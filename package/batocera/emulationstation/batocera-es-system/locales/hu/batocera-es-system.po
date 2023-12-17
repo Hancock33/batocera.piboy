@@ -7849,7 +7849,7 @@ msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
 msgstr "Batocera beállítja az első audio eszközt (alapértelmezett)"
 
-#. TRANSLATION: cemu, sonic2013, sonicmania, play, yuzu, ...
+#. TRANSLATION: cemu, sonic2013, sonicmania, sonicnexus, play, ...
 msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr "Javítsa ki a képernyő szakadását."
@@ -14313,7 +14313,7 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
-#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, sonicmania.keys, fallout1-ce.keys, ...
+#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, sonicmania.keys, sonicnexus.keys, ...
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr "Kilépés a játékból"
@@ -14521,6 +14521,11 @@ msgstr ""
 #. TRANSLATION: openjazz.keys
 msgctxt "keys_files"
 msgid "Stats"
+msgstr ""
+
+#. TRANSLATION: sonicnexus.keys
+msgctxt "keys_files"
+msgid "Dev Menu"
 msgstr ""
 
 #. TRANSLATION: rtcw.keys, theforceengine.keys
