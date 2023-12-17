@@ -67,18 +67,6 @@ class XeniaGenerator(Generator):
         else:
             sWine = 'lutris'
 
-        # now setup the command array for the emulator
-        if rom == 'config':
-            if core == 'xenia-canary':
-                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe']
-            else:
-                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe']
-        else:
-            if core == 'xenia-canary':
-                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe', 'z:' + rom]
-            else:
-                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe', 'z:' + rom]
-
         if not os.path.exists(wineprefix + "/vkd3d.done"):
             cmd = ["/usr/wine/winetricks", "-q", "vkd3d"]
             env = {"LD_LIBRARY_PATH": "/usr/wine/" + sWine + "/lib/wine", "WINEPREFIX": wineprefix }
@@ -285,6 +273,18 @@ class XeniaGenerator(Generator):
                         toml.dump(patch_toml, f)
             else:
                 eslog.debug(f'No patch file found for {rom_name}')
+
+        # now setup the command array for the emulator
+        if rom == 'config':
+            if core == 'xenia-canary':
+                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe']
+            else:
+                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe']
+        else:
+            if core == 'xenia-canary':
+                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe', 'z:' + rom]
+            else:
+                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe', 'z:' + rom]
 
         return Command.Command(
             array=commandArray,
