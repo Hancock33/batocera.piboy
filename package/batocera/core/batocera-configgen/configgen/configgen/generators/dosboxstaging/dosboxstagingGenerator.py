@@ -18,7 +18,6 @@ class DosBoxStagingGenerator(Generator):
 
         commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
 			"-fullscreen",
-			"-userconf",
 			"-exit",
 			f"""{batFile}""",
 			"-c", f"""set ROOT={gameDir}"""]
