@@ -5808,7 +5808,7 @@ sonicretro:
   manufacturer:         Sega
   release:              2021
   hardware:             port
-  extensions:           [son, scd, som, snx]
+  extensions:           [son, scd]
   platform:             pc
   group:                sonic
   path:                 /userdata/roms/ports/sonicretro
@@ -5817,10 +5817,6 @@ sonicretro:
       sonic2013:        { requireAnyOf: [BR2_PACKAGE_SONIC2013] }
     soniccd:
       soniccd:          { requireAnyOf: [BR2_PACKAGE_SONICCD] }
-    sonicmania:
-      sonicmania:       { requireAnyOf: [BR2_PACKAGE_SONICMANIA] }
-    sonicnexus:
-      sonicnexus:       { requireAnyOf: [BR2_PACKAGE_SONICNEXUS] }
   comment_en:           |
                         ---------------------
                         Data File Setup
@@ -5850,6 +5846,38 @@ sonicretro:
                         The options are slightly different between the two, so you may need to manually select the emulator to change them.
 
                         The dev menu option is needed to run mods.
+
+sonicmania:
+  name:                 Sonic Mania
+  manufacturer:         Sega
+  release:              2017
+  hardware:             port
+  extensions:           [sman, som]
+  platform:             pc
+  group:                sonic
+  path:                 /userdata/roms/ports/sonicmania
+  emulators:
+    sonicmania:
+      sonicmania: { requireAnyOf: [ BR2_PACKAGE_SONICMANIA] }
+  comment_en:           |
+                        For more info: https://wiki.batocera.org/systems:sonic-mania
+  comment_fr:           |
+                        Trouvez la documentation ici: https://wiki.batocera.org/systems:sonic-mania
+  comment_br:           |
+                        Para mais informações: https://wiki.batocera.org/systems:sonic-mania
+
+sonicnexus:
+  name:                 Sonic Nexus
+  manufacturer:         Sega
+  release:              2008
+  hardware:             port
+  extensions:           [snx]
+  platform:             pc
+  group:                sonic
+  path:                 /userdata/roms/ports/sonicnexus
+  emulators:
+    sonicnexus:
+      sonicnexus:       { requireAnyOf: [BR2_PACKAGE_SONICNEXUS] }
 
 srb2:
   name:                 Sonic Robo Blast 2

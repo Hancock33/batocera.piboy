@@ -11175,6 +11175,45 @@ soniccd:
             choices:
                 "Off":    0
                 "On":     1
+sonicmania:
+  features: [padtokeyboard]
+  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+    smania_vsync:
+      prompt: VSYNC
+      description: Fix screen tearing.
+      choices:
+        "Disabled": "n"
+        "Enabled":  "y"
+    smania_buffering:
+      prompt: TRIPLE BUFFERING
+      description: Enable triple buffering.
+      choices:
+        "Disabled": "n"
+        "Enabled":  "y"
+    smania_language:
+      prompt: LANGUAGE
+      description: Change the game's language.
+      choices:
+        "English":             "0"
+        "French":              "1"
+        "Italian":             "2"
+        "German":              "3"
+        "Spanish":             "4"
+        "Japanese":            "5"
+        "Korean":              "6"
+        "Simplified Chinese":  "7"
+        "Traditional Chinese": "8"
+sonicnexus:
+  features: [padtokeyboard]
+  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+    snexus_vsync:
+      prompt: VSYNC
+      description: Fix screen tearing.
+      choices:
+        "Disabled": "n"
+        "Enabled":  "y"
 srb2:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
