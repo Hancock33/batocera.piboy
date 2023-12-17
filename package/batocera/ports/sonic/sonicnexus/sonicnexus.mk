@@ -23,7 +23,7 @@ endef
 
 define SONICNEXUS_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sonic/sonicmania/sonicnexus.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sonic/sonicnexus/sonicnexus.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 SONICNEXUS_POST_INSTALL_TARGET_HOOKS += SONICNEXUS_EVMAPY
