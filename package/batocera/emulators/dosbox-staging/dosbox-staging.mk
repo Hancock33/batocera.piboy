@@ -79,7 +79,8 @@ DOSBOX_STAGING_CXXFLAGS += -march=armv8.2-a+dotprod+rcpc+ssbs+sb -mcpu=cortex-a7
 endif
 
 define DOSBOX_STAGING_INSTALL_TARGET_CMDS
-		$(INSTALL) -D $(@D)/build/dosbox $(TARGET_DIR)/usr/bin/dosbox-staging
+		$(INSTALL) -D $(@D)/build/dosbox                                 $(TARGET_DIR)/usr/bin/dosbox-staging
+		cp -avr       $(@D)/build/subprojects/*libmt32emu*/libmt32emu.so $(TARGET_DIR)/usr/lib
 endef
 
 # this is a not nice workaround
