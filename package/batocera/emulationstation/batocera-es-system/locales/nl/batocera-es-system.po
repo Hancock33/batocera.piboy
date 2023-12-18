@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2023-12-10 00:13+0000\n"
+"PO-Revision-Date: 2023-12-18 11:59+0000\n"
 "Last-Translator: THa_MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl-NL\n"
@@ -8276,6 +8276,8 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable controller rumble capabilities if supported by the controller."
 msgstr ""
+"Schakel controller-rumble-mogelijkheden in, indien ondersteund door de "
+"controller."
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -10806,7 +10808,7 @@ msgstr "ASYNCHRONE TEXTUURSTREAMING"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "On (Vulkan Only)"
-msgstr ""
+msgstr "Aan (alleen Vulkan)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -14033,7 +14035,7 @@ msgstr "Trek aan plunger"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Lockbar Fire Button"
-msgstr ""
+msgstr "Lockbar vuurknop"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -15104,6 +15106,14 @@ msgstr "Snel Opslaan"
 #~ "afbeeldingen en flikkeringen oplossen."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Stream texture to GPU in parrallel. Can improve performance on more "
+#~ "powerful GPU's that have spare headroom."
+#~ msgstr ""
+#~ "Stream texture parallel naar de GPU. Kan de prestaties verbeteren op "
+#~ "krachtigere GPU's die extra speelruimte hebben."
+
+#~ msgctxt "game_options"
 #~ msgid "Legacy Evdev"
 #~ msgstr "Legacy Evdev"
 
@@ -15309,11 +15319,3 @@ msgstr "Snel Opslaan"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Vooruitspoelen"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Stream texture to GPU in parrallel. Can improve performance on more "
-#~ "powerful GPU's."
-#~ msgstr ""
-#~ "Stream textuur parallel naar GPU. Kan de prestaties verbeteren op "
-#~ "krachtigere GPU's."
