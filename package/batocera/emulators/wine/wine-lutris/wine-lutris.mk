@@ -26,6 +26,7 @@ define WINE_LUTRIS_AUTOGEN
 	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/lutris
 	# Use Staging Patches
+	#printf "%s\n" "$(TERM_BOLD)>>> $($(PKG)_NAME) $($(PKG)_VERSION) Patching wine-staging" >&2
 	#tar -xf $(WINE_LUTRIS_DL_DIR)/v$(WINE_LUTRIS_STAGING_VERSION).tar.gz -C $(@D)
 	#cd $(@D); ./wine-staging-$(WINE_LUTRIS_STAGING_VERSION)/staging/patchinstall.py --all
 	# Autotools generation
