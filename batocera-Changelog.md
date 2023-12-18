@@ -124,13 +124,13 @@
 - Sonic CD to Dec 2, 2023 build
 - Sonic 2013 to Dec 2, 2023 build
 ### System
-- Linux kernel to 6.6.5
+- Linux kernel to 6.7
 - Mesa to 23.3.1
 - Proton to 8.0-4c
 - FAudio to 23.10
 - Nvidia production driver to 545.29.06
 - Nvidia legacy driver to 470.223.02
-- SDL2 to 2.28.4
+- SDL2 to 2.28.5
 - SOF Firmware to 2023.09.2
 - Bluez to 5.70
 - Streamlined x86_64 Secure Boot support
@@ -138,6 +138,9 @@
 - VKD3D-Proton to 2.11
 - Host-XA to 2.4.0
 - Pipewire to 1.0.0
+- Xorg Server to 21.1.10
+- XWayaland to 23.2.3
+- QT 6.6.1
 
 # 2023/10/16 - batocera.linux 38 - Blue Moon
 ### Hardware
