@@ -1,5 +1,30 @@
+diff --git a/sound/soc/amd/acp-config.c b/sound/soc/amd/acp-config.c
+index 3bc4b2e41650..7c1b538d96b8 100644
+--- a/sound/soc/amd/acp-config.c
++++ b/sound/soc/amd/acp-config.c
+@@ -47,6 +47,20 @@ static const struct config_entry config_table[] = {
+ 			{}
+ 		},
+ 	},
++	{
++		.flags = FLAG_AMD_LEGACY,
++		.device = ACP_PCI_DEV_ID,
++		.dmi_table = (const struct dmi_system_id []) {
++			{
++				.matches = {
++					DMI_MATCH(DMI_SYS_VENDOR, "Valve"),
++					DMI_MATCH(DMI_PRODUCT_NAME, "Jupiter"),
++					DMI_MATCH(DMI_PRODUCT_FAMILY, "Aerith"),
++				},
++			},
++			{}
++		},
++	},
+ 	{
+ 		.flags = FLAG_AMD_SOF,
+ 		.device = ACP_PCI_DEV_ID,
 diff --git a/sound/soc/amd/acp/acp-mach-common.c b/sound/soc/amd/acp/acp-mach-common.c
-index 34b14f2611ba..65512494384b 100644
+index 34b14f2611ba..b2b3d0ccde7d 100644
 --- a/sound/soc/amd/acp/acp-mach-common.c
 +++ b/sound/soc/amd/acp/acp-mach-common.c
 @@ -26,6 +26,8 @@
@@ -35,7 +60,7 @@ index 34b14f2611ba..65512494384b 100644
 +static int acp_cs35l41_hw_params(struct snd_pcm_substream *substream,
 +				   struct snd_pcm_hw_params *params)
 +{
-+	struct snd_soc_pcm_runtime *rtd = snd_soc_substream_to_rtd(substream);
++	struct snd_soc_pcm_runtime *rtd = asoc_substream_to_rtd(substream);
 +	struct snd_soc_card *card = rtd->card;
 +	struct snd_soc_dai *codec_dai;
 +	int ret, i;
@@ -44,7 +69,7 @@ index 34b14f2611ba..65512494384b 100644
 +
 +	ret = 0;
 +	for (i = 0; i < num_codecs; i++) {
-+		codec_dai = snd_soc_rtd_to_codec(rtd, i);
++		codec_dai = asoc_rtd_to_codec(rtd, i);
 +		if (strcmp(codec_dai->name, "cs35l41-pcm") == 0) {
 +			switch (params_rate(params)) {
 +			case 48000:
@@ -152,7 +177,7 @@ index 34b14f2611ba..65512494384b 100644
 +		links[i].no_pcm = 1;
 +		if (!drv_data->bt_codec_id) {
 +			/* Use dummy codec if codec id not specified */
-+			links[i].codecs = &snd_soc_dummy_dlc;
++			links[i].codecs = &asoc_dummy_dlc;
 +			links[i].num_codecs = 1;
 +		}
  		i++;
@@ -206,11 +231,114 @@ index 5223033a122f..45d4ce17ce5b 100644
  	.dmic_codec_id = NONE,
  	.soc_mclk = true,
  	.tdm_mode = false,
+diff --git a/sound/soc/amd/vangogh/pci-acp5x.c b/sound/soc/amd/vangogh/pci-acp5x.c
+index c4634a8a17cd..e29c4cc10e0f 100644
+--- a/sound/soc/amd/vangogh/pci-acp5x.c
++++ b/sound/soc/amd/vangogh/pci-acp5x.c
+@@ -13,6 +13,7 @@
+ #include <linux/pm_runtime.h>
+ 
+ #include "acp5x.h"
++#include "../mach-config.h"
+ 
+ struct acp5x_dev_data {
+ 	void __iomem *acp5x_base;
+@@ -131,7 +132,7 @@ static int snd_acp5x_probe(struct pci_dev *pci,
+ 
+ 	/* Return if acp config flag is defined */
+ 	flag = snd_amd_acp_find_config(pci);
+-	if (flag)
++	if (flag != FLAG_AMD_LEGACY)
+ 		return -ENODEV;
+ 
+ 	irqflags = IRQF_SHARED;
+diff --git a/sound/soc/codecs/max98388.c b/sound/soc/codecs/max98388.c
+index 078adec29312..d8974805b5f8 100644
+--- a/sound/soc/codecs/max98388.c
++++ b/sound/soc/codecs/max98388.c
+@@ -390,27 +390,43 @@ static void max98388_reset(struct max98388_priv *max98388, struct device *dev)
+ {
+ 	int ret, reg, count;
+ 
++
+ 	/* Software Reset */
+ 	ret = regmap_update_bits(max98388->regmap,
+ 				 MAX98388_R2000_SW_RESET,
+ 				 MAX98388_SOFT_RESET,
+ 				 MAX98388_SOFT_RESET);
+-	if (ret)
++
++	if (ret) {
+ 		dev_err(dev, "Reset command failed. (ret:%d)\n", ret);
++		goto exit;
++	}
++
+ 
+ 	count = 0;
+ 	while (count < 3) {
+ 		usleep_range(10000, 11000);
++
+ 		/* Software Reset Verification */
+ 		ret = regmap_read(max98388->regmap,
+ 				  MAX98388_R22FF_REV_ID, &reg);
++
+ 		if (!ret) {
+ 			dev_info(dev, "Reset completed (retry:%d)\n", count);
+-			return;
++			goto exit;
+ 		}
+ 		count++;
+ 	}
++
+ 	dev_err(dev, "Reset failed. (ret:%d)\n", ret);
++
++
++exit:
++	regcache_cache_only(max98388->regmap, true);
++	ret = regmap_update_bits(max98388->regmap,
++				 MAX98388_R2000_SW_RESET,
++				 MAX98388_SOFT_RESET, 0);
++	regcache_cache_only(max98388->regmap, false);
+ }
+ 
+ static int max98388_probe(struct snd_soc_component *component)
+@@ -419,6 +435,7 @@ static int max98388_probe(struct snd_soc_component *component)
+ 
+ 	/* Software Reset */
+ 	max98388_reset(max98388, component->dev);
++	usleep_range(400, 1000);
+ 
+ 	/* General channel source configuration */
+ 	regmap_write(max98388->regmap,
+@@ -811,6 +828,7 @@ static bool max98388_readable_register(struct device *dev,
+ 	case MAX98388_R210E_AUTO_RESTART:
+ 	case MAX98388_R210F_GLOBAL_EN:
+ 	case MAX98388_R22FF_REV_ID:
++	case MAX98388_R2000_SW_RESET:
+ 		return true;
+ 	default:
+ 		return false;
+@@ -823,6 +841,7 @@ static bool max98388_volatile_reg(struct device *dev, unsigned int reg)
+ 	case MAX98388_R2001_INT_RAW1 ... MAX98388_R2005_INT_STATE2:
+ 	case MAX98388_R210F_GLOBAL_EN:
+ 	case MAX98388_R22FF_REV_ID:
++	case MAX98388_R2000_SW_RESET:
+ 		return true;
+ 	default:
+ 		return false;
+@@ -866,6 +885,7 @@ static int max98388_resume(struct device *dev)
+ 
+ 	regcache_cache_only(max98388->regmap, false);
+ 	max98388_reset(max98388, dev);
++	usleep_range(400, 1000);
+ 	regcache_sync(max98388->regmap);
+ 
+ 	return 0;
 diff --git a/sound/soc/sof/ipc3-topology.c b/sound/soc/sof/ipc3-topology.c
-index ba4ef290b634..2f070f90773a 100644
+index 2c7a5e7a364c..237fb5f5adaf 100644
 --- a/sound/soc/sof/ipc3-topology.c
 +++ b/sound/soc/sof/ipc3-topology.c
-@@ -1174,6 +1174,7 @@ static int sof_link_acp_bt_load(struct snd_soc_component *scomp, struct snd_sof_
+@@ -1176,6 +1176,7 @@ static int sof_link_acp_bt_load(struct snd_soc_component *scomp, struct snd_sof_
  	struct snd_soc_tplg_hw_config *hw_config = slink->hw_configs;
  	struct sof_dai_private_data *private = dai->private;
  	u32 size = sizeof(*config);
@@ -218,7 +346,7 @@ index ba4ef290b634..2f070f90773a 100644
  
  	/* handle master/slave and inverted clocks */
  	sof_dai_set_format(hw_config, config);
-@@ -1182,12 +1183,14 @@ static int sof_link_acp_bt_load(struct snd_soc_component *scomp, struct snd_sof_
+@@ -1184,12 +1185,14 @@ static int sof_link_acp_bt_load(struct snd_soc_component *scomp, struct snd_sof_
  	memset(&config->acpbt, 0, sizeof(config->acpbt));
  	config->hdr.size = size;
  
@@ -238,7 +366,7 @@ index ba4ef290b634..2f070f90773a 100644
  	dai->number_configs = 1;
  	dai->current_config = 0;
 diff --git a/sound/soc/sof/topology.c b/sound/soc/sof/topology.c
-index a3a3af252259..a634ae05ff8c 100644
+index 37ec671a2d76..8beef2ab8ece 100644
 --- a/sound/soc/sof/topology.c
 +++ b/sound/soc/sof/topology.c
 @@ -289,7 +289,7 @@ static const struct sof_dai_types sof_dais[] = {
@@ -250,7 +378,7 @@ index a3a3af252259..a634ae05ff8c 100644
  	{"ACPSP", SOF_DAI_AMD_SP},
  	{"ACPDMIC", SOF_DAI_AMD_DMIC},
  	{"ACPHS", SOF_DAI_AMD_HS},
-@@ -1953,6 +1953,7 @@ static int sof_link_load(struct snd_soc_component *scomp, int index, struct snd_
+@@ -1955,6 +1955,7 @@ static int sof_link_load(struct snd_soc_component *scomp, int index, struct snd_
  		token_id = SOF_ACPDMIC_TOKENS;
  		num_tuples += token_list[SOF_ACPDMIC_TOKENS].count;
  		break;
