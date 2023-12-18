@@ -3,8 +3,8 @@
 # dosbox-staging
 #
 ################################################################################
-# Version: Commits on Dec 16, 2023
-DOSBOX_STAGING_VERSION = 022be74a4cc37d6184d14ca557ac21a7e3c7074a
+# Version: Commits on Dec 18, 2023
+DOSBOX_STAGING_VERSION = efc06129de77258fe801b6318246377969ab382d
 DOSBOX_STAGING_SITE = $(call github,dosbox-staging,dosbox-staging,$(DOSBOX_STAGING_VERSION))
 DOSBOX_STAGING_DEPENDENCIES = alsa-lib sdl2 sdl2_net sdl2_image fluidsynth zlib libpng libogg libvorbis opus opusfile slirp iir speexdsp
 DOSBOX_STAGING_LICENSE = GPLv2
@@ -12,6 +12,7 @@ DOSBOX_STAGING_LICENSE = GPLv2
 DOSBOX_STAGING_CPPFLAGS = -DNDEBUG
 DOSBOX_STAGING_CFLAGS   = -O3 -fstrict-aliasing -fno-signed-zeros -fno-trapping-math -fassociative-math -frename-registers -ffunction-sections -fdata-sections
 DOSBOX_STAGING_CXXFLAGS = -O3 -fstrict-aliasing -fno-signed-zeros -fno-trapping-math -fassociative-math -frename-registers -ffunction-sections -fdata-sections
+#DOSBOX_STAGING_CONF_OPTS = -Duse_mt32emu=false
 DOSBOX_STAGING_CONF_OPTS += -Duse_zlib_ng=system
 
 ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
@@ -79,7 +80,10 @@ DOSBOX_STAGING_CXXFLAGS += -march=armv8.2-a+dotprod+rcpc+ssbs+sb -mcpu=cortex-a7
 endif
 
 define DOSBOX_STAGING_INSTALL_TARGET_CMDS
-		$(INSTALL) -D $(@D)/build/dosbox $(TARGET_DIR)/usr/bin/dosbox-staging
+	mkdir -p $(TARGET_DIR)/usr/bin/dosbox-staging
+	$(INSTALL) -D $(@D)/build/dosbox                                 $(TARGET_DIR)/usr/bin/dosbox-staging/dosbox-staging
+	cp -avr       $(@D)/build/subprojects/*libmt32emu*/libmt32emu.so $(TARGET_DIR)/usr/lib
+	cp -a         $(@D)/build/resources                              $(TARGET_DIR)/usr/bin/dosbox-staging
 endef
 
 # this is a not nice workaround

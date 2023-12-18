@@ -143,6 +143,10 @@ def getGenerator(emulator):
         from generators.etekwar.etekwarGenerator import EtekwarGenerator
         return EtekwarGenerator()
 
+    if emulator == "etlegacy":
+        from generators.etlegacy.etlegacyGenerator import ETLegacyGenerator
+        return ETLegacyGenerator()
+
     if emulator == 'f2bgl':
         from generators.f2bgl.f2bglGenerator import F2bglGenerator
         return F2bglGenerator()
@@ -399,22 +403,6 @@ def getGenerator(emulator):
         from generators.serioussam.serioussamGenerator import SerioussamGenerator
         return SerioussamGenerator()
 
-    if emulator == 'vpinball':
-        from generators.vpinball.vpinballGenerator import VPinballGenerator
-        return VPinballGenerator()
-
-    if emulator == "etlegacy":
-        from generators.etlegacy.etlegacyGenerator import ETLegacyGenerator
-        return ETLegacyGenerator()
-
-    if emulator == "sonic3-air":
-        from generators.sonic3_air.sonic3_airGenerator import Sonic3AIRGenerator
-        return Sonic3AIRGenerator()
-
-    if emulator == "sonic-mania":
-        from generators.sonic_mania.sonic_maniaGenerator import SonicManiaGenerator
-        return SonicManiaGenerator()
-
     if emulator == 'sh':
         from generators.sh.shGenerator import ShGenerator
         return ShGenerator()
@@ -427,6 +415,10 @@ def getGenerator(emulator):
         from generators.solarus.solarusGenerator import SolarusGenerator
         return SolarusGenerator()
 
+    if emulator == "sonic3-air":
+        from generators.sonic3_air.sonic3_airGenerator import Sonic3AIRGenerator
+        return Sonic3AIRGenerator()
+
     if emulator == 'sonic2013':
         from generators.sonicretro.sonicretroGenerator import SonicRetroGenerator
         return SonicRetroGenerator()
@@ -434,6 +426,14 @@ def getGenerator(emulator):
     if emulator == 'soniccd':
         from generators.sonicretro.sonicretroGenerator import SonicRetroGenerator
         return SonicRetroGenerator()
+
+    if emulator == "sonicmania":
+        from generators.sonicmania.sonicmaniaGenerator import SonicManiaGenerator
+        return SonicManiaGenerator()
+
+    if emulator == "sonicnexus":
+        from generators.sonicnexus.sonicnexusGenerator import SonicNexusGenerator
+        return SonicNexusGenerator()
 
     if emulator == 'sorr':
         from generators.sorr.sorrGenerator import SorrGenerator
@@ -526,6 +526,10 @@ def getGenerator(emulator):
     if emulator == 'voidsw':
         from generators.voidsw.voidswGenerator import VoidswGenerator
         return VoidswGenerator()
+
+    if emulator == 'vpinball':
+        from generators.vpinball.vpinballGenerator import VPinballGenerator
+        return VPinballGenerator()
 
     if emulator == 'wine':
         from generators.wine.wineGenerator import WineGenerator
