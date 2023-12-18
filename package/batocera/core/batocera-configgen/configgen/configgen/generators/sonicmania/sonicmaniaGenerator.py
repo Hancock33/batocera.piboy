@@ -10,9 +10,9 @@ class SonicManiaGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
 
-        source_file = '/usr/bin/sonic-mania'
-        rom_directory = '/userdata/roms/sonic-mania'
-        destination_file = rom_directory + '/sonic-mania'
+        source_file = '/usr/bin/sonicmania'
+        rom_directory = '/userdata/roms/ports/sonicmania'
+        destination_file = rom_directory + '/sonicmania'
         if not os.path.exists(destination_file):
             shutil.copy(source_file, destination_file)
         

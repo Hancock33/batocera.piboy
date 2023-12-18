@@ -755,7 +755,7 @@ msgctxt "game_options"
 msgid "24 bit (Default)"
 msgstr ""
 
-#. TRANSLATION: libretro/cap32, sonic2013, soniccd, play, yuzu, ...
+#. TRANSLATION: libretro/cap32, sonic2013, soniccd, sonicmania, play, ...
 msgctxt "game_options"
 msgid "Change the game's language."
 msgstr "Vaihda pelin kieltä."
@@ -1352,12 +1352,12 @@ msgctxt "game_options"
 msgid "Dutch"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, play, yuzu, ryujinx
+#. TRANSLATION: libretro/dolphin, sonicmania, play, yuzu, ryujinx
 msgctxt "game_options"
 msgid "Simplified Chinese"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, play, yuzu, ryujinx
+#. TRANSLATION: libretro/dolphin, sonicmania, play, yuzu, ryujinx
 msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr ""
@@ -7756,7 +7756,7 @@ msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
 msgstr ""
 
-#. TRANSLATION: cemu, sonic2013, play, yuzu, demul, ...
+#. TRANSLATION: cemu, sonic2013, sonicmania, sonicnexus, play, ...
 msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr ""
@@ -11931,6 +11931,16 @@ msgctxt "game_options"
 msgid "Sonic CD (hold jump)"
 msgstr ""
 
+#. TRANSLATION: sonicmania
+msgctxt "game_options"
+msgid "Enable triple buffering."
+msgstr ""
+
+#. TRANSLATION: sonicmania
+msgctxt "game_options"
+msgid "TRIPLE BUFFERING"
+msgstr ""
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Screen Resolution (Default)"
@@ -13466,6 +13476,16 @@ msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
+msgid "VKD3D (D3D12 to Vulkan)"
+msgstr ""
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
+msgid "Native Vulkan"
+msgstr ""
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
 msgid ""
 "This option enables the ability to play Xbox Live Arcade games. May cause "
 "compatibility issues with non-XBLA games."
@@ -14100,7 +14120,7 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
-#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, fallout1-ce.keys, dxx-rebirth.keys
+#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, sonicmania.keys, sonicnexus.keys, ...
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr ""
@@ -14308,6 +14328,11 @@ msgstr ""
 #. TRANSLATION: openjazz.keys
 msgctxt "keys_files"
 msgid "Stats"
+msgstr ""
+
+#. TRANSLATION: sonicnexus.keys
+msgctxt "keys_files"
+msgid "Dev Menu"
 msgstr ""
 
 #. TRANSLATION: rtcw.keys, theforceengine.keys

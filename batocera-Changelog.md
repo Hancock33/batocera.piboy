@@ -35,6 +35,11 @@
 - Bug preventing scraping of msx-family systems
 - Missing mouse cursor for known iOS soniccd rom originally requiring touchscreen input
 - Bug preventing passing command line options to ES unless on xorg-based system
+- Install-to-disk progress dialog stopping around 31% of download
+- Install-to-disk redownloading image even when a copy is already downloaded
+- Scraping wrong system (c64) for cplus4 and pet
+- Missing automount of partitions on NVMe drives in /media
+- Initialization data was too large for /userdata on RAMdisk
 ### Changed
 - L|R activate in-game "Z" input in Dolphin for GC controllers/GC games if controller has L+R inputs mapped.
 - PS2 BIOS files should be put in /userdata/bios/ps2
@@ -43,24 +48,24 @@
 - default pad order now in emulationstation is hardware dependant (so the same at each boot)
 ### Updated
 - Retroarch to 1.16.0.3
-- GroovyMAME 0.260 - Switchres 2.002w
+- GroovyMAME 0.261 - Switchres 2.002x
 - DosBox-X to 2023.10.6
 - Libretro-FBNeo to Oct 9, 2023
 - DevilutionX to 1.5.1
 - PPSSPP (standalone) and lr-ppsspp to v1.16.6
-- Libretro-MAME to 0.259 (Oct 4, 2023)
+- Libretro-MAME to 0.261
 - Libretro-Picodrive to Aug 11, 2023
 - Libretro-Genesis-Plus-GX to Sep 11, 2023
 - Libretro-PCSX-ReARMed to Oct 9, 2023
 - Fheroes2 to 1.0.9
 - BigPEmu to 1.092
-- Cemu to 2.0-55
-- Citra to nightly-2050
-- Dolphin to 5.0-20619
-- Flycast to v2.2
-- Libretro-Flycast to v2.2
+- Cemu to 2.0-61
+- Citra to nightly-2054
+- Dolphin to 5.0-20778
+- Flycast to 17th Dec build
+- Libretro-Flycast to 17th Dec build
 - MelonDS to Oct 12, 2023
-- PCSX2 to v1.7.5105
+- PCSX2 to v1.7.5309
 - Play! to Nov 30, 2023 build
 - Python Pygame2 to 2.5.2
 - Python Pyxel to v1.9.18
@@ -124,13 +129,13 @@
 - Sonic CD to Dec 2, 2023 build
 - Sonic 2013 to Dec 2, 2023 build
 ### System
-- Linux kernel to 6.6.5
+- Linux kernel to 6.7
 - Mesa to 23.3.1
 - Proton to 8.0-4c
 - FAudio to 23.10
 - Nvidia production driver to 545.29.06
 - Nvidia legacy driver to 470.223.02
-- SDL2 to 2.28.4
+- SDL2 to 2.28.5
 - SOF Firmware to 2023.09.2
 - Bluez to 5.70
 - Streamlined x86_64 Secure Boot support
@@ -138,6 +143,11 @@
 - VKD3D-Proton to 2.11
 - Host-XA to 2.4.0
 - Pipewire to 1.0.0
+- Xorg Server to 21.1.10
+- XWayaland to 23.2.3
+- QT 6.6.1
+- Support x86_64 build on systems with x64 cpu but only ia32 UEFI
+- Add wsdd for system discovery in "Network" panel on Windows without legacy SMB1 protocols
 
 # 2023/10/16 - batocera.linux 38 - Blue Moon
 ### Hardware
