@@ -221,9 +221,9 @@ class Rpcs3Generator(Generator):
 
         # Async Texture Streaming
         if system.isOptSet("rpcs3_async_texture"):
-            rpcs3ymlconfig["Video"]["Vulkan"]["Asynchronous Texture Streaming 2"] = system.config["rpcs3_async_texture"]
+            rpcs3ymlconfig["Video"]["Asynchronous Texture Streaming 2"] = system.config["rpcs3_async_texture"]
         else:
-            rpcs3ymlconfig["Video"]["Vulkan"]["Asynchronous Texture Streaming 2"] = False
+            rpcs3ymlconfig["Video"]["Asynchronous Texture Streaming 2"] = False
 
         # -= [Audio] =-
         # defaults
