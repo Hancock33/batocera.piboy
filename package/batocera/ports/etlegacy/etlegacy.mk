@@ -3,8 +3,8 @@
 # etlegacy
 #
 ################################################################################
-# Version: Commits on Dec 14, 2023
-ETLEGACY_VERSION = 1e73ec65c92c4df2db41f6e98c6fe8b3ebe50995
+# Version: Commits on Dec 18, 2023
+ETLEGACY_VERSION = 59f36bc2608ac8f6f065462f196dea203c279ed7
 ETLEGACY_SITE = https://github.com/etlegacy/etlegacy.git
 ETLEGACY_SITE_METHOD = git
 ETLEGACY_GIT_SUBMODULES = YES
