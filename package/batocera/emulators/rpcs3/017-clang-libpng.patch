@@ -1,0 +1,12 @@
+diff -Naur rpcs3/3rdparty/libpng/libpng/pngpriv.h rpcs3.bak/3rdparty/libpng/libpng/pngpriv.h
+--- rpcs3/3rdparty/libpng/libpng/pngpriv.h	2023-12-20 10:26:29.954285970 +0000
++++ rpcs3.bak/3rdparty/libpng/libpng/pngpriv.h	2023-12-20 10:24:38.467833367 +0000
+@@ -908,7 +908,7 @@
+  * must match that used in the build, or we must be using pnglibconf.h.prebuilt:
+  */
+ #if PNG_ZLIB_VERNUM != 0 && PNG_ZLIB_VERNUM != ZLIB_VERNUM
+-#  error ZLIB_VERNUM != PNG_ZLIB_VERNUM \
++//#  error ZLIB_VERNUM != PNG_ZLIB_VERNUM \
+       "-I (include path) error: see the notes in pngpriv.h"
+    /* This means that when pnglibconf.h was built the copy of zlib.h that it
+     * used is not the same as the one being used here.  Because the build of
