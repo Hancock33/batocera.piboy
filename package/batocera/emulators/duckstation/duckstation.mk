@@ -9,7 +9,7 @@ DUCKSTATION_SITE = https://github.com/stenzek/duckstation.git
 DUCKSTATION_SITE_METHOD=git
 DUCKSTATION_GIT_SUBMODULES=YES
 DUCKSTATION_LICENSE = GPLv2
-DUCKSTATION_DEPENDENCIES = fmt boost ffmpeg libcurl ecm libdrm sdl2 libevdev
+DUCKSTATION_DEPENDENCIES = host-clang fmt boost ffmpeg libcurl ecm libdrm sdl2 libevdev
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
 
 DUCKSTATION_CONF_OPTS += -DBUILD_SHARED_LIBS=FALSE
