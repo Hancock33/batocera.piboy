@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2023-12-18 11:59+0000\n"
+"PO-Revision-Date: 2023-12-21 14:39+0000\n"
 "Last-Translator: THa_MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl-NL\n"
@@ -10265,22 +10265,22 @@ msgstr "TIME CRISIS MIST HACK"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Playstation 2 wheel type"
-msgstr ""
+msgstr "Playstation 2 stuurwiel type"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "WHEEL MODEL"
-msgstr ""
+msgstr "STUURWIEL MODEL"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Driving Force Pro"
-msgstr ""
+msgstr "Driving Force Pro"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "GT Force"
-msgstr ""
+msgstr "GT Force"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -13748,12 +13748,12 @@ msgstr "Anti-aliasing is een techniek om gekartelde randen glad te strijken."
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "VKD3D (D3D12 to Vulkan)"
-msgstr ""
+msgstr "VKD3D (D3D12 naar Vulkan)"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Native Vulkan"
-msgstr ""
+msgstr "Native Vulkan"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
