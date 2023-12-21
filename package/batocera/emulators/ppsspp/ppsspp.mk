@@ -3,8 +3,8 @@
 # ppsspp
 #
 ################################################################################
-# Version: Commits on Dec 20, 2023
-PPSSPP_VERSION = e40ec0cc500853bcb08d18dc229a4aa827901eef
+# Version: Commits on Dec 21, 2023
+PPSSPP_VERSION = 8601c5a3bc3cdb189e2b37927f8e2082d59be2de
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
@@ -26,10 +26,6 @@ PPSSPP_CONF_OPTS += -DSIMULATOR=OFF
 PPSSPP_CONF_OPTS += -DUSING_QT_UI=OFF
 PPSSPP_CONF_OPTS += -DHEADLESS=ON
 PPSSPP_CONF_OPTS += -DMOBILE_DEVICE=OFF
-
-# use clang to build
-PPSSPP_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/clang
-PPSSPP_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/clang++
 
 PPSSPP_TARGET_CFLAGS = $(TARGET_CFLAGS)
 PPSSPP_TARGET_BINARY = PPSSPPSDL
