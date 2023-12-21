@@ -40,6 +40,7 @@
 - Scraping wrong system (c64) for cplus4 and pet
 - Missing automount of partitions on NVMe drives in /media
 - Initialization data was too large for /userdata on RAMdisk
+- Nvidia Prime defaulting to provider 1 when it could be another provider.
 ### Changed
 - L|R activate in-game "Z" input in Dolphin for GC controllers/GC games if controller has L+R inputs mapped.
 - PS2 BIOS files should be put in /userdata/bios/ps2
@@ -137,7 +138,7 @@
 - Nvidia legacy driver to 470.223.02
 - SDL2 to 2.28.5
 - Sound Open Firmware to 2023.12
-- Bluez to 5.70
+- Bluez to 5.71
 - Streamlined x86_64 Secure Boot support
 - Added tree(1) utility
 - VKD3D-Proton to 2.11
