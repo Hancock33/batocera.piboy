@@ -28,10 +28,6 @@ RPCS3_CONF_OPTS += -DUSE_LIBEVDEV=ON
 # sdl controller config seems broken...
 RPCS3_CONF_OPTS += -DUSE_SDL=OFF
 
-# use clang to build
-RPCS3_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/clang
-RPCS3_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/clang++
-
 RPCS3_CONF_ENV = LIBS="-ncurses -ltinfo"
 
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
