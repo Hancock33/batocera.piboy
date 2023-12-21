@@ -10812,7 +10812,7 @@ msgstr "FLUXO DE TEXTURA ASSÍNCRONO"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "On (Vulkan Only)"
-msgstr ""
+msgstr "Ativado (Somente Vulkan)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -13731,12 +13731,12 @@ msgstr "Anti-aliasing é uma técnica para suavizar arestas irregulares."
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "VKD3D (D3D12 to Vulkan)"
-msgstr ""
+msgstr "VKD3D (D3D12 para Vulkan)"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Native Vulkan"
-msgstr ""
+msgstr "Vulkan Nativo"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15106,6 +15106,14 @@ msgstr "Guardar Rápido"
 #~ msgstr ""
 #~ "Especificação de API direta. Pode resolver casos raros de falta de "
 #~ "gráficos e intermitência."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Stream texture to GPU in parrallel. Can improve performance on more "
+#~ "powerful GPU's that have spare headroom."
+#~ msgstr ""
+#~ "Transmitir textura para GPU em paralelo. Pode melhorar o desempenho em "
+#~ "dispositivos mais potentes GPUs que possuem espaço livre."
 
 #~ msgctxt "game_options"
 #~ msgid "Legacy Evdev"
