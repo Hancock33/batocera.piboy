@@ -52,3 +52,5 @@ BR2_PACKAGE_ZLIB_NG=y
 # Enables ccache
 BR2_CCACHE=y
 BR2_CCACHE_DIR="$(HOME)/build-dir/ccache/x86_wow64"
+
+BR_CMAKE_USE_CLANG=y

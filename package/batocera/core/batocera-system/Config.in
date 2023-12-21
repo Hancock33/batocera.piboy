@@ -99,6 +99,12 @@ config BR2_PACKAGE_BATOCERA_BCM27XX
 config BR2_REMOVE_SOURCE_AFTER_COMPILE
     bool "remove src"
 
+config BR2_REMOVE_SOURCE_AFTER_COMPILE
+    bool "remove src"
+
+config BR_CMAKE_USE_CLANG
+    bool "use clang for cmake builds"
+
 ##########################################
 config BR2_PACKAGE_BATOCERA_MUSIC_SUPPORT
     bool "batocera.linux music formats support"
