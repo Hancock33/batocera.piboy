@@ -2256,6 +2256,35 @@ libretro:
                 choices:
                     "Off":                disabled
                     "On":                 enabled
+            gx_controller1_mapping:
+                group:       CONTROLLER SETTINGS 
+                prompt:      CONTROLLER 1 INPUT MAPPING
+                description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
+                choices:
+                    "Retropad (Default)": retropad
+                    "Megadrive":          megadrive
+            gx_controller2_mapping:
+                group:       CONTROLLER SETTINGS 
+                prompt:      CONTROLLER 2 INPUT MAPPING
+                description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
+                choices:
+                    "Retropad (Default)": retropad
+                    "Megadrive":          megadrive
+            gx_controller3_mapping:
+                group:       CONTROLLER SETTINGS 
+                prompt:      CONTROLLER 3 INPUT MAPPING
+                description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
+                choices:
+                    "Retropad (Default)": retropad
+                    "Megadrive":          megadrive
+            gx_controller4_mapping:
+                group:       CONTROLLER SETTINGS 
+                prompt:      CONTROLLER 4 INPUT MAPPING
+                description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
+                choices:
+                    "Retropad (Default)": retropad
+                    "Megadrive":          megadrive            
+            
       systems:
             megadrive:
                 shared: [use_guns]
@@ -4819,6 +4848,34 @@ libretro:
                 choices:
                     "Off":             disabled
                     "On":              enabled
+            pd_controller1_mapping:
+                group:       CONTROLLER SETTINGS 
+                prompt:      CONTROLLER 1 INPUT MAPPING
+                description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
+                choices:
+                    "Retropad (Default)": retropad
+                    "Megadrive":          megadrive
+            pd_controller2_mapping:
+                group:       CONTROLLER SETTINGS 
+                prompt:      CONTROLLER 2 INPUT MAPPING
+                description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
+                choices:
+                    "Retropad (Default)": retropad
+                    "Megadrive":          megadrive
+            pd_controller3_mapping:
+                group:       CONTROLLER SETTINGS 
+                prompt:      CONTROLLER 3 INPUT MAPPING
+                description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
+                choices:
+                    "Retropad (Default)": retropad
+                    "Megadrive":          megadrive
+            pd_controller4_mapping:
+                group:       CONTROLLER SETTINGS 
+                prompt:      CONTROLLER 4 INPUT MAPPING
+                description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
+                choices:
+                    "Retropad (Default)": retropad
+                    "Megadrive":          megadrive              
             picodrive_controller1:
                 group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
