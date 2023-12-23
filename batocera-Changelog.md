@@ -63,7 +63,7 @@
 - BigPEmu to 1.092
 - Cemu to 2.0-61
 - Citra to nightly-2054
-- Dolphin to 5.0-20778
+- Dolphin to 5.0-20840
 - Flycast to 17th Dec build
 - Libretro-Flycast to 17th Dec build
 - MelonDS to Oct 12, 2023
@@ -75,7 +75,7 @@
 - Ruffle to nightly-2023-10-13
 - Solarus Engine to Oct 2, 2023
 - Vita3k to Oct 13 build
-- Xemu to v0.7.116
+- Xemu to v0.7.118
 - Xenia to v1.0.2808
 - Xenia Canary to a34944e (October 28 build)
 - ECWolf to 1.5pre
@@ -130,6 +130,7 @@
 - Libretro-MAME to 0.260
 - Sonic CD to Dec 2, 2023 build
 - Sonic 2013 to Dec 2, 2023 build
+- Duckstation to Dec 21, 2023 build
 ### System
 - Linux kernel to 6.7
 - Mesa to 23.3.1
