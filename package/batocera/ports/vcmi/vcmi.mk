@@ -17,8 +17,6 @@ VCMI_CONF_OPTS += -DENABLE_STATIC_AI_LIBS=ON
 VCMI_CONF_OPTS += -DstaticAI=ON
 VCMI_CONF_OPTS += -DTBB_ROOT=$(STAGING_DIR)/usr/lib/tbb
 
-
-
 define VCMI_EVMAPY
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
