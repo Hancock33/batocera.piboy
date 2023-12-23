@@ -22,7 +22,7 @@ valid_n64_controller_guids = [
     "05000000c82d00006928000000010000",
     "030000007e0500001920000011810000",
 ]
-        
+
 valid_n64_controller_names = [
     "N64 Controller",
     "Nintendo Co., Ltd. N64 Controller",
