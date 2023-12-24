@@ -3,14 +3,18 @@
 # batocera-es-piboy
 #
 ################################################################################
-# Version: Commits on Dec 17, 2023
-BATOCERA_ES_PIBOY_VERSION = e2e323072b9c92259498d4b563014c6963c402ba
+# Version: Commits on Dec 22, 2023
+BATOCERA_ES_PIBOY_VERSION = 3959d0742f1b3fb9e3b86e56f365d5eea99eaf5d
 BATOCERA_ES_PIBOY_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_ES_PIBOY_SITE_METHOD = git
 BATOCERA_ES_PIBOY_LICENSE = MIT
 BATOCERA_ES_PIBOY_GIT_SUBMODULES = YES
 BATOCERA_ES_PIBOY_LICENSE = MIT, Apache-2.0
 BATOCERA_ES_PIBOY_DEPENDENCIES = sdl2 sdl2_mixer libfreeimage freetype alsa-lib libcurl vlc rapidjson pulseaudio batocera-es-system host-gettext
+
+# use gcc to build
+BATOCERA_ES_PIBOY_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
+BATOCERA_ES_PIBOY_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 BATOCERA_ES_PIBOY_CONF_OPTS += -DCMAKE_CXX_FLAGS=-D$(call UPPERCASE,$(BATOCERA_SYSTEM_ARCH))
 

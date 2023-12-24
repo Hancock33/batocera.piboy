@@ -38,6 +38,8 @@ then
     mv "${TARGET_DIR}/etc/init.d/S02acpid" "${TARGET_DIR}/etc/init.d/S05acpid" || exit 1
 fi
 
+rm -rf "${TARGET_DIR}/usr/lib/tbb" || exit 1
+
 #### remove unneeded firmware + drivers
 if (test -e "${TARGET_DIR}/etc/init.d/S19piboy") || (test "${BATOCERA_TARGET}" = "RPI4")
 then

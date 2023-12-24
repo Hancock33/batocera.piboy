@@ -3,8 +3,8 @@
 # box64
 #
 ################################################################################
-# Version: Commits on Dec 18, 2023
-BOX64_VERSION = 23542bbfeecf84bdc13ba2a4ba91adf8a2c3ed37
+# Version: Commits on Dec 23, 2023
+BOX64_VERSION = 2c8d2d8643c451fe7829f7c86374ae08945a79f2
 BOX64_SITE = https://github.com/ptitseb/box64.git
 BOX64_SITE_METHOD=git
 BOX64_GIT_SUBMODULES=YES
@@ -13,8 +13,10 @@ BOX64_SUPPORTS_IN_SOURCE_BUILD = NO
 BOX64_DEPENDENCIES = sdl2 sdl2_image zlib libzip freetype bzip2 libpng openal
 BOX64_LICENSE = GPL-3.0
 
-BOX64_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=""
 BOX64_CONF_OPTS += -DRPI4=1
+BOX64_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=""
+BOX64_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
+BOX64_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 define BOX64_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/buildroot-build/box64 $(TARGET_DIR)/usr/bin

@@ -3,8 +3,8 @@
 # flycast
 #
 ################################################################################
-# Version: Commits on Dec 16, 2023
-FLYCAST_VERSION = 192838b9c1c4036628ed3c042f7f1091726ef1b8
+# Version: Commits on Dec 22, 2023
+FLYCAST_VERSION = 4a0ace5de2fd07fcf6c8e7d3c7d8f3c48d4d4581
 FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 FLYCAST_SITE_METHOD=git
 FLYCAST_GIT_SUBMODULES=YES
@@ -19,7 +19,8 @@ FLYCAST_CONF_OPTS += -DGDB_SERVER=OFF
 FLYCAST_CONF_OPTS += -DGIT_VERSION="$(shell echo $(FLYCAST_VERSION) | cut -c 1-7)"
 FLYCAST_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -Wno-error=array-bounds"
 FLYCAST_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CFLAGS) -Wno-error=array-bounds"
-#FLYCAST_CONF_OPTS += -DCMAKE_VERBOSE_MAKEFILE=ON
+FLYCAST_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
+FLYCAST_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 	FLYCAST_CONF_OPTS += -DUSE_OPENGL=ON

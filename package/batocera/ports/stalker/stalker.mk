@@ -3,8 +3,8 @@
 # stalker
 #
 ################################################################################
-# Version: Commits on Dec 18, 2023
-STALKER_VERSION = bec6b599002a4b169fea25ccacce9a79caeb843f
+# Version: Commits on Dec 23, 2023
+STALKER_VERSION = 386735111399447c0ef898df0bb661a7dc01fa50
 STALKER_SITE = https://github.com/OpenXRay/xray-16.git
 STALKER_SITE_METHOD=git
 STALKER_GIT_SUBMODULES=YES
@@ -14,6 +14,8 @@ STALKER_LICENSE = GPL-2.0
 
 STALKER_SUPPORTS_IN_SOURCE_BUILD = NO
 STALKER_CONF_OPTS += -DUSE_LTO=ON
+STALKER_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
+STALKER_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 define STALKER_EVMAPY
 	# evmap config

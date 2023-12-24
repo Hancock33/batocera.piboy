@@ -9,12 +9,15 @@ DAPHNE_SITE = https://github.com/DirtBagXon/hypseus-singe
 DAPHNE_SITE_METHOD=git
 DAPHNE_LICENSE = GPLv3
 DAPHNE_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf zlib libogg libvorbis libmpeg2
+DAPHNE_SUPPORTS_IN_SOURCE_BUILD = NO
+DAPHNE_SUBDIR = src
 
-DAPHNE_SUBDIR = build
-DAPHNE_CONF_OPTS = ../src -DBUILD_SHARED_LIBS=OFF
+DAPHNE_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
+DAPHNE_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
+DAPHNE_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 define DAPHNE_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/build/hypseus $(TARGET_DIR)/usr/bin/
+	$(INSTALL) -D $(@D)/src/buildroot-build/hypseus $(TARGET_DIR)/usr/bin/
 		mkdir -p $(TARGET_DIR)/usr/share/daphne
 
 	# copy support files

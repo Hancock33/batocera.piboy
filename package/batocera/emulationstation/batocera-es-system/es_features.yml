@@ -2256,6 +2256,35 @@ libretro:
                 choices:
                     "Off":                disabled
                     "On":                 enabled
+            gx_controller1_mapping:
+                group:       CONTROLLER SETTINGS 
+                prompt:      CONTROLLER 1 INPUT MAPPING
+                description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
+                choices:
+                    "Retropad (Default)": retropad
+                    "Megadrive":          megadrive
+            gx_controller2_mapping:
+                group:       CONTROLLER SETTINGS 
+                prompt:      CONTROLLER 2 INPUT MAPPING
+                description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
+                choices:
+                    "Retropad (Default)": retropad
+                    "Megadrive":          megadrive
+            gx_controller3_mapping:
+                group:       CONTROLLER SETTINGS 
+                prompt:      CONTROLLER 3 INPUT MAPPING
+                description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
+                choices:
+                    "Retropad (Default)": retropad
+                    "Megadrive":          megadrive
+            gx_controller4_mapping:
+                group:       CONTROLLER SETTINGS 
+                prompt:      CONTROLLER 4 INPUT MAPPING
+                description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
+                choices:
+                    "Retropad (Default)": retropad
+                    "Megadrive":          megadrive            
+            
       systems:
             megadrive:
                 shared: [use_guns]
@@ -2305,7 +2334,17 @@ libretro:
                             "Mouse":                         2
                             "Menacer Light Gun":             516
                             "Konami Justifiers":             772
-            megacd:
+                    gpgx_fm:
+                        group:       ADVANCED OPTIONS
+                        prompt:      FM SYNTHESIZER
+                        description: Sound generator. MAME is faster and Nuked is cycle accurate. Original model used YM2612 while later revisions used YM3438.
+                        choices:
+                            "MAME (YM2612)":            mame (ym2612)
+                            "MAME (ASIC YM3438)":       mame (asic ym3438)
+                            "MAME (Enhanced YM3438)":   mame (enhanced ym3438)
+                            "Nuked (YM2612)":           nuked (ym2612)
+                            "Nuked (YM3438)":           nuked (ym3438)        
+            segacd:
                 cfeatures:
                     gpgx_cd_add_on:
                         prompt:      CD ADD-ON
@@ -2328,6 +2367,16 @@ libretro:
                             "20":     20
                             "10":     10
                             "0":      0
+                    gpgx_fm:
+                        group:       ADVANCED OPTIONS
+                        prompt:      FM SYNTHESIZER
+                        description: Sound generator. MAME is faster and Nuked is cycle accurate. Original model used YM2612 while later revisions used YM3438.
+                        choices:
+                            "MAME (YM2612)":            mame (ym2612)
+                            "MAME (ASIC YM3438)":       mame (asic ym3438)
+                            "MAME (Enhanced YM3438)":   mame (enhanced ym3438)
+                            "Nuked (YM2612)":           nuked (ym2612)
+                            "Nuked (YM3438)":           nuked (ym3438)    
             msu-md:
                 cfeatures:
                     gpgx_cd_add_on:
@@ -4819,6 +4868,34 @@ libretro:
                 choices:
                     "Off":             disabled
                     "On":              enabled
+            pd_controller1_mapping:
+                group:       CONTROLLER SETTINGS 
+                prompt:      CONTROLLER 1 INPUT MAPPING
+                description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
+                choices:
+                    "Retropad (Default)": retropad
+                    "Megadrive":          megadrive
+            pd_controller2_mapping:
+                group:       CONTROLLER SETTINGS 
+                prompt:      CONTROLLER 2 INPUT MAPPING
+                description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
+                choices:
+                    "Retropad (Default)": retropad
+                    "Megadrive":          megadrive
+            pd_controller3_mapping:
+                group:       CONTROLLER SETTINGS 
+                prompt:      CONTROLLER 3 INPUT MAPPING
+                description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
+                choices:
+                    "Retropad (Default)": retropad
+                    "Megadrive":          megadrive
+            pd_controller4_mapping:
+                group:       CONTROLLER SETTINGS 
+                prompt:      CONTROLLER 4 INPUT MAPPING
+                description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
+                choices:
+                    "Retropad (Default)": retropad
+                    "Megadrive":          megadrive              
             picodrive_controller1:
                 group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
@@ -8933,6 +9010,13 @@ pcsx2:
             choices:
                 "Off": "false"
                 "On":  "true"
+        pcsx2_wheel_type:
+            group: WHEELS
+            prompt: WHEEL MODEL
+            description: Playstation 2 wheel type
+            choices:
+              "Driving Force Pro":  DrivingForcePro
+              "GT Force": GTForce
 ppsspp:
   features: [padtokeyboard]
   shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, rewind]

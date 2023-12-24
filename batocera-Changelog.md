@@ -1,4 +1,4 @@
-# 202x/xx/xx - batocera.linux 39 - 
+# 2024/02/xx - batocera.linux 39 - Painted Lady
 ### Hardware
 - Initial support for the AYN Loki MiniPro (Speakers not working)
 - Initial support for the Anbernic RG353V
@@ -40,6 +40,8 @@
 - Scraping wrong system (c64) for cplus4 and pet
 - Missing automount of partitions on NVMe drives in /media
 - Initialization data was too large for /userdata on RAMdisk
+- Nvidia Prime defaulting to provider 1 when it could be another provider.
+- AMD Prime defaulting to provider 1 when it could be another provider.
 ### Changed
 - L|R activate in-game "Z" input in Dolphin for GC controllers/GC games if controller has L+R inputs mapped.
 - PS2 BIOS files should be put in /userdata/bios/ps2
@@ -61,7 +63,7 @@
 - BigPEmu to 1.092
 - Cemu to 2.0-61
 - Citra to nightly-2054
-- Dolphin to 5.0-20778
+- Dolphin to 5.0-20840
 - Flycast to 17th Dec build
 - Libretro-Flycast to 17th Dec build
 - MelonDS to Oct 12, 2023
@@ -69,11 +71,11 @@
 - Play! to Nov 30, 2023 build
 - Python Pygame2 to 2.5.2
 - Python Pyxel to v1.9.18
-- RPCS3 to Oct 12 build
+- RPCS3 to 0.0.29-15838
 - Ruffle to nightly-2023-10-13
 - Solarus Engine to Oct 2, 2023
 - Vita3k to Oct 13 build
-- Xemu to v0.7.116
+- Xemu to v0.7.118
 - Xenia to v1.0.2808
 - Xenia Canary to a34944e (October 28 build)
 - ECWolf to 1.5pre
@@ -128,6 +130,7 @@
 - Libretro-MAME to 0.260
 - Sonic CD to Dec 2, 2023 build
 - Sonic 2013 to Dec 2, 2023 build
+- Duckstation to Dec 21, 2023 build
 ### System
 - Linux kernel to 6.7
 - Mesa to 23.3.1
@@ -136,8 +139,8 @@
 - Nvidia production driver to 545.29.06
 - Nvidia legacy driver to 470.223.02
 - SDL2 to 2.28.5
-- SOF Firmware to 2023.09.2
-- Bluez to 5.70
+- Sound Open Firmware to 2023.12
+- Bluez to 5.71
 - Streamlined x86_64 Secure Boot support
 - Added tree(1) utility
 - VKD3D-Proton to 2.11
@@ -148,6 +151,8 @@
 - QT 6.6.1
 - Support x86_64 build on systems with x64 cpu but only ia32 UEFI
 - Add wsdd for system discovery in "Network" panel on Windows without legacy SMB1 protocols
+- Send hostname to DHCP server, and allow for dynamically configured
+  hostname from DHCP
 
 # 2023/10/16 - batocera.linux 38 - Blue Moon
 ### Hardware

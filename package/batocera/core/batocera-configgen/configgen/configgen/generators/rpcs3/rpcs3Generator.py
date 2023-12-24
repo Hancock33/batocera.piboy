@@ -243,7 +243,7 @@ class Rpcs3Generator(Generator):
         if system.isOptSet("rpcs3_audiobuffer"):
             rpcs3ymlconfig["Audio"]["Enable Buffering"] = system.config["rpcs3_audiobuffer"]
         else:
-            rpcs3ymlconfig["Audio"]["Enable Buffering"] = False
+            rpcs3ymlconfig["Audio"]["Enable Buffering"] = True
         # audio buffer duration
         if system.isOptSet("rpcs3_audiobuffer_duration"):
             rpcs3ymlconfig["Audio"]["Desired Audio Buffer Duration"] = int(system.config["rpcs3_audiobuffer_duration"])

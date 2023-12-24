@@ -3,13 +3,13 @@
 # ppsspp
 #
 ################################################################################
-# Version: Commits on Dec 18, 2023
-PPSSPP_VERSION = ef149bd9f3c6494ba7571f10416cecd372c6a024
+# Version: Commits on Dec 23, 2023
+PPSSPP_VERSION = c9e269761a230457ae5e462eb7b9528d2c6b0d8b
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
 PPSSPP_LICENSE = GPLv2
-PPSSPP_DEPENDENCIES = sdl2 sdl2_ttf libzip
+PPSSPP_DEPENDENCIES = host-clang sdl2 sdl2_ttf libzip
 
 PPSSPP_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 PPSSPP_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF

@@ -110,7 +110,8 @@ class XeniaGenerator(Generator):
                 f.write("done")
 
         # check & copy newer dxvk files
-        self.sync_directories("/usr/wine/dxvk/x64", wineprefix + "/drive_c/windows/system32")
+        if os.path.exists(wineprefix + "/drive_c/windows/system32"):
+            self.sync_directories("/usr/wine/dxvk/x64", wineprefix + "/drive_c/windows/system32")
 
         # are we loading a digital title?
         if os.path.splitext(rom)[1] == '.xbox360':
