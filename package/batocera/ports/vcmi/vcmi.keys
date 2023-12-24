@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 vcmiclient && reset"
+            "target": "kill -9 $(pidof vcmiclient)"
         },
         {
             "trigger": "joystick1",
@@ -51,6 +51,40 @@
             "trigger": "select",
             "type": "key",
             "target": "KEY_ESC"
+        },
+        {
+            "trigger": [
+                "b",
+                "hotkey"
+            ],
+            "type": "key",
+            "target": "KEY_O"
+        },
+        {
+            "trigger": [
+                "hotkey",
+                "x"
+            ],
+            "type": "key",
+            "target": "KEY_M"
+        },
+        {
+            "trigger": [
+                "hotkey",
+                "y"
+            ],
+            "type": "key",
+            "target": "KEY_Q"
+        },
+        {
+            "trigger": "y",
+            "type": "key",
+            "target": "KEY_C"
+        },
+        {
+            "trigger": "x",
+            "type": "key",
+            "target": "KEY_Q"
         }
     ]
 }

@@ -3,8 +3,8 @@
 # supertux2
 #
 ################################################################################
-# Version: Commits on Dec 16, 2023
-SUPERTUX2_VERSION = 85274f0ed85b1cdf92aef8bcf7996866db49f97d
+# Version: Commits on Dec 22, 2023
+SUPERTUX2_VERSION = 96682c1a5f43ab0d5bd858d337d2ea50f94c07d6
 SUPERTUX2_SITE = https://github.com/SuperTux/supertux.git
 SUPERTUX2_SITE_METHOD=git
 SUPERTUX2_GIT_SUBMODULES=YES
@@ -18,11 +18,16 @@ SUPERTUX2_LICENSE_FILES = LICENSE.txt data/AUTHORS
 SUPERTUX2_DEPENDENCIES = host-pkgconf boost freetype libcurl \
 	libogg libpng libvorbis openal physfs sdl2 sdl2_image zlib
 
-SUPERTUX2_CONF_OPTS += \
-	-DBUILD_DOCUMENTATION=OFF \
-	-DINSTALL_SUBDIR_BIN="bin" \
-	-DINSTALL_SUBDIR_SHARE="share/supertux2" \
-	-DGIT_VERSION="$(shell echo $(SUPERTUX2_VERSION) | cut -c 1-7)"
+SUPERTUX2_CONF_OPTS +=-DBUILD_DOCUMENTATION=OFF
+SUPERTUX2_CONF_OPTS +=-DINSTALL_SUBDIR_BIN="bin"
+SUPERTUX2_CONF_OPTS +=-DINSTALL_SUBDIR_SHARE="share/supertux2"
+SUPERTUX2_CONF_OPTS +=-DGIT_VERSION="$(shell echo $(SUPERTUX2_VERSION) | cut -c 1-7)"
+
+ifeq ($(BR2_ARCH_IS_64),y)
+SUPERTUX2_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
+SUPERTUX2_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
+endif
+
 
 define SUPERTUX2_INSTALL_TARGET_CMDS
 	# install media

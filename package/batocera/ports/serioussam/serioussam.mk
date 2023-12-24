@@ -3,8 +3,8 @@
 # serioussam
 #
 ################################################################################
-# Version: Commits on Dec 14, 2023
-SERIOUSSAM_VERSION = b4b7b0f76d1b687942fc95c19fe5fc4e773c8d1c
+# Version: Commits on Dec 20, 2023
+SERIOUSSAM_VERSION = d2c7cc22d2b62e971bafad05568639e3f5965342
 SERIOUSSAM_SITE = https://github.com/tx00100xt/SeriousSamClassic-VK.git
 SERIOUSSAM_SITE_METHOD=git
 SERIOUSSAM_GIT_SUBMODULES=YES
@@ -27,6 +27,8 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 SERIOUSSAM_CONF_OPTS += -DRPI4=ON -DUSE_ASM=OFF
 endif
 SERIOUSSAM_CONF_OPTS += -DImageMagick_EXECUTABLE_DIR=/usr/bin
+SERIOUSSAM_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
+SERIOUSSAM_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 define SERIOUSSAM_INSTALL_TARGET_CMDS
 	# evmap config

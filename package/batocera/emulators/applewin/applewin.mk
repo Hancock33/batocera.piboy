@@ -3,8 +3,8 @@
 # applewin
 #
 ################################################################################
-# Version: Commits on Dec 12, 2023
-APPLEWIN_VERSION = 43ac65139365c1011fdc1ccdb73c1bcb3835fa86
+# Version: Commits on Dec 22, 2023
+APPLEWIN_VERSION = b8ad9712472bca1cc3e1eaa5b40b4b830d0cd945
 APPLEWIN_SITE = https://github.com/audetto/AppleWin
 APPLEWIN_SITE_METHOD=git
 APPLEWIN_GIT_SUBMODULES=YES
@@ -13,9 +13,10 @@ APPLEWIN_DEPENDENCIES = sdl2 sdl2_image minizip-zlib slirp libpcap boost
 
 APPLEWIN_SUPPORTS_IN_SOURCE_BUILD = NO
 
-APPLEWIN_CONF_OPTS  = -DCMAKE_BUILD_TYPE=Release
 APPLEWIN_CONF_OPTS += -DBUILD_SA2=ON
 APPLEWIN_CONF_OPTS += -DBUILD_LIBRETRO=ON
+APPLEWIN_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
+APPLEWIN_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 ifeq ($(BR2_PACKAGE_HAS_OPENGL),y)
 APPLEWIN_CONF_OPTS += -DSA2_OPENGL=ON

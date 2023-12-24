@@ -391,6 +391,47 @@ def createLibretroConfig(generator, system, controllers, guns, rom, bezel, shade
         else:
             retroarchConfig['input_libretro_device_p2'] = '513' # 6 button
 
+    ## Sega Megadrive style controller remap
+    if system.config['core'] in ['genesisplusgx', 'picodrive']:
+
+        valid_megadrive_controller_guids = [
+        # 8bitdo m30
+        "05000000c82d00005106000000010000",
+        "03000000c82d00000650000011010000",
+        "050000005e0400008e02000030110000",
+        # 8bitdo m30 modkit
+        "03000000c82d00000150000011010000",
+        "05000000c82d00000151000000010000",
+        ]
+
+        valid_megadrive_controller_names = [
+        "8BitDo M30 gamepad",
+        "8Bitdo  8BitDo M30 gamepad",
+        "8BitDo M30 Modkit",
+        "8Bitdo  8BitDo M30 Modkit",
+        ]
+
+        def update_megadrive_controller_config(controller_number):
+            # Remaps for Megadrive style controllers
+            remap_values = {
+                'btn_a': '0', 'btn_b': '1', 'btn_x': '9', 'btn_y': '10',
+                'btn_l': '11', 'btn_r': '8',
+            }
+
+            for btn, value in remap_values.items():
+                retroarchConfig[f'input_player{controller_number}_{btn}'] = value
+
+        if system.config['core'] == 'genesisplusgx':
+            option = 'gx'
+        if system.config['core'] == 'picodrive':
+            option = 'pd'
+
+        controller_list = sorted(controllers.items())
+        for i in range(1, min(5, len(controller_list) + 1)):
+            controller, pad = controller_list[i - 1]
+            if (pad.guid in valid_megadrive_controller_guids and pad.configName in valid_megadrive_controller_names) or (system.isOptSet(f'{option}_controller{i}_mapping') and system.config[f'{option}_controller{i}_mapping'] != 'retropad'):
+                update_megadrive_controller_config(i)
+
     ## Sega Mastersystem controller
     if system.config['core'] == 'genesisplusgx' and system.name == 'mastersystem':
         if system.isOptSet('controller1_ms'):
@@ -494,27 +535,42 @@ def createLibretroConfig(generator, system, controllers, guns, rom, bezel, shade
         retroarchConfig['wswan_rotate_display'] = wswanOrientation
 
     ## N64 Controller Remap
-    def update_controller_config(controller_number, option):
-        # Remaps for N64 style controllers
-        remap_values = {
-            'btn_a': '1', 'btn_b': '0', 'btn_x': '23', 'btn_y': '21',
-            'btn_l2': '22', 'btn_r2': '20', 'btn_select': '12',
-        }
+    if system.config['core'] in ['mupen64plus-next', 'parallel_n64']:
 
-        for btn, value in remap_values.items():
-            retroarchConfig[f'input_player{controller_number}_{btn}'] = value
+        valid_n64_controller_guids = [
+            # official nintendo switch n64 controller
+            "050000007e0500001920000001800000",
+            # 8bitdo n64 modkit
+            "05000000c82d00006928000000010000",
+            "030000007e0500001920000011810000",
+        ]
 
+        valid_n64_controller_names = [
+            "N64 Controller",
+            "Nintendo Co., Ltd. N64 Controller",
+            "8BitDo N64 Modkit",
+        ]
 
-    if system.config['core'] == 'mupen64plus-next':
-        option = 'mupen64plus-controller'
-    elif system.config['core'] == 'parallel_n64':
-        option = 'parallel-n64-controller'
-    else:
-        option = None
+        def update_n64_controller_config(controller_number):
+            # Remaps for N64 style controllers
+            remap_values = {
+                'btn_a': '1', 'btn_b': '0', 'btn_x': '23', 'btn_y': '21',
+                'btn_l2': '22', 'btn_r2': '20', 'btn_select': '12',
+            }
 
-    for i in range(1, 5):
-        if option and system.isOptSet(f'{option}{i}') and system.config[f'{option}{i}'] != 'retropad':
-            update_controller_config(i, option)
+            for btn, value in remap_values.items():
+                retroarchConfig[f'input_player{controller_number}_{btn}'] = value
+
+        if system.config['core'] == 'mupen64plus-next':
+            option = 'mupen64plus'
+        elif system.config['core'] == 'parallel_n64':
+            option = 'parallel-n64'
+
+        controller_list = sorted(controllers.items())
+        for i in range(1, min(5, len(controller_list) + 1)):
+            controller, pad = controller_list[i - 1]
+            if (pad.guid in valid_n64_controller_guids and pad.configName in valid_n64_controller_names) or (system.isOptSet(f'{option}-controller{i}') and system.config[f'{option}-controller{i}'] != 'retropad'):
+                update_n64_controller_config(i)
 
     ## PORTS
     ## Quake
