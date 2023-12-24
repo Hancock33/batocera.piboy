@@ -1,8 +1,8 @@
 diff --git a/cmake/BuildParameters.cmake b/cmake/BuildParameters.cmake
-index f9f496c4e..6683d1afa 100644
+index 49382cc59..7967f370a 100644
 --- a/cmake/BuildParameters.cmake
 +++ b/cmake/BuildParameters.cmake
-@@ -118,7 +118,7 @@ if(${PCSX2_TARGET_ARCHITECTURES} MATCHES "x86_64")
+@@ -104,7 +104,7 @@ if(${PCSX2_TARGET_ARCHITECTURES} MATCHES "x86_64")
  			set(ARCH_FLAG "-msse -msse2 -msse4.1 -mfxsr")
  		else()
  			#set(ARCH_FLAG "-march=native -fabi-version=6")
@@ -12,10 +12,10 @@ index f9f496c4e..6683d1afa 100644
  	elseif(NOT DEFINED ARCH_FLAG AND USE_CLANG_CL)
  		set(ARCH_FLAG "-msse4.1")
 diff --git a/pcsx2/CMakeLists.txt b/pcsx2/CMakeLists.txt
-index b4d2f3698..bb022238c 100644
+index c8db70240..9c13845c5 100644
 --- a/pcsx2/CMakeLists.txt
 +++ b/pcsx2/CMakeLists.txt
-@@ -786,9 +786,9 @@ if(DISABLE_ADVANCE_SIMD)
+@@ -749,9 +749,9 @@ if(DISABLE_ADVANCE_SIMD)
  		set(compile_options_avx  -msse4.1 -mavx)
  		set(compile_options_sse4 -msse4.1)
  	else()
