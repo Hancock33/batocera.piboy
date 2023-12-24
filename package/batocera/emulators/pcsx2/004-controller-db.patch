@@ -1,8 +1,8 @@
 diff --git a/pcsx2/Input/SDLInputSource.cpp b/pcsx2/Input/SDLInputSource.cpp
-index 4993e43514..38f6a1da47 100644
+index 78e9ab48e..514454aae 100644
 --- a/pcsx2/Input/SDLInputSource.cpp
 +++ b/pcsx2/Input/SDLInputSource.cpp
-@@ -29,7 +29,7 @@
+@@ -18,7 +18,7 @@
  #include <bit>
  #include <cmath>
  
