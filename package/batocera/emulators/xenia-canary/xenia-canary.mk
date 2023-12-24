@@ -3,10 +3,10 @@
 # xenia-canary
 #
 ################################################################################
-# Version: Commits on Dec 21, 2023
-XENIA_CANARY_VERSION = b86f5b090f80d7e9b957a8349bec2424062c0197
+# Version: Commits on Dec 23, 2023
+XENIA_CANARY_VERSION = e0f0dc7f3a58af49811dd82e2287e81c28ac50da
 XENIA_CANARY_SOURCE = xenia_canary.zip
-XENIA_CANARY_SITE = https://github.com/Hancock33/xenia-canary-issue-158/releases/download/"$(shell echo $(XENIA_CANARY_VERSION) | cut -c 1-7)"
+XENIA_CANARY_SITE = https://github.com/xenia-canary/xenia-canary/releases/download/"$(shell echo $(XENIA_CANARY_VERSION) | cut -c 1-7)"
 XENIA_CANARY_LICENSE = BSD
 XENIA_CANARY_LICENSE_FILE = LICENSE
 XENIA_CANARY_DEPENDENCIES = python-toml
