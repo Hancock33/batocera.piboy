@@ -39,10 +39,10 @@ index 4ea5b837399a..825e95da7e95 100644
                                                                       <mailto:nchatrad@amd.com>
  0xFD  all    linux/dm-ioctl.h
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 9104430e148e..0ad1723cd1e8 100644
+index 7cef2d2ef8d7..51e8fa4a9ff5 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -23386,6 +23386,15 @@ M:	David Härdeman <david@hardeman.nu>
+@@ -23385,6 +23385,15 @@ M:	David Härdeman <david@hardeman.nu>
  S:	Maintained
  F:	drivers/media/rc/winbond-cir.c
  
