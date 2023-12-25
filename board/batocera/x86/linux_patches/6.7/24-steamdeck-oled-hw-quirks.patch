@@ -115,7 +115,7 @@ index 8ed4a6fb147a..89fac01a8195 100644
  	tmp = REG_SET_FIELD(tmp, CP_HQD_PQ_CONTROL, KMD_QUEUE, 1);
  	mqd->cp_hqd_pq_control = tmp;
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index f2e7d6d1338b..01f6344840a9 100644
+index c8c00c2a5224..55ee4da3989e 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -151,6 +151,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_35_DMUB);
@@ -193,7 +193,7 @@ index f2e7d6d1338b..01f6344840a9 100644
  	return DIV_ROUND_CLOSEST(AMDGPU_MAX_BL_LEVEL * (brightness - min),
  				 max - min);
  }
-@@ -7359,7 +7381,8 @@ static int amdgpu_dm_connector_get_modes(struct drm_connector *connector)
+@@ -7356,7 +7378,8 @@ static int amdgpu_dm_connector_get_modes(struct drm_connector *connector)
  				drm_add_modes_noedid(connector, 1920, 1080);
  	} else {
  		amdgpu_dm_connector_ddc_get_modes(connector, edid);
@@ -203,7 +203,7 @@ index f2e7d6d1338b..01f6344840a9 100644
  		amdgpu_dm_connector_add_freesync_modes(connector, edid);
  	}
  	amdgpu_dm_fbc_init(connector);
-@@ -8115,7 +8138,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -8112,7 +8135,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -242,10 +242,10 @@ index b45fda96eaf6..308c2e7c833a 100644
  
  	/* TODO: DYNAMIC_VALIDATION needs to be implemented */
 diff --git a/drivers/gpu/drm/drm_panel_orientation_quirks.c b/drivers/gpu/drm/drm_panel_orientation_quirks.c
-index 8da0d90df673..080328e10d71 100644
+index 3d92f66e550c..b6a5548c7242 100644
 --- a/drivers/gpu/drm/drm_panel_orientation_quirks.c
 +++ b/drivers/gpu/drm/drm_panel_orientation_quirks.c
-@@ -415,6 +415,13 @@ static const struct dmi_system_id orientation_data[] = {
+@@ -409,6 +409,13 @@ static const struct dmi_system_id orientation_data[] = {
  		  DMI_EXACT_MATCH(DMI_PRODUCT_VERSION, "1"),
  		},
  		.driver_data = (void *)&lcd800x1280_rightside_up,
