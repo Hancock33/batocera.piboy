@@ -124,10 +124,10 @@ index f6d8757c2..000000000
 -    return 0;
 -}
 diff --git a/meson.build b/meson.build
-index 31ddca10d..d3ec90f37 100644
+index 8801b340a..5218258be 100644
 --- a/meson.build
 +++ b/meson.build
-@@ -395,6 +395,9 @@ conf_data.set10('C_TRACY', get_option('tracy'))
+@@ -399,6 +399,9 @@ conf_data.set10('C_TRACY', get_option('tracy'))
  conf_data.set10('C_FPU', true)
  conf_data.set10('C_FPU_X86', host_machine.cpu_family() in ['x86', 'x86_64'])
  
@@ -137,7 +137,7 @@ index 31ddca10d..d3ec90f37 100644
  if get_option('enable_debugger') != 'none'
      conf_data.set10('C_DEBUG', true)
  endif
-@@ -499,37 +502,24 @@ if host_machine.endian() == 'big'
+@@ -503,37 +506,24 @@ if host_machine.endian() == 'big'
      conf_data.set10('WORDS_BIGENDIAN', true)
  endif
  
@@ -192,7 +192,7 @@ index 31ddca10d..d3ec90f37 100644
  
  set_prio_code = '''
  #include <sys/resource.h>
-@@ -1010,6 +1000,17 @@ if host_machine.system() == 'darwin'
+@@ -1044,6 +1034,17 @@ if host_machine.system() == 'darwin'
          warning('''Core Services disabled because Frameworks is missing''')
      endif
      summary('CoreServices support', coreservices_dep.found())
@@ -210,7 +210,7 @@ index 31ddca10d..d3ec90f37 100644
  endif
  
  # Determine if system is capable of using ManyMouse library
-@@ -1069,6 +1070,10 @@ if host_machine.system() in ['windows', 'cygwin']
+@@ -1103,6 +1104,10 @@ if host_machine.system() in ['windows', 'cygwin']
      summary('Windows Multimedia support', winmm_dep.found())
  endif
  
@@ -222,10 +222,10 @@ index 31ddca10d..d3ec90f37 100644
  incdir = [
      include_directories('include', '.'),
 diff --git a/meson_options.txt b/meson_options.txt
-index 4dab801f8..b931ec917 100644
+index 926a76eb3..931038c91 100644
 --- a/meson_options.txt
 +++ b/meson_options.txt
-@@ -175,13 +175,6 @@ option(
+@@ -144,13 +144,6 @@ option(
      description: 'Select the dynamic core implementation.',
  )
  
