@@ -22,10 +22,10 @@ BR2_ZCAT="pigz -d -c"
 # required for utf-8
 BR2_TOOLCHAIN_GLIBC_GCONV_LIBS_COPY=y
 
-# Kernel 6.6
+# Kernel 6.7
 BR2_LINUX_KERNEL=n
 BR2_KERNEL_HEADERS_CUSTOM_TARBALL=y
-BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="$BR2_DL_DIR/linux/linux-6.6.tar.xz"
+BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="$BR2_DL_DIR/linux/linux-6.7-rc7.tar.gz"
 
 # BR2_TARGET_ROOTFS_TAR is not set
 BR2_ROOTFS_POST_BUILD_SCRIPT="$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/32bit/lib32bit-packager/x86_wow-packager.sh"
