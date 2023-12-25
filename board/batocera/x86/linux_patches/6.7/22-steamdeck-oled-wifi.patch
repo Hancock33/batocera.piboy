@@ -1,15 +1,15 @@
 diff --git a/drivers/net/wireless/ath/ath11k/core.c b/drivers/net/wireless/ath/ath11k/core.c
-index 0c6ecbb9a066..86069eef5495 100644
+index 0c6ecbb9a066..203e33c2233b 100644
 --- a/drivers/net/wireless/ath/ath11k/core.c
 +++ b/drivers/net/wireless/ath/ath11k/core.c
-@@ -16,6 +16,7 @@
- #include "debug.h"
+@@ -17,6 +17,7 @@
  #include "hif.h"
  #include "wow.h"
-+#include "wmi.h"
  #include "fw.h"
++#include "wmi.h"
  
  unsigned int ath11k_debug_mask;
+ EXPORT_SYMBOL(ath11k_debug_mask);
 @@ -122,6 +123,7 @@ static const struct ath11k_hw_params ath11k_hw_params[] = {
  		.tcl_ring_retry = true,
  		.tx_ring_size = DP_TCL_DATA_RING_SIZE,

@@ -127,7 +127,7 @@ index dc31984f71dc..53a73d9e8d0a 100644
  #define MAX_SIZE_PER_TLV_SEGMENT	(243)
  #define QCA_PRE_SHUTDOWN_CMD		(0xFC08)
 diff --git a/drivers/bluetooth/hci_qca.c b/drivers/bluetooth/hci_qca.c
-index 067e248e3599..325e26d25cdf 100644
+index 067e248e3599..bf2dc94b1541 100644
 --- a/drivers/bluetooth/hci_qca.c
 +++ b/drivers/bluetooth/hci_qca.c
 @@ -1865,7 +1865,7 @@ static int qca_setup(struct hci_uart *hu)
@@ -139,19 +139,7 @@ index 067e248e3599..325e26d25cdf 100644
  	}
  	bt_dev_info(hdev, "setting up %s", soc_name);
  
-@@ -1991,6 +1991,11 @@ static const struct hci_uart_proto qca_proto = {
- 	.dequeue	= qca_dequeue,
- };
- 
-+static const struct qca_device_data qca_soc_data_qca2066 = {
-+	.soc_type = QCA_QCA2066,
-+	.num_vregs = 0,
-+};
-+
- static const struct qca_device_data qca_soc_data_wcn3988 __maybe_unused = {
- 	.soc_type = QCA_WCN3988,
- 	.vregs = (struct qca_vreg []) {
-@@ -2579,6 +2584,7 @@ static const struct of_device_id qca_bluetooth_of_match[] = {
+@@ -2579,6 +2579,7 @@ static const struct of_device_id qca_bluetooth_of_match[] = {
  	{ .compatible = "qcom,wcn6750-bt", .data = &qca_soc_data_wcn6750},
  	{ .compatible = "qcom,wcn6855-bt", .data = &qca_soc_data_wcn6855},
  	{ .compatible = "qcom,wcn7850-bt", .data = &qca_soc_data_wcn7850},
@@ -159,7 +147,7 @@ index 067e248e3599..325e26d25cdf 100644
  	{ /* sentinel */ }
  };
  MODULE_DEVICE_TABLE(of, qca_bluetooth_of_match);
-@@ -2591,6 +2597,7 @@ static const struct acpi_device_id qca_bluetooth_acpi_match[] = {
+@@ -2591,6 +2592,7 @@ static const struct acpi_device_id qca_bluetooth_acpi_match[] = {
  	{ "DLA16390", (kernel_ulong_t)&qca_soc_data_qca6390 },
  	{ "DLB16390", (kernel_ulong_t)&qca_soc_data_qca6390 },
  	{ "DLB26390", (kernel_ulong_t)&qca_soc_data_qca6390 },
