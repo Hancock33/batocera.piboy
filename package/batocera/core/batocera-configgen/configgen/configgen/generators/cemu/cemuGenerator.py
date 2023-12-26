@@ -14,6 +14,7 @@ import filecmp
 import subprocess
 import glob
 from . import cemuControllers
+from pathlib import Path
 
 from utils.logger import get_logger
 eslog = get_logger(__name__)
@@ -22,6 +23,7 @@ cemuConfig  = batoceraFiles.CONF + '/cemu'
 cemuRomdir = '/userdata/roms/wiiu'
 cemuSaves = '/userdata/saves/wiiu'
 cemuDatadir = '/usr/bin/cemu'
+aco_debug = ''
 
 class CemuGenerator(Generator):
 
@@ -31,6 +33,11 @@ class CemuGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
 
+        if os.path.isfile('/sys/devices/virtual/dmi/id/board_name'):
+            boardid = Path('/sys/devices/virtual/dmi/id/board_name').read_text()
+            if 'Galileo' or 'Jupiter' in boardid:
+                aco_debug = "noopt"
+                    
         # in case of squashfs, the root directory is passed
         rpxrom = rom
         paths = list(glob.iglob(os.path.join(glob.escape(rom), '**/code/*.rpx'), recursive=True))
@@ -66,7 +73,8 @@ class CemuGenerator(Generator):
             env={"XDG_CONFIG_HOME":batoceraFiles.CONF, "XDG_CACHE_HOME":batoceraFiles.CACHE,
                 "XDG_DATA_HOME":batoceraFiles.SAVES,
                 "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers),
-                "SDL_JOYSTICK_HIDAPI": "0"
+                "SDL_JOYSTICK_HIDAPI": "0",
+                "ACO_DEBUG": aco_debug
             })
 
     @staticmethod
