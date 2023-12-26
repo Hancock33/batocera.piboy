@@ -26,7 +26,6 @@ import batoceraFiles
 import utils.videoMode as videoMode
 import utils.gunsUtils as gunsUtils
 import utils.wheelsUtils as wheelsUtils
-from pathlib import Path
 ############################
 from utils.logger import get_logger
 eslog = get_logger(__name__)
@@ -255,12 +254,6 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
         #os.environ.update({'PIPEWIRE_LATENCY': '1024/48000'})
         os.environ.update({'QT_QPA_PLATFORM': 'xcb'})
         os.environ.update({'QT_XCB_NO_XI2': '1'})
-
-        if os.path.isfile('/sys/devices/virtual/dmi/id/board_name'):
-            boardid = Path('/sys/devices/virtual/dmi/id/board_name').read_text()
-            if 'Galileo' or 'Jupiter' in boardid:
-                os.environ.update({'RADV_DEBUG': 'llvm'})
-                eslog.debug("Steamdeck GPU found, using LLVM compiler backend")
 
         if (system.config['core'] != 'flatpak'):
             os.environ.update({'QT_PLUGIN_PATH': '/usr/lib/qt6/plugins'})
