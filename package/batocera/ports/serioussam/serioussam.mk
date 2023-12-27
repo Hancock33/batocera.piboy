@@ -3,8 +3,8 @@
 # serioussam
 #
 ################################################################################
-# Version: Commits on Dec 26, 2023
-SERIOUSSAM_VERSION = ccb88fd322415f51513fa07ef72ee1ec05668d87
+# Version: Commits on Dec 20, 2023
+SERIOUSSAM_VERSION = d2c7cc22d2b62e971bafad05568639e3f5965342
 SERIOUSSAM_SITE = https://github.com/tx00100xt/SeriousSamClassic-VK.git
 SERIOUSSAM_SITE_METHOD=git
 SERIOUSSAM_GIT_SUBMODULES=YES
