@@ -13,11 +13,9 @@ import toml
 import glob
 import re
 from utils.logger import get_logger
-from pathlib import Path
 
 eslog = get_logger(__name__)
 sWine = 'lutris'
-radv_debug = ''
 
 class XeniaGenerator(Generator):
 
@@ -33,11 +31,6 @@ class XeniaGenerator(Generator):
             shutil.copy2(src_path, dest_path)
 
     def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
-
-        if os.path.isfile('/sys/devices/virtual/dmi/id/board_name'):
-            boardid = Path('/sys/devices/virtual/dmi/id/board_name').read_text()
-            if 'Galileo' or 'Jupiter' in boardid:
-                radv_debug = "llvm"
 
         wineprefix = batoceraFiles.SAVES + '/xenia-bottle'
         emupath = wineprefix + '/xenia'
@@ -302,8 +295,7 @@ class XeniaGenerator(Generator):
                 'LD_LIBRARY_PATH': '/usr/lib:/usr/wine/' + sWine + '/lib/wine',
                 'WINEESYNC': '1',
                 'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers),
-                'SDL_JOYSTICK_HIDAPI': '0',
-                'RADV_DEBUG': radv_debug
+                'SDL_JOYSTICK_HIDAPI': '0'
             }
         )
 
