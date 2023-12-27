@@ -124,10 +124,10 @@ index f6d8757c2..000000000
 -    return 0;
 -}
 diff --git a/meson.build b/meson.build
-index 8801b340a..5218258be 100644
+index 63e753339..3d8b8640b 100644
 --- a/meson.build
 +++ b/meson.build
-@@ -399,6 +399,9 @@ conf_data.set10('C_TRACY', get_option('tracy'))
+@@ -405,6 +405,9 @@ conf_data.set10('C_TRACY', get_option('tracy'))
  conf_data.set10('C_FPU', true)
  conf_data.set10('C_FPU_X86', host_machine.cpu_family() in ['x86', 'x86_64'])
  
@@ -137,11 +137,10 @@ index 8801b340a..5218258be 100644
  if get_option('enable_debugger') != 'none'
      conf_data.set10('C_DEBUG', true)
  endif
-@@ -503,37 +506,24 @@ if host_machine.endian() == 'big'
-     conf_data.set10('WORDS_BIGENDIAN', true)
+@@ -516,40 +519,24 @@ if host_machine.endian() == 'big'
  endif
  
--
+ 
 -# Get host page size
 -# ~~~~~~~~~~~~~~~~~~
 -# When detecting the page size, we use Meson's configured
@@ -164,6 +163,9 @@ index 8801b340a..5218258be 100644
 -        name: 'Query host page size',
 -    )
 -    if pagesize_cmd.returncode() == 0
+-        pagesize = pagesize_cmd.stdout().strip().to_int()
+-    else
+-        error('''Unable to detect the host's page size''')
 +# 64-bit Power ISA can run with either 4K or 64K page size.
 +# (32-bit Power ISA and PowerPC are always 4K.)
 +if host_machine.cpu_family() in ['ppc64', 'ppc64le', 'powerpc64le']
@@ -171,14 +173,7 @@ index 8801b340a..5218258be 100644
 +    if pagesize_cmd.returncode() != 0
 +        error('''error executing getconf: unable to determine host architecture page size for ppc64 dynamic core''')
 +     else
-         pagesize = pagesize_cmd.stdout().strip().to_int()
--    else
--        error('''Unable to detect the host's page size''')
--    endif
--endif
--conf_data.set('PAGESIZE', pagesize)
--summary('Host page size (bytes)', pagesize.to_string(), section: 'Build Summary')
--
++       pagesize = pagesize_cmd.stdout().strip().to_int()
 +        if pagesize < 4096
 +            # unexpected; did getconf return an empty or bogus string?
 +            error('''need at least 4096-byte pages, getconf PAGESIZE returned '''+pagesize_cmd.stdout())
@@ -187,12 +182,19 @@ index 8801b340a..5218258be 100644
 +                conf_data.set('PAGESIZE', pagesize)
 +            endif
 +        endif
-+     endif
-+ endif
+     endif
+ endif
+-conf_data.set('PAGESIZE', pagesize)
+-summary(
+-    'Host page size (bytes)',
+-    pagesize.to_string(),
+-    section: 'Build Summary',
+-)
+-
  
  set_prio_code = '''
  #include <sys/resource.h>
-@@ -1044,6 +1034,17 @@ if host_machine.system() == 'darwin'
+@@ -1119,6 +1106,17 @@ if host_machine.system() == 'darwin'
          warning('''Core Services disabled because Frameworks is missing''')
      endif
      summary('CoreServices support', coreservices_dep.found())
@@ -210,7 +212,7 @@ index 8801b340a..5218258be 100644
  endif
  
  # Determine if system is capable of using ManyMouse library
-@@ -1103,6 +1104,10 @@ if host_machine.system() in ['windows', 'cygwin']
+@@ -1178,6 +1176,10 @@ if host_machine.system() in ['windows', 'cygwin']
      summary('Windows Multimedia support', winmm_dep.found())
  endif
  
