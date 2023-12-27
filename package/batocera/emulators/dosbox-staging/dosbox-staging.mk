@@ -13,7 +13,7 @@ DOSBOX_STAGING_CPPFLAGS = -DNDEBUG
 DOSBOX_STAGING_CFLAGS   = -O3 -fstrict-aliasing -fno-signed-zeros -fno-trapping-math -fassociative-math -frename-registers -ffunction-sections -fdata-sections
 DOSBOX_STAGING_CXXFLAGS = -O3 -fstrict-aliasing -fno-signed-zeros -fno-trapping-math -fassociative-math -frename-registers -ffunction-sections -fdata-sections
 
-DOSBOX_STAGING_CONF_OPTS += -Duse_zlib_ng=system
+DOSBOX_STAGING_CONF_OPTS += -Duse_zlib_ng=false
 
 ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 DOSBOX_STAGING_CONF_OPTS += -Duse_opengl=false
