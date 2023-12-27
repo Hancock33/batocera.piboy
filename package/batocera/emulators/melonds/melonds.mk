@@ -3,8 +3,8 @@
 # melonds
 #
 ################################################################################
-# Version: Commits on Dec 26, 2023
-MELONDS_VERSION = cbd65a131ed4eb6938964e57de3385ca890b6091
+# Version: Commits on Dec 27, 2023
+MELONDS_VERSION = fa835ecf68910baa9bc355be4c4eb1dc66e65b0f
 MELONDS_SITE = https://github.com/melonDS-emu/melonDS.git
 MELONDS_SITE_METHOD=git
 MELONDS_GIT_SUBMODULES=YES
