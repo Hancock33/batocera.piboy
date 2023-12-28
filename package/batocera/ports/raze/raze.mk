@@ -3,8 +3,8 @@
 # raze
 #
 ################################################################################
-# Version: Commits on Dec 27, 2023
-RAZE_VERSION = 542997a96708e21789a6105ceee329111ea87fb0
+# Version: Commits on Nov 27, 2023 (branch@1.8)
+RAZE_VERSION = d26dfa28b99a218e43a77813870934fc77e74139
 RAZE_SITE = $(call github,ZDoom,Raze,$(RAZE_VERSION))
 RAZE_LICENSE = GPLv2
 RAZE_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic webp host-zmusic host-raze
@@ -16,6 +16,7 @@ HOST_RAZE_DEPENDENCIES = zlib bzip2
 HOST_RAZE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 HOST_RAZE_CONF_OPTS += -DSKIP_INSTALL_ALL=ON
 HOST_RAZE_CONF_OPTS += -DTOOLS_ONLY=ON
+HOST_RAZE_CONF_OPTS += -DHAVE_VULKAN=OFF
 HOST_RAZE_SUPPORTS_IN_SOURCE_BUILD = NO
 
 define HOST_RAZE_INSTALL_CMDS

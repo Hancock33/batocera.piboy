@@ -3,8 +3,8 @@
 # gzdoom
 #
 ################################################################################
-# Version: Commits on Dec 27, 2023
-GZDOOM_VERSION = eb2f2638032e1659f8ffdadad9438bdb34f7e487
+# Version: Commits on Oct 31, 2023 (branch@4.11)
+GZDOOM_VERSION = 99ae4b7c4c8112ef12e2d6a40c9c15ed1ca8db6b
 GZDOOM_SITE = $(call github,ZDoom,gzdoom,$(GZDOOM_VERSION))
 GZDOOM_LICENSE = GPL-3.0
 GZDOOM_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic libvpx webp host-zmusic host-gzdoom
@@ -16,6 +16,7 @@ HOST_GZDOOM_DEPENDENCIES = zlib bzip2 host-webp
 HOST_GZDOOM_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 HOST_GZDOOM_CONF_OPTS += -DSKIP_INSTALL_ALL=ON
 HOST_GZDOOM_CONF_OPTS += -DTOOLS_ONLY=ON
+HOST_GZDOOM_CONF_OPTS += -DHAVE_VULKAN=OFF
 HOST_GZDOOM_SUPPORTS_IN_SOURCE_BUILD = NO
 
 define HOST_GZDOOM_INSTALL_CMDS
