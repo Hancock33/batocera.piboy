@@ -19,10 +19,10 @@ class DuckstationLegacyGenerator(Generator):
         if os.path.splitext(rom)[1] == ".m3u":
             rom = rewriteM3uFullPath(rom)
 
-        if os.path.exists('/usr/bin/duckstation-qt'):
-            commandArray = ["duckstation-qt", "-batch", "-nogui", "--", rom ]
+        if os.path.exists('/usr/bin/duckstation-legacy/duckstation-qt'):
+            commandArray = ["/usr/bin/duckstation-legacy/duckstation-qt", "-batch", "-nogui", "--", rom ]
         else:
-            commandArray = ["duckstation-nogui", "-batch", "-fullscreen", "--", rom ]
+            commandArray = ["/usr/bin/duckstation-legacy/duckstation-nogui", "-batch", "-fullscreen", "--", rom ]
 
         settings = configparser.ConfigParser(interpolation=None)
         # To prevent ConfigParser from converting to lower case
