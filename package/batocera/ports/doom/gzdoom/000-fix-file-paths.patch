@@ -119,7 +119,7 @@ index 112e92ee7..bced0681c 100644
  	// Don't use GAME_DIR and such so that ZDoom and its child ports can
  	// share the node cache.
 -	FString path = NicePath("$HOME/.config/zdoom/cache");
-+	FString path = NicePath("/userdata/saves/gzdoom/cache");
++	FString path = NicePath("/userdata/system/cache/gzdoom");
  	if (create)
  	{
  		CreatePath(path.GetChars());
