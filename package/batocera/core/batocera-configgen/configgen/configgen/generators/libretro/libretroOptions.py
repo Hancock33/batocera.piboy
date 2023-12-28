@@ -833,7 +833,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         if system.isOptSet('video_standard'):
             coreSettings.save('puae2021_video_standard', system.config['video_standard'])
         else:
-            coreSettings.save('puae2021_video_standard', '"PAL"')
+            coreSettings.save('puae2021_video_standard', '"PAL auto"')
         # Video Resolution
         if system.isOptSet('video_resolution') and system.config['video_resolution'] != 'automatic':
             coreSettings.save('puae2021_video_resolution', system.config['video_resolution'])
