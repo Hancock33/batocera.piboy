@@ -1,6 +1,8 @@
---- a/CMakeLists.txt	2023-07-12 09:46:32.433403667 +0200
-+++ b/CMakeLists.txt	2023-07-12 09:47:10.218043808 +0200
-@@ -20,6 +20,8 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 764b27070..e417658f5 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -59,6 +59,8 @@ list( APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake )
  include( FindPackageHandleStandardArgs )
  
  # Support cross compiling
@@ -9,7 +11,7 @@
  option( FORCE_CROSSCOMPILE "Turn on cross compiling." NO )
  if( FORCE_CROSSCOMPILE )
  	set( CMAKE_CROSSCOMPILING TRUE )
-@@ -451,8 +451,10 @@ endif()
+@@ -449,8 +451,10 @@ endif()
  add_subdirectory( libraries/lzma )
  add_subdirectory( libraries/miniz )
  add_subdirectory( tools )

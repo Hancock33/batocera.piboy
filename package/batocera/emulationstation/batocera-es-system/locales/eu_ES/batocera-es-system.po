@@ -14196,6 +14196,41 @@ msgctxt "keys_files"
 msgid "Open DuckStation Quick Menu"
 msgstr "Ireki Duckstation Menu azkarra"
 
+#. TRANSLATION: psx.duckstation.keys
+msgctxt "keys_files"
+msgid "Restart Game"
+msgstr "Jokoa berhasieratu"
+
+#. TRANSLATION: psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "Pantaila argazkia"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot -"
+msgstr "Zirrikitua -"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot +"
+msgstr "Zirrikitua +"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Rewind"
+msgstr "Atzera bota"
+
+#. TRANSLATION: psx.duckstation.keys
+msgctxt "keys_files"
+msgid "Next Disc (m3u)"
+msgstr "Hurrengo diska (m3u)"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Fast Forward"
+msgstr "Azkar aurreratu"
+
 #. TRANSLATION: dreamcast.redream.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, dreamcast.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Hide the bezel"
@@ -14210,11 +14245,6 @@ msgstr "Menua"
 msgctxt "keys_files"
 msgid "Graphics filtering on/off"
 msgstr "Filtro grafikoa gaitu/desgaitu"
-
-#. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys, rtcw.keys
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Pantaila argazkia"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -14325,26 +14355,6 @@ msgstr "Aldatu pantailak"
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Xagu Klik-a"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot -"
-msgstr "Zirrikitua -"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot +"
-msgstr "Zirrikitua +"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "Atzera bota"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Azkar aurreratu"
 
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
@@ -15263,14 +15273,6 @@ msgstr "Gordetze Azkarra"
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Gorde 1 Egoera Zirrikitua"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Jokoa berhasieratu"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Hurrengo diska (m3u)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"

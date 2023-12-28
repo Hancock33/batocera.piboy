@@ -54,5 +54,7 @@ define GZDOOM_INSTALL
 	mv $(TARGET_DIR)/usr/bin/gzdoom $(TARGET_DIR)/usr/share/gzdoom/gzdoom
 endef
 
+GZDOOM_POST_INSTALL_TARGET_HOOKS += GZDOOM_INSTALL
+
 $(eval $(cmake-package))
 $(eval $(host-cmake-package))

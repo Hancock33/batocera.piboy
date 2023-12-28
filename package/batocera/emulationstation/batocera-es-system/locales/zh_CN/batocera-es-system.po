@@ -13960,6 +13960,41 @@ msgctxt "keys_files"
 msgid "Open DuckStation Quick Menu"
 msgstr "打开DuckStation快速菜单"
 
+#. TRANSLATION: psx.duckstation.keys
+msgctxt "keys_files"
+msgid "Restart Game"
+msgstr "重置游戏"
+
+#. TRANSLATION: psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "截图"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot -"
+msgstr "插槽-"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot +"
+msgstr "插槽+"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Rewind"
+msgstr "倒带"
+
+#. TRANSLATION: psx.duckstation.keys
+msgctxt "keys_files"
+msgid "Next Disc (m3u)"
+msgstr "下一个光盘（m3u）"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Fast Forward"
+msgstr "快进"
+
 #. TRANSLATION: dreamcast.redream.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, dreamcast.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Hide the bezel"
@@ -13974,11 +14009,6 @@ msgstr "菜单"
 msgctxt "keys_files"
 msgid "Graphics filtering on/off"
 msgstr "打开/关闭图形过滤"
-
-#. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys, rtcw.keys
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "截图"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -14089,26 +14119,6 @@ msgstr "交换屏幕"
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "鼠标点击"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot -"
-msgstr "插槽-"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot +"
-msgstr "插槽+"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "倒带"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "快进"
 
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
@@ -15018,14 +15028,6 @@ msgstr "快速保存"
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "保存状态插槽1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "重置游戏"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "下一个光盘（m3u）"
 
 #~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"

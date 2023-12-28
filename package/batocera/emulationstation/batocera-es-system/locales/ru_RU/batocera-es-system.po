@@ -14161,6 +14161,41 @@ msgctxt "keys_files"
 msgid "Open DuckStation Quick Menu"
 msgstr "Открыть быстрое меню DuckStation"
 
+#. TRANSLATION: psx.duckstation.keys
+msgctxt "keys_files"
+msgid "Restart Game"
+msgstr "Перезапустить игру"
+
+#. TRANSLATION: psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "Скриншот"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot -"
+msgstr "Слот -"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot +"
+msgstr "Слот +"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Rewind"
+msgstr "Перемотка"
+
+#. TRANSLATION: psx.duckstation.keys
+msgctxt "keys_files"
+msgid "Next Disc (m3u)"
+msgstr "Следующий диск (m3u)"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Fast Forward"
+msgstr "Быстрая перемотка"
+
 #. TRANSLATION: dreamcast.redream.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, dreamcast.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Hide the bezel"
@@ -14175,11 +14210,6 @@ msgstr "Меню"
 msgctxt "keys_files"
 msgid "Graphics filtering on/off"
 msgstr "Фильтрация графики вкл/выкл"
-
-#. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys, rtcw.keys
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Скриншот"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -14290,26 +14320,6 @@ msgstr "Смена экранов"
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Клик мышью"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot -"
-msgstr "Слот -"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot +"
-msgstr "Слот +"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "Перемотка"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Быстрая перемотка"
 
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
@@ -15229,14 +15239,6 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Сохранение в Слот 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Перезапустить игру"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Следующий диск (m3u)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"

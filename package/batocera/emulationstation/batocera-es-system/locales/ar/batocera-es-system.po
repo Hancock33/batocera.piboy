@@ -14036,6 +14036,41 @@ msgctxt "keys_files"
 msgid "Open DuckStation Quick Menu"
 msgstr "افتح القائمة السريعة لـDuckStation"
 
+#. TRANSLATION: psx.duckstation.keys
+msgctxt "keys_files"
+msgid "Restart Game"
+msgstr "أعد تشغيل اللعبة"
+
+#. TRANSLATION: psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "لقطة شاشة"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot -"
+msgstr "- فتحة"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot +"
+msgstr "+ فتحة"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Rewind"
+msgstr "الترجيع"
+
+#. TRANSLATION: psx.duckstation.keys
+msgctxt "keys_files"
+msgid "Next Disc (m3u)"
+msgstr ""
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Fast Forward"
+msgstr "تسريع إلى الأمام"
+
 #. TRANSLATION: dreamcast.redream.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, dreamcast.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Hide the bezel"
@@ -14050,11 +14085,6 @@ msgstr "القائمة"
 msgctxt "keys_files"
 msgid "Graphics filtering on/off"
 msgstr ""
-
-#. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys, rtcw.keys
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "لقطة شاشة"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -14165,26 +14195,6 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "النقر بالفأرة"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot -"
-msgstr "- فتحة"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot +"
-msgstr "+ فتحة"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "الترجيع"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "تسريع إلى الأمام"
 
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
@@ -14667,10 +14677,6 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "احفظ الحالة في فتحة ١"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "أعد تشغيل اللعبة"
 
 #~ msgctxt "keys_files"
 #~ msgid "Button A"

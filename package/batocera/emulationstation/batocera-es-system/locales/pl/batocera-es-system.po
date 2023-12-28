@@ -14204,6 +14204,41 @@ msgctxt "keys_files"
 msgid "Open DuckStation Quick Menu"
 msgstr "Otwórz menu podręczne DuckStation"
 
+#. TRANSLATION: psx.duckstation.keys
+msgctxt "keys_files"
+msgid "Restart Game"
+msgstr "Restart gry"
+
+#. TRANSLATION: psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "Zrzut ekranu"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot -"
+msgstr "Gniazdo -"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot +"
+msgstr "Gniazdo +"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Rewind"
+msgstr "Przewijanie do tyłu"
+
+#. TRANSLATION: psx.duckstation.keys
+msgctxt "keys_files"
+msgid "Next Disc (m3u)"
+msgstr "Następny dysk (m3u)"
+
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Fast Forward"
+msgstr "Przewijanie do przodu"
+
 #. TRANSLATION: dreamcast.redream.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, dreamcast.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Hide the bezel"
@@ -14218,11 +14253,6 @@ msgstr "Menu"
 msgctxt "keys_files"
 msgid "Graphics filtering on/off"
 msgstr "Wł./wył. filtrowania grafiki"
-
-#. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys, rtcw.keys
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Zrzut ekranu"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -14333,26 +14363,6 @@ msgstr "Zamień ekrany"
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Kliknięcie myszą"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot -"
-msgstr "Gniazdo -"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot +"
-msgstr "Gniazdo +"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "Przewijanie do tyłu"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Przewijanie do przodu"
 
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
@@ -15291,14 +15301,6 @@ msgstr "Szybkie zapisywanie"
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Zapis stanu gniazda 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Restart gry"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Następny dysk (m3u)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
