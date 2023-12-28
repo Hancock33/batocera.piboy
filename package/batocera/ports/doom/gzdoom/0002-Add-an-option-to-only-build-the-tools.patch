@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 362d2d667..6df02dc8b 100644
+index 94101d28a..e5782840b 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -52,6 +52,8 @@ list( APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake )
