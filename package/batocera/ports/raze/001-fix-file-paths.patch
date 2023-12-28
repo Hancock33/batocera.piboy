@@ -159,7 +159,7 @@ index a135419d7..0b735e7a5 100644
  	}
  
 diff --git a/source/core/gamecontrol.cpp b/source/core/gamecontrol.cpp
-index a8e9f8a98..7b0094504 100644
+index 62241abb0..978256363 100644
 --- a/source/core/gamecontrol.cpp
 +++ b/source/core/gamecontrol.cpp
 @@ -1037,7 +1037,7 @@ int RunGame()

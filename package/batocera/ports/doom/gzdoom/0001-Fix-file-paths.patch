@@ -41,7 +41,7 @@ index 4f29bb76e..0d5b56261 100644
  	I_StartupJoysticks();
  
 diff --git a/src/common/platform/posix/unix/i_specialpaths.cpp b/src/common/platform/posix/unix/i_specialpaths.cpp
-index 112e92ee7..bced0681c 100644
+index 112e92ee7..adc8f4151 100644
 --- a/src/common/platform/posix/unix/i_specialpaths.cpp
 +++ b/src/common/platform/posix/unix/i_specialpaths.cpp
 @@ -45,59 +45,7 @@
