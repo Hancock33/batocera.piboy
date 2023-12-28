@@ -1,8 +1,8 @@
 diff --git a/meson.build b/meson.build
-index 56b69dad0..31ddca10d 100644
+index 8801b340a..a11c703cf 100644
 --- a/meson.build
 +++ b/meson.build
-@@ -773,29 +773,8 @@ can_trust_system_speexdsp = (
+@@ -786,29 +786,8 @@ can_trust_system_speexdsp = (
  
  # Test the library. Trust is dropped if the test fails.
  if can_trust_system_speexdsp

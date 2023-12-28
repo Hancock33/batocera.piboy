@@ -396,7 +396,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 
     # leds
     select BR2_PACKAGE_AYN_PLATFORM                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
-    
+
     help
         Install the batocera.linux system files
 
@@ -793,7 +793,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
 
     # 3DS
     select BR2_PACKAGE_CITRA                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
-    #select BR2_PACKAGE_LIBRETRO_CITRA                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY #disabled, build errors. not well maintained.
+    select BR2_PACKAGE_LIBRETRO_CITRA                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # PSP
     select BR2_PACKAGE_PPSSPP                               if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
@@ -917,7 +917,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 
     # EDuke32 requires OpenGL or GLES 3.0
     select BR2_PACKAGE_EDUKE32                              if BR2_PACKAGE_BATOCERA_GLES3                   # Duke3D / Shadow Warrior / Ion fury
-    
+
     # GZDoom and Raze require both 64-bit arch (x86,arm,riscv,....) AND OpenGL or GLES 3.0
     select BR2_PACKAGE_GZDOOM                               if BR2_ARCH_IS_64 && BR2_PACKAGE_BATOCERA_GLES3
     select BR2_PACKAGE_RAZE                                 if BR2_ARCH_IS_64 && BR2_PACKAGE_BATOCERA_GLES3
@@ -1069,7 +1069,10 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     select BR2_PACKAGE_BATOCERA_SEGADC
 
     # PSX
-    select BR2_PACKAGE_DUCKSTATION                          if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835    && \
+    select BR2_PACKAGE_DUCKSTATION                          if  BR2_PACKAGE_BATOCERA_GLES3               # newer versions of duckstation are stricter on OpenGL 3.1
+
+    select BR2_PACKAGE_DUCKSTATION_LEGACY                   if  !BR2_PACKAGE_BATOCERA_GLES3             && \
+                                                                !BR2_PACKAGE_BATOCERA_TARGET_BCM2835    && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_H3         && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3326     && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3128     && \
@@ -1086,7 +1089,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_BEETLE_PSX                  if  !BR2_PACKAGE_BATOCERA_RPI_ANY           && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_H3         && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3326     || BR2_PACKAGE_BATOCERA_BCM27XX
-
 
     # Saturn
     select BR2_PACKAGE_LIBRETRO_BEETLE_SATURN               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712

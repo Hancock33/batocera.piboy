@@ -60,14 +60,14 @@ class Pcsx2Generator(Generator):
         # wheels won't work correctly when SDL_GAMECONTROLLERCONFIG is set. excluding wheels from SDL_GAMECONTROLLERCONFIG doesn't fix too.
         if not (system.isOptSet('use_wheels') and system.getOptBoolean('use_wheels') and len(wheels) > 0):
             envcmd["SDL_GAMECONTROLLERCONFIG"] = controllersConfig.generateSdlGameControllerConfig(playersControllers)
-        
+
         # ensure we have the patches.zip file to avoid message.
         if not os.path.exists(pcsx2BiosDir):
             os.makedirs(pcsx2BiosDir)
         if not os.path.exists(pcsx2Patches):
             source_file = "/usr/bin/pcsx2/resources/patches.zip"
             shutil.copy(source_file, pcsx2Patches)
-        
+
         return Command.Command(
             array=commandArray,
             env=envcmd
@@ -154,6 +154,9 @@ def configureINI(config_directory, bios_directory, system, rom, controllers, gun
     ## [Folders]
     if not pcsx2INIConfig.has_section("Folders"):
         pcsx2INIConfig.add_section("Folders")
+
+    # remove inconsistent SaveStates casing if it exists
+    pcsx2INIConfig.remove_option("Folders", "SaveStates")
 
     # set the folders we want
     pcsx2INIConfig.set("Folders", "Bios", "../../../bios/ps2")
