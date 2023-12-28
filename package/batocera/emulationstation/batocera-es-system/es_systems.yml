@@ -4560,6 +4560,7 @@ vpinball:
                         /userdata/system/configs/vpinball/pinmame/roms:     PinMAME ROMs directory
                         /userdata/system/configs/vpinball/pinmame/nvram:    PinMAME NVRAM directory
                         /userdata/system/configs/vpinball/pinmame/altcolor: Serum colorizations directory <rom_name>/<rom.cRZ>
+                        /userdata/system/configs/vpinball/pinmame/altsound: AltSound directory <rom_name>/
                         /userdata/system/configs/vpinball/pinmame/vpinball: VPinball PinMAME settings directory
 
                         Music
@@ -4593,6 +4594,7 @@ vpinball:
                         /userdata/system/configs/vpinball/pinmame/roms:     Répertoire des ROMs PinMAME
                         /userdata/system/configs/vpinball/pinmame/nvram :   Répertoire NVRAM PinMAME
                         /userdata/system/configs/vpinball/pinmame/altcolor: Répertoire des colorisations Serum <nom_rom>/<rom.cRZ>
+                        /userdata/system/configs/vpinball/pinmame/altsound: Répertoire des AltSound <rom_name>/
                         /userdata/system/configs/vpinball/pinmame/vpinball: Répertoire des paramètres VPinball pour PinMAME
 
                         Musique
@@ -6237,6 +6239,7 @@ psx:
       mednafen_psx:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PSX] }
     duckstation:
       duckstation:      { requireAnyOf: [BR2_PACKAGE_DUCKSTATION]  }
+      duckstation-legacy: { requireAnyOf: [BR2_PACKAGE_DUCKSTATION_LEGACY] }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:psx
   comment_fr:           |

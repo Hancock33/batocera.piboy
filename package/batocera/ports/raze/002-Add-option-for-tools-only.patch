@@ -1,0 +1,26 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 764b27070..e417658f5 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -59,6 +59,8 @@ list( APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake )
+ include( FindPackageHandleStandardArgs )
+ 
+ # Support cross compiling
++option(TOOLS_ONLY "Only build the tools, not gzdoom itself (useful for cross-compiling)" OFF)
++
+ option( FORCE_CROSSCOMPILE "Turn on cross compiling." NO )
+ if( FORCE_CROSSCOMPILE )
+ 	set( CMAKE_CROSSCOMPILING TRUE )
+@@ -449,8 +451,10 @@ endif()
+ add_subdirectory( libraries/lzma )
+ add_subdirectory( libraries/miniz )
+ add_subdirectory( tools )
+-add_subdirectory( wadsrc )
+-add_subdirectory( source )
++if ( NOT TOOLS_ONLY )
++    add_subdirectory( wadsrc )
++    add_subdirectory( source )
++endif()
+ 
+ if( NOT CMAKE_CROSSCOMPILING )
+ 	export(TARGETS ${CROSS_EXPORTS} FILE "${CMAKE_BINARY_DIR}/ImportExecutables.cmake" )

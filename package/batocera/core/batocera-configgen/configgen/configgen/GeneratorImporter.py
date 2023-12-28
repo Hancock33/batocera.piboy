@@ -123,6 +123,10 @@ def getGenerator(emulator):
         from generators.duckstation.duckstationGenerator import DuckstationGenerator
         return DuckstationGenerator()
 
+    if emulator == 'duckstation-legacy':
+        from generators.duckstation_legacy.duckstationLegacyGenerator import DuckstationLegacyGenerator
+        return DuckstationLegacyGenerator()
+
     if emulator == "dxx-rebirth":
         from generators.dxx_rebirth.dxx_rebirthGenerator import DXX_RebirthGenerator
         return DXX_RebirthGenerator()

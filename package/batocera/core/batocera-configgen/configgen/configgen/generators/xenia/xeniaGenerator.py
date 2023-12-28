@@ -31,6 +31,7 @@ class XeniaGenerator(Generator):
             shutil.copy2(src_path, dest_path)
 
     def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+
         wineprefix = batoceraFiles.SAVES + '/xenia-bottle'
         emupath = wineprefix + '/xenia'
         canarypath = wineprefix + '/xenia-canary'
@@ -292,13 +293,9 @@ class XeniaGenerator(Generator):
             env={
                 'WINEPREFIX': wineprefix,
                 'LD_LIBRARY_PATH': '/usr/lib:/usr/wine/' + sWine + '/lib/wine',
-                'LIBGL_DRIVERS_PATH': '/usr/lib/dri',
                 'WINEESYNC': '1',
                 'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers),
-                'SDL_JOYSTICK_HIDAPI': '0',
-                # hum pw 0.2 and 0.3 are hardcoded, not nice
-                'SPA_PLUGIN_DIR': '/usr/lib/spa-0.2',
-                'PIPEWIRE_MODULE_DIR': '/usr/lib/pipewire-0.3'
+                'SDL_JOYSTICK_HIDAPI': '0'
             }
         )
 
