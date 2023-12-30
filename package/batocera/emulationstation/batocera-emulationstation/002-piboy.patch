@@ -1,0 +1,241 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 8bb253bb..1866bc93 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -9,6 +9,8 @@ option(BCM "BCM host" OFF)
+ 
+ option(BATOCERA "Set to ON to enable BATOCERA specific code" OFF)
+ option(RETROBAT "Set to ON to enable RETROBAT specific code" OFF)
++option(PIBOY "Set to ON to enable DMG Piboy compatibility" OFF)
++option(NOUPDATE "Set to ON to disable system updates" OFF)
+ 
+ option(ENABLE_FILEMANAGER "Set to ON to enable f1 shortcut for filesystem" OFF)
+ option(DISABLE_KODI "Set to ON to disable kodi in menu" OFF)
+@@ -97,6 +99,16 @@ if(RETROBAT)
+   add_definitions(-DRETROBAT)
+ endif()
+ 
++if(PIBOY)
++  MESSAGE("Piboy build")
++  add_definitions(-DPIBOY)
++endif()
++
++if(NOUPDATE)
++  MESSAGE("Update disabled")
++  add_definitions(-DNOUPDATE)
++endif()
++
+ # disable kodi menu
+ if(DISABLE_KODI)
+   MESSAGE("Kodi disabled")
+diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
+index fd1678e1..0851a797 100644
+--- a/es-app/src/guis/GuiMenu.cpp
++++ b/es-app/src/guis/GuiMenu.cpp
+@@ -73,8 +73,15 @@
+ #define fake_gettext_architecture _("Architecture")
+ #define fake_gettext_diskformat   _("Disk format")
+ #define fake_gettext_temperature  _("Temperature")
++#if PIBOY
++#define fake_gettext_fan          _("Fan speed")
++#endif
+ #define fake_gettext_avail_memory _("Available memory")
+ #define fake_gettext_battery      _("Battery")
++#if PIBOY
++#define fake_gettext_battery_volts   _("Battery voltage")
++#define fake_gettext_battery_amps    _("Battery current")
++#endif
+ #define fake_gettext_model        _("Model")
+ #define fake_gettext_cpu_model    _("Cpu model")
+ #define fake_gettext_cpu_number   _("Cpu number")
+@@ -181,9 +188,12 @@ GuiMenu::GuiMenu(Window *window, bool animate) : GuiComponent(window), mMenu(win
+ 		if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::BATOCERASTORE) || ApiSystem::getInstance()->isScriptingSupported(ApiSystem::THEMESDOWNLOADER) ||
+ 			(ApiSystem::getInstance()->isScriptingSupported(ApiSystem::THEBEZELPROJECT) && ApiSystem::getInstance()->isScriptingSupported(ApiSystem::DECORATIONS)) ||
+ 			ApiSystem::getInstance()->isScriptingSupported(ApiSystem::UPGRADE))
+-			addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
+-
+-		addEntry(_("SYSTEM SETTINGS").c_str(), true, [this] { openSystemSettings(); }, "iconSystem");
++			#if !NOUPDATE
++				addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
++			#else
++				addEntry(_("DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
++			#endif	
++			addEntry(_("SYSTEM SETTINGS").c_str(), true, [this] { openSystemSettings(); }, "iconSystem");
+ 	}
+ 	else
+ 	{
+@@ -855,7 +865,11 @@ void GuiMenu::openDeveloperSettings()
+ 
+ void GuiMenu::openUpdatesSettings()
+ {
+-	GuiSettings *updateGui = new GuiSettings(mWindow, _("UPDATES & DOWNLOADS").c_str());
++	#if !NOUPDATE
++		GuiSettings *updateGui = new GuiSettings(mWindow, _("UPDATES & DOWNLOADS").c_str());
++	#else
++		GuiSettings *updateGui = new GuiSettings(mWindow, _("DOWNLOADS").c_str());
++	#endif
+ 
+ 	updateGui->addGroup(_("DOWNLOADS"));
+ 
+@@ -896,6 +910,7 @@ void GuiMenu::openUpdatesSettings()
+ 
+ 	if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::UPGRADE))
+ 	{
++#if !NOUPDATE
+ 		updateGui->addGroup(_("SOFTWARE UPDATES"));
+ 
+ 		// Enable updates
+@@ -911,11 +926,11 @@ void GuiMenu::openUpdatesSettings()
+ 
+ 		std::string updatesType = SystemConf::getInstance()->get("updates.type");
+ 
+-#if WIN32
++    #if WIN32
+ 		if (updatesType == "unstable")
+ 			updatesTypeList->add("unstable", "unstable", updatesType == "unstable");
+ 		else
+-#endif
++    #endif
+ 			if (updatesType.empty() || updatesType != BETA_NAME)
+ 				updatesType = "stable";
+ 
+@@ -944,6 +959,7 @@ void GuiMenu::openUpdatesSettings()
+ 				mWindow->pushGui(new GuiUpdate(mWindow));
+ 			}
+ 		});
++#endif
+ 	}
+ 
+ 	mWindow->pushGui(updateGui);
+diff --git a/es-core/src/utils/Platform.cpp b/es-core/src/utils/Platform.cpp
+index 0fc9cef7..aa00bac0 100644
+--- a/es-core/src/utils/Platform.cpp
++++ b/es-core/src/utils/Platform.cpp
+@@ -21,6 +21,8 @@
+ #include "Log.h"
+ #include "Scripting.h"
+ #include "Paths.h"
++#include <fstream>
++#include <iostream>
+ 
+ // #define DEVTEST
+ 
+@@ -170,6 +172,8 @@ namespace Utils
+ 		{
+ #ifdef WIN32 // windows
+ 			return system("shutdown -s -t 0");
++#elseif PIBOY
++	return system("/sbin/rmmod xpi_gamecon ; /sbin/rmmod xpi_gamecon_xrs shutdown -t1 now -h");
+ #else // osx / linux	
+ 			return system("shutdown -h now");
+ #endif
+@@ -179,6 +183,8 @@ namespace Utils
+ 		{
+ #ifdef WIN32 // windows	
+ 			return system("shutdown -r -t 0");
++#elseif PIBOY
++	return system("reboot");
+ #else // osx / linux	
+ 			return system("shutdown -r now");
+ #endif
+@@ -399,9 +405,20 @@ namespace Utils
+ 				std::string fuelgaugeRootPath;
+ 				std::string chargerRootPath;
+ 
+-				auto files = Utils::FileSystem::getDirContent("/sys/class/power_supply");
++	        #if PIBOY
++		        auto files = Utils::FileSystem::getDirContent("/sys/kernel");
++	        #else
++         		auto files = Utils::FileSystem::getDirContent("/sys/class/power_supply");
++	        #endif
+ 				for (auto file : files)
+ 				{
++    		#if PIBOY
++    			if (Utils::String::toLower(file).find("/xpi_gamecon") != std::string::npos)
++    			{
++    				batteryRootPath = file;
++    				break;
++    			}
++    		#else
+ 					if ((Utils::String::toLower(file).find("/bat") != std::string::npos) && (batteryRootPath.empty()))
+ 						batteryRootPath = file;
+ 
+@@ -410,7 +427,8 @@ namespace Utils
+ 
+ 					if ((Utils::String::toLower(file).find("charger") != std::string::npos) && (chargerRootPath.empty()))
+ 						chargerRootPath = file;
+-				}
++		    #endif
++		    }
+ 
+ 				// If there's no battery device, look for discrete charger and fuel gauge
+ 				if (batteryRootPath.empty())
+@@ -434,8 +452,13 @@ namespace Utils
+ 				}
+ 				else
+ 				{
+-					batteryStatusPath = batteryRootPath + "/status";
+-					batteryCapacityPath = batteryRootPath + "/capacity";
++    		    #if PIBOY
++    			    batteryStatusPath = batteryRootPath + "/amps";
++    			    batteryCapacityPath = batteryRootPath + "/percent";
++    		    #else
++     			    batteryStatusPath = batteryRootPath + "/status";
++     			    batteryCapacityPath = batteryRootPath + "/capacity";
++    		    #endif
+ 				}
+ 			}
+ 
+@@ -448,9 +471,33 @@ namespace Utils
+ 			else
+ 			{
+ 				ret.hasBattery = true;
++    		#if PIBOY
++        	 	std::string battlvl;
++        	 	std::string battsts;
++        	 	std::ifstream rfile;
++
++        	 	// Battery Charging
++        	 	rfile.open(batteryStatusPath);
++					if (std::getline(rfile, battsts)) LOG(LogDebug) << "Batt Charging: " + battsts;
++					int output = Utils::String::toInteger(battsts);
++	       	 	rfile.close();
++
++        	 	if (output < 0)
++				    ret.isCharging = false;
++				else
++				    ret.isCharging = true;
++
++        	 	// Battery Level
++        	 	rfile.open(batteryCapacityPath);
++					if (std::getline(rfile, battlvl)) LOG(LogDebug) << "Batt Lvl: " + battlvl;
++					int intBattLvl = Utils::String::toInteger(battlvl);
++        	 	rfile.close();
++        	 	ret.level = intBattLvl;
++    		#else
+ 				std::string chargerStatus;
+ 				chargerStatus = Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "\n", "");
+ 				ret.isCharging = ((chargerStatus != "Not charging") && (chargerStatus != "Discharging"));
++    		#endif
+ 				// If reading from fuel gauge, we have to calculate remaining charge
+ 				if (batteryCapacityPath.length() <= 1)
+ 				{
+@@ -458,14 +505,16 @@ namespace Utils
+ 					float full = std::stof(Utils::FileSystem::readAllText(batteryMaxChargePath).c_str());
+ 					ret.level = int(round((now / full) * 100));
+ 				}
++    		#if PIBOY
++					//do nothing
++    		#else
+ 				else
+ 					ret.level = Utils::String::toInteger(Utils::FileSystem::readAllText(batteryCapacityPath).c_str());
++    		#endif
+ 			}
+-
+ 			return ret;
+ 		}
+ 
+-
+ 		std::string getArchString()
+ 		{
+ #if WIN32
