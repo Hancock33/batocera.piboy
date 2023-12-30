@@ -1,8 +1,8 @@
 diff --git a/pcsx2/Pcsx2Config.cpp b/pcsx2/Pcsx2Config.cpp
-index 2b4088158..3394314ba 100644
+index 83b357a1f..278b0b89b 100644
 --- a/pcsx2/Pcsx2Config.cpp
 +++ b/pcsx2/Pcsx2Config.cpp
-@@ -1756,17 +1756,17 @@ void EmuFolders::SetDataDirectory()
+@@ -1974,17 +1974,17 @@ void EmuFolders::SetDataDirectory()
  
  void EmuFolders::SetDefaults(SettingsInterface& si)
  {
@@ -31,7 +31,7 @@ index 2b4088158..3394314ba 100644
  }
  
  static std::string LoadPathFromSettings(SettingsInterface& si, const std::string& root, const char* name, const char* def)
-@@ -1779,19 +1779,19 @@ static std::string LoadPathFromSettings(SettingsInterface& si, const std::string
+@@ -1997,19 +1997,19 @@ static std::string LoadPathFromSettings(SettingsInterface& si, const std::string
  
  void EmuFolders::LoadConfig(SettingsInterface& si)
  {
