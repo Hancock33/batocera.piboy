@@ -1,8 +1,8 @@
 diff --git a/src/include/options.h b/src/include/options.h
-index fd4e7f6a..5e74a8b0 100644
+index 78bcca2e..5d91d9f3 100644
 --- a/src/include/options.h
 +++ b/src/include/options.h
-@@ -1239,7 +1239,7 @@ struct amiberry_options
+@@ -1240,7 +1240,7 @@ struct amiberry_options
  	bool default_auto_crop = false;
  	int default_width = 720;
  	int default_height = 568;

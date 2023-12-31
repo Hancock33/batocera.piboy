@@ -47,7 +47,11 @@
 - PS2 BIOS files should be put in /userdata/bios/ps2
 - Migrated C-Dogs SDL (cdogs) assets to content downloader
 - Migrated Super Mario War (superbroswar) assets to content downloader
-- default pad order now in emulationstation is hardware dependant (so the same at each boot)
+- Default pad order now in emulationstation is hardware dependant (so the same at each boot)
+- Support x86_64 build on systems with x64 cpu but only ia32 UEFI
+- Add wsdd for system discovery in "Network" panel on Windows without legacy SMB1 protocols
+- Send hostname to DHCP server, and allow for dynamically configured hostname from DHCP
+- Streamlined x86_64 Secure Boot support
 ### Updated
 - Retroarch to 1.16.0.3
 - GroovyMAME 0.261 - Switchres 2.002x
@@ -74,7 +78,7 @@
 - RPCS3 to 0.0.29-15838
 - Ruffle to nightly-2023-10-13
 - Solarus Engine to Oct 2, 2023
-- Vita3k to Oct 13 build
+- Vita3k to Dec 26 build
 - Xemu to v0.7.118
 - Xenia to v1.0.2808
 - Xenia Canary to a34944e (October 28 build)
@@ -97,7 +101,7 @@
 - Libretro-Craft to May 28, 2023 build
 - Libretro-Desmume to Oct 6, 2023 build
 - GZDoom to g4.11.3
-- Libretro-DosBox-Pure to Nov 30, 2023 build
+- Libretro-DosBox-Pure to 0.9.9
 - Libretro-Ecwolf to Jul 18, 2023 build
 - Libretro-Fake08 to Oct 19, 2023 build
 - Libretro-Fceumm to Sep 17, 2023 build
@@ -124,16 +128,17 @@
 - Libretro-Opera to Jul 31, 2023 build
 - Libretro-ProSystem to Aug 18, 2023 build
 - Libretro-PUAE to Oct 15, 2023 build
-- Libretro-Scummvm to Oct 22, 2023 build
+- Libretro-Scummvm to Nov 27, 2023 build
 - Libretro-Snes9x to Oct 13, 2023 build
 - Libretro-Stella to Oct 26, 2023 build
 - Libretro-MAME to 0.260
 - Sonic CD to Dec 2, 2023 build
 - Sonic 2013 to Dec 2, 2023 build
 - Duckstation to Dec 21, 2023 build
+- ScummVM to 2.8
 ### System
 - Linux kernel to 6.7
-- Mesa to 23.3.1
+- Mesa to 23.3.2
 - Proton to 8.0-4c
 - FAudio to 23.10
 - Nvidia production driver to 545.29.06
@@ -141,18 +146,13 @@
 - SDL2 to 2.28.5
 - Sound Open Firmware to 2023.12
 - Bluez to 5.71
-- Streamlined x86_64 Secure Boot support
-- Added tree(1) utility
+- Added tree utility
 - VKD3D-Proton to 2.11
 - Host-XA to 2.4.0
 - Pipewire to 1.0.0
 - Xorg Server to 21.1.10
 - XWayaland to 23.2.3
 - QT 6.6.1
-- Support x86_64 build on systems with x64 cpu but only ia32 UEFI
-- Add wsdd for system discovery in "Network" panel on Windows without legacy SMB1 protocols
-- Send hostname to DHCP server, and allow for dynamically configured
-  hostname from DHCP
 
 # 2023/10/16 - batocera.linux 38 - Blue Moon
 ### Hardware

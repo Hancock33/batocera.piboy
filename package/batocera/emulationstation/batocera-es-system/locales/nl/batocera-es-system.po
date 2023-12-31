@@ -6092,6 +6092,16 @@ msgstr "CPU SNELHEID"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
+msgid "PAL 288x576px 50Hz (auto)"
+msgstr ""
+
+#. TRANSLATION: libretro/puae, libretro/puae2021
+msgctxt "game_options"
+msgid "NTSC 240x480px 60Hz (auto)"
+msgstr ""
+
+#. TRANSLATION: libretro/puae, libretro/puae2021
+msgctxt "game_options"
 msgid "Manually define which resolution to use."
 msgstr ""
 
@@ -10348,6 +10358,11 @@ msgstr "STUURWIEL MODEL"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
+msgid "Driving Force"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Driving Force Pro"
 msgstr "Driving Force Pro"
 
@@ -10355,6 +10370,11 @@ msgstr "Driving Force Pro"
 msgctxt "game_options"
 msgid "GT Force"
 msgstr "GT Force"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Virtual"
+msgstr ""
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"

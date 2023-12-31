@@ -1,5 +1,5 @@
 diff --git a/src/osdep/amiberry_gui.cpp b/src/osdep/amiberry_gui.cpp
-index 6fe37a5f..31f5ac6b 100644
+index 2f280020..a074ceca 100644
 --- a/src/osdep/amiberry_gui.cpp
 +++ b/src/osdep/amiberry_gui.cpp
 @@ -246,23 +246,21 @@ static struct romdata* scan_single_rom_2(struct zfile* f)

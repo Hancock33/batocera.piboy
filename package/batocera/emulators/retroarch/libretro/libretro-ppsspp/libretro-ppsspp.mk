@@ -3,14 +3,13 @@
 # libretro-ppsspp
 #
 ################################################################################
-# Version: Commits on Dec 28, 2023
-LIBRETRO_PPSSPP_VERSION = 15b5c7f6bfa63d19a7ae67eef217a00a40054501
+# Version: Commits on Dec 31, 2023
+LIBRETRO_PPSSPP_VERSION = eabcd5d8a29ec79480b10119376cd124bfce427d
 LIBRETRO_PPSSPP_SOURCE = ppsspp-$(LIBRETRO_PPSSPP_VERSION)-br1.tar.gz
 LIBRETRO_PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 LIBRETRO_PPSSPP_SITE_METHOD=git
 LIBRETRO_PPSSPP_GIT_SUBMODULES=YES
 LIBRETRO_PPSSPP_LICENSE = GPLv2
-LIBRETRO_PPSSPP_DEPENDENCIES = host-clang
 
 LIBRETRO_PPSSPP_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 LIBRETRO_PPSSPP_CONF_OPTS += -DCMAKE_SYSTEM_NAME=Linux

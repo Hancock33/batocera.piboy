@@ -1,30 +1,30 @@
 diff --git a/cmake/BuildParameters.cmake b/cmake/BuildParameters.cmake
-index 49382cc59..7967f370a 100644
+index 6e47de852..92f1c56e8 100644
 --- a/cmake/BuildParameters.cmake
 +++ b/cmake/BuildParameters.cmake
-@@ -104,7 +104,7 @@ if(${PCSX2_TARGET_ARCHITECTURES} MATCHES "x86_64")
- 			set(ARCH_FLAG "-msse -msse2 -msse4.1 -mfxsr")
+@@ -94,7 +94,7 @@ if("${CMAKE_HOST_SYSTEM_PROCESSOR}" STREQUAL "x86_64" OR "${CMAKE_HOST_SYSTEM_PR
  		else()
- 			#set(ARCH_FLAG "-march=native -fabi-version=6")
--			set(ARCH_FLAG "-march=native")
-+			set(ARCH_FLAG "-march=znver2")
+ 			# Can't use march=native on Apple Silicon.
+ 			if(NOT APPLE OR "${CMAKE_HOST_SYSTEM_PROCESSOR}" STREQUAL "x86_64")
+-				add_compile_options("-march=native")
++				set(ARCH_FLAG "-march=x86-64-v2 -mtune=znver2")
+ 			endif()
  		endif()
- 	elseif(NOT DEFINED ARCH_FLAG AND USE_CLANG_CL)
- 		set(ARCH_FLAG "-msse4.1")
+ 	endif()
 diff --git a/pcsx2/CMakeLists.txt b/pcsx2/CMakeLists.txt
-index c8db70240..9c13845c5 100644
+index 21b8ad1c0..60ef733e8 100644
 --- a/pcsx2/CMakeLists.txt
 +++ b/pcsx2/CMakeLists.txt
-@@ -749,9 +749,9 @@ if(DISABLE_ADVANCE_SIMD)
+@@ -734,9 +734,9 @@ if(DISABLE_ADVANCE_SIMD)
  		set(compile_options_avx  -msse4.1 -mavx)
  		set(compile_options_sse4 -msse4.1)
  	else()
 -		set(compile_options_avx2 -march=haswell -mtune=haswell)
 -		set(compile_options_avx  -march=sandybridge -mtune=sandybridge)
 -		set(compile_options_sse4 -msse4.1 -mtune=nehalem)
-+		set(compile_options_avx2 -march=znver2 -mtune=znver2)
-+		set(compile_options_avx  -march=znver2 -mtune=znver2)
-+		set(compile_options_sse4 -march=znver2 -mtune=znver2)
++		set(compile_options_avx2 -march=x86-64-v2 -mtune=znver2)
++		set(compile_options_avx  -march=x86-64-v2 -mtune=znver2)
++		set(compile_options_sse4 -march=x86-64-v2 -mtune=znver2)
  	endif()
  	# ODR violation time!
  	# Everything would be fine if we only defined things in cpp files, but C++ tends to like inline functions (STL anyone?)
