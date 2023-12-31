@@ -15,11 +15,10 @@ LIBRETRO_SUPERFLAPPYBIRDS_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GN
 
 define LIBRETRO_SUPERFLAPPYBIRDS_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/evmap
-
-	cp -r $(@D)/resources $(TARGET_DIR)/usr/lib/libretro
-	$(INSTALL) -D $(@D)/buildroot-build/superflappybirds_libretro.so $(TARGET_DIR)/usr/lib/libretro/superflappybirds_libretro.so
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/superflappybirds
+
+	$(INSTALL) -D $(@D)/buildroot-build/superflappybirds_libretro.so $(TARGET_DIR)/usr/lib/libretro/superflappybirds_libretro.so
+	cp -r  $(@D)/resources $(TARGET_DIR)/usr/lib/libretro
 	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-superflappybirds/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/superflappybirds/
 endef
 
