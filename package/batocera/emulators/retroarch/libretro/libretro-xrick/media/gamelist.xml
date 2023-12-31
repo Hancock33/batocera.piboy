@@ -7,16 +7,12 @@
 
 Rick Dangerous is a platform game across over 100 screens, in which Rick has his gun in one hand, and dynamite sticks in another. You must take a methodical approach to clearing each screen, as there are traps in place which will need memorizing and preempting where possible. Use the dynamite wisely, for enemies you can't get into the purely-horizontal range of your gun.</desc>
 		<image>./images/RickDangerous.png</image>
-		<video>./videos/RickDangerous.mp4</video>
 		<rating>0.8</rating>
 		<releasedate>19890101T000000</releasedate>
 		<developer>Firebird</developer>
 		<publisher>Core Design</publisher>
 		<genre>Platform</genre>
 		<players>1</players>
-		<playcount>6</playcount>
-		<lastplayed>20210620T214427</lastplayed>
-		<gametime>80</gametime>
 		<lang>en</lang>
 		<genreid>257</genreid>
 	</game>
