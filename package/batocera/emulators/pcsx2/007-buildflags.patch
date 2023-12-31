@@ -1,21 +1,21 @@
 diff --git a/cmake/BuildParameters.cmake b/cmake/BuildParameters.cmake
-index 94d3baae1..0537b11aa 100644
+index 6e47de852..92f1c56e8 100644
 --- a/cmake/BuildParameters.cmake
 +++ b/cmake/BuildParameters.cmake
-@@ -92,7 +92,7 @@ if("${CMAKE_HOST_SYSTEM_PROCESSOR}" STREQUAL "x86_64" OR "${CMAKE_HOST_SYSTEM_PR
- 		if (DISABLE_ADVANCE_SIMD)
- 			add_compile_options("-msse" "-msse2" "-msse4.1" "-mfxsr")
+@@ -94,7 +94,7 @@ if("${CMAKE_HOST_SYSTEM_PROCESSOR}" STREQUAL "x86_64" OR "${CMAKE_HOST_SYSTEM_PR
  		else()
--			add_compile_options("-march=native")
-+			set(ARCH_FLAG "-march=x86-64-v2 -mtune=znver2")
+ 			# Can't use march=native on Apple Silicon.
+ 			if(NOT APPLE OR "${CMAKE_HOST_SYSTEM_PROCESSOR}" STREQUAL "x86_64")
+-				add_compile_options("-march=native")
++				set(ARCH_FLAG "-march=x86-64-v2 -mtune=znver2")
+ 			endif()
  		endif()
  	endif()
- else()
 diff --git a/pcsx2/CMakeLists.txt b/pcsx2/CMakeLists.txt
-index 214583881..a36d0532f 100644
+index 21b8ad1c0..60ef733e8 100644
 --- a/pcsx2/CMakeLists.txt
 +++ b/pcsx2/CMakeLists.txt
-@@ -736,9 +736,9 @@ if(DISABLE_ADVANCE_SIMD)
+@@ -734,9 +734,9 @@ if(DISABLE_ADVANCE_SIMD)
  		set(compile_options_avx  -msse4.1 -mavx)
  		set(compile_options_sse4 -msse4.1)
  	else()
