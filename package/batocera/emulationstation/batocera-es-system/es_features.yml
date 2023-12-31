@@ -6986,8 +6986,8 @@ cemu:
             prompt:      GRAPHICS API
             description: Choose which graphics API library to use.
             choices:
-                "OpenGL  (Default)":  0
-                "Vulkan":             1
+                "OpenGL":           0
+                "Vulkan (Default)": 1
         cemu_async:
             group: ADVANCED OPTIONS
             prompt: ASYNC SHADER COMPILE (VULKAN ONLY)
