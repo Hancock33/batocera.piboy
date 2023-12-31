@@ -1,8 +1,8 @@
 diff --git a/pcsx2/VMManager.cpp b/pcsx2/VMManager.cpp
-index 5815ad332..1843da954 100644
+index 7b73c3c8c..3d4de4fbe 100644
 --- a/pcsx2/VMManager.cpp
 +++ b/pcsx2/VMManager.cpp
-@@ -174,7 +174,7 @@ static u64 s_session_start_time = 0;
+@@ -182,7 +182,7 @@ static u64 s_session_start_time = 0;
  
  static bool s_screensaver_inhibited = false;
  
@@ -11,7 +11,7 @@ index 5815ad332..1843da954 100644
  
  static bool s_discord_presence_active = false;
  static time_t s_discord_presence_time_epoch;
-@@ -378,7 +378,7 @@ void VMManager::Internal::CPUThreadShutdown()
+@@ -390,7 +390,7 @@ void VMManager::Internal::CPUThreadShutdown()
  {
  	ShutdownDiscordPresence();
  
@@ -20,7 +20,7 @@ index 5815ad332..1843da954 100644
  
  	Achievements::Shutdown(false);
  
-@@ -3048,18 +3048,18 @@ const std::vector<u32>& VMManager::GetSortedProcessorList()
+@@ -3174,18 +3174,18 @@ const std::vector<u32>& VMManager::GetSortedProcessorList()
  
  void VMManager::ReloadPINE()
  {

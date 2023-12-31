@@ -5085,8 +5085,10 @@ libretro:
             video_standard:
                 prompt:      VIDEO FORMAT STANDARD
                 choices:
+                    "PAL 288x576px 50Hz (auto)":  PAL auto
                     "PAL 288x576px 50Hz":  PAL
                     "NTSC 240x480px 60Hz": NTSC
+                    "NTSC 240x480px 60Hz (auto)": NTSC auto
             video_resolution:
                 prompt:      VIDEO RESOLUTION
                 description: Manually define which resolution to use.
@@ -5353,8 +5355,10 @@ libretro:
             video_standard:
                 prompt:      VIDEO FORMAT STANDARD
                 choices:
+                    "PAL 288x576px 50Hz (auto)":  PAL auto
                     "PAL 288x576px 50Hz":  PAL
                     "NTSC 240x480px 60Hz": NTSC
+                    "NTSC 240x480px 60Hz (auto)": NTSC auto
             video_resolution:
                 prompt:      VIDEO RESOLUTION
                 description: Manually define which resolution to use.
@@ -6982,8 +6986,8 @@ cemu:
             prompt:      GRAPHICS API
             description: Choose which graphics API library to use.
             choices:
-                "OpenGL  (Default)":  0
-                "Vulkan":             1
+                "OpenGL":           0
+                "Vulkan (Default)": 1
         cemu_async:
             group: ADVANCED OPTIONS
             prompt: ASYNC SHADER COMPILE (VULKAN ONLY)
@@ -9015,8 +9019,11 @@ pcsx2:
             prompt: WHEEL MODEL
             description: Playstation 2 wheel type
             choices:
+              "Driving Force":      DrivingForce
               "Driving Force Pro":  DrivingForcePro
-              "GT Force": GTForce
+              "GT Force":           GTForce
+              "Virtual":            Virtual
+
 ppsspp:
   features: [padtokeyboard]
   shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, rewind]
