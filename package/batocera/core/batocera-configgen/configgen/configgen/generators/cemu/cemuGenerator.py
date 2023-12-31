@@ -141,7 +141,7 @@ class CemuGenerator(Generator):
         if system.isOptSet("cemu_gfxbackend"):
             CemuGenerator.setSectionConfig(config, graphic_root, "api", system.config["cemu_gfxbackend"])
         else:
-            CemuGenerator.setSectionConfig(config, graphic_root, "api", "0") # OpenGL
+            CemuGenerator.setSectionConfig(config, graphic_root, "api", "1") # Vulkan
         # Async VULKAN Shader compilation
         if system.isOptSet("cemu_async") and system.config["cemu_async"] == "False":
             CemuGenerator.setSectionConfig(config, graphic_root, "AsyncCompile", "false")
