@@ -25,8 +25,8 @@ define LIBRETRO_GENESISPLUSGX_WIDE_BUILD_CMDS
 endef
 
 define LIBRETRO_GENESISPLUSGX_WIDE_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/genesis_plus_gx_wide_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/genesisplusgx-wide_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/genesis_plus_gx_wide_libretro.so $(TARGET_DIR)/usr/lib/libretro/genesisplusgx-wide_libretro.so
 endef
 
 $(eval $(generic-package))

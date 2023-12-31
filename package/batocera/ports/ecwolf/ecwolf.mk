@@ -22,7 +22,7 @@ define ECWOLF_CROSS
 	$(HOST_ECWOLF_BUILDDIR)/deps/gdtoa/arithchk > $(@D)/deps/gdtoa/arith.h
 	$(HOST_ECWOLF_BUILDDIR)/deps/gdtoa/qnan > $(@D)/deps/gdtoa/gd_qnan.h
 endef
-ECWOLF_POST_EXTRACT_HOOKS += ECWOLF_CROSS
+ECWOLF_POST_CONFIGURE_HOOKS += ECWOLF_CROSS
 
 define ECWOLF_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin

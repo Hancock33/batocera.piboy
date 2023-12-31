@@ -18,11 +18,11 @@ define LIBRETRO_FAKE08_BUILD_CMDS
 endef
 
 define LIBRETRO_FAKE08_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/platform/libretro/fake08_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/fake08_libretro.so
-	# install core info file
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
-	cp -a $(@D)/platform/libretro/fake08_libretro.info $(TARGET_DIR)/usr/share/libretro/info/
+
+	$(INSTALL) -D $(@D)/platform/libretro/fake08_libretro.so $(TARGET_DIR)/usr/lib/libretro/fake08_libretro.so
+	cp -a $(@D)/platform/libretro/fake08_libretro.info       $(TARGET_DIR)/usr/share/libretro/info/
 endef
 
 $(eval $(generic-package))

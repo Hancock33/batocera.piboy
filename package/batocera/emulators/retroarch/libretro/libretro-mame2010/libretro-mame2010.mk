@@ -48,18 +48,17 @@ define LIBRETRO_MAME2010_BUILD_CMDS
 		GIT_VERSION="-$(shell echo $(LIBRETRO_MAME2010_VERSION) | cut -c 1-7)"
 endef
 
-# Bios
-# Need to think of another way to use these files.
-# They take up a lot of space on tmpfs.
 define LIBRETRO_MAME2010_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/mame2010_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/mame0139_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/mame2010_libretro.so $(TARGET_DIR)/usr/lib/libretro/mame0139_libretro.so
 
+	# Bios
+	# Need to think of another way to use these files.
+	# They take up a lot of space on tmpfs.
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2010/samples
 	find $(@D)/metadata -maxdepth 1 -iname "*.xml" -print0 | xargs -0 -I{} xz -9 {}
 	find $(@D)/metadata -maxdepth 1 -iname "*.xml" -print0 | xargs -0 -I{} rm {}
-	$(INSTALL) -D $(@D)/metadata/* \
-		$(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2010
+	$(INSTALL) -D $(@D)/metadata/* $(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2010
 endef
 
 $(eval $(generic-package))

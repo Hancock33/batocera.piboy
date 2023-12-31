@@ -16,8 +16,8 @@ define LIBRETRO_VIRTUALJAGUAR_BUILD_CMDS
 endef
 
 define LIBRETRO_VIRTUALJAGUAR_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/virtualjaguar_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/virtualjaguar_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/virtualjaguar_libretro.so $(TARGET_DIR)/usr/lib/libretro/virtualjaguar_libretro.so
 endef
 
 $(eval $(generic-package))

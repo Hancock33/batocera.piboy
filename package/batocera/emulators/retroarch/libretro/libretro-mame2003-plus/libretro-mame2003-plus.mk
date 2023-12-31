@@ -45,8 +45,8 @@ define LIBRETRO_MAME2003_PLUS_BUILD_CMDS
 endef
 
 define LIBRETRO_MAME2003_PLUS_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/mame2003_plus_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/mame078plus_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/mame2003_plus_libretro.so $(TARGET_DIR)/usr/lib/libretro/mame078plus_libretro.so
 
 	# Bios
 	# Need to think of another way to use these files.
@@ -54,8 +54,7 @@ define LIBRETRO_MAME2003_PLUS_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2003-plus/samples
 	find $(@D)/metadata -maxdepth 1 -iname "*.xml" -print0 | xargs -0 -I{} xz -9 {}
 	find $(@D)/metadata -maxdepth 1 -iname "*.xml" -print0 | xargs -0 -I{} rm {}
-	cp -r $(@D)/metadata/* \
-		$(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2003-plus
+	cp -r $(@D)/metadata/* $(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2003-plus
 endef
 
 define LIBRETRO_MAME2003_PLUS_NAMCO_QUICK_FIX

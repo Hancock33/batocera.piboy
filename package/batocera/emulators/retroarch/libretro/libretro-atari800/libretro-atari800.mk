@@ -35,8 +35,8 @@ define LIBRETRO_ATARI800_BUILD_CMDS
 endef
 
 define LIBRETRO_ATARI800_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/atari800_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/atari800_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/atari800_libretro.so $(TARGET_DIR)/usr/lib/libretro/atari800_libretro.so
 endef
 
 $(eval $(generic-package))

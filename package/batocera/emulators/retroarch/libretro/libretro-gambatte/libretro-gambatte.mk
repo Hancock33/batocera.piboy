@@ -30,8 +30,8 @@ define LIBRETRO_GAMBATTE_BUILD_CMDS
 endef
 
 define LIBRETRO_GAMBATTE_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/gambatte_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/gambatte_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/gambatte_libretro.so $(TARGET_DIR)/usr/lib/libretro/gambatte_libretro.so
 endef
 
 $(eval $(generic-package))

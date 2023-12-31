@@ -35,8 +35,8 @@ define LIBRETRO_BEETLE_NGP_BUILD_CMDS
 endef
 
 define LIBRETRO_BEETLE_NGP_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/mednafen_ngp_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/mednafen_ngp_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/mednafen_ngp_libretro.so $(TARGET_DIR)/usr/lib/libretro/mednafen_ngp_libretro.so
 endef
 
 $(eval $(generic-package))

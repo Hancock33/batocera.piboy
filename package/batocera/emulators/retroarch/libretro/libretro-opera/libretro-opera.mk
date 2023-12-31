@@ -23,8 +23,8 @@ define LIBRETRO_OPERA_BUILD_CMDS
 endef
 
 define LIBRETRO_OPERA_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/opera_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/opera_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/opera_libretro.so $(TARGET_DIR)/usr/lib/libretro/opera_libretro.so
 endef
 
 $(eval $(generic-package))

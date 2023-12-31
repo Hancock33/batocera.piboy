@@ -21,7 +21,8 @@ define LIBRETRO_BOOM3_BUILD_CMDS
 endef
 
 define LIBRETRO_BOOM3_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/neo/boom3_libretro.so $(TARGET_DIR)/usr/lib/libretro/boom3_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/neo/boom3_libretro.so    $(TARGET_DIR)/usr/lib/libretro/boom3_libretro.so
 	$(INSTALL) -D $(@D)/neo/boom3_xp_libretro.so $(TARGET_DIR)/usr/lib/libretro/boom3_xp_libretro.so
 endef
 

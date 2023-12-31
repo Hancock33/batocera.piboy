@@ -59,8 +59,8 @@ else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S922X),y)
 endif
 
 define LIBRETRO_FLYCAST_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/buildroot-build/flycast_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/flycast_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/buildroot-build/flycast_libretro.so $(TARGET_DIR)/usr/lib/libretro/flycast_libretro.so
 endef
 
 $(eval $(cmake-package))

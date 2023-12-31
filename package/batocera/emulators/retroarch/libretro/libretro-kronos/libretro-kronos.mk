@@ -37,8 +37,8 @@ define LIBRETRO_KRONOS_BUILD_CMDS
 endef
 
 define LIBRETRO_KRONOS_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/yabause/src/libretro/kronos_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/kronos_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/yabause/src/libretro/kronos_libretro.so $(TARGET_DIR)/usr/lib/libretro/kronos_libretro.so
 endef
 
 $(eval $(generic-package))

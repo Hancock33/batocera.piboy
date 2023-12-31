@@ -31,12 +31,9 @@ define LIBRETRO_HATARIB_BUILD_CMDS
 endef
 
 define LIBRETRO_HATARIB_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/build/hatarib.so \
-		$(TARGET_DIR)/usr/lib/libretro/hatarib_libretro.so
-
-	# install core info file
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
-	cp -a $(@D)/info/hatarib.info $(TARGET_DIR)/usr/share/libretro/info/hatarib_libretro.info
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/build/hatarib.so 	$(TARGET_DIR)/usr/lib/libretro/hatarib_libretro.so
+	cp -a $(@D)/info/hatarib.info 			$(TARGET_DIR)/usr/share/libretro/info/hatarib_libretro.info
 endef
 
 $(eval $(generic-package))

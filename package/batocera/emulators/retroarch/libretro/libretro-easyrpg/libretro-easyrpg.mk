@@ -19,8 +19,8 @@ LIBRETRO_EASYRPG_CONF_OPTS += -DBUILD_SHARED_LIBS=ON
 LIBRETRO_EASYRPG_CONF_ENV += LDFLAGS="-lpthread -fPIC" CFLAGS="-fPIC" CXX_FLAGS="-fPIC"
 
 define LIBRETRO_EASYRPG_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/buildroot-build/easyrpg_libretro.so \
-	$(TARGET_DIR)/usr/lib/libretro/easyrpg_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/buildroot-build/easyrpg_libretro.so $(TARGET_DIR)/usr/lib/libretro/easyrpg_libretro.so
 endef
 
 $(eval $(cmake-package))

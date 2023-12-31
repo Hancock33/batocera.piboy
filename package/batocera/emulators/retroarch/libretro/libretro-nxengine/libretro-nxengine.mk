@@ -33,8 +33,8 @@ define LIBRETRO_NXENGINE_BUILD_CMDS
 endef
 
 define LIBRETRO_NXENGINE_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/nxengine_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/nxengine_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/nxengine_libretro.so $(TARGET_DIR)/usr/lib/libretro/nxengine_libretro.so
 endef
 
 $(eval $(generic-package))

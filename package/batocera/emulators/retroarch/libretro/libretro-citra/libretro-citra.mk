@@ -28,6 +28,7 @@ LIBRETRO_CITRA_CONF_OPTS += -DUSE_SYSTEM_FMT=ON
 LIBRETRO_CITRA_CONF_OPTS += -DUSE_SYSTEM_OPENSSL=ON
 
 define LIBRETRO_CITRA_INSTALL_TARGET_CMDS
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/buildroot-build/citra_libretro.so $(TARGET_DIR)/usr/lib/libretro/citra_libretro.so
 endef
 

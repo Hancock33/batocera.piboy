@@ -27,8 +27,8 @@ define LIBRETRO_SMSPLUS_GX_BUILD_CMDS
 endef
 
 define LIBRETRO_SMSPLUS_GX_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/smsplus_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/smsplus_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/smsplus_libretro.so $(TARGET_DIR)/usr/lib/libretro/smsplus_libretro.so
 endef
 
 $(eval $(generic-package))

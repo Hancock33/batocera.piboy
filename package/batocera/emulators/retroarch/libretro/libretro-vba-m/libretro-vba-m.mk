@@ -15,8 +15,7 @@ define LIBRETRO_VBA_M_BUILD_CMDS
 endef
 
 define LIBRETRO_VBA_M_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/src/libretro/vbam_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/vba-m_libretro.so
+	$(INSTALL) -D $(@D)/src/libretro/vbam_libretro.so $(TARGET_DIR)/usr/lib/libretro/vba-m_libretro.so
 endef
 
 $(eval $(generic-package))
