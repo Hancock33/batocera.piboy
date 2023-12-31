@@ -10254,6 +10254,11 @@ msgstr "ホイール(ハンドル)モデル"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
+msgid "Driving Force"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Driving Force Pro"
 msgstr "Driving Force Pro"
 
@@ -10261,6 +10266,11 @@ msgstr "Driving Force Pro"
 msgctxt "game_options"
 msgid "GT Force"
 msgstr "GT Force"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Virtual"
+msgstr ""
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"

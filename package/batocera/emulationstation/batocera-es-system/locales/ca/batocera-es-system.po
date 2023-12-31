@@ -10293,12 +10293,22 @@ msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
+msgid "Driving Force"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Driving Force Pro"
 msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "GT Force"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Virtual"
 msgstr ""
 
 #. TRANSLATION: ppsspp
