@@ -32,7 +32,6 @@ endef
 define LIBRETRO_PX68K_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/px68k_libretro.so $(TARGET_DIR)/usr/lib/libretro/px68k_libretro.so
-
 	# Bios
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/keropi
 	echo "[WinX68k]" > $(TARGET_DIR)/usr/share/batocera/datainit/bios/keropi/config

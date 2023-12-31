@@ -19,7 +19,6 @@ LIBRETRO_LRPS2_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NA
 
 define LIBRETRO_LRPS2_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-
 	$(INSTALL) -D $(@D)/pcsx2/pcsx2_libretro.so $(TARGET_DIR)/usr/lib/libretro/lrps2_libretro.so
 endef
 
