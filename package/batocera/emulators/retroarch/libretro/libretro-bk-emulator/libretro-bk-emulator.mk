@@ -17,8 +17,8 @@ define LIBRETRO_BK_EMULATOR_BUILD_CMDS
 endef
 
 define LIBRETRO_BK_EMULATOR_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/bk_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/bk_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/bk_libretro.so $(TARGET_DIR)/usr/lib/libretro/bk_libretro.so
 endef
 
 $(eval $(generic-package))

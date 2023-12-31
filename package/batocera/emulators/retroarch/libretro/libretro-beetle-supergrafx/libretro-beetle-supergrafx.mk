@@ -35,8 +35,8 @@ define LIBRETRO_BEETLE_SUPERGRAFX_BUILD_CMDS
 endef
 
 define LIBRETRO_BEETLE_SUPERGRAFX_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/mednafen_supergrafx_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/mednafen_supergrafx_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/mednafen_supergrafx_libretro.so $(TARGET_DIR)/usr/lib/libretro/mednafen_supergrafx_libretro.so
 endef
 
 $(eval $(generic-package))

@@ -43,11 +43,10 @@ define LIBRETRO_SCUMMVM_BUILD_CMDS
 endef
 
 define LIBRETRO_SCUMMVM_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/backends/platform/libretro/scummvm_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/scummvm_libretro.so
-
-	$(INSTALL) -D $(@D)/backends/platform/libretro/scummvm_libretro.info \
-		$(TARGET_DIR)/usr/share/libretro/info/scummvm_libretro.info
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
+	$(INSTALL) -D $(@D)/backends/platform/libretro/scummvm_libretro.so   $(TARGET_DIR)/usr/lib/libretro/scummvm_libretro.so
+	$(INSTALL) -D $(@D)/backends/platform/libretro/scummvm_libretro.info $(TARGET_DIR)/usr/share/libretro/info/scummvm_libretro.info
 endef
 
 $(eval $(generic-package))

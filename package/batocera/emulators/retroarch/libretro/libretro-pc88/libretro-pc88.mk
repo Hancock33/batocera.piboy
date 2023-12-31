@@ -29,9 +29,9 @@ define LIBRETRO_PC88_BUILD_CMDS
 endef
 
 define LIBRETRO_PC88_INSTALL_TARGET_CMDS
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/quasi88
-	$(INSTALL) -D $(@D)/quasi88_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/quasi88_libretro.so
+	$(INSTALL) -D $(@D)/quasi88_libretro.so $(TARGET_DIR)/usr/lib/libretro/quasi88_libretro.so
 endef
 
 $(eval $(generic-package))

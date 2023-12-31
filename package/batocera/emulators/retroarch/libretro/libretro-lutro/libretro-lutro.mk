@@ -43,8 +43,8 @@ define LIBRETRO_LUTRO_BUILD_CMDS
 endef
 
 define LIBRETRO_LUTRO_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/lutro_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/lutro_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/lutro_libretro.so $(TARGET_DIR)/usr/lib/libretro/lutro_libretro.so
 endef
 
 $(eval $(generic-package))

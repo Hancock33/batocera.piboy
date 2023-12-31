@@ -28,8 +28,8 @@ define LIBRETRO_PRBOOM_BUILD_CMDS
 endef
 
 define LIBRETRO_PRBOOM_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/prboom_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/prboom_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/prboom_libretro.so $(TARGET_DIR)/usr/lib/libretro/prboom_libretro.so
 endef
 
 $(eval $(generic-package))

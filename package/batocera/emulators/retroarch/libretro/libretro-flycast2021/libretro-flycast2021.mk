@@ -45,8 +45,8 @@ define LIBRETRO_FLYCAST2021_BUILD_CMDS
 endef
 
 define LIBRETRO_FLYCAST2021_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/flycast_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/flycast2021_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/flycast_libretro.so $(TARGET_DIR)/usr/lib/libretro/flycast2021_libretro.so
 endef
 
 $(eval $(generic-package))

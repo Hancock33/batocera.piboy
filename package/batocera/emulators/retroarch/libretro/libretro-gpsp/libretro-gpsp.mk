@@ -25,8 +25,8 @@ define LIBRETRO_GPSP_BUILD_CMDS
 endef
 
 define LIBRETRO_GPSP_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/gpsp_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/gpsp_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/gpsp_libretro.so $(TARGET_DIR)/usr/lib/libretro/gpsp_libretro.so
 endef
 
 $(eval $(generic-package))

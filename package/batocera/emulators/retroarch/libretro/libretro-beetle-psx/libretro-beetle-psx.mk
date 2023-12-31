@@ -35,8 +35,8 @@ define LIBRETRO_BEETLE_PSX_BUILD_CMDS
 endef
 
 define LIBRETRO_BEETLE_PSX_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/$(LIBRETRO_BEETLE_PSX_OUTFILE) \
-		$(TARGET_DIR)/usr/lib/libretro/mednafen_psx_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/$(LIBRETRO_BEETLE_PSX_OUTFILE) $(TARGET_DIR)/usr/lib/libretro/mednafen_psx_libretro.so
 endef
 
 $(eval $(generic-package))

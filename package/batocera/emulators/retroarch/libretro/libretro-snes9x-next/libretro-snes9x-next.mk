@@ -36,8 +36,8 @@ define LIBRETRO_SNES9X_NEXT_BUILD_CMDS
 endef
 
 define LIBRETRO_SNES9X_NEXT_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/snes9x2010_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/snes9x_next_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/snes9x2010_libretro.so $(TARGET_DIR)/usr/lib/libretro/snes9x_next_libretro.so
 endef
 
 $(eval $(generic-package))

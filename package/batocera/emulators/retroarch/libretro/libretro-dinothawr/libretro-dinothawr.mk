@@ -17,8 +17,8 @@ define LIBRETRO_DINOTHAWR_BUILD_CMDS
 endef
 
 define LIBRETRO_DINOTHAWR_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/dinothawr_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/dinothawr_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/dinothawr_libretro.so $(TARGET_DIR)/usr/lib/libretro/dinothawr_libretro.so
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/dinothawr/dinothawr
 	cp -R $(@D)/dinothawr/* $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/dinothawr/dinothawr
 endef
