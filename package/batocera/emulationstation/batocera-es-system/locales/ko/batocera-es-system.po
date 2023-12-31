@@ -8403,7 +8403,7 @@ msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "그래픽 API"
 
-#. TRANSLATION: libretro, daphne, dolphin, duckstation, flycast, ...
+#. TRANSLATION: libretro, cemu, daphne, dolphin, duckstation, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "OpenGL"
@@ -8420,7 +8420,7 @@ msgctxt "game_options"
 msgid "SDL2"
 msgstr ""
 
-#. TRANSLATION: libretro, cemu, citra, daphne, dolphin, ...
+#. TRANSLATION: libretro, citra, daphne, dolphin, duckstation, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Vulkan"
@@ -8747,10 +8747,10 @@ msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr "사용할 그래픽 API 라이브러리를 선택합니다."
 
-#. TRANSLATION: cemu
+#. TRANSLATION: cemu, flycast
 msgctxt "game_options"
-msgid "OpenGL  (Default)"
-msgstr ""
+msgid "Vulkan (Default)"
+msgstr "Vulkan (기본값)"
 
 #. TRANSLATION: cemu, yuzu
 #, fuzzy
@@ -10239,11 +10239,6 @@ msgstr "4.5x (2880x2160)"
 msgctxt "game_options"
 msgid "Choose your graphics renderer."
 msgstr ""
-
-#. TRANSLATION: flycast
-msgctxt "game_options"
-msgid "Vulkan (Default)"
-msgstr "Vulkan (기본값)"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
