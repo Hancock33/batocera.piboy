@@ -1,0 +1,26 @@
+diff --git a/hid-lg.c b/hid-lg.c
+index 2377bbf..51df6dc 100644
+--- a/hid-lg.c
++++ b/hid-lg.c
+@@ -943,7 +943,7 @@ static struct hid_driver lg_driver = {
+ };
+ module_hid_driver(lg_driver);
+ 
+-#ifdef CONFIG_LOGIWHEELS_FF
++#ifndef CONFIG_LOGIWHEELS_FF
+ int lg4ff_no_autoswitch = 0;
+ module_param_named(lg4ff_no_autoswitch, lg4ff_no_autoswitch, int, S_IRUGO);
+ MODULE_PARM_DESC(lg4ff_no_autoswitch, "Do not switch multimode wheels to their native mode automatically");
+diff --git a/hid-lg4ff.h b/hid-lg4ff.h
+index e5c55d5..a68737b 100644
+--- a/hid-lg4ff.h
++++ b/hid-lg4ff.h
+@@ -2,7 +2,7 @@
+ #ifndef __HID_LG4FF_H
+ #define __HID_LG4FF_H
+ 
+-#ifdef CONFIG_LOGIWHEELS_FF
++#ifndef CONFIG_LOGIWHEELS_FF
+ extern int lg4ff_no_autoswitch; /* From hid-lg.c */
+ 
+ int lg4ff_adjust_input_event(struct hid_device *hid, struct hid_field *field,
