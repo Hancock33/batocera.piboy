@@ -770,12 +770,12 @@ msgctxt "game_options"
 msgid "English (Default)"
 msgstr "English (по умолчанию)"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/yabasanshiro, cemu, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, ...
 msgctxt "game_options"
 msgid "Spanish"
 msgstr "Spanish"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/yabasanshiro, cemu, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, ...
 msgctxt "game_options"
 msgid "French"
 msgstr "French"
@@ -1275,17 +1275,17 @@ msgstr ""
 "Выбранный язык будет использоваться, если 'Использовать настройки прошивки' "
 "отключено или если файл прошивки не найден."
 
-#. TRANSLATION: libretro/melonds, libretro/dolphin, cemu, flycast/vitaquake3, scummvm, ...
+#. TRANSLATION: libretro/melonds, libretro/dolphin, libretro/kronos, cemu, flycast/vitaquake3, ...
 msgctxt "game_options"
 msgid "German"
 msgstr "German"
 
-#. TRANSLATION: libretro/melonds, libretro/dolphin, libretro/yabasanshiro, cemu, flycast/vitaquake3, ...
+#. TRANSLATION: libretro/melonds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, cemu, ...
 msgctxt "game_options"
 msgid "Italian"
 msgstr "Italian"
 
-#. TRANSLATION: libretro/melonds, libretro/dolphin, libretro/yabasanshiro, cemu, flycast/vitaquake3, ...
+#. TRANSLATION: libretro/melonds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, cemu, ...
 msgctxt "game_options"
 msgid "Japanese"
 msgstr "Japanese"
@@ -1350,7 +1350,7 @@ msgctxt "game_options"
 msgid "Wii NAND's language setting."
 msgstr "Wii NAND Настройка языка."
 
-#. TRANSLATION: libretro/dolphin, cemu, flycast/vitaquake3, scummvm, sonic2013, ...
+#. TRANSLATION: libretro/dolphin, libretro/kronos, cemu, flycast/vitaquake3, scummvm, ...
 msgctxt "game_options"
 msgid "English"
 msgstr "English"
@@ -3477,6 +3477,91 @@ msgctxt "game_options"
 msgid "No Indicator"
 msgstr "Без индикатора"
 
+#. TRANSLATION: libretro/kronos, libretro/puae, libretro/puae2021, libretro/vb
+msgctxt "game_options"
+msgid "original"
+msgstr "оригинал"
+
+#. TRANSLATION: libretro/kronos, theforceengine
+msgctxt "game_options"
+msgid "480p"
+msgstr ""
+
+#. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, yabasanshiro
+msgctxt "game_options"
+msgid "720p"
+msgstr "720p"
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "4k"
+msgstr "4k"
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "8k"
+msgstr ""
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "Replace meshed transparency by real transparency."
+msgstr ""
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "IMPROVED MESH"
+msgstr ""
+
+#. TRANSLATION: libretro/kronos, libretro/kronos, libretro/mame, libretro/mame, libretro/pcsx2, ...
+msgctxt "game_options"
+msgid "Enabled"
+msgstr "Включено"
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "Apply gouraud shading instead of flat shading."
+msgstr ""
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "IMPROVED BANDING"
+msgstr ""
+
+#. TRANSLATION: libretro/kronos, libretro/yabasanshiro
+msgctxt "game_options"
+msgid "Allows up to 7 or 12 controllers in supported games."
+msgstr "Позволяет исп. до 7 или 12 контроллеров в поддерживаемых играх."
+
+#. TRANSLATION: libretro/kronos, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro, pcsx2
+msgctxt "game_options"
+msgid "MULTITAP"
+msgstr "MULTITAP"
+
+#. TRANSLATION: libretro/kronos, libretro/pcsx_rearmed, libretro/yabasanshiro
+msgctxt "game_options"
+msgid "Port1"
+msgstr "Порт1"
+
+#. TRANSLATION: libretro/kronos, libretro/pcsx_rearmed, libretro/yabasanshiro
+msgctxt "game_options"
+msgid "Port2"
+msgstr "Порт2"
+
+#. TRANSLATION: libretro/kronos, libretro/pcsx_rearmed, libretro/yabasanshiro
+msgctxt "game_options"
+msgid "Port1+2"
+msgstr "Порт1+2"
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "Choose system BIOS language."
+msgstr ""
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "BIOS Language"
+msgstr ""
+
 #. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "Use a custom MAME config, do not overwrite config on launch."
@@ -3563,11 +3648,6 @@ msgstr "Звуковой эффект падения монеты при наж�
 msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "ЗВУКОВОЙ ПЛАГИН ДЛЯ МОНЕТ"
-
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/pcsx2, cemu, cemu, ...
-msgctxt "game_options"
-msgid "Enabled"
-msgstr "Включено"
 
 #. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
 msgctxt "game_options"
@@ -4736,11 +4816,6 @@ msgctxt "game_options"
 msgid "Allows up to 5 or 8 controllers in supported games."
 msgstr "Позволяет использовать до 5 или 8 контроллеров в поддерживаемых играх."
 
-#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro, pcsx2
-msgctxt "game_options"
-msgid "MULTITAP"
-msgstr "MULTITAP"
-
 #. TRANSLATION: libretro/mednafen_psx, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, ...
 msgctxt "game_options"
 msgid "Port 1"
@@ -5671,21 +5746,6 @@ msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "Выкл безопаснее, Вкл для конкретных игр."
 
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/yabasanshiro
-msgctxt "game_options"
-msgid "Port1"
-msgstr "Порт1"
-
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/yabasanshiro
-msgctxt "game_options"
-msgid "Port2"
-msgstr "Порт2"
-
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/yabasanshiro
-msgctxt "game_options"
-msgid "Port1+2"
-msgstr "Порт1+2"
-
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
@@ -6176,11 +6236,6 @@ msgstr "Глобально влияет на скорость мыши."
 msgctxt "game_options"
 msgid "MOUSE SPEED"
 msgstr "СКОРОСТЬ МЫШИ"
-
-#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vb
-msgctxt "game_options"
-msgid "original"
-msgstr "оригинал"
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, ...
 msgctxt "game_options"
@@ -7397,20 +7452,10 @@ msgctxt "game_options"
 msgid "EXPOSE MODE"
 msgstr "РЕЖИМ ЭКСПОЗИЦИИ"
 
-#. TRANSLATION: libretro/yabasanshiro, theforceengine, yabasanshiro
-msgctxt "game_options"
-msgid "720p"
-msgstr "720p"
-
 #. TRANSLATION: libretro/yabasanshiro
 msgctxt "game_options"
 msgid "4K"
 msgstr "4K"
-
-#. TRANSLATION: libretro/yabasanshiro
-msgctxt "game_options"
-msgid "Allows up to 7 or 12 controllers in supported games."
-msgstr "Позволяет исп. до 7 или 12 контроллеров в поддерживаемых играх."
 
 #. TRANSLATION: libretro/yabasanshiro
 msgctxt "game_options"
@@ -13531,11 +13576,6 @@ msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "480p"
-msgstr ""
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
 msgid "600p"
 msgstr ""
 
@@ -16154,10 +16194,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "1x(native)"
 #~ msgstr "1x(родное)"
-
-#~ msgctxt "game_options"
-#~ msgid "4k"
-#~ msgstr "4k"
 
 #~ msgctxt "game_options"
 #~ msgid "Native (400x240)"
