@@ -7,6 +7,7 @@
 - Initial support for the Steam Deck OLED
 ### Added
 - New Powermode ES setting. Adjusts cpu governor/system power usage while in-game.
+- New TDP setting to adjust TDP wattage values of supported Ryzen Mobile Series CPU's per system or globally.
 - Additional ES controller settings for Dolphin.
 - DPLII/Surround Sound ES setting for Dolphin. Note there is a mild performance cost.
 - The Force Engine: Play Dark Forces with enhanced graphics.
@@ -97,7 +98,7 @@
 - Libretro-Beetle-WSwan to May 27, 2023 build
 - Libretro-Bluemsx to Apr 18, 2023 build
 - Libretro-Bsnes to Oct 20, 2023 build
-- Libretro-Cap32 to Jul 12, 2023 build
+- Libretro-Cap32 4.5.4
 - Libretro-ChaiLove to Sep 30, 2023 build
 - Libretro-Craft to May 28, 2023 build
 - Libretro-Desmume to Oct 6, 2023 build
