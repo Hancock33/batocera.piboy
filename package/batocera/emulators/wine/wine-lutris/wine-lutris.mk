@@ -3,8 +3,8 @@
 # wine-lutris
 #
 ################################################################################
-# Version: Commits on Dec 27, 2023
-WINE_LUTRIS_VERSION = 91a29134ff35c0a6e388329ea819dd73651062b1
+# Version: Commits on Jan 04, 2024
+WINE_LUTRIS_VERSION = def5e1a61d8c565c646f2a900059e6cf42f05c96
 WINE_LUTRIS_STAGING_VERSION = $(subst wine-,,$(WINE_LUTRIS_VERSION))
 WINE_LUTRIS_SOURCE = wine-$(WINE_LUTRIS_VERSION).tar.gz
 WINE_LUTRIS_SITE = $(call github,wine-mirror,wine,$(WINE_LUTRIS_VERSION))
