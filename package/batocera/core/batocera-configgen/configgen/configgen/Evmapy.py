@@ -30,14 +30,14 @@ class Evmapy():
     def __prepare(system, emulator, core, rom, playersControllers, guns):
         # consider files here in this order to get a configuration
         for keysfile in [
+                "{}.keys" .format (rom),
                 "{}/padto.keys" .format (rom), # case when the rom is a directory
                 #"/userdata/system/configs/evmapy/{}.{}.{}.keys" .format (system, emulator, core),
                 #"/userdata/system/configs/evmapy/{}.{}.keys" .format (system, emulator),
                 "/userdata/system/configs/evmapy/{}.keys" .format (system),
                 #"/usr/share/evmapy/{}.{}.{}.keys" .format (system, emulator, core),
                 "/usr/share/evmapy/{}.{}.keys" .format (system, emulator),
-                "/usr/share/evmapy/{}.keys" .format (system),
-                "{}.keys" .format (rom)
+                "/usr/share/evmapy/{}.keys" .format (system)
         ]:
             if os.path.exists(keysfile) and not (os.path.isdir(rom) and keysfile == "{}.keys" .format (rom)): # "{}.keys" .format (rom) is forbidden for directories, it must be inside
                 eslog.debug(f"evmapy on {keysfile}")
