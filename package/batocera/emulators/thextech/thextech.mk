@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jan 07, 2024
-THEXTECH_VERSION = 5e75aac3605a7ec98c9c4e459c685c87f010f0dc
+THEXTECH_VERSION = 67e2c59aa4a02ed57cac4a77744e6a150db09b14
 THEXTECH_SITE = https://github.com/Wohlstand/TheXTech
 THEXTECH_SITE_METHOD = git
 THEXTECH_GIT_SUBMODULES = YES
