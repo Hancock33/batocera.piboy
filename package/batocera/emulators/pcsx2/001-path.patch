@@ -1,8 +1,8 @@
 diff --git a/pcsx2/Pcsx2Config.cpp b/pcsx2/Pcsx2Config.cpp
-index 83b357a1f..278b0b89b 100644
+index e05441565..d54e71690 100644
 --- a/pcsx2/Pcsx2Config.cpp
 +++ b/pcsx2/Pcsx2Config.cpp
-@@ -1974,17 +1974,17 @@ void EmuFolders::SetDataDirectory()
+@@ -1974,18 +1974,18 @@ void EmuFolders::SetDataDirectory()
  
  void EmuFolders::SetDefaults(SettingsInterface& si)
  {
@@ -13,10 +13,6 @@ index 83b357a1f..278b0b89b 100644
 -	si.SetStringValue("Folders", "Logs", "logs");
 -	si.SetStringValue("Folders", "Cheats", "cheats");
 -	si.SetStringValue("Folders", "Patches", "patches");
--	si.SetStringValue("Folders", "Cache", "cache");
--	si.SetStringValue("Folders", "Textures", "textures");
--	si.SetStringValue("Folders", "InputProfiles", "inputprofiles");
--	si.SetStringValue("Folders", "Videos", "videos");
 +	si.SetStringValue("Folders", "Bios", "/userdata/bios/ps2");
 +	si.SetStringValue("Folders", "Snapshots", "/userdata/screenshots/ps2");
 +	si.SetStringValue("Folders", "Savestates", "/userdata/saves/ps2");
@@ -24,6 +20,11 @@ index 83b357a1f..278b0b89b 100644
 +	si.SetStringValue("Folders", "Logs", "/userdata/system/logs");
 +	si.SetStringValue("Folders", "Cheats", "/userdata/cheats/ps2/cheats");
 +	si.SetStringValue("Folders", "Patches", "/usr/bin/pcsx2/resources");
+ 	si.SetStringValue("Folders", "UserResources", "resources");
+-	si.SetStringValue("Folders", "Cache", "cache");
+-	si.SetStringValue("Folders", "Textures", "textures");
+-	si.SetStringValue("Folders", "InputProfiles", "inputprofiles");
+-	si.SetStringValue("Folders", "Videos", "videos");
 +	si.SetStringValue("Folders", "Cache", "/userdata/system/cache/ps2");
 +	si.SetStringValue("Folders", "Textures", "/userdata/system/configs/PCSX2/textures");
 +	si.SetStringValue("Folders", "InputProfiles", "/userdata/system/configs/PCSX2/inputprofiles");
@@ -31,7 +32,7 @@ index 83b357a1f..278b0b89b 100644
  }
  
  static std::string LoadPathFromSettings(SettingsInterface& si, const std::string& root, const char* name, const char* def)
-@@ -1997,19 +1997,19 @@ static std::string LoadPathFromSettings(SettingsInterface& si, const std::string
+@@ -1998,20 +1998,20 @@ static std::string LoadPathFromSettings(SettingsInterface& si, const std::string
  
  void EmuFolders::LoadConfig(SettingsInterface& si)
  {
@@ -52,6 +53,7 @@ index 83b357a1f..278b0b89b 100644
 +	Patches = LoadPathFromSettings(si, DataRoot, "Patches", "/usr/bin/pcsx2/resources");
 +	Covers = LoadPathFromSettings(si, DataRoot, "Covers", "/userdata/system/configs/PCSX2/covers");
  	GameSettings = LoadPathFromSettings(si, DataRoot, "GameSettings", "gamesettings");
+ 	UserResources = LoadPathFromSettings(si, DataRoot, "UserResources", "resources");
 -	Cache = LoadPathFromSettings(si, DataRoot, "Cache", "cache");
 -	Textures = LoadPathFromSettings(si, DataRoot, "Textures", "textures");
 -	InputProfiles = LoadPathFromSettings(si, DataRoot, "InputProfiles", "inputprofiles");

@@ -1,5 +1,5 @@
 diff --git a/cmake/BuildParameters.cmake b/cmake/BuildParameters.cmake
-index 6e47de852..92f1c56e8 100644
+index c8a278ec8..98ce9bb40 100644
 --- a/cmake/BuildParameters.cmake
 +++ b/cmake/BuildParameters.cmake
 @@ -94,7 +94,7 @@ if("${CMAKE_HOST_SYSTEM_PROCESSOR}" STREQUAL "x86_64" OR "${CMAKE_HOST_SYSTEM_PR
@@ -12,10 +12,10 @@ index 6e47de852..92f1c56e8 100644
  		endif()
  	endif()
 diff --git a/pcsx2/CMakeLists.txt b/pcsx2/CMakeLists.txt
-index 21b8ad1c0..60ef733e8 100644
+index 475a3d3cf..503806942 100644
 --- a/pcsx2/CMakeLists.txt
 +++ b/pcsx2/CMakeLists.txt
-@@ -734,9 +734,9 @@ if(DISABLE_ADVANCE_SIMD)
+@@ -736,9 +736,9 @@ if(DISABLE_ADVANCE_SIMD)
  		set(compile_options_avx  -msse4.1 -mavx)
  		set(compile_options_sse4 -msse4.1)
  	else()
