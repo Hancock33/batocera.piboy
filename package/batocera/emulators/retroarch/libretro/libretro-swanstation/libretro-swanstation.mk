@@ -39,8 +39,8 @@ else
 endif
 
 define LIBRETRO_SWANSTATION_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/buildroot-build/swanstation_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/swanstation_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/buildroot-build/swanstation_libretro.so $(TARGET_DIR)/usr/lib/libretro/swanstation_libretro.so
 endef
 
 $(eval $(cmake-package))

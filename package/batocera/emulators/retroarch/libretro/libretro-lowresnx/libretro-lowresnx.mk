@@ -31,8 +31,8 @@ define LIBRETRO_LOWRESNX_BUILD_CMDS
 endef
 
 define LIBRETRO_LOWRESNX_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/platform/LibRetro/lowresnx_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/lowresnx_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/platform/LibRetro/lowresnx_libretro.so $(TARGET_DIR)/usr/lib/libretro/lowresnx_libretro.so
 endef
 
 $(eval $(generic-package))

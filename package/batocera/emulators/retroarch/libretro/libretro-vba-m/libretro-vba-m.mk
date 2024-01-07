@@ -3,8 +3,8 @@
 # libretro-vba-m
 #
 ################################################################################
-# Version: Commits on Dec 30, 2023
-LIBRETRO_VBA_M_VERSION = 92d9230e2c2515f9d1eae2bb21517423b0d0a7e3
+# Version: Commits on Jan 02, 2024
+LIBRETRO_VBA_M_VERSION = 390482a719d60be723f0ec4a84f2c07f7a822389
 LIBRETRO_VBA_M_SITE = $(call github,visualboyadvance-m,visualboyadvance-m,$(LIBRETRO_VBA_M_VERSION))
 
 define LIBRETRO_VBA_M_BUILD_CMDS
@@ -15,8 +15,7 @@ define LIBRETRO_VBA_M_BUILD_CMDS
 endef
 
 define LIBRETRO_VBA_M_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/src/libretro/vbam_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/vba-m_libretro.so
+	$(INSTALL) -D $(@D)/src/libretro/vbam_libretro.so $(TARGET_DIR)/usr/lib/libretro/vba-m_libretro.so
 endef
 
 $(eval $(generic-package))

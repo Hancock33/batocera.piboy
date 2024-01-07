@@ -3,8 +3,8 @@
 # libretro-gambatte
 #
 ################################################################################
-# Version: Commits on Dec 22, 2023
-LIBRETRO_GAMBATTE_VERSION = ee002a8f529a5b542b0151784156f5002a6541f5
+# Version: Commits on Jan 05, 2024
+LIBRETRO_GAMBATTE_VERSION = 71d22fdd891e7776f9a175a5a6af51d2b9844b44
 LIBRETRO_GAMBATTE_SITE = $(call github,libretro,gambatte-libretro,$(LIBRETRO_GAMBATTE_VERSION))
 LIBRETRO_GAMBATTE_LICENSE = GPLv2
 
@@ -30,8 +30,8 @@ define LIBRETRO_GAMBATTE_BUILD_CMDS
 endef
 
 define LIBRETRO_GAMBATTE_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/gambatte_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/gambatte_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/gambatte_libretro.so $(TARGET_DIR)/usr/lib/libretro/gambatte_libretro.so
 endef
 
 $(eval $(generic-package))

@@ -7,6 +7,7 @@
 - Initial support for the Steam Deck OLED
 ### Added
 - New Powermode ES setting. Adjusts cpu governor/system power usage while in-game.
+- New TDP setting to adjust TDP wattage values of supported Ryzen Mobile Series CPU's per system or globally.
 - Additional ES controller settings for Dolphin.
 - DPLII/Surround Sound ES setting for Dolphin. Note there is a mild performance cost.
 - The Force Engine: Play Dark Forces with enhanced graphics.
@@ -29,6 +30,7 @@
  - Atari Classic joystick: the rudder is seen as a spinner
 - Ayn Loki Zero: support for on-board LEDs (and light effect on retroachievements unlocked)
 - Sonic Mania port.
+- OpenBor 4 (7533 build)
 ### Fixed
 - Dolphin bug that prevented full range of analog trigger axis being used.
 - Flycast per pixel sorting option if renderer not explicitly set
@@ -96,7 +98,7 @@
 - Libretro-Beetle-WSwan to May 27, 2023 build
 - Libretro-Bluemsx to Apr 18, 2023 build
 - Libretro-Bsnes to Oct 20, 2023 build
-- Libretro-Cap32 to Jul 12, 2023 build
+- Libretro-Cap32 4.5.4
 - Libretro-ChaiLove to Sep 30, 2023 build
 - Libretro-Craft to May 28, 2023 build
 - Libretro-Desmume to Oct 6, 2023 build
@@ -116,7 +118,7 @@
 - Libretro-Handy to Aug 20, 2023 build
 - Libretro-Hatari to Sep 30, 2023 build
 - Libretro-iMame to Apr 26, 2023 build
-- Libretro-Kronos to Oct 27, 2023 build
+- Libretro-Kronos to 2.6.1
 - Libretro-Lutro to May 30, 2023 build
 - Libretro-Mame2003-plus to Oct 23, 2023 build
 - Libretro-Mesen to May 21, 2023 build

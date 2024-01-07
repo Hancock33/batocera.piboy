@@ -3,8 +3,8 @@
 # libretro-beetle-pce
 #
 ################################################################################
-# Version: Commits on Dec 15, 2023
-LIBRETRO_BEETLE_PCE_VERSION = ae3159b15e303cb7156ca1274353fdf665b31a6d
+# Version: Commits on Jan 05, 2024
+LIBRETRO_BEETLE_PCE_VERSION = 7f0375608181c02b504d585c788a568522a0606c
 LIBRETRO_BEETLE_PCE_SITE = $(call github,libretro,beetle-pce-libretro,$(LIBRETRO_BEETLE_PCE_VERSION))
 LIBRETRO_BEETLE_PCE_LICENSE = GPLv2
 
@@ -16,8 +16,8 @@ define LIBRETRO_BEETLE_PCE_BUILD_CMDS
 endef
 
 define LIBRETRO_BEETLE_PCE_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/mednafen_pce_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/pce_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/mednafen_pce_libretro.so $(TARGET_DIR)/usr/lib/libretro/pce_libretro.so
 endef
 
 $(eval $(generic-package))

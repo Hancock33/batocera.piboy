@@ -29,9 +29,10 @@ define LIBRETRO_81_BUILD_CMDS
 endef
 
 define LIBRETRO_81_INSTALL_TARGET_CMDS
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	mkdir -p $(TARGET_DIR)/usr/share/evmap
 	$(INSTALL) -D $(@D)/81_libretro.so $(TARGET_DIR)/usr/lib/libretro/81_libretro.so
-	$(INSTALL) -D -t $(TARGET_DIR)/usr/share/evmapy/ \
-	    $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-81/zx81.keys
+	$(INSTALL) -D -t $(TARGET_DIR)/usr/share/evmapy/ $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-81/zx81.keys
 endef
 
 $(eval $(generic-package))

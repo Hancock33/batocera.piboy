@@ -28,6 +28,7 @@ define LIBRETRO_VITAVOYAGER_BUILD_CMDS
 endef
 
 define LIBRETRO_VITAVOYAGER_INSTALL_TARGET_CMDS
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/VITAVOYAGER_libretro.so $(TARGET_DIR)/usr/lib/libretro/VITAVOYAGER_libretro.so
 endef
 

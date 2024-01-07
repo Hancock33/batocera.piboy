@@ -3,8 +3,8 @@
 # libretro-pcsx
 #
 ################################################################################
-# Version: Commits on Dec 27, 2023
-LIBRETRO_PCSX_VERSION = cf6f7cacc502169c0931320a08b0e6027e1ac908
+# Version: Commits on Jan 03, 2024
+LIBRETRO_PCSX_VERSION = 5ee1c9269d333936eba3e7e3259956f601ff5edd
 LIBRETRO_PCSX_SITE = $(call github,libretro,pcsx_rearmed,$(LIBRETRO_PCSX_VERSION))
 LIBRETRO_PCSX_LICENSE = GPLv2
 
@@ -49,8 +49,8 @@ define LIBRETRO_PCSX_BUILD_CMDS
 endef
 
 define LIBRETRO_PCSX_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/pcsx_rearmed_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/pcsx_rearmed_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/pcsx_rearmed_libretro.so $(TARGET_DIR)/usr/lib/libretro/pcsx_rearmed_libretro.so
 endef
 
 $(eval $(generic-package))

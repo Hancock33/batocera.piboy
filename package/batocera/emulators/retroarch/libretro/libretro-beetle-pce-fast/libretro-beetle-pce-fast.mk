@@ -3,8 +3,8 @@
 # libretro-beetle-pce-fast
 #
 ################################################################################
-# Version: Commits on Dec 15, 2023
-LIBRETRO_BEETLE_PCE_FAST_VERSION = ac1c49539a4b18449b3118835c52d606545bb87a
+# Version: Commits on Jan 05, 2024
+LIBRETRO_BEETLE_PCE_FAST_VERSION = fa2ad8e4ad2c01f2e6dc05e5e9cc3b68153c4d66
 LIBRETRO_BEETLE_PCE_FAST_SITE = $(call github,libretro,beetle-pce-fast-libretro,$(LIBRETRO_BEETLE_PCE_FAST_VERSION))
 LIBRETRO_BEETLE_PCE_FAST_LICENSE = GPLv2
 
@@ -35,8 +35,8 @@ define LIBRETRO_BEETLE_PCE_FAST_BUILD_CMDS
 endef
 
 define LIBRETRO_BEETLE_PCE_FAST_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/mednafen_pce_fast_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/pce_fast_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/mednafen_pce_fast_libretro.so $(TARGET_DIR)/usr/lib/libretro/pce_fast_libretro.so
 endef
 
 $(eval $(generic-package))

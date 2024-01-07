@@ -45,8 +45,8 @@ define LIBRETRO_VITAQUAKE2_BUILD_CMDS
 endef
 
 define LIBRETRO_VITAQUAKE2_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/vitaquake2*.so \
-		$(TARGET_DIR)/usr/lib/libretro/
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/vitaquake2*.so $(TARGET_DIR)/usr/lib/libretro/
 endef
 
 $(eval $(generic-package))

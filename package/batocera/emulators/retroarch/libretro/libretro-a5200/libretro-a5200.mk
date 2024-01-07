@@ -40,8 +40,8 @@ define LIBRETRO_A5200_BUILD_CMDS
 endef
 
 define LIBRETRO_A5200_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/a5200_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/a5200_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/a5200_libretro.so $(TARGET_DIR)/usr/lib/libretro/a5200_libretro.so
 endef
 
 $(eval $(generic-package))

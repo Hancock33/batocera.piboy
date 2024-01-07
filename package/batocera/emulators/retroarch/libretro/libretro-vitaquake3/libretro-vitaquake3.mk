@@ -29,6 +29,7 @@ define LIBRETRO_VITAQUAKE3_BUILD_CMDS
 endef
 
 define LIBRETRO_VITAQUAKE3_INSTALL_TARGET_CMDS
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/vitaquake3_libretro.so $(TARGET_DIR)/usr/lib/libretro/vitaquake3_libretro.so
 endef
 

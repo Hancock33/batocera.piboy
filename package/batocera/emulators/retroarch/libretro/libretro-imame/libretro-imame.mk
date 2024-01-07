@@ -23,13 +23,11 @@ define LIBRETRO_IMAME_BUILD_CMDS
 endef
 
 define LIBRETRO_IMAME_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/mame2000_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/imame4all_libretro.so
-
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/mame2000_libretro.so $(TARGET_DIR)/usr/lib/libretro/imame4all_libretro.so
 	# Bios
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/imame4all/samples
-	$(INSTALL) -D $(@D)/metadata/* \
-		$(TARGET_DIR)/usr/share/batocera/datainit/bios/imame4all
+	$(INSTALL) -D $(@D)/metadata/* $(TARGET_DIR)/usr/share/batocera/datainit/bios/imame4all
 endef
 
 $(eval $(generic-package))

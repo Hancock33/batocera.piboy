@@ -3,8 +3,8 @@
 # libretro-gpsp
 #
 ################################################################################
-# Version: Commits on Dec 29, 2023
-LIBRETRO_GPSP_VERSION = 8e7d42bb431ef54929878a0e7426ffd190b6d22f
+# Version: Commits on Dec 31, 2023
+LIBRETRO_GPSP_VERSION = 092c5144827ee3ac07a6af9276244221c303ca41
 LIBRETRO_GPSP_SITE = $(call github,libretro,gpsp,$(LIBRETRO_GPSP_VERSION))
 LIBRETRO_GPSP_LICENSE = GPLv2
 
@@ -25,8 +25,8 @@ define LIBRETRO_GPSP_BUILD_CMDS
 endef
 
 define LIBRETRO_GPSP_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/gpsp_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/gpsp_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/gpsp_libretro.so $(TARGET_DIR)/usr/lib/libretro/gpsp_libretro.so
 endef
 
 $(eval $(generic-package))

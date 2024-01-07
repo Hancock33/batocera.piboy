@@ -3,8 +3,8 @@
 # libretro-mgba
 #
 ################################################################################
-# Version: Commits on Dec 22, 2023
-LIBRETRO_MGBA_VERSION = d83b2f99cd3d35509cf110bb47cbc72f569a31ed
+# Version: Commits on Jan 07, 2024
+LIBRETRO_MGBA_VERSION = 3becd63ef5ef623957cae822c67c9a694aeda7a6
 LIBRETRO_MGBA_SITE = $(call github,mgba-emu,mgba,$(LIBRETRO_MGBA_VERSION))
 LIBRETRO_MGBA_LICENSE = MPLv2.0
 
@@ -34,8 +34,8 @@ else
 endif
 
 define LIBRETRO_MGBA_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/mgba_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/mgba_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/mgba_libretro.so $(TARGET_DIR)/usr/lib/libretro/mgba_libretro.so
 endef
 
 $(eval $(cmake-package))

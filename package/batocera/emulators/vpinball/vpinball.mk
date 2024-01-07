@@ -3,8 +3,8 @@
 # vpinball
 #
 ################################################################################
-# Version: Commits on Dec 26, 2023 (branch@standalone)
-VPINBALL_VERSION = b884fb42d7d9183aba6f3d8c51e8866d83083218
+# Version: Commits on Jan 07, 2024 (branch@standalone)
+VPINBALL_VERSION = 1c797f3328ab9db2b54abbf810473868ed6cfc4b
 VPINBALL_SITE = $(call github,vpinball,vpinball,$(VPINBALL_VERSION))
 VPINBALL_LICENSE = GPLv3+
 VPINBALL_LICENSE_FILES = LICENSE
@@ -56,10 +56,11 @@ define VPINBALL_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/VPinballX_GL \
 		$(TARGET_DIR)/usr/bin/vpinball
 	# copy folders
-	cp -R $(@D)/buildroot-build/flexdmd		$(TARGET_DIR)/usr/bin/vpinball/
-	cp -R $(@D)/buildroot-build/assets		$(TARGET_DIR)/usr/bin/vpinball/
-	cp -R $(@D)/buildroot-build/scripts		$(TARGET_DIR)/usr/bin/vpinball/
-	cp -R $(@D)/buildroot-build/shader		$(TARGET_DIR)/usr/bin/vpinball/
+	cp -R $(@D)/buildroot-build/flexdmd			$(TARGET_DIR)/usr/bin/vpinball/
+	cp -R $(@D)/buildroot-build/assets			$(TARGET_DIR)/usr/bin/vpinball/
+	cp -R $(@D)/buildroot-build/scripts			$(TARGET_DIR)/usr/bin/vpinball/
+	cp -R $(@D)/buildroot-build/shader10.8.0	$(TARGET_DIR)/usr/bin/vpinball/
+	ln -sf /usr/bin/vpinball/shader10.8.0		$(TARGET_DIR)/usr/bin/vpinball/shader
 endef
 
 define VPINBALL_EVMAPY
