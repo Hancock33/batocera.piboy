@@ -3,8 +3,8 @@
 # freedroid
 #
 ################################################################################
-# Version: Commits on Apr 07, 2021
-FREEDROID_VERSION = 2d5cf64ff5227ee55e133ba392b8ace74d1df2cc
+# Version: Commits on Nov 06, 2023
+FREEDROID_VERSION = e17ecf79694e482253efaba17a9432b802c1364b
 FREEDROID_SITE = $(call github,ReinhardPrix,FreedroidClassic,$(FREEDROID_VERSION))
 
 FREEDROID_DEPENDENCIES = sdl12-compat sdl_mixer sdl_image sdl_gfx jpeg
