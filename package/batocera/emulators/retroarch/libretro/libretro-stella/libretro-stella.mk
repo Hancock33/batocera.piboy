@@ -3,8 +3,8 @@
 # libretro-stella
 #
 ################################################################################
-# Version: Commits on Dec 29, 2023
-LIBRETRO_STELLA_VERSION = 6cbf3ca83b964748a7023fea11718ac2f99b6f87
+# Version: Commits on Jan 07, 2024
+LIBRETRO_STELLA_VERSION = 39caf7d629eda889d239fea629b56f38e6fff2fc
 LIBRETRO_STELLA_SITE = $(call github,stella-emu,stella,$(LIBRETRO_STELLA_VERSION))
 LIBRETRO_STELLA_LICENSE = GPLv2
 
@@ -30,8 +30,8 @@ define LIBRETRO_STELLA_BUILD_CMDS
 endef
 
 define LIBRETRO_STELLA_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/src/os/libretro/stella_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/stella_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/src/os/libretro/stella_libretro.so $(TARGET_DIR)/usr/lib/libretro/stella_libretro.so
 endef
 
 $(eval $(generic-package))

@@ -3,8 +3,8 @@
 # libretro-squirreljme
 #
 ################################################################################
-# Version: Commits on Dec 31, 2023
-LIBRETRO_SQUIRRELJME_VERSION = 5fd75bb5229b5c34f5a8b746eab92bd5fb307b74
+# Version: Commits on Jan 07, 2024
+LIBRETRO_SQUIRRELJME_VERSION = 1f35f05c7f558c9a5e1bbbfb0947d1fc8754bf57
 LIBRETRO_SQUIRRELJME_SITE = $(call github,SquirrelJME,SquirrelJME,$(LIBRETRO_SQUIRRELJME_VERSION))
 LIBRETRO_SQUIRRELJME_LICENSE = GPL-3.0
 
@@ -23,8 +23,8 @@ define LIBRETRO_SQUIRRELJME_BUILD_CMDS
 endef
 
 define LIBRETRO_SQUIRRELJME_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/ratufacoat/libretro/squirreljme_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/squirreljme_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/ratufacoat/libretro/squirreljme_libretro.so $(TARGET_DIR)/usr/lib/libretro/squirreljme_libretro.so
 endef
 
 $(eval $(generic-package))

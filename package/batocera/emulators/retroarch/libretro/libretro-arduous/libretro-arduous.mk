@@ -17,8 +17,8 @@ LIBRETRO_ARDUOUS_SUPPORTS_IN_SOURCE_BUILD = NO
 LIBRETRO_ARDUOUS_CONF_OPTS  = -DWERROR=OFF
 
 define LIBRETRO_ARDUOUS_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/buildroot-build/arduous_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/arduous_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/buildroot-build/arduous_libretro.so $(TARGET_DIR)/usr/lib/libretro/arduous_libretro.so
 endef
 
 $(eval $(cmake-package))

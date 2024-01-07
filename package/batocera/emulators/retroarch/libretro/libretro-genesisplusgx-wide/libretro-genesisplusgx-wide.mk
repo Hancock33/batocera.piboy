@@ -3,8 +3,8 @@
 # libretro-genesisplusgx-wide
 #
 ################################################################################
-# Version: Commits on Nov 15, 2023
-LIBRETRO_GENESISPLUSGX_WIDE_VERSION = 659329cbfbc3267f4f617910a3ecee60dd655dac
+# Version: Commits on Jan 05, 2024
+LIBRETRO_GENESISPLUSGX_WIDE_VERSION = bf99eaaa9e005242ad127484cd7e4772668c8da4
 LIBRETRO_GENESISPLUSGX_WIDE_SITE = $(call github,libretro,Genesis-Plus-GX-Wide,$(LIBRETRO_GENESISPLUSGX_WIDE_VERSION))
 LIBRETRO_GENESISPLUSGX_WIDE_LICENSE = Non-commercial
 
@@ -25,8 +25,8 @@ define LIBRETRO_GENESISPLUSGX_WIDE_BUILD_CMDS
 endef
 
 define LIBRETRO_GENESISPLUSGX_WIDE_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/genesis_plus_gx_wide_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/genesisplusgx-wide_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/genesis_plus_gx_wide_libretro.so $(TARGET_DIR)/usr/lib/libretro/genesisplusgx-wide_libretro.so
 endef
 
 $(eval $(generic-package))

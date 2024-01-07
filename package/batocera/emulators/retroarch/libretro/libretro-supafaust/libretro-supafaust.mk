@@ -29,8 +29,8 @@ define LIBRETRO_SUPAFAUST_BUILD_CMDS
 endef
 
 define LIBRETRO_SUPAFAUST_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/mednafen_supafaust_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/supafaust_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/mednafen_supafaust_libretro.so $(TARGET_DIR)/usr/lib/libretro/supafaust_libretro.so
 endef
 
 $(eval $(generic-package))

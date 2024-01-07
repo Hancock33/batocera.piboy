@@ -37,8 +37,8 @@ define LIBRETRO_CHAILOVE_BUILD_CMDS
 endef
 
 define LIBRETRO_CHAILOVE_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/chailove_libretro.so \
-	$(TARGET_DIR)/usr/lib/libretro/chailove_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/chailove_libretro.so $(TARGET_DIR)/usr/lib/libretro/chailove_libretro.so
 endef
 
 $(eval $(generic-package))

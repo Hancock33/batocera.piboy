@@ -3,8 +3,8 @@
 # libretro-ppsspp
 #
 ################################################################################
-# Version: Commits on Dec 31, 2023
-LIBRETRO_PPSSPP_VERSION = eabcd5d8a29ec79480b10119376cd124bfce427d
+# Version: Commits on Jan 06, 2024
+LIBRETRO_PPSSPP_VERSION = 53cfe5285d6b7c8959dd65bb72e6a6adf7248c74
 LIBRETRO_PPSSPP_SOURCE = ppsspp-$(LIBRETRO_PPSSPP_VERSION)-br1.tar.gz
 LIBRETRO_PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 LIBRETRO_PPSSPP_SITE_METHOD=git
@@ -96,8 +96,8 @@ endef
 LIBRETRO_PPSSPP_PRE_CONFIGURE_HOOKS += LIBRETRO_PPSSPP_UPDATE_INCLUDES
 
 define LIBRETRO_PPSSPP_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/lib/ppsspp_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/ppsspp_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/lib/ppsspp_libretro.so $(TARGET_DIR)/usr/lib/libretro/ppsspp_libretro.so
 
 	# Required for game menus
 	mkdir -p $(TARGET_DIR)/usr/share/ppsspp

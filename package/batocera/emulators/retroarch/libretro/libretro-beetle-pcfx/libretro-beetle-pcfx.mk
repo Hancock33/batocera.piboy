@@ -55,8 +55,8 @@ define LIBRETRO_BEETLE_PCFX_BUILD_CMDS
 endef
 
 define LIBRETRO_BEETLE_PCFX_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/mednafen_pcfx_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/pcfx_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/mednafen_pcfx_libretro.so $(TARGET_DIR)/usr/lib/libretro/pcfx_libretro.so
 endef
 
 $(eval $(generic-package))

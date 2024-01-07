@@ -3,8 +3,8 @@
 # ecwolf
 #
 ################################################################################
-# Version: Commits on Sept 05, 2023
-ECWOLF_VERSION = 84b52829128ba2633ff7e1d71e22c785749d807a
+# Version: Commits on Dec 24, 2023
+ECWOLF_VERSION = 2065d07de4a4bc3c70f6ff66a15666468b3a42f2
 ECWOLF_SITE = https://bitbucket.org/ecwolf/ecwolf.git
 ECWOLF_SITE_METHOD=git
 ECWOLF_GIT_SUBMODULES=YES
@@ -22,7 +22,7 @@ define ECWOLF_CROSS
 	$(HOST_ECWOLF_BUILDDIR)/deps/gdtoa/arithchk > $(@D)/deps/gdtoa/arith.h
 	$(HOST_ECWOLF_BUILDDIR)/deps/gdtoa/qnan > $(@D)/deps/gdtoa/gd_qnan.h
 endef
-ECWOLF_POST_EXTRACT_HOOKS += ECWOLF_CROSS
+ECWOLF_PRE_CONFIGURE_HOOKS += ECWOLF_CROSS
 
 define ECWOLF_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin

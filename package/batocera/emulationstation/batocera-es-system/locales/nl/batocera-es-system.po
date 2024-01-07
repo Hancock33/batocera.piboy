@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2023-12-21 14:39+0000\n"
+"PO-Revision-Date: 2024-01-01 03:14+0000\n"
 "Last-Translator: THa_MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl-NL\n"
@@ -14,6 +14,74 @@ msgstr ""
 "X-Loco-Source-Locale: nl_NL\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Parser: loco_parse_po\n"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Adjust the cpu power profile while in-game."
+msgstr "Pas het CPU-energieprofiel aan tijdens het gamen."
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "POWER MODE"
+msgstr "POWER-MODUS"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "High Performance"
+msgstr "Hoge performance"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Balanced"
+msgstr "Gebalanceerd"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Power Saver"
+msgstr "Energiebespaarder"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Adjust the percentage of power (watts) provided to a Ryzen Mobile Series CPU "
+"based on it's default max value. Caution, setting wattage too high could "
+"damage your device."
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "RYZEN THERMAL DESIGN POWER"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "105% (Use caution"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "110% (Use caution)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "115% (Use caution)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "120% (Are you crazy?)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "125% (Yes, you're crazy)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "130% (Nope, you're just insane!)"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -32,7 +100,7 @@ msgctxt "game_options"
 msgid "VIDEO MODE"
 msgstr "VIDEO MODUS"
 
-#. TRANSLATION: shared, pcsx2
+#. TRANSLATION: shared, openbor
 msgctxt "game_options"
 msgid ""
 "Force the game to render in this aspect ratio. Not all systems support all "
@@ -41,7 +109,7 @@ msgstr ""
 "Forceer het spel om in deze beeldverhouding te renderen. Niet alle systemen "
 "ondersteunen alle verhoudingen."
 
-#. TRANSLATION: shared, dolphin, flycast, mupen64plus, pcsx2, ...
+#. TRANSLATION: shared, dolphin, flycast, mupen64plus, openbor, ...
 msgctxt "game_options"
 msgid "GAME ASPECT RATIO"
 msgstr "SPEL ASPECT RATIO"
@@ -384,7 +452,7 @@ msgstr ""
 "Gebruik stuurwielen in plaats van joypads als er stuurwielen zijn "
 "aangesloten."
 
-#. TRANSLATION: shared, shared, shared, shared, pcsx2
+#. TRANSLATION: shared, shared, shared, shared, openbor
 msgctxt "game_options"
 msgid "WHEELS"
 msgstr "STUURWIELEN"
@@ -783,12 +851,12 @@ msgctxt "game_options"
 msgid "English (Default)"
 msgstr "Engels (Standaard)"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/yabasanshiro, cemu, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, ...
 msgctxt "game_options"
 msgid "Spanish"
 msgstr "Spaans"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/yabasanshiro, cemu, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, ...
 msgctxt "game_options"
 msgid "French"
 msgstr "Frans"
@@ -905,7 +973,7 @@ msgctxt "game_options"
 msgid "Low"
 msgstr "Laag"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen, mupen64plus, pcsx2
+#. TRANSLATION: libretro/mesens, libretro/mesen, mupen64plus, openbor
 msgctxt "game_options"
 msgid "Medium"
 msgstr "Gemiddeld"
@@ -1291,17 +1359,17 @@ msgstr ""
 "De geselecteerde taal wordt gebruikt als 'Gebruik firmware-instellingen' is "
 "uitgeschakeld of als er geen firmwarebestand is gevonden."
 
-#. TRANSLATION: libretro/melonds, libretro/dolphin, cemu, flycast/vitaquake3, scummvm, ...
+#. TRANSLATION: libretro/melonds, libretro/dolphin, libretro/kronos, cemu, flycast/vitaquake3, ...
 msgctxt "game_options"
 msgid "German"
 msgstr "Duits"
 
-#. TRANSLATION: libretro/melonds, libretro/dolphin, libretro/yabasanshiro, cemu, flycast/vitaquake3, ...
+#. TRANSLATION: libretro/melonds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, cemu, ...
 msgctxt "game_options"
 msgid "Italian"
 msgstr "Italiaans"
 
-#. TRANSLATION: libretro/melonds, libretro/dolphin, libretro/yabasanshiro, cemu, flycast/vitaquake3, ...
+#. TRANSLATION: libretro/melonds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, cemu, ...
 msgctxt "game_options"
 msgid "Japanese"
 msgstr "Japans"
@@ -1366,7 +1434,7 @@ msgctxt "game_options"
 msgid "Wii NAND's language setting."
 msgstr "Wii NAND's taal instelling."
 
-#. TRANSLATION: libretro/dolphin, cemu, flycast/vitaquake3, scummvm, sonic2013, ...
+#. TRANSLATION: libretro/dolphin, libretro/kronos, cemu, flycast/vitaquake3, scummvm, ...
 msgctxt "game_options"
 msgid "English"
 msgstr "Engels"
@@ -1440,7 +1508,7 @@ msgctxt "game_options"
 msgid "Skip Drawing"
 msgstr "Skip Drawing"
 
-#. TRANSLATION: libretro/dolphin, dolphin, dolphin_triforce, pcsx2, ppsspp, ...
+#. TRANSLATION: libretro/dolphin, dolphin, dolphin_triforce, openbor, ppsspp, ...
 msgctxt "game_options"
 msgid "Improves clarity of distant textures."
 msgstr "Verbeterd helderheid van verre textures."
@@ -1543,12 +1611,12 @@ msgctxt "game_options"
 msgid "External (variable fps)"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox, openbor, mame
+#. TRANSLATION: libretro/dosbox, mame
 msgctxt "game_options"
 msgid "Apply a post-processing effect."
 msgstr "Pas post-processing effecten toe."
 
-#. TRANSLATION: libretro/dosbox, openbor, cgenius
+#. TRANSLATION: libretro/dosbox, cgenius
 msgctxt "game_options"
 msgid "VIDEO FILTER"
 msgstr "VIDEOFILTER"
@@ -1718,12 +1786,12 @@ msgctxt "game_options"
 msgid "4MB"
 msgstr "4MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/uae4arm, libretro/px68k, mame/vitaquake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/uae4arm, libretro/px68k, mame/openbor7530
 msgctxt "game_options"
 msgid "8MB"
 msgstr "8MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/vitaquake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/openbor7530
 msgctxt "game_options"
 msgid "16MB"
 msgstr "16MB"
@@ -1733,27 +1801,27 @@ msgctxt "game_options"
 msgid "24MB"
 msgstr "24MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/vitaquake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/openbor7530
 msgctxt "game_options"
 msgid "32MB"
 msgstr "32MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "48MB"
 msgstr "48MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/vitaquake3, quake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/openbor7530, quake3
 msgctxt "game_options"
 msgid "64MB"
 msgstr "64MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "96MB"
 msgstr "96MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/vitaquake3, quake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, quake3
 msgctxt "game_options"
 msgid "128MB"
 msgstr "128MB"
@@ -2220,7 +2288,7 @@ msgctxt "game_options"
 msgid "TEXTURE FILTERING"
 msgstr "TEXTURE FILTEREN"
 
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/parallel_n64, pcsx2, ppsspp, ...
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/parallel_n64, openbor, ppsspp, ...
 msgctxt "game_options"
 msgid "Nearest"
 msgstr "Meest dichtbij"
@@ -2704,7 +2772,7 @@ msgctxt "game_options"
 msgid "RENDER TO TEXTURE UPSCALING"
 msgstr ""
 
-#. TRANSLATION: libretro/fuse, libretro/mame, hatari, mame/vitaquake3
+#. TRANSLATION: libretro/fuse, libretro/mame, hatari, mame/openbor7530
 msgctxt "game_options"
 msgid "MODEL"
 msgstr "MODEL"
@@ -3048,36 +3116,38 @@ msgid ""
 "Use Megadrive to automap inputs for a Megadrive style controller with a 6 "
 "button layout."
 msgstr ""
+"Gebruik Megadrive om invoer automatisch toe te wijzen voor een Megadrive-"
+"stijl controller met een indeling met 6 knoppen."
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
 msgid "CONTROLLER 1 INPUT MAPPING"
-msgstr ""
+msgstr "CONTROLLER 1 INVOER MAPPING"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, ...
 msgctxt "game_options"
 msgid "Retropad (Default)"
-msgstr ""
+msgstr "Retropad (Standaard)"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, ...
 msgctxt "game_options"
 msgid "Megadrive"
-msgstr ""
+msgstr "Megadrive"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
 msgid "CONTROLLER 2 INPUT MAPPING"
-msgstr ""
+msgstr "CONTROLLER 2 INVOER MAPPING"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
 msgid "CONTROLLER 3 INPUT MAPPING"
-msgstr ""
+msgstr "CONTROLLER 3 INVOER MAPPING"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
 msgid "CONTROLLER 4 INPUT MAPPING"
-msgstr ""
+msgstr "CONTROLLER 4 INVOER MAPPING"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
@@ -3135,36 +3205,39 @@ msgid ""
 "Sound generator. MAME is faster and Nuked is cycle accurate. Original model "
 "used YM2612 while later revisions used YM3438."
 msgstr ""
+"Geluidsgenerator. MAME is sneller en Nuked is cyclusnauwkeurig. Het "
+"originele model gebruikte YM2612, terwijl latere herzieningen YM3438 "
+"gebruikten."
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
 msgid "FM SYNTHESIZER"
-msgstr ""
+msgstr "FM SYNTHESIZER"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
 msgid "MAME (YM2612)"
-msgstr ""
+msgstr "MAME (YM2612)"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
 msgid "MAME (ASIC YM3438)"
-msgstr ""
+msgstr "MAME (ASIC YM3438)"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
 msgid "MAME (Enhanced YM3438)"
-msgstr ""
+msgstr "MAME (Enhanced YM3438)"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Nuked (YM2612)"
-msgstr ""
+msgstr "Nuked (YM2612)"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Nuked (YM3438)"
-msgstr ""
+msgstr "Nuked (YM3438)"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
@@ -3489,6 +3562,91 @@ msgctxt "game_options"
 msgid "No Indicator"
 msgstr "Geen Indicator"
 
+#. TRANSLATION: libretro/kronos, libretro/puae, libretro/puae2021, libretro/vb
+msgctxt "game_options"
+msgid "original"
+msgstr "origineel"
+
+#. TRANSLATION: libretro/kronos, theforceengine
+msgctxt "game_options"
+msgid "480p"
+msgstr "400p"
+
+#. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, yabasanshiro
+msgctxt "game_options"
+msgid "720p"
+msgstr "720p"
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "4k"
+msgstr ""
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "8k"
+msgstr ""
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "Replace meshed transparency by real transparency."
+msgstr ""
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "IMPROVED MESH"
+msgstr ""
+
+#. TRANSLATION: libretro/kronos, libretro/kronos, libretro/mame, libretro/mame, libretro/pcsx2, ...
+msgctxt "game_options"
+msgid "Enabled"
+msgstr "Ingeschakeld"
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "Apply gouraud shading instead of flat shading."
+msgstr ""
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "IMPROVED BANDING"
+msgstr ""
+
+#. TRANSLATION: libretro/kronos, libretro/yabasanshiro
+msgctxt "game_options"
+msgid "Allows up to 7 or 12 controllers in supported games."
+msgstr "Maakt tot 7 of 12 controllers mogelijk in ondersteunde spellen."
+
+#. TRANSLATION: libretro/kronos, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro, openbor
+msgctxt "game_options"
+msgid "MULTITAP"
+msgstr "MULTITAP"
+
+#. TRANSLATION: libretro/kronos, libretro/pcsx_rearmed, libretro/yabasanshiro
+msgctxt "game_options"
+msgid "Port1"
+msgstr "Poort1"
+
+#. TRANSLATION: libretro/kronos, libretro/pcsx_rearmed, libretro/yabasanshiro
+msgctxt "game_options"
+msgid "Port2"
+msgstr "Poort2"
+
+#. TRANSLATION: libretro/kronos, libretro/pcsx_rearmed, libretro/yabasanshiro
+msgctxt "game_options"
+msgid "Port1+2"
+msgstr "Poort1+2"
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "Choose system BIOS language."
+msgstr ""
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "BIOS Language"
+msgstr ""
+
 #. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "Use a custom MAME config, do not overwrite config on launch."
@@ -3501,62 +3659,62 @@ msgctxt "game_options"
 msgid "CUSTOM CONFIG"
 msgstr "AANGEPASTE CONFIG"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Controls for 5/6 button games and other unique controls"
 msgstr "Controls voor 5/6 knop spellen en andere unieke controls"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "SPECIAL CONTROL LAYOUTS"
 msgstr "SPECIALE CONTROL LAYOUTS"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Default Only"
 msgstr "Alleen Standaard"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "SNES Style"
 msgstr "SNES Stijl"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Genesis/Megadrive Style"
 msgstr "Genesis/Megadrive Stijl"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Modern Fightstick Style"
 msgstr "Moderne Fightstick Stijl"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Neo Geo Mini Pad"
 msgstr "Neo Geo Mini Pad"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Neo Geo CD Pad"
 msgstr "Neo Geo CD Pad"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Twin Stick with Triggers"
 msgstr "Twin Stick met Triggers"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Rotated 4-Way Stick (Q*Bert)"
 msgstr "Rotated 4-Way Stick (Q*Bert)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Enable or disable high score saving"
 msgstr "Schakel het opslaan van high scores in of uit"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "HIGH SCORE PLUGIN"
 msgstr "HIGH SCORE PLUGIN"
@@ -3566,22 +3724,17 @@ msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "Ingeschakeld (Standaard)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Play a coin drop sound effect when an insert coin button is pressed"
 msgstr ""
 "Speel het geluidseffect van het laten vallen van een munt wanneer er op een "
 "muntinvoerknop wordt gedrukt"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "MUNT GELUID PLUGIN"
-
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/pcsx2, cemu, cemu, ...
-msgctxt "game_options"
-msgid "Enabled"
-msgstr "Ingeschakeld"
 
 #. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
 msgctxt "game_options"
@@ -3643,22 +3796,22 @@ msgctxt "game_options"
 msgid "Don't Use (Default)"
 msgstr "Niet Gebruiken (Standaard)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Coleco Adam cartridges"
 msgstr "Coleco Adam cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Coleco Adam Digital Data Packs"
 msgstr "Coleco Adam Digital Data Packs"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Coleco ADAM diskettes"
 msgstr "Coleco ADAM diskettes"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Coleco ColecoVision cartridges"
 msgstr "Coleco ColecoVision cartridges"
@@ -3673,12 +3826,12 @@ msgctxt "game_options"
 msgid "MEDIA TYPE"
 msgstr "MEDIA TYPE"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Cassette 1"
 msgstr "Cassette 1"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Cassette 2"
 msgstr "Cassette 2"
@@ -3693,22 +3846,22 @@ msgctxt "game_options"
 msgid "Disk (Drive 2)"
 msgstr "Disk (Drive 2)"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Cartridge (Slot 1)"
 msgstr "Cartridge (Slot 1)"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Cartridge (Slot 2)"
 msgstr "Cartridge (Slot 2)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Cartridge (Slot 3)"
 msgstr "Cartridge (Slot 3)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Cartridge (Slot 4)"
 msgstr "Cartridge (Slot 4)"
@@ -3743,27 +3896,27 @@ msgctxt "game_options"
 msgid "CUSTOM GAME CONFIG"
 msgstr "AANGEPASTE SPEL CONFIG"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Entex AdventureVision cartridges"
 msgstr "Coleco ColecoVision cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "APF M-1000 cartridges"
 msgstr "APF M-1000 cartridges"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Apple II cleanly cracked disks"
 msgstr "Apple II cleanly cracked disks"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Apple II miscellaneous disks"
 msgstr "Apple II diverse schijven"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Apple II original disks"
 msgstr "Apple II originele disks"
@@ -3773,157 +3926,157 @@ msgctxt "game_options"
 msgid "Cassette"
 msgstr "Cassette"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Hard Drive"
 msgstr "Harde Schijf"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Type of joystick connected to the game port."
 msgstr "Type joystick aangesloten op de gamepoort."
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "JOYSTICK TYPE"
 msgstr "JOYSTICK TYPE"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Apple (2x 2-button Analog)"
 msgstr "Apple (2x 2-button Analoog)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Sirius/Atari (2x 1-button Digital, II+ Only)"
 msgstr "Sirius/Atari (2x 1-button Digitaal, Alleen II+)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Gizmo (1-Button Digital)"
 msgstr "Gizmo (1-Button Digitaal)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Model of emulated Apple II."
 msgstr "Model van geëmuleerde Apple II."
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Apple //e Enhanced (Default)"
 msgstr "Apple //e Enhanced (Standaard)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Apple //e"
 msgstr "Apple //e"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Apple ][ Plus"
 msgstr "Apple ][ Plus"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Apple IIgs cleanly cracked disks"
 msgstr "Apple IIgs cleanly cracked disks"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Apple IIgs miscellaneous disks"
 msgstr "Apple IIgs diverse disks"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Apple IIgs original disks"
 msgstr "Apple IIgs originele disks"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "5 1/4 Disk (Drive 1)"
 msgstr "5 1/4 Disk (Drive 1)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "5 1/4 Disk (Drive 2)"
 msgstr "5 1/4 Disk (Drive 2)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "3 1/2 Disk (Drive 3)"
 msgstr "3 1/2 Disk (Drive 3)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "3 1/2 Disk (Drive 4)"
 msgstr "3 1/2 Disk (Drive 4)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Emerson Arcadia 2001 cartridges"
 msgstr "Emerson Arcadia 2001 cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Archimedes floppy images"
 msgstr "Acorn Archimedes floppy images"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Archimedes hard disks"
 msgstr "Acorn Archimedes harde schijven"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Archimedes ROM images"
 msgstr "Acorn Archimedes ROM images"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, mame/vitaquake3, ...
+#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, mame/openbor7530, ...
 msgctxt "game_options"
 msgid "Select model to emulate"
 msgstr "Selecteer het model dat u wilt emuleren"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "ARCHIMEDES MODEL"
 msgstr "ARCHIMEDES MODEL"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Archimedes 310"
 msgstr "Archimedes 310"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "BBC A3000"
 msgstr "Archimedes 310"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Archimedes 440/1 (Default)"
 msgstr "Archimedes 440/1 (Standaard)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Archimedes 540"
 msgstr "Archimedes 540"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Bally Professional Arcade cartridges"
 msgstr "Bally Professional Arcade cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Atom cassettes"
 msgstr "Acorn Atom cassettes"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Atom disk images"
 msgstr "Acorn Atom disk images"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Atom Utility ROMs"
 msgstr "Acorn Atom Utility ROMs"
@@ -3933,37 +4086,37 @@ msgctxt "game_options"
 msgid "Cartridge"
 msgstr "Cartridge"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Quickload"
 msgstr "Snellaad"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Select which joystick to emulate."
 msgstr "Selecteer welke joystick u wilt emuleren."
 
-#. TRANSLATION: libretro/mame, cgenius, mame/vitaquake3, rtcw
+#. TRANSLATION: libretro/mame, cgenius, mame/openbor7530, rtcw
 msgctxt "game_options"
 msgid "None (Default)"
 msgstr "Geen (Standaard)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Analogue Joysticks"
 msgstr "Acorn Analoge Joysticks"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Bitstik"
 msgstr "Acorn Analogue Joysticks"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Robo Bitstik 2"
 msgstr "Robo Bitstik 2"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Voltmace Delta 3b Twin Joysticks"
 msgstr "Voltmace Delta 3b Twin Joysticks"
@@ -3993,27 +4146,27 @@ msgctxt "game_options"
 msgid "BBC Master Compact"
 msgstr "BBC Master Compact"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn BBC Micro cassettes"
 msgstr "Acorn BBC Micro cassettes"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn BBC Micro hard disks"
 msgstr "Acorn BBC Micro hard disks"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn BBC Micro ROMs"
 msgstr "Acorn BBC Micro ROMs"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn BBC Micro Model B disks"
 msgstr "Acorn BBC Micro Model B disks"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn BBC Micro Model B Original disks"
 msgstr "Acorn BBC Micro Model B Original disks"
@@ -4083,187 +4236,187 @@ msgctxt "game_options"
 msgid "BBC Master Cartridge (Slot 2)"
 msgstr "BBC Master Cartridge (Slot 2)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Camputers Lynx cassettes"
 msgstr "Camputers Lynx cassettes"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Camputers Lynx floppies"
 msgstr "Camputers Lynx floppies"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "LYNX MODEL"
 msgstr "LYNX MODEL"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Lynx 48k"
 msgstr "Lynx 48k"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Lynx 96k"
 msgstr "Lynx 96k"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Lynx 128k"
 msgstr "Lynx 128k"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Philips CD-i CD-ROMs"
 msgstr "Philips CD-i CD-ROMs"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Tandy Radio Shack Colour Computer cartridges"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Tandy Radio Shack Colour Computer disk images"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Select the model of Colour Computer to emulate"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "COLOUR COMPUTER MODEL"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Color Computer"
 msgstr "Color Computer"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Color Computer 2"
 msgstr "Color Computer 2"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Color Computer 2B"
 msgstr "Color Computer 2B"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Color Computer 3 (NTSC) (Default)"
 msgstr "Color Computer 3 (NTSC) (Standaard)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Color Computer 3 (PAL)"
 msgstr "Color Computer 3 (PAL)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "V-Tech Creativision cartridges"
 msgstr "V-Tech Creativision cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Electron Disks"
 msgstr "Acorn Electron Disks"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Electron Cassettes"
 msgstr "Acorn Electron Cassettes"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Electron Cartridges"
 msgstr "Acorn Electron Cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acron Electron ROMs"
 msgstr "Acron Electron ROMs"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "ELECTRON MODEL"
 msgstr "ELECTRON MODEL"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Electron w/64k Master RAM Board (default)"
 msgstr "Electron w/64k Master RAM Board (standaard)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Electron"
 msgstr "Electron"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Floppy Disk"
 msgstr "Floppy Disk"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Fujitsu FM-77AV disk images"
 msgstr "Fujitsu FM-77AV disk images"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Fujitsu FM-7 cassettes"
 msgstr "Fujitsu FM-7 cassettes"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Fujitsu FM-7 disk images"
 msgstr "Fujitsu FM-7 disk images"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "FM-7 MODEL"
 msgstr "FM-7 MODEL"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "FM TOWNS MODEL"
 msgstr "FM TOWNS MODEL"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "FM Towns Marty (Default)"
 msgstr "FM Towns Marty (Standaard)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "FM Towns (Model 1/2)"
 msgstr "FM Towns (Model 1/2)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "FM Towns II UX"
 msgstr "FM Towns II UX"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "How much RAM the emulated FM Towns will have installed"
 msgstr "Hoeveel RAM de geëmuleerde FM Towns zullen hebben geïnstalleerd"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "RAM SIZE"
 msgstr "RAM GROOTTE"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/uae4arm, libretro/px68k, mame/vitaquake3, ...
+#. TRANSLATION: libretro/mame, libretro/mame, libretro/uae4arm, libretro/px68k, mame/openbor7530, ...
 msgctxt "game_options"
 msgid "2MB"
 msgstr "2MB"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid ""
 "Insert a disk into the floppy drive, a blank will be used if one doesn't "
@@ -4272,122 +4425,122 @@ msgstr ""
 "Plaats een schijf in het diskettestation; er wordt een blanco schijf "
 "gebruikt als deze niet bestaat"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "ADD USER DISK"
 msgstr "VOEG USER DISK TOE"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Fujitsu FM Towns CD-ROMs"
 msgstr "Fujitsu FM Towns CD-ROMs"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Fujitsu FM Towns cracked floppy disk images"
 msgstr "Fujitsu FM Towns cracked floppy disk images"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Fujitsu FM Towns miscellaneous floppy disk images"
 msgstr "Fujitsu FM Towns miscellaneous floppy disk images"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Fujitsu FM Towns original floppy disk images"
 msgstr "Fujitsu FM Towns original floppy disk images"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Floppy Disk (Drive 1)"
 msgstr "Floppy Disk (Drive 1)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Floppy Disk (Drive 2 - Model 1/2 & II UX)"
 msgstr "Floppy Disk (Drive 2 - Model 1/2 & II UX)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "CD-ROM"
 msgstr "CD-ROM"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Hard Drive (II UX)"
 msgstr "Hard Drive (II UX)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Bit Corp Gamate cartridges"
 msgstr "Bit Corp Gamate cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Tiger Game.com cartridges"
 msgstr "TI-99/4A Cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Epoch Game Pocket Computer cartridges"
 msgstr "Epoch Game Pocket Computer cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Hartung Game Master cartridges"
 msgstr "Hartung Game Master cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "GamePark GP32 SmartMedia cards"
 msgstr "GamePark GP32 SmartMedia cards"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Dick Smith Electronics VZ-200/300 cassettes"
 msgstr "Dick Smith Electronics VZ-200/300 cassettes"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Dick Smith Electronics VZ-200/300 snapshots"
 msgstr "Dick Smith Electronics VZ-200/300 snapshots"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Choose hardware for the memory expansion slot"
 msgstr "Kies hardware voor het geheugenuitbreidingsslot"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "MEMORY SLOT"
 msgstr "GEHEUGENSLOT"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Laser 310/VZ-300 16k Memory"
 msgstr "Laser 310/VZ-300 16k Geheugen"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Laser/VZ 64k Memory (Default)"
 msgstr "Laser/VZ 64k Geheugen (Standaard)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Snapshot"
 msgstr "Snapshot"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Macintosh 400K/800K Disk images"
 msgstr "Macintosh 400K/800K Disk images"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Macintosh High Density Disk images"
 msgstr "Macintosh High Density Disk images"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Mac Harddisks"
 msgstr "Mac Harddisks"
@@ -4399,37 +4552,37 @@ msgid ""
 "Colour)"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "MAC MODEL"
 msgstr "MAC MODEL"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Mac 128k (128kb RAM, 2 LD Floppies)"
 msgstr "Mac 128k (128kb RAM, 2 LD Floppies)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Mac 512k (512kb RAM, 2 LD Floppies)"
 msgstr "Mac 512k (512kb RAM, 2 LD Floppies)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Mac Plus (4Mb RAM, 2 LD Floppies/HDD)"
 msgstr "Mac Plus (4Mb RAM, 2 LD Floppies/HDD)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Mac SE (4Mb RAM, 2 LD Floppies/HDD)"
 msgstr "Mac SE (4Mb RAM, 2 LD Floppies/HDD)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Mac Classic (4Mb RAM, 2 HD Floppies/HDD)"
 msgstr "Mac Classic (4Mb RAM, 2 HD Floppies/HDD)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Mac II (2Mb RAM, Color, 2 HD Floppies/CD/HDD)"
 msgstr "Mac II (2Mb RAM, Color, 2 HD Floppies/CD/HDD)"
@@ -4439,49 +4592,49 @@ msgctxt "game_options"
 msgid "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD/Image Reader)"
 msgstr "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD/Image Reader)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Mac LC 3 (Default) (4Mb RAM, Color, 2 HD Floppies/CD/HDD)"
 msgstr "Mac LC 3 (Default) (4Mb RAM, Color, 2 HD Floppies/CD/HDD)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Install the image reader card to read idks image files (Mac IIx only)"
 msgstr ""
 "Installeer de image lezer kaart om idks-beeldbestanden te lezen (alleen Mac "
 "IIx)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "IMAGE READER"
 msgstr "IMAGE LEZER"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Slot A (Default)"
 msgstr "Slot A (Standaard)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Slot B"
 msgstr "Slot B"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Slot C"
 msgstr "Slot C"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Slot D"
 msgstr "Slot D"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Slot E"
 msgstr "Slot E"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid ""
 "How much RAM the emulated Mac will have installed (Mac IIx & Mac LC 3 only)"
@@ -4494,147 +4647,147 @@ msgctxt "game_options"
 msgid "Type of ROM file to load"
 msgstr "Type ROM-bestand dat moet worden geladen"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "CD"
 msgstr "CD"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Select a boot disk or hard drive if needed"
 msgstr "Selecteer een opstartschijf of harde schijf indien nodig"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "BOOT DISK"
 msgstr "BOOT SCHIJF"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "System 3.0 (LD Floppy)"
 msgstr "System 3.0 (LD Floppy)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "System 6.0.8 (LD Floppy)"
 msgstr "System 6.0.8 (LD Floppy)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "System 7.0.1 (HD Floppy)"
 msgstr "System 7.0.1 (HD Floppy)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "System 7.5 (HD Floppy)"
 msgstr "System 7.5 (HD Floppy)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "System 6.0.8 (Hard Drive)"
 msgstr "System 6.0.8 (Harde Schijf)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "System 7.0.1 (Hard Drive)"
 msgstr "System 7.0.1 (Harde Schijf)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "System 7.5.5 (Hard Drive)"
 msgstr "System 7.5.5 (Harde Schijf)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Creatronic Mega Duck cartridges"
 msgstr "Creatronic Mega Duck cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "PDP-1 Paper Tape Reader Images"
 msgstr "PDP-1 Paper Tape Reader Images"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Casio PV-1000 cartridges"
 msgstr "Casio PV-1000 cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Video Technology Socrates cartridges"
 msgstr "Video Technology Socrates cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Funtech Super A'Can cartridges"
 msgstr "Funtech Super A'Can cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "TI-99/4A Cartridges"
 msgstr "TI-99/4A Cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "32k RAM expansion card installed"
 msgstr "32k RAM uitbreidingskaart geïnstalleerd"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "32K RAM EXPANSION"
 msgstr "32K RAM UITBREIDING"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Speech module installed"
 msgstr "Spraakmodule geïnstalleerd"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "SPEECH MODULE"
 msgstr "Spraakmodule"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Tomy Tutor & Pyuuta cartridge"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "GCE Vectrex cartridges"
 msgstr "GCE Vectrex cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "VTech V.Smile cartridges"
 msgstr "VTech V.Smile cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "VTech V.Smile Motion cartridges"
 msgstr "VTech V.Smile Motion cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Atari XE Game System cartridges"
 msgstr "Atari XE Game System cartridges"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Atari 400 / 800 floppy disks"
 msgstr "Atari 400 / 800 floppy disks"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Disk (Drive 3)"
 msgstr "Disk (Drive 3)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Disk (Drive 4)"
 msgstr "Disk (Drive 4)"
 
-#. TRANSLATION: libretro/mamevirtual, mame/vitaquake3
+#. TRANSLATION: libretro/mamevirtual, mame/openbor7530
 msgctxt "game_options"
 msgid "Video Game Music Files"
 msgstr "Video Game Muziek Bestanden"
@@ -4748,11 +4901,6 @@ msgstr "Alleen DMA (Beetje Sneller)"
 msgctxt "game_options"
 msgid "Allows up to 5 or 8 controllers in supported games."
 msgstr "Staat 5 tot 8 controllers toe in ondersteunde spellen."
-
-#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro, pcsx2
-msgctxt "game_options"
-msgid "MULTITAP"
-msgstr "MULTITAP"
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, ...
 msgctxt "game_options"
@@ -5099,6 +5247,39 @@ msgstr "Rumble Pak"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
+msgid ""
+"Use to eliminate joystick drift/unwanted input. Effects all controllers."
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid "JOYSTICK DEADZONE"
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid "15% (Default)"
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid ""
+"Use to make joystick movement more or less sensitive. Effects all "
+"controllers."
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid "JOYSTICK SENSITIVITY"
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid "100% (Default)"
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
 msgid "Full speed can break some games."
 msgstr "Volledige snelheid kan sommige spellen kapot maken."
 
@@ -5149,7 +5330,7 @@ msgctxt "game_options"
 msgid "USA"
 msgstr "USA"
 
-#. TRANSLATION: libretro/neocd, flycast/vitaquake3, pcsx2, redream, yuzu, ...
+#. TRANSLATION: libretro/neocd, flycast/vitaquake3, openbor, redream, yuzu, ...
 msgctxt "game_options"
 msgid "Europe"
 msgstr "Europa"
@@ -5567,7 +5748,7 @@ msgstr "Verhelpt een mogelijke bug met detectie van meerdere controllers."
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
 msgid "ACTIVE INPUT DEVICES FIX"
-msgstr "ACTIEVE INVOER APPARATEN FIX"
+msgstr "ACTIEVE INVOERAPPARATEN FIX"
 
 #. TRANSLATION: libretro/opera, libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -5684,21 +5865,6 @@ msgstr "BIOS FAST BOOT"
 msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "Uit is veiliger, Aan voor specifieke spellen."
-
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/yabasanshiro
-msgctxt "game_options"
-msgid "Port1"
-msgstr "Poort1"
-
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/yabasanshiro
-msgctxt "game_options"
-msgid "Port2"
-msgstr "Poort2"
-
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/yabasanshiro
-msgctxt "game_options"
-msgid "Port1+2"
-msgstr "Poort1+2"
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -6191,11 +6357,6 @@ msgstr "Beïnvloed muis snelheid globaal."
 msgctxt "game_options"
 msgid "MOUSE SPEED"
 msgstr "MUIS SNELHEID"
-
-#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vb
-msgctxt "game_options"
-msgid "original"
-msgstr "origineel"
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, ...
 msgctxt "game_options"
@@ -7411,20 +7572,10 @@ msgctxt "game_options"
 msgid "EXPOSE MODE"
 msgstr "BLOOTSTELLINGSMODUS"
 
-#. TRANSLATION: libretro/yabasanshiro, theforceengine, yabasanshiro
-msgctxt "game_options"
-msgid "720p"
-msgstr "720p"
-
 #. TRANSLATION: libretro/yabasanshiro
 msgctxt "game_options"
 msgid "4K"
 msgstr "4K"
-
-#. TRANSLATION: libretro/yabasanshiro
-msgctxt "game_options"
-msgid "Allows up to 7 or 12 controllers in supported games."
-msgstr "Maakt tot 7 of 12 controllers mogelijk in ondersteunde spellen."
 
 #. TRANSLATION: libretro/yabasanshiro
 msgctxt "game_options"
@@ -7464,7 +7615,7 @@ msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "GRAPHICS API"
 
-#. TRANSLATION: libretro, daphne, dolphin, duckstation, flycast, ...
+#. TRANSLATION: libretro, cemu, daphne, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "OpenGL"
 msgstr "OpenGL"
@@ -7479,7 +7630,7 @@ msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
 
-#. TRANSLATION: libretro, cemu, citra, daphne, dolphin, ...
+#. TRANSLATION: libretro, citra, daphne, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
@@ -7759,7 +7910,7 @@ msgctxt "game_options"
 msgid "SOUND BUFFER SIZE"
 msgstr ""
 
-#. TRANSLATION: amiberry, pcsx2, rpcs3
+#. TRANSLATION: amiberry, openbor, rpcs3
 msgctxt "game_options"
 msgid "Minimum"
 msgstr "Minimum"
@@ -7783,10 +7934,10 @@ msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr "Kies welke grafische API-bibliotheek u wilt gebruiken."
 
-#. TRANSLATION: cemu
+#. TRANSLATION: cemu, flycast
 msgctxt "game_options"
-msgid "OpenGL  (Default)"
-msgstr ""
+msgid "Vulkan (Default)"
+msgstr "Vulkan (Standaard)"
 
 #. TRANSLATION: cemu, yuzu
 msgctxt "game_options"
@@ -7914,7 +8065,7 @@ msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
 msgstr "Batocera stelt eerste audioapparaat in (Standaard)"
 
-#. TRANSLATION: cemu, sonic2013, sonicmania, sonicnexus, play, ...
+#. TRANSLATION: cemu, openbor/openbor7530, sonic2013, sonicmania, sonicnexus, ...
 msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr "Fix screen tearing."
@@ -7984,7 +8135,7 @@ msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
 msgstr "Beeldverhouding behouden (Standaard)"
 
-#. TRANSLATION: cemu, daphne, openbor, redream, demul
+#. TRANSLATION: cemu, daphne, redream, demul
 msgctxt "game_options"
 msgid "Stretch"
 msgstr "Rekken"
@@ -7994,7 +8145,7 @@ msgctxt "game_options"
 msgid "Enable mouse input to simulate touchscreen."
 msgstr "Schakel muisinvoer in om touchscreen te simuleren."
 
-#. TRANSLATION: cemu, mame/vitaquake3, wine
+#. TRANSLATION: cemu, mame/openbor7530, wine
 msgctxt "game_options"
 msgid "ENABLE MOUSE"
 msgstr "MUIS INSCHAKELEN"
@@ -8092,7 +8243,7 @@ msgctxt "game_options"
 msgid "GRAPHICS"
 msgstr "GRAPHICS"
 
-#. TRANSLATION: citra, duckstation, melonds, pcsx2, scummvm, ...
+#. TRANSLATION: citra, duckstation, melonds, openbor, scummvm, ...
 msgctxt "game_options"
 msgid "Software"
 msgstr "Software"
@@ -8102,7 +8253,7 @@ msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (Standaard)"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, pcsx2
+#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, openbor
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr "Verhelp screen tearing. Zwaar voor de CPU."
@@ -8218,7 +8369,7 @@ msgstr ""
 #. TRANSLATION: daphne
 msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
-msgstr "ABSOLUTE MOUSE INPUT"
+msgstr "ABSOLUTE MOUSE INVOER"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
@@ -8489,7 +8640,7 @@ msgstr ""
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "ALT INPUT MAPPING"
-msgstr "ALTERNATIEVE INVOER MAPPING"
+msgstr "ALTERNATIEVE INVOERMAPPING"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -9178,11 +9329,6 @@ msgstr ""
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
-msgid "Vulkan (Default)"
-msgstr "Vulkan (Standaard)"
-
-#. TRANSLATION: flycast
-msgctxt "game_options"
 msgid "Choose your video broadcast setting."
 msgstr ""
 
@@ -9488,7 +9634,7 @@ msgctxt "game_options"
 msgid "Bottom only"
 msgstr "Alleen onderkant"
 
-#. TRANSLATION: melonds, pcsx2
+#. TRANSLATION: melonds, openbor
 msgctxt "game_options"
 msgid "INTEGER SCALING"
 msgstr "INTEGER SCHALEN"
@@ -9875,114 +10021,113 @@ msgctxt "game_options"
 msgid "1% (Default)"
 msgstr "1% (Standaard)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
-msgid "Stretch games to full-screen, but may distort the aspect ratio"
+msgid "Limit FPS to reduce high CPU usage."
 msgstr ""
-"Rek spellen naar volledig scherm, maar dit zou de beeldverhouding kunnen "
-"vervormen"
+
+#. TRANSLATION: openbor/openbor7530
+msgctxt "game_options"
+msgid "LIMIT FPS"
+msgstr ""
+
+#. TRANSLATION: openbor/openbor7530, supermodel
+msgctxt "game_options"
+msgid "Only some games feature rumble. Not compatible with all controllers."
+msgstr ""
+"Alleen sommige games hebben rumble. Niet compatibel met alle controllers."
 
 #. TRANSLATION: openbor
-msgctxt "game_options"
-msgid "SCREEN RATIO"
-msgstr "SCHERM RATIO"
-
-#. TRANSLATION: openbor
-msgctxt "game_options"
-msgid "Simple 2x"
-msgstr "Simpel 2x"
-
-#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "OSD MESSAGES"
 msgstr "OSD BERICHTEN"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Fit to Window / Fullscreen"
 msgstr "Aanpassen aan venster / Volledig scherm"
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: openbor, openbor
 msgctxt "game_options"
 msgid "Auto Standard (4:3 interlaced / 3:2 progressive)"
 msgstr "Auto Standaard (4:3 geïnterlinieerd / 3:2 progressief)"
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: openbor, openbor
 msgctxt "game_options"
 msgid "Standard (4:3)"
 msgstr "Standaard (4:3)"
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: openbor, openbor
 msgctxt "game_options"
 msgid "Widescreen (16:9)"
 msgstr "Breedbeeld (16:9)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Adjusts Full Motion Video movies aspect ratio."
 msgstr "Past de beeldverhouding van Full Motion Video-films aan."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "FMV ASPECT RATIO"
 msgstr "FMV ASPECT RATIO"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "FMV movie deinterlacing."
 msgstr "De-interlacing van FMV-films."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "DEINTERLACING"
 msgstr "DEINTERLACING"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Weave (Top Field First)"
 msgstr "Weave (Bovenste Veld Eerst)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Weave (Bottom Field First)"
 msgstr "Weave (Onderste Veld Eerst)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Bob (Top Field First)"
 msgstr "Bob (Bovenste Veld Eerst)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Bob (Bottom Field First)"
 msgstr "Bob (Onderste Veld Eerst)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Blend (Top Field First)"
 msgstr "Blend (Bovenste Veld Eerst)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Blend (Bottom Field First)"
 msgstr "Blend (Onderste Veld Eerst)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Adaptive (Top Field First)"
 msgstr "Adaptief (Bovenste Veld Eerst)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Adaptive (Bottom Field First)"
 msgstr "Adaptief (Onderste Veld Eerst)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid ""
 "Smooths the overall picture as it is displayed on the screen. Corrects "
@@ -9991,213 +10136,213 @@ msgstr ""
 "Maakt het totaalbeeld glad zoals het op het scherm wordt weergegeven. "
 "Corrigeert de positionering tussen pixels."
 
-#. TRANSLATION: pcsx2, model2emu
+#. TRANSLATION: openbor, model2emu
 msgctxt "game_options"
 msgid "BILINEAR FILTERING"
 msgstr "BILINEAIRE FILTER"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Bilinear (Smooth)"
 msgstr "Bilinear (Glad)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Bilinear (Sharp)"
 msgstr "Bilinear (Scherp)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN PATCHES"
 msgstr "BREEDBEELDPATCHES INSCHAKELEN"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Enable to improve blurriness."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "ANTI-BLUR"
 msgstr "ANTI-BLUR"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Enable No-interlacing Patches."
 msgstr "Schakel niet-interlacing patches in."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "INTERLACING PATCHES"
 msgstr "INTERLACING PATCHES"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Can sharpen images in lower resolutions."
 msgstr "Kan afbeeldingen in lagere resoluties verscherpen."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Native (PS2)(Default)"
 msgstr "Native (PS2)(Standaard)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "1.25x Native"
 msgstr "1.25x Native"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "1.5x Native"
 msgstr "1.5x Native"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "1.75x Native"
 msgstr "1.75x Native"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "2x Native (~720p)"
 msgstr "2x Native (~720p)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "2.25x Native"
 msgstr "2.25x Native"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "2.5x Native"
 msgstr "2.5x Native"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "2.75x Native"
 msgstr "2.75x Native"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "3x Native (~1080p)"
 msgstr "3x Native (~1080p)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "3.5x Native"
 msgstr "3.5x Native"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "4x Native (~1440p/2K)"
 msgstr "4x Native (~1440p/2K)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "5x Native (~1620p)"
 msgstr "5x Native (~1620p)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "6x Native (~2160p/4K)"
 msgstr "6x Native (~2160p/4K)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "7x Native (~2520p)"
 msgstr "7x Native (~2520p)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "8x Native (~2880p/5K)"
 msgstr "8x Native (~2880p/5K)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Choose mipmapping type."
 msgstr "Kies het mipmapping type."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "MIPMAPPING"
 msgstr "MIPMAPPING"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Basic (generated Mipmaps)"
 msgstr "Basis (gegenereerde Mipmaps)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Full (PS2 Mipmaps)"
 msgstr "Volledig (PS2 Mipmaps)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Control the texture filtering of the emulation."
 msgstr "Beheer de textuurfiltering van de emulatie."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Bilinear (Forced)"
 msgstr "Bilineair (Geforceerd)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Bilinear (PS2)"
 msgstr "Bilineair (PS2)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Bilinear (Forced excluding sprite)"
 msgstr "Bilineair (geforceerd exclusief sprite)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Control the texture's trilinear filtering of the emulation."
 msgstr "Beheer de trilineaire filtering van de texture van de emulatie."
 
-#. TRANSLATION: pcsx2, model2emu
+#. TRANSLATION: openbor, model2emu
 msgctxt "game_options"
 msgid "TRILINEAR FILTERING"
 msgstr "TRILINEAIR FILTEREN"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Off (None)"
 msgstr "Uit (Geen)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Trilinear (PS2)"
 msgstr "Trilineair (PS2)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Trilinear (Forced)"
 msgstr "Trilineair (Geforceerd)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid ""
 "Reduces banding between colours and improves the perceived colour depth."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "DITHERING"
 msgstr "DITHERING"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Unscaled (Default)"
 msgstr "Niet geschaald (Standaard)"
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: openbor, openbor
 msgctxt "game_options"
 msgid "Basic (Recommended)"
 msgstr "Basis (Aanbevolen)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid ""
 "The higher the setting, the more blending is emulated in the shader "
@@ -10206,22 +10351,22 @@ msgstr ""
 "Hoe hoger de instelling, hoe nauwkeuriger het overvloeien in de shader wordt "
 "geëmuleerd, en hoe hoger de snelheidsbeperking zal zijn."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "BLENDING ACCURACY"
 msgstr "BLENDING NAUWKEURIGHEID"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Full (Slow)"
 msgstr "Volledig (Traag)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Maximum (Very Slow)"
 msgstr "Maximum (Erg Traag)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid ""
 "Uploads entire textures at once instead of small pieces. Improves "
@@ -10230,54 +10375,54 @@ msgstr ""
 "Uploadt hele texturen in één keer in plaats van kleine stukjes. Verbetert de "
 "prestaties in de meeste spellen."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "TEXTURE PRELOADING"
 msgstr "TEXTUUR VOORLADEN"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Partial"
 msgstr "Gedeeltelijk"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Full (Hash Cache)"
 msgstr "Volledig (Hash Cache)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Choose PS2 Bios to use (USA Recommended)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "PS2 BIOS"
 msgstr ""
 
-#. TRANSLATION: pcsx2, redream
+#. TRANSLATION: openbor, redream
 msgctxt "game_options"
 msgid "USA (Default)"
 msgstr "USA (Standaard)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Some games have issues when the animation is shown, others require it."
 msgstr ""
 "Sommige spellen hebben problemen wanneer de animatie weergegeven word, "
 "andere hebben het nodig."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Skip (safer)"
 msgstr "Overslaan (veiliger)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Show (specific games)"
 msgstr "Toon (specifieke spellen)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid ""
 "Applies the FXAA anti-aliasing algorithm to improve the visual quality of "
@@ -10286,53 +10431,53 @@ msgstr ""
 "Past het FXAA anti-aliasing-algoritme toe om de visuele kwaliteit van "
 "spellen te verbeteren."
 
-#. TRANSLATION: pcsx2, yuzu, vita3k
+#. TRANSLATION: openbor, yuzu, vita3k
 msgctxt "game_options"
 msgid "FXAA"
 msgstr "FXAA"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Automatically loads and applies cheats on game start."
 msgstr ""
 "Laadt automatisch cheats en past deze toe bij het starten van het spel."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "CHEATS"
 msgstr "CHEATS"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Allows up to 8 controllers in supported games."
 msgstr "Maakt maximaal 8 controllers mogelijk in ondersteunde spellen."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Maximum 2 Players (Default)"
 msgstr "Maximaal 2 spelers (standaard)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Maximum 4 Players"
 msgstr "Maximaal 4 spelers"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Maximum 8 Players"
 msgstr "Maximaal 8 spelers"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Allows user replaceable textures."
 msgstr "Maakt door de gebruiker vervangbare texturen mogelijk."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "TEXTURE REPLACEMENTS"
 msgstr "TEXTUURVERVANGINGEN"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid ""
 "Necessary for some guns to replace fog textures as a workaround in Time "
@@ -10341,37 +10486,37 @@ msgstr ""
 "Noodzakelijk voor sommige guns om mist-texturen te vervangen als tijdelijke "
 "oplossing in Time Crisis - Crisis Zone."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "TIME CRISIS FOG HACK"
 msgstr "TIME CRISIS MIST HACK"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Playstation 2 wheel type"
 msgstr "Playstation 2 stuurwiel type"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "WHEEL MODEL"
 msgstr "STUURWIEL MODEL"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Driving Force"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Driving Force Pro"
 msgstr "Driving Force Pro"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "GT Force"
 msgstr "GT Force"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Virtual"
 msgstr ""
@@ -11520,12 +11665,6 @@ msgstr "P1 & P2"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
-msgid "Only some games feature rumble. Not compatible with all controllers."
-msgstr ""
-"Alleen sommige games hebben rumble. Niet compatibel met alle controllers."
-
-#. TRANSLATION: supermodel
-msgctxt "game_options"
 msgid ""
 "Use L2/R2 for Accel/Brake and L1/R1 or R-stick Up/Down for Shift Up/Down."
 msgstr ""
@@ -11654,37 +11793,37 @@ msgctxt "game_options"
 msgid "FORCE 386DX CPU"
 msgstr "FORCEER 386DX CPU"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid "ROM (Slot 1)"
 msgstr "ROM (Slot 1)"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid "ROM (Slot 2)"
 msgstr "ROM (Slot 2)"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid "ROM (Slot 3)"
 msgstr "ROM (Slot 3)"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid "ROM (Slot 4)"
 msgstr "ROM (Slot 4)"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid "Mount a floppy for user data, creates if needed"
 msgstr "Mount een floppy voor gebruikersgegevens, maak deze aan indien nodig"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid "USER DISK"
 msgstr "GEBRUIKERS DISK"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid ""
 "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
@@ -11693,29 +11832,29 @@ msgstr ""
 "Selecteer Mac-model (aanbevelingen zijn Mac Plus voor zwart-wit, Mac LC 3 "
 "voor kleur)"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD, Image Reader)"
 msgstr "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD, Image Reader)"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid "Type of ROM file to load. Disk Image requires Mac IIx and Image Reader"
 msgstr ""
 "Type ROM-bestand dat moet worden geladen. Voor Schijfimage zijn Mac IIx en "
 "Image Reader vereist"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid "Disk Image"
 msgstr "SCHIJFIMAGE"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid "Interton VC 4000 cartridges"
 msgstr "Interton VC 4000 cartridges"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid ""
 "Enable mouse input for trackballs, spinners, lightguns (if no gun "
@@ -12404,7 +12543,7 @@ msgstr ""
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "ENABLE RAW INPUT"
-msgstr "RAW INPUT INSCHAKELEN"
+msgstr "RAW INVOER INSCHAKELEN"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -13583,11 +13722,6 @@ msgstr "200p"
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "400p"
-msgstr "400p"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "480p"
 msgstr "400p"
 
 #. TRANSLATION: theforceengine
@@ -14782,26 +14916,6 @@ msgid "Quick Save"
 msgstr "Snel Opslaan"
 
 #~ msgctxt "game_options"
-#~ msgid "Adjust the cpu power profile while in-game."
-#~ msgstr "Pas het CPU-energieprofiel aan tijdens het gamen."
-
-#~ msgctxt "game_options"
-#~ msgid "POWER MODE"
-#~ msgstr "POWER-MODUS"
-
-#~ msgctxt "game_options"
-#~ msgid "High Performance"
-#~ msgstr "Hoge performance"
-
-#~ msgctxt "game_options"
-#~ msgid "Balanced"
-#~ msgstr "Gebalanceerd"
-
-#~ msgctxt "game_options"
-#~ msgid "Power Saver"
-#~ msgstr "Energiebespaarder"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Sla vorige staat op om in realtime naartoe te gaan, als de core het "
@@ -15180,6 +15294,20 @@ msgstr "Snel Opslaan"
 #~ msgstr ""
 #~ "Uitbreiding. Verbeterd helderheid van verre textures wanneer mip-mapping "
 #~ "ingeschakeld is."
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch games to full-screen, but may distort the aspect ratio"
+#~ msgstr ""
+#~ "Rek spellen naar volledig scherm, maar dit zou de beeldverhouding kunnen "
+#~ "vervormen"
+
+#~ msgctxt "game_options"
+#~ msgid "SCREEN RATIO"
+#~ msgstr "SCHERM RATIO"
+
+#~ msgctxt "game_options"
+#~ msgid "Simple 2x"
+#~ msgstr "Simpel 2x"
 
 #~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."

@@ -20,6 +20,74 @@ msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
+msgid "Adjust the cpu power profile while in-game."
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "POWER MODE"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "High Performance"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Balanced"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Power Saver"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Adjust the percentage of power (watts) provided to a Ryzen Mobile Series CPU "
+"based on it's default max value. Caution, setting wattage too high could "
+"damage your device."
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "RYZEN THERMAL DESIGN POWER"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "105% (Use caution"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "110% (Use caution)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "115% (Use caution)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "120% (Are you crazy?)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "125% (Yes, you're crazy)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "130% (Nope, you're just insane!)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
 msgid "Set the display's resolution. Does not affect the rendering resolution."
 msgstr ""
 "디스플레이 해상도를 설정합니다. 렌더링 해상도에는 영향을 주지 않습니다."
@@ -34,7 +102,7 @@ msgctxt "game_options"
 msgid "VIDEO MODE"
 msgstr "비디오 모드"
 
-#. TRANSLATION: shared, pcsx2
+#. TRANSLATION: shared, openbor
 msgctxt "game_options"
 msgid ""
 "Force the game to render in this aspect ratio. Not all systems support all "
@@ -43,7 +111,7 @@ msgstr ""
 "게임이 이 종횡비로 렌더링되도록 강제합니다. 모든 시스템이 모든 비율을 지원하"
 "는 것은 아닙니다."
 
-#. TRANSLATION: shared, dolphin, flycast, mupen64plus, pcsx2, ...
+#. TRANSLATION: shared, dolphin, flycast, mupen64plus, openbor, ...
 msgctxt "game_options"
 msgid "GAME ASPECT RATIO"
 msgstr "게임 종횡비"
@@ -434,7 +502,7 @@ msgctxt "game_options"
 msgid "Use wheels instead of pads if wheels are connected."
 msgstr ""
 
-#. TRANSLATION: shared, shared, shared, shared, pcsx2
+#. TRANSLATION: shared, shared, shared, shared, openbor
 msgctxt "game_options"
 msgid "WHEELS"
 msgstr ""
@@ -869,13 +937,13 @@ msgctxt "game_options"
 msgid "English (Default)"
 msgstr "영어(기본값)"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/yabasanshiro, cemu, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Spanish"
 msgstr "스페인어"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/yabasanshiro, cemu, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "French"
@@ -1001,7 +1069,7 @@ msgctxt "game_options"
 msgid "Low"
 msgstr "낮음"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen, mupen64plus, pcsx2
+#. TRANSLATION: libretro/mesens, libretro/mesen, mupen64plus, openbor
 #, fuzzy
 msgctxt "game_options"
 msgid "Medium"
@@ -1441,19 +1509,19 @@ msgid ""
 "firmware file was not found."
 msgstr ""
 
-#. TRANSLATION: libretro/melonds, libretro/dolphin, cemu, flycast/vitaquake3, scummvm, ...
+#. TRANSLATION: libretro/melonds, libretro/dolphin, libretro/kronos, cemu, flycast/vitaquake3, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "German"
 msgstr "독일어"
 
-#. TRANSLATION: libretro/melonds, libretro/dolphin, libretro/yabasanshiro, cemu, flycast/vitaquake3, ...
+#. TRANSLATION: libretro/melonds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, cemu, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Italian"
 msgstr "이탈리아어"
 
-#. TRANSLATION: libretro/melonds, libretro/dolphin, libretro/yabasanshiro, cemu, flycast/vitaquake3, ...
+#. TRANSLATION: libretro/melonds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, cemu, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Japanese"
@@ -1527,7 +1595,7 @@ msgctxt "game_options"
 msgid "Wii NAND's language setting."
 msgstr "Wii 낸드의 언어 설정."
 
-#. TRANSLATION: libretro/dolphin, cemu, flycast/vitaquake3, scummvm, sonic2013, ...
+#. TRANSLATION: libretro/dolphin, libretro/kronos, cemu, flycast/vitaquake3, scummvm, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "English"
@@ -1614,7 +1682,7 @@ msgctxt "game_options"
 msgid "Skip Drawing"
 msgstr "그리기 건너뛰기"
 
-#. TRANSLATION: libretro/dolphin, dolphin, dolphin_triforce, pcsx2, ppsspp, ...
+#. TRANSLATION: libretro/dolphin, dolphin, dolphin_triforce, openbor, ppsspp, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Improves clarity of distant textures."
@@ -1726,13 +1794,13 @@ msgctxt "game_options"
 msgid "External (variable fps)"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox, openbor, mame
+#. TRANSLATION: libretro/dosbox, mame
 #, fuzzy
 msgctxt "game_options"
 msgid "Apply a post-processing effect."
 msgstr "후처리 효과를 적용합니다."
 
-#. TRANSLATION: libretro/dosbox, openbor, cgenius
+#. TRANSLATION: libretro/dosbox, cgenius
 #, fuzzy
 msgctxt "game_options"
 msgid "VIDEO FILTER"
@@ -1926,12 +1994,12 @@ msgctxt "game_options"
 msgid "4MB"
 msgstr "4MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/uae4arm, libretro/px68k, mame/vitaquake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/uae4arm, libretro/px68k, mame/openbor7530
 msgctxt "game_options"
 msgid "8MB"
 msgstr "8MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/vitaquake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/openbor7530
 msgctxt "game_options"
 msgid "16MB"
 msgstr "16MB"
@@ -1941,27 +2009,27 @@ msgctxt "game_options"
 msgid "24MB"
 msgstr "24MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/vitaquake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/openbor7530
 msgctxt "game_options"
 msgid "32MB"
 msgstr "32MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "48MB"
 msgstr "48MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/vitaquake3, quake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/openbor7530, quake3
 msgctxt "game_options"
 msgid "64MB"
 msgstr "64MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "96MB"
 msgstr "96MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/vitaquake3, quake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, quake3
 msgctxt "game_options"
 msgid "128MB"
 msgstr "128MB"
@@ -2487,7 +2555,7 @@ msgctxt "game_options"
 msgid "TEXTURE FILTERING"
 msgstr "텍스처 필터링"
 
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/parallel_n64, pcsx2, ppsspp, ...
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/parallel_n64, openbor, ppsspp, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Nearest"
@@ -3025,7 +3093,7 @@ msgctxt "game_options"
 msgid "RENDER TO TEXTURE UPSCALING"
 msgstr ""
 
-#. TRANSLATION: libretro/fuse, libretro/mame, hatari, mame/vitaquake3
+#. TRANSLATION: libretro/fuse, libretro/mame, hatari, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "MODEL"
@@ -3891,6 +3959,99 @@ msgctxt "game_options"
 msgid "No Indicator"
 msgstr ""
 
+#. TRANSLATION: libretro/kronos, libretro/puae, libretro/puae2021, libretro/vb
+#, fuzzy
+msgctxt "game_options"
+msgid "original"
+msgstr "원문 언어"
+
+#. TRANSLATION: libretro/kronos, theforceengine
+msgctxt "game_options"
+msgid "480p"
+msgstr ""
+
+#. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, yabasanshiro
+#, fuzzy
+msgctxt "game_options"
+msgid "720p"
+msgstr "720p"
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "4k"
+msgstr ""
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "8k"
+msgstr ""
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "Replace meshed transparency by real transparency."
+msgstr ""
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "IMPROVED MESH"
+msgstr ""
+
+#. TRANSLATION: libretro/kronos, libretro/kronos, libretro/mame, libretro/mame, libretro/pcsx2, ...
+#, fuzzy
+msgctxt "game_options"
+msgid "Enabled"
+msgstr "사용"
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "Apply gouraud shading instead of flat shading."
+msgstr ""
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "IMPROVED BANDING"
+msgstr ""
+
+#. TRANSLATION: libretro/kronos, libretro/yabasanshiro
+#, fuzzy
+msgctxt "game_options"
+msgid "Allows up to 7 or 12 controllers in supported games."
+msgstr "지원되는 게임에서 최대 7개 또는 12개의 컨트롤러를 허용합니다."
+
+#. TRANSLATION: libretro/kronos, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro, openbor
+#, fuzzy
+msgctxt "game_options"
+msgid "MULTITAP"
+msgstr "멀티탭"
+
+#. TRANSLATION: libretro/kronos, libretro/pcsx_rearmed, libretro/yabasanshiro
+#, fuzzy
+msgctxt "game_options"
+msgid "Port1"
+msgstr "포트1"
+
+#. TRANSLATION: libretro/kronos, libretro/pcsx_rearmed, libretro/yabasanshiro
+#, fuzzy
+msgctxt "game_options"
+msgid "Port2"
+msgstr "포트2"
+
+#. TRANSLATION: libretro/kronos, libretro/pcsx_rearmed, libretro/yabasanshiro
+#, fuzzy
+msgctxt "game_options"
+msgid "Port1+2"
+msgstr "포트1+2"
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "Choose system BIOS language."
+msgstr ""
+
+#. TRANSLATION: libretro/kronos
+msgctxt "game_options"
+msgid "BIOS Language"
+msgstr ""
+
 #. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "Use a custom MAME config, do not overwrite config on launch."
@@ -3902,72 +4063,72 @@ msgctxt "game_options"
 msgid "CUSTOM CONFIG"
 msgstr "사용자 지정 구성"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Controls for 5/6 button games and other unique controls"
 msgstr "5/6 버튼 게임 및 기타 고유 한 컨트롤을위한 컨트롤"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "SPECIAL CONTROL LAYOUTS"
 msgstr "특수 제어 레이아웃"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Default Only"
 msgstr "기본값만"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "SNES Style"
 msgstr "SNES 스타일"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Genesis/Megadrive Style"
 msgstr "제네시스/메가드라이브 스타일"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Modern Fightstick Style"
 msgstr "모던 파이트 스틱 스타일"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Neo Geo Mini Pad"
 msgstr "네오지오 미니패드"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Neo Geo CD Pad"
 msgstr "네오 지오 CD 패드"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Twin Stick with Triggers"
 msgstr "트리거가 있는 트윈 스틱"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Rotated 4-Way Stick (Q*Bert)"
 msgstr "회전식 4방향 스틱(Q*버트)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Enable or disable high score saving"
 msgstr "최고 점수 저장 사용 또는 사용 안 함"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "HIGH SCORE PLUGIN"
@@ -3979,23 +4140,17 @@ msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "사용(기본값)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Play a coin drop sound effect when an insert coin button is pressed"
 msgstr "동전 삽입 버튼을 눌렀을 때 동전 떨어뜨리기 사운드 효과를 재생합니다."
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "코인 사운드 플러그인"
-
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/pcsx2, cemu, cemu, ...
-#, fuzzy
-msgctxt "game_options"
-msgid "Enabled"
-msgstr "사용"
 
 #. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
 #, fuzzy
@@ -4065,25 +4220,25 @@ msgctxt "game_options"
 msgid "Don't Use (Default)"
 msgstr "사용 안 함(기본값)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Coleco Adam cartridges"
 msgstr "콜레코 아담 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Coleco Adam Digital Data Packs"
 msgstr "콜레코 아담 디지털 데이터 팩"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Coleco ADAM diskettes"
 msgstr "콜레코 아담 디스켓"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Coleco ColecoVision cartridges"
@@ -4101,13 +4256,13 @@ msgctxt "game_options"
 msgid "MEDIA TYPE"
 msgstr "미디어 유형"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Cassette 1"
 msgstr "카세트 1"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Cassette 2"
@@ -4125,25 +4280,25 @@ msgctxt "game_options"
 msgid "Disk (Drive 2)"
 msgstr "디스크(드라이브 2)"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Cartridge (Slot 1)"
 msgstr "카트리지(슬롯 1)"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Cartridge (Slot 2)"
 msgstr "카트리지(슬롯 2)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Cartridge (Slot 3)"
 msgstr "카트리지(슬롯 3)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Cartridge (Slot 4)"
@@ -4185,31 +4340,31 @@ msgctxt "game_options"
 msgid "CUSTOM GAME CONFIG"
 msgstr "커스텀 게임 구성"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Entex AdventureVision cartridges"
 msgstr "엔텍스 어드벤처비전 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "APF M-1000 cartridges"
 msgstr "APF M-1000 카트리지"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Apple II cleanly cracked disks"
 msgstr "애플 II 깨끗하게 금이 간 디스크"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Apple II miscellaneous disks"
 msgstr "애플 II 기타 디스크"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Apple II original disks"
@@ -4221,182 +4376,182 @@ msgctxt "game_options"
 msgid "Cassette"
 msgstr "카세트"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Hard Drive"
 msgstr "하드 디스크"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Type of joystick connected to the game port."
 msgstr "게임 포트에 연결된 조이스틱 유형입니다."
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "JOYSTICK TYPE"
 msgstr "조이스틱 타입"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Apple (2x 2-button Analog)"
 msgstr "애플 (2x 2 버튼 아날로그)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Sirius/Atari (2x 1-button Digital, II+ Only)"
 msgstr "시리우스/아타리(2x 1버튼 디지털, II+ 전용)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Gizmo (1-Button Digital)"
 msgstr "기즈모(1버튼 디지털)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Model of emulated Apple II."
 msgstr "에뮬레이트 된 애플 II의 모델."
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Apple //e Enhanced (Default)"
 msgstr "Apple //e 고급(기본값)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Apple //e"
 msgstr "애플 //e"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Apple ][ Plus"
 msgstr "애플 ][ 플러스"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Apple IIgs cleanly cracked disks"
 msgstr "애플 IIgs는 깨끗하게 금이 간 디스크를"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Apple IIgs miscellaneous disks"
 msgstr "애플 IIgs 기타 디스크"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Apple IIgs original disks"
 msgstr "애플 IIgs 원본 디스크"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "5 1/4 Disk (Drive 1)"
 msgstr "5 1/4 디스크(드라이브 1)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "5 1/4 Disk (Drive 2)"
 msgstr "5 1/4 디스크(드라이브 2)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "3 1/2 Disk (Drive 3)"
 msgstr "3 1/2 디스크(드라이브 3)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "3 1/2 Disk (Drive 4)"
 msgstr "3 1/2 디스크(드라이브 4)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Emerson Arcadia 2001 cartridges"
 msgstr "에머슨 아카디아 2001 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Archimedes floppy images"
 msgstr "아크론 아르키메데스 플로피 이미지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Archimedes hard disks"
 msgstr "아크론 아르키메데스 하드 디스크"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Archimedes ROM images"
 msgstr "아크론 아르키메데스 ROM 이미지"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, mame/vitaquake3, ...
+#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, mame/openbor7530, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Select model to emulate"
 msgstr "에뮬레이트할 모델 선택"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "ARCHIMEDES MODEL"
 msgstr "아르키메데스 모델"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Archimedes 310"
 msgstr "아르키메데스 310"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "BBC A3000"
 msgstr "BBC A3000"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Archimedes 440/1 (Default)"
 msgstr "아르키메데스 440/1 (기본값)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Archimedes 540"
 msgstr "아르키메데스 540"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Bally Professional Arcade cartridges"
 msgstr "발리 프로페셔널 아케이드 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Atom cassettes"
 msgstr "아크론 원자 카세트"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Atom disk images"
 msgstr "아크론 원자 디스크 이미지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Atom Utility ROMs"
 msgstr "아크론 원자 유틸리티 ROM"
@@ -4407,41 +4562,41 @@ msgctxt "game_options"
 msgid "Cartridge"
 msgstr "카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Quickload"
 msgstr "빠른 로드"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Select which joystick to emulate."
 msgstr "에뮬레이트할 조이스틱을 선택합니다."
 
-#. TRANSLATION: libretro/mame, cgenius, mame/vitaquake3, rtcw
+#. TRANSLATION: libretro/mame, cgenius, mame/openbor7530, rtcw
 #, fuzzy
 msgctxt "game_options"
 msgid "None (Default)"
 msgstr "없음(기본값)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Analogue Joysticks"
 msgstr "아크론 아날로그 조이스틱"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Bitstik"
 msgstr "아크론 비트스틱"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Robo Bitstik 2"
 msgstr "로보 비틱 2"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Voltmace Delta 3b Twin Joysticks"
@@ -4477,27 +4632,27 @@ msgctxt "game_options"
 msgid "BBC Master Compact"
 msgstr "BBC 마스터 컴팩트"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn BBC Micro cassettes"
 msgstr "아크론 BBC 마이크로 카세트"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn BBC Micro hard disks"
 msgstr "아크론 BBC 마이크로 하드 디스크"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn BBC Micro ROMs"
 msgstr "아크론 BBC 마이크로 롬"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn BBC Micro Model B disks"
 msgstr "아크론 BBC 마이크로 모델 B 디스크"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn BBC Micro Model B Original disks"
 msgstr "아크론 BBC 마이크로 모델 B 오리지널 디스크"
@@ -4577,209 +4732,209 @@ msgctxt "game_options"
 msgid "BBC Master Cartridge (Slot 2)"
 msgstr "BBC 마스터 카트리지(슬롯 2)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Camputers Lynx cassettes"
 msgstr "캠퍼 스 살쾡이 카세트"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Camputers Lynx floppies"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "LYNX MODEL"
 msgstr "LYNX 모델"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Lynx 48k"
 msgstr "LYNX 48k"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Lynx 96k"
 msgstr "LYNX 96k"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Lynx 128k"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Philips CD-i CD-ROMs"
 msgstr "필립스 CD-i CD-ROM"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Tandy Radio Shack Colour Computer cartridges"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Tandy Radio Shack Colour Computer disk images"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Select the model of Colour Computer to emulate"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "COLOUR COMPUTER MODEL"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Color Computer"
 msgstr "컬러 컴퓨터"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Color Computer 2"
 msgstr "컬러 컴퓨터 2"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Color Computer 2B"
 msgstr "컬러 컴퓨터 2B"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Color Computer 3 (NTSC) (Default)"
 msgstr "컬러 컴퓨터 3(NTSC)(기본값)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Color Computer 3 (PAL)"
 msgstr "컬러 컴퓨터 3 (PAL)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "V-Tech Creativision cartridges"
 msgstr "V-테크 크리에이티비전 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Electron Disks"
 msgstr "아크론 전자 디스크"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Electron Cassettes"
 msgstr "아크론 전자 카세트"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Electron Cartridges"
 msgstr "아크론 전자 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acron Electron ROMs"
 msgstr "아크론 전자 ROM"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "ELECTRON MODEL"
 msgstr "전자 모델"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Electron w/64k Master RAM Board (default)"
 msgstr "전자 승 / 64k 마스터 RAM 보드 (기본값)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Electron"
 msgstr "전자"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Floppy Disk"
 msgstr "디스켓"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Fujitsu FM-77AV disk images"
 msgstr "후지쯔 FM-77AV 디스크 이미지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Fujitsu FM-7 cassettes"
 msgstr "후지쯔 FM-7 카세트"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Fujitsu FM-7 disk images"
 msgstr "후지쯔 FM-7 디스크 이미지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "FM-7 MODEL"
 msgstr "FM-7 모델"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "FM TOWNS MODEL"
 msgstr "FM 타운 모델"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "FM Towns Marty (Default)"
 msgstr "FM 타운스 마티 (기본값)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "FM Towns (Model 1/2)"
 msgstr "FM 타운 (모델 1/2)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "FM Towns II UX"
 msgstr "FM 타운 II UX"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "How much RAM the emulated FM Towns will have installed"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "RAM SIZE"
 msgstr "램 크기"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/uae4arm, libretro/px68k, mame/vitaquake3, ...
+#. TRANSLATION: libretro/mame, libretro/mame, libretro/uae4arm, libretro/px68k, mame/openbor7530, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "2MB"
 msgstr "2메가바이트"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid ""
@@ -4787,145 +4942,145 @@ msgid ""
 "exist"
 msgstr "플로피 드라이브에 디스크를 넣고 존재하지 않으면 공백이 사용됩니다."
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "ADD USER DISK"
 msgstr "사용자 디스크 추가"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Fujitsu FM Towns CD-ROMs"
 msgstr "후지쯔 FM 타운 CD - ROM"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Fujitsu FM Towns cracked floppy disk images"
 msgstr "후지쯔 FM 타운스 금이 플로피 디스크 이미지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Fujitsu FM Towns miscellaneous floppy disk images"
 msgstr "후지쯔 FM 타운 기타 플로피 디스크 이미지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Fujitsu FM Towns original floppy disk images"
 msgstr "후지쯔 FM 타운 원본 플로피 디스크 이미지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Floppy Disk (Drive 1)"
 msgstr "플로피 디스크(드라이브 1)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Floppy Disk (Drive 2 - Model 1/2 & II UX)"
 msgstr "플로피 디스크 (드라이브 2 - 모델 1/2 & II UX)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "CD-ROM"
 msgstr "시디롬"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Hard Drive (II UX)"
 msgstr "하드 드라이브 (II UX)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Bit Corp Gamate cartridges"
 msgstr "비트 코프 가메이트 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Tiger Game.com cartridges"
 msgstr "타이거 Game.com 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Epoch Game Pocket Computer cartridges"
 msgstr "에포크 게임 포켓 컴퓨터 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Hartung Game Master cartridges"
 msgstr "하르퉁 게임 마스터 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "GamePark GP32 SmartMedia cards"
 msgstr "게임파크 GP32 스마트미디어 카드"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Dick Smith Electronics VZ-200/300 cassettes"
 msgstr "딕 스미스 전자 VZ-200/300 카세트"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Dick Smith Electronics VZ-200/300 snapshots"
 msgstr "딕 스미스 전자 VZ-200/300 스냅샷"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Choose hardware for the memory expansion slot"
 msgstr "메모리 확장 슬롯용 하드웨어 선택"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "MEMORY SLOT"
 msgstr "메모리 슬롯"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Laser 310/VZ-300 16k Memory"
 msgstr "레이저 310/VZ-300 16k 메모리"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Laser/VZ 64k Memory (Default)"
 msgstr "레이저/VZ 64k 메모리(기본값)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Snapshot"
 msgstr "스냅 사진"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Macintosh 400K/800K Disk images"
 msgstr "매킨토시 400K / 800K 디스크 이미지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Macintosh High Density Disk images"
 msgstr "매킨토시 고밀도 디스크 이미지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Mac Harddisks"
@@ -4938,41 +5093,41 @@ msgid ""
 "Colour)"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "MAC MODEL"
 msgstr "맥 모델"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Mac 128k (128kb RAM, 2 LD Floppies)"
 msgstr "맥 128k (128kb 램, 2 LD 플로피)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Mac 512k (512kb RAM, 2 LD Floppies)"
 msgstr "맥 512k (512kb 램, 2 LD 플로피)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Mac Plus (4Mb RAM, 2 LD Floppies/HDD)"
 msgstr "맥 플러스 (4MB RAM, 2 LD 플로피 / 하드 디스크)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Mac SE (4Mb RAM, 2 LD Floppies/HDD)"
 msgstr "맥 SE (4MB 램, 2 LD 플로피 / 하드 디스크)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Mac Classic (4Mb RAM, 2 HD Floppies/HDD)"
 msgstr "맥 클래식 (4Mb RAM, 2 HD 플로피 / HDD)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Mac II (2Mb RAM, Color, 2 HD Floppies/CD/HDD)"
 msgstr "맥 II (2MB 램, 컬러, 2 HD 플로피 / CD / 하드 디스크)"
@@ -4982,54 +5137,54 @@ msgctxt "game_options"
 msgid "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD/Image Reader)"
 msgstr "맥 IIx (2MB 램, 컬러, 2 HD 플로피 / CD / 하드 디스크 / 이미지 리더)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Mac LC 3 (Default) (4Mb RAM, Color, 2 HD Floppies/CD/HDD)"
 msgstr "맥 LC 3 (기본값) (4MB 램, 컬러, 2 HD 플로피 / CD / 하드 디스크)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Install the image reader card to read idks image files (Mac IIx only)"
 msgstr "이미지 판독기 카드를 설치하여 idks 이미지 파일 읽기(Mac IIx만 해당)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "IMAGE READER"
 msgstr "이미지 리더"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Slot A (Default)"
 msgstr "슬롯 A(기본값)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Slot B"
 msgstr "슬롯 B"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Slot C"
 msgstr "슬롯 C"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Slot D"
 msgstr "슬롯 D"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Slot E"
 msgstr "슬롯 E"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid ""
@@ -5042,175 +5197,175 @@ msgctxt "game_options"
 msgid "Type of ROM file to load"
 msgstr "로드할 ROM 파일 유형"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "CD"
 msgstr "시디"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Select a boot disk or hard drive if needed"
 msgstr "필요한 경우 부팅 디스크 또는 하드 드라이브 선택"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "BOOT DISK"
 msgstr "부팅 디스크"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "System 3.0 (LD Floppy)"
 msgstr "시스템 3.0 (LD 플로피)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "System 6.0.8 (LD Floppy)"
 msgstr "시스템 6.0.8 (LD 플로피)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "System 7.0.1 (HD Floppy)"
 msgstr "시스템 7.0.1 (HD 플로피)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "System 7.5 (HD Floppy)"
 msgstr "시스템 7.5 (HD 플로피)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "System 6.0.8 (Hard Drive)"
 msgstr "시스템 6.0.8(하드 드라이브)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "System 7.0.1 (Hard Drive)"
 msgstr "시스템 7.0.1(하드 드라이브)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "System 7.5.5 (Hard Drive)"
 msgstr "시스템 7.5.5(하드 드라이브)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Creatronic Mega Duck cartridges"
 msgstr "크레아트로닉 메가 덕 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "PDP-1 Paper Tape Reader Images"
 msgstr "PDP-1 종이 테이프 리더 이미지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Casio PV-1000 cartridges"
 msgstr "카시오 PV-1000 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Video Technology Socrates cartridges"
 msgstr "비디오 기술 소크라테스 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Funtech Super A'Can cartridges"
 msgstr "펀테크 슈퍼 아칸 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "TI-99/4A Cartridges"
 msgstr "TI-99 / 4A 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "32k RAM expansion card installed"
 msgstr "32k RAM 확장 카드가 설치됨"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "32K RAM EXPANSION"
 msgstr "32K 램 확장"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Speech module installed"
 msgstr "음성 모듈 설치됨"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "SPEECH MODULE"
 msgstr "음성 모듈"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Tomy Tutor & Pyuuta 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "GCE Vectrex cartridges"
 msgstr "GCE 벡트렉스 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "VTech V.Smile cartridges"
 msgstr "VTech V.스마일 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "VTech V.Smile Motion cartridges"
 msgstr "VTech V.스마일 모션 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Atari XE Game System cartridges"
 msgstr "아타리 XE 게임 시스템 카트리지"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Atari 400 / 800 floppy disks"
 msgstr "아타리 400 / 800 플로피 디스크"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Disk (Drive 3)"
 msgstr "디스크(드라이브 3)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Disk (Drive 4)"
 msgstr "디스크(드라이브 4)"
 
-#. TRANSLATION: libretro/mamevirtual, mame/vitaquake3
+#. TRANSLATION: libretro/mamevirtual, mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Video Game Music Files"
@@ -5342,12 +5497,6 @@ msgstr "DMA 전용(약간 빠름)"
 msgctxt "game_options"
 msgid "Allows up to 5 or 8 controllers in supported games."
 msgstr "지원되는 게임에서 최대 5개 또는 8개의 컨트롤러를 허용합니다."
-
-#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro, pcsx2
-#, fuzzy
-msgctxt "game_options"
-msgid "MULTITAP"
-msgstr "멀티탭"
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, ...
 #, fuzzy
@@ -5741,6 +5890,39 @@ msgid "Rumble Pak"
 msgstr "럼블 팩"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid ""
+"Use to eliminate joystick drift/unwanted input. Effects all controllers."
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid "JOYSTICK DEADZONE"
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid "15% (Default)"
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid ""
+"Use to make joystick movement more or less sensitive. Effects all "
+"controllers."
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid "JOYSTICK SENSITIVITY"
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid "100% (Default)"
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 #, fuzzy
 msgctxt "game_options"
 msgid "Full speed can break some games."
@@ -5797,7 +5979,7 @@ msgctxt "game_options"
 msgid "USA"
 msgstr "미국"
 
-#. TRANSLATION: libretro/neocd, flycast/vitaquake3, pcsx2, redream, yuzu, ...
+#. TRANSLATION: libretro/neocd, flycast/vitaquake3, openbor, redream, yuzu, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Europe"
@@ -6399,24 +6581,6 @@ msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "꺼짐이 더 안전하고, 특정 게임의 경우 켜짐이 더 안전합니다."
 
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/yabasanshiro
-#, fuzzy
-msgctxt "game_options"
-msgid "Port1"
-msgstr "포트1"
-
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/yabasanshiro
-#, fuzzy
-msgctxt "game_options"
-msgid "Port2"
-msgstr "포트2"
-
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/yabasanshiro
-#, fuzzy
-msgctxt "game_options"
-msgid "Port1+2"
-msgstr "포트1+2"
-
 #. TRANSLATION: libretro/pcsx_rearmed
 #, fuzzy
 msgctxt "game_options"
@@ -6980,12 +7144,6 @@ msgstr "마우스 속도에 전역적으로 영향을 줍니다."
 msgctxt "game_options"
 msgid "MOUSE SPEED"
 msgstr "마우스 속도"
-
-#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vb
-#, fuzzy
-msgctxt "game_options"
-msgid "original"
-msgstr "원문 언어"
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, ...
 #, fuzzy
@@ -8346,22 +8504,10 @@ msgctxt "game_options"
 msgid "EXPOSE MODE"
 msgstr "노출 모드"
 
-#. TRANSLATION: libretro/yabasanshiro, theforceengine, yabasanshiro
-#, fuzzy
-msgctxt "game_options"
-msgid "720p"
-msgstr "720p"
-
 #. TRANSLATION: libretro/yabasanshiro
 msgctxt "game_options"
 msgid "4K"
 msgstr "4K"
-
-#. TRANSLATION: libretro/yabasanshiro
-#, fuzzy
-msgctxt "game_options"
-msgid "Allows up to 7 or 12 controllers in supported games."
-msgstr "지원되는 게임에서 최대 7개 또는 12개의 컨트롤러를 허용합니다."
 
 #. TRANSLATION: libretro/yabasanshiro
 msgctxt "game_options"
@@ -8403,7 +8549,7 @@ msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "그래픽 API"
 
-#. TRANSLATION: libretro, daphne, dolphin, duckstation, flycast, ...
+#. TRANSLATION: libretro, cemu, daphne, dolphin, duckstation, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "OpenGL"
@@ -8420,7 +8566,7 @@ msgctxt "game_options"
 msgid "SDL2"
 msgstr ""
 
-#. TRANSLATION: libretro, cemu, citra, daphne, dolphin, ...
+#. TRANSLATION: libretro, citra, daphne, dolphin, duckstation, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Vulkan"
@@ -8720,7 +8866,7 @@ msgctxt "game_options"
 msgid "SOUND BUFFER SIZE"
 msgstr ""
 
-#. TRANSLATION: amiberry, pcsx2, rpcs3
+#. TRANSLATION: amiberry, openbor, rpcs3
 msgctxt "game_options"
 msgid "Minimum"
 msgstr ""
@@ -8747,10 +8893,10 @@ msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr "사용할 그래픽 API 라이브러리를 선택합니다."
 
-#. TRANSLATION: cemu
+#. TRANSLATION: cemu, flycast
 msgctxt "game_options"
-msgid "OpenGL  (Default)"
-msgstr ""
+msgid "Vulkan (Default)"
+msgstr "Vulkan (기본값)"
 
 #. TRANSLATION: cemu, yuzu
 #, fuzzy
@@ -8897,7 +9043,7 @@ msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
 msgstr "첫 번째 오디오 장치를 설정합니다 (기본값)."
 
-#. TRANSLATION: cemu, sonic2013, sonicmania, sonicnexus, play, ...
+#. TRANSLATION: cemu, openbor/openbor7530, sonic2013, sonicmania, sonicnexus, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Fix screen tearing."
@@ -8981,7 +9127,7 @@ msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
 msgstr "종횡비 유지(기본값)"
 
-#. TRANSLATION: cemu, daphne, openbor, redream, demul
+#. TRANSLATION: cemu, daphne, redream, demul
 msgctxt "game_options"
 msgid "Stretch"
 msgstr "늘리기"
@@ -8992,7 +9138,7 @@ msgctxt "game_options"
 msgid "Enable mouse input to simulate touchscreen."
 msgstr "마우스 입력을 활성화하여 터치스크린을 시뮬레이션합니다."
 
-#. TRANSLATION: cemu, mame/vitaquake3, wine
+#. TRANSLATION: cemu, mame/openbor7530, wine
 #, fuzzy
 msgctxt "game_options"
 msgid "ENABLE MOUSE"
@@ -9092,7 +9238,7 @@ msgctxt "game_options"
 msgid "GRAPHICS"
 msgstr ""
 
-#. TRANSLATION: citra, duckstation, melonds, pcsx2, scummvm, ...
+#. TRANSLATION: citra, duckstation, melonds, openbor, scummvm, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Software"
@@ -9104,7 +9250,7 @@ msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "오픈GL (기본값)"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, pcsx2
+#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, openbor
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr "화면 찢어짐을 수정합니다. CPU가 성능을 많이 소모합니다."
@@ -10242,11 +10388,6 @@ msgstr ""
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
-msgid "Vulkan (Default)"
-msgstr "Vulkan (기본값)"
-
-#. TRANSLATION: flycast
-msgctxt "game_options"
 msgid "Choose your video broadcast setting."
 msgstr ""
 
@@ -10589,7 +10730,7 @@ msgctxt "game_options"
 msgid "Bottom only"
 msgstr "하단만"
 
-#. TRANSLATION: melonds, pcsx2
+#. TRANSLATION: melonds, openbor
 #, fuzzy
 msgctxt "game_options"
 msgid "INTEGER SCALING"
@@ -11007,390 +11148,388 @@ msgctxt "game_options"
 msgid "1% (Default)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: openbor/openbor7530
+msgctxt "game_options"
+msgid "Limit FPS to reduce high CPU usage."
+msgstr ""
+
+#. TRANSLATION: openbor/openbor7530
+msgctxt "game_options"
+msgid "LIMIT FPS"
+msgstr ""
+
+#. TRANSLATION: openbor/openbor7530, supermodel
 #, fuzzy
 msgctxt "game_options"
-msgid "Stretch games to full-screen, but may distort the aspect ratio"
-msgstr "게임을 전체 화면으로 늘이지만 종횡비가 왜곡될 수 있음"
+msgid "Only some games feature rumble. Not compatible with all controllers."
+msgstr "일부 게임에만 럼블 기능이 있습니다. 모든 컨트롤러와 호환되지 않습니다."
 
 #. TRANSLATION: openbor
-#, fuzzy
-msgctxt "game_options"
-msgid "SCREEN RATIO"
-msgstr "화면 비율"
-
-#. TRANSLATION: openbor
-#, fuzzy
-msgctxt "game_options"
-msgid "Simple 2x"
-msgstr "단순성 2x"
-
-#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "OSD MESSAGES"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Fit to Window / Fullscreen"
 msgstr ""
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: openbor, openbor
 msgctxt "game_options"
 msgid "Auto Standard (4:3 interlaced / 3:2 progressive)"
 msgstr ""
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: openbor, openbor
 msgctxt "game_options"
 msgid "Standard (4:3)"
 msgstr ""
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: openbor, openbor
 msgctxt "game_options"
 msgid "Widescreen (16:9)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Adjusts Full Motion Video movies aspect ratio."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "FMV ASPECT RATIO"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "FMV movie deinterlacing."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "DEINTERLACING"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Weave (Top Field First)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Weave (Bottom Field First)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Bob (Top Field First)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Bob (Bottom Field First)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Blend (Top Field First)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Blend (Bottom Field First)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Adaptive (Top Field First)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Adaptive (Bottom Field First)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid ""
 "Smooths the overall picture as it is displayed on the screen. Corrects "
 "positioning between pixels."
 msgstr ""
 
-#. TRANSLATION: pcsx2, model2emu
+#. TRANSLATION: openbor, model2emu
 #, fuzzy
 msgctxt "game_options"
 msgid "BILINEAR FILTERING"
 msgstr "쌍선형 필터링"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Bilinear (Smooth)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Bilinear (Sharp)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN PATCHES"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Enable to improve blurriness."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "ANTI-BLUR"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Enable No-interlacing Patches."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "INTERLACING PATCHES"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Can sharpen images in lower resolutions."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Native (PS2)(Default)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "1.25x Native"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "1.5x Native"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "1.75x Native"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "2x Native (~720p)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "2.25x Native"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "2.5x Native"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "2.75x Native"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "3x Native (~1080p)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "3.5x Native"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "4x Native (~1440p/2K)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "5x Native (~1620p)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "6x Native (~2160p/4K)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "7x Native (~2520p)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "8x Native (~2880p/5K)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Choose mipmapping type."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "MIPMAPPING"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Basic (generated Mipmaps)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Full (PS2 Mipmaps)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Control the texture filtering of the emulation."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Bilinear (Forced)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Bilinear (PS2)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Bilinear (Forced excluding sprite)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Control the texture's trilinear filtering of the emulation."
 msgstr ""
 
-#. TRANSLATION: pcsx2, model2emu
+#. TRANSLATION: openbor, model2emu
 #, fuzzy
 msgctxt "game_options"
 msgid "TRILINEAR FILTERING"
 msgstr "삼선형 필터링"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Off (None)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Trilinear (PS2)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Trilinear (Forced)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid ""
 "Reduces banding between colours and improves the perceived colour depth."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "DITHERING"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Unscaled (Default)"
 msgstr ""
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: openbor, openbor
 msgctxt "game_options"
 msgid "Basic (Recommended)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid ""
 "The higher the setting, the more blending is emulated in the shader "
 "accurately, and the higher the speed penalty will be."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "BLENDING ACCURACY"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Full (Slow)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Maximum (Very Slow)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid ""
 "Uploads entire textures at once instead of small pieces. Improves "
 "performance in most games."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "TEXTURE PRELOADING"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Partial"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Full (Hash Cache)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Choose PS2 Bios to use (USA Recommended)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "PS2 BIOS"
 msgstr ""
 
-#. TRANSLATION: pcsx2, redream
+#. TRANSLATION: openbor, redream
 #, fuzzy
 msgctxt "game_options"
 msgid "USA (Default)"
 msgstr "미국(기본값)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 #, fuzzy
 msgctxt "game_options"
 msgid "Some games have issues when the animation is shown, others require it."
@@ -11398,108 +11537,108 @@ msgstr ""
 "일부 게임에는 애니메이션이 표시 될 때 문제가 있고 다른 게임에는 문제가 필요합"
 "니다."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 #, fuzzy
 msgctxt "game_options"
 msgid "Skip (safer)"
 msgstr "건너뛰기(더 안전함)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Show (specific games)"
 msgstr "보이기(특정 게임)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid ""
 "Applies the FXAA anti-aliasing algorithm to improve the visual quality of "
 "games."
 msgstr ""
 
-#. TRANSLATION: pcsx2, yuzu, vita3k
+#. TRANSLATION: openbor, yuzu, vita3k
 #, fuzzy
 msgctxt "game_options"
 msgid "FXAA"
 msgstr "FXAA"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Automatically loads and applies cheats on game start."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "CHEATS"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Allows up to 8 controllers in supported games."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Maximum 2 Players (Default)"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Maximum 4 Players"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Maximum 8 Players"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Allows user replaceable textures."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "TEXTURE REPLACEMENTS"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid ""
 "Necessary for some guns to replace fog textures as a workaround in Time "
 "Crisis - Crisis Zone."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "TIME CRISIS FOG HACK"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Playstation 2 wheel type"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "WHEEL MODEL"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Driving Force"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Driving Force Pro"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "GT Force"
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Virtual"
 msgstr ""
@@ -12704,12 +12843,6 @@ msgstr "P1 및 P2"
 #. TRANSLATION: supermodel
 #, fuzzy
 msgctxt "game_options"
-msgid "Only some games feature rumble. Not compatible with all controllers."
-msgstr "일부 게임에만 럼블 기능이 있습니다. 모든 컨트롤러와 호환되지 않습니다."
-
-#. TRANSLATION: supermodel
-#, fuzzy
-msgctxt "game_options"
 msgid ""
 "Use L2/R2 for Accel/Brake and L1/R1 or R-stick Up/Down for Shift Up/Down."
 msgstr ""
@@ -12848,40 +12981,40 @@ msgctxt "game_options"
 msgid "FORCE 386DX CPU"
 msgstr "강제 386DX CPU"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid "ROM (Slot 1)"
 msgstr "롬 (슬롯 1)"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid "ROM (Slot 2)"
 msgstr "롬 (슬롯 2)"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid "ROM (Slot 3)"
 msgstr "롬 (슬롯 3)"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "ROM (Slot 4)"
 msgstr "롬 (슬롯 4)"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Mount a floppy for user data, creates if needed"
 msgstr "사용자 데이터용 플로피 탑재, 필요한 경우 만들기"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "USER DISK"
 msgstr "사용자 디스크"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid ""
@@ -12889,12 +13022,12 @@ msgid ""
 "Color)"
 msgstr "Mac 모델 선택 (권장 사항은 B & W 용 Mac Plus, Mac LC 3 용 Color)"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD, Image Reader)"
 msgstr "맥 IIx (2MB 램, 컬러, 2 HD 플로피 / CD / 하드 디스크, 이미지 리더)"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Type of ROM file to load. Disk Image requires Mac IIx and Image Reader"
@@ -12902,19 +13035,19 @@ msgstr ""
 "로드할 ROM 파일의 유형입니다. 디스크 이미지에는 Mac IIx 및 이미지 판독기가 필"
 "요합니다."
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Disk Image"
 msgstr "디스크 이미지"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid "Interton VC 4000 cartridges"
 msgstr "인터톤 VC 4000 카트리지"
 
-#. TRANSLATION: mame/vitaquake3
+#. TRANSLATION: mame/openbor7530
 #, fuzzy
 msgctxt "game_options"
 msgid ""
@@ -14921,11 +15054,6 @@ msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "480p"
-msgstr ""
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
 msgid "600p"
 msgstr ""
 
@@ -16502,6 +16630,21 @@ msgstr ""
 #~ msgstr ""
 #~ "향상. 밉 매핑을 사용하도록 설정한 경우 멀리 있는 텍스처의 선명도를 개선합"
 #~ "니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Stretch games to full-screen, but may distort the aspect ratio"
+#~ msgstr "게임을 전체 화면으로 늘이지만 종횡비가 왜곡될 수 있음"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "SCREEN RATIO"
+#~ msgstr "화면 비율"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Simple 2x"
+#~ msgstr "단순성 2x"
 
 #, fuzzy
 #~ msgctxt "game_options"

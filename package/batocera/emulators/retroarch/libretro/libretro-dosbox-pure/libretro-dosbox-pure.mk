@@ -42,8 +42,8 @@ define LIBRETRO_DOSBOX_PURE_BUILD_CMDS
 endef
 
 define LIBRETRO_DOSBOX_PURE_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/dosbox_pure_libretro.so \
-	  $(TARGET_DIR)/usr/lib/libretro/dosbox_pure_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/dosbox_pure_libretro.so $(TARGET_DIR)/usr/lib/libretro/dosbox_pure_libretro.so
 endef
 
 $(eval $(generic-package))

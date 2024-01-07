@@ -45,8 +45,8 @@ define LIBRETRO_FMSX_BUILD_CMDS
 endef
 
 define LIBRETRO_FMSX_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/fmsx_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/fmsx_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/fmsx_libretro.so $(TARGET_DIR)/usr/lib/libretro/fmsx_libretro.so
 endef
 
 $(eval $(generic-package))

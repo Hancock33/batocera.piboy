@@ -275,12 +275,13 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_XPADNEO                              if  !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # xbox receiver (require linux >= 4.18)
     select BR2_PACKAGE_WII_U_GC_ADAPTER                                                                     # wii-u-gc-adapter
     select BR2_PACKAGE_WIIMOTES_RULES                                                                       # wiimotes
+    select BR2_PACKAGE_WIIMOTE_3RDPARTY                                                                     # some non official wiimotes
     select BR2_PACKAGE_XWIIMOTE                                                                             # a tool to analyse wiimote events (mainly to debug, but helps and is funny)
     select BR2_PACKAGE_BATOCERA_GUNS                        if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
     select BR2_PACKAGE_BATOCERA_WHEEL_CALIBRATOR
     select BR2_PACKAGE_HID_NX                               if  !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # updated nintendo switch controller driver, requires kernel > 4.4
     select BR2_PACKAGE_JOYCOND                              if   BR2_PACKAGE_HID_NX                         # nintendo switch joycon daemon (requires hid-nx)
-    select BR2_PACKAGE_NEW_LG4FF                            if  !BR2_PACKAGE_BATOCERA_TARGET_X86_ANY        # Improved Linux module driver for Logitech driving wheels (the lg4ff is disabled in kernels)
+    select BR2_PACKAGE_NEW_LG4FF                            if  !BR2_PACKAGE_BATOCERA_TARGET_RK3326         # Improved Linux module driver for Logitech driving wheels (the lg4ff is disabled in kernels)
     select BR2_PACKAGE_JAMMASD
 
     # Case
@@ -371,12 +372,17 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     # gpio controllers
     select BR2_PACKAGE_DB9_GPIO_RPI                         if  BR2_PACKAGE_BATOCERA_RPI_ANY
     select BR2_PACKAGE_GAMECON_GPIO_RPI                     if  BR2_PACKAGE_BATOCERA_RPI_ANY
-    select BR2_PACKAGE_PYTHON_RPI_GPIO                      if  BR2_PACKAGE_BATOCERA_RPI_ANY
-    select BR2_PACKAGE_PYTHON_GPIOZERO                      if  BR2_PACKAGE_BATOCERA_TARGET_BCM2835     || BR2_PACKAGE_BATOCERA_TARGET_BCM2836
-    select BR2_PACKAGE_PYTHON_ADAFRUIT_CIRCUITPYTHON_WS2801 if  BR2_PACKAGE_BATOCERA_RPI_ANY
+    select BR2_PACKAGE_PYTHON_RPI_GPIO                      if  BR2_PACKAGE_BATOCERA_RPI_ANY            && !BR2_PACKAGE_BATOCERA_TARGET_BCM2712
+    select BR2_PACKAGE_PYTHON_GPIOZERO                      if  BR2_PACKAGE_BATOCERA_TARGET_BCM2835     ||  BR2_PACKAGE_BATOCERA_TARGET_BCM2836
+    select BR2_PACKAGE_PYTHON_ADAFRUIT_CIRCUITPYTHON_WS2801 if  BR2_PACKAGE_BATOCERA_RPI_ANY            && !BR2_PACKAGE_BATOCERA_TARGET_BCM2712
 
     # GPIO kernel driver
-    select BR2_PACKAGE_LIBGPIOD if !BR2_PACKAGE_BATOCERA_RPI_ANY && !BR2_PACKAGE_BATOCERA_TARGET_BCM2835 && !BR2_PACKAGE_BATOCERA_TARGET_BCM2836 && BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_8
+    select BR2_PACKAGE_LIBGPIOD                             if  BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_BCM2711     && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_BCM2836     && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_BCM2837     && \
+                                                                BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_8
 
     # joy 2 pad
     select BR2_PACKAGE_EVMAPY
@@ -663,6 +669,7 @@ config BR2_PACKAGE_BATOCERA_HOMEBREW_SYSTEMS
     select BR2_PACKAGE_OPENBOR6412                          # ALL
     #select BR2_PACKAGE_OPENBOR6510                         # ALL
     select BR2_PACKAGE_OPENBOR7142                          # ALL
+    select BR2_PACKAGE_OPENBOR7530                          # ALL
 
     # Lutro Engine / LÖVE
     select BR2_PACKAGE_LIBRETRO_LUTRO                       if  !BR2_PACKAGE_BATOCERA_TARGET_H3

@@ -3,8 +3,8 @@
 # libretro-mame
 #
 ################################################################################
-# Version: Commits on Nov 30, 2023
-LIBRETRO_MAME_VERSION = 7d5e270850c90e7e167fe53105d0c11c1c1c87b1
+# Version: Commits on Jan 03, 2024
+LIBRETRO_MAME_VERSION = 68520cf9defd1c2762bca7f266f13ad593b7b3f3
 LIBRETRO_MAME_SITE = $(call github,sonninnos,mame,$(LIBRETRO_MAME_VERSION))
 LIBRETRO_MAME_LICENSE = MAME
 
@@ -61,11 +61,12 @@ define LIBRETRO_MAME_BUILD_CMDS
 endef
 
 define LIBRETRO_MAME_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/mame_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/mame_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+
+	$(INSTALL) -D $(@D)/mame_libretro.so $(TARGET_DIR)/usr/lib/libretro/mame_libretro.so
+	
 	mkdir -p $(TARGET_DIR)/usr/share/lr-mame
-	#cp -av $(@D)/hash/* $(TARGET_DIR)/usr/share/lr-mame/hash
-    ln -sf /usr/bin/mame/hash $(TARGET_DIR)/usr/share/lr-mame/hash
+	ln -sf /usr/bin/mame/hash $(TARGET_DIR)/usr/share/lr-mame/hash
 
 	mkdir -p $(TARGET_DIR)/usr/share/mame
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/blank.fmtowns $(TARGET_DIR)/usr/share/mame/blank.fmtowns
@@ -74,15 +75,6 @@ define LIBRETRO_MAME_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/mame/
 	cp -R -u $(@D)/plugins $(TARGET_DIR)/usr/bin/mame/
 	cp -R -u $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/coindrop $(TARGET_DIR)/usr/bin/mame/plugins
-endef
-
-define LIBRETRO_MAME_INSTALL_STAGING_CMDS
-	$(INSTALL) -D $(@D)/mamearcade_libretro.so \
-		$(STAGING_DIR)/usr/lib/libretro/mame_libretro.so
-	mkdir -p $(STAGING_DIR)/usr/share/lr-mame/hash
-	cp -av $(@D)/hash/* $(STAGING_DIR)/usr/share/lr-mame/hash
-	mkdir -p $(TARGET_DIR)/usr/share/mame
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/blank.fmtowns $(TARGET_DIR)/usr/share/mame/blank.fmtowns
 endef
 
 $(eval $(generic-package))

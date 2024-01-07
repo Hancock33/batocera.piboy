@@ -3,8 +3,8 @@
 # libretro-fbneo
 #
 ################################################################################
-# Version: Commits on Dec 30, 2023
-LIBRETRO_FBNEO_VERSION = 0f0e76c4a4762f29cdc3e88b0ed82ae6ae638dbe
+# Version: Commits on Jan 06, 2024
+LIBRETRO_FBNEO_VERSION = 6d8730f4c1e335641d56802756757b2c8243ee54
 LIBRETRO_FBNEO_SITE = $(call github,libretro,FBNeo,$(LIBRETRO_FBNEO_VERSION))
 LIBRETRO_FBNEO_LICENSE = Non-commercial
 
@@ -51,21 +51,19 @@ define LIBRETRO_FBNEO_BUILD_CMDS
 endef
 
 define LIBRETRO_FBNEO_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/src/burner/libretro/fbneo_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/fbneo_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/src/burner/libretro/fbneo_libretro.so $(TARGET_DIR)/usr/lib/libretro/fbneo_libretro.so
 
 	# Bios
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/fbneo/samples
-	$(INSTALL) -D $(@D)/metadata/* \
-		$(TARGET_DIR)/usr/share/batocera/datainit/bios/fbneo
+	$(INSTALL) -D $(@D)/metadata/* $(TARGET_DIR)/usr/share/batocera/datainit/bios/fbneo
 
 	# Need to think of another way to use these files.
 	# They take up a lot of space on tmpfs.
 	# --exclude light as those are for the n3ds build of fbneo, not used by Batocera at all
 	find $(@D)/dats -maxdepth 1 -iname "*.dat" -print0 | xargs -0 -I{} xz -9 {}
 	find $(@D)/dats -maxdepth 1 -iname "*.dat" -print0 | xargs -0 -I{} rm {}
-	rsync -a $(@D)/dats/* \
-		$(TARGET_DIR)/usr/share/batocera/datainit/bios/fbneo --exclude light
+	rsync -a $(@D)/dats/* $(TARGET_DIR)/usr/share/batocera/datainit/bios/fbneo --exclude light
 endef
 
 $(eval $(generic-package))

@@ -2,6 +2,33 @@
 # the aim is to display in es only the available options
 shared:
   cfeatures:
+    powermode:
+      prompt: POWER MODE
+      description: Adjust the cpu power profile while in-game.
+      choices:
+        "High Performance": highperformance
+        "Balanced": balanced
+        "Power Saver": powersaver
+    tdp:
+      prompt: RYZEN THERMAL DESIGN POWER
+      description: Adjust the percentage of power (watts) provided to a Ryzen Mobile Series CPU based on it's default max value. Caution, setting wattage too high could damage your device.
+      choices:
+        "10%":                10
+        "20%":                20
+        "30%":                30
+        "40%":                40
+        "50%":                50
+        "60%":                60
+        "70%":                70
+        "80%":                80
+        "90%":                90
+        "100%":               100
+        "105% (Use caution":  105
+        "110% (Use caution)": 110
+        "115% (Use caution)": 115
+        "120% (Are you crazy?)": 120
+        "125% (Yes, you're crazy)": 125
+        "130% (Nope, you're just insane!)": 130
     videomode:
       group: VIDEO SETTINGS
       prompt: VIDEO MODE
@@ -240,22 +267,30 @@ shared:
       prompt: WHEEL ROTATION
       description: Maximum wheel rotation from left to right (in degrees)
       choices:
-        "90":   90
-        "135": 135
+        "150": 150
         "180": 180
-        "225": 225
+        "200": 200
+        "240": 240
         "270": 270
+        "360": 360
+        "720": 720
+        "900": 900
+        "1080": 1080
     wheel_deadzone:
       group: WHEELS
       prompt: WHEEL DEADZONE
       description: Zone for which the game doesn't react to the wheel (in degrees)
       choices:
         "5":   5
+        "10": 10
         "15": 15
+        "20": 20
         "25": 25
+        "30": 30
         "35": 35
+        "40": 40
         "45": 45
-        "55": 55
+        "50": 50
     wheel_midzone:
       group: WHEELS
       prompt: WHEEL MIDZONE
@@ -263,7 +298,13 @@ shared:
       choices:
         "1":   1
         "2":   2
+        "3":   3
+        "4":   4
         "5":   5
+        "6":   6
+        "7":   7
+        "8":   8
+        "9":   9
         "10": 10
     rumble_gain:
       prompt:      RUMBLE LEVEL
@@ -310,9 +351,9 @@ shared:
         "No Saving":   2
 
 global:
-  shared: [videomode, powersave, ratio, shaderset, smooth, integerscale, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, ai_service_enabled, ai_target_lang, ai_service_url, ai_service_pause, rewind, runahead, secondinstance, video_frame_delay_auto, vrr_runloop_enable, video_threaded, rumble_gain]
+  shared: [powermode, tdp, videomode, powersave, ratio, shaderset, smooth, integerscale, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, ai_service_enabled, ai_target_lang, ai_service_url, ai_service_pause, rewind, runahead, secondinstance, video_frame_delay_auto, vrr_runloop_enable, video_threaded, rumble_gain]
 libretro:
-  shared: [videomode, powersave, ratio, shaderset, smooth, integerscale, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, ai_service_enabled, ai_target_lang, ai_service_url, ai_service_pause, runahead, secondinstance, video_frame_delay_auto, vrr_runloop_enable, video_threaded, rumble_gain, audio_volume, bordersmode]
+  shared: [powermode, tdp, videomode, powersave, ratio, shaderset, smooth, integerscale, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, ai_service_enabled, ai_target_lang, ai_service_url, ai_service_pause, runahead, secondinstance, video_frame_delay_auto, vrr_runloop_enable, video_threaded, rumble_gain, audio_volume, bordersmode]
   cfeatures:
     gfxbackend:
       group: DRIVERS
@@ -485,7 +526,7 @@ libretro:
                             "On":      enabled
     beetle-saturn:
       features: [padtokeyboard, cheevos, netplay]
-      shared: [autosave, use_guns]
+      shared: [autosave, use_guns, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
       cfeatures:
           beetle-saturn_crosshair:
                 group: LIGHT GUN
@@ -2257,34 +2298,34 @@ libretro:
                     "Off":                disabled
                     "On":                 enabled
             gx_controller1_mapping:
-                group:       CONTROLLER SETTINGS 
+                group:       CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 INPUT MAPPING
                 description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
                 choices:
                     "Retropad (Default)": retropad
                     "Megadrive":          megadrive
             gx_controller2_mapping:
-                group:       CONTROLLER SETTINGS 
+                group:       CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 INPUT MAPPING
                 description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
                 choices:
                     "Retropad (Default)": retropad
                     "Megadrive":          megadrive
             gx_controller3_mapping:
-                group:       CONTROLLER SETTINGS 
+                group:       CONTROLLER SETTINGS
                 prompt:      CONTROLLER 3 INPUT MAPPING
                 description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
                 choices:
                     "Retropad (Default)": retropad
                     "Megadrive":          megadrive
             gx_controller4_mapping:
-                group:       CONTROLLER SETTINGS 
+                group:       CONTROLLER SETTINGS
                 prompt:      CONTROLLER 4 INPUT MAPPING
                 description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
                 choices:
                     "Retropad (Default)": retropad
-                    "Megadrive":          megadrive            
-            
+                    "Megadrive":          megadrive
+
       systems:
             megadrive:
                 shared: [use_guns]
@@ -2343,7 +2384,7 @@ libretro:
                             "MAME (ASIC YM3438)":       mame (asic ym3438)
                             "MAME (Enhanced YM3438)":   mame (enhanced ym3438)
                             "Nuked (YM2612)":           nuked (ym2612)
-                            "Nuked (YM3438)":           nuked (ym3438)        
+                            "Nuked (YM3438)":           nuked (ym3438)
             segacd:
                 cfeatures:
                     gpgx_cd_add_on:
@@ -2376,7 +2417,7 @@ libretro:
                             "MAME (ASIC YM3438)":       mame (asic ym3438)
                             "MAME (Enhanced YM3438)":   mame (enhanced ym3438)
                             "Nuked (YM2612)":           nuked (ym2612)
-                            "Nuked (YM3438)":           nuked (ym3438)    
+                            "Nuked (YM3438)":           nuked (ym3438)
             msu-md:
                 cfeatures:
                     gpgx_cd_add_on:
@@ -2557,6 +2598,47 @@ libretro:
     kronos:
       features: [padtokeyboard, cheevos]
       shared: [autosave]
+      cfeatures:
+        kronos_resolution:
+            prompt: RENDERING RESOLUTION
+            description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
+            choices:
+                "original": original
+                "480p":     480p
+                "720p":     720p
+                "1080p":    1080p
+                "4k":       4k
+                "8k":       8k
+        kronos_meshmode:
+            prompt: IMPROVED MESH
+            description: Replace meshed transparency by real transparency.
+            choices:
+                "Disabled": disabled
+                "Enabled":  enabled
+        kronos_bandingmode:
+            prompt: IMPROVED BANDING
+            description: Apply gouraud shading instead of flat shading.
+            choices:
+                "Disabled": disabled
+                "Enabled":  enabled
+        kronos_multitap:
+            prompt: MULTITAP
+            description: Allows up to 7 or 12 controllers in supported games.
+            choices:
+                "Off":      disabled
+                "Port1":    port1
+                "Port2":    port2
+                "Port1+2":  port12
+        kronos_language_id:
+            prompt: BIOS Language
+            description: Choose system BIOS language.
+            choices:
+                "English":  English
+                "German":   German
+                "French":   French
+                "Spanish":  Spanish
+                "Italian":  Italian
+                "Japanese": Japanese
     lowresnx:
       features: [padtokeyboard]
     same_cdi:
@@ -4252,6 +4334,41 @@ libretro:
                     "Off":         none
                     "Memory Pak":  memory
                     "Rumble Pak":  rumble
+            mupen64plus-deadzone:
+                prompt:      JOYSTICK DEADZONE
+                description: Use to eliminate joystick drift/unwanted input. Effects all controllers.
+                choices:
+                    "0%":               0
+                    "5%":               5
+                    "15% (Default)":    15
+                    "20%":              20
+                    "25%":              25
+                    "30%":              30
+            mupen64plus-sensitivity:
+                prompt:      JOYSTICK SENSITIVITY
+                description: Use to make joystick movement more or less sensitive. Effects all controllers.
+                choices:
+                    "50%":              50
+                    "55%":              55
+                    "60%":              60
+                    "65%":              65
+                    "70%":              70
+                    "75%":              75
+                    "80%":              80
+                    "85%":              85
+                    "90%":              90
+                    "95%":              95
+                    "100% (Default)":   100
+                    "105%":             105
+                    "110%":             110
+                    "115%":             115
+                    "120%":             120
+                    "125%":             125
+                    "130%":             130
+                    "135%":             135
+                    "140%":             140
+                    "145%":             145
+                    "150%":             150
             mupen64plus-Framerate:
                 group: ADVANCED OPTIONS
                 prompt: FRAME RATE
@@ -4640,7 +4757,7 @@ libretro:
                     "Gln64":     gln64
                     "Rice":      rice
                     "Angrylion": angrylion
-                    "Parallel":  parallel            
+                    "Parallel":  parallel
             parallel-n64-screensize:
                 group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
@@ -4738,6 +4855,41 @@ libretro:
                     "Off":         none
                     "Memory Pak":  memory
                     "Rumble Pak":  rumble
+            parallel-n64-deadzone:
+                prompt:      JOYSTICK DEADZONE
+                description: Use to eliminate joystick drift/unwanted input. Effects all controllers.
+                choices:
+                    "0%":               0
+                    "5%":               5
+                    "15% (Default)":    15
+                    "20%":              20
+                    "25%":              25
+                    "30%":              30
+            parallel-n64-sensitivity:
+                prompt:      JOYSTICK SENSITIVITY
+                description: Use to make joystick movement more or less sensitive. Effects all controllers.
+                choices:
+                    "50%":              50
+                    "55%":              55
+                    "60%":              60
+                    "65%":              65
+                    "70%":              70
+                    "75%":              75
+                    "80%":              80
+                    "85%":              85
+                    "90%":              90
+                    "95%":              95
+                    "100% (Default)":   100
+                    "105%":             105
+                    "110%":             110
+                    "115%":             115
+                    "120%":             120
+                    "125%":             125
+                    "130%":             130
+                    "135%":             135
+                    "140%":             140
+                    "145%":             145
+                    "150%":             150
     pce:
       features: [padtokeyboard, cheevos, netplay]
       shared: [autosave, rewind]
@@ -4869,33 +5021,33 @@ libretro:
                     "Off":             disabled
                     "On":              enabled
             pd_controller1_mapping:
-                group:       CONTROLLER SETTINGS 
+                group:       CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 INPUT MAPPING
                 description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
                 choices:
                     "Retropad (Default)": retropad
                     "Megadrive":          megadrive
             pd_controller2_mapping:
-                group:       CONTROLLER SETTINGS 
+                group:       CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 INPUT MAPPING
                 description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
                 choices:
                     "Retropad (Default)": retropad
                     "Megadrive":          megadrive
             pd_controller3_mapping:
-                group:       CONTROLLER SETTINGS 
+                group:       CONTROLLER SETTINGS
                 prompt:      CONTROLLER 3 INPUT MAPPING
                 description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
                 choices:
                     "Retropad (Default)": retropad
                     "Megadrive":          megadrive
             pd_controller4_mapping:
-                group:       CONTROLLER SETTINGS 
+                group:       CONTROLLER SETTINGS
                 prompt:      CONTROLLER 4 INPUT MAPPING
                 description: Use Megadrive to automap inputs for a Megadrive style controller with a 6 button layout.
                 choices:
                     "Retropad (Default)": retropad
-                    "Megadrive":          megadrive              
+                    "Megadrive":          megadrive
             picodrive_controller1:
                 group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
@@ -6893,7 +7045,7 @@ libretro:
 # Standalones
 amiberry:
   features: [padtokeyboard]
-  shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         amiberry_linemode:
             prompt:      LINE MODE
@@ -6971,7 +7123,7 @@ amiberry:
                 "9":                           9
                 "10":                          10
 cannonball:
-  shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         highResolution:
             prompt:      HIGH RESOLUTION MODE
@@ -6980,7 +7132,7 @@ cannonball:
                 "Off": 0
                 "On":  1
 cemu:
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
   cfeatures:
         cemu_gfxbackend:
             prompt:      GRAPHICS API
@@ -7103,7 +7255,7 @@ cemu:
                "Enabled":            true
 
 citra:
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         citra_screen_layout:
             prompt: SCREEN LAYOUT
@@ -7139,7 +7291,7 @@ citra:
             prompt: GRAPHICS API
             description: Choose which graphics API library to use.
             choices:
-                "Software":         0 
+                "Software":         0
                 "OpenGL (Default)": 1
                 "Vulkan":           2
         citra_use_vsync_new:
@@ -7169,7 +7321,7 @@ citra:
             description: Compile shaders using background threads to avoid shader compilation stutter. May cause graphical glitches.
             choices:
                 "Off": 0
-                "On":  1            
+                "On":  1
         citra_custom_textures:
             submenu: GRAPHICS
             prompt: LOAD CUSTOM TEXTURES
@@ -7187,7 +7339,7 @@ citra:
                 "On":  1
 daphne:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns]
   cfeatures:
         gfxbackend:
             group: DRIVERS
@@ -7275,10 +7427,10 @@ daphne:
                 "On":                           1
 devilutionx:
   features: [padtokeyboard]
-  shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 dolphin:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
   cfeatures:
         dolphin_aspect_ratio:
             submenu: DISPLAY
@@ -7388,7 +7540,7 @@ dolphin:
             choices:
                 "None":                       0
                 "Standard Controller":        6a
-                "GameCube Controller":        6b 
+                "GameCube Controller":        6b
                 "GameCube Adapter for Wii U": 12
                 "Steering Wheel":             8
                 "Dance Mat":                  9
@@ -7422,7 +7574,7 @@ dolphin:
             description: Use alternative input mappings. Only applies to Standard Controller type.
             choices:
                 "Face Buttons (CW)":         buttons_cw
-                "Face Buttons (CCW)":        buttons_ccw        
+                "Face Buttons (CCW)":        buttons_ccw
         anisotropic_filtering:
             submenu: RENDERING
             prompt: ANISOTROPIC FILTERING
@@ -7581,7 +7733,7 @@ dolphin:
             choices:
                 "Smaller":          smaller
                 "Normal (Default)": normal
-                "Larger":           larger 
+                "Larger":           larger
         jsgate_size_3:
             submenu: CONTROLLER 3
             prompt: JOYSTICK GATE SIZE
@@ -7589,7 +7741,7 @@ dolphin:
             choices:
                 "Smaller":          smaller
                 "Normal (Default)": normal
-                "Larger":           larger 
+                "Larger":           larger
         jsgate_size_4:
             submenu: CONTROLLER 4
             prompt: JOYSTICK GATE SIZE
@@ -7604,7 +7756,7 @@ dolphin:
             description: Enables Dolby Pro Logic II for surround sound. May impact performance.
             choices:
                 "Off": 0
-                "On":  1        
+                "On":  1
   systems:
     gamecube:
         cfeatures:
@@ -7720,7 +7872,7 @@ dolphin:
                     "On":  1
 dolphin_triforce:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         internal_resolution:
             group: VIDEO SETTINGS
@@ -7820,16 +7972,16 @@ dolphin_triforce:
                 "On":  1
 dosbox:
   features: [padtokeyboard]
-  shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 dosbox_staging:
   features: [padtokeyboard]
-  shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 dosboxx:
   features: [padtokeyboard]
-  shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 duckstation:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
   cfeatures:
         duckstation_clocking:
             submenu: EMULATION
@@ -8149,7 +8301,7 @@ duckstation:
                 "32x SSAA":           "32-ssaa"
 flycast:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
   cfeatures:
     flycast_ratio:
       group: VIDEO SETTINGS
@@ -8308,7 +8460,7 @@ flycast:
             "Enabled"           : "yes"
 fpinball:
   features: [padtokeyboard]
-  shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
     fpcontroller:
       prompt: CONTROLLER CONFIGURATION
@@ -8318,10 +8470,10 @@ fpinball:
         "Enabled":            true
 fsuae:
   features: [padtokeyboard]
-  shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 hatari:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         model:
             prompt:      MODEL
@@ -8363,7 +8515,7 @@ hatari:
                 "IDE (Default)": IDE
                 "ASCI":          ASCI
 melonds:
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         melonds_renderer:
             prompt: GRAPHICS API
@@ -8466,7 +8618,7 @@ melonds:
                 "DS":                  0
                 "DSi (experiemental)": 1
 moonlight:
-  shared: [videomode, powersave, ratio]
+  shared: [powermode, tdp, videomode, powersave, ratio]
   cfeatures:
         moonlight_codec:
             group: ADVANCED OPTIONS
@@ -8534,7 +8686,7 @@ moonlight:
                 "5.1": "5.1"
                 "7.1": "7.1"
 mupen64plus:
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
   cfeatures:
         mupen64plus_ratio:
             group: VIDEO SETTINGS
@@ -8768,16 +8920,16 @@ mupen64plus:
                 "20%": 0.2
                 "25%": 0.25
 openbor:
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
-        ratio:
-            prompt:      SCREEN RATIO
+        openbor_ratio:
+            prompt: SCREEN RATIO
             description: Stretch games to full-screen, but may distort the aspect ratio
             choices:
                 "Normal":         0
                 "Stretch":        1
-        filter:
-            prompt:      VIDEO FILTER
+        openbor_filter:
+            prompt: VIDEO FILTER
             description: Apply a post-processing effect.
             choices:
                 "Simple 2x":      0
@@ -8792,9 +8944,30 @@ openbor:
                 "ScanLines TV":   9
                 "TV 2x":          10
                 "Dot Matrix":     11
-pcsx2:
+  cores:
+    'openbor7530':
+      cfeatures:
+        openbor_vsync:
+          prompt: VSYNC
+          description: Fix screen tearing.
+          choices:
+            "Disabled": 0
+            "Enabled":  1
+        openbor_limit:
+          prompt: LIMIT FPS
+          description: Limit FPS to reduce high CPU usage.
+          choices:
+            "Disabled": 0
+            "Enabled":  1
+        openbor_rumble:
+          prompt: RUMBLE
+          description: Only some games feature rumble. Not compatible with all controllers.
+          choices:
+            "Disabled": 0
+            "Enabled":  1
+
   features: [padtokeyboard, cheevos]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
   cfeatures:
         pcsx2_osd_messages:
             submenu: DISPLAY
@@ -9026,7 +9199,7 @@ pcsx2:
 
 ppsspp:
   features: [padtokeyboard]
-  shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, rewind]
+  shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, rewind]
   cfeatures:
         gfxbackend:
             archs_include: [x86, x86_64, bcm2711, bcm2712, rk3326]
@@ -9135,12 +9308,12 @@ ppsspp:
                 "On":  True
 pygame:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns]
 reicast:
-  shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 rpcs3:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
   cfeatures:
         rpcs3_ppudecoder:
             submenu: CPU
@@ -9484,7 +9657,7 @@ rpcs3:
                 "Sony DS":         "Sony"
 scummvm:
   features: [padtokeyboard]
-  shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
       scumm_scale:
           prompt: SCALE FACTOR
@@ -9549,7 +9722,7 @@ scummvm:
 
 easyrpg:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         testplay:
             prompt:      TEST PLAY
@@ -9574,7 +9747,7 @@ easyrpg:
                 "Baltic":                        1257
 redream:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
       redreamResolution:
           prompt:      RENDERING RESOLUTION
@@ -9648,13 +9821,13 @@ redream:
               "Composite":     composite
 sdlpop:
   features: [padtokeyboard]
-  shared: [videomode, powersave, ratio, hud]
+  shared: [powermode, tdp, videomode, powersave, ratio, hud]
 superbroswar:
   features: [padtokeyboard]
-  shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 supermodel:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
   cfeatures:
         engine3D:
             prompt:      3D ENGINE
@@ -9717,7 +9890,7 @@ supermodel:
                 "150":          150
 cgenius:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         cgenius_aspect:
             prompt: ASPECT RATIO
@@ -9759,7 +9932,7 @@ cgenius:
                 "Enabled":            "true"
 vice:
   features: [padtokeyboard]
-  shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         noborder:
             prompt:      ZOOM (HIDE BORDERS)
@@ -9769,7 +9942,7 @@ vice:
                 "YES":          1
 tsugaru:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         cdrom_speed:
             prompt:      CD-ROM SPEED
@@ -9787,7 +9960,7 @@ tsugaru:
                 "YES":            1
 mame:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
   cfeatures:
         video:
             prompt:      VIDEO MODE
@@ -10876,7 +11049,7 @@ mame:
                         "Disabled (Default)": 0
 wine:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [powermode, tdp, videomode, powersave]
   cfeatures:
         sdl_config:
             prompt: SDL CONFIG
@@ -11001,7 +11174,7 @@ wine:
                 "On":  1
 solarus:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         joystick:
             group: CONTROLLER SETTINGS
@@ -11013,7 +11186,7 @@ solarus:
                 "Right stick":      joystick2
 mugen:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         esync:
             prompt:      ESYNC
@@ -11041,16 +11214,16 @@ mugen:
                 "On":  1
 ikemen:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 ruffle:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [powermode, tdp, videomode, powersave]
 lightspark:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 drastic:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         drastic_hires:
             group: VIDEO SETTINGS
@@ -11106,7 +11279,7 @@ drastic:
                 "Single": 3
 xemu:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         xemu_scaling:
             group: VIDEO SETTINGS
@@ -11157,13 +11330,13 @@ xemu:
                 "128MiB":          128
 lexaloffle:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 ecwolf:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 sonic2013:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         language:
             group: GAME TRANSLATION
@@ -11217,7 +11390,7 @@ sonic2013:
                 "On":     1
 soniccd:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         language:
             group: GAME TRANSLATION
@@ -11268,7 +11441,7 @@ soniccd:
                 "On":     1
 sonicmania:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
     smania_vsync:
       prompt: VSYNC
@@ -11297,7 +11470,7 @@ sonicmania:
         "Traditional Chinese": "8"
 sonicnexus:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
     snexus_vsync:
       prompt: VSYNC
@@ -11307,10 +11480,10 @@ sonicnexus:
         "Enabled":  "y"
 srb2:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 srb2kart:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 model2emu:
   features: [padtokeyboard]
   cfeatures:
@@ -11412,10 +11585,10 @@ model2emu:
                 "On":            1
 gsplus:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 play:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
   cfeatures:
       play_api:
           prompt: GRAPHICS API
@@ -11474,13 +11647,13 @@ play:
               "Simplified Chinese":  "11"
 flatpak:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [powermode, tdp, videomode, powersave]
 steam:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [powermode, tdp, videomode, powersave]
 yuzu:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         yuzu_backend:
           prompt: GRAPHICS API
@@ -11644,7 +11817,7 @@ yuzu:
             "Enabled":  "true"
 ryujinx:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         ryujinx_api:
           prompt: GRAPHICS API
@@ -11749,13 +11922,13 @@ ryujinx:
             "Enabled":  "true"
 samcoupe:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 hcl:
   features: [padtokeyboard]
-  shared: [videomode, hud, hud_corner]
+  shared: [powermode, tdp, videomode, powersave, hud, hud_corner]
 hurrican:
   features: [padtokeyboard]
-  shared: [videomode, hud, hud_corner]
+  shared: [powermode, tdp, videomode, powersave, hud, hud_corner]
   cfeatures:
         hurrican_crt:
             prompt:      CRT EFFECT
@@ -11777,19 +11950,19 @@ hurrican:
                 "Walkers World":  Walkers_World
 openjazz:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 etekwar:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 abuse:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 cdogs:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 openmsx:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         openmsx_loading:
             prompt: LOADING SPEED
@@ -11805,7 +11978,7 @@ openmsx:
                 "Hard Disk Image":   "hda"
 demul:
   features: [padtokeyboard]
-  shared: [videomode, powersave, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
+  shared: [powermode, tdp, videomode, powersave, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
   cfeatures:
         demulRatio:
             group: VIDEO SETTINGS
@@ -11823,13 +11996,13 @@ demul:
                 "On":  1
 alephone:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 avp:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 awgl:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         awgl_difficulty:
             group: GAME PLAY
@@ -11878,7 +12051,7 @@ awgl:
                 "Off":            disabled
 bermuda:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [powermode, tdp, videomode, powersave]
   cfeatures:
         bermuda_aspect:
             group: VIDEO SETTINGS
@@ -11889,33 +12062,33 @@ bermuda:
                 "16:9":          1
 bbja:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 bigfish:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [powermode, tdp, videomode, powersave]
 bigpemu:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [powermode, tdp, videomode, powersave]
 blues:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 box86:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 bstone:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 doom3:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 doomretro:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 droidports:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 dxx-rebirth:
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   features: [padtokeyboard]
   cfeatures:
     rebirth_vsync:
@@ -11944,7 +12117,7 @@ dxx-rebirth:
         "Enabled":            1
 eduke32:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
     nologo:
       prompt: SKIP INTRO VIDEOS
@@ -11954,10 +12127,10 @@ eduke32:
         "Show (Default)": 0
 eka2l1:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 f2bgl:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         f2b_fog:
             group: VIDEO SETTINGS
@@ -12025,7 +12198,7 @@ f2bgl:
                 "13": 13
                 "14": 14
 etlegacy:
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   features: [padtokeyboard]
   cfeatures:
     etlegacy_language:
@@ -12064,7 +12237,7 @@ etlegacy:
         "Turkish":    "tr"
         "Ukrainian":  "uk"
 fallout1-ce:
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   features: [padtokeyboard]
   cfeatures:
     fout1_game_difficulty:
@@ -12104,7 +12277,7 @@ fallout1-ce:
         "Italian":           "italian"
         "Spanish":           "spanish"
 fallout2-ce:
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   features: [padtokeyboard]
   cfeatures:
     fout2_game_difficulty:
@@ -12145,19 +12318,19 @@ fallout2-ce:
         "Spanish":           "spanish"
 freedroid:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 gzdoom:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 halflife2:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 hode:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 ionfury:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   features: [padtokeyboard]
   cfeatures:
     nologo:
@@ -12168,58 +12341,58 @@ ionfury:
         "Show (Default)": 0
 kodi:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 mplayer:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 nblood:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 nukem2:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 odcommander:
   features: [padtokeyboard]
-  shared: [videomode, powersave, ratio, hud]
+  shared: [powermode, tdp, videomode, powersave, ratio, hud]
 openclaw:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 openjkja:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 openjkjo:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 openlara:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 omf2097:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 opentyrian:
   features: [padtokeyboard]
-  shared: [videomode, powersave, hud, hud_corner]
+  shared: [powermode, tdp, videomode, powersave, hud, hud_corner]
 pcexhumed:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 popcap:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [powermode, tdp, videomode, powersave]
 pre2:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 prototype:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 pyxel:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 quakespasm:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 quake3:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
     ioquake3_mem:
       group: ADVANCED OPTIONS
@@ -12232,7 +12405,7 @@ quake3:
         "512MB":           "512"
 raze:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
     nologo:
       prompt: SKIP INTRO VIDEOS
@@ -12242,16 +12415,16 @@ raze:
         "Show (Default)": 0
 raptor:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 rednukem:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 rott:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 rtcw:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
     iortcw_api:
       submenu: GRAPHICS
@@ -12313,16 +12486,16 @@ rtcw:
         "Spanish":           4
 serioussam:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 settings:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 sh:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 sm64:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
     nointro:
       prompt: SKIP INTRO VIDEOS
@@ -12337,17 +12510,17 @@ sm64:
         "On": 1
         "Off": 0
 sonic3-air:
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   features: [padtokeyboard]
 sorr:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 spacecadetpinball:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 stalker:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
     stalker_intro:
       prompt: SKIP SPLASH SCREEN
@@ -12356,19 +12529,19 @@ stalker:
         "Show (Default)": 0
 stella:
   features: [padtokeyboard]
-  shared: [videomode]
+  shared: [powermode, tdp, videomode, powersave]
 stk:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 stuntcar:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 supertux2:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 themehospital:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [powermode, tdp, videomode, powersave]
   cfeatures:
     cth_new_graphics:
       prompt: USE NEW GRAPHICS
@@ -12390,7 +12563,7 @@ themehospital:
         "Disabled": "false"
 theforceengine:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
     force_render_res:
       submenu: GRAPHICS
@@ -12532,7 +12705,7 @@ theforceengine:
         "Skip All":     "skip"
 thextech:
   features: [padtokeyboard]
-  shared: [videomode, powersave, hud, hud_corner]
+  shared: [powermode, tdp, videomode, powersave, hud, hud_corner]
   cfeatures:
     frameskip:
       prompt:      FRAMESKIP
@@ -12549,16 +12722,16 @@ thextech:
         "Vsync":              "vsync"
 vanillara:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 vanillatd:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 vcmi:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 virtualjaguar:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [powermode, tdp, videomode, powersave]
   cfeatures:
         virtualjaguar_frameskip:
             group: VIDEO SETTINGS
@@ -12602,7 +12775,7 @@ virtualjaguar:
                 "PAL":  pal
 # vita3k doesn't handle the hud - so no deocrations etc
 vita3k:
-  shared: [videomode, powersave]
+  shared: [powermode, tdp, videomode, powersave]
   features: [padtokeyboard]
   cfeatures:
     vita3k_gfxbackend:
@@ -12658,24 +12831,24 @@ vita3k:
         "16x": 16
 vkquake:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 voidsw:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 vpinball:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 witchaven:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 xash3d_fwgs:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 xboxcloud:
   features: [padtokeyboard]
 xenia:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         xenia_api:
             prompt: GRAPHICS API
@@ -12725,7 +12898,7 @@ xenia:
 
 xenia-canary:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [powermode, tdp, videomode, powersave]
   cfeatures:
         xeniaLicense:
             prompt: XBOX LIVE ARCADE
@@ -12801,7 +12974,7 @@ xenia-canary:
 
 yabasanshiro:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
     yaba_aspect:
       prompt:      GAME ASPECT RATIO
@@ -12841,7 +13014,7 @@ yabasanshiro:
         "Analog":  1
 yquake2:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         yquake2_render:
             group: VIDEO SETTINGS

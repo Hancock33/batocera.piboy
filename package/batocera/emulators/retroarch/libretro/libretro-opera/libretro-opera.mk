@@ -3,8 +3,8 @@
 # libretro-opera
 #
 ################################################################################
-# Version: Commits on Dec 26, 2023
-LIBRETRO_OPERA_VERSION = 9dfa8c3db680246472f29bf353fe5df7bf0438b9
+# Version: Commits on Dec 31, 2023
+LIBRETRO_OPERA_VERSION = 9d18f6cdab4d5c94e2db6448294d1caa11411425
 LIBRETRO_OPERA_SITE = $(call github,libretro,opera-libretro,$(LIBRETRO_OPERA_VERSION))
 LIBRETRO_OPERA_LICENSE = LGPL/Non-commercial
 
@@ -23,8 +23,8 @@ define LIBRETRO_OPERA_BUILD_CMDS
 endef
 
 define LIBRETRO_OPERA_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/opera_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/opera_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/opera_libretro.so $(TARGET_DIR)/usr/lib/libretro/opera_libretro.so
 endef
 
 $(eval $(generic-package))

@@ -3,8 +3,8 @@
 # libretro-reminiscence
 #
 ################################################################################
-# Version: Commits on Oct 31, 2023
-LIBRETRO_REMINISCENCE_VERSION = e0d6d47230fdf22d468afd46cfb01f9315aff2bd
+# Version: Commits on Jan 05, 2024
+LIBRETRO_REMINISCENCE_VERSION = e21856941dcedee23026da8b2ca94708c14dae7f
 LIBRETRO_REMINISCENCE_SITE = $(call github,libretro,REminiscence,$(LIBRETRO_REMINISCENCE_VERSION))
 LIBRETRO_REMINISCENCE_LICENSE = GPL-3.0
 
@@ -17,8 +17,8 @@ define LIBRETRO_REMINISCENCE_BUILD_CMDS
 endef
 
 define LIBRETRO_REMINISCENCE_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/reminiscence_libretro.so \
-	$(TARGET_DIR)/usr/lib/libretro/reminiscence_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/reminiscence_libretro.so $(TARGET_DIR)/usr/lib/libretro/reminiscence_libretro.so
 endef
 
 $(eval $(generic-package))

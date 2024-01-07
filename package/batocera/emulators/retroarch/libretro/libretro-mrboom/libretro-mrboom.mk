@@ -3,8 +3,8 @@
 # libretro-mrboom
 #
 ################################################################################
-# Version: Commits on Dec 16, 2023
-LIBRETRO_MRBOOM_VERSION = e47197ce6bf304567c7c332afe6b2044cf19b715
+# Version: Commits on Jan 04, 2024
+LIBRETRO_MRBOOM_VERSION = cde2ef61873e1b315af050ad8500f82beb5b014e
 LIBRETRO_MRBOOM_SITE = https://github.com/Javanaise/mrboom-libretro.git
 LIBRETRO_MRBOOM_SITE_METHOD=git
 LIBRETRO_MRBOOM_GIT_SUBMODULES=YES
@@ -22,8 +22,9 @@ define LIBRETRO_MRBOOM_BUILD_CMDS
 endef
 
 define LIBRETRO_MRBOOM_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/mrboom_libretro.so $(TARGET_DIR)/usr/lib/libretro/mrboom_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/mrboom
+	$(INSTALL) -D $(@D)/mrboom_libretro.so $(TARGET_DIR)/usr/lib/libretro/mrboom_libretro.so
 	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-mrboom/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/mrboom/
 endef
 

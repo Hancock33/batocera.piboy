@@ -3,8 +3,8 @@
 # libretro-kronos
 #
 ################################################################################
-# Version: Commits on Dec 29, 2023
-LIBRETRO_KRONOS_VERSION = c31b11fbf74dbb7bbeae991bcd1633f6f958d6f7
+# Version: Commits on Jan 01, 2024
+LIBRETRO_KRONOS_VERSION = b847da58fd741bb7351e6da92316ae2fb1f95045
 LIBRETRO_KRONOS_SITE = $(call github,FCare,kronos,$(LIBRETRO_KRONOS_VERSION))
 LIBRETRO_KRONOS_LICENSE = BSD-3-Clause
 
@@ -37,8 +37,8 @@ define LIBRETRO_KRONOS_BUILD_CMDS
 endef
 
 define LIBRETRO_KRONOS_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/yabause/src/libretro/kronos_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/kronos_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/yabause/src/libretro/kronos_libretro.so $(TARGET_DIR)/usr/lib/libretro/kronos_libretro.so
 endef
 
 $(eval $(generic-package))
