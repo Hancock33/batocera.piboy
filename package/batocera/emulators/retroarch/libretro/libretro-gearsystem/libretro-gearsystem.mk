@@ -3,8 +3,8 @@
 # libretro-gearsystem
 #
 ################################################################################
-# Version: Commits on Jan 08, 2024
-LIBRETRO_GEARSYSTEM_VERSION = f36fca14718203ff89f781014874000c3079284d
+# Version: Commits on Jan 09, 2024
+LIBRETRO_GEARSYSTEM_VERSION = 8f025874415cdcbba354776f4228709d757be90e
 LIBRETRO_GEARSYSTEM_SITE = $(call github,drhelius,Gearsystem,$(LIBRETRO_GEARSYSTEM_VERSION))
 LIBRETRO_GEARSYSTEM_LICENSE = GPLv3
 
