@@ -274,6 +274,8 @@ endif
 # Cleanup final directory
 define WINE_PROTON_REMOVE_INCLUDES_HOOK
 		rm -Rf $(TARGET_DIR)/usr/wine/proton/include
+		rm -Rf $(TARGET_DIR)/usr/wine/proton/share
+		ln -sf /usr/wine/lutris/share $(TARGET_DIR)/usr/wine/proton/
 endef
 
 WINE_PROTON_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_REMOVE_INCLUDES_HOOK
