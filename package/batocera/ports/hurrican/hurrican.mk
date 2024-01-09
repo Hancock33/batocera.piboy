@@ -21,7 +21,8 @@ define HURRICAN_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/Hurrican/buildroot-build/hurrican $(TARGET_DIR)/usr/bin
 	chmod 0755 $(TARGET_DIR)/usr/bin/hurrican
 	cp -avr $(@D)/Hurrican/data $(TARGET_DIR)/usr/share/hurrican/
-	cp -avr $(@D)/Hurrican/lang $(TARGET_DIR)/usr/share/hurrican/
+	cp -avr $(@D)/Hurrican/lang 
+	rm -r $(TARGET_DIR)/usr/share/hurrican/data/textures/pvr
 	# install media
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/hurrican
 	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/hurrican/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/hurrican/
