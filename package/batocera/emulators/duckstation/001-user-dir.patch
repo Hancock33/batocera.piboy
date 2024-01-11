@@ -58,10 +58,10 @@ index 1c0f2014..85d0a3a9 100644
    if(ENABLE_X11)
      target_sources(glad PRIVATE src/glad_glx.c)
 diff --git a/src/core/settings.cpp b/src/core/settings.cpp
-index cdee1b4a..ffc16a7a 100644
+index bbcfa715..937dc869 100644
 --- a/src/core/settings.cpp
 +++ b/src/core/settings.cpp
-@@ -1459,18 +1459,18 @@ std::string EmuFolders::Textures;
+@@ -1508,18 +1508,18 @@ std::string EmuFolders::UserResources;
  
  void EmuFolders::SetDefaults()
  {
@@ -89,10 +89,10 @@ index cdee1b4a..ffc16a7a 100644
 +  Screenshots = "/userdata/screenshots";
 +  Shaders = "/usr/bin/duckstation/resources/shaders";
 +  Textures = "/userdata/system/configs/duckstation/textures";
+   UserResources = Path::Combine(DataRoot, "resources");
  }
  
- static std::string LoadPathFromSettings(SettingsInterface& si, const std::string& root, const char* section,
-@@ -1516,18 +1516,18 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
+@@ -1569,18 +1569,18 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
  void EmuFolders::Save(SettingsInterface& si)
  {
    // convert back to relative
@@ -120,6 +120,6 @@ index cdee1b4a..ffc16a7a 100644
 +  si.SetStringValue("Folders", "Screenshots", Screenshots.c_str());
 +  si.SetStringValue("Folders", "Shaders", Shaders.c_str());
 +  si.SetStringValue("Folders", "Textures", Textures.c_str());
+   si.SetStringValue("Folders", "UserResources", Path::MakeRelative(UserResources, DataRoot).c_str());
  }
  
- void EmuFolders::Update()
