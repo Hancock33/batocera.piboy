@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2024-01-01 03:14+0000\n"
+"PO-Revision-Date: 2024-01-10 11:54+0000\n"
 "Last-Translator: THa_MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl-NL\n"
@@ -47,41 +47,44 @@ msgid ""
 "based on it's default max value. Caution, setting wattage too high could "
 "damage your device."
 msgstr ""
+"Pas het percentage vermogen (watt) aan dat aan een CPU uit de Ryzen Mobile-"
+"serie wordt geleverd, op basis van de standaard maximale waarde. Let op: een "
+"te hoog wattage kan uw apparaat beschadigen."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "RYZEN THERMAL DESIGN POWER"
-msgstr ""
+msgstr "RYZEN THERMISCH DESIGN KRACHT"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "105% (Use caution"
-msgstr ""
+msgstr "105% (Wees voorzichtig)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "110% (Use caution)"
-msgstr ""
+msgstr "110% (Wees voorzichtig)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "115% (Use caution)"
-msgstr ""
+msgstr "115% (Wees voorzichtig)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "120% (Are you crazy?)"
-msgstr ""
+msgstr "120% (Ben je gek?)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "125% (Yes, you're crazy)"
-msgstr ""
+msgstr "125% (Ja, je bent gek)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "130% (Nope, you're just insane!)"
-msgstr ""
+msgstr "130% (Nee, je bent krankzinnig!)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -3580,22 +3583,22 @@ msgstr "720p"
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
 msgid "4k"
-msgstr ""
+msgstr "4k"
 
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
 msgid "8k"
-msgstr ""
+msgstr "8k"
 
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
 msgid "Replace meshed transparency by real transparency."
-msgstr ""
+msgstr "Vervang mesh-transparantie door echte transparantie."
 
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
 msgid "IMPROVED MESH"
-msgstr ""
+msgstr "VERBETERDE MESH"
 
 #. TRANSLATION: libretro/kronos, libretro/kronos, libretro/mame, libretro/mame, libretro/pcsx2, ...
 msgctxt "game_options"
@@ -3605,12 +3608,12 @@ msgstr "Ingeschakeld"
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
 msgid "Apply gouraud shading instead of flat shading."
-msgstr ""
+msgstr "Pas gouraud-shading toe in plaats van vlakke shading."
 
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
 msgid "IMPROVED BANDING"
-msgstr ""
+msgstr "VERBETERDE BANDING"
 
 #. TRANSLATION: libretro/kronos, libretro/yabasanshiro
 msgctxt "game_options"
@@ -3640,12 +3643,12 @@ msgstr "Poort1+2"
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
 msgid "Choose system BIOS language."
-msgstr ""
+msgstr "Kies BIOS taal"
 
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
 msgid "BIOS Language"
-msgstr ""
+msgstr "BIOS Taal"
 
 #. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -5250,16 +5253,18 @@ msgctxt "game_options"
 msgid ""
 "Use to eliminate joystick drift/unwanted input. Effects all controllers."
 msgstr ""
+"Gebruik om joystick drift/ongewenste invoer te elimineren. Dit heeft effect "
+"op alle controllers."
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "JOYSTICK DEADZONE"
-msgstr ""
+msgstr "JOYSTICK DEADZONE"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "15% (Default)"
-msgstr ""
+msgstr "15% (Standaard)"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
@@ -5267,16 +5272,18 @@ msgid ""
 "Use to make joystick movement more or less sensitive. Effects all "
 "controllers."
 msgstr ""
+"Gebruik om joystick bewegingen meer of minder gevoelig te maken. Dit heeft "
+"effect op alle controllers."
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "JOYSTICK SENSITIVITY"
-msgstr ""
+msgstr "JOYSTICK GEVOELIGHEID"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "100% (Default)"
-msgstr ""
+msgstr "100% (Standaard)"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
@@ -6259,12 +6266,12 @@ msgstr "CPU SNELHEID"
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "PAL 288x576px 50Hz (auto)"
-msgstr ""
+msgstr "PAL 288x576px 50Hz (auto)"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "NTSC 240x480px 60Hz (auto)"
-msgstr ""
+msgstr "NTSC 240x480px 60Hz (auto)"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -10024,12 +10031,12 @@ msgstr "1% (Standaard)"
 #. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
 msgid "Limit FPS to reduce high CPU usage."
-msgstr ""
+msgstr "Beperk FPS om hoog CPU-gebruik te verminderen."
 
 #. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
 msgid "LIMIT FPS"
-msgstr ""
+msgstr "BEPERK FPS"
 
 #. TRANSLATION: openbor/openbor7530, supermodel
 msgctxt "game_options"
@@ -10504,7 +10511,7 @@ msgstr "STUURWIEL MODEL"
 #. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Driving Force"
-msgstr ""
+msgstr "Driving Force"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -10519,7 +10526,7 @@ msgstr "GT Force"
 #. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Virtual"
-msgstr ""
+msgstr "Virtueel"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -13976,12 +13983,12 @@ msgstr "Anti-aliasing is een techniek om gekartelde randen glad te strijken."
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "VKD3D (D3D12 to Vulkan)"
-msgstr "VKD3D (D3D12 naar Vulkan)"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Native Vulkan"
-msgstr "Native Vulkan"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"

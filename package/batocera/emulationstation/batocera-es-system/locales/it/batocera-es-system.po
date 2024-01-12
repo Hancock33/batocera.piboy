@@ -5242,7 +5242,8 @@ msgctxt "game_options"
 msgid ""
 "Use to eliminate joystick drift/unwanted input. Effects all controllers."
 msgstr ""
-"Elimina il drift e input involontari del joystick. Vale per tutti i controllers."
+"Elimina il drift e input involontari del joystick. Vale per tutti i "
+"controllers."
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
@@ -5260,8 +5261,8 @@ msgid ""
 "Use to make joystick movement more or less sensitive. Effects all "
 "controllers."
 msgstr ""
-"Usalo per rendere meno sensibili i movimenti del joystick. Vale per "
-"tutti i controllers/"
+"Usalo per rendere meno sensibili i movimenti del joystick. Vale per tutti i "
+"controllers/"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"

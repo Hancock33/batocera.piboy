@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v39beta(2024/01/02)\n"
+"Project-Id-Version: batocera-es v39beta(2024/01/09)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-01-02 17:45+0900\n"
+"PO-Revision-Date: 2024-01-09 18:07+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -45,41 +45,44 @@ msgid ""
 "based on it's default max value. Caution, setting wattage too high could "
 "damage your device."
 msgstr ""
+"標準の最大値に基づいて、Ryzen Mobile シリーズ CPU に提供される電力 (ワット) "
+"の割合を調整します。ワット数の設定が高すぎるとデバイスが損傷する可能性がある"
+"ので注意してください"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "RYZEN THERMAL DESIGN POWER"
-msgstr ""
+msgstr "RYZEN 熱設計電力"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "105% (Use caution"
-msgstr ""
+msgstr "105% (注意してください)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "110% (Use caution)"
-msgstr ""
+msgstr "110% (注意してください)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "115% (Use caution)"
-msgstr ""
+msgstr "115% (注意してください)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "120% (Are you crazy?)"
-msgstr ""
+msgstr "120％（正気か？）"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "125% (Yes, you're crazy)"
-msgstr ""
+msgstr "125％（はい、あなたはおかしいです）"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "130% (Nope, you're just insane!)"
-msgstr ""
+msgstr "130% (いや、君は正気じゃない！)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -5202,16 +5205,18 @@ msgctxt "game_options"
 msgid ""
 "Use to eliminate joystick drift/unwanted input. Effects all controllers."
 msgstr ""
+"ジョイスティックのドリフトや不要な入力を排除するために使用します。全コント"
+"ローラーに影響を与えます"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "JOYSTICK DEADZONE"
-msgstr ""
+msgstr "ジョイスティック 遊び幅"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "15% (Default)"
-msgstr ""
+msgstr "15% (標準)"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
@@ -5219,16 +5224,18 @@ msgid ""
 "Use to make joystick movement more or less sensitive. Effects all "
 "controllers."
 msgstr ""
+"ジョイスティックの動きを敏感にするために使用します。全コントローラーに影響を"
+"与えます"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "JOYSTICK SENSITIVITY"
-msgstr ""
+msgstr "ジョイスティック 感度"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "100% (Default)"
-msgstr ""
+msgstr "100% (標準)"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
@@ -9922,17 +9929,17 @@ msgstr ""
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "1% (Default)"
-msgstr "1% (Default)"
+msgstr "1% (標準)"
 
 #. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
 msgid "Limit FPS to reduce high CPU usage."
-msgstr ""
+msgstr "FPS を制限して、高い CPU 使用率を削減します"
 
 #. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
 msgid "LIMIT FPS"
-msgstr ""
+msgstr "FPS 制限"
 
 #. TRANSLATION: openbor/openbor7530, supermodel
 msgctxt "game_options"
@@ -14847,11 +14854,11 @@ msgstr "クイック セーブ"
 
 #~ msgctxt "game_options"
 #~ msgid "Set the deadzone of the joystick analog sticks."
-#~ msgstr "アナログスティックのデッドゾーン(遊び幅)を設定します"
+#~ msgstr "アナログスティックの遊び幅(デッドゾーン)を設定します"
 
 #~ msgctxt "game_options"
 #~ msgid "ANALOG JOYSTICK DEADZONE"
-#~ msgstr "アナログスティックデッドゾーン"
+#~ msgstr "アナログスティック遊び幅"
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Controller (DualShock)"
@@ -14987,7 +14994,7 @@ msgstr "クイック セーブ"
 
 #~ msgctxt "game_options"
 #~ msgid "ANALOG DEADZONE"
-#~ msgstr "アナログデッドゾーン"
+#~ msgstr "アナログ遊び幅"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR PALETTE (2D)"
@@ -15099,7 +15106,7 @@ msgstr "クイック セーブ"
 
 #~ msgctxt "game_options"
 #~ msgid "Set joystick deadzone."
-#~ msgstr "ジョイスティックの遊び幅を設定します"
+#~ msgstr "ジョイスティックの遊び幅(デッドゾーン)を設定します"
 
 #~ msgctxt "game_options"
 #~ msgid "Determines the speed and the runahead behaviour of the system."
