@@ -1,13 +1,21 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es-system\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: A.H.\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2024-01-06 14:07+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4\n"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -416,12 +424,12 @@ msgstr ""
 #. TRANSLATION: shared, shared, libretro/beetle-saturn, libretro/fbneo, libretro/fceumm, ...
 msgctxt "game_options"
 msgid "LIGHT GUN"
-msgstr ""
+msgstr "LJUSPISTOL"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "USE LIGHT GUNS"
-msgstr ""
+msgstr "ANVÄND LJUSPISTOL"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -655,22 +663,22 @@ msgstr ""
 #. TRANSLATION: libretro/beetle-saturn
 msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIR"
-msgstr ""
+msgstr "LJUSPISTOLSSIKTE"
 
 #. TRANSLATION: libretro/beetle-saturn
 msgctxt "game_options"
 msgid "Cross"
-msgstr ""
+msgstr "Kors"
 
 #. TRANSLATION: libretro/beetle-saturn
 msgctxt "game_options"
 msgid "Dot"
-msgstr ""
+msgstr "Punkt"
 
 #. TRANSLATION: libretro/beetle-saturn, libretro/mesens, libretro/mesen, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Disabled"
-msgstr ""
+msgstr "Inaktiverat"
 
 #. TRANSLATION: libretro/beetle-saturn, libretro/beetle-saturn, libretro/yabasanshiro, libretro/yabasanshiro
 msgctxt "game_options"
@@ -730,7 +738,7 @@ msgstr ""
 #. TRANSLATION: libretro/bsnes
 msgctxt "game_options"
 msgid "VIDEO FILTERS"
-msgstr ""
+msgstr "VIDEOFILTER"
 
 #. TRANSLATION: libretro/bsnes
 msgctxt "game_options"
@@ -765,27 +773,27 @@ msgstr ""
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
 msgid "64KB"
-msgstr ""
+msgstr "64KB"
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
 msgid "128KB"
-msgstr ""
+msgstr "128KB"
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
 msgid "192+KB"
-msgstr ""
+msgstr "192+KB"
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
 msgid "512KB"
-msgstr ""
+msgstr "512KB"
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
 msgid "576+KB"
-msgstr ""
+msgstr "576+KB"
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
@@ -800,37 +808,37 @@ msgstr ""
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
 msgid "16 bit"
-msgstr ""
+msgstr "16 bit"
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
 msgid "24 bit (Default)"
-msgstr ""
+msgstr "24 bit (Standard)"
 
 #. TRANSLATION: libretro/cap32, sonic2013, soniccd, sonicmania, play, ...
 msgctxt "game_options"
 msgid "Change the game's language."
-msgstr ""
+msgstr "Ändra spelets språk."
 
 #. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/yabasanshiro, hatari, ...
 msgctxt "game_options"
 msgid "LANGUAGE"
-msgstr ""
+msgstr "SPRÅK"
 
 #. TRANSLATION: libretro/cap32, libretro/melonds, libretro/yabasanshiro, redream, fallout1-ce, ...
 msgctxt "game_options"
 msgid "English (Default)"
-msgstr ""
+msgstr "Engelska (Standard"
 
 #. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, ...
 msgctxt "game_options"
 msgid "Spanish"
-msgstr ""
+msgstr "Spanska"
 
 #. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, ...
 msgctxt "game_options"
 msgid "French"
-msgstr ""
+msgstr "Franska"
 
 #. TRANSLATION: libretro/mesens, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
@@ -934,22 +942,22 @@ msgstr ""
 #. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, amiberry, mupen64plus, ...
 msgctxt "game_options"
 msgid "Low"
-msgstr ""
+msgstr "Låg"
 
 #. TRANSLATION: libretro/mesens, libretro/mesen, mupen64plus, openbor
 msgctxt "game_options"
 msgid "Medium"
-msgstr ""
+msgstr "Medium"
 
 #. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, amiberry, mupen64plus, ...
 msgctxt "game_options"
 msgid "High"
-msgstr ""
+msgstr "Hög"
 
 #. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, mupen64plus
 msgctxt "game_options"
 msgid "Very High"
-msgstr ""
+msgstr "Mycket Hög"
 
 #. TRANSLATION: libretro/mesens, libretro/mesen
 msgctxt "game_options"
@@ -1009,17 +1017,17 @@ msgstr ""
 #. TRANSLATION: libretro/mesen, daphne, flycast, melonds, moonlight
 msgctxt "game_options"
 msgid "90 degrees"
-msgstr ""
+msgstr "90 grader"
 
 #. TRANSLATION: libretro/mesen, melonds, moonlight
 msgctxt "game_options"
 msgid "180 degrees"
-msgstr ""
+msgstr "180 grader"
 
 #. TRANSLATION: libretro/mesen, daphne, melonds, moonlight
 msgctxt "game_options"
 msgid "270 degrees"
-msgstr ""
+msgstr "270 grader"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -1054,7 +1062,7 @@ msgstr ""
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
 msgid "COLOR PALETTE"
-msgstr ""
+msgstr "FÄRGPALETT"
 
 #. TRANSLATION: libretro/mesen, libretro/puae, libretro/puae2021, yuzu, yuzu
 msgctxt "game_options"
@@ -1300,12 +1308,12 @@ msgstr ""
 #. TRANSLATION: libretro/melonds, amiberry, amiberry
 msgctxt "game_options"
 msgid "ON"
-msgstr ""
+msgstr "PÅ"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "OFF (Default)"
-msgstr ""
+msgstr "AV (Standard)"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -1362,7 +1370,7 @@ msgstr ""
 #. TRANSLATION: libretro/melonds, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Mouse"
-msgstr ""
+msgstr "Mus"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -1392,12 +1400,12 @@ msgstr ""
 #. TRANSLATION: libretro/dolphin, libretro/kronos, cemu, flycast/vitaquake3, scummvm, ...
 msgctxt "game_options"
 msgid "English"
-msgstr ""
+msgstr "Engelska"
 
 #. TRANSLATION: libretro/dolphin, cemu, play, yuzu, ryujinx, ...
 msgctxt "game_options"
 msgid "Dutch"
-msgstr ""
+msgstr "Nederländska"
 
 #. TRANSLATION: libretro/dolphin, sonicmania, play, yuzu, ryujinx
 msgctxt "game_options"
@@ -1412,7 +1420,7 @@ msgstr ""
 #. TRANSLATION: libretro/dolphin, cemu, scummvm, easyrpg, sonic2013, ...
 msgctxt "game_options"
 msgid "Korean"
-msgstr ""
+msgstr "Koreanska"
 
 #. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -1433,7 +1441,7 @@ msgstr ""
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/genesisplusgx, libretro/genesisplusgx, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
-msgstr ""
+msgstr "AVANCERADE INSTÄLLNINGAR"
 
 #. TRANSLATION: libretro/dolphin, dolphin
 msgctxt "game_options"
@@ -1839,92 +1847,92 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "US"
-msgstr ""
+msgstr "USA"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "UK"
-msgstr ""
+msgstr "Storbrittanien"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Brazil"
-msgstr ""
+msgstr "Brasilien"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Croatia"
-msgstr ""
+msgstr "Kroatien"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Czech Republic"
-msgstr ""
+msgstr "Tjeckien "
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Denmark"
-msgstr ""
+msgstr "Danmark"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Finland"
-msgstr ""
+msgstr "Finland"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "France"
-msgstr ""
+msgstr "Frankrike"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Germany"
-msgstr ""
+msgstr "Tyskland"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Greece"
-msgstr ""
+msgstr "Grekland"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Hungary"
-msgstr ""
+msgstr "Ungern"
 
 #. TRANSLATION: libretro/dosbox_pure, yuzu
 msgctxt "game_options"
 msgid "Iceland"
-msgstr ""
+msgstr "Island"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Italy"
-msgstr ""
+msgstr "Italien"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Netherlands"
-msgstr ""
+msgstr "Nederländerna"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Norway"
-msgstr ""
+msgstr "Norge"
 
 #. TRANSLATION: libretro/dosbox_pure, yuzu
 msgctxt "game_options"
 msgid "Poland"
-msgstr ""
+msgstr "Polen"
 
 #. TRANSLATION: libretro/dosbox_pure, yuzu
 msgctxt "game_options"
 msgid "Portugal"
-msgstr ""
+msgstr "Portugal"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Russia"
-msgstr ""
+msgstr "Ryssland"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -1939,12 +1947,12 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Spain"
-msgstr ""
+msgstr "Spanien"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Sweden"
-msgstr ""
+msgstr "Sverige"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -1959,7 +1967,7 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure, yuzu
 msgctxt "game_options"
 msgid "Turkey"
-msgstr ""
+msgstr "Turkiet"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -2152,7 +2160,7 @@ msgstr ""
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, ...
 msgctxt "game_options"
 msgid "Show"
-msgstr ""
+msgstr "Visa"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, ...
 msgctxt "game_options"
@@ -9291,7 +9299,7 @@ msgstr ""
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "German (de)"
-msgstr ""
+msgstr "Tyska (de)"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
@@ -9316,12 +9324,12 @@ msgstr ""
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Russian (ru)"
-msgstr ""
+msgstr "Rysska(ru)"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Swedish (se)"
-msgstr ""
+msgstr "Svenska (se)"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
@@ -9331,7 +9339,7 @@ msgstr ""
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "English (us)"
-msgstr ""
+msgstr "Engelska (us)"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
@@ -14127,7 +14135,7 @@ msgstr ""
 #. TRANSLATION: scummvm.keys
 msgctxt "keys_files"
 msgid "Menu"
-msgstr ""
+msgstr "Meny"
 
 #. TRANSLATION: scummvm.keys
 msgctxt "keys_files"
