@@ -49,4 +49,13 @@ define LIBRETRO_SCUMMVM_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/backends/platform/libretro/scummvm_libretro.info $(TARGET_DIR)/usr/share/libretro/info/scummvm_libretro.info
 endef
 
+
+define LIBRETRO_GIT_DL
+	mkdir -p $(@D)/backends/platform/libretro/deps
+	cd $(@D)/backends/platform/libretro/deps && git clone https://github.com/libretro/libretro-deps
+	cd $(@D)/backends/platform/libretro/deps && git clone https://github.com/libretro/libretro-common
+endef
+
+LIBRETRO_SCUMMVM_POST_EXTRACT_HOOKS = LIBRETRO_GIT_DL
+
 $(eval $(generic-package))
