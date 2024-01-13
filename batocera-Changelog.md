@@ -142,7 +142,7 @@
 - Redream to 1.5.0-1093
 ### System
 - Linux kernel to 6.7
-- Mesa to 23.3.2
+- Mesa to 23.3.3
 - Proton to 8.0-4c
 - FAudio to 23.10
 - Nvidia production driver to 545.29.06
@@ -151,7 +151,7 @@
 - Sound Open Firmware to 2023.12
 - Bluez to 5.71
 - Added tree utility
-- VKD3D-Proton to 2.11
+- VKD3D-Proton to 2.11.1
 - Host-XA to 2.4.0
 - Pipewire to 1.0.0
 - Xorg Server to 21.1.10
