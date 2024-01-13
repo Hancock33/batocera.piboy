@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Jan 10, 2024
-DUCKSTATION_VERSION = 5d3cf93aa3420ce4bd6bb22a42b5b4c438854170
+# Version: Commits on Jan 13, 2024
+DUCKSTATION_VERSION = d8b5314e65d9917f2b92cd06582374d6f367a0c3
 DUCKSTATION_SITE = https://github.com/stenzek/duckstation.git
 DUCKSTATION_SITE_METHOD=git
 DUCKSTATION_GIT_SUBMODULES=YES
