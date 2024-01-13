@@ -5,7 +5,6 @@
     <name>Old Towers</name>
     <desc>You play as a little explorers in a towers full of deadly traps and ugly skullz. Your only weapons to help you win: quick-thinking and skill.</desc>
     <image>./images/Old-Towers-image.png</image>
-    <video>./videos/Old-Towers-video.mp4</video>
     <marquee>./images/Old-Towers-marquee.png</marquee>
     <thumbnail>./images/Old-Towers-thumb.png</thumbnail>
     <rating>0.9</rating>

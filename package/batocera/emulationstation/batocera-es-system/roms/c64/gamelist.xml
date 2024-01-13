@@ -4,7 +4,6 @@
     <path>./fix_it_felix_64.d64</path>
     <name>Fix It Felix Jr. 64</name>
     <image>./images/fix_it_felix_64-image.png</image>
-    <video>./videos/fix_it_felix_64-video.mp4</video>
     <marquee>./fix_it_felix_64-marquee.png</marquee>
     <thumbnail>./images/fix_it_felix_64.png</thumbnail>
     <desc>Save Niceland from chaos!

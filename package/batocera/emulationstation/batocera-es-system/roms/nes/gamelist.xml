@@ -5,7 +5,6 @@
 		<name>2048</name>
 		<desc>2048 is an originally Smartphone Game. You must play with tile to add them pair by pair to obtain 2048.</desc>
 		<image>./images/2048 (tsone)-image.png</image>
-		<video>./videos/2048 (tsone)-video.mp4</video>
 		<marquee>./images/2048 (tsone)-marquee.png</marquee>
 		<thumbnail>./images/2048 (tsone)-thumb.png</thumbnail>
 		<releasedate>20140621T000000</releasedate>
