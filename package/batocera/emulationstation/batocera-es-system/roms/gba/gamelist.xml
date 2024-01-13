@@ -5,7 +5,6 @@
     <name>Space Twins</name>
     <desc>Very professional and solid platform/puzzle game for Gameboy Advance.</desc>
     <image>./images/SpaceTwins-image.png</image>
-    <video>./videos/SpaceTwins-video.mp4</video>
     <marquee>./images/SpaceTwins-marquee.png</marquee>
     <releasedate>20090427T000000</releasedate>
     <developer>9wires</developer>

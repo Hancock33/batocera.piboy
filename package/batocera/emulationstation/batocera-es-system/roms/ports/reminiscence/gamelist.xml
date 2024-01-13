@@ -11,8 +11,7 @@
     <genre>Platform-Shooter-Platform / Shooter Scrolling-Shooter / Run and Gun</genre>
     <players>1</players>
     <image>./images/Flashback.png</image>
-    <video>./videos/Flashback.mp4</video>
-	<lang>en</lang>
+    <lang>en</lang>
     <genreid>257</genreid>
   </game>
 </gameList>
