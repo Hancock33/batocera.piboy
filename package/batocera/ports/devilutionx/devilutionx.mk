@@ -43,6 +43,8 @@ define DEVILUTIONX_BUILD_SRC_DIST
 	cd $(DEVILUTIONX_DL_DIR)/git && python $(DEVILUTIONX_DL_DIR)/git/tools/make_src_dist.py
 	tar -xf $(DEVILUTIONX_DL_DIR)/git/build-src-dist/devilutionx-src-*.tar.xz -C $(@D)
 	mv $(@D)/devilutionx-src-* $(@D)/dist-src
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/devilutionx
+	cp -av $(@D)/dist-src/dist/devilutionx.mpq $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/devilutionx
 endef
 
 DEVILUTIONX_PRE_CONFIGURE_HOOKS += DEVILUTIONX_FIX_SDL2MAIN
