@@ -1,21 +1,21 @@
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 7e801954..4ce36496 100644
+index 9e6affdb..ebd14456 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
 @@ -16,7 +16,7 @@ if(EMSCRIPTEN)
  endif()
  
  # Disk image code is shared with the hmsa tool, so we put it into a library:
--add_library(Floppy createBlankImage.c dim.c msa.c st.c zip.c)
-+add_library(Floppy STATIC createBlankImage.c dim.c msa.c st.c zip.c)
+-add_library(Floppy createBlankImage.c dim.c msa.c st.c zip.c utils.c)
++add_library(Floppy STATIC createBlankImage.c dim.c msa.c st.c zip.c utils.c)
  
  # When building for macOS, define specific sources for gui and resources
  if(ENABLE_OSX_BUNDLE)
 diff --git a/src/cpu/CMakeLists.txt b/src/cpu/CMakeLists.txt
-index 60a8cef9..99d5d545 100644
+index 087e1b0d..deead2c3 100644
 --- a/src/cpu/CMakeLists.txt
 +++ b/src/cpu/CMakeLists.txt
-@@ -87,7 +87,7 @@ if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_C_COMPILER_ID MATCHES "Clang")
+@@ -95,7 +95,7 @@ if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_C_COMPILER_ID MATCHES "Clang")
  		PROPERTIES COMPILE_FLAGS ${CPUMAIN_CFLAGS})
  endif()
  
