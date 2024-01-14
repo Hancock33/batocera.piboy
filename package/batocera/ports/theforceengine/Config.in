@@ -6,5 +6,5 @@ config BR2_PACKAGE_THEFORCEENGINE
     help
       Modern "Jedi Engine" replacement supporting Dark Forces, mods,
       and in the future Outlaws.
-      
+
       https://theforceengine.github.io/

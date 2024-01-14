@@ -1485,13 +1485,13 @@ def generateCoreSettings(coreSettings, system, rom, guns, wheels):
             coreSettings.save('mupen64plus-astick-deadzone', '"' + system.config['mupen64plus-deadzone'] + '"')
         else:
             coreSettings.save('mupen64plus-astick-deadzone', '"15"')
-            
+
         # Joystick sensitivity
         if system.isOptSet('mupen64plus-sensitivity'):
             coreSettings.save('mupen64plus-astick-sensitivity', '"' + system.config['mupen64plus-sensitivity'] + '"')
         else:
             coreSettings.save('mupen64plus-astick-sensitivity', '"100"')
-        
+
     if (system.config['core'] == 'parallel_n64'):
         coreSettings.save('parallel-n64-64dd-hardware', '"disabled"')
         coreSettings.save('parallel-n64-boot-device',   '"Default"')
@@ -1551,13 +1551,13 @@ def generateCoreSettings(coreSettings, system, rom, guns, wheels):
             coreSettings.save('parallel-n64-astick-deadzone', '"' + system.config['parallel-n64-deadzone'] + '"')
         else:
             coreSettings.save('parallel-n64-astick-deadzone', '"15"')
-            
+
         # Joystick sensitivity
         if system.isOptSet('parallel-n64-sensitivity'):
             coreSettings.save('parallel-n64-astick-sensitivity', '"' + system.config['parallel-n64-sensitivity'] + '"')
         else:
             coreSettings.save('parallel-n64-astick-sensitivity', '"100"')
-        
+
         # Nintendo 64-DD
         if (system.name == 'n64dd'):
             # 64DD Hardware
@@ -2410,8 +2410,8 @@ def generateCoreSettings(coreSettings, system, rom, guns, wheels):
         if system.isOptSet('gpgx_fm'):
             coreSettings.save('genesis_plus_gx_ym2612', '"' + system.config['gpgx_fm'] + '"')
         else:
-            coreSettings.save('genesis_plus_gx_ym2612', '"mame (ym2612)"')       
-        
+            coreSettings.save('genesis_plus_gx_ym2612', '"mame (ym2612)"')
+
         # system.name == 'mastersystem'
         # Master System FM (YM2413)
         if system.isOptSet('ym2413') and system.config['ym2413'] != "automatic":
@@ -2529,7 +2529,7 @@ def generateCoreSettings(coreSettings, system, rom, guns, wheels):
         if system.isOptSet('kronos_bandingmode'):
             coreSettings.save('kronos_bandingmode', '"' + system.config['kronos_bandingmode'] + '"')
         else:
-            coreSettings.save('kronos_bandingmode', '"disabled"')        
+            coreSettings.save('kronos_bandingmode', '"disabled"')
         # Share saves with Beetle
         if system.isOptSet('kronos_use_beetle_saves') and system.config['kronos_use_beetle_saves'] == 'disabled':
             coreSettings.save('kronos_use_beetle_saves', '"disabled"')
@@ -2553,7 +2553,7 @@ def generateCoreSettings(coreSettings, system, rom, guns, wheels):
         if system.isOptSet('kronos_language_id'):
             coreSettings.save('kronos_language_id', '"' + system.config['kronos_language_id'] + '"')
         else:
-            coreSettings.save('kronos_language_id', '"English"')  
+            coreSettings.save('kronos_language_id', '"English"')
 
     # gun cross / wheel
     if (system.config['core'] == 'beetle-saturn'):

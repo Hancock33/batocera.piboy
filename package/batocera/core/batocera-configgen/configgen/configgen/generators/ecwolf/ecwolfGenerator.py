@@ -43,7 +43,7 @@ class ECWolfGenerator(Generator):
                 for line in lines:
                     if not IgnoreConfigKeys.intersection(line.split()):
                         f.write(line)
- 
+
             # ... and append the ignored keys with default values now ;)
             f = codecs.open(ecwolfConfigFile, "a")
             f.write('JoystickEnabled = 1;\n')
@@ -86,9 +86,9 @@ class ECWolfGenerator(Generator):
 
             if fextension == ".pk3":
                 ecwolfArray += ["--file", path.basename(rom)]
- 
+
         ecwolfArray += [
-                 #Use values according ecwolf --help, do not miss any parameter  
+                 #Use values according ecwolf --help, do not miss any parameter
                  "--savedir", ecwolfSaves
         ]
 

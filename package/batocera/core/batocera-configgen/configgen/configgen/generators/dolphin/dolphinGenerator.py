@@ -65,7 +65,7 @@ class DolphinGenerator(Generator):
 
         # PanicHandlers displaymessages
         dolphinSettings.set("Interface", "UsePanicHandlers", "False")
-        
+
         # Display message in game (Memory card save and many more...)
         if system.isOptSet("ShowDpMsg") and system.getOptBoolean("ShowDpMsg") == False:
             dolphinSettings.set("Interface", "OnScreenDisplayMessages", "False")
@@ -171,7 +171,7 @@ class DolphinGenerator(Generator):
         else:
             dolphinSettings.set("Core", "DPL2Decoder", "False")
             dolphinSettings.set("Core", "DSPHLE", "True")
-            dolphinSettings.set("DSP", "EnableJIT", "False")   
+            dolphinSettings.set("DSP", "EnableJIT", "False")
 
         # Save dolphin.ini
         with open(batoceraFiles.dolphinIni, 'w') as configfile:
@@ -304,12 +304,12 @@ class DolphinGenerator(Generator):
             dolphinGFXSettings.set("Settings", "SSAA", "True")
         else:
             dolphinGFXSettings.set("Settings", "SSAA", "False")
-        
+
         # Manual texture sampling
         if system.isOptSet('manual_texture_sampling') and system.getOptBoolean('manual_texture_sampling'):
             dolphinGFXSettings.set("Hacks", "FastTextureSampling", "False")
         else:
-            dolphinGFXSettings.set("Hacks", "FastTextureSampling", "True")        
+            dolphinGFXSettings.set("Hacks", "FastTextureSampling", "True")
 
         # Save gfx.ini
         with open(batoceraFiles.dolphinGfxIni, 'w') as configfile:
