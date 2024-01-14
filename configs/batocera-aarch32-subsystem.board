@@ -89,4 +89,3 @@ BR2_PACKAGE_ZLIB_NG=y
 # Enables ccache
 BR2_CCACHE=y
 BR2_CCACHE_DIR="$(HOME)/build-dir/ccache/aarch32"
-BR2_PER_PACKAGE_DIRECTORIES=y
