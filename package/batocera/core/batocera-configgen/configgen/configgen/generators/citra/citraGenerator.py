@@ -19,7 +19,7 @@ class CitraGenerator(Generator):
             commandArray = ['/usr/bin/citra-qt', rom]
         else:
             commandArray = ['/usr/bin/citra', rom]
-        return Command.Command(array=commandArray, env={ 
+        return Command.Command(array=commandArray, env={
             "XDG_CONFIG_HOME":batoceraFiles.CONF,
             "XDG_DATA_HOME":batoceraFiles.SAVES + "/3ds",
             "XDG_CACHE_HOME":batoceraFiles.CACHE,
@@ -36,7 +36,7 @@ class CitraGenerator(Generator):
             return False
         else:
             return True
-    
+
     @staticmethod
     def writeCITRAConfig(citraConfigFile, system, playersControllers):
         # Pads

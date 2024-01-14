@@ -5,7 +5,6 @@
     <name>Reflectron</name>
     <desc>You are a Biological Entity Remover Node And Repair Droid (or B.E.R.N.A.R.D. for short), working for the evil robot overlord on his deadly mobile space station. Charged with maintaining the primary laser cannon, B.E.R.N.A.R.D has, however, developed something of a conscience. Instead, he has chosen to defy his master and do his best to stop the cannon's DELTA CRYSTAL from charging up by destroying the MEGA PROTONS with his cranial gun. Will he be able to stop the cannon from decimating another innocent world?</desc>
     <image>./images/Reflectron (aetherbyte)-image.png</image>
-    <video>./videos/Reflectron (aetherbyte)-video.mp4</video>
     <marquee>./images/Reflectron (aetherbyte)-marquee.png</marquee>
     <thumbnail>./images/Reflectron (aetherbyte)-thumb.png</thumbnail>
     <developer>Andrew Darovich</developer>
@@ -25,7 +24,6 @@
 
 Santatlantean is a festive high-score action shoot 'em up (based on Aetherbyte's Atlantean) which is free to download and play on a PC Engine emulator of your choice (such as Magic Engine, Mednafen or Ootake) or flash card.</desc>
     <image>./images/Santatlantean (aetherbyte)-image.png</image>
-    <video>./videos/Santatlantean (aetherbyte)-video.mp4</video>
     <marquee>./images/Santatlantean (aetherbyte)-marquee.png</marquee>
     <thumbnail>./images/Santatlantean (aetherbyte)-thumb.png</thumbnail>
     <developer>Andrew Darovich</developer>

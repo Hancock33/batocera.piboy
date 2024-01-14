@@ -3,8 +3,8 @@
 # wine-lutris
 #
 ################################################################################
-# Version: Commits on Jan 05, 2024
-WINE_LUTRIS_VERSION = wine-9.0-rc4
+# Version: Commits on Jan 12, 2024
+WINE_LUTRIS_VERSION = wine-9.0-rc5
 WINE_LUTRIS_STAGING_VERSION = $(subst wine-,,$(WINE_LUTRIS_VERSION))
 WINE_LUTRIS_SOURCE = wine-$(WINE_LUTRIS_VERSION).tar.gz
 WINE_LUTRIS_SITE = $(call github,wine-mirror,wine,$(WINE_LUTRIS_VERSION))
@@ -14,7 +14,7 @@ WINE_LUTRIS_CPE_ID_VENDOR = winehq
 WINE_LUTRIS_SELINUX_MODULES = wine
 WINE_LUTRIS_DEPENDENCIES = host-bison host-flex host-wine-lutris
 HOST_WINE_LUTRIS_DEPENDENCIES = host-bison host-flex host-clang host-lld
-#HOST_WINE_LUTRIS_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/v$(WINE_LUTRIS_STAGING_VERSION).tar.gz
+HOST_WINE_LUTRIS_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/v$(WINE_LUTRIS_STAGING_VERSION).tar.gz
 
 # Configure Lutris
 define WINE_LUTRIS_AUTOGEN
@@ -26,9 +26,9 @@ define WINE_LUTRIS_AUTOGEN
 	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/lutris
 	# Use Staging Patches
-	#printf "%s\n" "$(TERM_BOLD)>>> $($(PKG)_NAME) $($(PKG)_VERSION) Patching wine-staging" >&2
-	#tar -xf $(WINE_LUTRIS_DL_DIR)/v$(WINE_LUTRIS_STAGING_VERSION).tar.gz -C $(@D)
-	#cd $(@D); ./wine-staging-$(WINE_LUTRIS_STAGING_VERSION)/staging/patchinstall.py --all
+	printf "%s\n" "$(TERM_BOLD)>>> $($(PKG)_NAME) $($(PKG)_VERSION) Patching wine-staging" >&2
+	tar -xf $(WINE_LUTRIS_DL_DIR)/v$(WINE_LUTRIS_STAGING_VERSION).tar.gz -C $(@D)
+	cd $(@D); ./wine-staging-$(WINE_LUTRIS_STAGING_VERSION)/staging/patchinstall.py --all
 	# Autotools generation
 	cd $(@D); autoreconf -fiv
 	cd $(@D); ./tools/make_requests

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-01-03 00:56+0800\n"
+"PO-Revision-Date: 2024-01-10 23:21+0800\n"
 "Last-Translator: wanger\n"
 "Language-Team: 王二\n"
 "Language: zh_CN\n"
@@ -50,41 +50,43 @@ msgid ""
 "based on it's default max value. Caution, setting wattage too high could "
 "damage your device."
 msgstr ""
+"根据Ryzen笔记本CPU的默认最大值 调整提供给该CPU的功率百分比（瓦）. 注意，功率"
+"设置过高可能会损坏您的设备。"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "RYZEN THERMAL DESIGN POWER"
-msgstr ""
+msgstr "RYZEN热设计功率"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "105% (Use caution"
+msgid "105% (Use caution)"
 msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "110% (Use caution)"
-msgstr ""
+msgstr "110% (小心)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "115% (Use caution)"
-msgstr ""
+msgstr "115% (小心)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "120% (Are you crazy?)"
-msgstr ""
+msgstr "120% (你疯了吗?)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "125% (Yes, you're crazy)"
-msgstr ""
+msgstr "125% (是的, 你疯了)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "130% (Nope, you're just insane!)"
-msgstr ""
+msgstr "130% (你完全疯了!)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -470,9 +472,9 @@ msgstr "方向死区"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid ""
-"Reserve a non dead zone at the center of the wheel to go straight ahead (in "
+"Reserve a non dead zone at the centre of the wheel to go straight ahead (in "
 "degrees)"
-msgstr "在方向盘中心保留一个非死区以便直行(以度数表示)"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -631,7 +633,7 @@ msgctxt "game_options"
 msgid "Use an alternate resolution. Some games need this."
 msgstr "使用备用分辨率。有些游戏需要这个。"
 
-#. TRANSLATION: libretro/atari800, libretro/uae4arm
+#. TRANSLATION: libretro/atari800, libretro/uae4arm, vpinball
 msgctxt "game_options"
 msgid "INTERNAL RESOLUTION"
 msgstr "内部分辨率"
@@ -912,8 +914,8 @@ msgstr "Game Boy"
 
 #. TRANSLATION: libretro/mesens
 msgctxt "game_options"
-msgid "Game Boy Color"
-msgstr "Game Boy Color"
+msgid "Game Boy Colour"
+msgstr ""
 
 #. TRANSLATION: libretro/mesens
 msgctxt "game_options"
@@ -1270,6 +1272,11 @@ msgstr "跳过帧以提高性能，代价是运动不稳定."
 msgctxt "game_options"
 msgid "FRAMESKIP"
 msgstr "跳帧"
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "Choose the NDS handheld version"
+msgstr ""
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -3518,7 +3525,7 @@ msgctxt "game_options"
 msgid "480p"
 msgstr "480p"
 
-#. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, yabasanshiro
+#. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, vpinball, yabasanshiro
 msgctxt "game_options"
 msgid "720p"
 msgstr "720p"
@@ -4233,28 +4240,28 @@ msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer"
-msgstr "彩色计算机"
+msgid "Colour Computer"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer 2"
-msgstr "彩色计算机 2"
+msgid "Colour Computer 2"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer 2B"
-msgstr "彩色计算机 2B"
+msgid "Colour Computer 2B"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer 3 (NTSC) (Default)"
-msgstr "彩色计算机3（NTSC）（默认设置）"
+msgid "Colour Computer 3 (NTSC) (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer 3 (PAL)"
-msgstr "彩色计算机 3 (PAL)"
+msgid "Colour Computer 3 (PAL)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -4278,8 +4285,8 @@ msgstr "Acorn Electron 盒式磁带"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Acron Electron ROMs"
-msgstr "Acron Electron 内存"
+msgid "Acorn Electron ROMs"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -4483,7 +4490,7 @@ msgctxt "game_options"
 msgid "Mac Harddisks"
 msgstr "Mac硬盘"
 
-#. TRANSLATION: libretro/mame
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid ""
 "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
@@ -4871,6 +4878,11 @@ msgctxt "game_options"
 msgid "Enhancement. Remove the sixteen sprites per line limit."
 msgstr "增强.移除每行16个精灵的限制."
 
+#. TRANSLATION: libretro/mednafen_wswan
+msgctxt "game_options"
+msgid "Initial orientation of the game & controls"
+msgstr ""
+
 #. TRANSLATION: libretro/mednafen_wswan, drastic
 msgctxt "game_options"
 msgid "Manual"
@@ -4923,8 +4935,8 @@ msgstr "自拍"
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
-msgid "Color"
-msgstr "颜色"
+msgid "Colour"
+msgstr ""
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -5175,33 +5187,38 @@ msgctxt "game_options"
 msgid "Rumble Pak"
 msgstr "震动卡"
 
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+msgctxt "game_options"
+msgid "Rumble Pak (Automatic)"
+msgstr ""
+
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid ""
 "Use to eliminate joystick drift/unwanted input. Effects all controllers."
-msgstr ""
+msgstr "用于消除手柄漂移或不必要输入, 会影响所有控制器."
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "JOYSTICK DEADZONE"
-msgstr ""
+msgstr "摇杆死区"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "15% (Default)"
-msgstr ""
+msgstr "15% (默认)"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid ""
 "Use to make joystick movement more or less sensitive. Effects all "
 "controllers."
-msgstr ""
+msgstr "使手柄的移动更敏感或不敏感, 会影响所有控制器."
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "JOYSTICK SENSITIVITY"
-msgstr ""
+msgstr "摇杆灵敏度"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
@@ -7978,7 +7995,7 @@ msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
 msgstr "Batocera设置第一个音频设备 (默认)"
 
-#. TRANSLATION: cemu, openbor/openbor7530, sonic2013, sonicmania, sonicnexus, ...
+#. TRANSLATION: cemu, openbor/openbor7530, sonic2013, soniccd, sonicmania, ...
 msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr "修复屏幕撕裂."
@@ -9087,6 +9104,13 @@ msgstr "每 1 秒, 总计 120 秒 (1320MB|240MB)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
+msgid ""
+"Enable achievements for supported games. Enter login details via app in F1 "
+"menu."
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
 msgid "ACHIEVEMENTS"
 msgstr "成就"
 
@@ -9163,11 +9187,6 @@ msgstr "启用Dreamcast DSP以获得更精确的音频。仅推荐用于快速�
 msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr "数字音频处理器"
-
-#. TRANSLATION: flycast/vitaquake3, virtualjaguar
-msgctxt "game_options"
-msgid "Disbaled (Default)"
-msgstr "禁用(默认)"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
@@ -9872,12 +9891,12 @@ msgstr "1% (默认)"
 #. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
 msgid "Limit FPS to reduce high CPU usage."
-msgstr ""
+msgstr "限制FPS以减少高CPU使用率."
 
 #. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
 msgid "LIMIT FPS"
-msgstr ""
+msgstr "限制FPS"
 
 #. TRANSLATION: openbor/openbor7530, supermodel
 msgctxt "game_options"
@@ -10327,8 +10346,8 @@ msgstr "《时空危机》雾霭变通解决方案"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
-msgid "Playstation 2 wheel type"
-msgstr "PlayStation 2 方向盘类型"
+msgid "PlayStation 2 wheel type"
+msgstr ""
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -11533,8 +11552,8 @@ msgstr "最好"
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
-msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
-msgstr "启用或取消缩放鼠标光标。对CG菜单很有用."
+msgid "Enabled or disable the mouse cursor. Useful for CG's menus."
+msgstr ""
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
@@ -11613,13 +11632,6 @@ msgstr "用户磁盘"
 
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
-msgid ""
-"Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
-"Color)"
-msgstr "选择Mac型号（建议B&W使用Mac Plus，彩色使用Mac LC 3）"
-
-#. TRANSLATION: mame/openbor7530
-msgctxt "game_options"
 msgid "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD, Image Reader)"
 msgstr "Mac IIx（2Mb RAM，彩色，2个高清软盘/CD/HDD，图像读取器）"
 
@@ -11641,9 +11653,9 @@ msgstr "Interton VC 4000盒式磁带"
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid ""
-"Enable mouse input for trackballs, spinners, lightguns (if no gun "
+"Enable mouse input for trackballs, spinners, light guns (if no gun "
 "connected), and similar controls"
-msgstr "为轨迹球、旋转器、光枪(如果未连接枪)和类似控件启用鼠标输入"
+msgstr ""
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -12294,8 +12306,8 @@ msgstr "启用全屏抗锯齿"
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid ""
-"Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
-msgstr "通过Rawinput阅读鼠标，允许2个鼠标用于2个玩家射击游戏。"
+"Read mouse through Raw input, allowing 2 mice for 2 player shooting games."
+msgstr ""
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -12398,7 +12410,7 @@ msgctxt "game_options"
 msgid "6x (4320p/6480p)"
 msgstr "6x (4320p/6480p)"
 
-#. TRANSLATION: yuzu, ryujinx
+#. TRANSLATION: yuzu, ryujinx, vpinball
 msgctxt "game_options"
 msgid "16:9 (Default)"
 msgstr "16:9 (默认)"
@@ -13355,10 +13367,10 @@ msgctxt "game_options"
 msgid "Enhanced OpenGL"
 msgstr "增强OpenGL"
 
-#. TRANSLATION: rtcw
+#. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
-msgid "Set the desired maximum refresh rate when Vsync is off."
-msgstr "在Vsync关闭时设置所需的最大刷新率."
+msgid "Set the desired maximum refresh rate when VSync is off."
+msgstr ""
 
 #. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
@@ -13479,25 +13491,20 @@ msgctxt "game_options"
 msgid "600p"
 msgstr "600p"
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: theforceengine, vpinball
 msgctxt "game_options"
 msgid "768p"
 msgstr "768p"
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: theforceengine, vpinball
 msgctxt "game_options"
 msgid "800p"
 msgstr "800p"
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: theforceengine, vpinball
 msgctxt "game_options"
 msgid "960p"
 msgstr "960p"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Set the desired maximum refresh rate when VSync is off."
-msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -13671,17 +13678,12 @@ msgstr "硬件 (默认)"
 
 #. TRANSLATION: thextech
 msgctxt "game_options"
-msgid "Vsync"
-msgstr "垂直同步"
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Enable the Digital Sound Processor."
+msgid "VSync"
 msgstr ""
 
 #. TRANSLATION: virtualjaguar
 msgctxt "game_options"
-msgid "Disbaled"
+msgid "Enable the Digital Sound Processor."
 msgstr ""
 
 #. TRANSLATION: virtualjaguar
@@ -13721,6 +13723,126 @@ msgstr "线性滤波"
 msgctxt "game_options"
 msgid "Anti-aliasing is a technique for smoothing out jagged edges."
 msgstr "锯齿是一种平滑锯齿边缘的技术."
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Makes the ball easier to follow."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "BALL TRAIL"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "0 (Default)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Affects just the visual effect of nudging."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "VISUAL NUDGE STRENGTH"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "0 (No Visual Effect)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Maximum Framerate."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "MAX FRAMERATE"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "0 (Defaults Unlimited)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"Sync the frame rate with the refresh rate of your monitor. None for lower "
+"input latency but video tearing. Vertical Sync to avoid video tearing, but "
+"with higher input latency. Adaptive Sync (Default) synchronizes on video "
+"sync, except for late frames (below target FPS) which are displayed "
+"immediately, also has higher input latency."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Vertical Sync"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Adaptive Sync (Default)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Big Impact on Performances (Press F11 in game to display FPS)."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "PRESETS"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Default Settings"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Low-end Computer"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "High-end Computer"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Rendering resolution."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "DISPLAY RATIO"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "You need to also check if the table rom has its own settings."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "MUSIC VOLUME"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Mechanical sounds of the table."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "SOUND VOLUME"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -14657,6 +14779,85 @@ msgstr "快速载入"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "快速保存"
+
+#~ msgctxt "game_options"
+#~ msgid "105% (Use caution"
+#~ msgstr "105% (小心)"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Reserve a non dead zone at the center of the wheel to go straight ahead "
+#~ "(in degrees)"
+#~ msgstr "在方向盘中心保留一个非死区以便直行(以度数表示)"
+
+#~ msgctxt "game_options"
+#~ msgid "Game Boy Color"
+#~ msgstr "Game Boy Color"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer"
+#~ msgstr "彩色计算机"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2"
+#~ msgstr "彩色计算机 2"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2B"
+#~ msgstr "彩色计算机 2B"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 3 (NTSC) (Default)"
+#~ msgstr "彩色计算机3（NTSC）（默认设置）"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 3 (PAL)"
+#~ msgstr "彩色计算机 3 (PAL)"
+
+#~ msgctxt "game_options"
+#~ msgid "Acron Electron ROMs"
+#~ msgstr "Acron Electron 内存"
+
+#~ msgctxt "game_options"
+#~ msgid "Color"
+#~ msgstr "颜色"
+
+#~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "禁用(默认)"
+
+#~ msgctxt "game_options"
+#~ msgid "Playstation 2 wheel type"
+#~ msgstr "PlayStation 2 方向盘类型"
+
+#~ msgctxt "game_options"
+#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+#~ msgstr "启用或取消缩放鼠标光标。对CG菜单很有用."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
+#~ "Color)"
+#~ msgstr "选择Mac型号（建议B&W使用Mac Plus，彩色使用Mac LC 3）"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable mouse input for trackballs, spinners, lightguns (if no gun "
+#~ "connected), and similar controls"
+#~ msgstr "为轨迹球、旋转器、光枪(如果未连接枪)和类似控件启用鼠标输入"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
+#~ msgstr "通过Rawinput阅读鼠标，允许2个鼠标用于2个玩家射击游戏。"
+
+#~ msgctxt "game_options"
+#~ msgid "Set the desired maximum refresh rate when Vsync is off."
+#~ msgstr "在Vsync关闭时设置所需的最大刷新率."
+
+#~ msgctxt "game_options"
+#~ msgid "Vsync"
+#~ msgstr "垂直同步"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."

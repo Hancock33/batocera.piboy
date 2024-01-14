@@ -21,7 +21,7 @@ class DolphinGenerator(Generator):
             os.makedirs(batoceraFiles.dolphinData + "/StateSaves")
 
         # Generate the controller config(s)
-        dolphinControllers.generateControllerConfig(system, playersControllers, rom, guns)
+        dolphinControllers.generateControllerConfig(system, playersControllers, wheels, rom, guns)
 
         ## [ dolphin.ini ] ##
         dolphinSettings = configparser.ConfigParser(interpolation=None)
@@ -65,7 +65,7 @@ class DolphinGenerator(Generator):
 
         # PanicHandlers displaymessages
         dolphinSettings.set("Interface", "UsePanicHandlers", "False")
-        
+
         # Display message in game (Memory card save and many more...)
         if system.isOptSet("ShowDpMsg") and system.getOptBoolean("ShowDpMsg") == False:
             dolphinSettings.set("Interface", "OnScreenDisplayMessages", "False")
@@ -133,7 +133,11 @@ class DolphinGenerator(Generator):
                 # Sub in the appropriate values from es_features, accounting for the 1 integer difference.
                 dolphinSettings.set("Core", "SIDevice" + str(i - 1), value)
             else:
-                dolphinSettings.set("Core", "SIDevice" + str(i - 1), "6")
+                # if the pad is a wheel and on gamecube, use it
+                if system.name == "gamecube" and system.isOptSet('use_wheels') and system.getOptBoolean('use_wheels') and len(wheels) > 0 and str(i) in playersControllers and playersControllers[str(i)].dev in wheels:
+                    dolphinSettings.set("Core", "SIDevice" + str(i - 1), "8")
+                else:
+                    dolphinSettings.set("Core", "SIDevice" + str(i - 1), "6")
 
         # HiResTextures for guns part 1/2 (see below the part 2)
         if system.isOptSet('use_guns') and system.getOptBoolean('use_guns') and len(guns) > 0 and ((system.isOptSet('dolphin-lightgun-hide-crosshair') == False and controllersConfig.gunsNeedCrosses(guns) == False) or system.getOptBoolean('dolphin-lightgun-hide-crosshair' == True)):
@@ -167,7 +171,7 @@ class DolphinGenerator(Generator):
         else:
             dolphinSettings.set("Core", "DPL2Decoder", "False")
             dolphinSettings.set("Core", "DSPHLE", "True")
-            dolphinSettings.set("DSP", "EnableJIT", "False")   
+            dolphinSettings.set("DSP", "EnableJIT", "False")
 
         # Save dolphin.ini
         with open(batoceraFiles.dolphinIni, 'w') as configfile:
@@ -300,12 +304,12 @@ class DolphinGenerator(Generator):
             dolphinGFXSettings.set("Settings", "SSAA", "True")
         else:
             dolphinGFXSettings.set("Settings", "SSAA", "False")
-        
+
         # Manual texture sampling
         if system.isOptSet('manual_texture_sampling') and system.getOptBoolean('manual_texture_sampling'):
             dolphinGFXSettings.set("Hacks", "FastTextureSampling", "False")
         else:
-            dolphinGFXSettings.set("Hacks", "FastTextureSampling", "True")        
+            dolphinGFXSettings.set("Hacks", "FastTextureSampling", "True")
 
         # Save gfx.ini
         with open(batoceraFiles.dolphinGfxIni, 'w') as configfile:

@@ -3,12 +3,12 @@
 # vpinball
 #
 ################################################################################
-# Version: Commits on Jan 07, 2024 (branch@standalone)
-VPINBALL_VERSION = 1c797f3328ab9db2b54abbf810473868ed6cfc4b
+# Version: Commits on Jan 13, 2024 (branch@standalone)
+VPINBALL_VERSION = 5f5d2323d9445bf8c30bc080fb4c696c0861d6aa
 VPINBALL_SITE = $(call github,vpinball,vpinball,$(VPINBALL_VERSION))
 VPINBALL_LICENSE = GPLv3+
 VPINBALL_LICENSE_FILES = LICENSE
-VPINBALL_DEPENDENCIES = libaltsound libfreeimage libpinmame libserum libzedmd sdl2 sdl2_image sdl2_ttf
+VPINBALL_DEPENDENCIES = host-libcurl libfreeimage libpinmame libaltsound libserialport libzedmd libserum libdmdutil sdl2 sdl2_image sdl2_ttf
 VPINBALL_SUPPORTS_IN_SOURCE_BUILD = NO
 VPINBALL_EXTRA_DOWNLOADS = https://www.un4seen.com/files/bass24-linux.zip
 
@@ -60,7 +60,6 @@ define VPINBALL_INSTALL_TARGET_CMDS
 	cp -R $(@D)/buildroot-build/assets			$(TARGET_DIR)/usr/bin/vpinball/
 	cp -R $(@D)/buildroot-build/scripts			$(TARGET_DIR)/usr/bin/vpinball/
 	cp -R $(@D)/buildroot-build/shader10.8.0	$(TARGET_DIR)/usr/bin/vpinball/
-	ln -sf /usr/bin/vpinball/shader10.8.0		$(TARGET_DIR)/usr/bin/vpinball/shader
 endef
 
 define VPINBALL_EVMAPY

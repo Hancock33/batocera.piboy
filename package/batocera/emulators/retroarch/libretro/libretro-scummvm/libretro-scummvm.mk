@@ -3,8 +3,8 @@
 # libretro-scummvm
 #
 ################################################################################
-# Version: Commits on Jan 07, 2024 (branch@branch-2-8)
-LIBRETRO_SCUMMVM_VERSION = 6e3f31d1a858f638ec1966740310e253c7e37b97
+# Version: Commits on Jan 14, 2024 (branch@branch-2-8)
+LIBRETRO_SCUMMVM_VERSION = 9ac75b0e4fcde0862e76b5d4f2cc3b7a50d8f922
 LIBRETRO_SCUMMVM_SOURCE = scummvm-$(LIBRETRO_SCUMMVM_VERSION).tar.gz
 LIBRETRO_SCUMMVM_SITE = $(call github,scummvm,scummvm,$(LIBRETRO_SCUMMVM_VERSION))
 LIBRETRO_SCUMMVM_LICENSE = GPLv2
@@ -48,5 +48,14 @@ define LIBRETRO_SCUMMVM_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/backends/platform/libretro/scummvm_libretro.so   $(TARGET_DIR)/usr/lib/libretro/scummvm_libretro.so
 	$(INSTALL) -D $(@D)/backends/platform/libretro/scummvm_libretro.info $(TARGET_DIR)/usr/share/libretro/info/scummvm_libretro.info
 endef
+
+
+define LIBRETRO_GIT_DL
+	mkdir -p $(@D)/backends/platform/libretro/deps
+	cd $(@D)/backends/platform/libretro/deps && git clone https://github.com/libretro/libretro-deps
+	cd $(@D)/backends/platform/libretro/deps && git clone https://github.com/libretro/libretro-common
+endef
+
+LIBRETRO_SCUMMVM_POST_EXTRACT_HOOKS = LIBRETRO_GIT_DL
 
 $(eval $(generic-package))

@@ -1,5 +1,5 @@
 diff --git a/.gitmodules b/.gitmodules
-index e57fd159..bb5ed956 100644
+index 1bd6207a..ec5fa93f 100644
 --- a/.gitmodules
 +++ b/.gitmodules
 @@ -90,9 +90,9 @@
@@ -16,10 +16,10 @@ index e57fd159..bb5ed956 100644
  	path = external/cubeb
  	url = https://github.com/mozilla/cubeb.git
 diff --git a/external/CMakeLists.txt b/external/CMakeLists.txt
-index d4dcfc94..4cb3e1ee 100644
+index 83521510..ffe7ce4c 100644
 --- a/external/CMakeLists.txt
 +++ b/external/CMakeLists.txt
-@@ -344,11 +344,20 @@ target_compile_definitions(tracy PUBLIC $<$<CONFIG:Debug,RelWithDebInfo>:TRACY_E
+@@ -379,11 +379,20 @@ target_compile_definitions(tracy PUBLIC $<$<CONFIG:Debug,RelWithDebInfo>:TRACY_E
  #
  # target_compile_definitions(tracy PUBLIC TRACY_ENABLE)
  
@@ -47,10 +47,10 @@ index d4dcfc94..4cb3e1ee 100644
 -# Create alias to prevent the need of multiple changes in case the target name changes
 -add_library(NFDe::NFDe ALIAS nfd)
 diff --git a/vita3k/CMakeLists.txt b/vita3k/CMakeLists.txt
-index e1b27dfd..25d8f88b 100644
+index 4f008ab4..6ce353a6 100644
 --- a/vita3k/CMakeLists.txt
 +++ b/vita3k/CMakeLists.txt
-@@ -105,7 +105,6 @@ add_subdirectory(features)
+@@ -104,7 +104,6 @@ add_subdirectory(features)
  add_subdirectory(glutil)
  add_subdirectory(gui)
  add_subdirectory(gxm)
@@ -76,7 +76,7 @@ index b66bbd98..28d5a6f4 100644
   * @dir vita3k/io
   *
 diff --git a/vita3k/gui/CMakeLists.txt b/vita3k/gui/CMakeLists.txt
-index ef7de553..811ee661 100644
+index 03c9ebe6..40b2ad93 100644
 --- a/vita3k/gui/CMakeLists.txt
 +++ b/vita3k/gui/CMakeLists.txt
 @@ -51,5 +51,5 @@ add_library(
@@ -87,7 +87,7 @@ index ef7de553..811ee661 100644
 +target_link_libraries(gui PRIVATE audio ctrl kernel miniz psvpfsparser pugixml::pugixml stb renderer packages sdl2 touch vkutil nativefiledialog concurrentqueue)
  target_link_libraries(gui PUBLIC tracy)
 diff --git a/vita3k/gui/src/archive_install_dialog.cpp b/vita3k/gui/src/archive_install_dialog.cpp
-index 67832991..5d724637 100644
+index a7e92a13..1e9382d8 100644
 --- a/vita3k/gui/src/archive_install_dialog.cpp
 +++ b/vita3k/gui/src/archive_install_dialog.cpp
 @@ -19,7 +19,7 @@
@@ -99,7 +99,7 @@ index 67832991..5d724637 100644
  #include <packages/sfo.h>
  
  #include <util/string_utils.h>
-@@ -32,7 +33,7 @@ static bool delete_archive_file;
+@@ -34,7 +34,7 @@ static bool delete_archive_file;
  static std::string state, type, title;
  static std::map<fs::path, std::vector<ContentInfo>> contents_archives;
  static std::vector<fs::path> invalid_archives;
@@ -108,7 +108,7 @@ index 67832991..5d724637 100644
  static float global_progress = 0.f;
  static float archives_count = 0.f;
  
-@@ -104,20 +104,12 @@ void draw_archive_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+@@ -105,20 +105,12 @@ void draw_archive_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
              gui.file_menu.archive_install_dialog = false;
      } else {
          if (state.empty()) {
@@ -133,9 +133,9 @@ index 67832991..5d724637 100644
 +                result = NFD_PickFolder(nullptr, &archive_path);
 +            if (result == NFD_OKAY) {
                  state = "install";
-             } else
-                 type.clear();
-@@ -133,7 +127,7 @@ void draw_archive_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+             } else {
+                 if (result == host::dialog::filesystem::Result::ERROR)
+@@ -139,7 +131,7 @@ void draw_archive_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
                      } else
                          invalid_archives.push_back(archive_path);
                  };
@@ -144,8 +144,8 @@ index 67832991..5d724637 100644
                  if (type == "directory") {
                      const auto archives_path = get_path_of_archives(contents_path);
                      archives_count = float(archives_path.size());
-@@ -264,7 +258,7 @@ void draw_archive_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
-                     for (const auto archive : invalid_archives)
+@@ -270,7 +262,7 @@ void draw_archive_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+                     for (const auto &archive : invalid_archives)
                          fs::remove(archive);
                  }
 -                archive_path = "";
@@ -154,7 +154,7 @@ index 67832991..5d724637 100644
                  delete_archive_file = false;
                  contents_archives.clear();
 diff --git a/vita3k/gui/src/firmware_install_dialog.cpp b/vita3k/gui/src/firmware_install_dialog.cpp
-index 1b7208e6..f29150f7 100644
+index 50b3ac29..5eaf4f24 100644
 --- a/vita3k/gui/src/firmware_install_dialog.cpp
 +++ b/vita3k/gui/src/firmware_install_dialog.cpp
 @@ -19,18 +19,19 @@
@@ -178,8 +178,8 @@ index 1b7208e6..f29150f7 100644
 +nfdchar_t *pup_path;
  
  static void get_firmware_version(EmuEnvState &emuenv) {
-     fs::ifstream versionFile(emuenv.pref_path + L"/PUP_DEC/PUP/version.txt");
-@@ -46,7 +46,7 @@ static void get_firmware_version(EmuEnvState &emuenv) {
+     fs::ifstream versionFile(emuenv.pref_path / "PUP_DEC/PUP/version.txt");
+@@ -45,7 +46,7 @@ static void get_firmware_version(EmuEnvState &emuenv) {
  }
  
  void draw_firmware_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
@@ -188,7 +188,7 @@ index 1b7208e6..f29150f7 100644
  
      static std::mutex install_mutex;
      static bool draw_file_dialog = true;
-@@ -69,23 +69,23 @@ void draw_firmware_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+@@ -68,23 +69,23 @@ void draw_firmware_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
      ImGui::SetNextWindowPos(ImVec2(emuenv.viewport_pos.x + (display_size.x / 2.f) - (WINDOW_SIZE.x / 2), emuenv.viewport_pos.y + (display_size.y / 2.f) - (WINDOW_SIZE.y / 2.f)), ImGuiCond_Always);
      ImGui::SetNextWindowSize(WINDOW_SIZE);
      if (draw_file_dialog) {
@@ -217,17 +217,17 @@ index 1b7208e6..f29150f7 100644
              gui.file_menu.firmware_install_dialog = false;
              draw_file_dialog = true;
          }
-@@ -117,7 +118,7 @@ void draw_firmware_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
-             ImGui::SetCursorPosX(ImGui::GetWindowWidth() / 2 - 30);
-             if (ImGui::Button("OK", BUTTON_SIZE)) {
+@@ -143,7 +144,7 @@ void draw_firmware_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+             ImGui::SetCursorPos(ImVec2(POS_BUTTON, ImGui::GetWindowSize().y - BUTTON_SIZE.y - (20.f * SCALE.y)));
+             if (ImGui::Button(common["ok"].c_str(), BUTTON_SIZE)) {
                  if (delete_pup_file) {
 -                    fs::remove(fs::path(pup_path.wstring()));
 +                    fs::remove(fs::path(string_utils::utf_to_wide(pup_path)));
                      delete_pup_file = false;
                  }
-                 if (emuenv.cfg.initial_setup)
+                 get_modules_list(gui, emuenv);
 diff --git a/vita3k/gui/src/initial_setup.cpp b/vita3k/gui/src/initial_setup.cpp
-index 0bbe3548..e327c6cb 100644
+index 8f3ef0df..8121336c 100644
 --- a/vita3k/gui/src/initial_setup.cpp
 +++ b/vita3k/gui/src/initial_setup.cpp
 @@ -19,11 +19,12 @@
@@ -244,7 +244,7 @@ index 0bbe3548..e327c6cb 100644
  namespace gui {
  
  enum InitialSetup {
-@@ -166,14 +166,12 @@ void draw_initial_setup(GuiState &gui, EmuEnvState &emuenv) {
+@@ -165,14 +166,12 @@ void draw_initial_setup(GuiState &gui, EmuEnvState &emuenv) {
          ImGui::TextWrapped("%s", emuenv.cfg.pref_path.c_str());
          ImGui::SetCursorPos(!is_default_path ? ImVec2((WINDOW_SIZE.x / 2.f) - BIG_BUTTON_SIZE.x - (20.f * SCALE.x), BIG_BUTTON_POS.y) : BIG_BUTTON_POS);
          if (ImGui::Button(lang["change_emu_path"].c_str(), BIG_BUTTON_SIZE)) {
@@ -265,7 +265,7 @@ index 0bbe3548..e327c6cb 100644
          }
          if (!is_default_path) {
 diff --git a/vita3k/gui/src/license_install_dialog.cpp b/vita3k/gui/src/license_install_dialog.cpp
-index beabedb8..7eb910a5 100644
+index c791393a..e4064df4 100644
 --- a/vita3k/gui/src/license_install_dialog.cpp
 +++ b/vita3k/gui/src/license_install_dialog.cpp
 @@ -17,15 +17,15 @@
@@ -301,7 +301,7 @@ index beabedb8..7eb910a5 100644
                  state = "success";
              else
                  state = "fail";
-@@ -105,12 +105,12 @@ void draw_license_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+@@ -109,12 +109,12 @@ void draw_license_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
          ImGui::Spacing();
          ImGui::Separator();
          ImGui::Spacing();
@@ -317,7 +317,7 @@ index beabedb8..7eb910a5 100644
              }
              license_path = nullptr;
 diff --git a/vita3k/gui/src/pkg_install_dialog.cpp b/vita3k/gui/src/pkg_install_dialog.cpp
-index 75c11214..46fcf6f8 100644
+index 19c0dca3..b32122e8 100644
 --- a/vita3k/gui/src/pkg_install_dialog.cpp
 +++ b/vita3k/gui/src/pkg_install_dialog.cpp
 @@ -18,7 +18,6 @@
@@ -328,7 +328,7 @@ index 75c11214..46fcf6f8 100644
  #include <misc/cpp/imgui_stdlib.h>
  #include <packages/functions.h>
  #include <packages/pkg.h>
-@@ -25,19 +25,18 @@
+@@ -26,19 +25,18 @@
  #include <rif2zrif.h>
  #include <util/log.h>
  #include <util/string_utils.h>
@@ -351,8 +351,8 @@ index 75c11214..46fcf6f8 100644
      static std::atomic<float> progress(0);
      static std::mutex install_mutex;
      static const auto progress_callback = [&](float updated_progress) {
-@@ -53,15 +53,15 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
-     const auto BUTTON_SIZE = ImVec2(160.f * SCALE.x, 45.f * SCALE.y);
+@@ -47,15 +45,15 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+     std::lock_guard<std::mutex> lock(install_mutex);
  
      if (draw_file_dialog) {
 -        result = host::dialog::filesystem::open_file(pkg_path, { { "PlayStation Store Downloaded Package", { "pkg" } } });
@@ -371,7 +371,7 @@ index 75c11214..46fcf6f8 100644
              gui.file_menu.pkg_install_dialog = false;
              draw_file_dialog = true;
          }
-@@ -97,9 +96,9 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+@@ -98,9 +96,9 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
                  draw_file_dialog = true;
              }
          } else if (state == "license") {
@@ -383,8 +383,8 @@ index 75c11214..46fcf6f8 100644
 +                fs::ifstream binfile(string_utils::utf_to_wide(std::string(license_path)), std::ios::in | std::ios::binary | std::ios::ate);
                  zRIF = rif2zrif(binfile);
                  state = "install";
-             } else
-@@ -125,7 +125,7 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+             } else {
+@@ -128,7 +126,7 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
                  state = "install";
          } else if (state == "install") {
              std::thread installation([&emuenv]() {
@@ -393,7 +393,7 @@ index 75c11214..46fcf6f8 100644
                      std::lock_guard<std::mutex> lock(install_mutex);
                      state = "success";
                  } else {
-@@ -143,17 +142,17 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+@@ -147,17 +145,17 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
              ImGui::Separator();
              ImGui::Spacing();
              ImGui::Checkbox(lang["delete_pkg"].c_str(), &delete_pkg_file);
@@ -414,7 +414,7 @@ index 75c11214..46fcf6f8 100644
                      delete_license_file = false;
                  }
                  if ((emuenv.app_info.app_category.find("gd") != std::string::npos) || (emuenv.app_info.app_category.find("gp") != std::string::npos)) {
-@@ -160,8 +160,8 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+@@ -165,8 +163,8 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
                      save_apps_cache(gui, emuenv);
                  }
                  update_notice_info(gui, emuenv, "content");
@@ -425,17 +425,17 @@ index 75c11214..46fcf6f8 100644
                  gui.file_menu.pkg_install_dialog = false;
                  draw_file_dialog = true;
                  state.clear();
-@@ -175,7 +175,7 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+@@ -179,7 +177,7 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
              ImGui::SetCursorPos(ImVec2(POS_BUTTON, ImGui::GetWindowSize().y - BUTTON_SIZE.y - (20.f * SCALE.y)));
-             if (ImGui::Button("OK", BUTTON_SIZE)) {
+             if (ImGui::Button(common["ok"].c_str(), BUTTON_SIZE)) {
                  gui.file_menu.pkg_install_dialog = false;
 -                pkg_path = "";
 +                pkg_path = nullptr;
                  draw_file_dialog = true;
-                 work_path = "";
+                 license_path = "";
                  state.clear();
 diff --git a/vita3k/gui/src/settings.cpp b/vita3k/gui/src/settings.cpp
-index 72ffabdb..7a6f4265 100644
+index bbc2aab6..cd9bbfa9 100644
 --- a/vita3k/gui/src/settings.cpp
 +++ b/vita3k/gui/src/settings.cpp
 @@ -20,7 +20,6 @@
@@ -454,7 +454,7 @@ index 72ffabdb..7a6f4265 100644
  #include <pugixml.hpp>
  #include <stb_image.h>
  
-@@ -581,11 +581,11 @@ void draw_settings(GuiState &gui, EmuEnvState &emuenv) {
+@@ -600,11 +600,11 @@ void draw_settings(GuiState &gui, EmuEnvState &emuenv) {
                              sub_menu.clear();
                          }
                      } else if (sub_menu == "image") {
@@ -470,7 +470,7 @@ index 72ffabdb..7a6f4265 100644
                              gui.users[emuenv.io.user_id].start_type = "image";
                              save_user(gui, emuenv, emuenv.io.user_id);
                          }
-@@ -641,12 +641,12 @@ void draw_settings(GuiState &gui, EmuEnvState &emuenv) {
+@@ -664,12 +664,12 @@ void draw_settings(GuiState &gui, EmuEnvState &emuenv) {
                      ImGui::NextColumn();
                  }
                  if (ImGui::Selectable(theme_background.home_screen_backgrounds["add_background"].c_str(), false, ImGuiSelectableFlags_None, SIZE_PACKAGE)) {
@@ -489,18 +489,18 @@ index 72ffabdb..7a6f4265 100644
                              save_user(gui, emuenv, emuenv.io.user_id);
                          }
 diff --git a/vita3k/gui/src/settings_dialog.cpp b/vita3k/gui/src/settings_dialog.cpp
-index 37c05f1c..73dc08c3 100644
+index a849cdb8..4ed6dc56 100644
 --- a/vita3k/gui/src/settings_dialog.cpp
 +++ b/vita3k/gui/src/settings_dialog.cpp
-@@ -21,7 +21,6 @@
+@@ -23,7 +23,6 @@
  #include <config/functions.h>
  #include <config/state.h>
  #include <display/state.h>
 -#include <host/dialog/filesystem.hpp>
  #include <io/state.h>
  #include <kernel/state.h>
- #include <renderer/state.h>
-@@ -43,6 +42,7 @@
+ #include <lang/functions.h>
+@@ -47,6 +46,7 @@
  #include <SDL.h>
  
  #include <algorithm>
@@ -535,10 +535,10 @@ index 37c05f1c..73dc08c3 100644
  
  static CPUBackend config_cpu_backend;
 diff --git a/vita3k/gui/src/trophy_collection.cpp b/vita3k/gui/src/trophy_collection.cpp
-index 85854dc3..97193c7d 100644
+index e973ef73..de1ec1eb 100644
 --- a/vita3k/gui/src/trophy_collection.cpp
 +++ b/vita3k/gui/src/trophy_collection.cpp
-@@ -26,6 +26,7 @@
+@@ -27,6 +27,7 @@
  #include <io/device.h>
  #include <io/functions.h>
  
@@ -547,7 +547,7 @@ index 85854dc3..97193c7d 100644
  #include <stb_image.h>
  
 diff --git a/vita3k/gui/src/user_management.cpp b/vita3k/gui/src/user_management.cpp
-index e1d23bfb..f0b8a935 100644
+index 2bd67f4b..504fd381 100644
 --- a/vita3k/gui/src/user_management.cpp
 +++ b/vita3k/gui/src/user_management.cpp
 @@ -24,13 +24,13 @@

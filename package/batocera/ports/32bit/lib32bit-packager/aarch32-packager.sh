@@ -13,11 +13,11 @@ ln -sf libblkid.so.1                                     $DEST_DIR/lib32/libblki
 ln -sf libmount.so.1                                     $DEST_DIR/lib32/libmount.so
 ln -sf libsmartcols.so.1                                 $DEST_DIR/lib32/libsmartcols.so
 ln -sf libudev.so.1                                      $DEST_DIR/lib32/libudev.so
-ln -sf /usr/lib32/pulseaudio/libpulsecommon-16.1.so      $DEST_DIR/lib32/libpulsecommon-16.1.so
+ln -sf /usr/lib32/pulseaudio/libpulsecommon-17.0.so      $DEST_DIR/lib32/libpulsecommon-17.0.so
 
 mv $DEST_DIR/lib32/dri                                   $DEST_DIR/lib32/dri.old
 mkdir -p $DEST_DIR/lib32/dri
-mv $DEST_DIR/lib32/dri.old/{v3d_dri.so,vc4_dri.so,drm-*} $DEST_DIR/lib32/dri
+mv $DEST_DIR/lib32/dri.old/{v3d_dri.so,vc4_dri.so}       $DEST_DIR/lib32/dri
 
 rm -rf $DEST_DIR/lib32/dri.old
 rm -rf $DEST_DIR/lib32/firmware

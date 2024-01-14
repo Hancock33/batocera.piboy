@@ -51,7 +51,7 @@ def generateControllerConfig(system, controllers, rom):
         ("joystick2up", "Right Stick Up", [("ABS_RY", "RY-")]),
         ("joystick2left", "Right Stick Left", [("ABS_RX", "RX-")])
     ]
-    
+
     mapping_dict = {}
     for input_name, config_name, event_variations in input_mapping:
         mapping_dict[input_name] = {
