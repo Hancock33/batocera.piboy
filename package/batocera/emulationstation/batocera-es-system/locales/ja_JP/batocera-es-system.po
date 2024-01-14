@@ -56,8 +56,8 @@ msgstr "RYZEN 熱設計電力"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "105% (Use caution"
-msgstr "105% (注意してください)"
+msgid "105% (Use caution)"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -474,9 +474,9 @@ msgstr "ホイール(ハンドル)遊び幅"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid ""
-"Reserve a non dead zone at the center of the wheel to go straight ahead (in "
+"Reserve a non dead zone at the centre of the wheel to go straight ahead (in "
 "degrees)"
-msgstr "直進のためにステアリングの中間幅を設定 (度単位)"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -635,7 +635,7 @@ msgctxt "game_options"
 msgid "Use an alternate resolution. Some games need this."
 msgstr "一部のゲームの代替解像度を有効にします"
 
-#. TRANSLATION: libretro/atari800, libretro/uae4arm
+#. TRANSLATION: libretro/atari800, libretro/uae4arm, vpinball
 msgctxt "game_options"
 msgid "INTERNAL RESOLUTION"
 msgstr "内部解像度"
@@ -918,8 +918,8 @@ msgstr "ゲームボーイ"
 
 #. TRANSLATION: libretro/mesens
 msgctxt "game_options"
-msgid "Game Boy Color"
-msgstr "ゲームボーイカラー"
+msgid "Game Boy Colour"
+msgstr ""
 
 #. TRANSLATION: libretro/mesens
 msgctxt "game_options"
@@ -1278,6 +1278,11 @@ msgstr "フレームを間引きし描写速度を向上させますが、動き
 msgctxt "game_options"
 msgid "FRAMESKIP"
 msgstr "フレームスキップ"
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "Choose the NDS handheld version"
+msgstr ""
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -3536,7 +3541,7 @@ msgctxt "game_options"
 msgid "480p"
 msgstr "480p"
 
-#. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, yabasanshiro
+#. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, vpinball, yabasanshiro
 msgctxt "game_options"
 msgid "720p"
 msgstr "720p"
@@ -4252,28 +4257,28 @@ msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer"
-msgstr "カラーコンピュータ"
+msgid "Colour Computer"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer 2"
-msgstr "カラーコンピュータ 2"
+msgid "Colour Computer 2"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer 2B"
-msgstr "カラーコンピュータ 2B"
+msgid "Colour Computer 2B"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer 3 (NTSC) (Default)"
-msgstr "カラーコンピュータ 3 (NTSC) (標準)"
+msgid "Colour Computer 3 (NTSC) (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer 3 (PAL)"
-msgstr "カラーコンピュータ 3 (PAL)"
+msgid "Colour Computer 3 (PAL)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -4297,8 +4302,8 @@ msgstr "Acorn Electron カートリッジ"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Acron Electron ROMs"
-msgstr "Acron Electron ROM"
+msgid "Acorn Electron ROMs"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -4502,7 +4507,7 @@ msgctxt "game_options"
 msgid "Mac Harddisks"
 msgstr "Mac ハードディスク"
 
-#. TRANSLATION: libretro/mame
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid ""
 "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
@@ -4892,6 +4897,11 @@ msgctxt "game_options"
 msgid "Enhancement. Remove the sixteen sprites per line limit."
 msgstr "強化：行制限ごとに16個のスプライトを削除します"
 
+#. TRANSLATION: libretro/mednafen_wswan
+msgctxt "game_options"
+msgid "Initial orientation of the game & controls"
+msgstr ""
+
 #. TRANSLATION: libretro/mednafen_wswan, drastic
 msgctxt "game_options"
 msgid "Manual"
@@ -4944,8 +4954,8 @@ msgstr "自画像"
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
-msgid "Color"
-msgstr "色"
+msgid "Colour"
+msgstr ""
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -8014,7 +8024,7 @@ msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
 msgstr "Batocera で最初の音声デバイスに設定 (標準)"
 
-#. TRANSLATION: cemu, openbor/openbor7530, sonic2013, sonicmania, sonicnexus, ...
+#. TRANSLATION: cemu, openbor/openbor7530, sonic2013, soniccd, sonicmania, ...
 msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr "画面のずれを修正します"
@@ -9140,6 +9150,13 @@ msgstr "   1 秒間隔、合計120秒 (1320MB|240MB)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
+msgid ""
+"Enable achievements for supported games. Enter login details via app in F1 "
+"menu."
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
 msgid "ACHIEVEMENTS"
 msgstr "ACHIEVEMENTS(実績)"
 
@@ -9219,11 +9236,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr "デジタル サウンド プロセッサ"
-
-#. TRANSLATION: flycast/vitaquake3, virtualjaguar
-msgctxt "game_options"
-msgid "Disbaled (Default)"
-msgstr "無効（標準）"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
@@ -10391,8 +10403,8 @@ msgstr "タイムクライシス フォグ(霧)ハック"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
-msgid "Playstation 2 wheel type"
-msgstr "PS2 ホイール(ハンドル)タイプ"
+msgid "PlayStation 2 wheel type"
+msgstr ""
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -11622,8 +11634,8 @@ msgstr "最良"
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
-msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
-msgstr "マウス カーソルを有効/無効にします。 CG のメニューに便利です"
+msgid "Enabled or disable the mouse cursor. Useful for CG's menus."
+msgstr ""
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
@@ -11702,13 +11714,6 @@ msgstr "ユーザーディスク"
 
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
-msgid ""
-"Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
-"Color)"
-msgstr "Macのモデルを選択します (推奨は白黒のMac Plus、カラーのMac LC 3です)"
-
-#. TRANSLATION: mame/openbor7530
-msgctxt "game_options"
 msgid "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD, Image Reader)"
 msgstr "Mac IIx（2MBメモリ,カラー,2HD FD/CD/HDD,イメージリーダー)"
 
@@ -11731,11 +11736,9 @@ msgstr "Interton VC 4000 カートリッジ"
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid ""
-"Enable mouse input for trackballs, spinners, lightguns (if no gun "
+"Enable mouse input for trackballs, spinners, light guns (if no gun "
 "connected), and similar controls"
 msgstr ""
-"トラックボール、スピナー、ガンコン、および同様の操作のためのマウス入力を有効"
-"にします"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -12399,8 +12402,8 @@ msgstr "全画面アンチエイリアスを有効"
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid ""
-"Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
-msgstr "2人用のシューティングゲームで２つ同時にマウスを使用できます"
+"Read mouse through Raw input, allowing 2 mice for 2 player shooting games."
+msgstr ""
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -12503,7 +12506,7 @@ msgctxt "game_options"
 msgid "6x (4320p/6480p)"
 msgstr "6x (4320p/6480p)"
 
-#. TRANSLATION: yuzu, ryujinx
+#. TRANSLATION: yuzu, ryujinx, vpinball
 msgctxt "game_options"
 msgid "16:9 (Default)"
 msgstr "16:9 (標準)"
@@ -13462,10 +13465,10 @@ msgctxt "game_options"
 msgid "Enhanced OpenGL"
 msgstr "Enhanced OpenGL"
 
-#. TRANSLATION: rtcw
+#. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
-msgid "Set the desired maximum refresh rate when Vsync is off."
-msgstr "Vsync がオフの場合に、希望の最大リフレッシュ レートを設定します"
+msgid "Set the desired maximum refresh rate when VSync is off."
+msgstr ""
 
 #. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
@@ -13586,25 +13589,20 @@ msgctxt "game_options"
 msgid "600p"
 msgstr "600p"
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: theforceengine, vpinball
 msgctxt "game_options"
 msgid "768p"
 msgstr "768p"
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: theforceengine, vpinball
 msgctxt "game_options"
 msgid "800p"
 msgstr "800p"
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: theforceengine, vpinball
 msgctxt "game_options"
 msgid "960p"
 msgstr "960p"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Set the desired maximum refresh rate when VSync is off."
-msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -13778,17 +13776,12 @@ msgstr "ハードウェア (標準)"
 
 #. TRANSLATION: thextech
 msgctxt "game_options"
-msgid "Vsync"
-msgstr "VSYNC(垂直同期)"
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Enable the Digital Sound Processor."
+msgid "VSync"
 msgstr ""
 
 #. TRANSLATION: virtualjaguar
 msgctxt "game_options"
-msgid "Disbaled"
+msgid "Enable the Digital Sound Processor."
 msgstr ""
 
 #. TRANSLATION: virtualjaguar
@@ -13829,6 +13822,126 @@ msgstr "リニア フィルタリング"
 msgctxt "game_options"
 msgid "Anti-aliasing is a technique for smoothing out jagged edges."
 msgstr "FXAAは、ギザギザのエッジを滑らかにする技術です"
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Makes the ball easier to follow."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "BALL TRAIL"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "0 (Default)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Affects just the visual effect of nudging."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "VISUAL NUDGE STRENGTH"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "0 (No Visual Effect)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Maximum Framerate."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "MAX FRAMERATE"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "0 (Defaults Unlimited)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"Sync the frame rate with the refresh rate of your monitor. None for lower "
+"input latency but video tearing. Vertical Sync to avoid video tearing, but "
+"with higher input latency. Adaptive Sync (Default) synchronizes on video "
+"sync, except for late frames (below target FPS) which are displayed "
+"immediately, also has higher input latency."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Vertical Sync"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Adaptive Sync (Default)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Big Impact on Performances (Press F11 in game to display FPS)."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "PRESETS"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Default Settings"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Low-end Computer"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "High-end Computer"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Rendering resolution."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "DISPLAY RATIO"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "You need to also check if the table rom has its own settings."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "MUSIC VOLUME"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Mechanical sounds of the table."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "SOUND VOLUME"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -14769,6 +14882,88 @@ msgstr "クイック ロード"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "クイック セーブ"
+
+#~ msgctxt "game_options"
+#~ msgid "105% (Use caution"
+#~ msgstr "105% (注意してください)"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Reserve a non dead zone at the center of the wheel to go straight ahead "
+#~ "(in degrees)"
+#~ msgstr "直進のためにステアリングの中間幅を設定 (度単位)"
+
+#~ msgctxt "game_options"
+#~ msgid "Game Boy Color"
+#~ msgstr "ゲームボーイカラー"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer"
+#~ msgstr "カラーコンピュータ"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2"
+#~ msgstr "カラーコンピュータ 2"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2B"
+#~ msgstr "カラーコンピュータ 2B"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 3 (NTSC) (Default)"
+#~ msgstr "カラーコンピュータ 3 (NTSC) (標準)"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 3 (PAL)"
+#~ msgstr "カラーコンピュータ 3 (PAL)"
+
+#~ msgctxt "game_options"
+#~ msgid "Acron Electron ROMs"
+#~ msgstr "Acron Electron ROM"
+
+#~ msgctxt "game_options"
+#~ msgid "Color"
+#~ msgstr "色"
+
+#~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "無効（標準）"
+
+#~ msgctxt "game_options"
+#~ msgid "Playstation 2 wheel type"
+#~ msgstr "PS2 ホイール(ハンドル)タイプ"
+
+#~ msgctxt "game_options"
+#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+#~ msgstr "マウス カーソルを有効/無効にします。 CG のメニューに便利です"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
+#~ "Color)"
+#~ msgstr ""
+#~ "Macのモデルを選択します (推奨は白黒のMac Plus、カラーのMac LC 3です)"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable mouse input for trackballs, spinners, lightguns (if no gun "
+#~ "connected), and similar controls"
+#~ msgstr ""
+#~ "トラックボール、スピナー、ガンコン、および同様の操作のためのマウス入力を有"
+#~ "効にします"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
+#~ msgstr "2人用のシューティングゲームで２つ同時にマウスを使用できます"
+
+#~ msgctxt "game_options"
+#~ msgid "Set the desired maximum refresh rate when Vsync is off."
+#~ msgstr "Vsync がオフの場合に、希望の最大リフレッシュ レートを設定します"
+
+#~ msgctxt "game_options"
+#~ msgid "Vsync"
+#~ msgstr "VSYNC(垂直同期)"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."

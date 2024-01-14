@@ -58,7 +58,7 @@ msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "105% (Use caution"
+msgid "105% (Use caution)"
 msgstr ""
 
 #. TRANSLATION: shared
@@ -535,7 +535,7 @@ msgstr ""
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid ""
-"Reserve a non dead zone at the center of the wheel to go straight ahead (in "
+"Reserve a non dead zone at the centre of the wheel to go straight ahead (in "
 "degrees)"
 msgstr ""
 
@@ -713,7 +713,7 @@ msgctxt "game_options"
 msgid "Use an alternate resolution. Some games need this."
 msgstr "대체 해상도를 사용합니다. 일부 게임에서 필요합니다."
 
-#. TRANSLATION: libretro/atari800, libretro/uae4arm
+#. TRANSLATION: libretro/atari800, libretro/uae4arm, vpinball
 #, fuzzy
 msgctxt "game_options"
 msgid "INTERNAL RESOLUTION"
@@ -1028,10 +1028,9 @@ msgid "Game Boy"
 msgstr "게임보이"
 
 #. TRANSLATION: libretro/mesens
-#, fuzzy
 msgctxt "game_options"
-msgid "Game Boy Color"
-msgstr "게임보이 컬러"
+msgid "Game Boy Colour"
+msgstr ""
 
 #. TRANSLATION: libretro/mesens
 #, fuzzy
@@ -1454,6 +1453,11 @@ msgstr "프레임을 건너뛰어 성능을 향상시키지만 동작이 고르�
 msgctxt "game_options"
 msgid "FRAMESKIP"
 msgstr "프레임스킵"
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "Choose the NDS handheld version"
+msgstr ""
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -3970,7 +3974,7 @@ msgctxt "game_options"
 msgid "480p"
 msgstr ""
 
-#. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, yabasanshiro
+#. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, vpinball, yabasanshiro
 #, fuzzy
 msgctxt "game_options"
 msgid "720p"
@@ -4790,34 +4794,29 @@ msgid "COLOUR COMPUTER MODEL"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
-#, fuzzy
 msgctxt "game_options"
-msgid "Color Computer"
-msgstr "컬러 컴퓨터"
+msgid "Colour Computer"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
-#, fuzzy
 msgctxt "game_options"
-msgid "Color Computer 2"
-msgstr "컬러 컴퓨터 2"
+msgid "Colour Computer 2"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
-#, fuzzy
 msgctxt "game_options"
-msgid "Color Computer 2B"
-msgstr "컬러 컴퓨터 2B"
+msgid "Colour Computer 2B"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
-#, fuzzy
 msgctxt "game_options"
-msgid "Color Computer 3 (NTSC) (Default)"
-msgstr "컬러 컴퓨터 3(NTSC)(기본값)"
+msgid "Colour Computer 3 (NTSC) (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
-#, fuzzy
 msgctxt "game_options"
-msgid "Color Computer 3 (PAL)"
-msgstr "컬러 컴퓨터 3 (PAL)"
+msgid "Colour Computer 3 (PAL)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
@@ -4842,8 +4841,8 @@ msgstr "아크론 전자 카트리지"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Acron Electron ROMs"
-msgstr "아크론 전자 ROM"
+msgid "Acorn Electron ROMs"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 #, fuzzy
@@ -5086,7 +5085,7 @@ msgctxt "game_options"
 msgid "Mac Harddisks"
 msgstr "맥 하드 디스크"
 
-#. TRANSLATION: libretro/mame
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid ""
 "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
@@ -5538,6 +5537,11 @@ msgctxt "game_options"
 msgid "Enhancement. Remove the sixteen sprites per line limit."
 msgstr "향상. 줄당 16개의 스프라이트 제한을 제거합니다."
 
+#. TRANSLATION: libretro/mednafen_wswan
+msgctxt "game_options"
+msgid "Initial orientation of the game & controls"
+msgstr ""
+
 #. TRANSLATION: libretro/mednafen_wswan, drastic
 #, fuzzy
 msgctxt "game_options"
@@ -5596,10 +5600,9 @@ msgid "Selfie"
 msgstr "셀카"
 
 #. TRANSLATION: libretro/mrboom
-#, fuzzy
 msgctxt "game_options"
-msgid "Color"
-msgstr "색"
+msgid "Colour"
+msgstr ""
 
 #. TRANSLATION: libretro/mrboom
 #, fuzzy
@@ -9043,7 +9046,7 @@ msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
 msgstr "첫 번째 오디오 장치를 설정합니다 (기본값)."
 
-#. TRANSLATION: cemu, openbor/openbor7530, sonic2013, sonicmania, sonicnexus, ...
+#. TRANSLATION: cemu, openbor/openbor7530, sonic2013, soniccd, sonicmania, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Fix screen tearing."
@@ -10258,6 +10261,13 @@ msgstr "Per 1s, 120s total (1320MB|240MB)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
+msgid ""
+"Enable achievements for supported games. Enter login details via app in F1 "
+"menu."
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
 msgid "ACHIEVEMENTS"
 msgstr ""
 
@@ -10352,12 +10362,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr "디지털 음향처리기"
-
-#. TRANSLATION: flycast/vitaquake3, virtualjaguar
-#, fuzzy
-msgctxt "game_options"
-msgid "Disbaled (Default)"
-msgstr "디스발링됨(기본값)"
 
 #. TRANSLATION: flycast
 #, fuzzy
@@ -11615,7 +11619,7 @@ msgstr ""
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
-msgid "Playstation 2 wheel type"
+msgid "PlayStation 2 wheel type"
 msgstr ""
 
 #. TRANSLATION: openbor
@@ -12925,7 +12929,7 @@ msgstr ""
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
-msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+msgid "Enabled or disable the mouse cursor. Useful for CG's menus."
 msgstr ""
 
 #. TRANSLATION: cgenius
@@ -13015,14 +13019,6 @@ msgid "USER DISK"
 msgstr "사용자 디스크"
 
 #. TRANSLATION: mame/openbor7530
-#, fuzzy
-msgctxt "game_options"
-msgid ""
-"Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
-"Color)"
-msgstr "Mac 모델 선택 (권장 사항은 B & W 용 Mac Plus, Mac LC 3 용 Color)"
-
-#. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD, Image Reader)"
 msgstr "맥 IIx (2MB 램, 컬러, 2 HD 플로피 / CD / 하드 디스크, 이미지 리더)"
@@ -13048,14 +13044,11 @@ msgid "Interton VC 4000 cartridges"
 msgstr "인터톤 VC 4000 카트리지"
 
 #. TRANSLATION: mame/openbor7530
-#, fuzzy
 msgctxt "game_options"
 msgid ""
-"Enable mouse input for trackballs, spinners, lightguns (if no gun "
+"Enable mouse input for trackballs, spinners, light guns (if no gun "
 "connected), and similar controls"
 msgstr ""
-"트랙볼, 스피너, 라이트건(연결된 총이 없는 경우) 및 유사한 컨트롤에 대한 마우"
-"스 입력 활성화"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -13808,12 +13801,10 @@ msgid "ENABLE FULL-SCREEN ANTI-ALIASING"
 msgstr "전체 화면 앤티앨리어싱 사용"
 
 #. TRANSLATION: model2emu
-#, fuzzy
 msgctxt "game_options"
 msgid ""
-"Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
+"Read mouse through Raw input, allowing 2 mice for 2 player shooting games."
 msgstr ""
-"Rawinput을 통해 마우스를 읽고 2 인용 슈팅 게임에 2 개의 마우스를 허용합니다."
 
 #. TRANSLATION: model2emu
 #, fuzzy
@@ -13919,7 +13910,7 @@ msgctxt "game_options"
 msgid "6x (4320p/6480p)"
 msgstr "6x (4320p/6480p)"
 
-#. TRANSLATION: yuzu, ryujinx
+#. TRANSLATION: yuzu, ryujinx, vpinball
 msgctxt "game_options"
 msgid "16:9 (Default)"
 msgstr "16:9 (기본값)"
@@ -14935,9 +14926,9 @@ msgctxt "game_options"
 msgid "Enhanced OpenGL"
 msgstr ""
 
-#. TRANSLATION: rtcw
+#. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
-msgid "Set the desired maximum refresh rate when Vsync is off."
+msgid "Set the desired maximum refresh rate when VSync is off."
 msgstr ""
 
 #. TRANSLATION: rtcw, theforceengine
@@ -15057,24 +15048,19 @@ msgctxt "game_options"
 msgid "600p"
 msgstr ""
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: theforceengine, vpinball
 msgctxt "game_options"
 msgid "768p"
 msgstr ""
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: theforceengine, vpinball
 msgctxt "game_options"
 msgid "800p"
 msgstr ""
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: theforceengine, vpinball
 msgctxt "game_options"
 msgid "960p"
-msgstr ""
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Set the desired maximum refresh rate when VSync is off."
 msgstr ""
 
 #. TRANSLATION: theforceengine
@@ -15249,17 +15235,12 @@ msgstr ""
 
 #. TRANSLATION: thextech
 msgctxt "game_options"
-msgid "Vsync"
+msgid "VSync"
 msgstr ""
 
 #. TRANSLATION: virtualjaguar
 msgctxt "game_options"
 msgid "Enable the Digital Sound Processor."
-msgstr ""
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Disbaled"
 msgstr ""
 
 #. TRANSLATION: virtualjaguar
@@ -15299,6 +15280,126 @@ msgstr ""
 msgctxt "game_options"
 msgid "Anti-aliasing is a technique for smoothing out jagged edges."
 msgstr "앤티앨리어싱은 들쭉날쭉한 가장자리를 매끄럽게 하는 기술입니다."
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Makes the ball easier to follow."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "BALL TRAIL"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "0 (Default)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Affects just the visual effect of nudging."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "VISUAL NUDGE STRENGTH"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "0 (No Visual Effect)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Maximum Framerate."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "MAX FRAMERATE"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "0 (Defaults Unlimited)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"Sync the frame rate with the refresh rate of your monitor. None for lower "
+"input latency but video tearing. Vertical Sync to avoid video tearing, but "
+"with higher input latency. Adaptive Sync (Default) synchronizes on video "
+"sync, except for late frames (below target FPS) which are displayed "
+"immediately, also has higher input latency."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Vertical Sync"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Adaptive Sync (Default)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Big Impact on Performances (Press F11 in game to display FPS)."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "PRESETS"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Default Settings"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Low-end Computer"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "High-end Computer"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Rendering resolution."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "DISPLAY RATIO"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "You need to also check if the table rom has its own settings."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "MUSIC VOLUME"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Mechanical sounds of the table."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "SOUND VOLUME"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -16236,6 +16337,74 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr ""
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Game Boy Color"
+#~ msgstr "게임보이 컬러"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Color Computer"
+#~ msgstr "컬러 컴퓨터"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2"
+#~ msgstr "컬러 컴퓨터 2"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2B"
+#~ msgstr "컬러 컴퓨터 2B"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 3 (NTSC) (Default)"
+#~ msgstr "컬러 컴퓨터 3(NTSC)(기본값)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 3 (PAL)"
+#~ msgstr "컬러 컴퓨터 3 (PAL)"
+
+#~ msgctxt "game_options"
+#~ msgid "Acron Electron ROMs"
+#~ msgstr "아크론 전자 ROM"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Color"
+#~ msgstr "색"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "디스발링됨(기본값)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
+#~ "Color)"
+#~ msgstr "Mac 모델 선택 (권장 사항은 B & W 용 Mac Plus, Mac LC 3 용 Color)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable mouse input for trackballs, spinners, lightguns (if no gun "
+#~ "connected), and similar controls"
+#~ msgstr ""
+#~ "트랙볼, 스피너, 라이트건(연결된 총이 없는 경우) 및 유사한 컨트롤에 대한 마"
+#~ "우스 입력 활성화"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
+#~ msgstr ""
+#~ "Rawinput을 통해 마우스를 읽고 2 인용 슈팅 게임에 2 개의 마우스를 허용합니"
+#~ "다."
 
 #, fuzzy
 #~ msgctxt "game_options"
