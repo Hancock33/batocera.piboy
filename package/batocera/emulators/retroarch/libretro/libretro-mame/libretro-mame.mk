@@ -64,7 +64,7 @@ define LIBRETRO_MAME_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 
 	$(INSTALL) -D $(@D)/mame_libretro.so $(TARGET_DIR)/usr/lib/libretro/mame_libretro.so
-	
+
 	mkdir -p $(TARGET_DIR)/usr/share/lr-mame
 	ln -sf /usr/bin/mame/hash $(TARGET_DIR)/usr/share/lr-mame/hash
 

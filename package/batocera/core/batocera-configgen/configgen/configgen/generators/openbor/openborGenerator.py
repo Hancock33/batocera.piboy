@@ -57,7 +57,7 @@ class OpenborGenerator(Generator):
             config.save("swfilter", system.config["filter"])
         else:
             config.save("swfilter", "0")
-        
+
         if system.isOptSet("openbor_vsync"):
             config.save("vsync", system.config["openbor_vsync"])
         else:
