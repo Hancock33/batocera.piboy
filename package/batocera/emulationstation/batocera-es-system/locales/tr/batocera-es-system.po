@@ -58,7 +58,7 @@ msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "105% (Use caution"
+msgid "105% (Use caution)"
 msgstr ""
 
 #. TRANSLATION: shared
@@ -483,10 +483,9 @@ msgstr "TEKERLEK ÖLÜ BÖLGESİ"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid ""
-"Reserve a non dead zone at the center of the wheel to go straight ahead (in "
+"Reserve a non dead zone at the centre of the wheel to go straight ahead (in "
 "degrees)"
 msgstr ""
-"İlerlemek için tekelegin merkezinde ölü olmayan bölge oluşturun (derece)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -646,7 +645,7 @@ msgctxt "game_options"
 msgid "Use an alternate resolution. Some games need this."
 msgstr "Alternatif bir çözünürlük kullan. Bazı oyunların buna ihtiyaç duyar."
 
-#. TRANSLATION: libretro/atari800, libretro/uae4arm
+#. TRANSLATION: libretro/atari800, libretro/uae4arm, vpinball
 msgctxt "game_options"
 msgid "INTERNAL RESOLUTION"
 msgstr "DAHİLİ ÇÖZÜNÜRLÜK"
@@ -934,8 +933,8 @@ msgstr "Game Boy"
 
 #. TRANSLATION: libretro/mesens
 msgctxt "game_options"
-msgid "Game Boy Color"
-msgstr "Game Boy Rengi"
+msgid "Game Boy Colour"
+msgstr ""
 
 #. TRANSLATION: libretro/mesens
 msgctxt "game_options"
@@ -1299,6 +1298,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "FRAMESKIP"
 msgstr "KARE ATLAMA"
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "Choose the NDS handheld version"
+msgstr ""
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -3560,7 +3564,7 @@ msgctxt "game_options"
 msgid "480p"
 msgstr "480p"
 
-#. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, yabasanshiro
+#. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, vpinball, yabasanshiro
 msgctxt "game_options"
 msgid "720p"
 msgstr "720p"
@@ -4280,28 +4284,28 @@ msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer"
-msgstr "Renkli Bilgisayar"
+msgid "Colour Computer"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer 2"
-msgstr "Renkli Bilgisayar 2"
+msgid "Colour Computer 2"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer 2B"
-msgstr "Color Computer 2B"
+msgid "Colour Computer 2B"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer 3 (NTSC) (Default)"
-msgstr "Renkli Bilgisayar 3 (NTSC) (Varsayılan)"
+msgid "Colour Computer 3 (NTSC) (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer 3 (PAL)"
-msgstr "Renkli Bilgisayar 3 (PAL)"
+msgid "Colour Computer 3 (PAL)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -4325,8 +4329,8 @@ msgstr "Acorn Electron Kartuşları"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Acron Electron ROMs"
-msgstr "Acron Electron ROMları"
+msgid "Acorn Electron ROMs"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -4531,7 +4535,7 @@ msgctxt "game_options"
 msgid "Mac Harddisks"
 msgstr "Mac Harddiskleri"
 
-#. TRANSLATION: libretro/mame
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid ""
 "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
@@ -4923,6 +4927,11 @@ msgctxt "game_options"
 msgid "Enhancement. Remove the sixteen sprites per line limit."
 msgstr "İyileştirme. Satır sınırı başına on altı bağımsız görüntüyü kaldır."
 
+#. TRANSLATION: libretro/mednafen_wswan
+msgctxt "game_options"
+msgid "Initial orientation of the game & controls"
+msgstr ""
+
 #. TRANSLATION: libretro/mednafen_wswan, drastic
 msgctxt "game_options"
 msgid "Manual"
@@ -4975,8 +4984,8 @@ msgstr "Özçekim"
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
-msgid "Color"
-msgstr "Renk"
+msgid "Colour"
+msgstr ""
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -8056,7 +8065,7 @@ msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
 msgstr "Batocera ilk ses cihazını ayarlar (Varsayılan)"
 
-#. TRANSLATION: cemu, openbor/openbor7530, sonic2013, sonicmania, sonicnexus, ...
+#. TRANSLATION: cemu, openbor/openbor7530, sonic2013, soniccd, sonicmania, ...
 msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr "Ekran kırılmasını düzelt."
@@ -9199,6 +9208,13 @@ msgstr "1s başına, toplam 120s (1320MB|240MB)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
+msgid ""
+"Enable achievements for supported games. Enter login details via app in F1 "
+"menu."
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
 msgid "ACHIEVEMENTS"
 msgstr "BAŞARIMLAR"
 
@@ -9279,11 +9295,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr "DİJİTAL SES İŞLEMCİSİ"
-
-#. TRANSLATION: flycast/vitaquake3, virtualjaguar
-msgctxt "game_options"
-msgid "Disbaled (Default)"
-msgstr "Devre Dışı (Varsayılan)"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
@@ -10476,7 +10487,7 @@ msgstr "ZAMAN KRİZİ SİS HACK'İ"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
-msgid "Playstation 2 wheel type"
+msgid "PlayStation 2 wheel type"
 msgstr ""
 
 #. TRANSLATION: openbor
@@ -11720,10 +11731,8 @@ msgstr "eniyi"
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
-msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+msgid "Enabled or disable the mouse cursor. Useful for CG's menus."
 msgstr ""
-"Fare imlecini etkinleştirin veya devre dışı bırakın. CG'nin menüleri için "
-"kullanışlıdır."
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
@@ -11802,13 +11811,6 @@ msgstr "KULLANICI DİSKİ"
 
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
-msgid ""
-"Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
-"Color)"
-msgstr "Mac modelini seç (Mac Plus for B&W veya Mac LC 3 for Color önerilir)"
-
-#. TRANSLATION: mame/openbor7530
-msgctxt "game_options"
 msgid "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD, Image Reader)"
 msgstr "Mac IIx (2Mb RAM, Renkli, 2 HD Disket/CD/HDD, İmaj Okuyucu)"
 
@@ -11832,11 +11834,9 @@ msgstr "Interton VC 4000 kartuşları"
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid ""
-"Enable mouse input for trackballs, spinners, lightguns (if no gun "
+"Enable mouse input for trackballs, spinners, light guns (if no gun "
 "connected), and similar controls"
 msgstr ""
-"Trackball, spinner, silah (eğer bağlı değilse) ve benzer kontroller için "
-"fare girişini etkinleştir"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -12508,10 +12508,8 @@ msgstr "TAM EKRAN KENAR YUMUŞATMAYI AÇ"
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid ""
-"Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
+"Read mouse through Raw input, allowing 2 mice for 2 player shooting games."
 msgstr ""
-"2 oyunculu atış oyunları için 2 fareye izin veren ham girdi aracılığıyla "
-"fareyi oku."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -12615,7 +12613,7 @@ msgctxt "game_options"
 msgid "6x (4320p/6480p)"
 msgstr "6x (4320p/6480p)"
 
-#. TRANSLATION: yuzu, ryujinx
+#. TRANSLATION: yuzu, ryujinx, vpinball
 msgctxt "game_options"
 msgid "16:9 (Default)"
 msgstr "16:9 (Varsayılan)"
@@ -13574,10 +13572,10 @@ msgctxt "game_options"
 msgid "Enhanced OpenGL"
 msgstr "Geliştirilmiş OpenGL"
 
-#. TRANSLATION: rtcw
+#. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
-msgid "Set the desired maximum refresh rate when Vsync is off."
-msgstr "Vsync kapalıyken istediğiniz maksimum yenileme hızını ayarlayın."
+msgid "Set the desired maximum refresh rate when VSync is off."
+msgstr ""
 
 #. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
@@ -13701,25 +13699,20 @@ msgctxt "game_options"
 msgid "600p"
 msgstr "600p"
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: theforceengine, vpinball
 msgctxt "game_options"
 msgid "768p"
 msgstr "768p"
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: theforceengine, vpinball
 msgctxt "game_options"
 msgid "800p"
 msgstr "800p"
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: theforceengine, vpinball
 msgctxt "game_options"
 msgid "960p"
 msgstr "960p"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Set the desired maximum refresh rate when VSync is off."
-msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -13894,17 +13887,12 @@ msgstr "Donanım (Varsayılan)"
 
 #. TRANSLATION: thextech
 msgctxt "game_options"
-msgid "Vsync"
-msgstr "Vsync"
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Enable the Digital Sound Processor."
+msgid "VSync"
 msgstr ""
 
 #. TRANSLATION: virtualjaguar
 msgctxt "game_options"
-msgid "Disbaled"
+msgid "Enable the Digital Sound Processor."
 msgstr ""
 
 #. TRANSLATION: virtualjaguar
@@ -13947,6 +13935,126 @@ msgctxt "game_options"
 msgid "Anti-aliasing is a technique for smoothing out jagged edges."
 msgstr ""
 "Kenar yumuşatma, pürüzlü kenarları yumuşatmak için kullanılan bir tekniktir."
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Makes the ball easier to follow."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "BALL TRAIL"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "0 (Default)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Affects just the visual effect of nudging."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "VISUAL NUDGE STRENGTH"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "0 (No Visual Effect)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Maximum Framerate."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "MAX FRAMERATE"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "0 (Defaults Unlimited)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"Sync the frame rate with the refresh rate of your monitor. None for lower "
+"input latency but video tearing. Vertical Sync to avoid video tearing, but "
+"with higher input latency. Adaptive Sync (Default) synchronizes on video "
+"sync, except for late frames (below target FPS) which are displayed "
+"immediately, also has higher input latency."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Vertical Sync"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Adaptive Sync (Default)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Big Impact on Performances (Press F11 in game to display FPS)."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "PRESETS"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Default Settings"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Low-end Computer"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "High-end Computer"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Rendering resolution."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "DISPLAY RATIO"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "You need to also check if the table rom has its own settings."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "MUSIC VOLUME"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Mechanical sounds of the table."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "SOUND VOLUME"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -14889,6 +14997,85 @@ msgstr "Hızlı Yükle"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Hızlı Kaydet"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Reserve a non dead zone at the center of the wheel to go straight ahead "
+#~ "(in degrees)"
+#~ msgstr ""
+#~ "İlerlemek için tekelegin merkezinde ölü olmayan bölge oluşturun (derece)"
+
+#~ msgctxt "game_options"
+#~ msgid "Game Boy Color"
+#~ msgstr "Game Boy Rengi"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer"
+#~ msgstr "Renkli Bilgisayar"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2"
+#~ msgstr "Renkli Bilgisayar 2"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2B"
+#~ msgstr "Color Computer 2B"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 3 (NTSC) (Default)"
+#~ msgstr "Renkli Bilgisayar 3 (NTSC) (Varsayılan)"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 3 (PAL)"
+#~ msgstr "Renkli Bilgisayar 3 (PAL)"
+
+#~ msgctxt "game_options"
+#~ msgid "Acron Electron ROMs"
+#~ msgstr "Acron Electron ROMları"
+
+#~ msgctxt "game_options"
+#~ msgid "Color"
+#~ msgstr "Renk"
+
+#~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "Devre Dışı (Varsayılan)"
+
+#~ msgctxt "game_options"
+#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+#~ msgstr ""
+#~ "Fare imlecini etkinleştirin veya devre dışı bırakın. CG'nin menüleri için "
+#~ "kullanışlıdır."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
+#~ "Color)"
+#~ msgstr ""
+#~ "Mac modelini seç (Mac Plus for B&W veya Mac LC 3 for Color önerilir)"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable mouse input for trackballs, spinners, lightguns (if no gun "
+#~ "connected), and similar controls"
+#~ msgstr ""
+#~ "Trackball, spinner, silah (eğer bağlı değilse) ve benzer kontroller için "
+#~ "fare girişini etkinleştir"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
+#~ msgstr ""
+#~ "2 oyunculu atış oyunları için 2 fareye izin veren ham girdi aracılığıyla "
+#~ "fareyi oku."
+
+#~ msgctxt "game_options"
+#~ msgid "Set the desired maximum refresh rate when Vsync is off."
+#~ msgstr "Vsync kapalıyken istediğiniz maksimum yenileme hızını ayarlayın."
+
+#~ msgctxt "game_options"
+#~ msgid "Vsync"
+#~ msgstr "Vsync"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
