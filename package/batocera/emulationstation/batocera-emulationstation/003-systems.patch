@@ -856,10 +856,10 @@ index b3d1f138..2e8045d4 100644
  	{ MSX, "113089" },
  	{ NOKIA_NGAGE, "128704" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index 6d8b7120..29f1acae 100644
+index c037af98..30bf2eb3 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
-@@ -36,157 +36,235 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
+@@ -30,157 +30,235 @@ using namespace PlatformIds;
  	https://www.screenscraper.fr/api/systemesListe.php?devid=xxx&devpassword=yyy&softname=zzz&output=XML
  **/
  const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
