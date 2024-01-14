@@ -15,7 +15,7 @@ class SonicNexusGenerator(Generator):
         destination_file = rom_directory + '/sonicnexus'
         if not os.path.exists(destination_file):
             shutil.copy(source_file, destination_file)
-        
+
         ## Configuration
 
         # VSync
@@ -66,7 +66,7 @@ class SonicNexusGenerator(Generator):
         # Now run
         os.chdir(rom_directory)
         commandArray = [destination_file]
-        
+
         return Command.Command(
             array=commandArray,
             env={
@@ -74,7 +74,7 @@ class SonicNexusGenerator(Generator):
                 "SDL_JOYSTICK_HIDAPI": "0"
             }
         )
-    
+
     # Show mouse for menu / play actions
     def getMouseMode(self, config, rom):
         return False

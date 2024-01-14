@@ -3,8 +3,8 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Jan 03, 2024 (branch@bleeding-edge)
-WINE_PROTON_VERSION = 57bb5378f760d400272454fc182de95a0689baab
+# Version: Commits on Jan 12, 2024 (branch@bleeding-edge)
+WINE_PROTON_VERSION = a56aa3ae6d7882c1a8a20acfe174a412ce3fadbe
 WINE_PROTON_SOURCE = $(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
@@ -274,6 +274,8 @@ endif
 # Cleanup final directory
 define WINE_PROTON_REMOVE_INCLUDES_HOOK
 		rm -Rf $(TARGET_DIR)/usr/wine/proton/include
+		rm -Rf $(TARGET_DIR)/usr/wine/proton/share
+		ln -sf /usr/wine/lutris/share $(TARGET_DIR)/usr/wine/proton/
 endef
 
 WINE_PROTON_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_REMOVE_INCLUDES_HOOK

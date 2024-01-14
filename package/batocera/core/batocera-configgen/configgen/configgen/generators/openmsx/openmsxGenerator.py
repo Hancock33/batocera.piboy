@@ -31,7 +31,7 @@ class OpenmsxGenerator(Generator):
         # create folder if needed
         if not os.path.isdir(openMSX_Homedir):
             os.mkdir(openMSX_Homedir)
-        
+
         # screenshot folder
         if not os.path.isdir("/userdata/screenshots/openmsx"):
             os.mkdir("/userdata/screenshots/openmsx")

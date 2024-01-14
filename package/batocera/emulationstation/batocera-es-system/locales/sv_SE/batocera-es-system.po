@@ -1,13 +1,21 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es-system\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: A.H.\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2024-01-06 14:07+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4\n"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -49,7 +57,7 @@ msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "105% (Use caution"
+msgid "105% (Use caution)"
 msgstr ""
 
 #. TRANSLATION: shared
@@ -416,12 +424,12 @@ msgstr ""
 #. TRANSLATION: shared, shared, libretro/beetle-saturn, libretro/fbneo, libretro/fceumm, ...
 msgctxt "game_options"
 msgid "LIGHT GUN"
-msgstr ""
+msgstr "LJUSPISTOL"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "USE LIGHT GUNS"
-msgstr ""
+msgstr "ANVÄND LJUSPISTOL"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -461,7 +469,7 @@ msgstr ""
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid ""
-"Reserve a non dead zone at the center of the wheel to go straight ahead (in "
+"Reserve a non dead zone at the centre of the wheel to go straight ahead (in "
 "degrees)"
 msgstr ""
 
@@ -622,7 +630,7 @@ msgctxt "game_options"
 msgid "Use an alternate resolution. Some games need this."
 msgstr ""
 
-#. TRANSLATION: libretro/atari800, libretro/uae4arm
+#. TRANSLATION: libretro/atari800, libretro/uae4arm, vpinball
 msgctxt "game_options"
 msgid "INTERNAL RESOLUTION"
 msgstr ""
@@ -655,22 +663,22 @@ msgstr ""
 #. TRANSLATION: libretro/beetle-saturn
 msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIR"
-msgstr ""
+msgstr "LJUSPISTOLSSIKTE"
 
 #. TRANSLATION: libretro/beetle-saturn
 msgctxt "game_options"
 msgid "Cross"
-msgstr ""
+msgstr "Kors"
 
 #. TRANSLATION: libretro/beetle-saturn
 msgctxt "game_options"
 msgid "Dot"
-msgstr ""
+msgstr "Punkt"
 
 #. TRANSLATION: libretro/beetle-saturn, libretro/mesens, libretro/mesen, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Disabled"
-msgstr ""
+msgstr "Inaktiverat"
 
 #. TRANSLATION: libretro/beetle-saturn, libretro/beetle-saturn, libretro/yabasanshiro, libretro/yabasanshiro
 msgctxt "game_options"
@@ -730,7 +738,7 @@ msgstr ""
 #. TRANSLATION: libretro/bsnes
 msgctxt "game_options"
 msgid "VIDEO FILTERS"
-msgstr ""
+msgstr "VIDEOFILTER"
 
 #. TRANSLATION: libretro/bsnes
 msgctxt "game_options"
@@ -765,27 +773,27 @@ msgstr ""
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
 msgid "64KB"
-msgstr ""
+msgstr "64KB"
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
 msgid "128KB"
-msgstr ""
+msgstr "128KB"
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
 msgid "192+KB"
-msgstr ""
+msgstr "192+KB"
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
 msgid "512KB"
-msgstr ""
+msgstr "512KB"
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
 msgid "576+KB"
-msgstr ""
+msgstr "576+KB"
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
@@ -800,37 +808,37 @@ msgstr ""
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
 msgid "16 bit"
-msgstr ""
+msgstr "16 bit"
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
 msgid "24 bit (Default)"
-msgstr ""
+msgstr "24 bit (Standard)"
 
 #. TRANSLATION: libretro/cap32, sonic2013, soniccd, sonicmania, play, ...
 msgctxt "game_options"
 msgid "Change the game's language."
-msgstr ""
+msgstr "Ändra spelets språk."
 
 #. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/yabasanshiro, hatari, ...
 msgctxt "game_options"
 msgid "LANGUAGE"
-msgstr ""
+msgstr "SPRÅK"
 
 #. TRANSLATION: libretro/cap32, libretro/melonds, libretro/yabasanshiro, redream, fallout1-ce, ...
 msgctxt "game_options"
 msgid "English (Default)"
-msgstr ""
+msgstr "Engelska (Standard"
 
 #. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, ...
 msgctxt "game_options"
 msgid "Spanish"
-msgstr ""
+msgstr "Spanska"
 
 #. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, ...
 msgctxt "game_options"
 msgid "French"
-msgstr ""
+msgstr "Franska"
 
 #. TRANSLATION: libretro/mesens, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
@@ -903,7 +911,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/mesens
 msgctxt "game_options"
-msgid "Game Boy Color"
+msgid "Game Boy Colour"
 msgstr ""
 
 #. TRANSLATION: libretro/mesens
@@ -934,22 +942,22 @@ msgstr ""
 #. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, amiberry, mupen64plus, ...
 msgctxt "game_options"
 msgid "Low"
-msgstr ""
+msgstr "Låg"
 
 #. TRANSLATION: libretro/mesens, libretro/mesen, mupen64plus, openbor
 msgctxt "game_options"
 msgid "Medium"
-msgstr ""
+msgstr "Medium"
 
 #. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, amiberry, mupen64plus, ...
 msgctxt "game_options"
 msgid "High"
-msgstr ""
+msgstr "Hög"
 
 #. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, mupen64plus
 msgctxt "game_options"
 msgid "Very High"
-msgstr ""
+msgstr "Mycket Hög"
 
 #. TRANSLATION: libretro/mesens, libretro/mesen
 msgctxt "game_options"
@@ -1009,17 +1017,17 @@ msgstr ""
 #. TRANSLATION: libretro/mesen, daphne, flycast, melonds, moonlight
 msgctxt "game_options"
 msgid "90 degrees"
-msgstr ""
+msgstr "90 grader"
 
 #. TRANSLATION: libretro/mesen, melonds, moonlight
 msgctxt "game_options"
 msgid "180 degrees"
-msgstr ""
+msgstr "180 grader"
 
 #. TRANSLATION: libretro/mesen, daphne, melonds, moonlight
 msgctxt "game_options"
 msgid "270 degrees"
-msgstr ""
+msgstr "270 grader"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -1054,7 +1062,7 @@ msgstr ""
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
 msgid "COLOR PALETTE"
-msgstr ""
+msgstr "FÄRGPALETT"
 
 #. TRANSLATION: libretro/mesen, libretro/puae, libretro/puae2021, yuzu, yuzu
 msgctxt "game_options"
@@ -1264,6 +1272,11 @@ msgstr ""
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
+msgid "Choose the NDS handheld version"
+msgstr ""
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
 msgid "NDS VERSION"
 msgstr ""
 
@@ -1300,12 +1313,12 @@ msgstr ""
 #. TRANSLATION: libretro/melonds, amiberry, amiberry
 msgctxt "game_options"
 msgid "ON"
-msgstr ""
+msgstr "PÅ"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "OFF (Default)"
-msgstr ""
+msgstr "AV (Standard)"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -1362,7 +1375,7 @@ msgstr ""
 #. TRANSLATION: libretro/melonds, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Mouse"
-msgstr ""
+msgstr "Mus"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -1392,12 +1405,12 @@ msgstr ""
 #. TRANSLATION: libretro/dolphin, libretro/kronos, cemu, flycast/vitaquake3, scummvm, ...
 msgctxt "game_options"
 msgid "English"
-msgstr ""
+msgstr "Engelska"
 
 #. TRANSLATION: libretro/dolphin, cemu, play, yuzu, ryujinx, ...
 msgctxt "game_options"
 msgid "Dutch"
-msgstr ""
+msgstr "Nederländska"
 
 #. TRANSLATION: libretro/dolphin, sonicmania, play, yuzu, ryujinx
 msgctxt "game_options"
@@ -1412,7 +1425,7 @@ msgstr ""
 #. TRANSLATION: libretro/dolphin, cemu, scummvm, easyrpg, sonic2013, ...
 msgctxt "game_options"
 msgid "Korean"
-msgstr ""
+msgstr "Koreanska"
 
 #. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -1433,7 +1446,7 @@ msgstr ""
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/genesisplusgx, libretro/genesisplusgx, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
-msgstr ""
+msgstr "AVANCERADE INSTÄLLNINGAR"
 
 #. TRANSLATION: libretro/dolphin, dolphin
 msgctxt "game_options"
@@ -1839,92 +1852,92 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "US"
-msgstr ""
+msgstr "USA"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "UK"
-msgstr ""
+msgstr "Storbrittanien"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Brazil"
-msgstr ""
+msgstr "Brasilien"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Croatia"
-msgstr ""
+msgstr "Kroatien"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Czech Republic"
-msgstr ""
+msgstr "Tjeckien "
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Denmark"
-msgstr ""
+msgstr "Danmark"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Finland"
-msgstr ""
+msgstr "Finland"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "France"
-msgstr ""
+msgstr "Frankrike"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Germany"
-msgstr ""
+msgstr "Tyskland"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Greece"
-msgstr ""
+msgstr "Grekland"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Hungary"
-msgstr ""
+msgstr "Ungern"
 
 #. TRANSLATION: libretro/dosbox_pure, yuzu
 msgctxt "game_options"
 msgid "Iceland"
-msgstr ""
+msgstr "Island"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Italy"
-msgstr ""
+msgstr "Italien"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Netherlands"
-msgstr ""
+msgstr "Nederländerna"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Norway"
-msgstr ""
+msgstr "Norge"
 
 #. TRANSLATION: libretro/dosbox_pure, yuzu
 msgctxt "game_options"
 msgid "Poland"
-msgstr ""
+msgstr "Polen"
 
 #. TRANSLATION: libretro/dosbox_pure, yuzu
 msgctxt "game_options"
 msgid "Portugal"
-msgstr ""
+msgstr "Portugal"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Russia"
-msgstr ""
+msgstr "Ryssland"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -1939,12 +1952,12 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Spain"
-msgstr ""
+msgstr "Spanien"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Sweden"
-msgstr ""
+msgstr "Sverige"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -1959,7 +1972,7 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure, yuzu
 msgctxt "game_options"
 msgid "Turkey"
-msgstr ""
+msgstr "Turkiet"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -2152,7 +2165,7 @@ msgstr ""
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, ...
 msgctxt "game_options"
 msgid "Show"
-msgstr ""
+msgstr "Visa"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, ...
 msgctxt "game_options"
@@ -3503,7 +3516,7 @@ msgctxt "game_options"
 msgid "480p"
 msgstr ""
 
-#. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, yabasanshiro
+#. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, vpinball, yabasanshiro
 msgctxt "game_options"
 msgid "720p"
 msgstr ""
@@ -4218,27 +4231,27 @@ msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer"
+msgid "Colour Computer"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer 2"
+msgid "Colour Computer 2"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer 2B"
+msgid "Colour Computer 2B"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer 3 (NTSC) (Default)"
+msgid "Colour Computer 3 (NTSC) (Default)"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Color Computer 3 (PAL)"
+msgid "Colour Computer 3 (PAL)"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
@@ -4263,7 +4276,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
-msgid "Acron Electron ROMs"
+msgid "Acorn Electron ROMs"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
@@ -4468,7 +4481,7 @@ msgctxt "game_options"
 msgid "Mac Harddisks"
 msgstr ""
 
-#. TRANSLATION: libretro/mame
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid ""
 "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
@@ -4856,6 +4869,11 @@ msgctxt "game_options"
 msgid "Enhancement. Remove the sixteen sprites per line limit."
 msgstr ""
 
+#. TRANSLATION: libretro/mednafen_wswan
+msgctxt "game_options"
+msgid "Initial orientation of the game & controls"
+msgstr ""
+
 #. TRANSLATION: libretro/mednafen_wswan, drastic
 msgctxt "game_options"
 msgid "Manual"
@@ -4908,7 +4926,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
-msgid "Color"
+msgid "Colour"
 msgstr ""
 
 #. TRANSLATION: libretro/mrboom
@@ -5158,6 +5176,11 @@ msgstr ""
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "Rumble Pak"
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+msgctxt "game_options"
+msgid "Rumble Pak (Automatic)"
 msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
@@ -7963,7 +7986,7 @@ msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
 msgstr ""
 
-#. TRANSLATION: cemu, openbor/openbor7530, sonic2013, sonicmania, sonicnexus, ...
+#. TRANSLATION: cemu, openbor/openbor7530, sonic2013, soniccd, sonicmania, ...
 msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr ""
@@ -9069,6 +9092,13 @@ msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
+msgid ""
+"Enable achievements for supported games. Enter login details via app in F1 "
+"menu."
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
 msgid "ACHIEVEMENTS"
 msgstr ""
 
@@ -9144,11 +9174,6 @@ msgstr ""
 #. TRANSLATION: flycast/vitaquake3, virtualjaguar
 msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
-msgstr ""
-
-#. TRANSLATION: flycast/vitaquake3, virtualjaguar
-msgctxt "game_options"
-msgid "Disbaled (Default)"
 msgstr ""
 
 #. TRANSLATION: flycast
@@ -9291,7 +9316,7 @@ msgstr ""
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "German (de)"
-msgstr ""
+msgstr "Tyska (de)"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
@@ -9316,12 +9341,12 @@ msgstr ""
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Russian (ru)"
-msgstr ""
+msgstr "Rysska(ru)"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Swedish (se)"
-msgstr ""
+msgstr "Svenska (se)"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
@@ -9331,7 +9356,7 @@ msgstr ""
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "English (us)"
-msgstr ""
+msgstr "Engelska (us)"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
@@ -10308,7 +10333,7 @@ msgstr ""
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
-msgid "Playstation 2 wheel type"
+msgid "PlayStation 2 wheel type"
 msgstr ""
 
 #. TRANSLATION: openbor
@@ -11508,7 +11533,7 @@ msgstr ""
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
-msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+msgid "Enabled or disable the mouse cursor. Useful for CG's menus."
 msgstr ""
 
 #. TRANSLATION: cgenius
@@ -11588,13 +11613,6 @@ msgstr ""
 
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
-msgid ""
-"Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
-"Color)"
-msgstr ""
-
-#. TRANSLATION: mame/openbor7530
-msgctxt "game_options"
 msgid "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD, Image Reader)"
 msgstr ""
 
@@ -11616,7 +11634,7 @@ msgstr ""
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid ""
-"Enable mouse input for trackballs, spinners, lightguns (if no gun "
+"Enable mouse input for trackballs, spinners, light guns (if no gun "
 "connected), and similar controls"
 msgstr ""
 
@@ -12268,7 +12286,7 @@ msgstr ""
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid ""
-"Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
+"Read mouse through Raw input, allowing 2 mice for 2 player shooting games."
 msgstr ""
 
 #. TRANSLATION: model2emu
@@ -12372,7 +12390,7 @@ msgctxt "game_options"
 msgid "6x (4320p/6480p)"
 msgstr ""
 
-#. TRANSLATION: yuzu, ryujinx
+#. TRANSLATION: yuzu, ryujinx, vpinball
 msgctxt "game_options"
 msgid "16:9 (Default)"
 msgstr ""
@@ -13329,9 +13347,9 @@ msgctxt "game_options"
 msgid "Enhanced OpenGL"
 msgstr ""
 
-#. TRANSLATION: rtcw
+#. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
-msgid "Set the desired maximum refresh rate when Vsync is off."
+msgid "Set the desired maximum refresh rate when VSync is off."
 msgstr ""
 
 #. TRANSLATION: rtcw, theforceengine
@@ -13451,24 +13469,19 @@ msgctxt "game_options"
 msgid "600p"
 msgstr ""
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: theforceengine, vpinball
 msgctxt "game_options"
 msgid "768p"
 msgstr ""
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: theforceengine, vpinball
 msgctxt "game_options"
 msgid "800p"
 msgstr ""
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: theforceengine, vpinball
 msgctxt "game_options"
 msgid "960p"
-msgstr ""
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Set the desired maximum refresh rate when VSync is off."
 msgstr ""
 
 #. TRANSLATION: theforceengine
@@ -13643,17 +13656,12 @@ msgstr ""
 
 #. TRANSLATION: thextech
 msgctxt "game_options"
-msgid "Vsync"
-msgstr "Vsync"
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Enable the Digital Sound Processor."
+msgid "VSync"
 msgstr ""
 
 #. TRANSLATION: virtualjaguar
 msgctxt "game_options"
-msgid "Disbaled"
+msgid "Enable the Digital Sound Processor."
 msgstr ""
 
 #. TRANSLATION: virtualjaguar
@@ -13691,6 +13699,126 @@ msgstr ""
 #. TRANSLATION: vita3k
 msgctxt "game_options"
 msgid "Anti-aliasing is a technique for smoothing out jagged edges."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Makes the ball easier to follow."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "BALL TRAIL"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "0 (Default)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Affects just the visual effect of nudging."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "VISUAL NUDGE STRENGTH"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "0 (No Visual Effect)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Maximum Framerate."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "MAX FRAMERATE"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "0 (Defaults Unlimited)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"Sync the frame rate with the refresh rate of your monitor. None for lower "
+"input latency but video tearing. Vertical Sync to avoid video tearing, but "
+"with higher input latency. Adaptive Sync (Default) synchronizes on video "
+"sync, except for late frames (below target FPS) which are displayed "
+"immediately, also has higher input latency."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Vertical Sync"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Adaptive Sync (Default)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Big Impact on Performances (Press F11 in game to display FPS)."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "PRESETS"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Default Settings"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Low-end Computer"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "High-end Computer"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Rendering resolution."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "DISPLAY RATIO"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "You need to also check if the table rom has its own settings."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "MUSIC VOLUME"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Mechanical sounds of the table."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "SOUND VOLUME"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -14127,7 +14255,7 @@ msgstr ""
 #. TRANSLATION: scummvm.keys
 msgctxt "keys_files"
 msgid "Menu"
-msgstr ""
+msgstr "Meny"
 
 #. TRANSLATION: scummvm.keys
 msgctxt "keys_files"
@@ -14628,3 +14756,7 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "Vsync"
+#~ msgstr "Vsync"

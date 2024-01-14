@@ -1,5 +1,5 @@
 diff --git a/es-core/src/InputManager.cpp b/es-core/src/InputManager.cpp
-index a67c0701..cac9ca2b 100644
+index db78b470..0d5438e6 100644
 --- a/es-core/src/InputManager.cpp
 +++ b/es-core/src/InputManager.cpp
 @@ -1258,7 +1258,7 @@ void InputManager::updateBatteryLevel(int id, const std::string& device, const s

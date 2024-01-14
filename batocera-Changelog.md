@@ -5,6 +5,7 @@
 - Initial support for the ASUS ROG Ally
 - Initial support for the Raspberry Pi 5
 - Initial support for the Steam Deck OLED
+- Support for Thunderbolt 3 / USB4 eGPU chasis
 ### Added
 - New Powermode ES setting. Adjusts cpu governor/system power usage while in-game.
 - New TDP setting to adjust TDP wattage values of supported Ryzen Mobile Series CPU's per system or globally.
@@ -56,7 +57,7 @@
 - Streamlined x86_64 Secure Boot support
 ### Updated
 - Retroarch to 1.16.0.3
-- GroovyMAME 0.261 - Switchres 2.002x
+- GroovyMAME 0.261 - Switchres 2.002z
 - DosBox-X to 2023.10.6
 - Libretro-FBNeo to Oct 9, 2023
 - DevilutionX to 1.5.1
@@ -83,7 +84,7 @@
 - Vita3k to Dec 26 build
 - Xemu to v0.7.118
 - Xenia to v1.0.2808
-- Xenia Canary to a34944e (October 28 build)
+- Xenia Canary to 49d4460 (Jan 11 build)
 - ECWolf to 1.5pre
 - EDuke32 to Oct 07, 2023 build
 - Libretro-A5200 to Aug 18th build
@@ -138,9 +139,10 @@
 - Sonic 2013 to Dec 2, 2023 build
 - Duckstation to Dec 21, 2023 build
 - ScummVM to 2.8
+- Redream to 1.5.0-1093
 ### System
 - Linux kernel to 6.7
-- Mesa to 23.3.2
+- Mesa to 23.3.3
 - Proton to 8.0-4c
 - FAudio to 23.10
 - Nvidia production driver to 545.29.06
@@ -149,7 +151,7 @@
 - Sound Open Firmware to 2023.12
 - Bluez to 5.71
 - Added tree utility
-- VKD3D-Proton to 2.11
+- VKD3D-Proton to 2.11.1
 - Host-XA to 2.4.0
 - Pipewire to 1.0.0
 - Xorg Server to 21.1.10

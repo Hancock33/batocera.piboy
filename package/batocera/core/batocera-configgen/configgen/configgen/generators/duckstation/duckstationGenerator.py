@@ -488,7 +488,7 @@ class DuckstationGenerator(Generator):
         settings.set("Hotkeys", "ChangeDisc",                  "Keyboard/F8")
         if settings.has_option('Hotkeys', 'OpenQuickMenu'):
             settings.remove_option('Hotkeys', 'OpenQuickMenu')
-        
+
         ## [CDROM]
         if not settings.has_section("CDROM"):
             settings.add_section("CDROM")

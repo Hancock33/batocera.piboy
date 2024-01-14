@@ -22,7 +22,7 @@ def do_startVersion(infos, version, date, title):
 
     if infos["n"] > 1:
         print("<br />")
-    
+
     print("<div class=\"mb-4\" id=\"accordion\" role=\"tablist\" aria-multiselectable=\"true\">")
     print(" <div class=\"card\">")
     print("  <div class=\"card-header\" role=\"tab\" id=\"heading{}\">".format(n))
@@ -32,7 +32,7 @@ def do_startVersion(infos, version, date, title):
     print("  </div>")
     print("  <div id=\"collapse{}\" class=\"collapse".format(n))
     if n== 0:
-        print(" show")      
+        print(" show")
     print("\" role=\"tabpanel\" aria-labelledby=\"heading{}\">".format(n))
     print("   <div class=\"card-body\">")
 
@@ -40,7 +40,7 @@ def do_endVersion(infos):
     print("  </div>")
     print(" </div>")
     print("</div>")
-    
+
     infos["level"] = infos["level"]-1
     if infos["level"] != 0:
         raise Exception("end of version doesn't end at level 0")
@@ -68,7 +68,7 @@ def do_item(line):
 
 def do_subitem(line):
     print("         <li>{}</li>".format(line))
-    
+
 def do_comment(line):
     print("<div>{}</div>".format(line))
 
@@ -95,7 +95,7 @@ def readChangeLogLine(infos, line):
                     vtitle   = None
                 else:
                     raise Exception("invalid format " + line)
-        
+
         if infos["nsubitems"] > 0:
             infos["nsubitems"] = 0
             do_end_subitems()

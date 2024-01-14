@@ -121,7 +121,7 @@ class Rpcs3Generator(Generator):
         # Max Power Saving CPU-Preemptions
         # values are maximum yields per frame threshold
         if system.isOptSet("rpcs3_maxcpu_preemptcount"):
-            rpcs3ymlconfig["Core"]["Max CPU Preempt Count"] = system.config["rpcs3_maxcpu_preemptcount"]           
+            rpcs3ymlconfig["Core"]["Max CPU Preempt Count"] = system.config["rpcs3_maxcpu_preemptcount"]
         else:
             rpcs3ymlconfig["Core"]["Max CPU Preempt Count"] = 0
 
@@ -238,7 +238,7 @@ class Rpcs3Generator(Generator):
         if system.isOptSet("rpcs3_audio_16bit") and system.config["rpcs3_audio_16bit"] == "True":
             rpcs3ymlconfig["Audio"]["Convert to 16 bit"] = True
         else:
-            rpcs3ymlconfig["Audio"]["Convert to 16 bit"] = False        
+            rpcs3ymlconfig["Audio"]["Convert to 16 bit"] = False
         # audio buffering
         if system.isOptSet("rpcs3_audiobuffer"):
             rpcs3ymlconfig["Audio"]["Enable Buffering"] = system.config["rpcs3_audiobuffer"]

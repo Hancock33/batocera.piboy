@@ -15,11 +15,13 @@ endif
 
 define SUPERMODEL_BUILD_CMDS
 	cp $(@D)/Makefiles/Makefile.UNIX $(@D)/Makefile
+	$(SED) "s|-O3||g" $(@D)/Makefiles/Rules.inc
+	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
 	$(SED) "s|CC = gcc|CC = $(TARGET_CC)|g" $(@D)/Makefile
 	$(SED) "s|CXX = g++|CXX = $(TARGET_CXX)|g" $(@D)/Makefile
 	$(SED) "s|LD = gcc|LD = $(TARGET_CC)|g" $(@D)/Makefile
 	$(SED) "s|sdl2-config|$(STAGING_DIR)/usr/bin/sdl2-config|g" $(@D)/Makefile
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D) -f Makefile NET_BOARD=1 VERBOSE=1 ARCH=$(BR2_TARGET_OPTIMIZATION)
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) -j2 -C $(@D) -f Makefile NET_BOARD=1 VERBOSE=1
 endef
 
 define SUPERMODEL_INSTALL_TARGET_CMDS
