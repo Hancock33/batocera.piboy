@@ -67,8 +67,8 @@
 - Libretro-Genesis-Plus-GX to Sep 11, 2023
 - Libretro-PCSX-ReARMed to Oct 9, 2023
 - Fheroes2 to 1.0.9
-- BigPEmu to 1.092
-- Cemu to 2.0-61
+- BigPEmu to 1.094
+- Cemu to 2.0-62
 - Citra to nightly-2054
 - Dolphin to 5.0-20840
 - Flycast to 17th Dec build
@@ -144,6 +144,7 @@
 - Linux kernel to 6.7
 - Mesa to 23.3.3
 - Proton to 8.0-4c
+- Wine Tricks to 20240105
 - FAudio to 23.10
 - Nvidia production driver to 545.29.06
 - Nvidia legacy driver to 470.223.02
@@ -157,6 +158,7 @@
 - Xorg Server to 21.1.10
 - XWayaland to 23.2.3
 - QT 6.6.1
+- Vulkan stack to support 1.3.275
 
 # 2023/10/16 - batocera.linux 38 - Blue Moon
 ### Hardware
