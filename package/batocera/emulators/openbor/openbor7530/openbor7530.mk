@@ -3,8 +3,8 @@
 # openbor7530 (OpenBor 4)
 #
 ################################################################################
-# Version: Commits on Jan 16, 2024
-OPENBOR7530_VERSION = 5254fc372cb6cf57687b95db3b10998a5a242d18
+# Version: Commits on Jan 17, 2024
+OPENBOR7530_VERSION = e838382583583f6f74115cf230df56170ca10f8b
 OPENBOR7530_SITE = $(call github,DCurrent,openbor,$(OPENBOR7530_VERSION))
 OPENBOR7530_LICENSE = BSD
 OPENBOR7530_LICENSE_FILE = LICENSE
