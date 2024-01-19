@@ -700,6 +700,18 @@ msgctxt "game_options"
 msgid "Disabled"
 msgstr "Uitgeschakeld"
 
+#. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
+msgctxt "game_options"
+msgid ""
+"Automatically sets aspect ratio to 16/9 for games that natively support it. "
+"2D elements like HUD/UI may be stretched."
+msgstr ""
+
+#. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
+msgctxt "game_options"
+msgid "AUTO WIDESCREEN"
+msgstr ""
+
 #. TRANSLATION: libretro/beetle-saturn, libretro/beetle-saturn, libretro/yabasanshiro, libretro/yabasanshiro
 msgctxt "game_options"
 msgid "Not all games support 3D pad."
@@ -3124,6 +3136,11 @@ msgid ""
 msgstr ""
 "Gebruik Megadrive om invoer automatisch toe te wijzen voor een Megadrive-"
 "stijl controller met een indeling met 6 knoppen."
+
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, ...
+msgctxt "game_options"
+msgid "CONTROLLERS"
+msgstr "CONTROLLERS"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
@@ -8462,11 +8479,6 @@ msgctxt "game_options"
 msgid "Map your controller to an emulated Wii Remote."
 msgstr ""
 
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, ...
-msgctxt "game_options"
-msgid "CONTROLLERS"
-msgstr "CONTROLLERS"
-
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "EMULATE WII REMOTE"
@@ -12346,6 +12358,57 @@ msgctxt "game_options"
 msgid "128MiB"
 msgstr "128MiB"
 
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid ""
+"Nat to access internet from xemu machine. Udp for System Link. Default "
+"(Auto) disables network access."
+msgstr ""
+
+#. TRANSLATION: xemu, xemu, xemu, xemu, xemu, ...
+msgctxt "game_options"
+msgid "NETWORK"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "NETWORK TYPE"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "NAT"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "UDP Tunnel"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid ""
+"Destination address and port to forward packets to. Leave this empty if you "
+"want to enter it manually in the xemu.toml configuration file."
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "UDP REMOTE ADDRESS"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid ""
+"Local address and port to receive packets on. Leave this empty if you want "
+"to enter it manually in the xemu.toml configuration file."
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "UDP BIND ADDRESS"
+msgstr ""
+
 #. TRANSLATION: sonic2013
 msgctxt "game_options"
 msgid "Portugese"
@@ -14093,7 +14156,14 @@ msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
-msgid "VKD3D (D3D12 to Vulkan)"
+msgid ""
+"Choose which graphics API library to use. D3D12 may yield better results "
+"with faster GPUs."
+msgstr ""
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
+msgid "D3D12 (Default)"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -14149,26 +14219,6 @@ msgstr "Ingeschakelde UI-prompts (Standaard)"
 msgctxt "game_options"
 msgid "Disable UI prompts"
 msgstr "Schakel UI-prompts uit"
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Select which version of wine to use"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "WINE EMULATOR"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "WINE NATIVE"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "PROTON"
-msgstr ""
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -15038,90 +15088,6 @@ msgstr "Snel Opslaan"
 #~ msgstr "105% (Wees voorzichtig)"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Reserve a non dead zone at the center of the wheel to go straight ahead "
-#~ "(in degrees)"
-#~ msgstr ""
-#~ "Reserveer een niet-deadzone in het midden van het wiel om rechtdoor te "
-#~ "gaan (in graden)"
-
-#~ msgctxt "game_options"
-#~ msgid "Game Boy Color"
-#~ msgstr "Game Boy Color"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer"
-#~ msgstr "Color Computer"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 2"
-#~ msgstr "Color Computer 2"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 2B"
-#~ msgstr "Color Computer 2B"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 3 (NTSC) (Default)"
-#~ msgstr "Color Computer 3 (NTSC) (Standaard)"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 3 (PAL)"
-#~ msgstr "Color Computer 3 (PAL)"
-
-#~ msgctxt "game_options"
-#~ msgid "Acron Electron ROMs"
-#~ msgstr "Acron Electron ROMs"
-
-#~ msgctxt "game_options"
-#~ msgid "Color"
-#~ msgstr "Kleur"
-
-#~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "Uitgeschakeld (Standaard)"
-
-#~ msgctxt "game_options"
-#~ msgid "Playstation 2 wheel type"
-#~ msgstr "Playstation 2 stuurwiel type"
-
-#~ msgctxt "game_options"
-#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
-#~ msgstr "De muiscursor in- of uitschakelen. Handig voor menu's van CG."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
-#~ "Color)"
-#~ msgstr ""
-#~ "Selecteer Mac-model (aanbevelingen zijn Mac Plus voor zwart-wit, Mac LC 3 "
-#~ "voor kleur)"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable mouse input for trackballs, spinners, lightguns (if no gun "
-#~ "connected), and similar controls"
-#~ msgstr ""
-#~ "Schakel muisinvoer in voor trackballs, spinners, lightguns (als er geen "
-#~ "gun is aangesloten) en soortgelijke bedieningselementen"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
-#~ msgstr ""
-#~ "Less muis door Rawinput, laat 2 muizen toe voor 2 speler schiet spellen."
-
-#~ msgctxt "game_options"
-#~ msgid "Set the desired maximum refresh rate when Vsync is off."
-#~ msgstr ""
-#~ "Stel de gewenste maximale verversingssnelheid in wanneer Vsync is "
-#~ "uitgeschakeld."
-
-#~ msgctxt "game_options"
-#~ msgid "Vsync"
-#~ msgstr "V-sync"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Sla vorige staat op om in realtime naartoe te gaan, als de core het "
@@ -15134,6 +15100,14 @@ msgstr "Snel Opslaan"
 #~ msgstr ""
 #~ "Druk tijdens het spelen op Sneltoets + R1 om de tekst op het scherm te "
 #~ "vertalen. Alleen op libretro-cores."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Reserve a non dead zone at the center of the wheel to go straight ahead "
+#~ "(in degrees)"
+#~ msgstr ""
+#~ "Reserveer een niet-deadzone in het midden van het wiel om rechtdoor te "
+#~ "gaan (in graden)"
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate Chroma 81 interface (colorization)."
@@ -15150,6 +15124,10 @@ msgstr "Snel Opslaan"
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
 #~ msgstr "Behandelt de rechter analoge stick als de tweede joystick."
+
+#~ msgctxt "game_options"
+#~ msgid "Game Boy Color"
+#~ msgstr "Game Boy Color"
 
 #~ msgctxt "game_options"
 #~ msgid "Useful for speedruns/glitches."
@@ -15294,6 +15272,38 @@ msgstr "Snel Opslaan"
 #~ msgstr "COLOR COMPUTER MODEL"
 
 #~ msgctxt "game_options"
+#~ msgid "Color Computer"
+#~ msgstr "Color Computer"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2"
+#~ msgstr "Color Computer 2"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2B"
+#~ msgstr "Color Computer 2B"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 3 (NTSC) (Default)"
+#~ msgstr "Color Computer 3 (NTSC) (Standaard)"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 3 (PAL)"
+#~ msgstr "Color Computer 3 (PAL)"
+
+#~ msgctxt "game_options"
+#~ msgid "Acron Electron ROMs"
+#~ msgstr "Acron Electron ROMs"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
+#~ "Color)"
+#~ msgstr ""
+#~ "Selecteer Mac-model (aanbevelingen zijn Mac Plus voor zwart-wit, Mac LC 3 "
+#~ "voor kleur)"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Install the image reader card to read disk image files (Mac IIx only). "
 #~ "Minimum 4MB ram size recommended."
@@ -15312,6 +15322,10 @@ msgstr "Snel Opslaan"
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "TEAM KLEUR MODUS"
+
+#~ msgctxt "game_options"
+#~ msgid "Color"
+#~ msgstr "Kleur"
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate a pak in the controller expansion port."
@@ -15474,6 +15488,10 @@ msgstr "Snel Opslaan"
 #~ msgstr "PS1 Analoge Joystick"
 
 #~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "Uitgeschakeld (Standaard)"
+
+#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "Per pixel is het meest nauwkeurig, maar ook het meest veeleisend."
 
@@ -15530,6 +15548,10 @@ msgstr "Snel Opslaan"
 #~ "Reduces banding between colours and improves the preceived colour depth."
 #~ msgstr ""
 #~ "Vermindert banding tussen kleuren en verbetert de waargenomen kleurdiepte."
+
+#~ msgctxt "game_options"
+#~ msgid "Playstation 2 wheel type"
+#~ msgstr "Playstation 2 stuurwiel type"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -15590,6 +15612,18 @@ msgstr "Snel Opslaan"
 #~ "Schakel automatische frameskipping in voor prestaties op lagere systemen."
 
 #~ msgctxt "game_options"
+#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+#~ msgstr "De muiscursor in- of uitschakelen. Handig voor menu's van CG."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable mouse input for trackballs, spinners, lightguns (if no gun "
+#~ "connected), and similar controls"
+#~ msgstr ""
+#~ "Schakel muisinvoer in voor trackballs, spinners, lightguns (als er geen "
+#~ "gun is aangesloten) en soortgelijke bedieningselementen"
+
+#~ msgctxt "game_options"
 #~ msgid "BGFX for post-processing, accel/opengl for raw image."
 #~ msgstr "BGFX voor post-processing, accel/opengl voor raw image."
 
@@ -15630,6 +15664,12 @@ msgstr "Snel Opslaan"
 #~ msgstr "Schakelt Direct3D Automip-map generatie in."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
+#~ msgstr ""
+#~ "Less muis door Rawinput, laat 2 muizen toe voor 2 speler schiet spellen."
+
+#~ msgctxt "game_options"
 #~ msgid "Choose your console timezone."
 #~ msgstr "Kies de tijdzone van uw console."
 
@@ -15661,6 +15701,16 @@ msgstr "Snel Opslaan"
 #~ msgctxt "game_options"
 #~ msgid "OpenGLES (Default)"
 #~ msgstr "OpenGLES (Standaard)"
+
+#~ msgctxt "game_options"
+#~ msgid "Vsync"
+#~ msgstr "V-sync"
+
+#~ msgctxt "game_options"
+#~ msgid "Set the desired maximum refresh rate when Vsync is off."
+#~ msgstr ""
+#~ "Stel de gewenste maximale verversingssnelheid in wanneer Vsync is "
+#~ "uitgeschakeld."
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"

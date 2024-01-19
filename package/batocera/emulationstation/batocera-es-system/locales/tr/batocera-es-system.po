@@ -695,6 +695,18 @@ msgctxt "game_options"
 msgid "Disabled"
 msgstr "Devre dışı"
 
+#. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
+msgctxt "game_options"
+msgid ""
+"Automatically sets aspect ratio to 16/9 for games that natively support it. "
+"2D elements like HUD/UI may be stretched."
+msgstr ""
+
+#. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
+msgctxt "game_options"
+msgid "AUTO WIDESCREEN"
+msgstr ""
+
 #. TRANSLATION: libretro/beetle-saturn, libretro/beetle-saturn, libretro/yabasanshiro, libretro/yabasanshiro
 msgctxt "game_options"
 msgid "Not all games support 3D pad."
@@ -3113,6 +3125,11 @@ msgid ""
 "Use Megadrive to automap inputs for a Megadrive style controller with a 6 "
 "button layout."
 msgstr ""
+
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, ...
+msgctxt "game_options"
+msgid "CONTROLLERS"
+msgstr "KONTROLCÜLER"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
@@ -8443,11 +8460,6 @@ msgctxt "game_options"
 msgid "Map your controller to an emulated Wii Remote."
 msgstr ""
 
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, ...
-msgctxt "game_options"
-msgid "CONTROLLERS"
-msgstr "KONTROLCÜLER"
-
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "EMULATE WII REMOTE"
@@ -12315,6 +12327,57 @@ msgctxt "game_options"
 msgid "128MiB"
 msgstr "128MiB"
 
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid ""
+"Nat to access internet from xemu machine. Udp for System Link. Default "
+"(Auto) disables network access."
+msgstr ""
+
+#. TRANSLATION: xemu, xemu, xemu, xemu, xemu, ...
+msgctxt "game_options"
+msgid "NETWORK"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "NETWORK TYPE"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "NAT"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "UDP Tunnel"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid ""
+"Destination address and port to forward packets to. Leave this empty if you "
+"want to enter it manually in the xemu.toml configuration file."
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "UDP REMOTE ADDRESS"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid ""
+"Local address and port to receive packets on. Leave this empty if you want "
+"to enter it manually in the xemu.toml configuration file."
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "UDP BIND ADDRESS"
+msgstr ""
+
 #. TRANSLATION: sonic2013
 msgctxt "game_options"
 msgid "Portugese"
@@ -14063,7 +14126,14 @@ msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
-msgid "VKD3D (D3D12 to Vulkan)"
+msgid ""
+"Choose which graphics API library to use. D3D12 may yield better results "
+"with faster GPUs."
+msgstr ""
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
+msgid "D3D12 (Default)"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -14119,26 +14189,6 @@ msgstr "Kullanıcı arabirimi istemlerini etkinleştir(Varsayılan)"
 msgctxt "game_options"
 msgid "Disable UI prompts"
 msgstr "Kullanıcı arabirimi istemlerini devre dışı bırak"
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Select which version of wine to use"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "WINE EMULATOR"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "WINE NATIVE"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "PROTON"
-msgstr ""
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -15004,85 +15054,6 @@ msgid "Quick Save"
 msgstr "Hızlı Kaydet"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Reserve a non dead zone at the center of the wheel to go straight ahead "
-#~ "(in degrees)"
-#~ msgstr ""
-#~ "İlerlemek için tekelegin merkezinde ölü olmayan bölge oluşturun (derece)"
-
-#~ msgctxt "game_options"
-#~ msgid "Game Boy Color"
-#~ msgstr "Game Boy Rengi"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer"
-#~ msgstr "Renkli Bilgisayar"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 2"
-#~ msgstr "Renkli Bilgisayar 2"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 2B"
-#~ msgstr "Color Computer 2B"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 3 (NTSC) (Default)"
-#~ msgstr "Renkli Bilgisayar 3 (NTSC) (Varsayılan)"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 3 (PAL)"
-#~ msgstr "Renkli Bilgisayar 3 (PAL)"
-
-#~ msgctxt "game_options"
-#~ msgid "Acron Electron ROMs"
-#~ msgstr "Acron Electron ROMları"
-
-#~ msgctxt "game_options"
-#~ msgid "Color"
-#~ msgstr "Renk"
-
-#~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "Devre Dışı (Varsayılan)"
-
-#~ msgctxt "game_options"
-#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
-#~ msgstr ""
-#~ "Fare imlecini etkinleştirin veya devre dışı bırakın. CG'nin menüleri için "
-#~ "kullanışlıdır."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
-#~ "Color)"
-#~ msgstr ""
-#~ "Mac modelini seç (Mac Plus for B&W veya Mac LC 3 for Color önerilir)"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable mouse input for trackballs, spinners, lightguns (if no gun "
-#~ "connected), and similar controls"
-#~ msgstr ""
-#~ "Trackball, spinner, silah (eğer bağlı değilse) ve benzer kontroller için "
-#~ "fare girişini etkinleştir"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
-#~ msgstr ""
-#~ "2 oyunculu atış oyunları için 2 fareye izin veren ham girdi aracılığıyla "
-#~ "fareyi oku."
-
-#~ msgctxt "game_options"
-#~ msgid "Set the desired maximum refresh rate when Vsync is off."
-#~ msgstr "Vsync kapalıyken istediğiniz maksimum yenileme hızını ayarlayın."
-
-#~ msgctxt "game_options"
-#~ msgid "Vsync"
-#~ msgstr "Vsync"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Çekirdek destekliyorsa, gerçek zamanlı olarak geri sarmak için geçmiş "
@@ -15095,6 +15066,13 @@ msgstr "Hızlı Kaydet"
 #~ msgstr ""
 #~ "Oyun sırasında, ekrandaki metni çevirmek için Hotkey + R1'e basın. "
 #~ "Yalnızca libretro çekirdeklerinde."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Reserve a non dead zone at the center of the wheel to go straight ahead "
+#~ "(in degrees)"
+#~ msgstr ""
+#~ "İlerlemek için tekelegin merkezinde ölü olmayan bölge oluşturun (derece)"
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate Chroma 81 interface (colorization)."
@@ -15113,6 +15091,10 @@ msgstr "Hızlı Kaydet"
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
 #~ msgstr "Sağ analog çubuğa ikinci joystick gibi davranır."
+
+#~ msgctxt "game_options"
+#~ msgid "Game Boy Color"
+#~ msgstr "Game Boy Rengi"
 
 #~ msgctxt "game_options"
 #~ msgid "Useful for speedruns/glitches."
@@ -15254,6 +15236,37 @@ msgstr "Hızlı Kaydet"
 #~ msgstr "RENKLİ BİLGİSAYAR MODELİ"
 
 #~ msgctxt "game_options"
+#~ msgid "Color Computer"
+#~ msgstr "Renkli Bilgisayar"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2"
+#~ msgstr "Renkli Bilgisayar 2"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2B"
+#~ msgstr "Color Computer 2B"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 3 (NTSC) (Default)"
+#~ msgstr "Renkli Bilgisayar 3 (NTSC) (Varsayılan)"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 3 (PAL)"
+#~ msgstr "Renkli Bilgisayar 3 (PAL)"
+
+#~ msgctxt "game_options"
+#~ msgid "Acron Electron ROMs"
+#~ msgstr "Acron Electron ROMları"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
+#~ "Color)"
+#~ msgstr ""
+#~ "Mac modelini seç (Mac Plus for B&W veya Mac LC 3 for Color önerilir)"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Install the image reader card to read disk image files (Mac IIx only). "
 #~ "Minimum 4MB ram size recommended."
@@ -15272,6 +15285,10 @@ msgstr "Hızlı Kaydet"
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "TAKIM RENGİ MODU"
+
+#~ msgctxt "game_options"
+#~ msgid "Color"
+#~ msgstr "Renk"
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate a pak in the controller expansion port."
@@ -15434,6 +15451,10 @@ msgstr "Hızlı Kaydet"
 #~ msgstr "PS1 Analog Joystick"
 
 #~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "Devre Dışı (Varsayılan)"
+
+#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "Piksel başına, en doğru ama aynı zamanda en ısrarcı olanıdır."
 
@@ -15548,6 +15569,20 @@ msgstr "Hızlı Kaydet"
 #~ "özelliğini etkinleştir."
 
 #~ msgctxt "game_options"
+#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+#~ msgstr ""
+#~ "Fare imlecini etkinleştirin veya devre dışı bırakın. CG'nin menüleri için "
+#~ "kullanışlıdır."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable mouse input for trackballs, spinners, lightguns (if no gun "
+#~ "connected), and similar controls"
+#~ msgstr ""
+#~ "Trackball, spinner, silah (eğer bağlı değilse) ve benzer kontroller için "
+#~ "fare girişini etkinleştir"
+
+#~ msgctxt "game_options"
 #~ msgid "BGFX for post-processing, accel/opengl for raw image."
 #~ msgstr "Son işleme için BGFX, ham görüntü için accel/opengl."
 
@@ -15588,6 +15623,13 @@ msgstr "Hızlı Kaydet"
 #~ msgstr "Direct3D Automip-map oluşturmayı etkinleştirir."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
+#~ msgstr ""
+#~ "2 oyunculu atış oyunları için 2 fareye izin veren ham girdi aracılığıyla "
+#~ "fareyi oku."
+
+#~ msgctxt "game_options"
 #~ msgid "Choose your console timezone."
 #~ msgstr "Konsolunuzun saat dilimini seç."
 
@@ -15618,6 +15660,14 @@ msgstr "Hızlı Kaydet"
 #~ msgctxt "game_options"
 #~ msgid "OpenGLES (Default)"
 #~ msgstr "OpenGLES (Varsayılan)"
+
+#~ msgctxt "game_options"
+#~ msgid "Vsync"
+#~ msgstr "Vsync"
+
+#~ msgctxt "game_options"
+#~ msgid "Set the desired maximum refresh rate when Vsync is off."
+#~ msgstr "Vsync kapalıyken istediğiniz maksimum yenileme hızını ayarlayın."
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"

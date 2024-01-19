@@ -696,6 +696,18 @@ msgctxt "game_options"
 msgid "Disabled"
 msgstr "Matikan"
 
+#. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
+msgctxt "game_options"
+msgid ""
+"Automatically sets aspect ratio to 16/9 for games that natively support it. "
+"2D elements like HUD/UI may be stretched."
+msgstr ""
+
+#. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
+msgctxt "game_options"
+msgid "AUTO WIDESCREEN"
+msgstr ""
+
 #. TRANSLATION: libretro/beetle-saturn, libretro/beetle-saturn, libretro/yabasanshiro, libretro/yabasanshiro
 msgctxt "game_options"
 msgid "Not all games support 3D pad."
@@ -3108,6 +3120,11 @@ msgctxt "game_options"
 msgid ""
 "Use Megadrive to automap inputs for a Megadrive style controller with a 6 "
 "button layout."
+msgstr ""
+
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, ...
+msgctxt "game_options"
+msgid "CONTROLLERS"
 msgstr ""
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
@@ -8420,11 +8437,6 @@ msgctxt "game_options"
 msgid "Map your controller to an emulated Wii Remote."
 msgstr ""
 
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, ...
-msgctxt "game_options"
-msgid "CONTROLLERS"
-msgstr ""
-
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "EMULATE WII REMOTE"
@@ -12226,6 +12238,57 @@ msgctxt "game_options"
 msgid "128MiB"
 msgstr ""
 
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid ""
+"Nat to access internet from xemu machine. Udp for System Link. Default "
+"(Auto) disables network access."
+msgstr ""
+
+#. TRANSLATION: xemu, xemu, xemu, xemu, xemu, ...
+msgctxt "game_options"
+msgid "NETWORK"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "NETWORK TYPE"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "NAT"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "UDP Tunnel"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid ""
+"Destination address and port to forward packets to. Leave this empty if you "
+"want to enter it manually in the xemu.toml configuration file."
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "UDP REMOTE ADDRESS"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid ""
+"Local address and port to receive packets on. Leave this empty if you want "
+"to enter it manually in the xemu.toml configuration file."
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "UDP BIND ADDRESS"
+msgstr ""
+
 #. TRANSLATION: sonic2013
 msgctxt "game_options"
 msgid "Portugese"
@@ -13960,7 +14023,14 @@ msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
-msgid "VKD3D (D3D12 to Vulkan)"
+msgid ""
+"Choose which graphics API library to use. D3D12 may yield better results "
+"with faster GPUs."
+msgstr ""
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
+msgid "D3D12 (Default)"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -14013,26 +14083,6 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Disable UI prompts"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Select which version of wine to use"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "WINE EMULATOR"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "WINE NATIVE"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "PROTON"
 msgstr ""
 
 #. TRANSLATION: xenia-canary
@@ -14895,65 +14945,6 @@ msgid "Quick Save"
 msgstr ""
 
 #~ msgctxt "game_options"
-#~ msgid "Game Boy Color"
-#~ msgstr "Game Boy Color"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer"
-#~ msgstr "Komputer Berwarna"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 2"
-#~ msgstr "Komputer Berwarna 2"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 2B"
-#~ msgstr "Komputer Berwarna 2B"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 3 (NTSC) (Default)"
-#~ msgstr "Komputer Berwarna 3 (NTSC) (Standar)"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 3 (PAL)"
-#~ msgstr "Komputer Berwarna 3 ()PAL)"
-
-#~ msgctxt "game_options"
-#~ msgid "Acron Electron ROMs"
-#~ msgstr "ROMs - Acron Electron"
-
-#~ msgctxt "game_options"
-#~ msgid "Color"
-#~ msgstr "Warna"
-
-#~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "Matikan (Standar)"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
-#~ "Color)"
-#~ msgstr ""
-#~ "Pilih model dari Mac (Rekomendasi adalah Mac Plus untuk B&W, Mac LC 3 "
-#~ "untuk Warna)"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable mouse input for trackballs, spinners, lightguns (if no gun "
-#~ "connected), and similar controls"
-#~ msgstr ""
-#~ "Aktifkan masukan mouse untuk trackball, spinner, lightgun (jika tidak ada "
-#~ "senjata terhubung), dan kontrol serupa"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
-#~ msgstr ""
-#~ "Membaca mouse melalui Rawinput, Dapat memakai 2 mouse untuk 2 pemain "
-#~ "dalam game menembak"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Simpan status sebelumnya untuk diputar ulang secara langsung, jika Core "
@@ -14983,6 +14974,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
 #~ msgstr "Perlakukan stik analog kanan sebagai joystick kedua"
+
+#~ msgctxt "game_options"
+#~ msgid "Game Boy Color"
+#~ msgstr "Game Boy Color"
 
 #~ msgctxt "game_options"
 #~ msgid "Useful for speedruns/glitches."
@@ -15121,6 +15116,38 @@ msgstr ""
 #~ msgstr "MODEL KOMPUTER BERWARNA"
 
 #~ msgctxt "game_options"
+#~ msgid "Color Computer"
+#~ msgstr "Komputer Berwarna"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2"
+#~ msgstr "Komputer Berwarna 2"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2B"
+#~ msgstr "Komputer Berwarna 2B"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 3 (NTSC) (Default)"
+#~ msgstr "Komputer Berwarna 3 (NTSC) (Standar)"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 3 (PAL)"
+#~ msgstr "Komputer Berwarna 3 ()PAL)"
+
+#~ msgctxt "game_options"
+#~ msgid "Acron Electron ROMs"
+#~ msgstr "ROMs - Acron Electron"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
+#~ "Color)"
+#~ msgstr ""
+#~ "Pilih model dari Mac (Rekomendasi adalah Mac Plus untuk B&W, Mac LC 3 "
+#~ "untuk Warna)"
+
+#~ msgctxt "game_options"
 #~ msgid "Analog Controller"
 #~ msgstr "Kontroler Analog"
 
@@ -15131,6 +15158,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "MODE WARNA ANGGOTA"
+
+#~ msgctxt "game_options"
+#~ msgid "Color"
+#~ msgstr "Warna"
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate a pak in the controller expansion port."
@@ -15261,6 +15292,10 @@ msgstr ""
 #~ msgstr "Analog Joystick - PS1"
 
 #~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "Matikan (Standar)"
+
+#~ msgctxt "game_options"
 #~ msgid "Per Strip"
 #~ msgstr "Setiap Strip"
 
@@ -15322,6 +15357,14 @@ msgstr ""
 #~ msgstr "Aktifkan frameskipping otomatis untuk perangkat spesifikasi rendah"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable mouse input for trackballs, spinners, lightguns (if no gun "
+#~ "connected), and similar controls"
+#~ msgstr ""
+#~ "Aktifkan masukan mouse untuk trackball, spinner, lightgun (jika tidak ada "
+#~ "senjata terhubung), dan kontrol serupa"
+
+#~ msgctxt "game_options"
 #~ msgid "BGFX for post-processing, accel/opengl for raw image."
 #~ msgstr ""
 #~ "BGFX untuk sebelum pemrosesan, accel/opengl untuk raw image (gambar "
@@ -15358,6 +15401,13 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Enables Direct3D Automip-map generation."
 #~ msgstr "Aktifkan pembuatan mipmap otomatis Direct3D"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
+#~ msgstr ""
+#~ "Membaca mouse melalui Rawinput, Dapat memakai 2 mouse untuk 2 pemain "
+#~ "dalam game menembak"
 
 #~ msgctxt "game_options"
 #~ msgid "Choose your console timezone."
