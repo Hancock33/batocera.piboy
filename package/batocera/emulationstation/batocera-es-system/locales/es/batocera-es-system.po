@@ -697,6 +697,18 @@ msgctxt "game_options"
 msgid "Disabled"
 msgstr "Desactivado"
 
+#. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
+msgctxt "game_options"
+msgid ""
+"Automatically sets aspect ratio to 16/9 for games that natively support it. "
+"2D elements like HUD/UI may be stretched."
+msgstr ""
+
+#. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
+msgctxt "game_options"
+msgid "AUTO WIDESCREEN"
+msgstr ""
+
 #. TRANSLATION: libretro/beetle-saturn, libretro/beetle-saturn, libretro/yabasanshiro, libretro/yabasanshiro
 msgctxt "game_options"
 msgid "Not all games support 3D pad."
@@ -3131,6 +3143,11 @@ msgid ""
 msgstr ""
 "Selecciona Megadrive para mapear automáticamente los botones para un mando "
 "de estilo Megadrive con 6 botones."
+
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, ...
+msgctxt "game_options"
+msgid "CONTROLLERS"
+msgstr "MANDOS"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
@@ -8471,11 +8488,6 @@ msgctxt "game_options"
 msgid "Map your controller to an emulated Wii Remote."
 msgstr ""
 
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, ...
-msgctxt "game_options"
-msgid "CONTROLLERS"
-msgstr "MANDOS"
-
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "EMULATE WII REMOTE"
@@ -12362,6 +12374,57 @@ msgctxt "game_options"
 msgid "128MiB"
 msgstr "128MiB"
 
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid ""
+"Nat to access internet from xemu machine. Udp for System Link. Default "
+"(Auto) disables network access."
+msgstr ""
+
+#. TRANSLATION: xemu, xemu, xemu, xemu, xemu, ...
+msgctxt "game_options"
+msgid "NETWORK"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "NETWORK TYPE"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "NAT"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "UDP Tunnel"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid ""
+"Destination address and port to forward packets to. Leave this empty if you "
+"want to enter it manually in the xemu.toml configuration file."
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "UDP REMOTE ADDRESS"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid ""
+"Local address and port to receive packets on. Leave this empty if you want "
+"to enter it manually in the xemu.toml configuration file."
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "UDP BIND ADDRESS"
+msgstr ""
+
 #. TRANSLATION: sonic2013
 msgctxt "game_options"
 msgid "Portugese"
@@ -14109,8 +14172,15 @@ msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
-msgid "VKD3D (D3D12 to Vulkan)"
-msgstr "VKD3D (D3D12 a Vulkan)"
+msgid ""
+"Choose which graphics API library to use. D3D12 may yield better results "
+"with faster GPUs."
+msgstr ""
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
+msgid "D3D12 (Default)"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -14165,26 +14235,6 @@ msgstr "Activadas (Defecto)"
 msgctxt "game_options"
 msgid "Disable UI prompts"
 msgstr "Desactivadas"
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Select which version of wine to use"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "WINE EMULATOR"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "WINE NATIVE"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "PROTON"
-msgstr ""
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -15054,92 +15104,6 @@ msgstr "Guardado rápido"
 #~ msgstr "105% (Precaución)"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Reserve a non dead zone at the center of the wheel to go straight ahead "
-#~ "(in degrees)"
-#~ msgstr ""
-#~ "Reserva una zona no muerta en el centro del volante para seguir recto (en "
-#~ "grados)"
-
-#~ msgctxt "game_options"
-#~ msgid "Game Boy Color"
-#~ msgstr "Game Boy Color"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer"
-#~ msgstr "Color Computer"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 2"
-#~ msgstr "Color Computer 2"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 2B"
-#~ msgstr "Color Computer 2B"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 3 (NTSC) (Default)"
-#~ msgstr "Color Computer 3 (NTSC) (Defecto)"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 3 (PAL)"
-#~ msgstr "Color Computer 3 (PAL)"
-
-#~ msgctxt "game_options"
-#~ msgid "Acron Electron ROMs"
-#~ msgstr "ROMs Acorn Electron"
-
-#~ msgctxt "game_options"
-#~ msgid "Color"
-#~ msgstr "Color"
-
-#~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "Desactivado (Defecto)"
-
-#~ msgctxt "game_options"
-#~ msgid "Playstation 2 wheel type"
-#~ msgstr "Tipo de volante de PlayStation 2"
-
-#~ msgctxt "game_options"
-#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
-#~ msgstr ""
-#~ "Habilita o deshabilita el cursor del mouse. Útil para los menús de los CG."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
-#~ "Color)"
-#~ msgstr ""
-#~ "Selecciona el modelo de Mac (Recomend. Mac Plus para ByN, Mac LC 3 para "
-#~ "Color)"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable mouse input for trackballs, spinners, lightguns (if no gun "
-#~ "connected), and similar controls"
-#~ msgstr ""
-#~ "Habilita la entrada del mouse para trackballs, spinners, lightguns (si no "
-#~ "hay una pistola conectada) y mandos similares"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
-#~ msgstr ""
-#~ "Lee el mouse a través de Rawinput, lo que permite 2 mouse para juegos de "
-#~ "disparos de 2 jugadores."
-
-#~ msgctxt "game_options"
-#~ msgid "Set the desired maximum refresh rate when Vsync is off."
-#~ msgstr ""
-#~ "Establezca la frecuencia de actualización máxima deseada cuando Vsync "
-#~ "esté desactivado."
-
-#~ msgctxt "game_options"
-#~ msgid "Vsync"
-#~ msgstr "Vsync"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Almacena estados pasados del juego en caché para rebobinar en tiempo "
@@ -15152,6 +15116,14 @@ msgstr "Guardado rápido"
 #~ msgstr ""
 #~ "Durante el juego, presiona la tecla HOTKEY + R1 para traducir el texto en "
 #~ "pantalla. Solo en núcleos libretro."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Reserve a non dead zone at the center of the wheel to go straight ahead "
+#~ "(in degrees)"
+#~ msgstr ""
+#~ "Reserva una zona no muerta en el centro del volante para seguir recto (en "
+#~ "grados)"
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate Chroma 81 interface (colorization)."
@@ -15170,6 +15142,10 @@ msgstr "Guardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
 #~ msgstr "Utilizar stick derecho del mando como segundo joystick."
+
+#~ msgctxt "game_options"
+#~ msgid "Game Boy Color"
+#~ msgstr "Game Boy Color"
 
 #~ msgctxt "game_options"
 #~ msgid "Useful for speedruns/glitches."
@@ -15313,6 +15289,38 @@ msgstr "Guardado rápido"
 #~ msgstr "MODELO DE COLOR COMPUTER"
 
 #~ msgctxt "game_options"
+#~ msgid "Color Computer"
+#~ msgstr "Color Computer"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2"
+#~ msgstr "Color Computer 2"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2B"
+#~ msgstr "Color Computer 2B"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 3 (NTSC) (Default)"
+#~ msgstr "Color Computer 3 (NTSC) (Defecto)"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 3 (PAL)"
+#~ msgstr "Color Computer 3 (PAL)"
+
+#~ msgctxt "game_options"
+#~ msgid "Acron Electron ROMs"
+#~ msgstr "ROMs Acorn Electron"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
+#~ "Color)"
+#~ msgstr ""
+#~ "Selecciona el modelo de Mac (Recomend. Mac Plus para ByN, Mac LC 3 para "
+#~ "Color)"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Install the image reader card to read disk image files (Mac IIx only). "
 #~ "Minimum 4MB ram size recommended."
@@ -15331,6 +15339,10 @@ msgstr "Guardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "MODO DE COLOR DEL EQUIPO"
+
+#~ msgctxt "game_options"
+#~ msgid "Color"
+#~ msgstr "Color"
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate a pak in the controller expansion port."
@@ -15496,6 +15508,10 @@ msgstr "Guardado rápido"
 #~ msgstr "Joystick analógico PS1 (stick)"
 
 #~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "Desactivado (Defecto)"
+
+#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr ""
 #~ "El modo 'Por Píxel' es el más preciso, pero también el más exigente."
@@ -15554,6 +15570,10 @@ msgstr "Guardado rápido"
 #~ msgstr ""
 #~ "Reduce las bandas entre colores y mejora la profundidad de color "
 #~ "percibida."
+
+#~ msgctxt "game_options"
+#~ msgid "Playstation 2 wheel type"
+#~ msgstr "Tipo de volante de PlayStation 2"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -15616,6 +15636,19 @@ msgstr "Guardado rápido"
 #~ "sistemas de gama baja."
 
 #~ msgctxt "game_options"
+#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+#~ msgstr ""
+#~ "Habilita o deshabilita el cursor del mouse. Útil para los menús de los CG."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable mouse input for trackballs, spinners, lightguns (if no gun "
+#~ "connected), and similar controls"
+#~ msgstr ""
+#~ "Habilita la entrada del mouse para trackballs, spinners, lightguns (si no "
+#~ "hay una pistola conectada) y mandos similares"
+
+#~ msgctxt "game_options"
 #~ msgid "BGFX for post-processing, accel/opengl for raw image."
 #~ msgstr "BGFX para posprocesamiento, accel/opengl para imagen raw."
 
@@ -15657,6 +15690,13 @@ msgstr "Guardado rápido"
 #~ msgstr "Habilita la generación Direct3D automática de Mipmaps."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
+#~ msgstr ""
+#~ "Lee el mouse a través de Rawinput, lo que permite 2 mouse para juegos de "
+#~ "disparos de 2 jugadores."
+
+#~ msgctxt "game_options"
 #~ msgid "Choose your console timezone."
 #~ msgstr "Selecciona la zona horaria de tu consola."
 
@@ -15687,6 +15727,16 @@ msgstr "Guardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "OpenGLES (Default)"
 #~ msgstr "OpenGLES (Defecto)"
+
+#~ msgctxt "game_options"
+#~ msgid "Vsync"
+#~ msgstr "Vsync"
+
+#~ msgctxt "game_options"
+#~ msgid "Set the desired maximum refresh rate when Vsync is off."
+#~ msgstr ""
+#~ "Establezca la frecuencia de actualización máxima deseada cuando Vsync "
+#~ "esté desactivado."
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
@@ -15795,6 +15845,10 @@ msgstr "Guardado rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rápido"
+
+#~ msgctxt "game_options"
+#~ msgid "VKD3D (D3D12 to Vulkan)"
+#~ msgstr "VKD3D (D3D12 a Vulkan)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
