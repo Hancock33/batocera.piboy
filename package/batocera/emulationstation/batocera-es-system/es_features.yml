@@ -13029,16 +13029,16 @@ xenia:
   cfeatures:
         xenia_api:
             prompt: GRAPHICS API
-            description: Choose which graphics API library to use.
+            description: Choose which graphics API library to use. D3D12 may yield better results with faster GPUs.
             choices:
-                "VKD3D (D3D12 to Vulkan)": D3D12
-                "Native Vulkan":           Vulkan
+                "D3D12 (Default)": D3D12
+                "Native Vulkan":   Vulkan
         xeniaLicense:
             prompt: XBOX LIVE ARCADE
             description: This option enables the ability to play Xbox Live Arcade games. May cause compatibility issues with non-XBLA games.
             choices:
-                "No licenses enabled":                     0
-                "XBLA license enabled (Default)":          1
+                "No licenses enabled":                      0
+                "XBLA license enabled (Default)":           1
                 "All possible licenses (Not recommended)": -1
         xeniaHeadless:
             prompt: UI PROMPTS
@@ -13065,13 +13065,6 @@ xenia:
                 "Turkish":           14
                 "Norwegian":         15
                 "Dutch":             16
-        xeniawine:
-          group: ADVANCED OPTIONS
-          prompt: WINE EMULATOR
-          description: Select which version of wine to use
-          choices:
-            "WINE NATIVE":      "lutris"
-            "PROTON":           "proton"
 
 xenia-canary:
   features: [padtokeyboard]
@@ -13106,10 +13099,10 @@ xenia-canary:
                 "1920x1080":          16
         xenia_api:
             prompt: GRAPHICS API
-            description: Choose which graphics API library to use.
+            description: Choose which graphics API library to use. D3D12 may yield better results with faster GPUs.
             choices:
-                "VKD3D (D3D12 to Vulkan)": D3D12
-                "Native Vulkan":           Vulkan
+                "D3D12 (Default)": D3D12
+                "Native Vulkan":   Vulkan
         xeniaHeadless:
             prompt: UI PROMPTS
             description: Choose to display UI prompts or accept defaults.
@@ -13141,13 +13134,6 @@ xenia-canary:
             choices:
                 "Disabled (Default)": false
                 "Enabled": true
-        xeniawine:
-          group: ADVANCED OPTIONS
-          prompt: WINE EMULATOR
-          description: Select which version of wine to use
-          choices:
-            "WINE NATIVE":      "lutris"
-            "PROTON":           "proton"
 
 yabasanshiro:
   features: [padtokeyboard]

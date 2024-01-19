@@ -1,11 +1,17 @@
 # 2024/02/xx - batocera.linux 39 - Painted Lady
+### Special Notes
+- Emulators using Wine now use the Glorious Eggroll custom runner for latest capabilities and compatibility.
+  Your previously saved games are still maintained in `/userdata/saves/` in their associated bottle for the afftected emulators Xenia, BigPemu, FPinball & Model2Emu.
+  Future WINE bottles are now provisioned here: `/userdata/system/wine-bottles` under their respective system name. Xbox360 emulators (Xenia & Xenai-Canary) have now moved to support VKD3D (D3D12 to Vulkan) for exanded compatibility by default with the previous native Vulkan available as an option.
+  New saves will be in `/userdata/saves/xbox360` where you can transfer your previous saves to continue gaming where you left off. You can then free up space by removing your previous WINE bottles from `userdata/saves` respectively after starting each emulator and forming the new WINE bottle accordingly.
+  If you have used squashfs for your Windows games you can choose to unsquash & recreate the bottle with the new runner.
 ### Hardware
 - Initial support for the AYN Loki MiniPro (Speakers not working)
 - Initial support for the Anbernic RG353V
 - Initial support for the ASUS ROG Ally
 - Initial support for the Raspberry Pi 5
 - Initial support for the Steam Deck OLED
-- Support for Thunderbolt 3 / USB4 eGPU chasis
+- Support for Thunderbolt 3 / USB4 eGPU chassis
 ### Added
 - New Powermode ES setting. Adjusts cpu governor/system power usage while in-game.
 - New TDP setting to adjust TDP wattage values of supported Ryzen Mobile Series CPU's per system or globally.
@@ -35,6 +41,9 @@
 - Sonic Mania port.
 - OpenBor 4 (7533 build)
 - Initial support for Retro Shooter Lightgun
+- Added zramswap service
+- Enable swap on rpi through rpi3 to improve suppport for low-memory
+  variants e.g. Zero 2W
 ### Fixed
 - Dolphin bug that prevented full range of analog trigger axis being used.
 - Flycast per pixel sorting option if renderer not explicitly set
@@ -60,6 +69,7 @@
 - Send hostname to DHCP server, and allow for dynamically configured hostname from DHCP
 - Streamlined x86_64 Secure Boot support
 - Wii gun games now 100% playable with light guns (based on 5 buttons mapping)
+- Enable performance governor by default on Raspberry_Pi_Zero_2_W_Rev_1_0
 ### Updated
 - Retroarch to 1.16.0.3
 - GroovyMAME 0.261 - Switchres 2.002z
@@ -148,7 +158,7 @@
 ### System
 - Linux kernel to 6.7
 - Mesa to 23.3.3
-- Proton to 8.0-4c
+- Proton & Lutris replaced by the Glorious Eggroll customer WINE runner
 - Wine Tricks to 20240105
 - FAudio to 23.10
 - Nvidia production driver to 545.29.06
@@ -164,10 +174,6 @@
 - XWayaland to 23.2.3
 - QT 6.6.1
 - Vulkan stack to support 1.3.275
-- Added zramswap service
-- Enable swap on rpi through rpi3 to improve suppport for low-memory
-  variants e.g. Zero 2W
-- Enable performance governor by default on Raspberry_Pi_Zero_2_W_Rev_1_0
 
 # 2023/10/16 - batocera.linux 38 - Blue Moon
 ### Hardware
