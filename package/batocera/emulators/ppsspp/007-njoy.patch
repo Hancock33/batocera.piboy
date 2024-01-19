@@ -73,10 +73,10 @@ index 50cc43c4c..9c287ade8 100644
  	// Deduplicate axis events. Pair is device, axis.
  	std::map<std::pair<InputDeviceID, InputAxis>, float> prevAxisValue_;
 diff --git a/SDL/SDLMain.cpp b/SDL/SDLMain.cpp
-index 7dccaf17a..4373b09ca 100644
+index 9416ca79a..53ddfc652 100644
 --- a/SDL/SDLMain.cpp
 +++ b/SDL/SDLMain.cpp
-@@ -1192,6 +1192,7 @@ int main(int argc, char *argv[]) {
+@@ -1138,6 +1138,7 @@ int main(int argc, char *argv[]) {
  	bool set_ipad = false;
  	float set_dpi = 0.0f;
  	float set_scale = 1.0f;
@@ -84,7 +84,7 @@ index 7dccaf17a..4373b09ca 100644
  
  	// Produce a new set of arguments with the ones we skip.
  	int remain_argc = 1;
-@@ -1210,6 +1211,8 @@ int main(int argc, char *argv[]) {
+@@ -1156,6 +1157,8 @@ int main(int argc, char *argv[]) {
  			set_dpi = parseFloat(argv[i]);
  		else if (set_scale == -2)
  			set_scale = parseFloat(argv[i]);
@@ -93,7 +93,7 @@ index 7dccaf17a..4373b09ca 100644
  		else if (!strcmp(argv[i],"--xres"))
  			set_xres = -2;
  		else if (!strcmp(argv[i],"--yres"))
-@@ -1222,6 +1225,8 @@ int main(int argc, char *argv[]) {
+@@ -1168,6 +1171,8 @@ int main(int argc, char *argv[]) {
  			set_ipad = true;
  		else if (!strcmp(argv[i],"--portrait"))
  			portrait = true;
@@ -102,7 +102,7 @@ index 7dccaf17a..4373b09ca 100644
  		else {
  			remain_argv[remain_argc++] = argv[i];
  		}
-@@ -1443,7 +1448,7 @@ int main(int argc, char *argv[]) {
+@@ -1389,7 +1394,7 @@ int main(int argc, char *argv[]) {
  	InitSDLAudioDevice();
  
  	if (joystick_enabled) {
