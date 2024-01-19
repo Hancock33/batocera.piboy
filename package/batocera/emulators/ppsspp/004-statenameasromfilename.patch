@@ -1,8 +1,8 @@
 diff --git a/Core/SaveState.cpp b/Core/SaveState.cpp
-index d12409a86..f3dd54ec8 100644
+index cfb71737d..ce7e74347 100644
 --- a/Core/SaveState.cpp
 +++ b/Core/SaveState.cpp
-@@ -527,7 +527,7 @@ namespace SaveState
+@@ -532,7 +532,7 @@ namespace SaveState
  
  	Path GenerateSaveSlotFilename(const Path &gameFilename, int slot, const char *extension)
  	{
