@@ -19,7 +19,7 @@ WINE_GE_CUSTOM_SUBDIR = proton-wine
 HOST_WINE_GE_CUSTOM_SUBDIR = proton-wine
 
 # Wine needs its own directory structure and tools for cross compiling
-WINE_GE_CUSTOM_CONF_OPTS = \
+WINE_GE_CUSTOM_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
 	--with-wine-tools=../../host-wine-ge-custom-$(WINE_GE_CUSTOM_VERSION)/proton-wine \
 	--disable-tests \
 	--without-capi \
