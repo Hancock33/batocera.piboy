@@ -46,6 +46,9 @@ def createXemuConfig(iniConfig, system, rom, playersControllers, gameResolution)
         iniConfig.add_section("input.bindings")
     if not iniConfig.has_section("net"):
         iniConfig.add_section("net")
+    if not iniConfig.has_section("net.udp"):
+        iniConfig.add_section("net.udp")
+        
 
     # Boot Animation Skip
     if system.isOptSet("xemu_bootanim"):
@@ -118,39 +121,15 @@ def createXemuConfig(iniConfig, system, rom, playersControllers, gameResolution)
             iniConfig.set("input.bindings", f"port{nplayer}", '"' + pad.guid + '"')
         nplayer = nplayer + 1
 
-    # Determine the current default network connection
-    #currentDefaultNetwork = defaultNetworkInterface()
-
-    #if currentDefaultNetwork:
-        ## Fill network section
-        #iniConfig.set("network", "enabled", "true")
-        #iniConfig.set("network", "backend", "pcap")
-        #iniConfig.set("network", "local_addr", "0.0.0.0:9368")
-        #iniConfig.set("network", "remote_addr", "1.2.3.4:9368")
-        #iniConfig.set("network", "pcap_iface", currentDefaultNetwork)
-    #else:
-        #iniConfig.set("network", "enabled", "false")
-        #iniConfig.set("network", "backend", "user")
-        #iniConfig.set("network", "local_addr", "0.0.0.0:9368")
-        #iniConfig.set("network", "remote_addr", "1.2.3.4:9368")
-
-    # Fill misc section
-    #iniConfig.set("misc", "user_token", "")
-
-#def defaultNetworkInterface():
-    ## This function returns the name of the first interface that routes to the "default" destination. If there is no such interface, return None instead.
-
-    #n = 0
-    ## Open the route network information.
-    #with open("/proc/net/route") as f:
-        #for line in f:
-            #n += 1
-            ## Check to make sure we are skipping over the first line (as it is just the header).
-            #if n > 1:
-                #words = line.split("\t")
-                ## If the "Destination" of the route is the default "00000000":
-                #if words[1] == "00000000":
-                    ## Return the name of that "Iface" and immediately exit this function:
-                    #return words[0]
-    ## Otherwise, this loop repeats for all the remaining routes. If none are found, return None.
-    #return None
+    # Network
+    # Documentation: https://github.com/xemu-project/xemu/blob/master/config_spec.yml
+    if system.isOptSet("xemu_networktype"):
+        iniConfig.set("net", "enable", "true")
+        iniConfig.set("net", "backend", '"' + system.config["xemu_networktype"] + '"')
+    else:
+        iniConfig.set("net", "enable", "false")
+    # Additionnal settings for udp: if nothing is entered in these fields, the xemu.toml is untouched
+    if system.isOptSet("xemu_udpremote"):
+        iniConfig.set("net.udp", "remote_addr", '"' + system.config["xemu_udpremote"] + '"')
+    if system.isOptSet("xemu_udpbind"):
+        iniConfig.set("net.udp", "bind_addr", '"' + system.config["xemu_udpbind"] + '"')

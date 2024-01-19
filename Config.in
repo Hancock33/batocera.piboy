@@ -573,6 +573,7 @@ menu "Utils"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/xosd/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/xwiimote/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/xxd/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/zramswap/Config.in"
 endmenu
 
 menu "Cases"
