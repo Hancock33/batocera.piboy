@@ -645,7 +645,7 @@ msgctxt "game_options"
 msgid "Use an alternate resolution. Some games need this."
 msgstr "Utiliser une autre résolution. Nécessaire pour certains jeux."
 
-#. TRANSLATION: libretro/atari800, libretro/uae4arm, vpinball
+#. TRANSLATION: libretro/atari800, libretro/uae4arm
 msgctxt "game_options"
 msgid "INTERNAL RESOLUTION"
 msgstr "RÉSOLUTION INTERNE"
@@ -3591,7 +3591,7 @@ msgctxt "game_options"
 msgid "480p"
 msgstr "480p"
 
-#. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, vpinball, yabasanshiro
+#. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, yabasanshiro
 msgctxt "game_options"
 msgid "720p"
 msgstr "720p"
@@ -12710,7 +12710,7 @@ msgctxt "game_options"
 msgid "6x (4320p/6480p)"
 msgstr "6x (4320p/6480p)"
 
-#. TRANSLATION: yuzu, ryujinx, vpinball
+#. TRANSLATION: yuzu, ryujinx
 msgctxt "game_options"
 msgid "16:9 (Default)"
 msgstr "16:9 (par défaut)"
@@ -13778,6 +13778,255 @@ msgctxt "game_options"
 msgid "PLAY INTRO MOVIE"
 msgstr "JOUER LE FILM D'INTRO"
 
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "200p"
+msgstr "200p"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "400p"
+msgstr "400p"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "600p"
+msgstr "600p"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "768p"
+msgstr "768p"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "800p"
+msgstr "800p"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "960p"
+msgstr "960p"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "144 fps"
+msgstr "144 fps"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "240 fps"
+msgstr "240 fps"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Choose which graphics renderer to use."
+msgstr "Choisir le moteur graphique de rendu à utiliser."
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "GRAPHICS RENDERER"
+msgstr "MOTEUR GRAPHIQUE"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Classic Software"
+msgstr "Logiciel classique"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "GPU / OpenGL (Default)"
+msgstr "GPU / OpenGL (par défaut)"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "ENABLE TRUE COLOUR"
+msgstr "ACTIVER LES VRAIES COULEURS"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "ENABLE BILINEAR FILTER"
+msgstr "ACTIVER LE FILTRE BI-LINÉAIRE"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "ENABLE MIPMAPPING"
+msgstr "ACTIVER LE MIPMAPPING"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "ENABLE CROSSHAIR"
+msgstr "ACTIVER LE RÉTICULE"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Choose to use Bloom post processing."
+msgstr "Choisir d'utiliser le filtre de rendu Bloom"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "ENABLE BLOOM"
+msgstr "ACTIVER BLOOM"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Enable / Disable sound in menus."
+msgstr "Activer ou pas les sons dans les menus."
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "MENU SOUNDS"
+msgstr "SONS DANS LES MENUS"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Enable 16-channel iMuse Digital Audio."
+msgstr "Activer la sortie audio iMuse 16 pistes."
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "DIGITAL AUDIO"
+msgstr "AUDIO NUMÉRIQUE"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Enable / Disable fight music."
+msgstr "Activer ou pas la musique des combats."
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "FIGHT MUSIC"
+msgstr "MUSIQUE DES COMBATS"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Enable / Disable automatic aiming."
+msgstr "Activer ou pas la visée automatique."
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "AUTO AIM"
+msgstr "VISÉE AUTOMATIQUE"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Enable / Disable showing secret found messages."
+msgstr "Afficher ou pas les messages secrets trouvés."
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "SHOW SECRET MESSAGES"
+msgstr "MESSAGES SECRETS"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "AUTOMATICALLY RUN"
+msgstr "COURS AUTOMATIQUEMENT"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Bobba Fett Face Player Fix"
+msgstr "Patch pour le visage de Bobba Fett."
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "BOBBA FETT FIX"
+msgstr "PATCH BOBBA FETT"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "SMOOTH VUES"
+msgstr "VUES FLUIDES"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Choose to enable or disable cutscenes."
+msgstr "Afficher ou pas les cinématiques."
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "SKIP CUTSCENES"
+msgstr "SAUTE LES CINÉMATIQUES"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Show All"
+msgstr "Toutes les montrer"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Skip Initial"
+msgstr "Sauter la première"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Skip All"
+msgstr "Les sauter toutes"
+
+#. TRANSLATION: thextech
+msgctxt "game_options"
+msgid "On (default)"
+msgstr "Activé (par défaut)"
+
+#. TRANSLATION: thextech
+msgctxt "game_options"
+msgid "Better performance with hardware rendering."
+msgstr "Meilleures performances avec le rendu matériel."
+
+#. TRANSLATION: thextech
+msgctxt "game_options"
+msgid "Hardware (default)"
+msgstr "Matériel (par défaut)"
+
+#. TRANSLATION: thextech
+msgctxt "game_options"
+msgid "VSync"
+msgstr ""
+
+#. TRANSLATION: virtualjaguar
+msgctxt "game_options"
+msgid "Enable the Digital Sound Processor."
+msgstr ""
+
+#. TRANSLATION: virtualjaguar
+msgctxt "game_options"
+msgid "Use the DSP pipelined core."
+msgstr ""
+
+#. TRANSLATION: virtualjaguar
+msgctxt "game_options"
+msgid "DSP PIPELINED CORE"
+msgstr ""
+
+#. TRANSLATION: vita3k
+msgctxt "game_options"
+msgid ""
+"Speed hack, enable to disable surface syncing between CPU and GPU. Surface "
+"syncing is needed by a few games."
+msgstr ""
+"Hack pour les performances, en empêchant la synchro de surface entre le CPU "
+"et le GPU. La synchro de surface n'est requise que pour quelques jeux."
+
+#. TRANSLATION: vita3k
+msgctxt "game_options"
+msgid "DISABLE SURFACE SYNC"
+msgstr "DÉSACTIVER LA SYNCHRO DE SURFACE"
+
+#. TRANSLATION: vita3k
+msgctxt "game_options"
+msgid "The image will be softer which could help with aliasing."
+msgstr "L'image sera plus légère, ce qui peut aider avec le crénelage."
+
+#. TRANSLATION: vita3k
+msgctxt "game_options"
+msgid "LINEAR FILTERING"
+msgstr "FILTRAGE LINÉAIRE"
+
+#. TRANSLATION: vita3k
+msgctxt "game_options"
+msgid "Anti-aliasing is a technique for smoothing out jagged edges."
+msgstr "L'anti-crénelage est une méthode pour diminuer l'effet d'escalier."
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Provides a ball trail to makes the ball easier to follow."
@@ -14071,375 +14320,6 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "PER TABLE FOLDER"
-msgstr ""
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "200p"
-msgstr "200p"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "400p"
-msgstr "400p"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "600p"
-msgstr "600p"
-
-#. TRANSLATION: theforceengine, vpinball
-msgctxt "game_options"
-msgid "768p"
-msgstr "768p"
-
-#. TRANSLATION: theforceengine, vpinball
-msgctxt "game_options"
-msgid "800p"
-msgstr "800p"
-
-#. TRANSLATION: theforceengine, vpinball
-msgctxt "game_options"
-msgid "960p"
-msgstr "960p"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "144 fps"
-msgstr "144 fps"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "240 fps"
-msgstr "240 fps"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Choose which graphics renderer to use."
-msgstr "Choisir le moteur graphique de rendu à utiliser."
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "GRAPHICS RENDERER"
-msgstr "MOTEUR GRAPHIQUE"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Classic Software"
-msgstr "Logiciel classique"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "GPU / OpenGL (Default)"
-msgstr "GPU / OpenGL (par défaut)"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "ENABLE TRUE COLOUR"
-msgstr "ACTIVER LES VRAIES COULEURS"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "ENABLE BILINEAR FILTER"
-msgstr "ACTIVER LE FILTRE BI-LINÉAIRE"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "ENABLE MIPMAPPING"
-msgstr "ACTIVER LE MIPMAPPING"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "ENABLE CROSSHAIR"
-msgstr "ACTIVER LE RÉTICULE"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Choose to use Bloom post processing."
-msgstr "Choisir d'utiliser le filtre de rendu Bloom"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "ENABLE BLOOM"
-msgstr "ACTIVER BLOOM"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Enable / Disable sound in menus."
-msgstr "Activer ou pas les sons dans les menus."
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "MENU SOUNDS"
-msgstr "SONS DANS LES MENUS"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Enable 16-channel iMuse Digital Audio."
-msgstr "Activer la sortie audio iMuse 16 pistes."
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "DIGITAL AUDIO"
-msgstr "AUDIO NUMÉRIQUE"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Enable / Disable fight music."
-msgstr "Activer ou pas la musique des combats."
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "FIGHT MUSIC"
-msgstr "MUSIQUE DES COMBATS"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Enable / Disable automatic aiming."
-msgstr "Activer ou pas la visée automatique."
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "AUTO AIM"
-msgstr "VISÉE AUTOMATIQUE"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Enable / Disable showing secret found messages."
-msgstr "Afficher ou pas les messages secrets trouvés."
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "SHOW SECRET MESSAGES"
-msgstr "MESSAGES SECRETS"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "AUTOMATICALLY RUN"
-msgstr "COURS AUTOMATIQUEMENT"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Bobba Fett Face Player Fix"
-msgstr "Patch pour le visage de Bobba Fett."
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "BOBBA FETT FIX"
-msgstr "PATCH BOBBA FETT"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "SMOOTH VUES"
-msgstr "VUES FLUIDES"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Choose to enable or disable cutscenes."
-msgstr "Afficher ou pas les cinématiques."
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "SKIP CUTSCENES"
-msgstr "SAUTE LES CINÉMATIQUES"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Show All"
-msgstr "Toutes les montrer"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Skip Initial"
-msgstr "Sauter la première"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Skip All"
-msgstr "Les sauter toutes"
-
-#. TRANSLATION: thextech
-msgctxt "game_options"
-msgid "On (default)"
-msgstr "Activé (par défaut)"
-
-#. TRANSLATION: thextech
-msgctxt "game_options"
-msgid "Better performance with hardware rendering."
-msgstr "Meilleures performances avec le rendu matériel."
-
-#. TRANSLATION: thextech
-msgctxt "game_options"
-msgid "Hardware (default)"
-msgstr "Matériel (par défaut)"
-
-#. TRANSLATION: thextech
-msgctxt "game_options"
-msgid "VSync"
-msgstr ""
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Enable the Digital Sound Processor."
-msgstr ""
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Use the DSP pipelined core."
-msgstr ""
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "DSP PIPELINED CORE"
-msgstr ""
-
-#. TRANSLATION: vita3k
-msgctxt "game_options"
-msgid ""
-"Speed hack, enable to disable surface syncing between CPU and GPU. Surface "
-"syncing is needed by a few games."
-msgstr ""
-"Hack pour les performances, en empêchant la synchro de surface entre le CPU "
-"et le GPU. La synchro de surface n'est requise que pour quelques jeux."
-
-#. TRANSLATION: vita3k
-msgctxt "game_options"
-msgid "DISABLE SURFACE SYNC"
-msgstr "DÉSACTIVER LA SYNCHRO DE SURFACE"
-
-#. TRANSLATION: vita3k
-msgctxt "game_options"
-msgid "The image will be softer which could help with aliasing."
-msgstr "L'image sera plus légère, ce qui peut aider avec le crénelage."
-
-#. TRANSLATION: vita3k
-msgctxt "game_options"
-msgid "LINEAR FILTERING"
-msgstr "FILTRAGE LINÉAIRE"
-
-#. TRANSLATION: vita3k
-msgctxt "game_options"
-msgid "Anti-aliasing is a technique for smoothing out jagged edges."
-msgstr "L'anti-crénelage est une méthode pour diminuer l'effet d'escalier."
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "Makes the ball easier to follow."
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "BALL TRAIL"
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "0 (Default)"
-msgstr "0 (Par défaut)"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "Affects just the visual effect of nudging."
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "VISUAL NUDGE STRENGTH"
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "0 (No Visual Effect)"
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "Maximum Framerate."
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "MAX FRAMERATE"
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "0 (Defaults Unlimited)"
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid ""
-"Sync the frame rate with the refresh rate of your monitor. None for lower "
-"input latency but video tearing. Vertical Sync to avoid video tearing, but "
-"with higher input latency. Adaptive Sync (Default) synchronizes on video "
-"sync, except for late frames (below target FPS) which are displayed "
-"immediately, also has higher input latency."
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "Vertical Sync"
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "Adaptive Sync (Default)"
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "Big Impact on Performances (Press F11 in game to display FPS)."
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "PRESETS"
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "Default Settings"
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "Low-end Computer"
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "High-end Computer"
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "Rendering resolution."
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "DISPLAY RATIO"
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "You need to also check if the table rom has its own settings."
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "MUSIC VOLUME"
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "Mechanical sounds of the table."
-msgstr ""
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "SOUND VOLUME"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -17066,6 +16946,10 @@ msgstr "Sauvegarde rapide"
 #~ msgctxt "game_options"
 #~ msgid "May help to fix choppy audio on weaker CPUs."
 #~ msgstr "Permet de corriger les problèmes audios sur certains CPUs faibles."
+
+#~ msgctxt "game_options"
+#~ msgid "0 (Default)"
+#~ msgstr "0 (Par défaut)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
