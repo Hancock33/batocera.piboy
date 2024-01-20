@@ -28,7 +28,7 @@ class XeniaGenerator(Generator):
             dest_path = os.path.join(dest_dir, file)
             # Copy and overwrite the files from source to destination
             shutil.copy2(src_path, dest_path)
-    
+
     def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         wineprefix = '/userdata/system/wine-bottles/xbox360'
         wineBinary = '/usr/wine/ge-custom/bin/wine64'
@@ -49,7 +49,7 @@ class XeniaGenerator(Generator):
             os.makedirs(xeniaCache)
         if not os.path.exists(xeniaSaves):
             os.makedirs(xeniaSaves)
-        
+
         # create dir & copy xenia exe to wine bottle as necessary
         if not os.path.exists(emupath):
             shutil.copytree('/usr/xenia', emupath)
@@ -63,7 +63,7 @@ class XeniaGenerator(Generator):
             shutil.copytree('/usr/xenia-canary', canarypath, dirs_exist_ok=True)
         if not os.path.exists(canarypath + '/patches'):
             shutil.copytree('/usr/xenia-canary', canarypath, dirs_exist_ok=True)
-        
+
         # create portable txt file to try & stop file spam
         if not os.path.exists(emupath + '/portable.txt'):
             with open(emupath + '/portable.txt', 'w') as fp:
@@ -71,7 +71,7 @@ class XeniaGenerator(Generator):
         if not os.path.exists(canarypath + '/portable.txt'):
             with open(canarypath + '/portable.txt', 'w') as fp:
                 pass
-        
+
         if not os.path.exists(wineprefix + "/vkd3d.done"):
             cmd = ["/usr/wine/winetricks", "-q", "vkd3d"]
             env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
@@ -134,7 +134,7 @@ class XeniaGenerator(Generator):
             else:
                 eslog.error(f'Disc installation/XBLA title {firstLine} from {rom} not found, check path or filename.')
             openFile.close()
-        
+
         # adjust the config toml file accordingly
         config = {}
         if core == 'xenia-canary':
@@ -144,7 +144,7 @@ class XeniaGenerator(Generator):
         if os.path.isfile(toml_file):
             with open(toml_file) as f:
                 config = toml.load(f)
-        
+
         # [ Now adjust the config file defaults & options we want ]
         # add node CPU
         if 'CPU' not in config:
@@ -202,7 +202,7 @@ class XeniaGenerator(Generator):
                 'vsync_fps': 60,
                 'query_occlusion_fake_sample_count': 0
             }
-                                
+
         # add node General
         if 'General' not in config:
             config['General'] = {}
@@ -261,17 +261,17 @@ class XeniaGenerator(Generator):
             config['XConfig'] = {'user_language': int(system.config['xeniaLanguage'])}
         else:
             config['XConfig'] = {'user_language': 1}
-        
+
         # now write the updated toml
         with open(toml_file, 'w') as f:
             toml.dump(config, f)
-        
+
         # handle patches files to set all matching toml files keys to true
         rom_name = os.path.splitext(os.path.basename(rom))[0]
         # simplify the name for matching
         rom_name = re.sub(r'\[.*?\]', '', rom_name)
         rom_name = re.sub(r'\(.*?\)', '', rom_name)
-        if system.isOptSet('xeniaPatches') and system.config['xeniaPatches'] == 'True':            
+        if system.isOptSet('xeniaPatches') and system.config['xeniaPatches'] == 'True':
             # pattern to search for matching .patch.toml files
             pattern = os.path.join(canarypath, 'patches', '*' + rom_name + '*.patch.toml')
             matching_files = [file_path for file_path in glob.glob(pattern) if re.search(rom_name, os.path.basename(file_path), re.IGNORECASE)]
@@ -290,7 +290,7 @@ class XeniaGenerator(Generator):
                         toml.dump(patch_toml, f)
             else:
                 eslog.debug(f'No patch file found for {rom_name}')
-        
+
         # now setup the command array for the emulator
         if rom == 'config':
             if core == 'xenia-canary':
@@ -302,7 +302,7 @@ class XeniaGenerator(Generator):
                 commandArray = [wineBinary, canarypath + '/xenia_canary.exe', 'z:' + rom]
             else:
                 commandArray = [wineBinary, emupath + '/xenia.exe', 'z:' + rom]
-        
+
         environment={
                 'WINEPREFIX': wineprefix,
                 'LD_LIBRARY_PATH': '/usr/lib:/lib32:/usr/wine/ge-custom/lib/wine',
@@ -315,7 +315,7 @@ class XeniaGenerator(Generator):
                 'PIPEWIRE_MODULE_DIR': '/usr/lib/pipewire-0.3:/lib32/pipewire-0.3',
                 'VKD3D_SHADER_CACHE_PATH': xeniaCache
             }
-        
+
         # ensure nvidia driver used for vulkan
         if os.path.exists("/var/tmp/nvidia.prime"):
             environment.update(
@@ -324,9 +324,9 @@ class XeniaGenerator(Generator):
                     'VK_LAYER_PATH': '/usr/share/vulkan/explicit_layer.d'
                 }
             )
-        
+
         return Command.Command(array=commandArray, env=environment)
-    
+
     # Show mouse on screen when needed
     # xenia auto-hides
     def getMouseMode(self, config, rom):
