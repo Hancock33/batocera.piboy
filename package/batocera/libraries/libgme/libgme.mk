@@ -3,9 +3,9 @@
 # libgme
 #
 ################################################################################
-# Version: Commits on 08 Jul, 2022
-LIBGME_VERSION = 6cd4bdb69be304f58c9253fb08b8362f541b3b4b
-LIBGME_SITE = https://bitbucket.org/mpyne/game-music-emu.git
+# Version: Commits on 03 Oct, 2023
+LIBGME_VERSION = 0.6.3
+LIBGME_SITE = https://github.com/libgme/game-music-emu.git
 LIBGME_SITE_METHOD=git
 LIBGME_GIT_SUBMODULES=YES
 LIBGME_INSTALL_STAGING = YES

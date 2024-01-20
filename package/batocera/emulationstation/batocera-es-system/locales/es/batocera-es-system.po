@@ -647,7 +647,7 @@ msgctxt "game_options"
 msgid "Use an alternate resolution. Some games need this."
 msgstr "Usa una resolución alternativa. Necesario en algunos juegos."
 
-#. TRANSLATION: libretro/atari800, libretro/uae4arm, vpinball
+#. TRANSLATION: libretro/atari800, libretro/uae4arm
 msgctxt "game_options"
 msgid "INTERNAL RESOLUTION"
 msgstr "RESOLUCIÓN INTERNA"
@@ -696,6 +696,18 @@ msgstr "Punto"
 msgctxt "game_options"
 msgid "Disabled"
 msgstr "Desactivado"
+
+#. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
+msgctxt "game_options"
+msgid ""
+"Automatically sets aspect ratio to 16/9 for games that natively support it. "
+"2D elements like HUD/UI may be stretched."
+msgstr ""
+
+#. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
+msgctxt "game_options"
+msgid "AUTO WIDESCREEN"
+msgstr ""
 
 #. TRANSLATION: libretro/beetle-saturn, libretro/beetle-saturn, libretro/yabasanshiro, libretro/yabasanshiro
 msgctxt "game_options"
@@ -3132,6 +3144,11 @@ msgstr ""
 "Selecciona Megadrive para mapear automáticamente los botones para un mando "
 "de estilo Megadrive con 6 botones."
 
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, ...
+msgctxt "game_options"
+msgid "CONTROLLERS"
+msgstr "MANDOS"
+
 #. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
 msgid "CONTROLLER 1 INPUT MAPPING"
@@ -3585,7 +3602,7 @@ msgctxt "game_options"
 msgid "480p"
 msgstr "480p"
 
-#. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, vpinball, yabasanshiro
+#. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, yabasanshiro
 msgctxt "game_options"
 msgid "720p"
 msgstr "720p"
@@ -8471,11 +8488,6 @@ msgctxt "game_options"
 msgid "Map your controller to an emulated Wii Remote."
 msgstr ""
 
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, ...
-msgctxt "game_options"
-msgid "CONTROLLERS"
-msgstr "MANDOS"
-
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "EMULATE WII REMOTE"
@@ -12362,6 +12374,57 @@ msgctxt "game_options"
 msgid "128MiB"
 msgstr "128MiB"
 
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid ""
+"Nat to access internet from xemu machine. Udp for System Link. Default "
+"(Auto) disables network access."
+msgstr ""
+
+#. TRANSLATION: xemu, xemu, xemu, xemu, xemu, ...
+msgctxt "game_options"
+msgid "NETWORK"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "NETWORK TYPE"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "NAT"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "UDP Tunnel"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid ""
+"Destination address and port to forward packets to. Leave this empty if you "
+"want to enter it manually in the xemu.toml configuration file."
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "UDP REMOTE ADDRESS"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid ""
+"Local address and port to receive packets on. Leave this empty if you want "
+"to enter it manually in the xemu.toml configuration file."
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "UDP BIND ADDRESS"
+msgstr ""
+
 #. TRANSLATION: sonic2013
 msgctxt "game_options"
 msgid "Portugese"
@@ -12666,7 +12729,7 @@ msgctxt "game_options"
 msgid "6x (4320p/6480p)"
 msgstr "6x (4320p/6480p)"
 
-#. TRANSLATION: yuzu, ryujinx, vpinball
+#. TRANSLATION: yuzu, ryujinx
 msgctxt "game_options"
 msgid "16:9 (Default)"
 msgstr "16:9 (Defecto)"
@@ -13751,17 +13814,17 @@ msgctxt "game_options"
 msgid "600p"
 msgstr "600p"
 
-#. TRANSLATION: theforceengine, vpinball
+#. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "768p"
 msgstr "768p"
 
-#. TRANSLATION: theforceengine, vpinball
+#. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "800p"
 msgstr "800p"
 
-#. TRANSLATION: theforceengine, vpinball
+#. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "960p"
 msgstr "960p"
@@ -13989,17 +14052,17 @@ msgstr "Antialiasing es una técnica para suavizar los bordes irregulares."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "Makes the ball easier to follow."
+msgid "Provides a ball trail to makes the ball easier to follow."
 msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "BALL TRAIL"
+msgid "BALL TRAIL STRENGTH"
 msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "0 (Default)"
+msgid "0% (Default)"
 msgstr ""
 
 #. TRANSLATION: vpinball
@@ -14019,12 +14082,12 @@ msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "Maximum Framerate."
+msgid "Framerate limiter to reduce CPU utilisation."
 msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "MAX FRAMERATE"
+msgid "MAXIMUM FRAMERATE"
 msgstr ""
 
 #. TRANSLATION: vpinball
@@ -14035,11 +14098,8 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Sync the frame rate with the refresh rate of your monitor. None for lower "
-"input latency but video tearing. Vertical Sync to avoid video tearing, but "
-"with higher input latency. Adaptive Sync (Default) synchronizes on video "
-"sync, except for late frames (below target FPS) which are displayed "
-"immediately, also has higher input latency."
+"Fix screen tearing. Adaptive Sync (Default) synchronizes on video sync, "
+"except for late frames (below target FPS) which are displayed immediately."
 msgstr ""
 
 #. TRANSLATION: vpinball
@@ -14054,17 +14114,19 @@ msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "Big Impact on Performances (Press F11 in game to display FPS)."
+msgid ""
+"Presets which can improve performance without manually editing the VPinballX."
+"ini file to fine tune performance."
 msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "PRESETS"
+msgid "PERFORMANCE PRESETS"
 msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "Default Settings"
+msgid "Default Performance Settings"
 msgstr ""
 
 #. TRANSLATION: vpinball
@@ -14079,17 +14141,166 @@ msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "Rendering resolution."
+msgid "Manual (Default)"
 msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "DISPLAY RATIO"
+msgid "Alternative Coloured Dot Matrix Display (needs additional file)."
 msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "You need to also check if the table rom has its own settings."
+msgid "ALTCOLOR"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"Extra DMD (Dot Matrix Display) window to display the score for tables with a "
+"pinmame rom."
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
+msgctxt "game_options"
+msgid "PINMAME DMD"
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball, vpinball
+msgctxt "game_options"
+msgid "Horizontal position (in percentage of the screen width)."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "PINMAME DMD X"
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball, vpinball
+msgctxt "game_options"
+msgid "Vertical position (in percentage of the screen height)."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "PINMAME DMD Y"
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball, vpinball
+msgctxt "game_options"
+msgid "Horizontal width (in percentage of the screen width)."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "PINMAME DMD WIDTH"
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball, vpinball
+msgctxt "game_options"
+msgid "Vertical height (in percentage of the screen height)."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "PINMAME DMD HEIGHT"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"Extra DMD (Dot Matrix Display) window to display the score for tables "
+"without a rom."
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
+msgctxt "game_options"
+msgid "FLEX DMD"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "FLEX DMD X"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "FLEX DMD Y"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "FLEX DMD WIDTH"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "FLEX DMD HEIGHT"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Upright glass panel displaying some illuminated artwork."
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
+msgctxt "game_options"
+msgid "BACKGLASS (B2S)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "BACKGLASS X"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "BACKGLASS Y"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "BACKGLASS WIDTH"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "BACKGLASS HEIGHT"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Hides the Extra DMD (Dot Matrix Display) integrated in the Backglass."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "BACKGLASS DMD HIDE"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "B2S DMD X"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "B2S DMD Y"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "B2S DMD WIDTH"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "B2S DMD HEIGHT"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Adjust the music volume. Some tables may have its own settings."
 msgstr ""
 
 #. TRANSLATION: vpinball
@@ -14099,7 +14310,7 @@ msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "Mechanical sounds of the table."
+msgid "Adjust the mechanical sounds of the table."
 msgstr ""
 
 #. TRANSLATION: vpinball
@@ -14107,10 +14318,44 @@ msgctxt "game_options"
 msgid "SOUND VOLUME"
 msgstr ""
 
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Alternative sounds for the table (needs additional files)."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "ALTERNATIVE SOUND"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"Per Table Folder requires all files to be in the associated rom table "
+"folder. If disabled, consult the Wiki for further details."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "FOLDERS ORGANISATION"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "PER TABLE FOLDER"
+msgstr ""
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
-msgid "VKD3D (D3D12 to Vulkan)"
-msgstr "VKD3D (D3D12 a Vulkan)"
+msgid ""
+"Choose which graphics API library to use. D3D12 may yield better results "
+"with faster GPUs."
+msgstr ""
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
+msgid "D3D12 (Default)"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -14165,26 +14410,6 @@ msgstr "Activadas (Defecto)"
 msgctxt "game_options"
 msgid "Disable UI prompts"
 msgstr "Desactivadas"
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Select which version of wine to use"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "WINE EMULATOR"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "WINE NATIVE"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "PROTON"
-msgstr ""
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -15054,92 +15279,6 @@ msgstr "Guardado rápido"
 #~ msgstr "105% (Precaución)"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Reserve a non dead zone at the center of the wheel to go straight ahead "
-#~ "(in degrees)"
-#~ msgstr ""
-#~ "Reserva una zona no muerta en el centro del volante para seguir recto (en "
-#~ "grados)"
-
-#~ msgctxt "game_options"
-#~ msgid "Game Boy Color"
-#~ msgstr "Game Boy Color"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer"
-#~ msgstr "Color Computer"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 2"
-#~ msgstr "Color Computer 2"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 2B"
-#~ msgstr "Color Computer 2B"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 3 (NTSC) (Default)"
-#~ msgstr "Color Computer 3 (NTSC) (Defecto)"
-
-#~ msgctxt "game_options"
-#~ msgid "Color Computer 3 (PAL)"
-#~ msgstr "Color Computer 3 (PAL)"
-
-#~ msgctxt "game_options"
-#~ msgid "Acron Electron ROMs"
-#~ msgstr "ROMs Acorn Electron"
-
-#~ msgctxt "game_options"
-#~ msgid "Color"
-#~ msgstr "Color"
-
-#~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "Desactivado (Defecto)"
-
-#~ msgctxt "game_options"
-#~ msgid "Playstation 2 wheel type"
-#~ msgstr "Tipo de volante de PlayStation 2"
-
-#~ msgctxt "game_options"
-#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
-#~ msgstr ""
-#~ "Habilita o deshabilita el cursor del mouse. Útil para los menús de los CG."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
-#~ "Color)"
-#~ msgstr ""
-#~ "Selecciona el modelo de Mac (Recomend. Mac Plus para ByN, Mac LC 3 para "
-#~ "Color)"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable mouse input for trackballs, spinners, lightguns (if no gun "
-#~ "connected), and similar controls"
-#~ msgstr ""
-#~ "Habilita la entrada del mouse para trackballs, spinners, lightguns (si no "
-#~ "hay una pistola conectada) y mandos similares"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
-#~ msgstr ""
-#~ "Lee el mouse a través de Rawinput, lo que permite 2 mouse para juegos de "
-#~ "disparos de 2 jugadores."
-
-#~ msgctxt "game_options"
-#~ msgid "Set the desired maximum refresh rate when Vsync is off."
-#~ msgstr ""
-#~ "Establezca la frecuencia de actualización máxima deseada cuando Vsync "
-#~ "esté desactivado."
-
-#~ msgctxt "game_options"
-#~ msgid "Vsync"
-#~ msgstr "Vsync"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Almacena estados pasados del juego en caché para rebobinar en tiempo "
@@ -15152,6 +15291,14 @@ msgstr "Guardado rápido"
 #~ msgstr ""
 #~ "Durante el juego, presiona la tecla HOTKEY + R1 para traducir el texto en "
 #~ "pantalla. Solo en núcleos libretro."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Reserve a non dead zone at the center of the wheel to go straight ahead "
+#~ "(in degrees)"
+#~ msgstr ""
+#~ "Reserva una zona no muerta en el centro del volante para seguir recto (en "
+#~ "grados)"
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate Chroma 81 interface (colorization)."
@@ -15170,6 +15317,10 @@ msgstr "Guardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
 #~ msgstr "Utilizar stick derecho del mando como segundo joystick."
+
+#~ msgctxt "game_options"
+#~ msgid "Game Boy Color"
+#~ msgstr "Game Boy Color"
 
 #~ msgctxt "game_options"
 #~ msgid "Useful for speedruns/glitches."
@@ -15313,6 +15464,38 @@ msgstr "Guardado rápido"
 #~ msgstr "MODELO DE COLOR COMPUTER"
 
 #~ msgctxt "game_options"
+#~ msgid "Color Computer"
+#~ msgstr "Color Computer"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2"
+#~ msgstr "Color Computer 2"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2B"
+#~ msgstr "Color Computer 2B"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 3 (NTSC) (Default)"
+#~ msgstr "Color Computer 3 (NTSC) (Defecto)"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 3 (PAL)"
+#~ msgstr "Color Computer 3 (PAL)"
+
+#~ msgctxt "game_options"
+#~ msgid "Acron Electron ROMs"
+#~ msgstr "ROMs Acorn Electron"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
+#~ "Color)"
+#~ msgstr ""
+#~ "Selecciona el modelo de Mac (Recomend. Mac Plus para ByN, Mac LC 3 para "
+#~ "Color)"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Install the image reader card to read disk image files (Mac IIx only). "
 #~ "Minimum 4MB ram size recommended."
@@ -15331,6 +15514,10 @@ msgstr "Guardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "MODO DE COLOR DEL EQUIPO"
+
+#~ msgctxt "game_options"
+#~ msgid "Color"
+#~ msgstr "Color"
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate a pak in the controller expansion port."
@@ -15496,6 +15683,10 @@ msgstr "Guardado rápido"
 #~ msgstr "Joystick analógico PS1 (stick)"
 
 #~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "Desactivado (Defecto)"
+
+#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr ""
 #~ "El modo 'Por Píxel' es el más preciso, pero también el más exigente."
@@ -15554,6 +15745,10 @@ msgstr "Guardado rápido"
 #~ msgstr ""
 #~ "Reduce las bandas entre colores y mejora la profundidad de color "
 #~ "percibida."
+
+#~ msgctxt "game_options"
+#~ msgid "Playstation 2 wheel type"
+#~ msgstr "Tipo de volante de PlayStation 2"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -15616,6 +15811,19 @@ msgstr "Guardado rápido"
 #~ "sistemas de gama baja."
 
 #~ msgctxt "game_options"
+#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+#~ msgstr ""
+#~ "Habilita o deshabilita el cursor del mouse. Útil para los menús de los CG."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable mouse input for trackballs, spinners, lightguns (if no gun "
+#~ "connected), and similar controls"
+#~ msgstr ""
+#~ "Habilita la entrada del mouse para trackballs, spinners, lightguns (si no "
+#~ "hay una pistola conectada) y mandos similares"
+
+#~ msgctxt "game_options"
 #~ msgid "BGFX for post-processing, accel/opengl for raw image."
 #~ msgstr "BGFX para posprocesamiento, accel/opengl para imagen raw."
 
@@ -15657,6 +15865,13 @@ msgstr "Guardado rápido"
 #~ msgstr "Habilita la generación Direct3D automática de Mipmaps."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
+#~ msgstr ""
+#~ "Lee el mouse a través de Rawinput, lo que permite 2 mouse para juegos de "
+#~ "disparos de 2 jugadores."
+
+#~ msgctxt "game_options"
 #~ msgid "Choose your console timezone."
 #~ msgstr "Selecciona la zona horaria de tu consola."
 
@@ -15687,6 +15902,16 @@ msgstr "Guardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "OpenGLES (Default)"
 #~ msgstr "OpenGLES (Defecto)"
+
+#~ msgctxt "game_options"
+#~ msgid "Vsync"
+#~ msgstr "Vsync"
+
+#~ msgctxt "game_options"
+#~ msgid "Set the desired maximum refresh rate when Vsync is off."
+#~ msgstr ""
+#~ "Establezca la frecuencia de actualización máxima deseada cuando Vsync "
+#~ "esté desactivado."
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
@@ -15795,6 +16020,10 @@ msgstr "Guardado rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rápido"
+
+#~ msgctxt "game_options"
+#~ msgid "VKD3D (D3D12 to Vulkan)"
+#~ msgstr "VKD3D (D3D12 a Vulkan)"
 
 #~ msgctxt "game_options"
 #~ msgid ""

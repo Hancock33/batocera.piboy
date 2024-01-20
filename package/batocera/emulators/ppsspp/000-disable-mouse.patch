@@ -1,8 +1,8 @@
 diff --git a/SDL/SDLMain.cpp b/SDL/SDLMain.cpp
-index b7e0572d9..66211c5b3 100644
+index cb3c51eee..ff785a321 100644
 --- a/SDL/SDLMain.cpp
 +++ b/SDL/SDLMain.cpp
-@@ -823,12 +823,6 @@ static void ProcessSDLEvent(SDL_Window *window, const SDL_Event &event, InputSta
+@@ -772,12 +772,6 @@ static void ProcessSDLEvent(SDL_Window *window, const SDL_Event &event, InputSta
  				g_Config.iWindowWidth = new_width;
  				g_Config.iWindowHeight = new_height;
  			}
@@ -15,7 +15,7 @@ index b7e0572d9..66211c5b3 100644
  			break;
  		}
  
-@@ -1441,9 +1435,7 @@ int main(int argc, char *argv[]) {
+@@ -1387,9 +1381,7 @@ int main(int argc, char *argv[]) {
  		printf("Init from thread error: '%s'\n", error_message.c_str());
  	}
  
@@ -25,21 +25,21 @@ index b7e0572d9..66211c5b3 100644
  
  	// Ensure that the swap interval is set after context creation (needed for kmsdrm)
  	SDL_GL_SetSwapInterval(1);
-@@ -1482,7 +1474,7 @@ int main(int argc, char *argv[]) {
+@@ -1426,7 +1418,7 @@ int main(int argc, char *argv[]) {
  			if (g_QuitRequested || g_RestartRequested)
  				break;
  
 -			UpdateSDLCursor();
 +			//UpdateSDLCursor();
  
- 			inputTracker.MouseControl();
  			inputTracker.MouseCaptureControl();
-@@ -1512,7 +1504,7 @@ int main(int argc, char *argv[]) {
+ 
+@@ -1452,7 +1444,7 @@ int main(int argc, char *argv[]) {
  		if (g_QuitRequested || g_RestartRequested)
  			break;
  
 -		UpdateSDLCursor();
 +		//UpdateSDLCursor();
  
- 		inputTracker.MouseControl();
  		inputTracker.MouseCaptureControl();
+ 

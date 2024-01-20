@@ -3,8 +3,8 @@
 # moonlight-embedded
 #
 ################################################################################
-# Version: Commits on Jan 01, 2024
-MOONLIGHT_EMBEDDED_VERSION = 810ef140cb1aa1516e5563fd152cab47764a6de0
+# Version: Commits on Jan 20, 2024
+MOONLIGHT_EMBEDDED_VERSION = d3d79c3224d477f16986d5a1cc3d550cb78f4713
 MOONLIGHT_EMBEDDED_SITE = https://github.com/moonlight-stream/moonlight-embedded.git
 MOONLIGHT_EMBEDDED_SITE_METHOD = git
 MOONLIGHT_EMBEDDED_SITE_METHOD = git

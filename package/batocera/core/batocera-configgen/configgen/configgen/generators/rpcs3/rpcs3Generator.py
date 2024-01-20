@@ -13,6 +13,7 @@ import json
 import re
 import controllersConfig
 from . import rpcs3Controllers
+import yaml
 
 class Rpcs3Generator(Generator):
 
@@ -50,7 +51,7 @@ class Rpcs3Generator(Generator):
         rpcs3ymlconfig = {}
         if os.path.isfile(batoceraFiles.rpcs3config):
             with open(batoceraFiles.rpcs3config, "r") as stream:
-                rpcs3ymlconfig = yaml.safe_load(stream)
+                rpcs3ymlconfig = yaml.load(stream, Loader=yaml.SafeLoader)
 
         if rpcs3ymlconfig is None: # in case the file is empty
             rpcs3ymlconfig = {}

@@ -18,7 +18,7 @@ index 304b89a9..0d0092b5 100644
  // sleeps for the given number of microseconds
  #if _POSIX_C_SOURCE >= 199309L
 diff --git a/engine/source/utils.c b/engine/source/utils.c
-index bf90c12d..8b5b93ec 100644
+index bf90c12d..98304f1a 100644
 --- a/engine/source/utils.c
 +++ b/engine/source/utils.c
 @@ -95,12 +95,12 @@ typedef void DIR;
