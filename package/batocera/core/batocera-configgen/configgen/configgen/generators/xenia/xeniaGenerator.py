@@ -52,17 +52,17 @@ class XeniaGenerator(Generator):
 
         # create dir & copy xenia exe to wine bottle as necessary
         if not os.path.exists(emupath):
-            shutil.copytree('/usr/xenia', emupath)
+            shutil.copytree('/usr/bin/xenia', emupath)
         if not os.path.exists(canarypath):
-            shutil.copytree('/usr/xenia-canary', canarypath)
+            shutil.copytree('/usr/bin/xenia-canary', canarypath)
         # check binary then copy updated xenia exe's as necessary
-        if not filecmp.cmp('/usr/xenia/xenia.exe', emupath + '/xenia.exe'):
-            shutil.copytree('/usr/xenia', emupath, dirs_exist_ok=True)
+        if not filecmp.cmp('/usr/bin/xenia/xenia.exe', emupath + '/xenia.exe'):
+            shutil.copytree('/usr/bin/xenia', emupath, dirs_exist_ok=True)
         # xenia canary - copy patches directory also
-        if not filecmp.cmp('/usr/xenia-canary/xenia_canary.exe', canarypath + '/xenia_canary.exe'):
-            shutil.copytree('/usr/xenia-canary', canarypath, dirs_exist_ok=True)
+        if not filecmp.cmp('/usr/bin/xenia-canary/xenia_canary.exe', canarypath + '/xenia_canary.exe'):
+            shutil.copytree('/usr/bin/xenia-canary', canarypath, dirs_exist_ok=True)
         if not os.path.exists(canarypath + '/patches'):
-            shutil.copytree('/usr/xenia-canary', canarypath, dirs_exist_ok=True)
+            shutil.copytree('/usr/bin/xenia-canary', canarypath, dirs_exist_ok=True)
 
         # create portable txt file to try & stop file spam
         if not os.path.exists(emupath + '/portable.txt'):
