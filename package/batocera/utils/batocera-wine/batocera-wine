@@ -11,13 +11,13 @@ get_setting() {
 }
 
 ## Wine detection
-GAMENAME=$1 
+GAMENAME=$1
 ROMGAMENAME=$(basename "${GAMENAME}")
-WINE_VERSION="$(get_setting core "${SYSTEM}" "${ROMGAMENAME}" || echo proton)"
+WINE_VERSION="$(get_setting core "${SYSTEM}" "${ROMGAMENAME}" || echo ge-custom)"
 
 # Wine Folder
 wine_folder() {
-if test -e "/userdata/system/wine/proton" || test -e "/userdata/system/wine/lutris"; then
+if test -e "/userdata/system/wine/proton" || test -e "/userdata/system/wine/lutris" || test -e "/userdata/system/wine/wine9"; then
     echo "/userdata/system/wine"
     else
     echo "/usr/wine"
@@ -32,10 +32,9 @@ WINE64="${DIR}/${WINE_VERSION}/bin/wine64"
 WINESERVER="${DIR}/${WINE_VERSION}/bin/wineserver"
 MSIEXEC="${DIR}/${WINE_VERSION}/bin/msiexec"
 WINETRICKS="${DIR}/winetricks"
-MF_INSTALL="${DIR}/mf/mf-install.sh"
 
 ## Folders
-G_SAVES_DIR="/userdata/saves/${SYSTEM}"
+WINE_BOTTLE_DIR="/userdata/system/wine-bottles/${SYSTEM}"
 G_ROMS_DIR="/userdata/roms/${SYSTEM}"
 
 ## Export Wine libs
@@ -50,15 +49,15 @@ export SPA_PLUGIN_DIR="/usr/lib/spa-0.2:/lib32/spa-0.2"
 export PIPEWIRE_MODULE_DIR="/usr/lib/pipewire-0.3:/lib32/pipewire-0.3"
 
 usage() {
-    echo "${1} windows play    	     <game>.iso"             >&2
-    echo "${1} windows play    	     <game>.exe"             >&2
-    echo "${1} windows play    	     <game>.pc"              >&2
-    echo "${1} windows play    	     <game>.wine"            >&2
-    echo "${1} windows play    	     <game>.wsquashfs"       >&2
-    echo "${1} windows play    	     <game>.wtgz"            >&2
-    echo "${1} windows install 	     <game>.iso"             >&2
-    echo "${1} windows install 	     <game>.exe"             >&2
-    echo "${1} windows tricks  	     <game>.wine directplay" >&2
+    echo "${1} windows play             <game>.iso"             >&2
+    echo "${1} windows play             <game>.exe"             >&2
+    echo "${1} windows play             <game>.pc"              >&2
+    echo "${1} windows play             <game>.wine"            >&2
+    echo "${1} windows play             <game>.wsquashfs"       >&2
+    echo "${1} windows play             <game>.wtgz"            >&2
+    echo "${1} windows install          <game>.iso"             >&2
+    echo "${1} windows install          <game>.exe"             >&2
+    echo "${1} windows tricks           <game>.wine directplay" >&2
     echo "${1} windows wine2squashfs <game.wine>"            >&2
     echo "${1} windows wine2winetgz  <game.wine>"            >&2
 }
@@ -66,8 +65,8 @@ usage() {
 waitWineServer() {
     while pgrep "${WINESERVER}"
     do
-	echo "waiting wineserver" >&2
-	sleep 1
+    echo "waiting wineserver" >&2
+    sleep 1
     done
 }
 
@@ -119,6 +118,8 @@ wine_options() {
     export VKD3D_SHADER_DEBUG=none
     test "${WINE_DEBUG}" = 1 && unset VKD3D_SHADER_DEBUG
 
+    export VKD3D_SHADER_CACHE_PATH="/userdata/system/cache"
+
     export WINE_FULLSCREEN_FSR=0
     test "${FSR}" = 1 && unset WINE_FULLSCREEN_FSR=1
 
@@ -156,11 +157,11 @@ wine_options() {
     export USE_BUILTIN_VKD3D=0
 
     # Nvidia variables
-    if test -e "/userdata/system/.cache"; then
-        export XDG_CACHE_HOME="/userdata/system/.cache"
+    if test -e "/userdata/system/cache"; then
+        export XDG_CACHE_HOME="/userdata/system/cache"
     else
-        mkdir -p "/userdata/system/.cache"
-        export XDG_CACHE_HOME="/userdata/system/.cache"
+        mkdir -p "/userdata/system/cache"
+        export XDG_CACHE_HOME="/userdata/system/cache"
     fi
     export __GL_SHADER_DISK_CACHE_SIZE=2147483648
     export __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1
@@ -173,101 +174,81 @@ wine_options() {
     setxkbmap "${KEYBOARD}"
 }
 
-mf_install() {
-    WINEPREFIX=$1
-    MF="$(get_setting mf "${SYSTEM}" "${ROMGAMENAME}")"
-
-    if test "${MF}" = 1
-    then
-        if test -e "/userdata/system/wine/mf"
-        then
-            chmod +x "${MF_INSTALL}" || return 1
-            WINEPREFIX="${WINEPREFIX}" "${MF_INSTALL}" || return 1
-            /usr/bin/batocera-settings-set "${SYSTEM}[\"${ROMGAMENAME}\"].mf" 0
-        else
-            WINEPREFIX="${WINEPREFIX}" "${MF_INSTALL}" || return 1
-            /usr/bin/batocera-settings-set "${SYSTEM}[\"${ROMGAMENAME}\"].mf" 0
-        fi
-    fi
-
-    return 0
-}
-
 redist_install() {
 WINEPREFIX=$1
 if test -e "${USER_DIR}/exe"; then
 
     for file in ${USER_DIR}/exe/*.exe; do
-	    echo "Executing file $file"
-			
-		case "${file}" in
+        echo "Executing file $file"
 
-  		"${USER_DIR}/exe/DXSETUP.exe" | "${USER_DIR}/exe/dxsetup.exe")
-    		WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /silent &>/dev/null || return 1
-			"${WINESERVER}" -w
-			;;
+        case "${file}" in
 
-		"${USER_DIR}/exe/vcredist_x64_2005.exe" | "${USER_DIR}/exe/vcredist_x86_2005.exe")
-    		WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /q &>/dev/null || return 1
-			"${WINESERVER}" -w
-    		;;
+          "${USER_DIR}/exe/DXSETUP.exe" | "${USER_DIR}/exe/dxsetup.exe")
+            WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /silent &>/dev/null || return 1
+            "${WINESERVER}" -w
+            ;;
 
-  		"${USER_DIR}/exe/vcredist_x64_2008.exe" | "${USER_DIR}/exe/vcredist_x86_2008.exe")
-    		WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /quiet /qn /norestart &>/dev/null || return 1
-			"${WINESERVER}" -w
-    		;;
+        "${USER_DIR}/exe/vcredist_x64_2005.exe" | "${USER_DIR}/exe/vcredist_x86_2005.exe")
+            WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /q &>/dev/null || return 1
+            "${WINESERVER}" -w
+            ;;
 
-  		"${USER_DIR}/exe/vcredist_x64_2010.exe" | "${USER_DIR}/exe/vcredist_x86_2010.exe")
-    		WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /quiet /qn /norestart &>/dev/null || return 1
-			"${WINESERVER}" -w
-    		;;
+          "${USER_DIR}/exe/vcredist_x64_2008.exe" | "${USER_DIR}/exe/vcredist_x86_2008.exe")
+            WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /quiet /qn /norestart &>/dev/null || return 1
+            "${WINESERVER}" -w
+            ;;
 
-		"${USER_DIR}/exe/vcredist_x64_2012.exe" | "${USER_DIR}/exe/vcredist_x86_2012.exe")
-    		WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /quiet /qn /norestart &>/dev/null || return 1
-			"${WINESERVER}" -w
-    		;;
+          "${USER_DIR}/exe/vcredist_x64_2010.exe" | "${USER_DIR}/exe/vcredist_x86_2010.exe")
+            WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /quiet /qn /norestart &>/dev/null || return 1
+            "${WINESERVER}" -w
+            ;;
 
-		"${USER_DIR}/exe/vcredist_x64_2013.exe" | "${USER_DIR}/exe/vcredist_x86_2013.exe")
-    		WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /quiet /qn /norestart &>/dev/null || return 1
-			"${WINESERVER}" -w
-    		;;
+        "${USER_DIR}/exe/vcredist_x64_2012.exe" | "${USER_DIR}/exe/vcredist_x86_2012.exe")
+            WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /quiet /qn /norestart &>/dev/null || return 1
+            "${WINESERVER}" -w
+            ;;
 
-		"${USER_DIR}/exe/vcredist_x64_2015.exe" | "${USER_DIR}/exe/vcredist_x86_2015.exe")
-    		WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /quiet /qn /norestart &>/dev/null || return 1
-			"${WINESERVER}" -w
-    		;;
+        "${USER_DIR}/exe/vcredist_x64_2013.exe" | "${USER_DIR}/exe/vcredist_x86_2013.exe")
+            WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /quiet /qn /norestart &>/dev/null || return 1
+            "${WINESERVER}" -w
+            ;;
 
-		"${USER_DIR}/exe/vcredist_x64_2017.exe" | "${USER_DIR}/exe/vcredist_x86_2017.exe")
-    		WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /quiet /qn /norestart &>/dev/null || return 1
-			"${WINESERVER}" -w
-    		;;
+        "${USER_DIR}/exe/vcredist_x64_2015.exe" | "${USER_DIR}/exe/vcredist_x86_2015.exe")
+            WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /quiet /qn /norestart &>/dev/null || return 1
+            "${WINESERVER}" -w
+            ;;
 
-		"${USER_DIR}/exe/vcredist_x64_2019.exe" | "${USER_DIR}/exe/vcredist_x86_2019.exe")
-    		WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /quiet /qn /norestart &>/dev/null || return 1
-			"${WINESERVER}" -w
-    		;;
+        "${USER_DIR}/exe/vcredist_x64_2017.exe" | "${USER_DIR}/exe/vcredist_x86_2017.exe")
+            WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /quiet /qn /norestart &>/dev/null || return 1
+            "${WINESERVER}" -w
+            ;;
 
-		"${USER_DIR}/exe/vcredist_x64_2015_2019.exe" | "${USER_DIR}/exe/vcredist_x86_2015_2019.exe")
-    		WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /quiet /qn /norestart &>/dev/null || return 1
-			"${WINESERVER}" -w
-    		;;
+        "${USER_DIR}/exe/vcredist_x64_2019.exe" | "${USER_DIR}/exe/vcredist_x86_2019.exe")
+            WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /quiet /qn /norestart &>/dev/null || return 1
+            "${WINESERVER}" -w
+            ;;
 
-		"${USER_DIR}/exe/vcredist_x64_2015_2022.exe" | "${USER_DIR}/exe/vcredist_x86_2015_2022.exe")
-    		WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /quiet /qn /norestart &>/dev/null || return 1
-			"${WINESERVER}" -w
-    		;;
+        "${USER_DIR}/exe/vcredist_x64_2015_2019.exe" | "${USER_DIR}/exe/vcredist_x86_2015_2019.exe")
+            WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /quiet /qn /norestart &>/dev/null || return 1
+            "${WINESERVER}" -w
+            ;;
 
-		"${USER_DIR}/exe/oalinst.exe")
-    		WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /s &>/dev/null
-			"${WINESERVER}" -w
-    		;;
+        "${USER_DIR}/exe/vcredist_x64_2015_2022.exe" | "${USER_DIR}/exe/vcredist_x86_2015_2022.exe")
+            WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /quiet /qn /norestart &>/dev/null || return 1
+            "${WINESERVER}" -w
+            ;;
 
-  		*)
-    		WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" &>/dev/null
-			"${WINESERVER}" -w
-    		;;
-		esac
-	done
+        "${USER_DIR}/exe/oalinst.exe")
+            WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" /s &>/dev/null
+            "${WINESERVER}" -w
+            ;;
+
+          *)
+            WINEPREFIX=${WINEPOINT} "${WINE}" "${file}" &>/dev/null
+            "${WINESERVER}" -w
+            ;;
+        esac
+    done
 
     mv "${USER_DIR}/exe" "${USER_DIR}/exe.bak" || return 1
 fi
@@ -341,26 +322,26 @@ dxvk_install() {
 
     if test "${DXVK_HUD}" = 1
     then
-	    export DXVK_HUD=1
+        export DXVK_HUD=1
     fi
 
     if test "${DXVK}" = 1
     then
-	mkdir -p "${WINEPREFIX}/drive_c/windows/system32" "${WINEPREFIX}/drive_c/windows/syswow64" || return 1
-	if test -e "/userdata/system/wine/dxvk"
-	then
-	    echo "Creating links on /userdata, Linux File System required !!!"
-	    ln -sf "/userdata/system/wine/dxvk/x64/"{d3d12.dll,d3d12core.dll,d3d11.dll,d3d10core.dll,d3d9.dll,dxgi.dll,nvapi64.dll} "${WINEPREFIX}/drive_c/windows/system32" || return 1
+    mkdir -p "${WINEPREFIX}/drive_c/windows/system32" "${WINEPREFIX}/drive_c/windows/syswow64" || return 1
+    if test -e "/userdata/system/wine/dxvk"
+    then
+        echo "Creating links on /userdata, Linux File System required !!!"
+        ln -sf "/userdata/system/wine/dxvk/x64/"{d3d12.dll,d3d12core.dll,d3d11.dll,d3d10core.dll,d3d9.dll,dxgi.dll,nvapi64.dll} "${WINEPREFIX}/drive_c/windows/system32" || return 1
         ln -sf "/userdata/system/wine/dxvk/x32/"{d3d8.dll,d3d12.dll,d3d12core.dll,d3d11.dll,d3d10core.dll,d3d9.dll,dxgi.dll,nvapi.dll} "${WINEPREFIX}/drive_c/windows/syswow64" || return 1
-	else
-	    echo "Creating links on /userdata, Linux File System required !!!"
-	    ln -sf "/usr/wine/dxvk/x64/"{d3d12.dll,d3d12core.dll,d3d11.dll,d3d10core.dll,d3d9.dll,dxgi.dll,nvapi64.dll} "${WINEPREFIX}/drive_c/windows/system32" || return 1
-        ln -sf "/usr/wine/dxvk/x32/"{d3d8.dll,d3d12.dll,d3d12core.dll,d3d11.dll,d3d10core.dll,d3d9.dll,dxgi.dll,nvapi.dll} "${WINEPREFIX}/drive_c/windows/syswow64" || return 1
-	fi
     else
-	    echo "Creating links on /userdata, Linux File System required !!!"
-	    ln -sf "/usr/wine/${WINE_VERSION}/lib/wine/x86_64-windows/"{d3d8.dll,d3d12.dll,d3d12core.dll,d3d11.dll,d3d10core.dll,d3d9.dll,dxgi.dll}   "${WINEPREFIX}/drive_c/windows/system32" || return 1
-        ln -sf "/usr/wine/${WINE_VERSION}/lib/wine/i386-windows/"{d3d8.dll,d3d12.dll,d3d12core.dll,d3d11.dll,d3d10core.dll,d3d9.dll,dxgi.dll} "${WINEPREFIX}/drive_c/windows/syswow64" || return 1
+        echo "Creating links on /userdata, Linux File System required !!!"
+        ln -sf "/usr/wine/dxvk/x64/"{d3d12.dll,d3d12core.dll,d3d11.dll,d3d10core.dll,d3d9.dll,dxgi.dll,nvapi64.dll} "${WINEPREFIX}/drive_c/windows/system32" || return 1
+        ln -sf "/usr/wine/dxvk/x32/"{d3d8.dll,d3d12.dll,d3d12core.dll,d3d11.dll,d3d10core.dll,d3d9.dll,dxgi.dll,nvapi.dll} "${WINEPREFIX}/drive_c/windows/syswow64" || return 1
+    fi
+    else
+        echo "Creating links on /userdata, Linux File System required !!!"
+        ln -sf "/usr/wine/${WINE_VERSION}/lib/wine/x86_64-windows/"{d3d8.dll,d3d12.dll,d3d12core.dll,d3d11.dll,d3d10core.dll,d3d9.dll,dxgi.dll}   "${WINEPREFIX}/drive_c/windows/system32" || return 1
+        ln -sf "/usr/wine//${WINE_VERSION}/lib/wine/i386-windows/"{d3d8.dll,d3d12.dll,d3d12core.dll,d3d11.dll,d3d10core.dll,d3d9.dll,dxgi.dll} "${WINEPREFIX}/drive_c/windows/syswow64" || return 1
     fi
 
     if test "${DXVK}" = 1
@@ -368,6 +349,7 @@ dxvk_install() {
         export DXVK_ASYNC=1
         export DXVK_CONFIG_FILE="/userdata/system/wine/dxvk/dxvk.conf"
         export WINEDLLOVERRIDES="${WINEDLLOVERRIDES};dxgi,d3d8,d3d9,d3d10core,d3d11,d3d12,d3d12core=n"
+        export DXVK_STATE_CACHE_PATH="/userdata/system/cache"
     else
         export DXVK_ASYNC=0
         export WINEDLLOVERRIDES="${WINEDLLOVERRIDES};dxgi,d3d8,d3d9,d3d10core,d3d11,d3d12,d3d12core=b"
@@ -395,7 +377,7 @@ sandboxing_prefix() {
     fi
 
     echo "Remove Symblink"
-    # replace some links by folders. 
+    # replace some links by folders.
     # don't create all folders in case links doesn't exist to not create both Music and My Music at the same time (old wine uses My Music, new wine uses Musics)
     for DIR in "Downloads" "Documents" "My Documents" "Music" "My Music" "Pictures" "My Pictures" "Videos" "My Videos" "Templates"
     do
@@ -422,9 +404,9 @@ createWineDirectory() {
 
     if ! WINEPREFIX=${WINEPREFIX} ${WINE} hostname
     then
-	    rm -rf "${WINEPREFIX}"
-	    kill -15 ${BSODPID}
-	    return 1
+        rm -rf "${WINEPREFIX}"
+        kill -15 ${BSODPID}
+        return 1
     fi
 
     kill -15 ${BSODPID}
@@ -439,15 +421,15 @@ getWine_var() {
 
     if test -e "${WINEPOINT}/autorun.cmd"
     then
-	    VAL=$(cat "${WINEPOINT}/autorun.cmd" | dos2unix | grep "^${WINEVAR}=" | sed -e s+"^${WINEVAR}="+""+ | head -1)
-	if test -n "${VAL}"
-	then
-	    echo "${VAL}"
-	else
-	    echo "${WINEVALUE}"
-	fi
+        VAL=$(cat "${WINEPOINT}/autorun.cmd" | dos2unix | grep "^${WINEVAR}=" | sed -e s+"^${WINEVAR}="+""+ | head -1)
+    if test -n "${VAL}"
+    then
+        echo "${VAL}"
     else
-	    echo "${WINEVALUE}"
+        echo "${WINEVALUE}"
+    fi
+    else
+        echo "${WINEVALUE}"
     fi
 }
 
@@ -459,14 +441,13 @@ play_wine() {
     redist_install "${WINEPOINT}" || return 1
     msi_install "${WINEPOINT}" || return 1
     reg_install "${WINEPOINT}" || return 1
-    mf_install "${WINEPOINT}" || return 1
     fonts_install "${WINEPOINT}" || return 1
     dxvk_install "${WINEPOINT}" || return 1
     WINE_CMD=$(getWine_var "${WINEPOINT}" "CMD" "explorer")
     WINE_DIR=$(getWine_var "${WINEPOINT}" "DIR" "")
     WINE_LANG=$(getWine_var "${WINEPOINT}" "LANG" "")
     if test -n "${WINE_LANG}"
-	then
+    then
         (cd "${WINEPOINT}/${WINE_DIR}" && LC_ALL=${WINE_LANG} WINEPREFIX=${WINEPOINT} eval "${WINE} ${VDESKTOP} ${WINE_CMD}")
     else
         (cd "${WINEPOINT}/${WINE_DIR}" && WINEPREFIX=${WINEPOINT} eval "${WINE} ${VDESKTOP} ${WINE_CMD}")
@@ -476,14 +457,13 @@ play_wine() {
 
 play_pc() {
     GAMENAME=$1
-    WINEPOINT="${G_SAVES_DIR}/${WINE_VERSION}/"$(basename "${GAMENAME}")".wine"
-    
+    WINEPOINT="${WINE_BOTTLE_DIR}/${WINE_VERSION}/"$(basename "${GAMENAME}")".wine"
+
     wine_options "${WINEPOINT}"
     createWineDirectory "${WINEPOINT}" || return 1
     redist_install "${WINEPOINT}" || return 1
     msi_install "${WINEPOINT}" || return 1
     reg_install "${WINEPOINT}" || return 1
-    mf_install "${WINEPOINT}" || return 1
     fonts_install "${WINEPOINT}" || return 1
     sandboxing_prefix "${WINEPOINT}" || return 1
     dxvk_install "${WINEPOINT}" || return 1
@@ -492,7 +472,7 @@ play_pc() {
     WINE_DIR=$(getWine_var "${GAMENAME}" "DIR" "")
     WINE_LANG=$(getWine_var "${GAMENAME}" "LANG" "")
     if test -n "${WINE_LANG}"
-	then
+    then
         (cd "${GAMENAME}/${WINE_DIR}" && LC_ALL=${WINE_LANG} WINEPREFIX=${WINEPOINT} eval "${WINE} ${VDESKTOP} ${WINE_CMD}")
     else
         (cd "${GAMENAME}/${WINE_DIR}" && WINEPREFIX=${WINEPOINT} eval "${WINE} ${VDESKTOP} ${WINE_CMD}")
@@ -504,12 +484,12 @@ trick_wine() {
     GAMENAME=$1
     if [ -e "${WINETRICKS}" ]; then
         echo "Winetricks is installed"
-	else
+    else
         echo "Winetricks is downloading"
         wget -O "${WINETRICKS}" "https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks" &>/dev/null
         chmod +x "${WINETRICKS}"
         echo "Winetricks is now installed"
-	fi
+    fi
     TRICK=$2
     WINEPOINT="${GAMENAME}"
     WINEPREFIX=${WINEPOINT} "${WINETRICKS}" "${TRICK}"
@@ -522,7 +502,7 @@ trick_wine() {
 
 play_exe() {
     GAMENAME=$1
-    WINEPOINT="${G_SAVES_DIR}/${WINE_VERSION}/"$(basename "${GAMENAME}")".wine"
+    WINEPOINT="${WINE_BOTTLE_DIR}/${WINE_VERSION}/"$(basename "${GAMENAME}")".wine"
     GAMEDIR=$(dirname "${GAMENAME}")
     GAMEEXE=$(basename "${GAMENAME}")
 
@@ -531,7 +511,6 @@ play_exe() {
     redist_install "${WINEPOINT}" || return 1
     msi_install "${WINEPOINT}" || return 1
     reg_install "${WINEPOINT}" || return 1
-    mf_install "${WINEPOINT}" || return 1
     fonts_install "${WINEPOINT}" || return 1
     sandboxing_prefix "${WINEPOINT}" || return 1
     dxvk_install "${WINEPOINT}" || return 1
@@ -542,19 +521,18 @@ play_exe() {
 
 play_winetgz() {
     GAMENAME=$1
-    WINEPOINT="${G_SAVES_DIR}/"$(basename "${GAMENAME}")".wine"
+    WINEPOINT="${WINE_BOTTLE_DIR}/"$(basename "${GAMENAME}")".wine"
 
     wine_options "${WINEPOINT}"
     if ! test -e "${WINEPOINT}"
     then
-	    mkdir -p "${WINEPOINT}" || return 1
-	    (cd "${WINEPOINT}" && gunzip -c "${GAMENAME}" | tar xf -) || return 1
+        mkdir -p "${WINEPOINT}" || return 1
+        (cd "${WINEPOINT}" && gunzip -c "${GAMENAME}" | tar xf -) || return 1
     fi
 
     redist_install "${WINEPOINT}" || return 1
     msi_install "${WINEPOINT}" || return 1
     reg_install "${WINEPOINT}" || return 1
-    mf_install "${WINEPOINT}" || return 1
     fonts_install "${WINEPOINT}" || return 1
     dxvk_install "${WINEPOINT}" || return 1
 
@@ -562,7 +540,7 @@ play_winetgz() {
     WINE_DIR=$(getWine_var "${WINEPOINT}" "DIR" "")
     WINE_LANG=$(getWine_var "${WINEPOINT}" "LANG" "")
     if test -n "${WINE_LANG}"
-	then
+    then
         (cd "${WINEPOINT}/${WINE_DIR}" && LC_ALL=${WINE_LANG} WINEPREFIX=${WINEPOINT} eval "${WINE} ${VDESKTOP} ${WINE_CMD}")
     else
         (cd "${WINEPOINT}/${WINE_DIR}" && WINEPREFIX=${WINEPOINT} eval "${WINE} ${VDESKTOP} ${WINE_CMD}")
@@ -576,8 +554,8 @@ play_squashfs() {
     WINEPOINT="/var/run/wine/${BASEGAMENAME}"
     wine_options "${WINEPOINT}"
     SQUASHFSPOINT="/var/run/wine/squashfs_${BASEGAMENAME}"
-    SAVEPOINT="${G_SAVES_DIR}/${BASEGAMENAME}"
-    WORKPOINT="${G_SAVES_DIR}/${BASEGAMENAME}.work"
+    SAVEPOINT="${WINE_BOTTLE_DIR}/${BASEGAMENAME}"
+    WORKPOINT="${WINE_BOTTLE_DIR}/${BASEGAMENAME}.work"
 
     # ensure we clean before starting if wine was killed for some reason
     umount -f -R "${WINEPOINT}"
@@ -594,22 +572,21 @@ play_squashfs() {
     if ! mount "${GAMENAME}" "${SQUASHFSPOINT}"
     then
         rm -rf "${SQUASHFSPOINT}"
-	    rm -rf "${WORKPOINT}"
-	    rm -rf "${WINEPOINT}"
-	return 1
+        rm -rf "${WORKPOINT}"
+        rm -rf "${WINEPOINT}"
+    return 1
     fi
-    
+
     if ! mount -t overlay -o rw,lowerdir="${SQUASHFSPOINT}",upperdir="${SAVEPOINT}",workdir="${WORKPOINT}",redirect_dir=on overlay "${WINEPOINT}"
     then
         umount "${SQUASHFSPOINT}"
-	    rm -rf "${SQUASHFSPOINT}"
-	    rm -rf "${WORKPOINT}"
-	    rm -rf "${WINEPOINT}"
-	    return 1
+        rm -rf "${SQUASHFSPOINT}"
+        rm -rf "${WORKPOINT}"
+        rm -rf "${WINEPOINT}"
+        return 1
     fi
-    
+
     reg_install "${WINEPOINT}" || return 1
-    mf_install "${WINEPOINT}" || return 1
     fonts_install "${WINEPOINT}" || return 1
     dxvk_install "${WINEPOINT}" || return 1
 
@@ -617,7 +594,7 @@ play_squashfs() {
     WINE_DIR=$(getWine_var "${WINEPOINT}" "DIR" "")
     WINE_LANG=$(getWine_var "${WINEPOINT}" "LANG" "")
     if test -n "${WINE_LANG}"
-	then
+    then
         (cd "${WINEPOINT}/${WINE_DIR}" && LC_ALL=${WINE_LANG} WINEPREFIX=${WINEPOINT} eval "${WINE} ${VDESKTOP} ${WINE_CMD}")
     else
         (cd "${WINEPOINT}/${WINE_DIR}" && WINEPREFIX=${WINEPOINT} eval "${WINE} ${VDESKTOP} ${WINE_CMD}")
@@ -639,8 +616,8 @@ init_cmd() {
     WINEPOINT=$1
 
     (
-	echo "#DIR=drive_c/Program Files/myprogram"
-	echo "#CMD=start.exe"
+    echo "#DIR=drive_c/Program Files/myprogram"
+    echo "#CMD=start.exe"
     ) > "${WINEPOINT}/autorun.cmd"
 }
 
@@ -705,11 +682,11 @@ install_iso() {
     WINEPOINT=$(echo "${G_ROMS_DIR}/${BASEGAMENAME}" | sed -e s+"\.iso$"++)".wine"
 
     createWineDirectory "${WINEPOINT}"
-    
+
     if mkdir -p "${WINEPOINT}/dosdevices" && rm -f "${WINEPOINT}/dosdevices/d:" && ln -sf "${GAMEISOMOUNT}" "${WINEPOINT}/dosdevices/d:"
     then
-	    WINEPREFIX=${WINEPOINT} wine explorer "d:"
-	    rm -f "${WINEPOINT}/dosdevices/d:"
+        WINEPREFIX=${WINEPOINT} wine explorer "d:"
+        rm -f "${WINEPOINT}/dosdevices/d:"
     fi
 
     waitWineServer
@@ -725,7 +702,7 @@ wine2squashfs() {
     BASEGAMENAME=$(basename "${GAMENAME}")
     GAMEDIR="${GAMENAME}"
     SQUASHFSFILE=$(echo "${G_ROMS_DIR}/${BASEGAMENAME}.squashfs" | sed -e s+"\.wine\.squashfs$"+".wsquashfs"+)
-    
+
     mksquashfs "${GAMEDIR}" "${SQUASHFSFILE}" -comp zstd || return 1
     return 0
 }
@@ -763,75 +740,72 @@ G_RESCUR=$(batocera-resolution currentMode)
 
 case "${ACTION}" in
     "play")
-	GAMENAME=$1
-	GAMEEXT=$(gameext "${GAMENAME}")
-	case "${GAMEEXT}" in
-	    "wine")
-		play_wine "${GAMENAME}" || cleanAndExit 1
-		;;
-	    "pc")
-		play_pc "${GAMENAME}" || cleanAndExit 1
-		;;
-	    "exe")
-		play_exe "${GAMENAME}" || cleanAndExit 1
-		;;
-#	    "iso")
-#		play_iso "${GAMENAME}" || cleanAndExit 1
-#		;;
-	    "squashfs")
-		play_squashfs "${GAMENAME}" || cleanAndExit 1
-		;;
-	    "wsquashfs")
-		play_squashfs "${GAMENAME}" || cleanAndExit 1
-		;;
-	    "wtgz")
-		play_winetgz "${GAMENAME}" || cleanAndExit 1
-		;;
-	    *)
-		echo "unknown extension ${GAMEEXT}" >&2
-		cleanAndExit 1
-	esac
-	;;
+    GAMENAME=$1
+    GAMEEXT=$(gameext "${GAMENAME}")
+    case "${GAMEEXT}" in
+        "wine")
+        play_wine "${GAMENAME}" || cleanAndExit 1
+        ;;
+        "pc")
+        play_pc "${GAMENAME}" || cleanAndExit 1
+        ;;
+        "exe")
+        play_exe "${GAMENAME}" || cleanAndExit 1
+        ;;
+#        "iso")
+#        play_iso "${GAMENAME}" || cleanAndExit 1
+#        ;;
+        "wsquashfs")
+        play_squashfs "${GAMENAME}" || cleanAndExit 1
+        ;;
+        "wtgz")
+        play_winetgz "${GAMENAME}" || cleanAndExit 1
+        ;;
+        *)
+        echo "unknown extension ${GAMEEXT}" >&2
+        cleanAndExit 1
+    esac
+    ;;
     "install")
-	GAMENAME=$1
-    	GAMEEXT=$(gameext "${GAMENAME}")
-	case "${GAMEEXT}" in
-	    "exe")
-		install_exe "${GAMENAME}" || cleanAndExit 1
-		;;
-	    "msi")
-		install_msi "${GAMENAME}" || cleanAndExit 1
-		;;
-	    "iso")
-		install_iso "${GAMENAME}" || cleanAndExit 1
-		;;
-	    *)
-		echo "unknown extension ${GAMEEXT}" >&2
-		cleanAndExit 1
-	esac
-	;;
+    GAMENAME=$1
+        GAMEEXT=$(gameext "${GAMENAME}")
+    case "${GAMEEXT}" in
+        "exe")
+        install_exe "${GAMENAME}" || cleanAndExit 1
+        ;;
+        "msi")
+        install_msi "${GAMENAME}" || cleanAndExit 1
+        ;;
+        "iso")
+        install_iso "${GAMENAME}" || cleanAndExit 1
+        ;;
+        *)
+        echo "unknown extension ${GAMEEXT}" >&2
+        cleanAndExit 1
+    esac
+    ;;
     "tricks")
-	GAMENAME=$1
-	TRICK=$2
-    	GAMEEXT=$(gameext "${GAMENAME}")
-	case "${GAMEEXT}" in
-	    "wine")
-		trick_wine "${GAMENAME}" "${TRICK}" || cleanAndExit 1
-		;;
-	esac
-	;;
+    GAMENAME=$1
+    TRICK=$2
+        GAMEEXT=$(gameext "${GAMENAME}")
+    case "${GAMEEXT}" in
+        "wine")
+        trick_wine "${GAMENAME}" "${TRICK}" || cleanAndExit 1
+        ;;
+    esac
+    ;;
     "wine2squashfs")
-	GAMENAME=$1
-	wine2squashfs "${GAMENAME}" || exit 1
-	;;
+    GAMENAME=$1
+    wine2squashfs "${GAMENAME}" || exit 1
+    ;;
     "wine2winetgz")
-	GAMENAME=$1
-	wine2winetgz "${GAMENAME}" || exit 1
-	;;
+    GAMENAME=$1
+    wine2winetgz "${GAMENAME}" || exit 1
+    ;;
     *)
-	set +x
-	echo "unknown action ${ACTION}" >&2
-	usage "${0}"
-	cleanAndExit 1
+    set +x
+    echo "unknown action ${ACTION}" >&2
+    usage "${0}"
+    cleanAndExit 1
 esac
 cleanAndExit 0

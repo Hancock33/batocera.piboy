@@ -148,7 +148,7 @@ bermuda:
   core:     bermuda
 bigfish:
   emulator: wine
-  core:     proton
+  core:     ge-custom
   options:
     powersave: '1'
     hud_support: false
@@ -564,7 +564,7 @@ mu:
   core:     mu
 mugen:
   emulator: mugen
-  core:     proton
+  core:     ge-custom
 multivision:
   emulator: libretro
   core:     gearsystem
@@ -732,7 +732,7 @@ ports:
     bezel: none
 popcap:
   emulator: wine
-  core:     proton
+  core:     ge-custom
   options:
     powersave: '1'
     hud_support: false
@@ -1088,13 +1088,13 @@ wiiware:
     powersave: '1'
 windows:
   emulator: wine
-  core:     proton
+  core:     ge-custom
   options:
     powersave: '2'
     hud_support: false
 windows_installers:
   emulator: wine
-  core:     proton
+  core:     ge-custom
   options:
     powersave: '2'
     hud_support: false
@@ -1125,8 +1125,8 @@ xbox:
   options:
     powersave: '2'
 xbox360:
-  emulator: xenia
-  core:     xenia
+  emulator: xenia-canary
+  core:     xenia-canary
   options:
     powersave: '2'
     hud_support: false
