@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jan 21, 2024
-CITRA_VERSION = 228f26d1e4d64d391b37eff16e83750f55048aff
+CITRA_VERSION = 8d82adb3d39b276f83cdbd26762ff0e8c43c1a16
 CITRA_SITE = https://github.com/citra-emu/citra.git
 
 CITRA_SITE_METHOD=git
