@@ -3,8 +3,8 @@
 # vpinball
 #
 ################################################################################
-# Version: Commits on Jan 20, 2024 (branch@standalone)
-VPINBALL_VERSION = e67d9f8f28bbdd91115da5b853fb3449c546394a
+# Version: Commits on Jan 21, 2024 (branch@standalone)
+VPINBALL_VERSION = 0aa9ec0670c20c71331ec3cf4f06b6ed7bdc44de
 VPINBALL_SITE = $(call github,vpinball,vpinball,$(VPINBALL_VERSION))
 VPINBALL_LICENSE = GPLv3+
 VPINBALL_LICENSE_FILES = LICENSE
@@ -36,6 +36,7 @@ define VPINBALL_CMAKE_HACKS
 	# copy linux x64
 	cp $(@D)/standalone/cmake/$(SOURCE) $(@D)/CMakeLists.txt
 	sed -i -e s+" 3.26"+" 3.22"+ $(@D)/CMakeLists.txt
+	sed -i -e s+"libSDL2_ttf-2.0.so"+"libSDL2_ttf-2.0.so.0"+ $(@D)/CMakeLists.txt
 	$(SED) 's:$${CMAKE_SOURCE_DIR}/standalone/$(SOURCE_DIR)/external/include:$(STAGING_DIR)/usr/include/:g' $(@D)/CMakeLists.txt
 	$(SED) 's:$${CMAKE_SOURCE_DIR}/standalone/$(SOURCE_DIR)/external/lib/:$(STAGING_DIR)/usr/lib/:g' $(@D)/CMakeLists.txt
 	# bass24 - this is ugly...

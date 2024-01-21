@@ -3,24 +3,47 @@
 # wine-ge-custom
 #
 ################################################################################
-
-WINE_GE_CUSTOM_VERSION = GE-Proton8-25
-WINE_GE_CUSTOM_SITE = https://github.com/GloriousEggroll/wine-ge-custom
-WINE_GE_CUSTOM_SITE_METHOD = git
+# Version: Commits on Jan 16, 2024
+WINE_GE_CUSTOM_VERSION = wine-9.0
+WINE_GE_CUSTOM_STAGING_VERSION = $(subst wine-,,$(WINE_GE_CUSTOM_VERSION))
+WINE_GE_CUSTOM_SOURCE = wine-$(WINE_GE_CUSTOM_VERSION).tar.gz
+WINE_GE_CUSTOM_SITE = $(call github,wine-mirror,wine,$(WINE_GE_CUSTOM_VERSION))
 WINE_GE_CUSTOM_LICENSE = LGPL-2.1+
 WINE_GE_CUSTOM_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_GE_CUSTOM_SELINUX_MODULES = wine
 WINE_GE_CUSTOM_DEPENDENCIES = host-bison host-flex host-wine-ge-custom
 HOST_WINE_GE_CUSTOM_DEPENDENCIES = host-bison host-flex
+HOST_WINE_GE_CUSTOM_DEPENDENCIES = host-bison host-flex host-clang host-lld
+HOST_WINE_GE_CUSTOM_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/v$(WINE_GE_CUSTOM_STAGING_VERSION).tar.gz
 
-WINE_GE_CUSTOM_GIT_SUBMODULES = YES
+# Configure Wine
+define WINE_GE_CUSTOM_AUTOGEN
+	# Add Version
+	$(SED) "s|The Wine configuration|Wine-86_64-$(WINE_GE_CUSTOM_VERSION) config|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|IDD_WAITDLG DIALOG 0, 0, 200, 50|IDD_WAITDLG DIALOG 0, 0, 300, 30|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|IDC_WAITTEXT, 40, 5, 150, 40|IDC_WAITTEXT, 20, 5, 250, 20|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|FONT 8,|FONT 14,|g" $(@D)/programs/wineboot/wineboot.rc
 
-WINE_GE_CUSTOM_SUBDIR = proton-wine
-HOST_WINE_GE_CUSTOM_SUBDIR = proton-wine
+	# Create folder for install
+	mkdir -p $(TARGET_DIR)/usr/wine/ge-custom
+
+	# Use Staging Patches
+	printf "%s\n" "$(TERM_BOLD)>>> $($(PKG)_NAME) $($(PKG)_VERSION) Patching wine-staging" >&2
+	tar -xf $(WINE_GE_CUSTOM_DL_DIR)/v$(WINE_GE_CUSTOM_STAGING_VERSION).tar.gz -C $(@D)
+	cd $(@D); ./wine-staging-$(WINE_GE_CUSTOM_STAGING_VERSION)/staging/patchinstall.py --all
+
+	# Autotools generation
+	cd $(@D); autoreconf -fiv
+	cd $(@D); ./tools/make_requests
+	cd $(@D); ./dlls/winevulkan/make_vulkan && rm dlls/winevulkan/vk-*.xml
+endef
+
+WINE_GE_CUSTOM_PRE_CONFIGURE_HOOKS += WINE_GE_CUSTOM_AUTOGEN
+HOST_WINE_GE_CUSTOM_PRE_CONFIGURE_HOOKS += WINE_GE_CUSTOM_AUTOGEN
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_GE_CUSTOM_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
-	--with-wine-tools=../../host-wine-ge-custom-$(WINE_GE_CUSTOM_VERSION)/proton-wine \
+	--with-wine-tools=$(BUILD_DIR)/host-wine-ge-custom-$(WINE_GE_CUSTOM_VERSION) \
 	--disable-tests \
 	--without-capi \
 	--without-coreaudio \
@@ -276,7 +299,7 @@ endif
 # Wine only needs the host tools to be built, so cut-down the
 # build time by building just what we need.
 define HOST_WINE_GE_CUSTOM_BUILD_CMDS
-	$(HOST_MAKE_ENV) $(MAKE) -C $(@D)/proton-wine __tooldeps__
+	$(HOST_MAKE_ENV) $(MAKE) -C $(@D) __tooldeps__
 endef
 
 # Wine only needs its host variant to be built, not that it is
