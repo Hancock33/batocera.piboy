@@ -36,6 +36,7 @@ define VPINBALL_CMAKE_HACKS
 	# copy linux x64
 	cp $(@D)/standalone/cmake/$(SOURCE) $(@D)/CMakeLists.txt
 	sed -i -e s+" 3.26"+" 3.22"+ $(@D)/CMakeLists.txt
+	sed -i -e s+"libSDL2_ttf-2.0.so"+"libSDL2_ttf-2.0.so.0"+ $(@D)/CMakeLists.txt
 	$(SED) 's:$${CMAKE_SOURCE_DIR}/standalone/$(SOURCE_DIR)/external/include:$(STAGING_DIR)/usr/include/:g' $(@D)/CMakeLists.txt
 	$(SED) 's:$${CMAKE_SOURCE_DIR}/standalone/$(SOURCE_DIR)/external/lib/:$(STAGING_DIR)/usr/lib/:g' $(@D)/CMakeLists.txt
 	# bass24 - this is ugly...
