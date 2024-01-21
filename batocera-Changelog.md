@@ -58,6 +58,7 @@
 - Nvidia Prime defaulting to provider 1 when it could be another provider.
 - AMD Prime defaulting to provider 1 when it could be another provider.
 - Sinden Lightgun border not showing on 4K resolution in model2 gun games
+- ES script logs clobbering game logs #1666
 ### Changed
 - L|R activate in-game "Z" input in Dolphin for GC controllers/GC games if controller has L+R inputs mapped.
 - PS2 BIOS files should be put in /userdata/bios/ps2
@@ -83,7 +84,7 @@
 - Libretro-PCSX-ReARMed to Oct 9, 2023
 - Fheroes2 to 1.0.9
 - BigPEmu to 1.094
-- Cemu to 2.0-62
+- Cemu to 2.0-65
 - Citra to nightly-2054
 - Dolphin to 5.0-20840
 - Flycast to 17th Dec build
