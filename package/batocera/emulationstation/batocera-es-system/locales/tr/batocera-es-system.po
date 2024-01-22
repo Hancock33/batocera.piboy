@@ -11982,8 +11982,8 @@ msgstr "SDL YAPILANDIR"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
-msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
-msgstr "DirectX 9/10/11/12 çağrılarını Vulkan'a dönüştürür."
+msgid "Converts DirectX 8/9/10/11/12 calls to Vulkan."
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -15951,6 +15951,10 @@ msgstr "Hızlı Kaydet"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Hızlı İleri"
+
+#~ msgctxt "game_options"
+#~ msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
+#~ msgstr "DirectX 9/10/11/12 çağrılarını Vulkan'a dönüştürür."
 
 #~ msgctxt "game_options"
 #~ msgid ""

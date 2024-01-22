@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v39beta(2024/01/09)\n"
+"Project-Id-Version: batocera-es v39beta(2024/01/20)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-01-09 18:07+0900\n"
+"PO-Revision-Date: 2024-01-20 18:24+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -134,7 +134,7 @@ msgstr "コア設定"
 #. TRANSLATION: shared, shared, libretro/mesen, libretro/gambatte
 msgctxt "game_options"
 msgid "Custom"
-msgstr "カスタム(ベゼル設定)"
+msgstr "カスタム構成"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -691,11 +691,13 @@ msgid ""
 "Automatically sets aspect ratio to 16/9 for games that natively support it. "
 "2D elements like HUD/UI may be stretched."
 msgstr ""
+"アスペクト比16/9 に対応するゲームでは、 16/9 に自動的に設定します。 HUD/UI な"
+"どの 2D 要素は引き伸ばされる可能性があります"
 
 #. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "AUTO WIDESCREEN"
-msgstr ""
+msgstr "自動ワイドスクリーン "
 
 #. TRANSLATION: libretro/beetle-saturn, libretro/beetle-saturn, libretro/yabasanshiro, libretro/yabasanshiro
 msgctxt "game_options"
@@ -2097,12 +2099,12 @@ msgstr "ジョイスティック 2(2軸,2ボタン)"
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Type of emulated SoundBlaster card."
-msgstr "エミュレートされた SoundBlaster の種類"
+msgstr "エミュレートされた SoundBlaster タイプ"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SOUNDBLASTER TYPE"
-msgstr "SOUNDBLASTER 種類"
+msgstr "SOUNDBLASTER タイプ"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -3432,7 +3434,7 @@ msgstr "Atari モニターを選択します"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "ATARI MONITOR TYPE"
-msgstr "Atari モニター種類"
+msgstr "Atari モニタータイプ"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -3511,7 +3513,7 @@ msgstr "クロップ 1080p (270、540)"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Choose your desired pause screen display type."
-msgstr "一時停止画面の表示種類を選択します"
+msgstr "一時停止画面の表示タイプを選択します"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -3636,7 +3638,7 @@ msgstr "BIOS 言語"
 #. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "Use a custom MAME config, do not overwrite config on launch."
-msgstr "MAMEカスタム設定を使用する（起動時、構成を上書きしない）"
+msgstr "MAMEカスタム構成を使用する（起動時、設定を上書きしない）"
 
 #. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -3805,7 +3807,7 @@ msgstr "読み込むROMファイルの種類"
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
 msgid "MEDIA TYPE"
-msgstr "メディアの種類"
+msgstr "メディアタイプ"
 
 #. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
@@ -5230,7 +5232,7 @@ msgstr "振動パック"
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
-msgstr ""
+msgstr "振動パック (自動)"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
@@ -9464,7 +9466,7 @@ msgstr "拡張子.hd ファイルの Atari ハード ドライブの種類を選
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "ATARI HARD DRIVE TYPE"
-msgstr "ATARI ハードドライブ種類"
+msgstr "ATARI ハードドライブタイプ"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
@@ -11880,8 +11882,8 @@ msgstr "SDL 構成"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
-msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
-msgstr "DirectX 9/10/11/12の呼び出しをVulkanに変換します"
+msgid "Converts DirectX 8/9/10/11/12 calls to Vulkan."
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -12226,26 +12228,28 @@ msgid ""
 "Nat to access internet from xemu machine. Udp for System Link. Default "
 "(Auto) disables network access."
 msgstr ""
+"xemu からインターネットに接続する Nat設定(システムリンク用の UDP) 標準 (自"
+"動) では、ネットワーク接続が無効になります"
 
 #. TRANSLATION: xemu, xemu, xemu, xemu, xemu, ...
 msgctxt "game_options"
 msgid "NETWORK"
-msgstr ""
+msgstr "ネットワーク"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "NETWORK TYPE"
-msgstr ""
+msgstr "ネットワークタイプ"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "NAT"
-msgstr ""
+msgstr "NAT"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "UDP Tunnel"
-msgstr ""
+msgstr "UDPトンネル"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -12253,11 +12257,13 @@ msgid ""
 "Destination address and port to forward packets to. Leave this empty if you "
 "want to enter it manually in the xemu.toml configuration file."
 msgstr ""
+"パケットの転送先の宛先アドレスとポート。 xemu.toml 構成ファイルに手動で入力す"
+"る場合は、空のままにしておきます"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "UDP REMOTE ADDRESS"
-msgstr ""
+msgstr "UDPリモートアドレス"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -12265,11 +12271,13 @@ msgid ""
 "Local address and port to receive packets on. Leave this empty if you want "
 "to enter it manually in the xemu.toml configuration file."
 msgstr ""
+"パケットを受信するローカル アドレスとポート。 xemu.toml 構成ファイルに手動で"
+"入力する場合は、空のままにしておきます"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "UDP BIND ADDRESS"
-msgstr ""
+msgstr "UDPバインドアドレス"
 
 #. TRANSLATION: sonic2013
 msgctxt "game_options"
@@ -13107,7 +13115,7 @@ msgstr "ディスク イメージに合ったメディアを選択します"
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "DISK TYPE"
-msgstr "ディスクの種類"
+msgstr "ディスクタイプ"
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
@@ -14192,11 +14200,13 @@ msgid ""
 "Choose which graphics API library to use. D3D12 may yield better results "
 "with faster GPUs."
 msgstr ""
+"使用するグラフィック API を選択します。 D3D12 は、より高速な GPU を使用する"
+"と、より良くなる可能性があります"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "D3D12 (Default)"
-msgstr ""
+msgstr "D3D12 (標準)"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15824,6 +15834,10 @@ msgstr "クイック セーブ"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "game_options"
+#~ msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
+#~ msgstr "DirectX 9/10/11/12の呼び出しをVulkanに変換します"
 
 #~ msgctxt "game_options"
 #~ msgid "VKD3D (D3D12 to Vulkan)"

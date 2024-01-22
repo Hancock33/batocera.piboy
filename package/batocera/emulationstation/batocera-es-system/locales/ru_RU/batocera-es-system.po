@@ -11962,8 +11962,8 @@ msgstr "SDL НАСТРОЙКА"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
-msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
-msgstr "Преобразует вызовы DirectX 9/10/11/12 в Vulkan."
+msgid "Converts DirectX 8/9/10/11/12 calls to Vulkan."
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -15905,6 +15905,10 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Перемотка"
+
+#~ msgctxt "game_options"
+#~ msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
+#~ msgstr "Преобразует вызовы DirectX 9/10/11/12 в Vulkan."
 
 #~ msgctxt "game_options"
 #~ msgid ""
