@@ -12013,8 +12013,8 @@ msgstr "KONFIGURACJA SDL"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
-msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
-msgstr "Konwertuje wywołania DirectX 9/10/11/12 na Vulkan."
+msgid "Converts DirectX 8/9/10/11/12 calls to Vulkan."
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -15996,6 +15996,10 @@ msgstr "Szybkie zapisywanie"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Przewijanie do przodu"
+
+#~ msgctxt "game_options"
+#~ msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
+#~ msgstr "Konwertuje wywołania DirectX 9/10/11/12 na Vulkan."
 
 #~ msgctxt "game_options"
 #~ msgid "VKD3D (D3D12 to Vulkan)"
