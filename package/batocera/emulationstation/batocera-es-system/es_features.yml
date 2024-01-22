@@ -11112,7 +11112,7 @@ wine:
                 "On (Default)": 1
         dxvk:
             prompt:      DXVK FEATURE
-            description: Converts DirectX 9/10/11/12 calls to Vulkan.
+            description: Converts DirectX 8/9/10/11/12 calls to Vulkan.
             choices:
                 "Off": 0
                 "On":  1
