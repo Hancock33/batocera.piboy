@@ -72,7 +72,7 @@ index 0d5438e6..b05496fc 100644
      }
    }
 diff --git a/es-core/src/guis/GuiInputConfig.cpp b/es-core/src/guis/GuiInputConfig.cpp
-index 3218d957..affb8d3b 100644
+index 0428cfbc..a5e1de9e 100644
 --- a/es-core/src/guis/GuiInputConfig.cpp
 +++ b/es-core/src/guis/GuiInputConfig.cpp
 @@ -415,6 +415,8 @@ bool GuiInputConfig::assign(Input input, int inputId)
