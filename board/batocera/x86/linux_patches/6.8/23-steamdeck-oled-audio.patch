@@ -162,14 +162,6 @@ diff --git a/sound/soc/amd/acp/acp-mach.h b/sound/soc/amd/acp/acp-mach.h
 index a48546d8d407..306ecd489625 100644
 --- a/sound/soc/amd/acp/acp-mach.h
 +++ b/sound/soc/amd/acp/acp-mach.h
-@@ -27,6 +27,7 @@
- enum be_id {
- 	HEADSET_BE_ID = 0,
- 	AMP_BE_ID,
-+	BT_BE_ID,
- 	DMIC_BE_ID,
- 	BT_BE_ID,
- };
 @@ -46,6 +47,7 @@ enum codec_endpoints {
  	MAX98360A,
  	RT5682S,
