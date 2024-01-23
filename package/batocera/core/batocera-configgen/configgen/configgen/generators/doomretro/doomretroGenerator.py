@@ -8,7 +8,7 @@ from os import path
 import shlex
 
 class DoomretroGenerator(Generator):
-    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
         iwad = ''
         pwad = ''
