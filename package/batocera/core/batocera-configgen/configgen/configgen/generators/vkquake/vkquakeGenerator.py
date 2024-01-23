@@ -11,7 +11,7 @@ q1_dst = "/userdata/roms/ports/quake1/id1/vkquake.pak"
 
 class VkquakeGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["vkquake", "-basedir", "/userdata/roms/ports/quake1", "-sndspeed", "44100"]
 
         shutil.copy(q1_src, q1_dst)

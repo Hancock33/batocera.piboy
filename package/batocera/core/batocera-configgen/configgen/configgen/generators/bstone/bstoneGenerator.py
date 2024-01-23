@@ -7,7 +7,7 @@ import utils.videoMode as videoMode
 
 class BstoneGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         addon = "/userdata/roms/ports/bstone/SW"
         gver = "--aog_sw"
         gameResolution = videoMode.getCurrentResolution()
