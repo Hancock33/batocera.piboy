@@ -1,8 +1,8 @@
 diff --git a/.gitmodules b/.gitmodules
-index 1bd6207a..ec5fa93f 100644
+index 83486efc..4a494bb2 100644
 --- a/.gitmodules
 +++ b/.gitmodules
-@@ -90,9 +90,9 @@
+@@ -87,9 +87,9 @@
  [submodule "external/tracy"]
  	path = external/tracy
  	url = https://github.com/wolfpld/tracy.git
@@ -16,10 +16,10 @@ index 1bd6207a..ec5fa93f 100644
  	path = external/cubeb
  	url = https://github.com/mozilla/cubeb.git
 diff --git a/external/CMakeLists.txt b/external/CMakeLists.txt
-index 83521510..ffe7ce4c 100644
+index bdc7b367..64ec141e 100644
 --- a/external/CMakeLists.txt
 +++ b/external/CMakeLists.txt
-@@ -379,11 +379,20 @@ target_compile_definitions(tracy PUBLIC $<$<CONFIG:Debug,RelWithDebInfo>:TRACY_E
+@@ -378,11 +378,20 @@ target_compile_definitions(tracy PUBLIC $<$<CONFIG:Debug,RelWithDebInfo>:TRACY_E
  #
  # target_compile_definitions(tracy PUBLIC TRACY_ENABLE)
  
@@ -47,10 +47,10 @@ index 83521510..ffe7ce4c 100644
 -# Create alias to prevent the need of multiple changes in case the target name changes
 -add_library(NFDe::NFDe ALIAS nfd)
 diff --git a/vita3k/CMakeLists.txt b/vita3k/CMakeLists.txt
-index 4f008ab4..6ce353a6 100644
+index 87deaff4..bb721e08 100644
 --- a/vita3k/CMakeLists.txt
 +++ b/vita3k/CMakeLists.txt
-@@ -104,7 +104,6 @@ add_subdirectory(features)
+@@ -103,7 +103,6 @@ add_subdirectory(features)
  add_subdirectory(glutil)
  add_subdirectory(gui)
  add_subdirectory(gxm)
@@ -435,7 +435,7 @@ index 19c0dca3..b32122e8 100644
                  license_path = "";
                  state.clear();
 diff --git a/vita3k/gui/src/settings.cpp b/vita3k/gui/src/settings.cpp
-index bbc2aab6..cd9bbfa9 100644
+index 18919bd8..d5e963b7 100644
 --- a/vita3k/gui/src/settings.cpp
 +++ b/vita3k/gui/src/settings.cpp
 @@ -20,7 +20,6 @@
@@ -489,7 +489,7 @@ index bbc2aab6..cd9bbfa9 100644
                              save_user(gui, emuenv, emuenv.io.user_id);
                          }
 diff --git a/vita3k/gui/src/settings_dialog.cpp b/vita3k/gui/src/settings_dialog.cpp
-index a849cdb8..4ed6dc56 100644
+index 30144cec..c1c739b4 100644
 --- a/vita3k/gui/src/settings_dialog.cpp
 +++ b/vita3k/gui/src/settings_dialog.cpp
 @@ -23,7 +23,6 @@
