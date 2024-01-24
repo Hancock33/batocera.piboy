@@ -1,5 +1,5 @@
 diff --git a/pcsx2/USB/usb-lightgun/guncon2.cpp b/pcsx2/USB/usb-lightgun/guncon2.cpp
-index 3aac35be1..bc7a590ee 100644
+index 58ef137d5..f6d4a7981 100644
 --- a/pcsx2/USB/usb-lightgun/guncon2.cpp
 +++ b/pcsx2/USB/usb-lightgun/guncon2.cpp
 @@ -18,6 +18,12 @@
@@ -182,7 +182,7 @@ index 3aac35be1..bc7a590ee 100644
  		s16 pos_x, pos_y;
  		if (pointer_x < 0.0f || pointer_y < 0.0f)
  		{
-@@ -445,9 +564,151 @@ namespace usb_lightgun
+@@ -444,9 +563,151 @@ namespace usb_lightgun
  		return "guncon2";
  	}
  
