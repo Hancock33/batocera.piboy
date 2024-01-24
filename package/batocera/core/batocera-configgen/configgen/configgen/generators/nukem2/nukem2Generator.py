@@ -7,7 +7,7 @@ import controllersConfig
 
 class Nukem2Generator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["RigelEngine", "/userdata/roms/ports/nukem2"]
 
         return Command.Command(
