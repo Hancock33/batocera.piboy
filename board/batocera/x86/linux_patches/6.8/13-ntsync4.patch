@@ -1,12 +1,12 @@
 diff --git a/Documentation/admin-guide/devices.txt b/Documentation/admin-guide/devices.txt
-index 839054923530..7ae111fd02e7 100644
+index 94c98be1329a..041404397ee5 100644
 --- a/Documentation/admin-guide/devices.txt
 +++ b/Documentation/admin-guide/devices.txt
 @@ -376,8 +376,9 @@
  		240 = /dev/userio	Serio driver testing device
  		241 = /dev/vhost-vsock	Host kernel driver for virtio vsock
  		242 = /dev/rfkill	Turning off radio transmissions (rfkill)
-+		243 = /dev/winesync	Wine synchronization primitive device
++		243 = /dev/ntsync	NT synchronization primitive device
  
 -		243-254			Reserved for local use
 +		244-254			Reserved for local use
@@ -14,48 +14,47 @@ index 839054923530..7ae111fd02e7 100644
  
    11 char	Raw keyboard device	(Linux/SPARC only)
 diff --git a/Documentation/userspace-api/index.rst b/Documentation/userspace-api/index.rst
-index 031df47a7c19..ef98164e3cdb 100644
+index 09f61bd2ac2e..f5a72ed27def 100644
 --- a/Documentation/userspace-api/index.rst
 +++ b/Documentation/userspace-api/index.rst
-@@ -33,6 +33,7 @@ place where this information is gathered.
-    sysfs-platform_profile
-    vduse
-    futex2
-+   winesync
+@@ -34,6 +34,7 @@ place where this information is gathered.
+    tee
+    isapnp
+    dcdbas
++   ntsync
  
  .. only::  subproject and html
  
 diff --git a/Documentation/userspace-api/ioctl/ioctl-number.rst b/Documentation/userspace-api/ioctl/ioctl-number.rst
-index 4ea5b837399a..825e95da7e95 100644
+index 457e16f06e04..a1326a5bc2e0 100644
 --- a/Documentation/userspace-api/ioctl/ioctl-number.rst
 +++ b/Documentation/userspace-api/ioctl/ioctl-number.rst
-@@ -375,6 +375,8 @@ Code  Seq#    Include File                                           Comments
+@@ -378,6 +378,8 @@ Code  Seq#    Include File                                           Comments
                                                                       <mailto:thomas@winischhofer.net>
  0xF6  all                                                            LTTng Linux Trace Toolkit Next Generation
                                                                       <mailto:mathieu.desnoyers@efficios.com>
-+0xF7  00-0F  uapi/linux/winesync.h                                   Wine synchronization primitives
++0xF7  00-1F  uapi/linux/ntsync.h                                     NT synchronization primitives
 +                                                                     <mailto:wine-devel@winehq.org>
  0xF8  all    arch/x86/include/uapi/asm/amd_hsmp.h                    AMD HSMP EPYC system management interface driver
                                                                       <mailto:nchatrad@amd.com>
  0xFD  all    linux/dm-ioctl.h
-diff --git a/Documentation/userspace-api/winesync.rst b/Documentation/userspace-api/winesync.rst
+diff --git a/Documentation/userspace-api/ntsync.rst b/Documentation/userspace-api/ntsync.rst
 new file mode 100644
-index 000000000000..d7055bf41820
+index 000000000000..45d945b3e246
 --- /dev/null
-+++ b/Documentation/userspace-api/winesync.rst
-@@ -0,0 +1,444 @@
-+=====================================
-+Wine synchronization primitive driver
-+=====================================
++++ b/Documentation/userspace-api/ntsync.rst
+@@ -0,0 +1,445 @@
++===================================
++NT synchronization primitive driver
++===================================
 +
-+This page documents the user-space API for the winesync driver.
++This page documents the user-space API for the ntsync driver.
 +
-+winesync is a support driver for emulation of NT synchronization
-+primitives by the Wine project or other NT emulators. It exists
-+because implementation in user-space, using existing tools, cannot
-+simultaneously satisfy performance, correctness, and security
-+constraints. It is implemented entirely in software, and does not
-+drive any hardware device.
++ntsync is a support driver for emulation of NT synchronization
++primitives by user-space NT emulators. It exists because implementation
++in user-space, using existing tools, cannot match Windows performance
++while offering accurate semantics. It is implemented entirely in
++software, and does not drive any hardware device.
 +
 +This interface is meant as a compatibility tool only, and should not
 +be used for general synchronization. Instead use generic, versatile
@@ -64,7 +63,7 @@ index 000000000000..d7055bf41820
 +Synchronization primitives
 +==========================
 +
-+The winesync driver exposes three types of synchronization primitives:
++The ntsync driver exposes three types of synchronization primitives:
 +semaphores, mutexes, and events.
 +
 +A semaphore holds a single volatile 32-bit counter, and a static
@@ -82,12 +81,12 @@ index 000000000000..d7055bf41820
 +A mutex also holds an internal flag denoting whether its previous
 +owner has died; such a mutex is said to be inconsistent. Owner death
 +is not tracked automatically based on thread death, but rather must be
-+communicated using ``WINESYNC_IOC_KILL_OWNER``. An inconsistent mutex
++communicated using ``NTSYNC_IOC_KILL_OWNER``. An inconsistent mutex
 +is inherently considered unowned.
 +
 +Except for the "unowned" semantics of zero, the actual value of the
-+owner identifier is not interpreted by the winesync driver at all. The
-+intended use is to store a thread identifier; however, the winesync
++owner identifier is not interpreted by the ntsync driver at all. The
++intended use is to store a thread identifier; however, the ntsync
 +driver does not actually validate that a calling thread provides
 +consistent or unique identifiers.
 +
@@ -105,7 +104,7 @@ index 000000000000..d7055bf41820
 +Char device
 +===========
 +
-+The winesync driver creates a single char device /dev/winesync. Each
++The ntsync driver creates a single char device /dev/ntsync. Each
 +file description opened on the device represents a unique namespace.
 +That is, objects created on one open file description are shared
 +across all its individual descriptors, but are not shared with other
@@ -115,34 +114,34 @@ index 000000000000..d7055bf41820
 +ioctl reference
 +===============
 +
-+All operations on the device are done through ioctls. There are three
++All operations on the device are done through ioctls. There are four
 +structures used in ioctl calls::
 +
-+   struct winesync_sem_args {
-+	__u32 sem;
-+	__u32 count;
-+	__u32 max;
++   struct ntsync_sem_args {
++   	__u32 sem;
++   	__u32 count;
++   	__u32 max;
 +   };
 +
-+   struct winesync_mutex_args {
-+	__u32 mutex;
-+	__u32 owner;
-+	__u32 count;
++   struct ntsync_mutex_args {
++   	__u32 mutex;
++   	__u32 owner;
++   	__u32 count;
 +   };
 +
-+   struct winesync_event_args {
-+	__u32 event;
-+	__u32 signaled;
-+	__u32 manual;
++   struct ntsync_event_args {
++   	__u32 event;
++   	__u32 signaled;
++   	__u32 manual;
 +   };
 +
-+   struct winesync_wait_args {
-+	__u64 timeout;
-+	__u64 objs;
-+	__u32 count;
-+	__u32 owner;
-+	__u32 index;
-+	__u32 pad;
++   struct ntsync_wait_args {
++   	__u64 timeout;
++   	__u64 objs;
++   	__u32 count;
++   	__u32 owner;
++   	__u32 index;
++   	__u32 alert;
 +   };
 +
 +Depending on the ioctl, members of the structure may be used as input,
@@ -150,10 +149,10 @@ index 000000000000..d7055bf41820
 +
 +The ioctls are as follows:
 +
-+.. c:macro:: WINESYNC_IOC_CREATE_SEM
++.. c:macro:: NTSYNC_IOC_CREATE_SEM
 +
 +  Create a semaphore object. Takes a pointer to struct
-+  :c:type:`winesync_sem_args`, which is used as follows:
++  :c:type:`ntsync_sem_args`, which is used as follows:
 +
 +  .. list-table::
 +
@@ -166,10 +165,10 @@ index 000000000000..d7055bf41820
 +
 +  Fails with ``EINVAL`` if ``count`` is greater than ``max``.
 +
-+.. c:macro:: WINESYNC_IOC_CREATE_MUTEX
++.. c:macro:: NTSYNC_IOC_CREATE_MUTEX
 +
 +  Create a mutex object. Takes a pointer to struct
-+  :c:type:`winesync_mutex_args`, which is used as follows:
++  :c:type:`ntsync_mutex_args`, which is used as follows:
 +
 +  .. list-table::
 +
@@ -183,10 +182,10 @@ index 000000000000..d7055bf41820
 +  If ``owner`` is nonzero and ``count`` is zero, or if ``owner`` is
 +  zero and ``count`` is nonzero, the function fails with ``EINVAL``.
 +
-+.. c:macro:: WINESYNC_IOC_CREATE_EVENT
++.. c:macro:: NTSYNC_IOC_CREATE_EVENT
 +
 +  Create an event object. Takes a pointer to struct
-+  :c:type:`winesync_event_args`, which is used as follows:
++  :c:type:`ntsync_event_args`, which is used as follows:
 +
 +  .. list-table::
 +
@@ -199,7 +198,7 @@ index 000000000000..d7055bf41820
 +       - If nonzero, the event is a manual-reset event, otherwise
 +         auto-reset.
 +
-+.. c:macro:: WINESYNC_IOC_DELETE
++.. c:macro:: NTSYNC_IOC_DELETE
 +
 +  Delete an object of any type. Takes an input-only pointer to a
 +  32-bit integer denoting the object to delete.
@@ -207,10 +206,10 @@ index 000000000000..d7055bf41820
 +  Wait ioctls currently in progress are not interrupted, and behave as
 +  if the object remains valid.
 +
-+.. c:macro:: WINESYNC_IOC_PUT_SEM
++.. c:macro:: NTSYNC_IOC_PUT_SEM
 +
 +  Post to a semaphore object. Takes a pointer to struct
-+  :c:type:`winesync_sem_args`, which is used as follows:
++  :c:type:`ntsync_sem_args`, which is used as follows:
 +
 +  .. list-table::
 +
@@ -229,10 +228,10 @@ index 000000000000..d7055bf41820
 +  waiting on this semaphore will be woken and the semaphore's count
 +  decremented appropriately.
 +
-+.. c:macro:: WINESYNC_IOC_PUT_MUTEX
++.. c:macro:: NTSYNC_IOC_PUT_MUTEX
 +
 +  Release a mutex object. Takes a pointer to struct
-+  :c:type:`winesync_mutex_args`, which is used as follows:
++  :c:type:`ntsync_mutex_args`, which is used as follows:
 +
 +  .. list-table::
 +
@@ -252,10 +251,10 @@ index 000000000000..d7055bf41820
 +  unowned and signaled, and eligible threads waiting on it will be
 +  woken as appropriate.
 +
-+.. c:macro:: WINESYNC_IOC_SET_EVENT
++.. c:macro:: NTSYNC_IOC_SET_EVENT
 +
 +  Signal an event object. Takes a pointer to struct
-+  :c:type:`winesync_event_args`, which is used as follows:
++  :c:type:`ntsync_event_args`, which is used as follows:
 +
 +  .. list-table::
 +
@@ -269,10 +268,10 @@ index 000000000000..d7055bf41820
 +  Eligible threads will be woken, and auto-reset events will be
 +  designaled appropriately.
 +
-+.. c:macro:: WINESYNC_IOC_RESET_EVENT
++.. c:macro:: NTSYNC_IOC_RESET_EVENT
 +
 +  Designal an event object. Takes a pointer to struct
-+  :c:type:`winesync_event_args`, which is used as follows:
++  :c:type:`ntsync_event_args`, which is used as follows:
 +
 +  .. list-table::
 +
@@ -283,11 +282,11 @@ index 000000000000..d7055bf41820
 +     * - ``manual``
 +       - Unused.
 +
-+.. c:macro:: WINESYNC_IOC_PULSE_EVENT
++.. c:macro:: NTSYNC_IOC_PULSE_EVENT
 +
 +  Wake threads waiting on an event object without leaving it in a
 +  signaled state. Takes a pointer to struct
-+  :c:type:`winesync_event_args`, which is used as follows:
++  :c:type:`ntsync_event_args`, which is used as follows:
 +
 +  .. list-table::
 +
@@ -306,10 +305,10 @@ index 000000000000..d7055bf41820
 +  afterwards, and a simultaneous read operation will always report the
 +  event as unsignaled.
 +
-+.. c:macro:: WINESYNC_IOC_READ_SEM
++.. c:macro:: NTSYNC_IOC_READ_SEM
 +
 +  Read the current state of a semaphore object. Takes a pointer to
-+  struct :c:type:`winesync_sem_args`, which is used as follows:
++  struct :c:type:`ntsync_sem_args`, which is used as follows:
 +
 +  .. list-table::
 +
@@ -320,10 +319,10 @@ index 000000000000..d7055bf41820
 +     * - ``max``
 +       - On output, contains the maximum count of the semaphore.
 +
-+.. c:macro:: WINESYNC_IOC_READ_MUTEX
++.. c:macro:: NTSYNC_IOC_READ_MUTEX
 +
 +  Read the current state of a mutex object. Takes a pointer to struct
-+  :c:type:`winesync_mutex_args`, which is used as follows:
++  :c:type:`ntsync_mutex_args`, which is used as follows:
 +
 +  .. list-table::
 +
@@ -339,10 +338,10 @@ index 000000000000..d7055bf41820
 +  ``EOWNERDEAD``. In this case, ``count`` and ``owner`` are set to
 +  zero.
 +
-+.. c:macro:: WINESYNC_IOC_READ_EVENT
++.. c:macro:: NTSYNC_IOC_READ_EVENT
 +
 +  Read the current state of an event object. Takes a pointer to struct
-+  :c:type:`winesync_event_args`, which is used as follows:
++  :c:type:`ntsync_event_args`, which is used as follows:
 +
 +  .. list-table::
 +
@@ -354,7 +353,7 @@ index 000000000000..d7055bf41820
 +       - On output, contains 1 if the event is a manual-reset event,
 +         and 0 otherwise.
 +
-+.. c:macro:: WINESYNC_IOC_KILL_OWNER
++.. c:macro:: NTSYNC_IOC_KILL_OWNER
 +
 +  Mark any mutexes owned by the given owner as unowned and
 +  inconsistent. Takes an input-only pointer to a 32-bit integer
@@ -369,10 +368,10 @@ index 000000000000..d7055bf41820
 +  each mutex is atomic and totally ordered with respect to other
 +  operations on the same mutex.
 +
-+.. c:macro:: WINESYNC_IOC_WAIT_ANY
++.. c:macro:: NTSYNC_IOC_WAIT_ANY
 +
 +  Poll on any of a list of objects, atomically acquiring at most one.
-+  Takes a pointer to struct :c:type:`winesync_wait_args`, which is
++  Takes a pointer to struct :c:type:`ntsync_wait_args`, which is
 +  used as follows:
 +
 +  .. list-table::
@@ -393,6 +392,8 @@ index 000000000000..d7055bf41820
 +         invalid, the function fails with ``EINVAL``.
 +     * - ``count``
 +       - Number of object identifiers specified in the ``objs`` array.
++         If greater than ``NTSYNC_MAX_WAIT_COUNT``, the function fails
++         with ``EINVAL``.
 +     * - ``owner``
 +       - Mutex owner identifier. If any object in ``objs`` is a mutex,
 +         the ioctl will attempt to acquire that mutex on behalf of
@@ -451,11 +452,11 @@ index 000000000000..d7055bf41820
 +
 +  The function may fail with ``EINTR`` if a signal is received.
 +
-+.. c:macro:: WINESYNC_IOC_WAIT_ALL
++.. c:macro:: NTSYNC_IOC_WAIT_ALL
 +
 +  Poll on a list of objects, atomically acquiring all of them. Takes a
-+  pointer to struct :c:type:`winesync_wait_args`, which is used
-+  identically to ``WINESYNC_IOC_WAIT_ANY``, except that ``index`` is
++  pointer to struct :c:type:`ntsync_wait_args`, which is used
++  identically to ``NTSYNC_IOC_WAIT_ANY``, except that ``index`` is
 +  always filled with zero on success if not woken via alert.
 +
 +  This function attempts to simultaneously acquire all of the given
@@ -472,7 +473,7 @@ index 000000000000..d7055bf41820
 +  objects.
 +
 +  If an inconsistent mutex is acquired, the ioctl fails with
-+  ``EOWNERDEAD``. Similarly to ``WINESYNC_IOC_WAIT_ANY``, all objects
++  ``EOWNERDEAD``. Similarly to ``NTSYNC_IOC_WAIT_ANY``, all objects
 +  are nevertheless marked as acquired. Note that if multiple mutex
 +  objects are specified, there is no way to know which were marked as
 +  inconsistent.
@@ -484,75 +485,73 @@ index 000000000000..d7055bf41820
 +  ``count``. As with "any" waits, if both conditions are filled, the
 +  former takes priority, and objects in ``objs`` will be acquired.
 +
-+  Unlike ``WINESYNC_IOC_WAIT_ANY``, it is not valid to pass the same
++  Unlike ``NTSYNC_IOC_WAIT_ANY``, it is not valid to pass the same
 +  object more than once, nor is it valid to pass the same object in
-+  ``objs`` and in ``alert`` If this is attempted, the function fails
++  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 7cef2d2ef8d7..51e8fa4a9ff5 100644
+index 8d1052fa6a69..7924127d351b 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -23385,6 +23385,15 @@ M:	David Härdeman <david@hardeman.nu>
- S:	Maintained
- F:	drivers/media/rc/winbond-cir.c
+@@ -15585,6 +15585,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
+ F:	Documentation/filesystems/ntfs3.rst
+ F:	fs/ntfs3/
  
-+WINESYNC SYNCHRONIZATION PRIMITIVE DRIVER
-+M:	Zebediah Figura <zfigura@codeweavers.com>
++NTSYNC SYNCHRONIZATION PRIMITIVE DRIVER
++M:	Elizabeth Figura <zfigura@codeweavers.com>
 +L:	wine-devel@winehq.org
 +S:	Supported
-+F:	Documentation/userspace-api/winesync.rst
-+F:	drivers/misc/winesync.c
-+F:	include/uapi/linux/winesync.h
-+F:	tools/testing/selftests/drivers/winesync/
++F:	Documentation/userspace-api/ntsync.rst
++F:	drivers/misc/ntsync.c
++F:	include/uapi/linux/ntsync.h
++F:	tools/testing/selftests/drivers/ntsync/
 +
- WINSYSTEMS EBC-C384 WATCHDOG DRIVER
- L:	linux-watchdog@vger.kernel.org
- S:	Orphan
+ NUBUS SUBSYSTEM
+ M:	Finn Thain <fthain@linux-m68k.org>
+ L:	linux-m68k@lists.linux-m68k.org
 diff --git a/drivers/misc/Kconfig b/drivers/misc/Kconfig
-index f37c4b8380ae..cd7aa4af70c0 100644
+index 4fb291f0bf7c..bdd8a71bd853 100644
 --- a/drivers/misc/Kconfig
 +++ b/drivers/misc/Kconfig
-@@ -506,6 +506,17 @@ config OPEN_DICE
+@@ -504,6 +504,15 @@ config OPEN_DICE
+ 	  measured boot flow. Userspace can use CDIs for remote attestation
+ 	  and sealing.
  
- 	  If unsure, say N.
- 
-+config WINESYNC
-+	tristate "Synchronization primitives for Wine"
++config NTSYNC
++	tristate "NT synchronization primitive emulation"
 +	help
-+	  This module provides kernel support for synchronization primitives
-+	  used by Wine. It is not a hardware driver.
++	  This module provides kernel support for emulation of Windows NT
++	  synchronization primitives. It is not a hardware driver.
 +
 +	  To compile this driver as a module, choose M here: the
-+	  module will be called winesync.
++	  module will be called ntsync.
 +
-+	  If unsure, say N.
-+
+ 	  If unsure, say N.
+ 
  config VCPU_STALL_DETECTOR
- 	tristate "Guest vCPU stall detector"
- 	depends on OF && HAS_IOMEM
 diff --git a/drivers/misc/Makefile b/drivers/misc/Makefile
-index f2a4d1ff65d4..e7824ea71db4 100644
+index ea6ea5bbbc9c..153a3f4837e8 100644
 --- a/drivers/misc/Makefile
 +++ b/drivers/misc/Makefile
 @@ -59,6 +59,7 @@ obj-$(CONFIG_PVPANIC)   	+= pvpanic/
  obj-$(CONFIG_UACCE)		+= uacce/
  obj-$(CONFIG_XILINX_SDFEC)	+= xilinx_sdfec.o
  obj-$(CONFIG_HISI_HIKEY_USB)	+= hisi_hikey_usb.o
-+obj-$(CONFIG_WINESYNC)		+= winesync.o
++obj-$(CONFIG_NTSYNC)		+= ntsync.o
  obj-$(CONFIG_HI6421V600_IRQ)	+= hi6421v600-irq.o
  obj-$(CONFIG_OPEN_DICE)		+= open-dice.o
  obj-$(CONFIG_GP_PCI1XXXX)	+= mchp_pci1xxxx/
-diff --git a/drivers/misc/winesync.c b/drivers/misc/winesync.c
+diff --git a/drivers/misc/ntsync.c b/drivers/misc/ntsync.c
 new file mode 100644
-index 000000000000..7a28f58dbbf2
+index 000000000000..6f4cb9a3ed5a
 --- /dev/null
-+++ b/drivers/misc/winesync.c
-@@ -0,0 +1,1212 @@
++++ b/drivers/misc/ntsync.c
+@@ -0,0 +1,1203 @@
 +// SPDX-License-Identifier: GPL-2.0-only
 +/*
-+ * winesync.c - Kernel driver for Wine synchronization primitives
++ * ntsync.c - Kernel driver for NT synchronization primitives
 + *
-+ * Copyright (C) 2021 Zebediah Figura
++ * Copyright (C) 2021-2022 Elizabeth Figura
 + */
 +
 +#include <linux/fs.h>
@@ -560,17 +559,17 @@ index 000000000000..7a28f58dbbf2
 +#include <linux/module.h>
 +#include <linux/slab.h>
 +#include <linux/xarray.h>
-+#include <uapi/linux/winesync.h>
++#include <uapi/linux/ntsync.h>
 +
-+#define WINESYNC_NAME	"winesync"
++#define NTSYNC_NAME	"ntsync"
 +
-+enum winesync_type {
-+	WINESYNC_TYPE_SEM,
-+	WINESYNC_TYPE_MUTEX,
-+	WINESYNC_TYPE_EVENT,
++enum ntsync_type {
++	NTSYNC_TYPE_SEM,
++	NTSYNC_TYPE_MUTEX,
++	NTSYNC_TYPE_EVENT,
 +};
 +
-+struct winesync_obj {
++struct ntsync_obj {
 +	struct rcu_head rhead;
 +	struct kref refcount;
 +	spinlock_t lock;
@@ -604,7 +603,7 @@ index 000000000000..7a28f58dbbf2
 +	 */
 +	atomic_t all_hint;
 +
-+	enum winesync_type type;
++	enum ntsync_type type;
 +
 +	/* The following fields are protected by the object lock. */
 +	union {
@@ -624,14 +623,14 @@ index 000000000000..7a28f58dbbf2
 +	} u;
 +};
 +
-+struct winesync_q_entry {
++struct ntsync_q_entry {
 +	struct list_head node;
-+	struct winesync_q *q;
-+	struct winesync_obj *obj;
++	struct ntsync_q *q;
++	struct ntsync_obj *obj;
 +	__u32 index;
 +};
 +
-+struct winesync_q {
++struct ntsync_q {
 +	struct task_struct *task;
 +	__u32 owner;
 +
@@ -645,10 +644,10 @@ index 000000000000..7a28f58dbbf2
 +	bool all;
 +	bool ownerdead;
 +	__u32 count;
-+	struct winesync_q_entry entries[];
++	struct ntsync_q_entry entries[];
 +};
 +
-+struct winesync_device {
++struct ntsync_device {
 +	/*
 +	 * Wait-all operations must atomically grab all objects, and be totally
 +	 * ordered with respect to each other and wait-any operations. If one
@@ -665,9 +664,9 @@ index 000000000000..7a28f58dbbf2
 +	struct xarray objects;
 +};
 +
-+static struct winesync_obj *get_obj(struct winesync_device *dev, __u32 id)
++static struct ntsync_obj *get_obj(struct ntsync_device *dev, __u32 id)
 +{
-+	struct winesync_obj *obj;
++	struct ntsync_obj *obj;
 +
 +	rcu_read_lock();
 +	obj = xa_load(&dev->objects, id);
@@ -680,20 +679,20 @@ index 000000000000..7a28f58dbbf2
 +
 +static void destroy_obj(struct kref *ref)
 +{
-+	struct winesync_obj *obj = container_of(ref, struct winesync_obj, refcount);
++	struct ntsync_obj *obj = container_of(ref, struct ntsync_obj, refcount);
 +
 +	kfree_rcu(obj, rhead);
 +}
 +
-+static void put_obj(struct winesync_obj *obj)
++static void put_obj(struct ntsync_obj *obj)
 +{
 +	kref_put(&obj->refcount, destroy_obj);
 +}
 +
-+static struct winesync_obj *get_obj_typed(struct winesync_device *dev, __u32 id,
-+					  enum winesync_type type)
++static struct ntsync_obj *get_obj_typed(struct ntsync_device *dev, __u32 id,
++					enum ntsync_type type)
 +{
-+	struct winesync_obj *obj = get_obj(dev, id);
++	struct ntsync_obj *obj = get_obj(dev, id);
 +
 +	if (obj && obj->type != type) {
 +		put_obj(obj);
@@ -702,9 +701,9 @@ index 000000000000..7a28f58dbbf2
 +	return obj;
 +}
 +
-+static int winesync_char_open(struct inode *inode, struct file *file)
++static int ntsync_char_open(struct inode *inode, struct file *file)
 +{
-+	struct winesync_device *dev;
++	struct ntsync_device *dev;
 +
 +	dev = kzalloc(sizeof(*dev), GFP_KERNEL);
 +	if (!dev)
@@ -718,10 +717,10 @@ index 000000000000..7a28f58dbbf2
 +	return nonseekable_open(inode, file);
 +}
 +
-+static int winesync_char_release(struct inode *inode, struct file *file)
++static int ntsync_char_release(struct inode *inode, struct file *file)
 +{
-+	struct winesync_device *dev = file->private_data;
-+	struct winesync_obj *obj;
++	struct ntsync_device *dev = file->private_data;
++	struct ntsync_obj *obj;
 +	unsigned long id;
 +
 +	xa_for_each(&dev->objects, id, obj)
@@ -734,7 +733,7 @@ index 000000000000..7a28f58dbbf2
 +	return 0;
 +}
 +
-+static void init_obj(struct winesync_obj *obj)
++static void init_obj(struct ntsync_obj *obj)
 +{
 +	kref_init(&obj->refcount);
 +	atomic_set(&obj->all_hint, 0);
@@ -743,18 +742,18 @@ index 000000000000..7a28f58dbbf2
 +	INIT_LIST_HEAD(&obj->all_waiters);
 +}
 +
-+static bool is_signaled(struct winesync_obj *obj, __u32 owner)
++static bool is_signaled(struct ntsync_obj *obj, __u32 owner)
 +{
 +	lockdep_assert_held(&obj->lock);
 +
 +	switch (obj->type) {
-+	case WINESYNC_TYPE_SEM:
++	case NTSYNC_TYPE_SEM:
 +		return !!obj->u.sem.count;
-+	case WINESYNC_TYPE_MUTEX:
++	case NTSYNC_TYPE_MUTEX:
 +		if (obj->u.mutex.owner && obj->u.mutex.owner != owner)
 +			return false;
 +		return obj->u.mutex.count < UINT_MAX;
-+	case WINESYNC_TYPE_EVENT:
++	case NTSYNC_TYPE_EVENT:
 +		return obj->u.event.signaled;
 +	}
 +
@@ -767,8 +766,8 @@ index 000000000000..7a28f58dbbf2
 + * should not be locked again. This is necessary so that changing an object's
 + * state and waking it can be a single atomic operation.
 + */
-+static void try_wake_all(struct winesync_device *dev, struct winesync_q *q,
-+			 struct winesync_obj *locked_obj)
++static void try_wake_all(struct ntsync_device *dev, struct ntsync_q *q,
++			 struct ntsync_obj *locked_obj)
 +{
 +	__u32 count = q->count;
 +	bool can_wake = true;
@@ -780,7 +779,7 @@ index 000000000000..7a28f58dbbf2
 +
 +	for (i = 0; i < count; i++) {
 +		if (q->entries[i].obj != locked_obj)
-+			spin_lock(&q->entries[i].obj->lock);
++			spin_lock_nest_lock(&q->entries[i].obj->lock, &dev->wait_all_lock);
 +	}
 +
 +	for (i = 0; i < count; i++) {
@@ -792,20 +791,20 @@ index 000000000000..7a28f58dbbf2
 +
 +	if (can_wake && atomic_cmpxchg(&q->signaled, -1, 0) == -1) {
 +		for (i = 0; i < count; i++) {
-+			struct winesync_obj *obj = q->entries[i].obj;
++			struct ntsync_obj *obj = q->entries[i].obj;
 +
 +			switch (obj->type) {
-+			case WINESYNC_TYPE_SEM:
++			case NTSYNC_TYPE_SEM:
 +				obj->u.sem.count--;
 +				break;
-+			case WINESYNC_TYPE_MUTEX:
++			case NTSYNC_TYPE_MUTEX:
 +				if (obj->u.mutex.ownerdead)
 +					q->ownerdead = true;
 +				obj->u.mutex.ownerdead = false;
 +				obj->u.mutex.count++;
 +				obj->u.mutex.owner = q->owner;
 +				break;
-+			case WINESYNC_TYPE_EVENT:
++			case NTSYNC_TYPE_EVENT:
 +				if (!obj->u.event.manual)
 +					obj->u.event.signaled = false;
 +				break;
@@ -820,10 +819,9 @@ index 000000000000..7a28f58dbbf2
 +	}
 +}
 +
-+static void try_wake_all_obj(struct winesync_device *dev,
-+			     struct winesync_obj *obj)
++static void try_wake_all_obj(struct ntsync_device *dev, struct ntsync_obj *obj)
 +{
-+	struct winesync_q_entry *entry;
++	struct ntsync_q_entry *entry;
 +
 +	lockdep_assert_held(&dev->wait_all_lock);
 +	lockdep_assert_held(&obj->lock);
@@ -832,14 +830,14 @@ index 000000000000..7a28f58dbbf2
 +		try_wake_all(dev, entry->q, obj);
 +}
 +
-+static void try_wake_any_sem(struct winesync_obj *sem)
++static void try_wake_any_sem(struct ntsync_obj *sem)
 +{
-+	struct winesync_q_entry *entry;
++	struct ntsync_q_entry *entry;
 +
 +	lockdep_assert_held(&sem->lock);
 +
 +	list_for_each_entry(entry, &sem->any_waiters, node) {
-+		struct winesync_q *q = entry->q;
++		struct ntsync_q *q = entry->q;
 +
 +		if (!sem->u.sem.count)
 +			break;
@@ -851,14 +849,14 @@ index 000000000000..7a28f58dbbf2
 +	}
 +}
 +
-+static void try_wake_any_mutex(struct winesync_obj *mutex)
++static void try_wake_any_mutex(struct ntsync_obj *mutex)
 +{
-+	struct winesync_q_entry *entry;
++	struct ntsync_q_entry *entry;
 +
 +	lockdep_assert_held(&mutex->lock);
 +
 +	list_for_each_entry(entry, &mutex->any_waiters, node) {
-+		struct winesync_q *q = entry->q;
++		struct ntsync_q *q = entry->q;
 +
 +		if (mutex->u.mutex.count == UINT_MAX)
 +			break;
@@ -876,14 +874,14 @@ index 000000000000..7a28f58dbbf2
 +	}
 +}
 +
-+static void try_wake_any_event(struct winesync_obj *event)
++static void try_wake_any_event(struct ntsync_obj *event)
 +{
-+	struct winesync_q_entry *entry;
++	struct ntsync_q_entry *entry;
 +
 +	lockdep_assert_held(&event->lock);
 +
 +	list_for_each_entry(entry, &event->any_waiters, node) {
-+		struct winesync_q *q = entry->q;
++		struct ntsync_q *q = entry->q;
 +
 +		if (!event->u.event.signaled)
 +			break;
@@ -896,11 +894,11 @@ index 000000000000..7a28f58dbbf2
 +	}
 +}
 +
-+static int winesync_create_sem(struct winesync_device *dev, void __user *argp)
++static int ntsync_create_sem(struct ntsync_device *dev, void __user *argp)
 +{
-+	struct winesync_sem_args __user *user_args = argp;
-+	struct winesync_sem_args args;
-+	struct winesync_obj *sem;
++	struct ntsync_sem_args __user *user_args = argp;
++	struct ntsync_sem_args args;
++	struct ntsync_obj *sem;
 +	__u32 id;
 +	int ret;
 +
@@ -915,7 +913,7 @@ index 000000000000..7a28f58dbbf2
 +		return -ENOMEM;
 +
 +	init_obj(sem);
-+	sem->type = WINESYNC_TYPE_SEM;
++	sem->type = NTSYNC_TYPE_SEM;
 +	sem->u.sem.count = args.count;
 +	sem->u.sem.max = args.max;
 +
@@ -928,11 +926,11 @@ index 000000000000..7a28f58dbbf2
 +	return put_user(id, &user_args->sem);
 +}
 +
-+static int winesync_create_mutex(struct winesync_device *dev, void __user *argp)
++static int ntsync_create_mutex(struct ntsync_device *dev, void __user *argp)
 +{
-+	struct winesync_mutex_args __user *user_args = argp;
-+	struct winesync_mutex_args args;
-+	struct winesync_obj *mutex;
++	struct ntsync_mutex_args __user *user_args = argp;
++	struct ntsync_mutex_args args;
++	struct ntsync_obj *mutex;
 +	__u32 id;
 +	int ret;
 +
@@ -947,7 +945,7 @@ index 000000000000..7a28f58dbbf2
 +		return -ENOMEM;
 +
 +	init_obj(mutex);
-+	mutex->type = WINESYNC_TYPE_MUTEX;
++	mutex->type = NTSYNC_TYPE_MUTEX;
 +	mutex->u.mutex.count = args.count;
 +	mutex->u.mutex.owner = args.owner;
 +
@@ -960,11 +958,11 @@ index 000000000000..7a28f58dbbf2
 +	return put_user(id, &user_args->mutex);
 +}
 +
-+static int winesync_create_event(struct winesync_device *dev, void __user *argp)
++static int ntsync_create_event(struct ntsync_device *dev, void __user *argp)
 +{
-+	struct winesync_event_args __user *user_args = argp;
-+	struct winesync_event_args args;
-+	struct winesync_obj *event;
++	struct ntsync_event_args __user *user_args = argp;
++	struct ntsync_event_args args;
++	struct ntsync_obj *event;
 +	__u32 id;
 +	int ret;
 +
@@ -976,7 +974,7 @@ index 000000000000..7a28f58dbbf2
 +		return -ENOMEM;
 +
 +	init_obj(event);
-+	event->type = WINESYNC_TYPE_EVENT;
++	event->type = NTSYNC_TYPE_EVENT;
 +	event->u.event.manual = args.manual;
 +	event->u.event.signaled = args.signaled;
 +
@@ -989,9 +987,9 @@ index 000000000000..7a28f58dbbf2
 +	return put_user(id, &user_args->event);
 +}
 +
-+static int winesync_delete(struct winesync_device *dev, void __user *argp)
++static int ntsync_delete(struct ntsync_device *dev, void __user *argp)
 +{
-+	struct winesync_obj *obj;
++	struct ntsync_obj *obj;
 +	__u32 id;
 +
 +	if (get_user(id, (__u32 __user *)argp))
@@ -1009,7 +1007,7 @@ index 000000000000..7a28f58dbbf2
 + * Actually change the semaphore state, returning -EOVERFLOW if it is made
 + * invalid.
 + */
-+static int put_sem_state(struct winesync_obj *sem, __u32 count)
++static int put_sem_state(struct ntsync_obj *sem, __u32 count)
 +{
 +	lockdep_assert_held(&sem->lock);
 +
@@ -1021,24 +1019,24 @@ index 000000000000..7a28f58dbbf2
 +	return 0;
 +}
 +
-+static int winesync_put_sem(struct winesync_device *dev, void __user *argp)
++static int ntsync_put_sem(struct ntsync_device *dev, void __user *argp)
 +{
-+	struct winesync_sem_args __user *user_args = argp;
-+	struct winesync_sem_args args;
-+	struct winesync_obj *sem;
++	struct ntsync_sem_args __user *user_args = argp;
++	struct ntsync_sem_args args;
++	struct ntsync_obj *sem;
 +	__u32 prev_count;
 +	int ret;
 +
 +	if (copy_from_user(&args, argp, sizeof(args)))
 +		return -EFAULT;
 +
-+	sem = get_obj_typed(dev, args.sem, WINESYNC_TYPE_SEM);
++	sem = get_obj_typed(dev, args.sem, NTSYNC_TYPE_SEM);
 +	if (!sem)
 +		return -EINVAL;
 +
 +	if (atomic_read(&sem->all_hint) > 0) {
 +		spin_lock(&dev->wait_all_lock);
-+		spin_lock(&sem->lock);
++		spin_lock_nest_lock(&sem->lock, &dev->wait_all_lock);
 +
 +		prev_count = sem->u.sem.count;
 +		ret = put_sem_state(sem, args.count);
@@ -1071,8 +1069,8 @@ index 000000000000..7a28f58dbbf2
 +/*
 + * Actually change the mutex state, returning -EPERM if not the owner.
 + */
-+static int put_mutex_state(struct winesync_obj *mutex,
-+			   const struct winesync_mutex_args *args)
++static int put_mutex_state(struct ntsync_obj *mutex,
++			   const struct ntsync_mutex_args *args)
 +{
 +	lockdep_assert_held(&mutex->lock);
 +
@@ -1084,11 +1082,11 @@ index 000000000000..7a28f58dbbf2
 +	return 0;
 +}
 +
-+static int winesync_put_mutex(struct winesync_device *dev, void __user *argp)
++static int ntsync_put_mutex(struct ntsync_device *dev, void __user *argp)
 +{
-+	struct winesync_mutex_args __user *user_args = argp;
-+	struct winesync_mutex_args args;
-+	struct winesync_obj *mutex;
++	struct ntsync_mutex_args __user *user_args = argp;
++	struct ntsync_mutex_args args;
++	struct ntsync_obj *mutex;
 +	__u32 prev_count;
 +	int ret;
 +
@@ -1097,13 +1095,13 @@ index 000000000000..7a28f58dbbf2
 +	if (!args.owner)
 +		return -EINVAL;
 +
-+	mutex = get_obj_typed(dev, args.mutex, WINESYNC_TYPE_MUTEX);
++	mutex = get_obj_typed(dev, args.mutex, NTSYNC_TYPE_MUTEX);
 +	if (!mutex)
 +		return -EINVAL;
 +
 +	if (atomic_read(&mutex->all_hint) > 0) {
 +		spin_lock(&dev->wait_all_lock);
-+		spin_lock(&mutex->lock);
++		spin_lock_nest_lock(&mutex->lock, &dev->wait_all_lock);
 +
 +		prev_count = mutex->u.mutex.count;
 +		ret = put_mutex_state(mutex, &args);
@@ -1133,17 +1131,17 @@ index 000000000000..7a28f58dbbf2
 +	return ret;
 +}
 +
-+static int winesync_read_sem(struct winesync_device *dev, void __user *argp)
++static int ntsync_read_sem(struct ntsync_device *dev, void __user *argp)
 +{
-+	struct winesync_sem_args __user *user_args = argp;
-+	struct winesync_sem_args args;
-+	struct winesync_obj *sem;
++	struct ntsync_sem_args __user *user_args = argp;
++	struct ntsync_sem_args args;
++	struct ntsync_obj *sem;
 +	__u32 id;
 +
 +	if (get_user(id, &user_args->sem))
 +		return -EFAULT;
 +
-+	sem = get_obj_typed(dev, id, WINESYNC_TYPE_SEM);
++	sem = get_obj_typed(dev, id, NTSYNC_TYPE_SEM);
 +	if (!sem)
 +		return -EINVAL;
 +
@@ -1160,18 +1158,18 @@ index 000000000000..7a28f58dbbf2
 +	return 0;
 +}
 +
-+static int winesync_read_mutex(struct winesync_device *dev, void __user *argp)
++static int ntsync_read_mutex(struct ntsync_device *dev, void __user *argp)
 +{
-+	struct winesync_mutex_args __user *user_args = argp;
-+	struct winesync_mutex_args args;
-+	struct winesync_obj *mutex;
++	struct ntsync_mutex_args __user *user_args = argp;
++	struct ntsync_mutex_args args;
++	struct ntsync_obj *mutex;
 +	__u32 id;
 +	int ret;
 +
 +	if (get_user(id, &user_args->mutex))
 +		return -EFAULT;
 +
-+	mutex = get_obj_typed(dev, id, WINESYNC_TYPE_MUTEX);
++	mutex = get_obj_typed(dev, id, NTSYNC_TYPE_MUTEX);
 +	if (!mutex)
 +		return -EINVAL;
 +
@@ -1189,17 +1187,17 @@ index 000000000000..7a28f58dbbf2
 +	return ret;
 +}
 +
-+static int winesync_read_event(struct winesync_device *dev, void __user *argp)
++static int ntsync_read_event(struct ntsync_device *dev, void __user *argp)
 +{
-+	struct winesync_event_args __user *user_args = argp;
-+	struct winesync_event_args args;
-+	struct winesync_obj *event;
++	struct ntsync_event_args __user *user_args = argp;
++	struct ntsync_event_args args;
++	struct ntsync_obj *event;
 +	__u32 id;
 +
 +	if (get_user(id, &user_args->event))
 +		return -EFAULT;
 +
-+	event = get_obj_typed(dev, id, WINESYNC_TYPE_EVENT);
++	event = get_obj_typed(dev, id, NTSYNC_TYPE_EVENT);
 +	if (!event)
 +		return -EINVAL;
 +
@@ -1219,7 +1217,7 @@ index 000000000000..7a28f58dbbf2
 +/*
 + * Actually change the mutex state to mark its owner as dead.
 + */
-+static void put_mutex_ownerdead_state(struct winesync_obj *mutex)
++static void put_mutex_ownerdead_state(struct ntsync_obj *mutex)
 +{
 +	lockdep_assert_held(&mutex->lock);
 +
@@ -1228,9 +1226,9 @@ index 000000000000..7a28f58dbbf2
 +	mutex->u.mutex.count = 0;
 +}
 +
-+static int winesync_kill_owner(struct winesync_device *dev, void __user *argp)
++static int ntsync_kill_owner(struct ntsync_device *dev, void __user *argp)
 +{
-+	struct winesync_obj *obj;
++	struct ntsync_obj *obj;
 +	unsigned long id;
 +	__u32 owner;
 +
@@ -1245,14 +1243,14 @@ index 000000000000..7a28f58dbbf2
 +		if (!kref_get_unless_zero(&obj->refcount))
 +			continue;
 +
-+		if (obj->type != WINESYNC_TYPE_MUTEX) {
++		if (obj->type != NTSYNC_TYPE_MUTEX) {
 +			put_obj(obj);
 +			continue;
 +		}
 +
 +		if (atomic_read(&obj->all_hint) > 0) {
 +			spin_lock(&dev->wait_all_lock);
-+			spin_lock(&obj->lock);
++			spin_lock_nest_lock(&obj->lock, &dev->wait_all_lock);
 +
 +			if (obj->u.mutex.owner == owner) {
 +				put_mutex_ownerdead_state(obj);
@@ -1281,24 +1279,24 @@ index 000000000000..7a28f58dbbf2
 +	return 0;
 +}
 +
-+static int winesync_set_event(struct winesync_device *dev, void __user *argp,
-+			      bool pulse)
++static int ntsync_set_event(struct ntsync_device *dev, void __user *argp,
++			    bool pulse)
 +{
-+	struct winesync_event_args __user *user_args = argp;
-+	struct winesync_event_args args;
-+	struct winesync_obj *event;
++	struct ntsync_event_args __user *user_args = argp;
++	struct ntsync_event_args args;
++	struct ntsync_obj *event;
 +	bool prev_state;
 +
 +	if (copy_from_user(&args, argp, sizeof(args)))
 +		return -EFAULT;
 +
-+	event = get_obj_typed(dev, args.event, WINESYNC_TYPE_EVENT);
++	event = get_obj_typed(dev, args.event, NTSYNC_TYPE_EVENT);
 +	if (!event)
 +		return -EINVAL;
 +
 +	if (atomic_read(&event->all_hint) > 0) {
 +		spin_lock(&dev->wait_all_lock);
-+		spin_lock(&event->lock);
++		spin_lock_nest_lock(&event->lock, &dev->wait_all_lock);
 +
 +		prev_state = event->u.event.signaled;
 +		event->u.event.signaled = true;
@@ -1329,17 +1327,17 @@ index 000000000000..7a28f58dbbf2
 +	return 0;
 +}
 +
-+static int winesync_reset_event(struct winesync_device *dev, void __user *argp)
++static int ntsync_reset_event(struct ntsync_device *dev, void __user *argp)
 +{
-+	struct winesync_event_args __user *user_args = argp;
-+	struct winesync_event_args args;
-+	struct winesync_obj *event;
++	struct ntsync_event_args __user *user_args = argp;
++	struct ntsync_event_args args;
++	struct ntsync_obj *event;
 +	bool prev_state;
 +
 +	if (copy_from_user(&args, argp, sizeof(args)))
 +		return -EFAULT;
 +
-+	event = get_obj_typed(dev, args.event, WINESYNC_TYPE_EVENT);
++	event = get_obj_typed(dev, args.event, NTSYNC_TYPE_EVENT);
 +	if (!event)
 +		return -EINVAL;
 +
@@ -1358,7 +1356,7 @@ index 000000000000..7a28f58dbbf2
 +	return 0;
 +}
 +
-+static int winesync_schedule(const struct winesync_q *q, ktime_t *timeout)
++static int ntsync_schedule(const struct ntsync_q *q, ktime_t *timeout)
 +{
 +	int ret = 0;
 +
@@ -1381,21 +1379,24 @@ index 000000000000..7a28f58dbbf2
 +}
 +
 +/*
-+ * Allocate and initialize the winesync_q structure, but do not queue us yet.
++ * Allocate and initialize the ntsync_q structure, but do not queue us yet.
 + * Also, calculate the relative timeout.
 + */
-+static int setup_wait(struct winesync_device *dev,
-+		      const struct winesync_wait_args *args, bool all,
-+		      ktime_t *ret_timeout, struct winesync_q **ret_q)
++static int setup_wait(struct ntsync_device *dev,
++		      const struct ntsync_wait_args *args, bool all,
++		      ktime_t *ret_timeout, struct ntsync_q **ret_q)
 +{
 +	const __u32 count = args->count;
-+	struct winesync_q *q;
++	struct ntsync_q *q;
 +	ktime_t timeout = 0;
 +	__u32 total_count;
 +	__u32 *ids;
 +	__u32 i, j;
 +
 +	if (!args->owner)
++		return -EINVAL;
++
++	if (args->count > NTSYNC_MAX_WAIT_COUNT)
 +		return -EINVAL;
 +
 +	if (args->timeout) {
@@ -1437,8 +1438,8 @@ index 000000000000..7a28f58dbbf2
 +	q->count = count;
 +
 +	for (i = 0; i < total_count; i++) {
-+		struct winesync_q_entry *entry = &q->entries[i];
-+		struct winesync_obj *obj = get_obj(dev, ids[i]);
++		struct ntsync_q_entry *entry = &q->entries[i];
++		struct ntsync_obj *obj = get_obj(dev, ids[i]);
 +
 +		if (!obj)
 +			goto err;
@@ -1472,25 +1473,25 @@ index 000000000000..7a28f58dbbf2
 +	return -EINVAL;
 +}
 +
-+static void try_wake_any_obj(struct winesync_obj *obj)
++static void try_wake_any_obj(struct ntsync_obj *obj)
 +{
 +	switch (obj->type) {
-+	case WINESYNC_TYPE_SEM:
++	case NTSYNC_TYPE_SEM:
 +		try_wake_any_sem(obj);
 +		break;
-+	case WINESYNC_TYPE_MUTEX:
++	case NTSYNC_TYPE_MUTEX:
 +		try_wake_any_mutex(obj);
 +		break;
-+	case WINESYNC_TYPE_EVENT:
++	case NTSYNC_TYPE_EVENT:
 +		try_wake_any_event(obj);
 +		break;
 +	}
 +}
 +
-+static int winesync_wait_any(struct winesync_device *dev, void __user *argp)
++static int ntsync_wait_any(struct ntsync_device *dev, void __user *argp)
 +{
-+	struct winesync_wait_args args;
-+	struct winesync_q *q;
++	struct ntsync_wait_args args;
++	struct ntsync_q *q;
 +	__u32 i, total_count;
 +	ktime_t timeout;
 +	int signaled;
@@ -1510,8 +1511,8 @@ index 000000000000..7a28f58dbbf2
 +	/* queue ourselves */
 +
 +	for (i = 0; i < total_count; i++) {
-+		struct winesync_q_entry *entry = &q->entries[i];
-+		struct winesync_obj *obj = entry->obj;
++		struct ntsync_q_entry *entry = &q->entries[i];
++		struct ntsync_obj *obj = entry->obj;
 +
 +		spin_lock(&obj->lock);
 +		list_add_tail(&entry->node, &obj->any_waiters);
@@ -1527,7 +1528,7 @@ index 000000000000..7a28f58dbbf2
 +	 */
 +
 +	for (i = 0; i < total_count; i++) {
-+		struct winesync_obj *obj = q->entries[i].obj;
++		struct ntsync_obj *obj = q->entries[i].obj;
 +
 +		if (atomic_read(&q->signaled) != -1)
 +			break;
@@ -1539,13 +1540,13 @@ index 000000000000..7a28f58dbbf2
 +
 +	/* sleep */
 +
-+	ret = winesync_schedule(q, args.timeout ? &timeout : NULL);
++	ret = ntsync_schedule(q, args.timeout ? &timeout : NULL);
 +
 +	/* and finally, unqueue */
 +
 +	for (i = 0; i < total_count; i++) {
-+		struct winesync_q_entry *entry = &q->entries[i];
-+		struct winesync_obj *obj = entry->obj;
++		struct ntsync_q_entry *entry = &q->entries[i];
++		struct ntsync_obj *obj = entry->obj;
 +
 +		spin_lock(&obj->lock);
 +		list_del(&entry->node);
@@ -1556,7 +1557,7 @@ index 000000000000..7a28f58dbbf2
 +
 +	signaled = atomic_read(&q->signaled);
 +	if (signaled != -1) {
-+		struct winesync_wait_args __user *user_args = argp;
++		struct ntsync_wait_args __user *user_args = argp;
 +
 +		/* even if we caught a signal, we need to communicate success */
 +		ret = q->ownerdead ? -EOWNERDEAD : 0;
@@ -1571,10 +1572,10 @@ index 000000000000..7a28f58dbbf2
 +	return ret;
 +}
 +
-+static int winesync_wait_all(struct winesync_device *dev, void __user *argp)
++static int ntsync_wait_all(struct ntsync_device *dev, void __user *argp)
 +{
-+	struct winesync_wait_args args;
-+	struct winesync_q *q;
++	struct ntsync_wait_args args;
++	struct ntsync_q *q;
 +	ktime_t timeout;
 +	int signaled;
 +	__u32 i;
@@ -1592,8 +1593,8 @@ index 000000000000..7a28f58dbbf2
 +	spin_lock(&dev->wait_all_lock);
 +
 +	for (i = 0; i < args.count; i++) {
-+		struct winesync_q_entry *entry = &q->entries[i];
-+		struct winesync_obj *obj = entry->obj;
++		struct ntsync_q_entry *entry = &q->entries[i];
++		struct ntsync_obj *obj = entry->obj;
 +
 +		atomic_inc(&obj->all_hint);
 +
@@ -1604,10 +1605,10 @@ index 000000000000..7a28f58dbbf2
 +		list_add_tail(&entry->node, &obj->all_waiters);
 +	}
 +	if (args.alert) {
-+		struct winesync_q_entry *entry = &q->entries[args.count];
-+		struct winesync_obj *obj = entry->obj;
++		struct ntsync_q_entry *entry = &q->entries[args.count];
++		struct ntsync_obj *obj = entry->obj;
 +
-+		spin_lock(&obj->lock);
++		spin_lock_nest_lock(&obj->lock, &dev->wait_all_lock);
 +		list_add_tail(&entry->node, &obj->any_waiters);
 +		spin_unlock(&obj->lock);
 +	}
@@ -1624,7 +1625,7 @@ index 000000000000..7a28f58dbbf2
 +	 */
 +
 +	if (args.alert) {
-+		struct winesync_obj *obj = q->entries[args.count].obj;
++		struct ntsync_obj *obj = q->entries[args.count].obj;
 +
 +		if (atomic_read(&q->signaled) == -1) {
 +			spin_lock(&obj->lock);
@@ -1635,15 +1636,15 @@ index 000000000000..7a28f58dbbf2
 +
 +	/* sleep */
 +
-+	ret = winesync_schedule(q, args.timeout ? &timeout : NULL);
++	ret = ntsync_schedule(q, args.timeout ? &timeout : NULL);
 +
 +	/* and finally, unqueue */
 +
 +	spin_lock(&dev->wait_all_lock);
 +
 +	for (i = 0; i < args.count; i++) {
-+		struct winesync_q_entry *entry = &q->entries[i];
-+		struct winesync_obj *obj = entry->obj;
++		struct ntsync_q_entry *entry = &q->entries[i];
++		struct ntsync_obj *obj = entry->obj;
 +
 +		/*
 +		 * obj->all_waiters is protected by dev->wait_all_lock rather
@@ -1656,10 +1657,10 @@ index 000000000000..7a28f58dbbf2
 +		put_obj(obj);
 +	}
 +	if (args.alert) {
-+		struct winesync_q_entry *entry = &q->entries[args.count];
-+		struct winesync_obj *obj = entry->obj;
++		struct ntsync_q_entry *entry = &q->entries[args.count];
++		struct ntsync_obj *obj = entry->obj;
 +
-+		spin_lock(&obj->lock);
++		spin_lock_nest_lock(&obj->lock, &dev->wait_all_lock);
 +		list_del(&entry->node);
 +		spin_unlock(&obj->lock);
 +
@@ -1670,7 +1671,7 @@ index 000000000000..7a28f58dbbf2
 +
 +	signaled = atomic_read(&q->signaled);
 +	if (signaled != -1) {
-+		struct winesync_wait_args __user *user_args = argp;
++		struct ntsync_wait_args __user *user_args = argp;
 +
 +		/* even if we caught a signal, we need to communicate success */
 +		ret = q->ownerdead ? -EOWNERDEAD : 0;
@@ -1685,130 +1686,119 @@ index 000000000000..7a28f58dbbf2
 +	return ret;
 +}
 +
-+static long winesync_char_ioctl(struct file *file, unsigned int cmd,
-+				unsigned long parm)
++static long ntsync_char_ioctl(struct file *file, unsigned int cmd,
++			      unsigned long parm)
 +{
-+	struct winesync_device *dev = file->private_data;
++	struct ntsync_device *dev = file->private_data;
 +	void __user *argp = (void __user *)parm;
 +
 +	switch (cmd) {
-+	case WINESYNC_IOC_CREATE_EVENT:
-+		return winesync_create_event(dev, argp);
-+	case WINESYNC_IOC_CREATE_MUTEX:
-+		return winesync_create_mutex(dev, argp);
-+	case WINESYNC_IOC_CREATE_SEM:
-+		return winesync_create_sem(dev, argp);
-+	case WINESYNC_IOC_DELETE:
-+		return winesync_delete(dev, argp);
-+	case WINESYNC_IOC_KILL_OWNER:
-+		return winesync_kill_owner(dev, argp);
-+	case WINESYNC_IOC_PULSE_EVENT:
-+		return winesync_set_event(dev, argp, true);
-+	case WINESYNC_IOC_PUT_MUTEX:
-+		return winesync_put_mutex(dev, argp);
-+	case WINESYNC_IOC_PUT_SEM:
-+		return winesync_put_sem(dev, argp);
-+	case WINESYNC_IOC_READ_EVENT:
-+		return winesync_read_event(dev, argp);
-+	case WINESYNC_IOC_READ_MUTEX:
-+		return winesync_read_mutex(dev, argp);
-+	case WINESYNC_IOC_READ_SEM:
-+		return winesync_read_sem(dev, argp);
-+	case WINESYNC_IOC_RESET_EVENT:
-+		return winesync_reset_event(dev, argp);
-+	case WINESYNC_IOC_SET_EVENT:
-+		return winesync_set_event(dev, argp, false);
-+	case WINESYNC_IOC_WAIT_ALL:
-+		return winesync_wait_all(dev, argp);
-+	case WINESYNC_IOC_WAIT_ANY:
-+		return winesync_wait_any(dev, argp);
++	case NTSYNC_IOC_CREATE_EVENT:
++		return ntsync_create_event(dev, argp);
++	case NTSYNC_IOC_CREATE_MUTEX:
++		return ntsync_create_mutex(dev, argp);
++	case NTSYNC_IOC_CREATE_SEM:
++		return ntsync_create_sem(dev, argp);
++	case NTSYNC_IOC_DELETE:
++		return ntsync_delete(dev, argp);
++	case NTSYNC_IOC_KILL_OWNER:
++		return ntsync_kill_owner(dev, argp);
++	case NTSYNC_IOC_PULSE_EVENT:
++		return ntsync_set_event(dev, argp, true);
++	case NTSYNC_IOC_PUT_MUTEX:
++		return ntsync_put_mutex(dev, argp);
++	case NTSYNC_IOC_PUT_SEM:
++		return ntsync_put_sem(dev, argp);
++	case NTSYNC_IOC_READ_EVENT:
++		return ntsync_read_event(dev, argp);
++	case NTSYNC_IOC_READ_MUTEX:
++		return ntsync_read_mutex(dev, argp);
++	case NTSYNC_IOC_READ_SEM:
++		return ntsync_read_sem(dev, argp);
++	case NTSYNC_IOC_RESET_EVENT:
++		return ntsync_reset_event(dev, argp);
++	case NTSYNC_IOC_SET_EVENT:
++		return ntsync_set_event(dev, argp, false);
++	case NTSYNC_IOC_WAIT_ALL:
++		return ntsync_wait_all(dev, argp);
++	case NTSYNC_IOC_WAIT_ANY:
++		return ntsync_wait_any(dev, argp);
 +	default:
-+		return -ENOSYS;
++		return -ENOIOCTLCMD;
 +	}
 +}
 +
-+static const struct file_operations winesync_fops = {
++static const struct file_operations ntsync_fops = {
 +	.owner		= THIS_MODULE,
-+	.open		= winesync_char_open,
-+	.release	= winesync_char_release,
-+	.unlocked_ioctl	= winesync_char_ioctl,
-+	.compat_ioctl	= winesync_char_ioctl,
++	.open		= ntsync_char_open,
++	.release	= ntsync_char_release,
++	.unlocked_ioctl	= ntsync_char_ioctl,
++	.compat_ioctl	= ntsync_char_ioctl,
 +	.llseek		= no_llseek,
 +};
 +
-+static struct miscdevice winesync_misc = {
-+	.minor		= WINESYNC_MINOR,
-+	.name		= WINESYNC_NAME,
-+	.fops		= &winesync_fops,
++static struct miscdevice ntsync_misc = {
++	.minor		= NTSYNC_MINOR,
++	.name		= NTSYNC_NAME,
++	.fops		= &ntsync_fops,
 +};
 +
-+static int __init winesync_init(void)
-+{
-+	return misc_register(&winesync_misc);
-+}
++module_misc_device(ntsync_misc);
 +
-+static void __exit winesync_exit(void)
-+{
-+	misc_deregister(&winesync_misc);
-+}
-+
-+module_init(winesync_init);
-+module_exit(winesync_exit);
-+
-+MODULE_AUTHOR("Zebediah Figura");
-+MODULE_DESCRIPTION("Kernel driver for Wine synchronization primitives");
++MODULE_AUTHOR("Elizabeth Figura");
++MODULE_DESCRIPTION("Kernel driver for NT synchronization primitives");
 +MODULE_LICENSE("GPL");
-+MODULE_ALIAS("devname:" WINESYNC_NAME);
-+MODULE_ALIAS_MISCDEV(WINESYNC_MINOR);
++MODULE_ALIAS("devname:" NTSYNC_NAME);
++MODULE_ALIAS_MISCDEV(NTSYNC_MINOR);
 diff --git a/include/linux/miscdevice.h b/include/linux/miscdevice.h
-index c0fea6ca5076..36fc5d5315a4 100644
+index c0fea6ca5076..fe5d9366fdf7 100644
 --- a/include/linux/miscdevice.h
 +++ b/include/linux/miscdevice.h
 @@ -71,6 +71,7 @@
  #define USERIO_MINOR		240
  #define VHOST_VSOCK_MINOR	241
  #define RFKILL_MINOR		242
-+#define WINESYNC_MINOR		243
++#define NTSYNC_MINOR		243
  #define MISC_DYNAMIC_MINOR	255
  
  struct device;
-diff --git a/include/uapi/linux/winesync.h b/include/uapi/linux/winesync.h
+diff --git a/include/uapi/linux/ntsync.h b/include/uapi/linux/ntsync.h
 new file mode 100644
-index 000000000000..5b4e369f7469
+index 000000000000..e145b36a15ea
 --- /dev/null
-+++ b/include/uapi/linux/winesync.h
-@@ -0,0 +1,71 @@
++++ b/include/uapi/linux/ntsync.h
+@@ -0,0 +1,73 @@
 +/* SPDX-License-Identifier: GPL-2.0 WITH Linux-syscall-note */
 +/*
-+ * Kernel support for Wine synchronization primitives
++ * Kernel support for NT synchronization primitive emulation
 + *
-+ * Copyright (C) 2021 Zebediah Figura
++ * Copyright (C) 2021-2022 Elizabeth Figura
 + */
 +
-+#ifndef __LINUX_WINESYNC_H
-+#define __LINUX_WINESYNC_H
++#ifndef __LINUX_NTSYNC_H
++#define __LINUX_NTSYNC_H
 +
 +#include <linux/types.h>
 +
-+struct winesync_sem_args {
++struct ntsync_sem_args {
 +	__u32 sem;
 +	__u32 count;
 +	__u32 max;
 +};
 +
-+struct winesync_mutex_args {
++struct ntsync_mutex_args {
 +	__u32 mutex;
 +	__u32 owner;
 +	__u32 count;
 +};
 +
-+struct winesync_event_args {
++struct ntsync_event_args {
 +	__u32 event;
 +	__u32 manual;
 +	__u32 signaled;
 +};
 +
-+struct winesync_wait_args {
++struct ntsync_wait_args {
 +	__u64 timeout;
 +	__u64 objs;
 +	__u32 count;
@@ -1817,82 +1807,84 @@ index 000000000000..5b4e369f7469
 +	__u32 alert;
 +};
 +
-+#define WINESYNC_IOC_BASE 0xf7
++#define NTSYNC_MAX_WAIT_COUNT 64
 +
-+#define WINESYNC_IOC_CREATE_SEM		_IOWR(WINESYNC_IOC_BASE, 0, \
-+					      struct winesync_sem_args)
-+#define WINESYNC_IOC_DELETE		_IOW (WINESYNC_IOC_BASE, 1, __u32)
-+#define WINESYNC_IOC_PUT_SEM		_IOWR(WINESYNC_IOC_BASE, 2, \
-+					      struct winesync_sem_args)
-+#define WINESYNC_IOC_WAIT_ANY		_IOWR(WINESYNC_IOC_BASE, 3, \
-+					      struct winesync_wait_args)
-+#define WINESYNC_IOC_WAIT_ALL		_IOWR(WINESYNC_IOC_BASE, 4, \
-+					      struct winesync_wait_args)
-+#define WINESYNC_IOC_CREATE_MUTEX	_IOWR(WINESYNC_IOC_BASE, 5, \
-+					      struct winesync_mutex_args)
-+#define WINESYNC_IOC_PUT_MUTEX		_IOWR(WINESYNC_IOC_BASE, 6, \
-+					      struct winesync_mutex_args)
-+#define WINESYNC_IOC_KILL_OWNER		_IOW (WINESYNC_IOC_BASE, 7, __u32)
-+#define WINESYNC_IOC_READ_SEM		_IOWR(WINESYNC_IOC_BASE, 8, \
-+					      struct winesync_sem_args)
-+#define WINESYNC_IOC_READ_MUTEX		_IOWR(WINESYNC_IOC_BASE, 9, \
-+					      struct winesync_mutex_args)
-+#define WINESYNC_IOC_CREATE_EVENT	_IOWR(WINESYNC_IOC_BASE, 10, \
-+					      struct winesync_event_args)
-+#define WINESYNC_IOC_SET_EVENT		_IOWR(WINESYNC_IOC_BASE, 11, \
-+					      struct winesync_event_args)
-+#define WINESYNC_IOC_RESET_EVENT	_IOWR(WINESYNC_IOC_BASE, 12, \
-+					      struct winesync_event_args)
-+#define WINESYNC_IOC_PULSE_EVENT	_IOWR(WINESYNC_IOC_BASE, 13, \
-+					      struct winesync_event_args)
-+#define WINESYNC_IOC_READ_EVENT		_IOWR(WINESYNC_IOC_BASE, 14, \
-+					      struct winesync_event_args)
++#define NTSYNC_IOC_BASE 0xf7
++
++#define NTSYNC_IOC_CREATE_SEM		_IOWR(NTSYNC_IOC_BASE, 0, \
++					      struct ntsync_sem_args)
++#define NTSYNC_IOC_DELETE		_IOW (NTSYNC_IOC_BASE, 1, __u32)
++#define NTSYNC_IOC_PUT_SEM		_IOWR(NTSYNC_IOC_BASE, 2, \
++					      struct ntsync_sem_args)
++#define NTSYNC_IOC_WAIT_ANY		_IOWR(NTSYNC_IOC_BASE, 3, \
++					      struct ntsync_wait_args)
++#define NTSYNC_IOC_WAIT_ALL		_IOWR(NTSYNC_IOC_BASE, 4, \
++					      struct ntsync_wait_args)
++#define NTSYNC_IOC_CREATE_MUTEX		_IOWR(NTSYNC_IOC_BASE, 5, \
++					      struct ntsync_mutex_args)
++#define NTSYNC_IOC_PUT_MUTEX		_IOWR(NTSYNC_IOC_BASE, 6, \
++					      struct ntsync_mutex_args)
++#define NTSYNC_IOC_KILL_OWNER		_IOW (NTSYNC_IOC_BASE, 7, __u32)
++#define NTSYNC_IOC_READ_SEM		_IOWR(NTSYNC_IOC_BASE, 8, \
++					      struct ntsync_sem_args)
++#define NTSYNC_IOC_READ_MUTEX		_IOWR(NTSYNC_IOC_BASE, 9, \
++					      struct ntsync_mutex_args)
++#define NTSYNC_IOC_CREATE_EVENT		_IOWR(NTSYNC_IOC_BASE, 10, \
++					      struct ntsync_event_args)
++#define NTSYNC_IOC_SET_EVENT		_IOWR(NTSYNC_IOC_BASE, 11, \
++					      struct ntsync_event_args)
++#define NTSYNC_IOC_RESET_EVENT		_IOWR(NTSYNC_IOC_BASE, 12, \
++					      struct ntsync_event_args)
++#define NTSYNC_IOC_PULSE_EVENT		_IOWR(NTSYNC_IOC_BASE, 13, \
++					      struct ntsync_event_args)
++#define NTSYNC_IOC_READ_EVENT		_IOWR(NTSYNC_IOC_BASE, 14, \
++					      struct ntsync_event_args)
 +
 +#endif
 diff --git a/tools/testing/selftests/Makefile b/tools/testing/selftests/Makefile
-index 8247a7c69c36..553c949dc5d7 100644
+index 15b6a111c3be..6c714a4e6478 100644
 --- a/tools/testing/selftests/Makefile
 +++ b/tools/testing/selftests/Makefile
-@@ -18,6 +18,7 @@ TARGETS += drivers/dma-buf
+@@ -15,6 +15,7 @@ TARGETS += cpu-hotplug
+ TARGETS += damon
+ TARGETS += dmabuf-heaps
+ TARGETS += drivers/dma-buf
++TARGETS += drivers/ntsync
  TARGETS += drivers/s390x/uvdevice
  TARGETS += drivers/net/bonding
  TARGETS += drivers/net/team
-+TARGETS += drivers/winesync
- TARGETS += dt
- TARGETS += efivarfs
- TARGETS += exec
-diff --git a/tools/testing/selftests/drivers/winesync/Makefile b/tools/testing/selftests/drivers/winesync/Makefile
+diff --git a/tools/testing/selftests/drivers/ntsync/Makefile b/tools/testing/selftests/drivers/ntsync/Makefile
 new file mode 100644
-index 000000000000..43b39fdeea10
+index 000000000000..a34da5ccacf0
 --- /dev/null
-+++ b/tools/testing/selftests/drivers/winesync/Makefile
++++ b/tools/testing/selftests/drivers/ntsync/Makefile
 @@ -0,0 +1,8 @@
 +# SPDX-LICENSE-IDENTIFIER: GPL-2.0-only
-+TEST_GEN_PROGS := winesync
++TEST_GEN_PROGS := ntsync
 +
 +top_srcdir =../../../../..
 +CFLAGS += -I$(top_srcdir)/usr/include
 +LDLIBS += -lpthread
 +
 +include ../../lib.mk
-diff --git a/tools/testing/selftests/drivers/winesync/config b/tools/testing/selftests/drivers/winesync/config
+diff --git a/tools/testing/selftests/drivers/ntsync/config b/tools/testing/selftests/drivers/ntsync/config
 new file mode 100644
 index 000000000000..60539c826d06
 --- /dev/null
-+++ b/tools/testing/selftests/drivers/winesync/config
++++ b/tools/testing/selftests/drivers/ntsync/config
 @@ -0,0 +1 @@
 +CONFIG_WINESYNC=y
-diff --git a/tools/testing/selftests/drivers/winesync/winesync.c b/tools/testing/selftests/drivers/winesync/winesync.c
+diff --git a/tools/testing/selftests/drivers/ntsync/ntsync.c b/tools/testing/selftests/drivers/ntsync/ntsync.c
 new file mode 100644
-index 000000000000..169e922484b0
+index 000000000000..fda9f1c5e810
 --- /dev/null
-+++ b/tools/testing/selftests/drivers/winesync/winesync.c
-@@ -0,0 +1,1479 @@
++++ b/tools/testing/selftests/drivers/ntsync/ntsync.c
+@@ -0,0 +1,1477 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
-+ * Various unit tests for the "winesync" synchronization primitive driver.
++ * Various unit tests for the "ntsync" synchronization primitive driver.
 + *
-+ * Copyright (C) 2021 Zebediah Figura
++ * Copyright (C) 2021-2022 Elizabeth Figura
 + */
 +
 +#define _GNU_SOURCE
@@ -1901,18 +1893,18 @@ index 000000000000..169e922484b0
 +#include <fcntl.h>
 +#include <time.h>
 +#include <pthread.h>
-+#include <linux/winesync.h>
++#include <linux/ntsync.h>
 +#include "../../kselftest_harness.h"
 +
 +static int read_sem_state(int fd, __u32 sem, __u32 *count, __u32 *max)
 +{
-+	struct winesync_sem_args args;
++	struct ntsync_sem_args args;
 +	int ret;
 +
 +	args.sem = sem;
 +	args.count = 0xdeadbeef;
 +	args.max = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_READ_SEM, &args);
++	ret = ioctl(fd, NTSYNC_IOC_READ_SEM, &args);
 +	*count = args.count;
 +	*max = args.max;
 +	return ret;
@@ -1929,25 +1921,25 @@ index 000000000000..169e922484b0
 +
 +static int put_sem(int fd, __u32 sem, __u32 *count)
 +{
-+	struct winesync_sem_args args;
++	struct ntsync_sem_args args;
 +	int ret;
 +
 +	args.sem = sem;
 +	args.count = *count;
-+	ret = ioctl(fd, WINESYNC_IOC_PUT_SEM, &args);
++	ret = ioctl(fd, NTSYNC_IOC_PUT_SEM, &args);
 +	*count = args.count;
 +	return ret;
 +}
 +
 +static int read_mutex_state(int fd, __u32 mutex, __u32 *count, __u32 *owner)
 +{
-+	struct winesync_mutex_args args;
++	struct ntsync_mutex_args args;
 +	int ret;
 +
 +	args.mutex = mutex;
 +	args.count = 0xdeadbeef;
 +	args.owner = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_READ_MUTEX, &args);
++	ret = ioctl(fd, NTSYNC_IOC_READ_MUTEX, &args);
 +	*count = args.count;
 +	*owner = args.owner;
 +	return ret;
@@ -1964,26 +1956,26 @@ index 000000000000..169e922484b0
 +
 +static int put_mutex(int fd, __u32 mutex, __u32 owner, __u32 *count)
 +{
-+	struct winesync_mutex_args args;
++	struct ntsync_mutex_args args;
 +	int ret;
 +
 +	args.mutex = mutex;
 +	args.owner = owner;
 +	args.count = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_PUT_MUTEX, &args);
++	ret = ioctl(fd, NTSYNC_IOC_PUT_MUTEX, &args);
 +	*count = args.count;
 +	return ret;
 +}
 +
 +static int read_event_state(int fd, __u32 event, __u32 *signaled, __u32 *manual)
 +{
-+	struct winesync_event_args args;
++	struct ntsync_event_args args;
 +	int ret;
 +
 +	args.event = event;
 +	args.signaled = 0xdeadbeef;
 +	args.manual = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_READ_EVENT, &args);
++	ret = ioctl(fd, NTSYNC_IOC_READ_EVENT, &args);
 +	*signaled = args.signaled;
 +	*manual = args.manual;
 +	return ret;
@@ -2002,7 +1994,7 @@ index 000000000000..169e922484b0
 +static int wait_objs(int fd, unsigned long request, __u32 count,
 +		     const __u32 *objs, __u32 owner, __u32 alert, __u32 *index)
 +{
-+	struct winesync_wait_args args = {0};
++	struct ntsync_wait_args args = {0};
 +	struct timespec timeout;
 +	int ret;
 +
@@ -2022,108 +2014,106 @@ index 000000000000..169e922484b0
 +static int wait_any(int fd, __u32 count, const __u32 *objs,
 +		    __u32 owner, __u32 *index)
 +{
-+	return wait_objs(fd, WINESYNC_IOC_WAIT_ANY,
-+			 count, objs, owner, 0, index);
++	return wait_objs(fd, NTSYNC_IOC_WAIT_ANY, count, objs, owner, 0, index);
 +}
 +
 +static int wait_all(int fd, __u32 count, const __u32 *objs,
 +		    __u32 owner, __u32 *index)
 +{
-+	return wait_objs(fd, WINESYNC_IOC_WAIT_ALL,
-+			 count, objs, owner, 0, index);
++	return wait_objs(fd, NTSYNC_IOC_WAIT_ALL, count, objs, owner, 0, index);
 +}
 +
 +static int wait_any_alert(int fd, __u32 count, const __u32 *objs,
 +			  __u32 owner, __u32 alert, __u32 *index)
 +{
-+	return wait_objs(fd, WINESYNC_IOC_WAIT_ANY,
++	return wait_objs(fd, NTSYNC_IOC_WAIT_ANY,
 +			 count, objs, owner, alert, index);
 +}
 +
 +static int wait_all_alert(int fd, __u32 count, const __u32 *objs,
 +			  __u32 owner, __u32 alert, __u32 *index)
 +{
-+	return wait_objs(fd, WINESYNC_IOC_WAIT_ALL,
++	return wait_objs(fd, NTSYNC_IOC_WAIT_ALL,
 +			 count, objs, owner, alert, index);
 +}
 +
 +TEST(semaphore_state)
 +{
-+	struct winesync_sem_args sem_args;
++	struct ntsync_sem_args sem_args;
 +	struct timespec timeout;
-+	__u32 sem, count, index;
++	__u32 count, index;
 +	int fd, ret;
 +
 +	clock_gettime(CLOCK_MONOTONIC, &timeout);
 +
-+	fd = open("/dev/winesync", O_CLOEXEC | O_RDONLY);
++	fd = open("/dev/ntsync", O_CLOEXEC | O_RDONLY);
 +	ASSERT_LE(0, fd);
 +
 +	sem_args.count = 3;
 +	sem_args.max = 2;
 +	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
 +	sem_args.count = 2;
 +	sem_args.max = 2;
 +	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_NE(0xdeadbeef, sem_args.sem);
-+	check_sem_state(fd, sem, 2, 2);
++	check_sem_state(fd, sem_args.sem, 2, 2);
 +
 +	count = 0;
-+	ret = put_sem(fd, sem, &count);
++	ret = put_sem(fd, sem_args.sem, &count);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(2, count);
-+	check_sem_state(fd, sem, 2, 2);
++	check_sem_state(fd, sem_args.sem, 2, 2);
 +
 +	count = 1;
-+	ret = put_sem(fd, sem, &count);
++	ret = put_sem(fd, sem_args.sem, &count);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EOVERFLOW, errno);
-+	check_sem_state(fd, sem, 2, 2);
++	check_sem_state(fd, sem_args.sem, 2, 2);
 +
-+	ret = wait_any(fd, 1, &sem, 123, &index);
++	ret = wait_any(fd, 1, &sem_args.sem, 123, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, index);
-+	check_sem_state(fd, sem, 1, 2);
++	check_sem_state(fd, sem_args.sem, 1, 2);
 +
-+	ret = wait_any(fd, 1, &sem, 123, &index);
++	ret = wait_any(fd, 1, &sem_args.sem, 123, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, index);
-+	check_sem_state(fd, sem, 0, 2);
++	check_sem_state(fd, sem_args.sem, 0, 2);
 +
-+	ret = wait_any(fd, 1, &sem, 123, &index);
++	ret = wait_any(fd, 1, &sem_args.sem, 123, &index);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(ETIMEDOUT, errno);
 +
 +	count = 3;
-+	ret = put_sem(fd, sem, &count);
++	ret = put_sem(fd, sem_args.sem, &count);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EOVERFLOW, errno);
-+	check_sem_state(fd, sem, 0, 2);
++	check_sem_state(fd, sem_args.sem, 0, 2);
 +
 +	count = 2;
-+	ret = put_sem(fd, sem, &count);
++	ret = put_sem(fd, sem_args.sem, &count);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, count);
-+	check_sem_state(fd, sem, 2, 2);
++	check_sem_state(fd, sem_args.sem, 2, 2);
 +
-+	ret = wait_any(fd, 1, &sem, 123, &index);
++	ret = wait_any(fd, 1, &sem_args.sem, 123, &index);
 +	EXPECT_EQ(0, ret);
-+	ret = wait_any(fd, 1, &sem, 123, &index);
++	ret = wait_any(fd, 1, &sem_args.sem, 123, &index);
 +	EXPECT_EQ(0, ret);
 +
 +	count = 1;
-+	ret = put_sem(fd, sem, &count);
++	ret = put_sem(fd, sem_args.sem, &count);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, count);
-+	check_sem_state(fd, sem, 1, 2);
++	check_sem_state(fd, sem_args.sem, 1, 2);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &sem);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &sem_args.sem);
 +	EXPECT_EQ(0, ret);
 +
 +	close(fd);
@@ -2131,32 +2121,32 @@ index 000000000000..169e922484b0
 +
 +TEST(mutex_state)
 +{
-+	struct winesync_mutex_args mutex_args;
++	struct ntsync_mutex_args mutex_args;
 +	__u32 mutex, owner, count, index;
 +	struct timespec timeout;
 +	int fd, ret;
 +
 +	clock_gettime(CLOCK_MONOTONIC, &timeout);
 +
-+	fd = open("/dev/winesync", O_CLOEXEC | O_RDONLY);
++	fd = open("/dev/ntsync", O_CLOEXEC | O_RDONLY);
 +	ASSERT_LE(0, fd);
 +
 +	mutex_args.owner = 123;
 +	mutex_args.count = 0;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_MUTEX, &mutex_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
 +	mutex_args.owner = 0;
 +	mutex_args.count = 2;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_MUTEX, &mutex_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
 +	mutex_args.owner = 123;
 +	mutex_args.count = 2;
 +	mutex_args.mutex = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_MUTEX, &mutex_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_NE(0xdeadbeef, mutex_args.mutex);
 +	mutex = mutex_args.mutex;
@@ -2205,22 +2195,22 @@ index 000000000000..169e922484b0
 +	EXPECT_EQ(ETIMEDOUT, errno);
 +
 +	owner = 0;
-+	ret = ioctl(fd, WINESYNC_IOC_KILL_OWNER, &owner);
++	ret = ioctl(fd, NTSYNC_IOC_KILL_OWNER, &owner);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
 +	owner = 123;
-+	ret = ioctl(fd, WINESYNC_IOC_KILL_OWNER, &owner);
++	ret = ioctl(fd, NTSYNC_IOC_KILL_OWNER, &owner);
 +	EXPECT_EQ(0, ret);
 +	check_mutex_state(fd, mutex, 1, 456);
 +
 +	owner = 456;
-+	ret = ioctl(fd, WINESYNC_IOC_KILL_OWNER, &owner);
++	ret = ioctl(fd, NTSYNC_IOC_KILL_OWNER, &owner);
 +	EXPECT_EQ(0, ret);
 +
 +	mutex_args.count = 0xdeadbeef;
 +	mutex_args.owner = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_READ_MUTEX, &mutex_args);
++	ret = ioctl(fd, NTSYNC_IOC_READ_MUTEX, &mutex_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EOWNERDEAD, errno);
 +	EXPECT_EQ(0, mutex_args.count);
@@ -2228,7 +2218,7 @@ index 000000000000..169e922484b0
 +
 +	mutex_args.count = 0xdeadbeef;
 +	mutex_args.owner = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_READ_MUTEX, &mutex_args);
++	ret = ioctl(fd, NTSYNC_IOC_READ_MUTEX, &mutex_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EOWNERDEAD, errno);
 +	EXPECT_EQ(0, mutex_args.count);
@@ -2241,12 +2231,12 @@ index 000000000000..169e922484b0
 +	check_mutex_state(fd, mutex, 1, 123);
 +
 +	owner = 123;
-+	ret = ioctl(fd, WINESYNC_IOC_KILL_OWNER, &owner);
++	ret = ioctl(fd, NTSYNC_IOC_KILL_OWNER, &owner);
 +	EXPECT_EQ(0, ret);
 +
 +	mutex_args.count = 0xdeadbeef;
 +	mutex_args.owner = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_READ_MUTEX, &mutex_args);
++	ret = ioctl(fd, NTSYNC_IOC_READ_MUTEX, &mutex_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EOWNERDEAD, errno);
 +	EXPECT_EQ(0, mutex_args.count);
@@ -2258,13 +2248,13 @@ index 000000000000..169e922484b0
 +	EXPECT_EQ(0, index);
 +	check_mutex_state(fd, mutex, 1, 123);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &mutex);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &mutex);
 +	EXPECT_EQ(0, ret);
 +
 +	mutex_args.owner = 0;
 +	mutex_args.count = 0;
 +	mutex_args.mutex = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_MUTEX, &mutex_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_NE(0xdeadbeef, mutex_args.mutex);
 +	mutex = mutex_args.mutex;
@@ -2275,7 +2265,7 @@ index 000000000000..169e922484b0
 +	EXPECT_EQ(0, index);
 +	check_mutex_state(fd, mutex, 1, 123);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &mutex_args.mutex);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &mutex_args.mutex);
 +	EXPECT_EQ(0, ret);
 +
 +	close(fd);
@@ -2283,28 +2273,28 @@ index 000000000000..169e922484b0
 +
 +TEST(manual_event_state)
 +{
-+	struct winesync_event_args event_args;
++	struct ntsync_event_args event_args;
 +	__u32 index;
 +	int fd, ret;
 +
-+	fd = open("/dev/winesync", O_CLOEXEC | O_RDONLY);
++	fd = open("/dev/ntsync", O_CLOEXEC | O_RDONLY);
 +	ASSERT_LE(0, fd);
 +
 +	event_args.manual = 1;
 +	event_args.signaled = 0;
 +	event_args.event = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_NE(0xdeadbeef, event_args.event);
 +	check_event_state(fd, event_args.event, 0, 1);
 +
 +	event_args.signaled = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_SET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_SET_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, event_args.signaled);
 +	check_event_state(fd, event_args.event, 1, 1);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_SET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_SET_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(1, event_args.signaled);
 +	check_event_state(fd, event_args.event, 1, 1);
@@ -2315,12 +2305,12 @@ index 000000000000..169e922484b0
 +	check_event_state(fd, event_args.event, 1, 1);
 +
 +	event_args.signaled = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_RESET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_RESET_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(1, event_args.signaled);
 +	check_event_state(fd, event_args.event, 0, 1);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_RESET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_RESET_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, event_args.signaled);
 +	check_event_state(fd, event_args.event, 0, 1);
@@ -2329,21 +2319,21 @@ index 000000000000..169e922484b0
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(ETIMEDOUT, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_SET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_SET_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, event_args.signaled);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_PULSE_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_PULSE_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(1, event_args.signaled);
 +	check_event_state(fd, event_args.event, 0, 1);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_PULSE_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_PULSE_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, event_args.signaled);
 +	check_event_state(fd, event_args.event, 0, 1);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &event_args.event);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &event_args.event);
 +	EXPECT_EQ(0, ret);
 +
 +	close(fd);
@@ -2351,24 +2341,24 @@ index 000000000000..169e922484b0
 +
 +TEST(auto_event_state)
 +{
-+	struct winesync_event_args event_args;
++	struct ntsync_event_args event_args;
 +	__u32 index;
 +	int fd, ret;
 +
-+	fd = open("/dev/winesync", O_CLOEXEC | O_RDONLY);
++	fd = open("/dev/ntsync", O_CLOEXEC | O_RDONLY);
 +	ASSERT_LE(0, fd);
 +
 +	event_args.manual = 0;
 +	event_args.signaled = 1;
 +	event_args.event = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_NE(0xdeadbeef, event_args.event);
 +
 +	check_event_state(fd, event_args.event, 1, 0);
 +
 +	event_args.signaled = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_SET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_SET_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(1, event_args.signaled);
 +	check_event_state(fd, event_args.event, 1, 0);
@@ -2379,7 +2369,7 @@ index 000000000000..169e922484b0
 +	check_event_state(fd, event_args.event, 0, 0);
 +
 +	event_args.signaled = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_RESET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_RESET_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, event_args.signaled);
 +	check_event_state(fd, event_args.event, 0, 0);
@@ -2388,21 +2378,21 @@ index 000000000000..169e922484b0
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(ETIMEDOUT, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_SET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_SET_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, event_args.signaled);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_PULSE_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_PULSE_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(1, event_args.signaled);
 +	check_event_state(fd, event_args.event, 0, 0);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_PULSE_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_PULSE_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, event_args.signaled);
 +	check_event_state(fd, event_args.event, 0, 0);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &event_args.event);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &event_args.event);
 +	EXPECT_EQ(0, ret);
 +
 +	close(fd);
@@ -2410,29 +2400,29 @@ index 000000000000..169e922484b0
 +
 +TEST(test_wait_any)
 +{
-+	struct winesync_mutex_args mutex_args = {0};
-+	struct winesync_wait_args wait_args = {0};
-+	struct winesync_sem_args sem_args = {0};
++	struct ntsync_mutex_args mutex_args = {0};
++	struct ntsync_wait_args wait_args = {0};
++	struct ntsync_sem_args sem_args = {0};
 +	__u32 objs[2], owner, index;
 +	struct timespec timeout;
 +	int fd, ret;
 +
 +	clock_gettime(CLOCK_MONOTONIC, &timeout);
 +
-+	fd = open("/dev/winesync", O_CLOEXEC | O_RDONLY);
++	fd = open("/dev/ntsync", O_CLOEXEC | O_RDONLY);
 +	ASSERT_LE(0, fd);
 +
 +	sem_args.count = 2;
 +	sem_args.max = 3;
 +	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_NE(0xdeadbeef, sem_args.sem);
 +
 +	mutex_args.owner = 0;
 +	mutex_args.count = 0;
 +	mutex_args.mutex = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_MUTEX, &mutex_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_NE(0xdeadbeef, mutex_args.mutex);
 +
@@ -2458,7 +2448,7 @@ index 000000000000..169e922484b0
 +	check_mutex_state(fd, mutex_args.mutex, 1, 123);
 +
 +	sem_args.count = 1;
-+	ret = ioctl(fd, WINESYNC_IOC_PUT_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_PUT_SEM, &sem_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, sem_args.count);
 +
@@ -2479,7 +2469,7 @@ index 000000000000..169e922484b0
 +	EXPECT_EQ(ETIMEDOUT, errno);
 +
 +	owner = 123;
-+	ret = ioctl(fd, WINESYNC_IOC_KILL_OWNER, &owner);
++	ret = ioctl(fd, NTSYNC_IOC_KILL_OWNER, &owner);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_any(fd, 2, objs, 456, &index);
@@ -2493,7 +2483,7 @@ index 000000000000..169e922484b0
 +
 +	/* test waiting on the same object twice */
 +	sem_args.count = 2;
-+	ret = ioctl(fd, WINESYNC_IOC_PUT_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_PUT_SEM, &sem_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, sem_args.count);
 +
@@ -2507,9 +2497,9 @@ index 000000000000..169e922484b0
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(ETIMEDOUT, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &sem_args.sem);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &sem_args.sem);
 +	EXPECT_EQ(0, ret);
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &mutex_args.mutex);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &mutex_args.mutex);
 +	EXPECT_EQ(0, ret);
 +
 +	close(fd);
@@ -2517,32 +2507,32 @@ index 000000000000..169e922484b0
 +
 +TEST(test_wait_all)
 +{
-+	struct winesync_event_args event_args = {0};
-+	struct winesync_mutex_args mutex_args = {0};
-+	struct winesync_sem_args sem_args = {0};
++	struct ntsync_event_args event_args = {0};
++	struct ntsync_mutex_args mutex_args = {0};
++	struct ntsync_sem_args sem_args = {0};
 +	__u32 objs[2], owner, index;
 +	int fd, ret;
 +
-+	fd = open("/dev/winesync", O_CLOEXEC | O_RDONLY);
++	fd = open("/dev/ntsync", O_CLOEXEC | O_RDONLY);
 +	ASSERT_LE(0, fd);
 +
 +	sem_args.count = 2;
 +	sem_args.max = 3;
 +	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_NE(0xdeadbeef, sem_args.sem);
 +
 +	mutex_args.owner = 0;
 +	mutex_args.count = 0;
 +	mutex_args.mutex = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_MUTEX, &mutex_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_NE(0xdeadbeef, mutex_args.mutex);
 +
 +	event_args.manual = true;
 +	event_args.signaled = true;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +
 +	objs[0] = sem_args.sem;
@@ -2573,7 +2563,7 @@ index 000000000000..169e922484b0
 +	check_mutex_state(fd, mutex_args.mutex, 2, 123);
 +
 +	sem_args.count = 3;
-+	ret = ioctl(fd, WINESYNC_IOC_PUT_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_PUT_SEM, &sem_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, sem_args.count);
 +
@@ -2584,7 +2574,7 @@ index 000000000000..169e922484b0
 +	check_mutex_state(fd, mutex_args.mutex, 3, 123);
 +
 +	owner = 123;
-+	ret = ioctl(fd, WINESYNC_IOC_KILL_OWNER, &owner);
++	ret = ioctl(fd, NTSYNC_IOC_KILL_OWNER, &owner);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_all(fd, 2, objs, 123, &index);
@@ -2607,11 +2597,11 @@ index 000000000000..169e922484b0
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &sem_args.sem);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &sem_args.sem);
 +	EXPECT_EQ(0, ret);
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &mutex_args.mutex);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &mutex_args.mutex);
 +	EXPECT_EQ(0, ret);
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &event_args.event);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &event_args.event);
 +	EXPECT_EQ(0, ret);
 +
 +	close(fd);
@@ -2619,126 +2609,126 @@ index 000000000000..169e922484b0
 +
 +TEST(invalid_objects)
 +{
-+	struct winesync_event_args event_args = {0};
-+	struct winesync_mutex_args mutex_args = {0};
-+	struct winesync_wait_args wait_args = {0};
-+	struct winesync_sem_args sem_args = {0};
++	struct ntsync_event_args event_args = {0};
++	struct ntsync_mutex_args mutex_args = {0};
++	struct ntsync_wait_args wait_args = {0};
++	struct ntsync_sem_args sem_args = {0};
 +	__u32 objs[2] = {0};
 +	int fd, ret;
 +
-+	fd = open("/dev/winesync", O_CLOEXEC | O_RDONLY);
++	fd = open("/dev/ntsync", O_CLOEXEC | O_RDONLY);
 +	ASSERT_LE(0, fd);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_PUT_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_PUT_SEM, &sem_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_READ_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_READ_SEM, &sem_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_PUT_MUTEX, &mutex_args);
++	ret = ioctl(fd, NTSYNC_IOC_PUT_MUTEX, &mutex_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_READ_MUTEX, &mutex_args);
++	ret = ioctl(fd, NTSYNC_IOC_READ_MUTEX, &mutex_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_SET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_SET_EVENT, &event_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_RESET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_RESET_EVENT, &event_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_PULSE_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_PULSE_EVENT, &event_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_READ_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_READ_EVENT, &event_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
 +	wait_args.objs = (uintptr_t)objs;
 +	wait_args.count = 1;
-+	ret = ioctl(fd, WINESYNC_IOC_WAIT_ANY, &wait_args);
++	ret = ioctl(fd, NTSYNC_IOC_WAIT_ANY, &wait_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
-+	ret = ioctl(fd, WINESYNC_IOC_WAIT_ALL, &wait_args);
++	ret = ioctl(fd, NTSYNC_IOC_WAIT_ALL, &wait_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &objs[0]);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &objs[0]);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
 +	sem_args.max = 1;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
 +	EXPECT_EQ(0, ret);
 +
 +	mutex_args.mutex = sem_args.sem;
-+	ret = ioctl(fd, WINESYNC_IOC_PUT_MUTEX, &mutex_args);
++	ret = ioctl(fd, NTSYNC_IOC_PUT_MUTEX, &mutex_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_READ_MUTEX, &mutex_args);
++	ret = ioctl(fd, NTSYNC_IOC_READ_MUTEX, &mutex_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
 +	event_args.event = sem_args.sem;
-+	ret = ioctl(fd, WINESYNC_IOC_SET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_SET_EVENT, &event_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_RESET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_RESET_EVENT, &event_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_PULSE_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_PULSE_EVENT, &event_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_READ_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_READ_EVENT, &event_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
 +	objs[0] = sem_args.sem;
 +	objs[1] = sem_args.sem + 1;
 +	wait_args.count = 2;
-+	ret = ioctl(fd, WINESYNC_IOC_WAIT_ANY, &wait_args);
++	ret = ioctl(fd, NTSYNC_IOC_WAIT_ANY, &wait_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
-+	ret = ioctl(fd, WINESYNC_IOC_WAIT_ALL, &wait_args);
++	ret = ioctl(fd, NTSYNC_IOC_WAIT_ALL, &wait_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
 +	objs[0] = sem_args.sem + 1;
 +	objs[1] = sem_args.sem;
-+	ret = ioctl(fd, WINESYNC_IOC_WAIT_ANY, &wait_args);
++	ret = ioctl(fd, NTSYNC_IOC_WAIT_ANY, &wait_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
-+	ret = ioctl(fd, WINESYNC_IOC_WAIT_ALL, &wait_args);
++	ret = ioctl(fd, NTSYNC_IOC_WAIT_ALL, &wait_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &sem_args.sem);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &sem_args.sem);
 +	EXPECT_EQ(0, ret);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_MUTEX, &mutex_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
 +	EXPECT_EQ(0, ret);
 +
 +	sem_args.sem = mutex_args.mutex;
-+	ret = ioctl(fd, WINESYNC_IOC_PUT_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_PUT_SEM, &sem_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_READ_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_READ_SEM, &sem_args);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &mutex_args.mutex);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &mutex_args.mutex);
 +	EXPECT_EQ(0, ret);
 +
 +	close(fd);
@@ -2754,7 +2744,7 @@ index 000000000000..169e922484b0
 +{
 +	int fd;
 +	unsigned long request;
-+	struct winesync_wait_args *args;
++	struct ntsync_wait_args *args;
 +	int ret;
 +	int err;
 +};
@@ -2786,30 +2776,30 @@ index 000000000000..169e922484b0
 +
 +TEST(wake_any)
 +{
-+	struct winesync_event_args event_args = {0};
-+	struct winesync_mutex_args mutex_args = {0};
-+	struct winesync_wait_args wait_args = {0};
-+	struct winesync_sem_args sem_args = {0};
++	struct ntsync_event_args event_args = {0};
++	struct ntsync_mutex_args mutex_args = {0};
++	struct ntsync_wait_args wait_args = {0};
++	struct ntsync_sem_args sem_args = {0};
 +	struct wait_args thread_args;
 +	__u32 objs[2], count, index;
 +	struct timespec timeout;
 +	pthread_t thread;
 +	int fd, ret;
 +
-+	fd = open("/dev/winesync", O_CLOEXEC | O_RDONLY);
++	fd = open("/dev/ntsync", O_CLOEXEC | O_RDONLY);
 +	ASSERT_LE(0, fd);
 +
 +	sem_args.count = 0;
 +	sem_args.max = 3;
 +	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_NE(0xdeadbeef, sem_args.sem);
 +
 +	mutex_args.owner = 123;
 +	mutex_args.count = 1;
 +	mutex_args.mutex = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_MUTEX, &mutex_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_NE(0xdeadbeef, mutex_args.mutex);
 +
@@ -2826,7 +2816,7 @@ index 000000000000..169e922484b0
 +	wait_args.index = 0xdeadbeef;
 +	thread_args.fd = fd;
 +	thread_args.args = &wait_args;
-+	thread_args.request = WINESYNC_IOC_WAIT_ANY;
++	thread_args.request = NTSYNC_IOC_WAIT_ANY;
 +	ret = pthread_create(&thread, NULL, wait_thread, &thread_args);
 +	EXPECT_EQ(0, ret);
 +
@@ -2834,7 +2824,7 @@ index 000000000000..169e922484b0
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
 +	sem_args.count = 1;
-+	ret = ioctl(fd, WINESYNC_IOC_PUT_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_PUT_SEM, &sem_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, sem_args.count);
 +	check_sem_state(fd, sem_args.sem, 0, 3);
@@ -2880,7 +2870,7 @@ index 000000000000..169e922484b0
 +
 +	event_args.manual = false;
 +	event_args.signaled = false;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +
 +	objs[1] = event_args.event;
@@ -2891,7 +2881,7 @@ index 000000000000..169e922484b0
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_SET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_SET_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, event_args.signaled);
 +	check_event_state(fd, event_args.event, 0, 0);
@@ -2908,7 +2898,7 @@ index 000000000000..169e922484b0
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_PULSE_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_PULSE_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, event_args.signaled);
 +	check_event_state(fd, event_args.event, 0, 0);
@@ -2918,12 +2908,12 @@ index 000000000000..169e922484b0
 +	EXPECT_EQ(0, thread_args.ret);
 +	EXPECT_EQ(1, wait_args.index);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &event_args.event);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &event_args.event);
 +	EXPECT_EQ(0, ret);
 +
 +	event_args.manual = true;
 +	event_args.signaled = false;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +
 +	objs[1] = event_args.event;
@@ -2934,7 +2924,7 @@ index 000000000000..169e922484b0
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_SET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_SET_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, event_args.signaled);
 +	check_event_state(fd, event_args.event, 1, 1);
@@ -2944,7 +2934,7 @@ index 000000000000..169e922484b0
 +	EXPECT_EQ(0, thread_args.ret);
 +	EXPECT_EQ(1, wait_args.index);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_RESET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_RESET_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(1, event_args.signaled);
 +
@@ -2955,7 +2945,7 @@ index 000000000000..169e922484b0
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_PULSE_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_PULSE_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, event_args.signaled);
 +	check_event_state(fd, event_args.event, 0, 1);
@@ -2965,7 +2955,7 @@ index 000000000000..169e922484b0
 +	EXPECT_EQ(0, thread_args.ret);
 +	EXPECT_EQ(1, wait_args.index);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &event_args.event);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &event_args.event);
 +	EXPECT_EQ(0, ret);
 +
 +	/* delete an object while it's being waited on */
@@ -2979,9 +2969,9 @@ index 000000000000..169e922484b0
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &sem_args.sem);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &sem_args.sem);
 +	EXPECT_EQ(0, ret);
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &mutex_args.mutex);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &mutex_args.mutex);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_for_thread(thread, 200);
@@ -2994,42 +2984,42 @@ index 000000000000..169e922484b0
 +
 +TEST(wake_all)
 +{
-+	struct winesync_event_args manual_event_args = {0};
-+	struct winesync_event_args auto_event_args = {0};
-+	struct winesync_mutex_args mutex_args = {0};
-+	struct winesync_wait_args wait_args = {0};
-+	struct winesync_sem_args sem_args = {0};
++	struct ntsync_event_args manual_event_args = {0};
++	struct ntsync_event_args auto_event_args = {0};
++	struct ntsync_mutex_args mutex_args = {0};
++	struct ntsync_wait_args wait_args = {0};
++	struct ntsync_sem_args sem_args = {0};
 +	struct wait_args thread_args;
 +	__u32 objs[4], count, index;
 +	struct timespec timeout;
 +	pthread_t thread;
 +	int fd, ret;
 +
-+	fd = open("/dev/winesync", O_CLOEXEC | O_RDONLY);
++	fd = open("/dev/ntsync", O_CLOEXEC | O_RDONLY);
 +	ASSERT_LE(0, fd);
 +
 +	sem_args.count = 0;
 +	sem_args.max = 3;
 +	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_NE(0xdeadbeef, sem_args.sem);
 +
 +	mutex_args.owner = 123;
 +	mutex_args.count = 1;
 +	mutex_args.mutex = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_MUTEX, &mutex_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_NE(0xdeadbeef, mutex_args.mutex);
 +
 +	manual_event_args.manual = true;
 +	manual_event_args.signaled = true;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_EVENT, &manual_event_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &manual_event_args);
 +	EXPECT_EQ(0, ret);
 +
 +	auto_event_args.manual = false;
 +	auto_event_args.signaled = true;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_EVENT, &auto_event_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &auto_event_args);
 +	EXPECT_EQ(0, ret);
 +
 +	objs[0] = sem_args.sem;
@@ -3044,7 +3034,7 @@ index 000000000000..169e922484b0
 +	wait_args.owner = 456;
 +	thread_args.fd = fd;
 +	thread_args.args = &wait_args;
-+	thread_args.request = WINESYNC_IOC_WAIT_ALL;
++	thread_args.request = NTSYNC_IOC_WAIT_ALL;
 +	ret = pthread_create(&thread, NULL, wait_thread, &thread_args);
 +	EXPECT_EQ(0, ret);
 +
@@ -3052,7 +3042,7 @@ index 000000000000..169e922484b0
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
 +	sem_args.count = 1;
-+	ret = ioctl(fd, WINESYNC_IOC_PUT_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_PUT_SEM, &sem_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, sem_args.count);
 +
@@ -3074,25 +3064,25 @@ index 000000000000..169e922484b0
 +
 +	check_mutex_state(fd, mutex_args.mutex, 0, 0);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_RESET_EVENT, &manual_event_args);
++	ret = ioctl(fd, NTSYNC_IOC_RESET_EVENT, &manual_event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(1, manual_event_args.signaled);
 +
 +	sem_args.count = 2;
-+	ret = ioctl(fd, WINESYNC_IOC_PUT_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_PUT_SEM, &sem_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, sem_args.count);
 +	check_sem_state(fd, sem_args.sem, 2, 3);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_RESET_EVENT, &auto_event_args);
++	ret = ioctl(fd, NTSYNC_IOC_RESET_EVENT, &auto_event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(1, auto_event_args.signaled);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_SET_EVENT, &manual_event_args);
++	ret = ioctl(fd, NTSYNC_IOC_SET_EVENT, &manual_event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, manual_event_args.signaled);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_SET_EVENT, &auto_event_args);
++	ret = ioctl(fd, NTSYNC_IOC_SET_EVENT, &auto_event_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, auto_event_args.signaled);
 +
@@ -3115,13 +3105,13 @@ index 000000000000..169e922484b0
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &sem_args.sem);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &sem_args.sem);
 +	EXPECT_EQ(0, ret);
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &mutex_args.mutex);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &mutex_args.mutex);
 +	EXPECT_EQ(0, ret);
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &manual_event_args.event);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &manual_event_args.event);
 +	EXPECT_EQ(0, ret);
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &auto_event_args.event);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &auto_event_args.event);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_for_thread(thread, 200);
@@ -3134,22 +3124,22 @@ index 000000000000..169e922484b0
 +
 +TEST(alert_any)
 +{
-+	struct winesync_event_args event_args = {0};
-+	struct winesync_wait_args wait_args = {0};
-+	struct winesync_sem_args sem_args = {0};
++	struct ntsync_event_args event_args = {0};
++	struct ntsync_wait_args wait_args = {0};
++	struct ntsync_sem_args sem_args = {0};
 +	struct wait_args thread_args;
 +	struct timespec timeout;
 +	__u32 objs[2], index;
 +	pthread_t thread;
 +	int fd, ret;
 +
-+	fd = open("/dev/winesync", O_CLOEXEC | O_RDONLY);
++	fd = open("/dev/ntsync", O_CLOEXEC | O_RDONLY);
 +	ASSERT_LE(0, fd);
 +
 +	sem_args.count = 0;
 +	sem_args.max = 2;
 +	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_NE(0xdeadbeef, sem_args.sem);
 +	objs[0] = sem_args.sem;
@@ -3157,28 +3147,28 @@ index 000000000000..169e922484b0
 +	sem_args.count = 1;
 +	sem_args.max = 2;
 +	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_NE(0xdeadbeef, sem_args.sem);
 +	objs[1] = sem_args.sem;
 +
 +	event_args.manual = true;
 +	event_args.signaled = true;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_any_alert(fd, 0, NULL, 123, event_args.event, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, index);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_RESET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_RESET_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_any_alert(fd, 0, NULL, 123, event_args.event, &index);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(ETIMEDOUT, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_SET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_SET_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_any_alert(fd, 2, objs, 123, event_args.event, &index);
@@ -3191,7 +3181,7 @@ index 000000000000..169e922484b0
 +
 +	/* test wakeup via alert */
 +
-+	ret = ioctl(fd, WINESYNC_IOC_RESET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_RESET_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +
 +	get_abs_timeout(&timeout, CLOCK_MONOTONIC, 1000);
@@ -3203,14 +3193,14 @@ index 000000000000..169e922484b0
 +	wait_args.alert = event_args.event;
 +	thread_args.fd = fd;
 +	thread_args.args = &wait_args;
-+	thread_args.request = WINESYNC_IOC_WAIT_ANY;
++	thread_args.request = NTSYNC_IOC_WAIT_ANY;
 +	ret = pthread_create(&thread, NULL, wait_thread, &thread_args);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_SET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_SET_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_for_thread(thread, 100);
@@ -3218,19 +3208,19 @@ index 000000000000..169e922484b0
 +	EXPECT_EQ(0, thread_args.ret);
 +	EXPECT_EQ(2, wait_args.index);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &event_args.event);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &event_args.event);
 +	EXPECT_EQ(0, ret);
 +
 +	/* test with an auto-reset event */
 +
 +	event_args.manual = false;
 +	event_args.signaled = true;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +
 +	sem_args.sem = objs[0];
 +	sem_args.count = 1;
-+	ret = ioctl(fd, WINESYNC_IOC_PUT_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_PUT_SEM, &sem_args);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_any_alert(fd, 2, objs, 123, event_args.event, &index);
@@ -3245,12 +3235,12 @@ index 000000000000..169e922484b0
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(ETIMEDOUT, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &event_args.event);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &event_args.event);
 +	EXPECT_EQ(0, ret);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &objs[0]);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &objs[0]);
 +	EXPECT_EQ(0, ret);
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &objs[1]);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &objs[1]);
 +	EXPECT_EQ(0, ret);
 +
 +	close(fd);
@@ -3258,22 +3248,22 @@ index 000000000000..169e922484b0
 +
 +TEST(alert_all)
 +{
-+	struct winesync_event_args event_args = {0};
-+	struct winesync_wait_args wait_args = {0};
-+	struct winesync_sem_args sem_args = {0};
++	struct ntsync_event_args event_args = {0};
++	struct ntsync_wait_args wait_args = {0};
++	struct ntsync_sem_args sem_args = {0};
 +	struct wait_args thread_args;
 +	struct timespec timeout;
 +	__u32 objs[2], index;
 +	pthread_t thread;
 +	int fd, ret;
 +
-+	fd = open("/dev/winesync", O_CLOEXEC | O_RDONLY);
++	fd = open("/dev/ntsync", O_CLOEXEC | O_RDONLY);
 +	ASSERT_LE(0, fd);
 +
 +	sem_args.count = 2;
 +	sem_args.max = 2;
 +	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_NE(0xdeadbeef, sem_args.sem);
 +	objs[0] = sem_args.sem;
@@ -3281,14 +3271,14 @@ index 000000000000..169e922484b0
 +	sem_args.count = 1;
 +	sem_args.max = 2;
 +	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_NE(0xdeadbeef, sem_args.sem);
 +	objs[1] = sem_args.sem;
 +
 +	event_args.manual = true;
 +	event_args.signaled = true;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_all_alert(fd, 2, objs, 123, event_args.event, &index);
@@ -3301,7 +3291,7 @@ index 000000000000..169e922484b0
 +
 +	/* test wakeup via alert */
 +
-+	ret = ioctl(fd, WINESYNC_IOC_RESET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_RESET_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +
 +	get_abs_timeout(&timeout, CLOCK_MONOTONIC, 1000);
@@ -3313,14 +3303,14 @@ index 000000000000..169e922484b0
 +	wait_args.alert = event_args.event;
 +	thread_args.fd = fd;
 +	thread_args.args = &wait_args;
-+	thread_args.request = WINESYNC_IOC_WAIT_ALL;
++	thread_args.request = NTSYNC_IOC_WAIT_ALL;
 +	ret = pthread_create(&thread, NULL, wait_thread, &thread_args);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_SET_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_SET_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_for_thread(thread, 100);
@@ -3328,19 +3318,19 @@ index 000000000000..169e922484b0
 +	EXPECT_EQ(0, thread_args.ret);
 +	EXPECT_EQ(2, wait_args.index);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &event_args.event);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &event_args.event);
 +	EXPECT_EQ(0, ret);
 +
 +	/* test with an auto-reset event */
 +
 +	event_args.manual = false;
 +	event_args.signaled = true;
-+	ret = ioctl(fd, WINESYNC_IOC_CREATE_EVENT, &event_args);
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
 +	EXPECT_EQ(0, ret);
 +
 +	sem_args.sem = objs[1];
 +	sem_args.count = 2;
-+	ret = ioctl(fd, WINESYNC_IOC_PUT_SEM, &sem_args);
++	ret = ioctl(fd, NTSYNC_IOC_PUT_SEM, &sem_args);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_all_alert(fd, 2, objs, 123, event_args.event, &index);
@@ -3355,12 +3345,12 @@ index 000000000000..169e922484b0
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(ETIMEDOUT, errno);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &event_args.event);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &event_args.event);
 +	EXPECT_EQ(0, ret);
 +
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &objs[0]);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &objs[0]);
 +	EXPECT_EQ(0, ret);
-+	ret = ioctl(fd, WINESYNC_IOC_DELETE, &objs[1]);
++	ret = ioctl(fd, NTSYNC_IOC_DELETE, &objs[1]);
 +	EXPECT_EQ(0, ret);
 +
 +	close(fd);
