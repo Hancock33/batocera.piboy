@@ -28,9 +28,9 @@ define WINE_GE_CUSTOM_AUTOGEN
 	mkdir -p $(TARGET_DIR)/usr/wine/ge-custom
 
 	# Use Staging Patches
-	printf "%s\n" "$(TERM_BOLD)>>> $($(PKG)_NAME) $($(PKG)_VERSION) Patching wine-staging" >&2
-	tar -xf $(WINE_GE_CUSTOM_DL_DIR)/v$(WINE_GE_CUSTOM_STAGING_VERSION).tar.gz -C $(@D)
-	cd $(@D); ./wine-staging-$(WINE_GE_CUSTOM_STAGING_VERSION)/staging/patchinstall.py --all
+	#printf "%s\n" "$(TERM_BOLD)>>> $($(PKG)_NAME) $($(PKG)_VERSION) Patching wine-staging" >&2
+	#tar -xf $(WINE_GE_CUSTOM_DL_DIR)/v$(WINE_GE_CUSTOM_STAGING_VERSION).tar.gz -C $(@D)
+	#cd $(@D); ./wine-staging-$(WINE_GE_CUSTOM_STAGING_VERSION)/staging/patchinstall.py --all
 
 	# Autotools generation
 	cd $(@D); autoreconf -fiv
