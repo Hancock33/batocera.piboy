@@ -7,7 +7,7 @@ import controllersConfig
 
 class SerioussamGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         # Determine the emulator
         sam_rom = rom.lower()
         data_dir = '/usr/share/game_assets/samtse/Bin'

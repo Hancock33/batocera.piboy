@@ -7,7 +7,7 @@ import controllersConfig
 
 class IonfuryGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["ionfury", "-game_dir", os.path.dirname(os.path.abspath(rom)), "-g", rom, "-nologo" if system.getOptBoolean("nologo") else ""]
         os.chdir(os.path.dirname(os.path.abspath(rom)))
 
