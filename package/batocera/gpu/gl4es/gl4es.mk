@@ -3,8 +3,8 @@
 # gl4es
 #
 ################################################################################
-
-GL4ES_VERSION = bfcdd3a452e0d04d41afd2693a879c073b5ad8c9
+# Version: Commits on Nov 01, 2023
+GL4ES_VERSION = e39434a2b17d12be569a1406f3bd23ac6a231347
 GL4ES_SITE =  $(call github,ptitSeb,gl4es,$(GL4ES_VERSION))
 GL4ES_DEPENDENCIES =
 GL4ES_INSTALL_STAGING = YES
