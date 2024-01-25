@@ -15527,10 +15527,6 @@ msgstr "快速保存"
 #~ msgstr "允许使用CRT低解配置文件(如果存在)."
 
 #~ msgctxt "game_options"
-#~ msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
-#~ msgstr "将DirectX 9/10/11/12调用转换为Vulkan。"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enable this mode if you have issue for run your game on NTFS storage (by "
 #~ "default is better to use LinuxFS)."
