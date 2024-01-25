@@ -15787,10 +15787,6 @@ msgstr "Salvataggio Rapido"
 #~ msgstr "Permette di usare profili switchres se presenti."
 
 #~ msgctxt "game_options"
-#~ msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
-#~ msgstr "Converte le chiamate DirectX 9/10/11/12 in Vulkan."
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enable this mode if you have issue for run your game on NTFS storage (by "
 #~ "default is better to use LinuxFS)."
@@ -15977,6 +15973,10 @@ msgstr "Salvataggio Rapido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "AvanzamentoRapido"
+
+#~ msgctxt "game_options"
+#~ msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
+#~ msgstr "Converte le chiamate DirectX 9/10/11/12 in Vulkan."
 
 #~ msgctxt "game_options"
 #~ msgid "VKD3D (D3D12 to Vulkan)"

@@ -15664,10 +15664,6 @@ msgstr "クイック セーブ"
 #~ msgstr "switchres プロファイルがあれば使用可能にします"
 
 #~ msgctxt "game_options"
-#~ msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
-#~ msgstr "DirectX 9/10/11/12の呼び出しをVulkanに変換します"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enable this mode if you have issue for run your game on NTFS storage (by "
 #~ "default is better to use LinuxFS)."
@@ -15851,6 +15847,10 @@ msgstr "クイック セーブ"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "game_options"
+#~ msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
+#~ msgstr "DirectX 9/10/11/12の呼び出しをVulkanに変換します"
 
 #~ msgctxt "game_options"
 #~ msgid "VKD3D (D3D12 to Vulkan)"

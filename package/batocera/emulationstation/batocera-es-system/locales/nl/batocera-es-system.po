@@ -15832,10 +15832,6 @@ msgstr "Snel Opslaan"
 #~ msgstr "Staat het gebruik toe van switchres profielen indien aanwezig."
 
 #~ msgctxt "game_options"
-#~ msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
-#~ msgstr "Converteert DirectX 9/10/11/12 calls naar Vulkan."
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enable this mode if you have issue for run your game on NTFS storage (by "
 #~ "default is better to use LinuxFS)."
@@ -16023,3 +16019,7 @@ msgstr "Snel Opslaan"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Vooruitspoelen"
+
+#~ msgctxt "game_options"
+#~ msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
+#~ msgstr "Converteert DirectX 9/10/11/12 calls naar Vulkan."
