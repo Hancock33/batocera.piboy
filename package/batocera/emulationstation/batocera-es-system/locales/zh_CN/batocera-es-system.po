@@ -15711,6 +15711,10 @@ msgstr "快速保存"
 #~ msgstr "快进"
 
 #~ msgctxt "game_options"
+#~ msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
+#~ msgstr "将DirectX 9/10/11/12调用转换为Vulkan。"
+
+#~ msgctxt "game_options"
 #~ msgid "VKD3D (D3D12 to Vulkan)"
 #~ msgstr "VKD3D (D3D12 至 Vulkan)"
 
