@@ -14,7 +14,7 @@ WINE_GE_CUSTOM_SELINUX_MODULES = wine
 WINE_GE_CUSTOM_DEPENDENCIES = host-bison host-flex host-wine-ge-custom
 HOST_WINE_GE_CUSTOM_DEPENDENCIES = host-bison host-flex
 HOST_WINE_GE_CUSTOM_DEPENDENCIES = host-bison host-flex host-clang host-lld
-HOST_WINE_GE_CUSTOM_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/v$(WINE_GE_CUSTOM_STAGING_VERSION).tar.gz
+#HOST_WINE_GE_CUSTOM_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/v$(WINE_GE_CUSTOM_STAGING_VERSION).tar.gz
 
 # Configure Wine
 define WINE_GE_CUSTOM_AUTOGEN
