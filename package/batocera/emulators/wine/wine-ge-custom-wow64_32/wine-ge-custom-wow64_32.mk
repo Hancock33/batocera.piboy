@@ -3,8 +3,8 @@
 # wine-ge-custom-wow64_32
 #
 ################################################################################
-# Version: Commits on Jan 25, 2024
-WINE_GE_CUSTOM_WOW64_32_VERSION = eb5993a7c6fbc1cd9deac0dceabc8f1c76e14ba8
+# Version: Commits on Jan 26, 2024
+WINE_GE_CUSTOM_WOW64_32_VERSION = wine-9.1
 WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION = $(subst wine-,,$(WINE_GE_CUSTOM_WOW64_32_VERSION))
 WINE_GE_CUSTOM_WOW64_32_SOURCE = wine-$(WINE_GE_CUSTOM_WOW64_32_VERSION).tar.gz
 WINE_GE_CUSTOM_WOW64_32_SITE = $(call github,wine-mirror,wine,$(WINE_GE_CUSTOM_WOW64_32_VERSION))
