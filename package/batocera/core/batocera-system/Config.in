@@ -338,7 +338,9 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3128     && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
-    select BR2_PACKAGE_RTL8822CS        if BR2_PACKAGE_BATOCERA_TARGET_S905GEN3
+    select BR2_PACKAGE_RTW89_TEMP                           if  BR2_PACKAGE_BATOCERA_TARGET_RK3588
+
+    select BR2_PACKAGE_RTL8822CS                            if  BR2_PACKAGE_BATOCERA_TARGET_S905GEN3
 
     # ethernet
     select BR2_PACKAGE_R8125                                if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
@@ -654,7 +656,7 @@ config BR2_PACKAGE_BATOCERA_GAMESTREAM_SYSTEMS
     bool "batocera.linux game streaming support"
 
     # Game streaming
-    select BR2_PACKAGE_MOONLIGHT_EMBEDDED                   if  !BR2_PACKAGE_BATOCERA_TARGET_RK3128
+    select BR2_PACKAGE_MOONLIGHT_EMBEDDED                   if !BR2_PACKAGE_BATOCERA_TARGET_RK3128 || !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
 
 #### ScummVM ####
 config BR2_PACKAGE_BATOCERA_SCUMMVM_SYSTEMS
@@ -1704,6 +1706,12 @@ config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H6          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_ANY || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3399
+
+    # orangepi firmware
+    select BR2_PACKAGE_FIRMWARE_ORANGEPI                    if  BR2_PACKAGE_BATOCERA_TARGET_H3          || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_H5          || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_H6          || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_H616
 
 config BR2_PACKAGE_BATOCERA_SDL2
     bool "BATOCERA SDL2"
