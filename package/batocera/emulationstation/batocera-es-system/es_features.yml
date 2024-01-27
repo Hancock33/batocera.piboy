@@ -904,6 +904,222 @@ libretro:
                     "Mouse":        Mouse
                     "Touch Screen": Touch
                     "Right Stick":  Joystick
+    melondsds:
+      features: [cheevos]
+      shared: [autosave]
+      cfeatures:
+            melondsds_console_mode:
+                prompt: NDS VERSION
+                decription: Choose the NDS handheld version
+                choices:
+                    "DS":                  DS
+                    "DSi (Experiemental)": DSi
+            melondsds_render_mode:
+                submenu: VIDEO SETTINGS
+                prompt: RENDERER MODE
+                description: Software mode is faster and more accurate, while OpenGL mode supports scaling 3D graphics.
+                choices:
+                    "Software":                                  "software"
+                    "OpenGL (Overwrites Libretro API settings)": "opengl"
+            melondsds_resolution:
+                submenu: VIDEO SETTINGS
+                prompt: INTERNAL RESOLUTION
+                description: Degree in which 3D graphics are scaled up. OpenGL renderer only.
+                choices:
+                    "1x native (256 x 192)":   1
+                    "2x native (512 x 384)":   2
+                    "3x native (768 x 576)":   3
+                    "4x native (1024 x 768)":  4
+                    "5x native (1280 x 960)":  5
+                    "6x native (1536 x 1152)": 6
+                    "7x native (1792 x 1344)": 7
+                    "8x native (2048 x 1536)": 8
+            melondsds_poygon:
+                submenu: VIDEO SETTINGS
+                prompt: IMPROVED POLYGON SPLITTING
+                description: Enable this if your game's 3D modles are not rendered correctly. OpenGL renderer only.
+                choices:
+                    "Disabled": "disabled"
+                    "Enabled":  "enabled"
+            melondsds_filtering:
+                submenu: VIDEO SETTINGS
+                prompt: SCREEN FILTERING
+                description: Affects how the emulated screens are scaled. OpenGL renderer only.
+                choices:
+                    "Nearest": "nearest"
+                    "Linear":  "linear"
+            melondsds_cursor:
+                submenu: SCREEN SETTINGS
+                prompt: CURSOR MODE
+                description: Determines how the cursor should apprear on the botton screen.
+                choices:
+                    "Never":          "never"
+                    "While Touching": "touching"
+                    "Until Timeout":  "timeout"
+                    "Always":         "always"
+            melondsds_cursor_timeout:
+                submenu: SCREEN SETTINGS
+                prompt: CURSOR TIMEOUT
+                description: Cursor timeout in seconds when using Cursor Mode - Until Timeout.
+                choices:
+                    "1 second":   1
+                    "2 seconds":  2
+                    "3 seconds":  3
+                    "5 seconds":  5
+                    "10 seconds": 10
+                    "15 seconds": 15
+                    "20 seconds": 20
+                    "30 seconds": 30
+                    "60 seconds": 60
+            melondsds_touchmode:
+                submenu: SCREEN SETTINGS
+                prompt: TOUCH MODE
+                description: Determine how the console's touch screen in emulated.
+                choices:
+                    "Joystick": "joystick"
+                    "Pointer":  "pointer"
+            melondsds_dns:
+                submenu: FIRMWARE SETTINGS
+                prompt: DNS OVERRIDE
+                description: Use this to play online with custom servers that reimplement the discontinued Nintendo Wi-Fi.
+                choices:
+                    "Kaeru WFC (178.62.43.212)": "178.62.43.212"
+                    "AltWFC (172.104.88.237)":   "172.104.88.237"
+                    "Wiimmfi (95.217.77.181)":   "95.217.77.181"
+                    "Force Default DNS":         "0.0.0.0"
+                    "Don't Override":            "default"
+            melondsds_language:
+                submenu: FIRMWARE SETTINGS
+                prompt: LANGUAGE
+                description: Overrides the language mode of the emulated console.
+                choices:
+                    "Use Host":       "auto"
+                    "English":        "en"
+                    "Japanese":       "jp"
+                    "French":         "fr"
+                    "German":         "de"
+                    "Italian":        "it"
+                    "Spanish":        "es"
+                    "Don't Override": "default"
+            melondsds_colour:
+                submenu: FIRMWARE SETTINGS
+                prompt: FAVOURITE COLOUR
+                description: The theme colour of the emulated console.
+                choices:
+                    "Gray":           0
+                    "Brown":          1
+                    "Red":            2
+                    "Light Pink":     3
+                    "Orange":         4
+                    "Yellow":         5
+                    "Lime":           6
+                    "Light Green":    7
+                    "Dark Green":     8
+                    "Turquoise":      9
+                    "Light Blue":     10
+                    "Blue":           11
+                    "Dark Blue":      12
+                    "Dark Purple":    13
+                    "Light Purple":   14
+                    "Dark Pink":      15
+                    "Don't Override": "default"
+            melondsds_month:
+                submenu: FIRMWARE SETTINGS
+                prompt: BIRTH MONTH
+                description: The month of your birthay.
+                choices:
+                    "January":   1
+                    "February":  2
+                    "March":     3
+                    "April":     4
+                    "May":       5
+                    "June":      6
+                    "July":      7
+                    "August":    8
+                    "September": 9
+                    "October":   10
+                    "November":  11
+                    "December":  12
+                    "Don't Override": "default"
+            melondsds_day:
+                submenu: FIRMWARE SETTINGS
+                prompt: BIRTH DAY
+                description: The day within the month of your birthday.
+                choices:
+                    "1st":  1
+                    "2nd":  2
+                    "3rd":  3
+                    "4th":  4
+                    "5th":  5
+                    "6th":  6
+                    "7th":  7
+                    "8th":  8
+                    "9th":  9
+                    "10th": 10
+                    "11th": 11
+                    "12th": 12
+                    "13th": 13
+                    "14th": 14
+                    "15th": 15
+                    "16th": 16
+                    "17th": 17
+                    "18th": 18
+                    "19th": 19
+                    "20th": 20
+                    "21st": 21
+                    "22nd": 22
+                    "23rd": 23
+                    "24th": 24
+                    "25th": 25
+                    "26th": 26
+                    "27th": 27
+                    "28th": 28
+                    "29th": 29
+                    "30th": 30
+                    "31st": 31
+                    "Don't Override": "default"
+            melondsds_show_unsupported:
+                submenu: ON-SCREEN DISPLAY & NOTIFCATIONS
+                prompt: WARN ABOUT UNSUPPORTED FEATURES
+                description: Enable to display an on-screen message if trying to use unsupported features.
+                choices:
+                    "Disabled": "disabled"
+                    "Enabled":  "enabled"
+            melondsds_show_bios:
+                submenu: ON-SCREEN DISPLAY & NOTIFCATIONS
+                prompt: WARN ABOUT BIOS PROBLEMS
+                description: Enable to display if your BIOS haas known problems.
+                choices:
+                    "Disabled": "disabled"
+                    "Enabled":  "enabled"
+            melondsds_show_layout:
+                submenu: ON-SCREEN DISPLAY & NOTIFCATIONS
+                prompt: SHOW SCREEN LAYOUT
+                description: Enable to show which screen layout with the configured sequence is active.
+                choices:
+                    "Disabled": "disabled"
+                    "Enabled":  "enabled"
+            melondsds_show_mic:
+                submenu: ON-SCREEN DISPLAY & NOTIFCATIONS
+                prompt: SHOW HOST MICROPHONE STATE
+                description: Enable to show whether your device's microphone is active.
+                choices:
+                    "Disabled": "disabled"
+                    "Enabled":  "enabled"
+            melondsds_show_camera:
+                submenu: ON-SCREEN DISPLAY & NOTIFCATIONS
+                prompt: SHOW HOST CAMERA STATE
+                description: Enable to show whether your device's camera is active.
+                choices:
+                    "Disabled": "disabled"
+                    "Enabled":  "enabled"
+            melondsds_show_lid:
+                submenu: ON-SCREEN DISPLAY & NOTIFCATIONS
+                prompt: SHOW LID STATE
+                description: Enable to show whether the emulated screens are closed.
+                choices:
+                    "Disabled": "disabled"
+                    "Enabled":  "enabled"
     dolphin:
       shared: [autosave, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
       cfeatures:
@@ -11104,124 +11320,132 @@ wine:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave]
   cfeatures:
+        dxvk:
+            prompt: DXVK FEATURE
+            description: Converts DirectX 8/9/10/11/12 calls to Vulkan.
+            choices:
+                "Off": 0
+                "On":  1
+        fps_limit:
+            prompt: FPS LIMITER
+            description: Allows you to limit FPS to 60.
+            choices:
+                "Off": 0
+                "On":  1
+        force_mouse:
+            prompt: ENABLE MOUSE
+            description: Force mouse in games.
+            choices:
+                "Off": 0
+                "On":  1
         sdl_config:
             prompt: SDL CONFIG
             description: Choose whether to pass SDL Game Controller config to the Windows game. Disabling may help with some games.
             choices:
                 "Off":          0
                 "On (Default)": 1
-        dxvk:
-            prompt:      DXVK FEATURE
-            description: Converts DirectX 8/9/10/11/12 calls to Vulkan.
-            choices:
-                "Off": 0
-                "On":  1
         dxvk_hud:
-            prompt:      DXVK HUD
+            group: ADVANCED OPTIONS
+            prompt: DXVK HUD
             description: See your FPS and version of Vulkan API/driver.
             choices:
                 "Off": 0
                 "On":  1
         esync:
-            prompt:      ESYNC
+            group: ADVANCED OPTIONS
+            prompt: ESYNC
             description: Can increase performance for games that stress the CPU.
             choices:
                 "Off": 0
                 "On":  1
         fsync:
-            prompt:      FSYNC
+            group: ADVANCED OPTIONS
+            prompt: FSYNC
             description: Can improve frame rate and responsiveness.
             choices:
                 "Off": 0
                 "On":  1
         pba:
-            prompt:      PBA
+            group: ADVANCED OPTIONS
+            prompt: PBA
             description: Vastly improves the speed of buffer maps.
             choices:
                 "Off": 0
                 "On":  1
         fsr:
-            prompt:      FIDELITY FX SUPER RESOLUTION
+            group: ADVANCED OPTIONS
+            prompt: FIDELITY FX SUPER RESOLUTION
             description: Renders game at a lower res then upscales to increase FPS.
             choices:
                 "Off": 0
                 "On":  1
-        fps_limit:
-            prompt:      FPS LIMITER
-            description: Allows you to limit FPS to 60.
-            choices:
-                "Off": 0
-                "On":  1
-        mf:
-            prompt:      INSTALL MEDIA FOUNDATION
-            choices:
-                "Off": 0
-                "On":  1
         virtual_desktop:
-            prompt:      VIRTUAL DESKTOP
+            group: ADVANCED OPTIONS
+            prompt: VIRTUAL DESKTOP
             description: Define the resolution and a new dedicated window.
             choices:
                 "Off": 0
                 "On":  1
-        force_mouse:
-            prompt:      ENABLE MOUSE
-            description: Force mouse in games.
-            choices:
-                "Off": 0
-                "On":  1
         allow_xim:
-            prompt:      ENABLE XIM
-            description: Enable XIM support.
+            group: ADVANCED OPTIONS
+            prompt: ENABLE XIM
+            description: Enable support for Chinese, Japanese and Korean input methods.
             choices:
                 "Off": 0
                 "On":  1
         no_write_watch:
-            prompt:      NO WRITE WATCH
+            group: ADVANCED OPTIONS
+            prompt: NO WRITE WATCH
             description: Disable support for memory write watches in ntdll.
             choices:
                 "Off": 0
                 "On":  1
         force_large_adress:
-            prompt:      FORCE LARGE ADDRESS
+            group: ADVANCED OPTIONS
+            prompt: FORCE LARGE ADDRESS
             description: Force WINE to run games with large addresses.
             choices:
                 "Off": 0
                 "On":  1
         heap_delay_free:
-            prompt:      HEAP DELAY FREE
+            group: ADVANCED OPTIONS
+            prompt: HEAP DELAY FREE
             description: Delay freeing some memory.
             choices:
                 "Off": 0
                 "On":  1
         hide_nvidia_gpu:
-            prompt:      HIDE NVIDIA GPU
-            description: Force Nvidia GPUs to always be reported as AMD GPUs.
+            group: ADVANCED OPTIONS
+            prompt: HIDE NVIDIA GPU
+            description: Force Nvidia GPUs to always be reported as AMD GPUs to workaround game issues.
             choices:
                 "Off": 0
                 "On":  1
         enable_nvapi:
             group: ADVANCED OPTIONS
-            prompt:      ENABLE NVAPI
+            prompt: ENABLE NVAPI
             description: NVAPI is NVIDIA's core software that allows direct access to NVIDIA GPU.
             choices:
                 "Off": 0
                 "On":  1
         dxvk_reset_cache:
             group: ADVANCED OPTIONS
-            prompt:      DXVK RESET CACHE
+            prompt: DXVK RESET CACHE
             description: Reset the cache can fix some crashes if your game was running under Batocera 29.
             choices:
                 "Off": 0
                 "On":  1
         wine_ntfs:
             group: ADVANCED OPTIONS
-            prompt:      ENABLE NTFS MODE
+            prompt: ENABLE NTFS MODE
             description: Enable this mode if you have issue for run your game on NTFS storage (by default it is better to use LinuxFS).
             choices:
                 "Off": 1
                 "On":  0
         wine_debug:
-            prompt:      ENABLE DEBUG
+            group: ADVANCED OPTIONS
+            prompt: ENABLE DEBUG
+            description: Useful to troubleshoot when your Windows game won't start of crashes.
             choices:
                 "Off": 0
                 "On":  1
