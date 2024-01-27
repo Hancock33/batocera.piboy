@@ -15179,6 +15179,10 @@ msgstr ""
 #~ msgstr "Útil per speedruns/defectes."
 
 #~ msgctxt "game_options"
+#~ msgid "DSi (Experiemental)"
+#~ msgstr "DSi (Experimental)"
+
+#~ msgctxt "game_options"
 #~ msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
 #~ msgstr ""
 #~ "Emular un Wiimote en horitzontal amb L2 per a sacsar i Nunchuk a la "
@@ -16606,10 +16610,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "DS (default)"
 #~ msgstr "DS (Per defecte)"
-
-#~ msgctxt "game_options"
-#~ msgid "DSi (Experiemental)"
-#~ msgstr "DSi (Experimental)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
