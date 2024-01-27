@@ -15354,6 +15354,10 @@ msgstr "Salvamento rápido"
 #~ msgstr "Útil para speedruns/falhas."
 
 #~ msgctxt "game_options"
+#~ msgid "DSi (Experiemental)"
+#~ msgstr "DSi (Experimental)"
+
+#~ msgctxt "game_options"
 #~ msgid "Enables or disable on screen messages."
 #~ msgstr "Ativa ou desativa mensagens na tela."
 
@@ -16942,10 +16946,6 @@ msgstr "Salvamento rápido"
 #~ msgctxt "game_options"
 #~ msgid "DS (default)"
 #~ msgstr "DS (padrão)"
-
-#~ msgctxt "game_options"
-#~ msgid "DSi (Experiemental)"
-#~ msgstr "DSi (Experimental)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
