@@ -15238,6 +15238,10 @@ msgstr ""
 #~ msgstr "Полезно для спидранов/гличей."
 
 #~ msgctxt "game_options"
+#~ msgid "DSi (Experiemental)"
+#~ msgstr "DSi (экспериментальный)"
+
+#~ msgctxt "game_options"
 #~ msgid "Enables or disable on screen messages."
 #~ msgstr "Включить или отключить экранные сообщения."
 
@@ -16645,10 +16649,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "DS (default)"
 #~ msgstr "DS (по умолчанию)"
-
-#~ msgctxt "game_options"
-#~ msgid "DSi (Experiemental)"
-#~ msgstr "DSi (экспериментальный)"
 
 #~ msgctxt "game_options"
 #~ msgid ""

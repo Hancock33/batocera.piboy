@@ -15224,6 +15224,10 @@ msgstr "Rychlé uložení"
 #~ msgstr "Užitečné pro rychlé běhy/zadrhávání."
 
 #~ msgctxt "game_options"
+#~ msgid "DSi (Experiemental)"
+#~ msgstr "DSi (Experimentální)"
+
+#~ msgctxt "game_options"
 #~ msgid "Enables or disable on screen messages."
 #~ msgstr "Povolí nebo zakáže zprávy na obrazovce."
 
@@ -16800,10 +16804,6 @@ msgstr "Rychlé uložení"
 #~ msgctxt "game_options"
 #~ msgid "DS (default)"
 #~ msgstr "DS (výchozí)"
-
-#~ msgctxt "game_options"
-#~ msgid "DSi (Experiemental)"
-#~ msgstr "DSi (Experimentální)"
 
 #~ msgctxt "game_options"
 #~ msgid "PS2's internal ratio setting. Some games only support 4/3."
