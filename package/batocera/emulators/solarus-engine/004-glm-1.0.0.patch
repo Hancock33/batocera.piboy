@@ -1,0 +1,13 @@
+diff --git a/include/solarus/graphics/SolarusGl.h b/include/solarus/graphics/SolarusGl.h
+index a182d69be..9242e6bc2 100644
+--- a/include/solarus/graphics/SolarusGl.h
++++ b/include/solarus/graphics/SolarusGl.h
+@@ -15,7 +15,7 @@
+  * with this program. If not, see <http://www.gnu.org/licenses/>.
+  */
+ #pragma once
+-
++#define GLM_ENABLE_EXPERIMENTAL
+ #ifdef ANDROID
+ #include <SDL_opengles2.h>
+ #include <stdio.h>

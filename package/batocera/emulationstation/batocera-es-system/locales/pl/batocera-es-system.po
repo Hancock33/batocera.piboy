@@ -15332,6 +15332,10 @@ msgstr "Szybkie zapisywanie"
 #~ msgstr "Przydatne przy speedrun'ach/glitch'ach."
 
 #~ msgctxt "game_options"
+#~ msgid "DSi (Experiemental)"
+#~ msgstr "DSi (doświadczalny)"
+
+#~ msgctxt "game_options"
 #~ msgid "Enables or disable on screen messages."
 #~ msgstr "Włącza lub wyłącza komunikaty ekranowe."
 
@@ -16779,10 +16783,6 @@ msgstr "Szybkie zapisywanie"
 #~ msgctxt "game_options"
 #~ msgid "DS (default)"
 #~ msgstr "DS (domyślnie)"
-
-#~ msgctxt "game_options"
-#~ msgid "DSi (Experiemental)"
-#~ msgstr "DSi (doświadczalny)"
 
 #~ msgctxt "game_options"
 #~ msgid "PS2's internal ratio setting. Some games only support 4/3."
