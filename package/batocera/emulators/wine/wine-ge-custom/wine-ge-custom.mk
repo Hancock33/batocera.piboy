@@ -3,8 +3,8 @@
 # wine-ge-custom
 #
 ################################################################################
-# Version: Commits on Jan 26, 2024
-WINE_GE_CUSTOM_VERSION = wine-9.1
+
+WINE_GE_CUSTOM_VERSION = wine-9.0
 WINE_GE_CUSTOM_STAGING_VERSION = $(subst wine-,,$(WINE_GE_CUSTOM_VERSION))
 WINE_GE_CUSTOM_SOURCE = wine-$(WINE_GE_CUSTOM_VERSION).tar.gz
 WINE_GE_CUSTOM_SITE = $(call github,wine-mirror,wine,$(WINE_GE_CUSTOM_VERSION))
