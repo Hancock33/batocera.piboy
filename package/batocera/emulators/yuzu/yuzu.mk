@@ -47,6 +47,7 @@ endef
 define YUZU_DL_TZ
 	mkdir -p $(@D)/buildroot-build/externals/nx_tzdb
 	cp $(YUZU_DL_DIR)/$(YUZU_TZDB_VERSION).zip $(@D)/buildroot-build/externals/nx_tzdb
+	cd  $(@D)/buildroot-build/externals/nx_tzdb && unzip $(YUZU_TZDB_VERSION).zip
 endef
 YUZU_POST_EXTRACT_HOOKS += YUZU_DL_TZ
 
