@@ -41,7 +41,7 @@ index 4f29bb76e..0d5b56261 100644
  	I_StartupJoysticks();
  
 diff --git a/src/common/platform/posix/unix/i_specialpaths.cpp b/src/common/platform/posix/unix/i_specialpaths.cpp
-index f844f0dd0..3ff37f984 100644
+index 112e92ee7..09811c5b1 100644
 --- a/src/common/platform/posix/unix/i_specialpaths.cpp
 +++ b/src/common/platform/posix/unix/i_specialpaths.cpp
 @@ -45,59 +45,7 @@
@@ -53,15 +53,15 @@ index f844f0dd0..3ff37f984 100644
 -
 -	path = NicePath("$HOME/" GAME_DIR "/");
 -
--	if (stat (path, &info) == -1)
+-	if (stat (path.GetChars(), &info) == -1)
 -	{
 -		struct stat extrainfo;
 -
 -		// Sanity check for $HOME/.config
 -		FString configPath = NicePath("$HOME/.config/");
--		if (stat (configPath, &extrainfo) == -1)
+-		if (stat (configPath.GetChars(), &extrainfo) == -1)
 -		{
--			if (mkdir (configPath, S_IRUSR | S_IWUSR | S_IXUSR) == -1)
+-			if (mkdir (configPath.GetChars(), S_IRUSR | S_IWUSR | S_IXUSR) == -1)
 -			{
 -				I_FatalError ("Failed to create $HOME/.config directory:\n%s", strerror(errno));
 -			}
@@ -75,9 +75,9 @@ index f844f0dd0..3ff37f984 100644
 -		// Transfer the old zdoom directory to the new location
 -		bool moved = false;
 -		FString oldpath = NicePath("$HOME/." GAMENAMELOWERCASE "/");
--		if (stat (oldpath, &extrainfo) != -1)
+-		if (stat (oldpath.GetChars(), &extrainfo) != -1)
 -		{
--			if (rename(oldpath, path) == -1)
+-			if (rename(oldpath.GetChars(), path.GetChars()) == -1)
 -			{
 -				I_Error ("Failed to move old " GAMENAMELOWERCASE " directory (%s) to new location (%s).",
 -					oldpath.GetChars(), path.GetChars());
@@ -86,7 +86,7 @@ index f844f0dd0..3ff37f984 100644
 -				moved = true;
 -		}
 -
--		if (!moved && mkdir (path, S_IRUSR | S_IWUSR | S_IXUSR) == -1)
+-		if (!moved && mkdir (path.GetChars(), S_IRUSR | S_IWUSR | S_IXUSR) == -1)
 -		{
 -			I_FatalError ("Failed to create %s directory:\n%s",
 -				path.GetChars(), strerror (errno));
@@ -113,7 +113,7 @@ index f844f0dd0..3ff37f984 100644
 +	FString path = NicePath("/userdata/saves/gzdoom");
  	if (create)
  	{
- 		CreatePath(path);
+ 		CreatePath(path.GetChars());
 @@ -132,7 +80,7 @@ FString M_GetCachePath(bool create)
  {
  	// Don't use GAME_DIR and such so that ZDoom and its child ports can
@@ -122,7 +122,7 @@ index f844f0dd0..3ff37f984 100644
 +	FString path = NicePath("/userdata/system/cache/gzdoom");
  	if (create)
  	{
- 		CreatePath(path);
+ 		CreatePath(path.GetChars());
 @@ -150,7 +98,7 @@ FString M_GetCachePath(bool create)
  
  FString M_GetAutoexecPath()
@@ -160,7 +160,7 @@ index f844f0dd0..3ff37f984 100644
  
  //===========================================================================
 diff --git a/src/gameconfigfile.cpp b/src/gameconfigfile.cpp
-index 0b3931e88..108ac247d 100644
+index a0f27899e..f78dc265f 100644
 --- a/src/gameconfigfile.cpp
 +++ b/src/gameconfigfile.cpp
 @@ -145,7 +145,7 @@ FGameConfigFile::FGameConfigFile ()

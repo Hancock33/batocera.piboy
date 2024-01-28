@@ -7,7 +7,7 @@ import controllersConfig
 
 class OpenlaraGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["OpenLara"]
 
         return Command.Command(

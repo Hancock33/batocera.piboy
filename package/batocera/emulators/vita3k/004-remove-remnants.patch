@@ -45,7 +45,7 @@ index b32122e8..f2456efa 100644
          } else if (state == "zrif") {
              title = lang["enter_zrif_key"];
 diff --git a/vita3k/gui/src/settings.cpp b/vita3k/gui/src/settings.cpp
-index cd9bbfa9..7a7f23ee 100644
+index d5e963b7..bac137ba 100644
 --- a/vita3k/gui/src/settings.cpp
 +++ b/vita3k/gui/src/settings.cpp
 @@ -608,9 +608,6 @@ void draw_settings(GuiState &gui, EmuEnvState &emuenv) {

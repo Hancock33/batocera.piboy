@@ -7,7 +7,7 @@ import controllersConfig
 
 class WitchavenGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         os.chdir("/userdata/roms/ports/witchaven")
         commandArray = ["ewitchaven"]
 

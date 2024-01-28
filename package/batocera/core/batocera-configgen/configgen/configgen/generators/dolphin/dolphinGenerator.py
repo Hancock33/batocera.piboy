@@ -12,7 +12,7 @@ import controllersConfig
 
 class DolphinGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         if not os.path.exists(os.path.dirname(batoceraFiles.dolphinIni)):
             os.makedirs(os.path.dirname(batoceraFiles.dolphinIni))
 
@@ -21,7 +21,7 @@ class DolphinGenerator(Generator):
             os.makedirs(batoceraFiles.dolphinData + "/StateSaves")
 
         # Generate the controller config(s)
-        dolphinControllers.generateControllerConfig(system, playersControllers, wheels, rom, guns)
+        dolphinControllers.generateControllerConfig(system, playersControllers, metadata, wheels, rom, guns)
 
         ## [ dolphin.ini ] ##
         dolphinSettings = configparser.ConfigParser(interpolation=None)
@@ -103,9 +103,11 @@ class DolphinGenerator(Generator):
         else:
             dolphinSettings.set("Core", "SyncGPU", "False")
 
-        # Language
-        dolphinSettings.set("Core", "SelectedLanguage", str(getGameCubeLangFromEnvironment())) # Wii
-        dolphinSettings.set("Core", "GameCubeLanguage", str(getGameCubeLangFromEnvironment())) # GC
+        # Gamecube Language
+        if system.isOptSet("gamecube_language"):
+            dolphinSettings.set("Core", "SelectedLanguage", system.config["gamecube_language"])
+        else:
+            dolphinSettings.set("Core", "SelectedLanguage", str(getGameCubeLangFromEnvironment()))
 
         # Enable MMU
         if system.isOptSet("enable_mmu") and system.getOptBoolean("enable_mmu"):
@@ -435,6 +437,7 @@ class DolphinGenerator(Generator):
 
         return 4/3
 
+# Get the language from the environment if user didn't set it in ES.
 # Seem to be only for the gamecube. However, while this is not in a gamecube section
 # It may be used for something else, so set it anyway
 def getGameCubeLangFromEnvironment():

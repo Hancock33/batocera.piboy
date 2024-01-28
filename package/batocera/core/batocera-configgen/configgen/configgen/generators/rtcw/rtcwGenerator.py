@@ -12,7 +12,7 @@ rtcw_dst = "/userdata/roms/ports/rtcw/main"
 
 class RtcwGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
         shutil.copytree(rtcw_src, rtcw_dst, dirs_exist_ok=True)
 

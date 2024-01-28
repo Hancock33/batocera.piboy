@@ -1,0 +1,77 @@
+From 5c94026f410308e7425fa6d18bcf6c443cdc2534 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Joan=20Bruguera=20Mic=C3=B3?= <joanbrugueram@gmail.com>
+Date: Tue, 9 Jan 2024 22:32:09 +0000
+Subject: [PATCH] Tentative fix for NVIDIA 470.223.02 driver for Linux 6.8-rc1
+
+Requires the following commit to be applied to the kernel, which
+should hopefully be included in the mainline kernel soon:
+https://lore.kernel.org/all/20240109082232.22657-1-jgross@suse.com/
+---
+ common/inc/nv.h             | 24 ++++++++++++++++++++++++
+ nvidia-drm/nvidia-drm-drv.c |  8 ++++++++
+ 2 files changed, 32 insertions(+)
+
+diff --git a/kernel/common/inc/nv.h b/kernel/common/inc/nv.h
+index ef4272a..93be213 100644
+--- a/kernel/common/inc/nv.h
++++ b/kernel/common/inc/nv.h
+@@ -12,6 +12,30 @@
+ #ifndef _NV_H_
+ #define _NV_H_
+ 
++#include <linux/version.h>
++// Rel. commit. "mm/sparsemem: fix race in accessing memory_section->usage" (Charan Teja Kalla, 13 Oct 2023)
++// The commit introduces a RCU lock/unlock to pfn_valid. As those are exported
++// GPL-only, so their uses from the NVIDIA driver code cause the build to fail.
++
++// Since I have no idea how to fix this for real, this is just a hack that
++// "undoes" the commit above for the NVIDIA driver.
++// At the same time, my understanding is that the bug fixed by that commit
++// is either extremely rare and/or only affects non-typical system setups.
++
++// PS: The following commit (currently in linux-next 20240125) also fixes the GPL/build issue:
++// https://lore.kernel.org/linux-mm/20240118110022.2538350-1-elver@google.com/
++
++// However: USE AT YOUR OWN RISK!
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 8, 0)
++#include <linux/rcupdate.h> // Define rcu_read_lock and rcu_read_unlock
++
++static inline void rcu_dummy(void) {}
++#define rcu_read_lock rcu_dummy
++#define rcu_read_unlock rcu_dummy
++#include <linux/mmzone.h>
++#undef rcu_read_lock
++#undef rcu_read_unlock
++#endif
+ 
+ 
+ #include <nvlimits.h>
+diff --git a/kernel/nvidia-drm/nvidia-drm-drv.c b/kernel/nvidia-drm/nvidia-drm-drv.c
+index 5ef557c..d271551 100644
+--- a/kernel/nvidia-drm/nvidia-drm-drv.c
++++ b/kernel/nvidia-drm/nvidia-drm-drv.c
+@@ -60,6 +60,7 @@
+ #include <drm/drm_ioctl.h>
+ #endif
+ 
++#include <linux/version.h>
+ #include <linux/pci.h>
+ 
+ /*
+@@ -741,6 +742,13 @@ static const struct file_operations nv_drm_fops = {
+     .llseek         = noop_llseek,
+ };
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 8, 0)
++// Rel. commit. "drm: Remove locking for legacy ioctls and DRM_UNLOCKED" (Thomas Zimmermann, 22 Nov 2023)
++// Mock this flag, which was already useless on any recent kernel, since it
++// only did something if the driver set DRIVER_LEGACY in driver_features.
++static const enum drm_ioctl_flags DRM_UNLOCKED = 0;
++#endif
++
+ static const struct drm_ioctl_desc nv_drm_ioctls[] = {
+ #if defined(NV_DRM_ATOMIC_MODESET_AVAILABLE)
+     DRM_IOCTL_DEF_DRV(NVIDIA_GEM_IMPORT_NVKMS_MEMORY,
+-- 
+2.43.0
+

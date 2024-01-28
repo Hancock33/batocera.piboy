@@ -9,7 +9,7 @@ import utils.videoMode as videoMode
 
 class VcmiGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         gameResolution = videoMode.getCurrentResolution()
 
         if os.path.isfile('/tmp/piboy'):

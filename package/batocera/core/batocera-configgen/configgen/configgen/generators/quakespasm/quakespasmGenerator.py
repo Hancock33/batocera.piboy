@@ -12,7 +12,7 @@ q1_dst = "/userdata/roms/ports/quake1/id1/quakespasm.pak"
 
 class QuakespasmGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         gameResolution = videoMode.getCurrentResolution()
         commandArray = ["quakespasm", "-basedir", "/userdata/roms/ports/quake1", "-sndspeed", "44100", "+set" , "vid_fullscreen", "1", "+set", "vid_width", str(gameResolution["width"]), "+set", "vid_height",str(gameResolution["height"])]
 
