@@ -14685,6 +14685,38 @@ msgstr "Antyaliasing to technika wygładzania postrzępionych krawędzi."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
+msgid ""
+"Turn on to configure settings from this GUI (Recommended). If disabled, you "
+"have to manually edit the Config File (Experts only - not recommended)."
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball
+msgctxt "game_options"
+msgid "EXPERT SETTINGS"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "ENABLE EMULATIONSTATION CONFIGURATION"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"Per Table Folder requires all files to be in the associated rom table "
+"folder. If disabled, consult the Wiki for further details."
+msgstr ""
+"Folder Na Stół wymaga, aby wszystkie pliki znajdowały się w powiązanym "
+"folderze stołu romu. Jeśli opcja ta jest wyłączona, więcej informacji można "
+"znaleźć na Wiki."
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "PER TABLE FOLDER"
+msgstr "FOLDER NA STÓŁ"
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
 msgid "Provides a ball trail to make the ball easier to follow."
 msgstr "Zapewnia ślad piłki, aby ułatwić jej śledzenie."
 
@@ -14797,150 +14829,96 @@ msgstr "ALTCOLOR"
 msgctxt "game_options"
 msgid ""
 "Extra DMD (Dot Matrix Display) window to display the score for tables with a "
-"pinmame rom."
+"pinmame rom. By default, settings come from the VPinballX.ini configuration "
+"file."
 msgstr ""
-"Dodatkowe okno DMD (Dot Matrix Display) do wyświetlania wyniku dla stołów z "
-"pinmame rom."
 
-#. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "PINMAME DMD"
 msgstr "PINMAME DMD"
 
-#. TRANSLATION: vpinball, vpinball, vpinball, vpinball
+#. TRANSLATION: vpinball, vpinball, vpinball
 msgctxt "game_options"
-msgid "Horizontal position (in percentage of the screen width)."
-msgstr "Pozycja pozioma (w procentach szerokości ekranu)."
+msgid "Top-Right Position, Small"
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball
+msgctxt "game_options"
+msgid "Top-Right Position, Medium"
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball
+msgctxt "game_options"
+msgid "Top-Right Position, Large"
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball
+msgctxt "game_options"
+msgid "Top-Left Position, Small"
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball
+msgctxt "game_options"
+msgid "Top-Left Position, Medium"
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball
+msgctxt "game_options"
+msgid "Top-Left Position, Large"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "PINMAME DMD X"
-msgstr "PINMAME DMD X"
-
-#. TRANSLATION: vpinball, vpinball, vpinball, vpinball
-msgctxt "game_options"
-msgid "Vertical position (in percentage of the screen height)."
-msgstr "Pozycja pionowa (w procentach wysokości ekranu)."
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "PINMAME DMD Y"
-msgstr "PINMAME DMD Y"
-
-#. TRANSLATION: vpinball, vpinball, vpinball, vpinball
-msgctxt "game_options"
-msgid "Horizontal width (in percentage of the screen width)."
-msgstr "Szerokość pozioma (w procentach szerokości ekranu)."
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "PINMAME DMD WIDTH"
-msgstr "SZEROKOŚĆ PINMAME DMD"
-
-#. TRANSLATION: vpinball, vpinball, vpinball, vpinball
-msgctxt "game_options"
-msgid "Vertical height (in percentage of the screen height)."
-msgstr "Wysokość pionowa (w procentach wysokości ekranu)."
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "PINMAME DMD HEIGHT"
-msgstr "WYSOKOŚĆ PINMAME DMD"
+msgid "PinMAME DMD disabled"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
 "Extra DMD (Dot Matrix Display) window to display the score for tables "
-"without a rom."
+"without a rom. By default, settings come from the VPinballX.ini "
+"configuration file."
 msgstr ""
-"Dodatkowe okno DMD (Dot Matrix Display) do wyświetlania wyniku dla stołów."
 
-#. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "FLEX DMD"
 msgstr "FLEX DMD"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "FLEX DMD X"
-msgstr "FLEX DMD X"
+msgid "FlexDMD disabled"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "FLEX DMD Y"
-msgstr "FLEX DMD Y"
+msgid ""
+"Upright glass panel displaying some illuminated artwork. By default, "
+"settings come from the VPinballX.ini configuration file."
+msgstr ""
 
 #. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "FLEX DMD WIDTH"
-msgstr "SZEROKOŚĆ FLEX DMD"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "FLEX DMD HEIGHT"
-msgstr "WYSOKOŚĆ FLEX DMD"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "Upright glass panel displaying some illuminated artwork."
-msgstr "Stojący szklany panel wyświetlający podświetlaną grafikę."
-
-#. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
 msgctxt "game_options"
 msgid "BACKGLASS (B2S)"
 msgstr "BACKGLASS (B2S)"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "BACKGLASS X"
-msgstr "BACKGLASS X"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "BACKGLASS Y"
-msgstr "BACKGLASS Y"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "BACKGLASS WIDTH"
-msgstr "SZEROKOŚĆ BACKGLASS"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "BACKGLASS HEIGHT"
-msgstr "WYSOKOŚĆ BACKGLASS"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "Hides the Extra DMD (Dot Matrix Display) integrated in the Backglass."
+msgid "Backglass disabled"
 msgstr ""
-"Ukrywa dodatkowy wyświetlacz DMD (Dot Matrix Display) zintegrowany z tylną "
-"szybą."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "BACKGLASS DMD HIDE"
-msgstr "UKRYJ BACKGLASS DMD"
+msgid ""
+"When the Backglass is activated, display the small additional part with the "
+"scores."
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "B2S DMD X"
-msgstr "B2S DMD X"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "B2S DMD Y"
-msgstr "B2S DMD Y"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "B2S DMD WIDTH"
-msgstr "SZEROKOŚĆ B2S DMD"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "B2S DMD HEIGHT"
-msgstr "WYSOKOŚĆ B2S DMD"
+msgid "DISPLAY BACKGLASS DMD"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -14971,26 +14949,6 @@ msgstr "Alternatywne dźwięki dla stołu (wymaga dodatkowych plików)."
 msgctxt "game_options"
 msgid "ALTERNATIVE SOUND"
 msgstr "DŹWIĘK ALTERNATYWNY"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid ""
-"Per Table Folder requires all files to be in the associated rom table "
-"folder. If disabled, consult the Wiki for further details."
-msgstr ""
-"Folder Na Stół wymaga, aby wszystkie pliki znajdowały się w powiązanym "
-"folderze stołu romu. Jeśli opcja ta jest wyłączona, więcej informacji można "
-"znaleźć na Wiki."
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "FOLDERS ORGANISATION"
-msgstr "ORGANIZACJA FOLDERÓW"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "PER TABLE FOLDER"
-msgstr "FOLDER NA STÓŁ"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -16152,6 +16110,120 @@ msgstr "Szybkie ładowanie"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Szybkie zapisywanie"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Extra DMD (Dot Matrix Display) window to display the score for tables "
+#~ "with a pinmame rom."
+#~ msgstr ""
+#~ "Dodatkowe okno DMD (Dot Matrix Display) do wyświetlania wyniku dla stołów "
+#~ "z pinmame rom."
+
+#~ msgctxt "game_options"
+#~ msgid "Horizontal position (in percentage of the screen width)."
+#~ msgstr "Pozycja pozioma (w procentach szerokości ekranu)."
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD X"
+#~ msgstr "PINMAME DMD X"
+
+#~ msgctxt "game_options"
+#~ msgid "Vertical position (in percentage of the screen height)."
+#~ msgstr "Pozycja pionowa (w procentach wysokości ekranu)."
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD Y"
+#~ msgstr "PINMAME DMD Y"
+
+#~ msgctxt "game_options"
+#~ msgid "Horizontal width (in percentage of the screen width)."
+#~ msgstr "Szerokość pozioma (w procentach szerokości ekranu)."
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD WIDTH"
+#~ msgstr "SZEROKOŚĆ PINMAME DMD"
+
+#~ msgctxt "game_options"
+#~ msgid "Vertical height (in percentage of the screen height)."
+#~ msgstr "Wysokość pionowa (w procentach wysokości ekranu)."
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD HEIGHT"
+#~ msgstr "WYSOKOŚĆ PINMAME DMD"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Extra DMD (Dot Matrix Display) window to display the score for tables "
+#~ "without a rom."
+#~ msgstr ""
+#~ "Dodatkowe okno DMD (Dot Matrix Display) do wyświetlania wyniku dla stołów."
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD X"
+#~ msgstr "FLEX DMD X"
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD Y"
+#~ msgstr "FLEX DMD Y"
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD WIDTH"
+#~ msgstr "SZEROKOŚĆ FLEX DMD"
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD HEIGHT"
+#~ msgstr "WYSOKOŚĆ FLEX DMD"
+
+#~ msgctxt "game_options"
+#~ msgid "Upright glass panel displaying some illuminated artwork."
+#~ msgstr "Stojący szklany panel wyświetlający podświetlaną grafikę."
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS X"
+#~ msgstr "BACKGLASS X"
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS Y"
+#~ msgstr "BACKGLASS Y"
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS WIDTH"
+#~ msgstr "SZEROKOŚĆ BACKGLASS"
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS HEIGHT"
+#~ msgstr "WYSOKOŚĆ BACKGLASS"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Hides the Extra DMD (Dot Matrix Display) integrated in the Backglass."
+#~ msgstr ""
+#~ "Ukrywa dodatkowy wyświetlacz DMD (Dot Matrix Display) zintegrowany z "
+#~ "tylną szybą."
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS DMD HIDE"
+#~ msgstr "UKRYJ BACKGLASS DMD"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD X"
+#~ msgstr "B2S DMD X"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD Y"
+#~ msgstr "B2S DMD Y"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD WIDTH"
+#~ msgstr "SZEROKOŚĆ B2S DMD"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD HEIGHT"
+#~ msgstr "WYSOKOŚĆ B2S DMD"
+
+#~ msgctxt "game_options"
+#~ msgid "FOLDERS ORGANISATION"
+#~ msgstr "ORGANIZACJA FOLDERÓW"
 
 #~ msgctxt "game_options"
 #~ msgid "105% (Use caution"

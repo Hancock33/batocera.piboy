@@ -14440,6 +14440,37 @@ msgstr "锯齿是一种平滑锯齿边缘的技术."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
+msgid ""
+"Turn on to configure settings from this GUI (Recommended). If disabled, you "
+"have to manually edit the Config File (Experts only - not recommended)."
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball
+msgctxt "game_options"
+msgid "EXPERT SETTINGS"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "ENABLE EMULATIONSTATION CONFIGURATION"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"Per Table Folder requires all files to be in the associated rom table "
+"folder. If disabled, consult the Wiki for further details."
+msgstr ""
+"“每个表文件夹”要求所有文件都位于关联的rom表文件夹中, 如果已禁用, 请参阅Wiki以"
+"了解更多详细信息."
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "PER TABLE FOLDER"
+msgstr "每个表文件夹"
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
 msgid "Provides a ball trail to make the ball easier to follow."
 msgstr "提供一个球的轨迹, 使得球更容易被追踪."
 
@@ -14548,145 +14579,96 @@ msgstr "备用颜色"
 msgctxt "game_options"
 msgid ""
 "Extra DMD (Dot Matrix Display) window to display the score for tables with a "
-"pinmame rom."
-msgstr "在使用PinMAME ROM的桌面游戏中, 额外提供一个显示分数的DMD窗口."
+"pinmame rom. By default, settings come from the VPinballX.ini configuration "
+"file."
+msgstr ""
 
-#. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "PINMAME DMD"
 msgstr "PINMAME DMD点阵显示器"
 
-#. TRANSLATION: vpinball, vpinball, vpinball, vpinball
+#. TRANSLATION: vpinball, vpinball, vpinball
 msgctxt "game_options"
-msgid "Horizontal position (in percentage of the screen width)."
-msgstr "水平位置(以屏幕宽度的百分比表示)."
+msgid "Top-Right Position, Small"
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball
+msgctxt "game_options"
+msgid "Top-Right Position, Medium"
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball
+msgctxt "game_options"
+msgid "Top-Right Position, Large"
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball
+msgctxt "game_options"
+msgid "Top-Left Position, Small"
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball
+msgctxt "game_options"
+msgid "Top-Left Position, Medium"
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball
+msgctxt "game_options"
+msgid "Top-Left Position, Large"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "PINMAME DMD X"
-msgstr "PINMAME DMD X轴"
-
-#. TRANSLATION: vpinball, vpinball, vpinball, vpinball
-msgctxt "game_options"
-msgid "Vertical position (in percentage of the screen height)."
-msgstr "垂直位置(以屏幕高度的百分比表示)."
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "PINMAME DMD Y"
-msgstr "PINMAME DMD Y轴"
-
-#. TRANSLATION: vpinball, vpinball, vpinball, vpinball
-msgctxt "game_options"
-msgid "Horizontal width (in percentage of the screen width)."
-msgstr "水平宽度(以屏幕宽度的百分比表示)."
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "PINMAME DMD WIDTH"
-msgstr "PINMAME DMD宽度"
-
-#. TRANSLATION: vpinball, vpinball, vpinball, vpinball
-msgctxt "game_options"
-msgid "Vertical height (in percentage of the screen height)."
-msgstr "垂直高度(以屏幕高度的百分比表示)."
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "PINMAME DMD HEIGHT"
-msgstr "PINMAME DMD高度"
+msgid "PinMAME DMD disabled"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
 "Extra DMD (Dot Matrix Display) window to display the score for tables "
-"without a rom."
-msgstr "额外DMD(点阵显示)窗口, 用于显示没有rom的表格的分数."
+"without a rom. By default, settings come from the VPinballX.ini "
+"configuration file."
+msgstr ""
 
-#. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "FLEX DMD"
 msgstr "FLEX DMD点阵显示器"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "FLEX DMD X"
-msgstr "FLEX DMD X轴"
+msgid "FlexDMD disabled"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "FLEX DMD Y"
-msgstr "FLEX DMD Y轴"
+msgid ""
+"Upright glass panel displaying some illuminated artwork. By default, "
+"settings come from the VPinballX.ini configuration file."
+msgstr ""
 
 #. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "FLEX DMD WIDTH"
-msgstr "FLEX DMD宽度"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "FLEX DMD HEIGHT"
-msgstr "FLEX DMD高度"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "Upright glass panel displaying some illuminated artwork."
-msgstr "直立的玻璃面板, 展示一些发光的艺术品."
-
-#. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
 msgctxt "game_options"
 msgid "BACKGLASS (B2S)"
 msgstr "BACKGLASS (B2S)背景玻璃"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "BACKGLASS X"
-msgstr "BACKGLASS X轴"
+msgid "Backglass disabled"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "BACKGLASS Y"
-msgstr "BACKGLASS Y轴"
+msgid ""
+"When the Backglass is activated, display the small additional part with the "
+"scores."
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "BACKGLASS WIDTH"
-msgstr "BACKGLASS宽度"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "BACKGLASS HEIGHT"
-msgstr "BACKGLASS高度"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "Hides the Extra DMD (Dot Matrix Display) integrated in the Backglass."
-msgstr "隐藏集成在背面玻璃中的额外DMD(点阵显示器)."
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "BACKGLASS DMD HIDE"
-msgstr "隐藏BACKGLASS背景玻璃"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "B2S DMD X"
-msgstr "B2S DMD X轴"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "B2S DMD Y"
-msgstr "B2S DMD Y轴"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "B2S DMD WIDTH"
-msgstr "B2S DMD宽度"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "B2S DMD HEIGHT"
-msgstr "B2S DMD高度"
+msgid "DISPLAY BACKGLASS DMD"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -14717,25 +14699,6 @@ msgstr "针对游戏桌的替代音效(需要额外的文件)."
 msgctxt "game_options"
 msgid "ALTERNATIVE SOUND"
 msgstr "替代声音"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid ""
-"Per Table Folder requires all files to be in the associated rom table "
-"folder. If disabled, consult the Wiki for further details."
-msgstr ""
-"“每个表文件夹”要求所有文件都位于关联的rom表文件夹中, 如果已禁用, 请参阅Wiki以"
-"了解更多详细信息."
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "FOLDERS ORGANISATION"
-msgstr "文件夹组织"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "PER TABLE FOLDER"
-msgstr "每个表文件夹"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15890,6 +15853,115 @@ msgstr "快速载入"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "快速保存"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Extra DMD (Dot Matrix Display) window to display the score for tables "
+#~ "with a pinmame rom."
+#~ msgstr "在使用PinMAME ROM的桌面游戏中, 额外提供一个显示分数的DMD窗口."
+
+#~ msgctxt "game_options"
+#~ msgid "Horizontal position (in percentage of the screen width)."
+#~ msgstr "水平位置(以屏幕宽度的百分比表示)."
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD X"
+#~ msgstr "PINMAME DMD X轴"
+
+#~ msgctxt "game_options"
+#~ msgid "Vertical position (in percentage of the screen height)."
+#~ msgstr "垂直位置(以屏幕高度的百分比表示)."
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD Y"
+#~ msgstr "PINMAME DMD Y轴"
+
+#~ msgctxt "game_options"
+#~ msgid "Horizontal width (in percentage of the screen width)."
+#~ msgstr "水平宽度(以屏幕宽度的百分比表示)."
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD WIDTH"
+#~ msgstr "PINMAME DMD宽度"
+
+#~ msgctxt "game_options"
+#~ msgid "Vertical height (in percentage of the screen height)."
+#~ msgstr "垂直高度(以屏幕高度的百分比表示)."
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD HEIGHT"
+#~ msgstr "PINMAME DMD高度"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Extra DMD (Dot Matrix Display) window to display the score for tables "
+#~ "without a rom."
+#~ msgstr "额外DMD(点阵显示)窗口, 用于显示没有rom的表格的分数."
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD X"
+#~ msgstr "FLEX DMD X轴"
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD Y"
+#~ msgstr "FLEX DMD Y轴"
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD WIDTH"
+#~ msgstr "FLEX DMD宽度"
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD HEIGHT"
+#~ msgstr "FLEX DMD高度"
+
+#~ msgctxt "game_options"
+#~ msgid "Upright glass panel displaying some illuminated artwork."
+#~ msgstr "直立的玻璃面板, 展示一些发光的艺术品."
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS X"
+#~ msgstr "BACKGLASS X轴"
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS Y"
+#~ msgstr "BACKGLASS Y轴"
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS WIDTH"
+#~ msgstr "BACKGLASS宽度"
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS HEIGHT"
+#~ msgstr "BACKGLASS高度"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Hides the Extra DMD (Dot Matrix Display) integrated in the Backglass."
+#~ msgstr "隐藏集成在背面玻璃中的额外DMD(点阵显示器)."
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS DMD HIDE"
+#~ msgstr "隐藏BACKGLASS背景玻璃"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD X"
+#~ msgstr "B2S DMD X轴"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD Y"
+#~ msgstr "B2S DMD Y轴"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD WIDTH"
+#~ msgstr "B2S DMD宽度"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD HEIGHT"
+#~ msgstr "B2S DMD高度"
+
+#~ msgctxt "game_options"
+#~ msgid "FOLDERS ORGANISATION"
+#~ msgstr "文件夹组织"
 
 #~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
