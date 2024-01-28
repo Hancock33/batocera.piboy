@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-WINE_GE_CUSTOM_VERSION = wine-9.0
+WINE_GE_CUSTOM_VERSION = wine-9.1
 WINE_GE_CUSTOM_STAGING_VERSION = $(subst wine-,,$(WINE_GE_CUSTOM_VERSION))
 WINE_GE_CUSTOM_SOURCE = wine-$(WINE_GE_CUSTOM_VERSION).tar.gz
 WINE_GE_CUSTOM_SITE = $(call github,wine-mirror,wine,$(WINE_GE_CUSTOM_VERSION))
@@ -14,7 +14,7 @@ WINE_GE_CUSTOM_SELINUX_MODULES = wine
 WINE_GE_CUSTOM_DEPENDENCIES = host-bison host-flex host-wine-ge-custom
 HOST_WINE_GE_CUSTOM_DEPENDENCIES = host-bison host-flex
 HOST_WINE_GE_CUSTOM_DEPENDENCIES = host-bison host-flex host-clang host-lld
-#HOST_WINE_GE_CUSTOM_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/v$(WINE_GE_CUSTOM_STAGING_VERSION).tar.gz
+HOST_WINE_GE_CUSTOM_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/v$(WINE_GE_CUSTOM_STAGING_VERSION).tar.gz
 
 # Configure Wine
 define WINE_GE_CUSTOM_AUTOGEN
@@ -28,9 +28,9 @@ define WINE_GE_CUSTOM_AUTOGEN
 	mkdir -p $(TARGET_DIR)/usr/wine/ge-custom
 
 	# Use Staging Patches
-	#printf "%s\n" "$(TERM_BOLD)>>> $($(PKG)_NAME) $($(PKG)_VERSION) Patching wine-staging" >&2
-	#tar -xf $(WINE_GE_CUSTOM_DL_DIR)/v$(WINE_GE_CUSTOM_STAGING_VERSION).tar.gz -C $(@D)
-	#cd $(@D); ./wine-staging-$(WINE_GE_CUSTOM_STAGING_VERSION)/staging/patchinstall.py --all
+	printf "%s\n" "$(TERM_BOLD)>>> $($(PKG)_NAME) $($(PKG)_VERSION) Patching wine-staging" >&2
+	tar -xf $(WINE_GE_CUSTOM_DL_DIR)/v$(WINE_GE_CUSTOM_STAGING_VERSION).tar.gz -C $(@D)
+	cd $(@D); ./wine-staging-$(WINE_GE_CUSTOM_STAGING_VERSION)/staging/patchinstall.py --all
 
 	# Autotools generation
 	cd $(@D); autoreconf -fiv

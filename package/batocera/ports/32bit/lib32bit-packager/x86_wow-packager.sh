@@ -26,11 +26,13 @@ cp -a ${TARGET_DIR}/usr/share/vulkan/icd.d/intel_icd.i686.json         $DEST_DIR
 cp -a ${TARGET_DIR}/usr/share/vulkan/icd.d/radeon_icd.i686.json        $DEST_DIR/usr/share/vulkan/icd.d/radeon_icd.i686.json
 sed -i s@/usr/lib/@/lib32/@g                                           $DEST_DIR/usr/share/vulkan/icd.d/*i686.json
 
-rm -rf $DEST_DIR/usr/lib32/{avahi,gconv,glslang,graphene-1.0,icu,libfm,locale}
+rm -rf $DEST_DIR/usr/lib32/{avahi,gconv,glslang,graphene-1.0,icu,libfm,locale,bluez,gio}
 rm -rf $DEST_DIR/usr/lib32/{pcmanfm,python3.*,terminfo,udev,xorg,X11}
 rm -rf $DEST_DIR/usr/lib32/firmware
 rm -rf $DEST_DIR/usr/wine/proton/share
 rm -rf $DEST_DIR/usr/wine/lutris/share
+rm -rf $DEST_DIR/usr/wine/ge-custom/share
+rm -rf $DEST_DIR/usr/lib32/*/include
 
 find $DEST_DIR/usr -type f -name "*.a" -exec rm {} \;
 
