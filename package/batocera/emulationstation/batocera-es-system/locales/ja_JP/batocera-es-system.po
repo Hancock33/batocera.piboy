@@ -15970,121 +15970,6 @@ msgid "Quick Save"
 msgstr "クイック セーブ"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Extra DMD (Dot Matrix Display) window to display the score for tables "
-#~ "with a pinmame rom."
-#~ msgstr ""
-#~ "pinmame rom を使用し、テーブルスコア表示用の追加 DMD (ドット マトリックス "
-#~ "ディスプレイ) ウィンドウ"
-
-#~ msgctxt "game_options"
-#~ msgid "Horizontal position (in percentage of the screen width)."
-#~ msgstr "水平位置 (画面幅のパーセンテージ)"
-
-#~ msgctxt "game_options"
-#~ msgid "PINMAME DMD X"
-#~ msgstr "PINMAME DMD X位置"
-
-#~ msgctxt "game_options"
-#~ msgid "Vertical position (in percentage of the screen height)."
-#~ msgstr "垂直位置 (画面の高さのパーセンテージ)"
-
-#~ msgctxt "game_options"
-#~ msgid "PINMAME DMD Y"
-#~ msgstr "PINMAME DMD Y位置"
-
-#~ msgctxt "game_options"
-#~ msgid "Horizontal width (in percentage of the screen width)."
-#~ msgstr "水平幅 (画面幅のパーセンテージ)"
-
-#~ msgctxt "game_options"
-#~ msgid "PINMAME DMD WIDTH"
-#~ msgstr "PINMAME DMD 幅"
-
-#~ msgctxt "game_options"
-#~ msgid "Vertical height (in percentage of the screen height)."
-#~ msgstr "垂直方向の高さ (画面の高さのパーセンテージ)"
-
-#~ msgctxt "game_options"
-#~ msgid "PINMAME DMD HEIGHT"
-#~ msgstr "PINMAME DMD 高さ"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Extra DMD (Dot Matrix Display) window to display the score for tables "
-#~ "without a rom."
-#~ msgstr ""
-#~ "ROM のないテーブルスコア表示用の追加 DMD (ドット マトリックス ディスプレ"
-#~ "イ) ウィンドウ"
-
-#~ msgctxt "game_options"
-#~ msgid "FLEX DMD X"
-#~ msgstr "FLEX DMD X位置"
-
-#~ msgctxt "game_options"
-#~ msgid "FLEX DMD Y"
-#~ msgstr "FLEX DMD Y位置"
-
-#~ msgctxt "game_options"
-#~ msgid "FLEX DMD WIDTH"
-#~ msgstr "FLEX DMD 幅"
-
-#~ msgctxt "game_options"
-#~ msgid "FLEX DMD HEIGHT"
-#~ msgstr "FLEX DMD 高さ"
-
-#~ msgctxt "game_options"
-#~ msgid "Upright glass panel displaying some illuminated artwork."
-#~ msgstr "ライトアップされたアートワークを表示する直立したガラス パネル"
-
-#~ msgctxt "game_options"
-#~ msgid "BACKGLASS X"
-#~ msgstr "BACKGLASS X位置"
-
-#~ msgctxt "game_options"
-#~ msgid "BACKGLASS Y"
-#~ msgstr "BACKGLASS Y位置"
-
-#~ msgctxt "game_options"
-#~ msgid "BACKGLASS WIDTH"
-#~ msgstr "BACKGLASS 幅"
-
-#~ msgctxt "game_options"
-#~ msgid "BACKGLASS HEIGHT"
-#~ msgstr "BACKGLASS 高さ"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Hides the Extra DMD (Dot Matrix Display) integrated in the Backglass."
-#~ msgstr ""
-#~ "バックガラスに組み込みの追加の DMD (ドット マトリックス ディスプレイ) を非"
-#~ "表示にします"
-
-#~ msgctxt "game_options"
-#~ msgid "BACKGLASS DMD HIDE"
-#~ msgstr "BACKGLASS DMD 非表示"
-
-#~ msgctxt "game_options"
-#~ msgid "B2S DMD X"
-#~ msgstr "B2S DMD X位置"
-
-#~ msgctxt "game_options"
-#~ msgid "B2S DMD Y"
-#~ msgstr "B2S DMD Y位置"
-
-#~ msgctxt "game_options"
-#~ msgid "B2S DMD WIDTH"
-#~ msgstr "B2S DMD 幅"
-
-#~ msgctxt "game_options"
-#~ msgid "B2S DMD HEIGHT"
-#~ msgstr "B2S DMD 高さ"
-
-#~ msgctxt "game_options"
-#~ msgid "FOLDERS ORGANISATION"
-#~ msgstr "フォルダー整理"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (注意してください)"
 
@@ -16795,6 +16680,121 @@ msgstr "クイック セーブ"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Extra DMD (Dot Matrix Display) window to display the score for tables "
+#~ "with a pinmame rom."
+#~ msgstr ""
+#~ "pinmame rom を使用し、テーブルスコア表示用の追加 DMD (ドット マトリックス "
+#~ "ディスプレイ) ウィンドウ"
+
+#~ msgctxt "game_options"
+#~ msgid "Horizontal position (in percentage of the screen width)."
+#~ msgstr "水平位置 (画面幅のパーセンテージ)"
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD X"
+#~ msgstr "PINMAME DMD X位置"
+
+#~ msgctxt "game_options"
+#~ msgid "Vertical position (in percentage of the screen height)."
+#~ msgstr "垂直位置 (画面の高さのパーセンテージ)"
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD Y"
+#~ msgstr "PINMAME DMD Y位置"
+
+#~ msgctxt "game_options"
+#~ msgid "Horizontal width (in percentage of the screen width)."
+#~ msgstr "水平幅 (画面幅のパーセンテージ)"
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD WIDTH"
+#~ msgstr "PINMAME DMD 幅"
+
+#~ msgctxt "game_options"
+#~ msgid "Vertical height (in percentage of the screen height)."
+#~ msgstr "垂直方向の高さ (画面の高さのパーセンテージ)"
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD HEIGHT"
+#~ msgstr "PINMAME DMD 高さ"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Extra DMD (Dot Matrix Display) window to display the score for tables "
+#~ "without a rom."
+#~ msgstr ""
+#~ "ROM のないテーブルスコア表示用の追加 DMD (ドット マトリックス ディスプレ"
+#~ "イ) ウィンドウ"
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD X"
+#~ msgstr "FLEX DMD X位置"
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD Y"
+#~ msgstr "FLEX DMD Y位置"
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD WIDTH"
+#~ msgstr "FLEX DMD 幅"
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD HEIGHT"
+#~ msgstr "FLEX DMD 高さ"
+
+#~ msgctxt "game_options"
+#~ msgid "Upright glass panel displaying some illuminated artwork."
+#~ msgstr "ライトアップされたアートワークを表示する直立したガラス パネル"
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS X"
+#~ msgstr "BACKGLASS X位置"
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS Y"
+#~ msgstr "BACKGLASS Y位置"
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS WIDTH"
+#~ msgstr "BACKGLASS 幅"
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS HEIGHT"
+#~ msgstr "BACKGLASS 高さ"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Hides the Extra DMD (Dot Matrix Display) integrated in the Backglass."
+#~ msgstr ""
+#~ "バックガラスに組み込みの追加の DMD (ドット マトリックス ディスプレイ) を非"
+#~ "表示にします"
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS DMD HIDE"
+#~ msgstr "BACKGLASS DMD 非表示"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD X"
+#~ msgstr "B2S DMD X位置"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD Y"
+#~ msgstr "B2S DMD Y位置"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD WIDTH"
+#~ msgstr "B2S DMD 幅"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD HEIGHT"
+#~ msgstr "B2S DMD 高さ"
+
+#~ msgctxt "game_options"
+#~ msgid "FOLDERS ORGANISATION"
+#~ msgstr "フォルダー整理"
 
 #~ msgctxt "game_options"
 #~ msgid "INSTALL MEDIA FOUNDATION"

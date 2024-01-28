@@ -16117,121 +16117,6 @@ msgid "Quick Save"
 msgstr "Snel Opslaan"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Extra DMD (Dot Matrix Display) window to display the score for tables "
-#~ "with a pinmame rom."
-#~ msgstr ""
-#~ "Extra DMD-venster (Dot Matrix Display) om de score weer te geven voor "
-#~ "tafels met een pinmame-rom."
-
-#~ msgctxt "game_options"
-#~ msgid "Horizontal position (in percentage of the screen width)."
-#~ msgstr "Horizontale positie (in percentage van de schermbreedte)."
-
-#~ msgctxt "game_options"
-#~ msgid "PINMAME DMD X"
-#~ msgstr "PINMAME DMD X"
-
-#~ msgctxt "game_options"
-#~ msgid "Vertical position (in percentage of the screen height)."
-#~ msgstr "Verticale positie (in percentage van de schermhoogte)."
-
-#~ msgctxt "game_options"
-#~ msgid "PINMAME DMD Y"
-#~ msgstr "PINMAME DMD Y"
-
-#~ msgctxt "game_options"
-#~ msgid "Horizontal width (in percentage of the screen width)."
-#~ msgstr "Horizontale breedte (in percentage van de schermbreedte)."
-
-#~ msgctxt "game_options"
-#~ msgid "PINMAME DMD WIDTH"
-#~ msgstr "PINMAME DMD BREEDTE"
-
-#~ msgctxt "game_options"
-#~ msgid "Vertical height (in percentage of the screen height)."
-#~ msgstr "Verticale hoogte (in percentage van de schermhoogte)."
-
-#~ msgctxt "game_options"
-#~ msgid "PINMAME DMD HEIGHT"
-#~ msgstr "PINMAME DMD HOOGTE"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Extra DMD (Dot Matrix Display) window to display the score for tables "
-#~ "without a rom."
-#~ msgstr ""
-#~ "Extra DMD (Dot Matrix Display) venster om de score weer te geven voor "
-#~ "tafels zonder rom."
-
-#~ msgctxt "game_options"
-#~ msgid "FLEX DMD X"
-#~ msgstr "FLEX DMD X"
-
-#~ msgctxt "game_options"
-#~ msgid "FLEX DMD Y"
-#~ msgstr "FLEX DMD Y"
-
-#~ msgctxt "game_options"
-#~ msgid "FLEX DMD WIDTH"
-#~ msgstr "FLEX DMD BREEDTE"
-
-#~ msgctxt "game_options"
-#~ msgid "FLEX DMD HEIGHT"
-#~ msgstr "FLEX DMD HOOGTE"
-
-#~ msgctxt "game_options"
-#~ msgid "Upright glass panel displaying some illuminated artwork."
-#~ msgstr "Rechtopstaand glazen paneel met wat verlichte artwork."
-
-#~ msgctxt "game_options"
-#~ msgid "BACKGLASS X"
-#~ msgstr "KOPRUIT X"
-
-#~ msgctxt "game_options"
-#~ msgid "BACKGLASS Y"
-#~ msgstr "KOPRUIT Y"
-
-#~ msgctxt "game_options"
-#~ msgid "BACKGLASS WIDTH"
-#~ msgstr "KOPRUIT BREEDTE"
-
-#~ msgctxt "game_options"
-#~ msgid "BACKGLASS HEIGHT"
-#~ msgstr "KOPRUIT HOOGTE"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Hides the Extra DMD (Dot Matrix Display) integrated in the Backglass."
-#~ msgstr ""
-#~ "Verbergt het Extra DMD (Dot Matrix Display) dat in de kopruit is "
-#~ "geïntegreerd."
-
-#~ msgctxt "game_options"
-#~ msgid "BACKGLASS DMD HIDE"
-#~ msgstr "KOPRUIT DMD VERBERGEN"
-
-#~ msgctxt "game_options"
-#~ msgid "B2S DMD X"
-#~ msgstr "B2S DMD X"
-
-#~ msgctxt "game_options"
-#~ msgid "B2S DMD Y"
-#~ msgstr "B2S DMD Y"
-
-#~ msgctxt "game_options"
-#~ msgid "B2S DMD WIDTH"
-#~ msgstr "B2S DMD-BREEDTE"
-
-#~ msgctxt "game_options"
-#~ msgid "B2S DMD HEIGHT"
-#~ msgstr "B2S DMD-HOOGTE"
-
-#~ msgctxt "game_options"
-#~ msgid "FOLDERS ORGANISATION"
-#~ msgstr "MAPPEN-ORGANISATIE"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (Wees voorzichtig)"
 
@@ -16967,6 +16852,121 @@ msgstr "Snel Opslaan"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Vooruitspoelen"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Extra DMD (Dot Matrix Display) window to display the score for tables "
+#~ "with a pinmame rom."
+#~ msgstr ""
+#~ "Extra DMD-venster (Dot Matrix Display) om de score weer te geven voor "
+#~ "tafels met een pinmame-rom."
+
+#~ msgctxt "game_options"
+#~ msgid "Horizontal position (in percentage of the screen width)."
+#~ msgstr "Horizontale positie (in percentage van de schermbreedte)."
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD X"
+#~ msgstr "PINMAME DMD X"
+
+#~ msgctxt "game_options"
+#~ msgid "Vertical position (in percentage of the screen height)."
+#~ msgstr "Verticale positie (in percentage van de schermhoogte)."
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD Y"
+#~ msgstr "PINMAME DMD Y"
+
+#~ msgctxt "game_options"
+#~ msgid "Horizontal width (in percentage of the screen width)."
+#~ msgstr "Horizontale breedte (in percentage van de schermbreedte)."
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD WIDTH"
+#~ msgstr "PINMAME DMD BREEDTE"
+
+#~ msgctxt "game_options"
+#~ msgid "Vertical height (in percentage of the screen height)."
+#~ msgstr "Verticale hoogte (in percentage van de schermhoogte)."
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD HEIGHT"
+#~ msgstr "PINMAME DMD HOOGTE"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Extra DMD (Dot Matrix Display) window to display the score for tables "
+#~ "without a rom."
+#~ msgstr ""
+#~ "Extra DMD (Dot Matrix Display) venster om de score weer te geven voor "
+#~ "tafels zonder rom."
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD X"
+#~ msgstr "FLEX DMD X"
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD Y"
+#~ msgstr "FLEX DMD Y"
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD WIDTH"
+#~ msgstr "FLEX DMD BREEDTE"
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD HEIGHT"
+#~ msgstr "FLEX DMD HOOGTE"
+
+#~ msgctxt "game_options"
+#~ msgid "Upright glass panel displaying some illuminated artwork."
+#~ msgstr "Rechtopstaand glazen paneel met wat verlichte artwork."
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS X"
+#~ msgstr "KOPRUIT X"
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS Y"
+#~ msgstr "KOPRUIT Y"
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS WIDTH"
+#~ msgstr "KOPRUIT BREEDTE"
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS HEIGHT"
+#~ msgstr "KOPRUIT HOOGTE"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Hides the Extra DMD (Dot Matrix Display) integrated in the Backglass."
+#~ msgstr ""
+#~ "Verbergt het Extra DMD (Dot Matrix Display) dat in de kopruit is "
+#~ "geïntegreerd."
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS DMD HIDE"
+#~ msgstr "KOPRUIT DMD VERBERGEN"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD X"
+#~ msgstr "B2S DMD X"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD Y"
+#~ msgstr "B2S DMD Y"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD WIDTH"
+#~ msgstr "B2S DMD-BREEDTE"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD HEIGHT"
+#~ msgstr "B2S DMD-HOOGTE"
+
+#~ msgctxt "game_options"
+#~ msgid "FOLDERS ORGANISATION"
+#~ msgstr "MAPPEN-ORGANISATIE"
 
 #~ msgctxt "game_options"
 #~ msgid "INSTALL MEDIA FOUNDATION"

@@ -16080,121 +16080,6 @@ msgid "Quick Save"
 msgstr "Salvataggio Rapido"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Extra DMD (Dot Matrix Display) window to display the score for tables "
-#~ "with a pinmame rom."
-#~ msgstr ""
-#~ "Finestra extra DMD (Schermo a Dot Matrix) per visualizzare il punteggio "
-#~ "delle tavole con una rom pinmame."
-
-#~ msgctxt "game_options"
-#~ msgid "Horizontal position (in percentage of the screen width)."
-#~ msgstr "Posizione orizzontale (percentuale della larghezza schermo)."
-
-#~ msgctxt "game_options"
-#~ msgid "PINMAME DMD X"
-#~ msgstr "DMD PINMAME X"
-
-#~ msgctxt "game_options"
-#~ msgid "Vertical position (in percentage of the screen height)."
-#~ msgstr "Posizione verticale (percentuale dell'altezza schermo)."
-
-#~ msgctxt "game_options"
-#~ msgid "PINMAME DMD Y"
-#~ msgstr "DMD PINMAME Y"
-
-#~ msgctxt "game_options"
-#~ msgid "Horizontal width (in percentage of the screen width)."
-#~ msgstr "Larghezza orizzontale (percentuale della larghezza schermo)"
-
-#~ msgctxt "game_options"
-#~ msgid "PINMAME DMD WIDTH"
-#~ msgstr "DMD PINMAME LARGHEZZA"
-
-#~ msgctxt "game_options"
-#~ msgid "Vertical height (in percentage of the screen height)."
-#~ msgstr "Altezza verticale (percentuale dell'altezza schermo)."
-
-#~ msgctxt "game_options"
-#~ msgid "PINMAME DMD HEIGHT"
-#~ msgstr "DMD PINMAME ALTEZZA"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Extra DMD (Dot Matrix Display) window to display the score for tables "
-#~ "without a rom."
-#~ msgstr ""
-#~ "Finestra extra DMD (Schermo Dot Matrix) per visualizzare i punti delle "
-#~ "tavole senza una rom."
-
-#~ msgctxt "game_options"
-#~ msgid "FLEX DMD X"
-#~ msgstr "DMD FLEX X"
-
-#~ msgctxt "game_options"
-#~ msgid "FLEX DMD Y"
-#~ msgstr "DMD FLEX Y"
-
-#~ msgctxt "game_options"
-#~ msgid "FLEX DMD WIDTH"
-#~ msgstr "DMD FLEX LARGHEZZA"
-
-#~ msgctxt "game_options"
-#~ msgid "FLEX DMD HEIGHT"
-#~ msgstr "DMD FLEX ALTEZZA"
-
-#~ msgctxt "game_options"
-#~ msgid "Upright glass panel displaying some illuminated artwork."
-#~ msgstr "Pannello vetro verticale che mostra le illustrazioni."
-
-#~ msgctxt "game_options"
-#~ msgid "BACKGLASS X"
-#~ msgstr "BACLGLASS X"
-
-#~ msgctxt "game_options"
-#~ msgid "BACKGLASS Y"
-#~ msgstr "BACKGLASS Y"
-
-#~ msgctxt "game_options"
-#~ msgid "BACKGLASS WIDTH"
-#~ msgstr "BACKGLASS LARGHEZZA"
-
-#~ msgctxt "game_options"
-#~ msgid "BACKGLASS HEIGHT"
-#~ msgstr "BACKGLASS ALTEZZA"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Hides the Extra DMD (Dot Matrix Display) integrated in the Backglass."
-#~ msgstr ""
-#~ "Nasconde gli extra DMD (Schermo Dot Matrix) integrati nel vetro "
-#~ "posteriore."
-
-#~ msgctxt "game_options"
-#~ msgid "BACKGLASS DMD HIDE"
-#~ msgstr "NASCONDI DMD BACKGLASS"
-
-#~ msgctxt "game_options"
-#~ msgid "B2S DMD X"
-#~ msgstr "B2S DMD X"
-
-#~ msgctxt "game_options"
-#~ msgid "B2S DMD Y"
-#~ msgstr "B2S DMD Y"
-
-#~ msgctxt "game_options"
-#~ msgid "B2S DMD WIDTH"
-#~ msgstr "B2S DMD LARGHEZZA"
-
-#~ msgctxt "game_options"
-#~ msgid "B2S DMD HEIGHT"
-#~ msgstr "DMD B2S ALTEZZA"
-
-#~ msgctxt "game_options"
-#~ msgid "FOLDERS ORGANISATION"
-#~ msgstr "ORGANIZZAZIONE CARTELLE"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (Usare con cautela)"
 
@@ -16922,6 +16807,121 @@ msgstr "Salvataggio Rapido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "AvanzamentoRapido"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Extra DMD (Dot Matrix Display) window to display the score for tables "
+#~ "with a pinmame rom."
+#~ msgstr ""
+#~ "Finestra extra DMD (Schermo a Dot Matrix) per visualizzare il punteggio "
+#~ "delle tavole con una rom pinmame."
+
+#~ msgctxt "game_options"
+#~ msgid "Horizontal position (in percentage of the screen width)."
+#~ msgstr "Posizione orizzontale (percentuale della larghezza schermo)."
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD X"
+#~ msgstr "DMD PINMAME X"
+
+#~ msgctxt "game_options"
+#~ msgid "Vertical position (in percentage of the screen height)."
+#~ msgstr "Posizione verticale (percentuale dell'altezza schermo)."
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD Y"
+#~ msgstr "DMD PINMAME Y"
+
+#~ msgctxt "game_options"
+#~ msgid "Horizontal width (in percentage of the screen width)."
+#~ msgstr "Larghezza orizzontale (percentuale della larghezza schermo)"
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD WIDTH"
+#~ msgstr "DMD PINMAME LARGHEZZA"
+
+#~ msgctxt "game_options"
+#~ msgid "Vertical height (in percentage of the screen height)."
+#~ msgstr "Altezza verticale (percentuale dell'altezza schermo)."
+
+#~ msgctxt "game_options"
+#~ msgid "PINMAME DMD HEIGHT"
+#~ msgstr "DMD PINMAME ALTEZZA"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Extra DMD (Dot Matrix Display) window to display the score for tables "
+#~ "without a rom."
+#~ msgstr ""
+#~ "Finestra extra DMD (Schermo Dot Matrix) per visualizzare i punti delle "
+#~ "tavole senza una rom."
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD X"
+#~ msgstr "DMD FLEX X"
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD Y"
+#~ msgstr "DMD FLEX Y"
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD WIDTH"
+#~ msgstr "DMD FLEX LARGHEZZA"
+
+#~ msgctxt "game_options"
+#~ msgid "FLEX DMD HEIGHT"
+#~ msgstr "DMD FLEX ALTEZZA"
+
+#~ msgctxt "game_options"
+#~ msgid "Upright glass panel displaying some illuminated artwork."
+#~ msgstr "Pannello vetro verticale che mostra le illustrazioni."
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS X"
+#~ msgstr "BACLGLASS X"
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS Y"
+#~ msgstr "BACKGLASS Y"
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS WIDTH"
+#~ msgstr "BACKGLASS LARGHEZZA"
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS HEIGHT"
+#~ msgstr "BACKGLASS ALTEZZA"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Hides the Extra DMD (Dot Matrix Display) integrated in the Backglass."
+#~ msgstr ""
+#~ "Nasconde gli extra DMD (Schermo Dot Matrix) integrati nel vetro "
+#~ "posteriore."
+
+#~ msgctxt "game_options"
+#~ msgid "BACKGLASS DMD HIDE"
+#~ msgstr "NASCONDI DMD BACKGLASS"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD X"
+#~ msgstr "B2S DMD X"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD Y"
+#~ msgstr "B2S DMD Y"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD WIDTH"
+#~ msgstr "B2S DMD LARGHEZZA"
+
+#~ msgctxt "game_options"
+#~ msgid "B2S DMD HEIGHT"
+#~ msgstr "DMD B2S ALTEZZA"
+
+#~ msgctxt "game_options"
+#~ msgid "FOLDERS ORGANISATION"
+#~ msgstr "ORGANIZZAZIONE CARTELLE"
 
 #~ msgctxt "game_options"
 #~ msgid "INSTALL MEDIA FOUNDATION"
