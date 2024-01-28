@@ -3,8 +3,7 @@
 # alllinuxfirmwares
 #
 ################################################################################
-# Version: Commits 11th December 2023
-ALLLINUXFIRMWARES_VERSION = 20231211
+ALLLINUXFIRMWARES_VERSION = 20240115
 ALLLINUXFIRMWARES_SOURCE = linux-firmware-$(ALLLINUXFIRMWARES_VERSION).tar.gz
 ALLLINUXFIRMWARES_SITE = https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot
 
@@ -29,6 +28,7 @@ ifeq ($(BR2_arm)$(BR2_aarch64),y)
 									$(@D)/amdgpu \
 									$(@D)/ath10k \
 									$(@D)/ath11k \
+									$(@D)/ath12k \
 									$(@D)/c*.bin \
 									$(@D)/cypress \
 									$(@D)/i915 \

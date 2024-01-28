@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 94101d28a..e5782840b 100644
+index 763e1e9a0..2a292f52d 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -52,6 +52,8 @@ list( APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake )
@@ -22,13 +22,15 @@ index 94101d28a..e5782840b 100644
  
  include( TargetArch )
  
-@@ -350,15 +356,6 @@ option(FORCE_INTERNAL_BZIP2 "Use internal bzip2")
+@@ -350,17 +356,6 @@ option(FORCE_INTERNAL_BZIP2 "Use internal bzip2")
  option(FORCE_INTERNAL_ASMJIT "Use internal asmjit" ON)
  mark_as_advanced( FORCE_INTERNAL_ASMJIT )
  
 -if (HAVE_VULKAN)
 -	add_subdirectory( libraries/ZVulkan )
 -endif()
+-
+-add_subdirectory( libraries/ZWidget )
 -
 -add_subdirectory( libraries/discordrpc EXCLUDE_FROM_ALL )
 -set( DRPC_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/discordrpc/include" )
@@ -38,7 +40,7 @@ index 94101d28a..e5782840b 100644
  if( HAVE_VM_JIT AND UNIX )
  	check_symbol_exists( "backtrace" "execinfo.h" HAVE_BACKTRACE )
  	if( NOT HAVE_BACKTRACE )
-@@ -398,6 +395,57 @@ endif()
+@@ -400,6 +395,59 @@ endif()
  
  set( LZMA_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/lzma/C" )
  
@@ -46,6 +48,8 @@ index 94101d28a..e5782840b 100644
 +	if (HAVE_VULKAN)
 +		add_subdirectory( libraries/ZVulkan )
 +	endif()
++
++	add_subdirectory( libraries/ZWidget )
 +
 +	add_subdirectory( libraries/discordrpc EXCLUDE_FROM_ALL )
 +	set( DRPC_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/discordrpc/include" )
@@ -96,7 +100,7 @@ index 94101d28a..e5782840b 100644
  if( NOT CMAKE_CROSSCOMPILING )
  	if( NOT CROSS_EXPORTS )
  		set( CROSS_EXPORTS "" )
-@@ -405,26 +453,30 @@ if( NOT CMAKE_CROSSCOMPILING )
+@@ -407,26 +455,30 @@ if( NOT CMAKE_CROSSCOMPILING )
  endif()
  
  # Install the entire docs directory in the distributed zip package

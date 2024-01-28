@@ -9,7 +9,7 @@ import utils.videoMode as videoMode
 
 class Doom3Generator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         gameResolution = videoMode.getCurrentResolution()
         commandArray = ["dhewm3", "+set", "fs_basepath", "/userdata/roms/ports/doom3", "+set", "r_mode", "-1", "+set" , "r_fullscreen", "1", "+set", "r_customWidth", str(gameResolution["width"]), "+set", "r_customHeight",str(gameResolution["height"])]
 

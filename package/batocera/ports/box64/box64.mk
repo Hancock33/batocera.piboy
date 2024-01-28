@@ -3,8 +3,8 @@
 # box64
 #
 ################################################################################
-# Version: Commits on Jan 22, 2024
-BOX64_VERSION = 2ca85a49761c38f1b36068fe4104e62c5c42b67b
+# Version: Commits on Dec 15, 2023
+BOX64_VERSION = v0.2.6
 BOX64_SITE = https://github.com/ptitseb/box64.git
 BOX64_SITE_METHOD=git
 BOX64_GIT_SUBMODULES=YES

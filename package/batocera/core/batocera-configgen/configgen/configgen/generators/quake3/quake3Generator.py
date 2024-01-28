@@ -11,7 +11,7 @@ from . import quake3Config
 
 class Quake3Generator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         quake3Config.writeCfgFiles(system, rom, playersControllers, gameResolution)
 
         commandArray = ["ioquake3", "+set", "fs_basePath", "/userdata/roms/ports/quake3" ]

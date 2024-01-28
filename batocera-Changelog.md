@@ -1,4 +1,4 @@
-# 2024/02/xx - batocera.linux 39 - Painted Lady
+# 2024/03/xx - batocera.linux 39 - Painted Lady
 ### Special Notes
 - Emulators using Wine now use the Glorious Eggroll custom runner for latest capabilities and compatibility.
   Your previously saved games are still maintained in `/userdata/saves/` in their associated bottle for the afftected emulators Xenia, BigPemu, FPinball & Model2Emu.
@@ -28,8 +28,10 @@
   - Not compatible with nuvee GunCon patch, use clean ROM.
 - Sonic 3 A.I.R. (Angel Island Revisited) port.
 - New supported steering wheels:
-  - Logitech : Driving Force, G29, G920, Momo
-  - Thrustmaster : T300RS
+  - Logitech : Driving Force, G29, G920, G923 (PS4), Momo
+  - Thrustmaster T300RS
+  - HORI Racing Wheel APEX
+  - MOZA Racing R9
 - More steering wheel support :
   - Out of the box steering wheel optimization for Atomiswave, Dreamcast, N64, Naomi, Naomi 2, GameCube, PS2, Saturn
   - Initial support for Wii, PSX, MAME, Xbox
@@ -40,11 +42,14 @@
 - Ayn Loki Zero: support for on-board LEDs (and light effect on retroachievements unlocked)
 - Sonic Mania port.
 - OpenBor 4 (7533 build)
+- Content downloader: Batocera hosted content can now show thumbnails
 - Initial support for Retro Shooter Lightgun
   - Press and hold rear left button for 3s to start calibration
 - Added zramswap service
 - Enable swap on rpi through rpi3 to improve suppport for low-memory
   variants e.g. Zero 2W
+- Support for third-party Wiimotes
+  - Enable the wiimote3rdparty service in SYSTEM -> SERVICES
 ### Fixed
 - Dolphin bug that prevented full range of analog trigger axis being used.
 - Flycast per pixel sorting option if renderer not explicitly set
@@ -156,12 +161,12 @@
 - Sonic 2013 to Dec 2, 2023 build
 - Duckstation to Dec 21, 2023 build
 - ScummVM to 2.8
-- Redream to 1.5.0-1093
+- Redream to 1.5.0-1106
 - Raze to 1.9.1
 ### System
-- Linux kernel to 6.7
-- Mesa to 23.3.3
-- Proton & Lutris replaced by the Glorious Eggroll customer WINE runner
+- Linux kernel to 6.7.2
+- Mesa to 23.3.4
+- Proton & Lutris replaced by the Glorious Eggroll custom WINE runner
 - Wine Tricks to 20240105
 - FAudio to 23.10
 - Nvidia production driver to 545.29.06

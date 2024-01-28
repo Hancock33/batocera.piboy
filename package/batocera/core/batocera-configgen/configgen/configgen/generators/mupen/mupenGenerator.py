@@ -9,7 +9,7 @@ from . import mupenControllers
 
 class MupenGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
         # Read the configuration file
         iniConfig = configparser.ConfigParser(interpolation=None)
@@ -23,7 +23,7 @@ class MupenGenerator(Generator):
             iniConfig.read(batoceraFiles.mupenCustom)
 
         mupenConfig.setMupenConfig(iniConfig, system, playersControllers, gameResolution)
-        mupenControllers.setControllersConfig(iniConfig, playersControllers, system)
+        mupenControllers.setControllersConfig(iniConfig, playersControllers, system, wheels)
 
         # Save the ini file
         if not os.path.exists(os.path.dirname(batoceraFiles.mupenCustom)):

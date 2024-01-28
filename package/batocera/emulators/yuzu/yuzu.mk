@@ -3,8 +3,8 @@
 # yuzu
 #
 ################################################################################
-# Version: Commits on Jan 22, 2024
-YUZU_VERSION = 8bd10473d60503c7acddc399604a51b9c9947541
+# Version: Commits on Jan 28, 2024
+YUZU_VERSION = 72c897c49d4187b229e2a60f4be32331b8fef0bc
 YUZU_SITE = https://github.com/yuzu-emu/yuzu.git
 YUZU_SITE_METHOD=git
 YUZU_GIT_SUBMODULES=YES
@@ -47,6 +47,7 @@ endef
 define YUZU_DL_TZ
 	mkdir -p $(@D)/buildroot-build/externals/nx_tzdb
 	cp $(YUZU_DL_DIR)/$(YUZU_TZDB_VERSION).zip $(@D)/buildroot-build/externals/nx_tzdb
+	cd  $(@D)/buildroot-build/externals/nx_tzdb && unzip $(YUZU_TZDB_VERSION).zip
 endef
 YUZU_POST_EXTRACT_HOOKS += YUZU_DL_TZ
 

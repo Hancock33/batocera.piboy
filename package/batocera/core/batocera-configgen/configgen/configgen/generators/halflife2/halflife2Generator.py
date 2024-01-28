@@ -11,7 +11,7 @@ hl2_dst = "/userdata/roms/ports/halflife2/hl2"
 
 class Halflife2Generator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["/usr/bin/hl2/hl2_launcher"]
         os.chdir("/usr/bin/hl2")
 

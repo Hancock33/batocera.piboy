@@ -904,6 +904,222 @@ libretro:
                     "Mouse":        Mouse
                     "Touch Screen": Touch
                     "Right Stick":  Joystick
+    melondsds:
+      features: [cheevos]
+      shared: [autosave]
+      cfeatures:
+            melondsds_console_mode:
+                prompt: NDS VERSION
+                decription: Choose the NDS handheld version
+                choices:
+                    "DS":                  DS
+                    "DSi (Experiemental)": DSi
+            melondsds_render_mode:
+                submenu: VIDEO SETTINGS
+                prompt: RENDERER MODE
+                description: Software mode is faster and more accurate, while OpenGL mode supports scaling 3D graphics.
+                choices:
+                    "Software":                                  "software"
+                    "OpenGL (Overwrites Libretro API settings)": "opengl"
+            melondsds_resolution:
+                submenu: VIDEO SETTINGS
+                prompt: INTERNAL RESOLUTION
+                description: Degree in which 3D graphics are scaled up. OpenGL renderer only.
+                choices:
+                    "1x native (256 x 192)":   1
+                    "2x native (512 x 384)":   2
+                    "3x native (768 x 576)":   3
+                    "4x native (1024 x 768)":  4
+                    "5x native (1280 x 960)":  5
+                    "6x native (1536 x 1152)": 6
+                    "7x native (1792 x 1344)": 7
+                    "8x native (2048 x 1536)": 8
+            melondsds_poygon:
+                submenu: VIDEO SETTINGS
+                prompt: IMPROVED POLYGON SPLITTING
+                description: Enable this if your game's 3D modles are not rendered correctly. OpenGL renderer only.
+                choices:
+                    "Disabled": "disabled"
+                    "Enabled":  "enabled"
+            melondsds_filtering:
+                submenu: VIDEO SETTINGS
+                prompt: SCREEN FILTERING
+                description: Affects how the emulated screens are scaled. OpenGL renderer only.
+                choices:
+                    "Nearest": "nearest"
+                    "Linear":  "linear"
+            melondsds_cursor:
+                submenu: SCREEN SETTINGS
+                prompt: CURSOR MODE
+                description: Determines how the cursor should apprear on the botton screen.
+                choices:
+                    "Never":          "never"
+                    "While Touching": "touching"
+                    "Until Timeout":  "timeout"
+                    "Always":         "always"
+            melondsds_cursor_timeout:
+                submenu: SCREEN SETTINGS
+                prompt: CURSOR TIMEOUT
+                description: Cursor timeout in seconds when using Cursor Mode - Until Timeout.
+                choices:
+                    "1 second":   1
+                    "2 seconds":  2
+                    "3 seconds":  3
+                    "5 seconds":  5
+                    "10 seconds": 10
+                    "15 seconds": 15
+                    "20 seconds": 20
+                    "30 seconds": 30
+                    "60 seconds": 60
+            melondsds_touchmode:
+                submenu: SCREEN SETTINGS
+                prompt: TOUCH MODE
+                description: Determine how the console's touch screen in emulated.
+                choices:
+                    "Joystick": "joystick"
+                    "Pointer":  "pointer"
+            melondsds_dns:
+                submenu: FIRMWARE SETTINGS
+                prompt: DNS OVERRIDE
+                description: Use this to play online with custom servers that reimplement the discontinued Nintendo Wi-Fi.
+                choices:
+                    "Kaeru WFC (178.62.43.212)": "178.62.43.212"
+                    "AltWFC (172.104.88.237)":   "172.104.88.237"
+                    "Wiimmfi (95.217.77.181)":   "95.217.77.181"
+                    "Force Default DNS":         "0.0.0.0"
+                    "Don't Override":            "default"
+            melondsds_language:
+                submenu: FIRMWARE SETTINGS
+                prompt: LANGUAGE
+                description: Overrides the language mode of the emulated console.
+                choices:
+                    "Use Host":       "auto"
+                    "English":        "en"
+                    "Japanese":       "jp"
+                    "French":         "fr"
+                    "German":         "de"
+                    "Italian":        "it"
+                    "Spanish":        "es"
+                    "Don't Override": "default"
+            melondsds_colour:
+                submenu: FIRMWARE SETTINGS
+                prompt: FAVOURITE COLOUR
+                description: The theme colour of the emulated console.
+                choices:
+                    "Gray":           0
+                    "Brown":          1
+                    "Red":            2
+                    "Light Pink":     3
+                    "Orange":         4
+                    "Yellow":         5
+                    "Lime":           6
+                    "Light Green":    7
+                    "Dark Green":     8
+                    "Turquoise":      9
+                    "Light Blue":     10
+                    "Blue":           11
+                    "Dark Blue":      12
+                    "Dark Purple":    13
+                    "Light Purple":   14
+                    "Dark Pink":      15
+                    "Don't Override": "default"
+            melondsds_month:
+                submenu: FIRMWARE SETTINGS
+                prompt: BIRTH MONTH
+                description: The month of your birthay.
+                choices:
+                    "January":   1
+                    "February":  2
+                    "March":     3
+                    "April":     4
+                    "May":       5
+                    "June":      6
+                    "July":      7
+                    "August":    8
+                    "September": 9
+                    "October":   10
+                    "November":  11
+                    "December":  12
+                    "Don't Override": "default"
+            melondsds_day:
+                submenu: FIRMWARE SETTINGS
+                prompt: BIRTH DAY
+                description: The day within the month of your birthday.
+                choices:
+                    "1st":  1
+                    "2nd":  2
+                    "3rd":  3
+                    "4th":  4
+                    "5th":  5
+                    "6th":  6
+                    "7th":  7
+                    "8th":  8
+                    "9th":  9
+                    "10th": 10
+                    "11th": 11
+                    "12th": 12
+                    "13th": 13
+                    "14th": 14
+                    "15th": 15
+                    "16th": 16
+                    "17th": 17
+                    "18th": 18
+                    "19th": 19
+                    "20th": 20
+                    "21st": 21
+                    "22nd": 22
+                    "23rd": 23
+                    "24th": 24
+                    "25th": 25
+                    "26th": 26
+                    "27th": 27
+                    "28th": 28
+                    "29th": 29
+                    "30th": 30
+                    "31st": 31
+                    "Don't Override": "default"
+            melondsds_show_unsupported:
+                submenu: ON-SCREEN DISPLAY & NOTIFCATIONS
+                prompt: WARN ABOUT UNSUPPORTED FEATURES
+                description: Enable to display an on-screen message if trying to use unsupported features.
+                choices:
+                    "Disabled": "disabled"
+                    "Enabled":  "enabled"
+            melondsds_show_bios:
+                submenu: ON-SCREEN DISPLAY & NOTIFCATIONS
+                prompt: WARN ABOUT BIOS PROBLEMS
+                description: Enable to display if your BIOS haas known problems.
+                choices:
+                    "Disabled": "disabled"
+                    "Enabled":  "enabled"
+            melondsds_show_layout:
+                submenu: ON-SCREEN DISPLAY & NOTIFCATIONS
+                prompt: SHOW SCREEN LAYOUT
+                description: Enable to show which screen layout with the configured sequence is active.
+                choices:
+                    "Disabled": "disabled"
+                    "Enabled":  "enabled"
+            melondsds_show_mic:
+                submenu: ON-SCREEN DISPLAY & NOTIFCATIONS
+                prompt: SHOW HOST MICROPHONE STATE
+                description: Enable to show whether your device's microphone is active.
+                choices:
+                    "Disabled": "disabled"
+                    "Enabled":  "enabled"
+            melondsds_show_camera:
+                submenu: ON-SCREEN DISPLAY & NOTIFCATIONS
+                prompt: SHOW HOST CAMERA STATE
+                description: Enable to show whether your device's camera is active.
+                choices:
+                    "Disabled": "disabled"
+                    "Enabled":  "enabled"
+            melondsds_show_lid:
+                submenu: ON-SCREEN DISPLAY & NOTIFCATIONS
+                prompt: SHOW LID STATE
+                description: Enable to show whether the emulated screens are closed.
+                choices:
+                    "Disabled": "disabled"
+                    "Enabled":  "enabled"
     dolphin:
       shared: [autosave, use_wheels, wheel_rotation_angle, wheel_deadzone, wheel_midzone]
       cfeatures:
@@ -7827,6 +8043,17 @@ dolphin:
                 choices:
                     "Off": 0
                     "On":  1
+            gamecube_language:
+                group: ADVANCED OPTIONS
+                prompt: GAMECUBE LANGUAGE
+                description: Change the Gamecube system language.
+                choices:
+                    "English/Japanese":     0
+                    "German":               1
+                    "French":               2
+                    "Spanish":              3
+                    "Italian":              4
+                    "Dutch":                5
     wii:
         shared: [use_guns]
         cfeatures:
@@ -11104,124 +11331,132 @@ wine:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave]
   cfeatures:
+        dxvk:
+            prompt: DXVK FEATURE
+            description: Converts DirectX 8/9/10/11/12 calls to Vulkan.
+            choices:
+                "Off": 0
+                "On":  1
+        fps_limit:
+            prompt: FPS LIMITER
+            description: Allows you to limit FPS to 60.
+            choices:
+                "Off": 0
+                "On":  1
+        force_mouse:
+            prompt: ENABLE MOUSE
+            description: Force mouse in games.
+            choices:
+                "Off": 0
+                "On":  1
         sdl_config:
             prompt: SDL CONFIG
             description: Choose whether to pass SDL Game Controller config to the Windows game. Disabling may help with some games.
             choices:
                 "Off":          0
                 "On (Default)": 1
-        dxvk:
-            prompt:      DXVK FEATURE
-            description: Converts DirectX 8/9/10/11/12 calls to Vulkan.
-            choices:
-                "Off": 0
-                "On":  1
         dxvk_hud:
-            prompt:      DXVK HUD
+            group: ADVANCED OPTIONS
+            prompt: DXVK HUD
             description: See your FPS and version of Vulkan API/driver.
             choices:
                 "Off": 0
                 "On":  1
         esync:
-            prompt:      ESYNC
+            group: ADVANCED OPTIONS
+            prompt: ESYNC
             description: Can increase performance for games that stress the CPU.
             choices:
                 "Off": 0
                 "On":  1
         fsync:
-            prompt:      FSYNC
+            group: ADVANCED OPTIONS
+            prompt: FSYNC
             description: Can improve frame rate and responsiveness.
             choices:
                 "Off": 0
                 "On":  1
         pba:
-            prompt:      PBA
+            group: ADVANCED OPTIONS
+            prompt: PBA
             description: Vastly improves the speed of buffer maps.
             choices:
                 "Off": 0
                 "On":  1
         fsr:
-            prompt:      FIDELITY FX SUPER RESOLUTION
+            group: ADVANCED OPTIONS
+            prompt: FIDELITY FX SUPER RESOLUTION
             description: Renders game at a lower res then upscales to increase FPS.
             choices:
                 "Off": 0
                 "On":  1
-        fps_limit:
-            prompt:      FPS LIMITER
-            description: Allows you to limit FPS to 60.
-            choices:
-                "Off": 0
-                "On":  1
-        mf:
-            prompt:      INSTALL MEDIA FOUNDATION
-            choices:
-                "Off": 0
-                "On":  1
         virtual_desktop:
-            prompt:      VIRTUAL DESKTOP
+            group: ADVANCED OPTIONS
+            prompt: VIRTUAL DESKTOP
             description: Define the resolution and a new dedicated window.
             choices:
                 "Off": 0
                 "On":  1
-        force_mouse:
-            prompt:      ENABLE MOUSE
-            description: Force mouse in games.
-            choices:
-                "Off": 0
-                "On":  1
         allow_xim:
-            prompt:      ENABLE XIM
-            description: Enable XIM support.
+            group: ADVANCED OPTIONS
+            prompt: ENABLE XIM
+            description: Enable support for Chinese, Japanese and Korean input methods.
             choices:
                 "Off": 0
                 "On":  1
         no_write_watch:
-            prompt:      NO WRITE WATCH
+            group: ADVANCED OPTIONS
+            prompt: NO WRITE WATCH
             description: Disable support for memory write watches in ntdll.
             choices:
                 "Off": 0
                 "On":  1
         force_large_adress:
-            prompt:      FORCE LARGE ADDRESS
+            group: ADVANCED OPTIONS
+            prompt: FORCE LARGE ADDRESS
             description: Force WINE to run games with large addresses.
             choices:
                 "Off": 0
                 "On":  1
         heap_delay_free:
-            prompt:      HEAP DELAY FREE
+            group: ADVANCED OPTIONS
+            prompt: HEAP DELAY FREE
             description: Delay freeing some memory.
             choices:
                 "Off": 0
                 "On":  1
         hide_nvidia_gpu:
-            prompt:      HIDE NVIDIA GPU
-            description: Force Nvidia GPUs to always be reported as AMD GPUs.
+            group: ADVANCED OPTIONS
+            prompt: HIDE NVIDIA GPU
+            description: Force Nvidia GPUs to always be reported as AMD GPUs to workaround game issues.
             choices:
                 "Off": 0
                 "On":  1
         enable_nvapi:
             group: ADVANCED OPTIONS
-            prompt:      ENABLE NVAPI
+            prompt: ENABLE NVAPI
             description: NVAPI is NVIDIA's core software that allows direct access to NVIDIA GPU.
             choices:
                 "Off": 0
                 "On":  1
         dxvk_reset_cache:
             group: ADVANCED OPTIONS
-            prompt:      DXVK RESET CACHE
+            prompt: DXVK RESET CACHE
             description: Reset the cache can fix some crashes if your game was running under Batocera 29.
             choices:
                 "Off": 0
                 "On":  1
         wine_ntfs:
             group: ADVANCED OPTIONS
-            prompt:      ENABLE NTFS MODE
+            prompt: ENABLE NTFS MODE
             description: Enable this mode if you have issue for run your game on NTFS storage (by default it is better to use LinuxFS).
             choices:
                 "Off": 1
                 "On":  0
         wine_debug:
-            prompt:      ENABLE DEBUG
+            group: ADVANCED OPTIONS
+            prompt: ENABLE DEBUG
+            description: Useful to troubleshoot when your Windows game won't start of crashes.
             choices:
                 "Off": 0
                 "On":  1
@@ -12912,6 +13147,16 @@ vpinball:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
+    vpinball_enableconfiggen:
+      group: EXPERT SETTINGS
+      prompt: ENABLE EMULATIONSTATION CONFIGURATION
+      description: Turn on to configure settings from this GUI (Recommended). If disabled, you have to manually edit the Config File (Experts only - not recommended).
+      preset: switchon  
+    vpinball_folders:
+      group: EXPERT SETTINGS
+      prompt: PER TABLE FOLDER
+      description: Per Table Folder requires all files to be in the associated rom table folder. If disabled, consult the Wiki for further details.
+      preset: switchon
     vpinball_balltrail:
       group: DISPLAY
       prompt: BALL TRAIL STRENGTH
@@ -12966,126 +13211,47 @@ vpinball:
       prompt: ALTCOLOR
       description: Alternative Coloured Dot Matrix Display (needs additional file).
       preset: switchon
-    vpinball_pinmamewindow:
+    vpinball_pinmame:
       group: DISPLAY
-      submenu: PINMAME DMD
       prompt: PINMAME DMD
-      description: Extra DMD (Dot Matrix Display) window to display the score for tables with a pinmame rom.
-      preset: switch
-    vpinball_pinmamewindowx:
+      description: Extra DMD (Dot Matrix Display) window to display the score for tables with a pinmame rom. By default, settings come from the VPinballX.ini configuration file.
+      choices:              
+        "Top-Right Position, Small": "pinmame_topright_small"
+        "Top-Right Position, Medium": "pinmame_topright_medium"
+        "Top-Right Position, Large": "pinmame_topright_large"        
+        "Top-Left Position, Small": "pinmame_topleft_small"
+        "Top-Left Position, Medium": "pinmame_topleft_medium"
+        "Top-Left Position, Large": "pinmame_topleft_large"        
+        "PinMAME DMD disabled": "pinmame_disabled"
+    vpinball_flexdmd:
       group: DISPLAY
-      submenu: PINMAME DMD
-      prompt: PINMAME DMD X
-      description: Horizontal position (in percentage of the screen width).
-      preset: input
-    vpinball_pinmamewindowy:
-      group: DISPLAY
-      submenu: PINMAME DMD
-      prompt: PINMAME DMD Y
-      description: Vertical position (in percentage of the screen height).
-      preset: input
-    vpinball_pinmamewindowwidth:
-      group: DISPLAY
-      submenu: PINMAME DMD
-      prompt: PINMAME DMD WIDTH
-      description: Horizontal width (in percentage of the screen width).
-      preset: input
-    vpinball_pinmamewindowheight:
-      group: DISPLAY
-      submenu: PINMAME DMD
-      prompt: PINMAME DMD HEIGHT
-      description: Vertical height (in percentage of the screen height).
-      preset: input
-    vpinball_flexdmdwindow:
-      group: DISPLAY
-      submenu: FLEX DMD
       prompt: FLEX DMD
-      description: Extra DMD (Dot Matrix Display) window to display the score for tables without a rom.
-      preset: switch
-    vpinball_flexdmdwindowx:
+      description: Extra DMD (Dot Matrix Display) window to display the score for tables without a rom. By default, settings come from the VPinballX.ini configuration file.
+      choices:      
+        "Top-Right Position, Small": "flexdmd_topright_small"
+        "Top-Right Position, Medium": "flexdmd_topright_medium"
+        "Top-Right Position, Large": "flexdmd_topright_large"        
+        "Top-Left Position, Small": "flexdmd_topleft_small"
+        "Top-Left Position, Medium": "flexdmd_topleft_medium"
+        "Top-Left Position, Large": "flexdmd_topleft_large"        
+        "FlexDMD disabled": "flexdmd_disabled"
+    vpinball_b2s:
       group: DISPLAY
-      submenu: FLEX DMD
-      prompt: FLEX DMD X
-      description: Horizontal position (in percentage of the screen width).
-      preset: input
-    vpinball_flexdmdwindowy:
-      group: DISPLAY
-      submenu: FLEX DMD
-      prompt: FLEX DMD Y
-      description: Vertical position (in percentage of the screen height).
-      preset: input
-    vpinball_flexdmdwindowwidth:
-      group: DISPLAY
-      submenu: FLEX DMD
-      prompt: FLEX DMD WIDTH
-      description: Horizontal width (in percentage of the screen width).
-      preset: input
-    vpinball_flexdmdwindowheight:
-      group: DISPLAY
-      submenu: FLEX DMD
-      prompt: FLEX DMD HEIGHT
-      description: Vertical height (in percentage of the screen height).
-      preset: input
-    vpinball_b2swindows:
-      group: DISPLAY
-      submenu: BACKGLASS (B2S)
       prompt: BACKGLASS (B2S)
-      description: Upright glass panel displaying some illuminated artwork.
+      description: Upright glass panel displaying some illuminated artwork. By default, settings come from the VPinballX.ini configuration file.
+      choices:      
+        "Top-Right Position, Small": "b2s_topright_small"
+        "Top-Right Position, Medium": "b2s_topright_medium"
+        "Top-Right Position, Large": "b2s_topright_large"        
+        "Top-Left Position, Small": "b2s_topleft_small"
+        "Top-Left Position, Medium": "b2s_topleft_medium"
+        "Top-Left Position, Large": "b2s_topleft_large"        
+        "Backglass disabled": "b2s_disabled"
+    vpinball_b2sdmd:
+      group: DISPLAY
+      prompt: DISPLAY BACKGLASS DMD
+      description: When the Backglass is activated, display the small additional part with the scores.
       preset: switchon
-    vpinball_b2sbackglassx:
-      group: DISPLAY
-      submenu: BACKGLASS (B2S)
-      prompt: BACKGLASS X
-      description: Horizontal position (in percentage of the screen width).
-      preset: input
-    vpinball_b2sbackglassy:
-      group: DISPLAY
-      submenu: BACKGLASS (B2S)
-      prompt: BACKGLASS Y
-      description: Vertical position (in percentage of the screen height).
-      preset: input
-    vpinball_b2sbackglasswidth:
-      group: DISPLAY
-      submenu: BACKGLASS (B2S)
-      prompt: BACKGLASS WIDTH
-      description: Horizontal width (in percentage of the screen width).
-      preset: input
-    vpinball_b2sbackglassheight:
-      group: DISPLAY
-      submenu: BACKGLASS (B2S)
-      prompt: BACKGLASS HEIGHT
-      description: Vertical height (in percentage of the screen height).
-      preset: input
-    vpinball_b2shidedmd:
-      group: DISPLAY
-      submenu: BACKGLASS (B2S)
-      prompt: BACKGLASS DMD HIDE
-      description: Hides the Extra DMD (Dot Matrix Display) integrated in the Backglass.
-      preset: switchon
-    vpinball_b2sdmdx:
-      group: DISPLAY
-      submenu: BACKGLASS (B2S)
-      prompt: B2S DMD X
-      description: Horizontal position (in percentage of the screen width).
-      preset: input
-    vpinball_b2sdmdy:
-      group: DISPLAY
-      submenu: BACKGLASS (B2S)
-      prompt: B2S DMD Y
-      description: Vertical position (in percentage of the screen height).
-      preset: input
-    vpinball_b2sdmdwidth:
-      group: DISPLAY
-      submenu: BACKGLASS (B2S)
-      prompt: B2S DMD WIDTH
-      description: Horizontal width (in percentage of the screen width).
-      preset: input
-    vpinball_b2sdmdheight:
-      group: DISPLAY
-      submenu: BACKGLASS (B2S)
-      prompt: B2S DMD HEIGHT
-      description: Vertical height (in percentage of the screen height).
-      preset: input
     vpinball_musicvolume:
       group: AUDIO
       prompt: MUSIC VOLUME
@@ -13125,11 +13291,6 @@ vpinball:
       prompt: ALTERNATIVE SOUND
       description: Alternative sounds for the table (needs additional files).
       preset: switchon
-    vpinball_folders:
-      group: FOLDERS ORGANISATION
-      prompt: PER TABLE FOLDER
-      description: Per Table Folder requires all files to be in the associated rom table folder. If disabled, consult the Wiki for further details.
-      preset: switchon
 
 witchaven:
   features: [padtokeyboard]
@@ -13149,6 +13310,12 @@ xenia:
             choices:
                 "D3D12 (Default)": D3D12
                 "Native Vulkan":   Vulkan
+        xenia_vsync:
+            prompt: VSYNC
+            description: Fix screen tearing.
+            choices:
+                "Disabled": "false"
+                "Enabled":  "true"
         xeniaLicense:
             prompt: XBOX LIVE ARCADE
             description: This option enables the ability to play Xbox Live Arcade games. May cause compatibility issues with non-XBLA games.
@@ -13181,6 +13348,90 @@ xenia:
                 "Turkish":           14
                 "Norwegian":         15
                 "Dutch":             16
+        xenia_page_state:
+            group: ADVANCED OPTIONS
+            prompt: CLEAR MEMORY PAGE STATE
+            description: Refresh state of memory pages to enable gpu written data. (Use for 'Team Ninja' Games to fix missing character models).
+            choices:
+                "Disabled": "false"
+                "Enabled":  "true"
+        xenia_target_path:
+            group: ADVANCED OPTIONS
+            prompt: RENDER TARGET PATH
+            description: Render target emulation path to use on Direct3D 12. Try changing if you have render issues.
+            choices:
+                "Any":           "any"
+                "RTV (Default)": "rtv"
+                "ROV":           "rov"
+        xenia_query_occlusion:
+            group: ADVANCED OPTIONS
+            prompt: QUERY OCCLUSION
+            description: The sample count of every tile will be incremented on every EVENT_WRITE_ZPD by this number. Setting this to 0 means everything is reported as occluded.
+            choices:
+                "0":              0
+                "10":             10
+                "50":             50
+                "100":            100
+                "250":            250
+                "500":            500
+                "750":            750
+                "1000 (Default)": 1000
+        xenia_readback_resolve:
+            group: ADVANCED OPTIONS
+            prompt: READBACK RESOLVE
+            description: D3D12, read render-to-texture results on the CPU. Needed in some games, but causes mid-frame synchronization, so it has a huge performance impact.
+            choices:
+                "Disabled": "false"
+                "Enabled":  "true"
+        xenia_limit_hard:
+            group: ADVANCED OPTIONS
+            prompt: HARD TEXTURE CACHE MEMORY LIMIT
+            description: Maximum host texture memory usage (in megabytes) above which textures will be destroyed as soon as possible.
+            choices:
+                "768MB (Default)": 768
+                "1536MB":          1536
+                "2304MB":          2034
+                "3072MB":          3072
+                "3840MB":          3840
+                "4096MB":          4096
+                "5120MB":          5120
+                "6144MB":          6144
+        xenia_limit_render_to_texture:
+            group: ADVANCED OPTIONS
+            prompt: TEXTURE MEMORY SCALE SIZE
+            description: Part of the host texture memory budget (in megabytes) that will be scaled by the current drawing resolution scale.
+            choices:
+                "24MB (Default)": 24
+                "48MB":           48
+                "72MB":           72
+                "96MB":           96
+        xenia_limit_soft:
+            group: ADVANCED OPTIONS
+            prompt: SOFT TEXTURE CACHE MEMORY LIMIT
+            description: Maximum host texture memory usage (in megabytes) above which old textures will be destroyed. Set below hard limit.
+            choices:
+                "384MB (Default)": 384
+                "768MB":           768
+                "1536MB":          1536
+                "2048MB":          2048
+                "3072MB":          3072
+                "4096MB":          4096
+        xenia_limit_soft_lifetime:
+            group: ADVANCED OPTIONS
+            prompt: SOFT TEXTURE CACHE MEMORY TIMEOUT
+            description: Seconds a texture should be unused to be considered old enough to be deleted if texture memory usage exceeds Soft Texture Cache limit.
+            choices:
+                "15s":           15
+                "30s (Default)": 30
+                "45s":           45
+                "15s":           60
+        xenia_cache:
+            group: ADVANCED OPTIONS
+            prompt: MOUNT CACHE
+            description: Enable cache mount. Can improve performance and compatibility in some games.
+            choices:
+                "Disabled": "false"
+                "Enabled":  "true"
 
 xenia-canary:
   features: [padtokeyboard]
@@ -13219,6 +13470,21 @@ xenia-canary:
             choices:
                 "D3D12 (Default)": D3D12
                 "Native Vulkan":   Vulkan
+        xenia_vsync:
+            prompt: VSYNC
+            description: Fix screen tearing. With Some games you need to turn VSync on in the games options.
+            choices:
+                "Disabled": "false"
+                "Enabled":  "true"
+        xenia_vsync_fps:
+            prompt: VSYNC FPS
+            description: Manually set VSYNC frames per second. Ideally this should match your monitor refresh rate.
+            choices:
+                "50fps":            50
+                "60fps (Default)":  60
+                "120fps":           120
+                "144fps":           144
+                "165fps":           165
         xeniaHeadless:
             prompt: UI PROMPTS
             description: Choose to display UI prompts or accept defaults.
@@ -13250,6 +13516,90 @@ xenia-canary:
             choices:
                 "Disabled (Default)": false
                 "Enabled": true
+        xenia_page_state:
+            group: ADVANCED OPTIONS
+            prompt: CLEAR MEMORY PAGE STATE
+            description: Refresh state of memory pages to enable gpu written data. (Use for 'Team Ninja' Games to fix missing character models).
+            choices:
+                "Disabled": "false"
+                "Enabled":  "true"
+        xenia_target_path:
+            group: ADVANCED OPTIONS
+            prompt: RENDER TARGET PATH
+            description: Render target emulation path to use on Direct3D 12. Try changing if you have render issues.
+            choices:
+                "Any":           "any"
+                "RTV (Default)": "rtv"
+                "ROV":           "rov"
+        xenia_query_occlusion:
+            group: ADVANCED OPTIONS
+            prompt: QUERY OCCLUSION
+            description: The sample count of every tile will be incremented on every EVENT_WRITE_ZPD by this number. Setting this to 0 means everything is reported as occluded.
+            choices:
+                "0":              0
+                "10":             10
+                "50":             50
+                "100":            100
+                "250":            250
+                "500":            500
+                "750":            750
+                "1000 (Default)": 1000
+        xenia_readback_resolve:
+            group: ADVANCED OPTIONS
+            prompt: READBACK RESOLVE
+            description: D3D12, read render-to-texture results on the CPU. Needed in some games, but causes mid-frame synchronization, so it has a huge performance impact.
+            choices:
+                "Disabled": "false"
+                "Enabled":  "true"
+        xenia_limit_hard:
+            group: ADVANCED OPTIONS
+            prompt: HARD TEXTURE CACHE MEMORY LIMIT
+            description: Maximum host texture memory usage (in megabytes) above which textures will be destroyed as soon as possible.
+            choices:
+                "768MB (Default)": 768
+                "1536MB":          1536
+                "2304MB":          2034
+                "3072MB":          3072
+                "3840MB":          3840
+                "4096MB":          4096
+                "5120MB":          5120
+                "6144MB":          6144
+        xenia_limit_render_to_texture:
+            group: ADVANCED OPTIONS
+            prompt: TEXTURE MEMORY SCALE SIZE
+            description: Part of the host texture memory budget (in megabytes) that will be scaled by the current drawing resolution scale.
+            choices:
+                "24MB (Default)": 24
+                "48MB":           48
+                "72MB":           72
+                "96MB":           96
+        xenia_limit_soft:
+            group: ADVANCED OPTIONS
+            prompt: SOFT TEXTURE CACHE MEMORY LIMIT
+            description: Maximum host texture memory usage (in megabytes) above which old textures will be destroyed. Set below hard limit.
+            choices:
+                "384MB (Default)": 384
+                "768MB":           768
+                "1536MB":          1536
+                "2048MB":          2048
+                "3072MB":          3072
+                "4096MB":          4096
+        xenia_limit_soft_lifetime:
+            group: ADVANCED OPTIONS
+            prompt: SOFT TEXTURE CACHE MEMORY TIMEOUT
+            description: Seconds a texture should be unused to be considered old enough to be deleted if texture memory usage exceeds Soft Texture Cache limit.
+            choices:
+                "15s":           15
+                "30s (Default)": 30
+                "45s":           45
+                "15s":           60           
+        xenia_cache:
+            group: ADVANCED OPTIONS
+            prompt: MOUNT CACHE
+            description: Enable cache mount. Can improve performance and compatibility in some games.
+            choices:
+                "Disabled": "false"
+                "Enabled":  "true"
 
 yabasanshiro:
   features: [padtokeyboard]

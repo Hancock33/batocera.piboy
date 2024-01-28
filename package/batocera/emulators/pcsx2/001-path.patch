@@ -1,8 +1,8 @@
 diff --git a/pcsx2/Pcsx2Config.cpp b/pcsx2/Pcsx2Config.cpp
-index e05441565..d54e71690 100644
+index 7a28f0d3a..53b4208f8 100644
 --- a/pcsx2/Pcsx2Config.cpp
 +++ b/pcsx2/Pcsx2Config.cpp
-@@ -1974,18 +1974,18 @@ void EmuFolders::SetDataDirectory()
+@@ -1967,18 +1967,18 @@ void EmuFolders::SetDataDirectory()
  
  void EmuFolders::SetDefaults(SettingsInterface& si)
  {
@@ -32,7 +32,7 @@ index e05441565..d54e71690 100644
  }
  
  static std::string LoadPathFromSettings(SettingsInterface& si, const std::string& root, const char* name, const char* def)
-@@ -1998,20 +1998,20 @@ static std::string LoadPathFromSettings(SettingsInterface& si, const std::string
+@@ -1991,20 +1991,20 @@ static std::string LoadPathFromSettings(SettingsInterface& si, const std::string
  
  void EmuFolders::LoadConfig(SettingsInterface& si)
  {
@@ -62,6 +62,6 @@ index e05441565..d54e71690 100644
 +	Textures = LoadPathFromSettings(si, DataRoot, "Textures", "/userdata/system/configs/PCSX2/textures");
 +	InputProfiles = LoadPathFromSettings(si, DataRoot, "InputProfiles", "/userdata/system/configs/PCSX2/inputprofiles");
 +	Videos = LoadPathFromSettings(si, DataRoot, "Videos", "/userdata/system/configs/PCSX2/videos");
+ 	DebuggerSettings = LoadPathFromSettings(si, Settings, "DebuggerSettings", "debuggersettings");
  
  	Console.WriteLn("BIOS Directory: %s", Bios.c_str());
- 	Console.WriteLn("Snapshots Directory: %s", Snapshots.c_str());

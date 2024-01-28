@@ -7,6 +7,6 @@ import controllersConfig
 
 class FreedroidGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["freedroid"]
         return Command.Command(array=commandArray)
