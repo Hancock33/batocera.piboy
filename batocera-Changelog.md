@@ -84,7 +84,7 @@
 - DosBox-X to 2023.10.6
 - Libretro-FBNeo to Oct 9, 2023
 - DevilutionX to 1.5.1
-- PPSSPP (standalone) and lr-ppsspp to v1.16.6
+- PPSSPP (standalone) and lr-ppsspp to v1.17
 - Libretro-MAME to 0.261
 - Libretro-Picodrive to Aug 11, 2023
 - Libretro-Genesis-Plus-GX to Sep 11, 2023
@@ -97,7 +97,7 @@
 - Flycast to 17th Dec build
 - Libretro-Flycast to 17th Dec build
 - MelonDS to Oct 12, 2023
-- PCSX2 to v1.7.5309
+- PCSX2 to v1.7.5531
 - Play! to Nov 30, 2023 build
 - Python Pygame2 to 2.5.2
 - Python Pyxel to v1.9.18
