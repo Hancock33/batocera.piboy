@@ -19,7 +19,6 @@ ifeq ($(BR_CMAKE_USE_CLANG),y)
 	HOST_WINE_GE_CUSTOM_DEPENDENCIES += host-clang host-lld
 endif
 
-
 # Configure Wine
 define WINE_GE_CUSTOM_AUTOGEN
 	# Add Version
