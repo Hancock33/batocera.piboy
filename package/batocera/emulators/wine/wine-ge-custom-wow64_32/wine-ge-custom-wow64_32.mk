@@ -11,10 +11,13 @@ WINE_GE_CUSTOM_WOW64_32_SITE = $(call github,wine-mirror,wine,$(WINE_GE_CUSTOM_W
 WINE_GE_CUSTOM_WOW64_32_LICENSE = LGPL-2.1+
 WINE_GE_CUSTOM_WOW64_32_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_GE_CUSTOM_WOW64_32_SELINUX_MODULES = wine
-WINE_GE_CUSTOM_WOW64_32_DEPENDENCIES = host-bison host-flex host-wine-ge-custom
+WINE_GE_CUSTOM_WOW64_32_DEPENDENCIES = host-bison host-flex host-wine-ge-custom-wow64_32
 HOST_WINE_GE_CUSTOM_WOW64_32_DEPENDENCIES = host-bison host-flex
-HOST_WINE_GE_CUSTOM_WOW64_32_DEPENDENCIES = host-bison host-flex host-clang host-lld
 HOST_WINE_GE_CUSTOM_WOW64_32_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/v$(WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION).tar.gz
+
+ifeq ($(BR_CMAKE_USE_CLANG),y)
+	HOST_WINE_GE_CUSTOM_WOW64_32_DEPENDENCIES += host-clang host-lld
+endif
 
 # Configure Wine
 define WINE_GE_CUSTOM_WOW64_32_AUTOGEN
@@ -43,7 +46,7 @@ HOST_WINE_GE_CUSTOM_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_GE_CUSTOM_WOW64_32_AUTO
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_GE_CUSTOM_WOW64_32_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
-	--with-wine-tools=$(BUILD_DIR)/host-wine-ge-custom-$(WINE_GE_CUSTOM_WOW64_32_VERSION) \
+	--with-wine-tools=$(BUILD_DIR)/host-wine-ge-custom-wow64_32-$(WINE_GE_CUSTOM_WOW64_32_VERSION) \
 	--disable-tests \
 	--without-capi \
 	--without-coreaudio \
