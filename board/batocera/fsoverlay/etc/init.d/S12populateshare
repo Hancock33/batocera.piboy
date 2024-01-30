@@ -99,7 +99,7 @@ for FILE in music bios extractions kodi library saves screenshots splash \
             system/pacman/pacman.conf \
             bios/mame2003 \
             bios/dolphin-emu \
-            roms/rtcw/main \
+            roms/ports/rtcw  \
             bios/ps2
 do
     # update if newer also
