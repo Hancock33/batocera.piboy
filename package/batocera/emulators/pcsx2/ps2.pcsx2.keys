@@ -6,9 +6,9 @@
             "target": [ "KEY_LEFTALT", "KEY_F4" ]
 	},
 	{
-            "trigger": [ "b", "hotkey" ],
+            "trigger": ["hotkey", "b"],
             "type": "key",
-            "target": "KEY_ESC"
+            "target": [ "KEY_ESC" ]
 	},
 	{
             "trigger": ["hotkey", "x"],

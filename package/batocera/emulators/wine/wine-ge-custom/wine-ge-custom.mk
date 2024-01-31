@@ -13,8 +13,11 @@ WINE_GE_CUSTOM_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_GE_CUSTOM_SELINUX_MODULES = wine
 WINE_GE_CUSTOM_DEPENDENCIES = host-bison host-flex host-wine-ge-custom
 HOST_WINE_GE_CUSTOM_DEPENDENCIES = host-bison host-flex
-HOST_WINE_GE_CUSTOM_DEPENDENCIES = host-bison host-flex host-clang host-lld
 HOST_WINE_GE_CUSTOM_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/v$(WINE_GE_CUSTOM_STAGING_VERSION).tar.gz
+
+ifeq ($(BR_CMAKE_USE_CLANG),y)
+	HOST_WINE_GE_CUSTOM_DEPENDENCIES += host-clang host-lld
+endif
 
 # Configure Wine
 define WINE_GE_CUSTOM_AUTOGEN
