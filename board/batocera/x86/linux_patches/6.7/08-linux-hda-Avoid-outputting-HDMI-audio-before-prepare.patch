@@ -1,5 +1,5 @@
 diff --git a/sound/pci/hda/patch_hdmi.c b/sound/pci/hda/patch_hdmi.c
-index 78cee53fee02..b1569b68f01f 100644
+index 038db8902c9e..b43c3b03ac72 100644
 --- a/sound/pci/hda/patch_hdmi.c
 +++ b/sound/pci/hda/patch_hdmi.c
 @@ -1981,6 +1981,14 @@ static int hdmi_add_cvt(struct hda_codec *codec, hda_nid_t cvt_nid)

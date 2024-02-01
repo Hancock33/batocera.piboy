@@ -1,5 +1,5 @@
 diff --git a/Documentation/admin-guide/devices.txt b/Documentation/admin-guide/devices.txt
-index 94c98be1329a..041404397ee5 100644
+index 839054923530..13841636ce92 100644
 --- a/Documentation/admin-guide/devices.txt
 +++ b/Documentation/admin-guide/devices.txt
 @@ -376,8 +376,9 @@
@@ -14,7 +14,7 @@ index 94c98be1329a..041404397ee5 100644
  
    11 char	Raw keyboard device	(Linux/SPARC only)
 diff --git a/Documentation/userspace-api/index.rst b/Documentation/userspace-api/index.rst
-index 031df47a7c19..ef98164e3cdb 100644
+index 031df47a7c19..188bf15c4ecf 100644
 --- a/Documentation/userspace-api/index.rst
 +++ b/Documentation/userspace-api/index.rst
 @@ -33,6 +33,7 @@ place where this information is gathered.
@@ -26,10 +26,10 @@ index 031df47a7c19..ef98164e3cdb 100644
  .. only::  subproject and html
  
 diff --git a/Documentation/userspace-api/ioctl/ioctl-number.rst b/Documentation/userspace-api/ioctl/ioctl-number.rst
-index 457e16f06e04..a1326a5bc2e0 100644
+index 4ea5b837399a..055482769b35 100644
 --- a/Documentation/userspace-api/ioctl/ioctl-number.rst
 +++ b/Documentation/userspace-api/ioctl/ioctl-number.rst
-@@ -378,6 +378,8 @@ Code  Seq#    Include File                                           Comments
+@@ -375,6 +375,8 @@ Code  Seq#    Include File                                           Comments
                                                                       <mailto:thomas@winischhofer.net>
  0xF6  all                                                            LTTng Linux Trace Toolkit Next Generation
                                                                       <mailto:mathieu.desnoyers@efficios.com>
@@ -490,10 +490,10 @@ index 000000000000..45d945b3e246
 +  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 8d1052fa6a69..7924127d351b 100644
+index a7c4cf8201e0..90e84b768c42 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -15585,6 +15585,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
+@@ -15341,6 +15341,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
  F:	Documentation/filesystems/ntfs3.rst
  F:	fs/ntfs3/
  
@@ -510,7 +510,7 @@ index 8d1052fa6a69..7924127d351b 100644
  M:	Finn Thain <fthain@linux-m68k.org>
  L:	linux-m68k@lists.linux-m68k.org
 diff --git a/drivers/misc/Kconfig b/drivers/misc/Kconfig
-index 4fb291f0bf7c..bdd8a71bd853 100644
+index f37c4b8380ae..622eb26ac040 100644
 --- a/drivers/misc/Kconfig
 +++ b/drivers/misc/Kconfig
 @@ -504,6 +504,15 @@ config OPEN_DICE
@@ -530,7 +530,7 @@ index 4fb291f0bf7c..bdd8a71bd853 100644
  
  config VCPU_STALL_DETECTOR
 diff --git a/drivers/misc/Makefile b/drivers/misc/Makefile
-index ea6ea5bbbc9c..153a3f4837e8 100644
+index f2a4d1ff65d4..bd12e9a3b8c5 100644
 --- a/drivers/misc/Makefile
 +++ b/drivers/misc/Makefile
 @@ -59,6 +59,7 @@ obj-$(CONFIG_PVPANIC)   	+= pvpanic/
@@ -1842,7 +1842,7 @@ index 000000000000..e145b36a15ea
 +
 +#endif
 diff --git a/tools/testing/selftests/Makefile b/tools/testing/selftests/Makefile
-index 15b6a111c3be..6c714a4e6478 100644
+index 8247a7c69c36..40b7318a8e22 100644
 --- a/tools/testing/selftests/Makefile
 +++ b/tools/testing/selftests/Makefile
 @@ -15,6 +15,7 @@ TARGETS += cpu-hotplug
