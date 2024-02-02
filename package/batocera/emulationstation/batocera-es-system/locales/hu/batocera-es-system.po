@@ -8752,7 +8752,7 @@ msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
 msgstr "Batocera beállítja az első audio eszközt (alapértelmezett)"
 
-#. TRANSLATION: cemu, openbor/openbor7530, sonic2013, soniccd, sonicmania, ...
+#. TRANSLATION: cemu, openbor/openbor7530, xemu, sonic2013, soniccd, ...
 msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr "Javítsa ki a képernyő szakadását."
