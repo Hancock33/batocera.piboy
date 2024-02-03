@@ -4,12 +4,12 @@
 #
 ################################################################################
 # Version: Commits on Feb 03, 2024
-DUCKSTATION_VERSION = d793dbf8b93ee7aaffd75f0a603981f4474bbca1
+DUCKSTATION_VERSION = 13e02141cfb9c27da9ee8cb77f4ffcf6588fb6e7
 DUCKSTATION_SITE = https://github.com/stenzek/duckstation.git
 DUCKSTATION_SITE_METHOD=git
 DUCKSTATION_GIT_SUBMODULES=YES
 DUCKSTATION_LICENSE = GPLv2
-DUCKSTATION_DEPENDENCIES = fmt boost ffmpeg libcurl ecm libdrm sdl2 libevdev
+DUCKSTATION_DEPENDENCIES = fmt boost ffmpeg libcurl ecm libdrm sdl2 libevdev webp
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
 
 DUCKSTATION_CONF_OPTS += -DBUILD_SHARED_LIBS=FALSE
