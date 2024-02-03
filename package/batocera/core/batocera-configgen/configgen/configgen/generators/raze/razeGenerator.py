@@ -4,6 +4,10 @@ import controllersConfig
 from generators.Generator import Generator
 import os
 from utils.buildargs import parse_args
+import platform
+from utils.logger import get_logger
+
+eslog = get_logger(__name__)
 
 class RazeGenerator(Generator):
     config_dir = f"{batoceraFiles.CONF}/raze"
@@ -173,3 +177,9 @@ class RazeGenerator(Generator):
                 'SDL_AUTO_UPDATE_JOYSTICKS': '0'
             }
         )
+
+def getInGameRatio(self, config, gameResolution, rom):
+    return 16/9
+
+def get_cpu_architecture():
+    return platform.uname().machine
