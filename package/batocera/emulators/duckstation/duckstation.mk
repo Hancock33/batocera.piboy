@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Feb 03, 2024
-DUCKSTATION_VERSION = 13e02141cfb9c27da9ee8cb77f4ffcf6588fb6e7
+DUCKSTATION_VERSION = 6cca468e65df46914d104c0021c557a490ae397d
 DUCKSTATION_SITE = https://github.com/stenzek/duckstation.git
 DUCKSTATION_SITE_METHOD=git
 DUCKSTATION_GIT_SUBMODULES=YES
@@ -59,5 +59,11 @@ define DUCKSTATION_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy
 endef
+
+define SOUNDTOUCH_OPTIMISE
+	$(SED) "s|-Ofast|$(TARGET_OPTIMIZATION)|g" $(@D)/dep/soundtouch/CMakeLists.txt
+endef
+
+DUCKSTATION_PRE_CONFIGURE_HOOKS = SOUNDTOUCH_OPTIMISE
 
 $(eval $(cmake-package))
