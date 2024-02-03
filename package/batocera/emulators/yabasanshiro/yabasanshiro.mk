@@ -57,7 +57,6 @@ define YABASANSHIRO_GIT_HASH
 	cd $(@D)/yabause/src/libchdr-prefix/src && git clone https://github.com/devmiyax/libchdr.git
 	mkdir -p $(@D)/yabause/src/retro_arena/Json/src
 	cd $(@D)/yabause/src/retro_arena/Json/src && git clone https://github.com/nlohmann/json.git Json
-
 endef
 
 define YABASANSHIRO_POST_PROCESS
