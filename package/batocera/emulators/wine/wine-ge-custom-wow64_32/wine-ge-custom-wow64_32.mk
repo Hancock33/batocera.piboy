@@ -3,9 +3,10 @@
 # wine-ge-custom-wow64_32
 #
 ################################################################################
-
-WINE_GE_CUSTOM_WOW64_32_VERSION = wine-9.1
-WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION = $(subst wine-,,$(WINE_GE_CUSTOM_WOW64_32_VERSION))
+# Version: Commits on Feb 01, 2024
+WINE_GE_CUSTOM_WOW64_32_VERSION = c3918f2a82fd67301cf5fe1b35894506a34a2135
+#WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION = $(subst wine-,,v$(WINE_GE_CUSTOM_WOW64_32_VERSION))
+WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION = be51ecf5c2a62dbf6ee1d2812adc43b2c96e4b43
 WINE_GE_CUSTOM_WOW64_32_SOURCE = wine-$(WINE_GE_CUSTOM_WOW64_32_VERSION).tar.gz
 WINE_GE_CUSTOM_WOW64_32_SITE = $(call github,wine-mirror,wine,$(WINE_GE_CUSTOM_WOW64_32_VERSION))
 WINE_GE_CUSTOM_WOW64_32_LICENSE = LGPL-2.1+
@@ -13,7 +14,8 @@ WINE_GE_CUSTOM_WOW64_32_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_GE_CUSTOM_WOW64_32_SELINUX_MODULES = wine
 WINE_GE_CUSTOM_WOW64_32_DEPENDENCIES = host-bison host-flex host-wine-ge-custom-wow64_32
 HOST_WINE_GE_CUSTOM_WOW64_32_DEPENDENCIES = host-bison host-flex
-HOST_WINE_GE_CUSTOM_WOW64_32_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/v$(WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION).tar.gz
+#HOST_WINE_GE_CUSTOM_WOW64_32_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/$(WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION).tar.gz
+HOST_WINE_GE_CUSTOM_WOW64_32_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/$(WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION).tar.gz
 
 ifeq ($(BR_CMAKE_USE_CLANG),y)
 	HOST_WINE_GE_CUSTOM_WOW64_32_DEPENDENCIES += host-clang host-lld
@@ -32,7 +34,7 @@ define WINE_GE_CUSTOM_WOW64_32_AUTOGEN
 
 	# Use Staging Patches
 	printf "%s\n" "$(TERM_BOLD)>>> $($(PKG)_NAME) $($(PKG)_VERSION) Patching wine-staging" >&2
-	tar -xf $(WINE_GE_CUSTOM_WOW64_32_DL_DIR)/v$(WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION).tar.gz -C $(@D)
+	tar -xf $(WINE_GE_CUSTOM_WOW64_32_DL_DIR)/$(WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION).tar.gz -C $(@D)
 	cd $(@D); ./wine-staging-$(WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION)/staging/patchinstall.py --all
 
 	# Autotools generation
