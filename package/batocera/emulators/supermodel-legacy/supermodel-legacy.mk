@@ -23,7 +23,7 @@ define SUPERMODEL_LEGACY_BUILD_CMDS
 	$(SED) "s|LD = gcc|LD = $(TARGET_CC)|g" $(@D)/Makefile
 	$(SED) "s|sdl2-config|$(STAGING_DIR)/usr/bin/sdl2-config|g" $(@D)/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) -j1 -C $(@D) clean && \
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) -j1 -C $(@D) -f Makefile NET_BOARD=1 VERBOSE=1
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) -j2 -C $(@D) -f Makefile NET_BOARD=1 VERBOSE=1
 endef
 
 define SUPERMODEL_LEGACY_INSTALL_TARGET_CMDS
