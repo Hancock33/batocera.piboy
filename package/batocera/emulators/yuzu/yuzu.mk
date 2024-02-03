@@ -3,7 +3,7 @@
 # yuzu
 #
 ################################################################################
-# Version: Commits on Feb 02, 2024
+# Version: Commits on Feb 2, 2024
 YUZU_VERSION = 6baf965777145fd9c76bd06a3c140afa46a50e87
 YUZU_SITE = https://github.com/yuzu-emu/yuzu.git
 YUZU_SITE_METHOD=git
@@ -24,10 +24,12 @@ YUZU_CONF_OPTS += -DYUZU_USE_EXTERNAL_SDL2=OFF
 YUZU_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
 YUZU_CONF_OPTS += -DYUZU_TESTS=OFF
 YUZU_CONF_OPTS += -DENABLE_QT6=ON
-YUZU_CONF_OPTS += -DYUZU_ENABLE_LTO=OFF
 YUZU_CONF_OPTS += -DYUZU_USE_EXTERNAL_VULKAN_HEADERS=OFF
-YUZU_CONF_OPTS += -DYUZU_DOWNLOAD_TIME_ZONE_DATA=ON
 YUZU_CONF_OPTS += -DENABLE_WEB_SERVICE=OFF
+
+ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
+    YUZU_DEPENDENCIES += host-glslang vulkan-headers vulkan-loader
+endif
 
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
 	YUZU_DEPENDENCIES += host-glslang
