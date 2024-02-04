@@ -1,5 +1,5 @@
 diff --git a/rpcs3/rpcs3qt/screenshot_manager_dialog.cpp b/rpcs3/rpcs3qt/screenshot_manager_dialog.cpp
-index 5564bd4bf..7bebafeee 100644
+index b93f9398a..66cbfeb1b 100644
 --- a/rpcs3/rpcs3qt/screenshot_manager_dialog.cpp
 +++ b/rpcs3/rpcs3qt/screenshot_manager_dialog.cpp
 @@ -82,7 +82,7 @@ void screenshot_manager_dialog::reload()

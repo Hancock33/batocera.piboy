@@ -1,0 +1,176 @@
+diff --git a/Utilities/StrFmt.cpp b/Utilities/StrFmt.cpp
+index d9cbd58d6..9468e6af9 100644
+--- a/Utilities/StrFmt.cpp
++++ b/Utilities/StrFmt.cpp
+@@ -617,7 +617,7 @@ std::vector<std::string> fmt::split(std::string_view source, std::initializer_li
+ 
+ std::string fmt::trim(const std::string& source, std::string_view values)
+ {
+-	const usz begin = source.find_first_not_of(values);
++	usz begin = source.find_first_not_of(values);
+ 
+ 	if (begin == source.npos)
+ 		return {};
+@@ -625,16 +625,6 @@ std::string fmt::trim(const std::string& source, std::string_view values)
+ 	return source.substr(begin, source.find_last_not_of(values) + 1);
+ }
+ 
+-std::string fmt::trim_front(const std::string& source, std::string_view values)
+-{
+-	const usz begin = source.find_first_not_of(values);
+-
+-	if (begin == source.npos)
+-		return {};
+-
+-	return source.substr(begin);
+-}
+-
+ void fmt::trim_back(std::string& source, std::string_view values)
+ {
+ 	const usz index = source.find_last_not_of(values);
+diff --git a/Utilities/StrUtil.h b/Utilities/StrUtil.h
+index 4fe6fc90c..5d14b7bc6 100644
+--- a/Utilities/StrUtil.h
++++ b/Utilities/StrUtil.h
+@@ -125,7 +125,6 @@ namespace fmt
+ 
+ 	std::vector<std::string> split(std::string_view source, std::initializer_list<std::string_view> separators, bool is_skip_empty = true);
+ 	std::string trim(const std::string& source, std::string_view values = " \t");
+-	std::string trim_front(const std::string& source, std::string_view values = " \t");
+ 	void trim_back(std::string& source, std::string_view values = " \t");
+ 
+ 	template <typename T>
+diff --git a/rpcs3/Emu/Cell/Modules/cellGame.cpp b/rpcs3/Emu/Cell/Modules/cellGame.cpp
+index a8817ae32..64dd9bdff 100644
+--- a/rpcs3/Emu/Cell/Modules/cellGame.cpp
++++ b/rpcs3/Emu/Cell/Modules/cellGame.cpp
+@@ -746,7 +746,7 @@ error_code cellGameBootCheck(vm::ptr<u32> type, vm::ptr<u32> attributes, vm::ptr
+ 		*attributes = 0; // TODO
+ 
+ 		sfo = psf::load_object(vfs::get(Emu.GetDir() + "PARAM.SFO"));
+-		dir = fmt::trim(Emu.GetDir().substr(fs::get_parent_dir_view(Emu.GetDir()).size() + 1), fs::delim);
++		dir = Emu.GetTitleID();
+ 	}
+ 
+ 	*type = _type;
+@@ -763,8 +763,7 @@ error_code cellGameBootCheck(vm::ptr<u32> type, vm::ptr<u32> attributes, vm::ptr
+ 
+ 	if (_type == u32{CELL_GAME_GAMETYPE_HDD} && dirName)
+ 	{
+-		ensure(dir.size() < CELL_GAME_DIRNAME_SIZE);
+-		strcpy_trunc(*dirName, dir);
++		strcpy_trunc(*dirName, Emu.GetTitleID());
+ 	}
+ 
+ 	perm.dir = std::move(dir);
+diff --git a/rpcs3/Emu/System.cpp b/rpcs3/Emu/System.cpp
+index 3055711cc..f399a90e6 100644
+--- a/rpcs3/Emu/System.cpp
++++ b/rpcs3/Emu/System.cpp
+@@ -1282,14 +1282,14 @@ game_boot_result Emulator::Load(const std::string& title_id, bool is_disc_patch,
+ 
+ 				if (argv[0].starts_with(game0_path) && !fs::is_file(vfs::get(argv[0])))
+ 				{
+-					std::string dirname = argv[0].substr(game0_path.size());
+-					dirname = dirname.substr(0, dirname.find_first_of('/'));
++					std::string title_id = argv[0].substr(game0_path.size());
++					title_id = title_id.substr(0, title_id.find_first_of('/'));
+ 
+ 					// Try to load game directory from list if available
+ 					if (std::string game_path = m_games_config.get_path(m_title_id); !game_path.empty())
+ 					{
+ 						disc = std::move(game_path);
+-						m_path = disc + argv[0].substr(game0_path.size() + dirname.size());
++						m_path = disc + argv[0].substr(game0_path.size() + title_id.size());
+ 					}
+ 				}
+ 			}
+@@ -1552,7 +1552,7 @@ game_boot_result Emulator::Load(const std::string& title_id, bool is_disc_patch,
+ 			// Fake arg (workaround)
+ 			argv.resize(1);
+ 			argv[0] = "/dev_bdvd/PS3_GAME/USRDIR/EBOOT.BIN";
+-			m_dir = "/dev_bdvd/PS3_GAME/";
++			m_dir = "/dev_bdvd/PS3_GAME";
+ 
+ 			std::string path;
+ 			std::vector<std::string> dir_queue;
+@@ -1774,9 +1774,7 @@ game_boot_result Emulator::Load(const std::string& title_id, bool is_disc_patch,
+ 			// PS1 Classic located in dev_hdd0/game
+ 			sys_log.notice("PS1 Game: %s, %s", m_title_id, m_title);
+ 
+-			const std::string tail = m_path.substr(hdd0_game.size());
+-			const std::string dirname = fmt::trim_front(tail, fs::delim).substr(0, tail.find_first_of(fs::delim));
+-			const std::string game_path = "/dev_hdd0/game/" + dirname;
++			const std::string game_path = "/dev_hdd0/game/" + m_path.substr(hdd0_game.size(), 9);
+ 
+ 			argv.resize(9);
+ 			argv[0] = "/dev_flash/ps1emu/ps1_newemu.self";
+@@ -1802,9 +1800,7 @@ game_boot_result Emulator::Load(const std::string& title_id, bool is_disc_patch,
+ 			// PSP Remaster located in dev_hdd0/game
+ 			sys_log.notice("PSP Remaster Game: %s, %s", m_title_id, m_title);
+ 
+-			const std::string tail = m_path.substr(hdd0_game.size());
+-			const std::string dirname = fmt::trim_front(tail, fs::delim).substr(0, tail.find_first_of(fs::delim));
+-			const std::string game_path = "/dev_hdd0/game/" + dirname;
++			const std::string game_path = "/dev_hdd0/game/" + m_path.substr(hdd0_game.size(), 9);
+ 
+ 			argv.resize(2);
+ 			argv[0] = "/dev_flash/pspemu/psp_emulator.self";
+@@ -1821,8 +1817,7 @@ game_boot_result Emulator::Load(const std::string& title_id, bool is_disc_patch,
+ 				// Add HG games not in HDD0 to games.yml
+ 				[[maybe_unused]] const games_config::result res = m_games_config.add_external_hdd_game(m_title_id, game_dir);
+ 
+-				const std::string dir = fmt::trim(game_dir.substr(fs::get_parent_dir_view(game_dir).size() + 1), fs::delim);
+-				vfs::mount("/dev_hdd0/game/" + dir, game_dir + '/');
++				vfs::mount("/dev_hdd0/game/" + m_title_id, game_dir + '/');
+ 			}
+ 		}
+ 		else if (!inherited_ps3_game_path.empty() || (from_hdd0_game && m_cat == "DG" && disc.empty()))
+@@ -2145,19 +2140,14 @@ game_boot_result Emulator::Load(const std::string& title_id, bool is_disc_patch,
+ 
+ 				if (from_hdd0_game && m_cat == "DG")
+ 				{
+-					const std::string tail = resolved_path.substr(resolved_hdd0.size());
+-					const std::string tail_usrdir = tail.substr(tail.find_first_of(fs::delim) + 1);
+-					const std::string dirname = tail.substr(0, tail.find_first_of(fs::delim));
+-					argv[0] = "/dev_bdvd/PS3_GAME/" + unescape(tail_usrdir);
+-					m_dir = "/dev_hdd0/game/" + dirname + "/";
++					argv[0] = "/dev_bdvd/PS3_GAME/" + unescape(resolved_path.substr(resolved_hdd0.size() + 10));
++					m_dir = "/dev_hdd0/game/" + resolved_path.substr(resolved_hdd0.size(), 10);
+ 					sys_log.notice("Disc path: %s", m_dir);
+ 				}
+ 				else if (from_hdd0_game)
+ 				{
+-					const std::string tail = resolved_path.substr(resolved_hdd0.size());
+-					const std::string dirname = tail.substr(0, tail.find_first_of(fs::delim));
+-					argv[0] = "/dev_hdd0/game/" + unescape(tail);
+-					m_dir = "/dev_hdd0/game/" + dirname + "/";
++					argv[0] = "/dev_hdd0/game/" + unescape(resolved_path.substr(resolved_hdd0.size()));
++					m_dir = "/dev_hdd0/game/" + resolved_path.substr(resolved_hdd0.size(), 10);
+ 					sys_log.notice("Boot path: %s", m_dir);
+ 				}
+ 				else if (!bdvd_dir.empty() && fs::is_dir(bdvd_dir))
+@@ -2183,9 +2173,7 @@ game_boot_result Emulator::Load(const std::string& title_id, bool is_disc_patch,
+ 						game_dir = game_dir.substr(0, game_dir.size() - 4);
+ 					}
+ 
+-					const std::string dir = fmt::trim(game_dir.substr(fs::get_parent_dir_view(game_dir).size() + 1), fs::delim);
+-
+-					m_dir = "/dev_hdd0/game/" + dir + '/';
++					m_dir = "/dev_hdd0/game/" + m_title_id + '/';
+ 					argv[0] = m_dir + unescape(resolved_path.substr(GetCallbacks().resolve_path(game_dir).size()));
+ 					sys_log.notice("Boot path: %s", m_dir);
+ 				}
+diff --git a/rpcs3/Emu/games_config.cpp b/rpcs3/Emu/games_config.cpp
+index 8ab7bec07..96e8a07cb 100644
+--- a/rpcs3/Emu/games_config.cpp
++++ b/rpcs3/Emu/games_config.cpp
+@@ -104,7 +104,7 @@ bool games_config::save_nl()
+ 
+ 	fs::pending_file temp(fs::get_config_dir() + "/games.yml");
+ 
+-	if (temp.file && temp.file.write(out.c_str(), out.size()) >= out.size() && temp.commit())
++	if (temp.file && temp.file.write(out.c_str(), out.size()), temp.commit())
+ 	{
+ 		m_dirty = false;
+ 		return true;
