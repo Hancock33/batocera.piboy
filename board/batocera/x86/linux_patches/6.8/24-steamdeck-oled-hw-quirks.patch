@@ -47,7 +47,7 @@ index 7672abe6c140..568a816bcf58 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index d4f525b66a09..8e28ef07f93a 100644
+index 51ba05a50e62..a640c19210f7 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -153,6 +153,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_35_DMUB);
@@ -60,7 +60,7 @@ index d4f525b66a09..8e28ef07f93a 100644
  /**
   * DOC: overview
   *
-@@ -4086,7 +4089,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4093,7 +4096,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  	return 0;
  }
  
@@ -69,7 +69,7 @@ index d4f525b66a09..8e28ef07f93a 100644
  #define AMDGPU_DM_DEFAULT_MAX_BACKLIGHT 255
  #define AUX_BL_DEFAULT_TRANSITION_TIME_MS 50
  
-@@ -4104,11 +4107,27 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
+@@ -4111,11 +4114,27 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
  	amdgpu_acpi_get_backlight_caps(&caps);
  	if (caps.caps_valid) {
  		dm->backlight_caps[bl_idx].caps_valid = true;
@@ -97,7 +97,7 @@ index d4f525b66a09..8e28ef07f93a 100644
  		dm->backlight_caps[bl_idx].min_input_signal =
  				AMDGPU_DM_DEFAULT_MIN_BACKLIGHT;
  		dm->backlight_caps[bl_idx].max_input_signal =
-@@ -4118,6 +4137,9 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
+@@ -4125,6 +4144,9 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
  	if (dm->backlight_caps[bl_idx].aux_support)
  		return;
  
@@ -107,7 +107,7 @@ index d4f525b66a09..8e28ef07f93a 100644
  	dm->backlight_caps[bl_idx].min_input_signal = AMDGPU_DM_DEFAULT_MIN_BACKLIGHT;
  	dm->backlight_caps[bl_idx].max_input_signal = AMDGPU_DM_DEFAULT_MAX_BACKLIGHT;
  #endif
-@@ -4149,7 +4171,7 @@ static u32 convert_brightness_from_user(const struct amdgpu_dm_backlight_caps *c
+@@ -4156,7 +4178,7 @@ static u32 convert_brightness_from_user(const struct amdgpu_dm_backlight_caps *c
  	if (!get_brightness_range(caps, &min, &max))
  		return brightness;
  
@@ -116,7 +116,7 @@ index d4f525b66a09..8e28ef07f93a 100644
  	return min + DIV_ROUND_CLOSEST((max - min) * brightness,
  				       AMDGPU_MAX_BL_LEVEL);
  }
-@@ -4164,7 +4186,7 @@ static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *cap
+@@ -4171,7 +4193,7 @@ static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *cap
  
  	if (brightness < min)
  		return 0;
@@ -125,7 +125,7 @@ index d4f525b66a09..8e28ef07f93a 100644
  	return DIV_ROUND_CLOSEST(AMDGPU_MAX_BL_LEVEL * (brightness - min),
  				 max - min);
  }
-@@ -7433,7 +7455,8 @@ static int amdgpu_dm_connector_get_modes(struct drm_connector *connector)
+@@ -7443,7 +7465,8 @@ static int amdgpu_dm_connector_get_modes(struct drm_connector *connector)
  				drm_add_modes_noedid(connector, 1920, 1080);
  	} else {
  		amdgpu_dm_connector_ddc_get_modes(connector, edid);
@@ -135,7 +135,7 @@ index d4f525b66a09..8e28ef07f93a 100644
  		amdgpu_dm_connector_add_freesync_modes(connector, edid);
  	}
  	amdgpu_dm_fbc_init(connector);
-@@ -8189,7 +8212,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -8199,7 +8222,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -174,10 +174,10 @@ index 8fe66c367850..97e525f066c9 100644
  
  	/* TODO: DYNAMIC_VALIDATION needs to be implemented */
 diff --git a/drivers/gpu/drm/drm_panel_orientation_quirks.c b/drivers/gpu/drm/drm_panel_orientation_quirks.c
-index 3d92f66e550c..b6a5548c7242 100644
+index 8da0d90df673..080328e10d71 100644
 --- a/drivers/gpu/drm/drm_panel_orientation_quirks.c
 +++ b/drivers/gpu/drm/drm_panel_orientation_quirks.c
-@@ -409,6 +409,13 @@ static const struct dmi_system_id orientation_data[] = {
+@@ -415,6 +415,13 @@ static const struct dmi_system_id orientation_data[] = {
  		  DMI_EXACT_MATCH(DMI_PRODUCT_VERSION, "1"),
  		},
  		.driver_data = (void *)&lcd800x1280_rightside_up,
