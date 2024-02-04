@@ -5,6 +5,13 @@
   Future WINE bottles are now provisioned here: `/userdata/system/wine-bottles` under their respective system name. Xbox360 emulators (Xenia & Xenai-Canary) have now moved to support VKD3D (D3D12 to Vulkan) for exanded compatibility by default with the previous native Vulkan available as an option.
   New saves will be in `/userdata/saves/xbox360` where you can transfer your previous saves to continue gaming where you left off. You can then free up space by removing your previous WINE bottles from `userdata/saves` respectively after starting each emulator and forming the new WINE bottle accordingly.
   If you have used squashfs for your Windows games you can choose to unsquash & recreate the bottle with the new runner.
+- Enhanced Secure Boot support for x86_64 systems requires
+  interaction with the system's Trusted Platform Module (TPM) even
+  when Secure Boot is disabled.  When booting v39 or later you may
+  need to either disable the TPM or acknowledge the intention to
+  boot Batocera when presented with the blue "Boot Option
+  Restoration" screen.  See https://wiki.batocera.org/secureboot#tpm
+  for more detailed instructions.
 ### Hardware
 - Initial support for the AYN Loki MiniPro (Speakers not working)
 - Initial support for the Anbernic RG353V
@@ -13,6 +20,13 @@
 - Initial support for the Steam Deck OLED
 - Support for Thunderbolt 3 / USB4 eGPU chassis
 ### Added
+- XEMU ES seting for Vsync.
+- ES setting to automatically detect and enable 16:9 aspect ratio for libretro cores if game suports it.
+- N64 ES setting to automatically detect and enable rumble pak if game supports it.
+- Additional sound ES settings for sega libretro cores.
+- Automatically remap inputs by guid/device name for n64 style controllers and 6 face button controllers.
+- Added auto-mapping ES setting for 6 face button style controllers for genesisplusgx and picodrive libretro cores.
+- Additional frame limit options to RPCS3.
 - New Powermode ES setting. Adjusts cpu governor/system power usage while in-game.
 - New TDP setting to adjust TDP wattage values of supported Ryzen Mobile Series CPU's per system or globally.
 - Additional ES controller settings for Dolphin.
@@ -29,7 +43,7 @@
 - Sonic 3 A.I.R. (Angel Island Revisited) port.
 - New supported steering wheels:
   - Logitech : Driving Force, G29, G920, G923 (PS4), Momo
-  - Thrustmaster T300RS
+  - Thrustmaster : T300RS, Ferrari 458 Spider
   - HORI Racing Wheel APEX
   - MOZA Racing R9
 - More steering wheel support :
@@ -51,7 +65,12 @@
 - Support for third-party Wiimotes
   - Enable the wiimote3rdparty service in SYSTEM -> SERVICES
 - Hotkey+south padtokey for pcsx2 OSD menu
+- Language: Vietnamese
+- Support CONFIGS@ mount point in S11share
 ### Fixed
+- Yabasanshiro input mapping fix.
+- RPCS3 Async texture ES setting was not being applied.
+- Dolphin bug preventing wii pad profiles working.
 - Dolphin bug that prevented full range of analog trigger axis being used.
 - Flycast per pixel sorting option if renderer not explicitly set
 - Bug preventing scraping of msx-family systems
@@ -66,7 +85,16 @@
 - AMD Prime defaulting to provider 1 when it could be another provider.
 - Sinden Lightgun border not showing on 4K resolution in model2 gun games
 - ES script logs clobbering game logs #1666
+- Dolphin does not use Motion Control on DualSense controllers when selected in ES.
+- Supermodel gun games failing when number of guns were more than the number of controllers
+- CUSTOMESOPTIONS could not be set when not running xorg #10220
+- ANYEXTERNAL storage was not functioning in certain scenarios #3455
+- Hostname was not sent to DHCP server and hostnames from DHCP were not	honored #7502
+- Fixed retroachivements for pcsx2 and duckstation
+- Restore missing /sbin/hwclock binary
 ### Changed
+- RPCS3 SPU cache enabled by default.
+- Changes made to Mupen64plus joystick sensitivity and deadzone.
 - L|R activate in-game "Z" input in Dolphin for GC controllers/GC games if controller has L+R inputs mapped.
 - PS2 BIOS files should be put in /userdata/bios/ps2
 - Migrated C-Dogs SDL (cdogs) assets to content downloader
@@ -78,6 +106,8 @@
 - Streamlined x86_64 Secure Boot support
 - Wii gun games now 100% playable with light guns (based on 5 buttons mapping)
 - Enable performance governor by default on Raspberry_Pi_Zero_2_W_Rev_1_0
+- Game assets for cdogs and superbroswar migrated to content downloader
+- Improved workaround for mounting NTFS volumes
 ### Updated
 - Retroarch to 1.16.0.3
 - GroovyMAME 0.261 - Switchres 2.002z
@@ -170,7 +200,7 @@
 - Proton & Lutris replaced by the Glorious Eggroll custom WINE runner
 - Wine Tricks to 20240105
 - FAudio to 23.10
-- Nvidia production driver to 545.29.06
+- Nvidia production driver to 550.40.07 (beta)
 - Nvidia legacy driver to 470.223.02
 - SDL2 to 2.28.5
 - Sound Open Firmware to 2023.12

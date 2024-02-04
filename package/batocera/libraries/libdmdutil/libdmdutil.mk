@@ -3,8 +3,8 @@
 # libdmdutil
 #
 ################################################################################
-# Version: Commits on Jan 27, 2024
-LIBDMDUTIL_VERSION = 0a7e81f64c32b02596f11c969a07207bea48a8cc
+# Version: Commits on Feb 03, 2024
+LIBDMDUTIL_VERSION = 342f687a9067f4f3ae2fb7863ef296b3f44253e0
 LIBDMDUTIL_SITE = $(call github,vpinball,libdmdutil,$(LIBDMDUTIL_VERSION))
 LIBDMDUTIL_LICENSE = BSD-3-Clause
 LIBDMDUTIL_LICENSE_FILES = LICENSE
@@ -15,6 +15,7 @@ LIBDMDUTIL_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 LIBDMDUTIL_CONF_OPTS += -DBUILD_STATIC=OFF
 LIBDMDUTIL_CONF_OPTS += -DPLATFORM=linux
 LIBDMDUTIL_CONF_OPTS += -DARCH=$(DMDUTIL_ARCH)
+LIBDMDUTIL_CONF_OPTS += -DPOST_BUILD_COPY_EXT_LIBS=OFF
 
 # handle supported target platforms
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588),y)

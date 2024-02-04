@@ -1,28 +1,20 @@
-diff --git a/externals/nx_tzdb/CMakeLists.txt b/externals/nx_tzdb/CMakeLists.txt
-index 13723f175..0fad24642 100644
---- a/externals/nx_tzdb/CMakeLists.txt
-+++ b/externals/nx_tzdb/CMakeLists.txt
-@@ -32,7 +32,7 @@ set(NX_TZDB_ARCHIVE "${CMAKE_CURRENT_BINARY_DIR}/${NX_TZDB_VERSION}.zip")
+diff --git a/externals/nx_tzdb/tzdb_to_nx/src/tzdb/CMakeLists.txt b/externals/nx_tzdb/tzdb_to_nx/src/tzdb/CMakeLists.txt.new
+index 119002b20b..92660b2994 100644
+--- a/externals/nx_tzdb/tzdb_to_nx/src/tzdb/CMakeLists.txt
++++ b/externals/nx_tzdb/tzdb_to_nx/src/tzdb/CMakeLists.txt.new
+@@ -13,14 +13,7 @@ set(NX_ZONEINFO_DIR "${NX_TZDB_DIR}/zoneinfo")
  
- set(NX_TZDB_ROMFS_DIR "${CMAKE_CURRENT_BINARY_DIR}/nx_tzdb")
+ set(TZDB_VERSION_FILE ${TZ_SOURCE_DIR}/NEWS)
  
--if ((NOT CAN_BUILD_NX_TZDB OR YUZU_DOWNLOAD_TIME_ZONE_DATA) AND NOT EXISTS ${NX_TZDB_ROMFS_DIR})
-+if ((NOT CAN_BUILD_NX_TZDB OR YUZU_DOWNLOAD_TIME_ZONE_DATA) AND NOT EXISTS ${NX_TZDB_ARCHIVE})
-     set(NX_TZDB_DOWNLOAD_URL "https://github.com/lat9nq/tzdb_to_nx/releases/download/${NX_TZDB_VERSION}/${NX_TZDB_VERSION}.zip")
+-execute_process(
+-    COMMAND 
+-        ${GIT_PROGRAM} log --pretty=%at -n1 NEWS
+-    OUTPUT_VARIABLE
+-        TZ_COMMIT_TIME
+-    WORKING_DIRECTORY
+-        ${TZ_SOURCE_DIR}
+-    COMMAND_ERROR_IS_FATAL ANY)
++set(TZ_COMMIT_TIME "1660610838")
  
-     message(STATUS "Downloading time zone data from ${NX_TZDB_DOWNLOAD_URL}...")
-diff --git a/externals/nx_tzdb/NxTzdbCreateHeader.cmake b/externals/nx_tzdb/NxTzdbCreateHeader.cmake
-index 95606d862..8c29e1167 100644
---- a/externals/nx_tzdb/NxTzdbCreateHeader.cmake
-+++ b/externals/nx_tzdb/NxTzdbCreateHeader.cmake
-@@ -11,10 +11,6 @@ execute_process(
-     WORKING_DIRECTORY ${ZONE_PATH}
-     OUTPUT_VARIABLE FILE_LIST)
+ string(REPLACE "\n" "" TZ_COMMIT_TIME "${TZ_COMMIT_TIME}")
  
--if (NOT FILE_LIST)
--    message(FATAL_ERROR "No timezone files found in directory ${ZONE_PATH}, did the download fail?")
--endif()
--
- set(DIRECTORY_NAME ${HEADER_NAME})
- 
- set(FILE_DATA "")
