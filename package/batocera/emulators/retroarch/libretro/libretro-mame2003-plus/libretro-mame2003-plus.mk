@@ -3,8 +3,8 @@
 # libretro-mame2003-plus
 #
 ################################################################################
-# Version: Commits on Jan 30, 2024
-LIBRETRO_MAME2003_PLUS_VERSION = fb653702f04c2f4544ed2c6ef03d6fb33c7de35b
+# Version: Commits on Feb 03, 2024
+LIBRETRO_MAME2003_PLUS_VERSION = 53c6083a2044c3529a436b51c5206cd9a896d12c
 LIBRETRO_MAME2003_PLUS_SITE = $(call github,libretro,mame2003-plus-libretro,$(LIBRETRO_MAME2003_PLUS_VERSION))
 LIBRETRO_MAME2003_PLUS_LICENSE = MAME
 
@@ -38,6 +38,8 @@ LIBRETRO_MAME2003_PLUS_EXTRA_ARGS = HAS_CYCLONE=1 HAS_DRZ80=1
 endif
 
 define LIBRETRO_MAME2003_PLUS_BUILD_CMDS
+	$(SED) "s|-ffast-math|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
+
 	mkdir -p $(@D)/obj/mame/cpu/ccpu
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile platform="$(LIBRETRO_MAME2003_PLUS_PLATFORM)" \
 		OPTIMIZE=s SYMBOLS=1 SYMLEVEL=1 STRIP_SYMBOLS=1 \

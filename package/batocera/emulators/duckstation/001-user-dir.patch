@@ -58,10 +58,10 @@ index 1c0f2014..85d0a3a9 100644
    if(ENABLE_X11)
      target_sources(glad PRIVATE src/glad_glx.c)
 diff --git a/src/core/settings.cpp b/src/core/settings.cpp
-index bbcfa715..937dc869 100644
+index 2a4577ad..15034294 100644
 --- a/src/core/settings.cpp
 +++ b/src/core/settings.cpp
-@@ -1508,18 +1508,18 @@ std::string EmuFolders::UserResources;
+@@ -1519,18 +1519,18 @@ std::string EmuFolders::UserResources;
  
  void EmuFolders::SetDefaults()
  {
@@ -92,7 +92,7 @@ index bbcfa715..937dc869 100644
    UserResources = Path::Combine(DataRoot, "resources");
  }
  
-@@ -1569,18 +1569,18 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
+@@ -1580,18 +1580,18 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
  void EmuFolders::Save(SettingsInterface& si)
  {
    // convert back to relative

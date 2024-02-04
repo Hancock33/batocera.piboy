@@ -8712,7 +8712,7 @@ msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
 msgstr "Atur suara pertama perangkat Batocera (Standar)"
 
-#. TRANSLATION: cemu, openbor/openbor7530, sonic2013, soniccd, sonicmania, ...
+#. TRANSLATION: cemu, openbor/openbor7530, xemu, sonic2013, soniccd, ...
 msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr "Perbaiki screen tearing."

@@ -5,13 +5,13 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: batocera-emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-01-23 17:04+0000\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: pt_BR\n"
+"POT-Creation-Date: 2019-01-15 21:09+0100\n"
+"PO-Revision-Date: 2024-02-02 01:07+0000\n"
+"Last-Translator: Maioni\n"
+"Language-Team: Portuguese (Brasil)\n"
+"Language: pt-BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,7 +21,7 @@ msgstr ""
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Adjust the cpu power profile while in-game."
-msgstr " Ajuste o perfil de energia do processador durante o jogo."
+msgstr "Ajusta o perfil de energia do processador durante o jogo."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -50,7 +50,7 @@ msgid ""
 "based on it's default max value. Caution, setting wattage too high could "
 "damage your device."
 msgstr ""
-" Ajuste a porcentagem de energia (watts) fornecida para o série de "
+"Ajusta a porcentagem de energia (watts) fornecida para o série de "
 "processadores móveis da Ryzen com base em seu valor máximo padrão. Cuidado, "
 "a configuração de potência muito alta pode danificar seu dispositivo."
 
@@ -97,7 +97,7 @@ msgstr "Define a resolução do monitor. Não afeta a resolução de renderizaç
 #. TRANSLATION: shared, shared, shared, shared, shared, ...
 msgctxt "game_options"
 msgid "VIDEO SETTINGS"
-msgstr ""
+msgstr "AJUSTES DE VÍDEO"
 
 #. TRANSLATION: shared, mame
 msgctxt "game_options"
@@ -1454,11 +1454,13 @@ msgid ""
 "Software mode is faster and more accurate, while OpenGL mode supports "
 "scaling 3D graphics."
 msgstr ""
+"O modo de software é mais rápido e preciso, enquanto que o modo OpenGL "
+"suporta gráficos 3D em escala."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "RENDERER MODE"
-msgstr ""
+msgstr "MODO DE RENDERIZAÇÃO"
 
 #. TRANSLATION: libretro/melondsds, citra, duckstation, melonds, openbor, ...
 msgctxt "game_options"
@@ -1468,52 +1470,53 @@ msgstr "Software"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "OpenGL (Overwrites Libretro API settings)"
-msgstr ""
+msgstr "OpenGL (Sobrepõe os ajustes da API Libretro)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Degree in which 3D graphics are scaled up. OpenGL renderer only."
 msgstr ""
+"Grau em que os gráficos 3D são ampliados. Somente para o renderizador OpenGL."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "1x native (256 x 192)"
-msgstr ""
+msgstr "1x nativo (256 x 192)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "2x native (512 x 384)"
-msgstr ""
+msgstr "2x nativo (512 x 384)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "3x native (768 x 576)"
-msgstr ""
+msgstr "3x nativo (768 x 576)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "4x native (1024 x 768)"
-msgstr ""
+msgstr "4x nativo (1024 x 768)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "5x native (1280 x 960)"
-msgstr ""
+msgstr "5x nativo (1280 x 960)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "6x native (1536 x 1152)"
-msgstr ""
+msgstr "6x nativo (1536 x 1152)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "7x native (1792 x 1344)"
-msgstr ""
+msgstr "6x nativo (1536 x 1152)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "8x native (2048 x 1536)"
-msgstr ""
+msgstr "8x nativo (2048 x 1536)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -1521,11 +1524,13 @@ msgid ""
 "Enable this if your game's 3D modles are not rendered correctly. OpenGL "
 "renderer only."
 msgstr ""
+"Ative essa opção se os modelos 3D do seu jogo não forem renderizados "
+"corretamente. Somente no renderizador OpenGL."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "IMPROVED POLYGON SPLITTING"
-msgstr ""
+msgstr "MELHORIA NA DIVISÃO DE POLÍGONOS"
 
 #. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, ...
 msgctxt "game_options"
@@ -1536,11 +1541,13 @@ msgstr "Ativado"
 msgctxt "game_options"
 msgid "Affects how the emulated screens are scaled. OpenGL renderer only."
 msgstr ""
+"Afeta a forma como as telas emuladas são dimensionadas. Somente no "
+"renderizador OpenGL."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "SCREEN FILTERING"
-msgstr ""
+msgstr "FILTRO DE TELA"
 
 #. TRANSLATION: libretro/melondsds, libretro/swanstation, libretro/duckstation, libretro/parallel_n64, openbor, ...
 msgctxt "game_options"
@@ -1555,102 +1562,104 @@ msgstr "Linear"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Determines how the cursor should apprear on the botton screen."
-msgstr ""
+msgstr "Determina como o cursor deve aparecer na tela inferior."
 
 #. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds
 msgctxt "game_options"
 msgid "SCREEN SETTINGS"
-msgstr ""
+msgstr "AJUSTES DE TELA"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "CURSOR MODE"
-msgstr ""
+msgstr "MODO DO CURSOR"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Never"
-msgstr ""
+msgstr "Nunca"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "While Touching"
-msgstr ""
+msgstr "Enquanto estiver tocando"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Until Timeout"
-msgstr ""
+msgstr "Até o tempo limite"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Always"
-msgstr ""
+msgstr "Sempre"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Cursor timeout in seconds when using Cursor Mode - Until Timeout."
 msgstr ""
+"Tempo limite do cursor em segundos ao usar o Modo do Cursor - Até o tempo "
+"limite."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "CURSOR TIMEOUT"
-msgstr ""
+msgstr "TEMPO LIMITE DO CURSOR"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "1 second"
-msgstr ""
+msgstr "1 segundo"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "2 seconds"
-msgstr ""
+msgstr "2 segundos"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "3 seconds"
-msgstr ""
+msgstr "3 segundos"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "5 seconds"
-msgstr ""
+msgstr "5 segundos"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "10 seconds"
-msgstr ""
+msgstr "10 segundos"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "15 seconds"
-msgstr ""
+msgstr "15 segundos"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "20 seconds"
-msgstr ""
+msgstr "20 segundos"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "30 seconds"
-msgstr ""
+msgstr "30 segundos"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "60 seconds"
-msgstr ""
+msgstr "60 segundos"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Determine how the console's touch screen in emulated."
-msgstr ""
+msgstr "Determine como a tela de toque do videogame é emulada."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "TOUCH MODE"
-msgstr ""
+msgstr "MODO DE TOQUE"
 
 #. TRANSLATION: libretro/melondsds, libretro/puae, libretro/puae, libretro/puae, libretro/puae, ...
 msgctxt "game_options"
@@ -1660,7 +1669,7 @@ msgstr "Controle"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Pointer"
-msgstr ""
+msgstr "Ponteiro"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -1668,51 +1677,53 @@ msgid ""
 "Use this to play online with custom servers that reimplement the "
 "discontinued Nintendo Wi-Fi."
 msgstr ""
+"Use isso para jogar on-line com servidores personalizados que reimplementam "
+"o Nintendo Wi-Fi descontinuado."
 
 #. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds
 msgctxt "game_options"
 msgid "FIRMWARE SETTINGS"
-msgstr ""
+msgstr "CONFIGURAÇÕES DE FIRMWARE"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "DNS OVERRIDE"
-msgstr ""
+msgstr "SOBREPOSIÇÃO DE DNS"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Kaeru WFC (178.62.43.212)"
-msgstr ""
+msgstr "Kaeru WFC (178.62.43.212)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "AltWFC (172.104.88.237)"
-msgstr ""
+msgstr "AltWFC (172.104.88.237)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Wiimmfi (95.217.77.181)"
-msgstr ""
+msgstr "Wiimmfi (95.217.77.181)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Force Default DNS"
-msgstr ""
+msgstr "Forçar DNS Padrão"
 
 #. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds
 msgctxt "game_options"
 msgid "Don't Override"
-msgstr ""
+msgstr "Não Sobrepor"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Overrides the language mode of the emulated console."
-msgstr ""
+msgstr "Sobrepõe o modo de idioma do videogame emulado."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Use Host"
-msgstr ""
+msgstr "Usar máquina anfitriã"
 
 #. TRANSLATION: libretro/melondsds, libretro/dolphin, libretro/kronos, cemu, flycast/vitaquake3, ...
 msgctxt "game_options"
@@ -1722,22 +1733,22 @@ msgstr "Inglês"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "The theme colour of the emulated console."
-msgstr ""
+msgstr "A cor do tema do videogame emulado."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "FAVOURITE COLOUR"
-msgstr ""
+msgstr "COR FAVORITA"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Gray"
-msgstr ""
+msgstr "Cinza"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Brown"
-msgstr ""
+msgstr "Marrom"
 
 #. TRANSLATION: libretro/melondsds, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -1747,42 +1758,42 @@ msgstr "Vermelho"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Light Pink"
-msgstr ""
+msgstr "Rosa claro"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Orange"
-msgstr ""
+msgstr "Laranja"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Yellow"
-msgstr ""
+msgstr "Amarelo"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Lime"
-msgstr ""
+msgstr "Limão"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Light Green"
-msgstr ""
+msgstr "Verde Claro"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Dark Green"
-msgstr ""
+msgstr "Verde Escuro"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Turquoise"
-msgstr ""
+msgstr "Turquesa"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Light Blue"
-msgstr ""
+msgstr "Azul Claro"
 
 #. TRANSLATION: libretro/melondsds, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -1792,324 +1803,328 @@ msgstr "Azul"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Dark Blue"
-msgstr ""
+msgstr "Azul Escuro"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Dark Purple"
-msgstr ""
+msgstr "Roxo Escuro"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Light Purple"
-msgstr ""
+msgstr "Roxo Claro"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Dark Pink"
-msgstr ""
+msgstr "Rosa Escuro"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "The month of your birthay."
-msgstr ""
+msgstr "O mês do seu aniversário."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "BIRTH MONTH"
-msgstr ""
+msgstr "MÊS DE NASCIMENTO"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "January"
-msgstr ""
+msgstr "Janeiro"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "February"
-msgstr ""
+msgstr "Fevereiro"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "March"
-msgstr ""
+msgstr "Março"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "April"
-msgstr ""
+msgstr "Abril"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "May"
-msgstr ""
+msgstr "Maio"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "June"
-msgstr ""
+msgstr "Junho"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "July"
-msgstr ""
+msgstr "Julho"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "August"
-msgstr ""
+msgstr "Agosto"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "September"
-msgstr ""
+msgstr "Setembro"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "October"
-msgstr ""
+msgstr "Outubro"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "November"
-msgstr ""
+msgstr "Novembro"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "December"
-msgstr ""
+msgstr "Dezembro"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "The day within the month of your birthday."
-msgstr ""
+msgstr "O dia do mês do seu aniversário."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "BIRTH DAY"
-msgstr ""
+msgstr "DIA DO NASCIMENTO"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "1st"
-msgstr ""
+msgstr "1º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "2nd"
-msgstr ""
+msgstr "2º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "3rd"
-msgstr ""
+msgstr "3º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "4th"
-msgstr ""
+msgstr "4º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "5th"
-msgstr ""
+msgstr "5º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "6th"
-msgstr ""
+msgstr "6º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "7th"
-msgstr ""
+msgstr "7º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "8th"
-msgstr ""
+msgstr "8º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "9th"
-msgstr ""
+msgstr "9º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "10th"
-msgstr ""
+msgstr "10º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "11th"
-msgstr ""
+msgstr "11º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "12th"
-msgstr ""
+msgstr "12º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "13th"
-msgstr ""
+msgstr "13º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "14th"
-msgstr ""
+msgstr "14º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "15th"
-msgstr ""
+msgstr "15º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "16th"
-msgstr ""
+msgstr "16º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "17th"
-msgstr ""
+msgstr "17º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "18th"
-msgstr ""
+msgstr "18º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "19th"
-msgstr ""
+msgstr "19º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "20th"
-msgstr ""
+msgstr "20º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "21st"
-msgstr ""
+msgstr "21º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "22nd"
-msgstr ""
+msgstr "22º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "23rd"
-msgstr ""
+msgstr "23º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "24th"
-msgstr ""
+msgstr "24º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "25th"
-msgstr ""
+msgstr "25º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "26th"
-msgstr ""
+msgstr "26º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "27th"
-msgstr ""
+msgstr "27º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "28th"
-msgstr ""
+msgstr "28º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "29th"
-msgstr ""
+msgstr "29º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "30th"
-msgstr ""
+msgstr "30º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "31st"
-msgstr ""
+msgstr "31º"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid ""
 "Enable to display an on-screen message if trying to use unsupported features."
 msgstr ""
+"Ativa a exibição de uma mensagem na tela ao tentar usar recursos não "
+"suportados."
 
 #. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, ...
 msgctxt "game_options"
 msgid "ON-SCREEN DISPLAY & NOTIFCATIONS"
-msgstr ""
+msgstr "EXIBIÇÃO NA TELA E NOTIFICAÇÕES"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "WARN ABOUT UNSUPPORTED FEATURES"
-msgstr ""
+msgstr "AVISAR SOBRE RECURSOS NÃO SUPORTADOS"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Enable to display if your BIOS haas known problems."
-msgstr ""
+msgstr "Ativa para exibir se o seu BIOS tem problemas conhecidos."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "WARN ABOUT BIOS PROBLEMS"
-msgstr ""
+msgstr "AVISO SOBRE PROBLEMAS DO BIOS"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid ""
 "Enable to show which screen layout with the configured sequence is active."
 msgstr ""
+"Ative para mostrar qual a disposição de tela quando a sequência configurada "
+"está ativa."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "SHOW SCREEN LAYOUT"
-msgstr ""
+msgstr "EXIBIR DISPOSIÇÃO DE TELA"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Enable to show whether your device's microphone is active."
-msgstr ""
+msgstr "Ative para mostrar se o microfone do seu dispositivo está ativo."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "SHOW HOST MICROPHONE STATE"
-msgstr ""
+msgstr "EXIBIR ESTADO DO MICROFONE DO ANFITRIÃO"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Enable to show whether your device's camera is active."
-msgstr ""
+msgstr "Ative para mostrar se a câmera do seu dispositivo está ativa."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "SHOW HOST CAMERA STATE"
-msgstr ""
+msgstr "EXIBIR ESTADO DA CÂMERA DO ANFITRIÃO"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Enable to show whether the emulated screens are closed."
-msgstr ""
+msgstr "Ative para mostrar se as telas emuladas estão fechadas."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "SHOW LID STATE"
-msgstr ""
+msgstr "MOSTRAR ESTADO DA TAMPA"
 
 #. TRANSLATION: libretro/dolphin, dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -5848,7 +5863,7 @@ msgstr "Dynarec (Mais Rápido)"
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "Cached Interpreter"
-msgstr "Interpretador em Memória Cache"
+msgstr "Interpretador em Memória Temporária"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -8761,7 +8776,7 @@ msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
 msgstr "Batocera define o primeiro dispositivo de áudio (padrão)"
 
-#. TRANSLATION: cemu, openbor/openbor7530, sonic2013, soniccd, sonicmania, ...
+#. TRANSLATION: cemu, openbor/openbor7530, xemu, sonic2013, soniccd, ...
 msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr "Corrige a falta de sincronização da taxa de atualização da tela."
@@ -8859,7 +8874,8 @@ msgstr "ATIVAR INDICADOR DE DESEMPENHO"
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Enable notifications of cache, controller events etc."
-msgstr "Habilita notificações de memória cache, eventos do controlador etc."
+msgstr ""
+"Habilita notificações de memória temporária, eventos do controlador etc."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -8969,7 +8985,7 @@ msgstr "Reduz a gagueira que acontece ao compilar sombreamentos."
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
-msgstr "MEMÓRIA CACHE EM DISCO PARA SOMBREAMENTO"
+msgstr "MEMÓRIA TEMPORÁRIA EM DISCO PARA SOMBREAMENTO"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
@@ -9131,17 +9147,17 @@ msgstr "ATIVAR ANIMAÇÃO DE INICIALIZAÇÃO"
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Change the Gamecube system language."
-msgstr ""
+msgstr "Altera o idioma do sistema Gamecube."
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "GAMECUBE LANGUAGE"
-msgstr ""
+msgstr "IDIOMA DO GAMECUBE"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "English/Japanese"
-msgstr ""
+msgstr "Inglês/Japonês"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
@@ -9250,7 +9266,7 @@ msgstr ""
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "PRE-CACHE SHADERS"
-msgstr "MEMÓRIA PRÉ-CACHE DE SOMBREAMENTO"
+msgstr "MEMÓRIA PRÉ-TEMPORÁRIA DE SOMBREAMENTO"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9871,7 +9887,7 @@ msgstr "Interpretador (mais lento)"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Cached Interpreter (Faster)"
-msgstr "Interpretador em memória cache (mais rápido)"
+msgstr "Interpretador em memória temporária (mais rápido)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -10459,7 +10475,7 @@ msgctxt "game_options"
 msgid ""
 "Streaming Optimal Playable Settings, overrides other settings if enabled."
 msgstr ""
-"Ajustes Ideais para Reprodução de Transmissão de Video, substitui outros "
+"Ajustes Ideais para Reprodução de Transmissão de Video, sobrepõe outros "
 "ajustes se ativados."
 
 #. TRANSLATION: moonlight
@@ -11094,7 +11110,7 @@ msgstr "Parcial"
 #. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Full (Hash Cache)"
-msgstr "Completo (memoria cache de hash)"
+msgstr "Completo (memoria temporária de hash)"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -11721,13 +11737,13 @@ msgid ""
 "Disables the vertex cache. Might resolve missing or flickering graphics "
 "output but degrade performance."
 msgstr ""
-"Desativa a memória cache de vértices. Pode resolver gráficos ausentes ou "
-"piscando, mas diminui o desempenho."
+"Desativa a memória temporária de vértices. Pode resolver gráficos ausentes "
+"ou piscando, mas diminui o desempenho."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "DISABLE VERTEX CACHE"
-msgstr "DESATIVAR MEMÓRIA CACHE DE VÉRTICES"
+msgstr "DESATIVAR MEMÓRIA TEMPORÁRIA DE VÉRTICES"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -12759,7 +12775,7 @@ msgstr "ÁREA DE TRABALHO VIRTUAL"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Enable support for Chinese, Japanese and Korean input methods."
-msgstr ""
+msgstr "Ativa o suporte para métodos de entrada em chinês, japonês e coreano."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -12802,6 +12818,8 @@ msgid ""
 "Force Nvidia GPUs to always be reported as AMD GPUs to workaround game "
 "issues."
 msgstr ""
+"Força os Processadores Gráficos Nvidia a serem sempre relatadas como "
+"Processadores Gráficos AMD para contornar problemas de jogos."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -12827,13 +12845,13 @@ msgid ""
 "Reset the cache can fix some crashes if your game was running under Batocera "
 "29."
 msgstr ""
-"Reestabelecer o cache pode corrigir algumas falhas se o jogo estiver sendo "
-"executado no Batocera 29."
+"Reestabelecer a memória temporária pode corrigir algumas falhas se o jogo "
+"estiver sendo executado no Batocera 29."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "DXVK RESET CACHE"
-msgstr "REESTABELECER MEMÓRIA CHACHE DO DXVK"
+msgstr "REESTABELECER MEMÓRIA TEMPORÁRIA DO DXVK"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -12851,6 +12869,7 @@ msgstr "ATIVAR MODO NTFS"
 msgctxt "game_options"
 msgid "Useful to troubleshoot when your Windows game won't start of crashes."
 msgstr ""
+"Útil para solucionar problemas quando o jogo do Windows não inicia ou trava."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13161,7 +13180,7 @@ msgstr "Sonic CD (segure o salto)"
 #. TRANSLATION: sonicmania
 msgctxt "game_options"
 msgid "Enable triple buffering."
-msgstr "Ativar memória temporária de reserva tripla"
+msgstr "Ativar memória temporária de reserva tripla."
 
 #. TRANSLATION: sonicmania
 msgctxt "game_options"
@@ -14599,7 +14618,7 @@ msgstr "CORRER AUTOMATICAMENTE"
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Bobba Fett Face Player Fix"
-msgstr " Correção da Face do Bobba Fett"
+msgstr "Correção da Face do Bobba Fett"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -14708,16 +14727,19 @@ msgid ""
 "Turn on to configure settings from this GUI (Recommended). If disabled, you "
 "have to manually edit the Config File (Experts only - not recommended)."
 msgstr ""
+"Ative para definir os ajustes a partir desta Interface (recomendado). Se "
+"desativado, você terá de editar manualmente o arquivo de configuração "
+"(somente para especialistas - não recomendado)."
 
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
 msgid "EXPERT SETTINGS"
-msgstr ""
+msgstr "AJUSTES PARA ESPECIALISTAS"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "ENABLE EMULATIONSTATION CONFIGURATION"
-msgstr ""
+msgstr "ATIVAR CONFIGURAÇÃO DO EMULATIONSTATION"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -14785,7 +14807,7 @@ msgid ""
 "Fix screen tearing. Adaptive Sync (Default) synchronizes on video sync, "
 "except for late frames (below target FPS) which are displayed immediately."
 msgstr ""
-"Corrige o Corrige a falta de sincronização da taxa de atualização da tela. "
+"Corrige a falta de sincronização da taxa de atualização da tela. "
 "Sincronização Adaptiva (Padrão) sincroniza na sincronização de vídeo, exceto "
 "para quadros atrasados (abaixo dos quadros por segundos desejado), que são "
 "exibidos imediatamente."
@@ -14852,6 +14874,9 @@ msgid ""
 "pinmame rom. By default, settings come from the VPinballX.ini configuration "
 "file."
 msgstr ""
+"Visor de matriz de pontos extra (Dot-Matrix Display) para exibir a pontuação "
+"das mesas com um jogo pinMAME. Por padrão, os ajustes vêm do arquivo de "
+"configuração VPinballX.ini."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -14861,37 +14886,37 @@ msgstr "PINMAME DMD (VISOR DE MATRIZ DE PONTOS)"
 #. TRANSLATION: vpinball, vpinball, vpinball
 msgctxt "game_options"
 msgid "Top-Right Position, Small"
-msgstr ""
+msgstr "Posição Superior-Direita, Pequena"
 
 #. TRANSLATION: vpinball, vpinball, vpinball
 msgctxt "game_options"
 msgid "Top-Right Position, Medium"
-msgstr ""
+msgstr "Posição Superior-Direita, Média"
 
 #. TRANSLATION: vpinball, vpinball, vpinball
 msgctxt "game_options"
 msgid "Top-Right Position, Large"
-msgstr ""
+msgstr "Posição Superior-Direita, Grande"
 
 #. TRANSLATION: vpinball, vpinball, vpinball
 msgctxt "game_options"
 msgid "Top-Left Position, Small"
-msgstr ""
+msgstr "Posição Superior-Esquerda, Pequena"
 
 #. TRANSLATION: vpinball, vpinball, vpinball
 msgctxt "game_options"
 msgid "Top-Left Position, Medium"
-msgstr ""
+msgstr "Posição Superior-Esquerda, Média"
 
 #. TRANSLATION: vpinball, vpinball, vpinball
 msgctxt "game_options"
 msgid "Top-Left Position, Large"
-msgstr ""
+msgstr "Posição Superior-Esquerda, Grande"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "PinMAME DMD disabled"
-msgstr ""
+msgstr "PinMAME DMD desativado"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -14900,16 +14925,19 @@ msgid ""
 "without a rom. By default, settings come from the VPinballX.ini "
 "configuration file."
 msgstr ""
+"Visor de matriz de pontos extra (Dot-Matrix Display) para exibir a pontuação "
+"das mesas sem um jogo pinMAME. Por padrão, os ajustes vêm do arquivo de "
+"configuração VPinballX.ini."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "FLEX DMD"
-msgstr "FLEX DMD"
+msgstr "FLEX DMD (Dot Matrix Display)"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "FlexDMD disabled"
-msgstr ""
+msgstr "Flex DMD desabilitado"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -14917,6 +14945,8 @@ msgid ""
 "Upright glass panel displaying some illuminated artwork. By default, "
 "settings come from the VPinballX.ini configuration file."
 msgstr ""
+"Painel de vidro vertical que exibe algumas artes iluminadas. Por padrão, os "
+"ajustes vêm do arquivo de configuração VPinballX.ini."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -14926,7 +14956,7 @@ msgstr "VIDRO TRASEIRO (B2S)"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Backglass disabled"
-msgstr ""
+msgstr "Vidro traseiro desabilitado"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -14934,11 +14964,13 @@ msgid ""
 "When the Backglass is activated, display the small additional part with the "
 "scores."
 msgstr ""
+"Quando o vidro traseiro estiver ativado, exibe uma pequena parte adicional "
+"com as pontuações."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "DISPLAY BACKGLASS DMD"
-msgstr ""
+msgstr "EXIBIR VIDRO TRASEIRO DMD (VISOR DE MATRIZ DE PONTOS)"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15044,11 +15076,14 @@ msgid ""
 "Refresh state of memory pages to enable gpu written data. (Use for 'Team "
 "Ninja' Games to fix missing character models)."
 msgstr ""
+"Atualiza o estado das páginas de memória para permitir a gravação de dados "
+"no Processador Gráfico. (Use para jogos da \"Team Ninja\" para corrigir a "
+"ausência de modelos dos personagens)."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "CLEAR MEMORY PAGE STATE"
-msgstr ""
+msgstr "LIMPAR O ESTADO DA PÁGINA DE MEMÓRIA"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15056,26 +15091,28 @@ msgid ""
 "Render target emulation path to use on Direct3D 12. Try changing if you have "
 "render issues."
 msgstr ""
+"Caminho do alvo de renderização emulada a ser usado no Direct3D 12. Tente "
+"alterar se você tiver problemas de renderização."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "RENDER TARGET PATH"
-msgstr ""
+msgstr "CAMINHO DO ALVO DE RENDERIZAÇÃO"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Any"
-msgstr ""
+msgstr "Qualquer"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "RTV (Default)"
-msgstr ""
+msgstr "RTV (Padrão)"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "ROV"
-msgstr ""
+msgstr "ROV"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15083,16 +15120,19 @@ msgid ""
 "The sample count of every tile will be incremented on every EVENT_WRITE_ZPD "
 "by this number. Setting this to 0 means everything is reported as occluded."
 msgstr ""
+"A contagem de amostras de cada bloco será incrementada em cada "
+"EVENT_WRITE_ZPD por esse número. Definir esse valor como 0 significa que "
+"tudo será relatado como ocluso."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "QUERY OCCLUSION"
-msgstr ""
+msgstr "CONSULTA DE OCLUSÃO"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "1000 (Default)"
-msgstr ""
+msgstr "1000 (Padrão)"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15100,11 +15140,14 @@ msgid ""
 "D3D12, read render-to-texture results on the CPU. Needed in some games, but "
 "causes mid-frame synchronization, so it has a huge performance impact."
 msgstr ""
+"D3D12, ler resultados de renderização para textura no Processador. "
+"Necessário em alguns jogos, mas causa sincronização de meio-quadro, "
+"portanto, tem um grande impacto no desempenho."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "READBACK RESOLVE"
-msgstr ""
+msgstr "RESOLVER LEITURA DE DADOS ARMAZENADOS"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15112,51 +15155,53 @@ msgid ""
 "Maximum host texture memory usage (in megabytes) above which textures will "
 "be destroyed as soon as possible."
 msgstr ""
+"Usar o máximo de memória de textura do anfitrião (em megabytes) acima do "
+"qual as texturas serão destruídas assim que possível."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "HARD TEXTURE CACHE MEMORY LIMIT"
-msgstr ""
+msgstr "LIMITE DE MEMÓRIA TEMPORÁRIA PARA TEXTURA RÍGIDA"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "768MB (Default)"
-msgstr ""
+msgstr "768MB (Padrão)"
 
 #. TRANSLATION: xenia, xenia, xenia-canary, xenia-canary
 msgctxt "game_options"
 msgid "1536MB"
-msgstr ""
+msgstr "1536MB"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "2304MB"
-msgstr ""
+msgstr "2304MB"
 
 #. TRANSLATION: xenia, xenia, xenia-canary, xenia-canary
 msgctxt "game_options"
 msgid "3072MB"
-msgstr ""
+msgstr "3072MB"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "3840MB"
-msgstr ""
+msgstr "3840MB"
 
 #. TRANSLATION: xenia, xenia, xenia-canary, xenia-canary
 msgctxt "game_options"
 msgid "4096MB"
-msgstr ""
+msgstr "4096MB"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "5120MB"
-msgstr ""
+msgstr "5120MB"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "6144MB"
-msgstr ""
+msgstr "6144MB"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15164,21 +15209,23 @@ msgid ""
 "Part of the host texture memory budget (in megabytes) that will be scaled by "
 "the current drawing resolution scale."
 msgstr ""
+"Parte do orçamento da memória de textura do anfitrião (em megabytes) que "
+"será dimensionada pela escala de resolução de desenho atual."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "TEXTURE MEMORY SCALE SIZE"
-msgstr ""
+msgstr "TAMANHO DA ESCALA DA MEMÓRIA DE TEXTURA"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "24MB (Default)"
-msgstr ""
+msgstr "24MB (Padrão)"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "72MB"
-msgstr ""
+msgstr "72MB"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15186,26 +15233,28 @@ msgid ""
 "Maximum host texture memory usage (in megabytes) above which old textures "
 "will be destroyed. Set below hard limit."
 msgstr ""
+"Usar o máximo da memória de textura do host (em megabytes) acima do qual as "
+"texturas antigas serão destruídas. Defina abaixo do limite rígido."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "SOFT TEXTURE CACHE MEMORY LIMIT"
-msgstr ""
+msgstr "TAMANHO DA ESCALA DA MEMÓRIA TEMPORÁRIA DE TEXTURA"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "384MB (Default)"
-msgstr ""
+msgstr "384MB (Padrão)"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "768MB"
-msgstr ""
+msgstr "768MB"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "2048MB"
-msgstr ""
+msgstr "2048MB"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15213,37 +15262,42 @@ msgid ""
 "Seconds a texture should be unused to be considered old enough to be deleted "
 "if texture memory usage exceeds Soft Texture Cache limit."
 msgstr ""
+"Segundos em que uma textura deve não ser usada para ser considerada velha o "
+"suficiente para ser excluída se o uso da memória da textura exceder o limite "
+"da memória temporária de textura suave."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "SOFT TEXTURE CACHE MEMORY TIMEOUT"
-msgstr ""
+msgstr "TEMPO LIMITE DE MEMÓRIA TEMPORÁRIA DE TEXTURA SUAVE"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "15s"
-msgstr ""
+msgstr "15s"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "30s (Default)"
-msgstr ""
+msgstr "30s (Padrão)"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "45s"
-msgstr ""
+msgstr "45s"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid ""
 "Enable cache mount. Can improve performance and compatibility in some games."
 msgstr ""
+"Ativa a montagem da memória temporária. Pode melhorar o desempenho e a "
+"compatibilidade em alguns jogos."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "MOUNT CACHE"
-msgstr ""
+msgstr "MONTAR MEMÓRIA TEMPORÁRIA"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -15265,6 +15319,8 @@ msgid ""
 "Fix screen tearing. With Some games you need to turn VSync on in the games "
 "options."
 msgstr ""
+"Corrige a falta de sincronização da taxa de atualização da tela. Em alguns "
+"jogos, é necessário ativar a Sincronização Vertical nas opções do jogo."
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -15272,16 +15328,18 @@ msgid ""
 "Manually set VSYNC frames per second. Ideally this should match your monitor "
 "refresh rate."
 msgstr ""
+"Defina manualmente os quadros por segundo da Sincronização Vertical. O ideal "
+"é que isso corresponda à taxa de atualização do monitor."
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "VSYNC FPS"
-msgstr ""
+msgstr "SINCRONIZAÇÃO VERTICAL EM QUADROS POR SEGUNDO"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "165fps"
-msgstr ""
+msgstr "165fps"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -15385,22 +15443,22 @@ msgstr "Comando 8"
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Digital Left"
-msgstr "Digital à esquerda"
+msgstr "Digital à Esquerda"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Digital Right"
-msgstr "Digital à direita"
+msgstr "Digital à Direita"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Digital Up"
-msgstr "Digital para cima"
+msgstr "Digital para Cima"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Digital Down"
-msgstr "Digital para baixo"
+msgstr "Digital para Baixo"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
@@ -15465,7 +15523,7 @@ msgstr "Ajustes de Interface gráfica do usuário"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Reset the table, sometimes required for PinMame"
-msgstr "Redefinir a mesa, às vezes necessário para PinMame"
+msgstr "Redefinir a mesa, às vezes necessário para o PinMAME"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -15475,7 +15533,7 @@ msgstr "Iniciar o jogo"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Insert coin"
-msgstr "Insirir moeda"
+msgstr "Inserir moeda"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -15715,12 +15773,12 @@ msgstr "Mover o Ponteiro do Estilete"
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Restart Emulation"
-msgstr "Reinicie a Emulação"
+msgstr "Reiniciar a Emulação"
 
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Continue/Pause emulation"
-msgstr "Continuar/pausar a emulação"
+msgstr "Continuar/Pausar a emulação"
 
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"

@@ -24,7 +24,7 @@ index 3bc4b2e41650..7c1b538d96b8 100644
  		.flags = FLAG_AMD_SOF,
  		.device = ACP_PCI_DEV_ID,
 diff --git a/sound/soc/amd/acp/acp-mach-common.c b/sound/soc/amd/acp/acp-mach-common.c
-index 34b14f2611ba..b2b3d0ccde7d 100644
+index 34b14f2611ba..65512494384b 100644
 --- a/sound/soc/amd/acp/acp-mach-common.c
 +++ b/sound/soc/amd/acp/acp-mach-common.c
 @@ -26,6 +26,8 @@
@@ -366,7 +366,7 @@ index 2c7a5e7a364c..237fb5f5adaf 100644
  	dai->number_configs = 1;
  	dai->current_config = 0;
 diff --git a/sound/soc/sof/topology.c b/sound/soc/sof/topology.c
-index 37ec671a2d76..8beef2ab8ece 100644
+index 7133ec13322b..54152e3ca713 100644
 --- a/sound/soc/sof/topology.c
 +++ b/sound/soc/sof/topology.c
 @@ -289,7 +289,7 @@ static const struct sof_dai_types sof_dais[] = {
