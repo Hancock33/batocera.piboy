@@ -1,5 +1,5 @@
 diff --git a/rpcs3/Emu/savestate_utils.cpp b/rpcs3/Emu/savestate_utils.cpp
-index 663f0421a..2cfdc2816 100644
+index 4aaed035d..99df96974 100644
 --- a/rpcs3/Emu/savestate_utils.cpp
 +++ b/rpcs3/Emu/savestate_utils.cpp
 @@ -216,7 +216,7 @@ bool boot_last_savestate(bool testing)

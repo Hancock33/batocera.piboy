@@ -1,16 +1,5 @@
-From 5b767eeb9e4d2b2886bcf444b83020daef38d0db Mon Sep 17 00:00:00 2001
-From: capriots <29807355+capriots@users.noreply.github.com>
-Date: Fri, 2 Feb 2024 19:43:18 +0100
-Subject: [PATCH] cellPamf implementation
-
----
- rpcs3/Emu/Cell/Modules/cellPamf.cpp | 1344 ++++++++++++++++++++++-----
- rpcs3/Emu/Cell/Modules/cellPamf.h   |  343 +++++--
- rpcs3/Emu/Cell/lv2/sys_prx.cpp      |    2 +-
- 3 files changed, 1352 insertions(+), 337 deletions(-)
-
 diff --git a/rpcs3/Emu/Cell/Modules/cellPamf.cpp b/rpcs3/Emu/Cell/Modules/cellPamf.cpp
-index 833fe43e32e4..ff2fcbf4fb48 100644
+index 833fe43e3..ff2fcbf4f 100644
 --- a/rpcs3/Emu/Cell/Modules/cellPamf.cpp
 +++ b/rpcs3/Emu/Cell/Modules/cellPamf.cpp
 @@ -2,6 +2,7 @@
@@ -1693,7 +1682,7 @@ index 833fe43e32e4..ff2fcbf4fb48 100644
 +	REG_FUNC(cellPamf, cellPamfReaderGetEpWithIndex);
  });
 diff --git a/rpcs3/Emu/Cell/Modules/cellPamf.h b/rpcs3/Emu/Cell/Modules/cellPamf.h
-index d1bdcaf0f7f5..db25618dacc1 100644
+index d1bdcaf0f..db25618da 100644
 --- a/rpcs3/Emu/Cell/Modules/cellPamf.h
 +++ b/rpcs3/Emu/Cell/Modules/cellPamf.h
 @@ -32,6 +32,23 @@ enum CellPamfStreamType
@@ -2118,7 +2107,7 @@ index d1bdcaf0f7f5..db25618dacc1 100644
  
  CHECK_SIZE(CellPamfReader, 128);
 diff --git a/rpcs3/Emu/Cell/lv2/sys_prx.cpp b/rpcs3/Emu/Cell/lv2/sys_prx.cpp
-index 84c9279dfa83..efd1c85510f8 100644
+index 84c9279df..efd1c8551 100644
 --- a/rpcs3/Emu/Cell/lv2/sys_prx.cpp
 +++ b/rpcs3/Emu/Cell/lv2/sys_prx.cpp
 @@ -96,7 +96,7 @@ extern const std::map<std::string_view, int> g_prx_list
