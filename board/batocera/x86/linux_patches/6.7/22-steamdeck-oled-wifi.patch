@@ -429,7 +429,7 @@ index 09e65c5e55c4..88f11f6e47b7 100644
  	ret = pci_register_driver(&ath11k_pci_driver);
  	if (ret)
 diff --git a/drivers/net/wireless/ath/ath11k/pcic.c b/drivers/net/wireless/ath/ath11k/pcic.c
-index 16d1e332193f..406eef086836 100644
+index e602d4130105..108a6dcc87c0 100644
 --- a/drivers/net/wireless/ath/ath11k/pcic.c
 +++ b/drivers/net/wireless/ath/ath11k/pcic.c
 @@ -115,6 +115,17 @@ static const struct ath11k_msi_config ath11k_msi_config[] = {

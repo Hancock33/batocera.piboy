@@ -11,10 +11,10 @@ index 031df47a7c19..188bf15c4ecf 100644
  .. only::  subproject and html
  
 diff --git a/Documentation/userspace-api/ioctl/ioctl-number.rst b/Documentation/userspace-api/ioctl/ioctl-number.rst
-index 457e16f06e04..2f5c6994f042 100644
+index 4ea5b837399a..a132d8c8c772 100644
 --- a/Documentation/userspace-api/ioctl/ioctl-number.rst
 +++ b/Documentation/userspace-api/ioctl/ioctl-number.rst
-@@ -173,6 +173,8 @@ Code  Seq#    Include File                                           Comments
+@@ -174,6 +174,8 @@ Code  Seq#    Include File                                           Comments
  'M'   00-0F  drivers/video/fsl-diu-fb.h                              conflict!
  'N'   00-1F  drivers/usb/scanner.h
  'N'   40-7F  drivers/block/nvme.c
@@ -420,10 +420,10 @@ index 000000000000..bda9401f6747
 +  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 8d1052fa6a69..7924127d351b 100644
+index a7c4cf8201e0..90e84b768c42 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -15585,6 +15585,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
+@@ -15341,6 +15341,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
  F:	Documentation/filesystems/ntfs3.rst
  F:	fs/ntfs3/
  
@@ -440,7 +440,7 @@ index 8d1052fa6a69..7924127d351b 100644
  M:	Finn Thain <fthain@linux-m68k.org>
  L:	linux-m68k@lists.linux-m68k.org
 diff --git a/drivers/misc/Kconfig b/drivers/misc/Kconfig
-index 4fb291f0bf7c..bdd8a71bd853 100644
+index f37c4b8380ae..622eb26ac040 100644
 --- a/drivers/misc/Kconfig
 +++ b/drivers/misc/Kconfig
 @@ -504,6 +504,15 @@ config OPEN_DICE
@@ -460,7 +460,7 @@ index 4fb291f0bf7c..bdd8a71bd853 100644
  
  config VCPU_STALL_DETECTOR
 diff --git a/drivers/misc/Makefile b/drivers/misc/Makefile
-index ea6ea5bbbc9c..153a3f4837e8 100644
+index f2a4d1ff65d4..bd12e9a3b8c5 100644
 --- a/drivers/misc/Makefile
 +++ b/drivers/misc/Makefile
 @@ -59,6 +59,7 @@ obj-$(CONFIG_PVPANIC)   	+= pvpanic/
@@ -1674,7 +1674,7 @@ index 000000000000..7c91af7011e4
 +
 +#endif
 diff --git a/tools/testing/selftests/Makefile b/tools/testing/selftests/Makefile
-index 15b6a111c3be..6c714a4e6478 100644
+index 8247a7c69c36..40b7318a8e22 100644
 --- a/tools/testing/selftests/Makefile
 +++ b/tools/testing/selftests/Makefile
 @@ -15,6 +15,7 @@ TARGETS += cpu-hotplug
