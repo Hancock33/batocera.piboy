@@ -47,10 +47,10 @@ index 3ee219aa2891..001e0e9d1e2d 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 9dbbaeb8c6cf..b46703d2bd7e 100644
+index b86d482475e0..6e1f3db5893d 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -151,6 +151,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_35_DMUB);
+@@ -150,6 +150,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_35_DMUB);
  /* Number of bytes in PSP footer for firmware. */
  #define PSP_FOOTER_BYTES 0x100
  
@@ -60,7 +60,7 @@ index 9dbbaeb8c6cf..b46703d2bd7e 100644
  /**
   * DOC: overview
   *
-@@ -4042,7 +4045,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4045,7 +4048,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  	return 0;
  }
  
@@ -69,7 +69,7 @@ index 9dbbaeb8c6cf..b46703d2bd7e 100644
  #define AMDGPU_DM_DEFAULT_MAX_BACKLIGHT 255
  #define AUX_BL_DEFAULT_TRANSITION_TIME_MS 50
  
-@@ -4060,11 +4063,27 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
+@@ -4063,11 +4066,27 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
  	amdgpu_acpi_get_backlight_caps(&caps);
  	if (caps.caps_valid) {
  		dm->backlight_caps[bl_idx].caps_valid = true;
@@ -97,7 +97,7 @@ index 9dbbaeb8c6cf..b46703d2bd7e 100644
  		dm->backlight_caps[bl_idx].min_input_signal =
  				AMDGPU_DM_DEFAULT_MIN_BACKLIGHT;
  		dm->backlight_caps[bl_idx].max_input_signal =
-@@ -4074,6 +4093,9 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
+@@ -4077,6 +4096,9 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
  	if (dm->backlight_caps[bl_idx].aux_support)
  		return;
  
@@ -107,7 +107,7 @@ index 9dbbaeb8c6cf..b46703d2bd7e 100644
  	dm->backlight_caps[bl_idx].min_input_signal = AMDGPU_DM_DEFAULT_MIN_BACKLIGHT;
  	dm->backlight_caps[bl_idx].max_input_signal = AMDGPU_DM_DEFAULT_MAX_BACKLIGHT;
  #endif
-@@ -4105,7 +4127,7 @@ static u32 convert_brightness_from_user(const struct amdgpu_dm_backlight_caps *c
+@@ -4108,7 +4130,7 @@ static u32 convert_brightness_from_user(const struct amdgpu_dm_backlight_caps *c
  	if (!get_brightness_range(caps, &min, &max))
  		return brightness;
  
@@ -116,7 +116,7 @@ index 9dbbaeb8c6cf..b46703d2bd7e 100644
  	return min + DIV_ROUND_CLOSEST((max - min) * brightness,
  				       AMDGPU_MAX_BL_LEVEL);
  }
-@@ -4120,7 +4142,7 @@ static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *cap
+@@ -4123,7 +4145,7 @@ static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *cap
  
  	if (brightness < min)
  		return 0;
@@ -125,7 +125,7 @@ index 9dbbaeb8c6cf..b46703d2bd7e 100644
  	return DIV_ROUND_CLOSEST(AMDGPU_MAX_BL_LEVEL * (brightness - min),
  				 max - min);
  }
-@@ -7371,7 +7393,8 @@ static int amdgpu_dm_connector_get_modes(struct drm_connector *connector)
+@@ -7356,7 +7378,8 @@ static int amdgpu_dm_connector_get_modes(struct drm_connector *connector)
  				drm_add_modes_noedid(connector, 1920, 1080);
  	} else {
  		amdgpu_dm_connector_ddc_get_modes(connector, edid);
@@ -135,7 +135,7 @@ index 9dbbaeb8c6cf..b46703d2bd7e 100644
  		amdgpu_dm_connector_add_freesync_modes(connector, edid);
  	}
  	amdgpu_dm_fbc_init(connector);
-@@ -8127,7 +8150,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -8112,7 +8135,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -174,10 +174,10 @@ index b45fda96eaf6..308c2e7c833a 100644
  
  	/* TODO: DYNAMIC_VALIDATION needs to be implemented */
 diff --git a/drivers/gpu/drm/drm_panel_orientation_quirks.c b/drivers/gpu/drm/drm_panel_orientation_quirks.c
-index 3d92f66e550c..b6a5548c7242 100644
+index 8da0d90df673..080328e10d71 100644
 --- a/drivers/gpu/drm/drm_panel_orientation_quirks.c
 +++ b/drivers/gpu/drm/drm_panel_orientation_quirks.c
-@@ -409,6 +409,13 @@ static const struct dmi_system_id orientation_data[] = {
+@@ -415,6 +415,13 @@ static const struct dmi_system_id orientation_data[] = {
  		  DMI_EXACT_MATCH(DMI_PRODUCT_VERSION, "1"),
  		},
  		.driver_data = (void *)&lcd800x1280_rightside_up,
@@ -192,7 +192,7 @@ index 3d92f66e550c..b6a5548c7242 100644
  		.matches = {
  		  DMI_EXACT_MATCH(DMI_SYS_VENDOR, "VIOS"),
 diff --git a/drivers/pci/quirks.c b/drivers/pci/quirks.c
-index d55a3ffae4b8..7394f3ff5d75 100644
+index a2bf6de11462..5b19376da44c 100644
 --- a/drivers/pci/quirks.c
 +++ b/drivers/pci/quirks.c
 @@ -690,7 +690,7 @@ DECLARE_PCI_FIXUP_FINAL(PCI_VENDOR_ID_ATI,	PCI_DEVICE_ID_ATI_RS100,   quirk_ati_
@@ -213,8 +213,8 @@ index d55a3ffae4b8..7394f3ff5d75 100644
  {
  	u32 class = pdev->class;
  
-@@ -708,9 +708,7 @@ static void quirk_amd_dwc_class(struct pci_dev *pdev)
- 		 class, pdev->class);
+@@ -711,9 +711,7 @@ static void quirk_amd_dwc_class(struct pci_dev *pdev)
+ 	}
  }
  DECLARE_PCI_FIXUP_HEADER(PCI_VENDOR_ID_AMD, PCI_DEVICE_ID_AMD_NL_USB,
 -		quirk_amd_dwc_class);
@@ -225,7 +225,7 @@ index d55a3ffae4b8..7394f3ff5d75 100644
  /*
   * Synopsys USB 3.x host HAPS platform has a class code of
 diff --git a/include/linux/pci_ids.h b/include/linux/pci_ids.h
-index 275799b5f535..91c1f6d5b44f 100644
+index 97cc0baad0f4..9a1669e4a148 100644
 --- a/include/linux/pci_ids.h
 +++ b/include/linux/pci_ids.h
 @@ -582,7 +582,6 @@
