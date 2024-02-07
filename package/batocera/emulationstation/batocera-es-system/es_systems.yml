@@ -6384,7 +6384,7 @@ steam:
   release:              2003
   hardware:             computer
   extensions:           [steam]
-  platform:             pc
+  platform:             windows
   emulators:
     steam:
       steam:            { requireAnyOf: [BR2_PACKAGE_BATOCERA_STEAM] }
