@@ -117,7 +117,8 @@ systems = {
                                                        { "md5": "122aee210324c72e8a11116e6ef9c0d0", "file": "bios/neocd/top-sp1.bin" },
                                                        { "md5": "f39572af7584cb5b3f70ae8cc848aba2", "file": "bios/neocd/neocd.bin"},
                                                        { "md5": "08ca8b2dba6662e8024f9e789711c6fc", "file": "bios/neocd/uni-bioscd.rom"} ] },
-
+    "neogeomvs":  { "name": "NeoGeo", "biosFiles":  [  { "md5": "dffb72f116d36d025068b23970a4f6df", "file": "bios/neogeo.zip" } ] },
+                                                       { "md5": "d3ecf9b7e23aad59714a051dcefb0583", "file": "bios/aes.zip"} ] },
     # ---------- Sharp ---------- #
     # https://github.com/libretro/libretro-super/blob/master/dist/info/px68k_libretro.info
     "x68000": { "name": "Sharp x68000", "biosFiles": [  { "md5": "7fd4caabac1d9169e289f0f7bbf71d8e", "file": "bios/keropi/iplrom.dat" },
