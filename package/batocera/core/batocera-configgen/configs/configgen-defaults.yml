@@ -616,6 +616,9 @@ neogeo:
 neogeocd:
   emulator: libretro
   core:     neocd
+neogeomvs:
+  emulator: libretro
+  core:     geolith
 nes:
   emulator: libretro
   core:     fceumm
