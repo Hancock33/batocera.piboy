@@ -1191,8 +1191,9 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_H616       && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_H6
 
-    # SNK Neo Geo CD
+    # SNK Neo Geo
     select BR2_PACKAGE_LIBRETRO_NEOCD                       # ALL
+    select BR2_PACKAGE_LIBRETRO_GEOLITH                     # ALL
 
     # Nintendo Virtual Boy
     select BR2_PACKAGE_LIBRETRO_BEETLE_VB                   # ALL
