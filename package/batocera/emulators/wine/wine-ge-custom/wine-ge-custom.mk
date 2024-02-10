@@ -3,10 +3,10 @@
 # wine-ge-custom
 #
 ################################################################################
-# Version: Commits on Feb 08, 2024
-WINE_GE_CUSTOM_VERSION = 8cb68e43dec6e6bb32fcdf82e03a6d4263dd2354
+# Version: Commits on Feb 09, 2024
+WINE_GE_CUSTOM_VERSION = wine-9.2
 WINE_GE_CUSTOM_STAGING_VERSION = $(subst wine-,,v$(WINE_GE_CUSTOM_VERSION))
-WINE_GE_CUSTOM_STAGING_VERSION = ff18b9b26e636ff5a626257ec172168ba7dbbb95
+WINE_GE_CUSTOM_STAGING_VERSION = dd067c0b0dff22560d1689a6a2d4440e1eb46239
 WINE_GE_CUSTOM_SOURCE = wine-$(WINE_GE_CUSTOM_VERSION).tar.gz
 WINE_GE_CUSTOM_SITE = $(call github,wine-mirror,wine,$(WINE_GE_CUSTOM_VERSION))
 WINE_GE_CUSTOM_LICENSE = LGPL-2.1+
