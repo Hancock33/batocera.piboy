@@ -3,7 +3,7 @@
 # pixelcade
 #
 ################################################################################
-
+# Version: Commits on Feb 09, 2024
 PIXELCADE_VERSION = 47b2997fca6f99daa55ffa3d97bbcfb6d2005b9d
 PIXELCADE_SITE = $(call github,alinke,pixelcade-linux-builds,$(PIXELCADE_VERSION))
 
