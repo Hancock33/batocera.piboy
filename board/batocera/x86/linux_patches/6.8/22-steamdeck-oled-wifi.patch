@@ -147,7 +147,7 @@ index 0c6ecbb9a066..203e33c2233b 100644
  
  err_reo_cleanup:
 diff --git a/drivers/net/wireless/ath/ath11k/core.h b/drivers/net/wireless/ath/ath11k/core.h
-index 7e3b6779f4e9..a798837e8df7 100644
+index 02e160d831be..4f0ecea16b68 100644
 --- a/drivers/net/wireless/ath/ath11k/core.h
 +++ b/drivers/net/wireless/ath/ath11k/core.h
 @@ -147,6 +147,7 @@ enum ath11k_hw_rev {
@@ -183,10 +183,10 @@ index 1b070747a5db..20fb19e3d82a 100644
  	const struct cfg80211_sar_capa *bios_sar_capa;
  	bool m3_fw_support;
 diff --git a/drivers/net/wireless/ath/ath11k/mac.c b/drivers/net/wireless/ath/ath11k/mac.c
-index db241589424d..1ae0cdb5fd80 100644
+index b13525bbbb80..cddb857721c9 100644
 --- a/drivers/net/wireless/ath/ath11k/mac.c
 +++ b/drivers/net/wireless/ath/ath11k/mac.c
-@@ -9298,6 +9298,31 @@ static int ath11k_mac_setup_channels_rates(struct ath11k *ar,
+@@ -9288,6 +9288,31 @@ static int ath11k_mac_setup_channels_rates(struct ath11k *ar,
  	return 0;
  }
  
@@ -218,7 +218,7 @@ index db241589424d..1ae0cdb5fd80 100644
  static int ath11k_mac_setup_iface_combinations(struct ath11k *ar)
  {
  	struct ath11k_base *ab = ar->ab;
-@@ -9317,28 +9342,43 @@ static int ath11k_mac_setup_iface_combinations(struct ath11k *ar)
+@@ -9307,28 +9332,43 @@ static int ath11k_mac_setup_iface_combinations(struct ath11k *ar)
  		return -ENOMEM;
  	}
  
@@ -282,7 +282,7 @@ index db241589424d..1ae0cdb5fd80 100644
  
  	ar->hw->wiphy->iface_combinations = combinations;
  	ar->hw->wiphy->n_iface_combinations = 1;
-@@ -9403,6 +9443,8 @@ static void __ath11k_mac_unregister(struct ath11k *ar)
+@@ -9393,6 +9433,8 @@ static void __ath11k_mac_unregister(struct ath11k *ar)
  	kfree(ar->hw->wiphy->iface_combinations[0].limits);
  	kfree(ar->hw->wiphy->iface_combinations);
  
@@ -291,7 +291,7 @@ index db241589424d..1ae0cdb5fd80 100644
  	SET_IEEE80211_DEV(ar->hw, NULL);
  }
  
-@@ -9445,6 +9487,7 @@ static int __ath11k_mac_register(struct ath11k *ar)
+@@ -9435,6 +9477,7 @@ static int __ath11k_mac_register(struct ath11k *ar)
  	ath11k_pdev_caps_update(ar);
  
  	SET_IEEE80211_PERM_ADDR(ar->hw, ar->mac_addr);

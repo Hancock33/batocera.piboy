@@ -24,7 +24,7 @@ index 42c2322cd11b..efef46888fdc 100644
  		.flags = FLAG_AMD_SOF,
  		.device = ACP_PCI_DEV_ID,
 diff --git a/sound/soc/amd/acp/acp-mach-common.c b/sound/soc/amd/acp/acp-mach-common.c
-index c90ec3419247..753d10b09062 100644
+index 504d1b8c4cbb..d96d08ff9437 100644
 --- a/sound/soc/amd/acp/acp-mach-common.c
 +++ b/sound/soc/amd/acp/acp-mach-common.c
 @@ -26,6 +26,8 @@
@@ -36,7 +36,7 @@ index c90ec3419247..753d10b09062 100644
  #include "acp-mach.h"
  
  #define PCO_PLAT_CLK 48000000
-@@ -1275,6 +1277,78 @@ SND_SOC_DAILINK_DEF(nau8821,
+@@ -1282,6 +1284,78 @@ SND_SOC_DAILINK_DEF(nau8821,
  		    DAILINK_COMP_ARRAY(COMP_CODEC("i2c-NVTN2020:00",
  						  "nau8821-hifi")));
  
@@ -115,7 +115,7 @@ index c90ec3419247..753d10b09062 100644
  /* Declare DMIC codec components */
  SND_SOC_DAILINK_DEF(dmic_codec,
  		DAILINK_COMP_ARRAY(COMP_CODEC("dmic-codec", "dmic-hifi")));
-@@ -1585,6 +1659,8 @@ int acp_legacy_dai_links_create(struct snd_soc_card *card)
+@@ -1597,6 +1671,8 @@ int acp_legacy_dai_links_create(struct snd_soc_card *card)
  
  	if (drv_data->hs_cpu_id)
  		num_links++;
@@ -124,7 +124,7 @@ index c90ec3419247..753d10b09062 100644
  	if (drv_data->amp_cpu_id)
  		num_links++;
  	if (drv_data->dmic_cpu_id)
-@@ -1732,6 +1808,33 @@ int acp_legacy_dai_links_create(struct snd_soc_card *card)
+@@ -1744,6 +1820,33 @@ int acp_legacy_dai_links_create(struct snd_soc_card *card)
  			card->codec_conf = rt1019_conf;
  			card->num_configs = ARRAY_SIZE(rt1019_conf);
  		}
@@ -159,10 +159,10 @@ index c90ec3419247..753d10b09062 100644
  	}
  
 diff --git a/sound/soc/amd/acp/acp-mach.h b/sound/soc/amd/acp/acp-mach.h
-index a48546d8d407..306ecd489625 100644
+index a48546d8d407..3b69dfa806a3 100644
 --- a/sound/soc/amd/acp/acp-mach.h
 +++ b/sound/soc/amd/acp/acp-mach.h
-@@ -46,6 +47,7 @@ enum codec_endpoints {
+@@ -46,6 +46,7 @@ enum codec_endpoints {
  	MAX98360A,
  	RT5682S,
  	NAU8825,

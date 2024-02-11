@@ -3,8 +3,8 @@
 # tekwar
 #
 ################################################################################
-# Version: Commits on Jan 08, 2023
-TEKWAR_VERSION = 45c37ed419c252da5b89a3af53aa72ba640d0fc5
+# Version: Commits on Feb 07, 2024
+TEKWAR_VERSION = aa28ad8c2c6ee4be93550f7dfb0c1cb372844166
 TEKWAR_SITE = https://github.com/jonof/jftekwar.git
 
 TEKWAR_DEPENDENCIES = sdl2 sdl2_image
@@ -24,7 +24,7 @@ define TEKWAR_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/tekwar -D $(TARGET_DIR)/usr/bin/etekwar
 	# make rom path
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/etekwar
-	cp $(@D)/data/*.dat $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/etekwar/
+	cp $(@D)/rsrc/*.dat $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/etekwar/
 
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy

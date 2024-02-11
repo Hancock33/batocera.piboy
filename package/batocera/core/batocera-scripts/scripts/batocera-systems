@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#!/usr/bin/env python
 
 from __future__ import print_function
 
@@ -117,7 +118,8 @@ systems = {
                                                        { "md5": "122aee210324c72e8a11116e6ef9c0d0", "file": "bios/neocd/top-sp1.bin" },
                                                        { "md5": "f39572af7584cb5b3f70ae8cc848aba2", "file": "bios/neocd/neocd.bin"},
                                                        { "md5": "08ca8b2dba6662e8024f9e789711c6fc", "file": "bios/neocd/uni-bioscd.rom"} ] },
-
+    "neogeomvs":  { "name": "NeoGeo", "biosFiles":  [  { "md5": "dffb72f116d36d025068b23970a4f6df", "file": "bios/neogeo.zip" },
+                                                       { "md5": "d3ecf9b7e23aad59714a051dcefb0583", "file": "bios/aes.zip"} ] },
     # ---------- Sharp ---------- #
     # https://github.com/libretro/libretro-super/blob/master/dist/info/px68k_libretro.info
     "x68000": { "name": "Sharp x68000", "biosFiles": [  { "md5": "7fd4caabac1d9169e289f0f7bbf71d8e", "file": "bios/keropi/iplrom.dat" },
@@ -796,7 +798,7 @@ systems = {
                                                           { "md5": "afa4b5f2944334f84971af814a24bd5a", "file": "bios/openmsx/ide250.zip" },
                                                           { "md5": "2ce20986da024e9a0e271961c6bc9f01", "file": "bios/openmsx/phc-70fd2_basickun.rom" },
                                                           { "md5": "42af93619160ef2116416f74a6cb12f2", "file": "bios/openmsx/yrw801.rom" } ] },
-    
+
     # ---------- Supr'A'can  ---------- #
     "supracan":   { "name": "Supr'A'can", "biosFiles":  [ { "md5": "", "file": "bios/supracan.zip"  },
                                     { "md5": "53c4343e062bb3b337370bbb58e64d16", "zippedFile": "internal_68k.bin", "file": "bios/supracan.zip" } ] },
@@ -805,7 +807,7 @@ systems = {
     "vis":  { "name": "Tandy Video Information System", "biosFiles": [  { "md5": "", "file": "bios/vis.zip" },
                                   { "md5": "ebf432d3b09f694db1c62018eb2ab471", "zippedFile": "p513bk0b.bin", "file": "bios/vis.zip"},
                                   { "md5": "758f8fec271fbf526bb22b36e88f154b", "zippedFile": "p513bk1b.bin", "file": "bios/vis.zip"} ] },
-    
+
     # ---------- GameCube ---------- #
     "gamecube":   { "name": "Nintendo GameCube", "biosFiles":  [ { "md5": "db92574caab77a7ec99d4605fd6f2450", "file": "bios/GC/EUR/IPL.bin" },
                                                                  { "md5": "b17148254a5799684c7d783206504926", "file": "bios/GC/JAP/IPL.bin" },

@@ -5,13 +5,9 @@
   Future WINE bottles are now provisioned here: `/userdata/system/wine-bottles` under their respective system name. Xbox360 emulators (Xenia & Xenai-Canary) have now moved to support VKD3D (D3D12 to Vulkan) for exanded compatibility by default with the previous native Vulkan available as an option.
   New saves will be in `/userdata/saves/xbox360` where you can transfer your previous saves to continue gaming where you left off. You can then free up space by removing your previous WINE bottles from `userdata/saves` respectively after starting each emulator and forming the new WINE bottle accordingly.
   If you have used squashfs for your Windows games you can choose to unsquash & recreate the bottle with the new runner.
-- Enhanced Secure Boot support for x86_64 systems requires
-  interaction with the system's Trusted Platform Module (TPM) even
-  when Secure Boot is disabled.  When booting v39 or later you may
-  need to either disable the TPM or acknowledge the intention to
-  boot Batocera when presented with the blue "Boot Option
-  Restoration" screen.  See https://wiki.batocera.org/secureboot#tpm
-  for more detailed instructions.
+- Enhanced Secure Boot support for x86_64 systems requires interaction with the system's Trusted Platform Module (TPM) even when Secure Boot is disabled.
+  When booting v39 or later you may need to either disable the TPM or acknowledge the intention to boot Batocera when presented with the blue "Boot Option Restoration" screen.
+  See https://wiki.batocera.org/secureboot#tpm for more detailed instructions.
 ### Hardware
 - Initial support for the AYN Loki MiniPro (Speakers not working)
 - Initial support for the Anbernic RG353V
@@ -19,6 +15,8 @@
 - Initial support for the Raspberry Pi 5
 - Initial support for the Steam Deck OLED
 - Support for Thunderbolt 3 / USB4 eGPU chassis
+- Initial support for various RK3568 boards (Rock-3a, Firefly-ROC-PC, Odroid-M1, Anbernic-RG353P, Anbernic-RG353PS, Anbernic-RG353V, Anbernic-RG353V-v2, Anbernic-RG353VS, Anbernic-RG503)
+- Le-Potato v2 board support
 ### Added
 - XEMU ES seting for Vsync.
 - ES setting to automatically detect and enable 16:9 aspect ratio for libretro cores if game suports it.
@@ -42,7 +40,7 @@
   - Not compatible with nuvee GunCon patch, use clean ROM.
 - Sonic 3 A.I.R. (Angel Island Revisited) port.
 - New supported steering wheels:
-  - Logitech : Driving Force, G29, G920, G923 (PS4), Momo
+  - Logitech : Driving Force, G27, G29, G920, G923 (PS4), Momo
   - Thrustmaster : T300RS, Ferrari 458 Spider
   - HORI Racing Wheel APEX
   - MOZA Racing R9
@@ -67,6 +65,7 @@
 - Hotkey+south padtokey for pcsx2 OSD menu
 - Language: Vietnamese
 - Support CONFIGS@ mount point in S11share
+- Calibration for GunCon3 (press and hold B2 for 3 seconds)
 ### Fixed
 - Yabasanshiro input mapping fix.
 - RPCS3 Async texture ES setting was not being applied.
@@ -92,6 +91,7 @@
 - Hostname was not sent to DHCP server and hostnames from DHCP were not	honored #7502
 - Fixed retroachivements for pcsx2 and duckstation
 - Restore missing /sbin/hwclock binary
+- Daphne symlink failing
 ### Changed
 - RPCS3 SPU cache enabled by default.
 - Changes made to Mupen64plus joystick sensitivity and deadzone.
