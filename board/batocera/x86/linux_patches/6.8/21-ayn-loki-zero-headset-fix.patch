@@ -1,8 +1,8 @@
 diff --git a/sound/pci/hda/patch_realtek.c b/sound/pci/hda/patch_realtek.c
-index f6f16622f9cc..196e689c9c7b 100644
+index 6994c4c5073c..626d684aabbc 100644
 --- a/sound/pci/hda/patch_realtek.c
 +++ b/sound/pci/hda/patch_realtek.c
-@@ -6550,6 +6550,20 @@ static void alc294_gx502_toggle_output(struct hda_codec *codec,
+@@ -6552,6 +6552,20 @@ static void alc294_gx502_toggle_output(struct hda_codec *codec,
  		alc_write_coef_idx(codec, 0x10, 0x0a20);
  }
  
@@ -23,7 +23,7 @@ index f6f16622f9cc..196e689c9c7b 100644
  static void alc294_fixup_gx502_hp(struct hda_codec *codec,
  					const struct hda_fixup *fix, int action)
  {
-@@ -7247,6 +7261,7 @@ enum {
+@@ -7249,6 +7263,7 @@ enum {
  	ALC269_FIXUP_DELL4_MIC_NO_PRESENCE,
  	ALC269_FIXUP_DELL4_MIC_NO_PRESENCE_QUIET,
  	ALC269_FIXUP_HEADSET_MODE,
@@ -31,7 +31,7 @@ index f6f16622f9cc..196e689c9c7b 100644
  	ALC269_FIXUP_HEADSET_MODE_NO_HP_MIC,
  	ALC269_FIXUP_ASPIRE_HEADSET_MIC,
  	ALC269_FIXUP_ASUS_X101_FUNC,
-@@ -8691,6 +8706,10 @@ static const struct hda_fixup alc269_fixups[] = {
+@@ -8693,6 +8708,10 @@ static const struct hda_fixup alc269_fixups[] = {
  		.chained = true,
  		.chain_id = ALC256_FIXUP_ASUS_HEADSET_MODE
  	},
@@ -42,11 +42,11 @@ index f6f16622f9cc..196e689c9c7b 100644
  	[ALC299_FIXUP_PREDATOR_SPK] = {
  		.type = HDA_FIXUP_PINS,
  		.v.pins = (const struct hda_pintbl[]) {
-@@ -10321,6 +10340,7 @@ static const struct snd_pci_quirk alc269_fixup_tbl[] = {
+@@ -10330,6 +10349,7 @@ static const struct snd_pci_quirk alc269_fixup_tbl[] = {
  	SND_PCI_QUIRK(0x1d72, 0x1901, "RedmiBook 14", ALC256_FIXUP_ASUS_HEADSET_MIC),
  	SND_PCI_QUIRK(0x1d72, 0x1945, "Redmi G", ALC256_FIXUP_ASUS_HEADSET_MIC),
  	SND_PCI_QUIRK(0x1d72, 0x1947, "RedmiBook Air", ALC255_FIXUP_XIAOMI_HEADSET_MIC),
 +	SND_PCI_QUIRK(0x1f66, 0x0101, "Loki Zero", ALC269_FIXUP_HEADSET_AYN_LOKI_ZERO),
  	SND_PCI_QUIRK(0x2782, 0x0232, "CHUWI CoreBook XPro", ALC269VB_FIXUP_CHUWI_COREBOOK_XPRO),
+ 	SND_PCI_QUIRK(0x2782, 0x1707, "Vaio VJFE-ADL", ALC298_FIXUP_SPK_VOLUME),
  	SND_PCI_QUIRK(0x8086, 0x2074, "Intel NUC 8", ALC233_FIXUP_INTEL_NUC8_DMIC),
- 	SND_PCI_QUIRK(0x8086, 0x2080, "Intel NUC 8 Rugged", ALC256_FIXUP_INTEL_NUC8_RUGGED),

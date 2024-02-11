@@ -21,7 +21,7 @@ mv $DEST_DIR/lib32/dri.old/{v3d_dri.so,vc4_dri.so}       $DEST_DIR/lib32/dri
 
 rm -rf $DEST_DIR/lib32/dri.old
 rm -rf $DEST_DIR/lib32/firmware
-rm -rf $DEST_DIR/lib32/{gconv,glslang,python3.*,terminfo,udev,xorg}
+rm -rf $DEST_DIR/lib32/{gconv,gio,glslang,python3.*,terminfo,udev,xorg}
 
 find $DEST_DIR -type f -name "*.a" -exec rm {} \;
 

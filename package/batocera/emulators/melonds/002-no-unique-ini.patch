@@ -1,9 +1,9 @@
 diff --git a/src/frontend/qt_sdl/Config.cpp b/src/frontend/qt_sdl/Config.cpp
-index c91d6ef911..549a41ddb2 100644
+index 610b8778..0cf524f7 100644
 --- a/src/frontend/qt_sdl/Config.cpp
 +++ b/src/frontend/qt_sdl/Config.cpp
-@@ -354,14 +354,7 @@ ConfigEntry ConfigFile[] =
- void LoadFile(int inst)
+@@ -380,20 +380,7 @@ ConfigEntry ConfigFile[] =
+ bool LoadFile(int inst, int actualinst)
  {
      Platform::FileHandle* f;
 -    if (inst > 0)
@@ -11,14 +11,20 @@ index c91d6ef911..549a41ddb2 100644
 -        char name[100] = {0};
 -        snprintf(name, 99, kUniqueConfigFile, inst+1);
 -        f = Platform::OpenLocalFile(name, Platform::FileMode::ReadText);
+-
+-        if (!Platform::CheckLocalFileWritable(name)) return false;
 -    }
 -    else
+-    {
 -        f = Platform::OpenLocalFile(kConfigFile, Platform::FileMode::ReadText);
+-
+-        if (actualinst == 0 && !Platform::CheckLocalFileWritable(kConfigFile)) return false;
+-    }
 +    f = Platform::OpenLocalFile(kConfigFile, Platform::FileMode::ReadText);
  
-     if (!f) return;
+     if (!f) return true;
  
-@@ -362,9 +355,6 @@ void LoadFile(int inst)
+@@ -413,9 +400,6 @@ bool LoadFile(int inst, int actualinst)
          {
              if (!strncmp(entry->Name, entryname, 32))
              {
@@ -28,18 +34,21 @@ index c91d6ef911..549a41ddb2 100644
                  switch (entry->Type)
                  {
                  case 0: *(int*)entry->Value = strtol(entryval, NULL, 10); break;
-@@ -394,10 +384,6 @@ void Load()
+@@ -446,12 +430,8 @@ bool Load()
+         case 3: *(int64_t*)entry->Value = std::get<int64_t>(entry->Default); break;
+         }
      }
- 
-     LoadFile(0);
--
+-    
 -    int inst = Platform::InstanceID();
--    if (inst > 0)
--        LoadFile(inst);
- }
  
- void Save()
-@@ -405,22 +391,12 @@ void Save()
+-    bool ret = LoadFile(0, inst);
+-    if (inst > 0)
+-        ret = LoadFile(inst, inst);
++    bool ret = LoadFile(0, 0);
+ 
+     return ret;
+ }
+@@ -461,22 +441,12 @@ void Save()
      int inst = Platform::InstanceID();
  
      Platform::FileHandle* f;
@@ -54,7 +63,7 @@ index c91d6ef911..549a41ddb2 100644
 +    f = Platform::OpenLocalFile(kConfigFile, Platform::FileMode::WriteText);
  
      if (!f) return;
-
+ 
      for (ConfigEntry* entry = &ConfigFile[0]; entry->Value; entry++)
      {
 -        if ((inst > 0) && (!entry->InstanceUnique))
@@ -62,4 +71,4 @@ index c91d6ef911..549a41ddb2 100644
 -
          switch (entry->Type)
          {
-         case 0: fprintf(f, "%s=%d\r\n", entry->Name, *(int*)entry->Value); break;
+         case 0: Platform::FileWriteFormatted(f, "%s=%d\n", entry->Name, *(int*)entry->Value); break;

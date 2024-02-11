@@ -1,8 +1,8 @@
 diff --git a/sound/soc/amd/acp-config.c b/sound/soc/amd/acp-config.c
-index 3bc4b2e41650..7c1b538d96b8 100644
+index dea6d367b9e8..d9adaa5f9d40 100644
 --- a/sound/soc/amd/acp-config.c
 +++ b/sound/soc/amd/acp-config.c
-@@ -47,6 +47,20 @@ static const struct config_entry config_table[] = {
+@@ -35,6 +35,20 @@ static const struct config_entry config_table[] = {
  			{}
  		},
  	},

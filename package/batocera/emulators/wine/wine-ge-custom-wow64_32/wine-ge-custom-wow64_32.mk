@@ -3,10 +3,10 @@
 # wine-ge-custom-wow64_32
 #
 ################################################################################
-# Version: Commits on Feb 01, 2024
-WINE_GE_CUSTOM_WOW64_32_VERSION = c3918f2a82fd67301cf5fe1b35894506a34a2135
-#WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION = $(subst wine-,,v$(WINE_GE_CUSTOM_WOW64_32_VERSION))
-WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION = be51ecf5c2a62dbf6ee1d2812adc43b2c96e4b43
+# Version: Commits on Feb 09, 2024
+WINE_GE_CUSTOM_WOW64_32_VERSION = wine-9.2
+WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION = $(subst wine-,,v$(WINE_GE_CUSTOM_WOW64_32_VERSION))
+WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION = b2ca294530cc6a69f377b46796d6e90b183cae65
 WINE_GE_CUSTOM_WOW64_32_SOURCE = wine-$(WINE_GE_CUSTOM_WOW64_32_VERSION).tar.gz
 WINE_GE_CUSTOM_WOW64_32_SITE = $(call github,wine-mirror,wine,$(WINE_GE_CUSTOM_WOW64_32_VERSION))
 WINE_GE_CUSTOM_WOW64_32_LICENSE = LGPL-2.1+
@@ -24,7 +24,7 @@ endif
 # Configure Wine
 define WINE_GE_CUSTOM_WOW64_32_AUTOGEN
 	# Add Version
-	$(SED) "s|The Wine configuration|Wine-86_64-$(WINE_GE_CUSTOM_WOW64_32_VERSION) config|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|The Wine configuration|Wine-86-$(WINE_GE_CUSTOM_WOW64_32_VERSION) config|g" $(@D)/programs/wineboot/wineboot.rc
 	$(SED) "s|IDD_WAITDLG DIALOG 0, 0, 200, 50|IDD_WAITDLG DIALOG 0, 0, 300, 30|g" $(@D)/programs/wineboot/wineboot.rc
 	$(SED) "s|IDC_WAITTEXT, 40, 5, 150, 40|IDC_WAITTEXT, 20, 5, 250, 20|g" $(@D)/programs/wineboot/wineboot.rc
 	$(SED) "s|FONT 8,|FONT 14,|g" $(@D)/programs/wineboot/wineboot.rc

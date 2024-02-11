@@ -1,8 +1,8 @@
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 9dbbaeb8c6cf..9a3c3efefea5 100644
+index affc628004ff..233226073476 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -5557,6 +5557,8 @@ static void fill_stream_properties_from_drm_display_mode(
+@@ -5539,6 +5539,8 @@ static void fill_stream_properties_from_drm_display_mode(
  			timing_out->flags.HSYNC_POSITIVE_POLARITY = 1;
  		if (mode_in->flags & DRM_MODE_FLAG_PVSYNC)
  			timing_out->flags.VSYNC_POSITIVE_POLARITY = 1;
@@ -11,7 +11,7 @@ index 9dbbaeb8c6cf..9a3c3efefea5 100644
  	}
  
  	if (stream->signal == SIGNAL_TYPE_HDMI_TYPE_A) {
-@@ -6139,6 +6141,8 @@ create_stream_for_sink(struct drm_connector *connector,
+@@ -6121,6 +6123,8 @@ create_stream_for_sink(struct drm_connector *connector,
  
  	if (recalculate_timing)
  		drm_mode_set_crtcinfo(&saved_mode, 0);
@@ -20,7 +20,7 @@ index 9dbbaeb8c6cf..9a3c3efefea5 100644
  
  	/*
  	 * If scaling is enabled and refresh rate didn't change
-@@ -6698,8 +6702,7 @@ enum drm_mode_status amdgpu_dm_connector_mode_valid(struct drm_connector *connec
+@@ -6680,8 +6684,7 @@ enum drm_mode_status amdgpu_dm_connector_mode_valid(struct drm_connector *connec
  	struct dc_stream_state *stream;
  	struct amdgpu_dm_connector *aconnector = to_amdgpu_dm_connector(connector);
  
@@ -30,7 +30,7 @@ index 9dbbaeb8c6cf..9a3c3efefea5 100644
  		return result;
  
  	/*
-@@ -7403,7 +7406,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
+@@ -7385,7 +7388,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
  	aconnector->connector_id = link_index;
  	aconnector->bl_idx = -1;
  	aconnector->dc_link = link;
@@ -125,10 +125,10 @@ index 9a3ded311195..ea41d9d3ed68 100644
  		mode_lib->vba.htaps[mode_lib->vba.NumberOfActivePlanes] = taps->htaps;
  		mode_lib->vba.vtaps[mode_lib->vba.NumberOfActivePlanes] = taps->vtaps;
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c
-index cdb903116eb7..e3a053504e9d 100644
+index 1fc8436c8130..d446ddcdda65 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c
-@@ -2692,6 +2692,9 @@ static void update_scaler(struct pipe_ctx *pipe_ctx)
+@@ -2693,6 +2693,9 @@ static void update_scaler(struct pipe_ctx *pipe_ctx)
  	pipe_ctx->plane_res.scl_data.lb_params.alpha_en = per_pixel_alpha;
  	pipe_ctx->plane_res.scl_data.lb_params.depth = LB_PIXEL_DEPTH_36BPP;
  	/* scaler configuration */
@@ -138,7 +138,7 @@ index cdb903116eb7..e3a053504e9d 100644
  	pipe_ctx->plane_res.dpp->funcs->dpp_set_scaler(
  			pipe_ctx->plane_res.dpp, &pipe_ctx->plane_res.scl_data);
  }
-@@ -3718,8 +3721,7 @@ int dcn10_get_vupdate_offset_from_vsync(struct pipe_ctx *pipe_ctx)
+@@ -3719,8 +3722,7 @@ int dcn10_get_vupdate_offset_from_vsync(struct pipe_ctx *pipe_ctx)
  
  	asic_blank_end = (patched_crtc_timing.v_total -
  			vesa_sync_start -
@@ -149,7 +149,7 @@ index cdb903116eb7..e3a053504e9d 100644
  	return asic_blank_end -
  			pipe_ctx->pipe_dlg_param.vstartup_start + 1;
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
-index 608221b0dd5d..9fd70416ab3c 100644
+index da0181fef411..4dfef43ee2f9 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
 @@ -1626,6 +1626,9 @@ static void dcn20_update_dchubp_dpp(

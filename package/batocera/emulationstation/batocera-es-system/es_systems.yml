@@ -6051,6 +6051,17 @@ neogeocd:
     libretro:
       neocd:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_NEOCD] }
 
+neogeomvs:
+  name:                 Neo-Geo Multi Video System
+  manufacturer:         SNK
+  release:              1990
+  hardware:             arcade
+  extensions:           [neo]
+  platform:             neogeo, arcade
+  emulators:
+    libretro:
+      geolith:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GEOLITH] }
+
 ngp:
   name:                 Neo-Geo Pocket
   manufacturer:         SNK
@@ -6384,7 +6395,7 @@ steam:
   release:              2003
   hardware:             computer
   extensions:           [steam]
-  platform:             pc
+  platform:             windows
   emulators:
     steam:
       steam:            { requireAnyOf: [BR2_PACKAGE_BATOCERA_STEAM] }

@@ -20,6 +20,12 @@ class DolphinTriforceGenerator(Generator):
         if not os.path.exists(batoceraFiles.dolphinTriforceData + "/StateSaves"):
             os.makedirs(batoceraFiles.dolphinTriforceData + "/StateSaves")
 
+        if os.path.exists("/userdata/system/configs/dolphin-triforce/Triforce"):
+           shutil.rmtree("/userdata/system/configs/dolphin-triforce/Triforce")
+
+        if os.path.exists("/userdata/system/configs/dolphin-triforce/Cache"):
+           shutil.rmtree("/userdata/system/configs/dolphin-triforce/Cache")
+
         dolphinTriforceGameConfig.generateGameConfig()
         ## dolphin.ini ##
 
