@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Feb 09, 2024 (branch@mobile_hacks)
-HLSDK_XASH3D_VERSION = 70a7d6289078901d96512674cc0daaa2990c7a03
+HLSDK_XASH3D_VERSION = db07f50f554a6e52d777c82b8c67f2b55e86307f
 HLSDK_XASH3D_SITE = $(call github,FWGS,hlsdk-portable,$(HLSDK_XASH3D_VERSION))
 HLSDK_XASH3D_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf libsodium
 HLSDK_XASH3D_LICENSE = Half Life 1 SDK LICENSE
