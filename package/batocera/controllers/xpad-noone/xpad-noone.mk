@@ -3,8 +3,8 @@
 # xpad-noone
 #
 ################################################################################
-# Version: Commits on Dec 27, 2022
-XPAD_NOONE_VERSION = d02737f7eab1e17a7748fbe550dd982e3808525d
+# Version: Commits on Jan 09, 2024
+XPAD_NOONE_VERSION = 96d119aabacb84d39ed9c95ae48cc4891496ccb4
 XPAD_NOONE_SITE = $(call github,medusalix,xpad-noone,$(XPAD_NOONE_VERSION))
 XPAD_NOONE_DEPENDENCIES = host-cabextract libusb
 
