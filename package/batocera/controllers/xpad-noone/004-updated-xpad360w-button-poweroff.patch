@@ -1,3 +1,4 @@
+@@ -1,21 +1,8 @@
 From 5d6794045292c532cd6a42eb85574fc96db05062 Mon Sep 17 00:00:00 2001
 From: Davide Garberi <dade.garberi@gmail.com>
 Date: Sat, 22 Oct 2022 17:49:16 +0200
@@ -12,10 +13,10 @@ Signed-off-by: Davide Garberi <dade.garberi@gmail.com>
  1 file changed, 24 insertions(+), 11 deletions(-)
 
 diff --git a/xpad.c b/xpad.c
-index 1ecaf9d..25e2a4e 100644
+index 8fcd429..998b4d0 100644
 --- a/xpad.c
 +++ b/xpad.c
-@@ -710,6 +710,7 @@ struct usb_xpad {
+@@ -489,6 +489,7 @@ struct usb_xpad {
  	int quirks;
  	const char *name;		/* name of the device */
  	struct work_struct work;	/* init/remove device from callback */
@@ -23,7 +24,7 @@ index 1ecaf9d..25e2a4e 100644
  	time64_t mode_btn_down_ts;
  };
  
-@@ -871,20 +872,29 @@ static void xpad360_process_packet(struct usb_xpad *xpad, struct input_dev *dev,
+@@ -667,20 +668,29 @@ static void xpad360_process_packet(struct usb_xpad *xpad, struct input_dev *dev,
  
  	/* XBOX360W controllers can't be turned off without driver assistance */
  	if (xpad->xtype == XTYPE_XBOX360W) {
@@ -64,7 +65,7 @@ index 1ecaf9d..25e2a4e 100644
  }
  
  static void xpad_presence_work(struct work_struct *work)
-@@ -1864,6 +1874,8 @@ static int xpad360w_start_input(struct usb_xpad *xpad)
+@@ -1399,6 +1409,8 @@ static int xpad360w_start_input(struct usb_xpad *xpad)
  		return error;
  	}
  
@@ -73,7 +74,7 @@ index 1ecaf9d..25e2a4e 100644
  	return 0;
  }
  
-@@ -1873,6 +1885,7 @@ static void xpad360w_stop_input(struct usb_xpad *xpad)
+@@ -1408,6 +1420,7 @@ static void xpad360w_stop_input(struct usb_xpad *xpad)
  
  	/* Make sure we are done with presence work if it was scheduled */
  	flush_work(&xpad->work);
