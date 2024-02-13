@@ -92,6 +92,7 @@
 - Fixed retroachivements for pcsx2 and duckstation
 - Restore missing /sbin/hwclock binary
 - Daphne symlink failing
+- Emulators failing if Vulkan API is selected and no Vulkan capable GPU is in the system. We now fallback to OpenGL where possible.
 ### Changed
 - RPCS3 SPU cache enabled by default.
 - Changes made to Mupen64plus joystick sensitivity and deadzone.
@@ -108,6 +109,8 @@
 - Enable performance governor by default on Raspberry_Pi_Zero_2_W_Rev_1_0
 - Game assets for cdogs and superbroswar migrated to content downloader
 - Improved workaround for mounting NTFS volumes
+- Batocera will now automatically choose the discrete GPU (in a multi-GPU system) for Vulkan
+- EmulationStation: new default settings for the Carbon theme
 ### Updated
 - Retroarch to 1.16.0.3
 - GroovyMAME 0.261 - Switchres 2.002z
