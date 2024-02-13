@@ -3,8 +3,8 @@
 # xbox-xcloud-client
 #
 ################################################################################
-# Version: Commits on Dec 20, 2023
-XBOX_XCLOUD_CLIENT_VERSION = 2.0.1
+# Version: Commits on Jan 29, 2024
+XBOX_XCLOUD_CLIENT_VERSION = 2.1.1
 XBOX_XCLOUD_CLIENT_SITE = https://github.com/unknownskl/greenlight/releases/download/v$(XBOX_XCLOUD_CLIENT_VERSION)
 XBOX_XCLOUD_CLIENT_SOURCE = Greenlight-$(XBOX_XCLOUD_CLIENT_VERSION).AppImage
 
