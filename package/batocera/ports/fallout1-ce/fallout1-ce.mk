@@ -3,8 +3,8 @@
 # fallout1-ce
 #
 ################################################################################
-# Version: Commits on Oct 31, 2023
-FALLOUT1_CE_VERSION = f33143d0db9066d4c654464f66aba58871e4c81e
+# Version: Commits on Feb 15, 2024
+FALLOUT1_CE_VERSION = e672467ef293a704da3354a15cf53372c046a346
 FALLOUT1_CE_SITE = $(call github,alexbatalov,fallout1-ce,$(FALLOUT1_CE_VERSION))
 FALLOUT1_CE_DEPENDENCIES = sdl2
 
