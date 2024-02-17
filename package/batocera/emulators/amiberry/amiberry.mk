@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Feb 17, 2024
-AMIBERRY_VERSION = 0d0659c89a6a8ddd5eeba09d9624d159e5aee5ab
+AMIBERRY_VERSION = 78d80f6106bbf6614af8614056430571158bc47a
 AMIBERRY_SITE = $(call github,BlitterStudio,amiberry,$(AMIBERRY_VERSION))
 AMIBERRY_LICENSE = GPLv3
 AMIBERRY_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf mpg123 libxml2 libmpeg2 flac libpng libserialport portmidi
