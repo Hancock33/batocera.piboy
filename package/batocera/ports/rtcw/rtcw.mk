@@ -3,8 +3,8 @@
 # rtcw
 #
 ################################################################################
-# Version: Commits on Feb 02, 2024
-RTCW_VERSION = 1ff4d799c96ffce0e1097a5760031e24f5d1a3ce
+# Version: Commits on Feb 16, 2024
+RTCW_VERSION = df545d2867a2f75a624347983f2eaa56af99accb
 RTCW_SITE = https://github.com/iortcw/iortcw.git
 RTCW_SITE_METHOD = git
 RTCW_GIT_SUBMODULES=YES
