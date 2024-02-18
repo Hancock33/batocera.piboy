@@ -14955,13 +14955,13 @@ msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
-msgid "D3D12 (Default)"
-msgstr "D3D12 (Default)"
+msgid "D3D12"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
-msgid "Native Vulkan"
-msgstr "Vulkan Nativo"
+msgid "Native Vulkan (Default)"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -16129,6 +16129,14 @@ msgstr "Caricamento Rapido"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Salvataggio Rapido"
+
+#~ msgctxt "game_options"
+#~ msgid "D3D12 (Default)"
+#~ msgstr "D3D12 (Default)"
+
+#~ msgctxt "game_options"
+#~ msgid "Native Vulkan"
+#~ msgstr "Vulkan Nativo"
 
 #~ msgctxt "game_options"
 #~ msgid "105% (Use caution"

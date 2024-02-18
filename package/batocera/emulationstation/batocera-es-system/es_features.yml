@@ -13315,8 +13315,8 @@ xenia:
             prompt: GRAPHICS API
             description: Choose which graphics API library to use. D3D12 may yield better results with faster GPUs.
             choices:
-                "D3D12 (Default)": D3D12
-                "Native Vulkan":   Vulkan
+                "D3D12": D3D12
+                "Native Vulkan (Default)":   Vulkan
         xenia_vsync:
             prompt: VSYNC
             description: Fix screen tearing.
@@ -13475,8 +13475,8 @@ xenia-canary:
             prompt: GRAPHICS API
             description: Choose which graphics API library to use. D3D12 may yield better results with faster GPUs.
             choices:
-                "D3D12 (Default)": D3D12
-                "Native Vulkan":   Vulkan
+                "D3D12": D3D12
+                "Native Vulkan (Default)":   Vulkan
         xenia_vsync:
             prompt: VSYNC
             description: Fix screen tearing. With Some games you need to turn VSync on in the games options.
