@@ -178,19 +178,19 @@ class XeniaGenerator(Generator):
             config['GPU'] = {}
         # may be used to bypass fetch constant type errors in certain games.
         # set the API to use
-        if system.isOptSet('xenia_api') and system.config['xenia_api'] == 'Vulkan':
-            config['GPU'] = {
-                'depth_float24_convert_in_pixel_shader': True,
-                'gpu': 'vulkan',
-                'gpu_allow_invalid_fetch_constants': True,
-                'render_target_path_vulkan': 'any'
-            }
-        else:
+        if system.isOptSet('xenia_api') and system.config['xenia_api'] == 'D3D12':
             config['GPU'] = {
                 'depth_float24_convert_in_pixel_shader': True,
                 'gpu_allow_invalid_fetch_constants': True,
                 'gpu': 'd3d12',
                 'render_target_path_d3d12': 'rtv'
+            }
+        else:
+            config['GPU'] = {
+                'depth_float24_convert_in_pixel_shader': True,
+                'gpu': 'vulkan',
+                'gpu_allow_invalid_fetch_constants': True,
+                'render_target_path_vulkan': 'any'
             }
         # vsync
         config['GPU']['vsync'] = system.config.get('xenia_vsync', False)
