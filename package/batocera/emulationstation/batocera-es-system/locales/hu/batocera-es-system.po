@@ -14902,12 +14902,12 @@ msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
-msgid "D3D12 (Default)"
-msgstr "D3D12 (alapértelmezett)"
+msgid "D3D12"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
-msgid "Native Vulkan"
+msgid "Native Vulkan (Default)"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -16052,6 +16052,10 @@ msgstr "Mentés betöltése"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Gyors mentés"
+
+#~ msgctxt "game_options"
+#~ msgid "D3D12 (Default)"
+#~ msgstr "D3D12 (alapértelmezett)"
 
 #~ msgctxt "game_options"
 #~ msgid "105% (Use caution"

@@ -14948,12 +14948,12 @@ msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
-msgid "D3D12 (Default)"
+msgid "D3D12"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
-msgid "Native Vulkan"
+msgid "Native Vulkan (Default)"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
