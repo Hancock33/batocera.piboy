@@ -189,14 +189,14 @@ class FpinballGenerator(Generator):
             for variable_name in variables_to_remove:
                 if variable_name in os.environ:
                     del os.environ[variable_name]
-            
+
             environment.update(
                 {
                     'VK_ICD_FILENAMES': '/usr/share/vulkan/icd.d/nvidia_icd.x86_64.json',
                     'VK_LAYER_PATH': '/usr/share/vulkan/explicit_layer.d'
                 }
             )
-        
+
         return Command.Command(
             array=commandArray,
             env=environment

@@ -133,7 +133,7 @@ def createLibretroConfig(generator, system, controllers, metadata, guns, wheels,
                     eslog.debug("Error checking for discrete GPU.")
         except subprocess.CalledProcessError:
             eslog.debug("Error executing batocera-vulkan script.")
-    
+
     retroarchConfig['audio_driver'] = '"pulse"'
     if (system.isOptSet("audio_driver")):
         retroarchConfig['audio_driver'] = system.config['audio_driver']
@@ -435,7 +435,7 @@ def createLibretroConfig(generator, system, controllers, metadata, guns, wheels,
         "03000000c82d00000150000011010000",
         "05000000c82d00000151000000010000",
         # Retrobit bt saturn
-        "0500000049190000020400001b010000",        
+        "0500000049190000020400001b010000",
         ]
 
         valid_megadrive_controller_names = [
@@ -671,15 +671,15 @@ def createLibretroConfig(generator, system, controllers, metadata, guns, wheels,
         if systemConfig['ratio'] in ratioIndexes:
             index = ratioIndexes.index(systemConfig['ratio'])
         # Check if game natively supports widescreen from metadata (not widescreen hack) (for easy scalability ensure all values for respective systems start with core name and end with "-autowidescreen")
-        elif system.isOptSet(f"{systemCore}-autowidescreen") and system.config[f"{systemCore}-autowidescreen"] == "True": 
+        elif system.isOptSet(f"{systemCore}-autowidescreen") and system.config[f"{systemCore}-autowidescreen"] == "True":
             metadata = controllersConfig.getGamesMetaData(system.name, rom)
             if metadata.get("video_widescreen") == "true":
                 index = str(ratioIndexes.index("16/9"))
                 # Easy way to disable bezels if setting to 16/9
-                bezel = None      
-        
+                bezel = None
+
         retroarchConfig['video_aspect_ratio_auto'] = 'false'
-        retroarchConfig['aspect_ratio_index'] = index          
+        retroarchConfig['aspect_ratio_index'] = index
 
     # Rewind option
     retroarchConfig['rewind_enable'] = 'false'

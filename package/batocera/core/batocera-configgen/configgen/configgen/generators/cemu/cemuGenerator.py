@@ -174,7 +174,7 @@ class CemuGenerator(Generator):
                     CemuGenerator.setSectionConfig(config, graphic_root, "api", "0")
             except subprocess.CalledProcessError:
                 eslog.debug("Error executing batocera-vulkan script.")
-        
+
         # Async VULKAN Shader compilation
         if system.isOptSet("cemu_async") and system.config["cemu_async"] == "False":
             CemuGenerator.setSectionConfig(config, graphic_root, "AsyncCompile", "false")
