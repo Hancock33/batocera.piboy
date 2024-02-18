@@ -73,7 +73,7 @@ class RazeGenerator(Generator):
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        
+
         architecture = get_cpu_architecture()
         eslog.debug(f"*** Detected architecture is: {architecture} ***")
 
