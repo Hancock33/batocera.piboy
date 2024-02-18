@@ -74,7 +74,7 @@ def createPPSSPPConfig(iniConfig, system):
                 iniConfig.set("Graphics", "GraphicsBackend", "0 (OPENGL)")
         except subprocess.CalledProcessError:
             eslog.debug("Error executing batocera-vulkan script.")
-    
+
     # Display FPS
     if system.isOptSet('showFPS') and system.getOptBoolean('showFPS') == True:
         iniConfig.set("Graphics", "ShowFPSCounter", "3") # 1 for Speed%, 2 for FPS, 3 for both
