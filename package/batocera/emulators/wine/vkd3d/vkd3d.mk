@@ -3,7 +3,7 @@
 # vkd3d
 #
 ################################################################################
-# Commits on 29 May, 2023
+# Commits on 15 Feb, 2024
 VKD3D_VERSION = 4735ff48d17258fa996a9df954dde2893482aefb
 VKD3D_SITE = git://source.winehq.org/git/vkd3d
 VKD3D_LICENSE = LGPL-2.1+
