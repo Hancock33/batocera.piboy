@@ -3,8 +3,8 @@
 # theforceengine
 #
 ################################################################################
-# Version: Commits on Feb 15, 2024
-THEFORCEENGINE_VERSION = 4b77c84569f4cd4d00884d636689605f0ac1153f
+# Version: Commits on Feb 18, 2024
+THEFORCEENGINE_VERSION = 8bc138fb2a5acb48f77090cd68fe2d12caf68791
 THEFORCEENGINE_SITE = https://github.com/luciusDXL/TheForceEngine.git
 THEFORCEENGINE_SITE_METHOD=git
 THEFORCEENGINE_GIT_SUBMODULES=YES
