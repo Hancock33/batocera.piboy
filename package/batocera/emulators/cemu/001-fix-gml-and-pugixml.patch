@@ -1,8 +1,8 @@
 diff --git a/src/Cafe/CMakeLists.txt b/src/Cafe/CMakeLists.txt
-index 29c5a0b..7c60d5b 100644
+index 2085378..34112d5 100644
 --- a/src/Cafe/CMakeLists.txt
 +++ b/src/Cafe/CMakeLists.txt
-@@ -521,7 +521,7 @@ target_link_libraries(CemuCafe PRIVATE
+@@ -522,7 +522,7 @@ target_link_libraries(CemuCafe PRIVATE
  	OpenSSL::Crypto
  	OpenSSL::SSL
  	PNG::PNG
@@ -25,10 +25,10 @@ index 1fce8ec..bb09cf7 100644
  )
  
 diff --git a/src/Common/CMakeLists.txt b/src/Common/CMakeLists.txt
-index 7ed3d67..ab7574d 100644
+index 9a76459..8606655 100644
 --- a/src/Common/CMakeLists.txt
 +++ b/src/Common/CMakeLists.txt
-@@ -63,7 +63,7 @@ target_link_libraries(CemuCommon PRIVATE
+@@ -64,7 +64,7 @@ target_link_libraries(CemuCommon PRIVATE
  	CemuComponents
  	Boost::nowide
  	Boost::filesystem
@@ -64,10 +64,10 @@ index 19ce95d..5499c05 100644
  )
  
 diff --git a/src/input/CMakeLists.txt b/src/input/CMakeLists.txt
-index 53b4dc3..b8c36e6 100644
+index 9f7873a..a09e34a 100644
 --- a/src/input/CMakeLists.txt
 +++ b/src/input/CMakeLists.txt
-@@ -95,8 +95,8 @@ target_link_libraries(CemuInput PRIVATE
+@@ -86,8 +86,8 @@ target_link_libraries(CemuInput PRIVATE
  	CemuUtil
  	Boost::headers
  	Boost::program_options

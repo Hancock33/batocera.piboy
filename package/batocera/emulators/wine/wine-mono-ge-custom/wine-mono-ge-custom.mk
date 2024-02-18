@@ -5,7 +5,7 @@
 ################################################################################
 
 # Wine Mono addon (required)
-WINE_MONO_GE_CUSTOM_VERSION = 8.1.0
+WINE_MONO_GE_CUSTOM_VERSION = 9.0.0
 WINE_MONO_GE_CUSTOM_SOURCE = wine-mono-$(WINE_MONO_GE_CUSTOM_VERSION)-x86.tar.xz
 WINE_MONO_GE_CUSTOM_SITE = https://dl.winehq.org/wine/wine-mono/$(WINE_MONO_GE_CUSTOM_VERSION)
 

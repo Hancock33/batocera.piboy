@@ -1731,7 +1731,7 @@ def generateCoreSettings(coreSettings, system, rom, guns, wheels):
             coreSettings.save('melonds_console_mode', '"' + system.config['melonds_console_mode'] + '"')
         else:
             coreSettings.save('melonds_console_mode', '"DS"')
-        
+
         # Video Settings
         if system.isOptSet('melondsds_render_mode'):
             coreSettings.save('melonds_render_mode', '"' + system.config['melondsds_render_mode'] + '"')
@@ -1749,7 +1749,7 @@ def generateCoreSettings(coreSettings, system, rom, guns, wheels):
             coreSettings.save('melonds_opengl_filtering', '"' + system.config['melondsds_filtering'] + '"')
         else:
             coreSettings.save('melonds_opengl_filtering', '"nearest"')
-        
+
         # Screen Settings
         if system.isOptSet('melondsds_cursor'):
             coreSettings.save('melonds_show_cursor', '"' + system.config['melondsds_cursor'] + '"')
@@ -1767,7 +1767,7 @@ def generateCoreSettings(coreSettings, system, rom, guns, wheels):
         coreSettings.save('melonds_number_of_screen_layouts', '"1"')
         coreSettings.save('melonds_screen_gap', '"0"')
         coreSettings.save('melonds_screen_layout1', '"top-bottom"')
-        
+
         # Firmware Settings
         if system.isOptSet('melondsds_dns'):
             coreSettings.save('melonds_firmware_wfc_dns', '"' + system.config['melondsds_dns'] + '"')
@@ -1789,7 +1789,7 @@ def generateCoreSettings(coreSettings, system, rom, guns, wheels):
             coreSettings.save('melonds_firmware_birth_day', '"' + system.config['melondsds_day'] + '"')
         else:
             coreSettings.save('melonds_firmware_birth_day', '"default"')
-        
+
         # Onscreen Display
         if system.isOptSet('melondsds_show_unsupported'):
             coreSettings.save('melonds_show_unsupported_features', '"' + system.config['melondsds_show_unsupported'] + '"')
@@ -1879,13 +1879,13 @@ def generateCoreSettings(coreSettings, system, rom, guns, wheels):
             coreSettings.save('mgba_skip_bios', '"ON"')
         else:
             coreSettings.save('mgba_skip_bios', '"OFF"')
-        
+
         # Rumble
         if system.isOptSet('rumble_gain') and system.config['rumble_gain'] != "1":
             coreSettings.save('mgba_force_gbp', '"ON"')
         else:
             coreSettings.save('mgba_force_gbp', '"OFF"')
-        
+
         if (system.name != 'gba'):
             # GB / GBC: Use Super Game Boy borders
             if system.isOptSet('sgb_borders') and system.config['sgb_borders'] == "True":
