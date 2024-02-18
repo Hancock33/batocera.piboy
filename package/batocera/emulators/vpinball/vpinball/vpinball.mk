@@ -3,8 +3,8 @@
 # vpinball
 #
 ################################################################################
-# Version: Commits on Feb 12, 2024 (branch@standalone)
-VPINBALL_VERSION = 3cecc949e267cc6086366976f3e8436501546fd9
+# Version: Commits on Feb 18, 2024 (branch@standalone)
+VPINBALL_VERSION = 4db47ddb360439fd6b4510d927f6a30a378483c3
 VPINBALL_SITE = $(call github,vpinball,vpinball,$(VPINBALL_VERSION))
 VPINBALL_LICENSE = GPLv3+
 VPINBALL_LICENSE_FILES = LICENSE
@@ -65,7 +65,7 @@ endef
 
 define VPINBALL_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/vpinball/vpinball.keys \
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/vpinball/vpinball/vpinball.keys \
 		$(TARGET_DIR)/usr/share/evmapy
 endef
 
