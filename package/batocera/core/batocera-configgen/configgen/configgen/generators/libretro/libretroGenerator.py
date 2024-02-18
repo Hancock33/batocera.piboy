@@ -296,12 +296,12 @@ class LibretroGenerator(Generator):
 
         if system.name == 'snes-msu1':
             if "squashfs" in rom:
-                romsInDir = glob.glob(glob.escape(rom) + '/*.sfc') + glob.glob(glob.escape(rom) + '/*.smc') 
+                romsInDir = glob.glob(glob.escape(rom) + '/*.sfc') + glob.glob(glob.escape(rom) + '/*.smc')
                 rom = romsInDir[0]
 
         if system.name == 'satellaview':
             if "squashfs" in rom:
-                romsInDir = glob.glob(glob.escape(rom) + '/*.sfc') + glob.glob(glob.escape(rom) + '/*.smc') 
+                romsInDir = glob.glob(glob.escape(rom) + '/*.sfc') + glob.glob(glob.escape(rom) + '/*.smc')
                 rom = romsInDir[0]
 
         if system.name == 'scummvm':
