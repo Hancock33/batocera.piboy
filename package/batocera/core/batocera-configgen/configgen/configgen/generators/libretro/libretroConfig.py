@@ -107,7 +107,34 @@ def createLibretroConfig(generator, system, controllers, metadata, guns, wheels,
     retroarchConfig['menu_show_restart_retroarch'] = 'false'      # this option messes everything up on Batocera if ever clicked
     retroarchConfig['menu_show_load_content_animation'] = 'false' # hide popup when starting a game
 
-    retroarchConfig['video_driver'] = '"' + gfxBackend + '"'      # needed for the ozone menu
+    retroarchConfig['video_driver'] = '"' + gfxBackend + '"'  # needed for the ozone menu
+    # Set Vulkan
+    if system.isOptSet("gfxbackend") and system.config["gfxbackend"] == "vulkan":
+        try:
+            have_vulkan = subprocess.check_output(["/usr/bin/batocera-vulkan", "hasVulkan"], text=True).strip()
+            if have_vulkan == "true":
+                eslog.debug("Vulkan driver is available on the system.")
+                try:
+                    have_discrete = subprocess.check_output(["/usr/bin/batocera-vulkan", "hasDiscrete"], text=True).strip()
+                    if have_discrete == "true":
+                        eslog.debug("A discrete GPU is available on the system. We will use that for performance")
+                        try:
+                            discrete_index = subprocess.check_output(["/usr/bin/batocera-vulkan", "discreteIndex"], text=True).strip()
+                            if discrete_index != "":
+                                eslog.debug("Using Discrete GPU Index: {} for RetroArch".format(discrete_index))
+                                retroarchConfig["vulkan_gpu_index"] = '"' + discrete_index + '"'
+                            else:
+                                eslog.debug("Couldn't get discrete GPU index")
+                        except subprocess.CalledProcessError:
+                            eslog.debug("Error getting discrete GPU index")
+                    else:
+                        eslog.debug("Discrete GPU is not available on the system. Using default.")
+                except subprocess.CalledProcessError:
+                    eslog.debug("Error checking for discrete GPU.")
+        except subprocess.CalledProcessError:
+            eslog.debug("Error executing batocera-vulkan script.")
+
+    retroarchConfig['audio_driver'] = '"pulse"'
     if (system.isOptSet("audio_driver")):
         retroarchConfig['audio_driver'] = system.config['audio_driver']
 
@@ -408,7 +435,7 @@ def createLibretroConfig(generator, system, controllers, metadata, guns, wheels,
         "03000000c82d00000150000011010000",
         "05000000c82d00000151000000010000",
         # Retrobit bt saturn
-        "0500000049190000020400001b010000",        
+        "0500000049190000020400001b010000",
         ]
 
         valid_megadrive_controller_names = [
@@ -644,15 +671,15 @@ def createLibretroConfig(generator, system, controllers, metadata, guns, wheels,
         if systemConfig['ratio'] in ratioIndexes:
             index = ratioIndexes.index(systemConfig['ratio'])
         # Check if game natively supports widescreen from metadata (not widescreen hack) (for easy scalability ensure all values for respective systems start with core name and end with "-autowidescreen")
-        elif system.isOptSet(f"{systemCore}-autowidescreen") and system.config[f"{systemCore}-autowidescreen"] == "True": 
+        elif system.isOptSet(f"{systemCore}-autowidescreen") and system.config[f"{systemCore}-autowidescreen"] == "True":
             metadata = controllersConfig.getGamesMetaData(system.name, rom)
             if metadata.get("video_widescreen") == "true":
                 index = str(ratioIndexes.index("16/9"))
                 # Easy way to disable bezels if setting to 16/9
-                bezel = None      
-        
+                bezel = None
+
         retroarchConfig['video_aspect_ratio_auto'] = 'false'
-        retroarchConfig['aspect_ratio_index'] = index          
+        retroarchConfig['aspect_ratio_index'] = index
 
     # Rewind option
     retroarchConfig['rewind_enable'] = 'false'

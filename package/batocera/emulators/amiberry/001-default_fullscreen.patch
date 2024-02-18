@@ -1,5 +1,5 @@
 diff --git a/src/include/options.h b/src/include/options.h
-index 78bcca2e..5d91d9f3 100644
+index d65696f7..3d701dae 100644
 --- a/src/include/options.h
 +++ b/src/include/options.h
 @@ -1240,7 +1240,7 @@ struct amiberry_options
