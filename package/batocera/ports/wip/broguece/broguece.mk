@@ -3,8 +3,8 @@
 # broguece
 #
 ################################################################################
-# Version: Commits on Feb 02, 2024
-BROGUECE_VERSION = 9c35671a2267291e3f2cd38d2d1412a9e51dda8e
+# Version: Commits on Feb 19, 2024
+BROGUECE_VERSION = 213e0e0307d8221b12a74841ca21fe4e17be9665
 BROGUECE_SITE = $(call github,tmewett,BrogueCE,$(BROGUECE_VERSION))
 
 BROGUECE_DEPENDENCIES = sdl2 sdl2_image
