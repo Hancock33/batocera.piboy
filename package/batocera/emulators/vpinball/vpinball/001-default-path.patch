@@ -1,8 +1,8 @@
 diff --git a/standalone/inc/vpinmame/VPinMAMEController.cpp b/standalone/inc/vpinmame/VPinMAMEController.cpp
-index 9fb96c0c..43dbdb2f 100644
+index 58dee9aa..8483b643 100644
 --- a/standalone/inc/vpinmame/VPinMAMEController.cpp
 +++ b/standalone/inc/vpinmame/VPinMAMEController.cpp
-@@ -336,7 +336,7 @@ VPinMAMEController::VPinMAMEController()
+@@ -153,7 +153,7 @@ VPinMAMEController::VPinMAMEController()
  #if (defined(__APPLE__) && ((defined(TARGET_OS_IOS) && TARGET_OS_IOS) || (defined(TARGET_OS_TV) && TARGET_OS_TV))) || defined(__ANDROID__)
           m_szPath = g_pvp->m_szMyPath + "pinmame" + PATH_SEPARATOR_CHAR;
  #else
@@ -12,10 +12,10 @@ index 9fb96c0c..43dbdb2f 100644
        }
     }
 diff --git a/vpinball.cpp b/vpinball.cpp
-index 6ada8b9f..d2cb6223 100644
+index 784ba3ab..e2661ecd 100644
 --- a/vpinball.cpp
 +++ b/vpinball.cpp
-@@ -212,7 +212,7 @@ void VPinball::GetMyPrefPath()
+@@ -230,7 +230,7 @@ void VPinball::GetMyPrefPath()
     m_szMyPrefPath = szPrefPath;
     SDL_free(szPrefPath);
  #else
