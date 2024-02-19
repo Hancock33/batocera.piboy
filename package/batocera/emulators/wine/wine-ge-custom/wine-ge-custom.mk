@@ -4,9 +4,8 @@
 #
 ################################################################################
 # Version: Commits on Feb 16, 2024
-WINE_GE_CUSTOM_VERSION = 90103fa07e5c23c7500c7d33e538b0610bf3c27d
-WINE_GE_CUSTOM_STAGING_VERSION = $(subst wine-,,v$(WINE_GE_CUSTOM_VERSION))
-WINE_GE_CUSTOM_STAGING_VERSION = 9f8d8bb5995c9cb771d2da8291cbaef2f87d088b
+WINE_GE_CUSTOM_VERSION = wine-9.2
+WINE_GE_CUSTOM_STAGING_VERSION = v9.2
 WINE_GE_CUSTOM_SOURCE = wine-$(WINE_GE_CUSTOM_VERSION).tar.gz
 WINE_GE_CUSTOM_SITE = $(call github,wine-mirror,wine,$(WINE_GE_CUSTOM_VERSION))
 WINE_GE_CUSTOM_LICENSE = LGPL-2.1+
@@ -14,8 +13,7 @@ WINE_GE_CUSTOM_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_GE_CUSTOM_SELINUX_MODULES = wine
 WINE_GE_CUSTOM_DEPENDENCIES = host-bison host-flex host-wine-ge-custom
 HOST_WINE_GE_CUSTOM_DEPENDENCIES = host-bison host-flex
-#HOST_WINE_GE_CUSTOM_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/$(WINE_GE_CUSTOM_STAGING_VERSION).tar.gz
-HOST_WINE_GE_CUSTOM_WOW64_32_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/$(WINE_GE_CUSTOM_STAGING_VERSION).tar.gz
+HOST_WINE_GE_CUSTOM_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/$(WINE_GE_CUSTOM_STAGING_VERSION).tar.gz
 
 ifeq ($(BR_CMAKE_USE_CLANG),y)
 	HOST_WINE_GE_CUSTOM_DEPENDENCIES += host-clang host-lld
@@ -35,7 +33,7 @@ define WINE_GE_CUSTOM_AUTOGEN
 	# Use Staging Patches
 	printf "%s\n" "$(TERM_BOLD)>>> $($(PKG)_NAME) $($(PKG)_VERSION) Patching wine-staging" >&2
 	tar -xf $(WINE_GE_CUSTOM_DL_DIR)/$(WINE_GE_CUSTOM_STAGING_VERSION).tar.gz -C $(@D)
-	cd $(@D); ./wine-staging-$(WINE_GE_CUSTOM_STAGING_VERSION)/staging/patchinstall.py --all
+	cd $(@D); ./wine-staging-$(subst v,,$(WINE_GE_CUSTOM_STAGING_VERSION))/staging/patchinstall.py --all
 
 	# Autotools generation
 	cd $(@D); autoreconf -fiv
