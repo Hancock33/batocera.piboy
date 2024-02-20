@@ -294,6 +294,11 @@ class LibretroGenerator(Generator):
             romName = os.path.splitext(os.path.basename(rom))[0]
             rom = batoceraFiles.daphneDatadir + '/roms/' + romName +'.zip'
 
+        if system.name == 'msu-md':
+            if "squashfs" in rom:
+                romsInDir = glob.glob(glob.escape(rom) + '/*.md')
+                rom = romsInDir[0]
+
         if system.name == 'snes-msu1':
             if "squashfs" in rom:
                 romsInDir = glob.glob(glob.escape(rom) + '/*.sfc') + glob.glob(glob.escape(rom) + '/*.smc')
