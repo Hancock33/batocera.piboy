@@ -2427,6 +2427,8 @@ def generateCoreSettings(coreSettings, system, rom, guns, wheels):
 
     # Sega Dreamcast / Atomiswave / Naomi
     if (system.config['core'] == 'flycast') or (system.config['core'] == 'flycast2021'):
+        # force vmu all, to save in saves (otherwise, it saves in game_dir, which is bios)
+        coreSettings.save('reicast_per_content_vmus',  '"All VMUs"')
         # Synchronous rendering
         if system.isOptSet('reicast_synchronous_rendering'):
             coreSettings.save('reicast_synchronous_rendering', '"' + system.config['reicast_synchronous_rendering'] + '"')
