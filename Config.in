@@ -55,11 +55,6 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/toolchain/toolchain-optional-linaro-aarch64/Config.in"
   endmenu
 
-  menu "Fonts"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/fonts/nanum-font/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/fonts/noto-cjk-fonts/Config.in"
-  endmenu
-
   menu "Firmwares"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/firmwares/alllinuxfirmwares/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/firmwares/extralinuxfirmwares/Config.in"
@@ -110,10 +105,6 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl8812au/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl8821au-morrownr/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl88x2bu/Config.in"
-  endmenu
-
-  menu "LED"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/leds/ayn-platform/Config.in"
   endmenu
 
   menu "Device trees"
@@ -523,13 +514,13 @@ if BR2_PACKAGE_KODI
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-resource-language-zh_cn/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-audiodecoder-openmpt/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-pvr-freebox/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-p8-platform/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-platform/Config.in"
 endif
 endmenu
 
 menu "Looks"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/looks/adwaita-icon-theme-light/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/looks/nanum-font/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/looks/noto-cjk-fonts/Config.in"
 endmenu
 
 menu "Utils"
@@ -580,15 +571,13 @@ menu "Utils"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/zramswap/Config.in"
 endmenu
 
-menu "Cases"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/cases/deskpipro-case/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/cases/element14-pi-desktop/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/cases/gpicase/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/cases/roshambo-case/Config.in"
-endmenu
-
-menu "Screens"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/screens/pixelcade/Config.in"
+menu "Hardware"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/ayn-platform/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/deskpipro-case/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/element14-pi-desktop/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/gpicase/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/pixelcade/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/roshambo-case/Config.in"
 endmenu
 
 menu "Libraries"

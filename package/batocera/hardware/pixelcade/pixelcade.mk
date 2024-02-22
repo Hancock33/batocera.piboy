@@ -23,14 +23,14 @@ endif
 
 define PIXELCADE_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 -D $(@D)/$(PIXELCADE_ARCH_DIR)/pixelweb $(TARGET_DIR)/usr/bin/pixelweb
-	$(INSTALL) -m 0755 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/screens/pixelcade/pixelcade-tools		$(TARGET_DIR)/usr/bin/pixelcade-tools
-	$(INSTALL) -m 0755 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/screens/pixelcade/pixelcade-add		$(TARGET_DIR)/usr/bin/pixelcade-add
-	$(INSTALL) -m 0644 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/screens/pixelcade/99-pixelcade.rules	$(TARGET_DIR)/etc/udev/rules.d/99-pixelcade.rules
+	$(INSTALL) -m 0755 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/hardware/pixelcade/pixelcade-tools		$(TARGET_DIR)/usr/bin/pixelcade-tools
+	$(INSTALL) -m 0755 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/hardware/pixelcade/pixelcade-add		$(TARGET_DIR)/usr/bin/pixelcade-add
+	$(INSTALL) -m 0644 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/hardware/pixelcade/99-pixelcade.rules	$(TARGET_DIR)/etc/udev/rules.d/99-pixelcade.rules
 
 	mkdir -p $(TARGET_DIR)/usr/share/pixelcade/images/system
 	mkdir -p $(TARGET_DIR)/usr/share/pixelcade/scripts
-	$(INSTALL) -m 0644 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/screens/pixelcade/batocera.png $(TARGET_DIR)/usr/share/pixelcade/images/system/batocera.png
-	$(INSTALL) -m 0755 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/screens/pixelcade/scripts/*.sh $(TARGET_DIR)/usr/share/pixelcade/scripts/
+	$(INSTALL) -m 0644 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/hardware/pixelcade/batocera.png $(TARGET_DIR)/usr/share/pixelcade/images/system/batocera.png
+	$(INSTALL) -m 0755 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/hardware/pixelcade/scripts/*.sh $(TARGET_DIR)/usr/share/pixelcade/scripts/
 endef
 
 $(eval $(generic-package))
