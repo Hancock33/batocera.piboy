@@ -3,9 +3,9 @@
 # thextech
 #
 ################################################################################
-# Version: Commits on Feb 20, 2024
-THEXTECH_VERSION = 18d3a49de032796e75c0fdaa8ca846c29a3c2866
-THEXTECH_SITE = https://github.com/Wohlstand/TheXTech
+# Version: Commits on Feb 22, 2024
+THEXTECH_VERSION = 408b0fb4a26bc90c892c76a32695b16d37d942af
+THEXTECH_SITE = https://github.com/TheXTech/TheXTech
 THEXTECH_SITE_METHOD = git
 THEXTECH_GIT_SUBMODULES = YES
 THEXTECH_LICENSE = GPLv3
