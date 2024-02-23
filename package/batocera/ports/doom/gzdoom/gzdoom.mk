@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Feb 23, 2024
-GZDOOM_VERSION = d848a57bac0582ed85e34151ed8038c6707b9ee9
+GZDOOM_VERSION = e4ea5ad30783333c65c5f40eb0fd8d77f3e76605
 GZDOOM_SITE = $(call github,ZDoom,gzdoom,$(GZDOOM_VERSION))
 GZDOOM_LICENSE = GPL-3.0
 GZDOOM_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic libvpx webp host-zmusic host-gzdoom
