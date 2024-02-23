@@ -9950,7 +9950,7 @@ msgctxt "game_options"
 msgid "Force the game to render in this aspect ratio."
 msgstr "Vynútiť zobrazenie hry v tomto pomere strán."
 
-#. TRANSLATION: flycast, rpcs3, cgenius, yabasanshiro
+#. TRANSLATION: flycast, cgenius, yabasanshiro
 msgctxt "game_options"
 msgid "RENDER RESOLUTION"
 msgstr "Renderovacie rozlíšenie"
@@ -11530,6 +11530,11 @@ msgstr "Vysoké (predvolené)"
 msgctxt "game_options"
 msgid "Choose your preferred render resolution."
 msgstr "Vyberte preferované renderovanie rozlíšenie."
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "RENDER RESOLUTION (SCALING)"
+msgstr ""
 
 #. TRANSLATION: rpcs3, xenia-canary
 msgctxt "game_options"

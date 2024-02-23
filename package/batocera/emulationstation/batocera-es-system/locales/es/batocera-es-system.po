@@ -10022,7 +10022,7 @@ msgctxt "game_options"
 msgid "Force the game to render in this aspect ratio."
 msgstr "Fuerza al juego a renderizarse en esta relación de aspecto."
 
-#. TRANSLATION: flycast, rpcs3, cgenius, yabasanshiro
+#. TRANSLATION: flycast, cgenius, yabasanshiro
 msgctxt "game_options"
 msgid "RENDER RESOLUTION"
 msgstr "RESOLUCIÓN DE RENDERIZADO"
@@ -11615,6 +11615,11 @@ msgstr "Alta (Defecto)"
 msgctxt "game_options"
 msgid "Choose your preferred render resolution."
 msgstr "Elige tu resolución de renderizado preferida."
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "RENDER RESOLUTION (SCALING)"
+msgstr ""
 
 #. TRANSLATION: rpcs3, xenia-canary
 msgctxt "game_options"
