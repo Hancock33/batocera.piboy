@@ -3,9 +3,9 @@
 # wine-ge-custom-wow64_32
 #
 ################################################################################
-# Version: Commits on Feb 16, 2024
-WINE_GE_CUSTOM_WOW64_32_VERSION = wine-9.2
-WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION = v9.2
+# Version: Commits on Feb 22, 2024
+WINE_GE_CUSTOM_WOW64_32_VERSION = 232b18d820e08fe6534249a64d3afdbf35d0b688
+WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION = f76a6ab8dad86c024991d70625e1d8460e096c0f
 WINE_GE_CUSTOM_WOW64_32_SOURCE = wine-$(WINE_GE_CUSTOM_WOW64_32_VERSION).tar.gz
 WINE_GE_CUSTOM_WOW64_32_SITE = $(call github,wine-mirror,wine,$(WINE_GE_CUSTOM_WOW64_32_VERSION))
 WINE_GE_CUSTOM_WOW64_32_LICENSE = LGPL-2.1+
@@ -21,12 +21,6 @@ endif
 
 # Configure Wine
 define WINE_GE_CUSTOM_WOW64_32_AUTOGEN
-	# Add Version
-	$(SED) "s|The Wine configuration|Wine-86-$(WINE_GE_CUSTOM_WOW64_32_VERSION) config|g" $(@D)/programs/wineboot/wineboot.rc
-	$(SED) "s|IDD_WAITDLG DIALOG 0, 0, 200, 50|IDD_WAITDLG DIALOG 0, 0, 300, 30|g" $(@D)/programs/wineboot/wineboot.rc
-	$(SED) "s|IDC_WAITTEXT, 40, 5, 150, 40|IDC_WAITTEXT, 20, 5, 250, 20|g" $(@D)/programs/wineboot/wineboot.rc
-	$(SED) "s|FONT 8,|FONT 14,|g" $(@D)/programs/wineboot/wineboot.rc
-
 	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/ge-custom
 
