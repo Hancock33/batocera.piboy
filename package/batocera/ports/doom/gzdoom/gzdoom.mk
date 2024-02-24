@@ -8,7 +8,6 @@ GZDOOM_VERSION = e4ea5ad30783333c65c5f40eb0fd8d77f3e76605
 GZDOOM_SITE = $(call github,ZDoom,gzdoom,$(GZDOOM_VERSION))
 GZDOOM_LICENSE = GPL-3.0
 GZDOOM_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic libvpx webp host-zmusic host-gzdoom
-HOST_GZDOOM_DEPENDENCIES = host-webp
 GZDOOM_SUPPORTS_IN_SOURCE_BUILD = YES
 
 # We need the tools from the host package to build the target package
