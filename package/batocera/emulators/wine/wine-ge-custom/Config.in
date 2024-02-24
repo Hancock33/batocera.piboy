@@ -10,12 +10,7 @@ config BR2_PACKAGE_WINE_GE_CUSTOM
 	  eliminating the performance and memory penalties of other
 	  methods.
 
-	  This is the custom Glorius Eggroll version.
-	  Whih is based on/forked from the most recent bleeding-edge proton experimental wine repo.
-	  This is meant to be used with non-steam games outside of Steam.
-
 	  http://www.winehq.org
-	  https://github.com/GloriousEggroll/wine-ge-custom
 
 comment "wine needs a toolchain w/ dynamic library"
 	depends on BR2_PACKAGE_WINE_ARCH_SUPPORTS
