@@ -4950,7 +4950,7 @@ popcap:
   platform:             pc
   emulators:
     wine:
-      ge-custom:        { requireAnyOf: [`] }
+      ge-custom:        { requireAnyOf: [BR2_PACKAGE_WINE_CUSTOM] }
 
 atomiswave:
   name:                 Atomiswave
