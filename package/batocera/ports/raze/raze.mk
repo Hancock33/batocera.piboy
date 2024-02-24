@@ -8,11 +8,10 @@ RAZE_VERSION = 9af265b5ea1ab2872368ae58ad3b5490fab658f1
 RAZE_SITE = $(call github,ZDoom,Raze,$(RAZE_VERSION))
 RAZE_LICENSE = GPLv2
 RAZE_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic webp host-zmusic host-raze
-HOST_RAZE_DEPENDENCIES = host-webp
 RAZE_SUPPORTS_IN_SOURCE_BUILD = NO
 
 # We need the tools from the host package to build the target package
-HOST_RAZE_DEPENDENCIES = zlib bzip2
+HOST_RAZE_DEPENDENCIES = zlib bzip2 host-webp
 HOST_RAZE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 HOST_RAZE_CONF_OPTS += -DSKIP_INSTALL_ALL=ON
 
