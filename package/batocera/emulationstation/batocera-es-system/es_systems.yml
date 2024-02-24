@@ -2540,7 +2540,7 @@ windows:
   manufacturer:         Microsoft
   release:              1992
   hardware:             computer
-  extensions:           [pc, exe, wine, wsquashfs, wtgz]
+  extensions:           [pc, exe, squashfs, wine, wsquashfs, wtgz]
   platform:             pc
   theme:                windows
   emulators:
@@ -4935,7 +4935,7 @@ bigfish:
   manufacturer:         Big Fish Games
   release:              2002
   hardware:             computer
-  extensions:           [exe]
+  extensions:           [pc, exe, squashfs, wine, wsquashfs, wtgz]
   platform:             pc
   emulators:
     wine:
@@ -4946,7 +4946,7 @@ popcap:
   manufacturer:         Popcap
   release:              2000
   hardware:             computer
-  extensions:           [exe]
+  extensions:           [pc, exe, squashfs, wine, wsquashfs, wtgz]
   platform:             pc
   emulators:
     wine:
