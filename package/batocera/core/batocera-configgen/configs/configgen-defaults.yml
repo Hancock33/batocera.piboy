@@ -1129,8 +1129,8 @@ xbox:
   options:
     powersave: '2'
 xbox360:
-  emulator: xenia-canary
-  core:     xenia-canary
+  emulator: xenia
+  core:     xenia
   options:
     powersave: '2'
     hud_support: false
