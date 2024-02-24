@@ -17,7 +17,7 @@ class WineGenerator(Generator):
         elif system.name == "windows" or system.name == "popcap" or system.name == "bigfish":
             if "squashfs" in rom:
                 romsInDir = glob.glob(glob.escape(rom) + '/*.wineexe')
-                rom = romsInDir[0].replace('.wineexe','exe')
+                rom = romsInDir[0].replace('.wineexe','.exe')
                 commandArray = ["batocera-wine", "windows", "play", rom]
             else:
                 commandArray = ["batocera-wine", "windows", "play", rom]
