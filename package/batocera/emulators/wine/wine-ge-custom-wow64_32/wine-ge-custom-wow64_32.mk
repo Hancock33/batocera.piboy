@@ -5,7 +5,6 @@
 ################################################################################
 # Version: Commits on Feb 22, 2024
 WINE_GE_CUSTOM_WOW64_32_VERSION = 232b18d820e08fe6534249a64d3afdbf35d0b688
-WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION = f76a6ab8dad86c024991d70625e1d8460e096c0f
 WINE_GE_CUSTOM_WOW64_32_SOURCE = wine-$(WINE_GE_CUSTOM_WOW64_32_VERSION).tar.gz
 WINE_GE_CUSTOM_WOW64_32_SITE = $(call github,wine-mirror,wine,$(WINE_GE_CUSTOM_WOW64_32_VERSION))
 WINE_GE_CUSTOM_WOW64_32_LICENSE = LGPL-2.1+
@@ -13,22 +12,28 @@ WINE_GE_CUSTOM_WOW64_32_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_GE_CUSTOM_WOW64_32_SELINUX_MODULES = wine
 WINE_GE_CUSTOM_WOW64_32_DEPENDENCIES = host-bison host-flex host-wine-ge-custom-wow64_32
 HOST_WINE_GE_CUSTOM_WOW64_32_DEPENDENCIES = host-bison host-flex
-HOST_WINE_GE_CUSTOM_WOW64_32_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/$(WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION).tar.gz
 
 ifeq ($(BR_CMAKE_USE_CLANG),y)
 	HOST_WINE_GE_CUSTOM_WOW64_32_DEPENDENCIES += host-clang host-lld
 endif
 
-# Configure Wine
-define WINE_GE_CUSTOM_WOW64_32_AUTOGEN
-	# Create folder for install
-	mkdir -p $(TARGET_DIR)/usr/wine/ge-custom
+ifeq ($(BR_WINE_STAGING),y)
+	WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION = f76a6ab8dad86c024991d70625e1d8460e096c0f
+	HOST_WINE_GE_CUSTOM_WOW64_32_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/$(WINE_GE_CUSTOM_STAGING_VERSION).tar.gz
+	WINE_GE_CUSTOM_WOW64_32_POST_EXTRACT_HOOKS += WINE_GE_CUSTOM_WOW64_32_STAGING
+	HOST_WINE_GE_CUSTOM_WOW64_32_POST_EXTRACT_HOOKS += WINE_GE_CUSTOM_WOW64_32_STAGING
+endif
 
+define WINE_GE_CUSTOM_WOW64_32_STAGING
 	# Use Staging Patches
 	printf "%s\n" "$(TERM_BOLD)>>> $($(PKG)_NAME) $($(PKG)_VERSION) Patching wine-staging" >&2
 	tar -xf $(WINE_GE_CUSTOM_WOW64_32_DL_DIR)/$(WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION).tar.gz -C $(@D)
 	cd $(@D); ./wine-staging-$(subst v,,$(WINE_GE_CUSTOM_WOW64_32_STAGING_VERSION))/staging/patchinstall.py --all
+endef
 
+define WINE_GE_CUSTOM_WOW64_32_AUTOGEN
+	# Create folder for install
+	mkdir -p $(TARGET_DIR)/usr/wine/ge-custom
 	# Autotools generation
 	cd $(@D); autoreconf -fiv
 	cd $(@D); ./tools/make_requests
