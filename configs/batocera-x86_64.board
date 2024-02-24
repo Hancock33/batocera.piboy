@@ -40,8 +40,11 @@ BR2_PACKAGE_BATOCERA_KODI=y
 BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL=y
 BR2_CCACHE_DIR="$(HOME)/build-dir/ccache/x86_64"
 
-Experimental, build cmake packages with clang
+# Experimental, build cmake packages with clang
 BR_CMAKE_USE_CLANG=y
+
+# Wine Staging Patches
+BR_WINE_STAGING=y
 
 # EFI Boot
 BR2_PACKAGE_EFIBOOTMGR=y
