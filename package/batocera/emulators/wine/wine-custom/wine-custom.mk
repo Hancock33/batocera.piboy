@@ -3,10 +3,10 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Feb 23, 2024
-WINE_CUSTOM_VERSION = wine-9.3
+# Version: Commits on Feb 22, 2024 (branch@proton_9.0)
+WINE_CUSTOM_VERSION = proton-wine-9.0-beta11
 WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
-WINE_CUSTOM_SITE = $(call github,wine-mirror,wine,$(WINE_CUSTOM_VERSION))
+WINE_CUSTOM_SITE = $(call github,ValveSoftware,wine,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
 WINE_CUSTOM_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_CUSTOM_SELINUX_MODULES = wine
@@ -35,9 +35,10 @@ define WINE_CUSTOM_AUTOGEN
 	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/ge-custom
 	# Autotools generation
-	cd $(@D); autoreconf -fiv
 	cd $(@D); ./tools/make_requests
+	cd $(@D); ./tools/make_specfiles
 	cd $(@D); ./dlls/winevulkan/make_vulkan && rm dlls/winevulkan/vk-*.xml
+	cd $(@D); autoreconf -fiv
 endef
 
 WINE_CUSTOM_PRE_CONFIGURE_HOOKS += WINE_CUSTOM_AUTOGEN
