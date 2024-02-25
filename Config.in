@@ -55,11 +55,6 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/toolchain/toolchain-optional-linaro-aarch64/Config.in"
   endmenu
 
-  menu "Fonts"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/fonts/nanum-font/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/fonts/noto-cjk-fonts/Config.in"
-  endmenu
-
   menu "Firmwares"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/firmwares/alllinuxfirmwares/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/firmwares/extralinuxfirmwares/Config.in"
@@ -110,10 +105,6 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl8812au/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl8821au-morrownr/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl88x2bu/Config.in"
-  endmenu
-
-  menu "LED"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/leds/ayn-platform/Config.in"
   endmenu
 
   menu "Device trees"
@@ -223,7 +214,6 @@ menu "Emulators"
       source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-fbalpha/Config.in"
       source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-fbneo/Config.in"
       source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-fceumm/Config.in"
-      source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-ffmpeg/Config.in"
       source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-flycast/Config.in"
       source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-flycast2021/Config.in"
       source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-fmsx/Config.in"
@@ -360,9 +350,7 @@ menu "Emulators"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/model2emu/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/moonlight-embedded/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/openbor/openbor4432/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/openbor/openbor6330/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/openbor/openbor6412/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/openbor/openbor6510/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/openbor/openbor7142/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/openbor/openbor7530/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/pcsx2/Config.in"
@@ -397,7 +385,6 @@ menu "Emulators"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/xemu/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/xenia/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/xenia-canary/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/xenia-native/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/yabasanshiro/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/yuzu/Config.in"
   endmenu
@@ -418,13 +405,11 @@ menu "Emulators"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/d8vk/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/dxvk/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/dxvk-nvapi/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/mf/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/rtkit/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/vkd3d/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/vkd3d-proton/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/wine-ge-custom/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/wine-ge-custom-wow64_32/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/wine-mono-ge-custom/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/wine-custom/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/wine-mono/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/winetricks/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/wine-x86/Config.in"
   endmenu
@@ -502,8 +487,6 @@ menu "Ports"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/tekwar/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/theforceengine/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/vcmi/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/wip/halflife2/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/wip/pemu/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/xash3d/hlsdk-xash3d/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/xash3d/hlsdk-xash3d-dmc/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/xash3d/hlsdk-xash3d-opfor/Config.in"
@@ -526,13 +509,13 @@ if BR2_PACKAGE_KODI
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-resource-language-zh_cn/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-audiodecoder-openmpt/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-pvr-freebox/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-p8-platform/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-platform/Config.in"
 endif
 endmenu
 
 menu "Looks"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/looks/adwaita-icon-theme-light/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/looks/nanum-font/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/looks/noto-cjk-fonts/Config.in"
 endmenu
 
 menu "Utils"
@@ -583,15 +566,14 @@ menu "Utils"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/zramswap/Config.in"
 endmenu
 
-menu "Cases"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/cases/deskpipro-case/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/cases/element14-pi-desktop/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/cases/gpicase/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/cases/roshambo-case/Config.in"
-endmenu
-
-menu "Screens"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/screens/pixelcade/Config.in"
+menu "Hardware"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/ayn-platform/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/deskpipro-case/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/element14-pi-desktop/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/gpicase/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/pironman/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/pixelcade/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/roshambo-case/Config.in"
 endmenu
 
 menu "Libraries"

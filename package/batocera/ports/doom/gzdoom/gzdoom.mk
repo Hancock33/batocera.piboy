@@ -3,12 +3,11 @@
 # gzdoom
 #
 ################################################################################
-# Version: Commits on Feb 17, 2024
-GZDOOM_VERSION = 6de9d83b81ce5a5f6613ccc3668acbe6728e4123
+# Version: Commits on Feb 24, 2024
+GZDOOM_VERSION = a1a916a82333bcb9652b1acc12623b9e8517dbf2
 GZDOOM_SITE = $(call github,ZDoom,gzdoom,$(GZDOOM_VERSION))
 GZDOOM_LICENSE = GPL-3.0
 GZDOOM_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic libvpx webp host-zmusic host-gzdoom
-HOST_GZDOOM_DEPENDENCIES = host-webp
 GZDOOM_SUPPORTS_IN_SOURCE_BUILD = YES
 
 # We need the tools from the host package to build the target package

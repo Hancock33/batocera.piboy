@@ -1464,7 +1464,7 @@ msgstr "Logiciel"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "OpenGL (Overwrites Libretro API settings)"
-msgstr "OpenGL (prend le pas sur les réglages d'API Libretro)"
+msgstr "OpenGL (outrepasse les réglages Libretro)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -1553,12 +1553,12 @@ msgstr "Linéaire"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Determines how the cursor should apprear on the botton screen."
-msgstr ""
+msgstr "Détermine comment le curseur apparaît sur l'écran inférieur."
 
 #. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds
 msgctxt "game_options"
 msgid "SCREEN SETTINGS"
-msgstr ""
+msgstr "RÉGLAGES D'ÉCRAN"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -1683,17 +1683,17 @@ msgstr "FORÇAGE DNS"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Kaeru WFC (178.62.43.212)"
-msgstr ""
+msgstr "Kaeru WFC (178.62.43.212)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "AltWFC (172.104.88.237)"
-msgstr ""
+msgstr "AltWFC (172.104.88.237)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Wiimmfi (95.217.77.181)"
-msgstr ""
+msgstr "Wiimmfi (95.217.77.181)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -1713,7 +1713,7 @@ msgstr "Force le réglage de langue de la console émulée."
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Use Host"
-msgstr ""
+msgstr "Utiliser l'hôte"
 
 #. TRANSLATION: libretro/melondsds, libretro/dolphin, libretro/kronos, cemu, flycast/vitaquake3, ...
 msgctxt "game_options"
@@ -2050,6 +2050,8 @@ msgctxt "game_options"
 msgid ""
 "Enable to display an on-screen message if trying to use unsupported features."
 msgstr ""
+"Permet d'afficher un message à l'écran si vous essayez des fonctionnalités "
+"non supportées."
 
 #. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, ...
 msgctxt "game_options"
@@ -2059,17 +2061,17 @@ msgstr "AFFICHAGE & NOTIFICATIONS"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "WARN ABOUT UNSUPPORTED FEATURES"
-msgstr ""
+msgstr "PRÉVENIR SI FONCTIONS NON SUPPORTÉES"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Enable to display if your BIOS haas known problems."
-msgstr ""
+msgstr "À activer si le BIOS utilisé a des soucis connus."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "WARN ABOUT BIOS PROBLEMS"
-msgstr ""
+msgstr "PRÉVENIR DES PROBLÈMES DE BIOS"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -2080,7 +2082,7 @@ msgstr ""
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "SHOW SCREEN LAYOUT"
-msgstr ""
+msgstr "MONTRER L'AGENCEMENT DE L'ÉCRAN"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -3794,6 +3796,8 @@ msgid ""
 "Use Megadrive to automap inputs for a Megadrive style controller with a 6 "
 "button layout."
 msgstr ""
+"Megadrive est à utiliser pour mapper automatiquement une manette type "
+"Megadrive à 6 boutons."
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, ...
 msgctxt "game_options"
@@ -3808,12 +3812,12 @@ msgstr ""
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, ...
 msgctxt "game_options"
 msgid "Retropad (Default)"
-msgstr ""
+msgstr "Retropad (Défaut)"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, ...
 msgctxt "game_options"
 msgid "Megadrive"
-msgstr ""
+msgstr "Megadrive"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
@@ -4314,12 +4318,12 @@ msgstr "Port1+2"
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
 msgid "Choose system BIOS language."
-msgstr ""
+msgstr "Choisir la langue du BIOS du système."
 
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
 msgid "BIOS Language"
-msgstr ""
+msgstr "Langue du BIOS"
 
 #. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -5924,23 +5928,24 @@ msgstr "Rumble Pak"
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
-msgstr ""
+msgstr "Rumble Pak (Automatique)"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid ""
 "Use to eliminate joystick drift/unwanted input. Effects all controllers."
 msgstr ""
+"Pour éliminer des soucis de drift sur le stick. Affecte toutes les manettes."
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "JOYSTICK DEADZONE"
-msgstr ""
+msgstr "ZONE MORTE DU STICK"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "15% (Default)"
-msgstr ""
+msgstr "15% (Défaut)"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
@@ -5948,11 +5953,13 @@ msgid ""
 "Use to make joystick movement more or less sensitive. Effects all "
 "controllers."
 msgstr ""
+"Pour régler la sensibilité des mouvements du stick. Affecte toutes les "
+"manettes."
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "JOYSTICK SENSITIVITY"
-msgstr ""
+msgstr "SENSIBILITÉ DU STICK"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
@@ -6939,12 +6946,12 @@ msgstr "VITESSE CPU"
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "PAL 288x576px 50Hz (auto)"
-msgstr ""
+msgstr "PAL 288x576px 50Hz (auto)"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "NTSC 240x480px 60Hz (auto)"
-msgstr ""
+msgstr "NTSC 240x480px 60Hz (auto)"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -9119,17 +9126,17 @@ msgstr "ACTIVER L'ANIMATION DE BOOT"
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Change the Gamecube system language."
-msgstr ""
+msgstr "Change la langue du système Gamecube."
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "GAMECUBE LANGUAGE"
-msgstr ""
+msgstr "LANGUE DE LA GAMECUBE"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "English/Japanese"
-msgstr ""
+msgstr "Anglais/Japonais"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
@@ -9199,7 +9206,7 @@ msgstr ""
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Enable controller rumble capabilities if supported by the controller."
-msgstr ""
+msgstr "Active les vibrations de la manette si supporté par la manette."
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -9998,7 +10005,7 @@ msgctxt "game_options"
 msgid "Force the game to render in this aspect ratio."
 msgstr "Force le jeu à respecter ce ratio d'écran."
 
-#. TRANSLATION: flycast, rpcs3, cgenius, yabasanshiro
+#. TRANSLATION: flycast, cgenius, yabasanshiro
 msgctxt "game_options"
 msgid "RENDER RESOLUTION"
 msgstr "RÉSOLUTION DE RENDU"
@@ -10709,12 +10716,12 @@ msgstr "1% (par défaut)"
 #. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
 msgid "Limit FPS to reduce high CPU usage."
-msgstr ""
+msgstr "Limite les FPS pour réduire l'usage CPU."
 
 #. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
 msgid "LIMIT FPS"
-msgstr ""
+msgstr "LIMITER LES FPS"
 
 #. TRANSLATION: openbor/openbor7530, supermodel
 msgctxt "game_options"
@@ -11188,22 +11195,22 @@ msgstr "MODÈLE DE VOLANT"
 #. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Driving Force"
-msgstr ""
+msgstr "Driving Force"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Driving Force Pro"
-msgstr ""
+msgstr "Driving Force Pro"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "GT Force"
-msgstr ""
+msgstr "GT Force"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Virtual"
-msgstr ""
+msgstr "Virtuel"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -11591,6 +11598,11 @@ msgstr "Haute (par défaut)"
 msgctxt "game_options"
 msgid "Choose your preferred render resolution."
 msgstr "Choisir la résolution de rendu."
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "RENDER RESOLUTION (SCALING)"
+msgstr ""
 
 #. TRANSLATION: rpcs3, xenia-canary
 msgctxt "game_options"
@@ -12746,6 +12758,7 @@ msgstr "BUREAU VIRTUEL"
 msgctxt "game_options"
 msgid "Enable support for Chinese, Japanese and Korean input methods."
 msgstr ""
+"Permet de supporter les méthodes de saisies pour Chinois, Japonais et Coréen."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -14723,7 +14736,7 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "0% (Default)"
-msgstr ""
+msgstr "0% (Défaut)"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -14738,22 +14751,22 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "0 (No Visual Effect)"
-msgstr ""
+msgstr "0 (Pas d'effet visuel)"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Framerate limiter to reduce CPU utilisation."
-msgstr ""
+msgstr "Limite de FPS pour réduire l'usage CPU."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "MAXIMUM FRAMERATE"
-msgstr ""
+msgstr "FRAMERATE MXIMUM"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "0 (Defaults Unlimited)"
-msgstr ""
+msgstr "0 (Par défaut non limité)"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -14765,7 +14778,7 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Vertical Sync"
-msgstr ""
+msgstr "Synchro Verticale"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -14782,12 +14795,12 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "PERFORMANCE PRESETS"
-msgstr ""
+msgstr "PRÉRÉGLAGES DE PERFORMANCE"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Default Performance Settings"
-msgstr ""
+msgstr "Réglages de performances par défaut"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -14945,6 +14958,8 @@ msgid ""
 "Choose which graphics API library to use. D3D12 may yield better results "
 "with faster GPUs."
 msgstr ""
+"Choisi l'API graphique à utiliser. D3D12 permet de meilleurs résultats sur "
+"des GPUs plus rapides."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15715,7 +15730,7 @@ msgstr "Clicks de la souris"
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Pause / Menu"
-msgstr ""
+msgstr "Pause / Menu"
 
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
@@ -16682,6 +16697,14 @@ msgstr "Sauvegarde rapide"
 #~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."
 #~ msgstr "Choisissez le fuseau horaire UTC de la console."
+
+#~ msgctxt "game_options"
+#~ msgid "D3D12 (Default)"
+#~ msgstr "D3D12 (Défaut)"
+
+#~ msgctxt "game_options"
+#~ msgid "Native Vulkan"
+#~ msgstr "Vulkan natif"
 
 #~ msgctxt "game_options"
 #~ msgid ""

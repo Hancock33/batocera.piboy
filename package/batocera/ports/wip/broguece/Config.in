@@ -1,8 +1,0 @@
-config BR2_PACKAGE_BROGUECE
-	bool "broguece"
-	depends on BR2_PACKAGE_SDL2
-	depends on BR2_PACKAGE_SDL2_IMAGE
-	help
-	  Brogue Community Edition - a community-lead fork of the much-loved minimalist roguelike game.
-
-	  https://github.com/tmewett/BrogueCE

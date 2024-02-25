@@ -54,7 +54,7 @@ define BATOCERA_SHADERS_INSTALL_TARGET_CMDS
 
 	# general
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/shaders/configs
-	cp $(BATOCERA_SHADERS_DIRIN)/rendering-defaults.yml $(TARGET_DIR)/usr/share/batocera/shaders/configs/
+	cp $(BATOCERA_SHADERS_DIRIN)/rendering-defaults.yml		   $(TARGET_DIR)/usr/share/batocera/shaders/configs/
 	if test -e $(BATOCERA_SHADERS_DIRIN)/rendering-defaults-$(BATOCERA_GPU_SYSTEM).yml; then \
 		cp $(BATOCERA_SHADERS_DIRIN)/rendering-defaults-$(BATOCERA_GPU_SYSTEM).yml $(TARGET_DIR)/usr/share/batocera/shaders/configs/rendering-defaults-arch.yml; \
 	fi
@@ -62,11 +62,23 @@ define BATOCERA_SHADERS_INSTALL_TARGET_CMDS
 	# sets
 	for set in $(BATOCERA_SHADERS_SETS); do \
 		mkdir -p $(TARGET_DIR)/usr/share/batocera/shaders/configs/$$set; \
-		cp $(BATOCERA_SHADERS_DIRIN)/$$set/rendering-defaults.yml	$(TARGET_DIR)/usr/share/batocera/shaders/configs/$$set/; \
+		cp $(BATOCERA_SHADERS_DIRIN)/$$set/rendering-defaults.yml	 $(TARGET_DIR)/usr/share/batocera/shaders/configs/$$set/; \
 		if test -e $(BATOCERA_SHADERS_DIRIN)/$$set/rendering-defaults-$(BATOCERA_GPU_SYSTEM).yml; then \
 			cp $(BATOCERA_SHADERS_DIRIN)/$$set/rendering-defaults-$(BATOCERA_GPU_SYSTEM).yml $(TARGET_DIR)/usr/share/batocera/shaders/configs/$$set/rendering-defaults-arch.yml; \
 		fi \
 	done
 endef
+
+define BATOCERA_SHADERS_SLANG
+	# Some shaders got the .slan(g) variants moved
+	cd $(TARGET_DIR)/usr/share/batocera/shaders/ && cp -f pixel-art-scaling/sharp-bilinear-simple.slangp ./interpolation/ && \
+		cp -f pixel-art-scaling/shaders/sharp-bilinear-simple.slang ./interpolation/shaders/
+	cd $(TARGET_DIR)/usr/share/batocera/shaders/ && cp -f edge-smoothing/scalehq/2xScaleHQ.slangp ./scalehq/ && \
+		cp -f ./edge-smoothing/scalehq/shaders/2xScaleHQ.slang ./scalehq/shaders/
+endef
+
+ifeq ($(BR2_PACKAGE_SLANG_SHADERS),y)
+	BATOCERA_SHADERS_POST_INSTALL_TARGET_HOOKS = BATOCERA_SHADERS_SLANG
+endif
 
 $(eval $(generic-package))

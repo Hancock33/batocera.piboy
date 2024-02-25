@@ -1,3 +1,56 @@
+# 2024/xx/xx - batocera.linux 40 - 
+### Special Notes
+
+### Hardware
+Add support for the Pironman case with RPI4 devices.
+
+### Added
+
+### Fixed
+- RG552 Splash-screen rotation
+- RG552 Vibrator enabled
+- GameForce Vibrator enabled
+
+### Changed
+- RK3326 Replaced the mali-G31 driver with mesa3d
+
+### Updated
+- Retroarch to 1.17.0
+- mupen64plus-core bump to Jan 25, 2024 build
+- mupen64plus-audio-sdl bump to Jun 11, 2023 build
+- mupen64plus-input-sdl bump to Nov 4, 2023 build
+- mupen64plus-ui-console bump to Jun 11, 2023 build
+- mupen64plus-rsp-hle bump to Jan 13, 2024 build
+- mupen64plus-video-glide64mk2 bump to Jun 11, 2023 build
+- mupen64plus-video-rice bump to Jun 11, 2023 build
+- mupen64plus-gliden64 bump to Feb 18, 2024 build
+- ppsspp: bump to 1.17.1
+- duckstation: bump to Feb 06, 2024 build
+- libretro-ppsspp: bump to 1.17.1
+- libretro-81: bump to Nov 1, 2023 build
+- libretro-fbneo: bump to Feb 23, 2024 build (v1.0.0.03)
+- libretro-genesisplusgx: bump to Feb 23, 2024 build
+- libretro-mame2003-plus: bump to Feb 21, 2024 build
+- libretro-mupen64plus-next: bump to Feb 6, 2024 build
+- libretro-neocd: bump to Feb 1, 2024 build
+- libretro-opera: bump to Jan 13, 2024 build
+- libretro-stella: bump to Jan 2, 2024 build
+- libretro-swanstation: bump to Jan 25, 2024 build
+- libretro-pcsx: bump to Feb 14, 2024 build
+- Redream to 1.5.0-1103-g47bc2b7
+### System
+- Nvidia Production driver to 550.54.14
+- Nvidia Legacy driver to 470.239.06
+- wayland-protocols to 1.33
+- wlroots to 0.17.1
+- sway to 1.9
+- mesa3d to 24.0.1
+- RPI kernel to 6.1.77
+- RK3326 kernel to 6.7.5
+- RK3399 kernel to 6.1.78
+- S922X kernel to 6.7.5
+- Odroid-XU4 kernel to 6.6.16
+
 # 2024/03/xx - batocera.linux 39 - Painted Lady
 ### Special Notes
 - Emulators using Wine now use the Glorious Eggroll custom runner for latest capabilities and compatibility.

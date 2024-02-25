@@ -3,8 +3,8 @@
 # libretro-mame2003-plus
 #
 ################################################################################
-# Version: Commits on Feb 16, 2024
-LIBRETRO_MAME2003_PLUS_VERSION = fc987f1913203a41bca7f6fd16e92c83729dd7fc
+# Version: Commits on Feb 21, 2024
+LIBRETRO_MAME2003_PLUS_VERSION = 1a5b4b75e1e178a338f8f3dee3dfd940c8c9a3f2
 LIBRETRO_MAME2003_PLUS_SITE = $(call github,libretro,mame2003-plus-libretro,$(LIBRETRO_MAME2003_PLUS_VERSION))
 LIBRETRO_MAME2003_PLUS_LICENSE = MAME
 
