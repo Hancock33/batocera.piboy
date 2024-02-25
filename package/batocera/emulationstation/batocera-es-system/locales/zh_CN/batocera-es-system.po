@@ -9858,7 +9858,7 @@ msgctxt "game_options"
 msgid "Force the game to render in this aspect ratio."
 msgstr "强制游戏以此纵横比渲染。"
 
-#. TRANSLATION: flycast, rpcs3, cgenius, yabasanshiro
+#. TRANSLATION: flycast, cgenius, yabasanshiro
 msgctxt "game_options"
 msgid "RENDER RESOLUTION"
 msgstr "渲染分辨率"
@@ -11404,6 +11404,11 @@ msgstr "高(默认)"
 msgctxt "game_options"
 msgid "Choose your preferred render resolution."
 msgstr "选择您喜欢的渲染分辨率."
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "RENDER RESOLUTION (SCALING)"
+msgstr ""
 
 #. TRANSLATION: rpcs3, xenia-canary
 msgctxt "game_options"
@@ -15870,14 +15875,6 @@ msgid "Quick Save"
 msgstr "快速保存"
 
 #~ msgctxt "game_options"
-#~ msgid "D3D12 (Default)"
-#~ msgstr "D3D12 (默认)"
-
-#~ msgctxt "game_options"
-#~ msgid "Native Vulkan"
-#~ msgstr "原生Vulkan"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (小心)"
 
@@ -16428,6 +16425,14 @@ msgstr "快速保存"
 #~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."
 #~ msgstr "选择控制台UTC时区."
+
+#~ msgctxt "game_options"
+#~ msgid "D3D12 (Default)"
+#~ msgstr "D3D12 (默认)"
+
+#~ msgctxt "game_options"
+#~ msgid "Native Vulkan"
+#~ msgstr "原生Vulkan"
 
 #~ msgctxt "game_options"
 #~ msgid ""

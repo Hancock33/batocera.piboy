@@ -358,7 +358,7 @@ libretro:
   cfeatures:
     gfxbackend:
       group: DRIVERS
-      archs_include: [x86, x86_64, bcm2711, bcm2712, rk3326]
+      archs_include: [x86, x86_64, bcm2711, bcm2712]
       prompt:      GRAPHICS API
       description: Choose which graphics API library to use. Vulkan may not work for every core.
       choices:
@@ -7613,7 +7613,7 @@ daphne:
   cfeatures:
         gfxbackend:
             group: DRIVERS
-            archs_include: [x86, x86_64, bcm2711, bcm2712, rk3326]
+            archs_include: [x86, x86_64, bcm2711, bcm2712]
             prompt:      GRAPHICS API
             description: Choose which graphics API library to use. Vulkan may not work on all hardware.
             choices:
@@ -7711,7 +7711,7 @@ dolphin:
                 "Force 4:3":         2
                 "Stretch to window": 3
         gfxbackend:
-            archs_include: [x86, x86_64, bcm2711, bcm2712, rk3326]
+            archs_include: [x86, x86_64, bcm2711, bcm2712]
             submenu: RENDERING
             prompt:  GRAPHICS API
             description: Choose which graphics API library to use.
@@ -8315,7 +8315,7 @@ duckstation:
         duckstation_gfxbackend:
             submenu: DISPLAY
             group: ADVANCED OPTIONS
-            archs_include: [x86, x86_64, bcm2711, bcm2712, rk3326]
+            archs_include: [x86, x86_64, bcm2711, bcm2712]
             prompt: GRAPHICS API
             description: Choose which graphics API library to use.
             choices:
@@ -9483,8 +9483,8 @@ ppsspp:
   shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, rewind]
   cfeatures:
         gfxbackend:
-            archs_include: [x86, x86_64, bcm2711, bcm2712, rk3326]
             group: DRIVERS
+            archs_include: [x86, x86_64, bcm2711, bcm2712]
             prompt: GRAPHICS API
             description: Choose which graphics API library to use.
             choices:
@@ -9713,19 +9713,22 @@ rpcs3:
                 "High (Default)": High
                 "Low":            Low
                 "Automatic":      Auto
-        rpcs3_resolution:
+        rpcs3_resolution_scale:
             submenu: VIDEO
-            prompt: RENDER RESOLUTION
+            prompt: RENDER RESOLUTION (SCALING)
             description: Choose your preferred render resolution.
             choices:
-                "720x480":            720x480
-                "720x576":            720x576
-                "1280x720 (Default)": 1280x720
-                "960x1080":           960x1080
-                "1280x1080":          1280x1080
-                "1440x1080":          1440x1080
-                "1600x1080":          1600x1080
-                "1920x1080":          1920x1080
+                "640x360":            50
+                "960x540":            75
+                "1280x720 (Default)": 100
+                "1600x900":           125
+                "1920x1080":          150
+                "2240x1260":          175
+                "2560x1440":          200
+                "3200x1800":          225
+                "3840x2160":          250
+                "4480x2520":          275
+                "5120x2880":          300
         rpcs3_scaling:
             submenu: RENDER
             prompt: OUTPUT SCALING
@@ -10257,7 +10260,7 @@ mame:
                 "Off (Default)": 0
                 "On":            1
         bgfxbackend:
-            archs_include: [x86, x86_64, bcm2711, bcm2712, rk3326]
+            archs_include: [x86, x86_64, bcm2711, bcm2712]
             prompt:      BGFX GRAPHICS API
             description: Depends on video mode being set to BGFX.
             choices:
@@ -11604,7 +11607,7 @@ xemu:
             description: Fix screen tearing.
             choices:
                 "Off":          "false"
-                "On (Default)": "true"       
+                "On (Default)": "true"
         xemu_bootanim:
             prompt:      SHOW BIOS BOOTLOGO
             description: Enhancement.
@@ -13158,7 +13161,7 @@ vpinball:
       group: EXPERT SETTINGS
       prompt: ENABLE EMULATIONSTATION CONFIGURATION
       description: Turn on to configure settings from this GUI (Recommended). If disabled, you have to manually edit the Config File (Experts only - not recommended).
-      preset: switchon  
+      preset: switchon
     vpinball_folders:
       group: EXPERT SETTINGS
       prompt: PER TABLE FOLDER
@@ -13222,37 +13225,37 @@ vpinball:
       group: DISPLAY
       prompt: PINMAME DMD
       description: Extra DMD (Dot Matrix Display) window to display the score for tables with a pinmame rom. By default, settings come from the VPinballX.ini configuration file.
-      choices:              
+      choices:
         "Top-Right Position, Small": "pinmame_topright_small"
         "Top-Right Position, Medium": "pinmame_topright_medium"
-        "Top-Right Position, Large": "pinmame_topright_large"        
+        "Top-Right Position, Large": "pinmame_topright_large"
         "Top-Left Position, Small": "pinmame_topleft_small"
         "Top-Left Position, Medium": "pinmame_topleft_medium"
-        "Top-Left Position, Large": "pinmame_topleft_large"        
+        "Top-Left Position, Large": "pinmame_topleft_large"
         "PinMAME DMD disabled": "pinmame_disabled"
     vpinball_flexdmd:
       group: DISPLAY
       prompt: FLEX DMD
       description: Extra DMD (Dot Matrix Display) window to display the score for tables without a rom. By default, settings come from the VPinballX.ini configuration file.
-      choices:      
+      choices:
         "Top-Right Position, Small": "flexdmd_topright_small"
         "Top-Right Position, Medium": "flexdmd_topright_medium"
-        "Top-Right Position, Large": "flexdmd_topright_large"        
+        "Top-Right Position, Large": "flexdmd_topright_large"
         "Top-Left Position, Small": "flexdmd_topleft_small"
         "Top-Left Position, Medium": "flexdmd_topleft_medium"
-        "Top-Left Position, Large": "flexdmd_topleft_large"        
+        "Top-Left Position, Large": "flexdmd_topleft_large"
         "FlexDMD disabled": "flexdmd_disabled"
     vpinball_b2s:
       group: DISPLAY
       prompt: BACKGLASS (B2S)
       description: Upright glass panel displaying some illuminated artwork. By default, settings come from the VPinballX.ini configuration file.
-      choices:      
+      choices:
         "Top-Right Position, Small": "b2s_topright_small"
         "Top-Right Position, Medium": "b2s_topright_medium"
-        "Top-Right Position, Large": "b2s_topright_large"        
+        "Top-Right Position, Large": "b2s_topright_large"
         "Top-Left Position, Small": "b2s_topleft_small"
         "Top-Left Position, Medium": "b2s_topleft_medium"
-        "Top-Left Position, Large": "b2s_topleft_large"        
+        "Top-Left Position, Large": "b2s_topleft_large"
         "Backglass disabled": "b2s_disabled"
     vpinball_b2sdmd:
       group: DISPLAY
@@ -13599,7 +13602,7 @@ xenia-canary:
                 "15s":           15
                 "30s (Default)": 30
                 "45s":           45
-                "15s":           60           
+                "15s":           60
         xenia_cache:
             group: ADVANCED OPTIONS
             prompt: MOUNT CACHE

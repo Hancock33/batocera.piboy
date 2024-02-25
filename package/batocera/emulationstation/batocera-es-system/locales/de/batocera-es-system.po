@@ -10059,7 +10059,7 @@ msgid "Force the game to render in this aspect ratio."
 msgstr ""
 "Das Rendern der Spielauflösung im angegebenen Seitenverhältnis erzwingen."
 
-#. TRANSLATION: flycast, rpcs3, cgenius, yabasanshiro
+#. TRANSLATION: flycast, cgenius, yabasanshiro
 msgctxt "game_options"
 msgid "RENDER RESOLUTION"
 msgstr "RENDER AUFLÖSUNG"
@@ -11660,6 +11660,11 @@ msgstr "Hoch (Standard)"
 msgctxt "game_options"
 msgid "Choose your preferred render resolution."
 msgstr "Bevorzugte Render-Auflösung auswählen."
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "RENDER RESOLUTION (SCALING)"
+msgstr ""
 
 #. TRANSLATION: rpcs3, xenia-canary
 msgctxt "game_options"
@@ -16244,14 +16249,6 @@ msgid "Quick Save"
 msgstr "Schnellspeichern"
 
 #~ msgctxt "game_options"
-#~ msgid "D3D12 (Default)"
-#~ msgstr "D3D12 (Standard)"
-
-#~ msgctxt "game_options"
-#~ msgid "Native Vulkan"
-#~ msgstr "Native Vulkan"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (Vorsicht ist geboten)"
 
@@ -16853,6 +16850,14 @@ msgstr "Schnellspeichern"
 #~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."
 #~ msgstr "UTC-Zeitzone für die Konsole auswählen."
+
+#~ msgctxt "game_options"
+#~ msgid "D3D12 (Default)"
+#~ msgstr "D3D12 (Standard)"
+
+#~ msgctxt "game_options"
+#~ msgid "Native Vulkan"
+#~ msgstr "Native Vulkan"
 
 #~ msgctxt "game_options"
 #~ msgid ""

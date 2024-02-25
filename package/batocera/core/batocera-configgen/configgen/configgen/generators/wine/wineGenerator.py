@@ -6,6 +6,7 @@ import os
 from os import path
 import controllersConfig
 import subprocess
+import glob
 
 class WineGenerator(Generator):
 
@@ -14,7 +15,12 @@ class WineGenerator(Generator):
             commandArray = ["batocera-wine", "windows", "install", rom]
             return Command.Command(array=commandArray)
         elif system.name == "windows" or system.name == "popcap" or system.name == "bigfish":
-            commandArray = ["batocera-wine", "windows", "play", rom]
+            if "squashfs" in rom:
+                romsInDir = glob.glob(glob.escape(rom) + '/*.wineexe')
+                rom = romsInDir[0].replace('.wineexe','.exe')
+                commandArray = ["batocera-wine", "windows", "play", rom]
+            else:
+                commandArray = ["batocera-wine", "windows", "play", rom]
 
             environment = {}
             #system.language
