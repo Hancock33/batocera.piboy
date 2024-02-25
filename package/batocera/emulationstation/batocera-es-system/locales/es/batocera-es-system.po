@@ -16203,14 +16203,6 @@ msgid "Quick Save"
 msgstr "Guardado rápido"
 
 #~ msgctxt "game_options"
-#~ msgid "D3D12 (Default)"
-#~ msgstr "D3D12 (Por defecto)"
-
-#~ msgctxt "game_options"
-#~ msgid "Native Vulkan"
-#~ msgstr "Vulkan Nativo"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (Precaución)"
 
@@ -16814,6 +16806,14 @@ msgstr "Guardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."
 #~ msgstr "Selecciona la zona horaria UTC de tu consola."
+
+#~ msgctxt "game_options"
+#~ msgid "D3D12 (Default)"
+#~ msgstr "D3D12 (Por defecto)"
+
+#~ msgctxt "game_options"
+#~ msgid "Native Vulkan"
+#~ msgstr "Vulkan Nativo"
 
 #~ msgctxt "game_options"
 #~ msgid ""
