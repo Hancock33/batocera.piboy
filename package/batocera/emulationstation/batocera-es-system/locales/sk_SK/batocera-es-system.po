@@ -16023,14 +16023,6 @@ msgid "Quick Save"
 msgstr "Rýchle uloženie"
 
 #~ msgctxt "game_options"
-#~ msgid "D3D12 (Default)"
-#~ msgstr "D3D12 (predvolené)"
-
-#~ msgctxt "game_options"
-#~ msgid "Native Vulkan"
-#~ msgstr "Natívne Vulkan"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (dávajte pozor)"
 
@@ -16611,6 +16603,14 @@ msgstr "Rýchle uloženie"
 #~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."
 #~ msgstr "Vyberte časové pásmo UTC vašej konzoly."
+
+#~ msgctxt "game_options"
+#~ msgid "D3D12 (Default)"
+#~ msgstr "D3D12 (predvolené)"
+
+#~ msgctxt "game_options"
+#~ msgid "Native Vulkan"
+#~ msgstr "Natívne Vulkan"
 
 #~ msgctxt "game_options"
 #~ msgid ""
