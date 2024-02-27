@@ -1554,7 +1554,7 @@ msgstr "Lineare"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Determines how the cursor should apprear on the botton screen."
-msgstr ""
+msgstr "Stabilisce come il cursore appare nella parte bassa dello schermo."
 
 #. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds
 msgctxt "game_options"
