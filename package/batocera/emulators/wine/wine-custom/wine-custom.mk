@@ -3,8 +3,8 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Feb 22, 2024 (branch@proton_9.0)
-WINE_CUSTOM_VERSION = proton-wine-9.0-beta11
+# Version: Commits on Feb 28, 2024 (branch@bleeding-edge)
+WINE_CUSTOM_VERSION = b90040301ba80464061de5bac8453ace292b64e6
 WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
 WINE_CUSTOM_SITE = $(call github,ValveSoftware,wine,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
