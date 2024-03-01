@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Feb 29, 2024
-LIBRETRO_JAXE_VERSION = 3b602024b05fedb0cef341dc71f863ff04c4e0e7
+LIBRETRO_JAXE_VERSION = bf5a788993c9bf048622bab5d3c876b15af3fcf6
 LIBRETRO_JAXE_SITE = https://github.com/kurtjd/jaxe.git
 LIBRETRO_JAXE_SITE_METHOD=git
 LIBRETRO_JAXE_GIT_SUBMODULES=YES
