@@ -3,7 +3,7 @@
 # eka2l1
 #
 ################################################################################
-# Version: Commits on Sept 11, 2023 (branch@wayland-system-ffmpeg)
+# Version: Commits on Sept 18, 2023 (branch@wayland-system-ffmpeg)
 EKA2L1_VERSION = 8bf21e354c7aa3ea8f287a5f47825d1370b1c14f
 EKA2L1_SITE = https://github.com/rtissera/EKA2L1.git
 EKA2L1_SITE_METHOD=git
