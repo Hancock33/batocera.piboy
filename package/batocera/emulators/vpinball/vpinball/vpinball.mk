@@ -14,20 +14,22 @@ VPINBALL_EXTRA_DOWNLOADS = https://www.un4seen.com/files/bass24-linux.zip
 
 # handle supported target platforms
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588),y)
-	SOURCE = CMakeLists_gl-rk3588-aarch64.txt
-	SOURCE_DIR = rk3588
+	SOURCE = CMakeLists_gl-linux-aarch64.txt
+	SOURCE_DIR = linux-aarch64
 	ARCH = aarch64
+	VPINBALL_CONF_OPTS += "-DBUILD_RK3588=ON"
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711)$(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
-	SOURCE = CMakeLists_gl-rpi-aarch64.txt
-	SOURCE_DIR = rpi
+	SOURCE = CMakeLists_gl-linux-aarch64.txt
+	SOURCE_DIR = linux-aarch64
 	ARCH = aarch64
+	VPINBALL_CONF_OPTS += "-DBUILD_RPI=ON"
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 	SOURCE = CMakeLists_gl-linux-x64.txt
-	SOURCE_DIR = linux
+	SOURCE_DIR = linux-x64
 	ARCH = x86_64
 endif
 
@@ -46,7 +48,6 @@ define VPINBALL_CMAKE_HACKS
 	$(INSTALL) -D -m 0755 $(@D)/tmp/libs/$(ARCH)/libbass.so $(TARGET_DIR)/usr/lib
 endef
 
-VPINBALL_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=""
 VPINBALL_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 VPINBALL_CONF_OPTS += -DPOST_BUILD_COPY_EXT_LIBS=OFF
 VPINBALL_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
