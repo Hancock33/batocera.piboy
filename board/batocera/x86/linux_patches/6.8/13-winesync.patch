@@ -1,15 +1,15 @@
 diff --git a/Documentation/userspace-api/index.rst b/Documentation/userspace-api/index.rst
-index 09f61bd2ac2e..d83a7148dec8 100644
+index 09f61bd2ac2e..f5a72ed27def 100644
 --- a/Documentation/userspace-api/index.rst
 +++ b/Documentation/userspace-api/index.rst
-@@ -30,6 +30,7 @@ place where this information is gathered.
-    sysfs-platform_profile
-    vduse
-    futex2
-+   ntsync
-    lsm
+@@ -34,6 +34,7 @@ place where this information is gathered.
     tee
     isapnp
+    dcdbas
++   ntsync
+ 
+ .. only::  subproject and html
+ 
 diff --git a/Documentation/userspace-api/ioctl/ioctl-number.rst b/Documentation/userspace-api/ioctl/ioctl-number.rst
 index 457e16f06e04..2f5c6994f042 100644
 --- a/Documentation/userspace-api/ioctl/ioctl-number.rst
@@ -25,10 +25,10 @@ index 457e16f06e04..2f5c6994f042 100644
  'P'   60-6F  sound/sscape_ioctl.h                                    conflict!
 diff --git a/Documentation/userspace-api/ntsync.rst b/Documentation/userspace-api/ntsync.rst
 new file mode 100644
-index 000000000000..bda9401f6747
+index 000000000000..202c2350d3af
 --- /dev/null
 +++ b/Documentation/userspace-api/ntsync.rst
-@@ -0,0 +1,390 @@
+@@ -0,0 +1,399 @@
 +===================================
 +NT synchronization primitive driver
 +===================================
@@ -126,6 +126,8 @@ index 000000000000..bda9401f6747
 +   	__u32 owner;
 +   	__u32 index;
 +   	__u32 alert;
++   	__u32 flags;
++   	__u32 pad;
 +   };
 +
 +Depending on the ioctl, members of the structure may be used as input,
@@ -314,12 +316,13 @@ index 000000000000..bda9401f6747
 +  .. list-table::
 +
 +     * - ``timeout``
-+       - Absolute timeout in nanoseconds, measured against the
-+         MONOTONIC clock. If the timeout is equal to or earlier than
-+         the current time, the function returns immediately without
-+         sleeping. If ``timeout`` is U64_MAX, the function will sleep
-+         until an object is signaled, and will not fail with
-+         ``ETIMEDOUT``.
++       - Absolute timeout in nanoseconds. If ``NTSYNC_WAIT_REALTIME``
++         is set, the timeout is measured against the REALTIME clock;
++         otherwise it is measured against the MONOTONIC clock. If the
++         timeout is equal to or earlier than the current time, the
++         function returns immediately without sleeping. If ``timeout``
++         is U64_MAX, the function will sleep until an object is
++         signaled, and will not fail with ``ETIMEDOUT``.
 +     * - ``objs``
 +       - Pointer to an array of ``count`` file descriptors
 +         (specified as an integer so that the structure has the same
@@ -343,6 +346,12 @@ index 000000000000..bda9401f6747
 +         specifies an "alert" event object which, if signaled, will
 +         terminate the wait. If nonzero, the identifier must point to a
 +         valid event.
++     * - ``flags``
++       - Zero or more flags. Currently the only flag is
++         ``NTSYNC_WAIT_REALTIME``, which causes the timeout to be
++         measured against the REALTIME clock instead of MONOTONIC.
++     * - ``pad``
++       - Unused, must be set to zero.
 +
 +  This function attempts to acquire one of the given objects. If unable
 +  to do so, it sleeps until an object becomes signaled, subsequently
@@ -471,12 +480,157 @@ index ea6ea5bbbc9c..153a3f4837e8 100644
  obj-$(CONFIG_HI6421V600_IRQ)	+= hi6421v600-irq.o
  obj-$(CONFIG_OPEN_DICE)		+= open-dice.o
  obj-$(CONFIG_GP_PCI1XXXX)	+= mchp_pci1xxxx/
+diff --git a/drivers/misc/hpilo.c b/drivers/misc/hpilo.c
+index f1b74d3f8958..04bd34c8c506 100644
+--- a/drivers/misc/hpilo.c
++++ b/drivers/misc/hpilo.c
+@@ -770,7 +770,7 @@ static void ilo_remove(struct pci_dev *pdev)
+ static int ilo_probe(struct pci_dev *pdev,
+ 			       const struct pci_device_id *ent)
+ {
+-	int devnum, minor, start, error = 0;
++	int devnum, slot, start, error = 0;
+ 	struct ilo_hwinfo *ilo_hw;
+ 
+ 	if (pci_match_id(ilo_blacklist, pdev)) {
+@@ -839,11 +839,11 @@ static int ilo_probe(struct pci_dev *pdev,
+ 		goto remove_isr;
+ 	}
+ 
+-	for (minor = 0 ; minor < max_ccb; minor++) {
++	for (slot = 0; slot < max_ccb; slot++) {
+ 		struct device *dev;
+ 		dev = device_create(&ilo_class, &pdev->dev,
+-				    MKDEV(ilo_major, minor), NULL,
+-				    "hpilo!d%dccb%d", devnum, minor);
++				    MKDEV(ilo_major, start + slot), NULL,
++				    "hpilo!d%dccb%d", devnum, slot);
+ 		if (IS_ERR(dev))
+ 			dev_err(&pdev->dev, "Could not create files\n");
+ 	}
+diff --git a/drivers/misc/mei/gsc-me.c b/drivers/misc/mei/gsc-me.c
+index 6be8f1cc052c..9e558ec2ea1d 100644
+--- a/drivers/misc/mei/gsc-me.c
++++ b/drivers/misc/mei/gsc-me.c
+@@ -292,6 +292,10 @@ static const struct auxiliary_device_id mei_gsc_id_table[] = {
+ 		.name = "i915.mei-gscfi",
+ 		.driver_data = MEI_ME_GSCFI_CFG,
+ 	},
++	{
++		.name = "xe.mei-gscfi",
++		.driver_data = MEI_ME_GSCFI_CFG,
++	},
+ 	{
+ 		/* sentinel */
+ 	}
+@@ -312,5 +316,6 @@ module_auxiliary_driver(mei_gsc_driver);
+ MODULE_AUTHOR("Intel Corporation");
+ MODULE_ALIAS("auxiliary:i915.mei-gsc");
+ MODULE_ALIAS("auxiliary:i915.mei-gscfi");
++MODULE_ALIAS("auxiliary:xe.mei-gscfi");
+ MODULE_DESCRIPTION("Intel(R) Graphics System Controller");
+ MODULE_LICENSE("GPL");
+diff --git a/drivers/misc/mei/hdcp/Kconfig b/drivers/misc/mei/hdcp/Kconfig
+index 9be312ec798d..631dd9651d7c 100644
+--- a/drivers/misc/mei/hdcp/Kconfig
++++ b/drivers/misc/mei/hdcp/Kconfig
+@@ -4,7 +4,7 @@
+ config INTEL_MEI_HDCP
+ 	tristate "Intel HDCP2.2 services of ME Interface"
+ 	depends on INTEL_MEI_ME
+-	depends on DRM_I915
++	depends on DRM_I915 || DRM_XE
+ 	help
+ 	  MEI Support for HDCP2.2 Services on Intel platforms.
+ 
+diff --git a/drivers/misc/mei/hdcp/mei_hdcp.c b/drivers/misc/mei/hdcp/mei_hdcp.c
+index 51359cc5ece9..f8759a6c9ed3 100644
+--- a/drivers/misc/mei/hdcp/mei_hdcp.c
++++ b/drivers/misc/mei/hdcp/mei_hdcp.c
+@@ -17,6 +17,7 @@
+  */
+ 
+ #include <linux/module.h>
++#include <linux/pci.h>
+ #include <linux/slab.h>
+ #include <linux/mei.h>
+ #include <linux/mei_cl_bus.h>
+@@ -781,9 +782,18 @@ static int mei_hdcp_component_match(struct device *dev, int subcomponent,
+ 				    void *data)
+ {
+ 	struct device *base = data;
++	struct pci_dev *pdev;
+ 
+-	if (!dev->driver || strcmp(dev->driver->name, "i915") ||
+-	    subcomponent != I915_COMPONENT_HDCP)
++	if (!dev_is_pci(dev))
++		return 0;
++
++	pdev = to_pci_dev(dev);
++
++	if (pdev->class != (PCI_CLASS_DISPLAY_VGA << 8) ||
++	    pdev->vendor != PCI_VENDOR_ID_INTEL)
++		return 0;
++
++	if (subcomponent != I915_COMPONENT_HDCP)
+ 		return 0;
+ 
+ 	base = base->parent;
+diff --git a/drivers/misc/mei/pxp/Kconfig b/drivers/misc/mei/pxp/Kconfig
+index e9219b61cd92..aa2dece4a927 100644
+--- a/drivers/misc/mei/pxp/Kconfig
++++ b/drivers/misc/mei/pxp/Kconfig
+@@ -4,7 +4,7 @@
+ config INTEL_MEI_PXP
+ 	tristate "Intel PXP services of ME Interface"
+ 	depends on INTEL_MEI_ME
+-	depends on DRM_I915
++	depends on DRM_I915 || DRM_XE
+ 	help
+ 	  MEI Support for PXP Services on Intel platforms.
+ 
+diff --git a/drivers/misc/mei/pxp/mei_pxp.c b/drivers/misc/mei/pxp/mei_pxp.c
+index 787c6a27a4be..b1e4c23b31a3 100644
+--- a/drivers/misc/mei/pxp/mei_pxp.c
++++ b/drivers/misc/mei/pxp/mei_pxp.c
+@@ -13,6 +13,7 @@
+ 
+ #include <linux/delay.h>
+ #include <linux/module.h>
++#include <linux/pci.h>
+ #include <linux/slab.h>
+ #include <linux/mei.h>
+ #include <linux/mei_cl_bus.h>
+@@ -225,12 +226,21 @@ static int mei_pxp_component_match(struct device *dev, int subcomponent,
+ 				   void *data)
+ {
+ 	struct device *base = data;
++	struct pci_dev *pdev;
+ 
+ 	if (!dev)
+ 		return 0;
+ 
+-	if (!dev->driver || strcmp(dev->driver->name, "i915") ||
+-	    subcomponent != I915_COMPONENT_PXP)
++	if (!dev_is_pci(dev))
++		return 0;
++
++	pdev = to_pci_dev(dev);
++
++	if (pdev->class != (PCI_CLASS_DISPLAY_VGA << 8) ||
++	    pdev->vendor != PCI_VENDOR_ID_INTEL)
++		return 0;
++
++	if (subcomponent != I915_COMPONENT_PXP)
+ 		return 0;
+ 
+ 	base = base->parent;
 diff --git a/drivers/misc/ntsync.c b/drivers/misc/ntsync.c
 new file mode 100644
-index 000000000000..1e619e1ce6a6
+index 000000000000..496704268603
 --- /dev/null
 +++ b/drivers/misc/ntsync.c
-@@ -0,0 +1,1132 @@
+@@ -0,0 +1,1146 @@
 +// SPDX-License-Identifier: GPL-2.0-only
 +/*
 + * ntsync.c - Kernel driver for NT synchronization primitives
@@ -485,11 +639,18 @@ index 000000000000..1e619e1ce6a6
 + */
 +
 +#include <linux/anon_inodes.h>
++#include <linux/atomic.h>
 +#include <linux/file.h>
 +#include <linux/fs.h>
++#include <linux/hrtimer.h>
++#include <linux/ktime.h>
 +#include <linux/miscdevice.h>
 +#include <linux/module.h>
++#include <linux/overflow.h>
++#include <linux/sched.h>
++#include <linux/sched/signal.h>
 +#include <linux/slab.h>
++#include <linux/spinlock.h>
 +#include <uapi/linux/ntsync.h>
 +
 +#define NTSYNC_NAME	"ntsync"
@@ -754,13 +915,15 @@ index 000000000000..1e619e1ce6a6
 + */
 +static int post_sem_state(struct ntsync_obj *sem, __u32 count)
 +{
++	__u32 sum;
++
 +	lockdep_assert_held(&sem->lock);
 +
-+	if (sem->u.sem.count + count < sem->u.sem.count ||
-+	    sem->u.sem.count + count > sem->u.sem.max)
++	if (check_add_overflow(sem->u.sem.count, count, &sum) ||
++	    sum > sem->u.sem.max)
 +		return -EOVERFLOW;
 +
-+	sem->u.sem.count += count;
++	sem->u.sem.count = sum;
 +	return 0;
 +}
 +
@@ -1213,15 +1376,13 @@ index 000000000000..1e619e1ce6a6
 +	struct file *file = fget(fd);
 +	struct ntsync_obj *obj;
 +
-+	if (file->f_op != &ntsync_obj_fops)
-+	{
++	if (file->f_op != &ntsync_obj_fops) {
 +		fput(file);
 +		return NULL;
 +	}
 +
 +	obj = file->private_data;
-+	if (obj->dev != dev)
-+	{
++	if (obj->dev != dev) {
 +		fput(file);
 +		return NULL;
 +	}
@@ -1234,9 +1395,17 @@ index 000000000000..1e619e1ce6a6
 +	fput(obj->file);
 +}
 +
-+static int ntsync_schedule(const struct ntsync_q *q, ktime_t *timeout)
++static int ntsync_schedule(const struct ntsync_q *q, const struct ntsync_wait_args *args)
 +{
++	ktime_t timeout = ns_to_ktime(args->timeout);
++	clockid_t clock = CLOCK_MONOTONIC;
++	ktime_t *timeout_ptr;
 +	int ret = 0;
++
++	timeout_ptr = (args->timeout == U64_MAX ? NULL : &timeout);
++
++	if (args->flags & NTSYNC_WAIT_REALTIME)
++		clock = CLOCK_REALTIME;
 +
 +	do {
 +		if (signal_pending(current)) {
@@ -1249,7 +1418,7 @@ index 000000000000..1e619e1ce6a6
 +			ret = 0;
 +			break;
 +		}
-+		ret = schedule_hrtimeout(timeout, HRTIMER_MODE_ABS);
++		ret = schedule_hrtimeout_range_clock(timeout_ptr, 0, HRTIMER_MODE_ABS, clock);
 +	} while (ret < 0);
 +	__set_current_state(TASK_RUNNING);
 +
@@ -1270,6 +1439,9 @@ index 000000000000..1e619e1ce6a6
 +	__u32 i, j;
 +
 +	if (!args->owner)
++		return -EINVAL;
++
++	if (args->pad || (args->flags & ~NTSYNC_WAIT_REALTIME))
 +		return -EINVAL;
 +
 +	if (args->count > NTSYNC_MAX_WAIT_COUNT)
@@ -1345,9 +1517,8 @@ index 000000000000..1e619e1ce6a6
 +static int ntsync_wait_any(struct ntsync_device *dev, void __user *argp)
 +{
 +	struct ntsync_wait_args args;
-+	struct ntsync_q *q;
 +	__u32 i, total_count;
-+	ktime_t timeout;
++	struct ntsync_q *q;
 +	int signaled;
 +	int ret;
 +
@@ -1394,8 +1565,7 @@ index 000000000000..1e619e1ce6a6
 +
 +	/* sleep */
 +
-+	timeout = ns_to_ktime(args.timeout);
-+	ret = ntsync_schedule(q, args.timeout == U64_MAX ? NULL : &timeout);
++	ret = ntsync_schedule(q, &args);
 +
 +	/* and finally, unqueue */
 +
@@ -1431,7 +1601,6 @@ index 000000000000..1e619e1ce6a6
 +{
 +	struct ntsync_wait_args args;
 +	struct ntsync_q *q;
-+	ktime_t timeout;
 +	int signaled;
 +	__u32 i;
 +	int ret;
@@ -1492,8 +1661,7 @@ index 000000000000..1e619e1ce6a6
 +
 +	/* sleep */
 +
-+	timeout = ns_to_ktime(args.timeout);
-+	ret = ntsync_schedule(q, args.timeout == U64_MAX ? NULL : &timeout);
++	ret = ntsync_schedule(q, &args);
 +
 +	/* and finally, unqueue */
 +
@@ -1611,10 +1779,10 @@ index 000000000000..1e619e1ce6a6
 +MODULE_LICENSE("GPL");
 diff --git a/include/uapi/linux/ntsync.h b/include/uapi/linux/ntsync.h
 new file mode 100644
-index 000000000000..7c91af7011e4
+index 000000000000..074f26423426
 --- /dev/null
 +++ b/include/uapi/linux/ntsync.h
-@@ -0,0 +1,58 @@
+@@ -0,0 +1,62 @@
 +/* SPDX-License-Identifier: GPL-2.0 WITH Linux-syscall-note */
 +/*
 + * Kernel support for NT synchronization primitive emulation
@@ -1645,6 +1813,8 @@ index 000000000000..7c91af7011e4
 +	__u32 signaled;
 +};
 +
++#define NTSYNC_WAIT_REALTIME	0x1
++
 +struct ntsync_wait_args {
 +	__u64 timeout;
 +	__u64 objs;
@@ -1652,6 +1822,8 @@ index 000000000000..7c91af7011e4
 +	__u32 owner;
 +	__u32 index;
 +	__u32 alert;
++	__u32 flags;
++	__u32 pad;
 +};
 +
 +#define NTSYNC_MAX_WAIT_COUNT 64
@@ -1708,10 +1880,10 @@ index 000000000000..60539c826d06
 +CONFIG_WINESYNC=y
 diff --git a/tools/testing/selftests/drivers/ntsync/ntsync.c b/tools/testing/selftests/drivers/ntsync/ntsync.c
 new file mode 100644
-index 000000000000..09153d0686ac
+index 000000000000..aba513c9af01
 --- /dev/null
 +++ b/tools/testing/selftests/drivers/ntsync/ntsync.c
-@@ -0,0 +1,1300 @@
+@@ -0,0 +1,1407 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * Various unit tests for the "ntsync" synchronization primitive driver.
@@ -1929,6 +2101,12 @@ index 000000000000..09153d0686ac
 +	EXPECT_EQ(0, count);
 +	check_sem_state(sem, 1, 2);
 +
++	count = ~0u;
++	ret = post_sem(sem, &count);
++	EXPECT_EQ(-1, ret);
++	EXPECT_EQ(EOVERFLOW, errno);
++	check_sem_state(sem, 1, 2);
++
 +	close(sem);
 +
 +	close(fd);
@@ -2079,6 +2257,21 @@ index 000000000000..09153d0686ac
 +
 +	close(mutex);
 +
++	mutex_args.owner = 123;
++	mutex_args.count = ~0u;
++	mutex_args.mutex = 0xdeadbeef;
++	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
++	EXPECT_EQ(0, ret);
++	EXPECT_NE(0xdeadbeef, mutex_args.mutex);
++	mutex = mutex_args.mutex;
++	check_mutex_state(mutex, ~0u, 123);
++
++	ret = wait_any(fd, 1, &mutex, 123, &index);
++	EXPECT_EQ(-1, ret);
++	EXPECT_EQ(ETIMEDOUT, errno);
++
++	close(mutex);
++
 +	close(fd);
 +}
 +
@@ -2211,12 +2404,11 @@ index 000000000000..09153d0686ac
 +
 +TEST(test_wait_any)
 +{
++	int objs[NTSYNC_MAX_WAIT_COUNT + 1], fd, ret;
 +	struct ntsync_mutex_args mutex_args = {0};
-+	struct ntsync_wait_args wait_args = {0};
 +	struct ntsync_sem_args sem_args = {0};
-+	__u32 owner, index, count;
++	__u32 owner, index, count, i;
 +	struct timespec timeout;
-+	int objs[2], fd, ret;
 +
 +	clock_gettime(CLOCK_MONOTONIC, &timeout);
 +
@@ -2301,12 +2493,27 @@ index 000000000000..09153d0686ac
 +	objs[0] = objs[1] = sem_args.sem;
 +	ret = wait_any(fd, 2, objs, 456, &index);
 +	EXPECT_EQ(0, ret);
-+	EXPECT_EQ(0, wait_args.index);
++	EXPECT_EQ(0, index);
 +	check_sem_state(sem_args.sem, 1, 3);
 +
 +	ret = wait_any(fd, 0, NULL, 456, &index);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(ETIMEDOUT, errno);
++
++	for (i = 0; i < NTSYNC_MAX_WAIT_COUNT + 1; ++i)
++		objs[i] = sem_args.sem;
++
++	ret = wait_any(fd, NTSYNC_MAX_WAIT_COUNT, objs, 123, &index);
++	EXPECT_EQ(0, ret);
++	EXPECT_EQ(0, index);
++
++	ret = wait_any(fd, NTSYNC_MAX_WAIT_COUNT + 1, objs, 123, &index);
++	EXPECT_EQ(-1, ret);
++	EXPECT_EQ(EINVAL, errno);
++
++	ret = wait_any(fd, -1, objs, 123, &index);
++	EXPECT_EQ(-1, ret);
++	EXPECT_EQ(EINVAL, errno);
 +
 +	close(sem_args.sem);
 +	close(mutex_args.mutex);
@@ -2413,14 +2620,12 @@ index 000000000000..09153d0686ac
 +	close(fd);
 +}
 +
-+struct wake_args
-+{
++struct wake_args {
 +	int fd;
 +	int obj;
 +};
 +
-+struct wait_args
-+{
++struct wait_args {
 +	int fd;
 +	unsigned long request;
 +	struct ntsync_wait_args *args;
@@ -3009,6 +3214,80 @@ index 000000000000..09153d0686ac
 +	close(objs[1]);
 +
 +	close(fd);
++}
++
++#define STRESS_LOOPS 10000
++#define STRESS_THREADS 4
++
++static unsigned int stress_counter;
++static int stress_device, stress_start_event, stress_mutex;
++
++static void *stress_thread(void *arg)
++{
++	struct ntsync_wait_args wait_args = {0};
++	__u32 index, count, i;
++	int ret;
++
++	wait_args.timeout = UINT64_MAX;
++	wait_args.count = 1;
++	wait_args.objs = (uintptr_t)&stress_start_event;
++	wait_args.owner = gettid();
++	wait_args.index = 0xdeadbeef;
++
++	ioctl(stress_device, NTSYNC_IOC_WAIT_ANY, &wait_args);
++
++	wait_args.objs = (uintptr_t)&stress_mutex;
++
++	for (i = 0; i < STRESS_LOOPS; ++i) {
++		ioctl(stress_device, NTSYNC_IOC_WAIT_ANY, &wait_args);
++
++		++stress_counter;
++
++		unlock_mutex(stress_mutex, wait_args.owner, &count);
++	}
++
++	return NULL;
++}
++
++TEST(stress_wait)
++{
++	struct ntsync_event_args event_args;
++	struct ntsync_mutex_args mutex_args;
++	pthread_t threads[STRESS_THREADS];
++	__u32 signaled, i;
++	int ret;
++
++	stress_device = open("/dev/ntsync", O_CLOEXEC | O_RDONLY);
++	ASSERT_LE(0, stress_device);
++
++	mutex_args.owner = 0;
++	mutex_args.count = 0;
++	ret = ioctl(stress_device, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
++	EXPECT_EQ(0, ret);
++	stress_mutex = mutex_args.mutex;
++
++	event_args.manual = 1;
++	event_args.signaled = 0;
++	ret = ioctl(stress_device, NTSYNC_IOC_CREATE_EVENT, &event_args);
++	EXPECT_EQ(0, ret);
++	stress_start_event = event_args.event;
++
++	for (i = 0; i < STRESS_THREADS; ++i)
++		pthread_create(&threads[i], NULL, stress_thread, NULL);
++
++	ret = ioctl(stress_start_event, NTSYNC_IOC_EVENT_SET, &signaled);
++	EXPECT_EQ(0, ret);
++
++	for (i = 0; i < STRESS_THREADS; ++i) {
++		ret = pthread_join(threads[i], NULL);
++		EXPECT_EQ(0, ret);
++	}
++
++	EXPECT_EQ(STRESS_LOOPS * STRESS_THREADS, stress_counter);
++
++	close(stress_start_event);
++	close(stress_mutex);
++	close(stress_device);
 +}
 +
 +TEST_HARNESS_MAIN
