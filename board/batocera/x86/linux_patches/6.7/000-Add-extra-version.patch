@@ -1,7 +1,0 @@
-diff --git a/Makefile b/Makefile
-index 5c418efbe89b6..dd8ce68271ab0 100644
---- a/Makefile
-+++ b/Makefile
-@@ -6 +6 @@
--EXTRAVERSION =
-+EXTRAVERSION = -batocera

@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index affc628004ff..233226073476 100644
+index 272c27495ede..86c0d66bb2ae 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -5539,6 +5539,8 @@ static void fill_stream_properties_from_drm_display_mode(
@@ -11,7 +11,7 @@ index affc628004ff..233226073476 100644
  	}
  
  	if (stream->signal == SIGNAL_TYPE_HDMI_TYPE_A) {
-@@ -6121,6 +6123,8 @@ create_stream_for_sink(struct drm_connector *connector,
+@@ -6123,6 +6125,8 @@ create_stream_for_sink(struct drm_connector *connector,
  
  	if (recalculate_timing)
  		drm_mode_set_crtcinfo(&saved_mode, 0);
@@ -20,7 +20,7 @@ index affc628004ff..233226073476 100644
  
  	/*
  	 * If scaling is enabled and refresh rate didn't change
-@@ -6680,8 +6684,7 @@ enum drm_mode_status amdgpu_dm_connector_mode_valid(struct drm_connector *connec
+@@ -6693,8 +6697,7 @@ enum drm_mode_status amdgpu_dm_connector_mode_valid(struct drm_connector *connec
  	struct dc_stream_state *stream;
  	struct amdgpu_dm_connector *aconnector = to_amdgpu_dm_connector(connector);
  
@@ -30,7 +30,7 @@ index affc628004ff..233226073476 100644
  		return result;
  
  	/*
-@@ -7385,7 +7388,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
+@@ -7398,7 +7401,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
  	aconnector->connector_id = link_index;
  	aconnector->bl_idx = -1;
  	aconnector->dc_link = link;
@@ -149,7 +149,7 @@ index 1fc8436c8130..d446ddcdda65 100644
  	return asic_blank_end -
  			pipe_ctx->pipe_dlg_param.vstartup_start + 1;
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
-index da0181fef411..4dfef43ee2f9 100644
+index c966f38583cb..4d6544877acf 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
 @@ -1626,6 +1626,9 @@ static void dcn20_update_dchubp_dpp(
