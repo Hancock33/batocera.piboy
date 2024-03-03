@@ -1,8 +1,8 @@
 diff --git a/sound/soc/amd/acp-config.c b/sound/soc/amd/acp-config.c
-index dea6d367b9e8..d9adaa5f9d40 100644
+index 3bc4b2e41650..7c1b538d96b8 100644
 --- a/sound/soc/amd/acp-config.c
 +++ b/sound/soc/amd/acp-config.c
-@@ -35,6 +35,20 @@ static const struct config_entry config_table[] = {
+@@ -47,6 +47,20 @@ static const struct config_entry config_table[] = {
  			{}
  		},
  	},
@@ -24,7 +24,7 @@ index dea6d367b9e8..d9adaa5f9d40 100644
  		.flags = FLAG_AMD_SOF,
  		.device = ACP_PCI_DEV_ID,
 diff --git a/sound/soc/amd/acp/acp-mach-common.c b/sound/soc/amd/acp/acp-mach-common.c
-index 34b14f2611ba..65512494384b 100644
+index 12ff0a558ea8..df19aeb242f9 100644
 --- a/sound/soc/amd/acp/acp-mach-common.c
 +++ b/sound/soc/amd/acp/acp-mach-common.c
 @@ -26,6 +26,8 @@
@@ -133,7 +133,7 @@ index 34b14f2611ba..65512494384b 100644
  	if (drv_data->amp_cpu_id)
  		num_links++;
  	if (drv_data->dmic_cpu_id)
-@@ -1433,6 +1511,7 @@ int acp_sofdsp_dai_links_create(struct snd_soc_card *card)
+@@ -1438,6 +1516,7 @@ int acp_sofdsp_dai_links_create(struct snd_soc_card *card)
  		links[i].platforms = sof_component;
  		links[i].num_platforms = ARRAY_SIZE(sof_component);
  		links[i].dpcm_playback = 1;
@@ -141,7 +141,7 @@ index 34b14f2611ba..65512494384b 100644
  		links[i].nonatomic = true;
  		links[i].no_pcm = 1;
  		if (!drv_data->amp_codec_id) {
-@@ -1465,6 +1544,7 @@ int acp_sofdsp_dai_links_create(struct snd_soc_card *card)
+@@ -1470,6 +1549,7 @@ int acp_sofdsp_dai_links_create(struct snd_soc_card *card)
  		links[i].platforms = sof_component;
  		links[i].num_platforms = ARRAY_SIZE(sof_component);
  		links[i].dpcm_playback = 1;
@@ -149,7 +149,7 @@ index 34b14f2611ba..65512494384b 100644
  		links[i].nonatomic = true;
  		links[i].no_pcm = 1;
  		if (!drv_data->amp_codec_id) {
-@@ -1494,6 +1574,33 @@ int acp_sofdsp_dai_links_create(struct snd_soc_card *card)
+@@ -1499,6 +1579,33 @@ int acp_sofdsp_dai_links_create(struct snd_soc_card *card)
  			card->codec_conf = rt1019_conf;
  			card->num_configs = ARRAY_SIZE(rt1019_conf);
  		}
@@ -335,7 +335,7 @@ index 078adec29312..d8974805b5f8 100644
  
  	return 0;
 diff --git a/sound/soc/sof/ipc3-topology.c b/sound/soc/sof/ipc3-topology.c
-index 2c7a5e7a364c..237fb5f5adaf 100644
+index d96555438c6b..3eb0ab0bf728 100644
 --- a/sound/soc/sof/ipc3-topology.c
 +++ b/sound/soc/sof/ipc3-topology.c
 @@ -1176,6 +1176,7 @@ static int sof_link_acp_bt_load(struct snd_soc_component *scomp, struct snd_sof_

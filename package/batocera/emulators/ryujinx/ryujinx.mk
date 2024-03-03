@@ -3,8 +3,8 @@
 # ryujinx
 #
 ################################################################################
-# Version: Commits on Feb 23, 2024
-RYUJINX_VERSION = 1.1.1213
+# Version: Commits on Feb 24, 2024
+RYUJINX_VERSION = 1.1.1214
 
 ifeq ($(BR2_x86_64),y)
 	RYUJINX_SOURCE = ryujinx-$(RYUJINX_VERSION)-linux_x64.tar.gz

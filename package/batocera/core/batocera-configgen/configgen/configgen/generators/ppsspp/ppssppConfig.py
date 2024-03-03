@@ -23,7 +23,7 @@ def writePPSSPPConfig(system):
     if os.path.exists(ppssppConfig):
         try:
             with io.open(ppssppConfig, 'r', encoding='utf_8_sig') as fp:
-                iniConfig.readfp(fp)
+                iniConfig.read_file(fp)
         except:
             pass
 

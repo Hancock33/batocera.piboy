@@ -147,7 +147,7 @@ index 112e92ee7..6993f94e5 100644
  
  //===========================================================================
 diff --git a/source/core/gameconfigfile.cpp b/source/core/gameconfigfile.cpp
-index a135419d7..0b735e7a5 100644
+index c99c6bc01..17f9c9a50 100644
 --- a/source/core/gameconfigfile.cpp
 +++ b/source/core/gameconfigfile.cpp
 @@ -156,6 +156,7 @@ FGameConfigFile::FGameConfigFile ()
@@ -159,10 +159,10 @@ index a135419d7..0b735e7a5 100644
  	}
  
 diff --git a/source/core/gamecontrol.cpp b/source/core/gamecontrol.cpp
-index e7472ee03..bc8103730 100644
+index 9f07ed859..e91da7b2e 100644
 --- a/source/core/gamecontrol.cpp
 +++ b/source/core/gamecontrol.cpp
-@@ -1037,7 +1037,7 @@ int RunGame()
+@@ -1041,7 +1041,7 @@ int RunGame()
  	FString logfile = Args->TakeValue("+logfile");
  
  	// As long as this engine is still in prerelease mode let's always write a log file.

@@ -16,6 +16,7 @@ Add support for the Pironman case with RPI4 devices.
 
 ### Updated
 - Retroarch to 1.17.0
+- libretro cores for retroarch 1.17.0 [#11113](https://github.com/batocera-linux/batocera.linux/pull/11113/files)
 - mupen64plus-core bump to Jan 25, 2024 build
 - mupen64plus-audio-sdl bump to Jun 11, 2023 build
 - mupen64plus-input-sdl bump to Nov 4, 2023 build
@@ -25,7 +26,7 @@ Add support for the Pironman case with RPI4 devices.
 - mupen64plus-video-rice bump to Jun 11, 2023 build
 - mupen64plus-gliden64 bump to Feb 18, 2024 build
 - ppsspp: bump to 1.17.1
-- duckstation: bump to Feb 06, 2024 build
+- duckstation: bump to Feb 25, 2024 build
 - libretro-ppsspp: bump to 1.17.1
 - libretro-81: bump to Nov 1, 2023 build
 - libretro-fbneo: bump to Feb 23, 2024 build (v1.0.0.03)
@@ -38,18 +39,20 @@ Add support for the Pironman case with RPI4 devices.
 - libretro-swanstation: bump to Jan 25, 2024 build
 - libretro-pcsx: bump to Feb 14, 2024 build
 - Redream to 1.5.0-1103-g47bc2b7
+
 ### System
 - Nvidia Production driver to 550.54.14
 - Nvidia Legacy driver to 470.239.06
 - wayland-protocols to 1.33
 - wlroots to 0.17.1
 - sway to 1.9
-- mesa3d to 24.0.1
+- mesa3d to 24.0.2
 - RPI kernel to 6.1.77
-- RK3326 kernel to 6.7.5
-- RK3399 kernel to 6.1.78
-- S922X kernel to 6.7.5
-- Odroid-XU4 kernel to 6.6.16
+- RK3326 kernel to 6.7.8
+- RK3399 kernel to 6.6.20
+- S922X kernel to 6.7.8
+- Odroid-XU4 kernel to 6.6.20
+- sdl2 to 2.30.0
 
 # 2024/03/xx - batocera.linux 39 - Painted Lady
 ### Special Notes
