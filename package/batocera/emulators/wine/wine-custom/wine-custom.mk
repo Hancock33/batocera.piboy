@@ -3,8 +3,8 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Feb 22, 2024 (branch@proton_9.0)
-WINE_CUSTOM_VERSION = proton-wine-9.0-beta11
+# Version: Commits on Mar 01, 2024 (branch@bleeding-edge)
+WINE_CUSTOM_VERSION = c651e01d987feca64d56e7f02bab5ca12e4eba6d
 WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
 WINE_CUSTOM_SITE = $(call github,ValveSoftware,wine,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
@@ -18,7 +18,7 @@ ifeq ($(BR_CMAKE_USE_CLANG),y)
 endif
 
 ifeq ($(BR_WINE_STAGING),y)
-	WINE_CUSTOM_STAGING_VERSION = v9.3
+	WINE_CUSTOM_STAGING_VERSION = 21b92f96111d6d9b167611d6b32c4e0f06269b81
 	HOST_WINE_CUSTOM_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/$(WINE_CUSTOM_STAGING_VERSION).tar.gz
 	WINE_CUSTOM_POST_EXTRACT_HOOKS += WINE_CUSTOM_STAGING
 	HOST_WINE_CUSTOM_POST_EXTRACT_HOOKS += WINE_CUSTOM_STAGING

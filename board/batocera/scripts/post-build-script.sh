@@ -31,6 +31,11 @@ rm -f "${TARGET_DIR}/etc/init.d/S20urandom" || exit 1
 
 # we dont use cups / printing?
 rm -f "${TARGET_DIR}/etc/init.d/S81cupsd" || exit 1
+rm -frv ${TARGET_DIR}/usr/share/cups
+
+#remove mono-api
+rm -frv ${TARGET_DIR}/usr/lib/mono/*-api
+rm -frv ${TARGET_DIR}/usr/lib/mono/{lldb,mono*,msbuild,xbuild*}
 
 # use /userdata/system/iptables.conf for S35iptables
 rm -f "${TARGET_DIR}/etc/iptables.conf" || exit 1
