@@ -15,7 +15,7 @@ def writeIniFile(system, rom, playersControllers, gameResolution):
     if os.path.exists(batoceraFiles.xemuConfig):
         try:
             with io.open(batoceraFiles.xemuConfig, 'r', encoding='utf_8_sig') as fp:
-                iniConfig.readfp(fp)
+                iniConfig.read_file(fp)
         except:
             pass
 
