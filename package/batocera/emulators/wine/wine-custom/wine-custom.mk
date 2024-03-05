@@ -3,8 +3,8 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Mar 04, 2024 (branch@bleeding-edge)
-WINE_CUSTOM_VERSION = 3eeca96f1e1ab1427165a04001b93d0ac01fe575
+# Version: Commits on Mar 05, 2024 (branch@bleeding-edge)
+WINE_CUSTOM_VERSION = 34bbb1a44849b57834f6632dd6186b2dd0a36e57
 WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
 WINE_CUSTOM_SITE = $(call github,ValveSoftware,wine,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
