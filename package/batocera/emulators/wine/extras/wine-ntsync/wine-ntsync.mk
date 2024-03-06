@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-WINE_NTSYNC_VERSION = e2661a1812bd1e28db6748edaa45366fe3a76fda
+WINE_NTSYNC_VERSION = 312bc2fe6b27e10c3ce56eeda158aef2e5a0a304
 WINE_NTSYNC_SOURCE = $(WINE_NTSYNC_VERSION).tar.gz
 WINE_NTSYNC_SITE = https://repo.or.cz/wine/zf.git/snapshot/
 WINE_NTSYNC_LICENSE = LGPL-2.1+
