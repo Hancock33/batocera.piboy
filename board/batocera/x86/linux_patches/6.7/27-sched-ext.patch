@@ -1,5 +1,166 @@
+From fd5aef4f741b729f40ac6ae450e4632c403f535d Mon Sep 17 00:00:00 2001
+From: Piotr Gorski <lucjan.lucjanov@gmail.com>
+Date: Mon, 26 Feb 2024 21:52:51 +0100
+Subject: [PATCH] sched-ext
+
+Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
+---
+ Documentation/scheduler/index.rst             |    1 +
+ Documentation/scheduler/sched-ext.rst         |  294 +
+ MAINTAINERS                                   |    3 +
+ Makefile                                      |    8 +-
+ drivers/tty/sysrq.c                           |    1 +
+ fs/kernfs/dir.c                               |   31 +-
+ fs/kernfs/kernfs-internal.h                   |    2 +
+ include/asm-generic/vmlinux.lds.h             |    1 +
+ include/linux/cgroup-defs.h                   |    8 +
+ include/linux/cgroup.h                        |    5 +-
+ include/linux/kernfs.h                        |    7 +-
+ include/linux/sched.h                         |    5 +
+ include/linux/sched/ext.h                     |  756 +++
+ include/linux/sched/task.h                    |    3 +-
+ include/uapi/linux/sched.h                    |    1 +
+ init/Kconfig                                  |    5 +
+ init/init_task.c                              |   15 +
+ kernel/Kconfig.preempt                        |   24 +-
+ kernel/bpf/bpf_struct_ops_types.h             |    4 +
+ kernel/bpf/verifier.c                         |  744 +--
+ kernel/cgroup/cgroup.c                        |   97 +-
+ kernel/fork.c                                 |   17 +-
+ kernel/sched/build_policy.c                   |    8 +
+ kernel/sched/core.c                           |  318 +-
+ kernel/sched/deadline.c                       |    4 +-
+ kernel/sched/debug.c                          |    3 +
+ kernel/sched/ext.c                            | 5187 +++++++++++++++++
+ kernel/sched/ext.h                            |  278 +
+ kernel/sched/fair.c                           |    9 +-
+ kernel/sched/idle.c                           |    2 +
+ kernel/sched/rt.c                             |    4 +-
+ kernel/sched/sched.h                          |  119 +-
+ kernel/sched/topology.c                       |    4 +-
+ lib/dump_stack.c                              |    1 +
+ tools/Makefile                                |   10 +-
+ tools/bpf/bpftool/Documentation/bpftool.rst   |    2 +-
+ tools/sched_ext/.gitignore                    |   10 +
+ tools/sched_ext/Kconfig                       |    9 +
+ tools/sched_ext/Makefile                      |  251 +
+ tools/sched_ext/README.md                     |  269 +
+ .../sched_ext/include/bpf-compat/gnu/stubs.h  |   11 +
+ tools/sched_ext/include/scx/common.bpf.h      |  245 +
+ tools/sched_ext/include/scx/common.h          |   69 +
+ tools/sched_ext/include/scx/ravg.bpf.h        |   42 +
+ tools/sched_ext/include/scx/ravg_impl.bpf.h   |  358 ++
+ tools/sched_ext/include/scx/user_exit_info.h  |   67 +
+ tools/sched_ext/scx_qmap.bpf.c                |  400 ++
+ tools/sched_ext/scx_qmap.c                    |  106 +
+ tools/sched_ext/scx_show_state.py             |   39 +
+ tools/sched_ext/scx_simple.bpf.c              |  155 +
+ tools/sched_ext/scx_simple.c                  |   99 +
+ tools/testing/selftests/bpf/config.aarch64    |   17 +-
+ tools/testing/selftests/bpf/config.s390x      |    9 -
+ tools/testing/selftests/bpf/config.vm         |   12 +
+ tools/testing/selftests/bpf/config.x86_64     |   12 -
+ .../bpf/map_tests/map_percpu_stats.c          |   39 +-
+ .../selftests/bpf/prog_tests/bpf_iter.c       |   85 +-
+ tools/testing/selftests/bpf/test_maps.c       |   17 +-
+ tools/testing/selftests/bpf/test_maps.h       |    5 +
+ tools/testing/selftests/bpf/vmtest.sh         |    4 +-
+ tools/testing/selftests/scx/.gitignore        |    6 +
+ tools/testing/selftests/scx/Makefile          |  210 +
+ tools/testing/selftests/scx/config            |    5 +
+ .../selftests/scx/ddsp_bogus_dsq_fail.bpf.c   |   50 +
+ .../selftests/scx/ddsp_bogus_dsq_fail.c       |   57 +
+ .../selftests/scx/ddsp_vtimelocal_fail.bpf.c  |   47 +
+ .../selftests/scx/ddsp_vtimelocal_fail.c      |   56 +
+ .../selftests/scx/enq_last_no_enq_fails.bpf.c |   29 +
+ .../selftests/scx/enq_last_no_enq_fails.c     |   60 +
+ .../selftests/scx/enq_select_cpu_fails.bpf.c  |   51 +
+ .../selftests/scx/enq_select_cpu_fails.c      |   61 +
+ .../selftests/scx/init_enable_count.bpf.c     |   63 +
+ .../testing/selftests/scx/init_enable_count.c |  160 +
+ tools/testing/selftests/scx/maximal.bpf.c     |  164 +
+ tools/testing/selftests/scx/maximal.c         |   51 +
+ tools/testing/selftests/scx/maybe_null.bpf.c  |   26 +
+ tools/testing/selftests/scx/maybe_null.c      |   40 +
+ .../selftests/scx/maybe_null_fail.bpf.c       |   25 +
+ tools/testing/selftests/scx/minimal.bpf.c     |   32 +
+ tools/testing/selftests/scx/minimal.c         |   58 +
+ tools/testing/selftests/scx/reload_loop.c     |   75 +
+ tools/testing/selftests/scx/runner.c          |  201 +
+ tools/testing/selftests/scx/scx_test.h        |  123 +
+ .../selftests/scx/select_cpu_dfl.bpf.c        |   48 +
+ tools/testing/selftests/scx/select_cpu_dfl.c  |   72 +
+ .../scx/select_cpu_dfl_nodispatch.bpf.c       |   97 +
+ .../selftests/scx/select_cpu_dfl_nodispatch.c |   72 +
+ .../selftests/scx/select_cpu_dispatch.bpf.c   |   49 +
+ .../selftests/scx/select_cpu_dispatch.c       |   70 +
+ .../scx/select_cpu_dispatch_bad_dsq.bpf.c     |   45 +
+ .../scx/select_cpu_dispatch_bad_dsq.c         |   56 +
+ .../scx/select_cpu_dispatch_dbl_dsp.bpf.c     |   46 +
+ .../scx/select_cpu_dispatch_dbl_dsp.c         |   56 +
+ .../selftests/scx/select_cpu_vtime.bpf.c      |   94 +
+ .../testing/selftests/scx/select_cpu_vtime.c  |   59 +
+ tools/testing/selftests/scx/test_example.c    |   49 +
+ 96 files changed, 12219 insertions(+), 555 deletions(-)
+ create mode 100644 Documentation/scheduler/sched-ext.rst
+ create mode 100644 include/linux/sched/ext.h
+ create mode 100644 kernel/sched/ext.c
+ create mode 100644 kernel/sched/ext.h
+ create mode 100644 tools/sched_ext/.gitignore
+ create mode 100644 tools/sched_ext/Kconfig
+ create mode 100644 tools/sched_ext/Makefile
+ create mode 100644 tools/sched_ext/README.md
+ create mode 100644 tools/sched_ext/include/bpf-compat/gnu/stubs.h
+ create mode 100644 tools/sched_ext/include/scx/common.bpf.h
+ create mode 100644 tools/sched_ext/include/scx/common.h
+ create mode 100644 tools/sched_ext/include/scx/ravg.bpf.h
+ create mode 100644 tools/sched_ext/include/scx/ravg_impl.bpf.h
+ create mode 100644 tools/sched_ext/include/scx/user_exit_info.h
+ create mode 100644 tools/sched_ext/scx_qmap.bpf.c
+ create mode 100644 tools/sched_ext/scx_qmap.c
+ create mode 100644 tools/sched_ext/scx_show_state.py
+ create mode 100644 tools/sched_ext/scx_simple.bpf.c
+ create mode 100644 tools/sched_ext/scx_simple.c
+ create mode 100644 tools/testing/selftests/bpf/config.vm
+ create mode 100644 tools/testing/selftests/scx/.gitignore
+ create mode 100644 tools/testing/selftests/scx/Makefile
+ create mode 100644 tools/testing/selftests/scx/config
+ create mode 100644 tools/testing/selftests/scx/ddsp_bogus_dsq_fail.bpf.c
+ create mode 100644 tools/testing/selftests/scx/ddsp_bogus_dsq_fail.c
+ create mode 100644 tools/testing/selftests/scx/ddsp_vtimelocal_fail.bpf.c
+ create mode 100644 tools/testing/selftests/scx/ddsp_vtimelocal_fail.c
+ create mode 100644 tools/testing/selftests/scx/enq_last_no_enq_fails.bpf.c
+ create mode 100644 tools/testing/selftests/scx/enq_last_no_enq_fails.c
+ create mode 100644 tools/testing/selftests/scx/enq_select_cpu_fails.bpf.c
+ create mode 100644 tools/testing/selftests/scx/enq_select_cpu_fails.c
+ create mode 100644 tools/testing/selftests/scx/init_enable_count.bpf.c
+ create mode 100644 tools/testing/selftests/scx/init_enable_count.c
+ create mode 100644 tools/testing/selftests/scx/maximal.bpf.c
+ create mode 100644 tools/testing/selftests/scx/maximal.c
+ create mode 100644 tools/testing/selftests/scx/maybe_null.bpf.c
+ create mode 100644 tools/testing/selftests/scx/maybe_null.c
+ create mode 100644 tools/testing/selftests/scx/maybe_null_fail.bpf.c
+ create mode 100644 tools/testing/selftests/scx/minimal.bpf.c
+ create mode 100644 tools/testing/selftests/scx/minimal.c
+ create mode 100644 tools/testing/selftests/scx/reload_loop.c
+ create mode 100644 tools/testing/selftests/scx/runner.c
+ create mode 100644 tools/testing/selftests/scx/scx_test.h
+ create mode 100644 tools/testing/selftests/scx/select_cpu_dfl.bpf.c
+ create mode 100644 tools/testing/selftests/scx/select_cpu_dfl.c
+ create mode 100644 tools/testing/selftests/scx/select_cpu_dfl_nodispatch.bpf.c
+ create mode 100644 tools/testing/selftests/scx/select_cpu_dfl_nodispatch.c
+ create mode 100644 tools/testing/selftests/scx/select_cpu_dispatch.bpf.c
+ create mode 100644 tools/testing/selftests/scx/select_cpu_dispatch.c
+ create mode 100644 tools/testing/selftests/scx/select_cpu_dispatch_bad_dsq.bpf.c
+ create mode 100644 tools/testing/selftests/scx/select_cpu_dispatch_bad_dsq.c
+ create mode 100644 tools/testing/selftests/scx/select_cpu_dispatch_dbl_dsp.bpf.c
+ create mode 100644 tools/testing/selftests/scx/select_cpu_dispatch_dbl_dsp.c
+ create mode 100644 tools/testing/selftests/scx/select_cpu_vtime.bpf.c
+ create mode 100644 tools/testing/selftests/scx/select_cpu_vtime.c
+ create mode 100644 tools/testing/selftests/scx/test_example.c
+
 diff --git a/Documentation/scheduler/index.rst b/Documentation/scheduler/index.rst
-index 3170747226f6..0b650bb550e6 100644
+index 317074722..0b650bb55 100644
 --- a/Documentation/scheduler/index.rst
 +++ b/Documentation/scheduler/index.rst
 @@ -19,6 +19,7 @@ Scheduler
@@ -12,7 +173,7 @@ index 3170747226f6..0b650bb550e6 100644
      text_files
 diff --git a/Documentation/scheduler/sched-ext.rst b/Documentation/scheduler/sched-ext.rst
 new file mode 100644
-index 000000000000..e3847b44e17c
+index 000000000..e3847b44e
 --- /dev/null
 +++ b/Documentation/scheduler/sched-ext.rst
 @@ -0,0 +1,294 @@
@@ -311,7 +472,7 @@ index 000000000000..e3847b44e17c
 +possible, they are subject to change without warning between kernel
 +versions.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index a7c4cf8201e0..4845553268c9 100644
+index a7c4cf820..484555326 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -19222,6 +19222,8 @@ R:	Ben Segall <bsegall@google.com> (CONFIG_CFS_BANDWIDTH)
@@ -332,7 +493,7 @@ index a7c4cf8201e0..4845553268c9 100644
  SCSI LIBSAS SUBSYSTEM
  R:	John Garry <john.g.garry@oracle.com>
 diff --git a/Makefile b/Makefile
-index ea6399580fe3..da8a98ac87fc 100644
+index d65f192db..765cab325 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -1496,6 +1496,12 @@ ifneq ($(wildcard $(resolve_btfids_O)),)
@@ -358,7 +519,7 @@ index ea6399580fe3..da8a98ac87fc 100644
  	@find . $(RCS_FIND_IGNORE) \
  		\( -name '*.rmeta' \) \
 diff --git a/drivers/tty/sysrq.c b/drivers/tty/sysrq.c
-index 6b4a28bcf2f5..6ec15c131e27 100644
+index 6b4a28bcf..6ec15c131 100644
 --- a/drivers/tty/sysrq.c
 +++ b/drivers/tty/sysrq.c
 @@ -520,6 +520,7 @@ static const struct sysrq_key_op *sysrq_key_table[62] = {
@@ -370,7 +531,7 @@ index 6b4a28bcf2f5..6ec15c131e27 100644
  	NULL,				/* T */
  	NULL,				/* U */
 diff --git a/fs/kernfs/dir.c b/fs/kernfs/dir.c
-index 62d39ecf0a46..2405aeb39b9a 100644
+index 62d39ecf0..2405aeb39 100644
 --- a/fs/kernfs/dir.c
 +++ b/fs/kernfs/dir.c
 @@ -529,6 +529,20 @@ void kernfs_get(struct kernfs_node *kn)
@@ -445,7 +606,7 @@ index 62d39ecf0a46..2405aeb39b9a 100644
  }
  
 diff --git a/fs/kernfs/kernfs-internal.h b/fs/kernfs/kernfs-internal.h
-index 237f2764b941..b42ee6547cdc 100644
+index 237f2764b..b42ee6547 100644
 --- a/fs/kernfs/kernfs-internal.h
 +++ b/fs/kernfs/kernfs-internal.h
 @@ -49,6 +49,8 @@ struct kernfs_root {
@@ -458,7 +619,7 @@ index 237f2764b941..b42ee6547cdc 100644
  
  /* +1 to avoid triggering overflow warning when negating it */
 diff --git a/include/asm-generic/vmlinux.lds.h b/include/asm-generic/vmlinux.lds.h
-index bae0fe4d499b..b4c51e798e25 100644
+index bae0fe4d4..b4c51e798 100644
 --- a/include/asm-generic/vmlinux.lds.h
 +++ b/include/asm-generic/vmlinux.lds.h
 @@ -131,6 +131,7 @@
@@ -470,7 +631,7 @@ index bae0fe4d499b..b4c51e798e25 100644
  	__sched_class_lowest = .;
  
 diff --git a/include/linux/cgroup-defs.h b/include/linux/cgroup-defs.h
-index 4a6b6b77ccb6..516bb663e0b3 100644
+index 4a6b6b77c..516bb663e 100644
 --- a/include/linux/cgroup-defs.h
 +++ b/include/linux/cgroup-defs.h
 @@ -132,12 +132,18 @@ enum {
@@ -503,7 +664,7 @@ index 4a6b6b77ccb6..516bb663e0b3 100644
  	struct timer_list notify_timer;
  };
 diff --git a/include/linux/cgroup.h b/include/linux/cgroup.h
-index 0ef0af66080e..53040f7464c4 100644
+index 0ef0af660..53040f746 100644
 --- a/include/linux/cgroup.h
 +++ b/include/linux/cgroup.h
 @@ -29,8 +29,6 @@
@@ -533,7 +694,7 @@ index 0ef0af66080e..53040f7464c4 100644
  void cgroup_file_show(struct cgroup_file *cfile, bool show);
  
 diff --git a/include/linux/kernfs.h b/include/linux/kernfs.h
-index 99aaa050ccb7..05dcbae7ecbf 100644
+index 99aaa050c..05dcbae7e 100644
 --- a/include/linux/kernfs.h
 +++ b/include/linux/kernfs.h
 @@ -206,6 +206,9 @@ struct kernfs_node {
@@ -559,7 +720,7 @@ index 99aaa050ccb7..05dcbae7ecbf 100644
  
  /*
 diff --git a/include/linux/sched.h b/include/linux/sched.h
-index 292c31697248..e5530c97fedb 100644
+index 292c31697..e5530c97f 100644
 --- a/include/linux/sched.h
 +++ b/include/linux/sched.h
 @@ -70,6 +70,8 @@ struct task_delay_info;
@@ -583,7 +744,7 @@ index 292c31697248..e5530c97fedb 100644
  #ifdef CONFIG_SCHED_CORE
 diff --git a/include/linux/sched/ext.h b/include/linux/sched/ext.h
 new file mode 100644
-index 000000000000..474131a209a4
+index 000000000..474131a20
 --- /dev/null
 +++ b/include/linux/sched/ext.h
 @@ -0,0 +1,756 @@
@@ -1344,7 +1505,7 @@ index 000000000000..474131a209a4
 +#endif	/* CONFIG_SCHED_CLASS_EXT */
 +#endif	/* _LINUX_SCHED_EXT_H */
 diff --git a/include/linux/sched/task.h b/include/linux/sched/task.h
-index a23af225c898..03d35e3eda3c 100644
+index a23af225c..03d35e3ed 100644
 --- a/include/linux/sched/task.h
 +++ b/include/linux/sched/task.h
 @@ -61,7 +61,8 @@ extern asmlinkage void schedule_tail(struct task_struct *prev);
@@ -1358,7 +1519,7 @@ index a23af225c898..03d35e3eda3c 100644
  extern void sched_dead(struct task_struct *p);
  
 diff --git a/include/uapi/linux/sched.h b/include/uapi/linux/sched.h
-index 3bac0a8ceab2..359a14cc76a4 100644
+index 3bac0a8ce..359a14cc7 100644
 --- a/include/uapi/linux/sched.h
 +++ b/include/uapi/linux/sched.h
 @@ -118,6 +118,7 @@ struct clone_args {
@@ -1370,7 +1531,7 @@ index 3bac0a8ceab2..359a14cc76a4 100644
  /* Can be ORed in to make sure the process is reverted back to SCHED_NORMAL on fork */
  #define SCHED_RESET_ON_FORK     0x40000000
 diff --git a/init/Kconfig b/init/Kconfig
-index 36a0a8fc9ed4..b498a8e7b05b 100644
+index 36a0a8fc9..b498a8e7b 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -1025,6 +1025,11 @@ config RT_GROUP_SCHED
@@ -1386,7 +1547,7 @@ index 36a0a8fc9ed4..b498a8e7b05b 100644
  
  config SCHED_MM_CID
 diff --git a/init/init_task.c b/init/init_task.c
-index 5727d42149c3..54c9244ef9e5 100644
+index 5727d4214..54c9244ef 100644
 --- a/init/init_task.c
 +++ b/init/init_task.c
 @@ -6,6 +6,7 @@
@@ -1419,7 +1580,7 @@ index 5727d42149c3..54c9244ef9e5 100644
  	.ptraced	= LIST_HEAD_INIT(init_task.ptraced),
  	.ptrace_entry	= LIST_HEAD_INIT(init_task.ptrace_entry),
 diff --git a/kernel/Kconfig.preempt b/kernel/Kconfig.preempt
-index c2f1fd95a821..bae49b743834 100644
+index c2f1fd95a..bae49b743 100644
 --- a/kernel/Kconfig.preempt
 +++ b/kernel/Kconfig.preempt
 @@ -133,4 +133,26 @@ config SCHED_CORE
@@ -1451,7 +1612,7 @@ index c2f1fd95a821..bae49b743834 100644
 +
 +	  See Documentation/scheduler/sched-ext.rst for more details.
 diff --git a/kernel/bpf/bpf_struct_ops_types.h b/kernel/bpf/bpf_struct_ops_types.h
-index 5678a9ddf817..3618769d853d 100644
+index 5678a9ddf..3618769d8 100644
 --- a/kernel/bpf/bpf_struct_ops_types.h
 +++ b/kernel/bpf/bpf_struct_ops_types.h
 @@ -9,4 +9,8 @@ BPF_STRUCT_OPS_TYPE(bpf_dummy_ops)
@@ -1464,7 +1625,7 @@ index 5678a9ddf817..3618769d853d 100644
 +#endif
  #endif
 diff --git a/kernel/bpf/verifier.c b/kernel/bpf/verifier.c
-index e215413c79a5..f45507ce9ad0 100644
+index e215413c7..f45507ce9 100644
 --- a/kernel/bpf/verifier.c
 +++ b/kernel/bpf/verifier.c
 @@ -2349,6 +2349,81 @@ static void __update_reg_bounds(struct bpf_reg_state *reg)
@@ -2442,7 +2603,7 @@ index e215413c79a5..f45507ce9ad0 100644
  	    !WARN_ON_ONCE(dst_reg->id != other_branch_regs[insn->dst_reg].id)) {
  		find_equal_scalars(this_branch, dst_reg);
 diff --git a/kernel/cgroup/cgroup.c b/kernel/cgroup/cgroup.c
-index 4b9ff41ca603..455cc1291668 100644
+index 4b9ff41ca..455cc1291 100644
 --- a/kernel/cgroup/cgroup.c
 +++ b/kernel/cgroup/cgroup.c
 @@ -4214,10 +4214,13 @@ static int cgroup_add_file(struct cgroup_subsys_state *css, struct cgroup *cgrp,
@@ -2577,7 +2738,7 @@ index 4b9ff41ca603..455cc1291668 100644
   * css_create - create a cgroup_subsys_state
   * @cgrp: the cgroup new css will be associated with
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 458360cf9bfb..4da03be2b382 100644
+index 458360cf9..4da03be2b 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -23,6 +23,7 @@
@@ -2655,7 +2816,7 @@ index 458360cf9bfb..4da03be2b382 100644
  	lockdep_free_task(p);
  #ifdef CONFIG_NUMA
 diff --git a/kernel/sched/build_policy.c b/kernel/sched/build_policy.c
-index d9dc9ab3773f..e0e73b44afe9 100644
+index d9dc9ab37..e0e73b44a 100644
 --- a/kernel/sched/build_policy.c
 +++ b/kernel/sched/build_policy.c
 @@ -21,13 +21,18 @@
@@ -2685,7 +2846,7 @@ index d9dc9ab3773f..e0e73b44afe9 100644
 +# include "ext.c"
 +#endif
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index a708d225c28e..937ef9353c0b 100644
+index a708d225c..937ef9353 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -167,7 +167,10 @@ static inline int __task_prio(const struct task_struct *p)
@@ -3431,7 +3592,7 @@ index a708d225c28e..937ef9353c0b 100644
 +}
 +#endif	/* CONFIG_SCHED_CLASS_EXT */
 diff --git a/kernel/sched/deadline.c b/kernel/sched/deadline.c
-index b28114478b82..e00704ddd963 100644
+index b28114478..e00704ddd 100644
 --- a/kernel/sched/deadline.c
 +++ b/kernel/sched/deadline.c
 @@ -2483,7 +2483,7 @@ static void set_cpus_allowed_dl(struct task_struct *p,
@@ -3453,7 +3614,7 @@ index b28114478b82..e00704ddd963 100644
  	if (rq->dl.overloaded)
  		dl_clear_overload(rq);
 diff --git a/kernel/sched/debug.c b/kernel/sched/debug.c
-index 4580a450700e..c5ee001d3459 100644
+index 4580a4507..c5ee001d3 100644
 --- a/kernel/sched/debug.c
 +++ b/kernel/sched/debug.c
 @@ -1085,6 +1085,9 @@ void proc_sched_show_task(struct task_struct *p, struct pid_namespace *ns,
@@ -3468,7 +3629,7 @@ index 4580a450700e..c5ee001d3459 100644
  
 diff --git a/kernel/sched/ext.c b/kernel/sched/ext.c
 new file mode 100644
-index 000000000000..b74d1a0bc78a
+index 000000000..b74d1a0bc
 --- /dev/null
 +++ b/kernel/sched/ext.c
 @@ -0,0 +1,5187 @@
@@ -8661,7 +8822,7 @@ index 000000000000..b74d1a0bc78a
 +__initcall(scx_init);
 diff --git a/kernel/sched/ext.h b/kernel/sched/ext.h
 new file mode 100644
-index 000000000000..0c97e8d7106b
+index 000000000..0c97e8d71
 --- /dev/null
 +++ b/kernel/sched/ext.h
 @@ -0,0 +1,278 @@
@@ -8944,7 +9105,7 @@ index 000000000000..0c97e8d7106b
 +#endif	/* CONFIG_EXT_GROUP_SCHED */
 +#endif	/* CONFIG_CGROUP_SCHED */
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index 44c5950eae9d..3d6a96fe9ecb 100644
+index 44c5950ea..3d6a96fe9 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -3840,7 +3840,7 @@ static void reweight_entity(struct cfs_rq *cfs_rq, struct sched_entity *se,
@@ -8991,7 +9152,7 @@ index 44c5950eae9d..3d6a96fe9ecb 100644
  	.switched_from		= switched_from_fair,
  	.switched_to		= switched_to_fair,
 diff --git a/kernel/sched/idle.c b/kernel/sched/idle.c
-index 565f8374ddbb..4aa6acd960af 100644
+index 565f8374d..4aa6acd96 100644
 --- a/kernel/sched/idle.c
 +++ b/kernel/sched/idle.c
 @@ -408,11 +408,13 @@ static void wakeup_preempt_idle(struct rq *rq, struct task_struct *p, int flags)
@@ -9009,7 +9170,7 @@ index 565f8374ddbb..4aa6acd960af 100644
  }
  
 diff --git a/kernel/sched/rt.c b/kernel/sched/rt.c
-index 6aaf0a3d6081..c5511ce079a7 100644
+index 6aaf0a3d6..c5511ce07 100644
 --- a/kernel/sched/rt.c
 +++ b/kernel/sched/rt.c
 @@ -2435,7 +2435,7 @@ static void task_woken_rt(struct rq *rq, struct task_struct *p)
@@ -9031,7 +9192,7 @@ index 6aaf0a3d6081..c5511ce079a7 100644
  	if (rq->rt.overloaded)
  		rt_clear_overload(rq);
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index dabb52655144..88239cdb8423 100644
+index dabb52655..88239cdb8 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -171,9 +171,19 @@ static inline int idle_policy(int policy)
@@ -9254,7 +9415,7 @@ index dabb52655144..88239cdb8423 100644
 +
  #endif /* _KERNEL_SCHED_SCHED_H */
 diff --git a/kernel/sched/topology.c b/kernel/sched/topology.c
-index 10d1391e7416..7798063b3a38 100644
+index 10d1391e7..7798063b3 100644
 --- a/kernel/sched/topology.c
 +++ b/kernel/sched/topology.c
 @@ -497,7 +497,7 @@ void rq_attach_root(struct rq *rq, struct root_domain *rd)
@@ -9276,7 +9437,7 @@ index 10d1391e7416..7798063b3a38 100644
  	rq_unlock_irqrestore(rq, &rf);
  
 diff --git a/lib/dump_stack.c b/lib/dump_stack.c
-index 83471e81501a..6e667c445539 100644
+index 83471e815..6e667c445 100644
 --- a/lib/dump_stack.c
 +++ b/lib/dump_stack.c
 @@ -68,6 +68,7 @@ void dump_stack_print_info(const char *log_lvl)
@@ -9288,7 +9449,7 @@ index 83471e81501a..6e667c445539 100644
  
  /**
 diff --git a/tools/Makefile b/tools/Makefile
-index 37e9f6804832..8021267f7e5b 100644
+index 37e9f6804..8021267f7 100644
 --- a/tools/Makefile
 +++ b/tools/Makefile
 @@ -29,6 +29,7 @@ help:
@@ -9329,7 +9490,7 @@ index 37e9f6804832..8021267f7e5b 100644
  
  .PHONY: FORCE
 diff --git a/tools/bpf/bpftool/Documentation/bpftool.rst b/tools/bpf/bpftool/Documentation/bpftool.rst
-index 6965c94dfdaf..09e4f2ff5658 100644
+index 6965c94df..09e4f2ff5 100644
 --- a/tools/bpf/bpftool/Documentation/bpftool.rst
 +++ b/tools/bpf/bpftool/Documentation/bpftool.rst
 @@ -20,7 +20,7 @@ SYNOPSIS
@@ -9343,7 +9504,7 @@ index 6965c94dfdaf..09e4f2ff5658 100644
  	*OPTIONS* := { { **-V** | **--version** } | |COMMON_OPTIONS| }
 diff --git a/tools/sched_ext/.gitignore b/tools/sched_ext/.gitignore
 new file mode 100644
-index 000000000000..215ed36b2a94
+index 000000000..215ed36b2
 --- /dev/null
 +++ b/tools/sched_ext/.gitignore
 @@ -0,0 +1,10 @@
@@ -9359,7 +9520,7 @@ index 000000000000..215ed36b2a94
 +build/
 diff --git a/tools/sched_ext/Kconfig b/tools/sched_ext/Kconfig
 new file mode 100644
-index 000000000000..6543fcf199f6
+index 000000000..6543fcf19
 --- /dev/null
 +++ b/tools/sched_ext/Kconfig
 @@ -0,0 +1,9 @@
@@ -9374,7 +9535,7 @@ index 000000000000..6543fcf199f6
 +CONFIG_PAHOLE_HAS_BTF_TAG=y
 diff --git a/tools/sched_ext/Makefile b/tools/sched_ext/Makefile
 new file mode 100644
-index 000000000000..731bf6278ffc
+index 000000000..731bf6278
 --- /dev/null
 +++ b/tools/sched_ext/Makefile
 @@ -0,0 +1,251 @@
@@ -9631,7 +9792,7 @@ index 000000000000..731bf6278ffc
 +.SECONDARY:
 diff --git a/tools/sched_ext/README.md b/tools/sched_ext/README.md
 new file mode 100644
-index 000000000000..407327494a99
+index 000000000..407327494
 --- /dev/null
 +++ b/tools/sched_ext/README.md
 @@ -0,0 +1,269 @@
@@ -9906,7 +10067,7 @@ index 000000000000..407327494a99
 +Seeing `llvm: [ OFF ]` here is not an issue. You can safely ignore.
 diff --git a/tools/sched_ext/include/bpf-compat/gnu/stubs.h b/tools/sched_ext/include/bpf-compat/gnu/stubs.h
 new file mode 100644
-index 000000000000..ad7d139ce907
+index 000000000..ad7d139ce
 --- /dev/null
 +++ b/tools/sched_ext/include/bpf-compat/gnu/stubs.h
 @@ -0,0 +1,11 @@
@@ -9923,7 +10084,7 @@ index 000000000000..ad7d139ce907
 + */
 diff --git a/tools/sched_ext/include/scx/common.bpf.h b/tools/sched_ext/include/scx/common.bpf.h
 new file mode 100644
-index 000000000000..f2336d357106
+index 000000000..f2336d357
 --- /dev/null
 +++ b/tools/sched_ext/include/scx/common.bpf.h
 @@ -0,0 +1,245 @@
@@ -10174,7 +10335,7 @@ index 000000000000..f2336d357106
 +#endif	/* __SCHED_EXT_COMMON_BPF_H */
 diff --git a/tools/sched_ext/include/scx/common.h b/tools/sched_ext/include/scx/common.h
 new file mode 100644
-index 000000000000..7019d9f2da60
+index 000000000..7019d9f2d
 --- /dev/null
 +++ b/tools/sched_ext/include/scx/common.h
 @@ -0,0 +1,69 @@
@@ -10249,7 +10410,7 @@ index 000000000000..7019d9f2da60
 +#endif	/* __SCHED_EXT_COMMON_H */
 diff --git a/tools/sched_ext/include/scx/ravg.bpf.h b/tools/sched_ext/include/scx/ravg.bpf.h
 new file mode 100644
-index 000000000000..a233d85d05aa
+index 000000000..a233d85d0
 --- /dev/null
 +++ b/tools/sched_ext/include/scx/ravg.bpf.h
 @@ -0,0 +1,42 @@
@@ -10297,7 +10458,7 @@ index 000000000000..a233d85d05aa
 +#endif /* __SCX_RAVG_BPF_H__ */
 diff --git a/tools/sched_ext/include/scx/ravg_impl.bpf.h b/tools/sched_ext/include/scx/ravg_impl.bpf.h
 new file mode 100644
-index 000000000000..4922a3e689bc
+index 000000000..4922a3e68
 --- /dev/null
 +++ b/tools/sched_ext/include/scx/ravg_impl.bpf.h
 @@ -0,0 +1,358 @@
@@ -10661,7 +10822,7 @@ index 000000000000..4922a3e689bc
 +}
 diff --git a/tools/sched_ext/include/scx/user_exit_info.h b/tools/sched_ext/include/scx/user_exit_info.h
 new file mode 100644
-index 000000000000..a51b0baf1cbf
+index 000000000..a51b0baf1
 --- /dev/null
 +++ b/tools/sched_ext/include/scx/user_exit_info.h
 @@ -0,0 +1,67 @@
@@ -10734,7 +10895,7 @@ index 000000000000..a51b0baf1cbf
 +#endif	/* __USER_EXIT_INFO_H */
 diff --git a/tools/sched_ext/scx_qmap.bpf.c b/tools/sched_ext/scx_qmap.bpf.c
 new file mode 100644
-index 000000000000..2fb75543a164
+index 000000000..2fb75543a
 --- /dev/null
 +++ b/tools/sched_ext/scx_qmap.bpf.c
 @@ -0,0 +1,400 @@
@@ -11140,7 +11301,7 @@ index 000000000000..2fb75543a164
 +};
 diff --git a/tools/sched_ext/scx_qmap.c b/tools/sched_ext/scx_qmap.c
 new file mode 100644
-index 000000000000..7008b9138644
+index 000000000..7008b9138
 --- /dev/null
 +++ b/tools/sched_ext/scx_qmap.c
 @@ -0,0 +1,106 @@
@@ -11252,7 +11413,7 @@ index 000000000000..7008b9138644
 +}
 diff --git a/tools/sched_ext/scx_show_state.py b/tools/sched_ext/scx_show_state.py
 new file mode 100644
-index 000000000000..d457d2a74e1e
+index 000000000..d457d2a74
 --- /dev/null
 +++ b/tools/sched_ext/scx_show_state.py
 @@ -0,0 +1,39 @@
@@ -11297,7 +11458,7 @@ index 000000000000..d457d2a74e1e
 +print(f'nr_rejected   : {read_atomic("scx_nr_rejected")}')
 diff --git a/tools/sched_ext/scx_simple.bpf.c b/tools/sched_ext/scx_simple.bpf.c
 new file mode 100644
-index 000000000000..95035aa29b10
+index 000000000..95035aa29
 --- /dev/null
 +++ b/tools/sched_ext/scx_simple.bpf.c
 @@ -0,0 +1,155 @@
@@ -11458,7 +11619,7 @@ index 000000000000..95035aa29b10
 +};
 diff --git a/tools/sched_ext/scx_simple.c b/tools/sched_ext/scx_simple.c
 new file mode 100644
-index 000000000000..5c5589770a2f
+index 000000000..5c5589770
 --- /dev/null
 +++ b/tools/sched_ext/scx_simple.c
 @@ -0,0 +1,99 @@
@@ -11562,7 +11723,7 @@ index 000000000000..5c5589770a2f
 +	return 0;
 +}
 diff --git a/tools/testing/selftests/bpf/config.aarch64 b/tools/testing/selftests/bpf/config.aarch64
-index 253821494884..29c8635c5722 100644
+index 253821494..29c8635c5 100644
 --- a/tools/testing/selftests/bpf/config.aarch64
 +++ b/tools/testing/selftests/bpf/config.aarch64
 @@ -1,4 +1,3 @@
@@ -11629,7 +11790,7 @@ index 253821494884..29c8635c5722 100644
  CONFIG_VSOCKETS=y
  CONFIG_VSOCKETS_LOOPBACK=y
 diff --git a/tools/testing/selftests/bpf/config.s390x b/tools/testing/selftests/bpf/config.s390x
-index 2ba92167be35..e93330382849 100644
+index 2ba92167b..e93330382 100644
 --- a/tools/testing/selftests/bpf/config.s390x
 +++ b/tools/testing/selftests/bpf/config.s390x
 @@ -1,4 +1,3 @@
@@ -11668,7 +11829,7 @@ index 2ba92167be35..e93330382849 100644
  CONFIG_VSOCKETS_LOOPBACK=y
 diff --git a/tools/testing/selftests/bpf/config.vm b/tools/testing/selftests/bpf/config.vm
 new file mode 100644
-index 000000000000..a9746ca78777
+index 000000000..a9746ca78
 --- /dev/null
 +++ b/tools/testing/selftests/bpf/config.vm
 @@ -0,0 +1,12 @@
@@ -11685,7 +11846,7 @@ index 000000000000..a9746ca78777
 +CONFIG_VIRTIO_PCI=y
 +CONFIG_VIRTIO_VSOCKETS_COMMON=y
 diff --git a/tools/testing/selftests/bpf/config.x86_64 b/tools/testing/selftests/bpf/config.x86_64
-index 49a29dbc1910..b946088017f1 100644
+index 49a29dbc1..b94608801 100644
 --- a/tools/testing/selftests/bpf/config.x86_64
 +++ b/tools/testing/selftests/bpf/config.x86_64
 @@ -1,6 +1,3 @@
@@ -11726,7 +11887,7 @@ index 49a29dbc1910..b946088017f1 100644
  CONFIG_VSOCKETS=y
  CONFIG_VSOCKETS_LOOPBACK=y
 diff --git a/tools/testing/selftests/bpf/map_tests/map_percpu_stats.c b/tools/testing/selftests/bpf/map_tests/map_percpu_stats.c
-index 8bf497a9843e..2ea36408816b 100644
+index 8bf497a98..2ea364088 100644
 --- a/tools/testing/selftests/bpf/map_tests/map_percpu_stats.c
 +++ b/tools/testing/selftests/bpf/map_tests/map_percpu_stats.c
 @@ -131,10 +131,17 @@ static bool is_lru(__u32 map_type)
@@ -11804,7 +11965,7 @@ index 8bf497a9843e..2ea36408816b 100644
  	 * Upsert keys [0, n) under some competition: with random values from
  	 * N_THREADS threads. Check values, then delete all elements and check
 diff --git a/tools/testing/selftests/bpf/prog_tests/bpf_iter.c b/tools/testing/selftests/bpf/prog_tests/bpf_iter.c
-index 2cacc8fa9697..618af9dfae9b 100644
+index 2cacc8fa9..618af9dfa 100644
 --- a/tools/testing/selftests/bpf/prog_tests/bpf_iter.c
 +++ b/tools/testing/selftests/bpf/prog_tests/bpf_iter.c
 @@ -34,8 +34,6 @@
@@ -12068,7 +12229,7 @@ index 2cacc8fa9697..618af9dfae9b 100644
  
  	/* test results */
 diff --git a/tools/testing/selftests/bpf/test_maps.c b/tools/testing/selftests/bpf/test_maps.c
-index 7fc00e423e4d..767e0693df10 100644
+index 7fc00e423..767e0693d 100644
 --- a/tools/testing/selftests/bpf/test_maps.c
 +++ b/tools/testing/selftests/bpf/test_maps.c
 @@ -1396,13 +1396,18 @@ static void test_map_stress(void)
@@ -12110,7 +12271,7 @@ index 7fc00e423e4d..767e0693df10 100644
  				printf("error %d %d\n", err, errno);
  			assert(err == 0);
 diff --git a/tools/testing/selftests/bpf/test_maps.h b/tools/testing/selftests/bpf/test_maps.h
-index f6fbca761732..e4ac704a536c 100644
+index f6fbca761..e4ac704a5 100644
 --- a/tools/testing/selftests/bpf/test_maps.h
 +++ b/tools/testing/selftests/bpf/test_maps.h
 @@ -4,6 +4,7 @@
@@ -12131,7 +12292,7 @@ index f6fbca761732..e4ac704a536c 100644
 +
  #endif
 diff --git a/tools/testing/selftests/bpf/vmtest.sh b/tools/testing/selftests/bpf/vmtest.sh
-index 685034528018..65d14f3bbe30 100755
+index 685034528..65d14f3bb 100755
 --- a/tools/testing/selftests/bpf/vmtest.sh
 +++ b/tools/testing/selftests/bpf/vmtest.sh
 @@ -36,7 +36,9 @@ DEFAULT_COMMAND="./test_progs"
@@ -12147,7 +12308,7 @@ index 685034528018..65d14f3bbe30 100755
  LOG_FILE_BASE="$(date +"bpf_selftests.%Y-%m-%d_%H-%M-%S")"
 diff --git a/tools/testing/selftests/scx/.gitignore b/tools/testing/selftests/scx/.gitignore
 new file mode 100644
-index 000000000000..ae5491a114c0
+index 000000000..ae5491a11
 --- /dev/null
 +++ b/tools/testing/selftests/scx/.gitignore
 @@ -0,0 +1,6 @@
@@ -12159,7 +12320,7 @@ index 000000000000..ae5491a114c0
 +!config
 diff --git a/tools/testing/selftests/scx/Makefile b/tools/testing/selftests/scx/Makefile
 new file mode 100644
-index 000000000000..c8d5231af31d
+index 000000000..c8d5231af
 --- /dev/null
 +++ b/tools/testing/selftests/scx/Makefile
 @@ -0,0 +1,210 @@
@@ -12375,7 +12536,7 @@ index 000000000000..c8d5231af31d
 +.SECONDARY:
 diff --git a/tools/testing/selftests/scx/config b/tools/testing/selftests/scx/config
 new file mode 100644
-index 000000000000..fef8f81ad377
+index 000000000..fef8f81ad
 --- /dev/null
 +++ b/tools/testing/selftests/scx/config
 @@ -0,0 +1,5 @@
@@ -12386,7 +12547,7 @@ index 000000000000..fef8f81ad377
 +CONFIG_EXT_GROUP_SCHED=y
 diff --git a/tools/testing/selftests/scx/ddsp_bogus_dsq_fail.bpf.c b/tools/testing/selftests/scx/ddsp_bogus_dsq_fail.bpf.c
 new file mode 100644
-index 000000000000..dd32b189911e
+index 000000000..dd32b1899
 --- /dev/null
 +++ b/tools/testing/selftests/scx/ddsp_bogus_dsq_fail.bpf.c
 @@ -0,0 +1,50 @@
@@ -12442,7 +12603,7 @@ index 000000000000..dd32b189911e
 +};
 diff --git a/tools/testing/selftests/scx/ddsp_bogus_dsq_fail.c b/tools/testing/selftests/scx/ddsp_bogus_dsq_fail.c
 new file mode 100644
-index 000000000000..ef8ee04ff987
+index 000000000..ef8ee04ff
 --- /dev/null
 +++ b/tools/testing/selftests/scx/ddsp_bogus_dsq_fail.c
 @@ -0,0 +1,57 @@
@@ -12505,7 +12666,7 @@ index 000000000000..ef8ee04ff987
 +REGISTER_SCX_TEST(&ddsp_bogus_dsq_fail)
 diff --git a/tools/testing/selftests/scx/ddsp_vtimelocal_fail.bpf.c b/tools/testing/selftests/scx/ddsp_vtimelocal_fail.bpf.c
 new file mode 100644
-index 000000000000..9b21c1d57861
+index 000000000..9b21c1d57
 --- /dev/null
 +++ b/tools/testing/selftests/scx/ddsp_vtimelocal_fail.bpf.c
 @@ -0,0 +1,47 @@
@@ -12558,7 +12719,7 @@ index 000000000000..9b21c1d57861
 +};
 diff --git a/tools/testing/selftests/scx/ddsp_vtimelocal_fail.c b/tools/testing/selftests/scx/ddsp_vtimelocal_fail.c
 new file mode 100644
-index 000000000000..b55611cd0b1f
+index 000000000..b55611cd0
 --- /dev/null
 +++ b/tools/testing/selftests/scx/ddsp_vtimelocal_fail.c
 @@ -0,0 +1,56 @@
@@ -12620,7 +12781,7 @@ index 000000000000..b55611cd0b1f
 +REGISTER_SCX_TEST(&ddsp_vtimelocal_fail)
 diff --git a/tools/testing/selftests/scx/enq_last_no_enq_fails.bpf.c b/tools/testing/selftests/scx/enq_last_no_enq_fails.bpf.c
 new file mode 100644
-index 000000000000..4b0f84568dc1
+index 000000000..4b0f84568
 --- /dev/null
 +++ b/tools/testing/selftests/scx/enq_last_no_enq_fails.bpf.c
 @@ -0,0 +1,29 @@
@@ -12655,7 +12816,7 @@ index 000000000000..4b0f84568dc1
 +};
 diff --git a/tools/testing/selftests/scx/enq_last_no_enq_fails.c b/tools/testing/selftests/scx/enq_last_no_enq_fails.c
 new file mode 100644
-index 000000000000..2a3eda5e2c0b
+index 000000000..2a3eda5e2
 --- /dev/null
 +++ b/tools/testing/selftests/scx/enq_last_no_enq_fails.c
 @@ -0,0 +1,60 @@
@@ -12721,7 +12882,7 @@ index 000000000000..2a3eda5e2c0b
 +REGISTER_SCX_TEST(&enq_last_no_enq_fails)
 diff --git a/tools/testing/selftests/scx/enq_select_cpu_fails.bpf.c b/tools/testing/selftests/scx/enq_select_cpu_fails.bpf.c
 new file mode 100644
-index 000000000000..40ea393b2bbc
+index 000000000..40ea393b2
 --- /dev/null
 +++ b/tools/testing/selftests/scx/enq_select_cpu_fails.bpf.c
 @@ -0,0 +1,51 @@
@@ -12778,7 +12939,7 @@ index 000000000000..40ea393b2bbc
 +};
 diff --git a/tools/testing/selftests/scx/enq_select_cpu_fails.c b/tools/testing/selftests/scx/enq_select_cpu_fails.c
 new file mode 100644
-index 000000000000..dd1350e5f002
+index 000000000..dd1350e5f
 --- /dev/null
 +++ b/tools/testing/selftests/scx/enq_select_cpu_fails.c
 @@ -0,0 +1,61 @@
@@ -12845,7 +13006,7 @@ index 000000000000..dd1350e5f002
 +REGISTER_SCX_TEST(&enq_select_cpu_fails)
 diff --git a/tools/testing/selftests/scx/init_enable_count.bpf.c b/tools/testing/selftests/scx/init_enable_count.bpf.c
 new file mode 100644
-index 000000000000..a5053aeb0ca0
+index 000000000..a5053aeb0
 --- /dev/null
 +++ b/tools/testing/selftests/scx/init_enable_count.bpf.c
 @@ -0,0 +1,63 @@
@@ -12914,7 +13075,7 @@ index 000000000000..a5053aeb0ca0
 +};
 diff --git a/tools/testing/selftests/scx/init_enable_count.c b/tools/testing/selftests/scx/init_enable_count.c
 new file mode 100644
-index 000000000000..1d89f9f6fb92
+index 000000000..1d89f9f6f
 --- /dev/null
 +++ b/tools/testing/selftests/scx/init_enable_count.c
 @@ -0,0 +1,160 @@
@@ -13080,7 +13241,7 @@ index 000000000000..1d89f9f6fb92
 +REGISTER_SCX_TEST(&init_enable_count)
 diff --git a/tools/testing/selftests/scx/maximal.bpf.c b/tools/testing/selftests/scx/maximal.bpf.c
 new file mode 100644
-index 000000000000..00bfa9cb95d3
+index 000000000..00bfa9cb9
 --- /dev/null
 +++ b/tools/testing/selftests/scx/maximal.bpf.c
 @@ -0,0 +1,164 @@
@@ -13250,7 +13411,7 @@ index 000000000000..00bfa9cb95d3
 +};
 diff --git a/tools/testing/selftests/scx/maximal.c b/tools/testing/selftests/scx/maximal.c
 new file mode 100644
-index 000000000000..f38fc973c380
+index 000000000..f38fc973c
 --- /dev/null
 +++ b/tools/testing/selftests/scx/maximal.c
 @@ -0,0 +1,51 @@
@@ -13307,7 +13468,7 @@ index 000000000000..f38fc973c380
 +REGISTER_SCX_TEST(&maximal)
 diff --git a/tools/testing/selftests/scx/maybe_null.bpf.c b/tools/testing/selftests/scx/maybe_null.bpf.c
 new file mode 100644
-index 000000000000..ad5e694226bb
+index 000000000..ad5e69422
 --- /dev/null
 +++ b/tools/testing/selftests/scx/maybe_null.bpf.c
 @@ -0,0 +1,26 @@
@@ -13339,7 +13500,7 @@ index 000000000000..ad5e694226bb
 +};
 diff --git a/tools/testing/selftests/scx/maybe_null.c b/tools/testing/selftests/scx/maybe_null.c
 new file mode 100644
-index 000000000000..3f26b784f9c5
+index 000000000..3f26b784f
 --- /dev/null
 +++ b/tools/testing/selftests/scx/maybe_null.c
 @@ -0,0 +1,40 @@
@@ -13385,7 +13546,7 @@ index 000000000000..3f26b784f9c5
 +REGISTER_SCX_TEST(&maybe_null)
 diff --git a/tools/testing/selftests/scx/maybe_null_fail.bpf.c b/tools/testing/selftests/scx/maybe_null_fail.bpf.c
 new file mode 100644
-index 000000000000..1607fe07bead
+index 000000000..1607fe07b
 --- /dev/null
 +++ b/tools/testing/selftests/scx/maybe_null_fail.bpf.c
 @@ -0,0 +1,25 @@
@@ -13416,7 +13577,7 @@ index 000000000000..1607fe07bead
 +};
 diff --git a/tools/testing/selftests/scx/minimal.bpf.c b/tools/testing/selftests/scx/minimal.bpf.c
 new file mode 100644
-index 000000000000..14b3d44d90db
+index 000000000..14b3d44d9
 --- /dev/null
 +++ b/tools/testing/selftests/scx/minimal.bpf.c
 @@ -0,0 +1,32 @@
@@ -13454,7 +13615,7 @@ index 000000000000..14b3d44d90db
 +};
 diff --git a/tools/testing/selftests/scx/minimal.c b/tools/testing/selftests/scx/minimal.c
 new file mode 100644
-index 000000000000..6c5db8ebbf8a
+index 000000000..6c5db8ebb
 --- /dev/null
 +++ b/tools/testing/selftests/scx/minimal.c
 @@ -0,0 +1,58 @@
@@ -13518,7 +13679,7 @@ index 000000000000..6c5db8ebbf8a
 +REGISTER_SCX_TEST(&minimal)
 diff --git a/tools/testing/selftests/scx/reload_loop.c b/tools/testing/selftests/scx/reload_loop.c
 new file mode 100644
-index 000000000000..5cfba2d6e056
+index 000000000..5cfba2d6e
 --- /dev/null
 +++ b/tools/testing/selftests/scx/reload_loop.c
 @@ -0,0 +1,75 @@
@@ -13599,7 +13760,7 @@ index 000000000000..5cfba2d6e056
 +REGISTER_SCX_TEST(&reload_loop)
 diff --git a/tools/testing/selftests/scx/runner.c b/tools/testing/selftests/scx/runner.c
 new file mode 100644
-index 000000000000..37b25b2830d2
+index 000000000..37b25b283
 --- /dev/null
 +++ b/tools/testing/selftests/scx/runner.c
 @@ -0,0 +1,201 @@
@@ -13806,7 +13967,7 @@ index 000000000000..37b25b2830d2
 +}
 diff --git a/tools/testing/selftests/scx/scx_test.h b/tools/testing/selftests/scx/scx_test.h
 new file mode 100644
-index 000000000000..4b70bf75fa81
+index 000000000..4b70bf75f
 --- /dev/null
 +++ b/tools/testing/selftests/scx/scx_test.h
 @@ -0,0 +1,123 @@
@@ -13935,7 +14096,7 @@ index 000000000000..4b70bf75fa81
 +#endif  // # __SCX_TEST_H__
 diff --git a/tools/testing/selftests/scx/select_cpu_dfl.bpf.c b/tools/testing/selftests/scx/select_cpu_dfl.bpf.c
 new file mode 100644
-index 000000000000..f2fa80628299
+index 000000000..f2fa80628
 --- /dev/null
 +++ b/tools/testing/selftests/scx/select_cpu_dfl.bpf.c
 @@ -0,0 +1,48 @@
@@ -13989,7 +14150,7 @@ index 000000000000..f2fa80628299
 +};
 diff --git a/tools/testing/selftests/scx/select_cpu_dfl.c b/tools/testing/selftests/scx/select_cpu_dfl.c
 new file mode 100644
-index 000000000000..a53a40c2d2f0
+index 000000000..a53a40c2d
 --- /dev/null
 +++ b/tools/testing/selftests/scx/select_cpu_dfl.c
 @@ -0,0 +1,72 @@
@@ -14067,7 +14228,7 @@ index 000000000000..a53a40c2d2f0
 +REGISTER_SCX_TEST(&select_cpu_dfl)
 diff --git a/tools/testing/selftests/scx/select_cpu_dfl_nodispatch.bpf.c b/tools/testing/selftests/scx/select_cpu_dfl_nodispatch.bpf.c
 new file mode 100644
-index 000000000000..636ea1de12fe
+index 000000000..636ea1de1
 --- /dev/null
 +++ b/tools/testing/selftests/scx/select_cpu_dfl_nodispatch.bpf.c
 @@ -0,0 +1,97 @@
@@ -14170,7 +14331,7 @@ index 000000000000..636ea1de12fe
 +};
 diff --git a/tools/testing/selftests/scx/select_cpu_dfl_nodispatch.c b/tools/testing/selftests/scx/select_cpu_dfl_nodispatch.c
 new file mode 100644
-index 000000000000..1d85bf4bf3a3
+index 000000000..1d85bf4bf
 --- /dev/null
 +++ b/tools/testing/selftests/scx/select_cpu_dfl_nodispatch.c
 @@ -0,0 +1,72 @@
@@ -14248,7 +14409,7 @@ index 000000000000..1d85bf4bf3a3
 +REGISTER_SCX_TEST(&select_cpu_dfl_nodispatch)
 diff --git a/tools/testing/selftests/scx/select_cpu_dispatch.bpf.c b/tools/testing/selftests/scx/select_cpu_dispatch.bpf.c
 new file mode 100644
-index 000000000000..0fda97769725
+index 000000000..0fda97769
 --- /dev/null
 +++ b/tools/testing/selftests/scx/select_cpu_dispatch.bpf.c
 @@ -0,0 +1,49 @@
@@ -14303,7 +14464,7 @@ index 000000000000..0fda97769725
 +};
 diff --git a/tools/testing/selftests/scx/select_cpu_dispatch.c b/tools/testing/selftests/scx/select_cpu_dispatch.c
 new file mode 100644
-index 000000000000..0309ca8785b3
+index 000000000..0309ca878
 --- /dev/null
 +++ b/tools/testing/selftests/scx/select_cpu_dispatch.c
 @@ -0,0 +1,70 @@
@@ -14379,7 +14540,7 @@ index 000000000000..0309ca8785b3
 +REGISTER_SCX_TEST(&select_cpu_dispatch)
 diff --git a/tools/testing/selftests/scx/select_cpu_dispatch_bad_dsq.bpf.c b/tools/testing/selftests/scx/select_cpu_dispatch_bad_dsq.bpf.c
 new file mode 100644
-index 000000000000..c9105add924d
+index 000000000..c9105add9
 --- /dev/null
 +++ b/tools/testing/selftests/scx/select_cpu_dispatch_bad_dsq.bpf.c
 @@ -0,0 +1,45 @@
@@ -14430,7 +14591,7 @@ index 000000000000..c9105add924d
 +};
 diff --git a/tools/testing/selftests/scx/select_cpu_dispatch_bad_dsq.c b/tools/testing/selftests/scx/select_cpu_dispatch_bad_dsq.c
 new file mode 100644
-index 000000000000..a7b91d58cb31
+index 000000000..a7b91d58c
 --- /dev/null
 +++ b/tools/testing/selftests/scx/select_cpu_dispatch_bad_dsq.c
 @@ -0,0 +1,56 @@
@@ -14492,7 +14653,7 @@ index 000000000000..a7b91d58cb31
 +REGISTER_SCX_TEST(&select_cpu_dispatch_bad_dsq)
 diff --git a/tools/testing/selftests/scx/select_cpu_dispatch_dbl_dsp.bpf.c b/tools/testing/selftests/scx/select_cpu_dispatch_dbl_dsp.bpf.c
 new file mode 100644
-index 000000000000..82d8148399f2
+index 000000000..82d814839
 --- /dev/null
 +++ b/tools/testing/selftests/scx/select_cpu_dispatch_dbl_dsp.bpf.c
 @@ -0,0 +1,46 @@
@@ -14544,7 +14705,7 @@ index 000000000000..82d8148399f2
 +};
 diff --git a/tools/testing/selftests/scx/select_cpu_dispatch_dbl_dsp.c b/tools/testing/selftests/scx/select_cpu_dispatch_dbl_dsp.c
 new file mode 100644
-index 000000000000..e32b22963744
+index 000000000..e32b22963
 --- /dev/null
 +++ b/tools/testing/selftests/scx/select_cpu_dispatch_dbl_dsp.c
 @@ -0,0 +1,56 @@
@@ -14606,7 +14767,7 @@ index 000000000000..e32b22963744
 +REGISTER_SCX_TEST(&select_cpu_dispatch_dbl_dsp)
 diff --git a/tools/testing/selftests/scx/select_cpu_vtime.bpf.c b/tools/testing/selftests/scx/select_cpu_vtime.bpf.c
 new file mode 100644
-index 000000000000..b8bdadf3e541
+index 000000000..b8bdadf3e
 --- /dev/null
 +++ b/tools/testing/selftests/scx/select_cpu_vtime.bpf.c
 @@ -0,0 +1,94 @@
@@ -14706,7 +14867,7 @@ index 000000000000..b8bdadf3e541
 +};
 diff --git a/tools/testing/selftests/scx/select_cpu_vtime.c b/tools/testing/selftests/scx/select_cpu_vtime.c
 new file mode 100644
-index 000000000000..b4629c2364f5
+index 000000000..b4629c236
 --- /dev/null
 +++ b/tools/testing/selftests/scx/select_cpu_vtime.c
 @@ -0,0 +1,59 @@
@@ -14771,7 +14932,7 @@ index 000000000000..b4629c2364f5
 +REGISTER_SCX_TEST(&select_cpu_vtime)
 diff --git a/tools/testing/selftests/scx/test_example.c b/tools/testing/selftests/scx/test_example.c
 new file mode 100644
-index 000000000000..ce36cdf03cdc
+index 000000000..ce36cdf03
 --- /dev/null
 +++ b/tools/testing/selftests/scx/test_example.c
 @@ -0,0 +1,49 @@
@@ -14824,3 +14985,5 @@ index 000000000000..ce36cdf03cdc
 +	.cleanup	= cleanup,
 +};
 +REGISTER_SCX_TEST(&example)
+-- 
+2.43.0.232.ge79552d197
