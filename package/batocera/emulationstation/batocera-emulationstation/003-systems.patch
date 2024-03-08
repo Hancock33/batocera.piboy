@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index 3071e948..9134bd6f 100644
+index e1fbf05b..9134bd6f 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -9,192 +9,280 @@ namespace PlatformIds
+@@ -9,193 +9,280 @@ namespace PlatformIds
  	static std::map<std::string, PlatformId> Platforms =
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
@@ -11,7 +11,7 @@ index 3071e948..9134bd6f 100644
 +		{ "atom",					ACORN_ATOM },
 +		{ "bbc",					ACORN_BBC_MICRO },
 +		{ "electron",				ACORN_ELECTRON },
-+		{ "actionmax",				ACTIONMAX },
+ 		{ "actionmax",				ACTIONMAX },
 +		{ "adam",					ADAM },
 +		{ "alg",					ALG },
 +		{ "alphadenshi",			ALPHADENSHI },
@@ -420,10 +420,10 @@ index 3071e948..9134bd6f 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index 1ca6fffd..63e01ea6 100644
+index f239033d..63e01ea6 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
-@@ -11,163 +11,250 @@ namespace PlatformIds
+@@ -11,164 +11,250 @@ namespace PlatformIds
  	{
  		PLATFORM_UNKNOWN = 0,
  
@@ -432,7 +432,7 @@ index 1ca6fffd..63e01ea6 100644
 +		ACORN_ATOM,
 +		ACORN_BBC_MICRO,
 +		ACORN_ELECTRON,
-+		ACTIONMAX,
+ 		ACTIONMAX,
 +		ADAM,
 +		ALG,
 +		ALPHADENSHI,
@@ -856,14 +856,15 @@ index b3d1f138..2e8045d4 100644
  	{ MSX, "113089" },
  	{ NOKIA_NGAGE, "128704" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index c037af98..30bf2eb3 100644
+index 8475268f..30bf2eb3 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
-@@ -30,157 +30,235 @@ using namespace PlatformIds;
+@@ -30,158 +30,235 @@ using namespace PlatformIds;
  	https://www.screenscraper.fr/api/systemesListe.php?devid=xxx&devpassword=yyy&softname=zzz&output=XML
  **/
  const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
 -	{ THREEDO, 29 },
+-	{ ACTIONMAX, 81 },
 -	{ AMIGA, 64 },
 -	{ AMSTRAD_CPC, 65 },
 -	{ APPLE_II, 86 },
