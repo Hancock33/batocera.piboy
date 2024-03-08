@@ -1,5 +1,5 @@
 diff --git a/src/osdep/amiberry_gui.cpp b/src/osdep/amiberry_gui.cpp
-index 9c4eba8b..ff3f09df 100644
+index 3399826c..b56fbf60 100644
 --- a/src/osdep/amiberry_gui.cpp
 +++ b/src/osdep/amiberry_gui.cpp
 @@ -296,7 +296,6 @@ void SymlinkROMs()
