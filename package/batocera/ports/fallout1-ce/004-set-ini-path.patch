@@ -1,7 +1,7 @@
-diff --git a/src/game/game.cc b/src/game/game.cc.new
-index c01b514e6e..bb607a4a54 100644
+diff --git a/src/game/game.cc b/src/game/game.cc
+index c01b514..bb607a4 100644
 --- a/src/game/game.cc
-+++ b/src/game/game.cc.new
++++ b/src/game/game.cc
 @@ -151,7 +151,7 @@ int game_init(const char* windowTitle, bool isMapper, int font, int flags, int a
  
      Config resolutionConfig;
