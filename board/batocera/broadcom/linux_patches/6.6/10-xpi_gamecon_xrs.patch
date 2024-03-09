@@ -1,5 +1,5 @@
 diff --git a/drivers/gpio/Kconfig b/drivers/gpio/Kconfig
-index 601d6c7f0e2fc..f1fcbac0d0fb4 100644
+index 43837e9e7576..360d0787bff8 100644
 --- a/drivers/gpio/Kconfig
 +++ b/drivers/gpio/Kconfig
 @@ -9,6 +9,13 @@ config XPI_GAMECON
@@ -17,7 +17,7 @@ index 601d6c7f0e2fc..f1fcbac0d0fb4 100644
         tristate "RPi Arcade Joystick"
         depends on ARM64
 diff --git a/drivers/gpio/Makefile b/drivers/gpio/Makefile
-index 2ee59cfec7b0e..c67326f3d576a 100644
+index 1e7bc4de3a07..a916b47b8456 100644
 --- a/drivers/gpio/Makefile
 +++ b/drivers/gpio/Makefile
 @@ -13,6 +13,7 @@ obj-$(CONFIG_GPIO_SYSFS)	+= gpiolib-sysfs.o
@@ -30,7 +30,7 @@ index 2ee59cfec7b0e..c67326f3d576a 100644
  obj-$(CONFIG_GPIO_REGMAP)	+= gpio-regmap.o
 diff --git a/drivers/gpio/xpi_gamecon_xrs.c b/drivers/gpio/xpi_gamecon_xrs.c
 new file mode 100644
-index 0000000000000..db20ddc97ab81
+index 000000000000..db20ddc97ab8
 --- /dev/null
 +++ b/drivers/gpio/xpi_gamecon_xrs.c
 @@ -0,0 +1,754 @@
@@ -788,4 +788,3 @@ index 0000000000000..db20ddc97ab81
 +module_exit(gc_exit);
 +
 +
-
