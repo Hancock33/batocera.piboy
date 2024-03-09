@@ -13072,6 +13072,26 @@ msgctxt "game_options"
 msgid "Only applicable when using OpenGL."
 msgstr ""
 
+#. TRANSLATION: yuzu
+msgctxt "game_options"
+msgid "Choose which core to use"
+msgstr ""
+
+#. TRANSLATION: yuzu
+msgctxt "game_options"
+msgid "EMULATOR CORE"
+msgstr ""
+
+#. TRANSLATION: yuzu
+msgctxt "game_options"
+msgid "Yuzu"
+msgstr ""
+
+#. TRANSLATION: yuzu
+msgctxt "game_options"
+msgid "Suyu"
+msgstr ""
+
 #. TRANSLATION: yuzu, ryujinx
 msgctxt "game_options"
 msgid "Native (720p/1080p)"
