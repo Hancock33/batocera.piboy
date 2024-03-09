@@ -1,5 +1,5 @@
 diff --git a/drivers/gpio/Kconfig b/drivers/gpio/Kconfig
-index f662fdcdc850..dafb80ed4a5d 100644
+index 76144deee503..87f3c728a728 100644
 --- a/drivers/gpio/Kconfig
 +++ b/drivers/gpio/Kconfig
 @@ -3,6 +3,14 @@
@@ -18,7 +18,7 @@ index f662fdcdc850..dafb80ed4a5d 100644
  	bool "GPIO Support"
  	help
 diff --git a/drivers/gpio/Makefile b/drivers/gpio/Makefile
-index 7a2216ea1797..2782b5056d84 100644
+index 354050021dca..f6dfa0f3577d 100644
 --- a/drivers/gpio/Makefile
 +++ b/drivers/gpio/Makefile
 @@ -3,6 +3,7 @@
