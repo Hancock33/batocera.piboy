@@ -48,21 +48,18 @@ ETLEGACY_CONF_OPTS += -DINSTALL_EXTRA=OFF
 
 # RPi4/5 needs XWayland support so OpenGL runs under the required X11
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711)$(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
-    ETLEGACY_CONF_OPTS += -DARM=ON
+	ETLEGACY_CONF_OPTS += -DARM=ON
 endif
 
 define ETLEGACY_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/usr/share/etlegacy
-	cp $(@D)/buildroot-build/legacy/legacy_2.81-dirty.pk3 \
-	    $(TARGET_DIR)/usr/share/etlegacy
-    cp $(@D)/buildroot-build/etl \
-	    $(TARGET_DIR)/usr/bin/etl
+	mkdir -p $(TARGET_DIR)/usr/share/etlegacy
+	cp $(@D)/buildroot-build/legacy/legacy_2.8*-dirty.pk3 $(TARGET_DIR)/usr/share/etlegacy
+	cp $(@D)/buildroot-build/etl $(TARGET_DIR)/usr/bin/etl
 endef
 
 define ETLEGACY_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/etlegacy/etlegacy.keys \
-	    $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/etlegacy/etlegacy.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 ETLEGACY_POST_INSTALL_TARGET_HOOKS += ETLEGACY_EVMAPY
