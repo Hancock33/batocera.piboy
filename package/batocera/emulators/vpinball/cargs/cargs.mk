@@ -1,0 +1,17 @@
+################################################################################
+#
+# cargs
+#
+################################################################################
+# Version: Commits on Jan 07, 2024
+CARGS_VERSION = v1.1.0
+CARGS_SITE = $(call github,likle,cargs,$(CARGS_VERSION))
+CARGS_LICENSE = GPLv2+
+CARGS_LICENSE_FILES = LICENSE.md
+CARGS_DEPENDENCIES =
+CARGS_SUPPORTS_IN_SOURCE_BUILD = NO
+CARGS_INSTALL_STAGING = YES
+
+CARGS_CONF_OPTS += -DBUILD_SHARED_LIBS=ON
+
+$(eval $(cmake-package))
