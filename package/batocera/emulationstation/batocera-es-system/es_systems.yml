@@ -2044,6 +2044,16 @@ vaporspec:
     libretro:
       vaporspec:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VAPORSPEC] }
 
+vircon32:
+  name:                 Vircon32
+  manufacturer:         Homebrew Systems
+  release:              2023
+  hardware:             console
+  extensions:           [v32]
+  emulators:
+    libretro:
+      vircon32:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VIRCON32] }
+
 wasm4:
   name:                 WASM-4
   manufacturer:         Homebrew Systems
