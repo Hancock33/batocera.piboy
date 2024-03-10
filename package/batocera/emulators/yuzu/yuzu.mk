@@ -33,7 +33,7 @@ endif
 
 define YUZU_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin
-	cp $(@D)/buildroot-build/bin/* $(TARGET_DIR)/usr/bin/
+	cp $(@D)/buildroot-build/bin/yuzu $(TARGET_DIR)/usr/bin/
 
 	#evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy

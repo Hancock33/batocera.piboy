@@ -29,7 +29,7 @@ index 8bb253bb..1866bc93 100644
  if(DISABLE_KODI)
    MESSAGE("Kodi disabled")
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 7a7f1fec..64883bf6 100644
+index c1fa5541..c63bc136 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -73,8 +73,15 @@
@@ -108,7 +108,7 @@ index 7a7f1fec..64883bf6 100644
  
  	mWindow->pushGui(updateGui);
 diff --git a/es-core/src/utils/Platform.cpp b/es-core/src/utils/Platform.cpp
-index b51b0be6..d7c8fffe 100644
+index 910a877c..042d0ddf 100644
 --- a/es-core/src/utils/Platform.cpp
 +++ b/es-core/src/utils/Platform.cpp
 @@ -21,6 +21,8 @@
@@ -220,9 +220,9 @@ index b51b0be6..d7c8fffe 100644
  				// If reading from fuel gauge, we have to calculate remaining charge
  				if (batteryCapacityPath.length() <= 1)
  				{
-@@ -466,8 +513,12 @@ namespace Utils
- 					float full = std::stof(Utils::FileSystem::readAllText(batteryMaxChargePath).c_str());
- 					ret.level = int(round((now / full) * 100));
+@@ -469,8 +516,12 @@ namespace Utils
+ 						ret.level = int(round((now / full) * 100));
+ 					}
  				}
 -				else
 -					ret.level = Utils::String::toInteger(Utils::FileSystem::readAllText(batteryCapacityPath).c_str());

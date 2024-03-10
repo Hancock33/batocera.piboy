@@ -3,8 +3,8 @@
 # flycast
 #
 ################################################################################
-# Version: Commits on Mar 02, 2024
-FLYCAST_VERSION = 960b8134c15e4b4961147b01aeb4e162e9cf22b2
+# Version: Commits on Mar 10, 2024
+FLYCAST_VERSION = 464defe0d791795553a6cd2f0dbe05b437ecd068
 FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 FLYCAST_SITE_METHOD=git
 FLYCAST_GIT_SUBMODULES=YES
@@ -17,8 +17,6 @@ FLYCAST_CONF_OPTS += -DLIBRETRO=OFF
 FLYCAST_CONF_OPTS += -DUSE_HOST_SDL=ON
 FLYCAST_CONF_OPTS += -DGDB_SERVER=OFF
 FLYCAST_CONF_OPTS += -DGIT_VERSION="$(shell echo $(FLYCAST_VERSION) | cut -c 1-7)"
-FLYCAST_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -Wno-error=array-bounds"
-FLYCAST_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CFLAGS) -Wno-error=array-bounds"
 FLYCAST_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
 FLYCAST_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 

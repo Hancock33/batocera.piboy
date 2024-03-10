@@ -1,5 +1,5 @@
 diff --git a/src/game/gconfig.cc b/src/game/gconfig.cc
-index 98226b54d4..cc819315ee 100644
+index 98226b5..cc81931 100644
 --- a/src/game/gconfig.cc
 +++ b/src/game/gconfig.cc
 @@ -120,14 +120,7 @@ bool gconfig_init(bool isMapper, int argc, char** argv)

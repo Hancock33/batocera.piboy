@@ -3,12 +3,12 @@
 # vkd3d
 #
 ################################################################################
-# Commits on 15 Feb, 2024
-VKD3D_VERSION = 4735ff48d17258fa996a9df954dde2893482aefb
-VKD3D_SITE = git://source.winehq.org/git/vkd3d
+# Commits on 05 Mar, 2024
+VKD3D_VERSION = vkd3d-1.11
+VKD3D_SITE = 	https://source.winehq.org/git/vkd3d.git
 VKD3D_LICENSE = LGPL-2.1+
 VKD3D_LICENSE_FILES = COPYING.LIB LICENSE
-VKD3D_DEPENDENCIES = host-bison host-flex host-wine-custom spirv-headers host-libtool vulkan-headers vulkan-loader
+VKD3D_DEPENDENCIES = host-bison host-flex host-wine-custom spirv-headers host-libtool vulkan-headers vulkan-loader spirv-tools
 VKD3D_CONF_ENV += WIDL="$(BUILD_DIR)/host-wine-custom-$(WINE_CUSTOM_VERSION)/tools/widl/widl"
 
 VKD3D_CONF_OPTS = --disable-tests --with-sysroot=$(STAGING_DIR)

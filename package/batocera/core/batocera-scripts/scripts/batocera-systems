@@ -812,6 +812,9 @@ systems = {
     "gamecube":   { "name": "Nintendo GameCube", "biosFiles":  [ { "md5": "db92574caab77a7ec99d4605fd6f2450", "file": "bios/GC/EUR/IPL.bin" },
                                                                  { "md5": "b17148254a5799684c7d783206504926", "file": "bios/GC/JAP/IPL.bin" },
                                                                  { "md5": "b17148254a5799684c7d783206504926", "file": "bios/GC/USA/IPL.bin" } ] },
+
+    # ---------- Vircon32 ---------- #
+    "vircon32":   { "name": "Vircon32", "biosFiles":  [ { "md5": "1ad96946bce7bd0422b7d9340735b248", "file": "bios/StandardBios.v32" } ] },
 }
 
 class BiosStatus:

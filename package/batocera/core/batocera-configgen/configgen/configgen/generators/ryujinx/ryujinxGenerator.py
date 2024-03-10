@@ -220,6 +220,7 @@ class RyujinxGenerator(Generator):
             "XDG_DATA_HOME":batoceraFiles.SAVES + "/switch", \
             "XDG_CACHE_HOME":batoceraFiles.CACHE, \
             "QT_QPA_PLATFORM":"xcb", \
+            "LD_LIBRARY_PATH": "/usr/bin/ryujinx/:/usr/lib",
             "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)})
 
 def writeControllerIntoJson(new_controller, filename=ryujinxConfFile):

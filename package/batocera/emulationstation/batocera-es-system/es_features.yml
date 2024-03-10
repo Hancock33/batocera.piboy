@@ -11979,6 +11979,12 @@ yuzu:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
+        yuzu_emulator:
+          prompt: EMULATOR CORE
+          description: Choose which core to use
+          choices:
+            "Yuzu": 0
+            "Suyu": 1
         yuzu_backend:
           prompt: GRAPHICS API
           description: Choose which graphics API library to use.

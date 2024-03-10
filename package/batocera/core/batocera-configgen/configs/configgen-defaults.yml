@@ -1055,6 +1055,9 @@ videopacplus:
 videosystem:
   emulator: libretro
   core:     mame078plus
+vircon32:
+  emulator: libretro
+  core:     vircon32
 virtualboy:
   emulator: libretro
   core:     vb
