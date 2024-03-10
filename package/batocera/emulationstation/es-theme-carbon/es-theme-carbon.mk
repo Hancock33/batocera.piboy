@@ -3,11 +3,12 @@
 # es-theme-carbon
 #
 ################################################################################
-# Version: Commits on Feb 09, 2024
-ES_THEME_CARBON_VERSION = 62405887d05c3ff11c27b025e794f6789ad992f5
+# Version: Commits on Mar 10, 2024
+ES_THEME_CARBON_VERSION = 9457846eaa67b8ccc278f98d5fa33117b05cf515
 ES_THEME_CARBON_SITE = $(call github,hancock33,es-theme-carbon,$(ES_THEME_CARBON_VERSION))
 
 define ES_THEME_CARBON_INSTALL_TARGET_CMDS
+	rm -rf $(TARGET_DIR)/usr/share/emulationstation/themes/es-theme-carbon
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/themes/es-theme-carbon
 	cp -r $(@D)/* $(TARGET_DIR)/usr/share/emulationstation/themes/es-theme-carbon
 endef
