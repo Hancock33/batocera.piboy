@@ -3,8 +3,8 @@
 # lightspark
 #
 ################################################################################
-# Version: Commits on Mar 10, 2024
-LIGHTSPARK_VERSION = 2c7a976fb5904d661737adbbcba15fb03e4054aa
+# Version: Commits on Mar 11, 2024
+LIGHTSPARK_VERSION = 0836fbd37a1409d31703a577f0452a928c841dc9
 LIGHTSPARK_SITE = $(call github,lightspark,lightspark,$(LIGHTSPARK_VERSION))
 LIGHTSPARK_LICENSE = LGPLv3
 LIGHTSPARK_DEPENDENCIES = sdl2 freetype pcre jpeg libpng cairo pango ffmpeg libcurl rtmpdump
