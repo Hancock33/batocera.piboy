@@ -256,7 +256,7 @@ index 000000000000..84aa5106c8fa
 +struct drm_display_mode *drm_mode_low_dotclock_res(struct drm_device *dev,
 +				int hsize, int vsize, bool interlace);
 diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
-index 3f479483d7d8..969313f8c5fc 100644
+index 23b4e9a3361d..61374fcc974d 100644
 --- a/drivers/gpu/drm/drm_probe_helper.c
 +++ b/drivers/gpu/drm/drm_probe_helper.c
 @@ -448,21 +448,26 @@ static int __drm_helper_update_and_validate(struct drm_connector *connector,

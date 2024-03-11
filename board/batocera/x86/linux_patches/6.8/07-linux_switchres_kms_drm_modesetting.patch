@@ -281,7 +281,7 @@ index bae9e97328d9..d05f3c596cfd 100644
  EXPORT_SYMBOL(drm_connector_list_update);
  
 diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
-index ebe140e8838f..0c868550db8e 100644
+index 254309eba87c..bbb80cc8b2fa 100644
 --- a/drivers/gpu/drm/drm_probe_helper.c
 +++ b/drivers/gpu/drm/drm_probe_helper.c
 @@ -374,6 +374,23 @@ drm_helper_probe_detect_ctx(struct drm_connector *connector, bool force)
