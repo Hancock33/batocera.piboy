@@ -2801,6 +2801,8 @@ tg-cd:
       citra:            { requireAnyOf: [BR2_PACKAGE_CITRA]          }
     libretro:
       citra:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_CITRA] }
+    panda3ds:
+      panda3ds:         { requireAnyOf: [BR2_PACKAGE_PANDA3DS]       }
 
 fds:
   name:                 Family Computer Disk System
