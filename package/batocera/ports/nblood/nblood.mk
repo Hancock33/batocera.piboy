@@ -3,8 +3,8 @@
 # nblood
 #
 ################################################################################
-# Version: Commits on Mar 09, 2024
-NBLOOD_VERSION = f9a3d895ebffa9dc58b149cf59e408aa74e42cfe
+# Version: Commits on Mar 12, 2024
+NBLOOD_VERSION = 939f330faaa33a4e0d5249d0184b84c9d73cf8b8
 NBLOOD_SITE = https://github.com/nukeykt/NBlood.git
 
 NBLOOD_DEPENDENCIES = sdl2 flac libvpx
