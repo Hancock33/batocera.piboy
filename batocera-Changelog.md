@@ -1,4 +1,4 @@
-# 2024/xx/xx - batocera.linux 40 - 
+# 2024/xx/xx - batocera.linux 40 -
 ### Special Notes
 
 ### Hardware
@@ -51,8 +51,9 @@ Add support for the Pironman case with RPI4 devices.
 - sway to 1.9
 - mesa3d to 24.0.2
 - RPI kernel to 6.6.20
-- RK3326 kernel to 6.7.8
+- RK3326 kernel to 6.8
 - sdl2 to 2.30.0
+- X86_64 kernel to 6.8
 
 # 2024/03/xx - batocera.linux 39 - Painted Lady
 ### Special Notes
