@@ -581,12 +581,17 @@ menu "Utils"
 endmenu
 
 menu "Hardware"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/cases/deskpipro-case/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/cases/element14-pi-desktop/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/cases/gpicase/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/cases/pironman/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/cases/roshambo-case/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/ayn-platform/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/deskpipro-case/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/dmd-simulator/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/element14-pi-desktop/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/gpicase/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/pironman/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/pixelcade/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/roshambo-case/Config.in"
 endmenu
 

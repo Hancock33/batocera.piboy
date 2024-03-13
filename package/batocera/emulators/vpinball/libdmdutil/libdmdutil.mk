@@ -31,15 +31,24 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 endif
 
 define LIBDMDUTIL_CMAKE_HACKS
-	## derived from platforms/${PLATFORM}/${DMDUTIL_ARCH}/external.sh and CMakeLists.txt ##
-	$(SED) 's:third-party/include$$:$(STAGING_DIR)/usr/include/\n	third-party/include:g'						$(@D)/CMakeLists.txt
-	$(SED) 's:$${CMAKE_SOURCE_DIR}/third-party/runtime-libs/$${PLATFORM}/$${ARCH}/:$(STAGING_DIR)/usr/lib/:g'	$(@D)/CMakeLists.txt
-	$(SED) 's:third-party/runtime-libs/$${PLATFORM}/$${ARCH}:$(STAGING_DIR)/usr/lib/:g'							$(@D)/CMakeLists.txt
+	## derived from platforms/${PLATFORM}/${BUILD_ARCH}/external.sh and CMakeLists.txt ##
+	$(SED) 's:third-party/include$$:$(STAGING_DIR)/usr/include/\n   third-party/include:g' $(@D)/CMakeLists.txt
+	$(SED) 's:$${CMAKE_SOURCE_DIR}/third-party/runtime-libs/$${PLATFORM}/$${ARCH}/:$(STAGING_DIR)/usr/lib/:g' $(@D)/CMakeLists.txt
+	$(SED) 's:third-party/runtime-libs/$${PLATFORM}/$${ARCH}:$(STAGING_DIR)/usr/lib/:g' $(@D)/CMakeLists.txt
 endef
 
 # Install to staging to build Visual Pinball Standalone
 LIBDMDUTIL_INSTALL_STAGING = YES
 
 LIBDMDUTIL_PRE_CONFIGURE_HOOKS += LIBDMDUTIL_CMAKE_HACKS
+
+define LIBDMDUTIL_INSTALL_SERVER
+	$(INSTALL) -D -m 0755 $(LIBDMDUTIL_BUILDDIR)/dmdserver $(TARGET_DIR)/usr/bin/dmdserver
+
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/services
+	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/vpinball/libdmdutil/dmd_server.service $(TARGET_DIR)/usr/share/batocera/services/dmd_real
+endef
+
+LIBDMDUTIL_POST_INSTALL_TARGET_HOOKS += LIBDMDUTIL_INSTALL_SERVER
 
 $(eval $(cmake-package))
