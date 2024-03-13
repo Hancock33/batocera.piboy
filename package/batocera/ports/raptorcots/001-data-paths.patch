@@ -1,5 +1,5 @@
 diff --git a/src/glbapi.cpp b/src/glbapi.cpp
-index a258df4..fed6136 100644
+index c2e195e..1ae872a 100644
 --- a/src/glbapi.cpp
 +++ b/src/glbapi.cpp
 @@ -8,6 +8,7 @@
@@ -10,26 +10,24 @@ index a258df4..fed6136 100644
  
  #ifdef _WIN32
  #include <io.h>
-@@ -31,7 +32,7 @@ char* strupr(char* s)
- #endif // _MSC_VER
+@@ -33,7 +34,7 @@ char* strupr(char* s)
+ #define _SCOTTGAME
  
- char prefix[] = "FILE";
--char exePath[PATH_MAX];
-+char exePath[PATH_MAX] = "/userdata/roms/ports/raptor/";
- const char *serial = "32768GLB";
- 
- struct fitem_t {
-@@ -478,7 +479,7 @@ int GLB_ReadFile(const char *a1, char *a2)
-     FILE *handle;
-     int l;
-     char f_a0[PATH_MAX];
--    if (access(a1, 0) == -1)
-+    if (!checkfile(a1) == -1)
-     {
-         strcpy(f_a0, exePath);
-         strcat(f_a0, a1);
+ static const char* serial = "32768GLB";
+-static char exePath[PATH_MAX];
++static char exePath[PATH_MAX] = "/userdata/roms/ports/raptor/";
+ static int num_glbs;
+ static KEYFILE g_key;
+ static char prefix[5] = "FILE";
+@@ -898,4 +899,4 @@ GLB_SaveFile(
+ 	}
+ 	
+ 	fclose(handle);
+-}
+\ No newline at end of file
++}
 diff --git a/src/loadsave.cpp b/src/loadsave.cpp
-index 7f5cc3c..43769bb 100644
+index 4433a9e..fbfdcf3 100644
 --- a/src/loadsave.cpp
 +++ b/src/loadsave.cpp
 @@ -43,8 +43,8 @@ int filepos = -1;
@@ -41,8 +39,8 @@ index 7f5cc3c..43769bb 100644
 +static const char *fmt = "/userdata/roms/ports/raptor/CHAR%04u.FIL";
 +static const char *cdfmt = "/userdata/roms/ports/raptor/CHAR%04u.FIL";
  
- map_t *mapmem;
- csprite_t *csprite;
+ MAZELEVEL *mapmem;
+ CSPRITE *csprite;
 @@ -138,7 +138,7 @@ RAP_AreSavedFiles(
          else
              sprintf(temp, fmt, loop);
@@ -80,10 +78,10 @@ index 7f5cc3c..43769bb 100644
      return cdpath;
  }
 diff --git a/src/prefapi.cpp b/src/prefapi.cpp
-index b9d583b..c47fb09 100644
+index faab246..df2c2e6 100644
 --- a/src/prefapi.cpp
 +++ b/src/prefapi.cpp
-@@ -3,6 +3,7 @@
+@@ -2,6 +2,7 @@
  #include <string.h>
  #include "common.h"
  #include "prefapi.h"
@@ -91,17 +89,8 @@ index b9d583b..c47fb09 100644
  
  #ifdef _WIN32
  #include <io.h>
-@@ -267,7 +268,7 @@ int INI_InitPreference(const char *section)
- {
-     if (section)
-         strcpy(preference, section);
--    return !access(preference, 4);
-+    return checkfile(preference);
- }
- 
- int INI_GetPreferenceLong(const char *section, const char *key, int defValue)
 diff --git a/src/rap.cpp b/src/rap.cpp
-index d46dc99..6c3bb67 100644
+index a6c0182..42b2593 100644
 --- a/src/rap.cpp
 +++ b/src/rap.cpp
 @@ -32,6 +32,7 @@
@@ -123,7 +112,7 @@ index d46dc99..6c3bb67 100644
  
      //IPT_DeInit();
      //DMX_DeInit();
-@@ -1233,6 +1234,18 @@ RAP_InitMem(
+@@ -1236,6 +1237,18 @@ RAP_InitMem(
      GLB_UseVM();
  }
  
@@ -142,7 +131,7 @@ index d46dc99..6c3bb67 100644
  /***************************************************************************
  main() -
   ***************************************************************************/
-@@ -1290,13 +1303,13 @@ main(
+@@ -1293,13 +1306,13 @@ main(
      
      cur_diff = 0;
  
@@ -159,7 +148,7 @@ index d46dc99..6c3bb67 100644
      {
          gameflag[2] = 1;
          gameflag[3] = 1;
-@@ -1313,15 +1326,15 @@ main(
+@@ -1316,15 +1329,15 @@ main(
              numfiles++;
      }
  
@@ -181,7 +170,7 @@ index d46dc99..6c3bb67 100644
      EXIT_Install(ShutDown);
      
      // ================================================
-@@ -1368,10 +1381,10 @@ main(
+@@ -1371,10 +1384,10 @@ main(
      // ================================================
  
      if (access(RAP_SetupFilename(), 0))
@@ -195,10 +184,10 @@ index d46dc99..6c3bb67 100644
      fflush(stdout);
      KBD_Install();
 diff --git a/src/rap.h b/src/rap.h
-index 4b398d0..866a339 100644
+index 33b1b8b..6db7c67 100644
 --- a/src/rap.h
 +++ b/src/rap.h
-@@ -170,3 +170,4 @@ void RAP_LoadMap(void);
+@@ -173,3 +173,4 @@ void RAP_LoadMap(void);
  int Do_Game(void);
  int RAP_LoadWin(void);
  void ShutDown(int errcode);

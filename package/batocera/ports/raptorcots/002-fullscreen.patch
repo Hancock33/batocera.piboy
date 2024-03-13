@@ -16,7 +16,7 @@ index c0d7bcd..c03c2b9 100644
  aspect_ratio_correct=1
  txt_fullscreen=0
 diff --git a/src/i_video.cpp b/src/i_video.cpp
-index ae66bdf..0511444 100644
+index f6f49ea..c942f44 100644
 --- a/src/i_video.cpp
 +++ b/src/i_video.cpp
 @@ -115,8 +115,8 @@ static int max_scaling_buffer_pixels = 16000000;
@@ -30,7 +30,7 @@ index ae66bdf..0511444 100644
  
  int txt_fullscreen;
  
-@@ -196,8 +196,8 @@ unsigned int joywait = 0;
+@@ -199,8 +199,8 @@ int screencoordpoint = 0;
  
  void VIDEO_LoadPrefs(void)
  {
