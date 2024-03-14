@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2024-01-28 22:58+0000\n"
+"PO-Revision-Date: 2024-02-29 10:14+0000\n"
 "Last-Translator: THa_MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl-NL\n"
@@ -1359,7 +1359,7 @@ msgstr "Gebruik de taal en gebruikersnaam van de NDS-firmware"
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "USE FIRMWARE SETTINGS"
-msgstr "GEBRUIK FIRMWARE-INSTELLINGEN"
+msgstr "GEBRUIK FIRMWARE INSTELLINGEN"
 
 #. TRANSLATION: libretro/melonds, amiberry, amiberry
 msgctxt "game_options"
@@ -1683,7 +1683,7 @@ msgstr ""
 #. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds
 msgctxt "game_options"
 msgid "FIRMWARE SETTINGS"
-msgstr "FIRMWARE-INSTELLINGEN"
+msgstr "FIRMWARE INSTELLINGEN"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -3331,7 +3331,7 @@ msgctxt "game_options"
 msgid "AUTO FRAME SKIPPING"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, amiberry, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, flycast
 msgctxt "game_options"
 msgid "OFF"
 msgstr "UIT"
@@ -8583,36 +8583,6 @@ msgctxt "game_options"
 msgid "AUTO CROP"
 msgstr ""
 
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "Emulates the floppy drive sound."
-msgstr ""
-
-#. TRANSLATION: amiberry, amiberry
-msgctxt "game_options"
-msgid "SOUND SETTINGS"
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "FLOPPY DRIVE SOUND"
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "Select the best value to compensate latency and avoid crackling."
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "SOUND BUFFER SIZE"
-msgstr ""
-
-#. TRANSLATION: amiberry, pcsx2, rpcs3
-msgctxt "game_options"
-msgid "Minimum"
-msgstr "Minimum"
-
 #. TRANSLATION: cannonball
 msgctxt "game_options"
 msgid ""
@@ -8751,7 +8721,7 @@ msgstr "Laat Batocera het eerste audio-uitvoerapparaat instellen."
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "AUDIO OUTPUT"
-msgstr "AUDIO-OUTPUT"
+msgstr "AUDIO OUTPUT"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -9584,7 +9554,7 @@ msgstr "Onbeperkt"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "VSync and Audio Resampling need to be enabled."
-msgstr "V-Sync en Audio Resampling moeten aan staan."
+msgstr "V-SYNC en Audio Resampling moeten aan staan."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -9607,7 +9577,7 @@ msgstr "OPTIMALE FRAME PACING"
 msgctxt "game_options"
 msgid "Improve performance if VSync is disabled and using Vulkan."
 msgstr ""
-"Verhoog prestatie als VSync uitgeschakeld is en als Vulkan word gebruikt."
+"Verhoog prestatie als V-SYNC uitgeschakeld is en als Vulkan word gebruikt."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -11073,6 +11043,11 @@ msgctxt "game_options"
 msgid "BLENDING ACCURACY"
 msgstr "BLENDING NAUWKEURIGHEID"
 
+#. TRANSLATION: pcsx2, rpcs3
+msgctxt "game_options"
+msgid "Minimum"
+msgstr "Minimum"
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Full (Slow)"
@@ -11631,7 +11606,7 @@ msgstr "Kies de gewenste renderresolutie."
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "RENDER RESOLUTION (SCALING)"
-msgstr ""
+msgstr "RENDERRESOLUTIE (SCHALING)"
 
 #. TRANSLATION: rpcs3, xenia-canary
 msgctxt "game_options"
@@ -15347,7 +15322,7 @@ msgid ""
 "Fix screen tearing. With Some games you need to turn VSync on in the games "
 "options."
 msgstr ""
-"Schermscheuren verhelpen. Bij sommige games moet je V-Sync aanzetten in de "
+"Schermscheuren verhelpen. Bij sommige games moet je V-SYNC aanzetten in de "
 "spelopties."
 
 #. TRANSLATION: xenia-canary
@@ -15356,8 +15331,8 @@ msgid ""
 "Manually set VSYNC frames per second. Ideally this should match your monitor "
 "refresh rate."
 msgstr ""
-"Stel VSYNC-frames per seconde handmatig in. Idealiter zou dit moeten "
-"overeenkomen met de refresh rate van uw monitor."
+"Stel V-SYNC fps handmatig in. Idealiter zou dit moeten overeenkomen met de "
+"refresh rate van uw monitor."
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -16833,12 +16808,12 @@ msgstr "Snel Opslaan"
 
 #~ msgctxt "game_options"
 #~ msgid "Vsync"
-#~ msgstr "V-sync"
+#~ msgstr "V-SYNC"
 
 #~ msgctxt "game_options"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
 #~ msgstr ""
-#~ "Stel de gewenste maximale verversingssnelheid in wanneer Vsync is "
+#~ "Stel de gewenste maximale verversingssnelheid in wanneer V-SYNC is "
 #~ "uitgeschakeld."
 
 #~ msgctxt "keys_files"

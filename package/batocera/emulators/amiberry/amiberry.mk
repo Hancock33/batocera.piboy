@@ -7,7 +7,7 @@
 AMIBERRY_VERSION = b55d7fba1db385f9b2e84175bd6ad3deee90ed4f
 AMIBERRY_SITE = $(call github,BlitterStudio,amiberry,$(AMIBERRY_VERSION))
 AMIBERRY_LICENSE = GPLv3
-AMIBERRY_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf mpg123 libxml2 libmpeg2 flac libpng libserialport libzlib portmidi
+AMIBERRY_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf mpg123 libxml2 libmpeg2 flac libpng libserialport portmidi
 
 define AMIBERRY_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/amiberry 						$(TARGET_DIR)/usr/bin/amiberry

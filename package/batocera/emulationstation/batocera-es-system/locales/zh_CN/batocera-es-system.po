@@ -3267,7 +3267,7 @@ msgctxt "game_options"
 msgid "AUTO FRAME SKIPPING"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, amiberry, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, flycast
 msgctxt "game_options"
 msgid "OFF"
 msgstr "关闭"
@@ -8478,36 +8478,6 @@ msgctxt "game_options"
 msgid "AUTO CROP"
 msgstr ""
 
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "Emulates the floppy drive sound."
-msgstr ""
-
-#. TRANSLATION: amiberry, amiberry
-msgctxt "game_options"
-msgid "SOUND SETTINGS"
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "FLOPPY DRIVE SOUND"
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "Select the best value to compensate latency and avoid crackling."
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "SOUND BUFFER SIZE"
-msgstr ""
-
-#. TRANSLATION: amiberry, pcsx2, rpcs3
-msgctxt "game_options"
-msgid "Minimum"
-msgstr "最小"
-
 #. TRANSLATION: cannonball
 msgctxt "game_options"
 msgid ""
@@ -10892,6 +10862,11 @@ msgstr "设置越高，着色器中模拟的混合就越精确，速度也就越
 msgctxt "game_options"
 msgid "BLENDING ACCURACY"
 msgstr "混合精度"
+
+#. TRANSLATION: pcsx2, rpcs3
+msgctxt "game_options"
+msgid "Minimum"
+msgstr "最小"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"

@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: batocera-emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-15 21:09+0100\n"
-"PO-Revision-Date: 2024-02-02 01:07+0000\n"
+"PO-Revision-Date: 2024-03-01 19:24+0000\n"
 "Last-Translator: Maioni\n"
 "Language-Team: Portuguese (Brasil)\n"
-"Language: pt-BR\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -3333,7 +3333,7 @@ msgctxt "game_options"
 msgid "AUTO FRAME SKIPPING"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, amiberry, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, flycast
 msgctxt "game_options"
 msgid "OFF"
 msgstr "DESLIGADO"
@@ -8595,36 +8595,6 @@ msgctxt "game_options"
 msgid "AUTO CROP"
 msgstr ""
 
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "Emulates the floppy drive sound."
-msgstr ""
-
-#. TRANSLATION: amiberry, amiberry
-msgctxt "game_options"
-msgid "SOUND SETTINGS"
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "FLOPPY DRIVE SOUND"
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "Select the best value to compensate latency and avoid crackling."
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "SOUND BUFFER SIZE"
-msgstr ""
-
-#. TRANSLATION: amiberry, pcsx2, rpcs3
-msgctxt "game_options"
-msgid "Minimum"
-msgstr "Mínimo"
-
 #. TRANSLATION: cannonball
 msgctxt "game_options"
 msgid ""
@@ -11094,6 +11064,11 @@ msgctxt "game_options"
 msgid "BLENDING ACCURACY"
 msgstr "PRECISÃO DE MISTURA"
 
+#. TRANSLATION: pcsx2, rpcs3
+msgctxt "game_options"
+msgid "Minimum"
+msgstr "Mínimo"
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Full (Slow)"
@@ -11643,7 +11618,7 @@ msgstr "Escolha sua resolução de renderização preferida."
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "RENDER RESOLUTION (SCALING)"
-msgstr ""
+msgstr "RESOLUÇÃO DE RENDERIZAÇÃO (ESCALA)"
 
 #. TRANSLATION: rpcs3, xenia-canary
 msgctxt "game_options"
