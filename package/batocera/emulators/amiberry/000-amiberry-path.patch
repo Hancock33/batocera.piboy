@@ -1,8 +1,8 @@
 diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
-index 14bd2aeb..fdc57896 100644
+index 6f818661..b9801827 100644
 --- a/src/osdep/amiberry.cpp
 +++ b/src/osdep/amiberry.cpp
-@@ -3820,26 +3820,26 @@ static void init_amiberry_paths(void)
+@@ -3851,26 +3851,26 @@ static void init_amiberry_paths(void)
  		input_dir = screenshot_dir = nvram_dir = video_dir = 
  		start_path_data;
  

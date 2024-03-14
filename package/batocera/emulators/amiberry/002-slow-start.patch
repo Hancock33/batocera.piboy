@@ -1,8 +1,8 @@
 diff --git a/src/osdep/amiberry_gui.cpp b/src/osdep/amiberry_gui.cpp
-index 3399826c..b56fbf60 100644
+index 2aff1458..a7bce888 100644
 --- a/src/osdep/amiberry_gui.cpp
 +++ b/src/osdep/amiberry_gui.cpp
-@@ -296,7 +296,6 @@ void SymlinkROMs()
+@@ -242,7 +242,6 @@ void SymlinkROMs()
  
  void RescanROMs()
  {
@@ -10,7 +10,7 @@ index 3399826c..b56fbf60 100644
  	vector<string> files;
  	char path[MAX_DPATH];
  
-@@ -306,28 +305,13 @@ void RescanROMs()
+@@ -252,28 +251,13 @@ void RescanROMs()
  	get_rom_path(path, MAX_DPATH);
  
  	load_keyring(&changed_prefs, path);

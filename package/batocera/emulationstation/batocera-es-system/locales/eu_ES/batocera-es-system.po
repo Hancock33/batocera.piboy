@@ -3310,7 +3310,7 @@ msgctxt "game_options"
 msgid "AUTO FRAME SKIPPING"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, amiberry, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, flycast
 msgctxt "game_options"
 msgid "OFF"
 msgstr "EZGAITUTA"
@@ -8558,36 +8558,6 @@ msgctxt "game_options"
 msgid "AUTO CROP"
 msgstr ""
 
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "Emulates the floppy drive sound."
-msgstr ""
-
-#. TRANSLATION: amiberry, amiberry
-msgctxt "game_options"
-msgid "SOUND SETTINGS"
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "FLOPPY DRIVE SOUND"
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "Select the best value to compensate latency and avoid crackling."
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "SOUND BUFFER SIZE"
-msgstr ""
-
-#. TRANSLATION: amiberry, pcsx2, rpcs3
-msgctxt "game_options"
-msgid "Minimum"
-msgstr "Minimoa"
-
 #. TRANSLATION: cannonball
 msgctxt "game_options"
 msgid ""
@@ -11034,6 +11004,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "BLENDING ACCURACY"
 msgstr "NAHASTE ZEHAZTASUNA"
+
+#. TRANSLATION: pcsx2, rpcs3
+msgctxt "game_options"
+msgid "Minimum"
+msgstr "Minimoa"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"

@@ -21,27 +21,27 @@ msgstr ""
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Adjust the cpu power profile while in-game."
-msgstr ""
+msgstr "Ajusta el perfil de potència de la CPU durant el joc."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "POWER MODE"
-msgstr ""
+msgstr "MODE D'ENERGIA"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "High Performance"
-msgstr ""
+msgstr "Alt rendiment"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Balanced"
-msgstr ""
+msgstr "Equilibrat"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Power Saver"
-msgstr ""
+msgstr "Estalvi d'energia"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -54,7 +54,7 @@ msgstr ""
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "RYZEN THERMAL DESIGN POWER"
-msgstr ""
+msgstr "POTÈNCIA DE DISSENY TÈRMIC DE RYZEN"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -64,27 +64,27 @@ msgstr ""
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "110% (Use caution)"
-msgstr ""
+msgstr "110% (Tingueu precaució)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "115% (Use caution)"
-msgstr ""
+msgstr "115% (Tingueu precaució)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "120% (Are you crazy?)"
-msgstr ""
+msgstr "120% (Estàs boig?)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "125% (Yes, you're crazy)"
-msgstr ""
+msgstr "125% (Sí, estàs boig)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "130% (Nope, you're just insane!)"
-msgstr ""
+msgstr "130% (No, estàs boig!)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -3301,7 +3301,7 @@ msgctxt "game_options"
 msgid "AUTO FRAME SKIPPING"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, amiberry, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, flycast
 msgctxt "game_options"
 msgid "OFF"
 msgstr "APAGAT"
@@ -8534,36 +8534,6 @@ msgctxt "game_options"
 msgid "AUTO CROP"
 msgstr ""
 
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "Emulates the floppy drive sound."
-msgstr ""
-
-#. TRANSLATION: amiberry, amiberry
-msgctxt "game_options"
-msgid "SOUND SETTINGS"
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "FLOPPY DRIVE SOUND"
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "Select the best value to compensate latency and avoid crackling."
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "SOUND BUFFER SIZE"
-msgstr ""
-
-#. TRANSLATION: amiberry, pcsx2, rpcs3
-msgctxt "game_options"
-msgid "Minimum"
-msgstr "Mínim"
-
 #. TRANSLATION: cannonball
 msgctxt "game_options"
 msgid ""
@@ -10987,6 +10957,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "BLENDING ACCURACY"
 msgstr ""
+
+#. TRANSLATION: pcsx2, rpcs3
+msgctxt "game_options"
+msgid "Minimum"
+msgstr "Mínim"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -16017,6 +15992,10 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "105% (Use caution"
+#~ msgstr "105% (Tingueu precaució"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
