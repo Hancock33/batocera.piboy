@@ -3,6 +3,7 @@
 
 ### Hardware
 Add support for the Pironman case with RPI4 devices.
+Add support for OrangePi Zero 3 (all variants)
 
 ### Added
 - Support for Lexaloffle Voxatron (needs official engine, no emulator provided)
@@ -32,6 +33,7 @@ Add support for the Pironman case with RPI4 devices.
 - libretro-81: bump to Nov 1, 2023 build
 - libretro-fbneo: bump to Feb 23, 2024 build (v1.0.0.03)
 - libretro-genesisplusgx: bump to Feb 23, 2024 build
+- libretro-mame: bump to 0.263
 - libretro-mame2003-plus: bump to Feb 21, 2024 build
 - libretro-mupen64plus-next: bump to Feb 6, 2024 build
 - libretro-neocd: bump to Feb 1, 2024 build
@@ -41,6 +43,12 @@ Add support for the Pironman case with RPI4 devices.
 - libretro-pcsx: bump to Feb 14, 2024 build
 - Redream to 1.5.0-1103-g47bc2b7
 - Ikemen Go to 0.99
+- Amiberry to 5.6.8
+- GroovyMAME to 0.263 SR 0.220a
+- DOSBox-Staging to 0.81.0
+- DOSBox-X to 2024.03.01
+- SimCoupe to 1.2.13
+- Kodi to 20.5-Nexus
 
 ### System
 - Mainline Kernel 6.6.y bump to 6.6.21
@@ -49,11 +57,14 @@ Add support for the Pironman case with RPI4 devices.
 - wayland-protocols to 1.33
 - wlroots to 0.17.1
 - sway to 1.9
-- mesa3d to 24.0.2
+- mesa3d to 24.0.3
 - RPI kernel to 6.6.20
 - RK3326 kernel to 6.8
 - sdl2 to 2.30.0
 - X86_64 kernel to 6.8
+- switchres 0.220
+- btop to 1.3.2
+- Linux firmware to 20240312
 
 # 2024/03/xx - batocera.linux 39 - Painted Lady
 ### Special Notes
