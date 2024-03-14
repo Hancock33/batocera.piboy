@@ -18,7 +18,7 @@ index 6f818661..b9801827 100644
 -	logfile_path.append("/amiberry.log");
 -	rom_path.append("/kickstarts/");
 +	logfile_path = "/usrdata/system/logs/amiberry.log";
-+	rom_path = "/userdata/bios/";
++	rom_path = "/userdata/bios/amiga";
  	rp9_path.append("/rp9/");
 -	saveimage_dir.append("/savestates/");
 -	savestate_dir.append("/savestates/");
