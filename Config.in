@@ -51,7 +51,6 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/boot/uboot-vim1s/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/boot/uboot-vim4/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/boot/uboot-visionfive2/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/boot/uboot-x96-mate/Config.in"
   endmenu
 
   menu "Toolchain"
