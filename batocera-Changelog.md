@@ -4,6 +4,7 @@
 ### Hardware
 Add support for the Pironman case with RPI4 devices.
 Add support for OrangePi Zero 3 (all variants)
+Add support for Radxa Rock 3C
 
 ### Added
 - Support for Lexaloffle Voxatron (needs official engine, no emulator provided)
@@ -49,6 +50,11 @@ Add support for OrangePi Zero 3 (all variants)
 - DOSBox-Staging to 0.81.0
 - DOSBox-X to 2024.03.01
 - SimCoupe to 1.2.13
+- Tsugaru to 20240223
+- Redream (x86_64) to Mar 10, 2024 build
+- Fallout 1 CE to v1.1.0 (March 2024 release)
+- DevilutionX to 1.5.2
+- Commander Genius to 3.5.0
 - Kodi to 20.5-Nexus
 
 ### System
