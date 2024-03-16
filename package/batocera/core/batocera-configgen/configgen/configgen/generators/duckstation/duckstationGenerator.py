@@ -407,6 +407,7 @@ class DuckstationGenerator(Generator):
                     if nplayer > 4:
                         settings.set("ControllerPorts", "MultitapMode", "BothPorts")
                 pad_num = "Pad{}".format(nplayer)
+                gun_num = "Pointer-{}".format(pad.index)
                 sdl_num = "SDL-{}".format(pad.index)
                 ctrl_num = "Controller" + str(nplayer)
                 # SDL2 configs are always the same for controllers
@@ -459,11 +460,21 @@ class DuckstationGenerator(Generator):
                     settings.set(pad_num, "SteeringLeft", sdl_num+"/-LeftX")
                     settings.set(pad_num, "SteeringRight", sdl_num+"/+LeftX")
                 # Guns - GunCon
-                if system.isOptSet("duckstation_" + ctrl_num) and system.config["duckstation_" + ctrl_num] == "GunCon":
-                    settings.set(pad_num, "Trigger", sdl_num+"/+RightTrigger")
-                    settings.set(pad_num, "ShootOffscreen", sdl_num+"/+LeftTrigger")
-                    settings.set(pad_num, "A", sdl_num+"/A")
-                    settings.set(pad_num, "B", sdl_num+"/B")
+                if system.isOptSet("use_guns") and system.getOptBoolean("use_guns") and len(guns) > 0:
+                    settings.set(pad_num, "Type", "GunCon")
+                    settings.set(pad_num, "Trigger", gun_num+"/LeftButton")
+                    settings.set(pad_num, "A", gun_num+"/RightButton")
+                    settings.set(pad_num, "B", gun_num+"/MiddleButton")
+                    if system.isOptSet("duckstation_" + ctrl_num) and system.config["duckstation_" + ctrl_num] == "GunCon":
+                        settings.set(pad_num, "Trigger", sdl_num+"/+RightTrigger")
+                        settings.set(pad_num, "ShootOffscreen", sdl_num+"/+LeftTrigger")
+                        settings.set(pad_num, "A", sdl_num+"/A")
+                        settings.set(pad_num, "B", sdl_num+"/B")
+                # Guns crosshair
+                if system.isOptSet("duckstation_crosshair"):
+                    settings.set(pad_num, "CrosshairScale", system.config["duckstation_crosshair"])
+                else:
+                    settings.set(pad_num, "CrosshairScale", "0")
                 # Mouse
                 if system.isOptSet("duckstation_" + ctrl_num) and system.config["duckstation_" + ctrl_num] == "PlayStationMouse":
                     settings.set(pad_num, "Right", sdl_num+"/B")
