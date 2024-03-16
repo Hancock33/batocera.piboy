@@ -1,9 +1,15 @@
 {
     "actions_player1": [
         {
+            "trigger": ["b", "hotkey"],
+            "type": "key",
+            "target": ["KEY_LEFTALT","KEY_F4"],
+            "description": "Emulator Config"
+        },
+        {
             "trigger": ["hotkey", "start"],
             "type": "exec",
-            "target": "killall -9 ryujinx && reset",
+            "target": "pkill ryujinx",
             "description": "Exit the emulator"
         }
     ]
