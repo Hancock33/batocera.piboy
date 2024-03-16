@@ -86,6 +86,9 @@ define SERIOUSSAM_CP_WEAPONS
 	sed -i "s|add_compile_options(-march=native)|#add_compile_options(-march=native)|" $(@D)/SamTFE/Sources/CMakeLists.txt
 	cp -vfr $(@D)/SamTSE/Sources/Entities/PlayerWeapons_old.es $(@D)/SamTSE/Sources/Entities/PlayerWeapons.es
 	sed -i "s|add_compile_options(-march=native)|#add_compile_options(-march=native)|" $(@D)/SamTSE/Sources/CMakeLists.txt
+
+	sed '/RPATH_SETTINGS/d' $(@D)/SamTFE/Sources/CMakeLists.txt
+	sed '/RPATH_SETTINGS/d' $(@D)/SamTSE/Sources/CMakeLists.txt
 endef
 SERIOUSSAM_POST_EXTRACT_HOOKS += SERIOUSSAM_CP_WEAPONS
 
