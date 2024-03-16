@@ -86,11 +86,6 @@ class RyujinxGenerator(Generator):
         if not os.path.exists(ryujinxConf + "/system"):
             os.makedirs(ryujinxConf + "/system")
 
-        # Copy file & make executable (workaround)
-        if not os.path.exists(ryujinxExec) or not filecmp.cmp("/usr/bin/ryujinx/Ryujinx", ryujinxExec):
-            shutil.copyfile("/usr/bin/ryujinx/Ryujinx", ryujinxExec)
-            os.chmod(ryujinxExec, 0o0775)
-
         # Copy the prod.keys file to where ryujinx reads it
         if os.path.exists(ryujinxKeys):
             shutil.copyfile(ryujinxKeys, ryujinxConf + "/system/prod.keys")
@@ -104,15 +99,16 @@ class RyujinxGenerator(Generator):
             conf = {}
 
         # Set defaults
-        conf["enable_discord_integration"] = "false"
-        conf["check_updates_on_start"] = "false"
-        conf["show_confirm_exit"] = "false"
-        conf["hide_cursor_on_idle"] = "true"
+        conf["enable_discord_integration"] = False
+        conf["check_updates_on_start"] = False
+        conf["show_confirm_exit"] = False
+        conf["hide_cursor_on_idle"] = True
         conf["game_dirs"] = ["/userdata/roms/switch"]
-        conf["start_fullscreen"] = "true"
-        conf["docked_mode"] = "true"
+        conf["start_fullscreen"] = True
+        conf["docked_mode"] = True
         conf["audio_backend"] = "OpenAl"
         conf["audio_volume"] = 1
+
         # set ryujinx app language
         conf["language_code"] = "en_US"
 
@@ -158,6 +154,9 @@ class RyujinxGenerator(Generator):
 
         # write / update the config file
         js_out = json.dumps(conf, indent=2)
+        js_out = js_out.replace("False","false")
+        js_out = js_out.replace("True","true")
+
         with open(ryujinxConfFile, "w") as jout:
             jout.write(js_out)
 
@@ -210,9 +209,9 @@ class RyujinxGenerator(Generator):
             nplayer += 1
 
         if rom == "config":
-            commandArray = [ryujinxExec]
+            commandArray = ["/usr/bin/ryujinx/Ryujinx"]
         else:
-            commandArray = [ryujinxExec, "--fullscreen", rom]
+            commandArray = ["/usr/bin/ryujinx/Ryujinx", "--fullscreen", rom]
 
         return Command.Command(
             array=commandArray,
@@ -221,6 +220,7 @@ class RyujinxGenerator(Generator):
             "XDG_CACHE_HOME":batoceraFiles.CACHE, \
             "QT_QPA_PLATFORM":"xcb", \
             "LD_LIBRARY_PATH": "/usr/bin/ryujinx/:/usr/lib",
+            "SDL_JOYSTICK_HIDAPI": "0",
             "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)})
 
 def writeControllerIntoJson(new_controller, filename=ryujinxConfFile):

@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Mar 14, 2024
-RYUJINX_VERSION = 1.1.1231
+RYUJINX_VERSION = 1.1.1237
 
 ifeq ($(BR2_x86_64),y)
 	RYUJINX_SOURCE = ryujinx-$(RYUJINX_VERSION)-linux_x64.tar.gz
@@ -25,6 +25,7 @@ define RYUJINX_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/bin/ryujinx
 	mkdir -p $(TARGET_DIR)/usr/bin/ryujinx
 	cp -avr $(@D)/target/publish/* $(TARGET_DIR)/usr/bin/ryujinx
+	rm -rf  $(TARGET_DIR)/usr/bin/ryujinx/Ryujinx.Ava
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ryujinx/switch.ryujinx.keys \
