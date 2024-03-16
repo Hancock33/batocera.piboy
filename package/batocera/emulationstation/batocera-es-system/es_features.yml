@@ -8552,7 +8552,6 @@ duckstation:
         duckstation_crosshair:
             group: LIGHT GUN
             prompt: CROSSHAIR
-            description: 
             choices:
                 "Disabled (Default)": "0"
                 "Enabled":            "100"
