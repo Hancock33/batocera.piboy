@@ -14,7 +14,9 @@ D8VK_DEPENDENCIES = dxvk
 
 define D8VK_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/wine/dxvk/x32
-	cp -a $(@D)/d3d8.dll $(TARGET_DIR)/usr/wine/dxvk/x32
+	mkdir -p $(TARGET_DIR)/usr/wine/dxvk/x64
+	cp -a $(@D)/x32/d3d8.dll $(TARGET_DIR)/usr/wine/dxvk/x32
+	cp -a $(@D)/x64/d3d8.dll $(TARGET_DIR)/usr/wine/dxvk/x64
 endef
 
 $(eval $(generic-package))
