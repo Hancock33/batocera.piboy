@@ -1575,7 +1575,7 @@ c64:
   manufacturer:         Commodore
   release:              1982
   hardware:             computer
-  extensions:           [d64, d81, crt, prg, tap, t64, m3u, zip, 7z, nib]
+  extensions:           [7z, crt, d64, d71, d81, g64, m3u, nib, prg, t64, tap, zip]
   platform:             c64
   group:                c64
   emulators:
