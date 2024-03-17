@@ -3147,7 +3147,7 @@ switch:
   extensions:           [xci, nsp]
   emulators:
     yuzu:
-      yuzu:             { requireAnyOf: [BR2_PACKAGE_YUZU]    }
+      yuzu:             { requireAnyOf: [BR2_PACKAGE_SUYU]    }
     ryujinx:
       ryujinx:          { requireAnyOf: [BR2_PACKAGE_RYUJINX] }
 
