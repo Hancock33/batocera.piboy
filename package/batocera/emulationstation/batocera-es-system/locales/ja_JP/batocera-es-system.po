@@ -16093,10 +16093,6 @@ msgid "Quick Save"
 msgstr "クイック セーブ"
 
 #~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "ナムコ ガンコン(振動有)"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (注意してください)"
 
@@ -16490,6 +16486,10 @@ msgstr "クイック セーブ"
 #~ msgctxt "game_options"
 #~ msgid "PS1 Analog Joystick"
 #~ msgstr "PS1 アナログジョイスティック"
+
+#~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "ナムコ ガンコン(振動有)"
 
 #~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"

@@ -16148,10 +16148,6 @@ msgid "Quick Save"
 msgstr "Gordetze Azkarra"
 
 #~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "Namco GunCon (Rumble)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Gorde iragandako egoerak denbora errealean atzera botatzeko, nukleoak "
@@ -16545,6 +16541,10 @@ msgstr "Gordetze Azkarra"
 #~ msgctxt "game_options"
 #~ msgid "PS1 Analog Joystick"
 #~ msgstr "PS1 Joystick Analogikoa"
+
+#~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "Namco GunCon (Rumble)"
 
 #~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"

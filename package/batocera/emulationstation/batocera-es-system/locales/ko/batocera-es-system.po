@@ -17484,11 +17484,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "남코 건콘 (럼블)"
-
-#, fuzzy
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr "코어가 지원하는 경우 실시간으로 되감기할 과거 상태를 저장합니다."
 
@@ -17902,6 +17897,11 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "PS1 Analog Joystick"
 #~ msgstr "PS1 아날로그 조이스틱"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "남코 건콘 (럼블)"
 
 #, fuzzy
 #~ msgctxt "game_options"
