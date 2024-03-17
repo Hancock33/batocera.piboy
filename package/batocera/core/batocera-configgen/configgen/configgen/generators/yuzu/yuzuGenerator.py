@@ -16,10 +16,7 @@ class YuzuGenerator(Generator):
 
         YuzuGenerator.writeYuzuConfig(batoceraFiles.CONF + "/yuzu/qt-config.ini", system, playersControllers)
 
-        if system.isOptSet('yuzu_emulator'):
-            commandArray = ["/usr/bin/suyu", "-f", "-g", rom ]
-        else:
-            commandArray = ["/usr/bin/yuzu", "-f", "-g", rom ]
+        commandArray = ["/usr/bin/suyu", "-f", "-g", rom ]
 
         return Command.Command(array=commandArray, env={
             "XDG_CONFIG_HOME":batoceraFiles.CONF, \
