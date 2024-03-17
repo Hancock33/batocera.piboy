@@ -86,11 +86,6 @@ class RyujinxGenerator(Generator):
         if not os.path.exists(ryujinxConf + "/system"):
             os.makedirs(ryujinxConf + "/system")
 
-        # Copy file & make executable (workaround)
-        if not os.path.exists(ryujinxExec) or not filecmp.cmp("/usr/bin/ryujinx/Ryujinx", ryujinxExec):
-            shutil.copyfile("/usr/bin/ryujinx/Ryujinx", ryujinxExec)
-            os.chmod(ryujinxExec, 0o0775)
-
         # Copy the prod.keys file to where ryujinx reads it
         if os.path.exists(ryujinxKeys):
             shutil.copyfile(ryujinxKeys, ryujinxConf + "/system/prod.keys")
@@ -113,8 +108,9 @@ class RyujinxGenerator(Generator):
         conf["docked_mode"] = True
         conf["audio_backend"] = "OpenAl"
         conf["audio_volume"] = 1
+
         # set ryujinx app language
-        conf["language_code"] = str(getLangFromEnvironment())
+        conf["language_code"] = "en_US"
 
         # Console language, time & date
         if system.isOptSet("ryujinx_language"):
@@ -158,6 +154,9 @@ class RyujinxGenerator(Generator):
 
         # write / update the config file
         js_out = json.dumps(conf, indent=2)
+        js_out = js_out.replace("False","false")
+        js_out = js_out.replace("True","true")
+
         with open(ryujinxConfFile, "w") as jout:
             jout.write(js_out)
 
@@ -210,9 +209,9 @@ class RyujinxGenerator(Generator):
             nplayer += 1
 
         if rom == "config":
-            commandArray = [ryujinxExec]
+            commandArray = ["/usr/bin/ryujinx/Ryujinx"]
         else:
-            commandArray = [ryujinxExec, rom]
+            commandArray = ["/usr/bin/ryujinx/Ryujinx", "--fullscreen", rom]
 
         return Command.Command(
             array=commandArray,
@@ -221,6 +220,7 @@ class RyujinxGenerator(Generator):
             "XDG_CACHE_HOME":batoceraFiles.CACHE, \
             "QT_QPA_PLATFORM":"xcb", \
             "LD_LIBRARY_PATH": "/usr/bin/ryujinx/:/usr/lib",
+            "SDL_JOYSTICK_HIDAPI": "0",
             "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)})
 
 def writeControllerIntoJson(new_controller, filename=ryujinxConfFile):
@@ -229,13 +229,3 @@ def writeControllerIntoJson(new_controller, filename=ryujinxConfFile):
         file_data["input_config"].append(new_controller)
         file.seek(0)
         json.dump(file_data, file, indent=2)
-
-def getLangFromEnvironment():
-    lang = environ['LANG'][:5]
-    availableLanguages = { "jp_JP": 0, "en_US": 1, "de_DE": 2,
-                           "fr_FR": 3, "es_ES": 4, "it_IT": 5,
-                           "nl_NL": 6, "zh_CN": 7, "zh_TW": 8, "ko_KR": 9 }
-    if lang in availableLanguages:
-        return availableLanguages[lang]
-    else:
-        return availableLanguages["en_US"]

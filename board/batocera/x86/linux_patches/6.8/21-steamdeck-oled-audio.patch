@@ -1,0 +1,291 @@
+diff --git a/sound/soc/amd/acp/acp-mach-common.c b/sound/soc/amd/acp/acp-mach-common.c
+index 504d1b8c4cbb..665a6ea0a2a8 100644
+--- a/sound/soc/amd/acp/acp-mach-common.c
++++ b/sound/soc/amd/acp/acp-mach-common.c
+@@ -828,8 +828,8 @@ static const struct snd_soc_ops acp_card_maxim_ops = {
+ };
+ 
+ SND_SOC_DAILINK_DEF(max98388,
+-		    DAILINK_COMP_ARRAY(COMP_CODEC("i2c-ADS8388:00", "max98388-aif1"),
+-				       COMP_CODEC("i2c-ADS8388:01", "max98388-aif1")));
++		    DAILINK_COMP_ARRAY(COMP_CODEC("i2c-ADS8388:00", MAX98388_CODEC_DAI),
++				       COMP_CODEC("i2c-ADS8388:01", MAX98388_CODEC_DAI)));
+ 
+ static const struct snd_kcontrol_new max98388_controls[] = {
+ 	SOC_DAPM_PIN_SWITCH("Left Spk"),
+@@ -1280,7 +1280,7 @@ static const struct snd_soc_ops acp_8821_ops = {
+ 
+ SND_SOC_DAILINK_DEF(nau8821,
+ 		    DAILINK_COMP_ARRAY(COMP_CODEC("i2c-NVTN2020:00",
+-						  "nau8821-hifi")));
++						  NAU8821_CODEC_DAI)));
+ 
+ /* Declare DMIC codec components */
+ SND_SOC_DAILINK_DEF(dmic_codec,
+diff --git a/sound/soc/amd/acp/acp-sof-mach.c b/sound/soc/amd/acp/acp-sof-mach.c
+index 20b94814a046..fc59ea34e687 100644
+--- a/sound/soc/amd/acp/acp-sof-mach.c
++++ b/sound/soc/amd/acp/acp-sof-mach.c
+@@ -28,7 +28,6 @@ static struct acp_card_drvdata sof_rt5682_rt1019_data = {
+ 	.hs_codec_id = RT5682,
+ 	.amp_codec_id = RT1019,
+ 	.dmic_codec_id = DMIC,
+-	.tdm_mode = false,
+ };
+ 
+ static struct acp_card_drvdata sof_rt5682_max_data = {
+@@ -38,7 +37,6 @@ static struct acp_card_drvdata sof_rt5682_max_data = {
+ 	.hs_codec_id = RT5682,
+ 	.amp_codec_id = MAX98360A,
+ 	.dmic_codec_id = DMIC,
+-	.tdm_mode = false,
+ };
+ 
+ static struct acp_card_drvdata sof_rt5682s_rt1019_data = {
+@@ -49,7 +47,6 @@ static struct acp_card_drvdata sof_rt5682s_rt1019_data = {
+ 	.amp_codec_id = RT1019,
+ 	.dmic_codec_id = DMIC,
+ 	.platform = RENOIR,
+-	.tdm_mode = false,
+ };
+ 
+ static struct acp_card_drvdata sof_rt5682s_max_data = {
+@@ -60,7 +57,6 @@ static struct acp_card_drvdata sof_rt5682s_max_data = {
+ 	.amp_codec_id = MAX98360A,
+ 	.dmic_codec_id = DMIC,
+ 	.platform = RENOIR,
+-	.tdm_mode = false,
+ };
+ 
+ static struct acp_card_drvdata sof_nau8825_data = {
+@@ -72,7 +68,6 @@ static struct acp_card_drvdata sof_nau8825_data = {
+ 	.dmic_codec_id = DMIC,
+ 	.platform = REMBRANDT,
+ 	.soc_mclk = true,
+-	.tdm_mode = false,
+ };
+ 
+ static struct acp_card_drvdata sof_rt5682s_hs_rt1019_data = {
+@@ -84,20 +79,15 @@ static struct acp_card_drvdata sof_rt5682s_hs_rt1019_data = {
+ 	.dmic_codec_id = DMIC,
+ 	.platform = REMBRANDT,
+ 	.soc_mclk = true,
+-	.tdm_mode = false,
+ };
+ 
+ static struct acp_card_drvdata sof_nau8821_max98388_data = {
+ 	.hs_cpu_id = I2S_SP,
+ 	.amp_cpu_id = I2S_HS,
+ 	.bt_cpu_id = I2S_BT,
+-	.dmic_cpu_id = NONE,
+ 	.hs_codec_id = NAU8821,
+ 	.amp_codec_id = MAX98388,
+-	.bt_codec_id = NONE,
+-	.dmic_codec_id = NONE,
+ 	.soc_mclk = true,
+-	.tdm_mode = false,
+ };
+ 
+ static int acp_sof_probe(struct platform_device *pdev)
+@@ -126,16 +116,14 @@ static int acp_sof_probe(struct platform_device *pdev)
+ 	if (dmi_id && dmi_id->driver_data)
+ 		acp_card_drvdata->tdm_mode = dmi_id->driver_data;
+ 
+-	acp_sofdsp_dai_links_create(card);
++	ret = acp_sofdsp_dai_links_create(card);
++	if (ret)
++		return dev_err_probe(&pdev->dev, ret, "Failed to create DAI links\n");
+ 
+ 	ret = devm_snd_soc_register_card(&pdev->dev, card);
+-	if (ret) {
+-		dev_err(&pdev->dev,
+-				"devm_snd_soc_register_card(%s) failed: %d\n",
+-				card->name, ret);
+-		return ret;
+-	}
+-
++	if (ret)
++		return dev_err_probe(&pdev->dev, ret,
++				     "Failed to register card(%s)\n", card->name);
+ 	return 0;
+ }
+ 
+@@ -182,7 +170,7 @@ static struct platform_driver acp_asoc_audio = {
+ module_platform_driver(acp_asoc_audio);
+ 
+ MODULE_IMPORT_NS(SND_SOC_AMD_MACH);
+-MODULE_DESCRIPTION("ACP chrome SOF audio support");
++MODULE_DESCRIPTION("ACP SOF Machine Driver");
+ MODULE_ALIAS("platform:rt5682-rt1019");
+ MODULE_ALIAS("platform:rt5682-max");
+ MODULE_ALIAS("platform:rt5682s-max");
+diff --git a/sound/soc/sof/amd/acp-loader.c b/sound/soc/sof/amd/acp-loader.c
+index e05eb7a86dd4..d2d21478399e 100644
+--- a/sound/soc/sof/amd/acp-loader.c
++++ b/sound/soc/sof/amd/acp-loader.c
+@@ -267,29 +267,49 @@ int acp_sof_load_signed_firmware(struct snd_sof_dev *sdev)
+ {
+ 	struct snd_sof_pdata *plat_data = sdev->pdata;
+ 	struct acp_dev_data *adata = plat_data->hw_pdata;
++	const char *fw_filename;
+ 	int ret;
+ 
+-	ret = request_firmware(&sdev->basefw.fw, adata->fw_code_bin, sdev->dev);
++	fw_filename = kasprintf(GFP_KERNEL, "%s/%s",
++				plat_data->fw_filename_prefix,
++				adata->fw_code_bin);
++	if (!fw_filename)
++		return -ENOMEM;
++
++	ret = request_firmware(&sdev->basefw.fw, fw_filename, sdev->dev);
+ 	if (ret < 0) {
++		kfree(fw_filename);
+ 		dev_err(sdev->dev, "sof signed firmware code bin is missing\n");
+ 		return ret;
+ 	} else {
+-		dev_dbg(sdev->dev, "request_firmware %s successful\n", adata->fw_code_bin);
++		dev_dbg(sdev->dev, "request_firmware %s successful\n", fw_filename);
+ 	}
++	kfree(fw_filename);
++
+ 	ret = snd_sof_dsp_block_write(sdev, SOF_FW_BLK_TYPE_IRAM, 0,
+-				      (void *)sdev->basefw.fw->data, sdev->basefw.fw->size);
++				      (void *)sdev->basefw.fw->data,
++				      sdev->basefw.fw->size);
++
++	fw_filename = kasprintf(GFP_KERNEL, "%s/%s",
++				plat_data->fw_filename_prefix,
++				adata->fw_data_bin);
++	if (!fw_filename)
++		return -ENOMEM;
+ 
+-	ret = request_firmware(&adata->fw_dbin, adata->fw_data_bin, sdev->dev);
++	ret = request_firmware(&adata->fw_dbin, fw_filename, sdev->dev);
+ 	if (ret < 0) {
++		kfree(fw_filename);
+ 		dev_err(sdev->dev, "sof signed firmware data bin is missing\n");
+ 		return ret;
+ 
+ 	} else {
+-		dev_dbg(sdev->dev, "request_firmware %s successful\n", adata->fw_data_bin);
++		dev_dbg(sdev->dev, "request_firmware %s successful\n", fw_filename);
+ 	}
++	kfree(fw_filename);
+ 
+ 	ret = snd_sof_dsp_block_write(sdev, SOF_FW_BLK_TYPE_DRAM, 0,
+-				      (void *)adata->fw_dbin->data, adata->fw_dbin->size);
++				      (void *)adata->fw_dbin->data,
++				      adata->fw_dbin->size);
+ 	return ret;
+ }
+ EXPORT_SYMBOL_NS(acp_sof_load_signed_firmware, SND_SOC_SOF_AMD_COMMON);
+diff --git a/sound/soc/sof/amd/acp.c b/sound/soc/sof/amd/acp.c
+index 07632ae6ccf5..193296152b42 100644
+--- a/sound/soc/sof/amd/acp.c
++++ b/sound/soc/sof/amd/acp.c
+@@ -28,11 +28,10 @@ MODULE_PARM_DESC(enable_fw_debug, "Enable Firmware debug");
+ 
+ const struct dmi_system_id acp_sof_quirk_table[] = {
+ 	{
+-		/* Valve Jupiter device */
++		/* Steam Deck OLED device */
+ 		.matches = {
+ 			DMI_MATCH(DMI_SYS_VENDOR, "Valve"),
+ 			DMI_MATCH(DMI_PRODUCT_NAME, "Galileo"),
+-			DMI_MATCH(DMI_PRODUCT_FAMILY, "Sephiroth"),
+ 		},
+ 		.driver_data = (void *)SECURED_FIRMWARE,
+ 	},
+@@ -493,7 +492,6 @@ EXPORT_SYMBOL_NS(amd_sof_acp_resume, SND_SOC_SOF_AMD_COMMON);
+ int amd_sof_acp_probe(struct snd_sof_dev *sdev)
+ {
+ 	struct pci_dev *pci = to_pci_dev(sdev->dev);
+-	struct snd_sof_pdata *plat_data = sdev->pdata;
+ 	struct acp_dev_data *adata;
+ 	const struct sof_amd_acp_desc *chip;
+ 	const struct dmi_system_id *dmi_id;
+@@ -560,17 +558,25 @@ int amd_sof_acp_probe(struct snd_sof_dev *sdev)
+ 	adata->signed_fw_image = false;
+ 	dmi_id = dmi_first_match(acp_sof_quirk_table);
+ 	if (dmi_id && dmi_id->driver_data) {
+-		adata->fw_code_bin = kasprintf(GFP_KERNEL, "%s/sof-%s-code.bin",
+-					       plat_data->fw_filename_prefix,
+-					       chip->name);
+-		adata->fw_data_bin = kasprintf(GFP_KERNEL, "%s/sof-%s-data.bin",
+-					       plat_data->fw_filename_prefix,
+-					       chip->name);
+-		adata->signed_fw_image = dmi_id->driver_data;
++		adata->fw_code_bin = devm_kasprintf(sdev->dev, GFP_KERNEL,
++						    "sof-%s-code.bin",
++						    chip->name);
++		if (!adata->fw_code_bin) {
++			ret = -ENOMEM;
++			goto free_ipc_irq;
++		}
++
++		adata->fw_data_bin = devm_kasprintf(sdev->dev, GFP_KERNEL,
++						    "sof-%s-data.bin",
++						    chip->name);
++		if (!adata->fw_data_bin) {
++			ret = -ENOMEM;
++			goto free_ipc_irq;
++		}
+ 
+-		dev_dbg(sdev->dev, "fw_code_bin:%s, fw_data_bin:%s\n", adata->fw_code_bin,
+-			adata->fw_data_bin);
++		adata->signed_fw_image = dmi_id->driver_data;
+ 	}
++
+ 	adata->enable_fw_debug = enable_fw_debug;
+ 	acp_memory_init(sdev);
+ 
+diff --git a/sound/soc/sof/fw-file-profile.c b/sound/soc/sof/fw-file-profile.c
+index 138a1ca2c4a8..b56b14232444 100644
+--- a/sound/soc/sof/fw-file-profile.c
++++ b/sound/soc/sof/fw-file-profile.c
+@@ -89,6 +89,12 @@ static int sof_test_topology_file(struct device *dev,
+ 	return ret;
+ }
+ 
++static bool sof_platform_uses_generic_loader(struct snd_sof_dev *sdev)
++{
++	return (sdev->pdata->desc->ops->load_firmware == snd_sof_load_firmware_raw ||
++		sdev->pdata->desc->ops->load_firmware == snd_sof_load_firmware_memcpy);
++}
++
+ static int
+ sof_file_profile_for_ipc_type(struct snd_sof_dev *sdev,
+ 			      enum sof_ipc_type ipc_type,
+@@ -130,7 +136,8 @@ sof_file_profile_for_ipc_type(struct snd_sof_dev *sdev,
+ 	 * For default path and firmware name do a verification before
+ 	 * continuing further.
+ 	 */
+-	if (base_profile->fw_path || base_profile->fw_name) {
++	if ((base_profile->fw_path || base_profile->fw_name) &&
++	    sof_platform_uses_generic_loader(sdev)) {
+ 		ret = sof_test_firmware_file(dev, out_profile, &ipc_type);
+ 		if (ret)
+ 			return ret;
+@@ -181,7 +188,8 @@ sof_file_profile_for_ipc_type(struct snd_sof_dev *sdev,
+ 	out_profile->ipc_type = ipc_type;
+ 
+ 	/* Test only default firmware file */
+-	if (!base_profile->fw_path && !base_profile->fw_name)
++	if ((!base_profile->fw_path && !base_profile->fw_name) &&
++	    sof_platform_uses_generic_loader(sdev))
+ 		ret = sof_test_firmware_file(dev, out_profile, NULL);
+ 
+ 	if (!ret)
+@@ -267,7 +275,11 @@ static void sof_print_profile_info(struct snd_sof_dev *sdev,
+ 
+ 	dev_info(dev, "Firmware paths/files for ipc type %d:\n", profile->ipc_type);
+ 
+-	dev_info(dev, " Firmware file:     %s/%s\n", profile->fw_path, profile->fw_name);
++	/* The firmware path is only valid when generic loader is used */
++	if (sof_platform_uses_generic_loader(sdev))
++		dev_info(dev, " Firmware file:     %s/%s\n",
++			 profile->fw_path, profile->fw_name);
++
+ 	if (profile->fw_lib_path)
+ 		dev_info(dev, " Firmware lib path: %s\n", profile->fw_lib_path);
+ 	dev_info(dev, " Topology file:     %s/%s\n", profile->tplg_path, profile->tplg_name);

@@ -102,7 +102,7 @@ msgctxt "game_options"
 msgid "VIDEO MODE"
 msgstr "비디오 모드"
 
-#. TRANSLATION: shared, openbor
+#. TRANSLATION: shared, pcsx2
 msgctxt "game_options"
 msgid ""
 "Force the game to render in this aspect ratio. Not all systems support all "
@@ -111,7 +111,7 @@ msgstr ""
 "게임이 이 종횡비로 렌더링되도록 강제합니다. 모든 시스템이 모든 비율을 지원하"
 "는 것은 아닙니다."
 
-#. TRANSLATION: shared, dolphin, flycast, mupen64plus, openbor, ...
+#. TRANSLATION: shared, dolphin, flycast, mupen64plus, pcsx2, ...
 msgctxt "game_options"
 msgid "GAME ASPECT RATIO"
 msgstr "게임 종횡비"
@@ -502,7 +502,7 @@ msgctxt "game_options"
 msgid "Use wheels instead of pads if wheels are connected."
 msgstr ""
 
-#. TRANSLATION: shared, shared, shared, shared, openbor
+#. TRANSLATION: shared, shared, shared, shared, pcsx2
 msgctxt "game_options"
 msgid "WHEELS"
 msgstr ""
@@ -1080,7 +1080,7 @@ msgctxt "game_options"
 msgid "Low"
 msgstr "낮음"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen, mupen64plus, openbor
+#. TRANSLATION: libretro/mesens, libretro/mesen, mupen64plus, pcsx2
 #, fuzzy
 msgctxt "game_options"
 msgid "Medium"
@@ -1396,7 +1396,7 @@ msgctxt "game_options"
 msgid "Arrange the dual screen layout."
 msgstr "듀얼 스크린 레이아웃을 정렬합니다."
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, citra, melonds, drastic
+#. TRANSLATION: libretro/desmume, libretro/melonds, citra, melonds, panda3ds, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "SCREEN LAYOUT"
@@ -1617,7 +1617,7 @@ msgctxt "game_options"
 msgid "RENDERER MODE"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, citra, duckstation, melonds, openbor, ...
+#. TRANSLATION: libretro/melondsds, citra, duckstation, melonds, panda3ds, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Software"
@@ -1701,7 +1701,7 @@ msgctxt "game_options"
 msgid "SCREEN FILTERING"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, libretro/swanstation, libretro/duckstation, libretro/parallel_n64, openbor, ...
+#. TRANSLATION: libretro/melondsds, libretro/swanstation, libretro/duckstation, libretro/parallel_n64, pcsx2, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Nearest"
@@ -2371,7 +2371,7 @@ msgctxt "game_options"
 msgid "Skip Drawing"
 msgstr "그리기 건너뛰기"
 
-#. TRANSLATION: libretro/dolphin, dolphin, dolphin_triforce, openbor, ppsspp, ...
+#. TRANSLATION: libretro/dolphin, dolphin, dolphin_triforce, pcsx2, ppsspp, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Improves clarity of distant textures."
@@ -2483,13 +2483,13 @@ msgctxt "game_options"
 msgid "External (variable fps)"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox, mame
+#. TRANSLATION: libretro/dosbox, openbor, mame
 #, fuzzy
 msgctxt "game_options"
 msgid "Apply a post-processing effect."
 msgstr "후처리 효과를 적용합니다."
 
-#. TRANSLATION: libretro/dosbox, cgenius
+#. TRANSLATION: libretro/dosbox, openbor, cgenius
 #, fuzzy
 msgctxt "game_options"
 msgid "VIDEO FILTER"
@@ -3626,7 +3626,7 @@ msgctxt "game_options"
 msgid "AUTO FRAME SKIPPING"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, amiberry, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, flycast
 #, fuzzy
 msgctxt "game_options"
 msgid "OFF"
@@ -4690,7 +4690,7 @@ msgctxt "game_options"
 msgid "Allows up to 7 or 12 controllers in supported games."
 msgstr "지원되는 게임에서 최대 7개 또는 12개의 컨트롤러를 허용합니다."
 
-#. TRANSLATION: libretro/kronos, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro, openbor
+#. TRANSLATION: libretro/kronos, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro, pcsx2
 #, fuzzy
 msgctxt "game_options"
 msgid "MULTITAP"
@@ -6655,7 +6655,7 @@ msgctxt "game_options"
 msgid "USA"
 msgstr "미국"
 
-#. TRANSLATION: libretro/neocd, flycast/vitaquake3, openbor, redream, yuzu, ...
+#. TRANSLATION: libretro/neocd, flycast/vitaquake3, pcsx2, redream, yuzu, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Europe"
@@ -8917,6 +8917,56 @@ msgctxt "game_options"
 msgid "Koalapad"
 msgstr "코알라패드"
 
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "Some games and homebrews require more RAM"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "RAM EXPANSION UNIT"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "128kB (1700)"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "256kB (1764)"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "512kB (1750)"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "1024kB"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "2048kB"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "4096kB"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "8192kB"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "16384kB"
+msgstr ""
+
 #. TRANSLATION: libretro/vice_x128
 #, fuzzy
 msgctxt "game_options"
@@ -9511,36 +9561,6 @@ msgctxt "game_options"
 msgid "AUTO CROP"
 msgstr ""
 
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "Emulates the floppy drive sound."
-msgstr ""
-
-#. TRANSLATION: amiberry, amiberry
-msgctxt "game_options"
-msgid "SOUND SETTINGS"
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "FLOPPY DRIVE SOUND"
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "Select the best value to compensate latency and avoid crackling."
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "SOUND BUFFER SIZE"
-msgstr ""
-
-#. TRANSLATION: amiberry, openbor, rpcs3
-msgctxt "game_options"
-msgid "Minimum"
-msgstr ""
-
 #. TRANSLATION: cannonball
 #, fuzzy
 msgctxt "game_options"
@@ -9797,7 +9817,7 @@ msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
 msgstr "종횡비 유지(기본값)"
 
-#. TRANSLATION: cemu, daphne, redream, demul
+#. TRANSLATION: cemu, daphne, openbor, redream, demul
 msgctxt "game_options"
 msgid "Stretch"
 msgstr "늘리기"
@@ -9851,54 +9871,54 @@ msgctxt "game_options"
 msgid "ENABLE GAMEPAD VIEW"
 msgstr "게임패드 보기 활성화"
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
 "Hotkey+R2."
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Top Only"
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Bottom Only"
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Large Top"
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Large Bottom"
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Left/Right"
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Right/Left"
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Separate Windows"
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
 msgstr ""
@@ -9908,66 +9928,66 @@ msgctxt "game_options"
 msgid "GRAPHICS"
 msgstr ""
 
-#. TRANSLATION: citra, scummvm, play
+#. TRANSLATION: citra, panda3ds, scummvm, play
 #, fuzzy
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "오픈GL (기본값)"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, openbor
+#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, panda3ds, ...
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr "화면 찢어짐을 수정합니다. CPU가 성능을 많이 소모합니다."
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 #, fuzzy
 msgctxt "game_options"
 msgid "Off will help some games, others will run too fast."
 msgstr "꺼짐은 일부 게임에 도움이되고 다른 게임은 너무 빨리 실행됩니다."
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 #, fuzzy
 msgctxt "game_options"
 msgid "FRAME LIMIT"
 msgstr "프레임 제한"
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 #, fuzzy
 msgctxt "game_options"
 msgid "Reduce stutter that happens when compiling shaders."
 msgstr "셰이더를 컴파일할 때 발생하는 끊김을 줄입니다."
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 #, fuzzy
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
 msgstr "디스크 셰이더 캐시"
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid ""
 "Compile shaders using background threads to avoid shader compilation "
 "stutter. May cause graphical glitches."
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "ENABLE ASYNC SHADER COMPILATION"
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 #, fuzzy
 msgctxt "game_options"
 msgid "Preloading is impossible from ES."
 msgstr "ES에서는 프리로드가 불가능합니다."
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 #, fuzzy
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
 msgstr "새로운 3DS에는 더 빠른 프로세서, ZL / ZR 버튼 및 C- 스틱이 있습니다."
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 #, fuzzy
 msgctxt "game_options"
 msgid "NEW 3DS MODE"
@@ -10824,12 +10844,6 @@ msgstr "듀얼쇼크 / 엑스박스 타입"
 #. TRANSLATION: duckstation, duckstation
 #, fuzzy
 msgctxt "game_options"
-msgid "Namco GunCon (Rumble)"
-msgstr "남코 건콘 (럼블)"
-
-#. TRANSLATION: duckstation, duckstation
-#, fuzzy
-msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "네그콘 (럼블)"
 
@@ -10940,6 +10954,11 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "ACHIEVEMENTS"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "CROSSHAIR"
 msgstr ""
 
 #. TRANSLATION: flycast/vitaquake3
@@ -11405,7 +11424,7 @@ msgctxt "game_options"
 msgid "Bottom only"
 msgstr "하단만"
 
-#. TRANSLATION: melonds, openbor
+#. TRANSLATION: melonds, pcsx2
 #, fuzzy
 msgctxt "game_options"
 msgid "INTEGER SCALING"
@@ -11835,371 +11854,394 @@ msgid "Only some games feature rumble. Not compatible with all controllers."
 msgstr "일부 게임에만 럼블 기능이 있습니다. 모든 컨트롤러와 호환되지 않습니다."
 
 #. TRANSLATION: openbor
+#, fuzzy
+msgctxt "game_options"
+msgid "Stretch games to full-screen, but may distort the aspect ratio"
+msgstr "게임을 전체 화면으로 늘이지만 종횡비가 왜곡될 수 있음"
+
+#. TRANSLATION: openbor
+#, fuzzy
+msgctxt "game_options"
+msgid "SCREEN RATIO"
+msgstr "화면 비율"
+
+#. TRANSLATION: openbor
+#, fuzzy
+msgctxt "game_options"
+msgid "Simple 2x"
+msgstr "단순성 2x"
+
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "OSD MESSAGES"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Fit to Window / Fullscreen"
 msgstr ""
 
-#. TRANSLATION: openbor, openbor
+#. TRANSLATION: pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Auto Standard (4:3 interlaced / 3:2 progressive)"
 msgstr ""
 
-#. TRANSLATION: openbor, openbor
+#. TRANSLATION: pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Standard (4:3)"
 msgstr ""
 
-#. TRANSLATION: openbor, openbor
+#. TRANSLATION: pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Widescreen (16:9)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Adjusts Full Motion Video movies aspect ratio."
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "FMV ASPECT RATIO"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "FMV movie deinterlacing."
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "DEINTERLACING"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Weave (Top Field First)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Weave (Bottom Field First)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bob (Top Field First)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bob (Bottom Field First)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Blend (Top Field First)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Blend (Bottom Field First)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Adaptive (Top Field First)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Adaptive (Bottom Field First)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
 "Smooths the overall picture as it is displayed on the screen. Corrects "
 "positioning between pixels."
 msgstr ""
 
-#. TRANSLATION: openbor, model2emu
+#. TRANSLATION: pcsx2, model2emu
 #, fuzzy
 msgctxt "game_options"
 msgid "BILINEAR FILTERING"
 msgstr "쌍선형 필터링"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bilinear (Smooth)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bilinear (Sharp)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN PATCHES"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Enable to improve blurriness."
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "ANTI-BLUR"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Enable No-interlacing Patches."
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "INTERLACING PATCHES"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Can sharpen images in lower resolutions."
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Native (PS2)(Default)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "1.25x Native"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "1.5x Native"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "1.75x Native"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "2x Native (~720p)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "2.25x Native"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "2.5x Native"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "2.75x Native"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "3x Native (~1080p)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "3.5x Native"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "4x Native (~1440p/2K)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "5x Native (~1620p)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "6x Native (~2160p/4K)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "7x Native (~2520p)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "8x Native (~2880p/5K)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Choose mipmapping type."
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "MIPMAPPING"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Basic (generated Mipmaps)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Full (PS2 Mipmaps)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Control the texture filtering of the emulation."
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bilinear (Forced)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bilinear (PS2)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bilinear (Forced excluding sprite)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Control the texture's trilinear filtering of the emulation."
 msgstr ""
 
-#. TRANSLATION: openbor, model2emu
+#. TRANSLATION: pcsx2, model2emu
 #, fuzzy
 msgctxt "game_options"
 msgid "TRILINEAR FILTERING"
 msgstr "삼선형 필터링"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Off (None)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Trilinear (PS2)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Trilinear (Forced)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
 "Reduces banding between colours and improves the perceived colour depth."
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "DITHERING"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Unscaled (Default)"
 msgstr ""
 
-#. TRANSLATION: openbor, openbor
+#. TRANSLATION: pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Basic (Recommended)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
 "The higher the setting, the more blending is emulated in the shader "
 "accurately, and the higher the speed penalty will be."
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "BLENDING ACCURACY"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2, rpcs3
+msgctxt "game_options"
+msgid "Minimum"
+msgstr ""
+
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Full (Slow)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Maximum (Very Slow)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
 "Uploads entire textures at once instead of small pieces. Improves "
 "performance in most games."
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "TEXTURE PRELOADING"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Partial"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Full (Hash Cache)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Choose PS2 Bios to use (USA Recommended)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "PS2 BIOS"
 msgstr ""
 
-#. TRANSLATION: openbor, redream
+#. TRANSLATION: pcsx2, redream
 #, fuzzy
 msgctxt "game_options"
 msgid "USA (Default)"
 msgstr "미국(기본값)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 #, fuzzy
 msgctxt "game_options"
 msgid "Some games have issues when the animation is shown, others require it."
@@ -12207,108 +12249,108 @@ msgstr ""
 "일부 게임에는 애니메이션이 표시 될 때 문제가 있고 다른 게임에는 문제가 필요합"
 "니다."
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 #, fuzzy
 msgctxt "game_options"
 msgid "Skip (safer)"
 msgstr "건너뛰기(더 안전함)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Show (specific games)"
 msgstr "보이기(특정 게임)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
 "Applies the FXAA anti-aliasing algorithm to improve the visual quality of "
 "games."
 msgstr ""
 
-#. TRANSLATION: openbor, yuzu, vita3k
+#. TRANSLATION: pcsx2, yuzu, vita3k
 #, fuzzy
 msgctxt "game_options"
 msgid "FXAA"
 msgstr "FXAA"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Automatically loads and applies cheats on game start."
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "CHEATS"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Allows up to 8 controllers in supported games."
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Maximum 2 Players (Default)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Maximum 4 Players"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Maximum 8 Players"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Allows user replaceable textures."
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "TEXTURE REPLACEMENTS"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
 "Necessary for some guns to replace fog textures as a workaround in Time "
 "Crisis - Crisis Zone."
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "TIME CRISIS FOG HACK"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "PlayStation 2 wheel type"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "WHEEL MODEL"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Driving Force"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Driving Force Pro"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "GT Force"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Virtual"
 msgstr ""
@@ -13840,6 +13882,28 @@ msgstr "데이터 플러그인"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid ""
+"Runners simplify compatibility of running Windows games. If choosing Custom, "
+"you must have a runner in /userdata/system/wine/custom."
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "WINE RUNNER"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Glorius Eggroll Proton (Default)"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "User Provided Runner"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "Converts DirectX 8/9/10/11/12 calls to Vulkan."
 msgstr ""
 
@@ -14592,26 +14656,6 @@ msgstr ""
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Only applicable when using OpenGL."
-msgstr ""
-
-#. TRANSLATION: yuzu
-msgctxt "game_options"
-msgid "Choose which core to use"
-msgstr ""
-
-#. TRANSLATION: yuzu
-msgctxt "game_options"
-msgid "EMULATOR CORE"
-msgstr ""
-
-#. TRANSLATION: yuzu
-msgctxt "game_options"
-msgid "Yuzu"
-msgstr ""
-
-#. TRANSLATION: yuzu
-msgctxt "game_options"
-msgid "Suyu"
 msgstr ""
 
 #. TRANSLATION: yuzu, ryujinx
@@ -16623,6 +16667,16 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
+#. TRANSLATION: switch.ryujinx.keys
+msgctxt "keys_files"
+msgid "Emulator Config"
+msgstr ""
+
+#. TRANSLATION: switch.ryujinx.keys
+msgctxt "keys_files"
+msgid "Take Screenshot"
+msgstr ""
+
 #. TRANSLATION: switch.ryujinx.keys, naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, ...
 msgctxt "keys_files"
 msgid "Exit the emulator"
@@ -16858,6 +16912,51 @@ msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr ""
 
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Move Stylet Pointer"
+msgstr ""
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Restart Emulation"
+msgstr ""
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Continue/Pause emulation"
+msgstr ""
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Swap Screen"
+msgstr ""
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Toggle Screen Layout"
+msgstr ""
+
+#. TRANSLATION: 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr ""
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Toggle Speed Limit"
+msgstr ""
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Swap screens"
+msgstr ""
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Mouse Click"
+msgstr ""
+
 #. TRANSLATION: moonlight.moonlight.keys
 msgctxt "keys_files"
 msgid "Exit emulator using SDL"
@@ -16886,11 +16985,6 @@ msgstr ""
 #. TRANSLATION: psx.duckstation.keys
 msgctxt "keys_files"
 msgid "Restart Game"
-msgstr ""
-
-#. TRANSLATION: psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
 msgstr ""
 
 #. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
@@ -17001,46 +17095,6 @@ msgstr ""
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "State/Save to Selected Slot"
-msgstr ""
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Move Stylet Pointer"
-msgstr ""
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr ""
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Continue/Pause emulation"
-msgstr ""
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Swap Screen"
-msgstr ""
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Toggle Screen Layout"
-msgstr ""
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Toggle Speed Limit"
-msgstr ""
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Swap screens"
-msgstr ""
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Mouse Click"
 msgstr ""
 
 #. TRANSLATION: psp.ppsspp.keys
@@ -17846,6 +17900,11 @@ msgstr ""
 
 #, fuzzy
 #~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "남코 건콘 (럼블)"
+
+#, fuzzy
+#~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"
 #~ msgstr "디스발링됨(기본값)"
 
@@ -17872,21 +17931,6 @@ msgstr ""
 #~ msgstr ""
 #~ "향상. 밉 매핑을 사용하도록 설정한 경우 멀리 있는 텍스처의 선명도를 개선합"
 #~ "니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Stretch games to full-screen, but may distort the aspect ratio"
-#~ msgstr "게임을 전체 화면으로 늘이지만 종횡비가 왜곡될 수 있음"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "SCREEN RATIO"
-#~ msgstr "화면 비율"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Simple 2x"
-#~ msgstr "단순성 2x"
 
 #, fuzzy
 #~ msgctxt "game_options"

@@ -1,8 +1,8 @@
 diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
-index 14bd2aeb..fdc57896 100644
+index 6f818661..b9801827 100644
 --- a/src/osdep/amiberry.cpp
 +++ b/src/osdep/amiberry.cpp
-@@ -3820,26 +3820,26 @@ static void init_amiberry_paths(void)
+@@ -3851,26 +3851,26 @@ static void init_amiberry_paths(void)
  		input_dir = screenshot_dir = nvram_dir = video_dir = 
  		start_path_data;
  
@@ -18,7 +18,7 @@ index 14bd2aeb..fdc57896 100644
 -	logfile_path.append("/amiberry.log");
 -	rom_path.append("/kickstarts/");
 +	logfile_path = "/usrdata/system/logs/amiberry.log";
-+	rom_path = "/userdata/bios/";
++	rom_path = "/userdata/bios/amiga";
  	rp9_path.append("/rp9/");
 -	saveimage_dir.append("/savestates/");
 -	savestate_dir.append("/savestates/");

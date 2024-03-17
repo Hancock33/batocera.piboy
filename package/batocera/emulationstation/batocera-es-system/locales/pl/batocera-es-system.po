@@ -105,7 +105,7 @@ msgctxt "game_options"
 msgid "VIDEO MODE"
 msgstr "TRYB WIDEO"
 
-#. TRANSLATION: shared, openbor
+#. TRANSLATION: shared, pcsx2
 msgctxt "game_options"
 msgid ""
 "Force the game to render in this aspect ratio. Not all systems support all "
@@ -114,7 +114,7 @@ msgstr ""
 "Wymuś renderowanie gry w tym współczynniku proporcji. Nie wszystkie systemy "
 "obsługują wszystkie proporcje."
 
-#. TRANSLATION: shared, dolphin, flycast, mupen64plus, openbor, ...
+#. TRANSLATION: shared, dolphin, flycast, mupen64plus, pcsx2, ...
 msgctxt "game_options"
 msgid "GAME ASPECT RATIO"
 msgstr "PROPORCJE GRY"
@@ -453,7 +453,7 @@ msgctxt "game_options"
 msgid "Use wheels instead of pads if wheels are connected."
 msgstr "Jeśli kierownice są podłączone, użyj kierownic zamiast padów."
 
-#. TRANSLATION: shared, shared, shared, shared, openbor
+#. TRANSLATION: shared, shared, shared, shared, pcsx2
 msgctxt "game_options"
 msgid "WHEELS"
 msgstr "KIEROWNICE"
@@ -985,7 +985,7 @@ msgctxt "game_options"
 msgid "Low"
 msgstr "Słabe"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen, mupen64plus, openbor
+#. TRANSLATION: libretro/mesens, libretro/mesen, mupen64plus, pcsx2
 msgctxt "game_options"
 msgid "Medium"
 msgstr "Średnie"
@@ -1256,7 +1256,7 @@ msgctxt "game_options"
 msgid "Arrange the dual screen layout."
 msgstr "Rozmieść układ dwóch ekranów."
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, citra, melonds, drastic
+#. TRANSLATION: libretro/desmume, libretro/melonds, citra, melonds, panda3ds, ...
 msgctxt "game_options"
 msgid "SCREEN LAYOUT"
 msgstr "UKŁAD EKRANU"
@@ -1461,7 +1461,7 @@ msgctxt "game_options"
 msgid "RENDERER MODE"
 msgstr "TRYB RENDEROWANIA"
 
-#. TRANSLATION: libretro/melondsds, citra, duckstation, melonds, openbor, ...
+#. TRANSLATION: libretro/melondsds, citra, duckstation, melonds, panda3ds, ...
 msgctxt "game_options"
 msgid "Software"
 msgstr "Programowo"
@@ -1546,7 +1546,7 @@ msgctxt "game_options"
 msgid "SCREEN FILTERING"
 msgstr "FILTROWANIE EKRANU"
 
-#. TRANSLATION: libretro/melondsds, libretro/swanstation, libretro/duckstation, libretro/parallel_n64, openbor, ...
+#. TRANSLATION: libretro/melondsds, libretro/swanstation, libretro/duckstation, libretro/parallel_n64, pcsx2, ...
 msgctxt "game_options"
 msgid "Nearest"
 msgstr "Najbliższe"
@@ -2208,7 +2208,7 @@ msgctxt "game_options"
 msgid "Skip Drawing"
 msgstr "Pomiń rysowanie"
 
-#. TRANSLATION: libretro/dolphin, dolphin, dolphin_triforce, openbor, ppsspp, ...
+#. TRANSLATION: libretro/dolphin, dolphin, dolphin_triforce, pcsx2, ppsspp, ...
 msgctxt "game_options"
 msgid "Improves clarity of distant textures."
 msgstr "Poprawia wyrazistość odległych tekstur."
@@ -2311,12 +2311,12 @@ msgctxt "game_options"
 msgid "External (variable fps)"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox, mame
+#. TRANSLATION: libretro/dosbox, openbor, mame
 msgctxt "game_options"
 msgid "Apply a post-processing effect."
 msgstr "Zastosuj efekt przetwarzania końcowego."
 
-#. TRANSLATION: libretro/dosbox, cgenius
+#. TRANSLATION: libretro/dosbox, openbor, cgenius
 msgctxt "game_options"
 msgid "VIDEO FILTER"
 msgstr "FILTR WIDEO"
@@ -3330,7 +3330,7 @@ msgctxt "game_options"
 msgid "AUTO FRAME SKIPPING"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, amiberry, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, flycast
 msgctxt "game_options"
 msgid "OFF"
 msgstr "Wył."
@@ -4306,7 +4306,7 @@ msgstr ""
 "Umożliwia korzystanie z maksymalnie 7 lub 12 kontrolerów w obsługiwanych "
 "grach."
 
-#. TRANSLATION: libretro/kronos, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro, openbor
+#. TRANSLATION: libretro/kronos, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro, pcsx2
 msgctxt "game_options"
 msgid "MULTITAP"
 msgstr "MULTITAP"
@@ -6037,7 +6037,7 @@ msgctxt "game_options"
 msgid "USA"
 msgstr "USA"
 
-#. TRANSLATION: libretro/neocd, flycast/vitaquake3, openbor, redream, yuzu, ...
+#. TRANSLATION: libretro/neocd, flycast/vitaquake3, pcsx2, redream, yuzu, ...
 msgctxt "game_options"
 msgid "Europe"
 msgstr "Europa"
@@ -8054,6 +8054,56 @@ msgctxt "game_options"
 msgid "Koalapad"
 msgstr "Koalapad"
 
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "Some games and homebrews require more RAM"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "RAM EXPANSION UNIT"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "128kB (1700)"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "256kB (1764)"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "512kB (1750)"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "1024kB"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "2048kB"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "4096kB"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "8192kB"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
+msgctxt "game_options"
+msgid "16384kB"
+msgstr ""
+
 #. TRANSLATION: libretro/vice_x128
 msgctxt "game_options"
 msgid "C128 PAL"
@@ -8594,36 +8644,6 @@ msgctxt "game_options"
 msgid "AUTO CROP"
 msgstr ""
 
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "Emulates the floppy drive sound."
-msgstr ""
-
-#. TRANSLATION: amiberry, amiberry
-msgctxt "game_options"
-msgid "SOUND SETTINGS"
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "FLOPPY DRIVE SOUND"
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "Select the best value to compensate latency and avoid crackling."
-msgstr ""
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "SOUND BUFFER SIZE"
-msgstr ""
-
-#. TRANSLATION: amiberry, openbor, rpcs3
-msgctxt "game_options"
-msgid "Minimum"
-msgstr "Minimalne"
-
 #. TRANSLATION: cannonball
 msgctxt "game_options"
 msgid ""
@@ -8844,7 +8864,7 @@ msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
 msgstr "Zachowaj proporcje (domyślnie)"
 
-#. TRANSLATION: cemu, daphne, redream, demul
+#. TRANSLATION: cemu, daphne, openbor, redream, demul
 msgctxt "game_options"
 msgid "Stretch"
 msgstr "Rozciągnięcie"
@@ -8893,7 +8913,7 @@ msgctxt "game_options"
 msgid "ENABLE GAMEPAD VIEW"
 msgstr "WŁĄCZ WIDOK Z GAMEPADA"
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
@@ -8902,47 +8922,47 @@ msgstr ""
 "Układ podwójnego ekranu. Oddzielne okna można zmieniać za pomocą skrótu "
 "klawiszowego Hotkey+R2."
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Top Only"
 msgstr "Tylko góra"
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Bottom Only"
 msgstr "Tylko dół"
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Large Top"
 msgstr "Duża góra"
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Large Bottom"
 msgstr "Duży dół"
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Left/Right"
 msgstr "Lewo/Prawo"
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Right/Left"
 msgstr "Prawo/Lewo"
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Separate Windows"
 msgstr "Oddzielne okna"
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
 msgstr "Hybrydowy ekran górny"
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
 msgstr "Hybrydowy ekran dolny"
@@ -8952,38 +8972,38 @@ msgctxt "game_options"
 msgid "GRAPHICS"
 msgstr "GRAFIKA"
 
-#. TRANSLATION: citra, scummvm, play
+#. TRANSLATION: citra, panda3ds, scummvm, play
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (domyślnie)"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, openbor
+#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, panda3ds, ...
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr "Naprawia zrywanie ekranu. Obciąża procesor."
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Off will help some games, others will run too fast."
 msgstr ""
 "Wyłączenie pomoże w niektórych grach, inne gry będą działać zbyt szybko."
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "FRAME LIMIT"
 msgstr "LIMIT KLATEK"
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Reduce stutter that happens when compiling shaders."
 msgstr "Redukuje zacinanie się programu podczas kompilacji shaderów."
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
 msgstr "PAMIĘĆ PODRĘCZNA SHADERÓW NA DYSKU"
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid ""
 "Compile shaders using background threads to avoid shader compilation "
@@ -8992,23 +9012,23 @@ msgstr ""
 "Kompilacja shaderów przy użyciu wątków w tle w celu uniknięcia zacinania się "
 "kompilacji shaderów. Może powodować usterki graficzne."
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "ENABLE ASYNC SHADER COMPILATION"
 msgstr "WŁĄCZ ASYNCH. KOMPILACJĘ SHADERÓW"
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Preloading is impossible from ES."
 msgstr "Wstępne ładowanie jest niemożliwe z ES."
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
 msgstr ""
 "Nowa konsola 3DS posiada szybszy procesor, przyciski ZL/ZR oraz joystick C."
 
-#. TRANSLATION: citra
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "NEW 3DS MODE"
 msgstr "NOWY TRYB 3DS"
@@ -9824,11 +9844,6 @@ msgstr "DualShock / Xbox"
 
 #. TRANSLATION: duckstation, duckstation
 msgctxt "game_options"
-msgid "Namco GunCon (Rumble)"
-msgstr "Namco GunCon (wibracje)"
-
-#. TRANSLATION: duckstation, duckstation
-msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "NeGcon (wibracje)"
 
@@ -9933,6 +9948,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "ACHIEVEMENTS"
 msgstr "OSIĄGNIĘCIA"
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "CROSSHAIR"
+msgstr ""
 
 #. TRANSLATION: flycast/vitaquake3
 msgctxt "game_options"
@@ -10344,7 +10364,7 @@ msgctxt "game_options"
 msgid "Bottom only"
 msgstr "Tylko dół"
 
-#. TRANSLATION: melonds, openbor
+#. TRANSLATION: melonds, pcsx2
 msgctxt "game_options"
 msgid "INTEGER SCALING"
 msgstr "SKALOWANIE CAŁKOWITE"
@@ -10743,95 +10763,112 @@ msgstr ""
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
+msgid "Stretch games to full-screen, but may distort the aspect ratio"
+msgstr ""
+"Rozciągaj gry na pełny ekran, ale może to spowodować zniekształcenie "
+"proporcji obrazu"
+
+#. TRANSLATION: openbor
+msgctxt "game_options"
+msgid "SCREEN RATIO"
+msgstr "PROPORCJE EKRANU"
+
+#. TRANSLATION: openbor
+msgctxt "game_options"
+msgid "Simple 2x"
+msgstr "Proste 2x"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "OSD MESSAGES"
 msgstr "KOMUNIKATY OSD"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Fit to Window / Fullscreen"
 msgstr "Dopasuj do okna / pełny ekran"
 
-#. TRANSLATION: openbor, openbor
+#. TRANSLATION: pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Auto Standard (4:3 interlaced / 3:2 progressive)"
 msgstr "Auto standardowe (4:3 z przeplotem / 3:2 progresywne)"
 
-#. TRANSLATION: openbor, openbor
+#. TRANSLATION: pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Standard (4:3)"
 msgstr "Standardowe (4:3)"
 
-#. TRANSLATION: openbor, openbor
+#. TRANSLATION: pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Widescreen (16:9)"
 msgstr "Panoramiczne (16:9)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Adjusts Full Motion Video movies aspect ratio."
 msgstr "Dostosowuje współczynnik proporcji filmów Full Motion Video."
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "FMV ASPECT RATIO"
 msgstr "WSPÓŁCZYNNIK PROPORCJI FMV"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "FMV movie deinterlacing."
 msgstr "Usuwanie przeplotu w filmach FMV."
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "DEINTERLACING"
 msgstr "USUWANIE PRZEPLOTU"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Weave (Top Field First)"
 msgstr "Splot (najpierw górne pole)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Weave (Bottom Field First)"
 msgstr "Splot (najpierw dolne pole)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bob (Top Field First)"
 msgstr "Bob (pierwsze górne pole)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bob (Bottom Field First)"
 msgstr "Bob (pierwsze dolne pole)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Blend (Top Field First)"
 msgstr "Mieszanie (najpierw górne pole)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Blend (Bottom Field First)"
 msgstr "Mieszanie (najpierw dolne pole)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Adaptive (Top Field First)"
 msgstr "Adaptacyjne (najpierw górne pole)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Adaptive (Bottom Field First)"
 msgstr "Adaptacyjnie (najpierw dolne pole)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
 "Smooths the overall picture as it is displayed on the screen. Corrects "
@@ -10840,213 +10877,213 @@ msgstr ""
 "Wygładza ogólny obraz wyświetlany na ekranie. Koryguje położenie między "
 "pikselami."
 
-#. TRANSLATION: openbor, model2emu
+#. TRANSLATION: pcsx2, model2emu
 msgctxt "game_options"
 msgid "BILINEAR FILTERING"
 msgstr "FILTROWANIE DWULINIOWE"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bilinear (Smooth)"
 msgstr "Dwuliniowe (wygładzone)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bilinear (Sharp)"
 msgstr "Dwuliniowe (ostre)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN PATCHES"
 msgstr "WŁĄCZ ŁATKI SZEROKOEKRANOWE"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Enable to improve blurriness."
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "ANTI-BLUR"
 msgstr "ANTY-BLUR"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Enable No-interlacing Patches."
 msgstr "Włącz poprawki dla usuwania przeplotu."
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "INTERLACING PATCHES"
 msgstr "POPRAWKI PRZEPLOTU"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Can sharpen images in lower resolutions."
 msgstr "Może wyostrzać obrazy w niższych rozdzielczościach."
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Native (PS2)(Default)"
 msgstr "Natywna (PS2)(domyślnie)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "1.25x Native"
 msgstr "1,25x natywnej"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "1.5x Native"
 msgstr "1,5x natywnej"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "1.75x Native"
 msgstr "1,75x natywnej"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "2x Native (~720p)"
 msgstr "2x natywnej (~720p)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "2.25x Native"
 msgstr "2.25x natywnej"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "2.5x Native"
 msgstr "2.5x natywnej"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "2.75x Native"
 msgstr "2.75x natywnej"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "3x Native (~1080p)"
 msgstr "3x natywnej  (~1080p)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "3.5x Native"
 msgstr "3.5x natywnej"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "4x Native (~1440p/2K)"
 msgstr "4x natywnej (~1440p/2K)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "5x Native (~1620p)"
 msgstr "5x natywnej (~1620p)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "6x Native (~2160p/4K)"
 msgstr "6x natywnej (~2160p/4K)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "7x Native (~2520p)"
 msgstr "7x natywnej (~2520p)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "8x Native (~2880p/5K)"
 msgstr "8x natywnej (~2880p/5K)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Choose mipmapping type."
 msgstr "Wybierz typ mipmappingu."
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "MIPMAPPING"
 msgstr "MIPMAPPING"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Basic (generated Mipmaps)"
 msgstr "Podstawowe (wygenerowane Mipmapy)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Full (PS2 Mipmaps)"
 msgstr "Pełne (Mipmapy PS2)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Control the texture filtering of the emulation."
 msgstr "Kontroluje filtrowanie tekstur emulacji."
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bilinear (Forced)"
 msgstr "Dwuliniowe (wymuszone)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bilinear (PS2)"
 msgstr "Dwuliniowe (PS2)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bilinear (Forced excluding sprite)"
 msgstr "Dwuliniowe (wymuszone z wyłączeniem sprite'ów)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Control the texture's trilinear filtering of the emulation."
 msgstr "Kontroluje trójliniowe filtrowanie tekstur emulacji."
 
-#. TRANSLATION: openbor, model2emu
+#. TRANSLATION: pcsx2, model2emu
 msgctxt "game_options"
 msgid "TRILINEAR FILTERING"
 msgstr "FILTROWANIE TRÓJLINIOWE"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Off (None)"
 msgstr "Wył. (Brak)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Trilinear (PS2)"
 msgstr "Trójliniowe (PS2)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Trilinear (Forced)"
 msgstr "Trójliniowe (wymuszone)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
 "Reduces banding between colours and improves the perceived colour depth."
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "DITHERING"
 msgstr "DITHERING"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Unscaled (Default)"
 msgstr "Nieskalowane (domyślnie)"
 
-#. TRANSLATION: openbor, openbor
+#. TRANSLATION: pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Basic (Recommended)"
 msgstr "Podstawowe (zalecane)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
 "The higher the setting, the more blending is emulated in the shader "
@@ -11055,22 +11092,27 @@ msgstr ""
 "Im wyższe ustawienie, tym dokładniejsze mieszanie jest emulowane w module "
 "cieniującym i tym większy będzie spadek szybkości."
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "BLENDING ACCURACY"
 msgstr "DOKŁADNOŚĆ MIESZANIA"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2, rpcs3
+msgctxt "game_options"
+msgid "Minimum"
+msgstr "Minimalne"
+
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Full (Slow)"
 msgstr "Pełne (powolne)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Maximum (Very Slow)"
 msgstr "Maksymalne (bardzo wolne)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
 "Uploads entire textures at once instead of small pieces. Improves "
@@ -11079,53 +11121,53 @@ msgstr ""
 "Przesyła całe tekstury naraz zamiast małych fragmentów. Poprawia wydajność w "
 "większości gier."
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "TEXTURE PRELOADING"
 msgstr "WSTĘPNE ŁADOWANIE TEKSTUR"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Partial"
 msgstr "Częściowe"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Full (Hash Cache)"
 msgstr "Pełne (Hash Cache)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Choose PS2 Bios to use (USA Recommended)"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "PS2 BIOS"
 msgstr ""
 
-#. TRANSLATION: openbor, redream
+#. TRANSLATION: pcsx2, redream
 msgctxt "game_options"
 msgid "USA (Default)"
 msgstr "USA (domyślnie)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Some games have issues when the animation is shown, others require it."
 msgstr ""
 "Niektóre gry mają problemy, gdy animacja jest wyświetlana, inne jej wymagają."
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Skip (safer)"
 msgstr "Pomiń (bezpieczniej)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Show (specific games)"
 msgstr "Pokaż (konkretne gry)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
 "Applies the FXAA anti-aliasing algorithm to improve the visual quality of "
@@ -11133,52 +11175,52 @@ msgid ""
 msgstr ""
 "Stosuje algorytm antyaliasingu FXAA w celu poprawy jakości wizualnej gier."
 
-#. TRANSLATION: openbor, yuzu, vita3k
+#. TRANSLATION: pcsx2, yuzu, vita3k
 msgctxt "game_options"
 msgid "FXAA"
 msgstr "FXAA"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Automatically loads and applies cheats on game start."
 msgstr "Automatycznie ładuje i stosuje cheaty podczas uruchamiania gry."
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "CHEATS"
 msgstr "CHEATY"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Allows up to 8 controllers in supported games."
 msgstr "Umożliwia podłączenie do 8 kontrolerów w obsługiwanych grach."
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Maximum 2 Players (Default)"
 msgstr "Maksymalnie 2 graczy (domyślnie)"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Maximum 4 Players"
 msgstr "Maksymalnie 4 graczy"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Maximum 8 Players"
 msgstr "Maksymalnie 8 graczy"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Allows user replaceable textures."
 msgstr "Umożliwia wymianę tekstur przez użytkownika."
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "TEXTURE REPLACEMENTS"
 msgstr "ZAMIENNIKI TEKSTUR"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
 "Necessary for some guns to replace fog textures as a workaround in Time "
@@ -11187,37 +11229,37 @@ msgstr ""
 "Konieczne dla niektórych broni, aby zastąpić tekstury mgły jako obejście w "
 "Time Crisis - Crisis Zone."
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "TIME CRISIS FOG HACK"
 msgstr "HACK MGŁY DLA TIME CRISIS"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "PlayStation 2 wheel type"
 msgstr ""
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "WHEEL MODEL"
 msgstr "MODEL KIEROWNICY"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Driving Force"
 msgstr "Driving Force"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Driving Force Pro"
 msgstr "Driving Force Pro"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "GT Force"
 msgstr "GT Force"
 
-#. TRANSLATION: openbor
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Virtual"
 msgstr "Wirtualna"
@@ -12663,6 +12705,28 @@ msgstr "WTYCZKA DANYCH"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid ""
+"Runners simplify compatibility of running Windows games. If choosing Custom, "
+"you must have a runner in /userdata/system/wine/custom."
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "WINE RUNNER"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Glorius Eggroll Proton (Default)"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "User Provided Runner"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "Converts DirectX 8/9/10/11/12 calls to Vulkan."
 msgstr "Konwertuje wywołania DirectX 8/9/10/11/12 na Vulkan."
 
@@ -13358,26 +13422,6 @@ msgstr "Oryginalny rozmiar"
 msgctxt "game_options"
 msgid "Only applicable when using OpenGL."
 msgstr "Ma zastosowanie tylko w przypadku korzystania z OpenGL."
-
-#. TRANSLATION: yuzu
-msgctxt "game_options"
-msgid "Choose which core to use"
-msgstr ""
-
-#. TRANSLATION: yuzu
-msgctxt "game_options"
-msgid "EMULATOR CORE"
-msgstr ""
-
-#. TRANSLATION: yuzu
-msgctxt "game_options"
-msgid "Yuzu"
-msgstr ""
-
-#. TRANSLATION: yuzu
-msgctxt "game_options"
-msgid "Suyu"
-msgstr ""
 
 #. TRANSLATION: yuzu, ryujinx
 msgctxt "game_options"
@@ -15386,6 +15430,16 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
+#. TRANSLATION: switch.ryujinx.keys
+msgctxt "keys_files"
+msgid "Emulator Config"
+msgstr ""
+
+#. TRANSLATION: switch.ryujinx.keys
+msgctxt "keys_files"
+msgid "Take Screenshot"
+msgstr ""
+
 #. TRANSLATION: switch.ryujinx.keys, naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, ...
 msgctxt "keys_files"
 msgid "Exit the emulator"
@@ -15621,6 +15675,51 @@ msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr "Wyświetlanie ekranu kontrolera"
 
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Move Stylet Pointer"
+msgstr "Przesuwanie wskaźnika Stylet"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Restart Emulation"
+msgstr "Ponowne uruchomienie emulacji"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Continue/Pause emulation"
+msgstr "Kontynuacja/wstrzymanie emulacji"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Swap Screen"
+msgstr "Zamiana ekranu"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Toggle Screen Layout"
+msgstr "Przełączanie układu ekranu"
+
+#. TRANSLATION: 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "Zrzut ekranu"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Toggle Speed Limit"
+msgstr "Przełączanie limitu szybkości"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Swap screens"
+msgstr "Zamień ekrany"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Mouse Click"
+msgstr "Kliknięcie myszą"
+
 #. TRANSLATION: moonlight.moonlight.keys
 msgctxt "keys_files"
 msgid "Exit emulator using SDL"
@@ -15650,11 +15749,6 @@ msgstr "Otwórz menu podręczne DuckStation"
 msgctxt "keys_files"
 msgid "Restart Game"
 msgstr "Restart gry"
-
-#. TRANSLATION: psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Zrzut ekranu"
 
 #. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -15765,46 +15859,6 @@ msgstr ""
 msgctxt "keys_files"
 msgid "State/Save to Selected Slot"
 msgstr ""
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Move Stylet Pointer"
-msgstr "Przesuwanie wskaźnika Stylet"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "Ponowne uruchomienie emulacji"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Continue/Pause emulation"
-msgstr "Kontynuacja/wstrzymanie emulacji"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Swap Screen"
-msgstr "Zamiana ekranu"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Toggle Screen Layout"
-msgstr "Przełączanie układu ekranu"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Toggle Speed Limit"
-msgstr "Przełączanie limitu szybkości"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Swap screens"
-msgstr "Zamień ekrany"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Mouse Click"
-msgstr "Kliknięcie myszą"
 
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
@@ -16599,6 +16653,10 @@ msgstr "Szybkie zapisywanie"
 #~ msgstr "Kontroler analogowy PS1"
 
 #~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "Namco GunCon (wibracje)"
+
+#~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"
 #~ msgstr "Wyłączone (domyślnie)"
 
@@ -16629,20 +16687,6 @@ msgstr "Szybkie zapisywanie"
 #~ msgstr ""
 #~ "Usprawnienie. Poprawia wyrazistość odległych tekstur, gdy mapowanie mip "
 #~ "jest włączone."
-
-#~ msgctxt "game_options"
-#~ msgid "Stretch games to full-screen, but may distort the aspect ratio"
-#~ msgstr ""
-#~ "Rozciągaj gry na pełny ekran, ale może to spowodować zniekształcenie "
-#~ "proporcji obrazu"
-
-#~ msgctxt "game_options"
-#~ msgid "SCREEN RATIO"
-#~ msgstr "PROPORCJE EKRANU"
-
-#~ msgctxt "game_options"
-#~ msgid "Simple 2x"
-#~ msgstr "Proste 2x"
 
 #~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."

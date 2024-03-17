@@ -298,7 +298,8 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_PIRONMAN                             if  BR2_PACKAGE_BATOCERA_TARGET_BCM2711                                             # pironman case is rpi4 only
 
     # screens
-    select BR2_PACKAGE_PIXELCADE
+    select BR2_PACKAGE_DMD_SIMULATOR                        if  BR2_PACKAGE_VPINBALL
+    select BR2_PACKAGE_DMD_SIMULATOR_PLAYER                 if  BR2_PACKAGE_VPINBALL
 
     # swap
     select BR2_PACKAGE_SWAPIT                               if  BR2_PACKAGE_BATOCERA_TARGET_RK3128      || BR2_PACKAGE_BATOCERA_TARGET_RK3326   || \
@@ -464,7 +465,7 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     default "allwinner/h3/orangepi-pc allwinner/h3/orangepi-one allwinner/h3/orangepi-plus2e allwinner/h3/bananapi-m2-zero allwinner/h3/cha"                                                   if  BR2_PACKAGE_BATOCERA_TARGET_H3
     default "allwinner/h5/tritium-h5 allwinner/h5/orangepi-pc2"                                                                                                                                if  BR2_PACKAGE_BATOCERA_TARGET_H5
     default "allwinner/h6/orangepi-3-lts allwinner/h6/orangepi-3 allwinner/h6/orangepi-one-plus"                                                                                               if  BR2_PACKAGE_BATOCERA_TARGET_H6
-    default "allwinner/h616/orangepi-zero2 allwinner/h616/x96-mate"                                                                                                                            if  BR2_PACKAGE_BATOCERA_TARGET_H616
+    default "allwinner/h616/orangepi-zero2 allwinner/h616/orangepi-zero3 allwinner/h616/x96-mate"                                                                                              if  BR2_PACKAGE_BATOCERA_TARGET_H616
     default "amlogic/s812"                                                                                                                                                                     if  BR2_PACKAGE_BATOCERA_TARGET_S812
     default "samsung/exynos5422/odroidxu4"                                                                                                                                                     if  BR2_PACKAGE_BATOCERA_TARGET_XU4
     default "x86"                                                                                                                                                                              if  BR2_PACKAGE_BATOCERA_TARGET_X86
@@ -695,13 +696,14 @@ config BR2_PACKAGE_BATOCERA_HOMEBREW_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_EASYRPG                     # libretro core
 
     # Fantasy consoles
-    select BR2_PACKAGE_LIBRETRO_TIC80                       # ALL
-    select BR2_PACKAGE_LIBRETRO_RETRO8                      # ALL but deprecated in favour of FAKE08
-    select BR2_PACKAGE_LIBRETRO_FAKE08                      # ALL
     select BR2_PACKAGE_LEXALOFFLE_PICO8                     # ALL
-    select BR2_PACKAGE_PYTHON_PYXEL                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
-    select BR2_PACKAGE_LIBRETRO_WASM4                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  #  Requires X11
+    select BR2_PACKAGE_LEXALOFFLE_VOXATRON                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  #  No engine for ARM yet
+    select BR2_PACKAGE_LIBRETRO_FAKE08                      # ALL
+    select BR2_PACKAGE_LIBRETRO_RETRO8                      # ALL but deprecated in favour of FAKE08
+    select BR2_PACKAGE_LIBRETRO_TIC80                       # ALL
     select BR2_PACKAGE_LIBRETRO_VIRCON32                    # ALL
+    select BR2_PACKAGE_LIBRETRO_WASM4                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  #  Requires X11
+    select BR2_PACKAGE_PYTHON_PYXEL                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Fighting games engine
     select BR2_PACKAGE_IKEMEN                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
@@ -813,6 +815,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
     # 3DS
     select BR2_PACKAGE_CITRA                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_CITRA                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    #select BR2_PACKAGE_PANDA3DS                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # PSP
     select BR2_PACKAGE_PPSSPP                               if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
@@ -1132,7 +1135,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_A3GEN2      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
-    select BR2_PACKAGE_YUZU                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_SUYU                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_RYUJINX                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
@@ -1324,7 +1326,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_LIBRETRO_FREEJ2ME                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
     select BR2_PACKAGE_LIBRETRO_SQUIRRELJME                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
     select BR2_PACKAGE_OPENJDK                              if  BR2_PACKAGE_LIBRETRO_FREEJ2ME
-    select BR2_OPENJDK_VERSION_LTS                          if  BR2_PACKAGE_LIBRETRO_FREEJ2ME
     select BR2_PACKAGE_LIBRETRO_GONG
     select BR2_PACKAGE_LIBRETRO_JAXE
     select BR2_PACKAGE_LIBRETRO_JUMPNBUMP
@@ -1732,17 +1733,23 @@ config BR2_PACKAGE_BATOCERA_SDL2
     select BR2_PACKAGE_TVTEXTVIEWER                         if !BR2_PACKAGE_BATOCERA_LIB32
 
 config BR2_PACKAGE_BATOCERA_WAYLAND
-    bool "batocera.linux wayland packages selection"
+    	bool "batocera.linux wayland packages selection"
 
-     # Wayland Protocol
-    select BR2_PACKAGE_WAYLAND
-    select BR2_PACKAGE_WAYLANDPP
-    select BR2_PACKAGE_WAYLAND_UTILS
-    select BR2_PACKAGE_WAYLAND_PROTOCOLS
+	# Wayland Protocol
+	select BR2_PACKAGE_WAYLAND
+	select BR2_PACKAGE_WAYLANDPP
+	select BR2_PACKAGE_WAYLAND_UTILS
+	select BR2_PACKAGE_WAYLAND_PROTOCOLS
+
+config BR2_PACKAGE_BATOCERA_WAYLAND_SWAY
+        bool "batocera.linux wayland sway packages selection"
+
+    # Wayland Protocol
+    select BR2_PACKAGE_BATOCERA_WAYLAND
 
     # Seat management daemon
-    select BR2_PACKAGE_SEATD
-    select BR2_PACKAGE_SEATD_DAEMON
+    select BR2_PACKAGE_SEATD                                if !BR2_PACKAGE_BATOCERA_LIB32
+    select BR2_PACKAGE_SEATD_DAEMON                         if !BR2_PACKAGE_BATOCERA_LIB32
 
     # Compositor for wayland
     select BR2_PACKAGE_SWAY                                 if !BR2_PACKAGE_BATOCERA_LIB32
@@ -1750,9 +1757,6 @@ config BR2_PACKAGE_BATOCERA_WAYLAND
 
 config BR2_PACKAGE_BATOCERA_XWAYLAND
     bool "batocera.linux xwayland packages selection"
-
-    # wayland packages
-    select BR2_PACKAGE_BATOCERA_WAYLAND
 
     # Xorg emulation layer of Wayland
     select BR2_PACKAGE_XORG7

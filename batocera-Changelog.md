@@ -1,18 +1,25 @@
-# 2024/xx/xx - batocera.linux 40 - 
+# 2024/xx/xx - batocera.linux 40 -
 ### Special Notes
 
 ### Hardware
 Add support for the Pironman case with RPI4 devices.
+Add support for OrangePi Zero 3 (all variants)
+Add support for Radxa Rock 3C
 
 ### Added
+- Support for Lexaloffle Voxatron (needs official engine, no emulator provided)
+- C64: support for REU (RAM Expansion Unit), .d71 and .g64 ROM format
 
 ### Fixed
 - RG552 Splash-screen rotation
 - RG552 Vibrator enabled
 - GameForce Vibrator enabled
+- Vita3k moving saves
+- Steam flatpak issue after forced runtime update.
 
 ### Changed
 - RK3326 Replaced the mali-G31 driver with mesa3d
+- Amiga BIOS files now go into the bios/amiga/ subfolder
 
 ### Updated
 - Retroarch to 1.17.0
@@ -31,6 +38,7 @@ Add support for the Pironman case with RPI4 devices.
 - libretro-81: bump to Nov 1, 2023 build
 - libretro-fbneo: bump to Feb 23, 2024 build (v1.0.0.03)
 - libretro-genesisplusgx: bump to Feb 23, 2024 build
+- libretro-mame: bump to 0.263
 - libretro-mame2003-plus: bump to Feb 21, 2024 build
 - libretro-mupen64plus-next: bump to Feb 6, 2024 build
 - libretro-neocd: bump to Feb 1, 2024 build
@@ -39,6 +47,20 @@ Add support for the Pironman case with RPI4 devices.
 - libretro-swanstation: bump to Jan 25, 2024 build
 - libretro-pcsx: bump to Feb 14, 2024 build
 - Redream to 1.5.0-1103-g47bc2b7
+- Ikemen Go to 0.99
+- Amiberry to 5.6.8
+- GroovyMAME to 0.263 SR 0.220a
+- DOSBox-Staging to 0.81.0
+- DOSBox-X to 2024.03.01
+- SimCoupe to 1.2.13
+- Tsugaru to 20240223
+- Redream (x86_64) to Mar 10, 2024 build
+- Fallout 1 CE to v1.1.0 (March 2024 release)
+- DevilutionX to 1.5.2
+- Commander Genius to 3.5.0
+- Kodi to 20.5-Nexus
+- RPCS3 to 0.0.31
+- solarus-engine: bump to Mar 10, 2024 build
 
 ### System
 - Mainline Kernel 6.6.y bump to 6.6.21
@@ -47,10 +69,15 @@ Add support for the Pironman case with RPI4 devices.
 - wayland-protocols to 1.33
 - wlroots to 0.17.1
 - sway to 1.9
-- mesa3d to 24.0.2
+- mesa3d to 24.0.3
 - RPI kernel to 6.6.20
-- RK3326 kernel to 6.7.8
+- RK3326 kernel to 6.8
 - sdl2 to 2.30.0
+- X86_64 kernel to 6.8
+- switchres 0.220
+- btop to 1.3.2
+- Linux firmware to 20240312
+- buildroot to 2024.02
 
 # 2024/03/xx - batocera.linux 39 - Painted Lady
 ### Special Notes

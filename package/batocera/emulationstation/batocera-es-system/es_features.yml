@@ -6664,6 +6664,20 @@ libretro:
                     #"Mouse (SmartMouse)":       8
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
+            vice_ram_expansion_unit:
+                group: ADVANCED OPTIONS
+                prompt:      RAM EXPANSION UNIT
+                description: Some games and homebrews require more RAM
+                choices:
+                    "Disabled":                 none
+                    "128kB (1700)":             128kB
+                    "256kB (1764)":             256kB
+                    "512kB (1750)":             512kB
+                    "1024kB":                   1024kB
+                    "2048kB":                   2048kB
+                    "4096kB":                   4096kB
+                    "8192kB":                   8192kB
+                    "16384kB":                  16384kB
             vice_keyboard_pass_through:
                 group: ADVANCED OPTIONS
                 prompt:      KEYBOARD PASSTHROUGH
@@ -6758,6 +6772,20 @@ libretro:
                     #"Mouse (SmartMouse)":       8
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
+            vice_ram_expansion_unit:
+                group: ADVANCED OPTIONS
+                prompt:      RAM EXPANSION UNIT
+                description: Some games and homebrews require more RAM
+                choices:
+                    "Disabled":                 none
+                    "128kB (1700)":             128kB
+                    "256kB (1764)":             256kB
+                    "512kB (1750)":             512kB
+                    "1024kB":                   1024kB
+                    "2048kB":                   2048kB
+                    "4096kB":                   4096kB
+                    "8192kB":                   8192kB
+                    "16384kB":                  16384kB
             vice_keyboard_pass_through:
                 group: ADVANCED OPTIONS
                 prompt:      KEYBOARD PASSTHROUGH
@@ -6936,6 +6964,20 @@ libretro:
                     #"Mouse (SmartMouse)":       8
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
+            vice_ram_expansion_unit:
+                group: ADVANCED OPTIONS
+                prompt:      RAM EXPANSION UNIT
+                description: Some games and homebrews require more RAM
+                choices:
+                    "Disabled":                 none
+                    "128kB (1700)":             128kB
+                    "256kB (1764)":             256kB
+                    "512kB (1750)":             512kB
+                    "1024kB":                   1024kB
+                    "2048kB":                   2048kB
+                    "4096kB":                   4096kB
+                    "8192kB":                   8192kB
+                    "16384kB":                  16384kB
             vice_keyboard_pass_through:
                 group: ADVANCED OPTIONS
                 prompt:      KEYBOARD PASSTHROUGH
@@ -7360,38 +7402,7 @@ amiberry:
             choices:
                 "ON":                          enabled
                 "OFF":                         disabled
-        amiberry_floppy_sound:
-            group: SOUND SETTINGS
-            prompt:      FLOPPY DRIVE SOUND
-            description: Emulates the floppy drive sound.
-            choices:
-                "OFF":                         nofloppysound
-                "10%":                         10
-                "20%":                         20
-                "30%":                         30
-                "40%":                         40
-                "50%":                         50
-                "60%":                         60
-                "70%":                         70
-                "80%":                         80
-                "90%":                         90
-                "100%":                        100
-        amiberry_soundbuffer:
-            group: SOUND SETTINGS
-            prompt:      SOUND BUFFER SIZE
-            description: Select the best value to compensate latency and avoid crackling.
-            choices:
-                "Minimum":                     min
-                "1":                           1
-                "2":                           2
-                "3":                           3
-                "4":                           4
-                "5":                           5
-                "6":                           6
-                "7":                           7
-                "8":                           8
-                "9":                           9
-                "10":                          10
+
 cannonball:
   shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
@@ -8497,7 +8508,7 @@ duckstation:
                 "PS1 Digital Controller": DigitalController
                 "PS1 Analogue Joystick":    AnalogJoystick
                 "DualShock / Xbox Type":  AnalogController
-                "Namco GunCon (Rumble)":  NamcoGunCon
+                "Namco GunCon":  GunCon
                 "PlayStation Mouse":      PlayStationMouse
                 "NeGcon (Rumble)":        NeGcon
         duckstation_Controller2:
@@ -8509,7 +8520,7 @@ duckstation:
                 "PS1 Digital Controller": DigitalController
                 "PS1 Analogue Joystick":    AnalogJoystick
                 "DualShock / Xbox Type":  AnalogController
-                "Namco GunCon (Rumble)":  NamcoGunCon
+                "Namco GunCon":  GunCon
                 "PlayStation Mouse":      PlayStationMouse
                 "NeGcon (Rumble)":        NeGcon
         duckstation_pgxp:
@@ -8580,6 +8591,13 @@ duckstation:
                 "8x SSAA":            "8-ssaa"
                 "16x SSAA":           "16-ssaa"
                 "32x SSAA":           "32-ssaa"
+        duckstation_crosshair:
+            group: LIGHT GUN
+            prompt: CROSSHAIR
+            choices:
+                "Disabled (Default)": "0"
+                "Enabled":            "100"
+
 flycast:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels, wheel_rotation, wheel_deadzone, wheel_midzone]
@@ -9247,6 +9265,91 @@ openbor:
             "Disabled": 0
             "Enabled":  1
 
+panda3ds:
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+        panda3ds_screen_layout:
+            prompt: SCREEN LAYOUT
+            description: Arrange the dual screen layout. Separate windows can be changed with Hotkey+R2.
+            choices:
+                "Top Only":              1-false
+                "Bottom Only":           1-true
+                "Large Top":             2-false
+                "Large Bottom":          2-true
+                "Left/Right":            3-false
+                "Right/Left":            3-true
+                "Separate Windows":      4-false
+                "Hybrid Screen Top":     5-false
+                "Hybrid Screen Bottom":  5-true
+        panda3ds_resolution_factor:
+            submenu: GRAPHICS
+            prompt: RENDERING RESOLUTION
+            description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
+            choices:
+                "1x (400x240)":    1
+                "2x (800x480)":    2
+                "3x (1200x720)":   3
+                "4x (1600x960)":   4
+                "5x (2000x1200)":  5
+                "6x (2400x1440)":  6
+                "7x (2800x1680)":  7
+                "8x (3200x1920)":  8
+                "9x (3600x2160)":  9
+                "10x (4000x2400)": 10
+        panda3ds_graphics_api:
+            archs_include: [x86, x86_64]
+            submenu: GRAPHICS
+            prompt: GRAPHICS API
+            description: Choose which graphics API library to use.
+            choices:
+                "Software":         0
+                "OpenGL (Default)": 1
+                "Vulkan":           2
+        panda3ds_use_vsync_new:
+            submenu: GRAPHICS
+            prompt: VSYNC
+            description: Fix screen tearing. CPU heavy.
+            choices:
+                "Off": 0
+                "On":  1
+        panda3ds_use_frame_limit:
+            submenu: GRAPHICS
+            prompt: FRAME LIMIT
+            description: Off will help some games, others will run too fast.
+            choices:
+                "Off": 0
+                "On":  1
+        panda3ds_use_disk_shader_cache:
+            submenu: GRAPHICS
+            prompt: DISK SHADER CACHE
+            description: Reduce stutter that happens when compiling shaders.
+            choices:
+                "Off": 0
+                "On":  1
+        panda3ds_async_shader_compilation:
+            submenu: GRAPHICS
+            prompt: ENABLE ASYNC SHADER COMPILATION
+            description: Compile shaders using background threads to avoid shader compilation stutter. May cause graphical glitches.
+            choices:
+                "Off": 0
+                "On":  1
+        panda3ds_custom_textures:
+            submenu: GRAPHICS
+            prompt: LOAD CUSTOM TEXTURES
+            description: Preloading is impossible from ES.
+            choices:
+                "Off": 0
+                "On":  1-normal
+                #"Preload": 1-preload
+        panda3ds_is_new_3ds:
+            group: ADVANCED OPTIONS
+            prompt: NEW 3DS MODE
+            description: The New 3DS has a faster processor, ZL/ZR buttons and a C-stick.
+            choices:
+                "Off": 0
+                "On":  1
+
+pcsx2:
   features: [padtokeyboard, cheevos]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns, use_wheels, wheel_rotation, wheel_deadzone, wheel_midzone]
   cfeatures:
@@ -11341,6 +11444,12 @@ wine:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave]
   cfeatures:
+        wine-runner:
+            prompt: WINE RUNNER
+            description: Runners simplify compatibility of running Windows games. If choosing Custom, you must have a runner in /userdata/system/wine/custom.
+            choices:
+                "Glorius Eggroll Proton (Default)": "ge-custom"
+                "User Provided Runner":             "custom"
         dxvk:
             prompt: DXVK FEATURE
             description: Converts DirectX 8/9/10/11/12 calls to Vulkan.
@@ -11979,12 +12088,6 @@ yuzu:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
-        yuzu_emulator:
-          prompt: EMULATOR CORE
-          description: Choose which core to use
-          choices:
-            "Yuzu": 0
-            "Suyu": 1
         yuzu_backend:
           prompt: GRAPHICS API
           description: Choose which graphics API library to use.

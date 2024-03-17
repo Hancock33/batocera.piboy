@@ -6,7 +6,7 @@ mkdir -p $DEST_DIR/lib
 mkdir -p $DEST_DIR/usr/bin32
 mkdir -p $DEST_DIR/usr/share/vulkan/icd.d
 cp -a ${TARGET_DIR}/usr/bin/gst-*                        $DEST_DIR/usr/bin32
-#cp -a ${TARGET_DIR}/usr/bin/sorr                         $DEST_DIR/usr/bin32
+#cp -a ${TARGET_DIR}/usr/bin/sorr                        $DEST_DIR/usr/bin32
 cp -a ${TARGET_DIR}/usr/share/gst-plugins-base           $DEST_DIR/usr/share
 cp -a ${TARGET_DIR}/usr/share/gstreamer-*                $DEST_DIR/usr/share
 cp -a ${TARGET_DIR}/usr/wine                             $DEST_DIR/usr
@@ -34,7 +34,7 @@ rm -rf $DEST_DIR/usr/wine/lutris/share
 rm -rf $DEST_DIR/usr/wine/ge-custom/share
 rm -rf $DEST_DIR/usr/lib32/*/include
 
-find $DEST_DIR/usr -type f -name "*.a" -exec rm {} \;
+find $DEST_DIR/ -type f -name "*.a" -exec rm {} \;
 
 cd $DEST_DIR && tar -cf $DEST_DIR.tar .
 xz -T0 -7 -v $DEST_DIR.tar
