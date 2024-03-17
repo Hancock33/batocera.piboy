@@ -3,8 +3,8 @@
 # serioussam
 #
 ################################################################################
-# Version: Commits on Mar 08, 2024
-SERIOUSSAM_VERSION = 8374214a1d7c59c0484ec325a9ecd4c2b0561573
+# Version: Commits on Mar 17, 2024
+SERIOUSSAM_VERSION = cffa2833a5102578bb51e38d8a364f8616dc33a0
 SERIOUSSAM_SITE = https://github.com/tx00100xt/SeriousSamClassic-VK.git
 SERIOUSSAM_SITE_METHOD=git
 SERIOUSSAM_GIT_SUBMODULES=YES
@@ -86,6 +86,9 @@ define SERIOUSSAM_CP_WEAPONS
 	sed -i "s|add_compile_options(-march=native)|#add_compile_options(-march=native)|" $(@D)/SamTFE/Sources/CMakeLists.txt
 	cp -vfr $(@D)/SamTSE/Sources/Entities/PlayerWeapons_old.es $(@D)/SamTSE/Sources/Entities/PlayerWeapons.es
 	sed -i "s|add_compile_options(-march=native)|#add_compile_options(-march=native)|" $(@D)/SamTSE/Sources/CMakeLists.txt
+
+	sed '/RPATH_SETTINGS/d' $(@D)/SamTFE/Sources/CMakeLists.txt
+	sed '/RPATH_SETTINGS/d' $(@D)/SamTSE/Sources/CMakeLists.txt
 endef
 SERIOUSSAM_POST_EXTRACT_HOOKS += SERIOUSSAM_CP_WEAPONS
 

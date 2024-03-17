@@ -1,7 +1,6 @@
 include batocera-board.common
 
 # Target definition
-BR2_GCC_VERSION_12_X=y
 BR2_aarch64=y
 BR2_cortex_a76=y
 BR2_ARM_FPU_NEON_FP_ARMV8=y
@@ -37,6 +36,7 @@ BR2_PACKAGE_RPI_FIRMWARE_VARIANT_PI=y
 
 # gpu
 BR2_PACKAGE_BATOCERA_RPI_MESA3D=y
+BR2_PACKAGE_BATOCERA_WAYLAND_SWAY=y
 BR2_PACKAGE_BATOCERA_XWAYLAND=y
 
 # batocera splash screen

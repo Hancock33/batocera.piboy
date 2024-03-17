@@ -3,8 +3,8 @@
 # libretro-wasm4
 #
 ################################################################################
-# Version: Commits on Feb 25, 2024
-LIBRETRO_WASM4_VERSION = e940675e950f7d7f59445ce58a4fcf38f492d870
+# Version: Commits on Mar 17, 2024
+LIBRETRO_WASM4_VERSION = 5f1fabf64b9f5f587b8c5462a7b356ec81a74934
 LIBRETRO_WASM4_SITE = https://github.com/aduros/wasm4
 LIBRETRO_WASM4_SITE_METHOD = git
 LIBRETRO_WASM4_GIT_SUBMODULES = yes
@@ -17,7 +17,7 @@ LIBRETRO_WASM4_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NA
 
 define LIBRETRO_WASM4_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/evmap
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	$(INSTALL) -D $(@D)/runtimes/native/wasm4_libretro.so $(TARGET_DIR)/usr/lib/libretro/wasm4_libretro.so
 	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-wasm4/wasm4.keys $(TARGET_DIR)/usr/share/evmapy/
 endef

@@ -1575,7 +1575,7 @@ c64:
   manufacturer:         Commodore
   release:              1982
   hardware:             computer
-  extensions:           [d64, d81, crt, prg, tap, t64, m3u, zip, 7z, nib]
+  extensions:           [7z, crt, d64, d71, d81, g64, m3u, nib, prg, t64, tap, zip]
   platform:             c64
   group:                c64
   emulators:
@@ -2801,6 +2801,8 @@ tg-cd:
       citra:            { requireAnyOf: [BR2_PACKAGE_CITRA]          }
     libretro:
       citra:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_CITRA] }
+    panda3ds:
+      panda3ds:         { requireAnyOf: [BR2_PACKAGE_PANDA3DS]       }
 
 fds:
   name:                 Family Computer Disk System
@@ -3145,7 +3147,7 @@ switch:
   extensions:           [xci, nsp]
   emulators:
     yuzu:
-      yuzu:             { requireAnyOf: [BR2_PACKAGE_YUZU]    }
+      yuzu:             { requireAnyOf: [BR2_PACKAGE_SUYU]    }
     ryujinx:
       ryujinx:          { requireAnyOf: [BR2_PACKAGE_RYUJINX] }
 

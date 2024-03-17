@@ -4,10 +4,10 @@
 #
 ################################################################################
 # Version: Commits on Feb 15, 2024
-SWITCHRES_VERSION = 103e83c73c178d7d9b3f94dd37194692d7891ab6
+SWITCHRES_VERSION = v2.2.0
 SWITCHRES_SITE = $(call github,antonioginer,switchres,$(SWITCHRES_VERSION))
 SWITCHRES_LICENSE = GPL-2.0+
-SWITCHRES_DEPENDENCIES = libdrm
+SWITCHRES_DEPENDENCIES = libdrm sdl2 sdl2_ttf
 SWITCHRES_INSTALL_STAGING = YES
 
 ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
