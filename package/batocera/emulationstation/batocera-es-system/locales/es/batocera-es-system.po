@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-05 00:00+0100\n"
+"PO-Revision-Date: 2024-03-14 00:00+0100\n"
 "Last-Translator: roliverosc <roliveros@hotmail.com>, 2024\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
@@ -14819,14 +14819,14 @@ msgid ""
 "Per Table Folder requires all files to be in the associated rom table "
 "folder. If disabled, consult the Wiki for further details."
 msgstr ""
-"La carpeta por tabla requiere que todos los archivos estén en la carpeta de "
-"la tabla ROM asociada. Si está deshabilitado, consulte la Wiki para obtener "
+"La carpeta por mesa requiere que todos los archivos estén en la carpeta de "
+"la mesa ROM asociada. Si está deshabilitado, consulte la Wiki para obtener "
 "más detalles."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "PER TABLE FOLDER"
-msgstr "CARPETA POR TABLA"
+msgstr "CARPETA POR MESA"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15650,7 +15650,7 @@ msgstr "Botón de disparo en Lockbar"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Buy extraball for a credit"
-msgstr "Compra una bola extra por un crédito"
+msgstr "Comprar bola extra por un crédito"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -16100,7 +16100,7 @@ msgstr "Abrir menú para amueblar pasillo"
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Quits the current level"
-msgstr "Abandonar el nivel actual"
+msgstr "Abandonar nivel actual"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -16278,10 +16278,6 @@ msgid "Quick Save"
 msgstr "Guardado rápido"
 
 #~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "Namco GunCon (Vibración)"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (Precaución)"
 
@@ -16451,8 +16447,8 @@ msgstr "Guardado rápido"
 #~ msgid ""
 #~ "Crop MAME artwork to maximize the game screen and only fill unused space."
 #~ msgstr ""
-#~ "Recorta las ilustraciones de MAME para maximizar la pantalla de juego y "
-#~ "llenar sólo el espacio no utilizado."
+#~ "Recorta las ilustraciones de MAME para maximizar la pantalla de juego "
+#~ "yllenar sólo el espacio no utilizado."
 
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
@@ -16688,6 +16684,10 @@ msgstr "Guardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "PS1 Analog Joystick"
 #~ msgstr "Joystick analógico PS1 (stick)"
+
+#~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "Namco GunCon (Vibración)"
 
 #~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"

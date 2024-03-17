@@ -16131,10 +16131,6 @@ msgid "Quick Save"
 msgstr "Gyors mentés"
 
 #~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "Namco GunCon (Rezgő)"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (Óvatosan!)"
 
@@ -16499,6 +16495,10 @@ msgstr "Gyors mentés"
 #~ msgctxt "game_options"
 #~ msgid "PS1 Analog Joystick"
 #~ msgstr "PS1 analóg joystick"
+
+#~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "Namco GunCon (Rezgő)"
 
 #~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"

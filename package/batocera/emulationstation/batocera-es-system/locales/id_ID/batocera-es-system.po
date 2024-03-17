@@ -16036,10 +16036,6 @@ msgid "Quick Save"
 msgstr ""
 
 #~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "Namco GunCon (Getaran)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Simpan status sebelumnya untuk diputar ulang secara langsung, jika Core "
@@ -16385,6 +16381,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "PS1 Analog Joystick"
 #~ msgstr "Analog Joystick - PS1"
+
+#~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "Namco GunCon (Getaran)"
 
 #~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"

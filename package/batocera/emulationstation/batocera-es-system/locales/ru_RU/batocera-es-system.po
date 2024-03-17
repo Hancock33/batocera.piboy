@@ -16114,10 +16114,6 @@ msgid "Quick Save"
 msgstr ""
 
 #~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "Namco GunCon (вибрация)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Сохраняет прошлые состояния для перемотки в реальном времени, если ядро "
@@ -16510,6 +16506,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "PS1 Analog Joystick"
 #~ msgstr "PS1 аналоговый джойстик"
+
+#~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "Namco GunCon (вибрация)"
 
 #~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"
