@@ -9,6 +9,8 @@ Add support for Radxa Rock 3C
 ### Added
 - Support for Lexaloffle Voxatron (needs official engine, no emulator provided)
 - C64: support for REU (RAM Expansion Unit), .d71 and .g64 ROM format
+- Light gun support in libretro-MAME
+- Light gun support in DuckStation (single light gun only)
 
 ### Fixed
 - RG552 Splash-screen rotation
@@ -16,10 +18,14 @@ Add support for Radxa Rock 3C
 - GameForce Vibrator enabled
 - Vita3k moving saves
 - Steam flatpak issue after forced runtime update.
+- GunCon2 A and B buttons now separate
 
 ### Changed
 - RK3326 Replaced the mali-G31 driver with mesa3d
 - Amiga BIOS files now go into the bios/amiga/ subfolder
+- RPCS3 upscaling now outputs properly
+- GunCon3 default mapping (visit light gun page on official wiki)
+  - Calibration now on C2 (press and hold it few seconds)
 
 ### Updated
 - Retroarch to 1.17.0
@@ -46,6 +52,8 @@ Add support for Radxa Rock 3C
 - libretro-stella: bump to Jan 2, 2024 build
 - libretro-swanstation: bump to Jan 25, 2024 build
 - libretro-pcsx: bump to Feb 14, 2024 build
+- libretro-flycast: bump to v2.3
+- Flycast: bump to v2.3
 - Redream to 1.5.0-1103-g47bc2b7
 - Ikemen Go to 0.99
 - Amiberry to 5.6.8
@@ -61,6 +69,8 @@ Add support for Radxa Rock 3C
 - Kodi to 20.5-Nexus
 - RPCS3 to 0.0.31
 - solarus-engine: bump to Mar 10, 2024 build
+- Cemu to v2.0-72
+- Sonic3-AIR to v24.02.02.0-stable
 
 ### System
 - Mainline Kernel 6.6.y bump to 6.6.21
@@ -72,7 +82,8 @@ Add support for Radxa Rock 3C
 - mesa3d to 24.0.3
 - RPI kernel to 6.6.20
 - RK3326 kernel to 6.8
-- sdl2 to 2.30.0
+- sdl2 to 2.30.1
+- Pipewire to 1.0.4
 - X86_64 kernel to 6.8
 - switchres 0.220
 - btop to 1.3.2

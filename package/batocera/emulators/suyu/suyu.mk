@@ -3,8 +3,8 @@
 # suyu
 #
 ################################################################################
-# Version: Commits on Mar 17, 2024 (branch@dev)
-SUYU_VERSION = 12d925f86d81283c1d3e3dc265f965e1f28a75c7
+# Version: Commits on Mar 18, 2024 (branch@dev)
+SUYU_VERSION = 898bd281a269c4e897d64122dc64082a00de3670
 SUYU_SITE = https://github.com/suyu-emu/suyu.git
 SUYU_SITE_METHOD=git
 SUYU_GIT_SUBMODULES=YES
@@ -39,6 +39,7 @@ define SUYU_INSTALL_TARGET_CMDS
 	#evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/suyu/switch.suyu.keys $(TARGET_DIR)/usr/share/evmapy
+	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/suyu/switch.suyu.keys $(TARGET_DIR)/usr/share/evmapy/switch.yuzu.keys
 endef
 
 $(eval $(cmake-package))
