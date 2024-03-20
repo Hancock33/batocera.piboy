@@ -961,6 +961,9 @@ switch:
     powersave: '2'
     forceNoBezel: true
     hud_support: false
+systemsp:
+  emulator: libretro
+  core:     flycast
 
 # T-Z
 
