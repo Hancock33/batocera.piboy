@@ -9140,6 +9140,26 @@ msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
+msgid "Position of wii sensor bar relative to the disaply for real wiimotes."
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "SENSOR BAR POSITION"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Bottom (Default)"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Top"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
 msgid "Emulate the Wii Remote pointer with a DS4's gyroscope."
 msgstr ""
 
@@ -15180,6 +15200,11 @@ msgstr "30 秒 (標準)"
 msgctxt "game_options"
 msgid "45s"
 msgstr "45秒"
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
+msgid "60s"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
