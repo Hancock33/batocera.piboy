@@ -5914,6 +5914,19 @@ srb2kart:
     srb2kart:
       srb2kart:         { requireAnyOf: [BR2_PACKAGE_SRB2KART] }
 
+systemsp:
+  name:                 Sega System SP
+  manufacturer:         Sega
+  release:              2004
+  hardware:             arcade
+  extensions:           [lst, bin, dat, zip, 7z]
+  platform:             systemsp, arcade
+  emulators:
+    libretro:
+      flycast:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]  }
+    flycast:
+      flycast:          { requireAnyOf: [BR2_PACKAGE_FLYCAST]           }
+
 vemulator:
   name:                 Dreamcast VMU
   manufacturer:         Sega
