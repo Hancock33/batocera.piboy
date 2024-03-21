@@ -19,6 +19,7 @@ Add support for Radxa Rock 3C
 - Vita3k moving saves
 - Steam flatpak issue after forced runtime update.
 - GunCon2 A and B buttons now separate
+- Sinden Lightgun now has limited bandwidth per camera to avoid timeout
 
 ### Changed
 - RK3326 Replaced the mali-G31 driver with mesa3d
@@ -26,6 +27,7 @@ Add support for Radxa Rock 3C
 - RPCS3 upscaling now outputs properly
 - GunCon3 default mapping (visit light gun page on official wiki)
   - Calibration now on C2 (press and hold it few seconds)
+- Sinden Lightgun firmware updated to 1.9
 
 ### Updated
 - Retroarch to 1.17.0
@@ -74,14 +76,13 @@ Add support for Radxa Rock 3C
 
 ### System
 - Mainline Kernel 6.6.y bump to 6.6.21
-- Nvidia Production driver to 550.54.14
+- Nvidia Production driver to 550.67
 - Nvidia Legacy driver to 470.239.06
 - wayland-protocols to 1.33
 - wlroots to 0.17.1
 - sway to 1.9
 - mesa3d to 24.0.3
 - RPI kernel to 6.6.20
-- RK3326 kernel to 6.8
 - sdl2 to 2.30.1
 - Pipewire to 1.0.4
 - X86_64 kernel to 6.8
