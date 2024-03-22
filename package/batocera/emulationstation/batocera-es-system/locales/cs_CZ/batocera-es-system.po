@@ -16602,10 +16602,6 @@ msgstr "Rychlé uložení"
 #~ msgstr "Analogový Joystick PS1"
 
 #~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "Namco GunCon (Vibrace)"
-
-#~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"
 #~ msgstr "Vyvážený (Výchozí)"
 
@@ -16928,6 +16924,10 @@ msgstr "Rychlé uložení"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rychle vpřed"
+
+#~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "Namco GunCon (Vibrace)"
 
 #~ msgctxt "game_options"
 #~ msgid "INSTALL MEDIA FOUNDATION"

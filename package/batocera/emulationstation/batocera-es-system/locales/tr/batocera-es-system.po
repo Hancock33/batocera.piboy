@@ -16567,10 +16567,6 @@ msgstr "Hızlı Kaydet"
 #~ msgstr "PS1 Analog Joystick"
 
 #~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "Namco GunCon (Sarsıntı)"
-
-#~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"
 #~ msgstr "Devre Dışı (Varsayılan)"
 
@@ -16884,6 +16880,10 @@ msgstr "Hızlı Kaydet"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Hızlı İleri"
+
+#~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "Namco GunCon (Sarsıntı)"
 
 #~ msgctxt "game_options"
 #~ msgid "INSTALL MEDIA FOUNDATION"

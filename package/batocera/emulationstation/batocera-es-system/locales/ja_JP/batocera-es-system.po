@@ -16513,10 +16513,6 @@ msgstr "クイック セーブ"
 #~ msgstr "PS1 アナログジョイスティック"
 
 #~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "ナムコ ガンコン(振動有)"
-
-#~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"
 #~ msgstr "無効（標準）"
 
@@ -16827,6 +16823,10 @@ msgstr "クイック セーブ"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "ナムコ ガンコン(振動有)"
 
 #~ msgctxt "game_options"
 #~ msgid "Horizontal position (in percentage of the screen width)."

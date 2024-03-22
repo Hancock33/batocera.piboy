@@ -16444,10 +16444,6 @@ msgstr ""
 #~ msgstr "Palanca analògica PS1"
 
 #~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "Namco GunCon (Vibració)"
-
-#~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"
 #~ msgstr "Deshabilitat (Per defecte)"
 
@@ -16695,6 +16691,10 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avançar"
+
+#~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "Namco GunCon (Vibració)"
 
 #~ msgctxt "game_options"
 #~ msgid "INSTALL MEDIA FOUNDATION"

@@ -16689,10 +16689,6 @@ msgstr "Sauvegarde rapide"
 #~ msgstr "Joystick analogique PS1"
 
 #~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "Namco GunCon (Vibration)"
-
-#~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"
 #~ msgstr "Désactivé (par défaut)"
 
@@ -17020,6 +17016,10 @@ msgstr "Sauvegarde rapide"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rapide"
+
+#~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "Namco GunCon (Vibration)"
 
 #~ msgctxt "game_options"
 #~ msgid "INSTALL MEDIA FOUNDATION"

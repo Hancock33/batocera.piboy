@@ -16358,10 +16358,6 @@ msgstr "快速保存"
 #~ msgstr "PS1 模拟操纵杆"
 
 #~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "NAMCO GunCon （震动）"
-
-#~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"
 #~ msgstr "禁用(默认)"
 
@@ -16661,6 +16657,10 @@ msgstr "快速保存"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快进"
+
+#~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "NAMCO GunCon （震动）"
 
 #~ msgctxt "game_options"
 #~ msgid ""
