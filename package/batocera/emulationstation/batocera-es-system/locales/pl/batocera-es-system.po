@@ -16678,10 +16678,6 @@ msgstr "Szybkie zapisywanie"
 #~ msgstr "Kontroler analogowy PS1"
 
 #~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "Namco GunCon (wibracje)"
-
-#~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"
 #~ msgstr "Wyłączone (domyślnie)"
 
@@ -17008,6 +17004,10 @@ msgstr "Szybkie zapisywanie"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Przewijanie do przodu"
+
+#~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "Namco GunCon (wibracje)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
