@@ -1,5 +1,5 @@
 diff --git a/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp b/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
-index 4b2fac5fd8..bab0f99050 100644
+index e8872fc5fa..bc62f031a3 100644
 --- a/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
 +++ b/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
 @@ -252,6 +252,7 @@ std::shared_ptr<evdevDevice>
