@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 64d8803b1..b5cdcd058 100644
+index ddb66d711..7030d6f43 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -257,7 +257,7 @@ endif()
+@@ -258,7 +258,7 @@ endif()
  
  if(NOT LIBRETRO)
  	find_program(SH_EXECUTABLE sh)

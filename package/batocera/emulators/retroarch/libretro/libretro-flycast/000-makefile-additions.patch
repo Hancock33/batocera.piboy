@@ -1,12 +1,8 @@
----
- CMakeLists.txt | 22 ++++++++++++++++++++++
- 1 file changed, 22 insertions(+)
-
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 49f312f..256dbb7 100644
+index ddb66d711..c277eafaa 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -68,6 +68,12 @@ option(APPLE_BREAKPAD "macOS: Build breakpad client and dump symbols" OFF)
+@@ -69,6 +69,12 @@ option(APPLE_BREAKPAD "macOS: Build breakpad client and dump symbols" OFF)
  option(ENABLE_GDB_SERVER "Build with GDB debugging support" OFF)
  option(ENABLE_DC_PROFILER "Build with support for target machine (SH4) profiler" OFF)
  option(ENABLE_FC_PROFILER "Build with support for host app (Flycast) profiler" OFF)
@@ -19,7 +15,7 @@ index 49f312f..256dbb7 100644
  
  if(IOS AND NOT LIBRETRO)
  	set(USE_VULKAN OFF CACHE BOOL "Force vulkan off" FORCE)
-@@ -150,6 +156,22 @@ elseif(LIBRETRO)
+@@ -151,6 +157,22 @@ elseif(LIBRETRO)
  	set(CMAKE_SHARED_LIBRARY_PREFIX "")
  	set(CMAKE_POSITION_INDEPENDENT_CODE ON)
  	target_compile_definitions(${PROJECT_NAME} PRIVATE LIBRETRO)
@@ -42,6 +38,3 @@ index 49f312f..256dbb7 100644
  	if(APPLE)
  		find_library(FOUNDATION Foundation)
  		target_link_libraries(${PROJECT_NAME} PRIVATE ${FOUNDATION})
--- 
-2.44.0
-
