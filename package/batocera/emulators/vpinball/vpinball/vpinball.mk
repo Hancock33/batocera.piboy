@@ -8,7 +8,7 @@ VPINBALL_VERSION = 856606bdaec19ffbacdd7ee9cb0b4a64cf6e8031
 VPINBALL_SITE = $(call github,vpinball,vpinball,$(VPINBALL_VERSION))
 VPINBALL_LICENSE = GPLv3+
 VPINBALL_LICENSE_FILES = LICENSE
-VPINBALL_DEPENDENCIES = host-libcurl libfreeimage libpinmame libaltsound libserialport libzedmd libserum libdmdutil sdl2 sdl2_image sdl2_ttf
+VPINBALL_DEPENDENCIES = host-libcurl libfreeimage libpinmame libaltsound libserialport libzedmd libserum libdmdutil libdof sdl2 sdl2_image sdl2_ttf
 VPINBALL_SUPPORTS_IN_SOURCE_BUILD = NO
 VPINBALL_EXTRA_DOWNLOADS = https://www.un4seen.com/files/bass24-linux.zip
 
