@@ -131,13 +131,6 @@ else
 WINE_CUSTOM_CONF_OPTS += --without-gstreamer
 endif
 
-ifeq ($(BR2_PACKAGE_LIBGCRYPT),y)
-WINE_CUSTOM_CONF_OPTS += --with-gcrypt
-WINE_CUSTOM_DEPENDENCIES += libgcrypt
-else
-WINE_CUSTOM_CONF_OPTS += --without-gcrypt
-endif
-
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
 WINE_CUSTOM_CONF_OPTS += --with-opengl
 WINE_CUSTOM_DEPENDENCIES += libgl
