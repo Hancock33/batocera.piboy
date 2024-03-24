@@ -23,7 +23,6 @@ rm -rf $HOME/build-dir/batocera.*/build/batocera-configgen-* > /dev/null 2>&1
 read -p "Clean Batocera packages? (y/n)" yn
 case $yn in 
 	y )
-	    echo "Clean Batocera packages"
         rm -rf $HOME/build-dir/batocera.*/build/batocera-a* > /dev/null 2>&1
         rm -rf $HOME/build-dir/batocera.*/build/batocera-b* > /dev/null 2>&1
         rm -rf $HOME/build-dir/batocera.*/build/batocera-c* > /dev/null 2>&1
@@ -98,9 +97,18 @@ fi
 for i in $make_distro
 do
     echo "Building: "${GREEN}$i${ENDCOLOR}
+    if [ "$i" = "x86_64" ]; then
+        echo "\e[1;46m"
+    elif [ "$i" = "rpi4" ]; then
+        echo "\e[1;41m"
+    fi
+    
     cd $HOME/build-dir/batocera.$i
     make -j33 > /dev/null
+    echo ${ENDCOLOR}
 done
+
+echo ${ENDCOLOR}
 
 # Cleanup
 cleanup="aarch32

@@ -1,8 +1,8 @@
 diff --git a/src/DataLoader.cpp b/src/DataLoader.cpp
-index 9f7530e..f5097ea 100644
+index 374e18b..223ac48 100644
 --- a/src/DataLoader.cpp
 +++ b/src/DataLoader.cpp
-@@ -539,7 +539,7 @@ umap<string, Items*> DataLoader::processInputMap(tinyxml2::XMLElement* inputNode
+@@ -523,7 +523,7 @@ umap<string, Items*> DataLoader::processInputMap(tinyxml2::XMLElement* inputNode
  
  string DataLoader::createFilename(const string& name) {
  	return (
@@ -12,7 +12,7 @@ index 9f7530e..f5097ea 100644
  			.append(".xml")
  	);
 diff --git a/src/Emitter.hpp b/src/Emitter.hpp
-index bf818b9..307b7f4 100644
+index 1e47827..a8a6b7c 100644
 --- a/src/Emitter.hpp
 +++ b/src/Emitter.hpp
 @@ -43,7 +43,7 @@ using std::endl;
@@ -33,11 +33,20 @@ index bf818b9..307b7f4 100644
  
  // Controllers
  #define MOUSE      "MOUSE"
+@@ -76,7 +76,7 @@ using std::endl;
+ #define POSITIONAL "POSITIONAL"
+ #define JOYSTICK   "JOYSTICK"
+ 
+-#define COLORINI_FILE PACKAGE_DATA_DIR "colors.ini"
++#define COLORINI_FILE "/userdata/system/configs/ledspicer/" "colors.ini"
+ 
+ struct PlayerData {
+ 
 diff --git a/src/Main.cpp b/src/Main.cpp
-index d626be3..01306ea 100644
+index a95b594..74e7d31 100644
 --- a/src/Main.cpp
 +++ b/src/Main.cpp
-@@ -270,7 +270,7 @@ int main(int argc, char **argv) {
+@@ -268,7 +268,7 @@ int main(int argc, char **argv) {
  				"-e or --elements\t\t\tTest registered elements.\n"
  				"-v or --version\t\t\t\tDisplay version information\n"
  				"-h or --help\t\t\t\tDisplay this help screen.\n"
@@ -47,7 +56,7 @@ index d626be3..01306ea 100644
  				"Devices directory: " DEVICES_DIR "\n"
  				"Inputs directory:  " INPUTS_DIR "\n"
 diff --git a/src/restrictors/UltraStik360.hpp b/src/restrictors/UltraStik360.hpp
-index 5e72f5f..baef3af 100644
+index 453a69c..4f251db 100644
 --- a/src/restrictors/UltraStik360.hpp
 +++ b/src/restrictors/UltraStik360.hpp
 @@ -35,7 +35,7 @@
@@ -57,5 +66,5 @@ index 5e72f5f..baef3af 100644
 -#define UM_FILES_DIR PACKAGE_DATA_DIR "umaps/"
 +#define UM_FILES_DIR "/userdata/system/configs/ledspicer/" "umaps/"
  #define DEFAULT_MAP_BORDERS {30,58,86,114,142,170,198,226}
- 
- namespace LEDSpicer::Restrictors {
+ namespace LEDSpicer {
+ namespace Restrictors {

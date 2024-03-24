@@ -1,5 +1,5 @@
 diff --git a/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp b/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
-index cf811e5b41..91b9e1ab5d 100644
+index 6e9764fda9..1cf97cbd05 100644
 --- a/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
 +++ b/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
 @@ -420,6 +420,65 @@ InputBackend::InputBackend(ControllerInterface* controller_interface)

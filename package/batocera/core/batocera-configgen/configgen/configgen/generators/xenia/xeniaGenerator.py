@@ -117,6 +117,13 @@ class XeniaGenerator(Generator):
         # check & copy newer dxvk files
         self.sync_directories("/usr/wine/dxvk/x64", wineprefix + "/drive_c/windows/system32")
 
+        # squashfs
+        if "/squashfs" in rom:
+            squashrom = rom + rom.replace('/var/run/squashfs','') + '.xbox360'
+            if os.path.exists(squashrom):
+                rom = squashrom
+                eslog.debug(f'Found squashfs playlist: {rom}')
+
         # are we loading a digital title?
         if os.path.splitext(rom)[1] == '.xbox360':
             eslog.debug(f'Found .xbox360 playlist: {rom}')
@@ -139,8 +146,10 @@ class XeniaGenerator(Generator):
         config = {}
         if core == 'xenia-canary':
             toml_file = canarypath + '/xenia-canary.config.toml'
+            os.chdir(wineprefix + '/xenia-canary')
         else:
             toml_file = emupath + '/xenia.config.toml'
+            os.chdir(wineprefix + '/xenia') 
         if os.path.isfile(toml_file):
             with open(toml_file) as f:
                 config = toml.load(f)

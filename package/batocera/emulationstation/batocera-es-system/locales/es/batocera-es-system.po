@@ -435,7 +435,7 @@ msgctxt "game_options"
 msgid "Use light guns instead of pads if light guns are connected."
 msgstr "Utilizar pistolas (light guns) en lugar de mandos si están conectadas."
 
-#. TRANSLATION: shared, shared, libretro/beetle-saturn, libretro/fbneo, libretro/fceumm, ...
+#. TRANSLATION: shared, shared, libretro/beetle-saturn, libretro/swanstation, libretro/fbneo, ...
 msgctxt "game_options"
 msgid "LIGHT GUN"
 msgstr "LIGHT GUN"
@@ -3049,6 +3049,11 @@ msgctxt "game_options"
 msgid "PlayStation Mouse"
 msgstr "Ratón de PlayStation"
 
+#. TRANSLATION: libretro/swanstation, libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, ...
+msgctxt "game_options"
+msgid "SHOW LIGHT GUN CROSSHAIRS"
+msgstr "MOSTRAR PUNTO DE MIRA DE LA PISTOLA"
+
 #. TRANSLATION: libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, ...
 msgctxt "game_options"
 msgid "Digital Controller"
@@ -3074,11 +3079,6 @@ msgstr "FRECUENCIA DEL PROCESADOR"
 msgctxt "game_options"
 msgid "No skipping"
 msgstr "Sin saltar"
-
-#. TRANSLATION: libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/mame078plus, ...
-msgctxt "game_options"
-msgid "SHOW LIGHT GUN CROSSHAIRS"
-msgstr "MOSTRAR PUNTO DE MIRA DE LA PISTOLA"
 
 #. TRANSLATION: libretro/fbneo, libretro/mame078plus
 msgctxt "game_options"
@@ -5622,6 +5622,11 @@ msgctxt "game_options"
 msgid "Analogue Joystick (Flystick)"
 msgstr ""
 
+#. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx
+msgctxt "game_options"
+msgid "Justifier"
+msgstr ""
+
 #. TRANSLATION: libretro/mednafen_supergrafx, libretro/pce, libretro/pce_fast, libretro/pcfx
 msgctxt "game_options"
 msgid "Enhancement. Remove the sixteen sprites per line limit."
@@ -6612,6 +6617,21 @@ msgstr "Pandemonium 2 Lazy Screen Update Fix"
 msgctxt "game_options"
 msgid "Parasite Eve 2/Vandal Hearts 1&2 Fix"
 msgstr "Parasite Eve 2/Vandal Hearts 1&2 Fix"
+
+#. TRANSLATION: libretro/pcsx_rearmed, libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "Hyper Blaster/Justifier"
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed, flycast
+msgctxt "game_options"
+msgid "PLAYER 1 CROSSHAIR COLOR"
+msgstr "COLOR PUNTO DE MIRA DEL JUGADOR 1"
+
+#. TRANSLATION: libretro/pcsx_rearmed, flycast
+msgctxt "game_options"
+msgid "PLAYER 2 CROSSHAIR COLOR"
+msgstr "COLOR PUNTO DE MIRA DEL JUGADOR 2"
 
 #. TRANSLATION: libretro/pokemini
 msgctxt "game_options"
@@ -9106,13 +9126,28 @@ msgstr "JOYSTICK A LA SENSIBILIDAD DEL CURSOR"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
-msgid "Hide crosshairs in supported games e.g. ActionMax."
-msgstr "Oculta puntos de mira en juegos compatibles, por ej. ActionMax."
+msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
+msgstr ""
+
+#. TRANSLATION: daphne, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "LIGHT GUNS"
+msgstr ""
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
 msgstr "OCULTAR PUNTO DE MIRA DE ARMA LIGHT GUN"
+
+#. TRANSLATION: daphne
+msgctxt "game_options"
+msgid "Hidden"
+msgstr ""
+
+#. TRANSLATION: daphne
+msgctxt "game_options"
+msgid "Shown"
+msgstr ""
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
@@ -9212,6 +9247,26 @@ msgstr ""
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Wii Remote Sideway + Nunchuk"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Position of wii sensor bar relative to the disaply for real wiimotes."
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "SENSOR BAR POSITION"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Bottom (Default)"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Top"
 msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3
@@ -10105,6 +10160,16 @@ msgstr ""
 msgctxt "game_options"
 msgid "HLE BIOS"
 msgstr ""
+
+#. TRANSLATION: flycast
+msgctxt "game_options"
+msgid "PLAYER 3 CROSSHAIR COLOR"
+msgstr "COLOR PUNTO DE MIRA DEL JUGADOR 3"
+
+#. TRANSLATION: flycast
+msgctxt "game_options"
+msgid "PLAYER 4 CROSSHAIR COLOR"
+msgstr "COLOR PUNTO DE MIRA DEL JUGADOR 4"
 
 #. TRANSLATION: fpinball
 msgctxt "game_options"
@@ -15365,6 +15430,11 @@ msgstr "45s"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
+msgid "60s"
+msgstr ""
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
 msgid ""
 "Enable cache mount. Can improve performance and compatibility in some games."
 msgstr ""
@@ -15706,6 +15776,11 @@ msgstr "Salir de Dosbox-X"
 msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr "Mostrar la pantalla del mando"
+
+#. TRANSLATION: daphne.daphne.keys
+msgctxt "keys_files"
+msgid "Service menu"
+msgstr ""
 
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
@@ -16278,6 +16353,10 @@ msgid "Quick Save"
 msgstr "Guardado rápido"
 
 #~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Oculta puntos de mira en juegos compatibles, por ej. ActionMax."
+
+#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (Precaución)"
 
@@ -16414,22 +16493,6 @@ msgstr "Guardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"
 #~ msgstr "SVideo (color bleeding only)"
-
-#~ msgctxt "game_options"
-#~ msgid "PLAYER 1 CROSSHAIR COLOR"
-#~ msgstr "COLOR PUNTO DE MIRA DEL JUGADOR 1"
-
-#~ msgctxt "game_options"
-#~ msgid "PLAYER 2 CROSSHAIR COLOR"
-#~ msgstr "COLOR PUNTO DE MIRA DEL JUGADOR 2"
-
-#~ msgctxt "game_options"
-#~ msgid "PLAYER 3 CROSSHAIR COLOR"
-#~ msgstr "COLOR PUNTO DE MIRA DEL JUGADOR 3"
-
-#~ msgctxt "game_options"
-#~ msgid "PLAYER 4 CROSSHAIR COLOR"
-#~ msgstr "COLOR PUNTO DE MIRA DEL JUGADOR 4"
 
 #~ msgctxt "game_options"
 #~ msgid "Simulate LCD color inaccuracy."
@@ -16684,10 +16747,6 @@ msgstr "Guardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "PS1 Analog Joystick"
 #~ msgstr "Joystick analógico PS1 (stick)"
-
-#~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "Namco GunCon (Vibración)"
 
 #~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"
@@ -17021,3 +17080,7 @@ msgstr "Guardado rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rápido"
+
+#~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "Namco GunCon (Vibración)"

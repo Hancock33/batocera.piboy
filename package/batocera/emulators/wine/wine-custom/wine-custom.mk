@@ -3,8 +3,8 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Mar 15, 2024
-WINE_CUSTOM_VERSION = 552cc456d1889ab3ee0dd5ead6c7520c34d030c0
+
+WINE_CUSTOM_VERSION = wine-9.5
 WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
 WINE_CUSTOM_SITE = $(call github,wine-mirror,wine,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
@@ -18,7 +18,7 @@ ifeq ($(BR_CMAKE_USE_CLANG),y)
 endif
 
 ifeq ($(BR_WINE_STAGING),y)
-	WINE_CUSTOM_STAGING_VERSION = 6a314e5994fd5701ef1142030071ea6e4cdc9b40
+	WINE_CUSTOM_STAGING_VERSION = v9.5
 	HOST_WINE_CUSTOM_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/$(WINE_CUSTOM_STAGING_VERSION).tar.gz
 	WINE_CUSTOM_POST_EXTRACT_HOOKS += WINE_CUSTOM_STAGING
 	HOST_WINE_CUSTOM_POST_EXTRACT_HOOKS += WINE_CUSTOM_STAGING
@@ -129,13 +129,6 @@ WINE_CUSTOM_CONF_OPTS += --with-gstreamer
 WINE_CUSTOM_DEPENDENCIES += gst1-plugins-base
 else
 WINE_CUSTOM_CONF_OPTS += --without-gstreamer
-endif
-
-ifeq ($(BR2_PACKAGE_LIBGCRYPT),y)
-WINE_CUSTOM_CONF_OPTS += --with-gcrypt
-WINE_CUSTOM_DEPENDENCIES += libgcrypt
-else
-WINE_CUSTOM_CONF_OPTS += --without-gcrypt
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)

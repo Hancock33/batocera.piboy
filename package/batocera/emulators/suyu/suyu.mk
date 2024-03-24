@@ -3,8 +3,8 @@
 # suyu
 #
 ################################################################################
-# Version: Commits on Mar 18, 2024 (branch@dev)
-SUYU_VERSION = 898bd281a269c4e897d64122dc64082a00de3670
+# Version: Commits on Mar 24, 2024 (branch@dev)
+SUYU_VERSION = d0944b7c5666f3935faf88b92044742fe05dfe40
 SUYU_SITE = https://github.com/suyu-emu/suyu.git
 SUYU_SITE_METHOD=git
 SUYU_GIT_SUBMODULES=YES
@@ -27,6 +27,9 @@ SUYU_CONF_OPTS += -DSUYU_TESTS=OFF
 SUYU_CONF_OPTS += -DSUYU_USE_EXTERNAL_SDL2=OFF
 SUYU_CONF_OPTS += -DSUYU_USE_EXTERNAL_VULKAN_HEADERS=OFF
 SUYU_CONF_OPTS += -DSUYU_USE_PRECOMPILED_HEADERS=OFF
+
+SUYU_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
+SUYU_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
 	SUYU_DEPENDENCIES += host-glslang vulkan-headers vulkan-loader

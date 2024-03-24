@@ -3,16 +3,14 @@
 # hatari
 #
 ################################################################################
-# Version: Commits on Mar 17, 2024
-HATARI_VERSION = ea6cbab756758a0188976a22559da1729ff071b6
+# Version: Commits on Mar 24, 2024
+HATARI_VERSION = e47e060e1337598023fb10c51334993a2c3169ce
 HATARI_SITE = $(call github,hatari,hatari,$(HATARI_VERSION))
 HATARI_LICENSE = GPLv3
 HATARI_DEPENDENCIES = sdl2 zlib libpng libcapsimage
 
 HATARI_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 HATARI_CONF_OPTS += -DCAPSIMAGE_INCLUDE_DIR="($STAGING_DIR)/usr/include/caps"
-HATARI_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
-HATARI_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 define HATARI_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/src/hatari $(TARGET_DIR)/usr/bin/hatari

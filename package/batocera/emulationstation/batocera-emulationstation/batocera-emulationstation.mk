@@ -3,8 +3,8 @@
 # batocera-emulationstation
 #
 ################################################################################
-# Version: Commits on Mar 17, 2024
-BATOCERA_EMULATIONSTATION_VERSION = 282024366af2b0a49a4b48f56ac2615d327e8766
+# Version: Commits on Mar 23, 2024
+BATOCERA_EMULATIONSTATION_VERSION = aa240ebac79c6a2463d6dd01ad4d4498fdafc858
 BATOCERA_EMULATIONSTATION_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_EMULATIONSTATION_SITE_METHOD = git
 BATOCERA_EMULATIONSTATION_LICENSE = MIT
@@ -120,7 +120,7 @@ endef
 BATOCERA_EMULATIONSTATION_PREFIX = SDL_NOMOUSE=1
 BATOCERA_EMULATIONSTATION_CMD = emulationstation-standalone
 BATOCERA_EMULATIONSTATION_ARGS = --no-splash $${EXTRA_OPTS}
-BATOCERA_EMULATIONSTATION_POSTFIX = \&
+BATOCERA_EMULATIONSTATION_POSTFIX = \>/dev/null 2>\&1 \&
 
 # disabling cec. causing perf issue on init/deinit
 #ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3128),y)

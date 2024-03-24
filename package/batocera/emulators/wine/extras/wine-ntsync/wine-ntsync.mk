@@ -10,7 +10,7 @@ WINE_NTSYNC_SITE = https://repo.or.cz/wine/zf.git/snapshot/
 WINE_NTSYNC_LICENSE = LGPL-2.1+
 WINE_NTSYNC_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_NTSYNC_SELINUX_MODULES = wine
-WINE_NTSYNC_DEPENDENCIES = host-bison host-flex host-wine-ntsync
+WINE_NTSYNC_DEPENDENCIES = host-bison host-flex host-wine-custom
 HOST_WINE_NTSYNC_DEPENDENCIES = host-bison host-flex
 
 ifeq ($(BR_CMAKE_USE_CLANG),y)
@@ -32,7 +32,7 @@ HOST_WINE_NTSYNC_PRE_CONFIGURE_HOOKS += WINE_NTSYNC_AUTOGEN
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_NTSYNC_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
-	--with-wine-tools=$(BUILD_DIR)/host-wine-ntsync-$(WINE_NTSYNC_VERSION) \
+	--with-wine-tools=$(BUILD_DIR)/host-wine-custom-$(WINE_CUSTOM_VERSION) \
 	--disable-tests \
 	--without-capi \
 	--without-coreaudio \
@@ -115,13 +115,6 @@ WINE_NTSYNC_CONF_OPTS += --with-gstreamer
 WINE_NTSYNC_DEPENDENCIES += gst1-plugins-base
 else
 WINE_NTSYNC_CONF_OPTS += --without-gstreamer
-endif
-
-ifeq ($(BR2_PACKAGE_LIBGCRYPT),y)
-WINE_NTSYNC_CONF_OPTS += --with-gcrypt
-WINE_NTSYNC_DEPENDENCIES += libgcrypt
-else
-WINE_NTSYNC_CONF_OPTS += --without-gcrypt
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)

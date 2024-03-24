@@ -25,6 +25,7 @@ guncon*
 hid-nx*
 joycond*
 lightguns-games-precalibrations*
+new-lg4ff*
 pd-mapper*
 qrtr*
 qtsixa*
@@ -59,7 +60,7 @@ if [ $DEL_RPI4 = '1' ]; then
     for i in $delkern
     do
         echo "Deleting: "${RED}$i${ENDCOLOR}
-        sudo rm -r $HOME/build-dir/batocera.rpi4/build/$i
+        sudo rm -rf $HOME/build-dir/batocera.rpi4/build/$i
     done
 fi
 

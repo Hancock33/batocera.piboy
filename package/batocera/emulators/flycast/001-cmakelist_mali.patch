@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 64d8803b1..90e13e59b 100644
+index 7030d6f43..8a7c6083e 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -68,6 +68,7 @@ option(APPLE_BREAKPAD "macOS: Build breakpad client and dump symbols" OFF)
+@@ -69,6 +69,7 @@ option(APPLE_BREAKPAD "macOS: Build breakpad client and dump symbols" OFF)
  option(ENABLE_GDB_SERVER "Build with GDB debugging support" OFF)
  option(ENABLE_DC_PROFILER "Build with support for target machine (SH4) profiler" OFF)
  option(ENABLE_FC_PROFILER "Build with support for host app (Flycast) profiler" OFF)
@@ -10,7 +10,7 @@ index 64d8803b1..90e13e59b 100644
  
  if(IOS AND NOT LIBRETRO)
  	set(USE_VULKAN OFF CACHE BOOL "Force vulkan off" FORCE)
-@@ -201,6 +202,10 @@ else()
+@@ -202,6 +203,10 @@ else()
  	add_executable(${PROJECT_NAME} core/emulator.cpp)
  endif()
  
