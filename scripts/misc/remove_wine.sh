@@ -7,8 +7,8 @@ ENDLINE="\n--------------------------------------------------"${ENDCOLOR}
 clear
 echo -e ${STARTLINE}"Removing Batocera Packages                        "${ENDLINE}
 
-batowine86=( $(find $HOME/batocera.se/package/batocera/emulators/wine-x86 -type f -name "*.mk" | sort -k3 -k1 ) )
 batowine=( $(find $HOME/batocera.se/package/batocera/emulators/wine -type f -name "*.mk" | sort -k3 -k1 ) )
+batowineextras=( $(find $HOME/batocera.se/package/batocera/emulators/wine/extras -type f -name "*.mk" | sort -k3 -k1 ) )
 
 # Variables
 BUILD_X86=0
@@ -24,14 +24,6 @@ case $yn in
 esac
 
 if [ $BUILD_X86 = '1' ]; then
-	for ((i=0; i<${#batowine86[@]}; i++)); do
-		f=( $(basename "${batowine86[$i]}" .mk ) )
-		echo -e "removing x86_64 package: "${RED}$f${ENDCOLOR}
-		rm -rf $HOME/build-dir/batocera.x86_64/build/$f-*
-		rm -rf $HOME/build-dir/batocera.x86_64/build/host-$f-*
-		rm -rf $HOME/build-dir/batocera.x86_wow64/build/$f-*
-		rm -rf $HOME/build-dir/batocera.x86_wow64/build/host-$f-*
-	done
 	for ((i=0; i<${#batowine[@]}; i++)); do
 		f=( $(basename "${batowine[$i]}" .mk ) )
 		echo -e "removing x86_64 package: "${RED}$f${ENDCOLOR}
@@ -40,7 +32,7 @@ if [ $BUILD_X86 = '1' ]; then
 		rm -rf $HOME/build-dir/batocera.x86_wow64/build/$f-*
 		rm -rf $HOME/build-dir/batocera.x86_wow64/build/host-$f-*
 	done
-	
+
 	rm -rf $HOME/build-dir/batocera.x86_64/build/wine*
 	rm -rf $HOME/build-dir/batocera.x86_64/build/batocera-wine*
 	rm -rf $HOME/build-dir/batocera.x86_64/target/usr/wine
@@ -58,5 +50,5 @@ do
 	find $HOME/build-dir/batocera.$i/build -maxdepth 1 -type d -printf '%T@ %p %f\n' | sed -r 's:\-[0-9a-f\.]+$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | xargs rm -rf
 done
 
-#find $HOME/dl -maxdepth 2 -type f -name "*.zip" -o -name "*.tar.*" -printf '%T@ %p %f\n' | sed -r 's:\-[0-9a-f\.]+(\.zip|\.tar\.[2a-z]+)$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | xargs rm -rf
+find $HOME/dl -maxdepth 2 -type f -name "*.zip" -o -name "*.tar.*" -printf '%T@ %p %f\n' | sed -r 's:\-[0-9a-f\.]+(\.zip|\.tar\.[2a-z]+)$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | xargs rm -rf
 

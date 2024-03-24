@@ -12,8 +12,6 @@ git pull
 git submodule init
 git submodule update
 ./build.sh $HOME/build-dir/batocera.aarch32 aarch32-subsystem > /dev/null 2>&1
-./build.sh $HOME/build-dir/batocera.rpi4 piboy4 > /dev/null 2>&1
-./build.sh $HOME/build-dir/batocera.x86_64 x86_64 > /dev/null 2>&1
 ./build.sh $HOME/build-dir/batocera.x86_wow64 x86_wow64 > /dev/null 2>&1
 rm -rf $HOME/build-dir/batocera.*/build/batocera-system-* > /dev/null 2>&1
 rm -rf $HOME/build-dir/batocera.*/build/batocera-splash-* > /dev/null 2>&1
@@ -44,7 +42,6 @@ BUILD_SUB=0
 BUILD_RPI=0
 BUILD_X86=0
 make_sub_sys=""
-make_distro=""
 
 # Build subsystems
 read -p "Build subsystems? (y/n)" yn
@@ -75,12 +72,10 @@ esac
 
 if [ $BUILD_X86 = '1' ]; then
 	make_sub_sys="x86_wow64"
-	make_distro="x86_64"
 fi
 
 if [ $BUILD_RPI = '1' ]; then
 	make_sub_sys=$make_sub_sys" aarch32"
-	make_distro=$make_distro" rpi4"
 fi
 
 # Build subsystems
@@ -93,28 +88,9 @@ if [ $BUILD_SUB = '1' ]; then
     done
 fi
 
-# Build Distro
-for i in $make_distro
-do
-    echo "Building: "${GREEN}$i${ENDCOLOR}
-    if [ "$i" = "x86_64" ]; then
-        echo "\e[1;46m"
-    elif [ "$i" = "rpi4" ]; then
-        echo "\e[1;41m"
-    fi
-    
-    cd $HOME/build-dir/batocera.$i
-    make -j33 > /dev/null
-    echo ${ENDCOLOR}
-done
-
-echo ${ENDCOLOR}
-
 # Cleanup
 cleanup="aarch32
-x86_wow64
-rpi4
-x86_64"
+x86_wow64"
 
 for i in $cleanup
 do
