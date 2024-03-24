@@ -65,3 +65,16 @@ index a14cf25a6..e514f5c62 100644
  			.setCodeModel(flags & 0x2 ? llvm::CodeModel::Large : llvm::CodeModel::Small)
  #ifdef __APPLE__
  			//.setCodeModel(llvm::CodeModel::Large)
+diff --git a/rpcs3/util/types.hpp b/rpcs3/util/types.hpp
+index dd90e0dda..cc7ff5b1b 100644
+--- a/rpcs3/util/types.hpp
++++ b/rpcs3/util/types.hpp
+@@ -1057,7 +1057,7 @@ template <typename CT> requires requires (const CT& x) { std::size(x); }
+ 	}
+ 	else
+ 	{
+-		return narrow<u32>(std::size(container), line, col, file, func);
++		return narrow<u32>(container.size(), line, col, file, func);
+ 	}
+ }
+ 
