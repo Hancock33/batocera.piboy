@@ -2235,12 +2235,16 @@ def generateCoreSettings(coreSettings, system, rom, guns, wheels):
         # Crosshair
         if system.isOptSet('superscope_crosshair'):
             coreSettings.save('snes9x_superscope_crosshair', '"' + system.config['superscope_crosshair'] + '"')
+            coreSettings.save('snes9x_justifier1_crosshair', '"' + system.config['superscope_crosshair'] + '"')
+            coreSettings.save('snes9x_justifier2_crosshair', '"' + system.config['superscope_crosshair'] + '"')
         else:
             if controllersConfig.gunsNeedCrosses(guns):
                 status = '"2"'
             else:
                 status = '"0"'
             coreSettings.save('snes9x_superscope_crosshair', status)
+            coreSettings.save('snes9x_justifier1_crosshair', status)
+            coreSettings.save('snes9x_justifier2_crosshair', status)
         if system.isOptSet('use_guns') and system.getOptBoolean('use_guns') and len(guns) >= 1:
             coreSettings.save('snes9x_superscope_reverse_buttons', '"disabled"')
 
@@ -3013,6 +3017,15 @@ def generateCoreSettings(coreSettings, system, rom, guns, wheels):
             coreSettings.save('swanstation_Display_CropMode', '"' + system.config['swanstation_CropMode'] + '"')
         else:
             coreSettings.save('swanstation_Display_CropMode', '"Overscan"')
+        # Gun crosshairs
+        if system.isOptSet('swanstation_Controller_ShowCrosshair'):
+            coreSettings.save('swanstation_Controller_ShowCrosshair', '"' + system.config['swanstation_Controller_ShowCrosshair'] + '"')
+        else:
+            if controllersConfig.gunsNeedCrosses(guns):
+                status = '"true"'
+            else:
+                status = '"false"'
+            coreSettings.save('swanstation_Controller_ShowCrosshair', status)
 
     #Duckstation
     if (system.config['core'] == 'duckstation'):

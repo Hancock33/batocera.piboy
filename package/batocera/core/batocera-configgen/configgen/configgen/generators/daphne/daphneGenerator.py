@@ -24,19 +24,19 @@ class DaphneGenerator(Generator):
                     if filename.endswith(".m2v"):
                         return filename
         return None
-    
+
     @staticmethod
     def find_file(start_path, filename):
         if os.path.exists(os.path.join(start_path, filename)):
             return os.path.join(start_path, filename)
-        
+
         for root, dirs, files in os.walk(start_path):
             if filename in files:
                 eslog.debug("Found m2v file in path - {}".format(os.path.join(root, filename)))
                 return os.path.join(root, filename)
-        
+
         return None
-    
+
     @staticmethod
     def get_resolution(video_path):
         cap = cv2.VideoCapture(video_path)
@@ -72,7 +72,7 @@ class DaphneGenerator(Generator):
                             shutil.copy2(source_item, destination_item)
                     elif os.path.isdir(source_item):
                         copy_resources(source_item, destination_item)
-        
+
         directories = [
             {"source": "/usr/share/daphne/pics", "destination": batoceraFiles.daphneDatadir + "/pics"},
             {"source": "/usr/share/daphne/sound", "destination": batoceraFiles.daphneDatadir + "/sound"},
@@ -119,20 +119,20 @@ class DaphneGenerator(Generator):
             eslog.debug("First .m2v file found: {}".format(m2v_filename))
         else:
             eslog.debug("No .m2v files found in the text file.")
-        
+
         # now get the resolution from the m2v file
         video_path = rom + "/" + m2v_filename
         # check the path exists
         if not os.path.exists(video_path):
             eslog.debug("Could not find m2v file in path - {}".format(video_path))
             video_path = self.find_file(rom, m2v_filename)
-        
+
         eslog.debug("Full m2v path is: {}".format(video_path))
 
         if video_path != None:
             video_resolution = self.get_resolution(video_path)
             eslog.debug("Resolution: {}".format(video_resolution))
-        
+
         if (system.name == 'actionmax'):
             amDir = '/userdata/roms/actionmax/'
             os.chdir(amDir)
@@ -185,7 +185,7 @@ class DaphneGenerator(Generator):
             else:
                 eslog.debug("Video resolution not found - using stretch")
                 commandArray.extend(["-x", str(gameResolution["width"]), "-y", str(gameResolution["height"])])
-        
+
         # Backend - Default OpenGL
         if system.isOptSet("gfxbackend") and system.config["gfxbackend"] == 'Vulkan':
             commandArray.append("-vulkan")
@@ -231,14 +231,6 @@ class DaphneGenerator(Generator):
                     if system.isOptSet('abs_mouse_input') and system.getOptBoolean("abs_mouse_input"):
                         commandArray.extend(["-manymouse"]) # this is causing issues on some "non-gun" games
 
-            # crosshair
-            if system.isOptSet('daphne_crosshair'):
-                if not system.getOptBoolean("daphne_crosshair"):
-                    commandArray.append("-nocrosshair")
-                else:
-                    if not controllersConfig.gunsNeedCrosses(guns):
-                        commandArray.append("-nocrosshair")
-        
         # bezels
         if bezelRequired:
             bordersSize = controllersConfig.gunsBordersSizeName(guns, system.config)
@@ -252,7 +244,7 @@ class DaphneGenerator(Generator):
                     commandArray.extend(["-bezel", "Daphne.png"])
                 else:
                     commandArray.extend(["-bezel", bezelFile])
-        
+
         # Invert HAT Axis
         if system.isOptSet('invert_axis') and system.getOptBoolean("invert_axis"):
             commandArray.append("-tiphat")
@@ -276,7 +268,8 @@ class DaphneGenerator(Generator):
             commandArray.append("-scanlines")
 
         # Hide crosshair in supported games (e.g. ActionMax, ALG)
-        if system.isOptSet('singe_crosshair') and system.getOptBoolean("singe_crosshair"):
+        # needCrosshair
+        if len(guns) > 0 and (not system.isOptSet('singe_crosshair') or ((system.isOptSet('singe_crosshair') and not system.config["singe_crosshair"]))):
             commandArray.append("-nocrosshair")
 
         # Enable SDL_TEXTUREACCESS_STREAMING, can aid SBC's with SDL2 => 2.0.16
@@ -293,7 +286,8 @@ class DaphneGenerator(Generator):
             env={
                 'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers),
                 'SDL_JOYSTICK_HIDAPI': '0'
-            })
+            }
+        )
 
     def getInGameRatio(self, config, gameResolution, rom):
         romName = os.path.splitext(os.path.basename(rom))[0]
