@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Mar 24, 2024 (branch@dev)
-SUYU_VERSION = cc62834f54fb976fb7a9a3dccfcf0e2c4f7c91db
+SUYU_VERSION = d0944b7c5666f3935faf88b92044742fe05dfe40
 SUYU_SITE = https://github.com/suyu-emu/suyu.git
 SUYU_SITE_METHOD=git
 SUYU_GIT_SUBMODULES=YES
