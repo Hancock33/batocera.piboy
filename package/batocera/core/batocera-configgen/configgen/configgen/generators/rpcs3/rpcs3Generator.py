@@ -235,7 +235,7 @@ class Rpcs3Generator(Generator):
         else:
             rpcs3ymlconfig["Video"]["Shader Precision"] = "High"
         # Internal resolution (CHANGE AT YOUR OWN RISK)
-            rpcs3ymlconfig["Video"]["Resolution"] = "1280x720"        
+            rpcs3ymlconfig["Video"]["Resolution"] = "1280x720"
         # Resolution scaling
         if system.isOptSet("rpcs3_resolution_scale"):
             rpcs3ymlconfig["Video"]["Resolution Scale"] = system.config["rpcs3_resolution_scale"]
@@ -305,6 +305,11 @@ class Rpcs3Generator(Generator):
             rpcs3ymlconfig["Input/Output"]["Move"] = "Gun"
             rpcs3ymlconfig["Input/Output"]["Camera"] = "Fake"
             rpcs3ymlconfig["Input/Output"]["Camera type"] = "PS Eye"
+        # Gun crosshairs
+        if system.isOptSet("rpcs3_crosshairs"):
+            rpcs3ymlconfig["Input/Output"]["Show move cursor"] = system.config["rpcs3_crosshairs"]
+        else:
+            rpcs3ymlconfig["Input/Output"]["Show move cursor"] = False
 
         # -= [Miscellaneous] =-
         rpcs3ymlconfig["Miscellaneous"]["Exit RPCS3 when process finishes"] = True
