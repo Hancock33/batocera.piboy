@@ -485,7 +485,7 @@ msgctxt "game_options"
 msgid "Use light guns instead of pads if light guns are connected."
 msgstr "라이트 건이 연결된 경우 패드 대신 라이트 건을 사용하십시오."
 
-#. TRANSLATION: shared, shared, libretro/beetle-saturn, libretro/fbneo, libretro/fceumm, ...
+#. TRANSLATION: shared, shared, libretro/beetle-saturn, libretro/swanstation, libretro/fbneo, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "LIGHT GUN"
@@ -3315,6 +3315,12 @@ msgctxt "game_options"
 msgid "PlayStation Mouse"
 msgstr "플레이 스테이션 마우스"
 
+#. TRANSLATION: libretro/swanstation, libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, ...
+#, fuzzy
+msgctxt "game_options"
+msgid "SHOW LIGHT GUN CROSSHAIRS"
+msgstr "라이트 건 십자선 표시"
+
 #. TRANSLATION: libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, ...
 #, fuzzy
 msgctxt "game_options"
@@ -3343,12 +3349,6 @@ msgstr "CPU 클럭"
 msgctxt "game_options"
 msgid "No skipping"
 msgstr "건너 뛰기 없음"
-
-#. TRANSLATION: libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/mame078plus, ...
-#, fuzzy
-msgctxt "game_options"
-msgid "SHOW LIGHT GUN CROSSHAIRS"
-msgstr "라이트 건 십자선 표시"
 
 #. TRANSLATION: libretro/fbneo, libretro/mame078plus
 #, fuzzy
@@ -6199,6 +6199,11 @@ msgctxt "game_options"
 msgid "Analogue Joystick (Flystick)"
 msgstr ""
 
+#. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx
+msgctxt "game_options"
+msgid "Justifier"
+msgstr ""
+
 #. TRANSLATION: libretro/mednafen_supergrafx, libretro/pce, libretro/pce_fast, libretro/pcfx
 #, fuzzy
 msgctxt "game_options"
@@ -7302,6 +7307,23 @@ msgstr "판데모니엄 2 지연 화면 업데이트 수정"
 msgctxt "game_options"
 msgid "Parasite Eve 2/Vandal Hearts 1&2 Fix"
 msgstr "페러사이트 이브 2 / 반달 하트 1 & 2 수정"
+
+#. TRANSLATION: libretro/pcsx_rearmed, libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "Hyper Blaster/Justifier"
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed, flycast
+#, fuzzy
+msgctxt "game_options"
+msgid "PLAYER 1 CROSSHAIR COLOR"
+msgstr "플레이어 1 십자선 색상"
+
+#. TRANSLATION: libretro/pcsx_rearmed, flycast
+#, fuzzy
+msgctxt "game_options"
+msgid "PLAYER 2 CROSSHAIR COLOR"
+msgstr "플레이어 2 십자선 색상"
 
 #. TRANSLATION: libretro/pokemini
 #, fuzzy
@@ -10076,16 +10098,30 @@ msgid "JOYSTICK TO CURSOR SENSITIVITY"
 msgstr "조이스틱 대 커서 감도"
 
 #. TRANSLATION: daphne
-#, fuzzy
 msgctxt "game_options"
-msgid "Hide crosshairs in supported games e.g. ActionMax."
-msgstr "지원되는 게임에서 십자선을 숨깁니다(예: ActionMax)."
+msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
+msgstr ""
+
+#. TRANSLATION: daphne, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "LIGHT GUNS"
+msgstr ""
 
 #. TRANSLATION: daphne
 #, fuzzy
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
 msgstr "라이트 건 십자선 숨기기"
+
+#. TRANSLATION: daphne
+msgctxt "game_options"
+msgid "Hidden"
+msgstr ""
+
+#. TRANSLATION: daphne
+msgctxt "game_options"
+msgid "Shown"
+msgstr ""
 
 #. TRANSLATION: daphne
 #, fuzzy
@@ -11148,6 +11184,18 @@ msgstr ""
 msgctxt "game_options"
 msgid "HLE BIOS"
 msgstr ""
+
+#. TRANSLATION: flycast
+#, fuzzy
+msgctxt "game_options"
+msgid "PLAYER 3 CROSSHAIR COLOR"
+msgstr "플레이어 3 십자선 색상"
+
+#. TRANSLATION: flycast
+#, fuzzy
+msgctxt "game_options"
+msgid "PLAYER 4 CROSSHAIR COLOR"
+msgstr "플레이어 4 십자선 색상"
 
 #. TRANSLATION: fpinball
 msgctxt "game_options"
@@ -17514,6 +17562,11 @@ msgstr ""
 
 #, fuzzy
 #~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "지원되는 게임에서 십자선을 숨깁니다(예: ActionMax)."
+
+#, fuzzy
+#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr "코어가 지원하는 경우 실시간으로 되감기할 과거 상태를 저장합니다."
 
@@ -17656,26 +17709,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"
 #~ msgstr "SVideo (색 번짐 만)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "PLAYER 1 CROSSHAIR COLOR"
-#~ msgstr "플레이어 1 십자선 색상"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "PLAYER 2 CROSSHAIR COLOR"
-#~ msgstr "플레이어 2 십자선 색상"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "PLAYER 3 CROSSHAIR COLOR"
-#~ msgstr "플레이어 3 십자선 색상"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "PLAYER 4 CROSSHAIR COLOR"
-#~ msgstr "플레이어 4 십자선 색상"
 
 #, fuzzy
 #~ msgctxt "game_options"
