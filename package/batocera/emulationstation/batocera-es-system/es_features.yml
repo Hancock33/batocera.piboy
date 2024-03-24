@@ -7620,7 +7620,7 @@ citra:
                 "On":  1
 daphne:
   features: [padtokeyboard]
-  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns]
+  shared: [powermode, tdp, videomode, powersave, use_guns]
   cfeatures:
         gfxbackend:
             group: DRIVERS
