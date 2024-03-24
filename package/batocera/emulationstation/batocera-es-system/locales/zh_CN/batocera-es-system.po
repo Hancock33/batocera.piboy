@@ -15409,6 +15409,11 @@ msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr "显示控制器屏幕"
 
+#. TRANSLATION: daphne.daphne.keys
+msgctxt "keys_files"
+msgid "Service menu"
+msgstr ""
+
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
