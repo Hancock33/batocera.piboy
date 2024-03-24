@@ -112,6 +112,13 @@ class DaphneGenerator(Generator):
         bezelPath = "/userdata/system/configs/daphne/bezels/" + bezelFile
         sindenBezelPath = "/userdata/system/configs/daphne/bezels/sinden/" + bezelFile
 
+        if (system.name == 'actionmax'):
+            amDir = '/userdata/roms/actionmax/'
+            os.chdir(amDir)
+            frameFile = amDir + romName + ".txt"
+            commandsFile = amDir + romName + ".commands"
+            singeFile = amDir + romName + ".singe"
+
         # get the first video file from frameFile to determine the resolution
         m2v_filename = self.find_m2v_from_txt(frameFile)
 
@@ -121,7 +128,11 @@ class DaphneGenerator(Generator):
             eslog.debug("No .m2v files found in the text file.")
 
         # now get the resolution from the m2v file
-        video_path = rom + "/" + m2v_filename
+        if (system.name == 'actionmax'):
+            video_path = '/userdata/roms/actionmax/' + m2v_filename
+        else:
+            video_path = rom + "/" + m2v_filename
+
         # check the path exists
         if not os.path.exists(video_path):
             eslog.debug("Could not find m2v file in path - {}".format(video_path))
@@ -133,12 +144,6 @@ class DaphneGenerator(Generator):
             video_resolution = self.get_resolution(video_path)
             eslog.debug("Resolution: {}".format(video_resolution))
 
-        if (system.name == 'actionmax'):
-            amDir = '/userdata/roms/actionmax/'
-            os.chdir(amDir)
-            frameFile = amDir + romName + ".txt"
-            commandsFile = amDir + romName + ".commands"
-            singeFile = amDir + romName + ".singe"
 
         if (system.name == 'actionmax') or (system.name == 'alg') :
             commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
