@@ -438,7 +438,7 @@ msgstr ""
 "Használjon fénypisztolyokat kontrollerek helyett, ha fénypisztolyok vannak "
 "csatlakoztatva."
 
-#. TRANSLATION: shared, shared, libretro/beetle-saturn, libretro/fbneo, libretro/fceumm, ...
+#. TRANSLATION: shared, shared, libretro/beetle-saturn, libretro/swanstation, libretro/fbneo, ...
 msgctxt "game_options"
 msgid "LIGHT GUN"
 msgstr "FÉNYPUSKA"
@@ -3055,6 +3055,11 @@ msgctxt "game_options"
 msgid "PlayStation Mouse"
 msgstr "PlayStation egér"
 
+#. TRANSLATION: libretro/swanstation, libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, ...
+msgctxt "game_options"
+msgid "SHOW LIGHT GUN CROSSHAIRS"
+msgstr "MUTASSA A FÉNYPUSKA KERESZTJÉT"
+
 #. TRANSLATION: libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, ...
 msgctxt "game_options"
 msgid "Digital Controller"
@@ -3079,11 +3084,6 @@ msgstr "CPU ÓRAJEL"
 msgctxt "game_options"
 msgid "No skipping"
 msgstr "Nincs kihagyás"
-
-#. TRANSLATION: libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/mame078plus, ...
-msgctxt "game_options"
-msgid "SHOW LIGHT GUN CROSSHAIRS"
-msgstr "MUTASSA A FÉNYPUSKA KERESZTJÉT"
 
 #. TRANSLATION: libretro/fbneo, libretro/mame078plus
 msgctxt "game_options"
@@ -5623,6 +5623,11 @@ msgctxt "game_options"
 msgid "Analogue Joystick (Flystick)"
 msgstr ""
 
+#. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx
+msgctxt "game_options"
+msgid "Justifier"
+msgstr ""
+
 #. TRANSLATION: libretro/mednafen_supergrafx, libretro/pce, libretro/pce_fast, libretro/pcfx
 msgctxt "game_options"
 msgid "Enhancement. Remove the sixteen sprites per line limit."
@@ -6609,6 +6614,21 @@ msgstr "Pandemonium 2 Lazy Screen Update Fix"
 msgctxt "game_options"
 msgid "Parasite Eve 2/Vandal Hearts 1&2 Fix"
 msgstr "Parasite Eve 2/Vandal Hearts 1&2 Fix"
+
+#. TRANSLATION: libretro/pcsx_rearmed, libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "Hyper Blaster/Justifier"
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed, flycast
+msgctxt "game_options"
+msgid "PLAYER 1 CROSSHAIR COLOR"
+msgstr "JÁTÉKOS 1 CÉLKERESZT SZÍNE"
+
+#. TRANSLATION: libretro/pcsx_rearmed, flycast
+msgctxt "game_options"
+msgid "PLAYER 2 CROSSHAIR COLOR"
+msgstr "JÁTÉKOS 2 CÉLKERESZT SZÍNE"
 
 #. TRANSLATION: libretro/pokemini
 msgctxt "game_options"
@@ -9101,12 +9121,27 @@ msgstr ""
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
-msgid "Hide crosshairs in supported games e.g. ActionMax."
-msgstr "Célkereszt elrejtése a támogatott játékokban, pl. ActionMax."
+msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
+msgstr ""
+
+#. TRANSLATION: daphne, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "LIGHT GUNS"
+msgstr ""
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
+msgstr ""
+
+#. TRANSLATION: daphne
+msgctxt "game_options"
+msgid "Hidden"
+msgstr ""
+
+#. TRANSLATION: daphne
+msgctxt "game_options"
+msgid "Shown"
 msgstr ""
 
 #. TRANSLATION: daphne
@@ -9207,6 +9242,26 @@ msgstr ""
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Wii Remote Sideway + Nunchuk"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Position of wii sensor bar relative to the disaply for real wiimotes."
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "SENSOR BAR POSITION"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Bottom (Default)"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Top"
 msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3
@@ -10067,6 +10122,16 @@ msgstr ""
 msgctxt "game_options"
 msgid "HLE BIOS"
 msgstr ""
+
+#. TRANSLATION: flycast
+msgctxt "game_options"
+msgid "PLAYER 3 CROSSHAIR COLOR"
+msgstr "JÁTÉKOS 3 CÉLKERESZT SZÍNE"
+
+#. TRANSLATION: flycast
+msgctxt "game_options"
+msgid "PLAYER 4 CROSSHAIR COLOR"
+msgstr "JÁTÉKOS 4 CÉLKERESZT SZÍNE"
 
 #. TRANSLATION: fpinball
 msgctxt "game_options"
@@ -15224,6 +15289,11 @@ msgstr "45s"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
+msgid "60s"
+msgstr ""
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
 msgid ""
 "Enable cache mount. Can improve performance and compatibility in some games."
 msgstr ""
@@ -15559,6 +15629,11 @@ msgstr "Kilépés a  Dosbox-X-ből"
 msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr "A vezérlő képernyőjének megjelenítése"
+
+#. TRANSLATION: daphne.daphne.keys
+msgctxt "keys_files"
+msgid "Service menu"
+msgstr ""
 
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
@@ -16131,6 +16206,10 @@ msgid "Quick Save"
 msgstr "Gyors mentés"
 
 #~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Célkereszt elrejtése a támogatott játékokban, pl. ActionMax."
+
+#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (Óvatosan!)"
 
@@ -16266,22 +16345,6 @@ msgstr "Gyors mentés"
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"
 #~ msgstr "SVideo (csak színes vérzés)"
-
-#~ msgctxt "game_options"
-#~ msgid "PLAYER 1 CROSSHAIR COLOR"
-#~ msgstr "JÁTÉKOS 1 CÉLKERESZT SZÍNE"
-
-#~ msgctxt "game_options"
-#~ msgid "PLAYER 2 CROSSHAIR COLOR"
-#~ msgstr "JÁTÉKOS 2 CÉLKERESZT SZÍNE"
-
-#~ msgctxt "game_options"
-#~ msgid "PLAYER 3 CROSSHAIR COLOR"
-#~ msgstr "JÁTÉKOS 3 CÉLKERESZT SZÍNE"
-
-#~ msgctxt "game_options"
-#~ msgid "PLAYER 4 CROSSHAIR COLOR"
-#~ msgstr "JÁTÉKOS 4 CÉLKERESZT SZÍNE"
 
 #~ msgctxt "game_options"
 #~ msgid "Simulate LCD color inaccuracy."
@@ -16495,10 +16558,6 @@ msgstr "Gyors mentés"
 #~ msgctxt "game_options"
 #~ msgid "PS1 Analog Joystick"
 #~ msgstr "PS1 analóg joystick"
-
-#~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "Namco GunCon (Rezgő)"
 
 #~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"
@@ -16767,6 +16826,10 @@ msgstr "Gyors mentés"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Gyors előre"
+
+#~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "Namco GunCon (Rezgő)"
 
 #~ msgctxt "game_options"
 #~ msgid "INSTALL MEDIA FOUNDATION"

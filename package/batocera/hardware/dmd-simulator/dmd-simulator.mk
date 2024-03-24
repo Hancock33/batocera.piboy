@@ -3,8 +3,8 @@
 # DMD_SIMULATOR
 #
 ################################################################################
-# Version: Commits on Mar 15, 2024
-DMD_SIMULATOR_VERSION = 1dc47437cf16b031e51a305771c8b08941cbe6b7
+# Version: Commits on Mar 21, 2024
+DMD_SIMULATOR_VERSION = 0e42c32c1cd7f0795110319c57f5afa5640391eb
 DMD_SIMULATOR_SITE =  $(call github,batocera-linux,dmd-simulator,$(DMD_SIMULATOR_VERSION))
 
 define DMD_SIMULATOR_INSTALL_DMD_SIMULATOR
@@ -16,10 +16,10 @@ define DMD_SIMULATOR_INSTALL_DMD_SIMULATOR_PLAYER
 	mkdir -p $(TARGET_DIR)/usr/bin
 	$(INSTALL) -D -m 0755 $(@D)/dmd-play.py      $(TARGET_DIR)/usr/bin/dmd-play
 
-        mkdir -p $(TARGET_DIR)/usr/share/dmd-simulator/scripts
-        $(INSTALL) -m 0755 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/hardware/dmd-simulator/scripts/*.sh $(TARGET_DIR)/usr/share/dmd-simulator/scripts/
+	mkdir -p $(TARGET_DIR)/usr/share/dmd-simulator/scripts
+	$(INSTALL) -m 0755 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/hardware/dmd-simulator/scripts/*.sh $(TARGET_DIR)/usr/share/dmd-simulator/scripts/
 
-        mkdir -p $(TARGET_DIR)/usr/share/batocera/services
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/services
 	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/hardware/dmd-simulator/dmd_simulator.service $(TARGET_DIR)/usr/share/batocera/services/dmd_simulator
 
 	$(INSTALL) -m 0644 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/hardware/dmd-simulator/batocera.png $(TARGET_DIR)/usr/share/dmd-simulator/images/system/batocera.png

@@ -4,7 +4,7 @@
 # It shows the unique BATOCERA logo in early boot stage
 enabledex="$(batocera-settings-get -f /boot/batocera-boot.conf key piboy.enabled)"
 enabledxrs="$(batocera-settings-get -f /boot/batocera-boot.conf key piboyxrs.enabled)"
-
+	
 do_start ()
 {
     # on some sytems, fb0 is not immediatly loaded, so, keep a chance by waiting a bit
@@ -46,7 +46,6 @@ do_start ()
     # FBV_OPTS can be set differently for some boards to work
     MODELOPTS="/etc/opts.$V_BOARD_MODEL"
     test -e "${MODELOPTS}" && . "${MODELOPTS}"
-
     test -e /dev/fb0 && fbv ${FBV_OPTS} -i "${image}"
 }
 

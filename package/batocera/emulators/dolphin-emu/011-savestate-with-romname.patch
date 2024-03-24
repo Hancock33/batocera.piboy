@@ -1,9 +1,9 @@
 diff --git a/Source/Core/Core/BootManager.cpp b/Source/Core/Core/BootManager.cpp
-index 1c9e2f03d4..a66c157365 100644
+index 9e9fb3b58c..324bcfa1ee 100644
 --- a/Source/Core/Core/BootManager.cpp
 +++ b/Source/Core/Core/BootManager.cpp
-@@ -65,6 +65,11 @@ bool BootCore(std::unique_ptr<BootParameters> boot, const WindowSystemInfo& wsi)
-   if (!StartUp.SetPathsAndGameMetadata(*boot))
+@@ -66,6 +66,11 @@ bool BootCore(Core::System& system, std::unique_ptr<BootParameters> boot,
+   if (!StartUp.SetPathsAndGameMetadata(system, *boot))
      return false;
  
 +  if (std::holds_alternative<BootParameters::Disc>(boot->parameters))
@@ -12,13 +12,13 @@ index 1c9e2f03d4..a66c157365 100644
 +  }
 +
    // Movie settings
-   if (Movie::IsPlayingInput() && Movie::IsConfigSaved())
-   {
+   auto& movie = system.GetMovie();
+   if (movie.IsPlayingInput() && movie.IsConfigSaved())
 diff --git a/Source/Core/Core/ConfigManager.cpp b/Source/Core/Core/ConfigManager.cpp
-index 27b7b2a51b..3ab040b3a4 100644
+index fb6fda4754..f7e50cfa08 100644
 --- a/Source/Core/Core/ConfigManager.cpp
 +++ b/Source/Core/Core/ConfigManager.cpp
-@@ -141,6 +141,10 @@ void SConfig::SetRunningGameMetadata(const std::string& game_id)
+@@ -142,6 +142,10 @@ void SConfig::SetRunningGameMetadata(const std::string& game_id)
    SetRunningGameMetadata(game_id, "", 0, 0, DiscIO::Region::Unknown);
  }
  
@@ -30,10 +30,10 @@ index 27b7b2a51b..3ab040b3a4 100644
                                       u64 title_id, u16 revision, DiscIO::Region region)
  {
 diff --git a/Source/Core/Core/ConfigManager.h b/Source/Core/Core/ConfigManager.h
-index 4c0eac3fe5..60fc668c9d 100644
+index 999cc9f86c..dd649a037a 100644
 --- a/Source/Core/Core/ConfigManager.h
 +++ b/Source/Core/Core/ConfigManager.h
-@@ -64,6 +64,8 @@ struct SConfig
+@@ -61,6 +61,8 @@ struct SConfig
    // TODO: remove this as soon as the ticket view hack in IOS/ES/Views is dropped.
    bool m_disc_booted_from_game_list = false;
  
@@ -42,7 +42,7 @@ index 4c0eac3fe5..60fc668c9d 100644
    const std::string& GetGameID() const { return m_game_id; }
    const std::string& GetGameTDBID() const { return m_gametdb_id; }
    const std::string& GetTitleName() const { return m_title_name; }
-@@ -118,6 +120,7 @@ private:
+@@ -115,6 +117,7 @@ private:
  
    static SConfig* m_Instance;
  
@@ -51,10 +51,10 @@ index 4c0eac3fe5..60fc668c9d 100644
    std::string m_gametdb_id;
    std::string m_title_name;
 diff --git a/Source/Core/Core/Core.cpp b/Source/Core/Core/Core.cpp
-index 536244869a..321dee2eff 100644
+index 565ff0d2eb..b124072944 100644
 --- a/Source/Core/Core/Core.cpp
 +++ b/Source/Core/Core/Core.cpp
-@@ -805,10 +805,14 @@ void SaveScreenShot()
+@@ -791,10 +791,14 @@ void SaveScreenShot()
    Core::RunAsCPUThread([] { g_frame_dumper->SaveScreenshot(GenerateScreenshotName()); });
  }
  
@@ -73,10 +73,10 @@ index 536244869a..321dee2eff 100644
  }
  
 diff --git a/Source/Core/Core/Core.h b/Source/Core/Core/Core.h
-index d8c5c9a0da..7f7312f82a 100644
+index 1f9baa35b3..e1118b8185 100644
 --- a/Source/Core/Core/Core.h
 +++ b/Source/Core/Core/Core.h
-@@ -151,6 +151,7 @@ void SetState(State state, bool report_state_change = true);
+@@ -150,6 +150,7 @@ void SetState(State state, bool report_state_change = true);
  State GetState();
  
  void SaveScreenShot();
@@ -85,11 +85,11 @@ index d8c5c9a0da..7f7312f82a 100644
  
  // This displays messages in a user-visible way.
 diff --git a/Source/Core/Core/State.cpp b/Source/Core/Core/State.cpp
-index 7879b84dda..bd0ef385ed 100644
+index 4e7d061d36..29ac5ce197 100644
 --- a/Source/Core/Core/State.cpp
 +++ b/Source/Core/Core/State.cpp
-@@ -285,7 +285,10 @@ static std::string SystemTimeAsDoubleToString(double time)
- #endif
+@@ -289,7 +289,10 @@ static std::string SystemTimeAsDoubleToString(double time)
+   return fmt::format(std::locale{""}, "{:%x %X}", *local_time);
  }
  
 -static std::string MakeStateFilename(int number);
@@ -100,7 +100,7 @@ index 7879b84dda..bd0ef385ed 100644
  
  static std::vector<SlotWithTimestamp> GetUsedSlotsWithTimestamp()
  {
-@@ -293,7 +296,7 @@ static std::vector<SlotWithTimestamp> GetUsedSlotsWithTimestamp()
+@@ -297,7 +300,7 @@ static std::vector<SlotWithTimestamp> GetUsedSlotsWithTimestamp()
    StateHeader header;
    for (int i = 1; i <= (int)NUM_STATES; i++)
    {
@@ -109,7 +109,7 @@ index 7879b84dda..bd0ef385ed 100644
      if (File::Exists(filename))
      {
        if (ReadHeader(filename, header))
-@@ -624,7 +627,7 @@ bool ReadHeader(const std::string& filename, StateHeader& header)
+@@ -640,7 +643,7 @@ bool ReadHeader(const std::string& filename, StateHeader& header)
  
  std::string GetInfoStringOfSlot(int slot, bool translate)
  {
@@ -118,7 +118,7 @@ index 7879b84dda..bd0ef385ed 100644
    if (!File::Exists(filename))
      return translate ? Common::GetStringT("Empty") : "Empty";
  
-@@ -638,7 +641,7 @@ std::string GetInfoStringOfSlot(int slot, bool translate)
+@@ -654,7 +657,7 @@ std::string GetInfoStringOfSlot(int slot, bool translate)
  u64 GetUnixTimeOfSlot(int slot)
  {
    State::StateHeader header;
@@ -127,7 +127,7 @@ index 7879b84dda..bd0ef385ed 100644
      return 0;
  
    constexpr u64 MS_PER_SEC = 1000;
-@@ -940,20 +943,49 @@ void Shutdown()
+@@ -965,20 +968,49 @@ void Shutdown()
    }
  }
  
@@ -148,37 +148,38 @@ index 7879b84dda..bd0ef385ed 100644
 +    return fileWithId;
 +  if(filePartName == "") return fileWithId;
 +  return fileWithName;
-+}
-+
+ }
+ 
+-void Save(Core::System& system, int slot, bool wait)
 +static std::string MakeStateFilename_partdirectory(int number)
 +{
 +  return File::GetUserPath(D_STATESAVES_IDX);
 +}
 +
 +static std::string MakeStateFilename_partfileID(int number)
-+{
+ {
+-  SaveAs(system, MakeStateFilename(slot), wait);
 +  return fmt::format("{}.s{:02d}", SConfig::GetInstance().GetGameID(), number);
-+}
-+
+ }
+ 
 +static std::string MakeStateFilename_partfileName(int number)
 +{
 +  std::string basesavestate = SConfig::GetInstance().GetBaseSaveState();
 +  if(basesavestate == "") return "";
 +  return fmt::format("{}.s{:02d}", basesavestate, number);
- }
- 
- void Save(int slot, bool wait)
- {
--  SaveAs(MakeStateFilename(slot), wait);
++ }
++ 
++void Save(Core::System& system, int slot, bool wait)
++{
 +  std::string savePath = MakeStateFilename(false, slot);
-+  SaveAs(savePath, wait);
++  SaveAs(system, savePath, wait);
 +  Core::SaveScreenShotWithPath(MakeStateFilename_partdirectory(slot), PathToFileName(savePath));
- }
- 
- void Load(int slot)
++}
++ 
+ void Load(Core::System& system, int slot)
  {
--  LoadAs(MakeStateFilename(slot));
-+  LoadAs(MakeStateFilename(true, slot));
+-  LoadAs(system, MakeStateFilename(slot));
++  LoadAs(system, MakeStateFilename(true, slot));
  }
  
- void LoadLastSaved(int i)
+ void LoadLastSaved(Core::System& system, int i)

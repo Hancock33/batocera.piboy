@@ -476,6 +476,13 @@ def configureINI(config_directory, bios_directory, system, rom, controllers, met
                 nc = nc + 1
             if gun1onport2:
                 pcsx2INIConfig.set("USB2", "guncon2_numdevice", "0")
+    # Gun crosshairs - one player only, PCSX2 can't distinguish both crosshair for some reason
+    if system.isOptSet('pcsx2_crosshairs') and system.config["pcsx2_crosshairs"] == "1":
+        pcsx2INIConfig.set("USB1", "guncon2_cursor_path", "/usr/pcsx2/bin/resources/crosshairs/Blue.png")
+        pcsx2INIConfig.set("USB2", "guncon2_cursor_path", "/usr/pcsx2/bin/resources/crosshairs/Red.png")
+    else:
+        pcsx2INIConfig.set("USB1", "guncon2_cursor_path", "")
+        pcsx2INIConfig.set("USB2", "guncon2_cursor_path", "")
 
     # hack for the fog bug for guns (time crisis - crisis zone)
     fog_files = [

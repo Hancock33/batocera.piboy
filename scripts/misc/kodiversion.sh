@@ -44,7 +44,8 @@ visualization.waveform"
 for i in $make_sub_sys
 do
     echo $i@ >> /tmp/kodi.txt
-	git ls-remote https://github.com/xbmc/$i | grep Nexus >> /tmp/kodi.txt
+	#git ls-remote https://github.com/xbmc/$i | grep Nexus >> /tmp/kodi.txt
+	git -c 'versionsort.suffix=-' ls-remote --exit-code --refs --sort='version:refname' --tags https://github.com/xbmc/$i '*.*.*'| grep Nexus | tail --lines=1 | cut --delimiter='/' --fields=3 >> /tmp/kodi.txt
 done
 
 kodi_norepo="texturepacker"
@@ -54,7 +55,8 @@ kodi_per="peripheral.xarcade"
 for i in $kodi_per
 do
     echo $i@ >> /tmp/kodi.txt
-	git ls-remote https://github.com/kodi-game/$i | grep Nexus >> /tmp/kodi.txt
+	#git ls-remote https://github.com/kodi-game/$i | grep Nexus >> /tmp/kodi.txt
+	git -c 'versionsort.suffix=-' ls-remote --exit-code --refs --sort='version:refname' --tags https://github.com/kodi-game/$i '*.*.*'| grep Nexus | tail --lines=1 | cut --delimiter='/' --fields=3 >> /tmp/kodi.txt
 done
 
 kodi_pvr="pvr.argustv
@@ -82,5 +84,6 @@ pvr.zattoo"
 for i in $kodi_pvr
 do
     echo $i@ >> /tmp/kodi.txt
-	git ls-remote https://github.com/kodi-pvr/$i | grep Nexus >> /tmp/kodi.txt
+	#git ls-remote https://github.com/kodi-pvr/$i | grep Nexus >> /tmp/kodi.txt
+	git -c 'versionsort.suffix=-' ls-remote --exit-code --refs --sort='version:refname' --tags https://github.com/kodi-pvr/$i '*.*.*'| grep Nexus | tail --lines=1 | cut --delimiter='/' --fields=3 >> /tmp/kodi.txt
 done

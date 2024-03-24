@@ -4,15 +4,15 @@
 #
 ################################################################################
 
-WINE_STAGING_VERSION = 552cc456d1889ab3ee0dd5ead6c7520c34d030c0
+WINE_STAGING_VERSION = wine-9.5
 WINE_STAGING_SOURCE = wine-$(WINE_STAGING_VERSION).tar.gz
 WINE_STAGING_SITE = $(call github,wine-mirror,wine,$(WINE_STAGING_VERSION))
 WINE_STAGING_LICENSE = LGPL-2.1+
 WINE_STAGING_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_STAGING_SELINUX_MODULES = wine
-WINE_STAGING_DEPENDENCIES = host-bison host-flex host-wine-staging
+WINE_STAGING_DEPENDENCIES = host-bison host-flex host-wine-custom
 HOST_WINE_STAGING_DEPENDENCIES = host-bison host-flex
-WINE_STAGING_STAGING_VERSION = 6a314e5994fd5701ef1142030071ea6e4cdc9b40
+WINE_STAGING_STAGING_VERSION = v9.5
 HOST_WINE_STAGING_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/$(WINE_STAGING_STAGING_VERSION).tar.gz
 
 ifeq ($(BR_CMAKE_USE_CLANG),y)
@@ -38,7 +38,7 @@ HOST_WINE_STAGING_PRE_CONFIGURE_HOOKS += WINE_STAGING_AUTOGEN
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_STAGING_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
-	--with-wine-tools=$(BUILD_DIR)/host-wine-staging-$(WINE_STAGING_VERSION) \
+	--with-wine-tools=$(BUILD_DIR)/host-wine-custom-$(WINE_CUSTOM_VERSION) \
 	--disable-tests \
 	--without-capi \
 	--without-coreaudio \
@@ -121,13 +121,6 @@ WINE_STAGING_CONF_OPTS += --with-gstreamer
 WINE_STAGING_DEPENDENCIES += gst1-plugins-base
 else
 WINE_STAGING_CONF_OPTS += --without-gstreamer
-endif
-
-ifeq ($(BR2_PACKAGE_LIBGCRYPT),y)
-WINE_STAGING_CONF_OPTS += --with-gcrypt
-WINE_STAGING_DEPENDENCIES += libgcrypt
-else
-WINE_STAGING_CONF_OPTS += --without-gcrypt
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)

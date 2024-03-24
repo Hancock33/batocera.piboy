@@ -435,7 +435,7 @@ msgctxt "game_options"
 msgid "Use light guns instead of pads if light guns are connected."
 msgstr "Eğer silah bağlı ise padlerin yerine silah kullan."
 
-#. TRANSLATION: shared, shared, libretro/beetle-saturn, libretro/fbneo, libretro/fceumm, ...
+#. TRANSLATION: shared, shared, libretro/beetle-saturn, libretro/swanstation, libretro/fbneo, ...
 msgctxt "game_options"
 msgid "LIGHT GUN"
 msgstr "LIGHT GUN"
@@ -3029,6 +3029,11 @@ msgctxt "game_options"
 msgid "PlayStation Mouse"
 msgstr "PlayStation Faresi"
 
+#. TRANSLATION: libretro/swanstation, libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, ...
+msgctxt "game_options"
+msgid "SHOW LIGHT GUN CROSSHAIRS"
+msgstr "SİLAH HEDEF İMLECİNİ GÖSTER"
+
 #. TRANSLATION: libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, ...
 msgctxt "game_options"
 msgid "Digital Controller"
@@ -3053,11 +3058,6 @@ msgstr "CPU SAATİ"
 msgctxt "game_options"
 msgid "No skipping"
 msgstr "ATLAMA YOK"
-
-#. TRANSLATION: libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/mame078plus, ...
-msgctxt "game_options"
-msgid "SHOW LIGHT GUN CROSSHAIRS"
-msgstr "SİLAH HEDEF İMLECİNİ GÖSTER"
 
 #. TRANSLATION: libretro/fbneo, libretro/mame078plus
 msgctxt "game_options"
@@ -5587,6 +5587,11 @@ msgctxt "game_options"
 msgid "Analogue Joystick (Flystick)"
 msgstr ""
 
+#. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx
+msgctxt "game_options"
+msgid "Justifier"
+msgstr ""
+
 #. TRANSLATION: libretro/mednafen_supergrafx, libretro/pce, libretro/pce_fast, libretro/pcfx
 msgctxt "game_options"
 msgid "Enhancement. Remove the sixteen sprites per line limit."
@@ -6571,6 +6576,21 @@ msgstr "Pandemonium 2 Tembel Ekran Güncellemesi Düzelt"
 msgctxt "game_options"
 msgid "Parasite Eve 2/Vandal Hearts 1&2 Fix"
 msgstr "Parasite Eve 2/Vandal Hearts 1&2 Düzelt"
+
+#. TRANSLATION: libretro/pcsx_rearmed, libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "Hyper Blaster/Justifier"
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed, flycast
+msgctxt "game_options"
+msgid "PLAYER 1 CROSSHAIR COLOR"
+msgstr "OYUNCU 1 HEDEF İMLECİ RENGİ"
+
+#. TRANSLATION: libretro/pcsx_rearmed, flycast
+msgctxt "game_options"
+msgid "PLAYER 2 CROSSHAIR COLOR"
+msgstr "OYUNCU 2 HEDEF İMLECİ RENGİ"
 
 #. TRANSLATION: libretro/pokemini
 msgctxt "game_options"
@@ -9065,13 +9085,28 @@ msgstr "JOYSTICK'TEN İMLEÇ HASSASİYETİNE"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
-msgid "Hide crosshairs in supported games e.g. ActionMax."
-msgstr "Desteklenen oyunlarda hedef imlecini gizle, ör. ActionMax."
+msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
+msgstr ""
+
+#. TRANSLATION: daphne, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "LIGHT GUNS"
+msgstr ""
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
 msgstr "SİLAH HEDEF İMLECİ GİZLE"
+
+#. TRANSLATION: daphne
+msgctxt "game_options"
+msgid "Hidden"
+msgstr ""
+
+#. TRANSLATION: daphne
+msgctxt "game_options"
+msgid "Shown"
+msgstr ""
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
@@ -9171,6 +9206,26 @@ msgstr ""
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Wii Remote Sideway + Nunchuk"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Position of wii sensor bar relative to the disaply for real wiimotes."
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "SENSOR BAR POSITION"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Bottom (Default)"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Top"
 msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3
@@ -10057,6 +10112,16 @@ msgstr ""
 msgctxt "game_options"
 msgid "HLE BIOS"
 msgstr ""
+
+#. TRANSLATION: flycast
+msgctxt "game_options"
+msgid "PLAYER 3 CROSSHAIR COLOR"
+msgstr "OYUNCU 3 HEDEF İMLECİ RENGİ"
+
+#. TRANSLATION: flycast
+msgctxt "game_options"
+msgid "PLAYER 4 CROSSHAIR COLOR"
+msgstr "OYUNCU 4 HEDEF İMLECİ RENGİ"
 
 #. TRANSLATION: fpinball
 msgctxt "game_options"
@@ -15238,6 +15303,11 @@ msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
+msgid "60s"
+msgstr ""
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
 msgid ""
 "Enable cache mount. Can improve performance and compatibility in some games."
 msgstr ""
@@ -15573,6 +15643,11 @@ msgstr "Dosbox-X Kapat"
 msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr "Kontrolcü ekranını görüntüleyin"
+
+#. TRANSLATION: daphne.daphne.keys
+msgctxt "keys_files"
+msgid "Service menu"
+msgstr ""
 
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
@@ -16145,6 +16220,10 @@ msgid "Quick Save"
 msgstr "Hızlı Kaydet"
 
 #~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Desteklenen oyunlarda hedef imlecini gizle, ör. ActionMax."
+
+#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Çekirdek destekliyorsa, gerçek zamanlı olarak geri sarmak için geçmiş "
@@ -16274,22 +16353,6 @@ msgstr "Hızlı Kaydet"
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"
 #~ msgstr "SVideo (yalnızca renk kanaması)"
-
-#~ msgctxt "game_options"
-#~ msgid "PLAYER 1 CROSSHAIR COLOR"
-#~ msgstr "OYUNCU 1 HEDEF İMLECİ RENGİ"
-
-#~ msgctxt "game_options"
-#~ msgid "PLAYER 2 CROSSHAIR COLOR"
-#~ msgstr "OYUNCU 2 HEDEF İMLECİ RENGİ"
-
-#~ msgctxt "game_options"
-#~ msgid "PLAYER 3 CROSSHAIR COLOR"
-#~ msgstr "OYUNCU 3 HEDEF İMLECİ RENGİ"
-
-#~ msgctxt "game_options"
-#~ msgid "PLAYER 4 CROSSHAIR COLOR"
-#~ msgstr "OYUNCU 4 HEDEF İMLECİ RENGİ"
 
 #~ msgctxt "game_options"
 #~ msgid "Simulate LCD color inaccuracy."
@@ -16540,10 +16603,6 @@ msgstr "Hızlı Kaydet"
 #~ msgctxt "game_options"
 #~ msgid "PS1 Analog Joystick"
 #~ msgstr "PS1 Analog Joystick"
-
-#~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "Namco GunCon (Sarsıntı)"
 
 #~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"
@@ -16859,6 +16918,10 @@ msgstr "Hızlı Kaydet"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Hızlı İleri"
+
+#~ msgctxt "game_options"
+#~ msgid "Namco GunCon (Rumble)"
+#~ msgstr "Namco GunCon (Sarsıntı)"
 
 #~ msgctxt "game_options"
 #~ msgid "INSTALL MEDIA FOUNDATION"

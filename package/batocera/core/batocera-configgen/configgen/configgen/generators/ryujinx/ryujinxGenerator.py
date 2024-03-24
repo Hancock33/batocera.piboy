@@ -99,6 +99,7 @@ class RyujinxGenerator(Generator):
             conf = {}
 
         # Set defaults
+        conf['backend_threading'] = 'Auto'
         conf["enable_discord_integration"] = False
         conf["check_updates_on_start"] = False
         conf["show_confirm_exit"] = False
@@ -106,11 +107,11 @@ class RyujinxGenerator(Generator):
         conf["game_dirs"] = ["/userdata/roms/switch"]
         conf["start_fullscreen"] = True
         conf["docked_mode"] = True
-        conf["audio_backend"] = "OpenAl"
+        conf["audio_backend"] = "SDL2"
         conf["audio_volume"] = 1
 
         # set ryujinx app language
-        conf["language_code"] = "en_US"
+        conf["language_code"] = str(getLangFromEnvironment())
 
         # Console language, time & date
         if system.isOptSet("ryujinx_language"):
@@ -182,7 +183,7 @@ class RyujinxGenerator(Generator):
                 for dev in devices:
                     if dev.path == pad.dev:
                         bustype = "%x" % dev.info.bustype
-                        bustype = bustype.zfill(8)
+                        bustype = bustype.zfill(4)
                         vendor = "%x" % dev.info.vendor
                         vendor = vendor.zfill(4)
                         product = "%x" % dev.info.product
@@ -197,7 +198,7 @@ class RyujinxGenerator(Generator):
                         version1 = (version)[-2::]
                         version2 = (version)[:-2]
                         version = version1 + version2
-                        ctrlUUID = (f"{pad.index}-{bustype}-{vendor}-0000-{product}-0000{version}0000")
+                        ctrlUUID = (f"{pad.index}-17f6{bustype}-{vendor}-0000-{product}-0000{version}0000")
                         ctrlConf["id"] = ctrlUUID
                         # always configure a pro controller for now
                         ctrlConf["controller_type"] = "ProController"
@@ -229,3 +230,13 @@ def writeControllerIntoJson(new_controller, filename=ryujinxConfFile):
         file_data["input_config"].append(new_controller)
         file.seek(0)
         json.dump(file_data, file, indent=2)
+
+def getLangFromEnvironment():
+    lang = environ['LANG'][:5]
+    availableLanguages = { "jp_JP": 0, "en_US": 1, "de_DE": 2,
+                           "fr_FR": 3, "es_ES": 4, "it_IT": 5,
+                           "nl_NL": 6, "zh_CN": 7, "zh_TW": 8, "ko_KR": 9 }
+    if lang in availableLanguages:
+        return availableLanguages[lang]
+    else:
+        return availableLanguages["en_US"]

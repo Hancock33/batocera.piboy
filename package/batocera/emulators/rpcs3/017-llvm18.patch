@@ -1,0 +1,80 @@
+diff --git a/3rdparty/llvm/CMakeLists.txt b/3rdparty/llvm/CMakeLists.txt
+index fdadd8c5d..28dbf06b0 100644
+--- a/3rdparty/llvm/CMakeLists.txt
++++ b/3rdparty/llvm/CMakeLists.txt
+@@ -36,12 +36,7 @@ if(WITH_LLVM)
+ 
+ 		set(STATIC_LINK_LLVM ON CACHE BOOL "Link against LLVM statically. This will get set to ON if you build LLVM from the submodule." FORCE)
+ 
+-		# now tries to find LLVM again
+ 		find_package(LLVM 16.0 CONFIG)
+-		if(NOT LLVM_FOUND)
+-			set(LLVM_DIR "${CMAKE_CURRENT_BINARY_DIR}/llvm_build/lib/cmake/llvm/")
+-			find_package(LLVM 17.0 CONFIG)
+-		endif()
+ 		if(NOT LLVM_FOUND)
+ 			message(FATAL_ERROR "Couldn't build LLVM from the submodule. You might need to run `git submodule update --init`")
+ 		endif()
+@@ -53,20 +48,16 @@ if(WITH_LLVM)
+ 			set(LLVM_DIR ${CMAKE_SOURCE_DIR}/${LLVM_DIR})
+ 		endif()
+ 
+-		find_package(LLVM 16.0 CONFIG)
+-		if(NOT LLVM_FOUND)
+-			find_package(LLVM 17.0 CONFIG)
+-		endif()
++		find_package(LLVM CONFIG)
+ 
+ 		if (NOT LLVM_FOUND)
+-			if (LLVM_VERSION AND LLVM_VERSION_MAJOR LESS 16)
+-				message(FATAL_ERROR "Found LLVM version ${LLVM_VERSION}. Required versions 16...17. \
+-														 Enable BUILD_LLVM option to build LLVM from included as a git submodule.")
+-			endif()
+-
+ 			message(FATAL_ERROR "Can't find LLVM libraries from the CMAKE_PREFIX_PATH path or LLVM_DIR. \
+ 													 Enable BUILD_LLVM option to build LLVM from included as a git submodule.")
+ 		endif()
++		if (LLVM_VERSION VERSION_LESS 16)
++			message(FATAL_ERROR "Found LLVM version ${LLVM_VERSION}. Required version 16 or above. \
++													 Enable BUILD_LLVM option to build LLVM from included as a git submodule.")
++		endif()
+ 	endif()
+ 
+ 	if (STATIC_LINK_LLVM)
+diff --git a/Utilities/JITLLVM.cpp b/Utilities/JITLLVM.cpp
+index a14cf25a6..e514f5c62 100644
+--- a/Utilities/JITLLVM.cpp
++++ b/Utilities/JITLLVM.cpp
+@@ -30,6 +30,7 @@ LOG_CHANNEL(jit_log, "JIT");
+ #pragma GCC diagnostic ignored "-Weffc++"
+ #pragma GCC diagnostic ignored "-Wmissing-noreturn"
+ #endif
++#include <llvm/Support/CodeGen.h>
+ #include "llvm/Support/TargetSelect.h"
+ #include "llvm/TargetParser/Host.h"
+ #include "llvm/ExecutionEngine/ExecutionEngine.h"
+@@ -542,7 +543,11 @@ jit_compiler::jit_compiler(const std::unordered_map<std::string, u64>& _link, co
+ 			.setErrorStr(&result)
+ 			.setEngineKind(llvm::EngineKind::JIT)
+ 			.setMCJITMemoryManager(std::move(mem))
++#if LLVM_VERSION_MAJOR < 18
+ 			.setOptLevel(llvm::CodeGenOpt::Aggressive)
++#else
++			.setOptLevel(llvm::CodeGenOptLevel::Aggressive)
++#endif
+ 			.setCodeModel(flags & 0x2 ? llvm::CodeModel::Large : llvm::CodeModel::Small)
+ #ifdef __APPLE__
+ 			//.setCodeModel(llvm::CodeModel::Large)
+diff --git a/rpcs3/util/types.hpp b/rpcs3/util/types.hpp
+index dd90e0dda..cc7ff5b1b 100644
+--- a/rpcs3/util/types.hpp
++++ b/rpcs3/util/types.hpp
+@@ -1057,7 +1057,7 @@ template <typename CT> requires requires (const CT& x) { std::size(x); }
+ 	}
+ 	else
+ 	{
+-		return narrow<u32>(std::size(container), line, col, file, func);
++		return narrow<u32>(container.size(), line, col, file, func);
+ 	}
+ }
+ 

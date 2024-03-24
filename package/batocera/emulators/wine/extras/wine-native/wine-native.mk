@@ -4,13 +4,13 @@
 #
 ################################################################################
 
-WINE_NATIVE_VERSION = wine-9.4
+WINE_NATIVE_VERSION = wine-9.5
 WINE_NATIVE_SOURCE = wine-$(WINE_NATIVE_VERSION).tar.gz
 WINE_NATIVE_SITE = $(call github,wine-mirror,wine,$(WINE_NATIVE_VERSION))
 WINE_NATIVE_LICENSE = LGPL-2.1+
 WINE_NATIVE_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_NATIVE_SELINUX_MODULES = wine
-WINE_NATIVE_DEPENDENCIES = host-bison host-flex host-wine-native
+WINE_NATIVE_DEPENDENCIES = host-bison host-flex host-wine-custom
 HOST_WINE_NATIVE_DEPENDENCIES = host-bison host-flex
 
 ifeq ($(BR_CMAKE_USE_CLANG),y)
@@ -32,7 +32,7 @@ HOST_WINE_NATIVE_PRE_CONFIGURE_HOOKS += WINE_NATIVE_AUTOGEN
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_NATIVE_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
-	--with-wine-tools=$(BUILD_DIR)/host-wine-native-$(WINE_NATIVE_VERSION) \
+	--with-wine-tools=$(BUILD_DIR)/host-wine-custom-$(WINE_CUSTOM_VERSION) \
 	--disable-tests \
 	--without-capi \
 	--without-coreaudio \
@@ -115,13 +115,6 @@ WINE_NATIVE_CONF_OPTS += --with-gstreamer
 WINE_NATIVE_DEPENDENCIES += gst1-plugins-base
 else
 WINE_NATIVE_CONF_OPTS += --without-gstreamer
-endif
-
-ifeq ($(BR2_PACKAGE_LIBGCRYPT),y)
-WINE_NATIVE_CONF_OPTS += --with-gcrypt
-WINE_NATIVE_DEPENDENCIES += libgcrypt
-else
-WINE_NATIVE_CONF_OPTS += --without-gcrypt
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)

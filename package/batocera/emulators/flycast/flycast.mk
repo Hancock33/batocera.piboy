@@ -3,8 +3,8 @@
 # flycast
 #
 ################################################################################
-# Version: Commits on Mar 17, 2024
-FLYCAST_VERSION = c7ee42f0ba16623cab44678a586c248d068933f7
+# Version: Commits on Mar 24, 2024
+FLYCAST_VERSION = f346bcd68b7d8eed9a74666163b2f3d783c2d2c5
 FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 FLYCAST_SITE_METHOD=git
 FLYCAST_GIT_SUBMODULES=YES
@@ -13,11 +13,11 @@ FLYCAST_DEPENDENCIES = sdl2 libpng libzip libcurl libao libminiupnpc
 FLYCAST_SUPPORTS_IN_SOURCE_BUILD = NO
 
 FLYCAST_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-FLYCAST_CONF_OPTS += -DLIBRETRO=OFF
-FLYCAST_CONF_OPTS += -DUSE_HOST_SDL=ON
-FLYCAST_CONF_OPTS += -DGDB_SERVER=OFF
-FLYCAST_CONF_OPTS += -DWITH_SYSTEM_ZLIB=ON
 FLYCAST_CONF_OPTS += -DGIT_VERSION="$(shell echo $(FLYCAST_VERSION) | cut -c 1-7)"
+FLYCAST_CONF_OPTS += -DLIBRETRO=OFF
+FLYCAST_CONF_OPTS += -DUSE_HOST_GLSLANG=OFF
+FLYCAST_CONF_OPTS += -DUSE_HOST_SDL=ON
+FLYCAST_CONF_OPTS += -DWITH_SYSTEM_ZLIB=ON
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 	FLYCAST_CONF_OPTS += -DUSE_OPENGL=ON
@@ -48,6 +48,7 @@ define FLYCAST_INSTALL_TARGET_CMDS
 	# evmapy files
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/flycast/*.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/flycast/naomi.flycast.keys $(TARGET_DIR)/usr/share/evmapy/systemsp.flycast.keys
 endef
 
 $(eval $(cmake-package))
