@@ -51,7 +51,8 @@ else
 endif
 
 define DOLPHIN_TRIFORCE_INSTALL_TARGET_CMDS
-	cp $(@D)/buildroot-build/Binaries/dolphin-emu* $(TARGET_DIR)/usr/bin/dolphin-triforce
+	cp $(@D)/buildroot-build/Binaries/dolphin-emu $(TARGET_DIR)/usr/bin/dolphin-triforce
+	cp $(@D)/buildroot-build/Binaries/dolphin-emu-nogui $(TARGET_DIR)/usr/bin/dolphin-triforce-nogui
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-triforce/*.keys $(TARGET_DIR)/usr/share/evmapy
 endef
