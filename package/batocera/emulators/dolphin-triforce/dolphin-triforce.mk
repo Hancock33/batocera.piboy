@@ -31,7 +31,7 @@ DOLPHIN_TRIFORCE_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_
 ifeq ($(BR2_PACKAGE_QT6),y)
 	DOLPHIN_EMU_DEPENDENCIES += qt6base qt6svg
 	DOLPHIN_TRIFORCE_CONF_OPTS += -DENABLE_QT=ON
-	DOLPHIN_TRIFORCE_CONF_OPTS += -DENABLE_NOGUI=OFF
+	DOLPHIN_TRIFORCE_CONF_OPTS += -DENABLE_NOGUI=ON
 else
 	DOLPHIN_TRIFORCE_CONF_OPTS += -DENABLE_QT=OFF
 	DOLPHIN_TRIFORCE_CONF_OPTS += -DENABLE_NOGUI=ON
@@ -51,7 +51,8 @@ else
 endif
 
 define DOLPHIN_TRIFORCE_INSTALL_TARGET_CMDS
-	cp $(@D)/buildroot-build/Binaries/dolphin-emu* $(TARGET_DIR)/usr/bin/dolphin-triforce
+	cp $(@D)/buildroot-build/Binaries/dolphin-emu $(TARGET_DIR)/usr/bin/dolphin-triforce
+	cp $(@D)/buildroot-build/Binaries/dolphin-emu-nogui $(TARGET_DIR)/usr/bin/dolphin-triforce-nogui
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-triforce/*.keys $(TARGET_DIR)/usr/share/evmapy
 endef

@@ -421,9 +421,6 @@ class DolphinGenerator(Generator):
 
         # Check what version we've got
         if os.path.isfile("/usr/bin/dolphin-emu"):
-            # use the -b 'batch' option for nicer exit
-            commandArray = ["dolphin-emu", "-b", "-e", rom]
-        else:
             commandArray = ["dolphin-emu-nogui", "-e", rom]
 
         # state_slot option
