@@ -97,48 +97,48 @@ $SkipBoot
 0x80031BF0:dword:0x60000000
 0x80031BFC:dword:0x60000000
 0x800BE10C:dword:0x4800002C
-0x8009F1E0:dword:0x6000000""")
+0x8009F1E0:dword:0x60000000""")
 
     #Mario Kart Arcade GP2
     if not os.path.exists(cfg_mkagp2):
         with open(cfg_mkagp2, "w") as script:
             script.write("""[OnFrame_Enabled]
+$DVDInquiry Patchok
+$Disable CARD
+$Disable CAM
+$Seat Loop patch
+$Stuck loop patch
+$60times Loop patch
 $GameTestMode Patch
 $SeatLoopPatch
-$Disable CARD
-$99Credits
+$99 credits
 [OnFrame]
+$DVDInquiry Patchok
+0x80286388:dword:0x3C602100
+0x8028638C:dword:0x4E800020
+$Ignore CMD Encryption
+0x80285CD0:dword:0x93A30008
+0x80285CD4:dword:0x93C3000C
+0x80285CD8:dword:0x93E30010
+$Disable CARD
+0x80073BF4:dword:0x98650023
+0x80073C10:dword:0x98650023
+$Disable CAM
+0x80073BD8:dword:0x98650025
+$Seat Loop patch
+0x800BE10C:dword:0x4800002C
+$Stuck loop patch
+0x8002E100:dword:0x60000000
+$60times Loop patch
+0x8028B5D4:dword:0x60000000
 $GameTestMode Patch
 0x8002E340:dword:0x60000000
 0x8002E34C:dword:0x60000000
 $SeatLoopPatch
 0x80084FC4:dword:0x4800000C
 0x80085000:dword:0x60000000
-$Disable CARD
-0x80073BF4:dword:0x98650023
-0x80073C10:dword:0x98650023
-$99Credits
-0x80690AC0:dword:0x00000063
-[Gecko]
-$Slowdowns Fix (US)
-04086150 60000000
-$Link Check Skip (US)
-0402eb6c 60000000
-$Skip boot checks (US)
-0402e858 60000000
-$Slowdowns Fix (JPN)
-04086768 60000000
-$Link Check Skip (JPN)
-0402ebcc 60000000
-$Skip boot checks (JPN)
-0402e8b8 60000000
-[Gecko_Enabled]
-$Slowdowns Fix (US)
-$Link Check Skip (US)
-$Skip boot checks (US)
-$Slowdowns Fix (JPN)
-$Link Check Skip (JPN)
-$Skip boot checks (JPN)""")
+$99 credits
+0x80690AC0:dword:0x00000063""")
 
     #F-ZERO AX Monster Ride
     if not os.path.exists(cfg_fzeromr):
