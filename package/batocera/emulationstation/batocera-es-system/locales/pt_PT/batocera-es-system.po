@@ -15736,7 +15736,7 @@ msgstr "Mostrar o ecrã do comando"
 #. TRANSLATION: daphne.daphne.keys
 msgctxt "keys_files"
 msgid "Service menu"
-msgstr ""
+msgstr "Menu de serviço"
 
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
@@ -16309,10 +16309,6 @@ msgid "Quick Save"
 msgstr "Guardar Rápido"
 
 #~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "Ocultar mira em jogos suportados, p. ex. ActionMax."
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (tenha cuidado"
 
@@ -16641,6 +16637,10 @@ msgstr "Guardar Rápido"
 #~ msgctxt "game_options"
 #~ msgid "5 Sideway Wiimote"
 #~ msgstr "5 Wiimotes de lado"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Ocultar mira em jogos suportados, p. ex. ActionMax."
 
 #~ msgctxt "game_options"
 #~ msgid ""

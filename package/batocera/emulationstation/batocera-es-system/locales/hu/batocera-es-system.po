@@ -16206,10 +16206,6 @@ msgid "Quick Save"
 msgstr "Gyors mentés"
 
 #~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "Célkereszt elrejtése a támogatott játékokban, pl. ActionMax."
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (Óvatosan!)"
 
@@ -16538,6 +16534,10 @@ msgstr "Gyors mentés"
 #~ msgctxt "game_options"
 #~ msgid "5 Sideway Wiimote"
 #~ msgstr "5 Oldalirányú Wiimote"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Célkereszt elrejtése a támogatott játékokban, pl. ActionMax."
 
 #~ msgctxt "game_options"
 #~ msgid "Wiimote Sideway"
