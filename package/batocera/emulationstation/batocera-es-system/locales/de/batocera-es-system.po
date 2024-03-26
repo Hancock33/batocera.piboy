@@ -16398,10 +16398,6 @@ msgid "Quick Save"
 msgstr "Schnellspeichern"
 
 #~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "Fadenkreuze in unterstützten Spielen ausblenden, z. B. ActionMax."
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (Vorsicht ist geboten)"
 
@@ -16729,6 +16725,10 @@ msgstr "Schnellspeichern"
 #~ msgctxt "game_options"
 #~ msgid "5 Sideway Wiimote"
 #~ msgstr "5 Sideway Wiimote"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Fadenkreuze in unterstützten Spielen ausblenden, z. B. ActionMax."
 
 #~ msgctxt "game_options"
 #~ msgid ""

@@ -16344,10 +16344,6 @@ msgid "Quick Save"
 msgstr "Salvamento rápido"
 
 #~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "Oculta mira em jogos suportados, p. ex. ActionMax."
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (Use com cautela)"
 
@@ -16679,6 +16675,10 @@ msgstr "Salvamento rápido"
 #~ msgctxt "game_options"
 #~ msgid "5 Sideway Wiimote"
 #~ msgstr "5 Wiimotes de lado"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Oculta mira em jogos suportados, p. ex. ActionMax."
 
 #~ msgctxt "game_options"
 #~ msgid ""

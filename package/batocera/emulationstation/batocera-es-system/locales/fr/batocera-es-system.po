@@ -16336,10 +16336,6 @@ msgid "Quick Save"
 msgstr "Sauvegarde rapide"
 
 #~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "Cache le réticule dans les jeux supportés comme ActionMax."
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (A utiliser avec précaution)"
 
@@ -16665,6 +16661,10 @@ msgstr "Sauvegarde rapide"
 #~ msgctxt "game_options"
 #~ msgid "5 Sideway Wiimote"
 #~ msgstr "5 Wiimote latérale"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Cache le réticule dans les jeux supportés comme ActionMax."
 
 #~ msgctxt "game_options"
 #~ msgid ""
