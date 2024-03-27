@@ -1206,7 +1206,7 @@ lynx:
   manufacturer:         Atari
   release:              1989
   hardware:             portable
-  extensions:           [lnx, zip, 7z]
+  extensions:           [lnx, lyx, o, zip, 7z]
   theme:                atarilynx
   platform:             atarilynx
   emulators:
