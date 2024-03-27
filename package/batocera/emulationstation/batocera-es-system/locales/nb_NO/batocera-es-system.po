@@ -16257,10 +16257,6 @@ msgid "Quick Save"
 msgstr "Hurtiglagring"
 
 #~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "Skjul trådkors i spill som støttes, f.eks. ActionMax."
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105 % (Vær forsiktig)"
 
@@ -16586,6 +16582,10 @@ msgstr "Hurtiglagring"
 #~ msgctxt "game_options"
 #~ msgid "5 Sideway Wiimote"
 #~ msgstr "5 Wiimote på siden"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Skjul trådkors i spill som støttes, f.eks. ActionMax."
 
 #~ msgctxt "game_options"
 #~ msgid ""
