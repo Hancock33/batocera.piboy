@@ -4462,12 +4462,12 @@ msgctxt "game_options"
 msgid "CROP ARTWORK"
 msgstr "CORTE DE ARTE"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Define o botão 2 da pistola para recarregar."
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "BOTÃO DE RECARGA FORA DA TELA"

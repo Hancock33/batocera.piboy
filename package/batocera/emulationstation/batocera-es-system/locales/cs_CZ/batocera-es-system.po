@@ -4438,12 +4438,12 @@ msgctxt "game_options"
 msgid "CROP ARTWORK"
 msgstr "UMĚLECKÁ DÍLA CROP"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Nastavte tlačítko zbraně 2 na nabíjení."
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "TLAČÍTKO PRO NABÍJENÍ MIMO OBRAZOVKU"

@@ -4434,12 +4434,12 @@ msgctxt "game_options"
 msgid "CROP ARTWORK"
 msgstr "MOZTU ARTELANA"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Ezarri pistolaren 2. botoia birkargatu dezan"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "PANTAILA KANPOKO BIRKARGA BOTOIA"

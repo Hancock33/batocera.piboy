@@ -4419,12 +4419,12 @@ msgctxt "game_options"
 msgid "CROP ARTWORK"
 msgstr "Orezať grafiku"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Nastaviť tlačidlo 2 zbrane na nabitie."
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "Tlačidlo na znovunačítanie mimo obrazovky"

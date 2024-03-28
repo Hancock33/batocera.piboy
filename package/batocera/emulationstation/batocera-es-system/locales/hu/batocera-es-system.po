@@ -4461,12 +4461,12 @@ msgctxt "game_options"
 msgid "CROP ARTWORK"
 msgstr "ARTWORK LEVÁGÁSA"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Állítsa újratöltésre a pisztoly 2-es gombját."
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "KÉPERNYŐN KÍVÜLI ÚJRATÖLTÉS GOMB"
