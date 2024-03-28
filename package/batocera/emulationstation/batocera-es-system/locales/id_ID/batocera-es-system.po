@@ -4418,12 +4418,12 @@ msgctxt "game_options"
 msgid "CROP ARTWORK"
 msgstr "POTONG KARYA-GAMBAR"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Atur tombol pistol 2 untuk isi ulang"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "TOMBOL ISI ULANG LAYAR-MATI"

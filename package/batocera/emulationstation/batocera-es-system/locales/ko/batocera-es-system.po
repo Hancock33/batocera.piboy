@@ -4864,12 +4864,12 @@ msgctxt "game_options"
 msgid "CROP ARTWORK"
 msgstr "아트웍 자르기"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "버튼 2를 장전으로 설정합니다."
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "오프 스크린 장전 버튼"

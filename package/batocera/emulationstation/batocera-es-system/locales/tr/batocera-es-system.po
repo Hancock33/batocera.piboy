@@ -4426,12 +4426,12 @@ msgctxt "game_options"
 msgid "CROP ARTWORK"
 msgstr "ÇİZİMİ KIRP"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Doldurma için tabanca tuşunu 2 ayarla."
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "EKRAN DIŞI YENİDEN YÜKLE TUŞU"

@@ -4457,12 +4457,12 @@ msgctxt "game_options"
 msgid "CROP ARTWORK"
 msgstr "COUPER LES ARTWORK"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Bouton 2 du pistolet pour recharger."
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "BOUTON POUR RECHARGER EN DEHORS DE L'ÉCRAN"

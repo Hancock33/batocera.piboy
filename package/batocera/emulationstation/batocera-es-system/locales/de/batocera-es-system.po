@@ -4483,12 +4483,12 @@ msgctxt "game_options"
 msgid "CROP ARTWORK"
 msgstr "MAME-GRAFIKEN ZUSCHNEIDEN"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Nachlade-Funktion auf Taste 2 der Lightgun legen."
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "OFF-SCREEN NACHLADE-TASTE"
