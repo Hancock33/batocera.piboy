@@ -12633,26 +12633,14 @@ msgstr "データ プラグイン"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
-"Runners simplify compatibility of running Windows games. If choosing Custom, "
-"you must have a runner in /userdata/system/wine/custom."
+"Runners simplify compatibility of running Windows games. You must have a "
+"runner in it's own directory under /userdata/system/wine/custom."
 msgstr ""
-"ランナーは、実行中の Windows ゲームの互換性を簡素化します。 [カスタム] を選択"
-"する場合は、/userdata/system/wine/custom にランナーが必要です"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "WINE RUNNER"
 msgstr "WINE ランナー"
-
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Glorius Eggroll Proton (Default)"
-msgstr "Glorius Eggroll Proton (標準)"
-
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "User Provided Runner"
-msgstr "ユーザー提供 ランナー"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -16164,6 +16152,22 @@ msgstr "クイック ロード"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "クイック セーブ"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Runners simplify compatibility of running Windows games. If choosing "
+#~ "Custom, you must have a runner in /userdata/system/wine/custom."
+#~ msgstr ""
+#~ "ランナーは、実行中の Windows ゲームの互換性を簡素化します。 [カスタム] を"
+#~ "選択する場合は、/userdata/system/wine/custom にランナーが必要です"
+
+#~ msgctxt "game_options"
+#~ msgid "Glorius Eggroll Proton (Default)"
+#~ msgstr "Glorius Eggroll Proton (標準)"
+
+#~ msgctxt "game_options"
+#~ msgid "User Provided Runner"
+#~ msgstr "ユーザー提供 ランナー"
 
 #~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
