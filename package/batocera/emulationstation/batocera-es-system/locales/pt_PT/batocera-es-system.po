@@ -16296,23 +16296,6 @@ msgid "Quick Save"
 msgstr "Guardar Rápido"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Runners simplify compatibility of running Windows games. If choosing "
-#~ "Custom, you must have a runner in /userdata/system/wine/custom."
-#~ msgstr ""
-#~ "Os corredores simplificam a compatibilidade da execução de jogos do "
-#~ "Windows. Se escolher Personalizado, você deve ter um executador em /"
-#~ "userdata/system/wine/custom."
-
-#~ msgctxt "game_options"
-#~ msgid "Glorius Eggroll Proton (Default)"
-#~ msgstr "Próton Glorius Eggroll (Padrão)"
-
-#~ msgctxt "game_options"
-#~ msgid "User Provided Runner"
-#~ msgstr "Executador fornecido pelo utilizador"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (tenha cuidado"
 
