@@ -15,7 +15,7 @@ LIBPUPDMD_CONF_OPTS += -DPLATFORM=linux
 LIBPUPDMD_CONF_OPTS += -DARCH=x64
 
 define LIBPUPDMD_CMAKE_HACK
-sed -i -e s+"pupdmd-decode.h"+" pupdmd.h"+ $(@D)/CMakeLists.txt
+sed -i -e s+"pupdmd-decode.h"+"pupdmd.h"+ $(@D)/CMakeLists.txt
 endef
 
 LIBPUPDMD_PRE_CONFIGURE_HOOKS += LIBPUPDMD_CMAKE_HACK
