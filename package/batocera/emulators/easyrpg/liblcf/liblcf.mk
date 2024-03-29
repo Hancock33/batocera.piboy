@@ -3,8 +3,8 @@
 # liblcf
 #
 ################################################################################
-# Version: Commits on Mar 28, 2024
-LIBLCF_VERSION = ad97cac13ecf3b19625a311fb4adee30e8bb4aa1
+# Version: Commits on Mar 29, 2024
+LIBLCF_VERSION = a7f3d95d692afd85753a0e79151d360d8692db0c
 LIBLCF_DEPENDENCIES = expat icu
 LIBLCF_LICENSE = MIT
 LIBLCF_SITE = $(call github,EasyRPG,liblcf,$(LIBLCF_VERSION))
