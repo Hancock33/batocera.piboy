@@ -25,27 +25,53 @@ if [[ "${WINE_VERSION}" == "lutris" || "${WINE_VERSION}" == "proton" ]]; then
 fi
 echo "*** Chosen WINE runner is ${WINE_VERSION} ***"
 
-# Wine Folder
-wine_folder() {
-	# check if custom wine runner
-	if [[ "$WINE_VERSION" == "custom" ]]; then
+find_wine_dir() {
+	local WINE_VERSION="$1"
+	# check if we're using a custom wine runner
+	if [[ "$WINE_VERSION" != "ge-custom" ]]; then
 		# now check if the folder exists
-		if [[ -e "/userdata/system/wine/${WINE_VERSION}" ]]; then
-			echo "/userdata/system/wine"
-		elif [[ -e "/usr/wine/${WINE_VERSION}" ]]; then
-			echo "/usr/wine"
+		if [[ -e "/userdata/system/wine/custom/${WINE_VERSION}" ]]; then
+			echo "/userdata/system/wine/custom"
 		else
-			exit 1
+			WINE_VERSION="ge-custom"
+			if [[ -e "/usr/wine/${WINE_VERSION}" ]]; then
+				echo "/usr/wine"
+			else
+				return 1
+			fi
 		fi
 	elif [[ -e "/usr/wine/${WINE_VERSION}" ]]; then
 		echo "/usr/wine"
 	else
-		exit 1
+		return 1
+	fi
+}
+
+update_wine_version() {
+	local WINE_VERSION="$1"
+	if [[ "$WINE_VERSION" != "ge-custom" ]]; then
+		if [[ -e "/userdata/system/wine/custom/${WINE_VERSION}" ]]; then
+			echo "$WINE_VERSION"
+		else
+			WINE_VERSION="ge-custom"
+			echo "$WINE_VERSION"
+		fi
+	else
+		echo "$WINE_VERSION"
 	fi
 }
 
 ## Wine executables
-DIR="$(wine_folder)" || { echo "can't find WINE version ${WINE_VERSION} directory"; exit 1; }
+DIR="$(find_wine_dir "$WINE_VERSION")"
+if [[ $? -eq 0 ]]; then
+	WINE_VERSION="$(update_wine_version "$WINE_VERSION")"
+else
+	echo "can't find WINE version ${WINE_VERSION} directory, you should change the runner"
+	exit 1
+fi
+
+echo "*** Directory checks complete, WINE runner is ${WINE_VERSION} ***"
+
 USER_DIR="/userdata/system/wine"
 WINE="${DIR}/${WINE_VERSION}/bin/wine"
 WINE64="${DIR}/${WINE_VERSION}/bin/wine64"
@@ -56,15 +82,18 @@ WINETRICKS="${DIR}/winetricks"
 ## Folders
 WINE_BOTTLE_DIR="/userdata/system/wine-bottles/${SYSTEM}"
 G_ROMS_DIR="/userdata/roms/${SYSTEM}"
-
+# Check lib64 directory
 if [[ -e "${DIR}/${WINE_VERSION}/lib64/wine" ]]; then
 	WINE_LIB64_DIR="${DIR}/${WINE_VERSION}/lib64/wine"
 else
 	WINE_LIB64_DIR="${DIR}/${WINE_VERSION}/lib/wine"
 fi
-
-WINE_LIB32_DIR="${DIR}/${WINE_VERSION}/lib/wine"
-
+# Check lib32 directory
+if [[ -e "${DIR}/${WINE_VERSION}/lib32/wine" ]]; then
+	WINE_LIB32_DIR="${DIR}/${WINE_VERSION}/lib32/wine"
+else
+	WINE_LIB32_DIR="${DIR}/${WINE_VERSION}/lib/wine"
+fi
 
 ## Export Wine libs
 PATH=$PATH:PATH=$PATH:${DIR}/${WINE_VERSION}/bin
@@ -78,17 +107,17 @@ export SPA_PLUGIN_DIR="/usr/lib/spa-0.2:/lib32/spa-0.2"
 export PIPEWIRE_MODULE_DIR="/usr/lib/pipewire-0.3:/lib32/pipewire-0.3"
 
 usage() {
-	echo "${1} windows play				<game>.iso"				>&2
-	echo "${1} windows play				<game>.exe"				>&2
-	echo "${1} windows play				<game>.pc"				>&2
-	echo "${1} windows play				<game>.wine"			>&2
-	echo "${1} windows play				<game>.wsquashfs"		>&2
-	echo "${1} windows play				<game>.wtgz"			>&2
-	echo "${1} windows install			<game>.iso"				>&2
-	echo "${1} windows install			<game>.exe"				>&2
-	echo "${1} windows tricks			<game>.wine directplay"	>&2
-	echo "${1} windows wine2squashfs	<game.wine>"			>&2
-	echo "${1} windows wine2winetgz		<game.wine>"			>&2
+	echo "${1} windows play			 <game>.iso"			 >&2
+	echo "${1} windows play			 <game>.exe"			 >&2
+	echo "${1} windows play			 <game>.pc"			  >&2
+	echo "${1} windows play			 <game>.wine"			>&2
+	echo "${1} windows play			 <game>.wsquashfs"	   >&2
+	echo "${1} windows play			 <game>.wtgz"			>&2
+	echo "${1} windows install 		 <game>.iso"			 >&2
+	echo "${1} windows install 		 <game>.exe"			 >&2
+	echo "${1} windows tricks  		 <game>.wine directplay" >&2
+	echo "${1} windows wine2squashfs <game.wine>"			>&2
+	echo "${1} windows wine2winetgz  <game.wine>"			>&2
 }
 
 waitWineServer() {
@@ -435,6 +464,7 @@ createWineDirectory() {
 	if ! WINEPREFIX=${WINEPREFIX} ${WINE} hostname; then
 		rm -rf "${WINEPREFIX}"
 		kill -15 "${BSODPID}"
+		echo "+++ Failed initialising ${WINEPREFIX} +++"
 		return 1
 	fi
 

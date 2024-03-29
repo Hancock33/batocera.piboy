@@ -1325,12 +1325,12 @@ msgstr "DSシステムメニューをスキップ"
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "Use language and username from the NDS Firmware"
-msgstr "NDS ファームウェアの言語とユーザー名を使用"
+msgstr "NDS ファームウェアの言語とユーザー名を使用します"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "USE FIRMWARE SETTINGS"
-msgstr "ファームウェア設定を使用"
+msgstr "ファームウェア設定を使用します"
 
 #. TRANSLATION: libretro/melonds, amiberry, amiberry
 msgctxt "game_options"
@@ -1553,7 +1553,7 @@ msgstr "しない"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "While Touching"
-msgstr "タッチしながら"
+msgstr "タッチしたとき"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -1569,8 +1569,7 @@ msgstr "常に"
 msgctxt "game_options"
 msgid "Cursor timeout in seconds when using Cursor Mode - Until Timeout."
 msgstr ""
-"[カーソル モード - タイムアウトまで] を使用する場合のカーソル タイムアウト "
-"(秒単位)"
+"[カーソルモード- タイムアウトまで] を使用する場合のカーソル表示時間(秒単位)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -3292,7 +3291,7 @@ msgctxt "game_options"
 msgid "AUTO FRAME SKIPPING"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, amiberry, ...
 msgctxt "game_options"
 msgid "OFF"
 msgstr "オフ"
@@ -4413,12 +4412,12 @@ msgctxt "game_options"
 msgid "CROP ARTWORK"
 msgstr "アートワークを加工表示"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "画面外射撃の代わりに銃ボタン2をリロードに設定します"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "画面外射撃リロードの代替えボタン"
@@ -8594,6 +8593,21 @@ msgctxt "game_options"
 msgid "AUTO CROP"
 msgstr ""
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Emulates the floppy drive sound."
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "SOUND SETTINGS"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "FLOPPY DRIVE SOUND"
+msgstr ""
+
 #. TRANSLATION: cannonball
 msgctxt "game_options"
 msgid ""
@@ -8968,7 +8982,7 @@ msgstr "非同期シェーダーのコンパイルを有効"
 #. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Preloading is impossible from ES."
-msgstr "ESからのプリロードは不可能です"
+msgstr "ESからの事前読込みは不可能です"
 
 #. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
@@ -12624,8 +12638,7 @@ msgstr "MAME カスタム設定"
 msgctxt "game_options"
 msgid ""
 "Make game history, setup instructions, and special moves viewable in the menu"
-msgstr ""
-"ゲーム履歴、セットアップ手順、および必殺技コマンドなどをメニューに表示します"
+msgstr "ゲーム履歴、セットアップ手順、必殺技コマンドなどをメニューに表示します"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -12635,26 +12648,14 @@ msgstr "データ プラグイン"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
-"Runners simplify compatibility of running Windows games. If choosing Custom, "
-"you must have a runner in /userdata/system/wine/custom."
+"Runners simplify compatibility of running Windows games. You must have a "
+"runner in it's own directory under /userdata/system/wine/custom."
 msgstr ""
-"ランナーは、実行中の Windows ゲームの互換性を簡素化します。 [カスタム] を選択"
-"する場合は、/userdata/system/wine/custom にランナーが必要です"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "WINE RUNNER"
 msgstr "WINE ランナー"
-
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Glorius Eggroll Proton (Default)"
-msgstr "Glorius Eggroll Proton (標準)"
-
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "User Provided Runner"
-msgstr "ユーザー提供 ランナー"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13022,8 +13023,8 @@ msgid ""
 "Nat to access internet from xemu machine. Udp for System Link. Default "
 "(Auto) disables network access."
 msgstr ""
-"xemu からインターネットに接続する Nat設定(システムリンク用の UDP) 標準 (自"
-"動) では、ネットワーク接続が無効になります"
+"xemu からインターネットに接続する Nat設定(システムリンク用の UDP) \n"
+"標準 (自動) では、ネットワーク接続が無効になります"
 
 #. TRANSLATION: xemu, xemu, xemu, xemu, xemu, ...
 msgctxt "game_options"
@@ -14777,8 +14778,8 @@ msgid ""
 "Fix screen tearing. Adaptive Sync (Default) synchronizes on video sync, "
 "except for late frames (below target FPS) which are displayed immediately."
 msgstr ""
-"画面のティアリングを修正。Adaptive VSync (標準) は、すぐに表示される遅いフ"
-"レーム (ターゲット FPS を下回る) を除き、ビデオ同期で同期します。"
+"画面のティアリングを修正します。Adaptive VSync (標準) は、すぐに表示される遅"
+"いフレーム (ターゲット FPS を下回る) を除き、ビデオ同期で同期します。"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -14974,8 +14975,8 @@ msgid ""
 "Choose which graphics API library to use. D3D12 may yield better results "
 "with faster GPUs."
 msgstr ""
-"使用するグラフィック API を選択します。 D3D12 は、より高速な GPU を使用する"
-"と、より良くなる可能性があります"
+"使用するグラフィック API を選択します。 D3D12 は、\n"
+"より高速な GPU を使用すると、より良くなる可能性があります"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -14997,22 +14998,22 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "XBOX LIVE ARCADE"
-msgstr "XBOX LIVE アーケード"
+msgstr "XBOX LIVE アーケード ライセンス"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "No licenses enabled"
-msgstr "ライセンスを有効にしない"
+msgstr "有効にしない"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "XBLA license enabled (Default)"
-msgstr "XBLA ライセンス 有効  (標準)"
+msgstr "XBLA有効 (標準)"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
-msgstr "可能なすべてのライセンス (非推奨)"
+msgstr "すべて (非推奨)"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15054,8 +15055,8 @@ msgid ""
 "Render target emulation path to use on Direct3D 12. Try changing if you have "
 "render issues."
 msgstr ""
-"Direct3D 12 で使用するレンダー ターゲット のパス。レンダリングの問題がある場"
-"合は、変更してみてください"
+"Direct3D 12 で使用するレンダー ターゲット のパス。\n"
+"レンダリングの問題がある場合は、変更してみてください"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15083,8 +15084,8 @@ msgid ""
 "The sample count of every tile will be incremented on every EVENT_WRITE_ZPD "
 "by this number. Setting this to 0 means everything is reported as occluded."
 msgstr ""
-"すべてのタイルのサンプル数は、EVENT_WRITE_ZPD ごとにこの数値だけ増加します。"
-"これを 0 に設定すると、すべてが遮蔽されているとして報告されます"
+"すべてのタイルのサンプル数は、EVENT_WRITE_ZPD ごとにこの数値だけ\n"
+"増加します。0 に設定すると、すべて遮蔽されているとして報告されます"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15102,9 +15103,8 @@ msgid ""
 "D3D12, read render-to-texture results on the CPU. Needed in some games, but "
 "causes mid-frame synchronization, so it has a huge performance impact."
 msgstr ""
-"D3D12,CPU 上でレンダリングからテクスチャへの結果を読み取ります。一部のゲーム"
-"では\n"
-"必要ですが、中間フレーム同期が発生するため、動作に大きな影響を与えます"
+"D3D12,CPU 上でレンダリングからテクスチャへの結果を読み取ります。\n"
+"一部のゲームでは必要ですが、中間フレーム同期で、動作に大きな影響を与えます"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15117,8 +15117,8 @@ msgid ""
 "Maximum host texture memory usage (in megabytes) above which textures will "
 "be destroyed as soon as possible."
 msgstr ""
-"ホスト テクスチャ メモリの最大使用量 (メガバイト単位)これを超えると、テクス"
-"チャはできるだけ早く破棄されます"
+"ホスト テクスチャ メモリの最大使用量を設定します (メガバイト単位)\n"
+"これを超えると、テクスチャはできるだけ早く破棄されます"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15171,8 +15171,8 @@ msgid ""
 "Part of the host texture memory budget (in megabytes) that will be scaled by "
 "the current drawing resolution scale."
 msgstr ""
-"現在の図面解像度スケールによって拡大縮小されるホスト テクスチャ メモリ バ"
-"ジェットの一部(メガバイト単位)"
+"現在の図面解像度スケールによって拡大縮小される\n"
+"ホスト テクスチャ メモリ バジェットの一部を設定します(メガバイト単位)"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15224,8 +15224,8 @@ msgid ""
 "Seconds a texture should be unused to be considered old enough to be deleted "
 "if texture memory usage exceeds Soft Texture Cache limit."
 msgstr ""
-"テクスチャ メモリの使用量がソフト テクスチャ キャッシュの制限を超えた場合に、"
-"次のテクスチャが未使用の必要がある秒数"
+"テクスチャメモリの使用量がソフトテクスチャキャッシュの制限を超えた場合、\n"
+"次のテクスチャが未使用の必要がある秒数を設定します"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15284,8 +15284,8 @@ msgid ""
 "Fix screen tearing. With Some games you need to turn VSync on in the games "
 "options."
 msgstr ""
-"画面のティアリングを修正。一部のゲームでは、オプションで VSync を有効にする必"
-"要があります"
+"画面のティアリングを修正します。一部のゲームでは、オプションで \n"
+"VSync を有効にする必要があります"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -15293,8 +15293,8 @@ msgid ""
 "Manually set VSYNC frames per second. Ideally this should match your monitor "
 "refresh rate."
 msgstr ""
-"垂直同期 フレーム/秒を手動で設定します。モニターのリフレッシュ レートと一致す"
-"る必要があります"
+"垂直同期 フレーム/秒を手動で設定します。\n"
+"モニターのリフレッシュ レートと一致する必要があります"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -16169,10 +16169,6 @@ msgid "Quick Save"
 msgstr "クイック セーブ"
 
 #~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "対応しているゲームで十字線を隠します(例:ActionMax)"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (注意してください)"
 
@@ -16728,8 +16724,8 @@ msgstr "クイック セーブ"
 #~ "This option enables the ability to play Xbox Live Arcacde games. May "
 #~ "cause compatibility issues with non-XBLA games."
 #~ msgstr ""
-#~ "Xbox Live Arcacde ゲームをプレイする機能を有効にしますが、非 XBLA ゲームと"
-#~ "の互換性の問題が発生する可能性があります"
+#~ "Xbox Live Arcacde ゲームをプレイする機能を有効にしますが、\n"
+#~ "非 XBLA ゲームとの互換性の問題が発生する可能性があります"
 
 #~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
@@ -16862,6 +16858,26 @@ msgstr "クイック セーブ"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Runners simplify compatibility of running Windows games. If choosing "
+#~ "Custom, you must have a runner in /userdata/system/wine/custom."
+#~ msgstr ""
+#~ "ランナーは、実行中の Windows ゲームの互換性を簡素化します。 [カスタム] を"
+#~ "選択する場合は、/userdata/system/wine/custom にランナーが必要です"
+
+#~ msgctxt "game_options"
+#~ msgid "Glorius Eggroll Proton (Default)"
+#~ msgstr "Glorius Eggroll Proton (標準)"
+
+#~ msgctxt "game_options"
+#~ msgid "User Provided Runner"
+#~ msgstr "ユーザー提供 ランナー"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "対応しているゲームで十字線を隠します(例:ActionMax)"
 
 #~ msgctxt "game_options"
 #~ msgid "Namco GunCon (Rumble)"

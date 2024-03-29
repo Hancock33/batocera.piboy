@@ -923,6 +923,7 @@ def createLibretroConfig(generator, system, controllers, metadata, guns, wheels,
                                           "gameDependant": [ { "key": "type", "value": "justifier", "mapkey": "device", "mapvalue": "516" },
                                                              { "key": "reversedbuttons", "value": "true", "mapcorekey": "bsnes_touchscreen_lightgun_superscope_reverse", "mapcorevalue": "ON" } ] } },
         "mesen-s"       : { "default" : { "device": 262,          "p2": 0 } },
+        "mesen"         : { "default" : { "device": 262,          "p2": 0 } },
         "snes9x"        : { "default" : { "device": 260,          "p2": 0, "p3": 1, "device_p3": 772, # different device for the 2nd gun...
                                           "gameDependant": [ { "key": "type", "value": "justifier", "mapkey": "device", "mapvalue": "516" },
                                                              { "key": "reversedbuttons", "value": "true", "mapcorekey": "snes9x_superscope_reverse_buttons", "mapcorevalue": "enabled" } ] } },
@@ -978,7 +979,7 @@ def createLibretroConfig(generator, system, controllers, metadata, guns, wheels,
                             retroarchConfig['input_libretro_device_p'+str(nplayer)] = ragunconf["device"]
                         else:
                             retroarchConfig['input_libretro_device_p'+str(nplayer)] = ""
-                    configureGunInputsForPlayer(nplayer, guns[ragunconf["p"+str(nplayer)]], controllers, retroarchConfig, system.config['core'], metadata)
+                    configureGunInputsForPlayer(nplayer, guns[ragunconf["p"+str(nplayer)]], controllers, retroarchConfig, system.config['core'], metadata, system)
 
             # override core settings
             for key in raguncoreconf:
@@ -1009,7 +1010,7 @@ def clearGunInputsForPlayer(n, retroarchConfig):
         for type in ["btn", "mbtn"]:
             retroarchConfig['input_player{}_{}_{}'.format(n, key, type)] = ''
 
-def configureGunInputsForPlayer(n, gun, controllers, retroarchConfig, core, metadata):
+def configureGunInputsForPlayer(n, gun, controllers, retroarchConfig, core, metadata, system):
     # gun mapping
     retroarchConfig['input_player{}_mouse_index'            .format(n)] = gun["id_mouse"]
     retroarchConfig['input_player{}_gun_trigger_mbtn'       .format(n)] = 1
@@ -1062,8 +1063,16 @@ def configureGunInputsForPlayer(n, gun, controllers, retroarchConfig, core, meta
         retroarchConfig['input_player{}_gun_start_mbtn'         .format(n)] = 4
 
     if core == "flycast":
-        retroarchConfig['input_player{}_gun_offscreen_shot_mbtn'.format(n)] = ''
-        retroarchConfig['input_player{}_gun_aux_a_mbtn'         .format(n)] = 2
+        if system.isOptSet('flycast_offscreen_reload') and system.getOptBoolean('flycast_offscreen_reload') == 1:
+            retroarchConfig['input_player{}_gun_start_mbtn'         .format(n)] = ''
+            retroarchConfig['input_player{}_gun_select_mbtn'        .format(n)] = ''
+            retroarchConfig['input_player{}_gun_aux_a_mbtn'         .format(n)] = ''
+            retroarchConfig['input_player{}_gun_aux_a_mbtn'         .format(n)] = 3
+            retroarchConfig['input_player{}_gun_start_mbtn'         .format(n)] = 4
+            retroarchConfig['input_player{}_gun_select_mbtn'        .format(n)] = 5
+        else:
+            retroarchConfig['input_player{}_gun_offscreen_shot_mbtn'.format(n)] = ''
+            retroarchConfig['input_player{}_gun_aux_a_mbtn'         .format(n)] = 2
 
     if core == "mame":
         retroarchConfig['input_player{}_gun_offscreen_shot_mbtn'.format(n)] = ''

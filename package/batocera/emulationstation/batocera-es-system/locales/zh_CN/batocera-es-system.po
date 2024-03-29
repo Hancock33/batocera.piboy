@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-03-22 16:50+0800\n"
+"PO-Revision-Date: 2024-03-25 11:17+0800\n"
 "Last-Translator: wanger\n"
 "Language-Team: 王二,monyxie\n"
 "Language: zh_CN\n"
@@ -3268,7 +3268,7 @@ msgctxt "game_options"
 msgid "AUTO FRAME SKIPPING"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, amiberry, ...
 msgctxt "game_options"
 msgid "OFF"
 msgstr "关闭"
@@ -4384,12 +4384,12 @@ msgctxt "game_options"
 msgid "CROP ARTWORK"
 msgstr "裁剪艺术品"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "将枪按钮2设置为装弹（RELOAD）。"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "屏幕外的装弹按钮（RELOAD）"
@@ -8549,6 +8549,21 @@ msgctxt "game_options"
 msgid "AUTO CROP"
 msgstr ""
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Emulates the floppy drive sound."
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "SOUND SETTINGS"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "FLOPPY DRIVE SOUND"
+msgstr ""
+
 #. TRANSLATION: cannonball
 msgctxt "game_options"
 msgid ""
@@ -12534,26 +12549,14 @@ msgstr "数据插件"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
-"Runners simplify compatibility of running Windows games. If choosing Custom, "
-"you must have a runner in /userdata/system/wine/custom."
+"Runners simplify compatibility of running Windows games. You must have a "
+"runner in it's own directory under /userdata/system/wine/custom."
 msgstr ""
-"启动器可以简化运行Windows游戏的兼容性。如果选择自定义，你必须将启动器放在 /"
-"userdata/system/wine/custom 目录下。"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "WINE RUNNER"
 msgstr "Wine启动器"
-
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Glorius Eggroll Proton (Default)"
-msgstr "Glorius Eggroll Proton（默认）"
-
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "User Provided Runner"
-msgstr "用户提供的启动器"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -15457,7 +15460,7 @@ msgstr "显示控制器屏幕"
 #. TRANSLATION: daphne.daphne.keys
 msgctxt "keys_files"
 msgid "Service menu"
-msgstr ""
+msgstr "服务菜单"
 
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
@@ -16028,10 +16031,6 @@ msgstr "快速载入"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "快速保存"
-
-#~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "在支持的游戏中隐藏十字光标，例如ActionMax。"
 
 #~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
@@ -16704,3 +16703,23 @@ msgstr "快速保存"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快进"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Runners simplify compatibility of running Windows games. If choosing "
+#~ "Custom, you must have a runner in /userdata/system/wine/custom."
+#~ msgstr ""
+#~ "启动器可以简化运行Windows游戏的兼容性。如果选择自定义，你必须将启动器放"
+#~ "在 /userdata/system/wine/custom 目录下。"
+
+#~ msgctxt "game_options"
+#~ msgid "Glorius Eggroll Proton (Default)"
+#~ msgstr "Glorius Eggroll Proton（默认）"
+
+#~ msgctxt "game_options"
+#~ msgid "User Provided Runner"
+#~ msgstr "用户提供的启动器"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "在支持的游戏中隐藏十字光标，例如ActionMax。"
