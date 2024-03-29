@@ -775,6 +775,9 @@ psvita:
 psx:
   emulator: libretro
   core:     swanstation
+p2000t:
+  emulator: libretro
+  core:     p2000t
 pv1000:
   emulator: libretro
   core:     mame
