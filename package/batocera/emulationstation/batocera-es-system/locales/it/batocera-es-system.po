@@ -3319,7 +3319,7 @@ msgctxt "game_options"
 msgid "AUTO FRAME SKIPPING"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, amiberry, ...
 msgctxt "game_options"
 msgid "OFF"
 msgstr "OFF"
@@ -4446,12 +4446,12 @@ msgctxt "game_options"
 msgid "CROP ARTWORK"
 msgstr "RITAGLIA ARTWORK"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Imposta il bottone 2 della pistola per ricaricare."
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "BOTTONE PER RICARICARE FUORI-SCHERMO"
@@ -8640,6 +8640,21 @@ msgctxt "game_options"
 msgid "AUTO CROP"
 msgstr ""
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Emulates the floppy drive sound."
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "SOUND SETTINGS"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "FLOPPY DRIVE SOUND"
+msgstr ""
+
 #. TRANSLATION: cannonball
 msgctxt "game_options"
 msgid ""
@@ -12735,23 +12750,13 @@ msgstr "PLUGIN DATI"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
-"Runners simplify compatibility of running Windows games. If choosing Custom, "
-"you must have a runner in /userdata/system/wine/custom."
+"Runners simplify compatibility of running Windows games. You must have a "
+"runner in it's own directory under /userdata/system/wine/custom."
 msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "WINE RUNNER"
-msgstr ""
-
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Glorius Eggroll Proton (Default)"
-msgstr ""
-
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "User Provided Runner"
 msgstr ""
 
 #. TRANSLATION: wine
@@ -16283,10 +16288,6 @@ msgid "Quick Save"
 msgstr "Salvataggio Rapido"
 
 #~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "Nascondi mirino nei giochi che lo supportano es. ActionMax."
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (Usare con cautela)"
 
@@ -16994,6 +16995,10 @@ msgstr "Salvataggio Rapido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "AvanzamentoRapido"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Nascondi mirino nei giochi che lo supportano es. ActionMax."
 
 #~ msgctxt "game_options"
 #~ msgid "Namco GunCon (Rumble)"

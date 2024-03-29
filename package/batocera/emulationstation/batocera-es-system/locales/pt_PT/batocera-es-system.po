@@ -3321,7 +3321,7 @@ msgctxt "game_options"
 msgid "AUTO FRAME SKIPPING"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, amiberry, ...
 msgctxt "game_options"
 msgid "OFF"
 msgstr "DESLIGADO"
@@ -4449,12 +4449,12 @@ msgctxt "game_options"
 msgid "CROP ARTWORK"
 msgstr "RECORTAR ARTE"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Defina o botão 2 da pistola para recarregar."
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "BOTÃO DE RECARGA FORA DO ECRÃ"
@@ -8650,6 +8650,21 @@ msgctxt "game_options"
 msgid "AUTO CROP"
 msgstr ""
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Emulates the floppy drive sound."
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "SOUND SETTINGS"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "FLOPPY DRIVE SOUND"
+msgstr ""
+
 #. TRANSLATION: cannonball
 msgctxt "game_options"
 msgid ""
@@ -12754,27 +12769,14 @@ msgstr "EXTENSÃO DE DADOS"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
-"Runners simplify compatibility of running Windows games. If choosing Custom, "
-"you must have a runner in /userdata/system/wine/custom."
+"Runners simplify compatibility of running Windows games. You must have a "
+"runner in it's own directory under /userdata/system/wine/custom."
 msgstr ""
-"Os corredores simplificam a compatibilidade da execução de jogos do Windows. "
-"Se escolher Personalizado, você deve ter um executador em /userdata/system/"
-"wine/custom."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "WINE RUNNER"
 msgstr "EXECUTADOR WINE"
-
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Glorius Eggroll Proton (Default)"
-msgstr "Próton Glorius Eggroll (Padrão)"
-
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "User Provided Runner"
-msgstr "Executador fornecido pelo utilizador"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -15736,7 +15738,7 @@ msgstr "Mostrar o ecrã do comando"
 #. TRANSLATION: daphne.daphne.keys
 msgctxt "keys_files"
 msgid "Service menu"
-msgstr ""
+msgstr "Menu de serviço"
 
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
@@ -16307,10 +16309,6 @@ msgstr "Carregamento Rápido"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Guardar Rápido"
-
-#~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "Ocultar mira em jogos suportados, p. ex. ActionMax."
 
 #~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
@@ -17029,3 +17027,24 @@ msgstr "Guardar Rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Runners simplify compatibility of running Windows games. If choosing "
+#~ "Custom, you must have a runner in /userdata/system/wine/custom."
+#~ msgstr ""
+#~ "Os corredores simplificam a compatibilidade da execução de jogos do "
+#~ "Windows. Se escolher Personalizado, você deve ter um executador em /"
+#~ "userdata/system/wine/custom."
+
+#~ msgctxt "game_options"
+#~ msgid "Glorius Eggroll Proton (Default)"
+#~ msgstr "Próton Glorius Eggroll (Padrão)"
+
+#~ msgctxt "game_options"
+#~ msgid "User Provided Runner"
+#~ msgstr "Executador fornecido pelo utilizador"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Ocultar mira em jogos suportados, p. ex. ActionMax."

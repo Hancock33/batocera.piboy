@@ -3,12 +3,12 @@
 # libdmdutil
 #
 ################################################################################
-# Version: Commits on Mar 23, 2024
-LIBDMDUTIL_VERSION = 4e5abe7934bfed1ce7b822b28ffbaf9104359083
+# Version: Commits on Mar 29, 2024
+LIBDMDUTIL_VERSION = 658543bb9050286ecc8c38df87505fc917bf52d8
 LIBDMDUTIL_SITE = $(call github,vpinball,libdmdutil,$(LIBDMDUTIL_VERSION))
 LIBDMDUTIL_LICENSE = BSD-3-Clause
 LIBDMDUTIL_LICENSE_FILES = LICENSE
-LIBDMDUTIL_DEPENDENCIES = cargs libserialport libzedmd libserum sockpp
+LIBDMDUTIL_DEPENDENCIES = cargs libpupdmd libserialport libzedmd libserum sockpp
 LIBDMDUTIL_SUPPORTS_IN_SOURCE_BUILD = NO
 
 LIBDMDUTIL_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release

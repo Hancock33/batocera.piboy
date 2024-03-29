@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-03-14 00:00+0100\n"
+"PO-Revision-Date: 2024-03-24 00:00+0100\n"
 "Last-Translator: roliverosc <roliveros@hotmail.com>, 2024\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
@@ -3331,7 +3331,7 @@ msgctxt "game_options"
 msgid "AUTO FRAME SKIPPING"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, amiberry, ...
 msgctxt "game_options"
 msgid "OFF"
 msgstr "OFF"
@@ -4461,12 +4461,12 @@ msgctxt "game_options"
 msgid "CROP ARTWORK"
 msgstr "RECORTAR ARTWORK"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Configura el botón 2 de la pistola para recargar."
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "BOTÓN DE RECARGA FUERA DE PANTALLA"
@@ -7587,7 +7587,7 @@ msgstr ""
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
 msgid "BLEND HIGH-RES MODE"
-msgstr "MODO BLEND HI-RES"
+msgstr "MODO BLEND HIGH-RES"
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
@@ -8074,52 +8074,52 @@ msgstr "Koalapad"
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "Some games and homebrews require more RAM"
-msgstr ""
+msgstr "Algunos juegos y homebrews requieren más RAM"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "RAM EXPANSION UNIT"
-msgstr ""
+msgstr "UNIDAD DE EXPASIÓN DE RAM"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "128kB (1700)"
-msgstr ""
+msgstr "128kB (1700)"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "256kB (1764)"
-msgstr ""
+msgstr "256kB (1764)"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "512kB (1750)"
-msgstr ""
+msgstr "512kB (1750)"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "1024kB"
-msgstr ""
+msgstr "1024kB"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "2048kB"
-msgstr ""
+msgstr "2048kB"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "4096kB"
-msgstr ""
+msgstr "4096kB"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "8192kB"
-msgstr ""
+msgstr "8192kB"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "16384kB"
-msgstr ""
+msgstr "16384kB"
 
 #. TRANSLATION: libretro/vice_x128
 msgctxt "game_options"
@@ -8657,6 +8657,21 @@ msgstr ""
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "AUTO CROP"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Emulates the floppy drive sound."
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "SOUND SETTINGS"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "FLOPPY DRIVE SOUND"
 msgstr ""
 
 #. TRANSLATION: cannonball
@@ -9253,21 +9268,23 @@ msgstr ""
 msgctxt "game_options"
 msgid "Position of wii sensor bar relative to the disaply for real wiimotes."
 msgstr ""
+"Posición de la barra de sensores de Wii en relación con la pantalla para "
+"wiimotes reales."
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "SENSOR BAR POSITION"
-msgstr ""
+msgstr "POSICIÓN DE LA BARRA DE SENSORES"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Bottom (Default)"
-msgstr ""
+msgstr "Abajo (defecto)"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Top"
-msgstr ""
+msgstr "Arriba"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
@@ -10009,7 +10026,7 @@ msgstr "LOGROS"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "CROSSHAIR"
-msgstr ""
+msgstr "PUNTO DE MIRA"
 
 #. TRANSLATION: flycast/vitaquake3
 msgctxt "game_options"
@@ -12785,24 +12802,14 @@ msgstr "COMPLEMENTO DE DATOS"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
-"Runners simplify compatibility of running Windows games. If choosing Custom, "
-"you must have a runner in /userdata/system/wine/custom."
+"Runners simplify compatibility of running Windows games. You must have a "
+"runner in it's own directory under /userdata/system/wine/custom."
 msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "WINE RUNNER"
-msgstr ""
-
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Glorius Eggroll Proton (Default)"
-msgstr ""
-
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "User Provided Runner"
-msgstr ""
+msgstr "WINE RUNNER"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -15431,7 +15438,7 @@ msgstr "45s"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "60s"
-msgstr ""
+msgstr "60s"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15600,7 +15607,7 @@ msgstr "Pulsar 8"
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Digital Left"
-msgstr "Izquierdo digiltal"
+msgstr "Izquierdo digital"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
@@ -15710,7 +15717,7 @@ msgstr "Empujar hacia la derecha"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Pull plunger"
-msgstr "Tirar del émbolo"
+msgstr "Tirar del embolo"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -15780,7 +15787,7 @@ msgstr "Mostrar la pantalla del mando"
 #. TRANSLATION: daphne.daphne.keys
 msgctxt "keys_files"
 msgid "Service menu"
-msgstr ""
+msgstr "Menú de servicio"
 
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
@@ -15840,7 +15847,7 @@ msgstr "Salir de DuckStation"
 #. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Load State"
-msgstr "Cargar estado"
+msgstr "Cargar estad"
 
 #. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -15970,7 +15977,7 @@ msgstr ""
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Pause / Menu"
-msgstr "Pausa / Menú"
+msgstr "Pausar / Menú"
 
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
@@ -15985,7 +15992,7 @@ msgstr "carga rápida"
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
 msgid "screenshot"
-msgstr "captura de pantalla"
+msgstr "Captura de pantalla"
 
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -16080,7 +16087,7 @@ msgstr "Salir del juego"
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera up"
-msgstr "Mover cámara hacía arriba"
+msgstr "Mover cámara hacia arriba"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -16345,16 +16352,12 @@ msgstr ""
 #. TRANSLATION: theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Load"
-msgstr "Carga rápida"
+msgstr "Carga rápidaz"
 
 #. TRANSLATION: theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Guardado rápido"
-
-#~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "Oculta puntos de mira en juegos compatibles, por ej. ActionMax."
 
 #~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
@@ -16510,8 +16513,8 @@ msgstr "Guardado rápido"
 #~ msgid ""
 #~ "Crop MAME artwork to maximize the game screen and only fill unused space."
 #~ msgstr ""
-#~ "Recorta las ilustraciones de MAME para maximizar la pantalla de juego "
-#~ "yllenar sólo el espacio no utilizado."
+#~ "Recorta las ilustraciones de MAME para maximizar la pantalla de juego y "
+#~ "llenar sólo el espacio no utilizado."
 
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
@@ -17082,5 +17085,22 @@ msgstr "Guardado rápido"
 #~ msgstr "Avance rápido"
 
 #~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "Namco GunCon (Vibración)"
+#~ msgid ""
+#~ "Runners simplify compatibility of running Windows games. If choosing "
+#~ "Custom, you must have a runner in /userdata/system/wine/custom."
+#~ msgstr ""
+#~ "Los runners simplifican la compatibilidad al ejecutar juegos de Windows. "
+#~ "Si elige Personalizado, debe tener un corredor en /userdata/system/wine/"
+#~ "custom."
+
+#~ msgctxt "game_options"
+#~ msgid "Glorius Eggroll Proton (Default)"
+#~ msgstr "Glorius Eggroll Proton (Defecto)"
+
+#~ msgctxt "game_options"
+#~ msgid "User Provided Runner"
+#~ msgstr "Runner proporcionado por el usuario"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Oculta puntos de mira en juegos compatibles, por ej. ActionMax."

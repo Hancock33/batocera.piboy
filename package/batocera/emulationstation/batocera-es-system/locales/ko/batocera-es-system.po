@@ -3626,7 +3626,7 @@ msgctxt "game_options"
 msgid "AUTO FRAME SKIPPING"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, amiberry, amiberry, amiberry, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "OFF"
@@ -4864,12 +4864,12 @@ msgctxt "game_options"
 msgid "CROP ARTWORK"
 msgstr "아트웍 자르기"
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "버튼 2를 장전으로 설정합니다."
 
-#. TRANSLATION: libretro/mame, mame
+#. TRANSLATION: libretro/mame, flycast, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "오프 스크린 장전 버튼"
@@ -9583,6 +9583,21 @@ msgctxt "game_options"
 msgid "AUTO CROP"
 msgstr ""
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Emulates the floppy drive sound."
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "SOUND SETTINGS"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "FLOPPY DRIVE SOUND"
+msgstr ""
+
 #. TRANSLATION: cannonball
 #, fuzzy
 msgctxt "game_options"
@@ -13951,23 +13966,13 @@ msgstr "데이터 플러그인"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
-"Runners simplify compatibility of running Windows games. If choosing Custom, "
-"you must have a runner in /userdata/system/wine/custom."
+"Runners simplify compatibility of running Windows games. You must have a "
+"runner in it's own directory under /userdata/system/wine/custom."
 msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "WINE RUNNER"
-msgstr ""
-
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Glorius Eggroll Proton (Default)"
-msgstr ""
-
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "User Provided Runner"
 msgstr ""
 
 #. TRANSLATION: wine
@@ -17562,11 +17567,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "지원되는 게임에서 십자선을 숨깁니다(예: ActionMax)."
-
-#, fuzzy
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr "코어가 지원하는 경우 실시간으로 되감기할 과거 상태를 저장합니다."
 
@@ -18104,6 +18104,11 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GZDOOM 조이스틱 구성 사용"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "지원되는 게임에서 십자선을 숨깁니다(예: ActionMax)."
 
 #, fuzzy
 #~ msgctxt "game_options"

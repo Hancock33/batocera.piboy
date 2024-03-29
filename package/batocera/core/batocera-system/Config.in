@@ -457,7 +457,7 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     default "broadcom/bcm2712"                                                                                                                                                                 if  BR2_PACKAGE_BATOCERA_TARGET_BCM2712
     default "raspberrypi/piboy3"                                                                                                                                                               if  BR2_PACKAGE_BATOCERA_TARGET_BCM2836 && BR2_PACKAGE_XPI_GAMECON_RPI
     default "raspberrypi/piboy4"                                                                                                                                                               if  BR2_PACKAGE_BATOCERA_TARGET_BCM2711 && BR2_PACKAGE_XPI_GAMECON_RPI
-    default "rockchip/rk3326/gameforce rockchip/rk3326/odroidgo rockchip/rk3326/anbernic"                                                                                                      if  BR2_PACKAGE_BATOCERA_TARGET_RK3326
+    default "rockchip/rk3326"                                                                                                                                                                  if  BR2_PACKAGE_BATOCERA_TARGET_RK3326
     default "rockchip/rk3328/rock64 rockchip/rk3328/roc-cc"                                                                                                                                    if  BR2_PACKAGE_BATOCERA_TARGET_RK3328
     default "rockchip/rk3288/tinkerboard rockchip/rk3288/miqi"                                                                                                                                 if  BR2_PACKAGE_BATOCERA_TARGET_RK3288
     default "rockchip/rk3568/odroid-m1 rockchip/rk3568/rock-3a rockchip/rk3568/anbernic-rgxx3 rockchip/rk3568/firefly-station-m2 rockchip/rk3568/firefly-station-p2"                           if  BR2_PACKAGE_BATOCERA_TARGET_RK3568
@@ -475,7 +475,7 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     default "riscv/visionfive2"                                                                                                                                                                if  BR2_PACKAGE_BATOCERA_TARGET_RISCV
     default "amlogic/s922x/ogu amlogic/s922x/gtkingpro amlogic/s922x/gtking amlogic/s922x/odroidn2l amlogic/s922x/vim3 amlogic/s922x/odroidn2 amlogic/s922x/odroidn2plus amlogic/s922x/zero2"  if  BR2_PACKAGE_BATOCERA_TARGET_S922X
     default "amlogic/s905/odroidc2 amlogic/s905/tvbox amlogic/s905/lepotato amlogic/s905/vim amlogic/s905/p201 amlogic/s905/lepotatov2 amlogic/s905/minix-neo-u1"                              if  BR2_PACKAGE_BATOCERA_TARGET_S905
-    default "rockchip/rk3399/rock960 rockchip/rk3399/rockpro64 rockchip/rk3399/rg552 rockchip/rk3399/orangepi4-lts rockchip/rk3399/rock-pi-4"                                                  if  BR2_PACKAGE_BATOCERA_TARGET_RK3399
+    default "rockchip/rk3399/orangepi-800 rockchip/rk3399/rg552 rockchip/rk3399/rockpro64 rockchip/rk3399/rock960 rockchip/rk3399/orangepi4-lts rockchip/rk3399/rock-pi-4 rockchip/rk3399/nanopi-m4v2 rockchip/rk3399/hugsun-x99"  if  BR2_PACKAGE_BATOCERA_TARGET_RK3399
     default "rockchip/rk3588/gameforce-ace rockchip/rk3588/rock-5b rockchip/rk3588/rock-5a rockchip/rk3588/quartzpro64 rockchip/rk3588/orangepi-5 rockchip/rk3588/orangepi-5b rockchip/rk3588/orangepi-5-plus rockchip/rk3588/indiedroid-nova rockchip/rk3588/mekotronics-r58 rockchip/rk3588/khadas-edge-2 rockchip/rk3588/firefly-station-m3" if BR2_PACKAGE_BATOCERA_TARGET_RK3588
 choice
     prompt "batocera.linux target"
@@ -1331,6 +1331,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_LIBRETRO_JUMPNBUMP
     select BR2_PACKAGE_LIBRETRO_MOJOZORK                    # Z-Machine
     select BR2_PACKAGE_LIBRETRO_MU
+    select BR2_PACKAGE_LIBRETRO_P2000T                      # Philips P2000
     select BR2_PACKAGE_LIBRETRO_QUICKNES
     select BR2_PACKAGE_LIBRETRO_RACE                        # Neo Geo Pocket
     select BR2_PACKAGE_LIBRETRO_SAMEBOY                     # Gameboy
