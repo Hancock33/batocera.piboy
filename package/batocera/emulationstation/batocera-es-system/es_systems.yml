@@ -3288,6 +3288,17 @@ odyssey2:
     libretro:
       o2em:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_O2EM] }
 
+p2000t:
+  name:                 P2000T
+  manufacturer:         Philips
+  release:              1980
+  hardware:             console
+  extensions:           [cas, p2000t, zip, 7z]
+  platform:             p2000t
+  emulators:
+    libretro:
+      p2000t:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_P2000T] }
+
 videopacplus:
   name:                 Videopac+ G7400
   manufacturer:         Philips
