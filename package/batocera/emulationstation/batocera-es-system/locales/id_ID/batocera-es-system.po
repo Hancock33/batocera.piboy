@@ -16398,10 +16398,6 @@ msgstr ""
 #~ msgstr "5 Sideway Wiimote"
 
 #~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "Sembunyikan corsair dalam dukungan game e.g ActionMax"
-
-#~ msgctxt "game_options"
 #~ msgid "Map your controller to an emulated Wiimote."
 #~ msgstr "Peta kontroler anda untuk emulasi Wiimote"
 
@@ -16566,6 +16562,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GUNAKAN KONFIGURASI JOYSTICK GZDOOM"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Sembunyikan corsair dalam dukungan game e.g ActionMax"
 
 #~ msgctxt "game_options"
 #~ msgid "Namco GunCon (Rumble)"

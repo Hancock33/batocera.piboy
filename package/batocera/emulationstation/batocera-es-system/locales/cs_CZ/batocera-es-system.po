@@ -16576,10 +16576,6 @@ msgstr "Rychlé uložení"
 #~ msgstr "5 Boční Wiimote"
 
 #~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "Skrýt zaměřovací kříž v podporovaných hrách, např. ActionMax."
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
 #~ "appropriate user directory)."
@@ -16962,6 +16958,10 @@ msgstr "Rychlé uložení"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rychle vpřed"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Skrýt zaměřovací kříž v podporovaných hrách, např. ActionMax."
 
 #~ msgctxt "game_options"
 #~ msgid "Namco GunCon (Rumble)"

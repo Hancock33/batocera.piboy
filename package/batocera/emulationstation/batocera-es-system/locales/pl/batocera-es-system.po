@@ -16652,10 +16652,6 @@ msgstr "Szybkie zapisywanie"
 #~ msgstr "5 Sideway Wiimote"
 
 #~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "Ukryj celownik w obsługiwanych grach, np. ActionMax."
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
 #~ "appropriate user directory)."
@@ -17042,6 +17038,10 @@ msgstr "Szybkie zapisywanie"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Przewijanie do przodu"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Ukryj celownik w obsługiwanych grach, np. ActionMax."
 
 #~ msgctxt "game_options"
 #~ msgid "Namco GunCon (Rumble)"

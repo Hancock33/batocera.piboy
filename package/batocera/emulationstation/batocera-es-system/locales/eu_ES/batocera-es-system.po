@@ -16542,10 +16542,6 @@ msgstr "Gordetze Azkarra"
 #~ msgstr "5 Alborako Wiimote"
 
 #~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "Ezkutatu jopuntuak onartzen duten jokuetan e.g. ActionMax."
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
 #~ "appropriate user directory)."
@@ -16911,6 +16907,10 @@ msgstr "Gordetze Azkarra"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Aurrera Azkar"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Ezkutatu jopuntuak onartzen duten jokuetan e.g. ActionMax."
 
 #~ msgctxt "game_options"
 #~ msgid "Namco GunCon (Rumble)"

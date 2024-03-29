@@ -16689,10 +16689,6 @@ msgstr "Guardado rápido"
 #~ msgstr "5 Sideway Wiimote"
 
 #~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "Oculta puntos de mira en juegos compatibles, por ej. ActionMax."
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
 #~ "appropriate user directory)."
@@ -17084,3 +17080,7 @@ msgstr "Guardado rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rápido"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Oculta puntos de mira en juegos compatibles, por ej. ActionMax."

@@ -16434,10 +16434,6 @@ msgstr ""
 #~ msgstr "5 Sideway Wiimote"
 
 #~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "Amagar el punt de mira als jocs suportats p. ex. ActionMax."
-
-#~ msgctxt "game_options"
 #~ msgid "Map your controller to an emulated Wiimote."
 #~ msgstr "Mapeja el comandament com un Wiimote emulat."
 
@@ -16729,6 +16725,10 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avançar"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Amagar el punt de mira als jocs suportats p. ex. ActionMax."
 
 #~ msgctxt "game_options"
 #~ msgid "Namco GunCon (Rumble)"

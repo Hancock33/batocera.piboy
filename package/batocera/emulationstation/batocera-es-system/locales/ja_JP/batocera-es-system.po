@@ -16485,10 +16485,6 @@ msgstr "クイック セーブ"
 #~ msgstr "5 横向きWiiリモコン"
 
 #~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "対応しているゲームで十字線を隠します(例:ActionMax)"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
 #~ "appropriate user directory)."
@@ -16859,6 +16855,10 @@ msgstr "クイック セーブ"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "対応しているゲームで十字線を隠します(例:ActionMax)"
 
 #~ msgctxt "game_options"
 #~ msgid "Namco GunCon (Rumble)"
