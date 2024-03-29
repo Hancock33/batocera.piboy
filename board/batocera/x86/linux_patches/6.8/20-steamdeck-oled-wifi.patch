@@ -147,7 +147,7 @@ index 0c6ecbb9a066..203e33c2233b 100644
  
  err_reo_cleanup:
 diff --git a/drivers/net/wireless/ath/ath11k/core.h b/drivers/net/wireless/ath/ath11k/core.h
-index 02e160d831be..4f0ecea16b68 100644
+index cd829ec70d76..ad0c86384c5b 100644
 --- a/drivers/net/wireless/ath/ath11k/core.h
 +++ b/drivers/net/wireless/ath/ath11k/core.h
 @@ -147,6 +147,7 @@ enum ath11k_hw_rev {
@@ -183,10 +183,10 @@ index 1b070747a5db..20fb19e3d82a 100644
  	const struct cfg80211_sar_capa *bios_sar_capa;
  	bool m3_fw_support;
 diff --git a/drivers/net/wireless/ath/ath11k/mac.c b/drivers/net/wireless/ath/ath11k/mac.c
-index b13525bbbb80..db5d99bf90d6 100644
+index cc80310088ce..62eccede1aeb 100644
 --- a/drivers/net/wireless/ath/ath11k/mac.c
 +++ b/drivers/net/wireless/ath/ath11k/mac.c
-@@ -2470,7 +2470,7 @@ static void ath11k_peer_assoc_h_he(struct ath11k *ar,
+@@ -2474,7 +2474,7 @@ static void ath11k_peer_assoc_h_he(struct ath11k *ar,
  		    he_mcs_mask[i])
  			max_nss = i + 1;
  	}
@@ -195,7 +195,7 @@ index b13525bbbb80..db5d99bf90d6 100644
  
  	if (arg->peer_phymode == MODE_11AX_HE160 ||
  	    arg->peer_phymode == MODE_11AX_HE80_80) {
-@@ -9288,6 +9288,31 @@ static int ath11k_mac_setup_channels_rates(struct ath11k *ar,
+@@ -9293,6 +9293,31 @@ static int ath11k_mac_setup_channels_rates(struct ath11k *ar,
  	return 0;
  }
  
@@ -227,7 +227,7 @@ index b13525bbbb80..db5d99bf90d6 100644
  static int ath11k_mac_setup_iface_combinations(struct ath11k *ar)
  {
  	struct ath11k_base *ab = ar->ab;
-@@ -9307,28 +9332,43 @@ static int ath11k_mac_setup_iface_combinations(struct ath11k *ar)
+@@ -9312,28 +9337,43 @@ static int ath11k_mac_setup_iface_combinations(struct ath11k *ar)
  		return -ENOMEM;
  	}
  
@@ -291,7 +291,7 @@ index b13525bbbb80..db5d99bf90d6 100644
  
  	ar->hw->wiphy->iface_combinations = combinations;
  	ar->hw->wiphy->n_iface_combinations = 1;
-@@ -9393,6 +9433,8 @@ static void __ath11k_mac_unregister(struct ath11k *ar)
+@@ -9398,6 +9438,8 @@ static void __ath11k_mac_unregister(struct ath11k *ar)
  	kfree(ar->hw->wiphy->iface_combinations[0].limits);
  	kfree(ar->hw->wiphy->iface_combinations);
  
@@ -300,7 +300,7 @@ index b13525bbbb80..db5d99bf90d6 100644
  	SET_IEEE80211_DEV(ar->hw, NULL);
  }
  
-@@ -9435,6 +9477,7 @@ static int __ath11k_mac_register(struct ath11k *ar)
+@@ -9440,6 +9482,7 @@ static int __ath11k_mac_register(struct ath11k *ar)
  	ath11k_pdev_caps_update(ar);
  
  	SET_IEEE80211_PERM_ADDR(ar->hw, ar->mac_addr);
@@ -460,7 +460,7 @@ index 15e2ceb22a44..c7b4b897d946 100644
  
  int ath11k_pcic_init_msi_config(struct ath11k_base *ab)
 diff --git a/drivers/net/wireless/ath/ath11k/wmi.c b/drivers/net/wireless/ath/ath11k/wmi.c
-index 8a65fa04b48d..20e068d1c725 100644
+index 442afda7ec88..2abf307a793f 100644
 --- a/drivers/net/wireless/ath/ath11k/wmi.c
 +++ b/drivers/net/wireless/ath/ath11k/wmi.c
 @@ -4069,6 +4069,7 @@ ath11k_wmi_copy_resource_config(struct wmi_resource_config *wmi_cfg,
@@ -471,7 +471,7 @@ index 8a65fa04b48d..20e068d1c725 100644
  	wmi_cfg->host_service_flags &=
  		~(1 << WMI_CFG_HOST_SERVICE_FLAG_REG_CC_EXT);
  	wmi_cfg->host_service_flags |= (tg_cfg->is_reg_cc_ext_event_supported <<
-@@ -9793,3 +9794,29 @@ int ath11k_wmi_sta_keepalive(struct ath11k *ar,
+@@ -9688,3 +9689,29 @@ int ath11k_wmi_sta_keepalive(struct ath11k *ar,
  
  	return ath11k_wmi_cmd_send(wmi, skb, WMI_STA_KEEPALIVE_CMDID);
  }
@@ -502,7 +502,7 @@ index 8a65fa04b48d..20e068d1c725 100644
 +	return ath11k_wmi_cmd_send(wmi, skb, WMI_COEX_CONFIG_CMDID);
 +}
 diff --git a/drivers/net/wireless/ath/ath11k/wmi.h b/drivers/net/wireless/ath/ath11k/wmi.h
-index ff0a9a92beeb..727fcc537ca2 100644
+index cd2098d78e86..7cfe0c0f522f 100644
 --- a/drivers/net/wireless/ath/ath11k/wmi.h
 +++ b/drivers/net/wireless/ath/ath11k/wmi.h
 @@ -2332,6 +2332,7 @@ struct wmi_init_cmd {
@@ -513,7 +513,7 @@ index ff0a9a92beeb..727fcc537ca2 100644
  
  #define WMI_CFG_HOST_SERVICE_FLAG_REG_CC_EXT 4
  
-@@ -5676,6 +5677,15 @@ struct target_resource_config {
+@@ -5677,6 +5678,15 @@ struct target_resource_config {
  	u8 is_reg_cc_ext_event_supported;
  	u32 ema_max_vap_cnt;
  	u32 ema_max_profile_period;
@@ -529,7 +529,7 @@ index ff0a9a92beeb..727fcc537ca2 100644
  };
  
  enum wmi_debug_log_param {
-@@ -6297,6 +6307,82 @@ enum wmi_sta_keepalive_method {
+@@ -6298,6 +6308,82 @@ enum wmi_sta_keepalive_method {
  
  const void **ath11k_wmi_tlv_parse_alloc(struct ath11k_base *ab, const void *ptr,
  					size_t len, gfp_t gfp);
@@ -612,7 +612,7 @@ index ff0a9a92beeb..727fcc537ca2 100644
  int ath11k_wmi_cmd_send(struct ath11k_pdev_wmi *wmi, struct sk_buff *skb,
  			u32 cmd_id);
  struct sk_buff *ath11k_wmi_alloc_skb(struct ath11k_wmi_base *wmi_sc, u32 len);
-@@ -6458,6 +6544,7 @@ int ath11k_wmi_scan_prob_req_oui(struct ath11k *ar,
+@@ -6459,6 +6545,7 @@ int ath11k_wmi_scan_prob_req_oui(struct ath11k *ar,
  				 const u8 mac_addr[ETH_ALEN]);
  int ath11k_wmi_fw_dbglog_cfg(struct ath11k *ar, u32 *module_id_bitmap,
  			     struct ath11k_fw_dbglog *dbglog);
