@@ -17907,11 +17907,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "지원되는 게임에서 십자선을 숨깁니다(예: ActionMax)."
-
-#, fuzzy
-#~ msgctxt "game_options"
 #~ msgid "Map your controller to an emulated Wiimote."
 #~ msgstr "컨트롤러를 에뮬레이트된 Wiimote에 매핑합니다."
 
@@ -18104,6 +18099,11 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GZDOOM 조이스틱 구성 사용"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "지원되는 게임에서 십자선을 숨깁니다(예: ActionMax)."
 
 #, fuzzy
 #~ msgctxt "game_options"

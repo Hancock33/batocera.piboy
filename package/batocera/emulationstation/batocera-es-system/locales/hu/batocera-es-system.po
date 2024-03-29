@@ -16536,10 +16536,6 @@ msgstr "Gyors mentés"
 #~ msgstr "5 Oldalirányú Wiimote"
 
 #~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "Célkereszt elrejtése a támogatott játékokban, pl. ActionMax."
-
-#~ msgctxt "game_options"
 #~ msgid "Wiimote Sideway"
 #~ msgstr "Wiimote Sideway"
 
@@ -16826,6 +16822,10 @@ msgstr "Gyors mentés"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Gyors előre"
+
+#~ msgctxt "game_options"
+#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
+#~ msgstr "Célkereszt elrejtése a támogatott játékokban, pl. ActionMax."
 
 #~ msgctxt "game_options"
 #~ msgid "Namco GunCon (Rumble)"
