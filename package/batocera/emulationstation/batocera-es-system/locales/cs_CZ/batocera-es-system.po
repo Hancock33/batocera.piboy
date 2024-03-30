@@ -7709,7 +7709,7 @@ msgctxt "game_options"
 msgid "Dual Konami Justifiers"
 msgstr "Dualní Konami Justifiery"
 
-#. TRANSLATION: libretro/tgbdual
+#. TRANSLATION: libretro/tgbdual, libretro/doublecherrygb
 msgctxt "game_options"
 msgid ""
 "Sync GB2Player/GBC2Player saves with saves in \"saves/gb\" or \"saves/gbc\"."
@@ -7717,7 +7717,7 @@ msgstr ""
 "Synchronizace uložišť GB2Player/GBC2Player s uložišti v \"uložíště/gb\" nebo "
 "\"uložiště/gbc\"."
 
-#. TRANSLATION: libretro/tgbdual
+#. TRANSLATION: libretro/tgbdual, libretro/doublecherrygb
 msgctxt "game_options"
 msgid "SYNC SAVE FILES"
 msgstr "SYNCHRONIZACE ULOŽENÝCH SOUBORŮ"
