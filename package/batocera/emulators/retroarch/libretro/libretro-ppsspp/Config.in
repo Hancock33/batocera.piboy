@@ -10,4 +10,3 @@ config BR2_PACKAGE_LIBRETRO_PPSSPP
 
 comment "LIBRETRO_PPSSPP needs a toolchain w/ C++"
     depends on !BR2_INSTALL_LIBSTDCPP
-

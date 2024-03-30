@@ -6,4 +6,3 @@ config BR2_PACKAGE_SNES9X
 	  Snes9x - Portable Super Nintendo Entertainment System (TM) emulator
 
 	  https://github.com/snes9xgit/snes9x/
-

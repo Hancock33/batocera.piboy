@@ -13,4 +13,3 @@ config BR2_PACKAGE_HURRICAN
 
 comment "BR2_PACKAGE_HURRICAN needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP
-
