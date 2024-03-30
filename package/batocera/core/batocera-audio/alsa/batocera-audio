@@ -67,7 +67,7 @@ case "${ACTION}" in
 	set-profile)
 	    MODE="$2"
 	    if test "${MODE}" != "auto"
-	    then			
+	    then
 				if [[ $(batocera-audio list-profiles) =~ "${MODE}" ]]; then
 					PROFILE_NAME=$(echo "${MODE}" | cut -d @ -f 1)
 					CARD_NAME=$(echo "${MODE}" | cut -d @ -f 2)
@@ -75,7 +75,7 @@ case "${ACTION}" in
 				else
 					# the profile isn't available yet, try again later
 					exit 1
-				fi		
+				fi
 	    fi
 	    ;;
 

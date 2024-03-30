@@ -23,7 +23,7 @@ do_bepatient() {
 	local COUNT=0
 	while kill -0 $PID 2>/dev/null; do
 		COUNT=$((COUNT+5))
-		[ $COUNT -gt 100 ] && COUNT=0 
+		[ $COUNT -gt 100 ] && COUNT=0
 		echo "$USER_INFO_INSIZE to extract ...>>>$COUNT"
 		sleep 0.1
 	done
@@ -77,7 +77,7 @@ case "${ACTION}" in
 			echo "Download error!"
 		else
 			pacman --noconfirm -S "${PKG}" --overwrite 'userdata/*'
-			RET=$?	
+			RET=$?
 		fi
 	# DOWNLOAD INSIDE ES
 	else
@@ -106,7 +106,7 @@ case "${ACTION}" in
 
 		else
 			echo "Download error!"
-			sleep 5			
+			sleep 5
 		fi
 	fi
 	exit ${RET}

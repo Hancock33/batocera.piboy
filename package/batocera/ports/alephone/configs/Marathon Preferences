@@ -5,4 +5,3 @@
   <input device="1" modifiers="1" sens_horizontal="28000" sens_vertical="28000" classic_vertical_aim="true" classic_aim_speed_limits="true" mouse_accel_type="1" mouse_accel_scale="1" raw_mouse_input="true" extra_mouse_precision="false" controller_analog="true" controller_sensitivity="65536" controller_deadzone="3276">
   </input>
 </mara_prefs>
-

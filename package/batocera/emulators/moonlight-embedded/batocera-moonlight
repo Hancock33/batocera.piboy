@@ -49,7 +49,6 @@ scrape () {
   # Make sure the $IMGPATH exists
   [ ! -d $IMGPATH ] && mkdir -p $IMGPATH
 
-
   # This is what we were waiting for : generate the gamelist.xml
   echo '<?xml version="1.0"?>' > $GAMELIST
   echo '<gameList>' >> $GAMELIST
@@ -82,7 +81,6 @@ scrape () {
     publisher=$(xml sel -t -v "Data/Game/Publisher" "$xmlfilename" 2>/dev/null)
     genre=$(xml sel -T -t -m "Data/Game/Genres/genre" -v 'text()' -i 'not(position()=last())' -o ' / ' "$xmlfilename" 2>/dev/null)
     players=$(xml sel -t -v "Data/Game/Players" "$xmlfilename" 2>/dev/null)
-
 
     # Write the XML data
     cat << EOF >> $GAMELIST
@@ -132,7 +130,7 @@ case $1 in
 
     clean)
         cmd="rm -rf $moonlight_config_dir/keydir" && echo "You can now pair again your batocera.linux with a PC" ;;
-        
+
     *)
         cmd="moonlight stream -remote -keydir ${moonlight_keydir} -${moonlight_screen} -fps ${moonlight_fps} -mapping ${moonlight_mapping} ${moonlight_ip}" ;;
 

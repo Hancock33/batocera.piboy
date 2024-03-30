@@ -7,7 +7,6 @@ import sys
 import math
 import os
 
-
 class Calibration:
     def __init__(self):
         self.calibration_step = 0
@@ -53,7 +52,6 @@ class Calibration:
         cmd2 = "evdev-joystick --e {} -a 1 --minimum {} --maximum {} ".format(path, self.minY_dev, self.maxY_dev)
         os.system(cmd1)
         os.system(cmd2)
-
 
 class Emulated_gun:
     def __init__(self):
@@ -131,7 +129,6 @@ class Emulated_gun:
         self.target.write(ecodes.EV_KEY, ecodes.KEY_CONFIG, 0)
         self.target.syn()
 
-
 class Gun:
     def __init__(self, device_path, btn_cal):
         self.device = evdev.InputDevice(device_path)
@@ -182,7 +179,7 @@ class Gun:
                         #    print("BTN_LEFT =0")
                     if event.code == ecodes.BTN_1:
                         self.btn_1 = event.value
-                        
+
             if self.btn_cal_pressed and time.time() - self.time1 > 3:
                 #print("CALIBRAR")
                 self.calibrate = 1
@@ -205,8 +202,7 @@ class Gun:
                 print(f"Error reconnecting: {reconnect_error}")
                 with open("/tmp/reconnect_error.log", "a") as log_file:
                     log_file.write(f"Error reconnecting: {reconnect_error}\n")
-                    
-    
+
     def stop_reading(self):
         pass
 
@@ -234,7 +230,6 @@ class Gun:
     def iscalibrate(self):
         return self.calibrate
 
-
 def main():
     if len(sys.argv) != 2 and len(sys.argv) != 3:
         print("mising device argument")
@@ -251,7 +246,6 @@ def main():
     print("Btn calibration" + str(bCalibration))
 
     gun = Gun(device_path, bCalibration)
-
 
     egun = Emulated_gun()
     egun.open(gun.name)
@@ -316,8 +310,5 @@ def main():
     except KeyboardInterrupt:
         gun.stop_reading()
 
-
 if __name__ == "__main__":
     main()
-
-

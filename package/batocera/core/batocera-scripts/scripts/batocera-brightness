@@ -18,7 +18,7 @@ setValue() {
 
     test "${NEWVAL}" -lt 0         && NEWVAL=0
     test "${NEWVAL}" -gt "${XMAX}" && NEWVAL="${XMAX}"
-    
+
     echo "${NEWVAL}" > "${B}"
 }
 

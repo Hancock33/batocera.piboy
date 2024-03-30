@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 #
 # Manage timezones
 #
@@ -41,6 +41,6 @@ elif [ x"$command" == "xset" ]; then
 	[ x"$tz" != "x" ] && tz_set "$tz" || usage
 elif [ x"$command" == "xget" ]; then
 	tz_get
-else 
-	usage	
+else
+	usage
 fi
