@@ -3,8 +3,8 @@
 # libdmdutil
 #
 ################################################################################
-# Version: Commits on Mar 29, 2024
-LIBDMDUTIL_VERSION = 93411244c5999fc293d9df1eeb02e0b45b129bc2
+# Version: Commits on Mar 30, 2024
+LIBDMDUTIL_VERSION = aafa3732d0624cadb790704aa36fa9d83b8057ce
 LIBDMDUTIL_SITE = $(call github,vpinball,libdmdutil,$(LIBDMDUTIL_VERSION))
 LIBDMDUTIL_LICENSE = BSD-3-Clause
 LIBDMDUTIL_LICENSE_FILES = LICENSE
