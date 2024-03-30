@@ -8558,7 +8558,7 @@ msgctxt "game_options"
 msgid "Dual Konami Justifiers"
 msgstr "듀얼 코나미 저스티파이어"
 
-#. TRANSLATION: libretro/tgbdual
+#. TRANSLATION: libretro/tgbdual, libretro/doublecherrygb
 #, fuzzy
 msgctxt "game_options"
 msgid ""
@@ -8566,7 +8566,7 @@ msgid ""
 msgstr ""
 "동기화 GB2Player/GBC2Player는 \"저장/GB\" 또는 \"저장/gbc\"로 저장합니다."
 
-#. TRANSLATION: libretro/tgbdual
+#. TRANSLATION: libretro/tgbdual, libretro/doublecherrygb
 #, fuzzy
 msgctxt "game_options"
 msgid "SYNC SAVE FILES"

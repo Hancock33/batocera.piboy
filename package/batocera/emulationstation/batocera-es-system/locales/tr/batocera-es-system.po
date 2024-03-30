@@ -7697,7 +7697,7 @@ msgctxt "game_options"
 msgid "Dual Konami Justifiers"
 msgstr "Çift Konami Justifiers"
 
-#. TRANSLATION: libretro/tgbdual
+#. TRANSLATION: libretro/tgbdual, libretro/doublecherrygb
 msgctxt "game_options"
 msgid ""
 "Sync GB2Player/GBC2Player saves with saves in \"saves/gb\" or \"saves/gbc\"."
@@ -7705,7 +7705,7 @@ msgstr ""
 "GB2Player/GBC2Player kayıtlarını \"saves/gb\" veya \"saves/gbc\" içindeki "
 "kayıtlarla senkronize edin."
 
-#. TRANSLATION: libretro/tgbdual
+#. TRANSLATION: libretro/tgbdual, libretro/doublecherrygb
 msgctxt "game_options"
 msgid "SYNC SAVE FILES"
 msgstr "KAYDETME DOSYALARINI SENKRONİZE ET"
