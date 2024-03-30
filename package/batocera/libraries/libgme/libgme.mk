@@ -19,4 +19,3 @@ define LIBGME_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
-

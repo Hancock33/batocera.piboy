@@ -93,4 +93,3 @@ SERIOUSSAM_POST_EXTRACT_HOOKS += SERIOUSSAM_CP_WEAPONS
 
 $(eval $(cmake-package))
 $(eval $(host-cmake-package))
-
