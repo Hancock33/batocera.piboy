@@ -4,7 +4,6 @@ import Command
 from generators.Generator import Generator
 import controllersConfig
 
-
 class AlephoneGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
@@ -14,7 +13,6 @@ class AlephoneGenerator(Generator):
 
         if (rom.__contains__("infinity")):
             game = "/userdata/roms/ports/alephone/infinity"
-
 
         commandArray = ["alephone", game]
 

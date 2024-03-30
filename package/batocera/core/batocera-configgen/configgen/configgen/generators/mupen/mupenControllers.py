@@ -234,8 +234,6 @@ def fillIniPlayer(nplayer, iniConfig, controller, config):
         iniConfig.set(section, "DPad R", "")
         iniConfig.set(section, "DPad L", "")
         iniConfig.set(section, "Y Axis", "")
-        iniConfig.set(section, "Y Axis", "")
-        iniConfig.set(section, "X Axis", "")
         iniConfig.set(section, "X Axis", "")
         iniConfig.set(section, "C Button U", "")
         iniConfig.set(section, "C Button D", "")

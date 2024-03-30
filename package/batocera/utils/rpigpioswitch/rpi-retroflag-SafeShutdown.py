@@ -45,7 +45,6 @@ def reset():
 		GPIO.wait_for_edge(resetPin, GPIO.FALLING)
 		os.system("shutdown -r now")
 
-
 if __name__ == "__main__":
 	#initialize GPIO settings
 	init()

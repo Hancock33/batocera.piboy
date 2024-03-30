@@ -4,7 +4,6 @@ from generators.Generator import Generator
 import controllersConfig
 import pathlib
 
-
 class PyxelGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):

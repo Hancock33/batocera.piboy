@@ -1,7 +1,6 @@
 import logging
 import sys
 
-
 def get_logger(module_name: str) -> logging.Logger:
     # The logging level that separates stdout from stderr: stdout < error_level <= stderr
     error_level = logging.WARNING

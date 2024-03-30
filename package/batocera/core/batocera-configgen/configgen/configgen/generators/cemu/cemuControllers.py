@@ -142,7 +142,6 @@ def generateControllerConfig(system, playersControllers):
     def getConfigFileName(controller):
         return path.join(profilesDir, "controller{}.xml".format(controller))
 
-
     # Make controller directory if it doesn't exist
     if not path.isdir(profilesDir):
         os.mkdir(profilesDir)

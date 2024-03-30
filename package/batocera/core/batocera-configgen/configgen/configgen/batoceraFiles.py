@@ -46,7 +46,6 @@ batoceraBins = {'amiberry'       : '/usr/bin/amiberry'
               , 'xemu'           : '/usr/bin/xemu'
 }
 
-
 retroarchRoot = CONF + '/retroarch'
 retroarchRootInit = CONF_INIT + '/retroarch'
 retroarchCustom = retroarchRoot + '/retroarchcustom.cfg'

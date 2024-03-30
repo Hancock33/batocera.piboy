@@ -14,7 +14,6 @@ VOX_BIN_PATH="/userdata/bios/voxatron/vox"
 VOX_ROOT_PATH="/userdata/roms/voxatron/"
 VOX_CONTROLLERS="/userdata/system/.lexaloffle/Voxatron/sdl_controllers.txt"
 
-
 # Generator for the official pico8 binary from Lexaloffle
 class LexaloffleGenerator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
