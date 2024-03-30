@@ -9,8 +9,7 @@ LIBRETRO_BSNES_HD_SITE = $(call github,DerKoun,bsnes-hd,$(LIBRETRO_BSNES_HD_VERS
 LIBRETRO_BSNES_HD_LICENSE = GPLv3
 
 define LIBRETRO_BSNES_HD_BUILD_CMDS
-	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/bsnes/GNUmakefile
-	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/bsnes/GNUmakefile
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/bsnes/GNUmakefile
 	$(SED) "s|options += -lX11 -lXext|#options += -lX11 -lXext|g" $(@D)/bsnes/GNUmakefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/bsnes -f GNUmakefile target="libretro" platform=linux local=false
 endef
