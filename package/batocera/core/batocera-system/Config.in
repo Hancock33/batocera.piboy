@@ -786,6 +786,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
     bool "batocera.linux handheld emulation packages"
 
     # Gameboy / Gameboy Colour
+    select BR2_PACKAGE_LIBRETRO_DOUBLECHERRYGB              # ALL
     select BR2_PACKAGE_LIBRETRO_GAMBATTE                    # ALL
     select BR2_PACKAGE_LIBRETRO_TGBDUAL                     # ALL
 
