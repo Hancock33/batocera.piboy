@@ -4,7 +4,6 @@
 #
 ################################################################################
 
-
 AML_DTBTOOLS_VERSION = master
 AML_DTBTOOLS_SITE = $(call github,Wilhansen,aml-dtbtools,$(AML_DTBTOOLS_VERSION))
 

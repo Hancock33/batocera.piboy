@@ -16,4 +16,3 @@ define RK3128_BLOBS_INSTALL_IMAGES_CMDS
 endef
 
 $(eval $(generic-package))
-

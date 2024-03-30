@@ -19,7 +19,6 @@ ifeq ($(BR2_PACKAGE_RPI_USERLAND),y)
 	QTSIXA_LIBS += -lbcm_host -lvcos -lvchiq_arm -lvchostif
 endif
 
-
 define QTSIXA_SHANWAN_BUILD_CMDS
 	# Make SHANWAN
 	$(SED) "s|/usr/.\+\?/sixad-remote|/usr/sixad/shanwan/sixad-remote|g" $(@D)/sixad/bluetooth.cpp

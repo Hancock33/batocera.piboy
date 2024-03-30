@@ -16,7 +16,6 @@ IMG_GPU_POWERVR_PROVIDES = libgles libopencl
 
 IMG_GPU_POWERVR_DEPENDENCIES += libdrm
 
-
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
 IMG_GPU_POWERVR_DEPENDENCIES += wayland
 endif
