@@ -15,8 +15,7 @@ LIBRETRO_ECWOLF_PLATFORM = $(LIBRETRO_PLATFORM)
 LIBRETRO_ECWOLF_CONF_OPTS += -DLIBRETRO=ON -DFORCE_CROSSCOMPILE=ON
 
 define LIBRETRO_ECWOLF_BUILD_CMDS
-	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/src/libretro/Makefile
-	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/src/libretro/Makefile
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/src/libretro/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" GIT_VERSION="" \
 	-C $(@D)/src/libretro/ -f Makefile platform="$(LIBRETRO_PLATFORM)"
 endef

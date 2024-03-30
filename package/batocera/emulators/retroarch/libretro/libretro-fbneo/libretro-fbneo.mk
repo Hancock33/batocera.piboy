@@ -44,8 +44,7 @@ LIBRETRO_FBNEO_EXTRA_ARGS += USE_EXPERIMENTAL_FLAGS=0
 endif
 
 define LIBRETRO_FBNEO_BUILD_CMDS
-	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/src/burner/libretro/Makefile
-	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/src/burner/libretro/Makefile
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/src/burner/libretro/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/src/burner/libretro -f Makefile platform="$(LIBRETRO_FBNEO_PLATFORM)" $(LIBRETRO_FBNEO_EXTRA_ARGS) \
 		GIT_VERSION="$(shell echo $(LIBRETRO_FBNEO_VERSION) | cut -c 1-7)"
 endef
