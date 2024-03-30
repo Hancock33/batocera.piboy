@@ -77,7 +77,7 @@ def connect_device(path, address, properties, forceConnect, filter):
   if paired and trusted and connected:
     logging.info("Skipping already connected device {}".format(getDevName(properties)));
     return
-  
+
   if not paired:
     if connected == False and gdiscovering:
       doPairing(address, devName, shortDevName)
@@ -108,7 +108,7 @@ def doPairing(address, devName, shortDevName):
 def doConnect(address, devName, shortDevName):
   global gadapter
   global gdiscovering
-  
+
   try:
     # discovery stopped during connection to help some devices
     if gdiscovering:
@@ -136,7 +136,7 @@ def doConnect(address, devName, shortDevName):
       except Exception as err:
         logging.info("Connection failed (" + devName + ")")
         time.sleep(1)
-    
+
     logging.info("Connection failed. Give up. (" + devName + ")")
     logging_status("Connection failed. Give up. (" + shortDevName + ")")
     if gdiscovering:
@@ -288,7 +288,7 @@ def properties_changed(interface, changed, invalidated, path):
     # ok, do as in simple-agent, trust and connect
     connect_device(path, gdevices[path]["Address"], gdevices[path], True, getBluetoothWantedAddr())
     return
-  
+
   # ok, it is now connected, what else ?
   if "Connected" in changed and changed["Connected"] == True:
     return
@@ -389,12 +389,12 @@ class Agent(dbus.service.Object):
     logging.info("agent: Release")
     if self.exit_on_release:
       mainloop.quit()
-  
+
   @dbus.service.method(AGENT_INTERFACE, in_signature="os", out_signature="")
   def AuthorizeService(self, device, uuid):
     logging.info("agent: AuthorizeService")
     return
-  
+
   @dbus.service.method(AGENT_INTERFACE, in_signature="o", out_signature="s")
   def RequestPinCode(self, device):
     logging.info("RequestPinCode (%s)" % (device))
@@ -404,25 +404,25 @@ class Agent(dbus.service.Object):
   def RequestPasskey(self, device):
     logging.info("RequestPasskey (%s)" % (device))
     return 0
-  
+
   @dbus.service.method(AGENT_INTERFACE, in_signature="ouq", out_signature="")
   def DisplayPasskey(self, device, passkey, entered):
     logging.info("agent: DisplayPasskey (%s, %06u entered %u)" % (device, passkey, entered))
-  
+
   @dbus.service.method(AGENT_INTERFACE, in_signature="os", out_signature="")
   def DisplayPinCode(self, device, pincode):
     logging.info("agent: DisplayPinCode (%s, %s)" % (device, pincode))
-  
+
   @dbus.service.method(AGENT_INTERFACE, in_signature="ou", out_signature="")
   def RequestConfirmation(self, device, passkey):
     logging.info("agent: RequestConfirmation")
     return
-  
+
   @dbus.service.method(AGENT_INTERFACE, in_signature="o", out_signature="")
   def RequestAuthorization(self, device):
     logging.info("agent: RequestAuthorization")
     return
-  
+
   @dbus.service.method(AGENT_INTERFACE, in_signature="", out_signature="")
   def Cancel(self):
     logging.info("agent: Cancel")
@@ -448,7 +448,7 @@ def do_main_loop(dev_id):
       gdevices[path] = interfaces["org.bluez.Device1"]
     if "org.bluez.Adapter1" in interfaces:
       adapters[path] = interfaces["org.bluez.Adapter1"]
-  
+
   adapter_props = adapters[adapter.object_path]
   logging.info(adapter_props["Name"] + "(" + adapter_props["Address"] + "), powered=" + str(adapter_props["Powered"]))
 
@@ -468,7 +468,7 @@ def do_main_loop(dev_id):
   signal.signal(signal.SIGUSR1, user_signal_start_discovery)
   signal.signal(signal.SIGUSR2, user_signal_stop_discovery)
   logging.info("signals set")
-  
+
   mainloop = GLib.MainLoop()
   mainloop.run()
 

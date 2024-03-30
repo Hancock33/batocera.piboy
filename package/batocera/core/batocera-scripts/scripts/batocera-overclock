@@ -61,9 +61,9 @@ doList() {
 	    echo "extreme EXTREME (1500Mhz)"
 	    ;;
 	"bcm2711")
-	    echo "slowwer SLOWWER (600Mhz)"	
-	    echo "rpi2 RPI2 LIKE (900Mhz)"	
-	    echo "rpi3 RPI3 LIKE (1200Mhz)"	
+	    echo "slowwer SLOWWER (600Mhz)"
+	    echo "rpi2 RPI2 LIKE (900Mhz)"
+	    echo "rpi3 RPI3 LIKE (1200Mhz)"
 	    echo "none NONE (B0 - 1500Mhz or C0 - 1800MHz)"
 	    echo "high HIGH (B0 HEATSINK - 1700Mhz)"
 	    echo "turbo TURBO (B0 HEATSINK - 1800Mhz)"
@@ -309,11 +309,11 @@ setValue() {
 		    setValue_rpi4PutVars -4 600 250
 		    ;;
 		"rpi2")
-		    setValue_rpi4PutVars -3 900 250		
+		    setValue_rpi4PutVars -3 900 250
 		    ;;
 		"rpi3")
 		    setValue_rpi4PutVars -2 1200 400
-		    ;;			
+		    ;;
 		"none")
 		    setValue_rpi4None
 		    ;;

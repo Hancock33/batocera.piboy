@@ -9,4 +9,3 @@ then
 	    "${HOOK}"
 	done
 fi
-

@@ -4,7 +4,7 @@
 # It shows the unique BATOCERA logo in early boot stage
 enabledex="$(batocera-settings-get -f /boot/batocera-boot.conf key piboy.enabled)"
 enabledxrs="$(batocera-settings-get -f /boot/batocera-boot.conf key piboyxrs.enabled)"
-	
+
 do_start ()
 {
     # on some sytems, fb0 is not immediatly loaded, so, keep a chance by waiting a bit
@@ -35,7 +35,7 @@ do_start ()
         image="/usr/share/batocera/splash/boot-logo.png"
         [ -f "$image" ] || exit 1
     fi
-	
+
     if [[ $enabledex == "1" ]]; then
         image="/usr/share/batocera/splash/boot-piboy.png"
     elif [[ $enabledxrs == "1" ]]; then
