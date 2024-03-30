@@ -112,7 +112,6 @@ class LibretroGenerator(Generator):
 
         romName = os.path.basename(rom)
 
-
         # The command to run
         dontAppendROM = False
         # For the NeoGeo CD (lr-fbneo) it is necessary to add the parameter: --subsystem neocd

@@ -10,7 +10,6 @@ import re
 from utils.logger import get_logger
 eslog = get_logger(__name__)
 
-
 """Default mapping of Batocera keys to SDL_GAMECONTROLLERCONFIG keys."""
 _DEFAULT_SDL_MAPPING = {
     'b':      'a',  'a':        'b',
@@ -31,7 +30,6 @@ class Input:
         self.id = id
         self.value = value
         self.code = code
-
 
 class Controller:
     def __init__(self, configName, type, guid, player, index="-1", realName="", inputs=None, dev=None, nbbuttons=None, nbhats=None, nbaxes=None):
@@ -68,7 +66,6 @@ def loadAllControllersConfig():
             controllerInstance.inputs[input.get("name")] = inputInstance
     return controllers
 
-
 # Load all controllers from the es_input.cfg
 def loadAllControllersByNameConfig():
     controllers = dict()
@@ -83,7 +80,6 @@ def loadAllControllersByNameConfig():
             inputInstance = Input(input.get("name"), input.get("type"), input.get("id"), input.get("value"), input.get("code"))
             controllerInstance.inputs[input.get("name")] = inputInstance
     return controllers
-
 
 # Create a controller array with the player id as a key
 def loadControllerConfig(controllersInput):
@@ -114,7 +110,6 @@ def findBestControllerConfig(controllers, x, pxguid, pxindex, pxname, pxdev, pxn
             return Controller(controller.configName, controller.type, pxguid, x, pxindex, pxname,
                               controller.inputs, pxdev, pxnbbuttons, pxnbhats, pxnbaxes)
     return None
-
 
 def _generateSdlGameControllerConfig(controller, sdlMapping=_DEFAULT_SDL_MAPPING):
     """Returns an SDL_GAMECONTROLLERCONFIG-formatted string for the given configuration."""
@@ -151,7 +146,6 @@ def _generateSdlGameControllerConfig(controller, sdlMapping=_DEFAULT_SDL_MAPPING
         add_mapping(hotkey_input)
     config.append('')
     return ','.join(config)
-
 
 def _keyToSdlGameControllerConfig(keyname, name, type, id, value=None):
     """
@@ -197,13 +191,11 @@ def _keyToSdlGameControllerConfig(keyname, name, type, id, value=None):
     else:
         raise ValueError('unknown key type: {!r}'.format(type))
 
-
 def generateSdlGameControllerConfig(controllers):
     configs = []
     for idx, controller in controllers.items():
         configs.append(controller.generateSDLGameDBLine())
     return "\n".join(configs)
-
 
 def writeSDLGameDBAllControllers(controllers, outputFile = "/tmp/gamecontrollerdb.txt"):
     with open(outputFile, "w") as text_file:

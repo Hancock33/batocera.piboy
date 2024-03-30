@@ -23,7 +23,6 @@ sys.path.append(
 def defined(key, dict):
     return key in dict and isinstance(dict[key], str) and len(dict[key]) > 0
 
-
 # Warning the values in the array must be exactly at the same index than
 # https://github.com/libretro/RetroArch/blob/master/gfx/video_driver.c#L188
 ratioIndexes = ["4/3", "16/9", "16/10", "16/15", "21/9", "1/1", "2/1", "3/2", "3/4", "4/1", "9/16", "5/4", "6/5", "7/9", "8/3",
@@ -1096,7 +1095,6 @@ def configureGunInputsForPlayer(n, gun, controllers, retroarchConfig, core, meta
         retroarchConfig['input_player{}_gun_aux_a_mbtn'         .format(n)] = 2
         retroarchConfig['input_player{}_gun_aux_b_mbtn'         .format(n)] = 3
 
-
     # mapping
     mapping = {
         "gun_trigger"        : "b",
@@ -1241,7 +1239,6 @@ def writeBezelConfig(generator, bezel, shaderBezel, retroarchConfig, rom, gameRe
                 if system.config['ratio'] in ratioIndexes:
                     retroarchConfig['aspect_ratio_index'] = ratioIndexes.index(system.config['ratio'])
                     retroarchConfig['video_aspect_ratio_auto'] = 'false'
-
 
     if not shaderBezel:
         retroarchConfig['input_overlay_enable']       = "true"

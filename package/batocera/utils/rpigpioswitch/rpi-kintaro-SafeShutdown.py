@@ -47,7 +47,6 @@ class SNES:
         self.pwm = GPIO.PWM(self.fan_pin, 50)  #PWM for the fan
         self.pwm.start(0)
 
-
     def power_interrupt(self, channel):
         time.sleep(self.debounce_time)  # debounce
         if GPIO.input(self.power_pin) == GPIO.HIGH and GPIO.input(

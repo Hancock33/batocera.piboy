@@ -9,7 +9,6 @@ import configparser
 from . import dolphinTriforceControllers
 from . import dolphinTriforceGameConfig
 
-
 class DolphinTriforceGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):

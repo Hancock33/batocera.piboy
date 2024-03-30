@@ -103,7 +103,6 @@ def load_config(fname):
         return []
     return newconfig
 
-
 def temp_check():
     check_interval=15 # seconds between two temp changes
     fanconfig =  ["65=100", "60=55", "55=10", "45=0"] # Default values when no config file
@@ -179,4 +178,3 @@ else:
         temp = open("/sys/class/thermal/thermal_zone0/temp","r").readline()
         val = float(int(temp)/1000)
         print ("Temp: {}C".format(val))
-
