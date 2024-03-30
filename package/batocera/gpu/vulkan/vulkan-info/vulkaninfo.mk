@@ -5,7 +5,7 @@
 ################################################################################
 
 VULKANINFO_VERSION = 1.0
-#VULKANINFO_SITE = 
+#VULKANINFO_SITE =
 VULKANINFO_SOURCE =
 
 define VULKANINFO_INSTALL_TARGET_CMDS
