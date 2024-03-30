@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if ! { [ -e /sys/devices/system/cpu/cpufreq/policy0/scaling_governor ] && 
+if ! { [ -e /sys/devices/system/cpu/cpufreq/policy0/scaling_governor ] &&
        [ -e /sys/devices/system/cpu/cpufreq/policy0/scaling_available_governors ]; }; then
 	exit 0
 fi
@@ -56,7 +56,7 @@ handle_powermode() {
 				set_governor "powersave"
 				;;
 			*)
-		esac				
+		esac
 }
 
 # Check for events
@@ -73,7 +73,7 @@ if [ "$EVENT" = "gameStop" ]; then
     SYSTEM_GOVERNOR="$(/usr/bin/batocera-settings-get-master system.cpu.governor)"
     if check_governor "$SYSTEM_GOVERNOR"; then
 		set_governor "$SYSTEM_GOVERNOR"
-	fi	
+	fi
 	exit 0
 fi
 
@@ -93,7 +93,7 @@ if [ -z "${POWER_MODE}" ]; then
     SYSTEM_GOVERNOR="$(/usr/bin/batocera-settings-get-master system.cpu.governor)"
     if check_governor "$SYSTEM_GOVERNOR"; then
 		set_governor "$SYSTEM_GOVERNOR"
-	fi	
+	fi
 	exit 0
 fi
 
