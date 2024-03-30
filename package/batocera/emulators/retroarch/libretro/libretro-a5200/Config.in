@@ -6,4 +6,3 @@ config BR2_PACKAGE_LIBRETRO_A5200
           A libretro Atari 5200 emulator.
 
 	  http://www.libretro.com
-

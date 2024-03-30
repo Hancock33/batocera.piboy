@@ -3,4 +3,3 @@ config BR2_PACKAGE_LIBRETRO_SUPERBROSWAR
 	depends on BR2_PACKAGE_RETROARCH
         help
           Libretro port of SuperMarioWar
-

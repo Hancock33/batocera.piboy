@@ -5,5 +5,3 @@ config BR2_PACKAGE_TSUGARU
       FM TOWNS Emulator "Tsugaru"
 
 	    https://github.com/captainys/TOWNSEMU
-
-
