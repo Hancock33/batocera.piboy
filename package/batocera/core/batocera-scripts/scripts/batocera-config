@@ -49,7 +49,7 @@ if [ "$command" = "getRootPassword" ]; then
 	    echo "linux"
 		exit 0
     fi
-    
+
     ENCPASSWD=$(grep -E '^[ \t]*rootshadowpassword[ \t]*=' "${storageFile}" | sed -e s+'^[ \t]*rootshadowpassword[ \t]*='++)
     if test -z "${ENCPASSWD}"; then
 	    exit 1
@@ -74,7 +74,7 @@ if [ "$command" = "setRootPassword" ]; then
 	    PASSWD=$(tr -cd _A-Z-a-z-0-9 < /dev/urandom | fold -w8 | head -n1)
     fi
     PASSWDENC=$(batocera-encode encode "${PASSWD}")
-    
+
     preBootConfig
     if grep -qE '^[ \t]*rootshadowpassword[ \t]*=' "${storageFile}"; then
 	    # update it
@@ -92,7 +92,7 @@ if [ "$command" = "setRootPassword" ]; then
 		fi
 		postBootConfig
 		exit 0
-	fi    
+	fi
 fi
 
 if [ "$command" = "overscan" ]; then
@@ -113,7 +113,7 @@ if [ "$command" = "overscan" ]; then
 		bato_config_set_value overscan_right "$extra2"
 		bato_config_set_value overscan_top "$extra3"
 		bato_config_set_value overscan_bottom "$extra4"
-		
+
 		postBootConfig
 		exit 0
 	fi
@@ -210,7 +210,7 @@ if [ "$command" = "canupdate" ];then
 	installed=`cat /usr/share/batocera/batocera.version`
 
 	echo "${available}"
-	
+
 	if [ "$available" != "$installed" ]; then
 		exit 0
 	fi
