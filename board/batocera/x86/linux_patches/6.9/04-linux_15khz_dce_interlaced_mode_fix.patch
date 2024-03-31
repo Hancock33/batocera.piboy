@@ -153,10 +153,10 @@ index c1a85ee374d9..dce95dd5d1cc 100644
  
  static void dce60_timing_generator_enable_advanced_request(
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
-index 9d5df4c0da59..3facae8b3d22 100644
+index 0ba1feaf96c0..42ebf43c9ed3 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
-@@ -2789,6 +2789,9 @@ static void dce110_program_front_end_for_pipe(
+@@ -2790,6 +2790,9 @@ static void dce110_program_front_end_for_pipe(
  
  	pipe_ctx->plane_res.scl_data.lb_params.alpha_en = pipe_ctx->bottom_pipe != NULL;
  
