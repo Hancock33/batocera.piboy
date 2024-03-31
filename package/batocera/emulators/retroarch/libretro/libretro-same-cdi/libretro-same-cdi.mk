@@ -23,8 +23,7 @@ LIBRETRO_SAME_CDI_ARCHOPTS += -D__aarch64__ -DASMJIT_BUILD_X86
 endif
 
 define LIBRETRO_SAME_CDI_BUILD_CMDS
-	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile.libretro
-	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile.libretro
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile.libretro
 
 	# First, we need to build genie for host
 	cd $(@D); \

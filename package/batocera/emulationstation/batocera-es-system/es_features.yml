@@ -6398,6 +6398,16 @@ libretro:
                 choices:
                     "On":   1
                     "Off":  0
+    doublecherrygb:
+      features: [padtokeyboard, netplay]
+      shared: [autosave, rewind]
+      cfeatures:
+            sync_saves:
+                prompt:      SYNC SAVE FILES
+                description: Sync GB2Player/GBC2Player saves with saves in "saves/gb" or "saves/gbc".
+                choices:
+                    "On":   1
+                    "Off":  0
     theodore:
       features: [padtokeyboard, netplay]
       shared: [autosave, rewind]

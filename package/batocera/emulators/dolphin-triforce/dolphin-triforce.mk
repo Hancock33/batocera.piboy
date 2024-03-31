@@ -3,9 +3,9 @@
 # dolphin-triforce
 #
 ################################################################################
-# Version: Commits on Mar 15, 2023
-DOLPHIN_TRIFORCE_VERSION = 6b7664dd230de299bae22150be77f4766cddde83
-DOLPHIN_TRIFORCE_SITE = https://crediar.dev/crediar/dolphin.git
+# Version: Commits on Feb 29, 2024
+DOLPHIN_TRIFORCE_VERSION = 8c6e5e0ed7b75578f368ccb4aec23777fdd8f9a9
+DOLPHIN_TRIFORCE_SITE = https://github.com/JuanMiguelBG/dolphin-triforce.git
 DOLPHIN_TRIFORCE_SITE_METHOD = git
 DOLPHIN_TRIFORCE_LICENSE = GPLv2+
 DOLPHIN_TRIFORCE_GIT_SUBMODULES = YES
@@ -14,19 +14,19 @@ DOLPHIN_TRIFORCE_SUPPORTS_IN_SOURCE_BUILD = NO
 DOLPHIN_TRIFORCE_DEPENDENCIES = libevdev ffmpeg zlib libpng lzo libusb libcurl
 DOLPHIN_TRIFORCE_DEPENDENCIES += bluez5_utils hidapi xz host-xz sdl2
 
+DOLPHIN_TRIFORCE_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=""
+DOLPHIN_TRIFORCE_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
+DOLPHIN_TRIFORCE_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 DOLPHIN_TRIFORCE_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 DOLPHIN_TRIFORCE_CONF_OPTS += -DDISTRIBUTOR='batocera.linux'
 DOLPHIN_TRIFORCE_CONF_OPTS += -DENABLE_ANALYTICS=OFF
 DOLPHIN_TRIFORCE_CONF_OPTS += -DENABLE_AUTOUPDATE=OFF
 DOLPHIN_TRIFORCE_CONF_OPTS += -DENABLE_CLI_TOOL=OFF
 DOLPHIN_TRIFORCE_CONF_OPTS += -DENABLE_LLVM=OFF
-DOLPHIN_TRIFORCE_CONF_OPTS += -DENABLE_LTO=ON
 DOLPHIN_TRIFORCE_CONF_OPTS += -DENABLE_TESTS=OFF
 DOLPHIN_TRIFORCE_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
 DOLPHIN_TRIFORCE_CONF_OPTS += -DUSE_MGBA=OFF
 DOLPHIN_TRIFORCE_CONF_OPTS += -DUSE_UPNP=OFF
-DOLPHIN_TRIFORCE_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
-DOLPHIN_TRIFORCE_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 ifeq ($(BR2_PACKAGE_QT6),y)
 	DOLPHIN_EMU_DEPENDENCIES += qt6base qt6svg
@@ -51,8 +51,8 @@ else
 endif
 
 define DOLPHIN_TRIFORCE_INSTALL_TARGET_CMDS
-	cp $(@D)/buildroot-build/Binaries/dolphin-emu $(TARGET_DIR)/usr/bin/dolphin-triforce
-	cp $(@D)/buildroot-build/Binaries/dolphin-emu-nogui $(TARGET_DIR)/usr/bin/dolphin-triforce-nogui
+	cp $(@D)/buildroot-build/Binaries/dolphin-triforce $(TARGET_DIR)/usr/bin/dolphin-triforce
+	cp $(@D)/buildroot-build/Binaries/dolphin-triforce-nogui $(TARGET_DIR)/usr/bin/dolphin-triforce-nogui
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-triforce/*.keys $(TARGET_DIR)/usr/share/evmapy
 endef

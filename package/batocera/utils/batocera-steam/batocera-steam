@@ -6,7 +6,7 @@ GAME=$1
 
 batocera-mouse show
 
-# bad hack in a first time to get audio for user batocera                                                                                                                                          
+# bad hack in a first time to get audio for user batocera
 chown -R root:audio /var/run/pulse
 chmod -R g+rwX /var/run/pulse
 

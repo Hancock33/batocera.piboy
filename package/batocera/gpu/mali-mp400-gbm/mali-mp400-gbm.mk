@@ -42,7 +42,6 @@ define MALI_MP400_GBM_INSTALL_STAGING_CMDS
 				sed -i -e s+@CMAKE_INSTALL_LIBDIR@+lib+g				$(STAGING_DIR)/usr/lib/pkgconfig/$${X}.pc; \
 		done
 
-
 endef
 
 define MALI_MP400_GBM_INSTALL_TARGET_CMDS

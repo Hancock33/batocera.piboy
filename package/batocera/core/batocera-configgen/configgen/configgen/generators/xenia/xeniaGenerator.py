@@ -149,7 +149,7 @@ class XeniaGenerator(Generator):
             os.chdir(wineprefix + '/xenia-canary')
         else:
             toml_file = emupath + '/xenia.config.toml'
-            os.chdir(wineprefix + '/xenia') 
+            os.chdir(wineprefix + '/xenia')
         if os.path.isfile(toml_file):
             with open(toml_file) as f:
                 config = toml.load(f)

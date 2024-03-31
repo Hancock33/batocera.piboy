@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-# 
-# Parser for .BATOEXEC pacman packages 
+#
+# Parser for .BATOEXEC pacman packages
 # @lbrpdx on Batocera Discord
 #
 # 20200528 - Initial revision (support for 'gamelist' and 'exec')
@@ -22,7 +22,7 @@ ROMPATH="/userdata/roms"
 # First line is "command = argument"
 # as described on https://wiki.batocera.org/pacman_package_manager
 # Rest of the file is depending on "command"
-def parse_batoexec(): 
+def parse_batoexec():
     if not os.path.isfile(BATOEXEC):
         return ('noop', '' , '')
     with open (BATOEXEC, 'r') as infile:

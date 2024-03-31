@@ -7,7 +7,7 @@ CACHEVERSION=$(head -1 "${CACHEFILE}" 2>/dev/null)
 
 if test "${VERSION}" != "${CACHEVERSION}"
 then
-    (cat "${VERSIONFILE}" ; retroarch -x /usr/lib/libretro/*_libretro.so) > "${CACHEFILE}" || exit 1	
+    (cat "${VERSIONFILE}" ; retroarch -x /usr/lib/libretro/*_libretro.so) > "${CACHEFILE}" || exit 1
 fi
 
 tail -n +2 "${CACHEFILE}"

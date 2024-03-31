@@ -4,7 +4,6 @@ import Command
 from generators.Generator import Generator
 import controllersConfig
 
-
 class SamcoupeGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):

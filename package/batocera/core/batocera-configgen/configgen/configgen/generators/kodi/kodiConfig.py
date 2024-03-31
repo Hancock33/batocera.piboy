@@ -120,7 +120,6 @@ def writeKodiConfigs(kodiJoystick, currentControllers, provider):
         kodiJoy.write(config.toprettyxml())
         kodiJoy.close()
 
-
 def writeKodiConfig(controllersFromES):
     # if there is no controller, don't remove the current generated one
     # it allows people to start kodi at startup when having only bluetooth joysticks

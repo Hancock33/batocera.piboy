@@ -11,7 +11,7 @@ start() {
         if [ ! -e "$CONFIG_DIR" ]; then
                 initialize
         fi
-        
+
         # Start the LEDSpicer daemon (ledspicerd)
         start-stop-daemon --start --quiet --exec $DAEMON --background -- $DAEMON_ARGS
         RETVAL=$?
@@ -26,7 +26,7 @@ stop() {
         # Stop the LEDSpicer daemon (ledspicerd)
         start-stop-daemon --stop --quiet --exec $DAEMON
 	RETVAL=$?
-	
+
         echo "done"
         return $RETVAL
 }

@@ -270,7 +270,6 @@ class Model2EmuGenerator(Generator):
         # now run the emulator
         return Command.Command(array=commandArray, env=environment)
 
-
 def modify_lua_widescreen(file_path, condition):
     with open(file_path, 'r') as lua_file:
         lines = lua_file.readlines()

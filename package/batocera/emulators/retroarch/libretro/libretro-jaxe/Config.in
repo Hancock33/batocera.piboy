@@ -8,5 +8,3 @@ config BR2_PACKAGE_LIBRETRO_JAXE
       A fully-featured, cross platform XO-CHIP/S-CHIP/CHIP-8 emulator written in C and SDL.
 
 	    https://github.com/kurtjd/jaxe
-
-

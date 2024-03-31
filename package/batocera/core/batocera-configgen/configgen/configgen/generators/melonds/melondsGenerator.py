@@ -66,7 +66,6 @@ class MelonDSGenerator(Generator):
         f.write("FirmwareOverrideSettings=1\n")
         f.write("FirmwareLanguage=1\n")
 
-
         # [User selected options]
         # MelonDS only has OpenGL or Software - use OpenGL if not selected
         if system.isOptSet("melonds_renderer"):

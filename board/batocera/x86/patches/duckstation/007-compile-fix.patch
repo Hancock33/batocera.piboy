@@ -1,0 +1,74 @@
+diff --git a/src/duckstation-nogui/sdl_key_names.h b/src/duckstation-nogui/sdl_key_names.h
+index efc587ea..8ef74e13 100644
+--- a/src/duckstation-nogui/sdl_key_names.h
++++ b/src/duckstation-nogui/sdl_key_names.h
+@@ -4,7 +4,10 @@
+ #pragma once
+ 
+ #include "common/types.h"
++
++#ifdef _WIN32
+ #include "common/windows_headers.h"
++#endif
+ 
+ #include <array>
+ #include <cstring>
+@@ -254,13 +257,13 @@ static const std::map<int, const char*> s_sdl_key_names = {{SDLK_RETURN, "Return
+                                                            {SDLK_AUDIOREWIND, "MediaRewind"},
+                                                            {SDLK_AUDIOFASTFORWARD, "MediaFastForward"}};
+ 
+-static const char* GetKeyName(DWORD key)
++static const char* GetKeyName(unsigned short key)
+ {
+   const auto it = s_sdl_key_names.find(key);
+   return it == s_sdl_key_names.end() ? nullptr : it->second;
+ }
+ 
+-static std::optional<DWORD> GetKeyCodeForName(const std::string_view& key_name)
++static std::optional<unsigned short> GetKeyCodeForName(const std::string_view& key_name)
+ {
+   for (const auto& it : s_sdl_key_names)
+   {
+diff --git a/src/duckstation-nogui/sdl_nogui_platform.cpp b/src/duckstation-nogui/sdl_nogui_platform.cpp
+index 3afb1e5b..e931b457 100644
+--- a/src/duckstation-nogui/sdl_nogui_platform.cpp
++++ b/src/duckstation-nogui/sdl_nogui_platform.cpp
+@@ -183,7 +183,7 @@ std::optional<WindowInfo> SDLNoGUIPlatform::GetPlatformWindowInfo()
+     case SDL_SYSWM_X11:
+       wi.type = WindowInfo::Type::X11;
+       wi.display_connection = swi.info.x11.display;
+-      wi.window_handle = swi.info.x11.window;
++      //wi.window_handle = swi.info.x11.window;
+       break;
+ #endif
+ 
+@@ -220,7 +220,7 @@ void SDLNoGUIPlatform::SetPlatformWindowTitle(std::string title)
+ 
+ std::optional<u32> SDLNoGUIPlatform::ConvertHostKeyboardStringToCode(const std::string_view& str)
+ {
+-  std::optional<DWORD> converted(SDLKeyNames::GetKeyCodeForName(str));
++  std::optional<unsigned short> converted(SDLKeyNames::GetKeyCodeForName(str));
+   return converted.has_value() ? std::optional<u32>(static_cast<u32>(converted.value())) : std::nullopt;
+   return std::nullopt;
+ }
+diff --git a/src/duckstation-nogui/sdl_nogui_platform.h b/src/duckstation-nogui/sdl_nogui_platform.h
+index ea8a1b83..66370e78 100644
+--- a/src/duckstation-nogui/sdl_nogui_platform.h
++++ b/src/duckstation-nogui/sdl_nogui_platform.h
+@@ -5,7 +5,9 @@
+ 
+ #include <atomic>
+ 
++#ifdef _WIN32
+ #include "common/windows_headers.h"
++#endif
+ 
+ #include "nogui_platform.h"
+ 
+@@ -54,4 +56,4 @@ private:
+ 
+   std::atomic_bool m_message_loop_running{false};
+   std::atomic_bool m_fullscreen{false};
+-};
+\ No newline at end of file
++};

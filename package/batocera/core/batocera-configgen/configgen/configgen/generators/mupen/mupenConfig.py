@@ -150,13 +150,11 @@ def setMupenConfig(iniConfig, system, controllers, gameResolution):
         iniConfig.set("Video-Rice", "LoadHiResTextures", "False")
         iniConfig.set("Video-Glide64mk2", "ghq_hirs",    "0")    # Hi-res texture pack format (0 for none, 1 for Rice)
 
-
     # Texture Enhencement XBRZ -> ONLY for RICE
     if system.isOptSet("mupen64plus_TextureEnhancement") and system.config["mupen64plus_TextureEnhancement"] != 0:
         iniConfig.set("Video-Rice", "TextureEnhancement", system.config["mupen64plus_TextureEnhancement"])
     else:
         iniConfig.set("Video-Rice", "TextureEnhancement", "0")   # 0=None, 1=2X, 2=2XSAI, 3=HQ2X, 4=LQ2X, 5=HQ4X, 6=Sharpen, 7=Sharpen More, 8=External, 9=Mirrored
-
 
     # Frameskip -> ONLY for GLIDE64MK2
     iniConfig.set("Video-Glide64mk2", "autoframeskip", "0")
@@ -186,7 +184,6 @@ def setMupenConfig(iniConfig, system, controllers, gameResolution):
     else:
         iniConfig.set("64DD", "IPL-ROM", "")
     iniConfig.set("64DD", "Disk", "")
-
 
     # Display FPS
     if system.config['showFPS'] == 'true':
@@ -248,7 +245,6 @@ def setHotKeyConfig(iniConfig, controllers, system):
             if 'b' in controllers['1'].inputs:
                 #iniConfig.set("CoreEvents", "Joy Mapping Pause", "\"J{}{}/{}\"".format(controllers['1'].index, createButtonCode(controllers['1'].inputs['hotkey']), createButtonCode(controllers['1'].inputs['b'])))
                 iniConfig.set("CoreEvents", "Joy Mapping Pause", "")
-
 
 def createButtonCode(button):
     if(button.type == 'axis'):

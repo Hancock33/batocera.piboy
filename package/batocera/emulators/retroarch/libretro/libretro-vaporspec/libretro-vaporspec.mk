@@ -13,8 +13,7 @@ LIBRETRO_VAPORSPEC_LICENSE = MIT
 LIBRETRO_VAPORSPEC_DEPENDENCIES = retroarch
 
 define LIBRETRO_VAPORSPEC_BUILD_CMDS
-	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/machine/Makefile.libretro
-	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/machine/Makefile.libretro
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/machine/Makefile.libretro
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/machine -f Makefile.libretro platform="unix"
 endef
 

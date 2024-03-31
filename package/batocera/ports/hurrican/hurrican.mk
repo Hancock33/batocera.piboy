@@ -32,4 +32,3 @@ define HURRICAN_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
-

@@ -14,6 +14,5 @@ define GUNCON_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/calibrate.py $(TARGET_DIR)/usr/bin/calibrate.py
 endef
 
-
 $(eval $(kernel-module))
 $(eval $(generic-package))

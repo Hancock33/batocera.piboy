@@ -21,14 +21,14 @@ start() {
 	then
 		mkdir /userdata/system/configs/syncthing/
 	fi
-	
+
 	echo -n "Starting syncthing service: "
 	start-stop-daemon -S -b -q -x /usr/bin/syncthing -- serve --no-upgrade --no-browser --logflags=2 --logfile=$SYNCTHING_LOG --home=$SYNCTHING_CONFIG --gui-address=$SYNCTHING_GUI
 	RETVAL=$?
 	echo "done"
 
 	return $RETVAL
-}	
+}
 
 stop() {
 	echo -n "Shutting down syncthing service: "
@@ -37,12 +37,12 @@ stop() {
 	echo "done"
 
 	return $RETVAL
-}	
+}
 
 restart() {
 	stop
 	start
-}	
+}
 
 reload() {
 	echo -n "Reloading syncthing service: "
@@ -51,7 +51,7 @@ reload() {
 	echo "done"
 
 	return $RETVAL
-}	
+}
 
 case "$1" in
 	start)

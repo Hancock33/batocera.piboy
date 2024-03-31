@@ -20,4 +20,3 @@ define FREEPATS_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
-

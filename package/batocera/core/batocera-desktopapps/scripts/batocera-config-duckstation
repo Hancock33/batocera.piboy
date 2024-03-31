@@ -14,4 +14,3 @@ if [ -f /usr/bin/duckstation-qt ]; then
 else
     XDG_CONFIG_HOME=/userdata/system/configs XDG_DATA_HOME=/userdata/saves QT_QPA_PLATFORM=xcb /usr/bin/duckstation/duckstation-nogui
 fi
-

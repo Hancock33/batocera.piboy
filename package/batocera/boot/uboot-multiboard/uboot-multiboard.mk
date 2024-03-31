@@ -118,7 +118,6 @@ define UBOOT_MULTIBOARD_STEP_BUILD
 			O=$(@D)/build-$(1) $(UBOOT_MULTIBOARD_MAKE_OPTS) all
 endef
 
-
 # Helper macro to install U-Boot.
 # $(1): the name of U-Boot defconfig without _defconfig part
 define UBOOT_MULTIBOARD_STEP_INSTALL

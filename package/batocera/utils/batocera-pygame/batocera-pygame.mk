@@ -21,7 +21,6 @@ define BATOCERA_PYGAME_INSTALL_SAMPLE
 	$(INSTALL) -D -m 0644 $(@D)/questions.py		$(TARGET_DIR)/usr/share/batocera/datainit/roms/pygame/retrotrivia/
 	$(INSTALL) -D -m 0644 $(@D)/videoplayer.py		$(TARGET_DIR)/usr/share/batocera/datainit/roms/pygame/retrotrivia/
 	$(INSTALL) -D -m 0644 $(@D)/gamelists.py		$(TARGET_DIR)/usr/share/batocera/datainit/roms/pygame/retrotrivia/
-	$(INSTALL) -D -m 0644 $(@D)/gamelists.py		$(TARGET_DIR)/usr/share/batocera/datainit/roms/pygame/retrotrivia/
 	$(INSTALL) -D -m 0644 $(@D)/assets/*			$(TARGET_DIR)/usr/share/batocera/datainit/roms/pygame/retrotrivia/assets/
 	$(INSTALL) -D -m 0644 $(@D)/README.md			$(TARGET_DIR)/usr/share/batocera/datainit/roms/pygame/retrotrivia/
 	$(INSTALL) -D -m 0644 $(@D)/retrotrivia.png		$(TARGET_DIR)/usr/share/batocera/datainit/roms/pygame/images

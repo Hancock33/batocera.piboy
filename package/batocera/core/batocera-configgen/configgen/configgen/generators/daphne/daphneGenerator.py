@@ -144,7 +144,6 @@ class DaphneGenerator(Generator):
             video_resolution = self.get_resolution(video_path)
             eslog.debug("Resolution: {}".format(video_resolution))
 
-
         if (system.name == 'actionmax') or (system.name == 'alg') :
             commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
                             "singe", "vldp", "-framefile", frameFile, "-script", singeFile, "-fullscreen",

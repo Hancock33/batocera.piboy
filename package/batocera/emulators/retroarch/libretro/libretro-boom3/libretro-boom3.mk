@@ -11,8 +11,7 @@ LIBRETRO_BOOM3_LICENSE_FILES = COPYING.txt
 LIBRETRO_BOOM3_DEPENDENCIES = host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
 
 define LIBRETRO_BOOM3_BUILD_CMDS
-	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/neo/Makefile
-	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/neo/Makefile
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/neo/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/neo -f Makefile platform=unix \
 		GIT_VERSION="-$(shell echo $(LIBRETRO_BOOM3_VERSION) | cut -c 1-7)"
 
@@ -27,4 +26,3 @@ define LIBRETRO_BOOM3_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
-

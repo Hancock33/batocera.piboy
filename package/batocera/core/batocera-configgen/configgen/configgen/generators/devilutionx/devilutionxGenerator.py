@@ -5,7 +5,6 @@ import Command
 from generators.Generator import Generator
 import controllersConfig
 
-
 class DevilutionXGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):

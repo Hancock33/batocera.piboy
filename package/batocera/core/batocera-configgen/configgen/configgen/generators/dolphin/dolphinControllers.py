@@ -550,7 +550,6 @@ def generateControllerConfig_wheel(f, pad, nplayer):
             if input.name == "joystick1left" and "joystick1right" in wheelMapping:
                 write_key(f, wheelMapping["joystick1right"], input.type, input.id, input.value, pad.nbaxes, True, None, None)
 
-
 def generateControllerConfig_any_auto(f, pad, anyMapping, anyReverseAxes, anyReplacements, extraOptions, system, nplayer, nsamepad):
     for opt in extraOptions:
         f.write(opt + " = " + extraOptions[opt] + "\n")

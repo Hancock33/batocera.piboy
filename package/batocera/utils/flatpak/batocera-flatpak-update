@@ -81,7 +81,7 @@ flatpak list --app --columns=app,name | (
 		mkdir -p "/userdata/roms/flatpak/images" || return 1
 		cp "${IMGFILE}" "/userdata/roms/flatpak/${IMGARG}" || return 1
 	    fi
-	    
+
 	    echo "adding ${Y}"
 	    echo "${X}" > "/userdata/roms/flatpak/${Y}.flatpak"
 
@@ -91,7 +91,7 @@ flatpak list --app --columns=app,name | (
 		echo "adding game in es failed" >&2
 		return 1
 	    fi
-	    
+
 	    let N++
 	fi
     done

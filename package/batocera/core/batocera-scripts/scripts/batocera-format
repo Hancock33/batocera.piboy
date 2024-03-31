@@ -55,7 +55,6 @@ do_listFstypes() {
     echo "exfat"
 }
 
-
 do_unmount_disk() {
     UDSK=$1
 
@@ -96,7 +95,7 @@ do_format() {
     # formatting
     echo "creating GPT partiton table on ${FORMATDISK}..."
     parted -s "/dev/${FORMATDISK}" mklabel GPT || return 1
-    
+
     echo "creating 1 partition on ${FORMATDISK}..."
     parted -s "/dev/${FORMATDISK}" -m unit b mkpart primary 2M 100% || return 1
 

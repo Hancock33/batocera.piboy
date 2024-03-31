@@ -49,7 +49,6 @@ def createXemuConfig(iniConfig, system, rom, playersControllers, gameResolution)
     if not iniConfig.has_section("net.udp"):
         iniConfig.add_section("net.udp")
 
-
     # Boot Animation Skip
     if system.isOptSet("xemu_bootanim"):
         iniConfig.set("general", "skip_boot_anim", system.config["xemu_bootanim"])

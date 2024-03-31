@@ -9,4 +9,3 @@ config BR2_PACKAGE_LIBRETRO_TYRQUAKE
 
 comment "LIBRETRO_TYRQUAKE needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP
-

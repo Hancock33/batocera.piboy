@@ -5,7 +5,6 @@ from generators.Generator import Generator
 import os.path
 import glob
 
-
 class DosBoxStagingGenerator(Generator):
 
     # Main entry of the module
