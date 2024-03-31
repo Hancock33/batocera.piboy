@@ -30,4 +30,3 @@ xz -T0 -7 -v $DEST_DIR.tar
 rm -r $DEST_DIR
 cp -av $DEST_DIR.tar.xz /mnt/smb
 mv $DEST_DIR.tar.xz  $HOME/dl/lib32bit
-

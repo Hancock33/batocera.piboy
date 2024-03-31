@@ -18,7 +18,6 @@ echo "${DEVNAME}" | grep -E "^/dev/input/event[0-9]+$" || exit 0
 # B_HAT_LEFT (HAT0X)    : BTN_7
 # B_HAT_RIGHT (HAT0X)   : BTN_8
 
-
 DEVHASH=$(echo "${DEVNAME}" | md5sum | cut -c 0-8)
 evsieve --input "${DEVNAME}" persist=exit \
 	--map btn:west btn:9 \

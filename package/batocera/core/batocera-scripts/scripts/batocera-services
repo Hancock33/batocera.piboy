@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 #
 # start/stop/list/enable/disable services
 #
@@ -118,7 +118,7 @@ do_disable() {
 
     NEW_ENABLED_SERVICES=
     JDONE=0
-    
+
     # build new services
     if test -n "${enabled_services}"
     then

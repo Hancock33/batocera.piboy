@@ -9,8 +9,7 @@ LIBRETRO_VIRTUALJAGUAR_SITE = $(call github,libretro,virtualjaguar-libretro,$(LI
 LIBRETRO_VIRTUALJAGUAR_LICENSE = GPLv3
 
 define LIBRETRO_VIRTUALJAGUAR_BUILD_CMDS
-	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
-	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D) -f Makefile \
 		platform="unix" GIT_VERSION="-$(shell echo $(LIBRETRO_VIRTUALJAGUAR_VERSION) | cut -c 1-7)"
 endef

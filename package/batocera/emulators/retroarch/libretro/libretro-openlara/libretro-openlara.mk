@@ -23,8 +23,7 @@ ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
 endif
 
 define LIBRETRO_OPENLARA_BUILD_CMDS
-	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/src/platform/libretro/Makefile
-	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/src/platform/libretro/Makefile
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/src/platform/libretro/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
 		-C $(@D)/src/platform/libretro -f Makefile $(LIBRETRO_OPENLARA_EXTRA_ARGS) \
 		platform="$(LIBRETRO_OPENLARA_PLATFORM)"

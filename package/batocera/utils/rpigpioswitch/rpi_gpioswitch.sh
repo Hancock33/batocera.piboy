@@ -186,7 +186,6 @@ function onoffshim_start()
     [ $CONF -eq 1 ] && return
     #------ CONFIG SECTION ------
 
-
     # This is Button command (GPIO17 default)
     echo $1 > /sys/class/gpio/export
     echo in > /sys/class/gpio/gpio$1/direction

@@ -56,7 +56,6 @@ class SonicNexusGenerator(Generator):
         with open( rom_directory + '/settings.ini', 'w') as configfile:
             config.write(configfile)
 
-
         with open(rom_directory + '/settings.ini',"r") as f:
             nexucfg = f.read()
 

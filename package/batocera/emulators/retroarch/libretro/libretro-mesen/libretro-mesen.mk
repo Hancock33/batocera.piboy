@@ -9,8 +9,7 @@ LIBRETRO_MESEN_SITE = $(call github,libretro,Mesen,$(LIBRETRO_MESEN_VERSION))
 LIBRETRO_MESEN_LICENSE = GPL
 
 define LIBRETRO_MESEN_BUILD_CMDS
-	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/Libretro/Makefile
-	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/Libretro/Makefile
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Libretro/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
 	    GIT_VERSION="" -C $(@D)/Libretro -f Makefile
 endef

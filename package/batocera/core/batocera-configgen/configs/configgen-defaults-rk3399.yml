@@ -7,4 +7,3 @@ nds:
 flash:
   emulator: lightspark
   core:     lightspark
-

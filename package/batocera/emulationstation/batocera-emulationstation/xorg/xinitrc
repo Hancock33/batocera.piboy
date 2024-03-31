@@ -40,7 +40,7 @@ if [ -f "/var/tmp/nvidia.prime" ]; then
             echo "Nvidia Prime provider = $provider_number" >> "$nvidia_log"
         fi
     else
-        echo "You do not have multiple xrandr providers to support Nvidia Prime!" >> "$nvidia_log"      
+        echo "You do not have multiple xrandr providers to support Nvidia Prime!" >> "$nvidia_log"
     fi
 fi
 

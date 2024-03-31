@@ -17,7 +17,7 @@ PROTOTYPE_CONF_OPTS=RPI4=1
 endif
 
 define PROTOTYPE_BUILD_CMDS
-	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) \
 	CPP="$(TARGET_CPP)" CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
 	AS="$(TARGET_CC)" LD="$(TARGET_CXX)" STRIP="$(TARGET_STRIP)" \
@@ -39,4 +39,3 @@ define PROTOTYPE_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
-

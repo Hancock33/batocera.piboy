@@ -10,5 +10,3 @@ config BR2_PACKAGE_LIBRETRO_SWANSTATION
         SwanStation - PlayStation 1, aka. PSX Emulator
 
 	    https://github.com/libretro/swanstation
-
-

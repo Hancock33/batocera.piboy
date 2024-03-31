@@ -102,7 +102,6 @@ define UBOOT_MULTI_H616_STEP_BUILD
 			O=$(@D)/build-$(1) $(UBOOT_MULTI_H616_MAKE_OPTS) all
 endef
 
-
 # Helper macro to install U-Boot.
 # $(1): the name of U-Boot defconfig without _defconfig part
 define UBOOT_MULTI_H616_STEP_INSTALL

@@ -2867,11 +2867,13 @@ gb:
   extensions:           [gb, zip, 7z]
   emulators:
     libretro:
+      doublecherrygb:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOUBLECHERRYGB] }
       gambatte:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GAMBATTE] }
-      mgba:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MGBA]     }
-      vba-m:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VBA_M]    }
       mesens:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]   }
+      mgba:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MGBA]     }
       sameboy:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAMEBOY]  }
+      tgbdual:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TGBDUAL]  }
+      vba-m:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VBA_M]    }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:gb
   comment_fr:           |
@@ -2888,7 +2890,8 @@ gb2players:
   platform:             gb
   emulators:
     libretro:
-      tgbdual:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TGBDUAL] }
+      doublecherrygb:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOUBLECHERRYGB] }
+      tgbdual:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TGBDUAL]        }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:gb2players
   comment_fr:           |
@@ -2922,11 +2925,13 @@ gbc:
   extensions:           [gbc, zip, 7z]
   emulators:
     libretro:
+      doublecherrygb:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOUBLECHERRYGB] }
       gambatte:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GAMBATTE] }
-      mgba:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MGBA]     }
-      vba-m:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VBA_M]    }
       mesens:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]   }
+      mgba:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MGBA]     }
       sameboy:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAMEBOY]  }
+      tgbdual:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TGBDUAL]  }
+      vba-m:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VBA_M]    }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:gbc
   comment_fr:           |
@@ -2943,7 +2948,8 @@ gbc2players:
   platform:             gbc
   emulators:
     libretro:
-      tgbdual:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TGBDUAL] }
+      doublecherrygb:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOUBLECHERRYGB] }
+      tgbdual:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TGBDUAL]        }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:gbc2players
   comment_fr:           |

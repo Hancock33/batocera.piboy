@@ -25,4 +25,3 @@ class IonfuryGenerator(Generator):
                 env={
                 "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })
-

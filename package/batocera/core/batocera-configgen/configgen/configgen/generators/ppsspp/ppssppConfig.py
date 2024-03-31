@@ -154,7 +154,6 @@ def createPPSSPPConfig(iniConfig, system):
     # Disable Encrypt Save (permit to exchange save with different machines)
     iniConfig.set("SystemParam", "EncryptSave", "False")
 
-
     ## [GENERAL]
     if not iniConfig.has_section("General"):
         iniConfig.add_section("General")

@@ -11,4 +11,3 @@ config BR2_PACKAGE_BATOCERA_CONFIGGEN
           The configuration utility for batocera
 	  The purpose of the lib is to automatically configure emulators, using the environment variables available in Batocera.
           The main program is emulatorlauncher.py, taking 13 parameters, that are the system and 4 controllers configurations.
-

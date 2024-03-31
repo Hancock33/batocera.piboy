@@ -12,8 +12,7 @@ LIBRETRO_ZC250X_LICENSE = GPLv2
 LIBRETRO_ZC250X_DEPENDENCIES = retroarch
 
 define LIBRETRO_ZC250X_BUILD_CMDS
-	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
-	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile platform="unix" \
 		GIT_VERSION="-$(shell echo $(LIBRETRO_ZC250X_VERSION) | cut -c 1-7)"
 endef

@@ -10,7 +10,7 @@ do_list() {
     (
 	GLOBAL_DIR="/usr/share/batocera/datainit/decorations"
 	USER_DIR="/userdata/decorations"
-	
+
 	ls "${GLOBAL_DIR}" |
 	    while read X
 	    do

@@ -34,4 +34,3 @@ fi
 dmd-play ${DMDOPT} --clear || exit 1
 
 exit 0
-

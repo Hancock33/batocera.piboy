@@ -27,4 +27,3 @@ do
     mkdir -p locales/$i
     touch locales/$i/batocera-es-system.po
 done
-

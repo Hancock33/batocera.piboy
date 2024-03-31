@@ -6,6 +6,5 @@ config BR2_PACKAGE_QTSIXA
         help
           Support for ps3 controllers.
 
-
 comment "qtsixa depends on bluez5 checkinstall libusb-dev libbluetooth-dev joystick"
 	depends on !BR2_PACKAGE_BLUEZ5_UTILS || !BR2_PACKAGE_LIBUSB

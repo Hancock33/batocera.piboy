@@ -110,7 +110,7 @@ do
         setxkbmap "${map_name}"
         fi
         ###################
-                
+
         forcedresolution="$(/usr/bin/batocera-settings-get -f $BOOTCONF es.forcedresolution)"
         if test -n "${forcedresolution}"
         then

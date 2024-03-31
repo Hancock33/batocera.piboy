@@ -7729,7 +7729,7 @@ msgctxt "game_options"
 msgid "Dual Konami Justifiers"
 msgstr "Duas Pistolas Konami Justifiers"
 
-#. TRANSLATION: libretro/tgbdual
+#. TRANSLATION: libretro/tgbdual, libretro/doublecherrygb
 msgctxt "game_options"
 msgid ""
 "Sync GB2Player/GBC2Player saves with saves in \"saves/gb\" or \"saves/gbc\"."
@@ -7737,7 +7737,7 @@ msgstr ""
 "Sincroniza ficheiros de gravações de GB2Player/GBC2Player \"saves/gb\"em "
 "\"saves/gbc\"."
 
-#. TRANSLATION: libretro/tgbdual
+#. TRANSLATION: libretro/tgbdual, libretro/doublecherrygb
 msgctxt "game_options"
 msgid "SYNC SAVE FILES"
 msgstr "SINCRONIZAR FICHEIROS DE GRAVAÇÕES"

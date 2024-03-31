@@ -16,26 +16,20 @@ _HLSDK_LIBS_DIR = '/usr/lib/xash3d/hlsdk'
 
 _DEFAULT_SERVER_LIB = 'hl'
 
-
 def _rom_dir(game):
     return _ROMS_DIR + '/' + game
-
 
 def _config_dir(game):
     return '/userdata/system/configs/xash3d_fwgs/' + game
 
-
 def _save_dir(game):
     return '/userdata/saves/xash3d_fwgs/' + game
-
 
 def _client_lib_path(server_lib, arch_suffix):
     return _HLSDK_LIBS_DIR + '/' + server_lib + '/cl_dlls/client' + arch_suffix + '.so'
 
-
 def _server_lib_path(server_lib, arch_suffix):
     return _HLSDK_LIBS_DIR + '/' + server_lib + '/dlls/' + server_lib + arch_suffix + '.so'
-
 
 def _get_server_lib_basename_from_liblist_gam(game):
     """Gets the base name of the server library from liblist.gam in the game directory."""
@@ -50,7 +44,6 @@ def _get_server_lib_basename_from_liblist_gam(game):
                 return m.group(1)
     return None
 
-
 def _find_server_lib(server_lib, arch_suffix):
     """Finds and returns the server library.
 
@@ -62,7 +55,6 @@ def _find_server_lib(server_lib, arch_suffix):
             return path
 
     return _server_lib_path(_DEFAULT_SERVER_LIB, arch_suffix)
-
 
 def _find_client_lib(server_lib, arch_suffix):
     """Finds and returns the client library.
@@ -76,12 +68,10 @@ def _find_client_lib(server_lib, arch_suffix):
 
     return _client_lib_path(_DEFAULT_SERVER_LIB, arch_suffix)
 
-
 def _get_arch_suffix():
     """Returns the architecture suffix, e.g. _amd64, based on a known server library."""
     path_prefix = _HLSDK_LIBS_DIR + '/hl/dlls/hl'
     return glob.glob(path_prefix + '*.so')[0][len(path_prefix):-3]
-
 
 class Xash3dFwgsGenerator(Generator):
 

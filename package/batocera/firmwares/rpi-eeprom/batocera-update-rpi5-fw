@@ -9,7 +9,7 @@ echo '-----------------------RPI5 Update----------------------'
 echo 'You are about to update the Raspberry Pi5 Firmware'
 echo 'This can be Dangerous and could potentially brick your'
 echo 'RPI if not done correctly'
-echo 
+echo
 echo 'Please enusre your RPI is connected to AC power before'
 echo 'proceeding with the update process.'
 echo -e '---------------------Current Version--------------------'${GREEN}
@@ -19,7 +19,7 @@ echo $V
 echo -e ${ENDCOLOR}'--------------------------------------------------------'${RED}
 read -p "Do you want to proceed? (yes/no)" yn
 echo -e ${ENDCOLOR}
-case $yn in 
+case $yn in
 	yes ) echo Proceeding with the firmware update, please wait...;;
 	no ) echo NOT applying Firmware update
 		exit;;

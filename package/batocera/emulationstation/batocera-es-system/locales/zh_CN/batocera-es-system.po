@@ -7632,13 +7632,13 @@ msgctxt "game_options"
 msgid "Dual Konami Justifiers"
 msgstr "双 Konami Justifier 光枪"
 
-#. TRANSLATION: libretro/tgbdual
+#. TRANSLATION: libretro/tgbdual, libretro/doublecherrygb
 msgctxt "game_options"
 msgid ""
 "Sync GB2Player/GBC2Player saves with saves in \"saves/gb\" or \"saves/gbc\"."
 msgstr "将GB2Player/GBC2Player的保存与“保存/gb”或“保存/gbc”中的保存同步。"
 
-#. TRANSLATION: libretro/tgbdual
+#. TRANSLATION: libretro/tgbdual, libretro/doublecherrygb
 msgctxt "game_options"
 msgid "SYNC SAVE FILES"
 msgstr "同步保存文件"
