@@ -1,8 +1,8 @@
 diff --git a/include/linux/sched.h b/include/linux/sched.h
-index 3c2abbc587b4..ce006da926e5 100644
+index dc07eb0d3290..505095b23587 100644
 --- a/include/linux/sched.h
 +++ b/include/linux/sched.h
-@@ -533,6 +533,19 @@ struct sched_statistics {
+@@ -535,6 +535,19 @@ struct sched_statistics {
  #endif /* CONFIG_SCHEDSTATS */
  } ____cacheline_aligned;
  
@@ -22,7 +22,7 @@ index 3c2abbc587b4..ce006da926e5 100644
  struct sched_entity {
  	/* For load-balancing: */
  	struct load_weight		load;
-@@ -542,14 +555,18 @@ struct sched_entity {
+@@ -544,14 +557,18 @@ struct sched_entity {
  
  	struct list_head		group_node;
  	unsigned int			on_rq;
@@ -44,7 +44,7 @@ index 3c2abbc587b4..ce006da926e5 100644
  
  #ifdef CONFIG_FAIR_GROUP_SCHED
 diff --git a/init/Kconfig b/init/Kconfig
-index 64c45f866266..1ae49418ac1e 100644
+index 0d9f935c32bd..24677055638f 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -130,6 +130,12 @@ config THREAD_INFO_IN_TASK
@@ -75,7 +75,7 @@ index 64c45f866266..1ae49418ac1e 100644
  	depends on FAIR_GROUP_SCHED
  	default n
  	help
-@@ -1301,9 +1308,11 @@ config CHECKPOINT_RESTORE
+@@ -1306,9 +1313,11 @@ config CHECKPOINT_RESTORE
  
  config SCHED_AUTOGROUP
  	bool "Automatic process group scheduling"
@@ -123,7 +123,7 @@ index 0f78364efd4f..fea81b1de644 100644
  	default 1000 if HZ_1000
  
 diff --git a/kernel/Kconfig.preempt b/kernel/Kconfig.preempt
-index c2f1fd95a821..d54bb52ccccc 100644
+index bae49b743834..bc41749fea13 100644
 --- a/kernel/Kconfig.preempt
 +++ b/kernel/Kconfig.preempt
 @@ -117,7 +117,8 @@ config PREEMPT_DYNAMIC
@@ -1933,10 +1933,10 @@ index 000000000000..7760327e5194
 +
 +}
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 7019a40457a6..a19dacb762ce 100644
+index e8b736cee130..45aed6f5d56e 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
-@@ -4534,6 +4534,12 @@ static void __sched_fork(unsigned long clone_flags, struct task_struct *p)
+@@ -4565,6 +4565,12 @@ static void __sched_fork(unsigned long clone_flags, struct task_struct *p)
  	p->se.vruntime			= 0;
  	p->se.vlag			= 0;
  	p->se.slice			= sysctl_sched_base_slice;
@@ -1949,7 +1949,7 @@ index 7019a40457a6..a19dacb762ce 100644
  	INIT_LIST_HEAD(&p->se.group_node);
  
  #ifdef CONFIG_FAIR_GROUP_SCHED
-@@ -4696,6 +4702,15 @@ static int sysctl_schedstats(struct ctl_table *table, int write, void *buffer,
+@@ -4744,6 +4750,15 @@ static int sysctl_schedstats(struct ctl_table *table, int write, void *buffer,
  
  #ifdef CONFIG_SYSCTL
  static struct ctl_table sched_core_sysctls[] = {
@@ -1965,7 +1965,7 @@ index 7019a40457a6..a19dacb762ce 100644
  #ifdef CONFIG_SCHEDSTATS
  	{
  		.procname       = "sched_schedstats",
-@@ -9933,6 +9948,10 @@ void __init sched_init(void)
+@@ -10028,6 +10043,10 @@ void __init sched_init(void)
  
  	wait_bit_init();
  
@@ -1977,7 +1977,7 @@ index 7019a40457a6..a19dacb762ce 100644
  	ptr += 2 * nr_cpu_ids * sizeof(void **);
  #endif
 diff --git a/kernel/sched/debug.c b/kernel/sched/debug.c
-index 8d5d98a5834d..ec7d41bc6d44 100644
+index 6f306e1c9c3e..2929b1bc540d 100644
 --- a/kernel/sched/debug.c
 +++ b/kernel/sched/debug.c
 @@ -1003,6 +1003,11 @@ void proc_sched_show_task(struct task_struct *p, struct pid_namespace *ns,
@@ -5264,7 +5264,7 @@ index 000000000000..1d9f6ff65a3e
 +
 +#endif /* CONFIG_NUMA_BALANCING */
 diff --git a/kernel/sched/idle.c b/kernel/sched/idle.c
-index 6135fbe83d68..33bad71a5556 100644
+index 3b6540cc436a..edbd1f0508eb 100644
 --- a/kernel/sched/idle.c
 +++ b/kernel/sched/idle.c
 @@ -331,6 +331,7 @@ static void do_idle(void)
@@ -5793,7 +5793,7 @@ index 000000000000..f00aeacb8f23
 +}
 +#endif /* CONFIG_NO_HZ_COMMON */
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 3e102936a6ab..f3a0483775d0 100644
+index 3b8e16c95162..3b48875c24da 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -109,6 +109,10 @@ extern int sysctl_sched_rt_period;
@@ -5807,7 +5807,7 @@ index 3e102936a6ab..f3a0483775d0 100644
  /*
   * Helpers for converting nanosecond timing to jiffy resolution
   */
-@@ -574,7 +578,9 @@ struct cfs_rq {
+@@ -617,7 +621,9 @@ struct cfs_rq {
  	unsigned int		h_nr_running;      /* SCHED_{NORMAL,BATCH,IDLE} */
  	unsigned int		idle_nr_running;   /* SCHED_IDLE */
  	unsigned int		idle_h_nr_running; /* SCHED_IDLE */
@@ -5818,7 +5818,7 @@ index 3e102936a6ab..f3a0483775d0 100644
  	s64			avg_vruntime;
  	u64			avg_load;
  
-@@ -596,6 +602,10 @@ struct cfs_rq {
+@@ -639,6 +645,10 @@ struct cfs_rq {
  	 * It is set to NULL otherwise (i.e when none are currently running).
  	 */
  	struct sched_entity	*curr;
@@ -5829,7 +5829,7 @@ index 3e102936a6ab..f3a0483775d0 100644
  	struct sched_entity	*next;
  
  #ifdef	CONFIG_SCHED_DEBUG
-@@ -1891,6 +1901,7 @@ DECLARE_PER_CPU(struct sched_domain_shared __rcu *, sd_llc_shared);
+@@ -1961,6 +1971,7 @@ DECLARE_PER_CPU(struct sched_domain_shared __rcu *, sd_llc_shared);
  DECLARE_PER_CPU(struct sched_domain __rcu *, sd_numa);
  DECLARE_PER_CPU(struct sched_domain __rcu *, sd_asym_packing);
  DECLARE_PER_CPU(struct sched_domain __rcu *, sd_asym_cpucapacity);
