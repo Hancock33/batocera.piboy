@@ -13473,6 +13473,8 @@ vpinball:
         "Top-Left Position, Small": "flexdmd_topleft_small"
         "Top-Left Position, Medium": "flexdmd_topleft_medium"
         "Top-Left Position, Large": "flexdmd_topleft_large"
+        "On screen 2 if available": "screen2"
+        "On screen 3 if available": "screen3"
         "FlexDMD disabled": "flexdmd_disabled"
     vpinball_b2s:
       group: DISPLAY
@@ -13485,6 +13487,7 @@ vpinball:
         "Top-Left Position, Small": "b2s_topleft_small"
         "Top-Left Position, Medium": "b2s_topleft_medium"
         "Top-Left Position, Large": "b2s_topleft_large"
+        "On screen 2 if available": "screen2"
         "Backglass disabled": "b2s_disabled"
     vpinball_b2sdmd:
       group: DISPLAY
