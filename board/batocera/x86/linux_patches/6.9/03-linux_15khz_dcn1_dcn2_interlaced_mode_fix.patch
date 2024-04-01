@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 2851719d7121..4ecba31f2eaa 100644
+index 71d2d44681b2..56e529afe1d8 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -5667,6 +5667,8 @@ static void fill_stream_properties_from_drm_display_mode(
@@ -20,7 +20,7 @@ index 2851719d7121..4ecba31f2eaa 100644
  
  	/*
  	 * If scaling is enabled and refresh rate didn't change
-@@ -6909,8 +6913,7 @@ enum drm_mode_status amdgpu_dm_connector_mode_valid(struct drm_connector *connec
+@@ -6907,8 +6911,7 @@ enum drm_mode_status amdgpu_dm_connector_mode_valid(struct drm_connector *connec
  	struct dc_stream_state *stream;
  	struct amdgpu_dm_connector *aconnector = to_amdgpu_dm_connector(connector);
  
@@ -30,7 +30,7 @@ index 2851719d7121..4ecba31f2eaa 100644
  		return result;
  
  	/*
-@@ -7617,7 +7620,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
+@@ -7615,7 +7618,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
  	aconnector->connector_id = link_index;
  	aconnector->bl_idx = -1;
  	aconnector->dc_link = link;

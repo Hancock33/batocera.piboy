@@ -429,10 +429,10 @@ index 000000000000..202c2350d3af
 +  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index aa3b947fb080..84d03d95f44b 100644
+index 7c121493f43d..df3fdbf7d72e 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -15720,6 +15720,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
+@@ -15726,6 +15726,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
  F:	Documentation/filesystems/ntfs3.rst
  F:	fs/ntfs3/
  

@@ -47,7 +47,7 @@ index 25feab188dfe..0243abb0e491 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index cb7329c97d3e..61f798d7e692 100644
+index 0cb54c8b8d36..f0ab9a658f6c 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -154,6 +154,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_35_DMUB);
@@ -125,7 +125,7 @@ index cb7329c97d3e..61f798d7e692 100644
  	return DIV_ROUND_CLOSEST(AMDGPU_MAX_BL_LEVEL * (brightness - min),
  				 max - min);
  }
-@@ -7588,7 +7610,8 @@ static int amdgpu_dm_connector_get_modes(struct drm_connector *connector)
+@@ -7586,7 +7608,8 @@ static int amdgpu_dm_connector_get_modes(struct drm_connector *connector)
  				drm_add_modes_noedid(connector, 1920, 1080);
  	} else {
  		amdgpu_dm_connector_ddc_get_modes(connector, edid);
@@ -135,7 +135,7 @@ index cb7329c97d3e..61f798d7e692 100644
  		amdgpu_dm_connector_add_freesync_modes(connector, edid);
  	}
  	amdgpu_dm_fbc_init(connector);
-@@ -8338,7 +8361,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -8336,7 +8359,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;

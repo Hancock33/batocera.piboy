@@ -1117,7 +1117,7 @@ index 2a7279d80460..b6a64a959e09 100644
  config IA32_FEAT_CTL
  	def_bool y
 diff --git a/arch/x86/Makefile b/arch/x86/Makefile
-index 662d9d4033e6..aa43d71ff1ce 100644
+index 5ab93fcdd691..505c528fc424 100644
 --- a/arch/x86/Makefile
 +++ b/arch/x86/Makefile
 @@ -70,9 +70,9 @@ export BITS
@@ -2690,7 +2690,7 @@ index 901d1961b739..05c49141f580 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 61f798d7e692..63f14c641e05 100644
+index f0ab9a658f6c..a056b363af87 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -4094,7 +4094,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
@@ -8512,7 +8512,7 @@ index 79d55465d5c1..8b4ffe649df5 100644
  #endif   /* ZSTD_H_ZSTD_STATIC_LINKING_ONLY */
  
 diff --git a/include/net/inet_connection_sock.h b/include/net/inet_connection_sock.h
-index 9ab4bf704e86..f681cfdb2164 100644
+index ccf171f7eb60..400a226d6bea 100644
 --- a/include/net/inet_connection_sock.h
 +++ b/include/net/inet_connection_sock.h
 @@ -137,8 +137,8 @@ struct inet_connection_sock {
@@ -8970,10 +8970,10 @@ index d2242679239e..3e102936a6ab 100644
  #else
  #define SCHED_NR_MIGRATE_BREAK 32
 diff --git a/kernel/sys.c b/kernel/sys.c
-index f8e543f1e38a..a02487c059f3 100644
+index 8bb106a56b3a..34b78c8e7bc6 100644
 --- a/kernel/sys.c
 +++ b/kernel/sys.c
-@@ -2764,6 +2764,153 @@ SYSCALL_DEFINE5(prctl, int, option, unsigned long, arg2, unsigned long, arg3,
+@@ -2767,6 +2767,153 @@ SYSCALL_DEFINE5(prctl, int, option, unsigned long, arg2, unsigned long, arg3,
  	return error;
  }
  
@@ -21951,10 +21951,10 @@ index 7f518ea5f4ac..8f9b677c20e1 100644
  	.undo_cwnd = bpf_tcp_ca_undo_cwnd,
  	.sndbuf_expand = bpf_tcp_ca_sndbuf_expand,
 diff --git a/net/ipv4/tcp.c b/net/ipv4/tcp.c
-index d20b62d52171..fdc70f7e9479 100644
+index e767721b3a58..07deb518e14f 100644
 --- a/net/ipv4/tcp.c
 +++ b/net/ipv4/tcp.c
-@@ -3090,6 +3090,7 @@ int tcp_disconnect(struct sock *sk, int flags)
+@@ -3092,6 +3092,7 @@ int tcp_disconnect(struct sock *sk, int flags)
  	tp->rx_opt.dsack = 0;
  	tp->rx_opt.num_sacks = 0;
  	tp->rcv_ooopack = 0;
@@ -21962,7 +21962,7 @@ index d20b62d52171..fdc70f7e9479 100644
  
  
  	/* Clean up fastopen related fields */
-@@ -3816,6 +3817,8 @@ void tcp_get_info(struct sock *sk, struct tcp_info *info)
+@@ -3818,6 +3819,8 @@ void tcp_get_info(struct sock *sk, struct tcp_info *info)
  		info->tcpi_options |= TCPI_OPT_ECN;
  	if (tp->ecn_flags & TCP_ECN_SEEN)
  		info->tcpi_options |= TCPI_OPT_ECN_SEEN;
