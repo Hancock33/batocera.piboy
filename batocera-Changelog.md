@@ -81,6 +81,9 @@ Initial support for the Lenovo Legion Go
 - Ruffle to 2024-03-28
 - Xenia Canary to build 122f58c (Commits on Mar 26, 2024)
 - Xemu to v0.7.120
+- ScummVM to 2.8.1
+- fheroes2 to 1.0.13
+- PCSX2 to v1.7.5663
 ### System
 - Mainline Kernel 6.6.y bump to 6.6.23
 - Nvidia Production driver to 550.67
@@ -99,6 +102,8 @@ Initial support for the Lenovo Legion Go
 - Xpad-Noone to Jan 10, 2024
 - XpadNeo to Mar 11, 2024
 - Xone to Mar 30, 2024
+- fdupes to 2.3.0
+- FAudio to 24.03
 
 # 2024/03/04 - batocera.linux 39 - Painted Lady
 ### Special Notes
