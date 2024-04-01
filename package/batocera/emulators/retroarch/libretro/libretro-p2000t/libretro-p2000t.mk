@@ -3,8 +3,8 @@
 # libretro-p2000t
 #
 ################################################################################
-# Version: Commits on Mar 31, 2024
-LIBRETRO_P2000T_VERSION = 5532d7828b1c2721fa7afecfcff22748faef16c1
+# Version: Commits on Apr 01, 2024
+LIBRETRO_P2000T_VERSION = 1b06969a63c2a7ae1ba20486ed6c3b677835c2d0
 LIBRETRO_P2000T_SITE = $(call github,p2000t,M2000,$(LIBRETRO_P2000T_VERSION))
 LIBRETRO_P2000T_LICENSE = GPL-3.0
 
