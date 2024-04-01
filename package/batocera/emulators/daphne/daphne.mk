@@ -3,16 +3,16 @@
 # daphne
 #
 ################################################################################
-# Version: Commits on Feb 02, 2024
-DAPHNE_VERSION = 428d4123b4b949ea4b58d9e5c7e6cf5ec8548c91
+# Version: Commits on Apr 01, 2024
+DAPHNE_VERSION = e2ad79d9d3a6102efe9e5fad2cc45294c9a0303c
 DAPHNE_SITE = https://github.com/DirtBagXon/hypseus-singe
 DAPHNE_SITE_METHOD=git
 DAPHNE_LICENSE = GPLv3
-DAPHNE_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf zlib libogg libvorbis libmpeg2
+DAPHNE_DEPENDENCIES = libzip sdl2 sdl2_image sdl2_ttf zlib libogg libvorbis libmpeg2
 DAPHNE_SUPPORTS_IN_SOURCE_BUILD = NO
 DAPHNE_SUBDIR = src
 DAPHNE_BEZELS_SOURCE = Bezels_Pack.zip
-DAPHNE_EXTRA_DOWNLOADS = $(DAPHNE_SITE)/releases/download/v2.11.1/$(DAPHNE_BEZELS_SOURCE)
+DAPHNE_EXTRA_DOWNLOADS = https://github.com/DirtBagXon/hypseus-singe/releases/download/v2.11.2/$(DAPHNE_BEZELS_SOURCE)
 
 DAPHNE_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 DAPHNE_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
