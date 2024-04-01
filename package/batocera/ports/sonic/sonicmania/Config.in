@@ -1,4 +1,4 @@
-config BR2_PACKAGE_SONIC_MANIA
+config BR2_PACKAGE_SONICMANIA
 	bool "sonic-mania"
 	select BR2_PACKAGE_LIBGLU
 	select BR2_PACKAGE_LIBGLEW
