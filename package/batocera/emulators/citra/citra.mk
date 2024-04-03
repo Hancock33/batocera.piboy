@@ -4,8 +4,8 @@
 #
 ################################################################################
 # Version: Commits on Mar 03, 2024
-CITRA_VERSION = f580ff64a5a34f94a63b60732b1a92f3ee6df88b
-CITRA_SITE = https://github.com/Lemonade-emu/Lemonade.git
+CITRA_VERSION = 0ff3440232d6bc9226e37c41c05c5aead03f37fd
+CITRA_SITE = https://github.com/citra-emu/citra.git
 
 CITRA_SITE_METHOD=git
 CITRA_GIT_SUBMODULES=YES
@@ -51,7 +51,7 @@ CITRA_CONF_ENV += LDFLAGS=-lpthread
 define CITRA_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin
 	mkdir -p $(TARGET_DIR)/usr/lib
-	$(INSTALL) -D $(@D)/buildroot-build/bin/Release/lemonade-qt \
+	$(INSTALL) -D $(@D)/buildroot-build/bin/Release/citra-qt \
 		$(TARGET_DIR)/usr/bin/citra-qt
 endef
 
