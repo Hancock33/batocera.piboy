@@ -67,10 +67,6 @@ def getGenerator(emulator):
         from generators.cgenius.cgeniusGenerator import CGeniusGenerator
         return CGeniusGenerator()
 
-    if emulator == 'citra':
-        from generators.citra.citraGenerator import CitraGenerator
-        return CitraGenerator()
-
     if emulator == 'daphne':
         from generators.daphne.daphneGenerator import DaphneGenerator
         return DaphneGenerator()
@@ -226,6 +222,10 @@ def getGenerator(emulator):
     if emulator == 'kodi':
         from generators.kodi.kodiGenerator import KodiGenerator
         return KodiGenerator()
+
+    if emulator == 'lemonade' :
+        from generators.lemonade.lemonadeGenerator import LemonadeGenerator
+        return LemonadeGenerator()
 
     if emulator == 'lexaloffle':
         from generators.lexaloffle.lexaloffleGenerator import LexaloffleGenerator
@@ -576,3 +576,4 @@ def getGenerator(emulator):
         return YuzuGenerator()
 
     raise Exception(f"no generator found for emulator {emulator}")
+
