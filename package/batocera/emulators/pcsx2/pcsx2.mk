@@ -3,8 +3,8 @@
 # pcsx2
 #
 ################################################################################
-# Version: Commits on Apr 01, 2024
-PCSX2_VERSION = c650b4b00f676ba826b55e8879bb05ccf0e793ef
+# Version: Commits on Apr 03, 2024
+PCSX2_VERSION = 2693bbff9576f92f1b818ed222036dec71b5d199
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES
@@ -14,7 +14,7 @@ PCSX2_SUPPORTS_IN_SOURCE_BUILD = NO
 
 PCSX2_DEPENDENCIES += xorgproto alsa-lib freetype zlib libpng
 PCSX2_DEPENDENCIES += libaio portaudio libsoundtouch sdl2 libpcap yaml-cpp
-PCSX2_DEPENDENCIES += libsamplerate fmt libgtk3 qt6base qt6tools qt6svg
+PCSX2_DEPENDENCIES += libsamplerate fmt qt6base qt6tools qt6svg
 
 PCSX2_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 PCSX2_CONF_OPTS += -DPCSX2_TARGET_ARCHITECTURES=x86_64

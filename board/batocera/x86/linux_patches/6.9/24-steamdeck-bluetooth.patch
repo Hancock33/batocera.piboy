@@ -1,31 +1,132 @@
-diff --git a/Documentation/devicetree/bindings/net/bluetooth/qualcomm-bluetooth.yaml b/Documentation/devicetree/bindings/net/bluetooth/qualcomm-bluetooth.yaml
-index 528ef3572b62..055a3351880b 100644
---- a/Documentation/devicetree/bindings/net/bluetooth/qualcomm-bluetooth.yaml
-+++ b/Documentation/devicetree/bindings/net/bluetooth/qualcomm-bluetooth.yaml
-@@ -94,6 +94,10 @@ properties:
+diff --git a/drivers/bluetooth/btintel.c b/drivers/bluetooth/btintel.c
+index 6ba7f5d1b837..a19ebe47bd95 100644
+--- a/drivers/bluetooth/btintel.c
++++ b/drivers/bluetooth/btintel.c
+@@ -489,7 +489,7 @@ static int btintel_version_info_tlv(struct hci_dev *hdev,
+ 	}
  
-   local-bd-address: true
+ 	switch (version->img_type) {
+-	case 0x01:
++	case BTINTEL_IMG_BOOTLOADER:
+ 		variant = "Bootloader";
+ 		/* It is required that every single firmware fragment is acknowledged
+ 		 * with a command complete event. If the boot parameters indicate
+@@ -521,7 +521,10 @@ static int btintel_version_info_tlv(struct hci_dev *hdev,
+ 			    version->min_fw_build_nn, version->min_fw_build_cw,
+ 			    2000 + version->min_fw_build_yy);
+ 		break;
+-	case 0x03:
++	case BTINTEL_IMG_IML:
++		variant = "Intermediate loader";
++		break;
++	case BTINTEL_IMG_OP:
+ 		variant = "Firmware";
+ 		break;
+ 	default:
+@@ -535,7 +538,7 @@ static int btintel_version_info_tlv(struct hci_dev *hdev,
+ 	bt_dev_info(hdev, "%s timestamp %u.%u buildtype %u build %u", variant,
+ 		    2000 + (version->timestamp >> 8), version->timestamp & 0xff,
+ 		    version->build_type, version->build_num);
+-	if (version->img_type == 0x03)
++	if (version->img_type == BTINTEL_IMG_OP)
+ 		bt_dev_info(hdev, "Firmware SHA1: 0x%8.8x", version->git_sha1);
  
-+  qcom,local-bd-address-broken:
-+    type: boolean
-+    description:
-+      boot firmware is incorrectly passing the address in big-endian order
+ 	return 0;
+@@ -1172,7 +1175,7 @@ static int btintel_download_fw_tlv(struct hci_dev *hdev,
+ 	 * If the firmware version has changed that means it needs to be reset
+ 	 * to bootloader when operational so the new firmware can be loaded.
+ 	 */
+-	if (ver->img_type == 0x03)
++	if (ver->img_type == BTINTEL_IMG_OP)
+ 		return -EINVAL;
  
- required:
-   - compatible
-diff --git a/arch/arm64/boot/dts/qcom/sc7180-trogdor.dtsi b/arch/arm64/boot/dts/qcom/sc7180-trogdor.dtsi
-index f3a6da8b2890..5260c63db007 100644
---- a/arch/arm64/boot/dts/qcom/sc7180-trogdor.dtsi
-+++ b/arch/arm64/boot/dts/qcom/sc7180-trogdor.dtsi
-@@ -944,6 +944,8 @@ bluetooth: bluetooth {
- 		vddrf-supply = <&pp1300_l2c>;
- 		vddch0-supply = <&pp3300_l10c>;
- 		max-speed = <3200000>;
+ 	/* iBT hardware variants 0x0b, 0x0c, 0x11, 0x12, 0x13, 0x14 support
+@@ -2194,10 +2197,26 @@ static void btintel_get_fw_name_tlv(const struct intel_version_tlv *ver,
+ 				    char *fw_name, size_t len,
+ 				    const char *suffix)
+ {
++	const char *format;
+ 	/* The firmware file name for new generation controllers will be
+ 	 * ibt-<cnvi_top type+cnvi_top step>-<cnvr_top type+cnvr_top step>
+ 	 */
+-	snprintf(fw_name, len, "intel/ibt-%04x-%04x.%s",
++	switch (ver->cnvi_top & 0xfff) {
++	/* Only Blazar  product supports downloading of intermediate loader
++	 * image
++	 */
++	case BTINTEL_CNVI_BLAZARI:
++		if (ver->img_type == BTINTEL_IMG_BOOTLOADER)
++			format = "intel/ibt-%04x-%04x-iml.%s";
++		else
++			format = "intel/ibt-%04x-%04x.%s";
++		break;
++	default:
++			format = "intel/ibt-%04x-%04x.%s";
++		break;
++	}
 +
-+		qcom,local-bd-address-broken;
- 	};
- };
++	snprintf(fw_name, len, format,
+ 		 INTEL_CNVX_TOP_PACK_SWAB(INTEL_CNVX_TOP_TYPE(ver->cnvi_top),
+ 					  INTEL_CNVX_TOP_STEP(ver->cnvi_top)),
+ 		 INTEL_CNVX_TOP_PACK_SWAB(INTEL_CNVX_TOP_TYPE(ver->cnvr_top),
+@@ -2230,7 +2249,7 @@ static int btintel_prepare_fw_download_tlv(struct hci_dev *hdev,
+ 	 * It is not possible to use the Secure Boot Parameters in this
+ 	 * case since that command is only available in bootloader mode.
+ 	 */
+-	if (ver->img_type == 0x03) {
++	if (ver->img_type == BTINTEL_IMG_OP) {
+ 		btintel_clear_flag(hdev, INTEL_BOOTLOADER);
+ 		btintel_check_bdaddr(hdev);
+ 	} else {
+@@ -2600,13 +2619,30 @@ static int btintel_bootloader_setup_tlv(struct hci_dev *hdev,
+ 		return err;
  
+ 	/* check if controller is already having an operational firmware */
+-	if (ver->img_type == 0x03)
++	if (ver->img_type == BTINTEL_IMG_OP)
+ 		goto finish;
+ 
+ 	err = btintel_boot(hdev, boot_param);
+ 	if (err)
+ 		return err;
+ 
++	err = btintel_read_version_tlv(hdev, ver);
++	if (err)
++		return err;
++
++	/* If image type returned is BTINTEL_IMG_IML, then controller supports
++	 * intermediae loader image
++	 */
++	if (ver->img_type == BTINTEL_IMG_IML) {
++		err = btintel_prepare_fw_download_tlv(hdev, ver, &boot_param);
++		if (err)
++			return err;
++
++		err = btintel_boot(hdev, boot_param);
++		if (err)
++			return err;
++	}
++
+ 	btintel_clear_flag(hdev, INTEL_BOOTLOADER);
+ 
+ 	btintel_get_fw_name_tlv(ver, ddcname, sizeof(ddcname), "ddc");
+diff --git a/drivers/bluetooth/btintel.h b/drivers/bluetooth/btintel.h
+index d19fcdb9ff0b..64ab5a2860ab 100644
+--- a/drivers/bluetooth/btintel.h
++++ b/drivers/bluetooth/btintel.h
+@@ -51,6 +51,12 @@ struct intel_tlv {
+ 	u8 val[];
+ } __packed;
+ 
++#define BTINTEL_CNVI_BLAZARI		0x900
++
++#define BTINTEL_IMG_BOOTLOADER		0x01	/* Bootloader image */
++#define BTINTEL_IMG_IML			0x02	/* Intermediate image */
++#define BTINTEL_IMG_OP			0x03	/* Operational image */
++
+ struct intel_version_tlv {
+ 	u32	cnvi_top;
+ 	u32	cnvr_top;
 diff --git a/drivers/bluetooth/btqca.c b/drivers/bluetooth/btqca.c
 index b40b32fa7f1c..19cfc342fc7b 100644
 --- a/drivers/bluetooth/btqca.c
@@ -48,6 +149,122 @@ index b40b32fa7f1c..19cfc342fc7b 100644
  	if (IS_ERR(skb)) {
  		err = PTR_ERR(skb);
  		bt_dev_err(hdev, "QCA Change address cmd failed (%d)", err);
+diff --git a/drivers/bluetooth/btqcomsmd.c b/drivers/bluetooth/btqcomsmd.c
+index 11c7e04bf394..88dbb2f3fabf 100644
+--- a/drivers/bluetooth/btqcomsmd.c
++++ b/drivers/bluetooth/btqcomsmd.c
+@@ -197,7 +197,7 @@ static int btqcomsmd_probe(struct platform_device *pdev)
+ 	return ret;
+ }
+ 
+-static int btqcomsmd_remove(struct platform_device *pdev)
++static void btqcomsmd_remove(struct platform_device *pdev)
+ {
+ 	struct btqcomsmd *btq = platform_get_drvdata(pdev);
+ 
+@@ -206,8 +206,6 @@ static int btqcomsmd_remove(struct platform_device *pdev)
+ 
+ 	rpmsg_destroy_ept(btq->cmd_channel);
+ 	rpmsg_destroy_ept(btq->acl_channel);
+-
+-	return 0;
+ }
+ 
+ static const struct of_device_id btqcomsmd_of_match[] = {
+@@ -218,7 +216,7 @@ MODULE_DEVICE_TABLE(of, btqcomsmd_of_match);
+ 
+ static struct platform_driver btqcomsmd_driver = {
+ 	.probe = btqcomsmd_probe,
+-	.remove = btqcomsmd_remove,
++	.remove_new = btqcomsmd_remove,
+ 	.driver  = {
+ 		.name  = "btqcomsmd",
+ 		.of_match_table = btqcomsmd_of_match,
+diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
+index 06e915b57283..d8bfea3914ba 100644
+--- a/drivers/bluetooth/btusb.c
++++ b/drivers/bluetooth/btusb.c
+@@ -617,6 +617,11 @@ static const struct usb_device_id quirks_table[] = {
+ 						     BTUSB_WIDEBAND_SPEECH |
+ 						     BTUSB_VALID_LE_STATES },
+ 
++	/* MediaTek MT7922 Bluetooth devices */
++	{ USB_DEVICE(0x13d3, 0x3585), .driver_info = BTUSB_MEDIATEK |
++						     BTUSB_WIDEBAND_SPEECH |
++						     BTUSB_VALID_LE_STATES },
++
+ 	/* MediaTek MT7922A Bluetooth devices */
+ 	{ USB_DEVICE(0x0489, 0xe0d8), .driver_info = BTUSB_MEDIATEK |
+ 						     BTUSB_WIDEBAND_SPEECH |
+@@ -662,6 +667,9 @@ static const struct usb_device_id quirks_table[] = {
+ 	{ USB_DEVICE(0x13d3, 0x3602), .driver_info = BTUSB_MEDIATEK |
+ 						     BTUSB_WIDEBAND_SPEECH |
+ 						     BTUSB_VALID_LE_STATES },
++	{ USB_DEVICE(0x0489, 0xe0f5), .driver_info = BTUSB_MEDIATEK |
++						     BTUSB_WIDEBAND_SPEECH |
++						     BTUSB_VALID_LE_STATES },
+ 
+ 	/* Additional Realtek 8723AE Bluetooth devices */
+ 	{ USB_DEVICE(0x0930, 0x021d), .driver_info = BTUSB_REALTEK },
+diff --git a/drivers/bluetooth/hci_bcm.c b/drivers/bluetooth/hci_bcm.c
+index 874d23089b39..3a227f73c063 100644
+--- a/drivers/bluetooth/hci_bcm.c
++++ b/drivers/bluetooth/hci_bcm.c
+@@ -1293,7 +1293,7 @@ static int bcm_probe(struct platform_device *pdev)
+ 	return 0;
+ }
+ 
+-static int bcm_remove(struct platform_device *pdev)
++static void bcm_remove(struct platform_device *pdev)
+ {
+ 	struct bcm_device *dev = platform_get_drvdata(pdev);
+ 
+@@ -1302,8 +1302,6 @@ static int bcm_remove(struct platform_device *pdev)
+ 	mutex_unlock(&bcm_device_lock);
+ 
+ 	dev_info(&pdev->dev, "%s device unregistered.\n", dev->name);
+-
+-	return 0;
+ }
+ 
+ static const struct hci_uart_proto bcm_proto = {
+@@ -1509,7 +1507,7 @@ static const struct dev_pm_ops bcm_pm_ops = {
+ 
+ static struct platform_driver bcm_driver = {
+ 	.probe = bcm_probe,
+-	.remove = bcm_remove,
++	.remove_new = bcm_remove,
+ 	.driver = {
+ 		.name = "hci_bcm",
+ 		.acpi_match_table = ACPI_PTR(bcm_acpi_match),
+diff --git a/drivers/bluetooth/hci_intel.c b/drivers/bluetooth/hci_intel.c
+index 78afb9a348e7..bd44d683b9be 100644
+--- a/drivers/bluetooth/hci_intel.c
++++ b/drivers/bluetooth/hci_intel.c
+@@ -1190,7 +1190,7 @@ static int intel_probe(struct platform_device *pdev)
+ 	return 0;
+ }
+ 
+-static int intel_remove(struct platform_device *pdev)
++static void intel_remove(struct platform_device *pdev)
+ {
+ 	struct intel_device *idev = platform_get_drvdata(pdev);
+ 
+@@ -1201,13 +1201,11 @@ static int intel_remove(struct platform_device *pdev)
+ 	mutex_unlock(&intel_device_list_lock);
+ 
+ 	dev_info(&pdev->dev, "unregistered.\n");
+-
+-	return 0;
+ }
+ 
+ static struct platform_driver intel_driver = {
+ 	.probe = intel_probe,
+-	.remove = intel_remove,
++	.remove_new = intel_remove,
+ 	.driver = {
+ 		.name = "hci_intel",
+ 		.acpi_match_table = ACPI_PTR(intel_acpi_match),
 diff --git a/drivers/bluetooth/hci_qca.c b/drivers/bluetooth/hci_qca.c
 index 8a60ad7acd70..ecbc52eaf101 100644
 --- a/drivers/bluetooth/hci_qca.c
@@ -107,6 +324,18 @@ index 8a60ad7acd70..ecbc52eaf101 100644
  	if (data)
  		qcadev->btsoc_type = data->soc_type;
  	else
+diff --git a/include/net/bluetooth/bluetooth.h b/include/net/bluetooth/bluetooth.h
+index 9fe95a22abeb..c95afcd9c605 100644
+--- a/include/net/bluetooth/bluetooth.h
++++ b/include/net/bluetooth/bluetooth.h
+@@ -155,6 +155,7 @@ struct bt_voice {
+ #define BT_PKT_STATUS           16
+ 
+ #define BT_SCM_PKT_STATUS	0x03
++#define BT_SCM_ERROR		0x04
+ 
+ #define BT_ISO_QOS		17
+ 
 diff --git a/include/net/bluetooth/hci.h b/include/net/bluetooth/hci.h
 index 8701ca5f31ee..5c12761cbc0e 100644
 --- a/include/net/bluetooth/hci.h
@@ -127,222 +356,65 @@ index 8701ca5f31ee..5c12761cbc0e 100644
  	/* When this quirk is set, the duplicate filtering during
  	 * scanning is based on Bluetooth devices addresses. To allow
  	 * RSSI based updates, restart scanning if needed.
-diff --git a/net/bluetooth/hci_core.c b/net/bluetooth/hci_core.c
-index 1690ae57a09d..a7028d38c1f5 100644
---- a/net/bluetooth/hci_core.c
-+++ b/net/bluetooth/hci_core.c
-@@ -2874,7 +2874,7 @@ static void hci_cancel_cmd_sync(struct hci_dev *hdev, int err)
- 	cancel_delayed_work_sync(&hdev->ncmd_timer);
- 	atomic_set(&hdev->cmd_cnt, 1);
+diff --git a/include/net/bluetooth/hci_core.h b/include/net/bluetooth/hci_core.h
+index 56fb42df44a3..90ddbf88ed9f 100644
+--- a/include/net/bluetooth/hci_core.h
++++ b/include/net/bluetooth/hci_core.h
+@@ -267,6 +267,12 @@ struct adv_info {
+ 	struct delayed_work	rpa_expired_cb;
+ };
  
--	hci_cmd_sync_cancel_sync(hdev, -err);
-+	hci_cmd_sync_cancel_sync(hdev, err);
- }
- 
- /* Suspend HCI device */
-@@ -2894,7 +2894,7 @@ int hci_suspend_dev(struct hci_dev *hdev)
- 		return 0;
- 
- 	/* Cancel potentially blocking sync operation before suspend */
--	hci_cancel_cmd_sync(hdev, -EHOSTDOWN);
-+	hci_cancel_cmd_sync(hdev, EHOSTDOWN);
- 
- 	hci_req_sync_lock(hdev);
- 	ret = hci_suspend_sync(hdev);
-@@ -4210,7 +4210,7 @@ static void hci_send_cmd_sync(struct hci_dev *hdev, struct sk_buff *skb)
- 
- 	err = hci_send_frame(hdev, skb);
- 	if (err < 0) {
--		hci_cmd_sync_cancel_sync(hdev, err);
-+		hci_cmd_sync_cancel_sync(hdev, -err);
- 		return;
- 	}
- 
-diff --git a/net/bluetooth/hci_debugfs.c b/net/bluetooth/hci_debugfs.c
-index 233453807b50..ce3ff2fa72e5 100644
---- a/net/bluetooth/hci_debugfs.c
-+++ b/net/bluetooth/hci_debugfs.c
-@@ -218,10 +218,12 @@ static int conn_info_min_age_set(void *data, u64 val)
- {
- 	struct hci_dev *hdev = data;
- 
--	if (val == 0 || val > hdev->conn_info_max_age)
-+	hci_dev_lock(hdev);
-+	if (val == 0 || val > hdev->conn_info_max_age) {
-+		hci_dev_unlock(hdev);
- 		return -EINVAL;
-+	}
- 
--	hci_dev_lock(hdev);
- 	hdev->conn_info_min_age = val;
- 	hci_dev_unlock(hdev);
- 
-@@ -246,10 +248,12 @@ static int conn_info_max_age_set(void *data, u64 val)
- {
- 	struct hci_dev *hdev = data;
- 
--	if (val == 0 || val < hdev->conn_info_min_age)
-+	hci_dev_lock(hdev);
-+	if (val == 0 || val < hdev->conn_info_min_age) {
-+		hci_dev_unlock(hdev);
- 		return -EINVAL;
-+	}
- 
--	hci_dev_lock(hdev);
- 	hdev->conn_info_max_age = val;
- 	hci_dev_unlock(hdev);
- 
-@@ -567,10 +571,12 @@ static int sniff_min_interval_set(void *data, u64 val)
- {
- 	struct hci_dev *hdev = data;
- 
--	if (val == 0 || val % 2 || val > hdev->sniff_max_interval)
-+	hci_dev_lock(hdev);
-+	if (val == 0 || val % 2 || val > hdev->sniff_max_interval) {
-+		hci_dev_unlock(hdev);
- 		return -EINVAL;
-+	}
- 
--	hci_dev_lock(hdev);
- 	hdev->sniff_min_interval = val;
- 	hci_dev_unlock(hdev);
- 
-@@ -595,10 +601,12 @@ static int sniff_max_interval_set(void *data, u64 val)
- {
- 	struct hci_dev *hdev = data;
- 
--	if (val == 0 || val % 2 || val < hdev->sniff_min_interval)
-+	hci_dev_lock(hdev);
-+	if (val == 0 || val % 2 || val < hdev->sniff_min_interval) {
-+		hci_dev_unlock(hdev);
- 		return -EINVAL;
-+	}
- 
--	hci_dev_lock(hdev);
- 	hdev->sniff_max_interval = val;
- 	hci_dev_unlock(hdev);
- 
-@@ -850,10 +858,12 @@ static int conn_min_interval_set(void *data, u64 val)
- {
- 	struct hci_dev *hdev = data;
- 
--	if (val < 0x0006 || val > 0x0c80 || val > hdev->le_conn_max_interval)
-+	hci_dev_lock(hdev);
-+	if (val < 0x0006 || val > 0x0c80 || val > hdev->le_conn_max_interval) {
-+		hci_dev_unlock(hdev);
- 		return -EINVAL;
-+	}
- 
--	hci_dev_lock(hdev);
- 	hdev->le_conn_min_interval = val;
- 	hci_dev_unlock(hdev);
- 
-@@ -878,10 +888,12 @@ static int conn_max_interval_set(void *data, u64 val)
- {
- 	struct hci_dev *hdev = data;
- 
--	if (val < 0x0006 || val > 0x0c80 || val < hdev->le_conn_min_interval)
-+	hci_dev_lock(hdev);
-+	if (val < 0x0006 || val > 0x0c80 || val < hdev->le_conn_min_interval) {
-+		hci_dev_unlock(hdev);
- 		return -EINVAL;
-+	}
- 
--	hci_dev_lock(hdev);
- 	hdev->le_conn_max_interval = val;
- 	hci_dev_unlock(hdev);
- 
-@@ -990,10 +1002,12 @@ static int adv_min_interval_set(void *data, u64 val)
- {
- 	struct hci_dev *hdev = data;
- 
--	if (val < 0x0020 || val > 0x4000 || val > hdev->le_adv_max_interval)
-+	hci_dev_lock(hdev);
-+	if (val < 0x0020 || val > 0x4000 || val > hdev->le_adv_max_interval) {
-+		hci_dev_unlock(hdev);
- 		return -EINVAL;
-+	}
- 
--	hci_dev_lock(hdev);
- 	hdev->le_adv_min_interval = val;
- 	hci_dev_unlock(hdev);
- 
-@@ -1018,10 +1032,12 @@ static int adv_max_interval_set(void *data, u64 val)
- {
- 	struct hci_dev *hdev = data;
- 
--	if (val < 0x0020 || val > 0x4000 || val < hdev->le_adv_min_interval)
-+	hci_dev_lock(hdev);
-+	if (val < 0x0020 || val > 0x4000 || val < hdev->le_adv_min_interval) {
-+		hci_dev_unlock(hdev);
- 		return -EINVAL;
-+	}
- 
--	hci_dev_lock(hdev);
- 	hdev->le_adv_max_interval = val;
- 	hci_dev_unlock(hdev);
- 
-diff --git a/net/bluetooth/hci_event.c b/net/bluetooth/hci_event.c
-index 4ae224824012..a8b8cfebe018 100644
---- a/net/bluetooth/hci_event.c
-+++ b/net/bluetooth/hci_event.c
-@@ -3208,6 +3208,31 @@ static void hci_conn_complete_evt(struct hci_dev *hdev, void *data,
- 		if (test_bit(HCI_ENCRYPT, &hdev->flags))
- 			set_bit(HCI_CONN_ENCRYPT, &conn->flags);
- 
-+		/* "Link key request" completed ahead of "connect request" completes */
-+		if (ev->encr_mode == 1 && !test_bit(HCI_CONN_ENCRYPT, &conn->flags) &&
-+		    ev->link_type == ACL_LINK) {
-+			struct link_key *key;
-+			struct hci_cp_read_enc_key_size cp;
++struct tx_queue {
++	struct sk_buff_head queue;
++	unsigned int extra;
++	unsigned int tracked;
++};
 +
-+			key = hci_find_link_key(hdev, &ev->bdaddr);
-+			if (key) {
-+				set_bit(HCI_CONN_ENCRYPT, &conn->flags);
+ #define HCI_MAX_ADV_INSTANCES		5
+ #define HCI_DEFAULT_ADV_DURATION	2
+ 
+@@ -763,6 +769,8 @@ struct hci_conn {
+ 	struct sk_buff_head data_q;
+ 	struct list_head chan_list;
+ 
++	struct tx_queue tx_q;
 +
-+				if (!(hdev->commands[20] & 0x10)) {
-+					conn->enc_key_size = HCI_LINK_KEY_SIZE;
-+				} else {
-+					cp.handle = cpu_to_le16(conn->handle);
-+					if (hci_send_cmd(hdev, HCI_OP_READ_ENC_KEY_SIZE,
-+							 sizeof(cp), &cp)) {
-+						bt_dev_err(hdev, "sending read key size failed");
-+						conn->enc_key_size = HCI_LINK_KEY_SIZE;
-+					}
-+				}
+ 	struct delayed_work disc_work;
+ 	struct delayed_work auto_accept_work;
+ 	struct delayed_work idle_work;
+@@ -1546,6 +1554,10 @@ void hci_conn_enter_active_mode(struct hci_conn *conn, __u8 force_active);
+ void hci_conn_failed(struct hci_conn *conn, u8 status);
+ u8 hci_conn_set_handle(struct hci_conn *conn, u16 handle);
+ 
++void hci_conn_tx_queue(struct hci_conn *conn, struct sk_buff *skb);
++void hci_conn_tx_dequeue(struct hci_conn *conn);
++void hci_tx_timestamp(struct sk_buff *skb, const struct sockcm_cookie *sockc);
 +
-+				hci_encrypt_cfm(conn, ev->status);
-+			}
-+		}
-+
- 		/* Get remote features */
- 		if (conn->type == ACL_LINK) {
- 			struct hci_cp_read_remote_features cp;
-diff --git a/net/bluetooth/hci_sync.c b/net/bluetooth/hci_sync.c
-index f6b662369322..8fe02921adf1 100644
---- a/net/bluetooth/hci_sync.c
-+++ b/net/bluetooth/hci_sync.c
-@@ -617,7 +617,10 @@ void hci_cmd_sync_cancel_sync(struct hci_dev *hdev, int err)
- 	bt_dev_dbg(hdev, "err 0x%2.2x", err);
- 
- 	if (hdev->req_status == HCI_REQ_PEND) {
--		hdev->req_result = err;
-+		/* req_result is __u32 so error must be positive to be properly
-+		 * propagated.
-+		 */
-+		hdev->req_result = err < 0 ? -err : err;
- 		hdev->req_status = HCI_REQ_CANCELED;
- 
- 		wake_up_interruptible(&hdev->req_wait_q);
-@@ -3416,7 +3419,10 @@ static void hci_dev_get_bd_addr_from_property(struct hci_dev *hdev)
- 	if (ret < 0 || !bacmp(&ba, BDADDR_ANY))
- 		return;
- 
--	bacpy(&hdev->public_addr, &ba);
-+	if (test_bit(HCI_QUIRK_BDADDR_PROPERTY_BROKEN, &hdev->quirks))
-+		baswap(&hdev->public_addr, &ba);
-+	else
-+		bacpy(&hdev->public_addr, &ba);
- }
- 
- struct hci_init_stage {
+ /*
+  * hci_conn_get() and hci_conn_put() are used to control the life-time of an
+  * "hci_conn" object. They do not guarantee that the hci_conn object is running,
+@@ -2229,8 +2241,22 @@ void hci_mgmt_chan_unregister(struct hci_mgmt_chan *c);
+ /* These LE scan and inquiry parameters were chosen according to LE General
+  * Discovery Procedure specification.
+  */
+-#define DISCOV_LE_SCAN_WIN		0x12
+-#define DISCOV_LE_SCAN_INT		0x12
++#define DISCOV_LE_SCAN_WIN		0x0012 /* 11.25 msec */
++#define DISCOV_LE_SCAN_INT		0x0012 /* 11.25 msec */
++#define DISCOV_LE_SCAN_INT_FAST		0x0060 /* 60 msec */
++#define DISCOV_LE_SCAN_WIN_FAST		0x0030 /* 30 msec */
++#define DISCOV_LE_SCAN_INT_CONN		0x0060 /* 60 msec */
++#define DISCOV_LE_SCAN_WIN_CONN		0x0060 /* 60 msec */
++#define DISCOV_LE_SCAN_INT_SLOW1	0x0800 /* 1.28 sec */
++#define DISCOV_LE_SCAN_WIN_SLOW1	0x0012 /* 11.25 msec */
++#define DISCOV_LE_SCAN_INT_SLOW2	0x1000 /* 2.56 sec */
++#define DISCOV_LE_SCAN_WIN_SLOW2	0x0024 /* 22.5 msec */
++#define DISCOV_CODED_SCAN_INT_FAST	0x0120 /* 180 msec */
++#define DISCOV_CODED_SCAN_WIN_FAST	0x0090 /* 90 msec */
++#define DISCOV_CODED_SCAN_INT_SLOW1	0x1800 /* 3.84 sec */
++#define DISCOV_CODED_SCAN_WIN_SLOW1	0x0036 /* 33.75 msec */
++#define DISCOV_CODED_SCAN_INT_SLOW2	0x3000 /* 7.68 sec */
++#define DISCOV_CODED_SCAN_WIN_SLOW2	0x006c /* 67.5 msec */
+ #define DISCOV_LE_TIMEOUT		10240	/* msec */
+ #define DISCOV_INTERLEAVED_TIMEOUT	5120	/* msec */
+ #define DISCOV_INTERLEAVED_INQUIRY_LEN	0x04
