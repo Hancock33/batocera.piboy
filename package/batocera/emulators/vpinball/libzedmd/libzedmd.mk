@@ -28,6 +28,6 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 endif
 
 # Install to staging to build Visual Pinball Standalone
-LIBDMDUTIL_INSTALL_STAGING = YES
+LIBZEDMD_INSTALL_STAGING = YES
 
 $(eval $(cmake-package))
