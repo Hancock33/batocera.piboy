@@ -23,7 +23,7 @@ elif [[ -x /usr/bin/lemonade ]]; then
         XDG_CACHE_HOME=/userdata/system/cache \
         QT_QPA_PLATFORM=xcb \
         QT_XCB_NO_XI2=1 \
-        /usr/bin/lemonade-qt
+        /usr/bin/lemonade
 else
     echo "System not found";
     exit 1
