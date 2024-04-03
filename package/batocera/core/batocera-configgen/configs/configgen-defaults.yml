@@ -23,8 +23,8 @@ twentyfourtyeight:
   emulator: libretro
   core:     opera
 3ds:
-  emulator: citra
-  core:     citra
+  emulator: lemonade
+  core:     lemonade
   options:
     powersave: '1'
 abuse:
@@ -1180,3 +1180,4 @@ vpinball:
   core:     vpinball
   options:
     powersave: '1'
+

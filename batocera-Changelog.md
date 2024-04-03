@@ -1,6 +1,6 @@
 # 2024/xx/xx - batocera.linux 40 -
 ### Special Notes
-
+The standalone Citra emulator has migrated to it's successor, Lemonade emulator. You should be able to move your saves from /userdata/saves/3ds/citra to the equivalent lemonade directory.
 ### Hardware
 Add support for the Pironman case with RPI4 devices.
 Add support for OrangePi Zero 3 (all variants)
@@ -13,6 +13,10 @@ Initial support for the Lenovo Legion Go
 - Light gun support in DuckStation (single light gun only)
 - libretro-Flycast ES setting for offscreen reload as button 2 on the light gun
 - Light gun crosshairs for PCSX2, libretro-swanstation, Flycast, RPCS3 and libretro-pcsx-rearmed
+- Support for zedmd
+- DMD server (handling any dmd supported by libdmd) integrated with vpinball
+- Support for multi screens (for pincab, mame multi games)
+- Evmapy keys file to help exit running flatpak app
 ### Fixed
 - RG552 Splash-screen rotation
 - RG552 Vibrator enabled
@@ -27,6 +31,7 @@ Initial support for the Lenovo Legion Go
 - Justifier mapping and crosshair on libretro-snes9x
 - Daphne crosshair not hidden by default when a light gun is detected
 - Libretro-mesen light gun not loading up
+- Vulkan driver version via System Information whne using a multi-GPU systems was sometimes wrong
 ### Changed
 - RK3326 Replaced the mali-G31 driver with mesa3d
 - Amiga BIOS files now go into the bios/amiga/ subfolder
@@ -34,6 +39,9 @@ Initial support for the Lenovo Legion Go
 - GunCon3 default mapping (visit light gun page on official wiki)
   - Calibration now on C2 (press and hold it few seconds)
 - Sinden Lightgun firmware updated to 1.9
+- Preferred vulkan driver name now listed in System Information
+- Start advisiong people on Vulkan GPU driver capabilities for Emualtors
+- Added additional Atari Lynx extensions for Beetle Lynx & Handy
 ### Updated
 - Retroarch to 1.18.0
 - Libretro cores for retroarch 1.17.0 [#11113](https://github.com/batocera-linux/batocera.linux/pull/11113/files)
@@ -64,7 +72,7 @@ Initial support for the Lenovo Legion Go
 - Redream to 1.5.0-1103-g47bc2b7
 - Ikemen Go to 0.99
 - Amiberry to 5.6.8
-- GroovyMAME to 0.263 SR 0.220a
+- GroovyMAME to 0.264 SR 0.220b
 - DOSBox-Staging to 0.81.0
 - DOSBox-X to 2024.03.01
 - SimCoupe to 1.2.13
@@ -102,8 +110,9 @@ Initial support for the Lenovo Legion Go
 - Xpad-Noone to Jan 10, 2024
 - XpadNeo to Mar 11, 2024
 - Xone to Mar 30, 2024
-- fdupes to 2.3.0
+- Fdupes to 2.3.0
 - FAudio to 24.03
+- Sound Open Firmware to 2023.12.1
 
 # 2024/03/04 - batocera.linux 39 - Painted Lady
 ### Special Notes
