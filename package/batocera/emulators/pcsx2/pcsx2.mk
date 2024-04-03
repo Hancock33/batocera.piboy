@@ -14,7 +14,7 @@ PCSX2_SUPPORTS_IN_SOURCE_BUILD = NO
 
 PCSX2_DEPENDENCIES += xorgproto alsa-lib freetype zlib libpng
 PCSX2_DEPENDENCIES += libaio portaudio libsoundtouch sdl2 libpcap yaml-cpp
-PCSX2_DEPENDENCIES += libsamplerate fmt libgtk3 qt6base qt6tools qt6svg
+PCSX2_DEPENDENCIES += libsamplerate fmt qt6base qt6tools qt6svg
 
 PCSX2_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 PCSX2_CONF_OPTS += -DPCSX2_TARGET_ARCHITECTURES=x86_64
