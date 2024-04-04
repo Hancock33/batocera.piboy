@@ -3,8 +3,8 @@
 # lemonade
 #
 ################################################################################
-# Version: Commits on Apr 03, 2024
-LEMONADE_VERSION = f580ff64a5a34f94a63b60732b1a92f3ee6df88b
+# Version: Commits on Apr 04, 2024
+LEMONADE_VERSION = 1e5f7b94dc751f1cfb26a7ca7ec3f0a9265e9ee7
 LEMONADE_SITE = https://github.com/Lemonade-emu/Lemonade.git
 LEMONADE_SITE_METHOD=git
 LEMONADE_GIT_SUBMODULES=YES
