@@ -1,8 +1,8 @@
 diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
-index 282db832..896eab06 100644
+index bcfda760..76e80c67 100644
 --- a/src/osdep/amiberry.cpp
 +++ b/src/osdep/amiberry.cpp
-@@ -3827,26 +3827,26 @@ static void init_amiberry_paths(void)
+@@ -3926,29 +3926,29 @@ static void init_amiberry_paths(void)
  		input_dir = screenshot_dir = nvram_dir = video_dir = 
  		start_path_data;
  
@@ -15,6 +15,9 @@ index 282db832..896eab06 100644
 +	data_dir = "/usr/share/amiberry/data/";
 +	whdboot_path = "/userdata/system/configs/amiberry/whdboot/";
  	whdload_arch_path.append("/lha/");
+ 	floppy_path.append("/floppies/");
+ 	harddrive_path.append("/harddrives/");
+ 	cdrom_path.append("/cdroms/");
 -	logfile_path.append("/amiberry.log");
 -	rom_path.append("/kickstarts/");
 +	logfile_path = "/usrdata/system/logs/amiberry.log";
