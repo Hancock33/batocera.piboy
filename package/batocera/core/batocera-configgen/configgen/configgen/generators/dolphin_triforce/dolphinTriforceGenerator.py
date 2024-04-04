@@ -302,7 +302,7 @@ class DolphinTriforceGenerator(Generator):
         with open(batoceraFiles.dolphinTriforceLoggerIni, 'w') as configfile:
             dolphinTriforceLogSettings.write(configfile)
 
-        commandArray = ["dolphin-triforce-nogui", "-u", "/userdata/system/configs/dolphin-triforce", "-e", rom]
+        commandArray = ["dolphin-triforce", "-b", "-u", "/userdata/system/configs/dolphin-triforce", "-e", rom]
 
         # No environment variables work for now, paths are coded in above.
         return Command.Command(array=commandArray, env={"XDG_CONFIG_HOME":batoceraFiles.CONF, "XDG_DATA_HOME":batoceraFiles.SAVES})
