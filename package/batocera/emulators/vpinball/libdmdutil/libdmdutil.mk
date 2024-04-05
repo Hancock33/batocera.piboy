@@ -3,8 +3,8 @@
 # libdmdutil
 #
 ################################################################################
-# Version: Commits on Apr 03, 2024
-LIBDMDUTIL_VERSION = 769764610897d962f4dce0c0618197738108ac97
+# Version: Commits on Apr 05, 2024
+LIBDMDUTIL_VERSION = ce648da7a19789f5dafcab5cac43911534b29a86
 LIBDMDUTIL_SITE = $(call github,vpinball,libdmdutil,$(LIBDMDUTIL_VERSION))
 LIBDMDUTIL_LICENSE = BSD-3-Clause
 LIBDMDUTIL_LICENSE_FILES = LICENSE
@@ -21,5 +21,7 @@ define LIBDMDUTIL_INSTALL_SERVER
 	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/vpinball/libdmdutil/dmd_server.service  $(TARGET_DIR)/usr/share/batocera/services/dmd_real
 	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/vpinball/libdmdutil/dmdserver-config.py $(TARGET_DIR)/usr/bin/dmdserver-config
 endef
+
+LIBDMDUTIL_POST_INSTALL_TARGET_HOOKS += LIBDMDUTIL_INSTALL_SERVER
 
 $(eval $(cmake-package))
