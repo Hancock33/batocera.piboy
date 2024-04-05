@@ -958,8 +958,8 @@ supracan:
   emulator: libretro
   core:     mame
 switch:
-  emulator: yuzu
-  core:     yuzu
+  emulator: suyu
+  core:     suyu
   options:
     powersave: '2'
     forceNoBezel: true
