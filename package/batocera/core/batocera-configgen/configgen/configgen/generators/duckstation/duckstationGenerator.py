@@ -281,8 +281,6 @@ class DuckstationGenerator(Generator):
         else:
             settings.set("Audio","StretchMode", "TimeStretch")
 
-            settings.set("Audio","OutputLatencyMS", "64")
-
         ## [GameList]
         if not settings.has_section("GameList"):
             settings.add_section("GameList")
