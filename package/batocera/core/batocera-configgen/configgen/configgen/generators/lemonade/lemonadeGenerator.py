@@ -93,11 +93,10 @@ class LemonadeGenerator(Generator):
         if not lemonadeConfig.has_section("System"):
             lemonadeConfig.add_section("System")
         # New 3DS Version
-        if system.isOptSet('lemonade_is_new_3ds') and system.config["lemonade_is_new_3ds"] == '1':
-            lemonadeConfig.set("System", "is_new_3ds", "true")
-        else:
+        if system.isOptSet('lemonade_is_new_3ds') and system.config["lemonade_is_new_3ds"] == '0':
             lemonadeConfig.set("System", "is_new_3ds", "false")
-        lemonadeConfig.set("System", "is_new_3ds\default", "false")
+        else:
+            lemonadeConfig.set("System", "is_new_3ds", "true")
         # Language
         lemonadeConfig.set("System", "region_value", str(getLemonadeLangFromEnvironment()))
         lemonadeConfig.set("System", "region_value\default", "false")
