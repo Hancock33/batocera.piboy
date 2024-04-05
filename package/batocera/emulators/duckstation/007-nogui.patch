@@ -1,0 +1,39 @@
+diff --git a/src/duckstation-nogui/CMakeLists.txt b/src/duckstation-nogui/CMakeLists.txt
+index 0f17a5f9..2ea2d15f 100644
+--- a/src/duckstation-nogui/CMakeLists.txt
++++ b/src/duckstation-nogui/CMakeLists.txt
+@@ -83,7 +83,7 @@ if(ENABLE_WAYLAND)
+   )
+ endif()
+ 
+-if(ENABLE_SDL2)
++if(ENABLE_SDL2NOGUI)
+   message(STATUS "Building SDL NoGUI Platform.")
+   target_sources(duckstation-nogui PRIVATE
+     sdl_nogui_platform.cpp
+diff --git a/src/duckstation-nogui/nogui_host.cpp b/src/duckstation-nogui/nogui_host.cpp
+index 7e3c6ab1..9429e7e2 100644
+--- a/src/duckstation-nogui/nogui_host.cpp
++++ b/src/duckstation-nogui/nogui_host.cpp
+@@ -871,7 +871,7 @@ std::unique_ptr<NoGUIPlatform> NoGUIHost::CreatePlatform()
+   std::unique_ptr<NoGUIPlatform> ret;
+ 
+   const char* platform = std::getenv("DUCKSTATION_NOGUI_PLATFORM");
+-#ifdef ENABLE_SDL2
++#ifdef ENABLE_SDL2NOGUI
+   if (platform && StringUtil::Strcasecmp(platform, "sdl") == 0)
+     ret = NoGUIPlatform::CreateSDLPlatform();
+ #endif
+diff --git a/src/duckstation-nogui/nogui_platform.h b/src/duckstation-nogui/nogui_platform.h
+index 452e545e..7bef31b3 100644
+--- a/src/duckstation-nogui/nogui_platform.h
++++ b/src/duckstation-nogui/nogui_platform.h
+@@ -52,7 +52,7 @@ public:
+ #ifdef __APPLE__
+   static std::unique_ptr<NoGUIPlatform> CreateCocoaPlatform();
+ #endif
+-#ifdef ENABLE_SDL2
++#ifdef ENABLE_SDL2NOGUI
+   static std::unique_ptr<NoGUIPlatform> CreateSDLPlatform();
+ #endif
+ #ifdef NOGUI_PLATFORM_WAYLAND

@@ -93,11 +93,10 @@ class LemonadeGenerator(Generator):
         if not lemonadeConfig.has_section("System"):
             lemonadeConfig.add_section("System")
         # New 3DS Version
-        if system.isOptSet('lemonade_is_new_3ds') and system.config["lemonade_is_new_3ds"] == '1':
-            lemonadeConfig.set("System", "is_new_3ds", "true")
-        else:
+        if system.isOptSet('lemonade_is_new_3ds') and system.config["lemonade_is_new_3ds"] == '0':
             lemonadeConfig.set("System", "is_new_3ds", "false")
-        lemonadeConfig.set("System", "is_new_3ds\default", "false")
+        else:
+            lemonadeConfig.set("System", "is_new_3ds", "true")
         # Language
         lemonadeConfig.set("System", "region_value", str(getLemonadeLangFromEnvironment()))
         lemonadeConfig.set("System", "region_value\default", "false")
@@ -216,12 +215,17 @@ class LemonadeGenerator(Generator):
             tab = system.config["lemonade_custom_textures"].split('-')
             lemonadeConfig.set("Utility", "custom_textures",  "true")
             if tab[1] == 'normal':
+                lemonadeConfig.set("Utility", "async_custom_loading", "true")
                 lemonadeConfig.set("Utility", "preload_textures", "false")
             else:
-                lemonadeConfig.set("Utility", "preload_textures", "true") # It's not working from ES for now, only from the emulator menu
+                lemonadeConfig.set("Utility", "async_custom_loading", "false")
+                lemonadeConfig.set("Utility", "preload_textures", "true")
         else:
             lemonadeConfig.set("Utility", "custom_textures",  "false")
             lemonadeConfig.set("Utility", "preload_textures", "false")
+        lemonadeConfig.set("Utility", "async_custom_loading\\default", "true")
+        lemonadeConfig.set("Utility", "custom_textures\\default", "false")
+        lemonadeConfig.set("Utility", "preload_textures\\default", "false")
 
         ## [CONTROLS]
         if not lemonadeConfig.has_section("Controls"):
