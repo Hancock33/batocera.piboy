@@ -8989,6 +8989,11 @@ msgctxt "game_options"
 msgid "Preloading is impossible from ES."
 msgstr "Pramuat mustahil dari ES"
 
+#. TRANSLATION: lemonade, duckstation
+msgctxt "game_options"
+msgid "Preload"
+msgstr "Persiapan-pemuatan"
+
 #. TRANSLATION: lemonade, panda3ds
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
@@ -9789,11 +9794,6 @@ msgstr "NTSC-U/C"
 msgctxt "game_options"
 msgid "Preload requires more RAM."
 msgstr "Persiapan-pemuatan membutuhkan RAM lebih"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Preload"
-msgstr "Persiapan-pemuatan"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -16270,10 +16270,6 @@ msgid "Quick Save"
 msgstr ""
 
 #~ msgctxt "game_options"
-#~ msgid "AMD FidelityFX (Vulkan Only)"
-#~ msgstr "AMD FidelityFX (Hanya Vulkan)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Simpan status sebelumnya untuk diputar ulang secara langsung, jika Core "
@@ -16713,6 +16709,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Choose your console timezone."
 #~ msgstr "PILIH ZONA WAKTU KONSOL ANDA"
+
+#~ msgctxt "game_options"
+#~ msgid "AMD FidelityFX (Vulkan Only)"
+#~ msgstr "AMD FidelityFX (Hanya Vulkan)"
 
 #~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."

@@ -8922,6 +8922,11 @@ msgctxt "game_options"
 msgid "Preloading is impossible from ES."
 msgstr ""
 
+#. TRANSLATION: lemonade, duckstation
+msgctxt "game_options"
+msgid "Preload"
+msgstr ""
+
 #. TRANSLATION: lemonade, panda3ds
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
@@ -9708,11 +9713,6 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Preload requires more RAM."
-msgstr ""
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Preload"
 msgstr ""
 
 #. TRANSLATION: duckstation

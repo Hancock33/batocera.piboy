@@ -10018,6 +10018,11 @@ msgctxt "game_options"
 msgid "Preloading is impossible from ES."
 msgstr "ES에서는 프리로드가 불가능합니다."
 
+#. TRANSLATION: lemonade, duckstation
+msgctxt "game_options"
+msgid "Preload"
+msgstr "프리로드"
+
 #. TRANSLATION: lemonade, panda3ds
 #, fuzzy
 msgctxt "game_options"
@@ -10873,11 +10878,6 @@ msgstr "NTSC-U / C"
 msgctxt "game_options"
 msgid "Preload requires more RAM."
 msgstr "프리로드에는 더 많은 RAM이 필요합니다."
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Preload"
-msgstr "프리로드"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -17719,10 +17719,6 @@ msgctxt "keys_files"
 msgid "Quick Save"
 msgstr ""
 
-#~ msgctxt "game_options"
-#~ msgid "AMD FidelityFX (Vulkan Only)"
-#~ msgstr "AMD 피델리티FX (불칸 전용)"
-
 #, fuzzy
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
@@ -18247,6 +18243,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Choose your console timezone."
 #~ msgstr "본체 시간대를 선택합니다."
+
+#~ msgctxt "game_options"
+#~ msgid "AMD FidelityFX (Vulkan Only)"
+#~ msgstr "AMD 피델리티FX (불칸 전용)"
 
 #, fuzzy
 #~ msgctxt "game_options"

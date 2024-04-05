@@ -9001,6 +9001,11 @@ msgctxt "game_options"
 msgid "Preloading is impossible from ES."
 msgstr "Prednačítanie je nemožné z ES."
 
+#. TRANSLATION: lemonade, duckstation
+msgctxt "game_options"
+msgid "Preload"
+msgstr "Prednačítať"
+
 #. TRANSLATION: lemonade, panda3ds
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
@@ -9810,11 +9815,6 @@ msgstr "NTSC-U/C"
 msgctxt "game_options"
 msgid "Preload requires more RAM."
 msgstr "Prednačítanie potrebuje viac RAM."
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Preload"
-msgstr "Prednačítať"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -16329,10 +16329,6 @@ msgid "Quick Save"
 msgstr "Rýchle uloženie"
 
 #~ msgctxt "game_options"
-#~ msgid "AMD FidelityFX (Vulkan Only)"
-#~ msgstr "AMD FidelityFX (iba Vulkan)"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (dávajte pozor)"
 
@@ -16881,6 +16877,10 @@ msgstr "Rýchle uloženie"
 #~ msgctxt "game_options"
 #~ msgid "Choose your console timezone."
 #~ msgstr "Vyberte časové pásmo vašej konzoly."
+
+#~ msgctxt "game_options"
+#~ msgid "AMD FidelityFX (Vulkan Only)"
+#~ msgstr "AMD FidelityFX (iba Vulkan)"
 
 #~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."
