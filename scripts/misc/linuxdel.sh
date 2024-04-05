@@ -11,34 +11,43 @@ delkern="linux-custom*
 linux-6.*
 linux-headers*
 *-nvidia*
+pd-mapper*
+qrtr*
+r81*
+rmtfs*
+rtl*
+tqftpserv*
 aelightgun*
 aimtrak-guns*
+anbernic-gpio-pad*
 ayn-platform-*
 batocera-gun-calibrator*
+batocera-wheel-calibrator*
 db9_gpio_rpi*
 dolphinbar-guns*
 dolphinCrosshairsPack*
 fun-r1-gamepad*
+fusion-lightguns*
 gamecon_gpio_rpi*
 gun4ir-guns*
 guncon*
 hid-nx*
+input-wrapper*
+jammasd*
 joycond*
 lightguns-games-precalibrations*
 new-lg4ff*
-pd-mapper*
-qrtr*
 qtsixa*
 qtsixa-shanwan*
-r81*
 retrogame*
-rmtfs*
-rtl*
+retroshooter-guns*
+samco-guns*
+sdl2-gamecontrollerdb*
 sinden-guns*
-sinden-guns-libs*
-tqftpserv*
+steamdeckgun*
 uinput-joystick*
 umtool*
+wiimote-3rdparty*
 wiimotes-rules*
 xarcade2jstick*
 xone*
@@ -56,7 +65,7 @@ case $yn in
 esac
 
 if [ $DEL_RPI4 = '1' ]; then
-    sudo rm -r $HOME/build-dir/batocera.rpi4/target/lib/modules/6.*
+    sudo rm -rf $HOME/build-dir/batocera.rpi4/target/lib/modules/6.*
     for i in $delkern
     do
         echo "Deleting: "${RED}$i${ENDCOLOR}

@@ -420,8 +420,11 @@ class DolphinGenerator(Generator):
             pass # don't fail in case of SYSCONF update
 
         # Check what version we've got
-        if os.path.isfile("/usr/bin/dolphin-emu"):
+        if os.path.isfile("/usr/bin/dolphin-emu-nogui"):
             commandArray = ["dolphin-emu-nogui", "-e", rom]
+        else:
+            # use the -b 'batch' option for nicer exit
+            commandArray = ["dolphin-emu", "-b", "-e", rom]
 
         # state_slot option
         if system.isOptSet('state_filename'):

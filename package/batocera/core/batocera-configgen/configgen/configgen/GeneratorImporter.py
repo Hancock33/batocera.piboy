@@ -491,6 +491,10 @@ def getGenerator(emulator):
         from generators.supertux2.supertux2Generator import Supertux2Generator
         return Supertux2Generator()
 
+    if emulator == 'suyu':
+        from generators.suyu.suyuGenerator import SuyuGenerator
+        return SuyuGenerator()
+
     if emulator == 'themehospital':
         from generators.themehospital.themehospitalGenerator import ThemehospitalGenerator
         return ThemehospitalGenerator()
@@ -571,9 +575,4 @@ def getGenerator(emulator):
         from generators.yquake2.yquake2Generator import Yquake2Generator
         return Yquake2Generator()
 
-    if emulator == 'yuzu':
-        from generators.yuzu.yuzuGenerator import YuzuGenerator
-        return YuzuGenerator()
-
     raise Exception(f"no generator found for emulator {emulator}")
-

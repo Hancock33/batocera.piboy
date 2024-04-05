@@ -3,18 +3,14 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Apr 03, 2024
-DUCKSTATION_VERSION = 59a13d91ea441bed479feff14f4614db1a81e449
+# Version: Commits on Apr 05, 2024
+DUCKSTATION_VERSION = 69f79c3a4f6bea4721dabf6ba8dca57c10111c6b
 DUCKSTATION_SITE = https://github.com/stenzek/duckstation.git
 DUCKSTATION_SITE_METHOD=git
 DUCKSTATION_GIT_SUBMODULES=YES
 DUCKSTATION_LICENSE = GPLv2
-DUCKSTATION_DEPENDENCIES = fmt boost ffmpeg libcurl ecm libdrm sdl2 libevdev webp
+DUCKSTATION_DEPENDENCIES = boost ecm ffmpeg fmt libcurl libdrm libevdev sdl2 shaderc webp zstd
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
-DUCKSTATION_VERSION = 8b2b4ce8d9c8aeb2d53a0ec170cd1dfc31263f3c
-endif
 
 DUCKSTATION_CONF_OPTS += -DBUILD_SHARED_LIBS=FALSE
 DUCKSTATION_CONF_OPTS += -DENABLE_DISCORD_PRESENCE=OFF
