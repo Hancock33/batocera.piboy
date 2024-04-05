@@ -3152,8 +3152,8 @@ switch:
   theme:                switch
   extensions:           [xci, nsp]
   emulators:
-    yuzu:
-      yuzu:             { requireAnyOf: [BR2_PACKAGE_SUYU]    }
+    suyu:
+      suyu:             { requireAnyOf: [BR2_PACKAGE_SUYU]    }
     ryujinx:
       ryujinx:          { requireAnyOf: [BR2_PACKAGE_RYUJINX] }
 
@@ -6591,4 +6591,3 @@ actionmax:
                         Trouvez la documentation ici: https://wiki.batocera.org/systems:daphne
   comment_br:           |
                         Para mais informações: https://wiki.batocera.org/systems:daphne
-
