@@ -1,3 +1,6 @@
+# 64-bit mode
+arm_64bit=1
+
 #Base Settings
 cec_osd_name=batocera             # sets the initial CEC name of the device
 disable_overscan=1
@@ -23,13 +26,6 @@ dtparam=audio=on
 dtparam=krnbt=on
 
 # Video settings
-dtoverlay=vc4-kms-v3d-pi5
-
-[rpi5]
-# 64-bit mode
-arm_64bit=1
-start_file=start.elf
-fixup_file=fixup.dat
 max_framebuffers=2                # Ensure only one display output can be used on the Pi4 with batocera
 
 ### Power saving options
@@ -57,3 +53,14 @@ arm_boost=1
 #over_voltage=2
 #arm_freq=1700
 #gpu_freq=500
+
+[rpi4]
+start_file=start4.elf
+fixup_file=fixup4.dat
+gpu_mem_1024=256
+dtoverlay=vc4-kms-v3d,cma-512
+
+[rpi5]
+start_file=start.elf
+fixup_file=fixup.dat
+dtoverlay=vc4-kms-v3d-pi5
