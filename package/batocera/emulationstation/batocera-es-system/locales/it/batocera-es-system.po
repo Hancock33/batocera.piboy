@@ -9032,6 +9032,11 @@ msgctxt "game_options"
 msgid "Preloading is impossible from ES."
 msgstr "Precaricamento e' impossibile da ES."
 
+#. TRANSLATION: lemonade, duckstation
+msgctxt "game_options"
+msgid "Preload"
+msgstr "Precaricamento"
+
 #. TRANSLATION: lemonade, panda3ds
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
@@ -9847,11 +9852,6 @@ msgstr "NTSC-U/C"
 msgctxt "game_options"
 msgid "Preload requires more RAM."
 msgstr "Precaricamento richiede piu' RAM."
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Preload"
-msgstr "Precaricamento"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -16442,10 +16442,6 @@ msgid "Quick Save"
 msgstr "Salvataggio Rapido"
 
 #~ msgctxt "game_options"
-#~ msgid "AMD FidelityFX (Vulkan Only)"
-#~ msgstr "AMD FidelityFX (Solo Vulkan)"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (Usare con cautela)"
 
@@ -17000,6 +16996,10 @@ msgstr "Salvataggio Rapido"
 #~ msgctxt "game_options"
 #~ msgid "Choose your console timezone."
 #~ msgstr "Scegli il fuso orario della tua console."
+
+#~ msgctxt "game_options"
+#~ msgid "AMD FidelityFX (Vulkan Only)"
+#~ msgstr "AMD FidelityFX (Solo Vulkan)"
 
 #~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."
