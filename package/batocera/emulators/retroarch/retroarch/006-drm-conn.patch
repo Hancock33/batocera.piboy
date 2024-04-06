@@ -74,7 +74,7 @@ index f71c49ca1d..93019484f0 100755
  	for (int num = 0; !m_desktop_output && num < MAX_CARD_ID; num++)
  	{
 diff --git a/gfx/common/drm_common.c b/gfx/common/drm_common.c
-index 418fe6709f..705fa72a5e 100644
+index 4bbc826e8f..a39e2e9af4 100644
 --- a/gfx/common/drm_common.c
 +++ b/gfx/common/drm_common.c
 @@ -68,6 +68,21 @@ bool drm_get_connector(int fd, unsigned monitor_index)

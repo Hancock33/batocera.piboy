@@ -1,8 +1,8 @@
 diff --git a/gfx/common/drm_common.c b/gfx/common/drm_common.c
-index 705fa72a5e..e18214aacb 100644
+index a39e2e9af4..42900c166d 100644
 --- a/gfx/common/drm_common.c
 +++ b/gfx/common/drm_common.c
-@@ -182,6 +182,22 @@ bool drm_get_encoder(int fd)
+@@ -193,6 +193,22 @@ bool drm_get_encoder(int fd)
              drm_calc_refresh_rate(&g_drm_connector->modes[i]));
     }
  
