@@ -14966,31 +14966,17 @@ msgstr "Antyaliasing to technika wygładzania postrzępionych krawędzi."
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Turn on to configure settings from this GUI (Recommended). If disabled, you "
-"have to manually edit the Config File (Experts only - not recommended)."
-msgstr ""
-"Włącz, aby konfigurować ustawienia z tego GUI (zalecane). Jeśli wyłączone, "
-"musisz ręcznie edytować plik konfiguracyjny (tylko eksperci - niezalecane)."
-
-#. TRANSLATION: vpinball, vpinball
-msgctxt "game_options"
-msgid "EXPERT SETTINGS"
-msgstr "USTAWIENIA EKSPERTA"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "ENABLE EMULATIONSTATION CONFIGURATION"
-msgstr "WŁĄCZ KONFIGURACJĘ EMULATIONSTATION"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid ""
 "Per Table Folder requires all files to be in the associated rom table "
 "folder. If disabled, consult the Wiki for further details."
 msgstr ""
 "Folder Na Stół wymaga, aby wszystkie pliki znajdowały się w powiązanym "
 "folderze stołu romu. Jeśli opcja ta jest wyłączona, więcej informacji można "
 "znaleźć na Wiki."
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "EXPERT SETTINGS"
+msgstr "USTAWIENIA EKSPERTA"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -17045,10 +17031,6 @@ msgstr "Szybkie zapisywanie"
 #~ msgstr "Wybierz strefę czasową konsoli."
 
 #~ msgctxt "game_options"
-#~ msgid "AMD FidelityFX (Vulkan Only)"
-#~ msgstr "AMD FidelityFX (tylko Vulkan)"
-
-#~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."
 #~ msgstr "Wybierz strefę czasową UTC konsoli."
 
@@ -17087,6 +17069,20 @@ msgstr "Szybkie zapisywanie"
 #~ msgctxt "game_options"
 #~ msgid "Vsync"
 #~ msgstr "Vsync"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Turn on to configure settings from this GUI (Recommended). If disabled, "
+#~ "you have to manually edit the Config File (Experts only - not "
+#~ "recommended)."
+#~ msgstr ""
+#~ "Włącz, aby konfigurować ustawienia z tego GUI (zalecane). Jeśli "
+#~ "wyłączone, musisz ręcznie edytować plik konfiguracyjny (tylko eksperci - "
+#~ "niezalecane)."
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE EMULATIONSTATION CONFIGURATION"
+#~ msgstr "WŁĄCZ KONFIGURACJĘ EMULATIONSTATION"
 
 #~ msgctxt "game_options"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
@@ -17201,6 +17197,10 @@ msgstr "Szybkie zapisywanie"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Przewijanie do przodu"
+
+#~ msgctxt "game_options"
+#~ msgid "AMD FidelityFX (Vulkan Only)"
+#~ msgstr "AMD FidelityFX (tylko Vulkan)"
 
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax."
