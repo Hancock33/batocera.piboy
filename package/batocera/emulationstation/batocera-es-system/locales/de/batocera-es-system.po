@@ -15037,33 +15037,17 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Turn on to configure settings from this GUI (Recommended). If disabled, you "
-"have to manually edit the Config File (Experts only - not recommended)."
-msgstr ""
-"Aktivieren Sie diese Option, um die Einstellungen über diese grafische "
-"Benutzeroberfläche zu konfigurieren (empfohlen). Wenn deaktiviert, müssen "
-"Sie die Konfigurationsdatei manuell bearbeiten (nur für Experten - nicht "
-"empfohlen)."
-
-#. TRANSLATION: vpinball, vpinball
-msgctxt "game_options"
-msgid "EXPERT SETTINGS"
-msgstr "EXPERTEN EINSTELLUNGEN"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "ENABLE EMULATIONSTATION CONFIGURATION"
-msgstr "KONFIGURATION DER EMULATIONSSTATION AKTIVIEREN"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid ""
 "Per Table Folder requires all files to be in the associated rom table "
 "folder. If disabled, consult the Wiki for further details."
 msgstr ""
 "Pro Tabellenordner erfordert, dass sich alle Dateien in dem zugehörigen "
 "Tabellenordner befinden. Wenn diese Funktion deaktiviert ist, finden Sie "
 "weitere Informationen im Wiki."
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "EXPERT SETTINGS"
+msgstr "EXPERTEN EINSTELLUNGEN"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -17126,10 +17110,6 @@ msgstr "Schnellspeichern"
 #~ msgstr "Zeitzone für die Konsole auswählen."
 
 #~ msgctxt "game_options"
-#~ msgid "AMD FidelityFX (Vulkan Only)"
-#~ msgstr "AMD FidelityFX (Nur Vulkan)"
-
-#~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."
 #~ msgstr "UTC-Zeitzone für die Konsole auswählen."
 
@@ -17169,6 +17149,21 @@ msgstr "Schnellspeichern"
 #~ msgctxt "game_options"
 #~ msgid "Vsync"
 #~ msgstr "VSync"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Turn on to configure settings from this GUI (Recommended). If disabled, "
+#~ "you have to manually edit the Config File (Experts only - not "
+#~ "recommended)."
+#~ msgstr ""
+#~ "Aktivieren Sie diese Option, um die Einstellungen über diese grafische "
+#~ "Benutzeroberfläche zu konfigurieren (empfohlen). Wenn deaktiviert, müssen "
+#~ "Sie die Konfigurationsdatei manuell bearbeiten (nur für Experten - nicht "
+#~ "empfohlen)."
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE EMULATIONSTATION CONFIGURATION"
+#~ msgstr "KONFIGURATION DER EMULATIONSSTATION AKTIVIEREN"
 
 #~ msgctxt "game_options"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
@@ -17283,6 +17278,10 @@ msgstr "Schnellspeichern"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Schnelles Vorspulen"
+
+#~ msgctxt "game_options"
+#~ msgid "AMD FidelityFX (Vulkan Only)"
+#~ msgstr "AMD FidelityFX (Nur Vulkan)"
 
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax."
