@@ -181,7 +181,7 @@ index 11c7e04bf394..88dbb2f3fabf 100644
  		.name  = "btqcomsmd",
  		.of_match_table = btqcomsmd_of_match,
 diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
-index 06e915b57283..d8bfea3914ba 100644
+index cacab148859c..e54fe2b448f2 100644
 --- a/drivers/bluetooth/btusb.c
 +++ b/drivers/bluetooth/btusb.c
 @@ -617,6 +617,11 @@ static const struct usb_device_id quirks_table[] = {
@@ -196,8 +196,8 @@ index 06e915b57283..d8bfea3914ba 100644
  	/* MediaTek MT7922A Bluetooth devices */
  	{ USB_DEVICE(0x0489, 0xe0d8), .driver_info = BTUSB_MEDIATEK |
  						     BTUSB_WIDEBAND_SPEECH |
-@@ -662,6 +667,9 @@ static const struct usb_device_id quirks_table[] = {
- 	{ USB_DEVICE(0x13d3, 0x3602), .driver_info = BTUSB_MEDIATEK |
+@@ -665,6 +670,9 @@ static const struct usb_device_id quirks_table[] = {
+ 	{ USB_DEVICE(0x0489, 0xe0f5), .driver_info = BTUSB_MEDIATEK |
  						     BTUSB_WIDEBAND_SPEECH |
  						     BTUSB_VALID_LE_STATES },
 +	{ USB_DEVICE(0x0489, 0xe0f5), .driver_info = BTUSB_MEDIATEK |

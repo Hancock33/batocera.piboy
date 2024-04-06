@@ -1,5 +1,5 @@
 diff --git a/sound/soc/amd/acp/acp-mach-common.c b/sound/soc/amd/acp/acp-mach-common.c
-index 665a6ea0a2a8..e8d316cda197 100644
+index 504d1b8c4cbb..3411e8d9aab3 100644
 --- a/sound/soc/amd/acp/acp-mach-common.c
 +++ b/sound/soc/amd/acp/acp-mach-common.c
 @@ -26,6 +26,7 @@
@@ -12,7 +12,7 @@ index 665a6ea0a2a8..e8d316cda197 100644
  #define PCO_PLAT_CLK 48000000
 @@ -1282,6 +1283,78 @@ SND_SOC_DAILINK_DEF(nau8821,
  		    DAILINK_COMP_ARRAY(COMP_CODEC("i2c-NVTN2020:00",
- 						  NAU8821_CODEC_DAI)));
+ 						  "nau8821-hifi")));
  
 +static int acp_cs35l41_init(struct snd_soc_pcm_runtime *rtd)
 +{
@@ -93,7 +93,7 @@ index 665a6ea0a2a8..e8d316cda197 100644
  		links[i].platforms = sof_component;
  		links[i].num_platforms = ARRAY_SIZE(sof_component);
  		links[i].dpcm_playback = 1;
-+        links[i].dpcm_capture = 1;
++		links[i].dpcm_capture = 1;
  		links[i].nonatomic = true;
  		links[i].no_pcm = 1;
  		if (!drv_data->amp_codec_id) {
@@ -101,11 +101,20 @@ index 665a6ea0a2a8..e8d316cda197 100644
  		links[i].platforms = sof_component;
  		links[i].num_platforms = ARRAY_SIZE(sof_component);
  		links[i].dpcm_playback = 1;
-+        links[i].dpcm_capture = 1;
++		links[i].dpcm_capture = 1;
  		links[i].nonatomic = true;
  		links[i].no_pcm = 1;
  		if (!drv_data->amp_codec_id) {
-@@ -1543,6 +1618,14 @@ int acp_sofdsp_dai_links_create(struct snd_soc_card *card)
+@@ -1597,6 +1672,8 @@ int acp_legacy_dai_links_create(struct snd_soc_card *card)
+ 
+ 	if (drv_data->hs_cpu_id)
+ 		num_links++;
++	if (drv_data->bt_cpu_id)
++		num_links++;
+ 	if (drv_data->amp_cpu_id)
+ 		num_links++;
+ 	if (drv_data->dmic_cpu_id)
+@@ -1744,6 +1821,33 @@ int acp_legacy_dai_links_create(struct snd_soc_card *card)
  			card->codec_conf = rt1019_conf;
  			card->num_configs = ARRAY_SIZE(rt1019_conf);
  		}
@@ -117,20 +126,39 @@ index 665a6ea0a2a8..e8d316cda197 100644
 +			card->num_configs = ARRAY_SIZE(cs35l41_conf);
 +			links[i].ops = &acp_cs35l41_ops;
 +		}
++		i++;
++	}
++
++	if (drv_data->bt_cpu_id == I2S_BT) {
++		links[i].name = "acp-bt-codec";
++		links[i].id = BT_BE_ID;
++		links[i].cpus = sof_bt;
++		links[i].num_cpus = ARRAY_SIZE(sof_bt);
++		links[i].platforms = sof_component;
++		links[i].num_platforms = ARRAY_SIZE(sof_component);
++		links[i].dpcm_playback = 1;
++		links[i].dpcm_capture = 1;
++		links[i].nonatomic = true;
++		links[i].no_pcm = 1;
++		if (!drv_data->bt_codec_id) {
++			/* Use dummy codec if codec id not specified */
++			links[i].codecs = &snd_soc_dummy_dlc;
++			links[i].num_codecs = 1;
++		}
  		i++;
  	}
  
 diff --git a/sound/soc/amd/acp/acp-mach.h b/sound/soc/amd/acp/acp-mach.h
-index a48546d8d407..3b69dfa806a3 100644
+index a48546d8d407..1d38025307b5 100644
 --- a/sound/soc/amd/acp/acp-mach.h
 +++ b/sound/soc/amd/acp/acp-mach.h
 @@ -27,8 +27,8 @@
  enum be_id {
  	HEADSET_BE_ID = 0,
  	AMP_BE_ID,
-+    BT_BE_ID,
- 	DMIC_BE_ID,
--	BT_BE_ID,
+-	DMIC_BE_ID,
+ 	BT_BE_ID,
++	DMIC_BE_ID,
  };
  
  enum cpu_endpoints {
@@ -142,3 +170,85 @@ index a48546d8d407..3b69dfa806a3 100644
  	NAU8821,
  	MAX98388,
  	ES83XX,
+diff --git a/sound/soc/codecs/max98388.c b/sound/soc/codecs/max98388.c
+index 078adec29312..d8974805b5f8 100644
+--- a/sound/soc/codecs/max98388.c
++++ b/sound/soc/codecs/max98388.c
+@@ -390,27 +390,43 @@ static void max98388_reset(struct max98388_priv *max98388, struct device *dev)
+ {
+ 	int ret, reg, count;
+ 
++
+ 	/* Software Reset */
+ 	ret = regmap_update_bits(max98388->regmap,
+ 				 MAX98388_R2000_SW_RESET,
+ 				 MAX98388_SOFT_RESET,
+ 				 MAX98388_SOFT_RESET);
+-	if (ret)
++
++	if (ret) {
+ 		dev_err(dev, "Reset command failed. (ret:%d)\n", ret);
++		goto exit;
++	}
++
+ 
+ 	count = 0;
+ 	while (count < 3) {
+ 		usleep_range(10000, 11000);
++
+ 		/* Software Reset Verification */
+ 		ret = regmap_read(max98388->regmap,
+ 				  MAX98388_R22FF_REV_ID, &reg);
++
+ 		if (!ret) {
+ 			dev_info(dev, "Reset completed (retry:%d)\n", count);
+-			return;
++			goto exit;
+ 		}
+ 		count++;
+ 	}
++
+ 	dev_err(dev, "Reset failed. (ret:%d)\n", ret);
++
++
++exit:
++	regcache_cache_only(max98388->regmap, true);
++	ret = regmap_update_bits(max98388->regmap,
++				 MAX98388_R2000_SW_RESET,
++				 MAX98388_SOFT_RESET, 0);
++	regcache_cache_only(max98388->regmap, false);
+ }
+ 
+ static int max98388_probe(struct snd_soc_component *component)
+@@ -419,6 +435,7 @@ static int max98388_probe(struct snd_soc_component *component)
+ 
+ 	/* Software Reset */
+ 	max98388_reset(max98388, component->dev);
++	usleep_range(400, 1000);
+ 
+ 	/* General channel source configuration */
+ 	regmap_write(max98388->regmap,
+@@ -811,6 +828,7 @@ static bool max98388_readable_register(struct device *dev,
+ 	case MAX98388_R210E_AUTO_RESTART:
+ 	case MAX98388_R210F_GLOBAL_EN:
+ 	case MAX98388_R22FF_REV_ID:
++	case MAX98388_R2000_SW_RESET:
+ 		return true;
+ 	default:
+ 		return false;
+@@ -823,6 +841,7 @@ static bool max98388_volatile_reg(struct device *dev, unsigned int reg)
+ 	case MAX98388_R2001_INT_RAW1 ... MAX98388_R2005_INT_STATE2:
+ 	case MAX98388_R210F_GLOBAL_EN:
+ 	case MAX98388_R22FF_REV_ID:
++	case MAX98388_R2000_SW_RESET:
+ 		return true;
+ 	default:
+ 		return false;
+@@ -866,6 +885,7 @@ static int max98388_resume(struct device *dev)
+ 
+ 	regcache_cache_only(max98388->regmap, false);
+ 	max98388_reset(max98388, dev);
++	usleep_range(400, 1000);
+ 	regcache_sync(max98388->regmap);
+ 
+ 	return 0;

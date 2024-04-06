@@ -216,7 +216,7 @@ index cd681101bea7..1d38025307b5 100644
  	unsigned int dai_fmt;
  	unsigned int platform;
 diff --git a/sound/soc/amd/acp/acp-sof-mach.c b/sound/soc/amd/acp/acp-sof-mach.c
-index 5223033a122f..45d4ce17ce5b 100644
+index 354d0fc55299..a203984f35b1 100644
 --- a/sound/soc/amd/acp/acp-sof-mach.c
 +++ b/sound/soc/amd/acp/acp-sof-mach.c
 @@ -86,9 +86,11 @@ static struct acp_card_drvdata sof_rt5682s_hs_rt1019_data = {
