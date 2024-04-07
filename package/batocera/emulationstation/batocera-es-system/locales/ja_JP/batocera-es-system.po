@@ -14819,30 +14819,16 @@ msgstr "FXAAは、ギザギザのエッジを滑らかにする技術です"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Turn on to configure settings from this GUI (Recommended). If disabled, you "
-"have to manually edit the Config File (Experts only - not recommended)."
-msgstr ""
-"この GUI から設定を行う場合はオンにします (推奨)無効にした場合は、構成ファイ"
-"ルを手動で編集する必要があります (エキスパートのみ - 推奨されません)"
-
-#. TRANSLATION: vpinball, vpinball
-msgctxt "game_options"
-msgid "EXPERT SETTINGS"
-msgstr "エキスパート設定"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "ENABLE EMULATIONSTATION CONFIGURATION"
-msgstr "EMULATIONSTATION構成を有効"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid ""
 "Per Table Folder requires all files to be in the associated rom table "
 "folder. If disabled, consult the Wiki for further details."
 msgstr ""
 "[テーブル フォルダーごと] では、すべてのファイルを関連する テーブル romフォル"
 "ダーに置く必要があります。無効の場合、詳細については Wiki を参照してください"
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "EXPERT SETTINGS"
+msgstr "エキスパート設定"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -16862,10 +16848,6 @@ msgstr "クイック セーブ"
 #~ msgstr "コンソールの タイムゾーンを選択します"
 
 #~ msgctxt "game_options"
-#~ msgid "AMD FidelityFX (Vulkan Only)"
-#~ msgstr "AMD FidelityFX (Vulkanのみ)"
-
-#~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."
 #~ msgstr "コンソールの UTC タイムゾーンを選択します"
 
@@ -16904,6 +16886,19 @@ msgstr "クイック セーブ"
 #~ msgctxt "game_options"
 #~ msgid "Vsync"
 #~ msgstr "VSYNC(垂直同期)"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Turn on to configure settings from this GUI (Recommended). If disabled, "
+#~ "you have to manually edit the Config File (Experts only - not "
+#~ "recommended)."
+#~ msgstr ""
+#~ "この GUI から設定を行う場合はオンにします (推奨)無効にした場合は、構成ファ"
+#~ "イルを手動で編集する必要があります (エキスパートのみ - 推奨されません)"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE EMULATIONSTATION CONFIGURATION"
+#~ msgstr "EMULATIONSTATION構成を有効"
 
 #~ msgctxt "game_options"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
@@ -17016,6 +17011,10 @@ msgstr "クイック セーブ"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "game_options"
+#~ msgid "AMD FidelityFX (Vulkan Only)"
+#~ msgstr "AMD FidelityFX (Vulkanのみ)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
