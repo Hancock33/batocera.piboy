@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Batocera_options\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-03-07 17:01+0100\n"
+"PO-Revision-Date: 2024-04-04 18:30+0200\n"
 "Last-Translator: Svein Jakobsen <svein.jakobsen@gmail.com>\n"
 "Language-Team: nb_NO\n"
 "Language: nb\n"
@@ -5600,7 +5600,7 @@ msgstr ""
 #. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Justifier"
-msgstr ""
+msgstr "Justifier"
 
 #. TRANSLATION: libretro/mednafen_supergrafx, libretro/pce, libretro/pce_fast, libretro/pcfx
 msgctxt "game_options"
@@ -6592,7 +6592,7 @@ msgstr "Parasite Eve 2/Vandal Hearts 1 & 2 Fix"
 #. TRANSLATION: libretro/pcsx_rearmed, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Hyper Blaster/Justifier"
-msgstr ""
+msgstr "Hyper Blaster/Justifier"
 
 #. TRANSLATION: libretro/pcsx_rearmed, flycast
 msgctxt "game_options"
@@ -8046,52 +8046,52 @@ msgstr "Koalapad"
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "Some games and homebrews require more RAM"
-msgstr ""
+msgstr "Noen spill og homebrews trenger mere RAM"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "RAM EXPANSION UNIT"
-msgstr ""
+msgstr "RAM EKSPANSJONS-ENHET"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "128kB (1700)"
-msgstr ""
+msgstr "128kB (1700)"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "256kB (1764)"
-msgstr ""
+msgstr "256kB (1764)"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "512kB (1750)"
-msgstr ""
+msgstr "512kB (1750)"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "1024kB"
-msgstr ""
+msgstr "1024kB"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "2048kB"
-msgstr ""
+msgstr "2048kB"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "4096kB"
-msgstr ""
+msgstr "4096kB"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "8192kB"
-msgstr ""
+msgstr "8192kB"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "16384kB"
-msgstr ""
+msgstr "16384kB"
 
 #. TRANSLATION: libretro/vice_x128
 msgctxt "game_options"
@@ -9112,27 +9112,27 @@ msgstr "JOYSTICK TIL MARKØRENS FØLSOMHET"
 #. TRANSLATION: daphne
 msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
-msgstr ""
+msgstr "Sjul trådkorset i støttede spill som f.eks. ActionMax, Maddog II."
 
 #. TRANSLATION: daphne, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "LIGHT GUNS"
-msgstr ""
+msgstr "LYSPISTOL"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
-msgstr "SKJULE TRÅDKORSET TIL LYSPISTOLER"
+msgstr "SKJUL TRÅDKORSET TIL LYSPISTOLER"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
 msgid "Hidden"
-msgstr ""
+msgstr "Skjult"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
 msgid "Shown"
-msgstr ""
+msgstr "Vist"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
@@ -9238,21 +9238,22 @@ msgstr ""
 msgctxt "game_options"
 msgid "Position of wii sensor bar relative to the disaply for real wiimotes."
 msgstr ""
+"Posisjonen til WII SENSOR BAR relative til skjermen for riktige wiimotes."
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "SENSOR BAR POSITION"
-msgstr ""
+msgstr "SENSOR BAR POSISJON"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Bottom (Default)"
-msgstr ""
+msgstr "Bunn (Standard)"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Top"
-msgstr ""
+msgstr "Topp"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
@@ -9979,7 +9980,7 @@ msgstr "PRESTASJONER"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "CROSSHAIR"
-msgstr ""
+msgstr "TRÅDKORS"
 
 #. TRANSLATION: flycast/vitaquake3
 msgctxt "game_options"
@@ -11102,7 +11103,7 @@ msgstr ""
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "DITHERING"
-msgstr "TITHERING"
+msgstr "DITHERING"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -12681,12 +12682,12 @@ msgstr "CRT-BRYTERE"
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "Play this game on several screens (if available)"
-msgstr ""
+msgstr "Spill dette spillet på flere skjermer (hvis tilgjengelig)"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "MULTISCREENS"
-msgstr ""
+msgstr "MULTISKJERMER"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -12739,11 +12740,13 @@ msgid ""
 "Runners simplify compatibility of running Windows games. You must have a "
 "runner in it's own directory under /userdata/system/wine/custom."
 msgstr ""
+"Runners gjør kompatibilitet enkelt når du kjører Windows spill. Du må en "
+"runner i egen mappe under /userdata/system/wine/custom."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "WINE RUNNER"
-msgstr ""
+msgstr "WINE RUNNER"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -14905,31 +14908,16 @@ msgstr "Anti-aliasing er en teknikk for å jevne ut ujevne kanter."
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Turn on to configure settings from this GUI (Recommended). If disabled, you "
-"have to manually edit the Config File (Experts only - not recommended)."
-msgstr ""
-"Slå på for å konfigurere innstillinger fra dette brukergrensesnittet "
-"(anbefales). Hvis deaktivert, må du redigere konfigurasjonsfilen manuelt "
-"(kun for eksperter - anbefales ikke)."
-
-#. TRANSLATION: vpinball, vpinball
-msgctxt "game_options"
-msgid "EXPERT SETTINGS"
-msgstr "EKSPERTINNSTILLINGER"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "ENABLE EMULATIONSTATION CONFIGURATION"
-msgstr "AKTIVERE KONFIGURASJON AV EMULATIONSTATION"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid ""
 "Per Table Folder requires all files to be in the associated rom table "
 "folder. If disabled, consult the Wiki for further details."
 msgstr ""
 "Per tabellmappe krever at alle filene ligger i den tilknyttede rom-"
 "tabellmappen. Hvis den er deaktivert, se wikien for mer informasjon."
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "EXPERT SETTINGS"
+msgstr "EKSPERTINNSTILLINGER"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15094,12 +15082,12 @@ msgstr "Øverst til venstre, Large"
 #. TRANSLATION: vpinball, vpinball, vpinball
 msgctxt "game_options"
 msgid "On screen 2 if available"
-msgstr ""
+msgstr "På skjerm 2 hvis tilgjengelig"
 
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
 msgid "On screen 3 if available"
-msgstr ""
+msgstr "På skjerm 3 hvis tilgjengelig"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15152,7 +15140,7 @@ msgid ""
 "When the Backglass is activated, display the small additional part with the "
 "scores."
 msgstr ""
-"Når Backglass er aktivert, vises den lille tilleggsdelen med poengsummene."
+"Når Bakglass er aktivert, vises den lille tilleggsdelen med poengsummene."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15165,11 +15153,13 @@ msgid ""
 "Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
 "main screen for other emulators."
 msgstr ""
+"Bytt om Bakglass og Playfield. Nyttig for å bruke Bakglass som hovedskjerm "
+"for andre emulatorer."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "INVERSE PLAYFIELD AND B2S"
-msgstr ""
+msgstr "BYTT OM PLAYFIELD OG B2S"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15485,7 +15475,7 @@ msgstr "45s"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "60s"
-msgstr ""
+msgstr "60s"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15878,7 +15868,7 @@ msgstr "Vis kontrollerskjermen"
 #. TRANSLATION: daphne.daphne.keys
 msgctxt "keys_files"
 msgid "Service menu"
-msgstr ""
+msgstr "Servicemeny"
 
 #. TRANSLATION: moonlight.moonlight.keys
 msgctxt "keys_files"
@@ -16028,12 +16018,12 @@ msgstr "Pause / Meny"
 #. TRANSLATION: steam.keys
 msgctxt "keys_files"
 msgid "Exit Steam"
-msgstr ""
+msgstr "Lukk Steam"
 
 #. TRANSLATION: flatpak.keys
 msgctxt "keys_files"
 msgid "Exit running Flatpak"
-msgstr ""
+msgstr "Lukk kjørende Flatpak"
 
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
@@ -16572,7 +16562,7 @@ msgstr "Hurtiglagring"
 
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
-#~ msgstr "Tandy Radio Shack Color Computer kassett "
+#~ msgstr "Tandy Radio Shack Color Computer kassett"
 
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer disk images"
@@ -16974,10 +16964,6 @@ msgstr "Hurtiglagring"
 #~ msgstr "Velg konsollens tidssone."
 
 #~ msgctxt "game_options"
-#~ msgid "AMD FidelityFX (Vulkan Only)"
-#~ msgstr "AMD FidelityFX (kun Vulkan)"
-
-#~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."
 #~ msgstr "Velg konsollens UTC-tidssone."
 
@@ -17016,6 +17002,20 @@ msgstr "Hurtiglagring"
 #~ msgctxt "game_options"
 #~ msgid "Vsync"
 #~ msgstr "Vsync"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Turn on to configure settings from this GUI (Recommended). If disabled, "
+#~ "you have to manually edit the Config File (Experts only - not "
+#~ "recommended)."
+#~ msgstr ""
+#~ "Slå på for å konfigurere innstillinger fra dette brukergrensesnittet "
+#~ "(anbefales). Hvis deaktivert, må du redigere konfigurasjonsfilen manuelt "
+#~ "(kun for eksperter - anbefales ikke)."
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE EMULATIONSTATION CONFIGURATION"
+#~ msgstr "AKTIVERE KONFIGURASJON AV EMULATIONSTATION"
 
 #~ msgctxt "game_options"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
@@ -17128,6 +17128,10 @@ msgstr "Hurtiglagring"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "FastForward"
+
+#~ msgctxt "game_options"
+#~ msgid "AMD FidelityFX (Vulkan Only)"
+#~ msgstr "AMD FidelityFX (kun Vulkan)"
 
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax."

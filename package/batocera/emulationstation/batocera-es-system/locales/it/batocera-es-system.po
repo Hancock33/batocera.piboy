@@ -5609,7 +5609,7 @@ msgstr ""
 #. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Justifier"
-msgstr ""
+msgstr "Giustiziere"
 
 #. TRANSLATION: libretro/mednafen_supergrafx, libretro/pce, libretro/pce_fast, libretro/pcfx
 msgctxt "game_options"
@@ -6601,7 +6601,7 @@ msgstr "Fix Parasite Eve2/Vandal Hearts 1&2"
 #. TRANSLATION: libretro/pcsx_rearmed, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Hyper Blaster/Justifier"
-msgstr ""
+msgstr "Hyper Blaster/Giustiziere"
 
 #. TRANSLATION: libretro/pcsx_rearmed, flycast
 msgctxt "game_options"
@@ -7603,7 +7603,7 @@ msgstr "Super Scope"
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Konami Justifier"
-msgstr "Giustificatore Konami"
+msgstr "Giustiziere Konami"
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
@@ -7616,13 +7616,13 @@ msgid ""
 "Konami Justifier P2 is daisy chained from controller 2, appears as port 3 to "
 "system."
 msgstr ""
-"Il giustificatore Konami P2 e' attaccato al controller 2, risulta come porta "
+"Il giustiziere Konami P2 e' attaccato al controller 2, risulta come porta "
 "3per il sistema."
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
 msgid "Konami Justifier (P2)"
-msgstr "Giustificatore Konami (P2)"
+msgstr "Giustiziere Konami (P2)"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -7717,7 +7717,7 @@ msgstr "Pistole/multitap."
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
 msgid "Dual Konami Justifiers"
-msgstr "Giustificatore Dual Konami"
+msgstr "Giustiziere Dual Konami"
 
 #. TRANSLATION: libretro/tgbdual, libretro/doublecherrygb
 msgctxt "game_options"
@@ -8055,52 +8055,52 @@ msgstr "Koalapad"
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "Some games and homebrews require more RAM"
-msgstr ""
+msgstr "Alcuni giochi e homebrew richiedono piu' RAM"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "RAM EXPANSION UNIT"
-msgstr ""
+msgstr "UNITA' ESPANSIONE RAM"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "128kB (1700)"
-msgstr ""
+msgstr "128kB (1700"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "256kB (1764)"
-msgstr ""
+msgstr "256kB (1764)"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "512kB (1750)"
-msgstr ""
+msgstr "512kB (1750)"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "1024kB"
-msgstr ""
+msgstr "1024kB"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "2048kB"
-msgstr ""
+msgstr "2048kB"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "4096kB"
-msgstr ""
+msgstr "4096kB"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "8192kB"
-msgstr ""
+msgstr "8192kB"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "16384kB"
-msgstr ""
+msgstr "16384kB"
 
 #. TRANSLATION: libretro/vice_x128
 msgctxt "game_options"
@@ -9126,12 +9126,12 @@ msgstr "SENSIBILITA' DA JOYSTICK A CURSORE"
 #. TRANSLATION: daphne
 msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
-msgstr ""
+msgstr "Nascondi mirini nei giochi che lo supportano es. ActionMax, Maddog II."
 
 #. TRANSLATION: daphne, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "LIGHT GUNS"
-msgstr ""
+msgstr "PISTOLE"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
@@ -9141,12 +9141,12 @@ msgstr "NASCONDI MIRINO PISTOLA"
 #. TRANSLATION: daphne
 msgctxt "game_options"
 msgid "Hidden"
-msgstr ""
+msgstr "Nascosto"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
 msgid "Shown"
-msgstr ""
+msgstr "Visibile"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
@@ -9252,21 +9252,22 @@ msgstr ""
 msgctxt "game_options"
 msgid "Position of wii sensor bar relative to the disaply for real wiimotes."
 msgstr ""
+"Posizione della sensor bar wii relativamente al monitor per i veri wiimotes."
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "SENSOR BAR POSITION"
-msgstr ""
+msgstr "POSIZIONE SENSOR BAR"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Bottom (Default)"
-msgstr ""
+msgstr "Basso (Default)"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Top"
-msgstr ""
+msgstr "Alto"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
@@ -9994,7 +9995,7 @@ msgstr "SUCCESSI"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "CROSSHAIR"
-msgstr ""
+msgstr "MIRINO"
 
 #. TRANSLATION: flycast/vitaquake3
 msgctxt "game_options"
@@ -12763,11 +12764,13 @@ msgid ""
 "Runners simplify compatibility of running Windows games. You must have a "
 "runner in it's own directory under /userdata/system/wine/custom."
 msgstr ""
+"I runners semplificano la compatibilita' coi giochi Windows. Devi "
+"posizionare unrunner nella sua directory dentro /userdata/system/wine/custom."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "WINE RUNNER"
-msgstr ""
+msgstr "RUNNER WINE"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -14928,31 +14931,16 @@ msgstr "Anti-aliasing e' una tecnica per sfumare gli angoli netti."
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Turn on to configure settings from this GUI (Recommended). If disabled, you "
-"have to manually edit the Config File (Experts only - not recommended)."
-msgstr ""
-"Abilitalo per configurare le impostazioni con questa GUI (Raccomandato). Se "
-"disabilitato, dovrai modificare manualmente il file Config (Solo per esperti "
-"- discoraggiato)."
-
-#. TRANSLATION: vpinball, vpinball
-msgctxt "game_options"
-msgid "EXPERT SETTINGS"
-msgstr "IMPOSTAZIONI ESPERTI"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "ENABLE EMULATIONSTATION CONFIGURATION"
-msgstr "ABILITA CONFIGURAZIONE EMULATIONSTATION"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid ""
 "Per Table Folder requires all files to be in the associated rom table "
 "folder. If disabled, consult the Wiki for further details."
 msgstr ""
 "Cartella per ogni tavola necessita tutti i files associati alla rom della "
 "tavola.Se disabilitato, riferisciti al Wiki per dettagli aggiuntivi."
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "EXPERT SETTINGS"
+msgstr "IMPOSTAZIONI ESPERTI"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15510,7 +15498,7 @@ msgstr "45s"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "60s"
-msgstr ""
+msgstr "60s"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15904,7 +15892,7 @@ msgstr "Mostra lo schermo controller"
 #. TRANSLATION: daphne.daphne.keys
 msgctxt "keys_files"
 msgid "Service menu"
-msgstr ""
+msgstr "Menu di servizio"
 
 #. TRANSLATION: moonlight.moonlight.keys
 msgctxt "keys_files"
@@ -16998,10 +16986,6 @@ msgstr "Salvataggio Rapido"
 #~ msgstr "Scegli il fuso orario della tua console."
 
 #~ msgctxt "game_options"
-#~ msgid "AMD FidelityFX (Vulkan Only)"
-#~ msgstr "AMD FidelityFX (Solo Vulkan)"
-
-#~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."
 #~ msgstr "Scegli il fuso orario UTC della tua console."
 
@@ -17040,6 +17024,20 @@ msgstr "Salvataggio Rapido"
 #~ msgctxt "game_options"
 #~ msgid "Vsync"
 #~ msgstr "Vsync"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Turn on to configure settings from this GUI (Recommended). If disabled, "
+#~ "you have to manually edit the Config File (Experts only - not "
+#~ "recommended)."
+#~ msgstr ""
+#~ "Abilitalo per configurare le impostazioni con questa GUI (Raccomandato). "
+#~ "Se disabilitato, dovrai modificare manualmente il file Config (Solo per "
+#~ "esperti - discoraggiato)."
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE EMULATIONSTATION CONFIGURATION"
+#~ msgstr "ABILITA CONFIGURAZIONE EMULATIONSTATION"
 
 #~ msgctxt "game_options"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
@@ -17153,6 +17151,10 @@ msgstr "Salvataggio Rapido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "AvanzamentoRapido"
+
+#~ msgctxt "game_options"
+#~ msgid "AMD FidelityFX (Vulkan Only)"
+#~ msgstr "AMD FidelityFX (Solo Vulkan)"
 
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax."

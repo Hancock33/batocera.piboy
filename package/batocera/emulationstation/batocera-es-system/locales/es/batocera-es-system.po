@@ -2,7 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-03-24 00:00+0100\n"
+"POT-Creation-Date: 2024-03-24 00:00+0100\n"
+"PO-Revision-Date: 2024-04-02 00:00+0100\n"
 "Last-Translator: roliverosc <roliveros@hotmail.com>, 2024\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
@@ -706,7 +707,7 @@ msgstr ""
 #. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "AUTO WIDESCREEN"
-msgstr "WIDESCREEN AUTOMÁTICO"
+msgstr "ANCHO AUTOMÁTICO"
 
 #. TRANSLATION: libretro/beetle-saturn, libretro/beetle-saturn, libretro/yabasanshiro, libretro/yabasanshiro
 msgctxt "game_options"
@@ -5625,7 +5626,7 @@ msgstr ""
 #. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Justifier"
-msgstr ""
+msgstr "Justifier"
 
 #. TRANSLATION: libretro/mednafen_supergrafx, libretro/pce, libretro/pce_fast, libretro/pcfx
 msgctxt "game_options"
@@ -6621,7 +6622,7 @@ msgstr "Parasite Eve 2/Vandal Hearts 1&2 Fix"
 #. TRANSLATION: libretro/pcsx_rearmed, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Hyper Blaster/Justifier"
-msgstr ""
+msgstr "Hyper Blaster/Justifier"
 
 #. TRANSLATION: libretro/pcsx_rearmed, flycast
 msgctxt "game_options"
@@ -9148,11 +9149,12 @@ msgstr "JOYSTICK A LA SENSIBILIDAD DEL CURSOR"
 msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 msgstr ""
+"Oculta puntos de mira en juegos compatibles, por ej. ActionMax, Maddog II."
 
 #. TRANSLATION: daphne, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "LIGHT GUNS"
-msgstr ""
+msgstr "LIGHT GUNS"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
@@ -9162,12 +9164,12 @@ msgstr "OCULTAR PUNTO DE MIRA DE ARMA LIGHT GUN"
 #. TRANSLATION: daphne
 msgctxt "game_options"
 msgid "Hidden"
-msgstr ""
+msgstr "Oculto"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
 msgid "Shown"
-msgstr ""
+msgstr "Mostrado"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
@@ -12815,6 +12817,9 @@ msgid ""
 "Runners simplify compatibility of running Windows games. You must have a "
 "runner in it's own directory under /userdata/system/wine/custom."
 msgstr ""
+"Los corredores simplifican la compatibilidad al ejecutar juegos de Windows. "
+"Debe tener un corredor en su propio directorio en /userdata/system/wine/"
+"custom."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -14990,32 +14995,17 @@ msgstr "Antialiasing es una técnica para suavizar los bordes irregulares."
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Turn on to configure settings from this GUI (Recommended). If disabled, you "
-"have to manually edit the Config File (Experts only - not recommended)."
-msgstr ""
-"Activar para configurar ajustes desde esta interfaz gráfica de usuario "
-"(recomendado). Si está desactivado, tendrás que editar manualmente el "
-"archivo de configuración (sólo para expertos, no recomendado)."
-
-#. TRANSLATION: vpinball, vpinball
-msgctxt "game_options"
-msgid "EXPERT SETTINGS"
-msgstr "AJUSTES AVANZADOS"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "ENABLE EMULATIONSTATION CONFIGURATION"
-msgstr "ACTIVAR CONFIGURACIÓN DE EMULATIONSTATION"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid ""
 "Per Table Folder requires all files to be in the associated rom table "
 "folder. If disabled, consult the Wiki for further details."
 msgstr ""
 "La carpeta por mesa requiere que todos los archivos estén en la carpeta de "
 "la mesa ROM asociada. Si está deshabilitado, consulte la Wiki para obtener "
 "más detalles."
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "EXPERT SETTINGS"
+msgstr "AJUSTES AVANZADOS"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -17085,10 +17075,6 @@ msgstr "Guardado rápido"
 #~ msgstr "Selecciona la zona horaria de tu consola."
 
 #~ msgctxt "game_options"
-#~ msgid "AMD FidelityFX (Vulkan Only)"
-#~ msgstr "AMD FidelityFX (Sólo Vulkan)"
-
-#~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."
 #~ msgstr "Selecciona la zona horaria UTC de tu consola."
 
@@ -17127,6 +17113,20 @@ msgstr "Guardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "Vsync"
 #~ msgstr "Vsync"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Turn on to configure settings from this GUI (Recommended). If disabled, "
+#~ "you have to manually edit the Config File (Experts only - not "
+#~ "recommended)."
+#~ msgstr ""
+#~ "Activar para configurar ajustes desde esta interfaz gráfica de usuario "
+#~ "(recomendado). Si está desactivado, tendrás que editar manualmente el "
+#~ "archivo de configuración (sólo para expertos, no recomendado)."
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE EMULATIONSTATION CONFIGURATION"
+#~ msgstr "ACTIVAR CONFIGURACIÓN DE EMULATIONSTATION"
 
 #~ msgctxt "game_options"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
@@ -17243,22 +17243,5 @@ msgstr "Guardado rápido"
 #~ msgstr "Avance rápido"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Runners simplify compatibility of running Windows games. If choosing "
-#~ "Custom, you must have a runner in /userdata/system/wine/custom."
-#~ msgstr ""
-#~ "Los runners simplifican la compatibilidad al ejecutar juegos de Windows. "
-#~ "Si elige Personalizado, debe tener un corredor en /userdata/system/wine/"
-#~ "custom."
-
-#~ msgctxt "game_options"
-#~ msgid "Glorius Eggroll Proton (Default)"
-#~ msgstr "Glorius Eggroll Proton (Defecto)"
-
-#~ msgctxt "game_options"
-#~ msgid "User Provided Runner"
-#~ msgstr "Runner proporcionado por el usuario"
-
-#~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "Oculta puntos de mira en juegos compatibles, por ej. ActionMax."
+#~ msgid "AMD FidelityFX (Vulkan Only)"
+#~ msgstr "AMD FidelityFX (Sólo Vulkan)"

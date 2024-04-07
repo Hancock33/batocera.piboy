@@ -14973,31 +14973,16 @@ msgstr "Anti-aliasing is een techniek om gekartelde randen glad te strijken."
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Turn on to configure settings from this GUI (Recommended). If disabled, you "
-"have to manually edit the Config File (Experts only - not recommended)."
-msgstr ""
-"Schakel dit in om instellingen vanuit deze GUI te configureren (aanbevolen). "
-"Indien uitgeschakeld, moet u het configuratiebestand handmatig bewerken "
-"(Alleen experts - niet aanbevolen)."
-
-#. TRANSLATION: vpinball, vpinball
-msgctxt "game_options"
-msgid "EXPERT SETTINGS"
-msgstr "EXPERT INSTELLINGEN"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "ENABLE EMULATIONSTATION CONFIGURATION"
-msgstr "CONFIGURATIE VAN EMULATIONSTATION INSCHAKELEN"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid ""
 "Per Table Folder requires all files to be in the associated rom table "
 "folder. If disabled, consult the Wiki for further details."
 msgstr ""
 "Per Tafel Folder vereist dat alle bestanden zich in de bijbehorende rom-"
 "tabelmap bevinden. Indien uitgeschakeld, raadpleeg de WIKI voor meer details."
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "EXPERT SETTINGS"
+msgstr "EXPERT INSTELLINGEN"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -17050,10 +17035,6 @@ msgstr "Snel Opslaan"
 #~ msgstr "Kies de tijdzone van uw console."
 
 #~ msgctxt "game_options"
-#~ msgid "AMD FidelityFX (Vulkan Only)"
-#~ msgstr "AMD FidelityFX (Alleen Vulkan)"
-
-#~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."
 #~ msgstr "Kies de UTC-tijdzone van uw console."
 
@@ -17093,6 +17074,20 @@ msgstr "Snel Opslaan"
 #~ msgctxt "game_options"
 #~ msgid "Vsync"
 #~ msgstr "V-SYNC"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Turn on to configure settings from this GUI (Recommended). If disabled, "
+#~ "you have to manually edit the Config File (Experts only - not "
+#~ "recommended)."
+#~ msgstr ""
+#~ "Schakel dit in om instellingen vanuit deze GUI te configureren "
+#~ "(aanbevolen). Indien uitgeschakeld, moet u het configuratiebestand "
+#~ "handmatig bewerken (Alleen experts - niet aanbevolen)."
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE EMULATIONSTATION CONFIGURATION"
+#~ msgstr "CONFIGURATIE VAN EMULATIONSTATION INSCHAKELEN"
 
 #~ msgctxt "game_options"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
@@ -17207,6 +17202,10 @@ msgstr "Snel Opslaan"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Vooruitspoelen"
+
+#~ msgctxt "game_options"
+#~ msgid "AMD FidelityFX (Vulkan Only)"
+#~ msgstr "AMD FidelityFX (Alleen Vulkan)"
 
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax."

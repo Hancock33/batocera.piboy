@@ -1,7 +1,7 @@
-diff --git a/gensignkey.c b/gensignkey.c
-index 4be3d7d..cbe3211 100644
---- a/gensignkey.c
-+++ b/gensignkey.c
+diff --git a/src/gensignkey.c b/src/gensignkey.c
+index cfe0a80..4bc2568 100644
+--- a/src/gensignkey.c
++++ b/src/gensignkey.c
 @@ -99,7 +99,7 @@ int signkey_generate(enum signkey_type keytype, int bits, const char* filename,
  {
  	sign_key * key = NULL;
@@ -68,8 +68,8 @@ index 4be3d7d..cbe3211 100644
  
  	/* ensure directory update is flushed to disk, otherwise we can end up
  	with zero-byte hostkey files if the power goes off */
-@@ -185,10 +185,10 @@ out:
- 		buf_free(buf);
+@@ -184,10 +184,10 @@ out:
+ 		buf_burn_free(buf);
  	}
  	
 -	if (fn_temp) {
