@@ -2,6 +2,11 @@
 
 # This is the BATOCERA system splash service
 # It shows the unique BATOCERA logo in early boot stage
+screen_rotate="$(/usr/bin/batocera-settings-get-master display.rotate)"
+screen_rotate_edp="$(/usr/bin/batocera-settings-get-master display.rotate.eDP)"
+screen_x=$(cat /sys/class/graphics/fb0/virtual_size | cut -d "," -f1)
+screen_y=$(cat /sys/class/graphics/fb0/virtual_size | cut -d "," -f2)
+image="/usr/share/batocera/splash/boot-logo.png"
 
 do_start ()
 {
@@ -14,36 +19,33 @@ do_start ()
         N=$((N+1))
     done
 
-    # V_BOARD_MODEL detection from batocera-info
-    V_BOARD_MODEL=$(cat /sys/firmware/devicetree/base/model 2>/dev/null | tr -d '\0' | sed -e s+"[^A-Za-z0-9]"+"_"+g)
-    if test -z "${V_BOARD_MODEL}"
-    then
-        # give an other chance with dmi
-        V_BOARD_MODEL=$(cat /sys/devices/virtual/dmi/id/board_name 2>/dev/null | tr -d '\0' | sed -e s+"[^A-Za-z0-9]"+"_"+g)
-    fi
-    # 3rd time lucky
-    if test -z "${V_BOARD_MODEL}" || test "${V_BOARD_MODEL}" = "Default_string"
-    then
-        V_BOARD_MODEL=$(cat /sys/devices/virtual/dmi/id/product_name 2>/dev/null | tr -d '\0' | sed -e s+"[^A-Za-z0-9]"+"_"+g)
+    if [ "$screen_rotate" = "1" ]; then
+        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -270 -quality 75 "/tmp/boot-logo.jpg"
+        image="/tmp/boot-logo.jpg"
+    elif [ "$screen_rotate" = "2" ]; then
+        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -180 -quality 75 "/tmp/boot-logo.jpg"
+        image="/tmp/boot-logo.jpg"
+    elif [ "$screen_rotate" = "3" ]; then
+        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -90 -quality 75 "/tmp/boot-logo.jpg"
+        image="/tmp/boot-logo.jpg"
     fi
 
-    # Batocera boot logo
-    image="/usr/share/batocera/splash/boot-logo-"$(cat /sys/class/graphics/fb0/virtual_size | sed 's/,/x/g')".png"
-    if ! [ -f "$image" ]; then
-        image="/usr/share/batocera/splash/boot-logo.png"
-        [ -f "$image" ] || exit 1
+    if [ "$screen_rotate_edp" = "1" ]; then
+        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -270 -quality 75 "/tmp/boot-logo.jpg"
+        image="/tmp/boot-logo.jpg"
+    elif [ "$screen_rotate_edp" = "2" ]; then
+        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -180 -quality 75 "/tmp/boot-logo.jpg"
+        image="/tmp/boot-logo.jpg"
+    elif [ "$screen_rotate_edp" = "3" ]; then
+        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -90 -quality 75 "/tmp/boot-logo.jpg"
+        image="/tmp/boot-logo.jpg"
     fi
 
-    if test "${V_BOARD_MODEL}" = "Loki_Zero"; then
-        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -90 "/tmp/boot-logo.png"
-        image="/tmp/boot-logo.png"
-    fi
+    convert "${image}" -resize "$screen_x"x"$screen_y"! -quality 75 "/tmp/boot-logo.jpg"
 
-    FBV_OPTS="-f -e"
+    FBV_OPTS="-f -e -i"
     # FBV_OPTS can be set differently for some boards to work
-    MODELOPTS="/etc/opts.$V_BOARD_MODEL"
-    test -e "${MODELOPTS}" && . "${MODELOPTS}"
-    test -e /dev/fb0 && fbv ${FBV_OPTS} -i "${image}"
+    test -e /dev/fb0 && fbv ${FBV_OPTS} -i "/tmp/boot-logo.jpg"
 }
 
 case "$1" in
