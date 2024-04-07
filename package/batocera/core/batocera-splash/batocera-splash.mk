@@ -77,12 +77,8 @@ define BATOCERA_SPLASH_INSTALL_BOOT_LOGO
 	cp "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/logo-16-9-480-rotate.png"	"${TARGET_DIR}/usr/share/batocera/splash/boot-logo-480x854.png"
 	cp "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/logo-720p-rotate.png"		"${TARGET_DIR}/usr/share/batocera/splash/boot-logo-720x1280.png"
 	cp "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/logo-1152-rotate.png"		"${TARGET_DIR}/usr/share/batocera/splash/boot-logo-1152x1920.png"
-	cp "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/logo-1080p-rotate-left.png"	"${TARGET_DIR}/usr/share/batocera/splash/boot-logo-1080x1920-left.png"
 	ln -sf /usr/share/batocera/splash/boot-logo-720x1280.png													"${TARGET_DIR}/usr/share/batocera/splash/boot-logo-800x1280.png"
 	ln -sf /usr/share/batocera/splash/boot-logo-1280x720.png													"${TARGET_DIR}/usr/share/batocera/splash/boot-logo-1280x800.png"
-
-	#piboy
-	cp "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/piboy-logo480p.png"			"${TARGET_DIR}/usr/share/batocera/splash/boot-piboy.png"
 endef
 
 define BATOCERA_SPLASH_INSTALL_VIDEO
@@ -105,8 +101,6 @@ define BATOCERA_SPLASH_INSTALL_IMAGE
 	convert "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/logo-16-9-480-rotate.png" -fill white -pointsize 20 -annotate 270x270+440+814 "$(BATOCERA_SPLASH_TGVERSION)" "${TARGET_DIR}/usr/share/batocera/splash/logo-version-480x854.png"
 	convert "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/logo-480p.png" -fill white -pointsize 20 -annotate +40+440 "$(BATOCERA_SPLASH_TGVERSION)" "${TARGET_DIR}/usr/share/batocera/splash/logo-version-640x480.png"
 	convert "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/logo-240.png" -fill white -pointsize 15 -annotate +20+220 "$(BATOCERA_SPLASH_TGVERSION)" "${TARGET_DIR}/usr/share/batocera/splash/logo-version-320x240.png"
-	convert "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/logo-480-dmg.png" -fill white -pointsize 20 -annotate +40+440 "$(BATOCERA_SPLASH_TGVERSION)" "${TARGET_DIR}/usr/share/batocera/splash/logo-version-640x480-dmg.png"
-	convert "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/piboy-logo480p.png" -fill white -pointsize 20 -annotate +40+440 "$(BATOCERA_SPLASH_TGVERSION)" "${TARGET_DIR}/usr/share/batocera/splash/boot-piboy.png"
 endef
 
 $(eval $(generic-package))
