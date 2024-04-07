@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Apr 06, 2024
-LEMONADE_VERSION = 8b1b60ac740ab044d1f90c6b190650749007a93e
+LEMONADE_VERSION = c3268eaa08ee3cebcadcca804ebe3bf203b32708
 LEMONADE_SITE = https://github.com/Lemonade-emu/Lemonade.git
 LEMONADE_SITE_METHOD=git
 LEMONADE_GIT_SUBMODULES=YES
