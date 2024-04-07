@@ -2,8 +2,6 @@
 
 # This is the BATOCERA system splash service
 # It shows the unique BATOCERA logo in early boot stage
-enabledex="$(batocera-settings-get -f /boot/batocera-boot.conf key piboy.enabled)"
-enabledxrs="$(batocera-settings-get -f /boot/batocera-boot.conf key piboyxrs.enabled)"
 
 do_start ()
 {
@@ -12,7 +10,7 @@ do_start ()
     N=0
     while ! test -e /dev/fb0 -o $N -gt 80
     do
-        sleep 0.25
+        sleep 0.1
         N=$((N+1))
     done
 
@@ -36,14 +34,9 @@ do_start ()
         [ -f "$image" ] || exit 1
     fi
 
-    if [[ $enabledex == "1" ]]; then
-        image="/usr/share/batocera/splash/boot-piboy.png"
-    elif [[ $enabledxrs == "1" ]]; then
-        image="/usr/share/batocera/splash/boot-piboy.png"
-    fi
-
     if test "${V_BOARD_MODEL}" = "Loki_Zero"; then
-        image="/usr/share/batocera/splash/boot-logo-1080x1920-left.png"
+        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -90 "/tmp/boot-logo.png"
+        image="/tmp/boot-logo.png"
     fi
 
     FBV_OPTS="-f -e"
