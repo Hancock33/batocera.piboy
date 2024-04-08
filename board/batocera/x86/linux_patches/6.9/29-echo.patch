@@ -1,8 +1,39 @@
+From 4ae3ef00b24b031bf9aa6a80aab50ba61b950566 Mon Sep 17 00:00:00 2001
+From: Piotr Gorski <lucjan.lucjanov@gmail.com>
+Date: Mon, 8 Apr 2024 13:22:19 +0200
+Subject: [PATCH] echo-cachy
+
+Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
+---
+ include/linux/sched.h         |   21 +-
+ init/Kconfig                  |   13 +-
+ kernel/Kconfig.hz             |   10 +-
+ kernel/Kconfig.preempt        |    3 +-
+ kernel/sched/Makefile         |    4 +
+ kernel/sched/balancer.h       |  881 +++++++++++++
+ kernel/sched/bs.c             |  888 +++++++++++++
+ kernel/sched/core.c           |   19 +
+ kernel/sched/debug.c          |    5 +
+ kernel/sched/fair_debug.h     |  137 ++
+ kernel/sched/fair_dep_funcs.h |  828 ++++++++++++
+ kernel/sched/fair_numa.h      | 2288 +++++++++++++++++++++++++++++++++
+ kernel/sched/idle.c           |    1 +
+ kernel/sched/nohz.h           |  511 ++++++++
+ kernel/sched/sched.h          |   13 +-
+ kernel/time/Kconfig           |    2 +-
+ 16 files changed, 5616 insertions(+), 8 deletions(-)
+ create mode 100644 kernel/sched/balancer.h
+ create mode 100644 kernel/sched/bs.c
+ create mode 100644 kernel/sched/fair_debug.h
+ create mode 100644 kernel/sched/fair_dep_funcs.h
+ create mode 100644 kernel/sched/fair_numa.h
+ create mode 100644 kernel/sched/nohz.h
+
 diff --git a/include/linux/sched.h b/include/linux/sched.h
-index dc07eb0d3290..505095b23587 100644
+index 3c2abbc58..ce006da92 100644
 --- a/include/linux/sched.h
 +++ b/include/linux/sched.h
-@@ -535,6 +535,19 @@ struct sched_statistics {
+@@ -533,6 +533,19 @@ struct sched_statistics {
  #endif /* CONFIG_SCHEDSTATS */
  } ____cacheline_aligned;
  
@@ -22,7 +53,7 @@ index dc07eb0d3290..505095b23587 100644
  struct sched_entity {
  	/* For load-balancing: */
  	struct load_weight		load;
-@@ -544,14 +557,18 @@ struct sched_entity {
+@@ -542,14 +555,18 @@ struct sched_entity {
  
  	struct list_head		group_node;
  	unsigned int			on_rq;
@@ -44,7 +75,7 @@ index dc07eb0d3290..505095b23587 100644
  
  #ifdef CONFIG_FAIR_GROUP_SCHED
 diff --git a/init/Kconfig b/init/Kconfig
-index 0d9f935c32bd..24677055638f 100644
+index 64c45f866..1ae49418a 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -130,6 +130,12 @@ config THREAD_INFO_IN_TASK
@@ -75,7 +106,7 @@ index 0d9f935c32bd..24677055638f 100644
  	depends on FAIR_GROUP_SCHED
  	default n
  	help
-@@ -1306,9 +1313,11 @@ config CHECKPOINT_RESTORE
+@@ -1301,9 +1308,11 @@ config CHECKPOINT_RESTORE
  
  config SCHED_AUTOGROUP
  	bool "Automatic process group scheduling"
@@ -88,7 +119,7 @@ index 0d9f935c32bd..24677055638f 100644
  	  This option optimizes the scheduler for common desktop workloads by
  	  automatically creating and populating task groups.  This separation
 diff --git a/kernel/Kconfig.hz b/kernel/Kconfig.hz
-index 0f78364efd4f..fea81b1de644 100644
+index 0f78364ef..fea81b1de 100644
 --- a/kernel/Kconfig.hz
 +++ b/kernel/Kconfig.hz
 @@ -5,7 +5,7 @@
@@ -123,7 +154,7 @@ index 0f78364efd4f..fea81b1de644 100644
  	default 1000 if HZ_1000
  
 diff --git a/kernel/Kconfig.preempt b/kernel/Kconfig.preempt
-index bae49b743834..bc41749fea13 100644
+index c2f1fd95a..d54bb52cc 100644
 --- a/kernel/Kconfig.preempt
 +++ b/kernel/Kconfig.preempt
 @@ -117,7 +117,8 @@ config PREEMPT_DYNAMIC
@@ -137,7 +168,7 @@ index bae49b743834..bc41749fea13 100644
  	  This option permits Core Scheduling, a means of coordinated task
  	  selection across SMT siblings. When enabled -- see
 diff --git a/kernel/sched/Makefile b/kernel/sched/Makefile
-index 976092b7bd45..f78ee1bffe16 100644
+index 976092b7b..f78ee1bff 100644
 --- a/kernel/sched/Makefile
 +++ b/kernel/sched/Makefile
 @@ -29,6 +29,10 @@ endif
@@ -153,7 +184,7 @@ index 976092b7bd45..f78ee1bffe16 100644
  obj-y += build_utility.o
 diff --git a/kernel/sched/balancer.h b/kernel/sched/balancer.h
 new file mode 100644
-index 000000000000..852faad1fc1d
+index 000000000..852faad1f
 --- /dev/null
 +++ b/kernel/sched/balancer.h
 @@ -0,0 +1,881 @@
@@ -1040,7 +1071,7 @@ index 000000000000..852faad1fc1d
 +#endif /* CONFIG_SMP */
 diff --git a/kernel/sched/bs.c b/kernel/sched/bs.c
 new file mode 100644
-index 000000000000..7760327e5194
+index 000000000..6b3d51b43
 --- /dev/null
 +++ b/kernel/sched/bs.c
 @@ -0,0 +1,888 @@
@@ -1060,8 +1091,8 @@ index 000000000000..7760327e5194
 +#include "sched.h"
 +#include "pelt.h"
 +
-+unsigned int sysctl_sched_base_slice	= 7000ULL;
-+unsigned int bs_shared_quota		= 105000ULL; // 105us
++unsigned int sysctl_sched_base_slice	= 4200ULL;
++unsigned int bs_shared_quota		= 35000ULL; // 35us
 +u32 alpha				= 500U;
 +
 +struct lb_env {
@@ -1933,10 +1964,10 @@ index 000000000000..7760327e5194
 +
 +}
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index e8b736cee130..45aed6f5d56e 100644
+index 7019a4045..7cc062785 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
-@@ -4565,6 +4565,12 @@ static void __sched_fork(unsigned long clone_flags, struct task_struct *p)
+@@ -4534,6 +4534,12 @@ static void __sched_fork(unsigned long clone_flags, struct task_struct *p)
  	p->se.vruntime			= 0;
  	p->se.vlag			= 0;
  	p->se.slice			= sysctl_sched_base_slice;
@@ -1949,7 +1980,7 @@ index e8b736cee130..45aed6f5d56e 100644
  	INIT_LIST_HEAD(&p->se.group_node);
  
  #ifdef CONFIG_FAIR_GROUP_SCHED
-@@ -4744,6 +4750,15 @@ static int sysctl_schedstats(struct ctl_table *table, int write, void *buffer,
+@@ -4696,6 +4702,15 @@ static int sysctl_schedstats(struct ctl_table *table, int write, void *buffer,
  
  #ifdef CONFIG_SYSCTL
  static struct ctl_table sched_core_sysctls[] = {
@@ -1965,19 +1996,19 @@ index e8b736cee130..45aed6f5d56e 100644
  #ifdef CONFIG_SCHEDSTATS
  	{
  		.procname       = "sched_schedstats",
-@@ -10028,6 +10043,10 @@ void __init sched_init(void)
+@@ -9933,6 +9948,10 @@ void __init sched_init(void)
  
  	wait_bit_init();
  
 +#ifdef CONFIG_ECHO_SCHED
-+	printk(KERN_INFO "ECHO CPU scheduler v6.7 by Hamad Al Marri.");
++	printk(KERN_INFO "ECHO CPU scheduler v6.8 by Hamad Al Marri.");
 +#endif
 +
  #ifdef CONFIG_FAIR_GROUP_SCHED
  	ptr += 2 * nr_cpu_ids * sizeof(void **);
  #endif
 diff --git a/kernel/sched/debug.c b/kernel/sched/debug.c
-index 6f306e1c9c3e..2929b1bc540d 100644
+index 8d5d98a58..ec7d41bc6 100644
 --- a/kernel/sched/debug.c
 +++ b/kernel/sched/debug.c
 @@ -1003,6 +1003,11 @@ void proc_sched_show_task(struct task_struct *p, struct pid_namespace *ns,
@@ -1994,7 +2025,7 @@ index 6f306e1c9c3e..2929b1bc540d 100644
  
 diff --git a/kernel/sched/fair_debug.h b/kernel/sched/fair_debug.h
 new file mode 100644
-index 000000000000..2778cf58000f
+index 000000000..2778cf580
 --- /dev/null
 +++ b/kernel/sched/fair_debug.h
 @@ -0,0 +1,137 @@
@@ -2137,7 +2168,7 @@ index 000000000000..2778cf58000f
 +#endif // CONFIG_SCHED_DEBUG
 diff --git a/kernel/sched/fair_dep_funcs.h b/kernel/sched/fair_dep_funcs.h
 new file mode 100644
-index 000000000000..d4411cded78b
+index 000000000..d4411cded
 --- /dev/null
 +++ b/kernel/sched/fair_dep_funcs.h
 @@ -0,0 +1,828 @@
@@ -2971,7 +3002,7 @@ index 000000000000..d4411cded78b
 +}
 diff --git a/kernel/sched/fair_numa.h b/kernel/sched/fair_numa.h
 new file mode 100644
-index 000000000000..1d9f6ff65a3e
+index 000000000..1d9f6ff65
 --- /dev/null
 +++ b/kernel/sched/fair_numa.h
 @@ -0,0 +1,2288 @@
@@ -5264,7 +5295,7 @@ index 000000000000..1d9f6ff65a3e
 +
 +#endif /* CONFIG_NUMA_BALANCING */
 diff --git a/kernel/sched/idle.c b/kernel/sched/idle.c
-index 3b6540cc436a..edbd1f0508eb 100644
+index 6135fbe83..33bad71a5 100644
 --- a/kernel/sched/idle.c
 +++ b/kernel/sched/idle.c
 @@ -331,6 +331,7 @@ static void do_idle(void)
@@ -5277,7 +5308,7 @@ index 3b6540cc436a..edbd1f0508eb 100644
  
 diff --git a/kernel/sched/nohz.h b/kernel/sched/nohz.h
 new file mode 100644
-index 000000000000..f00aeacb8f23
+index 000000000..f00aeacb8
 --- /dev/null
 +++ b/kernel/sched/nohz.h
 @@ -0,0 +1,511 @@
@@ -5793,7 +5824,7 @@ index 000000000000..f00aeacb8f23
 +}
 +#endif /* CONFIG_NO_HZ_COMMON */
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 3b8e16c95162..3b48875c24da 100644
+index 3e102936a..f3a048377 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -109,6 +109,10 @@ extern int sysctl_sched_rt_period;
@@ -5807,7 +5838,7 @@ index 3b8e16c95162..3b48875c24da 100644
  /*
   * Helpers for converting nanosecond timing to jiffy resolution
   */
-@@ -617,7 +621,9 @@ struct cfs_rq {
+@@ -574,7 +578,9 @@ struct cfs_rq {
  	unsigned int		h_nr_running;      /* SCHED_{NORMAL,BATCH,IDLE} */
  	unsigned int		idle_nr_running;   /* SCHED_IDLE */
  	unsigned int		idle_h_nr_running; /* SCHED_IDLE */
@@ -5818,7 +5849,7 @@ index 3b8e16c95162..3b48875c24da 100644
  	s64			avg_vruntime;
  	u64			avg_load;
  
-@@ -639,6 +645,10 @@ struct cfs_rq {
+@@ -596,6 +602,10 @@ struct cfs_rq {
  	 * It is set to NULL otherwise (i.e when none are currently running).
  	 */
  	struct sched_entity	*curr;
@@ -5829,7 +5860,7 @@ index 3b8e16c95162..3b48875c24da 100644
  	struct sched_entity	*next;
  
  #ifdef	CONFIG_SCHED_DEBUG
-@@ -1961,6 +1971,7 @@ DECLARE_PER_CPU(struct sched_domain_shared __rcu *, sd_llc_shared);
+@@ -1891,6 +1901,7 @@ DECLARE_PER_CPU(struct sched_domain_shared __rcu *, sd_llc_shared);
  DECLARE_PER_CPU(struct sched_domain __rcu *, sd_numa);
  DECLARE_PER_CPU(struct sched_domain __rcu *, sd_asym_packing);
  DECLARE_PER_CPU(struct sched_domain __rcu *, sd_asym_cpucapacity);
@@ -5837,3 +5868,19 @@ index 3b8e16c95162..3b48875c24da 100644
  extern struct static_key_false sched_asym_cpucapacity;
  extern struct static_key_false sched_cluster_active;
  
+diff --git a/kernel/time/Kconfig b/kernel/time/Kconfig
+index fc3b1a06c..e7f797187 100644
+--- a/kernel/time/Kconfig
++++ b/kernel/time/Kconfig
+@@ -124,7 +124,7 @@ config NO_HZ_FULL
+ 	bool "Full dynticks system (tickless)"
+ 	# NO_HZ_COMMON dependency
+ 	# We need at least one periodic CPU for timekeeping
+-	depends on SMP
++	depends on SMP && !ECHO_SCHED
+ 	depends on HAVE_CONTEXT_TRACKING_USER
+ 	# VIRT_CPU_ACCOUNTING_GEN dependency
+ 	depends on HAVE_VIRT_CPU_ACCOUNTING_GEN
+-- 
+2.44.0.325.g11c821f2f2
+
