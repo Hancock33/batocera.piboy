@@ -20,7 +20,8 @@ LIBRETRO_HATARIB_CONF_ENV += \
 	ZLIB_INCLUDE="$(STAGING_DIR)/usr/include" \
 	ZLIB_LIB="$(STAGING_DIR)/usr/lib" \
 	ZLIB_LINK="$(STAGING_DIR)/usr/lib/libz.so" \
-	CMAKE="$(HOST_DIR)/bin/cmake"
+	CMAKE="$(HOST_DIR)/bin/cmake" \
+	CC="$(TARGET_CC)"
 
 define LIBRETRO_HATARIB_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/makefile
