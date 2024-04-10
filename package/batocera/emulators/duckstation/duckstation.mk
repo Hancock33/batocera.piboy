@@ -45,10 +45,4 @@ define DUCKSTATION_INSTALL_TARGET_CMDS
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-define SOUNDTOUCH_OPTIMISE
-	$(SED) "s|-Ofast|$(TARGET_OPTIMIZATION)|g" $(@D)/dep/soundtouch/CMakeLists.txt
-endef
-
-DUCKSTATION_PRE_CONFIGURE_HOOKS = SOUNDTOUCH_OPTIMISE
-
 $(eval $(cmake-package))
