@@ -3614,11 +3614,11 @@ dxx-rebirth:
                         DXX-Rebirth contains engines for both games.
                         Each engine works for its respective game without the data from the other, so players who wish to purchase only one game may do so.
 
-                        Put your Descent data files in /userdata/roms/dxx-rebirth in it's own Descent directory.
-                        Then within that directory, /userdata/roms/dxx-rebirth/Descent add a blank file Descent.d1x.
+                        Put your Descent data files in /userdata/roms/ports/dxx-rebirth in it's own Descent directory.
+                        Then within that directory, /userdata/roms/ports/dxx-rebirth/Descent add a blank file Descent.d1x.
                         That file will launch the game and allow your to scrape game information via EmulationStation.
 
-                        Do the same for Descent 2 however using a blank file Descent2.d2x in /userdata/roms/dxx-rebirth/Descent2 accordingly.
+                        Do the same for Descent 2 however using a blank file Descent2.d2x in /userdata/roms/ports/dxx-rebirth/Descent2 accordingly.
 
                         A mouse & keyboard is required initially but you can configure a controller per user.
 
