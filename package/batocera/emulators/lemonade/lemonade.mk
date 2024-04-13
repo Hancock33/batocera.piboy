@@ -3,9 +3,9 @@
 # lemonade
 #
 ################################################################################
-# Version: Commits on Apr 13, 2024
-LEMONADE_VERSION = 4eee333752ea1c0c36e3c5dbc8eee97ea2c3759d
-LEMONADE_SITE = https://github.com/Lemonade-emu/Lemonade.git
+# Version: Commits on Apr 10, 2024
+LEMONADE_VERSION = e26ceabfd1d4f3d15063164f1a2d48cea5c138c0
+LEMONADE_SITE = https://github.com/PabloMK7/citra.git
 LEMONADE_SITE_METHOD=git
 LEMONADE_GIT_SUBMODULES=YES
 LEMONADE_LICENSE = GPLv2
@@ -32,7 +32,7 @@ LEMONADE_CONF_ENV += LDFLAGS=-lpthread
 
 define LEMONADE_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin
-	$(INSTALL) -D $(@D)/buildroot-build/bin/Release/lemonade-qt $(TARGET_DIR)/usr/bin/lemonade-qt
+	$(INSTALL) -D $(@D)/buildroot-build/bin/Release/citra-qt $(TARGET_DIR)/usr/bin/lemonade-qt
 endef
 
 define LEMONADE_EVMAP
