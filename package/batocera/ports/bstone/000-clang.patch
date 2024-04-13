@@ -1,0 +1,12 @@
+diff --git a/src/bstone_saved_game.cpp b/src/bstone_saved_game.cpp
+index 0ab1c14b..dce2b9f0 100644
+--- a/src/bstone_saved_game.cpp
++++ b/src/bstone_saved_game.cpp
+@@ -9,6 +9,7 @@ SPDX-License-Identifier: MIT
+ #include "bstone_saved_game.h"
+ 
+ #include <iterator>
++#include <algorithm>
+ 
+ #include "bstone_ascii.h"
+ #include "bstone_char_conv.h"
