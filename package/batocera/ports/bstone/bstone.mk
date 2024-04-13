@@ -11,6 +11,8 @@ BSTONE_DEPENDENCIES = sdl2 sdl2_mixer
 BSTONE_LICENSE = GPL-2.0
 BSTONE_SUPPORTS_IN_SOURCE_BUILD = NO
 
+BSTONE_CONF_OPTS += -DBSTONE_CI_GIT_HASH="$(shell echo $(BSTONE_VERSION) | cut -c 1-7)"
+
 define BSTONE_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/buildroot-build/src/bstone $(TARGET_DIR)/usr/bin
 	# evmap config
