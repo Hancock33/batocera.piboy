@@ -256,10 +256,10 @@ index 000000000000..84aa5106c8fa
 +struct drm_display_mode *drm_mode_low_dotclock_res(struct drm_device *dev,
 +				int hsize, int vsize, bool interlace);
 diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
-index 23b4e9a3361d..61374fcc974d 100644
+index 744cde9db246..88cbcf28cf7a 100644
 --- a/drivers/gpu/drm/drm_probe_helper.c
 +++ b/drivers/gpu/drm/drm_probe_helper.c
-@@ -448,21 +448,26 @@ static int __drm_helper_update_and_validate(struct drm_connector *connector,
+@@ -455,21 +455,26 @@ static int __drm_helper_update_and_validate(struct drm_connector *connector,
  		mode_flags |= DRM_MODE_FLAG_3D_MASK;
  
  	list_for_each_entry(mode, &connector->modes, head) {
@@ -286,7 +286,7 @@ index 23b4e9a3361d..61374fcc974d 100644
  		ret = drm_mode_validate_pipeline(mode, connector, ctx,
  						 &mode->status);
  		if (ret) {
-@@ -476,9 +481,11 @@ static int __drm_helper_update_and_validate(struct drm_connector *connector,
+@@ -483,9 +488,11 @@ static int __drm_helper_update_and_validate(struct drm_connector *connector,
  				return -EDEADLK;
  		}
  
@@ -298,7 +298,7 @@ index 23b4e9a3361d..61374fcc974d 100644
  	}
  
  	return 0;
-@@ -548,6 +555,7 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
+@@ -555,6 +562,7 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
  {
  	struct drm_device *dev = connector->dev;
  	struct drm_display_mode *mode;
@@ -306,7 +306,7 @@ index 23b4e9a3361d..61374fcc974d 100644
  	int count = 0, ret;
  	enum drm_connector_status old_status;
  	struct drm_modeset_acquire_ctx ctx;
-@@ -630,10 +638,13 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
+@@ -637,10 +645,13 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
  		goto exit;
  	}
  

@@ -1,8 +1,8 @@
 diff --git a/engine/Makefile b/engine/Makefile
-index acfeba7a..13098e5f 100644
+index 7f1792ae..fb608bec 100644
 --- a/engine/Makefile
 +++ b/engine/Makefile
-@@ -83,17 +83,17 @@ BUILDING        = 1
+@@ -69,17 +69,17 @@ BUILDING        = 1
  YASM 	        = yasm
  CC  	        = $(LNXDEV)/$(PREFIX)gcc
  OBJTYPE         = elf
@@ -23,7 +23,7 @@ index acfeba7a..13098e5f 100644
  BUILD_MMX       = 1
  endif
  ifeq ($(BUILD_LINUX), 0)
-@@ -116,12 +116,12 @@ BUILD_WEBM      = 1
+@@ -102,12 +102,12 @@ BUILD_WEBM      = 1
  BUILDING        = 1
  YASM 	          = nasm
  OBJTYPE         = elf
@@ -39,7 +39,7 @@ index acfeba7a..13098e5f 100644
  CFLAGS          += -DAMD64
  # Workaround for GCC 9
  CFLAGS          +=  -Wno-error=stringop-overflow
-@@ -139,10 +139,10 @@ BUILD_SDL_IO    = 1
+@@ -125,10 +125,10 @@ BUILD_SDL_IO    = 1
  BUILD_VORBIS    = 1
  BUILD_WEBM      = 1
  BUILDING        = 1
@@ -53,7 +53,7 @@ index acfeba7a..13098e5f 100644
  # Workaround for GCC 9
  CFLAGS          += -Wno-error=format-overflow -Wno-error=implicit-function-declaration -Wno-error=unused-variable -Wno-error=unused-label -Wno-error=stringop-overflow
  endif
-@@ -238,9 +238,9 @@ ifndef NO_STRIP
+@@ -189,9 +189,9 @@ ifndef NO_STRIP
  ifdef BUILD_WIN
  STRIP 	        = $(WINDEV)/$(PREFIX)strip$(EXTENSION) $(TARGET) -o $(TARGET_FINAL)
  endif
@@ -66,7 +66,7 @@ index acfeba7a..13098e5f 100644
  ifdef BUILD_DARWIN
  STRIP           = $(PREFIX)strip $(TARGET) -o $(TARGET_FINAL)
  endif
-@@ -499,7 +499,7 @@ OBJS            = $(MAIN)
+@@ -436,7 +436,7 @@ OBJS            = $(MAIN)
  #----------------------------------------------------------------------------------------------------
  
  CFLAGS 	       += $(addprefix -I", $(addsuffix ", $(INCS))) $(ARCHFLAGS) -D$(TARGET_PLATFORM)
@@ -75,12 +75,12 @@ index acfeba7a..13098e5f 100644
  
  
  ifndef BUILD_DARWIN
-@@ -621,7 +621,7 @@ endif
+@@ -558,7 +558,7 @@ endif
  
  
  ifdef BUILD_SDL
 -ifeq ($(findstring DGE, $(SDKPATH)), DGE)
 +ifeq ($(findstring DGE, $(STAGING_DIR)), DGE)
- LIBS           += -lSDL -lSDL_gfx -lts # Kratus (01-2023) Added a FPS limit option in the video settings
+ LIBS           += -lSDL -lts
  else
  COMMA		=,

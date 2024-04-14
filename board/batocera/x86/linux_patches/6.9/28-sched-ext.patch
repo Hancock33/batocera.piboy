@@ -324,10 +324,10 @@ index 000000000000..b01c4f22f73e
 +possible, they are subject to change without warning between kernel
 +versions.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index df3fdbf7d72e..1c5ff54cd414 100644
+index 6f84268f22d7..85b441823289 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -19638,6 +19638,8 @@ R:	Ben Segall <bsegall@google.com> (CONFIG_CFS_BANDWIDTH)
+@@ -19640,6 +19640,8 @@ R:	Ben Segall <bsegall@google.com> (CONFIG_CFS_BANDWIDTH)
  R:	Mel Gorman <mgorman@suse.de> (CONFIG_NUMA_BALANCING)
  R:	Daniel Bristot de Oliveira <bristot@redhat.com> (SCHED_DEADLINE)
  R:	Valentin Schneider <vschneid@redhat.com> (TOPOLOGY)
@@ -336,7 +336,7 @@ index df3fdbf7d72e..1c5ff54cd414 100644
  L:	linux-kernel@vger.kernel.org
  S:	Maintained
  T:	git git://git.kernel.org/pub/scm/linux/kernel/git/tip/tip.git sched/core
-@@ -19646,6 +19648,7 @@ F:	include/linux/sched.h
+@@ -19648,6 +19650,7 @@ F:	include/linux/sched.h
  F:	include/linux/wait.h
  F:	include/uapi/linux/sched.h
  F:	kernel/sched/
@@ -345,7 +345,7 @@ index df3fdbf7d72e..1c5ff54cd414 100644
  SCSI LIBSAS SUBSYSTEM
  R:	John Garry <john.g.garry@oracle.com>
 diff --git a/Makefile b/Makefile
-index 3bfc0b7a47cb..2b6a5cad094b 100644
+index b6c409d733eb..e789739bbf4e 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -1502,6 +1502,12 @@ ifneq ($(wildcard $(resolve_btfids_O)),)
@@ -482,7 +482,7 @@ index 3c2abbc587b4..dc07eb0d3290 100644
  #ifdef CONFIG_SCHED_CORE
 diff --git a/include/linux/sched/ext.h b/include/linux/sched/ext.h
 new file mode 100644
-index 000000000000..a2de731361d2
+index 000000000000..71f2bcda0473
 --- /dev/null
 +++ b/include/linux/sched/ext.h
 @@ -0,0 +1,765 @@
@@ -577,15 +577,9 @@ index 000000000000..a2de731361d2
 +/* sched_ext_ops.flags */
 +enum scx_ops_flags {
 +	/*
-+	 * If set, only tasks with policy set to SCHED_EXT are attached to
-+	 * sched_ext. If clear, SCHED_NORMAL tasks are also included.
-+	 */
-+	SCX_OPS_SWITCH_PARTIAL	= 1LLU << 0,
-+
-+	/*
 +	 * Keep built-in idle tracking even if ops.update_idle() is implemented.
 +	 */
-+	SCX_OPS_KEEP_BUILTIN_IDLE = 1LLU << 1,
++	SCX_OPS_KEEP_BUILTIN_IDLE = 1LLU << 0,
 +
 +	/*
 +	 * By default, if there are no other task to run on the CPU, ext core
@@ -593,7 +587,7 @@ index 000000000000..a2de731361d2
 +	 * flag is specified, such tasks are passed to ops.enqueue() with
 +	 * %SCX_ENQ_LAST. See the comment above %SCX_ENQ_LAST for more info.
 +	 */
-+	SCX_OPS_ENQ_LAST	= 1LLU << 2,
++	SCX_OPS_ENQ_LAST	= 1LLU << 1,
 +
 +	/*
 +	 * An exiting task may schedule after PF_EXITING is set. In such cases,
@@ -606,7 +600,13 @@ index 000000000000..a2de731361d2
 +	 * depend on pid lookups and wants to handle these tasks directly, the
 +	 * following flag can be used.
 +	 */
-+	SCX_OPS_ENQ_EXITING	= 1LLU << 3,
++	SCX_OPS_ENQ_EXITING	= 1LLU << 2,
++
++	/*
++	 * If set, only tasks with policy set to SCHED_EXT are attached to
++	 * sched_ext. If clear, SCHED_NORMAL tasks are also included.
++	 */
++	SCX_OPS_SWITCH_PARTIAL	= 1LLU << 3,
 +
 +	/*
 +	 * CPU cgroup knob enable flags
@@ -9321,7 +9321,7 @@ index 000000000000..b739e2bf7f08
 +#endif	/* __SCX_COMPAT_BPF_H */
 diff --git a/tools/sched_ext/include/scx/compat.h b/tools/sched_ext/include/scx/compat.h
 new file mode 100644
-index 000000000000..a9f0c2b955cd
+index 000000000000..fda4111b07e2
 --- /dev/null
 +++ b/tools/sched_ext/include/scx/compat.h
 @@ -0,0 +1,143 @@
@@ -9355,7 +9355,7 @@ index 000000000000..a9f0c2b955cd
 +
 +	__COMPAT_load_vmlinux_btf();
 +
-+	tid = btf__find_by_name_kind(__COMPAT_vmlinux_btf, type, BTF_KIND_ENUM);
++	tid = btf__find_by_name(__COMPAT_vmlinux_btf, type);
 +	if (tid < 0)
 +		return false;
 +

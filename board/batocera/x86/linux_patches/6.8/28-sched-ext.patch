@@ -332,7 +332,7 @@ index 91af49091a3c..839a6772eace 100644
  SCSI LIBSAS SUBSYSTEM
  R:	John Garry <john.g.garry@oracle.com>
 diff --git a/Makefile b/Makefile
-index 9b2a38687f07..3e750f1e7d1d 100644
+index 01617c509e05..0a642c2e70f1 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -1504,6 +1504,12 @@ ifneq ($(wildcard $(resolve_btfids_O)),)

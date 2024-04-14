@@ -3,8 +3,8 @@
 # zmusic
 #
 ################################################################################
-# Version: Commits on Feb 29, 2023
-ZMUSIC_VERSION = 7476a189755d2665b24a58182640752b82b3a66d
+# Version: Commits on Apr 03, 2024
+ZMUSIC_VERSION = b31b43efd0e92c8bff5501e95b31d9439642b711
 ZMUSIC_SITE = $(call github,ZDoom,ZMusic,$(ZMUSIC_VERSION))
 ZMUSIC_LICENSE = GPLv3
 ZMUSIC_SUPPORTS_IN_SOURCE_BUILD = NO

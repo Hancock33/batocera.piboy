@@ -1,8 +1,8 @@
 diff --git a/include/linux/sched.h b/include/linux/sched.h
-index 505095b23587..62e5d8160101 100644
+index dc07eb0d3290..6cc2b2035eb9 100644
 --- a/include/linux/sched.h
 +++ b/include/linux/sched.h
-@@ -564,6 +564,16 @@ struct sched_entity {
+@@ -549,6 +549,16 @@ struct sched_entity {
  	u64				sum_exec_runtime;
  	u64				prev_sum_exec_runtime;
  	u64				vruntime;
@@ -18,12 +18,12 @@ index 505095b23587..62e5d8160101 100644
 +#endif // CONFIG_SCHED_BORE
  	s64				vlag;
  	u64				slice;
- #ifdef CONFIG_ECHO_SCHED
+ 
 diff --git a/init/Kconfig b/init/Kconfig
-index 24677055638f..6e739d87aa9b 100644
+index 0d9f935c32bd..9ac1c38fb709 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
-@@ -1311,6 +1311,23 @@ config CHECKPOINT_RESTORE
+@@ -1304,6 +1304,23 @@ config CHECKPOINT_RESTORE
  
  	  If unsure, say N here.
  
@@ -46,9 +46,9 @@ index 24677055638f..6e739d87aa9b 100644
 +
  config SCHED_AUTOGROUP
  	bool "Automatic process group scheduling"
- 	depends on !ECHO_SCHED
+ 	select CGROUPS
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 45aed6f5d56e..bc6f8eede3f7 100644
+index e8b736cee130..da73783f92c5 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -4547,6 +4547,139 @@ int wake_up_state(struct task_struct *p, unsigned int state)
@@ -200,8 +200,8 @@ index 45aed6f5d56e..bc6f8eede3f7 100644
 +#endif // CONFIG_SCHED_BORE
  	p->se.vlag			= 0;
  	p->se.slice			= sysctl_sched_base_slice;
- 
-@@ -4932,6 +5068,9 @@ void sched_cancel_fork(struct task_struct *p)
+ 	INIT_LIST_HEAD(&p->se.group_node);
+@@ -4917,6 +5053,9 @@ void sched_cancel_fork(struct task_struct *p)
  
  void sched_post_fork(struct task_struct *p)
  {
@@ -211,7 +211,7 @@ index 45aed6f5d56e..bc6f8eede3f7 100644
  	uclamp_post_fork(p);
  	scx_post_fork(p);
  }
-@@ -10041,6 +10180,11 @@ void __init sched_init(void)
+@@ -10026,6 +10165,11 @@ void __init sched_init(void)
  	BUG_ON(!sched_class_above(&ext_sched_class, &idle_sched_class));
  #endif
  
@@ -222,9 +222,9 @@ index 45aed6f5d56e..bc6f8eede3f7 100644
 +
  	wait_bit_init();
  
- #ifdef CONFIG_ECHO_SCHED
+ #ifdef CONFIG_FAIR_GROUP_SCHED
 diff --git a/kernel/sched/debug.c b/kernel/sched/debug.c
-index 2929b1bc540d..a31e7a715f98 100644
+index 6f306e1c9c3e..286e200cbaf7 100644
 --- a/kernel/sched/debug.c
 +++ b/kernel/sched/debug.c
 @@ -167,7 +167,52 @@ static const struct file_operations sched_feat_fops = {
@@ -320,7 +320,7 @@ index 2929b1bc540d..a31e7a715f98 100644
  #ifdef CONFIG_NUMA_BALANCING
  	SEQ_printf(m, " %d %d", task_node(p), task_numa_group_id(p));
  #endif
-@@ -1073,6 +1128,9 @@ void proc_sched_show_task(struct task_struct *p, struct pid_namespace *ns,
+@@ -1068,6 +1123,9 @@ void proc_sched_show_task(struct task_struct *p, struct pid_namespace *ns,
  
  	P(se.load.weight);
  #ifdef CONFIG_SMP
@@ -704,10 +704,10 @@ index 143f55df890b..3f0fe409f5ee 100644
  /*
   * Prefer to schedule the task we woke last (assuming it failed
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 3b48875c24da..0c89f28a50d3 100644
+index 3b8e16c95162..8d5b0b781a08 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
-@@ -2046,7 +2046,11 @@ static inline void dirty_sched_domain_sysctl(int cpu)
+@@ -2035,7 +2035,11 @@ static inline void dirty_sched_domain_sysctl(int cpu)
  }
  #endif
  
@@ -719,7 +719,7 @@ index 3b48875c24da..0c89f28a50d3 100644
  
  static inline const struct cpumask *task_user_cpus(struct task_struct *p)
  {
-@@ -2647,6 +2651,9 @@ extern const_debug unsigned int sysctl_sched_nr_migrate;
+@@ -2636,6 +2640,9 @@ extern const_debug unsigned int sysctl_sched_nr_migrate;
  extern const_debug unsigned int sysctl_sched_migration_cost;
  
  extern unsigned int sysctl_sched_base_slice;

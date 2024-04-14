@@ -1040,7 +1040,7 @@ index 000000000000..852faad1fc1d
 +#endif /* CONFIG_SMP */
 diff --git a/kernel/sched/bs.c b/kernel/sched/bs.c
 new file mode 100644
-index 000000000000..7760327e5194
+index 000000000000..6b3d51b4366c
 --- /dev/null
 +++ b/kernel/sched/bs.c
 @@ -0,0 +1,888 @@
@@ -1060,8 +1060,8 @@ index 000000000000..7760327e5194
 +#include "sched.h"
 +#include "pelt.h"
 +
-+unsigned int sysctl_sched_base_slice	= 7000ULL;
-+unsigned int bs_shared_quota		= 105000ULL; // 105us
++unsigned int sysctl_sched_base_slice	= 4200ULL;
++unsigned int bs_shared_quota		= 35000ULL; // 35us
 +u32 alpha				= 500U;
 +
 +struct lb_env {
@@ -1933,7 +1933,7 @@ index 000000000000..7760327e5194
 +
 +}
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index e8b736cee130..45aed6f5d56e 100644
+index e8b736cee130..43caf7f9a588 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -4565,6 +4565,12 @@ static void __sched_fork(unsigned long clone_flags, struct task_struct *p)
@@ -1970,7 +1970,7 @@ index e8b736cee130..45aed6f5d56e 100644
  	wait_bit_init();
  
 +#ifdef CONFIG_ECHO_SCHED
-+	printk(KERN_INFO "ECHO CPU scheduler v6.7 by Hamad Al Marri.");
++	printk(KERN_INFO "ECHO CPU scheduler v6.8 by Hamad Al Marri.");
 +#endif
 +
  #ifdef CONFIG_FAIR_GROUP_SCHED
@@ -5837,3 +5837,16 @@ index 3b8e16c95162..3b48875c24da 100644
  extern struct static_key_false sched_asym_cpucapacity;
  extern struct static_key_false sched_cluster_active;
  
+diff --git a/kernel/time/Kconfig b/kernel/time/Kconfig
+index fc3b1a06c981..e7f7971876e3 100644
+--- a/kernel/time/Kconfig
++++ b/kernel/time/Kconfig
+@@ -124,7 +124,7 @@ config NO_HZ_FULL
+ 	bool "Full dynticks system (tickless)"
+ 	# NO_HZ_COMMON dependency
+ 	# We need at least one periodic CPU for timekeeping
+-	depends on SMP
++	depends on SMP && !ECHO_SCHED
+ 	depends on HAVE_CONTEXT_TRACKING_USER
+ 	# VIRT_CPU_ACCOUNTING_GEN dependency
+ 	depends on HAVE_VIRT_CPU_ACCOUNTING_GEN

@@ -1,8 +1,8 @@
 diff --git a/src/3d_main.cpp b/src/3d_main.cpp
-index eba632e3..52cb3b88 100644
+index cdf0caf5..9287ef02 100644
 --- a/src/3d_main.cpp
 +++ b/src/3d_main.cpp
-@@ -10727,7 +10727,7 @@ const std::string& get_profile_dir()
+@@ -10700,7 +10700,7 @@ const std::string& get_profile_dir()
  {
  	static std::string profile_dir;
  	static auto is_initialized = false;
@@ -11,7 +11,7 @@ index eba632e3..52cb3b88 100644
  	if (!is_initialized)
  	{
  		is_initialized = true;
-@@ -10760,8 +10760,9 @@ const std::string& get_screenshot_dir()
+@@ -10740,8 +10740,9 @@ const std::string& get_screenshot_dir()
  {
  	static auto is_initialized = false;
  	static auto screenshot_dir = std::string{};
@@ -22,7 +22,7 @@ index eba632e3..52cb3b88 100644
  	{
  		is_initialized = true;
  
-@@ -10772,7 +10773,7 @@ const std::string& get_screenshot_dir()
+@@ -10752,7 +10753,7 @@ const std::string& get_screenshot_dir()
  		{
  			screenshot_dir = get_profile_dir();
  		}

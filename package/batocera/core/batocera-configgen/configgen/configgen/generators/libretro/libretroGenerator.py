@@ -338,6 +338,16 @@ class LibretroGenerator(Generator):
             directory_path = '/'.join(rom.split('/')[:-1])
             rom = f"{directory_path}/{first_line}"
 
+        if system.name == 'n64':
+            if "squashfs" in rom:
+                romsInDir = glob.glob(glob.escape(rom) + '/*')
+                rom = romsInDir[0]
+
+        if system.name == 'n64dd':
+            if "squashfs" in rom:
+                romsInDir = glob.glob(glob.escape(rom) + '/*')
+                rom = romsInDir[0]
+
         # Use command line instead of ROM file for MAME variants
         if system.config['core'] in [ 'mame', 'mess', 'mamevirtual', 'same_cdi' ]:
             dontAppendROM = True

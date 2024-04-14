@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 763e1e9a0..2a292f52d 100644
+index 0ac374e55..349ba69c9 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -52,6 +52,8 @@ list( APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake )
@@ -11,18 +11,18 @@ index 763e1e9a0..2a292f52d 100644
  option( FORCE_CROSSCOMPILE "Turn on cross compiling." NO )
  if( FORCE_CROSSCOMPILE )
  	set( CMAKE_CROSSCOMPILING TRUE )
-@@ -229,6 +231,10 @@ if (NOT WebP_FOUND)
- 	add_library(WebP::webpdemux ALIAS PkgConfig::libwebpdemux)
- 	add_library(WebP::libwebpmux ALIAS PkgConfig::libwebpmux)
+@@ -223,6 +225,10 @@ target_architecture(TARGET_ARCHITECTURE)
+ if( ${TARGET_ARCHITECTURE} MATCHES "x86_64" )
+ 	set( HAVE_VM_JIT ON )
  endif()
 +if(NOT TOOLS_ONLY)
 +	find_package( JPEG )
 +	find_package( VPX )
 +endif()
  
- include( TargetArch )
- 
-@@ -350,17 +356,6 @@ option(FORCE_INTERNAL_BZIP2 "Use internal bzip2")
+ option (HAVE_VULKAN "Enable Vulkan support" ON)
+ option (HAVE_GLES2 "Enable GLES2 support" ON)
+@@ -336,18 +342,8 @@ option(FORCE_INTERNAL_BZIP2 "Use internal bzip2")
  option(FORCE_INTERNAL_ASMJIT "Use internal asmjit" ON)
  mark_as_advanced( FORCE_INTERNAL_ASMJIT )
  
@@ -31,7 +31,8 @@ index 763e1e9a0..2a292f52d 100644
 -endif()
 -
 -add_subdirectory( libraries/ZWidget )
--
+ add_subdirectory( libraries/webp )
+ 
 -add_subdirectory( libraries/discordrpc EXCLUDE_FROM_ALL )
 -set( DRPC_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/discordrpc/include" )
 -set( DRPC_LIBRARIES discord-rpc )
@@ -40,7 +41,7 @@ index 763e1e9a0..2a292f52d 100644
  if( HAVE_VM_JIT AND UNIX )
  	check_symbol_exists( "backtrace" "execinfo.h" HAVE_BACKTRACE )
  	if( NOT HAVE_BACKTRACE )
-@@ -400,6 +395,59 @@ endif()
+@@ -387,6 +383,59 @@ endif()
  
  set( LZMA_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/lzma/C" )
  
@@ -100,7 +101,7 @@ index 763e1e9a0..2a292f52d 100644
  if( NOT CMAKE_CROSSCOMPILING )
  	if( NOT CROSS_EXPORTS )
  		set( CROSS_EXPORTS "" )
-@@ -407,26 +455,30 @@ if( NOT CMAKE_CROSSCOMPILING )
+@@ -394,26 +443,30 @@ if( NOT CMAKE_CROSSCOMPILING )
  endif()
  
  # Install the entire docs directory in the distributed zip package

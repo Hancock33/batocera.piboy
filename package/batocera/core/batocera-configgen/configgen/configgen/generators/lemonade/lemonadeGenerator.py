@@ -17,7 +17,7 @@ class LemonadeGenerator(Generator):
 
     # Main entry of the module
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        LemonadeGenerator.writeLEMONADEConfig(batoceraFiles.CONF + "/lemonade-emu/qt-config.ini", system, playersControllers)
+        LemonadeGenerator.writeLEMONADEConfig(batoceraFiles.CONF + "/citra-emu/qt-config.ini", system, playersControllers)
 
         if os.path.exists('/usr/bin/lemonade-qt'):
             commandArray = ['/usr/bin/lemonade-qt', rom]
