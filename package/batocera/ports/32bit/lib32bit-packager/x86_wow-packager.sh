@@ -6,15 +6,12 @@ mkdir -p $DEST_DIR/lib
 mkdir -p $DEST_DIR/usr/bin32
 mkdir -p $DEST_DIR/usr/share/vulkan/icd.d
 cp -a ${TARGET_DIR}/usr/bin/gst-*                        $DEST_DIR/usr/bin32
-#cp -a ${TARGET_DIR}/usr/bin/sorr                        $DEST_DIR/usr/bin32
 cp -a ${TARGET_DIR}/usr/share/gst-plugins-base           $DEST_DIR/usr/share
 cp -a ${TARGET_DIR}/usr/share/gstreamer-*                $DEST_DIR/usr/share
 cp -a ${TARGET_DIR}/usr/wine                             $DEST_DIR/usr
 cp -a ${TARGET_DIR}/usr/lib                              $DEST_DIR/usr/lib32
 cp -a ${TARGET_DIR}/lib/*                                $DEST_DIR/usr/lib32
 ln -sf libblkid.so.1                                     $DEST_DIR/usr/lib32/libblkid.so
-ln -sf libmount.so.1                                     $DEST_DIR/usr/lib32/libmount.so
-ln -sf libsmartcols.so.1                                 $DEST_DIR/usr/lib32/libsmartcols.so
 ln -sf libudev.so.1                                      $DEST_DIR/usr/lib32/libudev.so
 ln -sf libuuid.so.1                                      $DEST_DIR/usr/lib32/libuuid.so
 ln -sf /usr/lib32/pulseaudio/libpulsecommon-17.0.so      $DEST_DIR/usr/lib32/libpulsecommon-17.0.so
