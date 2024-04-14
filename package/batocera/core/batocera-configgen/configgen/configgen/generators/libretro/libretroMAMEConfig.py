@@ -43,7 +43,7 @@ retroPad = {
     "start":            "START"
 }
 
-def generateMAMEConfigs(playersControllers, system, rom):
+def generateMAMEConfigs(playersControllers, system, rom, guns):
     # Generate command line for MAME/MESS/MAMEVirtual
     commandLine = []
     romBasename = os.path.basename(rom)
@@ -417,9 +417,9 @@ def generateMAMEConfigs(playersControllers, system, rom):
 
     # Call Controller Config
     if messMode == -1:
-        generateMAMEPadConfig(cfgPath, playersControllers, system, "", romBasename, specialController)
+        generateMAMEPadConfig(cfgPath, playersControllers, system, "", romBasename, specialController, guns)
     else:
-        generateMAMEPadConfig(cfgPath, playersControllers, system, messModel, romBasename, specialController)
+        generateMAMEPadConfig(cfgPath, playersControllers, system, messModel, romBasename, specialController, guns)
 
 def prepSoftwareList(subdirSoftList, softList, softDir, hashDir, romDirname):
     if not os.path.exists(softDir):
@@ -507,7 +507,7 @@ def getMameControlScheme(system, romBasename):
 
     return "default"
 
-def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romBasename, specialController):
+def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romBasename, specialController, guns):
     # config file
     config = minidom.Document()
     configFile = cfgPath + "default.cfg"
@@ -661,6 +661,10 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
             xml_kbenable_alt.setAttribute("tag", ":")
             xml_kbenable_alt.setAttribute("enabled", "1")
             xml_input_alt.appendChild(xml_kbenable_alt)
+
+    # Don't configure pads if guns are present and "use_guns" is on
+    if system.isOptSet('use_guns') and system.getOptBoolean('use_guns') and len(guns) > 0:
+        return
 
     # Fill in controls on cfg files
     nplayer = 1

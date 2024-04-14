@@ -6,6 +6,7 @@ import configparser
 import os
 from . import mupenConfig
 from . import mupenControllers
+import glob
 
 class MupenGenerator(Generator):
 
@@ -37,6 +38,10 @@ class MupenGenerator(Generator):
         # state_slot option
         if system.isOptSet('state_filename'):
             commandArray.extend(["--savestate", system.config['state_filename']])
+
+        if "squashfs" in rom:
+            romsInDir = glob.glob(glob.escape(rom) + '/*')
+            rom = romsInDir[0]
 
         commandArray.append(rom)
 

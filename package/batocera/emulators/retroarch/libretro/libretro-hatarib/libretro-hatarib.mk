@@ -3,8 +3,8 @@
 # libretro-hatarib
 #
 ################################################################################
-# Version: Commits on Apr 07, 2024
-LIBRETRO_HATARIB_VERSION = c15ab8ce4eeefed9d4ed515c312f6dc61084cea4
+# Version: Commits on Apr 14, 2024
+LIBRETRO_HATARIB_VERSION = d1b7cbd96feba9db55db63df976dbb0beda88a7c
 LIBRETRO_HATARIB_SITE = https://github.com/bbbradsmith/hatariB
 LIBRETRO_HATARIB_SITE_METHOD=git
 LIBRETRO_HATARIB_LICENSE = GPLv2
@@ -20,7 +20,8 @@ LIBRETRO_HATARIB_CONF_ENV += \
 	ZLIB_INCLUDE="$(STAGING_DIR)/usr/include" \
 	ZLIB_LIB="$(STAGING_DIR)/usr/lib" \
 	ZLIB_LINK="$(STAGING_DIR)/usr/lib/libz.so" \
-	CMAKE="$(HOST_DIR)/bin/cmake"
+	CMAKE="$(HOST_DIR)/bin/cmake" \
+	CC="$(TARGET_CC)"
 
 define LIBRETRO_HATARIB_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/makefile
@@ -31,8 +32,8 @@ endef
 
 define LIBRETRO_HATARIB_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	$(INSTALL) -D $(@D)/build/hatarib.so 	$(TARGET_DIR)/usr/lib/libretro/hatarib_libretro.so
-	cp -a $(@D)/info/hatarib.info 			$(TARGET_DIR)/usr/share/libretro/info/hatarib_libretro.info
+	$(INSTALL) -D $(@D)/build/hatarib.so	$(TARGET_DIR)/usr/lib/libretro/hatarib_libretro.so
+	cp -a $(@D)/info/hatarib.info			$(TARGET_DIR)/usr/share/libretro/info/hatarib_libretro.info
 endef
 
 $(eval $(generic-package))

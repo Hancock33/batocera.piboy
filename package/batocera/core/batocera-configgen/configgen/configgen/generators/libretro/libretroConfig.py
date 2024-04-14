@@ -57,15 +57,24 @@ systemNetplayModes = {'host', 'client', 'spectator'}
 coreForceSlangShaders = { 'mupen64plus-next' }
 
 def connected_to_internet():
-    # same call as in es
-    cmd = ["timeout", "1", "ping", "-c", "1", "-t", "255", "8.8.8.8"]
+    # Try 1.1.1.1 first
+    cmd = ["timeout", "1", "ping", "-c", "1", "-t", "255", "1.1.1.1"]
     process = subprocess.Popen(cmd)
     process.wait()
     if process.returncode == 0:
-        eslog.error(f"Connected to the internet")
+        eslog.debug("Connected to the internet")
         return True
-    eslog.error(f"Not connected to the internet")
-    return False
+    else:
+        # Try 8.8.8.8 if 1.1.1.1 fails
+        cmd = ["timeout", "1", "ping", "-c", "1", "-t", "255", "8.8.8.8"]
+        process = subprocess.Popen(cmd)
+        process.wait()
+        if process.returncode == 0:
+            eslog.debug("Connected to the internet")
+            return True
+        else:
+            eslog.error("Not connected to the internet")
+            return False
 
 def writeLibretroConfig(generator, retroconfig, system, controllers, metadata, guns, wheels, rom, bezel, shaderBezel, gameResolution, gfxBackend):
     writeLibretroConfigToFile(retroconfig, createLibretroConfig(generator, system, controllers, metadata, guns, wheels, rom, bezel, shaderBezel, gameResolution, gfxBackend))
@@ -94,7 +103,7 @@ def createLibretroConfig(generator, system, controllers, metadata, guns, wheels,
         libretroOptions.generateHatariConf(batoceraFiles.hatariConf)
 
     if system.config['core'] in [ 'mame', 'mess', 'mamevirtual', 'same_cdi' ]:
-        libretroMAMEConfig.generateMAMEConfigs(controllers, system, rom)
+        libretroMAMEConfig.generateMAMEConfigs(controllers, system, rom, guns)
 
     retroarchConfig = dict()
     systemConfig = system.config
@@ -910,12 +919,10 @@ def createLibretroConfig(generator, system, controllers, metadata, guns, wheels,
         retroarchConfig['ai_service_enable'] = 'false'
 
     # Guns
-    # clear
+    # clear premapping for each player gun to make new one. Useful for libretro-mame and flycast-dreamcast
     if system.isOptSet('use_guns') and system.getOptBoolean('use_guns'):
-        if len(guns) >= 1:
-            clearGunInputsForPlayer(1, retroarchConfig)
-        if len(guns) >= 2:
-            clearGunInputsForPlayer(2, retroarchConfig)
+        for g in range(0, len(guns)):
+            clearGunInputsForPlayer(g+1, retroarchConfig)
 
     gun_mapping = {
         "bsnes"         : { "default" : { "device": 260,          "p2": 0,
@@ -936,7 +943,7 @@ def createLibretroConfig(generator, system, controllers, metadata, guns, wheels,
                             "segacd" : { "device": 516, "p2": 0,
                                          "gameDependant": [ { "key": "type", "value": "justifier", "mapkey": "device", "mapvalue": "772" } ]} },
         "fbneo"         : { "default" : { "device":   4, "p1": 0, "p2": 1 } },
-        "mame"          : { "default" : { "p1": 0, "p2": 1 } },
+        "mame"          : { "default" : { "p1": 0, "p2": 1, "p3": 2 } },
         "mame078plus"   : { "default" : { "device":   4, "p1": 0, "p2": 1 } },
         "mame0139"      : { "default" : { "device":   4, "p1": 0, "p2": 1 } },
         "flycast"       : { "default" : { "device":   4, "p1": 0, "p2": 1 } },
@@ -1075,8 +1082,8 @@ def configureGunInputsForPlayer(n, gun, controllers, retroarchConfig, core, meta
 
     if core == "mame":
         retroarchConfig['input_player{}_gun_offscreen_shot_mbtn'.format(n)] = ''
-        retroarchConfig['input_player{}_a_mbtn'                 .format(n)] = 1
-        retroarchConfig['input_player{}_b_mbtn'                 .format(n)] = 2
+        retroarchConfig['input_player{}_gun_aux_a_mbtn'         .format(n)] = ''
+        retroarchConfig['input_player{}_gun_aux_a_mbtn'         .format(n)] = 2
         retroarchConfig['input_player{}_start_mbtn'             .format(n)] = 3
         retroarchConfig['input_player{}_select_mbtn'            .format(n)] = 4
 
