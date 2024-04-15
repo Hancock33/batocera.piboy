@@ -44,7 +44,7 @@ index dc07eb0d3290..505095b23587 100644
  
  #ifdef CONFIG_FAIR_GROUP_SCHED
 diff --git a/init/Kconfig b/init/Kconfig
-index 0d9f935c32bd..24677055638f 100644
+index b8fde3e53a77..763bf352bcee 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -130,6 +130,12 @@ config THREAD_INFO_IN_TASK
@@ -59,8 +59,8 @@ index 0d9f935c32bd..24677055638f 100644
 +
  menu "General setup"
  
- config CACHY
-@@ -1012,11 +1018,12 @@ menuconfig CGROUP_SCHED
+ config BROKEN
+@@ -1008,11 +1014,12 @@ menuconfig CGROUP_SCHED
  if CGROUP_SCHED
  config FAIR_GROUP_SCHED
  	bool "Group scheduling for SCHED_OTHER"
@@ -75,7 +75,7 @@ index 0d9f935c32bd..24677055638f 100644
  	depends on FAIR_GROUP_SCHED
  	default n
  	help
-@@ -1306,9 +1313,11 @@ config CHECKPOINT_RESTORE
+@@ -1286,9 +1293,11 @@ config CHECKPOINT_RESTORE
  
  config SCHED_AUTOGROUP
  	bool "Automatic process group scheduling"
@@ -88,7 +88,7 @@ index 0d9f935c32bd..24677055638f 100644
  	  This option optimizes the scheduler for common desktop workloads by
  	  automatically creating and populating task groups.  This separation
 diff --git a/kernel/Kconfig.hz b/kernel/Kconfig.hz
-index 0f78364efd4f..fea81b1de644 100644
+index 38ef6d06888e..80861d9044e3 100644
 --- a/kernel/Kconfig.hz
 +++ b/kernel/Kconfig.hz
 @@ -5,7 +5,7 @@
@@ -100,9 +100,9 @@ index 0f78364efd4f..fea81b1de644 100644
  	help
  	 Allows the configuration of the timer frequency. It is customary
  	 to have the timer interrupt run at 1000 Hz but 100 Hz may be more
-@@ -61,6 +61,13 @@ choice
- 	 on desktops with good smoothness without increasing CPU power
- 	 consumption and sacrificing the battery life on laptops.
+@@ -40,6 +40,13 @@ choice
+ 	 on SMP and NUMA systems and exactly dividing by both PAL and
+ 	 NTSC frame rates for video and multimedia work.
  
 +	config HZ_625
 +		bool "625 HZ"
@@ -114,14 +114,14 @@ index 0f78364efd4f..fea81b1de644 100644
  	config HZ_1000
  		bool "1000 HZ"
  	help
-@@ -76,6 +83,7 @@ config HZ
+@@ -53,6 +60,7 @@ config HZ
+ 	default 100 if HZ_100
+ 	default 250 if HZ_250
  	default 300 if HZ_300
- 	default 500 if HZ_500
- 	default 600 if HZ_600
 +	default 625 if HZ_625
- 	default 750 if HZ_750
  	default 1000 if HZ_1000
  
+ config SCHED_HRTICK
 diff --git a/kernel/Kconfig.preempt b/kernel/Kconfig.preempt
 index bae49b743834..bc41749fea13 100644
 --- a/kernel/Kconfig.preempt
@@ -1933,7 +1933,7 @@ index 000000000000..6b3d51b4366c
 +
 +}
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index e8b736cee130..43caf7f9a588 100644
+index ae7039676d31..1edc561b99d0 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -4565,6 +4565,12 @@ static void __sched_fork(unsigned long clone_flags, struct task_struct *p)
@@ -1965,7 +1965,7 @@ index e8b736cee130..43caf7f9a588 100644
  #ifdef CONFIG_SCHEDSTATS
  	{
  		.procname       = "sched_schedstats",
-@@ -10028,6 +10043,10 @@ void __init sched_init(void)
+@@ -10047,6 +10062,10 @@ void __init sched_init(void)
  
  	wait_bit_init();
  
@@ -5793,7 +5793,7 @@ index 000000000000..f00aeacb8f23
 +}
 +#endif /* CONFIG_NO_HZ_COMMON */
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 3b8e16c95162..3b48875c24da 100644
+index d31db189977a..3a1b2def372f 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -109,6 +109,10 @@ extern int sysctl_sched_rt_period;
@@ -5829,7 +5829,7 @@ index 3b8e16c95162..3b48875c24da 100644
  	struct sched_entity	*next;
  
  #ifdef	CONFIG_SCHED_DEBUG
-@@ -1961,6 +1971,7 @@ DECLARE_PER_CPU(struct sched_domain_shared __rcu *, sd_llc_shared);
+@@ -1962,6 +1972,7 @@ DECLARE_PER_CPU(struct sched_domain_shared __rcu *, sd_llc_shared);
  DECLARE_PER_CPU(struct sched_domain __rcu *, sd_numa);
  DECLARE_PER_CPU(struct sched_domain __rcu *, sd_asym_packing);
  DECLARE_PER_CPU(struct sched_domain __rcu *, sd_asym_cpucapacity);
