@@ -2797,8 +2797,8 @@ tg-cd:
   hardware:             portable
   extensions:           [3ds, 3dsx, cxi, axf, elf]
   emulators:
-    lemonade:
-      lemonade:         { requireAnyOf: [BR2_PACKAGE_LEMONADE]       }
+    citra:
+      citra:            { requireAnyOf: [BR2_PACKAGE_CITRA]          }
     libretro:
       citra:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_CITRA] }
     panda3ds:
