@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Batocera_options\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-04-04 18:30+0200\n"
+"PO-Revision-Date: 2024-04-12 16:18+0200\n"
 "Last-Translator: Svein Jakobsen <svein.jakobsen@gmail.com>\n"
 "Language-Team: nb_NO\n"
 "Language: nb\n"
@@ -1150,7 +1150,7 @@ msgctxt "game_options"
 msgid "For use with HD texture packs."
 msgstr "For bruk med HD-teksturpakker."
 
-#. TRANSLATION: libretro/mesen, lemonade, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: libretro/mesen, citra, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "LOAD CUSTOM TEXTURES"
 msgstr "LAST INN EGENDEFINERTE TEKSTURER"
@@ -1247,7 +1247,7 @@ msgctxt "game_options"
 msgid "Arrange the dual screen layout."
 msgstr "Ordne det doble skjermoppsettet."
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, lemonade, melonds, panda3ds, ...
+#. TRANSLATION: libretro/desmume, libretro/melonds, citra, melonds, panda3ds, ...
 msgctxt "game_options"
 msgid "SCREEN LAYOUT"
 msgstr "SKJERMLAYOUT"
@@ -1452,7 +1452,7 @@ msgctxt "game_options"
 msgid "RENDERER MODE"
 msgstr "GJENGIVELSESMODUS"
 
-#. TRANSLATION: libretro/melondsds, lemonade, duckstation, melonds, panda3ds, ...
+#. TRANSLATION: libretro/melondsds, citra, duckstation, melonds, panda3ds, ...
 msgctxt "game_options"
 msgid "Software"
 msgstr "Translate me"
@@ -5510,7 +5510,7 @@ msgstr "100 % (innfødt)"
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Small performance increase (may drop frames)."
-msgstr "Liten ytelsesøkning (kan slippe frames)."
+msgstr "Liten ytelsesøkning (kan hoppe over bilder)."
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -8356,7 +8356,7 @@ msgctxt "game_options"
 msgid "DRIVERS"
 msgstr ""
 
-#. TRANSLATION: libretro, cemu, lemonade, daphne, dolphin, ...
+#. TRANSLATION: libretro, cemu, citra, daphne, dolphin, ...
 msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "GRAFIKK-API"
@@ -8376,7 +8376,7 @@ msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
 
-#. TRANSLATION: libretro, lemonade, daphne, dolphin, duckstation, ...
+#. TRANSLATION: libretro, citra, daphne, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
@@ -8660,7 +8660,7 @@ msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
 msgstr "MODUS FOR HØY OPPLØSNING"
 
-#. TRANSLATION: cemu, lemonade, dolphin, duckstation, melonds, ...
+#. TRANSLATION: cemu, citra, dolphin, duckstation, melonds, ...
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr "Velg hvilket grafikk-API-bibliotek du vil bruke."
@@ -8800,7 +8800,7 @@ msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr "Fikser skjermriving."
 
-#. TRANSLATION: cemu, lemonade, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: cemu, citra, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "VSYNC"
 msgstr "VSYNC"
@@ -8914,7 +8914,7 @@ msgctxt "game_options"
 msgid "ENABLE GAMEPAD VIEW"
 msgstr "AKTIVERE GAMEPAD-VISNING"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
@@ -8923,87 +8923,87 @@ msgstr ""
 "Ordne oppsettet med to skjermer. Separate vinduer kan endres med "
 "hurtigtast+R2."
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Top Only"
 msgstr "Kun topp"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Bottom Only"
 msgstr "Kun bunn"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Large Top"
 msgstr "Stor topp"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Large Bottom"
 msgstr "Stor bunn"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Left/Right"
 msgstr "Venstre/høyre"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Right/Left"
 msgstr "Høyre/venstre"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Separate Windows"
 msgstr "Separate vinduer"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
 msgstr "Hybrid Screen Top"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
 msgstr "Hybridskjermbunn"
 
-#. TRANSLATION: lemonade, lemonade, lemonade, lemonade, lemonade, ...
+#. TRANSLATION: citra, citra, citra, citra, citra, ...
 msgctxt "game_options"
 msgid "GRAPHICS"
 msgstr "GRAFISK"
 
-#. TRANSLATION: lemonade, panda3ds, scummvm, play
+#. TRANSLATION: citra, panda3ds, scummvm, play
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (standard)"
 
-#. TRANSLATION: lemonade, dolphin, dolphin_triforce, duckstation, panda3ds, ...
+#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, panda3ds, ...
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr "Fikser skjermriving. CPU-tung."
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Off will help some games, others will run too fast."
 msgstr "Av vil hjelpe noen spill, mens andre vil gå for fort."
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "FRAME LIMIT"
 msgstr "RAMMEBEGRENSNING"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Reduce stutter that happens when compiling shaders."
 msgstr "Reduser hakking som oppstår ved kompilering av shaders."
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
 msgstr "DISK SHADER-HURTIGBUFFER"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid ""
 "Compile shaders using background threads to avoid shader compilation "
@@ -9012,27 +9012,27 @@ msgstr ""
 "Kompiler shaders ved hjelp av bakgrunnstråder for å unngå at kompilering av "
 "shaders hakker. Kan forårsake grafiske feil."
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "ENABLE ASYNC SHADER COMPILATION"
 msgstr "AKTIVERE ASYNKRON SHADER-KOMPILERING"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Preloading is impossible from ES."
 msgstr "Forhåndsinnlasting er umulig fra ES."
 
-#. TRANSLATION: lemonade, duckstation
+#. TRANSLATION: citra, duckstation
 msgctxt "game_options"
 msgid "Preload"
 msgstr "Forhåndslasting"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
 msgstr "New 3DS har en raskere prosessor, ZL/ZR-knapper og en C-stick."
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "NEW 3DS MODE"
 msgstr "NY 3DS-MODUS"
@@ -9785,7 +9785,7 @@ msgctxt "game_options"
 msgid ""
 "When running outside of 100%, adjusts the temp instead of dropping frames."
 msgstr ""
-"Når du kjører utenfor 100 %, justeres temperaturen i stedet for å slippe "
+"Når du kjører utenfor 100 %, justeres temperaturen i stedet for å hoppe over "
 "bilder."
 
 #. TRANSLATION: duckstation, scummvm
@@ -12632,7 +12632,7 @@ msgstr "Accel"
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "Fix screen tearing, but may drop frames."
-msgstr "Fikser skjermriving, men kan føre til færre bilder."
+msgstr "Fikser skjermriving, men kan hoppe over bilder."
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -13448,22 +13448,22 @@ msgstr "Gjelder kun ved bruk av OpenGL."
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "0.5x (360p/540p) [EXPERIMENTAL]"
-msgstr ""
+msgstr "0.5x (360p/540p) [EKSPERIMENTELL]"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "0.75x (540p/810p) [EXPERIMENTAL]"
-msgstr ""
+msgstr "0.75x (540p/810p) [EKSPERIMENTELL]"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "1x (720p/1080p)"
-msgstr ""
+msgstr "1x (720p/1080p)"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "1.5x (1080p/1620p) [EXPERIMENTAL]"
-msgstr ""
+msgstr "1.5x (1080p/1620p) [EKSPERIMENTELL]"
 
 #. TRANSLATION: suyu, ryujinx
 msgctxt "game_options"
@@ -13493,12 +13493,12 @@ msgstr "6x (4320p/6480p)"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "7x (5040p/7560p)"
-msgstr ""
+msgstr "7x (5040p/7560p)"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "8x (5760p/8640p)"
-msgstr ""
+msgstr "8x (5760p/8640p)"
 
 #. TRANSLATION: suyu, ryujinx
 msgctxt "game_options"
@@ -13518,7 +13518,7 @@ msgstr "Tving 16:10"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Force 32:9"
-msgstr ""
+msgstr "Tving 32:9"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13527,26 +13527,29 @@ msgid ""
 "tearing as it recovers from a slow down. Mailbox can have lower latency but "
 "may drop frames."
 msgstr ""
+"Fiks skjermrivning. FIFO (Vsync) hopper ikke over bilder. FIFO Avslappet "
+"tillater riving når den kommer seg etter en hastighets-senking. Postboks kan "
+"ha lavere ventetid, men kan hoppe over bilder."
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Immediate"
-msgstr ""
+msgstr "Umiddelbar"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Mailbox (Recommended)"
-msgstr ""
+msgstr "Postboks (anbefalt)"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "FIFO (VSync On)"
-msgstr ""
+msgstr "FIFO (VSync På)"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "FIFO Relaxed"
-msgstr ""
+msgstr "FIFO Avslappet"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13559,6 +13562,8 @@ msgid ""
 "FXAA has a lower performance impact, goof for low resolutions. SMAA offers "
 "best quality."
 msgstr ""
+"FXAA har en lavere ytelseseffekt, tull for lave oppløsninger. SMAA tilbyr "
+"best kvalitet."
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13568,7 +13573,7 @@ msgstr "ANTI-ALIASING-METODE"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "SMAA"
-msgstr ""
+msgstr "SMAA"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13583,7 +13588,7 @@ msgstr "ScaleForce"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "AMD FidelityFX Super Resolution"
-msgstr ""
+msgstr "AMD FidelityFX Super Oppløsning"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13591,16 +13596,18 @@ msgid ""
 "GPU emulation accuracy. Most games render fine with Normal. High is required "
 "to ensure particles render correctly."
 msgstr ""
+"GPU-emuleringsnøyaktighet. De fleste spill gjengis bra med Normal. Høy er "
+"nødvendig for å sikre at partikler gjengis riktig."
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "ACCURACY LEVEL"
-msgstr ""
+msgstr "NØYAKTIGHETSNIVÅ"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Extreme"
-msgstr ""
+msgstr "Ekstrem"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13615,22 +13622,22 @@ msgstr "Mono"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Choose whether the virtual switch is docked or not."
-msgstr ""
+msgstr "Velg om den virtuelle switchen er dokket eller ikke."
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "DOCK MODE"
-msgstr ""
+msgstr "DOKKMODUS"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Undocked"
-msgstr ""
+msgstr "Ikke dokket"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Docked (Default)"
-msgstr ""
+msgstr "Dokket (standard)"
 
 #. TRANSLATION: suyu, ryujinx
 msgctxt "game_options"
@@ -15575,56 +15582,6 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Move Stylet Pointer"
-msgstr "Flytt stylet peker"
-
-#. TRANSLATION: 3ds.lemonade.keys, xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, ...
-msgctxt "keys_files"
-msgid "Exit emulator"
-msgstr "Avslutt emulatoren"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "Start emulering på nytt"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Continue/Pause emulation"
-msgstr "Fortsett/pause emulering"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Swap Screen"
-msgstr "Bytte skjerm"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Toggle Screen Layout"
-msgstr "Veksle mellom skjermoppsett"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Skjermbilde"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Toggle Speed Limit"
-msgstr "Slå på hastighetsbegrensning"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Swap screens"
-msgstr "Bytt skjerm"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Mouse Click"
-msgstr "Museklikk"
-
 #. TRANSLATION: switch.ryujinx.keys
 msgctxt "keys_files"
 msgid "Emulator Config"
@@ -15755,6 +15712,11 @@ msgctxt "keys_files"
 msgid "Set to full screen"
 msgstr "Sett til fullskjerm"
 
+#. TRANSLATION: xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys, ...
+msgctxt "keys_files"
+msgid "Exit emulator"
+msgstr "Avslutt emulatoren"
+
 #. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
 msgctxt "keys_files"
 msgid "Virtual Keyboard"
@@ -15869,6 +15831,51 @@ msgstr "Vis kontrollerskjermen"
 msgctxt "keys_files"
 msgid "Service menu"
 msgstr "Servicemeny"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Move Stylet Pointer"
+msgstr "Flytt stylet peker"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Restart Emulation"
+msgstr "Start emulering på nytt"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Continue/Pause emulation"
+msgstr "Fortsett/pause emulering"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Swap Screen"
+msgstr "Bytte skjerm"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Toggle Screen Layout"
+msgstr "Veksle mellom skjermoppsett"
+
+#. TRANSLATION: 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "Skjermbilde"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Toggle Speed Limit"
+msgstr "Slå på hastighetsbegrensning"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Swap screens"
+msgstr "Bytt skjerm"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Mouse Click"
+msgstr "Museklikk"
 
 #. TRANSLATION: moonlight.moonlight.keys
 msgctxt "keys_files"
@@ -16854,7 +16861,7 @@ msgstr "Hurtiglagring"
 
 #~ msgctxt "game_options"
 #~ msgid "Automatically reduce frameskip if the system has spare overhead."
-#~ msgstr "Reduser frameskip automatisk hvis systemet har ledig overhead."
+#~ msgstr "Reduser frameskip automatisk hvis systemet har ledig kapasitet."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -16897,7 +16904,7 @@ msgstr "Hurtiglagring"
 #~ msgctxt "game_options"
 #~ msgid "Enable auto frameskipping for performance on lower-end systems."
 #~ msgstr ""
-#~ "Aktiver automatisk rammespring for å øke ytelsen på mindre avanserte "
+#~ "Aktiver automatisk frameskipping for å øke ytelsen på mindre avanserte "
 #~ "systemer."
 
 #~ msgctxt "game_options"
@@ -16934,7 +16941,7 @@ msgstr "Hurtiglagring"
 #~ "frames consecutively."
 #~ msgstr ""
 #~ "Når frameskip-typen er automatisk eller manuell, hopper du over så mange "
-#~ "frames etter hverandre."
+#~ "bilder etter hverandre."
 
 #~ msgctxt "game_options"
 #~ msgid "Enable scanlines for roms that support it."
@@ -17002,20 +17009,6 @@ msgstr "Hurtiglagring"
 #~ msgctxt "game_options"
 #~ msgid "Vsync"
 #~ msgstr "Vsync"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Turn on to configure settings from this GUI (Recommended). If disabled, "
-#~ "you have to manually edit the Config File (Experts only - not "
-#~ "recommended)."
-#~ msgstr ""
-#~ "Slå på for å konfigurere innstillinger fra dette brukergrensesnittet "
-#~ "(anbefales). Hvis deaktivert, må du redigere konfigurasjonsfilen manuelt "
-#~ "(kun for eksperter - anbefales ikke)."
-
-#~ msgctxt "game_options"
-#~ msgid "ENABLE EMULATIONSTATION CONFIGURATION"
-#~ msgstr "AKTIVERE KONFIGURASJON AV EMULATIONSTATION"
 
 #~ msgctxt "game_options"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
@@ -17128,6 +17121,20 @@ msgstr "Hurtiglagring"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "FastForward"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Turn on to configure settings from this GUI (Recommended). If disabled, "
+#~ "you have to manually edit the Config File (Experts only - not "
+#~ "recommended)."
+#~ msgstr ""
+#~ "Slå på for å konfigurere innstillinger fra dette brukergrensesnittet "
+#~ "(anbefales). Hvis deaktivert, må du redigere konfigurasjonsfilen manuelt "
+#~ "(kun for eksperter - anbefales ikke)."
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE EMULATIONSTATION CONFIGURATION"
+#~ msgstr "AKTIVERE KONFIGURASJON AV EMULATIONSTATION"
 
 #~ msgctxt "game_options"
 #~ msgid "AMD FidelityFX (Vulkan Only)"

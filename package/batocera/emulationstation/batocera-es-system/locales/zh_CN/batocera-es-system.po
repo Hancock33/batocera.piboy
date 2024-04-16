@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-03-31 15:32+0800\n"
+"PO-Revision-Date: 2024-04-08 14:09+0800\n"
 "Last-Translator: wanger\n"
 "Language-Team: 王二,monyxie\n"
 "Language: zh_CN\n"
@@ -1129,7 +1129,7 @@ msgctxt "game_options"
 msgid "For use with HD texture packs."
 msgstr "用于高清纹理包。"
 
-#. TRANSLATION: libretro/mesen, lemonade, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: libretro/mesen, citra, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "LOAD CUSTOM TEXTURES"
 msgstr "加载自定义纹理"
@@ -1225,7 +1225,7 @@ msgctxt "game_options"
 msgid "Arrange the dual screen layout."
 msgstr "排列双屏布局。"
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, lemonade, melonds, panda3ds, ...
+#. TRANSLATION: libretro/desmume, libretro/melonds, citra, melonds, panda3ds, ...
 msgctxt "game_options"
 msgid "SCREEN LAYOUT"
 msgstr "屏幕布局"
@@ -1424,7 +1424,7 @@ msgctxt "game_options"
 msgid "RENDERER MODE"
 msgstr "渲染器模式"
 
-#. TRANSLATION: libretro/melondsds, lemonade, duckstation, melonds, panda3ds, ...
+#. TRANSLATION: libretro/melondsds, citra, duckstation, melonds, panda3ds, ...
 msgctxt "game_options"
 msgid "Software"
 msgstr "软件"
@@ -8274,7 +8274,7 @@ msgctxt "game_options"
 msgid "DRIVERS"
 msgstr ""
 
-#. TRANSLATION: libretro, cemu, lemonade, daphne, dolphin, ...
+#. TRANSLATION: libretro, cemu, citra, daphne, dolphin, ...
 msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "图形API"
@@ -8294,7 +8294,7 @@ msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
 
-#. TRANSLATION: libretro, lemonade, daphne, dolphin, duckstation, ...
+#. TRANSLATION: libretro, citra, daphne, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
@@ -8576,7 +8576,7 @@ msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
 msgstr "高分辨率模式"
 
-#. TRANSLATION: cemu, lemonade, dolphin, duckstation, melonds, ...
+#. TRANSLATION: cemu, citra, dolphin, duckstation, melonds, ...
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr "选择要使用的图形API库。"
@@ -8716,7 +8716,7 @@ msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr "修复屏幕撕裂。"
 
-#. TRANSLATION: cemu, lemonade, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: cemu, citra, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "VSYNC"
 msgstr "垂直同步"
@@ -8828,121 +8828,121 @@ msgctxt "game_options"
 msgid "ENABLE GAMEPAD VIEW"
 msgstr "开启游戏板视图"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
 "Hotkey+R2."
 msgstr "排列双屏布局。 使用热键+R2可以更改单独的窗口。"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Top Only"
 msgstr "仅限顶部"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Bottom Only"
 msgstr "仅限底部"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Large Top"
 msgstr "顶部加大"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Large Bottom"
 msgstr "底部加大"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Left/Right"
 msgstr "左/右"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Right/Left"
 msgstr "右/左"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Separate Windows"
 msgstr "单独窗口"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
 msgstr "混合屏幕顶部"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
 msgstr "混合屏幕底部"
 
-#. TRANSLATION: lemonade, lemonade, lemonade, lemonade, lemonade, ...
+#. TRANSLATION: citra, citra, citra, citra, citra, ...
 msgctxt "game_options"
 msgid "GRAPHICS"
 msgstr "图形"
 
-#. TRANSLATION: lemonade, panda3ds, scummvm, play
+#. TRANSLATION: citra, panda3ds, scummvm, play
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL（默认）"
 
-#. TRANSLATION: lemonade, dolphin, dolphin_triforce, duckstation, panda3ds, ...
+#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, panda3ds, ...
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr "修复屏幕撕裂。会增加CPU占用。"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Off will help some games, others will run too fast."
 msgstr "关闭将有助于某些游戏，而其他游戏则会跑得太快。"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "FRAME LIMIT"
 msgstr "帧限制"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Reduce stutter that happens when compiling shaders."
 msgstr "减少编译着色器时发生的卡顿。"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
 msgstr "磁盘着色器缓存"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid ""
 "Compile shaders using background threads to avoid shader compilation "
 "stutter. May cause graphical glitches."
 msgstr "使用后台线程编译着色器以避免着色器编译造成的卡顿，可能会导致图形故障。"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "ENABLE ASYNC SHADER COMPILATION"
 msgstr "启用异步着色器编译"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Preloading is impossible from ES."
 msgstr "无法从ES进行预加载。"
 
-#. TRANSLATION: lemonade, duckstation
+#. TRANSLATION: citra, duckstation
 msgctxt "game_options"
 msgid "Preload"
 msgstr "预加载"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
 msgstr "New 3DS有更快的处理器、ZL/ZR按钮和一个C摇杆。"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "NEW 3DS MODE"
 msgstr "New 3DS模式"
@@ -12507,12 +12507,12 @@ msgstr "CRT低解开关"
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "Play this game on several screens (if available)"
-msgstr ""
+msgstr "在多个屏幕上玩此游戏(如果可用)"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "MULTISCREENS"
-msgstr ""
+msgstr "多显示器"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -13248,22 +13248,22 @@ msgstr "仅在使用OpenGL时适用。"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "0.5x (360p/540p) [EXPERIMENTAL]"
-msgstr ""
+msgstr "0.5x (360p/540p) [实验]"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "0.75x (540p/810p) [EXPERIMENTAL]"
-msgstr ""
+msgstr "0.75x (540p/810p) [实验]"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "1x (720p/1080p)"
-msgstr ""
+msgstr "1x (720p/1080p)"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "1.5x (1080p/1620p) [EXPERIMENTAL]"
-msgstr ""
+msgstr "1.5x (1080p/1620p) [实验]"
 
 #. TRANSLATION: suyu, ryujinx
 msgctxt "game_options"
@@ -13293,12 +13293,12 @@ msgstr "6x（4320p/6480p）"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "7x (5040p/7560p)"
-msgstr ""
+msgstr "7x (5040p/7560p)"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "8x (5760p/8640p)"
-msgstr ""
+msgstr "8x (5760p/8640p)"
 
 #. TRANSLATION: suyu, ryujinx
 msgctxt "game_options"
@@ -13318,7 +13318,7 @@ msgstr "强制 16:10"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Force 32:9"
-msgstr ""
+msgstr "强制 32:9"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13327,26 +13327,28 @@ msgid ""
 "tearing as it recovers from a slow down. Mailbox can have lower latency but "
 "may drop frames."
 msgstr ""
+"解决屏幕撕裂问题。FIFO（垂直同步）不会丢帧, FIFO Relaxed 在恢复时允许撕裂, "
+"Mailbox 可能具有较低的延迟, 但可能会丢帧。"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Immediate"
-msgstr ""
+msgstr "立即"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Mailbox (Recommended)"
-msgstr ""
+msgstr "邮箱 (推荐)"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "FIFO (VSync On)"
-msgstr ""
+msgstr "FIFO (开启垂直同步)"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "FIFO Relaxed"
-msgstr ""
+msgstr "FIFO 待机模式"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13358,7 +13360,7 @@ msgctxt "game_options"
 msgid ""
 "FXAA has a lower performance impact, goof for low resolutions. SMAA offers "
 "best quality."
-msgstr ""
+msgstr "FXAA具有较低的性能影响, 在低分辨率时表现不佳. SMAA提供最佳质量."
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13368,7 +13370,7 @@ msgstr "抗锯齿方法"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "SMAA"
-msgstr ""
+msgstr "SMAA"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13383,24 +13385,24 @@ msgstr "ScaleForce"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "AMD FidelityFX Super Resolution"
-msgstr ""
+msgstr "AMD FidelityFX超分辨率"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid ""
 "GPU emulation accuracy. Most games render fine with Normal. High is required "
 "to ensure particles render correctly."
-msgstr ""
+msgstr "GPU仿真精度. 大多数游戏使用标准渲染良好. 高是确保粒子正确渲染所必需的."
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "ACCURACY LEVEL"
-msgstr ""
+msgstr "精度等级"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Extreme"
-msgstr ""
+msgstr "极端"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13415,22 +13417,22 @@ msgstr "单声道"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Choose whether the virtual switch is docked or not."
-msgstr ""
+msgstr "选择虚拟开关是否已连接."
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "DOCK MODE"
-msgstr ""
+msgstr "连接模式"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Undocked"
-msgstr ""
+msgstr "未连接"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Docked (Default)"
-msgstr ""
+msgstr "连接(默认)"
 
 #. TRANSLATION: suyu, ryujinx
 msgctxt "game_options"
@@ -14875,12 +14877,12 @@ msgstr "左上角位置，大"
 #. TRANSLATION: vpinball, vpinball, vpinball
 msgctxt "game_options"
 msgid "On screen 2 if available"
-msgstr ""
+msgstr "如果可用则在第二屏幕上."
 
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
 msgid "On screen 3 if available"
-msgstr ""
+msgstr "如果可用则在第三屏幕上."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -14943,12 +14945,12 @@ msgctxt "game_options"
 msgid ""
 "Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
 "main screen for other emulators."
-msgstr ""
+msgstr "倒置背景板和游戏区域. 对于其他模拟器将背景板用作主屏幕时很有用."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "INVERSE PLAYFIELD AND B2S"
-msgstr ""
+msgstr "倒置游戏区域和B2S"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15344,56 +15346,6 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Move Stylet Pointer"
-msgstr "移动样式表指针"
-
-#. TRANSLATION: 3ds.lemonade.keys, xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, ...
-msgctxt "keys_files"
-msgid "Exit emulator"
-msgstr "退出模拟器"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "重置模拟器"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Continue/Pause emulation"
-msgstr "继续/暂停模拟器"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Swap Screen"
-msgstr "交换屏幕"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Toggle Screen Layout"
-msgstr "切换屏幕布局"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "截图"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Toggle Speed Limit"
-msgstr "切换速度限制"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Swap screens"
-msgstr "交换屏幕"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Mouse Click"
-msgstr "鼠标点击"
-
 #. TRANSLATION: switch.ryujinx.keys
 msgctxt "keys_files"
 msgid "Emulator Config"
@@ -15524,6 +15476,11 @@ msgctxt "keys_files"
 msgid "Set to full screen"
 msgstr "设置为全屏"
 
+#. TRANSLATION: xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys, ...
+msgctxt "keys_files"
+msgid "Exit emulator"
+msgstr "退出模拟器"
+
 #. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
 msgctxt "keys_files"
 msgid "Virtual Keyboard"
@@ -15638,6 +15595,51 @@ msgstr "显示控制器屏幕"
 msgctxt "keys_files"
 msgid "Service menu"
 msgstr "服务菜单"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Move Stylet Pointer"
+msgstr "移动样式表指针"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Restart Emulation"
+msgstr "重置模拟器"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Continue/Pause emulation"
+msgstr "继续/暂停模拟器"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Swap Screen"
+msgstr "交换屏幕"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Toggle Screen Layout"
+msgstr "切换屏幕布局"
+
+#. TRANSLATION: 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "截图"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Toggle Speed Limit"
+msgstr "切换速度限制"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Swap screens"
+msgstr "交换屏幕"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Mouse Click"
+msgstr "鼠标点击"
 
 #. TRANSLATION: moonlight.moonlight.keys
 msgctxt "keys_files"
@@ -15787,12 +15789,12 @@ msgstr "暂停/菜单"
 #. TRANSLATION: steam.keys
 msgctxt "keys_files"
 msgid "Exit Steam"
-msgstr ""
+msgstr "退出Steam"
 
 #. TRANSLATION: flatpak.keys
 msgctxt "keys_files"
 msgid "Exit running Flatpak"
-msgstr ""
+msgstr "退出运行Flatpak"
 
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
@@ -16735,19 +16737,6 @@ msgstr "快速保存"
 #~ msgstr "垂直同步"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Turn on to configure settings from this GUI (Recommended). If disabled, "
-#~ "you have to manually edit the Config File (Experts only - not "
-#~ "recommended)."
-#~ msgstr ""
-#~ "打开此GUI配置设置（推荐）。 如果禁用则必须手动编辑配置文件（仅限专家 - 不"
-#~ "推荐）。"
-
-#~ msgctxt "game_options"
-#~ msgid "ENABLE EMULATIONSTATION CONFIGURATION"
-#~ msgstr "启用仿真台配置"
-
-#~ msgctxt "game_options"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
 #~ msgstr "在Vsync关闭时设置所需的最大刷新率。"
 
@@ -16858,6 +16847,19 @@ msgstr "快速保存"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快进"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Turn on to configure settings from this GUI (Recommended). If disabled, "
+#~ "you have to manually edit the Config File (Experts only - not "
+#~ "recommended)."
+#~ msgstr ""
+#~ "打开此GUI配置设置（推荐）。 如果禁用则必须手动编辑配置文件（仅限专家 - 不"
+#~ "推荐）。"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE EMULATIONSTATION CONFIGURATION"
+#~ msgstr "启用仿真台配置"
 
 #~ msgctxt "game_options"
 #~ msgid "AMD FidelityFX (Vulkan Only)"
