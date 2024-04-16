@@ -3,12 +3,12 @@
 # vpinball
 #
 ################################################################################
-# Version: Commits on Apr 13, 2024 (branch@standalone)
-VPINBALL_VERSION = 93f8d7b354493d45f014b7232a9b30804034e6ed
+# Version: Commits on Apr 16, 2024 (branch@standalone)
+VPINBALL_VERSION = 9b49a0582b03af8a84e6086cf500d312366acfb2
 VPINBALL_SITE = $(call github,vpinball,vpinball,$(VPINBALL_VERSION))
 VPINBALL_LICENSE = GPLv3+
 VPINBALL_LICENSE_FILES = LICENSE
-VPINBALL_DEPENDENCIES = host-libcurl libfreeimage libpinmame libaltsound libserialport libzedmd libserum libdmdutil libdof sdl2 sdl2_image sdl2_ttf
+VPINBALL_DEPENDENCIES = ffmpeg host-libcurl libfreeimage libpinmame libaltsound libserialport libzedmd libserum libdmdutil libdof sdl2 sdl2_image sdl2_ttf
 VPINBALL_SUPPORTS_IN_SOURCE_BUILD = NO
 
 VPINBALL_CONF_OPTS += $(VPINBALL_COMMON_CONF_OPTS)
