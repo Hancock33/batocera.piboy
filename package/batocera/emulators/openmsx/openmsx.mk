@@ -3,8 +3,8 @@
 # openmsx
 #
 ################################################################################
-# Version: Commits on Apr 15, 2024
-OPENMSX_VERSION = 43c3b0f8e4f3bd396dff1914175f6bae35f86522
+# Version: Commits on Apr 16, 2024
+OPENMSX_VERSION = 7fde7c399330d89389fd0a2ccfda2dab5f8598b8
 OPENMSX_SITE = $(call github,openMSX,openMSX,$(OPENMSX_VERSION))
 OPENMSX_LICENSE = GPLv2
 OPENMSX_DEPENDENCIES = zlib sdl2 sdl2_ttf libpng tcl freetype
