@@ -17,7 +17,7 @@ Initial support for the Lenovo Legion Go
 - DMD server (handling any dmd supported by libdmd) integrated with vpinball
 - Support for multi screens (for pincab, mame multi games)
 - Evmapy keys file to help exit running flatpak app
-- Steering wheel support for Thrustmaster T150RS
+- Steering wheel support for Thrustmaster T150RS and T80 (gamepad mode only)
 ### Fixed
 - RG552 Splash-screen rotation
 - RG552 Vibrator enabled
@@ -74,7 +74,7 @@ Initial support for the Lenovo Legion Go
 - Ikemen Go to 0.99
 - Amiberry to 5.6.8
 - GroovyMAME to 0.264 SR 0.220b
-- DOSBox-Staging to 0.81.0
+- DOSBox-Staging to 0.81.1
 - DOSBox-X to 2024.03.01
 - SimCoupe to 1.2.13
 - Tsugaru to 20240223
