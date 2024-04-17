@@ -1,8 +1,8 @@
 diff --git a/src/core/linux/SDL_udev.c b/src/core/linux/SDL_udev.c
-index 1d7e05966..7a5a3f359 100644
+index 5bdfc0db8..80071803f 100644
 --- a/src/core/linux/SDL_udev.c
 +++ b/src/core/linux/SDL_udev.c
-@@ -424,11 +424,11 @@ static int device_class(struct udev_device *dev)
+@@ -423,11 +423,11 @@ static int device_class(struct udev_device *dev)
              devclass |= SDL_UDEV_DEVICE_JOYSTICK;
          }
  

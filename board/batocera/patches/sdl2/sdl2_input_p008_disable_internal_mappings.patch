@@ -1,5 +1,5 @@
 diff --git a/src/joystick/SDL_gamecontroller.c b/src/joystick/SDL_gamecontroller.c
-index 4ce1c9118..4b0907f9c 100644
+index a7d3303b3..8d9ce3077 100644
 --- a/src/joystick/SDL_gamecontroller.c
 +++ b/src/joystick/SDL_gamecontroller.c
 @@ -1908,13 +1908,13 @@ int SDL_GameControllerInitMappings(void)
