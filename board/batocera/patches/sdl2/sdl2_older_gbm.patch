@@ -1,8 +1,8 @@
 diff --git a/configure b/configure
-index 3d8a87dd4..8b45585fe 100755
+index 0bcecf426..77ec8ffa6 100755
 --- a/configure
 +++ b/configure
-@@ -25736,19 +25736,19 @@ printf "%s\n" "yes" >&6; }
+@@ -25739,19 +25739,19 @@ printf "%s\n" "yes" >&6; }
  fi
  
  pkg_failed=no
@@ -27,7 +27,7 @@ index 3d8a87dd4..8b45585fe 100755
  		      test "x$?" != "x0" && pkg_failed=yes
  else
    pkg_failed=yes
-@@ -25760,12 +25760,12 @@ if test -n "$LIBGBM_LIBS"; then
+@@ -25763,12 +25763,12 @@ if test -n "$LIBGBM_LIBS"; then
      pkg_cv_LIBGBM_LIBS="$LIBGBM_LIBS"
   elif test -n "$PKG_CONFIG"; then
      if test -n "$PKG_CONFIG" && \
@@ -43,7 +43,7 @@ index 3d8a87dd4..8b45585fe 100755
  		      test "x$?" != "x0" && pkg_failed=yes
  else
    pkg_failed=yes
-@@ -25786,9 +25786,9 @@ else
+@@ -25789,9 +25789,9 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -56,7 +56,7 @@ index 3d8a87dd4..8b45585fe 100755
  	# Put the nasty error message in config.log where it belongs
  	echo "$LIBGBM_PKG_ERRORS" >&5
 diff --git a/configure.ac b/configure.ac
-index 49c46fb93..3d5f3a882 100644
+index 0215857e2..357be8c58 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -2439,7 +2439,7 @@ CheckKMSDRM()
