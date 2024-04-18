@@ -4514,6 +4514,22 @@ twentyfourtyeight:
   comment_fr:           |
                         Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
 
+uqm:
+  name:                 Ur-Quan Masters
+  manufacturer:         Ports
+  release:              1992
+  hardware:             port
+  extensions:           [game]
+  platform:             pc
+  group:                ports
+  path:                 /usr/share/emulationstation/ports/uqm
+  emulators:
+    uqm:
+      uqm:              { requireAnyOf: [ BR2_PACKAGE_UQM ]         }
+  comment_en:           |
+                        Create a folder called 'packages' in this folder. This is where you place your game engine file 'uqm-0.8.0-content.uqm'.
+                        Then create a file called 'Ur-Quan Masters.game'. This is used to launch the game.
+
 vanillara:
   name:                 Command and Conquer Red Alert
   manufacturer:         Ports
