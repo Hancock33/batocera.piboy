@@ -411,6 +411,10 @@ def getGenerator(emulator):
         from generators.serioussam.serioussamGenerator import SerioussamGenerator
         return SerioussamGenerator()
 
+    if emulator == "uqm":
+        from generators.uqm.uqmGenerator import UqmGenerator
+        return UqmGenerator()
+
     if emulator == 'sh':
         from generators.sh.shGenerator import ShGenerator
         return ShGenerator()

@@ -1028,6 +1028,9 @@ unico:
 universal:
   emulator: libretro
   core:     mame078plus
+uqm:
+  emulator: uqm
+  core:     uqm
 uzebox:
   emulator: libretro
   core:     uzem
