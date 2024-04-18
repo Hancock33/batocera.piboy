@@ -1,0 +1,266 @@
+diff --git a/src/GlideHQ/TxCache.cpp b/src/GlideHQ/TxCache.cpp
+index 46960f4..a9034ff 100644
+--- a/src/GlideHQ/TxCache.cpp
++++ b/src/GlideHQ/TxCache.cpp
+@@ -41,7 +41,7 @@ TxCache::~TxCache()
+ }
+ 
+ TxCache::TxCache(int options, int cachesize, const wchar_t *datapath,
+-                 const wchar_t *cachepath, const wchar_t *ident,
++                 const wchar_t *_cachepath, const wchar_t *ident,
+                  dispInfoFuncExt callback)
+ {
+   _txUtil = new TxUtil();
+@@ -54,8 +54,8 @@ TxCache::TxCache(int options, int cachesize, const wchar_t *datapath,
+   /* save path name */
+   if (datapath)
+     _datapath.assign(datapath);
+-  if (cachepath)
+-    _cachepath.assign(cachepath);
++  if (_cachepath)
++    __cachepath.assign(_cachepath);
+ 
+   /* save ROM name */
+   if (ident)
+@@ -237,17 +237,17 @@ TxCache::save(const wchar_t *path, const wchar_t *filename, int config)
+     /* dump cache to disk */
+     char cbuf[MAX_PATH];
+ 
+-    boost::filesystem::wpath cachepath(path);
+-    boost::filesystem::create_directory(cachepath);
++    boost::filesystem::path _cachepath(path);
++    boost::filesystem::create_directory(_cachepath);
+ 
+     /* Ugly hack to enable fopen/gzopen in Win9x */
+ #ifdef BOOST_WINDOWS_API
+     wchar_t curpath[MAX_PATH];
+     GETCWD(MAX_PATH, curpath);
+-    CHDIR(cachepath.wstring().c_str());
++    CHDIR(_cachepath.wstring().c_str());
+ #else
+     char curpath[MAX_PATH];
+-    wcstombs(cbuf, cachepath.wstring().c_str(), MAX_PATH);
++    wcstombs(cbuf, _cachepath.wstring().c_str(), MAX_PATH);
+     if (GETCWD(MAX_PATH, curpath) == NULL)
+         ERRLOG("Error while retrieving working directory!");
+     if (CHDIR(cbuf) != 0)
+@@ -330,15 +330,15 @@ TxCache::load(const wchar_t *path, const wchar_t *filename, int config)
+   /* find it on disk */
+   char cbuf[MAX_PATH];
+ 
+-  boost::filesystem::wpath cachepath(path);
++  boost::filesystem::path _cachepath(path);
+ 
+ #ifdef BOOST_WINDOWS_API
+   wchar_t curpath[MAX_PATH];
+   GETCWD(MAX_PATH, curpath);
+-  CHDIR(cachepath.wstring().c_str());
++  CHDIR(_cachepath.wstring().c_str());
+ #else
+   char curpath[MAX_PATH];
+-  wcstombs(cbuf, cachepath.wstring().c_str(), MAX_PATH);
++  wcstombs(cbuf, _cachepath.wstring().c_str(), MAX_PATH);
+   if (GETCWD(MAX_PATH, curpath) == NULL)
+       ERRLOG("Error while retrieving working directory!");
+   if (CHDIR(cbuf) != 0)
+diff --git a/src/GlideHQ/TxCache.h b/src/GlideHQ/TxCache.h
+index cb2de0c..6864875 100644
+--- a/src/GlideHQ/TxCache.h
++++ b/src/GlideHQ/TxCache.h
+@@ -41,7 +41,7 @@ protected:
+   int _options;
+   std::wstring _ident;
+   std::wstring _datapath;
+-  std::wstring _cachepath;
++  std::wstring __cachepath;
+   dispInfoFuncExt _callback;
+   TxUtil *_txUtil;
+   struct TXCACHE {
+@@ -60,7 +60,7 @@ protected:
+ public:
+   ~TxCache();
+   TxCache(int options, int cachesize, const wchar_t *datapath,
+-              const wchar_t *cachepath, const wchar_t *ident,
++              const wchar_t *_cachepath, const wchar_t *ident,
+               dispInfoFuncExt callback);
+   boolean add(uint64 checksum, /* checksum hi:palette low:texture */
+               GHQTexInfo *info, int dataSize = 0);
+diff --git a/src/GlideHQ/TxHiResCache.cpp b/src/GlideHQ/TxHiResCache.cpp
+index ac87f2f..12cfff0 100644
+--- a/src/GlideHQ/TxHiResCache.cpp
++++ b/src/GlideHQ/TxHiResCache.cpp
+@@ -65,11 +65,11 @@ TxHiResCache::~TxHiResCache()
+   if ((_options & DUMP_HIRESTEXCACHE) && !_haveCache && !_abortLoad) {
+     /* dump cache to disk */
+     std::wstring filename = _ident + L"_HIRESTEXTURES.dat";
+-    boost::filesystem::wpath cachepath(_cachepath);
+-    cachepath /= boost::filesystem::wpath(L"glidehq");
++    boost::filesystem::path _cachepath(__cachepath);
++    _cachepath /= boost::filesystem::path(L"glidehq");
+     int config = _options & (HIRESTEXTURES_MASK|COMPRESS_HIRESTEX|COMPRESSION_MASK|TILE_HIRESTEX|FORCE16BPP_HIRESTEX|GZ_HIRESTEXCACHE|LET_TEXARTISTS_FLY);
+ 
+-    TxCache::save(cachepath.wstring().c_str(), filename.c_str(), config);
++    TxCache::save(_cachepath.wstring().c_str(), filename.c_str(), config);
+   }
+ #endif
+ 
+@@ -79,9 +79,9 @@ TxHiResCache::~TxHiResCache()
+ }
+ 
+ TxHiResCache::TxHiResCache(int maxwidth, int maxheight, int maxbpp, int options,
+-                           const wchar_t *datapath, const wchar_t *cachepath,
++                           const wchar_t *datapath, const wchar_t *_cachepath,
+                            const wchar_t *ident, dispInfoFuncExt callback
+-                           ) : TxCache((options & ~GZ_TEXCACHE), 0, datapath, cachepath, ident, callback)
++                           ) : TxCache((options & ~GZ_TEXCACHE), 0, datapath, _cachepath, ident, callback)
+ {
+   _txImage = new TxImage();
+   _txQuantize  = new TxQuantize();
+@@ -97,7 +97,7 @@ TxHiResCache::TxHiResCache(int maxwidth, int maxheight, int maxbpp, int options,
+   if (!(_options & COMPRESS_HIRESTEX))
+     _options &= ~COMPRESSION_MASK;
+ 
+-  if (_cachepath.empty() || _ident.empty()) {
++  if (__cachepath.empty() || _ident.empty()) {
+     _options &= ~DUMP_HIRESTEXCACHE;
+     return;
+   }
+@@ -107,11 +107,11 @@ TxHiResCache::TxHiResCache(int maxwidth, int maxheight, int maxbpp, int options,
+   if (_options & DUMP_HIRESTEXCACHE) {
+     /* find it on disk */
+     std::wstring filename = _ident + L"_HIRESTEXTURES.dat";
+-    boost::filesystem::wpath cachepath(_cachepath);
+-    cachepath /= boost::filesystem::wpath(L"glidehq");
++    boost::filesystem::path _cachepath(__cachepath);
++    _cachepath /= boost::filesystem::path(L"glidehq");
+     int config = _options & (HIRESTEXTURES_MASK|COMPRESS_HIRESTEX|COMPRESSION_MASK|TILE_HIRESTEX|FORCE16BPP_HIRESTEX|GZ_HIRESTEXCACHE|LET_TEXARTISTS_FLY);
+ 
+-    _haveCache = TxCache::load(cachepath.wstring().c_str(), filename.c_str(), config);
++    _haveCache = TxCache::load(_cachepath.wstring().c_str(), filename.c_str(), config);
+   }
+ #endif
+ 
+@@ -132,7 +132,7 @@ TxHiResCache::load(boolean replace) /* 0 : reload, 1 : replace partial */
+ 
+     if (!replace) TxCache::clear();
+ 
+-    boost::filesystem::wpath dir_path(_datapath);
++    boost::filesystem::path dir_path(_datapath);
+ 
+     switch (_options & HIRESTEXTURES_MASK) {
+     case GHQ_HIRESTEXTURES:
+@@ -149,8 +149,8 @@ TxHiResCache::load(boolean replace) /* 0 : reload, 1 : replace partial */
+       INFO(80, L"  usage of only 2) and 3) highly recommended!\n");
+       INFO(80, L"  folder names must be in US-ASCII characters!\n");
+ 
+-      dir_path /= boost::filesystem::wpath(L"hires_texture");
+-      dir_path /= boost::filesystem::wpath(_ident);
++      dir_path /= boost::filesystem::path(L"hires_texture");
++      dir_path /= boost::filesystem::path(_ident);
+       loadHiResTextures(dir_path, replace);
+       break;
+     case JABO_HIRESTEXTURES:
+@@ -164,7 +164,7 @@ TxHiResCache::load(boolean replace) /* 0 : reload, 1 : replace partial */
+ }
+ 
+ boolean
+-TxHiResCache::loadHiResTextures(boost::filesystem::wpath dir_path, boolean replace)
++TxHiResCache::loadHiResTextures(boost::filesystem::path dir_path, boolean replace)
+ {
+   uint32_t last, now, diff;
+   DBG_INFO(80, L"-----\n");
+@@ -196,7 +196,7 @@ TxHiResCache::loadHiResTextures(boost::filesystem::wpath dir_path, boolean repla
+       ERRLOG("Error while changing current directory to '%s'!", cbuf);
+ #endif
+ 
+-  /* NOTE: I could use the boost::wdirectory_iterator and boost::wpath
++  /* NOTE: I could use the boost::wdirectory_iterator and boost::path
+    * to resolve UNICODE file names and paths. But then, _wfopen() is
+    * required to get the file descriptor for MS Windows to pass into
+    * libpng, which is incompatible with Win9x. Win9x's fopen() cannot
+@@ -258,7 +258,7 @@ TxHiResCache::loadHiResTextures(boost::filesystem::wpath dir_path, boolean repla
+ #define CRCFMTSIZ_LEN 13
+ #define PALCRC_LEN 9
+     //wcstombs(fname, it->path().leaf().c_str(), MAX_PATH);
+-    strncpy(fname, it->path().leaf().string().c_str(), sizeof(fname));
++    //strncpy(fname, it->path().leaf().string().c_str(), sizeof(fname));
+     fname[sizeof(fname) - 1] = '\0';
+     /* XXX case sensitivity fiasco!
+      * files must use _a, _rgb, _all, _allciByRGBA, _ciByRGBA, _ci
+diff --git a/src/GlideHQ/TxHiResCache.h b/src/GlideHQ/TxHiResCache.h
+index d2094fe..c6f4040 100644
+--- a/src/GlideHQ/TxHiResCache.h
++++ b/src/GlideHQ/TxHiResCache.h
+@@ -47,11 +47,11 @@ private:
+   TxImage *_txImage;
+   TxQuantize *_txQuantize;
+   TxReSample *_txReSample;
+-  boolean loadHiResTextures(boost::filesystem::wpath dir_path, boolean replace);
++  boolean loadHiResTextures(boost::filesystem::path dir_path, boolean replace);
+ public:
+   ~TxHiResCache();
+   TxHiResCache(int maxwidth, int maxheight, int maxbpp, int options,
+-               const wchar_t *datapath, const wchar_t *cachepath,
++               const wchar_t *datapath, const wchar_t *_cachepath,
+                const wchar_t *ident, dispInfoFuncExt callback);
+   boolean empty();
+   boolean load(boolean replace);
+diff --git a/src/GlideHQ/TxTexCache.cpp b/src/GlideHQ/TxTexCache.cpp
+index 2297a0f..833580b 100644
+--- a/src/GlideHQ/TxTexCache.cpp
++++ b/src/GlideHQ/TxTexCache.cpp
+@@ -37,32 +37,32 @@ TxTexCache::~TxTexCache()
+   if (_options & DUMP_TEXCACHE) {
+     /* dump cache to disk */
+     std::wstring filename = _ident + L"_MEMORYCACHE.dat";
+-    boost::filesystem::wpath cachepath(_cachepath);
+-    cachepath /= boost::filesystem::wpath(L"glidehq");
++    boost::filesystem::path _cachepath(__cachepath);
++    _cachepath /= boost::filesystem::path(L"glidehq");
+     int config = _options & (FILTER_MASK|ENHANCEMENT_MASK|COMPRESS_TEX|COMPRESSION_MASK|FORCE16BPP_TEX|GZ_TEXCACHE);
+ 
+-    TxCache::save(cachepath.wstring().c_str(), filename.c_str(), config);
++    TxCache::save(_cachepath.wstring().c_str(), filename.c_str(), config);
+   }
+ #endif
+ }
+ 
+-TxTexCache::TxTexCache(int options, int cachesize, const wchar_t *datapath, const wchar_t *cachepath,
++TxTexCache::TxTexCache(int options, int cachesize, const wchar_t *datapath, const wchar_t *_cachepath,
+                        const wchar_t *ident, dispInfoFuncExt callback
+-                       ) : TxCache((options & ~GZ_HIRESTEXCACHE), cachesize, datapath, cachepath, ident, callback)
++                       ) : TxCache((options & ~GZ_HIRESTEXCACHE), cachesize, datapath, _cachepath, ident, callback)
+ {
+   /* assert local options */
+-  if (_cachepath.empty() || _ident.empty() || !_cacheSize)
++  if (__cachepath.empty() || _ident.empty() || !_cacheSize)
+     _options &= ~DUMP_TEXCACHE;
+ 
+ #ifdef DUMP_CACHE
+   if (_options & DUMP_TEXCACHE) {
+     /* find it on disk */
+     std::wstring filename = _ident + L"_MEMORYCACHE.dat";
+-    boost::filesystem::wpath cachepath(_cachepath);
+-    cachepath /= boost::filesystem::wpath(L"glidehq");
++    boost::filesystem::path _cachepath(__cachepath);
++    _cachepath /= boost::filesystem::path(L"glidehq");
+     int config = _options & (FILTER_MASK|ENHANCEMENT_MASK|COMPRESS_TEX|COMPRESSION_MASK|FORCE16BPP_TEX|GZ_TEXCACHE);
+ 
+-    TxCache::load(cachepath.wstring().c_str(), filename.c_str(), config);
++    TxCache::load(_cachepath.wstring().c_str(), filename.c_str(), config);
+   }
+ #endif
+ }
+diff --git a/src/GlideHQ/TxTexCache.h b/src/GlideHQ/TxTexCache.h
+index 61b1214..16ab3f1 100644
+--- a/src/GlideHQ/TxTexCache.h
++++ b/src/GlideHQ/TxTexCache.h
+@@ -31,7 +31,7 @@ class TxTexCache : public TxCache
+ public:
+   ~TxTexCache();
+   TxTexCache(int options, int cachesize, const wchar_t *datapath,
+-             const wchar_t *cachepath, const wchar_t *ident,
++             const wchar_t *_cachepath, const wchar_t *ident,
+              dispInfoFuncExt callback);
+   boolean add(uint64 checksum, /* checksum hi:palette low:texture */
+               GHQTexInfo *info);
