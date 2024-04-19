@@ -3,8 +3,8 @@
 # pcsx2
 #
 ################################################################################
-# Version: Commits on Apr 17, 2024
-PCSX2_VERSION = 3c901543bda8cadb21da24b1b47792a8bbacf82d
+# Version: Commits on Apr 19, 2024
+PCSX2_VERSION = 0b5a3fa6afe838ecbbd04c9cdf939e27efc7445a
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES

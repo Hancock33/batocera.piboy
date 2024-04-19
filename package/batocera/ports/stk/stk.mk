@@ -3,8 +3,8 @@
 # stk
 #
 ################################################################################
-# Version: Commits on Apr 18, 2024
-STK_VERSION = 78c6f16d7985b4b5c3abc4168a530b645b7c4d40
+# Version: Commits on Apr 19, 2024
+STK_VERSION = 52edb8507e1d59d61cb25c71bdc35b4cd947e4b8
 STK_SITE = https://github.com/supertuxkart/stk-code.git
 STK_SITE_METHOD=git
 STK_GIT_SUBMODULES=YES
