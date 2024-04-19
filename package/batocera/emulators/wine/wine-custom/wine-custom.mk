@@ -3,8 +3,8 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Apr 17, 2024
-WINE_CUSTOM_VERSION = d821ddaa2040d965c9902f5c21ce843125a7f78e
+# Version: Commits on Apr 18, 2024
+WINE_CUSTOM_VERSION = b87589757b82b36a8a58ca26f6dcabb550826ceb
 WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
 WINE_CUSTOM_SITE = $(call github,wine-mirror,wine,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
@@ -18,7 +18,7 @@ ifeq ($(BR_CMAKE_USE_CLANG),y)
 endif
 
 ifeq ($(BR_WINE_STAGING),y)
-	WINE_CUSTOM_STAGING_VERSION = 1f578b2d531440f9b1e2255d96c33efb87af5412
+	WINE_CUSTOM_STAGING_VERSION = 85146f009db7bc1b7eac6f45d4952fc4d9cb469e
 	HOST_WINE_CUSTOM_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/$(WINE_CUSTOM_STAGING_VERSION).tar.gz
 	WINE_CUSTOM_POST_EXTRACT_HOOKS += WINE_CUSTOM_STAGING
 	HOST_WINE_CUSTOM_POST_EXTRACT_HOOKS += WINE_CUSTOM_STAGING
