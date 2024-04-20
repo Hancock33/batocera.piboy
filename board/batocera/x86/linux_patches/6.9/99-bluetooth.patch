@@ -1,22 +1,3 @@
-From e00fc2700a3fa0a506666741279c969ae4ba5551 Mon Sep 17 00:00:00 2001
-From: Zijun Hu <quic_zijuhu@quicinc.com>
-Date: Mon, 25 Mar 2024 16:11:49 +0800
-Subject: Bluetooth: btusb: Fix triggering coredump implementation for QCA
-
-btusb_coredump_qca() uses __hci_cmd_sync() to send a vendor-specific
-command to trigger firmware coredump, but the command does not
-have any event as its sync response, so it is not suitable to use
-__hci_cmd_sync(), fixed by using __hci_cmd_send().
-
-Fixes: 20981ce2d5a5 ("Bluetooth: btusb: Add WCN6855 devcoredump support")
-Signed-off-by: Zijun Hu <quic_zijuhu@quicinc.com>
-Signed-off-by: Luiz Augusto von Dentz <luiz.von.dentz@intel.com>
----
- drivers/bluetooth/btusb.c | 9 ++++-----
- 1 file changed, 4 insertions(+), 5 deletions(-)
-
-(limited to 'drivers/bluetooth')
-
 diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
 index 3356af3a7f610d..4c0cc13adb47dc 100644
 --- a/drivers/bluetooth/btusb.c
@@ -39,6 +20,111 @@ index 3356af3a7f610d..4c0cc13adb47dc 100644
  }
  
  /*
--- 
-cgit 1.2.3-korg
+diff --git a/drivers/bluetooth/btqca.c b/drivers/bluetooth/btqca.c
+index 19cfc342fc7bbb..216826c31ee34f 100644
+--- a/drivers/bluetooth/btqca.c
++++ b/drivers/bluetooth/btqca.c
+@@ -15,6 +15,8 @@
+ 
+ #define VERSION "0.1"
+ 
++#define QCA_BDADDR_DEFAULT (&(bdaddr_t) {{ 0xad, 0x5a, 0x00, 0x00, 0x00, 0x00 }})
++
+ int qca_read_soc_version(struct hci_dev *hdev, struct qca_btsoc_version *ver,
+ 			 enum qca_btsoc_type soc_type)
+ {
+@@ -612,6 +614,38 @@ int qca_set_bdaddr_rome(struct hci_dev *hdev, const bdaddr_t *bdaddr)
+ }
+ EXPORT_SYMBOL_GPL(qca_set_bdaddr_rome);
+ 
++static int qca_check_bdaddr(struct hci_dev *hdev)
++{
++	struct hci_rp_read_bd_addr *bda;
++	struct sk_buff *skb;
++	int err;
++
++	if (bacmp(&hdev->public_addr, BDADDR_ANY))
++		return 0;
++
++	skb = __hci_cmd_sync(hdev, HCI_OP_READ_BD_ADDR, 0, NULL,
++			     HCI_INIT_TIMEOUT);
++	if (IS_ERR(skb)) {
++		err = PTR_ERR(skb);
++		bt_dev_err(hdev, "Failed to read device address (%d)", err);
++		return err;
++	}
++
++	if (skb->len != sizeof(*bda)) {
++		bt_dev_err(hdev, "Device address length mismatch");
++		kfree_skb(skb);
++		return -EIO;
++	}
++
++	bda = (struct hci_rp_read_bd_addr *)skb->data;
++	if (!bacmp(&bda->bdaddr, QCA_BDADDR_DEFAULT))
++		set_bit(HCI_QUIRK_USE_BDADDR_PROPERTY, &hdev->quirks);
++
++	kfree_skb(skb);
++
++	return 0;
++}
++
+ static void qca_generate_hsp_nvm_name(char *fwname, size_t max_size,
+ 		struct qca_btsoc_version ver, u8 rom_ver, u16 bid)
+ {
+@@ -818,6 +852,10 @@ int qca_uart_setup(struct hci_dev *hdev, uint8_t baudrate,
+ 		break;
+ 	}
+ 
++	err = qca_check_bdaddr(hdev);
++	if (err)
++		return err;
++
+ 	bt_dev_info(hdev, "QCA setup on UART is completed");
+ 
+ 	return 0;
+diff --git a/drivers/bluetooth/hci_qca.c b/drivers/bluetooth/hci_qca.c
+index ecbc52eaf10109..92fa20f5ac7d0c 100644
+--- a/drivers/bluetooth/hci_qca.c
++++ b/drivers/bluetooth/hci_qca.c
+@@ -1905,8 +1905,6 @@ retry:
+ 	case QCA_WCN6750:
+ 	case QCA_WCN6855:
+ 	case QCA_WCN7850:
+-		set_bit(HCI_QUIRK_USE_BDADDR_PROPERTY, &hdev->quirks);
+-
+ 		qcadev = serdev_device_get_drvdata(hu->serdev);
+ 		if (qcadev->bdaddr_property_broken)
+ 			set_bit(HCI_QUIRK_BDADDR_PROPERTY_BROKEN, &hdev->quirks);
+diff --git a/drivers/bluetooth/hci_qca.c b/drivers/bluetooth/hci_qca.c
+index 92fa20f5ac7d..160175a23a49 100644
+--- a/drivers/bluetooth/hci_qca.c
++++ b/drivers/bluetooth/hci_qca.c
+@@ -2323,7 +2323,7 @@  static int qca_serdev_probe(struct serdev_device *serdev)
+ 
+ 		qcadev->bt_en = devm_gpiod_get_optional(&serdev->dev, "enable",
+ 					       GPIOD_OUT_LOW);
+-		if (IS_ERR(qcadev->bt_en) &&
++		if (IS_ERR_OR_NULL(qcadev->bt_en) &&
+ 		    (data->soc_type == QCA_WCN6750 ||
+ 		     data->soc_type == QCA_WCN6855)) {
+ 			dev_err(&serdev->dev, "failed to acquire BT_EN gpio\n");
+@@ -2332,7 +2332,7 @@  static int qca_serdev_probe(struct serdev_device *serdev)
+ 
+ 		qcadev->sw_ctrl = devm_gpiod_get_optional(&serdev->dev, "swctrl",
+ 					       GPIOD_IN);
+-		if (IS_ERR(qcadev->sw_ctrl) &&
++		if (IS_ERR_OR_NULL(qcadev->sw_ctrl) &&
+ 		    (data->soc_type == QCA_WCN6750 ||
+ 		     data->soc_type == QCA_WCN6855 ||
+ 		     data->soc_type == QCA_WCN7850))
+@@ -2354,7 +2354,7 @@  static int qca_serdev_probe(struct serdev_device *serdev)
+ 	default:
+ 		qcadev->bt_en = devm_gpiod_get_optional(&serdev->dev, "enable",
+ 					       GPIOD_OUT_LOW);
+-		if (IS_ERR(qcadev->bt_en)) {
++		if (IS_ERR_OR_NULL(qcadev->bt_en)) {
+ 			dev_warn(&serdev->dev, "failed to acquire enable gpio\n");
+ 			power_ctrl_enabled = false;
+ 		}
 
