@@ -3,8 +3,8 @@
 # dxx-rebirth
 #
 ################################################################################
-# Version: Commits on Mar 30, 2024
-DXX_REBIRTH_VERSION = 30fdb4ae403ce2b0da9ac48cf67dcdf35ae612c2
+# Version: Commits on Apr 18, 2024
+DXX_REBIRTH_VERSION = 674f3a28d7bad8115aeb16131eabecdb538c792b
 DXX_REBIRTH_SITE = https://github.com/dxx-rebirth/dxx-rebirth
 DXX_REBIRTH_SITE_METHOD=git
 DXX_REBIRTH_LICENSE = GPLv3

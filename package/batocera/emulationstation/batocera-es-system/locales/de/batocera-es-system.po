@@ -1172,7 +1172,7 @@ msgctxt "game_options"
 msgid "For use with HD texture packs."
 msgstr "Zur Verwendung mit HD-Texturpaketen."
 
-#. TRANSLATION: libretro/mesen, lemonade, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: libretro/mesen, citra, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "LOAD CUSTOM TEXTURES"
 msgstr "BENUTZERDEF. TEXTUREN LADEN"
@@ -1270,7 +1270,7 @@ msgctxt "game_options"
 msgid "Arrange the dual screen layout."
 msgstr "Dual-Screen-Layouts anordnen und einstellen."
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, lemonade, melonds, panda3ds, ...
+#. TRANSLATION: libretro/desmume, libretro/melonds, citra, melonds, panda3ds, ...
 msgctxt "game_options"
 msgid "SCREEN LAYOUT"
 msgstr "BILDSCHIRM LAYOUT"
@@ -1476,7 +1476,7 @@ msgctxt "game_options"
 msgid "RENDERER MODE"
 msgstr "RENDERMODUS"
 
-#. TRANSLATION: libretro/melondsds, lemonade, duckstation, melonds, panda3ds, ...
+#. TRANSLATION: libretro/melondsds, citra, duckstation, melonds, panda3ds, ...
 msgctxt "game_options"
 msgid "Software"
 msgstr "Software"
@@ -5662,7 +5662,7 @@ msgctxt "game_options"
 msgid "Initial orientation of the game & controls"
 msgstr ""
 
-#. TRANSLATION: libretro/mednafen_wswan, drastic
+#. TRANSLATION: libretro/mednafen_wswan, drastic, vpinball, vpinball, vpinball, ...
 msgctxt "game_options"
 msgid "Manual"
 msgstr "Anleitung"
@@ -8415,7 +8415,7 @@ msgctxt "game_options"
 msgid "DRIVERS"
 msgstr ""
 
-#. TRANSLATION: libretro, cemu, lemonade, daphne, dolphin, ...
+#. TRANSLATION: libretro, cemu, citra, daphne, dolphin, ...
 msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "GRAFIK-API"
@@ -8435,7 +8435,7 @@ msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
 
-#. TRANSLATION: libretro, lemonade, daphne, dolphin, duckstation, ...
+#. TRANSLATION: libretro, citra, daphne, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
@@ -8722,7 +8722,7 @@ msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
 msgstr "HOCHAUFLÖSENDER MODUS"
 
-#. TRANSLATION: cemu, lemonade, dolphin, duckstation, melonds, ...
+#. TRANSLATION: cemu, citra, dolphin, duckstation, melonds, ...
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr "Grafik-API Bibliothek zur Verwendung auswählen."
@@ -8864,7 +8864,7 @@ msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr "Beheben von Screen-Tearing Effekten."
 
-#. TRANSLATION: cemu, lemonade, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: cemu, citra, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "VSYNC"
 msgstr "VSYNC"
@@ -8980,7 +8980,7 @@ msgctxt "game_options"
 msgid "ENABLE GAMEPAD VIEW"
 msgstr "GAMEPAD-ANSICHT AKTIVIEREN"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
@@ -8989,88 +8989,88 @@ msgstr ""
 "Anordnen des Doppelbildschirm-Layouts. Der Bildschirm kann mit Hotkey+R2 "
 "gewechselt werden."
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Top Only"
 msgstr "Nur Oben"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Bottom Only"
 msgstr "Nur Unten"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Large Top"
 msgstr "Oben groß"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Large Bottom"
 msgstr "Unten groß"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Left/Right"
 msgstr "Links/Rechts"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Right/Left"
 msgstr "Rechts/Links"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Separate Windows"
 msgstr "Getrennte Fenster"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
 msgstr "Gemeinsamer Bildschirm oben"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
 msgstr "Gemeinsamer Bildschirm unten"
 
-#. TRANSLATION: lemonade, lemonade, lemonade, lemonade, lemonade, ...
+#. TRANSLATION: citra, citra, citra, citra, citra, ...
 msgctxt "game_options"
 msgid "GRAPHICS"
 msgstr "GRAFIK"
 
-#. TRANSLATION: lemonade, panda3ds, scummvm, play
+#. TRANSLATION: citra, panda3ds, scummvm, play
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (Standard)"
 
-#. TRANSLATION: lemonade, dolphin, dolphin_triforce, duckstation, panda3ds, ...
+#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, panda3ds, ...
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr "Beheben von Screen-Tearing Effekten (CPU-lastig)."
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Off will help some games, others will run too fast."
 msgstr ""
 "Deaktivierung hilft bei einigen Spielen, andere laufen dennoch zu schnell."
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "FRAME LIMIT"
 msgstr "BILDRATE BEGRENZEN"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Reduce stutter that happens when compiling shaders."
 msgstr "Reduziert Ruckeln, das beim Kompilieren von Shadern auftritt."
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
 msgstr "DISK SHADER CACHE"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid ""
 "Compile shaders using background threads to avoid shader compilation "
@@ -9079,28 +9079,28 @@ msgstr ""
 "Kompilieren Sie Shader mithilfe von Hintergrundthreads, um Stottern bei der "
 "Shader-Kompilierung zu vermeiden. Kann zu Grafikfehlern führen."
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "ENABLE ASYNC SHADER COMPILATION"
 msgstr "AKTIVIERE ASYNCHRONE SHADER KOMPILIERUNG"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "Preloading is impossible from ES."
 msgstr "Das Vorladen ist von ES aus nicht möglich."
 
-#. TRANSLATION: lemonade, duckstation
+#. TRANSLATION: citra, duckstation
 msgctxt "game_options"
 msgid "Preload"
 msgstr "Preload"
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
 msgstr ""
 "Der New 3DS hat einen schnelleren Prozessor, ZL/ZR-Tasten und einen C-Stick."
 
-#. TRANSLATION: lemonade, panda3ds
+#. TRANSLATION: citra, panda3ds
 msgctxt "game_options"
 msgid "NEW 3DS MODE"
 msgstr "NEUER 3DS MODUS"
@@ -15150,11 +15150,6 @@ msgstr "High-end Computer"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "Manual (Default)"
-msgstr "Manuell (Standard)"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
 msgid "Alternative Coloured Dot Matrix Display (needs additional file)."
 msgstr "Alternative farbige Dot-Matrix-Anzeige (benötigt zusätzliche Datei)."
 
@@ -15162,6 +15157,21 @@ msgstr "Alternative farbige Dot-Matrix-Anzeige (benötigt zusätzliche Datei)."
 msgctxt "game_options"
 msgid "ALTCOLOR"
 msgstr "ALTCOLOR"
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Playfield configuration"
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
+msgctxt "game_options"
+msgid "WINDOWS POSITIONS"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "PLAYFIELD"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15221,11 +15231,6 @@ msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "PinMAME DMD disabled"
-msgstr "PinMAME DMD deaktiviert"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
 msgid ""
 "Extra DMD (Dot Matrix Display) window to display the score for tables "
 "without a rom. By default, settings come from the VPinballX.ini "
@@ -15239,11 +15244,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "FLEX DMD"
 msgstr "FLEX DMD"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
-msgid "FlexDMD disabled"
-msgstr "FlexDMD deaktiviert"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15262,11 +15262,6 @@ msgstr "HINTERGRUNDGLAS (B2S)"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
-msgid "Backglass disabled"
-msgstr "Hintergrundglas deaktiviert"
-
-#. TRANSLATION: vpinball
-msgctxt "game_options"
 msgid ""
 "When the Backglass is activated, display the small additional part with the "
 "scores."
@@ -15278,6 +15273,16 @@ msgstr ""
 msgctxt "game_options"
 msgid "DISPLAY BACKGLASS DMD"
 msgstr "BILDSCHIRM HINTERGRUNDGLAS DMD"
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "DMD window ratio"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "DMD SIZE"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15710,56 +15715,6 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Move Stylet Pointer"
-msgstr "Stylet-Zeiger bewegen"
-
-#. TRANSLATION: 3ds.lemonade.keys, xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, ...
-msgctxt "keys_files"
-msgid "Exit emulator"
-msgstr "Emulator beenden"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "Emulation neustarten"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Continue/Pause emulation"
-msgstr "Emulation fortfahren/pausieren"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Swap Screen"
-msgstr "Bildschirm tauschen"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Toggle Screen Layout"
-msgstr "Bildschirmlayout umschalten"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Bildschirmfoto"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Toggle Speed Limit"
-msgstr "Geschwindigkeitslimit umschalten"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Swap screens"
-msgstr "Bildschirme tauschen"
-
-#. TRANSLATION: 3ds.lemonade.keys, 3ds.panda3ds.keys
-msgctxt "keys_files"
-msgid "Mouse Click"
-msgstr "Mausklick"
-
 #. TRANSLATION: switch.ryujinx.keys
 msgctxt "keys_files"
 msgid "Emulator Config"
@@ -15890,6 +15845,11 @@ msgctxt "keys_files"
 msgid "Set to full screen"
 msgstr "Vollbildmodus festlegen"
 
+#. TRANSLATION: xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys, ...
+msgctxt "keys_files"
+msgid "Exit emulator"
+msgstr "Emulator beenden"
+
 #. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
 msgctxt "keys_files"
 msgid "Virtual Keyboard"
@@ -16004,6 +15964,51 @@ msgstr "Controller-Bildschirm anzeigen"
 msgctxt "keys_files"
 msgid "Service menu"
 msgstr ""
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Move Stylet Pointer"
+msgstr "Stylet-Zeiger bewegen"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Restart Emulation"
+msgstr "Emulation neustarten"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Continue/Pause emulation"
+msgstr "Emulation fortfahren/pausieren"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Swap Screen"
+msgstr "Bildschirm tauschen"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Toggle Screen Layout"
+msgstr "Bildschirmlayout umschalten"
+
+#. TRANSLATION: 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "Bildschirmfoto"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Toggle Speed Limit"
+msgstr "Geschwindigkeitslimit umschalten"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Swap screens"
+msgstr "Bildschirme tauschen"
+
+#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Mouse Click"
+msgstr "Mausklick"
 
 #. TRANSLATION: moonlight.moonlight.keys
 msgctxt "keys_files"
@@ -17151,21 +17156,6 @@ msgstr "Schnellspeichern"
 #~ msgstr "VSync"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Turn on to configure settings from this GUI (Recommended). If disabled, "
-#~ "you have to manually edit the Config File (Experts only - not "
-#~ "recommended)."
-#~ msgstr ""
-#~ "Aktivieren Sie diese Option, um die Einstellungen über diese grafische "
-#~ "Benutzeroberfläche zu konfigurieren (empfohlen). Wenn deaktiviert, müssen "
-#~ "Sie die Konfigurationsdatei manuell bearbeiten (nur für Experten - nicht "
-#~ "empfohlen)."
-
-#~ msgctxt "game_options"
-#~ msgid "ENABLE EMULATIONSTATION CONFIGURATION"
-#~ msgstr "KONFIGURATION DER EMULATIONSSTATION AKTIVIEREN"
-
-#~ msgctxt "game_options"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
 #~ msgstr ""
 #~ "Einstellen der gewünschten maximalen Bildwiederholfrequenz, wenn Vsync "
@@ -17278,6 +17268,37 @@ msgstr "Schnellspeichern"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Schnelles Vorspulen"
+
+#~ msgctxt "game_options"
+#~ msgid "Manual (Default)"
+#~ msgstr "Manuell (Standard)"
+
+#~ msgctxt "game_options"
+#~ msgid "PinMAME DMD disabled"
+#~ msgstr "PinMAME DMD deaktiviert"
+
+#~ msgctxt "game_options"
+#~ msgid "FlexDMD disabled"
+#~ msgstr "FlexDMD deaktiviert"
+
+#~ msgctxt "game_options"
+#~ msgid "Backglass disabled"
+#~ msgstr "Hintergrundglas deaktiviert"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Turn on to configure settings from this GUI (Recommended). If disabled, "
+#~ "you have to manually edit the Config File (Experts only - not "
+#~ "recommended)."
+#~ msgstr ""
+#~ "Aktivieren Sie diese Option, um die Einstellungen über diese grafische "
+#~ "Benutzeroberfläche zu konfigurieren (empfohlen). Wenn deaktiviert, müssen "
+#~ "Sie die Konfigurationsdatei manuell bearbeiten (nur für Experten - nicht "
+#~ "empfohlen)."
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE EMULATIONSTATION CONFIGURATION"
+#~ msgstr "KONFIGURATION DER EMULATIONSSTATION AKTIVIEREN"
 
 #~ msgctxt "game_options"
 #~ msgid "AMD FidelityFX (Vulkan Only)"

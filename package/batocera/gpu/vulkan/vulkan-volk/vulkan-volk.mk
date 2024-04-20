@@ -3,8 +3,8 @@
 # vulkan-volk
 #
 ################################################################################
-# Version: Commits on Apr 10, 2024
-VULKAN_VOLK_VERSION = 078838212830ddb9e5a9d2962ff456b42cc33895
+# Version: Commits on Apr 19, 2024
+VULKAN_VOLK_VERSION = 3a8068a57417940cf2bf9d837a7bb60d015ca2f1
 VULKAN_VOLK_SITE =  https://github.com/zeux/volk
 VULKAN_VOLK_GIT_SUBMODULES=YES
 VULKAN_VOLK_SITE_METHOD=git

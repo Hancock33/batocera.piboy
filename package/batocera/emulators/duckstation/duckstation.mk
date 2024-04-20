@@ -3,19 +3,20 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Apr 09, 2024
-DUCKSTATION_VERSION = d4d7a13feddcf067576fc833fc390eedb25880c5
+# Version: Commits on Apr 20, 2024
+DUCKSTATION_VERSION = 8867bb129a803fa88371645920f27430eaec7657
 DUCKSTATION_SITE = https://github.com/stenzek/duckstation.git
 DUCKSTATION_SITE_METHOD=git
 DUCKSTATION_GIT_SUBMODULES=YES
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_DEPENDENCIES = boost ecm ffmpeg fmt libcurl libdrm libevdev sdl2 shaderc webp zstd
+DUCKSTATION_DEPENDENCIES += qt6base qt6tools qt6svg
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
 
 DUCKSTATION_CONF_OPTS += -DBUILD_SHARED_LIBS=FALSE
 DUCKSTATION_CONF_OPTS += -DENABLE_DISCORD_PRESENCE=OFF
-DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=OFF
-DUCKSTATION_CONF_OPTS += -DBUILD_NOGUI_FRONTEND=ON
+DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=ON
+DUCKSTATION_CONF_OPTS += -DBUILD_NOGUI_FRONTEND=OFF
 DUCKSTATION_CONF_ENV += LDFLAGS=-lpthread
 
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
@@ -40,6 +41,7 @@ define DUCKSTATION_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/duckstation
 	$(INSTALL) -D $(@D)/buildroot-build/bin/duckstation*	$(TARGET_DIR)/usr/bin/duckstation
 	cp -pr	$(@D)/data/resources							$(TARGET_DIR)/usr/bin/duckstation/
+	cp -R $(@D)/buildroot-build/bin/translations			$(TARGET_DIR)/usr/bin/duckstation/
 
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy
