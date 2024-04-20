@@ -1433,7 +1433,7 @@ amiga1200:
   manufacturer:         Commodore
   release:              1992
   hardware:             computer
-  extensions:           [adf, uae, ipf, dms, dmz, adz, lha, hdf, exe, m3u, zip]
+  extensions:           [adf, adz, dms, dmz, exe, hdf, ipf, lha, m3u, raw, scp, uae, zip]
   platform:             amiga
   group:                amiga
   emulators:
@@ -1459,7 +1459,7 @@ amiga500:
   manufacturer:         Commodore
   release:              1987
   hardware:             computer
-  extensions:           [adf, uae, ipf, dms, dmz, adz, lha, hdf, exe, m3u, zip]
+  extensions:           [adf, adz, dms, dmz, exe, hdf, ipf, lha, m3u, raw, scp, uae, zip]
   platform:             amiga
   group:                amiga
   emulators:
@@ -5797,17 +5797,19 @@ saturn:
       yabasanshiro:     { requireAnyOf: [BR2_PACKAGE_YABASANSHIRO], incompatible_extensions: [ccd, m3u, zip] }
 
 segastv:
-  name:                 S-TV
-  manufacturer:         Arcade
+  name:                 Sega Titan Video
+  manufacturer:         Sega
   release:              1994
   hardware:             arcade
-  extensions:           [zip]
-  platform:             arcade
+  extensions:           [7z, zip]
+  platform:             st-v, arcade
   emulators:
     libretro:
       kronos:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_KRONOS]   }
       mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010] }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]     }
+    mame:
+      mame:             { requireAnyOf: [ BR2_PACKAGE_MAME ]            }
 
 sega32x:
   name:                 32x
