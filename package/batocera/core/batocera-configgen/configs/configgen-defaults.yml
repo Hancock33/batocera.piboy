@@ -23,8 +23,8 @@ twentyfourtyeight:
   emulator: libretro
   core:     opera
 3ds:
-  emulator: lemonade
-  core:     lemonade
+  emulator: citra
+  core:     citra
   options:
     powersave: '1'
 abuse:
@@ -1028,6 +1028,9 @@ unico:
 universal:
   emulator: libretro
   core:     mame078plus
+uqm:
+  emulator: uqm
+  core:     uqm
 uzebox:
   emulator: libretro
   core:     uzem

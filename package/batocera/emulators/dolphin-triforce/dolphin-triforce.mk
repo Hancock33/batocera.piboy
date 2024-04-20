@@ -3,9 +3,9 @@
 # dolphin-triforce
 #
 ################################################################################
-# Version: Commits on Feb 29, 2024
-DOLPHIN_TRIFORCE_VERSION = 8c6e5e0ed7b75578f368ccb4aec23777fdd8f9a9
-DOLPHIN_TRIFORCE_SITE = https://github.com/JuanMiguelBG/dolphin-triforce.git
+# Version: Commits on Apr 20, 2024
+DOLPHIN_TRIFORCE_VERSION = 21716bf8ae4c07d69d346d45bdc699d09818f16d
+DOLPHIN_TRIFORCE_SITE = https://github.com/Hancock33/dolphin-triforce.git
 DOLPHIN_TRIFORCE_SITE_METHOD = git
 DOLPHIN_TRIFORCE_LICENSE = GPLv2+
 DOLPHIN_TRIFORCE_GIT_SUBMODULES = YES
@@ -45,7 +45,7 @@ else
 endif
 
 define DOLPHIN_TRIFORCE_INSTALL_TARGET_CMDS
-	cp $(@D)/buildroot-build/Binaries/dolphin-triforce $(TARGET_DIR)/usr/bin/dolphin-triforce
+	cp $(@D)/buildroot-build/Binaries/dolphin-emu $(TARGET_DIR)/usr/bin/dolphin-triforce
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-triforce/*.keys $(TARGET_DIR)/usr/share/evmapy
 endef

@@ -1,5 +1,5 @@
-config BR2_PACKAGE_LEMONADE
-    bool "lemonade"
+config BR2_PACKAGE_CITRA
+    bool "citra"
     select BR2_PACKAGE_BATOCERA_QT6
     select BR2_PACKAGE_FMT
     select BR2_PACKAGE_BOOST
@@ -16,5 +16,6 @@ config BR2_PACKAGE_LEMONADE
     select BR2_PACKAGE_LIBBACKTRACE
 
     help
-      Lemonade is an open-source emulator for the Nintendo 3DS.
-      https://lemonade-emu.org/
+      Citra is an open-source emulator for the Nintendo 3DS.
+
+      https://github.com/PabloMK7/citra

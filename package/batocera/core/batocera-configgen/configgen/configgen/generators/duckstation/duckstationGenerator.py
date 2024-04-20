@@ -110,7 +110,8 @@ class DuckstationGenerator(Generator):
         if system.isOptSet("duckstation_PatchFastBoot"):
             settings.set("BIOS", "PatchFastBoot", system.config["duckstation_PatchFastBoot"])
         else:
-            settings.set("BIOS", "PatchFastBoot", "false")
+            settings.set("BIOS", "PatchFastBoot", "true")
+
         # Find & populate BIOS
         USbios = [ "scph101.bin", "scph1001.bin", "scph5501.bin", "scph7001.bin", "scph7501.bin" ]
         EUbios = [ "scph1002.bin", "scph5502.bin", "scph5552.bin", "scph7002.bin", "scph7502.bin", "scph9002.bin", "scph102a.bin", "scph102b.bin" ]
@@ -165,7 +166,7 @@ class DuckstationGenerator(Generator):
         if system.isOptSet("duckstation_threadedpresentation"):
             settings.set("GPU", "ThreadedPresentation", system.config["duckstation_threadedpresentation"])
         else:
-            settings.set("GPU", "ThreadedPresentation", "false")
+            settings.set("GPU", "ThreadedPresentation", "true")
         # Internal resolution
         if system.isOptSet("duckstation_resolution_scale"):
             settings.set("GPU", "ResolutionScale", system.config["duckstation_resolution_scale"])
@@ -375,16 +376,16 @@ class DuckstationGenerator(Generator):
         if not settings.has_section("MemoryCards"):
             settings.add_section("MemoryCards")
         # Set memory card location
-        settings.set("MemoryCards", "Directory", "../../../saves/duckstation/memcards")
+        settings.set("MemoryCards", "Directory", "/userdata/saves/psx/duckstation/memcards")
 
         ## [Folders]
         if not settings.has_section("Folders"):
             settings.add_section("Folders")
         # Set other folder locations too
-        settings.set("Folders", "Cache", "../../cache/duckstation")
-        settings.set("Folders", "Screenshots", "../../../screenshots")
-        settings.set("Folders", "SaveStates", "../../../saves/duckstation")
-        settings.set("Folders", "Cheats", "../../../cheats/duckstation")
+        settings.set("Folders", "Cache", "/userdata/system/.cache/duckstation")
+        settings.set("Folders", "Screenshots", "/userdata/screenshots")
+        settings.set("Folders", "SaveStates", "/userdata/saves/psxduckstation")
+        settings.set("Folders", "Cheats", "/userdata/cheats/duckstation")
 
         ## [Pad]
         # Clear existing Pad(x) configs

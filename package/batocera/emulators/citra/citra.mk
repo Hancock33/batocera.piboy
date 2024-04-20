@@ -1,0 +1,51 @@
+################################################################################
+#
+# citra
+#
+################################################################################
+# Version: Commits on Apr 10, 2024
+CITRA_VERSION = e26ceabfd1d4f3d15063164f1a2d48cea5c138c0
+CITRA_SITE = https://github.com/PabloMK7/citra.git
+CITRA_SITE_METHOD=git
+CITRA_GIT_SUBMODULES=YES
+CITRA_LICENSE = GPLv2
+CITRA_DEPENDENCIES += boost catch2 cubeb fdk-aac ffmpeg fmt libbacktrace qt6base qt6multimedia qt6tools sdl2
+CITRA_SUPPORTS_IN_SOURCE_BUILD = NO
+
+CITRA_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
+CITRA_CONF_OPTS += -DENABLE_LTO=ON
+CITRA_CONF_OPTS += -DENABLE_SDL2=ON
+CITRA_CONF_OPTS += -DENABLE_WEB_SERVICE=ON
+CITRA_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
+CITRA_CONF_OPTS += -DUSE_SYSTEM_LIBS=ON
+CITRA_CONF_OPTS += -DDISABLE_SYSTEM_CPP_HTTPLIB=ON
+CITRA_CONF_OPTS += -DDISABLE_SYSTEM_CPP_JWT=ON
+CITRA_CONF_OPTS += -DDISABLE_SYSTEM_CRYPTOPP=ON
+CITRA_CONF_OPTS += -DDISABLE_SYSTEM_DYNARMIC=ON
+CITRA_CONF_OPTS += -DDISABLE_SYSTEM_INIH=ON
+CITRA_CONF_OPTS += -DDISABLE_SYSTEM_LODEPNG=ON
+CITRA_CONF_OPTS += -DDISABLE_SYSTEM_VMA=ON
+CITRA_CONF_OPTS += -DDISABLE_SYSTEM_XBYAK=ON
+CITRA_CONF_OPTS += -DCITRA_WARNINGS_AS_ERRORS=OFF
+
+CITRA_CONF_ENV += LDFLAGS=-lpthread
+
+define CITRA_INSTALL_TARGET_CMDS
+	mkdir -p $(TARGET_DIR)/usr/bin
+	$(INSTALL) -D $(@D)/buildroot-build/bin/Release/citra-qt $(TARGET_DIR)/usr/bin/citra-qt
+endef
+
+define CITRA_EVMAP
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/citra/3ds.citra.keys $(TARGET_DIR)/usr/share/evmapy
+endef
+
+define NO_DL_EXTERNAL
+	sed -i '/(DownloadExternals)/d' $(@D)/CMakeLists.txt
+endef
+
+CITRA_POST_INSTALL_TARGET_HOOKS = CITRA_EVMAP
+CITRA_PRE_CONFIGURE_HOOKS += NO_DL_EXTERNAL
+
+$(eval $(cmake-package))
+
