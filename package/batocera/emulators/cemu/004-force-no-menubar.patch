@@ -1,17 +1,17 @@
 diff --git a/src/config/LaunchSettings.cpp b/src/config/LaunchSettings.cpp
-index fdd4cc6..df3b426 100644
+index 1731f50..3073ded 100644
 --- a/src/config/LaunchSettings.cpp
 +++ b/src/config/LaunchSettings.cpp
-@@ -71,6 +71,8 @@ bool LaunchSettings::HandleCommandline(const std::vector<std::wstring>& args)
+@@ -70,6 +70,8 @@ bool LaunchSettings::HandleCommandline(const std::vector<std::wstring>& args)
+ 
  		("force-interpreter", po::value<bool>()->implicit_value(true), "Force interpreter CPU emulation, disables recompiler")
- 		("enable-gdbstub", po::value<bool>()->implicit_value(true), "Enable GDB stub to debug executables inside Cemu using an external debugger")
- 
+ 		("enable-gdbstub", po::value<bool>()->implicit_value(true), "Enable GDB stub to debug executables inside Cemu using an external debugger");
++		
 +		("force-no-menubar", po::value<bool>()->implicit_value(true), "Force no menubar (cosmetic)")
-+
- 		("act-url", po::value<std::string>(), "URL prefix for account server")
- 		("ecs-url", po::value<std::string>(), "URL for ECS service");
  
-@@ -183,6 +185,9 @@ bool LaunchSettings::HandleCommandline(const std::vector<std::wstring>& args)
+ 	po::options_description hidden{ "Hidden options" };
+ 	hidden.add_options()
+@@ -177,6 +179,9 @@ bool LaunchSettings::HandleCommandline(const std::vector<std::wstring>& args)
  		if (vm.count("enable-gdbstub"))
  			s_enable_gdbstub = vm["enable-gdbstub"].as<bool>();
  
@@ -22,10 +22,10 @@ index fdd4cc6..df3b426 100644
  		std::string output_path;
  		if (vm.count("extract"))
 diff --git a/src/config/LaunchSettings.h b/src/config/LaunchSettings.h
-index f87dc60..e72eda8 100644
+index b0f673a..bbae98a 100644
 --- a/src/config/LaunchSettings.h
 +++ b/src/config/LaunchSettings.h
-@@ -28,6 +28,8 @@ public:
+@@ -27,6 +27,8 @@ public:
  
  	static bool ForceInterpreter() { return s_force_interpreter; };
  
@@ -33,9 +33,9 @@ index f87dc60..e72eda8 100644
 +
  	static std::optional<uint32> GetPersistentId() { return s_persistent_id; }
  
- 	static std::string GetActURLPrefix() { return serviceURL_ACT; }
-@@ -47,6 +49,8 @@ private:
- 	inline static bool s_force_intel_legacy = false;
+ private:
+@@ -41,6 +43,8 @@ private:
+ 	inline static bool s_nsight_mode = false;
  
  	inline static bool s_force_interpreter = false;
 +
@@ -44,10 +44,10 @@ index f87dc60..e72eda8 100644
  	inline static std::optional<uint32> s_persistent_id{};
  
 diff --git a/src/gui/MainWindow.cpp b/src/gui/MainWindow.cpp
-index d271ca3..2f91e18 100644
+index da57870..19f1dca 100644
 --- a/src/gui/MainWindow.cpp
 +++ b/src/gui/MainWindow.cpp
-@@ -1743,7 +1743,8 @@ void MainWindow::SetMenuVisible(bool state)
+@@ -1748,7 +1748,8 @@ void MainWindow::SetMenuVisible(bool state)
  	if (m_menu_visible == state)
  		return;
  
@@ -57,7 +57,7 @@ index d271ca3..2f91e18 100644
  	m_menu_visible = state;
  }
  
-@@ -2286,7 +2287,8 @@ void MainWindow::RecreateMenu()
+@@ -2301,7 +2302,8 @@ void MainWindow::RecreateMenu()
  
  	m_menuBar->Append(helpMenu, _("&Help"));
  
