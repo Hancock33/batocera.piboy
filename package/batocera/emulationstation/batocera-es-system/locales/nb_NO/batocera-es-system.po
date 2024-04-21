@@ -17016,22 +17016,6 @@ msgstr "Hurtiglagring"
 #~ msgstr "Vsync"
 
 #~ msgctxt "game_options"
-#~ msgid "Manual (Default)"
-#~ msgstr "Manuell (standard)"
-
-#~ msgctxt "game_options"
-#~ msgid "PinMAME DMD disabled"
-#~ msgstr "PinMAME DMD deaktivert"
-
-#~ msgctxt "game_options"
-#~ msgid "FlexDMD disabled"
-#~ msgstr "FlexDMD deaktivert"
-
-#~ msgctxt "game_options"
-#~ msgid "Backglass disabled"
-#~ msgstr "Bakglasset er deaktivert"
-
-#~ msgctxt "game_options"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
 #~ msgstr "Angi ønsket maksimal oppdateringsfrekvens når Vsync er av."
 
@@ -17142,6 +17126,22 @@ msgstr "Hurtiglagring"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "FastForward"
+
+#~ msgctxt "game_options"
+#~ msgid "Manual (Default)"
+#~ msgstr "Manuell (standard)"
+
+#~ msgctxt "game_options"
+#~ msgid "PinMAME DMD disabled"
+#~ msgstr "PinMAME DMD deaktivert"
+
+#~ msgctxt "game_options"
+#~ msgid "FlexDMD disabled"
+#~ msgstr "FlexDMD deaktivert"
+
+#~ msgctxt "game_options"
+#~ msgid "Backglass disabled"
+#~ msgstr "Bakglasset er deaktivert"
 
 #~ msgctxt "game_options"
 #~ msgid ""

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-24 00:00+0100\n"
-"PO-Revision-Date: 2024-04-13 00:00+0100\n"
+"PO-Revision-Date: 2024-04-19 00:00+0100\n"
 "Last-Translator: roliverosc <roliverosc@hotmail.com>, 2024\n"
 "Language-Team: Spanish_Spain\n"
 "Language: es_ES\n"
@@ -3550,7 +3550,7 @@ msgstr "Mando Sinclair 1 configurado como AUTO."
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "CONTROLLER TYPE 1"
-msgstr "MANDO TIPO 1"
+msgstr "TIPO DE MANDO 1"
 
 #. TRANSLATION: libretro/fuse, libretro/fuse, libretro/mame078plus, libretro/puae, libretro/puae, ...
 msgctxt "game_options"
@@ -3600,7 +3600,7 @@ msgstr "Mando Sinclair 2 configurado como AUTO."
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "CONTROLLER TYPE 2"
-msgstr "MANDO TIPO 2"
+msgstr "TIPO DE MANDO 2"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -3621,7 +3621,7 @@ msgstr "Requerido para ciertos efectos visuales."
 #. TRANSLATION: libretro/gambatte, libretro/potator
 msgctxt "game_options"
 msgid "LCD GHOSTING EFFECT"
-msgstr "EFECTO FANTASMA LCD"
+msgstr "EFECTO GHOSTING LCD"
 
 #. TRANSLATION: libretro/gambatte, libretro/o2em
 msgctxt "game_options"
@@ -5571,7 +5571,7 @@ msgstr "Comprobación de tiempo de ciclo"
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Lightrec Interpreter"
-msgstr "Lightrec Interpreter"
+msgstr "Intérprete de Lightrec"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -12817,7 +12817,7 @@ msgid ""
 "Runners simplify compatibility of running Windows games. You must have a "
 "runner in it's own directory under /userdata/system/wine/custom."
 msgstr ""
-"Los runners simplifican la compatibilidad al ejecutar juegos de Windows. "
+"Los corredores simplifican la compatibilidad al ejecutar juegos de Windows. "
 "Debe tener un corredor en su propio directorio en /userdata/system/wine/"
 "custom."
 
@@ -13267,7 +13267,7 @@ msgstr "Puede suavizar la imagen."
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
 msgid "Integer Scale"
-msgstr "Escaldo de enteros"
+msgstr "Escalado por enteros"
 
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
@@ -13610,7 +13610,7 @@ msgid ""
 "tearing as it recovers from a slow down. Mailbox can have lower latency but "
 "may drop frames."
 msgstr ""
-"Arreglar el screen tearing. FIFO (Vsync) sin caída de fotogramas. FIFO "
+"Corrige el screen tearing. FIFO (Vsync) sin caída de fotogramas. FIFO "
 "Relaxed permite el tearing mientras se recupera de una desaceleración. "
 "Mailbox puede tener una latencia más baja pero puede perder fotogramas."
 
@@ -15006,14 +15006,14 @@ msgid ""
 "Per Table Folder requires all files to be in the associated rom table "
 "folder. If disabled, consult the Wiki for further details."
 msgstr ""
-"La carpeta por mesa requiere que todos los archivos estén en la carpeta de "
-"la mesa ROM asociada. Si está deshabilitado, consulte la Wiki para obtener "
-"más detalles."
+"Carpeta por mesa requiere que todos los archivos estén en la carpeta de la "
+"mesa ROM asociada. Si está deshabilitado, consulte la Wiki para obtener más "
+"detalles."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "EXPERT SETTINGS"
-msgstr "AJUSTES EXPERTO"
+msgstr "AJUSTES DE EXPERTO"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15119,7 +15119,7 @@ msgstr "Ordenador de gama alta"
 msgctxt "game_options"
 msgid "Alternative Coloured Dot Matrix Display (needs additional file)."
 msgstr ""
-"Pantalla de matriz de puntos de color alternativo (se necesita un archivo "
+"Pantalla de Matriz de Puntos de Color Alternativo (se necesita un archivo "
 "adicional)."
 
 #. TRANSLATION: vpinball
@@ -15130,17 +15130,17 @@ msgstr "ALTCOLOR"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Playfield configuration"
-msgstr ""
+msgstr "Configuración de Playfield"
 
 #. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
 msgctxt "game_options"
 msgid "WINDOWS POSITIONS"
-msgstr ""
+msgstr "POSICIONES DE LAS VENTANAS"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "PLAYFIELD"
-msgstr ""
+msgstr "PLAYFIELD"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15246,12 +15246,12 @@ msgstr "MOSTRAR BACKGLASS DMD"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "DMD window ratio"
-msgstr ""
+msgstr "Relación de ventana DMD"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "DMD SIZE"
-msgstr ""
+msgstr "TAMANO DE DMD"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15881,12 +15881,12 @@ msgstr "Comprar bola extra por un crédito"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left flipper"
-msgstr "Aleta izquierda"
+msgstr "Flipper izquierdo"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Right flipper"
-msgstr "Aleta derecha"
+msgstr "Flipper derecho"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -15991,7 +15991,7 @@ msgstr "Salir del emulador usando SDL"
 #. TRANSLATION: psx.duckstation.keys
 msgctxt "keys_files"
 msgid "Exit Duckstation"
-msgstr "Salir de DuckStation"
+msgstr "Salir de Duckstation"
 
 #. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -16136,7 +16136,7 @@ msgstr "Salir de Steam"
 #. TRANSLATION: flatpak.keys
 msgctxt "keys_files"
 msgid "Exit running Flatpak"
-msgstr "Salir de Flatpak en ejecución"
+msgstr "Salir de Flatpak"
 
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
@@ -16511,7 +16511,7 @@ msgstr ""
 #. TRANSLATION: theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Load"
-msgstr "Carga rápidaz"
+msgstr "Carga rápida"
 
 #. TRANSLATION: theforceengine.keys
 msgctxt "keys_files"
@@ -17130,22 +17130,6 @@ msgstr "Guardado rápido"
 #~ msgstr "Vsync"
 
 #~ msgctxt "game_options"
-#~ msgid "Manual (Default)"
-#~ msgstr "Manual (Por defecto)"
-
-#~ msgctxt "game_options"
-#~ msgid "PinMAME DMD disabled"
-#~ msgstr "PinMAME DMD desactivado"
-
-#~ msgctxt "game_options"
-#~ msgid "FlexDMD disabled"
-#~ msgstr "FlexDMD desactivado"
-
-#~ msgctxt "game_options"
-#~ msgid "Backglass disabled"
-#~ msgstr "Backglass desactivado"
-
-#~ msgctxt "game_options"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
 #~ msgstr ""
 #~ "Establezca la frecuencia de actualización máxima deseada cuando Vsync "
@@ -17258,3 +17242,37 @@ msgstr "Guardado rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rápido"
+
+#~ msgctxt "game_options"
+#~ msgid "Manual (Default)"
+#~ msgstr "Manual (Por defecto)"
+
+#~ msgctxt "game_options"
+#~ msgid "PinMAME DMD disabled"
+#~ msgstr "PinMAME DMD desactivado"
+
+#~ msgctxt "game_options"
+#~ msgid "FlexDMD disabled"
+#~ msgstr "FlexDMD desactivado"
+
+#~ msgctxt "game_options"
+#~ msgid "Backglass disabled"
+#~ msgstr "Backglass desactivado"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Turn on to configure settings from this GUI (Recommended). If disabled, "
+#~ "you have to manually edit the Config File (Experts only - not "
+#~ "recommended)."
+#~ msgstr ""
+#~ "Activar para configurar ajustes desde esta interfaz gráfica de usuario "
+#~ "(recomendado). Si está¡ desactivado, tendrás que editar manualmente el "
+#~ "archivo de configuración (sólo para expertos, no recomendado)."
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE EMULATIONSTATION CONFIGURATION"
+#~ msgstr "ACTIVAR CONFIGURACIÓN DE EMULATIONSTATION"
+
+#~ msgctxt "game_options"
+#~ msgid "AMD FidelityFX (Vulkan Only)"
+#~ msgstr "AMD FidelityFX (Sólo Vulkan)"

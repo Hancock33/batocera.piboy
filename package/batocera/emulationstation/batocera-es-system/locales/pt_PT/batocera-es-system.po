@@ -17072,22 +17072,6 @@ msgstr "Guardar Rápido"
 #~ msgstr "Vsync"
 
 #~ msgctxt "game_options"
-#~ msgid "Manual (Default)"
-#~ msgstr "Manual (Padrão)"
-
-#~ msgctxt "game_options"
-#~ msgid "PinMAME DMD disabled"
-#~ msgstr "PinMAME DMD desativado"
-
-#~ msgctxt "game_options"
-#~ msgid "FlexDMD disabled"
-#~ msgstr "FlexDMD desativado"
-
-#~ msgctxt "game_options"
-#~ msgid "Backglass disabled"
-#~ msgstr "Vidro traseiro desativado"
-
-#~ msgctxt "game_options"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
 #~ msgstr ""
 #~ "Define a taxa de atualização máxima pretendida quando Vsync está "
@@ -17200,3 +17184,19 @@ msgstr "Guardar Rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
+
+#~ msgctxt "game_options"
+#~ msgid "Manual (Default)"
+#~ msgstr "Manual (Padrão)"
+
+#~ msgctxt "game_options"
+#~ msgid "PinMAME DMD disabled"
+#~ msgstr "PinMAME DMD desativado"
+
+#~ msgctxt "game_options"
+#~ msgid "FlexDMD disabled"
+#~ msgstr "FlexDMD desativado"
+
+#~ msgctxt "game_options"
+#~ msgid "Backglass disabled"
+#~ msgstr "Vidro traseiro desativado"

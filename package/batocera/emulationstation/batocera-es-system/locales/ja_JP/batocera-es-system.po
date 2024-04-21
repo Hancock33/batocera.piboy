@@ -16905,22 +16905,6 @@ msgstr "クイック セーブ"
 #~ msgstr "VSYNC(垂直同期)"
 
 #~ msgctxt "game_options"
-#~ msgid "Manual (Default)"
-#~ msgstr "手動 (標準)"
-
-#~ msgctxt "game_options"
-#~ msgid "PinMAME DMD disabled"
-#~ msgstr "PinMAME DMD 無効"
-
-#~ msgctxt "game_options"
-#~ msgid "FlexDMD disabled"
-#~ msgstr "FlexDMD 無効"
-
-#~ msgctxt "game_options"
-#~ msgid "Backglass disabled"
-#~ msgstr "BACKGLASS 無効"
-
-#~ msgctxt "game_options"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
 #~ msgstr "Vsync がオフの場合に、希望の最大リフレッシュ レートを設定します"
 
@@ -17031,6 +17015,22 @@ msgstr "クイック セーブ"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "game_options"
+#~ msgid "Manual (Default)"
+#~ msgstr "手動 (標準)"
+
+#~ msgctxt "game_options"
+#~ msgid "PinMAME DMD disabled"
+#~ msgstr "PinMAME DMD 無効"
+
+#~ msgctxt "game_options"
+#~ msgid "FlexDMD disabled"
+#~ msgstr "FlexDMD 無効"
+
+#~ msgctxt "game_options"
+#~ msgid "Backglass disabled"
+#~ msgstr "BACKGLASS 無効"
 
 #~ msgctxt "game_options"
 #~ msgid "AMD FidelityFX (Vulkan Only)"
