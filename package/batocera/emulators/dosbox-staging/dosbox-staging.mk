@@ -3,8 +3,8 @@
 # dosbox-staging
 #
 ################################################################################
-# Version: Commits on Apr 21, 2024 (branch@release/0.81.x)
-DOSBOX_STAGING_VERSION = 9c5284c908ecb00471335ecda510019f196005d0
+# Version: Commits on Apr 16, 2024 (branch@release/0.81.x)
+DOSBOX_STAGING_VERSION = 6c7aebc26063bc92ad66f774f720045bbb72a3ef
 DOSBOX_STAGING_SITE = $(call github,dosbox-staging,dosbox-staging,$(DOSBOX_STAGING_VERSION))
 DOSBOX_STAGING_DEPENDENCIES = alsa-lib sdl2 sdl2_net sdl2_image fluidsynth zlib libpng libogg libvorbis opus opusfile slirp iir speexdsp
 DOSBOX_STAGING_LICENSE = GPLv2
@@ -13,7 +13,7 @@ DOSBOX_STAGING_CPPFLAGS = -DNDEBUG
 DOSBOX_STAGING_CFLAGS   = -O3 -fstrict-aliasing -fno-signed-zeros -fno-trapping-math -fassociative-math -frename-registers -ffunction-sections -fdata-sections
 DOSBOX_STAGING_CXXFLAGS = -O3 -fstrict-aliasing -fno-signed-zeros -fno-trapping-math -fassociative-math -frename-registers -ffunction-sections -fdata-sections
 
-DOSBOX_STAGING_CONF_OPTS += -Duse_zlib_ng=false
+DOSBOX_STAGING_CONF_OPTS += -Duse_zlib_ng=sse2,ssse3,neon -Dcpp_std=c++17
 
 ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 DOSBOX_STAGING_CONF_OPTS += -Duse_opengl=false
