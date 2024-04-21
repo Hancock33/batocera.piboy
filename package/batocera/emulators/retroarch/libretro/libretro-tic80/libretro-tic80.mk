@@ -24,7 +24,7 @@ LIBRETRO_TIC80_CONF_OPTS += -DBUILD_WITH_MRUBY=OFF
 
 define LIBRETRO_TIC80_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	$(INSTALL) -D $(@D)/lib/tic80_libretro.so $(TARGET_DIR)/usr/lib/libretro/tic80_libretro.so
+	$(INSTALL) -D $(@D)/bin/tic80_libretro.so $(TARGET_DIR)/usr/lib/libretro/tic80_libretro.so
 endef
 
 $(eval $(cmake-package))
