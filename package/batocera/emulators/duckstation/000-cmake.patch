@@ -7,7 +7,7 @@ index 7088df29..d0123640 100644
  
  	# LINUX wasn't added until CMake 3.25.
 -	if (CMAKE_VERSION VERSION_LESS 3.25.0 AND CMAKE_SYSTEM_NAME MATCHES "Linux")
-+	if (CMAKE_VERSION VERSION_LESS 3.95.0CMAKE_SYSTEM_NAME MATCHES "Linux")
++	if (CMAKE_VERSION VERSION_LESS 3.95.0 AND CMAKE_SYSTEM_NAME MATCHES "Linux")
  		# Have to make it visible in this scope as well for below.
  		set(LINUX TRUE PARENT_SCOPE)
  		set(LINUX TRUE)
