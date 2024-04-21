@@ -7,7 +7,7 @@ index 1731f50..3073ded 100644
  		("force-interpreter", po::value<bool>()->implicit_value(true), "Force interpreter CPU emulation, disables recompiler")
  		("enable-gdbstub", po::value<bool>()->implicit_value(true), "Enable GDB stub to debug executables inside Cemu using an external debugger");
 +		
-+		("force-no-menubar", po::value<bool>()->implicit_value(true), "Force no menubar (cosmetic)")
++		("force-no-menubar", po::value<bool>()->implicit_value(true), "Force no menubar (cosmetic)");
  
  	po::options_description hidden{ "Hidden options" };
  	hidden.add_options()
