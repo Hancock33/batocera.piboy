@@ -110,7 +110,7 @@ Initial support for the Lenovo Legion Go
 - X86_64 kernel to 6.8.7
 - Switchres 0.220
 - Btop to 1.3.2
-- Linux firmware to 20240312
+- Linux firmware to 20240410
 - Buildroot to 2024.02.1
 - Xpad-Noone to Jan 10, 2024
 - XpadNeo to Mar 11, 2024
@@ -118,6 +118,7 @@ Initial support for the Lenovo Legion Go
 - Fdupes to 2.3.0
 - FAudio to 24.03
 - Sound Open Firmware to 2023.12.1
+- RyzenAdj to v0.15.0
 
 # 2024/03/04 - batocera.linux 39 - Painted Lady
 ### Special Notes
