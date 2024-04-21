@@ -13295,6 +13295,9 @@ thextech:
         "Hardware (default)": "hw"
         "Software":           "sw"
         "VSync":              "vsync"
+uqm:
+  features: [padtokeyboard]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 vanillara:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
