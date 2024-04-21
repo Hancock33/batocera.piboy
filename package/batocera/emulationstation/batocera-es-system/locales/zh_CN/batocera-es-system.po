@@ -16742,22 +16742,6 @@ msgstr "快速保存"
 #~ msgstr "垂直同步"
 
 #~ msgctxt "game_options"
-#~ msgid "Manual (Default)"
-#~ msgstr "手动（默认）"
-
-#~ msgctxt "game_options"
-#~ msgid "PinMAME DMD disabled"
-#~ msgstr "禁用PinMAME DMD"
-
-#~ msgctxt "game_options"
-#~ msgid "FlexDMD disabled"
-#~ msgstr "禁用FlexDMD"
-
-#~ msgctxt "game_options"
-#~ msgid "Backglass disabled"
-#~ msgstr "禁用背景玻璃"
-
-#~ msgctxt "game_options"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
 #~ msgstr "在Vsync关闭时设置所需的最大刷新率。"
 
@@ -16868,6 +16852,22 @@ msgstr "快速保存"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快进"
+
+#~ msgctxt "game_options"
+#~ msgid "Manual (Default)"
+#~ msgstr "手动（默认）"
+
+#~ msgctxt "game_options"
+#~ msgid "PinMAME DMD disabled"
+#~ msgstr "禁用PinMAME DMD"
+
+#~ msgctxt "game_options"
+#~ msgid "FlexDMD disabled"
+#~ msgstr "禁用FlexDMD"
+
+#~ msgctxt "game_options"
+#~ msgid "Backglass disabled"
+#~ msgstr "禁用背景玻璃"
 
 #~ msgctxt "game_options"
 #~ msgid ""
