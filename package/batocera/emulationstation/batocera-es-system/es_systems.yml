@@ -4522,7 +4522,7 @@ uqm:
   extensions:           [game]
   platform:             pc
   group:                ports
-  path:                 /usr/share/emulationstation/ports/uqm
+  path:                 /userdata/roms/ports/uqm
   emulators:
     uqm:
       uqm:              { requireAnyOf: [ BR2_PACKAGE_UQM ]         }

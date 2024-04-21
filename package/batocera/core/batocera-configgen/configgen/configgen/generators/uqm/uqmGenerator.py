@@ -4,6 +4,7 @@ import os
 import Command
 from generators.Generator import Generator
 import controllersConfig
+import utils.videoMode as videoMode
 
 class UqmGenerator(Generator):
 
@@ -17,11 +18,16 @@ class UqmGenerator(Generator):
         for directory in directories:
             os.makedirs(directory, exist_ok=True)
 
-        with open('/userdata/roms/uqm/version', 'a'): # Create file if does not exist
+        with open('/userdata/roms/ports/uqm/version', 'a'): # Create file if does not exist
             pass
 
-        commandArray = ["urquan","--contentdir=/userdata/roms/uqm",
-                        "--configdir=/userdata/saves/uqm"]
+        res = f'{gameResolution["width"]}' + "x" + f'{gameResolution["height"]}'
+
+        commandArray = ["urquan","-f","-o","-r", res,
+                        "--contentdir=/userdata/roms/ports/uqm",
+                        "--configdir=/userdata/saves/uqm","--addondir=/userdata/roms/ports/uqm/addons"]
+                        
+
 
         return Command.Command(
             array=commandArray,

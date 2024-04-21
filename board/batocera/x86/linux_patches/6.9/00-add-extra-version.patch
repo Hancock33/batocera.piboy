@@ -6,8 +6,8 @@ index 59d8a7f95d0a..1b20d306ff4d 100644
  VERSION = 6
  PATCHLEVEL = 9
  SUBLEVEL = 0
--EXTRAVERSION = -rc4
-+EXTRAVERSION = -rc4-batocera
+-EXTRAVERSION = -rc5
++EXTRAVERSION = -rc5-batocera
  NAME = Hurr durr I'ma ninja sloth
  
  # *DOCUMENTATION*
