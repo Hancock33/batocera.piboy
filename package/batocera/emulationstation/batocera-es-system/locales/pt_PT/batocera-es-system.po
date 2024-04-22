@@ -15084,17 +15084,17 @@ msgstr "ALTCOLOR"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Playfield configuration"
-msgstr ""
+msgstr "Configuração do campo de jogo"
 
 #. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
 msgctxt "game_options"
 msgid "WINDOWS POSITIONS"
-msgstr ""
+msgstr "POSIÇÕES DAS JANELAS"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "PLAYFIELD"
-msgstr ""
+msgstr "CAMPO DE JOGO"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15198,12 +15198,12 @@ msgstr "VISOR DE VIDRO DMD"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "DMD window ratio"
-msgstr ""
+msgstr "Proporção da janela DMD"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "DMD SIZE"
-msgstr ""
+msgstr "TAMANHO DMD"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -17185,18 +17185,4 @@ msgstr "Guardar Rápido"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
 
-#~ msgctxt "game_options"
-#~ msgid "Manual (Default)"
-#~ msgstr "Manual (Padrão)"
 
-#~ msgctxt "game_options"
-#~ msgid "PinMAME DMD disabled"
-#~ msgstr "PinMAME DMD desativado"
-
-#~ msgctxt "game_options"
-#~ msgid "FlexDMD disabled"
-#~ msgstr "FlexDMD desativado"
-
-#~ msgctxt "game_options"
-#~ msgid "Backglass disabled"
-#~ msgstr "Vidro traseiro desativado"
