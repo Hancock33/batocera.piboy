@@ -13,14 +13,6 @@ index b08a5ab58528..3b1adacda930 100644
  		/* ignore battery errors, we can live without it */
  		if (steam->quirks & STEAM_QUIRK_WIRELESS)
  			steam_battery_register(steam);
-@@ -1217,6 +1219,7 @@ static void steam_do_connect_event(struct steam_device *steam, bool connected)
- 	steam->connected = connected;
- 	spin_unlock_irqrestore(&steam->lock, flags);
- 
-+
- 	if (changed && schedule_work(&steam->work_connect) == 0)
- 		dbg_hid("%s: connected=%d event already queued\n",
- 				__func__, connected);
 @@ -1480,10 +1483,10 @@ static void steam_do_deck_input_event(struct steam_device *steam,
  	b13 = data[13];
  	b14 = data[14];
