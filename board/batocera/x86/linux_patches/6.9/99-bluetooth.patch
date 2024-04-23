@@ -1,27 +1,5 @@
-diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
-index 3356af3a7f610d..4c0cc13adb47dc 100644
---- a/drivers/bluetooth/btusb.c
-+++ b/drivers/bluetooth/btusb.c
-@@ -3487,13 +3487,12 @@ static void btusb_dump_hdr_qca(struct hci_dev *hdev, struct sk_buff *skb)
- 
- static void btusb_coredump_qca(struct hci_dev *hdev)
- {
-+	int err;
- 	static const u8 param[] = { 0x26 };
--	struct sk_buff *skb;
- 
--	skb = __hci_cmd_sync(hdev, 0xfc0c, 1, param, HCI_CMD_TIMEOUT);
--	if (IS_ERR(skb))
--		bt_dev_err(hdev, "%s: triggle crash failed (%ld)", __func__, PTR_ERR(skb));
--	kfree_skb(skb);
-+	err = __hci_cmd_send(hdev, 0xfc0c, 1, param);
-+	if (err < 0)
-+		bt_dev_err(hdev, "%s: triggle crash failed (%d)", __func__, err);
- }
- 
- /*
 diff --git a/drivers/bluetooth/btqca.c b/drivers/bluetooth/btqca.c
-index 19cfc342fc7bbb..216826c31ee34f 100644
+index 19cfc342fc7b..216826c31ee3 100644
 --- a/drivers/bluetooth/btqca.c
 +++ b/drivers/bluetooth/btqca.c
 @@ -15,6 +15,8 @@
@@ -83,11 +61,33 @@ index 19cfc342fc7bbb..216826c31ee34f 100644
  	bt_dev_info(hdev, "QCA setup on UART is completed");
  
  	return 0;
+diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
+index cacab148859c..d3bda685f5a0 100644
+--- a/drivers/bluetooth/btusb.c
++++ b/drivers/bluetooth/btusb.c
+@@ -3483,13 +3483,12 @@ static void btusb_dump_hdr_qca(struct hci_dev *hdev, struct sk_buff *skb)
+ 
+ static void btusb_coredump_qca(struct hci_dev *hdev)
+ {
++	int err;
+ 	static const u8 param[] = { 0x26 };
+-	struct sk_buff *skb;
+ 
+-	skb = __hci_cmd_sync(hdev, 0xfc0c, 1, param, HCI_CMD_TIMEOUT);
+-	if (IS_ERR(skb))
+-		bt_dev_err(hdev, "%s: triggle crash failed (%ld)", __func__, PTR_ERR(skb));
+-	kfree_skb(skb);
++	err = __hci_cmd_send(hdev, 0xfc0c, 1, param);
++	if (err < 0)
++		bt_dev_err(hdev, "%s: triggle crash failed (%d)", __func__, err);
+ }
+ 
+ /*
 diff --git a/drivers/bluetooth/hci_qca.c b/drivers/bluetooth/hci_qca.c
-index ecbc52eaf10109..92fa20f5ac7d0c 100644
+index ecbc52eaf101..160175a23a49 100644
 --- a/drivers/bluetooth/hci_qca.c
 +++ b/drivers/bluetooth/hci_qca.c
-@@ -1905,8 +1905,6 @@ retry:
+@@ -1905,8 +1905,6 @@ static int qca_setup(struct hci_uart *hu)
  	case QCA_WCN6750:
  	case QCA_WCN6855:
  	case QCA_WCN7850:
@@ -96,11 +96,7 @@ index ecbc52eaf10109..92fa20f5ac7d0c 100644
  		qcadev = serdev_device_get_drvdata(hu->serdev);
  		if (qcadev->bdaddr_property_broken)
  			set_bit(HCI_QUIRK_BDADDR_PROPERTY_BROKEN, &hdev->quirks);
-diff --git a/drivers/bluetooth/hci_qca.c b/drivers/bluetooth/hci_qca.c
-index 92fa20f5ac7d..160175a23a49 100644
---- a/drivers/bluetooth/hci_qca.c
-+++ b/drivers/bluetooth/hci_qca.c
-@@ -2323,7 +2323,7 @@  static int qca_serdev_probe(struct serdev_device *serdev)
+@@ -2325,7 +2323,7 @@ static int qca_serdev_probe(struct serdev_device *serdev)
  
  		qcadev->bt_en = devm_gpiod_get_optional(&serdev->dev, "enable",
  					       GPIOD_OUT_LOW);
@@ -109,7 +105,7 @@ index 92fa20f5ac7d..160175a23a49 100644
  		    (data->soc_type == QCA_WCN6750 ||
  		     data->soc_type == QCA_WCN6855)) {
  			dev_err(&serdev->dev, "failed to acquire BT_EN gpio\n");
-@@ -2332,7 +2332,7 @@  static int qca_serdev_probe(struct serdev_device *serdev)
+@@ -2334,7 +2332,7 @@ static int qca_serdev_probe(struct serdev_device *serdev)
  
  		qcadev->sw_ctrl = devm_gpiod_get_optional(&serdev->dev, "swctrl",
  					       GPIOD_IN);
@@ -118,7 +114,7 @@ index 92fa20f5ac7d..160175a23a49 100644
  		    (data->soc_type == QCA_WCN6750 ||
  		     data->soc_type == QCA_WCN6855 ||
  		     data->soc_type == QCA_WCN7850))
-@@ -2354,7 +2354,7 @@  static int qca_serdev_probe(struct serdev_device *serdev)
+@@ -2356,7 +2354,7 @@ static int qca_serdev_probe(struct serdev_device *serdev)
  	default:
  		qcadev->bt_en = devm_gpiod_get_optional(&serdev->dev, "enable",
  					       GPIOD_OUT_LOW);
@@ -127,4 +123,3 @@ index 92fa20f5ac7d..160175a23a49 100644
  			dev_warn(&serdev->dev, "failed to acquire enable gpio\n");
  			power_ctrl_enabled = false;
  		}
-
