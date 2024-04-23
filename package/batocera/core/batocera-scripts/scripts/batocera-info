@@ -40,6 +40,10 @@ if test -n "${BATTREMAINING_CURRENT}" -a -n "${BATTREMAINING_CHARGE}"; then
     fi
 fi
 
+TEMPE=$(cat /sys/devices/virtual/thermal/thermal_zone*/temp /sys/class/hwmon/hwmon*/temp*_input 2>/dev/null | sort -rn | head -1 | sed -e s+"[0-9][0-9][0-9]$"++)
+V_CPUNB=$(LANG=C lscpu | grep 'Core(s) per socket' | awk '{print $4}' | head -n 1)
+V_CPUMAXNB=$(LANG=C lscpu | grep '^CPU(s):' | awk '{print $2}')
+
 ### short version (for osd)
 if test "$1" = "--short"; then
     DT=$(date +%H:%M)
@@ -48,6 +52,15 @@ if test "$1" = "--short"; then
     else
         echo "${DT}"
     fi
+    if test -n "${TEMPE}"; then
+        echo "CPU Temp: ${TEMPE}°C"
+    fi
+    if test "${V_CPUMAXNB}" = "${V_CPUNB}"; then
+        echo "CPU Cores: ${V_CPUNB}"
+    else
+            echo "CPU Cores: ${V_CPUNB}/${V_CPUMAXNB}"
+    fi
+    echo "CPU Usage: "$[100-$(vmstat 1 2|tail -1|awk '{print $15}')]"%"
     exit 0
 fi
 ###
