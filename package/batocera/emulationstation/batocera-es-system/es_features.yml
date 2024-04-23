@@ -13531,6 +13531,11 @@ vpinball:
       prompt: DISPLAY BACKGLASS DMD
       description: When the Backglass is activated, display the small additional part with the scores.
       preset: switchon
+    vpinball_b2sgrill:
+      group: WINDOWS POSITIONS
+      prompt: DISPLAY BACKGLASS GRILL
+      description: When the Backglass is activated, display the grill.
+      preset: switchon
     vpinball_dmdsize:
       group: WINDOWS POSITIONS
       prompt: DMD SIZE
