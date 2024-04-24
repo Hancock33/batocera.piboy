@@ -17,28 +17,42 @@ msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "Adjust the cpu power profile while in-game."
-msgstr "Imposta il profilo energetico cpu in-gioco."
+msgid ""
+"Adjust the cpu power frequency profile whilst in-game. Some systems will "
+"benefit from improved voltage handling."
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "POWER MODE"
 msgstr "PROFILO ENERGETICO"
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, shared
 msgctxt "game_options"
 msgid "High Performance"
 msgstr "Alta Performance"
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, shared
 msgctxt "game_options"
 msgid "Balanced"
 msgstr "Bilanciato"
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, shared
 msgctxt "game_options"
 msgid "Power Saver"
 msgstr "Risparmio Energetico"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Adjust the cpu power profile whist on battery. Overwrites previous Power "
+"Mode(s)."
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "BATTERY MODE"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -15175,6 +15189,16 @@ msgstr "MOSTRA BACKGLASS DMD"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
+msgid "When the Backglass is activated, display the grill."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "DISPLAY BACKGLASS GRILL"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
 msgid "DMD window ratio"
 msgstr ""
 
@@ -17151,6 +17175,10 @@ msgstr "Salvataggio Rapido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "AvanzamentoRapido"
+
+#~ msgctxt "game_options"
+#~ msgid "Adjust the cpu power profile while in-game."
+#~ msgstr "Imposta il profilo energetico cpu in-gioco."
 
 #~ msgctxt "game_options"
 #~ msgid "Manual (Default)"
