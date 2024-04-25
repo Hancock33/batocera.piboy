@@ -3,8 +3,8 @@
 # supertux2
 #
 ################################################################################
-# Version: Commits on Apr 24, 2024
-SUPERTUX2_VERSION = 36db1cc3cb14f86370a5b01d50ffd50c1a3938bc
+# Version: Commits on Apr 25, 2024
+SUPERTUX2_VERSION = 9a9a84ee7795aba127ba0a67a05a27637ba4dabe
 SUPERTUX2_SITE = https://github.com/SuperTux/supertux.git
 SUPERTUX2_SITE_METHOD=git
 SUPERTUX2_GIT_SUBMODULES=YES
