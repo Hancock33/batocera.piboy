@@ -99,7 +99,7 @@ Initial support for the Lenovo Legion Go
 - Xemu to v0.7.120
 - ScummVM to 2.8.1
 - fheroes2 to 1.0.13
-- PCSX2 to v1.7.5663
+- PCSX2 to v1.7.5748
 - Play! & Libretro Play! to Apr 3, 2024 builds
 - Dolphin to 5.0-21453
 - Libretro-hatarib: bump to v0.3
@@ -127,6 +127,7 @@ Initial support for the Lenovo Legion Go
 - FAudio to 24.03
 - Sound Open Firmware to 2023.12.1
 - RyzenAdj to v0.15.0
+- Qt to 6.7.0
 
 # 2024/03/04 - batocera.linux 39 - Painted Lady
 ### Special Notes
