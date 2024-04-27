@@ -12,8 +12,8 @@ SORR_LICENSE = GPL-2.0
 SORR_SUPPORTS_IN_SOURCE_BUILD = NO
 
 SORR_CONF_OPTS += -DCMAKE_TOOLCHAIN_FILE=$(HOST_DIR)/share/buildroot/toolchainfile.cmake
-SORR_CONF_OPTS += -DCMAKE_CXX_FLAGS="-Wno-error -Wno-incompatible-pointer-types -Wno-int-conversion -Wno-implicit-function-declaration"
-SORR_CONF_OPTS += -DCMAKE_C_FLAGS="-Wno-error -Wno-incompatible-pointer-types -Wno-int-conversion -Wno-implicit-function-declaration"
+#SORR_CONF_OPTS += -DCMAKE_CXX_FLAGS="-Wno-error -Wno-incompatible-pointer-types -Wno-int-conversion -Wno-implicit-function-declaration"
+#SORR_CONF_OPTS += -DCMAKE_C_FLAGS="-Wno-error -Wno-incompatible-pointer-types -Wno-int-conversion -Wno-implicit-function-declaration"
 
 define SORR_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/buildroot-build/sorr $(TARGET_DIR)/usr/bin
