@@ -1,5 +1,5 @@
 diff --git a/drivers/hid/hid-steam.c b/drivers/hid/hid-steam.c
-index 2ebd9bc6497f..d7bb93dca23d 100644
+index 78b3f711ef30..08c15c099e72 100644
 --- a/drivers/hid/hid-steam.c
 +++ b/drivers/hid/hid-steam.c
 @@ -66,6 +66,14 @@ static LIST_HEAD(steam_devices);
@@ -33,7 +33,7 @@ index 2ebd9bc6497f..d7bb93dca23d 100644
  };
  
  static int steam_recv_report(struct steam_device *steam,
-@@ -831,6 +841,74 @@ static int steam_input_register(struct steam_device *steam)
+@@ -825,6 +835,74 @@ static int steam_input_register(struct steam_device *steam)
  	return ret;
  }
  
@@ -108,7 +108,7 @@ index 2ebd9bc6497f..d7bb93dca23d 100644
  static void steam_input_unregister(struct steam_device *steam)
  {
  	struct input_dev *input;
-@@ -844,6 +922,24 @@ static void steam_input_unregister(struct steam_device *steam)
+@@ -838,6 +916,24 @@ static void steam_input_unregister(struct steam_device *steam)
  	input_unregister_device(input);
  }
  
@@ -133,7 +133,7 @@ index 2ebd9bc6497f..d7bb93dca23d 100644
  static void steam_battery_unregister(struct steam_device *steam)
  {
  	struct power_supply *battery;
-@@ -896,18 +992,28 @@ static int steam_register(struct steam_device *steam)
+@@ -892,18 +988,28 @@ static int steam_register(struct steam_device *steam)
  	spin_lock_irqsave(&steam->lock, flags);
  	client_opened = steam->client_opened;
  	spin_unlock_irqrestore(&steam->lock, flags);
@@ -164,7 +164,7 @@ index 2ebd9bc6497f..d7bb93dca23d 100644
  	steam_input_unregister(steam);
  	if (steam->serial_no[0]) {
  		hid_info(steam->hdev, "Steam Controller '%s' disconnected",
-@@ -1016,6 +1122,7 @@ static int steam_client_ll_open(struct hid_device *hdev)
+@@ -1012,6 +1118,7 @@ static int steam_client_ll_open(struct hid_device *hdev)
  	steam->client_opened++;
  	spin_unlock_irqrestore(&steam->lock, flags);
  
@@ -172,7 +172,7 @@ index 2ebd9bc6497f..d7bb93dca23d 100644
  	steam_input_unregister(steam);
  
  	return 0;
-@@ -1036,6 +1143,7 @@ static void steam_client_ll_close(struct hid_device *hdev)
+@@ -1032,6 +1139,7 @@ static void steam_client_ll_close(struct hid_device *hdev)
  	if (connected) {
  		steam_set_lizard_mode(steam, lizard_mode);
  		steam_input_register(steam);
@@ -180,7 +180,7 @@ index 2ebd9bc6497f..d7bb93dca23d 100644
  	}
  }
  
-@@ -1127,6 +1235,7 @@ static int steam_probe(struct hid_device *hdev,
+@@ -1123,6 +1231,7 @@ static int steam_probe(struct hid_device *hdev,
  	INIT_DELAYED_WORK(&steam->mode_switch, steam_mode_switch_cb);
  	INIT_LIST_HEAD(&steam->list);
  	INIT_WORK(&steam->rumble_work, steam_haptic_rumble_cb);
@@ -188,7 +188,7 @@ index 2ebd9bc6497f..d7bb93dca23d 100644
  
  	/*
  	 * With the real steam controller interface, do not connect hidraw.
-@@ -1386,12 +1495,12 @@ static void steam_do_input_event(struct steam_device *steam,
+@@ -1382,12 +1491,12 @@ static void steam_do_input_event(struct steam_device *steam,
   *  18-19 | s16   | ABS_HAT0Y | left-pad Y value
   *  20-21 | s16   | ABS_HAT1X | right-pad X value
   *  22-23 | s16   | ABS_HAT1Y | right-pad Y value
@@ -207,7 +207,7 @@ index 2ebd9bc6497f..d7bb93dca23d 100644
   *  36-37 | s16   | --        | quaternion W value
   *  38-39 | s16   | --        | quaternion X value
   *  40-41 | s16   | --        | quaternion Y value
-@@ -1552,6 +1661,32 @@ static void steam_do_deck_input_event(struct steam_device *steam,
+@@ -1548,6 +1657,32 @@ static void steam_do_deck_input_event(struct steam_device *steam,
  	input_sync(input);
  }
  
@@ -240,7 +240,7 @@ index 2ebd9bc6497f..d7bb93dca23d 100644
  /*
   * The size for this message payload is 11.
   * The known values are:
-@@ -1589,6 +1724,7 @@ static int steam_raw_event(struct hid_device *hdev,
+@@ -1585,6 +1720,7 @@ static int steam_raw_event(struct hid_device *hdev,
  {
  	struct steam_device *steam = hid_get_drvdata(hdev);
  	struct input_dev *input;
@@ -248,7 +248,7 @@ index 2ebd9bc6497f..d7bb93dca23d 100644
  	struct power_supply *battery;
  
  	if (!steam)
-@@ -1634,6 +1770,9 @@ static int steam_raw_event(struct hid_device *hdev,
+@@ -1630,6 +1766,9 @@ static int steam_raw_event(struct hid_device *hdev,
  		input = rcu_dereference(steam->input);
  		if (likely(input))
  			steam_do_deck_input_event(steam, input, data);

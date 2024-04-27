@@ -4276,7 +4276,7 @@ index 901d1961b739..05c49141f580 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index c9226d93556b..f0a67ee1f216 100644
+index 98ce25d5c576..6283015be0f6 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -157,6 +157,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_351_DMUB);
@@ -4289,7 +4289,7 @@ index c9226d93556b..f0a67ee1f216 100644
  /**
   * DOC: overview
   *
-@@ -4098,7 +4101,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4099,7 +4102,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  		return r;
  	}
  
@@ -4298,7 +4298,7 @@ index c9226d93556b..f0a67ee1f216 100644
  	if (amdgpu_dm_create_color_properties(adev))
  		return -ENOMEM;
  #endif
-@@ -4113,7 +4116,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4114,7 +4117,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  	return 0;
  }
  
@@ -4307,7 +4307,7 @@ index c9226d93556b..f0a67ee1f216 100644
  #define AMDGPU_DM_DEFAULT_MAX_BACKLIGHT 255
  #define AUX_BL_DEFAULT_TRANSITION_TIME_MS 50
  
-@@ -4131,11 +4134,27 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
+@@ -4132,11 +4135,27 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
  	amdgpu_acpi_get_backlight_caps(&caps);
  	if (caps.caps_valid) {
  		dm->backlight_caps[bl_idx].caps_valid = true;
@@ -4335,7 +4335,7 @@ index c9226d93556b..f0a67ee1f216 100644
  		dm->backlight_caps[bl_idx].min_input_signal =
  				AMDGPU_DM_DEFAULT_MIN_BACKLIGHT;
  		dm->backlight_caps[bl_idx].max_input_signal =
-@@ -4145,6 +4164,9 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
+@@ -4146,6 +4165,9 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
  	if (dm->backlight_caps[bl_idx].aux_support)
  		return;
  
@@ -4345,7 +4345,7 @@ index c9226d93556b..f0a67ee1f216 100644
  	dm->backlight_caps[bl_idx].min_input_signal = AMDGPU_DM_DEFAULT_MIN_BACKLIGHT;
  	dm->backlight_caps[bl_idx].max_input_signal = AMDGPU_DM_DEFAULT_MAX_BACKLIGHT;
  #endif
-@@ -4176,7 +4198,7 @@ static u32 convert_brightness_from_user(const struct amdgpu_dm_backlight_caps *c
+@@ -4177,7 +4199,7 @@ static u32 convert_brightness_from_user(const struct amdgpu_dm_backlight_caps *c
  	if (!get_brightness_range(caps, &min, &max))
  		return brightness;
  
@@ -4354,7 +4354,7 @@ index c9226d93556b..f0a67ee1f216 100644
  	return min + DIV_ROUND_CLOSEST((max - min) * brightness,
  				       AMDGPU_MAX_BL_LEVEL);
  }
-@@ -4191,7 +4213,7 @@ static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *cap
+@@ -4192,7 +4214,7 @@ static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *cap
  
  	if (brightness < min)
  		return 0;
@@ -4363,7 +4363,7 @@ index c9226d93556b..f0a67ee1f216 100644
  	return DIV_ROUND_CLOSEST(AMDGPU_MAX_BL_LEVEL * (brightness - min),
  				 max - min);
  }
-@@ -7595,7 +7617,8 @@ static int amdgpu_dm_connector_get_modes(struct drm_connector *connector)
+@@ -7596,7 +7618,8 @@ static int amdgpu_dm_connector_get_modes(struct drm_connector *connector)
  				drm_add_modes_noedid(connector, 1920, 1080);
  	} else {
  		amdgpu_dm_connector_ddc_get_modes(connector, edid);
@@ -4373,7 +4373,7 @@ index c9226d93556b..f0a67ee1f216 100644
  		amdgpu_dm_connector_add_freesync_modes(connector, edid);
  	}
  	amdgpu_dm_fbc_init(connector);
-@@ -8345,7 +8368,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -8346,7 +8369,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -4487,7 +4487,7 @@ index 1aed55b0ab6a..27af7505caca 100644
  
  	/* TODO: DYNAMIC_VALIDATION needs to be implemented */
 diff --git a/drivers/gpu/drm/amd/pm/amdgpu_pm.c b/drivers/gpu/drm/amd/pm/amdgpu_pm.c
-index f09b9d49297e..55db055d34f6 100644
+index bbd0169010c2..bb1e169538e5 100644
 --- a/drivers/gpu/drm/amd/pm/amdgpu_pm.c
 +++ b/drivers/gpu/drm/amd/pm/amdgpu_pm.c
 @@ -3078,6 +3078,9 @@ static ssize_t amdgpu_hwmon_show_power_cap_min(struct device *dev,
@@ -19169,7 +19169,7 @@ index 000000000000..5ec0a518f685
 +
 +module_exit(legion_exit);
 diff --git a/include/linux/mm.h b/include/linux/mm.h
-index 7b0ee64225de..ad44964415b3 100644
+index b6bdaa18b9e9..4ef2318e61dc 100644
 --- a/include/linux/mm.h
 +++ b/include/linux/mm.h
 @@ -192,7 +192,7 @@ static inline void __mm_zero_struct_page(struct page *page)
