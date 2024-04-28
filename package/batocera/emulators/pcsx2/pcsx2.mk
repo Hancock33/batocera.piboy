@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Apr 28, 2024
-PCSX2_VERSION = 33556c70f227a055bccf494731534053beb3f6da
+PCSX2_VERSION = a485398029a83ad30f4b1c08fa18b3a36014e7d0
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES
@@ -70,28 +70,21 @@ endef
 PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_EVMAPY
 
 define PCSX2_TEXTURES
-	mkdir -p $(TARGET_DIR)/usr/bin/pcsx2/resources/textures
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/textures/ \
-		$(TARGET_DIR)/usr/bin/pcsx2/resources/
+	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/textures/	$(TARGET_DIR)/usr/bin/pcsx2/resources/
 endef
 
-# Download and copy PCSX2 patches.zip to BIOS folder
 define PCSX2_PATCHES
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/ps2
-	mkdir -p $(TARGET_DIR)/usr/bin/pcsx2/resources
 	curl -L https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip -o $(TARGET_DIR)/usr/bin/pcsx2/resources/patches.zip
 
 endef
 
-PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_TEXTURES
-PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_PATCHES
-
 define PCSX2_CROSSHAIRS
-	mkdir -p $(TARGET_DIR)/usr/pcsx2/bin/resources/crosshairs
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/crosshairs/ \
-        $(TARGET_DIR)/usr/pcsx2/bin/resources/
+	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/crosshairs/	$(TARGET_DIR)/usr/bin/pcsx2/resources/
 endef
 
+PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_TEXTURES
+PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_PATCHES
 PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_CROSSHAIRS
 
 $(eval $(cmake-package))

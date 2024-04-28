@@ -7,7 +7,7 @@ Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|d12dd946c1551d330
 Emulators|[duckstation](https://github.com/stenzek/duckstation.git)|d09497821468b6c86e7b8e68dfe9bd9c43373935|Apr 28, 2024
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|67173027b08745c1290cd73315ef4270b7df02b9|Apr 28, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|d7eba3e3c2b82a6f5f28d8f7b7e6cdc4b15dfbfe|Apr 28, 2024
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|33556c70f227a055bccf494731534053beb3f6da|Apr 28, 2024
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|a485398029a83ad30f4b1c08fa18b3a36014e7d0|Apr 28, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|2bb772322084db3fd905d3f9dd13139dd7423950|Apr 28, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|58b17faa695c2cff9b99e435fcef0f0a32777307|Apr 28, 2024 (branch@dev)
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|10c7c5a56b9dafddb2fd7f369f75363bff802086|Apr 28, 2024

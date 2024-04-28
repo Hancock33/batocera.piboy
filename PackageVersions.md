@@ -205,7 +205,7 @@ Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|09e281bb36502e23b7616638484e0bb82b3ba0cc|Apr 26, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|d7eba3e3c2b82a6f5f28d8f7b7e6cdc4b15dfbfe|Apr 28, 2024
 Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|2eaaccd96b7ea479e0341a2a9cc2bc8e81336e9f|Apr 26, 2024
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|33556c70f227a055bccf494731534053beb3f6da|Apr 28, 2024
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|a485398029a83ad30f4b1c08fa18b3a36014e7d0|Apr 28, 2024
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|07c1898303a9af41f5e91172b6b73ddf2f97b984|Apr 17, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|1786a4ddb097f7df1c75b55b4c4b163032614371|Apr 20, 2024
