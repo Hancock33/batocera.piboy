@@ -3,7 +3,7 @@
 # wine-native
 #
 ################################################################################
-
+# Version: Commits on Apr 19, 2024
 WINE_NATIVE_VERSION = wine-9.7
 WINE_NATIVE_SOURCE = wine-$(WINE_NATIVE_VERSION).tar.gz
 WINE_NATIVE_SITE = $(call github,wine-mirror,wine,$(WINE_NATIVE_VERSION))

@@ -3,9 +3,9 @@
 # wine-mono
 #
 ################################################################################
-
+# Version: Commits on Apr 17, 2024
 # Wine Mono addon (required)
-WINE_MONO_VERSION = 9.0.0
+WINE_MONO_VERSION = 9.1.0
 WINE_MONO_SOURCE = wine-mono-$(WINE_MONO_VERSION)-x86.tar.xz
 WINE_MONO_SITE = https://dl.winehq.org/wine/wine-mono/$(WINE_MONO_VERSION)
 
