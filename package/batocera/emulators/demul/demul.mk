@@ -3,9 +3,8 @@
 # demul
 #
 ################################################################################
-
-# version: DEmul x86 v0.7 BUILD 280418 - closed source
-# not developed since 2018
+# Version: Commits on Apr 28, 2018
+# DEmul x86 v0.7 BUILD 280418 - closed source not developed since 2018
 DEMUL_VERSION = demul07_280418
 DEMUL_SOURCE = $(DEMUL_VERSION).7z
 DEMUL_SITE = http://demul.emulation64.com/files
