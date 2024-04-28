@@ -40,6 +40,7 @@ Initial support for the Lenovo Legion Go
 - Libretro-mesen light gun not loading up
 - Vulkan driver version via System Information whne using a multi-GPU systems was sometimes wrong
 - Fix SteamDeck LCD mono audio which snuck in with the v39 release.
+- ScummVM configuration file location & ensure native file system is turned off
 ### Changed
 - RK3326 Replaced the mali-G31 driver with mesa3d
 - Amiga BIOS files now go into the bios/amiga/ subfolder
@@ -90,7 +91,7 @@ Initial support for the Lenovo Legion Go
 - DevilutionX to 1.5.2
 - Commander Genius to 3.5.0
 - Kodi to 20.5-Nexus
-- RPCS3 to 0.0.31
+- RPCS3 to 0.0.31-16388
 - Solarus-engine: bump to Mar 10, 2024 build
 - Cemu to v2.0-78
 - Sonic3-AIR to v24.02.02.0-stable
