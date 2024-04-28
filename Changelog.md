@@ -3,17 +3,20 @@
 Emulators|retroarch|d1b239ec8b28adb08952b2596e7afc77ece3f91e|Apr 28, 2024|http://github.com/libretro/RetroArch
 Emulators|libretro-mgba|df75204a0bfe0453540ad92c6d30abb9d83a5388|Apr 28, 2024|http://github.com/mgba-emu/mgba
 Emulators|libretro-tic80|0bf991728afd6e627bdc5504a4c0f52453b99571|Apr 28, 2024|https://github.com/nesbox/TIC-80.git
+Emulators|amiberry|d12dd946c1551d330ca174e7f7558e07ca943511|Apr 28, 2024|http://github.com/BlitterStudio/amiberry
 Emulators|duckstation|d09497821468b6c86e7b8e68dfe9bd9c43373935|Apr 28, 2024|https://github.com/stenzek/duckstation.git
+Emulators|lightspark|67173027b08745c1290cd73315ef4270b7df02b9|Apr 28, 2024|http://github.com/lightspark/lightspark
 Emulators|openmsx|d7eba3e3c2b82a6f5f28d8f7b7e6cdc4b15dfbfe|Apr 28, 2024|http://github.com/openMSX/openMSX
-Emulators|pcsx2|d63966b07132deeb88c5e0dc640e9242e1c0391f|Apr 28, 2024|https://github.com/pcsx2/pcsx2.git
+Emulators|pcsx2|33556c70f227a055bccf494731534053beb3f6da|Apr 28, 2024|https://github.com/pcsx2/pcsx2.git
 Emulators|snes9x|2bb772322084db3fd905d3f9dd13139dd7423950|Apr 28, 2024|https://github.com/snes9xgit/snes9x.git
 Emulators|suyu|58b17faa695c2cff9b99e435fcef0f0a32777307|Apr 28, 2024 (branch@dev)|https://github.com/suyu-emu/suyu.git
 Emulators|thextech|10c7c5a56b9dafddb2fd7f369f75363bff802086|Apr 28, 2024|https://github.com/TheXTech/TheXTech
+Emulators|vpinball|f0facd757a2f9872f817f2e25c7060301fab2c5e|Apr 28, 2024 (branch@standalone)|http://github.com/vpinball/vpinball
 Ports|corsixth|230b2082fd7c59f25eb571101de02d435af11d88|Apr 28, 2024|http://github.com/CorsixTH/CorsixTH
-Ports|etlegacy|1564f8b2613dbce5c481360fddd878a29230b397|Apr 28, 2024|https://github.com/etlegacy/etlegacy.git
+Ports|etlegacy|48dfda3f230b9e52de70a2c4cf98e9891073bd6a|Apr 28, 2024|https://github.com/etlegacy/etlegacy.git
 Ports|fheroes2|b7b5ad6eecba41419dbe03bf92e7aaf879ddb0d3|Apr 28, 2024|http://github.com/ihhub/fheroes2
 Ports|raze|73c4c46d23232a98d3442073739fa7e2fc369fb3|Apr 28, 2024|http://github.com/ZDoom/Raze
-Ports|stk|9206b923f706e91c79208038fd678653f8235233|Apr 28, 2024|https://github.com/supertuxkart/stk-code.git
+Ports|stk|01d62be5dea3b263486311f0c2e0a501438cc19c|Apr 28, 2024|https://github.com/supertuxkart/stk-code.git
 Ports|supertux2|5edb95ede13e2962c168b177a12e85676fda2753|Apr 28, 2024|https://github.com/SuperTux/supertux.git
 Ports|doomretro|21a2d3fa7fadf38bf4630188608631ddaf2c9a9c|Apr 28, 2024|http://github.com/bradharding/doomretro
 Ports|gzdoom|4625d4ac34d34e3f08f16533da24a3f1e7cb5501|Apr 28, 2024|http://github.com/ZDoom/gzdoom
@@ -26,11 +29,9 @@ Emulators|slang-shaders|67a1ee78e0a6f1906e7ccccdd2f24d7eb24511ee|Apr 27, 2024|ht
 Emulators|applewin|81ad66c2534fa3bc926cf620dfc4d893db770a9f|Apr 27, 2024|https://github.com/audetto/AppleWin
 Emulators|cemu|5be98da0ac5279a4e05eee22f24f3cb807ceb8f5|Apr 27, 2024|https://github.com/cemu-project/Cemu
 Emulators|hatari|6849a7e90e6bc798d34df5e6ebda76afbd1b5f16|Apr 27, 2024|http://github.com/hatari/hatari
-Emulators|lightspark|652076f262c5d3f85ecebae46b51f7862dfd80ba|Apr 27, 2024|http://github.com/lightspark/lightspark
 Emulators|python-pygame2|7a1a2c55210211c38dc95b21547dca169e1ffa85|Apr 27, 2024|http://github.com/pygame/pygame
 Emulators|rpcs3|e32c48d0dd87e5a9978af2e2841e7951903ff757|Apr 27, 2024|https://github.com/RPCS3/rpcs3.git
 Emulators|ruffle|b0443b3b5f2681b91b487d1b3987ad6f3b9a4517|Apr 27, 2024|http://github.com/ruffle-rs/ruffle
-Emulators|vpinball|0ca9b40f58333888c594d6cc25e07374e8cb5d88|Apr 27, 2024 (branch@standalone)|http://github.com/vpinball/vpinball
 Emulators|wine-x86|20240427|Apr 27, 2024|https://github.com/Hancock33/batocera-32bit-libs/releases/download/$(WINE_X86_VERSION)
 Emulators|winetricks|bc2ff55a63ccbf62be8bb163d57e12b7955a2842|Apr 27, 2024|http://github.com/Winetricks/winetricks
 Ports|sdlpop|b8fe6469fe39a42802651d2e5d47f94657cc6d76|Apr 27, 2024|http://github.com/NagyD/SDLPoP
@@ -79,7 +80,6 @@ Ports|fallout2-ce|9fb917c357b20d95d597bed4d67904c29cd5c753|Apr 21, 2024|http://g
 Emulators|libretro-easyrpg|b313163f57a5eb76fb38269e79ca77113cd1288a|Apr 20, 2024|https://github.com/EasyRPG/Player.git
 Emulators|libretro-genesisplusgx|0c45a8a8ab18131d3d470f5dfe3d20c6aa535335|Apr 20, 2024|http://github.com/ekeeke/Genesis-Plus-GX
 Emulators|libretro-ppsspp|1786a4ddb097f7df1c75b55b4c4b163032614371|Apr 20, 2024|https://github.com/hrydgard/ppsspp.git
-Emulators|amiberry|70ad1a95965b50341419e612531829fd78f8993d|Apr 20, 2024|http://github.com/BlitterStudio/amiberry
 Emulators|dolphin-triforce|21716bf8ae4c07d69d346d45bdc699d09818f16d|Apr 20, 2024|https://github.com/Hancock33/dolphin-triforce.git
 Emulators|ppsspp|1786a4ddb097f7df1c75b55b4c4b163032614371|Apr 20, 2024|https://github.com/hrydgard/ppsspp.git
 Emulators|easyrpg-player|b313163f57a5eb76fb38269e79ca77113cd1288a|Apr 20, 2024|http://github.com/EasyRPG/Player
