@@ -3,18 +3,17 @@
 # ryujinx
 #
 ################################################################################
-# Version: Commits on Apr 21, 2024
-RYUJINX_VERSION = 1.1.1289
+# Version: Commits on Apr 22, 2024
+RYUJINX_VERSION = 1.1.1291
+RYUJINX_SITE = https://github.com/Ryujinx/release-channel-master/releases/download/$(RYUJINX_VERSION)
+RYUJINX_LICENSE = MIT
+RYUJINX_DEPENDENCIES = sdl2 openal hicolor-icon-theme adwaita-icon-theme librsvg
 
 ifeq ($(BR2_x86_64),y)
 	RYUJINX_SOURCE = ryujinx-$(RYUJINX_VERSION)-linux_x64.tar.gz
 else
 	RYUJINX_SOURCE = ryujinx-$(RYUJINX_VERSION)-linux_arm64.tar.gz
 endif
-
-RYUJINX_SITE = https://github.com/Ryujinx/release-channel-master/releases/download/$(RYUJINX_VERSION)
-RYUJINX_LICENSE = MIT
-RYUJINX_DEPENDENCIES = sdl2 openal hicolor-icon-theme adwaita-icon-theme librsvg
 
 define RYUJINX_EXTRACT_CMDS
 	mkdir -p $(@D)/target && cd $(@D)/target && \

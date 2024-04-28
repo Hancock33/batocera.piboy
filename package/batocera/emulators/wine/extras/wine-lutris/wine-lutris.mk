@@ -3,7 +3,7 @@
 # wine-lutris
 #
 ################################################################################
-
+# Version: Commits on Jul 06, 2022
 WINE_LUTRIS_VERSION = lutris-wine-7.2-2
 WINE_LUTRIS_SOURCE = wine-$(WINE_LUTRIS_VERSION).tar.gz
 WINE_LUTRIS_SITE = $(call github,lutris,wine,$(WINE_LUTRIS_VERSION))

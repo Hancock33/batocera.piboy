@@ -1,5 +1,5 @@
 diff --git a/engine/sdl/sdlport.c b/engine/sdl/sdlport.c
-index 304b89a9..0d0092b5 100644
+index 464396bb..832a7459 100644
 --- a/engine/sdl/sdlport.c
 +++ b/engine/sdl/sdlport.c
 @@ -27,10 +27,10 @@ char packfile[MAX_FILENAME_LEN] = {"bor.pak"};
@@ -18,10 +18,10 @@ index 304b89a9..0d0092b5 100644
  // sleeps for the given number of microseconds
  #if _POSIX_C_SOURCE >= 199309L
 diff --git a/engine/source/utils.c b/engine/source/utils.c
-index bf90c12d..98304f1a 100644
+index 15116ffa..54f7fb68 100644
 --- a/engine/source/utils.c
 +++ b/engine/source/utils.c
-@@ -95,12 +95,12 @@ typedef void DIR;
+@@ -66,12 +66,12 @@
  #define COPY_ROOT_PATH(buf, name) strncpy(buf, rootDir, strlen(rootDir)); strncat(buf, name, strlen(name)); strncat(buf, "/", 1);
  #define COPY_PAKS_PATH(buf, name) strncpy(buf, paksDir, strlen(paksDir)); strncat(buf, "/", 1); strncat(buf, name, strlen(name));
  #else
@@ -40,7 +40,7 @@ index bf90c12d..98304f1a 100644
  #endif
  
  void debugBuf(unsigned char *buf, size_t size, int columns)
-@@ -154,6 +154,14 @@ u32 debug_time = 0;
+@@ -125,6 +125,14 @@ u32 debug_time = 0;
  
  void getBasePath(char *newName, char *name, int type)
  {
@@ -52,6 +52,6 @@ index bf90c12d..98304f1a 100644
 +	}
 +#endif
 +
- #ifndef DC
      char buf[MAX_BUFFER_LEN] = {""};
      switch(type)
+     {

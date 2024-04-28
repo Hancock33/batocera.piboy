@@ -12,7 +12,6 @@ SORR_LICENSE = GPL-2.0
 SORR_SUPPORTS_IN_SOURCE_BUILD = NO
 
 SORR_CONF_OPTS += -DCMAKE_TOOLCHAIN_FILE=$(HOST_DIR)/share/buildroot/toolchainfile.cmake
-SORR_CONF_OPTS += -DCMAKE_VERBOSE_MAKEFILE=ON
 
 define SORR_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/buildroot-build/sorr $(TARGET_DIR)/usr/bin

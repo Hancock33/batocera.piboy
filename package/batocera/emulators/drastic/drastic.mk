@@ -3,7 +3,7 @@
 # drastic
 #
 ################################################################################
-
+# Version: Commits on Feb 26, 2021
 DRASTIC_VERSION = 1.1
 DRASTIC_SOURCE = drastic.tar.gz
 DRASTIC_SITE = https://github.com/liberodark/drastic/releases/download/$(DRASTIC_VERSION)

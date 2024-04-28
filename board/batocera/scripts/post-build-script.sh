@@ -56,6 +56,7 @@ then
     rm -frv ${TARGET_DIR}/usr/lib/dri/{mali-dp_dri.so,mcde_dri.so,mediatek_dri.so,meson_dri.so,mi0283qt_dri.so,mxsfb-drm_dri.so,pl111_dri.so,repaper_dri.so,rockchip_dri.so}
     rm -frv ${TARGET_DIR}/usr/lib/dri/{st7586_dri.so,st7735r_dri.so,stm_dri.so,sun4i-drm_dri.so}
     rm -frv ${TARGET_DIR}/usr/lib/dri/{kirin_dri.so,komeda_dri.so,rcar-du_dri.so}
+    rm -frv ${TARGET_DIR}/usr/lib/dri/{gm12u320_dri.so,ili9163_dri.so,ili9486_dri.so,panel-mipi-dbi_dri.so,rzg2l-du_dri.so,ssd130x_dri.so,sti_dri.so,udl_dri.so,zynqmp-dpsub_dri.so}
 fi
 
 # remove buildlogs

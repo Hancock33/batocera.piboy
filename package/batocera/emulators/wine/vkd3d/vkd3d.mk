@@ -3,9 +3,9 @@
 # vkd3d
 #
 ################################################################################
-# Commits on 05 Mar, 2024
+# Version: Commits on Mar 05, 2024
 VKD3D_VERSION = vkd3d-1.11
-VKD3D_SITE = 	https://source.winehq.org/git/vkd3d.git
+VKD3D_SITE = https://source.winehq.org/git/vkd3d.git
 VKD3D_LICENSE = LGPL-2.1+
 VKD3D_LICENSE_FILES = COPYING.LIB LICENSE
 VKD3D_DEPENDENCIES = host-bison host-flex host-wine-custom spirv-headers host-libtool vulkan-headers vulkan-loader spirv-tools

@@ -17,14 +17,10 @@ DROIDPORTS_SUPPORTS_IN_SOURCE_BUILD = NO
 DROIDPORTS_CONF_OPTS += -DPLATFORM=linux
 DROIDPORTS_CONF_OPTS += -DPORT=gmloader
 DROIDPORTS_CONF_OPTS += -DCMAKE_TOOLCHAIN_FILE=$(HOST_DIR)/share/buildroot/toolchainfile.cmake
-
-ifeq ($(BR2_arm),y)
-	DROIDPORTS_CONF_OPTS += -DCMAKE_CXX_FLAGS="-w -mlittle-endian -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -lm"
-	DROIDPORTS_CONF_OPTS += -DCMAKE_C_FLAGS="-w -mlittle-endian -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -lm"
-endif
+DROIDPORTS_CONF_OPTS += -DCMAKE_CXX_FLAGS="-Wno-error -Wno-incompatible-pointer-types -Wno-int-conversion -Wno-implicit-function-declaration"
+DROIDPORTS_CONF_OPTS += -DCMAKE_C_FLAGS="-Wno-error -Wno-incompatible-pointer-types -Wno-int-conversion -Wno-implicit-function-declaration"
 
 define DROIDPORTS_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/DROIDPORTS
 	cp -pvr $(@D)/buildroot-build/gmloader $(TARGET_DIR)/usr/bin
 endef
 

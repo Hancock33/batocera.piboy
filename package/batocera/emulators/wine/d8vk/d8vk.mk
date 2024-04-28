@@ -3,7 +3,7 @@
 # d8vk
 #
 ################################################################################
-
+# Version: Commits on May 10, 2023
 D8VK_VERSION = 1.0
 D8VK_SOURCE = d8vk-v$(D8VK_VERSION).tar.gz
 D8VK_SITE = https://github.com/AlpyneDreams/d8vk/releases/download/d8vk-v$(D8VK_VERSION)

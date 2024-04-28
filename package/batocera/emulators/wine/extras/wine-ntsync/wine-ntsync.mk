@@ -3,7 +3,7 @@
 # wine-ntsync
 #
 ################################################################################
-
+# Version: Commits on Mar 04, 2024
 WINE_NTSYNC_VERSION = 312bc2fe6b27e10c3ce56eeda158aef2e5a0a304
 WINE_NTSYNC_SOURCE = $(WINE_NTSYNC_VERSION).tar.gz
 WINE_NTSYNC_SITE = https://repo.or.cz/wine/zf.git/snapshot/
