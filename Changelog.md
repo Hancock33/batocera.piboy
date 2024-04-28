@@ -294,7 +294,7 @@ Ports|spacecadetpinball|52126feb40327345c64fd26adf310b9334b27913|Feb 28, 2024|ht
 Ports|stalker|15c7a6cc25beec865c9c590a0711b1786198ab25|Apr 26, 2024|https://github.com/OpenXRay/xray-16.git
 Ports|stk|9206b923f706e91c79208038fd678653f8235233|Apr 28, 2024|https://github.com/supertuxkart/stk-code.git
 Ports|stuntcar|89f503f4dc11dd05d8dec7e802cd0b24d9c9f08a|Feb 09, 2024|http://github/ptitSeb/stuntcarremake
-Ports|supertux2|edc2d9edeb461df6d42ac6b393625759e71e71f1|Apr 27, 2024|https://github.com/SuperTux/supertux.git
+Ports|supertux2|5edb95ede13e2962c168b177a12e85676fda2753|Apr 28, 2024|https://github.com/SuperTux/supertux.git
 Ports|tekwar|d327bfa6140af179a9409e0ba42f392e03da530b|Mar 03, 2024|https://github.com/jonof/jftekwar.git
 Ports|theforceengine|5a669adb65727da7448b6aa51f9c5d74686fb100|Apr 27, 2024|https://github.com/luciusDXL/TheForceEngine.git
 Ports|uqm|d6583f2250e6046de0bcd20e18ba78e8620fb638|N/A|https://git.code.sf.net/p/sc2/uqm
