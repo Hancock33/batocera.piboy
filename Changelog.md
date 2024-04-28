@@ -205,7 +205,7 @@ Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d5
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|ed3e7e8a5896a9d80a57a537dd48a1b9d2ebac30|Jan 21, 2024|2024-01-21
 Emulators|[xemu](https://github.com/xemu-project/xemu)|94d826a4f125d755d6d37069ad7084bfde33d650|Mar 23, 2024|2024-03-23
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases/download/$(XENIA_VERSION))|v1.0.2808-master|Sept 14, 2023|2023-09-14
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases/download/"$(shellecho$(XENIA_CANARY_VERSION)")|5ca173cd4f4bfc941fe06250297d518e41dfd7b7|Apr 26, 2024|2024-04-26
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases/download/)|5ca173cd4f4bfc941fe06250297d518e41dfd7b7|Apr 26, 2024|2024-04-26
 Emulators|[yabasanshiro](https://github.com/devmiyax/yabause.git)|c7618d2ecbf77b1e8188fa8af4fa1cfb34833a72|Jun 18, 2022 (branch@pi4-1-9-0)|2022-06-18
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|b313163f57a5eb76fb38269e79ca77113cd1288a|Apr 20, 2024|2024-04-20
 Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|54dff22dca418e5fd13b3ca3471ef398b57b166a|Apr 15, 2024|2024-04-15

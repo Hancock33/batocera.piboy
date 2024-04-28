@@ -249,7 +249,7 @@ Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.7|Apr 19, 20
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases/download/$(WINE_X86_VERSION))|20240427|Apr 27, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|bc2ff55a63ccbf62be8bb163d57e12b7955a2842|Apr 27, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|94d826a4f125d755d6d37069ad7084bfde33d650|Mar 23, 2024
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases/download/"$(shellecho$(XENIA_CANARY_VERSION)|cut-c1-7)")|5ca173cd4f4bfc941fe06250297d518e41dfd7b7|Apr 26, 2024
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases/download/)|5ca173cd4f4bfc941fe06250297d518e41dfd7b7|Apr 26, 2024
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases/download/$(XENIA_VERSION))|v1.0.2808-master|Sept 14, 2023
 Emulators|[yabasanshiro](https://github.com/devmiyax/yabause.git)|c7618d2ecbf77b1e8188fa8af4fa1cfb34833a72|Jun 18, 2022 (branch@pi4-1-9-0)
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|14.1.0|Mar 08, 2024
