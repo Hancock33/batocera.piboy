@@ -1,4 +1,4 @@
-﻿** **Package Type&nbsp;&nbsp;&nbsp;&nbsp;Package&nbsp;&nbsp;&nbsp;&nbsp;Version&nbsp;&nbsp;&nbsp;&nbsp;Last Update&nbsp;&nbsp;&nbsp;&nbsp;Package Homepage
+﻿| **Package Type** || **Package** || **Version** || **Last Update** || **Package Homepage** |__
 Emulators	batocera-bezel	72ce23dd989ced9df3f49d2021208eff1f99552c	Mar 19, 2023	http://github/hancock33/batocera-bezel
 Emulators	libretro-core-info	a0a5dff2a11313ee4a757df689260300a616e38a	Apr 19, 2024	http://github/libretro/libretro-core-info
 Emulators	retroarch	d1b239ec8b28adb08952b2596e7afc77ece3f91e	Apr 28, 2024	http://github/libretro/RetroArch
