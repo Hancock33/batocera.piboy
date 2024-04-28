@@ -1,5 +1,5 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
------|:-----:|:-----:|:-----:|-----
+-----|:-----:|:-----:|:-----:
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|a0a5dff2a11313ee4a757df689260300a616e38a|Apr 19, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|d1b239ec8b28adb08952b2596e7afc77ece3f91e|Apr 28, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|9c0bd0d1015889592ad4362b800ac90ff4d019e1|Apr 24, 2024
