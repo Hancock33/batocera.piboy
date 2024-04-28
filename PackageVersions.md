@@ -203,9 +203,9 @@ Emulators|openbor4432|49505541b858d59842e87e75f415dfb4322ead93|Jan 14, 2021|http
 Emulators|openbor6412|05af203b0e5676034678291bbedc0b9fe4c8f898|Aug 29, 2018|http://github.com/DCurrent/openbor
 Emulators|openbor7142|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023|http://github.com/DCurrent/openbor
 Emulators|openbor7530|09e281bb36502e23b7616638484e0bb82b3ba0cc|Apr 26, 2024|http://github.com/DCurrent/openbor
-Emulators|openmsx|6b0be7be018c50f9910ca4fe6deaa43a500ea883|Apr 28, 2024|http://github.com/openMSX/openMSX
+Emulators|openmsx|d7eba3e3c2b82a6f5f28d8f7b7e6cdc4b15dfbfe|Apr 28, 2024|http://github.com/openMSX/openMSX
 Emulators|panda3ds|2eaaccd96b7ea479e0341a2a9cc2bc8e81336e9f|Apr 26, 2024|https://github.com/wheremyfoodat/Panda3DS.git
-Emulators|pcsx2|b01871aea89fc9799700794e0c774a731b81c538|Apr 27, 2024|https://github.com/pcsx2/pcsx2.git
+Emulators|pcsx2|d63966b07132deeb88c5e0dc640e9242e1c0391f|Apr 28, 2024|https://github.com/pcsx2/pcsx2.git
 Emulators|pifba|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015|http://github.com/batocera-linux/pifba
 Emulators|play|07c1898303a9af41f5e91172b6b73ddf2f97b984|Apr 17, 2024|https://github.com/jpd002/Play-.git
 Emulators|ppsspp|1786a4ddb097f7df1c75b55b4c4b163032614371|Apr 20, 2024|https://github.com/hrydgard/ppsspp.git
@@ -222,7 +222,7 @@ Emulators|ryujinx|1.1.1291|Apr 22, 2024|https://github.com/Ryujinx/release-chann
 Emulators|scummvm|e2b1299d85564c29a1642185aeb6b96e56ded206|Apr 13, 2024 (branch@branch-2-8)|http://github.com/scummvm/scummvm
 Emulators|simcoupe|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024|http://github.com/simonowen/simcoupe
 Emulators|slang-shaders|67a1ee78e0a6f1906e7ccccdd2f24d7eb24511ee|Apr 27, 2024|http://github.com/libretro/slang-shaders
-Emulators|snes9x|fdcff015dc7465859597459da07bca7ec9714266|Apr 27, 2024|https://github.com/snes9xgit/snes9x.git
+Emulators|snes9x|2bb772322084db3fd905d3f9dd13139dd7423950|Apr 28, 2024|https://github.com/snes9xgit/snes9x.git
 Emulators|sockpp|e6c4688a576d95f42dd7628cefe68092f6c5cd0f|Mar 11, 2024|http://github.com/fpagliughi/sockpp
 Emulators|solarus-engine|4efde600b9777af95472ad922c1cbc5939eb6c6d|Apr 09, 2024|https://gitlab.com/solarus-games/solarus
 Emulators|sugarbox|d7d1d39111efb9c44fc956beea076ee243774dc1|Nov 29, 2023|https://github.com/Tom1975/SugarboxV2.git

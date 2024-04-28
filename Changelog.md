@@ -4,7 +4,9 @@ Emulators|retroarch|d1b239ec8b28adb08952b2596e7afc77ece3f91e|Apr 28, 2024|http:/
 Emulators|libretro-mgba|df75204a0bfe0453540ad92c6d30abb9d83a5388|Apr 28, 2024|http://github.com/mgba-emu/mgba
 Emulators|libretro-tic80|0bf991728afd6e627bdc5504a4c0f52453b99571|Apr 28, 2024|https://github.com/nesbox/TIC-80.git
 Emulators|duckstation|d09497821468b6c86e7b8e68dfe9bd9c43373935|Apr 28, 2024|https://github.com/stenzek/duckstation.git
-Emulators|openmsx|6b0be7be018c50f9910ca4fe6deaa43a500ea883|Apr 28, 2024|http://github.com/openMSX/openMSX
+Emulators|openmsx|d7eba3e3c2b82a6f5f28d8f7b7e6cdc4b15dfbfe|Apr 28, 2024|http://github.com/openMSX/openMSX
+Emulators|pcsx2|d63966b07132deeb88c5e0dc640e9242e1c0391f|Apr 28, 2024|https://github.com/pcsx2/pcsx2.git
+Emulators|snes9x|2bb772322084db3fd905d3f9dd13139dd7423950|Apr 28, 2024|https://github.com/snes9xgit/snes9x.git
 Emulators|suyu|58b17faa695c2cff9b99e435fcef0f0a32777307|Apr 28, 2024 (branch@dev)|https://github.com/suyu-emu/suyu.git
 Emulators|thextech|10c7c5a56b9dafddb2fd7f369f75363bff802086|Apr 28, 2024|https://github.com/TheXTech/TheXTech
 Ports|corsixth|230b2082fd7c59f25eb571101de02d435af11d88|Apr 28, 2024|http://github.com/CorsixTH/CorsixTH
@@ -25,11 +27,9 @@ Emulators|applewin|81ad66c2534fa3bc926cf620dfc4d893db770a9f|Apr 27, 2024|https:/
 Emulators|cemu|5be98da0ac5279a4e05eee22f24f3cb807ceb8f5|Apr 27, 2024|https://github.com/cemu-project/Cemu
 Emulators|hatari|6849a7e90e6bc798d34df5e6ebda76afbd1b5f16|Apr 27, 2024|http://github.com/hatari/hatari
 Emulators|lightspark|652076f262c5d3f85ecebae46b51f7862dfd80ba|Apr 27, 2024|http://github.com/lightspark/lightspark
-Emulators|pcsx2|b01871aea89fc9799700794e0c774a731b81c538|Apr 27, 2024|https://github.com/pcsx2/pcsx2.git
 Emulators|python-pygame2|7a1a2c55210211c38dc95b21547dca169e1ffa85|Apr 27, 2024|http://github.com/pygame/pygame
 Emulators|rpcs3|e32c48d0dd87e5a9978af2e2841e7951903ff757|Apr 27, 2024|https://github.com/RPCS3/rpcs3.git
 Emulators|ruffle|b0443b3b5f2681b91b487d1b3987ad6f3b9a4517|Apr 27, 2024|http://github.com/ruffle-rs/ruffle
-Emulators|snes9x|fdcff015dc7465859597459da07bca7ec9714266|Apr 27, 2024|https://github.com/snes9xgit/snes9x.git
 Emulators|vpinball|0ca9b40f58333888c594d6cc25e07374e8cb5d88|Apr 27, 2024 (branch@standalone)|http://github.com/vpinball/vpinball
 Emulators|wine-x86|20240427|Apr 27, 2024|https://github.com/Hancock33/batocera-32bit-libs/releases/download/$(WINE_X86_VERSION)
 Emulators|winetricks|bc2ff55a63ccbf62be8bb163d57e12b7955a2842|Apr 27, 2024|http://github.com/Winetricks/winetricks
