@@ -12,12 +12,10 @@ VICE_DEPENDENCIES = ffmpeg sdl2 libpng giflib zlib lame alsa-lib jpeg host-xa ho
 
 VICE_CONF_OPTS += --disable-option-checking
 VICE_CONF_OPTS += --disable-pdf-docs
-VICE_CONF_OPTS += --enable-external-ffmpeg
 VICE_CONF_OPTS += --enable-midi
-VICE_CONF_OPTS += --enable-lame
+VICE_CONF_OPTS += --with-lame
 VICE_CONF_OPTS += --with-alsa
 VICE_CONF_OPTS += --with-zlib
-VICE_CONF_OPTS += --with-jpeg
 VICE_CONF_OPTS += --with-png
 VICE_CONF_OPTS += --with-fastsid
 VICE_CONF_OPTS += --without-pulse
