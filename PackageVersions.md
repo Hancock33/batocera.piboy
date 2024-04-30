@@ -238,7 +238,7 @@ Emulators|[vita3k](https://github.com/vita3k/vita3k)|ed3e7e8a5896a9d80a57a537dd4
 Emulators|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|2.12|Mar 15, 2024
 Emulators|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.11|Mar 05, 2024
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|657faf30e2af68739d0e920f7765edb6dad1d939|Apr 29, 2024 (branch@standalone)
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|25c58e6887647a223aa74f7e7d0402abb4a2a2b8|Apr 26, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|a27b95511be1cb6076b4a91027d14dd139ba3744|Apr 29, 2024
 Emulators|[wine-ge](http://github.com/GloriousEggroll/proton-wine)|39021e609a24b6aeffdf9c4695a286d71e7dffbc|Feb 04, 2024 (branch@Proton8-26)
 Emulators|[wine-lutris](http://github.com/lutris/wine)|lutris-wine-7.2-2|Jul 06, 2022
 Emulators|[wine-mono](https://dl.winehq.org/wine/wine-mono/)|9.1.0|Apr 17, 2024

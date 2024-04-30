@@ -17,6 +17,7 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|39e946630da8e23c4d2d2b763f
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|7006b080957d6df2a5dc569c2944e4ba87e310b4|Apr 29, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|c15161d4005a71e2d1b2843d1b4c1af8e6583718|Apr 29, 2024 (branch@dev)
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|657faf30e2af68739d0e920f7765edb6dad1d939|Apr 29, 2024 (branch@standalone)
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|a27b95511be1cb6076b4a91027d14dd139ba3744|Apr 29, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|1546e74e49bf55659a9bdeb5b3af99da5e2f035d|Apr 29, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|135d1206a89d8adb67039fbd866c6f26f213f039|Apr 29, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|d95daa79a3d84e685df0161a1ccc4101e60907a2|Apr 29, 2024
@@ -67,7 +68,6 @@ Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|bc5c
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|8e96590065fd23cd37a0d426d30f4aef6587d860|Apr 26, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|5ca173cd4f4bfc941fe06250297d518e41dfd7b7|Apr 26, 2024
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|09e281bb36502e23b7616638484e0bb82b3ba0cc|Apr 26, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|25c58e6887647a223aa74f7e7d0402abb4a2a2b8|Apr 26, 2024
 Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-1-rc2|Apr 26, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|db55e980ecb994f5cfa769954b2a812d8f9bc235|Apr 26, 2024
 Emulators|[libretro-jaxe](https://github.com/kurtjd/jaxe.git)|22115d58de5f80cfafbbeece19d723f4892ed75c|Apr 25, 2024
