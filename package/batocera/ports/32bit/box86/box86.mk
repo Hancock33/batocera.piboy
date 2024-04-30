@@ -3,8 +3,8 @@
 # box86
 #
 ################################################################################
-# Version: Commits on Apr 18, 2024
-BOX86_VERSION = 24f2c68805b3547524cfa7c0525c13f12f363ed4
+# Version: Commits on Apr 30, 2024
+BOX86_VERSION = f5f1e1413d167eb0c4e2aa9a65ab251ce1e142c4
 BOX86_SITE = https://github.com/ptitseb/box86.git
 BOX86_SITE_METHOD=git
 BOX86_GIT_SUBMODULES=YES
