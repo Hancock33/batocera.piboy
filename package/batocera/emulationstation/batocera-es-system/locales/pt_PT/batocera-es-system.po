@@ -15253,8 +15253,8 @@ msgid ""
 "FULLSCREEN gives you a top-down view on the playfield. For cabinet use or "
 "multi-window on desktop."
 msgstr ""
-"FULLSCREEN oferece uma visão de cima para baixo do campo de jogo. Para uso em gabinete ou "
-"múltiplas janelas no desktop."
+"FULLSCREEN oferece uma visão de cima para baixo do campo de jogo. Para uso "
+"em gabinete ou múltiplas janelas no desktop."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
