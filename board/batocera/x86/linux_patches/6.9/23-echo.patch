@@ -44,7 +44,7 @@ index 3c2abbc587b4..ce006da926e5 100644
  
  #ifdef CONFIG_FAIR_GROUP_SCHED
 diff --git a/init/Kconfig b/init/Kconfig
-index 64c45f866266..1ae49418ac1e 100644
+index 98246963db44..77a6eacb83f9 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -130,6 +130,12 @@ config THREAD_INFO_IN_TASK

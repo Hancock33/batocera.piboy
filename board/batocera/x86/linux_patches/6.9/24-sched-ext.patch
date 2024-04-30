@@ -499,10 +499,10 @@ index 000000000000..b01c4f22f73e
 +possible, they are subject to change without warning between kernel
 +versions.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index f6dc90559341..b9971c88d0fc 100644
+index a60b6d4d0e78..da355a3a19d6 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -19616,6 +19616,8 @@ R:	Ben Segall <bsegall@google.com> (CONFIG_CFS_BANDWIDTH)
+@@ -19625,6 +19625,8 @@ R:	Ben Segall <bsegall@google.com> (CONFIG_CFS_BANDWIDTH)
  R:	Mel Gorman <mgorman@suse.de> (CONFIG_NUMA_BALANCING)
  R:	Daniel Bristot de Oliveira <bristot@redhat.com> (SCHED_DEADLINE)
  R:	Valentin Schneider <vschneid@redhat.com> (TOPOLOGY)
@@ -511,7 +511,7 @@ index f6dc90559341..b9971c88d0fc 100644
  L:	linux-kernel@vger.kernel.org
  S:	Maintained
  T:	git git://git.kernel.org/pub/scm/linux/kernel/git/tip/tip.git sched/core
-@@ -19624,6 +19626,7 @@ F:	include/linux/sched.h
+@@ -19633,6 +19635,7 @@ F:	include/linux/sched.h
  F:	include/linux/wait.h
  F:	include/uapi/linux/sched.h
  F:	kernel/sched/
@@ -520,7 +520,7 @@ index f6dc90559341..b9971c88d0fc 100644
  SCSI LIBSAS SUBSYSTEM
  R:	John Garry <john.g.garry@oracle.com>
 diff --git a/Makefile b/Makefile
-index 47b08f134a43..ab2ff064ffdd 100644
+index 12c42565a35f..a7db4104943c 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -1502,6 +1502,12 @@ ifneq ($(wildcard $(resolve_btfids_O)),)
@@ -1625,7 +1625,7 @@ index 3bac0a8ceab2..359a14cc76a4 100644
  /* Can be ORed in to make sure the process is reverted back to SCHED_NORMAL on fork */
  #define SCHED_RESET_ON_FORK     0x40000000
 diff --git a/init/Kconfig b/init/Kconfig
-index 1ae49418ac1e..24677055638f 100644
+index 77a6eacb83f9..fd0f54087760 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -1044,6 +1044,11 @@ config RT_GROUP_SCHED
@@ -9684,10 +9684,10 @@ index 000000000000..b443be80a981
 +#endif	/* CONFIG_EXT_GROUP_SCHED */
 +#endif	/* CONFIG_CGROUP_SCHED */
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index 8d38f0022de1..62c751575f8d 100644
+index 95bade948bf5..ae42b39adb48 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
-@@ -3848,7 +3848,7 @@ static void reweight_entity(struct cfs_rq *cfs_rq, struct sched_entity *se,
+@@ -3854,7 +3854,7 @@ static void reweight_entity(struct cfs_rq *cfs_rq, struct sched_entity *se,
  	}
  }
  
@@ -9696,7 +9696,7 @@ index 8d38f0022de1..62c751575f8d 100644
  {
  	struct sched_entity *se = &p->se;
  	struct cfs_rq *cfs_rq = cfs_rq_of(se);
-@@ -8335,7 +8335,7 @@ static void check_preempt_wakeup_fair(struct rq *rq, struct task_struct *p, int
+@@ -8341,7 +8341,7 @@ static void check_preempt_wakeup_fair(struct rq *rq, struct task_struct *p, int
  	 * Batch and idle tasks do not preempt non-idle tasks (their preemption
  	 * is driven by the tick):
  	 */
@@ -9705,7 +9705,7 @@ index 8d38f0022de1..62c751575f8d 100644
  		return;
  
  	find_matching_se(&se, &pse);
-@@ -9296,28 +9296,18 @@ static inline void update_blocked_load_status(struct rq *rq, bool has_blocked) {
+@@ -9302,28 +9302,18 @@ static inline void update_blocked_load_status(struct rq *rq, bool has_blocked) {
  
  static bool __update_blocked_others(struct rq *rq, bool *done)
  {
@@ -9737,7 +9737,7 @@ index 8d38f0022de1..62c751575f8d 100644
  }
  
  #ifdef CONFIG_FAIR_GROUP_SCHED
-@@ -12459,14 +12449,14 @@ void trigger_load_balance(struct rq *rq)
+@@ -12465,14 +12455,14 @@ void trigger_load_balance(struct rq *rq)
  	nohz_balancer_kick(rq);
  }
  
@@ -9754,7 +9754,7 @@ index 8d38f0022de1..62c751575f8d 100644
  {
  	update_sysctl();
  
-@@ -13148,6 +13138,7 @@ DEFINE_SCHED_CLASS(fair) = {
+@@ -13154,6 +13144,7 @@ DEFINE_SCHED_CLASS(fair) = {
  	.task_tick		= task_tick_fair,
  	.task_fork		= task_fork_fair,
  
