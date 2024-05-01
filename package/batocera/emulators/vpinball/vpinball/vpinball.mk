@@ -3,7 +3,7 @@
 # vpinball
 #
 ################################################################################
-# Version: Commits on May 01, 2024 (branch@standalone)
+# Version: Commits on May 01, 2024
 VPINBALL_VERSION = 1663c8720c6670d8eee4a9e35ee1c333c598d00a
 VPINBALL_BRANCH = standalone
 VPINBALL_SITE = $(call github,vpinball,vpinball,$(VPINBALL_VERSION))

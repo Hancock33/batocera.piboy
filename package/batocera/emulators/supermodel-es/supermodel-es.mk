@@ -3,7 +3,7 @@
 # supermodel-es
 #
 ################################################################################
-# Version: Commits on Oct 03, 2023 (branch@gles32)
+# Version: Commits on Oct 03, 2023
 SUPERMODEL_ES_VERSION = 8f8c962775ec4819c02ffd9cc99135bff59e807d
 SUPERMODEL_ES_BRANCH = gles32
 SUPERMODEL_ES_SITE = $(call github,rtissera,Supermodel,$(SUPERMODEL_ES_VERSION))

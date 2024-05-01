@@ -3,7 +3,7 @@
 # libretro-uoyabause
 #
 ################################################################################
-# Version: Commits on Feb 13, 2024 (branch@libretro-cmake-rpi4)
+# Version: Commits on Feb 13, 2024
 LIBRETRO_UOYABAUSE_VERSION = c60e60854ae5bdef3f463a784674e8fe8c7d87f0
 LIBRETRO_UOYABAUSE_BRANCH = libretro-cmake-rpi4
 LIBRETRO_UOYABAUSE_SITE = $(call github,rob-ack,yabause,$(LIBRETRO_UOYABAUSE_VERSION))

@@ -3,7 +3,7 @@
 # libretro-yabasanshiro
 #
 ################################################################################
-# Version: Commits on Mar 02, 2024 (branch@yabasanshiro)
+# Version: Commits on Mar 02, 2024
 LIBRETRO_YABASANSHIRO_VERSION = 4e65871ec0a2582fa2dbe055fccb6573dbd68d4f
 LIBRETRO_YABASANSHIRO_BRANCH = yabasanshiro
 LIBRETRO_YABASANSHIRO_SITE = $(call github,libretro,yabause,$(LIBRETRO_YABASANSHIRO_VERSION))

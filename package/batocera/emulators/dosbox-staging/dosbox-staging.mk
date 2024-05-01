@@ -3,7 +3,7 @@
 # dosbox-staging
 #
 ################################################################################
-# Version: Commits on Apr 30, 2024 (branch@release/0.81.x)
+# Version: Commits on Apr 30, 2024
 DOSBOX_STAGING_VERSION = 80577be87c40bb8c1668d220e98dcdade3ae8a07
 DOSBOX_STAGING_BRANCH = release/0.81.x
 DOSBOX_STAGING_SITE = $(call github,dosbox-staging,dosbox-staging,$(DOSBOX_STAGING_VERSION))

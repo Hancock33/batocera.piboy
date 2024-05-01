@@ -3,7 +3,7 @@
 # scummvm
 #
 ################################################################################
-# Version: Commits on Apr 13, 2024 (branch@branch-2-8)
+# Version: Commits on Apr 13, 2024
 SCUMMVM_VERSION = e2b1299d85564c29a1642185aeb6b96e56ded206
 SCUMMVM_BRANCH = branch-2-8
 SCUMMVM_SITE = $(call github,scummvm,scummvm,$(SCUMMVM_VERSION))
