@@ -5,6 +5,7 @@
 ################################################################################
 # Version: Commits on Feb 04, 2024 (branch@Proton8-26)
 WINE_GE_VERSION = 39021e609a24b6aeffdf9c4695a286d71e7dffbc
+WINE_GE_BRANCH = Proton8-26
 WINE_GE_SOURCE = wine-$(WINE_GE_VERSION).tar.gz
 WINE_GE_SITE = $(call github,GloriousEggroll,proton-wine,$(WINE_GE_VERSION))
 WINE_GE_LICENSE = LGPL-2.1+
