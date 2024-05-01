@@ -3,7 +3,7 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Apr 08, 2024 (branch@1.5)
+# Version: Commits on Apr 08, 2024
 DEVILUTIONX_VERSION = b8b6dfff4c3ca304f5f7f56a1d264c1ef506db32
 DEVILUTIONX_BRANCH = 1.5
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git

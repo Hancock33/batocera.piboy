@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on May 01, 2024
-HATARI_VERSION = 1908353713da42bf466433fc3caae18f0616cebe
+HATARI_VERSION = b35307568d35391e2fa76c8df36b7cca8050eca4
 HATARI_SITE = $(call github,hatari,hatari,$(HATARI_VERSION))
 HATARI_LICENSE = GPLv3
 HATARI_DEPENDENCIES = sdl2 zlib libpng libcapsimage
