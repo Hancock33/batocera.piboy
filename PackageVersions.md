@@ -329,7 +329,7 @@ Ports|[vcmi](https://github.com/vcmi/vcmi.git)|3d2f69199a235faef40ca8e7d6bd8081f
 Ports|[vkquake](http://github.com/Novum/vkQuake)|19d76588037977f59506c18aa3d307f8f5124d0f|Apr 30, 2023
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|dd410a2de5164cca7bef93ad6b129f4bf68096cf|Apr 28, 2024
 Ports|[xatrix](http://github.com/yquake2/xatrix)|b837ee59e6251bfa960f5a74ab62914544c1a418|Dec 17, 2023
-Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|2.2.1|Mar 11, 2024
+Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|2.3.1|Apr 12, 2024
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|61be37b18393c45beb53dfe7e669a625495c28ef|Apr 06, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|e5ee2a74a529795a1ade91b02301642e1fdd00d3|Apr 07, 2024
 Ports|[yrogue](http://github.com/yquake2/rogue)|8baa9d35b083f2666d5f668675dbfbc9eee5ff06|Dec 17, 2023
