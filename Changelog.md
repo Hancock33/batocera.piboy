@@ -125,6 +125,7 @@ Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|63e0ed3796827c6
 Ports|[sonic2013](https://github.com/Rubberduckycooly/Sonic-1-2-2013-Decompilation.git)|53c7b88ad3a0dd8219b23747843805a7e3830bcf|Apr 13, 2024
 Ports|[soniccd](https://github.com/Rubberduckycooly/Sonic-CD-11-Decompilation.git)|0760a2b979003d28a40ea8dffa2a72cd7e2251d9|Apr 13, 2024
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|d2cbb9ff1d808dda0332d2fd68383b5e0974d302|Apr 12, 2024
+Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|2.3.1|Apr 12, 2024
 Emulators|[solarus-engine](https://gitlab.com/solarus-games/solarus)|4efde600b9777af95472ad922c1cbc5939eb6c6d|Apr 09, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|b8b6dfff4c3ca304f5f7f56a1d264c1ef506db32|Apr 08, 2024
 Emulators|[libretro-nestopia](http://github.com/libretro/nestopia)|b99ede358b2219602443e7f414eabf81e17da244|Apr 07, 2024
@@ -158,7 +159,6 @@ Emulators|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/relea
 Ports|[rtcw](https://github.com/iortcw/iortcw.git)|a4e6f501b5ef1a1f6127d89164e850bb7cf873d6|Mar 12, 2024
 Emulators|[cargs](http://github.com/likle/cargs)|82b51a3fd781ba978ab9bb6a05306ce777ecb2a1|Mar 11, 2024
 Emulators|[sockpp](http://github.com/fpagliughi/sockpp)|e6c4688a576d95f42dd7628cefe68092f6c5cd0f|Mar 11, 2024
-Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|2.2.1|Mar 11, 2024
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|14.1.0|Mar 08, 2024
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.0|Mar 08, 2024
 Emulators|[libretro-mupen64plus-next](http://github.com/libretro/mupen64plus-libretro-nx)|3f794eec4dc4af2f22ecce507f2da324381d3d92|Mar 07, 2024
