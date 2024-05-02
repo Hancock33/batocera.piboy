@@ -28,7 +28,7 @@ index 4f29bb76e..e780af5d2 100644
  	I_StartupJoysticks();
  
 diff --git a/source/common/platform/posix/unix/i_specialpaths.cpp b/source/common/platform/posix/unix/i_specialpaths.cpp
-index 112e92ee7..6993f94e5 100644
+index 112e92ee7..583a7fa6d 100644
 --- a/source/common/platform/posix/unix/i_specialpaths.cpp
 +++ b/source/common/platform/posix/unix/i_specialpaths.cpp
 @@ -45,59 +45,7 @@
@@ -88,7 +88,7 @@ index 112e92ee7..6993f94e5 100644
 -	}
 -	path += file;
 -	return path;
-+	return FString("/userdata/saves/raze/") + file;
++    return FString("/userdata/saves/raze/") + file;
  }
  
  //===========================================================================
@@ -97,7 +97,7 @@ index 112e92ee7..6993f94e5 100644
  	// Don't use GAME_DIR and such so that ZDoom and its child ports can
  	// share the node cache.
 -	FString path = NicePath("$HOME/.config/" GAMENAMELOWERCASE);
-+	FString path = NicePath("/userdata/saves/raze");
++	FString path = NicePath("/userdata/system/configs/raze");
  	if (create)
  	{
  		CreatePath(path.GetChars());
@@ -106,7 +106,7 @@ index 112e92ee7..6993f94e5 100644
  	// Don't use GAME_DIR and such so that ZDoom and its child ports can
  	// share the node cache.
 -	FString path = NicePath("$HOME/.config/zdoom/cache");
-+	FString path = NicePath("/userdata/saves/raze/cache");
++	FString path = NicePath("/userdata/system/cache/raze");
  	if (create)
  	{
  		CreatePath(path.GetChars());
@@ -137,12 +137,21 @@ index 112e92ee7..6993f94e5 100644
  }
  
  //===========================================================================
+@@ -191,7 +139,7 @@ FString M_GetScreenshotsPath()
+ 
+ FString M_GetSavegamesPath()
+ {
+-	return NicePath("$HOME/" GAME_DIR "/savegames/");
++	return FString("/userdata/saves/raze/");
+ }
+ 
+ //===========================================================================
 @@ -204,7 +152,7 @@ FString M_GetSavegamesPath()
  
  FString M_GetDocumentsPath()
  {
 -	return NicePath("$HOME/" GAME_DIR "/");
-+	return FString("/userdata/saves/raze/");
++	return M_GetSavegamesPath();
  }
  
  //===========================================================================
@@ -159,10 +168,10 @@ index c99c6bc01..17f9c9a50 100644
  	}
  
 diff --git a/source/core/gamecontrol.cpp b/source/core/gamecontrol.cpp
-index 9f07ed859..e91da7b2e 100644
+index 6f9c1792d..72e5a42a2 100644
 --- a/source/core/gamecontrol.cpp
 +++ b/source/core/gamecontrol.cpp
-@@ -1041,7 +1041,7 @@ int RunGame()
+@@ -1043,7 +1043,7 @@ int RunGame()
  	FString logfile = Args->TakeValue("+logfile");
  
  	// As long as this engine is still in prerelease mode let's always write a log file.

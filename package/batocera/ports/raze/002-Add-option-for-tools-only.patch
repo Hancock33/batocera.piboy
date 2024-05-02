@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 25b3843bb..3fea18e82 100644
+index 5565bfdda..ab69e72b9 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -59,6 +59,8 @@ list( APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake )
@@ -11,7 +11,7 @@ index 25b3843bb..3fea18e82 100644
  option( FORCE_CROSSCOMPILE "Turn on cross compiling." NO )
  if( FORCE_CROSSCOMPILE )
  	set( CMAKE_CROSSCOMPILING TRUE )
-@@ -458,8 +460,10 @@ endif()
+@@ -445,8 +447,10 @@ endif()
  add_subdirectory( libraries/lzma )
  add_subdirectory( libraries/miniz )
  add_subdirectory( tools )
