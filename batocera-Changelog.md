@@ -113,6 +113,7 @@ Support for Nvidia cards requiring the legacy 340.108 driver.
 - Raze to v1.10.2
 - Vice to v3.8
 - The Force Engine to Apr 29, 2024 build
+- DXX-Rebirth to Apr 22, 2024 build
 ### System
 - Mainline Kernel 6.6.y bump to 6.6.23
 - Nvidia Production driver to 550.67
@@ -123,7 +124,7 @@ Support for Nvidia cards requiring the legacy 340.108 driver.
 - Mesa3d to 24.0.5
 - RPI kernel to 6.6.20
 - Pipewire to 1.0.4
-- X86_64 kernel to 6.8.7
+- X86_64 kernel to 6.8.9
 - Switchres 0.220
 - Btop to 1.3.2
 - Linux firmware to 20240410
