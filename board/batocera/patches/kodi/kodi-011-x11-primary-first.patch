@@ -1,8 +1,8 @@
 diff --git a/xbmc-xrandr.c b/xbmc-xrandr.c
-index 6b916f0..60bed1e 100644
+index 64438cdb00..81c9e3c371 100644
 --- a/xbmc-xrandr.c
 +++ b/xbmc-xrandr.c
-@@ -3061,7 +3061,7 @@ int main(int argc, char** argv)
+@@ -3056,7 +3056,7 @@ int main(int argc, char** argv)
        Bool* mode_shown;
        //	    Rotation	    rotations = output_rotations (output);
  
@@ -12,16 +12,17 @@ index 6b916f0..60bed1e 100644
        if (mode)
        {
 diff --git a/xbmc/windowing/X11/XRandR.cpp b/xbmc/windowing/X11/XRandR.cpp
-index ab20da3..78227fe 100644
+index 021e09cd3b..c93727d993 100644
 --- a/xbmc/windowing/X11/XRandR.cpp
 +++ b/xbmc/windowing/X11/XRandR.cpp
-@@ -95,9 +95,16 @@ bool CXRandR::Query(bool force, int screennum, bool ignoreoff)
+@@ -94,10 +94,17 @@ bool CXRandR::Query(bool force, int screennum, bool ignoreoff)
      return false;
    }
  
 +  for(int i=1; i>=0; i--) { // 2 loops: 1:primary 2:others
-+
-   for (TiXmlElement* output = pRootElement->FirstChildElement("output"); output; output = output->NextSiblingElement("output"))
++ 
+   for (auto* output = rootElement->FirstChildElement("output"); output;
+        output = output->NextSiblingElement("output"))
    {
      XOutput xoutput;
 +
@@ -32,7 +33,7 @@ index ab20da3..78227fe 100644
      xoutput.name = output->Attribute("name");
      StringUtils::Trim(xoutput.name);
      xoutput.isConnected = (StringUtils::CompareNoCase(output->Attribute("connected"), "true") == 0);
-@@ -142,6 +149,9 @@ bool CXRandR::Query(bool force, int screennum, bool ignoreoff)
+@@ -143,6 +150,9 @@ bool CXRandR::Query(bool force, int screennum, bool ignoreoff)
        CLog::Log(LOGWARNING, "CXRandR::Query - output {} has no current mode, assuming disconnected",
                  xoutput.name);
    }
