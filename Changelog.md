@@ -38,6 +38,8 @@ Emulators|[vpinball](http://github.com/vpinball/vpinball)|a4852aade57176eb8a3da1
 Emulators|[wine-custom](http://github.com/wine-mirror/wine)|wine-9.8|May 03, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240503|May 03, 2024
 Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-9.8|May 03, 2024
+Emulators|[wine-ntsync](https://repo.or.cz/wine/zf.git/snapshot/)|b710a652bb7f582fa65f8d42d727847e231b7095|May 03, 2024
+Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|e8172fc9d5dbfcb88c92f7e8832ea773bccf38c4|May 03, 2024
 Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.8|May 03, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|ef85672b3327a59cf183814c8a6930058deb3a1b|May 03, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|61fc087b5e938cbe6983b408607f11310f8a1679|May 03, 2024
@@ -90,7 +92,6 @@ Ports|[sonic3-air](https://github.com/Eukaryot/sonic3air.git)|89884272165bce0891
 Emulators|[libretro-minivmac](https://github.com/libretro/libretro-minivmac)|e7fcfefe5963aaefb039c8ece5b9072f8d3f9cb9|Apr 26, 2024
 Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|6ed491d6ba46ac8ba64a580b3004a163c0725bd2|Apr 26, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|5ca173cd4f4bfc941fe06250297d518e41dfd7b7|Apr 26, 2024
-Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-1-rc2|Apr 26, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|db55e980ecb994f5cfa769954b2a812d8f9bc235|Apr 26, 2024
 Emulators|[libretro-jaxe](https://github.com/kurtjd/jaxe.git)|22115d58de5f80cfafbbeece19d723f4892ed75c|Apr 25, 2024
 Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|40fe56212d13dda091034888ac2f9021bd6eb02c|Apr 25, 2024
@@ -167,7 +168,6 @@ Emulators|[libretro-mupen64plus-next](http://github.com/libretro/mupen64plus-lib
 Ports|[sonicmania](https://github.com/Rubberduckycooly/Sonic-Mania-Decompilation.git)|8278952deec0e5acbe3a0d5bd3a7bac4c297e65a|Mar 06, 2024
 Emulators|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.11|Mar 05, 2024
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|ad8a2754fa99ceaf40495185ad48191cf27559e2|Mar 05, 2024
-Emulators|[wine-ntsync](https://repo.or.cz/wine/zf.git/snapshot/)|312bc2fe6b27e10c3ce56eeda158aef2e5a0a304|Mar 04, 2024
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|d327bfa6140af179a9409e0ba42f392e03da530b|Mar 03, 2024
 Emulators|[libretro-yabasanshiro](http://github.com/libretro/yabause)|4e65871ec0a2582fa2dbe055fccb6573dbd68d4f|Mar 02, 2024
 Ports|[openlara](http://github.com/XProger/OpenLara)|05361d3d37d9d09a8b986a64381d556333f63479|Mar 02, 2024
@@ -188,7 +188,7 @@ Emulators|[libretro-gpsp](http://github.com/libretro/gpsp)|4caf7a167d159866479ea
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|89f503f4dc11dd05d8dec7e802cd0b24d9c9f08a|Feb 09, 2024
 Emulators|[libretro-fmsx](http://github.com/libretro/fmsx-libretro)|9b5cf868825a629cc4c7086768338165d3bbf706|Feb 08, 2024
 Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|1569dac2674512fa503dbb95eb32bccbe2908063|Feb 04, 2024
-Emulators|[wine-ge](http://github.com/GloriousEggroll/proton-wine)|39021e609a24b6aeffdf9c4695a286d71e7dffbc|Feb 04, 2024 (branch@Proton8-26)
+Emulators|[wine-ge](http://github.com/GloriousEggroll/proton-wine)|39021e609a24b6aeffdf9c4695a286d71e7dffbc|Feb 04, 2024
 Emulators|[libretro-neocd](https://github.com/libretro/neocd_libretro.git)|71ebe5044639b825e5bd1bd590fef3e918133b80|Feb 01, 2024
 Emulators|[libretro-quicknes](http://github.com/libretro/QuickNES_Core)|cd73f021be7dd5b1a21b71155a320364c02de4ac|Feb 01, 2024
 Emulators|[libretro-citra](https://github.com/zorn-v/citra-libretro.git)|947ea2c7e426632392cf4bf44eab70de034267be|Jan 30, 2024
