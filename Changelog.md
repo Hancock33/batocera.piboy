@@ -9,9 +9,11 @@ Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|c23562b7b5f43d27
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|e48c68d80f529cc2d6b4141878fbcc726ef6f8e2|May 04, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|3a3349560e2b15dec684d78c2530c8d0f9d3e528|May 04, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|c71daa53435e9dfebdd109000a04de4ddcfefc33|May 04, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240504|May 04, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|7715db17d8d23e3786f7875ed6712f870973893e|May 04, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|d979712b60427b80f25959b9cb482a5c8f1e98cb|May 04, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|c35db908f38c907be42cdb9d048e8f764571b992|May 04, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240504|May 04, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|b5dd6466f18714ab4c9702e5bdb51cc9dfea061b|May 03, 2024
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|e2c0259a6941285f853bdc81dfd33756e107c2c2|May 03, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|54afe0284292fc6b83b9d515c86a553a8127a984|May 03, 2024
@@ -36,7 +38,6 @@ Emulators|[thextech](https://github.com/TheXTech/TheXTech)|f2c7cbf48784b17995271
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|d8cb2faa9e15656a49dbbac56ffc2a7ea251c47e|May 03, 2024
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|a4852aade57176eb8a3da10d5b8ce523d1ad4072|May 03, 2024
 Emulators|[wine-custom](http://github.com/wine-mirror/wine)|wine-9.8|May 03, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240503|May 03, 2024
 Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-9.8|May 03, 2024
 Emulators|[wine-ntsync](https://repo.or.cz/wine/zf.git/snapshot/)|b710a652bb7f582fa65f8d42d727847e231b7095|May 03, 2024
 Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|e8172fc9d5dbfcb88c92f7e8832ea773bccf38c4|May 03, 2024
@@ -45,7 +46,6 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|ef85672b3327a59cf183814c8a
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|61fc087b5e938cbe6983b408607f11310f8a1679|May 03, 2024
 Ports|[stk](https://github.com/supertuxkart/stk-code.git)|a14b9fd74724fe4636b6d90aff624d1adb6a644f|May 03, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|2c6a1e0498447057eeabf0d7c562e1b108a4a74a|May 03, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240503|May 03, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|35f5e0498eda6871f30386d977953fe5d2e25abd|May 03, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|27d5123a617c3e5eee238c3bacfca37b9b3fd70c|May 03, 2024
 Emulators|[libretro-hatarib](https://github.com/bbbradsmith/hatariB)|7abb02d533914b63f739853cd1601aa075991892|May 02, 2024
