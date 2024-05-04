@@ -1,12 +1,21 @@
 diff --git a/hid-xpadneo/src/hid-xpadneo.c b/hid-xpadneo/src/hid-xpadneo.c
-index bede173..34cd9d9 100644
+index 3ec206d..1728991 100644
 --- a/hid-xpadneo/src/hid-xpadneo.c
 +++ b/hid-xpadneo/src/hid-xpadneo.c
-@@ -940,62 +940,6 @@ static int xpadneo_event(struct hid_device *hdev, struct hid_field *field,
+@@ -928,7 +928,6 @@ static int xpadneo_event(struct hid_device *hdev, struct hid_field *field,
+ 		goto stop_processing;
+ 	} else if (usage->type == EV_ABS) {
+ 		switch (usage->code) {
+-		case ABS_X:
+ 		case ABS_Y:
+ 		case ABS_RX:
+ 		case ABS_RY:
+@@ -946,63 +945,6 @@ static int xpadneo_event(struct hid_device *hdev, struct hid_field *field,
  			xdata->last_abs_rz = value;
  			goto combine_z_axes;
  		}
--	} else if ((usage->type == EV_KEY) && (usage->code == BTN_XBOX)) {
+-	} else if (!param_disable_shift_mode && (usage->type == EV_KEY)
+-		   && (usage->code == BTN_XBOX)) {
 -		/*
 -		 * Handle the Xbox logo button: We want to cache the button
 -		 * down event to allow for profile switching. The button will
