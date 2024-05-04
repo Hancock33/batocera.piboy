@@ -13,10 +13,6 @@ WINE_NATIVE_SELINUX_MODULES = wine
 WINE_NATIVE_DEPENDENCIES = host-bison host-flex host-wine-custom
 HOST_WINE_NATIVE_DEPENDENCIES = host-bison host-flex
 
-ifeq ($(BR_CMAKE_USE_CLANG),y)
-	HOST_WINE_NATIVE_DEPENDENCIES += host-clang host-lld
-endif
-
 define WINE_NATIVE_AUTOGEN
 	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/native
