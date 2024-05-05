@@ -239,8 +239,8 @@ alg:
   extensions:           [daphne, squashfs]
   platform:             daphne, arcade
   emulators:
-    daphne:
-      hypseus:          { requireAnyOf: [BR2_PACKAGE_DAPHNE]          }
+    hypseus-singe:
+      hypseus-singe:    { requireAnyOf: [BR2_PACKAGE_HYPSEUS_SINGE] }
 
 alphadenshi:
   name:                 Alpha Denshi
@@ -466,7 +466,7 @@ daphne:
   emulators:
     hypseus-singe:
       hypseus-singe:    { requireAnyOf: [BR2_PACKAGE_HYPSEUS_SINGE] }
-comment_en:             |
+  comment_en:           |
                         Daphne supports these specific laser games games only:
                         - Astron Belt
                         - Badlands
@@ -495,8 +495,7 @@ comment_en:             |
                         |   and "badlands" tells daphne to use that game engine)
                         |
                         |-- badlands.daphne     
-                        |   |-- badlands.commands (Optional extra command-
-                        |   |                      line parameters)
+                        |   |-- badlands.commands (Optional extra command-line parameters)
                         |   |-- badlands.txt      (Framefile)
                         |   |-- badlands-pc.m2v
                         |   |-- badlands-pc.ogg
@@ -505,7 +504,6 @@ comment_en:             |
                         |   (All rom zips files go into this roms folder)
                         |-- roms
                         |-- badlands.zip
-
                         Singe games should now be run out of the singe rom directory.
   comment_fr:           |
                         Trouvez la documentation ici: https://wiki.batocera.org/systems:daphne
@@ -6623,7 +6621,6 @@ vsmile:
   hardware:             console
   extensions:           [u1, u3, bin, zip, 7z]
   emulators:
-  emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
     mame:
@@ -6668,8 +6665,8 @@ actionmax:
   extensions:           [daphne, squashfs]
   platform:             daphne
   emulators:
-    daphne:
-      hypseus:          { requireAnyOf: [BR2_PACKAGE_DAPHNE]          }
+    hypseus-singe:
+      hypseus-singe:    { requireAnyOf: [BR2_PACKAGE_HYPSEUS_SINGE] }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:daphne
   comment_fr:           |
