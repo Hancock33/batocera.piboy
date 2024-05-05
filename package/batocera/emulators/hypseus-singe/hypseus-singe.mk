@@ -3,18 +3,20 @@
 # hypseus-singe
 #
 ################################################################################
-
-HYPSEUS_SINGE_VERSION = v2.11.2
-HYPSEUS_SINGE_SITE =  $(call github,DirtBagXon,hypseus-singe,$(HYPSEUS_SINGE_VERSION))
+# Version: Commits on Apr 01, 2024
+HYPSEUS_SINGE_VERSION = e2ad79d9d3a6102efe9e5fad2cc45294c9a0303c
+HYPSEUS_SINGE_SITE = https://github.com/DirtBagXon/hypseus-singe
+HYPSEUS_SINGE_SITE_METHOD=git
 HYPSEUS_SINGE_LICENSE = GPLv3
 HYPSEUS_SINGE_DEPENDENCIES = libzip sdl2 sdl2_image sdl2_ttf zlib libogg libvorbis libmpeg2
-
+HYPSEUS_SINGE_SUPPORTS_IN_SOURCE_BUILD = NO
+HYPSEUS_SINGE_SUBDIR = src
 HYPSEUS_SINGE_BEZELS_SOURCE = Bezels_Pack.zip
-HYPSEUS_SINGE_EXTRA_DOWNLOADS = \
-    https://github.com/DirtBagXon/hypseus-singe/releases/download/$(HYPSEUS_SINGE_VERSION)/$(HYPSEUS_SINGE_BEZELS_SOURCE)
+HYPSEUS_SINGE_EXTRA_DOWNLOADS = https://github.com/DirtBagXon/hypseus-singe/releases/download/v2.11.2/$(HYPSEUS_SINGE_BEZELS_SOURCE)
 
-HYPSEUS_SINGE_SUBDIR = build
-HYPSEUS_SINGE_CONF_OPTS = ../src -DBUILD_SHARED_LIBS=OFF
+HYPSEUS_SINGE_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
+HYPSEUS_SINGE_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
+HYPSEUS_SINGE_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 define HYPSEUS_SINGE_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/build/hypseus $(TARGET_DIR)/usr/bin/
@@ -28,8 +30,7 @@ define HYPSEUS_SINGE_INSTALL_TARGET_CMDS
 
 	#evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/hypseus-singe/*.keys \
-	    $(TARGET_DIR)/usr/share/evmapy
+	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/hypseus-singe/*.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 define HYPSEUS_SINGE_INSTALL_BEZELS
@@ -49,6 +50,6 @@ define HYPSEUS_SINGE_INSTALL_BEZELS
 endef
 
 # Extract the bezels we want
-HYPSEUS_SINGE_POST_INSTALL_TARGET_HOOKS = HYPSEUS_SINGE_INSTALL_BEZELS
+#HYPSEUS_SINGE_POST_INSTALL_TARGET_HOOKS = HYPSEUS_SINGE_INSTALL_BEZELS
 
 $(eval $(cmake-package))
