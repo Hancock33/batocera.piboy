@@ -757,7 +757,7 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
     #select BR2_PACKAGE_DEMUL                               if  BR2_PACKAGE_BATOCERA_WINE
 
     # Laserdisc emulation
-    select BR2_PACKAGE_DAPHNE                               # daphne
+    select BR2_PACKAGE_HYPSEUS_SINGE                        # daphne
 
     # Standalone Sega Model 2 emulator
     select BR2_PACKAGE_MODEL2EMU                            if  BR2_PACKAGE_BATOCERA_WINE

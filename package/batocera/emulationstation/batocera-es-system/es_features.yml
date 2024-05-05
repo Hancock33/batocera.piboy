@@ -7677,94 +7677,157 @@ citra:
             choices:
                 "Off": 0
                 "On":  1
-daphne:
+hypseus-singe:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, use_guns]
   cfeatures:
-        gfxbackend:
-            group: DRIVERS
+        hypseus_api:
             archs_include: [x86, x86_64, bcm2711, bcm2712]
-            prompt:      GRAPHICS API
+            prompt: GRAPHICS API
             description: Choose which graphics API library to use. Vulkan may not work on all hardware.
             choices:
                 "OpenGL": OpenGL
                 "Vulkan": Vulkan
-        daphne_ratio:
-            group: VIDEO SETTINGS
-            prompt:      ASPECT RATIO
+        hypseus_ratio:
+            prompt: ASPECT RATIO
             description: Not all games support stretching, depending on their video files.
             choices:
                 "Original":   original
                 "Stretch":    stretch
                 "Force 4:3":  force_ratio
-        daphne_rotate:
-            group: VIDEO SETTINGS
-            prompt:      SCREEN ROTATION
+        hypseus_rotate:
+            prompt: SCREEN ROTATION
             choices:
                 "0 degrees":   0
                 "90 degrees":  90
                 "270 degrees": 270
-        bilinear_filter:
-            prompt:      SMOOTH GAMES (BILINEAR FILTERING)
+        hypseus_filter:
+            prompt: SMOOTH GAMES (BILINEAR FILTERING)
             choices:
                 "On":  1
                 "Off": 0
-        daphne_scanlines:
+        hypseus_scanlines:
             archs_include: [x86, x86_64]
-            prompt:      SCANLINES
+            group: ADVANCED OPTIONS
+            prompt: SCANLINES
             description: Use with the stretch aspect ratio and adjust joystick sensitivity as required.
             choices:
                 "Off":                          0
                 "On":                           1
-        blend_sprites:
-            prompt:      BLEND SPRITES (SINGE)
-            description: Restore BLENDMODE outline on Singe sprites.
-            choices:
-                "Off": 0
-                "On":  1
-        abs_mouse_input:
-            group: ADVANCED OPTIONS
-            prompt:      ABSOLUTE MOUSE INPUT
-            description: This option is required for some gun games when playing with a mouse.
-            choices:
-                "Off": 0
-                "On":  1
-        invert_axis:
-            group: CONTROLLER SETTINGS
-            prompt:      INVERT AXIS
+        hypseus_axis:
+            prompt: INVERT AXIS
             description: Invert the vertical joystick axis on flight games.
             choices:
                 "Off": 0
                 "On":  1
-        singe_joystick_range:
-            group: CONTROLLER SETTINGS
-            prompt:      JOYSTICK TO CURSOR SENSITIVITY
-            choices:
-                "5":  5
-                "10": 10
-                "15": 15
-                "20": 20
-        singe_crosshair:
-            group:       LIGHT GUNS
-            prompt:      HIDE LIGHT GUN CROSSHAIRS
-            description: Hide crosshairs in supported games e.g. ActionMax, Maddog II.
-            choices:
-                "Hidden":                          1
-                "Shown":                           0
-        daphne_texturestream:
+        hypseus_texturestream:
             group: ADVANCED OPTIONS
-            prompt:      SDL TEXTURE ACCESS STREAMING
+            prompt: SDL TEXTURE ACCESS STREAMING
             description: Can improve video performance. Do not use with ActionMax games or scanlines.
             choices:
                 "Off":                          0
-                "On":                            1
-        daphne_joy:
+                "On":                           1
+        hypseus_joy:
             group: ADVANCED OPTIONS
-            prompt:      CUSTOM CONTROLLER
+            prompt: CUSTOM CONTROLLER
             description: Use controller settings manually defined in custom.ini.
             choices:
                 "Off":                          0
                 "On":                           1
+  systems:
+    singe:
+      cfeatures:
+        singe_sprites:
+            group: ADVANCED OPTIONS
+            prompt: BLEND SPRITES (SINGE)
+            description: Restore BLENDMODE outline on Singe sprites.
+            choices:
+                "Off": 0
+                "On":  1
+        singe_joystick_range:
+          group: ADVANCED OPTIONS
+          prompt: JOYSTICK TO CURSOR SENSITIVITY
+          choices:
+            "5":  5
+            "10": 10
+            "15": 15
+            "20": 20
+        singe_crosshair:
+          group: LIGHT GUNS
+          prompt: HIDE LIGHT GUN CROSSHAIRS
+          description: Hide crosshairs in supported games e.g. ActionMax, Maddog II.
+          choices:
+            "Hidden": 1
+            "Shown":  0
+        singe_abs:
+            group: ADVANCED OPTIONS
+            prompt: ABSOLUTE MOUSE INPUT
+            description: This option is required for some gun games when playing with a mouse.
+            choices:
+                "Off": 0
+                "On":  1
+    actionmax:
+      cfeatures:
+        singe_sprites:
+            group: ADVANCED OPTIONS
+            prompt: BLEND SPRITES (SINGE)
+            description: Restore BLENDMODE outline on Singe sprites.
+            choices:
+                "Off": 0
+                "On":  1
+        singe_joystick_range:
+          group: ADVANCED OPTIONS
+          prompt: JOYSTICK TO CURSOR SENSITIVITY
+          choices:
+            "5":  5
+            "10": 10
+            "15": 15
+            "20": 20
+        singe_crosshair:
+          group: LIGHT GUNS
+          prompt: HIDE LIGHT GUN CROSSHAIRS
+          description: Hide crosshairs in supported games e.g. ActionMax, Maddog II.
+          choices:
+            "Hidden": 1
+            "Shown":  0
+        singe_abs:
+            group: ADVANCED OPTIONS
+            prompt: ABSOLUTE MOUSE INPUT
+            description: This option is required for some gun games when playing with a mouse.
+            choices:
+                "Off": 0
+                "On":  1
+    alg:
+      cfeatures:
+        singe_sprites:
+            group: ADVANCED OPTIONS
+            prompt: BLEND SPRITES (SINGE)
+            description: Restore BLENDMODE outline on Singe sprites.
+            choices:
+                "Off": 0
+                "On":  1
+        singe_joystick_range:
+          group: ADVANCED OPTIONS
+          prompt: JOYSTICK TO CURSOR SENSITIVITY
+          choices:
+            "5":  5
+            "10": 10
+            "15": 15
+            "20": 20
+        singe_crosshair:
+          group: LIGHT GUNS
+          prompt: HIDE LIGHT GUN CROSSHAIRS
+          description: Hide crosshairs in supported games e.g. ActionMax, Maddog II.
+          choices:
+            "Hidden": 1
+            "Shown":  0
+        singe_abs:
+            group: ADVANCED OPTIONS
+            prompt: ABSOLUTE MOUSE INPUT
+            description: This option is required for some gun games when playing with a mouse.
+            choices:
+                "Off": 0
+                "On":  1
 devilutionx:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
