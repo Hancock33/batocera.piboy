@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on May 04, 2024
-LIBRETRO_MAME_VERSION = 3272473e69880675756547fc5896d0869ba14255
+LIBRETRO_MAME_VERSION = f2b7a03ade76af6fc6d63d6c7786335717d48a43
 LIBRETRO_MAME_SITE = $(call github,sonninnos,mame,$(LIBRETRO_MAME_VERSION))
 LIBRETRO_MAME_LICENSE = MAME
 
