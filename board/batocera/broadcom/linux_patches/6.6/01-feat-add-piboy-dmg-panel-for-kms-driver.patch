@@ -1,8 +1,8 @@
 diff --git a/arch/arm/boot/dts/overlays/Makefile b/arch/arm/boot/dts/overlays/Makefile
-index 06790118dbcb..6bc648ceea13 100644
+index 759fe6d3761e..1b2f35b09515 100644
 --- a/arch/arm/boot/dts/overlays/Makefile
 +++ b/arch/arm/boot/dts/overlays/Makefile
-@@ -299,6 +299,7 @@ dtbo-$(CONFIG_ARCH_BCM2835) += \
+@@ -303,6 +303,7 @@ dtbo-$(CONFIG_ARCH_BCM2835) += \
  	vc4-kms-dpi-hyperpixel4.dtbo \
  	vc4-kms-dpi-hyperpixel4sq.dtbo \
  	vc4-kms-dpi-panel.dtbo \
@@ -61,10 +61,10 @@ index 000000000000..a4e727dda7d7
 +	};
 +};
 diff --git a/drivers/gpu/drm/panel/panel-simple.c b/drivers/gpu/drm/panel/panel-simple.c
-index 035ee7a2f8a0..db5fae3fde9a 100644
+index 0d436f0ec197..6bf46ad42de4 100644
 --- a/drivers/gpu/drm/panel/panel-simple.c
 +++ b/drivers/gpu/drm/panel/panel-simple.c
-@@ -2228,6 +2228,38 @@ static const struct panel_desc innolux_at043tn24 = {
+@@ -2220,6 +2220,38 @@ static const struct panel_desc innolux_at043tn24 = {
  	.bus_flags = DRM_BUS_FLAG_DE_HIGH | DRM_BUS_FLAG_PIXDATA_DRIVE_POSEDGE,
  };
  
@@ -103,7 +103,7 @@ index 035ee7a2f8a0..db5fae3fde9a 100644
  static const struct display_timing innolux_at056tn53v1_timing = {
  	.pixelclock = { 39700000, 39700000, 39700000},
  	.hactive = { 640, 640, 640 },
-@@ -4366,6 +4398,9 @@ static const struct of_device_id platform_of_match[] = {
+@@ -4358,6 +4390,9 @@ static const struct of_device_id platform_of_match[] = {
  	}, {
  		.compatible = "innolux,at043tn24",
  		.data = &innolux_at043tn24,
