@@ -19,7 +19,7 @@ HYPSEUS_SINGE_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)
 HYPSEUS_SINGE_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 define HYPSEUS_SINGE_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/build/hypseus $(TARGET_DIR)/usr/bin/
+	$(INSTALL) -D $(@D)/src/buildroot-build/hypseus $(TARGET_DIR)/usr/bin/
 		mkdir -p $(TARGET_DIR)/usr/share/hypseus-singe
 	
 	# copy support files
