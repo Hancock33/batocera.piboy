@@ -3272,7 +3272,7 @@ wiiu:
   manufacturer:         Nintendo
   release:              2012
   hardware:             console
-  extensions:           [wua, wup, wud, wux, rpx, squashfs]
+  extensions:           [rpx, squashfs, wua, wud, wuhb, wup, wux]
   platform:             wiiu
   theme:                wiiu
   emulators:
