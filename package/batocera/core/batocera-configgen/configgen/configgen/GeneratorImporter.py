@@ -71,10 +71,6 @@ def getGenerator(emulator):
         from generators.citra.citraGenerator import CitraGenerator
         return CitraGenerator()
 
-    if emulator == 'daphne':
-        from generators.daphne.daphneGenerator import DaphneGenerator
-        return DaphneGenerator()
-
     if emulator == 'demul':
         from generators.demul.demulGenerator import DemulGenerator
         return DemulGenerator()
@@ -214,6 +210,10 @@ def getGenerator(emulator):
     if emulator == 'hurrican':
         from generators.hurrican.hurricanGenerator import HurricanGenerator
         return HurricanGenerator()
+
+    if emulator == 'hypseus-singe' :
+        from generators.hypseus_singe.hypseusSingeGenerator import HypseusSingeGenerator
+        return HypseusSingeGenerator()
 
     if emulator == "ikemen":
         from generators.ikemen.ikemenGenerator import IkemenGenerator

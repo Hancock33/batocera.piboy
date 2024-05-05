@@ -4,7 +4,25 @@
 EVENTS="game-selected system-selected"
 PIDFILE="/var/run/batocera-backglass.pid"
 
+# unset these variables while they causes issues on my side for webkit
+export WEBKIT_DISABLE_DMABUF_RENDERER=1
+export __GLX_VENDOR_LIBRARY_NAME=
+export __NV_PRIME_RENDER_OFFLOAD=
+export __VK_LAYER_NV_optimus=
+
+do_help() {
+    echo "${1} enable <x> <y> <width> <height> <http location|theme>" >&2
+    echo "${1} disable" >&2
+    echo "${1} location <http location|theme name|empty for the default theme>" >&2
+}
+
 ACTION=$1
+if test -z "${ACTION}"
+then
+    do_help "${0}"
+    exit 1
+fi
+
 shift
 
 isRunning() {
@@ -17,7 +35,36 @@ isRunning() {
     fi
 }
 
+getUrl() {
+    THEME=$1
+    test -z "${THEME}" && THEME=backglass-default
+
+    # allow http:// or https:// urls
+    if echo "${THEME}" | grep -qE '^http://|^https://'
+    then
+	THEMEPATH=${THEME}
+    else
+	THEMEPATH="/userdata/system/backglass/${THEME}/index.htm"
+	if ! test -e "${THEMEPATH}"
+	then
+	    THEMEPATH="/usr/share/batocera-backglass/www/${THEME}/index.htm"
+	fi
+
+	# not found => the default one
+	if ! test -e "${THEMEPATH}"
+	then
+	    THEMEPATH="/usr/share/batocera-backglass/www/backglass-default/index.htm"
+	fi
+    fi
+    echo "${THEMEPATH}"
+}
+
 case "${ACTION}" in
+    "location")
+	LURL=$(getUrl "${1}")
+	curl "http://localhost:2033/location?url=${LURL}"
+	;;
+
     "enable")
 	if isRunning
 	then
@@ -25,16 +72,22 @@ case "${ACTION}" in
 	    exit 1
 	fi
 
+	#
 	X=$1
 	Y=$2
 	WIDTH=$3
 	HEIGHT=$4
 	if test -z "${X}" -o -z "${Y}" -o -z "${WIDTH}" -o -z "${HEIGHT}"
 	then
-	    echo "${0} X Y WIDTH HEIGHT "
+	    echo "${0} X Y WIDTH HEIGHT"
 	    exit 1
 	fi
-	batocera-backglass-window --x "${X}" --y "${Y}" --width "${WIDTH}" --height "${HEIGHT}" &
+
+	### theme
+	THEMEPATH=$(getUrl "${5}")
+	###
+
+	batocera-backglass-window --x "${X}" --y "${Y}" --width "${WIDTH}" --height "${HEIGHT}" --www "${THEMEPATH}" &
 	echo "$!" > "${PIDFILE}"
 
 	# add hooks

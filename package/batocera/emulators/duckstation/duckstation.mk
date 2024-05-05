@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Apr 28, 2024
-DUCKSTATION_VERSION = d09497821468b6c86e7b8e68dfe9bd9c43373935
+# Version: Commits on May 05, 2024
+DUCKSTATION_VERSION = 7626a9bf9c63dbdd578c88231bd7982ac10c8f8a
 DUCKSTATION_SITE = https://github.com/stenzek/duckstation.git
 DUCKSTATION_SITE_METHOD=git
 DUCKSTATION_GIT_SUBMODULES=YES
@@ -22,6 +22,7 @@ DUCKSTATION_CONF_ENV += LDFLAGS=-lpthread
 
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
 	DUCKSTATION_CONF_OPTS += -DENABLE_WAYLAND=ON
+	DUCKSTATION_DEPENDENCIES += qt6wayland
 else
 	DUCKSTATION_CONF_OPTS += -DENABLE_WAYLAND=OFF
 endif

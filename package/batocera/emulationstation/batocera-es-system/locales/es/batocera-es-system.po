@@ -204,7 +204,7 @@ msgstr ""
 "Deshabilitar si se usa un conjunto de shaders o si la salida de la pantalla "
 "coincide con la resolución del juego."
 
-#. TRANSLATION: shared, daphne, play
+#. TRANSLATION: shared, hypseus-singe, play
 msgctxt "game_options"
 msgid "SMOOTH GAMES (BILINEAR FILTERING)"
 msgstr "SUAVIZAR JUEGOS (FILTRADO BILINEAL)"
@@ -1068,7 +1068,7 @@ msgctxt "game_options"
 msgid "DISPLAY ROTATION"
 msgstr "ROTACIÓN DE PANTALLA"
 
-#. TRANSLATION: libretro/mesen, daphne, flycast, melonds, moonlight
+#. TRANSLATION: libretro/mesen, hypseus-singe, flycast, melonds, moonlight
 msgctxt "game_options"
 msgid "90 degrees"
 msgstr "90 grados"
@@ -1078,7 +1078,7 @@ msgctxt "game_options"
 msgid "180 degrees"
 msgstr "180 grados"
 
-#. TRANSLATION: libretro/mesen, daphne, melonds, moonlight
+#. TRANSLATION: libretro/mesen, hypseus-singe, melonds, moonlight
 msgctxt "game_options"
 msgid "270 degrees"
 msgstr "270 grados"
@@ -6012,7 +6012,7 @@ msgctxt "game_options"
 msgid "FRAME RATE"
 msgstr "VELOCIDAD DE FOTOGRAMAS"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, daphne, hurrican, awgl, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, hypseus-singe, hurrican, awgl, ...
 msgctxt "game_options"
 msgid "Original"
 msgstr "Original"
@@ -8394,17 +8394,17 @@ msgstr ""
 "Selecciona que librería gráfica usar (API). Es posible que Vulkan no "
 "funcione para todos los núcleos."
 
-#. TRANSLATION: libretro, libretro, libretro, libretro, daphne, ...
+#. TRANSLATION: libretro, libretro, libretro, libretro, flycast, ...
 msgctxt "game_options"
 msgid "DRIVERS"
 msgstr ""
 
-#. TRANSLATION: libretro, cemu, citra, daphne, dolphin, ...
+#. TRANSLATION: libretro, cemu, citra, hypseus-singe, dolphin, ...
 msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "API GRÁFICA"
 
-#. TRANSLATION: libretro, cemu, daphne, dolphin, duckstation, ...
+#. TRANSLATION: libretro, cemu, hypseus-singe, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "OpenGL"
 msgstr "OpenGL"
@@ -8419,7 +8419,7 @@ msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
 
-#. TRANSLATION: libretro, citra, daphne, dolphin, duckstation, ...
+#. TRANSLATION: libretro, citra, hypseus-singe, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
@@ -8589,7 +8589,7 @@ msgctxt "game_options"
 msgid "DOUBLE"
 msgstr "DOBLE"
 
-#. TRANSLATION: amiberry, daphne
+#. TRANSLATION: amiberry, hypseus-singe
 msgctxt "game_options"
 msgid "SCANLINES"
 msgstr "LÍNEAS DE ESCANEO"
@@ -8908,7 +8908,7 @@ msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
 msgstr "Mantener relación de aspecto (Defecto)"
 
-#. TRANSLATION: cemu, daphne, openbor, redream, demul
+#. TRANSLATION: cemu, hypseus-singe, openbor, redream, demul
 msgctxt "game_options"
 msgid "Stretch"
 msgstr "Estirar"
@@ -9082,7 +9082,60 @@ msgctxt "game_options"
 msgid "NEW 3DS MODE"
 msgstr "MODO NUEVA 3DS"
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Restore BLENDMODE outline on Singe sprites."
+msgstr "Restaura el esquema BLENDMODE en sprites Singe."
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "BLEND SPRITES (SINGE)"
+msgstr "BLEND SPRITES (SINGE)"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "JOYSTICK TO CURSOR SENSITIVITY"
+msgstr "JOYSTICK A LA SENSIBILIDAD DEL CURSOR"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
+msgstr ""
+"Oculta puntos de mira en juegos compatibles, por ej. ActionMax, Maddog II."
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "LIGHT GUNS"
+msgstr "LIGHT GUNS"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "HIDE LIGHT GUN CROSSHAIRS"
+msgstr "OCULTAR PUNTO DE MIRA DE ARMA LIGHT GUN"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Hidden"
+msgstr "Oculto"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Shown"
+msgstr "Mostrado"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "This option is required for some gun games when playing with a mouse."
+msgstr ""
+"Esta opción es necesaria para algunos juegos de armas lightgun cuando se "
+"juega con ratón."
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "ABSOLUTE MOUSE INPUT"
+msgstr "ENTRADA DE RATÓN ABSOLUTA"
+
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid ""
 "Choose which graphics API library to use. Vulkan may not work on all "
@@ -9091,29 +9144,29 @@ msgstr ""
 "Selecciona que librería gráfica API usar. Puede que Vulkan no funcione en "
 "todos los hardware."
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Not all games support stretching, depending on their video files."
 msgstr ""
 "No todos los juegos admiten el estiramiento, dependiendo de sus archivos de "
 "vídeo."
 
-#. TRANSLATION: daphne, dolphin, dolphin_triforce, suyu
+#. TRANSLATION: hypseus-singe, dolphin, dolphin_triforce, suyu
 msgctxt "game_options"
 msgid "Force 4:3"
 msgstr "Forzar 4:3"
 
-#. TRANSLATION: daphne, flycast, melonds
+#. TRANSLATION: hypseus-singe, flycast, melonds
 msgctxt "game_options"
 msgid "SCREEN ROTATION"
 msgstr "ROTACIÓN DE PANTALLA"
 
-#. TRANSLATION: daphne, flycast, melonds, moonlight
+#. TRANSLATION: hypseus-singe, flycast, melonds, moonlight
 msgctxt "game_options"
 msgid "0 degrees"
 msgstr "0 grados"
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid ""
 "Use with the stretch aspect ratio and adjust joystick sensitivity as "
@@ -9122,70 +9175,17 @@ msgstr ""
 "Úselo con relación de aspecto estirada y ajuste la sensibilidad del joystick "
 "según sea necesario."
 
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Restore BLENDMODE outline on Singe sprites."
-msgstr "Restaura el esquema BLENDMODE en sprites Singe."
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "BLEND SPRITES (SINGE)"
-msgstr "BLEND SPRITES (SINGE)"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "This option is required for some gun games when playing with a mouse."
-msgstr ""
-"Esta opción es necesaria para algunos juegos de armas lightgun cuando se "
-"juega con ratón."
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "ABSOLUTE MOUSE INPUT"
-msgstr "ENTRADA DE RATÓN ABSOLUTA"
-
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Invert the vertical joystick axis on flight games."
 msgstr "Invierte el eje vertical del joystick en los juegos de vuelo."
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "INVERT AXIS"
 msgstr "EJE INVERTIDO"
 
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "JOYSTICK TO CURSOR SENSITIVITY"
-msgstr "JOYSTICK A LA SENSIBILIDAD DEL CURSOR"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
-msgstr ""
-"Oculta puntos de mira en juegos compatibles, por ej. ActionMax, Maddog II."
-
-#. TRANSLATION: daphne, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "LIGHT GUNS"
-msgstr "LIGHT GUNS"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "HIDE LIGHT GUN CROSSHAIRS"
-msgstr "OCULTAR PUNTO DE MIRA DE ARMA LIGHT GUN"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Hidden"
-msgstr "Oculto"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Shown"
-msgstr "Mostrado"
-
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid ""
 "Can improve video performance. Do not use with ActionMax games or scanlines."
@@ -9193,17 +9193,17 @@ msgstr ""
 "Puede mejorar el rendimiento de vídeo. No UTILIZAR con juegos ActionMax o "
 "scan-lines."
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "SDL TEXTURE ACCESS STREAMING"
 msgstr "TRANSMISIÓN DE ACCESO A TEXTURA SDL"
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Use controller settings manually defined in custom.ini."
 msgstr "Utiliza ajustes del mando definidos manualmente en custom.ini ."
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "CUSTOM CONTROLLER"
 msgstr "MANDO PERSONALIZADO"
@@ -15754,6 +15754,16 @@ msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Salir del emulador"
 
+#. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys, xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, ...
+msgctxt "keys_files"
+msgid "Exit emulator"
+msgstr "Salir de emulador"
+
+#. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys
+msgctxt "keys_files"
+msgid "Service menu"
+msgstr "Menú de servicio"
+
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Start"
@@ -15869,11 +15879,6 @@ msgctxt "keys_files"
 msgid "Set to full screen"
 msgstr "Establecer a pantalla completa"
 
-#. TRANSLATION: xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys, ...
-msgctxt "keys_files"
-msgid "Exit emulator"
-msgstr "Salir de emulador"
-
 #. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
 msgctxt "keys_files"
 msgid "Virtual Keyboard"
@@ -15983,11 +15988,6 @@ msgstr "Salir de Dosbox-X"
 msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr "Mostrar la pantalla del mando"
-
-#. TRANSLATION: daphne.daphne.keys
-msgctxt "keys_files"
-msgid "Service menu"
-msgstr "Menú de servicio"
 
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"

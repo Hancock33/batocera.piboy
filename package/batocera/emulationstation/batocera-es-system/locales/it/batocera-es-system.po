@@ -206,7 +206,7 @@ msgstr ""
 "Disabilita se un set di shader e' in uso o se il monitor in uscita "
 "corrispondealla risoluzione del gioco."
 
-#. TRANSLATION: shared, daphne, play
+#. TRANSLATION: shared, hypseus-singe, play
 msgctxt "game_options"
 msgid "SMOOTH GAMES (BILINEAR FILTERING)"
 msgstr "SFUMA I GIOCHI (FILTRO BILINEARE)"
@@ -1067,7 +1067,7 @@ msgctxt "game_options"
 msgid "DISPLAY ROTATION"
 msgstr "ROTAZIONE SCHERMO"
 
-#. TRANSLATION: libretro/mesen, daphne, flycast, melonds, moonlight
+#. TRANSLATION: libretro/mesen, hypseus-singe, flycast, melonds, moonlight
 msgctxt "game_options"
 msgid "90 degrees"
 msgstr "90 gradi"
@@ -1077,7 +1077,7 @@ msgctxt "game_options"
 msgid "180 degrees"
 msgstr "180 gradi"
 
-#. TRANSLATION: libretro/mesen, daphne, melonds, moonlight
+#. TRANSLATION: libretro/mesen, hypseus-singe, melonds, moonlight
 msgctxt "game_options"
 msgid "270 degrees"
 msgstr "270 gradi"
@@ -5995,7 +5995,7 @@ msgctxt "game_options"
 msgid "FRAME RATE"
 msgstr "FRAME RATE"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, daphne, hurrican, awgl, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, hypseus-singe, hurrican, awgl, ...
 msgctxt "game_options"
 msgid "Original"
 msgstr "Originale"
@@ -8374,17 +8374,17 @@ msgstr ""
 "Scegli quali libreria API grafiche utilizzare. Vulkan potrebbe non "
 "funzionare per ogni core."
 
-#. TRANSLATION: libretro, libretro, libretro, libretro, daphne, ...
+#. TRANSLATION: libretro, libretro, libretro, libretro, flycast, ...
 msgctxt "game_options"
 msgid "DRIVERS"
 msgstr ""
 
-#. TRANSLATION: libretro, cemu, citra, daphne, dolphin, ...
+#. TRANSLATION: libretro, cemu, citra, hypseus-singe, dolphin, ...
 msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "API GRAFICHE"
 
-#. TRANSLATION: libretro, cemu, daphne, dolphin, duckstation, ...
+#. TRANSLATION: libretro, cemu, hypseus-singe, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "OpenGL"
 msgstr "OpenGL"
@@ -8399,7 +8399,7 @@ msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
 
-#. TRANSLATION: libretro, citra, daphne, dolphin, duckstation, ...
+#. TRANSLATION: libretro, citra, hypseus-singe, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
@@ -8569,7 +8569,7 @@ msgctxt "game_options"
 msgid "DOUBLE"
 msgstr "DOPPIA"
 
-#. TRANSLATION: amiberry, daphne
+#. TRANSLATION: amiberry, hypseus-singe
 msgctxt "game_options"
 msgid "SCANLINES"
 msgstr "SCANLINES"
@@ -8888,7 +8888,7 @@ msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
 msgstr "Mantieni il rapporto dimensioni (Default)"
 
-#. TRANSLATION: cemu, daphne, openbor, redream, demul
+#. TRANSLATION: cemu, hypseus-singe, openbor, redream, demul
 msgctxt "game_options"
 msgid "Stretch"
 msgstr "Allunga"
@@ -9061,7 +9061,59 @@ msgctxt "game_options"
 msgid "NEW 3DS MODE"
 msgstr "MODALITA' NUOVO 3DS"
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Restore BLENDMODE outline on Singe sprites."
+msgstr "Ripristina controno BLENDMODE sui singoli sprite."
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "BLEND SPRITES (SINGE)"
+msgstr "BLEND SPRITES (SINGE)"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "JOYSTICK TO CURSOR SENSITIVITY"
+msgstr "SENSIBILITA' DA JOYSTICK A CURSORE"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
+msgstr "Nascondi mirini nei giochi che lo supportano es. ActionMax, Maddog II."
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "LIGHT GUNS"
+msgstr "PISTOLE"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "HIDE LIGHT GUN CROSSHAIRS"
+msgstr "NASCONDI MIRINO PISTOLA"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Hidden"
+msgstr "Nascosto"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Shown"
+msgstr "Visibile"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "This option is required for some gun games when playing with a mouse."
+msgstr ""
+"Questa opzione e' necessaria per alcuni giochi con postola quando mostrano "
+"il mouse."
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "ABSOLUTE MOUSE INPUT"
+msgstr "INPU MOUSE ASSOLUTO"
+
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid ""
 "Choose which graphics API library to use. Vulkan may not work on all "
@@ -9070,28 +9122,28 @@ msgstr ""
 "Scegli quale libreria API grafiche usare. Vulkan potrebbe non funzionare "
 "sututti gli hardware."
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Not all games support stretching, depending on their video files."
 msgstr ""
 "Non tutti i giochi supportano allungamento, dipende dai loro file video."
 
-#. TRANSLATION: daphne, dolphin, dolphin_triforce, suyu
+#. TRANSLATION: hypseus-singe, dolphin, dolphin_triforce, suyu
 msgctxt "game_options"
 msgid "Force 4:3"
 msgstr "Forza 4:3"
 
-#. TRANSLATION: daphne, flycast, melonds
+#. TRANSLATION: hypseus-singe, flycast, melonds
 msgctxt "game_options"
 msgid "SCREEN ROTATION"
 msgstr "ROTAZIONE SCHERMO"
 
-#. TRANSLATION: daphne, flycast, melonds, moonlight
+#. TRANSLATION: hypseus-singe, flycast, melonds, moonlight
 msgctxt "game_options"
 msgid "0 degrees"
 msgstr "0 gradi"
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid ""
 "Use with the stretch aspect ratio and adjust joystick sensitivity as "
@@ -9100,69 +9152,17 @@ msgstr ""
 "Usa assieme a allungamento proporzioni e aggiusta la sensibilita' del "
 "joystickcome necessario"
 
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Restore BLENDMODE outline on Singe sprites."
-msgstr "Ripristina controno BLENDMODE sui singoli sprite."
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "BLEND SPRITES (SINGE)"
-msgstr "BLEND SPRITES (SINGE)"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "This option is required for some gun games when playing with a mouse."
-msgstr ""
-"Questa opzione e' necessaria per alcuni giochi con postola quando mostrano "
-"il mouse."
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "ABSOLUTE MOUSE INPUT"
-msgstr "INPU MOUSE ASSOLUTO"
-
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Invert the vertical joystick axis on flight games."
 msgstr "Inverti l'asse verticale del joystick nei giochi di volo."
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "INVERT AXIS"
 msgstr "INVERTI ASSI"
 
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "JOYSTICK TO CURSOR SENSITIVITY"
-msgstr "SENSIBILITA' DA JOYSTICK A CURSORE"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
-msgstr "Nascondi mirini nei giochi che lo supportano es. ActionMax, Maddog II."
-
-#. TRANSLATION: daphne, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "LIGHT GUNS"
-msgstr "PISTOLE"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "HIDE LIGHT GUN CROSSHAIRS"
-msgstr "NASCONDI MIRINO PISTOLA"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Hidden"
-msgstr "Nascosto"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Shown"
-msgstr "Visibile"
-
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid ""
 "Can improve video performance. Do not use with ActionMax games or scanlines."
@@ -9170,17 +9170,17 @@ msgstr ""
 "Puo' migliorare la performance video. Non usare con giochi ActionMax o "
 "scanlines."
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "SDL TEXTURE ACCESS STREAMING"
 msgstr "STREAMING ACCESSO ALLE TEXTURE SDL"
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Use controller settings manually defined in custom.ini."
 msgstr "Usa le impostazioni manuali del controlle presenti in custom.ini."
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "CUSTOM CONTROLLER"
 msgstr "CONTROLLER PERSONALIZZATO"
@@ -15679,6 +15679,16 @@ msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Esci dall'emulatore"
 
+#. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys, xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, ...
+msgctxt "keys_files"
+msgid "Exit emulator"
+msgstr "Esci dall'emulatore"
+
+#. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys
+msgctxt "keys_files"
+msgid "Service menu"
+msgstr "Menu di servizio"
+
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Start"
@@ -15794,11 +15804,6 @@ msgctxt "keys_files"
 msgid "Set to full screen"
 msgstr "Imposta a tutto schermo"
 
-#. TRANSLATION: xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys, ...
-msgctxt "keys_files"
-msgid "Exit emulator"
-msgstr "Esci dall'emulatore"
-
 #. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
 msgctxt "keys_files"
 msgid "Virtual Keyboard"
@@ -15908,11 +15913,6 @@ msgstr "Esci da Dosbox-X"
 msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr "Mostra lo schermo controller"
-
-#. TRANSLATION: daphne.daphne.keys
-msgctxt "keys_files"
-msgid "Service menu"
-msgstr "Menu di servizio"
 
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
