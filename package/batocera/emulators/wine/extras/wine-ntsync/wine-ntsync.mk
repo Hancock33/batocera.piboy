@@ -3,8 +3,8 @@
 # wine-ntsync
 #
 ################################################################################
-# Version: Commits on Mar 04, 2024
-WINE_NTSYNC_VERSION = 312bc2fe6b27e10c3ce56eeda158aef2e5a0a304
+# Version: Commits on May 03, 2024
+WINE_NTSYNC_VERSION = b710a652bb7f582fa65f8d42d727847e231b7095
 WINE_NTSYNC_SOURCE = $(WINE_NTSYNC_VERSION).tar.gz
 WINE_NTSYNC_SITE = https://repo.or.cz/wine/zf.git/snapshot/
 WINE_NTSYNC_LICENSE = LGPL-2.1+
@@ -12,10 +12,6 @@ WINE_NTSYNC_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_NTSYNC_SELINUX_MODULES = wine
 WINE_NTSYNC_DEPENDENCIES = host-bison host-flex host-wine-custom
 HOST_WINE_NTSYNC_DEPENDENCIES = host-bison host-flex
-
-ifeq ($(BR_CMAKE_USE_CLANG),y)
-	HOST_WINE_NTSYNC_DEPENDENCIES += host-clang host-lld
-endif
 
 define WINE_NTSYNC_AUTOGEN
 	# Create folder for install

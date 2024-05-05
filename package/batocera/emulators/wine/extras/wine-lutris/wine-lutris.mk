@@ -13,10 +13,6 @@ WINE_LUTRIS_SELINUX_MODULES = wine
 WINE_LUTRIS_DEPENDENCIES = host-bison host-flex host-wine-lutris
 HOST_WINE_LUTRIS_DEPENDENCIES = host-bison host-flex
 
-ifeq ($(BR_CMAKE_USE_CLANG),y)
-	HOST_WINE_LUTRIS_DEPENDENCIES += host-clang host-lld
-endif
-
 define WINE_LUTRIS_AUTOGEN
 	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/lutris

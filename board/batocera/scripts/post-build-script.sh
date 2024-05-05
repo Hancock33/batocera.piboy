@@ -58,6 +58,7 @@ then
     rm -frv ${TARGET_DIR}/usr/lib/dri/{kirin_dri.so,komeda_dri.so,rcar-du_dri.so}
     rm -frv ${TARGET_DIR}/usr/lib/dri/{gm12u320_dri.so,ili9163_dri.so,ili9486_dri.so,panel-mipi-dbi_dri.so,rzg2l-du_dri.so,ssd130x_dri.so,sti_dri.so,udl_dri.so,zynqmp-dpsub_dri.so}
 fi
+rm -rf "${TARGET_DIR}/usr/share/clc" || exit 1
 
 # remove buildlogs
 find ${TARGET_DIR}/usr -type f -name ".applied_patches_list" -exec rm {} \;

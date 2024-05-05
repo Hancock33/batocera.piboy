@@ -25,6 +25,8 @@ msgid ""
 "Adjust the cpu power frequency profile whilst in-game. Some systems will "
 "benefit from improved voltage handling."
 msgstr ""
+"Dostosuj profil częstotliwości zasilania CPU w grze. Niektóre systemy "
+"skorzystają na ulepszonej obsłudze napięcia."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -52,11 +54,13 @@ msgid ""
 "Adjust the cpu power profile whist on battery. Overwrites previous Power "
 "Mode(s)."
 msgstr ""
+"Dostosowuje profil zasilania CPU podczas pracy na baterii. Nadpisuje "
+"poprzednie tryby zasilania."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "BATTERY MODE"
-msgstr ""
+msgstr "TRYB BATERII"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -209,7 +213,7 @@ msgstr ""
 "Wyłączone, jeśli używany jest zestaw shaderów lub rozdzielczość obrazu "
 "odpowiada rozdzielczości gry."
 
-#. TRANSLATION: shared, daphne, play
+#. TRANSLATION: shared, hypseus-singe, play
 msgctxt "game_options"
 msgid "SMOOTH GAMES (BILINEAR FILTERING)"
 msgstr "WYGŁADZANIE GIER (FILTROWANIE DWULINIOWE)"
@@ -1071,7 +1075,7 @@ msgctxt "game_options"
 msgid "DISPLAY ROTATION"
 msgstr "OBRÓT EKRANU"
 
-#. TRANSLATION: libretro/mesen, daphne, flycast, melonds, moonlight
+#. TRANSLATION: libretro/mesen, hypseus-singe, flycast, melonds, moonlight
 msgctxt "game_options"
 msgid "90 degrees"
 msgstr "90 stopni"
@@ -1081,7 +1085,7 @@ msgctxt "game_options"
 msgid "180 degrees"
 msgstr "180 stopni"
 
-#. TRANSLATION: libretro/mesen, daphne, melonds, moonlight
+#. TRANSLATION: libretro/mesen, hypseus-singe, melonds, moonlight
 msgctxt "game_options"
 msgid "270 degrees"
 msgstr "270 stopni"
@@ -5642,7 +5646,7 @@ msgstr ""
 #. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Justifier"
-msgstr ""
+msgstr "Justifier"
 
 #. TRANSLATION: libretro/mednafen_supergrafx, libretro/pce, libretro/pce_fast, libretro/pcfx
 msgctxt "game_options"
@@ -6015,7 +6019,7 @@ msgctxt "game_options"
 msgid "FRAME RATE"
 msgstr "CZĘSTOTLIWOŚĆ ODŚWIEŻANIA"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, daphne, hurrican, awgl, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, hypseus-singe, hurrican, awgl, ...
 msgctxt "game_options"
 msgid "Original"
 msgstr "Oryginał"
@@ -6637,7 +6641,7 @@ msgstr "Parasite Eve 2/Vandal Hearts 1&2 Fix"
 #. TRANSLATION: libretro/pcsx_rearmed, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Hyper Blaster/Justifier"
-msgstr ""
+msgstr "Hyper Blaster/Justifier"
 
 #. TRANSLATION: libretro/pcsx_rearmed, flycast
 msgctxt "game_options"
@@ -8091,52 +8095,52 @@ msgstr "Koalapad"
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "Some games and homebrews require more RAM"
-msgstr ""
+msgstr "Niektóre gry i homebrew wymagają więcej RAM"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "RAM EXPANSION UNIT"
-msgstr ""
+msgstr "ROZSZERZENIE RAM"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "128kB (1700)"
-msgstr ""
+msgstr "128kB (1700)"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "256kB (1764)"
-msgstr ""
+msgstr "256kB (1764)"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "512kB (1750)"
-msgstr ""
+msgstr "512kB (1750)"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "1024kB"
-msgstr ""
+msgstr "1024kB"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "2048kB"
-msgstr ""
+msgstr "2048kB"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "4096kB"
-msgstr ""
+msgstr "4096kB"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "8192kB"
-msgstr ""
+msgstr "8192kB"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128
 msgctxt "game_options"
 msgid "16384kB"
-msgstr ""
+msgstr "16384kB"
 
 #. TRANSLATION: libretro/vice_x128
 msgctxt "game_options"
@@ -8396,17 +8400,17 @@ msgstr ""
 "Wybierz bibliotekę API grafiki, której chcesz użyć. Biblioteka Vulkan może "
 "nie działać w przypadku każdego jądra emulatora."
 
-#. TRANSLATION: libretro, libretro, libretro, libretro, daphne, ...
+#. TRANSLATION: libretro, libretro, libretro, libretro, flycast, ...
 msgctxt "game_options"
 msgid "DRIVERS"
 msgstr ""
 
-#. TRANSLATION: libretro, cemu, citra, daphne, dolphin, ...
+#. TRANSLATION: libretro, cemu, citra, hypseus-singe, dolphin, ...
 msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "API GRAFIKI"
 
-#. TRANSLATION: libretro, cemu, daphne, dolphin, duckstation, ...
+#. TRANSLATION: libretro, cemu, hypseus-singe, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "OpenGL"
 msgstr "OpenGL"
@@ -8421,7 +8425,7 @@ msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
 
-#. TRANSLATION: libretro, citra, daphne, dolphin, duckstation, ...
+#. TRANSLATION: libretro, citra, hypseus-singe, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
@@ -8591,7 +8595,7 @@ msgctxt "game_options"
 msgid "DOUBLE"
 msgstr "PODWÓJNA"
 
-#. TRANSLATION: amiberry, daphne
+#. TRANSLATION: amiberry, hypseus-singe
 msgctxt "game_options"
 msgid "SCANLINES"
 msgstr "SCANLINES"
@@ -8913,7 +8917,7 @@ msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
 msgstr "Zachowaj proporcje (domyślnie)"
 
-#. TRANSLATION: cemu, daphne, openbor, redream, demul
+#. TRANSLATION: cemu, hypseus-singe, openbor, redream, demul
 msgctxt "game_options"
 msgid "Stretch"
 msgstr "Rozciągnięcie"
@@ -9087,7 +9091,59 @@ msgctxt "game_options"
 msgid "NEW 3DS MODE"
 msgstr "NOWY TRYB 3DS"
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Restore BLENDMODE outline on Singe sprites."
+msgstr "Przywróć kontur BLENDMODE na pojedynczych sprite'ach."
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "BLEND SPRITES (SINGE)"
+msgstr "MIESZANIE SPRITE'ÓW (POJEDYNCZO)"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "JOYSTICK TO CURSOR SENSITIVITY"
+msgstr "CZUŁOŚĆ JOYSTIKA NA KURSOR"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
+msgstr "Ukryj celownik w obsługiwanych grach, np. ActionMax, Maddog II."
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "LIGHT GUNS"
+msgstr "PISTOLETY ŚWIETLNE"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "HIDE LIGHT GUN CROSSHAIRS"
+msgstr "UKRYJ CELOWNIK PISTOLETU ŚWIETLNEGO"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Hidden"
+msgstr "Ukryte"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Shown"
+msgstr "Widoczne"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "This option is required for some gun games when playing with a mouse."
+msgstr ""
+"Ta opcja jest wymagana w niektórych grach z bronią podczas gry za pomocą "
+"myszy."
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "ABSOLUTE MOUSE INPUT"
+msgstr "BEZWZGLĘDNE WEJŚCIE MYSZY"
+
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid ""
 "Choose which graphics API library to use. Vulkan may not work on all "
@@ -9096,28 +9152,28 @@ msgstr ""
 "Wybierz bibliotekę API grafiki, której chcesz użyć. Vulkan może nie działać "
 "na każdym sprzęcie."
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Not all games support stretching, depending on their video files."
 msgstr ""
 "Nie wszystkie gry obsługują rozciąganie, w zależności od ich plików wideo."
 
-#. TRANSLATION: daphne, dolphin, dolphin_triforce, suyu
+#. TRANSLATION: hypseus-singe, dolphin, dolphin_triforce, suyu
 msgctxt "game_options"
 msgid "Force 4:3"
 msgstr "Wymuszone 4:3"
 
-#. TRANSLATION: daphne, flycast, melonds
+#. TRANSLATION: hypseus-singe, flycast, melonds
 msgctxt "game_options"
 msgid "SCREEN ROTATION"
 msgstr "OBRÓT EKRANU"
 
-#. TRANSLATION: daphne, flycast, melonds, moonlight
+#. TRANSLATION: hypseus-singe, flycast, melonds, moonlight
 msgctxt "game_options"
 msgid "0 degrees"
 msgstr "0 stopni"
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid ""
 "Use with the stretch aspect ratio and adjust joystick sensitivity as "
@@ -9126,69 +9182,17 @@ msgstr ""
 "Używaj ze współczynnikiem proporcji rozciągania i dostosuj czułość joysticka "
 "zgodnie z wymaganiami."
 
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Restore BLENDMODE outline on Singe sprites."
-msgstr "Przywróć kontur BLENDMODE na pojedynczych sprite'ach."
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "BLEND SPRITES (SINGE)"
-msgstr "MIESZANIE SPRITE'ÓW (POJEDYNCZO)"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "This option is required for some gun games when playing with a mouse."
-msgstr ""
-"Ta opcja jest wymagana w niektórych grach z bronią podczas gry za pomocą "
-"myszy."
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "ABSOLUTE MOUSE INPUT"
-msgstr "BEZWZGLĘDNE WEJŚCIE MYSZY"
-
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Invert the vertical joystick axis on flight games."
 msgstr "Odwróć pionową oś joysticka w grach lotniczych."
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "INVERT AXIS"
 msgstr "ODWRÓĆ OŚ"
 
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "JOYSTICK TO CURSOR SENSITIVITY"
-msgstr "CZUŁOŚĆ JOYSTIKA NA KURSOR"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
-msgstr ""
-
-#. TRANSLATION: daphne, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "LIGHT GUNS"
-msgstr ""
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "HIDE LIGHT GUN CROSSHAIRS"
-msgstr "UKRYĆ CELOWNIK PISTOLETU ŚWIETLNEGO"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Hidden"
-msgstr ""
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Shown"
-msgstr ""
-
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid ""
 "Can improve video performance. Do not use with ActionMax games or scanlines."
@@ -9196,17 +9200,17 @@ msgstr ""
 "Może poprawić wydajność wideo. Nie należy używać z grami ActionMax ani "
 "scanlines."
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "SDL TEXTURE ACCESS STREAMING"
 msgstr "STRUMIENIOWY DOSTĘP DO TEKSTUR SDL"
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Use controller settings manually defined in custom.ini."
 msgstr "Użyj ustawień sterownika zdefiniowanych ręcznie w custom.ini."
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "CUSTOM CONTROLLER"
 msgstr "NIESTANDARDOWY KONTROLER"
@@ -9291,22 +9295,22 @@ msgstr ""
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Position of wii sensor bar relative to the disaply for real wiimotes."
-msgstr ""
+msgstr "Położenie sensor bara Wii względem ekranu dla prawdziwych Wiimote'ów."
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "SENSOR BAR POSITION"
-msgstr ""
+msgstr "POZYCJA SENSOR BARA"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Bottom (Default)"
-msgstr ""
+msgstr "Na dole (Domyślne)"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Top"
-msgstr ""
+msgstr "Na górze"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
@@ -9332,7 +9336,7 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable controller rumble capabilities if supported by the controller."
 msgstr ""
-"Włączenie funkcji dudnienia kontrolera, jeśli jest ona obsługiwana przez "
+"Włączenie funkcji wibracji kontrolera, jeśli jest ona obsługiwana przez "
 "kontroler."
 
 #. TRANSLATION: dolphin, dolphin_triforce
@@ -9382,7 +9386,7 @@ msgstr "Wyłączone (domyślnie)"
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
 msgid "Increase emulator performance, at the cost of accuracy/stability."
-msgstr "Zwiększ wydajność emulatora kosztem dokładności /stabilności."
+msgstr "Zwiększ wydajność emulatora kosztem dokładności/stabilności."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -10036,7 +10040,7 @@ msgstr "OSIĄGNIĘCIA"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "CROSSHAIR"
-msgstr ""
+msgstr "CELOWNIK"
 
 #. TRANSLATION: flycast/vitaquake3
 msgctxt "game_options"
@@ -12754,12 +12758,12 @@ msgstr "CRT SWITCHRES"
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "Play this game on several screens (if available)"
-msgstr ""
+msgstr "Graj w tą grę na kilku ekranach (jeśli to możliwe)"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "MULTISCREENS"
-msgstr ""
+msgstr "MULTIEKRANY"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -12813,11 +12817,13 @@ msgid ""
 "Runners simplify compatibility of running Windows games. You must have a "
 "runner in it's own directory under /userdata/system/wine/custom."
 msgstr ""
+"Uruchamiacze ułatwiają uruchamianie gier Windows. Musisz mieć uruchamiacz w "
+"swoim własnym katalogu pod /userdata/system/wine/custom."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "WINE RUNNER"
-msgstr ""
+msgstr "URUCHAMIACZ WINE"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13520,22 +13526,22 @@ msgstr "Ma zastosowanie tylko w przypadku korzystania z OpenGL."
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "0.5x (360p/540p) [EXPERIMENTAL]"
-msgstr ""
+msgstr "0.5x (360p/540p) [EKSPERYMENTALNE]"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "0.75x (540p/810p) [EXPERIMENTAL]"
-msgstr ""
+msgstr "0.75x (540p/810p) [EKSPERYMENTALNE]"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "1x (720p/1080p)"
-msgstr ""
+msgstr "1x (720p/1080p)"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "1.5x (1080p/1620p) [EXPERIMENTAL]"
-msgstr ""
+msgstr "1.5x (1080p/1620p) [EKSPERYMENTALNE]"
 
 #. TRANSLATION: suyu, ryujinx
 msgctxt "game_options"
@@ -13570,12 +13576,12 @@ msgstr ""
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "8x (5760p/8640p)"
-msgstr ""
+msgstr "8x (5760p/8640p)"
 
 #. TRANSLATION: suyu, ryujinx
 msgctxt "game_options"
 msgid "16:9 (Default)"
-msgstr "16:9 (domyślnie)"
+msgstr "16:9 (Domyślnie)"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13590,7 +13596,7 @@ msgstr "Wymuś 16:10"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Force 32:9"
-msgstr ""
+msgstr "Wymuś 32:9"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13599,31 +13605,34 @@ msgid ""
 "tearing as it recovers from a slow down. Mailbox can have lower latency but "
 "may drop frames."
 msgstr ""
+"Napraw rwanie obrazu. FIFO (Vsync) nie traci klatek. FIFO Relaxed pozwala na "
+"rwanie po spadku wydajności. Mailbox może mieć niższe opóźnienie, ale może "
+"tracić klatki."
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Immediate"
-msgstr ""
+msgstr "Natychmiast"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Mailbox (Recommended)"
-msgstr ""
+msgstr "Mailbox (Polecane)"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "FIFO (VSync On)"
-msgstr ""
+msgstr "FIFO (VSync wł.)"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "FIFO Relaxed"
-msgstr ""
+msgstr "FIFO Relaxed"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "ASYNC SHADER COMPILE"
-msgstr "KOMPILACJA ASYNC SHADERA"
+msgstr "KOMPILACJA ASYNCHRONICZNA SHADERÓW"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13631,6 +13640,8 @@ msgid ""
 "FXAA has a lower performance impact, goof for low resolutions. SMAA offers "
 "best quality."
 msgstr ""
+"FXAA ma mniejszy wpływ na wydajność, dobry dla niskich rozdzielczości. SMAA "
+"oferuje najlepszą jakość."
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13640,7 +13651,7 @@ msgstr "METODA ANTYALIASINGU"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "SMAA"
-msgstr ""
+msgstr "SMAA"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13655,7 +13666,7 @@ msgstr "ScaleForce"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "AMD FidelityFX Super Resolution"
-msgstr ""
+msgstr "AMD FidelityFX Super Resolution"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13663,16 +13674,19 @@ msgid ""
 "GPU emulation accuracy. Most games render fine with Normal. High is required "
 "to ensure particles render correctly."
 msgstr ""
+"Dokładność emulacji GPU. Większość gier renderuje się dobrze w trybie "
+"Normal. Wysoka jest wymagana, aby zapewnić prawidłowe renderowanie "
+"cząsteczek."
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "ACCURACY LEVEL"
-msgstr ""
+msgstr "POZIOM DOKŁADNOŚCI"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Extreme"
-msgstr ""
+msgstr "Ekstremalny"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13688,41 +13702,42 @@ msgstr "Mono"
 msgctxt "game_options"
 msgid "Choose whether the virtual switch is docked or not."
 msgstr ""
+"Wybierz, czy wirtualny Switch ma być w trybie zadokowanym, czy też nie."
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "DOCK MODE"
-msgstr ""
+msgstr "TRYB DOKOWANIA"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Undocked"
-msgstr ""
+msgstr "Poza dokiem"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Docked (Default)"
-msgstr ""
+msgstr "Zadokowany (Domyślne)"
 
 #. TRANSLATION: suyu, ryujinx
 msgctxt "game_options"
 msgid "British English"
-msgstr "Brytyjska odmiana Angielskiego"
+msgstr "Brytyjski angielski"
 
 #. TRANSLATION: suyu, ryujinx
 msgctxt "game_options"
 msgid "Canadian French"
-msgstr "Kanadyjska odmiana francuskiego"
+msgstr "Kanadyjski francuski"
 
 #. TRANSLATION: suyu, ryujinx
 msgctxt "game_options"
 msgid "Latin American Spanish"
-msgstr "Hiszpański z Ameryki Łacińskiej"
+msgstr "Hiszpański Ameryki Łacińskiej"
 
 #. TRANSLATION: suyu, ryujinx
 msgctxt "game_options"
 msgid "Brazilian Portuguese"
-msgstr "Brazylijska odmiana portugalskiego"
+msgstr "Brazylijski portugalski"
 
 #. TRANSLATION: suyu, ryujinx
 msgctxt "game_options"
@@ -15105,17 +15120,17 @@ msgstr "ALTCOLOR"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Playfield configuration"
-msgstr ""
+msgstr "Konfiguracja pola gry"
 
 #. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
 msgctxt "game_options"
 msgid "WINDOWS POSITIONS"
-msgstr ""
+msgstr "POZYCJE OKIEN"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "PLAYFIELD"
-msgstr ""
+msgstr "POLE GRY"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15166,7 +15181,7 @@ msgstr "Lewe górne położenie, duży"
 #. TRANSLATION: vpinball, vpinball, vpinball
 msgctxt "game_options"
 msgid "On screen 2 if available"
-msgstr ""
+msgstr "Na ekranie 2 jeśli dostępny"
 
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
@@ -15209,7 +15224,7 @@ msgid ""
 "When the Backglass is activated, display the small additional part with the "
 "scores."
 msgstr ""
-"Gdy Backglass jest aktywowany, wyświetl małą dodatkową część z wynikami."
+"Po włączeniu funkcji Backglass, wyświetl małą dodatkową część z wynikami."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15219,22 +15234,22 @@ msgstr "WYŚWIETL BACKGLASS DMD"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "When the Backglass is activated, display the grill."
-msgstr ""
+msgstr "Po włączeniu funkcji Backglass wyświetlany jest grill."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "DISPLAY BACKGLASS GRILL"
-msgstr ""
+msgstr "WYŚWIETL BACKGLASS GRILL"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "DMD window ratio"
-msgstr ""
+msgstr "Współczynnik okna DMD"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "DMD SIZE"
-msgstr ""
+msgstr "ROZMIAR DMD"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15242,11 +15257,13 @@ msgid ""
 "Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
 "main screen for other emulators."
 msgstr ""
+"Odwraca Backglass i pole gry. Przydatne do używania Backglass jako ekranu "
+"głównego dla innych emulatorów."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "INVERSE PLAYFIELD AND B2S"
-msgstr ""
+msgstr "ODWRÓĆ POLE GRY I B2S"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15254,26 +15271,28 @@ msgid ""
 "FULLSCREEN gives you a top-down view on the playfield. For cabinet use or "
 "multi-window on desktop."
 msgstr ""
+"PEŁNY EKRAN zapewnia widok z góry na pole gry. Do użytku w automacie lub w "
+"wielu oknach na pulpicie."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "PLAYFIELD MODE"
-msgstr ""
+msgstr "TRYB POLA GRY"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "DESKTOP"
-msgstr ""
+msgstr "PULPIT"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "FULLSCREEN"
-msgstr ""
+msgstr "PEŁNY EKRAN"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "FULL SINGLE SCREEN"
-msgstr ""
+msgstr "PEŁNY POJEDYNCZY EKRAN"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15590,7 +15609,7 @@ msgstr "45s"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "60s"
-msgstr ""
+msgstr "60s"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15705,6 +15724,16 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Zamknięcie emulatora"
+
+#. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys, xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, ...
+msgctxt "keys_files"
+msgid "Exit emulator"
+msgstr "Zamknięcie emulatora"
+
+#. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys
+msgctxt "keys_files"
+msgid "Service menu"
+msgstr "Menu usługi"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
@@ -15821,11 +15850,6 @@ msgctxt "keys_files"
 msgid "Set to full screen"
 msgstr "Ustawienie pełnego ekranu"
 
-#. TRANSLATION: xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys, ...
-msgctxt "keys_files"
-msgid "Exit emulator"
-msgstr "Zamknięcie emulatora"
-
 #. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
 msgctxt "keys_files"
 msgid "Virtual Keyboard"
@@ -15935,11 +15959,6 @@ msgstr "Wyjdź z Dosbox-X"
 msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr "Wyświetlanie ekranu kontrolera"
-
-#. TRANSLATION: daphne.daphne.keys
-msgctxt "keys_files"
-msgid "Service menu"
-msgstr ""
 
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
@@ -16134,12 +16153,12 @@ msgstr "Pauza / Menu"
 #. TRANSLATION: steam.keys
 msgctxt "keys_files"
 msgid "Exit Steam"
-msgstr ""
+msgstr "Opuść Steam"
 
 #. TRANSLATION: flatpak.keys
 msgctxt "keys_files"
 msgid "Exit running Flatpak"
-msgstr ""
+msgstr "Opuść działającego Flatpaka"
 
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
@@ -16399,7 +16418,7 @@ msgstr "Zarządzaj personelem"
 #. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys
 msgctxt "keys_files"
 msgid "Bring up menu"
-msgstr "Otworz menu"
+msgstr "Otwórz menu"
 
 #. TRANSLATION: openjazz.keys
 msgctxt "keys_files"
@@ -16890,15 +16909,15 @@ msgstr "Szybkie zapisywanie"
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
-#~ msgstr "Emuluj wskaźnik Wiimote za pomocą żyroskopu DS4."
+#~ msgstr "Emuluj wskaźnik Wiimote'a za pomocą żyroskopu DS4."
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate the Wiimote pointer with a mouse."
-#~ msgstr "Emuluj wskaźnik Wiimote za pomocą myszy."
+#~ msgstr "Emuluj wskaźnik Wiimote'a za pomocą myszy."
 
 #~ msgctxt "game_options"
 #~ msgid "MOUSE AS WIIMOTE POINTER"
-#~ msgstr "MYSZ JAKO WSKAŹNIK WIIMOTE"
+#~ msgstr "MYSZ JAKO WSKAŹNIK WIIMOTE'A"
 
 #~ msgctxt "game_options"
 #~ msgid "Set joystick deadzone."

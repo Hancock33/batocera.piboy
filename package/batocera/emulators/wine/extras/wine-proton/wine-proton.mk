@@ -3,8 +3,9 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Apr 26, 2024
-WINE_PROTON_VERSION = proton-wine-9.0-1-rc2
+# Version: Commits on May 03, 2024
+WINE_PROTON_VERSION = e8172fc9d5dbfcb88c92f7e8832ea773bccf38c4
+WINE_PROTON_BRANCH = bleeding-edge
 WINE_PROTON_SOURCE = wine-proton-$(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
@@ -12,13 +13,6 @@ WINE_PROTON_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_PROTON_SELINUX_MODULES = wine
 WINE_PROTON_DEPENDENCIES = host-bison host-flex host-wine-custom
 HOST_WINE_PROTON_DEPENDENCIES = host-bison host-flex
-
-define WINE_PROTON_STAGING
-	# Use Staging Patches
-	printf "%s\n" "$(TERM_BOLD)>>> $($(PKG)_NAME) $($(PKG)_VERSION) Patching wine-staging" >&2
-	tar -xf $(WINE_PROTON_DL_DIR)/$(WINE_PROTON_STAGING_VERSION).tar.gz -C $(@D)
-	cd $(@D); ./wine-staging-$(subst v,,$(WINE_PROTON_STAGING_VERSION))/staging/patchinstall.py --all
-endef
 
 define WINE_PROTON_AUTOGEN
 	# Create folder for install

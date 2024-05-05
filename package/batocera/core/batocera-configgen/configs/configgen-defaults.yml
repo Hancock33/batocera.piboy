@@ -34,8 +34,8 @@ acclaim:
   emulator: libretro
   core:     mame078plus
 actionmax:
-  emulator: daphne
-  core:     hypseus
+  emulator: hypseus-singe
+  core:     hypseus-singe
   options:
     hud_support: false
 adam:
@@ -48,8 +48,8 @@ alephone:
   emulator: alephone
   core:     alephone
 alg:
-  emulator: daphne
-  core:     hypseus
+  emulator: hypseus-singe
+  core:     hypseus-singe
   options:
     hud_support: false
 alphadenshi:
@@ -243,8 +243,8 @@ crvision:
 # D-L
 
 daphne:
-  emulator: daphne
-  core:     hypseus
+  emulator: hypseus-singe
+  core:     hypseus-singe
   options:
     hud_support: false
 dataeast:
@@ -877,6 +877,11 @@ sg1000:
 sgb:
   emulator: libretro
   core:     mgba
+singe:
+  emulator: hypseus-singe
+  core:     hypseus-singe
+  options:
+    hud_support: false
 sm64:
   emulator: sm64
   core:     sm64
@@ -1183,4 +1188,3 @@ vpinball:
   core:     vpinball
   options:
     powersave: '1'
-

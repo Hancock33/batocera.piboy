@@ -290,11 +290,6 @@ class LibretroGenerator(Generator):
         if (system.config['core'] != 'mrboom'):
             commandArray.extend(['--verbose'])
 
-        # Extension used by hypseus .daphne but lr-daphne starts with .zip
-        if system.name == 'daphne':
-            romName = os.path.splitext(os.path.basename(rom))[0]
-            rom = batoceraFiles.daphneDatadir + '/roms/' + romName +'.zip'
-
         if system.name == 'msu-md':
             if "squashfs" in rom:
                 romsInDir = glob.glob(glob.escape(rom) + '/*.md')

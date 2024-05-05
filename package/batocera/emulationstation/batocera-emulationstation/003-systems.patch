@@ -856,7 +856,7 @@ index b3d1f138..2e8045d4 100644
  	{ MSX, "113089" },
  	{ NOKIA_NGAGE, "128704" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index 8475268f..30bf2eb3 100644
+index fc3748b7..30bf2eb3 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
 @@ -30,158 +30,235 @@ using namespace PlatformIds;
@@ -1050,7 +1050,7 @@ index 8475268f..30bf2eb3 100644
 -	{ VISUALPINBALL, 198 },
 -	{ FUTUREPINBALL, 199 },
 -	
--	{ TEKNOPARROT, 138 }, // Use "PC Windows", as it's the nearest
+-	{ TEKNOPARROT, 269 }, // Screenscraper now has Teknoparrot platform
 -
 -	// Misc
 -	{ VIC20, 73 },
