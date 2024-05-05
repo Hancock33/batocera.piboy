@@ -1,13 +1,13 @@
 diff --git a/Makefile b/Makefile
-index 40fb2ca6fe4c..5c6cda97be69 100644
+index d51d411d44a8..dc427454d2e9 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -2,7 +2,7 @@
  VERSION = 6
  PATCHLEVEL = 9
  SUBLEVEL = 0
--EXTRAVERSION = -rc6
-+EXTRAVERSION = -rc6-batocera
+-EXTRAVERSION = -rc7
++EXTRAVERSION = -rc7-batocera
  NAME = Hurr durr I'ma ninja sloth
  
  # *DOCUMENTATION*
