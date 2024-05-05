@@ -214,7 +214,7 @@ msgstr ""
 "셰이더 세트 또는 출력 디스플레이를 사용하는 것이 게임의 해상도와 일치하는 경"
 "우 비활성화됩니다."
 
-#. TRANSLATION: shared, daphne, play
+#. TRANSLATION: shared, hypseus-singe, play
 #, fuzzy
 msgctxt "game_options"
 msgid "SMOOTH GAMES (BILINEAR FILTERING)"
@@ -1177,7 +1177,7 @@ msgctxt "game_options"
 msgid "DISPLAY ROTATION"
 msgstr "디스플레이 회전"
 
-#. TRANSLATION: libretro/mesen, daphne, flycast, melonds, moonlight
+#. TRANSLATION: libretro/mesen, hypseus-singe, flycast, melonds, moonlight
 #, fuzzy
 msgctxt "game_options"
 msgid "90 degrees"
@@ -1189,7 +1189,7 @@ msgctxt "game_options"
 msgid "180 degrees"
 msgstr "180도"
 
-#. TRANSLATION: libretro/mesen, daphne, melonds, moonlight
+#. TRANSLATION: libretro/mesen, hypseus-singe, melonds, moonlight
 #, fuzzy
 msgctxt "game_options"
 msgid "270 degrees"
@@ -6629,7 +6629,7 @@ msgctxt "game_options"
 msgid "FRAME RATE"
 msgstr "프레임 속도"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, daphne, hurrican, awgl, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, hypseus-singe, hurrican, awgl, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Original"
@@ -9294,18 +9294,18 @@ msgstr ""
 "사용할 그래픽 API 라이브러리를 선택합니다. Vulkan은 모든 코어에서 작동하지 않"
 "을 수 있습니다."
 
-#. TRANSLATION: libretro, libretro, libretro, libretro, daphne, ...
+#. TRANSLATION: libretro, libretro, libretro, libretro, flycast, ...
 msgctxt "game_options"
 msgid "DRIVERS"
 msgstr ""
 
-#. TRANSLATION: libretro, cemu, citra, daphne, dolphin, ...
+#. TRANSLATION: libretro, cemu, citra, hypseus-singe, dolphin, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "그래픽 API"
 
-#. TRANSLATION: libretro, cemu, daphne, dolphin, duckstation, ...
+#. TRANSLATION: libretro, cemu, hypseus-singe, dolphin, duckstation, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "OpenGL"
@@ -9322,7 +9322,7 @@ msgctxt "game_options"
 msgid "SDL2"
 msgstr ""
 
-#. TRANSLATION: libretro, citra, daphne, dolphin, duckstation, ...
+#. TRANSLATION: libretro, citra, hypseus-singe, dolphin, duckstation, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Vulkan"
@@ -9503,7 +9503,7 @@ msgctxt "game_options"
 msgid "DOUBLE"
 msgstr "배"
 
-#. TRANSLATION: amiberry, daphne
+#. TRANSLATION: amiberry, hypseus-singe
 #, fuzzy
 msgctxt "game_options"
 msgid "SCANLINES"
@@ -9868,7 +9868,7 @@ msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
 msgstr "종횡비 유지(기본값)"
 
-#. TRANSLATION: cemu, daphne, openbor, redream, demul
+#. TRANSLATION: cemu, hypseus-singe, openbor, redream, demul
 msgctxt "game_options"
 msgid "Stretch"
 msgstr "늘리기"
@@ -10049,7 +10049,63 @@ msgctxt "game_options"
 msgid "NEW 3DS MODE"
 msgstr "새로운 3DS 모드"
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#, fuzzy
+msgctxt "game_options"
+msgid "Restore BLENDMODE outline on Singe sprites."
+msgstr "싱글 스프라이트에서 블렌드모드 윤곽선을 복원합니다."
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#, fuzzy
+msgctxt "game_options"
+msgid "BLEND SPRITES (SINGE)"
+msgstr "블렌드 스프라이트 (싱글)"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#, fuzzy
+msgctxt "game_options"
+msgid "JOYSTICK TO CURSOR SENSITIVITY"
+msgstr "조이스틱 대 커서 감도"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
+msgstr ""
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "LIGHT GUNS"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#, fuzzy
+msgctxt "game_options"
+msgid "HIDE LIGHT GUN CROSSHAIRS"
+msgstr "라이트 건 십자선 숨기기"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Hidden"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Shown"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#, fuzzy
+msgctxt "game_options"
+msgid "This option is required for some gun games when playing with a mouse."
+msgstr "이 옵션은 마우스로 플레이할 때 일부 총기 게임에 필요합니다."
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#, fuzzy
+msgctxt "game_options"
+msgid "ABSOLUTE MOUSE INPUT"
+msgstr "절대 마우스 입력"
+
+#. TRANSLATION: hypseus-singe
 #, fuzzy
 msgctxt "game_options"
 msgid ""
@@ -10059,105 +10115,49 @@ msgstr ""
 "사용할 그래픽 API 라이브러리를 선택합니다. Vulkan은 모든 하드웨어에서 작동하"
 "지 않을 수 있습니다."
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Not all games support stretching, depending on their video files."
 msgstr "모든 게임이 비디오 파일에 따라 늘리기를 지원하는 것은 아닙니다."
 
-#. TRANSLATION: daphne, dolphin, dolphin_triforce, suyu
+#. TRANSLATION: hypseus-singe, dolphin, dolphin_triforce, suyu
 #, fuzzy
 msgctxt "game_options"
 msgid "Force 4:3"
 msgstr "힘 4:3"
 
-#. TRANSLATION: daphne, flycast, melonds
+#. TRANSLATION: hypseus-singe, flycast, melonds
 #, fuzzy
 msgctxt "game_options"
 msgid "SCREEN ROTATION"
 msgstr "화면 회전"
 
-#. TRANSLATION: daphne, flycast, melonds, moonlight
+#. TRANSLATION: hypseus-singe, flycast, melonds, moonlight
 #, fuzzy
 msgctxt "game_options"
 msgid "0 degrees"
 msgstr "0도"
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid ""
 "Use with the stretch aspect ratio and adjust joystick sensitivity as "
 "required."
 msgstr "늘리기 종횡비와 함께 사용하고 필요에 따라 조이스틱 감도를 조정합니다."
 
-#. TRANSLATION: daphne
-#, fuzzy
-msgctxt "game_options"
-msgid "Restore BLENDMODE outline on Singe sprites."
-msgstr "싱글 스프라이트에서 블렌드모드 윤곽선을 복원합니다."
-
-#. TRANSLATION: daphne
-#, fuzzy
-msgctxt "game_options"
-msgid "BLEND SPRITES (SINGE)"
-msgstr "블렌드 스프라이트 (싱글)"
-
-#. TRANSLATION: daphne
-#, fuzzy
-msgctxt "game_options"
-msgid "This option is required for some gun games when playing with a mouse."
-msgstr "이 옵션은 마우스로 플레이할 때 일부 총기 게임에 필요합니다."
-
-#. TRANSLATION: daphne
-#, fuzzy
-msgctxt "game_options"
-msgid "ABSOLUTE MOUSE INPUT"
-msgstr "절대 마우스 입력"
-
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 #, fuzzy
 msgctxt "game_options"
 msgid "Invert the vertical joystick axis on flight games."
 msgstr "비행 게임에서 수직 조이스틱 축을 뒤집습니다."
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 #, fuzzy
 msgctxt "game_options"
 msgid "INVERT AXIS"
 msgstr "축 반전"
 
-#. TRANSLATION: daphne
-#, fuzzy
-msgctxt "game_options"
-msgid "JOYSTICK TO CURSOR SENSITIVITY"
-msgstr "조이스틱 대 커서 감도"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
-msgstr ""
-
-#. TRANSLATION: daphne, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "LIGHT GUNS"
-msgstr ""
-
-#. TRANSLATION: daphne
-#, fuzzy
-msgctxt "game_options"
-msgid "HIDE LIGHT GUN CROSSHAIRS"
-msgstr "라이트 건 십자선 숨기기"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Hidden"
-msgstr ""
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Shown"
-msgstr ""
-
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 #, fuzzy
 msgctxt "game_options"
 msgid ""
@@ -10166,19 +10166,19 @@ msgstr ""
 "비디오 성능을 향상시킬 수 있습니다. ActionMax 게임 또는 스캔라인과 함께 사용"
 "하지 마십시오."
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 #, fuzzy
 msgctxt "game_options"
 msgid "SDL TEXTURE ACCESS STREAMING"
 msgstr "SDL 텍스처 액세스 스트리밍"
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 #, fuzzy
 msgctxt "game_options"
 msgid "Use controller settings manually defined in custom.ini."
 msgstr "custom.ini에 수동으로 정의된 컨트롤러 설정을 사용합니다."
 
-#. TRANSLATION: daphne
+#. TRANSLATION: hypseus-singe
 #, fuzzy
 msgctxt "game_options"
 msgid "CUSTOM CONTROLLER"
@@ -16948,6 +16948,16 @@ msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr ""
 
+#. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys, xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, ...
+msgctxt "keys_files"
+msgid "Exit emulator"
+msgstr ""
+
+#. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys
+msgctxt "keys_files"
+msgid "Service menu"
+msgstr ""
+
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Start"
@@ -17063,11 +17073,6 @@ msgctxt "keys_files"
 msgid "Set to full screen"
 msgstr ""
 
-#. TRANSLATION: xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys, ...
-msgctxt "keys_files"
-msgid "Exit emulator"
-msgstr ""
-
 #. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
 msgctxt "keys_files"
 msgid "Virtual Keyboard"
@@ -17176,11 +17181,6 @@ msgstr ""
 #. TRANSLATION: wiiu.keys
 msgctxt "keys_files"
 msgid "Display the controller screen"
-msgstr ""
-
-#. TRANSLATION: daphne.daphne.keys
-msgctxt "keys_files"
-msgid "Service menu"
 msgstr ""
 
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
