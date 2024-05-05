@@ -82,8 +82,11 @@ class HypseusSingeGenerator(Generator):
 
         # Copy/update directories
         for directory in directories:
-            copy_resources(directory["source"], directory["destination"])
-               
+            try:
+                copy_resources(directory["source"], directory["destination"])
+            except:
+                eslog.info("Source directory not found: " + str(directory["source"]))
+
         # extension used .daphne and the file to start the game is in the folder .daphne with the extension .txt
         romName = os.path.splitext(os.path.basename(rom))[0]
         frameFile = rom + "/" + romName + ".txt"
@@ -94,6 +97,13 @@ class HypseusSingeGenerator(Generator):
         bezelPath = batoceraFiles.hypseusDatadir + "/bezels/" + bezelFile
         sindenBezelPath = batoceraFiles.hypseusDatadir + "/bezels/sinden/" + bezelFile
 
+        if (system.name == 'actionmax'):
+            amDir = '/userdata/roms/actionmax/'
+            os.chdir(amDir)
+            frameFile = amDir + romName + ".txt"
+            commandsFile = amDir + romName + ".commands"
+            singeFile = amDir + romName + ".singe"
+
         # get the first video file from frameFile to determine the resolution
         m2v_filename = self.find_m2v_from_txt(frameFile)
 
@@ -103,7 +113,11 @@ class HypseusSingeGenerator(Generator):
             eslog.debug("No .m2v files found in the text file.")
 
         # now get the resolution from the m2v file
-        video_path = rom + "/" + m2v_filename
+        if (system.name == 'actionmax'):
+            video_path = '/userdata/roms/actionmax/' + m2v_filename
+        else:
+            video_path = rom + "/" + m2v_filename
+
         # check the path exists
         if not os.path.exists(video_path):
             eslog.debug("Could not find m2v file in path - {}".format(video_path))
@@ -122,8 +136,8 @@ class HypseusSingeGenerator(Generator):
                             "-romdir", batoceraFiles.singeRomdir, "-homedir", batoceraFiles.hypseusDatadir]
         elif (system.name == 'actionmax') or (system.name == 'alg') :
             commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
-                            "singe", "vldp", "-framefile", frameFile, "-script", singeFile, "-fullscreen",
-                            "-gamepad", "-datadir", batoceraFiles.daphneDatadir, "-homedir", batoceraFiles.daphneDatadir]
+                            "singe", "vldp", "-framefile", frameFile, "-script", singeFile,
+                            "-fullscreen", "-gamepad", "-datadir", batoceraFiles.hypseusDatadir, "-homedir", batoceraFiles.hypseusDatadir]
         else:
             commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
                             romName, "vldp", "-framefile", frameFile, "-fullscreen",
