@@ -4,11 +4,12 @@ index 21a3a66..1a9425f 100644
 +++ b/src/files.c
 @@ -650,8 +650,8 @@ void InitGameDirectories(char *argv0, char* argv_datapath)
      
-        localdir = (char *)malloc(strlen(homedir)+10);
-        strcpy(localdir, homedir);
--       strcat(localdir, "/");
--       strcat(localdir, ".avp");
-+       strcat(localdir, "/configs/");
-+       strcat(localdir, "avp");
+ 	localdir = (char *)malloc(strlen(homedir)+10);
+ 	strcpy(localdir, homedir);
+-	strcat(localdir, "/");
+-	strcat(localdir, ".avp");
++	strcat(localdir, "/configs/");
++	strcat(localdir, "avp");
  
-        tmp = NULL;
+ 	tmp = NULL;
+ 	
