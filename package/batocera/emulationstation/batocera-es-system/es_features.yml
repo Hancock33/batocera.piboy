@@ -12713,7 +12713,20 @@ bigfish:
   shared: [powermode, tdp, videomode, powersave]
 bigpemu:
   features: [padtokeyboard]
-  shared: [powermode, tdp, videomode, powersave]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+    bigpemu_vsync:
+      prompt: VSYNC
+      description: Fix screen tearing.
+      choices:
+        "Disabled": 0
+        "Enabled":  1
+    bigpemu_ratio:
+      prompt: ASPECT RATIO
+      description: Change the output resolution ratio.
+      choices:
+        "4:3 (Default)": 2
+        "16:9":          8
 blues:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -13232,7 +13245,7 @@ theforceengine:
         "2160p": 2160
     force_widescreen:
       submenu: GRAPHICS
-      prompt: ENABLE WIDESCREEN
+      prompt: WIDESCREEN
       description: Enable widescreen support.
       choices:
         "Disabled (Default)": 0
@@ -13265,31 +13278,39 @@ theforceengine:
         "GPU / OpenGL (Default)": 1
     force_colour:
       submenu: GRAPHICS
-      prompt: ENABLE TRUE COLOUR
+      prompt: COLOUR MODE
+      choices:
+        "8-bit (Classic)":    0
+        "8-bit Interpolated": 1
+        "True Colour":        2
+    force_hd:
+      submenu: GRAPHICS
+      prompt: HD TEXTURES
+      description: Choose to render high definition graphics textures. Requires OpenGL, True Colour and the enhanced.gob file.
       choices:
         "Disabled (Default)": 0
         "Enabled":            1
     force_bilinear:
       submenu: GRAPHICS
-      prompt: ENABLE BILINEAR FILTER
+      prompt: BILINEAR FILTER
       choices:
         "Disabled (Default)": 0
         "Enabled":            1
     force_mipmapping:
       submenu: GRAPHICS
-      prompt: ENABLE MIPMAPPING
+      prompt: MIPMAPPING
       choices:
         "Disabled (Default)": 0
         "Enabled":            1
     force_crosshair:
       submenu: GRAPHICS
-      prompt: ENABLE CROSSHAIR
+      prompt: CROSSHAIR
       choices:
         "Disabled (Default)": 0
         "Enabled":            1
     force_postfx:
       submenu: GRAPHICS
-      prompt: ENABLE BLOOM
+      prompt: BLOOM
       description: Choose to use Bloom post processing.
       choices:
         "Disabled (Default)": 0
