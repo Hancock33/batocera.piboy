@@ -67,9 +67,9 @@ Support for Nvidia cards requiring the legacy 340.108 driver.
 - Mupen64plus-video-glide64mk2 bump to Jun 11, 2023 build
 - Mupen64plus-video-rice bump to Jun 11, 2023 build
 - Mupen64plus-gliden64 bump to Feb 18, 2024 build
-- PPSSPP: bump to 1.17.1
+- PPSSPP: to May 6, 2024 build
 - Duckstation to v0.1-6658
-- Libretro-ppsspp: bump to 1.17.1
+- Libretro-ppsspp: to May 6, 2024 build
 - Libretro-81: bump to Nov 1, 2023 build
 - Libretro-fbneo: bump to Feb 23, 2024 build (v1.0.0.03)
 - Libretro-genesisplusgx: bump to Feb 23, 2024 build
@@ -116,8 +116,9 @@ Support for Nvidia cards requiring the legacy 340.108 driver.
 - Fallout2-CE to v1.3.0
 - Raze to v1.10.2
 - Vice to v3.8
-- The Force Engine to Apr 29, 2024 build
+- The Force Engine to Apr 29, 2024 build (Supports HD Textures)
 - DXX-Rebirth to Apr 22, 2024 build
+- BigPemu to v113 (Linux Build)
 ### System
 - Mainline Kernel 6.6.y bump to 6.6.23
 - Nvidia Production driver to 550.67
