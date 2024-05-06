@@ -1024,7 +1024,7 @@ singe:
                         Due to legacy supporting file structures, we still use the .daphne folder extension.
                         roms
                         |-- singe
-                        |-- maddog.daphne    
+                        |-- maddog.daphne
                         |-- maddog.singe      (Singe Game LUA)
                         |-- maddog.txt        (Framefile)
                         |-- maddog.m2v

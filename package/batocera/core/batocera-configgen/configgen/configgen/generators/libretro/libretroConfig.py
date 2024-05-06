@@ -20,15 +20,15 @@ eslog = get_logger(__name__)
 sys.path.append(
     os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
-# Return value for es invertedbuttons    
-def getInvertButtonsValue():   
+# Return value for es invertedbuttons
+def getInvertButtonsValue():
     tree = ET.parse(batoceraFiles.esSettings)
     root = tree.getroot()
     # Find the InvertButtons element and return value
     elem = root.find(".//bool[@name='InvertButtons']")
     if elem is not None:
         return elem.get('value') == 'true'
-    return False  # Return False if not found 
+    return False  # Return False if not found
 
 # return true if the option is considered defined
 def defined(key, dict):
