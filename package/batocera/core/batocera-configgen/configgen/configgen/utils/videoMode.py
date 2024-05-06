@@ -67,7 +67,7 @@ def getScreensInfos(config):
     eslog.debug(res)
     return res
 
-def getScreens():    
+def getScreens():
     proc = subprocess.Popen(["batocera-resolution listOutputs"], stdout=subprocess.PIPE, shell=True)
     (out, err) = proc.communicate()
     return out.decode().splitlines()

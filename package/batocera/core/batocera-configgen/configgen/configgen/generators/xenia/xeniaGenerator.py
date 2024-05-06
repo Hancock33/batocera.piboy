@@ -63,7 +63,7 @@ class XeniaGenerator(Generator):
                 sys.exit()
         except subprocess.CalledProcessError:
             eslog.debug("Error executing batocera-vulkan script.")
-        
+
         # make system directories
         if not os.path.exists(wineprefix):
             os.makedirs(wineprefix)

@@ -524,7 +524,7 @@ class DuckstationGenerator(Generator):
             qt_qpa_platform = "wayland"
         else:
             qt_qpa_platform = "xcb"
-        
+
         return Command.Command(
             array=commandArray,
             env={
