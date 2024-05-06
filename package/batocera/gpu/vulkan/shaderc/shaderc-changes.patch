@@ -1,13 +1,18 @@
+diff --git a/CHANGES b/CHANGES
+index 35069fe..0270c0e 100644
 --- a/CHANGES
 +++ b/CHANGES
-@@ -1,6 +1,6 @@
- Revision history for Shaderc
+@@ -7,7 +7,7 @@ v2024.1
+  - Update dependencies
+  - Propagate test/install options to Glslang
  
 -v2024.0
 +v2024.0 2024-03-09
   - Update dependencies
   - Utilities:
      - Use Python3 explicitly in utility scripts
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index ffcb54b..7c1a6d8 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -117,6 +117,9 @@ if(MSVC)
@@ -34,6 +39,8 @@
  define_pkg_config_file(shaderc -lshaderc_shared)
 -define_pkg_config_file(shaderc_static "-lshaderc ${EXTRA_STATIC_PKGCONFIG_LIBS} -lshaderc_util")
 -define_pkg_config_file(shaderc_combined -lshaderc_combined)
+diff --git a/libshaderc/CMakeLists.txt b/libshaderc/CMakeLists.txt
+index df9a88d..b15e5d7 100644
 --- a/libshaderc/CMakeLists.txt
 +++ b/libshaderc/CMakeLists.txt
 @@ -24,13 +24,6 @@ set(SHADERC_SOURCES
@@ -103,6 +110,8 @@
  if(${SHADERC_ENABLE_TESTS})
    add_executable(shaderc_c_smoke_test ./src/shaderc_c_smoke_test.c)
    shaderc_default_c_compile_options(shaderc_c_smoke_test)
+diff --git a/libshaderc/include/shaderc/shaderc.h b/libshaderc/include/shaderc/shaderc.h
+index 3a3e97d..05dc6a9 100644
 --- a/libshaderc/include/shaderc/shaderc.h
 +++ b/libshaderc/include/shaderc/shaderc.h
 @@ -319,6 +319,10 @@ SHADERC_EXPORT void shaderc_compile_options_set_source_language(
@@ -116,6 +125,8 @@
  // Sets the compiler optimization level to the given level. Only the last one
  // takes effect if multiple calls of this function exist.
  SHADERC_EXPORT void shaderc_compile_options_set_optimization_level(
+diff --git a/libshaderc/include/shaderc/shaderc.hpp b/libshaderc/include/shaderc/shaderc.hpp
+index 3817af8..fd3c588 100644
 --- a/libshaderc/include/shaderc/shaderc.hpp
 +++ b/libshaderc/include/shaderc/shaderc.hpp
 @@ -172,6 +172,12 @@ class CompileOptions {
@@ -131,6 +142,8 @@
    // Sets the compiler optimization level to the given level. Only the last one
    // takes effect if multiple calls of this function exist.
    void SetOptimizationLevel(shaderc_optimization_level level) {
+diff --git a/libshaderc/src/shaderc.cc b/libshaderc/src/shaderc.cc
+index 63f1bbc..37fd711 100644
 --- a/libshaderc/src/shaderc.cc
 +++ b/libshaderc/src/shaderc.cc
 @@ -422,6 +422,11 @@ void shaderc_compile_options_set_generate_debug_info(
@@ -145,6 +158,8 @@
  void shaderc_compile_options_set_optimization_level(
      shaderc_compile_options_t options, shaderc_optimization_level level) {
    auto opt_level = shaderc_util::Compiler::OptimizationLevel::Zero;
+diff --git a/libshaderc_util/include/libshaderc_util/compiler.h b/libshaderc_util/include/libshaderc_util/compiler.h
+index d9d02b9..b076ec8 100644
 --- a/libshaderc_util/include/libshaderc_util/compiler.h
 +++ b/libshaderc_util/include/libshaderc_util/compiler.h
 @@ -195,6 +195,7 @@ class Compiler {
@@ -177,6 +192,8 @@
    // Optimization passes to be applied.
    std::vector<PassId> enabled_opt_passes_;
  
+diff --git a/libshaderc_util/src/compiler.cc b/libshaderc_util/src/compiler.cc
+index e5f5d10..1f9e6a5 100644
 --- a/libshaderc_util/src/compiler.cc
 +++ b/libshaderc_util/src/compiler.cc
 @@ -341,6 +341,11 @@ std::tuple<bool, std::vector<uint32_t>, size_t> Compiler::Compile(
@@ -202,6 +219,8 @@
  void Compiler::SetOptimizationLevel(Compiler::OptimizationLevel level) {
    // Clear previous settings first.
    enabled_opt_passes_.clear();
+diff --git a/third_party/CMakeLists.txt b/third_party/CMakeLists.txt
+index d44f62a..e5f1960 100644
 --- a/third_party/CMakeLists.txt
 +++ b/third_party/CMakeLists.txt
 @@ -20,9 +20,9 @@ set(SHADERC_TINT_DIR "${SHADERC_THIRD_PARTY_ROOT_DIR}/tint" CACHE STRING
@@ -229,10 +248,10 @@
      if (NOT "${SPIRV_SKIP_TESTS}")
        if (MSVC)
          if (${MSVC_VERSION} LESS 1920)
-@@ -83,7 +86,7 @@ endif()
- 
- if (NOT TARGET glslang)
-   if (IS_DIRECTORY ${SHADERC_GLSLANG_DIR})
+@@ -88,7 +91,7 @@ if (NOT TARGET glslang)
+       set(GLSLANG_TESTS ON)
+     endif()
+     set(GLSLANG_ENABLE_INSTALL $<NOT:${SKIP_GLSLANG_INSTALL}>)
 -    add_subdirectory(${SHADERC_GLSLANG_DIR} glslang)
 +    add_subdirectory(${SHADERC_GLSLANG_DIR} glslang EXCLUDE_FROM_ALL)
    endif()
