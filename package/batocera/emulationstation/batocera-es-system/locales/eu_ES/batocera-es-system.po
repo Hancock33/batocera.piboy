@@ -9997,7 +9997,7 @@ msgctxt "game_options"
 msgid "ACHIEVEMENTS"
 msgstr "LORPENAK"
 
-#. TRANSLATION: duckstation
+#. TRANSLATION: duckstation, theforceengine
 msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr ""
@@ -11054,7 +11054,7 @@ msgctxt "game_options"
 msgid "Choose mipmapping type."
 msgstr "Aukeratu mipmapping mota."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: pcsx2, theforceengine
 msgctxt "game_options"
 msgid "MIPMAPPING"
 msgstr "MIPMAPPING"
@@ -12317,7 +12317,7 @@ msgctxt "game_options"
 msgid "Choose your preferred aspect ratio."
 msgstr "Aukeratu hobetsitatko proportzioa."
 
-#. TRANSLATION: redream, demul, bermuda
+#. TRANSLATION: redream, demul, bermuda, bigpemu
 msgctxt "game_options"
 msgid "4:3 (Default)"
 msgstr "4:3 (Defektuz)"
@@ -13292,7 +13292,7 @@ msgctxt "game_options"
 msgid "Enable widescreen support."
 msgstr "Gaitu pantaila zabal euskarria."
 
-#. TRANSLATION: model2emu, play, theforceengine
+#. TRANSLATION: model2emu, play
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN"
 msgstr "GAITU PANTAILA ZABALA"
@@ -14709,6 +14709,11 @@ msgstr "960p"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
+msgid "WIDESCREEN"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
 msgid "144 fps"
 msgstr "144 fps"
 
@@ -14739,23 +14744,40 @@ msgstr "GPU / OpenGL (Defektuzkoa)"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE TRUE COLOUR"
-msgstr "GAITU BENETAZKO KOLOREA"
+msgid "COLOUR MODE"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE BILINEAR FILTER"
-msgstr "GAITU FILTRO BILINEARRA"
+msgid "8-bit (Classic)"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE MIPMAPPING"
-msgstr "GAITU MIPMAPPING-A"
+msgid "8-bit Interpolated"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE CROSSHAIR"
-msgstr "GAITU JOPUNTUA"
+msgid "True Colour"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid ""
+"Choose to render high definition graphics textures. Requires OpenGL, True "
+"Colour and the enhanced.gob file."
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "HD TEXTURES"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "BILINEAR FILTER"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -14764,8 +14786,8 @@ msgstr "Aukeratu Bloom post prozesatzea erabiltzea"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE BLOOM"
-msgstr "GAITU BLOOM-A"
+msgid "BLOOM"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -15844,6 +15866,11 @@ msgstr "Irten Dosbox-X"
 msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr "Erakutsi kontrolatzaile pantaila"
+
+#. TRANSLATION: jaguar.bigpemu.keys
+msgctxt "keys_files"
+msgid "Configuration menu"
+msgstr ""
 
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
@@ -17110,6 +17137,26 @@ msgstr "Gordetze Azkarra"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Aurrera Azkar"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE TRUE COLOUR"
+#~ msgstr "GAITU BENETAZKO KOLOREA"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE BILINEAR FILTER"
+#~ msgstr "GAITU FILTRO BILINEARRA"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE MIPMAPPING"
+#~ msgstr "GAITU MIPMAPPING-A"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE CROSSHAIR"
+#~ msgstr "GAITU JOPUNTUA"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE BLOOM"
+#~ msgstr "GAITU BLOOM-A"
 
 #~ msgctxt "game_options"
 #~ msgid "AMD FidelityFX (Vulkan Only)"

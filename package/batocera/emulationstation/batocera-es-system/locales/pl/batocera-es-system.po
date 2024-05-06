@@ -10037,7 +10037,7 @@ msgctxt "game_options"
 msgid "ACHIEVEMENTS"
 msgstr "OSIĄGNIĘCIA"
 
-#. TRANSLATION: duckstation
+#. TRANSLATION: duckstation, theforceengine
 msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr "CELOWNIK"
@@ -11100,7 +11100,7 @@ msgctxt "game_options"
 msgid "Choose mipmapping type."
 msgstr "Wybierz typ mipmappingu."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: pcsx2, theforceengine
 msgctxt "game_options"
 msgid "MIPMAPPING"
 msgstr "MIPMAPPING"
@@ -12361,7 +12361,7 @@ msgctxt "game_options"
 msgid "Choose your preferred aspect ratio."
 msgstr "Wybierz preferowany współczynnik proporcji."
 
-#. TRANSLATION: redream, demul, bermuda
+#. TRANSLATION: redream, demul, bermuda, bigpemu
 msgctxt "game_options"
 msgid "4:3 (Default)"
 msgstr "4:3 (domyślnie)"
@@ -13351,7 +13351,7 @@ msgctxt "game_options"
 msgid "Enable widescreen support."
 msgstr "Włącz obsługę ekranu panoramicznego."
 
-#. TRANSLATION: model2emu, play, theforceengine
+#. TRANSLATION: model2emu, play
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN"
 msgstr "WŁĄCZ EKRAN PANORAMICZNY"
@@ -14775,6 +14775,11 @@ msgstr "960p"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
+msgid "WIDESCREEN"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
 msgid "144 fps"
 msgstr "144 kl/s"
 
@@ -14805,23 +14810,40 @@ msgstr "GPU / OpenGL (domyślnie)"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE TRUE COLOUR"
-msgstr "WŁĄCZ TRUE KOLOR"
+msgid "COLOUR MODE"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE BILINEAR FILTER"
-msgstr "WŁĄCZ FILTR DWULINIOWY"
+msgid "8-bit (Classic)"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE MIPMAPPING"
-msgstr "WŁĄCZ MIPMAPPOWANIE"
+msgid "8-bit Interpolated"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE CROSSHAIR"
-msgstr "WŁĄCZ CELOWNIK"
+msgid "True Colour"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid ""
+"Choose to render high definition graphics textures. Requires OpenGL, True "
+"Colour and the enhanced.gob file."
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "HD TEXTURES"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "BILINEAR FILTER"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -14830,8 +14852,8 @@ msgstr "Wybierz przetwarzanie końcowe Bloom."
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE BLOOM"
-msgstr "WŁĄCZ BLOOM"
+msgid "BLOOM"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -15959,6 +15981,11 @@ msgstr "Wyjdź z Dosbox-X"
 msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr "Wyświetlanie ekranu kontrolera"
+
+#. TRANSLATION: jaguar.bigpemu.keys
+msgctxt "keys_files"
+msgid "Configuration menu"
+msgstr ""
 
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
@@ -17258,6 +17285,26 @@ msgstr "Szybkie zapisywanie"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Przewijanie do przodu"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE TRUE COLOUR"
+#~ msgstr "WŁĄCZ TRUE KOLOR"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE BILINEAR FILTER"
+#~ msgstr "WŁĄCZ FILTR DWULINIOWY"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE MIPMAPPING"
+#~ msgstr "WŁĄCZ MIPMAPPOWANIE"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE CROSSHAIR"
+#~ msgstr "WŁĄCZ CELOWNIK"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE BLOOM"
+#~ msgstr "WŁĄCZ BLOOM"
 
 #~ msgctxt "game_options"
 #~ msgid "Adjust the cpu power profile while in-game."
