@@ -1,14 +1,14 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|5d57f322ec03e3731fab70e4df4ecdcfbdef822d|May 04, 2024
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|5d57f322ec03e3731fab70e4df4ecdcfbdef822d|May 04, 2024
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|87f97b8e9167a119aa8316e6d2e727938000e986|May 06, 2024
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|87f97b8e9167a119aa8316e6d2e727938000e986|May 06, 2024
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|8968deb8fbfd5c96819fa22aba7bbd8890ed8113|Apr 25, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|ea912118eb8a6c6d1726a49ed25e91d85f84dff5|May 04, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|f710c9af2ece1de9fb92238c899b5941dc6de205|May 04, 2024
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|72ce23dd989ced9df3f49d2021208eff1f99552c|Mar 19, 2023
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v113|May 05, 2024
 Emulators|[cargs](http://github.com/likle/cargs)|82b51a3fd781ba978ab9bb6a05306ce777ecb2a1|Mar 11, 2024
-Emulators|[cemu](https://github.com/cemu-project/Cemu)|7d6d4173549a55070683feac33afaad038383813|May 06, 2024
+Emulators|[cemu](https://github.com/cemu-project/Cemu)|3f8722f0a6789065f709daa3d6a636e2334b3bad|May 06, 2024
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|b5126f979ca31e6f6519c70788da8c25a2cdf7d7|Apr 23, 2024
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
 Emulators|[d8vk](https://github.com/AlpyneDreams/d8vk/releases)|1.0|May 10, 2023
@@ -132,7 +132,7 @@ Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|c2ca4046860264cb307e7
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|87a0a6318564fc171d0b576da8ea7e629aa229e7|Apr 22, 2024
 Emulators|[libretro-pcsx2](https://github.com/libretro/pcsx2.git)|5112943bbe90cba420b5e8526297e2d12b881905|Apr 26, 2023
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|ad93670449a28825d4b2cebf2eeff72cf03377a9|Mar 26, 2024
-Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|9f8d623f5d7e6a9bb6fa7ff30ce4d5b1fdf72a1e|May 01, 2024
+Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|700a44a1548d099705c901203414724518c90d43|May 05, 2024
 Emulators|[libretro-pocketsnes](http://github.com/libretro/snes9x2002)|540baad622d9833bba7e0696193cb06f5f02f564|Aug 06, 2022
 Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|9bf450887026d9b92d4f9432b5d2a5ed749a35e2|May 28, 2023
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|7dd2a89aa06da2bae726d3755cfa209364d9cf0c|May 05, 2024
@@ -153,7 +153,7 @@ Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|96fa9bc65
 Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|d8b10c4cd7606ed58f9c562864c986bc960faaaf|Feb 20, 2023
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|3265c0ac05ec595f9cedd020d76e7f39bf081538|May 02, 2024
 Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|5649534c802887984e9a4442620c1707a711fb6c|May 06, 2024
-Emulators|[libretro-stella](http://github.com/stella-emu/stella)|68e671169f11373e00c88b24d7b319a42b69a715|May 03, 2024
+Emulators|[libretro-stella](http://github.com/stella-emu/stella)|91d92b7ca08befab3dba9a0df628f2a2ec851458|May 06, 2024
 Emulators|[libretro-stella2014](http://github.com/libretro/stella2014-libretro)|8ab051edd4816f33a5631d230d54059eeed52c5f|Feb 20, 2023
 Emulators|[libretro-supafaust](http://github.com/libretro/supafaust)|6b639c98372d1c9bac885c55d772c812d2a9d525|Jun 19, 2023
 Emulators|[libretro-superbroswar](https://github.com/libretro/superbroswar-libretro.git)|6967c06b8446824565e37fa7deb26994d4997980|May 28, 2023
@@ -203,11 +203,11 @@ Emulators|[openbor4432](http://github.com/Darknior/OpenBORv3b4432)|49505541b858d
 Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678291bbedc0b9fe4c8f898|Aug 29, 2018
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|a88d2b2171abdfa0cb43ec586fe988475a16c55d|May 01, 2024
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|771aa344a9a12198cfe1acd0589ca7c0375bd771|May 05, 2024
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|d981f3183010c770382551bc9c1e13dc61b78f53|May 06, 2024
 Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|70f443b06e0fbfde1041af3859592ba3f40f87e2|May 01, 2024
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|3114332c8999068a9a88e6aceae3f33ecb5a437b|May 06, 2024
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|7264e397e2ccd1ed8742d892bf37dbc793e8c8c5|May 06, 2024
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
-Emulators|[play](https://github.com/jpd002/Play-.git)|9f8d623f5d7e6a9bb6fa7ff30ce4d5b1fdf72a1e|May 01, 2024
+Emulators|[play](https://github.com/jpd002/Play-.git)|700a44a1548d099705c901203414724518c90d43|May 05, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|7dd2a89aa06da2bae726d3755cfa209364d9cf0c|May 05, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|7a1a2c55210211c38dc95b21547dca169e1ffa85|Apr 27, 2024
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v1.9.18|Jul 08, 2023
@@ -217,7 +217,7 @@ Emulators|[retroarch](http://github.com/libretro/RetroArch)|9ab6c62fc7f88c70c9d1
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|2024.04.16|Apr 16, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|587d0b2c3617c38d0e3deced53dc22b83f6b0b76|May 05, 2024
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
-Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|37cc66fa9bcb84d85751c58423d2ba4b3d6baf07|May 06, 2024
+Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|0910df8307dd90285b79caae961440f5eafcc59c|May 06, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1295|Apr 29, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|e2b1299d85564c29a1642185aeb6b96e56ded206|Apr 13, 2024
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
@@ -230,7 +230,7 @@ Emulators|[supermodel-es](http://github.com/rtissera/Supermodel)|8f8c962775ec481
 Emulators|[supermodel-legacy](http://github.com/trzy/Supermodel)|0eef09ba2b74e48fd5cfd388ee69a3743fd5f618|Aug 20, 2022 <- last decent commit before breakages
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|7b02f58694ea2612bc54eb0dcdffb1c2fa637c4d|May 04, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|5db245075f3954c8c588098f5af654b7ecd92b47|May 06, 2024
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|44cf0fc76b54d7bebf8828af3be4e2a40bb5541c|May 06, 2024
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|aaa1aa8ee515dc4850535353c209e330844de35c|May 06, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|4196d8aa3b1c8bd3d35131bc189b2d52e3b2e1c8|May 05, 2024
 Emulators|[vice](https://sourceforge.net/projects/vice-emu/files/releases)|3.8|Dec 24, 2023
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
