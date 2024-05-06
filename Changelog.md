@@ -4,12 +4,13 @@ Emulators|[retroarch](http://github.com/libretro/RetroArch)|9ab6c62fc7f88c70c9d1
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|32f28b41c1ef7fdd2b7c4eac58cf13c6c58ab223|May 06, 2024
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|5121aa6d36eff884bd56ccbadb6c112f1e951fee|May 06, 2024
 Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|5649534c802887984e9a4442620c1707a711fb6c|May 06, 2024
+Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|bf5b95cf31bc40cc85ab400d723f95cb841436bb|May 06, 2024
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|82eda48e8fdb3784bc447bf6bcb0b3fde33b5cc0|May 06, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|7fc92d726acab6e01664feced5b31556eb3a0e08|May 06, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|7d6d4173549a55070683feac33afaad038383813|May 06, 2024
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|d82d1cc25a875c06e8d1631221a2e0f41e9a1c3f|May 06, 2024
 Emulators|[ikemen](https://github.com/ikemen-engine/Ikemen-GO)|fa1e70b631e065df7123a5537995275a6b69d9f1|May 06, 2024
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|f67611cbe6456127a31e15a8ab2d042efe8458c2|May 06, 2024
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|3114332c8999068a9a88e6aceae3f33ecb5a437b|May 06, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|37cc66fa9bcb84d85751c58423d2ba4b3d6baf07|May 06, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|5db245075f3954c8c588098f5af654b7ecd92b47|May 06, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|44cf0fc76b54d7bebf8828af3be4e2a40bb5541c|May 06, 2024
@@ -20,8 +21,9 @@ Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|7463f0fa4930a0dea8c973c9ed9f341d272b99d8|May 06, 2024
 Ports|[sonic3-air](https://github.com/Eukaryot/sonic3air.git)|9831bb8f0749514b8f7567d1ed1a8629e70a4e17|May 06, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|f4a77308ec6a73ee8fdeb6212d3ae02ca68485a9|May 06, 2024
+Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|c9356f62e4472d25b734115dc9cea2bbc200ca64|May 06, 2024
+Gpu|[vulkan-volk](https://github.com/zeux/volk)|3ca2bd9921b38f92b9bf5c26ce28808148d1e8bf|May 06, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|7dd2a89aa06da2bae726d3755cfa209364d9cf0c|May 05, 2024
-Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|c516b17e285e867b90e741495d5d744f5f2c007b|May 05, 2024
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v113|May 05, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|2c913674295e08bca0e2cb1726b778fb61bf6bd1|May 05, 2024
 Emulators|[duckstation](https://github.com/stenzek/duckstation.git)|7626a9bf9c63dbdd578c88231bd7982ac10c8f8a|May 05, 2024
@@ -104,7 +106,6 @@ Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|b8fe6469fe39a42802651d2e5d47f9465
 Emulators|[libretro-minivmac](https://github.com/libretro/libretro-minivmac)|e7fcfefe5963aaefb039c8ece5b9072f8d3f9cb9|Apr 26, 2024
 Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|6ed491d6ba46ac8ba64a580b3004a163c0725bd2|Apr 26, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|5ca173cd4f4bfc941fe06250297d518e41dfd7b7|Apr 26, 2024
-Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|db55e980ecb994f5cfa769954b2a812d8f9bc235|Apr 26, 2024
 Emulators|[libretro-jaxe](https://github.com/kurtjd/jaxe.git)|22115d58de5f80cfafbbeece19d723f4892ed75c|Apr 25, 2024
 Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|40fe56212d13dda091034888ac2f9021bd6eb02c|Apr 25, 2024
 Emulators|[mame](http://github.com/mamedev/mame)|mame0265|Apr 25, 2024
@@ -122,7 +123,6 @@ Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|a0
 Emulators|[libretro-dolphin](http://github.com/libretro/dolphin)|89a4df725d4eb24537728f7d655cddb1add25c18|Apr 19, 2024
 Ports|[nblood](https://github.com/nukeykt/NBlood.git)|667321dd6270156a8e49199f3cb23b015e0e3668|Apr 19, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|6daf1e9e7f05e435ad01c8a0b2c6860d33b26182|Apr 19, 2024
-Gpu|[vulkan-volk](https://github.com/zeux/volk)|3a8068a57417940cf2bf9d837a7bb60d015ca2f1|Apr 19, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|2cc8e02ced1594d76d12b39140e394e9cee0aa44|Apr 18, 2024
 Ports|[quake3](http://github.com/ioquake/ioq3)|60dfabbeb7a50cd55b214194eb2ec64c39529b59|Apr 18, 2024
 Emulators|[libretro-fake08](https://github.com/jtothebell/fake-08.git)|d98376fc41c34e3cd6d3ffc25ae9c2970efd5286|Apr 17, 2024

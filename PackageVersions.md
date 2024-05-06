@@ -161,7 +161,7 @@ Emulators|[libretro-superflappybirds](http://github.com/IgniparousTempest/libret
 Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|6ed491d6ba46ac8ba64a580b3004a163c0725bd2|Apr 26, 2024
 Emulators|[libretro-tgbdual](http://github.com/libretro/tgbdual-libretro)|a6f3018e6a23030afc1873845ee54d4b2d8ec9d3|Aug 06, 2022
 Emulators|[libretro-theodore](http://github.com/Zlika/theodore)|7889613edede5ba89de1dfe7c05cf8397cf178ba|Oct 08, 2022
-Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|c516b17e285e867b90e741495d5d744f5f2c007b|May 05, 2024
+Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|bf5b95cf31bc40cc85ab400d723f95cb841436bb|May 06, 2024
 Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|df0d3afb623b143beb76a5b1adf2d377953bfdf2|Oct 31, 2023
 Emulators|[libretro-uae4arm](http://github.com/chips-fr/uae4arm-rpi)|177c2f0e892adf2603ada9b150e31beffe0f76c3|Apr 22, 2022
 Emulators|[libretro-uoyabause](http://github.com/rob-ack/yabause)|c60e60854ae5bdef3f463a784674e8fe8c7d87f0|Feb 13, 2024
@@ -205,7 +205,7 @@ Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|a88d2b2171abdfa0cb43ec586fe988475a16c55d|May 01, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|771aa344a9a12198cfe1acd0589ca7c0375bd771|May 05, 2024
 Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|70f443b06e0fbfde1041af3859592ba3f40f87e2|May 01, 2024
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|f67611cbe6456127a31e15a8ab2d042efe8458c2|May 06, 2024
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|3114332c8999068a9a88e6aceae3f33ecb5a437b|May 06, 2024
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|9f8d623f5d7e6a9bb6fa7ff30ce4d5b1fdf72a1e|May 01, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|7dd2a89aa06da2bae726d3755cfa209364d9cf0c|May 05, 2024
@@ -254,8 +254,8 @@ Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releas
 Emulators|[yabasanshiro](https://github.com/devmiyax/yabause.git)|c7618d2ecbf77b1e8188fa8af4fa1cfb34833a72|Jun 18, 2022
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|14.2.0|May 02, 2024
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.1|Apr 30, 2024
-Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|db55e980ecb994f5cfa769954b2a812d8f9bc235|Apr 26, 2024
-Gpu|[vulkan-volk](https://github.com/zeux/volk)|3a8068a57417940cf2bf9d837a7bb60d015ca2f1|Apr 19, 2024
+Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|c9356f62e4472d25b734115dc9cea2bbc200ca64|May 06, 2024
+Gpu|[vulkan-volk](https://github.com/zeux/volk)|3ca2bd9921b38f92b9bf5c26ce28808148d1e8bf|May 06, 2024
 Ports|[abuse](http://github.com/Xenoveritas/abuse)|9d1f66f57377859bae10e28eabebea0b9c750490|Oct 27, 2022
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|d8773ef593cfcf72f1b1f7d3b6a4bee579f5dbd4|May 05, 2024
 Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e246ded9|May 05, 2024
