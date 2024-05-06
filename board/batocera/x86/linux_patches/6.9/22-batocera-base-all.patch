@@ -563,7 +563,7 @@ index 000000000000..202c2350d3af
 +  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index f6dc90559341..a60b6d4d0e78 100644
+index ec0284125e8f..2f4be32edc17 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -15720,6 +15720,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
@@ -583,7 +583,7 @@ index f6dc90559341..a60b6d4d0e78 100644
  M:	Finn Thain <fthain@linux-m68k.org>
  L:	linux-m68k@lists.linux-m68k.org
 diff --git a/Makefile b/Makefile
-index 5c6cda97be69..12c42565a35f 100644
+index dc427454d2e9..4e8db283add7 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -807,9 +807,164 @@ endif # need-config
@@ -5466,7 +5466,7 @@ index 901d1961b739..05c49141f580 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 98ce25d5c576..6283015be0f6 100644
+index 7f79ec4b8ed1..ad8ee513b0ef 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -157,6 +157,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_351_DMUB);
@@ -5553,7 +5553,7 @@ index 98ce25d5c576..6283015be0f6 100644
  	return DIV_ROUND_CLOSEST(AMDGPU_MAX_BL_LEVEL * (brightness - min),
  				 max - min);
  }
-@@ -7596,7 +7618,8 @@ static int amdgpu_dm_connector_get_modes(struct drm_connector *connector)
+@@ -7599,7 +7621,8 @@ static int amdgpu_dm_connector_get_modes(struct drm_connector *connector)
  				drm_add_modes_noedid(connector, 1920, 1080);
  	} else {
  		amdgpu_dm_connector_ddc_get_modes(connector, edid);
@@ -5563,7 +5563,7 @@ index 98ce25d5c576..6283015be0f6 100644
  		amdgpu_dm_connector_add_freesync_modes(connector, edid);
  	}
  	amdgpu_dm_fbc_init(connector);
-@@ -8346,7 +8369,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -8349,7 +8372,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;

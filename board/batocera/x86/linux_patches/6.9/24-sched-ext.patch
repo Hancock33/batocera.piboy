@@ -499,10 +499,10 @@ index 000000000000..b01c4f22f73e
 +possible, they are subject to change without warning between kernel
 +versions.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index a60b6d4d0e78..da355a3a19d6 100644
+index 2f4be32edc17..b5ea1fab5f7d 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -19625,6 +19625,8 @@ R:	Ben Segall <bsegall@google.com> (CONFIG_CFS_BANDWIDTH)
+@@ -19623,6 +19623,8 @@ R:	Ben Segall <bsegall@google.com> (CONFIG_CFS_BANDWIDTH)
  R:	Mel Gorman <mgorman@suse.de> (CONFIG_NUMA_BALANCING)
  R:	Daniel Bristot de Oliveira <bristot@redhat.com> (SCHED_DEADLINE)
  R:	Valentin Schneider <vschneid@redhat.com> (TOPOLOGY)
@@ -511,7 +511,7 @@ index a60b6d4d0e78..da355a3a19d6 100644
  L:	linux-kernel@vger.kernel.org
  S:	Maintained
  T:	git git://git.kernel.org/pub/scm/linux/kernel/git/tip/tip.git sched/core
-@@ -19633,6 +19635,7 @@ F:	include/linux/sched.h
+@@ -19631,6 +19633,7 @@ F:	include/linux/sched.h
  F:	include/linux/wait.h
  F:	include/uapi/linux/sched.h
  F:	kernel/sched/
@@ -520,7 +520,7 @@ index a60b6d4d0e78..da355a3a19d6 100644
  SCSI LIBSAS SUBSYSTEM
  R:	John Garry <john.g.garry@oracle.com>
 diff --git a/Makefile b/Makefile
-index 12c42565a35f..a7db4104943c 100644
+index 4e8db283add7..07331f2c9b28 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -1502,6 +1502,12 @@ ifneq ($(wildcard $(resolve_btfids_O)),)
@@ -546,10 +546,10 @@ index 12c42565a35f..a7db4104943c 100644
  	@find . $(RCS_FIND_IGNORE) \
  		\( -name '*.rmeta' \) \
 diff --git a/arch/arm/net/bpf_jit_32.c b/arch/arm/net/bpf_jit_32.c
-index 1d672457d02f..01516f83a95a 100644
+index 72b5cd697f5d..deeb8f292454 100644
 --- a/arch/arm/net/bpf_jit_32.c
 +++ b/arch/arm/net/bpf_jit_32.c
-@@ -2222,28 +2222,21 @@ struct bpf_prog *bpf_int_jit_compile(struct bpf_prog *prog)
+@@ -2252,28 +2252,21 @@ struct bpf_prog *bpf_int_jit_compile(struct bpf_prog *prog)
  	/* If building the body of the JITed code fails somehow,
  	 * we fall back to the interpretation.
  	 */
@@ -584,7 +584,7 @@ index 1d672457d02f..01516f83a95a 100644
  	prog->bpf_func = (void *)ctx.target;
  	prog->jited = 1;
  	prog->jited_len = image_size;
-@@ -2260,5 +2253,11 @@ struct bpf_prog *bpf_int_jit_compile(struct bpf_prog *prog)
+@@ -2290,5 +2283,11 @@ struct bpf_prog *bpf_int_jit_compile(struct bpf_prog *prog)
  		bpf_jit_prog_release_other(prog, prog == orig_prog ?
  					   tmp : orig_prog);
  	return prog;
@@ -597,7 +597,7 @@ index 1d672457d02f..01516f83a95a 100644
  }
  
 diff --git a/arch/arm64/net/bpf_jit_comp.c b/arch/arm64/net/bpf_jit_comp.c
-index 122021f9bdfc..82d6c562e8c7 100644
+index 13eac43c632d..320cb10ca93d 100644
 --- a/arch/arm64/net/bpf_jit_comp.c
 +++ b/arch/arm64/net/bpf_jit_comp.c
 @@ -2176,12 +2176,9 @@ void arch_free_bpf_trampoline(void *image, unsigned int size)
@@ -727,7 +727,7 @@ index fa0759bfe498..73bf0aea8baf 100644
  		jit_data->ctx = ctx;
  		jit_data->image = image_ptr;
 diff --git a/arch/x86/net/bpf_jit_comp.c b/arch/x86/net/bpf_jit_comp.c
-index df5fac428408..788a3d6f6276 100644
+index 59cbc94b6e69..fedff8ae7069 100644
 --- a/arch/x86/net/bpf_jit_comp.c
 +++ b/arch/x86/net/bpf_jit_comp.c
 @@ -1351,8 +1351,7 @@ static int do_jit(struct bpf_prog *bpf_prog, int *addrs, u8 *image, u8 *rw_image
@@ -740,7 +740,7 @@ index df5fac428408..788a3d6f6276 100644
  				if (dst_reg != src_reg)
  					/* 32-bit mov */
  					emit_mov_reg(&prog, false, dst_reg, src_reg);
-@@ -3001,12 +3000,9 @@ void arch_free_bpf_trampoline(void *image, unsigned int size)
+@@ -2994,12 +2993,9 @@ void arch_free_bpf_trampoline(void *image, unsigned int size)
  	bpf_prog_pack_free(image, size);
  }
  
@@ -963,7 +963,7 @@ index 34aaf0e87def..32679fcff0a7 100644
  void cgroup_file_show(struct cgroup_file *cfile, bool show);
  
 diff --git a/include/linux/filter.h b/include/linux/filter.h
-index c99bc3df2d28..44934b968b57 100644
+index 219ee7a76874..42dbceb04ca6 100644
 --- a/include/linux/filter.h
 +++ b/include/linux/filter.h
 @@ -228,6 +228,16 @@ static inline bool insn_is_zext(const struct bpf_insn *insn)
@@ -1760,7 +1760,7 @@ index 82243cb6c54d..8ba73042a239 100644
  		return &bpf_get_current_comm_proto;
  #ifdef CONFIG_CGROUP_NET_CLASSID
 diff --git a/kernel/bpf/core.c b/kernel/bpf/core.c
-index 696bc55de8e8..5aacb1d3c4cc 100644
+index 1ea5ce5bb599..a04695ca82b9 100644
 --- a/kernel/bpf/core.c
 +++ b/kernel/bpf/core.c
 @@ -908,23 +908,30 @@ static LIST_HEAD(pack_list);
@@ -2033,7 +2033,7 @@ index db7599c59c78..cc50607f8d8c 100644
  
  int __weak arch_bpf_trampoline_size(const struct btf_func_model *m, u32 flags,
 diff --git a/kernel/bpf/verifier.c b/kernel/bpf/verifier.c
-index 98188379d5c7..58952f040761 100644
+index cb7ad1f795e1..d09ddefdb783 100644
 --- a/kernel/bpf/verifier.c
 +++ b/kernel/bpf/verifier.c
 @@ -10201,8 +10201,8 @@ static int check_helper_call(struct bpf_verifier_env *env, struct bpf_insn *insn
@@ -2083,7 +2083,7 @@ index 98188379d5c7..58952f040761 100644
  	default:
  		return;
  	}
-@@ -19181,6 +19185,7 @@ static int jit_subprogs(struct bpf_verifier_env *env)
+@@ -19180,6 +19184,7 @@ static int jit_subprogs(struct bpf_verifier_env *env)
  		if (bpf_prog_calc_tag(func[i]))
  			goto out_free;
  		func[i]->is_func = 1;
@@ -2091,7 +2091,7 @@ index 98188379d5c7..58952f040761 100644
  		func[i]->aux->func_idx = i;
  		/* Below members will be freed only at prog->aux */
  		func[i]->aux->btf = prog->aux->btf;
-@@ -19285,10 +19290,14 @@ static int jit_subprogs(struct bpf_verifier_env *env)
+@@ -19284,10 +19289,14 @@ static int jit_subprogs(struct bpf_verifier_env *env)
  	 * bpf_prog_load will add the kallsyms for the main program.
  	 */
  	for (i = 1; i < env->subprog_cnt; i++) {
@@ -10734,7 +10734,7 @@ index 331848eca7d3..a3483a79a3f5 100644
  	dev_boot_phase = 0;
  
 diff --git a/net/core/filter.c b/net/core/filter.c
-index 8adf95765cdd..786d792ac816 100644
+index ae5254f712c9..8120c3dddf5e 100644
 --- a/net/core/filter.c
 +++ b/net/core/filter.c
 @@ -87,6 +87,9 @@
@@ -10747,7 +10747,7 @@ index 8adf95765cdd..786d792ac816 100644
  static const struct bpf_func_proto *
  bpf_sk_base_func_proto(enum bpf_func_id func_id, const struct bpf_prog *prog);
  
-@@ -5884,7 +5887,10 @@ static int bpf_ipv4_fib_lookup(struct net *net, struct bpf_fib_lookup *params,
+@@ -5906,7 +5909,10 @@ static int bpf_ipv4_fib_lookup(struct net *net, struct bpf_fib_lookup *params,
  
  		err = fib_table_lookup(tb, &fl4, &res, FIB_LOOKUP_NOREF);
  	} else {
@@ -10759,7 +10759,7 @@ index 8adf95765cdd..786d792ac816 100644
  		fl4.flowi4_secid = 0;
  		fl4.flowi4_tun_key.tun_id = 0;
  		fl4.flowi4_uid = sock_net_uid(net, NULL);
-@@ -6027,7 +6033,10 @@ static int bpf_ipv6_fib_lookup(struct net *net, struct bpf_fib_lookup *params,
+@@ -6049,7 +6055,10 @@ static int bpf_ipv6_fib_lookup(struct net *net, struct bpf_fib_lookup *params,
  		err = ipv6_stub->fib6_table_lookup(net, tb, oif, &fl6, &res,
  						   strict);
  	} else {
@@ -10771,7 +10771,7 @@ index 8adf95765cdd..786d792ac816 100644
  		fl6.flowi6_secid = 0;
  		fl6.flowi6_tun_key.tun_id = 0;
  		fl6.flowi6_uid = sock_net_uid(net, NULL);
-@@ -6105,7 +6114,7 @@ static int bpf_ipv6_fib_lookup(struct net *net, struct bpf_fib_lookup *params,
+@@ -6127,7 +6136,7 @@ static int bpf_ipv6_fib_lookup(struct net *net, struct bpf_fib_lookup *params,
  
  #define BPF_FIB_LOOKUP_MASK (BPF_FIB_LOOKUP_DIRECT | BPF_FIB_LOOKUP_OUTPUT | \
  			     BPF_FIB_LOOKUP_SKIP_NEIGH | BPF_FIB_LOOKUP_TBID | \
@@ -10780,7 +10780,7 @@ index 8adf95765cdd..786d792ac816 100644
  
  BPF_CALL_4(bpf_xdp_fib_lookup, struct xdp_buff *, ctx,
  	   struct bpf_fib_lookup *, params, int, plen, u32, flags)
-@@ -8342,8 +8351,6 @@ sk_msg_func_proto(enum bpf_func_id func_id, const struct bpf_prog *prog)
+@@ -8364,8 +8373,6 @@ sk_msg_func_proto(enum bpf_func_id func_id, const struct bpf_prog *prog)
  		return &bpf_event_output_data_proto;
  	case BPF_FUNC_get_current_uid_gid:
  		return &bpf_get_current_uid_gid_proto;
@@ -10790,10 +10790,10 @@ index 8adf95765cdd..786d792ac816 100644
  		return &bpf_sk_storage_get_proto;
  	case BPF_FUNC_sk_storage_delete:
 diff --git a/net/core/skbuff.c b/net/core/skbuff.c
-index b99127712e67..17617c29be2d 100644
+index 4096e679f61c..e03441de54b7 100644
 --- a/net/core/skbuff.c
 +++ b/net/core/skbuff.c
-@@ -7039,8 +7039,8 @@ nodefer:	__kfree_skb(skb);
+@@ -7050,8 +7050,8 @@ nodefer:	__kfree_skb(skb);
  	/* Make sure to trigger NET_RX_SOFTIRQ on the remote CPU
  	 * if we are unlucky enough (this seems very unlikely).
  	 */

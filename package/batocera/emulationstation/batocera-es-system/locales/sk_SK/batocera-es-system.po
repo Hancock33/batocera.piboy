@@ -9967,7 +9967,7 @@ msgctxt "game_options"
 msgid "ACHIEVEMENTS"
 msgstr "Úspechy"
 
-#. TRANSLATION: duckstation
+#. TRANSLATION: duckstation, theforceengine
 msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr ""
@@ -11022,7 +11022,7 @@ msgctxt "game_options"
 msgid "Choose mipmapping type."
 msgstr "Vyberte typ mipmappingu."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: pcsx2, theforceengine
 msgctxt "game_options"
 msgid "MIPMAPPING"
 msgstr "Mipmapping"
@@ -12272,7 +12272,7 @@ msgctxt "game_options"
 msgid "Choose your preferred aspect ratio."
 msgstr "Vyberte preferovaný pomer strán."
 
-#. TRANSLATION: redream, demul, bermuda
+#. TRANSLATION: redream, demul, bermuda, bigpemu
 msgctxt "game_options"
 msgid "4:3 (Default)"
 msgstr "4:3 (predvolené)"
@@ -13241,7 +13241,7 @@ msgctxt "game_options"
 msgid "Enable widescreen support."
 msgstr "Povoliť podporu širokej obrazovky."
 
-#. TRANSLATION: model2emu, play, theforceengine
+#. TRANSLATION: model2emu, play
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN"
 msgstr "Povoliť širokouhlú obrazovku"
@@ -14654,6 +14654,11 @@ msgstr "960p"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
+msgid "WIDESCREEN"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
 msgid "144 fps"
 msgstr "144 fps"
 
@@ -14684,23 +14689,40 @@ msgstr "GPU / OpenGL (predvolené)"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE TRUE COLOUR"
-msgstr "Povoliť pravé farby"
+msgid "COLOUR MODE"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE BILINEAR FILTER"
-msgstr "Povoliť bilineárne filtrovanie"
+msgid "8-bit (Classic)"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE MIPMAPPING"
-msgstr "Povoliť mipmapping"
+msgid "8-bit Interpolated"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE CROSSHAIR"
-msgstr "Povoliť nitkový kríž"
+msgid "True Colour"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid ""
+"Choose to render high definition graphics textures. Requires OpenGL, True "
+"Colour and the enhanced.gob file."
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "HD TEXTURES"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "BILINEAR FILTER"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -14709,8 +14731,8 @@ msgstr "Vyberte, či chcete použiť Bloom post processing."
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE BLOOM"
-msgstr "Povoliť BLOOM"
+msgid "BLOOM"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -15791,6 +15813,11 @@ msgstr "Ukončiť Dosbox-X"
 msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr "Zobraziť obrazovku ovládača"
+
+#. TRANSLATION: jaguar.bigpemu.keys
+msgctxt "keys_files"
+msgid "Configuration menu"
+msgstr ""
 
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
@@ -17075,6 +17102,26 @@ msgstr "Rýchle uloženie"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rýchlo dopredu"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE TRUE COLOUR"
+#~ msgstr "Povoliť pravé farby"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE BILINEAR FILTER"
+#~ msgstr "Povoliť bilineárne filtrovanie"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE MIPMAPPING"
+#~ msgstr "Povoliť mipmapping"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE CROSSHAIR"
+#~ msgstr "Povoliť nitkový kríž"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE BLOOM"
+#~ msgstr "Povoliť BLOOM"
 
 #~ msgctxt "game_options"
 #~ msgid "Adjust the cpu power profile while in-game."

@@ -9865,7 +9865,7 @@ msgctxt "game_options"
 msgid "ACHIEVEMENTS"
 msgstr ""
 
-#. TRANSLATION: duckstation
+#. TRANSLATION: duckstation, theforceengine
 msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr ""
@@ -10900,7 +10900,7 @@ msgctxt "game_options"
 msgid "Choose mipmapping type."
 msgstr ""
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: pcsx2, theforceengine
 msgctxt "game_options"
 msgid "MIPMAPPING"
 msgstr ""
@@ -12112,7 +12112,7 @@ msgctxt "game_options"
 msgid "Choose your preferred aspect ratio."
 msgstr ""
 
-#. TRANSLATION: redream, demul, bermuda
+#. TRANSLATION: redream, demul, bermuda, bigpemu
 msgctxt "game_options"
 msgid "4:3 (Default)"
 msgstr ""
@@ -13061,7 +13061,7 @@ msgctxt "game_options"
 msgid "Enable widescreen support."
 msgstr ""
 
-#. TRANSLATION: model2emu, play, theforceengine
+#. TRANSLATION: model2emu, play
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN"
 msgstr ""
@@ -14466,6 +14466,11 @@ msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
+msgid "WIDESCREEN"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
 msgid "144 fps"
 msgstr ""
 
@@ -14496,22 +14501,39 @@ msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE TRUE COLOUR"
+msgid "COLOUR MODE"
 msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE BILINEAR FILTER"
+msgid "8-bit (Classic)"
 msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE MIPMAPPING"
+msgid "8-bit Interpolated"
 msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE CROSSHAIR"
+msgid "True Colour"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid ""
+"Choose to render high definition graphics textures. Requires OpenGL, True "
+"Colour and the enhanced.gob file."
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "HD TEXTURES"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "BILINEAR FILTER"
 msgstr ""
 
 #. TRANSLATION: theforceengine
@@ -14521,7 +14543,7 @@ msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
-msgid "ENABLE BLOOM"
+msgid "BLOOM"
 msgstr ""
 
 #. TRANSLATION: theforceengine
@@ -15593,6 +15615,11 @@ msgstr ""
 #. TRANSLATION: wiiu.keys
 msgctxt "keys_files"
 msgid "Display the controller screen"
+msgstr ""
+
+#. TRANSLATION: jaguar.bigpemu.keys
+msgctxt "keys_files"
+msgid "Configuration menu"
 msgstr ""
 
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys

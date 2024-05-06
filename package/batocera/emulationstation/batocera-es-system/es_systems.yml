@@ -474,15 +474,17 @@ daphne:
                         - Cliff Hanger
                         - Cobra Command
                         - Dragon's Lair
+                        - Dragon's Lair (Atari EU)
                         - Dragon's Lair II: Time Warp
                         - Esh's Aurunmilla
-                        - Firefox
                         - Galaxy Ranger
+                        - Goal to Go
                         - GP World
                         - Interstellar Laser Fantasy
                         - M.A.C.H. 3
                         - Road Blaster
                         - Space Ace
+                        - Space Ace (Atari EU)
                         - Super Don Quix-Ote
                         - Thayer's Quest
                         - Us Vs Them
@@ -494,7 +496,7 @@ daphne:
                         |   tells emulationstation to add this to the menu,
                         |   and "badlands" tells daphne to use that game engine)
                         |
-                        |-- badlands.daphne     
+                        |-- badlands.daphne
                         |   |-- badlands.commands (Optional extra command-line parameters)
                         |   |-- badlands.txt      (Framefile)
                         |   |-- badlands-pc.m2v
@@ -1018,16 +1020,15 @@ singe:
     hypseus-singe:
       hypseus-singe:    { requireAnyOf: [BR2_PACKAGE_HYPSEUS_SINGE] }
   comment_en:           |
-                        Singe supports American Laser Games (Action Max) and fan made Singe & SInge 2 games.
+                        Singe supports American Laser Games, Action Max and fan made Singe & Singe 2 games.
                         Due to legacy supporting file structures, we still use the .daphne folder extension.
                         roms
                         |-- singe
-                        |-- bluethunder.daphne    
-                        |-- bluethunder.singe      (Singe parameters)
-                        |-- bluethunder.txt        (Framefile)
-                        |-- video_bluethunder.dat
-                        |-- video_bluethunder.m2v
-                        |-- video_bluethunder.ogg
+                        |-- maddog.daphne    
+                        |-- maddog.singe      (Singe Game LUA)
+                        |-- maddog.txt        (Framefile)
+                        |-- maddog.m2v
+                        |-- maddog.ogg
                         For more info: https://wiki.batocera.org/systems:singe
   comment_fr:           |
                         Trouvez la documentation ici: https://wiki.batocera.org/systems:singe
@@ -4529,6 +4530,10 @@ theforceengine:
                         Update the games list and Batocera can now launch the mod directly.
 
                         A good source of missions to try are available here: https://df-21.net/downloads/levels/
+
+                        Dark Forces HD Textures:
+                        To use HD textures you need to have a copy of the Remaster version of the games also.
+                        Copy the `enhanced.gob` file from the Remaster installation into the previous `Star Wars - Dark Forces` folder.
 
                         Notes:
 
