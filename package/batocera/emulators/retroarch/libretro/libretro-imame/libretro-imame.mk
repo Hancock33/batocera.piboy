@@ -3,8 +3,8 @@
 # libretro-imame
 #
 ################################################################################
-# Version: Commits on Oct 31, 2023
-LIBRETRO_IMAME_VERSION = 1472da3a39ab14fff8325b1f51a1dfdb8eabb5c8
+# Version: Commits on May 07, 2024
+LIBRETRO_IMAME_VERSION = 905808fbcc3adf8c610c1c60f0e41ce4b35db1c5
 LIBRETRO_IMAME_SITE = $(call github,libretro,mame2000-libretro,$(LIBRETRO_IMAME_VERSION))
 LIBRETRO_IMAME_LICENSE = MAME
 
