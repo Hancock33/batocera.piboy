@@ -12308,30 +12308,23 @@ msgstr ""
 
 #. TRANSLATION: redream
 msgctxt "game_options"
-msgid ""
-"Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
+msgid "RENDER MODE"
 msgstr ""
-"Válassza ki a sokszög rendezési pontosságát (a nagyobb műtermékeket okozhat)."
 
 #. TRANSLATION: redream
 msgctxt "game_options"
-msgid "POLYGON SORT ACCURACY"
-msgstr "SOKSZÖG RENDEZÉSI PONTOSSÁGA"
+msgid "HLE (per-strip)"
+msgstr ""
 
 #. TRANSLATION: redream
 msgctxt "game_options"
-msgid "Per-strip (Default)"
-msgstr "Pixelenként (alapértelmezett)"
+msgid "HLE (per-pixel)"
+msgstr ""
 
 #. TRANSLATION: redream
 msgctxt "game_options"
-msgid "Per-pixel (32 layers)"
-msgstr "Pixelenként (32 réteg)"
-
-#. TRANSLATION: redream
-msgctxt "game_options"
-msgid "Per-pixel (64 layers)"
-msgstr "Pixelenként (64 réteg)"
+msgid "LLE"
+msgstr ""
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -15850,7 +15843,7 @@ msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr "A vezérlő képernyőjének megjelenítése"
 
-#. TRANSLATION: jaguar.bigpemu.keys
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys
 msgctxt "keys_files"
 msgid "Configuration menu"
 msgstr ""
@@ -16434,6 +16427,29 @@ msgstr "Mentés betöltése"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Gyors mentés"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
+#~ msgstr ""
+#~ "Válassza ki a sokszög rendezési pontosságát (a nagyobb műtermékeket "
+#~ "okozhat)."
+
+#~ msgctxt "game_options"
+#~ msgid "POLYGON SORT ACCURACY"
+#~ msgstr "SOKSZÖG RENDEZÉSI PONTOSSÁGA"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-strip (Default)"
+#~ msgstr "Pixelenként (alapértelmezett)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (32 layers)"
+#~ msgstr "Pixelenként (32 réteg)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (64 layers)"
+#~ msgstr "Pixelenként (64 réteg)"
 
 #~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
