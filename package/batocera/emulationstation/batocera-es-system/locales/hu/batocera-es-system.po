@@ -16494,29 +16494,6 @@ msgid "Quick Save"
 msgstr "Gyors mentés"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
-#~ msgstr ""
-#~ "Válassza ki a sokszög rendezési pontosságát (a nagyobb műtermékeket "
-#~ "okozhat)."
-
-#~ msgctxt "game_options"
-#~ msgid "POLYGON SORT ACCURACY"
-#~ msgstr "SOKSZÖG RENDEZÉSI PONTOSSÁGA"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-strip (Default)"
-#~ msgstr "Pixelenként (alapértelmezett)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (32 layers)"
-#~ msgstr "Pixelenként (32 réteg)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (64 layers)"
-#~ msgstr "Pixelenként (64 réteg)"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (Óvatosan!)"
 
@@ -16993,14 +16970,6 @@ msgstr "Gyors mentés"
 #~ msgstr "D3D12 (alapértelmezett)"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "This option enables the ability to play Xbox Live Arcacde games. May "
-#~ "cause compatibility issues with non-XBLA games."
-#~ msgstr ""
-#~ "Ez az opció lehetővé teszi az Xbox Live Arcacde játékok lejátszását. "
-#~ "Kompatibilitási problémákat okozhat nem XBLA játékokkal."
-
-#~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "A vezérlők konfigurálása a GZDoomban problémákat okozhat."
 
@@ -17133,6 +17102,37 @@ msgstr "Gyors mentés"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Gyors előre"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
+#~ msgstr ""
+#~ "Válassza ki a sokszög rendezési pontosságát (a nagyobb műtermékeket "
+#~ "okozhat)."
+
+#~ msgctxt "game_options"
+#~ msgid "POLYGON SORT ACCURACY"
+#~ msgstr "SOKSZÖG RENDEZÉSI PONTOSSÁGA"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-strip (Default)"
+#~ msgstr "Pixelenként (alapértelmezett)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (32 layers)"
+#~ msgstr "Pixelenként (32 réteg)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (64 layers)"
+#~ msgstr "Pixelenként (64 réteg)"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "This option enables the ability to play Xbox Live Arcacde games. May "
+#~ "cause compatibility issues with non-XBLA games."
+#~ msgstr ""
+#~ "Ez az opció lehetővé teszi az Xbox Live Arcacde játékok lejátszását. "
+#~ "Kompatibilitási problémákat okozhat nem XBLA játékokkal."
 
 #~ msgctxt "game_options"
 #~ msgid "ENABLE TRUE COLOUR"

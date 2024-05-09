@@ -16462,28 +16462,6 @@ msgid "Quick Save"
 msgstr "クイック セーブ"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
-#~ msgstr ""
-#~ "ポリゴンの並べ替え精度を選択します(値が高いと画像がゆがむ場合があります)"
-
-#~ msgctxt "game_options"
-#~ msgid "POLYGON SORT ACCURACY"
-#~ msgstr "ポリゴンの並べ替え精度"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-strip (Default)"
-#~ msgstr "ストリップごと (標準)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (32 layers)"
-#~ msgstr "ピクセルごと(32レイヤー)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (64 layers)"
-#~ msgstr "ピクセルごと(64レイヤー)"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (注意してください)"
 
@@ -16883,10 +16861,6 @@ msgstr "クイック セーブ"
 #~ msgstr "ピクセル単位"
 
 #~ msgctxt "game_options"
-#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
-#~ msgstr "パッドからキーボードへの Future Pinabll の割り当てを許可します"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enhancement. Improves clarity of distant textures when mip-mapping is "
 #~ "enabled."
@@ -17035,14 +17009,6 @@ msgstr "クイック セーブ"
 #~ msgstr "Vulkan"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "This option enables the ability to play Xbox Live Arcacde games. May "
-#~ "cause compatibility issues with non-XBLA games."
-#~ msgstr ""
-#~ "Xbox Live Arcacde ゲームをプレイする機能を有効にしますが、\n"
-#~ "非 XBLA ゲームとの互換性の問題が発生する可能性があります"
-
-#~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "GZDoom でコントローラーを構成すると、問題が出る場合があります"
 
@@ -17173,6 +17139,40 @@ msgstr "クイック セーブ"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
+#~ msgstr ""
+#~ "ポリゴンの並べ替え精度を選択します(値が高いと画像がゆがむ場合があります)"
+
+#~ msgctxt "game_options"
+#~ msgid "POLYGON SORT ACCURACY"
+#~ msgstr "ポリゴンの並べ替え精度"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-strip (Default)"
+#~ msgstr "ストリップごと (標準)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (32 layers)"
+#~ msgstr "ピクセルごと(32レイヤー)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (64 layers)"
+#~ msgstr "ピクセルごと(64レイヤー)"
+
+#~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
+#~ msgstr "パッドからキーボードへの Future Pinabll の割り当てを許可します"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "This option enables the ability to play Xbox Live Arcacde games. May "
+#~ "cause compatibility issues with non-XBLA games."
+#~ msgstr ""
+#~ "Xbox Live Arcacde ゲームをプレイする機能を有効にしますが、\n"
+#~ "非 XBLA ゲームとの互換性の問題が発生する可能性があります"
 
 #~ msgctxt "game_options"
 #~ msgid "ENABLE TRUE COLOUR"

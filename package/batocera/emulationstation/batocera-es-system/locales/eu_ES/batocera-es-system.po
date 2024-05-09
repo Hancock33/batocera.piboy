@@ -16510,29 +16510,6 @@ msgid "Quick Save"
 msgstr "Gordetze Azkarra"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
-#~ msgstr ""
-#~ "Aukeratu poligono ordenatze zehaztasun maila (Altuagoak artefaktoak sor "
-#~ "ditzake)"
-
-#~ msgctxt "game_options"
-#~ msgid "POLYGON SORT ACCURACY"
-#~ msgstr "POLIGONO ORDENATZE ZEHAZTASUNA"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-strip (Default)"
-#~ msgstr "Bandako (Defektuz)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (32 layers)"
-#~ msgstr "Pixel-eko (32 geruza)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (64 layers)"
-#~ msgstr "Pixel-eko (64 geruza)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Gorde iragandako egoerak denbora errealean atzera botatzeko, nukleoak "
@@ -16932,10 +16909,6 @@ msgstr "Gordetze Azkarra"
 #~ msgstr "Pixel bakoitzeko"
 
 #~ msgctxt "game_options"
-#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
-#~ msgstr "Onartu mapeoa Future Pinball-en Pad-etik Teklatura."
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enhancement. Improves clarity of distant textures when mip-mapping is "
 #~ "enabled."
@@ -17077,14 +17050,6 @@ msgstr "Gordetze Azkarra"
 #~ msgstr "Aukeratu zure kontsolaren UTC ordu eremua."
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "This option enables the ability to play Xbox Live Arcacde games. May "
-#~ "cause compatibility issues with non-XBLA games."
-#~ msgstr ""
-#~ "Aukera honek Xbox Live Arcade jokuetan jolastea gaitzen du. XBLA "
-#~ "erabiltzen ez duten jokuekin arazoak sor ditzake."
-
-#~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "GZDoom-en kontrolatzaileak konfiguratzeak arazoak ekar ditzake."
 
@@ -17217,6 +17182,41 @@ msgstr "Gordetze Azkarra"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Aurrera Azkar"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
+#~ msgstr ""
+#~ "Aukeratu poligono ordenatze zehaztasun maila (Altuagoak artefaktoak sor "
+#~ "ditzake)"
+
+#~ msgctxt "game_options"
+#~ msgid "POLYGON SORT ACCURACY"
+#~ msgstr "POLIGONO ORDENATZE ZEHAZTASUNA"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-strip (Default)"
+#~ msgstr "Bandako (Defektuz)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (32 layers)"
+#~ msgstr "Pixel-eko (32 geruza)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (64 layers)"
+#~ msgstr "Pixel-eko (64 geruza)"
+
+#~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
+#~ msgstr "Onartu mapeoa Future Pinball-en Pad-etik Teklatura."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "This option enables the ability to play Xbox Live Arcacde games. May "
+#~ "cause compatibility issues with non-XBLA games."
+#~ msgstr ""
+#~ "Aukera honek Xbox Live Arcade jokuetan jolastea gaitzen du. XBLA "
+#~ "erabiltzen ez duten jokuekin arazoak sor ditzake."
 
 #~ msgctxt "game_options"
 #~ msgid "ENABLE TRUE COLOUR"
