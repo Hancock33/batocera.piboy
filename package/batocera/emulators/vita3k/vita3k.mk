@@ -3,8 +3,8 @@
 # vita3k
 #
 ################################################################################
-# Version: Commits on Jan 21, 2024
-VITA3K_VERSION = ed3e7e8a5896a9d80a57a537dd48a1b9d2ebac30
+# Version: Commits on Apr 26, 2024
+VITA3K_VERSION = 418f2343948bc4f4bfa1f6c098dd95cf6e4b971e
 VITA3K_SITE = https://github.com/vita3k/vita3k
 VITA3K_SITE_METHOD=git
 VITA3K_GIT_SUBMODULES=YES
@@ -16,6 +16,7 @@ VITA3K_SUPPORTS_IN_SOURCE_BUILD = NO
 VITA3K_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 VITA3K_CONF_OPTS += -DUSE_DISCORD_RICH_PRESENCE=OFF
 VITA3K_CONF_OPTS += -DUSE_VITA3K_UPDATE=OFF
+VITA3K_CONF_OPTS += -DBUILD_EXTERNAL=ON
 VITA3K_CONF_OPTS += -DXXH_X86DISPATCH_ALLOW_AVX=ON
 VITA3K_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
 VITA3K_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
@@ -23,6 +24,11 @@ VITA3K_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 define VITA3K_GET_SUBMODULE
     mkdir -p $(@D)/external
     cd $(@D)/external && git clone https://github.com/Vita3K/nativefiledialog-cmake
+endef
+
+define VITA3K_FFMPEG_GIT
+    mkdir $(@D)/.git/
+    cp -ruv $(DL_DIR)/$(VITA3K_DL_SUBDIR)/git/.git/* $(@D)/.git/
 endef
 
 define VITA3K_INSTALL_TARGET_CMDS
@@ -37,6 +43,7 @@ define VITA3K_INSTALL_EVMAPY
 endef
 
 VITA3K_PRE_CONFIGURE_HOOKS = VITA3K_GET_SUBMODULE
+VITA3K_PRE_CONFIGURE_HOOKS += VITA3K_FFMPEG_GIT
 VITA3K_POST_INSTALL_TARGET_HOOKS = VITA3K_INSTALL_EVMAPY
 
 $(eval $(cmake-package))
