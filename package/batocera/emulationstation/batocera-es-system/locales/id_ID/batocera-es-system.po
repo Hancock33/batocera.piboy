@@ -16399,29 +16399,6 @@ msgid "Quick Save"
 msgstr ""
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
-#~ msgstr ""
-#~ "Pilih penyortiran poligon presisi (nilai tinggi dapat menyebabkan "
-#~ "artifacts)"
-
-#~ msgctxt "game_options"
-#~ msgid "POLYGON SORT ACCURACY"
-#~ msgstr "AKURASI PENYORTIRAN POLYGON"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-strip (Default)"
-#~ msgstr "Tiap-Strip (Standar)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (32 layers)"
-#~ msgstr "Setiap-Pixel (32 Lapisan)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (64 layers)"
-#~ msgstr "Setiap-Pixel (64 Lapisan)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Simpan status sebelumnya untuk diputar ulang secara langsung, jika Core "
@@ -16873,6 +16850,29 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GUNAKAN KONFIGURASI JOYSTICK GZDOOM"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
+#~ msgstr ""
+#~ "Pilih penyortiran poligon presisi (nilai tinggi dapat menyebabkan "
+#~ "artifacts)"
+
+#~ msgctxt "game_options"
+#~ msgid "POLYGON SORT ACCURACY"
+#~ msgstr "AKURASI PENYORTIRAN POLYGON"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-strip (Default)"
+#~ msgstr "Tiap-Strip (Standar)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (32 layers)"
+#~ msgstr "Setiap-Pixel (32 Lapisan)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (64 layers)"
+#~ msgstr "Setiap-Pixel (64 Lapisan)"
 
 #~ msgctxt "game_options"
 #~ msgid "AMD FidelityFX (Vulkan Only)"

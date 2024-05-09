@@ -16608,29 +16608,6 @@ msgid "Quick Save"
 msgstr "Hızlı Kaydet"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
-#~ msgstr ""
-#~ "Poligon sıralama doğruluğunun miktarını seçin (Yükseldikçe yapay dokulara "
-#~ "neden olabilir)."
-
-#~ msgctxt "game_options"
-#~ msgid "POLYGON SORT ACCURACY"
-#~ msgstr "POLİGON SIRALAMA DOĞRULUĞU"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-strip (Default)"
-#~ msgstr "Piksel başına (Varsayılan)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (32 layers)"
-#~ msgstr "Piksel başına (32 katman)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (64 layers)"
-#~ msgstr "Piksel başına (64 katman)"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (Dikkatli kullanın"
 
@@ -17036,10 +17013,6 @@ msgstr "Hızlı Kaydet"
 #~ msgstr "Piksel Başına"
 
 #~ msgctxt "game_options"
-#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
-#~ msgstr "Pad'den Klavyeye Future Pinball ile eşlemesine izin ver."
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enhancement. Improves clarity of distant textures when mip-mapping is "
 #~ "enabled."
@@ -17203,14 +17176,6 @@ msgstr "Hızlı Kaydet"
 #~ msgstr "Doğal Vulkan"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "This option enables the ability to play Xbox Live Arcacde games. May "
-#~ "cause compatibility issues with non-XBLA games."
-#~ msgstr ""
-#~ "Bu seçenek, Xbox Live Arcade oyunlarını oynama olanağı sağlar. XBLA "
-#~ "olmayan oyunlarda uyumluluk sorunlarına neden olabilir."
-
-#~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "GZDoom'da kontrol aygıtı yapılandırmak sorunlara neden olabilir."
 
@@ -17341,6 +17306,41 @@ msgstr "Hızlı Kaydet"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Hızlı İleri"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
+#~ msgstr ""
+#~ "Poligon sıralama doğruluğunun miktarını seçin (Yükseldikçe yapay dokulara "
+#~ "neden olabilir)."
+
+#~ msgctxt "game_options"
+#~ msgid "POLYGON SORT ACCURACY"
+#~ msgstr "POLİGON SIRALAMA DOĞRULUĞU"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-strip (Default)"
+#~ msgstr "Piksel başına (Varsayılan)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (32 layers)"
+#~ msgstr "Piksel başına (32 katman)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (64 layers)"
+#~ msgstr "Piksel başına (64 katman)"
+
+#~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
+#~ msgstr "Pad'den Klavyeye Future Pinball ile eşlemesine izin ver."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "This option enables the ability to play Xbox Live Arcacde games. May "
+#~ "cause compatibility issues with non-XBLA games."
+#~ msgstr ""
+#~ "Bu seçenek, Xbox Live Arcade oyunlarını oynama olanağı sağlar. XBLA "
+#~ "olmayan oyunlarda uyumluluk sorunlarına neden olabilir."
 
 #~ msgctxt "game_options"
 #~ msgid "ENABLE TRUE COLOUR"

@@ -16476,29 +16476,6 @@ msgid "Quick Save"
 msgstr ""
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
-#~ msgstr ""
-#~ "Выберите точность сортировки полигонов (более высокая может вызвать "
-#~ "артефакты)."
-
-#~ msgctxt "game_options"
-#~ msgid "POLYGON SORT ACCURACY"
-#~ msgstr "ТОЧНОСТЬ СОРТИРОВКИ ПОЛИГОНОВ"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-strip (Default)"
-#~ msgstr "На полосу (по умолчанию)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (32 layers)"
-#~ msgstr "Попиксельно (32 слоя)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (64 layers)"
-#~ msgstr "Попиксельно (64 слоя)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Сохраняет прошлые состояния для перемотки в реальном времени, если ядро "
@@ -16897,10 +16874,6 @@ msgstr ""
 #~ msgstr "Попиксельно"
 
 #~ msgctxt "game_options"
-#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
-#~ msgstr "Разрешает сопоставление Future Pinabll с Pad для клавиатуры."
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enhancement. Improves clarity of distant textures when mip-mapping is "
 #~ "enabled."
@@ -17043,14 +17016,6 @@ msgstr ""
 #~ msgstr "Выбрать UTC часовой пояс консоли."
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "This option enables the ability to play Xbox Live Arcacde games. May "
-#~ "cause compatibility issues with non-XBLA games."
-#~ msgstr ""
-#~ "Этот параметр позволяет играть в Xbox Live Arcacde игры. Может вызвать "
-#~ "проблемы совместимости с играми, отличными от XBLA."
-
-#~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "Настройка контроллеров в GZDoom может вызвать проблемы."
 
@@ -17177,6 +17142,41 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Перемотка"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
+#~ msgstr ""
+#~ "Выберите точность сортировки полигонов (более высокая может вызвать "
+#~ "артефакты)."
+
+#~ msgctxt "game_options"
+#~ msgid "POLYGON SORT ACCURACY"
+#~ msgstr "ТОЧНОСТЬ СОРТИРОВКИ ПОЛИГОНОВ"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-strip (Default)"
+#~ msgstr "На полосу (по умолчанию)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (32 layers)"
+#~ msgstr "Попиксельно (32 слоя)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (64 layers)"
+#~ msgstr "Попиксельно (64 слоя)"
+
+#~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
+#~ msgstr "Разрешает сопоставление Future Pinabll с Pad для клавиатуры."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "This option enables the ability to play Xbox Live Arcacde games. May "
+#~ "cause compatibility issues with non-XBLA games."
+#~ msgstr ""
+#~ "Этот параметр позволяет играть в Xbox Live Arcacde игры. Может вызвать "
+#~ "проблемы совместимости с играми, отличными от XBLA."
 
 #~ msgctxt "game_options"
 #~ msgid "AMD FidelityFX (Vulkan Only)"

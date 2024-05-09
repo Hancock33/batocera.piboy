@@ -16553,29 +16553,6 @@ msgid "Quick Save"
 msgstr "Hurtiglagring"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
-#~ msgstr ""
-#~ "Velg hvor nøyaktig polygonsorteringen skal være (høyere nøyaktighet kan "
-#~ "føre til artefakter)."
-
-#~ msgctxt "game_options"
-#~ msgid "POLYGON SORT ACCURACY"
-#~ msgstr "POLYGONSORTERINGSNØYAKTIGHET"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-strip (Default)"
-#~ msgstr "Per stripe (standard)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (32 layers)"
-#~ msgstr "Per piksel (32 lag)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (64 layers)"
-#~ msgstr "Per piksel (64 lag)"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105 % (Vær forsiktig)"
 
@@ -16983,10 +16960,6 @@ msgstr "Hurtiglagring"
 #~ msgstr "Per piksel"
 
 #~ msgctxt "game_options"
-#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
-#~ msgstr "Tillat tilordning av Future Pinabll med Pad til tastatur."
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enhancement. Improves clarity of distant textures when mip-mapping is "
 #~ "enabled."
@@ -17146,14 +17119,6 @@ msgstr "Hurtiglagring"
 #~ msgstr "Native Vulkan"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "This option enables the ability to play Xbox Live Arcacde games. May "
-#~ "cause compatibility issues with non-XBLA games."
-#~ msgstr ""
-#~ "Dette alternativet gjør det mulig å spille Xbox Live Arcacde-spill. Kan "
-#~ "forårsake kompatibilitetsproblemer med spill som ikke er XBLA-spill."
-
-#~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "Konfigurering av kontrollere i GZDoom kan forårsake problemer."
 
@@ -17284,6 +17249,41 @@ msgstr "Hurtiglagring"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "FastForward"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
+#~ msgstr ""
+#~ "Velg hvor nøyaktig polygonsorteringen skal være (høyere nøyaktighet kan "
+#~ "føre til artefakter)."
+
+#~ msgctxt "game_options"
+#~ msgid "POLYGON SORT ACCURACY"
+#~ msgstr "POLYGONSORTERINGSNØYAKTIGHET"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-strip (Default)"
+#~ msgstr "Per stripe (standard)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (32 layers)"
+#~ msgstr "Per piksel (32 lag)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (64 layers)"
+#~ msgstr "Per piksel (64 lag)"
+
+#~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
+#~ msgstr "Tillat tilordning av Future Pinabll med Pad til tastatur."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "This option enables the ability to play Xbox Live Arcacde games. May "
+#~ "cause compatibility issues with non-XBLA games."
+#~ msgstr ""
+#~ "Dette alternativet gjør det mulig å spille Xbox Live Arcacde-spill. Kan "
+#~ "forårsake kompatibilitetsproblemer med spill som ikke er XBLA-spill."
 
 #~ msgctxt "game_options"
 #~ msgid "ENABLE TRUE COLOUR"

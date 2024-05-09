@@ -16630,29 +16630,6 @@ msgid "Quick Save"
 msgstr "Snel Opslaan"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
-#~ msgstr ""
-#~ "Kies de mate van nauwkeurigheid van het sorteren van polygonen (hoger kan "
-#~ "artefacten veroorzaken)."
-
-#~ msgctxt "game_options"
-#~ msgid "POLYGON SORT ACCURACY"
-#~ msgstr "POLYGON SORTEER NAUWKEURIGHEID"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-strip (Default)"
-#~ msgstr "Per-strip (Standaard)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (32 layers)"
-#~ msgstr "Per-pixel (32 lagen)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (64 layers)"
-#~ msgstr "Per-pixel (64 lagen)"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (Wees voorzichtig)"
 
@@ -17061,10 +17038,6 @@ msgstr "Snel Opslaan"
 #~ msgstr "Per Pixel"
 
 #~ msgctxt "game_options"
-#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
-#~ msgstr "Toewijzing van Future Pinball met Pad naar toetsenbord toestaan."
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enhancement. Improves clarity of distant textures when mip-mapping is "
 #~ "enabled."
@@ -17225,14 +17198,6 @@ msgstr "Snel Opslaan"
 #~ msgstr "Standaard Vulkan"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "This option enables the ability to play Xbox Live Arcacde games. May "
-#~ "cause compatibility issues with non-XBLA games."
-#~ msgstr ""
-#~ "Deze optie maakt het mogelijk om Xbox Live Arcade-games te spelen. Kan "
-#~ "compatibiliteitsproblemen veroorzaken met niet-XBLA spellen."
-
-#~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr ""
 #~ "Het configureren van controllers in GZDoom kan problemen veroorzaken."
@@ -17366,6 +17331,41 @@ msgstr "Snel Opslaan"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Vooruitspoelen"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
+#~ msgstr ""
+#~ "Kies de mate van nauwkeurigheid van het sorteren van polygonen (hoger kan "
+#~ "artefacten veroorzaken)."
+
+#~ msgctxt "game_options"
+#~ msgid "POLYGON SORT ACCURACY"
+#~ msgstr "POLYGON SORTEER NAUWKEURIGHEID"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-strip (Default)"
+#~ msgstr "Per-strip (Standaard)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (32 layers)"
+#~ msgstr "Per-pixel (32 lagen)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (64 layers)"
+#~ msgstr "Per-pixel (64 lagen)"
+
+#~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
+#~ msgstr "Toewijzing van Future Pinball met Pad naar toetsenbord toestaan."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "This option enables the ability to play Xbox Live Arcacde games. May "
+#~ "cause compatibility issues with non-XBLA games."
+#~ msgstr ""
+#~ "Deze optie maakt het mogelijk om Xbox Live Arcade-games te spelen. Kan "
+#~ "compatibiliteitsproblemen veroorzaken met niet-XBLA spellen."
 
 #~ msgctxt "game_options"
 #~ msgid "ENABLE TRUE COLOUR"

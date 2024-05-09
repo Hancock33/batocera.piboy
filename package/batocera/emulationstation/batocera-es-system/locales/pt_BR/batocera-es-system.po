@@ -16628,29 +16628,6 @@ msgid "Quick Save"
 msgstr "Salvamento rápido"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
-#~ msgstr ""
-#~ "Escolha a quantidade de precisão de ordenação do polígono (mais alta pode "
-#~ "causar artefatos)."
-
-#~ msgctxt "game_options"
-#~ msgid "POLYGON SORT ACCURACY"
-#~ msgstr "PRECISÃO DE ORDENAÇÃO DE POLÍGONOS"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-strip (Default)"
-#~ msgstr "Por faixa (padrão)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (32 layers)"
-#~ msgstr "Por pixel (32 camadas)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (64 layers)"
-#~ msgstr "Por pixel (64 camadas)"
-
-#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105% (Use com cautela)"
 
@@ -17064,10 +17041,6 @@ msgstr "Salvamento rápido"
 #~ msgstr "Per Pixel"
 
 #~ msgctxt "game_options"
-#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
-#~ msgstr "Permitir o mapeamento de Future Pinball com Pad2Key."
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enhancement. Improves clarity of distant textures when mip-mapping is "
 #~ "enabled."
@@ -17233,14 +17206,6 @@ msgstr "Salvamento rápido"
 #~ msgstr "Vulkan Nativo"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "This option enables the ability to play Xbox Live Arcacde games. May "
-#~ "cause compatibility issues with non-XBLA games."
-#~ msgstr ""
-#~ "Esta opção habilita a capacidade de jogar jogos do Xbox Live Arcade. Pode "
-#~ "causar problemas de compatibilidade com jogos não XBLA."
-
-#~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "Configurar os controles no GZDoom pode causar problemas."
 
@@ -17373,6 +17338,41 @@ msgstr "Salvamento rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
+#~ msgstr ""
+#~ "Escolha a quantidade de precisão de ordenação do polígono (mais alta pode "
+#~ "causar artefatos)."
+
+#~ msgctxt "game_options"
+#~ msgid "POLYGON SORT ACCURACY"
+#~ msgstr "PRECISÃO DE ORDENAÇÃO DE POLÍGONOS"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-strip (Default)"
+#~ msgstr "Por faixa (padrão)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (32 layers)"
+#~ msgstr "Por pixel (32 camadas)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (64 layers)"
+#~ msgstr "Por pixel (64 camadas)"
+
+#~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
+#~ msgstr "Permitir o mapeamento de Future Pinball com Pad2Key."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "This option enables the ability to play Xbox Live Arcacde games. May "
+#~ "cause compatibility issues with non-XBLA games."
+#~ msgstr ""
+#~ "Esta opção habilita a capacidade de jogar jogos do Xbox Live Arcade. Pode "
+#~ "causar problemas de compatibilidade com jogos não XBLA."
 
 #~ msgctxt "game_options"
 #~ msgid "ENABLE TRUE COLOUR"

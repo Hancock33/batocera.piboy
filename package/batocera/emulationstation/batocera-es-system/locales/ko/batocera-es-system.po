@@ -17845,33 +17845,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
-#~ msgstr ""
-#~ "다각형 정렬 정확도의 양을 선택합니다(높을수록 아티팩트가 발생할 수 있음)."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "POLYGON SORT ACCURACY"
-#~ msgstr "다각형 정렬 정확도"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Per-strip (Default)"
-#~ msgstr "스트립당(기본값)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (32 layers)"
-#~ msgstr "픽셀당(32개 레이어)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (64 layers)"
-#~ msgstr "픽셀당(64개 레이어)"
-
-#, fuzzy
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr "코어가 지원하는 경우 실시간으로 되감기할 과거 상태를 저장합니다."
 
@@ -18409,6 +18382,33 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GZDOOM 조이스틱 구성 사용"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
+#~ msgstr ""
+#~ "다각형 정렬 정확도의 양을 선택합니다(높을수록 아티팩트가 발생할 수 있음)."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "POLYGON SORT ACCURACY"
+#~ msgstr "다각형 정렬 정확도"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Per-strip (Default)"
+#~ msgstr "스트립당(기본값)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (32 layers)"
+#~ msgstr "픽셀당(32개 레이어)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (64 layers)"
+#~ msgstr "픽셀당(64개 레이어)"
 
 #~ msgctxt "game_options"
 #~ msgid "AMD FidelityFX (Vulkan Only)"
