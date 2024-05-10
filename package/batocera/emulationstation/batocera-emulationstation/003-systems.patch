@@ -1,5 +1,5 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index 5e5dd86f..82a3708e 100644
+index 5e5dd86f..4081331c 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
 @@ -9,194 +9,281 @@ namespace PlatformIds
@@ -54,6 +54,7 @@ index 5e5dd86f..82a3708e 100644
 +		{ "capcom",					CAPCOM },
 +		{ "pv1000",					CASIO_PV1000 },
 +		{ "casloopy",				CASLOOPY },
++		{ "loopy",		    		CASLOOPY },
 +		{ "cave",					CAVE },
 +		{ "centurye",				CENTURYE },
 +		{ "cgenie",					CGENIE },
@@ -108,7 +109,6 @@ index 5e5dd86f..82a3708e 100644
 +		{ "kaneko",					KANEKO },
 +		{ "konami",					KONAMI },
 +		{ "linux",					LINUX },
-+		{ "casloopy",				CASLOOPY },
 +		{ "lowresnx",				LOWRESNX },
 +		{ "lutro",					LUTRO },
  		{ "macintosh",				MAC_OS },
@@ -859,7 +859,7 @@ index b3d1f138..2e8045d4 100644
  	{ MSX, "113089" },
  	{ NOKIA_NGAGE, "128704" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index 528e8510..b3750133 100644
+index 528e8510..30bf2eb3 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
 @@ -30,159 +30,235 @@ using namespace PlatformIds;
@@ -1219,12 +1219,3 @@ index 528e8510..b3750133 100644
  };
  
  const std::set<Scraper::ScraperMediaSource>& ScreenScraperScraper::getSupportedMedias()
-@@ -556,7 +632,7 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc, std::ve
- 						genre = node.text().get();
- 
- 					if (subgenre.empty() && strcmp(node.attribute("principale").value(), "0") == 0 && strcmp(node.attribute("langue").value(), "en") == 0)
--						subgenre = node.text().get();
-+						subgenre = node.text().get()CASLOOPY;
- 				}
- 			}
- 
