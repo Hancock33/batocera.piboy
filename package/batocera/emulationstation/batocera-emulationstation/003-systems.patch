@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index e1fbf05b..9134bd6f 100644
+index 5e5dd86f..82a3708e 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -9,193 +9,280 @@ namespace PlatformIds
+@@ -9,194 +9,281 @@ namespace PlatformIds
  	static std::map<std::string, PlatformId> Platforms =
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
@@ -108,6 +108,7 @@ index e1fbf05b..9134bd6f 100644
 +		{ "kaneko",					KANEKO },
 +		{ "konami",					KONAMI },
 +		{ "linux",					LINUX },
++		{ "casloopy",				CASLOOPY },
 +		{ "lowresnx",				LOWRESNX },
 +		{ "lutro",					LUTRO },
  		{ "macintosh",				MAC_OS },
@@ -390,6 +391,7 @@ index e1fbf05b..9134bd6f 100644
 -		{ "cdi",					PHILIPS_CDI },			
 -		{ "fm7",					FUJITSU_FM7 },
 -		{ "pv1000",					CASIO_PV1000 },
+-		{ "loopy",					CASIO_LOOPY },
 -		{ "gamecom",				TIGER_GAMECOM },
 -		{ "advision",				ENTEX_ADVENTURE_VISION },			
 -		{ "arcadia",				EMERSON_ARCADIA_2001 },
@@ -420,10 +422,10 @@ index e1fbf05b..9134bd6f 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index f239033d..63e01ea6 100644
+index 016aa973..63e01ea6 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
-@@ -11,164 +11,250 @@ namespace PlatformIds
+@@ -11,165 +11,250 @@ namespace PlatformIds
  	{
  		PLATFORM_UNKNOWN = 0,
  
@@ -711,6 +713,7 @@ index f239033d..63e01ea6 100644
  		SUPER_NINTENDO_MSU1,
 -		FUJITSU_FM7,
 -		CASIO_PV1000,
+-		CASIO_LOOPY,
 +		SUPERGRAFX,
 +		TAITO,
 +		TANDY_VIS,
@@ -856,10 +859,10 @@ index b3d1f138..2e8045d4 100644
  	{ MSX, "113089" },
  	{ NOKIA_NGAGE, "128704" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index fc3748b7..30bf2eb3 100644
+index 528e8510..b3750133 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
-@@ -30,158 +30,235 @@ using namespace PlatformIds;
+@@ -30,159 +30,235 @@ using namespace PlatformIds;
  	https://www.screenscraper.fr/api/systemesListe.php?devid=xxx&devpassword=yyy&softname=zzz&output=XML
  **/
  const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
@@ -1192,6 +1195,7 @@ index fc3748b7..30bf2eb3 100644
 -	{ FMTOWNS, 253 },
 -	{ FUJITSU_FM7, 97 },
 -	{ CASIO_PV1000, 74 },
+-	{ CASIO_LOOPY, 98 },
 -	{ TIGER_GAMECOM, 121 },
 -	{ ENTEX_ADVENTURE_VISION, 78 },
 -	{ EMERSON_ARCADIA_2001, 94 },
@@ -1215,3 +1219,12 @@ index fc3748b7..30bf2eb3 100644
  };
  
  const std::set<Scraper::ScraperMediaSource>& ScreenScraperScraper::getSupportedMedias()
+@@ -556,7 +632,7 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc, std::ve
+ 						genre = node.text().get();
+ 
+ 					if (subgenre.empty() && strcmp(node.attribute("principale").value(), "0") == 0 && strcmp(node.attribute("langue").value(), "en") == 0)
+-						subgenre = node.text().get();
++						subgenre = node.text().get()CASLOOPY;
+ 				}
+ 			}
+ 
