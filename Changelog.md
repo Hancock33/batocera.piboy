@@ -58,6 +58,7 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|a24553e7d1026c77123abad6a7
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|85e682ec6c16e63e1180ca6248e0eca22eff1502|May 09, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|d72afb1acc8a9d8507e1a60ca689d121e7956693|May 09, 2024
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|572d3ab71c6a1b0850bb07a25039a496b4408173|May 08, 2024
+Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1297|May 08, 2024
 Emulators|[wine-custom](http://github.com/wine-mirror/wine)|ae9bdbda3be2b4ab5be34463fe1daec6c11cc7e6|May 08, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|4baa5916692de4109cf079e0496ea57bd0fdcbde|May 08, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|573c9b99e3cc0b11a652b2f21a22dcb15a2c4dda|May 07, 2024
@@ -107,7 +108,6 @@ Ports|[openjk](http://github.com/JACoders/OpenJK)|7b9dfe79fbb1e06585e95e67704722
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|52152d7949f7a5b9dd13d95fe7941b3852cb2dbe|Apr 30, 2024
 Ports|[box86](https://github.com/ptitseb/box86.git)|f5f1e1413d167eb0c4e2aa9a65ab251ce1e142c4|Apr 30, 2024
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.1|Apr 30, 2024
-Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1295|Apr 29, 2024
 Emulators|[redream](https://redream.io/download)|1.5.0-1125-g0f0a5c3|Apr 28, 2024
 Ports|[theforceengine](https://github.com/luciusDXL/TheForceEngine.git)|6b5aad240214bb9f1636cbde762dd9e852b61f49|Apr 28, 2024
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|8c72600f439364502f2decea4c971cc516f889fe|Apr 28, 2024
