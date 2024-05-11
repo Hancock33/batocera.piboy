@@ -8,6 +8,7 @@ from os import environ
 import configparser
 from . import dolphinTriforceControllers
 from . import dolphinTriforceGameConfig
+import subprocess
 
 class DolphinTriforceGenerator(Generator):
 
