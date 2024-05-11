@@ -14,7 +14,7 @@ Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8
 Emulators|[d8vk](https://github.com/AlpyneDreams/d8vk/releases)|1.0|May 10, 2023
 Emulators|[demul](http://demul.emulation64.com/files)|demul07_280418|Apr 28, 2018
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|7ba539d7965f6f20ff6557369cebac5bfd82e320|May 10, 2024
-Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|21716bf8ae4c07d69d346d45bdc699d09818f16d|Apr 20, 2024
+Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|9c113822dd0a30f3964d428866c1d1a832a6ee8b|May 11, 2024
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|d82d1cc25a875c06e8d1631221a2e0f41e9a1c3f|May 06, 2024
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.03.01|Mar 01, 2024
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 12, 2020
