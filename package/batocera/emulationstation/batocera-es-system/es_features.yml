@@ -8281,8 +8281,16 @@ dolphin:
                     "On":  1
 dolphin_triforce:
   features: [padtokeyboard]
-  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels, wheel_rotation, wheel_deadzone, wheel_midzone]
   cfeatures:
+        gfxbackend:
+            archs_include: [x86, x86_64, bcm2711, bcm2712]
+            submenu: RENDERING
+            prompt:  GRAPHICS API
+            description: Choose which graphics API library to use.
+            choices:
+                "OpenGL": OGL
+                "Vulkan": Vulkan
         internal_resolution:
             group: VIDEO SETTINGS
             prompt:      RENDERING RESOLUTION
