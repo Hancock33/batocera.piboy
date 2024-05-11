@@ -1,6 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|6bc4e24d740a8a98447b78b95c9df8b2e867cf65|May 11, 2024
+Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|9c113822dd0a30f3964d428866c1d1a832a6ee8b|May 11, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|90c9eecb2999ee5240d1ad40c98b0306226689d0|May 11, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240511|May 11, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|2dfbc7d156947eb32b43e20aa03e685a3791bca8|May 11, 2024
@@ -127,7 +128,6 @@ Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|9c0bd0
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|87a0a6318564fc171d0b576da8ea7e629aa229e7|Apr 22, 2024
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|0dff7ad4e6c7b28b87a6555bea8574e5aa748e27|Apr 22, 2024
 Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|9fb917c357b20d95d597bed4d67904c29cd5c753|Apr 21, 2024
-Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|21716bf8ae4c07d69d346d45bdc699d09818f16d|Apr 20, 2024
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|a0a5dff2a11313ee4a757df689260300a616e38a|Apr 19, 2024
 Emulators|[libretro-dolphin](http://github.com/libretro/dolphin)|89a4df725d4eb24537728f7d655cddb1add25c18|Apr 19, 2024
 Ports|[nblood](https://github.com/nukeykt/NBlood.git)|667321dd6270156a8e49199f3cb23b015e0e3668|Apr 19, 2024
