@@ -306,7 +306,7 @@ class SuyuGenerator(Generator):
             suyuConfig.set("Controls", "time_zone_index", system.config["suyu_timezone"])
         else:
             suyuConfig.set("Controls", "time_zone_index", "0")
-        suyuConfig.set("Controls", "time_zone_index\\default", "false")        
+        suyuConfig.set("Controls", "time_zone_index\\default", "false")
 
         # controllers
         nplayer = 1

@@ -5,9 +5,7 @@
 ################################################################################
 # Version: Commits on Mar 25, 2024
 SERIOUSSAM_VERSION = 6facc3b09b67593cf9151a44cc59afd490f2ea62
-SERIOUSSAM_SITE = https://github.com/tx00100xt/SeriousSamClassic-VK.git
-SERIOUSSAM_SITE_METHOD=git
-SERIOUSSAM_GIT_SUBMODULES=YES
+SERIOUSSAM_SITE = $(call github,tx00100xt,SeriousSamClassic-VK,$(SERIOUSSAM_VERSION))
 SERIOUSSAM_SUPPORTS_IN_SOURCE_BUILD = NO
 SERIOUSSAM_DEPENDENCIES = sdl2 sdl2_mixer host-serioussam
 SERIOUSSAM_LICENSE = GPL-2.0

@@ -5,9 +5,7 @@
 ################################################################################
 
 RTMIDI_VERSION = 6.0.0
-RTMIDI_SITE = https://github.com/thestk/rtmidi.git
-RTMIDI_SITE_METHOD=git
-RTMIDI_GIT_SUBMODULES=YES
+RTMIDI_SITE = $(call github,thestk,rtmidi,$(RTMIDI_VERSION))
 RTMIDI_LICENSE = PROPRIETARY
 RTMIDI_LICENSE_FILE = LICENSE
 

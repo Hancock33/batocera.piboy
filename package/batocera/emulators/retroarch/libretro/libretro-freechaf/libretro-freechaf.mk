@@ -5,8 +5,8 @@
 ################################################################################
 # Version: Commits on Nov 1, 2023
 LIBRETRO_FREECHAF_VERSION = 782739dd6988b0148f9c26ddc6ff414e76e54d7b
-LIBRETRO_FREECHAF_SITE_METHOD=git
 LIBRETRO_FREECHAF_SITE=https://github.com/libretro/FreeChaF.git
+LIBRETRO_FREECHAF_SITE_METHOD=git
 LIBRETRO_FREECHAF_GIT_SUBMODULES=YES
 LIBRETRO_FREECHAF_LICENSE = GPLv3.0
 

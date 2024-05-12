@@ -92,7 +92,7 @@ class HypseusSingeGenerator(Generator):
         frameFile = rom + "/" + romName + ".txt"
         commandsFile = rom + "/" + romName + ".commands"
         singeFile = rom + "/" + romName + ".singe"
-        
+
         bezelFile = romName + ".png"
         bezelPath = batoceraFiles.hypseusDatadir + "/bezels/" + bezelFile
         sindenBezelPath = batoceraFiles.hypseusDatadir + "/bezels/sinden/" + bezelFile
@@ -141,7 +141,7 @@ class HypseusSingeGenerator(Generator):
         else:
             commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
                             romName, "vldp", "-framefile", frameFile, "-fullscreen",
-                            "-fastboot", "-gamepad", "-datadir", batoceraFiles.hypseusDatadir, 
+                            "-fastboot", "-gamepad", "-datadir", batoceraFiles.hypseusDatadir,
                             "-romdir", batoceraFiles.daphneRomdir, "-homedir", batoceraFiles.hypseusDatadir]
 
         # controller config file

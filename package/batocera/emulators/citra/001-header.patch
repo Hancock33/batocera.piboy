@@ -1,0 +1,13 @@
+diff --git a/src/video_core/renderer_vulkan/vk_shader_util.cpp b/src/video_core/renderer_vulkan/vk_shader_util.cpp
+index 09e3eb883..4415599ce 100644
+--- a/src/video_core/renderer_vulkan/vk_shader_util.cpp
++++ b/src/video_core/renderer_vulkan/vk_shader_util.cpp
+@@ -2,7 +2,7 @@
+ // Licensed under GPLv2 or any later version
+ // Refer to the license.txt file included.
+ 
+-#include <SPIRV/GlslangToSpv.h>
++#include <glslang/SPIRV/GlslangToSpv.h>
+ #include <glslang/Include/ResourceLimits.h>
+ #include <glslang/Public/ShaderLang.h>
+ #include "common/assert.h"

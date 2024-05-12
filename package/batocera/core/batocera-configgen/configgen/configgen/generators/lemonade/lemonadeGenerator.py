@@ -23,7 +23,7 @@ class LemonadeGenerator(Generator):
             commandArray = ['/usr/bin/lemonade-qt', rom]
         else:
             commandArray = ['/usr/bin/lemonade', rom]
-        return Command.Command(array=commandArray, env={ 
+        return Command.Command(array=commandArray, env={
             "XDG_CONFIG_HOME":batoceraFiles.CONF,
             "XDG_DATA_HOME":batoceraFiles.SAVES + "/3ds",
             "XDG_CACHE_HOME":batoceraFiles.CACHE,
@@ -40,7 +40,7 @@ class LemonadeGenerator(Generator):
             return False
         else:
             return True
-    
+
     @staticmethod
     def writeLEMONADEConfig(lemonadeConfigFile, system, playersControllers):
         # Pads
@@ -103,7 +103,7 @@ class LemonadeGenerator(Generator):
 
         ## [UI]
         if not lemonadeConfig.has_section("UI"):
-            lemonadeConfig.add_section("UI")       
+            lemonadeConfig.add_section("UI")
         # Start Fullscreen
         lemonadeConfig.set("UI", "fullscreen", "true")
         lemonadeConfig.set("UI", "fullscreen\default", "false")
@@ -195,7 +195,7 @@ class LemonadeGenerator(Generator):
             lemonadeConfig.set("Renderer", "use_frame_limit", "false")
         else:
             lemonadeConfig.set("Renderer", "use_frame_limit", "true")
-        
+
         ## [WEB SERVICE]
         if not lemonadeConfig.has_section("WebService"):
             lemonadeConfig.add_section("WebService")
@@ -234,7 +234,7 @@ class LemonadeGenerator(Generator):
         # Options required to load the functions when the configuration file is created
         if not lemonadeConfig.has_option("Controls", "profiles\\size"):
             lemonadeConfig.set("Controls", "profile", 0)
-            lemonadeConfig.set("Controls", "profile\\default", "true")    
+            lemonadeConfig.set("Controls", "profile\\default", "true")
             lemonadeConfig.set("Controls", "profiles\\1\\name", "default")
             lemonadeConfig.set("Controls", "profiles\\1\\name\\default", "true")
             lemonadeConfig.set("Controls", "profiles\\size", 1)

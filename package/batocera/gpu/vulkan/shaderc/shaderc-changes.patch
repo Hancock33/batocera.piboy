@@ -1,8 +1,8 @@
 diff --git a/CHANGES b/CHANGES
-index 35069fe..0270c0e 100644
+index 5d3dd16..587b612 100644
 --- a/CHANGES
 +++ b/CHANGES
-@@ -7,7 +7,7 @@ v2024.1
+@@ -4,7 +4,7 @@ v2024.1
   - Update dependencies
   - Propagate test/install options to Glslang
  
@@ -193,7 +193,7 @@ index d9d02b9..b076ec8 100644
    std::vector<PassId> enabled_opt_passes_;
  
 diff --git a/libshaderc_util/src/compiler.cc b/libshaderc_util/src/compiler.cc
-index e5f5d10..1f9e6a5 100644
+index 5fd6d3c..b099cd6 100644
 --- a/libshaderc_util/src/compiler.cc
 +++ b/libshaderc_util/src/compiler.cc
 @@ -341,6 +341,11 @@ std::tuple<bool, std::vector<uint32_t>, size_t> Compiler::Compile(

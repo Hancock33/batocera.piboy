@@ -10,7 +10,7 @@ import configparser
 scummConfigDir = batoceraFiles.CONF + "/scummvm"
 scummConfigFile = scummConfigDir + "/scummvm.ini"
 
-class ScummVMGenerator(Generator):  
+class ScummVMGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         # crete /userdata/bios/scummvm/extra folder if it doesn't exist
@@ -105,7 +105,7 @@ class ScummVMGenerator(Generator):
         )
 
         return Command.Command(
-            array=commandArray, 
+            array=commandArray,
             env={
                 "XDG_CONFIG_HOME":batoceraFiles.CONF,
                 "XDG_DATA_HOME":batoceraFiles.SAVES,

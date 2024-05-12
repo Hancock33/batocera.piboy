@@ -5,9 +5,7 @@
 ################################################################################
 # Version: Commits on 03 Oct, 2023
 LIBGME_VERSION = 0.6.3
-LIBGME_SITE = https://github.com/libgme/game-music-emu.git
-LIBGME_SITE_METHOD=git
-LIBGME_GIT_SUBMODULES=YES
+LIBGME_SITE = $(call github,libgme,game-music-emu,$(LIBGME_VERSION))
 LIBGME_INSTALL_STAGING = YES
 
 LIBGME_CONF_OPTS = -DENABLE_UBSAN=OFF

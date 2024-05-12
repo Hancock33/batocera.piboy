@@ -26,8 +26,6 @@ class UqmGenerator(Generator):
         commandArray = ["urquan","-f","-o","-r", res,
                         "--contentdir=/userdata/roms/ports/uqm",
                         "--configdir=/userdata/saves/uqm","--addondir=/userdata/roms/ports/uqm/addons"]
-                        
-
 
         return Command.Command(
             array=commandArray,
