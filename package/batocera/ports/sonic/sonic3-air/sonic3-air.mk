@@ -5,9 +5,7 @@
 ################################################################################
 # Version: Commits on May 10, 2024
 SONIC3_AIR_VERSION = cf31f11228f1d959f60618a77010e47dcf9dfeea
-SONIC3_AIR_SITE = https://github.com/Eukaryot/sonic3air.git
-SONIC3_AIR_SITE_METHOD = git
-SONIC3_AIR_GIT_SUBMODULES = YES
+SONIC3_AIR_SITE = $(call github,Eukaryot,sonic3air,$(SONIC3_AIR_VERSION))
 SONIC3_AIR_LICENSE = GPL-3.0
 SONIC3_AIR_LICENSE_FILE = COPYING.txt
 # CMakeLists.txt in subfolder
