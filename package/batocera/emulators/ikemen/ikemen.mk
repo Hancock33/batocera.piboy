@@ -5,12 +5,9 @@
 ################################################################################
 # Version: Commits on May 09, 2024
 IKEMEN_VERSION = d385afe1aee5bacc11fb7d554c6f80908b19bc8a
-IKEMEN_SITE = https://github.com/ikemen-engine/Ikemen-GO
+IKEMEN_SITE = $(call github,ikemen-engine,Ikemen-GO,$(IKEMEN_VERSION))
 IKEMEN_LICENSE = MIT
 IKEMEN_DEPENDENCIES = libgtk3 mesa3d openal libglfw
-
-IKEMEN_SITE_METHOD = git
-IKEMEN_GIT_SUBMODULES = YES
 
 HOST_GO_COMMON_ENV = GOFLAGS=-mod=mod \
 			 GO111MODULE=on \

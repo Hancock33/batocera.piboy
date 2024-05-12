@@ -5,10 +5,7 @@
 ################################################################################
 # Version: Commits on Apr 17, 2022
 SONICNEXUS_VERSION = cdfe25cb84998645992a7a123f1bdc0a13eb9d90
-SONICNEXUS_SITE = https://github.com/Rubberduckycooly/Sonic-Nexus-Decompilation.git
-SONICNEXUS_SITE_METHOD = git
-SONICNEXUS_GIT_SUBMODULES = YES
-
+SONICNEXUS_SITE = $(call github,Rubberduckycooly,Sonic-Nexus-Decompilation,$(SONICNEXUS_VERSION))
 SONICNEXUS_DEPENDENCIES = sdl2 libogg libvorbis
 SONICNEXUS_LICENSE = Custom
 
