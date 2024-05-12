@@ -8,6 +8,7 @@ from os import environ
 import configparser
 from . import dolphinTriforceControllers
 from . import dolphinTriforceGameConfig
+import subprocess
 
 class DolphinTriforceGenerator(Generator):
 
@@ -104,8 +105,19 @@ class DolphinTriforceGenerator(Generator):
         else:
             dolphinTriforceSettings.set("Core", "MMU", "False")
 
-        # Backend - Default Vulkan
-        dolphinTriforceSettings.set("Core", "GFXBackend", "Vulkan")
+        # Backend - Default OpenGL
+        if system.isOptSet("gfxbackend") and system.config["gfxbackend"] == "Vulkan":
+            dolphinTriforceSettings.set("Core", "GFXBackend", "Vulkan")
+            # Check Vulkan
+            try:
+                have_vulkan = subprocess.check_output(["/usr/bin/batocera-vulkan", "hasVulkan"], text=True).strip()
+                if have_vulkan != "true":
+                    eslog.debug("Vulkan driver is not available on the system. Using OpenGL instead.")
+                    dolphinTriforceSettings.set("Core", "GFXBackend", "OGL")
+            except subprocess.CalledProcessError:
+                eslog.debug("Error checking for discrete GPU.")
+        else:
+            dolphinTriforceSettings.set("Core", "GFXBackend", "OGL")
 
         # Serial Port 1 to AM-Baseband
         dolphinTriforceSettings.set("Core", "SerialPort1", "6")

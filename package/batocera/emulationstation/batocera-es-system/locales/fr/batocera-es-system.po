@@ -20,6 +20,11 @@ msgid ""
 "benefit from improved voltage handling."
 msgstr ""
 
+#. TRANSLATION: shared, shared, shared, shared
+msgctxt "game_options"
+msgid "POWER OPTIONS"
+msgstr ""
+
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "POWER MODE"
@@ -67,36 +72,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "RYZEN THERMAL DESIGN POWER"
 msgstr "RYZEN THERMAL DESIGN POWER (TDP)"
-
-#. TRANSLATION: shared
-msgctxt "game_options"
-msgid "105% (Use caution)"
-msgstr ""
-
-#. TRANSLATION: shared
-msgctxt "game_options"
-msgid "110% (Use caution)"
-msgstr "110% (A utiliser avec précaution)"
-
-#. TRANSLATION: shared
-msgctxt "game_options"
-msgid "115% (Use caution)"
-msgstr "115% (A utiliser avec précaution)"
-
-#. TRANSLATION: shared
-msgctxt "game_options"
-msgid "120% (Are you crazy?)"
-msgstr "120% (tu es fou ? )"
-
-#. TRANSLATION: shared
-msgctxt "game_options"
-msgid "125% (Yes, you're crazy)"
-msgstr "125% (Oui, tu es fou)"
-
-#. TRANSLATION: shared
-msgctxt "game_options"
-msgid "130% (Nope, you're just insane!)"
-msgstr "130% (Non, tu es cinglé ! )"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -560,11 +535,6 @@ msgid ""
 "Disables CPU cores to helps reduce CPU power consumption. Useful for "
 "handhelds."
 msgstr ""
-
-#. TRANSLATION: shared, rpcs3, rpcs3, rpcs3, rpcs3, ...
-msgctxt "game_options"
-msgid "CPU"
-msgstr "CPU"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -8401,7 +8371,7 @@ msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "API GRAPHIQUE"
 
-#. TRANSLATION: libretro, cemu, hypseus-singe, dolphin, duckstation, ...
+#. TRANSLATION: libretro, cemu, hypseus-singe, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "OpenGL"
 msgstr "OpenGL"
@@ -8416,7 +8386,7 @@ msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
 
-#. TRANSLATION: libretro, citra, hypseus-singe, dolphin, duckstation, ...
+#. TRANSLATION: libretro, citra, hypseus-singe, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
@@ -8700,7 +8670,7 @@ msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
 msgstr "MODE HAUTE RÉSOLUTION"
 
-#. TRANSLATION: cemu, citra, dolphin, duckstation, melonds, ...
+#. TRANSLATION: cemu, citra, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr "Choisir l'API graphique à utiliser."
@@ -11470,6 +11440,11 @@ msgctxt "game_options"
 msgid "LLVM is fastest, use the Interpreter settings if there are issues."
 msgstr "LLVM est le plus rapide, utilisez l'interpréteur s'il y a des soucis."
 
+#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
+msgctxt "game_options"
+msgid "CPU"
+msgstr "CPU"
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "PPU DECODER"
@@ -12382,31 +12357,23 @@ msgstr ""
 
 #. TRANSLATION: redream
 msgctxt "game_options"
-msgid ""
-"Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
+msgid "RENDER MODE"
 msgstr ""
-"Choisir le degré de précision du tri des polygones (un niveau supérieur peut "
-"provoquer des artefacts)."
 
 #. TRANSLATION: redream
 msgctxt "game_options"
-msgid "POLYGON SORT ACCURACY"
-msgstr "PRÉCISION DU TRI POLYGONIQUE"
+msgid "HLE (per-strip)"
+msgstr ""
 
 #. TRANSLATION: redream
 msgctxt "game_options"
-msgid "Per-strip (Default)"
-msgstr "Par bande (par défaut)"
+msgid "HLE (per-pixel)"
+msgstr ""
 
 #. TRANSLATION: redream
 msgctxt "game_options"
-msgid "Per-pixel (32 layers)"
-msgstr "Par pixel (32 couches)"
-
-#. TRANSLATION: redream
-msgctxt "game_options"
-msgid "Per-pixel (64 layers)"
-msgstr "Par pixel (64 couches)"
+msgid "LLE"
+msgstr ""
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -15009,6 +14976,16 @@ msgctxt "game_options"
 msgid "Anti-aliasing is a technique for smoothing out jagged edges."
 msgstr "L'anti-crénelage est une méthode pour diminuer l'effet d'escalier."
 
+#. TRANSLATION: vita3k
+msgctxt "game_options"
+msgid "You can hide the pointer on touchscreen devices."
+msgstr ""
+
+#. TRANSLATION: vita3k
+msgctxt "game_options"
+msgid "SHOW POINTER"
+msgstr ""
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
@@ -15019,7 +14996,7 @@ msgstr ""
 "dossier de la table associé. Si désactivé, consultez le Wiki pour plus de "
 "détails."
 
-#. TRANSLATION: vpinball
+#. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
 msgid "EXPERT SETTINGS"
 msgstr "PARAMETRES EXPERTS"
@@ -15310,6 +15287,71 @@ msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
+msgid "Enable the custom values below."
+msgstr ""
+
+#. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
+msgctxt "game_options"
+msgid "DISPLAY PHYSICAL SETUP"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "ENABLE CUSTOM DISPLAY PHYSICAL SETUP"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Long visible screen edge (cm)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "SCREEN WIDTH"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Short visible screen edge (cm)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "SCREEN HEIGHT"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Screen inclination (degree)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "SCREEN INCLINATION"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Player distance from lower screen edge (cm)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "SCREEN PLAYER Y"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "Player's eyes distance from lower screen edge (cm)"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "SCREEN PLAYER Z"
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
 msgid "Adjust the music volume. Some tables may have its own settings."
 msgstr ""
 "Réglage du volume de la musique. Certaines tables peuvent avoir leurs "
@@ -15340,6 +15382,18 @@ msgstr ""
 msgctxt "game_options"
 msgid "ALTERNATIVE SOUND"
 msgstr "SON ALTERNATIF"
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"This should not be necessary, unless you are not using the default pad2key "
+"mapping."
+msgstr ""
+
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "USE JOYPAD SOUTH BUTTON TO ADD CREDIT"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15977,7 +16031,7 @@ msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr "Afficher l'écran du contrôleur"
 
-#. TRANSLATION: jaguar.bigpemu.keys
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys
 msgctxt "keys_files"
 msgid "Configuration menu"
 msgstr ""
@@ -16567,6 +16621,26 @@ msgstr "Sauvegarde rapide"
 #~ msgstr "105% (A utiliser avec précaution)"
 
 #~ msgctxt "game_options"
+#~ msgid "110% (Use caution)"
+#~ msgstr "110% (A utiliser avec précaution)"
+
+#~ msgctxt "game_options"
+#~ msgid "115% (Use caution)"
+#~ msgstr "115% (A utiliser avec précaution)"
+
+#~ msgctxt "game_options"
+#~ msgid "120% (Are you crazy?)"
+#~ msgstr "120% (tu es fou ? )"
+
+#~ msgctxt "game_options"
+#~ msgid "125% (Yes, you're crazy)"
+#~ msgstr "125% (Oui, tu es fou)"
+
+#~ msgctxt "game_options"
+#~ msgid "130% (Nope, you're just insane!)"
+#~ msgstr "130% (Non, tu es cinglé ! )"
+
+#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Sauvegarde les états de chargement pour le retour rapide, si le cœur le "
@@ -16970,10 +17044,6 @@ msgstr "Sauvegarde rapide"
 #~ msgstr "Par pixel"
 
 #~ msgctxt "game_options"
-#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
-#~ msgstr "Permettre le mappage du clavier dans Future Pinball."
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enhancement. Improves clarity of distant textures when mip-mapping is "
 #~ "enabled."
@@ -17139,14 +17209,6 @@ msgstr "Sauvegarde rapide"
 #~ msgstr "Vulkan Natif"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "This option enables the ability to play Xbox Live Arcacde games. May "
-#~ "cause compatibility issues with non-XBLA games."
-#~ msgstr ""
-#~ "Cette option permet de jouer aux jeux XBox Live Arcade. Cela peut causer "
-#~ "des problèmes de compatibilité avec les jeux non-XBLA."
-
-#~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "Configurer les manettes dans GZDoom peut poser des problèmes."
 
@@ -17277,6 +17339,41 @@ msgstr "Sauvegarde rapide"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rapide"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
+#~ msgstr ""
+#~ "Choisir le degré de précision du tri des polygones (un niveau supérieur "
+#~ "peut provoquer des artefacts)."
+
+#~ msgctxt "game_options"
+#~ msgid "POLYGON SORT ACCURACY"
+#~ msgstr "PRÉCISION DU TRI POLYGONIQUE"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-strip (Default)"
+#~ msgstr "Par bande (par défaut)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (32 layers)"
+#~ msgstr "Par pixel (32 couches)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per-pixel (64 layers)"
+#~ msgstr "Par pixel (64 couches)"
+
+#~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
+#~ msgstr "Permettre le mappage du clavier dans Future Pinball."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "This option enables the ability to play Xbox Live Arcacde games. May "
+#~ "cause compatibility issues with non-XBLA games."
+#~ msgstr ""
+#~ "Cette option permet de jouer aux jeux XBox Live Arcade. Cela peut causer "
+#~ "des problèmes de compatibilité avec les jeux non-XBLA."
 
 #~ msgctxt "game_options"
 #~ msgid "ENABLE TRUE COLOUR"

@@ -99,18 +99,33 @@ class Vita3kGenerator(Generator):
         # Simplify the rom name (strip the directory & extension)
         begin, end = rom.find('['), rom.rfind(']')
         smplromname = rom[begin+1: end]
-        # becuase of the yml formatting, we don't allow Vita3k to modify it
-        # using the -w & -f options prevents Vuta3k from re-writing & prompting the user in GUI
-        # we wwant to avoid that so roms load staright away
-        commandArray = ["/usr/bin/vita3k/Vita3K", "-F", "-w", "-f", "-c", vitaConfigFile, "-r", smplromname]
+        # because of the yml formatting, we don't allow Vita3k to modify it
+        # using the -w & -f options prevents Vita3k from re-writing & prompting the user in GUI
+        # we want to avoid that so roms load straight away
+        if path.isdir(vitaSaves + '/ux0/app/' + smplromname):
+            commandArray = ["/usr/bin/vita3k/Vita3K", "-F", "-w", "-f", "-c", vitaConfigFile, "-r", smplromname]
+        else:
+            # Game not installed yet, let's open the menu
+            commandArray = ["/usr/bin/vita3k/Vita3K", "-F", "-w", "-f", "-c", vitaConfigFile, rom]
 
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers),
+                "SDL_JOYSTICK_HIDAPI": "0",
+                "XDG_CONFIG_HOME": batoceraFiles.CONF,
+                "XDG_DATA_HOME": batoceraFiles.SAVES,
+                "XDG_CACHE_HOME": batoceraFiles.CACHE,
+                "XDG_DATA_DIRS": batoceraFiles.SAVES
             }
         )
 
     # Show mouse for touchscreen actions
     def getMouseMode(self, config, rom):
-        return True
+        if "vita3k_show_pointer" in config and config["vita3k_show_pointer"] == "false":
+             return False
+        else:
+             return True
+
+    def getInGameRatio(self, config, gameResolution, rom):
+        return 16/9

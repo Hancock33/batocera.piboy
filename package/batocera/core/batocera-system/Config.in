@@ -414,7 +414,8 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_TQFTPSERV                            if  BR2_PACKAGE_BATOCERA_TARGET_ODIN
 
     # leds
-    select BR2_PACKAGE_AYN_PLATFORM                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+	select BR2_PACKAGE_AYN_PLATFORM                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+	select BR2_PACKAGE_AYANEO_PLATFORM                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
     help
         Install the batocera.linux system files
@@ -818,7 +819,6 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
     select BR2_PACKAGE_CITRA                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_CITRA                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
    #select BR2_PACKAGE_PANDA3DS                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
-
 
     # PSP
     select BR2_PACKAGE_PPSSPP                               if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
@@ -1677,7 +1677,6 @@ config BR2_PACKAGE_BATOCERA_FREEDRENO_MESA3D
     select BR2_PACKAGE_MESA3D_OPENGL_GLX                    if  BR2_PACKAGE_XORG7                                                                       # OpenGL GLX support
     select BR2_PACKAGE_MESA3D_DEMOS                         if  BR2_PACKAGE_XORG7                                                                       # glxinfo etc
     select BR2_PACKAGE_LIBGLVND                             if  BR2_PACKAGE_XORG7                                                                       # opengl vendor neutral dispatch
-
 
 config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
     bool "batocera.linux Firmware package selection"

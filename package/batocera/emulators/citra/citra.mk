@@ -3,8 +3,8 @@
 # citra
 #
 ################################################################################
-# Version: Commits on Apr 23, 2024
-CITRA_VERSION = b5126f979ca31e6f6519c70788da8c25a2cdf7d7
+# Version: Commits on May 08, 2024
+CITRA_VERSION = 572d3ab71c6a1b0850bb07a25039a496b4408173
 CITRA_SITE = https://github.com/PabloMK7/citra.git
 CITRA_SITE_METHOD=git
 CITRA_GIT_SUBMODULES=YES
@@ -13,7 +13,7 @@ CITRA_DEPENDENCIES += boost catch2 cubeb fdk-aac ffmpeg fmt libbacktrace qt6base
 CITRA_SUPPORTS_IN_SOURCE_BUILD = NO
 
 CITRA_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-CITRA_CONF_OPTS += -DENABLE_LTO=ON
+CITRA_CONF_OPTS += -DENABLE_LTO=OFF
 CITRA_CONF_OPTS += -DENABLE_SDL2=ON
 CITRA_CONF_OPTS += -DENABLE_WEB_SERVICE=ON
 CITRA_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
@@ -37,7 +37,7 @@ endef
 
 define CITRA_EVMAP
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/citra/3ds.citra.keys $(TARGET_DIR)/usr/share/evmapy
+	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/citra/3ds.citra.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 define NO_DL_EXTERNAL
@@ -48,4 +48,3 @@ CITRA_POST_INSTALL_TARGET_HOOKS = CITRA_EVMAP
 CITRA_PRE_CONFIGURE_HOOKS += NO_DL_EXTERNAL
 
 $(eval $(cmake-package))
-

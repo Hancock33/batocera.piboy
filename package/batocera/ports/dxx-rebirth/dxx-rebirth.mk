@@ -5,8 +5,7 @@
 ################################################################################
 # Version: Commits on May 05, 2024
 DXX_REBIRTH_VERSION = ea01f707d539b99e537b54afe67705c5e8443dbc
-DXX_REBIRTH_SITE = https://github.com/dxx-rebirth/dxx-rebirth
-DXX_REBIRTH_SITE_METHOD=git
+DXX_REBIRTH_SITE = $(call github,dxx-rebirth,dxx-rebirth,$(DXX_REBIRTH_VERSION))
 DXX_REBIRTH_LICENSE = GPLv3
 DXX_REBIRTH_LICENSE_FILE = COPYING.txt
 DXX_REBIRTH_DEPENDENCIES = host-scons sdl2 sdl2_image sdl2_mixer libpng physfs

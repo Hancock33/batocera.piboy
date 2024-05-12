@@ -5,9 +5,7 @@
 ################################################################################
 # Version: Commits on Mar 12, 2024
 RTCW_VERSION = a4e6f501b5ef1a1f6127d89164e850bb7cf873d6
-RTCW_SITE = https://github.com/iortcw/iortcw.git
-RTCW_SITE_METHOD = git
-RTCW_GIT_SUBMODULES=YES
+RTCW_SITE = $(call github,iortcw,iortcw,$(RTCW_VERSION))
 RTCW_LICENSE = GPL-3.0
 RTCW_LICENSE_FILE = COPYING
 

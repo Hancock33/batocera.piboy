@@ -3,8 +3,8 @@
 # retrocrisis
 #
 ################################################################################
-# Version: Commits on Apr 16, 2024
-RETROCRISIS_VERSION = 2024.04.16
+# Version: Commits on May 05, 2024
+RETROCRISIS_VERSION = 2024.05.05
 RETROCRISIS_SITE = https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases/download/$(subst .,,$(RETROCRISIS_VERSION))
 RETROCRISIS_SOURCE = Retro.Crisis.GDV-NTSC.$(RETROCRISIS_VERSION).zip
 RETROCRISIS_LICENSE = GPL-3.0
