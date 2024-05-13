@@ -262,8 +262,8 @@ Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e24
 Ports|[awgl](http://github.com/cyxx/rawgl)|1eeaa530c859bd6e37b3d3bd7d3136bc16afcc89|Mar 12, 2022
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|1855c8ed66b771fb62ae66bf5b1cbc9ede9cd03a|Dec 26, 2023
-Ports|[box64](https://github.com/ptitseb/box64.git)|v0.2.6|Dec 15, 2023
-Ports|[box86](https://github.com/ptitseb/box86.git)|f5f1e1413d167eb0c4e2aa9a65ab251ce1e142c4|Apr 30, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|46dfaab639b7d2a5af79c288160bfe92b1fd6961|May 11, 2024
+Ports|[box86](http://github.com/ptitseb/box86)|f5f1e1413d167eb0c4e2aa9a65ab251ce1e142c4|Apr 30, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|1a823507f43ac84abf69e816cf975180298a4405|May 09, 2024
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|3046c51cb0112d1841512d56d67f6c85d1b74c47|May 12, 2024

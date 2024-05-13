@@ -35,6 +35,7 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|5fb6be4bf627dfcd97dd21212e
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|3d412c955ff2a84f02de7ef17be9eba70f3da5d2|May 11, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|911b416d28e4bf15345f00622f33c615a645f1ea|May 11, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|12a738a9b467693094646fc674f627df742d9f05|May 11, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|46dfaab639b7d2a5af79c288160bfe92b1fd6961|May 11, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|8fdb7dce5fa12531fcd1dead2357056adc7212d1|May 11, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|5c0b039d9f834099151073bcf41e1dfb790230d9|May 11, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|b8ee8d34d5570771cf465a2452b8b861754630df|May 11, 2024
@@ -111,7 +112,7 @@ Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|b021d8ee4372
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|a88d2b2171abdfa0cb43ec586fe988475a16c55d|May 01, 2024
 Ports|[openjk](http://github.com/JACoders/OpenJK)|7b9dfe79fbb1e06585e95e67704722f412db109c|May 01, 2024
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|52152d7949f7a5b9dd13d95fe7941b3852cb2dbe|Apr 30, 2024
-Ports|[box86](https://github.com/ptitseb/box86.git)|f5f1e1413d167eb0c4e2aa9a65ab251ce1e142c4|Apr 30, 2024
+Ports|[box86](http://github.com/ptitseb/box86)|f5f1e1413d167eb0c4e2aa9a65ab251ce1e142c4|Apr 30, 2024
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.1|Apr 30, 2024
 Emulators|[redream](https://redream.io/download)|1.5.0-1125-g0f0a5c3|Apr 28, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|6b5aad240214bb9f1636cbde762dd9e852b61f49|Apr 28, 2024
@@ -220,7 +221,6 @@ Emulators|[vice](https://sourceforge.net/projects/vice-emu/files/releases)|3.8|D
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|2065d07de4a4bc3c70f6ff66a15666468b3a42f2|Dec 24, 2023
 Ports|[xatrix](http://github.com/yquake2/xatrix)|b837ee59e6251bfa960f5a74ab62914544c1a418|Dec 17, 2023
 Ports|[yrogue](http://github.com/yquake2/rogue)|8baa9d35b083f2666d5f668675dbfbc9eee5ff06|Dec 17, 2023
-Ports|[box64](https://github.com/ptitseb/box64.git)|v0.2.6|Dec 15, 2023
 Emulators|[libretro-sameduck](http://github.com/LIJI32/SameBoy)|5619abdb01cee6bedb47599cdb5532c318443b52|Dec 10, 2023
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|d7d1d39111efb9c44fc956beea076ee243774dc1|Nov 29, 2023
