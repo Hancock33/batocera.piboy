@@ -16627,30 +16627,6 @@ msgid "Quick Save"
 msgstr "Snel Opslaan"
 
 #~ msgctxt "game_options"
-#~ msgid "105% (Use caution"
-#~ msgstr "105% (Wees voorzichtig)"
-
-#~ msgctxt "game_options"
-#~ msgid "110% (Use caution)"
-#~ msgstr "110% (Wees voorzichtig)"
-
-#~ msgctxt "game_options"
-#~ msgid "115% (Use caution)"
-#~ msgstr "115% (Wees voorzichtig)"
-
-#~ msgctxt "game_options"
-#~ msgid "120% (Are you crazy?)"
-#~ msgstr "120% (Ben je gek?)"
-
-#~ msgctxt "game_options"
-#~ msgid "125% (Yes, you're crazy)"
-#~ msgstr "125% (Ja, je bent gek)"
-
-#~ msgctxt "game_options"
-#~ msgid "130% (Nope, you're just insane!)"
-#~ msgstr "130% (Nee, je bent krankzinnig!)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Sla vorige staat op om in realtime naartoe te gaan, als de core het "
@@ -17348,6 +17324,30 @@ msgstr "Snel Opslaan"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Vooruitspoelen"
+
+#~ msgctxt "game_options"
+#~ msgid "105% (Use caution"
+#~ msgstr "105% (Wees voorzichtig)"
+
+#~ msgctxt "game_options"
+#~ msgid "110% (Use caution)"
+#~ msgstr "110% (Wees voorzichtig)"
+
+#~ msgctxt "game_options"
+#~ msgid "115% (Use caution)"
+#~ msgstr "115% (Wees voorzichtig)"
+
+#~ msgctxt "game_options"
+#~ msgid "120% (Are you crazy?)"
+#~ msgstr "120% (Ben je gek?)"
+
+#~ msgctxt "game_options"
+#~ msgid "125% (Yes, you're crazy)"
+#~ msgstr "125% (Ja, je bent gek)"
+
+#~ msgctxt "game_options"
+#~ msgid "130% (Nope, you're just insane!)"
+#~ msgstr "130% (Nee, je bent krankzinnig!)"
 
 #~ msgctxt "game_options"
 #~ msgid ""

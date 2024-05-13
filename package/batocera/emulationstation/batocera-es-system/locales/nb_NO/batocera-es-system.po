@@ -16550,30 +16550,6 @@ msgid "Quick Save"
 msgstr "Hurtiglagring"
 
 #~ msgctxt "game_options"
-#~ msgid "105% (Use caution"
-#~ msgstr "105 % (Vær forsiktig)"
-
-#~ msgctxt "game_options"
-#~ msgid "110% (Use caution)"
-#~ msgstr "110 % (Vær forsiktig)"
-
-#~ msgctxt "game_options"
-#~ msgid "115% (Use caution)"
-#~ msgstr "115 % (Vær forsiktig)"
-
-#~ msgctxt "game_options"
-#~ msgid "120% (Are you crazy?)"
-#~ msgstr "120 % (Er du gal?)"
-
-#~ msgctxt "game_options"
-#~ msgid "125% (Yes, you're crazy)"
-#~ msgstr "125 % (Ja, du er gal)"
-
-#~ msgctxt "game_options"
-#~ msgid "130% (Nope, you're just insane!)"
-#~ msgstr "130 % (Nei, du er fullstendig gal!)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Lagre tidligere tilstander som du kan spole tilbake til i sanntid, hvis "
@@ -17266,6 +17242,30 @@ msgstr "Hurtiglagring"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "FastForward"
+
+#~ msgctxt "game_options"
+#~ msgid "105% (Use caution"
+#~ msgstr "105 % (Vær forsiktig)"
+
+#~ msgctxt "game_options"
+#~ msgid "110% (Use caution)"
+#~ msgstr "110 % (Vær forsiktig)"
+
+#~ msgctxt "game_options"
+#~ msgid "115% (Use caution)"
+#~ msgstr "115 % (Vær forsiktig)"
+
+#~ msgctxt "game_options"
+#~ msgid "120% (Are you crazy?)"
+#~ msgstr "120 % (Er du gal?)"
+
+#~ msgctxt "game_options"
+#~ msgid "125% (Yes, you're crazy)"
+#~ msgstr "125 % (Ja, du er gal)"
+
+#~ msgctxt "game_options"
+#~ msgid "130% (Nope, you're just insane!)"
+#~ msgstr "130 % (Nei, du er fullstendig gal!)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
