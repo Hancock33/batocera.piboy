@@ -3,8 +3,8 @@
 # ayn-platform
 #
 ################################################################################
-# Version: Commits on Feb 09, 2024
-AYN_PLATFORM_VERSION = 02befd684c15743f9c8fd8e018c50b86feb0ae7b
+# Version: Commits on Apr 16, 2024
+AYN_PLATFORM_VERSION = 62032caddc25920f1f8ef256808d5a0cfc252f39
 AYN_PLATFORM_SITE = $(call github,ShadowBlip,ayn-platform,$(AYN_PLATFORM_VERSION))
 AYN_PLATFORM_LICENSE = GPL-3.0
 AYN_PLATFORM_LICENSE_FILES = LICENSE
