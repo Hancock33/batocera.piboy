@@ -3,9 +3,9 @@
 # libretro-picodrive
 #
 ################################################################################
-# Version: Commits on Mar 26, 2024
-LIBRETRO_PICODRIVE_VERSION = ad93670449a28825d4b2cebf2eeff72cf03377a9
-LIBRETRO_PICODRIVE_SITE = https://github.com/libretro/picodrive.git
+# Version: Commits on May 07, 2024
+LIBRETRO_PICODRIVE_VERSION = 695e6de85e06d47043003664531fc491eaa91240
+LIBRETRO_PICODRIVE_SITE = https://github.com/irixxxx/picodrive.git
 LIBRETRO_PICODRIVE_SITE_METHOD=git
 LIBRETRO_PICODRIVE_GIT_SUBMODULES=YES
 LIBRETRO_PICODRIVE_DEPENDENCIES = libpng
