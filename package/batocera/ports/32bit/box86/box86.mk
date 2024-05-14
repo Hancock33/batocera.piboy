@@ -3,8 +3,8 @@
 # box86
 #
 ################################################################################
-# Version: Commits on Apr 30, 2024
-BOX86_VERSION = f5f1e1413d167eb0c4e2aa9a65ab251ce1e142c4
+# Version: Commits on May 14, 2024
+BOX86_VERSION = 932045054f43410d0798c7ab48f6ccd44909bfc0
 BOX86_SITE = $(call github,ptitseb,box86,$(BOX86_VERSION))
 BOX86_SUPPORTS_IN_SOURCE_BUILD = NO
 
