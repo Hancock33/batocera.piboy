@@ -5,11 +5,8 @@
 ################################################################################
 # Version: Commits on Apr 27, 2024
 SOLARUS_ENGINE_VERSION = 696d6e8e6f3417d085cad958ec8de40665f0342b
-SOLARUS_ENGINE_SITE = https://gitlab.com/solarus-games/solarus
-SOLARUS_ENGINE_SITE_METHOD=git
-
-SOLARUS_ENGINE_LICENSE = GPL-3.0 (code), CC-BY-SA-4.0 (Solarus logos and icons), \
-	CC-BY-SA-3.0 (GUI icons)
+SOLARUS_ENGINE_SITE = $(call gitlab,solarus-games,solarus,$(SOLARUS_ENGINE_VERSION))
+SOLARUS_ENGINE_LICENSE = GPL-3.0 (code), CC-BY-SA-4.0 (Solarus logos and icons), CC-BY-SA-3.0 (GUI icons)
 SOLARUS_ENGINE_LICENSE_FILES = license.txt
 
 # Install libsolarus.so
