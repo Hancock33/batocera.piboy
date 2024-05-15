@@ -7,7 +7,6 @@ Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|9e25ec19d699
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|d64b24ca2eaf5dcdc0e9e5a8ada95af736ec80d7|May 15, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|2154d31e620a016685c4d8c155a4d6a7000927a1|May 15, 2024
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|893dad57b25b193edabce1be6c13ea9f75d76cae|May 15, 2024
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|0a38c0889e4445f5c6185d04d5fe65f45891d180|May 15, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|faea2032b028e695c4b2966d437cb4dfee53247f|May 15, 2024
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|37fc13121ee031f1390b59d2d962543e1a0bd853|May 15, 2024
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|a72b79a55ad2d61811af11b1b911f6af863f66c2|May 15, 2024
@@ -41,6 +40,7 @@ Emulators|[play](https://github.com/jpd002/Play-.git)|b92860fcc2e361ace7e983c675
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|dbcac0e48c769e4874028496c6d6f6ecc418e16f|May 14, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1310|May 14, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|5ad19ccdb4b8130cf878e0edfa53cba3796321d3|May 14, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|6a31983779479b42e0c2e5320a1dfa962767c28e|May 14, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|383292899865c41d7f9e5e77c3f09b73e72a0fde|May 14, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|3b43f255ceff1948f1623a1d4b847b4373897a0c|May 14, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|7fb93613d531213740c7196e7540b44f0272f17e|May 14, 2024
@@ -89,7 +89,7 @@ Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|cf31f11228f1d959f60618a
 Ports|[sonicmania](https://github.com/Rubberduckycooly/Sonic-Mania-Decompilation.git)|7b6681f5617b0cf7d5149c173b2f5fc35c2a9077|May 10, 2024
 Gpu|[vulkan-volk](http://github.com/zeux/volk)|749f0ab4e9e69394f4d1d39cbb11b5fb6c9e31b1|May 10, 2024
 Emulators|[libretro-mame](http://github.com/sonninnos/mame)|1c6d288bf15705ab93c66a11af40eaf9d2a515a2|May 09, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|ae9bdbda3be2b4ab5be34463fe1daec6c11cc7e6|May 08, 2024
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|0a63bec65ca0346c89f82469a8a9c9cba401faa1|May 09, 2024
 Emulators|[libretro-imame](http://github.com/libretro/mame2000-libretro)|905808fbcc3adf8c610c1c60f0e41ce4b35db1c5|May 07, 2024
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|ab05295d81fed2bb9db9f68a7ceeec7a544191d8|May 07, 2024
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|fe284b142e957e92a51726d6000e987753c0d4c8|May 07, 2024
