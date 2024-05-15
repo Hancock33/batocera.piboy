@@ -20,7 +20,7 @@ Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.0
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 12, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Emulators|[duckstation-legacy](https://github.com/stenzek/duckstation.git)|v0.1-6461|Mar 16, 2024
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|0a38c0889e4445f5c6185d04d5fe65f45891d180|May 15, 2024
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|0a63bec65ca0346c89f82469a8a9c9cba401faa1|May 09, 2024
 Emulators|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|0.7.0|Mar 15, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|2.3.1|Mar 20, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|9e25ec19d699359a8e2b9431a4d13f8f9ccfa172|May 15, 2024
@@ -238,7 +238,7 @@ Emulators|[vita3k](https://github.com/vita3k/vita3k)|418f2343948bc4f4bfa1f6c098d
 Emulators|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|2.12|Mar 15, 2024
 Emulators|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.11|Mar 05, 2024
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|d6ec90b8a1a03d46a6a3b3650688e8f57040faeb|May 10, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|ae9bdbda3be2b4ab5be34463fe1daec6c11cc7e6|May 08, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|6a31983779479b42e0c2e5320a1dfa962767c28e|May 14, 2024
 Emulators|[wine-ge](http://github.com/GloriousEggroll/proton-wine)|39021e609a24b6aeffdf9c4695a286d71e7dffbc|Feb 04, 2024
 Emulators|[wine-lutris](http://github.com/lutris/wine)|lutris-wine-7.2-2|Jul 06, 2022
 Emulators|[wine-mono](https://dl.winehq.org/wine/wine-mono/)|9.1.0|Apr 17, 2024
