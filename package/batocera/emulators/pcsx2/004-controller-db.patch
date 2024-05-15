@@ -1,5 +1,5 @@
 diff --git a/pcsx2/Input/SDLInputSource.cpp b/pcsx2/Input/SDLInputSource.cpp
-index 5f9a814db..06e94d186 100644
+index 168c9be73..3bc5651c6 100644
 --- a/pcsx2/Input/SDLInputSource.cpp
 +++ b/pcsx2/Input/SDLInputSource.cpp
 @@ -18,7 +18,7 @@
