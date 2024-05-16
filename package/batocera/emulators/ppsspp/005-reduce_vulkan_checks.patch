@@ -1,8 +1,8 @@
 diff --git a/Common/GPU/Vulkan/VulkanLoader.cpp b/Common/GPU/Vulkan/VulkanLoader.cpp
-index 6cab42ef5..6bbd381e3 100644
+index 17596b50a3..870afdf8ae 100644
 --- a/Common/GPU/Vulkan/VulkanLoader.cpp
 +++ b/Common/GPU/Vulkan/VulkanLoader.cpp
-@@ -259,8 +259,9 @@ typedef void *VulkanLibraryHandle;
+@@ -258,8 +258,9 @@ typedef void *VulkanLibraryHandle;
  static VulkanLibraryHandle vulkanLibrary;
  #endif
  
@@ -13,4 +13,4 @@ index 6cab42ef5..6bbd381e3 100644
 +bool g_vulkanMayBeAvailable = true;
  
  #define LOAD_INSTANCE_FUNC(instance, x) x = (PFN_ ## x)vkGetInstanceProcAddr(instance, #x); if (!x) {INFO_LOG(G3D, "Missing (instance): %s", #x);}
- #define LOAD_DEVICE_FUNC(instance, x) x = (PFN_ ## x)vkGetDeviceProcAddr(instance, #x); if (!x) {INFO_LOG(G3D, "Missing (device): %s", #x);}
+ #define LOAD_INSTANCE_FUNC_CORE(instance, x, ext_x, min_core) \

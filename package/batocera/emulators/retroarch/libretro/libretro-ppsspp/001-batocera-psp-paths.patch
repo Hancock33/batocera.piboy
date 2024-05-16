@@ -1,5 +1,5 @@
 diff --git a/Core/System.cpp b/Core/System.cpp
-index 8e800b747..973e8ff90 100644
+index 8e800b747e..973e8ff908 100644
 --- a/Core/System.cpp
 +++ b/Core/System.cpp
 @@ -659,63 +659,58 @@ std::string PSP_GetLoading() {
