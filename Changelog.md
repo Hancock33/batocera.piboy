@@ -17,6 +17,7 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|9ceb22a2c0b3bf261498f579fd
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|9522acf61dda16e7a5aeb4168df137a0c328a0cc|May 17, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|7130162df2cda9a3eee05af0402da0db15e4f5b5|May 17, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|c9d6003830085439c236dbb537c6636f96ee090e|May 17, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|wine-9.9|May 17, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240517|May 17, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|fa992bf4bb8a47ec44d68d1df22ce0e449ec0c73|May 17, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|5228338f97b27b5d2c2de028552a593e1d1f5578|May 17, 2024
@@ -42,7 +43,6 @@ Emulators|[lightspark](http://github.com/lightspark/lightspark)|a395fd5d8d5202aa
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2815-master|May 16, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|9b225d67de25388f91730d70063d70b1162ffe82|May 16, 2024
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|6a034f6db9826c8e8d29f0bf5f68ee2f0a8b450f|May 16, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|d2c11cdd945a438ccaf86658a6fb62a0a419414f|May 16, 2024
 Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|0bfca44a932fb6ad255d76cd2eda5fcbc2b01940|May 16, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|6d8bee9316223dee577239975168a7308afc454c|May 16, 2024
 Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|0d1c8667a409cf284aea98c1ac6786bbc826fdf1|May 15, 2024
