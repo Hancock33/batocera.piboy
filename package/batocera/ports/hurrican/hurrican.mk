@@ -28,7 +28,8 @@ define HURRICAN_INSTALL_TARGET_CMDS
 	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/hurrican/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/hurrican/
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/hurrican/hurrican.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/hurrican/hurrican.keys \
+	    $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(cmake-package))
