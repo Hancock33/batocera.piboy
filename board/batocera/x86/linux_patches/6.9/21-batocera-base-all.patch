@@ -571,7 +571,7 @@ index 28e20975c26f..5845f3dd0488 100644
  M:	Finn Thain <fthain@linux-m68k.org>
  L:	linux-m68k@lists.linux-m68k.org
 diff --git a/Makefile b/Makefile
-index a2907d9f2fbe..9a16ce0d2475 100644
+index 4bf1177c27d7..0d69fd04d77f 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -810,6 +810,9 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
