@@ -242,10 +242,10 @@ Emulators|[wine-custom](http://github.com/wine-mirror/wine)|wine-9.9|May 17, 202
 Emulators|[wine-ge](http://github.com/GloriousEggroll/proton-wine)|39021e609a24b6aeffdf9c4695a286d71e7dffbc|Feb 04, 2024
 Emulators|[wine-lutris](http://github.com/lutris/wine)|lutris-wine-7.2-2|Jul 06, 2022
 Emulators|[wine-mono](https://dl.winehq.org/wine/wine-mono/)|9.1.0|Apr 17, 2024
-Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-9.8|May 03, 2024
+Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-9.9|May 17, 2024
 Emulators|[wine-ntsync](https://repo.or.cz/wine/zf.git/snapshot/)|b710a652bb7f582fa65f8d42d727847e231b7095|May 03, 2024
-Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|e8172fc9d5dbfcb88c92f7e8832ea773bccf38c4|May 03, 2024
-Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.8|May 03, 2024
+Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|experimental-wine-9.0-20240516|May 16, 2024
+Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.9|May 17, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240517|May 17, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|383292899865c41d7f9e5e77c3f09b73e72a0fde|May 14, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|5a144a3fd3770fb730027dbab406ce71218bf966|May 06, 2024
