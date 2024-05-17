@@ -16610,30 +16610,6 @@ msgid "Quick Save"
 msgstr "Guardar Rápido"
 
 #~ msgctxt "game_options"
-#~ msgid "105% (Use caution"
-#~ msgstr "105% (tenha cuidado"
-
-#~ msgctxt "game_options"
-#~ msgid "110% (Use caution)"
-#~ msgstr "110% (tenha cuidado)"
-
-#~ msgctxt "game_options"
-#~ msgid "115% (Use caution)"
-#~ msgstr "115% (tenha cuidado)"
-
-#~ msgctxt "game_options"
-#~ msgid "120% (Are you crazy?)"
-#~ msgstr "120% (Você está louco?)"
-
-#~ msgctxt "game_options"
-#~ msgid "125% (Yes, you're crazy)"
-#~ msgstr "125% (Sim, você está louco)"
-
-#~ msgctxt "game_options"
-#~ msgid "130% (Nope, you're just insane!)"
-#~ msgstr "130% (não, você é simplesmente insano)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Armazenar savestates para rebobinar em tempo real, se o core suportar."
@@ -17334,3 +17310,27 @@ msgstr "Guardar Rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
+
+#~ msgctxt "game_options"
+#~ msgid "105% (Use caution"
+#~ msgstr "105% (tenha cuidado"
+
+#~ msgctxt "game_options"
+#~ msgid "110% (Use caution)"
+#~ msgstr "110% (tenha cuidado)"
+
+#~ msgctxt "game_options"
+#~ msgid "115% (Use caution)"
+#~ msgstr "115% (tenha cuidado)"
+
+#~ msgctxt "game_options"
+#~ msgid "120% (Are you crazy?)"
+#~ msgstr "120% (Você está louco?)"
+
+#~ msgctxt "game_options"
+#~ msgid "125% (Yes, you're crazy)"
+#~ msgstr "125% (Sim, você está louco)"
+
+#~ msgctxt "game_options"
+#~ msgid "130% (Nope, you're just insane!)"
+#~ msgstr "130% (não, você é simplesmente insano)"
