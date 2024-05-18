@@ -3,8 +3,8 @@
 # projectm
 #
 ################################################################################
-
-PROJECTM_VERSION = v3.1.12
+# Version: Commits on Mar 23, 2024
+PROJECTM_VERSION = v4.1.1
 PROJECTM_SITE =  $(call github,projectM-visualizer,projectm,$(PROJECTM_VERSION))
 PROJECTM_LICENSE = LGPLv3
 PROJECTM_AUTORECONF = YES

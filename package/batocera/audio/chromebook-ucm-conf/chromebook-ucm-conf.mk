@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Apr 09, 2024
-CHROMEBOOK_UCM_CONF_VERSION = f7be751655e4298851615bded7adaf364ccfb8c3
+CHROMEBOOK_UCM_CONF_VERSION = 0.5
 CHROMEBOOK_UCM_CONF_BRANCH = standalone
 CHROMEBOOK_UCM_CONF_SITE = $(call github,WeirdTreeThing,alsa-ucm-conf-cros,$(CHROMEBOOK_UCM_CONF_VERSION))
 CHROMEBOOK_UCM_CONF_LICENSE = BSD-3-Clause
