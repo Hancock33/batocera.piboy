@@ -16888,6 +16888,18 @@ msgstr ""
 #~ msgstr "UTILITZA CONFIGURACIÓ DEL JOYSTICK DE GZDOOM"
 
 #~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Obrir el menú Dolphin-Triforce"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Carregar ranura d'estat 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Desar ranura d'estat 1"
+
+#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad Amunt"
 
@@ -16982,18 +16994,6 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avançar"
-
-#~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Obrir el menú Dolphin-Triforce"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Carregar ranura d'estat 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Desar ranura d'estat 1"
 
 #~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
