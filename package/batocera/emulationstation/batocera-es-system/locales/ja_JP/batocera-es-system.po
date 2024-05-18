@@ -17026,6 +17026,18 @@ msgstr "クイック セーブ"
 #~ msgstr "Vsync がオフの場合に、希望の最大リフレッシュ レートを設定します"
 
 #~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Dolphin-triforce　メニューを開く"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "ステートロード - スロット  1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "ステートセーブ - スロット  1"
+
+#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad 上"
 
@@ -17120,18 +17132,6 @@ msgstr "クイック セーブ"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
-
-#~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Dolphin-triforce　メニューを開く"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "ステートロード - スロット  1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "ステートセーブ - スロット  1"
 
 #~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
