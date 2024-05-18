@@ -6,6 +6,7 @@
 # Version: Commits on May 10, 2023
 D8VK_VERSION = d8vk-v1.0
 D8VK_SITE = https://github.com/AlpyneDreams/d8vk/releases/download/$(D8VK_VERSION)
+D8VK_SOURCE = $(D8VK_VERSION).tar.gz
 D8VK_LICENSE = zlib
 D8VK_LICENSE_FILES = LICENSE
 

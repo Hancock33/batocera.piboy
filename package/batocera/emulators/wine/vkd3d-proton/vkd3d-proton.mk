@@ -5,7 +5,7 @@
 ################################################################################
 # Version: Commits on Mar 15, 2024
 VKD3D_PROTON_VERSION = v2.12
-VKD3D_PROTON_SOURCE = vkd3d-proton-$(VKD3D_PROTON_VERSION).tar.zst
+VKD3D_PROTON_SOURCE = vkd3d-proton-$(subst v,,$(VKD3D_PROTON_VERSION)).tar.zst
 VKD3D_PROTON_SITE = https://github.com/HansKristian-Work/vkd3d-proton/releases/download/$(VKD3D_PROTON_VERSION)
 VKD3D_PROTON_LICENSE = lgpl
 
@@ -19,10 +19,8 @@ endef
 define VKD3D_PROTON_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/wine/dxvk/x32
 	mkdir -p $(TARGET_DIR)/usr/wine/dxvk/x64
-	cp -a $(@D)/target/vkd3d-proton-$(VKD3D_PROTON_VERSION)/x86/*.dll \
-	    $(TARGET_DIR)/usr/wine/dxvk/x32
-	cp -a $(@D)/target/vkd3d-proton-$(VKD3D_PROTON_VERSION)/x64/*.dll \
-	    $(TARGET_DIR)/usr/wine/dxvk/x64
+	cp -a $(@D)/target/vkd3d-proton-$(subst v,,$(VKD3D_PROTON_VERSION))/x86/*.dll $(TARGET_DIR)/usr/wine/dxvk/x32
+	cp -a $(@D)/target/vkd3d-proton-$(subst v,,$(VKD3D_PROTON_VERSION))/x64/*.dll $(TARGET_DIR)/usr/wine/dxvk/x64
 endef
 
 $(eval $(generic-package))
