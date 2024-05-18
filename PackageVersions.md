@@ -1,7 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|8c62eeb53b3a08dabf51d1ba1afe1b466b1c553c|May 18, 2024
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|8c62eeb53b3a08dabf51d1ba1afe1b466b1c553c|May 18, 2024
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|4f4fb243320c942baa68d802d3a3e1253787eca1|May 18, 2024
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|4f4fb243320c942baa68d802d3a3e1253787eca1|May 18, 2024
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|8968deb8fbfd5c96819fa22aba7bbd8890ed8113|Apr 25, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|540e9b85beda523cd8bc1675b3f67c8fe42c5f7c|May 17, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|a6367163cc896400a1f4f60145bfbb140a6ce4b3|May 12, 2024
@@ -152,7 +152,7 @@ Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|e2b1299d85564c29
 Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|96fa9bc65aa27a5ab2779f9f2ff0439fec7cf513|Oct 31, 2023
 Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|d8b10c4cd7606ed58f9c562864c986bc960faaaf|Feb 20, 2023
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|3265c0ac05ec595f9cedd020d76e7f39bf081538|May 02, 2024
-Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|5649534c802887984e9a4442620c1707a711fb6c|May 06, 2024
+Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|60c76b2a585901862f58be533a90136ec107b5ce|May 18, 2024
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|49166ca9949708c3bddaed5cc549194c4bfcfae5|May 13, 2024
 Emulators|[libretro-stella2014](http://github.com/libretro/stella2014-libretro)|8ab051edd4816f33a5631d230d54059eeed52c5f|Feb 20, 2023
 Emulators|[libretro-supafaust](http://github.com/libretro/supafaust)|6b639c98372d1c9bac885c55d772c812d2a9d525|Jun 19, 2023
@@ -221,7 +221,7 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|f573f7b1412e745879aee4251
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1316|May 17, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|e2b1299d85564c29a1642185aeb6b96e56ded206|Apr 13, 2024
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
-Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|99d1bfe3bf775740fc5fa09caf86723f68a389a4|May 18, 2024
+Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|7b4baaa11c974ed959b2c72fd83ed3df7fafa5c8|May 18, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|8f41776532c407744c41e5d08444cb2dbd492c14|May 13, 2024
 Emulators|[sockpp](http://github.com/fpagliughi/sockpp)|e6c4688a576d95f42dd7628cefe68092f6c5cd0f|Mar 11, 2024
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|696d6e8e6f3417d085cad958ec8de40665f0342b|Apr 27, 2024
@@ -250,7 +250,7 @@ Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|383292899865c41d7f9e5e77c3f09b73e72a0fde|May 14, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|5a144a3fd3770fb730027dbab406ce71218bf966|May 06, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|5bbba85c70d809af063f02e16cd6558d79c98e42|May 15, 2024
-Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2815-master|May 16, 2024
+Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2816-master|May 18, 2024
 Emulators|[yabasanshiro](https://github.com/devmiyax/yabause.git)|c7618d2ecbf77b1e8188fa8af4fa1cfb34833a72|Jun 18, 2022
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|14.2.0|May 02, 2024
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.1|Apr 30, 2024
@@ -321,7 +321,7 @@ Ports|[srb2kart](http://github.com/STJr/Kart-Public)|44b4a6852858eebba5f9f50da2a
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|bc9f5894c8a0396a5b29eaad6a745785b34f0167|May 17, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|fcd8cea5cd15fd59d09a26dcde137fb38f2bc6fb|May 17, 2024
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|89f503f4dc11dd05d8dec7e802cd0b24d9c9f08a|Feb 09, 2024
-Ports|[supertux2](https://github.com/SuperTux/supertux.git)|6507c72c087adeac8264277fcd57540427422336|May 18, 2024
+Ports|[supertux2](https://github.com/SuperTux/supertux.git)|a5b7c79aa21886a8832ea703630bb808aaaee432|May 18, 2024
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|d327bfa6140af179a9409e0ba42f392e03da530b|Mar 03, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|6b5aad240214bb9f1636cbde762dd9e852b61f49|Apr 28, 2024
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
