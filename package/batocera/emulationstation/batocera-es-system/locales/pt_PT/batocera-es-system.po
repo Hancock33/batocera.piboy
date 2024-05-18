@@ -27,7 +27,7 @@ msgstr ""
 #. TRANSLATION: shared, shared, shared, shared
 msgctxt "game_options"
 msgid "POWER OPTIONS"
-msgstr ""
+msgstr "OPÇÕES DE ENERGIA"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -14969,11 +14969,12 @@ msgstr "Anti-aliasing é uma técnica para suavizar arestas irregulares."
 msgctxt "game_options"
 msgid "You can hide the pointer on touchscreen devices."
 msgstr ""
+"Você pode ocultar o ponteiro em dispositivos com ecrã sensível ao toque."
 
 #. TRANSLATION: vita3k
 msgctxt "game_options"
 msgid "SHOW POINTER"
-msgstr ""
+msgstr "MOSTRAR PONTEIRO"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15280,67 +15281,67 @@ msgstr "ECRÃ ÚNICA COMPLETA"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Enable the custom values below."
-msgstr ""
+msgstr "Ativar os valores personalizados abaixo."
 
 #. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
 msgctxt "game_options"
 msgid "DISPLAY PHYSICAL SETUP"
-msgstr ""
+msgstr "MOSTRAR CONFIGURAÇÃO FÍSICA"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "ENABLE CUSTOM DISPLAY PHYSICAL SETUP"
-msgstr ""
+msgstr "ATIVAR CONFIGURAÇÃO FÍSICA DE EXIBIÇÃO PERSONALIZADA"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
-msgstr ""
+msgstr "Borda longa do ecrã visível (cm)"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "SCREEN WIDTH"
-msgstr ""
+msgstr "LARGURA DO ECRÃ"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Short visible screen edge (cm)"
-msgstr ""
+msgstr "Borda curta do ecrã visível (cm)"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "SCREEN HEIGHT"
-msgstr ""
+msgstr "ALTURA DO ECRÃ"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
-msgstr ""
+msgstr "Inclinação do ecrã (grau)"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "SCREEN INCLINATION"
-msgstr ""
+msgstr "INCLINAÇÃO DO ECRÃ"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Player distance from lower screen edge (cm)"
-msgstr ""
+msgstr "Distância do jogador até a borda inferior do ecrã (cm)"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "SCREEN PLAYER Y"
-msgstr ""
+msgstr "ECRÃ DO LEITOR Y"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Player's eyes distance from lower screen edge (cm)"
-msgstr ""
+msgstr "Distância dos olhos do jogador à borda inferior do ecrã (cm)"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "SCREEN PLAYER Z"
-msgstr ""
+msgstr "ECRÃ DO LEITOR Z"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15380,11 +15381,13 @@ msgid ""
 "This should not be necessary, unless you are not using the default pad2key "
 "mapping."
 msgstr ""
+"Isso não deve ser necessário, a menos que você não esteja a usar o pad2key "
+"padrão mapeamento."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "USE JOYPAD SOUTH BUTTON TO ADD CREDIT"
-msgstr ""
+msgstr "USAR O BOTÃO SUL DO JOYPAD PARA ADICIONAR CRÉDITO"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -17204,18 +17207,6 @@ msgstr "Guardar Rápido"
 #~ "desligado."
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Abrir o menu do Dolphin-triforce"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Carregar Estado no Slot 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Guardar Estado no Slot 1"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad Cima"
 
@@ -17311,26 +17302,14 @@ msgstr "Guardar Rápido"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
 
-#~ msgctxt "game_options"
-#~ msgid "105% (Use caution"
-#~ msgstr "105% (tenha cuidado"
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Abrir o menu do Dolphin-triforce"
 
-#~ msgctxt "game_options"
-#~ msgid "110% (Use caution)"
-#~ msgstr "110% (tenha cuidado)"
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Carregar Estado no Slot 1"
 
-#~ msgctxt "game_options"
-#~ msgid "115% (Use caution)"
-#~ msgstr "115% (tenha cuidado)"
-
-#~ msgctxt "game_options"
-#~ msgid "120% (Are you crazy?)"
-#~ msgstr "120% (Você está louco?)"
-
-#~ msgctxt "game_options"
-#~ msgid "125% (Yes, you're crazy)"
-#~ msgstr "125% (Sim, você está louco)"
-
-#~ msgctxt "game_options"
-#~ msgid "130% (Nope, you're just insane!)"
-#~ msgstr "130% (não, você é simplesmente insano)"
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Guardar Estado no Slot 1"

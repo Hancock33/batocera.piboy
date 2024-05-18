@@ -16456,14 +16456,6 @@ msgstr ""
 #~ msgstr "اختر المنطقة الزمنية لوحدة التحكم الخاصة بك بالتوقيت العالمي."
 
 #~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "حمل الحالة من فتحة ١"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "احفظ الحالة في فتحة ١"
-
-#~ msgctxt "keys_files"
 #~ msgid "Button A"
 #~ msgstr "زر A"
 
@@ -16514,6 +16506,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "تسريع إلى الأمام"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "حمل الحالة من فتحة ١"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "احفظ الحالة في فتحة ١"
 
 #~ msgctxt "keys_files"
 #~ msgid "Aspect ratio correction on/off"
