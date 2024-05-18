@@ -1,7 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|0fb2d852f4d0a2183e8c18f1823770b80d358783|May 17, 2024
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|0fb2d852f4d0a2183e8c18f1823770b80d358783|May 17, 2024
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|8c62eeb53b3a08dabf51d1ba1afe1b466b1c553c|May 18, 2024
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|8c62eeb53b3a08dabf51d1ba1afe1b466b1c553c|May 18, 2024
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|8968deb8fbfd5c96819fa22aba7bbd8890ed8113|Apr 25, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|540e9b85beda523cd8bc1675b3f67c8fe42c5f7c|May 17, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|a6367163cc896400a1f4f60145bfbb140a6ce4b3|May 12, 2024

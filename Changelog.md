@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|8c62eeb53b3a08dabf51d1ba1afe1b466b1c553c|May 18, 2024
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|8c62eeb53b3a08dabf51d1ba1afe1b466b1c553c|May 18, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|ae84c590de01561ece9c1e9cbcdfdf9f3cd16bf9|May 17, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|0eb4b423452da40dbf4393e09d4126c3090a1210|May 17, 2024
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|414149d335ce2a3284db6cdffbb8ed2ce42dbe5f|May 17, 2024
@@ -34,8 +36,6 @@ Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|88bc9b63dfd77636d1857dd48b960ebd9fc004af|May 17, 2024
 Ports|[sonic2013](https://github.com/Rubberduckycooly/Sonic-1-2-2013-Decompilation.git)|8def752b2f73226e201ae320b7905e03c6d34822|May 17, 2024
 Ports|[soniccd](https://github.com/Rubberduckycooly/Sonic-CD-11-Decompilation.git)|3691b65956f55383a31c40eed1152c1c83f8cc58|May 17, 2024
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|0fb2d852f4d0a2183e8c18f1823770b80d358783|May 17, 2024
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|0fb2d852f4d0a2183e8c18f1823770b80d358783|May 17, 2024
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|85d646a962e263c4724f596941b554c48f229a77|May 16, 2024
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|765b092744162358246cb5cade712ba7bf32d679|May 16, 2024
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|4de5555602545a2a245aa4f88862849f495e3b55|May 16, 2024
