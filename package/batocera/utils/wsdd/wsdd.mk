@@ -5,7 +5,7 @@
 ################################################################################
 # Version: Commits on Mar 30, 2024
 WSDD_VERSION = v0.8
-WSDD_SITE = $(call github,christgau,wsdd,v$(WSDD_VERSION))
+WSDD_SITE = $(call github,christgau,wsdd,$(WSDD_VERSION))
 WSDD_LICENSE = MIT
 
 define WSDD_INSTALL_TARGET_CMDS
