@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240518|May 18, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240518|May 18, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|8c62eeb53b3a08dabf51d1ba1afe1b466b1c553c|May 18, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|8c62eeb53b3a08dabf51d1ba1afe1b466b1c553c|May 18, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|ae84c590de01561ece9c1e9cbcdfdf9f3cd16bf9|May 17, 2024
@@ -20,7 +22,6 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|9522acf61dda16e7a5aeb4168
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|7130162df2cda9a3eee05af0402da0db15e4f5b5|May 17, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|c9d6003830085439c236dbb537c6636f96ee090e|May 17, 2024
 Emulators|[wine-custom](http://github.com/wine-mirror/wine)|wine-9.9|May 17, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240517|May 17, 2024
 Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-9.9|May 17, 2024
 Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.9|May 17, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|fa992bf4bb8a47ec44d68d1df22ce0e449ec0c73|May 17, 2024
@@ -32,7 +33,6 @@ Ports|[stk](http://github.com/supertuxkart/stk-code)|fcd8cea5cd15fd59d09a26dcde1
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|a9baa1b8ab6936ae4a5604bb777a30d672becd69|May 17, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|004e6d1fcba0beec34b1e6ad21464c09c4512398|May 17, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|79e622a839f8002b066066164154e6c6e029ed41|May 17, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240517|May 17, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|88bc9b63dfd77636d1857dd48b960ebd9fc004af|May 17, 2024
 Ports|[sonic2013](https://github.com/Rubberduckycooly/Sonic-1-2-2013-Decompilation.git)|8def752b2f73226e201ae320b7905e03c6d34822|May 17, 2024
 Ports|[soniccd](https://github.com/Rubberduckycooly/Sonic-CD-11-Decompilation.git)|3691b65956f55383a31c40eed1152c1c83f8cc58|May 17, 2024
