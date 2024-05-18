@@ -3,8 +3,8 @@
 # bauh
 #
 ################################################################################
-# Version: Commits on Apr 16, 2022
-BAUH_VERSION = 0.10.2
+# Version: Commits on Jan 10, 2024
+BAUH_VERSION = 0.10.7
 BAUH_SITE =  $(call github,vinifmor,bauh,$(BAUH_VERSION))
 BAUH_SETUP_TYPE = setuptools
 BAUH_DEPENDENCIES = python-pyqt5 python-pyqt5-sip
