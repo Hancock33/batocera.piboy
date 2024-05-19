@@ -3,7 +3,7 @@
 # ledspicer
 #
 ################################################################################
-
+# Version: Commits on Feb 26, 2024
 LEDSPICER_VERSION = 0.5.9
 LEDSPICER_SITE = $(call github,meduzapat,LEDSpicer,$(LEDSPICER_VERSION))
 LEDSPICER_LICENSE = GPLv3

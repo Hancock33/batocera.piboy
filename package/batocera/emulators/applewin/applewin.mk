@@ -29,7 +29,6 @@ define APPLEWIN_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/applewin
 	cp -R $(@D)/resource/* $(TARGET_DIR)/usr/share/applewin/
 	rm $(TARGET_DIR)/usr/share/applewin/resource.h
-	#cp -avf $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/applewin/applewin.keys $(TARGET_DIR)/usr/share/evmapy/
 endef
 
 $(eval $(cmake-package))

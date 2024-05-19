@@ -4,9 +4,10 @@
 #
 ################################################################################
 # Version: Commits on Mar 20, 2024
-DXVK_VERSION = 2.3.1
-DXVK_SOURCE = dxvk-$(DXVK_VERSION).tar.gz
-DXVK_SITE = https://github.com/doitsujin/dxvk/releases/download/v$(DXVK_VERSION)
+DXVK_VERSION = v2.3.1
+DXVK_SOURCE = dxvk-$(subst v,,$(DXVK_VERSION)).tar.gz
+DXVK_SITE = https://github.com/doitsujin/dxvk/releases/download/$(DXVK_VERSION)
+
 DXVK_LICENSE = zlib/libpng
 
 DXVK_EXTRA_DOWNLOADS = https://raw.githubusercontent.com/doitsujin/dxvk/master/dxvk.conf
@@ -17,8 +18,8 @@ endef
 
 define DXVK_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/wine/dxvk
-	cp -pr $(@D)/target/dxvk-$(DXVK_VERSION)/x32 $(TARGET_DIR)/usr/wine/dxvk/
-	cp -pr $(@D)/target/dxvk-$(DXVK_VERSION)/x64 $(TARGET_DIR)/usr/wine/dxvk/
+	cp -pr $(@D)/target/dxvk-$(subst v,,$(DXVK_VERSION))/x32 $(TARGET_DIR)/usr/wine/dxvk/
+	cp -pr $(@D)/target/dxvk-$(subst v,,$(DXVK_VERSION))/x64 $(TARGET_DIR)/usr/wine/dxvk/
 	# dxvk.conf
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/wine
 	cp $(DXVK_DL_DIR)/dxvk.conf $(TARGET_DIR)/usr/share/batocera/datainit/system/wine/dxvk.conf

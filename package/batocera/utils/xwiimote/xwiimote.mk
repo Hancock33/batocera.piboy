@@ -3,9 +3,9 @@
 # xwiimote
 #
 ################################################################################
-
-XWIIMOTE_VERSION = f2be57e24fc24652308840cec2ed702b9d1138df
-XWIIMOTE_SITE = $(call github,dvdhrm,xwiimote,$(XWIIMOTE_VERSION))
+# Version: Commits on Feb 29, 2024
+XWIIMOTE_VERSION = 4df713d9037d814cc0c64197f69e5c78d55caaf1
+XWIIMOTE_SITE = $(call github,xwiimote,xwiimote,$(XWIIMOTE_VERSION))
 
 XWIIMOTE_DEPENDENCIES = udev
 
