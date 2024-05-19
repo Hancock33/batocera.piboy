@@ -1,7 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|4f4fb243320c942baa68d802d3a3e1253787eca1|May 18, 2024
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|4f4fb243320c942baa68d802d3a3e1253787eca1|May 18, 2024
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|467f419f699afee174b17179ccc6e63ac73a7a07|May 19, 2024
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|467f419f699afee174b17179ccc6e63ac73a7a07|May 19, 2024
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|8968deb8fbfd5c96819fa22aba7bbd8890ed8113|Apr 25, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|540e9b85beda523cd8bc1675b3f67c8fe42c5f7c|May 17, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|a6367163cc896400a1f4f60145bfbb140a6ce4b3|May 12, 2024
@@ -205,7 +205,7 @@ Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|be7344d9739ad84cbeed9fa7132f5892edb131dd|May 19, 2024
 Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|79bfb67156efd22dd7b9c8c2d55d43fd72250302|May 12, 2024
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|81f11028096c7cf13e6a2d32a96bee832ca9fa59|May 19, 2024
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|7683674585ac631e7877ccf784108f5b20736d49|May 19, 2024
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|0efd17e79dc470c86cd1363a93130888c1e7a528|May 17, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|dbcac0e48c769e4874028496c6d6f6ecc418e16f|May 14, 2024
@@ -263,7 +263,7 @@ Ports|[awgl](http://github.com/cyxx/rawgl)|1eeaa530c859bd6e37b3d3bd7d3136bc16afc
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|1855c8ed66b771fb62ae66bf5b1cbc9ede9cd03a|Dec 26, 2023
 Ports|[box64](http://github.com/ptitseb/box64)|73619f4d75e2ee502748b641450ebc90398d7fce|May 18, 2024
-Ports|[box86](http://github.com/ptitseb/box86)|25e1d8bae8a37fda780b5083065c23052160fb1a|May 19, 2024
+Ports|[box86](http://github.com/ptitseb/box86)|0829c14a73cfaa6d0615b0acfea4c3ce421c30b8|May 19, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|d456b02c4abbf40d0e32989df07e00ba467eb972|May 12, 2024
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|753347f442b76296b9bb40fe009e61bc1bee54e4|May 18, 2024
@@ -280,7 +280,7 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|6935de0c07596db0fcbf9
 Ports|[f2bgl](http://github.com/cyxx/f2bgl)|0b84f41c7cc13a41f5a1832549485b814a52070d|Oct 18, 2020
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|ad8a2754fa99ceaf40495185ad48191cf27559e2|Mar 05, 2024
 Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|9fb917c357b20d95d597bed4d67904c29cd5c753|Apr 21, 2024
-Ports|[fheroes2](http://github.com/ihhub/fheroes2)|82a1a962e503051e0cdc426226d02d8ea812dbab|May 19, 2024
+Ports|[fheroes2](http://github.com/ihhub/fheroes2)|cd35b4d1345d03da9d32e8c2b118e74836561a94|May 19, 2024
 Ports|[freedroid](http://github.com/ReinhardPrix/FreedroidClassic)|126664e034d17bb7fd1e6c3cfa1e9e6f1ebf48ac|Jan 08, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|1dedcee7391370f919b38ce2a5c95728ba1a9d4e|May 18, 2024
 Ports|[hcl](http://github.com/ptitSeb/hydracastlelabyrinth)|229369c222f8604530f5e06f795b4505ef21d439|Feb 28, 2024
