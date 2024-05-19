@@ -1,4 +1,0 @@
-config BR2_PACKAGE_LIB32BIT_PACKAGER
-    bool "lib32bit-packager"
-    help
-      32bit libs packer

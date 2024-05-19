@@ -12,8 +12,7 @@ LIBRETRO_FAKE08_LICENSE = MIT
 
 define LIBRETRO_FAKE08_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/platform/libretro/Makefile
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C \
-	$(@D)/platform/libretro platform="unix"
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/platform/libretro platform="unix"
 endef
 
 define LIBRETRO_FAKE08_INSTALL_TARGET_CMDS

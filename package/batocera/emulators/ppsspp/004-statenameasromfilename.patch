@@ -1,5 +1,5 @@
 diff --git a/Core/SaveState.cpp b/Core/SaveState.cpp
-index fdb283e57..178870798 100644
+index fb42b68bdc..aeec69821c 100644
 --- a/Core/SaveState.cpp
 +++ b/Core/SaveState.cpp
 @@ -532,7 +532,7 @@ namespace SaveState

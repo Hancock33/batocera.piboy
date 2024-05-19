@@ -1922,10 +1922,10 @@ index 243a704..193a245 100644
  
      for (size_t i = 0; i < sizeof(windows_scancode_table) / sizeof(SDL_Scancode); i++) {
 diff --git a/src/pc/pc_main.c b/src/pc/pc_main.c
-index 923e7ea..4fe6161 100644
+index 98ddf78..c86a04a 100644
 --- a/src/pc/pc_main.c
 +++ b/src/pc/pc_main.c
-@@ -83,6 +83,25 @@ void send_display_list(struct SPTask *spTask) {
+@@ -130,6 +130,25 @@ void send_display_list(struct SPTask *spTask) {
  #define SAMPLES_LOW 528
  #endif
  
@@ -1951,8 +1951,8 @@ index 923e7ea..4fe6161 100644
  void produce_one_frame(void) {
      gfx_start_frame();
  
-@@ -110,6 +129,11 @@ void produce_one_frame(void) {
-     audio_api->play((u8 *)audio_buffer, 2 * num_audio_samples * 4);
+@@ -146,6 +165,11 @@ void produce_one_frame(void) {
+     thread6_rumble_loop(NULL);
  
      gfx_end_frame();
 +
@@ -1962,4 +1962,4 @@ index 923e7ea..4fe6161 100644
 +    gfx_end_frame();
  }
  
- void audio_shutdown(void) {
+ // Seperate the audio thread from the main thread so that your ears won't bleed at a low framerate

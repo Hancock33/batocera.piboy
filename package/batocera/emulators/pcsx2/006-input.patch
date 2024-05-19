@@ -1,5 +1,5 @@
 diff --git a/pcsx2/Input/InputManager.cpp b/pcsx2/Input/InputManager.cpp
-index 7c925017e..2b5ed4461 100644
+index 7017e8486..4fe560aa5 100644
 --- a/pcsx2/Input/InputManager.cpp
 +++ b/pcsx2/Input/InputManager.cpp
 @@ -1522,30 +1522,30 @@ std::vector<InputBindingKey> InputManager::EnumerateMotors()

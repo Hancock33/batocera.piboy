@@ -4,9 +4,9 @@
 #
 ################################################################################
 # Version: Commits on Apr 12, 2024
-XBOX_XCLOUD_CLIENT_VERSION = 2.3.1
-XBOX_XCLOUD_CLIENT_SITE = https://github.com/unknownskl/greenlight/releases/download/v$(XBOX_XCLOUD_CLIENT_VERSION)
-XBOX_XCLOUD_CLIENT_SOURCE = Greenlight-$(XBOX_XCLOUD_CLIENT_VERSION).AppImage
+XBOX_XCLOUD_CLIENT_VERSION = v2.3.1
+XBOX_XCLOUD_CLIENT_SITE = https://github.com/unknownskl/greenlight/releases/download/$(XBOX_XCLOUD_CLIENT_VERSION)
+XBOX_XCLOUD_CLIENT_SOURCE = Greenlight-$(subst v,,$(XBOX_XCLOUD_CLIENT_VERSION)).AppImage
 
 XBOX_XCLOUD_CLIENT_LICENSE =  MIT license
 XBOX_XCLOUD_CLIENT_DEPENDENCIES = libnss
