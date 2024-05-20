@@ -3,8 +3,8 @@
 # winbtrfs
 #
 ################################################################################
-
-WINBTRFS_VERSION = 1.8.2
+# Version: Commits on Mar 16, 2024
+WINBTRFS_VERSION = v1.9
 WINBTRFS_SOURCE = btrfs-$(WINBTRFS_VERSION).zip
 WINBTRFS_SITE = https://github.com/maharmstone/btrfs/releases/download/v$(WINBTRFS_VERSION)
 
