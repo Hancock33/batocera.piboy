@@ -4906,6 +4906,11 @@ msgstr "Philips CD-i CD-ROM"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
+msgid "Tandy Radio Shack Colour Computer cassettes"
+msgstr ""
+
+#. TRANSLATION: libretro/mame, mame/openbor7530
+msgctxt "game_options"
 msgid "Tandy Radio Shack Colour Computer cartridges"
 msgstr ""
 
