@@ -3414,7 +3414,8 @@ libretro:
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
-                          "Don't Use (Default)":                           none
+                          "Don't Use (Default)":                          none
+                          "Tandy Radio Shack Colour Computer cassettes":   coco_cass
                           "Tandy Radio Shack Colour Computer cartridges":  coco_cart
                           "Tandy Radio Shack Colour Computer disk images": coco_flop
                   altmodel:
@@ -3431,8 +3432,9 @@ libretro:
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
-                          "Cassette":    cass
-                          "Cartridge":   cart
+                          "Cassette":       cass
+                          "Cartridge":      cart
+                          "Disk (Drive 1)": flop1
                   enableui:
                       group: ADVANCED OPTIONS
                       prompt:      UI KEYS
@@ -10954,7 +10956,8 @@ mame:
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
-                        "Don't Use (Default)":                           none
+                        "Don't Use (Default)":                          none
+                        "Tandy Radio Shack Colour Computer cassettes":   coco_cass
                         "Tandy Radio Shack Colour Computer cartridges":  coco_cart
                         "Tandy Radio Shack Colour Computer disk images": coco_flop
                 altmodel:
@@ -10970,8 +10973,9 @@ mame:
                     prompt:      MEDIA TYPE
                     description: Type of ROM file to load.
                     choices:
-                        "Cassette":    cass
-                        "Cartridge":   cart
+                        "Cassette":       cass
+                        "Cartridge":      cart
+                        "Disk (Drive 1)": flop1
                 enableui:
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
