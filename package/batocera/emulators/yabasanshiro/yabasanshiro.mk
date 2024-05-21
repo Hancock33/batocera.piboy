@@ -3,10 +3,9 @@
 # yabasanshiro
 #
 ################################################################################
-# Version: Commits on Jun 18, 2022
-YABASANSHIRO_VERSION = c7618d2ecbf77b1e8188fa8af4fa1cfb34833a72
-YABASANSHIRO_BRANCH = pi4-1-9-0
-YABASANSHIRO_SITE = https://github.com/devmiyax/yabause.git
+# Version: Commits on May 21, 2024
+YABASANSHIRO_VERSION = bdbede9fca8ca77693f2e1c51c61d3511282585f
+YABASANSHIRO_SITE = https://github.com/Hancock33/yabause.git
 YABASANSHIRO_SITE_METHOD=git
 YABASANSHIRO_GIT_SUBMODULES=YES
 YABASANSHIRO_LICENSE = GPLv2
@@ -18,7 +17,7 @@ YABASANSHIRO_DEPENDENCIES = sdl2 libcurl boost libglfw
 
 YABASANSHIRO_CONF_ENV += LDFLAGS="$(TARGET_LDFLAGS) -L$(STAGING_DIR)/usr/lib -lpthread -ludev"
 
-YABASANSHIRO_CONF_OPTS += -DCMAKE_SYSTEM_NAME=Linux
+#YABASANSHIRO_CONF_OPTS += -DCMAKE_SYSTEM_NAME=Linux
 YABASANSHIRO_CONF_OPTS += -DCMAKE_INSTALL_PREFIX="/usr/bin/yabasanshiro"
 #YABASANSHIRO_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 YABASANSHIRO_CONF_OPTS += -DOpenGL_GL_PREFERENCE=GLVND
@@ -54,10 +53,10 @@ define YABASANSHIRO_GIT_HASH
 	$(HOSTCC) $(@D)/yabause/src/musashi/m68kmake.c -o $(@D)/m68kmake_host  > /dev/null 2>&1
 	sed -i 's/@GIT_SHA1@/$(shell echo "$(YABASANSHIRO_VERSION)" | cut -c1-7)/g' $(@D)/yabause/src/config.h.in
 
-	mkdir -p $(@D)/yabause/src/libchdr-prefix/src
-	cd $(@D)/yabause/src/libchdr-prefix/src && git clone https://github.com/devmiyax/libchdr.git
-	mkdir -p $(@D)/yabause/src/retro_arena/Json/src
-	cd $(@D)/yabause/src/retro_arena/Json/src && git clone https://github.com/nlohmann/json.git Json
+#	mkdir -p $(@D)/yabause/src/libchdr-prefix/src
+#	cd $(@D)/yabause/src/libchdr-prefix/src && git clone https://github.com/devmiyax/libchdr.git
+#	mkdir -p $(@D)/yabause/src/retro_arena/Json/src
+#	cd $(@D)/yabause/src/retro_arena/Json/src && git clone https://github.com/nlohmann/json.git Json
 endef
 
 define YABASANSHIRO_POST_PROCESS
