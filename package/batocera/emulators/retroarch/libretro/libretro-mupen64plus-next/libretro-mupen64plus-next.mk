@@ -3,8 +3,8 @@
 # libretro-mupen64plus-next
 #
 ################################################################################
-# Version: Commits on May 19, 2024
-LIBRETRO_MUPEN64PLUS_NEXT_VERSION = a0bbf1a133237f805e2984ce9d762ed9e5bd0919
+# Version: Commits on May 21, 2024
+LIBRETRO_MUPEN64PLUS_NEXT_VERSION = 5d2ac21adb784ad72d6101290117702eef0411dd
 LIBRETRO_MUPEN64PLUS_NEXT_SITE = $(call github,libretro,mupen64plus-libretro-nx,$(LIBRETRO_MUPEN64PLUS_NEXT_VERSION))
 LIBRETRO_MUPEN64PLUS_NEXT_LICENSE = GPLv2
 LIBRETRO_MUPEN64PLUS_NEXT_DEPENDENCIES = host-nasm
