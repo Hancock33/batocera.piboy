@@ -21,7 +21,7 @@ Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|
 Ports|[box64](http://github.com/ptitseb/box64)|229cae16d1801b83bdee0a95c5515858df209876|May 22, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|deb750cd9f1cf90b24722bc08e4e229d7009473f|May 22, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|da71bd697616b4c84d0e76b7df3500abd8a8b960|May 22, 2024
-Ports|[sm64port](http://github.com/sm64pc/sm64ex)|e93a2bc14ebe4527c7cdaa01aec18d42077f31a5|May 22, 2024
+Ports|[sm64port](http://github.com/sm64pc/sm64ex)|f2cfd74721376722b3a00d25243afd324065a0dd|May 22, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|abb5eacd8fd3af05e199b4af1c78fd656759c13e|May 22, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|ff702c0318850587e0f2a68d902a2da6cf960163|May 22, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240522|May 22, 2024
