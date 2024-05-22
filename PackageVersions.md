@@ -308,7 +308,7 @@ Ports|[rott](http://github.com/LTCHIPS/rottexpr)|407e3d8b07eaa968e8ed7d52a03fd31
 Ports|[rtcw](http://github.com/iortcw/iortcw)|a4e6f501b5ef1a1f6127d89164e850bb7cf873d6|Mar 12, 2024
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|be89e134e6f19ca5a9d4442b1ecfa2ccf2b3c6e2|May 11, 2024
 Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|6facc3b09b67593cf9151a44cc59afd490f2ea62|Mar 25, 2024
-Ports|[sm64port](http://github.com/sm64pc/sm64ex)|e93a2bc14ebe4527c7cdaa01aec18d42077f31a5|May 22, 2024
+Ports|[sm64port](http://github.com/sm64pc/sm64ex)|f2cfd74721376722b3a00d25243afd324065a0dd|May 22, 2024
 Ports|[sonic2013](https://github.com/Rubberduckycooly/Sonic-1-2-2013-Decompilation.git)|8def752b2f73226e201ae320b7905e03c6d34822|May 17, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|cf31f11228f1d959f60618a77010e47dcf9dfeea|May 10, 2024
 Ports|[soniccd](https://github.com/Rubberduckycooly/Sonic-CD-11-Decompilation.git)|3691b65956f55383a31c40eed1152c1c83f8cc58|May 17, 2024

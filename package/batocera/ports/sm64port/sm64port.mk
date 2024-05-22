@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on May 22, 2024
-SM64PORT_VERSION = e93a2bc14ebe4527c7cdaa01aec18d42077f31a5
+SM64PORT_VERSION = f2cfd74721376722b3a00d25243afd324065a0dd
 SM64PORT_SITE = $(call github,sm64pc,sm64ex,$(SM64PORT_VERSION))
 SM64PORT_DEPENDENCIES = sdl2
 
