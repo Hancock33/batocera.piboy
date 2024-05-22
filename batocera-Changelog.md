@@ -107,7 +107,7 @@ Add support for the Ayaneo Air Plus (6800U) model
 - DevilutionX to 1.5.2
 - Commander Genius to 3.5.0
 - Kodi to 20.5-Nexus
-- RPCS3 to 0.0.32-16476
+- RPCS3 to 0.0.32-16518
 - Solarus-engine: bump to Apr 27, 2024 build
 - Cemu to v2.0-82
 - Sonic3-AIR to v24.02.02.0-stable
@@ -116,7 +116,7 @@ Add support for the Ayaneo Air Plus (6800U) model
 - Xemu to v0.7.121
 - ScummVM to 2.8.1
 - fheroes2 to 1.0.13
-- PCSX2 to v1.7.5817
+- PCSX2 to v1.7.5835
 - Play! & Libretro Play! to 0.65-1
 - Dolphin to 5.0-21543
 - Libretro-hatarib: bump to v0.3
@@ -131,7 +131,7 @@ Add support for the Ayaneo Air Plus (6800U) model
 - DXX-Rebirth to May 6, 2024 build
 - BigPemu to v113 (Linux Build)
 - Xenia to v1.0.2815
-- Vita3K to May 14, 2024 build
+- Vita3K to May 22, 2024 build
 - Sonic-Mania to Mar 7, 2024 build
 - Libretro-Cap32 to May 15, 2024 build
 - Libretro-Arduous to May 14, 2024 build
