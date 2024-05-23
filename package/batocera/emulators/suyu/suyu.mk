@@ -3,8 +3,8 @@
 # suyu
 #
 ################################################################################
-# Version: Commits on May 22, 2024
-SUYU_VERSION = c63f832e2409b6cfa45678d2ba6375c582b2ad85
+# Version: Commits on May 23, 2024
+SUYU_VERSION = 442ad49044a01486a9fd8ff197ef81f465a1f897
 SUYU_BRANCH = dev
 SUYU_SITE = https://github.com/suyu-emu/suyu.git
 SUYU_SITE_METHOD=git
