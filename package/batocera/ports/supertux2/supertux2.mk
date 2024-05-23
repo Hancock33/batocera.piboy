@@ -23,6 +23,11 @@ SUPERTUX2_CONF_OPTS +=-DINSTALL_SUBDIR_BIN="bin"
 SUPERTUX2_CONF_OPTS +=-DINSTALL_SUBDIR_SHARE="share/supertux2"
 SUPERTUX2_CONF_OPTS +=-DGIT_VERSION="$(shell echo $(SUPERTUX2_VERSION) | cut -c 1-7)"
 
+ifeq ($(BR2_arm)$(BR2_aarch64),y)
+	SUPERTUX2_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
+	SUPERTUX2_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
+endif
+
 define SUPERTUX2_INSTALL_TARGET_CMDS
 	# install media
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2
