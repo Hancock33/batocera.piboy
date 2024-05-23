@@ -301,6 +301,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     # screens
     select BR2_PACKAGE_DMD_SIMULATOR                        if  BR2_PACKAGE_VPINBALL
     select BR2_PACKAGE_DMD_SIMULATOR_PLAYER                 if  BR2_PACKAGE_VPINBALL
+    select BR2_PACKAGE_LIBDMDUTIL                           if  BR2_PACKAGE_VPINBALL
    #select BR2_PACKAGE_BATOCERA_BACKGLASS                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
     # swap
