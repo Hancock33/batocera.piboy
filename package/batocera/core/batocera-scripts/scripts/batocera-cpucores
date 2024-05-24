@@ -1,5 +1,6 @@
 #!/bin/sh
-max_cpu=9999
+real_cpu=$(LANG=C lscpu | grep '^CPU(s):' | awk '{print $2}')
+max_cpu=$(echo "$real_cpu -1 "|bc)
 mid_cpu=$(echo "$max_cpu / 2"|bc)
 
 if [ $# -eq 0 ]
