@@ -14132,12 +14132,6 @@ msgctxt "game_options"
 msgid "SKIP INTRO VIDEOS"
 msgstr "تخطي فيديو المقدمة"
 
-#. TRANSLATION: eduke32, ionfury, raze, sm64, stalker
-#, fuzzy
-msgctxt "game_options"
-msgid "Show (Default)"
-msgstr "اظهار (تلقائي)"
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Disable fog rendering"
@@ -14399,6 +14393,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr ""
+
+#. TRANSLATION: raze, sm64, stalker
+#, fuzzy
+msgctxt "game_options"
+msgid "Show (Default)"
+msgstr "اظهار (تلقائي)"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"

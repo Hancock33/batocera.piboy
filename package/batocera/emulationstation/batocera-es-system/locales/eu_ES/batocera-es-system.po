@@ -14274,11 +14274,6 @@ msgctxt "game_options"
 msgid "SKIP INTRO VIDEOS"
 msgstr "SALTATU SARRERAKO BIDEOAK"
 
-#. TRANSLATION: eduke32, ionfury, raze, sm64, stalker
-msgctxt "game_options"
-msgid "Show (Default)"
-msgstr "Erakutsi (Defektuz)"
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Disable fog rendering"
@@ -14542,6 +14537,11 @@ msgstr "MEMORIA GRAFIKOA"
 msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr "256MB (Defektuz)"
+
+#. TRANSLATION: raze, sm64, stalker
+msgctxt "game_options"
+msgid "Show (Default)"
+msgstr "Erakutsi (Defektuz)"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"

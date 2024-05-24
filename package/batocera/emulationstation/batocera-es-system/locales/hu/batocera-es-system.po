@@ -14254,11 +14254,6 @@ msgctxt "game_options"
 msgid "SKIP INTRO VIDEOS"
 msgstr "BEVEZETŐ VIDEÓK ÁTUGRÁSA"
 
-#. TRANSLATION: eduke32, ionfury, raze, sm64, stalker
-msgctxt "game_options"
-msgid "Show (Default)"
-msgstr "Megjelenítés (alapértelmezett)"
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Disable fog rendering"
@@ -14522,6 +14517,11 @@ msgstr "GRAFIKAI MEMÓRIA"
 msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr "256MB (Alap)"
+
+#. TRANSLATION: raze, sm64, stalker
+msgctxt "game_options"
+msgid "Show (Default)"
+msgstr "Megjelenítés (alapértelmezett)"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"

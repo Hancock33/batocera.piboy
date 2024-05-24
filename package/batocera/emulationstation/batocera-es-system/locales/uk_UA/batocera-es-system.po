@@ -14036,11 +14036,6 @@ msgctxt "game_options"
 msgid "SKIP INTRO VIDEOS"
 msgstr ""
 
-#. TRANSLATION: eduke32, ionfury, raze, sm64, stalker
-msgctxt "game_options"
-msgid "Show (Default)"
-msgstr ""
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Disable fog rendering"
@@ -14301,6 +14296,11 @@ msgstr ""
 #. TRANSLATION: quake3
 msgctxt "game_options"
 msgid "256MB (Default)"
+msgstr ""
+
+#. TRANSLATION: raze, sm64, stalker
+msgctxt "game_options"
+msgid "Show (Default)"
 msgstr ""
 
 #. TRANSLATION: rtcw
