@@ -15617,12 +15617,6 @@ msgctxt "game_options"
 msgid "SKIP INTRO VIDEOS"
 msgstr "소개 동영상 건너뛰기"
 
-#. TRANSLATION: eduke32, ionfury, raze, sm64, stalker
-#, fuzzy
-msgctxt "game_options"
-msgid "Show (Default)"
-msgstr "표시(기본값)"
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Disable fog rendering"
@@ -15884,6 +15878,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr ""
+
+#. TRANSLATION: raze, sm64, stalker
+#, fuzzy
+msgctxt "game_options"
+msgid "Show (Default)"
+msgstr "표시(기본값)"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"

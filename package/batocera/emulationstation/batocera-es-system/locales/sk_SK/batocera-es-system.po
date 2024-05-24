@@ -14220,11 +14220,6 @@ msgctxt "game_options"
 msgid "SKIP INTRO VIDEOS"
 msgstr "Preskočiť úvodné videá"
 
-#. TRANSLATION: eduke32, ionfury, raze, sm64, stalker
-msgctxt "game_options"
-msgid "Show (Default)"
-msgstr "Zobraziť (predvolené)"
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Disable fog rendering"
@@ -14488,6 +14483,11 @@ msgstr "Grafická pamäť"
 msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr "256MB (predvolené)"
+
+#. TRANSLATION: raze, sm64, stalker
+msgctxt "game_options"
+msgid "Show (Default)"
+msgstr "Zobraziť (predvolené)"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"

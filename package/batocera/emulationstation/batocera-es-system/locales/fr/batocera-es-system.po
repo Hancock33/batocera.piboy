@@ -14336,11 +14336,6 @@ msgctxt "game_options"
 msgid "SKIP INTRO VIDEOS"
 msgstr "SAUTE LES VIDÉOS D'INTRO"
 
-#. TRANSLATION: eduke32, ionfury, raze, sm64, stalker
-msgctxt "game_options"
-msgid "Show (Default)"
-msgstr "Montre (par défaut)"
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Disable fog rendering"
@@ -14604,6 +14599,11 @@ msgstr "MÉMOIRE GRAPHIQUE"
 msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr "256 Mo (par défaut)"
+
+#. TRANSLATION: raze, sm64, stalker
+msgctxt "game_options"
+msgid "Show (Default)"
+msgstr "Montre (par défaut)"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"

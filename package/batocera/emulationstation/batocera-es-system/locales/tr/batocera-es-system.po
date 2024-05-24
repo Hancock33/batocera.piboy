@@ -14319,11 +14319,6 @@ msgctxt "game_options"
 msgid "SKIP INTRO VIDEOS"
 msgstr "GİRİŞ VİDEOLARINI ATLA"
 
-#. TRANSLATION: eduke32, ionfury, raze, sm64, stalker
-msgctxt "game_options"
-msgid "Show (Default)"
-msgstr "Göster(Varsayılan)"
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Disable fog rendering"
@@ -14587,6 +14582,11 @@ msgstr "GRAFİK HAFIZASI"
 msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr "256MB (Varsayılan)"
+
+#. TRANSLATION: raze, sm64, stalker
+msgctxt "game_options"
+msgid "Show (Default)"
+msgstr "Göster(Varsayılan)"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"

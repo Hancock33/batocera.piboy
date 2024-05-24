@@ -14198,11 +14198,6 @@ msgctxt "game_options"
 msgid "SKIP INTRO VIDEOS"
 msgstr "イントロ映像をスキップ"
 
-#. TRANSLATION: eduke32, ionfury, raze, sm64, stalker
-msgctxt "game_options"
-msgid "Show (Default)"
-msgstr "表示 (標準)"
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Disable fog rendering"
@@ -14466,6 +14461,11 @@ msgstr "グラフィックメモリ"
 msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr "256MB（標準）"
+
+#. TRANSLATION: raze, sm64, stalker
+msgctxt "game_options"
+msgid "Show (Default)"
+msgstr "表示 (標準)"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"

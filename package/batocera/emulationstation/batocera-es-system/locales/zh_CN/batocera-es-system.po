@@ -14073,11 +14073,6 @@ msgctxt "game_options"
 msgid "SKIP INTRO VIDEOS"
 msgstr "跳过简介视频"
 
-#. TRANSLATION: eduke32, ionfury, raze, sm64, stalker
-msgctxt "game_options"
-msgid "Show (Default)"
-msgstr "留空则会显示默认消息。"
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Disable fog rendering"
@@ -14339,6 +14334,11 @@ msgstr "图形内存"
 msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr "256MB（Default）"
+
+#. TRANSLATION: raze, sm64, stalker
+msgctxt "game_options"
+msgid "Show (Default)"
+msgstr "留空则会显示默认消息。"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"

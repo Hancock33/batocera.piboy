@@ -3,6 +3,7 @@
 shared:
   cfeatures:
     powermode:
+      archs_include: [bcm2711, bcm2712]
       group: POWER OPTIONS
       prompt: POWER MODE
       description: Adjust the cpu power frequency profile whilst in-game. Some systems will benefit from improved voltage handling.
@@ -11,6 +12,7 @@ shared:
         "Balanced":         balanced
         "Power Saver":      powersaver
     batterymode:
+      archs_include: [bcm2711, bcm2712]
       group: POWER OPTIONS
       prompt: BATTERY MODE
       description: Adjust the cpu power profile whist on battery. Overwrites previous Power Mode(s).
@@ -19,12 +21,12 @@ shared:
         "Balanced":         balanced
         "Power Saver":      powersaver
     tdp:
-      archs_include: [x86_64]
+      archs_include: [dummy]
       group: POWER OPTIONS
       prompt: RYZEN THERMAL DESIGN POWER
       description: Adjust the percentage of power (watts) provided to a Ryzen Mobile Series CPU based on it's default max value. Caution, setting wattage too high could damage your device.
       preset: slider
-      preset_parameters: 10 130 5 100 "%"
+      preset_parameters: 10 130 5 100 %
     videomode:
       group: VIDEO SETTINGS
       prompt: VIDEO MODE
@@ -12783,9 +12785,7 @@ eduke32:
     nologo:
       prompt: SKIP INTRO VIDEOS
       description: Skip introduction animations and logos; default is show
-      choices:
-        "Skip": 1
-        "Show (Default)": 0
+      preset: switchon
 eka2l1:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -12997,9 +12997,7 @@ ionfury:
     nologo:
       prompt: SKIP INTRO VIDEOS
       description: Skip introduction animations and logos; default is show
-      choices:
-        "Skip": 1
-        "Show (Default)": 0
+      preset: switchon
 kodi:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
