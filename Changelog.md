@@ -22,11 +22,13 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|8ac7a58d4e02c3b034ea61a2b
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1321|May 24, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|e880ebdc56d41cbc8706ddc331509e7ef427142a|May 24, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|d50ad7b18c6689f04ab8b52673e2ac3393c1631a|May 24, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240522|May 24, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|d82fab3a6168c604ace8811cfa574464b2467cf2|May 24, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|39303611efec5b89b44e47217b096eff5195dc97|May 24, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|e6710229fce2092923594baa450bd6ce276bcba5|May 24, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|c83001589f0bcbf8be04050d9a60839f0f8c4b4a|May 24, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|b902362b1de62180b61d2f4f625ae1454a76b171|May 24, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240522|May 24, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|7acb4477545264ac0bca3541775e0e7be6b845b4|May 24, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|ee8d82e6ffdfb5e4616b735610c030c19497eaf2|May 24, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|0bb006e3ecd7af322532c03dcc798878775473dc|May 23, 2024
@@ -44,6 +46,7 @@ Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|222a3930807545d9
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|bfefd38d2500103d32f5da9f7fcd80090b7836fb|May 23, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|99e38bc458e89061fa0e3723b23d44ea4dbfd99b|May 23, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|53741632bc98ebd3770cbe55b723843e1b83a458|May 23, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|badaed641928edb8f2426d9f12d16c88b479e1e8|May 23, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|52f1f5bb341a6e7c7e0f43b7fd6daa89548ffa3d|May 23, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|3d86d937695bd8d1056d14d05bd867ba876a0614|May 23, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|2e589f42fe7a29ced421af221ceb928a3966b54c|May 23, 2024
@@ -53,9 +56,7 @@ Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|075d8e30
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|7e40e849ab3ff26ae29121e2ffb898940488ca16|May 22, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|bb22f4da68fb783eb7819b276257cfb0fb130361|May 22, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|7d32bde074ae8198d2521a176cd084314138f9f8|May 22, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240522|May 22, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|f2cfd74721376722b3a00d25243afd324065a0dd|May 22, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240522|May 22, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|f4446ca6663d8fb56a3c40b1c1b3a13a4a0e4af3|May 22, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|3bc54d3757dc866d1509f29dd4bc3e4614441d53|May 22, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|51945f002b8ad272e60149666fbbe1b22c37cba3|May 22, 2024
@@ -69,7 +70,6 @@ Emulators|[xemu](https://github.com/xemu-project/xemu)|2be220df98c3db044c97e532a
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|8b52d670bda28a0d5e08a13743959f36cedce3fa|May 21, 2024
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|5340dafcc0f5e8284057ab931dd5c66222d3d49e|May 21, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|d41a1f0183f5686fa3ed1b42c4de07e393833925|May 21, 2024
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|df29d437204af0a5158b6ecb2d6b68296f8d979a|May 20, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|1c7ad4fafc5204e3aff83e2caa6020cb2fe43a2d|May 20, 2024
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|e43813bdb10384155e9d21d4d174ae352b321c16|May 20, 2024
