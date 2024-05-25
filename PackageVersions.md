@@ -20,7 +20,7 @@ Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.0
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 12, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Emulators|[duckstation-legacy](https://github.com/stenzek/duckstation.git)|v0.1-6461|Mar 16, 2024
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|a75e61e1d69e8b25b102dd798946753ff337b9fd|May 25, 2024
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|328a3cd7af9552098b35a0705763485c9ffd1b7d|May 25, 2024
 Emulators|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.7.0|Mar 15, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.3.1|Mar 20, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|8b52d670bda28a0d5e08a13743959f36cedce3fa|May 21, 2024
@@ -80,7 +80,7 @@ Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|0747110b
 Emulators|[libretro-fake08](https://github.com/jtothebell/fake-08.git)|d98376fc41c34e3cd6d3ffc25ae9c2970efd5286|Apr 17, 2024
 Emulators|[libretro-fbalpha](http://github.com/libretro/fbalpha2012)|b7ac554c53561d41640372f23dab15cd6fc4f0c4|Nov 01, 2023
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|0188d3f9dc6400167f28814c0c15d60d71c3b63a|May 25, 2024
-Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|6f6b527b9d006c4b5460d2e41fea4f70470fbb98|May 24, 2024
+Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|386376c673299add5d949434c1cb2cee3b13be2a|May 25, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|e85fa82101813ba803a071cfa6d6f8983f0a1f5c|May 24, 2024
 Emulators|[libretro-flycast2021](http://github.com/libretro/flycast)|4c293f306bc16a265c2d768af5d0cea138426054|Apr 06, 2022
 Emulators|[libretro-fmsx](http://github.com/libretro/fmsx-libretro)|9b5cf868825a629cc4c7086768338165d3bbf706|Feb 08, 2024

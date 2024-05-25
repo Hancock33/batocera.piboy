@@ -2,8 +2,9 @@
 -----|:-----:|:-----:|:-----:
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|7c92478e73cf8d335ed62ce63fbf1757c0d077f5|May 25, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|0188d3f9dc6400167f28814c0c15d60d71c3b63a|May 25, 2024
+Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|386376c673299add5d949434c1cb2cee3b13be2a|May 25, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|2b394e1e26a38359c731a6db507fea6559723cce|May 25, 2024
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|a75e61e1d69e8b25b102dd798946753ff337b9fd|May 25, 2024
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|328a3cd7af9552098b35a0705763485c9ffd1b7d|May 25, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|3928014e5c338d5aee6e55e777d289fdebf89874|May 25, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1322|May 25, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|794b4fdc728e632e00a8b190196468f51fa2107b|May 25, 2024
@@ -17,7 +18,6 @@ Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|c4f84094c2c569a8ee4410f6043f19ad48129be2|May 24, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|f7d733b935be185da633be660c73d8f91d6c6883|May 24, 2024
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|593cc3b63f5685a5723fc0a955f7d6abccf7c910|May 24, 2024
-Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|6f6b527b9d006c4b5460d2e41fea4f70470fbb98|May 24, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|e85fa82101813ba803a071cfa6d6f8983f0a1f5c|May 24, 2024
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|66a74d08f4ee4674377ca3ffecfec9744ff9e290|May 24, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|fa047061785494298655ffbedddcb89165fed393|May 24, 2024
