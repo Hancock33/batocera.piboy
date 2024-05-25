@@ -3,8 +3,8 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on May 23, 2024
-WINE_CUSTOM_VERSION = badaed641928edb8f2426d9f12d16c88b479e1e8
+# Version: Commits on May 24, 2024
+WINE_CUSTOM_VERSION = b210a204137dec8d2126ca909d762454fd47e963
 WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
 WINE_CUSTOM_SITE = $(call github,wine-mirror,wine,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
