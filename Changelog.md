@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240525|May 25, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240525|May 25, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|5db932d366c8d2ce8bd8e132e4931c4a9e30ffed|May 24, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|f7d733b935be185da633be660c73d8f91d6c6883|May 24, 2024
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|593cc3b63f5685a5723fc0a955f7d6abccf7c910|May 24, 2024
@@ -22,13 +24,12 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|8ac7a58d4e02c3b034ea61a2b
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1321|May 24, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|e880ebdc56d41cbc8706ddc331509e7ef427142a|May 24, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|d50ad7b18c6689f04ab8b52673e2ac3393c1631a|May 24, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240522|May 24, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|b210a204137dec8d2126ca909d762454fd47e963|May 24, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|d82fab3a6168c604ace8811cfa574464b2467cf2|May 24, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|03749788e8d51a2d2788f71ac3deb389d4dc0133|May 24, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|e6710229fce2092923594baa450bd6ce276bcba5|May 24, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|c83001589f0bcbf8be04050d9a60839f0f8c4b4a|May 24, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|b902362b1de62180b61d2f4f625ae1454a76b171|May 24, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240522|May 24, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|7acb4477545264ac0bca3541775e0e7be6b845b4|May 24, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|ee8d82e6ffdfb5e4616b735610c030c19497eaf2|May 24, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|0bb006e3ecd7af322532c03dcc798878775473dc|May 23, 2024
@@ -46,7 +47,6 @@ Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|222a3930807545d9
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|bfefd38d2500103d32f5da9f7fcd80090b7836fb|May 23, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|99e38bc458e89061fa0e3723b23d44ea4dbfd99b|May 23, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|53741632bc98ebd3770cbe55b723843e1b83a458|May 23, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|badaed641928edb8f2426d9f12d16c88b479e1e8|May 23, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|52f1f5bb341a6e7c7e0f43b7fd6daa89548ffa3d|May 23, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|3d86d937695bd8d1056d14d05bd867ba876a0614|May 23, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|2e589f42fe7a29ced421af221ceb928a3966b54c|May 23, 2024
