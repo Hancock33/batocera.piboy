@@ -95,7 +95,6 @@ class HypseusSingeGenerator(Generator):
 
         bezelFile = romName + ".png"
         bezelPath = batoceraFiles.hypseusDatadir + "/bezels/" + bezelFile
-        sindenBezelPath = batoceraFiles.hypseusDatadir + "/bezels/sinden/" + bezelFile
 
         if (system.name == 'actionmax'):
             amDir = '/userdata/roms/actionmax/'
@@ -224,17 +223,10 @@ class HypseusSingeGenerator(Generator):
 
         # bezels
         if bezelRequired:
-            bordersSize = controllersConfig.gunsBordersSizeName(guns, system.config)
-            if bordersSize is not None:
-                if not os.path.exists(sindenBezelPath):
-                    commandArray.extend(["-bezel", "Daphne.png"])
-                else:
-                    commandArray.extend(["-bezel", "sinden/" + bezelFile])
+            if not os.path.exists(bezelPath):
+                commandArray.extend(["-bezel", "Daphne.png"])
             else:
-                if not os.path.exists(bezelPath):
-                    commandArray.extend(["-bezel", "Daphne.png"])
-                else:
-                    commandArray.extend(["-bezel", bezelFile])
+                commandArray.extend(["-bezel", bezelFile])
 
         # Invert HAT Axis
         if system.isOptSet('hypseus_axis') and system.getOptBoolean("hypseus_axis"):
