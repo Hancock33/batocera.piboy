@@ -147,10 +147,10 @@ index c472423412bf..a141e8e65c5d 100644
  'P'   60-6F  sound/sscape_ioctl.h                                    conflict!
 diff --git a/Documentation/userspace-api/ntsync.rst b/Documentation/userspace-api/ntsync.rst
 new file mode 100644
-index 000000000000..202c2350d3af
+index 000000000000..767844637a7d
 --- /dev/null
 +++ b/Documentation/userspace-api/ntsync.rst
-@@ -0,0 +1,399 @@
+@@ -0,0 +1,398 @@
 +===================================
 +NT synchronization primitive driver
 +===================================
@@ -174,10 +174,11 @@ index 000000000000..202c2350d3af
 +semaphores, mutexes, and events.
 +
 +A semaphore holds a single volatile 32-bit counter, and a static 32-bit
-+integer denoting the maximum value. It is considered signaled when the
-+counter is nonzero. The counter is decremented by one when a wait is
-+satisfied. Both the initial and maximum count are established when the
-+semaphore is created.
++integer denoting the maximum value. It is considered signaled (that is,
++can be acquired without contention, or will wake up a waiting thread)
++when the counter is nonzero. The counter is decremented by one when a
++wait is satisfied. Both the initial and maximum count are established
++when the semaphore is created.
 +
 +A mutex holds a volatile 32-bit recursion count, and a volatile 32-bit
 +identifier denoting its owner. A mutex is considered signaled when its
@@ -197,10 +198,11 @@ index 000000000000..202c2350d3af
 +driver does not actually validate that a calling thread provides
 +consistent or unique identifiers.
 +
-+An event holds a volatile boolean state denoting whether it is signaled
-+or not. There are two types of events, auto-reset and manual-reset. An
-+auto-reset event is designaled when a wait is satisfied; a manual-reset
-+event is not. The event type is specified when the event is created.
++An event is similar to a semaphore with a maximum count of one. It holds
++a volatile boolean state denoting whether it is signaled or not. There
++are two types of events, auto-reset and manual-reset. An auto-reset
++event is designaled when a wait is satisfied; a manual-reset event is
++not. The event type is specified when the event is created.
 +
 +Unless specified otherwise, all operations on an object are atomic and
 +totally ordered with respect to other operations on the same object.
@@ -493,8 +495,7 @@ index 000000000000..202c2350d3af
 +  operations on the same object. If two wait operations (with different
 +  ``owner`` identifiers) are queued on the same mutex, only one is
 +  signaled. If two wait operations are queued on the same semaphore,
-+  and a value of one is posted to it, only one is signaled. The order
-+  in which threads are signaled is not specified.
++  and a value of one is posted to it, only one is signaled.
 +
 +  If an abandoned mutex is acquired, the ioctl fails with
 +  ``EOWNERDEAD``. Although this is a failure return, the function may
@@ -503,9 +504,7 @@ index 000000000000..202c2350d3af
 +  abandoned, and ``index`` is still set to the index of the mutex.
 +
 +  The ``alert`` argument is an "extra" event which can terminate the
-+  wait, independently of all other objects. If members of ``objs`` and
-+  ``alert`` are both simultaneously signaled, a member of ``objs`` will
-+  always be given priority and acquired first.
++  wait, independently of all other objects.
 +
 +  It is valid to pass the same object more than once, including by
 +  passing the same event in the ``objs`` array and in ``alert``. If a
@@ -1442,10 +1441,10 @@ index 9aa46093c91b..a2a536b690fa 100644
  sha1-ssse3-y := sha1_avx2_x86_64_asm.o sha1_ssse3_asm.o sha1_ssse3_glue.o
 diff --git a/arch/x86/crypto/aes-gcm-avx10-x86_64.S b/arch/x86/crypto/aes-gcm-avx10-x86_64.S
 new file mode 100644
-index 000000000000..ea978bbebc9a
+index 000000000000..ca608bda9995
 --- /dev/null
 +++ b/arch/x86/crypto/aes-gcm-avx10-x86_64.S
-@@ -0,0 +1,1219 @@
+@@ -0,0 +1,1223 @@
 +/* SPDX-License-Identifier: Apache-2.0 OR BSD-2-Clause */
 +//
 +// VAES and VPCLMULQDQ optimized AES-GCM for x86_64
@@ -1863,7 +1862,6 @@ index 000000000000..ea978bbebc9a
 +
 +	// Store the lowest set of key powers.
 +	vmovdqu8	H_CUR, (POWERS_PTR)
-+	sub		$VL, POWERS_PTR
 +
 +	// Compute and store the remaining key powers.  With VL=32, repeatedly
 +	// multiply [H^(i+1), H^i] by [H^2, H^2] to get [H^(i+3), H^(i+2)].
@@ -1871,9 +1869,9 @@ index 000000000000..ea978bbebc9a
 +	// [H^4, H^4, H^4, H^4] to get [H^(i+7), H^(i+6), H^(i+5), H^(i+4)].
 +	mov		$(NUM_KEY_POWERS*16/VL) - 1, %eax
 +.Lprecompute_next\@:
++	sub		$VL, POWERS_PTR
 +	_ghash_mul	H_INC, H_CUR, H_CUR, GFPOLY, V0, V1, V2
 +	vmovdqu8	H_CUR, (POWERS_PTR)
-+	sub		$VL, POWERS_PTR
 +	dec		%eax
 +	jnz		.Lprecompute_next\@
 +
@@ -1882,7 +1880,7 @@ index 000000000000..ea978bbebc9a
 +.endm
 +
 +// XOR together the 128-bit lanes of \src (whose low lane is \src_xmm) and store
-+// the result in \dst_xmm.  This implicitly zeroes the other lanes of dst.
++// the result in \dst_xmm.  This implicitly zeroizes the other lanes of dst.
 +.macro	_horizontal_xor	src, src_xmm, dst_xmm, t0_xmm, t1_xmm, t2_xmm
 +	vextracti32x4	$1, \src, \t0_xmm
 +.if VL == 32
@@ -2418,15 +2416,13 @@ index 000000000000..ea978bbebc9a
 +.endm
 +
 +// void aes_gcm_enc_final_vaes_avx10(const struct aes_gcm_key_avx10 *key,
-+//				     const u32 le_ctr[4],
-+//				     const u8 ghash_acc[16],
-+//				     u64 total_aadlen, u64 total_datalen,
-+//				     u8 *tag, int taglen);
++//				     const u32 le_ctr[4], u8 ghash_acc[16],
++//				     u64 total_aadlen, u64 total_datalen);
 +// bool aes_gcm_dec_final_vaes_avx10(const struct aes_gcm_key_avx10 *key,
 +//				     const u32 le_ctr[4],
 +//				     const u8 ghash_acc[16],
 +//				     u64 total_aadlen, u64 total_datalen,
-+//				     const u8 *tag, int taglen);
++//				     const u8 tag[16], int taglen);
 +//
 +// This macro generates one of the above two functions (with \enc selecting
 +// which one).  Both functions finish computing the GCM authentication tag by
@@ -2434,11 +2430,11 @@ index 000000000000..ea978bbebc9a
 +// |total_aadlen| and |total_datalen| must be the total length of the additional
 +// authenticated data and the en/decrypted data in bytes, respectively.
 +//
-+// The encryption function then stores the computed authentication tag to |tag|.
-+// The decryption function instead loads the expected authentication tag (the
-+// one that was transmitted) from |tag|, compares it to the computed tag in
-+// constant time, and returns true if and only if they match.  In both cases,
-+// |taglen| is the length of the tag in bytes, 4 <= |taglen| <= 16.
++// The encryption function then stores the full-length (16-byte) computed
++// authentication tag to |ghash_acc|.  The decryption function instead loads the
++// expected authentication tag (the one that was transmitted) from the 16-byte
++// buffer |tag|, compares the first 4 <= |taglen| <= 16 bytes of it to the
++// computed tag in constant time, and returns true if and only if they match.
 +.macro	_aes_gcm_final	enc
 +
 +	// Function arguments
@@ -2486,11 +2482,13 @@ index 000000000000..ea978bbebc9a
 +	// Load the first hash key power (H^1), which is stored last.
 +	vmovdqu8	OFFSETOFEND_KEY_POWERS-16(KEY), H_POW1
 +
-+	// Prepare the mask that will be used to store or load the auth tag.
++.if !\enc
++	// Prepare a mask of TAGLEN one bits.
 +	movl		8(%rsp), TAGLEN
 +	mov		$-1, %eax
 +	bzhi		TAGLEN, %eax, %eax
 +	kmovd		%eax, %k1
++.endif
 +
 +	// Make %rax point to the last AES round key for the chosen AES variant.
 +	lea		6*16(KEY,AESKEYLEN64,4), %rax
@@ -2520,28 +2518,33 @@ index 000000000000..ea978bbebc9a
 +	_ghash_mul_step	9, H_POW1, GHASH_ACC, GHASH_ACC, GFPOLY, \
 +			%xmm1, %xmm2, %xmm3
 +
-+	// Undo the byte reflection of the GHASH accumulator, then encrypt it to
-+	// produce the full-length auth tag.  Reduce latency by taking advantage
-+	// of the property vaesenclast(key, a) ^ b == vaesenclast(key ^ b, a).
-+	vpshufb		BSWAP_MASK, GHASH_ACC, %xmm1
-+	vpxor		(%rax), %xmm1, %xmm1
-+	vaesenclast	%xmm1, %xmm0, GHASH_ACC
++	// Undo the byte reflection of the GHASH accumulator.
++	vpshufb		BSWAP_MASK, GHASH_ACC, GHASH_ACC
 +
-+	// Store or compare the authentication tag.  To support authentication
-+	// tags shorter than 16 bytes, use masking.
-+.if \enc
-+	// Encrypting: store the computed authentication tag.
-+	vmovdqu8	GHASH_ACC, (TAG){%k1}
-+.else
-+	// Decrypting: compare the expected authentication tag (TAG) with the
-+	// computed authentication tag GHASH_ACC.  Return a true/false boolean.
++	// Do the last AES round and XOR the resulting keystream block with the
++	// GHASH accumulator to produce the full computed authentication tag.
 +	//
-+	// Do this by XOR'ing the tags together and using vptest to check
-+	// whether all bits are 0.  This should be constant-time.
++	// Reduce latency by taking advantage of the property vaesenclast(key,
++	// a) ^ b == vaesenclast(key ^ b, a).  I.e., XOR GHASH_ACC into the last
++	// round key, instead of XOR'ing the final AES output with GHASH_ACC.
++	//
++	// enc_final then returns the computed auth tag, while dec_final
++	// compares it with the transmitted one and returns a bool.  To compare
++	// the tags, dec_final XORs them together and uses vptest to check
++	// whether the result is all-zeroes.  This should be constant-time.
++	// dec_final applies the vaesenclast optimization to this additional
++	// value XOR'd too, using vpternlogd to XOR the last round key, GHASH
++	// accumulator, and transmitted auth tag together in one instruction.
++.if \enc
++	vpxor		(%rax), GHASH_ACC, %xmm1
++	vaesenclast	%xmm1, %xmm0, GHASH_ACC
++	vmovdqu		GHASH_ACC, (GHASH_ACC_PTR)
++.else
++	vmovdqu		(TAG), %xmm1
++	vpternlogd	$0x96, (%rax), GHASH_ACC, %xmm1
++	vaesenclast	%xmm1, %xmm0, %xmm0
 +	xor		%eax, %eax
-+	vmovdqu8	(TAG), %xmm0{%k1}{z}
-+	vmovdqu8	GHASH_ACC, GHASH_ACC{%k1}{z}
-+	vpxor		GHASH_ACC, %xmm0, %xmm0
++	vmovdqu8	%xmm0, %xmm0{%k1}{z}	// Truncate to TAGLEN bytes
 +	vptest		%xmm0, %xmm0
 +	sete		%al
 +.endif
@@ -4125,7 +4128,7 @@ index 411d8c83e88a..39066b57a70e 100644
 +	_aesni_xts_crypt	0
 +SYM_FUNC_END(aesni_xts_dec)
 diff --git a/arch/x86/crypto/aesni-intel_glue.c b/arch/x86/crypto/aesni-intel_glue.c
-index b1d90c25975a..700bc1e530c7 100644
+index b1d90c25975a..a64ff4660f1d 100644
 --- a/arch/x86/crypto/aesni-intel_glue.c
 +++ b/arch/x86/crypto/aesni-intel_glue.c
 @@ -1,7 +1,7 @@
@@ -4226,12 +4229,12 @@ index b1d90c25975a..700bc1e530c7 100644
 -	ret = aes_expandkey(&ctx, key, key_len);
 -	if (ret)
 -		return ret;
--
++	static const u8 zeroes[AES_BLOCK_SIZE];
+ 
 -	/* Clear the data in the hash sub key container to zero.*/
 -	/* We want to cipher all zeros to create the hash sub key. */
 -	memset(hash_subkey, 0, RFC4106_HASH_SUBKEY_SIZE);
-+	static const u8 zeroes[AES_BLOCK_SIZE];
- 
+-
 -	aes_encrypt(&ctx, hash_subkey, hash_subkey);
 -
 -	memzero_explicit(&ctx, sizeof(ctx));
@@ -4489,7 +4492,7 @@ index b1d90c25975a..700bc1e530c7 100644
  	}
  };
  
-@@ -1137,7 +1167,669 @@ static struct skcipher_alg aesni_xctr = {
+@@ -1137,7 +1167,665 @@ static struct skcipher_alg aesni_xctr = {
  };
  
  static struct simd_skcipher_alg *aesni_simd_xctr;
@@ -4598,14 +4601,13 @@ index b1d90c25975a..700bc1e530c7 100644
 +
 +asmlinkage void
 +aes_gcm_enc_final_vaes_avx10(const struct aes_gcm_key_avx10 *key,
-+			     const u32 le_ctr[4], const u8 ghash_acc[16],
-+			     u64 total_aadlen, u64 total_datalen,
-+			     u8 *tag, int taglen);
++			     const u32 le_ctr[4], u8 ghash_acc[16],
++			     u64 total_aadlen, u64 total_datalen);
 +asmlinkage bool __must_check
 +aes_gcm_dec_final_vaes_avx10(const struct aes_gcm_key_avx10 *key,
 +			     const u32 le_ctr[4], const u8 ghash_acc[16],
 +			     u64 total_aadlen, u64 total_datalen,
-+			     const u8 *tag, int taglen);
++			     const u8 tag[16], int taglen);
 +
 +/*
 + * This is the setkey function for the VAES + AVX10 implementations of AES-GCM.
@@ -4893,16 +4895,13 @@ index b1d90c25975a..700bc1e530c7 100644
 +	/* Finalize */
 +	taglen = crypto_aead_authsize(tfm);
 +	if (flags & FLAG_ENC) {
-+		unsigned int datalen = req->cryptlen;
-+		u8 tag[16];
-+
 +		/* Finish computing the auth tag. */
 +		aes_gcm_enc_final_vaes_avx10(key, le_ctr, ghash_acc, assoclen,
-+					     datalen, tag, taglen);
++					     req->cryptlen);
 +
 +		/* Store the computed auth tag in the dst scatterlist. */
-+		scatterwalk_map_and_copy(tag, req->dst, req->assoclen + datalen,
-+					 taglen, 1);
++		scatterwalk_map_and_copy(ghash_acc, req->dst, req->assoclen +
++					 req->cryptlen, taglen, 1);
 +	} else {
 +		unsigned int datalen = req->cryptlen - taglen;
 +		u8 tag[16];
@@ -5160,7 +5159,7 @@ index b1d90c25975a..700bc1e530c7 100644
  
  #ifdef CONFIG_X86_64
  static int generic_gcmaes_set_key(struct crypto_aead *aead, const u8 *key,
-@@ -1146,7 +1838,8 @@ static int generic_gcmaes_set_key(struct crypto_aead *aead, const u8 *key,
+@@ -1146,7 +1834,8 @@ static int generic_gcmaes_set_key(struct crypto_aead *aead, const u8 *key,
  	struct generic_gcmaes_ctx *ctx = generic_gcmaes_ctx_get(aead);
  
  	return aes_set_key_common(&ctx->aes_key_expanded, key, key_len) ?:
@@ -5170,7 +5169,7 @@ index b1d90c25975a..700bc1e530c7 100644
  }
  
  static int generic_gcmaes_encrypt(struct aead_request *req)
-@@ -1276,13 +1969,21 @@ static int __init aesni_init(void)
+@@ -1276,13 +1965,21 @@ static int __init aesni_init(void)
  		goto unregister_aeads;
  #endif /* CONFIG_X86_64 */
  
@@ -5193,7 +5192,7 @@ index b1d90c25975a..700bc1e530c7 100644
  
  unregister_skciphers:
  	simd_unregister_skciphers(aesni_skciphers, ARRAY_SIZE(aesni_skciphers),
-@@ -1303,6 +2004,7 @@ static void __exit aesni_exit(void)
+@@ -1303,6 +2000,7 @@ static void __exit aesni_exit(void)
  	if (boot_cpu_has(X86_FEATURE_AVX))
  		simd_unregister_skciphers(&aesni_xctr, 1, &aesni_simd_xctr);
  #endif /* CONFIG_X86_64 */
@@ -6340,7 +6339,7 @@ index 438c9e75a04d..1bbfeca5f01e 100644
  	  This driver adds a CPUFreq driver which utilizes a fine grain
  	  processor performance frequency control range instead of legacy
 diff --git a/drivers/cpufreq/amd-pstate.c b/drivers/cpufreq/amd-pstate.c
-index 2015c9fcc3c9..6a342b0c0140 100644
+index 2015c9fcc3c9..1b7e82a0ad2e 100644
 --- a/drivers/cpufreq/amd-pstate.c
 +++ b/drivers/cpufreq/amd-pstate.c
 @@ -50,7 +50,8 @@
@@ -6732,7 +6731,21 @@ index 2015c9fcc3c9..6a342b0c0140 100644
  	policy->driver_data = cpudata;
  
  	cpudata->epp_cached = amd_pstate_get_epp(cpudata, 0);
-@@ -1656,6 +1719,11 @@ static int __init amd_pstate_init(void)
+@@ -1378,6 +1441,13 @@ static int amd_pstate_epp_cpu_init(struct cpufreq_policy *policy)
+ 
+ static int amd_pstate_epp_cpu_exit(struct cpufreq_policy *policy)
+ {
++	struct amd_cpudata *cpudata = policy->driver_data;
++
++	if (cpudata) {
++		kfree(cpudata);
++		policy->driver_data = NULL;
++	}
++
+ 	pr_debug("CPU %d exiting\n", policy->cpu);
+ 	return 0;
+ }
+@@ -1656,6 +1726,11 @@ static int __init amd_pstate_init(void)
  	if (cpufreq_get_current_driver())
  		return -EEXIST;
  
@@ -15753,10 +15766,10 @@ index ea6ea5bbbc9c..153a3f4837e8 100644
  obj-$(CONFIG_GP_PCI1XXXX)	+= mchp_pci1xxxx/
 diff --git a/drivers/misc/ntsync.c b/drivers/misc/ntsync.c
 new file mode 100644
-index 000000000000..19fd70ac3f50
+index 000000000000..87a24798a5c7
 --- /dev/null
 +++ b/drivers/misc/ntsync.c
-@@ -0,0 +1,1166 @@
+@@ -0,0 +1,1232 @@
 +// SPDX-License-Identifier: GPL-2.0-only
 +/*
 + * ntsync.c - Kernel driver for NT synchronization primitives
@@ -15772,6 +15785,7 @@ index 000000000000..19fd70ac3f50
 +#include <linux/ktime.h>
 +#include <linux/miscdevice.h>
 +#include <linux/module.h>
++#include <linux/mutex.h>
 +#include <linux/overflow.h>
 +#include <linux/sched.h>
 +#include <linux/sched/signal.h>
@@ -15802,6 +15816,7 @@ index 000000000000..19fd70ac3f50
 +
 +struct ntsync_obj {
 +	spinlock_t lock;
++	int dev_locked;
 +
 +	enum ntsync_type type;
 +
@@ -15816,7 +15831,7 @@ index 000000000000..19fd70ac3f50
 +		} sem;
 +		struct {
 +			__u32 count;
-+			__u32 owner;
++			pid_t owner;
 +			bool ownerdead;
 +		} mutex;
 +		struct {
@@ -15844,10 +15859,6 @@ index 000000000000..19fd70ac3f50
 +	 * lock for every wake would create unnecessary contention.
 +	 * Therefore we first check whether all_hint is zero, and, if it is,
 +	 * we skip trying to wake "all" waiters.
-+	 *
-+	 * This hint isn't protected by any lock. It might change during the
-+	 * course of a wake, but there's no meaningful race there; it's only a
-+	 * hint.
 +	 *
 +	 * Since wait requests must originate from user-space threads, we're
 +	 * limited here by PID_MAX_LIMIT, so there's no risk of overflow.
@@ -15886,19 +15897,111 @@ index 000000000000..19fd70ac3f50
 +	 * If one thread is trying to acquire several objects, another thread
 +	 * cannot touch the object at the same time.
 +	 *
-+	 * We achieve this by grabbing multiple object locks at the same time.
-+	 * However, this creates a lock ordering problem. To solve that problem,
-+	 * wait_all_lock is taken first whenever multiple objects must be locked
-+	 * at the same time.
++	 * This device-wide lock is used to serialize wait-for-all
++	 * operations, and operations on an object that is involved in a
++	 * wait-for-all.
 +	 */
-+	spinlock_t wait_all_lock;
++	struct mutex wait_all_lock;
 +
 +	struct file *file;
 +};
 +
++/*
++ * Single objects are locked using obj->lock.
++ *
++ * Multiple objects are 'locked' while holding dev->wait_all_lock.
++ * In this case however, individual objects are not locked by holding
++ * obj->lock, but by setting obj->dev_locked.
++ *
++ * This means that in order to lock a single object, the sequence is slightly
++ * more complicated than usual. Specifically it needs to check obj->dev_locked
++ * after acquiring obj->lock, if set, it needs to drop the lock and acquire
++ * dev->wait_all_lock in order to serialize against the multi-object operation.
++ */
++
++static void dev_lock_obj(struct ntsync_device *dev, struct ntsync_obj *obj)
++{
++	lockdep_assert_held(&dev->wait_all_lock);
++	lockdep_assert(obj->dev == dev);
++	spin_lock(&obj->lock);
++	/*
++	 * By setting obj->dev_locked inside obj->lock, it is ensured that
++	 * anyone holding obj->lock must see the value.
++	 */
++	obj->dev_locked = 1;
++	spin_unlock(&obj->lock);
++}
++
++static void dev_unlock_obj(struct ntsync_device *dev, struct ntsync_obj *obj)
++{
++	lockdep_assert_held(&dev->wait_all_lock);
++	lockdep_assert(obj->dev == dev);
++	spin_lock(&obj->lock);
++	obj->dev_locked = 0;
++	spin_unlock(&obj->lock);
++}
++
++static void obj_lock(struct ntsync_obj *obj)
++{
++	struct ntsync_device *dev = obj->dev;
++
++	for (;;) {
++		spin_lock(&obj->lock);
++		if (likely(!obj->dev_locked))
++			break;
++
++		spin_unlock(&obj->lock);
++		mutex_lock(&dev->wait_all_lock);
++		spin_lock(&obj->lock);
++		/*
++		 * obj->dev_locked should be set and released under the same
++		 * wait_all_lock section, since we now own this lock, it should
++		 * be clear.
++		 */
++		lockdep_assert(!obj->dev_locked);
++		spin_unlock(&obj->lock);
++		mutex_unlock(&dev->wait_all_lock);
++	}
++}
++
++static void obj_unlock(struct ntsync_obj *obj)
++{
++	spin_unlock(&obj->lock);
++}
++
++static bool ntsync_lock_obj(struct ntsync_device *dev, struct ntsync_obj *obj)
++{
++	bool all;
++
++	obj_lock(obj);
++	all = atomic_read(&obj->all_hint);
++	if (unlikely(all)) {
++		obj_unlock(obj);
++		mutex_lock(&dev->wait_all_lock);
++		dev_lock_obj(dev, obj);
++	}
++
++	return all;
++}
++
++static void ntsync_unlock_obj(struct ntsync_device *dev, struct ntsync_obj *obj, bool all)
++{
++	if (all) {
++		dev_unlock_obj(dev, obj);
++		mutex_unlock(&dev->wait_all_lock);
++	} else {
++		obj_unlock(obj);
++	}
++}
++
++#define ntsync_assert_held(obj) \
++	lockdep_assert((lockdep_is_held(&(obj)->lock) != LOCK_STATE_NOT_HELD) || \
++		       ((lockdep_is_held(&(obj)->dev->wait_all_lock) != LOCK_STATE_NOT_HELD) && \
++			(obj)->dev_locked))
++
 +static bool is_signaled(struct ntsync_obj *obj, __u32 owner)
 +{
-+	lockdep_assert_held(&obj->lock);
++	ntsync_assert_held(obj);
 +
 +	switch (obj->type) {
 +	case NTSYNC_TYPE_SEM:
@@ -15930,11 +16033,11 @@ index 000000000000..19fd70ac3f50
 +
 +	lockdep_assert_held(&dev->wait_all_lock);
 +	if (locked_obj)
-+		lockdep_assert_held(&locked_obj->lock);
++		lockdep_assert(locked_obj->dev_locked);
 +
 +	for (i = 0; i < count; i++) {
 +		if (q->entries[i].obj != locked_obj)
-+			spin_lock_nest_lock(&q->entries[i].obj->lock, &dev->wait_all_lock);
++			dev_lock_obj(dev, q->entries[i].obj);
 +	}
 +
 +	for (i = 0; i < count; i++) {
@@ -15970,7 +16073,7 @@ index 000000000000..19fd70ac3f50
 +
 +	for (i = 0; i < count; i++) {
 +		if (q->entries[i].obj != locked_obj)
-+			spin_unlock(&q->entries[i].obj->lock);
++			dev_unlock_obj(dev, q->entries[i].obj);
 +	}
 +}
 +
@@ -15979,7 +16082,7 @@ index 000000000000..19fd70ac3f50
 +	struct ntsync_q_entry *entry;
 +
 +	lockdep_assert_held(&dev->wait_all_lock);
-+	lockdep_assert_held(&obj->lock);
++	lockdep_assert(obj->dev_locked);
 +
 +	list_for_each_entry(entry, &obj->all_waiters, node)
 +		try_wake_all(dev, entry->q, obj);
@@ -15989,7 +16092,8 @@ index 000000000000..19fd70ac3f50
 +{
 +	struct ntsync_q_entry *entry;
 +
-+	lockdep_assert_held(&sem->lock);
++	ntsync_assert_held(sem);
++	lockdep_assert(sem->type == NTSYNC_TYPE_SEM);
 +
 +	list_for_each_entry(entry, &sem->any_waiters, node) {
 +		struct ntsync_q *q = entry->q;
@@ -16009,7 +16113,8 @@ index 000000000000..19fd70ac3f50
 +{
 +	struct ntsync_q_entry *entry;
 +
-+	lockdep_assert_held(&mutex->lock);
++	ntsync_assert_held(mutex);
++	lockdep_assert(mutex->type == NTSYNC_TYPE_MUTEX);
 +
 +	list_for_each_entry(entry, &mutex->any_waiters, node) {
 +		struct ntsync_q *q = entry->q;
@@ -16035,7 +16140,8 @@ index 000000000000..19fd70ac3f50
 +{
 +	struct ntsync_q_entry *entry;
 +
-+	lockdep_assert_held(&event->lock);
++	ntsync_assert_held(event);
++	lockdep_assert(event->type == NTSYNC_TYPE_EVENT);
 +
 +	list_for_each_entry(entry, &event->any_waiters, node) {
 +		struct ntsync_q *q = entry->q;
@@ -16060,7 +16166,7 @@ index 000000000000..19fd70ac3f50
 +{
 +	__u32 sum;
 +
-+	lockdep_assert_held(&sem->lock);
++	ntsync_assert_held(sem);
 +
 +	if (check_add_overflow(sem->u.sem.count, count, &sum) ||
 +	    sum > sem->u.sem.max)
@@ -16076,6 +16182,7 @@ index 000000000000..19fd70ac3f50
 +	__u32 __user *user_args = argp;
 +	__u32 prev_count;
 +	__u32 args;
++	bool all;
 +	int ret;
 +
 +	if (copy_from_user(&args, argp, sizeof(args)))
@@ -16084,29 +16191,17 @@ index 000000000000..19fd70ac3f50
 +	if (sem->type != NTSYNC_TYPE_SEM)
 +		return -EINVAL;
 +
-+	if (atomic_read(&sem->all_hint) > 0) {
-+		spin_lock(&dev->wait_all_lock);
-+		spin_lock_nest_lock(&sem->lock, &dev->wait_all_lock);
++	all = ntsync_lock_obj(dev, sem);
 +
-+		prev_count = sem->u.sem.count;
-+		ret = post_sem_state(sem, args);
-+		if (!ret) {
++	prev_count = sem->u.sem.count;
++	ret = post_sem_state(sem, args);
++	if (!ret) {
++		if (all)
 +			try_wake_all_obj(dev, sem);
-+			try_wake_any_sem(sem);
-+		}
-+
-+		spin_unlock(&sem->lock);
-+		spin_unlock(&dev->wait_all_lock);
-+	} else {
-+		spin_lock(&sem->lock);
-+
-+		prev_count = sem->u.sem.count;
-+		ret = post_sem_state(sem, args);
-+		if (!ret)
-+			try_wake_any_sem(sem);
-+
-+		spin_unlock(&sem->lock);
++		try_wake_any_sem(sem);
 +	}
++
++	ntsync_unlock_obj(dev, sem, all);
 +
 +	if (!ret && put_user(prev_count, user_args))
 +		ret = -EFAULT;
@@ -16120,7 +16215,7 @@ index 000000000000..19fd70ac3f50
 +static int unlock_mutex_state(struct ntsync_obj *mutex,
 +			      const struct ntsync_mutex_args *args)
 +{
-+	lockdep_assert_held(&mutex->lock);
++	ntsync_assert_held(mutex);
 +
 +	if (mutex->u.mutex.owner != args->owner)
 +		return -EPERM;
@@ -16136,6 +16231,7 @@ index 000000000000..19fd70ac3f50
 +	struct ntsync_device *dev = mutex->dev;
 +	struct ntsync_mutex_args args;
 +	__u32 prev_count;
++	bool all;
 +	int ret;
 +
 +	if (copy_from_user(&args, argp, sizeof(args)))
@@ -16146,29 +16242,17 @@ index 000000000000..19fd70ac3f50
 +	if (mutex->type != NTSYNC_TYPE_MUTEX)
 +		return -EINVAL;
 +
-+	if (atomic_read(&mutex->all_hint) > 0) {
-+		spin_lock(&dev->wait_all_lock);
-+		spin_lock_nest_lock(&mutex->lock, &dev->wait_all_lock);
++	all = ntsync_lock_obj(dev, mutex);
 +
-+		prev_count = mutex->u.mutex.count;
-+		ret = unlock_mutex_state(mutex, &args);
-+		if (!ret) {
++	prev_count = mutex->u.mutex.count;
++	ret = unlock_mutex_state(mutex, &args);
++	if (!ret) {
++		if (all)
 +			try_wake_all_obj(dev, mutex);
-+			try_wake_any_mutex(mutex);
-+		}
-+
-+		spin_unlock(&mutex->lock);
-+		spin_unlock(&dev->wait_all_lock);
-+	} else {
-+		spin_lock(&mutex->lock);
-+
-+		prev_count = mutex->u.mutex.count;
-+		ret = unlock_mutex_state(mutex, &args);
-+		if (!ret)
-+			try_wake_any_mutex(mutex);
-+
-+		spin_unlock(&mutex->lock);
++		try_wake_any_mutex(mutex);
 +	}
++
++	ntsync_unlock_obj(dev, mutex, all);
 +
 +	if (!ret && put_user(prev_count, &user_args->count))
 +		ret = -EFAULT;
@@ -16182,7 +16266,7 @@ index 000000000000..19fd70ac3f50
 + */
 +static int kill_mutex_state(struct ntsync_obj *mutex, __u32 owner)
 +{
-+	lockdep_assert_held(&mutex->lock);
++	ntsync_assert_held(mutex);
 +
 +	if (mutex->u.mutex.owner != owner)
 +		return -EPERM;
@@ -16197,6 +16281,7 @@ index 000000000000..19fd70ac3f50
 +{
 +	struct ntsync_device *dev = mutex->dev;
 +	__u32 owner;
++	bool all;
 +	int ret;
 +
 +	if (get_user(owner, (__u32 __user *)argp))
@@ -16207,27 +16292,16 @@ index 000000000000..19fd70ac3f50
 +	if (mutex->type != NTSYNC_TYPE_MUTEX)
 +		return -EINVAL;
 +
-+	if (atomic_read(&mutex->all_hint) > 0) {
-+		spin_lock(&dev->wait_all_lock);
-+		spin_lock_nest_lock(&mutex->lock, &dev->wait_all_lock);
++	all = ntsync_lock_obj(dev, mutex);
 +
-+		ret = kill_mutex_state(mutex, owner);
-+		if (!ret) {
++	ret = kill_mutex_state(mutex, owner);
++	if (!ret) {
++		if (all)
 +			try_wake_all_obj(dev, mutex);
-+			try_wake_any_mutex(mutex);
-+		}
-+
-+		spin_unlock(&mutex->lock);
-+		spin_unlock(&dev->wait_all_lock);
-+	} else {
-+		spin_lock(&mutex->lock);
-+
-+		ret = kill_mutex_state(mutex, owner);
-+		if (!ret)
-+			try_wake_any_mutex(mutex);
-+
-+		spin_unlock(&mutex->lock);
++		try_wake_any_mutex(mutex);
 +	}
++
++	ntsync_unlock_obj(dev, mutex, all);
 +
 +	return ret;
 +}
@@ -16236,34 +16310,22 @@ index 000000000000..19fd70ac3f50
 +{
 +	struct ntsync_device *dev = event->dev;
 +	__u32 prev_state;
++	bool all;
 +
 +	if (event->type != NTSYNC_TYPE_EVENT)
 +		return -EINVAL;
 +
-+	if (atomic_read(&event->all_hint) > 0) {
-+		spin_lock(&dev->wait_all_lock);
-+		spin_lock_nest_lock(&event->lock, &dev->wait_all_lock);
++	all = ntsync_lock_obj(dev, event);
 +
-+		prev_state = event->u.event.signaled;
-+		event->u.event.signaled = true;
++	prev_state = event->u.event.signaled;
++	event->u.event.signaled = true;
++	if (all)
 +		try_wake_all_obj(dev, event);
-+		try_wake_any_event(event);
-+		if (pulse)
-+			event->u.event.signaled = false;
++	try_wake_any_event(event);
++	if (pulse)
++		event->u.event.signaled = false;
 +
-+		spin_unlock(&event->lock);
-+		spin_unlock(&dev->wait_all_lock);
-+	} else {
-+		spin_lock(&event->lock);
-+
-+		prev_state = event->u.event.signaled;
-+		event->u.event.signaled = true;
-+		try_wake_any_event(event);
-+		if (pulse)
-+			event->u.event.signaled = false;
-+
-+		spin_unlock(&event->lock);
-+	}
++	ntsync_unlock_obj(dev, event, all);
 +
 +	if (put_user(prev_state, (__u32 __user *)argp))
 +		return -EFAULT;
@@ -16273,17 +16335,19 @@ index 000000000000..19fd70ac3f50
 +
 +static int ntsync_event_reset(struct ntsync_obj *event, void __user *argp)
 +{
++	struct ntsync_device *dev = event->dev;
 +	__u32 prev_state;
++	bool all;
 +
 +	if (event->type != NTSYNC_TYPE_EVENT)
 +		return -EINVAL;
 +
-+	spin_lock(&event->lock);
++	all = ntsync_lock_obj(dev, event);
 +
 +	prev_state = event->u.event.signaled;
 +	event->u.event.signaled = false;
 +
-+	spin_unlock(&event->lock);
++	ntsync_unlock_obj(dev, event, all);
 +
 +	if (put_user(prev_state, (__u32 __user *)argp))
 +		return -EFAULT;
@@ -16294,16 +16358,21 @@ index 000000000000..19fd70ac3f50
 +static int ntsync_sem_read(struct ntsync_obj *sem, void __user *argp)
 +{
 +	struct ntsync_sem_args __user *user_args = argp;
++	struct ntsync_device *dev = sem->dev;
 +	struct ntsync_sem_args args;
++	bool all;
 +
 +	if (sem->type != NTSYNC_TYPE_SEM)
 +		return -EINVAL;
 +
 +	args.sem = 0;
-+	spin_lock(&sem->lock);
++
++	all = ntsync_lock_obj(dev, sem);
++
 +	args.count = sem->u.sem.count;
 +	args.max = sem->u.sem.max;
-+	spin_unlock(&sem->lock);
++
++	ntsync_unlock_obj(dev, sem, all);
 +
 +	if (copy_to_user(user_args, &args, sizeof(args)))
 +		return -EFAULT;
@@ -16313,18 +16382,23 @@ index 000000000000..19fd70ac3f50
 +static int ntsync_mutex_read(struct ntsync_obj *mutex, void __user *argp)
 +{
 +	struct ntsync_mutex_args __user *user_args = argp;
++	struct ntsync_device *dev = mutex->dev;
 +	struct ntsync_mutex_args args;
++	bool all;
 +	int ret;
 +
 +	if (mutex->type != NTSYNC_TYPE_MUTEX)
 +		return -EINVAL;
 +
 +	args.mutex = 0;
-+	spin_lock(&mutex->lock);
++
++	all = ntsync_lock_obj(dev, mutex);
++
 +	args.count = mutex->u.mutex.count;
 +	args.owner = mutex->u.mutex.owner;
 +	ret = mutex->u.mutex.ownerdead ? -EOWNERDEAD : 0;
-+	spin_unlock(&mutex->lock);
++
++	ntsync_unlock_obj(dev, mutex, all);
 +
 +	if (copy_to_user(user_args, &args, sizeof(args)))
 +		return -EFAULT;
@@ -16334,16 +16408,21 @@ index 000000000000..19fd70ac3f50
 +static int ntsync_event_read(struct ntsync_obj *event, void __user *argp)
 +{
 +	struct ntsync_event_args __user *user_args = argp;
++	struct ntsync_device *dev = event->dev;
 +	struct ntsync_event_args args;
++	bool all;
 +
 +	if (event->type != NTSYNC_TYPE_EVENT)
 +		return -EINVAL;
 +
 +	args.event = 0;
-+	spin_lock(&event->lock);
++
++	all = ntsync_lock_obj(dev, event);
++
 +	args.manual = event->u.event.manual;
 +	args.signaled = event->u.event.signaled;
-+	spin_unlock(&event->lock);
++
++	ntsync_unlock_obj(dev, event, all);
 +
 +	if (copy_to_user(user_args, &args, sizeof(args)))
 +		return -EFAULT;
@@ -16584,9 +16663,6 @@ index 000000000000..19fd70ac3f50
 +	__u32 total_count;
 +	__u32 i, j;
 +
-+	if (!args->owner)
-+		return -EINVAL;
-+
 +	if (args->pad || (args->flags & ~NTSYNC_WAIT_REALTIME))
 +		return -EINVAL;
 +
@@ -16666,6 +16742,7 @@ index 000000000000..19fd70ac3f50
 +	__u32 i, total_count;
 +	struct ntsync_q *q;
 +	int signaled;
++	bool all;
 +	int ret;
 +
 +	if (copy_from_user(&args, argp, sizeof(args)))
@@ -16685,9 +16762,9 @@ index 000000000000..19fd70ac3f50
 +		struct ntsync_q_entry *entry = &q->entries[i];
 +		struct ntsync_obj *obj = entry->obj;
 +
-+		spin_lock(&obj->lock);
++		all = ntsync_lock_obj(dev, obj);
 +		list_add_tail(&entry->node, &obj->any_waiters);
-+		spin_unlock(&obj->lock);
++		ntsync_unlock_obj(dev, obj, all);
 +	}
 +
 +	/*
@@ -16704,9 +16781,9 @@ index 000000000000..19fd70ac3f50
 +		if (atomic_read(&q->signaled) != -1)
 +			break;
 +
-+		spin_lock(&obj->lock);
++		all = ntsync_lock_obj(dev, obj);
 +		try_wake_any_obj(obj);
-+		spin_unlock(&obj->lock);
++		ntsync_unlock_obj(dev, obj, all);
 +	}
 +
 +	/* sleep */
@@ -16719,9 +16796,9 @@ index 000000000000..19fd70ac3f50
 +		struct ntsync_q_entry *entry = &q->entries[i];
 +		struct ntsync_obj *obj = entry->obj;
 +
-+		spin_lock(&obj->lock);
++		all = ntsync_lock_obj(dev, obj);
 +		list_del(&entry->node);
-+		spin_unlock(&obj->lock);
++		ntsync_unlock_obj(dev, obj, all);
 +
 +		put_obj(obj);
 +	}
@@ -16760,7 +16837,7 @@ index 000000000000..19fd70ac3f50
 +
 +	/* queue ourselves */
 +
-+	spin_lock(&dev->wait_all_lock);
++	mutex_lock(&dev->wait_all_lock);
 +
 +	for (i = 0; i < args.count; i++) {
 +		struct ntsync_q_entry *entry = &q->entries[i];
@@ -16779,16 +16856,16 @@ index 000000000000..19fd70ac3f50
 +		struct ntsync_q_entry *entry = &q->entries[args.count];
 +		struct ntsync_obj *obj = entry->obj;
 +
-+		spin_lock_nest_lock(&obj->lock, &dev->wait_all_lock);
++		dev_lock_obj(dev, obj);
 +		list_add_tail(&entry->node, &obj->any_waiters);
-+		spin_unlock(&obj->lock);
++		dev_unlock_obj(dev, obj);
 +	}
 +
 +	/* check if we are already signaled */
 +
 +	try_wake_all(dev, q, NULL);
 +
-+	spin_unlock(&dev->wait_all_lock);
++	mutex_unlock(&dev->wait_all_lock);
 +
 +	/*
 +	 * Check if the alert event is signaled, making sure to do so only
@@ -16799,9 +16876,9 @@ index 000000000000..19fd70ac3f50
 +		struct ntsync_obj *obj = q->entries[args.count].obj;
 +
 +		if (atomic_read(&q->signaled) == -1) {
-+			spin_lock(&obj->lock);
++			bool all = ntsync_lock_obj(dev, obj);
 +			try_wake_any_obj(obj);
-+			spin_unlock(&obj->lock);
++			ntsync_unlock_obj(dev, obj, all);
 +		}
 +	}
 +
@@ -16811,7 +16888,7 @@ index 000000000000..19fd70ac3f50
 +
 +	/* and finally, unqueue */
 +
-+	spin_lock(&dev->wait_all_lock);
++	mutex_lock(&dev->wait_all_lock);
 +
 +	for (i = 0; i < args.count; i++) {
 +		struct ntsync_q_entry *entry = &q->entries[i];
@@ -16827,18 +16904,20 @@ index 000000000000..19fd70ac3f50
 +
 +		put_obj(obj);
 +	}
++
++	mutex_unlock(&dev->wait_all_lock);
++
 +	if (args.alert) {
 +		struct ntsync_q_entry *entry = &q->entries[args.count];
 +		struct ntsync_obj *obj = entry->obj;
++		bool all;
 +
-+		spin_lock_nest_lock(&obj->lock, &dev->wait_all_lock);
++		all = ntsync_lock_obj(dev, obj);
 +		list_del(&entry->node);
-+		spin_unlock(&obj->lock);
++		ntsync_unlock_obj(dev, obj, all);
 +
 +		put_obj(obj);
 +	}
-+
-+	spin_unlock(&dev->wait_all_lock);
 +
 +	signaled = atomic_read(&q->signaled);
 +	if (signaled != -1) {
@@ -16865,7 +16944,7 @@ index 000000000000..19fd70ac3f50
 +	if (!dev)
 +		return -ENOMEM;
 +
-+	spin_lock_init(&dev->wait_all_lock);
++	mutex_init(&dev->wait_all_lock);
 +
 +	file->private_data = dev;
 +	dev->file = file;
@@ -19538,7 +19617,7 @@ index 50655de04c9b..82f8bd8f0d16 100644
  union tcp_cc_info {
 diff --git a/include/uapi/linux/ntsync.h b/include/uapi/linux/ntsync.h
 new file mode 100644
-index 000000000000..f21dbac42164
+index 000000000000..4a8095a3fc34
 --- /dev/null
 +++ b/include/uapi/linux/ntsync.h
 @@ -0,0 +1,62 @@
@@ -19578,9 +19657,9 @@ index 000000000000..f21dbac42164
 +	__u64 timeout;
 +	__u64 objs;
 +	__u32 count;
-+	__u32 owner;
 +	__u32 index;
 +	__u32 flags;
++	__u32 owner;
 +	__u32 alert;
 +	__u32 pad;
 +};

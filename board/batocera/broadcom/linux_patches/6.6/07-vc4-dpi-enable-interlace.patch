@@ -1,8 +1,8 @@
 diff --git a/drivers/gpu/drm/vc4/vc4_dpi.c b/drivers/gpu/drm/vc4/vc4_dpi.c
-index 39152e755a13..ca58f74e8b51 100644
+index 305a34e82139..451aff841fae 100644
 --- a/drivers/gpu/drm/vc4/vc4_dpi.c
 +++ b/drivers/gpu/drm/vc4/vc4_dpi.c
-@@ -248,9 +248,6 @@ static void vc4_dpi_encoder_enable(struct drm_encoder *encoder)
+@@ -255,9 +255,6 @@ static void vc4_dpi_encoder_enable(struct drm_encoder *encoder)
  static enum drm_mode_status vc4_dpi_encoder_mode_valid(struct drm_encoder *encoder,
  						       const struct drm_display_mode *mode)
  {
