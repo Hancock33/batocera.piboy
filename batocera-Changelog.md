@@ -31,6 +31,12 @@ Add support for the Ayaneo Air Plus (6800U) model
   - Thrustmaster T150RS
   - Thrustmaster T80 (gamepad mode only)
   - Driving Wheel SV200
+- Dolphin: support for Retroachievements (when they are enabled)
+- Color Computer (coco) now autoloads cassettes and disks based on MAME software lists with default fallbacks
+  - uses "usage" info field in MAME software list
+  - .cas/.dsk default autoload behaviors (.bas in rom basename uses CLOAD/RUN)
+  - user overrides declarable in `system/configs/mame/autoload/coco_{cass,flop}_autoload.csv`
+- "Tandy Radio Shack Color Computer cassettes" softList added to coco Advanced Game Options
 ### Fixed
 - RG552 Splash-screen rotation
 - RG552 Vibrator enabled
@@ -48,6 +54,8 @@ Add support for the Ayaneo Air Plus (6800U) model
 - Vulkan driver version via System Information whne using a multi-GPU systems was sometimes wrong
 - Fix SteamDeck LCD mono audio which snuck in with the v39 release.
 - ScummVM configuration file location & ensure native file system is turned off
+- Duckstation: faster loading time when RetroAchievements are enabled
+- Color Computer .dsk floppy images accepted in ES. "Disk" altRomType added in Advanced Game Options
 ### Changed
 - RK3326 Replaced the mali-G31 driver with mesa3d
 - Amiga BIOS files now go into the bios/amiga/ subfolder
@@ -70,9 +78,9 @@ Add support for the Ayaneo Air Plus (6800U) model
 - Mupen64plus-video-glide64mk2 bump to Jun 11, 2023 build
 - Mupen64plus-video-rice bump to Jun 11, 2023 build
 - Mupen64plus-gliden64 bump to Feb 18, 2024 build
-- PPSSPP: to May 15, 2024 build
+- PPSSPP: to v1.17.1
 - Duckstation to v0.1-6720
-- Libretro-PPSSPP: to May 15, 2024 build
+- Libretro-PPSSPP: to v1.17.1
 - Libretro-81: bump to Nov 1, 2023 build
 - Libretro-fbneo: bump to Feb 23, 2024 build (v1.0.0.03)
 - Libretro-genesisplusgx: bump to Feb 23, 2024 build
@@ -99,7 +107,7 @@ Add support for the Ayaneo Air Plus (6800U) model
 - DevilutionX to 1.5.2
 - Commander Genius to 3.5.0
 - Kodi to 20.5-Nexus
-- RPCS3 to 0.0.32-16476
+- RPCS3 to 0.0.32-16518
 - Solarus-engine: bump to Apr 27, 2024 build
 - Cemu to v2.0-82
 - Sonic3-AIR to v24.02.02.0-stable
@@ -108,7 +116,7 @@ Add support for the Ayaneo Air Plus (6800U) model
 - Xemu to v0.7.121
 - ScummVM to 2.8.1
 - fheroes2 to 1.0.13
-- PCSX2 to v1.7.5817
+- PCSX2 to v1.7.5835
 - Play! & Libretro Play! to 0.65-1
 - Dolphin to 5.0-21543
 - Libretro-hatarib: bump to v0.3
@@ -123,7 +131,7 @@ Add support for the Ayaneo Air Plus (6800U) model
 - DXX-Rebirth to May 6, 2024 build
 - BigPemu to v113 (Linux Build)
 - Xenia to v1.0.2815
-- Vita3K to May 14, 2024 build
+- Vita3K to May 22, 2024 build
 - Sonic-Mania to Mar 7, 2024 build
 - Libretro-Cap32 to May 15, 2024 build
 - Libretro-Arduous to May 14, 2024 build

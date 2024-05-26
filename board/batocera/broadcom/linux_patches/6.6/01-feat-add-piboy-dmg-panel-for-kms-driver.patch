@@ -1,8 +1,8 @@
 diff --git a/arch/arm/boot/dts/overlays/Makefile b/arch/arm/boot/dts/overlays/Makefile
-index 759fe6d3761e..1b2f35b09515 100644
+index 2f21f5d005f5..aaaf67e1ed71 100644
 --- a/arch/arm/boot/dts/overlays/Makefile
 +++ b/arch/arm/boot/dts/overlays/Makefile
-@@ -303,6 +303,7 @@ dtbo-$(CONFIG_ARCH_BCM2835) += \
+@@ -305,6 +305,7 @@ dtbo-$(CONFIG_ARCH_BCM2835) += \
  	vc4-kms-dpi-hyperpixel4.dtbo \
  	vc4-kms-dpi-hyperpixel4sq.dtbo \
  	vc4-kms-dpi-panel.dtbo \

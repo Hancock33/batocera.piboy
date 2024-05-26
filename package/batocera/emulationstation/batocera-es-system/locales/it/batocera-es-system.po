@@ -4937,6 +4937,11 @@ msgstr "Philips CD-i CD-ROM"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
+msgid "Tandy Radio Shack Colour Computer cassettes"
+msgstr ""
+
+#. TRANSLATION: libretro/mame, mame/openbor7530
+msgctxt "game_options"
 msgid "Tandy Radio Shack Colour Computer cartridges"
 msgstr ""
 
@@ -14294,11 +14299,6 @@ msgctxt "game_options"
 msgid "SKIP INTRO VIDEOS"
 msgstr "SALTA I VIDEO DI INTRO"
 
-#. TRANSLATION: eduke32, ionfury, raze, sm64, stalker
-msgctxt "game_options"
-msgid "Show (Default)"
-msgstr "Mostra (Default)"
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Disable fog rendering"
@@ -14562,6 +14562,11 @@ msgstr "MEMORIA GRAFICA"
 msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr "256MB (Default)"
+
+#. TRANSLATION: raze, sm64, stalker
+msgctxt "game_options"
+msgid "Show (Default)"
+msgstr "Mostra (Default)"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"

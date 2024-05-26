@@ -3,8 +3,8 @@
 # libretro-vitaquake2
 #
 ################################################################################
-# Version: Commits on May 14, 2024
-LIBRETRO_VITAQUAKE2_VERSION = 04cc55b8828fc5fec66426db7bd6cd8a4efd7901
+# Version: Commits on May 23, 2024
+LIBRETRO_VITAQUAKE2_VERSION = 69e56a470638ca8ed15b53212923220360a69f97
 LIBRETRO_VITAQUAKE2_SITE = $(call github,libretro,vitaquake2,$(LIBRETRO_VITAQUAKE2_VERSION))
 LIBRETRO_VITAQUAKE2_LICENSE = GPL-2.0
 

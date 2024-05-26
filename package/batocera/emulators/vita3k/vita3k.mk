@@ -3,8 +3,8 @@
 # vita3k
 #
 ################################################################################
-# Version: Commits on May 13, 2024
-VITA3K_VERSION = d4c0c499a490bec87c626fdcb5ea0035a43a36d1
+# Version: Commits on May 23, 2024
+VITA3K_VERSION = 53741632bc98ebd3770cbe55b723843e1b83a458
 VITA3K_SITE = https://github.com/vita3k/vita3k
 VITA3K_SITE_METHOD=git
 VITA3K_GIT_SUBMODULES=YES
@@ -20,6 +20,12 @@ VITA3K_CONF_OPTS += -DBUILD_EXTERNAL=ON
 VITA3K_CONF_OPTS += -DXXH_X86DISPATCH_ALLOW_AVX=ON
 VITA3K_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
 VITA3K_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
+
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_ZEN3),y)
+    VITA3K_CONF_OPTS += -DXXH_X86DISPATCH_ALLOW_AVX=ON
+else
+    VITA3K_CONF_OPTS += -DXXH_X86DISPATCH_ALLOW_AVX=OFF
+endif
 
 define VITA3K_GET_SUBMODULE
     mkdir -p $(@D)/external

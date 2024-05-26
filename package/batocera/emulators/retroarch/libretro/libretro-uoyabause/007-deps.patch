@@ -1,5 +1,5 @@
 diff --git a/yabause/CMake/Packages/external_libchdr.cmake b/yabause/CMake/Packages/external_libchdr.cmake
-index f6a8db60..b91eddf0 100644
+index 8c1644e9f..12f9b9a85 100644
 --- a/yabause/CMake/Packages/external_libchdr.cmake
 +++ b/yabause/CMake/Packages/external_libchdr.cmake
 @@ -29,8 +29,8 @@ endif()
@@ -13,8 +13,44 @@ index f6a8db60..b91eddf0 100644
    #PATCH_COMMAND  git apply "${CMAKE_SOURCE_DIR}/CMake/Packages/libchdr.patch"
    CMAKE_ARGS  -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/libchdr 
                -DCMAKE_BUILD_TYPE:STRING=Release 
+diff --git a/yabause/CMake/Packages/external_zlib.cmake b/yabause/CMake/Packages/external_zlib.cmake
+index 359f2be0c..6d0cb8f3f 100644
+--- a/yabause/CMake/Packages/external_zlib.cmake
++++ b/yabause/CMake/Packages/external_zlib.cmake
+@@ -59,16 +59,18 @@ set(ZLIB_HEADERS
+ 
+ ExternalProject_Add(
+     zlib
+-    PREFIX zlib
+-    GIT_REPOSITORY ${ZLIB_URL}
+-    GIT_TAG ${ZLIB_TAG}
+-    INSTALL_DIR ${ZLIB_INSTALL}
+-    BUILD_IN_SOURCE ON
+-    DOWNLOAD_DIR "${DOWNLOAD_LOCATION}"
++    #PREFIX zlib
++    #GIT_REPOSITORY ${ZLIB_URL}
++    #GIT_TAG ${ZLIB_TAG}
++    #INSTALL_DIR ${ZLIB_INSTALL}
++    #BUILD_IN_SOURCE ON
++    #DOWNLOAD_DIR "${DOWNLOAD_LOCATION}"
+     CMAKE_ARGS
+ 		-DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=ON
+         -DCMAKE_BUILD_TYPE:STRING=Release
+         -DCMAKE_INSTALL_PREFIX:STRING=${ZLIB_INSTALL}
++        -DCMAKE_CXX_FLAGS=${CMAKE_CXX_FLAGS}
++        -DCMAKE_C_FLAGS=${CMAKE_C_FLAGS}
+         ${ADDITIONAL_CMAKE_ARGS}        
+ )
+ 
+@@ -85,4 +87,4 @@ add_custom_target(zlib_copy_headers_to_destination
+ foreach(header_file ${ZLIB_HEADERS})
+     add_custom_command(TARGET zlib_copy_headers_to_destination PRE_BUILD
+     COMMAND ${CMAKE_COMMAND} -E copy_if_different ${header_file} ${zlib_INCLUDE_DIR})
+-endforeach()
+\ No newline at end of file
++endforeach()
 diff --git a/yabause/src/retro_arena/CMakeLists.txt b/yabause/src/retro_arena/CMakeLists.txt
-index d767aa81..a4e05ad7 100644
+index d767aa817..a4e05ad79 100644
 --- a/yabause/src/retro_arena/CMakeLists.txt
 +++ b/yabause/src/retro_arena/CMakeLists.txt
 @@ -31,11 +31,11 @@ include( ${CMAKE_SOURCE_DIR}/CMake/Packages/external_libpng.cmake )
