@@ -62,4 +62,4 @@ BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL=y
 BR2_CCACHE_DIR="$(HOME)/build-dir/ccache/rpi4"
 
 # Experimental, build cmake packages with clang
-BR_CMAKE_USE_CLANG=y
+BR_CMAKE_USE_CLANG=n
