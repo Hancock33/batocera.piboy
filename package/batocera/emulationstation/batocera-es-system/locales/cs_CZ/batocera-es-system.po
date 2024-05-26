@@ -4926,6 +4926,11 @@ msgstr "CD-ROMy Philips CD-i"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
+msgid "Tandy Radio Shack Colour Computer cassettes"
+msgstr ""
+
+#. TRANSLATION: libretro/mame, mame/openbor7530
+msgctxt "game_options"
 msgid "Tandy Radio Shack Colour Computer cartridges"
 msgstr ""
 
@@ -14253,11 +14258,6 @@ msgctxt "game_options"
 msgid "SKIP INTRO VIDEOS"
 msgstr "PŘESKOČIT ÚVODNÍ VIDEA"
 
-#. TRANSLATION: eduke32, ionfury, raze, sm64, stalker
-msgctxt "game_options"
-msgid "Show (Default)"
-msgstr "Zobrazit (výchozí)"
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Disable fog rendering"
@@ -14521,6 +14521,11 @@ msgstr "GRAFICKÁ PAMĚŤ"
 msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr "256 MB (výchozí)"
+
+#. TRANSLATION: raze, sm64, stalker
+msgctxt "game_options"
+msgid "Show (Default)"
+msgstr "Zobrazit (výchozí)"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"

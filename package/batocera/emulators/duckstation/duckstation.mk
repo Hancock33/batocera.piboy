@@ -3,13 +3,12 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on May 09, 2024
-DUCKSTATION_VERSION = 0a63bec65ca0346c89f82469a8a9c9cba401faa1
-DUCKSTATION_BRANCH = dev
+# Version: Commits on May 25, 2024
+DUCKSTATION_VERSION = 328a3cd7af9552098b35a0705763485c9ffd1b7d
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
-DUCKSTATION_DEPENDENCIES = boost ecm ffmpeg fmt libcurl libdrm libevdev sdl2 shaderc webp zstd
-DUCKSTATION_DEPENDENCIES += qt6base qt6tools qt6svg
+DUCKSTATION_DEPENDENCIES = boost ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev sdl2 shaderc webp zstd
+DUCKSTATION_DEPENDENCIES += qt6base qt6tools qt6svg host-clang
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
 
 DUCKSTATION_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CFLAGS) -flax-vector-conversions"
@@ -17,6 +16,9 @@ DUCKSTATION_CONF_OPTS += -DBUILD_SHARED_LIBS=FALSE
 DUCKSTATION_CONF_OPTS += -DENABLE_DISCORD_PRESENCE=OFF
 DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=ON
 DUCKSTATION_CONF_OPTS += -DBUILD_NOGUI_FRONTEND=OFF
+DUCKSTATION_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/clang
+DUCKSTATION_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/clang++
+
 DUCKSTATION_CONF_ENV += LDFLAGS=-lpthread
 
 ifeq ($(BR2_PACKAGE_WAYLAND),y)

@@ -3,6 +3,7 @@
 shared:
   cfeatures:
     powermode:
+      archs_include: [bcm2711, bcm2712]
       group: POWER OPTIONS
       prompt: POWER MODE
       description: Adjust the cpu power frequency profile whilst in-game. Some systems will benefit from improved voltage handling.
@@ -11,6 +12,7 @@ shared:
         "Balanced":         balanced
         "Power Saver":      powersaver
     batterymode:
+      archs_include: [bcm2711, bcm2712]
       group: POWER OPTIONS
       prompt: BATTERY MODE
       description: Adjust the cpu power profile whist on battery. Overwrites previous Power Mode(s).
@@ -19,12 +21,12 @@ shared:
         "Balanced":         balanced
         "Power Saver":      powersaver
     tdp:
-      archs_include: [x86_64]
+      archs_include: [dummy]
       group: POWER OPTIONS
       prompt: RYZEN THERMAL DESIGN POWER
       description: Adjust the percentage of power (watts) provided to a Ryzen Mobile Series CPU based on it's default max value. Caution, setting wattage too high could damage your device.
       preset: slider
-      preset_parameters: 10 130 5 100 "%"
+      preset_parameters: 10 130 5 100 %
     videomode:
       group: VIDEO SETTINGS
       prompt: VIDEO MODE
@@ -3414,7 +3416,8 @@ libretro:
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
-                          "Don't Use (Default)":                           none
+                          "Don't Use (Default)":                          none
+                          "Tandy Radio Shack Colour Computer cassettes":   coco_cass
                           "Tandy Radio Shack Colour Computer cartridges":  coco_cart
                           "Tandy Radio Shack Colour Computer disk images": coco_flop
                   altmodel:
@@ -3431,8 +3434,9 @@ libretro:
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
-                          "Cassette":    cass
-                          "Cartridge":   cart
+                          "Cassette":       cass
+                          "Cartridge":      cart
+                          "Disk (Drive 1)": flop1
                   enableui:
                       group: ADVANCED OPTIONS
                       prompt:      UI KEYS
@@ -10954,7 +10958,8 @@ mame:
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
-                        "Don't Use (Default)":                           none
+                        "Don't Use (Default)":                          none
+                        "Tandy Radio Shack Colour Computer cassettes":   coco_cass
                         "Tandy Radio Shack Colour Computer cartridges":  coco_cart
                         "Tandy Radio Shack Colour Computer disk images": coco_flop
                 altmodel:
@@ -10970,8 +10975,9 @@ mame:
                     prompt:      MEDIA TYPE
                     description: Type of ROM file to load.
                     choices:
-                        "Cassette":    cass
-                        "Cartridge":   cart
+                        "Cassette":       cass
+                        "Cartridge":      cart
+                        "Disk (Drive 1)": flop1
                 enableui:
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
@@ -12779,9 +12785,7 @@ eduke32:
     nologo:
       prompt: SKIP INTRO VIDEOS
       description: Skip introduction animations and logos; default is show
-      choices:
-        "Skip": 1
-        "Show (Default)": 0
+      preset: switchon
 eka2l1:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -12993,9 +12997,7 @@ ionfury:
     nologo:
       prompt: SKIP INTRO VIDEOS
       description: Skip introduction animations and logos; default is show
-      choices:
-        "Skip": 1
-        "Show (Default)": 0
+      preset: switchon
 kodi:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -13446,12 +13448,13 @@ vita3k:
   shared: [powermode, tdp, videomode, powersave]
   features: [padtokeyboard]
   cfeatures:
-    vita3k_gfxbackend:
-      prompt:      GRAPHICS API
-      description: Choose which graphics API library to use.
-      choices:
-        "OpenGL": "OpenGL"
-        "Vulkan": "Vulkan"
+    # Disabled until vulkan fixed upstream
+    #vita3k_gfxbackend:
+    #  prompt:      GRAPHICS API
+    #  description: Choose which graphics API library to use.
+    #  choices:
+    #    "OpenGL": "OpenGL"
+    #    "Vulkan": "Vulkan"
     vita3k_resolution:
       prompt:      RENDERING RESOLUTION
       description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
@@ -13467,33 +13470,19 @@ vita3k:
     vita3k_surface:
       prompt: DISABLE SURFACE SYNC
       description: Speed hack, enable to disable surface syncing between CPU and GPU. Surface syncing is needed by a few games.
-      choices:
-        "Disabled":          "false"
-        "Enabled (Default)": "true"
+      preset: switchoff
     vita3k_linear:
       prompt: LINEAR FILTERING
       description: The image will be softer which could help with aliasing.
-      choices:
-        "Disabled (Default)": "false"
-        "Enabled":            "true"
+      preset: switchoff
     vita3k_fxaa:
       prompt: FXAA
       description: Anti-aliasing is a technique for smoothing out jagged edges.
-      choices:
-        "Disabled (Default)": "false"
-        "Enabled":            "true"
+      preset: switchoff
     vita3k_vsync:
       prompt: VSYNC
       description: Fix screen tearing.
-      choices:
-        "Disabled":          "false"
-        "Enabled (Default)": "true"
-    vita3k_show_pointer:
-      prompt: SHOW POINTER
-      description: You can hide the pointer on touchscreen devices.
-      choices:
-        "Enabled (Default)": "true"
-        "Disabled":          "false"
+      preset: switchon
     vita3k_anisotropic:
       prompt:      ANISOTROPIC FILTERING
       description: Improves clarity of distant textures.
@@ -13503,6 +13492,11 @@ vita3k:
         "4x":  4
         "8x":  8
         "16x": 16
+    vita3k_show_pointer:
+      prompt: SHOW POINTER
+      description: You can hide the pointer on touchscreen devices.
+      preset: switchon
+
 vkquake:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

@@ -44,11 +44,35 @@ class HypseusSingeGenerator(Generator):
         height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         cap.release()
         return width, height
-
+    
     # Main entry of the module
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         # copy input.ini file templates
         hypseusConfigSource = "/usr/share/hypseus-singe/hypinput_gamepad.ini"
+
+        bezel_to_rom = {
+            "cliffhanger": ["cliffhanger", "cliff"],
+            "conan": ["conan", "future_boy"],
+            "cochantze_hd": ["cochantze_hd", "triad_hd", "triadstone"],
+            "crimepatrol": ["crimepatrol", "crimepatrol-hd", "cp_hd"],
+            "drugwars": ["drugwars", "drugwars-hd", "cp2dw_hd"],
+            "daitarn": ["daitarn", "daitarn_3"],
+            "dle": ["dle", "dle_alt"],
+            "lbh": ["lbh", "lbh-hd", "lbh_hd"],
+            "maddog": ["maddog", "maddog-hd", "maddog_hd"],
+            "maddog2": ["maddog2", "maddog2-hd", "maddog2_hd"],
+            "jack": ["jack", "samurai_jack"],
+            "spacepirates": ["spacepirates", "spacepirates-hd", "space_pirates_hd"],
+            "johnnyrock": ["johnnyrock", "johnnyrock-hd", "johnnyrocknoir", "wsjr_hd"],
+        }
+
+        default_bezel = "default"
+
+        def find_bezel(rom_name):
+            for bezel, rom_names in bezel_to_rom.items():
+                if rom_name in rom_names:
+                    return bezel
+            return default_bezel
 
         if not os.path.isdir(batoceraFiles.hypseusDatadir):
             os.mkdir(batoceraFiles.hypseusDatadir)
@@ -93,9 +117,8 @@ class HypseusSingeGenerator(Generator):
         commandsFile = rom + "/" + romName + ".commands"
         singeFile = rom + "/" + romName + ".singe"
 
-        bezelFile = romName + ".png"
+        bezelFile = find_bezel(romName.lower()) + ".png"
         bezelPath = batoceraFiles.hypseusDatadir + "/bezels/" + bezelFile
-        sindenBezelPath = batoceraFiles.hypseusDatadir + "/bezels/sinden/" + bezelFile
 
         if (system.name == 'actionmax'):
             amDir = '/userdata/roms/actionmax/'
@@ -224,18 +247,8 @@ class HypseusSingeGenerator(Generator):
 
         # bezels
         if bezelRequired:
-            bordersSize = controllersConfig.gunsBordersSizeName(guns, system.config)
-            if bordersSize is not None:
-                if not os.path.exists(sindenBezelPath):
-                    commandArray.extend(["-bezel", "Daphne.png"])
-                else:
-                    commandArray.extend(["-bezel", "sinden/" + bezelFile])
-            else:
-                if not os.path.exists(bezelPath):
-                    commandArray.extend(["-bezel", "Daphne.png"])
-                else:
-                    commandArray.extend(["-bezel", bezelFile])
-
+            commandArray.extend(["-bezel", bezelFile])
+        
         # Invert HAT Axis
         if system.isOptSet('hypseus_axis') and system.getOptBoolean("hypseus_axis"):
             commandArray.append("-tiphat")
@@ -276,7 +289,8 @@ class HypseusSingeGenerator(Generator):
             array=commandArray,
             env={
                 'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers),
-                'SDL_JOYSTICK_HIDAPI': '0'
+                'SDL_JOYSTICK_HIDAPI': '0',
+                'MANYMOUSE_NO_XINPUT2': 'x' # disable xorg mouse => forces evdev mouse
             }
         )
 

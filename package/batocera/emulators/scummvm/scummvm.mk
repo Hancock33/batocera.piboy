@@ -35,6 +35,10 @@ ifeq ($(BR2_riscv),y)
     SCUMMVM_CONF_OPTS += --host=riscv64-linux
 endif
 
+ifeq ($(BR2_PACKAGE_LIBMPEG2),y)
+    SCUMMVM_CONF_OPTS += --enable-mpeg2 --with-mpeg2-prefix="$(STAGING_DIR)/usr/lib"
+endif
+
 define SCUMMVM_ADD_VIRTUAL_KEYBOARD
 	cp -f $(@D)/backends/vkeybd/packs/vkeybd_default.zip $(TARGET_DIR)/usr/share/scummvm
 	cp -f $(@D)/backends/vkeybd/packs/vkeybd_small.zip $(TARGET_DIR)/usr/share/scummvm

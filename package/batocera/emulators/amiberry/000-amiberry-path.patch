@@ -1,9 +1,9 @@
 diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
-index bcfda760..76e80c67 100644
+index 0be8474c..dcf63d70 100644
 --- a/src/osdep/amiberry.cpp
 +++ b/src/osdep/amiberry.cpp
-@@ -3926,29 +3926,29 @@ static void init_amiberry_paths(void)
- 		input_dir = screenshot_dir = nvram_dir = video_dir = 
+@@ -3996,22 +3996,22 @@ static void init_amiberry_paths(void)
+ 		input_dir = screenshot_dir = nvram_dir = plugins_dir = video_dir = 
  		start_path_data;
  
 -	config_path.append("/conf/");
@@ -32,8 +32,9 @@ index bcfda760..76e80c67 100644
 -	screenshot_dir.append("/screenshots/");
 +	screenshot_dir = "/userdata/screenshots/";
  	nvram_dir.append("/nvram/");
+ 	plugins_dir.append("/plugins/");
  	video_dir.append("/videos/");
- #endif
+@@ -4019,7 +4019,7 @@ static void init_amiberry_paths(void)
  	amiberry_conf_file = config_path;
  	amiberry_conf_file.append("amiberry.conf");
  

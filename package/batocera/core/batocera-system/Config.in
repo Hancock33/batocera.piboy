@@ -20,7 +20,7 @@ if  BR2_PACKAGE_BATOCERA_TARGET_X86 || BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     default y
 endif
 
-if  BR2_PACKAGE_BATOCERA_TARGET_X86_64 || BR2_PACKAGE_BATOCERA_TARGET_X86_64_ZNVER2 || BR2_PACKAGE_BATOCERA_TARGET_PS4
+if  BR2_PACKAGE_BATOCERA_TARGET_X86_64 || BR2_PACKAGE_BATOCERA_TARGET_ZEN3
     config BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     bool "any x86_64"
     default y
@@ -301,6 +301,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     # screens
     select BR2_PACKAGE_DMD_SIMULATOR                        if  BR2_PACKAGE_VPINBALL
     select BR2_PACKAGE_DMD_SIMULATOR_PLAYER                 if  BR2_PACKAGE_VPINBALL
+    select BR2_PACKAGE_LIBDMDUTIL                           if  BR2_PACKAGE_VPINBALL
    #select BR2_PACKAGE_BATOCERA_BACKGLASS                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
     # swap
@@ -472,7 +473,7 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     default "samsung/exynos5422/odroidxu4"                                                                                                                                                     if  BR2_PACKAGE_BATOCERA_TARGET_XU4
     default "x86"                                                                                                                                                                              if  BR2_PACKAGE_BATOCERA_TARGET_X86
     default "x86_64"                                                                                                                                                                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64
-    default "znver2"                                                                                                                                                                           if  BR2_PACKAGE_BATOCERA_TARGET_ZNVER2
+    default "x86-64-v3"                                                                                                                                                                        if  BR2_PACKAGE_BATOCERA_TARGET_ZEN3
     default "qualcomm/sd845/odin"                                                                                                                                                              if  BR2_PACKAGE_BATOCERA_TARGET_ODIN
     default "riscv/visionfive2"                                                                                                                                                                if  BR2_PACKAGE_BATOCERA_TARGET_RISCV
     default "amlogic/s922x/ogu amlogic/s922x/gtkingpro amlogic/s922x/gtking amlogic/s922x/odroidn2l amlogic/s922x/vim3 amlogic/s922x/odroidn2 amlogic/s922x/odroidn2plus amlogic/s922x/zero2"  if  BR2_PACKAGE_BATOCERA_TARGET_S922X
@@ -570,8 +571,8 @@ config BR2_PACKAGE_BATOCERA_TARGET_X86
 config BR2_PACKAGE_BATOCERA_TARGET_X86_64
     bool "x86_64"
 
-config BR2_PACKAGE_BATOCERA_TARGET_ZNVER2
-    bool "x86_64_znver2"
+config BR2_PACKAGE_BATOCERA_TARGET_ZEN3
+	bool "x86-64-v3"
 
 # Snapdragon & Samsung
 # -------------------------------------
@@ -759,6 +760,7 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
 
     # Laserdisc emulation
     select BR2_PACKAGE_HYPSEUS_SINGE                        # daphne
+    select BR2_PACKAGE_HYPSEUS_SINGE_BEZELS                 if  BR2_PACKAGE_HYPSEUS_SINGE
 
     # Standalone Sega Model 2 emulator
     select BR2_PACKAGE_MODEL2EMU                            if  BR2_PACKAGE_BATOCERA_WINE
@@ -1189,7 +1191,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588      || \
                                                                 BR2_PACKAGE_BATOCERA_BCM27XX
 
-    select BR2_PACKAGE_BIGPEMU                              if  BR2_PACKAGE_BATOCERA_WINE
+    select BR2_PACKAGE_BIGPEMU                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # NEC PC-FX
     select BR2_PACKAGE_LIBRETRO_BEETLE_PCFX                 if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     && \
@@ -1431,7 +1433,7 @@ config BR2_PACKAGE_BATOCERA_GUNS
     select BR2_PACKAGE_DOLPHINCROSSHAIRSPACK                if  BR2_PACKAGE_DOLPHIN_EMU
     select BR2_PACKAGE_FUSION_LIGHTGUNS                     # fusion lightguns
     select BR2_PACKAGE_GUN4IR_GUNS                          # gun4ir guns
-    select BR2_PACKAGE_GUNCON                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64 || BR2_PACKAGE_BATOCERA_BCM27XX || BR2_PACKAGE_BATOCERA_TARGET_BCM2837 # guncon
+    select BR2_PACKAGE_GUNCON                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_BCM27XX || BR2_PACKAGE_BATOCERA_TARGET_BCM2837 # guncon
     select BR2_PACKAGE_GUNCON3                              if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4                                                                 # guncon3
     select BR2_PACKAGE_LIGHTGUNS_GAMES_PRECALIBRATIONS
     select BR2_PACKAGE_RETROSHOOTER_GUNS                    # retroshooter guns
