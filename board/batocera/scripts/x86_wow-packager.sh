@@ -18,9 +18,9 @@ ln -sf /usr/lib32/pulseaudio/libpulsecommon-17.0.so      $DEST_DIR/usr/lib32/lib
 ln -sf /usr/lib32                                        $DEST_DIR/lib32
 ln -sf /usr/lib32/ld-linux.so.2                          $DEST_DIR/lib/ld-linux.so.2
 
-cp -a ${TARGET_DIR}/usr/share/vulkan/icd.d/intel_hasvk_icd.i686.json   $DEST_DIR/usr/share/vulkan/icd.d/intel_hasvk_icd.i686.json
-cp -a ${TARGET_DIR}/usr/share/vulkan/icd.d/intel_icd.i686.json         $DEST_DIR/usr/share/vulkan/icd.d/intel_icd.i686.json
-cp -a ${TARGET_DIR}/usr/share/vulkan/icd.d/radeon_icd.i686.json        $DEST_DIR/usr/share/vulkan/icd.d/radeon_icd.i686.json
+cp -a ${TARGET_DIR}/usr/share/vulkan/icd.d/intel_hasvk_icd.*.json   $DEST_DIR/usr/share/vulkan/icd.d/intel_hasvk_icd.i686.json
+cp -a ${TARGET_DIR}/usr/share/vulkan/icd.d/intel_icd.*.json         $DEST_DIR/usr/share/vulkan/icd.d/intel_icd.i686.json
+cp -a ${TARGET_DIR}/usr/share/vulkan/icd.d/radeon_icd.*.json        $DEST_DIR/usr/share/vulkan/icd.d/radeon_icd.i686.json
 sed -i s@/usr/lib/@/lib32/@g                                           $DEST_DIR/usr/share/vulkan/icd.d/*i686.json
 
 rm -rf $DEST_DIR/usr/lib32/{avahi,gconv,glslang,graphene-1.0,icu,libfm,locale,bluez,gio}

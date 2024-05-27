@@ -6,6 +6,6 @@ Development builds are periodically updated and are located here https://mega.nz
 
 A optimised build for the [Steam Deck](https://www.steamdeck.com/en/) (OG+OLED) can also be found in the download folder.
 
-**Note** the Steamdeck version is compiled with "-O2 -march=x86-64-v2 -mtune=znver2" flags, should work on other x86-64 processors circa 2009.
+**Note** the Steamdeck version is compiled with "-O2 **-march=x86-64-v3** -mtune=znver2" flags, it should work on other x86-64 processors circa **2015**.
 
 **All credits to the team at https://batocera.org/**
