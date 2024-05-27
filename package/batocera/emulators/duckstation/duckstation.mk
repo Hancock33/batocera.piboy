@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on May 26, 2024
-DUCKSTATION_VERSION = 015804c43447a74dd2b861609d161ff2d574a489
+# Version: Commits on May 27, 2024
+DUCKSTATION_VERSION = 2eb0085539c171a8b2882840ffe6d81c82c245c9
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_DEPENDENCIES = boost ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev sdl2 shaderc webp zstd
