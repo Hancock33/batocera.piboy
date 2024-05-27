@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240527|May 27, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240527|May 27, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|c7b5d1054644b31d3fcd7b60d471948eb33648ed|May 26, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|1754fd15040ede8ab8d8bc7f16a317aa65f6a888|May 26, 2024
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|d5ef398c5b578537157503408057ebc1f03445c6|May 26, 2024
@@ -33,9 +35,7 @@ Emulators|[openmsx](http://github.com/openMSX/openMSX)|d1abf3481da509fab56a9a963
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|a688f87f557ab34ae8f7ef1353fc608e9314490b|May 25, 2024
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|ac9afdad48df8be53ce56fc39a223ed39eb041c3|May 25, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240525|May 25, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|92237f0d12c5552736b1850330b76176ee576070|May 25, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240525|May 25, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|7ffcd990c46912a2453be402cfe4d50d50dd0333|May 25, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|c4f84094c2c569a8ee4410f6043f19ad48129be2|May 24, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|f7d733b935be185da633be660c73d8f91d6c6883|May 24, 2024
