@@ -19,6 +19,7 @@ define LIBRETRO_CORE_INFO_INSTALL_TARGET_CMDS
 	mv $(@D)/genesis_plus_gx_wide_libretro.info $(TARGET_DIR)/usr/share/libretro/info/genesisplusgx-wide_libretro.info
 	cp $(@D)/mame_libretro.info					$(TARGET_DIR)/usr/share/libretro/info/mess_libretro.info
 	mv $(@D)/mame_libretro.info					$(TARGET_DIR)/usr/share/libretro/info/mamevirtual_libretro.info
+	cp $(@D)/mame2000_libretro.info				$(TARGET_DIR)/usr/share/libretro/info/imame4all_libretro.info
 	mv $(@D)/mame2003_plus_libretro.info		$(TARGET_DIR)/usr/share/libretro/info/mame078plus_libretro.info
 	mv $(@D)/mame2010_libretro.info				$(TARGET_DIR)/usr/share/libretro/info/mame0139_libretro.info
 	mv $(@D)/mednafen_pce_fast_libretro.info	$(TARGET_DIR)/usr/share/libretro/info/pce_fast_libretro.info
