@@ -259,12 +259,13 @@ class HypseusSingeGenerator(Generator):
                         commandArray.extend(["-manymouse"]) # this is causing issues on some "non-gun" games
 
         # bezels
-        if bezelRequired:
-            if not os.path.exists(bezelPath):
-                commandArray.extend(["-bezel", "default.png"])
-            else:
-                commandArray.extend(["-bezel", bezelFile])
-        
+        if system.getOptBoolean("hypseus_bezel")
+            if bezelRequired:
+                if not os.path.exists(bezelPath):
+                    commandArray.extend(["-bezel", "default.png"])
+                else:
+                    commandArray.extend(["-bezel", bezelFile])
+
         # Invert HAT Axis
         if system.isOptSet('hypseus_axis') and system.getOptBoolean("hypseus_axis"):
             commandArray.append("-tiphat")
