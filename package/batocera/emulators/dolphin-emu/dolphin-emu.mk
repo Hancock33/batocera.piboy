@@ -3,8 +3,8 @@
 # dolphin-emu
 #
 ################################################################################
-# Version: Commits on May 26, 2024
-DOLPHIN_EMU_VERSION = 85826440580a4e90e3fda9d9f08116b4e5b1981f
+# Version: Commits on May 28, 2024
+DOLPHIN_EMU_VERSION = 8ac22378a18217859f518ca6a07119ecea8c9cb7
 DOLPHIN_EMU_SITE = https://github.com/dolphin-emu/dolphin
 DOLPHIN_EMU_SITE_METHOD = git
 DOLPHIN_EMU_LICENSE = GPLv2+

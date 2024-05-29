@@ -7726,6 +7726,11 @@ hypseus-singe:
             choices:
                 "Off":                          0
                 "On":                           1
+        hypseus_bezel:
+          group: VIDEO SETTINGS
+          prompt: DECORATIONS
+          description: Show game Bezel
+          preset: switchon
   systems:
     singe:
       cfeatures:
