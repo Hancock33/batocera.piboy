@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/drm_edid.c b/drivers/gpu/drm/drm_edid.c
-index 923c4423151c..3acdc264d6b0 100644
+index 9064cdeb1319..44549ea334f3 100644
 --- a/drivers/gpu/drm/drm_edid.c
 +++ b/drivers/gpu/drm/drm_edid.c
 @@ -2176,7 +2176,10 @@ drm_do_probe_ddc_edid(void *data, u8 *buf, unsigned int block, size_t len)
