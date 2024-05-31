@@ -15,9 +15,11 @@ Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|69c2c53ca728097d1952a70f91
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|eb317378e3cf75776c4c6b7fa45e03ca8a66f027|May 31, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|e5ce88f00782a27d8edeedce81c05eb215309a67|May 31, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|a99d335edd42fdbe9fc6a7e3b95e2855667c1dda|May 31, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240531|May 31, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|dde85b761b43c5fecb89177b09d6e596e6338a0c|May 31, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|3195c332d7c92d600add02ff624930b41ce90e8d|May 31, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|b6c970d021dd4f89f184ff78a71723bbc09c6258|May 31, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240531|May 31, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|9c1dc18b678563debd16d31bc5231c2c27357b8f|May 31, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|caf14c1b7c1476c519c67e9a480957a3cad8fad0|May 31, 2024
 Gpu|[vulkan-volk](http://github.com/zeux/volk)|16c2936b6dfa6d4523540e3511df4b9a2895c24d|May 31, 2024
@@ -30,6 +32,7 @@ Emulators|[lightspark](http://github.com/lightspark/lightspark)|7ed554726d62d072
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|0b2881c8a61bee4604bcbdfd83d54233b82a0633|May 30, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|f2f8bba081625a30ae5c80516a06f28719b788eb|May 30, 2024
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|543f716da3ca633609cc63caa2dd82448d11488a|May 30, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|b6eada5e2f9e3c86c18df118cddd20e6212f64de|May 30, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|b90ad091f2880308801d151113277b2168f31d21|May 30, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|9121fcdc975dbf31a8eec8b2a41922402e5321a2|May 30, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|1cece3a761cf7aa2da254e21ab8f14cd2209a68d|May 29, 2024
@@ -61,8 +64,6 @@ Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-
 Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64plus-video-glide64mk2)|992b5942078fe77987e8c40bcd396f44be19be2b|May 27, 2024
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|1d41a6f8e2a8753cd9b9e970bac002465b3f145d|May 27, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|74040732a4ab209edfcbaaee79d73d6608456da6|May 27, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240527|May 27, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240527|May 27, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|c707b418efec4f27e8ba66cd008d66e36188f645|May 27, 2024
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|529f4dd9fb2877a808abd11b2d6e94427cdda484|May 26, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|1bd2e5036c3730f53934fe780f0510355b91fd93|May 26, 2024
@@ -81,7 +82,6 @@ Ports|[yquake2](http://github.com/yquake2/yquake2)|7ffcd990c46912a2453be402cfe4d
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|f7d733b935be185da633be660c73d8f91d6c6883|May 24, 2024
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|66a74d08f4ee4674377ca3ffecfec9744ff9e290|May 24, 2024
 Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|361d7b46bc75c1c9fb531aefb4329ba66745b540|May 24, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|b210a204137dec8d2126ca909d762454fd47e963|May 24, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|c83001589f0bcbf8be04050d9a60839f0f8c4b4a|May 24, 2024
 Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|31ccb0c2b634e73355a00086901c0d464846b90a|May 23, 2024
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|9d412db570d3291829b308e6d1ac17f04acdda17|May 23, 2024
