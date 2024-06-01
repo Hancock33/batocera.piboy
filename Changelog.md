@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240601|Jun 06, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240601|Jun 01, 2024
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|60d03476d002c92fe3d5dfffb548e5247a5a78a8|May 31, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|7f3de64ef8d4816eaeab2694fc47fc6592666de8|May 31, 2024
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|44f6ce5dedb138ded8e59d71df18cae5b0655eba|May 31, 2024
@@ -15,11 +17,10 @@ Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|69c2c53ca728097d1952a70f91
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|eb317378e3cf75776c4c6b7fa45e03ca8a66f027|May 31, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|e5ce88f00782a27d8edeedce81c05eb215309a67|May 31, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|a99d335edd42fdbe9fc6a7e3b95e2855667c1dda|May 31, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240531|May 31, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|951e0e27a743e52c75c7fedc0b1eaa9eb77e6bb6|May 31, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|dde85b761b43c5fecb89177b09d6e596e6338a0c|May 31, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|3195c332d7c92d600add02ff624930b41ce90e8d|May 31, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|b6c970d021dd4f89f184ff78a71723bbc09c6258|May 31, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240531|May 31, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|9c1dc18b678563debd16d31bc5231c2c27357b8f|May 31, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|caf14c1b7c1476c519c67e9a480957a3cad8fad0|May 31, 2024
 Gpu|[vulkan-volk](http://github.com/zeux/volk)|16c2936b6dfa6d4523540e3511df4b9a2895c24d|May 31, 2024
@@ -32,7 +33,6 @@ Emulators|[lightspark](http://github.com/lightspark/lightspark)|7ed554726d62d072
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|0b2881c8a61bee4604bcbdfd83d54233b82a0633|May 30, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|f2f8bba081625a30ae5c80516a06f28719b788eb|May 30, 2024
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|543f716da3ca633609cc63caa2dd82448d11488a|May 30, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|b6eada5e2f9e3c86c18df118cddd20e6212f64de|May 30, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|b90ad091f2880308801d151113277b2168f31d21|May 30, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|9121fcdc975dbf31a8eec8b2a41922402e5321a2|May 30, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|1cece3a761cf7aa2da254e21ab8f14cd2209a68d|May 29, 2024
