@@ -9394,10 +9394,9 @@ msgstr "8x 5K (5120x4224)"
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid ""
-"Compile shaders on next launch of game (one time). Reduces micro-freezes."
+"Compile shaders on next launch of game (one time). Reduces micro-freezes. "
+"Vulkan only."
 msgstr ""
-"Compila os shaders na próxima inicialização do jogo (uma vez). Reduz mini-"
-"congelamentos."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17413,6 +17412,13 @@ msgstr "Guardar Rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Compile shaders on next launch of game (one time). Reduces micro-freezes."
+#~ msgstr ""
+#~ "Compila os shaders na próxima inicialização do jogo (uma vez). Reduz mini-"
+#~ "congelamentos."
 
 #~ msgctxt "game_options"
 #~ msgid "Off (default)"

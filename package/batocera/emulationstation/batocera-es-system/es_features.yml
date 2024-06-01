@@ -7883,7 +7883,7 @@ dolphin:
         wait_for_shaders:
             submenu: RENDERING
             prompt: PRE-CACHE SHADERS
-            description: Compile shaders on next launch of game (one time). Reduces micro-freezes.
+            description: Compile shaders on next launch of game (one time). Reduces micro-freezes. Vulkan only.
             preset: switchoff
         anisotropic_filtering:
             submenu: RENDERING
@@ -7962,7 +7962,7 @@ dolphin:
             group: CONTROLS
             prompt: RUMBLE
             description: Enable controller rumble capabilities if supported by the controller.
-            preset: switchon
+            preset: switchoff
         dolphin_port_1_type:
             group: CONTROLS
             submenu: GAMECUBE CONTROLLER 1
