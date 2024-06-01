@@ -10381,11 +10381,11 @@ msgid "8x 5K (5120x4224)"
 msgstr "5K 8개(5120x4224)"
 
 #. TRANSLATION: dolphin
-#, fuzzy
 msgctxt "game_options"
 msgid ""
-"Compile shaders on next launch of game (one time). Reduces micro-freezes."
-msgstr "다음 게임 실행(한 번)에 셰이더를 컴파일합니다. 미세 동결을 줄입니다."
+"Compile shaders on next launch of game (one time). Reduces micro-freezes. "
+"Vulkan only."
+msgstr ""
 
 #. TRANSLATION: dolphin
 #, fuzzy
@@ -18460,6 +18460,13 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GZDOOM 조이스틱 구성 사용"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Compile shaders on next launch of game (one time). Reduces micro-freezes."
+#~ msgstr ""
+#~ "다음 게임 실행(한 번)에 셰이더를 컴파일합니다. 미세 동결을 줄입니다."
 
 #, fuzzy
 #~ msgctxt "game_options"
