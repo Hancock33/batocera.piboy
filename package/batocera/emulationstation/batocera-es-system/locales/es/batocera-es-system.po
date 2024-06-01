@@ -40,7 +40,7 @@ msgstr "Alto Rendimiento"
 #. TRANSLATION: shared, shared
 msgctxt "game_options"
 msgid "Balanced"
-msgstr "Balanceado"
+msgstr "Equilibrado"
 
 #. TRANSLATION: shared, shared
 msgctxt "game_options"
@@ -168,7 +168,7 @@ msgstr "GUARDAR/CARGAR AUTOMÁTICAMENTE AL INICIAR JUEGO"
 #. TRANSLATION: shared, shared, shared
 msgctxt "game_options"
 msgid "GAME RENDERING & SHADERS"
-msgstr "RENDERIZACIÓN DE JUEGOS Y SHADERS"
+msgstr "RENDERIZADO DE JUEGOS Y SHADERS"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -197,7 +197,7 @@ msgstr "Aumenta el tamaño de la imagen sólo en múltiplos enteros."
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "INTEGER SCALING (PIXEL PERFECT)"
-msgstr "ESCALADO DE ENTEROS (PIXEL PERFECT)"
+msgstr "ESCALADO POR ENTEROS (PIXEL PERFECT)"
 
 #. TRANSLATION: shared, shared, shared, shared, shared, ...
 msgctxt "game_options"
@@ -788,7 +788,7 @@ msgstr "MODELO DE CPC"
 #. TRANSLATION: libretro/cap32, libretro/dosbox_pure, libretro/np2kai, libretro/uae4arm, libretro/px68k, ...
 msgctxt "game_options"
 msgid "EMULATED RAM SIZE"
-msgstr "TAMAÑO DE RAM"
+msgstr "TAMAÑO DE RAM EMULADO"
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
@@ -9085,11 +9085,6 @@ msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 msgstr ""
 "Oculta puntos de mira en juegos compatibles, por ej. ActionMax, Maddog II."
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "LIGHT GUNS"
-msgstr "PISTOLAS (LIGHT GUNS)"
-
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
@@ -9116,6 +9111,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "ENTRADA DE RATÓN ABSOLUTA"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "LIGHT GUNS"
+msgstr "PISTOLAS (LIGHT GUNS)"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -9151,11 +9151,59 @@ msgstr "0 grados"
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid ""
-"Use with the stretch aspect ratio and adjust joystick sensitivity as "
-"required."
+"Enable or disable bezels being added when content is a 4:3 aspect with a "
+"widescreen display."
 msgstr ""
-"Usar con relación de aspecto estirada y ajuste la sensibilidad del joystick "
-"según sea necesario."
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "BEZELS"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "Shunt 2"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "Shunt 3"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "Shunt 4"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "Shunt 5"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "Shunt 6"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "Shunt 7"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "Shunt 8"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "Shunt 9"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "Shunt 10"
+msgstr ""
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -9189,11 +9237,6 @@ msgstr "Utiliza ajustes del mando definidos manualmente en custom.ini ."
 msgctxt "game_options"
 msgid "CUSTOM CONTROLLER"
 msgstr "MANDO PERSONALIZADO"
-
-#. TRANSLATION: hypseus-singe
-msgctxt "game_options"
-msgid "Show game Bezel"
-msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin, dolphin, ...
 msgctxt "game_options"
@@ -16842,6 +16885,10 @@ msgstr "Guardado rápido"
 #~ "llenar sólo el espacio no utilizado."
 
 #~ msgctxt "game_options"
+#~ msgid "Tandy Radio Shack Color Computer cassettes"
+#~ msgstr "Cassettes Tandy Radio Shack Color Computer"
+
+#~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
 #~ msgstr "Cartuchos Tandy Radio Shack Color Computer"
 
@@ -17396,6 +17443,14 @@ msgstr "Guardado rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rápido"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use with the stretch aspect ratio and adjust joystick sensitivity as "
+#~ "required."
+#~ msgstr ""
+#~ "Usar con relación de aspecto estirada y ajuste la sensibilidad del "
+#~ "joystick según sea necesario."
 
 #~ msgctxt "game_options"
 #~ msgid "Adjust the cpu power profile while in-game."
