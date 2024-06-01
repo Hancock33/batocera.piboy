@@ -169,21 +169,43 @@ class FlycastGenerator(Generator):
         # Guns (WIP)
         # Guns crosshairs
         if system.isOptSet("flycast_lightgun1_crosshair"):
-             Config.set("config", "rend.CrossHairColor1", + str(system.config["flycast_lightgun1_crosshair"]))
+            Config.set("config", "rend.CrossHairColor1", + str(system.config["flycast_lightgun1_crosshair"]))
         else:
-             Config.set("config", "rend.CrossHairColor1", "0")
+            Config.set("config", "rend.CrossHairColor1", "0")
         if system.isOptSet("flycast_lightgun2_crosshair"):
-             Config.set("config", "rend.CrossHairColor2", + str(system.config["flycast_lightgun2_crosshair"]))
+            Config.set("config", "rend.CrossHairColor2", + str(system.config["flycast_lightgun2_crosshair"]))
         else:
-             Config.set("config", "rend.CrossHairColor2", "0")
+            Config.set("config", "rend.CrossHairColor2", "0")
         if system.isOptSet("flycast_lightgun3_crosshair"):
-             Config.set("config", "rend.CrossHairColor3", + str(system.config["flycast_lightgun3_crosshair"]))
+            Config.set("config", "rend.CrossHairColor3", + str(system.config["flycast_lightgun3_crosshair"]))
         else:
-             Config.set("config", "rend.CrossHairColor3", "0")
+            Config.set("config", "rend.CrossHairColor3", "0")
         if system.isOptSet("flycast_lightgun4_crosshair"):
-             Config.set("config", "rend.CrossHairColor4", + str(system.config["flycast_lightgun4_crosshair"]))
+            Config.set("config", "rend.CrossHairColor4", + str(system.config["flycast_lightgun4_crosshair"]))
         else:
-             Config.set("config", "rend.CrossHairColor4", "0")
+            Config.set("config", "rend.CrossHairColor4", "0")
+
+        # Retroachievements
+        if not Config.has_section("achievements"):
+            Config.add_section("achievements")
+        
+        if system.isOptSet('retroachievements') and system.getOptBoolean('retroachievements') == True:
+            headers   = {"Content-type": "text/plain", "User-Agent": "Batocera.linux"}
+            login_url = "https://retroachievements.org/"
+            username  = system.config.get('retroachievements.username', "")
+            password  = system.config.get('retroachievements.password', "")
+            hardcore  = system.config.get('retroachievements.hardcore', "")
+            token     = system.config.get('retroachievements.token', "")
+            # apply config            
+            Config.set("achievements", "Enabled", "yes")
+            if hardcore == '1':
+                Config.set("achievements", "HardcoreMode", "yes")
+            else:
+                Config.set("achievements", "HardcoreMode", "no")
+                Config.set("achievements", "Token", token)
+                Config.set("achievements", "UserName" , username)
+        else:
+            Config.set("achievements", "Enabled", "no")
 
         # custom : allow the user to configure directly emu.cfg via batocera.conf via lines like : dreamcast.flycast.section.option=value
         for user_config in system.config:
@@ -194,7 +216,7 @@ class FlycastGenerator(Generator):
                 custom_option = section_option[section_option_splitter+1:]
                 if not Config.has_section(custom_section):
                     Config.add_section(custom_section)
-                Config.set(custom_section, custom_option, system.config[user_config])
+                    Config.set(custom_section, custom_option, system.config[user_config])
 
         ### update the configuration file
         if not os.path.exists(os.path.dirname(batoceraFiles.flycastConfig)):
