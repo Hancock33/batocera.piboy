@@ -27,7 +27,10 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|e5ce88f00782a27d8edeedce81
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|f0c41cdc4f11640798f1e34623a13632d0c700e5|May 31, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|b3f2ab0e9622fc79b1133287364fc966cefeee50|May 31, 2024
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|903eace91303a2a6210805c793a1572a93315fb6|May 31, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|9.10|May 31, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|wine-9.10|May 31, 2024
+Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-9.10|May 31, 2024
+Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|6390ca6f55bbc80290de0c8f6f45ad3852e09061|May 31, 2024
+Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.10|May 31, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|2970ed5bfd1d418573613077880af1bd379d3d61|May 31, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|3195c332d7c92d600add02ff624930b41ce90e8d|May 31, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|9c1dc18b678563debd16d31bc5231c2c27357b8f|May 31, 2024
@@ -122,9 +125,6 @@ Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|414149d335ce2a3284db6cdffbb8ed2ce42dbe5f|May 17, 2024
 Emulators|[libretro-beetle-supergrafx](http://github.com/libretro/beetle-supergrafx-libretro)|c96c05c0b6e948df00da7e6253ff3e2874314baa|May 17, 2024
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|238b195bca073bc1a2032c4e92c097d157e521f8|May 17, 2024
-Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-9.9|May 17, 2024
-Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.9|May 17, 2024
-Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|experimental-wine-9.0-20240516|May 16, 2024
 Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|0bfca44a932fb6ad255d76cd2eda5fcbc2b01940|May 16, 2024
 Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|0d1c8667a409cf284aea98c1ac6786bbc826fdf1|May 15, 2024
 Emulators|[hatari](http://github.com/hatari/hatari)|3bbaa031e59e25df17e15e79dd082945e0c132c6|May 15, 2024
