@@ -3,6 +3,7 @@
 # flycast
 #
 ################################################################################
+
 # Version: Commits on May 31, 2024
 FLYCAST_VERSION = 95de83431b9a9a1a3cc3dd042e72a3c10154480c
 FLYCAST_SITE = https://github.com/flyinghead/flycast.git
@@ -18,6 +19,8 @@ FLYCAST_CONF_OPTS += -DLIBRETRO=OFF
 FLYCAST_CONF_OPTS += -DUSE_HOST_GLSLANG=OFF
 FLYCAST_CONF_OPTS += -DUSE_HOST_SDL=ON
 FLYCAST_CONF_OPTS += -DWITH_SYSTEM_ZLIB=ON
+FLYCAST_CONF_OPTS += -DUSE_DX9=OFF
+FLYCAST_CONF_OPTS += -DUSE_DX11=OFF
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 	FLYCAST_CONF_OPTS += -DUSE_OPENGL=ON
