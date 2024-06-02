@@ -3,14 +3,15 @@
 # libretro-core-info
 #
 ################################################################################
-# Version: Commits on Apr 19, 2024
-LIBRETRO_CORE_INFO_VERSION = a0a5dff2a11313ee4a757df689260300a616e38a
+# Version: Commits on May 31, 2024
+LIBRETRO_CORE_INFO_VERSION = 60d03476d002c92fe3d5dfffb548e5247a5a78a8
 LIBRETRO_CORE_INFO_SITE = $(call github,libretro,libretro-core-info,$(LIBRETRO_CORE_INFO_VERSION))
 LIBRETRO_CORE_INFO_LICENSE = MIT
 
 define LIBRETRO_CORE_INFO_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	mv $(@D)/bsnes_hd_beta_libretro.info		$(TARGET_DIR)/usr/share/libretro/info/bsnes_hd_libretro.info
+	cp $(@D)/fbalpha2012_libretro.info			$(TARGET_DIR)/usr/share/libretro/info/fbalpha_libretro.info
 	cp $(@D)/flycast_libretro.info				$(TARGET_DIR)/usr/share/libretro/info/flycast-next_libretro.info
 	cp $(@D)/flycast_libretro.info				$(TARGET_DIR)/usr/share/libretro/info/flycast2021_libretro.info
 	cp $(@D)/flycast_libretro.info				$(TARGET_DIR)/usr/share/libretro/info/flycast2022_libretro.info
@@ -18,6 +19,7 @@ define LIBRETRO_CORE_INFO_INSTALL_TARGET_CMDS
 	mv $(@D)/genesis_plus_gx_wide_libretro.info $(TARGET_DIR)/usr/share/libretro/info/genesisplusgx-wide_libretro.info
 	cp $(@D)/mame_libretro.info					$(TARGET_DIR)/usr/share/libretro/info/mess_libretro.info
 	mv $(@D)/mame_libretro.info					$(TARGET_DIR)/usr/share/libretro/info/mamevirtual_libretro.info
+	cp $(@D)/mame2000_libretro.info				$(TARGET_DIR)/usr/share/libretro/info/imame4all_libretro.info
 	mv $(@D)/mame2003_plus_libretro.info		$(TARGET_DIR)/usr/share/libretro/info/mame078plus_libretro.info
 	mv $(@D)/mame2010_libretro.info				$(TARGET_DIR)/usr/share/libretro/info/mame0139_libretro.info
 	mv $(@D)/mednafen_pce_fast_libretro.info	$(TARGET_DIR)/usr/share/libretro/info/pce_fast_libretro.info
