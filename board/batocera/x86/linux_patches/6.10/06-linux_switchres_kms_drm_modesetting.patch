@@ -281,18 +281,10 @@ index d40ca486d775..768b78822d7f 100644
  EXPORT_SYMBOL(drm_connector_list_update);
  
 diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
-index 3c0a358c193c..d888ca025030 100644
+index 3c0a358c193c..c58d88b583ac 100644
 --- a/drivers/gpu/drm/drm_probe_helper.c
 +++ b/drivers/gpu/drm/drm_probe_helper.c
-@@ -15,7 +15,6 @@
-  * is" without express or implied warranty.
-  *
-  * THE COPYRIGHT HOLDERS DISCLAIM ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
-- * INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO
-  * EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY SPECIAL, INDIRECT OR
-  * CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
-  * DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
-@@ -378,6 +377,23 @@ drm_helper_probe_detect_ctx(struct drm_connector *connector, bool force)
+@@ -378,6 +378,23 @@ drm_helper_probe_detect_ctx(struct drm_connector *connector, bool force)
  	return ret;
  }
  
@@ -316,7 +308,16 @@ index 3c0a358c193c..d888ca025030 100644
  /**
   * drm_helper_probe_detect - probe connector status
   * @connector: connector to probe
-@@ -595,6 +611,10 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
+@@ -578,6 +595,8 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
+ 
+ 	drm_modeset_acquire_init(&ctx, 0);
+ 
++	DRM_DEBUG_KMS("[CONNECTOR:%d:%s] called by %ps\n", connector->base.id,
++			connector->name, __builtin_return_address(0));
+ 	drm_dbg_kms(dev, "[CONNECTOR:%d:%s]\n", connector->base.id,
+ 		    connector->name);
+ 
+@@ -595,6 +614,10 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
  
  	old_status = connector->status;
  
@@ -327,15 +328,22 @@ index 3c0a358c193c..d888ca025030 100644
  	if (connector->force) {
  		if (connector->force == DRM_FORCE_ON ||
  		    connector->force == DRM_FORCE_ON_DIGITAL)
-@@ -709,7 +729,7 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
- 		return 0;
+@@ -710,8 +733,13 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
  
  	drm_mode_sort(&connector->modes);
--
-+	
- 	drm_dbg_kms(dev, "[CONNECTOR:%d:%s] probed modes:\n",
- 		    connector->base.id, connector->name);
  
+-	drm_dbg_kms(dev, "[CONNECTOR:%d:%s] probed modes:\n",
+-		    connector->base.id, connector->name);
++	DRM_DEBUG_KMS("[CONNECTOR:%d:%s] final user_modes :\n", connector->base.id,
++			connector->name);
++	list_for_each_entry(mode, &connector->user_modes, head) {
++		drm_mode_set_crtcinfo(mode, CRTC_INTERLACE_HALVE_V);
++		drm_mode_debug_printmodeline(mode);
++	}
++	DRM_DEBUG_KMS("[CONNECTOR:%d:%s] final modes :\n", connector->base.id, connector->name);
+ 
+ 	list_for_each_entry(mode, &connector->modes, head) {
+ 		drm_mode_set_crtcinfo(mode, CRTC_INTERLACE_HALVE_V);
 diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
 index ce1d94bf0f7c..a145d020a54a 100644
 --- a/include/drm/drm_connector.h

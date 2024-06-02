@@ -88,7 +88,7 @@ index 44616ffe0af5..4d075b15976e 100644
  	  This option optimizes the scheduler for common desktop workloads by
  	  automatically creating and populating task groups.  This separation
 diff --git a/kernel/Kconfig.hz b/kernel/Kconfig.hz
-index 0f78364efd4f..75ba65935b26 100644
+index 0f78364efd4f..fea81b1de644 100644
 --- a/kernel/Kconfig.hz
 +++ b/kernel/Kconfig.hz
 @@ -5,7 +5,7 @@
@@ -100,7 +100,7 @@ index 0f78364efd4f..75ba65935b26 100644
  	help
  	 Allows the configuration of the timer frequency. It is customary
  	 to have the timer interrupt run at 1000 Hz but 100 Hz may be more
-@@ -54,6 +54,13 @@ choice
+@@ -61,6 +61,13 @@ choice
  	 on desktops with good smoothness without increasing CPU power
  	 consumption and sacrificing the battery life on laptops.
  
@@ -111,8 +111,8 @@ index 0f78364efd4f..75ba65935b26 100644
 +	 No need to increase it since the HighRes clock handles
 +	 the task preemption in 105us max.
 +
- 	config HZ_750
- 		bool "750 HZ"
+ 	config HZ_1000
+ 		bool "1000 HZ"
  	help
 @@ -76,6 +83,7 @@ config HZ
  	default 300 if HZ_300
