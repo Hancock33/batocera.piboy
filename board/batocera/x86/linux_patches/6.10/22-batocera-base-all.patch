@@ -1,8 +1,8 @@
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index 500cfa776225..20e9ec18c622 100644
+index b600df82669d..b3a9d61a53be 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
-@@ -2232,6 +2232,9 @@
+@@ -2254,6 +2254,9 @@
  			disable
  			  Do not enable intel_pstate as the default
  			  scaling driver for the supported processors
@@ -12,7 +12,7 @@ index 500cfa776225..20e9ec18c622 100644
                          active
                            Use intel_pstate driver to bypass the scaling
                            governors layer of cpufreq and provides it own
-@@ -4450,6 +4453,15 @@
+@@ -4472,6 +4475,15 @@
  		nomsi		[MSI] If the PCI_MSI kernel config parameter is
  				enabled, this kernel boot option can be used to
  				disable the use of MSI interrupts system-wide.
@@ -522,7 +522,7 @@ index 000000000000..767844637a7d
 +  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index d6c90161c7bf..7a3cb08e1a13 100644
+index 8754ac2c259d..282279b21283 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -15999,6 +15999,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
@@ -12470,10 +12470,10 @@ index d58fc022ec46..ebb7de0cd73f 100644
 +
  #endif /* _LINUX_AMD_PSTATE_H */
 diff --git a/include/linux/pagemap.h b/include/linux/pagemap.h
-index 3d69589c00a4..0acc1ce2ae25 100644
+index ee633712bba0..77d601318008 100644
 --- a/include/linux/pagemap.h
 +++ b/include/linux/pagemap.h
-@@ -1262,7 +1262,7 @@ struct readahead_control {
+@@ -1270,7 +1270,7 @@ struct readahead_control {
  		._index = i,						\
  	}
  
@@ -34872,7 +34872,7 @@ index 9c04a9c8be9d..2c89efbc8ddf 100644
  	    tcp_in_quickack_mode(sk) ||
  	    /* Protocol state mandates a one-time immediate ACK */
 diff --git a/net/ipv4/tcp_minisocks.c b/net/ipv4/tcp_minisocks.c
-index b93619b2384b..567b991384d4 100644
+index 538c06f95918..e4c861c071ae 100644
 --- a/net/ipv4/tcp_minisocks.c
 +++ b/net/ipv4/tcp_minisocks.c
 @@ -460,6 +460,8 @@ void tcp_ca_openreq_child(struct sock *sk, const struct dst_entry *dst)
