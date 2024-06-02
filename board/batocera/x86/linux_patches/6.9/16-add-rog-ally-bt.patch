@@ -1,5 +1,5 @@
 diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
-index 01b99471d1bb..a08cc06ff388 100644
+index fb716849b60f..6f273af516b9 100644
 --- a/drivers/bluetooth/btusb.c
 +++ b/drivers/bluetooth/btusb.c
 @@ -664,6 +664,9 @@ static const struct usb_device_id quirks_table[] = {

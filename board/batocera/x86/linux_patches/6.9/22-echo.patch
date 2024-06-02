@@ -1933,7 +1933,7 @@ index 000000000000..6b3d51b4366c
 +
 +}
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 7019a40457a6..7cc0627850a0 100644
+index d211d40a2edc..ff2d09b2e129 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -4534,6 +4534,12 @@ static void __sched_fork(unsigned long clone_flags, struct task_struct *p)

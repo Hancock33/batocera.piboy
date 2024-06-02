@@ -18,9 +18,12 @@ class Eduke32Generator(Generator):
             edukegroup=open(rom).readline().rstrip()
             edukerom=rom.replace('.eduke', '.GRP').replace('.EDUKE', '.GRP')
 
-            commandArray = ["eduke32", edukerom, "-game_dir", os.path.dirname(os.path.abspath(rom)), "-g", edukegroup, "-rts", rtsfile, "-nologo" if system.getOptBoolean("nologo") else ""]
+            commandArray = ["eduke32", edukerom, "-game_dir", os.path.dirname(os.path.abspath(rom)), "-g", edukegroup, "-rts", rtsfile]
         else:
-            commandArray = ["eduke32", rom, "-game_dir", os.path.dirname(os.path.abspath(rom)), "-rts", rtsfile, "-nologo" if system.getOptBoolean("nologo") else ""]
+            commandArray = ["eduke32", rom, "-game_dir", os.path.dirname(os.path.abspath(rom)), "-rts", rtsfile]
+
+        if system.isOptSet("nologo") == False:
+            commandArray.extend(["-nologo"])
 
         if os.path.isfile('/tmp/piboy') and not os.path.isfile('/tmp/piboy_xrs'):
             os.system('piboy_keys eduke32.keys')

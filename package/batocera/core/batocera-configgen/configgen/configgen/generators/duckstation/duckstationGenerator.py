@@ -45,6 +45,8 @@ class DuckstationGenerator(Generator):
         settings.set("Main", "ConfirmPowerOff", "false")
         # Force applying game Settings fixes
         settings.set("Main","ApplyGameSettings", "true")
+        # Remove wizard
+        settings.set("Main","SetupWizardIncomplete", "false")
         # overclock
         if system.isOptSet("duckstation_clocking"):
             settings.set("Main","EmulationSpeed", system.config["duckstation_clocking"])
@@ -427,7 +429,7 @@ class DuckstationGenerator(Generator):
                 if system.isOptSet("duckstation_digitalmode"):
                     settings.set(pad_num, "AnalogDPadInDigitalMode", system.config["duckstation_digitalmode"])
                     if system.isOptSet("duckstation_" + ctrl_num) and system.config["duckstation_" + ctrl_num] == "AnalogController":
-                        settings.set(pad_num, "Analog", sdl_num+"/Guide & "+sdl_num+"/+LeftTrigger")
+                        settings.set(pad_num, "Analog", sdl_num+"/Guide")
                 else:
                     settings.set(pad_num, "AnalogDPadInDigitalMode", "false")
                 # NeGcon ?
@@ -444,7 +446,21 @@ class DuckstationGenerator(Generator):
                 if system.isOptSet("use_guns") and system.getOptBoolean("use_guns") and len(guns) > 0:
                     settings.set(pad_num, "Type", "GunCon")
                     settings.set(pad_num, "Trigger", gun_num+"/LeftButton")
-                    settings.set(pad_num, "A", gun_num+"/RightButton")
+
+                    ### find a keyboard key to simulate the action of the player (always like button 2) ; search in batocera.conf, else default config
+                    pedalsKeys = {1: "c", 2: "v", 3: "b", 4: "n"}
+                    pedalkey = None
+                    pedalcname = "controllers.pedals{}".format(nplayer)
+                    if pedalcname in system.config:
+                        pedalkey = system.config[pedalcname]
+                    else:
+                        if nplayer in pedalsKeys:
+                            pedalkey = pedalsKeys[nplayer]
+                    if pedalkey is None:
+                        settings.set(pad_num, "A", gun_num+"/RightButton")
+                    else:
+                        settings.set(pad_num, "A", gun_num+"/RightButton & Keyboard/"+pedalkey.upper())
+                    ###
                     settings.set(pad_num, "B", gun_num+"/MiddleButton")
                     if system.isOptSet("duckstation_" + ctrl_num) and system.config["duckstation_" + ctrl_num] == "GunCon":
                         settings.set(pad_num, "Trigger", sdl_num+"/+RightTrigger")

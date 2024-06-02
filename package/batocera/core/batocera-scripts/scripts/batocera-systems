@@ -832,6 +832,10 @@ systems = {
                                                          { "md5": "b52e39d0a0377c098b33957a1ad3ba88", "zippedFile": "stv110.bin",     "file": "roms/st-v/stvbios.zip" },
                                                          { "md5": "8e0a1096fc6593eeb508e1159bbdd70c", "zippedFile": "stv1061.bin",    "file": "roms/st-v/stvbios.zip" },
                                                          { "md5": "a9ad871282e209b47adbdcb28241c02e", "zippedFile": "stvbios.nv",     "file": "roms/st-v/stvbios.zip" } ] },
+
+    # ---------- Sega Chihiro ---------- #
+    "chihiro": { "name": "Sega Chihiro", "biosFiles": [{ "md5": "d49c52a4102f6df7bcf8d0617ac475ed", "file": "bios/mcpx_1.0.bin" },
+                                                       { "md5": "f23d7e00ae8fbf88908ed1f9165f35eb", "file": "bios/cerbios.bin" }] },
 }
 
 class BiosStatus:

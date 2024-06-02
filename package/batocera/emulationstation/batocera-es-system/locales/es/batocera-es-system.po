@@ -40,7 +40,7 @@ msgstr "Alto Rendimiento"
 #. TRANSLATION: shared, shared
 msgctxt "game_options"
 msgid "Balanced"
-msgstr "Balanceado"
+msgstr "Equilibrado"
 
 #. TRANSLATION: shared, shared
 msgctxt "game_options"
@@ -168,7 +168,7 @@ msgstr "GUARDAR/CARGAR AUTOMÁTICAMENTE AL INICIAR JUEGO"
 #. TRANSLATION: shared, shared, shared
 msgctxt "game_options"
 msgid "GAME RENDERING & SHADERS"
-msgstr "RENDERIZACIÓN DE JUEGOS Y SHADERS"
+msgstr "RENDERIZADO DE JUEGOS Y SHADERS"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -197,7 +197,7 @@ msgstr "Aumenta el tamaño de la imagen sólo en múltiplos enteros."
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "INTEGER SCALING (PIXEL PERFECT)"
-msgstr "ESCALADO DE ENTEROS (PIXEL PERFECT)"
+msgstr "ESCALADO POR ENTEROS (PIXEL PERFECT)"
 
 #. TRANSLATION: shared, shared, shared, shared, shared, ...
 msgctxt "game_options"
@@ -430,10 +430,15 @@ msgctxt "game_options"
 msgid "Use light guns instead of pads if light guns are connected."
 msgstr "Utilizar pistolas (light guns) en lugar de mandos si están conectadas."
 
-#. TRANSLATION: shared, shared, libretro/beetle-saturn, libretro/swanstation, libretro/fbneo, ...
+#. TRANSLATION: shared, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "LIGHT GUN"
-msgstr "LIGHT GUN"
+msgid "LIGHT GUNS"
+msgstr "PISTOLAS (LIGHT GUNS)"
+
+#. TRANSLATION: shared, shared, shared, shared, shared, ...
+msgctxt "game_options"
+msgid "CONTROLS"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -516,6 +521,11 @@ msgstr "0 (Sin ganancia)"
 msgctxt "game_options"
 msgid "Show/Hide guns borders for specific systems"
 msgstr "Muestra/Oculta los bordes de armas para juegos específicos"
+
+#. TRANSLATION: shared, libretro/beetle-saturn, libretro/swanstation, libretro/fbneo, libretro/fceumm, ...
+msgctxt "game_options"
+msgid "LIGHT GUN"
+msgstr "LIGHT GUN"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -788,7 +798,7 @@ msgstr "MODELO DE CPC"
 #. TRANSLATION: libretro/cap32, libretro/dosbox_pure, libretro/np2kai, libretro/uae4arm, libretro/px68k, ...
 msgctxt "game_options"
 msgid "EMULATED RAM SIZE"
-msgstr "TAMAÑO DE RAM"
+msgstr "TAMAÑO DE RAM EMULADO"
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
@@ -5877,7 +5887,7 @@ msgstr ""
 "Útil para mandos estilo N64. Atajos de acceso rápido limitados para mandos "
 "sin botón HOTKEY."
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, ...
 msgctxt "game_options"
 msgid "CONTROLLER 1"
 msgstr "MANDO 1"
@@ -5907,17 +5917,17 @@ msgctxt "game_options"
 msgid "Useful for N64 style controllers."
 msgstr "Útil para mandos estilo N64."
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, ...
 msgctxt "game_options"
 msgid "CONTROLLER 2"
 msgstr "MANDO 2"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, ...
 msgctxt "game_options"
 msgid "CONTROLLER 3"
 msgstr "MANDO 3"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, ...
 msgctxt "game_options"
 msgid "CONTROLLER 4"
 msgstr "MANDO 4"
@@ -7798,7 +7808,7 @@ msgctxt "game_options"
 msgid "160fps"
 msgstr "160fps"
 
-#. TRANSLATION: libretro/tyrquake, cemu, dolphin/vitaquake3, dolphin/vitaquake3, dolphin_triforce, ...
+#. TRANSLATION: libretro/tyrquake, cemu, dolphin, dolphin_triforce, openbor/openbor7530, ...
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr "VIBRACIÓN"
@@ -9085,11 +9095,6 @@ msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 msgstr ""
 "Oculta puntos de mira en juegos compatibles, por ej. ActionMax, Maddog II."
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "LIGHT GUNS"
-msgstr "PISTOLAS (LIGHT GUNS)"
-
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
@@ -9151,11 +9156,59 @@ msgstr "0 grados"
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid ""
-"Use with the stretch aspect ratio and adjust joystick sensitivity as "
-"required."
+"Enable or disable bezels being added when content is a 4:3 aspect with a "
+"widescreen display."
 msgstr ""
-"Usar con relación de aspecto estirada y ajuste la sensibilidad del joystick "
-"según sea necesario."
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "BEZELS"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "Shunt 2"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "Shunt 3"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "Shunt 4"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "Shunt 5"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "Shunt 6"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "Shunt 7"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "Shunt 8"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "Shunt 9"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe
+msgctxt "game_options"
+msgid "Shunt 10"
+msgstr ""
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -9198,9 +9251,16 @@ msgstr "PANTALLA"
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid ""
-"Enable GameCube boot animation and BIOS access (requires IPL.bin BIOS in "
+"Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
 "appropriate user directory)."
 msgstr ""
+"Habilita animación de arranque de Gamecube y el acceso a BIOS (requiere BIOS "
+"IPL.bin en directorio apropiado de usuario)."
+
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin, dolphin, dolphin, ...
+msgctxt "game_options"
+msgid "EMULATION"
+msgstr "EMULACIÓN"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
@@ -9209,8 +9269,8 @@ msgstr "ACTIVAR ANIMACIÓN DE ARRANQUE"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Change the Gamecube system language."
-msgstr "Cambiar el idioma del sistema de Gamecube."
+msgid "Change the GameCube system language."
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
@@ -9227,22 +9287,32 @@ msgctxt "game_options"
 msgid "Map your controller to an emulated Wii Remote."
 msgstr ""
 
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, ...
 msgctxt "game_options"
-msgid "EMULATE WII REMOTE"
+msgid "WII CONTROLLERS"
 msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "CUSTOMIZE EMULATED WII REMOTE & GAMEPAD"
+msgid "EMULATE WIIMOTE"
+msgstr "EMULAR WIIMOTE"
+
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Emulate a Wii Remote. Sideway with L2 for Shake and Nunchuk on R-stick."
 msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
+msgstr "PERSONALIZAR WIIMOTE Y GAMEPAD EMULADOS"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Classic Controller"
 msgstr "Mando Clásico"
 
-#. TRANSLATION: dolphin/vitaquake3
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Classic Controller Pro"
 msgstr "Mando clásico Pro"
@@ -9267,52 +9337,46 @@ msgctxt "game_options"
 msgid "Wii Remote Sideway + Nunchuk"
 msgstr ""
 
-#. TRANSLATION: dolphin/vitaquake3
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Position of wii sensor bar relative to the disaply for real wiimotes."
-msgstr ""
-"Posición de la barra de sensores de Wii en relación con la pantalla para "
-"wiimotes reales."
-
-#. TRANSLATION: dolphin/vitaquake3
-msgctxt "game_options"
-msgid "SENSOR BAR POSITION"
-msgstr "POSICIÓN DE LA BARRA DE SENSORES"
-
-#. TRANSLATION: dolphin/vitaquake3
-msgctxt "game_options"
-msgid "Bottom (Default)"
-msgstr "Abajo (defecto)"
-
-#. TRANSLATION: dolphin/vitaquake3
-msgctxt "game_options"
-msgid "Top"
-msgstr "Arriba"
-
-#. TRANSLATION: dolphin/vitaquake3
-msgctxt "game_options"
-msgid "Emulate the Wii Remote pointer with a DS4's gyroscope."
-msgstr ""
-
-#. TRANSLATION: dolphin/vitaquake3
-msgctxt "game_options"
-msgid "DUALSHOCK MOTION CONTROL"
-msgstr "CONTROL DE MOVIMIENTO DUALSHOCK"
-
-#. TRANSLATION: dolphin/vitaquake3
-msgctxt "game_options"
-msgid "Emulate the Wii Remote pointer with a mouse."
-msgstr ""
-
-#. TRANSLATION: dolphin/vitaquake3
-msgctxt "game_options"
-msgid "MOUSE AS WII REMOTE POINTER"
+msgid ""
+"Position of wii sensor bar relative to the disaply for real Wii Remotes."
 msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Enable controller rumble capabilities if supported by the controller."
-msgstr "Activar las capacidades de vibración del mando si el mando lo soporta."
+msgid "SENSOR BAR POSITION"
+msgstr "POSICIÓN DE LA BARRA DE SENSORES"
+
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Bottom (Default)"
+msgstr "Abajo (defecto)"
+
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Top"
+msgstr "Arriba"
+
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Emulate the Wii Remote pointer with a DS4's gyroscope."
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "DUALSHOCK MOTION CONTROL"
+msgstr "CONTROL DE MOVIMIENTO DUALSHOCK"
+
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Emulate the Wii Remote pointer with a mouse."
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "MOUSE AS Wii Remote POINTER"
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -9344,20 +9408,66 @@ msgstr "8x 5K (5120x4224)"
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid ""
-"Compile shaders on next launch of game (one time). Reduces micro-freezes."
+"Compile shaders on next launch of game (one time). Reduces micro-freezes. "
+"Vulkan only."
 msgstr ""
-"Compila sombreadores en el próximo lanzamiento del juego (una vez). Reduce "
-"las microcongelaciones."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "PRE-CACHE SHADERS"
 msgstr "PRECARGAR CACHÉ DE SHADERS"
 
+#. TRANSLATION: dolphin, dolphin_triforce, rpcs3, rtcw
+msgctxt "game_options"
+msgid "ANTI-ALIASING"
+msgstr "ANTI-ALIASING"
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
-msgid "Off (default)"
-msgstr "Off (Defecto)"
+msgid ""
+"Use SSAA instead of MSAA for anti-aliasing. SSAA may look better but has a "
+"higher performance cost."
+msgstr ""
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "ANTI-ALIASING MODE"
+msgstr "MODO ANTI-ALIASING"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid ""
+"Enabling will allow for correct emulation of texture wrapping. This comes at "
+"a cost of potential worse performance."
+msgstr ""
+"Habilitarlo permitirá la emulación correcta del ajuste de textura. Esto "
+"viene con un costo de posible peor desempeño."
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "MANUAL TEXTURE SAMPLING"
+msgstr "MUESTREO MANUAL DE TEXTURAS"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "Usually not much faster than single core mode."
+msgstr "Por lo general, no es mucho más rápido que el modo de un único núcleo."
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "DUAL CORE MODE"
+msgstr "MODO DUAL CORE"
+
+#. TRANSLATION: dolphin, dolphin_triforce
+msgctxt "game_options"
+msgid "Speed hack for dual core mode to fix some glitches."
+msgstr ""
+"Truco de velocidad para el modo doble núcleo para solucionar algunos fallos."
+
+#. TRANSLATION: dolphin, dolphin_triforce
+msgctxt "game_options"
+msgid "GPU SYNC"
+msgstr "SINCRONIZACIÓN DE GPU"
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -9370,6 +9480,43 @@ msgctxt "game_options"
 msgid "PERFORMANCE HACKS"
 msgstr "HACK DE RENDIMIENTO"
 
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
+msgstr ""
+"Para usar trucos de juegos o códigos de corrección de relación de aspecto "
+"16/9."
+
+#. TRANSLATION: dolphin, melonds
+msgctxt "game_options"
+msgid "ENABLE CHEATS"
+msgstr "ACTIVAR TRUCOS"
+
+#. TRANSLATION: dolphin, dolphin_triforce, mupen64plus, tsugaru
+msgctxt "game_options"
+msgid "Required by some games."
+msgstr "Requerido por algunos juegos."
+
+#. TRANSLATION: dolphin, dolphin_triforce
+msgctxt "game_options"
+msgid "MEMORY MANAGEMENT UNIT"
+msgstr "UNIDAD DE GESTIÓN DE MEMORIA"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid ""
+"Skips Vertical Blank Interrupts when lag is detected, allowing for smooth "
+"audio playback when emulation speed is not 100%."
+msgstr ""
+"Omite las Vertical Blank Interrupts cuando se detecta un retraso, lo que "
+"permite una suave reproducción de audio cuando la velocidad de emulación no "
+"es del 100%."
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "VBI SKIP"
+msgstr "OMITIR VBI"
+
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
@@ -9380,10 +9527,20 @@ msgctxt "game_options"
 msgid "USE PAD PROFILES"
 msgstr "USAR PERFILES DE MANDOS"
 
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "Enable controller rumble capabilities if supported by the controller."
+msgstr "Activar las capacidades de vibración del mando si el mando lo soporta."
+
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "Change what's plugged into the virtual GameCube ports."
 msgstr "Cambia lo que está conectado a los puertos virtuales de GameCube."
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+msgctxt "game_options"
+msgid "GAMECUBE CONTROLLER 1"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9415,15 +9572,30 @@ msgctxt "game_options"
 msgid "DK Bongos"
 msgstr "Bongos DK"
 
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+msgctxt "game_options"
+msgid "GAMECUBE CONTROLLER 2"
+msgstr ""
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "GAMECUBE PORT 2 TYPE"
 msgstr "TIPO DE PUERTO 2 DE GAMECUBE"
 
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+msgctxt "game_options"
+msgid "GAMECUBE CONTROLLER 3"
+msgstr ""
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "GAMECUBE PORT 3 TYPE"
 msgstr "TIPO DE PUERTO 3 DE GAMECUBE"
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+msgctxt "game_options"
+msgid "GAMECUBE CONTROLLER 4"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9452,113 +9624,6 @@ msgstr "Botones frontales (CW)"
 msgctxt "game_options"
 msgid "Face Buttons (CCW)"
 msgstr "Botones frontales (CCW)"
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid "Usually not much faster than single core mode."
-msgstr "Por lo general, no es mucho más rápido que el modo de un único núcleo."
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid "DUAL CORE MODE"
-msgstr "MODO DUAL CORE"
-
-#. TRANSLATION: dolphin, dolphin_triforce
-msgctxt "game_options"
-msgid "Speed hack for dual core mode to fix some glitches."
-msgstr ""
-"Truco de velocidad para el modo doble núcleo para solucionar algunos fallos."
-
-#. TRANSLATION: dolphin, dolphin_triforce
-msgctxt "game_options"
-msgid "GPU SYNC"
-msgstr "SINCRONIZACIÓN DE GPU"
-
-#. TRANSLATION: dolphin, dolphin_triforce, rpcs3, rtcw
-msgctxt "game_options"
-msgid "ANTI-ALIASING"
-msgstr "ANTI-ALIASING"
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid "Toggle MSAA/SSAA. Depends on anti-aliasing being enabled."
-msgstr "Alterna MSAA/SSAA. Depende de si el suavizado está activado."
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid "ANTI-ALIASING MODE"
-msgstr "MODO ANTI-ALIASING"
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid "MSAA (default)"
-msgstr "MSAA (Defecto)"
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid "SSAA"
-msgstr "SSAA"
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid ""
-"Enabling will allow for correct emulation of texture wrapping. This comes at "
-"a cost of potential worse performance."
-msgstr ""
-"Habilitarlo permitirá la emulación correcta del ajuste de textura. Esto "
-"viene con un costo de posible peor desempeño."
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid "MANUAL TEXTURE SAMPLING"
-msgstr "MUESTREO MANUAL DE TEXTURAS"
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
-msgstr ""
-"Para usar trucos de juegos o códigos de corrección de relación de aspecto "
-"16/9."
-
-#. TRANSLATION: dolphin, melonds
-msgctxt "game_options"
-msgid "ENABLE CHEATS"
-msgstr "ACTIVAR TRUCOS"
-
-#. TRANSLATION: dolphin, dolphin_triforce, mupen64plus, tsugaru
-msgctxt "game_options"
-msgid "Required by some games."
-msgstr "Requerido por algunos juegos."
-
-#. TRANSLATION: dolphin, dolphin_triforce
-msgctxt "game_options"
-msgid "MEMORY MANAGEMENT UNIT"
-msgstr "UNIDAD DE GESTIÓN DE MEMORIA"
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid "Show on screen display messages (memory card saves..)."
-msgstr "Muestra mensajes en pantalla (guardados en tarjeta de memoria…)."
-
-#. TRANSLATION: dolphin, duckstation, melonds
-msgctxt "game_options"
-msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
-msgstr "MOSTRAR MENSAJES EN PANTALLA"
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid ""
-"Skips Vertical Blank Interrupts when lag is detected, allowing for smooth "
-"audio playback when emulation speed is not 100%."
-msgstr ""
-"Omite las Vertical Blank Interrupts cuando se detecta un retraso, lo que "
-"permite una suave reproducción de audio cuando la velocidad de emulación no "
-"es del 100%."
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid "VBI SKIP"
-msgstr "OMITIR VBI"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -9611,10 +9676,25 @@ msgstr ""
 "Habilita Dolby Pro Logic II para sonido envolvente. Puede afectar al "
 "rendimiento."
 
+#. TRANSLATION: dolphin, rpcs3, rpcs3, rpcs3, rpcs3, ...
+msgctxt "game_options"
+msgid "AUDIO"
+msgstr "AUDIO"
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "DOLBY PRO LOGIC II"
 msgstr "DOLBY PRO LOGIC II"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "Show on screen display messages (memory card saves..)."
+msgstr "Muestra mensajes en pantalla (guardados en tarjeta de memoria…)."
+
+#. TRANSLATION: dolphin, duckstation, melonds
+msgctxt "game_options"
+msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
+msgstr "MOSTRAR MENSAJES EN PANTALLA"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
@@ -9665,11 +9745,6 @@ msgstr "DESACTIVAR MENSAJES EN PANTALLA"
 msgctxt "game_options"
 msgid "Determines the speed and the run ahead behaviour of the system."
 msgstr ""
-
-#. TRANSLATION: duckstation, duckstation, duckstation
-msgctxt "game_options"
-msgid "EMULATION"
-msgstr "EMULACIÓN"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -11900,11 +11975,6 @@ msgctxt "game_options"
 msgid "Choose number of audio channels."
 msgstr "Elige el número de canales de audio."
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
-msgctxt "game_options"
-msgid "AUDIO"
-msgstr "AUDIO"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "AUDIO FORMAT"
@@ -12495,12 +12565,9 @@ msgstr "P1 & P2"
 msgctxt "game_options"
 msgid ""
 "For playing driving games with a game pad, it is sometimes a good idea to "
-"use a value larger than 100% so that the steering feels less sensitive on a "
+"use a value larger than 100%% so that the steering feels less sensitive on a "
 "thumbstick."
 msgstr ""
-"Para jugar a juegos de conducción con un mando, a veces es una buena idea "
-"usar un valor mayor al 100% s para que la dirección se sienta menos sensible "
-"en el stick."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -16683,6 +16750,17 @@ msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Guardado rápido"
 
+#, c-format
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "For playing driving games with a game pad, it is sometimes a good idea to "
+#~ "use a value larger than 100% so that the steering feels less sensitive on "
+#~ "a thumbstick."
+#~ msgstr ""
+#~ "Para jugar a juegos de conducción con un mando, a veces es una buena idea "
+#~ "usar un valor mayor al 100% s para que la dirección se sienta menos "
+#~ "sensible en el stick."
+
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
@@ -16835,6 +16913,10 @@ msgstr "Guardado rápido"
 #~ msgstr ""
 #~ "Recorta las ilustraciones de MAME para maximizar la pantalla de juego y "
 #~ "llenar sólo el espacio no utilizado."
+
+#~ msgctxt "game_options"
+#~ msgid "Tandy Radio Shack Color Computer cassettes"
+#~ msgstr "Cassettes Tandy Radio Shack Color Computer"
 
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
@@ -17012,24 +17094,12 @@ msgstr "Guardado rápido"
 #~ msgstr "5 Sideway Wiimote"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
-#~ "appropriate user directory)."
-#~ msgstr ""
-#~ "Habilita animación de arranque de Gamecube y el acceso a BIOS (requiere "
-#~ "BIOS IPL.bin en directorio apropiado de usuario)."
+#~ msgid "Change the Gamecube system language."
+#~ msgstr "Cambiar el idioma del sistema de Gamecube."
 
 #~ msgctxt "game_options"
 #~ msgid "Map your controller to an emulated Wiimote."
 #~ msgstr "Mapea tu mando como un Wiimote emulado."
-
-#~ msgctxt "game_options"
-#~ msgid "EMULATE WIIMOTE"
-#~ msgstr "EMULAR WIIMOTE"
-
-#~ msgctxt "game_options"
-#~ msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
-#~ msgstr "PERSONALIZAR WIIMOTE Y GAMEPAD EMULADOS"
 
 #~ msgctxt "game_options"
 #~ msgid "Wiimote Sideway"
@@ -17046,6 +17116,13 @@ msgstr "Guardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "Wiimote Sideway + Nunchuk"
 #~ msgstr "Wiimote Sideway + Nunchuk"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Position of wii sensor bar relative to the disaply for real wiimotes."
+#~ msgstr ""
+#~ "Posición de la barra de sensores de Wii en relación con la pantalla para "
+#~ "wiimotes reales."
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
@@ -17391,6 +17468,37 @@ msgstr "Guardado rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rápido"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Compile shaders on next launch of game (one time). Reduces micro-freezes."
+#~ msgstr ""
+#~ "Compila sombreadores en el próximo lanzamiento del juego (una vez). "
+#~ "Reduce las microcongelaciones."
+
+#~ msgctxt "game_options"
+#~ msgid "Off (default)"
+#~ msgstr "Off (Defecto)"
+
+#~ msgctxt "game_options"
+#~ msgid "Toggle MSAA/SSAA. Depends on anti-aliasing being enabled."
+#~ msgstr "Alterna MSAA/SSAA. Depende de si el suavizado está activado."
+
+#~ msgctxt "game_options"
+#~ msgid "MSAA (default)"
+#~ msgstr "MSAA (Defecto)"
+
+#~ msgctxt "game_options"
+#~ msgid "SSAA"
+#~ msgstr "SSAA"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use with the stretch aspect ratio and adjust joystick sensitivity as "
+#~ "required."
+#~ msgstr ""
+#~ "Usar con relación de aspecto estirada y ajuste la sensibilidad del "
+#~ "joystick según sea necesario."
 
 #~ msgctxt "game_options"
 #~ msgid "Adjust the cpu power profile while in-game."
