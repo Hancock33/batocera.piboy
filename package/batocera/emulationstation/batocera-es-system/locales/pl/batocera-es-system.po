@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-05-31 22:38+0200\n"
+"PO-Revision-Date: 2024-06-01 17:18+0200\n"
 "Last-Translator: borysus\n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -439,7 +439,7 @@ msgstr "PISTOLETY ŚWIETLNE"
 #. TRANSLATION: shared, shared, shared, shared, shared, ...
 msgctxt "game_options"
 msgid "CONTROLS"
-msgstr ""
+msgstr "STEROWANIE"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -9292,7 +9292,7 @@ msgstr ""
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, ...
 msgctxt "game_options"
 msgid "WII CONTROLLERS"
-msgstr ""
+msgstr "KONTROLERY WII"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
@@ -9409,9 +9409,10 @@ msgstr "8x 5K (5120x4224)"
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid ""
-"Compile shaders on next launch of game (one time). Reduces micro-freezes. "
-"Vulkan only."
+"Compile shaders on next launch of game (one time). Reduces micro-freezes."
 msgstr ""
+"Kompilacja shaderów przy następnym uruchomieniu gry (jednorazowo). Redukuje "
+"mikrozawieszania."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9429,6 +9430,8 @@ msgid ""
 "Use SSAA instead of MSAA for anti-aliasing. SSAA may look better but has a "
 "higher performance cost."
 msgstr ""
+"Używaj SSAA zamiast MSAA do antyaliasingu. SSAA może wyglądać lepiej, ale ma "
+"wyższy koszt wydajności."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9538,7 +9541,7 @@ msgstr "Podmień to, co jest podłączone do wirtualnych portów GameCube."
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 1"
-msgstr ""
+msgstr "KONTROLER GAMECUBE 1"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9573,7 +9576,7 @@ msgstr "DK Bongos"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 2"
-msgstr ""
+msgstr "KONTROLER GAMECUBE 2"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9583,7 +9586,7 @@ msgstr "TYP PORTU GAMECUBE 2"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 3"
-msgstr ""
+msgstr "KONTROLER GAMECUBE 3"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9593,7 +9596,7 @@ msgstr "TYP PORTU GAMECUBE 3"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 4"
-msgstr ""
+msgstr "KONTROLER GAMECUBE 4"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17431,13 +17434,6 @@ msgstr "Szybkie zapisywanie"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Przewijanie do przodu"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Compile shaders on next launch of game (one time). Reduces micro-freezes."
-#~ msgstr ""
-#~ "Kompilacja shaderów przy następnym uruchomieniu gry (jednorazowo). "
-#~ "Redukuje mikrozawieszania."
 
 #~ msgctxt "game_options"
 #~ msgid "Off (default)"
