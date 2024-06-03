@@ -13,6 +13,7 @@ define AMIBERRY_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/amiberry 						$(TARGET_DIR)/usr/bin/amiberry
 	mkdir -p											$(TARGET_DIR)/usr/share/amiberry
 	cp -rf $(@D)/data									$(TARGET_DIR)/usr/share/amiberry
+	cp -rf $(@D)/plugins								$(TARGET_DIR)/usr/share/amiberry
 	ln -sf /userdata/system/configs/amiberry/whdboot	$(TARGET_DIR)/usr/share/amiberry/whdboot
 	ln -sf /usr/lib/libcapsimage.so.5.1 				$(TARGET_DIR)/usr/share/amiberry/capsimg.so
 
