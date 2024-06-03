@@ -8403,7 +8403,7 @@ dosboxx:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 duckstation:
-  features: [padtokeyboard]
+  features: [cheevos, padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns, use_wheels, wheel_rotation, wheel_deadzone, wheel_midzone]
   cfeatures:
         duckstation_clocking:
@@ -8730,7 +8730,7 @@ duckstation:
                 "Enabled":            "100"
 
 flycast:
-  features: [padtokeyboard]
+  features: [cheevos, padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels, wheel_rotation, wheel_deadzone, wheel_midzone]
   cfeatures:
     flycast_ratio:
