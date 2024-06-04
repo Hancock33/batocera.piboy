@@ -22,7 +22,7 @@ Add support for the Ayaneo Air Plus (6800U) model
 - Light gun support in libretro-MAME
 - Light gun support in DuckStation (single light gun only)
 - libretro-Flycast ES setting for offscreen reload as button 2 on the light gun
-- Light gun crosshairs for PCSX2, libretro-swanstation, Flycast, RPCS3 and libretro-pcsx-rearmed
+- Light gun crosshairs for PCSX2, libretro-swanstation, Flycast, RPCS3, MAME (standalone) and libretro-pcsx-rearmed
 - Support for zedmd
 - DMD server (handling any dmd supported by libdmd) integrated with vpinball
 - Support for multi screens (for pincab, mame multi games)
@@ -88,7 +88,7 @@ Add support for the Ayaneo Air Plus (6800U) model
 - Mupen64plus-video-rice bump to Jun 11, 2023 build
 - Mupen64plus-gliden64 bump to Feb 18, 2024 build
 - PPSSPP: to v1.17.1
-- Duckstation to v0.1-6720
+- Duckstation to v0.1-6892
 - Libretro-PPSSPP: to v1.17.1
 - Libretro-81: bump to Nov 1, 2023 build
 - Libretro-fbneo: bump to Feb 23, 2024 build (v1.0.0.03)
@@ -125,7 +125,7 @@ Add support for the Ayaneo Air Plus (6800U) model
 - Xemu to v0.7.121
 - ScummVM to 2.8.1
 - fheroes2 to 1.0.13
-- PCSX2 to v1.7.5835
+- PCSX2 to v1.7.5864
 - Play! & Libretro Play! to 0.65-1
 - Dolphin to 5.0-21543
 - Libretro-hatarib: bump to v0.3

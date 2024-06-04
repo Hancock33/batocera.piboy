@@ -10072,7 +10072,7 @@ msgctxt "game_options"
 msgid "ACHIEVEMENTS"
 msgstr "CONQUISTAS"
 
-#. TRANSLATION: duckstation, theforceengine
+#. TRANSLATION: duckstation, mame, theforceengine
 msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr "MIRA"
@@ -17412,6 +17412,17 @@ msgstr "Guardar Rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
+
+#, c-format
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "For playing driving games with a game pad, it is sometimes a good idea to "
+#~ "use a value larger than 100% so that the steering feels less sensitive on "
+#~ "a thumbstick."
+#~ msgstr ""
+#~ "Para jogar jogos de condução com um comando, às vezes é uma boa ideia "
+#~ "usar um valor maior que 100% para que a direção pareça menos sensível no "
+#~ "analógico."
 
 #~ msgctxt "game_options"
 #~ msgid ""

@@ -10072,7 +10072,7 @@ msgctxt "game_options"
 msgid "ACHIEVEMENTS"
 msgstr "BAŞARIMLAR"
 
-#. TRANSLATION: duckstation, theforceengine
+#. TRANSLATION: duckstation, mame, theforceengine
 msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr "CROSSHAIR"
