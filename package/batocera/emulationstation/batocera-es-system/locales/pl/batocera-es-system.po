@@ -10093,7 +10093,7 @@ msgctxt "game_options"
 msgid "ACHIEVEMENTS"
 msgstr "OSIĄGNIĘCIA"
 
-#. TRANSLATION: duckstation, theforceengine
+#. TRANSLATION: duckstation, mame, theforceengine
 msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr "CELOWNIK"
@@ -17440,6 +17440,24 @@ msgstr "Szybkie zapisywanie"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Przewijanie do przodu"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Compile shaders on next launch of game (one time). Reduces micro-freezes."
+#~ msgstr ""
+#~ "Kompilacja shaderów przy następnym uruchomieniu gry (jednorazowo). "
+#~ "Redukuje mikrozawieszania."
+
+#, c-format
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "For playing driving games with a game pad, it is sometimes a good idea to "
+#~ "use a value larger than 100% so that the steering feels less sensitive on "
+#~ "a thumbstick."
+#~ msgstr ""
+#~ "W przypadku grania w gry samochodowe za pomocą pada do gier, czasami "
+#~ "dobrym pomysłem jest użycie wartości większej niż 100%, aby sterowanie "
+#~ "było mniej czułe na kciuku."
 
 #~ msgctxt "game_options"
 #~ msgid "Off (default)"

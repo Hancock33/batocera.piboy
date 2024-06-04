@@ -9934,7 +9934,7 @@ msgctxt "game_options"
 msgid "ACHIEVEMENTS"
 msgstr "成就"
 
-#. TRANSLATION: duckstation, theforceengine
+#. TRANSLATION: duckstation, mame, theforceengine
 msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr "十字瞄准线"
@@ -17078,6 +17078,21 @@ msgstr "快速保存"
 #~ msgid ""
 #~ "Compile shaders on next launch of game (one time). Reduces micro-freezes."
 #~ msgstr "在下次启动游戏时编译着色器（仅限一次）。可以减少细微卡顿。"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Compile shaders on next launch of game (one time). Reduces micro-freezes."
+#~ msgstr "在下次启动游戏时编译着色器（仅限一次）。可以减少细微卡顿。"
+
+#, c-format
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "For playing driving games with a game pad, it is sometimes a good idea to "
+#~ "use a value larger than 100% so that the steering feels less sensitive on "
+#~ "a thumbstick."
+#~ msgstr ""
+#~ "当用摇杆玩驾驶游戏, 有时使用大于100%的值更好, 这样拇指操纵摇杆转向就不那么"
+#~ "灵敏了."
 
 #~ msgctxt "game_options"
 #~ msgid "Off (default)"
