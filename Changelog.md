@@ -14,11 +14,13 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|0388613ce2f450a491555
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|cc706865926c5412fc711f819172c6bf14c7a131|Jun 04, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|75fc20002292e0a9e077e3dd9da8f859ff7414e5|Jun 04, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|7bb409ec08cf9e4221a1463f58defcfb4e558437|Jun 04, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240604|Jun 04, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|f7798f361a01719a0f5926eda4fd7c953a132450|Jun 04, 2024
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|30deaa5201b023838a950abbeddc3e0a2833b581|Jun 04, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|66e9f59a284a12fcf5f0c8833578189057f45693|Jun 04, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|3cdcdbd8c7af1c1e2778f0389eb061343c311862|Jun 04, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|dac4e21b02772d4073ec7a4c52c5b2a354740d3b|Jun 04, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240604|Jun 04, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|24b189eb78e508c99183df7d0e5a67b9a93205eb|Jun 04, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|f4eaa9364e97ab506230096cc73c4163d4803444|Jun 04, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|1e3cb35355769467ca7be192e740eb9728ecc88c|Jun 03, 2024
@@ -30,6 +32,7 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|d9ec33f51eb58d07f9c208f99a
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1330|Jun 03, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|2389715ecfb715cb0cc64632ee00108b7966e08d|Jun 03, 2024
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|e32b3c666e074073018c11a392b1e6dc6f4daeaf|Jun 03, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|b6abacbb7b0ed2fb3557d23f716878214b156c8c|Jun 03, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|498d4038cd0da3105ef7dafdb2a5f8f4c1b92f5c|Jun 03, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|956e441929d2f853ef4fbcbcf41799b253d3ab55|Jun 03, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|8c3a6a4026f27abaa63595b958d8d332fd8967cf|Jun 03, 2024
@@ -47,8 +50,6 @@ Emulators|[cemu](https://github.com/cemu-project/Cemu)|16070458edddb8bd73baf3cbb
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|021249c321826ecb6b0a0ed6e5d2af9044e973a3|Jun 02, 2024
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|060535e3f1174e6d4d4286eddb5b40068b056dac|Jun 02, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|467da2470060ca73ff0fe8038b801df8ef9f40b8|Jun 02, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240602|Jun 02, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240602|Jun 02, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|7733911e74560f539fe755b95905a64fb396b536|Jun 02, 2024
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|de1f082e75660c34eb56302b401f195f3a959166|Jun 01, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|a6466b353df34c0747471ba48187dffc704f3ba3|Jun 01, 2024
@@ -61,7 +62,6 @@ Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/rel
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|1e950b31cfebe35c9ef553fb7fc03ed5f9042188|May 31, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|e25bb4801c524aaae17b0628b58669b51c6c64eb|May 31, 2024
 Emulators|[mame](http://github.com/mamedev/mame)|mame0266|May 31, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|wine-9.10|May 31, 2024
 Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-9.10|May 31, 2024
 Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|6390ca6f55bbc80290de0c8f6f45ad3852e09061|May 31, 2024
 Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.10|May 31, 2024
