@@ -16560,16 +16560,6 @@ msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "クイック セーブ"
 
-#, c-format
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "For playing driving games with a game pad, it is sometimes a good idea to "
-#~ "use a value larger than 100% so that the steering feels less sensitive on "
-#~ "a thumbstick."
-#~ msgstr ""
-#~ "ゲームパッドでドライビング ゲームをプレイする場合は、100％% sより大きい値"
-#~ "で、スティックの感度を鈍くすることをお勧めします"
-
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
