@@ -1,0 +1,102 @@
+diff --git a/include/linux/mm.h b/include/linux/mm.h
+index 9849dfda44d4..adc5a252da02 100644
+--- a/include/linux/mm.h
++++ b/include/linux/mm.h
+@@ -2438,6 +2438,10 @@ int
+ copy_page_range(struct vm_area_struct *dst_vma, struct vm_area_struct *src_vma);
+ int follow_pte(struct vm_area_struct *vma, unsigned long address,
+ 	       pte_t **ptepp, spinlock_t **ptlp);
++int follow_pfn(struct vm_area_struct *vma, unsigned long address,
++	unsigned long *pfn);
++//int follow_phys(struct vm_area_struct *vma, unsigned long address,
++//		unsigned int flags, unsigned long *prot, resource_size_t *phys);
+ int generic_access_phys(struct vm_area_struct *vma, unsigned long addr,
+ 			void *buf, int len, int write);
+ 
+diff --git a/mm/memory.c b/mm/memory.c
+index 0f47a533014e..0401d10b3d82 100644
+--- a/mm/memory.c
++++ b/mm/memory.c
+@@ -5962,7 +5962,8 @@ int __pmd_alloc(struct mm_struct *mm, pud_t *pud, unsigned long address)
+  * Only IO mappings and raw PFN mappings are allowed.  The mmap semaphore
+  * should be taken for read.
+  *
+- * This function must not be used to modify PTE content.
++ * KVM uses this function.  While it is arguably less bad than ``follow_pfn``,
++ * it is not a good general-purpose API.
+  *
+  * Return: zero on success, -ve otherwise.
+  */
+@@ -6012,6 +6013,40 @@ int follow_pte(struct vm_area_struct *vma, unsigned long address,
+ }
+ EXPORT_SYMBOL_GPL(follow_pte);
+ 
++/**
++ * follow_pfn - look up PFN at a user virtual address
++ * @vma: memory mapping
++ * @address: user virtual address
++ * @pfn: location to store found PFN
++ *
++ * Only IO mappings and raw PFN mappings are allowed.
++ *
++ * This function does not allow the caller to read the permissions
++ * of the PTE.  Do not use it.
++ *
++ * Return: zero and the pfn at @pfn on success, -ve otherwise.
++ */
++int follow_pfn(struct vm_area_struct *vma, unsigned long address,
++	unsigned long *pfn)
++{
++	int ret = -EINVAL;
++	spinlock_t *ptl;
++	pte_t *ptep;
++
++	if (!(vma->vm_flags & (VM_IO | VM_PFNMAP)))
++		return ret;
++
++	//ret = follow_pte(vma->vm_mm, address, &ptep, &ptl);
++	ret = follow_pte(vma, address, &ptep, &ptl);
++	
++	if (ret)
++		return ret;
++	*pfn = pte_pfn(ptep_get(ptep));
++	pte_unmap_unlock(ptep, ptl);
++	return 0;
++}
++EXPORT_SYMBOL(follow_pfn);
++
+ #ifdef CONFIG_HAVE_IOREMAP_PROT
+ /**
+  * generic_access_phys - generic implementation for iomem mmap access
+diff --git a/mm/nommu.c b/mm/nommu.c
+index 7296e775e04e..8e0deb733bfe 100644
+--- a/mm/nommu.c
++++ b/mm/nommu.c
+@@ -110,6 +110,27 @@ unsigned int kobjsize(const void *objp)
+ 	return page_size(page);
+ }
+ 
++/**
++ * follow_pfn - look up PFN at a user virtual address
++ * @vma: memory mapping
++ * @address: user virtual address
++ * @pfn: location to store found PFN
++ *
++ * Only IO mappings and raw PFN mappings are allowed.
++ *
++ * Returns zero and the pfn at @pfn on success, -ve otherwise.
++ */
++int follow_pfn(struct vm_area_struct *vma, unsigned long address,
++	unsigned long *pfn)
++{
++	if (!(vma->vm_flags & (VM_IO | VM_PFNMAP)))
++		return -EINVAL;
++
++	*pfn = address >> PAGE_SHIFT;
++	return 0;
++}
++EXPORT_SYMBOL(follow_pfn);
++
+ void vfree(const void *addr)
+ {
+ 	kfree(addr);
