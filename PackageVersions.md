@@ -205,7 +205,7 @@ Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|fc2d2ccc77598f11f196dceba9762a7829cbba8a|Jun 03, 2024
 Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|79bfb67156efd22dd7b9c8c2d55d43fd72250302|May 12, 2024
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|877c3ee90d85b9cb17350846840d5df953b97374|Jun 04, 2024
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v1.7.5864|Jun 04, 2024
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|18c0a6b17d074c662bebea87684d025636862d64|May 28, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|0388613ce2f450a4915553e1df53fb86b4bf4aff|Jun 04, 2024
@@ -213,7 +213,7 @@ Emulators|[python-pygame2](http://github.com/pygame/pygame)|467da2470060ca73ff0f
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v1.9.18|Jul 08, 2023
 Emulators|[redream](https://redream.io/download)|1.5.0-1127-g6b62eff|May 10, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|771e60b1eacd4edc57c19b61ab2c713200af0a3f|May 30, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|75c647d3caf4f2470cd30ccfcd5fc47b531a3a6c|Jun 04, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|0792144fe3a7b59908b0afdb2c01722e79040360|Jun 04, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|2024.05.31|May 31, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|d9ec33f51eb58d07f9c208f99a3483f8a631bb59|Jun 03, 2024
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020

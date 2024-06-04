@@ -1,6 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|75c647d3caf4f2470cd30ccfcd5fc47b531a3a6c|Jun 04, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|0792144fe3a7b59908b0afdb2c01722e79040360|Jun 04, 2024
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|25b83453afeb30d429e0d4321070c45d29ca4649|Jun 04, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|7451decdacc7f0abcdac36ad9f6951e8ae7090b3|Jun 04, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|0388613ce2f450a4915553e1df53fb86b4bf4aff|Jun 04, 2024
@@ -9,7 +9,7 @@ Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|18dacc08e93dd9d
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|84241fa747f4e5b46a4ec132cb3e97b7f6c71adb|Jun 04, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|c04460d88b4f18d4b42dc81359aae1399776d2b0|Jun 04, 2024
 Emulators|[hatari](http://github.com/hatari/hatari)|5cd7b10ea20d6c072bc1935398fd99234be95f74|Jun 04, 2024
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|877c3ee90d85b9cb17350846840d5df953b97374|Jun 04, 2024
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v1.7.5864|Jun 04, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|0388613ce2f450a4915553e1df53fb86b4bf4aff|Jun 04, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|cc706865926c5412fc711f819172c6bf14c7a131|Jun 04, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|75fc20002292e0a9e077e3dd9da8f859ff7414e5|Jun 04, 2024
