@@ -16750,17 +16750,6 @@ msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Guardado rápido"
 
-#, c-format
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "For playing driving games with a game pad, it is sometimes a good idea to "
-#~ "use a value larger than 100% so that the steering feels less sensitive on "
-#~ "a thumbstick."
-#~ msgstr ""
-#~ "Para jugar a juegos de conducción con un mando, a veces es una buena idea "
-#~ "usar un valor mayor al 100% s para que la dirección se sienta menos "
-#~ "sensible en el stick."
-
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
