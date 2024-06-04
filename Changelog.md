@@ -107,6 +107,7 @@ Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|53741632bc98ebd3770cbe55b723843e1b83a458|May 23, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|2e589f42fe7a29ced421af221ceb928a3966b54c|May 23, 2024
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|075d8e30877e45e2c8a7790f5f70fd0569f96870|May 22, 2024
+Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v114|May 22, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|f2cfd74721376722b3a00d25243afd324065a0dd|May 22, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|f4446ca6663d8fb56a3c40b1c1b3a13a4a0e4af3|May 22, 2024
 Emulators|[libretro-mame](http://github.com/sonninnos/mame)|4ee35952a8fdb1332e970fa14c3e79c8c968050c|May 21, 2024
@@ -146,7 +147,6 @@ Ports|[sonicmania](https://github.com/Rubberduckycooly/Sonic-Mania-Decompilation
 Emulators|[libretro-imame](http://github.com/libretro/mame2000-libretro)|905808fbcc3adf8c610c1c60f0e41ce4b35db1c5|May 07, 2024
 Ports|[raze](http://github.com/ZDoom/Raze)|f3cad8426cd808be5ded036ed12a497d27d3742e|May 07, 2024
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|5121aa6d36eff884bd56ccbadb6c112f1e951fee|May 06, 2024
-Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v113|May 05, 2024
 Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e246ded9|May 05, 2024
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|ffa3cc48b8f159a6ae88594f8b1ca67f22e3044c|May 04, 2024
 Emulators|[wine-ntsync](https://repo.or.cz/wine/zf.git/snapshot/)|b710a652bb7f582fa65f8d42d727847e231b7095|May 03, 2024

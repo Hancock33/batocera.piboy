@@ -6,7 +6,7 @@ Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|84241fa747f4e5b46a4ec132cb3e97b7f6c71adb|Jun 04, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|3393a309ecff917985ea7599657d3ea70323cc39|Jun 02, 2024
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|72ce23dd989ced9df3f49d2021208eff1f99552c|Mar 19, 2023
-Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v113|May 05, 2024
+Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v114|May 22, 2024
 Emulators|[cargs](http://github.com/likle/cargs)|82b51a3fd781ba978ab9bb6a05306ce777ecb2a1|Mar 11, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|16070458edddb8bd73baf3cbb1678f5a8b2dbc5e|Jun 02, 2024
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|de1f082e75660c34eb56302b401f195f3a959166|Jun 01, 2024
