@@ -5,7 +5,6 @@ Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|69a20d7213f1
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|ddb012bbd278aedf7a0c3064e6c447a1e6f7653a|Jun 05, 2024
 Emulators|[libretro-mame](http://github.com/sonninnos/mame)|e21c4c91b0bccdced9cab902ee694498aca597d0|Jun 05, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|f51870f78dbbbc09ef5a043274ffe2d747b420e2|Jun 05, 2024
-Emulators|[libretro-stella](http://github.com/stella-emu/stella)|d65eaac19c7350806f8e72bc95384a9417767831|Jun 05, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|2a59d0a7c1562eb4348f71af8309a26dfdd21377|Jun 05, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|6772b1993ff678050d9a064dbd8c625eede272a1|Jun 05, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|e233a30ffc2d10c682f655b7fc38788e2f5ddeb7|Jun 05, 2024
@@ -21,6 +20,7 @@ Emulators|[vpinball](http://github.com/vpinball/vpinball)|7c6051034adb77806b01c3
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|b3548968f26c100cbd8d2dcc37ede7db9a23239a|Jun 05, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|79c1ad1431277d17cc7ce34f255b0af4c23ccbaa|Jun 05, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|9800de42e9624660e0fd0e207744bf61e3bd659c|Jun 05, 2024
+Ports|[sm64port](http://github.com/sm64pc/sm64ex)|6f7d974a73037d8ae61fb5dff8e1aec40432e1f8|Jun 05, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|91b941700de5496fdf5628f1c73e157263abab29|Jun 05, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|0f6109a322764eaed4da7277303828f8e07046d0|Jun 05, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|23d68d6717116f575407b71caa6fbf7e980f3054|Jun 05, 2024
@@ -112,7 +112,6 @@ Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|
 Ports|[box86](http://github.com/ptitseb/box86)|2e589f42fe7a29ced421af221ceb928a3966b54c|May 23, 2024
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|075d8e30877e45e2c8a7790f5f70fd0569f96870|May 22, 2024
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v114|May 22, 2024
-Ports|[sm64port](http://github.com/sm64pc/sm64ex)|f2cfd74721376722b3a00d25243afd324065a0dd|May 22, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|f4446ca6663d8fb56a3c40b1c1b3a13a4a0e4af3|May 22, 2024
 Emulators|[libretro-mupen64plus-next](http://github.com/libretro/mupen64plus-libretro-nx)|5d2ac21adb784ad72d6101290117702eef0411dd|May 21, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|2be220df98c3db044c97e532a6687ed2d707cb51|May 21, 2024
@@ -138,6 +137,7 @@ Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|a72b79a55ad2d61811af1
 Emulators|[libretro-arduous](https://github.com/libretro/arduous.git)|50c1e48084f003dee582ed5f4f5c0f59eb30bc4c|May 14, 2024
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|4d9692a48bbb375556527bd1aade29b1de9e497e|May 14, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|383292899865c41d7f9e5e77c3f09b73e72a0fde|May 14, 2024
+Emulators|[libretro-stella](http://github.com/stella-emu/stella)|49166ca9949708c3bddaed5cc549194c4bfcfae5|May 13, 2024
 Ports|[openlara](http://github.com/XProger/OpenLara)|28ee7ac92367e6c97aea2391c25e1c6fe29785aa|May 13, 2024
 Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|79bfb67156efd22dd7b9c8c2d55d43fd72250302|May 12, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|d456b02c4abbf40d0e32989df07e00ba467eb972|May 12, 2024
