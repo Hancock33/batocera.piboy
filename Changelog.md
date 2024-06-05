@@ -81,6 +81,7 @@ Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|7a27436
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|4f1a5dd726ecae3ce232e8ed5fe6cb70843cf7a6|May 30, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|9121fcdc975dbf31a8eec8b2a41922402e5321a2|May 30, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|b37ce123034084fa14709fb0f33c505737b3bfda|May 29, 2024
+Emulators|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.12|May 29, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|84dff4423e1546d22093edefdba063187061ceb3|May 29, 2024
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|18c0a6b17d074c662bebea87684d025636862d64|May 28, 2024
 Emulators|[play](https://github.com/jpd002/Play-.git)|18c0a6b17d074c662bebea87684d025636862d64|May 28, 2024
@@ -203,7 +204,6 @@ Emulators|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.7.0|Mar
 Emulators|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v2.12|Mar 15, 2024
 Emulators|[cargs](http://github.com/likle/cargs)|82b51a3fd781ba978ab9bb6a05306ce777ecb2a1|Mar 11, 2024
 Emulators|[sockpp](http://github.com/fpagliughi/sockpp)|e6c4688a576d95f42dd7628cefe68092f6c5cd0f|Mar 11, 2024
-Emulators|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.11|Mar 05, 2024
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|ad8a2754fa99ceaf40495185ad48191cf27559e2|Mar 05, 2024
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|d327bfa6140af179a9409e0ba42f392e03da530b|Mar 03, 2024
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.03.01|Mar 01, 2024

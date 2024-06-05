@@ -236,7 +236,7 @@ Emulators|[vice](https://sourceforge.net/projects/vice-emu/files/releases)|3.8|D
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|92c464648945a699f7e2c667c791f939b686550b|Jun 04, 2024
 Emulators|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v2.12|Mar 15, 2024
-Emulators|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.11|Mar 05, 2024
+Emulators|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.12|May 29, 2024
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|7c6051034adb77806b01c3b697c1d74301b02233|Jun 05, 2024
 Emulators|[wine-custom](http://github.com/wine-mirror/wine)|b6abacbb7b0ed2fb3557d23f716878214b156c8c|Jun 03, 2024
 Emulators|[wine-ge](http://github.com/GloriousEggroll/proton-wine)|39021e609a24b6aeffdf9c4695a286d71e7dffbc|Feb 04, 2024
