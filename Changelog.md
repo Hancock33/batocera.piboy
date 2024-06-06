@@ -3,7 +3,9 @@
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|9419f02d6357ee18b296b9eb34dec7922be35e0d|Jun 06, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|47fae68b0fbcee37e59753ad3f8a3a49fd544cd8|Jun 06, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|52442fb01177989c6df0ac83c7b9c10b44704272|Jun 06, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240606|Jun 06, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|e4dcd5fe2895ea823ec59e0f8224c1701576fdd8|Jun 06, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240606|Jun 06, 2024
 Ports|[quake3](http://github.com/ioquake/ioq3)|980147721a87452ea36a7b0b250d0a52910cf89f|Jun 06, 2024
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|69a20d7213f18b295fdd2f34acceb189a55b2a74|Jun 05, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|ddb012bbd278aedf7a0c3064e6c447a1e6f7653a|Jun 05, 2024
@@ -20,6 +22,7 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|bd8590212d1a79a7e0205d9f8b
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|091aa2361f989c067a922b0e9603f78050b325ba|Jun 05, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|69a20d7213f18b295fdd2f34acceb189a55b2a74|Jun 05, 2024
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|7c6051034adb77806b01c3b697c1d74301b02233|Jun 05, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|6a512200f4719ea6b0be6de83cac632112a38b36|Jun 05, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|b3548968f26c100cbd8d2dcc37ede7db9a23239a|Jun 05, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|79c1ad1431277d17cc7ce34f255b0af4c23ccbaa|Jun 05, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|9800de42e9624660e0fd0e207744bf61e3bd659c|Jun 05, 2024
@@ -42,18 +45,15 @@ Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v1.7.5865|Jun 04, 2024
 Emulators|[play](https://github.com/jpd002/Play-.git)|2f3d8252a2ba398078538abfe8a633b667a858a4|Jun 04, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|92c464648945a699f7e2c667c791f939b686550b|Jun 04, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|7bb409ec08cf9e4221a1463f58defcfb4e558437|Jun 04, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240604|Jun 04, 2024
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|30deaa5201b023838a950abbeddc3e0a2833b581|Jun 04, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|66e9f59a284a12fcf5f0c8833578189057f45693|Jun 04, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|3cdcdbd8c7af1c1e2778f0389eb061343c311862|Jun 04, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240604|Jun 04, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|17bad8030e3d5b83733b13e21848b56ba1c2a904|Jun 04, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|1e3cb35355769467ca7be192e740eb9728ecc88c|Jun 03, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|573b339c98400ff9c2687bf4d653edaf7dfd3fdb|Jun 03, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|d7c7178022d66bed49f2cf6bd22d0ecfe62ebbf5|Jun 03, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1330|Jun 03, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|2389715ecfb715cb0cc64632ee00108b7966e08d|Jun 03, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|b6abacbb7b0ed2fb3557d23f716878214b156c8c|Jun 03, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|956e441929d2f853ef4fbcbcf41799b253d3ab55|Jun 03, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|929dfd2c71acd3a0f5746a320e59500963ca4eb8|Jun 03, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|634d207adade213bbe83684be2a183d158f56e52|Jun 02, 2024
