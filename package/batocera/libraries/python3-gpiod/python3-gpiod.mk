@@ -3,7 +3,7 @@
 # python3-gpiod
 #
 ################################################################################
-
+# Version: Commits on Apr 23, 2023
 PYTHON3_GPIOD_VERSION = v1.5.4
 PYTHON3_GPIOD_SOURCE = $(PYTHON3_GPIOD_VERSION).tar.gz
 PYTHON3_GPIOD_SITE = https://github.com/hhk7734/python3-gpiod/archive/refs/tags
