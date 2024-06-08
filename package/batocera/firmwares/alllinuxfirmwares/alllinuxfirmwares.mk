@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-ALLLINUXFIRMWARES_VERSION = 20240513
+ALLLINUXFIRMWARES_VERSION = 90df68d2290ede07a3574c5212dff2fdce408785
 ALLLINUXFIRMWARES_SOURCE = linux-firmware-$(ALLLINUXFIRMWARES_VERSION).tar.gz
 ALLLINUXFIRMWARES_SITE = https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot
 
@@ -15,10 +15,13 @@ ALLLINUXFIRMWARES_REMOVE_DIRS = $(@D)/bnx2* \
 								$(@D)/liquidio \
 								$(@D)/mellanox \
 								$(@D)/mrvl/prestera \
+								$(@D)/myri* \
 								$(@D)/netronome \
 								$(@D)/phanfw.bin \
 								$(@D)/qcom \
+								$(@D)/ql2* \
 								$(@D)/qed \
+								$(@D)/s5p-mfc* \
 								$(@D)/ueagle-atm \
 								$(@D)/LICENCE* \
 								$(@D)/LICENSE*
@@ -35,13 +38,10 @@ ifeq ($(BR2_arm)$(BR2_aarch64),y)
 									$(@D)/i915 \
 									$(@D)/intel \
 									$(@D)/iwlwifi* \
-									$(@D)/myri* \
 									$(@D)/nvidia \
 									$(@D)/q*.bin \
 									$(@D)/qat_* \
-									$(@D)/ql2* \
-									$(@D)/radeon \
-									$(@D)/s5p-*
+									$(@D)/radeon
 endif
 
 ifeq ($(BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI)$(BR2_PACKAGE_EXTRALINUXFIRMWARES),y)
