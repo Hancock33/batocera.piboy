@@ -1,7 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|76e95af40dae27a84da906cf0ffdc0daff26861e|Jun 05, 2024
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|76e95af40dae27a84da906cf0ffdc0daff26861e|Jun 05, 2024
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|aa1e3c8a5deddf96416229c7f1ba6cadc64d5b5b|Jun 08, 2024
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|aa1e3c8a5deddf96416229c7f1ba6cadc64d5b5b|Jun 08, 2024
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|8968deb8fbfd5c96819fa22aba7bbd8890ed8113|Apr 25, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|d4418a16827d0edd619874405d990725b908b82a|Jun 06, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|3393a309ecff917985ea7599657d3ea70323cc39|Jun 02, 2024
@@ -215,7 +215,7 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1127-g6b62eff|May 10, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|771e60b1eacd4edc57c19b61ab2c713200af0a3f|May 30, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|fa61d825531d4c8e378135bb29ae6a0ccef31c9a|Jun 08, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|2024.05.31|May 31, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|5a13c027742c08fc3be603058839eb4c5ef79650|Jun 07, 2024
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|6fff22391c7c9666e958255c7e3ba0b3783ad2da|Jun 08, 2024
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|eb26616886563b0a2fda6e38498b7810ab0cede4|Jun 08, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1330|Jun 03, 2024
@@ -264,7 +264,7 @@ Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e24
 Ports|[awgl](http://github.com/cyxx/rawgl)|1eeaa530c859bd6e37b3d3bd7d3136bc16afcc89|Mar 12, 2022
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|1855c8ed66b771fb62ae66bf5b1cbc9ede9cd03a|Dec 26, 2023
-Ports|[box64](http://github.com/ptitseb/box64)|cd5fbc1492546ea2233363226721d6a6065ce33c|Jun 08, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|97530e4095af2786fac3258952c71ab3b98ce4ad|Jun 08, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|2e589f42fe7a29ced421af221ceb928a3966b54c|May 23, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|d456b02c4abbf40d0e32989df07e00ba467eb972|May 12, 2024
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
@@ -273,7 +273,7 @@ Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|2cc8e02ced1594d76
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|efc21ac3a0d9330f3e8e8b089b5960e044171d30|May 12, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|b8b6dfff4c3ca304f5f7f56a1d264c1ef506db32|Apr 08, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|f4446ca6663d8fb56a3c40b1c1b3a13a4a0e4af3|May 22, 2024
-Ports|[doomretro](http://github.com/bradharding/doomretro)|a1e8b9173955143ee0814f0921923e7c1dcee4a3|Jun 08, 2024
+Ports|[doomretro](http://github.com/bradharding/doomretro)|a3588fde8e5356f83791fc6e33e517e09c44bb66|Jun 08, 2024
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|10a62eb6451e6c2a7213a7051bb3753c52c98ec8|May 18, 2024
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|d1de69a576d4bb39e89124185a6dfd6991202cb9|May 20, 2024
