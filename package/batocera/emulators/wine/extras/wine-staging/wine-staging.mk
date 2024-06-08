@@ -44,8 +44,8 @@ WINE_STAGING_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_
 	--without-mingw \
 	--without-opencl \
 	--without-oss \
-    --prefix=/usr/wine/staging \
-    --exec-prefix=/usr/wine/staging
+	--prefix=/usr/wine/staging \
+	--exec-prefix=/usr/wine/staging
 
 ifeq ($(BR2_x86_64),y)
 	WINE_STAGING_CONF_OPTS += --enable-win64
@@ -198,10 +198,10 @@ WINE_STAGING_CONF_OPTS += --without-udev
 endif
 
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
-    WINE_STAGING_CONF_OPTS += --with-vulkan
-    WINE_STAGING_DEPENDENCIES += vulkan-headers vulkan-loader
+	WINE_STAGING_CONF_OPTS += --with-vulkan
+	WINE_STAGING_DEPENDENCIES += vulkan-headers vulkan-loader
 else
-    WINE_STAGING_CONF_OPTS += --without-vulkan
+	WINE_STAGING_CONF_OPTS += --without-vulkan
 endif
 
 ifeq ($(BR2_PACKAGE_XLIB_LIBX11),y)
@@ -336,7 +336,7 @@ HOST_WINE_STAGING_CONF_OPTS += \
 
 # Cleanup final directory
 define WINE_STAGING_REMOVE_INCLUDES_HOOK
-        rm -Rf $(TARGET_DIR)/usr/wine/staging/include
+	rm -Rf $(TARGET_DIR)/usr/wine/staging/include
 endef
 
 WINE_STAGING_POST_INSTALL_TARGET_HOOKS += WINE_STAGING_REMOVE_INCLUDES_HOOK

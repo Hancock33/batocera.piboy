@@ -3,9 +3,9 @@
 # wine-cachyos
 #
 ################################################################################
-# Version: Commits on Jun 05, 2024
+# Version: Commits on Jun 06, 2024
 WINE_CACHYOS_VERSION = cachyos-wine-9.0-20240605
-WINE_CACHYOS_BRANCH = bleeding-edge
+WINE_CACHYOS_BRANCH = cachyos_wine_9.0_20240605
 WINE_CACHYOS_SOURCE = wine-cachyos-$(WINE_CACHYOS_VERSION).tar.gz
 WINE_CACHYOS_SITE = $(call github,CachyOS,wine-cachyos,$(WINE_CACHYOS_VERSION))
 WINE_CACHYOS_LICENSE = LGPL-2.1+
@@ -39,8 +39,8 @@ WINE_CACHYOS_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_
 	--without-mingw \
 	--without-opencl \
 	--without-oss \
-    --prefix=/usr/wine/cachyos \
-    --exec-prefix=/usr/wine/cachyos
+	--prefix=/usr/wine/cachyos \
+	--exec-prefix=/usr/wine/cachyos
 
 ifeq ($(BR2_x86_64),y)
 	WINE_CACHYOS_CONF_OPTS += --enable-win64
@@ -200,10 +200,10 @@ WINE_CACHYOS_CONF_OPTS += --without-udev
 endif
 
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
-    WINE_CACHYOS_CONF_OPTS += --with-vulkan
-    WINE_CACHYOS_DEPENDENCIES += vulkan-headers vulkan-loader
+	WINE_CACHYOS_CONF_OPTS += --with-vulkan
+	WINE_CACHYOS_DEPENDENCIES += vulkan-headers vulkan-loader
 else
-    WINE_CACHYOS_CONF_OPTS += --without-vulkan
+	WINE_CACHYOS_CONF_OPTS += --without-vulkan
 endif
 
 ifeq ($(BR2_PACKAGE_XLIB_LIBX11),y)
@@ -338,7 +338,7 @@ HOST_WINE_CACHYOS_CONF_OPTS += \
 
 # Cleanup final directory
 define WINE_CACHYOS_REMOVE_INCLUDES_HOOK
-        rm -Rf $(TARGET_DIR)/usr/wine/cachyos/include
+	rm -Rf $(TARGET_DIR)/usr/wine/cachyos/include
 endef
 
 WINE_CACHYOS_POST_INSTALL_TARGET_HOOKS += WINE_CACHYOS_REMOVE_INCLUDES_HOOK

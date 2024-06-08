@@ -39,8 +39,8 @@ WINE_PROTON_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 	--without-mingw \
 	--without-opencl \
 	--without-oss \
-    --prefix=/usr/wine/proton \
-    --exec-prefix=/usr/wine/proton
+	--prefix=/usr/wine/proton \
+	--exec-prefix=/usr/wine/proton
 
 ifeq ($(BR2_x86_64),y)
 	WINE_PROTON_CONF_OPTS += --enable-win64
@@ -200,10 +200,10 @@ WINE_PROTON_CONF_OPTS += --without-udev
 endif
 
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
-    WINE_PROTON_CONF_OPTS += --with-vulkan
-    WINE_PROTON_DEPENDENCIES += vulkan-headers vulkan-loader
+	WINE_PROTON_CONF_OPTS += --with-vulkan
+	WINE_PROTON_DEPENDENCIES += vulkan-headers vulkan-loader
 else
-    WINE_PROTON_CONF_OPTS += --without-vulkan
+	WINE_PROTON_CONF_OPTS += --without-vulkan
 endif
 
 ifeq ($(BR2_PACKAGE_XLIB_LIBX11),y)
@@ -338,7 +338,7 @@ HOST_WINE_PROTON_CONF_OPTS += \
 
 # Cleanup final directory
 define WINE_PROTON_REMOVE_INCLUDES_HOOK
-        rm -Rf $(TARGET_DIR)/usr/wine/proton/include
+	rm -Rf $(TARGET_DIR)/usr/wine/proton/include
 endef
 
 WINE_PROTON_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_REMOVE_INCLUDES_HOOK
