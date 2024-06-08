@@ -31,6 +31,7 @@ Add support for the Ayaneo Air Plus (6800U) model
   - Thrustmaster T150RS
   - Thrustmaster T80 (gamepad mode only)
   - Driving Wheel SV200
+  - PNX-V10 (x-input only)
 - Dolphin: support for Retroachievements (when they are enabled)
 - Color Computer (coco) now autoloads cassettes and disks based on MAME software lists with default fallbacks
   - uses "usage" info field in MAME software list
@@ -42,6 +43,7 @@ Add support for the Ayaneo Air Plus (6800U) model
 - Bezel support for Daphne/Singe (can be toggled off)
 - Foot pedal for light guns on libretro cores, Duckstation, PCSX2 and MAME standalone
   - Bind key C for player 1; V for player 2; B for player 3; N for player 4
+- Nvidia cards using the latest production driver now has cuda hardware accelerated playback enabled for ffmpeg & mpv
 ### Fixed
 - RG552 Splash-screen rotation
 - RG552 Vibrator enabled
@@ -65,6 +67,7 @@ Add support for the Ayaneo Air Plus (6800U) model
 - Rpi4 udev rules when a gun is detected in Hypseus Singe
 - Scanlines not showing in Daphne/Singe
 - Supermodel persistent crash in some cases with light guns
+- Cuda hardware acceleration of the splash video for Nvidia cards using the production driver.
 ### Changed
 - RK3326 Replaced the mali-G31 driver with mesa3d
 - Amiga BIOS files now go into the bios/amiga/ subfolder

@@ -95,6 +95,7 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/vulkan/shaderc/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/vulkan/vulkan-samples/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/vulkan/vulkan-volk/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/nv-codec-headers/Config.in"
   endmenu
 
   menu "Network"
