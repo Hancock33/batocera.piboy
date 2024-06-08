@@ -44,12 +44,13 @@ Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|d4418a16827d0edd6
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|851cdd232b29f65c2a46273ee5e12321f3c50892|Jun 06, 2024
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|f2dd27ffb639c2514e4d67ef625a4408e7352114|Jun 06, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|e4dcd5fe2895ea823ec59e0f8224c1701576fdd8|Jun 06, 2024
+Emulators|[wine-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos-wine-9.0-20240605|Jun 06, 2024
+Emulators|[wine-proton-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos-proton-9.0-20240605|Jun 06, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|27ef548c4c960ae926098389de95753cc4ac0ba6|Jun 06, 2024
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|69a20d7213f18b295fdd2f34acceb189a55b2a74|Jun 05, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|6772b1993ff678050d9a064dbd8c625eede272a1|Jun 05, 2024
 Emulators|[hatari](http://github.com/hatari/hatari)|bd157dbeeaf819df9af9d000010564fe6b3b76aa|Jun 05, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|69a20d7213f18b295fdd2f34acceb189a55b2a74|Jun 05, 2024
-Emulators|[wine-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos-wine-9.0-20240605|Jun 05, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|6f7d974a73037d8ae61fb5dff8e1aec40432e1f8|Jun 05, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|c693e3b0731707351cd166aa160aaa7803751d89|Jun 05, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|23d68d6717116f575407b71caa6fbf7e980f3054|Jun 05, 2024
@@ -70,7 +71,6 @@ Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|1e3cb
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|573b339c98400ff9c2687bf4d653edaf7dfd3fdb|Jun 03, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1330|Jun 03, 2024
 Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-2|Jun 03, 2024
-Emulators|[wine-proton-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos-proton-9.0-20240605|Jun 03, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|634d207adade213bbe83684be2a183d158f56e52|Jun 02, 2024
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|f06472c4689e330115e54eba1690d4cd61eef342|Jun 02, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|3393a309ecff917985ea7599657d3ea70323cc39|Jun 02, 2024

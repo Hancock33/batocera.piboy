@@ -3,8 +3,9 @@
 # wine-proton-cachyos
 #
 ################################################################################
-# Version: Commits on Jun 03, 2024
+# Version: Commits on Jun 06, 2024
 WINE_PROTON_CACHYOS_VERSION = cachyos-proton-9.0-20240605
+WINE_CACHYOS_BRANCH = cachyos-proton-9.0-20240605
 WINE_PROTON_CACHYOS_SOURCE = wine-proton-cachyos-$(WINE_PROTON_CACHYOS_VERSION).tar.gz
 WINE_PROTON_CACHYOS_SITE = $(call github,CachyOS,wine-cachyos,$(WINE_PROTON_CACHYOS_VERSION))
 WINE_PROTON_CACHYOS_LICENSE = LGPL-2.1+
@@ -38,8 +39,8 @@ WINE_PROTON_CACHYOS_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG
 	--without-mingw \
 	--without-opencl \
 	--without-oss \
-    --prefix=/usr/wine/proton-cachyos \
-    --exec-prefix=/usr/wine/proton-cachyos
+	--prefix=/usr/wine/proton-cachyos \
+	--exec-prefix=/usr/wine/proton-cachyos
 
 ifeq ($(BR2_x86_64),y)
 	WINE_PROTON_CACHYOS_CONF_OPTS += --enable-win64
@@ -199,10 +200,10 @@ WINE_PROTON_CACHYOS_CONF_OPTS += --without-udev
 endif
 
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
-    WINE_PROTON_CACHYOS_CONF_OPTS += --with-vulkan
-    WINE_PROTON_CACHYOS_DEPENDENCIES += vulkan-headers vulkan-loader
+	WINE_PROTON_CACHYOS_CONF_OPTS += --with-vulkan
+	WINE_PROTON_CACHYOS_DEPENDENCIES += vulkan-headers vulkan-loader
 else
-    WINE_PROTON_CACHYOS_CONF_OPTS += --without-vulkan
+	WINE_PROTON_CACHYOS_CONF_OPTS += --without-vulkan
 endif
 
 ifeq ($(BR2_PACKAGE_XLIB_LIBX11),y)
@@ -337,7 +338,7 @@ HOST_WINE_PROTON_CACHYOS_CONF_OPTS += \
 
 # Cleanup final directory
 define WINE_PROTON_CACHYOS_REMOVE_INCLUDES_HOOK
-        rm -Rf $(TARGET_DIR)/usr/wine/proton-cachyos/include
+	rm -Rf $(TARGET_DIR)/usr/wine/proton-cachyos/include
 endef
 
 WINE_PROTON_CACHYOS_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_CACHYOS_REMOVE_INCLUDES_HOOK
