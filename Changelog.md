@@ -7,9 +7,11 @@ Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|aae930ccc625c2b80c
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|eb26616886563b0a2fda6e38498b7810ab0cede4|Jun 08, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|7875c481e586e619234d7566476fbb8f01ab3690|Jun 08, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|7053c265709ba40d2bd1e3fea1514d34ad0ed017|Jun 08, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240608|Jun 08, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|452addb1e35e8cb60fd92cd73f5924694c4c5891|Jun 08, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|2d37ea22e2b6216c3bb6044dfab98cf1015b20dc|Jun 08, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|7302e4b02dd671c7637f160ed2dd4f3326212590|Jun 08, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240608|Jun 08, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|dbd35e78c87c931213092a44578b359875038b75|Jun 08, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|b8e10a3039391db6e4fbdc96720d3428a2dbd039|Jun 07, 2024
 Emulators|[libretro-beetle-supergrafx](http://github.com/libretro/beetle-supergrafx-libretro)|e3f68c1311d4684a5a59d3d1662d5c4f32662c02|Jun 07, 2024
@@ -25,12 +27,11 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|5a13c027742c08fc3be6030588
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|c7b77d4a763e8fa3ee2c4ef63b3974527056b7ad|Jun 07, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|1b97d05c1747f38a664bbf0012ba27e369597970|Jun 07, 2024
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|994b063121b3afa9e080144aec7839afc667df06|Jun 07, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240607|Jun 07, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|7eb72b7bb3d3ea771efddcb5273e8a69456548ff|Jun 07, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|2e379300a69aa1e75ca36bd4ab67275061c356d4|Jun 07, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|a49d34885008c99b40d12c382700548626201fff|Jun 07, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|7f18a2b6662be55147eecca57fa62dfd774b55b8|Jun 07, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|fcf169064de313ca34e004a250b1e5b2aa825daf|Jun 07, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240607|Jun 07, 2024
 Ports|[quake3](http://github.com/ioquake/ioq3)|4fc059b9402d2f813bd1251faf9c8228c99dab03|Jun 07, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|6dd4012a5ac8b02add9b3ead96c9b941bcc76acb|Jun 07, 2024
 Ports|[sonicmania](https://github.com/Rubberduckycooly/Sonic-Mania-Decompilation.git)|2c283521b3fe28d17248aed35f1e83409d05ae5f|Jun 07, 2024
@@ -41,7 +42,6 @@ Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|d4418a16827d0edd619874405d990725b908b82a|Jun 06, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|81b6bfaa1e1804cf9d8ba4068fcbfe2c92a19e98|Jun 06, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|851cdd232b29f65c2a46273ee5e12321f3c50892|Jun 06, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|9f6e44fd9ca7d39258f2772c3f44013142702ca4|Jun 06, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|e4dcd5fe2895ea823ec59e0f8224c1701576fdd8|Jun 06, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|27ef548c4c960ae926098389de95753cc4ac0ba6|Jun 06, 2024
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|69a20d7213f18b295fdd2f34acceb189a55b2a74|Jun 05, 2024
