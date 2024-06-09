@@ -3,10 +3,10 @@
 # supermodel-legacy
 #
 ################################################################################
-# Version: Commits on Aug 20, 2022
-# last decent commit before breakages, move to OpenGL 4.1 breaks the RPi4 compatibility
-SUPERMODEL_LEGACY_VERSION = 0eef09ba2b74e48fd5cfd388ee69a3743fd5f618
-SUPERMODEL_LEGACY_SITE = $(call github,trzy,Supermodel,$(SUPERMODEL_LEGACY_VERSION))
+# Version: Commits on May 23, 2024
+SUPERMODEL_LEGACY_VERSION = fdbbec5d30831689b67e5f5af0bf0567dd2f0ba9
+SUPERMODEL_LEGACY_BRANCH = arm
+SUPERMODEL_LEGACY_SITE = $(call github,DirtBagXon,model3emu-code-sinden,$(SUPERMODEL_LEGACY_VERSION))
 SUPERMODEL_LEGACY_DEPENDENCIES = sdl2 zlib libzip sdl2_net
 SUPERMODEL_LEGACY_LICENSE = GPLv3
 

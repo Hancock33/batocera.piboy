@@ -3,10 +3,11 @@
 # unclutter
 #
 ################################################################################
-# Version: 1.5-batocera
-UNCLUTTER_VERSION = a73b7f8f353b8322374720aecf670803af4c8d8e
+# Version: Commits on Aug 13, 2019
+UNCLUTTER_VERSION = v1.5-batocera
+UNCLUTTER_SOURCE = $(UNCLUTTER_VERSION).tar.gz
+UNCLUTTER_SITE = https://github.com/batocera-linux/unclutter-xfixes/archive/refs/tags
 UNCLUTTER_LICENSE = MIT
-UNCLUTTER_SITE = $(call github,batocera-linux,unclutter-xfixes,$(UNCLUTTER_VERSION))
 UNCLUTTER_DEPENDENCIES = xserver_xorg-server libev
 
 UNCLUTTER_CFLAGS="-I$(@D)/include -D'__VERSION=\"$(UNCLUTTER_VERSION)\"'"

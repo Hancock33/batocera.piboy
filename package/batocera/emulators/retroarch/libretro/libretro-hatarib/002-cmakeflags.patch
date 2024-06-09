@@ -1,0 +1,12 @@
+diff --git a/makefile b/makefile
+index f3fa6d9..3cd20f0 100644
+--- a/makefile
++++ b/makefile
+@@ -48,6 +48,7 @@ CMAKEFLAGS += \
+ 	-DCMAKE_DISABLE_FIND_PACKAGE_PNG=1 \
+ 	-DCMAKE_DISABLE_FIND_PACKAGE_PortMidi=1 \
+ 	-DCMAKE_DISABLE_FIND_PACKAGE_CapsImage=1 \
++	-DCMAKE_SYSTEM_NAME=Linux \
+ 	-DENABLE_SMALL_MEM=0
+ CMAKEBUILDFLAGS += $(MULTITHREAD)
+ 

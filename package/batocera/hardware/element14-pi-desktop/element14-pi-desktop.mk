@@ -3,8 +3,8 @@
 # element14-pi-desktop
 #
 ################################################################################
-
-ELEMENT14_PI_DESKTOP_VERSION = 536649e9b2ee9d706cd1c600d1320ad78fd6ac47
+# Version: Commits on Jul 20, 2017
+ELEMENT14_PI_DESKTOP_VERSION = v1.1.0
 ELEMENT14_PI_DESKTOP_SITE = $(call github,pi-desktop,deb-make,$(ELEMENT14_PI_DESKTOP_VERSION))
 
 define ELEMENT14_PI_DESKTOP_CONFIGURE_CMDS

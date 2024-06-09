@@ -3,7 +3,7 @@
 # noto-cjk-fonts
 #
 ################################################################################
-
+# Version: Commits on Jan 27, 2022
 NOTO_CJK_FONTS_VERSION = Sans2.004
 NOTO_CJK_FONTS_SITE = https://github.com/notofonts/noto-cjk/releases/download/$(NOTO_CJK_FONTS_VERSION)
 NOTO_CJK_FONTS_SOURCE = 02_NotoSansCJK-TTF-VF.zip

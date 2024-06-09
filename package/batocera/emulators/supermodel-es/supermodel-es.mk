@@ -3,10 +3,9 @@
 # supermodel-es
 #
 ################################################################################
-# Version: Commits on Oct 03, 2023
-SUPERMODEL_ES_VERSION = 8f8c962775ec4819c02ffd9cc99135bff59e807d
-SUPERMODEL_ES_BRANCH = gles32
-SUPERMODEL_ES_SITE = $(call github,rtissera,Supermodel,$(SUPERMODEL_ES_VERSION))
+# Version: Commits on Jun 01, 2024
+SUPERMODEL_ES_VERSION = 55325c713e63d4834c365300ad4f63a211944113
+SUPERMODEL_ES_SITE = $(call github,DirtBagXon,model3emu-code-sinden,$(SUPERMODEL_ES_VERSION))
 SUPERMODEL_ES_DEPENDENCIES = sdl2 zlib libzip sdl2_net
 SUPERMODEL_ES_LICENSE = GPLv3
 
@@ -22,7 +21,7 @@ endef
 
 define SUPERMODEL_ES_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/supermodel
-	$(INSTALL) -D -m 0755 $(@D)/bin/supermodel $(TARGET_DIR)/usr/bin/supermodel
+	$(INSTALL) -D -m 0755 $(@D)/bin/supermodel $(TARGET_DIR)/usr/bin/supermodel-sinden
 	$(INSTALL) -D -m 0644 $(@D)/Config/Games.xml $(TARGET_DIR)/usr/share/supermodel/Games.xml
 	$(INSTALL) -D -m 0644 $(@D)/Config/Supermodel.ini $(TARGET_DIR)/usr/share/supermodel/Supermodel.ini.template
 	$(INSTALL) -D -m 0644 $(@D)/Config/Supermodel.ini $(TARGET_DIR)/usr/share/supermodel/Supermodel-Driving.ini.template
@@ -39,10 +38,9 @@ endef
 define SUPERMODEL_ES_LINE_ENDINGS_FIXUP
 	# DOS2UNIX Supermodel.ini and Main.cpp - patch system does not support different line endings
 	sed -i -E -e "s|\r$$||g" $(@D)/Src/OSD/SDL/Main.cpp
-	sed -i -E -e "s|\r$$||g" $(@D)/Src/OSD/Unix/FileSystemPath.cpp
 	sed -i -E -e "s|\r$$||g" $(@D)/Src/Inputs/Inputs.cpp
 	sed -i -E -e "s|\r$$||g" $(@D)/Src/Graphics/New3D/R3DShaderTriangles.h
-	sed -i -E -e "s|\r$$||g" $(@D)/Makefiles/Makefile.UNIX
+	sed -i -E -e "s|\r$$||g" $(@D)/Src/OSD/Unix/FileSystemPath.cpp
 endef
 
 define SUPERMODEL_ES_POST_PROCESS

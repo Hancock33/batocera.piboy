@@ -3,8 +3,8 @@
 # input-wrapper
 #
 ################################################################################
-# Version: Commits on Feb 29, 2024
-INPUT_WRAPPER_VERSION = 85f2c70c25230d90781dbddbc97436fa50283530
+# Version: Commits on Mar 19, 2024
+INPUT_WRAPPER_VERSION = e48e2081ac396441b685c0d162c6249f3b72572c
 INPUT_WRAPPER_SITE = $(call github,macromorgan,input-wrapper,$(INPUT_WRAPPER_VERSION))
 
 define INPUT_WRAPPER_BUILD_CMDS

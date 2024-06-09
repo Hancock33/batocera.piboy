@@ -3,9 +3,9 @@
 # qrtr
 #
 ################################################################################
-# Version: Commits on Dec 21, 2022
-QRTR_VERSION = d0d471c96e7d112fac6f48bd11f9e8ce209c04d2
-QRTR_SITE = $(call github,andersson,qrtr,$(QRTR_VERSION))
+# Version: Commits on May 21, 2024
+QRTR_VERSION = daf7f4cc326a5036dcce2bd7deaf2c32841b0336
+QRTR_SITE = $(call github,linux-msm,qrtr,$(QRTR_VERSION))
 QRTR_LICENSE = BSD-3-Clause license
 QRTR_LICENSE_FILE = LICENSE
 QRTR_DEPENDENCIES = linux-headers

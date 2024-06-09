@@ -3,8 +3,8 @@
 # amiberry
 #
 ################################################################################
-# Version: Commits on May 30, 2024
-AMIBERRY_VERSION = 10dbe5762eeb5adc1b77ca910b5d108440b5a72c
+# Version: Commits on Jun 06, 2024
+AMIBERRY_VERSION = d4418a16827d0edd619874405d990725b908b82a
 AMIBERRY_SITE = $(call github,BlitterStudio,amiberry,$(AMIBERRY_VERSION))
 AMIBERRY_LICENSE = GPLv3
 AMIBERRY_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf mpg123 libxml2 libmpeg2 flac libpng libserialport portmidi
@@ -13,6 +13,7 @@ define AMIBERRY_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/amiberry 						$(TARGET_DIR)/usr/bin/amiberry
 	mkdir -p											$(TARGET_DIR)/usr/share/amiberry
 	cp -rf $(@D)/data									$(TARGET_DIR)/usr/share/amiberry
+	cp -rf $(@D)/plugins								$(TARGET_DIR)/usr/share/amiberry
 	ln -sf /userdata/system/configs/amiberry/whdboot	$(TARGET_DIR)/usr/share/amiberry/whdboot
 	ln -sf /usr/lib/libcapsimage.so.5.1 				$(TARGET_DIR)/usr/share/amiberry/capsimg.so
 

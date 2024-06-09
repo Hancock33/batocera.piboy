@@ -39,8 +39,8 @@ WINE_GE_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGE
 	--without-mingw \
 	--without-opencl \
 	--without-oss \
-    --prefix=/usr/wine/ge \
-    --exec-prefix=/usr/wine/ge
+	--prefix=/usr/wine/ge \
+	--exec-prefix=/usr/wine/ge
 
 ifeq ($(BR2_x86_64),y)
 	WINE_GE_CONF_OPTS += --enable-win64
@@ -200,10 +200,10 @@ WINE_GE_CONF_OPTS += --without-udev
 endif
 
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
-    WINE_GE_CONF_OPTS += --with-vulkan
-    WINE_GE_DEPENDENCIES += vulkan-headers vulkan-loader
+	WINE_GE_CONF_OPTS += --with-vulkan
+	WINE_GE_DEPENDENCIES += vulkan-headers vulkan-loader
 else
-    WINE_GE_CONF_OPTS += --without-vulkan
+	WINE_GE_CONF_OPTS += --without-vulkan
 endif
 
 ifeq ($(BR2_PACKAGE_XLIB_LIBX11),y)
@@ -338,7 +338,7 @@ HOST_WINE_GE_CONF_OPTS += \
 
 # Cleanup final directory
 define WINE_GE_REMOVE_INCLUDES_HOOK
-        rm -Rf $(TARGET_DIR)/usr/wine/ge/include
+	rm -Rf $(TARGET_DIR)/usr/wine/ge/include
 endef
 
 WINE_GE_POST_INSTALL_TARGET_HOOKS += WINE_GE_REMOVE_INCLUDES_HOOK

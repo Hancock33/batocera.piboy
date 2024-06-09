@@ -3,8 +3,8 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on May 31, 2024
-RPCS3_VERSION = e5ce88f00782a27d8edeedce81c05eb215309a67
+# Version: Commits on Jun 08, 2024
+RPCS3_VERSION = 6fff22391c7c9666e958255c7e3ba0b3783ad2da
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
@@ -26,6 +26,7 @@ RPCS3_CONF_OPTS += -DUSE_SYSTEM_FFMPEG=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_CURL=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_LIBPNG=ON
 RPCS3_CONF_OPTS += -DUSE_LIBEVDEV=ON
+RPCS3_CONF_OPTS += -DUSE_FAUDIO=ON
 # sdl controller config seems broken...
 RPCS3_CONF_OPTS += -DUSE_SDL=OFF
 

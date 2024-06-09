@@ -10072,7 +10072,7 @@ msgctxt "game_options"
 msgid "ACHIEVEMENTS"
 msgstr "BAŞARIMLAR"
 
-#. TRANSLATION: duckstation, theforceengine
+#. TRANSLATION: duckstation, mame, theforceengine
 msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr "CROSSHAIR"
@@ -12390,7 +12390,7 @@ msgctxt "game_options"
 msgid "2x (1280x960) (Default)"
 msgstr "2x (1280x960) (Varsayılan)"
 
-#. TRANSLATION: redream
+#. TRANSLATION: redream, cgenius
 msgctxt "game_options"
 msgid "Choose your preferred aspect ratio."
 msgstr "Tercih ettiğiniz en boy oranını seçin."
@@ -12569,10 +12569,25 @@ msgctxt "game_options"
 msgid "50 (Default)"
 msgstr "50 (Varsayılan)"
 
-#. TRANSLATION: cgenius
+#. TRANSLATION: supermodel
 msgctxt "game_options"
-msgid "Choose your preferred aspect ratio.."
-msgstr "Tercih ettiğiniz en boy oranını seçin."
+msgid "Chose which emulator to use."
+msgstr ""
+
+#. TRANSLATION: supermodel, supermodel
+msgctxt "game_options"
+msgid "EMULATOR"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "Navite"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "Sinden"
+msgstr ""
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
@@ -16692,6 +16707,10 @@ msgstr "Hızlı Yükle"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Hızlı Kaydet"
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "Tercih ettiğiniz en boy oranını seçin."
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
