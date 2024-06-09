@@ -1,7 +1,7 @@
 config BR2_PACKAGE_VULKAN_VOLK
   bool "vulkan-volk"
-  depends on BR2_PACKAGE_WAYLAND || BR2_PACKAGE_XORG7
-  select BR2_PACKAGE_VULKAN_HEADERS
-  select BR2_PACKAGE_VULKAN_LOADER
   help
     Meta loader for Vulkan API
+
+    https://github.com/zeux/volk
+

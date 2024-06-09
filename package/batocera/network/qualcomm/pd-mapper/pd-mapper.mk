@@ -5,7 +5,7 @@
 ################################################################################
 # Version: Commits on Sept 01, 2023
 PD_MAPPER_VERSION = 10997ba7c43a3787a40b6b1b161408033e716374
-PD_MAPPER_SITE = $(call github,andersson,pd-mapper,$(PD_MAPPER_VERSION))
+PD_MAPPER_SITE = $(call github,linux-msm,pd-mapper,$(PD_MAPPER_VERSION))
 PD_MAPPER_LICENSE_FILE = LICENSE
 PD_MAPPER_DEPENDENCIES = host-qrtr qrtr
 

@@ -1,8 +1,8 @@
-diff --git a/sdl2-jstest.c b/sdl2-jstest.c
-index 4bc2dfd..5c76a8c 100644
---- a/sdl2-jstest.c
-+++ b/sdl2-jstest.c
-@@ -65,6 +65,7 @@ void print_joystick_info(int joy_idx, SDL_Joystick* joy, SDL_GameController* gam
+diff --git a/src/sdl2-jstest.c b/src/sdl2-jstest.c
+index ba87d3d..721b991 100644
+--- a/src/sdl2-jstest.c
++++ b/src/sdl2-jstest.c
+@@ -69,6 +69,7 @@ static void print_joystick_info(int joy_idx, SDL_Joystick* joy, SDL_GameControll
    SDL_JoystickGetGUIDString(guid, guid_str, sizeof(guid_str));
  
    printf("Joystick Name:     '%s'\n", SDL_JoystickName(joy));

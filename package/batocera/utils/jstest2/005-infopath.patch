@@ -1,8 +1,8 @@
-diff --git a/sdl2-jstest.c b/sdl2-jstest.c
-index 5c76a8c..0a1eb2f 100644
---- a/sdl2-jstest.c
-+++ b/sdl2-jstest.c
-@@ -150,6 +150,26 @@ void list_joysticks()
+diff --git a/src/sdl2-jstest.c b/src/sdl2-jstest.c
+index 721b991..8db1c2c 100644
+--- a/src/sdl2-jstest.c
++++ b/src/sdl2-jstest.c
+@@ -154,6 +154,26 @@ static void list_joysticks(void)
    }
  }
  
@@ -26,10 +26,10 @@ index 5c76a8c..0a1eb2f 100644
 +  }
 +}
 +
- void test_joystick(int joy_idx)
+ static void test_joystick(int joy_idx)
  {
    SDL_Joystick* joy = SDL_JoystickOpen(joy_idx);
-@@ -579,7 +599,7 @@ int main(int argc, char** argv)
+@@ -625,7 +645,7 @@ int main(int argc, char** argv)
    SDL_SetHint(SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS, "1");
  
    // FIXME: We don't need video, but without it SDL will fail to work in SDL_WaitEvent()
@@ -38,7 +38,7 @@ index 5c76a8c..0a1eb2f 100644
    {
      fprintf(stderr, "Unable to init SDL: %s\n", SDL_GetError());
      exit(1);
-@@ -603,6 +623,10 @@ int main(int argc, char** argv)
+@@ -661,6 +681,10 @@ int main(int argc, char** argv)
      {
        list_joysticks();
      }

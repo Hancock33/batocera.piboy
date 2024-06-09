@@ -3,8 +3,9 @@
 # qtsixa-shanwan
 #
 ################################################################################
-# Version: Commits on 01 May 2016
-QTSIXA_SHANWAN_VERSION = shanwan
+# Version: Commits on May 01, 2016
+QTSIXA_SHANWAN_VERSION = f01193703070a0d0f5db582bb0a6fe8c21ebf517
+QTSIXA_SHANWAN_BRANCH = shanwan
 QTSIXA_SHANWAN_SITE = $(call github,batocera-linux,qtsixa,$(QTSIXA_SHANWAN_VERSION))
 QTSIXA_SHANWAN_DEPENDENCIES = linux-headers qtsixa libusb-compat bluez5_utils
 PKGCONFIG_CONFIG=$(STAGING_DIR)/usr/lib/pkgconfig

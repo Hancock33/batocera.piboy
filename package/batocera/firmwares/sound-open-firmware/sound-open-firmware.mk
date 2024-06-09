@@ -4,9 +4,9 @@
 #
 ################################################################################
 # Version: Commits on Apr 02, 2024
-SOUND_OPEN_FIRMWARE_VERSION = 2024.03
-SOUND_OPEN_FIRMWARE_SOURCE = sof-bin-$(SOUND_OPEN_FIRMWARE_VERSION).tar.gz
-SOUND_OPEN_FIRMWARE_SITE = https://github.com/thesofproject/sof-bin/releases/download/v$(SOUND_OPEN_FIRMWARE_VERSION)
+SOUND_OPEN_FIRMWARE_VERSION = v2024.03
+SOUND_OPEN_FIRMWARE_SOURCE = sof-bin-$(subst v,,$(SOUND_OPEN_FIRMWARE_VERSION)).tar.gz
+SOUND_OPEN_FIRMWARE_SITE = https://github.com/thesofproject/sof-bin/releases/download/$(SOUND_OPEN_FIRMWARE_VERSION)
 SOUND_OPEN_FIRMWARE_LICENSE = BSD-3-Clause
 SOUND_OPEN_FIRMWARE_LICENSE_FILES = LICENSE
 

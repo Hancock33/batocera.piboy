@@ -1,8 +1,8 @@
-diff --git a/sdl2-jstest.c b/sdl2-jstest.c
-index fb08b56..227f558 100644
---- a/sdl2-jstest.c
-+++ b/sdl2-jstest.c
-@@ -581,7 +581,7 @@ int main(int argc, char** argv)
+diff --git a/src/sdl2-jstest.c b/src/sdl2-jstest.c
+index 8db1c2c..6fd1bf1 100644
+--- a/src/sdl2-jstest.c
++++ b/src/sdl2-jstest.c
+@@ -657,7 +657,7 @@ int main(int argc, char** argv)
      {
        int ret = SDL_GameControllerAddMappingsFromFile(SDL2_JSTEST_DATADIR "/gamecontrollerdb.txt");
        if (ret < 0) {

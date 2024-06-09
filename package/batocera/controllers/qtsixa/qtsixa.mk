@@ -3,8 +3,9 @@
 # qtsixa
 #
 ################################################################################
-# Version: Commits on 01 May 2016
-QTSIXA_VERSION = gasia
+# Version: Commits on May 01, 2016
+QTSIXA_VERSION = eec727030f341cf543a56bd9aeb821ea901bca64
+QTSIXA_BRANCH = gasia
 QTSIXA_SITE = $(call github,batocera-linux,qtsixa,$(QTSIXA_VERSION))
 QTSIXA_DEPENDENCIES = linux-headers libusb-compat bluez5_utils
 PKGCONFIG_CONFIG=$(STAGING_DIR)/usr/lib/pkgconfig

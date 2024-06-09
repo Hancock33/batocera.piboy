@@ -3,7 +3,7 @@
 # libgme
 #
 ################################################################################
-# Version: Commits on 03 Oct, 2023
+# Version: Commits on Oct 03, 2023
 LIBGME_VERSION = 0.6.3
 LIBGME_SITE = $(call github,libgme,game-music-emu,$(LIBGME_VERSION))
 LIBGME_INSTALL_STAGING = YES

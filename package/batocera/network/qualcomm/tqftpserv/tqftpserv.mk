@@ -3,9 +3,9 @@
 # tqftpserv
 #
 ################################################################################
-# Version: Commits on Feb 24, 2020
-TQFTPSERV_VERSION = de42697a2466cc5ee267ffe36ab4e8494f005fb0
-TQFTPSERV_SITE = $(call github,andersson,tqftpserv,$(TQFTPSERV_VERSION))
+# Version: Commits on Apr 30, 2024
+TQFTPSERV_VERSION = 47e89572713092caefd937856894fed33fcc9450
+TQFTPSERV_SITE = $(call github,linux-msm,tqftpserv,$(TQFTPSERV_VERSION))
 TQFTPSERV_LICENSE = BSD-3-Clause license
 TQFTPSERV_LICENSE_FILE = LICENSE
 TQFTPSERV_DEPENDENCIES = host-qrtr qrtr

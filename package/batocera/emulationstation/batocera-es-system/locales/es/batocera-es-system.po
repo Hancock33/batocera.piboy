@@ -10094,7 +10094,7 @@ msgctxt "game_options"
 msgid "ACHIEVEMENTS"
 msgstr "LOGROS"
 
-#. TRANSLATION: duckstation, theforceengine
+#. TRANSLATION: duckstation, mame, theforceengine
 msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr "PUNTO DE MIRA"
@@ -12419,7 +12419,7 @@ msgctxt "game_options"
 msgid "2x (1280x960) (Default)"
 msgstr "2x (1280x960) (Defecto)"
 
-#. TRANSLATION: redream
+#. TRANSLATION: redream, cgenius
 msgctxt "game_options"
 msgid "Choose your preferred aspect ratio."
 msgstr "Escoja su relación de aspecto preferida."
@@ -12603,10 +12603,25 @@ msgctxt "game_options"
 msgid "50 (Default)"
 msgstr "50 (Defecto)"
 
-#. TRANSLATION: cgenius
+#. TRANSLATION: supermodel
 msgctxt "game_options"
-msgid "Choose your preferred aspect ratio.."
-msgstr "Escoja su relación de aspecto preferida."
+msgid "Chose which emulator to use."
+msgstr ""
+
+#. TRANSLATION: supermodel, supermodel
+msgctxt "game_options"
+msgid "EMULATOR"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "Navite"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "Sinden"
+msgstr ""
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
@@ -16750,16 +16765,9 @@ msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Guardado rápido"
 
-#, c-format
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "For playing driving games with a game pad, it is sometimes a good idea to "
-#~ "use a value larger than 100% so that the steering feels less sensitive on "
-#~ "a thumbstick."
-#~ msgstr ""
-#~ "Para jugar a juegos de conducción con un mando, a veces es una buena idea "
-#~ "usar un valor mayor al 100% s para que la dirección se sienta menos "
-#~ "sensible en el stick."
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "Escoja su relación de aspecto preferida."
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
@@ -17468,6 +17476,17 @@ msgstr "Guardado rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rápido"
+
+#, c-format
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "For playing driving games with a game pad, it is sometimes a good idea to "
+#~ "use a value larger than 100% so that the steering feels less sensitive on "
+#~ "a thumbstick."
+#~ msgstr ""
+#~ "Para jugar a juegos de conducción con un mando, a veces es una buena idea "
+#~ "usar un valor mayor al 100% s para que la dirección se sienta menos "
+#~ "sensible en el stick."
 
 #~ msgctxt "game_options"
 #~ msgid ""

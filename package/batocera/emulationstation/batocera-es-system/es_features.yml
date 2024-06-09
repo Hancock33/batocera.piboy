@@ -265,6 +265,7 @@ shared:
         "On":  1
         "Off": 0
     wheel_rotation:
+      order: 100
       group: CONTROLS
       submenu: WHEELS
       prompt: WHEEL ROTATION
@@ -280,6 +281,7 @@ shared:
         "900": 900
         "1080": 1080
     wheel_deadzone:
+      order: 100
       group: CONTROLS
       submenu: WHEELS
       prompt: WHEEL DEADZONE
@@ -296,6 +298,7 @@ shared:
         "45": 45
         "50": 50
     wheel_midzone:
+      order: 100
       group: CONTROLS
       submenu: WHEELS
       prompt: WHEEL MIDZONE
@@ -8281,6 +8284,7 @@ dolphin:
                 description: Emulate the Wii Remote pointer with a mouse.
                 preset: switchoff
             dolphin-lightgun-hide-crosshair:
+                order: 99
                 group: CONTROLS
                 submenu: LIGHT GUNS
                 prompt: SHOW LIGHT GUN CROSSHAIRS
@@ -8403,7 +8407,7 @@ dosboxx:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 duckstation:
-  features: [padtokeyboard]
+  features: [cheevos, padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns, use_wheels, wheel_rotation, wheel_deadzone, wheel_midzone]
   cfeatures:
         duckstation_clocking:
@@ -8730,7 +8734,7 @@ duckstation:
                 "Enabled":            "100"
 
 flycast:
-  features: [padtokeyboard]
+  features: [cheevos, padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels, wheel_rotation, wheel_deadzone, wheel_midzone]
   cfeatures:
     flycast_ratio:
@@ -10472,13 +10476,21 @@ supermodel:
                 "130":          130
                 "140":          140
                 "150":          150
+        m3Emu:
+          archs_include: [x86, x86_64]
+          group: EMULATOR
+          prompt: EMULATOR
+          description: Chose which emulator to use.
+          choices:
+                "Navite": "native"
+                "Sinden":  "sinden"
 cgenius:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         cgenius_aspect:
             prompt: ASPECT RATIO
-            description: Choose your preferred aspect ratio..
+            description: Choose your preferred aspect ratio.
             choices:
                 "4x3 (Default)": "4:3"
                 "5x4":           "5:4"
@@ -10633,6 +10645,13 @@ mame:
             choices:
                 "On":            1
                 "Off (Default)": 0
+        mame_crosshair:
+            group: LIGHT GUN
+            prompt: CROSSHAIR
+            description:
+            choices:
+                "Disabled (Default)": "0"
+                "Enabled":            "1"
   systems:
        adam:
             cfeatures:
@@ -13451,12 +13470,12 @@ vita3k:
   features: [padtokeyboard]
   cfeatures:
     # Disabled until vulkan fixed upstream
-    #vita3k_gfxbackend:
-    #  prompt:      GRAPHICS API
-    #  description: Choose which graphics API library to use.
-    #  choices:
-    #    "OpenGL": "OpenGL"
-    #    "Vulkan": "Vulkan"
+    vita3k_gfxbackend:
+      prompt:      GRAPHICS API
+      description: Choose which graphics API library to use.
+      choices:
+        "OpenGL": "OpenGL"
+        "Vulkan": "Vulkan"
     vita3k_resolution:
       prompt:      RENDERING RESOLUTION
       description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.

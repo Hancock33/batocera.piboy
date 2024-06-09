@@ -3,8 +3,8 @@
 # aml-dtbtools
 #
 ################################################################################
-
-AML_DTBTOOLS_VERSION = master
+# Version: Commits on Jul 31, 2017
+AML_DTBTOOLS_VERSION = b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d
 AML_DTBTOOLS_SITE = $(call github,Wilhansen,aml-dtbtools,$(AML_DTBTOOLS_VERSION))
 
 define HOST_AML_DTBTOOLS_BUILD_CMDS

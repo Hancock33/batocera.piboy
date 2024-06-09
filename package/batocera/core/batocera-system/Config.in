@@ -283,7 +283,9 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_BATOCERA_WHEEL_CALIBRATOR
     select BR2_PACKAGE_HID_NX                               if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 && !BR2_PACKAGE_BATOCERA_TARGET_BCM2835 # updated nintendo switch controller driver, requires kernel > 4.4
     select BR2_PACKAGE_JOYCOND                              if  BR2_PACKAGE_HID_NX                         # nintendo switch joycon daemon (requires hid-nx)
-    select BR2_PACKAGE_NEW_LG4FF                            if !BR2_PACKAGE_BATOCERA_TARGET_RK3326 && !BR2_PACKAGE_BATOCERA_TARGET_XU4 && !BR2_PACKAGE_BATOCERA_TARGET_BCM2835# Improved Linux module driver for Logitech driving wheels (the lg4ff is disabled in kernels)
+    select BR2_PACKAGE_NEW_LG4FF                            if !BR2_PACKAGE_BATOCERA_TARGET_RK3326         && !BR2_PACKAGE_BATOCERA_TARGET_XU4    && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_BCM2835        && !BR2_PACKAGE_BATOCERA_TARGET_RK3326 && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3128         # Improved Linux module driver for Logitech driving wheels (the lg4ff is disabled in kernels)
     select BR2_PACKAGE_JAMMASD
 
     select BR2_PACKAGE_UPOWER                               # required by some cemuhook servers
@@ -767,7 +769,8 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
 
     # Standalone Sega Model 3 emulator
     select BR2_PACKAGE_SUPERMODEL                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
-    select BR2_PACKAGE_SUPERMODEL_LEGACY                    if  BR2_PACKAGE_BATOCERA_BCM27XX || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
+    select BR2_PACKAGE_SUPERMODEL_ES                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  # Sinden Gun support
+    select BR2_PACKAGE_SUPERMODEL_LEGACY                    if  BR2_PACKAGE_BATOCERA_BCM27XX            || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
 
     # RetroArch MAME derivatives
     select BR2_PACKAGE_LIBRETRO_MAME2003_PLUS               # ALL
@@ -1037,7 +1040,9 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     # Atari ST/TT/Falcon
     select BR2_PACKAGE_HATARI                               if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
     select BR2_PACKAGE_LIBRETRO_HATARI                      # ALL
-    select BR2_PACKAGE_LIBRETRO_HATARIB                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_LIBRETRO_HATARIB                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2711     || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2712
 
     # MSX range
     select BR2_PACKAGE_LIBRETRO_BLUEMSX                     # ALL
@@ -1406,12 +1411,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
     # Symbian OS / Nokia N-Gage emulator
     select BR2_PACKAGE_EKA2L1                               if !BR2_riscv && BR2_x86_64
-
-    # Supermodel OpenGL ES port
-    #select BR2_PACKAGE_SUPERMODEL_ES                       if  BR2_PACKAGE_BATOCERA_BCM27XX            || \
-    #                                                           BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
-    #                                                           BR2_PACKAGE_BATOCERA_TARGET_RK3568      || \
-    #                                                           BR2_PACKAGE_BATOCERA_TARGET_H616
 
     # Apple 2
     select BR2_PACKAGE_APPLEWIN                             # ALL

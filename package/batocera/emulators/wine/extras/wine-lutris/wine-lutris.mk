@@ -38,8 +38,8 @@ WINE_LUTRIS_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 	--without-mingw \
 	--without-opencl \
 	--without-oss \
-    --prefix=/usr/wine/lutris \
-    --exec-prefix=/usr/wine/lutris
+	--prefix=/usr/wine/lutris \
+	--exec-prefix=/usr/wine/lutris
 
 ifeq ($(BR2_x86_64),y)
 	WINE_LUTRIS_CONF_OPTS += --enable-win64
@@ -199,10 +199,10 @@ WINE_LUTRIS_CONF_OPTS += --without-udev
 endif
 
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
-    WINE_LUTRIS_CONF_OPTS += --with-vulkan
-    WINE_LUTRIS_DEPENDENCIES += vulkan-headers vulkan-loader
+	WINE_LUTRIS_CONF_OPTS += --with-vulkan
+	WINE_LUTRIS_DEPENDENCIES += vulkan-headers vulkan-loader
 else
-    WINE_LUTRIS_CONF_OPTS += --without-vulkan
+	WINE_LUTRIS_CONF_OPTS += --without-vulkan
 endif
 
 ifeq ($(BR2_PACKAGE_XLIB_LIBX11),y)
@@ -337,7 +337,7 @@ HOST_WINE_LUTRIS_CONF_OPTS += \
 
 # Cleanup final directory
 define WINE_LUTRIS_REMOVE_INCLUDES_HOOK
-        rm -Rf $(TARGET_DIR)/usr/wine/lutris/include
+	rm -Rf $(TARGET_DIR)/usr/wine/lutris/include
 endef
 
 WINE_LUTRIS_POST_INSTALL_TARGET_HOOKS += WINE_LUTRIS_REMOVE_INCLUDES_HOOK

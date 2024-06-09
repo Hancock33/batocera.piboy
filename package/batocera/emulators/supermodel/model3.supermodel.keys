@@ -1,12 +1,9 @@
 {
     "actions_player1": [
 	{
-            "trigger": [
-                "hotkey",
-                "start"
-            ],
-            "type": "exec",
-            "target": "killall -9 supermodel && reset"
+            "trigger": ["hotkey", "start"],
+            "type": "key",
+            "target": [ "KEY_ESC" ]
 	},
 	{
             "trigger": ["hotkey", "a"],
