@@ -12245,7 +12245,7 @@ msgctxt "game_options"
 msgid "2x (1280x960) (Default)"
 msgstr ""
 
-#. TRANSLATION: redream
+#. TRANSLATION: redream, cgenius
 #, fuzzy
 msgctxt "game_options"
 msgid "Choose your preferred aspect ratio."
@@ -12423,10 +12423,25 @@ msgctxt "game_options"
 msgid "50 (Default)"
 msgstr ""
 
-#. TRANSLATION: cgenius
+#. TRANSLATION: supermodel
 msgctxt "game_options"
-msgid "Choose your preferred aspect ratio.."
-msgstr "اختر تحجيم العرض المفضل لديك."
+msgid "Chose which emulator to use."
+msgstr ""
+
+#. TRANSLATION: supermodel, supermodel
+msgctxt "game_options"
+msgid "EMULATOR"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "Navite"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "Sinden"
+msgstr ""
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
@@ -16446,6 +16461,10 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "اختر تحجيم العرض المفضل لديك."
 
 #, fuzzy
 #~ msgctxt "game_options"

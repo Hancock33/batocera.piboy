@@ -12416,7 +12416,7 @@ msgctxt "game_options"
 msgid "2x (1280x960) (Default)"
 msgstr "2x (1280x960) (Standaard)"
 
-#. TRANSLATION: redream
+#. TRANSLATION: redream, cgenius
 msgctxt "game_options"
 msgid "Choose your preferred aspect ratio."
 msgstr "Kies de gewenste beeldverhouding."
@@ -12597,10 +12597,25 @@ msgctxt "game_options"
 msgid "50 (Default)"
 msgstr "50 (Standaard)"
 
-#. TRANSLATION: cgenius
+#. TRANSLATION: supermodel
 msgctxt "game_options"
-msgid "Choose your preferred aspect ratio.."
-msgstr "Kies de gewenste beeldverhouding.."
+msgid "Chose which emulator to use."
+msgstr ""
+
+#. TRANSLATION: supermodel, supermodel
+msgctxt "game_options"
+msgid "EMULATOR"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "Navite"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "Sinden"
+msgstr ""
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
@@ -16731,6 +16746,10 @@ msgstr "Snel Laden"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Snel Opslaan"
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "Kies de gewenste beeldverhouding.."
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
