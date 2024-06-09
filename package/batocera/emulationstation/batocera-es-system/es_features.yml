@@ -10476,13 +10476,21 @@ supermodel:
                 "130":          130
                 "140":          140
                 "150":          150
+        m3Emu:
+          archs_include: [x86, x86_64]
+          group: EMULATOR
+          prompt: EMULATOR
+          description: Chose which emulator to use.
+          choices:
+                "Navite": "native"
+                "Sinden":  "sinden"
 cgenius:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         cgenius_aspect:
             prompt: ASPECT RATIO
-            description: Choose your preferred aspect ratio..
+            description: Choose your preferred aspect ratio.
             choices:
                 "4x3 (Default)": "4:3"
                 "5x4":           "5:4"

@@ -12159,7 +12159,7 @@ msgctxt "game_options"
 msgid "2x (1280x960) (Default)"
 msgstr ""
 
-#. TRANSLATION: redream
+#. TRANSLATION: redream, cgenius
 msgctxt "game_options"
 msgid "Choose your preferred aspect ratio."
 msgstr ""
@@ -12334,9 +12334,24 @@ msgctxt "game_options"
 msgid "50 (Default)"
 msgstr ""
 
-#. TRANSLATION: cgenius
+#. TRANSLATION: supermodel
 msgctxt "game_options"
-msgid "Choose your preferred aspect ratio.."
+msgid "Chose which emulator to use."
+msgstr ""
+
+#. TRANSLATION: supermodel, supermodel
+msgctxt "game_options"
+msgid "EMULATOR"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "Navite"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "Sinden"
 msgstr ""
 
 #. TRANSLATION: cgenius
