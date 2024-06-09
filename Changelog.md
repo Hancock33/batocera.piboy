@@ -15,7 +15,9 @@ Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v1.7.5877|Jun 09, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|5dec3ca2db10943dcdf5e483cc8c28e0524d1a43|Jun 09, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|bc856389202419156e5b2bb09de8b54b467ae549|Jun 09, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|ff227c5d93acce7aa70d235654bcbbece0827ac0|Jun 09, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|38364ef07f328003104bb2a2d28a2c5d66f40d92|Jun 09, 2024
+Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.7.3|Jun 09, 2024
+Emulators|[vpinball](http://github.com/vpinball/vpinball)|031d3068b11b367ec0209c8179141d59c93dca06|Jun 09, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|04ba0b2f676bfb8a7f367cecd20c0fef372595b1|Jun 09, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|2a0adc90298212323a8f917f14a2bc9ad26fc63b|Jun 09, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|5d74b0eb36d3da77e0d1d4deedf04788151be1ec|Jun 09, 2024
 Ports|[quake3](http://github.com/ioquake/ioq3)|6f5c0389477c6c65c04be12ea2eb7a33a79e659f|Jun 09, 2024
@@ -45,7 +47,6 @@ Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|e203
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|13f8c93b740fa3a42d63389f63728ba31e1eab67|Jun 07, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|c7b77d4a763e8fa3ee2c4ef63b3974527056b7ad|Jun 07, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|1b97d05c1747f38a664bbf0012ba27e369597970|Jun 07, 2024
-Emulators|[vpinball](http://github.com/vpinball/vpinball)|994b063121b3afa9e080144aec7839afc667df06|Jun 07, 2024
 Emulators|[wine-custom](http://github.com/wine-mirror/wine)|7eb72b7bb3d3ea771efddcb5273e8a69456548ff|Jun 07, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|a49d34885008c99b40d12c382700548626201fff|Jun 07, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|7f18a2b6662be55147eecca57fa62dfd774b55b8|Jun 07, 2024
@@ -187,7 +188,6 @@ Emulators|[libretro-vircon32](http://github.com/vircon32/vircon32-libretro)|293d
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|e2b1299d85564c29a1642185aeb6b96e56ded206|Apr 13, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|e2b1299d85564c29a1642185aeb6b96e56ded206|Apr 13, 2024
 Emulators|[libframeutil](http://github.com/ppuc/libframeutil)|30048ca23d41ca0a8f7d5ab75d3f646a19a90182|Apr 13, 2024
-Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.7.2|Apr 13, 2024
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.1|Apr 12, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|b8b6dfff4c3ca304f5f7f56a1d264c1ef506db32|Apr 08, 2024
 Emulators|[libretro-nestopia](http://github.com/libretro/nestopia)|b99ede358b2219602443e7f414eabf81e17da244|Apr 07, 2024

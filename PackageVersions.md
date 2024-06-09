@@ -185,7 +185,7 @@ Emulators|[libretro-yabause](http://github.com/libretro/yabause)|4c96b96f7fbe072
 Emulators|[libretro-zc210](https://github.com/netux79/zc210-libretro.git)|b6426da40b074245fda097fd345fa7c9cdbf152a|Apr 26, 2022
 Emulators|[libretro-zc250x](https://github.com/netux79/zc250x-libretro.git)|cfe8da6aa8714f2a77dba81026a5a5560bc70ad6|Jan 25, 2023
 Emulators|[libserum](http://github.com/zesinger/libserum)|362177db4dad59d0a9c6d026f0aed7d64ac71b7b|Apr 04, 2024
-Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.7.2|Apr 13, 2024
+Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.7.3|Jun 09, 2024
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|13f8c93b740fa3a42d63389f63728ba31e1eab67|Jun 07, 2024
 Emulators|[mame](http://github.com/mamedev/mame)|mame0266|May 31, 2024
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|8e9b88d01da0d21c3c35db051d7e44d8ee0c7715|Jun 08, 2024
@@ -237,7 +237,7 @@ Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d5
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|1b97d05c1747f38a664bbf0012ba27e369597970|Jun 07, 2024
 Emulators|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v2.12|Mar 15, 2024
 Emulators|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.12|May 29, 2024
-Emulators|[vpinball](http://github.com/vpinball/vpinball)|994b063121b3afa9e080144aec7839afc667df06|Jun 07, 2024
+Emulators|[vpinball](http://github.com/vpinball/vpinball)|031d3068b11b367ec0209c8179141d59c93dca06|Jun 09, 2024
 Emulators|[wine-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos-wine-9.0-20240605|Jun 06, 2024
 Emulators|[wine-custom](http://github.com/wine-mirror/wine)|7eb72b7bb3d3ea771efddcb5273e8a69456548ff|Jun 07, 2024
 Emulators|[wine-ge](http://github.com/GloriousEggroll/proton-wine)|39021e609a24b6aeffdf9c4695a286d71e7dffbc|Feb 04, 2024
@@ -264,7 +264,7 @@ Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e24
 Ports|[awgl](http://github.com/cyxx/rawgl)|1eeaa530c859bd6e37b3d3bd7d3136bc16afcc89|Mar 12, 2022
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|1855c8ed66b771fb62ae66bf5b1cbc9ede9cd03a|Dec 26, 2023
-Ports|[box64](http://github.com/ptitseb/box64)|38364ef07f328003104bb2a2d28a2c5d66f40d92|Jun 09, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|04ba0b2f676bfb8a7f367cecd20c0fef372595b1|Jun 09, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|2e589f42fe7a29ced421af221ceb928a3966b54c|May 23, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|d456b02c4abbf40d0e32989df07e00ba467eb972|May 12, 2024
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
