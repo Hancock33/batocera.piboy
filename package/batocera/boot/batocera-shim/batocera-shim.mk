@@ -3,8 +3,8 @@
 # batocera-shim
 #
 ################################################################################
-
-BATOCERA_SHIM_VERSION = 15.7
+# Version: Commits on Jan 23, 2024
+BATOCERA_SHIM_VERSION = 15.8
 BATOCERA_SHIM_SITE = https://github.com/rhboot/shim/releases/download/$(BATOCERA_SHIM_VERSION)
 BATOCERA_SHIM_SOURCE = shim-$(BATOCERA_SHIM_VERSION).tar.bz2
 BATOCERA_SHIM_LICENSE = BSD-2-Clause
