@@ -4,9 +4,10 @@
 #
 ################################################################################
 # Version: Commits on May 31, 2024
-RETROCRISIS_VERSION = 2024.05.31
+RETROCRISIS_VERSION = 20240531
+RETROCRISIS_DATE = $(shell date -d '$(RETROCRISIS_VERSION)' +'%Y.%m.%d')
 RETROCRISIS_SITE = https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases/download/$(subst .,,$(RETROCRISIS_VERSION))
-RETROCRISIS_SOURCE = Retro.Crisis.GDV-NTSC.$(RETROCRISIS_VERSION).zip
+RETROCRISIS_SOURCE = Retro.Crisis.GDV-NTSC.$(RETROCRISIS_DATE).zip
 RETROCRISIS_LICENSE = GPL-3.0
 
 define RETROCRISIS_EXTRACT_CMDS
