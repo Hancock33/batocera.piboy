@@ -3,7 +3,7 @@
 # nv-codec-headers
 #
 ################################################################################
-# align to nvidia production driver - 550.54.14 or greater
+# Version: Commits on Mar 31, 2024
 NV_CODEC_HEADERS_VERSION = n12.2.72.0
 NV_CODEC_HEADERS_SITE = https://github.com/FFmpeg/nv-codec-headers
 NV_CODEC_HEADERS_SITE_METHOD = git
