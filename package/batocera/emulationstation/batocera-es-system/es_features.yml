@@ -1975,6 +1975,25 @@ libretro:
                     "OFF"    : disabled
                     "Normal" : some
                     "Maximum": more
+            reicast_region:
+                prompt: CONSOLE REGION
+                description: Choose the Dreamcast console region.
+                choices:
+                    "USA":      Usa
+                    "Europe":   Europe
+                    "Japan":    Japan
+                    "Default":  Default
+            reicast_language:
+                prompt: BIOS LANGUAGE
+                description: Dreamcast BIOS's language setting. Can change the language of some games. Some games default to Japanese.
+                choices:
+                    "English":   English
+                    "German":    German
+                    "French":    French
+                    "Spanish":   Spanish
+                    "Italian":   Italian
+                    "Japanese":  Japanese
+                    "Default":   Default
             reicast_force_wince:
                 prompt:      FORCE WINDOWS CE MODE
                 description: Required for some games.
