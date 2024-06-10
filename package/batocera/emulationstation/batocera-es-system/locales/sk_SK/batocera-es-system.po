@@ -848,12 +848,12 @@ msgctxt "game_options"
 msgid "English (Default)"
 msgstr "Angličtina (predvolené)"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Spanish"
 msgstr "Španielčina"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, ...
 msgctxt "game_options"
 msgid "French"
 msgstr "Francúzština"
@@ -1019,7 +1019,7 @@ msgctxt "game_options"
 msgid "Dendy is a popular Russian clone with unique characteristics."
 msgstr "Dendy je populárny ruský klon s jedinečnou charakteristikou."
 
-#. TRANSLATION: libretro/mesen, libretro/neocd, libretro/o2em, duckstation, flycast/vitaquake3
+#. TRANSLATION: libretro/mesen, libretro/flycast, libretro/neocd, libretro/o2em, duckstation, ...
 msgctxt "game_options"
 msgid "CONSOLE REGION"
 msgstr "Región konzoly"
@@ -1090,7 +1090,7 @@ msgctxt "game_options"
 msgid "COLOR PALETTE"
 msgstr "Farebná paleta"
 
-#. TRANSLATION: libretro/mesen, libretro/puae, libretro/puae2021, suyu, suyu
+#. TRANSLATION: libretro/mesen, libretro/flycast, libretro/flycast, libretro/puae, libretro/puae2021, ...
 msgctxt "game_options"
 msgid "Default"
 msgstr "Predvolené"
@@ -1355,17 +1355,17 @@ msgstr ""
 "Vybraný jazyk bude použitý ak je zakázané 'Použiť nastavenia firmvéru' alebo "
 "ak sa nenájde súbor firmvéru."
 
-#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, cemu, ...
+#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, libretro/kronos, ...
 msgctxt "game_options"
 msgid "German"
 msgstr "Nemčina"
 
-#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, ...
+#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, libretro/kronos, ...
 msgctxt "game_options"
 msgid "Italian"
 msgstr "Taliančina"
 
-#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, ...
+#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, libretro/kronos, ...
 msgctxt "game_options"
 msgid "Japanese"
 msgstr "Japončina"
@@ -1693,7 +1693,7 @@ msgctxt "game_options"
 msgid "Use Host"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, libretro/dolphin, libretro/kronos, cemu, flycast/vitaquake3, ...
+#. TRANSLATION: libretro/melondsds, libretro/dolphin, libretro/flycast, libretro/kronos, cemu, ...
 msgctxt "game_options"
 msgid "English"
 msgstr "Angličtina"
@@ -3305,6 +3305,40 @@ msgstr "Normálne"
 msgctxt "game_options"
 msgid "Maximum"
 msgstr "Maximálne"
+
+#. TRANSLATION: libretro/flycast, redream
+msgctxt "game_options"
+msgid "Choose the Dreamcast console region."
+msgstr "Vyberte región konzoly Dreamcast."
+
+#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, suyu, ryujinx
+msgctxt "game_options"
+msgid "USA"
+msgstr "USA"
+
+#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, pcsx2, redream, ...
+msgctxt "game_options"
+msgid "Europe"
+msgstr "Európa"
+
+#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, redream, suyu, ...
+msgctxt "game_options"
+msgid "Japan"
+msgstr "Japonsko"
+
+#. TRANSLATION: libretro/flycast, flycast/vitaquake3
+msgctxt "game_options"
+msgid ""
+"Dreamcast BIOS's language setting. Can change the language of some games. "
+"Some games default to Japanese."
+msgstr ""
+"Nastavenie jazyka Dreamcast BIOS. Môže zmeniť jazyk niektorých hier. "
+"Niektoré hry sú štandardne nastavené na japončinu."
+
+#. TRANSLATION: libretro/flycast, flycast/vitaquake3
+msgctxt "game_options"
+msgid "BIOS LANGUAGE"
+msgstr "Jazyk BIOSu"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/quasi88, flycast/vitaquake3
 msgctxt "game_options"
@@ -5982,21 +6016,6 @@ msgstr "1x (predvolené)"
 msgctxt "game_options"
 msgid "Can change the language of some games."
 msgstr "Môže zmeniť jazyk niektorých hier."
-
-#. TRANSLATION: libretro/neocd, flycast/vitaquake3, redream, suyu, suyu, ...
-msgctxt "game_options"
-msgid "Japan"
-msgstr "Japonsko"
-
-#. TRANSLATION: libretro/neocd, flycast/vitaquake3, suyu, ryujinx
-msgctxt "game_options"
-msgid "USA"
-msgstr "USA"
-
-#. TRANSLATION: libretro/neocd, flycast/vitaquake3, pcsx2, redream, suyu, ...
-msgctxt "game_options"
-msgid "Europe"
-msgstr "Európa"
 
 #. TRANSLATION: libretro/neocd
 msgctxt "game_options"
@@ -10024,20 +10043,6 @@ msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr ""
 
-#. TRANSLATION: flycast/vitaquake3
-msgctxt "game_options"
-msgid ""
-"Dreamcast BIOS's language setting. Can change the language of some games. "
-"Some games default to Japanese."
-msgstr ""
-"Nastavenie jazyka Dreamcast BIOS. Môže zmeniť jazyk niektorých hier. "
-"Niektoré hry sú štandardne nastavené na japončinu."
-
-#. TRANSLATION: flycast/vitaquake3
-msgctxt "game_options"
-msgid "BIOS LANGUAGE"
-msgstr "Jazyk BIOSu"
-
 #. TRANSLATION: flycast/vitaquake3, flycast/vitaquake3
 msgctxt "game_options"
 msgid "Game's default"
@@ -12360,11 +12365,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "LLE"
 msgstr ""
-
-#. TRANSLATION: redream
-msgctxt "game_options"
-msgid "Choose the Dreamcast console region."
-msgstr "Vyberte región konzoly Dreamcast."
 
 #. TRANSLATION: redream
 msgctxt "game_options"
