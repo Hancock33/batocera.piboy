@@ -367,6 +367,7 @@ chihiro:
   release:              2003
   hardware:             console
   extensions:           [iso]
+  platform:             chihiro
   emulators:
     xemu:
       xemu:             { requireAnyOf: [BR2_PACKAGE_XEMU] }
