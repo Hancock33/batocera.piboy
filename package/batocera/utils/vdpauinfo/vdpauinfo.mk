@@ -3,7 +3,7 @@
 # vdpauinfo
 #
 ################################################################################
-
+# Version: Commits on Jun 23, 2022
 VDPAUINFO_VERSION = 1.5
 VDPAUINFO_SOURCE = vdpauinfo-$(VDPAUINFO_VERSION).tar.gz
 VDPAUINFO_SITE = https://gitlab.freedesktop.org/vdpau/vdpauinfo/-/archive/$(VDPAUINFO_VERSION)

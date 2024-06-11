@@ -3,7 +3,7 @@
 # mangohud
 #
 ################################################################################
-# Version: Commits from Oct, 2021
+# Version: Commits on May 28, 2022
 MANGOHUD_VERSION = a8a0a245e69fbbca5263d2436fd1c04289375498
 MANGOHUD_SITE =  $(call github,flightlessmango,MangoHud,$(MANGOHUD_VERSION))
 

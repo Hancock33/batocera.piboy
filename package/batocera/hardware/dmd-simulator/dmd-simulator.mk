@@ -3,7 +3,7 @@
 # dmd-simulator
 #
 ################################################################################
-
+# Version: Commits on Apr 25, 2024
 DMD_SIMULATOR_VERSION = fd1d4b1c7e96cd679c2431ff2ee56506c193f0a0
 DMD_SIMULATOR_SITE =  $(call github,batocera-linux,dmd-simulator,$(DMD_SIMULATOR_VERSION))
 
