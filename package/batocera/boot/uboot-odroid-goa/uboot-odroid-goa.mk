@@ -3,7 +3,7 @@
 # uboot-odroid-goa
 #
 ################################################################################
-
+# Version: Commits on Mar 03, 2021
 UBOOT_ODROID_GOA_VERSION = 0e26e35cb18a80005b7de45c95858c86a2f7f41e
 UBOOT_ODROID_GOA_SITE = https://github.com/hardkernel/u-boot.git
 UBOOT_ODROID_GOA_SITE_METHOD=git
