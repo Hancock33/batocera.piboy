@@ -281,7 +281,7 @@ Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|c7b77d4a763e8fa3ee2c
 Emulators|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|f2dd27ffb639c2514e4d67ef625a4408e7352114|Jun 06, 2024
 Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|d7d1d39111efb9c44fc956beea076ee243774dc1|Nov 29, 2023
-Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|3f7ab6fb4580273bb2ed39f5b140556cfa54f762|Jun 11, 2024
+Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|55325c713e63d4834c365300ad4f63a211944113|Jun 01, 2024
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|fdbbec5d30831689b67e5f5af0bf0567dd2f0ba9|May 23, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|42e236be0dabf6cbda248e131d84459d8c268e6d|Jun 09, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|4905b7d13e6cfdec7e2b9d6f9f43d52f4d5b343f|Jun 11, 2024
@@ -309,7 +309,7 @@ Emulators|[xemu](https://github.com/xemu-project/xemu)|2be220df98c3db044c97e532a
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|ce990e28281a9de87b79218e22afc504c32dcf5a|Jun 01, 2024
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
-Firmwares|[alllinuxfirmwares](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot)|90df68d2290ede07a3574c5212dff2fdce408785|N/A
+Firmwares|[alllinuxfirmwares](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot)|20240610|N/A
 Firmwares|[extralinuxfirmwares](http://github.com/batocera-linux/extralinuxfirmwares)|e9c1d95f2d707ddd7bb0ef9e4711914de3cb60c2|May 10, 2024
 Firmwares|[firmware-armbian](http://github.com/armbian/firmware)|9d27a0dae0aa55caa1ac71525d19d4e9dad53330|Jun 02, 2024
 Firmwares|[firmware-orangepi](http://github.com/orangepi-xunlong/firmware)|76ead17a1770459560042a9a7c43fe615bbce5e7|Jan 24, 2024
@@ -348,16 +348,16 @@ Hardware|[dmd-simulator](http://github.com/batocera-linux/dmd-simulator)|fd1d4b1
 Hardware|[element14-pi-desktop](http://github.com/pi-desktop/deb-make)|v1.1.0|Jul 20, 2017
 Hardware|[pironman](http://github.com/sunfounder/pironman)|34b74f2a69b6a0b0c8867e2f830e569dd8eb6e12|Sept 15, 2023
 Hardware|[roshambo-case](http://github.com/mrfixit2001/Rock64-R64.GPIO)|986a7db7a6ffcbd3a78e65f1669cfe7dd81e9fa7|Apr 30, 2022
-Kodi|[kodi_resource_language_de_de](http://mirrors.kodi.tv/addons/omega/resource.language.de_de)|11.0.81|N/A
-Kodi|[kodi_resource_language_el_gr](http://mirrors.kodi.tv/addons/omega/resource.language.el_gr)|11.0.62|N/A
-Kodi|[kodi_resource_language_es_es](http://mirrors.kodi.tv/addons/omega/resource.language.es_es)|11.0.78|N/A
-Kodi|[kodi_resource_language_eu_es](http://mirrors.kodi.tv/addons/omega/resource.language.eu_es)|11.0.59|N/A
-Kodi|[kodi_resource_language_fr_fr](http://mirrors.kodi.tv/addons/omega/resource.language.fr_fr)|11.0.84|N/A
-Kodi|[kodi_resource_language_it_it](http://mirrors.kodi.tv/addons/omega/resource.language.it_it)|11.0.84|N/A
-Kodi|[kodi_resource_language_pt_br](http://mirrors.kodi.tv/addons/omega/resource.language.pt_br)|11.0.80|N/A
-Kodi|[kodi_resource_language_sv_se](http://mirrors.kodi.tv/addons/omega/resource.language.sv_se)|11.0.76|N/A
-Kodi|[kodi_resource_language_tr_tr](http://mirrors.kodi.tv/addons/omega/resource.language.tr_tr)|11.0.75|N/A
-Kodi|[kodi_resource_language_zh_cn](http://mirrors.kodi.tv/addons/omega/resource.language.zh_cn)|11.0.74|N/A
+Kodi|[kodi_resource_language_de_de](http://mirrors.kodi.tv/addons/omega/resource.language.de_de)|11.0.81|Feb 12, 2024
+Kodi|[kodi_resource_language_el_gr](http://mirrors.kodi.tv/addons/omega/resource.language.el_gr)|11.0.62|Jun 11, 2024
+Kodi|[kodi_resource_language_es_es](http://mirrors.kodi.tv/addons/omega/resource.language.es_es)|11.0.78|Jun 11, 2024
+Kodi|[kodi_resource_language_eu_es](http://mirrors.kodi.tv/addons/omega/resource.language.eu_es)|11.0.59|Jun 11, 2024
+Kodi|[kodi_resource_language_fr_fr](http://mirrors.kodi.tv/addons/omega/resource.language.fr_fr)|11.0.84|Jun 11, 2024
+Kodi|[kodi_resource_language_it_it](http://mirrors.kodi.tv/addons/omega/resource.language.it_it)|11.0.84|Jun 11, 2024
+Kodi|[kodi_resource_language_pt_br](http://mirrors.kodi.tv/addons/omega/resource.language.pt_br)|11.0.80|Jun 11, 2024
+Kodi|[kodi_resource_language_sv_se](http://mirrors.kodi.tv/addons/omega/resource.language.sv_se)|11.0.76|Jun 11, 2024
+Kodi|[kodi_resource_language_tr_tr](http://mirrors.kodi.tv/addons/omega/resource.language.tr_tr)|11.0.75|Jun 11, 2024
+Kodi|[kodi_resource_language_zh_cn](http://mirrors.kodi.tv/addons/omega/resource.language.zh_cn)|11.0.74|Jun 11, 2024
 Kodi|[kodi-audiodecoder-openmpt](http://github.com/xbmc/audiodecoder.openmpt)|f7cb103de96404fe26938f93cd277a066f77cb49|Feb 19, 2024
 Kodi|[kodi-pvr-freebox](http://github.com/aassif/pvr.freebox)|21.0.0-Omega|Feb 13, 2023
 Libraries|[appstream-glib](http://github.com/hughsie/appstream-glib)|appstream_glib_0_8_3|Jun 05, 2024
@@ -365,30 +365,28 @@ Libraries|[batocera-luajit](http://github.com/openresty/luajit2)|v2.1-20240314|M
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v5.116.0|May 19, 2024
 Libraries|[ffmpeg-python](http://github.com/kkroening/ffmpeg-python)|df129c7ba30aaa9ffffb81a48f53aa7253b0b4e6|Jul 11, 2022
 Libraries|[iir](http://github.com/berndporr/iir1)|1.9.4|Jan 07, 2023
-Libraries|[libcapsimage](http://www.kryoflux.com/download)|5.1|N/A
+Libraries|[libcapsimage](http://github.com/simonowen/capsimage)|502015b6e117e7c52fd143025856f9b5b242b6d6|Sept 01, 2022
 Libraries|[libgme](http://github.com/libgme/game-music-emu)|0.6.3|Oct 03, 2023
 Libraries|[libgraphene](https://github.com/ebassi/graphene/archive/refs/tags)|1.10.8|Mar 18, 2022
-Libraries|[libjpeg-bato](http://www.ijg.org/files)|9f|N/A
-Libraries|[libliftoff](https://gitlab.freedesktop.org/emersion/libliftoff/-/releases/v)|0.4.1|N/A
+Libraries|[libliftoff](https://gitlab.freedesktop.org/emersion/libliftoff/-/releases/v)|0.5.0|May 27, 2024
 Libraries|[projectm](http://github.com/projectM-visualizer/projectm)|v4.1.1|Mar 23, 2024
-Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/ee/83/8c443adb52da6d341907d17492def2ee1420a7f2f0aee64a453b1d017f62)|8.15.2|N/A
-Libraries|[python-adafruit-circuitpython-busdevice](https://files.pythonhosted.org/packages/6c/52/815bdbfb4b1fa4103b90cd0cf5e0101dc06d396e0c106eadd6bfbb2f057f)|5.2.3|N/A
-Libraries|[python-adafruit-circuitpython-typing](https://files.pythonhosted.org/packages/8a/f6/edbca0fe12e8a7bfa6026f420b09e6e541662040e62680eb98493803c87a)|1.8.3|N/A
-Libraries|[python-adafruit-circuitpython-ws2801](https://files.pythonhosted.org/packages/d5/18/3d3856158bacca66cc37aa57cd0eb2d991b1bc2e607ae1a073cbceee48c9)|0.10.14|N/A
-Libraries|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/a3/12/a4177c0633710e882fc7896e1a72fe5e286bbcbf7057f81c1b8a9bcfe92e)|3.41.0|N/A
-Libraries|[python-adafruit-pureio](https://files.pythonhosted.org/packages/bc/0c/ceb6d01615504190ad4061af51bf46093c8e3cb3cf942d840cf95b8ba4ad)|1.1.10|N/A
-Libraries|[python-hidapi](https://files.pythonhosted.org/packages/95/0e/c106800c94219ec3e6b483210e91623117bfafcf1decaff3c422e18af349)|0.14.0|N/A
+Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/f6/91/0275df60cc6e0ece3a7edf8a35cfa0b520cd0be9c07078e092aafd9d5403)|8.41.2|Jun 11, 2024
+Libraries|[python-adafruit-circuitpython-busdevice](https://files.pythonhosted.org/packages/a8/04/cf8d2ebfe0d171b7c8fe3425f1e2e80ed59738855d419e5486f5d2fa9145)|5.2.9|Apr 22, 2024
+Libraries|[python-adafruit-circuitpython-typing](https://files.pythonhosted.org/packages/35/0b/3bdb065264f061e5ab8bbf8b0746b349ff3adbf219dc69c39f7d8e2427c3)|1.10.3|Mar 11, 2024
+Libraries|[python-adafruit-circuitpython-ws2801](https://files.pythonhosted.org/packages/9c/fb/5da19b32912ed665a6778ed9ad9f8667846a9c4d4639aea533f0cce8a658)|0.10.18|Dec 09, 2023
+Libraries|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/17/32/75067ffea9503e9da528078c068075b3ec8ca030b5bd6f3dcb96e2498404)|3.69.0|Jun 06, 2024
+Libraries|[python-adafruit-pureio](https://files.pythonhosted.org/packages/e5/b7/f1672435116822079bbdab42163f9e6424769b7db778873d95d18c085230)|1.1.10|May 25, 2023
+Libraries|[python-hidapi](https://files.pythonhosted.org/packages/95/0e/c106800c94219ec3e6b483210e91623117bfafcf1decaff3c422e18af349)|0.14.0|May 28, 2023
 Libraries|[python-proxy-tools](http://github.com/jtushman/proxy_tools)|db43f1e35d4f90a65c5a4d56d9e9af88212ec6e6|May 06, 2014
-Libraries|[python-pyftdi](https://files.pythonhosted.org/packages/49/a3/6cd09c0493662b285b2ba87a08b1378a5b13e5cab44eb6a3f740c801c804)|0.54.0|N/A
-Libraries|[python-pyqt5-sip](https://files.pythonhosted.org/packages/2a/f1/dde13ef47f3075737af449bf833ed4d56a16bd1762c66c674c3cceacd973)|12.12.0|N/A
-Libraries|[python-sysv-ipc](https://files.pythonhosted.org/packages/0c/d7/5d2f861155e9749f981e6c58f2a482d3ab458bf8c35ae24d4b4d5899ebf9)|1.1.0|N/A
+Libraries|[python-pyftdi](https://files.pythonhosted.org/packages/8f/b4/8578b8e4c1e69faa8297cb1e1fd0c86de03bb7eeb3e7cb63157e1e72abfb)|0.55.4|Apr 10, 2024
+Libraries|[python-pyqt5-sip](https://files.pythonhosted.org/packages/ee/81/fce2a475aa56c1f49707d9306b930695b6ff078c2242c9f2fd72a3214e1f)|12.13.0|Oct 14, 2023
+Libraries|[python-sysv-ipc](https://files.pythonhosted.org/packages/0c/d7/5d2f861155e9749f981e6c58f2a482d3ab458bf8c35ae24d4b4d5899ebf9)|1.1.0|Jan 17, 2021
 Libraries|[python3-configobj](https://github.com/DiffSK/configobj/releases)|v5.0.8|Jan 19, 2023
 Libraries|[python3-gpiod](https://github.com/hhk7734/python3-gpiod/archive/refs/tags)|v1.5.4|Apr 23, 2023
-Libraries|[python3-pyparsing](https://files.pythonhosted.org/packages/c1/47/dfc9c342c9842bbe0036c7f763d2d6686bcf5eb1808ba3e170afdb282210)|2.4.7|N/A
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|5.1|Apr 18, 2024
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|bec4bd04b5fdc19bc7bf6a7a417ae79978b0344a|May 31, 2024
 Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.2.5|May 13, 2024
-Looks|[adwaita-icon-theme-light](http://ftp.gnome.org/pub/gnome/sources/adwaita-icon-theme/)|$(ADWAITA_ICON_THEME_LIGHT_VERSION_MAJOR).0|N/A
+Looks|[adwaita-icon-theme-light](http://ftp.gnome.org/pub/gnome/sources/adwaita-icon-theme/)|$(ADWAITA_ICON_THEME_LIGHT_VERSION_MAJOR).0|Sep 10, 2021
 Looks|[hypseus-singe-bezels](http://github.com/Tovarichtch/hypseus_singe_daphne_bezels)|10799146e803a7194ccccd365a4fae77945b3e60|May 25, 2024
 Looks|[nanum_font](http://github.com/ujuc/nanum-font)|33a5dec3cd6467979fed8ebfa64430d7cebdff9d|Oct 4, 2014
 Looks|[noto-cjk-fonts](https://github.com/notofonts/noto-cjk/releases)|Sans2.004|Jan 27, 2022
@@ -478,28 +476,28 @@ Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|61be37b18393c45beb53dfe7e669a625495c28ef|Apr 06, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|41e9b46358f2a851dfcfbdfddbfb73eeded14192|Jun 08, 2024
 Ports|[yrogue](http://github.com/yquake2/rogue)|8baa9d35b083f2666d5f668675dbfbc9eee5ff06|Dec 17, 2023
-Toolchain|[toolchain-optional-linaro-aarch64](https://releases.linaro.org/components/toolchain/binaries/)|7.5-2019.12|N/A
+Toolchain|[toolchain-optional-linaro-aarch64](https://releases.linaro.org/components/toolchain/binaries/)|7.5-2019.12|Dec 05, 2019
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
 Utils-host|[xa](https://www.floodgap.com/retrotech/xa/dists)|2.4.1|Mar 05, 2024
 Utils|[batocera-pygame](http://github.com/lbrpdx/retrotrivia)|e3238c736dfbde20d7ee402828ec57d89586d4de|Dec 31, 2021
 Utils|[bauh](http://github.com/vinifmor/bauh)|0.10.7|Jan 10, 2024
 Utils|[btop](http://github.com/aristocratos/btop)|v1.3.2|Feb 12, 2024
-Utils|[cabextract](https://www.cabextract.org.uk)|1.9.1|N/A
+Utils|[cabextract](https://www.cabextract.org.uk)|1.9.1|Feb 24, 2023
 Utils|[evmapy](http://github.com/kempniu/evmapy)|bd65338c236cd30b4f2d7835733ea5d6b108b75d|Jul 09, 2015
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|c98510eae6b442c9d570e5808c03b8c24551810a|Jun 01, 2024
 Utils|[fdupes](http://github.com/adrianlopezroche/fdupes)|v2.3.0|Jan 27, 2024
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.12.9|Apr 18, 2024
-Utils|[grim](https://git.sr.ht/~emersion/grim/refs/download/v)|1.4.0|N/A
+Utils|[grim](https://git.sr.ht/~emersion/grim/refs/download/v)|1.4.1|Jun 14, 2023
 Utils|[innoextract](http://github.com/dscharrer/innoextract)|1.9|Aug 09, 2020
 Utils|[jstest2](https://github.com/Grumbel/sdl-jstest)|60f6e62109e100b6ef363841b71c2e37ed714d01|Mar 31, 2024
 Utils|[l3afpad](http://github.com/stevenhoneyman/l3afpad)|16f22222116b78b7f6a6fd83289937cdaabed624|Feb 14, 2022
 Utils|[ledspicer](http://github.com/meduzapat/LEDSpicer)|0.5.9|Feb 26, 2024
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|a8a0a245e69fbbca5263d2436fd1c04289375498|May 28, 2022
 Utils|[od-commander](http://github.com/od-contrib/commander)|604c134502ff6cb9a6a2585724cf5c56e6748c94|May 17, 2024
-Utils|[pacman](https://sources.archlinux.org/other/pacman)|5.2.2|N/A
+Utils|[pacman](https://sources.archlinux.org/other/pacman)|5.2.2|Jun 26, 2020
 Utils|[picade](http://github.com/pimoroni/picade-hat)|df02844c0cd773af5b908f47eac5fb1f7f361531|Mar 05, 2020
-Utils|[pm-utils](http://pm-utils.freedesktop.org/releases)|1.4.1|N/A
+Utils|[pm-utils](http://pm-utils.freedesktop.org/releases)|1.4.1|Jul 04, 2010
 Utils|[raspi2png](http://github.com/AndrewFromMelbourne/raspi2png)|b3c5599c2e2652a3f585dc89075ff65dcd36a0dc|Jan 28, 2020
 Utils|[rclone](http://github.com/rclone/rclone)|v1.66.0|Mar 10, 2024
 Utils|[re2c](http://github.com/skvadrik/re2c)|671fc0bc08af8f06df3ed59c3294f0920d5b5184|Apr 24, 2024

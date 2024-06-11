@@ -3,7 +3,7 @@
 # adwaita-icon-theme-light
 #
 ################################################################################
-
+# Version: Commits on Sep 10, 2021
 ADWAITA_ICON_THEME_LIGHT_VERSION_MAJOR = 41
 ADWAITA_ICON_THEME_LIGHT_VERSION = $(ADWAITA_ICON_THEME_LIGHT_VERSION_MAJOR).0
 ADWAITA_ICON_THEME_LIGHT_SITE = http://ftp.gnome.org/pub/gnome/sources/adwaita-icon-theme/$(ADWAITA_ICON_THEME_LIGHT_VERSION_MAJOR)
