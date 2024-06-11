@@ -3,8 +3,8 @@
 # hlsdk-xash3d-opfor
 #
 ################################################################################
-# Version: Commits on Apr 28, 2024
-HLSDK_XASH3D_OPFOR_VERSION = db209533fc62fea3c1571f64f542485ea78e8f01
+# Version: Commits on Jun 10, 2024
+HLSDK_XASH3D_OPFOR_VERSION = 72937e544e715774f44c7d247be3c6f073cec9d6
 HLSDK_XASH3D_OPFOR_BRANCH = opforfixed
 HLSDK_XASH3D_OPFOR_SITE = $(call github,FWGS,hlsdk-portable,$(HLSDK_XASH3D_OPFOR_VERSION))
 HLSDK_XASH3D_OPFOR_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf libsodium
