@@ -16,7 +16,7 @@ Audio|[zmusic](http://github.com/ZDoom/ZMusic)|50ad730c381ce01a01a693e9e1d43e80c
 Boot|[batocera-initramfs](http://www.busybox.net/downloads)|1.36.1|N/A
 Boot|[batocera-shim-signed-efi-helpers-ia32](https://ftp.debian.org/debian/pool/main/s/shim-helpers-i386-signed)|1+15.7+1|N/A
 Boot|[batocera-shim-signed-efi-ia32](https://ftp.debian.org/debian/pool/main/s/shim-signed)|1.39+15.7-1|N/A
-Boot|[batocera-shim-signed-efi-x64](https://launchpad.net/ubuntu/+archive/primary/+files)|1.56+15.7-0ubuntu1|N/A
+Boot|[batocera-shim-signed-efi-x64](https://launchpad.net/ubuntu/+archive/primary/+files)|1.56+15.7-0ubuntu1|Oct 09, 2023
 Boot|[batocera-shim](https://github.com/rhboot/shim/releases)|15.8|Jan 23, 2024
 Boot|[batocera-syslinux-efi](binaries)|6.04.pre2.r11.gbf6db5b4-2|N/A
 Boot|[rk3128-blobs](https://github.com/rockchip-linux/rkbin.git)|a2a0b89b6c8c612dca5ed9ed8a68db8a07f68bc0|Feb 22, 2024
@@ -78,7 +78,7 @@ Emulators|[duckstation-legacy](https://github.com/stenzek/duckstation.git)|v0.1-
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|e6a11abedc52c0f5a8d5289b9c46f323046828fc|Jun 11, 2024
 Emulators|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.7.0|Mar 15, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.3.1|Mar 20, 2024
-Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|69a20d7213f18b295fdd2f34acceb189a55b2a74|Jun 05, 2024
+Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|6e33041ff2ce7813ea81a51e3b3b8dbe5ed22c22|Jun 11, 2024
 Emulators|[eka2l1](https://github.com/rtissera/EKA2L1.git)|8bf21e354c7aa3ea8f287a5f47825d1370b1c14f|Sept 18, 2023
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|ca613db70d8897e06562fe089e3e9543b41526a0|Jun 11, 2024
 Emulators|[fpinball](https://github.com/batocera-linux/fpinball/releases)|v1.9.1.20101231|Dec 31, 2010
@@ -128,7 +128,7 @@ Emulators|[libretro-dolphin](http://github.com/libretro/dolphin)|89a4df725d4eb24
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|1e3cb35355769467ca7be192e740eb9728ecc88c|Jun 03, 2024
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|31c85623b3a4ef50171bdb11ab2240cc6b5837b0|May 25, 2024
 Emulators|[libretro-duckstation](http://github.com/batocera-linux/lr-duckstation)|5c0d746e4ccb725fc03e53dc530b90bc570253d7|Dec 03, 2021
-Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|69a20d7213f18b295fdd2f34acceb189a55b2a74|Jun 05, 2024
+Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|6e33041ff2ce7813ea81a51e3b3b8dbe5ed22c22|Jun 11, 2024
 Emulators|[libretro-ecwolf](https://github.com/libretro/ecwolf)|71ec64cf98ba0a2a94e2fede560f1b435761b36d|Dec 29, 2023
 Emulators|[libretro-emuscv](http://gitlab.com/MaaaX-EmuSCV/libretro-emuscv)|dfce10df090ce3f5eb23bdbee289702ec1478246|Oct 18, 2022
 Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|0747110b5a98b4c36dc8784780f5ae436a94a1bd|Mar 23, 2024
@@ -270,18 +270,18 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1127-g6b62eff|May 10, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|771e60b1eacd4edc57c19b61ab2c713200af0a3f|May 30, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|6e057abc8e31e50ad84d24925f4616faa76ad4d2|Jun 11, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20240531|May 31, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|461862be4625c834ef7ab1ba72ff0d0e7fded298|Jun 10, 2024
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|cc19685207b7728810cfb2ee6d6ab46484448c13|Jun 11, 2024
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-06-11|Jun 11, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1330|Jun 03, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|e2b1299d85564c29a1642185aeb6b96e56ded206|Apr 13, 2024
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|573b339c98400ff9c2687bf4d653edaf7dfd3fdb|Jun 03, 2024
-Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|c7b77d4a763e8fa3ee2c4ef63b3974527056b7ad|Jun 07, 2024
+Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|c02ee4373ec14afefc2b09296a12fc0aac2b6a2e|Jun 11, 2024
 Emulators|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|f2dd27ffb639c2514e4d67ef625a4408e7352114|Jun 06, 2024
 Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|d7d1d39111efb9c44fc956beea076ee243774dc1|Nov 29, 2023
-Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|55325c713e63d4834c365300ad4f63a211944113|Jun 01, 2024
+Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|3f7ab6fb4580273bb2ed39f5b140556cfa54f762|Jun 11, 2024
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|fdbbec5d30831689b67e5f5af0bf0567dd2f0ba9|May 23, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|42e236be0dabf6cbda248e131d84459d8c268e6d|Jun 09, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|4905b7d13e6cfdec7e2b9d6f9f43d52f4d5b343f|Jun 11, 2024
@@ -431,7 +431,7 @@ Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|72937e544e7157
 Ports|[hlsdk-xash3d-zombiex](http://github.com/FWGS/hlsdk-portable)|6b6b403f56647f0d49ebc72df801fa15b8e5554f|Jun 10, 2024
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|60cb30f994ec8a35a61f382e3d4716eb42ca1faa|Jun 10, 2024
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
-Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|2c5596b2fa242eb3ad7eebe7cdbf81b3586678bb|Dec 27, 2023
+Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|6ef53c34dda241fa185a90261b6b3c40c09dffa3|Jun 11, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240608|Jun 08, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|b7b5648376ab8f39a2ddbfec1497d86c05966aa1|Jun 10, 2024
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
