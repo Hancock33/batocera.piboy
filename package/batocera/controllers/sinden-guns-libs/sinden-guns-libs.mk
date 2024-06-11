@@ -3,7 +3,7 @@
 # sinden-guns-libs
 #
 ################################################################################
-
+# Version: Commits on Sept 18, 2023
 SINDEN_GUNS_LIBS_VERSION = a18005ab0ce07d0d18f8575ba21162c58fbd2520
 SINDEN_GUNS_LIBS_SITE = $(call github,batocera-linux,batocera-sinden-bundles,$(SINDEN_GUNS_LIBS_VERSION))
 
