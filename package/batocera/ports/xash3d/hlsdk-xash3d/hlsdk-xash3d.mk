@@ -3,8 +3,8 @@
 # hlsdk-xash3d
 #
 ################################################################################
-# Version: Commits on Apr 28, 2024
-HLSDK_XASH3D_VERSION = 8c72600f439364502f2decea4c971cc516f889fe
+# Version: Commits on Jun 10, 2024
+HLSDK_XASH3D_VERSION = 60cb30f994ec8a35a61f382e3d4716eb42ca1faa
 HLSDK_XASH3D_BRANCH = mobile_hacks
 HLSDK_XASH3D_SITE = $(call github,FWGS,hlsdk-portable,$(HLSDK_XASH3D_VERSION))
 HLSDK_XASH3D_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf libsodium
