@@ -3,7 +3,7 @@
 # toolchain-optional-linaro-aarch64
 #
 ################################################################################
-
+# Version: Commits on Dec 05, 2019
 TOOLCHAIN_OPTIONAL_LINARO_AARCH64_VERSION = 7.5-2019.12
 TOOLCHAIN_OPTIONAL_LINARO_AARCH64_BINARY_VERSION = 7.5.0-2019.12
 TOOLCHAIN_OPTIONAL_LINARO_AARCH64_SITE = https://releases.linaro.org/components/toolchain/binaries/$(TOOLCHAIN_OPTIONAL_LINARO_AARCH64_VERSION)/aarch64-linux-gnu
