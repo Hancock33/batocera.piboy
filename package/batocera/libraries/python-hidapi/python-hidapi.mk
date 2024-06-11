@@ -3,7 +3,7 @@
 # python-hidapi
 #
 ################################################################################
-
+# Version: Commits on May 28, 2023
 PYTHON_HIDAPI_VERSION = 0.14.0
 PYTHON_HIDAPI_SOURCE = hidapi-$(PYTHON_HIDAPI_VERSION).tar.gz
 PYTHON_HIDAPI_SETUP_TYPE = setuptools
