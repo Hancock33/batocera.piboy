@@ -95,7 +95,6 @@ Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|7f18a2b6662be55147eecca
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|fcf169064de313ca34e004a250b1e5b2aa825daf|Jun 07, 2024
 Ports|[sonicmania](https://github.com/Rubberduckycooly/Sonic-Mania-Decompilation.git)|2c283521b3fe28d17248aed35f1e83409d05ae5f|Jun 07, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|9055df09a2bdd56339096639168c8bcdc6c0edc2|Jun 07, 2024
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|955e5e47f41feb28e1f67aab1b293613bafc9af3|Jun 07, 2024
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|834c7de86cce1375b28b09b0fdd0b53d1ad82020|Jun 06, 2024
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|f2dd27ffb639c2514e4d67ef625a4408e7352114|Jun 06, 2024
 Emulators|[wine-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos-wine-9.0-20240605|Jun 06, 2024
@@ -181,7 +180,7 @@ Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|d1de69a576d4bb39e8912418
 Emulators|[libretro-beetle-saturn](http://github.com/libretro/beetle-saturn-libretro)|7a8f808a1d447fcb8fa9547d9f163eb3600d3086|May 19, 2024
 Emulators|[libretro-mrboom](https://github.com/Javanaise/mrboom-libretro.git)|a7af125dc9ef65c9a1b43136a75374bbac5458ee|May 19, 2024
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|6b9dc49f32d163996e62941339ef0d4b7eef724a|May 19, 2024
-Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v5.116.0|May 19, 2024
+Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.3.0|May 19, 2024
 Emulators|[libretro-atari800](http://github.com/libretro/libretro-atari800)|8bfa3b80f6a2db365dfd1e8a6c06b7b0844327cf|May 18, 2024
 Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)|fa103d42a70ad18765691f730b543a9ed11c1cba|May 18, 2024
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
@@ -210,7 +209,7 @@ Audio|[portmidi](http://github.com/PortMidi/portmidi)|912aba2f85f4119b6f3a420a80
 Emulators|[wine-ntsync](https://repo.or.cz/wine/zf.git/snapshot/)|b710a652bb7f582fa65f8d42d727847e231b7095|May 03, 2024
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|3265c0ac05ec595f9cedd020d76e7f39bf081538|May 02, 2024
 Ports|[raptorcots](http://github.com/skynettx/raptor)|e8d838c6db77084a6fb7f37b41de669fbf68b808|May 02, 2024
-Gpu|[glslang](http://github.com/KhronosGroup/glslang)|14.2.0|May 02, 2024
+Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.3.283.0|May 02, 2024
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|f9f16d7a552c5606caea52c2179ca2831b8e0177|May 01, 2024
 Ports|[openjk](http://github.com/JACoders/OpenJK)|7b9dfe79fbb1e06585e95e67704722f412db109c|May 01, 2024
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.1|Apr 30, 2024
@@ -232,6 +231,7 @@ Network|[r8125](http://github.com/awesometic/realtek-r8125-dkms)|980736e3d5bcbb3
 Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|9fb917c357b20d95d597bed4d67904c29cd5c753|Apr 21, 2024
 Network|[r8168](http://github.com/mtorromeo/r8168)|503086686ea7b08b8b9b323ab52991987dfd9f6a|Apr 21, 2024
 Emulators|[libretro-dolphin](http://github.com/libretro/dolphin)|89a4df725d4eb24537728f7d655cddb1add25c18|Apr 19, 2024
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.3.283.0|Apr 19, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|2cc8e02ced1594d76d12b39140e394e9cee0aa44|Apr 18, 2024
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|5.1|Apr 18, 2024
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.12.9|Apr 18, 2024
@@ -455,7 +455,7 @@ Utils|[wii-u-gc-adapter](http://github.com/ToadKing/wii-u-gc-adapter)|fa098efa7f
 Utils|[xosd](http://github.com/kdmurthy/libxosd-xft)|1.1.0|Jul 05, 2021
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|e6241340d292dee20406a0567262a78ff34d45f7|Jun 02, 2021
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
-Audio|[alsa-topology](http://github.com/alsa-project/alsa-topology-conf)|v1.2.5.1|Mar 11, 2021
+Audio|[alsa-topology-conf](http://github.com/alsa-project/alsa-topology-conf)|v1.2.5.1|Mar 11, 2021
 Boot|[uboot-odroid-goa](https://github.com/hardkernel/u-boot.git)|0e26e35cb18a80005b7de45c95858c86a2f7f41e|Mar 03, 2021
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Controllers|[db9_gpio_rpi](http://github.com/marqs85/db9_gpio_rpi)|a3c16921a812ec2cf24a043a184cf445813bac08|Feb 01, 2021
