@@ -16,6 +16,7 @@ Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|0e3b54173339b79886c653c14
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|30737b4456285bcfff94498d6934ec8ed3455481|Jun 13, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|190d9251472b41d496d4a5030f3326e22482bd18|Jun 13, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|ec267c348a046f25bdf5d1313f07b4fa852640df|Jun 13, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|1d42cf12747a6d80ee7d84c70d7e0bbca00ee4fc|Jun 13, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240613|Jun 13, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|a3d09e95d5f3423bbaab0c3a08b9e1fbbf77d582|Jun 13, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|89bc20fecb0c6f6fc7758cb21e554f31d0977154|Jun 13, 2024
@@ -45,7 +46,6 @@ Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|ca613db7
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|3e80e5c25edcf850f603cf0948e1cc16dc38e98d|Jun 11, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|ca613db70d8897e06562fe089e3e9543b41526a0|Jun 11, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|6e33041ff2ce7813ea81a51e3b3b8dbe5ed22c22|Jun 11, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|e6f9cb1e0935a0381ea54663dc61886677d1bb5a|Jun 11, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|fbac5741aecb520e3b7c46dbab3e098f4f1e0e70|Jun 11, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|8d812e98ea795e7a7f1bc71a0d3e32faf2aba17d|Jun 11, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|247d7fd270a9ba8f1d4f8b4fff8b70c70e5d16c0|Jun 11, 2024
