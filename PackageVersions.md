@@ -1,6 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Audio|[alsa-topology](http://github.com/alsa-project/alsa-topology-conf)|v1.2.5.1|Mar 11, 2021
+Audio|[alsa-topology-conf](http://github.com/alsa-project/alsa-topology-conf)|v1.2.5.1|Mar 11, 2021
 Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.12|Jun 10, 2024
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|6b9dc49f32d163996e62941339ef0d4b7eef724a|May 19, 2024
 Audio|[chromebook-ucm-conf](http://github.com/WeirdTreeThing/alsa-ucm-conf-cros)|0.5|Apr 09, 2024
@@ -324,7 +324,7 @@ Gpu|[batocera-nvidia-lists](http://github.com/batocera-linux/nvidia-lists)|af6f2
 Gpu|[batocera-nvidia340-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|340.108|N/A
 Gpu|[batocera-nvidia390-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|390.157|N/A
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|52e0c496f513cac4bfb23b8897e8028396fcd61f|Jun 01, 2024
-Gpu|[glslang](http://github.com/KhronosGroup/glslang)|14.2.0|May 02, 2024
+Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.3.283.0|May 02, 2024
 Gpu|[img-gpu-powervr](https://github.com/starfive-tech/soft_3rdpart/raw/JH7110_VisionFive2_devel/IMG_GPU/out)|c43d4fab94b0ef3b492a6382e2282fa7a2695b9b|Mar 06, 2024
 Gpu|[img-mesa3d](https://archive.mesa3d.org)|22.1.3|N/A
 Gpu|[mali-g31-gbm](https://github.com/batocera-linux/rockchip-packages/releases)|ad4c28932c3d07c75fc41dd4a3333f9013a25e7f|N/A
@@ -339,7 +339,7 @@ Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|e025b079a2b01aadc09b0da
 Gpu|[rockchip-rga](https://github.com/batocera-linux/rockchip-packages/releases)||N/A
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.1|Apr 30, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|23d68d6717116f575407b71caa6fbf7e980f3054|Jun 05, 2024
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|955e5e47f41feb28e1f67aab1b293613bafc9af3|Jun 07, 2024
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.3.283.0|Apr 19, 2024
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.1|Jun 08, 2024
 Hardware|[ayn-platform](http://github.com/ShadowBlip/ayn-platform)|v0.5.1|Apr 16, 2024
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|7d4b4f6d9459394fe5902acc812ba9229924e252|May 13, 2024
@@ -361,7 +361,7 @@ Kodi|[kodi-audiodecoder-openmpt](http://github.com/xbmc/audiodecoder.openmpt)|f7
 Kodi|[kodi-pvr-freebox](http://github.com/aassif/pvr.freebox)|21.0.0-Omega|Feb 13, 2023
 Libraries|[appstream-glib](http://github.com/hughsie/appstream-glib)|appstream_glib_0_8_3|Jun 05, 2024
 Libraries|[batocera-luajit](http://github.com/openresty/luajit2)|v2.1-20240314|Mar 14, 2024
-Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v5.116.0|May 19, 2024
+Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.3.0|May 19, 2024
 Libraries|[ffmpeg-python](http://github.com/kkroening/ffmpeg-python)|df129c7ba30aaa9ffffb81a48f53aa7253b0b4e6|Jul 11, 2022
 Libraries|[iir](http://github.com/berndporr/iir1)|1.9.4|Jan 07, 2023
 Libraries|[libcapsimage](http://github.com/simonowen/capsimage)|502015b6e117e7c52fd143025856f9b5b242b6d6|Sept 01, 2022
