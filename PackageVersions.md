@@ -1,7 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Audio|[alsa-topology](http://github.com/alsa-project/alsa-topology-conf)|v1.2.5.1|Jun 15, 2021
-Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.12|Jun 11, 2024
+Audio|[alsa-topology](http://github.com/alsa-project/alsa-topology-conf)|v1.2.5.1|Mar 11, 2021
+Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.12|Jun 10, 2024
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|6b9dc49f32d163996e62941339ef0d4b7eef724a|May 19, 2024
 Audio|[chromebook-ucm-conf](http://github.com/WeirdTreeThing/alsa-ucm-conf-cros)|0.5|Apr 09, 2024
 Audio|[cubeb](http://github.com/mozilla/cubeb)|42cf7061fcea5fd6178d6affe27da4a388346bda|Jun 04, 2024
@@ -12,7 +12,7 @@ Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.6.0|Jun 15, 2023
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|912aba2f85f4119b6f3a420a80621397ebddfff6|May 04, 2024
 Audio|[rtmidi](http://github.com/thestk/rtmidi)|6.0.0|Aug 03, 2023
 Audio|[wildmidi](http://github.com/Mindwerks/wildmidi)|wildmidi-0.4.6|Apr 11, 2024
-Audio|[zmusic](http://github.com/ZDoom/ZMusic)|50ad730c381ce01a01a693e9e1d43e80c34eaeed|Apr 28, 2024
+Audio|[zmusic](http://github.com/ZDoom/ZMusic)|1.1.13|Apr 28, 2024
 Boot|[batocera-initramfs](http://www.busybox.net/downloads)|1.36.1|N/A
 Boot|[batocera-shim-signed-efi-helpers-ia32](https://ftp.debian.org/debian/pool/main/s/shim-helpers-i386-signed)|1+15.7+1|N/A
 Boot|[batocera-shim-signed-efi-ia32](https://ftp.debian.org/debian/pool/main/s/shim-signed)|1.39+15.7-1|N/A
