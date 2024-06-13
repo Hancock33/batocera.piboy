@@ -32,7 +32,6 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|fbac5741aecb520e3b7c46dbab3e098
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|8d812e98ea795e7a7f1bc71a0d3e32faf2aba17d|Jun 11, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|247d7fd270a9ba8f1d4f8b4fff8b70c70e5d16c0|Jun 11, 2024
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|6ef53c34dda241fa185a90261b6b3c40c09dffa3|Jun 11, 2024
-Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.12|Jun 11, 2024
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|80be2d6d14c44964fd807e079eb5ad7225e49e5a|Jun 11, 2024
 Kodi|[kodi_resource_language_el_gr](http://mirrors.kodi.tv/addons/omega/resource.language.el_gr)|11.0.62|Jun 11, 2024
 Kodi|[kodi_resource_language_es_es](http://mirrors.kodi.tv/addons/omega/resource.language.es_es)|11.0.78|Jun 11, 2024
@@ -57,6 +56,7 @@ Ports|[hlsdk-xash3d-dmc](http://github.com/FWGS/hlsdk-portable)|87b6ff53f3257c1f
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|72937e544e715774f44c7d247be3c6f073cec9d6|Jun 10, 2024
 Ports|[hlsdk-xash3d-zombiex](http://github.com/FWGS/hlsdk-portable)|6b6b403f56647f0d49ebc72df801fa15b8e5554f|Jun 10, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|ec5e9cb6e31a114da0784e35a27f252663d0ecba|Jun 10, 2024
+Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.12|Jun 10, 2024
 Firmwares|[alllinuxfirmwares](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot)|20240610|Jun 10, 2024
 Emulators|[libretro-mesen](http://github.com/libretro/Mesen)|91db6be681f70b2080525c267af6132555323ea1|Jun 09, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|e16dfc264a7b0949cbfad2ce347adc1686849206|Jun 09, 2024
@@ -215,7 +215,7 @@ Gpu|[shaderc](http://github.com/google/shaderc)|v2024.1|Apr 30, 2024
 Network|[rtl8821au-morrownr](http://github.com/morrownr/8821au-20210708)|eec76d8f58156c97b025fe729ade73fa2f8e0154|Apr 30, 2024
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|47e89572713092caefd937856894fed33fcc9450|Apr 30, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|6b5aad240214bb9f1636cbde762dd9e852b61f49|Apr 28, 2024
-Audio|[zmusic](http://github.com/ZDoom/ZMusic)|50ad730c381ce01a01a693e9e1d43e80c34eaeed|Apr 28, 2024
+Audio|[zmusic](http://github.com/ZDoom/ZMusic)|1.1.13|Apr 28, 2024
 Emulators|[libretro-freechaf](https://github.com/libretro/FreeChaF.git)|630e068c51a8027aa7222dc737575d235b9a75a1|Apr 26, 2024
 Emulators|[libretro-minivmac](https://github.com/libretro/libretro-minivmac)|e7fcfefe5963aaefb039c8ece5b9072f8d3f9cb9|Apr 26, 2024
 Emulators|[libretro-jaxe](https://github.com/kurtjd/jaxe.git)|22115d58de5f80cfafbbeece19d723f4892ed75c|Apr 25, 2024
@@ -453,9 +453,9 @@ Ports|[sorr](http://github.com/Cpasjuste/bennugd-monolithic)|0290c3719fd74121ff9
 Looks|[adwaita-icon-theme-light](http://ftp.gnome.org/pub/gnome/sources/adwaita-icon-theme/)|$(ADWAITA_ICON_THEME_LIGHT_VERSION_MAJOR).0|Sep 10, 2021
 Utils|[wii-u-gc-adapter](http://github.com/ToadKing/wii-u-gc-adapter)|fa098efa7f6b34f8cd82e2c249c81c629901976c|Sept 06, 2021
 Utils|[xosd](http://github.com/kdmurthy/libxosd-xft)|1.1.0|Jul 05, 2021
-Audio|[alsa-topology](http://github.com/alsa-project/alsa-topology-conf)|v1.2.5.1|Jun 15, 2021
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|e6241340d292dee20406a0567262a78ff34d45f7|Jun 02, 2021
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
+Audio|[alsa-topology](http://github.com/alsa-project/alsa-topology-conf)|v1.2.5.1|Mar 11, 2021
 Boot|[uboot-odroid-goa](https://github.com/hardkernel/u-boot.git)|0e26e35cb18a80005b7de45c95858c86a2f7f41e|Mar 03, 2021
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Controllers|[db9_gpio_rpi](http://github.com/marqs85/db9_gpio_rpi)|a3c16921a812ec2cf24a043a184cf445813bac08|Feb 01, 2021
