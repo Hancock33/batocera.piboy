@@ -16709,10 +16709,6 @@ msgid "Quick Save"
 msgstr "Hızlı Kaydet"
 
 #~ msgctxt "game_options"
-#~ msgid "Choose your preferred aspect ratio.."
-#~ msgstr "Tercih ettiğiniz en boy oranını seçin."
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Çekirdek destekliyorsa, gerçek zamanlı olarak geri sarmak için geçmiş "
@@ -17191,6 +17187,10 @@ msgstr "Hızlı Kaydet"
 #~ msgstr ""
 #~ "Düşük bütçeli sistemlerde performans için otomatik çerçeve atlama "
 #~ "özelliğini etkinleştir."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "Tercih ettiğiniz en boy oranını seçin."
 
 #~ msgctxt "game_options"
 #~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."

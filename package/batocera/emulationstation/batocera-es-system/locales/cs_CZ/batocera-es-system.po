@@ -16638,10 +16638,6 @@ msgid "Quick Save"
 msgstr "Rychlé uložení"
 
 #~ msgctxt "game_options"
-#~ msgid "Choose your preferred aspect ratio.."
-#~ msgstr "Vyberte si preferovaný poměr stran."
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Uložení minulých pozic pro přetáčení v reálném čase, pokud to jádro "
@@ -17114,6 +17110,10 @@ msgstr "Rychlé uložení"
 #~ msgstr ""
 #~ "Povoluje auto. přeskakování snímků pro zvýšení výkonu na systémech nižší "
 #~ "třídy."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "Vyberte si preferovaný poměr stran."
 
 #~ msgctxt "game_options"
 #~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."

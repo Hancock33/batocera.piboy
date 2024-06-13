@@ -9152,8 +9152,8 @@ msgid ""
 "Enable or disable bezels being added when content is a 4:3 aspect with a "
 "widescreen display."
 msgstr ""
-"Abilita o disabilita i bordi quando il contenuto e' a 4:3 ma visualizzato "
-"su monitor widescreen."
+"Abilita o disabilita i bordi quando il contenuto e' a 4:3 ma visualizzato su "
+"monitor widescreen."
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -9406,8 +9406,8 @@ msgid ""
 "Compile shaders on next launch of game (one time). Reduces micro-freezes. "
 "Vulkan only."
 msgstr ""
-"Compila gli shaders al prossimo lancio del gioco (una volta). Riduce i "
-"micro-blocchi. Solo con Vulkan."
+"Compila gli shaders al prossimo lancio del gioco (una volta). Riduce i micro-"
+"blocchi. Solo con Vulkan."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -16700,10 +16700,6 @@ msgid "Quick Save"
 msgstr "Salvataggio Rapido"
 
 #~ msgctxt "game_options"
-#~ msgid "Choose your preferred aspect ratio.."
-#~ msgstr "Seleziona il tuo aspect ratio preferito.."
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Archivia gli stati per riavvolgere in realtime, se il core lo supporta."
@@ -17185,6 +17181,10 @@ msgstr "Salvataggio Rapido"
 #~ msgctxt "game_options"
 #~ msgid "Enable auto frameskipping for performance on lower-end systems."
 #~ msgstr "Abilita l'auto frameskipping per la performance su sistemi vecchi."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "Seleziona il tuo aspect ratio preferito.."
 
 #~ msgctxt "game_options"
 #~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."

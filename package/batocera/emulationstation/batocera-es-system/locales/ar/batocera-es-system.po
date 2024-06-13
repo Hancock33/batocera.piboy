@@ -16462,10 +16462,6 @@ msgctxt "keys_files"
 msgid "Quick Save"
 msgstr ""
 
-#~ msgctxt "game_options"
-#~ msgid "Choose your preferred aspect ratio.."
-#~ msgstr "اختر تحجيم العرض المفضل لديك."
-
 #, fuzzy
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
@@ -16556,6 +16552,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Per Pixel"
 #~ msgstr "لكل بكسل"
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "اختر تحجيم العرض المفضل لديك."
 
 #, fuzzy
 #~ msgctxt "game_options"

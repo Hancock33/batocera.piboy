@@ -16613,10 +16613,6 @@ msgid "Quick Save"
 msgstr "Gordetze Azkarra"
 
 #~ msgctxt "game_options"
-#~ msgid "Choose your preferred aspect ratio.."
-#~ msgstr "Aukeratu hobetsitako proportzioa.."
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Gorde iragandako egoerak denbora errealean atzera botatzeko, nukleoak "
@@ -17072,6 +17068,10 @@ msgstr "Gordetze Azkarra"
 #~ msgid "Enable auto frameskipping for performance on lower-end systems."
 #~ msgstr ""
 #~ "Gaitu fotograma saltatze automatikoa eraginkortasunerako sistema eskaxetan"
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "Aukeratu hobetsitako proportzioa.."
 
 #~ msgctxt "game_options"
 #~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
