@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240613|Jun 13, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240613|Jun 13, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|af7f1f7f91133462b2eff5b75ec4e03337d78a9a|Jun 12, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|418fe399ad93d94e0a5e1f929aca81f0fcee8d4b|Jun 12, 2024
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|cd24689b20f2ff4a5b1f588415b77b4f1747e431|Jun 12, 2024
@@ -24,13 +26,12 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|6aef0c90c1d1512be1873
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-06-11|Jun 11, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|99990af31e04629fb6798fba2723619798e94393|Jun 11, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|6e33041ff2ce7813ea81a51e3b3b8dbe5ed22c22|Jun 11, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240611|Jun 11, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|e6f9cb1e0935a0381ea54663dc61886677d1bb5a|Jun 11, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|75dbffdfab46b1dd4f68b2f1375cdd6422b055b1|Jun 11, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|fbac5741aecb520e3b7c46dbab3e098f4f1e0e70|Jun 11, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|8d812e98ea795e7a7f1bc71a0d3e32faf2aba17d|Jun 11, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|247d7fd270a9ba8f1d4f8b4fff8b70c70e5d16c0|Jun 11, 2024
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|6ef53c34dda241fa185a90261b6b3c40c09dffa3|Jun 11, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240611|Jun 11, 2024
 Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.12|Jun 11, 2024
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|80be2d6d14c44964fd807e079eb5ad7225e49e5a|Jun 11, 2024
 Kodi|[kodi_resource_language_el_gr](http://mirrors.kodi.tv/addons/omega/resource.language.el_gr)|11.0.62|Jun 11, 2024
@@ -47,7 +48,6 @@ Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|ac7ab8a9
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|b72d4a6d1e88a37245f7fa3cdefee2a2c02e04da|Jun 10, 2024
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|330fa5efd306ad116c44faf6833a8108ed4144b0|Jun 10, 2024
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|183a74349932db4f9ed954510056f1284dfebc89|Jun 10, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|8ba51a6f711c5466e060a5958cc15c31b2b2ac7d|Jun 10, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|3a85f74e4f11c2efd2abb7117e8b53964f4f5c88|Jun 10, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|b7b5648376ab8f39a2ddbfec1497d86c05966aa1|Jun 10, 2024
 Ports|[quake3](http://github.com/ioquake/ioq3)|c1ab47a7649bed3a9d626833f661fbc6768c1b87|Jun 10, 2024
