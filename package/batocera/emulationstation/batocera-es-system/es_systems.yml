@@ -2761,6 +2761,16 @@ mplayer:
     mplayer:
       mplayer:          { requireAnyOf: [BR2_PACKAGE_MPV] }
 
+recordings:
+  name:       Recordings
+  manufacturer: Misc. System
+  release:
+  hardware: system
+  extensions: [mkv, mp4, avi, webm, mp3, wav, ogg, flac]
+  path:       /userdata/recordings
+  platform:   imageviewer
+  force:      True
+
 library:
   name:                 Library
   manufacturer:         Misc. System
