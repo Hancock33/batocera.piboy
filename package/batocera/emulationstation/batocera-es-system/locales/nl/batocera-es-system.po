@@ -16748,10 +16748,6 @@ msgid "Quick Save"
 msgstr "Snel Opslaan"
 
 #~ msgctxt "game_options"
-#~ msgid "Choose your preferred aspect ratio.."
-#~ msgstr "Kies de gewenste beeldverhouding.."
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Sla vorige staat op om in realtime naartoe te gaan, als de core het "
@@ -17239,6 +17235,10 @@ msgstr "Snel Opslaan"
 #~ msgid "Enable auto frameskipping for performance on lower-end systems."
 #~ msgstr ""
 #~ "Schakel automatische frameskipping in voor prestaties op lagere systemen."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "Kies de gewenste beeldverhouding.."
 
 #~ msgctxt "game_options"
 #~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."

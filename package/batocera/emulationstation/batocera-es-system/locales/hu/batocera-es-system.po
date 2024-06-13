@@ -16599,10 +16599,6 @@ msgid "Quick Save"
 msgstr "Gyors mentés"
 
 #~ msgctxt "game_options"
-#~ msgid "Choose your preferred aspect ratio.."
-#~ msgstr "Válassza ki a kívánt képarányt.."
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Tárolja a múltbeli állapotokat a valós idejű visszatekeréshez, ha a mag "
@@ -17001,6 +16997,10 @@ msgstr "Gyors mentés"
 #~ msgstr ""
 #~ "Engedélyezze az automatikus képkockakihagyást a teljesítmény érdekében "
 #~ "alacsonyabb kategóriás rendszereken."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "Válassza ki a kívánt képarányt.."
 
 #~ msgctxt "game_options"
 #~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."

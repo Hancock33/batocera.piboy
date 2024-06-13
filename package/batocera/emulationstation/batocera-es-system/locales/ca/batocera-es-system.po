@@ -16521,10 +16521,6 @@ msgid "Quick Save"
 msgstr ""
 
 #~ msgctxt "game_options"
-#~ msgid "Choose your preferred aspect ratio.."
-#~ msgstr "Triï la seva relació d'aspecte preferida."
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Emmagatzema estats passats al rebobinar en temps real, si el nucli ho "
@@ -16920,6 +16916,10 @@ msgstr ""
 #~ msgstr ""
 #~ "Habilitar salt de quadres automàtic per a guanyar rendiment als sistemes "
 #~ "de baixes prestacions."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "Triï la seva relació d'aspecte preferida."
 
 #~ msgctxt "game_options"
 #~ msgid ""

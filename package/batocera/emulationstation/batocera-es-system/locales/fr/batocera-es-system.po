@@ -16723,10 +16723,6 @@ msgid "Quick Save"
 msgstr "Sauvegarde rapide"
 
 #~ msgctxt "game_options"
-#~ msgid "Choose your preferred aspect ratio.."
-#~ msgstr "Choisir le ratio d'écran préféré."
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Sauvegarde les états de chargement pour le retour rapide, si le cœur le "
@@ -17206,6 +17202,10 @@ msgstr "Sauvegarde rapide"
 #~ msgstr ""
 #~ "Activer le saut d'image automatique pour améliorer les performances sur "
 #~ "les systèmes bas de gamme."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "Choisir le ratio d'écran préféré."
 
 #~ msgctxt "game_options"
 #~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."

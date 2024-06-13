@@ -16766,10 +16766,6 @@ msgid "Quick Save"
 msgstr "Guardado rápido"
 
 #~ msgctxt "game_options"
-#~ msgid "Choose your preferred aspect ratio.."
-#~ msgstr "Escoja su relación de aspecto preferida."
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Almacena estados pasados del juego en caché para rebobinar en tiempo "
@@ -17265,6 +17261,10 @@ msgstr "Guardado rápido"
 #~ msgstr ""
 #~ "Habilita el salto automático de fotogramas para mejorar rendimiento en "
 #~ "sistemas de gama baja."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "Escoja su relación de aspecto preferida."
 
 #~ msgctxt "game_options"
 #~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."

@@ -16668,10 +16668,6 @@ msgid "Quick Save"
 msgstr "Hurtiglagring"
 
 #~ msgctxt "game_options"
-#~ msgid "Choose your preferred aspect ratio.."
-#~ msgstr "Velg ønsket størrelsesforhold."
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Lagre tidligere tilstander som du kan spole tilbake til i sanntid, hvis "
@@ -17151,6 +17147,10 @@ msgstr "Hurtiglagring"
 #~ msgstr ""
 #~ "Aktiver automatisk frameskipping for å øke ytelsen på mindre avanserte "
 #~ "systemer."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "Velg ønsket størrelsesforhold."
 
 #~ msgctxt "game_options"
 #~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."

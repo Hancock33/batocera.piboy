@@ -437,7 +437,7 @@ msgstr "ARMAS LEVES"
 #. TRANSLATION: shared, shared, shared, shared, shared, ...
 msgctxt "game_options"
 msgid "CONTROLS"
-msgstr ""
+msgstr "COMANDOS"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -9165,56 +9165,58 @@ msgid ""
 "Enable or disable bezels being added when content is a 4:3 aspect with a "
 "widescreen display."
 msgstr ""
+"Ative ou desative a adição de molduras quando o conteúdo tiver um formato "
+"4:3 com um ecrã widescreen"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "BEZELS"
-msgstr ""
+msgstr "MOLDURASMOLDURAS"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 2"
-msgstr ""
+msgstr "Derivação 2"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 3"
-msgstr ""
+msgstr "Derivação 3"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 4"
-msgstr ""
+msgstr "Derivação 4"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 5"
-msgstr ""
+msgstr "Derivação 5"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 6"
-msgstr ""
+msgstr "Derivação 6"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 7"
-msgstr ""
+msgstr "Derivação 7"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 8"
-msgstr ""
+msgstr "Derivação 8"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 9"
-msgstr ""
+msgstr "Derivação 9"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 10"
-msgstr ""
+msgstr "Derivação 10"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -9296,7 +9298,7 @@ msgstr ""
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, ...
 msgctxt "game_options"
 msgid "WII CONTROLLERS"
-msgstr ""
+msgstr "COMANDOS WII"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
@@ -9416,6 +9418,8 @@ msgid ""
 "Compile shaders on next launch of game (one time). Reduces micro-freezes. "
 "Vulkan only."
 msgstr ""
+"Compilar shaders na próxima inicialização do jogo (uma vez). Reduz "
+"microcongelamentos. Apenas Vulkan."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9433,6 +9437,8 @@ msgid ""
 "Use SSAA instead of MSAA for anti-aliasing. SSAA may look better but has a "
 "higher performance cost."
 msgstr ""
+"Usar SSAA em vez de MSAA para anti-aliasing. SSAA pode parecer melhor, mas "
+"tem um maior custo de desempenho."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9544,7 +9550,7 @@ msgstr "Altera o que está conectado às portas virtuais da GameCube."
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 1"
-msgstr ""
+msgstr "COMANDO GAMECUBE 1"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9579,7 +9585,7 @@ msgstr "Bongos do DK"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 2"
-msgstr ""
+msgstr "COMANDO GAMECUBE 2"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9589,7 +9595,7 @@ msgstr "TIPO DE PORTA 2 DO GAMECUBE"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 3"
-msgstr ""
+msgstr "COMANDO GAMECUBE 3"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9599,7 +9605,7 @@ msgstr "TIPO DE PORTA 3 DO GAMECUBE"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 4"
-msgstr ""
+msgstr "COMANDO GAMECUBE 4"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -12534,6 +12540,9 @@ msgid ""
 "use a value larger than 100%% so that the steering feels less sensitive on a "
 "thumbstick."
 msgstr ""
+"Para jogar jogos de condução com um comando, às vezes é uma boa ideia usar "
+"um valor maior que 100%% para que a direção pareça menos sensível no "
+"analógico"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -16717,10 +16726,6 @@ msgid "Quick Save"
 msgstr "Guardar Rápido"
 
 #~ msgctxt "game_options"
-#~ msgid "Choose your preferred aspect ratio.."
-#~ msgstr "Escolha a sua proporção de ecrã preferida.."
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Armazenar savestates para rebobinar em tempo real, se o core suportar."
@@ -17211,6 +17216,10 @@ msgstr "Guardar Rápido"
 #~ "lentos."
 
 #~ msgctxt "game_options"
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "Escolha a sua proporção de ecrã preferida.."
+
+#~ msgctxt "game_options"
 #~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
 #~ msgstr ""
 #~ "Ativar ou desativar o cursor do rato. Útil para menus de Commander Genius."
@@ -17420,45 +17429,3 @@ msgstr "Guardar Rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
-
-#, c-format
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "For playing driving games with a game pad, it is sometimes a good idea to "
-#~ "use a value larger than 100% so that the steering feels less sensitive on "
-#~ "a thumbstick."
-#~ msgstr ""
-#~ "Para jogar jogos de condução com um comando, às vezes é uma boa ideia "
-#~ "usar um valor maior que 100% para que a direção pareça menos sensível no "
-#~ "analógico."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Compile shaders on next launch of game (one time). Reduces micro-freezes."
-#~ msgstr ""
-#~ "Compila os shaders na próxima inicialização do jogo (uma vez). Reduz mini-"
-#~ "congelamentos."
-
-#~ msgctxt "game_options"
-#~ msgid "Off (default)"
-#~ msgstr "Desligado (Predefinição)"
-
-#~ msgctxt "game_options"
-#~ msgid "Toggle MSAA/SSAA. Depends on anti-aliasing being enabled."
-#~ msgstr "Alterna MSAA/SSAA. Depende se o anti-aliasing estiver ativado."
-
-#~ msgctxt "game_options"
-#~ msgid "MSAA (default)"
-#~ msgstr "MSAA (padrão)"
-
-#~ msgctxt "game_options"
-#~ msgid "SSAA"
-#~ msgstr "SSAA"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use with the stretch aspect ratio and adjust joystick sensitivity as "
-#~ "required."
-#~ msgstr ""
-#~ "Usar com a opção de esticar ecrã para ajustar a sensibilidade do comando "
-#~ "conforme necessário."
