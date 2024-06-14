@@ -1,11 +1,11 @@
 diff --git a/src/video_core/renderer_vulkan/vk_shader_util.cpp b/src/video_core/renderer_vulkan/vk_shader_util.cpp
-index 09e3eb883..4415599ce 100644
+index 3d2f2f1d1..3d4200196 100644
 --- a/src/video_core/renderer_vulkan/vk_shader_util.cpp
 +++ b/src/video_core/renderer_vulkan/vk_shader_util.cpp
-@@ -2,7 +2,7 @@
- // Licensed under GPLv2 or any later version
+@@ -3,7 +3,7 @@
  // Refer to the license.txt file included.
  
+ #include <memory>
 -#include <SPIRV/GlslangToSpv.h>
 +#include <glslang/SPIRV/GlslangToSpv.h>
  #include <glslang/Include/ResourceLimits.h>
