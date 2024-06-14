@@ -174,7 +174,7 @@ Emulators|[libretro-mojozork](http://github.com/icculus/mojozork)|5c8d81f8db53c2
 Emulators|[libretro-mrboom](https://github.com/Javanaise/mrboom-libretro.git)|a7af125dc9ef65c9a1b43136a75374bbac5458ee|May 19, 2024
 Emulators|[libretro-mu](http://github.com/libretro/Mu)|865acf3a2889dfe02863bbfb9c5b3cfee8620c22|Nov 02, 2023
 Emulators|[libretro-mupen64plus-next](http://github.com/libretro/mupen64plus-libretro-nx)|5d2ac21adb784ad72d6101290117702eef0411dd|May 21, 2024
-Emulators|[libretro-neocd](http://github.com/libretro/neocd_libretro)|06fa9b6afe8e52ef8fa8aff12b0c4498efed27fc|Jun 13, 2024
+Emulators|[libretro-neocd](http://github.com/libretro/neocd_libretro)|f297cab3e79573e33e6fbc39c1cd1a7a6eb6e500|Jun 12, 2024
 Emulators|[libretro-nestopia](http://github.com/libretro/nestopia)|b99ede358b2219602443e7f414eabf81e17da244|Apr 07, 2024
 Emulators|[libretro-nxengine](http://github.com/libretro/nxengine-libretro)|1f371e51c7a19049e00f4364cbe9c68ca08b303a|Feb 21, 2023
 Emulators|[libretro-o2em](http://github.com/libretro/libretro-o2em)|44fe5f306033242f7d74144105e19a7d4939477e|Nov 3, 2021
@@ -338,6 +338,7 @@ Gpu|[nv-codec-headers](https://github.com/FFmpeg/nv-codec-headers)|n12.2.72.0|Ma
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|e025b079a2b01aadc09b0da118b9509c2f02dc6c|N/A
 Gpu|[rockchip-rga](https://github.com/batocera-linux/rockchip-packages/releases)||N/A
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.1|Apr 30, 2024
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.3.283.0|Apr 29, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|23d68d6717116f575407b71caa6fbf7e980f3054|Jun 05, 2024
 Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.3.283.0|Apr 19, 2024
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.1|Jun 08, 2024
@@ -362,7 +363,7 @@ Kodi|[kodi-pvr-freebox](http://github.com/aassif/pvr.freebox)|21.0.0-Omega|Feb 1
 Libraries|[appstream-glib](http://github.com/hughsie/appstream-glib)|appstream_glib_0_8_3|Jun 05, 2024
 Libraries|[batocera-luajit](http://github.com/openresty/luajit2)|v2.1-20240314|Mar 14, 2024
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.3.0|May 19, 2024
-Libraries|[ffmpeg-python](http://github.com/kkroening/ffmpeg-python)|v0.1.9|Nov 20, 2017
+Libraries|[ffmpeg-python](http://github.com/kkroening/ffmpeg-python)|df129c7ba30aaa9ffffb81a48f53aa7253b0b4e6|Jul 11, 2022
 Libraries|[iir](http://github.com/berndporr/iir1)|1.9.4|Jan 07, 2023
 Libraries|[libcapsimage](http://github.com/simonowen/capsimage)|502015b6e117e7c52fd143025856f9b5b242b6d6|Sept 01, 2022
 Libraries|[libgme](http://github.com/libgme/game-music-emu)|0.6.3|Oct 03, 2023
