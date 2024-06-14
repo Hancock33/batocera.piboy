@@ -21,7 +21,6 @@ Ports|[fheroes2](http://github.com/ihhub/fheroes2)|acf285ff0a5870cf9820db9043cd2
 Ports|[nblood](http://github.com/nukeykt/NBlood)|1c72fbc436aaeab33b3f8ecfba6a5674bca01fc6|Jun 14, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|3256236ba295be08ef1181830122817e2efb639d|Jun 14, 2024
 Emulators|[libretro-mame](http://github.com/sonninnos/mame)|db65a583bd2da39514a544c58362a6ac170179ac|Jun 13, 2024
-Emulators|[libretro-neocd](http://github.com/libretro/neocd_libretro)|06fa9b6afe8e52ef8fa8aff12b0c4498efed27fc|Jun 13, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|f0e3fd277897488c3ac18598ca8012bb09cd2a2c|Jun 13, 2024
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|a06ee1fba0ffbcf84b924308c0d5498de118f866|Jun 13, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|8c14ac43c8c82a6bd484ada30db1382f05ab739c|Jun 13, 2024
@@ -42,6 +41,7 @@ Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|e430a41e7323a1e
 Network|[rtl8812au](http://github.com/morrownr/8812au-20210820)|c0efee9cd121d9f0c815d9771475f76339a8f7d3|Jun 13, 2024
 Network|[rtl8821au-morrownr](http://github.com/morrownr/8821au-20210708)|0b12ea54b7d6dcbfa4ce94eb403b1447565407f1|Jun 13, 2024
 Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|f8707d641eb264b4c75942e94e7d9768384d4202|Jun 12, 2024
+Emulators|[libretro-neocd](http://github.com/libretro/neocd_libretro)|f297cab3e79573e33e6fbc39c1cd1a7a6eb6e500|Jun 12, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|b0f8520a3d8fc39bbd4364f9c382b97363566936|Jun 12, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|08cb38d5535512a9932200a1f8f8cc032500b311|Jun 12, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|e778c6865a356a661d9a3dbe18cbc1310990ce08|Jun 12, 2024
@@ -213,6 +213,7 @@ Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|f9f
 Ports|[openjk](http://github.com/JACoders/OpenJK)|7b9dfe79fbb1e06585e95e67704722f412db109c|May 01, 2024
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.1|Apr 30, 2024
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|47e89572713092caefd937856894fed33fcc9450|Apr 30, 2024
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.3.283.0|Apr 29, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|6b5aad240214bb9f1636cbde762dd9e852b61f49|Apr 28, 2024
 Audio|[zmusic](http://github.com/ZDoom/ZMusic)|1.1.13|Apr 28, 2024
 Emulators|[libretro-freechaf](https://github.com/libretro/FreeChaF.git)|630e068c51a8027aa7222dc737575d235b9a75a1|Apr 26, 2024
@@ -419,6 +420,7 @@ Emulators|[libretro-bk-emulator](http://github.com/libretro/bk-emulator)|cf70ce5
 Emulators|[libretro-blastem](http://github.com/libretro/blastem)|277e4a62668597d4f59cadda1cbafb844f981d45|Jul 26, 2022
 Emulators|[libretro-mesens](http://github.com/libretro/Mesen-S)|32a7adfb4edb029324253cb3632dfc6599ad1aa8|Jul 25, 2022
 Ports|[openclaw](http://github.com/pjasicek/OpenClaw)|5ee5740ca98377c76b13b50c84f610b0066a4717|Jul 13, 2022
+Libraries|[ffmpeg-python](http://github.com/kkroening/ffmpeg-python)|df129c7ba30aaa9ffffb81a48f53aa7253b0b4e6|Jul 11, 2022
 Emulators|[wine-lutris](http://github.com/lutris/wine)|lutris-wine-7.2-2|Jul 06, 2022
 Utils|[vdpauinfo](https://gitlab.freedesktop.org/vdpau/vdpauinfo/-/archive/)|1.5|Jun 23, 2022
 Emulators|[libretro-mame2010](http://github.com/libretro/mame2010-libretro)|5f524dd5fca63ec1dcf5cca63885286109937587|Jun 14, 2022
@@ -481,7 +483,6 @@ Utils|[unclutter](https://github.com/batocera-linux/unclutter-xfixes/archive/ref
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
 Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678291bbedc0b9fe4c8f898|Aug 29, 2018
 Emulators|[demul](http://demul.emulation64.com/files)|demul07_280418|Apr 28, 2018
-Libraries|[ffmpeg-python](http://github.com/kkroening/ffmpeg-python)|v0.1.9|Nov 20, 2017
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Hardware|[element14-pi-desktop](http://github.com/pi-desktop/deb-make)|v1.1.0|Jul 20, 2017
 Controllers|[qtsixa](http://github.com/batocera-linux/qtsixa)|eec727030f341cf543a56bd9aeb821ea901bca64|May 01, 2016
