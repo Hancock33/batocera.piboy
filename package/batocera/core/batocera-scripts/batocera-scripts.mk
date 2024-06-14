@@ -24,7 +24,10 @@ endif
 ###
 
 define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
+	mkdir -p $(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)
+	mkdir -p $(TARGET_DIR)/usr/bin
 	mkdir -p $(TARGET_DIR)/etc/udev/rules.d
+
 	install -m 0644 $(BATOCERA_SCRIPTS_PATH)/rules/80-switch-screen.rules					$(TARGET_DIR)/etc/udev/rules.d
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-amd-tdp						$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-autologin						$(TARGET_DIR)/usr/bin/
@@ -77,7 +80,7 @@ define BATOCERA_SCRIPTS_INSTALL_GAMECON_RPI
 endef
 
 ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI),y)
-  BATOCERA_SCRIPTS_POST_INSTALL_TARGET_HOOKS += BATOCERA_SCRIPTS_INSTALL_GAMECON_RPI
+	BATOCERA_SCRIPTS_POST_INSTALL_TARGET_HOOKS += BATOCERA_SCRIPTS_INSTALL_GAMECON_RPI
 endif
 
 define BATOCERA_SCRIPTS_INSTALL_MOUSE
@@ -85,6 +88,7 @@ define BATOCERA_SCRIPTS_INSTALL_MOUSE
 endef
 
 define BATOCERA_SCRIPTS_INSTALL_ROCKCHIP
+	mkdir -p $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-rockchip-suspend $(TARGET_DIR)/usr/bin/
 endef
 
