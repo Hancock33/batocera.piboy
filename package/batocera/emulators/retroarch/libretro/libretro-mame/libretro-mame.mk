@@ -8,6 +8,8 @@ LIBRETRO_MAME_VERSION = db65a583bd2da39514a544c58362a6ac170179ac
 LIBRETRO_MAME_SITE = $(call github,sonninnos,mame,$(LIBRETRO_MAME_VERSION))
 LIBRETRO_MAME_LICENSE = MAME
 
+LIBRETRO_MAME_DEPENDENCIES = alsa-lib
+
 # Limit number of jobs not to eat too much RAM....
 LIBRETRO_MAME_JOBS = $(shell expr $(shell nproc))
 

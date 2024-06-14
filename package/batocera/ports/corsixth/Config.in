@@ -8,6 +8,8 @@ config BR2_PACKAGE_CORSIXTH
 	select BR2_PACKAGE_LUASOCKET
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_IMAGE
+	select BR2_PACKAGE_SDL2_MIXER
+	select BR2_PACKAGE_FFMPEG
 
     help
 	  CorsixTH - Theme Hospital engine
