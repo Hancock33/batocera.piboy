@@ -94,6 +94,7 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/rockchip-rga/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/vulkan/glslang/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/vulkan/shaderc/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/vulkan/spirv-cross/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/vulkan/vulkan-samples/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/vulkan/vulkan-volk/Config.in"
   endmenu
