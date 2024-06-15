@@ -1,8 +1,8 @@
 diff --git a/configuration.c b/configuration.c
-index a915675099..3a1168bfb3 100644
+index f59038fe81..1c198f352e 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -4808,12 +4808,33 @@ static void save_keybind_mbutton(config_file_t *conf,
+@@ -4845,12 +4845,33 @@ static void save_keybind_mbutton(config_file_t *conf,
        case RETRO_DEVICE_ID_MOUSE_MIDDLE:
           config_set_uint64(conf, key, 3);
           break;
@@ -38,7 +38,7 @@ index a915675099..3a1168bfb3 100644
        case RETRO_DEVICE_ID_MOUSE_WHEELUP:
           config_set_string(conf, key, "wu");
           break;
-@@ -6354,11 +6375,32 @@ void input_config_parse_mouse_button(
+@@ -6411,11 +6432,32 @@ void input_config_parse_mouse_button(
                 bind->mbutton = RETRO_DEVICE_ID_MOUSE_MIDDLE;
                 break;
              case 4:
@@ -73,7 +73,7 @@ index a915675099..3a1168bfb3 100644
        }
     }
 diff --git a/input/drivers/udev_input.c b/input/drivers/udev_input.c
-index 616fd2318c..fa7971105e 100644
+index e1a7dd4033..3f8b157839 100644
 --- a/input/drivers/udev_input.c
 +++ b/input/drivers/udev_input.c
 @@ -226,7 +226,7 @@ typedef struct
@@ -85,41 +85,41 @@ index 616fd2318c..fa7971105e 100644
     bool wu, wd, whu, whd;
     bool pp;
  } udev_input_mouse_t;
-@@ -895,6 +895,33 @@ static void udev_handle_mouse(void *data,
+@@ -893,6 +893,33 @@ static void udev_handle_mouse(void *data,
              case BTN_TOUCH:
                 mouse->pp = event->value;
                 break;
-+	    case BTN_1:
++            case BTN_1:
 +               mouse->b1 = event->value;
 +               break;
-+	    case BTN_2:
++            case BTN_2:
 +               mouse->b2 = event->value;
 +               break;
-+	    case BTN_3:
++            case BTN_3:
 +               mouse->b3 = event->value;
 +               break;
-+	    case BTN_4:
++            case BTN_4:
 +               mouse->b4 = event->value;
 +               break;
-+	    case BTN_5:
++            case BTN_5:
 +               mouse->b5 = event->value;
 +               break;
-+	    case BTN_6:
++            case BTN_6:
 +               mouse->b6 = event->value;
 +               break;
-+	    case BTN_7:
++            case BTN_7:
 +               mouse->b7 = event->value;
 +               break;
-+	    case BTN_8:
++            case BTN_8:
 +               mouse->b8 = event->value;
 +               break;
-+	    case BTN_9:
++            case BTN_9:
 +               mouse->b9 = event->value;
 +               break;
- #if 0
-             case BTN_??:
+             case BTN_SIDE:
                 mouse->b4 = event->value;
-@@ -3671,10 +3698,24 @@ static int16_t udev_mouse_state(udev_input_t *udev,
+                break;
+@@ -3667,10 +3694,24 @@ static int16_t udev_mouse_state(udev_input_t *udev,
              return mouse->r;
           case RETRO_DEVICE_ID_MOUSE_MIDDLE:
              return mouse->m;
@@ -144,7 +144,7 @@ index 616fd2318c..fa7971105e 100644
           case RETRO_DEVICE_ID_MOUSE_WHEELUP:
              return mouse->wu;
           case RETRO_DEVICE_ID_MOUSE_WHEELDOWN:
-@@ -3711,10 +3752,24 @@ static bool udev_mouse_button_pressed(
+@@ -3707,10 +3748,24 @@ static bool udev_mouse_button_pressed(
              return mouse->r;
           case RETRO_DEVICE_ID_MOUSE_MIDDLE:
              return mouse->m;
@@ -170,7 +170,7 @@ index 616fd2318c..fa7971105e 100644
              return mouse->wu;
           case RETRO_DEVICE_ID_MOUSE_WHEELDOWN:
 diff --git a/libretro-common/include/libretro.h b/libretro-common/include/libretro.h
-index d9e7658b48..1b60c365cb 100644
+index 7e7b9505b7..cd3a21e47a 100644
 --- a/libretro-common/include/libretro.h
 +++ b/libretro-common/include/libretro.h
 @@ -401,8 +401,15 @@ extern "C" {
@@ -192,10 +192,10 @@ index d9e7658b48..1b60c365cb 100644
  /* Id values for LIGHTGUN. */
  #define RETRO_DEVICE_ID_LIGHTGUN_SCREEN_X        13 /*Absolute Position*/
 diff --git a/menu/menu_driver.c b/menu/menu_driver.c
-index 2828d8970f..46e1194b3b 100644
+index a9d530edcf..257630e805 100644
 --- a/menu/menu_driver.c
 +++ b/menu/menu_driver.c
-@@ -1646,8 +1646,15 @@ static bool menu_input_key_bind_poll_find_trigger_pad(
+@@ -1666,8 +1666,15 @@ static bool menu_input_key_bind_poll_find_trigger_pad(
           case RETRO_DEVICE_ID_MOUSE_LEFT:
           case RETRO_DEVICE_ID_MOUSE_RIGHT:
           case RETRO_DEVICE_ID_MOUSE_MIDDLE:
