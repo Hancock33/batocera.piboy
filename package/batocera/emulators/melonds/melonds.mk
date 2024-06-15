@@ -3,8 +3,8 @@
 # melonds
 #
 ################################################################################
-# Version: Commits on Jun 15, 2024
-MELONDS_VERSION = d449888405847f5c95a2eb4c823da89be2feac7d
+# Version: Commits on Jun 08, 2024
+MELONDS_VERSION = 8e9b88d01da0d21c3c35db051d7e44d8ee0c7715
 MELONDS_SITE = $(call github,melonDS-emu,melonDS,$(MELONDS_VERSION))
 MELONDS_LICENSE = GPLv2
 MELONDS_DEPENDENCIES = sdl2 qt6base qt6multimedia slirp libepoxy libarchive

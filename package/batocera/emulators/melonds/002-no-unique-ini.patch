@@ -1,8 +1,8 @@
 diff --git a/src/frontend/qt_sdl/Config.cpp b/src/frontend/qt_sdl/Config.cpp
-index 610b8778..0cf524f7 100644
+index 94b34393..7e6c7e26 100644
 --- a/src/frontend/qt_sdl/Config.cpp
 +++ b/src/frontend/qt_sdl/Config.cpp
-@@ -380,20 +380,7 @@ ConfigEntry ConfigFile[] =
+@@ -383,20 +383,7 @@ ConfigEntry ConfigFile[] =
  bool LoadFile(int inst, int actualinst)
  {
      Platform::FileHandle* f;
@@ -24,7 +24,7 @@ index 610b8778..0cf524f7 100644
  
      if (!f) return true;
  
-@@ -413,9 +400,6 @@ bool LoadFile(int inst, int actualinst)
+@@ -416,9 +403,6 @@ bool LoadFile(int inst, int actualinst)
          {
              if (!strncmp(entry->Name, entryname, 32))
              {
@@ -34,7 +34,7 @@ index 610b8778..0cf524f7 100644
                  switch (entry->Type)
                  {
                  case 0: *(int*)entry->Value = strtol(entryval, NULL, 10); break;
-@@ -446,12 +430,8 @@ bool Load()
+@@ -449,12 +433,8 @@ bool Load()
          case 3: *(int64_t*)entry->Value = std::get<int64_t>(entry->Default); break;
          }
      }
@@ -48,7 +48,7 @@ index 610b8778..0cf524f7 100644
  
      return ret;
  }
-@@ -461,22 +441,12 @@ void Save()
+@@ -464,22 +444,12 @@ void Save()
      int inst = Platform::InstanceID();
  
      Platform::FileHandle* f;

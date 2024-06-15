@@ -1,8 +1,8 @@
 diff --git a/src/frontend/qt_sdl/Config.cpp b/src/frontend/qt_sdl/Config.cpp
-index 2fdfc3ba..610b8778 100644
+index d6d01825..94b34393 100644
 --- a/src/frontend/qt_sdl/Config.cpp
 +++ b/src/frontend/qt_sdl/Config.cpp
-@@ -163,8 +163,7 @@ bool GdbARM9BreakOnStartup;
+@@ -165,8 +165,7 @@ bool GdbARM9BreakOnStartup;
  CameraConfig Camera[2];
  
  
