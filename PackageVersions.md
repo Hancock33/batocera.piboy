@@ -68,7 +68,7 @@ Emulators|[citra](https://github.com/PabloMK7/citra.git)|4f174f1c0b81266170aa8da
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
 Emulators|[d8vk](https://github.com/AlpyneDreams/d8vk/releases)|d8vk-v1.0|May 10, 2023
 Emulators|[demul](http://demul.emulation64.com/files)|demul07_280418|Apr 28, 2018
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|56fd9c177c0c907a342eedf0a91df089b8f0eea1|Jun 15, 2024
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|c23cfe3c0836bd993126692bc19d60ca286262b1|Jun 15, 2024
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|bfefd38d2500103d32f5da9f7fcd80090b7836fb|May 23, 2024
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|1e950b31cfebe35c9ef553fb7fc03ed5f9042188|May 31, 2024
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.03.01|Mar 01, 2024
@@ -270,7 +270,7 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1127-g6b62eff|May 10, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|771e60b1eacd4edc57c19b61ab2c713200af0a3f|May 30, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|d7d1011ab0b817f96f65016e7b39541fd28c5250|Jun 15, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20240531|May 31, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|feff2ba09e3b4bba230e90e968304f87590fac43|Jun 13, 2024
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|5b973448bf75a239f34fd9c7698c8a02b04e2ea9|Jun 15, 2024
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-06-15|Jun 15, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1330|Jun 03, 2024
@@ -305,7 +305,7 @@ Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-2|
 Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.11|Jun 14, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240615|Jun 15, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|8ffdb53f5aebfe51502ecceb0d5e7994ad814424|Jun 03, 2024
-Emulators|[xemu](https://github.com/xemu-project/xemu)|8ef45cc333881b88f24c4a52b8937c4d99f3e979|Jun 15, 2024
+Emulators|[xemu](https://github.com/xemu-project/xemu)|8152913bb956385841b5df251686a13ec6d2a4de|Jun 15, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|ce990e28281a9de87b79218e22afc504c32dcf5a|Jun 01, 2024
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024

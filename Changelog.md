@@ -3,14 +3,15 @@
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|b1e4090b3d4266e55feb0793efa35792e05faf66|Jun 15, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|c72c58ed026944c990051a108585ee58e168756e|Jun 15, 2024
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|4f174f1c0b81266170aa8dac226be1b772f4c94d|Jun 15, 2024
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|56fd9c177c0c907a342eedf0a91df089b8f0eea1|Jun 15, 2024
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|c23cfe3c0836bd993126692bc19d60ca286262b1|Jun 15, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|2a90a8805509a77e1e19bd0b6a0dc4e4e3c380fe|Jun 15, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|20cd506226cee9ad246624aaa70cf0e1684a8549|Jun 15, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v1.7.5901|Jun 15, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|20baf77dd2a7b697d83cb1dec2052861a3ed4647|Jun 15, 2024
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|5b973448bf75a239f34fd9c7698c8a02b04e2ea9|Jun 15, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-06-15|Jun 15, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|c8a491c87b2ac63537e6875362a166b03e252b58|Jun 15, 2024
-Emulators|[xemu](https://github.com/xemu-project/xemu)|8ef45cc333881b88f24c4a52b8937c4d99f3e979|Jun 15, 2024
+Emulators|[xemu](https://github.com/xemu-project/xemu)|8152913bb956385841b5df251686a13ec6d2a4de|Jun 15, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|4d068eee26809e491fb3ff6e115222630f3288bc|Jun 15, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|5fec1d38e117a6e8160f156d08b383bb568e3283|Jun 15, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|4e9bbdd5942be79ead7b79e5bdbe95c2ca67c9e9|Jun 15, 2024
@@ -46,7 +47,6 @@ Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|693c632bddc9
 Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-9.11|Jun 14, 2024
 Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.11|Jun 14, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|f0e3fd277897488c3ac18598ca8012bb09cd2a2c|Jun 13, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|feff2ba09e3b4bba230e90e968304f87590fac43|Jun 13, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|a9e64edf73f36fb1a4ac616b11131f6380d8e968|Jun 13, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|19612e1b13844227003ad25a83e98854926b2cac|Jun 13, 2024
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|36805ccc8c5259ba71a774c67c85f1fd31b25dfd|Jun 13, 2024
