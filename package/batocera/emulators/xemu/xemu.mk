@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jun 15, 2024
-XEMU_VERSION = 8152913bb956385841b5df251686a13ec6d2a4de
+XEMU_VERSION = b4ce2b58d09baa6dfd17c0bcab2e505df9f310e4
 XEMU_SITE = https://github.com/xemu-project/xemu
 XEMU_SITE_METHOD=git
 XEMU_GIT_SUBMODULES=YES
