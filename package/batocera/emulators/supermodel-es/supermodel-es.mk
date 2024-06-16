@@ -3,20 +3,21 @@
 # supermodel-es
 #
 ################################################################################
-# Version: Commits on Jun 01, 2024
-SUPERMODEL_ES_VERSION = 55325c713e63d4834c365300ad4f63a211944113
+# Version: Commits on Jun 13, 2024
+SUPERMODEL_ES_VERSION = 36805ccc8c5259ba71a774c67c85f1fd31b25dfd
 SUPERMODEL_ES_SITE = $(call github,DirtBagXon,model3emu-code-sinden,$(SUPERMODEL_ES_VERSION))
 SUPERMODEL_ES_DEPENDENCIES = sdl2 zlib libzip sdl2_net
 SUPERMODEL_ES_LICENSE = GPLv3
 
 define SUPERMODEL_ES_BUILD_CMDS
 	cp $(@D)/Makefiles/Makefile.UNIX $(@D)/Makefile
+	$(SED) "s|-O3||g" $(@D)/Makefiles/Rules.inc
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
 	$(SED) "s|CC = gcc|CC = $(TARGET_CC)|g" $(@D)/Makefile
 	$(SED) "s|CXX = g++|CXX = $(TARGET_CXX)|g" $(@D)/Makefile
 	$(SED) "s|LD = gcc|LD = $(TARGET_CC)|g" $(@D)/Makefile
 	$(SED) "s|sdl2-config|$(STAGING_DIR)/usr/bin/sdl2-config|g" $(@D)/Makefile
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D) clean && \
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D) -f Makefile VERBOSE=1 ARCH=$(BR2_TARGET_OPTIMIZATION)
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) -j2 -C $(@D) -f Makefile NET_BOARD=1 VERBOSE=1
 endef
 
 define SUPERMODEL_ES_INSTALL_TARGET_CMDS

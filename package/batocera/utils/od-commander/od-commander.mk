@@ -11,8 +11,8 @@ OD_COMMANDER_RESOURCES_DIR = /usr/share/od-commander/
 
 OD_COMMANDER_CONF_OPTS += \
 	-DWITH_SYSTEM_SDL_GFX=ON -DWITH_SYSTEM_SDL_TTF=ON \
-	-DFONTS=$(BR2_PACKAGE_OD_COMMANDER_FONTS) \
-	-DLOW_DPI_FONTS=$(BR2_PACKAGE_OD_COMMANDER_FONTS_LOW_DPI) \
+	-DFONTS="\"$(BR2_PACKAGE_OD_COMMANDER_FONTS)\"" \
+	-DLOW_DPI_FONTS="\"$(BR2_PACKAGE_OD_COMMANDER_FONTS_LOW_DPI)\"" \
 	-DRES_DIR="\"$(OD_COMMANDER_RESOURCES_DIR)\"" \
 	-DAUTOSCALE_DPI=0 \
 	-DPPU_X=2 \
@@ -53,14 +53,10 @@ endif
 define OD_COMMANDER_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)$(OD_COMMANDER_RESOURCES_DIR)
 	mkdir -p $(TARGET_DIR)/usr/share/fonts/truetype/droid
-	$(INSTALL) -m 0644 $(@D)/res/Fiery_Turk.ttf \
-		$(TARGET_DIR)$(OD_COMMANDER_RESOURCES_DIR)
-	$(INSTALL) -m 0644 $(@D)/res/DroidSansFallback.ttf \
-		$(TARGET_DIR)/usr/share/fonts/truetype/droid/
-	$(INSTALL) -m 0644 $(@D)/res/*.png \
-			$(TARGET_DIR)$(OD_COMMANDER_RESOURCES_DIR)
-	$(INSTALL) -m 0755 -D $(OD_COMMANDER_BUILDDIR)commander \
-		$(TARGET_DIR)/usr/bin/od-commander
+	$(INSTALL) -m 0644 $(@D)/res/Fiery_Turk.ttf 			$(TARGET_DIR)$(OD_COMMANDER_RESOURCES_DIR)
+	$(INSTALL) -m 0644 $(@D)/res/DroidSansFallback.ttf		$(TARGET_DIR)/usr/share/fonts/truetype/droid/
+	$(INSTALL) -m 0644 $(@D)/res/*.png						$(TARGET_DIR)$(OD_COMMANDER_RESOURCES_DIR)
+	$(INSTALL) -m 0755 -D $(OD_COMMANDER_BUILDDIR)commander	$(TARGET_DIR)/usr/bin/od-commander
 	# install media
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/od-commander
 	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/od-commander/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/od-commander/

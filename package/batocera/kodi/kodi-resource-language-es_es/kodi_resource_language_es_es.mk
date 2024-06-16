@@ -3,7 +3,7 @@
 # kodi_resource_language_es_es
 #
 ################################################################################
-
+# Version: Commits on Jun 11, 2024
 KODI_RESOURCE_LANGUAGE_ES_ES_VERSION = 11.0.78
 KODI_RESOURCE_LANGUAGE_ES_ES_SOURCE = resource.language.es_es-$(KODI_RESOURCE_LANGUAGE_ES_ES_VERSION).zip
 KODI_RESOURCE_LANGUAGE_ES_ES_SITE = http://mirrors.kodi.tv/addons/omega/resource.language.es_es

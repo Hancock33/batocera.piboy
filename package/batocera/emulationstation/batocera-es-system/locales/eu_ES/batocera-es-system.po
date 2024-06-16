@@ -847,12 +847,12 @@ msgctxt "game_options"
 msgid "English (Default)"
 msgstr "Ingelesa (Defektuz)"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Spanish"
 msgstr "Gaztelania"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, ...
 msgctxt "game_options"
 msgid "French"
 msgstr "Frantsesa"
@@ -1023,7 +1023,7 @@ msgctxt "game_options"
 msgid "Dendy is a popular Russian clone with unique characteristics."
 msgstr "Dendy Errusian klon ezagun bat da ezaugarri bereziekin."
 
-#. TRANSLATION: libretro/mesen, libretro/neocd, libretro/o2em, duckstation, flycast/vitaquake3
+#. TRANSLATION: libretro/mesen, libretro/flycast, libretro/neocd, libretro/o2em, duckstation, ...
 msgctxt "game_options"
 msgid "CONSOLE REGION"
 msgstr "KONTSOLAREN ERREGIOA"
@@ -1096,7 +1096,7 @@ msgctxt "game_options"
 msgid "COLOR PALETTE"
 msgstr "KOLORE PALETA"
 
-#. TRANSLATION: libretro/mesen, libretro/puae, libretro/puae2021, suyu, suyu
+#. TRANSLATION: libretro/mesen, libretro/flycast, libretro/flycast, libretro/puae, libretro/puae2021, ...
 msgctxt "game_options"
 msgid "Default"
 msgstr "Defektuzkoa"
@@ -1365,17 +1365,17 @@ msgstr ""
 "Aukeratu 'Erabili Firmware ezarpenak' desgaituta badago, edo aurkitzen ez "
 "bada erabiliko den hizkuntza"
 
-#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, cemu, ...
+#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, libretro/kronos, ...
 msgctxt "game_options"
 msgid "German"
 msgstr "Alemaniera"
 
-#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, ...
+#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, libretro/kronos, ...
 msgctxt "game_options"
 msgid "Italian"
 msgstr "Italiera"
 
-#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, ...
+#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, libretro/kronos, ...
 msgctxt "game_options"
 msgid "Japanese"
 msgstr "Japoniera"
@@ -1701,7 +1701,7 @@ msgctxt "game_options"
 msgid "Use Host"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, libretro/dolphin, libretro/kronos, cemu, flycast/vitaquake3, ...
+#. TRANSLATION: libretro/melondsds, libretro/dolphin, libretro/flycast, libretro/kronos, cemu, ...
 msgctxt "game_options"
 msgid "English"
 msgstr "Ingelera"
@@ -3318,6 +3318,40 @@ msgstr "Arrunta"
 msgctxt "game_options"
 msgid "Maximum"
 msgstr "Gehienezkoa"
+
+#. TRANSLATION: libretro/flycast, redream
+msgctxt "game_options"
+msgid "Choose the Dreamcast console region."
+msgstr "Aukeratu Dreamcast kontsolaren herrialdea"
+
+#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, suyu, ryujinx
+msgctxt "game_options"
+msgid "USA"
+msgstr "AEB"
+
+#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, pcsx2, redream, ...
+msgctxt "game_options"
+msgid "Europe"
+msgstr "Europa"
+
+#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, redream, suyu, ...
+msgctxt "game_options"
+msgid "Japan"
+msgstr "Japonia"
+
+#. TRANSLATION: libretro/flycast, flycast/vitaquake3
+msgctxt "game_options"
+msgid ""
+"Dreamcast BIOS's language setting. Can change the language of some games. "
+"Some games default to Japanese."
+msgstr ""
+"Dreamcas-eko BIOS-aren hizkuntza ezarpena. Joku batzuetako hizkuntza alda "
+"dezake. Joku batzuk Japoniera erabil dezakete defektuz."
+
+#. TRANSLATION: libretro/flycast, flycast/vitaquake3
+msgctxt "game_options"
+msgid "BIOS LANGUAGE"
+msgstr "BIOS HIZKUNTZA"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/quasi88, flycast/vitaquake3
 msgctxt "game_options"
@@ -5998,21 +6032,6 @@ msgstr "1x (Defektuz)"
 msgctxt "game_options"
 msgid "Can change the language of some games."
 msgstr "Joku batzuen hizkuntza alda dezake."
-
-#. TRANSLATION: libretro/neocd, flycast/vitaquake3, redream, suyu, suyu, ...
-msgctxt "game_options"
-msgid "Japan"
-msgstr "Japonia"
-
-#. TRANSLATION: libretro/neocd, flycast/vitaquake3, suyu, ryujinx
-msgctxt "game_options"
-msgid "USA"
-msgstr "AEB"
-
-#. TRANSLATION: libretro/neocd, flycast/vitaquake3, pcsx2, redream, suyu, ...
-msgctxt "game_options"
-msgid "Europe"
-msgstr "Europa"
 
 #. TRANSLATION: libretro/neocd
 msgctxt "game_options"
@@ -10054,20 +10073,6 @@ msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr ""
 
-#. TRANSLATION: flycast/vitaquake3
-msgctxt "game_options"
-msgid ""
-"Dreamcast BIOS's language setting. Can change the language of some games. "
-"Some games default to Japanese."
-msgstr ""
-"Dreamcas-eko BIOS-aren hizkuntza ezarpena. Joku batzuetako hizkuntza alda "
-"dezake. Joku batzuk Japoniera erabil dezakete defektuz."
-
-#. TRANSLATION: flycast/vitaquake3
-msgctxt "game_options"
-msgid "BIOS LANGUAGE"
-msgstr "BIOS HIZKUNTZA"
-
 #. TRANSLATION: flycast/vitaquake3, flycast/vitaquake3
 msgctxt "game_options"
 msgid "Game's default"
@@ -12403,11 +12408,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "LLE"
 msgstr ""
-
-#. TRANSLATION: redream
-msgctxt "game_options"
-msgid "Choose the Dreamcast console region."
-msgstr "Aukeratu Dreamcast kontsolaren herrialdea"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -16613,10 +16613,6 @@ msgid "Quick Save"
 msgstr "Gordetze Azkarra"
 
 #~ msgctxt "game_options"
-#~ msgid "Choose your preferred aspect ratio.."
-#~ msgstr "Aukeratu hobetsitako proportzioa.."
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Gorde iragandako egoerak denbora errealean atzera botatzeko, nukleoak "
@@ -17072,6 +17068,10 @@ msgstr "Gordetze Azkarra"
 #~ msgid "Enable auto frameskipping for performance on lower-end systems."
 #~ msgstr ""
 #~ "Gaitu fotograma saltatze automatikoa eraginkortasunerako sistema eskaxetan"
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "Aukeratu hobetsitako proportzioa.."
 
 #~ msgctxt "game_options"
 #~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."

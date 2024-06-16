@@ -3,11 +3,11 @@
 # mangohud
 #
 ################################################################################
-# Version: Commits from Oct, 2021
+# Version: Commits on May 28, 2022
 MANGOHUD_VERSION = a8a0a245e69fbbca5263d2436fd1c04289375498
 MANGOHUD_SITE =  $(call github,flightlessmango,MangoHud,$(MANGOHUD_VERSION))
 
-MANGOHUD_DEPENDENCIES = host-python-mako host-glslang
+MANGOHUD_DEPENDENCIES = host-libcurl host-python-mako host-glslang dbus
 
 ifeq ($(BR2_PACKAGE_LIBDRM),y)
 	MANGOHUD_DEPENDENCIES += libdrm
@@ -35,6 +35,7 @@ else
 endif
 
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
+	MANGOHUD_DEPENDENCIES += wayland
 	MANGOHUD_CONF_OPTS += -Dwith_wayland=enabled
 else
 	MANGOHUD_CONF_OPTS += -Dwith_wayland=disabled

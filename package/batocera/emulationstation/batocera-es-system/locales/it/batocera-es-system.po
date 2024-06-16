@@ -438,7 +438,7 @@ msgstr "PISTOLE"
 #. TRANSLATION: shared, shared, shared, shared, shared, ...
 msgctxt "game_options"
 msgid "CONTROLS"
-msgstr ""
+msgstr "CONTROLLI"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -860,12 +860,12 @@ msgctxt "game_options"
 msgid "English (Default)"
 msgstr "Inglese (Default)"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Spanish"
 msgstr "Spagnolo"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, ...
 msgctxt "game_options"
 msgid "French"
 msgstr "Francese"
@@ -1032,7 +1032,7 @@ msgctxt "game_options"
 msgid "Dendy is a popular Russian clone with unique characteristics."
 msgstr "Dendy è un clone russo popolare con caratteristiche uniche."
 
-#. TRANSLATION: libretro/mesen, libretro/neocd, libretro/o2em, duckstation, flycast/vitaquake3
+#. TRANSLATION: libretro/mesen, libretro/flycast, libretro/neocd, libretro/o2em, duckstation, ...
 msgctxt "game_options"
 msgid "CONSOLE REGION"
 msgstr "REGIONE CONSOLE"
@@ -1102,7 +1102,7 @@ msgctxt "game_options"
 msgid "COLOR PALETTE"
 msgstr "TAVOLA COLORE"
 
-#. TRANSLATION: libretro/mesen, libretro/puae, libretro/puae2021, suyu, suyu
+#. TRANSLATION: libretro/mesen, libretro/flycast, libretro/flycast, libretro/puae, libretro/puae2021, ...
 msgctxt "game_options"
 msgid "Default"
 msgstr "Default"
@@ -1371,17 +1371,17 @@ msgstr ""
 "Seleziona la lingua che sarà usata se 'Usa impostazioni firmware' è "
 "disabilitato e se 'il file del firmware non è stato trovato."
 
-#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, cemu, ...
+#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, libretro/kronos, ...
 msgctxt "game_options"
 msgid "German"
 msgstr "Tedesco"
 
-#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, ...
+#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, libretro/kronos, ...
 msgctxt "game_options"
 msgid "Italian"
 msgstr "Italiano"
 
-#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, ...
+#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, libretro/kronos, ...
 msgctxt "game_options"
 msgid "Japanese"
 msgstr "Giapponese"
@@ -1715,7 +1715,7 @@ msgctxt "game_options"
 msgid "Use Host"
 msgstr "Utilizza l'Host"
 
-#. TRANSLATION: libretro/melondsds, libretro/dolphin, libretro/kronos, cemu, flycast/vitaquake3, ...
+#. TRANSLATION: libretro/melondsds, libretro/dolphin, libretro/flycast, libretro/kronos, cemu, ...
 msgctxt "game_options"
 msgid "English"
 msgstr "Inglese"
@@ -3332,6 +3332,40 @@ msgstr "Normale"
 msgctxt "game_options"
 msgid "Maximum"
 msgstr "Massimo"
+
+#. TRANSLATION: libretro/flycast, redream
+msgctxt "game_options"
+msgid "Choose the Dreamcast console region."
+msgstr "Scegli la regione della console Dreamcast."
+
+#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, suyu, ryujinx
+msgctxt "game_options"
+msgid "USA"
+msgstr "USA"
+
+#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, pcsx2, redream, ...
+msgctxt "game_options"
+msgid "Europe"
+msgstr "Europa"
+
+#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, redream, suyu, ...
+msgctxt "game_options"
+msgid "Japan"
+msgstr "Giappone"
+
+#. TRANSLATION: libretro/flycast, flycast/vitaquake3
+msgctxt "game_options"
+msgid ""
+"Dreamcast BIOS's language setting. Can change the language of some games. "
+"Some games default to Japanese."
+msgstr ""
+"Impostazioni lingua BIOS Dreamcast. Può cambiare la lingua di alcuni giochi. "
+"Alcuni giochi vanno di default in Giapponese."
+
+#. TRANSLATION: libretro/flycast, flycast/vitaquake3
+msgctxt "game_options"
+msgid "BIOS LANGUAGE"
+msgstr "LINGUA BIOS"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/quasi88, flycast/vitaquake3
 msgctxt "game_options"
@@ -6013,21 +6047,6 @@ msgstr "1x (Default)"
 msgctxt "game_options"
 msgid "Can change the language of some games."
 msgstr "Può cambiare la lingua per alcuni giochi."
-
-#. TRANSLATION: libretro/neocd, flycast/vitaquake3, redream, suyu, suyu, ...
-msgctxt "game_options"
-msgid "Japan"
-msgstr "Giappone"
-
-#. TRANSLATION: libretro/neocd, flycast/vitaquake3, suyu, ryujinx
-msgctxt "game_options"
-msgid "USA"
-msgstr "USA"
-
-#. TRANSLATION: libretro/neocd, flycast/vitaquake3, pcsx2, redream, suyu, ...
-msgctxt "game_options"
-msgid "Europe"
-msgstr "Europa"
 
 #. TRANSLATION: libretro/neocd
 msgctxt "game_options"
@@ -9133,56 +9152,58 @@ msgid ""
 "Enable or disable bezels being added when content is a 4:3 aspect with a "
 "widescreen display."
 msgstr ""
+"Abilita o disabilita i bordi quando il contenuto e' a 4:3 ma visualizzato su "
+"monitor widescreen."
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "BEZELS"
-msgstr ""
+msgstr "BORDI"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 2"
-msgstr ""
+msgstr "Shunt 2"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 3"
-msgstr ""
+msgstr "Shunt 3"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 4"
-msgstr ""
+msgstr "Shunt 4"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 5"
-msgstr ""
+msgstr "Shunt 5"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 6"
-msgstr ""
+msgstr "Shunt 6"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 7"
-msgstr ""
+msgstr "Shunt 7"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 8"
-msgstr ""
+msgstr "Shunt 8"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 9"
-msgstr ""
+msgstr "Shunt 9"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 10"
-msgstr ""
+msgstr "Shunt 10"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -9264,7 +9285,7 @@ msgstr ""
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, ...
 msgctxt "game_options"
 msgid "WII CONTROLLERS"
-msgstr ""
+msgstr "CONTROLLI WII"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
@@ -9385,6 +9406,8 @@ msgid ""
 "Compile shaders on next launch of game (one time). Reduces micro-freezes. "
 "Vulkan only."
 msgstr ""
+"Compila gli shaders al prossimo lancio del gioco (una volta). Riduce i micro-"
+"blocchi. Solo con Vulkan."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9402,6 +9425,8 @@ msgid ""
 "Use SSAA instead of MSAA for anti-aliasing. SSAA may look better but has a "
 "higher performance cost."
 msgstr ""
+"Usa SSAA al posto di MSAA per l'anti-aliasing. SSAA puo' apparire meglio ma "
+"al costo della performance."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9510,7 +9535,7 @@ msgstr "Cambia quello che è inserito nelle porte virtuali del GameCube."
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 1"
-msgstr ""
+msgstr "CONTROLLER GAMECUBE 1"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9545,7 +9570,7 @@ msgstr "DK Bongos"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 2"
-msgstr ""
+msgstr "CONTROLLER GAMECUBE 2"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9555,7 +9580,7 @@ msgstr "TIPOLOGIA PORTA 2 GAMECUBE"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 3"
-msgstr ""
+msgstr "CONTROLLER GAMECUBE 3"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9565,7 +9590,7 @@ msgstr "TIPOLOGIA PORTA 3 GAMECUBE"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 4"
-msgstr ""
+msgstr "CONTROLLER GAMECUBE 4"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -10065,20 +10090,6 @@ msgstr "SUCCESSI"
 msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr "MIRINO"
-
-#. TRANSLATION: flycast/vitaquake3
-msgctxt "game_options"
-msgid ""
-"Dreamcast BIOS's language setting. Can change the language of some games. "
-"Some games default to Japanese."
-msgstr ""
-"Impostazioni lingua BIOS Dreamcast. Può cambiare la lingua di alcuni giochi. "
-"Alcuni giochi vanno di default in Giapponese."
-
-#. TRANSLATION: flycast/vitaquake3
-msgctxt "game_options"
-msgid "BIOS LANGUAGE"
-msgstr "LINGUA BIOS"
 
 #. TRANSLATION: flycast/vitaquake3, flycast/vitaquake3
 msgctxt "game_options"
@@ -12417,11 +12428,6 @@ msgstr "LLE"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
-msgid "Choose the Dreamcast console region."
-msgstr "Scegli la regione della console Dreamcast."
-
-#. TRANSLATION: redream
-msgctxt "game_options"
 msgid "Choose the Dreamcast console language."
 msgstr "Scegli la lingua della console Dreamcast"
 
@@ -12519,6 +12525,9 @@ msgid ""
 "use a value larger than 100%% so that the steering feels less sensitive on a "
 "thumbstick."
 msgstr ""
+"Per usare i giochi di guida con un game pad, a volte e' utile impostare un "
+"valore maggiore di 100%% cosicche' il volante sia meno sensibile quando usi "
+"il thumbstick."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -16691,10 +16700,6 @@ msgid "Quick Save"
 msgstr "Salvataggio Rapido"
 
 #~ msgctxt "game_options"
-#~ msgid "Choose your preferred aspect ratio.."
-#~ msgstr "Seleziona il tuo aspect ratio preferito.."
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Archivia gli stati per riavvolgere in realtime, se il core lo supporta."
@@ -17176,6 +17181,10 @@ msgstr "Salvataggio Rapido"
 #~ msgctxt "game_options"
 #~ msgid "Enable auto frameskipping for performance on lower-end systems."
 #~ msgstr "Abilita l'auto frameskipping per la performance su sistemi vecchi."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "Seleziona il tuo aspect ratio preferito.."
 
 #~ msgctxt "game_options"
 #~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
