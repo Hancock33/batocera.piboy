@@ -522,7 +522,7 @@ index 000000000000..767844637a7d
 +  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index aacccb376c28..64e51b0ff4f8 100644
+index cf9c9221c388..cf155b1f9480 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -15997,6 +15997,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
@@ -11162,10 +11162,10 @@ index e6a28e7f4dbf..9eba854ab7d3 100644
 +
  #endif /* _LINUX_AMD_PSTATE_H */
 diff --git a/drivers/cpufreq/intel_pstate.c b/drivers/cpufreq/intel_pstate.c
-index 65d3f79104bd..67189138e5af 100644
+index 15de5e3d96fd..2c9ddb4d7176 100644
 --- a/drivers/cpufreq/intel_pstate.c
 +++ b/drivers/cpufreq/intel_pstate.c
-@@ -3546,6 +3546,8 @@ static int __init intel_pstate_setup(char *str)
+@@ -3551,6 +3551,8 @@ static int __init intel_pstate_setup(char *str)
  
  	if (!strcmp(str, "disable"))
  		no_load = 1;
@@ -11746,7 +11746,7 @@ index 7789b313285c..c1c6330e287d 100644
  			"New power limit (%d) is out of range [%d,%d]\n",
  			limit, smu->min_power_limit, smu->max_power_limit);
 diff --git a/drivers/gpu/drm/drm_panel_orientation_quirks.c b/drivers/gpu/drm/drm_panel_orientation_quirks.c
-index aa93129c3397..04d1ab4d48c7 100644
+index 2166208a961d..5e84122f7dd8 100644
 --- a/drivers/gpu/drm/drm_panel_orientation_quirks.c
 +++ b/drivers/gpu/drm/drm_panel_orientation_quirks.c
 @@ -184,6 +184,12 @@ static const struct dmi_system_id orientation_data[] = {
@@ -11796,10 +11796,10 @@ index aa93129c3397..04d1ab4d48c7 100644
 +			DMI_EXACT_MATCH(DMI_PRODUCT_NAME, "Loki Zero"),
 +		},
 +		.driver_data = (void *)&lcd1080x1920_leftside_up,
- 	}, {	/* Chuwi HiBook (CWI514) */
+ 	}, {	/* AYA NEO KUN */
  		.matches = {
- 			DMI_MATCH(DMI_BOARD_VENDOR, "Hampoo"),
-@@ -421,6 +451,20 @@ static const struct dmi_system_id orientation_data[] = {
+ 		  DMI_EXACT_MATCH(DMI_BOARD_VENDOR, "AYANEO"),
+@@ -427,6 +457,20 @@ static const struct dmi_system_id orientation_data[] = {
  		  DMI_EXACT_MATCH(DMI_PRODUCT_VERSION, "1"),
  		},
  		.driver_data = (void *)&lcd800x1280_rightside_up,
@@ -40660,10 +40660,10 @@ index a8f6d9d06f2e..8737f2134648 100644
  	rs->interval_us = max(snd_us, ack_us);
  
 diff --git a/net/ipv4/tcp_timer.c b/net/ipv4/tcp_timer.c
-index 83fe7f62f7f1..bf81abbb2f02 100644
+index 5bfd76a31af6..0c63590c5fce 100644
 --- a/net/ipv4/tcp_timer.c
 +++ b/net/ipv4/tcp_timer.c
-@@ -680,6 +680,7 @@ void tcp_write_timer_handler(struct sock *sk)
+@@ -684,6 +684,7 @@ void tcp_write_timer_handler(struct sock *sk)
  		return;
  	}
  
