@@ -3,8 +3,8 @@
 # libretro-neocd
 #
 ################################################################################
-# Version: Commits on Jun 15, 2024
-LIBRETRO_NEOCD_VERSION = e7750bbc7bae9cb962a042f2721a242c17472a27
+# Version: Commits on Jun 16, 2024
+LIBRETRO_NEOCD_VERSION = bcba4ad241e0965ddee863b6b10b1fd2d764f03e
 LIBRETRO_NEOCD_SITE = $(call github,libretro,neocd_libretro,$(LIBRETRO_NEOCD_VERSION))
 LIBRETRO_NEOCD_LICENSE = GPLv3
 
