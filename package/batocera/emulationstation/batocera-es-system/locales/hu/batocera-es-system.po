@@ -857,12 +857,12 @@ msgctxt "game_options"
 msgid "English (Default)"
 msgstr "Angol (alapértelmezett)"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Spanish"
 msgstr "Spanyol"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, ...
 msgctxt "game_options"
 msgid "French"
 msgstr "Francia"
@@ -1033,7 +1033,7 @@ msgctxt "game_options"
 msgid "Dendy is a popular Russian clone with unique characteristics."
 msgstr "A Dendy egy népszerű orosz klón, egyedi tulajdonságokkal."
 
-#. TRANSLATION: libretro/mesen, libretro/neocd, libretro/o2em, duckstation, flycast/vitaquake3
+#. TRANSLATION: libretro/mesen, libretro/flycast, libretro/neocd, libretro/o2em, duckstation, ...
 msgctxt "game_options"
 msgid "CONSOLE REGION"
 msgstr "KONZOL RÉGIÓKONZOL RÉGIÓ"
@@ -1105,7 +1105,7 @@ msgctxt "game_options"
 msgid "COLOR PALETTE"
 msgstr "SZÍNPALETTA"
 
-#. TRANSLATION: libretro/mesen, libretro/puae, libretro/puae2021, suyu, suyu
+#. TRANSLATION: libretro/mesen, libretro/flycast, libretro/flycast, libretro/puae, libretro/puae2021, ...
 msgctxt "game_options"
 msgid "Default"
 msgstr "Alap"
@@ -1375,17 +1375,17 @@ msgstr ""
 "A kiválasztott nyelv akkor kerül használatba, ha a 'Firmware beállítások "
 "használata' ki van kapcsolva, vagy ha a firmware fájl nem található."
 
-#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, cemu, ...
+#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, libretro/kronos, ...
 msgctxt "game_options"
 msgid "German"
 msgstr "Német"
 
-#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, ...
+#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, libretro/kronos, ...
 msgctxt "game_options"
 msgid "Italian"
 msgstr "Olasz"
 
-#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/kronos, libretro/yabasanshiro, ...
+#. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, libretro/kronos, ...
 msgctxt "game_options"
 msgid "Japanese"
 msgstr "Japán"
@@ -1720,7 +1720,7 @@ msgctxt "game_options"
 msgid "Use Host"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, libretro/dolphin, libretro/kronos, cemu, flycast/vitaquake3, ...
+#. TRANSLATION: libretro/melondsds, libretro/dolphin, libretro/flycast, libretro/kronos, cemu, ...
 msgctxt "game_options"
 msgid "English"
 msgstr "Angol"
@@ -3343,6 +3343,38 @@ msgstr "Normál"
 msgctxt "game_options"
 msgid "Maximum"
 msgstr "Maximum"
+
+#. TRANSLATION: libretro/flycast, redream
+msgctxt "game_options"
+msgid "Choose the Dreamcast console region."
+msgstr "Válassza ki a Dreamcast konzol régióját."
+
+#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, suyu, ryujinx
+msgctxt "game_options"
+msgid "USA"
+msgstr "USA"
+
+#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, pcsx2, redream, ...
+msgctxt "game_options"
+msgid "Europe"
+msgstr "Európa"
+
+#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, redream, suyu, ...
+msgctxt "game_options"
+msgid "Japan"
+msgstr "Japán"
+
+#. TRANSLATION: libretro/flycast, flycast/vitaquake3
+msgctxt "game_options"
+msgid ""
+"Dreamcast BIOS's language setting. Can change the language of some games. "
+"Some games default to Japanese."
+msgstr ""
+
+#. TRANSLATION: libretro/flycast, flycast/vitaquake3
+msgctxt "game_options"
+msgid "BIOS LANGUAGE"
+msgstr "BIOS NYELVE"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/quasi88, flycast/vitaquake3
 msgctxt "game_options"
@@ -6023,21 +6055,6 @@ msgstr "1x (Alap)"
 msgctxt "game_options"
 msgid "Can change the language of some games."
 msgstr "Megváltoztathatja egyes játékok nyelvét."
-
-#. TRANSLATION: libretro/neocd, flycast/vitaquake3, redream, suyu, suyu, ...
-msgctxt "game_options"
-msgid "Japan"
-msgstr "Japán"
-
-#. TRANSLATION: libretro/neocd, flycast/vitaquake3, suyu, ryujinx
-msgctxt "game_options"
-msgid "USA"
-msgstr "USA"
-
-#. TRANSLATION: libretro/neocd, flycast/vitaquake3, pcsx2, redream, suyu, ...
-msgctxt "game_options"
-msgid "Europe"
-msgstr "Európa"
 
 #. TRANSLATION: libretro/neocd
 msgctxt "game_options"
@@ -10060,18 +10077,6 @@ msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr ""
 
-#. TRANSLATION: flycast/vitaquake3
-msgctxt "game_options"
-msgid ""
-"Dreamcast BIOS's language setting. Can change the language of some games. "
-"Some games default to Japanese."
-msgstr ""
-
-#. TRANSLATION: flycast/vitaquake3
-msgctxt "game_options"
-msgid "BIOS LANGUAGE"
-msgstr "BIOS NYELVE"
-
 #. TRANSLATION: flycast/vitaquake3, flycast/vitaquake3
 msgctxt "game_options"
 msgid "Game's default"
@@ -12379,11 +12384,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "LLE"
 msgstr ""
-
-#. TRANSLATION: redream
-msgctxt "game_options"
-msgid "Choose the Dreamcast console region."
-msgstr "Válassza ki a Dreamcast konzol régióját."
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -16599,10 +16599,6 @@ msgid "Quick Save"
 msgstr "Gyors mentés"
 
 #~ msgctxt "game_options"
-#~ msgid "Choose your preferred aspect ratio.."
-#~ msgstr "Válassza ki a kívánt képarányt.."
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Tárolja a múltbeli állapotokat a valós idejű visszatekeréshez, ha a mag "
@@ -17001,6 +16997,10 @@ msgstr "Gyors mentés"
 #~ msgstr ""
 #~ "Engedélyezze az automatikus képkockakihagyást a teljesítmény érdekében "
 #~ "alacsonyabb kategóriás rendszereken."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your preferred aspect ratio.."
+#~ msgstr "Válassza ki a kívánt képarányt.."
 
 #~ msgctxt "game_options"
 #~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."

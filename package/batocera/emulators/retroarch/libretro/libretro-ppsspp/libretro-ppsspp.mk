@@ -3,8 +3,8 @@
 # libretro-ppsspp
 #
 ################################################################################
-# Version: Commits on Jun 09, 2024
-LIBRETRO_PPSSPP_VERSION = 5dec3ca2db10943dcdf5e483cc8c28e0524d1a43
+# Version: Commits on Jun 13, 2024
+LIBRETRO_PPSSPP_VERSION = f0e3fd277897488c3ac18598ca8012bb09cd2a2c
 LIBRETRO_PPSSPP_SOURCE = ppsspp-$(LIBRETRO_PPSSPP_VERSION)-git4.tar.gz
 LIBRETRO_PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 LIBRETRO_PPSSPP_SITE_METHOD=git
@@ -54,6 +54,7 @@ endif
 
 # arm
 ifeq ($(BR2_arm),y)
+	LIBRETRO_PPSSPP_DEPENDENCIES += libgles
 	LIBRETRO_PPSSPP_CONF_OPTS += -DARM=ON
 	LIBRETRO_PPSSPP_CONF_OPTS += -DARMV7=ON
 	LIBRETRO_PPSSPP_CONF_OPTS += -DUSING_GLES2=ON
@@ -61,6 +62,7 @@ ifeq ($(BR2_arm),y)
 endif
 
 ifeq ($(BR2_aarch64),y)
+	LIBRETRO_PPSSPP_DEPENDENCIES += libgles
 	LIBRETRO_PPSSPP_CONF_OPTS += -DARM=ON
 	LIBRETRO_PPSSPP_CONF_OPTS += -DARM64=ON
 	LIBRETRO_PPSSPP_CONF_OPTS += -DUSING_GLES2=ON
@@ -69,6 +71,7 @@ endif
 
 # riscv
 ifeq ($(BR2_riscv),y)
+	LIBRETRO_PPSSPP_DEPENDENCIES += libgles
 	LIBRETRO_PPSSPP_CONF_OPTS += -DRISCV=ON
 	LIBRETRO_PPSSPP_CONF_OPTS += -DRISCV64=ON
 	LIBRETRO_PPSSPP_CONF_OPTS += -DUSING_GLES2=ON
@@ -77,6 +80,7 @@ endif
 
 # x86_64
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
+	LIBRETRO_PPSSPP_DEPENDENCIES += libgl
 	LIBRETRO_PPSSPP_CONF_OPTS += -DX86_64=ON
 endif
 

@@ -1,6 +1,6 @@
 ################################################################################
 #
-# Voxatron official virtuel console (needs the binary, not part of Batocera)
+# lexaloffle-voxatron
 #
 ################################################################################
 LEXALOFFLE_VOXATRON_VERSION = 0.1

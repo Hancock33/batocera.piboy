@@ -3,6 +3,7 @@
 # evmapy
 #
 ################################################################################
+# Version: Commits on Jul 09, 2015
 EVMAPY_VERSION = bd65338c236cd30b4f2d7835733ea5d6b108b75d
 EVMAPY_SITE =  $(call github,kempniu,evmapy,$(EVMAPY_VERSION))
 EVMAPY_SETUP_TYPE = setuptools

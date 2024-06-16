@@ -3,8 +3,8 @@
 # libretro-melonds-ds
 #
 ################################################################################
-# Version: Commits on May 20, 2024
-LIBRETRO_MELONDS_DS_VERSION = 7158502b599112671d2532b4d038509e2832c125
+# Version: Commits on Jun 14, 2024
+LIBRETRO_MELONDS_DS_VERSION = 1ad4582dc7e7d7d55d6adbb5df7692010615fd47
 LIBRETRO_MELONDS_DS_SITE = $(call github,JesseTG,melonds-ds,$(LIBRETRO_MELONDS_DS_VERSION))
 LIBRETRO_MELONDS_DS_LICENSE = GPLv2
 LIBRETRO_MELONDS_DS_DEPENDENCIES = libpcap

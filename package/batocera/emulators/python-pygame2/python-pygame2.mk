@@ -5,14 +5,14 @@
 ################################################################################
 # stable 1.9.1 release requires V4L which has been wiped out of recent Linux
 # kernels, so use latest mercurial revision until next stable release is out.
-# Version: Commits on Jun 02, 2024
-PYTHON_PYGAME2_VERSION = 467da2470060ca73ff0fe8038b801df8ef9f40b8
+# Version: Commits on Jun 16, 2024
+PYTHON_PYGAME2_VERSION = 65086c4c772d0f5ac720a0a6359e23921d3631c9
 PYTHON_PYGAME2_SITE =  $(call github,pygame,pygame,$(PYTHON_PYGAME2_VERSION))
 PYTHON_PYGAME2_SETUP_TYPE = setuptools
 PYTHON_PYGAME2_LICENSE = LGPL-2.1+
 PYTHON_PYGAME2_LICENSE_FILES = LGPL
 
-PYTHON_PYGAME2_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf sdl2_mixer libpng jpeg
+PYTHON_PYGAME2_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf sdl2_mixer libpng jpeg host-python-cython
 
 define PYTHON_PYGAME2_FIXSDL2_PATH
 	sed -i "s+sdl2-config+$(STAGING_DIR)/usr/bin/sdl2-config+g" $(@D)/buildconfig/config_unix.py

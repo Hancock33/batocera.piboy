@@ -3,9 +3,8 @@
 # uboot-ps7000
 #
 ################################################################################
-
+# Version: Commits on Nov 02, 2021
 UBOOT_PS7000_VERSION = e20e9d85d326345fb2e80105a79263c95757414f
-#634b85f106c0eb3d5167c989729b564253d60816
 UBOOT_PS7000_SITE = $(call github,rk3128-cfw,caesar-u-boot,$(UBOOT_PS7000_VERSION))
 UBOOT_PS7000_LICENSE = GPLv2
 

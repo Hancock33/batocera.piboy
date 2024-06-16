@@ -3,10 +3,12 @@
 # libretro-mame
 #
 ################################################################################
-# Version: Commits on Jun 06, 2024
-LIBRETRO_MAME_VERSION = 38a4bf055f3faf96ba8099165aec4cc8711a63a6
+# Version: Commits on Jun 13, 2024
+LIBRETRO_MAME_VERSION = db65a583bd2da39514a544c58362a6ac170179ac
 LIBRETRO_MAME_SITE = $(call github,sonninnos,mame,$(LIBRETRO_MAME_VERSION))
 LIBRETRO_MAME_LICENSE = MAME
+
+LIBRETRO_MAME_DEPENDENCIES = alsa-lib
 
 # Limit number of jobs not to eat too much RAM....
 LIBRETRO_MAME_JOBS = $(shell expr $(shell nproc))

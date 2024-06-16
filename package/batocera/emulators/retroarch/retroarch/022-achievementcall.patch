@@ -1,8 +1,8 @@
 diff --git a/cheevos/cheevos.c b/cheevos/cheevos.c
-index e11ce9801a..81f3873403 100644
+index 86808413af..dbf651e941 100644
 --- a/cheevos/cheevos.c
 +++ b/cheevos/cheevos.c
-@@ -468,6 +468,13 @@ static void rcheevos_award_achievement(const rc_client_achievement_t* cheevo)
+@@ -483,6 +483,13 @@ static void rcheevos_award_achievement(const rc_client_achievement_t* cheevo)
        }
     }
  
@@ -16,7 +16,7 @@ index e11ce9801a..81f3873403 100644
  #ifdef HAVE_AUDIOMIXER
     /* Play the unlock sound */
     if (settings->bools.cheevos_unlock_sound_enable)
-@@ -761,6 +768,13 @@ void rcheevos_award_achievement(rcheevos_locals_t* locals,
+@@ -776,6 +783,13 @@ void rcheevos_award_achievement(rcheevos_locals_t* locals,
     CHEEVOS_LOG(RCHEEVOS_TAG "Awarding achievement %u: %s (%s)\n",
           cheevo->id, cheevo->title, cheevo->description);
  
@@ -31,10 +31,10 @@ index e11ce9801a..81f3873403 100644
     if (settings->bools.cheevos_visibility_unlock)
     {
 diff --git a/configuration.c b/configuration.c
-index 3a1168bfb3..29e5496ca4 100644
+index 1c198f352e..72fcb17c77 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -1526,6 +1526,7 @@ static struct config_array_setting *populate_settings_array(
+@@ -1549,6 +1549,7 @@ static struct config_array_setting *populate_settings_array(
  
  #ifdef HAVE_CHEEVOS
     SETTING_ARRAY("cheevos_custom_host",          settings->arrays.cheevos_custom_host, false, NULL, true);
@@ -43,10 +43,10 @@ index 3a1168bfb3..29e5496ca4 100644
     SETTING_ARRAY("cheevos_password",             settings->arrays.cheevos_password, false, NULL, true);
     SETTING_ARRAY("cheevos_token",                settings->arrays.cheevos_token, false, NULL, true);
 diff --git a/configuration.h b/configuration.h
-index c1672a8fec..9273d5dcb1 100644
+index 70d7d982ec..cfd7f50f74 100644
 --- a/configuration.h
 +++ b/configuration.h
-@@ -459,6 +459,7 @@ typedef struct settings
+@@ -457,6 +457,7 @@ typedef struct settings
        char cheevos_token[32];
        char cheevos_leaderboards_enable[32];
        char cheevos_custom_host[64];

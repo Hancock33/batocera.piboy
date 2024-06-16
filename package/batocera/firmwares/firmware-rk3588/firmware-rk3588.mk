@@ -3,7 +3,7 @@
 # firmware-rk3588
 #
 ################################################################################
-
+# Version: Commits on Feb 16, 2023
 FIRMWARE_RK3588_VERSION = dc92513ebf859d1213c999e44d4a7bf6a1fb04d7
 FIRMWARE_RK3588_SITE = $(call github,stvhay,rk3588-firmware,$(FIRMWARE_RK3588_VERSION))
 FIRMWARE_RK3588_DEPENDENCIES += alllinuxfirmwares

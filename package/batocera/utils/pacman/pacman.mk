@@ -3,7 +3,7 @@
 # pacman
 #
 ################################################################################
-
+# Version: Commits on Jun 26, 2020
 PACMAN_VERSION = 5.2.2
 PACMAN_SITE = https://sources.archlinux.org/other/pacman
 PACMAN_SOURCE = pacman-$(PACMAN_VERSION).tar.gz

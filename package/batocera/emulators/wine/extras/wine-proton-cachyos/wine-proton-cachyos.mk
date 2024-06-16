@@ -11,7 +11,7 @@ WINE_PROTON_CACHYOS_SITE = $(call github,CachyOS,wine-cachyos,$(WINE_PROTON_CACH
 WINE_PROTON_CACHYOS_LICENSE = LGPL-2.1+
 WINE_PROTON_CACHYOS_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_PROTON_CACHYOS_SELINUX_MODULES = wine
-WINE_PROTON_CACHYOS_DEPENDENCIES = host-bison host-flex host-wine-custom
+WINE_PROTON_CACHYOS_DEPENDENCIES = host-bison host-flex host-wine-proton-cachyos
 HOST_WINE_PROTON_CACHYOS_DEPENDENCIES = host-bison host-flex
 
 define WINE_PROTON_CACHYOS_AUTOGEN
@@ -29,7 +29,7 @@ HOST_WINE_PROTON_CACHYOS_PRE_CONFIGURE_HOOKS += WINE_PROTON_CACHYOS_AUTOGEN
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_PROTON_CACHYOS_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
-	--with-wine-tools=$(BUILD_DIR)/host-wine-custom-$(WINE_CUSTOM_VERSION) \
+	--with-wine-tools=$(BUILD_DIR)/host-wine-proton-cachyos-$(WINE_PROTON_CACHYOS_VERSION) \
 	--disable-tests \
 	--without-capi \
 	--without-coreaudio \

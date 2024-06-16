@@ -3,7 +3,7 @@
 # uboot-rk3588
 #
 ################################################################################
-
+# Version: Commits on Feb 21, 2023
 UBOOT_RK3588_VERSION = e1bb28dd5be8e347096be7b0ea4e64716d054268
 UBOOT_RK3588_SITE = $(call github,stvhay,u-boot,$(UBOOT_RK3588_VERSION))
 UBOOT_RK3588_LICENSE = GPL + Rockchip Proprietary (Extra Downloads)

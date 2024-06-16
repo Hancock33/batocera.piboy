@@ -9,7 +9,8 @@ DUCKSTATION_LEGACY_SITE = https://github.com/stenzek/duckstation.git
 DUCKSTATION_LEGACY_SITE_METHOD=git
 DUCKSTATION_LEGACY_GIT_SUBMODULES=YES
 DUCKSTATION_LEGACY_LICENSE = GPLv2
-DUCKSTATION_LEGACY_DEPENDENCIES = boost ecm ffmpeg fmt libcurl libdrm libevdev sdl2 shaderc webp zstd
+DUCKSTATION_LEGACY_DEPENDENCIES = boost dbus ecm ffmpeg fmt libcurl libdrm libevdev sdl2 shaderc webp zstd
+
 DUCKSTATION_LEGACY_SUPPORTS_IN_SOURCE_BUILD = NO
 
 DUCKSTATION_LEGACY_CONF_OPTS += -DBUILD_SHARED_LIBS=FALSE

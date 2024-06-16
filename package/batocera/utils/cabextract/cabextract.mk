@@ -3,7 +3,7 @@
 # cabextract
 #
 ################################################################################
-
+# Version: Commits on Feb 24, 2023
 CABEXTRACT_VERSION = 1.9.1
 CABEXTRACT_SOURCE = cabextract-$(CABEXTRACT_VERSION).tar.gz
 CABEXTRACT_SITE = https://www.cabextract.org.uk
