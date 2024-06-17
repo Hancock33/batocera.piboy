@@ -1,0 +1,13 @@
+diff --git a/ayn-platform.c b/ayn-platform.c
+index f88f93b..feb1cf5 100644
+--- a/ayn-platform.c
++++ b/ayn-platform.c
+@@ -713,7 +713,7 @@ static int ayn_platform_probe(struct platform_device *pdev)
+ 
+         struct led_classdev *led_cdev = &ayn_led_mc.led_cdev;
+ 
+-        retval = devm_device_add_groups(led_cdev->dev, ayn_led_mc_groups);
++        retval = device_add_groups(led_cdev->dev, ayn_led_mc_groups);
+         if (retval)
+                 return retval;
+ 
