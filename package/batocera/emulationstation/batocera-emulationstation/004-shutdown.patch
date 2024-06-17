@@ -1,5 +1,5 @@
 diff --git a/es-core/src/utils/Platform.cpp b/es-core/src/utils/Platform.cpp
-index 042d0ddf..7f4995d4 100644
+index 69fe34d4..4e8f7fc9 100644
 --- a/es-core/src/utils/Platform.cpp
 +++ b/es-core/src/utils/Platform.cpp
 @@ -183,7 +183,7 @@ namespace Utils
