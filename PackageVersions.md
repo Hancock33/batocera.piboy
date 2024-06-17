@@ -306,7 +306,7 @@ Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.11|Jun 14, 2
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240615|Jun 15, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|8ffdb53f5aebfe51502ecceb0d5e7994ad814424|Jun 03, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|b4ce2b58d09baa6dfd17c0bcab2e505df9f310e4|Jun 15, 2024
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|c004d669c24a36f9ffbf1ff52f252475120ed68a|Jun 16, 2024
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|ce990e28281a9de87b79218e22afc504c32dcf5a|Jun 01, 2024
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Firmwares|[alllinuxfirmwares](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot)|20240610|Jun 10, 2024

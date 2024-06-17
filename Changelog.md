@@ -12,7 +12,6 @@ Emulators|[python-pygame2](http://github.com/pygame/pygame)|65086c4c772d0f5ac720
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-06-16|Jun 16, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1334|Jun 16, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|257f91d51ff553f9c3b8d5875d5d74fd9d13a140|Jun 16, 2024
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|c004d669c24a36f9ffbf1ff52f252475120ed68a|Jun 16, 2024
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|90dfef9d1e66dacc0fc180f8ba80d34b470388b7|Jun 16, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|f4be294f578ac943eba9336715f01433048ecdc5|Jun 16, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|067c08e640d8e1b6d6d7a255a2ff99331303399c|Jun 16, 2024
@@ -140,6 +139,7 @@ Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|060535e3f1
 Firmwares|[firmware-armbian](http://github.com/armbian/firmware)|9d27a0dae0aa55caa1ac71525d19d4e9dad53330|Jun 02, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|634d207adade213bbe83684be2a183d158f56e52|Jun 02, 2024
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|24.06|Jun 01, 2024
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|ce990e28281a9de87b79218e22afc504c32dcf5a|Jun 01, 2024
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|52e0c496f513cac4bfb23b8897e8028396fcd61f|Jun 01, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|72553fe82614fe17e931dba3a80711774bcbcdd4|Jun 01, 2024
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|c98510eae6b442c9d570e5808c03b8c24551810a|Jun 01, 2024
