@@ -1,5 +1,5 @@
 diff --git a/es-app/src/CustomFeatures.cpp b/es-app/src/CustomFeatures.cpp
-index dedf15a4..c7082c2a 100644
+index 7e9a30d1..e63c587a 100644
 --- a/es-app/src/CustomFeatures.cpp
 +++ b/es-app/src/CustomFeatures.cpp
 @@ -39,6 +39,8 @@ EmulatorFeatures::Features EmulatorFeatures::parseFeatures(const std::string fea
@@ -23,10 +23,10 @@ index dedf15a4..c7082c2a 100644
  
  	return ret;
 diff --git a/es-app/src/CustomFeatures.h b/es-app/src/CustomFeatures.h
-index a8f3dbfa..7e1fd314 100644
+index 0c89062e..15e74981 100644
 --- a/es-app/src/CustomFeatures.h
 +++ b/es-app/src/CustomFeatures.h
-@@ -90,7 +90,12 @@ public:
+@@ -91,7 +91,12 @@ public:
  		cheevos = 131072,
  		autocontrollers = 262144,
  		videofilters = 524288,
@@ -41,10 +41,10 @@ index a8f3dbfa..7e1fd314 100644
  	};
  
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index f95a88d9..c1fa5541 100644
+index 1ae466ce..2ccd1efb 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
-@@ -2113,7 +2113,7 @@ void GuiMenu::openGamesSettings()
+@@ -2533,7 +2533,7 @@ void GuiMenu::openGamesSettings()
  	s->addWithDescription(_("SHOW SAVESTATE MANAGER"), _("Display savestate manager before launching a game."), showSaveStates);
  	s->addSaveFunc([showSaveStates] { SystemConf::getInstance()->set("global.savestates", showSaveStates->getSelected()); });
  
@@ -53,7 +53,7 @@ index f95a88d9..c1fa5541 100644
  
  	// Screen ratio choice
  	if (!hasGlobalFeature("ratio"))
-@@ -2131,6 +2131,61 @@ void GuiMenu::openGamesSettings()
+@@ -2551,6 +2551,61 @@ void GuiMenu::openGamesSettings()
  		s->addSaveFunc([this, videoModeOptionList] { SystemConf::getInstance()->set("global.videomode", videoModeOptionList->getSelected()); });
  	}
  
