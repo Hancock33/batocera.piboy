@@ -687,7 +687,7 @@ config BR2_PACKAGE_BATOCERA_HOMEBREW_SYSTEMS
     select BR2_PACKAGE_OPENBOR7142                          # ALL
     select BR2_PACKAGE_OPENBOR7530                          # ALL
 
-    # Lutro Engine / LÖVE
+    # Lutro Engine / LOVE
     select BR2_PACKAGE_LIBRETRO_LUTRO                       if !BR2_PACKAGE_BATOCERA_TARGET_H3
 
     # PyGAME

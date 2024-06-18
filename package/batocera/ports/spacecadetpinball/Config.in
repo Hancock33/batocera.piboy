@@ -4,7 +4,7 @@ config BR2_PACKAGE_SPACECADETPINBALL
 	select BR2_PACKAGE_SDL2_MIXER
 	depends on BR2_INSTALL_LIBSTDCPP
 	help
-	  Decompilation of 3D Pinball for Windows – Space Cadet
+	  Decompilation of 3D Pinball for Windows Space Cadet
 
 	  https://github.com/k4zmu2a/SpaceCadetPinball
 
