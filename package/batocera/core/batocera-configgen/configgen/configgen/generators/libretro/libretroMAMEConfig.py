@@ -336,7 +336,7 @@ def generateMAMEConfigs(playersControllers, system, rom, guns):
             elif system.name == "fm7":
                 if system.isOptSet("altromtype") or softList != "":
                     if (system.isOptSet("altromtype") and system.config["altromtype"] == "cass") or softList[-4:] == "cass":
-                        autoRunCmd = 'LOADM”“,,R\\n'
+                        autoRunCmd = 'LOADM' + chr(148) + chr(147) + ',,R\\n'
                         autoRunDelay = 5
             elif system.name == "coco":
                 romType = 'cart'
