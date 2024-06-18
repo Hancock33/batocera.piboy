@@ -3,5 +3,5 @@ config BR2_PACKAGE_FFMPEG_PYTHON
     select BR2_PACKAGE_PYTHON_FUTURE
     help
       Python bindings for FFmpeg - with complex filtering support.
-      
+
       https://github.com/kkroening/ffmpeg-python
