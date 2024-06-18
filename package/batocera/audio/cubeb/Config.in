@@ -4,4 +4,4 @@ config BR2_PACKAGE_CUBEB
 	select BR2_PACKAGE_SPEEX
 
 	help
-		Cross platform audio library
+	  Cross platform audio library

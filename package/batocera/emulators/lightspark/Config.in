@@ -11,7 +11,7 @@ config BR2_PACKAGE_LIGHTSPARK
 	select BR2_PACKAGE_PANGO
 	select BR2_PACKAGE_RTMPDUMP
 	help
-          LightSpark
-          Flash emulator for windows / mac / linux.
+	  LightSpark
+	  Flash emulator for windows / mac / linux.
 
-          https://github.com/lightspark/lightspark
+	  https://github.com/lightspark/lightspark

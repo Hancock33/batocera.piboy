@@ -4,4 +4,4 @@ config BR2_PACKAGE_PORTMIDI
 	help
 	  Cross platform library for interfacing with OS MIDI I/O APIs
 
-		https://github.com/portmidi/portmidi
+	  https://github.com/portmidi/portmidi

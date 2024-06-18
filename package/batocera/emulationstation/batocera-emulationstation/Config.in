@@ -1,5 +1,5 @@
 config BR2_PACKAGE_BATOCERA_EMULATIONSTATION
-        bool "batocera Emulationstation"
+	bool "batocera Emulationstation"
 	depends on BR2_INSTALL_LIBSTDCPP
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
@@ -22,26 +22,26 @@ config BR2_PACKAGE_BATOCERA_EMULATIONSTATION
 	select BR2_PACKAGE_OPENJPEG # for poppler
 	select BR2_PACKAGE_JPEG     # for poppler
 	select BR2_PACKAGE_BATOCERA_ES_SYSTEM
-    select BR2_PACKAGE_FFMPEG
-    select BR2_PACKAGE_FFMPEG_GPL
+	select BR2_PACKAGE_FFMPEG
+	select BR2_PACKAGE_FFMPEG_GPL
 	select BR2_PACKAGE_FFMPEG_FFPROBE
 	select BR2_PACKAGE_FFMPEG_AVRESAMPLE
 	select BR2_PACKAGE_FFMPEG_SWSCALE
 	select BR2_PACKAGE_FFMPEG_POSTPROC
 
-        help
-          A multi emulator frontend.
+	help
+	  A multi emulator frontend.
 
 	  https://github.com/batocera-linux/batocera-emulationstation
 
-if BR2_PACKAGE_BATOCERA_EMULATIONSTATION
-choice
-    prompt "ES version to compile"
-    config BR2_PACKAGE_BATOCERA_EMULATIONSTATION_STANDARD
-          bool "standard"
-    config BR2_PACKAGE_BATOCERA_EMULATIONSTATION_ARCADE
-          bool "arcade"
- endchoice
-endif
+	  if BR2_PACKAGE_BATOCERA_EMULATIONSTATION
+	  choice
+	  prompt "ES version to compile"
+config BR2_PACKAGE_BATOCERA_EMULATIONSTATION_STANDARD
+	bool "standard"
+config BR2_PACKAGE_BATOCERA_EMULATIONSTATION_ARCADE
+	bool "arcade"
+	  endchoice
+	  endif
 
 comment "Emulation station 2 needs a toolchain w/ C++"

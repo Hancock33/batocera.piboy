@@ -15,4 +15,4 @@ config BR2_PACKAGE_VPINBALL
 	help
 	  Visual Pinball.
 
-		www.vpforums.org
+	  www.vpforums.org

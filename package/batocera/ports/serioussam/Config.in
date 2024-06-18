@@ -5,8 +5,8 @@ config BR2_PACKAGE_SERIOUSSAM
 	select BR2_PACKAGE_IMAGEMAGICK
 	depends on BR2_INSTALL_LIBSTDCPP
 	help
-		Serious Sam Classic open source project based on https://github.com/Croteam-official/Serious-Engine
-		and linux port https://github.com/icculus/Serious-Engine
+	  Serious Sam Classic open source project based on https://github.com/Croteam-official/Serious-Engine
+	  and linux port https://github.com/icculus/Serious-Engine
 
 comment "BR2_PACKAGE_SERIOUSSAM needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP

@@ -12,4 +12,4 @@ config BR2_PACKAGE_SPIRV_CROSS
 
 comment "spirv-tools needs a toolchain w/ C++, dynamic library, gcc >= 8"
 	depends on !BR2_INSTALL_LIBSTDCPP || BR2_STATIC_LIBS || \
-		!BR2_TOOLCHAIN_GCC_AT_LEAST_8
+	  !BR2_TOOLCHAIN_GCC_AT_LEAST_8

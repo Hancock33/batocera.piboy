@@ -2,8 +2,8 @@ config BR2_PACKAGE_LIBRETRO_VITAQUAKE3
 	bool "libretro-vitaquake3"
 	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
-	  help
-        A libretro Quake 3 core.
+	help
+	  A libretro Quake 3 core.
 
 	  http://www.libretro.com
 

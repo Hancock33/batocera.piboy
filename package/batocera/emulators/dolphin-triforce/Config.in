@@ -17,4 +17,4 @@ config BR2_PACKAGE_DOLPHIN_TRIFORCE
 	help
 	  Gamecube/Wii emulator
 
-	comment "DOLPHIN_TRIFORCE needs a toolchain w/ C++, OpenGL"
+comment "DOLPHIN_TRIFORCE needs a toolchain w/ C++, OpenGL"

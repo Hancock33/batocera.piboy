@@ -1,8 +1,8 @@
 config BR2_PACKAGE_BIGPEMU
-    bool "bigpemu"
+	bool "bigpemu"
 
-    help
-      BigPEmu is the first Atari Jaguar emulator to feature
-      compatibility with the entire retail cartridge library.
+	help
+	  BigPEmu is the first Atari Jaguar emulator to feature
+	  compatibility with the entire retail cartridge library.
 
-      https://www.richwhitehouse.com/jaguar/index.php
+	  https://www.richwhitehouse.com/jaguar/index.php

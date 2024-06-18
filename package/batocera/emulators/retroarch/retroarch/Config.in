@@ -1,5 +1,5 @@
 config BR2_PACKAGE_RETROARCH
-    bool "Retroarch"
+	bool "Retroarch"
 	depends on (BR2_PACKAGE_HAS_LIBGLES || BR2_PACKAGE_HAS_LIBEGL || BR2_PACKAGE_HAS_LIBGL)
 	select dejavu
 	select BR2_PACKAGE_RETROARCH_ASSETS
@@ -7,8 +7,8 @@ config BR2_PACKAGE_RETROARCH
 	select BR2_PACKAGE_FLAC
 	select BR2_PACKAGE_SLANG_SHADERS if BR2_PACKAGE_VULKAN_LOADER && BR2_PACKAGE_VULKAN_HEADERS
 	select BR2_PACKAGE_NOTO_CJK_FONTS
-    help
-      A multi emulator frontend.
+	help
+	  A multi emulator frontend.
 
 	  http://www.libretro.com
 

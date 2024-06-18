@@ -1,5 +1,5 @@
 config BR2_PACKAGE_ES_BACKGROUND_MUSICS
-        bool "es-background-musics"
+	bool "es-background-musics"
 
-        help
-         Emulationstation background musics
+	help
+	  Emulationstation background musics

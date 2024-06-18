@@ -1,8 +1,8 @@
 config BR2_PACKAGE_LIBRETRO_QUICKNES
-        bool "libretro-quicknes"
+	bool "libretro-quicknes"
 	depends on BR2_PACKAGE_RETROARCH
-        help
-          QuickNES is the fastest NES emulator available via libretro, though this speed comes at the cost of some accuracy.
-		  This core should be used only when performance is of the utmost concern and even FCEUmm is too demanding.
+	help
+	  QuickNES is the fastest NES emulator available via libretro, though this speed comes at the cost of some accuracy.
+	  This core should be used only when performance is of the utmost concern and even FCEUmm is too demanding.
 
 	  http://www.libretro.com

@@ -1,14 +1,14 @@
 config BR2_PACKAGE_SHADERC
-  bool "shaderc"
-  select BR2_PACKAGE_VULKAN_HEADERS
-  select BR2_PACKAGE_VULKAN_LOADER
-  select BR2_PACKAGE_HOST_PYTHON3
-  select BR2_PACKAGE_HOST_PYTHON3_SSL
-  select BR2_PACKAGE_SPIRV_TOOLS
-  select BR2_PACKAGE_GLSLANG
-  select BR2_PACKAGE_WAYLAND
+	bool "shaderc"
+	select BR2_PACKAGE_VULKAN_HEADERS
+	select BR2_PACKAGE_VULKAN_LOADER
+	select BR2_PACKAGE_HOST_PYTHON3
+	select BR2_PACKAGE_HOST_PYTHON3_SSL
+	select BR2_PACKAGE_SPIRV_TOOLS
+	select BR2_PACKAGE_GLSLANG
+	select BR2_PACKAGE_WAYLAND
 
-  help
-    A collection of tools, libraries, and tests for Vulkan shader compilation.
+	help
+	  A collection of tools, libraries, and tests for Vulkan shader compilation.
 
-    https://github.com/google/shaderc.git
+	  https://github.com/google/shaderc.git

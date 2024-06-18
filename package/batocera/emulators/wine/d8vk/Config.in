@@ -1,5 +1,5 @@
 config BR2_PACKAGE_D8VK
-    bool "d8vk"
+	bool "d8vk"
 	depends on BR2_i386 || BR2_x86_64
 	# Wine unconditionally builds shared libraries
 	depends on !BR2_STATIC_LIBS
@@ -11,4 +11,4 @@ config BR2_PACKAGE_D8VK
 	  https://github.com/AlpyneDreams/d8vk
 
 comment "d8vk needs a toolchain w/ dynamic library"
-    depends on BR2_STATIC_LIBS
+	depends on BR2_STATIC_LIBS

@@ -6,4 +6,4 @@ config BR2_PACKAGE_PYTHON_HIDAPI
 	select BR2_PACKAGE_HIDAPI
 	select BR2_PACKAGE_HOST_PYTHON_CYTHON
 	help
-	 https://pypi.org/project/hidapi
+	  https://pypi.org/project/hidapi

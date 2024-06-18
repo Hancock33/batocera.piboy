@@ -1,6 +1,6 @@
 config BR2_PACKAGE_LIBPUPDMD
-    bool "libpupdmd"
-    help
-      Emit PUP triggers from DMD frames
+	bool "libpupdmd"
+	help
+	  Emit PUP triggers from DMD frames
 
-      https://github.com/ppuc/libpupdmd/
+	  https://github.com/ppuc/libpupdmd/

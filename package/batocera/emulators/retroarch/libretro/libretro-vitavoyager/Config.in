@@ -3,7 +3,7 @@ config BR2_PACKAGE_LIBRETRO_VITAVOYAGER
 	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
 	help
-	A libretro Star Trek Voyager: Elite Force Holomatch core.
+	  A libretro Star Trek Voyager: Elite Force Holomatch core.
 
 	  http://www.libretro.com
 

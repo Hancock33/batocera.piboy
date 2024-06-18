@@ -2,10 +2,10 @@ config BR2_PACKAGE_LIBRETRO_P2000T
 	bool "libretro-p2000t"
 	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
-	  help
-		Emulator for the Philips P2000 home computer
+	help
+	  Emulator for the Philips P2000 home computer
 
-		https://github.com/p2000t/M2000
+	  https://github.com/p2000t/M2000
 
 comment "LIBRETRO_P2000T needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP
