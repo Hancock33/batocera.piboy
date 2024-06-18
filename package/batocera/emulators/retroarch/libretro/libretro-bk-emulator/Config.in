@@ -1,9 +1,9 @@
 config BR2_PACKAGE_LIBRETRO_BK_EMULATOR
-        bool "libretro-bk"
+	bool "libretro-bk"
 	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
-        help
-          A libretro BK computer serie emulator core.
+	help
+	  A libretro BK computer serie emulator core.
 
 	  http://www.libretro.com
 

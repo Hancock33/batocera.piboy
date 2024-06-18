@@ -1,5 +1,5 @@
 config BR2_PACKAGE_LIBCAPSIMAGE
-        bool "libcapsimage"
+	bool "libcapsimage"
 	help
 	  IPF library to enable IPF image
 	  support in a third party application.

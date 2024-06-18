@@ -2,10 +2,10 @@ config BR2_PACKAGE_LIBRETRO_EP128EMU
 	bool "libretro-ep128emu"
 	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
-	  help
-	    Libretro core version of ep128emu.
+	help
+	  Libretro core version of ep128emu.
 
-		http://www.libretro.com
+	  http://www.libretro.com
 
 comment "LIBRETRO_EP128EMU needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP

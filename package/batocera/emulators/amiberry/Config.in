@@ -1,6 +1,6 @@
 config BR2_PACKAGE_AMIBERRY
-    bool "amiberry"
-    select BR2_PACKAGE_SDL2
+	bool "amiberry"
+	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_IMAGE
 	select BR2_PACKAGE_SDL2_TTF
 	select BR2_PACKAGE_MPG123
@@ -12,4 +12,4 @@ config BR2_PACKAGE_AMIBERRY
 	select BR2_PACKAGE_PORTMIDI
 
 	help
-		An amiga emulator for arm
+	  An amiga emulator for arm

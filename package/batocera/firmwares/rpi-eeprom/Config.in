@@ -1,6 +1,6 @@
 config BR2_PACKAGE_RPI_EEPROM
 	bool "rpi-eeprom"
-    depends on BR2_PACKAGE_RPI_USERLAND_BATOCERA
+	depends on BR2_PACKAGE_RPI_USERLAND_BATOCERA
 
 	help
 	  Installation scripts and binaries for the closed sourced Raspberry Pi 4 EEPROMs.

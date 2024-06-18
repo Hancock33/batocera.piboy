@@ -5,7 +5,7 @@ config BR2_PACKAGE_PROTOTYPE
 	depends on BR2_PACKAGE_SDL2_IMAGE
 	depends on BR2_INSTALL_LIBSTDCPP
 	help
-	 This is ProtoType, an RType remake from Dark Castle Software.
+	  This is ProtoType, an RType remake from Dark Castle Software.
 
 	  http://ptitseb.github.io/prototype
 

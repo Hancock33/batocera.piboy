@@ -7,4 +7,4 @@ config BR2_PACKAGE_STK
 	help
 	  SuperTuxKart is a free kart racing game. It focuses on fun and not on realistic kart physics.
 
-	   https://supertuxkart.net/
+	  https://supertuxkart.net/

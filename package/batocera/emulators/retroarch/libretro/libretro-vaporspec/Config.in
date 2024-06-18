@@ -1,10 +1,10 @@
 config BR2_PACKAGE_LIBRETRO_VAPORSPEC
-    bool "libretro-wasm"
-    depends on BR2_PACKAGE_RETROARCH
-    depends on BR2_INSTALL_LIBSTDCPP
-    depends on BR2_GCC_ENABLE_OPENMP
+	bool "libretro-wasm"
+	depends on BR2_PACKAGE_RETROARCH
+	depends on BR2_INSTALL_LIBSTDCPP
+	depends on BR2_GCC_ENABLE_OPENMP
 
-    help
-      A virtual game platform with capabilities similar to 80s game consoles.
+	help
+	  A virtual game platform with capabilities similar to 80s game consoles.
 
-	    https://github.com/minkcv/vm.git
+	  https://github.com/minkcv/vm.git

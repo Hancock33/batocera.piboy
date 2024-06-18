@@ -1,5 +1,5 @@
 config BR2_PACKAGE_LIGHTGUNS_GAMES_PRECALIBRATIONS
-        bool "lightguns-games-precalibrations"
+	bool "lightguns-games-precalibrations"
 
-        help
-          lightguns precalibration files
+	help
+	  lightguns precalibration files

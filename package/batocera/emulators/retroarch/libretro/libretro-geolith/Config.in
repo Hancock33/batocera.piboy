@@ -2,10 +2,10 @@ config BR2_PACKAGE_LIBRETRO_GEOLITH
 	bool "libretro-geolith"
 	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
-	  help
-	    Highly accurate emulator for the Neo Geo AES and MVS Cartridge Systems.
+	help
+	  Highly accurate emulator for the Neo Geo AES and MVS Cartridge Systems.
 
-		http://www.libretro.com
+	  http://www.libretro.com
 
 comment "BR2_PACKAGE_LIBRETRO_GEOLITH needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP

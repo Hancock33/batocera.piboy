@@ -10,9 +10,9 @@ config BR2_PACKAGE_BOX64
 	select BR2_PACKAGE_SDL2_IMAGE
 	depends on BR2_INSTALL_LIBSTDCPP
 	help
-      Box64 - Linux Userspace x86_64 Emulator with a twist, targeted at ARM64 Linux devices
+	  Box64 - Linux Userspace x86_64 Emulator with a twist, targeted at ARM64 Linux devices
 
-      https://github.com/ptitseb/box64
+	  https://github.com/ptitseb/box64
 
 comment "BR2_PACKAGE_BOX64 needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP

@@ -9,7 +9,7 @@ config BR2_PACKAGE_SORR
 	select BR2_PACKAGE_LIBVORBIS
 
 	help
-        BennuGD is an open source video game development language,
-        with a modular design designed to facilitate the portability
-        of the projects carried out in it, making this language
-        one of the best.
+	  BennuGD is an open source video game development language,
+	  with a modular design designed to facilitate the portability
+	  of the projects carried out in it, making this language
+	  one of the best.

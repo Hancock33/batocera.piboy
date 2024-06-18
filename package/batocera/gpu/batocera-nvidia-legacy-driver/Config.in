@@ -1,11 +1,11 @@
 comment "batocera-nvidia-legacy-driver needs a glibc toolchain"
-#batocera nvidia dropped x86 support
+	  #batocera nvidia dropped x86 support
 	depends on BR2_x86_64
 	depends on !BR2_TOOLCHAIN_USES_GLIBC
 
 config BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER
 	bool "batocera-nvidia-legacy-driver"
-#batocera nvidia dropped x86 support
+	  #batocera nvidia dropped x86 support
 	depends on BR2_x86_64
 	depends on BR2_TOOLCHAIN_USES_GLIBC
 	select BR2_PACKAGE_KMOD_TOOLS
@@ -15,7 +15,7 @@ config BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER
 
 	  http://www.nvidia.com/
 
-if BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER
+	  if BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER
 
 comment "batocera-nvidia-legacy-driver X.org drivers needs a modular Xorg server"
 	depends on !BR2_PACKAGE_XSERVER_XORG_SERVER_MODULAR
@@ -24,28 +24,28 @@ config BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER_XORG
 	bool "X.org drivers"
 	default y
 	depends on BR2_PACKAGE_XSERVER_XORG_SERVER_MODULAR
-#batocera mesa3d and batocera-nvidia-legacy-driver must coexist
+	  #batocera mesa3d and batocera-nvidia-legacy-driver must coexist
 	select BR2_PACKAGE_MESA3D
 	select BR2_PACKAGE_XLIB_LIBX11
 	select BR2_PACKAGE_XLIB_LIBXEXT
 	select BR2_PACKAGE_HAS_LIBGL
 	select BR2_PACKAGE_HAS_LIBEGL
 	select BR2_PACKAGE_HAS_LIBEGL_WAYLAND
-#batocera GLES support is not enable in mesa3d by default
-#	select BR2_PACKAGE_HAS_LIBGLES
+	  #batocera GLES support is not enable in mesa3d by default
+	  #	select BR2_PACKAGE_HAS_LIBGLES
 	select BR2_PACKAGE_LIBGLVND
 
-if BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER_XORG
+	  if BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER_XORG
 
-#batocera let MESA3D set itself as default provider for gl, egl, and gles
-#config BR2_PACKAGE_PROVIDES_LIBGL
-#	default "batocera-nvidia-legacy-driver"
+	  #batocera let MESA3D set itself as default provider for gl, egl, and gles
+	  #config BR2_PACKAGE_PROVIDES_LIBGL
+	  #	default "batocera-nvidia-legacy-driver"
 
-#config BR2_PACKAGE_PROVIDES_LIBEGL
-#	default "batocera-nvidia-legacy-driver"
+	  #config BR2_PACKAGE_PROVIDES_LIBEGL
+	  #	default "batocera-nvidia-legacy-driver"
 
-#config BR2_PACKAGE_PROVIDES_LIBGLES
-#	default "batocera-nvidia-legacy-driver"
+	  #config BR2_PACKAGE_PROVIDES_LIBGLES
+	  #	default "batocera-nvidia-legacy-driver"
 
 config BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER_PRIVATE_LIBS
 	bool "Install private libraries"
@@ -58,12 +58,12 @@ config BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER_PRIVATE_LIBS
 	  Say 'y' here if you plan on running a program that uses
 	  those private libraries.
 
-endif # BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER_XORG
+	  endif # BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER_XORG
 
 config BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER_CUDA
 	bool "CUDA support"
 
-if BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER_CUDA
+	  if BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER_CUDA
 
 config BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER_OPENCL
 	bool "OpenCL support"
@@ -80,7 +80,7 @@ config BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER_CUDA_PROGS
 	  doing CUDA at the same time. The MPS server will be
 	  launched automatically when needed.
 
-endif # BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER_CUDA
+	  endif # BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER_CUDA
 
 comment "nvidia kernel module needs a kernel to be built"
 	depends on !BR2_LINUX_KERNEL
@@ -97,4 +97,4 @@ config BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER_MODULE
 	  provides Unified Memory access to the GPU and CPU memories for
 	  CUDA programs.
 
-endif # BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER
+	  endif # BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER

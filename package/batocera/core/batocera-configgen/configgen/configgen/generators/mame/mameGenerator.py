@@ -468,7 +468,7 @@ class MameGenerator(Generator):
             elif system.name == "fm7":
                 if system.isOptSet("altromtype") or softList != "":
                     if (system.isOptSet('altromtype') and system.config["altromtype"] == "cass") or softList.endswith("cass"):
-                        autoRunCmd = 'LOADM‚Äù‚Äú,,R\\n'
+                        autoRunCmd = 'LOADM‚?ù‚?o,,R\\n'
                         autoRunDelay = 5
             elif system.name == "coco":
                 romType = 'cart'
