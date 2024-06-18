@@ -188,7 +188,7 @@ class FlycastGenerator(Generator):
         # Retroachievements
         if not Config.has_section("achievements"):
             Config.add_section("achievements")
-        
+
         if system.isOptSet('retroachievements') and system.getOptBoolean('retroachievements') == True:
             headers   = {"Content-type": "text/plain", "User-Agent": "Batocera.linux"}
             login_url = "https://retroachievements.org/"
@@ -196,7 +196,7 @@ class FlycastGenerator(Generator):
             password  = system.config.get('retroachievements.password', "")
             hardcore  = system.config.get('retroachievements.hardcore', "")
             token     = system.config.get('retroachievements.token', "")
-            # apply config            
+            # apply config
             Config.set("achievements", "Enabled", "yes")
             if hardcore == '1':
                 Config.set("achievements", "HardcoreMode", "yes")
