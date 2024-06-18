@@ -34,4 +34,3 @@ define LIBRETRO_PUAE2021_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/puae2021_libretro.so $(TARGET_DIR)/usr/lib/libretro/puae2021_libretro.so
 endef
 
-$(eval $(generic-package))

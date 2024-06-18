@@ -225,7 +225,7 @@ class BigPEmuGenerator(Generator):
 
         # Delete the config file to update controllers
         # As it doesn't like to be updated
-        # ¯\_(ツ)_/¯
+        # ¯\_(�f")_/¯
         if os.path.exists(bigPemuConfig):
             os.remove(bigPemuConfig)
 
