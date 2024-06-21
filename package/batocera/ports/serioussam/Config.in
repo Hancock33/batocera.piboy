@@ -4,6 +4,7 @@ config BR2_PACKAGE_SERIOUSSAM
 	select BR2_PACKAGE_SDL2_MIXER
 	select BR2_PACKAGE_IMAGEMAGICK
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  Serious Sam Classic open source project based on https://github.com/Croteam-official/Serious-Engine
 	  and linux port https://github.com/icculus/Serious-Engine

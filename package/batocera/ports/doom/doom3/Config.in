@@ -3,6 +3,7 @@ config BR2_PACKAGE_DOOM3
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  dhewm 3 is a Doom 3 GPL source port
 

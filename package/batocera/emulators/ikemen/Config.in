@@ -6,6 +6,7 @@ config BR2_PACKAGE_IKEMEN
 	select BR2_PACKAGE_LIBGTK3
 	select BR2_PACKAGE_OPENAL
 	select BR2_PACKAGE_LIBGLFW
+
 	help
 	  A MUGEN emulator written in GoLang
 

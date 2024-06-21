@@ -3,6 +3,7 @@ config BR2_PACKAGE_LIBRETRO_EMUSCV
 	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
 	select SDL2
+
 	help
 	  A libretro EPOCH/YENO Super Cassette Vision emulator core.
 

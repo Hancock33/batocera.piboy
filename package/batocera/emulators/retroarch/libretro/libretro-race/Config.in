@@ -1,6 +1,7 @@
 config BR2_PACKAGE_LIBRETRO_RACE
 	bool "libretro-race"
 	depends on BR2_PACKAGE_RETROARCH
+
 	help
 	  RACE libretro port ( NGPC emulator emulator).
 

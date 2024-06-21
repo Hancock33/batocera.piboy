@@ -6,6 +6,7 @@ config BR2_PACKAGE_OMF2097
 	select BR2_PACKAGE_ENET
 	select BR2_PACKAGE_LIBCONFUSE
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  One Must Fall 2097 Remake
 

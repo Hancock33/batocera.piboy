@@ -1,4 +1,5 @@
 config BR2_PACKAGE_NANUM_FONT
 	bool "nanum-font"
+
 	help
 	  korean font

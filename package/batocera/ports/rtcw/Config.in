@@ -2,6 +2,7 @@ config BR2_PACKAGE_RTCW
 	bool "rtcw"
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_OPENAL
+
 	help
 	  Return to Castle Wolfenstein port using IOQuake3 functionality.
 

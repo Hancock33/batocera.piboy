@@ -3,6 +3,7 @@ config BR2_PACKAGE_LIBRETRO_PPSSPP
 	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
 	select BR2_PACKAGE_LIBZIP
+
 	help
 	  A libretro PSP core
 

@@ -19,6 +19,7 @@ config BR2_PACKAGE_SOLARUS_ENGINE
 	select BR2_PACKAGE_SDL2_IMAGE
 	select BR2_PACKAGE_SDL2_TTF
 	select BR2_PACKAGE_BATOCERA_LUAJIT
+
 	help
 	  Solarus is an open-source Zelda-like 2D game engine written
 	  in C++. It can run games scripted in Lua. This engine is used

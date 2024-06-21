@@ -1,5 +1,6 @@
 config BR2_PACKAGE_BATOCERA_SYSLINUX_EFI
 	bool "batocera-syslinux-efi"
+
 	help
 	  Precompiled syslinux EFI binaries from Archlinux
 

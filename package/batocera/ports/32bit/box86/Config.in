@@ -9,6 +9,7 @@ config BR2_PACKAGE_BOX86
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_IMAGE
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  Box86 - Linux Userspace x86 Emulator with a twist, targeted at ARM Linux devices
 

@@ -5,6 +5,7 @@ config BR2_PACKAGE_D8VK
 	depends on !BR2_STATIC_LIBS
 	depends on BR2_PACKAGE_SPIRV_HEADERS
 	select BR2_PACKAGE_DXVK
+
 	help
 	  Direct3D 8 to Vulkan translation for DXVK.
 

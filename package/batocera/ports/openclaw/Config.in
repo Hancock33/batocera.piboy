@@ -6,6 +6,7 @@ config BR2_PACKAGE_OPENCLAW
 	select BR2_PACKAGE_SDL2_TTF
 	select BR2_PACKAGE_SDL2_GFX
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  Reimplementation of Captain Claw (1997) platformer.
 

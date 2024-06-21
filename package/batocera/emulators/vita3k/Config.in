@@ -7,6 +7,7 @@ config BR2_PACKAGE_VITA3K
 	depends on BR2_PACKAGE_LIBOGG
 	depends on BR2_PACKAGE_LIBVORBIS
 	select BR2_PACKAGE_PYTHON_RUAMEL_YAML
+
 	help
 	  Experimental PlayStation Vita emulator
 

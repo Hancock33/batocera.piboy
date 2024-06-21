@@ -5,6 +5,7 @@ config BR2_PACKAGE_STUNTCAR
 	depends on BR2_PACKAGE_SDL2_TTF
 	depends on BR2_PACKAGE_OPENAL
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  This is a port of the old Stunt Car Racer from the AtariST/Amiga time.
 

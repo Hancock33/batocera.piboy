@@ -9,6 +9,7 @@ config BR2_PACKAGE_UBOOT_MULTIBOARD
 	select BR2_TARGET_ARM_TRUSTED_FIRMWARE_NEEDS_ARM32_TOOLCHAIN \
 	  if BR2_PACKAGE_BATOCERA_TARGET_RK3399
 	select BR2_TARGET_UBOOT_NO_SCP if BR2_PACKAGE_BATOCERA_TARGET_H5 || BR2_PACKAGE_BATOCERA_TARGET_H6 || BR2_PACKAGE_BATOCERA_TARGET_H616
+
 	help
 	  U-Boot for multiple boards. NOTE: some related configs, like
 	  BR2_TARGET_ARM_TRUSTED_FIRMWARE_PLATFORM have to be set in
@@ -25,6 +26,7 @@ config BR2_PACKAGE_UBOOT_MULTIBOARD_CONFIGS
 	default "orangepi_3 orangepi_3_lts orangepi_one_plus"                      if BR2_PACKAGE_BATOCERA_TARGET_H6
 	default "orangepi_zero2 orangepi_zero3 x96_mate"			     if BR2_PACKAGE_BATOCERA_TARGET_H616
 	default ""
+
 	help
 	  Names of U-Boot defconfigs to build without the _defconfig part.
 	  These also define the directory to search for board specific
@@ -37,6 +39,7 @@ config BR2_PACKAGE_UBOOT_MULTIBOARD_BINARIES
 	default "idbloader.img u-boot.img"  if BR2_PACKAGE_BATOCERA_TARGET_RK3288
 	default "idbloader.img u-boot.itb"  if BR2_PACKAGE_BATOCERA_TARGET_RK3399
 	default ""
+
 	help
 	  List of U-Boot binaries to be collected.
 

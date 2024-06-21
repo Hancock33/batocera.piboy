@@ -2,6 +2,7 @@ config BR2_PACKAGE_RMTFS
 	bool "rmtfs"
 	depends on BR2_PACKAGE_HAS_UDEV # libudev is build dependency
 	select BR2_PACKAGE_QRTR
+
 	help
 	  Qualcomm Remote Filesystem Service Implementation.
 

@@ -1,6 +1,7 @@
 config BR2_PACKAGE_LIBRETRO_SAMEBOY
 	bool "libretro-sameboy"
 	depends on BR2_PACKAGE_RETROARCH
+
 	help
 	  A libretro Sameboy is a Gameboy and Gameboy Color emulator written in C.
 

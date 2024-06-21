@@ -13,6 +13,7 @@ config BR2_PACKAGE_BATOCERA_SPLASH
 choice
 	prompt "splash type"
 	default BR2_PACKAGE_BATOCERA_SPLASH_IMAGE
+
 	help
 	Select batocera.linux splash type
 

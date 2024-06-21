@@ -2,6 +2,7 @@ config BR2_PACKAGE_OPENJK
 	bool "openjk"
 	select BR2_PACKAGE_SDL2
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  Community effort to maintain and improve Jedi Academy (SP & MP) + Jedi Outcast (SP only) released by Raven Software
 

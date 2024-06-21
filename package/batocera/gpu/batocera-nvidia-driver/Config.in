@@ -10,6 +10,7 @@ config BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER
 	depends on BR2_TOOLCHAIN_USES_GLIBC
 	select BR2_PACKAGE_BATOCERA_NVIDIA_LEGACY_DRIVER
 	select BR2_PACKAGE_BATOCERA_NVIDIA340_LEGACY_DRIVER
+
 	help
 	  The binary-only driver blob for NVidia cards.
 	  This is the userland part only.
@@ -50,6 +51,7 @@ if BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_XORG
 
 config BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_PRIVATE_LIBS
 	bool "Install private libraries"
+
 	help
 	  Two libraries require special agreement with NVidia to
 	  develop code linking to those libraries: libnvidia-ifr.so
@@ -76,6 +78,7 @@ config BR2_PACKAGE_PROVIDES_LIBOPENCL
 
 config BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_CUDA_PROGS
 	bool "CUDA MPS server and control"
+
 	help
 	  Say 'y' here if you need to run more than one program
 	  doing CUDA at the same time. The MPS server will be
@@ -90,6 +93,7 @@ config BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_MODULE
 	bool "nvidia kernel module"
 	depends on BR2_LINUX_KERNEL
 	select BR2_LINUX_NEEDS_MODULES # not using kernel-module infra
+
 	help
 	  Build the nvidia.ko kernel module.
 
