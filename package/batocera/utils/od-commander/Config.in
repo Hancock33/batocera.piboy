@@ -11,7 +11,7 @@ config BR2_PACKAGE_OD_COMMANDER
 
 	  https://github.com/od-contrib/commander
 
-	  if BR2_PACKAGE_OD_COMMANDER
+if BR2_PACKAGE_OD_COMMANDER
 
 config BR2_PACKAGE_OD_COMMANDER_FONTS
 	string "Font stack"
@@ -29,7 +29,7 @@ config BR2_PACKAGE_OD_COMMANDER_WIDTH
 	string "Screen width"
 	help
 	  Commander will pick the best resolution by default as reported by SDL.
-	  If this is unreliable on a given kernel, use this and the HEIGHT option to force a different one.
+	  if this is unreliable on a given kernel, use this and the HEIGHT option to force a different one.
 
 config BR2_PACKAGE_OD_COMMANDER_HEIGHT
 	string "Screen height"
@@ -40,4 +40,4 @@ config BR2_PACKAGE_OD_COMMANDER_PPU_X
 config BR2_PACKAGE_OD_COMMANDER_PPU_Y
 	string "Vertical pixels per unit"
 
-	  endif
+endif

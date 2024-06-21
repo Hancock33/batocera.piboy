@@ -34,14 +34,15 @@ config BR2_PACKAGE_BATOCERA_EMULATIONSTATION
 
 	  https://github.com/batocera-linux/batocera-emulationstation
 
-	  if BR2_PACKAGE_BATOCERA_EMULATIONSTATION
-	  choice
-	  prompt "ES version to compile"
-config BR2_PACKAGE_BATOCERA_EMULATIONSTATION_STANDARD
+if BR2_PACKAGE_BATOCERA_EMULATIONSTATION
+choice
+	prompt "ES version to compile"
+	config BR2_PACKAGE_BATOCERA_EMULATIONSTATION_STANDARD
 	bool "standard"
-config BR2_PACKAGE_BATOCERA_EMULATIONSTATION_ARCADE
+
+	config BR2_PACKAGE_BATOCERA_EMULATIONSTATION_ARCADE
 	bool "arcade"
-	  endchoice
-	  endif
+endchoice
+endif
 
 comment "Emulation station 2 needs a toolchain w/ C++"

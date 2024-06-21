@@ -15,7 +15,7 @@
 
 	  http://mesa3d.org
 
-	  if BR2_PACKAGE_IMG_MESA3D
+if BR2_PACKAGE_IMG_MESA3D
 
 	# Some Gallium driver needs libelf when built with LLVM support
 config BR2_PACKAGE_IMG_MESA3D_NEEDS_ELFUTILS
@@ -352,7 +352,7 @@ config BR2_PACKAGE_IMG_MESA3D_OSMESA_GALLIUM
 	help
 	  The OSMesa API provides functions for off-screen rendering.
 
-	  if BR2_PACKAGE_IMG_MESA3D_DRIVER
+if BR2_PACKAGE_IMG_MESA3D_DRIVER
 
 comment "OpenGL API Support"
 
@@ -400,7 +400,7 @@ config BR2_PACKAGE_IMG_MESA3D_OPENGL_ES
 	  Use the Khronos OpenGL ES APIs. This is commonly used on
 	  embedded systems and represents a subset of the OpenGL API.
 
-	  endif # BR2_PACKAGE_IMG_MESA3D_DRIVER
+endif # BR2_PACKAGE_IMG_MESA3D_DRIVER
 
 config BR2_PACKAGE_PROVIDES_LIBGBM
 	default "img-mesa3d" if BR2_PACKAGE_IMG_MESA3D_GBM
@@ -417,7 +417,7 @@ config BR2_PACKAGE_PROVIDES_LIBGLES
 config BR2_PACKAGE_PROVIDES_LIBOPENCL
 	default "img-mesa3d" if BR2_PACKAGE_IMG_MESA3D_OPENCL
 
-	  endif # BR2_PACKAGE_IMG_MESA3D
+endif # BR2_PACKAGE_IMG_MESA3D
 
 comment "mesa3d needs a toolchain w/ C++, NPTL, dynamic library"
 	depends on !BR2_INSTALL_LIBSTDCPP || !BR2_TOOLCHAIN_HAS_THREADS_NPTL || \
