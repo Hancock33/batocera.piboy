@@ -12,7 +12,7 @@ index 048473c7d..feb4b6af0 100644
  
      // [JM] Should I be using upscalefactor here, or some SW equivalent to Duke's ud.detail? !CHECKME!
 diff --git a/source/sw/src/game.cpp b/source/sw/src/game.cpp
-index 1c3d9f89b..d0438345c 100644
+index 6cc9acb22..141790b98 100644
 --- a/source/sw/src/game.cpp
 +++ b/source/sw/src/game.cpp
 @@ -782,7 +782,7 @@ void Set_GameMode(void)
