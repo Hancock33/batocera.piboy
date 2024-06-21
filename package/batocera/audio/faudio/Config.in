@@ -6,6 +6,7 @@ config BR2_PACKAGE_FAUDIO
 	select BR2_PACKAGE_GST1_PLUGINS_BASE
 	# Wine unconditionally builds shared libraries
 	depends on !BR2_STATIC_LIBS
+
 	help
 	  Faudio
 

@@ -4,6 +4,7 @@ config BR2_PACKAGE_MUPEN64PLUS_UI_CONSOLE
 	depends on BR2_PACKAGE_SDL2
 	depends on BR2_PACKAGE_ALSA_LIB
 	depends on BR2_PACKAGE_MUPEN64PLUS_CORE
+
 	help
 	  Console (command-line) front-end user interface for Mupen64Plus v2.0 project
 

@@ -9,6 +9,7 @@ config BR2_PACKAGE_LIBRETRO_BOOM3
 	select BR2_PACKAGE_OPENAL
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_ZLIB
+
 	help
 	  boom3 is a Doom 3 GPL source port.
 

@@ -5,6 +5,7 @@ config BR2_PACKAGE_DXVK_NVAPI
 	depends on !BR2_STATIC_LIBS
 	depends on BR2_PACKAGE_SPIRV_HEADERS
 	depends on BR2_PACKAGE_DXVK
+
 	help
 	  Provides an alternative implementation of NVIDIA's NVAPI library
 	  for use with DXVK and VKD3D-Proton.

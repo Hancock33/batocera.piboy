@@ -5,6 +5,7 @@ config BR2_PACKAGE_MUPEN64PLUS_GLIDEN64
 	select BR2_INSTALL_LIBSTDCPP
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_ALSA_LIB
+
 	help
 	  A new generation, open-source graphics plugin for N64 emulators.
 

@@ -6,6 +6,7 @@ config BR2_PACKAGE_SUPERMODEL_ES
 	select BR2_PACKAGE_SDL2_NET
 	select BR2_PACKAGE_ZLIB
 	select BR2_PACKAGE_LIBZIP
+
 	help
 	  Supermodel-ES fork is a SEGA Model 3 emulator that uses the SDL-Library targeting OpenGL ES 3.2 devices.
 

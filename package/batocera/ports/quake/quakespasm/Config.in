@@ -3,6 +3,7 @@ config BR2_PACKAGE_QUAKESPASM
 	depends on BR2_INSTALL_LIBSTDCPP
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_IMAGE
+
 	help
 	  QuakeSpasm is a *Nix friendly Quake Engine based on the SDL port of the popular FitzQuake.
 

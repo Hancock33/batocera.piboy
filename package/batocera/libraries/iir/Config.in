@@ -1,5 +1,6 @@
 config BR2_PACKAGE_IIR
 	bool "iir"
+
 	help
 	  An infinite impulse response (IIR) filter library for Linux,
 	  Mac OSX and Windows which implements Butterworth, RBJ, Chebychev

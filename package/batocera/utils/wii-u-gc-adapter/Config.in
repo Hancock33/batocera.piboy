@@ -3,5 +3,6 @@ config BR2_PACKAGE_WII_U_GC_ADAPTER
 	select BR2_PACKAGE_DBUS
 	select BR2_PACKAGE_LIBUSB
 	select BR2_PACKAGE_NCURSES
+
 	help
 	  wii-u-gc receiver daemon

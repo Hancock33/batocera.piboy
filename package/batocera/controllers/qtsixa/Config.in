@@ -3,6 +3,7 @@ config BR2_PACKAGE_QTSIXA
 	select BR2_PACKAGE_LIBUSB
 	select BR2_PACKAGE_LIBUSB_COMPAT
 	bool "qtsixa"
+
 	help
 	  Support for ps3 controllers.
 

@@ -4,6 +4,7 @@ config BR2_PACKAGE_STK
 	select BR2_PACKAGE_SDL2_MIXER
 	select BR2_PACKAGE_SHADERC
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  SuperTuxKart is a free kart racing game. It focuses on fun and not on realistic kart physics.
 

@@ -2,6 +2,7 @@ config BR2_PACKAGE_LIBRETRO_CRAFT
 	bool "libretro-craft"
 	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  A simple Minecraft clone written in C
 	  using modern OpenGL (shaders).

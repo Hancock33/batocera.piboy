@@ -4,6 +4,7 @@ config BR2_PACKAGE_F2BGL
 	select BR2_PACKAGE_SDL2_MIXER
 	select BR2_PACKAGE_FREEPATS
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  Fade To Black.
 

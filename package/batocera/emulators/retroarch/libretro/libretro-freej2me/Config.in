@@ -2,6 +2,7 @@ config BR2_PACKAGE_LIBRETRO_FREEJ2ME
 	bool "libretro-freej2me"
 	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  A free J2ME emulator.
 

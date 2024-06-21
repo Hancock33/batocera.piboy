@@ -4,6 +4,7 @@ config BR2_PACKAGE_PIFBA
 	depends on BR2_PACKAGE_SDL2
 	depends on BR2_PACKAGE_RPI_USERLAND
 	depends on BR2_PACKAGE_ALSA_LIB
+
 	help
 	  FBA arm optimized
 

@@ -3,6 +3,7 @@ config BR2_PACKAGE_VULKAN_SAMPLES
 	depends on BR2_PACKAGE_WAYLAND || BR2_PACKAGE_XORG7
 	select BR2_PACKAGE_VULKAN_HEADERS
 	select BR2_PACKAGE_VULKAN_LOADER
+
 	help
 	  Vulkan samples from Khronos
 

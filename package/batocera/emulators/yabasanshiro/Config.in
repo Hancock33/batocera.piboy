@@ -8,6 +8,7 @@ config BR2_PACKAGE_YABASANSHIRO
 	select BR2_PACKAGE_BOOST_LOCALE
 	select BR2_PACKAGE_BOOST_SYSTEM
 	select BR2_PACKAGE_LIBGLFW if BR2_PACKAGE_XORG7 || BR2_PACKAGE_WAYLAND
+
 	help
 	  uoYabause is a unofficial port of Yabause SEGA Saturn Emulator.
 

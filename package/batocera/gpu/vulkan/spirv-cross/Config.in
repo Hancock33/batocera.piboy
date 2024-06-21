@@ -4,6 +4,7 @@ config BR2_PACKAGE_SPIRV_CROSS
 	depends on !BR2_STATIC_LIBS
 	depends on BR2_TOOLCHAIN_GCC_AT_LEAST_8 # C++17 filesystem
 	select BR2_PACKAGE_SPIRV_HEADERS
+
 	help
 	  SPIRV-Cross is a tool designed for parsing and converting
 	  SPIR-V to other shader languages.
