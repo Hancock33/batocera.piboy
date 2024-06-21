@@ -16,7 +16,7 @@ config BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER
 
 	  http://www.nvidia.com/
 
-	  if BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER
+if BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER
 
 comment "nvidia-driver X.org drivers needs a modular Xorg server"
 	depends on !BR2_PACKAGE_XSERVER_XORG_SERVER_MODULAR
@@ -36,7 +36,7 @@ config BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_XORG
 	  #	select BR2_PACKAGE_HAS_LIBGLES
 	select BR2_PACKAGE_LIBGLVND
 
-	  if BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_XORG
+if BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_XORG
 
 	  #batocera let MESA3D set itself as default provider for gl, egl, and gles
 	  #config BR2_PACKAGE_PROVIDES_LIBGL
@@ -59,12 +59,12 @@ config BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_PRIVATE_LIBS
 	  Say 'y' here if you plan on running a program that uses
 	  those private libraries.
 
-	  endif # BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_XORG
+endif # BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_XORG
 
 config BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_CUDA
 	bool "CUDA support"
 
-	  if BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_CUDA
+if BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_CUDA
 
 config BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_OPENCL
 	bool "OpenCL support"
@@ -81,7 +81,7 @@ config BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_CUDA_PROGS
 	  doing CUDA at the same time. The MPS server will be
 	  launched automatically when needed.
 
-	  endif # BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_CUDA
+endif # BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_CUDA
 
 comment "nvidia kernel module needs a kernel to be built"
 	depends on !BR2_LINUX_KERNEL
@@ -93,9 +93,9 @@ config BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_MODULE
 	help
 	  Build the nvidia.ko kernel module.
 
-	  If CUDA support (above) is set, and the target is x86_64, then
+	  if CUDA support (above) is set, and the target is x86_64, then
 	  this will also build the nvidia-uvm.ko kernel module, which
 	  provides Unified Memory access to the GPU and CPU memories for
 	  CUDA programs.
 
-	  endif # BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER
+endif # BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER

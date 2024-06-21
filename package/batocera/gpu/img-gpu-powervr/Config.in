@@ -32,7 +32,7 @@ config BR2_PACKAGE_IMG_GPU_POWERVR
 	  This library is provided by StarFive as-is and doesn't have
 	  an upstream.
 
-	  if BR2_PACKAGE_IMG_GPU_POWERVR
+if BR2_PACKAGE_IMG_GPU_POWERVR
 
 	  #config BR2_PACKAGE_PROVIDES_LIBEGL
 	  #	default "img-gpu-powervr"

@@ -12,7 +12,7 @@ config BR2_PACKAGE_MALI_G610
 	  the ARM Mali GPU kernel driver enabled, as found in the
 	  'mali-driver' package.
 
-	  if BR2_PACKAGE_MALI_G610
+if BR2_PACKAGE_MALI_G610
 
 config BR2_PACKAGE_PROVIDES_LIBMALI
 	default "mali-G610"

@@ -11,7 +11,7 @@ config BR2_PACKAGE_MALI_MP400_GBM
 	  MP400 GPU. This package requires a kernel with the ARM Mali Utgard
 	  GPU Kernel Drivers enabled.
 
-	  if BR2_PACKAGE_MALI_MP400_GBM
+if BR2_PACKAGE_MALI_MP400_GBM
 
 config BR2_PACKAGE_PROVIDES_LIBEGL
 	default "mali-mp400-gbm"
