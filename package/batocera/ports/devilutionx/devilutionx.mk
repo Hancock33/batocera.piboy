@@ -3,25 +3,18 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Apr 08, 2024
-DEVILUTIONX_VERSION = b8b6dfff4c3ca304f5f7f56a1d264c1ef506db32
-DEVILUTIONX_BRANCH = 1.5
+# Version: Commits on Feb 04, 2024
+DEVILUTIONX_VERSION = 35e93366f6bb8bc641b58927aa763957fd0d501e
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
-DEVILUTIONX_SUBDIR = dist-src
 DEVILUTIONX_DEPENDENCIES = sdl2 sdl2_image fmt libsodium libpng bzip2 lua luafilesystem lua-lpeg-patterns lpeg luasocket luasec
 DEVILUTIONX_SUPPORTS_IN_SOURCE_BUILD = NO
 
+# Prefill the player name when creating a new character, in case the device does
+# not have a keyboard.
 DEVILUTIONX_CONF_OPTS += -DBUILD_TESTING=OFF
 DEVILUTIONX_CONF_OPTS += -DUSE_LD_MOLD=ON
-
- # Prefill the player name when creating a new character, in case the device does
-# not have a keyboard.
 DEVILUTIONX_CONF_OPTS += -DPREFILL_PLAYER_NAME=ON
-
-# Ensure that DevilutionX's vendored dependencies are not accidentally fetched from network.
-# They should all be present in the source package.
-DEVILUTIONX_CONF_OPTS += -DFETCHCONTENT_FULLY_DISCONNECTED=ON
 
 # ZeroTier on aarch64 uses ARMv8 Cryptography Extensions.
 # These extension are optional and only certain Armv8-A CPUs support them.
@@ -35,19 +28,11 @@ else ifeq ($(BR2_arm),y)
 endif
 
 define DEVILUTIONX_FIX_SDL2MAIN
-	sed -i -e s+"SDL2::SDL2main"+"-lSDL2main"+ $(@D)/dist-src/CMakeLists.txt
-	sed -i -e s+"SDL2::SDL2_image"+"-lSDL2_image"+ $(@D)/dist-src/Source/CMakeLists.txt
-endef
-
-define DEVILUTIONX_BUILD_SRC_DIST
-	rm -rf $(DEVILUTIONX_DL_DIR)/git/build-src-dist/
-	cd $(DEVILUTIONX_DL_DIR)/git && python $(DEVILUTIONX_DL_DIR)/git/tools/make_src_dist.py
-	tar -xf $(DEVILUTIONX_DL_DIR)/git/build-src-dist/devilutionx-src-*.tar.xz -C $(@D)
-	mv $(@D)/devilutionx-src-* $(@D)/dist-src
+	sed -i -e s+"SDL2::SDL2main"+"-lSDL2main"+ $(@D)/CMakeLists.txt
+	sed -i -e s+"SDL2::SDL2_image"+"-lSDL2_image"+ $(@D)/Source/CMakeLists.txt
 endef
 
 DEVILUTIONX_PRE_CONFIGURE_HOOKS += DEVILUTIONX_FIX_SDL2MAIN
-DEVILUTIONX_POST_EXTRACT_HOOKS += DEVILUTIONX_BUILD_SRC_DIST
 
 define DEVILUTIONX_INSTALL_TARGET_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy

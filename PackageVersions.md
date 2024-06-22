@@ -412,7 +412,7 @@ Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a4
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|18f36475dea23f9a241e064f14d6370eefb64fe2|Jun 20, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|2cc8e02ced1594d76d12b39140e394e9cee0aa44|Apr 18, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|5fec1d38e117a6e8160f156d08b383bb568e3283|Jun 15, 2024
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|b8b6dfff4c3ca304f5f7f56a1d264c1ef506db32|Apr 08, 2024
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|35e93366f6bb8bc641b58927aa763957fd0d501e|Feb 04, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|cec78b5a99afe7948471609ce8fd6f0ac58ff3ca|Jun 17, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|0b55e44ff4b966603e6500a0a242286160f3c7ed|Jun 22, 2024
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
