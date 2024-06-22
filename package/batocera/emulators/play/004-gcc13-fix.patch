@@ -1,0 +1,12 @@
+diff --git a/Source/iop/Iop_Usbd.h b/Source/iop/Iop_Usbd.h
+index 3892c483..3fd49887 100644
+--- a/Source/iop/Iop_Usbd.h
++++ b/Source/iop/Iop_Usbd.h
+@@ -2,6 +2,7 @@
+ 
+ #include "Iop_Module.h"
+ #include "UsbDevice.h"
++#include <cstring>
+ 
+ class CIopBios;
+ 
