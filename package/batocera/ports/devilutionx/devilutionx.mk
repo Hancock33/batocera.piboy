@@ -15,6 +15,7 @@ DEVILUTIONX_SUPPORTS_IN_SOURCE_BUILD = NO
 DEVILUTIONX_CONF_OPTS += -DBUILD_TESTING=OFF
 DEVILUTIONX_CONF_OPTS += -DUSE_LD_MOLD=ON
 DEVILUTIONX_CONF_OPTS += -DPREFILL_PLAYER_NAME=ON
+DEVILUTIONX_CONF_OPTS += -DCPACK=ON
 
 # ZeroTier on aarch64 uses ARMv8 Cryptography Extensions.
 # These extension are optional and only certain Armv8-A CPUs support them.
@@ -35,6 +36,9 @@ endef
 DEVILUTIONX_PRE_CONFIGURE_HOOKS += DEVILUTIONX_FIX_SDL2MAIN
 
 define DEVILUTIONX_INSTALL_TARGET_EVMAPY
+	mkdir -p $(TARGET_DIR)/usr/bin/diablo
+	mv $(TARGET_DIR)/usr/bin/devilutionx	$(TARGET_DIR)/usr/bin/diablo
+	cp -a $(@D)/buildroot-build/assets		$(TARGET_DIR)/usr/bin/diablo
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/devilutionx/devilutionx.keys $(TARGET_DIR)/usr/share/evmapy
 endef
