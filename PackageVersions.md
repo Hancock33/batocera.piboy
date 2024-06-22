@@ -208,7 +208,7 @@ Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|96fa9bc65
 Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|d8b10c4cd7606ed58f9c562864c986bc960faaaf|Feb 20, 2023
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|3265c0ac05ec595f9cedd020d76e7f39bf081538|May 02, 2024
 Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|8e5d6d65433fc429d782ab8b5467e9df3afb63ce|Jun 17, 2024
-Emulators|[libretro-stella](http://github.com/stella-emu/stella)|b477cb56bc6fd8b6977dcee279f16de01348bdae|Jun 15, 2024
+Emulators|[libretro-stella](http://github.com/stella-emu/stella)|0a6604b91b95141dc7f379f75c90b577414eab29|Jun 22, 2024
 Emulators|[libretro-stella2014](http://github.com/libretro/stella2014-libretro)|db6bee857f73138ae02755bf09e392b31fef4540|May 20, 2024
 Emulators|[libretro-supafaust](http://github.com/libretro/supafaust)|6b639c98372d1c9bac885c55d772c812d2a9d525|Jun 19, 2023
 Emulators|[libretro-superbroswar](https://github.com/libretro/superbroswar-libretro.git)|6967c06b8446824565e37fa7deb26994d4997980|May 28, 2023
@@ -258,7 +258,7 @@ Emulators|[openbor4432](http://github.com/Darknior/OpenBORv3b4432)|49505541b858d
 Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678291bbedc0b9fe4c8f898|Aug 29, 2018
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|5ab7a96e889998cda93b9a766f7482aeb796e388|Jun 22, 2024
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|6ea61ef8862fed6969e61b96da55b729e5743485|Jun 22, 2024
 Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|12d25fe20d269c7afb12ebd80724ee1ade2c8b87|Jun 08, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v1.7.5913|Jun 19, 2024
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
