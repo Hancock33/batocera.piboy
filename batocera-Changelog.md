@@ -8,6 +8,8 @@ Note: The `powersave` mode will have the biggest impact on CPU performance whils
 Singe games now have it's own system. Move any singe related games from roms/daphne to the roms/singe directory.
 Note: Singe games in the roms/daphne folder will no longer work.
 You can determine you have a Singe simulation game by the games folder contains a .singe file.
+
+EmulationStation's Video Mode (resolution) is now under System Settings rather than under Frontend Developers.
 ### Hardware
 Add support for the Pironman case with RPI4 devices.
 Add support for OrangePi Zero 3 (all variants)
@@ -46,6 +48,7 @@ Add support for the Rock 5c
 - Foot pedal for light guns on libretro cores, Duckstation, PCSX2 and MAME standalone
   - Bind key C for player 1; V for player 2; B for player 3; N for player 4
 - Nvidia cards using the latest production driver now has cuda hardware accelerated playback enabled for ffmpeg & mpv
+- Wireguard VPN tools to setup your PC for Wireguard VPN access. See the wiki here: https://wiki.batocera.org/vpn_client
 ### Fixed
 - RG552 Splash-screen rotation
 - RG552 Vibrator enabled
@@ -123,7 +126,7 @@ Add support for the Rock 5c
 - DevilutionX to 1.5.2
 - Commander Genius to 3.5.0
 - Kodi to 20.5-Nexus
-- RPCS3 to 0.0.32-16518
+- RPCS3 to 0.0.32-16618
 - Solarus-engine: bump to Apr 27, 2024 build
 - Cemu to v2.0-82
 - Sonic3-AIR to v24.02.02.0-stable
@@ -133,7 +136,7 @@ Add support for the Rock 5c
 - ScummVM to 2.8.1
 - Fheroes2 to 1.0.13
 - PCSX2 to v1.7.5864
-- Play! & Libretro Play! to 0.65-1
+- Play! & Libretro Play! to 0.66
 - Dolphin to 5.0-21543
 - Libretro-Hatarib: bump to v0.3
 - Hatari to v2.5.0
