@@ -11,6 +11,7 @@ config BR2_PACKAGE_BATOCERA_SHIM
 	bool "batocera shim"
 	default n
 	depends on BR2_PACKAGE_BATOCERA_SHIM_ARCH_SUPPORTS
+
 	help
 	  Boot loader to chain-load signed boot loaders under Secure
 	  Boot.

@@ -1,6 +1,6 @@
 config BR2_PACKAGE_ROCKCHIP_RGA
-  bool "rockchip-rga"
+	bool "rockchip-rga"
 
-  help
+	help
 
-    https://github.com/rockchip-linux/linux-rga
+	  https://github.com/rockchip-linux/linux-rga

@@ -3,8 +3,8 @@
 # dolphin-emu
 #
 ################################################################################
-# Version: Commits on Jun 16, 2024
-DOLPHIN_EMU_VERSION = 0c2b8fd58787b1aa9e5ee250f885c2691aef492a
+# Version: Commits on Jun 22, 2024
+DOLPHIN_EMU_VERSION = 9b33b777cfd26cf790a4fdf1f1d305b24c6777f7
 DOLPHIN_EMU_SITE = https://github.com/dolphin-emu/dolphin
 DOLPHIN_EMU_SITE_METHOD = git
 DOLPHIN_EMU_LICENSE = GPLv2+
@@ -41,7 +41,7 @@ else
 	DOLPHIN_EMU_CONF_OPTS += -DENABLE_X11=OFF
 endif
 
-ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
+ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
 	DOLPHIN_EMU_CONF_OPTS += -DENABLE_VULKAN=ON
 else
 	DOLPHIN_EMU_CONF_OPTS += -DENABLE_VULKAN=OFF

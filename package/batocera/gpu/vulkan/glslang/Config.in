@@ -4,6 +4,7 @@ config BR2_PACKAGE_GLSLANG
 	select BR2_PACKAGE_VULKAN_HEADERS
 	select BR2_PACKAGE_VULKAN_LOADER
 	select BR2_PACKAGE_SPIRV_TOOLS
+
 	help
 	  glslang from Khronos
 

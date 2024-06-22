@@ -8,6 +8,8 @@ Note: The `powersave` mode will have the biggest impact on CPU performance whils
 Singe games now have it's own system. Move any singe related games from roms/daphne to the roms/singe directory.
 Note: Singe games in the roms/daphne folder will no longer work.
 You can determine you have a Singe simulation game by the games folder contains a .singe file.
+
+EmulationStation's Video Mode (resolution) is now under System Settings rather than under Frontend Developers.
 ### Hardware
 Add support for the Pironman case with RPI4 devices.
 Add support for OrangePi Zero 3 (all variants)
@@ -16,6 +18,7 @@ Initial support for the Lenovo Legion Go
 Support for Nvidia cards requiring the legacy 340.108 driver.
 Add support for the Ayaneo 2S
 Add support for the Ayaneo Air Plus (6800U) model
+Add support for the Rock 5c
 ### Added
 - Support for Lexaloffle Voxatron (needs official engine, no emulator provided)
 - C64: support for REU (RAM Expansion Unit), .d71 and .g64 ROM format
@@ -45,6 +48,7 @@ Add support for the Ayaneo Air Plus (6800U) model
 - Foot pedal for light guns on libretro cores, Duckstation, PCSX2 and MAME standalone
   - Bind key C for player 1; V for player 2; B for player 3; N for player 4
 - Nvidia cards using the latest production driver now has cuda hardware accelerated playback enabled for ffmpeg & mpv
+- Wireguard VPN tools to setup your PC for Wireguard VPN access. See the wiki here: https://wiki.batocera.org/vpn_client
 ### Fixed
 - RG552 Splash-screen rotation
 - RG552 Vibrator enabled
@@ -69,6 +73,7 @@ Add support for the Ayaneo Air Plus (6800U) model
 - Scanlines not showing in Daphne/Singe
 - Supermodel persistent crash in some cases with light guns
 - Cuda hardware acceleration of the splash video for Nvidia cards using the production driver.
+- Kodi green screen with RK3588 boards
 ### Changed / Improved
 - RK3326 Replaced the mali-G31 driver with mesa3d
 - Amiga BIOS files now go into the bios/amiga/ subfolder
@@ -81,6 +86,7 @@ Add support for the Ayaneo Air Plus (6800U) model
 - Added additional Atari Lynx extensions for Beetle Lynx & Handy
 - Name the Bluetooth connection based on the host system hardware name.
 - We now record audio & use hardware encoding (x86_64 only) with Intel & AMD GPU's when using `batocera-record`.
+- Moved the RK3588 boards to the new Mesa 3D Panthor driver (now supports more emulators)
 ### Updated
 - Retroarch to 1.18.0
 - Libretro cores for retroarch 1.17.0 [#11113](https://github.com/batocera-linux/batocera.linux/pull/11113/files)
@@ -120,7 +126,7 @@ Add support for the Ayaneo Air Plus (6800U) model
 - DevilutionX to 1.5.2
 - Commander Genius to 3.5.0
 - Kodi to 20.5-Nexus
-- RPCS3 to 0.0.32-16518
+- RPCS3 to 0.0.32-16618
 - Solarus-engine: bump to Apr 27, 2024 build
 - Cemu to v2.0-82
 - Sonic3-AIR to v24.02.02.0-stable
@@ -130,7 +136,7 @@ Add support for the Ayaneo Air Plus (6800U) model
 - ScummVM to 2.8.1
 - Fheroes2 to 1.0.13
 - PCSX2 to v1.7.5864
-- Play! & Libretro Play! to 0.65-1
+- Play! & Libretro Play! to 0.66
 - Dolphin to 5.0-21543
 - Libretro-Hatarib: bump to v0.3
 - Hatari to v2.5.0
@@ -174,10 +180,10 @@ Add support for the Ayaneo Air Plus (6800U) model
 - Wayland Protocols to 1.33
 - Wlroots to 0.17.1
 - Sway to 1.9
-- Mesa3D to 24.1
+- Mesa3D to 24.1.2
 - RPi kernel to 6.6.20
 - Pipewire to 1.0.4
-- X86_64 kernel to 6.9.3
+- X86_64 kernel to 6.9.5
 - Switchres 0.220
 - Btop to 1.3.2
 - Linux firmware to 20240513

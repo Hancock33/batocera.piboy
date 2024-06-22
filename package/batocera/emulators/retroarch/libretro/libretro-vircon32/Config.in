@@ -1,11 +1,12 @@
 config BR2_PACKAGE_LIBRETRO_VIRCON32
-    bool "libretro-vircon32"
-    depends on BR2_PACKAGE_RETROARCH
-    depends on BR2_INSTALL_LIBSTDCPP
-      help
-        Vircon32 is a virtual game console, inspired by classic 16 & 32 bit systems as well as the arcade era.
+	bool "libretro-vircon32"
+	depends on BR2_PACKAGE_RETROARCH
+	depends on BR2_INSTALL_LIBSTDCPP
 
-        http://www.libretro.com
+	help
+	  Vircon32 is a virtual game console, inspired by classic 16 & 32 bit systems as well as the arcade era.
+
+	  http://www.libretro.com
 
 comment "LIBRETRO_VIRCON32 needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP

@@ -1,12 +1,13 @@
 config BR2_PACKAGE_FPINBALL
-    bool "fpinball"
-    depends on BR2_x86_64
-    depends on BR2_PACKAGE_BATOCERA_WINE
-    help
-      Future Pinball precompiled for 32bit Windows running through Wine.
+	bool "fpinball"
+	depends on BR2_x86_64
+	depends on BR2_PACKAGE_BATOCERA_WINE
 
-      https://futurepinball.com
+	help
+	  Future Pinball precompiled for 32bit Windows running through Wine.
 
-      Updated Better Arcade Mode (BAM)
+	  https://futurepinball.com
 
-      https://ravarcade.pl
+	  Updated Better Arcade Mode (BAM)
+
+	  https://ravarcade.pl

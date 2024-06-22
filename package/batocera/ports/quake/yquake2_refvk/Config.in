@@ -1,6 +1,7 @@
 config BR2_PACKAGE_YQUAKE2_REFVK
 	bool "yquake2_vulkan"
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  Optional Vulkan renderer lib for Yamagi Quake II
 

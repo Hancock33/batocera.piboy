@@ -11,6 +11,7 @@ lib32bit.mk
 libserum.mk
 mangohud.mk
 melonds.mk
+model2emu.mk
 noto-cjk-fonts.mk
 openbor6412.mk
 openbor7142.mk

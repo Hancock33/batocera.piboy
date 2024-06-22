@@ -3,6 +3,7 @@ config BR2_PACKAGE_BSTONE
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  Unofficial source port for Blake Stone series (Aliens Of Gold and Planet Strike).
 

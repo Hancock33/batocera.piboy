@@ -2,10 +2,11 @@ config BR2_PACKAGE_LIBRETRO_DOUBLECHERRYGB
 	bool "libretro-doublecherrygb"
 	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
-		help
-		  A libretro gameboy core with up to 16 players support
 
-		  https://timoelrichs.is-a.dev/
+	help
+	  A libretro gameboy core with up to 16 players support
+
+	  https://timoelrichs.is-a.dev/
 
 comment "LIBRETRO_DOUBLECHERRYGB needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP

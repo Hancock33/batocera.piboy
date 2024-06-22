@@ -13,7 +13,7 @@ class DevilutionXGenerator(Generator):
         os.makedirs(configDir, exist_ok=True)
         os.makedirs(saveDir, exist_ok=True)
 
-        commandArray = ['devilutionx', '--data-dir', '/userdata/roms/ports/devilutionx',
+        commandArray = ['/usr/bin/diablo/devilutionx', '--data-dir', '/userdata/roms/ports/devilutionx',
                         '--config-dir', configDir, '--save-dir', saveDir]
         if rom.endswith('hellfire.mpq'):
             commandArray.append('--hellfire')

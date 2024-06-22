@@ -2891,7 +2891,7 @@ tg-cd:
   manufacturer:         Nintendo
   release:              2011
   hardware:             portable
-  extensions:           [3ds, 3dsx, cxi, app, axf, elf]
+  extensions:           [3ds, 3dsx, app, axf, cxi, elf, squashfs]
   emulators:
     citra:
       citra:            { requireAnyOf: [BR2_PACKAGE_CITRA]          }

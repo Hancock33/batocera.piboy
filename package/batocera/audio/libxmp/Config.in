@@ -1,5 +1,6 @@
 config BR2_PACKAGE_LIBXMP
 	bool "libxmp"
+
 	help
 	  Libxmp is a library that renders module files to PCM data. It supports
 	  over 90 mainstream and obscure module formats including Protracker (MOD),

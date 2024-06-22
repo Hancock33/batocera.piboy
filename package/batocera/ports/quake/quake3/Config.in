@@ -1,9 +1,10 @@
 config BR2_PACKAGE_QUAKE3
-    bool "quake3"
-    select BR2_PACKAGE_SDL2
-    select BR2_PACKAGE_SDL2_NET
-    select BR2_PACKAGE_GL4ES    if (!BR2_PACKAGE_HAS_LIBGL) && BR2_PACKAGE_HAS_LIBGLES
-    help
-      The ioquake3 community effort to continue supporting/developing id's Quake III Arena.
+	bool "quake3"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_NET
+	select BR2_PACKAGE_GL4ES    if (!BR2_PACKAGE_HAS_LIBGL) && BR2_PACKAGE_HAS_LIBGLES
 
-      https://www.ioquake3.org/
+	help
+	  The ioquake3 community effort to continue supporting/developing id's Quake III Arena.
+
+	  https://www.ioquake3.org/

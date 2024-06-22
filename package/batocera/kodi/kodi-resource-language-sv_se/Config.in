@@ -1,6 +1,7 @@
 config BR2_PACKAGE_KODI_RESOURCE_LANGUAGE_SV_SE
-    bool "kodi-resource-language-sv_se"
-    help
-      Kodi sv_se language resource
+	bool "kodi-resource-language-sv_se"
 
-      https://kodi.tv
+	help
+	  Kodi sv_se language resource
+
+	  https://kodi.tv

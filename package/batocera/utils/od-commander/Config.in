@@ -6,6 +6,7 @@ config BR2_PACKAGE_OD_COMMANDER
 	select BR2_PACKAGE_SDL2_TTF
 	select BR2_PACKAGE_DEJAVU
 	select BR2_PACKAGE_NANUM_FONT
+
 	help
 	  Two-pane file manager in the style of Norton Commander.
 
@@ -27,9 +28,10 @@ config BR2_PACKAGE_OD_COMMANDER_AUTOSCALE
 
 config BR2_PACKAGE_OD_COMMANDER_WIDTH
 	string "Screen width"
+
 	help
 	  Commander will pick the best resolution by default as reported by SDL.
-	  If this is unreliable on a given kernel, use this and the HEIGHT option to force a different one.
+	  if this is unreliable on a given kernel, use this and the HEIGHT option to force a different one.
 
 config BR2_PACKAGE_OD_COMMANDER_HEIGHT
 	string "Screen height"

@@ -8,8 +8,9 @@ config BR2_PACKAGE_FREEDROID
 	select BR2_PACKAGE_SDL_IMAGE_JPEG
 
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
-	 The original Freedroid, a free & open-source clone of the C64 classic Paradroid.
+	  The original Freedroid, a free & open-source clone of the C64 classic Paradroid.
 
 	  https://github.com/ReinhardPrix/FreedroidClassic
 

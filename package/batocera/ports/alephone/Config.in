@@ -10,6 +10,6 @@ config BR2_PACKAGE_ALEPHONE
 
 	help
 	  ALEPHONE
-	  Aleph One is the open source continuation of Bungie’s Marathon 2 game engine.
+	  Aleph One is the open source continuation of Bungies Marathon 2 game engine.
 
 	  https://alephone.lhowon.org/

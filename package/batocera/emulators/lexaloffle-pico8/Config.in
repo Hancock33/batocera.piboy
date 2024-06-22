@@ -1,4 +1,5 @@
 config BR2_PACKAGE_LEXALOFFLE_PICO8
-        bool "lexaloffle-pico8"
-        help
-          Support for the officiel Pico-8 engine
+	bool "lexaloffle-pico8"
+
+	help
+	  Support for the officiel Pico-8 engine

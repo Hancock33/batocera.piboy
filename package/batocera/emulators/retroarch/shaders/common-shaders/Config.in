@@ -1,7 +1,8 @@
 config BR2_PACKAGE_COMMON_SHADERS
-        bool "common-shaders"
+	bool "common-shaders"
 	depends on BR2_PACKAGE_RETROARCH
-        help
-          Common CG shaders for RetroArch.
+
+	help
+	  Common CG shaders for RetroArch.
 
 	  http://www.libretro.com

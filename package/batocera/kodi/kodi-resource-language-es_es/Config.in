@@ -1,6 +1,7 @@
 config BR2_PACKAGE_KODI_RESOURCE_LANGUAGE_ES_ES
-    bool "kodi-resource-language-es_es"
-    help
-      Kodi es_es language resource
+	bool "kodi-resource-language-es_es"
 
-      https://kodi.tv
+	help
+	  Kodi es_es language resource
+
+	  https://kodi.tv

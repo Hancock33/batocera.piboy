@@ -1,6 +1,7 @@
 config BR2_PACKAGE_SOCKPP
-    bool "sockpp"
-    help
-      sockpp - Modern C++ socket library.
+	bool "sockpp"
 
-      https://github.com/fpagliughi/sockpp
+	help
+	  sockpp - Modern C++ socket library.
+
+	  https://github.com/fpagliughi/sockpp
