@@ -1,5 +1,5 @@
 config BR2_PACKAGE_BATOCERA_ES_PIBOY
-        bool "batocera-es-piboy"
+	bool "batocera-es-piboy"
 	depends on BR2_INSTALL_LIBSTDCPP
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
@@ -24,26 +24,27 @@ config BR2_PACKAGE_BATOCERA_ES_PIBOY
 	select BR2_PACKAGE_PULSEAUDIO_ENABLE_ATOMIC
 	select BR2_PACKAGE_PULSEAUDIO_UTILS
 	select BR2_PACKAGE_BATOCERA_ES_SYSTEM
-    select BR2_PACKAGE_FFMPEG
-    select BR2_PACKAGE_FFMPEG_GPL
+	select BR2_PACKAGE_FFMPEG
+	select BR2_PACKAGE_FFMPEG_GPL
 	select BR2_PACKAGE_FFMPEG_FFPROBE
 	select BR2_PACKAGE_FFMPEG_AVRESAMPLE
 	select BR2_PACKAGE_FFMPEG_SWSCALE
 	select BR2_PACKAGE_FFMPEG_POSTPROC
 
-        help
-          A multi emulator frontend.
+	help
+	  A multi emulator frontend.
 
 	  https://github.com/batocera-linux/batocera-emulationstation
 
 if BR2_PACKAGE_BATOCERA_ES_PIBOY
 choice
-    prompt "ES version to compile"
-    config BR2_PACKAGE_BATOCERA_ES_PIBOY_STANDARD
-          bool "standard"
-    config BR2_PACKAGE_BATOCERA_ES_PIBOY_ARCADE
-          bool "arcade"
- endchoice
+	prompt "ES version to compile"
+	config BR2_PACKAGE_BATOCERA_ES_PIBOY_STANDARD
+	bool "standard"
+
+	config BR2_PACKAGE_BATOCERA_ES_PIBOY_ARCADE
+	bool "arcade"
+endchoice
 endif
 
 comment "Emulation station 2 needs a toolchain w/ C++"

@@ -1,5 +1,5 @@
 diff --git a/src/gallium/drivers/radeonsi/si_pipe.h b/src/gallium/drivers/radeonsi/si_pipe.h
-index 50849fc8920..567c873f90f 100644
+index d6cfffac5e6..25e13379662 100644
 --- a/src/gallium/drivers/radeonsi/si_pipe.h
 +++ b/src/gallium/drivers/radeonsi/si_pipe.h
 @@ -2227,7 +2227,7 @@ si_set_rasterized_prim(struct si_context *sctx, enum mesa_prim rast_prim,
@@ -12,10 +12,10 @@ index 50849fc8920..567c873f90f 100644
     }
  }
 diff --git a/src/gallium/drivers/radeonsi/si_state.c b/src/gallium/drivers/radeonsi/si_state.c
-index c28acdd428d..4e6aae45549 100644
+index 65db6a0d6c0..5ec5a97e587 100644
 --- a/src/gallium/drivers/radeonsi/si_state.c
 +++ b/src/gallium/drivers/radeonsi/si_state.c
-@@ -1309,17 +1309,14 @@ static void si_bind_rs_state(struct pipe_context *ctx, void *state)
+@@ -1310,17 +1310,14 @@ static void si_bind_rs_state(struct pipe_context *ctx, void *state)
         old_rs->point_smooth != rs->point_smooth)
        si_update_ps_inputs_read_or_disabled(sctx);
  
@@ -39,16 +39,16 @@ index c28acdd428d..4e6aae45549 100644
        sctx->do_update_shaders = true;
  
     if (old_rs->line_smooth != rs->line_smooth ||
-@@ -3284,7 +3281,6 @@ static void si_set_framebuffer_state(struct pipe_context *ctx,
+@@ -3296,7 +3293,6 @@ static void si_set_framebuffer_state(struct pipe_context *ctx,
     si_ps_key_update_framebuffer(sctx);
     si_ps_key_update_framebuffer_blend_rasterizer(sctx);
     si_ps_key_update_framebuffer_rasterizer_sample_shading(sctx);
 -   si_vs_ps_key_update_rast_prim_smooth_stipple(sctx);
     si_update_ps_inputs_read_or_disabled(sctx);
+    si_update_vrs_flat_shading(sctx);
     sctx->do_update_shaders = true;
- 
 diff --git a/src/gallium/drivers/radeonsi/si_state.h b/src/gallium/drivers/radeonsi/si_state.h
-index c2e9e9d7d79..e912fc96531 100644
+index 1984336d8ec..aab75cc56d1 100644
 --- a/src/gallium/drivers/radeonsi/si_state.h
 +++ b/src/gallium/drivers/radeonsi/si_state.h
 @@ -663,7 +663,6 @@ void si_update_ps_inputs_read_or_disabled(struct si_context *sctx);
@@ -60,10 +60,10 @@ index c2e9e9d7d79..e912fc96531 100644
  void si_ps_key_update_framebuffer_blend_rasterizer(struct si_context *sctx);
  void si_ps_key_update_rasterizer(struct si_context *sctx);
 diff --git a/src/gallium/drivers/radeonsi/si_state_shaders.cpp b/src/gallium/drivers/radeonsi/si_state_shaders.cpp
-index 11f483aef58..b18f8692f8a 100644
+index 1ae91ab54eb..c16a684af1e 100644
 --- a/src/gallium/drivers/radeonsi/si_state_shaders.cpp
 +++ b/src/gallium/drivers/radeonsi/si_state_shaders.cpp
-@@ -2237,60 +2237,6 @@ void si_update_ps_inputs_read_or_disabled(struct si_context *sctx)
+@@ -2235,60 +2235,6 @@ void si_update_ps_inputs_read_or_disabled(struct si_context *sctx)
     }
  }
  
@@ -124,7 +124,7 @@ index 11f483aef58..b18f8692f8a 100644
  static void si_get_vs_key_outputs(struct si_context *sctx, struct si_shader_selector *vs,
                                    union si_shader_key *key)
  {
-@@ -2300,12 +2246,15 @@ static void si_get_vs_key_outputs(struct si_context *sctx, struct si_shader_sele
+@@ -2298,12 +2244,15 @@ static void si_get_vs_key_outputs(struct si_context *sctx, struct si_shader_sele
     uint64_t outputs_written = vs->info.outputs_written_before_ps;
     uint64_t linked = outputs_written & sctx->ps_inputs_read_or_disabled;
  
@@ -142,7 +142,7 @@ index 11f483aef58..b18f8692f8a 100644
     key->ge.opt.remove_streamout = vs->info.enabled_streamout_buffer_mask &&
                                    !sctx->streamout.enabled_mask;
  }
-@@ -2318,6 +2267,7 @@ static void si_clear_vs_key_outputs(struct si_context *sctx, struct si_shader_se
+@@ -2316,6 +2265,7 @@ static void si_clear_vs_key_outputs(struct si_context *sctx, struct si_shader_se
     key->ge.opt.remove_streamout = 0;
     key->ge.opt.ngg_culling = 0;
     key->ge.mono.u.vs_export_prim_id = 0;
@@ -150,7 +150,7 @@ index 11f483aef58..b18f8692f8a 100644
  }
  
  void si_ps_key_update_framebuffer(struct si_context *sctx)
-@@ -2516,6 +2466,27 @@ void si_ps_key_update_dsa(struct si_context *sctx)
+@@ -2514,6 +2464,27 @@ void si_ps_key_update_dsa(struct si_context *sctx)
     key->ps.part.epilog.alpha_func = sctx->queued.named.dsa->alpha_func;
  }
  
@@ -178,7 +178,7 @@ index 11f483aef58..b18f8692f8a 100644
  void si_ps_key_update_sample_shading(struct si_context *sctx)
  {
     struct si_shader_selector *sel = sctx->shader.ps.cso;
-@@ -2641,6 +2612,7 @@ static inline void si_shader_selector_key(struct pipe_context *ctx, struct si_sh
+@@ -2639,6 +2610,7 @@ static inline void si_shader_selector_key(struct pipe_context *ctx, struct si_sh
        }
        break;
     case MESA_SHADER_FRAGMENT:
@@ -186,7 +186,7 @@ index 11f483aef58..b18f8692f8a 100644
        break;
     default:
        assert(0);
-@@ -3515,18 +3487,12 @@ static void si_update_last_vgt_stage_state(struct si_context *sctx,
+@@ -3513,18 +3485,12 @@ static void si_update_last_vgt_stage_state(struct si_context *sctx,
                                             struct si_shader_selector *old_hw_vs,
                                             struct si_shader *old_hw_vs_variant)
  {

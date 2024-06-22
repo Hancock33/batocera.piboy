@@ -4,6 +4,7 @@ config BR2_PACKAGE_DOOMRETRO
 	select BR2_PACKAGE_SDL2_MIXER
 	select BR2_PACKAGE_SDL2_IMAGE
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  The classic, refined DOOM source port.
 

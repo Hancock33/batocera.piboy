@@ -1,7 +1,8 @@
 config BR2_PACKAGE_PORTMIDI
 	bool "portmidi"
 	select BR2_PACKAGE_ALSA_LIB
+
 	help
 	  Cross platform library for interfacing with OS MIDI I/O APIs
 
-		https://github.com/portmidi/portmidi
+	  https://github.com/portmidi/portmidi

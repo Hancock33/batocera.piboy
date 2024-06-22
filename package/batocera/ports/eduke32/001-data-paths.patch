@@ -33,10 +33,10 @@ index 5f3fcf114..93525bc80 100644
              if (asperr == -2)
              {
 diff --git a/source/duke3d/src/game.cpp b/source/duke3d/src/game.cpp
-index 4597ce81f..fcd7632b2 100644
+index 99e184adc..3eb1be957 100644
 --- a/source/duke3d/src/game.cpp
 +++ b/source/duke3d/src/game.cpp
-@@ -6596,7 +6596,7 @@ int app_main(int argc, char const* const* argv)
+@@ -6595,7 +6595,7 @@ int app_main(int argc, char const* const* argv)
  
      G_ExtPreInit(argc, argv);
  
@@ -45,7 +45,7 @@ index 4597ce81f..fcd7632b2 100644
      engineSetLogVerbosityCallback(dukeVerbosityCallback);
  
  #ifdef __APPLE__
-@@ -6907,7 +6907,7 @@ int app_main(int argc, char const* const* argv)
+@@ -6906,7 +6906,7 @@ int app_main(int argc, char const* const* argv)
  
      CONFIG_ReadSettings();
  
@@ -55,7 +55,7 @@ index 4597ce81f..fcd7632b2 100644
      CONFIG_SetDefaultKeys(keydefaults, true);
  
 diff --git a/source/duke3d/src/startgtk.game.cpp b/source/duke3d/src/startgtk.game.cpp
-index 6a7638300..f89fe8693 100644
+index f29a84f80..88b12fe6c 100644
 --- a/source/duke3d/src/startgtk.game.cpp
 +++ b/source/duke3d/src/startgtk.game.cpp
 @@ -286,7 +286,7 @@ static unsigned char GetModsDirNames(GtkListStore *list)

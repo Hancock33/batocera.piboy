@@ -66,7 +66,7 @@ def createXemuConfig(iniConfig, system, rom, playersControllers, gameResolution)
         iniConfig.set("sys", "mem_limit", '"' + system.config["xemu_memory"] + '"')
     else:
         iniConfig.set("sys", "mem_limit", '"64"')
-    
+
     if system.name == "chihiro":
         iniConfig.set("sys", "mem_limit", '"128"')
         iniConfig.set("sys.files", "flashrom_path", '"/userdata/bios/cerbios.bin"')

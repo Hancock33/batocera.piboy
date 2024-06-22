@@ -1,5 +1,5 @@
 config BR2_PACKAGE_PYWEBVIEW
-        bool "pywebview"
+	bool "pywebview"
 	select BR2_PACKAGE_PYTHON_CRYPTOGRAPHY
 	select BR2_PACKAGE_WEBKITGTK
 	select BR2_PACKAGE_WEBKITGTK_MULTIMEDIA

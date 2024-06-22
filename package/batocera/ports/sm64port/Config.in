@@ -2,6 +2,7 @@ config BR2_PACKAGE_SM64PORT
 	bool "sm64port"
 	select BR2_PACKAGE_SDL2
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  A Super Mario 64 decompilation, brought to you by a bunch of clever folks.
 

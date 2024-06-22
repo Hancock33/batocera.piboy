@@ -1,4 +1,5 @@
 config BR2_PACKAGE_BATOCERA_NOTICE
-    bool "batocera-notice"
-    help
-      Batocera pdf notice
+	bool "batocera-notice"
+
+	help
+	  Batocera pdf notice

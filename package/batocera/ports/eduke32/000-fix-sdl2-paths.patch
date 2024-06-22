@@ -1,8 +1,8 @@
 diff --git a/Common.mak b/Common.mak
-index 6e5822f68..17589b174 100644
+index 56d1be9ad..f4beb41bd 100644
 --- a/Common.mak
 +++ b/Common.mak
-@@ -897,7 +897,7 @@ endif
+@@ -908,7 +908,7 @@ endif
  
  ifeq ($(RENDERTYPE),SDL)
      ifeq ($(SDL_TARGET),2)
@@ -11,7 +11,7 @@ index 6e5822f68..17589b174 100644
          SDLNAME := SDL2
      else ifeq ($(SDL_TARGET),1)
          SDLCONFIG := sdl-config
-@@ -942,8 +942,8 @@ ifeq ($(RENDERTYPE),SDL)
+@@ -956,8 +956,8 @@ ifeq ($(RENDERTYPE),SDL)
              SDLCONFIG_CFLAGS := $(strip $(subst -Dmain=SDL_main,,$(shell $(SDLCONFIG) --cflags)))
              SDLCONFIG_LIBS := $(strip $(subst -mwindows,,$(shell $(SDLCONFIG) --libs)))
  

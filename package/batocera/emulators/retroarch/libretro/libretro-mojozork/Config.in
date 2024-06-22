@@ -1,10 +1,10 @@
 config BR2_PACKAGE_LIBRETRO_MOJOZORK
-        bool "libretro-mojozork"
+	bool "libretro-mojozork"
 	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
 
-        help
-          A simple Z-Machine implementation in a single C file.
+	help
+	  A simple Z-Machine implementation in a single C file.
 
 	  http://www.libretro.com
 

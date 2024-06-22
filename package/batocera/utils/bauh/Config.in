@@ -1,5 +1,5 @@
 config BR2_PACKAGE_BAUH
-    bool "bauh"
+	bool "bauh"
 	select BR2_PACKAGE_QT5
 	select BR2_PACKAGE_PYTHON_PYQT5_SIP
 	select BR2_PACKAGE_PYTHON_SETUPTOOLS

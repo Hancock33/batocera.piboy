@@ -1,7 +1,8 @@
 config BR2_PACKAGE_LIBRETRO_SAME_CDI
-    bool "libretro-same-cdi"
-    depends on BR2_PACKAGE_RETROARCH
-      help
-        A libretro CD-i emulator core (branched from MAME)
+	bool "libretro-same-cdi"
+	depends on BR2_PACKAGE_RETROARCH
 
-        http://www.libretro.com
+	help
+	  A libretro CD-i emulator core (branched from MAME)
+
+	  http://www.libretro.com

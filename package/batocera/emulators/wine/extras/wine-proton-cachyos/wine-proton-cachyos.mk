@@ -3,9 +3,9 @@
 # wine-proton-cachyos
 #
 ################################################################################
-# Version: Commits on Jun 06, 2024
-WINE_PROTON_CACHYOS_VERSION = cachyos-proton-9.0-20240605
-WINE_CACHYOS_BRANCH = cachyos-proton-9.0-20240605
+# Version: Commits on Jun 19, 2024
+WINE_PROTON_CACHYOS_VERSION = cachyos_proton_9.0_20240619
+WINE_CACHYOS_BRANCH = cachyos_proton_9.0_20240619
 WINE_PROTON_CACHYOS_SOURCE = wine-proton-cachyos-$(WINE_PROTON_CACHYOS_VERSION).tar.gz
 WINE_PROTON_CACHYOS_SITE = $(call github,CachyOS,wine-cachyos,$(WINE_PROTON_CACHYOS_VERSION))
 WINE_PROTON_CACHYOS_LICENSE = LGPL-2.1+

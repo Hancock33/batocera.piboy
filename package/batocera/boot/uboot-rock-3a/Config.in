@@ -1,4 +1,5 @@
 config BR2_PACKAGE_UBOOT_ROCK_3A
-    bool "uboot files for Rock 3A"
-    help
-        uboot files for Rock 3A
+	bool "uboot files for Rock 3A"
+
+	help
+	  uboot files for Rock 3A

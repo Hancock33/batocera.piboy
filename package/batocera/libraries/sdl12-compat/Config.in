@@ -1,6 +1,6 @@
 config BR2_PACKAGE_SDL12_COMPAT
-    bool "sdl12-compat"
-    select BR2_PACKAGE_SDL2
+	bool "sdl12-compat"
+	select BR2_PACKAGE_SDL2
 
-      help
-        An SDL-1.2 compatibility layer that uses SDL 2.0 behind the scenes.
+	help
+	  An SDL-1.2 compatibility layer that uses SDL 2.0 behind the scenes.

@@ -58,7 +58,7 @@ class SupermodelGenerator(Generator):
             drivingGame = 1
         else:
             drivingGame = 0
-        
+
         #driving sensitivity
         if system.isOptSet("joystickSensitivity"):
             sensitivity = system.config["joystickSensitivity"]

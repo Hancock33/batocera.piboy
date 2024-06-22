@@ -1,6 +1,7 @@
 config BR2_PACKAGE_PICADE
-    bool "picade"
-      help
-        Adds support for the Pimoroni Picade RPi arcade case
+	bool "picade"
 
-        https://github.com/pimoroni/picade-hat
+	help
+	  Adds support for the Pimoroni Picade RPi arcade case
+
+	  https://github.com/pimoroni/picade-hat

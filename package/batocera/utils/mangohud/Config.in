@@ -6,4 +6,4 @@ config BR2_PACKAGE_MANGOHUD
 	help
 	  Command line tool for injecting HUD / overlay in GL/Vulkan apps
 
-          https://github.com/flightlessmango/MangoHud
+	  https://github.com/flightlessmango/MangoHud

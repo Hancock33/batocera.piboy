@@ -1,4 +1,5 @@
 config BR2_PACKAGE_XXD
 	bool "xxd"
+
 	help
 	  xxd - a hexdump utility by Juergen Weigert, v1.11 by Vadim Vygonets

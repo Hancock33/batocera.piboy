@@ -1,5 +1,5 @@
 config BR2_PACKAGE_CORSIXTH
-    bool "corsixth"
+	bool "corsixth"
 	select BR2_PACKAGE_LPEG
 	select BR2_PACKAGE_LUA
 	select BR2_PACKAGE_LUA_LPEG_PATTERNS
@@ -11,7 +11,7 @@ config BR2_PACKAGE_CORSIXTH
 	select BR2_PACKAGE_SDL2_MIXER
 	select BR2_PACKAGE_FFMPEG
 
-    help
+	help
 	  CorsixTH - Theme Hospital engine
 
 	  https://github.com/CorsixTH/CorsixTH

@@ -1,6 +1,7 @@
 config BR2_PACKAGE_NOTO_CJK_FONTS
-    bool "noto-cjk-fonts"
-    help
-      Noto - Chinese, Japanese & Korean fonts.
+	bool "noto-cjk-fonts"
 
-      https://github.com/notofonts/noto-cjk
+	help
+	  Noto - Chinese, Japanese & Korean fonts.
+
+	  https://github.com/notofonts/noto-cjk

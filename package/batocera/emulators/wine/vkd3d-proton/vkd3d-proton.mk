@@ -3,8 +3,8 @@
 # vkd3d-proton
 #
 ################################################################################
-# Version: Commits on Mar 15, 2024
-VKD3D_PROTON_VERSION = v2.12
+# Version: Commits on Jun 21, 2024
+VKD3D_PROTON_VERSION = v2.13
 VKD3D_PROTON_SOURCE = vkd3d-proton-$(subst v,,$(VKD3D_PROTON_VERSION)).tar.zst
 VKD3D_PROTON_SITE = https://github.com/HansKristian-Work/vkd3d-proton/releases/download/$(VKD3D_PROTON_VERSION)
 VKD3D_PROTON_LICENSE = lgpl

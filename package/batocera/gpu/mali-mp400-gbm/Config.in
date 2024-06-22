@@ -22,6 +22,6 @@ config BR2_PACKAGE_PROVIDES_LIBGLES
 config BR2_PACKAGE_PROVIDES_LIBMALI
 	default "mali-mp400-gbm"
 
-endif
+	  endif
 
 comment "mali-mp400-gbm"

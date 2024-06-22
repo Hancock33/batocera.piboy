@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if ! { [ -e /sys/devices/system/cpu/cpufreq/policy0/scaling_governor ] && 
+if ! { [ -e /sys/devices/system/cpu/cpufreq/policy0/scaling_governor ] &&
     [ -e /sys/devices/system/cpu/cpufreq/policy0/scaling_available_governors ]; }; then
         exit 0
 fi
@@ -9,7 +9,7 @@ fi
 check_governor() {
     local GOVERNOR_TO_CHECK=$1
     local AVAILABLE_GOVERNORS_PATH="/sys/devices/system/cpu/cpufreq/policy0/scaling_available_governors"
-    
+
     local AVAILABLE_GOVERNORS=$(cat "$AVAILABLE_GOVERNORS_PATH")
     if echo "$AVAILABLE_GOVERNORS" | grep -q "\b$GOVERNOR_TO_CHECK\b"; then
         return 0

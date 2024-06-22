@@ -1,8 +1,8 @@
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index b600df82669d..b3a9d61a53be 100644
+index 11e57ba2985c..ce1557c65764 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
-@@ -2254,6 +2254,9 @@
+@@ -2248,6 +2248,9 @@
  			disable
  			  Do not enable intel_pstate as the default
  			  scaling driver for the supported processors
@@ -12,7 +12,7 @@ index b600df82669d..b3a9d61a53be 100644
                          active
                            Use intel_pstate driver to bypass the scaling
                            governors layer of cpufreq and provides it own
-@@ -4472,6 +4475,15 @@
+@@ -4466,6 +4469,15 @@
  		nomsi		[MSI] If the PCI_MSI kernel config parameter is
  				enabled, this kernel boot option can be used to
  				disable the use of MSI interrupts system-wide.
@@ -107,10 +107,10 @@ index 1e0d101b020a..b784ab090591 100644
  --------------
  
 diff --git a/Documentation/userspace-api/index.rst b/Documentation/userspace-api/index.rst
-index 5926115ec0ed..1e78586662fb 100644
+index 8a251d71fa6e..02bea81fb4bf 100644
 --- a/Documentation/userspace-api/index.rst
 +++ b/Documentation/userspace-api/index.rst
-@@ -63,6 +63,7 @@ Everything else
+@@ -64,6 +64,7 @@ Everything else
     vduse
     futex2
     perf_ring_buffer
@@ -523,7 +523,7 @@ index 000000000000..767844637a7d
 +  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index cf9c9221c388..cf155b1f9480 100644
+index a39c237edb95..5a01ee2210af 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -15997,6 +15997,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
@@ -11497,7 +11497,7 @@ index 25feab188dfe..0243abb0e491 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/Kconfig b/drivers/gpu/drm/amd/display/Kconfig
-index 5fcd4f778dc3..c86a73869b12 100644
+index 47b8b49da8a7..943959d1f401 100644
 --- a/drivers/gpu/drm/amd/display/Kconfig
 +++ b/drivers/gpu/drm/amd/display/Kconfig
 @@ -51,4 +51,10 @@ config DRM_AMD_SECURE_DISPLAY
@@ -11512,7 +11512,7 @@ index 5fcd4f778dc3..c86a73869b12 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index eba9b1731baa..2e285183a2e6 100644
+index a519fa49ee84..d8b9b4f1fa20 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -157,6 +157,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_351_DMUB);
@@ -18795,10 +18795,10 @@ index 20f7e98ee8af..0698c0292d8f 100644
  	 * Set by drivers that want to register with the energy model after the
  	 * policy is properly initialized, but before the governor is started.
 diff --git a/include/linux/pagemap.h b/include/linux/pagemap.h
-index ee633712bba0..77d601318008 100644
+index 59f1df0cde5a..fed6b8f435b1 100644
 --- a/include/linux/pagemap.h
 +++ b/include/linux/pagemap.h
-@@ -1270,7 +1270,7 @@ struct readahead_control {
+@@ -1274,7 +1274,7 @@ struct readahead_control {
  		._index = i,						\
  	}
  
@@ -20746,7 +20746,7 @@ index dbf896f3146c..4702cd2f1ffc 100644
  /*
   * Sender's congestion state indicating normal or abnormal situations
 diff --git a/init/Kconfig b/init/Kconfig
-index 72404c1f2157..44616ffe0af5 100644
+index febdea2afc3b..3ba6142f2f42 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -132,6 +132,10 @@ config THREAD_INFO_IN_TASK
@@ -38198,7 +38198,7 @@ index e731d45befc7..78653db1ddd8 100644
  static int __read_mostly sysctl_compact_memory;
  
 diff --git a/mm/huge_memory.c b/mm/huge_memory.c
-index 89932fd0f62e..70e627a90c7c 100644
+index db7946a0a28c..c9194f7afe00 100644
 --- a/mm/huge_memory.c
 +++ b/mm/huge_memory.c
 @@ -63,7 +63,11 @@ unsigned long transparent_hugepage_flags __read_mostly =
@@ -38242,7 +38242,7 @@ index 12c9297ed4a7..761f48142325 100644
  EXPORT_SYMBOL_GPL(dirty_writeback_interval);
  
 diff --git a/mm/page_alloc.c b/mm/page_alloc.c
-index 222299b5c0e6..c8f50c68e126 100644
+index 7300aa9f14b0..fde2a84d858b 100644
 --- a/mm/page_alloc.c
 +++ b/mm/page_alloc.c
 @@ -271,7 +271,11 @@ const char * const migratetype_names[MIGRATE_TYPES] = {
@@ -41063,7 +41063,7 @@ index 28ffcfbeef14..7b13915ba288 100644
  		icsk->icsk_ca_ops->init(sk);
  	if (tcp_ca_needs_ecn(sk))
 diff --git a/net/ipv4/tcp_input.c b/net/ipv4/tcp_input.c
-index 9c04a9c8be9d..2c89efbc8ddf 100644
+index 01d208e0eef3..a54951d6871d 100644
 --- a/net/ipv4/tcp_input.c
 +++ b/net/ipv4/tcp_input.c
 @@ -365,7 +365,7 @@ static void __tcp_ecn_check_ce(struct sock *sk, const struct sk_buff *skb)

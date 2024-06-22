@@ -6,6 +6,7 @@ config BR2_PACKAGE_SRB2
 	select BR2_PACKAGE_LIBOPENMPT
 
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  Sonic Robo Blast 2 is a 3D open-source Sonic the Hedgehog fangame built using a modified version of the Doom Legacy port of Doom.
 

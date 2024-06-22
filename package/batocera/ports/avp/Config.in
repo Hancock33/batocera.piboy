@@ -3,6 +3,7 @@ config BR2_PACKAGE_AVP
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  Want to play Aliens versus Predator (1999) in Linux?
 

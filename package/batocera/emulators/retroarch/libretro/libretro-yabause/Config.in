@@ -1,7 +1,8 @@
 config BR2_PACKAGE_LIBRETRO_YABAUSE
-        bool "libretro-yabause"
+	bool "libretro-yabause"
 	depends on BR2_PACKAGE_RETROARCH
-        help
-          Yabause libretro port (Sega Saturn emulator).
+
+	help
+	  Yabause libretro port (Sega Saturn emulator).
 
 	  http://www.libretro.com

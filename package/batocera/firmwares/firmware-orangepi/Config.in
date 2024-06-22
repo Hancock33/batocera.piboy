@@ -1,4 +1,5 @@
 config BR2_PACKAGE_FIRMWARE_ORANGEPI
 	bool "firmware-orangepi"
+
 	help
 	  Orange Pi specific firmware

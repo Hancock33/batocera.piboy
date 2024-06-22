@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index 5e5dd86f..4081331c 100644
+index 57a9af55..2ba0d52b 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -9,194 +9,281 @@ namespace PlatformIds
+@@ -9,195 +9,282 @@ namespace PlatformIds
  	static std::map<std::string, PlatformId> Platforms =
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
@@ -290,6 +290,7 @@ index 5e5dd86f..4081331c 100644
  		{ "zx81",					ZX81 },
 -		{ "tic80",					TIC80 },
 -		{ "gp32",					GP32 },
+-		{ "chihiro",				SEGA_CHIHIRO },
 -
 -		// batocera specific names
 +		// Batocera Systems
@@ -323,6 +324,7 @@ index 5e5dd86f..4081331c 100644
 -		{ "mrboom",					MRBOOM },
 -		{ "sonicretro",				SONIC },
 -		{ "cannonball",				CANNONBALL },
++		{ "chihiro",				SEGA_CHIHIRO },
 +		{ "megadrive",				SEGA_MEGA_DRIVE },
 +		{ "sg-1000",				SEGA_SG1000 },
  		{ "multivision",			SEGA_SG1000 },
@@ -367,7 +369,7 @@ index 5e5dd86f..4081331c 100644
 +		{ "crvision",				VTECH_CREATIVISION },
  		{ "watara",					WATARA_SUPERVISION },
 -		{ "supervision",			WATARA_SUPERVISION },
- 
+-
 -		{ "model3",					MODEL3 },
 -			
 -		{ "imageviewer",			IMAGEVIEWER },
@@ -386,7 +388,7 @@ index 5e5dd86f..4081331c 100644
 -		{ "astrocade",				ASTROCADE },
 -		{ "archimedes",				ARCHIMEDES },			
 -		{ "adam",					ADAM },
--
+ 
 -		{ "fmtowns",				FMTOWNS },
 -		{ "cdi",					PHILIPS_CDI },			
 -		{ "fm7",					FUJITSU_FM7 },
@@ -422,10 +424,10 @@ index 5e5dd86f..4081331c 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index 016aa973..63e01ea6 100644
+index 78947739..81edc5ee 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
-@@ -11,165 +11,250 @@ namespace PlatformIds
+@@ -11,54 +11,170 @@ namespace PlatformIds
  	{
  		PLATFORM_UNKNOWN = 0,
  
@@ -611,7 +613,8 @@ index 016aa973..63e01ea6 100644
 +		SEGA,
  		SEGA_32X,
  		SEGA_CD,
- 		SEGA_DREAMCAST,
+ 		SEGA_CHIHIRO,
+@@ -66,111 +182,80 @@ namespace PlatformIds
  		SEGA_GAME_GEAR,
  		SEGA_GENESIS,
  		SEGA_MASTER_SYSTEM,
@@ -847,7 +850,7 @@ index 66de7c31..1390f3cb 100644
  	/* Non existing systems
  	{ AMIGACDTV, "129" },
 diff --git a/es-app/src/scrapers/HfsDBScraper.cpp b/es-app/src/scrapers/HfsDBScraper.cpp
-index b3d1f138..2e8045d4 100644
+index a252ef60..25223140 100644
 --- a/es-app/src/scrapers/HfsDBScraper.cpp
 +++ b/es-app/src/scrapers/HfsDBScraper.cpp
 @@ -74,7 +74,6 @@ const std::map<PlatformId, std::string> hfsdb_platformids
@@ -858,6 +861,24 @@ index b3d1f138..2e8045d4 100644
  	{ THOMSON_TO_MO, "183673" },
  	{ MSX, "113089" },
  	{ NOKIA_NGAGE, "128704" },
+@@ -106,6 +105,7 @@ const std::map<PlatformId, std::string> hfsdb_platformids
+ 	{ SCUMMVM, "82805" },
+ 	{ SEGA_32X, "33731" },
+ 	{ SEGA_CD, "83493" },
++	{ SEGA_CHIHIRO, "75535"}
+ 	{ SEGA_SG1000, "75225" },
+ 	{ SUPER_NINTENDO, "82351" },
+ 	{ SUPER_NINTENDO_MSU1, "82351" },
+@@ -143,8 +143,7 @@ const std::map<PlatformId, std::string> hfsdb_platformids
+ 	{ CAMPUTER_LYNX, "240842" },
+ 	{ EPOCH_GAMEPOCKET, "190501" },
+ 	{ GP32, "240869"},
+-	{ VTECH_SOCRATES, "240929"},
+-	{ SEGA_CHIHIRO, "75535"}
++	{ VTECH_SOCRATES, "240929"}
+ };
+ 
+ const std::set<Scraper::ScraperMediaSource>& HfsDBScraper::getSupportedMedias()
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
 index 528e8510..30bf2eb3 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp

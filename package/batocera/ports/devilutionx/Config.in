@@ -10,6 +10,7 @@ config BR2_PACKAGE_DEVILUTIONX
 	select BR2_PACKAGE_LUASEC
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_IMAGE
+
 	help
 	  Diablo 1.
 

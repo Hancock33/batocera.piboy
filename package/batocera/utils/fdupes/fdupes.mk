@@ -3,8 +3,8 @@
 # fdupes
 #
 ################################################################################
-# Version: Commits on Jan 27, 2024
-FDUPES_VERSION = v2.3.0
+# Version: Commits on Jun 18, 2024
+FDUPES_VERSION = v2.3.1
 FDUPES_SITE = $(call github,adrianlopezroche,fdupes,$(FDUPES_VERSION))
 FDUPES_AUTORECONF = YES
 # fdupes needs curses.h but full ncurses support is disabled

@@ -51,7 +51,7 @@ class HypseusSingeGenerator(Generator):
             ratio = sar_num / sar_den
             width = int(height * ratio)
         return width, height
-    
+
     # Main entry of the module
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         # copy input.ini file templates
@@ -215,11 +215,11 @@ class HypseusSingeGenerator(Generator):
                 commandArray.extend(["-x", str(gameResolution["width"]), "-y", str(gameResolution["height"])])
                 if abs(gameResolution["width"] / gameResolution["height"] - 4/3) < 0.01:
                     xratio = 4/3
-        
+
         # Don't set bezel if screeen resolution is not conducive to needing them (i.e. CRT)
         if gameResolution["width"] / gameResolution["height"] < 1.51:
             bezelRequired = False
-        
+
         # Backend - Default OpenGL
         if system.isOptSet("hypseus_api") and system.config["hypseus_api"] == 'Vulkan':
             commandArray.append("-vulkan")
@@ -270,7 +270,7 @@ class HypseusSingeGenerator(Generator):
         # bezels
         if system.isOptSet('hypseus_bezels') and system.getOptBoolean("hypseus_bezels") == False:
             bezelRequired = False
-        
+
         if bezelRequired:
             if not os.path.exists(bezelPath):
                 commandArray.extend(["-bezel", "default.png"])
@@ -290,7 +290,7 @@ class HypseusSingeGenerator(Generator):
         # Singe joystick sensitivity, default is 5.
         if system.name == "singe" and system.isOptSet('singe_joystick_range'):
             commandArray.extend(["-js_range", system.config['singe_joystick_range']])
-        
+
         # Scanlines
         if system.isOptSet('hypseus_scanlines') and system.config['hypseus_scanlines'] > "0":
             commandArray.extend(["-scanlines", "-scanline_shunt", system.config['hypseus_scanlines']])

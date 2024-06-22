@@ -1,7 +1,8 @@
 config BR2_PACKAGE_LIBRETRO_SUPAFAUST
-        bool "libretro-supafaust"
+	bool "libretro-supafaust"
 	depends on BR2_PACKAGE_RETROARCH
-        help
-          A libretro Supafaust is a unsupported SNES emulator for multicore ARM Cortex A7,A9,A15,A53 Linux platforms.
+
+	help
+	  A libretro Supafaust is a unsupported SNES emulator for multicore ARM Cortex A7,A9,A15,A53 Linux platforms.
 
 	  http://www.libretro.com

@@ -1,0 +1,13 @@
+diff --git a/ayaneo-platform.c b/ayaneo-platform.c
+index bef883a..86dc63a 100644
+--- a/ayaneo-platform.c
++++ b/ayaneo-platform.c
+@@ -979,7 +979,7 @@ static int ayaneo_platform_probe(struct platform_device *pdev)
+         if (ret)
+                 return ret;
+ 
+-        ret = devm_device_add_groups(ayaneo_led_mc.led_cdev.dev, ayaneo_led_mc_groups);
++        ret = device_add_groups(ayaneo_led_mc.led_cdev.dev, ayaneo_led_mc_groups);
+         return ret;
+ }
+ 

@@ -5,10 +5,11 @@ config BR2_PACKAGE_OPENTYRIAN2000
 	depends on BR2_PACKAGE_SDL2_TTF
 	depends on BR2_PACKAGE_OPENAL
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
-	 OpenTyrian2000 is an open-source port of the DOS game Tyrian. It is a fork of
-	 OpenTyrian, with the end goal being to replicate the experience of Tyrian 2000
-	 as closely as possible
+	  OpenTyrian2000 is an open-source port of the DOS game Tyrian. It is a fork of
+	  OpenTyrian, with the end goal being to replicate the experience of Tyrian 2000
+	  as closely as possible
 
 comment "BR2_PACKAGE_OPENTYRIAN2000 needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP

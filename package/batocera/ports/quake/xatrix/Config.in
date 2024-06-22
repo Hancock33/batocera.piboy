@@ -3,6 +3,7 @@ config BR2_PACKAGE_XATRIX
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  The Reckoning for Yamagi Quake II
 

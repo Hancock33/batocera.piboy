@@ -15,6 +15,7 @@ config BR2_PACKAGE_SUPERTUX2
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_IMAGE
 	select BR2_PACKAGE_ZLIB
+
 	help
 	  SuperTux is a free classic 2D jump'n run sidescroller game in
 	  a style similar to the original Super Mario games covered

@@ -5,6 +5,6 @@ config BR2_PACKAGE_APPSTREAM_GLIB
 	select BR2_PACKAGE_JSON_GLIB
 
 	help
-	    This library provides objects and helper methods to help reading and writing AppStream metadata.
+	  This library provides objects and helper methods to help reading and writing AppStream metadata.
 
-		https://github.com/hughsie/appstream-glib
+	  https://github.com/hughsie/appstream-glib

@@ -7,7 +7,8 @@ config BR2_PACKAGE_APPLEWIN
 	select BR2_PACKAGE_MINIZIP_ZLIB
 	select BR2_PACKAGE_SLIRP
 	select BR2_PACKAGE_LIBPCAP
-	help
-		AppleWin linux / libretro port
 
-		https://github.com/audetto/AppleWin
+	help
+	  AppleWin linux / libretro port
+
+	  https://github.com/audetto/AppleWin

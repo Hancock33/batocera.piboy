@@ -2,14 +2,14 @@
    "actions_player1": [
        {
            "trigger": ["hotkey", "start"],
-            "type": "key",
+            "type": "key", 
             "target": ["KEY_LEFTALT", "KEY_F4"],
             "description": "Exit emulator"
         },
         {
            "trigger": ["hotkey", "r2"],
-            "type": "key",
-            "target": ["KEY_LEFTALT", "KEY_TAB"],
+            "type": "key", 
+            "target": ["KEY_LEFTCTRL", "KEY_TAB"],
             "description": "Display the controller screen"
         }
     ]

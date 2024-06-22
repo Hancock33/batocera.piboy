@@ -6,6 +6,7 @@ config BR2_PACKAGE_LIBRETRO_HATARIB
 	select BR2_PACKAGE_LIBPNG
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_ZLIB
+
 	help
 	  A libretro core for Hatari emulation of Atari ST STE TT Falcon.
 

@@ -19,4 +19,4 @@ config BR2_PACKAGE_SUYU
 	help
 	  A familiar, open source, and powerful Nintendo Switch emulator.
 
-		https://suyu.dev/
+	  https://suyu.dev/

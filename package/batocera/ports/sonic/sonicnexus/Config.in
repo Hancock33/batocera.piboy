@@ -1,12 +1,12 @@
 config BR2_PACKAGE_SONICNEXUS
 	bool "sonicnexus"
-		select BR2_PACKAGE_SDL2
-		select BR2_PACKAGE_SDL2_NET
-		select BR2_PACKAGE_SDL2_MIXER
-		select BR2_PACKAGE_LIBOGG
-		select BR2_PACKAGE_LIBVORBIS
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_NET
+	select BR2_PACKAGE_SDL2_MIXER
+	select BR2_PACKAGE_LIBOGG
+	select BR2_PACKAGE_LIBVORBIS
 
-    help
-      A decompilation of the 2008 Retro-Sonic Engine Demo of Sonic Nexus
+	help
+	  A decompilation of the 2008 Retro-Sonic Engine Demo of Sonic Nexus
 
 	  https://github.com/Rubberduckycooly/Sonic-Nexus-Decompilation
