@@ -34,17 +34,15 @@ config BR2_PACKAGE_IMG_GPU_POWERVR
 	  an upstream.
 
 if BR2_PACKAGE_IMG_GPU_POWERVR
+	# config BR2_PACKAGE_PROVIDES_LIBEGL
+		# default "img-gpu-powervr"
 
-	  #config BR2_PACKAGE_PROVIDES_LIBEGL
-	  #	default "img-gpu-powervr"
+	config BR2_PACKAGE_PROVIDES_LIBGLES
+		default "img-gpu-powervr"
 
-config BR2_PACKAGE_PROVIDES_LIBGLES
-	default "img-gpu-powervr"
-
-config BR2_PACKAGE_PROVIDES_LIBOPENCL
-	default "img-gpu-powervr"
-
-	  endif
+	config BR2_PACKAGE_PROVIDES_LIBOPENCL
+		default "img-gpu-powervr"
+endif
 
 config BR2_PACKAGE_IMG_GPU_POWERVR_EXAMPLES
 	bool "install examples"
