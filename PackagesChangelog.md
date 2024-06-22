@@ -492,7 +492,7 @@ Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149
 Utils|[evmapy](http://github.com/kempniu/evmapy)|bd65338c236cd30b4f2d7835733ea5d6b108b75d|Jul 09, 2015
 Looks|[nanum_font](http://github.com/ujuc/nanum-font)|33a5dec3cd6467979fed8ebfa64430d7cebdff9d|Oct 4, 2014
 Libraries|[python-proxy-tools](http://github.com/jtushman/proxy_tools)|db43f1e35d4f90a65c5a4d56d9e9af88212ec6e6|May 06, 2014
-Emulators|[model2](https://github.com/batocera-linux/model2emu/raw/main)|N/A|Jan 02, 2014
+Emulators|[model2](https://github.com/batocera-linux/model2emu/raw/main)|1.1a|Jan 02, 2014
 Utils|[xxd](http://github.com/ConorOG/xxd)|084dc9dec6b6a6d048934916aa9a539d49ba898d|Jul 25, 2013
 Emulators|[fpinball](https://github.com/batocera-linux/fpinball/releases)|v1.9.1.20101231|Dec 31, 2010
 Utils|[pm-utils](http://pm-utils.freedesktop.org/releases)|1.4.1|Jul 04, 2010
