@@ -3,8 +3,8 @@
 # cdogs
 #
 ################################################################################
-# Version: Commits on Jun 20, 2024
-CDOGS_VERSION = 18f36475dea23f9a241e064f14d6370eefb64fe2
+# Version: Commits on Jun 22, 2024
+CDOGS_VERSION = c858fd0c77e4638c8d37d7fff9c337cbe5dd3380
 CDOGS_SITE = $(call github,cxong,cdogs-sdl,$(CDOGS_VERSION))
 CDOGS_DEPENDENCIES = sdl2 sdl2_image sdl2_mixer python-protobuf enet
 CDOGS_LICENSE = GPL-2.0
