@@ -4,7 +4,7 @@ Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerD
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|fe77512c2528ee7671b24c588d6a183765eb449a|Jun 22, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|fe77512c2528ee7671b24c588d6a183765eb449a|Jun 22, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|9b33b777cfd26cf790a4fdf1f1d305b24c6777f7|Jun 22, 2024
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|5ab7a96e889998cda93b9a766f7482aeb796e388|Jun 22, 2024
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|6ea61ef8862fed6969e61b96da55b729e5743485|Jun 22, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|704bcf36991f75b4f7e18703e1eaf9bdfc1070dd|Jun 22, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-06-22|Jun 22, 2024
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|cec451f3c3639622a372e0140ce3589ca616c84f|Jun 22, 2024
@@ -24,6 +24,7 @@ Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|fe3644a4175db73c022
 Emulators|[libretro-neocd](http://github.com/libretro/neocd_libretro)|f87ed9eb4a7bf1243f031044c4e2ae1a7bf7100b|Jun 22, 2024
 Emulators|[libretro-nestopia](http://github.com/libretro/nestopia)|1fc8c32b91c64aed056fa6d26359f1831c455c70|Jun 22, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|704bcf36991f75b4f7e18703e1eaf9bdfc1070dd|Jun 22, 2024
+Emulators|[libretro-stella](http://github.com/stella-emu/stella)|0a6604b91b95141dc7f379f75c90b577414eab29|Jun 22, 2024
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|f6a3caf5fd707bf6d9d33f277d1fe9d1e20a87cb|Jun 22, 2024
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|075aa4d7e0d475e21007fdae96ef12abe74162e7|Jun 22, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|89dfd9bbd0b240f32143d3e3586e6876b3b0cac5|Jun 22, 2024
@@ -90,7 +91,6 @@ Emulators|[citra](https://github.com/PabloMK7/citra.git)|4f174f1c0b81266170aa8da
 Emulators|[xemu](https://github.com/xemu-project/xemu)|b4ce2b58d09baa6dfd17c0bcab2e505df9f310e4|Jun 15, 2024
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|fe4a4f8a53cc7f91278f393710abb4f32c4e0a8f|Jun 15, 2024
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|535217f16bc2848ec70985c41e1d131709352641|Jun 15, 2024
-Emulators|[libretro-stella](http://github.com/stella-emu/stella)|b477cb56bc6fd8b6977dcee279f16de01348bdae|Jun 15, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|757cdba320392df3e39f9afb10666f21695b346f|Jun 14, 2024
 Utils|[rclone](http://github.com/rclone/rclone)|v1.67.0|Jun 14, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|3d91a940b3a48254152a8789b79616ceefe4067f|Jun 14, 2024
