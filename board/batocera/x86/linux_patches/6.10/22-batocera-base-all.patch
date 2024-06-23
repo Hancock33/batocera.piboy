@@ -523,10 +523,10 @@ index 000000000000..767844637a7d
 +  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index a39c237edb95..5a01ee2210af 100644
+index 2ca8f35dfe03..b7ce74b343cc 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -15997,6 +15997,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
+@@ -15996,6 +15996,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
  F:	Documentation/filesystems/ntfs3.rst
  F:	fs/ntfs3/
  
@@ -10325,7 +10325,7 @@ index fe9ceb0d2288..b58955caf19b 100644
  obj-$(CONFIG_MTD)		+= mtd/
  obj-$(CONFIG_SPI)		+= spi/
 diff --git a/drivers/ata/ahci.c b/drivers/ata/ahci.c
-index 07d66d2c5f0d..df8601aaeb8b 100644
+index 5eb38fbbbecd..bd9a7cd465aa 100644
 --- a/drivers/ata/ahci.c
 +++ b/drivers/ata/ahci.c
 @@ -1618,7 +1618,7 @@ static irqreturn_t ahci_thunderx_irq_handler(int irq, void *dev_instance)
@@ -10369,7 +10369,7 @@ index 07d66d2c5f0d..df8601aaeb8b 100644
  }
  
  static int ahci_get_irq_vector(struct ata_host *host, int port)
-@@ -1886,7 +1879,9 @@ static int ahci_init_one(struct pci_dev *pdev, const struct pci_device_id *ent)
+@@ -1894,7 +1887,9 @@ static int ahci_init_one(struct pci_dev *pdev, const struct pci_device_id *ent)
  	hpriv->mmio = pcim_iomap_table(pdev)[ahci_pci_bar];
  
  	/* detect remapped nvme devices */
