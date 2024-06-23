@@ -6,7 +6,7 @@ Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|2aec195ec8b0fe0d
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|6021e435bac42e44dd0e288361f8a9fb82963308|Jun 23, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|7d645541f8f8b7f4550eabe9157d8fb82b43c1a7|Jun 23, 2024
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|2ce9d3edccab300713fa1c87911c1e102d701fe5|Jun 23, 2024
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v1.7.5921|Jun 23, 2024
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v1.7.5922|Jun 23, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|515cac745c5f080d80883505abe9e058c2307b37|Jun 23, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|eea9ee49c737267d15ec94f92435f43cc21bf584|Jun 23, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|87f5368d3c9c97bd71fb4dad015adff4e58618fd|Jun 23, 2024
@@ -14,7 +14,7 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-06-23|Jun 23
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|0999eeb7758b06becd796fd0310ef9d3fd5c4c41|Jun 23, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|99263d9d7a8bcb381f7b84a8809d1d97e0042fe0|Jun 23, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|b1ae5dc2b6335057305eb62b861c2eff166b8e0a|Jun 23, 2024
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|15e44a19c3e0d0e80cb6185103e0a4b4286d40a9|Jun 23, 2024
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|8a135c9c3bc5e326c20d5da69c521192d105ce44|Jun 23, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|3016209622aa892100dee803fa7038ed500ebdd2|Jun 23, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|7da8e28370f54e379fff6bb1a41e128dde995cdf|Jun 23, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240623|Jun 23, 2024
@@ -26,7 +26,7 @@ Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|7f5e365a6b5c89a7731
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|7d645541f8f8b7f4550eabe9157d8fb82b43c1a7|Jun 23, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|0422413bbb7741482ffdfcfb8719738657a827a5|Jun 23, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|515cac745c5f080d80883505abe9e058c2307b37|Jun 23, 2024
-Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|5e21b82c311bec4b04f35c8b52eb33a68737129b|Jun 23, 2024
+Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|77aaa6ae6b00d8d3da5d75a6e660c6a6cc9d812a|Jun 23, 2024
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|213ff10f6931cd1695ae43c75579177f8129c90a|Jun 23, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|3796d4448201e34f6f240a001b9db1c4c34f606b|Jun 23, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|4d6c3c70e440ea7cd898ce493b050c51f15daede|Jun 22, 2024
