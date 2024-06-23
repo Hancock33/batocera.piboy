@@ -290,6 +290,12 @@ class LibretroGenerator(Generator):
         if (system.config['core'] != 'mrboom'):
             commandArray.extend(['--verbose'])
 
+        if system.name == '3ds':
+            if "squashfs" in rom:
+                romsInDir = glob.glob(glob.escape(rom) + '/*.3ds')
+                if len(romsInDir) >= 1:
+                    rom = romsInDir[0]
+
         if system.name == 'msu-md':
             if "squashfs" in rom:
                 romsInDir = glob.glob(glob.escape(rom) + '/*.md')

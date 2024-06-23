@@ -9,6 +9,7 @@ from os import environ
 import configparser
 import controllersConfig
 import subprocess
+import glob
 
 from utils.logger import get_logger
 eslog = get_logger(__name__)
@@ -18,6 +19,11 @@ class CitraGenerator(Generator):
     # Main entry of the module
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         CitraGenerator.writeCITRAConfig(batoceraFiles.CONF + "/citra-emu/qt-config.ini", system, playersControllers)
+
+        if "squashfs" in rom:
+            romsInDir = glob.glob(glob.escape(rom) + '*/*.3ds')
+            if len(romsInDir) >= 1:
+                rom = romsInDir[0]
 
         if os.path.exists('/usr/bin/citra-qt'):
             commandArray = ['/usr/bin/citra-qt', rom]
