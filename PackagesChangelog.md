@@ -10,6 +10,8 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-06-23|Jun 23
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|0999eeb7758b06becd796fd0310ef9d3fd5c4c41|Jun 23, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|1637fba007404328ba4793ae50f01a804b8c35a5|Jun 23, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|7da8e28370f54e379fff6bb1a41e128dde995cdf|Jun 23, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240623|Jun 23, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240623|Jun 23, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|60bb8115ff21337819ec7c445c2f5ec71a8d3227|Jun 23, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|1337ed4d1e8c27630263362c00b28d26ad3b45ab|Jun 23, 2024
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|5e21b82c311bec4b04f35c8b52eb33a68737129b|Jun 23, 2024
@@ -43,8 +45,7 @@ Ports|[fheroes2](http://github.com/ihhub/fheroes2)|fc637369118f7b695bb6c0d73552d
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|4c65136c009d9ef6d140ae5782f560c4d627418b|Jun 21, 2024
 Emulators|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.7.1|Jun 21, 2024
 Emulators|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v2.13|Jun 21, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240621|Jun 21, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240621|Jun 21, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|6c5d17af07a318d754c0c21023b2d162a0d3725d|Jun 21, 2024
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|c5963607b59c8d56d28bb4de3f7ac555e004c69e|Jun 21, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|f9dcd08cf3b09379af5eb54459169a48a3aa5f10|Jun 21, 2024
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|594422484170a0a075d02d702d3367819c9d4e1a|Jun 21, 2024
@@ -72,7 +73,6 @@ Emulators|[wine-proton-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos_
 Controllers|[new-lg4ff](http://github.com/berarma/new-lg4ff)|1a2d5727876dd7befce23d9695924e9446b31c4b|Jun 18, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|d514d135a7d3521e16e9ea599690e36e95c5c1aa|Jun 18, 2024
 Utils|[fdupes](http://github.com/adrianlopezroche/fdupes)|v2.3.1|Jun 18, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|8c64979dcb2673659adacf39733e24d42b7fc01d|Jun 18, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|00a28b9e5368162cb738758c1d444f8868badc2a|Jun 18, 2024
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|1fa865a248a74f54a646df91dab66171f2667ccc|Jun 18, 2024
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|dfc8d55686a364cad85411dabb76c7fb94acd730|Jun 18, 2024
