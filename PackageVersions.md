@@ -231,7 +231,7 @@ Emulators|[libretro-virtualjaguar](http://github.com/libretro/virtualjaguar-libr
 Emulators|[libretro-vitaquake2](http://github.com/libretro/vitaquake2)|69e56a470638ca8ed15b53212923220360a69f97|May 23, 2024
 Emulators|[libretro-vitaquake3](http://github.com/libretro/vitaquake3)|7a633867cf0a35c71701aef6fc9dd9dfab9c33a9|Jan 31, 2021
 Emulators|[libretro-vitavoyager](http://github.com/libretro/vitaVoyager)|58b70dd7ea891c2e8ddc37d03a5d58116b0ea118|Jan 02, 2020
-Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|5e21b82c311bec4b04f35c8b52eb33a68737129b|Jun 23, 2024
+Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|77aaa6ae6b00d8d3da5d75a6e660c6a6cc9d812a|Jun 23, 2024
 Emulators|[libretro-watara](http://github.com/libretro/potator)|aed31f9254cada9826c65ff4528cc8bdda338275|May 28, 2023
 Emulators|[libretro-xmil](http://github.com/libretro/xmil-libretro)|04b3c90af710b66b31df3c9621fa8da13b24e123|Nov 1, 2023
 Emulators|[libretro-xrick](http://github.com/libretro/xrick-libretro)|58e544ee8de08ca8421e97c064d52ef6cdd73bd2|Nov 01, 2023
@@ -260,7 +260,7 @@ Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|6ea61ef8862fed6969e61b96da55b729e5743485|Jun 22, 2024
 Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|12d25fe20d269c7afb12ebd80724ee1ade2c8b87|Jun 08, 2024
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v1.7.5921|Jun 23, 2024
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v1.7.5922|Jun 23, 2024
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|77429c7aa911054d1a01778532226813438d50ea|Jun 21, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|515cac745c5f080d80883505abe9e058c2307b37|Jun 23, 2024
@@ -412,7 +412,7 @@ Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a4
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|936adcc5570593e644d24718bf4ed00ee894c29b|Jun 22, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|2cc8e02ced1594d76d12b39140e394e9cee0aa44|Apr 18, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|0937f16f509944150b3e3cb675f94e3d7bd03270|Jun 22, 2024
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|15e44a19c3e0d0e80cb6185103e0a4b4286d40a9|Jun 23, 2024
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|8a135c9c3bc5e326c20d5da69c521192d105ce44|Jun 23, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|cec78b5a99afe7948471609ce8fd6f0ac58ff3ca|Jun 17, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|35735a90a1ebac0892d0f61b0b5009f0f5ff1625|Jun 23, 2024
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
