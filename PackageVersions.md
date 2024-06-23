@@ -270,7 +270,7 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1127-g6b62eff|May 10, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|771e60b1eacd4edc57c19b61ab2c713200af0a3f|May 30, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|7da8e28370f54e379fff6bb1a41e128dde995cdf|Jun 23, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20240620|Jun 20, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|945bfaf0ea2060ec19d8f5290295e2498eca59fa|Jun 23, 2024
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|87f5368d3c9c97bd71fb4dad015adff4e58618fd|Jun 23, 2024
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-06-23|Jun 23, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1336|Jun 19, 2024

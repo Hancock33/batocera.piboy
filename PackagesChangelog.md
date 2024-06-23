@@ -9,7 +9,7 @@ Emulators|[lightspark](http://github.com/lightspark/lightspark)|2ce9d3edccab3007
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v1.7.5921|Jun 23, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|515cac745c5f080d80883505abe9e058c2307b37|Jun 23, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|eea9ee49c737267d15ec94f92435f43cc21bf584|Jun 23, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|945bfaf0ea2060ec19d8f5290295e2498eca59fa|Jun 23, 2024
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|87f5368d3c9c97bd71fb4dad015adff4e58618fd|Jun 23, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-06-23|Jun 23, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|0999eeb7758b06becd796fd0310ef9d3fd5c4c41|Jun 23, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|99263d9d7a8bcb381f7b84a8809d1d97e0042fe0|Jun 23, 2024
