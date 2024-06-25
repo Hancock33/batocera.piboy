@@ -3366,17 +3366,17 @@ msgctxt "game_options"
 msgid "Choose the Dreamcast console region."
 msgstr "Region für Dreamcast Konsole auswählen."
 
-#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, suyu, ryujinx
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/vitaquake3, suyu, ...
 msgctxt "game_options"
 msgid "USA"
 msgstr "USA"
 
-#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, pcsx2, redream, ...
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/vitaquake3, pcsx2, ...
 msgctxt "game_options"
 msgid "Europe"
 msgstr "Europa"
 
-#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, redream, suyu, ...
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/vitaquake3, redream, ...
 msgctxt "game_options"
 msgid "Japan"
 msgstr "Japan"
@@ -3828,7 +3828,7 @@ msgstr ""
 "Spiele können schneller/langsamer als normal laufen, wenn die falsche Region "
 "ausgewählt wurde."
 
-#. TRANSLATION: libretro/genesisplusgx, redream, virtualjaguar
+#. TRANSLATION: libretro/genesisplusgx, libretro/geolith, redream, virtualjaguar
 msgctxt "game_options"
 msgid "REGION"
 msgstr "REGION"
@@ -4050,6 +4050,31 @@ msgstr "Vergrößerung des Spielbildschirms, ähnlich wie beim Master System."
 msgctxt "game_options"
 msgid "EXTENDED SCREEN"
 msgstr "ERWEITERTE BILDSCHIRMANZEIGE"
+
+#. TRANSLATION: libretro/geolith
+msgctxt "game_options"
+msgid "SYSTEM TYPE"
+msgstr ""
+
+#. TRANSLATION: libretro/geolith
+msgctxt "game_options"
+msgid "AES (Home Console)"
+msgstr ""
+
+#. TRANSLATION: libretro/geolith
+msgctxt "game_options"
+msgid "MVS (Arcade)"
+msgstr ""
+
+#. TRANSLATION: libretro/geolith
+msgctxt "game_options"
+msgid "Universe BIOS (Cheats)"
+msgstr ""
+
+#. TRANSLATION: libretro/geolith
+msgctxt "game_options"
+msgid "Asia"
+msgstr ""
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
