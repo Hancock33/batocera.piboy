@@ -3642,19 +3642,19 @@ msgctxt "game_options"
 msgid "Choose the Dreamcast console region."
 msgstr "드림캐스트 콘솔 지역을 선택합니다."
 
-#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, suyu, ryujinx
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/vitaquake3, suyu, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "USA"
 msgstr "미국"
 
-#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, pcsx2, redream, ...
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/vitaquake3, pcsx2, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Europe"
 msgstr "유럽"
 
-#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, redream, suyu, ...
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/vitaquake3, redream, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Japan"
@@ -4174,7 +4174,7 @@ msgid ""
 msgstr ""
 "잘못된 지역을 선택하면 게임이 평소보다 빠르거나 느리게 실행될 수 있습니다."
 
-#. TRANSLATION: libretro/genesisplusgx, redream, virtualjaguar
+#. TRANSLATION: libretro/genesisplusgx, libretro/geolith, redream, virtualjaguar
 msgctxt "game_options"
 msgid "REGION"
 msgstr "지역"
@@ -4416,6 +4416,31 @@ msgstr "마스터 시스템과 유사하게 게임 화면 영역을 확장합니
 msgctxt "game_options"
 msgid "EXTENDED SCREEN"
 msgstr "확장 화면"
+
+#. TRANSLATION: libretro/geolith
+msgctxt "game_options"
+msgid "SYSTEM TYPE"
+msgstr ""
+
+#. TRANSLATION: libretro/geolith
+msgctxt "game_options"
+msgid "AES (Home Console)"
+msgstr ""
+
+#. TRANSLATION: libretro/geolith
+msgctxt "game_options"
+msgid "MVS (Arcade)"
+msgstr ""
+
+#. TRANSLATION: libretro/geolith
+msgctxt "game_options"
+msgid "Universe BIOS (Cheats)"
+msgstr ""
+
+#. TRANSLATION: libretro/geolith
+msgctxt "game_options"
+msgid "Asia"
+msgstr ""
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
