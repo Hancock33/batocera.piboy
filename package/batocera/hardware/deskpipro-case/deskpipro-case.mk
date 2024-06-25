@@ -3,8 +3,8 @@
 # deskpipro-case
 #
 ################################################################################
-# Version: Commits on May 13, 2024
-DESKPIPRO_CASE_VERSION = 7d4b4f6d9459394fe5902acc812ba9229924e252
+# Version: Commits on Jun 25, 2024
+DESKPIPRO_CASE_VERSION = 909174d02da9bbb728b6bba1b2f1c3d86a08d9ec
 DESKPIPRO_CASE_SITE = $(call github,DeskPi-Team,deskpi,$(DESKPIPRO_CASE_VERSION))
 DESKPIPRO_CASE_LICENSE = GPL-3.0+
 DESKPIPRO_CASE_DEPENDENCIES = lirc-tools
