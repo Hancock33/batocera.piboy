@@ -2765,9 +2765,8 @@ libretro:
                         choices:
                             "Off":       disabled
                             "On":        enabled
-
     geolith:
-      features: [padtokeyboard, , netplay]
+      features: [padtokeyboard, netplay]
       shared: [autosave, rewind, use_guns, use_wheels, wheel_rotation, wheel_deadzone, wheel_midzone]
       cfeatures:
             geolith_system:
