@@ -3,8 +3,8 @@
 # libaltsound
 #
 ################################################################################
-# Version: Commits on Feb 11, 2024
-LIBALTSOUND_VERSION = 9ac08a76e2aabc1fba57d3e5a3b87e7f63c09e07
+# Version: Commits on Jun 25, 2024
+LIBALTSOUND_VERSION = f11354cf262263a30327b4a9a02953f4c3c36d9c
 LIBALTSOUND_SITE = $(call github,vpinball,libaltsound,$(LIBALTSOUND_VERSION))
 LIBALTSOUND_LICENSE = BSD-3-Clause
 LIBALTSOUND_LICENSE_FILES = LICENSE
