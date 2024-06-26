@@ -1,18 +1,8 @@
-From bf68bf044efa2fc93720778bd5a4be4aa4758a39 Mon Sep 17 00:00:00 2001
-From: Steve Hay <me@stevenhay.com>
-Date: Tue, 4 Apr 2023 23:44:37 +0200
-Subject: [PATCH] system/addon-manifeset.xml / Enable default plugins
-
-Signed-off-by: Steve Hay <me@stevenhay.com>
----
- system/addon-manifest.xml | 62 ++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 63 insertions(+)
-
 diff --git a/system/addon-manifest.xml b/system/addon-manifest.xml
-index 7df13a6..1091f0b 100644
+index 8c87ebe871..c58f178a0f 100644
 --- a/system/addon-manifest.xml
 +++ b/system/addon-manifest.xml
-@@ -53,7 +53,70 @@
+@@ -52,7 +52,70 @@
    <addon>xbmc.metadata</addon>
    <addon>xbmc.python</addon>
    <addon>xbmc.webinterface</addon>
@@ -83,6 +73,3 @@ index 7df13a6..1091f0b 100644
 +  <addon optional="true">visualization.starburst</addon>
 +  <addon optional="true">visualization.waveform</addon>
  </addons>
--- 
-2.30.2
-

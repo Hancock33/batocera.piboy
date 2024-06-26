@@ -1,8 +1,8 @@
 diff --git a/xbmc/windowing/gbm/GBMUtils.cpp b/xbmc/windowing/gbm/GBMUtils.cpp
-index cf6ee7d..c7f47c3 100644
+index 0ac2b854ba..2256fdfd10 100644
 --- a/xbmc/windowing/gbm/GBMUtils.cpp
 +++ b/xbmc/windowing/gbm/GBMUtils.cpp
-@@ -79,7 +79,7 @@ CGBMUtils::CGBMDevice::CGBMSurface::CGBMSurfaceBuffer* CGBMUtils::CGBMDevice::CG
+@@ -79,7 +79,7 @@ CGBMUtils::CGBMDevice::CGBMSurface::CGBMSurfaceBuffer& CGBMUtils::CGBMDevice::CG
  {
    m_buffers.emplace(std::make_unique<CGBMSurfaceBuffer>(m_surface));
  
