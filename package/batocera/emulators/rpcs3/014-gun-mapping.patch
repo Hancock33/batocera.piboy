@@ -1,8 +1,8 @@
 diff --git a/rpcs3/Emu/Cell/Modules/cellGem.cpp b/rpcs3/Emu/Cell/Modules/cellGem.cpp
-index 870b98da9..6dc943382 100644
+index 18f3fb2e0..09616d9ea 100644
 --- a/rpcs3/Emu/Cell/Modules/cellGem.cpp
 +++ b/rpcs3/Emu/Cell/Modules/cellGem.cpp
-@@ -984,15 +984,15 @@ static bool gun_input_to_pad(const u32 gem_no, be_t<u16>& digital_buttons, be_t<
+@@ -985,15 +985,15 @@ static bool gun_input_to_pad(const u32 gem_no, be_t<u16>& digital_buttons, be_t<
  	if (gun.handler.get_button(gem_no, gun_button::btn_2) == 1)
  		digital_buttons |= CELL_GEM_CTRL_CIRCLE;
  

@@ -1,8 +1,8 @@
 diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
-index 0be8474c..dcf63d70 100644
+index dac0e7a0..d4a5f043 100644
 --- a/src/osdep/amiberry.cpp
 +++ b/src/osdep/amiberry.cpp
-@@ -3996,22 +3996,22 @@ static void init_amiberry_paths(void)
+@@ -4019,22 +4019,22 @@ static void init_amiberry_paths(void)
  		input_dir = screenshot_dir = nvram_dir = plugins_dir = video_dir = 
  		start_path_data;
  
@@ -34,9 +34,9 @@ index 0be8474c..dcf63d70 100644
  	nvram_dir.append("/nvram/");
  	plugins_dir.append("/plugins/");
  	video_dir.append("/videos/");
-@@ -4019,7 +4019,7 @@ static void init_amiberry_paths(void)
- 	amiberry_conf_file = config_path;
+@@ -4043,7 +4043,7 @@ static void init_amiberry_paths(void)
  	amiberry_conf_file.append("amiberry.conf");
+ #endif
  
 -	retroarch_file = config_path;
 +	retroarch_file = controllers_path;
