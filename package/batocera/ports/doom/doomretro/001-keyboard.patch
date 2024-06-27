@@ -1,10 +1,10 @@
 diff --git a/src/m_config.h b/src/m_config.h
-index 3665768f5..0339a5646 100644
+index 347a3ee3a..0461f5369 100644
 --- a/src/m_config.h
 +++ b/src/m_config.h
-@@ -836,22 +836,22 @@ enum
+@@ -896,22 +896,22 @@ enum
  
- #define GAMECONTROLLERALWAYSRUN_DEFAULT     GAMECONTROLLER_LEFT_THUMB
+ #define GAMECONTROLLERALWAYSRUN_DEFAULT     0
  #define GAMECONTROLLERAUTOMAP_DEFAULT       GAMECONTROLLER_BACK
 -#define GAMECONTROLLERBACK_DEFAULT          0
 +#define GAMECONTROLLERBACK_DEFAULT          GAMECONTROLLER_DPAD_DOWN
