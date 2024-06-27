@@ -15,6 +15,8 @@ Ports|[fheroes2](http://github.com/ihhub/fheroes2)|8bd28bef1aaa0d23c02c19e1094f3
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|96a8c635769fb1b864e4ce3376fe3948c227fb8a|Jun 27, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|f4a45a4dd9d97e771cf62d5cb2a949386b989a57|Jun 27, 2024
 Emulators|[libaltsound](http://github.com/vpinball/libaltsound)|fb87d6d34335fdb36b5ff861e5a7ba91e8f46c5b|Jun 27, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240627|Jun 27, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240627|Jun 27, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|ba8c9f9532dd2440937227bd09f2784cf77f6937|Jun 27, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|35d7076f32f4ebcd791a17556c84d100d3ae1ae7|Jun 27, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|5694610478a1df8d0156d17ef8355167ca670ad5|Jun 27, 2024
@@ -28,8 +30,7 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|597e6b5f5f11
 Ports|[omf2097](http://github.com/omf2097/openomf)|38310d9526eac1b298685cf5d5cdcabc289a99ea|Jun 26, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|41a7b804a128605baa02e56218e7fd02fcc32681|Jun 26, 2024
 Emulators|[libpupdmd](http://github.com/PPUC/libpupdmd)|ee45981afaf39df3e7bcddf559011bf4567ce3ea|Jun 26, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240626|Jun 26, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240626|Jun 26, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|07544942e2c9c2f35263adb5104998f18967dc6c|Jun 26, 2024
 Emulators|[libretro-81](http://github.com/libretro/81-libretro)|b16e15da1d78a250d35da5fd6a68fcb4cb57e130|Jun 26, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|dfb796957cfaa3a6bd669a1ba8b1252e4fc3dac0|Jun 26, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|fffb0665cde73a06f293650a0e1345887baa1414|Jun 26, 2024
@@ -49,7 +50,6 @@ Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|39ccdfb54182e0c3a71e
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|b1759cf84028aab89caa1c395e198c340b8dfd89|Jun 24, 2024
 Emulators|[hatari](http://github.com/hatari/hatari)|fc50bc3514f20fbb53f9f3c1cb0e84f92f86b8f7|Jun 24, 2024
 Network|[aic8800](http://github.com/batocera-linux/aic8800)|ccba7fffed8554fe861bd631ff6f852d2d6eec39|Jun 24, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|09a6d0f2913b064e09ed0bdc27b7bbc17a5fb0fc|Jun 24, 2024
 Ports|[sonic2013](https://github.com/Rubberduckycooly/Sonic-1-2-2013-Decompilation.git)|88e8aba975fce5ac3364d0e0df2848770a79e35c|Jun 24, 2024
 Ports|[soniccd](https://github.com/Rubberduckycooly/Sonic-CD-11-Decompilation.git)|5aae710c8db9d07e61c59d8cad83cf6eec1545df|Jun 24, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|bedeabca0e794e5f358a762f96f9bfe3abcbf8dc|Jun 23, 2024
