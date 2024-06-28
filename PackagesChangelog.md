@@ -21,7 +21,10 @@ Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240628|Jun 28, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|db2d74675311cc8b078afb5a966cf0af2210fea5|Jun 28, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|8c9b5c3b4dbcd3b2ab3ba010342c061c47ec6c2d|Jun 28, 2024
+Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|8a00800b5d9bb33bb82098cc2e3b838ca8d8fe57|Jun 28, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|2a2d3a0826556ee2ce7eb5a73fe04c69c169d47d|Jun 28, 2024
+Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|c57eaf557462b8f4eb1635304db72fc2fae0732b|Jun 28, 2024
+Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|636893a15549399f9fc1eb255e2720b38bd4a446|Jun 28, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|c73fa3d7a63b95bbfae01c358d6171c82100d3d7|Jun 28, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|faf0ae363df4206f85e2a3eb6fd466d92fb3e0e8|Jun 28, 2024
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|67967573f982993a90c44aaeced7d1a37e21d5d0|Jun 28, 2024
@@ -175,7 +178,7 @@ Emulators|[mame](http://github.com/mamedev/mame)|mame0266|May 31, 2024
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|bec4bd04b5fdc19bc7bf6a7a417ae79978b0344a|May 31, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|771e60b1eacd4edc57c19b61ab2c713200af0a3f|May 30, 2024
 Emulators|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.12|May 29, 2024
-Ports|[sonicnexus](http://github.com/Rubberduckycooly/Sonic-Nexus-Decompilation)|1bb1450edcf29bcdf7ecdaf900bec2f19f068567|May 28, 2024
+Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|1bb1450edcf29bcdf7ecdaf900bec2f19f068567|May 28, 2024
 Libraries|[libliftoff](https://gitlab.freedesktop.org/emersion/libliftoff/-/releases/v)|0.5.0|May 27, 2024
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|639466bdb069a300453d96b7b5be518ac19aab80|May 27, 2024
 Emulators|[mupen64plus-input-sdl](http://github.com/mupen64plus/mupen64plus-input-sdl)|3698a2b12b1dc536801649de2705b4a79ffb8a08|May 27, 2024
@@ -515,6 +518,3 @@ Gpu|[mali-G52](http://github.com/rtissera/a311d2-mali-g52)|6ab9d7ce7a991f9974606
 Gpu|[mali-G610](http://github.com/JeffyCN/mirrors)|309268f7a34ca0bba0ab94a0b09feb0191c77fb8|N/A
 Gpu|[mesa-panfork](https://gitlab.com/panfork/mesa.git)|120202c675749c5ef81ae4c8cdc30019b4de08f4|N/A
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
-Ports|[sonic2013](https://github.com/Rubberduckycooly/Sonic-1-2-2013-Decompilation.git)|8a00800b5d9bb33bb82098cc2e3b838ca8d8fe57|N/A
-Ports|[soniccd](https://github.com/Rubberduckycooly/Sonic-CD-11-Decompilation.git)|c57eaf557462b8f4eb1635304db72fc2fae0732b|N/A
-Ports|[sonicmania](https://github.com/Rubberduckycooly/Sonic-Mania-Decompilation.git)|d0e37a32c7658df3a4cb741f976b63a07882de35|N/A
