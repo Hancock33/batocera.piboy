@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[libaltsound](http://github.com/vpinball/libaltsound)|cb9dce5084433896fd3016862aff0065659a223a|Jun 28, 2024
+Emulators|[libpupdmd](http://github.com/PPUC/libpupdmd)|124f45e5ddd59ceb339591de88fcca72f8c54612|Jun 28, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|1c0c07cb1011d9bcbc02b2513676de0bc24d839c|Jun 27, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|233ea58446ffb2df0b7b909d29741603c1cef326|Jun 27, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|f77dba5cdb2ffcc16769c6b2fb3e5ea5d746b091|Jun 27, 2024
@@ -15,7 +17,6 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|39215108429b11ef7848f
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|8bd28bef1aaa0d23c02c19e1094f398e2e8fc962|Jun 27, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|96a8c635769fb1b864e4ce3376fe3948c227fb8a|Jun 27, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|f4a45a4dd9d97e771cf62d5cb2a949386b989a57|Jun 27, 2024
-Emulators|[libaltsound](http://github.com/vpinball/libaltsound)|d51a48926f8d264c93683377beb33e67b1ee563b|Jun 27, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|4ab8bfc9436f7ff54983f2daea87f76bde64c0fe|Jun 27, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240627|Jun 27, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240627|Jun 27, 2024
@@ -33,7 +34,6 @@ Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|dafd862b1a3f5ae3
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|597e6b5f5f113af657da2cd21605f77baf798333|Jun 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|38310d9526eac1b298685cf5d5cdcabc289a99ea|Jun 26, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|41a7b804a128605baa02e56218e7fd02fcc32681|Jun 26, 2024
-Emulators|[libpupdmd](http://github.com/PPUC/libpupdmd)|ee45981afaf39df3e7bcddf559011bf4567ce3ea|Jun 26, 2024
 Emulators|[wine-custom](http://github.com/wine-mirror/wine)|07544942e2c9c2f35263adb5104998f18967dc6c|Jun 26, 2024
 Emulators|[libretro-81](http://github.com/libretro/81-libretro)|b16e15da1d78a250d35da5fd6a68fcb4cb57e130|Jun 26, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|dfb796957cfaa3a6bd669a1ba8b1252e4fc3dac0|Jun 26, 2024
