@@ -453,11 +453,11 @@ Ports|[rtcw](http://github.com/iortcw/iortcw)|438e7d413b5f7277187c35b032eb0ef909
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|be89e134e6f19ca5a9d4442b1ecfa2ccf2b3c6e2|May 11, 2024
 Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|6facc3b09b67593cf9151a44cc59afd490f2ea62|Mar 25, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|6f7d974a73037d8ae61fb5dff8e1aec40432e1f8|Jun 05, 2024
-Ports|[sonic2013](https://github.com/Rubberduckycooly/Sonic-1-2-2013-Decompilation.git)|8a00800b5d9bb33bb82098cc2e3b838ca8d8fe57|N/A
+Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|8a00800b5d9bb33bb82098cc2e3b838ca8d8fe57|Jun 28, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|2a2d3a0826556ee2ce7eb5a73fe04c69c169d47d|Jun 28, 2024
-Ports|[soniccd](https://github.com/Rubberduckycooly/Sonic-CD-11-Decompilation.git)|c57eaf557462b8f4eb1635304db72fc2fae0732b|N/A
-Ports|[sonicmania](https://github.com/Rubberduckycooly/Sonic-Mania-Decompilation.git)|d0e37a32c7658df3a4cb741f976b63a07882de35|N/A
-Ports|[sonicnexus](http://github.com/Rubberduckycooly/Sonic-Nexus-Decompilation)|1bb1450edcf29bcdf7ecdaf900bec2f19f068567|May 28, 2024
+Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|c57eaf557462b8f4eb1635304db72fc2fae0732b|Jun 28, 2024
+Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|636893a15549399f9fc1eb255e2720b38bd4a446|Jun 28, 2024
+Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|1bb1450edcf29bcdf7ecdaf900bec2f19f068567|May 28, 2024
 Ports|[sorr](http://github.com/Cpasjuste/bennugd-monolithic)|0290c3719fd74121ff9c9e690c955285e4ba391c|Oct 07, 2021
 Ports|[spacecadetpinball](http://github.com/k4zmu2a/SpaceCadetPinball)|52126feb40327345c64fd26adf310b9334b27913|Feb 28, 2024
 Ports|[srb2](http://github.com/STJr/SRB2)|dd54f749f2371804ca08a574801cd88a951a0e1e|Feb 19, 2024

@@ -3,9 +3,9 @@
 # soniccd
 #
 ################################################################################
-NULL-NULL
+# Version: Commits on Jun 28, 2024
 SONICCD_VERSION = c57eaf557462b8f4eb1635304db72fc2fae0732b
-SONICCD_SITE = https://github.com/Rubberduckycooly/Sonic-CD-11-Decompilation.git
+SONICCD_SITE = https://github.com/RSDKModding/RSDKv3-Decompilation.git
 SONICCD_SITE_METHOD = git
 SONICCD_GIT_SUBMODULES = YES
 SONICCD_SUPPORTS_IN_SOURCE_BUILD = NO
