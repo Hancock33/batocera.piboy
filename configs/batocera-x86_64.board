@@ -50,7 +50,7 @@ BR2_CCACHE_DIR="$(HOME)/build-dir/ccache/x86_64"
 BR_CMAKE_USE_CLANG=y
 
 # Wine Staging Patches
-BR_WINE_STAGING=n
+BR_WINE_STAGING=y
 
 # EFI Boot
 BR2_PACKAGE_EFIBOOTMGR=y
