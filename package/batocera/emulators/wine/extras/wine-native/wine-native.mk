@@ -39,7 +39,8 @@ WINE_NATIVE_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 	--without-opencl \
 	--without-oss \
 	--prefix=/usr/wine/native \
-	--exec-prefix=/usr/wine/native
+	--exec-prefix=/usr/wine/native \
+	--enable-archs=i386,x86_64
 
 ifeq ($(BR2_x86_64),y)
 	WINE_NATIVE_CONF_OPTS += --enable-win64
