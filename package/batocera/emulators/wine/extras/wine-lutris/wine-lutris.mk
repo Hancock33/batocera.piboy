@@ -39,7 +39,8 @@ WINE_LUTRIS_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 	--without-opencl \
 	--without-oss \
 	--prefix=/usr/wine/lutris \
-	--exec-prefix=/usr/wine/lutris
+	--exec-prefix=/usr/wine/lutris \
+	--enable-archs=i386,x86_64
 
 ifeq ($(BR2_x86_64),y)
 	WINE_LUTRIS_CONF_OPTS += --enable-win64

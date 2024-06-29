@@ -31,7 +31,7 @@ class XeniaGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         wineprefix = '/userdata/system/wine-bottles/xbox360'
-        wineBinary = '/usr/wine/ge-custom/bin/wine64'
+        wineBinary = '/usr/wine/ge-custom/bin/wine'
         xeniaConfig = '/userdata/system/configs/xenia'
         xeniaCache = '/userdata/system/cache/xenia'
         xeniaSaves = '/userdata/saves/xbox360'
@@ -98,7 +98,7 @@ class XeniaGenerator(Generator):
 
         if not os.path.exists(wineprefix + "/vkd3d.done"):
             cmd = ["/usr/wine/winetricks", "-q", "vkd3d"]
-            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
             env["PATH"] = "/usr/wine/ge-custom/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
@@ -112,7 +112,7 @@ class XeniaGenerator(Generator):
 
         if not os.path.exists(wineprefix + "/vcrun2019.done"):
             cmd = ["/usr/wine/winetricks", "-q", "vcrun2019"]
-            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
             env["PATH"] = "/usr/wine/ge-custom/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
@@ -126,7 +126,7 @@ class XeniaGenerator(Generator):
 
         if not os.path.exists(wineprefix + "/dxvk.done"):
             cmd = ["/usr/wine/winetricks", "-q", "dxvk"]
-            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
             env["PATH"] = "/usr/wine/ge-custom/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
@@ -345,14 +345,14 @@ class XeniaGenerator(Generator):
 
         environment={
                 'WINEPREFIX': wineprefix,
-                'LD_LIBRARY_PATH': '/usr/lib:/lib32:/usr/wine/ge-custom/lib/wine',
+                'LD_LIBRARY_PATH': '/usr/lib:/usr/wine/ge-custom/lib/wine',
                 'LIBGL_DRIVERS_PATH': '/usr/lib/dri',
                 'WINEESYNC': '1',
                 'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers),
                 'SDL_JOYSTICK_HIDAPI': '0',
                 # hum pw 0.2 and 0.3 are hardcoded, not nice
-                'SPA_PLUGIN_DIR': '/usr/lib/spa-0.2:/lib32/spa-0.2',
-                'PIPEWIRE_MODULE_DIR': '/usr/lib/pipewire-0.3:/lib32/pipewire-0.3',
+                'SPA_PLUGIN_DIR': '/usr/lib/spa-0.2',
+                'PIPEWIRE_MODULE_DIR': '/usr/lib/pipewire-0.3',
                 'VKD3D_SHADER_CACHE_PATH': xeniaCache
             }
 

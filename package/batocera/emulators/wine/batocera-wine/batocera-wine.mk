@@ -7,7 +7,7 @@
 BATOCERA_WINE_VERSION = 1.1
 BATOCERA_WINE_LICENSE = GPL
 BATOCERA_WINE_SOURCE=
-BATOCERA_WINE_DEPENDENCIES = wine-x86
+#BATOCERA_WINE_DEPENDENCIES = wine-x86
 
 define BATOCERA_WINE_INSTALL_TARGET_CMDS
 	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/wine/batocera-wine/batocera-wine			$(TARGET_DIR)/usr/bin/batocera-wine

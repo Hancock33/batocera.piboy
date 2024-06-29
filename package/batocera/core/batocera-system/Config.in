@@ -654,7 +654,8 @@ config BR2_PACKAGE_BATOCERA_WINE_SYSTEMS
 
     # Wine (windows) layer
     select BR2_PACKAGE_BATOCERA_WINE                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
-    select BR2_PACKAGE_WINE_X86                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+   #select BR2_PACKAGE_WINE_X86                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+
 
 config BR_WINE_STAGING
     bool "use wine-staging patches"

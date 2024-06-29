@@ -40,7 +40,8 @@ WINE_CACHYOS_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_
 	--without-opencl \
 	--without-oss \
 	--prefix=/usr/wine/cachyos \
-	--exec-prefix=/usr/wine/cachyos
+	--exec-prefix=/usr/wine/cachyos \
+	--enable-archs=i386,x86_64
 
 ifeq ($(BR2_x86_64),y)
 	WINE_CACHYOS_CONF_OPTS += --enable-win64
