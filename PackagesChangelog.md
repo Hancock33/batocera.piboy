@@ -8,6 +8,8 @@ Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|6a1245461b9388f426bde8
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|548893678c6b35c4540df483ea6c8253a99eb74b|Jun 29, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|84dbbca7e9a562fb4c0ba1c7df4846151435c894|Jun 29, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|57c790646fded3b491f977aa67a061781f06aedb|Jun 29, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240629|Jun 29, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240629|Jun 29, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|7dc122e3178415b6f1c364c3bfcefd1be1a4e238|Jun 29, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|f5b0550c06b50d538491e4f21ff3224065452275|Jun 29, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|a24d6ed4fb294440e267b6f53546dca9fdc7cd03|Jun 29, 2024
@@ -28,8 +30,6 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|24b3e638875e8e6dfa32
 Emulators|[libaltsound](http://github.com/vpinball/libaltsound)|b8f397858cbc7a879f7392c14a509f00c8bdc7dd|Jun 28, 2024
 Emulators|[libpupdmd](http://github.com/PPUC/libpupdmd)|124f45e5ddd59ceb339591de88fcca72f8c54612|Jun 28, 2024
 Emulators|[wine-custom](http://github.com/wine-mirror/wine)|wine-9.12|Jun 28, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240628|Jun 28, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240628|Jun 28, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|2a2d3a0826556ee2ce7eb5a73fe04c69c169d47d|Jun 28, 2024
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|2b90078a59e6b0312541dc095776ae794cec142e|Jun 28, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|c73fa3d7a63b95bbfae01c358d6171c82100d3d7|Jun 28, 2024
