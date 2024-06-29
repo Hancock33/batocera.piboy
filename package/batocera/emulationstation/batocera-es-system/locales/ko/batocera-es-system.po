@@ -4640,7 +4640,7 @@ msgctxt "game_options"
 msgid "SCREEN BORDERS"
 msgstr ""
 
-#. TRANSLATION: libretro/hatarib
+#. TRANSLATION: libretro/hatarib, hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "Hide"
 msgstr ""
@@ -10110,16 +10110,6 @@ msgid "HIDE LIGHT GUN CROSSHAIRS"
 msgstr "라이트 건 십자선 숨기기"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
-msgctxt "game_options"
-msgid "Hidden"
-msgstr ""
-
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
-msgctxt "game_options"
-msgid "Shown"
-msgstr ""
-
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 #, fuzzy
 msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
@@ -10130,6 +10120,16 @@ msgstr "이 옵션은 마우스로 플레이할 때 일부 총기 게임에 필�
 msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "절대 마우스 입력"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Hidden"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Shown"
+msgstr ""
 
 #. TRANSLATION: hypseus-singe
 #, fuzzy

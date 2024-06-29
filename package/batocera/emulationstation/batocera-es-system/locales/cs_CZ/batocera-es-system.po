@@ -4234,7 +4234,7 @@ msgctxt "game_options"
 msgid "SCREEN BORDERS"
 msgstr "HRANICE OBRAZOVKY"
 
-#. TRANSLATION: libretro/hatarib
+#. TRANSLATION: libretro/hatarib, hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "Hide"
 msgstr "Skrytí"
@@ -9106,16 +9106,6 @@ msgstr "SKRÝT ZAMĚŘOVACÍ KŘÍŽ SVĚTELNÉ PISTOLE"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
-msgid "Hidden"
-msgstr ""
-
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
-msgctxt "game_options"
-msgid "Shown"
-msgstr ""
-
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
-msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr ""
 "Tato možnost je vyžadována u některých her se zbraněmi při hraní s myší."
@@ -9124,6 +9114,16 @@ msgstr ""
 msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "ABSOLUTNÍ VSTUP MYŠI"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Hidden"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Shown"
+msgstr ""
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
