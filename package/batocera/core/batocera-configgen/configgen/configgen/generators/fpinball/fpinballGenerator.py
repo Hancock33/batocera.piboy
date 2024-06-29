@@ -26,7 +26,7 @@ class FpinballGenerator(Generator):
             cmd = ["/usr/wine/winetricks", "-q", "wsh57"]
             env = {
                 "W_CACHE": "/userdata/bios",
-                "LD_LIBRARY_PATH": "/usr/wine/ge-custom/lib/wine",
+                "LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine",
                 "WINEPREFIX": wineprefix
             }
             env.update(os.environ)
@@ -164,7 +164,7 @@ class FpinballGenerator(Generator):
                         f.write("\r\n")
 
         cmd = ["wine", "regedit", "/userdata/system/configs/fpinball/batocera.confg.reg"]
-        env = {"LD_LIBRARY_PATH": "/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
+        env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
         env.update(os.environ)
         env["PATH"] = "/usr/wine/ge-custom/bin:/bin:/usr/bin"
         eslog.debug(f"command: {str(cmd)}")
@@ -176,10 +176,11 @@ class FpinballGenerator(Generator):
 
         environment={
             "WINEPREFIX": wineprefix,
-            "LD_LIBRARY_PATH": "/usr/wine/ge-custom/lib/wine",
+            "LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine",
+            "LIBGL_DRIVERS_PATH": "/lib32/dri",
             # hum pw 0.2 and 0.3 are hardcoded, not nice
-            "SPA_PLUGIN_DIR": "/usr/lib/spa-0.2",
-            "PIPEWIRE_MODULE_DIR": "/usr/lib/pipewire-0.3"
+            "SPA_PLUGIN_DIR": "/usr/lib/spa-0.2:/lib32/spa-0.2",
+            "PIPEWIRE_MODULE_DIR": "/usr/lib/pipewire-0.3:/lib32/pipewire-0.3"
         }
 
         # ensure nvidia driver used for vulkan

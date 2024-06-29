@@ -34,7 +34,7 @@ class Model2EmuGenerator(Generator):
         # install windows libraries required
         if not os.path.exists(wineprefix + "/d3dx9.done"):
             cmd = ["/usr/wine/winetricks", "-q", "d3dx9"]
-            env = {"LD_LIBRARY_PATH": "/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
             env["PATH"] = "/usr/wine/ge-custom/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
@@ -48,7 +48,7 @@ class Model2EmuGenerator(Generator):
 
         if not os.path.exists(wineprefix + "/d3dcompiler_42.done"):
             cmd = ["/usr/wine/winetricks", "-q", "d3dcompiler_42"]
-            env = {"LD_LIBRARY_PATH": "/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
             env["PATH"] = "/usr/wine/ge-custom/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
@@ -62,7 +62,7 @@ class Model2EmuGenerator(Generator):
 
         if not os.path.exists(wineprefix + "/d3dx9_42.done"):
             cmd = ["/usr/wine/winetricks", "-q", "d3dx9_42"]
-            env = {"LD_LIBRARY_PATH": "/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
             env["PATH"] = "/usr/wine/ge-custom/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
@@ -76,7 +76,7 @@ class Model2EmuGenerator(Generator):
 
         if not os.path.exists(wineprefix + "/xact.done"):
             cmd = ["/usr/wine/winetricks", "-q", "xact"]
-            env = {"LD_LIBRARY_PATH": "/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
             env["PATH"] = "/usr/wine/ge-custom/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
@@ -90,7 +90,7 @@ class Model2EmuGenerator(Generator):
 
         if not os.path.exists(wineprefix + "/xact_x64.done"):
             cmd = ["/usr/wine/winetricks", "-q", "xact_x64"]
-            env = {"LD_LIBRARY_PATH": "/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
             env["PATH"] = "/usr/wine/ge-custom/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
@@ -239,10 +239,10 @@ class Model2EmuGenerator(Generator):
         # set the environment variables
         environment = {
             "WINEPREFIX": wineprefix,
-            "LD_LIBRARY_PATH": "/usr/wine/ge-custom/lib/wine",
-            "LIBGL_DRIVERS_PATH": "/usr/lib/dri",
-            "SPA_PLUGIN_DIR": "/usr/lib/spa-0.2",
-            "PIPEWIRE_MODULE_DIR": "/usr/lib/pipewire-0.3"
+            "LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine",
+            "LIBGL_DRIVERS_PATH": "/lib32/dri",
+            "SPA_PLUGIN_DIR": "/usr/lib/spa-0.2:/lib32/spa-0.2",
+            "PIPEWIRE_MODULE_DIR": "/usr/lib/pipewire-0.3:/lib32/pipewire-0.3"
         }
 
         # check if software render option is chosen
