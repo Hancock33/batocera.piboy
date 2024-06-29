@@ -40,8 +40,7 @@ WINE_PROTON_CACHYOS_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG
 	--without-opencl \
 	--without-oss \
 	--prefix=/usr/wine/proton-cachyos \
-	--exec-prefix=/usr/wine/proton-cachyos \
-	--enable-archs=i386,x86_64
+	--exec-prefix=/usr/wine/proton-cachyos
 
 ifeq ($(BR2_x86_64),y)
 	WINE_PROTON_CACHYOS_CONF_OPTS += --enable-win64
