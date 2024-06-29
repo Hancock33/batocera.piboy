@@ -216,7 +216,7 @@ Emulators|[libretro-superflappybirds](http://github.com/IgniparousTempest/libret
 Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|8a999111ff3b8e40dd093c214dd56ba1596e1115|Jun 29, 2024
 Emulators|[libretro-tgbdual](http://github.com/libretro/tgbdual-libretro)|a6f3018e6a23030afc1873845ee54d4b2d8ec9d3|Aug 06, 2022
 Emulators|[libretro-theodore](http://github.com/Zlika/theodore)|503b2bb4fa747442fb91b89644238e5267637bcd|Mar 03, 2023
-Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|f6a3caf5fd707bf6d9d33f277d1fe9d1e20a87cb|Jun 22, 2024
+Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|52d6edbe27873117a9b4528b050a09ccfc9c4a4c|Jun 29, 2024
 Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|fcabaff7597254c241939bd7e1fa9be1cae1840b|Jun 28, 2024
 Emulators|[libretro-uae4arm](http://github.com/chips-fr/uae4arm-rpi)|177c2f0e892adf2603ada9b150e31beffe0f76c3|Apr 22, 2022
 Emulators|[libretro-uoyabause](https://github.com/rob-ack/yabause.git)|c60e60854ae5bdef3f463a784674e8fe8c7d87f0|Feb 13, 2024
@@ -258,7 +258,7 @@ Emulators|[openbor4432](http://github.com/Darknior/OpenBORv3b4432)|49505541b858d
 Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678291bbedc0b9fe4c8f898|Aug 29, 2018
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|ad56b1ccf57e38a006ef97df95e3584060ead5dd|Jun 29, 2024
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|7e3d750448205a1e8125a9066b0bc82f3002ffd2|Jun 29, 2024
 Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|29d9ed7224024f3ace7bf3c3a12d79d467d54be8|Jun 25, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v1.7.5946|Jun 29, 2024
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
@@ -285,7 +285,7 @@ Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|36
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|cec451f3c3639622a372e0140ce3589ca616c84f|Jun 22, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|19612e1b13844227003ad25a83e98854926b2cac|Jun 13, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|3caff75e4aa86aa3fb877408d08b1843ac6ed149|Jun 29, 2024
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|6c79a4d946654fa22e4e0de6713201892331db43|Jun 29, 2024
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|6ad1f4de98fe693db4af0f8f961edf3329c2b519|Jun 29, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|6a1245461b9388f426bde86fc9f024501a5bafef|Jun 29, 2024
 Emulators|[vice](https://sourceforge.net/projects/vice-emu/files/releases)|3.8|Dec 24, 2023
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
@@ -456,7 +456,7 @@ Ports|[sm64port](http://github.com/sm64pc/sm64ex)|6f7d974a73037d8ae61fb5dff8e1ae
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|a24d6ed4fb294440e267b6f53546dca9fdc7cd03|Jun 29, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|2a2d3a0826556ee2ce7eb5a73fe04c69c169d47d|Jun 28, 2024
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|38c37cb7e8298c0f8e7a441ab479c158369528fc|Jun 29, 2024
-Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|4901ae95693c6261548472976ef0aa66151e9423|Jun 29, 2024
+Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|71695941842d2916ac6302437e9663996e5f1144|Jun 29, 2024
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|2b90078a59e6b0312541dc095776ae794cec142e|Jun 28, 2024
 Ports|[sorr](http://github.com/Cpasjuste/bennugd-monolithic)|0290c3719fd74121ff9c9e690c955285e4ba391c|Oct 07, 2021
 Ports|[spacecadetpinball](http://github.com/k4zmu2a/SpaceCadetPinball)|52126feb40327345c64fd26adf310b9334b27913|Feb 28, 2024
