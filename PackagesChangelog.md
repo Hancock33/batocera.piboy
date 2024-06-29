@@ -1,11 +1,11 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|ad56b1ccf57e38a006ef97df95e3584060ead5dd|Jun 29, 2024
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|7e3d750448205a1e8125a9066b0bc82f3002ffd2|Jun 29, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v1.7.5946|Jun 29, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|eab4e8e5980ce564d0cab337817d0add3d5e6152|Jun 29, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-06-29|Jun 29, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|3caff75e4aa86aa3fb877408d08b1843ac6ed149|Jun 29, 2024
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|6c79a4d946654fa22e4e0de6713201892331db43|Jun 29, 2024
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|6ad1f4de98fe693db4af0f8f961edf3329c2b519|Jun 29, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|6a1245461b9388f426bde86fc9f024501a5bafef|Jun 29, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|548893678c6b35c4540df483ea6c8253a99eb74b|Jun 29, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|84dbbca7e9a562fb4c0ba1c7df4846151435c894|Jun 29, 2024
@@ -18,13 +18,14 @@ Ports|[doomretro](http://github.com/bradharding/doomretro)|48e195500f0fa79028342
 Ports|[vkquake](http://github.com/Novum/vkQuake)|bd23bc196a959e8c8bee8f58f610c4a7702dc6d6|Jun 29, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|a24d6ed4fb294440e267b6f53546dca9fdc7cd03|Jun 29, 2024
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|38c37cb7e8298c0f8e7a441ab479c158369528fc|Jun 29, 2024
-Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|4901ae95693c6261548472976ef0aa66151e9423|Jun 29, 2024
+Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|71695941842d2916ac6302437e9663996e5f1144|Jun 29, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|6f0ef7be0a023842b98ab5a8e7c7b5e4b2c31573|Jun 29, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|00e3ed7e361afbab03363e493f5aa643e0bb2577|Jun 29, 2024
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|5d47507d3e25354478b216111b30741868d0362b|Jun 29, 2024
 Emulators|[libretro-lowresnx](http://github.com/timoinutilis/lowres-nx)|c824ec163a1945cc48e4319054c7eb1024667497|Jun 29, 2024
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|334998e6129debe50f7ef9c5cd1e995460ae2da8|Jun 29, 2024
 Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|8a999111ff3b8e40dd093c214dd56ba1596e1115|Jun 29, 2024
+Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|52d6edbe27873117a9b4528b050a09ccfc9c4a4c|Jun 29, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|23f90e3b27b4f94fee278e6ce9df297159969a50|Jun 29, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|aefbb918beb8718af8f190a73018ff63bf801d95|Jun 28, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|f49659fbfc931fde6478d3c5d0fc445bfb62d3bf|Jun 28, 2024
@@ -122,7 +123,6 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|936adcc5570593e644d24718bf4ed00
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|0937f16f509944150b3e3cb675f94e3d7bd03270|Jun 22, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|852cec05e78a9bc3742b638188feb89b3e030547|Jun 22, 2024
 Emulators|[libretro-neocd](http://github.com/libretro/neocd_libretro)|f87ed9eb4a7bf1243f031044c4e2ae1a7bf7100b|Jun 22, 2024
-Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|f6a3caf5fd707bf6d9d33f277d1fe9d1e20a87cb|Jun 22, 2024
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|2fedc1da9d85369acc79215182093d6ecacbf442|Jun 21, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|4c65136c009d9ef6d140ae5782f560c4d627418b|Jun 21, 2024
 Emulators|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.7.1|Jun 21, 2024
