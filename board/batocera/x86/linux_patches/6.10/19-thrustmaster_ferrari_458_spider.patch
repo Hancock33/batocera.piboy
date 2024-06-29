@@ -1,5 +1,5 @@
 diff --git a/drivers/input/joystick/xpad.c b/drivers/input/joystick/xpad.c
-index 70f0654c58b6..39ca5e9a8440 100644
+index 2b8370ecf42a..42c4d1a401e4 100644
 --- a/drivers/input/joystick/xpad.c
 +++ b/drivers/input/joystick/xpad.c
 @@ -83,6 +83,7 @@
@@ -18,7 +18,7 @@ index 70f0654c58b6..39ca5e9a8440 100644
  	{ 0x045e, 0x0202, "Microsoft X-Box pad v1 (US)", 0, XTYPE_XBOX },
  	{ 0x045e, 0x0285, "Microsoft X-Box pad (Japan)", 0, XTYPE_XBOX },
  	{ 0x045e, 0x0287, "Microsoft Xbox Controller S", 0, XTYPE_XBOX },
-@@ -480,6 +482,7 @@ static const struct usb_device_id xpad_table[] = {
+@@ -481,6 +483,7 @@ static const struct usb_device_id xpad_table[] = {
  	XPAD_XBOX360_VENDOR(0x03f0),		/* HP HyperX Xbox 360 controllers */
  	XPAD_XBOXONE_VENDOR(0x03f0),		/* HP HyperX Xbox One controllers */
  	XPAD_XBOX360_VENDOR(0x044f),		/* Thrustmaster Xbox 360 controllers */
@@ -26,7 +26,7 @@ index 70f0654c58b6..39ca5e9a8440 100644
  	XPAD_XBOX360_VENDOR(0x045e),		/* Microsoft Xbox 360 controllers */
  	XPAD_XBOXONE_VENDOR(0x045e),		/* Microsoft Xbox One controllers */
  	XPAD_XBOX360_VENDOR(0x046d),		/* Logitech Xbox 360-style controllers */
-@@ -1064,6 +1067,11 @@ static void xpadone_process_packet(struct usb_xpad *xpad, u16 cmd, unsigned char
+@@ -1065,6 +1068,11 @@ static void xpadone_process_packet(struct usb_xpad *xpad, u16 cmd, unsigned char
  		input_report_key(dev, BTN_THUMBR, data[5] & BIT(7));
  
  		if (!(xpad->mapping & MAP_STICKS_TO_NULL)) {
@@ -38,7 +38,7 @@ index 70f0654c58b6..39ca5e9a8440 100644
  			/* left stick */
  			input_report_abs(dev, ABS_X,
  					(__s16) le16_to_cpup((__le16 *)(data + 10)));
-@@ -1075,6 +1083,7 @@ static void xpadone_process_packet(struct usb_xpad *xpad, u16 cmd, unsigned char
+@@ -1076,6 +1084,7 @@ static void xpadone_process_packet(struct usb_xpad *xpad, u16 cmd, unsigned char
  					(__s16) le16_to_cpup((__le16 *)(data + 14)));
  			input_report_abs(dev, ABS_RY,
  					~(__s16) le16_to_cpup((__le16 *)(data + 16)));
@@ -46,7 +46,7 @@ index 70f0654c58b6..39ca5e9a8440 100644
  		}
  
  		/* triggers left/right */
-@@ -1083,6 +1092,11 @@ static void xpadone_process_packet(struct usb_xpad *xpad, u16 cmd, unsigned char
+@@ -1084,6 +1093,11 @@ static void xpadone_process_packet(struct usb_xpad *xpad, u16 cmd, unsigned char
  					(__u16) le16_to_cpup((__le16 *)(data + 6)));
  			input_report_key(dev, BTN_TR2,
  					(__u16) le16_to_cpup((__le16 *)(data + 8)));
