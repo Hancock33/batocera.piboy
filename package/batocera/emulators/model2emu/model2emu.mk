@@ -18,7 +18,7 @@ endef
 
 define MODEL2EMU_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/model2emu
-	cp -pr $(@D) $(TARGET_DIR)/usr/bin
+	cp -pvr $(@D)/* $(TARGET_DIR)/usr/bin/model2emu
 	# extra files
 	unzip -uo $(MODEL2EMU_EXTRAS)/model2scripts.zip \
 		-d $(TARGET_DIR)/usr/bin/model2emu/

@@ -3,8 +3,8 @@
 # libretro-sameboy
 #
 ################################################################################
-# Version: Commits on Aug 19, 2022
-LIBRETRO_SAMEBOY_VERSION = 09138330990da32362246c7034cf4de2ea0a2a2b
+# Version: Commits on Jun 28, 2024
+LIBRETRO_SAMEBOY_VERSION = 51433012a871a44555492273fd22f29867d12655
 LIBRETRO_SAMEBOY_SITE = $(call github,libretro,SameBoy,$(LIBRETRO_SAMEBOY_VERSION))
 LIBRETRO_SAMEBOY_LICENSE = GPL
 

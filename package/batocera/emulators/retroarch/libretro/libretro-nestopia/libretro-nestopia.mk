@@ -3,8 +3,8 @@
 # libretro-nestopia
 #
 ################################################################################
-# Version: Commits on Jun 22, 2024
-LIBRETRO_NESTOPIA_VERSION = 1fc8c32b91c64aed056fa6d26359f1831c455c70
+# Version: Commits on Jun 28, 2024
+LIBRETRO_NESTOPIA_VERSION = be1139ec4d89151fc65b81a3494d2b9c0fd0b7dc
 LIBRETRO_NESTOPIA_SITE = $(call github,libretro,nestopia,$(LIBRETRO_NESTOPIA_VERSION))
 LIBRETRO_NESTOPIA_LICENSE = GPLv2
 

@@ -523,10 +523,10 @@ index 000000000000..767844637a7d
 +  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 2ca8f35dfe03..b7ce74b343cc 100644
+index 3c4fdf74a3f9..cc5364e19a1c 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -15996,6 +15996,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
+@@ -15997,6 +15997,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
  F:	Documentation/filesystems/ntfs3.rst
  F:	fs/ntfs3/
  
@@ -543,7 +543,7 @@ index 2ca8f35dfe03..b7ce74b343cc 100644
  M:	Finn Thain <fthain@linux-m68k.org>
  L:	linux-m68k@lists.linux-m68k.org
 diff --git a/Makefile b/Makefile
-index ab82080ac8e2..a6ae1853767a 100644
+index 8891165aa2c9..23e3c0be946a 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -817,6 +817,9 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -626,7 +626,7 @@ index 1346579f802f..f3a77719eb05 100644
  
  #define __ARCH_WANT_SYS_CLONE
 diff --git a/arch/arm64/include/asm/unistd32.h b/arch/arm64/include/asm/unistd32.h
-index 266b96acc014..56c1a1d1f94b 100644
+index 1386e8e751f2..ccdc523fa4bd 100644
 --- a/arch/arm64/include/asm/unistd32.h
 +++ b/arch/arm64/include/asm/unistd32.h
 @@ -931,6 +931,12 @@ __SYSCALL(__NR_lsm_set_self_attr, sys_lsm_set_self_attr)
@@ -665,7 +665,7 @@ index 2b81a6bd78b2..e2a93c856eed 100644
 +464	common	process_ksm_disable		sys_process_ksm_disable
 +465	common	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/mips/kernel/syscalls/syscall_n32.tbl b/arch/mips/kernel/syscalls/syscall_n32.tbl
-index cc869f5d5693..9168b5c2065a 100644
+index 953f5b7dc723..b921fbf56fa6 100644
 --- a/arch/mips/kernel/syscalls/syscall_n32.tbl
 +++ b/arch/mips/kernel/syscalls/syscall_n32.tbl
 @@ -401,3 +401,6 @@
@@ -687,7 +687,7 @@ index 1464c6be6eb3..8d7f9ddd66f4 100644
 +464	n64	process_ksm_disable		sys_process_ksm_disable
 +465	n64	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/mips/kernel/syscalls/syscall_o32.tbl b/arch/mips/kernel/syscalls/syscall_o32.tbl
-index 008ebe60263e..66624a883d7e 100644
+index 2439a2491cff..9d6142739954 100644
 --- a/arch/mips/kernel/syscalls/syscall_o32.tbl
 +++ b/arch/mips/kernel/syscalls/syscall_o32.tbl
 @@ -450,3 +450,6 @@
@@ -698,7 +698,7 @@ index 008ebe60263e..66624a883d7e 100644
 +464	o32	process_ksm_disable		sys_process_ksm_disable
 +465	o32	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/parisc/kernel/syscalls/syscall.tbl b/arch/parisc/kernel/syscalls/syscall.tbl
-index b13c21373974..a051960a87d3 100644
+index 66dc406b12e4..9d46476fd908 100644
 --- a/arch/parisc/kernel/syscalls/syscall.tbl
 +++ b/arch/parisc/kernel/syscalls/syscall.tbl
 @@ -461,3 +461,6 @@
@@ -709,10 +709,10 @@ index b13c21373974..a051960a87d3 100644
 +464	common	process_ksm_disable		sys_process_ksm_disable
 +465	common	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/powerpc/kernel/syscalls/syscall.tbl b/arch/powerpc/kernel/syscalls/syscall.tbl
-index 3656f1ca7a21..1183dae34eb3 100644
+index ebae8415dfbb..16f71bc2f6f0 100644
 --- a/arch/powerpc/kernel/syscalls/syscall.tbl
 +++ b/arch/powerpc/kernel/syscalls/syscall.tbl
-@@ -549,3 +549,6 @@
+@@ -553,3 +553,6 @@
  460	common	lsm_set_self_attr		sys_lsm_set_self_attr
  461	common	lsm_list_modules		sys_lsm_list_modules
  462	common	mseal				sys_mseal
@@ -720,7 +720,7 @@ index 3656f1ca7a21..1183dae34eb3 100644
 +464	common	process_ksm_disable		sys_process_ksm_disable
 +465	common	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/s390/kernel/syscalls/syscall.tbl b/arch/s390/kernel/syscalls/syscall.tbl
-index bd0fee24ad10..690595679673 100644
+index 01071182763e..7394bad8178e 100644
 --- a/arch/s390/kernel/syscalls/syscall.tbl
 +++ b/arch/s390/kernel/syscalls/syscall.tbl
 @@ -465,3 +465,6 @@
@@ -731,10 +731,10 @@ index bd0fee24ad10..690595679673 100644
 +464  common	process_ksm_disable	sys_process_ksm_disable		sys_process_ksm_disable
 +465  common	process_ksm_status	sys_process_ksm_status		sys_process_ksm_status
 diff --git a/arch/sh/kernel/syscalls/syscall.tbl b/arch/sh/kernel/syscalls/syscall.tbl
-index bbf83a2db986..191db240cde7 100644
+index c55fd7696d40..b9fc31221b87 100644
 --- a/arch/sh/kernel/syscalls/syscall.tbl
 +++ b/arch/sh/kernel/syscalls/syscall.tbl
-@@ -465,3 +465,6 @@
+@@ -466,3 +466,6 @@
  460	common	lsm_set_self_attr		sys_lsm_set_self_attr
  461	common	lsm_list_modules		sys_lsm_list_modules
  462	common	mseal				sys_mseal
@@ -742,7 +742,7 @@ index bbf83a2db986..191db240cde7 100644
 +464	common	process_ksm_disable		sys_process_ksm_disable
 +465	common	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/sparc/kernel/syscalls/syscall.tbl b/arch/sparc/kernel/syscalls/syscall.tbl
-index ac6c281ccfe0..8b1122584521 100644
+index cfdfb3707c16..0d79fd772854 100644
 --- a/arch/sparc/kernel/syscalls/syscall.tbl
 +++ b/arch/sparc/kernel/syscalls/syscall.tbl
 @@ -508,3 +508,6 @@
@@ -9513,7 +9513,7 @@ index ef031655b2d3..cd37de5ec404 100644
  
  late_initcall(aesni_init);
 diff --git a/arch/x86/entry/syscalls/syscall_32.tbl b/arch/x86/entry/syscalls/syscall_32.tbl
-index 7fd1f57ad3d3..d02c8caa83bf 100644
+index d6ebcab1d8b2..ae5d147f05f2 100644
 --- a/arch/x86/entry/syscalls/syscall_32.tbl
 +++ b/arch/x86/entry/syscalls/syscall_32.tbl
 @@ -467,3 +467,6 @@
@@ -11185,10 +11185,10 @@ index a45aac17c20f..e1a4730f4f8c 100644
  		/*
  		 * The initialization has succeeded and the policy is online.
 diff --git a/drivers/cpufreq/intel_pstate.c b/drivers/cpufreq/intel_pstate.c
-index 15de5e3d96fd..2c9ddb4d7176 100644
+index c31914a9876f..1035c074f36a 100644
 --- a/drivers/cpufreq/intel_pstate.c
 +++ b/drivers/cpufreq/intel_pstate.c
-@@ -3551,6 +3551,8 @@ static int __init intel_pstate_setup(char *str)
+@@ -3550,6 +3550,8 @@ static int __init intel_pstate_setup(char *str)
  
  	if (!strcmp(str, "disable"))
  		no_load = 1;
@@ -11737,10 +11737,10 @@ index c11952a4389b..52f54a228b39 100644
  }
  
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
-index 7789b313285c..c1c6330e287d 100644
+index e1796ecf9c05..5e46bd293205 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
-@@ -2736,7 +2736,10 @@ int smu_get_power_limit(void *handle,
+@@ -2749,7 +2749,10 @@ int smu_get_power_limit(void *handle,
  			*limit = smu->max_power_limit;
  			break;
  		case SMU_PPT_LIMIT_MIN:
@@ -11752,7 +11752,7 @@ index 7789b313285c..c1c6330e287d 100644
  			break;
  		default:
  			return -EINVAL;
-@@ -2760,7 +2763,14 @@ static int smu_set_power_limit(void *handle, uint32_t limit)
+@@ -2773,7 +2776,14 @@ static int smu_set_power_limit(void *handle, uint32_t limit)
  		if (smu->ppt_funcs->set_power_limit)
  			return smu->ppt_funcs->set_power_limit(smu, limit_type, limit);
  
@@ -18808,7 +18808,7 @@ index 59f1df0cde5a..fed6b8f435b1 100644
  void page_cache_ra_unbounded(struct readahead_control *,
  		unsigned long nr_to_read, unsigned long lookahead_count);
 diff --git a/include/linux/syscalls.h b/include/linux/syscalls.h
-index 9104952d323d..25c204cd2579 100644
+index 63424af87bba..5c7de798af90 100644
 --- a/include/linux/syscalls.h
 +++ b/include/linux/syscalls.h
 @@ -818,6 +818,9 @@ asmlinkage long sys_madvise(unsigned long start, size_t len, int behavior);
@@ -20418,7 +20418,7 @@ index 79d55465d5c1..6320fedcf8a4 100644
  #endif   /* ZSTD_H_ZSTD_STATIC_LINKING_ONLY */
  
 diff --git a/include/net/inet_connection_sock.h b/include/net/inet_connection_sock.h
-index 7d6b1254c92d..2ce55f444434 100644
+index c0deaafebfdc..d53f042d936e 100644
 --- a/include/net/inet_connection_sock.h
 +++ b/include/net/inet_connection_sock.h
 @@ -137,8 +137,8 @@ struct inet_connection_sock {
@@ -20605,7 +20605,7 @@ index 060e95b331a2..953244eefe7d 100644
  static inline void tcp_plb_init(const struct sock *sk,
  				struct tcp_plb_state *plb)
 diff --git a/include/uapi/asm-generic/unistd.h b/include/uapi/asm-generic/unistd.h
-index d983c48a3b6a..2187351b4f4e 100644
+index d4cc26932ff4..d191548f6326 100644
 --- a/include/uapi/asm-generic/unistd.h
 +++ b/include/uapi/asm-generic/unistd.h
 @@ -845,8 +845,17 @@ __SYSCALL(__NR_lsm_list_modules, sys_lsm_list_modules)
@@ -21086,7 +21086,7 @@ index 3a2df1bd9f64..86c6dd9d8c84 100644
  		struct getcpu_cache __user *, unused)
  {
 diff --git a/kernel/sys_ni.c b/kernel/sys_ni.c
-index d7eee421d4bc..d44a89dedb87 100644
+index b696b85ac63e..cf7f3d841b1e 100644
 --- a/kernel/sys_ni.c
 +++ b/kernel/sys_ni.c
 @@ -188,6 +188,9 @@ COND_SYSCALL(mincore);
@@ -38182,10 +38182,10 @@ index b4cb45255a54..8635b3b24739 100644
  
  #
 diff --git a/mm/compaction.c b/mm/compaction.c
-index e731d45befc7..78653db1ddd8 100644
+index 739b1bf3d637..3a4269c02fb2 100644
 --- a/mm/compaction.c
 +++ b/mm/compaction.c
-@@ -1943,7 +1943,11 @@ static int sysctl_compact_unevictable_allowed __read_mostly = CONFIG_COMPACT_UNE
+@@ -1950,7 +1950,11 @@ static int sysctl_compact_unevictable_allowed __read_mostly = CONFIG_COMPACT_UNE
   * aggressively the kernel should compact memory in the
   * background. It takes values in the range [0, 100].
   */
@@ -38242,7 +38242,7 @@ index 12c9297ed4a7..761f48142325 100644
  EXPORT_SYMBOL_GPL(dirty_writeback_interval);
  
 diff --git a/mm/page_alloc.c b/mm/page_alloc.c
-index 7300aa9f14b0..fde2a84d858b 100644
+index 9ecf99190ea2..6191be6c5de9 100644
 --- a/mm/page_alloc.c
 +++ b/mm/page_alloc.c
 @@ -271,7 +271,11 @@ const char * const migratetype_names[MIGRATE_TYPES] = {
@@ -41063,7 +41063,7 @@ index 28ffcfbeef14..7b13915ba288 100644
  		icsk->icsk_ca_ops->init(sk);
  	if (tcp_ca_needs_ecn(sk))
 diff --git a/net/ipv4/tcp_input.c b/net/ipv4/tcp_input.c
-index 01d208e0eef3..a54951d6871d 100644
+index 2e39cb881e20..7d471e04ad78 100644
 --- a/net/ipv4/tcp_input.c
 +++ b/net/ipv4/tcp_input.c
 @@ -365,7 +365,7 @@ static void __tcp_ecn_check_ce(struct sock *sk, const struct sk_buff *skb)
@@ -41115,7 +41115,7 @@ index 01d208e0eef3..a54951d6871d 100644
  	/* When we're adding to gso_segs == 1, gso_size will be zero,
  	 * in theory this shouldn't be necessary but as long as DSACK
  	 * code can come after this skb later on it's better to keep
-@@ -3764,7 +3780,8 @@ static void tcp_replace_ts_recent(struct tcp_sock *tp, u32 seq)
+@@ -3781,7 +3797,8 @@ static void tcp_replace_ts_recent(struct tcp_sock *tp, u32 seq)
  /* This routine deals with acks during a TLP episode and ends an episode by
   * resetting tlp_high_seq. Ref: TLP algorithm in draft-ietf-tcpm-rack
   */
@@ -41125,7 +41125,7 @@ index 01d208e0eef3..a54951d6871d 100644
  {
  	struct tcp_sock *tp = tcp_sk(sk);
  
-@@ -3781,6 +3798,7 @@ static void tcp_process_tlp_ack(struct sock *sk, u32 ack, int flag)
+@@ -3798,6 +3815,7 @@ static void tcp_process_tlp_ack(struct sock *sk, u32 ack, int flag)
  		/* ACK advances: there was a loss, so reduce cwnd. Reset
  		 * tlp_high_seq in tcp_init_cwnd_reduction()
  		 */
@@ -41133,7 +41133,7 @@ index 01d208e0eef3..a54951d6871d 100644
  		tcp_init_cwnd_reduction(sk);
  		tcp_set_ca_state(sk, TCP_CA_CWR);
  		tcp_end_cwnd_reduction(sk);
-@@ -3791,6 +3809,11 @@ static void tcp_process_tlp_ack(struct sock *sk, u32 ack, int flag)
+@@ -3808,6 +3826,11 @@ static void tcp_process_tlp_ack(struct sock *sk, u32 ack, int flag)
  			     FLAG_NOT_DUP | FLAG_DATA_SACKED))) {
  		/* Pure dupack: original and TLP probe arrived; no loss */
  		tp->tlp_high_seq = 0;
@@ -41145,7 +41145,7 @@ index 01d208e0eef3..a54951d6871d 100644
  	}
  }
  
-@@ -3899,6 +3922,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
+@@ -3916,6 +3939,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
  
  	prior_fack = tcp_is_sack(tp) ? tcp_highest_sack_seq(tp) : tp->snd_una;
  	rs.prior_in_flight = tcp_packets_in_flight(tp);
@@ -41153,7 +41153,7 @@ index 01d208e0eef3..a54951d6871d 100644
  
  	/* ts_recent update must be made after we are sure that the packet
  	 * is in window.
-@@ -3973,7 +3997,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
+@@ -3990,7 +4014,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
  	tcp_rack_update_reo_wnd(sk, &rs);
  
  	if (tp->tlp_high_seq)
@@ -41162,7 +41162,7 @@ index 01d208e0eef3..a54951d6871d 100644
  
  	if (tcp_ack_is_dubious(sk, flag)) {
  		if (!(flag & (FLAG_SND_UNA_ADVANCED |
-@@ -3997,6 +4021,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
+@@ -4014,6 +4038,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
  	delivered = tcp_newly_delivered(sk, delivered, flag);
  	lost = tp->lost - lost;			/* freshly marked lost */
  	rs.is_ack_delayed = !!(flag & FLAG_ACK_MAYBE_DELAYED);
@@ -41170,7 +41170,7 @@ index 01d208e0eef3..a54951d6871d 100644
  	tcp_rate_gen(sk, delivered, lost, is_sack_reneg, sack_state.rate);
  	tcp_cong_control(sk, ack, delivered, flag, sack_state.rate);
  	tcp_xmit_recovery(sk, rexmit);
-@@ -4016,7 +4041,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
+@@ -4033,7 +4058,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
  	tcp_ack_probe(sk);
  
  	if (tp->tlp_high_seq)
@@ -41179,7 +41179,7 @@ index 01d208e0eef3..a54951d6871d 100644
  	return 1;
  
  old_ack:
-@@ -5671,13 +5696,14 @@ static void __tcp_ack_snd_check(struct sock *sk, int ofo_possible)
+@@ -5688,13 +5713,14 @@ static void __tcp_ack_snd_check(struct sock *sk, int ofo_possible)
  
  	    /* More than one full frame received... */
  	if (((tp->rcv_nxt - tp->rcv_wup) > inet_csk(sk)->icsk_ack.rcv_mss &&

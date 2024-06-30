@@ -31,6 +31,7 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/boot/rockpro64-blobs/Config.in"
 #   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/boot/uboot-a3gen2/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/boot/uboot-anbernic-rgxx3/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/boot/uboot-bananapi-m7/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/boot/uboot-evb-rk3399/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/boot/uboot-firefly-station-m2/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/boot/uboot-firefly-station-p2/Config.in"
@@ -101,6 +102,7 @@ menu "System"
   endmenu
 
   menu "Network"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/aic8800/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/qualcomm/pd-mapper/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/qualcomm/qrtr/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/qualcomm/rmtfs/Config.in"
@@ -598,6 +600,7 @@ menu "Hardware"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/element14-pi-desktop/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/gpicase/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/pironman/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/pironman5/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/roshambo-case/Config.in"
 endmenu
 

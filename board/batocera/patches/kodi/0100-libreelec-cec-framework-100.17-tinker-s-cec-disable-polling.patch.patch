@@ -1,6 +1,8 @@
+diff --git a/xbmc/peripherals/bus/virtual/PeripheralBusCEC.cpp b/xbmc/peripherals/bus/virtual/PeripheralBusCEC.cpp
+index 81eef10036..c1d731d1c1 100644
 --- a/xbmc/peripherals/bus/virtual/PeripheralBusCEC.cpp
 +++ b/xbmc/peripherals/bus/virtual/PeripheralBusCEC.cpp
-@@ -45,6 +45,10 @@ bool CPeripheralBusCEC::PerformDeviceSca
+@@ -45,6 +45,10 @@ bool CPeripheralBusCEC::PerformDeviceScan(PeripheralScanResults& results)
        case ADAPTERTYPE_P8_DAUGHTERBOARD:
          result.m_mappedBusType = PERIPHERAL_BUS_USB;
          break;

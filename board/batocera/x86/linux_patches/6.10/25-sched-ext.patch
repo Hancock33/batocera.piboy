@@ -776,10 +776,10 @@ index 000000000000..497eeaa5ecbe
 +possible, they are subject to change without warning between kernel
 +versions.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index b7ce74b343cc..b64855f13dbb 100644
+index cc5364e19a1c..79616074a953 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -19944,6 +19944,19 @@ F:	include/linux/wait.h
+@@ -19945,6 +19945,19 @@ F:	include/linux/wait.h
  F:	include/uapi/linux/sched.h
  F:	kernel/sched/
  
@@ -800,7 +800,7 @@ index b7ce74b343cc..b64855f13dbb 100644
  R:	John Garry <john.g.garry@oracle.com>
  R:	Jason Yan <yanaijie@huawei.com>
 diff --git a/Makefile b/Makefile
-index a6ae1853767a..657127eecb67 100644
+index 23e3c0be946a..d48ae436c56d 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -1358,6 +1358,12 @@ ifneq ($(wildcard $(resolve_btfids_O)),)
@@ -1293,7 +1293,7 @@ index 2150ca60394b..06bb4ca93414 100644
  void cgroup_file_show(struct cgroup_file *cfile, bool show);
  
 diff --git a/include/linux/filter.h b/include/linux/filter.h
-index 0f12cf01070e..b02aea291b7e 100644
+index 5669da513cd7..3b1dbc63e309 100644
 --- a/include/linux/filter.h
 +++ b/include/linux/filter.h
 @@ -1406,7 +1406,7 @@ struct bpf_sock_ops_kern {
@@ -10864,7 +10864,7 @@ index c3c51b9a6826..816bb0fde718 100644
  		if (err)
  			goto blackhole;
 diff --git a/net/core/dev.c b/net/core/dev.c
-index 4d4de9008f6f..e62698c7a0e6 100644
+index 2b4819b610b8..d0db3ba8b306 100644
 --- a/net/core/dev.c
 +++ b/net/core/dev.c
 @@ -2160,7 +2160,7 @@ EXPORT_SYMBOL(net_disable_timestamp);

@@ -1,5 +1,5 @@
 diff --git a/SDL/SDLJoystick.cpp b/SDL/SDLJoystick.cpp
-index adafc50282..c7e4882b5e 100644
+index 326eab88de..d1eb3eb4aa 100644
 --- a/SDL/SDLJoystick.cpp
 +++ b/SDL/SDLJoystick.cpp
 @@ -19,7 +19,7 @@ static int SDLJoystickEventHandlerWrapper(void* userdata, SDL_Event* event)
@@ -36,7 +36,7 @@ index adafc50282..c7e4882b5e 100644
  }
  
  void SDLJoystick::setUpController(int deviceIndex) {
-@@ -215,11 +215,9 @@ void SDLJoystick::ProcessInput(const SDL_Event &event){
+@@ -227,11 +227,9 @@ void SDLJoystick::ProcessInput(const SDL_Event &event){
  		}
  		break;
  	case SDL_CONTROLLERDEVICEADDED:
@@ -73,10 +73,10 @@ index 50cc43c4c7..9c287ade8a 100644
  	// Deduplicate axis events. Pair is device, axis.
  	std::map<std::pair<InputDeviceID, InputAxis>, float> prevAxisValue_;
 diff --git a/SDL/SDLMain.cpp b/SDL/SDLMain.cpp
-index 2973222d8f..bce2d607bd 100644
+index b31d9fcd5b..efc3b1bdcc 100644
 --- a/SDL/SDLMain.cpp
 +++ b/SDL/SDLMain.cpp
-@@ -1147,6 +1147,7 @@ int main(int argc, char *argv[]) {
+@@ -1145,6 +1145,7 @@ int main(int argc, char *argv[]) {
  	bool set_ipad = false;
  	float set_dpi = 0.0f;
  	float set_scale = 1.0f;
@@ -84,7 +84,7 @@ index 2973222d8f..bce2d607bd 100644
  
  	// Produce a new set of arguments with the ones we skip.
  	int remain_argc = 1;
-@@ -1165,6 +1166,8 @@ int main(int argc, char *argv[]) {
+@@ -1163,6 +1164,8 @@ int main(int argc, char *argv[]) {
  			set_dpi = parseFloat(argv[i]);
  		else if (set_scale == -2)
  			set_scale = parseFloat(argv[i]);
@@ -93,7 +93,7 @@ index 2973222d8f..bce2d607bd 100644
  		else if (!strcmp(argv[i],"--xres"))
  			set_xres = -2;
  		else if (!strcmp(argv[i],"--yres"))
-@@ -1177,6 +1180,8 @@ int main(int argc, char *argv[]) {
+@@ -1175,6 +1178,8 @@ int main(int argc, char *argv[]) {
  			set_ipad = true;
  		else if (!strcmp(argv[i],"--portrait"))
  			portrait = true;
@@ -102,7 +102,7 @@ index 2973222d8f..bce2d607bd 100644
  		else {
  			remain_argv[remain_argc++] = argv[i];
  		}
-@@ -1400,7 +1405,7 @@ int main(int argc, char *argv[]) {
+@@ -1398,7 +1403,7 @@ int main(int argc, char *argv[]) {
  	InitSDLAudioDevice();
  
  	if (joystick_enabled) {

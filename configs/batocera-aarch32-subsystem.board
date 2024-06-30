@@ -24,13 +24,13 @@ BR2_ZCAT="pigz -d -c"
 # required for utf-8
 BR2_TOOLCHAIN_GLIBC_GCONV_LIBS_COPY=y
 
-# Linux headers same as kernel, a 6.6 series
-BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_6_6=y
+# Linux headers same as kernel, a 6.10 series
+BR2_KERNEL_HEADERS_AS_KERNEL=y
 
-# Kernel - Version: 6.6.34
+# Kernel - Version: 6.10
 BR2_LINUX_KERNEL=n
 BR2_KERNEL_HEADERS_CUSTOM_TARBALL=y
-BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,7af85d54e39733bb9a236b95ea5ed1ab8277d560)/7af85d54e39733bb9a236b95ea5ed1ab8277d560.tar.gz"
+BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,f61d3aca8045e70d64b55f7b98f083738f639ad2)/f61d3aca8045e70d64b55f7b98f083738f639ad2.tar.gz"
 
 BR2_TARGET_ROOTFS_TAR=n
 BR2_ROOTFS_POST_BUILD_SCRIPT="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/scripts/aarch32-packager.sh"

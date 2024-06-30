@@ -1,0 +1,17 @@
+diff --git a/gamecon_gpio_rpi.c b/gamecon_gpio_rpi.c
+index 3d6c423..5dd3896 100644
+--- a/gamecon_gpio_rpi.c
++++ b/gamecon_gpio_rpi.c
+@@ -31,7 +31,11 @@
+ #include <linux/module.h>
+ #include <linux/init.h>
+ #include <linux/input.h>
+-#include <linux/of_device.h>
++#include <linux/of.h>
++#include <linux/of_address.h>
++#include <linux/of_fdt.h>
++#include <linux/of_irq.h>
++#include <linux/of_platform.h>
+ #include <linux/mutex.h>
+ #include <linux/slab.h>
+ #include <linux/ioport.h>

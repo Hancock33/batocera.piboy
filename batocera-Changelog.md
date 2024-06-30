@@ -18,7 +18,9 @@ Initial support for the Lenovo Legion Go
 Support for Nvidia cards requiring the legacy 340.108 driver.
 Add support for the Ayaneo 2S
 Add support for the Ayaneo Air Plus (6800U) model
-Add support for the Rock 5c
+Add support for the Radxa Rock 5c
+Add support for the Banana Pi BPI-M7
+Add support for the Pironman 5 case with RPi5 devices.
 ### Added
 - Support for Lexaloffle Voxatron (needs official engine, no emulator provided)
 - C64: support for REU (RAM Expansion Unit), .d71 and .g64 ROM format
@@ -37,6 +39,7 @@ Add support for the Rock 5c
   - Driving Wheel SV200
   - PNX-V10 (x-input only)
   - Logitech Driving Force Pro
+  - HORI Racing Wheel Overdrive (mode 2 only)
 - Dolphin: support for Retroachievements (when they are enabled)
 - Color Computer (coco) now autoloads cassettes and disks based on MAME software lists with default fallbacks
   - uses "usage" info field in MAME software list
@@ -50,6 +53,8 @@ Add support for the Rock 5c
   - Bind key C for player 1; V for player 2; B for player 3; N for player 4
 - Nvidia cards using the latest production driver now has cuda hardware accelerated playback enabled for ffmpeg & mpv
 - Wireguard VPN tools to setup your PC for Wireguard VPN access. See the wiki here: https://wiki.batocera.org/vpn_client
+- Support for standalone MAME (MAME) and libretro-MAME (lr-mame) BIOS files in bios/mame/ subfolder
+  - BIOS files in /userdata/bios/mame have precendence over /userdata/bios (per MAME -rompath behavior)
 ### Fixed
 - RG552 Splash-screen rotation
 - RG552 Vibrator enabled
@@ -139,7 +144,7 @@ Add support for the Rock 5c
 - Fheroes2 to 1.0.13
 - PCSX2 to v1.7.5913
 - Play! & Libretro Play! to 0.66
-- Dolphin to 5.0-21543
+- Dolphin to 5.0-21774
 - Libretro-Hatarib: bump to v0.3
 - Hatari to v2.5.0
 - Citra to r64e3e9f

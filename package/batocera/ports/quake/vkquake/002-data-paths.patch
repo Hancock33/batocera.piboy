@@ -1,8 +1,8 @@
 diff --git a/Quake/sys_sdl_unix.c b/Quake/sys_sdl_unix.c
-index e4703d4..78e7561 100644
+index 5ef6732..d4dea16 100644
 --- a/Quake/sys_sdl_unix.c
 +++ b/Quake/sys_sdl_unix.c
-@@ -237,7 +237,7 @@ static char userdir[MAX_OSPATH];
+@@ -83,7 +83,7 @@ static char userdir[MAX_OSPATH];
  #ifdef PLATFORM_OSX
  #define SYS_USERDIR "Library/Application Support/vkQuake"
  #else
@@ -11,7 +11,7 @@ index e4703d4..78e7561 100644
  #endif
  
  static void Sys_GetUserdir (char *dst, size_t dstsize)
-@@ -256,6 +256,7 @@ static void Sys_GetUserdir (char *dst, size_t dstsize)
+@@ -102,6 +102,7 @@ static void Sys_GetUserdir (char *dst, size_t dstsize)
  	if (home_dir == NULL)
  		Sys_Error ("Couldn't determine userspace directory");
  

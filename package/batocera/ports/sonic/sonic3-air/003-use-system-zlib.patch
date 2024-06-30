@@ -25,7 +25,7 @@ index e5a614ca..36decde9 100644
  
  
 diff --git a/Oxygen/sonic3air/build/_cmake/CMakeLists.txt b/Oxygen/sonic3air/build/_cmake/CMakeLists.txt
-index 2a43f7db..b74d131f 100644
+index de6e8b0d..8a5e7477 100644
 --- a/Oxygen/sonic3air/build/_cmake/CMakeLists.txt
 +++ b/Oxygen/sonic3air/build/_cmake/CMakeLists.txt
 @@ -61,9 +61,9 @@ set(SDL_STATIC ON)

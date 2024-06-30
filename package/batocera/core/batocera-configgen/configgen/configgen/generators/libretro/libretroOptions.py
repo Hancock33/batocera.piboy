@@ -2898,6 +2898,32 @@ def generateCoreSettings(coreSettings, system, rom, guns, wheels):
             else:
                 coreSettings.save('fbneo-memcard-mode', '"per-game"')
 
+    if system.name == 'neogeomvs':
+        #System Type
+        if system.isOptSet('geolith_system'):
+            if system.config['geolith_system'] == "AES":
+                coreSettings.save('geolith_system_type', '"aes"')
+            elif system.config['geolith_system'] == 'MVS':
+                coreSettings.save('geolith_system_type', '"mvs"')
+            elif system.config['geolith_system'] == 'Universe BIOS':
+                coreSettings.save('geolith_system_type', '"uni"')
+            else:
+                coreSettings.save('geolith_system_type', '"mvs"')
+        #Region
+        if system.isOptSet('geolith_region'):
+            if system.config['geolith_region'] == "USA":
+                coreSettings.save('geolith_region', '"us"')
+            elif system.config['geolith_region'] == 'Japan':
+                coreSettings.save('geolith_region', '"jp"')
+            elif system.config['geolith_region'] == 'Asia':
+                coreSettings.save('geolith_region', '"as"')
+            elif system.config['geolith_region'] == 'Europe':
+                coreSettings.save('geolith_region', '"eu"')
+            else:
+                coreSettings.save('geolith_region', '"us"')
+
+            coreSettings.save('geolith_freeplay', '"on"')
+
     # SNK Neogeo CD
     if (system.config['core'] == 'neocd'):
         # Console region
