@@ -600,6 +600,7 @@ menu "Hardware"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/element14-pi-desktop/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/gpicase/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/pironman/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/pironman5/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/hardware/roshambo-case/Config.in"
 endmenu
 
