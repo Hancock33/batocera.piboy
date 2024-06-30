@@ -8,6 +8,8 @@ Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|f19a32eca97747ddbf30cb16f
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|bd6c7265511d5819fb6654f02d329daaa1b96dde|Jun 30, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|d8f20769e690e55ed204e81c0fc8eb88c0556082|Jun 30, 2024
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|f119c320f9106d7b452d0a1e7b79e1c3e3cee9b1|Jun 30, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240630|Jun 30, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240630|Jun 30, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|cc8e0b6a3838dfc972bbe0d0bc59643609b3d3cd|Jun 30, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|00679d3b786ccd6b1111058c1fc1fca1216b191a|Jun 30, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|64b0b85ed5fe15d17cfa6b5fce0044000b013a07|Jun 29, 2024
@@ -22,8 +24,6 @@ Ports|[fheroes2](http://github.com/ihhub/fheroes2)|84dbbca7e9a562fb4c0ba1c7df484
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|b5496f142f166c38a96f7a63c6fc320c6dec0c47|Jun 29, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|c1be0b746b16511ea8c35eefe4432c9aa7298d82|Jun 29, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|57c790646fded3b491f977aa67a061781f06aedb|Jun 29, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240629|Jun 29, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240629|Jun 29, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|7c441679095fc876f930f57b7c25ef0982579e4f|Jun 29, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|c3db0fe98f327228a1f44966f06fe46d8eac85a9|Jun 29, 2024
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|38c37cb7e8298c0f8e7a441ab479c158369528fc|Jun 29, 2024
