@@ -3,7 +3,7 @@
 # pm_dashboard
 #
 ################################################################################
-
+# Version: Commits on May 21, 2024
 PM_DASHBOARD_VERSION = 3466da5dcad2493bd125f1b5fd6bbc531c3782c1
 PM_DASHBOARD_SITE = $(call github,sunfounder,pm_dashboard,$(PM_DASHBOARD_VERSION))
 PM_DASHBOARD_SETUP_TYPE = setuptools

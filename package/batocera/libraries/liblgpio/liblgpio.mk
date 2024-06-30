@@ -3,15 +3,10 @@
 # liblgpio
 #
 ################################################################################
-
-LIBLGPIO_SOURCE = lg.zip
-LIBLGPIO_SITE = http://abyz.me.uk/lg
-
+# Version: Commits on Mar 28, 2024
+LIBLGPIO_VERSION = 746f0df43774175090b93abcc860b6733eefc09b
+LIBLGPIO_SITE = $(call github,joan2937,lg,$(LIBLGPIO_VERSION))
 LIBLGPIO_INSTALL_STAGING = YES
-
-define LIBLGPIO_EXTRACT_CMDS
-	$(UNZIP) $(DL_DIR)/$(LIBLGPIO_DL_SUBDIR)/$(LIBLGPIO_SOURCE) -d $(@D)
-endef
 
 define LIBLGPIO_BUILD_CMDS
 	$(TARGET_MAKE_ENV) $(TARGET_CONFIGURE_OPTS) \
