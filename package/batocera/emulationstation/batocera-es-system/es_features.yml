@@ -2765,6 +2765,23 @@ libretro:
                         choices:
                             "Off":       disabled
                             "On":        enabled
+    geolith:
+      features: [padtokeyboard, netplay]
+      shared: [autosave, rewind, use_guns, use_wheels, wheel_rotation, wheel_deadzone, wheel_midzone]
+      cfeatures:
+            geolith_system:
+                prompt:      SYSTEM TYPE
+                choices:
+                    "AES (Home Console)":             AES
+                    "MVS (Arcade)":                   MVS
+                    "Universe BIOS (Cheats)":         Universe BIOS
+            geolith_region:
+                prompt:      REGION
+                choices:
+                    "USA":                            USA
+                    "Japan":                          Japan
+                    "Asia":                           Asia
+                    "Europe":                         Europe
     gpsp:
       features: [padtokeyboard, cheevos]
       shared: [autosave, rewind]
@@ -7781,8 +7798,8 @@ hypseus-singe:
           prompt: HIDE LIGHT GUN CROSSHAIRS
           description: Hide crosshairs in supported games e.g. ActionMax, Maddog II.
           choices:
-            "Hidden": 1
-            "Shown":  0
+            "Hide": 1
+            "Show": 0
         singe_abs:
             group: ADVANCED OPTIONS
             prompt: ABSOLUTE MOUSE INPUT

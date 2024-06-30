@@ -3,8 +3,8 @@
 # libretro-cannonball
 #
 ################################################################################
-# Version: Commits on Oct 31, 2023
-LIBRETRO_CANNONBALL_VERSION = c5487ee342ec2596f733a211b812e338cdba8ad8
+# Version: Commits on Jun 28, 2024
+LIBRETRO_CANNONBALL_VERSION = fb2a341b9c17bab44941495fa5568f7f0f66f92a
 LIBRETRO_CANNONBALL_SITE = $(call github,libretro,cannonball,$(LIBRETRO_CANNONBALL_VERSION))
 LIBRETRO_CANNONBALL_LICENSE = COPYRIGHT
 LIBRETRO_CANNONBALL_NON_COMMERCIAL = y

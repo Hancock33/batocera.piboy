@@ -3345,17 +3345,17 @@ msgctxt "game_options"
 msgid "Choose the Dreamcast console region."
 msgstr "Dreamcast konsol bölgesini seç."
 
-#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, suyu, ryujinx
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/vitaquake3, suyu, ...
 msgctxt "game_options"
 msgid "USA"
 msgstr "ABD"
 
-#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, pcsx2, redream, ...
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/vitaquake3, pcsx2, ...
 msgctxt "game_options"
 msgid "Europe"
 msgstr "Avrupa"
 
-#. TRANSLATION: libretro/flycast, libretro/neocd, flycast/vitaquake3, redream, suyu, ...
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/vitaquake3, redream, ...
 msgctxt "game_options"
 msgid "Japan"
 msgstr "Japon"
@@ -3805,7 +3805,7 @@ msgid ""
 "Games may run faster/slower than normal if the incorrect region is selected."
 msgstr "Yanlış bölge seçilirse oyunlar normalden daha hızlı/yavaş çalışabilir."
 
-#. TRANSLATION: libretro/genesisplusgx, redream, virtualjaguar
+#. TRANSLATION: libretro/genesisplusgx, libretro/geolith, redream, virtualjaguar
 msgctxt "game_options"
 msgid "REGION"
 msgstr "ÜLKE"
@@ -4027,6 +4027,31 @@ msgctxt "game_options"
 msgid "EXTENDED SCREEN"
 msgstr "GENİŞLETİLMİŞ EKRAN"
 
+#. TRANSLATION: libretro/geolith
+msgctxt "game_options"
+msgid "SYSTEM TYPE"
+msgstr ""
+
+#. TRANSLATION: libretro/geolith
+msgctxt "game_options"
+msgid "AES (Home Console)"
+msgstr ""
+
+#. TRANSLATION: libretro/geolith
+msgctxt "game_options"
+msgid "MVS (Arcade)"
+msgstr ""
+
+#. TRANSLATION: libretro/geolith
+msgctxt "game_options"
+msgid "Universe BIOS (Cheats)"
+msgstr ""
+
+#. TRANSLATION: libretro/geolith
+msgctxt "game_options"
+msgid "Asia"
+msgstr ""
+
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Choose your desired Atari machine type."
@@ -4226,7 +4251,7 @@ msgctxt "game_options"
 msgid "SCREEN BORDERS"
 msgstr "EKRAN SINIRLARI"
 
-#. TRANSLATION: libretro/hatarib
+#. TRANSLATION: libretro/hatarib, hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "Hide"
 msgstr "Gizle"
@@ -9110,16 +9135,6 @@ msgstr "SİLAH HEDEF İMLECİ GİZLE"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
-msgid "Hidden"
-msgstr "Gizlenmiş"
-
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
-msgctxt "game_options"
-msgid "Shown"
-msgstr "Gösterilen"
-
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
-msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr "Bu seçenek, fare ile oynanan bazı silah oyunları için gereklidir."
 
@@ -9127,6 +9142,16 @@ msgstr "Bu seçenek, fare ile oynanan bazı silah oyunları için gereklidir."
 msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "MUTLAK FARE GİRİŞİ"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Hidden"
+msgstr "Gizlenmiş"
+
+#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+msgctxt "game_options"
+msgid "Shown"
+msgstr "Gösterilen"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"

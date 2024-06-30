@@ -1,0 +1,17 @@
+diff --git a/db9_gpio_rpi.c b/db9_gpio_rpi.c
+index cb210f7..06e4dca 100644
+--- a/db9_gpio_rpi.c
++++ b/db9_gpio_rpi.c
+@@ -36,7 +36,11 @@
+ #include <linux/delay.h>
+ #include <linux/init.h>
+ #include <linux/input.h>
+-#include <linux/of_device.h>
++#include <linux/of.h>
++#include <linux/of_address.h>
++#include <linux/of_fdt.h>
++#include <linux/of_irq.h>
++#include <linux/of_platform.h>
+ #include <linux/mutex.h>
+ #include <linux/version.h>
+ #include <linux/slab.h>

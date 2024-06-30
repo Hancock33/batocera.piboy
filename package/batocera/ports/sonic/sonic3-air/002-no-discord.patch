@@ -12,7 +12,7 @@ index 2a43f7db..de6e8b0d 100644
  	link_directories(/opt/vc/lib)	# Needed when building on Raspberry Pi
  	set(USE_DISCORD false)
 diff --git a/Oxygen/sonic3air/source/sonic3air/helper/DiscordIntegration.cpp b/Oxygen/sonic3air/source/sonic3air/helper/DiscordIntegration.cpp
-index 205dc9a3..34d2411d 100644
+index ee5506fa..645e7a2f 100644
 --- a/Oxygen/sonic3air/source/sonic3air/helper/DiscordIntegration.cpp
 +++ b/Oxygen/sonic3air/source/sonic3air/helper/DiscordIntegration.cpp
 @@ -14,7 +14,7 @@
