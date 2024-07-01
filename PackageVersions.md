@@ -69,7 +69,7 @@ Emulators|[citra](https://github.com/PabloMK7/citra.git)|4f174f1c0b81266170aa8da
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
 Emulators|[d8vk](https://github.com/AlpyneDreams/d8vk/releases)|d8vk-v1.0|May 10, 2023
 Emulators|[demul](http://demul.emulation64.com/files)|demul07_280418|Apr 28, 2018
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|1a376e46d5a11c8853e3028b46c39eb9498aa2c8|Jul 01, 2024
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|f4c6311b9106feaa6e79bffc9b32ec7bbc41e2e9|Jul 01, 2024
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|bfefd38d2500103d32f5da9f7fcd80090b7836fb|May 23, 2024
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|1e950b31cfebe35c9ef553fb7fc03ed5f9042188|May 31, 2024
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.03.01|Mar 01, 2024
@@ -79,7 +79,7 @@ Emulators|[duckstation-legacy](https://github.com/stenzek/duckstation.git)|v0.1-
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|1963d80d2ca0c256bee791116fd86944bf430922|Jun 30, 2024
 Emulators|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.7.1|Jun 21, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.3.1|Mar 20, 2024
-Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|6e33041ff2ce7813ea81a51e3b3b8dbe5ed22c22|Jun 11, 2024
+Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|a650f92f2a680902c60d618149beadde4f3a69ba|Jul 01, 2024
 Emulators|[eka2l1](https://github.com/rtissera/EKA2L1.git)|8bf21e354c7aa3ea8f287a5f47825d1370b1c14f|Sept 18, 2023
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|7d645541f8f8b7f4550eabe9157d8fb82b43c1a7|Jun 23, 2024
 Emulators|[fpinball](https://github.com/batocera-linux/fpinball/releases)|v1.9.1.20101231|Dec 31, 2010
@@ -129,7 +129,7 @@ Emulators|[libretro-dolphin](http://github.com/libretro/dolphin)|89a4df725d4eb24
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|00e3ed7e361afbab03363e493f5aa643e0bb2577|Jun 29, 2024
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|2f242676cf96b1054c1adfc94373302ed5ddc45a|Jun 20, 2024
 Emulators|[libretro-duckstation](http://github.com/batocera-linux/lr-duckstation)|5c0d746e4ccb725fc03e53dc530b90bc570253d7|Dec 03, 2021
-Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|6e33041ff2ce7813ea81a51e3b3b8dbe5ed22c22|Jun 11, 2024
+Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|a650f92f2a680902c60d618149beadde4f3a69ba|Jul 01, 2024
 Emulators|[libretro-ecwolf](https://github.com/libretro/ecwolf)|b3fe0743d8dc0fe90b066bccc1567496a0a25a14|Jun 28, 2024
 Emulators|[libretro-emuscv](http://gitlab.com/MaaaX-EmuSCV/libretro-emuscv)|dfce10df090ce3f5eb23bdbee289702ec1478246|Oct 18, 2022
 Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|0747110b5a98b4c36dc8784780f5ae436a94a1bd|Mar 23, 2024
