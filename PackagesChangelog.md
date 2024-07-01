@@ -3,7 +3,7 @@
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|24.07|Jul 01, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|3dcc978c9c865985e4b365ab14e162e2216bda5f|Jul 01, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|3dcc978c9c865985e4b365ab14e162e2216bda5f|Jul 01, 2024
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|1a376e46d5a11c8853e3028b46c39eb9498aa2c8|Jul 01, 2024
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|f4c6311b9106feaa6e79bffc9b32ec7bbc41e2e9|Jul 01, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|d80ff04708f6b6e40c35dcba1f1b17327d072f2f|Jul 01, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v1.7.5949|Jul 01, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-07-01|Jul 01, 2024
@@ -14,10 +14,12 @@ Ports|[box64](http://github.com/ptitseb/box64)|dbb84245a020e5a6c6fe58dbe5eff0fd4
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|eb89cede7780de7b11c6819f41cc14a6d36dd170|Jul 01, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|816491b94d6592d3e0d8dbbda4145dba6eacc55d|Jul 01, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|afbb58ed442704b716003626b3e4f106c3cbff09|Jul 01, 2024
+Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|a650f92f2a680902c60d618149beadde4f3a69ba|Jul 01, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240701|Jul 01, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|3160892879c68ec04c6c02e630c6ec0062542cf8|Jul 01, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240701|Jul 01, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|334c3d8189b6b2ead124ee8f204ecc672db22597|Jul 01, 2024
+Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|a650f92f2a680902c60d618149beadde4f3a69ba|Jul 01, 2024
 Emulators|[libretro-imame](http://github.com/libretro/mame2000-libretro)|2ec60f6e1078cf9ba173e80432cc28fd4eea200f|Jul 01, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|d6fdae0a803fde195d45cda87c6f7ecdb2cd8872|Jul 01, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|916fa1dba0a0452a0db9c870f6fe7ce2133b868a|Jul 01, 2024
@@ -189,8 +191,6 @@ Kodi|[kodi_resource_language_sv_se](http://mirrors.kodi.tv/addons/omega/resource
 Kodi|[kodi_resource_language_tr_tr](http://mirrors.kodi.tv/addons/omega/resource.language.tr_tr)|11.0.75|Jun 11, 2024
 Kodi|[kodi_resource_language_zh_cn](http://mirrors.kodi.tv/addons/omega/resource.language.zh_cn)|11.0.74|Jun 11, 2024
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|6ef53c34dda241fa185a90261b6b3c40c09dffa3|Jun 11, 2024
-Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|6e33041ff2ce7813ea81a51e3b3b8dbe5ed22c22|Jun 11, 2024
-Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|6e33041ff2ce7813ea81a51e3b3b8dbe5ed22c22|Jun 11, 2024
 Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.12|Jun 10, 2024
 Firmwares|[alllinuxfirmwares](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot)|20240610|Jun 10, 2024
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|60cb30f994ec8a35a61f382e3d4716eb42ca1faa|Jun 10, 2024
