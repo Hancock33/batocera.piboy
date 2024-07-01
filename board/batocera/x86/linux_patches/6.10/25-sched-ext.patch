@@ -776,10 +776,10 @@ index 000000000000..497eeaa5ecbe
 +possible, they are subject to change without warning between kernel
 +versions.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index cc5364e19a1c..79616074a953 100644
+index f8835a858a72..f96ed4419b3e 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -19945,6 +19945,19 @@ F:	include/linux/wait.h
+@@ -19963,6 +19963,19 @@ F:	include/linux/wait.h
  F:	include/uapi/linux/sched.h
  F:	kernel/sched/
  
@@ -800,7 +800,7 @@ index cc5364e19a1c..79616074a953 100644
  R:	John Garry <john.g.garry@oracle.com>
  R:	Jason Yan <yanaijie@huawei.com>
 diff --git a/Makefile b/Makefile
-index 23e3c0be946a..d48ae436c56d 100644
+index 6fdff96d1f5f..dd3d03f2fc5b 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -1358,6 +1358,12 @@ ifneq ($(wildcard $(resolve_btfids_O)),)
