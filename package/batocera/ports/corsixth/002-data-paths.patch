@@ -1,8 +1,8 @@
 diff --git a/CorsixTH/Lua/app.lua b/CorsixTH/Lua/app.lua
-index c638302d..f1975d3d 100644
+index 402abb07..d794cdf4 100644
 --- a/CorsixTH/Lua/app.lua
 +++ b/CorsixTH/Lua/app.lua
-@@ -1356,6 +1356,7 @@ function App:checkInstallFolder()
+@@ -1393,6 +1393,7 @@ function App:checkInstallFolder()
        if win_home_dir == user_dir then win_home_dir = nil; end
      end
      local possible_locations = {
@@ -10,12 +10,12 @@ index c638302d..f1975d3d 100644
        user_dir,
        user_dir and (user_dir .. pathsep .. "Documents"),
        win_home_dir,
-@@ -1369,7 +1370,7 @@ function App:checkInstallFolder()
+@@ -1406,7 +1407,7 @@ function App:checkInstallFolder()
        os.getenv("ProgramFiles"),
        os.getenv("ProgramFiles(x86)"),
        [[C:]], [[D:]], [[E:]], [[F:]], [[G:]], [[H:]] }
 -    local possible_folders = { "ThemeHospital", "Theme Hospital", "HOSP", "TH97",
 +    local possible_folders = { "themehospital", "Theme Hospital", "HOSP", "TH97",
-       [[GOG.com\Theme Hospital]], [[GOG Games\Theme Hospital]],
-       [[Origin Games\Theme Hospital\data\Game]], [[EA Games\Theme Hospital\data\Game]]
-     }
+       [[GOG Galaxy\Games\Theme Hospital]], [[GOG.com\Theme Hospital]],
+       [[GOG Games\Theme Hospital]], [[Origin Games\Theme Hospital\data\Game]],
+       [[EA Games\Theme Hospital\data\Game]]
