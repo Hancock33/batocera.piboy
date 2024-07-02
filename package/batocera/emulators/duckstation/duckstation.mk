@@ -7,7 +7,7 @@
 DUCKSTATION_VERSION = e16f2c4dab89f04415037f29c6943ec1ddb99793
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
-DUCKSTATION_DEPENDENCIES = boost ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev sdl2 shaderc webp zstd
+DUCKSTATION_DEPENDENCIES = boost cpuinfo ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev sdl2 shaderc webp zstd
 DUCKSTATION_DEPENDENCIES += qt6base qt6tools qt6svg host-clang host-spirv-cross spirv-cross
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
 
