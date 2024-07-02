@@ -607,6 +607,7 @@ endmenu
 menu "Libraries"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/appstream-glib/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/batocera-luajit/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/cpuinfo/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/ecm/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/ffmpeg-python/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/iir/Config.in"
