@@ -3,8 +3,8 @@
 # libserum
 #
 ################################################################################
-# Version: Commits on Apr 04, 2024
-LIBSERUM_VERSION = 362177db4dad59d0a9c6d026f0aed7d64ac71b7b
+# Version: Commits on Jun 30, 2024
+LIBSERUM_VERSION = v2.0.1
 LIBSERUM_SITE = $(call github,zesinger,libserum,$(LIBSERUM_VERSION))
 LIBSERUM_LICENSE = GPLv2+
 LIBSERUM_LICENSE_FILES = LICENSE.md
@@ -13,5 +13,10 @@ LIBSERUM_SUPPORTS_IN_SOURCE_BUILD = NO
 LIBSERUM_INSTALL_STAGING = YES
 
 LIBSERUM_CONF_OPTS += $(VPINBALL_COMMON_CONF_OPTS)
+
+define LIBSERUM_COPY_INCLUDES
+	cp $(@D)/src/serum.h $(STAGING_DIR)/usr/include
+endef
+LIBSERUM_POST_INSTALL_TARGET_HOOKS += LIBSERUM_COPY_INCLUDES
 
 $(eval $(cmake-package))
