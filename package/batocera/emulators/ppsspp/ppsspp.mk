@@ -31,7 +31,6 @@ PPSSPP_CONF_OPTS += -DUSE_SYSTEM_LIBPNG=ON
 PPSSPP_CONF_OPTS += -DUSE_SYSTEM_ZSTD=ON
 PPSSPP_CONF_OPTS += -DENABLE_CTEST=OFF
 
-PPSSPP_TARGET_CFLAGS = $(TARGET_CFLAGS) -flax-vector-conversions
 PPSSPP_TARGET_BINARY = PPSSPPSDL
 
 # make sure to select glvnd and depends on glew / glu because of X11 desktop GL
