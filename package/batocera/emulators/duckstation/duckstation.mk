@@ -3,15 +3,14 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Jul 02, 2024
-DUCKSTATION_VERSION = e16f2c4dab89f04415037f29c6943ec1ddb99793
+# Version: Commits on Jun 01, 2024
+DUCKSTATION_VERSION = dd53df756f17190c62e76c17d639979f582f1b4f
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_DEPENDENCIES = boost cpuinfo ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev sdl2 shaderc webp zstd
 DUCKSTATION_DEPENDENCIES += qt6base qt6tools qt6svg host-clang host-spirv-cross spirv-cross
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
 
-DUCKSTATION_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CFLAGS) -flax-vector-conversions"
 DUCKSTATION_CONF_OPTS += -DBUILD_SHARED_LIBS=FALSE
 DUCKSTATION_CONF_OPTS += -DENABLE_DISCORD_PRESENCE=OFF
 DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=ON
