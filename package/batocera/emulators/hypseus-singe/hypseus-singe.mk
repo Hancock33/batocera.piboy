@@ -3,8 +3,8 @@
 # hypseus-singe
 #
 ################################################################################
-# Version: Commits on Jun 02, 2024
-HYPSEUS_SINGE_VERSION = 060535e3f1174e6d4d4286eddb5b40068b056dac
+# Version: Commits on Jul 04, 2024
+HYPSEUS_SINGE_VERSION = 404042498b4846b2ee85773348f84e984c7f2e7e
 HYPSEUS_SINGE_SITE = $(call github,DirtBagXon,hypseus-singe,$(HYPSEUS_SINGE_VERSION))
 HYPSEUS_SINGE_LICENSE = GPLv3
 HYPSEUS_SINGE_DEPENDENCIES = libzip sdl2 sdl2_image sdl2_ttf zlib libogg libvorbis libmpeg2
