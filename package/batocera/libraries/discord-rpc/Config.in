@@ -1,0 +1,11 @@
+config BR2_PACKAGE_DISCORD_RPC
+	bool "discord-rpc"
+	depends on BR2_INSTALL_LIBSTDCPP
+
+	help
+	  This is a library for interfacing your game with a locally running Discord desktop client
+
+	  discordapp.com/developers
+
+comment "BR2_PACKAGE_DISCORD_RPC needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP
