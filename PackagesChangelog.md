@@ -13,8 +13,9 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|e39e07bc8198d6a3411b594c3bd7a2e
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|742f5fd5f7c0d244d833359bf08fd45135261cf1|Jul 06, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|8968ecd98884b59a0cb87fa4dbe266d6d419abd7|Jul 06, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|f63a9be2b0dd786412690d39c5bf34f8c91d7128|Jul 06, 2024
+Ports|[doomretro](http://github.com/bradharding/doomretro)|760b592a1ef13f8a99600fd9fd90430c16fbaae7|Jul 06, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|3f6a0a3689a8cbefb22455819b7def8d1a2d9b7a|Jul 06, 2024
-Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|b262163c2c921be806c5532984538484cf2cf0bd|Jul 06, 2024
+Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|e36ed6abb0ae456488a2d130d7f76a5bab23664b|Jul 06, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|b4376a6a8cf2685e588611728d325ee789a5244d|Jul 06, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|9e7f2030ad0ce2fc9150ea73e6507bf932ad017c|Jul 06, 2024
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|fc17209ac738ef2cae46292b71cec37301f766c9|Jul 06, 2024
@@ -34,7 +35,6 @@ Ports|[vcmi](https://github.com/vcmi/vcmi.git)|e1ee8df2b9248b035cad7eefc2b99adc5
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240705|Jul 05, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|fcbebfa8c8bebf25dded465b0c43ab859c91c0a2|Jul 05, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240705|Jul 05, 2024
-Ports|[doomretro](http://github.com/bradharding/doomretro)|13f7ba1ea42b32be3505e9816fe0f24a27487543|Jul 05, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|a90ceba8339c73abc2f28ff20ec65fce16904816|Jul 05, 2024
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|83591216128368943c509f028d06bc0277c5752d|Jul 05, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|0815ce24cfa713afd3e802a9a82c2599940c7b69|Jul 05, 2024

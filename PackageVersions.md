@@ -430,7 +430,7 @@ Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|2cc8e02ced1594d76
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|4351618d734b99fd7d6c9d21c123ccaf6c6cee23|Jul 04, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|742f5fd5f7c0d244d833359bf08fd45135261cf1|Jul 06, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|5c7aacb954e5cb7f5499821c577cbb334f0707fd|Jul 02, 2024
-Ports|[doomretro](http://github.com/bradharding/doomretro)|13f7ba1ea42b32be3505e9816fe0f24a27487543|Jul 05, 2024
+Ports|[doomretro](http://github.com/bradharding/doomretro)|760b592a1ef13f8a99600fd9fd90430c16fbaae7|Jul 06, 2024
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|27cbf1ba87e6d60809c43246e2eef760fcd26d13|Jun 30, 2024
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|d1de69a576d4bb39e89124185a6dfd6991202cb9|May 20, 2024
@@ -469,7 +469,7 @@ Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|be89e134e6f19ca5a9d4442b1ecfa2ccf
 Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|6facc3b09b67593cf9151a44cc59afd490f2ea62|Mar 25, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|20bb444562aa1dba79cf6adcb5da632ba580eec3|Jul 03, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|c3db0fe98f327228a1f44966f06fe46d8eac85a9|Jun 29, 2024
-Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|b262163c2c921be806c5532984538484cf2cf0bd|Jul 06, 2024
+Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|e36ed6abb0ae456488a2d130d7f76a5bab23664b|Jul 06, 2024
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|38c37cb7e8298c0f8e7a441ab479c158369528fc|Jun 29, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|71695941842d2916ac6302437e9663996e5f1144|Jun 29, 2024
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|2b90078a59e6b0312541dc095776ae794cec142e|Jun 28, 2024
