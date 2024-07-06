@@ -571,10 +571,10 @@ index 000000000000..767844637a7d
 +  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 3c4fdf74a3f9..f8835a858a72 100644
+index da5352dbd4f3..a2b008e335cf 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -6751,6 +6751,12 @@ S:	Supported
+@@ -6749,6 +6749,12 @@ S:	Supported
  T:	git https://gitlab.freedesktop.org/drm/misc/kernel.git
  F:	drivers/gpu/drm/sun4i/sun8i*
  
@@ -587,7 +587,7 @@ index 3c4fdf74a3f9..f8835a858a72 100644
  DRM DRIVER FOR ARM PL111 CLCD
  S:	Orphan
  T:	git https://gitlab.freedesktop.org/drm/misc/kernel.git
-@@ -9754,6 +9760,18 @@ F:	include/linux/pm.h
+@@ -9752,6 +9758,18 @@ F:	include/linux/pm.h
  F:	include/linux/suspend.h
  F:	kernel/power/
  
@@ -606,7 +606,7 @@ index 3c4fdf74a3f9..f8835a858a72 100644
  HID CORE LAYER
  M:	Jiri Kosina <jikos@kernel.org>
  M:	Benjamin Tissoires <bentiss@kernel.org>
-@@ -15997,6 +16015,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
+@@ -15995,6 +16013,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
  F:	Documentation/filesystems/ntfs3.rst
  F:	fs/ntfs3/
  
@@ -11596,7 +11596,7 @@ index 47b8b49da8a7..943959d1f401 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index a519fa49ee84..d8b9b4f1fa20 100644
+index e6fbcdb0708e..9f3646ac8dbd 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -157,6 +157,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_351_DMUB);
@@ -11925,7 +11925,7 @@ index b1be458ed4dd..28c0e76a1e88 100644
  			drm_fb_xrgb8888_to_argb8888(dst, dst_pitch, src, fb, clip, state);
  			return 0;
 diff --git a/drivers/gpu/drm/drm_panel_orientation_quirks.c b/drivers/gpu/drm/drm_panel_orientation_quirks.c
-index 2166208a961d..4b5e79dd5a9e 100644
+index 3860a8ce1e2d..a9944efc781c 100644
 --- a/drivers/gpu/drm/drm_panel_orientation_quirks.c
 +++ b/drivers/gpu/drm/drm_panel_orientation_quirks.c
 @@ -184,6 +184,12 @@ static const struct dmi_system_id orientation_data[] = {
@@ -11979,7 +11979,7 @@ index 2166208a961d..4b5e79dd5a9e 100644
  	}, {	/* Chuwi HiBook (CWI514) */
  		.matches = {
  			DMI_MATCH(DMI_BOARD_VENDOR, "Hampoo"),
-@@ -427,6 +457,20 @@ static const struct dmi_system_id orientation_data[] = {
+@@ -434,6 +464,20 @@ static const struct dmi_system_id orientation_data[] = {
  		  DMI_EXACT_MATCH(DMI_PRODUCT_VERSION, "1"),
  		},
  		.driver_data = (void *)&lcd800x1280_rightside_up,
@@ -12001,10 +12001,10 @@ index 2166208a961d..4b5e79dd5a9e 100644
  		.matches = {
  		  DMI_EXACT_MATCH(DMI_SYS_VENDOR, "VIOS"),
 diff --git a/drivers/gpu/drm/i915/display/intel_ddi.c b/drivers/gpu/drm/i915/display/intel_ddi.c
-index 3c3fc53376ce..f64e2d02a1f7 100644
+index 6bff169fa8d4..8d80ae00b838 100644
 --- a/drivers/gpu/drm/i915/display/intel_ddi.c
 +++ b/drivers/gpu/drm/i915/display/intel_ddi.c
-@@ -4645,6 +4645,7 @@ intel_ddi_init_hdmi_connector(struct intel_digital_port *dig_port)
+@@ -4648,6 +4648,7 @@ intel_ddi_init_hdmi_connector(struct intel_digital_port *dig_port)
  
  static bool intel_ddi_a_force_4_lanes(struct intel_digital_port *dig_port)
  {
@@ -12012,7 +12012,7 @@ index 3c3fc53376ce..f64e2d02a1f7 100644
  	struct drm_i915_private *dev_priv = to_i915(dig_port->base.base.dev);
  
  	if (dig_port->base.port != PORT_A)
-@@ -4653,6 +4654,9 @@ static bool intel_ddi_a_force_4_lanes(struct intel_digital_port *dig_port)
+@@ -4656,6 +4657,9 @@ static bool intel_ddi_a_force_4_lanes(struct intel_digital_port *dig_port)
  	if (dig_port->saved_port_bits & DDI_A_4_LANES)
  		return false;
  
@@ -28962,7 +28962,7 @@ index 59f1df0cde5a..fed6b8f435b1 100644
  void page_cache_ra_unbounded(struct readahead_control *,
  		unsigned long nr_to_read, unsigned long lookahead_count);
 diff --git a/include/linux/syscalls.h b/include/linux/syscalls.h
-index 63424af87bba..5c7de798af90 100644
+index fff820c3e93e..ab7d77ddc112 100644
 --- a/include/linux/syscalls.h
 +++ b/include/linux/syscalls.h
 @@ -818,6 +818,9 @@ asmlinkage long sys_madvise(unsigned long start, size_t len, int behavior);
@@ -48495,7 +48495,7 @@ index db7946a0a28c..c9194f7afe00 100644
  	(1<<TRANSPARENT_HUGEPAGE_USE_ZERO_PAGE_FLAG);
  
 diff --git a/mm/page-writeback.c b/mm/page-writeback.c
-index 12c9297ed4a7..761f48142325 100644
+index 8a1c92090129..a415623cde8f 100644
 --- a/mm/page-writeback.c
 +++ b/mm/page-writeback.c
 @@ -71,7 +71,11 @@ static long ratelimit_pages = 32;
@@ -51344,7 +51344,7 @@ index 28ffcfbeef14..7b13915ba288 100644
  		icsk->icsk_ca_ops->init(sk);
  	if (tcp_ca_needs_ecn(sk))
 diff --git a/net/ipv4/tcp_input.c b/net/ipv4/tcp_input.c
-index 2e39cb881e20..7d471e04ad78 100644
+index 77294fd5fd3e..d09fbc0f1b23 100644
 --- a/net/ipv4/tcp_input.c
 +++ b/net/ipv4/tcp_input.c
 @@ -365,7 +365,7 @@ static void __tcp_ecn_check_ce(struct sock *sk, const struct sk_buff *skb)
@@ -51460,7 +51460,7 @@ index 2e39cb881e20..7d471e04ad78 100644
  	return 1;
  
  old_ack:
-@@ -5688,13 +5713,14 @@ static void __tcp_ack_snd_check(struct sock *sk, int ofo_possible)
+@@ -5695,13 +5720,14 @@ static void __tcp_ack_snd_check(struct sock *sk, int ofo_possible)
  
  	    /* More than one full frame received... */
  	if (((tp->rcv_nxt - tp->rcv_wup) > inet_csk(sk)->icsk_ack.rcv_mss &&
