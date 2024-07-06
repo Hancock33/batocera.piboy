@@ -59,6 +59,10 @@ then
 fi
 rm -rf "${TARGET_DIR}/usr/share/clc" || exit 1
 
+find ${TARGET_DIR}/usr/share/locale -type f -not -name 'emulationstation2.mo' -delete || exit 1
+find ${TARGET_DIR}/usr/share/locale -xtype l -delete || exit 1
+find ${TARGET_DIR}/usr/share/locale -empty -type d -delete || exit 1
+
 # remove buildlogs
 find ${TARGET_DIR}/usr -type f -name ".applied_patches_list" -exec rm {} \;
 find ${TARGET_DIR}/usr -type f -name ".files-list*.before" -exec rm {} \;

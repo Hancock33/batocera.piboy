@@ -58,19 +58,30 @@ class HypseusSingeGenerator(Generator):
         hypseusConfigSource = "/usr/share/hypseus-singe/hypinput_gamepad.ini"
 
         bezel_to_rom = {
-            "cliffhanger": ["cliffhanger", "cliff"],
+            "ace": ["ace", "ace_a", "ace_a2", "ace91", "ace91_euro", "aceeuro"],
+            "astron": ["astron", "astronp"],
+            "badlands": ["badlands", "badlandsp"],
+            "bega": ["bega", "begar1"],
+            "cliffhanger": ["cliffhanger", "cliff", "cliffalt", "cliffalt2"],
+            "cobra": ["cobra", "cobraab", "cobraconv", "cobram3"],
             "conan": ["conan", "future_boy"],
             "chantze_hd": ["chantze_hd", "triad_hd", "triadstone"],
             "crimepatrol": ["crimepatrol", "crimepatrol-hd", "cp_hd"],
+            "dle": ["dle", "dle_alt", "dle11", "dle21"],
+            "dragon": ["dragon", "dragon_trainer"],
             "drugwars": ["drugwars", "drugwars-hd", "cp2dw_hd"],
             "daitarn": ["daitarn", "daitarn_3"],
             "dle": ["dle", "dle_alt"],
+            "fire_and_ice": ["fire_and_ice", "fire_and_ice_v2"],
+            "galaxy": ["galaxy", "galaxyp"],
+            "lair": ["lair", "lair_a", "lair_b", "lair_c", "lair_d", "lair_d2", "lair_e", "lair_f", "lair_ita", "lair_n1", "lair_x", "laireuro"],
             "lbh": ["lbh", "lbh-hd", "lbh_hd"],
             "maddog": ["maddog", "maddog-hd", "maddog_hd"],
             "maddog2": ["maddog2", "maddog2-hd", "maddog2_hd"],
             "jack": ["jack", "samurai_jack"],
-            "spacepirates": ["spacepirates", "spacepirates-hd", "space_pirates_hd"],
             "johnnyrock": ["johnnyrock", "johnnyrock-hd", "johnnyrocknoir", "wsjr_hd"],
+            "pussinboots": ["pussinboots", "puss_in_boots"],
+            "spacepirates": ["spacepirates", "spacepirates-hd", "space_pirates_hd"],
         }
 
         def find_bezel(rom_name):
