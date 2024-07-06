@@ -1,8 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|9a70003b70687ff8da70830273fd28b7949c1b37|Jul 06, 2024
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|02e1b9414909db1644562b3669967feff203460f|Jul 06, 2024
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|9afc6345407e656d5b34fa795a25fb978f16e598|Jul 06, 2024
-Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|93eebcac199a58c793752bc7b92e674b7c007421|Jul 06, 2024
+Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|4e5cc05dfbc74d6339357e3bf314160ebe1e7770|Jul 06, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|4f2b9d7e4edb283b8762680c3d5902cd39db34d8|Jul 06, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-07-06|Jul 06, 2024
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|391bf3ed07d1c167816c4e3390cf13b9f25837d3|Jul 06, 2024
@@ -10,7 +10,7 @@ Emulators|[thextech](https://github.com/TheXTech/TheXTech)|5da71ea28cfa6822c13ef
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|1766032ad90aba2f93fc484f58f0095b9770c238|Jul 06, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|b4828477794a8e69a96f0ca7991ad0e619d1b2a3|Jul 06, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|e39e07bc8198d6a3411b594c3bd7a2eb55e2a230|Jul 06, 2024
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|742f5fd5f7c0d244d833359bf08fd45135261cf1|Jul 06, 2024
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|ada13f9e9a297468cfdbda7d3ec721e598aa145c|Jul 06, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|8968ecd98884b59a0cb87fa4dbe266d6d419abd7|Jul 06, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|f63a9be2b0dd786412690d39c5bf34f8c91d7128|Jul 06, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|760b592a1ef13f8a99600fd9fd90430c16fbaae7|Jul 06, 2024
@@ -21,7 +21,6 @@ Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|9e7f2030ad0ce2fc915
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|fc17209ac738ef2cae46292b71cec37301f766c9|Jul 06, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|5c2783971ac101f65f6b3deaa8ec6592bd9e8393|Jul 05, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|5c2783971ac101f65f6b3deaa8ec6592bd9e8393|Jul 05, 2024
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|6ddfdc14836eaa24e08545486468dfdfd603f37a|Jul 05, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|c6f50fad9d4bb735f02444fddb14f53cfb6bacfc|Jul 05, 2024
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|cb9892c0d1b15bfc6ba96421cf91f684bf59045a|Jul 05, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v1.7.5957|Jul 05, 2024
@@ -236,6 +235,7 @@ Emulators|[mupen64plus-rsp-hle](http://github.com/mupen64plus/mupen64plus-rsp-hl
 Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-console)|3a5793ebc3c7e80972849e2d91f55500123a2cf4|May 27, 2024
 Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64plus-video-glide64mk2)|992b5942078fe77987e8c40bcd396f44be19be2b|May 27, 2024
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|1d41a6f8e2a8753cd9b9e970bac002465b3f145d|May 27, 2024
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|d372609bdcde013e8fbabbb8dd07659cf4725164|May 26, 2024
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
 Ports|[rtcw](http://github.com/iortcw/iortcw)|438e7d413b5f7277187c35b032eb0ef9093ae778|May 26, 2024
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024

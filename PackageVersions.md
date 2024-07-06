@@ -69,14 +69,14 @@ Emulators|[citra](https://github.com/PabloMK7/citra.git)|d2bd58287ca08af46830cea
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
 Emulators|[d8vk](https://github.com/AlpyneDreams/d8vk/releases)|d8vk-v1.0|May 10, 2023
 Emulators|[demul](http://demul.emulation64.com/files)|demul07_280418|Apr 28, 2018
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|6ddfdc14836eaa24e08545486468dfdfd603f37a|Jul 05, 2024
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|02e1b9414909db1644562b3669967feff203460f|Jul 06, 2024
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|bfefd38d2500103d32f5da9f7fcd80090b7836fb|May 23, 2024
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|1e950b31cfebe35c9ef553fb7fc03ed5f9042188|May 31, 2024
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.07.01|Jul 02, 2024
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 12, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Emulators|[duckstation-legacy](https://github.com/stenzek/duckstation.git)|v0.1-6461|Mar 16, 2024
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|9a70003b70687ff8da70830273fd28b7949c1b37|Jul 06, 2024
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|d372609bdcde013e8fbabbb8dd07659cf4725164|May 26, 2024
 Emulators|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.7.1|Jun 21, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.3.1|Mar 20, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|407707070e7e4b7f07c165cdcdf46fc156b8bd6b|Jul 02, 2024
@@ -88,7 +88,7 @@ Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|330348c94946fc
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
 Emulators|[hatari](http://github.com/hatari/hatari)|2680af99af9cb511e6fd177d2c50c6194814db39|Jul 03, 2024
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|9afc6345407e656d5b34fa795a25fb978f16e598|Jul 06, 2024
-Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|93eebcac199a58c793752bc7b92e674b7c007421|Jul 06, 2024
+Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|4e5cc05dfbc74d6339357e3bf314160ebe1e7770|Jul 06, 2024
 Emulators|[libaltsound](http://github.com/vpinball/libaltsound)|b8f397858cbc7a879f7392c14a509f00c8bdc7dd|Jun 28, 2024
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|0eb20528c6ff8aa79d04d467a3c64029e070cdce|Jul 02, 2024
 Emulators|[libdof](http://github.com/jsm174/libdof)|42160a6835ead9d64f101e687dc277a0fe766f25|Jun 25, 2024
@@ -428,7 +428,7 @@ Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a4
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|e39e07bc8198d6a3411b594c3bd7a2eb55e2a230|Jul 06, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|2cc8e02ced1594d76d12b39140e394e9cee0aa44|Apr 18, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|4351618d734b99fd7d6c9d21c123ccaf6c6cee23|Jul 04, 2024
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|742f5fd5f7c0d244d833359bf08fd45135261cf1|Jul 06, 2024
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|ada13f9e9a297468cfdbda7d3ec721e598aa145c|Jul 06, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|5c7aacb954e5cb7f5499821c577cbb334f0707fd|Jul 02, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|760b592a1ef13f8a99600fd9fd90430c16fbaae7|Jul 06, 2024
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
