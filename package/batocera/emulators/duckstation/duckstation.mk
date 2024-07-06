@@ -40,10 +40,8 @@ else
 endif
 
 define DUCKSTATION_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin/duckstation
-	$(INSTALL) -D $(@D)/buildroot-build/bin/duckstation*	$(TARGET_DIR)/usr/bin/duckstation
-	cp -pr	$(@D)/data/resources							$(TARGET_DIR)/usr/bin/duckstation/
-	cp -R $(@D)/buildroot-build/bin/translations			$(TARGET_DIR)/usr/bin/duckstation/
+	rm -rf $(TARGET_DIR)/usr/bin/duckstation
+	cp -R $(@D)/buildroot-build/bin $(TARGET_DIR)/usr/bin/duckstation
 
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy

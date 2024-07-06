@@ -1,8 +1,8 @@
 diff --git a/src/core/settings.cpp b/src/core/settings.cpp
-index af6107d5..acff1866 100644
+index af6107d5..4f926be2 100644
 --- a/src/core/settings.cpp
 +++ b/src/core/settings.cpp
-@@ -1724,19 +1724,19 @@ std::string EmuFolders::UserResources;
+@@ -1724,18 +1724,18 @@ std::string EmuFolders::UserResources;
  
  void EmuFolders::SetDefaults()
  {
@@ -18,7 +18,6 @@ index af6107d5..acff1866 100644
 -  Screenshots = Path::Combine(DataRoot, "screenshots");
 -  Shaders = Path::Combine(DataRoot, "shaders");
 -  Textures = Path::Combine(DataRoot, "textures");
--  UserResources = Path::Combine(DataRoot, "resources");
 +  Bios = "/userdata/bios";
 +  Cache = "/userdata/system/cache/psx";
 +  Cheats = "/userdata/cheats/psx";
@@ -31,11 +30,10 @@ index af6107d5..acff1866 100644
 +  Screenshots = "/userdata/screenshots";
 +  Shaders = "/usr/bin/duckstation/resources/shaders";
 +  Textures = "/userdata/system/configs/duckstation/textures";
-+  UserResources = "/usr/bin/duckstation/resources";
+   UserResources = Path::Combine(DataRoot, "resources");
  }
  
- static std::string LoadPathFromSettings(SettingsInterface& si, const std::string& root, const char* section,
-@@ -1786,19 +1786,19 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
+@@ -1786,18 +1786,18 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
  void EmuFolders::Save(SettingsInterface& si)
  {
    // convert back to relative
@@ -51,7 +49,6 @@ index af6107d5..acff1866 100644
 -  si.SetStringValue("Folders", "Screenshots", Path::MakeRelative(Screenshots, DataRoot).c_str());
 -  si.SetStringValue("Folders", "Shaders", Path::MakeRelative(Shaders, DataRoot).c_str());
 -  si.SetStringValue("Folders", "Textures", Path::MakeRelative(Textures, DataRoot).c_str());
--  si.SetStringValue("Folders", "UserResources", Path::MakeRelative(UserResources, DataRoot).c_str());
 +  si.SetStringValue("BIOS", "SearchDirectory", Bios.c_str());
 +  si.SetStringValue("Folders", "Cache", Cache.c_str());
 +  si.SetStringValue("Folders", "Cheats", Cheats.c_str());
@@ -64,7 +61,6 @@ index af6107d5..acff1866 100644
 +  si.SetStringValue("Folders", "Screenshots", Screenshots.c_str());
 +  si.SetStringValue("Folders", "Shaders", Shaders.c_str());
 +  si.SetStringValue("Folders", "Textures", Textures.c_str());
-+  si.SetStringValue("Folders", "UserResources", UserResources.c_str());
+   si.SetStringValue("Folders", "UserResources", Path::MakeRelative(UserResources, DataRoot).c_str());
  }
  
- void EmuFolders::Update()
