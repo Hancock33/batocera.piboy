@@ -1,8 +1,8 @@
 diff --git a/CorsixTH/Lua/config_finder.lua b/CorsixTH/Lua/config_finder.lua
-index 9eabdfe9..955a3a12 100644
+index 0f1a687a..705bc536 100644
 --- a/CorsixTH/Lua/config_finder.lua
 +++ b/CorsixTH/Lua/config_finder.lua
-@@ -126,7 +126,7 @@ local config_defaults = {
+@@ -127,7 +127,7 @@ local config_defaults = {
    audio_frequency = 22050,
    audio_channels = 2,
    audio_buffer_size = 2048,
@@ -11,7 +11,7 @@ index 9eabdfe9..955a3a12 100644
    debug = false,
    DBGp_client_idehost = nil,
    DBGp_client_ideport = nil,
-@@ -416,7 +416,7 @@ unicode_font = nil -- [[X:\ThemeHospital\font.ttc]]
+@@ -423,7 +423,7 @@ unicode_font = nil -- [[X:\ThemeHospital\font.ttc]]
  -- uncomment the following line, and point it to a directory which exists and
  -- is more suitable.
  --
@@ -20,7 +20,7 @@ index 9eabdfe9..955a3a12 100644
  
  -------------------------------------------------------------------------------
  -- Levels and Campaigns. By default, the "Levels" and "Campaigns" directory next to
-@@ -448,7 +448,7 @@ new_graphics_folder = nil -- [[X:\ThemeHospital\Graphics]]
+@@ -456,7 +456,7 @@ new_graphics_folder = nil -- [[X:\ThemeHospital\Graphics]]
  -- uncomment the following line, and point it to a directory which exists and
  -- is more suitable.
  --
@@ -29,7 +29,7 @@ index 9eabdfe9..955a3a12 100644
  
  -------------------------------------------------------------------------------
  -- If you want to listen to non-Theme-Hospital music, then follow these steps:
-@@ -459,7 +459,7 @@ screenshots = nil -- [[X:\ThemeHospital\Screenshots]]
+@@ -467,7 +467,7 @@ screenshots = nil -- [[X:\ThemeHospital\Screenshots]]
  --     "names.txt" and write the file name on one row, followed by the desired
  --     ingame name on the next row.
  --

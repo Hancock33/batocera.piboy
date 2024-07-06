@@ -3,15 +3,14 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Jun 30, 2024
-DUCKSTATION_VERSION = 422102989c185049244a56423a6149b5ecea3458
+# Version: Commits on May 26, 2024
+DUCKSTATION_VERSION = d372609bdcde013e8fbabbb8dd07659cf4725164
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
-DUCKSTATION_DEPENDENCIES = boost ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev sdl2 shaderc webp zstd
+DUCKSTATION_DEPENDENCIES = boost cpuinfo discord-rpc ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev sdl2 shaderc webp zstd
 DUCKSTATION_DEPENDENCIES += qt6base qt6tools qt6svg host-clang host-spirv-cross spirv-cross
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
 
-DUCKSTATION_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CFLAGS) -flax-vector-conversions"
 DUCKSTATION_CONF_OPTS += -DBUILD_SHARED_LIBS=FALSE
 DUCKSTATION_CONF_OPTS += -DENABLE_DISCORD_PRESENCE=OFF
 DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=ON
@@ -41,10 +40,8 @@ else
 endif
 
 define DUCKSTATION_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin/duckstation
-	$(INSTALL) -D $(@D)/buildroot-build/bin/duckstation*	$(TARGET_DIR)/usr/bin/duckstation
-	cp -pr	$(@D)/data/resources							$(TARGET_DIR)/usr/bin/duckstation/
-	cp -R $(@D)/buildroot-build/bin/translations			$(TARGET_DIR)/usr/bin/duckstation/
+	rm -rf $(TARGET_DIR)/usr/bin/duckstation
+	cp -R $(@D)/buildroot-build/bin $(TARGET_DIR)/usr/bin/duckstation
 
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy

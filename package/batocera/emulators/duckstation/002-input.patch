@@ -1,8 +1,8 @@
 diff --git a/src/util/input_manager.cpp b/src/util/input_manager.cpp
-index ef58ae06..d76251ec 100644
+index f5d14cf6..02409fc3 100644
 --- a/src/util/input_manager.cpp
 +++ b/src/util/input_manager.cpp
-@@ -2008,30 +2008,30 @@ std::vector<InputBindingKey> InputManager::EnumerateMotors()
+@@ -1863,30 +1863,30 @@ std::vector<InputBindingKey> InputManager::EnumerateMotors()
  
  static void GetKeyboardGenericBindingMapping(std::vector<std::pair<GenericInputBinding, std::string>>* mapping)
  {
@@ -56,4 +56,4 @@ index ef58ae06..d76251ec 100644
 +  mapping->emplace_back(GenericInputBinding::R3, "SDL-0/RightStick");
  }
  
- static bool GetInternalGenericBindingMapping(const std::string_view& device, GenericInputBindingMapping* mapping)
+ static bool GetInternalGenericBindingMapping(std::string_view device, GenericInputBindingMapping* mapping)

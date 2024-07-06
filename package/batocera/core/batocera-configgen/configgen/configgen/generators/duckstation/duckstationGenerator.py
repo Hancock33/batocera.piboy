@@ -327,6 +327,11 @@ class DuckstationGenerator(Generator):
         else:
             settings.set("Cheevos", "Enabled", "false")
 
+        ## [UI]
+        if not settings.has_section("UI"):
+            settings.add_section("UI")
+            settings.set("UI", "UnofficialBuildWarningConfirmed", "true")
+
         ## [ControllerPorts]
         if not settings.has_section("ControllerPorts"):
             settings.add_section("ControllerPorts")

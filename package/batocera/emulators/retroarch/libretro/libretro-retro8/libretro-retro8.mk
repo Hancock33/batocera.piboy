@@ -3,8 +3,8 @@
 # libretro-retro8
 #
 ################################################################################
-# Version: Commits on Nov 01, 2023
-LIBRETRO_RETRO8_VERSION = 95b40e58c29b829d96f37c85833f9e51730c5534
+# Version: Commits on Jul 01, 2024
+LIBRETRO_RETRO8_VERSION = c9a3a9791f147043c08a3c8ee42aad231f37fe42
 LIBRETRO_RETRO8_SITE = $(call github,libretro,retro8,$(LIBRETRO_RETRO8_VERSION))
 LIBRETRO_RETRO8_LICENSE = GPLv3.0
 
