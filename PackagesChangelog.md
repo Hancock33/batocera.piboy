@@ -5,6 +5,7 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-07-07|Jul 07
 Emulators|[suyu](https://github.com/suyu-emu/suyu.git)|2db8fc00f318b553678e3bb969d61fa8c7d4234a|Jul 07, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|a9915747515b4ac75e2e539caa9fde9ba8c93f2a|Jul 07, 2024
 Gpu|[batocera-nvidia-lists](http://github.com/batocera-linux/nvidia-lists)|45217510141288a04406522df00f390850da400f|Jul 07, 2024
+Ports|[fheroes2](http://github.com/ihhub/fheroes2)|d9efb109af414fcb6f22285c86493561ab7e5b99|Jul 07, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|c157a1cf10922d28f149ba5c4d8a59a56604560f|Jul 07, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|df670e40169d118ba35735aacfea4313056dcf32|Jul 07, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240707|Jul 07, 2024
@@ -25,7 +26,6 @@ Ports|[box64](http://github.com/ptitseb/box64)|b4828477794a8e69a96f0ca7991ad0e61
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|e39e07bc8198d6a3411b594c3bd7a2eb55e2a230|Jul 06, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|ada13f9e9a297468cfdbda7d3ec721e598aa145c|Jul 06, 2024
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|898f9ca66c1aa45c7caf72e7d80d4760dbc4a4a2|Jul 06, 2024
-Ports|[fheroes2](http://github.com/ihhub/fheroes2)|6d57e03d9199be0fa50e63bc41c68e066694ba3f|Jul 06, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|f63a9be2b0dd786412690d39c5bf34f8c91d7128|Jul 06, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|96d79396ba173e000969d89d3844e4a0598cf461|Jul 06, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|8c0904f0c84c73276a1a549028a2b9f54589d04a|Jul 06, 2024
