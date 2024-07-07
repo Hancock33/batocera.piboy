@@ -1,6 +1,8 @@
---- a/SConstruct	2023-08-30 17:25:09.494021248 +0200
-+++ b/SConstruct	2023-08-30 17:29:17.680353388 +0200
-@@ -1596,11 +1596,11 @@
+diff --git a/SConstruct b/SConstruct
+index 84f402128..722002f48 100644
+--- a/SConstruct
++++ b/SConstruct
+@@ -1708,11 +1708,11 @@ static void terminate_handler()
  		error_text_opengl_mismatch = f'Rebirth configured with OpenGL enabled, but SDL{sdl2} configured with OpenGL disabled.  Disable Rebirth OpenGL or install an SDL{sdl2} with OpenGL enabled.'
  		test_opengl = (f'''
  #if !((SDL_MAJOR_VERSION == 1) && (SDL_MINOR_VERSION == 2) && (SDL_PATCHLEVEL >= 50))
