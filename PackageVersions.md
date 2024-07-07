@@ -439,7 +439,7 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|b3e34cea85371f4c26a80
 Ports|[f2bgl](http://github.com/cyxx/f2bgl)|0b84f41c7cc13a41f5a1832549485b814a52070d|Oct 18, 2020
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|ad8a2754fa99ceaf40495185ad48191cf27559e2|Mar 05, 2024
 Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|9fb917c357b20d95d597bed4d67904c29cd5c753|Apr 21, 2024
-Ports|[fheroes2](http://github.com/ihhub/fheroes2)|6d57e03d9199be0fa50e63bc41c68e066694ba3f|Jul 06, 2024
+Ports|[fheroes2](http://github.com/ihhub/fheroes2)|d9efb109af414fcb6f22285c86493561ab7e5b99|Jul 07, 2024
 Ports|[freedroid](http://github.com/ReinhardPrix/FreedroidClassic)|126664e034d17bb7fd1e6c3cfa1e9e6f1ebf48ac|Jan 08, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|10d0f94972a6da8b4482ab46b615d9f5b497420a|May 26, 2024
 Ports|[hcl](http://github.com/ptitSeb/hydracastlelabyrinth)|229369c222f8604530f5e06f795b4505ef21d439|Feb 28, 2024
