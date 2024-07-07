@@ -7,6 +7,8 @@ Emulators|[thextech](https://github.com/TheXTech/TheXTech)|a9915747515b4ac75e2e5
 Gpu|[batocera-nvidia-lists](http://github.com/batocera-linux/nvidia-lists)|45217510141288a04406522df00f390850da400f|Jul 07, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|c157a1cf10922d28f149ba5c4d8a59a56604560f|Jul 07, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|df670e40169d118ba35735aacfea4313056dcf32|Jul 07, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240707|Jul 07, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240707|Jul 07, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|2a006086c5cf15e3771a49bc64dcf63ee9a866bf|Jul 07, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|02e1b9414909db1644562b3669967feff203460f|Jul 06, 2024
 Emulators|[hatari](http://github.com/hatari/hatari)|bd8a07aef850a0ff2abfd588fef5a1e07f464100|Jul 06, 2024
@@ -39,9 +41,7 @@ Emulators|[flycast](https://github.com/flyinghead/flycast.git)|c6f50fad9d4bb735f
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|cb9892c0d1b15bfc6ba96421cf91f684bf59045a|Jul 05, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|86451002f12738437dfaf977d281146314654879|Jul 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|e1ee8df2b9248b035cad7eefc2b99adc507a7699|Jul 05, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240705|Jul 05, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|fcbebfa8c8bebf25dded465b0c43ab859c91c0a2|Jul 05, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240705|Jul 05, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|a90ceba8339c73abc2f28ff20ec65fce16904816|Jul 05, 2024
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|83591216128368943c509f028d06bc0277c5752d|Jul 05, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|0815ce24cfa713afd3e802a9a82c2599940c7b69|Jul 05, 2024
