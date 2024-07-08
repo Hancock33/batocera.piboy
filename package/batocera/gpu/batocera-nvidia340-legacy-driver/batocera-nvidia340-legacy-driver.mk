@@ -3,7 +3,7 @@
 # batocera-nvidia340-legacy-driver
 #
 ################################################################################
-
+# Version: Commits on  Dec 23, 2019
 BATOCERA_NVIDIA340_LEGACY_DRIVER_VERSION = 340.108
 BATOCERA_NVIDIA340_LEGACY_DRIVER_SUFFIX = $(if $(BR2_x86_64),_64)
 BATOCERA_NVIDIA340_LEGACY_DRIVER_SITE = http://download.nvidia.com/XFree86/Linux-x86$(BATOCERA_NVIDIA340_LEGACY_DRIVER_SUFFIX)/$(BATOCERA_NVIDIA340_LEGACY_DRIVER_VERSION)

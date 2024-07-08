@@ -3,7 +3,7 @@
 # batocera-nvidia-legacy-driver
 #
 ################################################################################
-
+# Version: Commits on  Feb 22, 2024
 BATOCERA_NVIDIA_LEGACY_DRIVER_VERSION = 470.239.06
 BATOCERA_NVIDIA_LEGACY_DRIVER_SUFFIX = $(if $(BR2_x86_64),_64)
 BATOCERA_NVIDIA_LEGACY_DRIVER_SITE = http://download.nvidia.com/XFree86/Linux-x86$(BATOCERA_NVIDIA_LEGACY_DRIVER_SUFFIX)/$(BATOCERA_NVIDIA_LEGACY_DRIVER_VERSION)
