@@ -92,6 +92,21 @@ index 1e0d101b020a..d0324d44f548 100644
  
  	"active"
  		The driver is functional and in the ``active mode``
+diff --git a/Documentation/arch/x86/topology.rst b/Documentation/arch/x86/topology.rst
+index 7352ab89a55a..c12837e61bda 100644
+--- a/Documentation/arch/x86/topology.rst
++++ b/Documentation/arch/x86/topology.rst
+@@ -135,6 +135,10 @@ Thread-related topology information in the kernel:
+     The ID of the core to which a thread belongs. It is also printed in /proc/cpuinfo
+     "core_id."
+ 
++  - topology_logical_core_id();
++
++    The logical core ID to which a thread belongs.
++
+ 
+ 
+ System topology examples
 diff --git a/Documentation/core-api/printk-formats.rst b/Documentation/core-api/printk-formats.rst
 index 4451ef501936..c726a846f752 100644
 --- a/Documentation/core-api/printk-formats.rst
@@ -623,7 +638,7 @@ index da5352dbd4f3..a2b008e335cf 100644
  M:	Finn Thain <fthain@linux-m68k.org>
  L:	linux-m68k@lists.linux-m68k.org
 diff --git a/Makefile b/Makefile
-index 702cb112e853..6fdff96d1f5f 100644
+index 5b32997d396e..4168304bb187 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -817,6 +817,9 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -9617,6 +9632,833 @@ index a396f6e6ab5b..472c23b39a70 100644
  
  #
  # Due to a historical design error, certain syscalls are numbered differently
+diff --git a/arch/x86/events/rapl.c b/arch/x86/events/rapl.c
+index 0c5e7a7c43ac..cd808b699ccc 100644
+--- a/arch/x86/events/rapl.c
++++ b/arch/x86/events/rapl.c
+@@ -39,6 +39,10 @@
+  *	  event: rapl_energy_psys
+  *    perf code: 0x5
+  *
++ *  per_core counter: consumption of a single physical core
++ *	  event: rapl_energy_per_core (power_per_core PMU)
++ *    perf code: 0x1
++ *
+  * We manage those counters as free running (read-only). They may be
+  * use simultaneously by other tools, such as turbostat.
+  *
+@@ -70,18 +74,25 @@ MODULE_LICENSE("GPL");
+ /*
+  * RAPL energy status counters
+  */
+-enum perf_rapl_events {
++enum perf_rapl_pkg_events {
+ 	PERF_RAPL_PP0 = 0,		/* all cores */
+ 	PERF_RAPL_PKG,			/* entire package */
+ 	PERF_RAPL_RAM,			/* DRAM */
+ 	PERF_RAPL_PP1,			/* gpu */
+ 	PERF_RAPL_PSYS,			/* psys */
+ 
+-	PERF_RAPL_MAX,
+-	NR_RAPL_DOMAINS = PERF_RAPL_MAX,
++	PERF_RAPL_PKG_EVENTS_MAX,
++	NR_RAPL_PKG_DOMAINS = PERF_RAPL_PKG_EVENTS_MAX,
++};
++
++enum perf_rapl_core_events {
++	PERF_RAPL_PER_CORE = 0,		/* per-core */
++
++	PERF_RAPL_CORE_EVENTS_MAX,
++	NR_RAPL_CORE_DOMAINS = PERF_RAPL_CORE_EVENTS_MAX,
+ };
+ 
+-static const char *const rapl_domain_names[NR_RAPL_DOMAINS] __initconst = {
++static const char *const rapl_pkg_domain_names[NR_RAPL_PKG_DOMAINS] __initconst = {
+ 	"pp0-core",
+ 	"package",
+ 	"dram",
+@@ -89,6 +100,10 @@ static const char *const rapl_domain_names[NR_RAPL_DOMAINS] __initconst = {
+ 	"psys",
+ };
+ 
++static const char *const rapl_core_domain_names[NR_RAPL_CORE_DOMAINS] __initconst = {
++	"per-core",
++};
++
+ /*
+  * event code: LSB 8 bits, passed in attr->config
+  * any other bit is reserved
+@@ -103,6 +118,10 @@ static struct perf_pmu_events_attr event_attr_##v = {				\
+ 	.event_str	= str,							\
+ };
+ 
++#define rapl_pmu_is_pkg_scope()				\
++	(boot_cpu_data.x86_vendor == X86_VENDOR_AMD ||	\
++	 boot_cpu_data.x86_vendor == X86_VENDOR_HYGON)
++
+ struct rapl_pmu {
+ 	raw_spinlock_t		lock;
+ 	int			n_active;
+@@ -115,8 +134,9 @@ struct rapl_pmu {
+ 
+ struct rapl_pmus {
+ 	struct pmu		pmu;
++	cpumask_t		cpumask;
+ 	unsigned int		nr_rapl_pmu;
+-	struct rapl_pmu		*pmus[] __counted_by(nr_rapl_pmu);
++	struct rapl_pmu		*rapl_pmu[] __counted_by(nr_rapl_pmu);
+ };
+ 
+ enum rapl_unit_quirk {
+@@ -126,29 +146,45 @@ enum rapl_unit_quirk {
+ };
+ 
+ struct rapl_model {
+-	struct perf_msr *rapl_msrs;
+-	unsigned long	events;
++	struct perf_msr *rapl_pkg_msrs;
++	struct perf_msr *rapl_core_msrs;
++	unsigned long	pkg_events;
++	unsigned long	core_events;
+ 	unsigned int	msr_power_unit;
+ 	enum rapl_unit_quirk	unit_quirk;
+ };
+ 
+  /* 1/2^hw_unit Joule */
+-static int rapl_hw_unit[NR_RAPL_DOMAINS] __read_mostly;
+-static struct rapl_pmus *rapl_pmus;
+-static cpumask_t rapl_cpu_mask;
+-static unsigned int rapl_cntr_mask;
++static int rapl_hw_unit[NR_RAPL_PKG_DOMAINS] __read_mostly;
++static struct rapl_pmus *rapl_pmus_pkg;
++static struct rapl_pmus *rapl_pmus_core;
++static unsigned int rapl_pkg_cntr_mask;
++static unsigned int rapl_core_cntr_mask;
+ static u64 rapl_timer_ms;
+-static struct perf_msr *rapl_msrs;
++static struct rapl_model *rapl_model;
++
++static inline unsigned int get_rapl_pmu_idx(int cpu)
++{
++	return rapl_pmu_is_pkg_scope() ? topology_logical_package_id(cpu) :
++					 topology_logical_die_id(cpu);
++}
++
++static inline const struct cpumask *get_rapl_pmu_cpumask(int cpu)
++{
++	return rapl_pmu_is_pkg_scope() ? topology_core_cpumask(cpu) :
++					 topology_die_cpumask(cpu);
++}
+ 
+ static inline struct rapl_pmu *cpu_to_rapl_pmu(unsigned int cpu)
+ {
+-	unsigned int rapl_pmu_idx = topology_logical_die_id(cpu);
++	unsigned int rapl_pmu_idx = get_rapl_pmu_idx(cpu);
+ 
+ 	/*
+ 	 * The unsigned check also catches the '-1' return value for non
+ 	 * existent mappings in the topology map.
+ 	 */
+-	return rapl_pmu_idx < rapl_pmus->nr_rapl_pmu ? rapl_pmus->pmus[rapl_pmu_idx] : NULL;
++	return rapl_pmu_idx < rapl_pmus_pkg->nr_rapl_pmu ?
++	       rapl_pmus_pkg->rapl_pmu[rapl_pmu_idx] : NULL;
+ }
+ 
+ static inline u64 rapl_read_counter(struct perf_event *event)
+@@ -160,7 +196,7 @@ static inline u64 rapl_read_counter(struct perf_event *event)
+ 
+ static inline u64 rapl_scale(u64 v, int cfg)
+ {
+-	if (cfg > NR_RAPL_DOMAINS) {
++	if (cfg > NR_RAPL_PKG_DOMAINS) {
+ 		pr_warn("Invalid domain %d, failed to scale data\n", cfg);
+ 		return v;
+ 	}
+@@ -212,34 +248,34 @@ static void rapl_start_hrtimer(struct rapl_pmu *pmu)
+ 
+ static enum hrtimer_restart rapl_hrtimer_handle(struct hrtimer *hrtimer)
+ {
+-	struct rapl_pmu *pmu = container_of(hrtimer, struct rapl_pmu, hrtimer);
++	struct rapl_pmu *rapl_pmu = container_of(hrtimer, struct rapl_pmu, hrtimer);
+ 	struct perf_event *event;
+ 	unsigned long flags;
+ 
+-	if (!pmu->n_active)
++	if (!rapl_pmu->n_active)
+ 		return HRTIMER_NORESTART;
+ 
+-	raw_spin_lock_irqsave(&pmu->lock, flags);
++	raw_spin_lock_irqsave(&rapl_pmu->lock, flags);
+ 
+-	list_for_each_entry(event, &pmu->active_list, active_entry)
++	list_for_each_entry(event, &rapl_pmu->active_list, active_entry)
+ 		rapl_event_update(event);
+ 
+-	raw_spin_unlock_irqrestore(&pmu->lock, flags);
++	raw_spin_unlock_irqrestore(&rapl_pmu->lock, flags);
+ 
+-	hrtimer_forward_now(hrtimer, pmu->timer_interval);
++	hrtimer_forward_now(hrtimer, rapl_pmu->timer_interval);
+ 
+ 	return HRTIMER_RESTART;
+ }
+ 
+-static void rapl_hrtimer_init(struct rapl_pmu *pmu)
++static void rapl_hrtimer_init(struct rapl_pmu *rapl_pmu)
+ {
+-	struct hrtimer *hr = &pmu->hrtimer;
++	struct hrtimer *hr = &rapl_pmu->hrtimer;
+ 
+ 	hrtimer_init(hr, CLOCK_MONOTONIC, HRTIMER_MODE_REL);
+ 	hr->function = rapl_hrtimer_handle;
+ }
+ 
+-static void __rapl_pmu_event_start(struct rapl_pmu *pmu,
++static void __rapl_pmu_event_start(struct rapl_pmu *rapl_pmu,
+ 				   struct perf_event *event)
+ {
+ 	if (WARN_ON_ONCE(!(event->hw.state & PERF_HES_STOPPED)))
+@@ -247,39 +283,39 @@ static void __rapl_pmu_event_start(struct rapl_pmu *pmu,
+ 
+ 	event->hw.state = 0;
+ 
+-	list_add_tail(&event->active_entry, &pmu->active_list);
++	list_add_tail(&event->active_entry, &rapl_pmu->active_list);
+ 
+ 	local64_set(&event->hw.prev_count, rapl_read_counter(event));
+ 
+-	pmu->n_active++;
+-	if (pmu->n_active == 1)
+-		rapl_start_hrtimer(pmu);
++	rapl_pmu->n_active++;
++	if (rapl_pmu->n_active == 1)
++		rapl_start_hrtimer(rapl_pmu);
+ }
+ 
+ static void rapl_pmu_event_start(struct perf_event *event, int mode)
+ {
+-	struct rapl_pmu *pmu = event->pmu_private;
++	struct rapl_pmu *rapl_pmu = event->pmu_private;
+ 	unsigned long flags;
+ 
+-	raw_spin_lock_irqsave(&pmu->lock, flags);
+-	__rapl_pmu_event_start(pmu, event);
+-	raw_spin_unlock_irqrestore(&pmu->lock, flags);
++	raw_spin_lock_irqsave(&rapl_pmu->lock, flags);
++	__rapl_pmu_event_start(rapl_pmu, event);
++	raw_spin_unlock_irqrestore(&rapl_pmu->lock, flags);
+ }
+ 
+ static void rapl_pmu_event_stop(struct perf_event *event, int mode)
+ {
+-	struct rapl_pmu *pmu = event->pmu_private;
++	struct rapl_pmu *rapl_pmu = event->pmu_private;
+ 	struct hw_perf_event *hwc = &event->hw;
+ 	unsigned long flags;
+ 
+-	raw_spin_lock_irqsave(&pmu->lock, flags);
++	raw_spin_lock_irqsave(&rapl_pmu->lock, flags);
+ 
+ 	/* mark event as deactivated and stopped */
+ 	if (!(hwc->state & PERF_HES_STOPPED)) {
+-		WARN_ON_ONCE(pmu->n_active <= 0);
+-		pmu->n_active--;
+-		if (pmu->n_active == 0)
+-			hrtimer_cancel(&pmu->hrtimer);
++		WARN_ON_ONCE(rapl_pmu->n_active <= 0);
++		rapl_pmu->n_active--;
++		if (rapl_pmu->n_active == 0)
++			hrtimer_cancel(&rapl_pmu->hrtimer);
+ 
+ 		list_del(&event->active_entry);
+ 
+@@ -297,23 +333,23 @@ static void rapl_pmu_event_stop(struct perf_event *event, int mode)
+ 		hwc->state |= PERF_HES_UPTODATE;
+ 	}
+ 
+-	raw_spin_unlock_irqrestore(&pmu->lock, flags);
++	raw_spin_unlock_irqrestore(&rapl_pmu->lock, flags);
+ }
+ 
+ static int rapl_pmu_event_add(struct perf_event *event, int mode)
+ {
+-	struct rapl_pmu *pmu = event->pmu_private;
++	struct rapl_pmu *rapl_pmu = event->pmu_private;
+ 	struct hw_perf_event *hwc = &event->hw;
+ 	unsigned long flags;
+ 
+-	raw_spin_lock_irqsave(&pmu->lock, flags);
++	raw_spin_lock_irqsave(&rapl_pmu->lock, flags);
+ 
+ 	hwc->state = PERF_HES_UPTODATE | PERF_HES_STOPPED;
+ 
+ 	if (mode & PERF_EF_START)
+-		__rapl_pmu_event_start(pmu, event);
++		__rapl_pmu_event_start(rapl_pmu, event);
+ 
+-	raw_spin_unlock_irqrestore(&pmu->lock, flags);
++	raw_spin_unlock_irqrestore(&rapl_pmu->lock, flags);
+ 
+ 	return 0;
+ }
+@@ -327,10 +363,14 @@ static int rapl_pmu_event_init(struct perf_event *event)
+ {
+ 	u64 cfg = event->attr.config & RAPL_EVENT_MASK;
+ 	int bit, ret = 0;
+-	struct rapl_pmu *pmu;
++	struct rapl_pmu *rapl_pmu;
++	struct rapl_pmus *curr_rapl_pmus;
+ 
+ 	/* only look at RAPL events */
+-	if (event->attr.type != rapl_pmus->pmu.type)
++	if (event->attr.type == rapl_pmus_pkg->pmu.type ||
++		(rapl_pmus_core && event->attr.type == rapl_pmus_core->pmu.type))
++		curr_rapl_pmus = container_of(event->pmu, struct rapl_pmus, pmu);
++	else
+ 		return -ENOENT;
+ 
+ 	/* check only supported bits are set */
+@@ -340,16 +380,18 @@ static int rapl_pmu_event_init(struct perf_event *event)
+ 	if (event->cpu < 0)
+ 		return -EINVAL;
+ 
+-	event->event_caps |= PERF_EV_CAP_READ_ACTIVE_PKG;
++	if (curr_rapl_pmus == rapl_pmus_pkg)
++		event->event_caps |= PERF_EV_CAP_READ_ACTIVE_PKG;
+ 
+-	if (!cfg || cfg >= NR_RAPL_DOMAINS + 1)
++	if (!cfg || cfg >= NR_RAPL_PKG_DOMAINS + 1)
+ 		return -EINVAL;
+ 
+-	cfg = array_index_nospec((long)cfg, NR_RAPL_DOMAINS + 1);
++	cfg = array_index_nospec((long)cfg, NR_RAPL_PKG_DOMAINS + 1);
+ 	bit = cfg - 1;
+ 
+ 	/* check event supported */
+-	if (!(rapl_cntr_mask & (1 << bit)))
++	if (!(rapl_pkg_cntr_mask & (1 << bit)) &&
++	    !(rapl_core_cntr_mask & (1 << bit)))
+ 		return -EINVAL;
+ 
+ 	/* unsupported modes and filters */
+@@ -357,12 +399,18 @@ static int rapl_pmu_event_init(struct perf_event *event)
+ 		return -EINVAL;
+ 
+ 	/* must be done before validate_group */
+-	pmu = cpu_to_rapl_pmu(event->cpu);
+-	if (!pmu)
++	if (curr_rapl_pmus == rapl_pmus_core) {
++		rapl_pmu = curr_rapl_pmus->rapl_pmu[topology_logical_core_id(event->cpu)];
++		event->hw.event_base = rapl_model->rapl_core_msrs[bit].msr;
++	} else {
++		rapl_pmu = curr_rapl_pmus->rapl_pmu[get_rapl_pmu_idx(event->cpu)];
++		event->hw.event_base = rapl_model->rapl_pkg_msrs[bit].msr;
++	}
++
++	if (!rapl_pmu)
+ 		return -EINVAL;
+-	event->cpu = pmu->cpu;
+-	event->pmu_private = pmu;
+-	event->hw.event_base = rapl_msrs[bit].msr;
++	event->cpu = rapl_pmu->cpu;
++	event->pmu_private = rapl_pmu;
+ 	event->hw.config = cfg;
+ 	event->hw.idx = bit;
+ 
+@@ -377,7 +425,7 @@ static void rapl_pmu_event_read(struct perf_event *event)
+ static ssize_t rapl_get_attr_cpumask(struct device *dev,
+ 				struct device_attribute *attr, char *buf)
+ {
+-	return cpumap_print_to_pagebuf(true, buf, &rapl_cpu_mask);
++	return cpumap_print_to_pagebuf(true, buf, &rapl_pmus_pkg->cpumask);
+ }
+ 
+ static DEVICE_ATTR(cpumask, S_IRUGO, rapl_get_attr_cpumask, NULL);
+@@ -391,17 +439,38 @@ static struct attribute_group rapl_pmu_attr_group = {
+ 	.attrs = rapl_pmu_attrs,
+ };
+ 
++static ssize_t rapl_get_attr_per_core_cpumask(struct device *dev,
++					     struct device_attribute *attr, char *buf)
++{
++	return cpumap_print_to_pagebuf(true, buf, &rapl_pmus_core->cpumask);
++}
++
++static struct device_attribute dev_attr_per_core_cpumask = __ATTR(cpumask, 0444,
++								 rapl_get_attr_per_core_cpumask,
++								 NULL);
++
++static struct attribute *rapl_pmu_per_core_attrs[] = {
++	&dev_attr_per_core_cpumask.attr,
++	NULL,
++};
++
++static struct attribute_group rapl_pmu_per_core_attr_group = {
++	.attrs = rapl_pmu_per_core_attrs,
++};
++
+ RAPL_EVENT_ATTR_STR(energy-cores, rapl_cores, "event=0x01");
+ RAPL_EVENT_ATTR_STR(energy-pkg  ,   rapl_pkg, "event=0x02");
+ RAPL_EVENT_ATTR_STR(energy-ram  ,   rapl_ram, "event=0x03");
+ RAPL_EVENT_ATTR_STR(energy-gpu  ,   rapl_gpu, "event=0x04");
+ RAPL_EVENT_ATTR_STR(energy-psys,   rapl_psys, "event=0x05");
++RAPL_EVENT_ATTR_STR(energy-per-core,   rapl_per_core, "event=0x01");
+ 
+ RAPL_EVENT_ATTR_STR(energy-cores.unit, rapl_cores_unit, "Joules");
+ RAPL_EVENT_ATTR_STR(energy-pkg.unit  ,   rapl_pkg_unit, "Joules");
+ RAPL_EVENT_ATTR_STR(energy-ram.unit  ,   rapl_ram_unit, "Joules");
+ RAPL_EVENT_ATTR_STR(energy-gpu.unit  ,   rapl_gpu_unit, "Joules");
+ RAPL_EVENT_ATTR_STR(energy-psys.unit,   rapl_psys_unit, "Joules");
++RAPL_EVENT_ATTR_STR(energy-per-core.unit,   rapl_per_core_unit, "Joules");
+ 
+ /*
+  * we compute in 0.23 nJ increments regardless of MSR
+@@ -411,6 +480,7 @@ RAPL_EVENT_ATTR_STR(energy-pkg.scale,     rapl_pkg_scale, "2.3283064365386962890
+ RAPL_EVENT_ATTR_STR(energy-ram.scale,     rapl_ram_scale, "2.3283064365386962890625e-10");
+ RAPL_EVENT_ATTR_STR(energy-gpu.scale,     rapl_gpu_scale, "2.3283064365386962890625e-10");
+ RAPL_EVENT_ATTR_STR(energy-psys.scale,   rapl_psys_scale, "2.3283064365386962890625e-10");
++RAPL_EVENT_ATTR_STR(energy-per-core.scale,   rapl_per_core_scale, "2.3283064365386962890625e-10");
+ 
+ /*
+  * There are no default events, but we need to create
+@@ -444,6 +514,13 @@ static const struct attribute_group *rapl_attr_groups[] = {
+ 	NULL,
+ };
+ 
++static const struct attribute_group *rapl_per_core_attr_groups[] = {
++	&rapl_pmu_per_core_attr_group,
++	&rapl_pmu_format_group,
++	&rapl_pmu_events_group,
++	NULL,
++};
++
+ static struct attribute *rapl_events_cores[] = {
+ 	EVENT_PTR(rapl_cores),
+ 	EVENT_PTR(rapl_cores_unit),
+@@ -504,6 +581,18 @@ static struct attribute_group rapl_events_psys_group = {
+ 	.attrs = rapl_events_psys,
+ };
+ 
++static struct attribute *rapl_events_per_core[] = {
++	EVENT_PTR(rapl_per_core),
++	EVENT_PTR(rapl_per_core_unit),
++	EVENT_PTR(rapl_per_core_scale),
++	NULL,
++};
++
++static struct attribute_group rapl_events_per_core_group = {
++	.name  = "events",
++	.attrs = rapl_events_per_core,
++};
++
+ static bool test_msr(int idx, void *data)
+ {
+ 	return test_bit(idx, (unsigned long *) data);
+@@ -529,11 +618,11 @@ static struct perf_msr intel_rapl_spr_msrs[] = {
+ };
+ 
+ /*
+- * Force to PERF_RAPL_MAX size due to:
+- * - perf_msr_probe(PERF_RAPL_MAX)
++ * Force to PERF_RAPL_PKG_EVENTS_MAX size due to:
++ * - perf_msr_probe(PERF_RAPL_PKG_EVENTS_MAX)
+  * - want to use same event codes across both architectures
+  */
+-static struct perf_msr amd_rapl_msrs[] = {
++static struct perf_msr amd_rapl_pkg_msrs[] = {
+ 	[PERF_RAPL_PP0]  = { 0, &rapl_events_cores_group, NULL, false, 0 },
+ 	[PERF_RAPL_PKG]  = { MSR_AMD_PKG_ENERGY_STATUS,  &rapl_events_pkg_group,   test_msr, false, RAPL_MSR_MASK },
+ 	[PERF_RAPL_RAM]  = { 0, &rapl_events_ram_group,   NULL, false, 0 },
+@@ -541,72 +630,104 @@ static struct perf_msr amd_rapl_msrs[] = {
+ 	[PERF_RAPL_PSYS] = { 0, &rapl_events_psys_group,  NULL, false, 0 },
+ };
+ 
+-static int rapl_cpu_offline(unsigned int cpu)
++static struct perf_msr amd_rapl_core_msrs[] = {
++	[PERF_RAPL_PER_CORE] = { MSR_AMD_CORE_ENERGY_STATUS, &rapl_events_per_core_group,
++				 test_msr, false, RAPL_MSR_MASK },
++};
++
++static int __rapl_cpu_offline(struct rapl_pmus *rapl_pmus, unsigned int rapl_pmu_idx,
++			      const struct cpumask *event_cpumask, unsigned int cpu)
+ {
+-	struct rapl_pmu *pmu = cpu_to_rapl_pmu(cpu);
++	struct rapl_pmu *rapl_pmu = rapl_pmus->rapl_pmu[rapl_pmu_idx];
+ 	int target;
+ 
+ 	/* Check if exiting cpu is used for collecting rapl events */
+-	if (!cpumask_test_and_clear_cpu(cpu, &rapl_cpu_mask))
++	if (!cpumask_test_and_clear_cpu(cpu, &rapl_pmus->cpumask))
+ 		return 0;
+ 
+-	pmu->cpu = -1;
++	rapl_pmu->cpu = -1;
+ 	/* Find a new cpu to collect rapl events */
+-	target = cpumask_any_but(topology_die_cpumask(cpu), cpu);
++	target = cpumask_any_but(event_cpumask, cpu);
+ 
+ 	/* Migrate rapl events to the new target */
+ 	if (target < nr_cpu_ids) {
+-		cpumask_set_cpu(target, &rapl_cpu_mask);
+-		pmu->cpu = target;
+-		perf_pmu_migrate_context(pmu->pmu, cpu, target);
++		cpumask_set_cpu(target, &rapl_pmus->cpumask);
++		rapl_pmu->cpu = target;
++		perf_pmu_migrate_context(rapl_pmu->pmu, cpu, target);
+ 	}
+ 	return 0;
+ }
+ 
+-static int rapl_cpu_online(unsigned int cpu)
++static int rapl_cpu_offline(unsigned int cpu)
++{
++	int ret =  __rapl_cpu_offline(rapl_pmus_pkg, get_rapl_pmu_idx(cpu),
++				  get_rapl_pmu_cpumask(cpu), cpu);
++
++	if (ret == 0 && rapl_model->core_events)
++		ret = __rapl_cpu_offline(rapl_pmus_core, topology_logical_core_id(cpu),
++				   topology_sibling_cpumask(cpu), cpu);
++
++	return ret;
++}
++
++static int __rapl_cpu_online(struct rapl_pmus *rapl_pmus, unsigned int rapl_pmu_idx,
++			     const struct cpumask *event_cpumask, unsigned int cpu)
+ {
+-	struct rapl_pmu *pmu = cpu_to_rapl_pmu(cpu);
++	struct rapl_pmu *rapl_pmu = rapl_pmus->rapl_pmu[rapl_pmu_idx];
+ 	int target;
+ 
+-	if (!pmu) {
+-		pmu = kzalloc_node(sizeof(*pmu), GFP_KERNEL, cpu_to_node(cpu));
+-		if (!pmu)
++	if (!rapl_pmu) {
++		rapl_pmu = kzalloc_node(sizeof(*rapl_pmu), GFP_KERNEL, cpu_to_node(cpu));
++		if (!rapl_pmu)
+ 			return -ENOMEM;
+ 
+-		raw_spin_lock_init(&pmu->lock);
+-		INIT_LIST_HEAD(&pmu->active_list);
+-		pmu->pmu = &rapl_pmus->pmu;
+-		pmu->timer_interval = ms_to_ktime(rapl_timer_ms);
+-		rapl_hrtimer_init(pmu);
++		raw_spin_lock_init(&rapl_pmu->lock);
++		INIT_LIST_HEAD(&rapl_pmu->active_list);
++		rapl_pmu->pmu = &rapl_pmus->pmu;
++		rapl_pmu->timer_interval = ms_to_ktime(rapl_timer_ms);
++		rapl_hrtimer_init(rapl_pmu);
+ 
+-		rapl_pmus->pmus[topology_logical_die_id(cpu)] = pmu;
++		rapl_pmus->rapl_pmu[rapl_pmu_idx] = rapl_pmu;
+ 	}
+ 
+ 	/*
+ 	 * Check if there is an online cpu in the package which collects rapl
+ 	 * events already.
+ 	 */
+-	target = cpumask_any_and(&rapl_cpu_mask, topology_die_cpumask(cpu));
++	target = cpumask_any_and(&rapl_pmus->cpumask, event_cpumask);
+ 	if (target < nr_cpu_ids)
+ 		return 0;
+ 
+-	cpumask_set_cpu(cpu, &rapl_cpu_mask);
+-	pmu->cpu = cpu;
++	cpumask_set_cpu(cpu, &rapl_pmus->cpumask);
++	rapl_pmu->cpu = cpu;
+ 	return 0;
+ }
+ 
+-static int rapl_check_hw_unit(struct rapl_model *rm)
++static int rapl_cpu_online(unsigned int cpu)
++{
++	int ret =  __rapl_cpu_online(rapl_pmus_pkg, get_rapl_pmu_idx(cpu),
++				 get_rapl_pmu_cpumask(cpu), cpu);
++
++	if (ret == 0 && rapl_model->core_events)
++		ret = __rapl_cpu_online(rapl_pmus_core, topology_logical_core_id(cpu),
++				   topology_sibling_cpumask(cpu), cpu);
++
++	return ret;
++}
++
++
++static int rapl_check_hw_unit(void)
+ {
+ 	u64 msr_rapl_power_unit_bits;
+ 	int i;
+ 
+ 	/* protect rdmsrl() to handle virtualization */
+-	if (rdmsrl_safe(rm->msr_power_unit, &msr_rapl_power_unit_bits))
++	if (rdmsrl_safe(rapl_model->msr_power_unit, &msr_rapl_power_unit_bits))
+ 		return -1;
+-	for (i = 0; i < NR_RAPL_DOMAINS; i++)
++	for (i = 0; i < NR_RAPL_PKG_DOMAINS; i++)
+ 		rapl_hw_unit[i] = (msr_rapl_power_unit_bits >> 8) & 0x1FULL;
+ 
+-	switch (rm->unit_quirk) {
++	switch (rapl_model->unit_quirk) {
+ 	/*
+ 	 * DRAM domain on HSW server and KNL has fixed energy unit which can be
+ 	 * different than the unit from power unit MSR. See
+@@ -645,22 +766,29 @@ static void __init rapl_advertise(void)
+ 	int i;
+ 
+ 	pr_info("API unit is 2^-32 Joules, %d fixed counters, %llu ms ovfl timer\n",
+-		hweight32(rapl_cntr_mask), rapl_timer_ms);
++		hweight32(rapl_pkg_cntr_mask) + hweight32(rapl_core_cntr_mask), rapl_timer_ms);
+ 
+-	for (i = 0; i < NR_RAPL_DOMAINS; i++) {
+-		if (rapl_cntr_mask & (1 << i)) {
++	for (i = 0; i < NR_RAPL_PKG_DOMAINS; i++) {
++		if (rapl_pkg_cntr_mask & (1 << i)) {
+ 			pr_info("hw unit of domain %s 2^-%d Joules\n",
+-				rapl_domain_names[i], rapl_hw_unit[i]);
++				rapl_pkg_domain_names[i], rapl_hw_unit[i]);
++		}
++	}
++
++	for (i = 0; i < NR_RAPL_CORE_DOMAINS; i++) {
++		if (rapl_core_cntr_mask & (1 << i)) {
++			pr_info("hw unit of domain %s 2^-%d Joules\n",
++				rapl_core_domain_names[i], rapl_hw_unit[i]);
+ 		}
+ 	}
+ }
+ 
+-static void cleanup_rapl_pmus(void)
++static void cleanup_rapl_pmus(struct rapl_pmus *rapl_pmus)
+ {
+ 	int i;
+ 
+ 	for (i = 0; i < rapl_pmus->nr_rapl_pmu; i++)
+-		kfree(rapl_pmus->pmus[i]);
++		kfree(rapl_pmus->rapl_pmu[i]);
+ 	kfree(rapl_pmus);
+ }
+ 
+@@ -673,11 +801,17 @@ static const struct attribute_group *rapl_attr_update[] = {
+ 	NULL,
+ };
+ 
+-static int __init init_rapl_pmus(void)
++static const struct attribute_group *rapl_per_core_attr_update[] = {
++	&rapl_events_per_core_group,
++};
++
++static int __init init_rapl_pmus(struct rapl_pmus **rapl_pmus_ptr, int nr_rapl_pmu,
++				 const struct attribute_group **rapl_attr_groups,
++				 const struct attribute_group **rapl_attr_update)
+ {
+-	int nr_rapl_pmu = topology_max_packages() * topology_max_dies_per_package();
++	struct rapl_pmus *rapl_pmus;
+ 
+-	rapl_pmus = kzalloc(struct_size(rapl_pmus, pmus, nr_rapl_pmu), GFP_KERNEL);
++	rapl_pmus = kzalloc(struct_size(rapl_pmus, rapl_pmu, nr_rapl_pmu), GFP_KERNEL);
+ 	if (!rapl_pmus)
+ 		return -ENOMEM;
+ 
+@@ -693,75 +827,80 @@ static int __init init_rapl_pmus(void)
+ 	rapl_pmus->pmu.read		= rapl_pmu_event_read;
+ 	rapl_pmus->pmu.module		= THIS_MODULE;
+ 	rapl_pmus->pmu.capabilities	= PERF_PMU_CAP_NO_EXCLUDE;
++
++	*rapl_pmus_ptr = rapl_pmus;
++
+ 	return 0;
+ }
+ 
+ static struct rapl_model model_snb = {
+-	.events		= BIT(PERF_RAPL_PP0) |
++	.pkg_events	= BIT(PERF_RAPL_PP0) |
+ 			  BIT(PERF_RAPL_PKG) |
+ 			  BIT(PERF_RAPL_PP1),
+ 	.msr_power_unit = MSR_RAPL_POWER_UNIT,
+-	.rapl_msrs      = intel_rapl_msrs,
++	.rapl_pkg_msrs	= intel_rapl_msrs,
+ };
+ 
+ static struct rapl_model model_snbep = {
+-	.events		= BIT(PERF_RAPL_PP0) |
++	.pkg_events	= BIT(PERF_RAPL_PP0) |
+ 			  BIT(PERF_RAPL_PKG) |
+ 			  BIT(PERF_RAPL_RAM),
+ 	.msr_power_unit = MSR_RAPL_POWER_UNIT,
+-	.rapl_msrs      = intel_rapl_msrs,
++	.rapl_pkg_msrs	= intel_rapl_msrs,
+ };
+ 
+ static struct rapl_model model_hsw = {
+-	.events		= BIT(PERF_RAPL_PP0) |
++	.pkg_events	= BIT(PERF_RAPL_PP0) |
+ 			  BIT(PERF_RAPL_PKG) |
+ 			  BIT(PERF_RAPL_RAM) |
+ 			  BIT(PERF_RAPL_PP1),
+ 	.msr_power_unit = MSR_RAPL_POWER_UNIT,
+-	.rapl_msrs      = intel_rapl_msrs,
++	.rapl_pkg_msrs	= intel_rapl_msrs,
+ };
+ 
+ static struct rapl_model model_hsx = {
+-	.events		= BIT(PERF_RAPL_PP0) |
++	.pkg_events	= BIT(PERF_RAPL_PP0) |
+ 			  BIT(PERF_RAPL_PKG) |
+ 			  BIT(PERF_RAPL_RAM),
+ 	.unit_quirk	= RAPL_UNIT_QUIRK_INTEL_HSW,
+ 	.msr_power_unit = MSR_RAPL_POWER_UNIT,
+-	.rapl_msrs      = intel_rapl_msrs,
++	.rapl_pkg_msrs	= intel_rapl_msrs,
+ };
+ 
+ static struct rapl_model model_knl = {
+-	.events		= BIT(PERF_RAPL_PKG) |
++	.pkg_events	= BIT(PERF_RAPL_PKG) |
+ 			  BIT(PERF_RAPL_RAM),
+ 	.unit_quirk	= RAPL_UNIT_QUIRK_INTEL_HSW,
+ 	.msr_power_unit = MSR_RAPL_POWER_UNIT,
+-	.rapl_msrs      = intel_rapl_msrs,
++	.rapl_pkg_msrs	= intel_rapl_msrs,
+ };
+ 
+ static struct rapl_model model_skl = {
+-	.events		= BIT(PERF_RAPL_PP0) |
++	.pkg_events	= BIT(PERF_RAPL_PP0) |
+ 			  BIT(PERF_RAPL_PKG) |
+ 			  BIT(PERF_RAPL_RAM) |
+ 			  BIT(PERF_RAPL_PP1) |
+ 			  BIT(PERF_RAPL_PSYS),
+ 	.msr_power_unit = MSR_RAPL_POWER_UNIT,
+-	.rapl_msrs      = intel_rapl_msrs,
++	.rapl_pkg_msrs	= intel_rapl_msrs,
+ };
+ 
+ static struct rapl_model model_spr = {
+-	.events		= BIT(PERF_RAPL_PP0) |
++	.pkg_events	= BIT(PERF_RAPL_PP0) |
+ 			  BIT(PERF_RAPL_PKG) |
+ 			  BIT(PERF_RAPL_RAM) |
+ 			  BIT(PERF_RAPL_PSYS),
+ 	.unit_quirk	= RAPL_UNIT_QUIRK_INTEL_SPR,
+ 	.msr_power_unit = MSR_RAPL_POWER_UNIT,
+-	.rapl_msrs      = intel_rapl_spr_msrs,
++	.rapl_pkg_msrs	= intel_rapl_spr_msrs,
+ };
+ 
+ static struct rapl_model model_amd_hygon = {
+-	.events		= BIT(PERF_RAPL_PKG),
++	.pkg_events	= BIT(PERF_RAPL_PKG),
++	.core_events	= BIT(PERF_RAPL_PER_CORE),
+ 	.msr_power_unit = MSR_AMD_RAPL_POWER_UNIT,
+-	.rapl_msrs      = amd_rapl_msrs,
++	.rapl_pkg_msrs	= amd_rapl_pkg_msrs,
++	.rapl_core_msrs	= amd_rapl_core_msrs,
+ };
+ 
+ static const struct x86_cpu_id rapl_model_match[] __initconst = {
+@@ -817,28 +956,47 @@ MODULE_DEVICE_TABLE(x86cpu, rapl_model_match);
+ static int __init rapl_pmu_init(void)
+ {
+ 	const struct x86_cpu_id *id;
+-	struct rapl_model *rm;
+ 	int ret;
++	int nr_rapl_pmu = topology_max_packages() * topology_max_dies_per_package();
++	int nr_cores = topology_max_packages() * topology_num_cores_per_package();
++
++	if (rapl_pmu_is_pkg_scope())
++		nr_rapl_pmu = topology_max_packages();
+ 
+ 	id = x86_match_cpu(rapl_model_match);
+ 	if (!id)
+ 		return -ENODEV;
+ 
+-	rm = (struct rapl_model *) id->driver_data;
+-
+-	rapl_msrs = rm->rapl_msrs;
++	rapl_model = (struct rapl_model *) id->driver_data;
+ 
+-	rapl_cntr_mask = perf_msr_probe(rapl_msrs, PERF_RAPL_MAX,
+-					false, (void *) &rm->events);
++	rapl_pkg_cntr_mask = perf_msr_probe(rapl_model->rapl_pkg_msrs, PERF_RAPL_PKG_EVENTS_MAX,
++					false, (void *) &rapl_model->pkg_events);
+ 
+-	ret = rapl_check_hw_unit(rm);
++	ret = rapl_check_hw_unit();
+ 	if (ret)
+ 		return ret;
+ 
+-	ret = init_rapl_pmus();
++	ret = init_rapl_pmus(&rapl_pmus_pkg, nr_rapl_pmu, rapl_attr_groups, rapl_attr_update);
+ 	if (ret)
+ 		return ret;
+ 
++	if (rapl_model->core_events) {
++		rapl_core_cntr_mask = perf_msr_probe(rapl_model->rapl_core_msrs,
++						     PERF_RAPL_CORE_EVENTS_MAX, false,
++						     (void *) &rapl_model->core_events);
++
++		ret = init_rapl_pmus(&rapl_pmus_core, nr_cores,
++				     rapl_per_core_attr_groups, rapl_per_core_attr_update);
++		if (ret) {
++			/*
++			 * If initialization of per_core PMU fails, reset per_core
++			 * flag, and continue with power PMU initialization.
++			 */
++			pr_warn("Per-core PMU initialization failed (%d)\n", ret);
++			rapl_model->core_events = 0UL;
++		}
++	}
++
+ 	/*
+ 	 * Install callbacks. Core will call them for each online cpu.
+ 	 */
+@@ -848,10 +1006,24 @@ static int __init rapl_pmu_init(void)
+ 	if (ret)
+ 		goto out;
+ 
+-	ret = perf_pmu_register(&rapl_pmus->pmu, "power", -1);
++	ret = perf_pmu_register(&rapl_pmus_pkg->pmu, "power", -1);
+ 	if (ret)
+ 		goto out1;
+ 
++	if (rapl_model->core_events) {
++		ret = perf_pmu_register(&rapl_pmus_core->pmu, "power_per_core", -1);
++		if (ret) {
++			/*
++			 * If registration of per_core PMU fails, cleanup per_core PMU
++			 * variables, reset the per_core flag and keep the
++			 * power PMU untouched.
++			 */
++			pr_warn("Per-core PMU registration failed (%d)\n", ret);
++			cleanup_rapl_pmus(rapl_pmus_core);
++			rapl_model->core_events = 0UL;
++		}
++	}
++
+ 	rapl_advertise();
+ 	return 0;
+ 
+@@ -859,7 +1031,7 @@ static int __init rapl_pmu_init(void)
+ 	cpuhp_remove_state(CPUHP_AP_PERF_X86_RAPL_ONLINE);
+ out:
+ 	pr_warn("Initialization failed (%d), disabled\n", ret);
+-	cleanup_rapl_pmus();
++	cleanup_rapl_pmus(rapl_pmus_pkg);
+ 	return ret;
+ }
+ module_init(rapl_pmu_init);
+@@ -867,7 +1039,11 @@ module_init(rapl_pmu_init);
+ static void __exit intel_rapl_exit(void)
+ {
+ 	cpuhp_remove_state_nocalls(CPUHP_AP_PERF_X86_RAPL_ONLINE);
+-	perf_pmu_unregister(&rapl_pmus->pmu);
+-	cleanup_rapl_pmus();
++	perf_pmu_unregister(&rapl_pmus_pkg->pmu);
++	cleanup_rapl_pmus(rapl_pmus_pkg);
++	if (rapl_model->core_events) {
++		perf_pmu_unregister(&rapl_pmus_core->pmu);
++		cleanup_rapl_pmus(rapl_pmus_core);
++	}
+ }
+ module_exit(intel_rapl_exit);
 diff --git a/arch/x86/include/asm/cpufeatures.h b/arch/x86/include/asm/cpufeatures.h
 index 3c7434329661..6c128d463a14 100644
 --- a/arch/x86/include/asm/cpufeatures.h
@@ -9666,6 +10508,30 @@ index b3ab80a03365..5e883b397ff3 100644
  /* Can be used to override the logic in pci_scan_bus for skipping
     already-configured bus numbers - to be used for buggy BIOSes
     or architectures with incomplete PCI setup by the loader */
+diff --git a/arch/x86/include/asm/processor.h b/arch/x86/include/asm/processor.h
+index cb4f6c513c48..1ffe4260bef6 100644
+--- a/arch/x86/include/asm/processor.h
++++ b/arch/x86/include/asm/processor.h
+@@ -98,6 +98,7 @@ struct cpuinfo_topology {
+ 	// Logical ID mappings
+ 	u32			logical_pkg_id;
+ 	u32			logical_die_id;
++	u32			logical_core_id;
+ 
+ 	// AMD Node ID and Nodes per Package info
+ 	u32			amd_node_id;
+diff --git a/arch/x86/include/asm/topology.h b/arch/x86/include/asm/topology.h
+index abe3a8f22cbd..2a6dbf965d92 100644
+--- a/arch/x86/include/asm/topology.h
++++ b/arch/x86/include/asm/topology.h
+@@ -137,6 +137,7 @@ extern const struct cpumask *cpu_clustergroup_mask(int cpu);
+ #define topology_logical_package_id(cpu)	(cpu_data(cpu).topo.logical_pkg_id)
+ #define topology_physical_package_id(cpu)	(cpu_data(cpu).topo.pkg_id)
+ #define topology_logical_die_id(cpu)		(cpu_data(cpu).topo.logical_die_id)
++#define topology_logical_core_id(cpu)		(cpu_data(cpu).topo.logical_core_id)
+ #define topology_die_id(cpu)			(cpu_data(cpu).topo.die_id)
+ #define topology_core_id(cpu)			(cpu_data(cpu).topo.core_id)
+ #define topology_ppin(cpu)			(cpu_data(cpu).ppin)
 diff --git a/arch/x86/include/asm/vermagic.h b/arch/x86/include/asm/vermagic.h
 index 75884d2cdec3..7acca9b5a9d5 100644
 --- a/arch/x86/include/asm/vermagic.h
@@ -9760,6 +10626,18 @@ index 75884d2cdec3..7acca9b5a9d5 100644
  #elif defined CONFIG_MELAN
  #define MODULE_PROC_FAMILY "ELAN "
  #elif defined CONFIG_MCRUSOE
+diff --git a/arch/x86/kernel/cpu/debugfs.c b/arch/x86/kernel/cpu/debugfs.c
+index 3baf3e435834..b1eb6d7828db 100644
+--- a/arch/x86/kernel/cpu/debugfs.c
++++ b/arch/x86/kernel/cpu/debugfs.c
+@@ -24,6 +24,7 @@ static int cpu_debug_show(struct seq_file *m, void *p)
+ 	seq_printf(m, "core_id:             %u\n", c->topo.core_id);
+ 	seq_printf(m, "logical_pkg_id:      %u\n", c->topo.logical_pkg_id);
+ 	seq_printf(m, "logical_die_id:      %u\n", c->topo.logical_die_id);
++	seq_printf(m, "logical_core_id:     %u\n", c->topo.logical_core_id);
+ 	seq_printf(m, "llc_id:              %u\n", c->topo.llc_id);
+ 	seq_printf(m, "l2c_id:              %u\n", c->topo.l2c_id);
+ 	seq_printf(m, "amd_node_id:         %u\n", c->topo.amd_node_id);
 diff --git a/arch/x86/kernel/cpu/scattered.c b/arch/x86/kernel/cpu/scattered.c
 index af5aa2c754c2..c84c30188fdf 100644
 --- a/arch/x86/kernel/cpu/scattered.c
@@ -9772,6 +10650,18 @@ index af5aa2c754c2..c84c30188fdf 100644
  	{ X86_FEATURE_MBA,		CPUID_EBX,  6, 0x80000008, 0 },
  	{ X86_FEATURE_SMBA,		CPUID_EBX,  2, 0x80000020, 0 },
  	{ X86_FEATURE_BMEC,		CPUID_EBX,  3, 0x80000020, 0 },
+diff --git a/arch/x86/kernel/cpu/topology_common.c b/arch/x86/kernel/cpu/topology_common.c
+index 9a6069e7133c..23722aa21e2f 100644
+--- a/arch/x86/kernel/cpu/topology_common.c
++++ b/arch/x86/kernel/cpu/topology_common.c
+@@ -151,6 +151,7 @@ static void topo_set_ids(struct topo_scan *tscan, bool early)
+ 	if (!early) {
+ 		c->topo.logical_pkg_id = topology_get_logical_id(apicid, TOPO_PKG_DOMAIN);
+ 		c->topo.logical_die_id = topology_get_logical_id(apicid, TOPO_DIE_DOMAIN);
++		c->topo.logical_core_id = topology_get_logical_id(apicid, TOPO_CORE_DOMAIN);
+ 	}
+ 
+ 	/* Package relative core ID */
 diff --git a/arch/x86/pci/common.c b/arch/x86/pci/common.c
 index ddb798603201..7c20387d8202 100644
 --- a/arch/x86/pci/common.c
@@ -10491,8 +11381,54 @@ index 37f1cdf46d29..094f1f91a9b3 100644
  
  	return 0;
  }
+diff --git a/drivers/cpufreq/amd-pstate-ut.c b/drivers/cpufreq/amd-pstate-ut.c
+index fc275d41d51e..66b73c308ce6 100644
+--- a/drivers/cpufreq/amd-pstate-ut.c
++++ b/drivers/cpufreq/amd-pstate-ut.c
+@@ -202,6 +202,7 @@ static void amd_pstate_ut_check_freq(u32 index)
+ 	int cpu = 0;
+ 	struct cpufreq_policy *policy = NULL;
+ 	struct amd_cpudata *cpudata = NULL;
++	u32 nominal_freq_khz;
+ 
+ 	for_each_possible_cpu(cpu) {
+ 		policy = cpufreq_cpu_get(cpu);
+@@ -209,13 +210,14 @@ static void amd_pstate_ut_check_freq(u32 index)
+ 			break;
+ 		cpudata = policy->driver_data;
+ 
+-		if (!((cpudata->max_freq >= cpudata->nominal_freq) &&
+-			(cpudata->nominal_freq > cpudata->lowest_nonlinear_freq) &&
++		nominal_freq_khz = cpudata->nominal_freq*1000;
++		if (!((cpudata->max_freq >= nominal_freq_khz) &&
++			(nominal_freq_khz > cpudata->lowest_nonlinear_freq) &&
+ 			(cpudata->lowest_nonlinear_freq > cpudata->min_freq) &&
+ 			(cpudata->min_freq > 0))) {
+ 			amd_pstate_ut_cases[index].result = AMD_PSTATE_UT_RESULT_FAIL;
+ 			pr_err("%s cpu%d max=%d >= nominal=%d > lowest_nonlinear=%d > min=%d > 0, the formula is incorrect!\n",
+-				__func__, cpu, cpudata->max_freq, cpudata->nominal_freq,
++				__func__, cpu, cpudata->max_freq, nominal_freq_khz,
+ 				cpudata->lowest_nonlinear_freq, cpudata->min_freq);
+ 			goto skip_test;
+ 		}
+@@ -229,13 +231,13 @@ static void amd_pstate_ut_check_freq(u32 index)
+ 
+ 		if (cpudata->boost_supported) {
+ 			if ((policy->max == cpudata->max_freq) ||
+-					(policy->max == cpudata->nominal_freq))
++					(policy->max == nominal_freq_khz))
+ 				amd_pstate_ut_cases[index].result = AMD_PSTATE_UT_RESULT_PASS;
+ 			else {
+ 				amd_pstate_ut_cases[index].result = AMD_PSTATE_UT_RESULT_FAIL;
+ 				pr_err("%s cpu%d policy_max=%d should be equal cpu_max=%d or cpu_nominal=%d !\n",
+ 					__func__, cpu, policy->max, cpudata->max_freq,
+-					cpudata->nominal_freq);
++					nominal_freq_khz);
+ 				goto skip_test;
+ 			}
+ 		} else {
 diff --git a/drivers/cpufreq/amd-pstate.c b/drivers/cpufreq/amd-pstate.c
-index 9ad62dbe8bfb..80eaa58f1405 100644
+index 9ad62dbe8bfb..804fab4ebb26 100644
 --- a/drivers/cpufreq/amd-pstate.c
 +++ b/drivers/cpufreq/amd-pstate.c
 @@ -51,6 +51,7 @@
@@ -10537,7 +11473,32 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  		if (!cppc_req_cached) {
  			epp = rdmsrl_on_cpu(cpudata->cpu, MSR_AMD_CPPC_REQ,
  					&cppc_req_cached);
-@@ -252,7 +244,7 @@ static int amd_pstate_set_epp(struct amd_cpudata *cpudata, u32 epp)
+@@ -247,12 +239,32 @@ static int amd_pstate_get_energy_pref_index(struct amd_cpudata *cpudata)
+ 	return index;
+ }
+ 
++static void pstate_update_perf(struct amd_cpudata *cpudata, u32 min_perf,
++			       u32 des_perf, u32 max_perf, bool fast_switch)
++{
++	if (fast_switch)
++		wrmsrl(MSR_AMD_CPPC_REQ, READ_ONCE(cpudata->cppc_req_cached));
++	else
++		wrmsrl_on_cpu(cpudata->cpu, MSR_AMD_CPPC_REQ,
++			      READ_ONCE(cpudata->cppc_req_cached));
++}
++
++DEFINE_STATIC_CALL(amd_pstate_update_perf, pstate_update_perf);
++
++static inline void amd_pstate_update_perf(struct amd_cpudata *cpudata,
++					  u32 min_perf, u32 des_perf,
++					  u32 max_perf, bool fast_switch)
++{
++	static_call(amd_pstate_update_perf)(cpudata, min_perf, des_perf,
++					    max_perf, fast_switch);
++}
++
+ static int amd_pstate_set_epp(struct amd_cpudata *cpudata, u32 epp)
+ {
  	int ret;
  	struct cppc_perf_ctrls perf_ctrls;
  
@@ -10546,7 +11507,17 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  		u64 value = READ_ONCE(cpudata->cppc_req_cached);
  
  		value &= ~GENMASK_ULL(31, 24);
-@@ -281,10 +273,8 @@ static int amd_pstate_set_energy_pref_index(struct amd_cpudata *cpudata,
+@@ -263,6 +275,9 @@ static int amd_pstate_set_epp(struct amd_cpudata *cpudata, u32 epp)
+ 		if (!ret)
+ 			cpudata->epp_cached = epp;
+ 	} else {
++		amd_pstate_update_perf(cpudata, cpudata->min_limit_perf, 0U,
++					     cpudata->max_limit_perf, false);
++
+ 		perf_ctrls.energy_perf = epp;
+ 		ret = cppc_set_epp_perf(cpudata->cpu, &perf_ctrls, 1);
+ 		if (ret) {
+@@ -281,10 +296,8 @@ static int amd_pstate_set_energy_pref_index(struct amd_cpudata *cpudata,
  	int epp = -EINVAL;
  	int ret;
  
@@ -10559,7 +11530,41 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  
  	if (epp == -EINVAL)
  		epp = epp_values[pref_index];
-@@ -521,7 +511,10 @@ static inline bool amd_pstate_sample(struct amd_cpudata *cpudata)
+@@ -452,16 +465,6 @@ static inline int amd_pstate_init_perf(struct amd_cpudata *cpudata)
+ 	return static_call(amd_pstate_init_perf)(cpudata);
+ }
+ 
+-static void pstate_update_perf(struct amd_cpudata *cpudata, u32 min_perf,
+-			       u32 des_perf, u32 max_perf, bool fast_switch)
+-{
+-	if (fast_switch)
+-		wrmsrl(MSR_AMD_CPPC_REQ, READ_ONCE(cpudata->cppc_req_cached));
+-	else
+-		wrmsrl_on_cpu(cpudata->cpu, MSR_AMD_CPPC_REQ,
+-			      READ_ONCE(cpudata->cppc_req_cached));
+-}
+-
+ static void cppc_update_perf(struct amd_cpudata *cpudata,
+ 			     u32 min_perf, u32 des_perf,
+ 			     u32 max_perf, bool fast_switch)
+@@ -475,16 +478,6 @@ static void cppc_update_perf(struct amd_cpudata *cpudata,
+ 	cppc_set_perf(cpudata->cpu, &perf_ctrls);
+ }
+ 
+-DEFINE_STATIC_CALL(amd_pstate_update_perf, pstate_update_perf);
+-
+-static inline void amd_pstate_update_perf(struct amd_cpudata *cpudata,
+-					  u32 min_perf, u32 des_perf,
+-					  u32 max_perf, bool fast_switch)
+-{
+-	static_call(amd_pstate_update_perf)(cpudata, min_perf, des_perf,
+-					    max_perf, fast_switch);
+-}
+-
+ static inline bool amd_pstate_sample(struct amd_cpudata *cpudata)
+ {
+ 	u64 aperf, mperf, tsc;
+@@ -521,7 +514,10 @@ static inline bool amd_pstate_sample(struct amd_cpudata *cpudata)
  static void amd_pstate_update(struct amd_cpudata *cpudata, u32 min_perf,
  			      u32 des_perf, u32 max_perf, bool fast_switch, int gov_flags)
  {
@@ -10570,7 +11575,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  	u64 value = prev;
  
  	min_perf = clamp_t(unsigned long, min_perf, cpudata->min_limit_perf,
-@@ -530,6 +523,9 @@ static void amd_pstate_update(struct amd_cpudata *cpudata, u32 min_perf,
+@@ -530,6 +526,9 @@ static void amd_pstate_update(struct amd_cpudata *cpudata, u32 min_perf,
  			cpudata->max_limit_perf);
  	des_perf = clamp_t(unsigned long, des_perf, min_perf, max_perf);
  
@@ -10580,7 +11585,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  	if ((cppc_state == AMD_PSTATE_GUIDED) && (gov_flags & CPUFREQ_GOV_DYNAMIC_SWITCHING)) {
  		min_perf = des_perf;
  		des_perf = 0;
-@@ -541,6 +537,10 @@ static void amd_pstate_update(struct amd_cpudata *cpudata, u32 min_perf,
+@@ -541,6 +540,10 @@ static void amd_pstate_update(struct amd_cpudata *cpudata, u32 min_perf,
  	value &= ~AMD_CPPC_DES_PERF(~0L);
  	value |= AMD_CPPC_DES_PERF(des_perf);
  
@@ -10591,7 +11596,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  	value &= ~AMD_CPPC_MAX_PERF(~0L);
  	value |= AMD_CPPC_MAX_PERF(max_perf);
  
-@@ -651,10 +651,9 @@ static void amd_pstate_adjust_perf(unsigned int cpu,
+@@ -651,10 +654,9 @@ static void amd_pstate_adjust_perf(unsigned int cpu,
  				   unsigned long capacity)
  {
  	unsigned long max_perf, min_perf, des_perf,
@@ -10603,7 +11608,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  
  	if (policy->min != cpudata->min_limit_freq || policy->max != cpudata->max_limit_freq)
  		amd_pstate_update_min_max_limit(policy);
-@@ -662,7 +661,6 @@ static void amd_pstate_adjust_perf(unsigned int cpu,
+@@ -662,7 +664,6 @@ static void amd_pstate_adjust_perf(unsigned int cpu,
  
  	cap_perf = READ_ONCE(cpudata->highest_perf);
  	lowest_nonlinear_perf = READ_ONCE(cpudata->lowest_nonlinear_perf);
@@ -10611,7 +11616,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  
  	des_perf = cap_perf;
  	if (target_perf < capacity)
-@@ -680,51 +678,111 @@ static void amd_pstate_adjust_perf(unsigned int cpu,
+@@ -680,51 +681,111 @@ static void amd_pstate_adjust_perf(unsigned int cpu,
  		max_perf = min_perf;
  
  	des_perf = clamp_t(unsigned long, des_perf, min_perf, max_perf);
@@ -10707,8 +11712,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
 -		return;
 +	return ret;
 +}
- 
--	cpudata->boost_supported = true;
++
 +static int amd_pstate_init_boost_support(struct amd_cpudata *cpudata)
 +{
 +	u64 boost_val;
@@ -10723,7 +11727,8 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
 +		ret = 0;
 +		goto exit_err;
 +	}
-+
+ 
+-	cpudata->boost_supported = true;
 +	/* at least one CPU supports CPB, even if others fail later on to set up */
  	current_pstate_driver->boost_enabled = true;
 +
@@ -10745,7 +11750,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  }
  
  static void amd_perf_ctl_reset(unsigned int cpu)
-@@ -753,7 +811,7 @@ static int amd_pstate_get_highest_perf(int cpu, u32 *highest_perf)
+@@ -753,7 +814,7 @@ static int amd_pstate_get_highest_perf(int cpu, u32 *highest_perf)
  {
  	int ret;
  
@@ -10754,7 +11759,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  		u64 cap1;
  
  		ret = rdmsrl_safe_on_cpu(cpu, MSR_AMD_CPPC_CAP1, &cap1);
-@@ -849,8 +907,12 @@ static u32 amd_pstate_get_transition_delay_us(unsigned int cpu)
+@@ -849,8 +910,12 @@ static u32 amd_pstate_get_transition_delay_us(unsigned int cpu)
  	u32 transition_delay_ns;
  
  	transition_delay_ns = cppc_get_transition_latency(cpu);
@@ -10769,7 +11774,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  
  	return transition_delay_ns / NSEC_PER_USEC;
  }
-@@ -921,12 +983,30 @@ static int amd_pstate_init_freq(struct amd_cpudata *cpudata)
+@@ -921,12 +986,30 @@ static int amd_pstate_init_freq(struct amd_cpudata *cpudata)
  	WRITE_ONCE(cpudata->nominal_freq, nominal_freq);
  	WRITE_ONCE(cpudata->max_freq, max_freq);
  
@@ -10801,7 +11806,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  	struct device *dev;
  	struct amd_cpudata *cpudata;
  
-@@ -955,18 +1035,12 @@ static int amd_pstate_cpu_init(struct cpufreq_policy *policy)
+@@ -955,18 +1038,12 @@ static int amd_pstate_cpu_init(struct cpufreq_policy *policy)
  	if (ret)
  		goto free_cpudata1;
  
@@ -10824,7 +11829,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  
  	policy->cpuinfo.transition_latency = amd_pstate_get_transition_latency(policy->cpu);
  	policy->transition_delay_us = amd_pstate_get_transition_delay_us(policy->cpu);
-@@ -977,10 +1051,12 @@ static int amd_pstate_cpu_init(struct cpufreq_policy *policy)
+@@ -977,10 +1054,12 @@ static int amd_pstate_cpu_init(struct cpufreq_policy *policy)
  	policy->cpuinfo.min_freq = min_freq;
  	policy->cpuinfo.max_freq = max_freq;
  
@@ -10838,7 +11843,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  		policy->fast_switch_possible = true;
  
  	ret = freq_qos_add_request(&policy->constraints, &cpudata->req[0],
-@@ -1002,7 +1078,6 @@ static int amd_pstate_cpu_init(struct cpufreq_policy *policy)
+@@ -1002,7 +1081,6 @@ static int amd_pstate_cpu_init(struct cpufreq_policy *policy)
  
  	policy->driver_data = cpudata;
  
@@ -10846,7 +11851,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  	if (!current_pstate_driver->adjust_perf)
  		current_pstate_driver->adjust_perf = amd_pstate_adjust_perf;
  
-@@ -1213,7 +1288,7 @@ static int amd_pstate_change_mode_without_dvr_change(int mode)
+@@ -1213,7 +1291,7 @@ static int amd_pstate_change_mode_without_dvr_change(int mode)
  
  	cppc_state = mode;
  
@@ -10855,7 +11860,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  		return 0;
  
  	for_each_present_cpu(cpu) {
-@@ -1386,7 +1461,7 @@ static bool amd_pstate_acpi_pm_profile_undefined(void)
+@@ -1386,7 +1464,7 @@ static bool amd_pstate_acpi_pm_profile_undefined(void)
  
  static int amd_pstate_epp_cpu_init(struct cpufreq_policy *policy)
  {
@@ -10864,7 +11869,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  	struct amd_cpudata *cpudata;
  	struct device *dev;
  	u64 value;
-@@ -1417,17 +1492,12 @@ static int amd_pstate_epp_cpu_init(struct cpufreq_policy *policy)
+@@ -1417,17 +1495,12 @@ static int amd_pstate_epp_cpu_init(struct cpufreq_policy *policy)
  	if (ret)
  		goto free_cpudata1;
  
@@ -10886,7 +11891,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  
  	policy->cpuinfo.min_freq = min_freq;
  	policy->cpuinfo.max_freq = max_freq;
-@@ -1436,11 +1506,13 @@ static int amd_pstate_epp_cpu_init(struct cpufreq_policy *policy)
+@@ -1436,11 +1509,13 @@ static int amd_pstate_epp_cpu_init(struct cpufreq_policy *policy)
  
  	policy->driver_data = cpudata;
  
@@ -10901,7 +11906,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  	/*
  	 * Set the policy to provide a valid fallback value in case
  	 * the default cpufreq governor is neither powersave nor performance.
-@@ -1451,7 +1523,7 @@ static int amd_pstate_epp_cpu_init(struct cpufreq_policy *policy)
+@@ -1451,7 +1526,7 @@ static int amd_pstate_epp_cpu_init(struct cpufreq_policy *policy)
  	else
  		policy->policy = CPUFREQ_POLICY_POWERSAVE;
  
@@ -10910,7 +11915,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  		ret = rdmsrl_on_cpu(cpudata->cpu, MSR_AMD_CPPC_REQ, &value);
  		if (ret)
  			return ret;
-@@ -1462,7 +1534,6 @@ static int amd_pstate_epp_cpu_init(struct cpufreq_policy *policy)
+@@ -1462,7 +1537,6 @@ static int amd_pstate_epp_cpu_init(struct cpufreq_policy *policy)
  			return ret;
  		WRITE_ONCE(cpudata->cppc_cap1_cached, value);
  	}
@@ -10918,7 +11923,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  
  	return 0;
  
-@@ -1541,7 +1612,7 @@ static void amd_pstate_epp_update_limit(struct cpufreq_policy *policy)
+@@ -1541,7 +1615,7 @@ static void amd_pstate_epp_update_limit(struct cpufreq_policy *policy)
  		epp = 0;
  
  	/* Set initial EPP value */
@@ -10927,7 +11932,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  		value &= ~GENMASK_ULL(31, 24);
  		value |= (u64)epp << 24;
  	}
-@@ -1564,6 +1635,12 @@ static int amd_pstate_epp_set_policy(struct cpufreq_policy *policy)
+@@ -1564,6 +1638,12 @@ static int amd_pstate_epp_set_policy(struct cpufreq_policy *policy)
  
  	amd_pstate_epp_update_limit(policy);
  
@@ -10940,7 +11945,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  	return 0;
  }
  
-@@ -1580,7 +1657,7 @@ static void amd_pstate_epp_reenable(struct amd_cpudata *cpudata)
+@@ -1580,7 +1660,7 @@ static void amd_pstate_epp_reenable(struct amd_cpudata *cpudata)
  	value = READ_ONCE(cpudata->cppc_req_cached);
  	max_perf = READ_ONCE(cpudata->highest_perf);
  
@@ -10949,7 +11954,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  		wrmsrl_on_cpu(cpudata->cpu, MSR_AMD_CPPC_REQ, value);
  	} else {
  		perf_ctrls.max_perf = max_perf;
-@@ -1614,7 +1691,7 @@ static void amd_pstate_epp_offline(struct cpufreq_policy *policy)
+@@ -1614,7 +1694,7 @@ static void amd_pstate_epp_offline(struct cpufreq_policy *policy)
  	value = READ_ONCE(cpudata->cppc_req_cached);
  
  	mutex_lock(&amd_pstate_limits_lock);
@@ -10958,7 +11963,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  		cpudata->epp_policy = CPUFREQ_POLICY_UNKNOWN;
  
  		/* Set max perf same as min perf */
-@@ -1718,6 +1795,7 @@ static struct cpufreq_driver amd_pstate_epp_driver = {
+@@ -1718,6 +1798,7 @@ static struct cpufreq_driver amd_pstate_epp_driver = {
  	.suspend	= amd_pstate_epp_suspend,
  	.resume		= amd_pstate_epp_resume,
  	.update_limits	= amd_pstate_update_limits,
@@ -10966,7 +11971,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  	.name		= "amd-pstate-epp",
  	.attr		= amd_pstate_epp_attr,
  };
-@@ -1741,6 +1819,46 @@ static int __init amd_pstate_set_driver(int mode_idx)
+@@ -1741,6 +1822,46 @@ static int __init amd_pstate_set_driver(int mode_idx)
  	return -EINVAL;
  }
  
@@ -11013,7 +12018,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  static int __init amd_pstate_init(void)
  {
  	struct device *dev_root;
-@@ -1749,6 +1867,11 @@ static int __init amd_pstate_init(void)
+@@ -1749,6 +1870,11 @@ static int __init amd_pstate_init(void)
  	if (boot_cpu_data.x86_vendor != X86_VENDOR_AMD)
  		return -ENODEV;
  
@@ -11025,7 +12030,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  	if (!acpi_cpc_valid()) {
  		pr_warn_once("the _CPC object is not present in SBIOS or ACPI disabled\n");
  		return -ENODEV;
-@@ -1763,35 +1886,43 @@ static int __init amd_pstate_init(void)
+@@ -1763,35 +1889,43 @@ static int __init amd_pstate_init(void)
  	/* check if this machine need CPPC quirks */
  	dmi_check_system(amd_pstate_quirks_table);
  
@@ -11079,7 +12084,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  		pr_debug("AMD CPPC MSR based functionality is supported\n");
  		if (cppc_state != AMD_PSTATE_ACTIVE)
  			current_pstate_driver->adjust_perf = amd_pstate_adjust_perf;
-@@ -1805,13 +1936,15 @@ static int __init amd_pstate_init(void)
+@@ -1805,13 +1939,15 @@ static int __init amd_pstate_init(void)
  	/* enable amd pstate feature */
  	ret = amd_pstate_enable(true);
  	if (ret) {
@@ -11097,7 +12102,7 @@ index 9ad62dbe8bfb..80eaa58f1405 100644
  
  	dev_root = bus_get_dev_root(&cpu_subsys);
  	if (dev_root) {
-@@ -1827,6 +1960,8 @@ static int __init amd_pstate_init(void)
+@@ -1827,6 +1963,8 @@ static int __init amd_pstate_init(void)
  
  global_attr_free:
  	cpufreq_unregister_driver(current_pstate_driver);
@@ -11173,217 +12178,6 @@ index c31914a9876f..1035c074f36a 100644
  	else if (!strcmp(str, "active"))
  		default_driver = &intel_pstate;
  	else if (!strcmp(str, "passive"))
-diff --git a/drivers/extcon/Kconfig b/drivers/extcon/Kconfig
-index 3da94b382292..88ac6e28689c 100644
---- a/drivers/extcon/Kconfig
-+++ b/drivers/extcon/Kconfig
-@@ -203,4 +203,11 @@ config EXTCON_RTK_TYPE_C
- 	  The DHC (Digital Home Hub) RTD series SoC contains a type c module.
- 	  This driver will detect the status of the type-c port.
- 
-+config EXTCON_STEAMDECK
-+	tristate "Steam Deck extcon support"
-+	depends on MFD_STEAMDECK
-+	help
-+	  Say Y here to enable support of USB Type C cable detection extcon
-+	  support on Steam Deck devices
-+
- endif
-diff --git a/drivers/extcon/Makefile b/drivers/extcon/Makefile
-index f779adb5e4c7..6e0569b21d2f 100644
---- a/drivers/extcon/Makefile
-+++ b/drivers/extcon/Makefile
-@@ -26,3 +26,4 @@ obj-$(CONFIG_EXTCON_USB_GPIO)	+= extcon-usb-gpio.o
- obj-$(CONFIG_EXTCON_USBC_CROS_EC) += extcon-usbc-cros-ec.o
- obj-$(CONFIG_EXTCON_USBC_TUSB320) += extcon-usbc-tusb320.o
- obj-$(CONFIG_EXTCON_RTK_TYPE_C) += extcon-rtk-type-c.o
-+obj-$(CONFIG_EXTCON_STEAMDECK)  += extcon-steamdeck.o
-diff --git a/drivers/extcon/extcon-steamdeck.c b/drivers/extcon/extcon-steamdeck.c
-new file mode 100644
-index 000000000000..49cb5d30bf6b
---- /dev/null
-+++ b/drivers/extcon/extcon-steamdeck.c
-@@ -0,0 +1,180 @@
-+
-+#include <linux/acpi.h>
-+#include <linux/platform_device.h>
-+#include <linux/extcon-provider.h>
-+
-+#define ACPI_STEAMDECK_NOTIFY_STATUS	0x80
-+
-+/* 0 - port connected, 1 -port disconnected */
-+#define ACPI_STEAMDECK_PORT_CONNECT	BIT(0)
-+/* 0 - Upstream Facing Port, 1 - Downdstream Facing Port */
-+#define ACPI_STEAMDECK_CUR_DATA_ROLE	BIT(3)
-+/*
-+ * Debouncing delay to allow negotiation process to settle. 2s value
-+ * was arrived at via trial and error.
-+ */
-+#define STEAMDECK_ROLE_SWITCH_DELAY	(msecs_to_jiffies(2000))
-+
-+struct steamdeck_extcon {
-+	struct acpi_device *adev;
-+	struct delayed_work role_work;
-+	struct extcon_dev *edev;
-+	struct device *dev;
-+};
-+
-+static int steamdeck_read_pdcs(struct steamdeck_extcon *sd, unsigned long long *pdcs)
-+{
-+	acpi_status status;
-+
-+	status = acpi_evaluate_integer(sd->adev->handle, "PDCS", NULL, pdcs);
-+	if (ACPI_FAILURE(status)) {
-+		dev_err(sd->dev, "PDCS evaluation failed: %s\n",
-+			acpi_format_exception(status));
-+		return -EIO;
-+	}
-+
-+	return 0;
-+}
-+
-+static void steamdeck_usb_role_work(struct work_struct *work)
-+{
-+	struct steamdeck_extcon *sd =
-+		container_of(work, struct steamdeck_extcon, role_work.work);
-+	unsigned long long pdcs;
-+	bool usb_host;
-+
-+	if (steamdeck_read_pdcs(sd, &pdcs))
-+		return;
-+
-+	/*
-+	 * We only care about these two
-+	 */
-+	pdcs &= ACPI_STEAMDECK_PORT_CONNECT | ACPI_STEAMDECK_CUR_DATA_ROLE;
-+
-+	/*
-+	 * For "connect" events our role is determined by a bit in
-+	 * PDCS, for "disconnect" we switch to being a gadget
-+	 * unconditionally. The thinking for the latter is we don't
-+	 * want to start acting as a USB host until we get
-+	 * confirmation from the firmware that we are a USB host
-+	 */
-+	usb_host = (pdcs & ACPI_STEAMDECK_PORT_CONNECT) ?
-+		pdcs & ACPI_STEAMDECK_CUR_DATA_ROLE : false;
-+
-+	dev_dbg(sd->dev, "USB role is %s\n", usb_host ? "host" : "device");
-+	WARN_ON(extcon_set_state_sync(sd->edev, EXTCON_USB_HOST,
-+				      usb_host));
-+
-+}
-+
-+static void steamdeck_notify(acpi_handle handle, u32 event, void *context)
-+{
-+	struct device *dev = context;
-+	struct steamdeck_extcon *sd = dev_get_drvdata(dev);
-+	unsigned long long pdcs;
-+	unsigned long delay;
-+
-+	switch (event) {
-+	case ACPI_STEAMDECK_NOTIFY_STATUS:
-+		if (steamdeck_read_pdcs(sd, &pdcs))
-+			return;
-+		/*
-+		 * We process "disconnect" events immediately and
-+		 * "connect" events with a delay to give the HW time
-+		 * to settle. For example attaching USB hub (at least
-+		 * for HW used for testing) will generate intermediary
-+		 * event with "host" bit not set, followed by the one
-+		 * that does have it set.
-+		 */
-+		delay = (pdcs & ACPI_STEAMDECK_PORT_CONNECT) ?
-+			STEAMDECK_ROLE_SWITCH_DELAY : 0;
-+
-+		queue_delayed_work(system_long_wq, &sd->role_work, delay);
-+		break;
-+	default:
-+		dev_warn(dev, "Unsupported event [0x%x]\n", event);
-+	}
-+}
-+
-+static void steamdeck_remove_notify_handler(void *data)
-+{
-+	struct steamdeck_extcon *sd = data;
-+
-+	acpi_remove_notify_handler(sd->adev->handle, ACPI_DEVICE_NOTIFY,
-+				   steamdeck_notify);
-+	cancel_delayed_work_sync(&sd->role_work);
-+}
-+
-+static const unsigned int steamdeck_extcon_cable[] = {
-+	EXTCON_USB,
-+	EXTCON_USB_HOST,
-+	EXTCON_CHG_USB_SDP,
-+	EXTCON_CHG_USB_CDP,
-+	EXTCON_CHG_USB_DCP,
-+	EXTCON_CHG_USB_ACA,
-+	EXTCON_NONE,
-+};
-+
-+static int steamdeck_extcon_probe(struct platform_device *pdev)
-+{
-+	struct device *dev = &pdev->dev;
-+	struct steamdeck_extcon *sd;
-+	acpi_status status;
-+	int ret;
-+
-+	sd = devm_kzalloc(dev, sizeof(*sd), GFP_KERNEL);
-+	if (!sd)
-+		return -ENOMEM;
-+
-+	INIT_DELAYED_WORK(&sd->role_work, steamdeck_usb_role_work);
-+	platform_set_drvdata(pdev, sd);
-+	sd->adev = ACPI_COMPANION(dev->parent);
-+	sd->dev  = dev;
-+	sd->edev = devm_extcon_dev_allocate(dev, steamdeck_extcon_cable);
-+	if (IS_ERR(sd->edev))
-+		return PTR_ERR(sd->edev);
-+
-+	ret = devm_extcon_dev_register(dev, sd->edev);
-+	if (ret < 0) {
-+		dev_err(dev, "Failed to register extcon device: %d\n", ret);
-+		return ret;
-+	}
-+
-+	/*
-+	 * Set initial role value
-+	 */
-+	queue_delayed_work(system_long_wq, &sd->role_work, 0);
-+	flush_delayed_work(&sd->role_work);
-+
-+	status = acpi_install_notify_handler(sd->adev->handle,
-+					     ACPI_DEVICE_NOTIFY,
-+					     steamdeck_notify,
-+					     dev);
-+	if (ACPI_FAILURE(status)) {
-+		dev_err(dev, "Error installing ACPI notify handler\n");
-+		return -EIO;
-+	}
-+
-+	ret = devm_add_action_or_reset(dev, steamdeck_remove_notify_handler,
-+				       sd);
-+	return ret;
-+}
-+
-+static const struct platform_device_id steamdeck_extcon_id_table[] = {
-+	{ .name = "steamdeck-extcon" },
-+	{}
-+};
-+MODULE_DEVICE_TABLE(platform, steamdeck_extcon_id_table);
-+
-+static struct platform_driver steamdeck_extcon_driver = {
-+	.probe = steamdeck_extcon_probe,
-+	.driver = {
-+		.name = "steamdeck-extcon",
-+	},
-+	.id_table = steamdeck_extcon_id_table,
-+};
-+module_platform_driver(steamdeck_extcon_driver);
-+
-+MODULE_AUTHOR("Andrey Smirnov <andrew.smirnov@gmail.com>");
-+MODULE_DESCRIPTION("Steam Deck extcon driver");
-+MODULE_LICENSE("GPL");
 diff --git a/drivers/firmware/efi/libstub/efi-stub-helper.c b/drivers/firmware/efi/libstub/efi-stub-helper.c
 index de659f6a815f..f00a419a29be 100644
 --- a/drivers/firmware/efi/libstub/efi-stub-helper.c
@@ -11532,54 +12326,6 @@ index ea14f1c8f430..a05ed98da785 100644
  	/* skip devices which are owned by radeon */
  	for (i = 0; i < ARRAY_SIZE(amdgpu_unsupported_pciidlist); i++) {
  		if (amdgpu_unsupported_pciidlist[i] == pdev->device)
-diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_mode.h b/drivers/gpu/drm/amd/amdgpu/amdgpu_mode.h
-index 1fe21a70ddd0..1738a580ef51 100644
---- a/drivers/gpu/drm/amd/amdgpu/amdgpu_mode.h
-+++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_mode.h
-@@ -434,8 +434,6 @@ struct amdgpu_mode_info {
- 	struct drm_property *regamma_tf_property;
- };
- 
--#define AMDGPU_MAX_BL_LEVEL 0xFF
--
- struct amdgpu_backlight_privdata {
- 	struct amdgpu_encoder *encoder;
- 	uint8_t negative;
-diff --git a/drivers/gpu/drm/amd/amdgpu/atombios_encoders.c b/drivers/gpu/drm/amd/amdgpu/atombios_encoders.c
-index 25feab188dfe..0243abb0e491 100644
---- a/drivers/gpu/drm/amd/amdgpu/atombios_encoders.c
-+++ b/drivers/gpu/drm/amd/amdgpu/atombios_encoders.c
-@@ -39,6 +39,10 @@
- #include <linux/backlight.h>
- #include "bif/bif_4_1_d.h"
- 
-+
-+/* Maximum backlight level. */
-+#define AMDGPU_ATOM_MAX_BL_LEVEL 0xFF
-+
- u8
- amdgpu_atombios_encoder_get_backlight_level_from_reg(struct amdgpu_device *adev)
- {
-@@ -127,8 +131,8 @@ static u8 amdgpu_atombios_encoder_backlight_level(struct backlight_device *bd)
- 	/* Convert brightness to hardware level */
- 	if (bd->props.brightness < 0)
- 		level = 0;
--	else if (bd->props.brightness > AMDGPU_MAX_BL_LEVEL)
--		level = AMDGPU_MAX_BL_LEVEL;
-+	else if (bd->props.brightness > AMDGPU_ATOM_MAX_BL_LEVEL)
-+		level = AMDGPU_ATOM_MAX_BL_LEVEL;
- 	else
- 		level = bd->props.brightness;
- 
-@@ -198,7 +202,7 @@ void amdgpu_atombios_encoder_init_backlight(struct amdgpu_encoder *amdgpu_encode
- 	}
- 
- 	memset(&props, 0, sizeof(props));
--	props.max_brightness = AMDGPU_MAX_BL_LEVEL;
-+	props.max_brightness = AMDGPU_ATOM_MAX_BL_LEVEL;
- 	props.type = BACKLIGHT_RAW;
- 	snprintf(bl_name, sizeof(bl_name),
- 		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/Kconfig b/drivers/gpu/drm/amd/display/Kconfig
 index 47b8b49da8a7..943959d1f401 100644
 --- a/drivers/gpu/drm/amd/display/Kconfig
@@ -11596,20 +12342,10 @@ index 47b8b49da8a7..943959d1f401 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index e6fbcdb0708e..9f3646ac8dbd 100644
+index e6fbcdb0708e..0f4cf066f8af 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -157,6 +157,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_351_DMUB);
- /* Number of bytes in PSP footer for firmware. */
- #define PSP_FOOTER_BYTES 0x100
- 
-+/* Maximum backlight level. */
-+#define AMDGPU_MAX_BL_LEVEL 0xFFF
-+
- /**
-  * DOC: overview
-  *
-@@ -4118,7 +4121,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4118,7 +4118,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  		return r;
  	}
  
@@ -11618,90 +12354,6 @@ index e6fbcdb0708e..9f3646ac8dbd 100644
  	if (amdgpu_dm_create_color_properties(adev))
  		return -ENOMEM;
  #endif
-@@ -4133,7 +4136,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
- 	return 0;
- }
- 
--#define AMDGPU_DM_DEFAULT_MIN_BACKLIGHT 12
-+#define AMDGPU_DM_DEFAULT_MIN_BACKLIGHT 0
- #define AMDGPU_DM_DEFAULT_MAX_BACKLIGHT 255
- #define AUX_BL_DEFAULT_TRANSITION_TIME_MS 50
- 
-@@ -4151,11 +4154,27 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
- 	amdgpu_acpi_get_backlight_caps(&caps);
- 	if (caps.caps_valid) {
- 		dm->backlight_caps[bl_idx].caps_valid = true;
-+
-+		printk(KERN_NOTICE"VLV Successfully queried backlight range over ACPI: %d %d\n",
-+		       (int) caps.min_input_signal, (int) caps.max_input_signal);
-+
-+		if ( caps.min_input_signal != AMDGPU_DM_DEFAULT_MIN_BACKLIGHT ||
-+			caps.max_input_signal != AMDGPU_DM_DEFAULT_MAX_BACKLIGHT )
-+		{
-+			caps.min_input_signal = AMDGPU_DM_DEFAULT_MIN_BACKLIGHT;
-+			caps.max_input_signal = AMDGPU_DM_DEFAULT_MAX_BACKLIGHT;
-+
-+			printk(KERN_NOTICE"VLV OVERRIDE backlight range: %d %d\n",
-+			       (int) caps.min_input_signal, (int) caps.max_input_signal);
-+		}
-+
- 		if (caps.aux_support)
- 			return;
- 		dm->backlight_caps[bl_idx].min_input_signal = caps.min_input_signal;
- 		dm->backlight_caps[bl_idx].max_input_signal = caps.max_input_signal;
- 	} else {
-+		printk(KERN_NOTICE"VLV ACPI does not provide backlight range, using defaults: %d %d\n",
-+		       AMDGPU_DM_DEFAULT_MIN_BACKLIGHT, AMDGPU_DM_DEFAULT_MAX_BACKLIGHT);
- 		dm->backlight_caps[bl_idx].min_input_signal =
- 				AMDGPU_DM_DEFAULT_MIN_BACKLIGHT;
- 		dm->backlight_caps[bl_idx].max_input_signal =
-@@ -4165,6 +4184,9 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
- 	if (dm->backlight_caps[bl_idx].aux_support)
- 		return;
- 
-+	printk(KERN_NOTICE"VLV Kernel built without ACPI. using backlight range defaults: %d %d\n",
-+	       AMDGPU_DM_DEFAULT_MIN_BACKLIGHT, AMDGPU_DM_DEFAULT_MAX_BACKLIGHT);
-+
- 	dm->backlight_caps[bl_idx].min_input_signal = AMDGPU_DM_DEFAULT_MIN_BACKLIGHT;
- 	dm->backlight_caps[bl_idx].max_input_signal = AMDGPU_DM_DEFAULT_MAX_BACKLIGHT;
- #endif
-@@ -4196,7 +4218,7 @@ static u32 convert_brightness_from_user(const struct amdgpu_dm_backlight_caps *c
- 	if (!get_brightness_range(caps, &min, &max))
- 		return brightness;
- 
--	// Rescale 0..255 to min..max
-+	// Rescale 0..AMDGPU_MAX_BL_LEVEL to min..max
- 	return min + DIV_ROUND_CLOSEST((max - min) * brightness,
- 				       AMDGPU_MAX_BL_LEVEL);
- }
-@@ -4211,7 +4233,7 @@ static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *cap
- 
- 	if (brightness < min)
- 		return 0;
--	// Rescale min..max to 0..255
-+	// Rescale min..max to 0..AMDGPU_MAX_BL_LEVEL
- 	return DIV_ROUND_CLOSEST(AMDGPU_MAX_BL_LEVEL * (brightness - min),
- 				 max - min);
- }
-@@ -7618,7 +7640,8 @@ static int amdgpu_dm_connector_get_modes(struct drm_connector *connector)
- 				drm_add_modes_noedid(connector, 1920, 1080);
- 	} else {
- 		amdgpu_dm_connector_ddc_get_modes(connector, edid);
--		amdgpu_dm_connector_add_common_modes(encoder, connector);
-+		if (connector->connector_type != DRM_MODE_CONNECTOR_eDP)
-+			amdgpu_dm_connector_add_common_modes(encoder, connector);
- 		amdgpu_dm_connector_add_freesync_modes(connector, edid);
- 	}
- 	amdgpu_dm_fbc_init(connector);
-@@ -8368,7 +8391,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
- 	int planes_count = 0, vpos, hpos;
- 	unsigned long flags;
- 	u32 target_vblank, last_flip_vblank;
--	bool vrr_active = amdgpu_dm_crtc_vrr_active(acrtc_state);
-+	bool vrr_active = true;//amdgpu_dm_crtc_vrr_active(acrtc_state);
- 	bool cursor_update = false;
- 	bool pflip_present = false;
- 	bool dirty_rects_changed = false;
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_color.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_color.c
 index ebabfe3a512f..4d3ebcaacca1 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_color.c
@@ -11777,35 +12429,6 @@ index 8a4c40b4c27e..779880c64575 100644
  	dm_atomic_plane_attach_color_mgmt_properties(dm, plane);
  #endif
  	/* Create (reset) the plane state */
-diff --git a/drivers/gpu/drm/amd/display/dc/link/link_validation.c b/drivers/gpu/drm/amd/display/dc/link/link_validation.c
-index 1aed55b0ab6a..27af7505caca 100644
---- a/drivers/gpu/drm/amd/display/dc/link/link_validation.c
-+++ b/drivers/gpu/drm/amd/display/dc/link/link_validation.c
-@@ -35,6 +35,8 @@
- 
- #define DC_LOGGER_INIT(logger)
- 
-+static const uint8_t DP_SINK_BRANCH_DEV_NAME_KT50X0[] = "KT50X0!";
-+
- static uint32_t get_tmds_output_pixel_clock_100hz(const struct dc_crtc_timing *timing)
- {
- 
-@@ -276,6 +278,15 @@ static bool dp_validate_mode_timing(
- 		timing->v_addressable == (uint32_t) 480)
- 		return true;
- 
-+	if (link->ctx->dce_version == DCN_VERSION_3_01 &&
-+	    link->dpcd_caps.sink_dev_id == DP_BRANCH_DEVICE_ID_0060AD &&
-+	    memcmp(&link->dpcd_caps.branch_dev_name,
-+		   DP_SINK_BRANCH_DEV_NAME_KT50X0,
-+		   sizeof(link->dpcd_caps.branch_dev_name)) == 0) {
-+		if (timing->pix_clk_100hz / 10 >= (uint32_t) 1200000)
-+			return false; /* KT50X0 does not support Pxl clock >= 1200MHz */
-+	}
-+
- 	link_setting = dp_get_verified_link_cap(link);
- 
- 	/* TODO: DYNAMIC_VALIDATION needs to be implemented */
 diff --git a/drivers/gpu/drm/amd/pm/amdgpu_pm.c b/drivers/gpu/drm/amd/pm/amdgpu_pm.c
 index c11952a4389b..52f54a228b39 100644
 --- a/drivers/gpu/drm/amd/pm/amdgpu_pm.c
@@ -11852,6 +12475,34 @@ index e1796ecf9c05..5e46bd293205 100644
  		dev_err(smu->adev->dev,
  			"New power limit (%d) is out of range [%d,%d]\n",
  			limit, smu->min_power_limit, smu->max_power_limit);
+diff --git a/drivers/gpu/drm/drm_atomic_uapi.c b/drivers/gpu/drm/drm_atomic_uapi.c
+index fc16fddee5c5..05b21fe9b395 100644
+--- a/drivers/gpu/drm/drm_atomic_uapi.c
++++ b/drivers/gpu/drm/drm_atomic_uapi.c
+@@ -1066,21 +1066,14 @@ int drm_atomic_set_property(struct drm_atomic_state *state,
+ 			break;
+ 		}
+ 
+-		if (async_flip && prop != config->prop_fb_id) {
++		if (async_flip && (prop != config->prop_fb_id ||
++				   plane_state->plane->type != DRM_PLANE_TYPE_PRIMARY)) {
+ 			ret = drm_atomic_plane_get_property(plane, plane_state,
+ 							    prop, &old_val);
+ 			ret = drm_atomic_check_prop_changes(ret, old_val, prop_value, prop);
+ 			break;
+ 		}
+ 
+-		if (async_flip && plane_state->plane->type != DRM_PLANE_TYPE_PRIMARY) {
+-			drm_dbg_atomic(prop->dev,
+-				       "[OBJECT:%d] Only primary planes can be changed during async flip\n",
+-				       obj->id);
+-			ret = -EINVAL;
+-			break;
+-		}
+-
+ 		ret = drm_atomic_plane_set_property(plane,
+ 				plane_state, file_priv,
+ 				prop, prop_value);
 diff --git a/drivers/gpu/drm/drm_format_helper.c b/drivers/gpu/drm/drm_format_helper.c
 index b1be458ed4dd..28c0e76a1e88 100644
 --- a/drivers/gpu/drm/drm_format_helper.c
@@ -11924,82 +12575,6 @@ index b1be458ed4dd..28c0e76a1e88 100644
  		} else if (dst_format == DRM_FORMAT_ARGB8888) {
  			drm_fb_xrgb8888_to_argb8888(dst, dst_pitch, src, fb, clip, state);
  			return 0;
-diff --git a/drivers/gpu/drm/drm_panel_orientation_quirks.c b/drivers/gpu/drm/drm_panel_orientation_quirks.c
-index 3860a8ce1e2d..a9944efc781c 100644
---- a/drivers/gpu/drm/drm_panel_orientation_quirks.c
-+++ b/drivers/gpu/drm/drm_panel_orientation_quirks.c
-@@ -184,6 +184,12 @@ static const struct dmi_system_id orientation_data[] = {
- 		  DMI_EXACT_MATCH(DMI_PRODUCT_NAME, "T103HAF"),
- 		},
- 		.driver_data = (void *)&lcd800x1280_rightside_up,
-+	}, {	/* AYA NEO AYANEO 2 */
-+		.matches = {
-+		  DMI_EXACT_MATCH(DMI_SYS_VENDOR, "AYANEO"),
-+		  DMI_EXACT_MATCH(DMI_PRODUCT_NAME, "AYANEO 2"),
-+		},
-+		.driver_data = (void *)&lcd1200x1920_rightside_up,
- 	}, {	/* AYA NEO 2021 */
- 		.matches = {
- 		  DMI_EXACT_MATCH(DMI_SYS_VENDOR, "AYADEVICE"),
-@@ -196,6 +202,18 @@ static const struct dmi_system_id orientation_data[] = {
- 		  DMI_MATCH(DMI_PRODUCT_NAME, "AIR"),
- 		},
- 		.driver_data = (void *)&lcd1080x1920_leftside_up,
-+	}, {	/* AYA NEO Founder */
-+		.matches = {
-+		  DMI_EXACT_MATCH(DMI_SYS_VENDOR, "AYA NEO"),
-+		  DMI_MATCH(DMI_PRODUCT_NAME, "AYA NEO Founder"),
-+		},
-+		.driver_data = (void *)&lcd800x1280_rightside_up,
-+	}, {	/* AYA NEO GEEK */
-+		.matches = {
-+		  DMI_EXACT_MATCH(DMI_SYS_VENDOR, "AYANEO"),
-+		  DMI_MATCH(DMI_PRODUCT_NAME, "GEEK"),
-+		},
-+		.driver_data = (void *)&lcd800x1280_rightside_up,
- 	}, {	/* AYA NEO NEXT */
- 		.matches = {
- 		  DMI_EXACT_MATCH(DMI_BOARD_VENDOR, "AYANEO"),
-@@ -208,6 +226,18 @@ static const struct dmi_system_id orientation_data[] = {
- 		  DMI_MATCH(DMI_BOARD_NAME, "KUN"),
- 		},
- 		.driver_data = (void *)&lcd1600x2560_rightside_up,
-+	}, {    /* AYN Loki Max */
-+		.matches = {
-+			DMI_EXACT_MATCH(DMI_SYS_VENDOR, "ayn"),
-+			DMI_EXACT_MATCH(DMI_PRODUCT_NAME, "Loki Max"),
-+		},
-+		.driver_data = (void *)&lcd1080x1920_leftside_up,
-+	}, {	/* AYN Loki Zero */
-+		.matches = {
-+			DMI_EXACT_MATCH(DMI_SYS_VENDOR, "ayn"),
-+			DMI_EXACT_MATCH(DMI_PRODUCT_NAME, "Loki Zero"),
-+		},
-+		.driver_data = (void *)&lcd1080x1920_leftside_up,
- 	}, {	/* Chuwi HiBook (CWI514) */
- 		.matches = {
- 			DMI_MATCH(DMI_BOARD_VENDOR, "Hampoo"),
-@@ -434,6 +464,20 @@ static const struct dmi_system_id orientation_data[] = {
- 		  DMI_EXACT_MATCH(DMI_PRODUCT_VERSION, "1"),
- 		},
- 		.driver_data = (void *)&lcd800x1280_rightside_up,
-+	}, {	/* Valve Steam Deck */
-+		.matches = {
-+		  DMI_EXACT_MATCH(DMI_SYS_VENDOR, "Valve"),
-+		  DMI_EXACT_MATCH(DMI_PRODUCT_NAME, "Galileo"),
-+		  DMI_EXACT_MATCH(DMI_PRODUCT_VERSION, "1"),
-+		},
-+		.driver_data = (void *)&lcd800x1280_rightside_up,
-+	}, {	/* Valve Steam Deck */
-+		.matches = {
-+		  DMI_EXACT_MATCH(DMI_SYS_VENDOR, "Valve"),
-+		  DMI_EXACT_MATCH(DMI_PRODUCT_NAME, "Galileo"),
-+		  DMI_EXACT_MATCH(DMI_PRODUCT_VERSION, "1"),
-+		},
-+		.driver_data = (void *)&lcd800x1280_rightside_up,
- 	}, {	/* VIOS LTH17 */
- 		.matches = {
- 		  DMI_EXACT_MATCH(DMI_SYS_VENDOR, "VIOS"),
 diff --git a/drivers/gpu/drm/i915/display/intel_ddi.c b/drivers/gpu/drm/i915/display/intel_ddi.c
 index 6bff169fa8d4..8d80ae00b838 100644
 --- a/drivers/gpu/drm/i915/display/intel_ddi.c
@@ -13875,40 +14450,6 @@ index ee4e2358ab0e..aa8c0e394540 100644
  #if IS_ENABLED(CONFIG_HID_ASUS)
  	{ HID_I2C_DEVICE(USB_VENDOR_ID_ASUSTEK, USB_DEVICE_ID_ASUSTEK_I2C_KEYBOARD) },
  	{ HID_I2C_DEVICE(USB_VENDOR_ID_ASUSTEK, USB_DEVICE_ID_ASUSTEK_I2C_TOUCHPAD) },
-diff --git a/drivers/hwmon/Kconfig b/drivers/hwmon/Kconfig
-index e14ae18a973b..595708f955b6 100644
---- a/drivers/hwmon/Kconfig
-+++ b/drivers/hwmon/Kconfig
-@@ -2059,6 +2059,17 @@ config SENSORS_SCH5636
- 	  This driver can also be built as a module. If so, the module
- 	  will be called sch5636.
- 
-+config SENSORS_STEAMDECK
-+	tristate "Steam Deck EC sensors"
-+	depends on MFD_STEAMDECK
-+	help
-+	  If you say yes here you get support for the hardware
-+	  monitoring features exposed by EC firmware on Steam Deck
-+	  devices
-+
-+	  This driver can also be built as a module. If so, the module
-+	  will be called steamdeck-hwmon.
-+
- config SENSORS_STTS751
- 	tristate "ST Microelectronics STTS751"
- 	depends on I2C
-diff --git a/drivers/hwmon/Makefile b/drivers/hwmon/Makefile
-index e3f25475d1f0..c6eaee13917d 100644
---- a/drivers/hwmon/Makefile
-+++ b/drivers/hwmon/Makefile
-@@ -207,6 +207,7 @@ obj-$(CONFIG_SENSORS_SMSC47B397)+= smsc47b397.o
- obj-$(CONFIG_SENSORS_SMSC47M1)	+= smsc47m1.o
- obj-$(CONFIG_SENSORS_SMSC47M192)+= smsc47m192.o
- obj-$(CONFIG_SENSORS_SPARX5)	+= sparx5-temp.o
-+obj-$(CONFIG_SENSORS_STEAMDECK) += steamdeck-hwmon.o
- obj-$(CONFIG_SENSORS_STTS751)	+= stts751.o
- obj-$(CONFIG_SENSORS_SURFACE_FAN)+= surface_fan.o
- obj-$(CONFIG_SENSORS_SY7636A)	+= sy7636a-hwmon.o
 diff --git a/drivers/hwmon/applesmc.c b/drivers/hwmon/applesmc.c
 index fc6d6a9053ce..698f44794453 100644
 --- a/drivers/hwmon/applesmc.c
@@ -15895,306 +16436,6 @@ index fc6d6a9053ce..698f44794453 100644
  MODULE_DESCRIPTION("Apple SMC");
  MODULE_LICENSE("GPL v2");
  MODULE_DEVICE_TABLE(dmi, applesmc_whitelist);
-diff --git a/drivers/hwmon/steamdeck-hwmon.c b/drivers/hwmon/steamdeck-hwmon.c
-new file mode 100644
-index 000000000000..9d0a5471b181
---- /dev/null
-+++ b/drivers/hwmon/steamdeck-hwmon.c
-@@ -0,0 +1,294 @@
-+// SPDX-License-Identifier: GPL-2.0+
-+/*
-+ * Steam Deck EC sensors driver
-+ *
-+ * Copyright (C) 2021-2022 Valve Corporation
-+ */
-+
-+#include <linux/acpi.h>
-+#include <linux/hwmon.h>
-+#include <linux/platform_device.h>
-+
-+#define STEAMDECK_HWMON_NAME	"steamdeck-hwmon"
-+
-+struct steamdeck_hwmon {
-+	struct acpi_device *adev;
-+};
-+
-+static long
-+steamdeck_hwmon_get(struct steamdeck_hwmon *sd, const char *method)
-+{
-+	unsigned long long val;
-+	if (ACPI_FAILURE(acpi_evaluate_integer(sd->adev->handle,
-+					       (char *)method, NULL, &val)))
-+		return -EIO;
-+
-+	return val;
-+}
-+
-+static int
-+steamdeck_hwmon_read(struct device *dev, enum hwmon_sensor_types type,
-+		     u32 attr, int channel, long *out)
-+{
-+	struct steamdeck_hwmon *sd = dev_get_drvdata(dev);
-+
-+	switch (type) {
-+	case hwmon_curr:
-+		if (attr != hwmon_curr_input)
-+			return -EOPNOTSUPP;
-+
-+		*out = steamdeck_hwmon_get(sd, "PDAM");
-+		if (*out < 0)
-+			return *out;
-+		break;
-+	case hwmon_in:
-+		if (attr != hwmon_in_input)
-+			return -EOPNOTSUPP;
-+
-+		*out = steamdeck_hwmon_get(sd, "PDVL");
-+		if (*out < 0)
-+			return *out;
-+		break;
-+	case hwmon_temp:
-+		if (attr != hwmon_temp_input)
-+			return -EOPNOTSUPP;
-+
-+		*out = steamdeck_hwmon_get(sd, "BATT");
-+		if (*out < 0)
-+			return *out;
-+		/*
-+		 * Assuming BATT returns deg C we need to mutiply it
-+		 * by 1000 to convert to mC
-+		 */
-+		*out *= 1000;
-+		break;
-+	case hwmon_fan:
-+		switch (attr) {
-+		case hwmon_fan_input:
-+			*out = steamdeck_hwmon_get(sd, "FANR");
-+			if (*out < 0)
-+				return *out;
-+			break;
-+		case hwmon_fan_target:
-+			*out = steamdeck_hwmon_get(sd, "FSSR");
-+			if (*out < 0)
-+				return *out;
-+			break;
-+		case hwmon_fan_fault:
-+			*out = steamdeck_hwmon_get(sd, "FANC");
-+			if (*out < 0)
-+				return *out;
-+			/*
-+			 * FANC (Fan check):
-+			 * 0: Abnormal
-+			 * 1: Normal
-+			 */
-+			*out = !*out;
-+			break;
-+		default:
-+			return -EOPNOTSUPP;
-+		}
-+		break;
-+	default:
-+		return -EOPNOTSUPP;
-+	}
-+
-+	return 0;
-+}
-+
-+static int
-+steamdeck_hwmon_read_string(struct device *dev, enum hwmon_sensor_types type,
-+			    u32 attr, int channel, const char **str)
-+{
-+	switch (type) {
-+		/*
-+		 * These two aren't, strictly speaking, measured. EC
-+		 * firmware just reports what PD negotiation resulted
-+		 * in.
-+		 */
-+	case hwmon_curr:
-+		*str = "PD Contract Current";
-+		break;
-+	case hwmon_in:
-+		*str = "PD Contract Voltage";
-+		break;
-+	case hwmon_temp:
-+		*str = "Battery Temp";
-+		break;
-+	case hwmon_fan:
-+		*str = "System Fan";
-+		break;
-+	default:
-+		return -EOPNOTSUPP;
-+	}
-+
-+	return 0;
-+}
-+
-+static int
-+steamdeck_hwmon_write(struct device *dev, enum hwmon_sensor_types type,
-+		      u32 attr, int channel, long val)
-+{
-+	struct steamdeck_hwmon *sd = dev_get_drvdata(dev);
-+
-+	if (type != hwmon_fan ||
-+	    attr != hwmon_fan_target)
-+		return -EOPNOTSUPP;
-+
-+	val = clamp_val(val, 0, 7300);
-+
-+	if (ACPI_FAILURE(acpi_execute_simple_method(sd->adev->handle,
-+						    "FANS", val)))
-+		return -EIO;
-+
-+	return 0;
-+}
-+
-+static umode_t
-+steamdeck_hwmon_is_visible(const void *data, enum hwmon_sensor_types type,
-+			   u32 attr, int channel)
-+{
-+	if (type == hwmon_fan &&
-+	    attr == hwmon_fan_target)
-+		return 0644;
-+
-+	return 0444;
-+}
-+
-+static const struct hwmon_channel_info *steamdeck_hwmon_info[] = {
-+	HWMON_CHANNEL_INFO(in,
-+			   HWMON_I_INPUT | HWMON_I_LABEL),
-+	HWMON_CHANNEL_INFO(curr,
-+			   HWMON_C_INPUT | HWMON_C_LABEL),
-+	HWMON_CHANNEL_INFO(temp,
-+			   HWMON_T_INPUT | HWMON_T_LABEL),
-+	HWMON_CHANNEL_INFO(fan,
-+			   HWMON_F_INPUT | HWMON_F_LABEL |
-+			   HWMON_F_TARGET | HWMON_F_FAULT),
-+	NULL
-+};
-+
-+static const struct hwmon_ops steamdeck_hwmon_ops = {
-+	.is_visible = steamdeck_hwmon_is_visible,
-+	.read = steamdeck_hwmon_read,
-+	.read_string = steamdeck_hwmon_read_string,
-+	.write = steamdeck_hwmon_write,
-+};
-+
-+static const struct hwmon_chip_info steamdeck_hwmon_chip_info = {
-+	.ops = &steamdeck_hwmon_ops,
-+	.info = steamdeck_hwmon_info,
-+};
-+
-+
-+static ssize_t
-+steamdeck_hwmon_simple_store(struct device *dev, const char *buf, size_t count,
-+			     const char *method,
-+			     unsigned long upper_limit)
-+{
-+	struct steamdeck_hwmon *sd = dev_get_drvdata(dev);
-+	unsigned long value;
-+
-+	if (kstrtoul(buf, 10, &value) || value >= upper_limit)
-+		return -EINVAL;
-+
-+	if (ACPI_FAILURE(acpi_execute_simple_method(sd->adev->handle,
-+						    (char *)method, value)))
-+		return -EIO;
-+
-+	return count;
-+}
-+
-+static ssize_t
-+steamdeck_hwmon_simple_show(struct device *dev, char *buf,
-+			    const char *method)
-+{
-+	struct steamdeck_hwmon *sd = dev_get_drvdata(dev);
-+	unsigned long value;
-+
-+	value = steamdeck_hwmon_get(sd, method);
-+	if (value < 0)
-+		return value;
-+
-+	return sprintf(buf, "%ld\n", value);
-+}
-+
-+#define STEAMDECK_HWMON_ATTR_RW(_name, _set_method, _get_method,	\
-+				_upper_limit)				\
-+	static ssize_t _name##_show(struct device *dev,			\
-+				    struct device_attribute *attr,	\
-+				    char *buf)				\
-+	{								\
-+		return steamdeck_hwmon_simple_show(dev, buf,		\
-+						   _get_method);	\
-+	}								\
-+	static ssize_t _name##_store(struct device *dev,		\
-+				     struct device_attribute *attr,	\
-+				     const char *buf, size_t count)	\
-+	{								\
-+		return steamdeck_hwmon_simple_store(dev, buf, count,	\
-+						    _set_method,	\
-+						    _upper_limit);	\
-+	}								\
-+	static DEVICE_ATTR_RW(_name)
-+
-+STEAMDECK_HWMON_ATTR_RW(max_battery_charge_level, "FCBL", "SFBL", 101);
-+STEAMDECK_HWMON_ATTR_RW(max_battery_charge_rate,  "CHGR", "GCHR", 101);
-+
-+static struct attribute *steamdeck_hwmon_attributes[] = {
-+	&dev_attr_max_battery_charge_level.attr,
-+	&dev_attr_max_battery_charge_rate.attr,
-+	NULL
-+};
-+
-+static const struct attribute_group steamdeck_hwmon_group = {
-+	.attrs = steamdeck_hwmon_attributes,
-+};
-+
-+static const struct attribute_group *steamdeck_hwmon_groups[] = {
-+	&steamdeck_hwmon_group,
-+	NULL
-+};
-+
-+static int steamdeck_hwmon_probe(struct platform_device *pdev)
-+{
-+	struct device *dev = &pdev->dev;
-+	struct steamdeck_hwmon *sd;
-+	struct device *hwmon;
-+
-+	sd = devm_kzalloc(dev, sizeof(*sd), GFP_KERNEL);
-+	if (!sd)
-+		return -ENOMEM;
-+
-+	sd->adev = ACPI_COMPANION(dev->parent);
-+	hwmon = devm_hwmon_device_register_with_info(dev,
-+						     "steamdeck_hwmon",
-+						     sd,
-+						     &steamdeck_hwmon_chip_info,
-+						     steamdeck_hwmon_groups);
-+	if (IS_ERR(hwmon)) {
-+		dev_err(dev, "Failed to register HWMON device");
-+		return PTR_ERR(hwmon);
-+	}
-+
-+	return 0;
-+}
-+
-+static const struct platform_device_id steamdeck_hwmon_id_table[] = {
-+	{ .name = STEAMDECK_HWMON_NAME },
-+	{}
-+};
-+MODULE_DEVICE_TABLE(platform, steamdeck_hwmon_id_table);
-+
-+static struct platform_driver steamdeck_hwmon_driver = {
-+	.probe = steamdeck_hwmon_probe,
-+	.driver = {
-+		.name = STEAMDECK_HWMON_NAME,
-+	},
-+	.id_table = steamdeck_hwmon_id_table,
-+};
-+module_platform_driver(steamdeck_hwmon_driver);
-+
-+MODULE_AUTHOR("Andrey Smirnov <andrew.smirnov@gmail.com>");
-+MODULE_DESCRIPTION("Steam Deck EC sensors driver");
-+MODULE_LICENSE("GPL");
 diff --git a/drivers/i2c/busses/Kconfig b/drivers/i2c/busses/Kconfig
 index fe6e8a1bb607..1488a904e3bf 100644
 --- a/drivers/i2c/busses/Kconfig
@@ -17126,116 +17367,6 @@ index ca150618d32f..4e692b272ae9 100644
  	{}
  };
  
-diff --git a/drivers/leds/Kconfig b/drivers/leds/Kconfig
-index 05e6af88b88c..f1967a88ebeb 100644
---- a/drivers/leds/Kconfig
-+++ b/drivers/leds/Kconfig
-@@ -927,6 +927,13 @@ config LEDS_ACER_A500
- 	  This option enables support for the Power Button LED of
- 	  Acer Iconia Tab A500.
- 
-+config LEDS_STEAMDECK
-+	tristate "LED support for Steam Deck"
-+	depends on LEDS_CLASS && MFD_STEAMDECK
-+	help
-+	  This option enabled support for the status LED (next to the
-+	  power button) on Steam Deck
-+
- source "drivers/leds/blink/Kconfig"
- 
- comment "Flash and Torch LED drivers"
-diff --git a/drivers/leds/Makefile b/drivers/leds/Makefile
-index effdfc6f1e95..f2929021afeb 100644
---- a/drivers/leds/Makefile
-+++ b/drivers/leds/Makefile
-@@ -79,6 +79,7 @@ obj-$(CONFIG_LEDS_POWERNV)		+= leds-powernv.o
- obj-$(CONFIG_LEDS_PWM)			+= leds-pwm.o
- obj-$(CONFIG_LEDS_REGULATOR)		+= leds-regulator.o
- obj-$(CONFIG_LEDS_SC27XX_BLTC)		+= leds-sc27xx-bltc.o
-+obj-$(CONFIG_LEDS_STEAMDECK)		+= leds-steamdeck.o
- obj-$(CONFIG_LEDS_SUN50I_A100)		+= leds-sun50i-a100.o
- obj-$(CONFIG_LEDS_SUNFIRE)		+= leds-sunfire.o
- obj-$(CONFIG_LEDS_SYSCON)		+= leds-syscon.o
-diff --git a/drivers/leds/leds-steamdeck.c b/drivers/leds/leds-steamdeck.c
-new file mode 100644
-index 000000000000..56d31d2dd099
---- /dev/null
-+++ b/drivers/leds/leds-steamdeck.c
-@@ -0,0 +1,74 @@
-+// SPDX-License-Identifier: GPL-2.0+
-+
-+/*
-+ * Steam Deck EC MFD LED cell driver
-+ *
-+ * Copyright (C) 2021-2022 Valve Corporation
-+ *
-+ */
-+
-+#include <linux/acpi.h>
-+#include <linux/leds.h>
-+#include <linux/platform_device.h>
-+
-+struct steamdeck_led {
-+	struct acpi_device *adev;
-+	struct led_classdev cdev;
-+};
-+
-+static int steamdeck_leds_brightness_set(struct led_classdev *cdev,
-+					 enum led_brightness value)
-+{
-+	struct steamdeck_led *sd = container_of(cdev, struct steamdeck_led,
-+						cdev);
-+
-+	if (ACPI_FAILURE(acpi_execute_simple_method(sd->adev->handle,
-+						    "CHBV", value)))
-+		return -EIO;
-+
-+	return 0;
-+}
-+
-+static int steamdeck_leds_probe(struct platform_device *pdev)
-+{
-+	struct device *dev = &pdev->dev;
-+	struct steamdeck_led *sd;
-+	int ret;
-+
-+	sd = devm_kzalloc(dev, sizeof(*sd), GFP_KERNEL);
-+	if (!sd)
-+		return -ENOMEM;
-+
-+	sd->adev = ACPI_COMPANION(dev->parent);
-+
-+	sd->cdev.name = "status:white";
-+	sd->cdev.brightness_set_blocking = steamdeck_leds_brightness_set;
-+	sd->cdev.max_brightness = 100;
-+
-+	ret = devm_led_classdev_register(dev, &sd->cdev);
-+	if (ret) {
-+		dev_err(dev, "Failed to register LEDs device: %d\n", ret);
-+		return ret;
-+	}
-+
-+	return 0;
-+}
-+
-+static const struct platform_device_id steamdeck_leds_id_table[] = {
-+	{ .name = "steamdeck-leds" },
-+	{}
-+};
-+MODULE_DEVICE_TABLE(platform, steamdeck_leds_id_table);
-+
-+static struct platform_driver steamdeck_leds_driver = {
-+	.probe = steamdeck_leds_probe,
-+	.driver = {
-+		.name = "steamdeck-leds",
-+	},
-+	.id_table = steamdeck_leds_id_table,
-+};
-+module_platform_driver(steamdeck_leds_driver);
-+
-+MODULE_AUTHOR("Andrey Smirnov <andrew.smirnov@gmail.com>");
-+MODULE_DESCRIPTION("Steam Deck LEDs driver");
-+MODULE_LICENSE("GPL");
 diff --git a/drivers/md/dm-crypt.c b/drivers/md/dm-crypt.c
 index 1b7a97cc3779..37e9e43908ab 100644
 --- a/drivers/md/dm-crypt.c
@@ -21025,190 +21156,6 @@ index 000000000000..d855a3796554
 +	},
 +#endif /* V4L2_PIX_FMT_HEVC */
 +};
-diff --git a/drivers/mfd/Kconfig b/drivers/mfd/Kconfig
-index 266b4f54af60..ed732715aef5 100644
---- a/drivers/mfd/Kconfig
-+++ b/drivers/mfd/Kconfig
-@@ -2334,5 +2334,16 @@ config MFD_RSMU_SPI
- 	  Additional drivers must be enabled in order to use the functionality
- 	  of the device.
- 
-+config MFD_STEAMDECK
-+	tristate "Valve Steam Deck"
-+	select MFD_CORE
-+	depends on ACPI
-+	depends on X86_64 || COMPILE_TEST
-+	help
-+	  This driver registers various MFD cells that expose aspects
-+	  of Steam Deck specific ACPI functionality.
-+
-+	  Say N here, unless you are running on Steam Deck hardware.
-+
- endmenu
- endif
-diff --git a/drivers/mfd/Makefile b/drivers/mfd/Makefile
-index c66f07edcd0e..2bbdf4127232 100644
---- a/drivers/mfd/Makefile
-+++ b/drivers/mfd/Makefile
-@@ -284,3 +284,5 @@ rsmu-i2c-objs			:= rsmu_core.o rsmu_i2c.o
- rsmu-spi-objs			:= rsmu_core.o rsmu_spi.o
- obj-$(CONFIG_MFD_RSMU_I2C)	+= rsmu-i2c.o
- obj-$(CONFIG_MFD_RSMU_SPI)	+= rsmu-spi.o
-+
-+obj-$(CONFIG_MFD_STEAMDECK)	+= steamdeck.o
-diff --git a/drivers/mfd/steamdeck.c b/drivers/mfd/steamdeck.c
-new file mode 100644
-index 000000000000..a60fa7db9141
---- /dev/null
-+++ b/drivers/mfd/steamdeck.c
-@@ -0,0 +1,147 @@
-+// SPDX-License-Identifier: GPL-2.0+
-+
-+/*
-+ * Steam Deck EC MFD core driver
-+ *
-+ * Copyright (C) 2021-2022 Valve Corporation
-+ *
-+ */
-+
-+#include <linux/acpi.h>
-+#include <linux/platform_device.h>
-+#include <linux/mfd/core.h>
-+
-+#define STEAMDECK_STA_OK			\
-+	(ACPI_STA_DEVICE_ENABLED |		\
-+	 ACPI_STA_DEVICE_PRESENT |		\
-+	 ACPI_STA_DEVICE_FUNCTIONING)
-+
-+struct steamdeck {
-+	struct acpi_device *adev;
-+	struct device *dev;
-+};
-+
-+#define STEAMDECK_ATTR_RO(_name, _method)				\
-+	static ssize_t _name##_show(struct device *dev,			\
-+				    struct device_attribute *attr,	\
-+				    char *buf)				\
-+	{								\
-+		struct steamdeck *sd = dev_get_drvdata(dev);		\
-+		unsigned long long val;					\
-+									\
-+		if (ACPI_FAILURE(acpi_evaluate_integer(			\
-+					 sd->adev->handle,		\
-+					 _method, NULL, &val)))		\
-+			return -EIO;					\
-+									\
-+		return sysfs_emit(buf, "%llu\n", val);			\
-+	}								\
-+	static DEVICE_ATTR_RO(_name)
-+
-+STEAMDECK_ATTR_RO(firmware_version, "PDFW");
-+STEAMDECK_ATTR_RO(board_id, "BOID");
-+
-+static ssize_t controller_board_power_store(struct device *dev,
-+					    struct device_attribute *attr,
-+					    const char *buf, size_t count)
-+{
-+	struct steamdeck *sd = dev_get_drvdata(dev);
-+	bool enabled;
-+	ssize_t ret = kstrtobool(buf, &enabled);
-+
-+	if (ret)
-+		return ret;
-+
-+	if (ACPI_FAILURE(acpi_execute_simple_method(sd->adev->handle,
-+						    "SCBP", enabled)))
-+		return -EIO;
-+
-+	return count;
-+}
-+static DEVICE_ATTR_WO(controller_board_power);
-+
-+static struct attribute *steamdeck_attrs[] = {
-+	&dev_attr_firmware_version.attr,
-+	&dev_attr_board_id.attr,
-+	&dev_attr_controller_board_power.attr,
-+	NULL
-+};
-+
-+ATTRIBUTE_GROUPS(steamdeck);
-+
-+static const struct mfd_cell steamdeck_cells[] = {
-+	{ .name = "steamdeck-hwmon"  },
-+	{ .name = "steamdeck-leds"   },
-+	{ .name = "steamdeck-extcon" },
-+};
-+
-+static void steamdeck_remove_sysfs_groups(void *data)
-+{
-+	struct steamdeck *sd = data;
-+
-+	sysfs_remove_groups(&sd->dev->kobj, steamdeck_groups);
-+}
-+
-+static int steamdeck_probe(struct platform_device *pdev)
-+{
-+	struct device *dev = &pdev->dev;
-+	unsigned long long sta;
-+	struct steamdeck *sd;
-+	acpi_status status;
-+	int ret;
-+
-+	sd = devm_kzalloc(dev, sizeof(*sd), GFP_KERNEL);
-+	if (!sd)
-+		return -ENOMEM;
-+	sd->adev = ACPI_COMPANION(dev);
-+	sd->dev = dev;
-+	platform_set_drvdata(pdev, sd);
-+
-+	status = acpi_evaluate_integer(sd->adev->handle, "_STA",
-+				       NULL, &sta);
-+	if (ACPI_FAILURE(status)) {
-+		dev_err(dev, "Status check failed (0x%x)\n", status);
-+		return -EINVAL;
-+	}
-+
-+	if ((sta & STEAMDECK_STA_OK) != STEAMDECK_STA_OK) {
-+		dev_err(dev, "Device is not ready\n");
-+		return -EINVAL;
-+	}
-+
-+	ret = sysfs_create_groups(&dev->kobj, steamdeck_groups);
-+	if (ret) {
-+		dev_err(dev, "Failed to create sysfs group\n");
-+		return ret;
-+	}
-+
-+	ret = devm_add_action_or_reset(dev, steamdeck_remove_sysfs_groups,
-+				       sd);
-+	if (ret) {
-+		dev_err(dev, "Failed to register devres action\n");
-+		return ret;
-+	}
-+
-+	return devm_mfd_add_devices(dev, PLATFORM_DEVID_NONE,
-+				    steamdeck_cells, ARRAY_SIZE(steamdeck_cells),
-+				    NULL, 0, NULL);
-+}
-+
-+static const struct acpi_device_id steamdeck_device_ids[] = {
-+	{ "VLV0100", 0 },
-+	{ "", 0 },
-+};
-+MODULE_DEVICE_TABLE(acpi, steamdeck_device_ids);
-+
-+static struct platform_driver steamdeck_driver = {
-+	.probe = steamdeck_probe,
-+	.driver = {
-+		.name = "steamdeck",
-+		.acpi_match_table = steamdeck_device_ids,
-+	},
-+};
-+module_platform_driver(steamdeck_driver);
-+
-+MODULE_AUTHOR("Andrey Smirnov <andrew.smirnov@gmail.com>");
-+MODULE_DESCRIPTION("Steam Deck EC MFD core driver");
-+MODULE_LICENSE("GPL");
 diff --git a/drivers/misc/Kconfig b/drivers/misc/Kconfig
 index faf983680040..2907b5c23368 100644
 --- a/drivers/misc/Kconfig
@@ -22814,39 +22761,10 @@ index 000000000000..e105e6f5cc91
 +MODULE_AUTHOR("Daniel Drake <drake@endlessm.com>");
 +MODULE_LICENSE("GPL v2");
 diff --git a/drivers/pci/quirks.c b/drivers/pci/quirks.c
-index 568410e64ce6..aaa5ddad300b 100644
+index 568410e64ce6..192d0557fb05 100644
 --- a/drivers/pci/quirks.c
 +++ b/drivers/pci/quirks.c
-@@ -697,7 +697,7 @@ DECLARE_PCI_FIXUP_FINAL(PCI_VENDOR_ID_ATI,	PCI_DEVICE_ID_ATI_RS100,   quirk_ati_
- /*
-  * In the AMD NL platform, this device ([1022:7912]) has a class code of
-  * PCI_CLASS_SERIAL_USB_XHCI (0x0c0330), which means the xhci driver will
-- * claim it. The same applies on the VanGogh platform device ([1022:163a]).
-+ * claim it.
-  *
-  * But the dwc3 driver is a more specific driver for this device, and we'd
-  * prefer to use it instead of xhci. To prevent xhci from claiming the
-@@ -705,7 +705,7 @@ DECLARE_PCI_FIXUP_FINAL(PCI_VENDOR_ID_ATI,	PCI_DEVICE_ID_ATI_RS100,   quirk_ati_
-  * defines as "USB device (not host controller)". The dwc3 driver can then
-  * claim it based on its Vendor and Device ID.
-  */
--static void quirk_amd_dwc_class(struct pci_dev *pdev)
-+static void quirk_amd_nl_class(struct pci_dev *pdev)
- {
- 	u32 class = pdev->class;
- 
-@@ -718,9 +718,7 @@ static void quirk_amd_dwc_class(struct pci_dev *pdev)
- 	}
- }
- DECLARE_PCI_FIXUP_HEADER(PCI_VENDOR_ID_AMD, PCI_DEVICE_ID_AMD_NL_USB,
--		quirk_amd_dwc_class);
--DECLARE_PCI_FIXUP_HEADER(PCI_VENDOR_ID_AMD, PCI_DEVICE_ID_AMD_VANGOGH_USB,
--		quirk_amd_dwc_class);
-+		quirk_amd_nl_class);
- 
- /*
-  * Synopsys USB 3.x host HAPS platform has a class code of
-@@ -3732,6 +3730,106 @@ static void quirk_no_bus_reset(struct pci_dev *dev)
+@@ -3732,6 +3732,106 @@ static void quirk_no_bus_reset(struct pci_dev *dev)
  	dev->dev_flags |= PCI_DEV_FLAGS_NO_BUS_RESET;
  }
  
@@ -22953,7 +22871,7 @@ index 568410e64ce6..aaa5ddad300b 100644
  /*
   * Some NVIDIA GPU devices do not work with bus reset, SBR needs to be
   * prevented for those affected devices.
-@@ -5143,6 +5241,7 @@ static const struct pci_dev_acs_enabled {
+@@ -5143,6 +5243,7 @@ static const struct pci_dev_acs_enabled {
  	{ PCI_VENDOR_ID_ZHAOXIN, PCI_ANY_ID, pci_quirk_zhaoxin_pcie_ports_acs },
  	/* Wangxun nics */
  	{ PCI_VENDOR_ID_WANGXUN, PCI_ANY_ID, pci_quirk_wangxun_nic_acs },
@@ -51706,260 +51624,6 @@ index 2b812210b412..4c3a8cc6ef15 100755
  						$bad_specifier = $specifier;
  						last;
  					}
-diff --git a/sound/soc/amd/acp/acp-mach-common.c b/sound/soc/amd/acp/acp-mach-common.c
-index a36300a4ed8a..6f7604a70e1f 100644
---- a/sound/soc/amd/acp/acp-mach-common.c
-+++ b/sound/soc/amd/acp/acp-mach-common.c
-@@ -26,6 +26,7 @@
- #include "../../codecs/rt5682s.h"
- #include "../../codecs/nau8825.h"
- #include "../../codecs/nau8821.h"
-+#include "../../codecs/cs35l41.h"
- #include "acp-mach.h"
- 
- #define PCO_PLAT_CLK 48000000
-@@ -1282,6 +1283,78 @@ SND_SOC_DAILINK_DEF(nau8821,
- 		    DAILINK_COMP_ARRAY(COMP_CODEC("i2c-NVTN2020:00",
- 						  NAU8821_CODEC_DAI)));
- 
-+static int acp_cs35l41_init(struct snd_soc_pcm_runtime *rtd)
-+{
-+	return 0;
-+}
-+
-+static int acp_cs35l41_startup(struct snd_pcm_substream *substream)
-+{
-+	struct snd_pcm_runtime *runtime = substream->runtime;
-+
-+	runtime->hw.channels_max = DUAL_CHANNEL;
-+	snd_pcm_hw_constraint_list(runtime, 0, SNDRV_PCM_HW_PARAM_CHANNELS,
-+				   &constraints_channels);
-+	snd_pcm_hw_constraint_list(runtime, 0, SNDRV_PCM_HW_PARAM_RATE,
-+				   &constraints_rates);
-+	return 0;
-+}
-+
-+static int acp_cs35l41_hw_params(struct snd_pcm_substream *substream,
-+				   struct snd_pcm_hw_params *params)
-+{
-+	struct snd_soc_pcm_runtime *rtd = snd_soc_substream_to_rtd(substream);
-+	struct snd_soc_card *card = rtd->card;
-+	struct snd_soc_dai *codec_dai;
-+	int ret, i;
-+	unsigned int num_codecs = rtd->dai_link->num_codecs;
-+	unsigned int bclk_val;
-+
-+	ret = 0;
-+	for (i = 0; i < num_codecs; i++) {
-+		codec_dai = snd_soc_rtd_to_codec(rtd, i);
-+		if (strcmp(codec_dai->name, "cs35l41-pcm") == 0) {
-+			switch (params_rate(params)) {
-+			case 48000:
-+				bclk_val = 1536000;
-+				break;
-+			default:
-+				dev_err(card->dev, "Invalid Samplerate:0x%x\n",
-+					params_rate(params));
-+				return -EINVAL;
-+			}
-+			ret = snd_soc_component_set_sysclk(codec_dai->component,
-+							   0, 0, bclk_val, SND_SOC_CLOCK_IN);
-+			if (ret < 0) {
-+				dev_err(card->dev, "failed to set sysclk for CS35l41 dai\n");
-+				return ret;
-+			}
-+		}
-+	}
-+
-+	return ret;
-+}
-+
-+static struct snd_soc_codec_conf cs35l41_conf[] = {
-+	{
-+		.dlc = COMP_CODEC_CONF("spi-VLV1776:00"),
-+		.name_prefix = "Left",
-+	},
-+	{
-+		.dlc = COMP_CODEC_CONF("spi-VLV1776:01"),
-+		.name_prefix = "Right",
-+	},
-+};
-+
-+static const struct snd_soc_ops acp_cs35l41_ops = {
-+	.startup = acp_cs35l41_startup,
-+	.hw_params = acp_cs35l41_hw_params,
-+};
-+
-+SND_SOC_DAILINK_DEF(cs35l41,
-+		    DAILINK_COMP_ARRAY(COMP_CODEC("spi-VLV1776:00", "cs35l41-pcm"),
-+				       COMP_CODEC("spi-VLV1776:01", "cs35l41-pcm")));
-+
- /* Declare DMIC codec components */
- SND_SOC_DAILINK_DEF(dmic_codec,
- 		DAILINK_COMP_ARRAY(COMP_CODEC("dmic-codec", "dmic-hifi")));
-@@ -1481,6 +1554,7 @@ int acp_sofdsp_dai_links_create(struct snd_soc_card *card)
- 		links[i].platforms = sof_component;
- 		links[i].num_platforms = ARRAY_SIZE(sof_component);
- 		links[i].dpcm_playback = 1;
-+		links[i].dpcm_capture = 1;
- 		links[i].nonatomic = true;
- 		links[i].no_pcm = 1;
- 		if (!drv_data->amp_codec_id) {
-@@ -1513,6 +1587,7 @@ int acp_sofdsp_dai_links_create(struct snd_soc_card *card)
- 		links[i].platforms = sof_component;
- 		links[i].num_platforms = ARRAY_SIZE(sof_component);
- 		links[i].dpcm_playback = 1;
-+		links[i].dpcm_capture = 1;
- 		links[i].nonatomic = true;
- 		links[i].no_pcm = 1;
- 		if (!drv_data->amp_codec_id) {
-@@ -1597,6 +1672,8 @@ int acp_legacy_dai_links_create(struct snd_soc_card *card)
- 
- 	if (drv_data->hs_cpu_id)
- 		num_links++;
-+	if (drv_data->bt_cpu_id)
-+		num_links++;
- 	if (drv_data->amp_cpu_id)
- 		num_links++;
- 	if (drv_data->dmic_cpu_id)
-@@ -1744,6 +1821,33 @@ int acp_legacy_dai_links_create(struct snd_soc_card *card)
- 			card->codec_conf = rt1019_conf;
- 			card->num_configs = ARRAY_SIZE(rt1019_conf);
- 		}
-+		if (drv_data->amp_codec_id == CS35L41) {
-+			links[i].codecs = cs35l41;
-+			links[i].num_codecs = ARRAY_SIZE(cs35l41);
-+			links[i].init = acp_cs35l41_init;
-+			card->codec_conf = cs35l41_conf;
-+			card->num_configs = ARRAY_SIZE(cs35l41_conf);
-+			links[i].ops = &acp_cs35l41_ops;
-+		}
-+		i++;
-+	}
-+
-+	if (drv_data->bt_cpu_id == I2S_BT) {
-+		links[i].name = "acp-bt-codec";
-+		links[i].id = BT_BE_ID;
-+		links[i].cpus = sof_bt;
-+		links[i].num_cpus = ARRAY_SIZE(sof_bt);
-+		links[i].platforms = sof_component;
-+		links[i].num_platforms = ARRAY_SIZE(sof_component);
-+		links[i].dpcm_playback = 1;
-+		links[i].dpcm_capture = 1;
-+		links[i].nonatomic = true;
-+		links[i].no_pcm = 1;
-+		if (!drv_data->bt_codec_id) {
-+			/* Use dummy codec if codec id not specified */
-+			links[i].codecs = &snd_soc_dummy_dlc;
-+			links[i].num_codecs = 1;
-+		}
- 		i++;
- 	}
- 
-diff --git a/sound/soc/amd/acp/acp-mach.h b/sound/soc/amd/acp/acp-mach.h
-index a48546d8d407..1d38025307b5 100644
---- a/sound/soc/amd/acp/acp-mach.h
-+++ b/sound/soc/amd/acp/acp-mach.h
-@@ -27,8 +27,8 @@
- enum be_id {
- 	HEADSET_BE_ID = 0,
- 	AMP_BE_ID,
--	DMIC_BE_ID,
- 	BT_BE_ID,
-+	DMIC_BE_ID,
- };
- 
- enum cpu_endpoints {
-@@ -46,6 +46,7 @@ enum codec_endpoints {
- 	MAX98360A,
- 	RT5682S,
- 	NAU8825,
-+	CS35L41,
- 	NAU8821,
- 	MAX98388,
- 	ES83XX,
-diff --git a/sound/soc/codecs/max98388.c b/sound/soc/codecs/max98388.c
-index b847d7c59ec0..bb03fb0c62b4 100644
---- a/sound/soc/codecs/max98388.c
-+++ b/sound/soc/codecs/max98388.c
-@@ -390,27 +390,43 @@ static void max98388_reset(struct max98388_priv *max98388, struct device *dev)
- {
- 	int ret, reg, count;
- 
-+
- 	/* Software Reset */
- 	ret = regmap_update_bits(max98388->regmap,
- 				 MAX98388_R2000_SW_RESET,
- 				 MAX98388_SOFT_RESET,
- 				 MAX98388_SOFT_RESET);
--	if (ret)
-+
-+	if (ret) {
- 		dev_err(dev, "Reset command failed. (ret:%d)\n", ret);
-+		goto exit;
-+	}
-+
- 
- 	count = 0;
- 	while (count < 3) {
- 		usleep_range(10000, 11000);
-+
- 		/* Software Reset Verification */
- 		ret = regmap_read(max98388->regmap,
- 				  MAX98388_R22FF_REV_ID, &reg);
-+
- 		if (!ret) {
- 			dev_info(dev, "Reset completed (retry:%d)\n", count);
--			return;
-+			goto exit;
- 		}
- 		count++;
- 	}
-+
- 	dev_err(dev, "Reset failed. (ret:%d)\n", ret);
-+
-+
-+exit:
-+	regcache_cache_only(max98388->regmap, true);
-+	ret = regmap_update_bits(max98388->regmap,
-+				 MAX98388_R2000_SW_RESET,
-+				 MAX98388_SOFT_RESET, 0);
-+	regcache_cache_only(max98388->regmap, false);
- }
- 
- static int max98388_probe(struct snd_soc_component *component)
-@@ -419,6 +435,7 @@ static int max98388_probe(struct snd_soc_component *component)
- 
- 	/* Software Reset */
- 	max98388_reset(max98388, component->dev);
-+	usleep_range(400, 1000);
- 
- 	/* General channel source configuration */
- 	regmap_write(max98388->regmap,
-@@ -811,6 +828,7 @@ static bool max98388_readable_register(struct device *dev,
- 	case MAX98388_R210E_AUTO_RESTART:
- 	case MAX98388_R210F_GLOBAL_EN:
- 	case MAX98388_R22FF_REV_ID:
-+	case MAX98388_R2000_SW_RESET:
- 		return true;
- 	default:
- 		return false;
-@@ -823,6 +841,7 @@ static bool max98388_volatile_reg(struct device *dev, unsigned int reg)
- 	case MAX98388_R2001_INT_RAW1 ... MAX98388_R2005_INT_STATE2:
- 	case MAX98388_R210F_GLOBAL_EN:
- 	case MAX98388_R22FF_REV_ID:
-+	case MAX98388_R2000_SW_RESET:
- 		return true;
- 	default:
- 		return false;
-@@ -866,6 +885,7 @@ static int max98388_resume(struct device *dev)
- 
- 	regcache_cache_only(max98388->regmap, false);
- 	max98388_reset(max98388, dev);
-+	usleep_range(400, 1000);
- 	regcache_sync(max98388->regmap);
- 
- 	return 0;
 diff --git a/tools/testing/selftests/Makefile b/tools/testing/selftests/Makefile
 index 9039f3709aff..d5aeaa8fe3ca 100644
 --- a/tools/testing/selftests/Makefile
