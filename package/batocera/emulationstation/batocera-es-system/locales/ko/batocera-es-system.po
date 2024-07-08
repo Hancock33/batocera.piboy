@@ -6352,18 +6352,6 @@ msgctxt "game_options"
 msgid "Skynet"
 msgstr "스카이넷"
 
-#. TRANSLATION: libretro/mrboom
-#, fuzzy
-msgctxt "game_options"
-msgid "Enable or disable monsters in battle."
-msgstr "전투에서 몬스터를 활성화 또는 비활성화합니다."
-
-#. TRANSLATION: libretro/mrboom
-#, fuzzy
-msgctxt "game_options"
-msgid "MONSTERS"
-msgstr "괴물"
-
 #. TRANSLATION: libretro/mupen64plus-next
 #, fuzzy
 msgctxt "game_options"
@@ -18500,6 +18488,16 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GZDOOM 조이스틱 구성 사용"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Enable or disable monsters in battle."
+#~ msgstr "전투에서 몬스터를 활성화 또는 비활성화합니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "MONSTERS"
+#~ msgstr "괴물"
 
 #, fuzzy
 #~ msgctxt "game_options"
