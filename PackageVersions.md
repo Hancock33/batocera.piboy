@@ -43,7 +43,7 @@ Controllers|[qtsixa-shanwan](http://github.com/batocera-linux/qtsixa)|f011937030
 Controllers|[qtsixa](http://github.com/batocera-linux/qtsixa)|eec727030f341cf543a56bd9aeb821ea901bca64|May 01, 2016
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|b1759cf84028aab89caa1c395e198c340b8dfd89|Jun 24, 2024
 Controllers|[sinden-guns-libs](http://github.com/batocera-linux/batocera-sinden-bundles)|a18005ab0ce07d0d18f8575ba21162c58fbd2520|Sept 18, 2023
-Controllers|[sinden-guns](https://www.sindenlightgun.com/software)|1.09|N/A
+Controllers|[sinden-guns](https://www.sindenlightgun.com/software)|1.09|Mar 20, 2024
 Controllers|[uinput-joystick](http://github.com/shantigilbert/uinput_joystick)|bea7d56f4947b547db2b827640bc9966fe770f84|Feb 11, 2022
 Controllers|[umtool](http://github.com/katie-snow/Ultimarc-linux)|20b8c56a3e6f94034b8529eddd777306f5b6152b|Jun 13, 2022
 Controllers|[xarcade2jstick](http://github.com/petrockblog/xarcade2jstick)|7b579e9e9554e6d997978d069ddeb566ff381007|Apr 10, 2023
@@ -55,7 +55,7 @@ Controllers|[xpi_gamecon_rpi](http://github.com/hancock33/piboycontrols)|f30cea1
 Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-controller-overlays)|a77301e60ae6fef28d4ffd149b9618cbc697a4a2|Jan 20, 2024
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|e6241340d292dee20406a0567262a78ff34d45f7|Jun 02, 2021
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
-Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.6|N/A
+Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.6|Apr 12, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|96d3c04177b10d471102c467d427981fcb332217|Jul 08, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|96d3c04177b10d471102c467d427981fcb332217|Jul 08, 2024
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|8968deb8fbfd5c96819fa22aba7bbd8890ed8113|Apr 25, 2024
@@ -320,22 +320,22 @@ Firmwares|[firmware-rk3588](http://github.com/stvhay/rk3588-firmware)|dc92513ebf
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|e430a41e7323a1e28fb42b53cf79e5ba9b5ee975|Jun 13, 2024
 Firmwares|[rpi-userland-batocera](http://github.com/raspberrypi/userland)|96a7334ae9d5fc9db7ac92e59852377df63f1848|Oct 18, 2023
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2024.03|Apr 02, 2024
-Gpu|[batocera-nvidia-driver](http://download.nvidia.com/XFree86/Linux-x86)|555.58|N/A
-Gpu|[batocera-nvidia-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|470.239.06|N/A
+Gpu|[batocera-nvidia-driver](http://download.nvidia.com/XFree86/Linux-x86)|555.58|Jun 27, 2024
+Gpu|[batocera-nvidia-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|470.239.06|Feb 22, 2024
 Gpu|[batocera-nvidia-lists](http://github.com/batocera-linux/nvidia-lists)|45217510141288a04406522df00f390850da400f|Jul 07, 2024
-Gpu|[batocera-nvidia340-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|340.108|N/A
-Gpu|[batocera-nvidia390-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|390.157|N/A
+Gpu|[batocera-nvidia340-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|340.108|Dec 23, 2019
+Gpu|[batocera-nvidia390-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|390.157|Nov 22, 2022
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|52e0c496f513cac4bfb23b8897e8028396fcd61f|Jun 01, 2024
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.3.283.0|May 02, 2024
 Gpu|[img-gpu-powervr](https://github.com/starfive-tech/soft_3rdpart/raw/JH7110_VisionFive2_devel/IMG_GPU/out)|c43d4fab94b0ef3b492a6382e2282fa7a2695b9b|Mar 06, 2024
-Gpu|[img-mesa3d](https://archive.mesa3d.org)|22.1.3|N/A
-Gpu|[mali-g31-gbm](https://github.com/batocera-linux/rockchip-packages/releases)|ad4c28932c3d07c75fc41dd4a3333f9013a25e7f|N/A
-Gpu|[mali-G31](http://github.com/Multi-Retropie/vim1s-g31)|2e33bb43d343336fbcf1f4d4a241af6c04f6af3d|N/A
-Gpu|[mali-G52](http://github.com/rtissera/a311d2-mali-g52)|6ab9d7ce7a991f997460697013fc54029fcac681|N/A
-Gpu|[mali-G610](http://github.com/JeffyCN/mirrors)|309268f7a34ca0bba0ab94a0b09feb0191c77fb8|N/A
+Gpu|[img-mesa3d](https://archive.mesa3d.org)|22.1.3|Jun 29, 2022
+Gpu|[mali-g31-gbm](https://github.com/batocera-linux/rockchip-packages/releases)|ad4c28932c3d07c75fc41dd4a3333f9013a25e7f|Jun 11, 2021
+Gpu|[mali-G31](http://github.com/Multi-Retropie/vim1s-g31)|2e33bb43d343336fbcf1f4d4a241af6c04f6af3d|Aug 06, 2023
+Gpu|[mali-G52](http://github.com/rtissera/a311d2-mali-g52)|6ab9d7ce7a991f997460697013fc54029fcac681|Aug 13, 2023
+Gpu|[mali-G610](http://github.com/JeffyCN/mirrors)|309268f7a34ca0bba0ab94a0b09feb0191c77fb8|Nov 21, 2022
 Gpu|[mali-mp400-gbm](http://github.com/caesar-github/libmali)|b35e1b288bdac91a7d401edd04c71ec9fa573040|Feb 24, 2022
 Gpu|[mali-mp400-wayland](http://github.com/caesar-github/libmali)|b35e1b288bdac91a7d401edd04c71ec9fa573040|Feb 24, 2022
-Gpu|[mesa-panfork](https://gitlab.com/panfork/mesa.git)|120202c675749c5ef81ae4c8cdc30019b4de08f4|N/A
+Gpu|[mesa-panfork](https://gitlab.com/Peter756729890/panfork-mesa.git)|120202c675749c5ef81ae4c8cdc30019b4de08f4|Dec 10, 2022
 Gpu|[nv-codec-headers](https://github.com/FFmpeg/nv-codec-headers)|n12.2.72.0|Mar 31, 2024
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.5|Apr 23, 2024
 Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|d7a0a485ed6c201f882c20b3a8881e801f131385|Dec 01, 2023
@@ -380,21 +380,21 @@ Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|bea33f251758
 Libraries|[projectm](http://github.com/projectM-visualizer/projectm)|v4.1.1|Mar 23, 2024
 Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/1b/7f/45b488a117767efcc1554f9654a82dd2399582a029a8cd54c94cc3757306)|8.45.0|Jun 21, 2024
 Libraries|[python-adafruit-circuitpython-busdevice](https://files.pythonhosted.org/packages/a8/04/cf8d2ebfe0d171b7c8fe3425f1e2e80ed59738855d419e5486f5d2fa9145)|5.2.9|Apr 22, 2024
-Libraries|[python-adafruit-circuitpython-connectionmanager](https://files.pythonhosted.org/packages/21/8c/a7d5e38ae4b41c6a7c3aa9b3c9c8f742faed570acdcb48b634e2e1dde573)|3.1.1|N/A
-Libraries|[python-adafruit-circuitpython-neopixel-spi](https://files.pythonhosted.org/packages/4e/8a/8551808a687cd181737a52ea1629cd783e7a30c83ffa5129fd5d9ef96807)|1.0.9|N/A
-Libraries|[python-adafruit-circuitpython-pixelbuf](https://files.pythonhosted.org/packages/f4/70/4145f3b6ea67e0735acbcee58f1f49979249b3e44136e563896ad83d1254)|2.0.4|N/A
-Libraries|[python-adafruit-circuitpython-requests](https://files.pythonhosted.org/packages/02/4d/54ea4ef2bd4455f1d6e8d062691e55164a998c217b0ed9d3678447a83f6c)|4.1.1|N/A
+Libraries|[python-adafruit-circuitpython-connectionmanager](https://files.pythonhosted.org/packages/21/8c/a7d5e38ae4b41c6a7c3aa9b3c9c8f742faed570acdcb48b634e2e1dde573)|3.1.1|Jun 24, 2024
+Libraries|[python-adafruit-circuitpython-neopixel-spi](https://files.pythonhosted.org/packages/4e/8a/8551808a687cd181737a52ea1629cd783e7a30c83ffa5129fd5d9ef96807)|1.0.9|Dec 09, 2023
+Libraries|[python-adafruit-circuitpython-pixelbuf](https://files.pythonhosted.org/packages/f4/70/4145f3b6ea67e0735acbcee58f1f49979249b3e44136e563896ad83d1254)|2.0.4|Dec 09, 2023
+Libraries|[python-adafruit-circuitpython-requests](https://files.pythonhosted.org/packages/6e/b0/afc5600f34105002f76ffa9afa5668ca3a4bce51ee6124cd3bcd1fd27128)|4.1.4|Jul 08, 2024
 Libraries|[python-adafruit-circuitpython-typing](https://files.pythonhosted.org/packages/35/0b/3bdb065264f061e5ab8bbf8b0746b349ff3adbf219dc69c39f7d8e2427c3)|1.10.3|Mar 11, 2024
 Libraries|[python-adafruit-circuitpython-ws2801](https://files.pythonhosted.org/packages/9c/fb/5da19b32912ed665a6778ed9ad9f8667846a9c4d4639aea533f0cce8a658)|0.10.18|Dec 09, 2023
 Libraries|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/76/65/eeeee3bd52c63ddd7b8cbcf051d1763169303e1c9e0fd835ac5d258a4119)|3.71.0|Jun 18, 2024
 Libraries|[python-adafruit-pureio](https://files.pythonhosted.org/packages/e5/b7/f1672435116822079bbdab42163f9e6424769b7db778873d95d18c085230)|1.1.11|May 25, 2023
-Libraries|[python-binho-host-adapter](https://files.pythonhosted.org/packages/68/36/29b7b896e83e195fac6d64ccff95c0f24a18ee86e7437a22e60e0331d90a)|0.1.6|N/A
+Libraries|[python-binho-host-adapter](https://files.pythonhosted.org/packages/68/36/29b7b896e83e195fac6d64ccff95c0f24a18ee86e7437a22e60e0331d90a)|0.1.6|Jun 04, 2020
 Libraries|[python-hidapi](https://files.pythonhosted.org/packages/95/0e/c106800c94219ec3e6b483210e91623117bfafcf1decaff3c422e18af349)|0.14.0|May 28, 2023
-Libraries|[python-lgpio](https://files.pythonhosted.org/packages/56/33/26ec2e8049eaa2f077bf23a12dc61ca559fbfa7bea0516bf263d657ae275)|0.2.2.0|N/A
+Libraries|[python-lgpio](https://files.pythonhosted.org/packages/56/33/26ec2e8049eaa2f077bf23a12dc61ca559fbfa7bea0516bf263d657ae275)|0.2.2.0|Mar 29, 2024
 Libraries|[python-proxy-tools](http://github.com/jtushman/proxy_tools)|db43f1e35d4f90a65c5a4d56d9e9af88212ec6e6|May 06, 2014
 Libraries|[python-pyftdi](https://files.pythonhosted.org/packages/8f/b4/8578b8e4c1e69faa8297cb1e1fd0c86de03bb7eeb3e7cb63157e1e72abfb)|0.55.4|Apr 10, 2024
 Libraries|[python-pyqt5-sip](https://files.pythonhosted.org/packages/ee/81/fce2a475aa56c1f49707d9306b930695b6ff078c2242c9f2fd72a3214e1f)|12.13.0|Oct 14, 2023
-Libraries|[python-smbus2](https://files.pythonhosted.org/packages/98/17/9663936e52a348b3ad1c85e6ca6071d2abf00a5f64f2df50bec8dcca6e16)|0.4.3|N/A
+Libraries|[python-smbus2](https://files.pythonhosted.org/packages/98/17/9663936e52a348b3ad1c85e6ca6071d2abf00a5f64f2df50bec8dcca6e16)|0.4.3|Aug 25, 2023
 Libraries|[python-sysv-ipc](https://files.pythonhosted.org/packages/0c/d7/5d2f861155e9749f981e6c58f2a482d3ab458bf8c35ae24d4b4d5899ebf9)|1.1.0|Jan 17, 2021
 Libraries|[python3-configobj](https://github.com/DiffSK/configobj/releases)|v5.0.8|Jan 19, 2023
 Libraries|[python3-gpiod](https://files.pythonhosted.org/packages/aa/b7/12bda3ba884c7299ac461f84732583048d962145ad230447115758c32e6e)|2.2.0|Jun 18, 2024

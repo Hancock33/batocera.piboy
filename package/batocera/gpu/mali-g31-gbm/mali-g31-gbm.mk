@@ -3,7 +3,7 @@
 # mali-g31-gbm
 #
 ################################################################################
-# Version: Jun 11, 2021
+# Version: Commits on Jun 11, 2021
 MALI_G31_GBM_VERSION = ad4c28932c3d07c75fc41dd4a3333f9013a25e7f
 
 MALI_G31_GBM_SOURCE = libmali-$(MALI_G31_GBM_VERSION).tar.gz
