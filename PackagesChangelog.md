@@ -15,6 +15,8 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|dc981ecf176cf07d654e
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|2f3a5df4dbdb2324fe4775acb973edad99be0717|Jul 10, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|8689b73c3b79c30f32daed333853a79c9d6f2fc5|Jul 10, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.4|Jul 10, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240710|Jul 10, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240710|Jul 10, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|d4ed6ee538fd19ab5ad1efe19c85027bb0c00b39|Jul 10, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|b74507636485ae5cf7bbaefb1079b93c34e4325e|Jul 10, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|9b86c3127ac9bc0b55e16b1dc7e1de2a59fc3a42|Jul 10, 2024
@@ -28,9 +30,8 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-07-09|Jul 09
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|0b0f661947588f1007b223ea2a58534efdb2a794|Jul 09, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|86c1562cdb4e23b5133413fbba24b7e546b9576f|Jul 09, 2024
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|71378daabb9a66bde3d88bcda8738c540aacf7f2|Jul 09, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240709|Jul 09, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|8179609faddee580621529f8b1fffba9a50fb650|Jul 09, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|a41ce69ee7b77e717c296e079f53cc2a19035fc7|Jul 09, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240709|Jul 09, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|0caa036a96a24f47964cddb57906d5b51f71ac1e|Jul 09, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|4469a662358edd2b0ab42cc763f6daf4c86531e0|Jul 09, 2024
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|1df72551797eeb2d7a1c6c27fdd163db30fc659d|Jul 09, 2024
@@ -46,7 +47,6 @@ Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|
 Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|bea33f251758e93f2e40f430339613ba169c2c99|Jul 08, 2024
 Libraries|[python-adafruit-circuitpython-requests](https://files.pythonhosted.org/packages/6e/b0/afc5600f34105002f76ffa9afa5668ca3a4bce51ee6124cd3bcd1fd27128)|4.1.4|Jul 08, 2024
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|de2472e24f255bc094e800f2f78fbee79e89fb9e|Jul 08, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|6e3dcf6c5877867b98b0d01b85206fba780c39c9|Jul 8, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|c931f076a3a6e0d294b6e57eda3fc7bceb4b99da|Jul 08, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|b63598f8120f280db24c3af5433274c6a2eb6d91|Jul 08, 2024
 Emulators|[libretro-genesisplusgx-wide](http://github.com/libretro/Genesis-Plus-GX-Wide)|7d56f9f30439e99b339a34de7fa3cfb07ab2826a|Jul 08, 2024
@@ -415,7 +415,6 @@ Emulators|[libretro-race](http://github.com/libretro/RACE)|f65011e6639ccbbbb44b6
 Emulators|[libretro-superbroswar](https://github.com/libretro/superbroswar-libretro.git)|6967c06b8446824565e37fa7deb26994d4997980|May 28, 2023
 Emulators|[libretro-watara](http://github.com/libretro/potator)|aed31f9254cada9826c65ff4528cc8bdda338275|May 28, 2023
 Libraries|[python-adafruit-pureio](https://files.pythonhosted.org/packages/e5/b7/f1672435116822079bbdab42163f9e6424769b7db778873d95d18c085230)|1.1.11|May 25, 2023
-Emulators|[d8vk](https://github.com/AlpyneDreams/d8vk/releases)|d8vk-v1.0|May 10, 2023
 Emulators|[libretro-bsnes-hd](http://github.com/DerKoun/bsnes-hd)|f46b6d6368ea93943a30b5d4e79e8ed51c2da5e8|Apr 26, 2023
 Emulators|[libretro-pcsx2](https://github.com/libretro/pcsx2.git)|5112943bbe90cba420b5e8526297e2d12b881905|Apr 26, 2023
 Emulators|[libretro-melonds](http://github.com/libretro/melonds)|c6488c88cb4c7583dbcd61609e0eef441572fae8|Apr 13, 2023
