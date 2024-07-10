@@ -33,6 +33,7 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|80baaa5fc40b396f3568a
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|99b44cf33a78698df57355534b51b9eb3202660f|Jul 08, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|79868e0ad3cc4aa49772ac33c688e699b3272eac|Jul 08, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|9c0d5526da92ec5a46cfd2e32cceeca3d117b58a|Jul 08, 2024
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|5d3240d4929e200e423cb224ce934035bf0dc695|Jul 08, 2024
 Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|bea33f251758e93f2e40f430339613ba169c2c99|Jul 08, 2024
 Libraries|[python-adafruit-circuitpython-requests](https://files.pythonhosted.org/packages/6e/b0/afc5600f34105002f76ffa9afa5668ca3a4bce51ee6124cd3bcd1fd27128)|4.1.4|Jul 08, 2024
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|de2472e24f255bc094e800f2f78fbee79e89fb9e|Jul 08, 2024
@@ -228,7 +229,6 @@ Libraries|[appstream-glib](http://github.com/hughsie/appstream-glib)|appstream_g
 Emulators|[libretro-p2000t](http://github.com/p2000t/M2000)|b7ae2b634abbe42af65b4767335d7f74f69c5f72|Jun 04, 2024
 Firmwares|[firmware-armbian](http://github.com/armbian/firmware)|9d27a0dae0aa55caa1ac71525d19d4e9dad53330|Jun 02, 2024
 Libraries|[cpuinfo](http://github.com/pytorch/cpuinfo)|05332fd802d9109a2a151ec32154b107c1e5caf9|Jun 02, 2024
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|ce990e28281a9de87b79218e22afc504c32dcf5a|Jun 01, 2024
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|52e0c496f513cac4bfb23b8897e8028396fcd61f|Jun 01, 2024
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|c98510eae6b442c9d570e5808c03b8c24551810a|Jun 01, 2024
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|1e950b31cfebe35c9ef553fb7fc03ed5f9042188|May 31, 2024
