@@ -420,7 +420,6 @@ menu "Emulators"
 
   menu "WINE"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/batocera-wine/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/d8vk/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/dxvk/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/dxvk-nvapi/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/rtkit/Config.in"
