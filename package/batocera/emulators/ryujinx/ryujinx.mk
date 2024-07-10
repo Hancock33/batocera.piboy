@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jul 10, 2024
-RYUJINX_VERSION = 1.1.1344
+RYUJINX_VERSION = 1.1.1345
 RYUJINX_SITE = https://github.com/Ryujinx/release-channel-master/releases/download/$(RYUJINX_VERSION)
 RYUJINX_LICENSE = MIT
 RYUJINX_DEPENDENCIES = sdl2 openal hicolor-icon-theme adwaita-icon-theme librsvg
