@@ -3,8 +3,8 @@
 # sonic3-air
 #
 ################################################################################
-# Version: Commits on Jul 10, 2024
-SONIC3_AIR_VERSION = 1f6ee38122745858563db14218a8264fe8ad8386
+# Version: Commits on Jul 11, 2024
+SONIC3_AIR_VERSION = 8ea10a04dcfe91e1c01a122b70205bffe83112ed
 SONIC3_AIR_SITE = $(call github,Eukaryot,sonic3air,$(SONIC3_AIR_VERSION))
 SONIC3_AIR_LICENSE = GPL-3.0
 SONIC3_AIR_LICENSE_FILE = COPYING.txt
