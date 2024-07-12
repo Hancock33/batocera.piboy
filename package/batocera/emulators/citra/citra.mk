@@ -3,8 +3,8 @@
 # citra
 #
 ################################################################################
-# Version: Commits on Jul 09, 2024
-CITRA_VERSION = 4780a7134d850e86bee4b4575aa66bcf262ea83c
+# Version: Commits on Jul 12, 2024
+CITRA_VERSION = cc220928bda5c16410dfa811a4bd4ba09d8ddec4
 CITRA_SITE = https://github.com/PabloMK7/citra.git
 CITRA_SITE_METHOD=git
 CITRA_GIT_SUBMODULES=YES
