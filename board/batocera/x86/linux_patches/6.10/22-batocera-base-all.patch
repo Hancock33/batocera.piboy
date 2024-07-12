@@ -586,7 +586,7 @@ index 000000000000..767844637a7d
 +  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index da5352dbd4f3..a2b008e335cf 100644
+index a48ddea7b9b2..f5e1680565ce 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -6749,6 +6749,12 @@ S:	Supported
@@ -602,7 +602,7 @@ index da5352dbd4f3..a2b008e335cf 100644
  DRM DRIVER FOR ARM PL111 CLCD
  S:	Orphan
  T:	git https://gitlab.freedesktop.org/drm/misc/kernel.git
-@@ -9752,6 +9758,18 @@ F:	include/linux/pm.h
+@@ -9754,6 +9760,18 @@ F:	include/linux/pm.h
  F:	include/linux/suspend.h
  F:	kernel/power/
  
@@ -621,7 +621,7 @@ index da5352dbd4f3..a2b008e335cf 100644
  HID CORE LAYER
  M:	Jiri Kosina <jikos@kernel.org>
  M:	Benjamin Tissoires <bentiss@kernel.org>
-@@ -15995,6 +16013,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
+@@ -15997,6 +16015,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
  F:	Documentation/filesystems/ntfs3.rst
  F:	fs/ntfs3/
  
@@ -11361,7 +11361,7 @@ index 438c9e75a04d..5a3af44d785a 100644
  	help
  	  This kernel module is used for testing. It's safe to say M here.
 diff --git a/drivers/cpufreq/acpi-cpufreq.c b/drivers/cpufreq/acpi-cpufreq.c
-index 37f1cdf46d29..094f1f91a9b3 100644
+index 4ac3a35dcd98..f4f8587c4ea0 100644
 --- a/drivers/cpufreq/acpi-cpufreq.c
 +++ b/drivers/cpufreq/acpi-cpufreq.c
 @@ -50,8 +50,6 @@ enum {
@@ -12125,7 +12125,7 @@ index e6a28e7f4dbf..cc8bb2bc325a 100644
  
  #endif /* _LINUX_AMD_PSTATE_H */
 diff --git a/drivers/cpufreq/cpufreq.c b/drivers/cpufreq/cpufreq.c
-index a45aac17c20f..270ea04fb616 100644
+index 9e5060b27864..270ea04fb616 100644
 --- a/drivers/cpufreq/cpufreq.c
 +++ b/drivers/cpufreq/cpufreq.c
 @@ -614,10 +614,9 @@ static ssize_t show_boost(struct kobject *kobj,
@@ -12155,16 +12155,6 @@ index a45aac17c20f..270ea04fb616 100644
  		return -EINVAL;
  
  	if (!cpufreq_driver->boost_enabled)
-@@ -1431,7 +1430,8 @@ static int cpufreq_online(unsigned int cpu)
- 		}
- 
- 		/* Let the per-policy boost flag mirror the cpufreq_driver boost during init */
--		policy->boost_enabled = cpufreq_boost_enabled() && policy_has_boost_freq(policy);
-+		if (cpufreq_boost_enabled() && policy_has_boost_freq(policy))
-+			policy->boost_enabled = true;
- 
- 		/*
- 		 * The initialization has succeeded and the policy is online.
 diff --git a/drivers/cpufreq/intel_pstate.c b/drivers/cpufreq/intel_pstate.c
 index c31914a9876f..1035c074f36a 100644
 --- a/drivers/cpufreq/intel_pstate.c
@@ -28867,10 +28857,10 @@ index 8e06d89698e6..6cdb5a451453 100644
  int hid_input_report(struct hid_device *hid, enum hid_report_type type, u8 *data, u32 size,
  		     int interrupt);
 diff --git a/include/linux/pagemap.h b/include/linux/pagemap.h
-index 59f1df0cde5a..fed6b8f435b1 100644
+index a0a026d2d244..8bece21a8998 100644
 --- a/include/linux/pagemap.h
 +++ b/include/linux/pagemap.h
-@@ -1274,7 +1274,7 @@ struct readahead_control {
+@@ -1281,7 +1281,7 @@ struct readahead_control {
  		._index = i,						\
  	}
  
@@ -48397,7 +48387,7 @@ index 739b1bf3d637..3a4269c02fb2 100644
  static int __read_mostly sysctl_compact_memory;
  
 diff --git a/mm/huge_memory.c b/mm/huge_memory.c
-index db7946a0a28c..c9194f7afe00 100644
+index 2120f7478e55..765ea6197e1e 100644
 --- a/mm/huge_memory.c
 +++ b/mm/huge_memory.c
 @@ -63,7 +63,11 @@ unsigned long transparent_hugepage_flags __read_mostly =
@@ -51262,7 +51252,7 @@ index 28ffcfbeef14..7b13915ba288 100644
  		icsk->icsk_ca_ops->init(sk);
  	if (tcp_ca_needs_ecn(sk))
 diff --git a/net/ipv4/tcp_input.c b/net/ipv4/tcp_input.c
-index 77294fd5fd3e..d09fbc0f1b23 100644
+index 38da23f991d6..37d2b393088a 100644
 --- a/net/ipv4/tcp_input.c
 +++ b/net/ipv4/tcp_input.c
 @@ -365,7 +365,7 @@ static void __tcp_ecn_check_ce(struct sock *sk, const struct sk_buff *skb)
@@ -51314,7 +51304,7 @@ index 77294fd5fd3e..d09fbc0f1b23 100644
  	/* When we're adding to gso_segs == 1, gso_size will be zero,
  	 * in theory this shouldn't be necessary but as long as DSACK
  	 * code can come after this skb later on it's better to keep
-@@ -3781,7 +3797,8 @@ static void tcp_replace_ts_recent(struct tcp_sock *tp, u32 seq)
+@@ -3790,7 +3806,8 @@ static void tcp_replace_ts_recent(struct tcp_sock *tp, u32 seq)
  /* This routine deals with acks during a TLP episode and ends an episode by
   * resetting tlp_high_seq. Ref: TLP algorithm in draft-ietf-tcpm-rack
   */
@@ -51324,7 +51314,7 @@ index 77294fd5fd3e..d09fbc0f1b23 100644
  {
  	struct tcp_sock *tp = tcp_sk(sk);
  
-@@ -3798,6 +3815,7 @@ static void tcp_process_tlp_ack(struct sock *sk, u32 ack, int flag)
+@@ -3807,6 +3824,7 @@ static void tcp_process_tlp_ack(struct sock *sk, u32 ack, int flag)
  		/* ACK advances: there was a loss, so reduce cwnd. Reset
  		 * tlp_high_seq in tcp_init_cwnd_reduction()
  		 */
@@ -51332,7 +51322,7 @@ index 77294fd5fd3e..d09fbc0f1b23 100644
  		tcp_init_cwnd_reduction(sk);
  		tcp_set_ca_state(sk, TCP_CA_CWR);
  		tcp_end_cwnd_reduction(sk);
-@@ -3808,6 +3826,11 @@ static void tcp_process_tlp_ack(struct sock *sk, u32 ack, int flag)
+@@ -3817,6 +3835,11 @@ static void tcp_process_tlp_ack(struct sock *sk, u32 ack, int flag)
  			     FLAG_NOT_DUP | FLAG_DATA_SACKED))) {
  		/* Pure dupack: original and TLP probe arrived; no loss */
  		tp->tlp_high_seq = 0;
@@ -51344,7 +51334,7 @@ index 77294fd5fd3e..d09fbc0f1b23 100644
  	}
  }
  
-@@ -3916,6 +3939,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
+@@ -3925,6 +3948,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
  
  	prior_fack = tcp_is_sack(tp) ? tcp_highest_sack_seq(tp) : tp->snd_una;
  	rs.prior_in_flight = tcp_packets_in_flight(tp);
@@ -51352,7 +51342,7 @@ index 77294fd5fd3e..d09fbc0f1b23 100644
  
  	/* ts_recent update must be made after we are sure that the packet
  	 * is in window.
-@@ -3990,7 +4014,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
+@@ -3999,7 +4023,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
  	tcp_rack_update_reo_wnd(sk, &rs);
  
  	if (tp->tlp_high_seq)
@@ -51361,7 +51351,7 @@ index 77294fd5fd3e..d09fbc0f1b23 100644
  
  	if (tcp_ack_is_dubious(sk, flag)) {
  		if (!(flag & (FLAG_SND_UNA_ADVANCED |
-@@ -4014,6 +4038,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
+@@ -4023,6 +4047,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
  	delivered = tcp_newly_delivered(sk, delivered, flag);
  	lost = tp->lost - lost;			/* freshly marked lost */
  	rs.is_ack_delayed = !!(flag & FLAG_ACK_MAYBE_DELAYED);
@@ -51369,7 +51359,7 @@ index 77294fd5fd3e..d09fbc0f1b23 100644
  	tcp_rate_gen(sk, delivered, lost, is_sack_reneg, sack_state.rate);
  	tcp_cong_control(sk, ack, delivered, flag, sack_state.rate);
  	tcp_xmit_recovery(sk, rexmit);
-@@ -4033,7 +4058,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
+@@ -4042,7 +4067,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
  	tcp_ack_probe(sk);
  
  	if (tp->tlp_high_seq)
@@ -51378,7 +51368,7 @@ index 77294fd5fd3e..d09fbc0f1b23 100644
  	return 1;
  
  old_ack:
-@@ -5695,13 +5720,14 @@ static void __tcp_ack_snd_check(struct sock *sk, int ofo_possible)
+@@ -5704,13 +5729,14 @@ static void __tcp_ack_snd_check(struct sock *sk, int ofo_possible)
  
  	    /* More than one full frame received... */
  	if (((tp->rcv_nxt - tp->rcv_wup) > inet_csk(sk)->icsk_ack.rcv_mss &&
@@ -51600,10 +51590,10 @@ index a8f6d9d06f2e..8737f2134648 100644
  	rs->interval_us = max(snd_us, ack_us);
  
 diff --git a/net/ipv4/tcp_timer.c b/net/ipv4/tcp_timer.c
-index 5bfd76a31af6..0c63590c5fce 100644
+index 892c86657fbc..33c2c9252364 100644
 --- a/net/ipv4/tcp_timer.c
 +++ b/net/ipv4/tcp_timer.c
-@@ -684,6 +684,7 @@ void tcp_write_timer_handler(struct sock *sk)
+@@ -693,6 +693,7 @@ void tcp_write_timer_handler(struct sock *sk)
  		return;
  	}
  
