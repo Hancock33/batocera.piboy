@@ -13,7 +13,8 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|6d7afa2f8448e16a40ba
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240712|Jul 12, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|34e2ec197353669c603f2f029a2149d500a26058|Jul 12, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240712|Jul 12, 2024
-Ports|[doomretro](http://github.com/bradharding/doomretro)|452846975121f9a0e549e023746c9cad5d6d2375|Jul 12, 2024
+Ports|[doomretro](http://github.com/bradharding/doomretro)|e66285bcf62b20beb4ab7c5f4eb6ad315b2f74c1|Jul 12, 2024
+Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|9d78eb5aa0231197b3b7399ae13aaf6741384a02|Jul 12, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|ff397da9aae8547b53ccf5e24b2fd8572373736d|Jul 12, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|c831627ee0acff6429c6d0543fbfebcdf6c0461d|Jul 12, 2024
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|38b80153fd6fcfa4ba0e548562a8bd32c510d685|Jul 12, 2024
@@ -26,6 +27,7 @@ Emulators|[flycast](https://github.com/flyinghead/flycast.git)|39e04b07b82457eb1
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|15fd4ab360a7b0f014f178674cc33b29e059c983|Jul 11, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v1.7.5976|Jul 11, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|b54d0e5fda888dcf9510ad9b6a53f6e48a852fa4|Jul 11, 2024
+Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|d4f01864ae9d1c1c7914181b5c5ff7d4e85fd5ba|Jul 11, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|1d2692c9b1b636ef7acaaa6ec54f3dc816f9d638|Jul 11, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|286a70c007cc8ec1c0b36eb157d6b2b89b7f1dda|Jul 11, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|93a5d05383e233a056fb553790cddabc437935ba|Jul 11, 2024
@@ -54,7 +56,6 @@ Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|0b0f661947588f100
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|86c1562cdb4e23b5133413fbba24b7e546b9576f|Jul 09, 2024
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|71378daabb9a66bde3d88bcda8738c540aacf7f2|Jul 09, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|a41ce69ee7b77e717c296e079f53cc2a19035fc7|Jul 09, 2024
-Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|0caa036a96a24f47964cddb57906d5b51f71ac1e|Jul 09, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|4469a662358edd2b0ab42cc763f6daf4c86531e0|Jul 09, 2024
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|1df72551797eeb2d7a1c6c27fdd163db30fc659d|Jul 09, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|771eb4535adf221f66d94756cbd79017c7907b55|Jul 09, 2024
@@ -185,7 +186,6 @@ Emulators|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/relea
 Ports|[nblood](http://github.com/nukeykt/NBlood)|08b38b488fda6fa4f13e3bf1f2ebe1161be87299|Jun 20, 2024
 Ports|[openjk](http://github.com/JACoders/OpenJK)|c11082b0899e590d30120615dcf520253c4bb0f2|Jun 20, 2024
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|2f242676cf96b1054c1adfc94373302ed5ddc45a|Jun 20, 2024
-Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|e35219148c8f3b0547408c1c00909158f7ec5c9d|Jun 19, 2024
 Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Network|[pd-mapper](http://github.com/linux-msm/pd-mapper)|e7c42e1522249593302a5b8920b9e7b42dc3f25e|Jun 19, 2024
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|28566d3fcb541bae588d1567d1c8fc8dbe58fedb|Jun 19, 2024
