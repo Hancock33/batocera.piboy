@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240712|Jul 12, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240712|Jul 12, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|7c45ad3fed49e423d6ed1619ad29fdc2655637cc|Jul 11, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|39e04b07b82457eb11c45fa8c28e1b039f3f0479|Jul 11, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|15fd4ab360a7b0f014f178674cc33b29e059c983|Jul 11, 2024
@@ -11,6 +13,7 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|1d2692c9b1b636ef7acaa
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|be1b59606282445293187032823016ac2e310207|Jul 11, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|286a70c007cc8ec1c0b36eb157d6b2b89b7f1dda|Jul 11, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|93a5d05383e233a056fb553790cddabc437935ba|Jul 11, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|34b1606019982b71818780bc84b76460f650af31|Jul 11, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|666b5a6ce699e3c1a7d254f7687483620a825409|Jul 11, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|9c1532127477b2caef02a73a45d52cd5fd79808c|Jul 11, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|8ea10a04dcfe91e1c01a122b70205bffe83112ed|Jul 11, 2024
@@ -28,8 +31,6 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|024586338b54ea093dc0b6f7f5
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|b1735eff8ee18f855397fd1f7b7f5284113b0848|Jul 10, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|8689b73c3b79c30f32daed333853a79c9d6f2fc5|Jul 10, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.4|Jul 10, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240710|Jul 10, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240710|Jul 10, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|8fddc8161df106e99b6598d1004f98cde617a13c|Jul 10, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|d1ea797420e2429a03aa019a29e8897de06fa860|Jul 10, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|bcdeadd865368d4ff5f587592a15dfb78fc78444|Jul 10, 2024
@@ -41,7 +42,6 @@ Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|a1ff34d41759
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|0b0f661947588f1007b223ea2a58534efdb2a794|Jul 09, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|86c1562cdb4e23b5133413fbba24b7e546b9576f|Jul 09, 2024
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|71378daabb9a66bde3d88bcda8738c540aacf7f2|Jul 09, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|8179609faddee580621529f8b1fffba9a50fb650|Jul 09, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|a41ce69ee7b77e717c296e079f53cc2a19035fc7|Jul 09, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|0caa036a96a24f47964cddb57906d5b51f71ac1e|Jul 09, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|4469a662358edd2b0ab42cc763f6daf4c86531e0|Jul 09, 2024
@@ -132,7 +132,7 @@ Emulators|[libretro-beetle-vb](http://github.com/libretro/beetle-vb-libretro)|43
 Emulators|[libretro-beetle-wswan](http://github.com/libretro/beetle-wswan-libretro)|440e9228592a3f603d7d09e8bee707b0163f545f|Jun 28, 2024
 Emulators|[libretro-bk-emulator](http://github.com/libretro/bk-emulator)|31af5ca5f307991eb596ed411d4d0e955c833421|Jun 28, 2024
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|1f6b5b393df17e746bec118902b1d1f6ed3e4109|Jun 28, 2024
-Emulators|[libretro-cannonball](http://github.com/libretro/cannonball)||Jun 28, 2024
+Emulators|[libretro-cannonball](http://github.com/libretro/cannonball)|fb2a341b9c17bab44941495fa5568f7f0f66f92a|Jun 28, 2024
 Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|bae879df46f7f22951efda256c19b1692b77ef3e|Jun 28, 2024
 Emulators|[libretro-ecwolf](https://github.com/libretro/ecwolf)|b3fe0743d8dc0fe90b066bccc1567496a0a25a14|Jun 28, 2024
 Emulators|[libretro-fmsx](http://github.com/libretro/fmsx-libretro)|cf97a3c6da07d5f8e98c90c907ad987ffea432e0|Jun 28, 2024
