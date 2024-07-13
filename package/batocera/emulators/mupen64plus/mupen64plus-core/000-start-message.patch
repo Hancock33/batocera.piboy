@@ -1,8 +1,8 @@
 diff --git a/src/main/main.c b/src/main/main.c
-index b3c323d4..56d6ae54 100644
+index e317570d..824cde76 100644
 --- a/src/main/main.c
 +++ b/src/main/main.c
-@@ -1961,7 +1961,7 @@ m64p_error main_run(void)
+@@ -1963,7 +1963,7 @@ m64p_error main_run(void)
  #endif
  
      /* Startup message on the OSD */

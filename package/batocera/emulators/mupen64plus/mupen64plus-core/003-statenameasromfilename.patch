@@ -1,5 +1,5 @@
 diff --git a/src/api/frontend.c b/src/api/frontend.c
-index 6f2d267..2ec0538 100644
+index 956f96f0..b57f9eda 100644
 --- a/src/api/frontend.c
 +++ b/src/api/frontend.c
 @@ -177,6 +177,9 @@ EXPORT m64p_error CALL CoreDoCommand(m64p_command Command, int ParamInt, void *P
@@ -13,7 +13,7 @@ index 6f2d267..2ec0538 100644
              if (g_EmulatorRunning || l_DiskOpen || l_ROMOpen)
                  return M64ERR_INVALID_STATE;
 diff --git a/src/api/m64p_types.h b/src/api/m64p_types.h
-index 088f011..e68c92d 100644
+index 088f0117..e68c92d0 100644
 --- a/src/api/m64p_types.h
 +++ b/src/api/m64p_types.h
 @@ -170,6 +170,7 @@ typedef enum {
@@ -25,7 +25,7 @@ index 088f011..e68c92d 100644
    M64CMD_DISK_CLOSE
  } m64p_command;
 diff --git a/src/main/main.c b/src/main/main.c
-index 7612875..954a9d7 100644
+index 824cde76..bca52bea 100644
 --- a/src/main/main.c
 +++ b/src/main/main.c
 @@ -114,6 +114,7 @@ uint32_t g_start_address = UINT32_C(0xa4000040);
@@ -37,7 +37,7 @@ index 7612875..954a9d7 100644
  int g_gs_vi_counter = 0;
  
 diff --git a/src/main/main.h b/src/main/main.h
-index 3aacca3..e03574b 100644
+index 41f452af..cbe44ccb 100644
 --- a/src/main/main.h
 +++ b/src/main/main.h
 @@ -50,6 +50,7 @@ extern void* g_mem_base;
@@ -49,7 +49,7 @@ index 3aacca3..e03574b 100644
  extern m64p_frame_callback g_FrameCallback;
  
 diff --git a/src/main/savestates.c b/src/main/savestates.c
-index bf3926d..5a957c3 100644
+index 664edd1c..98987ff8 100644
 --- a/src/main/savestates.c
 +++ b/src/main/savestates.c
 @@ -86,6 +86,12 @@ static char *savestates_generate_path(savestates_type type)
@@ -87,7 +87,7 @@ index bf3926d..5a957c3 100644
                  break;
              default:
                  filepath = NULL;
-@@ -2156,6 +2162,7 @@ int savestates_save(void)
+@@ -2165,6 +2171,7 @@ int savestates_save(void)
      char *filepath;
      int ret = 0;
      const struct device* dev = &g_dev;
@@ -95,22 +95,33 @@ index bf3926d..5a957c3 100644
  
      /* Can only save PJ64 savestates on VI / COMPARE interrupt.
         Otherwise try again in a little while. */
-@@ -2179,9 +2186,13 @@ int savestates_save(void)
+@@ -2179,6 +2186,9 @@ int savestates_save(void)
+         type = savestates_type_m64p;
+ 
+     filepath = savestates_generate_path(type);
++    strncpy(ScreenshotFileName, filepath, 251);
++    strncat(ScreenshotFileName, ".png", 4);
++
+     if (filepath != NULL)
+     {
+         switch (type)
+@@ -2186,12 +2196,14 @@ int savestates_save(void)
+             case savestates_type_m64p: ret = savestates_save_m64p(dev, filepath); break;
+             case savestates_type_pj64_zip: ret = savestates_save_pj64_zip(dev, filepath); break;
              case savestates_type_pj64_unc: ret = savestates_save_pj64_unc(dev, filepath); break;
-             default: ret = 0; break;
++            TakeScreenshotToFile(ScreenshotFileName, 0);
+             default: ret = 0; StateChanged(M64CORE_STATE_SAVECOMPLETE, ret); break;
          }
-+        strncpy(ScreenshotFileName, filepath, 251);
-+        strncat(ScreenshotFileName, ".png", 4);
          free(filepath);
      }
- 
-+    TakeScreenshotToFile(ScreenshotFileName, 0);
-+    
-     // deliver callback to indicate completion of state saving operation
-     StateChanged(M64CORE_STATE_SAVECOMPLETE, ret);
+     else
+     {
++        TakeScreenshotToFile(ScreenshotFileName, 0);
+         StateChanged(M64CORE_STATE_SAVECOMPLETE, ret);
+     }
  
 diff --git a/src/main/screenshot.c b/src/main/screenshot.c
-index a831571..12a184b 100644
+index a831571b..12a184b2 100644
 --- a/src/main/screenshot.c
 +++ b/src/main/screenshot.c
 @@ -227,6 +227,12 @@ void TakeScreenshot(int iFrameNumber)
@@ -143,7 +154,7 @@ index a831571..12a184b 100644
      if (rval != 0)
      {
 diff --git a/src/main/screenshot.h b/src/main/screenshot.h
-index c7f6bad..fdc3e36 100644
+index c7f6badd..fdc3e369 100644
 --- a/src/main/screenshot.h
 +++ b/src/main/screenshot.h
 @@ -24,5 +24,6 @@
