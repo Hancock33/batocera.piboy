@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240714|Jul 14, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240714|Jul 14, 2024
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|40851682cede3b94b5ea0fb964d6c0701c984634|Jul 13, 2024
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|e26d0b24cebf2b8a6d4e5a50f2088987c29ebc5f|Jul 13, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|6a2ab358d869050ce8a6d8c7313e08f798bddafa|Jul 13, 2024
@@ -36,9 +38,7 @@ Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|6bda95ad3f1f52f6
 Ports|[bstone](http://github.com/bibendovsky/bstone)|498d5ba1ba6acaec5dd083e40f92339873153a1c|Jul 12, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|14b1caa22789f99e84fe6a028445411ca0d20ffd|Jul 12, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|6d7afa2f8448e16a40ba4cb56fa02cddffa85486|Jul 12, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240712|Jul 12, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|34e2ec197353669c603f2f029a2149d500a26058|Jul 12, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240712|Jul 12, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|9d78eb5aa0231197b3b7399ae13aaf6741384a02|Jul 12, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|ff397da9aae8547b53ccf5e24b2fd8572373736d|Jul 12, 2024
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|38b80153fd6fcfa4ba0e548562a8bd32c510d685|Jul 12, 2024
