@@ -3,8 +3,8 @@
 # vulkan-samples
 #
 ################################################################################
-# Version: Commits on Jul 02, 2024
-VULKAN_SAMPLES_VERSION = 0d347b1029f4a3df307b0b17d8779fd08c08e9a2
+# Version: Commits on Jul 12, 2024
+VULKAN_SAMPLES_VERSION = 34e2ec197353669c603f2f029a2149d500a26058
 VULKAN_SAMPLES_SITE =  https://github.com/KhronosGroup/Vulkan-Samples
 VULKAN_SAMPLES_GIT_SUBMODULES=YES
 VULKAN_SAMPLES_SITE_METHOD=git

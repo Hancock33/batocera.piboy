@@ -3,7 +3,7 @@
 # mali-G31
 #
 ################################################################################
-
+# Version: Commits on Aug 06, 2023
 MALI_G31_VERSION = 2e33bb43d343336fbcf1f4d4a241af6c04f6af3d
 MALI_G31_SITE = $(call github,Multi-Retropie,vim1s-g31,$(MALI_G31_VERSION))
 MALI_G31_LICENSE = Proprietary

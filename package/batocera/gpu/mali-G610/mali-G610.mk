@@ -3,7 +3,7 @@
 # mali-G610
 #
 ################################################################################
-
+# Version: Commits on Nov 21, 2022
 MALI_G610_VERSION = 309268f7a34ca0bba0ab94a0b09feb0191c77fb8
 MALI_G610_SITE = $(call github,JeffyCN,mirrors,$(MALI_G610_VERSION))
 MALI_G610_LICENSE = Proprietary

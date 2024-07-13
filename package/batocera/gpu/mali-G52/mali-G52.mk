@@ -3,7 +3,7 @@
 # mali-G52
 #
 ################################################################################
-
+# Version: Commits on Aug 13, 2023
 MALI_G52_VERSION = 6ab9d7ce7a991f997460697013fc54029fcac681
 MALI_G52_SITE = $(call github,rtissera,a311d2-mali-g52,$(MALI_G52_VERSION))
 MALI_G52_LICENSE = Proprietary

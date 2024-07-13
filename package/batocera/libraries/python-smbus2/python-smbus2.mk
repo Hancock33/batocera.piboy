@@ -3,7 +3,7 @@
 # python-smbus2
 #
 ################################################################################
-
+# Version: Commits on Aug 25, 2023
 PYTHON_SMBUS2_VERSION = 0.4.3
 PYTHON_SMBUS2_SOURCE = smbus2-$(PYTHON_SMBUS2_VERSION).tar.gz
 PYTHON_SMBUS2_SITE = https://files.pythonhosted.org/packages/98/17/9663936e52a348b3ad1c85e6ca6071d2abf00a5f64f2df50bec8dcca6e16

@@ -3,8 +3,8 @@
 # cpuinfo
 #
 ################################################################################
-# Version: Commits on Jun 02, 2024
-CPUINFO_VERSION = 05332fd802d9109a2a151ec32154b107c1e5caf9
+# Version: Commits on Jul 10, 2024
+CPUINFO_VERSION = ca678952a9a8eaa6de112d154e8e104b22f9ab3f
 CPUINFO_SITE = $(call github,pytorch,cpuinfo,$(CPUINFO_VERSION))
 
 CPUINFO_LICENSE = BSD-2-Clause

@@ -3,7 +3,7 @@
 # batocera-nvidia390-legacy-driver
 #
 ################################################################################
-
+# Version: Commits on  Nov 22, 2022
 BATOCERA_NVIDIA390_LEGACY_DRIVER_VERSION = 390.157
 BATOCERA_NVIDIA390_LEGACY_DRIVER_SUFFIX = $(if $(BR2_x86_64),_64)
 BATOCERA_NVIDIA390_LEGACY_DRIVER_SITE = http://download.nvidia.com/XFree86/Linux-x86$(BATOCERA_NVIDIA390_LEGACY_DRIVER_SUFFIX)/$(BATOCERA_NVIDIA390_LEGACY_DRIVER_VERSION)
