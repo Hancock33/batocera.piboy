@@ -24,6 +24,5 @@ wine-proton-cachyos.mk
 wine-proton.mk
 wine-staging.mk
 wine-x86.mk
-xenia-canary.mk
 xkbd.mk
 xosd.mk

@@ -1,8 +1,8 @@
 diff --git a/src/main/main.c b/src/main/main.c
-index b3c323d4..3da68877 100644
+index bca52bea..76daf8ea 100644
 --- a/src/main/main.c
 +++ b/src/main/main.c
-@@ -168,6 +168,18 @@ static char *get_save_filename(void)
+@@ -169,6 +169,18 @@ static char *get_save_filename(void)
  
      if (format == 0) {
          snprintf(filename, 256, "%s", ROM_PARAMS.headername);

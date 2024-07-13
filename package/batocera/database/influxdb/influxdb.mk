@@ -3,7 +3,7 @@
 # influxdb
 #
 ################################################################################
-
+# Version: Commits on Apr 12, 2024
 INFLUXDB_VERSION = 2.7.6
 INFLUXDB_SITE = https://dl.influxdata.com/influxdb/releases
 INFLUXDB_LICENSE = Apache-2.0, MIT

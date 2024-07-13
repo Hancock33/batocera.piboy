@@ -1,5 +1,5 @@
 diff --git a/src/main/rom.c b/src/main/rom.c
-index 0f02d3dd..343f7890 100644
+index 325c5b6c..900b2cf2 100644
 --- a/src/main/rom.c
 +++ b/src/main/rom.c
 @@ -587,7 +587,8 @@ void romdatabase_open(void)
