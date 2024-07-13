@@ -7,7 +7,6 @@ Audio|[chromebook-ucm-conf](http://github.com/WeirdTreeThing/alsa-ucm-conf-cros)
 Audio|[cubeb](http://github.com/mozilla/cubeb)|bbbe5bb0b29ed64cc7dd191d7a72fe24bba0d284|Jul 05, 2024
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|24.07|Jul 01, 2024
 Audio|[freepats](https://freepats.zenvoid.org)|20060219|Feb 19, 2006
-Audio|[libopenmpt](https://lib.openmpt.org/files/libopenmpt/src)|0.7.8|Jun 09, 2024
 Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.6.0|Jun 15, 2023
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|8efac0cfe6c245aeb2ce5122aa2b82fb79e91463|Jun 17, 2024
 Audio|[rtmidi](http://github.com/thestk/rtmidi)|6.0.0|Aug 03, 2023

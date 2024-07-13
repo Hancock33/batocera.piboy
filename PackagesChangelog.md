@@ -221,7 +221,6 @@ Firmwares|[alllinuxfirmwares](https://git.kernel.org/pub/scm/linux/kernel/git/fi
 Ports|[hlsdk-xash3d-dmc](http://github.com/FWGS/hlsdk-portable)|87b6ff53f3257c1f7635ef1a681a6ea9de3b896d|Jun 10, 2024
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|72937e544e715774f44c7d247be3c6f073cec9d6|Jun 10, 2024
 Ports|[hlsdk-xash3d-zombiex](http://github.com/FWGS/hlsdk-portable)|6b6b403f56647f0d49ebc72df801fa15b8e5554f|Jun 10, 2024
-Audio|[libopenmpt](https://lib.openmpt.org/files/libopenmpt/src)|0.7.8|Jun 09, 2024
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.7.3|Jun 09, 2024
 Emulators|[libretro-mesen](http://github.com/libretro/Mesen)|91db6be681f70b2080525c267af6132555323ea1|Jun 09, 2024
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|8e9b88d01da0d21c3c35db051d7e44d8ee0c7715|Jun 08, 2024
