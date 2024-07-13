@@ -74,7 +74,7 @@ Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.0
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 12, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Emulators|[duckstation-legacy](https://github.com/stenzek/duckstation.git)|v0.1-6461|Mar 16, 2024
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|14f8870d7cc7e62f07cf4ed2549f5623a48d58de|Jul 11, 2024
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|b4c929898e83691529facbd59e37609311d53e8d|Jul 11, 2024
 Emulators|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.7.1|Jun 21, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.4|Jul 10, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|407707070e7e4b7f07c165cdcdf46fc156b8bd6b|Jul 02, 2024
@@ -259,7 +259,7 @@ Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|9625ba32e116506e0383ce4d077cb199bea68a83|Jul 13, 2024
 Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|276cf9e06f4fd2ef76b97ced83e53c22c914a698|Jul 12, 2024
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.0.2|Jul 13, 2024
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.0.3|Jul 13, 2024
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|6a6ff95bf9202bfdc13af7425e8b6962fc3eabf3|Jun 26, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|630cae9616d9c7f30bdf1f6ba162f993c5330887|Jul 12, 2024
@@ -269,7 +269,7 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1127-g6b62eff|May 10, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|771e60b1eacd4edc57c19b61ab2c713200af0a3f|May 30, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|60fd45f5f934dc3bc8467603ecdbfc8793377857|Jul 13, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20240706|Jul 06, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|99b44cf33a78698df57355534b51b9eb3202660f|Jul 08, 2024
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|065a64371ee274d4e957501274ae045a0caa5ff1|May 02, 2024
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-07-13|Jul 13, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1345|Jul 10, 2024
@@ -401,7 +401,7 @@ Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|bec4bd04b5fd
 Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|09b3e252308328b932d678d04d4d7c87798d2748|Jul 4, 2024
 Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.2.5|May 13, 2024
 Looks|[adwaita-icon-theme-light](http://ftp.gnome.org/pub/gnome/sources/adwaita-icon-theme/)|$(ADWAITA_ICON_THEME_LIGHT_VERSION_MAJOR).0|Sep 10, 2021
-Looks|[hypseus-singe-bezels](http://github.com/Tovarichtch/hypseus_singe_daphne_bezels)|7fd874c0d49b901e984d87afba73b57a8973c349|Jul 13, 2024
+Looks|[hypseus-singe-bezels](http://github.com/Tovarichtch/hypseus_singe_daphne_bezels)|4075bc408280cfce8a0f8dc354e9d8a8b0b3c4b2|Jul 13, 2024
 Looks|[nanum_font](http://github.com/ujuc/nanum-font)|33a5dec3cd6467979fed8ebfa64430d7cebdff9d|Oct 4, 2014
 Looks|[noto-cjk-fonts](https://github.com/notofonts/noto-cjk/releases)|Sans2.004|Jan 27, 2022
 Network|[aic8800](http://github.com/batocera-linux/aic8800)|ccba7fffed8554fe861bd631ff6f852d2d6eec39|Jun 24, 2024
@@ -427,14 +427,14 @@ Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a4
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|e39e07bc8198d6a3411b594c3bd7a2eb55e2a230|Jul 06, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|0b0f661947588f1007b223ea2a58534efdb2a794|Jul 09, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|024586338b54ea093dc0b6f7f5b0263333ea1124|Jul 10, 2024
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|8108f23d5899b4213e1c0aeda841e50c34ad54ca|Jul 12, 2024
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|27206cd1d72902c9b5a506370639662363273d0b|Jul 13, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|5c7aacb954e5cb7f5499821c577cbb334f0707fd|Jul 02, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|35e8473c5a368f101afb02e20c0219bff7d2cc7f|Jul 13, 2024
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|898f9ca66c1aa45c7caf72e7d80d4760dbc4a4a2|Jul 06, 2024
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|d1de69a576d4bb39e89124185a6dfd6991202cb9|May 20, 2024
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|d4f01864ae9d1c1c7914181b5c5ff7d4e85fd5ba|Jul 11, 2024
-Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|1d2692c9b1b636ef7acaaa6ec54f3dc816f9d638|Jul 11, 2024
+Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|7de06ccef18decd90304911fc19ba4284647d817|Jul 13, 2024
 Ports|[f2bgl](http://github.com/cyxx/f2bgl)|0b84f41c7cc13a41f5a1832549485b814a52070d|Oct 18, 2020
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|ad8a2754fa99ceaf40495185ad48191cf27559e2|Mar 05, 2024
 Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|9fb917c357b20d95d597bed4d67904c29cd5c753|Apr 21, 2024
@@ -468,7 +468,7 @@ Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|be89e134e6f19ca5a9d4442b1ecfa2ccf
 Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|6facc3b09b67593cf9151a44cc59afd490f2ea62|Mar 25, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|20bb444562aa1dba79cf6adcb5da632ba580eec3|Jul 03, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|4469a662358edd2b0ab42cc763f6daf4c86531e0|Jul 09, 2024
-Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|c831627ee0acff6429c6d0543fbfebcdf6c0461d|Jul 12, 2024
+Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|eb95ce12eee57a698d20e1c5008bd2fb7d5b17a1|Jul 13, 2024
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|1df72551797eeb2d7a1c6c27fdd163db30fc659d|Jul 09, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|75b3784141d89668eaabce5173862993cecb8d53|Jul 13, 2024
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|2b90078a59e6b0312541dc095776ae794cec142e|Jun 28, 2024
@@ -486,11 +486,11 @@ Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e86
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|286a70c007cc8ec1c0b36eb157d6b2b89b7f1dda|Jul 11, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|ff397da9aae8547b53ccf5e24b2fd8572373736d|Jul 12, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|56ba2325c1035fdb6745ac1a9808ab75b3239aa8|Jul 11, 2024
-Ports|[xatrix](http://github.com/yquake2/xatrix)|b837ee59e6251bfa960f5a74ab62914544c1a418|Dec 17, 2023
+Ports|[xatrix](http://github.com/yquake2/xatrix)|0da23271851441de776a320446ca76e0183f8bf8|Jul 13, 2024
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.1|Apr 12, 2024
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|28566d3fcb541bae588d1567d1c8fc8dbe58fedb|Jun 19, 2024
-Ports|[yquake2](http://github.com/yquake2/yquake2)|2a2f3e0b2f8fcb931490e324484e14d1cc3cf2cc|Jul 11, 2024
-Ports|[yrogue](http://github.com/yquake2/rogue)|8baa9d35b083f2666d5f668675dbfbc9eee5ff06|Dec 17, 2023
+Ports|[yquake2](http://github.com/yquake2/yquake2)|fd2ebb889116dd78d17d6536d28bc5927262fb76|Jul 13, 2024
+Ports|[yrogue](http://github.com/yquake2/rogue)|bea9dc85ffcc148fe7a30d212b2b76e5ff028ed9|Jul 13, 2024
 Toolchain|[toolchain-optional-linaro-aarch64](https://releases.linaro.org/components/toolchain/binaries/)|7.5-2019.12|Dec 05, 2019
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
