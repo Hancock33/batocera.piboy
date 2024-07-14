@@ -112,7 +112,7 @@ class DuckstationGenerator(Generator):
         if system.isOptSet("duckstation_PatchFastBoot"):
             settings.set("BIOS", "PatchFastBoot", system.config["duckstation_PatchFastBoot"])
         else:
-            settings.set("BIOS", "PatchFastBoot", "true")
+            settings.set("BIOS", "PatchFastBoot", "false")
 
         # Find & populate BIOS
         USbios = [ "scph101.bin", "scph1001.bin", "scph5501.bin", "scph7001.bin", "scph7501.bin" ]

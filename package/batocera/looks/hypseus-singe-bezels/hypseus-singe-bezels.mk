@@ -4,18 +4,22 @@
 #
 ################################################################################
 # Version: Commits on Jul 13, 2024
-HYPSEUS_SINGE_BEZELS_VERSION = 7fd874c0d49b901e984d87afba73b57a8973c349
+HYPSEUS_SINGE_BEZELS_VERSION = 4075bc408280cfce8a0f8dc354e9d8a8b0b3c4b2
 HYPSEUS_SINGE_BEZELS_SITE = $(call github,Tovarichtch,hypseus_singe_daphne_bezels,$(HYPSEUS_SINGE_BEZELS_VERSION))
 HYPSEUS_SINGE_BEZELS_LICENSE = LGPL-3.0
 HYPSEUS_SINGE_BEZELS_LICENSE_FILES = LICENSE
 HYPSEUS_SINGE_BEZELS_DEPENDENCIES = ffmpeg-python
 
 define HYPSEUS_SINGE_BEZELS_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/hypseus-singe/bezels
-	cp -f $(@D)/default.png $(TARGET_DIR)/usr/share/hypseus-singe/bezels
-	cp -f $(@D)/Daphne/*.png $(TARGET_DIR)/usr/share/hypseus-singe/bezels
-	cp -f $(@D)/Singe/*.png $(TARGET_DIR)/usr/share/hypseus-singe/bezels
-	cp -f $(@D)/Kimmy/*.png $(TARGET_DIR)/usr/share/hypseus-singe/bezels
+	rm -rf   $(TARGET_DIR)/usr/share/hypseus-singe/bezels
+	#mkdir -p $(TARGET_DIR)/usr/share/hypseus-singe/bezels
+	#cp -f $(@D)/default.png $(TARGET_DIR)/usr/share/hypseus-singe/bezels
+	#cp -f $(@D)/Daphne/*.png $(TARGET_DIR)/usr/share/hypseus-singe/bezels
+	#cp -f $(@D)/Singe/*.png $(TARGET_DIR)/usr/share/hypseus-singe/bezels
+	#cp -f $(@D)/Kimmy/*.png $(TARGET_DIR)/usr/share/hypseus-singe/bezels
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/decorations/hypseus-singe
+	mkdir -p $(TARGET_DIR)/usr/share/hypseus-singe
+	ln -sf /userdata/decorations/hypseus-singe $(TARGET_DIR)/usr/share/hypseus-singe/bezels
 endef
 
 $(eval $(generic-package))
