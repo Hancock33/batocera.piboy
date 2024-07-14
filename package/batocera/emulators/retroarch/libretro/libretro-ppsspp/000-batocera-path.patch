@@ -1,8 +1,8 @@
 diff --git a/libretro/libretro.cpp b/libretro/libretro.cpp
-index 0a19b55135..137b537dc7 100644
+index 586ebd9036..dc57ac0c49 100644
 --- a/libretro/libretro.cpp
 +++ b/libretro/libretro.cpp
-@@ -1110,7 +1110,7 @@ void retro_init(void)
+@@ -1254,7 +1254,7 @@ void retro_init(void)
     if (environ_cb(RETRO_ENVIRONMENT_GET_SAVE_DIRECTORY, &dir_ptr) && dir_ptr)
        retro_save_dir = Path(dir_ptr);
  

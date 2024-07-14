@@ -1,8 +1,8 @@
 diff --git a/Core/System.cpp b/Core/System.cpp
-index 8e800b747e..973e8ff908 100644
+index 0c46edec3c..845062dc28 100644
 --- a/Core/System.cpp
 +++ b/Core/System.cpp
-@@ -659,63 +659,58 @@ std::string PSP_GetLoading() {
+@@ -650,63 +650,58 @@ std::string PSP_GetLoading() {
  }
  
  Path GetSysDirectory(PSPDirectories directoryType) {
@@ -60,10 +60,10 @@ index 8e800b747e..973e8ff908 100644
 -		return g_Config.memStickDirectory;
 -	// Just return the memory stick root if we run into some sort of problem.
 -	default:
--		ERROR_LOG(FILESYS, "Unknown directory type.");
+-		ERROR_LOG(Log::FileSystem, "Unknown directory type.");
 -		return g_Config.memStickDirectory;
 -	}
-+	// Batocera config directories
++        // Batocera config directories
 +        Path memStickDirectory = Path("/userdata/saves/psp/");
 +        Path pspDirectory = Path("/userdata/system/configs/ppsspp/PSP/");
 +
@@ -112,9 +112,9 @@ index 8e800b747e..973e8ff908 100644
 +                return memStickDirectory;
 +        // Just return the memory stick root if we run into some sort of problem.
 +        default:
-+                ERROR_LOG(FILESYS, "Unknown directory type.");
++                ERROR_LOG(Log::FileSystem, "Unknown directory type.");
 +                return pspDirectory;
-+        }	
++        }
  }
  
  bool CreateSysDirectories() {
