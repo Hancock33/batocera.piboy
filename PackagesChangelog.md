@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|a98d33ad0a1c3a472087e75563c74a8556b9064f|Jul 14, 2024
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|a98d33ad0a1c3a472087e75563c74a8556b9064f|Jul 14, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|a273dc2de2510f470f8a71f54ce2cb128055cd20|Jul 14, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|fae6b7ae86e67b192d3b6b4b02643635fb55500c|Jul 14, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|77164c2619184f1fd8300d1b152b0a9904155751|Jul 14, 2024
@@ -68,8 +70,6 @@ Libraries|[cpuinfo](http://github.com/pytorch/cpuinfo)|ca678952a9a8eaa6de112d154
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|024586338b54ea093dc0b6f7f5b0263333ea1124|Jul 10, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|8689b73c3b79c30f32daed333853a79c9d6f2fc5|Jul 10, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.4|Jul 10, 2024
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|2ebe38c466e962f599cc6909bd007f7bf99650e6|Jul 09, 2024
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|2ebe38c466e962f599cc6909bd007f7bf99650e6|Jul 09, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|0b0f661947588f1007b223ea2a58534efdb2a794|Jul 09, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|86c1562cdb4e23b5133413fbba24b7e546b9576f|Jul 09, 2024
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|71378daabb9a66bde3d88bcda8738c540aacf7f2|Jul 09, 2024
