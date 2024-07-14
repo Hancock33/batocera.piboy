@@ -258,7 +258,7 @@ Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|77164c2619184f1fd8300d1b152b0a9904155751|Jul 14, 2024
-Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|276cf9e06f4fd2ef76b97ced83e53c22c914a698|Jul 12, 2024
+Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|398d84d13e5c4214390f1f6787ef177fe61153dd|Jul 14, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.0.3|Jul 13, 2024
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|6a6ff95bf9202bfdc13af7425e8b6962fc3eabf3|Jun 26, 2024
@@ -420,11 +420,11 @@ Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e24
 Ports|[awgl](http://github.com/cyxx/rawgl)|1eeaa530c859bd6e37b3d3bd7d3136bc16afcc89|Mar 12, 2022
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|1855c8ed66b771fb62ae66bf5b1cbc9ede9cd03a|Dec 26, 2023
-Ports|[box64](http://github.com/ptitseb/box64)|4ff4ca72d38c82fe3adbd07003053ead2586b366|Jul 14, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|d8746c6c70007417ececbcfafa5a47fd6e47ba4f|Jul 14, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|21e9a43d211a6334fbb99652cfcc699b9e492915|Jul 13, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|498d5ba1ba6acaec5dd083e40f92339873153a1c|Jul 12, 2024
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
-Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|e39e07bc8198d6a3411b594c3bd7a2eb55e2a230|Jul 06, 2024
+Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|c1ad162167f836f7a1488dd8902c15e73dc0640f|Jul 14, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|0b0f661947588f1007b223ea2a58534efdb2a794|Jul 09, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|024586338b54ea093dc0b6f7f5b0263333ea1124|Jul 10, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|27206cd1d72902c9b5a506370639662363273d0b|Jul 13, 2024
