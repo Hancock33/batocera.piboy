@@ -3,13 +3,15 @@
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|a273dc2de2510f470f8a71f54ce2cb128055cd20|Jul 14, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|fae6b7ae86e67b192d3b6b4b02643635fb55500c|Jul 14, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|77164c2619184f1fd8300d1b152b0a9904155751|Jul 14, 2024
+Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|398d84d13e5c4214390f1f6787ef177fe61153dd|Jul 14, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|e01ca5b0571531c956f3e5cbb952fa97473d15fe|Jul 14, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1346|Jul 14, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|18096d9f682cf1cb22c90fac349838a226a8cb1d|Jul 14, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|a2645c944f57e8d9c245063d21f9bf612eab0a6b|Jul 14, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|77d76fc97fe9695bdc0fb46bbb9938134958e059|Jul 14, 2024
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|b944f2ea6954d666ed6a2ed30a050a29558dafff|Jul 14, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|4ff4ca72d38c82fe3adbd07003053ead2586b366|Jul 14, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|d8746c6c70007417ececbcfafa5a47fd6e47ba4f|Jul 14, 2024
+Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|c1ad162167f836f7a1488dd8902c15e73dc0640f|Jul 14, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|70e59d3053e38757fab44a463cf4086616e4ca9a|Jul 14, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|9e9d1fb0f7defa1701e4165068de83de2e623f6e|Jul 14, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|edb4a9ccd9102e52d4b9607c7023c6b14e624923|Jul 14, 2024
@@ -41,7 +43,6 @@ Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|e1a5c92679e1150
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|1a564f900c41a378173d0785297269aa3d426e8f|Jul 13, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|9d0994523206c9d73925d78d185531c4c7331db7|Jul 12, 2024
 Emulators|[hatari](http://github.com/hatari/hatari)|5288383b6d803db9e69d3cf011dc49882a1d19f7|Jul 12, 2024
-Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|276cf9e06f4fd2ef76b97ced83e53c22c914a698|Jul 12, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|b6cbfbbbf36807a88cf4153aab7a51c97be3cc87|Jul 12, 2024
 Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|6bda95ad3f1f52f61ddec97f4fa6df8dfebb48b1|Jul 12, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|498d5ba1ba6acaec5dd083e40f92339873153a1c|Jul 12, 2024
@@ -91,7 +92,6 @@ Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|d8f7a8
 Emulators|[libretro-mame](http://github.com/sonninnos/mame)|1e31f3a77644341e0ff9065aff3bc249fb024978|Jul 07, 2024
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|9afc6345407e656d5b34fa795a25fb978f16e598|Jul 06, 2024
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|f1897ba889deb36d5922f5be52a6c3050e215ad1|Jul 06, 2024
-Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|e39e07bc8198d6a3411b594c3bd7a2eb55e2a230|Jul 06, 2024
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|898f9ca66c1aa45c7caf72e7d80d4760dbc4a4a2|Jul 06, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20240706|Jul 06, 2024
 Audio|[cubeb](http://github.com/mozilla/cubeb)|bbbe5bb0b29ed64cc7dd191d7a72fe24bba0d284|Jul 05, 2024
