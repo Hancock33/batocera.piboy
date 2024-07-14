@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-24 00:00+0100\n"
-"PO-Revision-Date: 2024-06-10 00:00+0100\n"
+"PO-Revision-Date: 2024-06-29 00:00+0100\n"
 "Last-Translator: roliverosc <roliveros@hotmail.com>, 2024\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
@@ -437,7 +437,7 @@ msgstr "LIGHT GUNS"
 #. TRANSLATION: shared, shared, shared, shared, shared, ...
 msgctxt "game_options"
 msgid "CONTROLS"
-msgstr ""
+msgstr "MANDOS"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -8337,7 +8337,7 @@ msgstr "FAST BLITTER (MENOS COMPATIBLE)"
 #. TRANSLATION: libretro/virtualjaguar
 msgctxt "game_options"
 msgid "Enable for Doom to run at its correct resolution."
-msgstr "Habilitar para que Doom se ejecute con su resolución correcta."
+msgstr "Habilita para que Doom se ejecute con su resolución correcta."
 
 #. TRANSLATION: libretro/virtualjaguar
 msgctxt "game_options"
@@ -10288,7 +10288,7 @@ msgstr "COLOR PUNTO DE MIRA DEL JUGADOR 4"
 #. TRANSLATION: fpinball
 msgctxt "game_options"
 msgid "Allow mapping Future Pinball with Pad to Keyboard."
-msgstr ""
+msgstr "Permite configurar Future Pinball con Pad-To-Keyboard."
 
 #. TRANSLATION: fpinball
 msgctxt "game_options"
@@ -12590,6 +12590,9 @@ msgid ""
 "use a value larger than 100%% so that the steering feels less sensitive on a "
 "thumbstick."
 msgstr ""
+"Para jugar a juegos de conducción con un mando, a veces es una buena idea "
+"usar un valor mayor al 100% para que la dirección se sienta menos sensible "
+"en el stick."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -15588,6 +15591,8 @@ msgid ""
 "This option enables the ability to play Xbox Live Arcade games. May cause "
 "compatibility issues with non-XBLA games."
 msgstr ""
+"Esta opción habilita la capacidad de jugar a juegos de Xbox Live Arcade. "
+"Puede causar problemas de compatibilidad con juegos que no sean de XBLA."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -17017,6 +17022,14 @@ msgstr "Guardado rápido"
 #~ msgstr "Color"
 
 #~ msgctxt "game_options"
+#~ msgid "Enable or disable monsters in battle."
+#~ msgstr "Activa o desactiva monstruos en la batalla."
+
+#~ msgctxt "game_options"
+#~ msgid "MONSTERS"
+#~ msgstr "MONSTRUOS"
+
+#~ msgctxt "game_options"
 #~ msgid "Emulate a pak in the controller expansion port."
 #~ msgstr "Emula un pak en el puerto de expansión del mando."
 
@@ -17498,37 +17511,6 @@ msgstr "Guardado rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rápido"
-
-#~ msgctxt "game_options"
-#~ msgid "Enable or disable monsters in battle."
-#~ msgstr "Activa o desactiva monstruos en la batalla."
-
-#~ msgctxt "game_options"
-#~ msgid "MONSTERS"
-#~ msgstr "MONSTRUOS"
-
-#~ msgctxt "game_options"
-#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
-#~ msgstr "Permite configurar Future Pinball con Pad a Teclado."
-
-#, c-format
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "For playing driving games with a game pad, it is sometimes a good idea to "
-#~ "use a value larger than 100% so that the steering feels less sensitive on "
-#~ "a thumbstick."
-#~ msgstr ""
-#~ "Para jugar a juegos de conducción con un mando, a veces es una buena idea "
-#~ "usar un valor mayor al 100% para que la dirección se sienta menos "
-#~ "sensible en el stick."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "This option enables the ability to play Xbox Live Arcacde games. May "
-#~ "cause compatibility issues with non-XBLA games."
-#~ msgstr ""
-#~ "Esta opción habilita la capacidad de jugar a juegos de Xbox Live Arcade. "
-#~ "Puede causar problemas de compatibilidad con juegos que no sean de XBLA."
 
 #~ msgctxt "game_options"
 #~ msgid "Manual (Default)"
