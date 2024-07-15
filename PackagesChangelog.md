@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240715|Jul 15, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240715|Jul 15, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|1cccd518ac6ccfec144090cb296c35eaecf839a9|Jul 14, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|1cccd518ac6ccfec144090cb296c35eaecf839a9|Jul 14, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|17a5d520078df7052a7444655af82f8632f4159f|Jul 14, 2024
@@ -29,8 +31,7 @@ Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-
 Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64plus-video-glide64mk2)|368c3e761116c72bcd7b64bfa134e6e39d276ec5|Jul 14, 2024
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|8a1b817ebe6e127a8388843e1e4921ec3bcd7bf5|Jul 14, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|c208186df56a935064961bb292a150db59ef1ebf|Jul 14, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240714|Jul 14, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240714|Jul 14, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|wine-9.13|Jul 14, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|595f34b0fb3ec4309a78647bdfbb43f28084b6f4|Jul 14, 2024
 Ports|[quake3](http://github.com/ioquake/ioq3)|15f5fe78ad61f7bb0684b420f1d768a87e193a87|Jul 14, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|debcaca0c94a1d927d0bedfeb9313db290304f13|Jul 14, 2024
@@ -68,7 +69,6 @@ Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libr
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|db5a4d12479bd0fabb4734c7f5647a40f8d06c7e|Jul 11, 2024
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|d4f01864ae9d1c1c7914181b5c5ff7d4e85fd5ba|Jul 11, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|286a70c007cc8ec1c0b36eb157d6b2b89b7f1dda|Jul 11, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|34b1606019982b71818780bc84b76460f650af31|Jul 11, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|56ba2325c1035fdb6745ac1a9808ab75b3239aa8|Jul 11, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|db5a4d12479bd0fabb4734c7f5647a40f8d06c7e|Jul 11, 2024
 Emulators|[libretro-mupen64plus-next](http://github.com/libretro/mupen64plus-libretro-nx)|80e48a0f6e3e6b4a295d1e96ba010b3223b96c78|Jul 11, 2024
