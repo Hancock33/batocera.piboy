@@ -586,10 +586,10 @@ index 000000000000..767844637a7d
 +  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index a48ddea7b9b2..f5e1680565ce 100644
+index 958e935449e5..94540127a563 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -6749,6 +6749,12 @@ S:	Supported
+@@ -6728,6 +6728,12 @@ S:	Supported
  T:	git https://gitlab.freedesktop.org/drm/misc/kernel.git
  F:	drivers/gpu/drm/sun4i/sun8i*
  
@@ -602,7 +602,7 @@ index a48ddea7b9b2..f5e1680565ce 100644
  DRM DRIVER FOR ARM PL111 CLCD
  S:	Orphan
  T:	git https://gitlab.freedesktop.org/drm/misc/kernel.git
-@@ -9754,6 +9760,18 @@ F:	include/linux/pm.h
+@@ -9733,6 +9739,18 @@ F:	include/linux/pm.h
  F:	include/linux/suspend.h
  F:	kernel/power/
  
@@ -621,7 +621,7 @@ index a48ddea7b9b2..f5e1680565ce 100644
  HID CORE LAYER
  M:	Jiri Kosina <jikos@kernel.org>
  M:	Benjamin Tissoires <bentiss@kernel.org>
-@@ -15997,6 +16015,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
+@@ -15976,6 +15994,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
  F:	Documentation/filesystems/ntfs3.rst
  F:	fs/ntfs3/
  
@@ -638,7 +638,7 @@ index a48ddea7b9b2..f5e1680565ce 100644
  M:	Finn Thain <fthain@linux-m68k.org>
  L:	linux-m68k@lists.linux-m68k.org
 diff --git a/Makefile b/Makefile
-index 5b32997d396e..4168304bb187 100644
+index e962174e9708..2ffd5adb0354 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -817,6 +817,9 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -31147,7 +31147,7 @@ index 99076dbe27d8..18750b83c564 100644
  	if (err)
  		goto bad_unshare_out;
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index 8a5b1ae0aa55..a241e0d45922 100644
+index 24dda708b699..c2bb8eb1d6ba 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -73,10 +73,19 @@ unsigned int sysctl_sched_tunable_scaling = SCHED_TUNABLESCALING_LOG;
@@ -31184,10 +31184,10 @@ index 8a5b1ae0aa55..a241e0d45922 100644
  #ifdef CONFIG_NUMA_BALANCING
  /* Restrict the NUMA promotion throughput (MB/s) for each target node. */
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index a831af102070..6e6a45087015 100644
+index ef20c61004eb..10c1caff5e06 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
-@@ -2543,7 +2543,7 @@ extern void deactivate_task(struct rq *rq, struct task_struct *p, int flags);
+@@ -2544,7 +2544,7 @@ extern void deactivate_task(struct rq *rq, struct task_struct *p, int flags);
  
  extern void wakeup_preempt(struct rq *rq, struct task_struct *p, int flags);
  
