@@ -1,5 +1,5 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index 57a9af55..2ba0d52b 100644
+index 6178bc82..2ba0d52b 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
 @@ -9,195 +9,282 @@ namespace PlatformIds
@@ -348,7 +348,7 @@ index 57a9af55..2ba0d52b 100644
 -		{ "palm",					PALMOS },
 -		{ "daphne",					DAPHNE },
 -		{ "solarus",				SOLARUS },
--
+-		{ "lowresnx",				LOWRESNX },
 -		{ "vic20",					VIC20 },
 -		{ "c20",					VIC20 },
 -		{ "ti99",					TI99 },
@@ -424,7 +424,7 @@ index 57a9af55..2ba0d52b 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index 78947739..81edc5ee 100644
+index 516608a5..81edc5ee 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
 @@ -11,54 +11,170 @@ namespace PlatformIds
@@ -614,7 +614,7 @@ index 78947739..81edc5ee 100644
  		SEGA_32X,
  		SEGA_CD,
  		SEGA_CHIHIRO,
-@@ -66,111 +182,80 @@ namespace PlatformIds
+@@ -66,112 +182,80 @@ namespace PlatformIds
  		SEGA_GAME_GEAR,
  		SEGA_GENESIS,
  		SEGA_MASTER_SYSTEM,
@@ -784,6 +784,7 @@ index 78947739..81edc5ee 100644
 -		EPOCH_GAMEPOCKET,
 -		WASM4,
 -		TANDY_VIS,
+-		LOWRESNX,
  
  		TEKNOPARROT,
  
@@ -880,10 +881,10 @@ index a252ef60..25223140 100644
  
  const std::set<Scraper::ScraperMediaSource>& HfsDBScraper::getSupportedMedias()
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index 528e8510..30bf2eb3 100644
+index a1ca84ed..30bf2eb3 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
-@@ -30,159 +30,235 @@ using namespace PlatformIds;
+@@ -30,160 +30,235 @@ using namespace PlatformIds;
  	https://www.screenscraper.fr/api/systemesListe.php?devid=xxx&devpassword=yyy&softname=zzz&output=XML
  **/
  const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
@@ -1234,8 +1235,8 @@ index 528e8510..30bf2eb3 100644
 +	{ VG5000, 261 },
  	{ WASM4, 262 },
 -	{ GAMATE, 266 },
--	{ ARDUBOY, 263 }
-+	{ ARDUBOY, 263 },
+ 	{ ARDUBOY, 263 },
+-	{ LOWRESNX, 244 }
 +	{ GAMATE, 266 }
  };
  

@@ -1,8 +1,8 @@
 diff --git a/Makefile b/Makefile
-index 58648e5..711b580 100644
+index 9aa3019..7ce472a 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -334,6 +334,87 @@ else ifneq (,$(findstring amlogic,$(platform)))
+@@ -344,6 +344,87 @@ else ifneq (,$(findstring amlogic,$(platform)))
     COREFLAGS += -DUSE_GENERIC_GLESV2 -DOS_LINUX
     CPUFLAGS += -march=armv8-a -mcpu=cortex-a53 -mtune=cortex-a53
  
