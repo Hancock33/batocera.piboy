@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jul 16, 2024
-PANDA3DS_VERSION = 71b8031d5b8c2b29987373b27098f8db75eb8637
+PANDA3DS_VERSION = 6bef278f43716e7d2219a46d3646adbb2868edff
 PANDA3DS_SITE = https://github.com/wheremyfoodat/Panda3DS.git
 
 PANDA3DS_SITE_METHOD=git
