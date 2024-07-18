@@ -1,7 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|bf03903230faf3208ab3bd94ca8c1ceb1945a4e2|Jul 18, 2024
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|bf03903230faf3208ab3bd94ca8c1ceb1945a4e2|Jul 18, 2024
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|0261e73a172fcc6e01f73c9d5988f60bc0cb40fd|Jul 18, 2024
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|0261e73a172fcc6e01f73c9d5988f60bc0cb40fd|Jul 18, 2024
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|139e6f6f1b748211c0bd4d13d03e7ef433bee670|Jul 18, 2024
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|0f15e23e562d09cef4711bdd5ecb99906ddb0d84|Jul 18, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.12|Jul 18, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|02abd394793b8b980e8699dba1b74f9d90b62888|Jul 18, 2024
@@ -16,12 +17,14 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|3c6f8f9d13fd5798a6c93df4b8386d3
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|b4b47c7ae8f2b839794f795049a82c4fc6a28292|Jul 18, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|dfeb7fdc05b0e582a396f3029b29ff5f8421c4ee|Jul 18, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|3598a8410acdb7eb4dbd28c79ff065806dc91722|Jul 18, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|4683e83d9a51c0229fff23400a6a19542aa523b7|Jul 18, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|1232a6ae6e39da4060fbdfb2bdfc27becc3e0057|Jul 18, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240718|Jul 18, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240718|Jul 18, 2024
+Ports|[doomretro](http://github.com/bradharding/doomretro)|2419752489e5e5a28b4081c58db06ca2d525fc13|Jul 18, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|2e6c7d769454e4456026ed052a6596d70fe33553|Jul 18, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|bac0b22f7a3b89d0755697a4f3093c94db409a3e|Jul 18, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|8518262aa7f8c871b76342ecde3c02229fda3472|Jul 18, 2024
+Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|5d3253e783741a436331a75865e7fdf177a485cb|Jul 18, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|5a9cab0b241a413f5f46ddc2bd59da13eec71f90|Jul 18, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|a2ca0fc5efead1a937f1d72c86c4d254826b7abe|Jul 18, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|02abd394793b8b980e8699dba1b74f9d90b62888|Jul 18, 2024
@@ -36,14 +39,12 @@ Emulators|[vita3k](https://github.com/vita3k/vita3k)|80074c8f19f16dbeed354f36bd0
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|d415c44cd085b768bef66680f0b86310a66df17d|Jul 17, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|f21c4917090d51f687eb71749b365343f2246c3e|Jul 17, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|c5bccdf300ff5017b7225e49a934c395c51f297b|Jul 17, 2024
-Ports|[doomretro](http://github.com/bradharding/doomretro)|129591b06bc902ae5e0242727535401b6ee25041|Jul 17, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|42a915b04a2e3c455111413d56e4f48ee6794f15|Jul 17, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|53d092c326b2e9d5214a89cd797ff256b4ce15a6|Jul 17, 2024
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|8435915c0132087bb719721feed10aea908b3ad3|Jul 17, 2024
 Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|46623beb228ba8849a58bc555feb5ef939e15c4d|Jul 17, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20240717|Jul 17, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|2f62932308139a5c95e145cf093784f11317d627|Jul 16, 2024
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|cc3ff347b437fd80f3a2880d1bbc7ba2d5f191f4|Jul 16, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|01c42ba4145a612645213599185df59acced9e04|Jul 16, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|c9fb2d6aab2b5d89ea1d0ccc7e286a0e5fccc625|Jul 16, 2024
 Utils|[od-commander](http://github.com/od-contrib/commander)|9aa39d7bcb5d0f6faadaf027a1539d14177a3c7c|Jul 16, 2024
@@ -115,7 +116,6 @@ Emulators|[libretro-mame](http://github.com/sonninnos/mame)|1e31f3a77644341e0ff9
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|9afc6345407e656d5b34fa795a25fb978f16e598|Jul 06, 2024
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|898f9ca66c1aa45c7caf72e7d80d4760dbc4a4a2|Jul 06, 2024
 Audio|[cubeb](http://github.com/mozilla/cubeb)|bbbe5bb0b29ed64cc7dd191d7a72fe24bba0d284|Jul 05, 2024
-Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|a90ceba8339c73abc2f28ff20ec65fce16904816|Jul 05, 2024
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|d2557ae061d7251bf3fff69ec943077d1711ad16|Jul 05, 2024
 Emulators|[libretro-hatarib](https://github.com/bbbradsmith/hatariB)|e8187a7be75ff1c547cdcef214a8da26847561c1|Jul 05, 2024
 Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|4eb41467f8cf39d666372b5ea78694df970252a3|Jul 04, 2024
