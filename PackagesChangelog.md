@@ -17,6 +17,8 @@ Ports|[stk](http://github.com/supertuxkart/stk-code)|5527a11d254c1ec2f9e0c1e0a53
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|d63d4798ea028da004bafe674b21fd5433972c9e|Jul 19, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|0a5a8d2ee9ecba424c11b19bb3907d98dfc2814a|Jul 19, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|63799385fcf37c1fe92cb26852ffa16a58966dd9|Jul 19, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240719|Jul 19, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240719|Jul 19, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|a5e5406a76b31e93a877b51aaff4258a47ef9674|Jul 19, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|23e6c80f72a3ff66ee40caa8bf01ffe03af250e0|Jul 19, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|64726f13e185145072b4feaff8e1d93bfe850825|Jul 19, 2024
@@ -37,8 +39,6 @@ Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|4aeecabf641f1d16804bc5d6bdb3c688dabf6cd1|Jul 18, 2024
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2024.06|Jul 18, 2024
 Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|3c8f59b5b05e5090e8593da1940a8d3ccac3f878|Jul 18, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240718|Jul 18, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240718|Jul 18, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|2e6c7d769454e4456026ed052a6596d70fe33553|Jul 18, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|8518262aa7f8c871b76342ecde3c02229fda3472|Jul 18, 2024
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|26a700ea1a599bb586283e6e720e4da5964b90ac|Jul 17, 2024
@@ -85,7 +85,6 @@ Emulators|[applewin](https://github.com/audetto/AppleWin)|17a5d520078df7052a7444
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|881eeaed9a0d7b6ce9b16b094f25101785f0e39e|Jul 14, 2024
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|a46880ffa1eb026ee1137710daed28c6796d7367|Jul 14, 2024
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|6c2c3f8ae10b7f0f6dfe06f45ca7ca598a6b659a|Jul 14, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|wine-9.13|Jul 14, 2024
 Ports|[quake3](http://github.com/ioquake/ioq3)|15f5fe78ad61f7bb0684b420f1d768a87e193a87|Jul 14, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|75b3784141d89668eaabce5173862993cecb8d53|Jul 13, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|eb1b5718c3d69cc3778865a0b6b59e55a0807766|Jul 13, 2024
@@ -214,6 +213,7 @@ Emulators|[wine-proton-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos_
 Controllers|[new-lg4ff](http://github.com/berarma/new-lg4ff)|1a2d5727876dd7befce23d9695924e9446b31c4b|Jun 18, 2024
 Libraries|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/76/65/eeeee3bd52c63ddd7b8cbcf051d1763169303e1c9e0fd835ac5d258a4119)|3.71.0|Jun 18, 2024
 Libraries|[python3-gpiod](https://files.pythonhosted.org/packages/aa/b7/12bda3ba884c7299ac461f84732583048d962145ad230447115758c32e6e)|2.2.0|Jun 18, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|88a28aa5757ae74d9997b470d70216f10974247f|Jun 18, 2024
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|8efac0cfe6c245aeb2ce5122aa2b82fb79e91463|Jun 17, 2024
 Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-2b|Jun 17, 2024
 Utils|[rclone](http://github.com/rclone/rclone)|v1.67.0|Jun 14, 2024
