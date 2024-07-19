@@ -67,10 +67,10 @@ index 2d8b0371619d..d40ca486d775 100644
  				    cmd->refresh_specified ? cmd->refresh : 60,
 diff --git a/drivers/gpu/drm/drm_modes_low_dotclock.c b/drivers/gpu/drm/drm_modes_low_dotclock.c
 new file mode 100644
-index 000000000000..a14f18f397c6
+index 000000000000..fb97f4367466
 --- /dev/null
 +++ b/drivers/gpu/drm/drm_modes_low_dotclock.c
-@@ -0,0 +1,155 @@
+@@ -0,0 +1,156 @@
 +/*
 + * Permission is hereby granted, free of charge, to any person obtaining a
 + * copy of this software and associated documentation files (the "Software"),
@@ -94,8 +94,9 @@ index 000000000000..a14f18f397c6
 +
 +#include <drm/drm_modes.h>
 +#include <drm/drm_print.h>
++#include "drm_modes_low_dotclock.h"
 +
-+const static struct drm_display_mode drm_low_dotclock_modes[] = {
++static struct drm_display_mode drm_low_dotclock_modes[] = {
 +/* 15 kHz modes */
 +	/* 320x240 60.00 - generic_15 */
 +		/* Switchres: Modeline "320x240_60 15.660000KHz 60.000000Hz" 6.514560 320 333 364 416 240 241 244 261 -hsync -vsync */
