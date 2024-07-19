@@ -20,7 +20,7 @@ eslog = get_logger(__name__)
 sys.path.append(
     os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
-# Return value for es invertedbuttons    
+# Return value for es invertedbuttons
 def getInvertButtonsValue():
     try:
         tree = ET.parse(batoceraFiles.esSettings)
