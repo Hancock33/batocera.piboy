@@ -47,11 +47,11 @@ index b91cf0624b..fef6990b9a 100644
      {
          printf("eglCreateWindowSurface failed\n");
 diff --git a/deps/switchres/custom_video_drmkms.cpp b/deps/switchres/custom_video_drmkms.cpp
-index f71c49ca1d..93019484f0 100755
+index c7c2d0a3b1..142ee0183e 100755
 --- a/deps/switchres/custom_video_drmkms.cpp
 +++ b/deps/switchres/custom_video_drmkms.cpp
-@@ -532,7 +532,21 @@ bool drmkms_timing::init()
- 	char drm_name[15] = "/dev/dri/card_";
+@@ -571,7 +571,21 @@ bool drmkms_timing::init()
+ 	char *drm_name;
  	drmModeRes *p_res;
  	drmModeConnector *p_connector;
 -
@@ -71,7 +71,7 @@ index f71c49ca1d..93019484f0 100755
 +   }
 +   //
  	int output_position = 0;
- 	for (int num = 0; !m_desktop_output && num < MAX_CARD_ID; num++)
+ 	for (int num = 0; num < num_devices; num++)
  	{
 diff --git a/gfx/common/drm_common.c b/gfx/common/drm_common.c
 index 4bbc826e8f..a39e2e9af4 100644
