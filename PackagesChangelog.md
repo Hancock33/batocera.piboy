@@ -6,6 +6,8 @@ Emulators|[vita3k](https://github.com/vita3k/vita3k)|2711a71af6d72b15bfb721e9711
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|32ec66c53ee32dea139bf3f9e45f97da017fd8ab|Jul 20, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|c1785a7ef672c1fd79873ed1791314f6c7855521|Jul 20, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|019f256b171eb651dddae511de94dc6c68f4f843|Jul 20, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240720|Jul 20, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240720|Jul 20, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|9c4457da2019e6e59c333222a8de4145cf750aeb|Jul 20, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|1476308debfad87ce377c6cfe62db1398774cd65|Jul 20, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|09f456484cb401856d5dda1af5b80a659b7c2097|Jul 20, 2024
@@ -32,8 +34,6 @@ Ports|[fheroes2](http://github.com/ihhub/fheroes2)|efc8eb5cd6176f37b54f73a641f09
 Ports|[stk](http://github.com/supertuxkart/stk-code)|5527a11d254c1ec2f9e0c1e0a53bba6d9ec968f6|Jul 19, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|d63d4798ea028da004bafe674b21fd5433972c9e|Jul 19, 2024
 Utils|[re2c](http://github.com/skvadrik/re2c)|f2395c299886cfc5639f841f6445ab9ad0fa26f9|Jul 19, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240719|Jul 19, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240719|Jul 19, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|23e6c80f72a3ff66ee40caa8bf01ffe03af250e0|Jul 19, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|78ca0f17f30279832b9c1c3133a7deb10314ed63|Jul 19, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|ce878710821906376fab8150dbc7e281a5759dc7|Jul 19, 2024
