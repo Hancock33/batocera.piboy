@@ -3,7 +3,7 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Jun 19, 2024
+# Version: Commits on Jul 19, 2024
 WINE_CUSTOM_VERSION = 8d259957a2470190e109b1175cf61f4d95427fce
 WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
 #WINE_CUSTOM_SITE = $(call github,wine-mirror,wine,$(WINE_CUSTOM_VERSION))
