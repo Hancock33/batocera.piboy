@@ -43,6 +43,7 @@ Ports|[fheroes2](http://github.com/ihhub/fheroes2)|efc8eb5cd6176f37b54f73a641f09
 Ports|[stk](http://github.com/supertuxkart/stk-code)|5527a11d254c1ec2f9e0c1e0a53bba6d9ec968f6|Jul 19, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|d63d4798ea028da004bafe674b21fd5433972c9e|Jul 19, 2024
 Utils|[re2c](http://github.com/skvadrik/re2c)|f2395c299886cfc5639f841f6445ab9ad0fa26f9|Jul 19, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|8d259957a2470190e109b1175cf61f4d95427fce|Jul 19, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|ce878710821906376fab8150dbc7e281a5759dc7|Jul 19, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|64726f13e185145072b4feaff8e1d93bfe850825|Jul 19, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|372184b402852f9b3a3f1663ea676ffa910f6e48|Jul 19, 2024
@@ -207,7 +208,6 @@ Ports|[nblood](http://github.com/nukeykt/NBlood)|08b38b488fda6fa4f13e3bf1f2ebe11
 Ports|[openjk](http://github.com/JACoders/OpenJK)|c11082b0899e590d30120615dcf520253c4bb0f2|Jun 20, 2024
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|2f242676cf96b1054c1adfc94373302ed5ddc45a|Jun 20, 2024
 Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|8d259957a2470190e109b1175cf61f4d95427fce|Jun 19, 2024
 Network|[pd-mapper](http://github.com/linux-msm/pd-mapper)|e7c42e1522249593302a5b8920b9e7b42dc3f25e|Jun 19, 2024
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|28566d3fcb541bae588d1567d1c8fc8dbe58fedb|Jun 19, 2024
 Emulators|[wine-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos-wine-9.0-20240619|Jun 19, 2024
