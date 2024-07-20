@@ -9,7 +9,7 @@ config BR2_PACKAGE_DMD_SIMULATOR_PLAYER
 	help
 	  dmd-simulator player command that can send image to the simulator or to the libdmd server
 
-config BR2_PACKAGE_DMD_SIMULATOR
+	config BR2_PACKAGE_DMD_SIMULATOR
 	bool "dmd-simulator"
 	select BR2_PACKAGE_PYTHON_NUMPY
 	select BR2_PACKAGE_PYTHON_WEBSOCKETS

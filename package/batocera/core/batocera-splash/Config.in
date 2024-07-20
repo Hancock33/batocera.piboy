@@ -17,13 +17,13 @@ choice
 	help
 	Select batocera.linux splash type
 
-config BR2_PACKAGE_BATOCERA_SPLASH_IMAGE
+	config BR2_PACKAGE_BATOCERA_SPLASH_IMAGE
 	bool "image"
 
-config BR2_PACKAGE_BATOCERA_SPLASH_OMXPLAYER
+	config BR2_PACKAGE_BATOCERA_SPLASH_OMXPLAYER
 	bool "omxplayer"
 
-config BR2_PACKAGE_BATOCERA_SPLASH_MPV
+	config BR2_PACKAGE_BATOCERA_SPLASH_MPV
 	bool "mpv"
 
- endchoice
+endchoice
