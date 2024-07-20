@@ -144,7 +144,7 @@ Emulators|[libretro-freej2me](http://github.com/hex007/freej2me)|8b9bc8a19baf26e
 Emulators|[libretro-fuse](http://github.com/libretro/fuse-libretro)|4d511d7fc3faa7714fa5de2e824793d35d5f4da8|Jun 28, 2024
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|0cf1a421a2123205559c666853cdf9112382fa46|Jul 19, 2024
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|6b1b8d15e43096288346f05fdf9baa9f91360aaf|Jun 28, 2024
-Emulators|[libretro-genesisplusgx-wide](http://github.com/libretro/Genesis-Plus-GX-Wide)|7d56f9f30439e99b339a34de7fa3cfb07ab2826a|Jul 08, 2024
+Emulators|[libretro-genesisplusgx-wide](http://github.com/libretro/Genesis-Plus-GX-Wide)|a0717a3cc7757c27ded83625331f2ced4bc25065|Jul 20, 2024
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|2fd18851754e715bd55e7040aaace2590ac0d8cb|Jul 20, 2024
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|d8f7a87376ab614d464d46ee408d29b2dec163ff|Jul 07, 2024
 Emulators|[libretro-gong](http://github.com/libretro/gong)|11d98233f9bba2dec60cae555b196684fd9d2aa5|Jun 28, 2024

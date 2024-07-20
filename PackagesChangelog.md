@@ -22,6 +22,7 @@ Ports|[yrogue](http://github.com/yquake2/rogue)|b26f8e590ba4a2154e5ec17b077c6d3f
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|c8941f7ee823da3bbed58b9e6c5fcbe7f7adb8ac|Jul 20, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|1476308debfad87ce377c6cfe62db1398774cd65|Jul 20, 2024
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|2fd18851754e715bd55e7040aaace2590ac0d8cb|Jul 20, 2024
+Emulators|[libretro-genesisplusgx-wide](http://github.com/libretro/Genesis-Plus-GX-Wide)|a0717a3cc7757c27ded83625331f2ced4bc25065|Jul 20, 2024
 Emulators|[libretro-gpsp](http://github.com/libretro/gpsp)|74c4b82cef7793b11892c791cc2379cb87847fb8|Jul 20, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|09f456484cb401856d5dda1af5b80a659b7c2097|Jul 20, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|5edd02ef0a81fec0b9f0e6423cbea96123af083f|Jul 20, 2024
@@ -119,7 +120,6 @@ Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|f759fd4558
 Libraries|[python-adafruit-circuitpython-requests](https://files.pythonhosted.org/packages/6e/b0/afc5600f34105002f76ffa9afa5668ca3a4bce51ee6124cd3bcd1fd27128)|4.1.4|Jul 08, 2024
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|899bbd5c1ebf84105ca0616ee933a0ee113fbc79|Jul 08, 2024
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|de2472e24f255bc094e800f2f78fbee79e89fb9e|Jul 08, 2024
-Emulators|[libretro-genesisplusgx-wide](http://github.com/libretro/Genesis-Plus-GX-Wide)|7d56f9f30439e99b339a34de7fa3cfb07ab2826a|Jul 08, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|8d929587ec246e214408763e778ec2a1813c9ff7|Jul 07, 2024
 Gpu|[batocera-nvidia-lists](http://github.com/batocera-linux/nvidia-lists)|45217510141288a04406522df00f390850da400f|Jul 07, 2024
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|d8f7a87376ab614d464d46ee408d29b2dec163ff|Jul 07, 2024
