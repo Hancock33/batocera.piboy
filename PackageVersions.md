@@ -432,7 +432,7 @@ Ports|[doom3](http://github.com/dhewm/dhewm3)|5c7aacb954e5cb7f5499821c577cbb334f
 Ports|[doomretro](http://github.com/bradharding/doomretro)|20000befc2fd75e6ee2dcc39429e36f906274641|Jul 20, 2024
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|898f9ca66c1aa45c7caf72e7d80d4760dbc4a4a2|Jul 06, 2024
-Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|d1de69a576d4bb39e89124185a6dfd6991202cb9|May 20, 2024
+Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|899bbd5c1ebf84105ca0616ee933a0ee113fbc79|Jul 08, 2024
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|d4f01864ae9d1c1c7914181b5c5ff7d4e85fd5ba|Jul 11, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|777690a6e81fca2ea767efde942de0fcd1acac05|Jul 19, 2024
 Ports|[f2bgl](http://github.com/cyxx/f2bgl)|0b84f41c7cc13a41f5a1832549485b814a52070d|Oct 18, 2020

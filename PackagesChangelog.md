@@ -116,6 +116,7 @@ Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|1df7255
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|0d8a19fd82758746cc41af5e18946a9410e4533f|Jul 09, 2024
 Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|f759fd4558cb2a92c976ededcdb7d4c7aa7faebc|Jul 09, 2024
 Libraries|[python-adafruit-circuitpython-requests](https://files.pythonhosted.org/packages/6e/b0/afc5600f34105002f76ffa9afa5668ca3a4bce51ee6124cd3bcd1fd27128)|4.1.4|Jul 08, 2024
+Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|899bbd5c1ebf84105ca0616ee933a0ee113fbc79|Jul 08, 2024
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|de2472e24f255bc094e800f2f78fbee79e89fb9e|Jul 08, 2024
 Emulators|[libretro-genesisplusgx-wide](http://github.com/libretro/Genesis-Plus-GX-Wide)|7d56f9f30439e99b339a34de7fa3cfb07ab2826a|Jul 08, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|8d929587ec246e214408763e778ec2a1813c9ff7|Jul 07, 2024
@@ -260,7 +261,6 @@ Emulators|[libretro-yabasanshiro](http://github.com/libretro/yabause)|39535a6abc
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|075d8e30877e45e2c8a7790f5f70fd0569f96870|May 22, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Network|[qrtr](http://github.com/linux-msm/qrtr)|daf7f4cc326a5036dcce2bd7deaf2c32841b0336|May 21, 2024
-Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|d1de69a576d4bb39e89124185a6dfd6991202cb9|May 20, 2024
 Emulators|[libretro-stella2014](http://github.com/libretro/stella2014-libretro)|db6bee857f73138ae02755bf09e392b31fef4540|May 20, 2024
 Emulators|[libretro-beetle-saturn](http://github.com/libretro/beetle-saturn-libretro)|7a8f808a1d447fcb8fa9547d9f163eb3600d3086|May 19, 2024
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
