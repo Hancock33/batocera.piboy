@@ -30,13 +30,13 @@ config BR2_PACKAGE_BATOCERA_LUAJIT
 
 	  https://luajit.org/luajit.html
 
-	  if BR2_PACKAGE_BATOCERA_LUAJIT
+if BR2_PACKAGE_BATOCERA_LUAJIT
 config BR2_PACKAGE_BATOCERA_LUAJIT_COMPAT52
 	bool "Lua 5.2 compatibility"
 
 	help
 	  Compile with Lua 5.2 compatibility.
-	  endif
+endif
 
 comment "batocera luajit needs a toolchain w/ dynamic library"
 	depends on BR2_STATIC_LIBS
