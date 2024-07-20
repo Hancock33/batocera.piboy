@@ -33,6 +33,7 @@ Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.17|Jul 19, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|5dc7a6a815f6a488b3fef12714dd516ffceba77a|Jul 19, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1354|Jul 19, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|5fa402f2f586ebd7a107e68f7b9d9613e56d2b70|Jul 19, 2024
+Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45250|Jul 19, 2024
 Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|d1e0d5e0d91b202c9954a9b6432a1b9ff1e39c38|Jul 19, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|0ed210f8c316c737a82313ecdcd722c321413a1b|Jul 19, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|655d0539f500551b3c531be4047097227223be31|Jul 19, 2024
@@ -367,7 +368,6 @@ Utils|[xkbd](https://github.com/mahatma-kaganovich/xkbd.git)|0.8.18-860-gec90622
 Ports|[freedroid](http://github.com/ReinhardPrix/FreedroidClassic)|126664e034d17bb7fd1e6c3cfa1e9e6f1ebf48ac|Jan 08, 2024
 Emulators|[libretro-mojozork](http://github.com/icculus/mojozork)|5c8d81f8db53c206ace6952472e7a7e68bd8e752|Dec 31, 2023
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|1855c8ed66b771fb62ae66bf5b1cbc9ede9cd03a|Dec 26, 2023
-Emulators|[vice](https://sourceforge.net/projects/vice-emu/files/releases)|3.8|Dec 24, 2023
 Emulators|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Emulators|[libretro-sameduck](http://github.com/LIJI32/SameBoy)|5619abdb01cee6bedb47599cdb5532c318443b52|Dec 10, 2023
 Libraries|[python-adafruit-circuitpython-neopixel-spi](https://files.pythonhosted.org/packages/4e/8a/8551808a687cd181737a52ea1629cd783e7a30c83ffa5129fd5d9ef96807)|1.0.9|Dec 09, 2023
