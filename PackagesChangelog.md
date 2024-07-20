@@ -70,6 +70,7 @@ Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|fea21169c4d1fd6aa
 Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|46623beb228ba8849a58bc555feb5ef939e15c4d|Jul 17, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20240717|Jul 17, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|2f62932308139a5c95e145cf093784f11317d627|Jul 16, 2024
+Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v115|Jul 16, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|c9fb2d6aab2b5d89ea1d0ccc7e286a0e5fccc625|Jul 16, 2024
 Utils|[od-commander](http://github.com/od-contrib/commander)|9aa39d7bcb5d0f6faadaf027a1539d14177a3c7c|Jul 16, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|b11511238ca70d6a4fa56e3ac8a1645b6e7094dc|Jul 16, 2024
@@ -255,7 +256,6 @@ Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|4493a194dd42
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|bfefd38d2500103d32f5da9f7fcd80090b7836fb|May 23, 2024
 Emulators|[libretro-px68k](http://github.com/libretro/px68k-libretro)|8bdae0a389fb471f02154dce74afaed726d5ae79|May 23, 2024
 Emulators|[libretro-yabasanshiro](http://github.com/libretro/yabause)|39535a6abcad5abf9f71c8b2a7975f005ee12ed6|May 23, 2024
-Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v114|May 22, 2024
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|075d8e30877e45e2c8a7790f5f70fd0569f96870|May 22, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Network|[qrtr](http://github.com/linux-msm/qrtr)|daf7f4cc326a5036dcce2bd7deaf2c32841b0336|May 21, 2024
