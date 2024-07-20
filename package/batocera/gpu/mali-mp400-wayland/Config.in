@@ -13,13 +13,13 @@ config BR2_PACKAGE_MALI_MP400_WAYLAND
 
 if BR2_PACKAGE_MALI_MP400_WAYLAND
 	config BR2_PACKAGE_PROVIDES_LIBEGL
-		default "mali-mp400-wayland"
+	default "mali-mp400-wayland"
 
 	config BR2_PACKAGE_PROVIDES_LIBGLES
-		default "mali-mp400-wayland"
+	default "mali-mp400-wayland"
 
 	config BR2_PACKAGE_PROVIDES_LIBMALI
-		default "mali-mp400-wayland"
+	default "mali-mp400-wayland"
 endif
 
 comment "mali-mp400-wayland"
