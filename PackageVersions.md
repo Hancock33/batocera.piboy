@@ -84,7 +84,7 @@ Emulators|[fpinball](https://github.com/batocera-linux/fpinball/releases)|v1.9.1
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|bfa0c7522c6c5f73cceb340d677491d056febd01|Jul 30, 2022
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|1359309f89e4e5b513df1a263c6a3e46398936b6|Jul 16, 2024
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
-Emulators|[hatari](http://github.com/hatari/hatari)|5288383b6d803db9e69d3cf011dc49882a1d19f7|Jul 12, 2024
+Emulators|[hatari](http://github.com/hatari/hatari)|27c8d64d714eb61b24664fef0268d68198cba175|Jul 20, 2024
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|9afc6345407e656d5b34fa795a25fb978f16e598|Jul 06, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|e09e6b8df05cba599691e3c80ae15a90c0b88359|Jul 19, 2024
 Emulators|[libaltsound](http://github.com/vpinball/libaltsound)|b8f397858cbc7a879f7392c14a509f00c8bdc7dd|Jun 28, 2024
@@ -148,7 +148,7 @@ Emulators|[libretro-genesisplusgx-wide](http://github.com/libretro/Genesis-Plus-
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|f9f16d7a552c5606caea52c2179ca2831b8e0177|May 01, 2024
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|d8f7a87376ab614d464d46ee408d29b2dec163ff|Jul 07, 2024
 Emulators|[libretro-gong](http://github.com/libretro/gong)|11d98233f9bba2dec60cae555b196684fd9d2aa5|Jun 28, 2024
-Emulators|[libretro-gpsp](http://github.com/libretro/gpsp)|bfbdfda215889cad5ae314bd5221d773a343b5bd|Jun 28, 2024
+Emulators|[libretro-gpsp](http://github.com/libretro/gpsp)|74c4b82cef7793b11892c791cc2379cb87847fb8|Jul 20, 2024
 Emulators|[libretro-gw](http://github.com/libretro/gw-libretro)|feab76c102166784230dc44c45cad4cb49a1c9a7|Jun 28, 2024
 Emulators|[libretro-handy](http://github.com/libretro/libretro-handy)|15d3c87e0eba52464ed759d3702d7cb7fdd0d7e0|Jun 28, 2024
 Emulators|[libretro-hatari](http://github.com/libretro/hatari)|c10a21dbe99277b06ccf7de10eceb74f5d57e921|Jun 28, 2024
@@ -257,7 +257,7 @@ Emulators|[openbor4432](http://github.com/Darknior/OpenBORv3b4432)|49505541b858d
 Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678291bbedc0b9fe4c8f898|Aug 29, 2018
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|ce627d34af4b66b9d6bf292ed78a237a7aa1b078|Jul 20, 2024
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|b81ba46559e912a76e1369fd0800f789b2b0773c|Jul 20, 2024
 Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|dec3df39e0deac23d28db773928aba8cd8e28a46|Jul 19, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.17|Jul 19, 2024
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
@@ -420,7 +420,7 @@ Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e24
 Ports|[awgl](http://github.com/cyxx/rawgl)|1eeaa530c859bd6e37b3d3bd7d3136bc16afcc89|Mar 12, 2022
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|1855c8ed66b771fb62ae66bf5b1cbc9ede9cd03a|Dec 26, 2023
-Ports|[box64](http://github.com/ptitseb/box64)|d1eb01e535b324e23e85535fce5ee4516161c47e|Jul 19, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|052bba4578730f82bbf26486dcacd276f135c44d|Jul 20, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|c5bccdf300ff5017b7225e49a934c395c51f297b|Jul 17, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|0ed210f8c316c737a82313ecdcd722c321413a1b|Jul 19, 2024
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
@@ -429,7 +429,7 @@ Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|0b0f661947588f100
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|441ec65c29b45bbd262edd0f7a16be92ecc083db|Jul 19, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|63d525fe4715f492e5a0da82b97fee39f5dac3f1|Jul 19, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|5c7aacb954e5cb7f5499821c577cbb334f0707fd|Jul 02, 2024
-Ports|[doomretro](http://github.com/bradharding/doomretro)|9c4457da2019e6e59c333222a8de4145cf750aeb|Jul 20, 2024
+Ports|[doomretro](http://github.com/bradharding/doomretro)|c59e931c8464fdd83609076fe0bb033edca99cb9|Jul 20, 2024
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|898f9ca66c1aa45c7caf72e7d80d4760dbc4a4a2|Jul 06, 2024
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|d1de69a576d4bb39e89124185a6dfd6991202cb9|May 20, 2024
@@ -484,13 +484,13 @@ Ports|[tekwar](https://github.com/jonof/jftekwar.git)|d327bfa6140af179a9409e0ba4
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|c1785a7ef672c1fd79873ed1791314f6c7855521|Jul 20, 2024
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|c9fb2d6aab2b5d89ea1d0ccc7e286a0e5fccc625|Jul 16, 2024
-Ports|[vkquake](http://github.com/Novum/vkQuake)|23e6c80f72a3ff66ee40caa8bf01ffe03af250e0|Jul 19, 2024
+Ports|[vkquake](http://github.com/Novum/vkQuake)|0314204399ce563d22121dc74dc80c4376341ba9|Jul 20, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|64726f13e185145072b4feaff8e1d93bfe850825|Jul 19, 2024
-Ports|[xatrix](http://github.com/yquake2/xatrix)|36e9e031444efd0a1f26ff05a93eacb339737f9e|Jul 15, 2024
+Ports|[xatrix](http://github.com/yquake2/xatrix)|b2e6790c8ff8af0bbaa069e597661198df9858d8|Jul 20, 2024
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.1|Apr 12, 2024
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|28566d3fcb541bae588d1567d1c8fc8dbe58fedb|Jun 19, 2024
-Ports|[yquake2](http://github.com/yquake2/yquake2)|4b9b8e14a497dff7615a676db1ec190400d2b326|Jul 15, 2024
-Ports|[yrogue](http://github.com/yquake2/rogue)|145ed6ea89c9ad9553199357e6b68e81de58c6c4|Jul 15, 2024
+Ports|[yquake2](http://github.com/yquake2/yquake2)|824cd9c034a52ca5d5513d806900c49d4d2dcf67|Jul 20, 2024
+Ports|[yrogue](http://github.com/yquake2/rogue)|b26f8e590ba4a2154e5ec17b077c6d3f9a1c6173|Jul 20, 2024
 Toolchain|[toolchain-optional-linaro-aarch64](https://releases.linaro.org/components/toolchain/binaries/)|7.5-2019.12|Dec 05, 2019
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
