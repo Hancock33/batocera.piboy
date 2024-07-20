@@ -206,6 +206,7 @@ Ports|[nblood](http://github.com/nukeykt/NBlood)|08b38b488fda6fa4f13e3bf1f2ebe11
 Ports|[openjk](http://github.com/JACoders/OpenJK)|c11082b0899e590d30120615dcf520253c4bb0f2|Jun 20, 2024
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|2f242676cf96b1054c1adfc94373302ed5ddc45a|Jun 20, 2024
 Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|8d259957a2470190e109b1175cf61f4d95427fce|Jun 19, 2024
 Network|[pd-mapper](http://github.com/linux-msm/pd-mapper)|e7c42e1522249593302a5b8920b9e7b42dc3f25e|Jun 19, 2024
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|28566d3fcb541bae588d1567d1c8fc8dbe58fedb|Jun 19, 2024
 Emulators|[wine-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos-wine-9.0-20240619|Jun 19, 2024
@@ -213,7 +214,6 @@ Emulators|[wine-proton-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos_
 Controllers|[new-lg4ff](http://github.com/berarma/new-lg4ff)|1a2d5727876dd7befce23d9695924e9446b31c4b|Jun 18, 2024
 Libraries|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/76/65/eeeee3bd52c63ddd7b8cbcf051d1763169303e1c9e0fd835ac5d258a4119)|3.71.0|Jun 18, 2024
 Libraries|[python3-gpiod](https://files.pythonhosted.org/packages/aa/b7/12bda3ba884c7299ac461f84732583048d962145ad230447115758c32e6e)|2.2.0|Jun 18, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|88a28aa5757ae74d9997b470d70216f10974247f|Jun 18, 2024
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|8efac0cfe6c245aeb2ce5122aa2b82fb79e91463|Jun 17, 2024
 Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-2b|Jun 17, 2024
 Utils|[rclone](http://github.com/rclone/rclone)|v1.67.0|Jun 14, 2024
