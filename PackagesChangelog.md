@@ -2,7 +2,9 @@
 -----|:-----:|:-----:|:-----:
 Emulators|[hatari](http://github.com/hatari/hatari)|27c8d64d714eb61b24664fef0268d68198cba175|Jul 20, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|b81ba46559e912a76e1369fd0800f789b2b0773c|Jul 20, 2024
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|5edd02ef0a81fec0b9f0e6423cbea96123af083f|Jul 20, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-07-20|Jul 20, 2024
+Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|cbb29669ed1329efab7afe6f5ef123296dd73506|Jul 20, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|2711a71af6d72b15bfb721e9711e96a92e90649c|Jul 20, 2024
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|32ec66c53ee32dea139bf3f9e45f97da017fd8ab|Jul 20, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|052bba4578730f82bbf26486dcacd276f135c44d|Jul 20, 2024
@@ -10,14 +12,16 @@ Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|c1785a7ef672c
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|019f256b171eb651dddae511de94dc6c68f4f843|Jul 20, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240720|Jul 20, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240720|Jul 20, 2024
-Ports|[doomretro](http://github.com/bradharding/doomretro)|c59e931c8464fdd83609076fe0bb033edca99cb9|Jul 20, 2024
+Ports|[doomretro](http://github.com/bradharding/doomretro)|20000befc2fd75e6ee2dcc39429e36f906274641|Jul 20, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|0314204399ce563d22121dc74dc80c4376341ba9|Jul 20, 2024
 Ports|[xatrix](http://github.com/yquake2/xatrix)|b2e6790c8ff8af0bbaa069e597661198df9858d8|Jul 20, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|824cd9c034a52ca5d5513d806900c49d4d2dcf67|Jul 20, 2024
 Ports|[yrogue](http://github.com/yquake2/rogue)|b26f8e590ba4a2154e5ec17b077c6d3f9a1c6173|Jul 20, 2024
+Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|c8941f7ee823da3bbed58b9e6c5fcbe7f7adb8ac|Jul 20, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|1476308debfad87ce377c6cfe62db1398774cd65|Jul 20, 2024
 Emulators|[libretro-gpsp](http://github.com/libretro/gpsp)|74c4b82cef7793b11892c791cc2379cb87847fb8|Jul 20, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|09f456484cb401856d5dda1af5b80a659b7c2097|Jul 20, 2024
+Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|5edd02ef0a81fec0b9f0e6423cbea96123af083f|Jul 20, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|7522c8470ee27d50a68ba662ae721b69018f3a8f|Jul 19, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|1fcb2ee5c12eb9a3552fcb6ea7dd2fcd7c6c1749|Jul 19, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|4f7ddfaae625d9f6f56f9ee87e25ca3c1a3983af|Jul 19, 2024
@@ -26,7 +30,6 @@ Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|e09e6b8df05cba5996
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|ecd5d6ff128ea95878eeeff58d50042bbf262335|Jul 19, 2024
 Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|dec3df39e0deac23d28db773928aba8cd8e28a46|Jul 19, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.17|Jul 19, 2024
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|5c26aa4c962005e00bdd0f4b4abf3748d435d770|Jul 19, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|5dc7a6a815f6a488b3fef12714dd516ffceba77a|Jul 19, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1354|Jul 19, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|5fa402f2f586ebd7a107e68f7b9d9613e56d2b70|Jul 19, 2024
@@ -40,7 +43,6 @@ Ports|[fheroes2](http://github.com/ihhub/fheroes2)|efc8eb5cd6176f37b54f73a641f09
 Ports|[stk](http://github.com/supertuxkart/stk-code)|5527a11d254c1ec2f9e0c1e0a53bba6d9ec968f6|Jul 19, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|d63d4798ea028da004bafe674b21fd5433972c9e|Jul 19, 2024
 Utils|[re2c](http://github.com/skvadrik/re2c)|f2395c299886cfc5639f841f6445ab9ad0fa26f9|Jul 19, 2024
-Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|78ca0f17f30279832b9c1c3133a7deb10314ed63|Jul 19, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|ce878710821906376fab8150dbc7e281a5759dc7|Jul 19, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|64726f13e185145072b4feaff8e1d93bfe850825|Jul 19, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|372184b402852f9b3a3f1663ea676ffa910f6e48|Jul 19, 2024
@@ -51,7 +53,6 @@ Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|0b6b8b37
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|0cf1a421a2123205559c666853cdf9112382fa46|Jul 19, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|389511ca3afc931a285db1604084bc1ef6ae3656|Jul 19, 2024
 Emulators|[libretro-mupen64plus-next](http://github.com/libretro/mupen64plus-libretro-nx)|c7cd8edcd015ddcbd4a2e984573c9c1d1ddd0b6e|Jul 19, 2024
-Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|5c26aa4c962005e00bdd0f4b4abf3748d435d770|Jul 19, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|7d6751a07c872eebd17c1d5c5dbdb9ca31f13578|Jul 19, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|0261e73a172fcc6e01f73c9d5988f60bc0cb40fd|Jul 18, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|0261e73a172fcc6e01f73c9d5988f60bc0cb40fd|Jul 18, 2024
@@ -238,7 +239,6 @@ Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.7.3|Jun 09, 2024
 Emulators|[libretro-mesen](http://github.com/libretro/Mesen)|91db6be681f70b2080525c267af6132555323ea1|Jun 09, 2024
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|8e9b88d01da0d21c3c35db051d7e44d8ee0c7715|Jun 08, 2024
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.1|Jun 08, 2024
-Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|f2dd27ffb639c2514e4d67ef625a4408e7352114|Jun 06, 2024
 Firmwares|[firmware-radxa-rkwifibt](http://github.com/JeffyCN/rockchip_mirrors)|f17efc911891d0e50b86bc734754520164d326a2|Jun 06, 2024
 Libraries|[appstream-glib](http://github.com/hughsie/appstream-glib)|appstream_glib_0_8_3|Jun 05, 2024
 Emulators|[libretro-p2000t](http://github.com/p2000t/M2000)|b7ae2b634abbe42af65b4767335d7f74f69c5f72|Jun 04, 2024
