@@ -12,7 +12,7 @@ config BR2_PACKAGE_OD_COMMANDER
 
 	  https://github.com/od-contrib/commander
 
-if BR2_PACKAGE_OD_COMMANDER
+	  if BR2_PACKAGE_OD_COMMANDER
 
 config BR2_PACKAGE_OD_COMMANDER_FONTS
 	string "Font stack"
@@ -42,4 +42,4 @@ config BR2_PACKAGE_OD_COMMANDER_PPU_X
 config BR2_PACKAGE_OD_COMMANDER_PPU_Y
 	string "Vertical pixels per unit"
 
-endif
+	  endif
