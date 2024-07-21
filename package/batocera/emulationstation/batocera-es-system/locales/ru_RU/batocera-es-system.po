@@ -2159,7 +2159,7 @@ msgstr ""
 "Может работать не на всех устройствах. Гибрид предпочтительнее, если "
 "поддерживается."
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/genesisplusgx, libretro/genesisplusgx, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/swanstation, libretro/flycast, libretro/genesisplusgx, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "ДОПОЛНИТЕЛЬНЫЕ ПАРАМЕТРЫ"
@@ -2903,6 +2903,21 @@ msgstr "Более точная эмуляция, но медленная."
 msgctxt "game_options"
 msgid "USE SOFTWARE RENDERING"
 msgstr "ИСП. SOFTWARE РЕНДЕРИНГ"
+
+#. TRANSLATION: libretro/swanstation, duckstation
+msgctxt "game_options"
+msgid "Reduces wobbly polygons & warping textures."
+msgstr "Уменьшает шатание полигонов и деформацию текстур."
+
+#. TRANSLATION: libretro/swanstation, duckstation
+msgctxt "game_options"
+msgid "ENABLE PGXP CORRECTIONS"
+msgstr "ВКЛЮЧИТЬ PGXP КОРРЕКЦИЮ"
+
+#. TRANSLATION: libretro/swanstation, libretro/mame, libretro/mame, duckstation, duckstation, ...
+msgctxt "game_options"
+msgid "Enabled (Default)"
+msgstr "Включено (по умолчанию)"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
@@ -4448,11 +4463,6 @@ msgstr "Включить или отключить сохранение высо
 msgctxt "game_options"
 msgid "HIGH SCORE PLUGIN"
 msgstr "ПЛАГИН РЕКОРДОВ"
-
-#. TRANSLATION: libretro/mame, libretro/mame, duckstation, duckstation, flycast, ...
-msgctxt "game_options"
-msgid "Enabled (Default)"
-msgstr "Включено (по умолчанию)"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
@@ -9991,16 +10001,6 @@ msgstr "DualShock / Xbox Тип"
 msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "NeGcon (вибрация)"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Reduces wobbly polygons & warping textures."
-msgstr "Уменьшает шатание полигонов и деформацию текстур."
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "ENABLE PGXP CORRECTIONS"
-msgstr "ВКЛЮЧИТЬ PGXP КОРРЕКЦИЮ"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -15879,6 +15879,46 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
+#. TRANSLATION: mame.mame.keys
+msgctxt "keys_files"
+msgid "Exit Emulator"
+msgstr ""
+
+#. TRANSLATION: mame.mame.keys
+msgctxt "keys_files"
+msgid "RetroArch Menu"
+msgstr ""
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Load State"
+msgstr "Загрузка"
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Save State"
+msgstr "Сохранение"
+
+#. TRANSLATION: mame.mame.keys, 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "Скриншот"
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Fast Forward"
+msgstr "Быстрая перемотка"
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot +"
+msgstr "Слот +"
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot -"
+msgstr "Слот -"
+
 #. TRANSLATION: switch.ryujinx.keys
 msgctxt "keys_files"
 msgid "Emulator Config"
@@ -16159,11 +16199,6 @@ msgctxt "keys_files"
 msgid "Toggle Screen Layout"
 msgstr "Переключить расположение экранов"
 
-#. TRANSLATION: 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Скриншот"
-
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
@@ -16189,16 +16224,6 @@ msgctxt "keys_files"
 msgid "Exit Duckstation"
 msgstr "Выйти из DuckStation"
 
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Load State"
-msgstr "Загрузка"
-
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Save State"
-msgstr "Сохранение"
-
 #. TRANSLATION: psx.duckstation.keys
 msgctxt "keys_files"
 msgid "Open DuckStation Quick Menu"
@@ -16211,16 +16236,6 @@ msgstr "Перезапустить игру"
 
 #. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
-msgid "Slot -"
-msgstr "Слот -"
-
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot +"
-msgstr "Слот +"
-
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
 msgid "Rewind"
 msgstr "Перемотка"
 
@@ -16228,11 +16243,6 @@ msgstr "Перемотка"
 msgctxt "keys_files"
 msgid "Next Disc (m3u)"
 msgstr "Следующий диск (m3u)"
-
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Быстрая перемотка"
 
 #. TRANSLATION: dreamcast.redream.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, dreamcast.flycast.keys, ...
 msgctxt "keys_files"
