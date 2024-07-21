@@ -17032,14 +17032,6 @@ msgstr "Guardado rápido"
 #~ msgstr "Color"
 
 #~ msgctxt "game_options"
-#~ msgid "Enable or disable monsters in battle."
-#~ msgstr "Activa o desactiva monstruos en la batalla."
-
-#~ msgctxt "game_options"
-#~ msgid "MONSTERS"
-#~ msgstr "MONSTRUOS"
-
-#~ msgctxt "game_options"
 #~ msgid "Emulate a pak in the controller expansion port."
 #~ msgstr "Emula un pak en el puerto de expansión del mando."
 
@@ -17521,6 +17513,14 @@ msgstr "Guardado rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rápido"
+
+#~ msgctxt "game_options"
+#~ msgid "Enable or disable monsters in battle."
+#~ msgstr "Activa o desactiva monstruos en la batalla."
+
+#~ msgctxt "game_options"
+#~ msgid "MONSTERS"
+#~ msgstr "MONSTRUOS"
 
 #~ msgctxt "game_options"
 #~ msgid "Manual (Default)"
