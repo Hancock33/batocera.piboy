@@ -7,6 +7,8 @@ Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|8d6a49598c8535b1
 Ports|[box64](http://github.com/ptitseb/box64)|43de5afcf6b7803c08066bdce2214de901b8dbe9|Jul 21, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|e35f33c9595437e5ce600bf8b476edb2e94c1c99|Jul 21, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|36cfa39997f0dde3f344dc3065b0d202d774a206|Jul 21, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240721|Jul 21, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240721|Jul 21, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|24544bd5844b4742d477f2d7aba9ce444c4ab2af|Jul 21, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|528ffe6a6d5eff14e40f2d8261bd2c0125647a86|Jul 21, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|7a469fb481d9bdb62923868f1acdff65d9058e6e|Jul 21, 2024
@@ -25,8 +27,6 @@ Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|32ec66c53ee32dea
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|b366b97142044ea355d2fe4d07c049e31ce04b3e|Jul 20, 2024
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|50aa833e885e2132bad1e919ba2ebe687cf64b91|Jul 20, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|3c45d78a956018d58a784dcd2ac34b2f6be6ec20|Jul 20, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240720|Jul 20, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240720|Jul 20, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|f671018700e1e71ad2dda9ccdbf3fe62bb9efb49|Jul 20, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|58f5bbe6e20ac3134c290bcd016a239279e6b925|Jul 20, 2024
 Ports|[xatrix](http://github.com/yquake2/xatrix)|b2e6790c8ff8af0bbaa069e597661198df9858d8|Jul 20, 2024
