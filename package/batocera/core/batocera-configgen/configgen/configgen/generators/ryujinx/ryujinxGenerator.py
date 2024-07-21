@@ -221,6 +221,9 @@ class RyujinxGenerator(Generator):
             "XDG_CACHE_HOME":batoceraFiles.CACHE, \
             "QT_QPA_PLATFORM":"xcb", \
             "LD_LIBRARY_PATH": "/usr/bin/ryujinx/:/usr/lib",
+            "DOTNET_SYSTEM_GLOBALIZATION_INVARIANT": "1",
+            "DOTNET_EnableAlternateStackCheck": "1",
+            "DOTNET_SYSTEM_GLOBALIZATION_PREDEFINED_CULTURES_ONLY": "false",
             "SDL_JOYSTICK_HIDAPI": "0",
             "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)})
 
