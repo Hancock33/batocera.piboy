@@ -2160,7 +2160,7 @@ msgstr ""
 "Nemusí fungovat dobře na veškerém hardwaru. Pokud je podporován, "
 "upřednostňuje se hybridní systém."
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/genesisplusgx, libretro/genesisplusgx, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/swanstation, libretro/flycast, libretro/genesisplusgx, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "POKROČILÉ MOŽNOSTI"
@@ -2903,6 +2903,21 @@ msgstr "Přesnější emulace, ale pomalejší."
 msgctxt "game_options"
 msgid "USE SOFTWARE RENDERING"
 msgstr "POUŽÍT VYKRESLOVACÍ SOFTWARE"
+
+#. TRANSLATION: libretro/swanstation, duckstation
+msgctxt "game_options"
+msgid "Reduces wobbly polygons & warping textures."
+msgstr "Omezuje rozviklané polygony a deformující se textury."
+
+#. TRANSLATION: libretro/swanstation, duckstation
+msgctxt "game_options"
+msgid "ENABLE PGXP CORRECTIONS"
+msgstr "POVOLIT OPRAVY PGXP"
+
+#. TRANSLATION: libretro/swanstation, libretro/mame, libretro/mame, duckstation, duckstation, ...
+msgctxt "game_options"
+msgid "Enabled (Default)"
+msgstr "Povoleno (Výchozí)"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
@@ -4439,11 +4454,6 @@ msgstr "Povolení nebo zakázání ukládání vysokého skóre"
 msgctxt "game_options"
 msgid "HIGH SCORE PLUGIN"
 msgstr "PLUGIN PRO VYSOKÉ SKÓRE"
-
-#. TRANSLATION: libretro/mame, libretro/mame, duckstation, duckstation, flycast, ...
-msgctxt "game_options"
-msgid "Enabled (Default)"
-msgstr "Povoleno (Výchozí)"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
@@ -9972,16 +9982,6 @@ msgstr "DualShock / Typ Xbox"
 msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "NeGcon (Vibrace)"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Reduces wobbly polygons & warping textures."
-msgstr "Omezuje rozviklané polygony a deformující se textury."
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "ENABLE PGXP CORRECTIONS"
-msgstr "POVOLIT OPRAVY PGXP"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -15817,6 +15817,46 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
+#. TRANSLATION: mame.mame.keys
+msgctxt "keys_files"
+msgid "Exit Emulator"
+msgstr ""
+
+#. TRANSLATION: mame.mame.keys
+msgctxt "keys_files"
+msgid "RetroArch Menu"
+msgstr ""
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Load State"
+msgstr "Načíst pozici"
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Save State"
+msgstr "Uložit pozici"
+
+#. TRANSLATION: mame.mame.keys, 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "Snímek obrazovky"
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Fast Forward"
+msgstr "Rychle vpřed"
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot +"
+msgstr "Slot +"
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot -"
+msgstr "Slot -"
+
 #. TRANSLATION: switch.ryujinx.keys
 msgctxt "keys_files"
 msgid "Emulator Config"
@@ -16097,11 +16137,6 @@ msgctxt "keys_files"
 msgid "Toggle Screen Layout"
 msgstr "Přepínání rozložení obrazovky"
 
-#. TRANSLATION: 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Snímek obrazovky"
-
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
@@ -16127,16 +16162,6 @@ msgctxt "keys_files"
 msgid "Exit Duckstation"
 msgstr "Odchod z Duckstation"
 
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Load State"
-msgstr "Načíst pozici"
-
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Save State"
-msgstr "Uložit pozici"
-
 #. TRANSLATION: psx.duckstation.keys
 msgctxt "keys_files"
 msgid "Open DuckStation Quick Menu"
@@ -16149,16 +16174,6 @@ msgstr "Restart hry"
 
 #. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
-msgid "Slot -"
-msgstr "Slot -"
-
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot +"
-msgstr "Slot +"
-
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
 msgid "Rewind"
 msgstr "Přetočit"
 
@@ -16166,11 +16181,6 @@ msgstr "Přetočit"
 msgctxt "keys_files"
 msgid "Next Disc (m3u)"
 msgstr "Další disk (m3u)"
-
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Rychle vpřed"
 
 #. TRANSLATION: dreamcast.redream.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, dreamcast.flycast.keys, ...
 msgctxt "keys_files"
