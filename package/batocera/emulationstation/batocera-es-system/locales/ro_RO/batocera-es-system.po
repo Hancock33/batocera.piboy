@@ -16995,14 +16995,6 @@ msgstr "Salvare rapidă"
 #~ msgstr "Culoare"
 
 #~ msgctxt "game_options"
-#~ msgid "Enable or disable monsters in battle."
-#~ msgstr "Activează sau dezactivează monștrii în bătălie."
-
-#~ msgctxt "game_options"
-#~ msgid "MONSTERS"
-#~ msgstr "MONȘTRII"
-
-#~ msgctxt "game_options"
 #~ msgid "Emulate a pak in the controller expansion port."
 #~ msgstr "Emulează un pak în portul de expansiune al controlerului."
 
@@ -17477,3 +17469,11 @@ msgstr "Salvare rapidă"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Derulare rapidă"
+
+#~ msgctxt "game_options"
+#~ msgid "Enable or disable monsters in battle."
+#~ msgstr "Activează sau dezactivează monștrii în bătălie."
+
+#~ msgctxt "game_options"
+#~ msgid "MONSTERS"
+#~ msgstr "MONȘTRII"

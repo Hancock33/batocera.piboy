@@ -16983,14 +16983,6 @@ msgstr "Gardado rápido"
 #~ msgstr "Cor"
 
 #~ msgctxt "game_options"
-#~ msgid "Enable or disable monsters in battle."
-#~ msgstr "Activa ou desactiva os monstros na batalla."
-
-#~ msgctxt "game_options"
-#~ msgid "MONSTERS"
-#~ msgstr "MONSTROS"
-
-#~ msgctxt "game_options"
 #~ msgid "Emulate a pak in the controller expansion port."
 #~ msgstr "Emula un pak no porto de expansión do mando."
 
@@ -17093,14 +17085,6 @@ msgstr "Gardado rápido"
 #~ msgstr "5 Sideway Wiimote"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use with the stretch aspect ratio and adjust joystick sensitivity as "
-#~ "required."
-#~ msgstr ""
-#~ "Use a relación de aspecto estirable e axuste a sensibilidade do joystick "
-#~ "segundo sexa necesario."
-
-#~ msgctxt "game_options"
 #~ msgid "Change the Gamecube system language."
 #~ msgstr "Cambia a lingua do sistema Gamecube."
 
@@ -17142,29 +17126,6 @@ msgstr "Gardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "MOUSE AS WIIMOTE POINTER"
 #~ msgstr "RATO COMO PUNTEIRO DE WIIMOTE"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Compile shaders on next launch of game (one time). Reduces micro-freezes."
-#~ msgstr ""
-#~ "Compila sombreadores no próximo lanzamento do xogo (unha vez). Reduce as "
-#~ "microconxelacións."
-
-#~ msgctxt "game_options"
-#~ msgid "Off (default)"
-#~ msgstr "Desactivado (predeterminado)"
-
-#~ msgctxt "game_options"
-#~ msgid "Toggle MSAA/SSAA. Depends on anti-aliasing being enabled."
-#~ msgstr "Alterna MSAA/SSAA. Depende de que o anti-aliasing estea activado."
-
-#~ msgctxt "game_options"
-#~ msgid "MSAA (default)"
-#~ msgstr "MSAA (predeterminado)"
-
-#~ msgctxt "game_options"
-#~ msgid "SSAA"
-#~ msgstr "SSAA"
 
 #~ msgctxt "game_options"
 #~ msgid "Set joystick deadzone."
@@ -17284,17 +17245,6 @@ msgstr "Gardado rápido"
 #~ msgstr ""
 #~ "Activa o salto de fotogramas automático para mellorar o rendemento de "
 #~ "sistemas de gama baixa."
-
-#, c-format
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "For playing driving games with a game pad, it is sometimes a good idea to "
-#~ "use a value larger than 100% so that the steering feels less sensitive on "
-#~ "a thumbstick."
-#~ msgstr ""
-#~ "Para xogar con xogos de condución cun mando, ás veces é unha boa idea "
-#~ "utilizar un valor superior a 100% so para que a dirección sexa menos "
-#~ "sensible nun stick."
 
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
@@ -17508,3 +17458,53 @@ msgstr "Gardado rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rápido"
+
+#~ msgctxt "game_options"
+#~ msgid "Enable or disable monsters in battle."
+#~ msgstr "Activa ou desactiva os monstros na batalla."
+
+#~ msgctxt "game_options"
+#~ msgid "MONSTERS"
+#~ msgstr "MONSTROS"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use with the stretch aspect ratio and adjust joystick sensitivity as "
+#~ "required."
+#~ msgstr ""
+#~ "Use a relación de aspecto estirable e axuste a sensibilidade do joystick "
+#~ "segundo sexa necesario."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Compile shaders on next launch of game (one time). Reduces micro-freezes."
+#~ msgstr ""
+#~ "Compila sombreadores no próximo lanzamento do xogo (unha vez). Reduce as "
+#~ "microconxelacións."
+
+#~ msgctxt "game_options"
+#~ msgid "Off (default)"
+#~ msgstr "Desactivado (predeterminado)"
+
+#~ msgctxt "game_options"
+#~ msgid "Toggle MSAA/SSAA. Depends on anti-aliasing being enabled."
+#~ msgstr "Alterna MSAA/SSAA. Depende de que o anti-aliasing estea activado."
+
+#~ msgctxt "game_options"
+#~ msgid "MSAA (default)"
+#~ msgstr "MSAA (predeterminado)"
+
+#~ msgctxt "game_options"
+#~ msgid "SSAA"
+#~ msgstr "SSAA"
+
+#, c-format
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "For playing driving games with a game pad, it is sometimes a good idea to "
+#~ "use a value larger than 100% so that the steering feels less sensitive on "
+#~ "a thumbstick."
+#~ msgstr ""
+#~ "Para xogar con xogos de condución cun mando, ás veces é unha boa idea "
+#~ "utilizar un valor superior a 100% so para que a dirección sexa menos "
+#~ "sensible nun stick."
