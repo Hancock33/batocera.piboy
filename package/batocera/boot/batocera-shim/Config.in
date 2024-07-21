@@ -7,7 +7,7 @@ config BR2_PACKAGE_BATOCERA_SHIM_ARCH_SUPPORTS
 	# it includes gnu-efi
 	depends on BR2_PACKAGE_GNU_EFI_ARCH_SUPPORTS
 
-config BR2_PACKAGE_BATOCERA_SHIM
+	config BR2_PACKAGE_BATOCERA_SHIM
 	bool "batocera shim"
 	default n
 	depends on BR2_PACKAGE_BATOCERA_SHIM_ARCH_SUPPORTS

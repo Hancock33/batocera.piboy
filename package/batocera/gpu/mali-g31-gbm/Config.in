@@ -8,13 +8,13 @@ config BR2_PACKAGE_MALI_G31_GBM
 
 if BR2_PACKAGE_MALI_G31_GBM
 	config BR2_PACKAGE_PROVIDES_LIBEGL
-		default "mali-g31-gbm"
+	default "mali-g31-gbm"
 
 	config BR2_PACKAGE_PROVIDES_LIBGLES
-		default "mali-g31-gbm"
+	default "mali-g31-gbm"
 
 	config BR2_PACKAGE_PROVIDES_LIBMALI
-		default "mali-g31-gbm"
+	default "mali-g31-gbm"
 endif
 
 comment "mali-g31-gbm"

@@ -2145,7 +2145,7 @@ msgid ""
 msgstr ""
 "うまく機能しない場合があります。対応している場合は、ハイブリッドを推奨します"
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/genesisplusgx, libretro/genesisplusgx, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/swanstation, libretro/flycast, libretro/genesisplusgx, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "詳細設定"
@@ -2888,6 +2888,21 @@ msgstr "より正確なエミュレーションですが、速度は遅くなり
 msgctxt "game_options"
 msgid "USE SOFTWARE RENDERING"
 msgstr "ソフトウェアレンダリングを使用"
+
+#. TRANSLATION: libretro/swanstation, duckstation
+msgctxt "game_options"
+msgid "Reduces wobbly polygons & warping textures."
+msgstr "ポリゴンのぐらつきやテクスチャの歪みを軽減します"
+
+#. TRANSLATION: libretro/swanstation, duckstation
+msgctxt "game_options"
+msgid "ENABLE PGXP CORRECTIONS"
+msgstr "PGXP 修正を有効"
+
+#. TRANSLATION: libretro/swanstation, libretro/mame, libretro/mame, duckstation, duckstation, ...
+msgctxt "game_options"
+msgid "Enabled (Default)"
+msgstr "使用する (標準)"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
@@ -4418,11 +4433,6 @@ msgstr "HIGH SCOREの保存を有効/無効にします"
 msgctxt "game_options"
 msgid "HIGH SCORE PLUGIN"
 msgstr "HIGH SCORE プラグイン"
-
-#. TRANSLATION: libretro/mame, libretro/mame, duckstation, duckstation, flycast, ...
-msgctxt "game_options"
-msgid "Enabled (Default)"
-msgstr "使用する (標準)"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
@@ -9934,16 +9944,6 @@ msgstr "デュアルショック / Xbox タイプ"
 msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "ネジコン(ナムコ)(振動有)"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Reduces wobbly polygons & warping textures."
-msgstr "ポリゴンのぐらつきやテクスチャの歪みを軽減します"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "ENABLE PGXP CORRECTIONS"
-msgstr "PGXP 修正を有効"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -15763,6 +15763,46 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
+#. TRANSLATION: mame.mame.keys
+msgctxt "keys_files"
+msgid "Exit Emulator"
+msgstr ""
+
+#. TRANSLATION: mame.mame.keys
+msgctxt "keys_files"
+msgid "RetroArch Menu"
+msgstr ""
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Load State"
+msgstr "ステートロード"
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Save State"
+msgstr "ステートセーブ"
+
+#. TRANSLATION: mame.mame.keys, 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "スクリーンショット"
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Fast Forward"
+msgstr "早送り"
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot +"
+msgstr "スロット +"
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot -"
+msgstr "スロット -"
+
 #. TRANSLATION: switch.ryujinx.keys
 msgctxt "keys_files"
 msgid "Emulator Config"
@@ -16043,11 +16083,6 @@ msgctxt "keys_files"
 msgid "Toggle Screen Layout"
 msgstr "画面レイアウトの切り替え"
 
-#. TRANSLATION: 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "スクリーンショット"
-
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
@@ -16073,16 +16108,6 @@ msgctxt "keys_files"
 msgid "Exit Duckstation"
 msgstr "Duckstation を終了"
 
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Load State"
-msgstr "ステートロード"
-
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Save State"
-msgstr "ステートセーブ"
-
 #. TRANSLATION: psx.duckstation.keys
 msgctxt "keys_files"
 msgid "Open DuckStation Quick Menu"
@@ -16095,16 +16120,6 @@ msgstr "ゲームを再開"
 
 #. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
-msgid "Slot -"
-msgstr "スロット -"
-
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot +"
-msgstr "スロット +"
-
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
 msgid "Rewind"
 msgstr "巻き戻し"
 
@@ -16112,11 +16127,6 @@ msgstr "巻き戻し"
 msgctxt "keys_files"
 msgid "Next Disc (m3u)"
 msgstr "次のディスク (m3u)"
-
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "早送り"
 
 #. TRANSLATION: dreamcast.redream.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, dreamcast.flycast.keys, ...
 msgctxt "keys_files"

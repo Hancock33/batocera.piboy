@@ -556,7 +556,7 @@ libretro:
                 choices:
                     #"None":          0
                     "Saturn Pad":    1
-                    "Saturn 3D Pad": 5
+                    "Saturn 3D Pad": 261
           controller2_saturn:
                 group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 TYPE
@@ -564,7 +564,7 @@ libretro:
                 choices:
                     #"None":          0
                     "Saturn Pad":    1
-                    "Saturn 3D Pad": 5
+                    "Saturn 3D Pad": 261
     fmsx:
       features: [padtokeyboard, cheevos, netplay]
       shared: [autosave, rewind]
@@ -1557,6 +1557,13 @@ libretro:
                     "7x (2240x1680)": 7
                     "8x (2560x1920)": 8
                     "9x (2880x2160)": 9
+            swanstation_pgxp:
+                group: ADVANCED OPTIONS
+                prompt: ENABLE PGXP CORRECTIONS
+                description: Reduces wobbly polygons & warping textures.
+                choices:
+                    "Disabled":          "false"
+                    "Enabled (Default)": "true"
             swanstation_antialiasing:
                 prompt:      ANTI-ALIASING (MSAA/SSAA)
                 description: Enhancement. Smooth out jagged edges on 3D object polygons.

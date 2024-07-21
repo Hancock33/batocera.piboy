@@ -1,7 +1,7 @@
 comment "r8168 needs a Linux kernel to be built"
 	depends on !BR2_LINUX_KERNEL
 
-config BR2_PACKAGE_R8168
+	config BR2_PACKAGE_R8168
 	bool "r8168"
 	depends on BR2_LINUX_KERNEL
 

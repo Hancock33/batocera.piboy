@@ -10,5 +10,5 @@ config BR2_PACKAGE_GLSLANG
 
 	  https://github.com/KhronosGroup/glslang
 
-config BR2_PACKAGE_HOST_GLSLANG
+	config BR2_PACKAGE_HOST_GLSLANG
 	bool "host-glslang"

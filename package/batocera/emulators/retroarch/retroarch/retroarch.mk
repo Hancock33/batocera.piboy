@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Jul 16, 2024
-RETROARCH_VERSION = b5024348390890b04af406503219c073ed28eeff
+# Version: Commits on Jul 20, 2024
+RETROARCH_VERSION = 3c45d78a956018d58a784dcd2ac34b2f6be6ec20
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts
@@ -122,6 +122,10 @@ endif
 
 ifeq ($(BR2_PACKAGE_ROCKCHIP_RGA),y)
 	RETROARCH_DEPENDENCIES += rockchip-rga
+endif
+
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3326),y)
+     RETROARCH_CONF_OPTS += --enable-odroidgo2
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)

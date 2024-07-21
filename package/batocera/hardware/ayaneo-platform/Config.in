@@ -1,7 +1,7 @@
 comment "ayaneo-platform needs a Linux kernel to be built"
 	depends on !BR2_LINUX_KERNEL
 
-config BR2_PACKAGE_AYANEO_PLATFORM
+	config BR2_PACKAGE_AYANEO_PLATFORM
 	bool "ayaneo-platform"
 	depends on BR2_LINUX_KERNEL
 
