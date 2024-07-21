@@ -2151,7 +2151,7 @@ msgstr ""
 "Baliteke hardware guztietan ez funtzionatzea. Hibridoa nahiago da onartzen "
 "denean."
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/genesisplusgx, libretro/genesisplusgx, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/swanstation, libretro/flycast, libretro/genesisplusgx, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "AUKERA AURRERATUAK"
@@ -2895,6 +2895,21 @@ msgstr "Emulazio zehatzagoa, baino mantsoagoa"
 msgctxt "game_options"
 msgid "USE SOFTWARE RENDERING"
 msgstr "ERABILI SOFTEARE RENDERING-A"
+
+#. TRANSLATION: libretro/swanstation, duckstation
+msgctxt "game_options"
+msgid "Reduces wobbly polygons & warping textures."
+msgstr "Poligono dardarti & deformatzen diren testurak gutxitzen ditu."
+
+#. TRANSLATION: libretro/swanstation, duckstation
+msgctxt "game_options"
+msgid "ENABLE PGXP CORRECTIONS"
+msgstr "GAITU PGXP ZUZENKETAK"
+
+#. TRANSLATION: libretro/swanstation, libretro/mame, libretro/mame, duckstation, duckstation, ...
+msgctxt "game_options"
+msgid "Enabled (Default)"
+msgstr "Gaituta (Defektuz)"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
@@ -4434,11 +4449,6 @@ msgstr "Gaitu edo desgaitul puntuazio altuenen gordetzea"
 msgctxt "game_options"
 msgid "HIGH SCORE PLUGIN"
 msgstr "PUNTUAZIO ALTUENEN PLUGIN-A"
-
-#. TRANSLATION: libretro/mame, libretro/mame, duckstation, duckstation, flycast, ...
-msgctxt "game_options"
-msgid "Enabled (Default)"
-msgstr "Gaituta (Defektuz)"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
@@ -9979,16 +9989,6 @@ msgstr "DualShock / Xbox Mota"
 msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "NeGcon (Rumble)"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Reduces wobbly polygons & warping textures."
-msgstr "Poligono dardarti & deformatzen diren testurak gutxitzen ditu."
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "ENABLE PGXP CORRECTIONS"
-msgstr "GAITU PGXP ZUZENKETAK"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -15792,6 +15792,46 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
+#. TRANSLATION: mame.mame.keys
+msgctxt "keys_files"
+msgid "Exit Emulator"
+msgstr ""
+
+#. TRANSLATION: mame.mame.keys
+msgctxt "keys_files"
+msgid "RetroArch Menu"
+msgstr ""
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Load State"
+msgstr "Kargatu Egoera"
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Save State"
+msgstr "Gorde Egoera"
+
+#. TRANSLATION: mame.mame.keys, 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "Pantaila argazkia"
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Fast Forward"
+msgstr "Azkar aurreratu"
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot +"
+msgstr "Zirrikitua +"
+
+#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot -"
+msgstr "Zirrikitua -"
+
 #. TRANSLATION: switch.ryujinx.keys
 msgctxt "keys_files"
 msgid "Emulator Config"
@@ -16072,11 +16112,6 @@ msgctxt "keys_files"
 msgid "Toggle Screen Layout"
 msgstr "Aldatu Pantaila antolaketa"
 
-#. TRANSLATION: 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Pantaila argazkia"
-
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
@@ -16102,16 +16137,6 @@ msgctxt "keys_files"
 msgid "Exit Duckstation"
 msgstr "Irten Duckstation-etik"
 
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Load State"
-msgstr "Kargatu Egoera"
-
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Save State"
-msgstr "Gorde Egoera"
-
 #. TRANSLATION: psx.duckstation.keys
 msgctxt "keys_files"
 msgid "Open DuckStation Quick Menu"
@@ -16124,16 +16149,6 @@ msgstr "Jokoa berhasieratu"
 
 #. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
-msgid "Slot -"
-msgstr "Zirrikitua -"
-
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot +"
-msgstr "Zirrikitua +"
-
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
 msgid "Rewind"
 msgstr "Atzera bota"
 
@@ -16141,11 +16156,6 @@ msgstr "Atzera bota"
 msgctxt "keys_files"
 msgid "Next Disc (m3u)"
 msgstr "Hurrengo diska (m3u)"
-
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Azkar aurreratu"
 
 #. TRANSLATION: dreamcast.redream.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, dreamcast.flycast.keys, ...
 msgctxt "keys_files"

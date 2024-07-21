@@ -13,13 +13,13 @@ config BR2_PACKAGE_MALI_MP400_GBM
 
 if BR2_PACKAGE_MALI_MP400_GBM
 	config BR2_PACKAGE_PROVIDES_LIBEGL
-		default "mali-mp400-gbm"
+	default "mali-mp400-gbm"
 
 	config BR2_PACKAGE_PROVIDES_LIBGLES
-		default "mali-mp400-gbm"
+	default "mali-mp400-gbm"
 
 	config BR2_PACKAGE_PROVIDES_LIBMALI
-		default "mali-mp400-gbm"
+	default "mali-mp400-gbm"
 endif
 
 comment "mali-mp400-gbm"

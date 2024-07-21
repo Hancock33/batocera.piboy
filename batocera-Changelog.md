@@ -1,4 +1,4 @@
-# 2024/07/xx - batocera.linux 40 - Swallowtail
+# 2024/08/xx - batocera.linux 40 - Swallowtail
 ### Special Notes
 Batocera now has a global battery mode option under Game Setting to determine the power mode when a handheld is unplugged.
 To potentially improve battery consumption, you can adjust the mode the handheld operates at when running on battery.
@@ -40,7 +40,7 @@ Add support for the Pironman 5 case with RPi5 devices.
   - PNX-V10 (x-input only)
   - Logitech Driving Force Pro
   - HORI Racing Wheel Overdrive (mode 2 only)
-- Dolphin: support for Retroachievements (when they are enabled)
+- Dolphin: support for Retroachievements
 - Color Computer (coco) now autoloads cassettes and disks based on MAME software lists with default fallbacks
   - uses "usage" info field in MAME software list
   - .cas/.dsk default autoload behaviors (.bas in rom basename uses CLOAD/RUN)
@@ -84,7 +84,6 @@ Add support for the Pironman 5 case with RPi5 devices.
 - Kodi green screen with RK3588 boards
 ### Changed / Improved
 - Organized dolphin ES settings.
-- RK3326 Replaced the mali-G31 driver with mesa3d
 - Amiga BIOS files now go into the bios/amiga/ subfolder
 - RPCS3 upscaling now outputs properly
 - GunCon3 default mapping (visit light gun page on official wiki)
@@ -147,7 +146,7 @@ Add support for the Pironman 5 case with RPi5 devices.
 - Fheroes2 to 1.0.13
 - PCSX2 to v1.7.5913
 - Play! & Libretro Play! to 0.66
-- Dolphin to 5.0-21774
+- Dolphin to 2407-76 (5.0 development version)
 - Libretro-Hatarib: bump to v0.3
 - Hatari to v2.5.0
 - Citra to r64e3e9f
@@ -184,16 +183,16 @@ Add support for the Pironman 5 case with RPi5 devices.
 - Libretro-MrBoom to May 17, 2024 build
 - Libretro-Picodrive to Mar 27, 2024 build
 ### System
-- ARM mainline kernel to 6.6.23
+- ARM mainline kernel to 6.6.27
 - Nvidia Production driver to 550.90.07
 - Nvidia Legacy driver to 470.239.06
 - Wayland Protocols to 1.33
 - Wlroots to 0.17.1
 - Sway to 1.9
-- Mesa3D to 24.1.3
-- RPi kernel to 6.6.20
+- Mesa3D to 24.1.4
+- RPi kernel to 6.6.41
 - Pipewire to 1.0.4
-- X86_64 kernel to 6.9.8
+- X86_64 kernel to 6.9.10
 - Switchres 0.220
 - Btop to 1.3.2
 - Linux firmware to 20240513

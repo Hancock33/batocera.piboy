@@ -3,12 +3,13 @@
 # vice
 #
 ################################################################################
-# Version: Commits on Dec 24, 2023
-VICE_VERSION = 3.8
+# Version: Commits on Jul 19, 2024
+VICE_VERSION = r45250
 VICE_SOURCE = vice-$(VICE_VERSION).tar.gz
-VICE_SITE = https://sourceforge.net/projects/vice-emu/files/releases
+VICE_SITE = $(call github,VICE-Team,svn-mirror,$(VICE_VERSION))
 VICE_LICENSE = GPLv2
 VICE_DEPENDENCIES = ffmpeg sdl2 libpng giflib zlib lame alsa-lib jpeg host-xa host-dos2unix sdl2_image libcurl
+VICE_SUBDIR  = vice
 
 VICE_CONF_OPTS += --disable-option-checking
 VICE_CONF_OPTS += --disable-pdf-docs
@@ -34,5 +35,11 @@ define VICE_POST_PROCESS
 endef
 
 VICE_POST_INSTALL_TARGET_HOOKS += VICE_POST_PROCESS
+
+define VICE_SRC_MOVE
+	cd $(@D)/vice && ./autogen.sh
+endef
+
+VICE_POST_EXTRACT_HOOKS += VICE_SRC_MOVE
 
 $(eval $(autotools-package))

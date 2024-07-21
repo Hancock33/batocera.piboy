@@ -19,10 +19,10 @@
 if BR2_PACKAGE_IMG_MESA3D
 
 	# Some Gallium driver needs libelf when built with LLVM support
-config BR2_PACKAGE_IMG_MESA3D_NEEDS_ELFUTILS
+	config BR2_PACKAGE_IMG_MESA3D_NEEDS_ELFUTILS
 	bool
 
-config BR2_PACKAGE_IMG_MESA3D_LLVM
+	config BR2_PACKAGE_IMG_MESA3D_LLVM
 	bool "llvm support"
 	depends on BR2_PACKAGE_LLVM_ARCH_SUPPORTS
 	depends on BR2_TOOLCHAIN_GCC_AT_LEAST_5
@@ -47,7 +47,7 @@ comment "llvm support needs a toolchain not affected by GCC bug 64735"
 
 	# clang and libclc dependencies are satisfied by
 	# BR2_PACKAGE_IMG_MESA3D_LLVM
-config BR2_PACKAGE_IMG_MESA3D_OPENCL
+	config BR2_PACKAGE_IMG_MESA3D_OPENCL
 	bool "OpenCL support"
 	depends on BR2_PACKAGE_IMG_MESA3D_LLVM
 	depends on BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_R600 || \
@@ -58,29 +58,29 @@ config BR2_PACKAGE_IMG_MESA3D_OPENCL
 	select BR2_PACKAGE_HAS_LIBOPENCL
 
 	# inform the .mk file of gallium, dri, dri3 or vulkan driver selection
-config BR2_PACKAGE_IMG_MESA3D_DRI3
+	config BR2_PACKAGE_IMG_MESA3D_DRI3
 	bool
 	select BR2_PACKAGE_XLIB_LIBXSHMFENCE
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER
 	bool
 	select BR2_PACKAGE_IMG_MESA3D_DRIVER
 
-config BR2_PACKAGE_IMG_MESA3D_VULKAN_DRIVER
+	config BR2_PACKAGE_IMG_MESA3D_VULKAN_DRIVER
 	bool
 	select BR2_PACKAGE_IMG_MESA3D_DRIVER
 
-config BR2_PACKAGE_IMG_MESA3D_DRIVER
+	config BR2_PACKAGE_IMG_MESA3D_DRIVER
 	bool
 
 	# Gallium xa state tracker.
 	# Quote from mesa3d meson.build: "XA state tracker requires at least
 	# one of the following gallium drivers: nouveau, freedreno, i915, svga.
-config BR2_PACKAGE_IMG_MESA3D_NEEDS_XA
+	config BR2_PACKAGE_IMG_MESA3D_NEEDS_XA
 	bool
 
 	# OpenGL GLX and Gallium VDPAU both needs X11
-config BR2_PACKAGE_IMG_MESA3D_NEEDS_X11
+	config BR2_PACKAGE_IMG_MESA3D_NEEDS_X11
 	bool
 	depends on BR2_PACKAGE_XORG7
 	select BR2_PACKAGE_LIBXCB
@@ -94,7 +94,7 @@ config BR2_PACKAGE_IMG_MESA3D_NEEDS_X11
 
 comment "Gallium drivers"
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_CROCUS
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_CROCUS
 	bool "Gallium crocus driver"
 	depends on BR2_i386 || BR2_x86_64
 	select BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER
@@ -102,7 +102,7 @@ config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_CROCUS
 	help
 	  Mesa driver for gen4-7 Intel GPUs.
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_ETNAVIV
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_ETNAVIV
 	bool "Gallium Etnaviv driver"
 	depends on (BR2_TOOLCHAIN_HAS_SYNC_4 && !BR2_RISCV_32) || !BR2_PACKAGE_XORG7 # libxshmfence
 	select BR2_PACKAGE_IMG_MESA3D_DRI3 if BR2_PACKAGE_XORG7
@@ -112,7 +112,7 @@ config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_ETNAVIV
 	help
 	  Mesa driver for Vivante GPUs.
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_FREEDRENO
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_FREEDRENO
 	bool "Gallium freedreno driver"
 	depends on BR2_arm || BR2_aarch64 || BR2_aarch64_be # libdrm-freedreno
 	# libdrm's freedreno option depends on LIBDRM_HAS_ATOMIC. Propagating
@@ -127,7 +127,7 @@ config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_FREEDRENO
 	help
 	  Mesa driver for Freedreno GPUs.
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_I915
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_I915
 	bool "Gallium i915 driver"
 	depends on BR2_i386 || BR2_x86_64
 	select BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER
@@ -136,7 +136,7 @@ config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_I915
 	help
 	  Support for i915-based Intel GPUs.
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_IRIS
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_IRIS
 	bool "Gallium iris driver"
 	depends on BR2_i386 || BR2_x86_64
 	select BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER
@@ -144,7 +144,7 @@ config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_IRIS
 	help
 	  Mesa driver for iris-based Intel GPUs.
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_LIMA
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_LIMA
 	bool "Gallium lima driver"
 	depends on (BR2_TOOLCHAIN_HAS_SYNC_4 && !BR2_RISCV_32) || !BR2_PACKAGE_XORG7 # libxshmfence
 	select BR2_PACKAGE_IMG_MESA3D_DRI3 if BR2_PACKAGE_XORG7
@@ -153,7 +153,7 @@ config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_LIMA
 	help
 	  Mesa driver for ARM Mali Utgard GPUs.
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_NOUVEAU
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_NOUVEAU
 	bool "Gallium nouveau driver"
 	select BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER
 	select BR2_PACKAGE_LIBDRM_NOUVEAU
@@ -163,7 +163,7 @@ config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_NOUVEAU
 	help
 	  Supports all Nvidia GPUs.
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_PANFROST
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_PANFROST
 	bool "Gallium panfrost driver"
 	depends on (BR2_TOOLCHAIN_HAS_SYNC_4 && !BR2_RISCV_32) || !BR2_PACKAGE_XORG7 # libxshmfence
 	select BR2_PACKAGE_IMG_MESA3D_DRI3 if BR2_PACKAGE_XORG7
@@ -172,7 +172,7 @@ config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_PANFROST
 	help
 	  Mesa driver for ARM Mali Midgard and Bifrost GPUs.
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_R300
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_R300
 	bool "Gallium Radeon R300 driver"
 	depends on BR2_i386 || BR2_x86_64
 	# lbdrm's radeon option depends on LIBDRM_HAS_ATOMIC. Propagating
@@ -186,7 +186,7 @@ config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_R300
 	help
 	  Driver for ATI/AMD Radeon R300/R400/R500 GPUs.
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_R600
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_R600
 	bool "Gallium Radeon R600 driver"
 	depends on BR2_i386 || BR2_x86_64
 	depends on !BR2_PACKAGE_IMG_MESA3D_LLVM || \
@@ -207,7 +207,7 @@ comment "R600 driver needs a uClibc or glibc toolchain when llvm is enabled"
 	depends on BR2_PACKAGE_IMG_MESA3D_LLVM
 	depends on !(BR2_TOOLCHAIN_USES_UCLIBC || BR2_TOOLCHAIN_USES_GLIBC)
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_RADEONSI
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_RADEONSI
 	bool "Gallium Radeon SI driver"
 	depends on BR2_USE_MMU # libdrm
 	depends on BR2_i386 || BR2_x86_64
@@ -230,7 +230,7 @@ comment "Radeon SI driver needs a uClibc or glibc toolchain"
 	depends on BR2_PACKAGE_IMG_MESA3D_LLVM
 	depends on !(BR2_TOOLCHAIN_USES_UCLIBC || BR2_TOOLCHAIN_USES_GLIBC)
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_SVGA
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_SVGA
 	bool "Gallium vmware svga driver"
 	depends on BR2_i386 || BR2_x86_64
 	select BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER
@@ -240,7 +240,7 @@ config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_SVGA
 	help
 	  This is a virtual GPU driver for VMWare virtual machines.
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_SWRAST
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_SWRAST
 	bool "Gallium swrast driver"
 	select BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER
 
@@ -248,7 +248,7 @@ config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_SWRAST
 	  This is a software opengl implementation using the Gallium3D
 	  infrastructure.
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_TEGRA
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_TEGRA
 	bool "Gallium tegra driver"
 	select BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER
 	select BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_NOUVEAU
@@ -258,7 +258,7 @@ config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_TEGRA
 	help
 	  Adds support for Nvidia Tegra GPUs, requires nouveau.
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_V3D
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_V3D
 	bool "Gallium v3d driver"
 	depends on (BR2_arm && BR2_ARM_CPU_HAS_NEON) || BR2_aarch64
 	depends on BR2_TOOLCHAIN_HAS_SYNC_4 || !BR2_PACKAGE_XORG7 # libxshmfence
@@ -275,7 +275,7 @@ config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_V3D
 	  - CONFIG_DRM_V3D
 	  - CONFIG_DRM_VC4
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_VC4
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_VC4
 	bool "Gallium vc4 driver"
 	depends on (BR2_arm && BR2_ARM_CPU_HAS_NEON) || BR2_aarch64
 	depends on BR2_TOOLCHAIN_HAS_SYNC_4 || !BR2_PACKAGE_XORG7 # libxshmfence
@@ -288,7 +288,7 @@ config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_VC4
 	  Driver for Broadcom VC4 (rpi2/3) GPUs.
 	  It requires a vanilla 4.5+ kernel with drm vc4 (open) support.
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_VIRGL
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_VIRGL
 	bool "Gallium virgl driver"
 	select BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER
 	select BR2_PACKAGE_IMG_MESA3D_OPENGL_EGL
@@ -297,7 +297,7 @@ config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_VIRGL
 	  virgl is the 3D acceleration backend for the virtio-gpu
 	  shipping with qemu.
 
-config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_PVR
+	config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_PVR
 	bool "Gallium pvr driver"
 	depends on BR2_PACKAGE_IMG_GPU_POWERVR
 	select BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER
@@ -306,7 +306,7 @@ config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_PVR
 	help
 	  pvr is the 3D acceleration backend for Imagination PowerVR GPUs
 
-config BR2_PACKAGE_IMG_MESA3D_VDPAU
+	config BR2_PACKAGE_IMG_MESA3D_VDPAU
 	bool "Gallium VDPAU state tracker"
 	depends on BR2_PACKAGE_XORG7
 	depends on BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_NOUVEAU \
@@ -327,7 +327,7 @@ comment "Gallium VDPAU state tracker needs X.org and gallium drivers r300, r600,
 	  || BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_R600 \
 	  || BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_RADEONSI)
 
-config BR2_PACKAGE_IMG_MESA3D_XVMC
+	config BR2_PACKAGE_IMG_MESA3D_XVMC
 	bool "Gallium XvMC state tracker"
 	depends on BR2_i386 || BR2_x86_64
 	depends on BR2_PACKAGE_XORG7
@@ -348,7 +348,7 @@ comment "Gallium XvMC state tracker needs X.org and gallium drivers r600 or nouv
 
 comment "Vulkan drivers"
 
-config BR2_PACKAGE_IMG_MESA3D_VULKAN_DRIVER_INTEL
+	config BR2_PACKAGE_IMG_MESA3D_VULKAN_DRIVER_INTEL
 	bool "Vulkan Intel driver"
 	depends on BR2_i386 || BR2_x86_64
 	depends on BR2_TOOLCHAIN_HAS_SYNC_4 || !BR2_PACKAGE_XORG7 # libxshmfence
@@ -368,7 +368,7 @@ comment "intel vulkan needs a glibc toolchain w/ headers >= 3.17"
 
 comment "Off-screen Rendering"
 
-config BR2_PACKAGE_IMG_MESA3D_OSMESA_GALLIUM
+	config BR2_PACKAGE_IMG_MESA3D_OSMESA_GALLIUM
 	bool "OSMesa (Gallium) library"
 	select BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_SWRAST
 
@@ -379,7 +379,7 @@ if BR2_PACKAGE_IMG_MESA3D_DRIVER
 
 comment "OpenGL API Support"
 
-config BR2_PACKAGE_IMG_MESA3D_GBM
+	config BR2_PACKAGE_IMG_MESA3D_GBM
 	bool "gbm"
 	depends on BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER && \
 	  BR2_PACKAGE_IMG_MESA3D_OPENGL_EGL
@@ -393,7 +393,7 @@ config BR2_PACKAGE_IMG_MESA3D_GBM
 comment "gbm support needs a gallium driver w/ EGL support."
 	depends on !(BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER && BR2_PACKAGE_IMG_MESA3D_OPENGL_EGL)
 
-config BR2_PACKAGE_IMG_MESA3D_OPENGL_GLX
+	config BR2_PACKAGE_IMG_MESA3D_OPENGL_GLX
 	bool "OpenGL GLX"
 	depends on BR2_PACKAGE_XORG7
 	select BR2_PACKAGE_HAS_LIBGL if !BR2_PACKAGE_LIBGLVND
@@ -406,7 +406,7 @@ config BR2_PACKAGE_IMG_MESA3D_OPENGL_GLX
 comment "OpenGL GLX support needs X11"
 	depends on !BR2_PACKAGE_XORG7
 
-config BR2_PACKAGE_IMG_MESA3D_OPENGL_EGL
+	config BR2_PACKAGE_IMG_MESA3D_OPENGL_EGL
 	bool "OpenGL EGL"
 	depends on BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER
 	select BR2_PACKAGE_HAS_LIBEGL if !BR2_PACKAGE_LIBGLVND
@@ -418,7 +418,7 @@ config BR2_PACKAGE_IMG_MESA3D_OPENGL_EGL
 	  Use the Khronos EGL APIs. EGL is a window manager for OpenGL
 	  applications similar to GLX, for X, and WGL, for Windows.
 
-config BR2_PACKAGE_IMG_MESA3D_OPENGL_ES
+	config BR2_PACKAGE_IMG_MESA3D_OPENGL_ES
 	bool "OpenGL ES"
 	select BR2_PACKAGE_HAS_LIBGLES if !BR2_PACKAGE_LIBGLVND
 	select BR2_PACKAGE_LIBGLVND_DISPATCH_GLES if BR2_PACKAGE_LIBGLVND
@@ -429,19 +429,19 @@ config BR2_PACKAGE_IMG_MESA3D_OPENGL_ES
 
 endif # BR2_PACKAGE_IMG_MESA3D_DRIVER
 
-config BR2_PACKAGE_PROVIDES_LIBGBM
+	config BR2_PACKAGE_PROVIDES_LIBGBM
 	default "img-mesa3d" if BR2_PACKAGE_IMG_MESA3D_GBM
 
-config BR2_PACKAGE_PROVIDES_LIBGL
+	config BR2_PACKAGE_PROVIDES_LIBGL
 	default "img-mesa3d" if BR2_PACKAGE_IMG_MESA3D_OPENGL_GLX && !BR2_PACKAGE_LIBGLVND
 
-config BR2_PACKAGE_PROVIDES_LIBEGL
+	config BR2_PACKAGE_PROVIDES_LIBEGL
 	default "img-mesa3d" if BR2_PACKAGE_IMG_MESA3D_OPENGL_EGL && !BR2_PACKAGE_LIBGLVND
 
-config BR2_PACKAGE_PROVIDES_LIBGLES
+	config BR2_PACKAGE_PROVIDES_LIBGLES
 	default "img-mesa3d" if BR2_PACKAGE_IMG_MESA3D_OPENGL_ES && !BR2_PACKAGE_LIBGLVND
 
-config BR2_PACKAGE_PROVIDES_LIBOPENCL
+	config BR2_PACKAGE_PROVIDES_LIBOPENCL
 	default "img-mesa3d" if BR2_PACKAGE_IMG_MESA3D_OPENCL
 
 endif # BR2_PACKAGE_IMG_MESA3D

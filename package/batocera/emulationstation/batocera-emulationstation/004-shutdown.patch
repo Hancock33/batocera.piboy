@@ -1,8 +1,8 @@
 diff --git a/es-core/src/utils/Platform.cpp b/es-core/src/utils/Platform.cpp
-index 042d0ddf..7f4995d4 100644
+index e4feae19..36a72b23 100644
 --- a/es-core/src/utils/Platform.cpp
 +++ b/es-core/src/utils/Platform.cpp
-@@ -183,7 +183,7 @@ namespace Utils
+@@ -184,7 +184,7 @@ namespace Utils
  #elseif PIBOY
  	return system("/sbin/rmmod xpi_gamecon ; /sbin/rmmod xpi_gamecon_xrs shutdown -t1 now -h");
  #else // osx / linux	
@@ -11,7 +11,7 @@ index 042d0ddf..7f4995d4 100644
  #endif
  		}
  
-@@ -194,7 +194,7 @@ namespace Utils
+@@ -195,7 +195,7 @@ namespace Utils
  #elseif PIBOY
  	return system("reboot");
  #else // osx / linux	

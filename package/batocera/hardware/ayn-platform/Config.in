@@ -1,7 +1,7 @@
 comment "ayn-platform needs a Linux kernel to be built"
 	depends on !BR2_LINUX_KERNEL
 
-config BR2_PACKAGE_AYN_PLATFORM
+	config BR2_PACKAGE_AYN_PLATFORM
 	bool "ayn-platform"
 	depends on BR2_LINUX_KERNEL
 

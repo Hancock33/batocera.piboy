@@ -22,13 +22,16 @@ sys.path.append(
 
 # Return value for es invertedbuttons
 def getInvertButtonsValue():
-    tree = ET.parse(batoceraFiles.esSettings)
-    root = tree.getroot()
-    # Find the InvertButtons element and return value
-    elem = root.find(".//bool[@name='InvertButtons']")
-    if elem is not None:
-        return elem.get('value') == 'true'
-    return False  # Return False if not found
+    try:
+        tree = ET.parse(batoceraFiles.esSettings)
+        root = tree.getroot()
+        # Find the InvertButtons element and return value
+        elem = root.find(".//bool[@name='InvertButtons']")
+        if elem is not None:
+            return elem.get('value') == 'true'
+        return False  # Return False if not found
+    except:
+        return False # when file is not yet here or malformed
 
 # return true if the option is considered defined
 def defined(key, dict):

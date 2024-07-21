@@ -1,8 +1,8 @@
 diff --git a/cheevos/cheevos.c b/cheevos/cheevos.c
-index 097b4708ec..86808413af 100644
+index 92e546ac76..407e8193b0 100644
 --- a/cheevos/cheevos.c
 +++ b/cheevos/cheevos.c
-@@ -817,9 +817,10 @@ void rcheevos_award_achievement(rcheevos_locals_t* locals,
+@@ -838,9 +838,10 @@ void rcheevos_award_achievement(rcheevos_locals_t* locals,
        if (shotname)
        {
           video_driver_state_t *video_st  = video_state_get_ptr();;

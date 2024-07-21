@@ -11,7 +11,7 @@ config BR2_PACKAGE_BATOCERA_LUAJIT_ARCH_SUPPORTS
 	# Building for 64-bit target requires a 64-bit host
 	depends on !BR2_ARCH_IS_64 || BR2_HOSTARCH = "x86_64"
 
-config BR2_PACKAGE_BATOCERA_LUAJIT
+	config BR2_PACKAGE_BATOCERA_LUAJIT
 	bool "batocera-luajit"
 	depends on !BR2_STATIC_LIBS # dlopen
 	# Luajit is only available for some target architectures, and
@@ -32,10 +32,10 @@ config BR2_PACKAGE_BATOCERA_LUAJIT
 
 if BR2_PACKAGE_BATOCERA_LUAJIT
 	config BR2_PACKAGE_BATOCERA_LUAJIT_COMPAT52
-		bool "Lua 5.2 compatibility"
+	bool "Lua 5.2 compatibility"
 
-		help
-		  Compile with Lua 5.2 compatibility.
+	help
+	  Compile with Lua 5.2 compatibility.
 endif
 
 comment "batocera luajit needs a toolchain w/ dynamic library"

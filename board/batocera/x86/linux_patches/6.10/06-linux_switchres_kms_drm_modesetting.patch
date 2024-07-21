@@ -281,7 +281,7 @@ index d40ca486d775..768b78822d7f 100644
  EXPORT_SYMBOL(drm_connector_list_update);
  
 diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
-index 3c0a358c193c..c58d88b583ac 100644
+index 3c0a358c193c..af94e0d4096f 100644
 --- a/drivers/gpu/drm/drm_probe_helper.c
 +++ b/drivers/gpu/drm/drm_probe_helper.c
 @@ -378,6 +378,23 @@ drm_helper_probe_detect_ctx(struct drm_connector *connector, bool force)
@@ -312,7 +312,7 @@ index 3c0a358c193c..c58d88b583ac 100644
  
  	drm_modeset_acquire_init(&ctx, 0);
  
-+	DRM_DEBUG_KMS("[CONNECTOR:%d:%s] called by %ps\n", connector->base.id,
++	drm_dbg_kms(dev, "[CONNECTOR:%d:%s] called by %ps\n", connector->base.id,
 +			connector->name, __builtin_return_address(0));
  	drm_dbg_kms(dev, "[CONNECTOR:%d:%s]\n", connector->base.id,
  		    connector->name);
@@ -328,22 +328,21 @@ index 3c0a358c193c..c58d88b583ac 100644
  	if (connector->force) {
  		if (connector->force == DRM_FORCE_ON ||
  		    connector->force == DRM_FORCE_ON_DIGITAL)
-@@ -710,8 +733,13 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
+@@ -710,7 +733,13 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
  
  	drm_mode_sort(&connector->modes);
  
 -	drm_dbg_kms(dev, "[CONNECTOR:%d:%s] probed modes:\n",
--		    connector->base.id, connector->name);
-+	DRM_DEBUG_KMS("[CONNECTOR:%d:%s] final user_modes :\n", connector->base.id,
-+			connector->name);
-+	list_for_each_entry(mode, &connector->user_modes, head) {
-+		drm_mode_set_crtcinfo(mode, CRTC_INTERLACE_HALVE_V);
-+		drm_mode_debug_printmodeline(mode);
-+	}
-+	DRM_DEBUG_KMS("[CONNECTOR:%d:%s] final modes :\n", connector->base.id, connector->name);
++        drm_dbg_kms(dev, "[CONNECTOR:%d:%s] final user_modes :\n",
++		    connector->base.id, connector->name);
++        list_for_each_entry(mode, &connector->user_modes, head) {
++                drm_mode_set_crtcinfo(mode, CRTC_INTERLACE_HALVE_V);
++                drm_mode_debug_printmodeline(mode);
++        }
++        drm_dbg_kms(dev, "[CONNECTOR:%d:%s] final modes :\n", 
+ 		    connector->base.id, connector->name);
  
  	list_for_each_entry(mode, &connector->modes, head) {
- 		drm_mode_set_crtcinfo(mode, CRTC_INTERLACE_HALVE_V);
 diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
 index ce1d94bf0f7c..a145d020a54a 100644
 --- a/include/drm/drm_connector.h
