@@ -11,10 +11,12 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-07-22|Jul 22
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1359|Jul 22, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|3b1fbef95ca3f6842fe4edc8f7c12f776eb0dccb|Jul 22, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|1de8d85411ae930c31b2a50421276fa13e30e7d0|Jul 22, 2024
-Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|43270965803ada94613319458877d817189e33dc|Jul 22, 2024
+Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|419fe72bcb3b1ee3517d87f772d0160f6955a31c|Jul 22, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|c747577a30a53dffca3341cd26f8aead29ce9415|Jul 22, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|3ba8171ed82fd4f1d6cac9c8d1fb19db33be0e74|Jul 22, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|ccfcd3d44504d0b681f3b0a3855da657beb5bff1|Jul 22, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240722|Jul 22, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240722|Jul 22, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|f61d529a938ce6ccb65c21ec00ac1ef22da6cb7b|Jul 22, 2024
 Ports|[xatrix](http://github.com/yquake2/xatrix)|31b1c2d92b571929b017a3b7c573edb7a6b0d5ef|Jul 22, 2024
 Ports|[yrogue](http://github.com/yquake2/rogue)|19014a3c85e9204e9c3153123efe5bd974dfa2c8|Jul 22, 2024
@@ -36,8 +38,6 @@ Emulators|[xemu](https://github.com/xemu-project/xemu)|c6bad867390403f87334d3cc7
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|8d6a49598c8535b189b1a118a4e34960a135982c|Jul 21, 2024
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|5b8dc756f67d3077cfe171838aa15c798cc67c98|Jul 21, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|5c1da8f0428ced2cf4ee5ad8a961d36e867386ef|Jul 21, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240721|Jul 21, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240721|Jul 21, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|5c264f0f14fe655093daa7426873141f6893af4b|Jul 21, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|528ffe6a6d5eff14e40f2d8261bd2c0125647a86|Jul 21, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|8737305878b65f8d80d0b0e7e9d4d96dffa0c205|Jul 21, 2024
