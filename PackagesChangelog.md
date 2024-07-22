@@ -116,6 +116,7 @@ Ports|[quake3](http://github.com/ioquake/ioq3)|15f5fe78ad61f7bb0684b420f1d768a87
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|e1a5c92679e11501f86ddf2f815964bb91699af8|Jul 13, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|b6cbfbbbf36807a88cf4153aab7a51c97be3cc87|Jul 12, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|14b1caa22789f99e84fe6a028445411ca0d20ffd|Jul 12, 2024
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.3.290.0|Jul 12, 2024
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|d4f01864ae9d1c1c7914181b5c5ff7d4e85fd5ba|Jul 11, 2024
 Libraries|[cpuinfo](http://github.com/pytorch/cpuinfo)|ca678952a9a8eaa6de112d154e8e104b22f9ab3f|Jul 10, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.4|Jul 10, 2024
@@ -205,6 +206,7 @@ Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.12|Jun 28, 2
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|471fb51cb26909cba02b877ed6bba35de1c14802|Jun 27, 2024
 Emulators|[libdof](http://github.com/jsm174/libdof)|42160a6835ead9d64f101e687dc277a0fe766f25|Jun 25, 2024
 Emulators|[wine-mono](https://dl.winehq.org/wine/wine-mono/)|9.2.0|Jun 25, 2024
+Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.3.290.0|Jun 25, 2024
 Emulators|[libretro-mu](http://github.com/libretro/Mu)|d7dd7e2a33ba405b0794c2931ddc6c2d75e59d36|Jun 25, 2024
 Libraries|[python-adafruit-circuitpython-connectionmanager](https://files.pythonhosted.org/packages/21/8c/a7d5e38ae4b41c6a7c3aa9b3c9c8f742faed570acdcb48b634e2e1dde573)|3.1.1|Jun 24, 2024
 Network|[aic8800](http://github.com/batocera-linux/aic8800)|ccba7fffed8554fe861bd631ff6f852d2d6eec39|Jun 24, 2024
@@ -224,6 +226,7 @@ Emulators|[wine-proton-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos_
 Controllers|[new-lg4ff](http://github.com/berarma/new-lg4ff)|1a2d5727876dd7befce23d9695924e9446b31c4b|Jun 18, 2024
 Libraries|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/76/65/eeeee3bd52c63ddd7b8cbcf051d1763169303e1c9e0fd835ac5d258a4119)|3.71.0|Jun 18, 2024
 Libraries|[python3-gpiod](https://files.pythonhosted.org/packages/aa/b7/12bda3ba884c7299ac461f84732583048d962145ad230447115758c32e6e)|2.2.0|Jun 18, 2024
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.3.290.0|Jun 18, 2024
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|8efac0cfe6c245aeb2ce5122aa2b82fb79e91463|Jun 17, 2024
 Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-2b|Jun 17, 2024
 Utils|[rclone](http://github.com/rclone/rclone)|v1.67.0|Jun 14, 2024
@@ -282,11 +285,9 @@ Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e24
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|ffa3cc48b8f159a6ae88594f8b1ca67f22e3044c|May 04, 2024
 Emulators|[wine-ntsync](https://repo.or.cz/wine/zf.git/snapshot/)|b710a652bb7f582fa65f8d42d727847e231b7095|May 03, 2024
 Ports|[raptorcots](http://github.com/skynettx/raptor)|e8d838c6db77084a6fb7f37b41de669fbf68b808|May 02, 2024
-Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.3.283.0|May 02, 2024
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|3265c0ac05ec595f9cedd020d76e7f39bf081538|May 02, 2024
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.1|Apr 30, 2024
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|47e89572713092caefd937856894fed33fcc9450|Apr 30, 2024
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.3.283.0|Apr 29, 2024
 Audio|[zmusic](http://github.com/ZDoom/ZMusic)|1.1.13|Apr 28, 2024
 Emulators|[libretro-freechaf](https://github.com/libretro/FreeChaF.git)|630e068c51a8027aa7222dc737575d235b9a75a1|Apr 26, 2024
 Controllers|[xone](http://github.com/medusalix/xone)|29ec3577e52a50f876440c81267f609575c5161e|Apr 25, 2024
@@ -300,7 +301,6 @@ Libraries|[python-adafruit-circuitpython-busdevice](https://files.pythonhosted.o
 Network|[r8125](http://github.com/awesometic/realtek-r8125-dkms)|980736e3d5bcbb32bee8f1bd228a166dbd2d89f0|Apr 22, 2024
 Network|[r8168](http://github.com/mtorromeo/r8168)|503086686ea7b08b8b9b323ab52991987dfd9f6a|Apr 21, 2024
 Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|9fb917c357b20d95d597bed4d67904c29cd5c753|Apr 21, 2024
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.3.283.0|Apr 19, 2024
 Emulators|[libretro-dolphin](http://github.com/libretro/dolphin)|89a4df725d4eb24537728f7d655cddb1add25c18|Apr 19, 2024
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|5.1|Apr 18, 2024
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.12.9|Apr 18, 2024
