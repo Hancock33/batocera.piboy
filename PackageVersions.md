@@ -324,7 +324,7 @@ Gpu|[batocera-nvidia-lists](http://github.com/batocera-linux/nvidia-lists)|45217
 Gpu|[batocera-nvidia340-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|340.108|Dec 23, 2019
 Gpu|[batocera-nvidia390-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|390.157|Nov 22, 2022
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|4acb49cd555ef89a8c18b7773e6c542fb757674a|Jul 15, 2024
-Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.3.283.0|May 02, 2024
+Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.3.290.0|Jun 25, 2024
 Gpu|[img-gpu-powervr](https://github.com/starfive-tech/soft_3rdpart/raw/JH7110_VisionFive2_devel/IMG_GPU/out)|c43d4fab94b0ef3b492a6382e2282fa7a2695b9b|Mar 06, 2024
 Gpu|[img-mesa3d](https://archive.mesa3d.org)|22.1.3|Jun 29, 2022
 Gpu|[mali-g31-gbm](https://github.com/batocera-linux/rockchip-packages/releases)|ad4c28932c3d07c75fc41dd4a3333f9013a25e7f|Jun 11, 2021
@@ -338,9 +338,9 @@ Gpu|[nv-codec-headers](https://github.com/FFmpeg/nv-codec-headers)|n12.2.72.0|Ma
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.5|Apr 23, 2024
 Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|d7a0a485ed6c201f882c20b3a8881e801f131385|Dec 01, 2023
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.1|Apr 30, 2024
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.3.283.0|Apr 29, 2024
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.3.290.0|Jun 18, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|b11511238ca70d6a4fa56e3ac8a1645b6e7094dc|Jul 16, 2024
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.3.283.0|Apr 19, 2024
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.3.290.0|Jul 12, 2024
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.1|Jun 08, 2024
 Hardware|[ayn-platform](http://github.com/ShadowBlip/ayn-platform)|v0.5.1|Apr 16, 2024
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|32ec66c53ee32dea139bf3f9e45f97da017fd8ab|Jul 20, 2024
