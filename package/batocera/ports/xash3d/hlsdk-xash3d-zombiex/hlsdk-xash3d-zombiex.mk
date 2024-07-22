@@ -3,8 +3,8 @@
 # hlsdk-xash3d-zombiex
 #
 ################################################################################
-# Version: Commits on Jul 20, 2024
-HLSDK_XASH3D_ZOMBIEX_VERSION = a9e3433090924674615d27bc05d186153f6b201a
+# Version: Commits on Jul 21, 2024
+HLSDK_XASH3D_ZOMBIEX_VERSION = a4ea5d2cbdbdd06d1c611f42eeccdc123ff9e833
 HLSDK_XASH3D_ZOMBIEX_BRANCH = zombie-x
 HLSDK_XASH3D_ZOMBIEX_SITE = $(call github,FWGS,hlsdk-portable,$(HLSDK_XASH3D_ZOMBIEX_VERSION))
 HLSDK_XASH3D_ZOMBIEX_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf libsodium
