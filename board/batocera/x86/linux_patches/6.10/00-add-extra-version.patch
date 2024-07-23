@@ -7,7 +7,7 @@ index 3d10e3aadeda..e962174e9708 100644
  PATCHLEVEL = 10
  SUBLEVEL = 0
 -EXTRAVERSION =
-+EXTRAVERSION = batocera
++EXTRAVERSION = -batocera
  NAME = Baby Opossum Posse
  
  # *DOCUMENTATION*
