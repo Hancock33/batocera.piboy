@@ -15847,46 +15847,6 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
-#. TRANSLATION: mame.mame.keys
-msgctxt "keys_files"
-msgid "Exit Emulator"
-msgstr ""
-
-#. TRANSLATION: mame.mame.keys
-msgctxt "keys_files"
-msgid "RetroArch Menu"
-msgstr ""
-
-#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Load State"
-msgstr "Last tilstand"
-
-#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Save State"
-msgstr "Lagre tilstand"
-
-#. TRANSLATION: mame.mame.keys, 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Skjermbilde"
-
-#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Hurtigspoling"
-
-#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot +"
-msgstr "Spor +"
-
-#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot -"
-msgstr "Spor -"
-
 #. TRANSLATION: switch.ryujinx.keys
 msgctxt "keys_files"
 msgid "Emulator Config"
@@ -16167,6 +16127,11 @@ msgctxt "keys_files"
 msgid "Toggle Screen Layout"
 msgstr "Veksle mellom skjermoppsett"
 
+#. TRANSLATION: 3ds.panda3ds.keys, mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "Skjermbilde"
+
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
@@ -16186,6 +16151,36 @@ msgstr "Museklikk"
 msgctxt "keys_files"
 msgid "Exit emulator using SDL"
 msgstr "Avslutt emulatoren ved hjelp av SDL"
+
+#. TRANSLATION: mame.keys
+msgctxt "keys_files"
+msgid "Exit Emulator"
+msgstr ""
+
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Load State"
+msgstr "Last tilstand"
+
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Save State"
+msgstr "Lagre tilstand"
+
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Fast Forward"
+msgstr "Hurtigspoling"
+
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot +"
+msgstr "Spor +"
+
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot -"
+msgstr "Spor -"
 
 #. TRANSLATION: psx.duckstation.keys
 msgctxt "keys_files"
