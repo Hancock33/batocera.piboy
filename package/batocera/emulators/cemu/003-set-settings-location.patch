@@ -1,9 +1,9 @@
 diff --git a/src/config/CemuConfig.cpp b/src/config/CemuConfig.cpp
-index e4be97a..dd258be 100644
+index 338392d..849d809 100644
 --- a/src/config/CemuConfig.cpp
 +++ b/src/config/CemuConfig.cpp
-@@ -8,7 +8,7 @@
- #include "PermanentConfig.h"
+@@ -7,7 +7,7 @@
+ 
  #include "ActiveSettings.h"
  
 -XMLCemuConfig_t g_config(L"settings.xml");
