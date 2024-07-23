@@ -16,7 +16,9 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|2f2a250db33f589de1c7e
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|16ce7a4fd3a06c464cf26e15a0aaf9d087802098|Jul 23, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|240e5eb9e5dca81b5d3961c9088ede80dbfc8d99|Jul 23, 2024
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|6fdeb403b52fc118803997530f37e9342b501bca|Jul 23, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240723|Jul 23, 2024
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|48e143d273d4de79d6e41bf7066592bffa5c84c5|Jul 23, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240723|Jul 23, 2024
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|352fc5328fa879a7c3dd5080a23287ba72c364ed|Jul 23, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|10e5792459df44e0f78b98ab7b169c6c17e78e92|Jul 23, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|aa17f71f14ba1746bfbf68a44c97b238712a84e1|Jul 23, 2024
@@ -31,8 +33,6 @@ Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|e97eb92c306c1307c220e804db10543924dbd953|Jul 22, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|c747577a30a53dffca3341cd26f8aead29ce9415|Jul 22, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|e7e1a9b8245767bb9da2ac6b6bc2438a4eb2856a|Jul 22, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240722|Jul 22, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240722|Jul 22, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|f61d529a938ce6ccb65c21ec00ac1ef22da6cb7b|Jul 22, 2024
 Ports|[xatrix](http://github.com/yquake2/xatrix)|31b1c2d92b571929b017a3b7c573edb7a6b0d5ef|Jul 22, 2024
 Ports|[yrogue](http://github.com/yquake2/rogue)|19014a3c85e9204e9c3153123efe5bd974dfa2c8|Jul 22, 2024
