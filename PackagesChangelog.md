@@ -13,6 +13,8 @@ Ports|[fheroes2](http://github.com/ihhub/fheroes2)|d7cb8253ea82cff4a81933b37abe1
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|fdd3ad0c97a29334dc825f85ad36e8bc7bf4f072|Jul 24, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|f4cd979557b050c1704a718872d6ad8ef43614aa|Jul 24, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|efbfe3610a3b163de671572de329a602790dbcc0|Jul 24, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240724|Jul 24, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240724|Jul 24, 2024
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|1d3679584e21dad0a71bfbd5d686ee6bc5f71479|Jul 24, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|173aa7333a2cb0f767cca22814e31ee59b10e121|Jul 24, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|0c1f92bd8a642f5b73978a284afc651d731370e5|Jul 24, 2024
@@ -32,9 +34,7 @@ Ports|[box64](http://github.com/ptitseb/box64)|b26ae5886ddc7d0d84595fb5b94878f50
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|3555346ed8d4a515162eb82df3ad9729f2386e2c|Jul 23, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.27.10-rc.1|Jul 23, 2024
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|6fdeb403b52fc118803997530f37e9342b501bca|Jul 23, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240723|Jul 23, 2024
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|48e143d273d4de79d6e41bf7066592bffa5c84c5|Jul 23, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240723|Jul 23, 2024
 Emulators|[libretro-px68k](http://github.com/libretro/px68k-libretro)|b76d470b0e09d33998e4dfb7ef8c318877f73570|Jul 23, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|0af4314793ff2cdf45f11012fa30b6ca3a68505a|Jul 22, 2024
 Emulators|[play](https://github.com/jpd002/Play-.git)|aa1bc3ed269cb07cd8dcbef0299093eaf5478835|Jul 22, 2024
@@ -82,7 +82,7 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|655d0539f500551b3c531be40470972
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|441ec65c29b45bbd262edd0f7a16be92ecc083db|Jul 19, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|5527a11d254c1ec2f9e0c1e0a53bba6d9ec968f6|Jul 19, 2024
 Utils|[re2c](http://github.com/skvadrik/re2c)|f2395c299886cfc5639f841f6445ab9ad0fa26f9|Jul 19, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|8d259957a2470190e109b1175cf61f4d95427fce|Jul 19, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|0c1c8c295b14626c2cb3c2fac65e1f29b1ea874e|Jul 19, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|372184b402852f9b3a3f1663ea676ffa910f6e48|Jul 19, 2024
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|c68ee949ab5a572c0c6541d25b66e997174a09f6|Jul 19, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|9c3f4dbe9650c31fa690db230243b4eae9a2f131|Jul 19, 2024
