@@ -3,8 +3,8 @@
 # libretro-vircon32
 #
 ################################################################################
-# Version: Commits on Apr 14, 2024
-LIBRETRO_VIRCON32_VERSION = 293d0b2b0e3b996b991b7a667ec31a64d8865450
+# Version: Commits on Jul 25, 2024
+LIBRETRO_VIRCON32_VERSION = c3aadc50b986aee7198e346ca4241e16727aa247
 LIBRETRO_VIRCON32_SITE = $(call github,vircon32,vircon32-libretro,$(LIBRETRO_VIRCON32_VERSION))
 LIBRETRO_VIRCON32_LICENSE = BSD
 LIBRETRO_VIRCON32_SUPPORTS_IN_SOURCE_BUILD = NO
