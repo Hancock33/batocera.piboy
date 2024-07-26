@@ -429,7 +429,7 @@ Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|0b0f661947588f100
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|441ec65c29b45bbd262edd0f7a16be92ecc083db|Jul 19, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|5ae0e5eb17d2fcd809f38d79bac0efe60249e42d|Jul 26, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|4df8495d61edec74ac2c989ff43e30278ee503d4|Jul 25, 2024
-Ports|[doomretro](http://github.com/bradharding/doomretro)|2e63112abc2b87378645a27ccfe1acfd3984487b|Jul 26, 2024
+Ports|[doomretro](http://github.com/bradharding/doomretro)|d931833821684a993dd8c5ff6e00686652837135|Jul 26, 2024
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|5b8dc756f67d3077cfe171838aa15c798cc67c98|Jul 21, 2024
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|899bbd5c1ebf84105ca0616ee933a0ee113fbc79|Jul 08, 2024
@@ -451,7 +451,7 @@ Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|6ef53c34dda241fa185a9
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240726|Jul 26, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|c8421de270583828cfc3816aa3f39955bfc7e51f|Jul 26, 2024
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
-Ports|[omf2097](http://github.com/omf2097/openomf)|099a735512aec863ab30ef5936f2d655841fa5db|Jul 26, 2024
+Ports|[omf2097](http://github.com/omf2097/openomf)|6e21760fb2fe3d89ade963e3cf25740efad2049d|Jul 26, 2024
 Ports|[openclaw](http://github.com/pjasicek/OpenClaw)|5ee5740ca98377c76b13b50c84f610b0066a4717|Jul 13, 2022
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|1e1adcd815bd79854b9787bc542fec6ad84f23e2|Apr 15, 2024
 Ports|[openjk](http://github.com/JACoders/OpenJK)|c11082b0899e590d30120615dcf520253c4bb0f2|Jun 20, 2024
