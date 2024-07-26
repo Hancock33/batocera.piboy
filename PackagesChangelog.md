@@ -9,7 +9,7 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-07-26|Jul 26
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|32414ee1fd06345755b9fe9572bc508c8be3c11c|Jul 26, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|fe34337ee537fca38dfc5aee2585383d95d03ae6|Jul 26, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|5ae0e5eb17d2fcd809f38d79bac0efe60249e42d|Jul 26, 2024
-Ports|[fheroes2](http://github.com/ihhub/fheroes2)|010ac0ff5859ed56ab75f728be9353c89d4eb34c|Jul 26, 2024
+Ports|[fheroes2](http://github.com/ihhub/fheroes2)|471570ec2f8055aba51ac447974d7ad7e9a86655|Jul 26, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|c8421de270583828cfc3816aa3f39955bfc7e51f|Jul 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|099a735512aec863ab30ef5936f2d655841fa5db|Jul 26, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|858148fbae6f3b99de0777f80034af06a458a3a0|Jul 26, 2024
@@ -17,7 +17,7 @@ Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|2f507682e4e44669b9
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|8cb54a192b681f7d7e21eb704634ecbf10d5056b|Jul 26, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240726|Jul 26, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240726|Jul 26, 2024
-Ports|[doomretro](http://github.com/bradharding/doomretro)|739bcfab676d219c104879ef5964107b52a11e92|Jul 26, 2024
+Ports|[doomretro](http://github.com/bradharding/doomretro)|2e63112abc2b87378645a27ccfe1acfd3984487b|Jul 26, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|11d04207b8223ad5eb0a340e1a3eb8f4bdb5e62f|Jul 26, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|e70f9a67b85ef3184f058cd10480d32ef68d14eb|Jul 26, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|03935421be14680a4aed799388e74ecab8167311|Jul 26, 2024
@@ -26,7 +26,7 @@ Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|
 Emulators|[libretro-beetle-supergrafx](http://github.com/libretro/beetle-supergrafx-libretro)|1943f676c70a9ceeee51f05a7422093c525e83ca|Jul 26, 2024
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|d63ec98054477d4be3398d108b6ec0a7b162349a|Jul 26, 2024
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|607c19668426b8945011fd11e25cfce7849f7e13|Jul 26, 2024
-Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|fbec48de262958aa40178153b9da383b051a4296|Jul 26, 2024
+Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|48bf0c65764dd3dd99dc392a7df3a3ee1c1ce280|Jul 26, 2024
 Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|6e48901ab9e54ff048a1bf6ea322372d7ae3ed29|Jul 26, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|832e64b8cd49484a0c44e2c26897f5f7259a3b6a|Jul 26, 2024
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|cf5cb40cb988601f91658e083a599f90b4b53811|Jul 26, 2024
