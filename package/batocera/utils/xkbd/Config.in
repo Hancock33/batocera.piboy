@@ -1,7 +1,0 @@
-config BR2_PACKAGE_XKBD
-	bool "xkbd"
-	select BR2_PACKAGE_XLIB_LIBXPM
-	select BR2_PACKAGE_XLIB_LIBXFT
-
-	help
-	  onscreen soft keyboard for X11
