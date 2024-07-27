@@ -3,7 +3,7 @@
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|c73fa3761c9572db4d09cdb976a0f1510cda548a|Jul 27, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|a3acb0c5db597c8201e84e85a0a80cdfb2409f78|Jul 27, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-07-27|Jul 27, 2024
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|2ca78f280389d4f3d8d6cf10f09dc4c113dc3dd0|Jul 27, 2024
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|5fced46ff29f4099e0c7221862ca98563a1edb18|Jul 27, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|048a87315130f5185f322fef725e207001bbb430|Jul 27, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1504b8a3eb7e5a5997830fa2a1d10c269a1520e0|Jul 27, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|00d6f67b9a09a044c1ac4351128487e1cde5c6c2|Jul 27, 2024
@@ -11,6 +11,7 @@ Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|6201060bd8e73
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|33d9def3b3886542e6e0b79e6cda16d4a80267a0|Jul 27, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240727|Jul 27, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240727|Jul 27, 2024
+Ports|[doomretro](http://github.com/bradharding/doomretro)|d2809d77413fb8935d41570f1dccf161460ef8ae|Jul 27, 2024
 Ports|[quake3](http://github.com/ioquake/ioq3)|4c19ff2b55e6dd3d97c681112821de0556f78d4a|Jul 27, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|d5aae5a68daa779da768ab21b17796dfb6300429|Jul 27, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|4b3545697ede842532dcace806859443db1b374b|Jul 27, 2024
@@ -31,7 +32,6 @@ Ports|[nblood](http://github.com/nukeykt/NBlood)|c8421de270583828cfc3816aa3f3995
 Ports|[omf2097](http://github.com/omf2097/openomf)|37607097cb43dac18532ad3205af9e09b4def1ea|Jul 26, 2024
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|2f507682e4e44669b916031091d7e89dd2391824|Jul 26, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|8cb54a192b681f7d7e21eb704634ecbf10d5056b|Jul 26, 2024
-Ports|[doomretro](http://github.com/bradharding/doomretro)|d931833821684a993dd8c5ff6e00686652837135|Jul 26, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|11d04207b8223ad5eb0a340e1a3eb8f4bdb5e62f|Jul 26, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|e70f9a67b85ef3184f058cd10480d32ef68d14eb|Jul 26, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|03935421be14680a4aed799388e74ecab8167311|Jul 26, 2024
