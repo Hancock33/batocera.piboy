@@ -635,7 +635,7 @@ index 958e935449e5..064156d69e75 100644
  M:	Finn Thain <fthain@linux-m68k.org>
  L:	linux-m68k@lists.linux-m68k.org
 diff --git a/Makefile b/Makefile
-index e7d0149be66b..611cd7277426 100644
+index 6202fb7acfef..390ba17d0f5c 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -817,6 +817,9 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -10690,6 +10690,29 @@ index ddb798603201..7c20387d8202 100644
  	return dev;
  }
 -#endif
+diff --git a/arch/x86/xen/setup.c b/arch/x86/xen/setup.c
+index 380591028cb8..f6f5aa569367 100644
+--- a/arch/x86/xen/setup.c
++++ b/arch/x86/xen/setup.c
+@@ -691,6 +691,7 @@ char * __init xen_memory_setup(void)
+ 	struct xen_memory_map memmap;
+ 	unsigned long max_pages;
+ 	unsigned long extra_pages = 0;
++	unsigned long maxmem_pages;
+ 	int i;
+ 	int op;
+ 
+@@ -762,8 +763,8 @@ char * __init xen_memory_setup(void)
+ 	 * Make sure we have no memory above max_pages, as this area
+ 	 * isn't handled by the p2m management.
+ 	 */
+-	extra_pages = min3(EXTRA_MEM_RATIO * min(max_pfn, PFN_DOWN(MAXMEM)),
+-			   extra_pages, max_pages - max_pfn);
++	maxmem_pages = EXTRA_MEM_RATIO * min(max_pfn, PFN_DOWN(MAXMEM));
++	extra_pages = min3(maxmem_pages, extra_pages, max_pages - max_pfn);
+ 	i = 0;
+ 	addr = xen_e820_table.entries[0].addr;
+ 	size = xen_e820_table.entries[0].size;
 diff --git a/arch/xtensa/kernel/syscalls/syscall.tbl b/arch/xtensa/kernel/syscalls/syscall.tbl
 index 67083fc1b2f5..c1aecee4ad9b 100644
 --- a/arch/xtensa/kernel/syscalls/syscall.tbl
@@ -29226,6 +29249,42 @@ index 8e06d89698e6..6cdb5a451453 100644
  int hid_set_field(struct hid_field *, unsigned, __s32);
  int hid_input_report(struct hid_device *hid, enum hid_report_type type, u8 *data, u32 size,
  		     int interrupt);
+diff --git a/include/linux/minmax.h b/include/linux/minmax.h
+index 2ec559284a9f..a7ef65f78933 100644
+--- a/include/linux/minmax.h
++++ b/include/linux/minmax.h
+@@ -270,4 +270,11 @@ static inline bool in_range32(u32 val, u32 start, u32 len)
+ #define swap(a, b) \
+ 	do { typeof(a) __tmp = (a); (a) = (b); (b) = __tmp; } while (0)
+ 
++/*
++ * Use these carefully: no type checking, and uses the arguments
++ * multiple times. Use for obvious constants only.
++ */
++#define MIN_T(type,a,b) __cmp(min,(type)(a),(type)(b))
++#define MAX_T(type,a,b) __cmp(max,(type)(a),(type)(b))
++
+ #endif	/* _LINUX_MINMAX_H */
+diff --git a/include/linux/pageblock-flags.h b/include/linux/pageblock-flags.h
+index 547e82cdc89a..fc6b9c87cb0a 100644
+--- a/include/linux/pageblock-flags.h
++++ b/include/linux/pageblock-flags.h
+@@ -41,13 +41,13 @@ extern unsigned int pageblock_order;
+  * Huge pages are a constant size, but don't exceed the maximum allocation
+  * granularity.
+  */
+-#define pageblock_order		min_t(unsigned int, HUGETLB_PAGE_ORDER, MAX_PAGE_ORDER)
++#define pageblock_order		MIN_T(unsigned int, HUGETLB_PAGE_ORDER, MAX_PAGE_ORDER)
+ 
+ #endif /* CONFIG_HUGETLB_PAGE_SIZE_VARIABLE */
+ 
+ #elif defined(CONFIG_TRANSPARENT_HUGEPAGE)
+ 
+-#define pageblock_order		min_t(unsigned int, HPAGE_PMD_ORDER, MAX_PAGE_ORDER)
++#define pageblock_order		MIN_T(unsigned int, HPAGE_PMD_ORDER, MAX_PAGE_ORDER)
+ 
+ #else /* CONFIG_TRANSPARENT_HUGEPAGE */
+ 
 diff --git a/include/linux/pagemap.h b/include/linux/pagemap.h
 index a0a026d2d244..8bece21a8998 100644
 --- a/include/linux/pagemap.h
