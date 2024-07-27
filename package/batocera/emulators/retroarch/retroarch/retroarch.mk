@@ -178,6 +178,7 @@ define RETROARCH_BUILD_CMDS
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" LD="$(TARGET_LD)" -C $(@D)/
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" LD="$(TARGET_LD)" -C $(@D)/gfx/video_filters
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" LD="$(TARGET_LD)" -C $(@D)/libretro-common/audio/dsp_filters
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" LD="$(TARGET_LD)" -C $(@D)/cores/libretro-ffmpeg
 endef
 
 define RETROARCH_INSTALL_TARGET_CMDS
@@ -190,6 +191,8 @@ define RETROARCH_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/audio_filters
 	cp $(@D)/libretro-common/audio/dsp_filters/*.so $(TARGET_DIR)/usr/share/audio_filters
 	cp $(@D)/libretro-common/audio/dsp_filters/*.dsp $(TARGET_DIR)/usr/share/audio_filters
+
+	$(INSTALL) -D $(@D)/cores/libretro-ffmpeg/ffmpeg_libretro.so $(TARGET_DIR)/usr/lib/libretro/ffmpeg_libretro.so
 endef
 
 define RETROARCH_INSTALL_STAGING_CMDS
