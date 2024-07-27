@@ -2749,17 +2749,10 @@ kodi:
   emulators:
     kodi:
       kodi:             { requireAnyOf: [BR2_PACKAGE_KODI] }
-
-mplayer:
-  name:                 Media Player
-  manufacturer:         Misc. System
-  release:              2001
-  hardware:             computer
-  extensions:           [mkv, avi, f4v, f4f, 3gp, ogm, flv, mp4, mp3, flac, ogg, m4a, webm, 3g2, mov, wmv, mpg, mpeg, vob, asf, divx, m2p, m2ts, ps, ts, mxf, wma, wav]
-  path:                 /userdata/library
-  emulators:
     mplayer:
       mplayer:          { requireAnyOf: [BR2_PACKAGE_MPV] }
+    libretro:
+      ffmpeg:           { requireAnyOf: [BR2_PACKAGE_RETROARCH] }
 
 recordings:
   name:                 Recordings
