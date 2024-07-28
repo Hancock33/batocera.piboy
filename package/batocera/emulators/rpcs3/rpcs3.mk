@@ -14,6 +14,8 @@ RPCS3_DEPENDENCIES += libglew libglu libpng libusb mesa3d ncurses openal rtmpdum
 RPCS3_DEPENDENCIES += qt6base qt6multimedia qt6svg wolfssl
 RPCS3_SUPPORTS_IN_SOURCE_BUILD = NO
 
+RPCS3_TARGET_CFLAGS = $(TARGET_CFLAGS) -Wno-missing-template-arg-list-after-template-kw
+RPCS3_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(RPCS3_TARGET_CFLAGS)"
 RPCS3_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 RPCS3_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
 RPCS3_CONF_OPTS += -DCMAKE_CROSSCOMPILING=ON
