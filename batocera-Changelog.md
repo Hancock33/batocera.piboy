@@ -14,6 +14,7 @@
 - Citra to r518f723
 - Dolphin to 2407-103
 - Duckstaton to Jul 27, 2024 build
+- DXX-Rebirth to July 21 build
 ### System
 - Nvidia Driver to 555.58.02
 - Nvidia Legacy Driver to 470.256.02
@@ -23,6 +24,7 @@
 - MangoHud to Jun 15, 2024 build
 - SDL2 to 2.30.5
 - DXVK to 2.4
+- DXVK NVAPI to v0.7.1
 
 # 2024/08/xx - batocera.linux 40 - Swallowtail
 ### Special Notes
