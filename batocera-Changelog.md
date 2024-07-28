@@ -13,6 +13,7 @@
 - BigPEmu to v115
 - Citra to r518f723
 - Dolphin to 2407-103
+- Duckstaton to Jul 27, 2024 build
 ### System
 - Nvidia Driver to 555.58.02
 - Nvidia Legacy Driver to 470.256.02
@@ -21,6 +22,7 @@
 - Ayn Platform driver to Jul 17, 2024 build
 - MangoHud to Jun 15, 2024 build
 - SDL2 to 2.30.5
+- DXVK to 2.4
 
 # 2024/08/xx - batocera.linux 40 - Swallowtail
 ### Special Notes
