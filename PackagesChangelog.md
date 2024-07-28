@@ -1,7 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|284960651827a15888a78b47db3978079307c793|Jul 28, 2024
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|b6b0997e702f342eff094a9cb1c461f94a9cdc81|Jul 28, 2024
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|7b99fcbbf3e55de52431be595b2a31931f602820|Jul 28, 2024
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|c0ada2f445bad80ef36beaa47633e9531c4911a6|Jul 28, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.35|Jul 28, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|0a1cd19afedce4b3ec9e1d5839bbb89cde11fe63|Jul 28, 2024
@@ -10,6 +10,7 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-07-28|Jul 28
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|2cae95c67eb962ad11762dee6added06f6c7f0aa|Jul 28, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|3a3578aeccce0e00d4ca2ea0cfcb3eb64ef79e9e|Jul 28, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|c1f23a3b09d2ba4101f092559aeec7d016586847|Jul 28, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|dcd1eeb256c2258bf7610a32f0c676979dd71f35|Jul 28, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240728|Jul 28, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|26ddd6e9ef5a360d1b393ddd2c7c9fe933c8b1d2|Jul 28, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240728|Jul 28, 2024
@@ -64,7 +65,6 @@ Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|be8232be753fc0b4f5d9251bc38242dec6299f3c|Jul 25, 2024
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|19c21b9ab10b0c17147c9ad951cc15279ed33f77|Jul 25, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|b7c98f2fade39f1c3d9e927a60a05961e9d41640|Jul 25, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|8ad8c50e8f5e89b968146f232c63fea4388589f1|Jul 25, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|e35ecad1847de7b2d3382ce180c145015cc1e379|Jul 25, 2024
 Emulators|[libretro-atari800](http://github.com/libretro/libretro-atari800)|50141a6bf1a069abd86dd8c53aa4031f3f7cfbd1|Jul 25, 2024
 Emulators|[libretro-vircon32](http://github.com/vircon32/vircon32-libretro)|c3aadc50b986aee7198e346ca4241e16727aa247|Jul 25, 2024
