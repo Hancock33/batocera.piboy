@@ -23,5 +23,4 @@ wine-proton-cachyos.mk
 wine-proton.mk
 wine-staging.mk
 wine-x86.mk
-xkbd.mk
 xosd.mk
