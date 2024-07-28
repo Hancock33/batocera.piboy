@@ -10,6 +10,8 @@ DEVILUTIONX_SITE_METHOD=git
 DEVILUTIONX_DEPENDENCIES = sdl2 sdl2_image fmt libsodium libpng bzip2 lua luafilesystem lua-lpeg-patterns lpeg luasocket luasec
 DEVILUTIONX_SUPPORTS_IN_SOURCE_BUILD = NO
 
+DEVILUTIONX_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
+DEVILUTIONX_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 # Prefill the player name when creating a new character, in case the device does
 # not have a keyboard.
 DEVILUTIONX_CONF_OPTS += -DBUILD_TESTING=OFF
