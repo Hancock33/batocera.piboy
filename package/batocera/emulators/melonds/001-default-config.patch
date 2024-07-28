@@ -1,14 +1,17 @@
 diff --git a/src/frontend/qt_sdl/Config.cpp b/src/frontend/qt_sdl/Config.cpp
-index d6d01825..94b34393 100644
+index 98749175..ac29eb49 100644
 --- a/src/frontend/qt_sdl/Config.cpp
 +++ b/src/frontend/qt_sdl/Config.cpp
-@@ -165,8 +165,7 @@ bool GdbARM9BreakOnStartup;
- CameraConfig Camera[2];
+@@ -38,10 +38,9 @@ namespace Config
+ using namespace melonDS;
  
  
--const char* kConfigFile = "melonDS.ini";
--const char* kUniqueConfigFile = "melonDS.%d.ini";
-+const char* kConfigFile = "/userdata/system/configs/melonDS/melonDS.ini";
+-const char* kConfigFile = "melonDS.toml";
++const char* kConfigFile = "/userdata/system/configs/melonDS/melonDS.toml";
  
- ConfigEntry ConfigFile[] =
- {
+-const char* kLegacyConfigFile = "melonDS.ini";
+-const char* kLegacyUniqueConfigFile = "melonDS.%d.ini";
++const char* kLegacyConfigFile = "/userdata/system/configs/melonDS/melonDS.ini";
+ 
+ toml::value RootTable;
+ 

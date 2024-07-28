@@ -3,8 +3,8 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Jun 17, 2024
-WINE_PROTON_VERSION = proton-wine-9.0-2b
+# Version: Commits on Jul 19, 2024
+WINE_PROTON_VERSION = experimental-wine-9.0-20240719
 WINE_PROTON_BRANCH = bleeding-edge
 WINE_PROTON_SOURCE = wine-proton-$(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
@@ -29,6 +29,7 @@ HOST_WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_PROTON_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
+	CFLAGS="$(TARGET_CFLAGS) -Wno-incompatible-pointer-types" \
 	--with-wine-tools=$(BUILD_DIR)/host-wine-custom-$(WINE_CUSTOM_VERSION) \
 	--disable-tests \
 	--without-capi \

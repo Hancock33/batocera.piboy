@@ -15922,46 +15922,6 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
-#. TRANSLATION: mame.mame.keys
-msgctxt "keys_files"
-msgid "Exit Emulator"
-msgstr ""
-
-#. TRANSLATION: mame.mame.keys
-msgctxt "keys_files"
-msgid "RetroArch Menu"
-msgstr ""
-
-#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Load State"
-msgstr "Ładowanie stanu"
-
-#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Save State"
-msgstr "Zapisywanie stanu"
-
-#. TRANSLATION: mame.mame.keys, 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Zrzut ekranu"
-
-#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Przewijanie do przodu"
-
-#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot +"
-msgstr "Gniazdo +"
-
-#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot -"
-msgstr "Gniazdo -"
-
 #. TRANSLATION: switch.ryujinx.keys
 msgctxt "keys_files"
 msgid "Emulator Config"
@@ -16242,6 +16202,11 @@ msgctxt "keys_files"
 msgid "Toggle Screen Layout"
 msgstr "Przełączanie układu ekranu"
 
+#. TRANSLATION: 3ds.panda3ds.keys, mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "Zrzut ekranu"
+
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
@@ -16261,6 +16226,36 @@ msgstr "Kliknięcie myszą"
 msgctxt "keys_files"
 msgid "Exit emulator using SDL"
 msgstr "Zamknięcie emulatora za pomocą SDL"
+
+#. TRANSLATION: mame.keys
+msgctxt "keys_files"
+msgid "Exit Emulator"
+msgstr ""
+
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Load State"
+msgstr "Ładowanie stanu"
+
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Save State"
+msgstr "Zapisywanie stanu"
+
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Fast Forward"
+msgstr "Przewijanie do przodu"
+
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot +"
+msgstr "Gniazdo +"
+
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot -"
+msgstr "Gniazdo -"
 
 #. TRANSLATION: psx.duckstation.keys
 msgctxt "keys_files"

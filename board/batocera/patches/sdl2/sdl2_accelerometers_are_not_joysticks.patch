@@ -1,0 +1,12 @@
+diff --git a/src/core/linux/SDL_udev.c b/src/core/linux/SDL_udev.c
+index 5bdfc0db8..a5ab17ded 100644
+--- a/src/core/linux/SDL_udev.c
++++ b/src/core/linux/SDL_udev.c
+@@ -423,6 +423,7 @@ static int device_class(struct udev_device *dev)
+             devclass |= SDL_UDEV_DEVICE_JOYSTICK;
+         }
+ 
++        SDL_SetHint(SDL_HINT_ACCELEROMETER_AS_JOYSTICK, "0");
+         val = _this->syms.udev_device_get_property_value(dev, "ID_INPUT_ACCELEROMETER");
+         if (SDL_GetHintBoolean(SDL_HINT_ACCELEROMETER_AS_JOYSTICK, SDL_TRUE) &&
+             val && SDL_strcmp(val, "1") == 0) {

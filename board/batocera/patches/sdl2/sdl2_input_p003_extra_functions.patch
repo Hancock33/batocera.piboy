@@ -1,5 +1,5 @@
 diff --git a/include/SDL_joystick.h b/include/SDL_joystick.h
-index 561e01099..06500eb9f 100644
+index 7a3faf841..fbe0a9cf3 100644
 --- a/include/SDL_joystick.h
 +++ b/include/SDL_joystick.h
 @@ -424,6 +424,11 @@ extern DECLSPEC int SDLCALL SDL_JoystickDetachVirtual(int device_index);
@@ -49,10 +49,10 @@ index 7f5d32525..d3d939906 100644
  SDL_DYNAPI_PROC(int,SDL_JoystickGetBall,(SDL_Joystick *a, int b, int *c, int *d),(a,b,c,d),return)
  SDL_DYNAPI_PROC(Uint8,SDL_JoystickGetButton,(SDL_Joystick *a, int b),(a,b),return)
 diff --git a/src/joystick/SDL_joystick.c b/src/joystick/SDL_joystick.c
-index 29bad0696..13c6b0d6c 100644
+index ca4902361..a3d3ec111 100644
 --- a/src/joystick/SDL_joystick.c
 +++ b/src/joystick/SDL_joystick.c
-@@ -3310,6 +3310,27 @@ SDL_JoystickGUID SDL_JoystickGetGUIDFromString(const char *pchGUID)
+@@ -3328,6 +3328,27 @@ SDL_JoystickGUID SDL_JoystickGetGUIDFromString(const char *pchGUID)
      return SDL_GUIDFromString(pchGUID);
  }
  
@@ -97,10 +97,10 @@ index 97efa888a..cd66bbfbc 100644
  
  /* vi: set ts=4 sw=4 expandtab: */
 diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
-index 9ef5a404f..e2747be09 100644
+index 8032fc887..18fa0e627 100644
 --- a/src/joystick/linux/SDL_sysjoystick.c
 +++ b/src/joystick/linux/SDL_sysjoystick.c
-@@ -1224,6 +1224,16 @@ static void ConfigJoystick(SDL_Joystick *joystick, int fd, int fd_sensor)
+@@ -1267,6 +1267,16 @@ static void ConfigJoystick(SDL_Joystick *joystick, int fd, int fd_sensor)
  
      SDL_AssertJoysticksLocked();
  
@@ -117,7 +117,7 @@ index 9ef5a404f..e2747be09 100644
      /* See if this device uses the new unified event API */
      if ((ioctl(fd, EVIOCGBIT(EV_KEY, sizeof(keybit)), keybit) >= 0) &&
          (ioctl(fd, EVIOCGBIT(EV_ABS, sizeof(absbit)), absbit) >= 0) &&
-@@ -2766,6 +2776,56 @@ SDL_JoystickDriver SDL_LINUX_JoystickDriver = {
+@@ -2809,6 +2819,56 @@ SDL_JoystickDriver SDL_LINUX_JoystickDriver = {
      LINUX_JoystickGetGamepadMapping
  };
  

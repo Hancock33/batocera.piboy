@@ -1,0 +1,10 @@
+config BR2_PACKAGE_RPI_UTILS
+	bool "rpi-utils"
+	depends on !BR2_STATIC_LIBS # dtc
+	select BR2_PACKAGE_DTC
+
+	help
+	  A collection of scripts and simple applications for the
+	  Raspberry Pi.
+
+	  https://github.com/raspberrypi/utils/

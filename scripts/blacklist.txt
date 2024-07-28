@@ -10,7 +10,6 @@ ledspicer.mk
 lib32bit.mk
 libserum.mk
 mangohud.mk
-melonds.mk
 model2emu.mk
 noto-cjk-fonts.mk
 openbor6412.mk
@@ -24,5 +23,4 @@ wine-proton-cachyos.mk
 wine-proton.mk
 wine-staging.mk
 wine-x86.mk
-xkbd.mk
 xosd.mk

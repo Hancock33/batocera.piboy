@@ -79,4 +79,12 @@ define LIBRETRO_MAME_INSTALL_TARGET_CMDS
 	cp -R -u $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/coindrop $(TARGET_DIR)/usr/bin/mame/plugins
 endef
 
+define LIBRETRO_MAME_EVMAPY
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-mame/mame.keys \
+	    $(TARGET_DIR)/usr/share/evmapy
+endef
+
+LIBRETRO_MAME_POST_INSTALL_TARGET_HOOKS += LIBRETRO_MAME_EVMAPY
+
 $(eval $(generic-package))

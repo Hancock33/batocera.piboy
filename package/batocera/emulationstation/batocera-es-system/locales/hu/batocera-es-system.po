@@ -15789,46 +15789,6 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
-#. TRANSLATION: mame.mame.keys
-msgctxt "keys_files"
-msgid "Exit Emulator"
-msgstr ""
-
-#. TRANSLATION: mame.mame.keys
-msgctxt "keys_files"
-msgid "RetroArch Menu"
-msgstr ""
-
-#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Load State"
-msgstr "Játékállás betöltése"
-
-#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Save State"
-msgstr "Állam mentése"
-
-#. TRANSLATION: mame.mame.keys, 3ds.panda3ds.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Pillanatkép"
-
-#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Gyorsan előre"
-
-#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot +"
-msgstr "Slot +"
-
-#. TRANSLATION: mame.mame.keys, psx.duckstation.keys, psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Slot -"
-msgstr "Slot -"
-
 #. TRANSLATION: switch.ryujinx.keys
 msgctxt "keys_files"
 msgid "Emulator Config"
@@ -16109,6 +16069,11 @@ msgctxt "keys_files"
 msgid "Toggle Screen Layout"
 msgstr "Képernyőelrendezés váltása"
 
+#. TRANSLATION: 3ds.panda3ds.keys, mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "Pillanatkép"
+
 #. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
@@ -16128,6 +16093,36 @@ msgstr "Egérkattintás"
 msgctxt "keys_files"
 msgid "Exit emulator using SDL"
 msgstr "Kilépés az emulátorból SDL használatával"
+
+#. TRANSLATION: mame.keys
+msgctxt "keys_files"
+msgid "Exit Emulator"
+msgstr ""
+
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Load State"
+msgstr "Játékállás betöltése"
+
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Save State"
+msgstr "Állam mentése"
+
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Fast Forward"
+msgstr "Gyorsan előre"
+
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot +"
+msgstr "Slot +"
+
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Slot -"
+msgstr "Slot -"
 
 #. TRANSLATION: psx.duckstation.keys
 msgctxt "keys_files"

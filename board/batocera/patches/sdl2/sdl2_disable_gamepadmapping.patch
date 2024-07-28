@@ -1,8 +1,8 @@
 diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
-index affd82bce..d085498ef 100644
+index bb7c31ced..8880158ab 100644
 --- a/src/joystick/linux/SDL_sysjoystick.c
 +++ b/src/joystick/linux/SDL_sysjoystick.c
-@@ -2282,6 +2282,9 @@ static SDL_bool LINUX_JoystickGetGamepadMapping(int device_index, SDL_GamepadMap
+@@ -2328,6 +2328,9 @@ static SDL_bool LINUX_JoystickGetGamepadMapping(int device_index, SDL_GamepadMap
  
      SDL_AssertJoysticksLocked();
  

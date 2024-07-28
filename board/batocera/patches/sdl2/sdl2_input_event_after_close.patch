@@ -1,22 +1,22 @@
 diff --git a/src/joystick/SDL_joystick.c b/src/joystick/SDL_joystick.c
-index a79e050e9..29bad0696 100644
+index 7c2edb316..ca4902361 100644
 --- a/src/joystick/SDL_joystick.c
 +++ b/src/joystick/SDL_joystick.c
-@@ -2262,7 +2262,7 @@ void SDL_JoystickUpdate(void)
-             if (joystick->delayed_guide_button) {
-                 SDL_GameControllerHandleDelayedGuideButton(joystick);
+@@ -1488,7 +1488,7 @@ int SDL_JoystickRumble(SDL_Joystick *joystick, Uint16 low_frequency_rumble, Uint
+             if (!joystick->rumble_resend) {
+                 joystick->rumble_resend = 1;
              }
 -        }
 +
  
-         now = SDL_GetTicks();
-         if (joystick->rumble_expiration &&
-@@ -2284,6 +2284,8 @@ void SDL_JoystickUpdate(void)
-             SDL_TICKS_PASSED(now, joystick->trigger_rumble_expiration)) {
-             SDL_JoystickRumbleTriggers(joystick, 0, 0, 0);
+         if (retval == 0) {
+             joystick->low_frequency_rumble = low_frequency_rumble;
+@@ -1504,6 +1504,8 @@ int SDL_JoystickRumble(SDL_Joystick *joystick, Uint16 low_frequency_rumble, Uint
+                 joystick->rumble_resend = 0;
+             }
          }
 +
 +	}
      }
+     SDL_UnlockJoysticks();
  
-     /* this needs to happen AFTER walking the joystick list above, so that any

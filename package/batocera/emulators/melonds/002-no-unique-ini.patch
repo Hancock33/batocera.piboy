@@ -1,74 +1,22 @@
 diff --git a/src/frontend/qt_sdl/Config.cpp b/src/frontend/qt_sdl/Config.cpp
-index 94b34393..7e6c7e26 100644
+index ac29eb49..3a9cf1db 100644
 --- a/src/frontend/qt_sdl/Config.cpp
 +++ b/src/frontend/qt_sdl/Config.cpp
-@@ -383,20 +383,7 @@ ConfigEntry ConfigFile[] =
- bool LoadFile(int inst, int actualinst)
+@@ -626,16 +626,7 @@ template<typename T> T Table::FindDefault(const std::string& path, T def, Defaul
+ bool LoadLegacyFile(int inst)
  {
      Platform::FileHandle* f;
 -    if (inst > 0)
 -    {
 -        char name[100] = {0};
--        snprintf(name, 99, kUniqueConfigFile, inst+1);
+-        snprintf(name, 99, kLegacyUniqueConfigFile, inst+1);
 -        f = Platform::OpenLocalFile(name, Platform::FileMode::ReadText);
--
--        if (!Platform::CheckLocalFileWritable(name)) return false;
 -    }
 -    else
 -    {
--        f = Platform::OpenLocalFile(kConfigFile, Platform::FileMode::ReadText);
--
--        if (actualinst == 0 && !Platform::CheckLocalFileWritable(kConfigFile)) return false;
+-        f = Platform::OpenLocalFile(kLegacyConfigFile, Platform::FileMode::ReadText);
 -    }
-+    f = Platform::OpenLocalFile(kConfigFile, Platform::FileMode::ReadText);
++    f = Platform::OpenLocalFile(kLegacyConfigFile, Platform::FileMode::ReadText);
  
      if (!f) return true;
  
-@@ -416,9 +403,6 @@ bool LoadFile(int inst, int actualinst)
-         {
-             if (!strncmp(entry->Name, entryname, 32))
-             {
--                if ((inst > 0) && (!entry->InstanceUnique))
--                    break;
--
-                 switch (entry->Type)
-                 {
-                 case 0: *(int*)entry->Value = strtol(entryval, NULL, 10); break;
-@@ -449,12 +433,8 @@ bool Load()
-         case 3: *(int64_t*)entry->Value = std::get<int64_t>(entry->Default); break;
-         }
-     }
--    
--    int inst = Platform::InstanceID();
- 
--    bool ret = LoadFile(0, inst);
--    if (inst > 0)
--        ret = LoadFile(inst, inst);
-+    bool ret = LoadFile(0, 0);
- 
-     return ret;
- }
-@@ -464,22 +444,12 @@ void Save()
-     int inst = Platform::InstanceID();
- 
-     Platform::FileHandle* f;
--    if (inst > 0)
--    {
--        char name[100] = {0};
--        snprintf(name, 99, kUniqueConfigFile, inst+1);
--        f = Platform::OpenLocalFile(name, Platform::FileMode::WriteText);
--    }
--    else
--        f = Platform::OpenLocalFile(kConfigFile, Platform::FileMode::WriteText);
-+    f = Platform::OpenLocalFile(kConfigFile, Platform::FileMode::WriteText);
- 
-     if (!f) return;
- 
-     for (ConfigEntry* entry = &ConfigFile[0]; entry->Value; entry++)
-     {
--        if ((inst > 0) && (!entry->InstanceUnique))
--            continue;
--
-         switch (entry->Type)
-         {
-         case 0: Platform::FileWriteFormatted(f, "%s=%d\n", entry->Name, *(int*)entry->Value); break;
