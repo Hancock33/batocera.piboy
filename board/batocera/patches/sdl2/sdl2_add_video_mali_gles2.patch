@@ -1,8 +1,8 @@
 diff --git a/configure b/configure
-index bcaefeaf1..0bcecf426 100755
+index e0f164f9e..c5b016712 100755
 --- a/configure
 +++ b/configure
-@@ -929,6 +929,7 @@ enable_render_metal
+@@ -928,6 +928,7 @@ enable_render_metal
  enable_video_directfb
  enable_directfb_shared
  enable_video_kmsdrm
@@ -10,27 +10,27 @@ index bcaefeaf1..0bcecf426 100755
  enable_kmsdrm_shared
  enable_video_dummy
  enable_video_offscreen
-@@ -25661,6 +25662,10 @@ fi
+@@ -25585,6 +25586,10 @@ fi
  
          video_kmsdrm=no
  
 +    if  test x$enable_video_mali = xyes; then
-+      $as_echo "#define SDL_VIDEO_DRIVER_MALI 1" >>confdefs.h
-+      SUMMARY_video="${SUMMARY_video} mali"
++$as_echo "#define SDL_VIDEO_DRIVER_MALI 1" >>confdefs.h
++            SUMMARY_video="${SUMMARY_video} mali"
 +    fi
  
  pkg_failed=no
  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for libdrm >= 1.4.82" >&5
 diff --git a/configure.ac b/configure.ac
-index 2114e4099..0215857e2 100644
+index 907d1d082..edd22b682 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -2445,6 +2445,15 @@ CheckKMSDRM()
+@@ -2413,6 +2413,15 @@ CheckKMSDRM()
              video_kmsdrm=yes
          fi
  
 +        AC_ARG_ENABLE(video-mali,
-+        [AS_HELP_STRING([--enable-video-mali],
++        [AS_HELP_STRING([--enable-video-mali], 
 +	       [use Mali video driver [default=no]])],
 +	      , enable_video_mali=yes)
 +        if test x$enable_video = xyes && x$enable_video_mali = xyes; then
@@ -41,7 +41,7 @@ index 2114e4099..0215857e2 100644
          if test x$video_kmsdrm = xyes; then
              AC_ARG_ENABLE(kmsdrm-shared,
  [AS_HELP_STRING([--enable-kmsdrm-shared], [dynamically load kmsdrm support [default=yes]])],
-@@ -2551,7 +2560,9 @@ CheckGLX()
+@@ -2519,7 +2528,9 @@ CheckGLX()
          AC_MSG_RESULT($video_opengl_glx)
          if test x$video_opengl_glx = xyes; then
              AC_DEFINE(SDL_VIDEO_OPENGL, 1, [ ])
@@ -65,7 +65,7 @@ index f5dd166ff..16b25d521 100644
  #undef SDL_VIDEO_DRIVER_KMSDRM_DYNAMIC
  #undef SDL_VIDEO_DRIVER_KMSDRM_DYNAMIC_GBM
 diff --git a/src/video/SDL_egl.c b/src/video/SDL_egl.c
-index a89c0e812..2d8179f3e 100644
+index a89c0e812..4e7a9cd18 100644
 --- a/src/video/SDL_egl.c
 +++ b/src/video/SDL_egl.c
 @@ -516,6 +516,22 @@ int SDL_EGL_LoadLibrary(_THIS, const char *egl_path, NativeDisplayType native_di
@@ -91,10 +91,11 @@ index a89c0e812..2d8179f3e 100644
          SDL_EGL_GetVersion(_this);
  
          if (_this->egl_data->egl_version_major == 1 && _this->egl_data->egl_version_minor == 5) {
-@@ -532,6 +548,7 @@ int SDL_EGL_LoadLibrary(_THIS, const char *egl_path, NativeDisplayType native_di
+@@ -532,6 +548,8 @@ int SDL_EGL_LoadLibrary(_THIS, const char *egl_path, NativeDisplayType native_di
                  }
              }
          }
++
 +#endif
      }
  #endif
