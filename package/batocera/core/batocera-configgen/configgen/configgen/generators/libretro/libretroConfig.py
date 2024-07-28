@@ -405,20 +405,20 @@ def createLibretroConfig(generator, system, controllers, metadata, guns, wheels,
         if system.isOptSet('analog_to_dpad_naomi_p1') and system.name == 'naomi':
             retroarchConfig['input_player1_analog_dpad_mode'] = system.config['analog_to_dpad_naomi_p1']
         else:
-            retroarchConfig['input_player1_analog_dpad_mode'] = '1'
+            retroarchConfig['input_player1_analog_dpad_mode'] = '3'
         if system.isOptSet('analog_to_dpad_naomi_p2') and system.name == 'naomi':
             retroarchConfig['input_player2_analog_dpad_mode'] = system.config['analog_to_dpad_naomi_p2']
         else:
-            retroarchConfig['input_player2_analog_dpad_mode'] = '1'
+            retroarchConfig['input_player2_analog_dpad_mode'] = '3'
         # Atomiswave D-Pad to Analog option
         if system.isOptSet('analog_to_dpad_atomiswave_p1') and system.name == 'atomiswave':
             retroarchConfig['input_player1_analog_dpad_mode'] = system.config['analog_to_dpad_atomiswave_p1']
         else:
-            retroarchConfig['input_player1_analog_dpad_mode'] = '1'
+            retroarchConfig['input_player1_analog_dpad_mode'] = '3'
         if system.isOptSet('analog_to_dpad_atomiswave_p2') and system.name == 'atomiswave':
             retroarchConfig['input_player2_analog_dpad_mode'] = system.config['analog_to_dpad_atomiswave_p2']
         else:
-            retroarchConfig['input_player2_analog_dpad_mode'] = '1'
+            retroarchConfig['input_player2_analog_dpad_mode'] = '3'
         # Dreamcast controller type selection
         if system.isOptSet('controller1_dc'):
             retroarchConfig['input_libretro_device_p1'] = system.config['controller1_dc']
