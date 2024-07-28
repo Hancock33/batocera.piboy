@@ -1,5 +1,5 @@
 diff --git a/src/config/LaunchSettings.cpp b/src/config/LaunchSettings.cpp
-index 1731f50..3073ded 100644
+index 1731f50..3f953c4 100644
 --- a/src/config/LaunchSettings.cpp
 +++ b/src/config/LaunchSettings.cpp
 @@ -70,6 +70,8 @@ bool LaunchSettings::HandleCommandline(const std::vector<std::wstring>& args)
@@ -44,10 +44,10 @@ index b0f673a..bbae98a 100644
  	inline static std::optional<uint32> s_persistent_id{};
  
 diff --git a/src/gui/MainWindow.cpp b/src/gui/MainWindow.cpp
-index da57870..19f1dca 100644
+index c83ab16..f8c926e 100644
 --- a/src/gui/MainWindow.cpp
 +++ b/src/gui/MainWindow.cpp
-@@ -1748,7 +1748,8 @@ void MainWindow::SetMenuVisible(bool state)
+@@ -1722,7 +1722,8 @@ void MainWindow::SetMenuVisible(bool state)
  	if (m_menu_visible == state)
  		return;
  
@@ -57,7 +57,7 @@ index da57870..19f1dca 100644
  	m_menu_visible = state;
  }
  
-@@ -2301,7 +2302,8 @@ void MainWindow::RecreateMenu()
+@@ -2282,7 +2283,8 @@ void MainWindow::RecreateMenu()
  
  	m_menuBar->Append(helpMenu, _("&Help"));
  

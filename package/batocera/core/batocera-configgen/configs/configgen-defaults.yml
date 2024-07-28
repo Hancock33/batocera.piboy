@@ -266,7 +266,7 @@ dos:
   core:     dosbox_pure
 dreamcast:
   emulator: libretro
-  core:     flycast2021
+  core:     flycast
   options:
     powersave: '1'
 droidports:
@@ -584,7 +584,7 @@ namco2x6:
     powersave: '1'
 naomi:
   emulator: libretro
-  core:     flycast2021
+  core:     flycast
   options:
     powersave: '1'
 naomi2:
@@ -599,7 +599,7 @@ naomi2gd:
     powersave: '1'
 naomigd:
   emulator: libretro
-  core:     flycast2021
+  core:     flycast
   options:
     powersave: '1'
 nblood:

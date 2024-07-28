@@ -1,5 +1,5 @@
 diff --git a/src/core/linux/SDL_udev.c b/src/core/linux/SDL_udev.c
-index 80071803f..56e03445e 100644
+index a5ab17ded..be73159d3 100644
 --- a/src/core/linux/SDL_udev.c
 +++ b/src/core/linux/SDL_udev.c
 @@ -64,6 +64,67 @@ static SDL_bool SDL_UDEV_load_sym(const char *fn, void **addr)
@@ -81,22 +81,25 @@ index 80071803f..56e03445e 100644
      if (!_this) {
          return;
      }
-@@ -218,11 +283,27 @@ void SDL_UDEV_Scan(void)
+@@ -218,10 +283,28 @@ void SDL_UDEV_Scan(void)
          const char *path = _this->syms.udev_list_entry_get_name(item);
          struct udev_device *dev = _this->syms.udev_device_new_from_syspath(_this->udev, path);
          if (dev) {
 -            device_event(SDL_UDEV_DEVICEADDED, dev);
 -            _this->syms.udev_device_unref(dev);
+-        }
+-    }
 +         const char* devnode = _this->syms.udev_device_get_devnode(dev);
-+             if(devnode != NULL) {
-+        	    sorted[sorted_count].devnode = devnode;
-+        	    sorted[sorted_count].dev     = dev;
-+        	    sorted[sorted_count].item = item;
-+        	    sorted_count++;
-+             }
-         }
-     }
- 
++         if(devnode != NULL) {
++        sorted[sorted_count].devnode = devnode;
++        sorted[sorted_count].dev     = dev;
++        sorted[sorted_count].item = item;
++        sorted_count++;
++         }
++       }
++    }
++
++ 
 +   /* Sort the udev entries by devnode name so that they are
 +    * created in the proper order */
 +   qsort(sorted, sorted_count,
@@ -108,6 +111,6 @@ index 80071803f..56e03445e 100644
 +     _this->syms.udev_device_unref(sorted[i].dev);
 +   }
 +
+ 
      _this->syms.udev_enumerate_unref(enumerate);
  }
- 

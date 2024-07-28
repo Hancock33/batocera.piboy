@@ -3,9 +3,9 @@
 # wine-cachyos
 #
 ################################################################################
-# Version: Commits on Jun 19, 2024
-WINE_CACHYOS_VERSION = cachyos-wine-9.0-20240619
-WINE_CACHYOS_BRANCH = cachyos_wine_9.0_20240619
+# Version: Commits on Jul 08, 2024
+WINE_CACHYOS_VERSION = cachyos-wine-9.0-20240708
+WINE_CACHYOS_BRANCH = cachyos_wine_9.0_20240708
 WINE_CACHYOS_SOURCE = wine-cachyos-$(WINE_CACHYOS_VERSION).tar.gz
 WINE_CACHYOS_SITE = $(call github,CachyOS,wine-cachyos,$(WINE_CACHYOS_VERSION))
 WINE_CACHYOS_LICENSE = LGPL-2.1+
@@ -29,6 +29,7 @@ HOST_WINE_CACHYOS_PRE_CONFIGURE_HOOKS += WINE_CACHYOS_AUTOGEN
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_CACHYOS_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
+	CFLAGS="$(TARGET_CFLAGS) -Wno-incompatible-pointer-types" \
 	--with-wine-tools=$(BUILD_DIR)/host-wine-cachyos-$(WINE_CACHYOS_VERSION) \
 	--disable-tests \
 	--without-capi \
