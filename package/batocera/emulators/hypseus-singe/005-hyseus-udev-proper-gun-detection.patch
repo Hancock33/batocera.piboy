@@ -1,21 +1,8 @@
-From 8066a5eca448d8dd6c9858db5ad89f3b221d2599 Mon Sep 17 00:00:00 2001
-From: Nicolas Adenis-Lamarre <nicolas.adenis.lamarre@gmail.com>
-Date: Sun, 26 May 2024 09:10:14 +0000
-Subject: [PATCH] 005-hyseus-udev-proper-gun-detection
-
-Signed-off-by: Nicolas Adenis-Lamarre <nicolas.adenis.lamarre@gmail.com>
----
- src/CMakeLists.txt               |   3 +-
- src/cmake/modules/FindUdev.cmake |  15 +++
- src/manymouse/linux_evdev.c      | 173 ++++++++++++++++++++++++++-----
- 3 files changed, 164 insertions(+), 27 deletions(-)
- create mode 100644 src/cmake/modules/FindUdev.cmake
-
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 6a85063..13a86bf 100644
+index e629557..c02fc8c 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -119,13 +119,14 @@ find_package(SDL2 REQUIRED)
+@@ -103,13 +103,14 @@ find_package(SDL2 REQUIRED)
  find_package(SDL2TTF REQUIRED)
  find_package(SDL2_IMAGE REQUIRED)
  find_package(Vorbis REQUIRED)
@@ -256,6 +243,3 @@ index 61d61e6..84dd5cc 100644
  
      return (int)available_mice;
  } /* linux_evdev_init */
--- 
-2.34.1
-
