@@ -10,7 +10,9 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-07-28|Jul 28
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|2cae95c67eb962ad11762dee6added06f6c7f0aa|Jul 28, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|3a3578aeccce0e00d4ca2ea0cfcb3eb64ef79e9e|Jul 28, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|c1f23a3b09d2ba4101f092559aeec7d016586847|Jul 28, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240728|Jul 28, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|26ddd6e9ef5a360d1b393ddd2c7c9fe933c8b1d2|Jul 28, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240728|Jul 28, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|ee76ea9f3322058b99de023316262f33b7e00fb4|Jul 28, 2024
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|b337bb07f88a30605c134d9e634f19fef39309f9|Jul 28, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|ae765fef8f4cd9cb3e058235ef104a2ff7995bf7|Jul 28, 2024
@@ -25,8 +27,6 @@ Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1504b8a3eb7e5a5997830fa2a1d10
 Ports|[omf2097](http://github.com/omf2097/openomf)|970ad59474aba3699d59078a67dab2967bafcb80|Jul 27, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|5a5057859a145dc78fdeae6d934654dbcda20daf|Jul 27, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|6201060bd8e738d468514ba66c5255f2ca739f12|Jul 27, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240727|Jul 27, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240727|Jul 27, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|9c36d2f66141d55da404bb8af6a9e82bad743bec|Jul 27, 2024
 Ports|[quake3](http://github.com/ioquake/ioq3)|4c19ff2b55e6dd3d97c681112821de0556f78d4a|Jul 27, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|d5aae5a68daa779da768ab21b17796dfb6300429|Jul 27, 2024
