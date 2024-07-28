@@ -1,0 +1,13 @@
+diff --git a/Source/Core/Core/Debugger/PPCDebugInterface.cpp b/Source/Core/Core/Debugger/PPCDebugInterface.cpp
+index f44c20d7f28c..1ebd0f8d5b48 100644
+--- a/Source/Core/Core/Debugger/PPCDebugInterface.cpp
++++ b/Source/Core/Core/Debugger/PPCDebugInterface.cpp
+@@ -4,6 +4,7 @@
+ 
+ #include "Core/Debugger/PPCDebugInterface.h"
+ 
++#include <algorithm>
+ #include <array>
+ #include <cstddef>
+ #include <string>
+ 
