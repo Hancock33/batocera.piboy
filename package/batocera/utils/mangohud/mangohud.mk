@@ -6,6 +6,7 @@
 # Version: Commits from Jun 15, 2024
 MANGOHUD_VERSION = 12620c91eaca0917a7939a92ec33915cadf24475
 MANGOHUD_SITE =  $(call github,flightlessmango,MangoHud,$(MANGOHUD_VERSION))
+MANGOHUD_BRANCH = simple-image-loader
 
 MANGOHUD_DEPENDENCIES = host-libcurl host-python-mako host-glslang dbus
 
@@ -17,7 +18,7 @@ ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
 	MANGOHUD_DEPENDENCIES += xserver_xorg-server
 endif
 
-MANGOHUD_CONF_OPTS = -Dwith_xnvctrl=disabled
+MANGOHUD_CONF_OPTS = -Dwith_xnvctrl=disabled -Dtests=disabled
 
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS),y)
     MANGOHUD_DEPENDENCIES += vulkan-headers
