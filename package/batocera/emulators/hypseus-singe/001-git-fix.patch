@@ -1,6 +1,8 @@
---- a/src/CMakeLists.txt	2021-03-29 15:33:17.456186927 +0200
-+++ b/src/CMakeLists.txt	2021-03-29 15:34:29.179517822 +0200
-@@ -34,7 +34,6 @@
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 8d4c9a7..da3e284 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -49,7 +49,6 @@ string(CONCAT TARGET_ARCH TARGET_ ${TARGET_ARCH})
  
  include(BuildSupport)
  include(GNUInstallDirs)
@@ -8,7 +10,7 @@
  include(InstallRequiredSystemLibraries)
  include(FindPkgConfig)
  include(ExternalProject)
-@@ -49,25 +48,10 @@
+@@ -63,25 +62,10 @@ build_libmpeg2( )
  
  message(STATUS "Target: ${CMAKE_SYSTEM_NAME} ${CMAKE_TARGET_ARCHITECTURES}")
  
