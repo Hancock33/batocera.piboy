@@ -29,6 +29,7 @@ HOST_WINE_CACHYOS_PRE_CONFIGURE_HOOKS += WINE_CACHYOS_AUTOGEN
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_CACHYOS_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
+	CFLAGS="$(TARGET_CFLAGS) -Wno-incompatible-pointer-types" \
 	--with-wine-tools=$(BUILD_DIR)/host-wine-cachyos-$(WINE_CACHYOS_VERSION) \
 	--disable-tests \
 	--without-capi \
