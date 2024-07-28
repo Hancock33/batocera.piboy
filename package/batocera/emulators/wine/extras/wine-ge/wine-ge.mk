@@ -29,6 +29,7 @@ HOST_WINE_GE_PRE_CONFIGURE_HOOKS += WINE_GE_AUTOGEN
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_GE_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
+	CFLAGS="$(TARGET_CFLAGS) -Wno-incompatible-pointer-types" \
 	--with-wine-tools=$(BUILD_DIR)/host-wine-ge-$(WINE_GE_VERSION) \
 	--disable-tests \
 	--without-capi \
