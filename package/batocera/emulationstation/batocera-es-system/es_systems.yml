@@ -2752,7 +2752,7 @@ kodi:
     mplayer:
       mplayer:          { requireAnyOf: [BR2_PACKAGE_MPV] }
     libretro:
-      ffmpeg:           { requireAnyOf: [BR2_PACKAGE_RETROARCH] }
+      ffmpeg:           { requireAnyOf: [BR2_PACKAGE_BATOCERA_TARGET_X86_ANY] }
 
 recordings:
   name:                 Recordings
