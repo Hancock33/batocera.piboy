@@ -45,7 +45,7 @@ do_start ()
 
     FBV_OPTS="-f -e -i"
     # FBV_OPTS can be set differently for some boards to work
-    test -e /dev/fb0 && fbv ${FBV_OPTS} -i "/tmp/boot-logo.png"
+    test -e /dev/fb0 && fbv ${FBV_OPTS} "/tmp/boot-logo.png"
 }
 
 case "$1" in
