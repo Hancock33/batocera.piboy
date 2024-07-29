@@ -24,8 +24,9 @@ Ports|[doomretro](http://github.com/bradharding/doomretro)|a274ee7c9461ba5054eab
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|d697eafbe16d8f76e01759ac033451386dfa3bb8|Jul 29, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|10c2531d51a16a933e750a3e2a16900f8f6ec9c3|Jul 29, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|dd570b616b3c005b0e78657c1b658612a4463e7f|Jul 29, 2024
-Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|2a2ef351d61bc35590ac4b64807a12e85e9f51de|Jul 29, 2024
+Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|f1f6b8ce930d6bf0aa3ee9c8c25be07252fb79d2|Jul 29, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|45bf218df428123f739714ef4e65e1b96c0959b7|Jul 29, 2024
+Emulators|[libretro-kronos](http://github.com/FCare/kronos)|18371424f21ef71b57e7e2eea962739418acca60|Jul 29, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|52cf10274c342c1dd97d91c273b109d5c859d227|Jul 29, 2024
 Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|cabd59af2c1e635b84f44643eec9f52891f0e560|Jul 29, 2024
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|189a59ea6a88c3c65553be3a1cea89c976ae3f22|Jul 29, 2024
@@ -161,7 +162,6 @@ Hardware|[pironman5](http://github.com/sunfounder/pironman5)|efd1d50d678a9048b56
 Libraries|[discord_rpc](http://github.com/stenzek/discord-rpc)|842c15192041f8e71c512851834f4dadb1a554fb|Jul 04, 2024
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|fb645bfcc8df959666543cf1f54ab3147c8f08b9|Jul 04, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|20bb444562aa1dba79cf6adcb5da632ba580eec3|Jul 03, 2024
-Emulators|[libretro-kronos](http://github.com/FCare/kronos)|400670e78da403ec37a86f23ac6e6c64e641e78e|Jul 03, 2024
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.07.01|Jul 02, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|407707070e7e4b7f07c165cdcdf46fc156b8bd6b|Jul 02, 2024
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|407707070e7e4b7f07c165cdcdf46fc156b8bd6b|Jul 02, 2024
