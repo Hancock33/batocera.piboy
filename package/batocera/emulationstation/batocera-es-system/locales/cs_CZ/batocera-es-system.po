@@ -6597,6 +6597,21 @@ msgstr "Vypnout je bezpečnější, Zapnout pro konkrétní hry."
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
+msgid "Double the rendering resolution."
+msgstr "Zdvojnásobte rozlišení vykreslování."
+
+#. TRANSLATION: libretro/pcsx_rearmed, drastic
+msgctxt "game_options"
+msgid "ENHANCED RENDERING RESOLUTION"
+msgstr "VYLEPŠENÉ ROZLIŠENÍ VYKRESLOVÁNÍ"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "On (Speed hack)"
+msgstr "Zapnout (Rychlostní hack)"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
 msgstr "Capcom VS hry Rozšířit Šířku Obrazovky"
 
@@ -13087,11 +13102,6 @@ msgstr ""
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
-msgid "ENHANCED RENDERING RESOLUTION"
-msgstr "VYLEPŠENÉ ROZLIŠENÍ VYKRESLOVÁNÍ"
-
-#. TRANSLATION: drastic
-msgctxt "game_options"
 msgid ""
 "Skip frames to improve performance, at the cost of choppy motion. Can cause "
 "visual glitches."
@@ -17640,14 +17650,6 @@ msgstr "Rychlé uložení"
 #~ msgctxt "game_options"
 #~ msgid "Emable or disable high score saving"
 #~ msgstr "Umožnit nebo zakázat ukládání vysokého skóre"
-
-#~ msgctxt "game_options"
-#~ msgid "Double the rendering resolution."
-#~ msgstr "Zdvojnásobte rozlišení vykreslování."
-
-#~ msgctxt "game_options"
-#~ msgid "On (Speed hack)"
-#~ msgstr "Zapnout (Rychlostní hack)"
 
 #~ msgctxt "game_options"
 #~ msgid ""

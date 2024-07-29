@@ -6524,6 +6524,21 @@ msgstr "关闭更安全，对于特定游戏打开。"
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
+msgid "Double the rendering resolution."
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed, drastic
+msgctxt "game_options"
+msgid "ENHANCED RENDERING RESOLUTION"
+msgstr "增强的渲染分辨率"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "On (Speed hack)"
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
 msgstr "卡普空格斗游戏扩展屏幕宽度"
 
@@ -12907,11 +12922,6 @@ msgstr "可以提高帧率和响应性。"
 msgctxt "game_options"
 msgid "Enhancement. Double the rendering resolution. Makes 3D objects clearer."
 msgstr "增强。增加渲染分辨率。使3D物体更加清晰。"
-
-#. TRANSLATION: drastic
-msgctxt "game_options"
-msgid "ENHANCED RENDERING RESOLUTION"
-msgstr "增强的渲染分辨率"
 
 #. TRANSLATION: drastic
 msgctxt "game_options"

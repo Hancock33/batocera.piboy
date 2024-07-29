@@ -6592,6 +6592,21 @@ msgstr "Desgaituta seguruagoa da, Gaituta joku zehatzetarako"
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
+msgid "Double the rendering resolution."
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed, drastic
+msgctxt "game_options"
+msgid "ENHANCED RENDERING RESOLUTION"
+msgstr "HOBETUTAKO RENDERIZAZIO BEREIZMENA"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "On (Speed hack)"
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
 msgstr "Capcom-en VS jokoen Pantailaren zabalera zabaltzen dute."
 
@@ -13103,11 +13118,6 @@ msgid "Enhancement. Double the rendering resolution. Makes 3D objects clearer."
 msgstr ""
 "Hobekuntza. Bikoiztu renderizatze bereizmena. 3D objetuak argiagoak egiten "
 "ditu."
-
-#. TRANSLATION: drastic
-msgctxt "game_options"
-msgid "ENHANCED RENDERING RESOLUTION"
-msgstr "HOBETUTAKO RENDERIZAZIO BEREIZMENA"
 
 #. TRANSLATION: drastic
 msgctxt "game_options"

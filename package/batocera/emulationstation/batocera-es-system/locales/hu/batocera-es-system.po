@@ -6626,6 +6626,21 @@ msgstr ""
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
+msgid "Double the rendering resolution."
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed, drastic
+msgctxt "game_options"
+msgid "ENHANCED RENDERING RESOLUTION"
+msgstr "FEJLESZTETT MEGJELENÍTÉSI FELBONTÁS"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "On (Speed hack)"
+msgstr "Be (Sebesség hack)"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
 msgstr "Capcom VS játékok Képernyőszélesség bővítése"
 
@@ -13097,11 +13112,6 @@ msgstr ""
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
-msgid "ENHANCED RENDERING RESOLUTION"
-msgstr "FEJLESZTETT MEGJELENÍTÉSI FELBONTÁS"
-
-#. TRANSLATION: drastic
-msgctxt "game_options"
 msgid ""
 "Skip frames to improve performance, at the cost of choppy motion. Can cause "
 "visual glitches."
@@ -17447,10 +17457,6 @@ msgstr "Gyors mentés"
 #~ msgctxt "game_options"
 #~ msgid "Stretch to 4:3"
 #~ msgstr "Nyújtás 4:3-ra"
-
-#~ msgctxt "game_options"
-#~ msgid "On (Speed hack)"
-#~ msgstr "Be (Sebesség hack)"
 
 #~ msgctxt "game_options"
 #~ msgid "USE ZINK RENDERER"

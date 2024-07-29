@@ -6570,6 +6570,21 @@ msgstr "Apagat és més segur, Engegat per a jocs específics."
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
+msgid "Double the rendering resolution."
+msgstr "Dobla la resolució de renderitzat."
+
+#. TRANSLATION: libretro/pcsx_rearmed, drastic
+msgctxt "game_options"
+msgid "ENHANCED RENDERING RESOLUTION"
+msgstr "RESOLUCIÓ DE RENDERITZACIÓ MILLORADA"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "On (Speed hack)"
+msgstr "Engegat (Truc de velocitat)"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
 msgstr "Expandir l’ample de pantalla als jocs de lluita Capcom"
 
@@ -13020,11 +13035,6 @@ msgstr ""
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
-msgid "ENHANCED RENDERING RESOLUTION"
-msgstr "RESOLUCIÓ DE RENDERITZACIÓ MILLORADA"
-
-#. TRANSLATION: drastic
-msgctxt "game_options"
 msgid ""
 "Skip frames to improve performance, at the cost of choppy motion. Can cause "
 "visual glitches."
@@ -17357,14 +17367,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "ENabling will smooth out the image."
 #~ msgstr "Es suavitzarà la imatge."
-
-#~ msgctxt "game_options"
-#~ msgid "Double the rendering resolution."
-#~ msgstr "Dobla la resolució de renderitzat."
-
-#~ msgctxt "game_options"
-#~ msgid "On (Speed hack)"
-#~ msgstr "Engegat (Truc de velocitat)"
 
 #~ msgctxt "game_options"
 #~ msgid ""

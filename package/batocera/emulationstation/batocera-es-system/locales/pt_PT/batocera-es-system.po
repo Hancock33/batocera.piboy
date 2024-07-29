@@ -6615,6 +6615,21 @@ msgstr "Desligado é mais seguro, Ativado para jogos específicos."
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
+msgid "Double the rendering resolution."
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed, drastic
+msgctxt "game_options"
+msgid "ENHANCED RENDERING RESOLUTION"
+msgstr "RESOLUÇÃO DE RENDERIZAÇÃO MELHORADA"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "On (Speed hack)"
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
 msgstr "Jogos de Luta da Capcom - Expande a Largura de ecrã"
 
@@ -13145,11 +13160,6 @@ msgid "Enhancement. Double the rendering resolution. Makes 3D objects clearer."
 msgstr ""
 "Melhoria. Duplica a resolução de renderização. Torna os objetos 3D mais "
 "nitidos)."
-
-#. TRANSLATION: drastic
-msgctxt "game_options"
-msgid "ENHANCED RENDERING RESOLUTION"
-msgstr "RESOLUÇÃO DE RENDERIZAÇÃO MELHORADA"
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
