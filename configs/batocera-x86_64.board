@@ -48,7 +48,6 @@ BR2_CCACHE_DIR="$(HOME)/build-dir/ccache/x86_64"
 
 # Experimental, build cmake packages with clang
 BR_CMAKE_USE_CLANG=y
-BR2_LINUX_BUILD_WITH_LLVM=y
 
 # Wine Staging Patches
 BR_WINE_STAGING=y

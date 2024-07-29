@@ -284,7 +284,7 @@ Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|33
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|67f571409d1d2ed2f3ab04f81e09a0fe5dc8b0cb|Jul 28, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|3d8557dc440669975b708efb486e0eb86276e4d8|Jul 29, 2024
 Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|4eb41467f8cf39d666372b5ea78694df970252a3|Jul 04, 2024
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|9cd292f54a61475ebb91bdf244486026d8a5d88c|Jul 29, 2024
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|9b3e9f2d9e10674fa23b168e7d01e3e2b0961795|Jul 29, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|b6cbfbbbf36807a88cf4153aab7a51c97be3cc87|Jul 12, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45250|Jul 19, 2024
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
@@ -339,7 +339,7 @@ Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.5|Apr 23, 2024
 Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|d7a0a485ed6c201f882c20b3a8881e801f131385|Dec 01, 2023
 Gpu|[shaderc](http://github.com/stenzek/shaderc)|feb2460bf3a504d67011246edeb810c45ea58826|Jul 28, 2024
 Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.3.290.0|Jun 18, 2024
-Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|d7e6306fef73214d5c9a80b89a8f6b6f6e036885|Jul 29, 2024
+Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|9487ac2f3be74dd0d3ce4580d3fd45cee0359cb1|Jul 29, 2024
 Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.3.290.0|Jul 12, 2024
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.1|Jun 08, 2024
 Hardware|[ayn-platform](http://github.com/ShadowBlip/ayn-platform)|v0.5.1|Apr 16, 2024
@@ -489,7 +489,7 @@ Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|dd570b616b3c005b0e7
 Ports|[xatrix](http://github.com/yquake2/xatrix)|31b1c2d92b571929b017a3b7c573edb7a6b0d5ef|Jul 22, 2024
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.1|Apr 12, 2024
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|b337bb07f88a30605c134d9e634f19fef39309f9|Jul 28, 2024
-Ports|[yquake2](http://github.com/yquake2/yquake2)|4b3545697ede842532dcace806859443db1b374b|Jul 27, 2024
+Ports|[yquake2](http://github.com/yquake2/yquake2)|c72d0c1b39c324d6227a474f1c5311df6d7570c8|Jul 29, 2024
 Ports|[yrogue](http://github.com/yquake2/rogue)|19014a3c85e9204e9c3153123efe5bd974dfa2c8|Jul 22, 2024
 Toolchain|[toolchain-optional-linaro-aarch64](https://releases.linaro.org/components/toolchain/binaries/)|7.5-2019.12|Dec 05, 2019
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
