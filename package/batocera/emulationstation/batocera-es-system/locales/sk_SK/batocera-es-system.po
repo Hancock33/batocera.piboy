@@ -6575,6 +6575,21 @@ msgstr "Vypnuté je bezpečnejšie, zapnuté pre určité hry."
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
+msgid "Double the rendering resolution."
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed, drastic
+msgctxt "game_options"
+msgid "ENHANCED RENDERING RESOLUTION"
+msgstr "Rozšírené renderovacie rozlíšenie"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "On (Speed hack)"
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
 msgstr "Zväčšiť šírku obrazovky pre hry Capcom VS"
 
@@ -13053,11 +13068,6 @@ msgctxt "game_options"
 msgid "Enhancement. Double the rendering resolution. Makes 3D objects clearer."
 msgstr ""
 "Rozšírenie. Zdvojnásobiť rozlíšenie vykresľovania. Robí 3D objekty jasnejšie."
-
-#. TRANSLATION: drastic
-msgctxt "game_options"
-msgid "ENHANCED RENDERING RESOLUTION"
-msgstr "Rozšírené renderovacie rozlíšenie"
 
 #. TRANSLATION: drastic
 msgctxt "game_options"

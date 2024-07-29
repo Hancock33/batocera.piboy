@@ -6624,6 +6624,21 @@ msgstr "Uit is veiliger, Aan voor specifieke spellen."
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
+msgid "Double the rendering resolution."
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed, drastic
+msgctxt "game_options"
+msgid "ENHANCED RENDERING RESOLUTION"
+msgstr "VERBETERDE RENDERRESOLUTIE"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "On (Speed hack)"
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
 msgstr "Capcom VS spellen Verbreed de Schermbreedte"
 
@@ -13166,11 +13181,6 @@ msgctxt "game_options"
 msgid "Enhancement. Double the rendering resolution. Makes 3D objects clearer."
 msgstr ""
 "Verbetering. Verdubbel de renderresolutie. Maakt 3D-objecten duidelijker."
-
-#. TRANSLATION: drastic
-msgctxt "game_options"
-msgid "ENHANCED RENDERING RESOLUTION"
-msgstr "VERBETERDE RENDERRESOLUTIE"
 
 #. TRANSLATION: drastic
 msgctxt "game_options"

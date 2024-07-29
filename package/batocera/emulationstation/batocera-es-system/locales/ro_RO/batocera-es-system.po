@@ -6619,6 +6619,21 @@ msgstr "Oprit este mai sigur. Pornit pentru anumite jocuri."
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
+msgid "Double the rendering resolution."
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed, drastic
+msgctxt "game_options"
+msgid "ENHANCED RENDERING RESOLUTION"
+msgstr "REZOLUȚIE DE REDARE ÎMBUNĂTĂȚITĂ"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "On (Speed hack)"
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
 msgstr "Extinde lățimea ecranului jocurilor Capcom VS"
 
@@ -13160,11 +13175,6 @@ msgctxt "game_options"
 msgid "Enhancement. Double the rendering resolution. Makes 3D objects clearer."
 msgstr ""
 "Îmbunătățire. Dublează rezoluția de redare. Face obiectele 3D mai clare."
-
-#. TRANSLATION: drastic
-msgctxt "game_options"
-msgid "ENHANCED RENDERING RESOLUTION"
-msgstr "REZOLUȚIE DE REDARE ÎMBUNĂTĂȚITĂ"
 
 #. TRANSLATION: drastic
 msgctxt "game_options"

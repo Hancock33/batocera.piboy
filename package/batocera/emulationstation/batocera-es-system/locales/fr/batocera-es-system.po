@@ -6616,6 +6616,21 @@ msgstr "Désactivé est plus sûr, activé pour des jeux spécifiques."
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
+msgid "Double the rendering resolution."
+msgstr "Double la résolution de rendu."
+
+#. TRANSLATION: libretro/pcsx_rearmed, drastic
+msgctxt "game_options"
+msgid "ENHANCED RENDERING RESOLUTION"
+msgstr "RÉSOLUTION DE RENDU AMÉLIORÉE"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "On (Speed hack)"
+msgstr "Activé (Speed hack)"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
 msgstr "Les jeux Capcom VS augmentent la largeur de l'écran"
 
@@ -13157,11 +13172,6 @@ msgstr ""
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
-msgid "ENHANCED RENDERING RESOLUTION"
-msgstr "RÉSOLUTION DE RENDU AMÉLIORÉE"
-
-#. TRANSLATION: drastic
-msgctxt "game_options"
 msgid ""
 "Skip frames to improve performance, at the cost of choppy motion. Can cause "
 "visual glitches."
@@ -17770,14 +17780,6 @@ msgstr "Sauvegarde rapide"
 #~ msgctxt "game_options"
 #~ msgid "Fills the screen regardless of the aspect ratio."
 #~ msgstr "Remplir l'écran peu importe le ratio d'écran."
-
-#~ msgctxt "game_options"
-#~ msgid "Double the rendering resolution."
-#~ msgstr "Double la résolution de rendu."
-
-#~ msgctxt "game_options"
-#~ msgid "On (Speed hack)"
-#~ msgstr "Activé (Speed hack)"
 
 #~ msgctxt "game_options"
 #~ msgid ""

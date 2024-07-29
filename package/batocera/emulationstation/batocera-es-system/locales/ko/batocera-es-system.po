@@ -7309,6 +7309,24 @@ msgstr "꺼짐이 더 안전하고, 특정 게임의 경우 켜짐이 더 안전
 #. TRANSLATION: libretro/pcsx_rearmed
 #, fuzzy
 msgctxt "game_options"
+msgid "Double the rendering resolution."
+msgstr "렌더링 해상도를 두 배로 높입니다."
+
+#. TRANSLATION: libretro/pcsx_rearmed, drastic
+#, fuzzy
+msgctxt "game_options"
+msgid "ENHANCED RENDERING RESOLUTION"
+msgstr "향상된 렌더링 해상도"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+#, fuzzy
+msgctxt "game_options"
+msgid "On (Speed hack)"
+msgstr "켜기(스피드 해킹)"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+#, fuzzy
+msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
 msgstr "캡콤 VS 게임 화면 너비 확장"
 
@@ -14348,12 +14366,6 @@ msgstr ""
 #. TRANSLATION: drastic
 #, fuzzy
 msgctxt "game_options"
-msgid "ENHANCED RENDERING RESOLUTION"
-msgstr "향상된 렌더링 해상도"
-
-#. TRANSLATION: drastic
-#, fuzzy
-msgctxt "game_options"
 msgid ""
 "Skip frames to improve performance, at the cost of choppy motion. Can cause "
 "visual glitches."
@@ -18705,16 +18717,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Emable or disable high score saving"
 #~ msgstr "최고 점수 저장 사용 또는 사용 안 함"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Double the rendering resolution."
-#~ msgstr "렌더링 해상도를 두 배로 높입니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "On (Speed hack)"
-#~ msgstr "켜기(스피드 해킹)"
 
 #, fuzzy
 #~ msgctxt "game_options"
