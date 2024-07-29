@@ -1,13 +1,16 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|410cea0f12171ff1942fa16d2d9556c32cd9db23|Jul 29, 2024
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|f1f57d88cec01a4177a461d598920722abbc3715|Jul 29, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|2e74efb2fc6f99fdd177338f267e8fce9b7fd75b|Jul 29, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-07-29|Jul 29, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|3d8557dc440669975b708efb486e0eb86276e4d8|Jul 29, 2024
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|ca88ca68f1257cb186e69d81573a47700711eb3e|Jul 29, 2024
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|9cd292f54a61475ebb91bdf244486026d8a5d88c|Jul 29, 2024
+Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|132ad70437e3d4ba01a59ed9e9cac1893ccd3faa|Jul 29, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|6addf3f3b733b9a42a19e1d421aa9962624cf58f|Jul 29, 2024
-Ports|[stk](http://github.com/supertuxkart/stk-code)|0704f25ac417028f4c6e04bf2e39f9e0753d80ab|Jul 29, 2024
+Ports|[stk](http://github.com/supertuxkart/stk-code)|4a9e5f0a8dd8d47b25ef078f789f218b6fb50c73|Jul 29, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|13dbb31f6226684749d937ba3fe2244756fc4909|Jul 29, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240729|Jul 29, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240729|Jul 29, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|b0d7c12404466417127269e222a4e3cd0bcc5ddc|Jul 29, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|a274ee7c9461ba5054eabc186fec8e6762a92362|Jul 29, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|d697eafbe16d8f76e01759ac033451386dfa3bb8|Jul 29, 2024
@@ -29,10 +32,9 @@ Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden
 Ports|[box64](http://github.com/ptitseb/box64)|3a3578aeccce0e00d4ca2ea0cfcb3eb64ef79e9e|Jul 28, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|30785ef25ec42585adcf8919a31f6d444c6c50da|Jul 28, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|bd7f9a8e3875b34f35593099f2080bbacd2fb6b6|Jul 28, 2024
-Emulators|[wine-custom](http://github.com/wine-mirror/wine)|6883402deca33d844a5990c5d157d34542e41f55|Jul 28, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240728|Jul 28, 2024
+Emulators|[wine-custom](http://github.com/wine-mirror/wine)|v9.14|Jul 28, 2024
+Gpu|[shaderc](http://github.com/stenzek/shaderc)|feb2460bf3a504d67011246edeb810c45ea58826|Jul 28, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|26ddd6e9ef5a360d1b393ddd2c7c9fe933c8b1d2|Jul 28, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240728|Jul 28, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|f3d03bcfeebc1c514e5caa972312a5eb1c146347|Jul 28, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|bfda0c3981530b665ab900e6a86bd48b9c742796|Jul 28, 2024
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|b337bb07f88a30605c134d9e634f19fef39309f9|Jul 28, 2024
@@ -70,7 +72,6 @@ Emulators|[applewin](https://github.com/audetto/AppleWin)|5da446a020411a40489254
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|e55e619328afdcb25df701f07e315fdf10bee71c|Jul 25, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|7c0909fe5429d35a5bfffb67f845522b55126692|Jul 25, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1361|Jul 25, 2024
-Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|be8232be753fc0b4f5d9251bc38242dec6299f3c|Jul 25, 2024
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|19c21b9ab10b0c17147c9ad951cc15279ed33f77|Jul 25, 2024
 Emulators|[libretro-atari800](http://github.com/libretro/libretro-atari800)|50141a6bf1a069abd86dd8c53aa4031f3f7cfbd1|Jul 25, 2024
 Emulators|[libretro-vircon32](http://github.com/vircon32/vircon32-libretro)|c3aadc50b986aee7198e346ca4241e16727aa247|Jul 25, 2024
@@ -136,6 +137,7 @@ Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-vid
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|6c2c3f8ae10b7f0f6dfe06f45ca7ca598a6b659a|Jul 14, 2024
 Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-9.13|Jul 14, 2024
 Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.13|Jul 14, 2024
+Emulators|[redream](https://redream.io/download)|1.5.0-1131-gafdfc1a|Jul 13, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|b6cbfbbbf36807a88cf4153aab7a51c97be3cc87|Jul 12, 2024
 Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.3.290.0|Jul 12, 2024
 Libraries|[cpuinfo](http://github.com/pytorch/cpuinfo)|ca678952a9a8eaa6de112d154e8e104b22f9ab3f|Jul 10, 2024
@@ -282,7 +284,6 @@ Emulators|[libretro-arduous](https://github.com/libretro/arduous.git)|50c1e48084
 Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.2.5|May 13, 2024
 Ports|[openlara](http://github.com/XProger/OpenLara)|28ee7ac92367e6c97aea2391c25e1c6fe29785aa|May 13, 2024
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|be89e134e6f19ca5a9d4442b1ecfa2ccf2b3c6e2|May 11, 2024
-Emulators|[redream](https://redream.io/download)|1.5.0-1127-g6b62eff|May 10, 2024
 Firmwares|[extralinuxfirmwares](http://github.com/batocera-linux/extralinuxfirmwares)|e9c1d95f2d707ddd7bb0ef9e4711914de3cb60c2|May 10, 2024
 Ports|[raze](http://github.com/ZDoom/Raze)|f3cad8426cd808be5ded036ed12a497d27d3742e|May 07, 2024
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|5121aa6d36eff884bd56ccbadb6c112f1e951fee|May 06, 2024
@@ -291,7 +292,6 @@ Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|ffa3cc48b8f
 Emulators|[wine-ntsync](https://repo.or.cz/wine/zf.git/snapshot/)|b710a652bb7f582fa65f8d42d727847e231b7095|May 03, 2024
 Ports|[raptorcots](http://github.com/skynettx/raptor)|e8d838c6db77084a6fb7f37b41de669fbf68b808|May 02, 2024
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|3265c0ac05ec595f9cedd020d76e7f39bf081538|May 02, 2024
-Gpu|[shaderc](http://github.com/google/shaderc)|v2024.1|Apr 30, 2024
 Audio|[zmusic](http://github.com/ZDoom/ZMusic)|1.1.13|Apr 28, 2024
 Emulators|[libretro-freechaf](https://github.com/libretro/FreeChaF.git)|630e068c51a8027aa7222dc737575d235b9a75a1|Apr 26, 2024
 Controllers|[xone](http://github.com/medusalix/xone)|29ec3577e52a50f876440c81267f609575c5161e|Apr 25, 2024
