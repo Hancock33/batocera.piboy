@@ -1,5 +1,4 @@
 {
-
     "actions_gun1": [
     {
         "trigger": ["left", "right", "middle"],
