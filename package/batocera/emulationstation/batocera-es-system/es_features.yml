@@ -5267,6 +5267,13 @@ libretro:
                     "1":                1
                     "2":                2
                     "3":                3
+            neon_enhancement:
+                prompt:      ENHANCED RENDERING RESOLUTION
+                description: Double the rendering resolution.
+                choices:
+                    "Off":              disabled
+                    "On":               enabled
+                    "On (Speed hack)":  enabled_with_speedhack
             pcsx_rearmed_multitap:
                 group: CONTROLLER SETTINGS
                 prompt:      MULTITAP

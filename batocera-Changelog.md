@@ -15,6 +15,13 @@
 - Dolphin to 2407-103
 - Duckstaton to Jul 27, 2024 build
 - DXX-Rebirth to July 21 build
+- Redream to 1.5.0-1131-gafdfc1a
+- RPCS3 to Jul 28, 2024 build
+- Sonic Mania to Jul 21, 2024 build
+- The Force Engine to Jul 27, 2024 build
+- Vita3k to Jul 27 build
+- Xemu to v0.7.131
+- Xenia Canary to Jul 15, 2024 build
 ### System
 - Nvidia Driver to 555.58.02
 - Nvidia Legacy Driver to 470.256.02
@@ -25,6 +32,7 @@
 - SDL2 to 2.30.5
 - DXVK to 2.4
 - DXVK NVAPI to v0.7.1
+- VKD3D Proton to 2.13
 
 # 2024/08/xx - batocera.linux 40 - Swallowtail
 ### Special Notes
