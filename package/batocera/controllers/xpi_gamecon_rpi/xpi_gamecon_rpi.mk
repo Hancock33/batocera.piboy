@@ -8,12 +8,8 @@ XPI_GAMECON_RPI_VERSION = f30cea1a30e4e9ad8fcf3b7da48f2770b4ea3368
 XPI_GAMECON_RPI_SITE = $(call github,hancock33,piboycontrols,$(XPI_GAMECON_RPI_VERSION))
 XPI_GAMECON_RPI_DEPENDENCIES = linux batocera-es-piboy
 
-#define XPI_GAMECON_RPI_BUILD_CMDS
-#		$(MAKE) -C $(@D) $(LINUX_MAKE_FLAGS) KERNELDIR=$(LINUX_DIR) KVERSION=$(LINUX_DIR)
-#endef
-
 define XPI_GAMECON_RPI_INSTALL_TARGET_CMDS
-	$(TARGET_CC) $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/volumed.c -o $(TARGET_DIR)/usr/sbin/volumed -L$(STAGING_DIR)/usr/lib -lpulse
+	$(TARGET_CC) -Wno-incompatible-pointer-types $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/volumed.c -o $(TARGET_DIR)/usr/sbin/volumed -L$(STAGING_DIR)/usr/lib -lpulse
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/S19piboy					$(TARGET_DIR)/etc/init.d/S19piboy
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/piboy_fan_power_ctrl.py	$(TARGET_DIR)/usr/bin/piboy_fan_power_ctrl.py
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/piboy_audctrl.py			$(TARGET_DIR)/usr/bin/piboy_audctrl.py
@@ -26,5 +22,4 @@ define XPI_GAMECON_RPI_INSTALL_TARGET_CMDS
 	cp -pvr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/roms/piboy $(TARGET_DIR)/usr/share/batocera/datainit/roms
 endef
 
-#$(eval $(kernel-module))
 $(eval $(generic-package))
