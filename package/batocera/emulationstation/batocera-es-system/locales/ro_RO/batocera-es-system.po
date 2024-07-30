@@ -9653,26 +9653,13 @@ msgstr "TIP PORT GAMECUBE 4"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid ""
-"Use alternative input mappings. Only applies to Standard Controller type."
+msgid "Moves South to West, West to North, etc. Standard controller type only."
 msgstr ""
-"Folosește asocieri de intrare alternative. Se aplică doar pentru "
-"controlerele standard."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid "ALT INPUT MAPPING"
-msgstr "ASOCIERI DE INTRARE ALTERNATIVE"
-
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-msgctxt "game_options"
-msgid "Face Buttons (CW)"
-msgstr "Butoane frontale (orar)"
-
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-msgctxt "game_options"
-msgid "Face Buttons (CCW)"
-msgstr "Butoane frontale (anti-orar)"
+msgid "ROTATE FACE BUTTONS"
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -16774,6 +16761,25 @@ msgstr "Încărcare rapidă"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Salvare rapidă"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Folosește asocieri de intrare alternative. Se aplică doar pentru "
+#~ "controlerele standard."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "ASOCIERI DE INTRARE ALTERNATIVE"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Butoane frontale (orar)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Butoane frontale (anti-orar)"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."

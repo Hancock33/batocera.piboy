@@ -9662,26 +9662,13 @@ msgstr "TIPO DE PORTA 4 DO GAMECUBE"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid ""
-"Use alternative input mappings. Only applies to Standard Controller type."
+msgid "Moves South to West, West to North, etc. Standard controller type only."
 msgstr ""
-"Usa mapeamentos de entrada alternativos. Aplica-se apenas ao tipo de "
-"controle padrão."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid "ALT INPUT MAPPING"
-msgstr "MAPEAMENTO DE ENTRADA ALTERNATIVO"
-
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-msgctxt "game_options"
-msgid "Face Buttons (CW)"
-msgstr "Botões de Face (CW)"
-
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-msgctxt "game_options"
-msgid "Face Buttons (CCW)"
-msgstr "Botões de Face (CCW)"
+msgid "ROTATE FACE BUTTONS"
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -16761,6 +16748,25 @@ msgstr "Carregamento rápido"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Salvamento rápido"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Usa mapeamentos de entrada alternativos. Aplica-se apenas ao tipo de "
+#~ "controle padrão."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "MAPEAMENTO DE ENTRADA ALTERNATIVO"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Botões de Face (CW)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Botões de Face (CCW)"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
