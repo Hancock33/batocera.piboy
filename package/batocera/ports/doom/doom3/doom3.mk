@@ -3,8 +3,8 @@
 # doom3
 #
 ################################################################################
-# Version: Commits on Jul 29, 2024
-DOOM3_VERSION = 227071bb9a3c6cacaed7849d6be8dc396240cb2b
+# Version: Commits on Jul 30, 2024
+DOOM3_VERSION = c44c0ffda4624f726ec3f3cde80a009c10493169
 DOOM3_SITE = $(call github,dhewm,dhewm3,$(DOOM3_VERSION))
 
 DOOM3_DEPENDENCIES = sdl2 sdl2_mixer
