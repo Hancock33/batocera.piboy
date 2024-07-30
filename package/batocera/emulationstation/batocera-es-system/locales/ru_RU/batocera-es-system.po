@@ -9634,26 +9634,13 @@ msgstr "GAMECUBE ТИП ПОРТА 4"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid ""
-"Use alternative input mappings. Only applies to Standard Controller type."
+msgid "Moves South to West, West to North, etc. Standard controller type only."
 msgstr ""
-"Использовать альт. сопоставления кнопок. Применяется только к типу "
-"\"Standard Controller\"."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid "ALT INPUT MAPPING"
-msgstr "АЛЬТ, СОПОСТАВЛЕНИЕ КНОПОК"
-
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-msgctxt "game_options"
-msgid "Face Buttons (CW)"
-msgstr "Лицевые кнопки (по часовой стрелке)"
-
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-msgctxt "game_options"
-msgid "Face Buttons (CCW)"
-msgstr "Лицевые кнопки (против часовой стрелки)"
+msgid "ROTATE FACE BUTTONS"
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -16733,6 +16720,25 @@ msgstr "Быстрая загрузка"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Быстрое сохранение"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Использовать альт. сопоставления кнопок. Применяется только к типу "
+#~ "\"Standard Controller\"."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "АЛЬТ, СОПОСТАВЛЕНИЕ КНОПОК"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Лицевые кнопки (по часовой стрелке)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Лицевые кнопки (против часовой стрелки)"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
