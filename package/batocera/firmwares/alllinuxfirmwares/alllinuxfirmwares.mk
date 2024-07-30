@@ -3,8 +3,8 @@
 # alllinuxfirmwares
 #
 ################################################################################
-# Version: Commits on Jul 19, 2024
-ALLLINUXFIRMWARES_VERSION = 22bc31b25a65d90e80e83674424819cce829092e
+# Version: Commits on Jul 28, 2024
+ALLLINUXFIRMWARES_VERSION = 65c5d9b1a4808462f5e885447dae1a133c96abec
 ALLLINUXFIRMWARES_SOURCE = linux-firmware-$(ALLLINUXFIRMWARES_VERSION).tar.gz
 ALLLINUXFIRMWARES_SITE = https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot
 
