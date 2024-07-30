@@ -4,10 +4,12 @@
 - Add Blamcon Gun support
 - Khadis VIM4 optimizations and enhancements
 ### Added
+- Exit game with light gun (hold `TRIGGER`, `ACTION` and `START` buttons for 2 seconds) 
 ### Fixed
 ### Changed / Improved
 ### Updated
 - RetroArch to v1.19.1
+  - Libretro-Melonds-Ds to v1.1.5
 - Cemu to v2.0-91
 - Amiberry to v5.7.3
 - BigPEmu to v115
@@ -15,6 +17,7 @@
 - Dolphin to 2407-103
 - Duckstaton to Jul 27, 2024 build
 - DXX-Rebirth to July 21 build
+- PCSX2 to v2.1.42
 - Redream to 1.5.0-1131-gafdfc1a
 - RPCS3 to Jul 28, 2024 build
 - Sonic Mania to Jul 21, 2024 build
@@ -33,6 +36,7 @@
 - DXVK to 2.4
 - DXVK NVAPI to v0.7.1
 - VKD3D Proton to 2.13
+- Linux Firmware to 20240709
 
 # 2024/08/xx - batocera.linux 40 - Swallowtail
 ### Special Notes
@@ -124,7 +128,7 @@ Add support for the Pironman 5 case with RPi5 devices.
 - RPCS3 upscaling now outputs properly
 - GunCon3 default mapping (visit light gun page on official wiki)
   - Calibration now on C2 (press and hold it few seconds)
-- Sinden Lightgun firmware updated to 1.9
+- Sinden Lightgun drivers updated to 2.05 (firmware v1.9 now compatible)
 - Preferred vulkan driver name now listed in System Information
 - Start advisiong people on Vulkan GPU driver capabilities for Emualtors
 - Added additional Atari Lynx extensions for Beetle Lynx & Handy
