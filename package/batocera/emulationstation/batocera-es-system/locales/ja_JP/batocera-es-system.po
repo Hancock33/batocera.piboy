@@ -16607,25 +16607,6 @@ msgid "Quick Save"
 msgstr "クイック セーブ"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "代替の入力マッピングを使用します。標準コントローラ タイプにのみ適用されま"
-#~ "す"
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "ALT 入力マッピング"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "表ボタン（時計回り)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "表ボタン（反時計回り）"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "コアが対応している場合は、過去の状態を保存してリアルタイムで巻き戻します"
@@ -16984,6 +16965,25 @@ msgstr "クイック セーブ"
 #~ msgctxt "game_options"
 #~ msgid "MOUSE AS WIIMOTE POINTER"
 #~ msgstr "マウスをWiiリモコンにする"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "代替の入力マッピングを使用します。標準コントローラ タイプにのみ適用されま"
+#~ "す"
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "ALT 入力マッピング"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "表ボタン（時計回り)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "表ボタン（反時計回り）"
 
 #~ msgctxt "game_options"
 #~ msgid "Set joystick deadzone."

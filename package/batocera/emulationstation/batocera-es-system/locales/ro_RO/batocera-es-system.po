@@ -16763,25 +16763,6 @@ msgid "Quick Save"
 msgstr "Salvare rapidă"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "Folosește asocieri de intrare alternative. Se aplică doar pentru "
-#~ "controlerele standard."
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "ASOCIERI DE INTRARE ALTERNATIVE"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "Butoane frontale (orar)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "Butoane frontale (anti-orar)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Stochează stările trecute pentru a putea reveni în timp real, dacă este "
@@ -17153,6 +17134,25 @@ msgstr "Salvare rapidă"
 #~ msgctxt "game_options"
 #~ msgid "MOUSE AS WIIMOTE POINTER"
 #~ msgstr "MAUSUL CA CURSOR WII"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Folosește asocieri de intrare alternative. Se aplică doar pentru "
+#~ "controlerele standard."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "ASOCIERI DE INTRARE ALTERNATIVE"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Butoane frontale (orar)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Butoane frontale (anti-orar)"
 
 #~ msgctxt "game_options"
 #~ msgid "Set joystick deadzone."

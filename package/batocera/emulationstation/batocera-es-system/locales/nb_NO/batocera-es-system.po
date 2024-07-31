@@ -16690,25 +16690,6 @@ msgid "Quick Save"
 msgstr "Hurtiglagring"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "Bruk alternative inngangstilordninger. Gjelder bare for kontrollertypen "
-#~ "Standard Controller."
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "ALT INPUT MAPPING"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "Ansiktsknapper (CW)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "Ansiktsknapper (CCW)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Lagre tidligere tilstander som du kan spole tilbake til i sanntid, hvis "
@@ -17072,6 +17053,25 @@ msgstr "Hurtiglagring"
 #~ msgctxt "game_options"
 #~ msgid "MOUSE AS WIIMOTE POINTER"
 #~ msgstr "MUS SOM WIIMOTE-PEKER"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Bruk alternative inngangstilordninger. Gjelder bare for kontrollertypen "
+#~ "Standard Controller."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "ALT INPUT MAPPING"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Ansiktsknapper (CW)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Ansiktsknapper (CCW)"
 
 #~ msgctxt "game_options"
 #~ msgid "Set joystick deadzone."
