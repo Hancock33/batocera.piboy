@@ -12,9 +12,10 @@ import shutil
 import evdev
 from evdev import InputDevice
 
-ryujinxConf = batoceraFiles.CONF + "/Ryujinx"
+ryujinxConf = batoceraFiles.CONF + "/RyujinxNG"
 ryujinxConfFile = ryujinxConf + "/Config.json"
 ryujinxKeys = batoceraFiles.BIOS + "/switch/prod.keys"
+ryujinxExec = ryujinxConf + "/ryujinx"
 btn_a = "A"
 btn_b = "B"
 btn_x = "X"
@@ -77,7 +78,7 @@ ryujinxCtrl = {
     "backend": "GamepadSDL2",
 }
 
-class RyujinxGenerator(Generator):
+class RyujinxNGGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         if not os.path.exists(ryujinxConf):
@@ -98,6 +99,7 @@ class RyujinxGenerator(Generator):
             conf = {}
 
         # Set defaults
+        conf['backend_threading'] = 'Auto'
         conf["enable_discord_integration"] = False
         conf["check_updates_on_start"] = False
         conf["show_confirm_exit"] = False
@@ -105,8 +107,9 @@ class RyujinxGenerator(Generator):
         conf["game_dirs"] = ["/userdata/roms/switch"]
         conf["start_fullscreen"] = True
         conf["docked_mode"] = True
-        conf["audio_backend"] = "OpenAl"
+        conf["audio_backend"] = "SDL2"
         conf["audio_volume"] = 1
+
         # set ryujinx app language
         conf["language_code"] = str(getLangFromEnvironment())
 
@@ -152,6 +155,9 @@ class RyujinxGenerator(Generator):
 
         # write / update the config file
         js_out = json.dumps(conf, indent=2)
+        js_out = js_out.replace("False","false")
+        js_out = js_out.replace("True","true")
+
         with open(ryujinxConfFile, "w") as jout:
             jout.write(js_out)
 
@@ -177,7 +183,7 @@ class RyujinxGenerator(Generator):
                 for dev in devices:
                     if dev.path == pad.dev:
                         bustype = "%x" % dev.info.bustype
-                        bustype = bustype.zfill(8)
+                        bustype = bustype.zfill(4)
                         vendor = "%x" % dev.info.vendor
                         vendor = vendor.zfill(4)
                         product = "%x" % dev.info.product
@@ -192,7 +198,7 @@ class RyujinxGenerator(Generator):
                         version1 = (version)[-2::]
                         version2 = (version)[:-2]
                         version = version1 + version2
-                        ctrlUUID = (f"{pad.index}-{bustype}-{vendor}-0000-{product}-0000{version}0000")
+                        ctrlUUID = (f"{pad.index}-17f6{bustype}-{vendor}-0000-{product}-0000{version}0000")
                         ctrlConf["id"] = ctrlUUID
                         # always configure a pro controller for now
                         ctrlConf["controller_type"] = "ProController"
@@ -204,16 +210,21 @@ class RyujinxGenerator(Generator):
             nplayer += 1
 
         if rom == "config":
-            commandArray = ["/usr/bin/ryujinx/Ryujinx"]
+            commandArray = ["/usr/bin/ryujinx-ng/Ryujinx"]
         else:
-            commandArray = ["/usr/bin/ryujinx/Ryujinx", rom]
+            commandArray = ["/usr/bin/ryujinx-ng/Ryujinx", "--fullscreen", rom]
 
         return Command.Command(
             array=commandArray,
             env={"XDG_CONFIG_HOME":batoceraFiles.CONF, \
             "XDG_DATA_HOME":batoceraFiles.SAVES + "/switch", \
             "XDG_CACHE_HOME":batoceraFiles.CACHE, \
-            "LD_LIBRARY_PATH": "/usr/bin/ryujinx/:/usr/lib",
+            "QT_QPA_PLATFORM":"xcb", \
+            "LD_LIBRARY_PATH": "/usr/bin/ryujinx-ng/:/usr/lib",
+            "DOTNET_SYSTEM_GLOBALIZATION_INVARIANT": "1",
+            "DOTNET_EnableAlternateStackCheck": "1",
+            "DOTNET_SYSTEM_GLOBALIZATION_PREDEFINED_CULTURES_ONLY": "false",
+            "SDL_JOYSTICK_HIDAPI": "0",
             "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)})
 
 def writeControllerIntoJson(new_controller, filename=ryujinxConfFile):
