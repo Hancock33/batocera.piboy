@@ -16731,25 +16731,6 @@ msgid "Quick Save"
 msgstr "Hızlı Kaydet"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "Alternatif giriş eşlemelerini kullanın. Yalnızca Standart Denetleyici "
-#~ "türü için geçerlidir."
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "ALT GİRİŞ EŞLEME"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "Yüz Düğmeleri (CW)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "Yüz Düğmeleri (CCW)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Çekirdek destekliyorsa, gerçek zamanlı olarak geri sarmak için geçmiş "
@@ -17110,6 +17091,25 @@ msgstr "Hızlı Kaydet"
 #~ msgctxt "game_options"
 #~ msgid "MOUSE AS WIIMOTE POINTER"
 #~ msgstr "WIIMOTE KUMANDASI OLARAK FARE"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Alternatif giriş eşlemelerini kullanın. Yalnızca Standart Denetleyici "
+#~ "türü için geçerlidir."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "ALT GİRİŞ EŞLEME"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Yüz Düğmeleri (CW)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Yüz Düğmeleri (CCW)"
 
 #~ msgctxt "game_options"
 #~ msgid "Set joystick deadzone."

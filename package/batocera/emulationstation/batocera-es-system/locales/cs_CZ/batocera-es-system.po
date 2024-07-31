@@ -16660,25 +16660,6 @@ msgid "Quick Save"
 msgstr "Rychlé uložení"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "Použijte alternativní mapování vstupů. Platí pouze pro standartní typ "
-#~ "ovladače."
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "MAPOVÁNÍ VSTUPU ALT"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "Přední tlačítka (CW)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "Přední tlačítka (CCW)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Uložení minulých pozic pro přetáčení v reálném čase, pokud to jádro "
@@ -17036,6 +17017,25 @@ msgstr "Rychlé uložení"
 #~ msgctxt "game_options"
 #~ msgid "MOUSE AS WIIMOTE POINTER"
 #~ msgstr "MYŠ JAKO UKAZATEL WIIMOTE"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Použijte alternativní mapování vstupů. Platí pouze pro standartní typ "
+#~ "ovladače."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "MAPOVÁNÍ VSTUPU ALT"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Přední tlačítka (CW)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Přední tlačítka (CCW)"
 
 #~ msgctxt "game_options"
 #~ msgid "Set joystick deadzone."

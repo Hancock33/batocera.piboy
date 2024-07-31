@@ -16839,24 +16839,6 @@ msgid "Quick Save"
 msgstr "Schnellspeichern"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "Alternative Eingabebelegung. Gilt nur für den Typ Standard-Controller."
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "ALT EINGABEBELEGUNG"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "Aktionstasten (im Uhrzeigersinn)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "Aktionstasten (gegen Uhrzeigersinn)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Vergangene Speicherstände sichern, um in Echtzeit zurückzuspulen, wenn "
@@ -17227,6 +17209,24 @@ msgstr "Schnellspeichern"
 #~ msgctxt "game_options"
 #~ msgid "MOUSE AS WIIMOTE POINTER"
 #~ msgstr "MAUS ALS WIIMOTE-ZEIGER"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Alternative Eingabebelegung. Gilt nur für den Typ Standard-Controller."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "ALT EINGABEBELEGUNG"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Aktionstasten (im Uhrzeigersinn)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Aktionstasten (gegen Uhrzeigersinn)"
 
 #~ msgctxt "game_options"
 #~ msgid "Set joystick deadzone."
