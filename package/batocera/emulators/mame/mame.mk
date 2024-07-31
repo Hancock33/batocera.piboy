@@ -3,8 +3,8 @@
 # mame
 #
 ################################################################################
-# Version: Commits on Jun 30, 2024
-MAME_VERSION = mame0267
+# Version: Commits on Jul 31, 2024
+MAME_VERSION = mame0268
 MAME_SITE = $(call github,mamedev,mame,$(MAME_VERSION))
 MAME_DEPENDENCIES = sdl2 sdl2_ttf zlib libpng fontconfig sqlite jpeg flac rapidjson expat glm
 MAME_LICENSE = MAME
