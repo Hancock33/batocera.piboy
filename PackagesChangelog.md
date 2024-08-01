@@ -6,6 +6,8 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|c5c51ec0c1e89893b52d98d5f4
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-08-01|Aug 01, 2024
 Emulators|[ryujinxng](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1364|Aug 01, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|7bfc8e91bd55a500df65e6a83137d21040a136fa|Aug 01, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240801|Aug 01, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240801|Aug 01, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|0d89fb00750bc7ddd279411f42bc08bdda730faa|Aug 01, 2024
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|8908202ddedbdccc345639c344300ad20470c418|Aug 01, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|8bab24a0baa752aa5e768bad1ca9ec9ff1306110|Jul 31, 2024
@@ -20,8 +22,6 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|1fbfd10978f54622f3a1
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|878009c820d8b127ed1a775b46f91386f4520a74|Jul 31, 2024
 Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|505496cb0c4ad846c5e2d346aed447ecd625f7f0|Jul 31, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|75c8c3c568a78d87f43c25fd28927ce013d26dfa|Jul 31, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240731|Jul 31, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240731|Jul 31, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|941dbb65b3b2497a4dcb9ec59316e150a5da472a|Jul 31, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|3d3cd8886843335a28d9c54a4876024948db867e|Jul 31, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|cc32abe09ed417ce3be10af300d2dc2f686349ba|Jul 31, 2024
