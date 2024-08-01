@@ -3,13 +3,17 @@
 ### Hardware
 - Add Blamcon Gun support
 - Khadis VIM4 optimizations and enhancements
+- Add Dockerpi Powerboard support initially for the RPi3
 ### Added
 - Exit game with light gun (hold `TRIGGER`, `ACTION` and `START` buttons for 2 seconds) 
 ### Fixed
 ### Changed / Improved
+- Added bezel & sinden border support for the RPi5 with Model 3 games
+- Added bezel & sinden border support for the RPi5 with Wii games, requires Vulkan API (default)
 ### Updated
 - RetroArch to v1.19.1
   - Libretro-Melonds-Ds to v1.1.5
+  - Libretro-Flycast to Jul 30 build
 - Cemu to v2.0-91
 - Amiberry to v5.7.3
 - BigPEmu to v115
@@ -17,6 +21,8 @@
 - Dolphin to 2407-103
 - Duckstaton to Jul 27, 2024 build
 - DXX-Rebirth to July 21 build
+- Eduke32 to Jul 25 build
+- Flycast to Jul 30 build
 - PCSX2 to v2.1.42
 - Redream to 1.5.0-1131-gafdfc1a
 - RPCS3 to Jul 28, 2024 build
@@ -40,14 +46,14 @@
 
 # 2024/08/xx - batocera.linux 40 - Swallowtail
 ### Special Notes
-Batocera now has a global battery mode option under Game Setting to determine the power mode when a handheld is unplugged.
+Batocera now has a global battery mode option under Game Settings to determine the power mode when a handheld is unplugged.
 To potentially improve battery consumption, you can adjust the mode the handheld operates at when running on battery.
 By default the power mode will be set to `balanced` mode when unplugged. Other options are `highperformance` or `powersave`
 Note: The `powersave` mode will have the biggest impact on CPU performance whilst gaming to reduce battery consumption as much as possible.
 
-Singe games now have it's own system. Move any singe related games from roms/daphne to the roms/singe directory.
-Note: Singe games in the roms/daphne folder will no longer work.
-You can determine you have a Singe simulation game by the games folder contains a .singe file.
+Singe games now have their own system. Move any Singe related games from `roms/daphne` to the `roms/singe` directory.
+Note: Singe games in the `roms/daphne` folder will no longer work.
+You can determine you have a Singe simulation game when the game folder contains a .singe file.
 
 EmulationStation's Video Mode (resolution) is now under System Settings rather than under Frontend Developers.
 ### Hardware
