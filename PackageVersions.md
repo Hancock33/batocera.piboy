@@ -5,7 +5,7 @@ Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.12|Jun 
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|0ac55a16ead7ee4b66f0db8eeb75c4a4bbf3e443|Jul 30, 2024
 Audio|[chromebook-ucm-conf](http://github.com/WeirdTreeThing/alsa-ucm-conf-cros)|0.5|Apr 09, 2024
 Audio|[cubeb](http://github.com/mozilla/cubeb)|bbbe5bb0b29ed64cc7dd191d7a72fe24bba0d284|Jul 05, 2024
-Audio|[faudio](http://github.com/FNA-XNA/FAudio)|24.07|Jul 01, 2024
+Audio|[faudio](http://github.com/FNA-XNA/FAudio)|24.08|Aug 01, 2024
 Audio|[freepats](https://freepats.zenvoid.org)|20060219|Feb 19, 2006
 Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.6.0|Jun 15, 2023
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|8efac0cfe6c245aeb2ce5122aa2b82fb79e91463|Jun 17, 2024
@@ -74,7 +74,7 @@ Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.0
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 12, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Emulators|[duckstation-legacy](https://github.com/stenzek/duckstation.git)|v0.1-6461|Mar 16, 2024
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|f1f57d88cec01a4177a461d598920722abbc3715|Jul 29, 2024
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|b6b0997e702f342eff094a9cb1c461f94a9cdc81|Jul 28, 2024
 Emulators|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.7.1|Jun 21, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.4|Jul 10, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|407707070e7e4b7f07c165cdcdf46fc156b8bd6b|Jul 02, 2024
@@ -82,7 +82,7 @@ Emulators|[eka2l1](https://github.com/rtissera/EKA2L1.git)|8bf21e354c7aa3ea8f287
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|45bf218df428123f739714ef4e65e1b96c0959b7|Jul 29, 2024
 Emulators|[fpinball](https://github.com/batocera-linux/fpinball/releases)|v1.9.1.20101231|Dec 31, 2010
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|bfa0c7522c6c5f73cceb340d677491d056febd01|Jul 30, 2022
-Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|af9900dc0a21f1a25e4cad81e89e867221085e04|Jul 30, 2024
+Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|8908202ddedbdccc345639c344300ad20470c418|Aug 01, 2024
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
 Emulators|[hatari](http://github.com/hatari/hatari)|ff65d14c658baf11b493b536820aa4a2d18c2f00|Jul 26, 2024
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|9afc6345407e656d5b34fa795a25fb978f16e598|Jul 06, 2024
@@ -257,7 +257,7 @@ Emulators|[openbor4432](http://github.com/Darknior/OpenBORv3b4432)|49505541b858d
 Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678291bbedc0b9fe4c8f898|Aug 29, 2018
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|c2baf9d0bb2ffa1fc1f948f3cdc835de32b35233|Jul 30, 2024
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|4d1cd35689c85883e26b8a36c928f923e3a3b01e|Aug 01, 2024
 Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|eacd9fdbffef5d012092937d912a8f95df163453|Jul 31, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.50|Jul 31, 2024
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
@@ -269,7 +269,7 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1131-gafdfc1a|Jul 13, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|771e60b1eacd4edc57c19b61ab2c713200af0a3f|May 30, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|75c8c3c568a78d87f43c25fd28927ce013d26dfa|Jul 31, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20240717|Jul 17, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|7884bcc21d5aff8f72813fda6d0eb6e44130818a|Jul 31, 2024
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|c5c51ec0c1e89893b52d98d5f4640a8e17e3dc20|Aug 01, 2024
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-08-01|Aug 01, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1083|Nov 15, 2023
@@ -346,6 +346,7 @@ Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.2|
 Hardware|[ayn-platform](http://github.com/ShadowBlip/ayn-platform)|v0.5.2|Jul 29, 2024
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|e421d1e6bd9afb545b6bbfc6b30e306975e77e44|Jul 23, 2024
 Hardware|[dmd-simulator](http://github.com/batocera-linux/dmd-simulator)|8aabef58f4c58efd981340c1a3cd66af39b3566a|Jun 22, 2024
+Hardware|[dockerpi-powerboard](http://github.com/geeekpi/dockerpi)|1e268b076bfb2bba0de053c780474239f4f88245|N/A
 Hardware|[element14-pi-desktop](http://github.com/pi-desktop/deb-make)|v1.1.0|Jul 20, 2017
 Hardware|[pironman](http://github.com/sunfounder/pironman)|34b74f2a69b6a0b0c8867e2f830e569dd8eb6e12|Sept 15, 2023
 Hardware|[pironman5](http://github.com/sunfounder/pironman5)|efd1d50d678a9048b5612eeec34530c08469e8a3|Jul 4, 2024
