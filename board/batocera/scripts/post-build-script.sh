@@ -35,6 +35,8 @@ rm -frv ${TARGET_DIR}/usr/share/cups
 
 #remove mono-api
 rm -frv ${TARGET_DIR}/usr/lib/mono/lldb
+rm -rf "${TARGET_DIR}/usr/lib/tbb" || exit 1
+rm -rf "${TARGET_DIR}/usr/share/clc" || exit 1
 
 # use /userdata/system/iptables.conf for S35iptables
 rm -f "${TARGET_DIR}/etc/iptables.conf" || exit 1
@@ -46,8 +48,6 @@ then
     mv "${TARGET_DIR}/etc/init.d/S02acpid" "${TARGET_DIR}/etc/init.d/S05acpid" || exit 1
 fi
 
-rm -rf "${TARGET_DIR}/usr/lib/tbb" || exit 1
-
 #### remove unneeded firmware + drivers
 if (test -e "${TARGET_DIR}/etc/init.d/S19piboy") || (test "${BATOCERA_TARGET}" = "RPI4")
 then
@@ -57,7 +57,6 @@ then
     rm -frv ${TARGET_DIR}/usr/lib/dri/{kirin_dri.so,komeda_dri.so,rcar-du_dri.so}
     rm -frv ${TARGET_DIR}/usr/lib/dri/{gm12u320_dri.so,ili9163_dri.so,ili9486_dri.so,panel-mipi-dbi_dri.so,rzg2l-du_dri.so,ssd130x_dri.so,sti_dri.so,udl_dri.so,zynqmp-dpsub_dri.so}
 fi
-rm -rf "${TARGET_DIR}/usr/share/clc" || exit 1
 
 find ${TARGET_DIR}/usr/share/locale -type f -not -name 'emulationstation2.mo' -delete || exit 1
 find ${TARGET_DIR}/usr/share/locale -xtype l -delete || exit 1
