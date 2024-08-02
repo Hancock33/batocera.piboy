@@ -8,6 +8,8 @@ Emulators|[supermodel](http://github.com/trzy/Supermodel)|ce9809c4d7505a291720fd
 Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|bc13d979164e0d60806c2b034f96d9b4de1657f2|Aug 02, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|38b3ba4e00d2fc16b3109d36e7a9d4477438a67e|Aug 02, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|01f2bbbe0283ff47ba8af5a9f8a3e1407690aa27|Aug 02, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240802|Aug 02, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240802|Aug 02, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|031dec01eb357e1f7ad6ccc1d23ddf2f3ce81c5d|Aug 02, 2024
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|b908d54ef503d012069e4b0cc5c56462cef5f523|Aug 02, 2024
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|24.08|Aug 01, 2024
@@ -19,8 +21,6 @@ Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|18
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|b5bf8f8cd9eb4dd3d2bc19ac9ea1e08c0fc9252f|Aug 01, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|8884767e18f8288af987fc2ebada9a58a79e852b|Aug 01, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|80ee3269111c46c8d340de57fedf6ce535826c43|Aug 01, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240801|Aug 01, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240801|Aug 01, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|30163d0aa81dc5a518673940d72fcdf43ebf79dc|Aug 01, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|2d2505a5cf7e48e348fee900f0d90714ce1011e3|Aug 01, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|79d113ad4ae0b253d9a8d81009245e81b274222f|Aug 01, 2024
