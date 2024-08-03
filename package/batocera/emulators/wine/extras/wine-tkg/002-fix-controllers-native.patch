@@ -1,26 +1,28 @@
 diff --git a/loader/wine.inf.in b/loader/wine.inf.in
-index 69791b78130..c2253b4f64e 100644
+index 8ebba1535..9000266f4 100644
 --- a/loader/wine.inf.in
 +++ b/loader/wine.inf.in
-@@ -72,7 +72,8 @@ AddReg=\
-     SessionMgr,\
+@@ -97,7 +97,8 @@ AddReg=\
      Tapi,\
      ThemeManager,\
+     VersionInfo,\
 -    LicenseInformation
 +    LicenseInformation,\
 +    BatoceraOverrides
  
- [DefaultInstall.NT]
+ [DefaultInstall.ntamd64]
  RegisterDlls=RegisterDllsSection
-@@ -129,6 +130,7 @@ AddReg=\
+@@ -123,7 +124,8 @@ AddReg=\
+     Tapi,\
      ThemeManager,\
      VersionInfo,\
-     LicenseInformation,\
+-    LicenseInformation
++    LicenseInformation,\
 +    BatoceraOverrides
-     NVIDIANGX, \
-     WineNonSteamController, \
-     ProtonOverrides
-@@ -157,7 +159,8 @@ AddReg=\
+ 
+ [DefaultInstall.ntarm64]
+ RegisterDlls=RegisterDllsSection
+@@ -148,7 +150,8 @@ AddReg=\
      Tapi,\
      ThemeManager,\
      VersionInfo,\
@@ -30,14 +32,11 @@ index 69791b78130..c2253b4f64e 100644
  
  [Wow64Install.ntx86]
  RegisterDlls=RegisterDllsSection
-@@ -192,7 +195,12 @@ AddReg=\
-     Misc,\
+@@ -180,6 +183,10 @@ AddReg=\
      Tapi,\
      VersionInfo,\
--    LicenseInformation
-+    LicenseInformation,\
-+    BatoceraOverrides
-+
+     LicenseInformation
++    
 +[BatoceraOverrides]
 +HKLM,System\CurrentControlSet\Services\winebus,"DisableHidraw",0x10001,"1"
 +HKLM,System\CurrentControlSet\Services\winebus,"Enable SDL",0x10001,"1"
