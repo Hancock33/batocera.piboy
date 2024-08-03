@@ -2,6 +2,8 @@
 -----|:-----:|:-----:|:-----:
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-08-03|Aug 03, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|c057c8bfb25befa4587cd1516f86d84241cb3a9d|Aug 03, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240803|Aug 03, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240803|Aug 03, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|be2b788c6719dff953ce816a1246c49bd5cd30a5|Aug 03, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|4048cd5b041ac8fbde1ccced9ca71a56a543047a|Aug 03, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|8e0aa3cf86e49704588d392903f47a2576f681a3|Aug 03, 2024
@@ -26,8 +28,6 @@ Ports|[fheroes2](http://github.com/ihhub/fheroes2)|2322d4cff845546288a6f7b79029e
 Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|bc13d979164e0d60806c2b034f96d9b4de1657f2|Aug 02, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|c706defb185d941dc85e553d17cf449e48fd4585|Aug 02, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|01f2bbbe0283ff47ba8af5a9f8a3e1407690aa27|Aug 02, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240802|Aug 02, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240802|Aug 02, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|5d5141b9b45768af62af3b5eb734f0c181ca7eea|Aug 02, 2024
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|b908d54ef503d012069e4b0cc5c56462cef5f523|Aug 02, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|ae63a9992db027139f934ce19a0ecdfc7d6edfc1|Aug 02, 2024
