@@ -302,7 +302,7 @@ Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-9.14|Jul 28, 20
 Emulators|[wine-ntsync](http://github.com/Kron4ek/wine-tkg)|7935cdf856708ab45cc470d28672ff0c36cdb960|Jul 16, 2024
 Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|experimental-wine-9.0-20240730|Jul 30, 2024
 Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.14|Jul 28, 2024
-Emulators|[wine-tkg](http://github.com/Kron4ek/wine-tkg)|5a80a5963a847175f194a7a11221a90b696aea47|Jul 30, 2024
+Emulators|[wine-tkg](http://github.com/Kron4ek/wine-tkg)|9.14|Jul 30, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240803|Aug 03, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|a41ce69ee7b77e717c296e079f53cc2a19035fc7|Jul 09, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|a8d8ef5484686ab53e67ae10363747eec7eb6729|Jul 23, 2024
