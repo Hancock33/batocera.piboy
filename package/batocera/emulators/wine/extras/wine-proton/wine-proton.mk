@@ -11,7 +11,7 @@ WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
 WINE_PROTON_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_PROTON_SELINUX_MODULES = wine
-WINE_PROTON_DEPENDENCIES = host-bison host-flex host-wine-custom
+WINE_PROTON_DEPENDENCIES = host-bison host-flex host-wine-proton
 HOST_WINE_PROTON_DEPENDENCIES = host-bison host-flex
 
 define WINE_PROTON_AUTOGEN
@@ -30,7 +30,7 @@ HOST_WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
 # Wine needs its own directory structure and tools for cross compiling
 WINE_PROTON_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
 	CFLAGS="$(TARGET_CFLAGS) -Wno-incompatible-pointer-types" \
-	--with-wine-tools=$(BUILD_DIR)/host-wine-custom-$(WINE_CUSTOM_VERSION) \
+	--with-wine-tools=$(BUILD_DIR)/host-wine-proton-$(WINE_PROTON_VERSION) \
 	--disable-tests \
 	--without-capi \
 	--without-coreaudio \
