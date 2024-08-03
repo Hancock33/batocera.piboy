@@ -148,7 +148,7 @@ index 7d833fa6dd77..5cb0ef26cdae 100644
  				pipe_ctx->plane_res.dpp, &pipe_ctx->plane_res.scl_data);
  	}
 diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn10/dcn10_optc.c b/drivers/gpu/drm/amd/display/dc/optc/dcn10/dcn10_optc.c
-index 5574bc628053..713c0b1d2dbb 100644
+index f109a101d84f..4a90db873a32 100644
 --- a/drivers/gpu/drm/amd/display/dc/optc/dcn10/dcn10_optc.c
 +++ b/drivers/gpu/drm/amd/display/dc/optc/dcn10/dcn10_optc.c
 @@ -608,10 +608,6 @@ bool optc1_validate_timing(
