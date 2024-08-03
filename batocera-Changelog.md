@@ -13,7 +13,12 @@
 ### Updated
 - RetroArch to v1.19.1
   - Libretro-Melonds-Ds to v1.1.5
+  - Libretro-Ecwolf to June 28 build
   - Libretro-Flycast to Jul 30 build
+  - Libretro-Freechaf to June 28 build
+  - Libretro-Minivac to July 1 build
+  - Libretro-MrBoom to v5.5
+  - Libretro-NeoCD to June 22 build
 - Cemu to v2.0-91
 - Amiberry to v5.7.3
 - BigPEmu to v115
