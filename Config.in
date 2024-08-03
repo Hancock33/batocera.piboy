@@ -430,14 +430,13 @@ menu "Emulators"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/wine-mono/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/winetricks/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/wine-x86/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/extras/wine-cachyos/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/extras/wine-ge/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/extras/wine-lutris/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/extras/wine-native/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/extras/wine-ntsync/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/extras/wine-proton/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/extras/wine-proton-cachyos/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/extras/wine-staging/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/extras/wine-tkg/Config.in"
   endmenu
 
 endmenu
