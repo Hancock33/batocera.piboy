@@ -64,7 +64,7 @@ Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|59087fb1f
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|56e6bd69bc070f1d31e13610f1a7ebb1ca8bacbf|Jul 30, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|679a3321c104342e81658819fcb2dc37143d4ad7|Jul 30, 2024
 Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|experimental-wine-9.0-20240730|Jul 30, 2024
-Emulators|[wine-tkg](http://github.com/Kron4ek/wine-tkg)|5a80a5963a847175f194a7a11221a90b696aea47|Jul 30, 2024
+Emulators|[wine-tkg](http://github.com/Kron4ek/wine-tkg)|9.14|Jul 30, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|45bf218df428123f739714ef4e65e1b96c0959b7|Jul 29, 2024
 Emulators|[play](https://github.com/jpd002/Play-.git)|06517ef014305c8579f38fa7574ef3685181d037|Jul 29, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|52cf10274c342c1dd97d91c273b109d5c859d227|Jul 29, 2024
