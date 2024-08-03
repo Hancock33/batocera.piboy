@@ -649,5 +649,6 @@ menu "Audio"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/rtmidi/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/wildmidi/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/zmusic/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/libfreeaptx/Config.in"
 endmenu
 endmenu
