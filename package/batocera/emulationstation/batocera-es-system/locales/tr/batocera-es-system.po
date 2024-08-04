@@ -6615,6 +6615,21 @@ msgstr "Kapalı olması daha güvenlidir, belirli oyunlar için Açık."
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
+msgid "Double the rendering resolution."
+msgstr "İşleme çözünürlüğünü ikiye katla."
+
+#. TRANSLATION: libretro/pcsx_rearmed, drastic
+msgctxt "game_options"
+msgid "ENHANCED RENDERING RESOLUTION"
+msgstr "GELİŞMİŞ OLUŞTURMA ÇÖZÜNÜRLÜĞÜ"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "On (Speed hack)"
+msgstr "Açık (Hız hack'i)"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
 msgstr "Capcom VS oyunları Ekran Genişliğini Genişlet"
 
@@ -9628,26 +9643,13 @@ msgstr "GAMECUBE PORT 4 TİP"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid ""
-"Use alternative input mappings. Only applies to Standard Controller type."
+msgid "Moves South to West, West to North, etc. Standard controller type only."
 msgstr ""
-"Alternatif giriş eşlemelerini kullanın. Yalnızca Standart Denetleyici türü "
-"için geçerlidir."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid "ALT INPUT MAPPING"
-msgstr "ALT GİRİŞ EŞLEME"
-
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-msgctxt "game_options"
-msgid "Face Buttons (CW)"
-msgstr "Yüz Düğmeleri (CW)"
-
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-msgctxt "game_options"
-msgid "Face Buttons (CCW)"
-msgstr "Yüz Düğmeleri (CCW)"
+msgid "ROTATE FACE BUTTONS"
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -13137,11 +13139,6 @@ msgstr ""
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
-msgid "ENHANCED RENDERING RESOLUTION"
-msgstr "GELİŞMİŞ OLUŞTURMA ÇÖZÜNÜRLÜĞÜ"
-
-#. TRANSLATION: drastic
-msgctxt "game_options"
 msgid ""
 "Skip frames to improve performance, at the cost of choppy motion. Can cause "
 "visual glitches."
@@ -15888,6 +15885,11 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
+#. TRANSLATION: mame.mame.keys, c128.vice.keys, c64.vice.keys, singe.hypseus-singe.keys, daphne.hypseus-singe.keys, ...
+msgctxt "keys_files"
+msgid "Exit emulator"
+msgstr "Emülatörden Çık"
+
 #. TRANSLATION: switch.ryujinx.keys
 msgctxt "keys_files"
 msgid "Emulator Config"
@@ -15902,11 +15904,6 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Sanal Makineden Çık"
-
-#. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys, xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, ...
-msgctxt "keys_files"
-msgid "Exit emulator"
-msgstr "Emülatörden Çık"
 
 #. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys
 msgctxt "keys_files"
@@ -16126,6 +16123,11 @@ msgstr ""
 #. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "State/Load from Selected Slot"
+msgstr ""
+
+#. TRANSLATION: wii.dolphin.keys
+msgctxt "keys_files"
+msgid "Exit Dolphin"
 msgstr ""
 
 #. TRANSLATION: dos.dosbox-x.keys
@@ -17091,6 +17093,25 @@ msgstr "Hızlı Kaydet"
 #~ msgstr "WIIMOTE KUMANDASI OLARAK FARE"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Alternatif giriş eşlemelerini kullanın. Yalnızca Standart Denetleyici "
+#~ "türü için geçerlidir."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "ALT GİRİŞ EŞLEME"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Yüz Düğmeleri (CW)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Yüz Düğmeleri (CCW)"
+
+#~ msgctxt "game_options"
 #~ msgid "Set joystick deadzone."
 #~ msgstr "Joystik ölü bölgesini ayarlayın."
 
@@ -17684,14 +17705,6 @@ msgstr "Hızlı Kaydet"
 #~ msgctxt "game_options"
 #~ msgid "Emable or disable high score saving"
 #~ msgstr "Yüksek skor kaydetmeyi etkinleştir veya devre dışı bırak"
-
-#~ msgctxt "game_options"
-#~ msgid "Double the rendering resolution."
-#~ msgstr "İşleme çözünürlüğünü ikiye katla."
-
-#~ msgctxt "game_options"
-#~ msgid "On (Speed hack)"
-#~ msgstr "Açık (Hız hack'i)"
 
 #~ msgctxt "game_options"
 #~ msgid ""

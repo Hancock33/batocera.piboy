@@ -1,8 +1,8 @@
 diff --git a/Makefile.libretro b/Makefile.libretro
-index b7c26def..325c1737 100755
+index 22529d1e..4a4f20db 100755
 --- a/Makefile.libretro
 +++ b/Makefile.libretro
-@@ -87,6 +87,30 @@ else ifeq ($(platform), osx)
+@@ -110,6 +110,30 @@ else ifeq ($(platform), osx)
  		LDFLAGS  += $(TARGET_RULE)
     endif
  

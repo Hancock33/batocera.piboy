@@ -3,16 +3,40 @@
 ### Hardware
 - Add Blamcon Gun support
 - Khadis VIM4 optimizations and enhancements
+- Add Dockerpi Powerboard support initially for the RPi3
 ### Added
+- Exit game with light gun (hold `TRIGGER`, `ACTION` and `START` buttons for 2 seconds) 
 ### Fixed
 ### Changed / Improved
+- Added bezel & sinden border support for the RPi5 with Model 3 games
+- Added bezel & sinden border support for the RPi5 with Wii games, requires Vulkan API (default)
 ### Updated
 - RetroArch to v1.19.1
+  - Libretro-Melonds-Ds to v1.1.5
+  - Libretro-Ecwolf to June 28 build
+  - Libretro-Flycast to Jul 30 build
+  - Libretro-Freechaf to June 28 build
+  - Libretro-Minivac to July 1 build
+  - Libretro-MrBoom to v5.5
+  - Libretro-Mupen64plus-Next to July 19, 2024 build
+  - Libretro-NeoCD to June 22 build
 - Cemu to v2.0-91
 - Amiberry to v5.7.3
 - BigPEmu to v115
 - Citra to r518f723
 - Dolphin to 2407-103
+- Duckstaton to Jul 27, 2024 build
+- DXX-Rebirth to July 21 build
+- Eduke32 to Jul 25 build
+- Flycast to Jul 30 build
+- PCSX2 to v2.1.42
+- Redream to 1.5.0-1131-gafdfc1a
+- RPCS3 to Jul 28, 2024 build
+- Sonic Mania to Jul 21, 2024 build
+- The Force Engine to Jul 27, 2024 build
+- Vita3k to Jul 27 build
+- Xemu to v0.7.131
+- Xenia Canary to Jul 15, 2024 build
 ### System
 - Nvidia Driver to 555.58.02
 - Nvidia Legacy Driver to 470.256.02
@@ -21,17 +45,22 @@
 - Ayn Platform driver to Jul 17, 2024 build
 - MangoHud to Jun 15, 2024 build
 - SDL2 to 2.30.5
+- DXVK to 2.4
+- DXVK NVAPI to v0.7.1
+- VKD3D Proton to 2.13
+- Linux Firmware to 20240709
+- Pipewire to 1.2.2
 
 # 2024/08/xx - batocera.linux 40 - Swallowtail
 ### Special Notes
-Batocera now has a global battery mode option under Game Setting to determine the power mode when a handheld is unplugged.
+Batocera now has a global battery mode option under Game Settings to determine the power mode when a handheld is unplugged.
 To potentially improve battery consumption, you can adjust the mode the handheld operates at when running on battery.
 By default the power mode will be set to `balanced` mode when unplugged. Other options are `highperformance` or `powersave`
 Note: The `powersave` mode will have the biggest impact on CPU performance whilst gaming to reduce battery consumption as much as possible.
 
-Singe games now have it's own system. Move any singe related games from roms/daphne to the roms/singe directory.
-Note: Singe games in the roms/daphne folder will no longer work.
-You can determine you have a Singe simulation game by the games folder contains a .singe file.
+Singe games now have their own system. Move any Singe related games from `roms/daphne` to the `roms/singe` directory.
+Note: Singe games in the `roms/daphne` folder will no longer work.
+You can determine you have a Singe simulation game when the game folder contains a .singe file.
 
 EmulationStation's Video Mode (resolution) is now under System Settings rather than under Frontend Developers.
 ### Hardware
@@ -112,7 +141,7 @@ Add support for the Pironman 5 case with RPi5 devices.
 - RPCS3 upscaling now outputs properly
 - GunCon3 default mapping (visit light gun page on official wiki)
   - Calibration now on C2 (press and hold it few seconds)
-- Sinden Lightgun firmware updated to 1.9
+- Sinden Lightgun drivers updated to 2.05 (firmware v1.9 now compatible)
 - Preferred vulkan driver name now listed in System Information
 - Start advisiong people on Vulkan GPU driver capabilities for Emualtors
 - Added additional Atari Lynx extensions for Beetle Lynx & Handy

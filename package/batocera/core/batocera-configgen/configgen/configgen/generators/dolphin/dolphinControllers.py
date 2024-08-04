@@ -464,23 +464,15 @@ def get_AltMapping(system, nplayer, anyMapping):
         mapping['a'] = 'Buttons/B'
         mapping['b'] = 'Buttons/A'
 
-    # Only apply alt inputs for standard controller type
+    # Only rotate inputs for standard controller type so it doesn't effect other controller types.
     if not system.isOptSet(f"dolphin_port_{nplayer}_type") or system.config.get(f'dolphin_port_{nplayer}_type') == '6a':
-        # Check for alternative mappings settings and adjust
-        if system.isOptSet(f"alt_mappings_{nplayer}"):
-            alt_mapping_type = system.config.get(f'alt_mappings_{nplayer}')
+        # Check for rotate mappings settings and adjust
+        if system.isOptSet(f"alt_mappings_{nplayer}") and system.getOptBoolean(f"alt_mappings_{nplayer}") == True:
 
-            if alt_mapping_type == 'buttons_ccw':
-                mapping['a'] = 'Buttons/B'
-                mapping['b'] = 'Buttons/Y'
-                mapping['y'] = 'Buttons/X'
-                mapping['x'] = 'Buttons/A'
-
-            elif alt_mapping_type == 'buttons_cw':
-                mapping['a'] = 'Buttons/X'
-                mapping['b'] = 'Buttons/A'
-                mapping['y'] = 'Buttons/B'
-                mapping['x'] = 'Buttons/Y'
+            mapping['a'] = 'Buttons/X'
+            mapping['b'] = 'Buttons/A'
+            mapping['y'] = 'Buttons/B'
+            mapping['x'] = 'Buttons/Y'
 
     return mapping
 
@@ -550,11 +542,12 @@ def generateControllerConfig_wheel(f, pad, nplayer):
             if input.name == "joystick1left" and "joystick1right" in wheelMapping:
                 write_key(f, wheelMapping["joystick1right"], input.type, input.id, input.value, pad.nbaxes, True, None, None)
 
+
 def generateControllerConfig_any_auto(f, pad, anyMapping, anyReverseAxes, anyReplacements, extraOptions, system, nplayer, nsamepad):
     for opt in extraOptions:
         f.write(opt + " = " + extraOptions[opt] + "\n")
 
-    # Get alt input mappings and recompute the mapping according to available buttons on the pads and the available replacements
+    # Check for alt input mappings
     currentMapping = get_AltMapping(system, nplayer, anyMapping)
     # Apply replacements
     if anyReplacements is not None:

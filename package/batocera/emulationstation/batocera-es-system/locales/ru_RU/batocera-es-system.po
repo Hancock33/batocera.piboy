@@ -6606,6 +6606,21 @@ msgstr "Выкл безопаснее, Вкл для конкретных игр
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
+msgid "Double the rendering resolution."
+msgstr "Удвоенное разрешение рендеринга."
+
+#. TRANSLATION: libretro/pcsx_rearmed, drastic
+msgctxt "game_options"
+msgid "ENHANCED RENDERING RESOLUTION"
+msgstr "УЛУЧШЕННОЕ РАЗРЕШЕНИЕ РЕНДЕРИНГА"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "On (Speed hack)"
+msgstr "Вкл (спидхак)"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
 msgstr "Capcom VS - расширить ширину экрана"
 
@@ -9619,26 +9634,13 @@ msgstr "GAMECUBE ТИП ПОРТА 4"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid ""
-"Use alternative input mappings. Only applies to Standard Controller type."
+msgid "Moves South to West, West to North, etc. Standard controller type only."
 msgstr ""
-"Использовать альт. сопоставления кнопок. Применяется только к типу "
-"\"Standard Controller\"."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid "ALT INPUT MAPPING"
-msgstr "АЛЬТ, СОПОСТАВЛЕНИЕ КНОПОК"
-
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-msgctxt "game_options"
-msgid "Face Buttons (CW)"
-msgstr "Лицевые кнопки (по часовой стрелке)"
-
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-msgctxt "game_options"
-msgid "Face Buttons (CCW)"
-msgstr "Лицевые кнопки (против часовой стрелки)"
+msgid "ROTATE FACE BUTTONS"
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -13128,11 +13130,6 @@ msgstr ""
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
-msgid "ENHANCED RENDERING RESOLUTION"
-msgstr "УЛУЧШЕННОЕ РАЗРЕШЕНИЕ РЕНДЕРИНГА"
-
-#. TRANSLATION: drastic
-msgctxt "game_options"
 msgid ""
 "Skip frames to improve performance, at the cost of choppy motion. Can cause "
 "visual glitches."
@@ -15879,6 +15876,11 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
+#. TRANSLATION: mame.mame.keys, c128.vice.keys, c64.vice.keys, singe.hypseus-singe.keys, daphne.hypseus-singe.keys, ...
+msgctxt "keys_files"
+msgid "Exit emulator"
+msgstr "Выйти из эмулятора"
+
 #. TRANSLATION: switch.ryujinx.keys
 msgctxt "keys_files"
 msgid "Emulator Config"
@@ -15892,11 +15894,6 @@ msgstr ""
 #. TRANSLATION: switch.ryujinx.keys, naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, ...
 msgctxt "keys_files"
 msgid "Exit the emulator"
-msgstr "Выйти из эмулятора"
-
-#. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys, xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, ...
-msgctxt "keys_files"
-msgid "Exit emulator"
 msgstr "Выйти из эмулятора"
 
 #. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys
@@ -16117,6 +16114,11 @@ msgstr ""
 #. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "State/Load from Selected Slot"
+msgstr ""
+
+#. TRANSLATION: wii.dolphin.keys
+msgctxt "keys_files"
+msgid "Exit Dolphin"
 msgstr ""
 
 #. TRANSLATION: dos.dosbox-x.keys
@@ -17093,6 +17095,25 @@ msgstr "Быстрое сохранение"
 #~ msgstr "МЫШЬ КАК УКАЗАТЕЛЬ WIIMOTE"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Использовать альт. сопоставления кнопок. Применяется только к типу "
+#~ "\"Standard Controller\"."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "АЛЬТ, СОПОСТАВЛЕНИЕ КНОПОК"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Лицевые кнопки (по часовой стрелке)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Лицевые кнопки (против часовой стрелки)"
+
+#~ msgctxt "game_options"
 #~ msgid "Set joystick deadzone."
 #~ msgstr "Установка мертвой зоны джойстика."
 
@@ -17647,14 +17668,6 @@ msgstr "Быстрое сохранение"
 #~ msgctxt "game_options"
 #~ msgid "Emable or disable high score saving"
 #~ msgstr "Включить или отключить сохранение рекордов"
-
-#~ msgctxt "game_options"
-#~ msgid "Double the rendering resolution."
-#~ msgstr "Удвоенное разрешение рендеринга."
-
-#~ msgctxt "game_options"
-#~ msgid "On (Speed hack)"
-#~ msgstr "Вкл (спидхак)"
 
 #~ msgctxt "game_options"
 #~ msgid ""

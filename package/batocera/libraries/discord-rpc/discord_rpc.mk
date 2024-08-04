@@ -3,8 +3,8 @@
 # discord-rpc
 #
 ################################################################################
-# Version: Commits on Jul 04, 2024
-DISCORD_RPC_VERSION = 842c15192041f8e71c512851834f4dadb1a554fb
+# Version: Commits on Aug 02, 2024
+DISCORD_RPC_VERSION = 144f3a3f1209994d8d9e8a87964a989cb9911c1e
 DISCORD_RPC_SITE = $(call github,stenzek,discord-rpc,$(DISCORD_RPC_VERSION))
 
 DISCORD_RPC_LICENSE =  MIT-license

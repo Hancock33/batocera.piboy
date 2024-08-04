@@ -1,5 +1,6 @@
 ﻿batocera-luajit.mk
 dolphinCrosshairsPack.mk
+duckstation.mk
 duckstation-legacy.mk
 firmware-armbian.mk
 firmware-orangepi.mk
@@ -9,12 +10,12 @@ flatpak.mk
 ledspicer.mk
 lib32bit.mk
 libserum.mk
-mangohud.mk
 model2emu.mk
 noto-cjk-fonts.mk
 openbor6412.mk
 openbor7142.mk
 python-pyxel.mk
+ryujinx.mk
 wine-cachyos.mk
 wine-custom.mk
 wine-ge.mk

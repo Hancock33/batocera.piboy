@@ -3,8 +3,8 @@
 # gzdoom
 #
 ################################################################################
-# Version: Commits on Jul 20, 2024
-GZDOOM_VERSION = f671018700e1e71ad2dda9ccdbf3fe62bb9efb49
+# Version: Commits on Jul 30, 2024
+GZDOOM_VERSION = 593e1c0225ff4127f80a506bb4631bcc5c842ef3
 GZDOOM_SITE = $(call github,ZDoom,gzdoom,$(GZDOOM_VERSION))
 GZDOOM_LICENSE = GPL-3.0
 GZDOOM_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic libvpx webp host-zmusic host-gzdoom
@@ -29,13 +29,18 @@ GZDOOM_CONF_OPTS += -DIMPORT_EXECUTABLES=$(HOST_GZDOOM_BUILDDIR)/ImportExecutabl
 GZDOOM_CONF_OPTS += -DINSTALL_SOUNDFONT_PATH="/usr/share/gzdoom"
 GZDOOM_CONF_OPTS += -DINSTALL_PK3_PATH="/usr/share/gzdoom"
 
-ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
-	GZDOOM_CONF_OPTS += -DHAVE_VULKAN=ON
-	GZDOOM_DEPENDENCIES += vulkan-headers vulkan-loader
+ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
 	ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
+		GZDOOM_DEPENDENCIES += xlib_libX11 vulkan-headers vulkan-loader
+		GZDOOM_CONF_OPTS += -DHAVE_VULKAN=ON
 		GZDOOM_CONF_OPTS += -DVULKAN_USE_XLIB=ON -DVULKAN_USE_WAYLAND=OFF
-	else ifeq ($(BR2_PACKAGE_WAYLAND)$(BR2_PACKAGE_SWAY),yy)
+	else ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND_SWAY),y)
+		GZDOOM_DEPENDENCIES += wayland vulkan-headers vulkan-loader
+		GZDOOM_CONF_OPTS += -DHAVE_VULKAN=ON
 		GZDOOM_CONF_OPTS += -DVULKAN_USE_XLIB=OFF -DVULKAN_USE_WAYLAND=ON
+	else
+		# no valid surface provider
+		GZDOOM_CONF_OPTS += -DHAVE_VULKAN=OFF
 	endif
 else
 	GZDOOM_CONF_OPTS += -DHAVE_VULKAN=OFF

@@ -3,10 +3,11 @@
 # wine-ntsync
 #
 ################################################################################
-# Version: Commits on May 03, 2024
-WINE_NTSYNC_VERSION = b710a652bb7f582fa65f8d42d727847e231b7095
-WINE_NTSYNC_SOURCE = $(WINE_NTSYNC_VERSION).tar.gz
-WINE_NTSYNC_SITE = https://repo.or.cz/wine/zf.git/snapshot/
+# Version: Commits on Jul 16, 2024
+WINE_NTSYNC_VERSION = 7935cdf856708ab45cc470d28672ff0c36cdb960
+WINE_NTSYNC_BRANCH = ntsync
+WINE_NTSYNC_SOURCE = wine-ntsync-$(WINE_NTSYNC_VERSION).tar.gz
+WINE_NTSYNC_SITE = $(call github,Kron4ek,wine-tkg,$(WINE_NTSYNC_VERSION))
 WINE_NTSYNC_LICENSE = LGPL-2.1+
 WINE_NTSYNC_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_NTSYNC_SELINUX_MODULES = wine

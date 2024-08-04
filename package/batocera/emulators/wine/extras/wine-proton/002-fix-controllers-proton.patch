@@ -1,5 +1,5 @@
 diff --git a/loader/wine.inf.in b/loader/wine.inf.in
-index 7ce0638c7df..ca396ba0ed9 100644
+index 1f4019cc417..12c5a5bb474 100644
 --- a/loader/wine.inf.in
 +++ b/loader/wine.inf.in
 @@ -99,6 +99,7 @@ AddReg=\
@@ -26,7 +26,7 @@ index 7ce0638c7df..ca396ba0ed9 100644
      SteamClient.ntamd64
  
  [Wow64Install.ntarm]
-@@ -2899,3 +2902,8 @@ HKCU,Software\Wine\AppDefaults\Spider-Man.exe\DllOverrides,"atiadlxx",,"builtin"
+@@ -2904,3 +2907,8 @@ HKCU,Software\Wine\AppDefaults\Spider-Man.exe\DllOverrides,"atiadlxx",,"builtin"
  HKCU,Software\Wine\AppDefaults\RiftApart.exe\DllOverrides,"atiadlxx",,"builtin"
  HKLM,Software\Wow6432Node\lucasarts entertainment company llc\Star Wars: Episode I Racer\v1.0,"Display Height",0x10001,480
  HKLM,Software\Wow6432Node\lucasarts entertainment company llc\Star Wars: Episode I Racer\v1.0,"Display Width",0x10001,640

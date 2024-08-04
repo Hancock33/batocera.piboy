@@ -1,0 +1,29 @@
+diff --git a/pcsx2/GS/Renderers/Vulkan/VKShaderCache.cpp b/pcsx2/GS/Renderers/Vulkan/VKShaderCache.cpp
+index d4df38661..882f84630 100644
+--- a/pcsx2/GS/Renderers/Vulkan/VKShaderCache.cpp
++++ b/pcsx2/GS/Renderers/Vulkan/VKShaderCache.cpp
+@@ -114,6 +114,7 @@ static void FillPipelineCacheHeader(VK_PIPELINE_CACHE_HEADER* header)
+ 	X(shaderc_result_get_length) \
+ 	X(shaderc_result_get_num_warnings) \
+ 	X(shaderc_result_get_bytes) \
++	X(shaderc_result_get_compilation_status) \
+ 	X(shaderc_result_get_error_message)
+ 
+ // TODO: NOT thread safe, yet.
+@@ -221,10 +222,12 @@ std::optional<VKShaderCache::SPIRVCodeVector> VKShaderCache::CompileShaderToSPV(
+ 	dyn_shaderc::shaderc_compile_options_set_optimization_level(
+ 		options, debug ? shaderc_optimization_level_zero : shaderc_optimization_level_performance);
+ 
+-	shaderc_compilation_result_t result;
+-	const shaderc_compilation_status status = dyn_shaderc::shaderc_compile_into_spv(
+-		dyn_shaderc::s_compiler, source.data(), source.length(), static_cast<shaderc_shader_kind>(stage), "source",
+-		"main", options, &result);
++	const shaderc_compilation_result_t result = dyn_shaderc::shaderc_compile_into_spv(
++               dyn_shaderc::s_compiler, source.data(), source.length(), static_cast<shaderc_shader_kind>(stage), "source",
++               "main", options);
++
++	const shaderc_compilation_status status = result ? dyn_shaderc::shaderc_result_get_compilation_status(result) : shaderc_compilation_status_internal_error;
++
+ 	if (status != shaderc_compilation_status_success)
+ 	{
+ 		const std::string_view errors(result ? dyn_shaderc::shaderc_result_get_error_message(result) :

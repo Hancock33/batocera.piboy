@@ -6575,6 +6575,21 @@ msgstr "Vypnuté je bezpečnejšie, zapnuté pre určité hry."
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
+msgid "Double the rendering resolution."
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed, drastic
+msgctxt "game_options"
+msgid "ENHANCED RENDERING RESOLUTION"
+msgstr "Rozšírené renderovacie rozlíšenie"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "On (Speed hack)"
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
 msgstr "Zväčšiť šírku obrazovky pre hry Capcom VS"
 
@@ -9579,25 +9594,13 @@ msgstr "Typ Gamecube portu 4"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid ""
-"Use alternative input mappings. Only applies to Standard Controller type."
+msgid "Moves South to West, West to North, etc. Standard controller type only."
 msgstr ""
-"Použiť alternatívne vstupné mapovanie. Iba pre štandardný typ ovládača."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid "ALT INPUT MAPPING"
-msgstr "Alt. vstupné mapovanie"
-
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-msgctxt "game_options"
-msgid "Face Buttons (CW)"
-msgstr "Face Buttons (CW)"
-
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-msgctxt "game_options"
-msgid "Face Buttons (CCW)"
-msgstr "Face Buttons (CCW)"
+msgid "ROTATE FACE BUTTONS"
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -13056,11 +13059,6 @@ msgstr ""
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
-msgid "ENHANCED RENDERING RESOLUTION"
-msgstr "Rozšírené renderovacie rozlíšenie"
-
-#. TRANSLATION: drastic
-msgctxt "game_options"
 msgid ""
 "Skip frames to improve performance, at the cost of choppy motion. Can cause "
 "visual glitches."
@@ -15740,6 +15738,11 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
+#. TRANSLATION: mame.mame.keys, c128.vice.keys, c64.vice.keys, singe.hypseus-singe.keys, daphne.hypseus-singe.keys, ...
+msgctxt "keys_files"
+msgid "Exit emulator"
+msgstr "Ukončiť emulátor"
+
 #. TRANSLATION: switch.ryujinx.keys
 msgctxt "keys_files"
 msgid "Emulator Config"
@@ -15753,11 +15756,6 @@ msgstr ""
 #. TRANSLATION: switch.ryujinx.keys, naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, ...
 msgctxt "keys_files"
 msgid "Exit the emulator"
-msgstr "Ukončiť emulátor"
-
-#. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys, xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, ...
-msgctxt "keys_files"
-msgid "Exit emulator"
 msgstr "Ukončiť emulátor"
 
 #. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys
@@ -15978,6 +15976,11 @@ msgstr ""
 #. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "State/Load from Selected Slot"
+msgstr ""
+
+#. TRANSLATION: wii.dolphin.keys
+msgctxt "keys_files"
+msgid "Exit Dolphin"
 msgstr ""
 
 #. TRANSLATION: dos.dosbox-x.keys
@@ -16929,6 +16932,24 @@ msgstr "Rýchle uloženie"
 #~ msgctxt "game_options"
 #~ msgid "MOUSE AS WIIMOTE POINTER"
 #~ msgstr "Myš ako ukazovateľ Wiimote"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Použiť alternatívne vstupné mapovanie. Iba pre štandardný typ ovládača."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "Alt. vstupné mapovanie"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Face Buttons (CW)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Face Buttons (CCW)"
 
 #~ msgctxt "game_options"
 #~ msgid "Set joystick deadzone."

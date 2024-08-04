@@ -6650,6 +6650,21 @@ msgstr "Aus ist sicherer, Ein für spezielle Spiele."
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
+msgid "Double the rendering resolution."
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed, drastic
+msgctxt "game_options"
+msgid "ENHANCED RENDERING RESOLUTION"
+msgstr "VERBESSERTE RENDERING AUFLÖSUNG"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "On (Speed hack)"
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
 msgstr "Capcom VS-Spiele (Bildschirmbreite vergrößern)"
 
@@ -9687,24 +9702,13 @@ msgstr "GAMECUBE ANSCHLUSS 4 TYP"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid ""
-"Use alternative input mappings. Only applies to Standard Controller type."
-msgstr "Alternative Eingabebelegung. Gilt nur für den Typ Standard-Controller."
+msgid "Moves South to West, West to North, etc. Standard controller type only."
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid "ALT INPUT MAPPING"
-msgstr "ALT EINGABEBELEGUNG"
-
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-msgctxt "game_options"
-msgid "Face Buttons (CW)"
-msgstr "Aktionstasten (im Uhrzeigersinn)"
-
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-msgctxt "game_options"
-msgid "Face Buttons (CCW)"
-msgstr "Aktionstasten (gegen Uhrzeigersinn)"
+msgid "ROTATE FACE BUTTONS"
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -13227,11 +13231,6 @@ msgstr ""
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
-msgid "ENHANCED RENDERING RESOLUTION"
-msgstr "VERBESSERTE RENDERING AUFLÖSUNG"
-
-#. TRANSLATION: drastic
-msgctxt "game_options"
 msgid ""
 "Skip frames to improve performance, at the cost of choppy motion. Can cause "
 "visual glitches."
@@ -15994,6 +15993,11 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
+#. TRANSLATION: mame.mame.keys, c128.vice.keys, c64.vice.keys, singe.hypseus-singe.keys, daphne.hypseus-singe.keys, ...
+msgctxt "keys_files"
+msgid "Exit emulator"
+msgstr "Emulator beenden"
+
 #. TRANSLATION: switch.ryujinx.keys
 msgctxt "keys_files"
 msgid "Emulator Config"
@@ -16007,11 +16011,6 @@ msgstr ""
 #. TRANSLATION: switch.ryujinx.keys, naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, ...
 msgctxt "keys_files"
 msgid "Exit the emulator"
-msgstr "Emulator beenden"
-
-#. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys, xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, ...
-msgctxt "keys_files"
-msgid "Exit emulator"
 msgstr "Emulator beenden"
 
 #. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys
@@ -16232,6 +16231,11 @@ msgstr ""
 #. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "State/Load from Selected Slot"
+msgstr ""
+
+#. TRANSLATION: wii.dolphin.keys
+msgctxt "keys_files"
+msgid "Exit Dolphin"
 msgstr ""
 
 #. TRANSLATION: dos.dosbox-x.keys
@@ -17205,6 +17209,24 @@ msgstr "Schnellspeichern"
 #~ msgctxt "game_options"
 #~ msgid "MOUSE AS WIIMOTE POINTER"
 #~ msgstr "MAUS ALS WIIMOTE-ZEIGER"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Alternative Eingabebelegung. Gilt nur für den Typ Standard-Controller."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "ALT EINGABEBELEGUNG"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Aktionstasten (im Uhrzeigersinn)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Aktionstasten (gegen Uhrzeigersinn)"
 
 #~ msgctxt "game_options"
 #~ msgid "Set joystick deadzone."

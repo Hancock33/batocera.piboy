@@ -6570,6 +6570,21 @@ msgstr "Apagat és més segur, Engegat per a jocs específics."
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
+msgid "Double the rendering resolution."
+msgstr "Dobla la resolució de renderitzat."
+
+#. TRANSLATION: libretro/pcsx_rearmed, drastic
+msgctxt "game_options"
+msgid "ENHANCED RENDERING RESOLUTION"
+msgstr "RESOLUCIÓ DE RENDERITZACIÓ MILLORADA"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
+msgid "On (Speed hack)"
+msgstr "Engegat (Truc de velocitat)"
+
+#. TRANSLATION: libretro/pcsx_rearmed
+msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
 msgstr "Expandir l’ample de pantalla als jocs de lluita Capcom"
 
@@ -9569,23 +9584,12 @@ msgstr "TIPUS DEL PORT 4 DE GAMECUBE"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid ""
-"Use alternative input mappings. Only applies to Standard Controller type."
+msgid "Moves South to West, West to North, etc. Standard controller type only."
 msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid "ALT INPUT MAPPING"
-msgstr ""
-
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-msgctxt "game_options"
-msgid "Face Buttons (CW)"
-msgstr ""
-
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-msgctxt "game_options"
-msgid "Face Buttons (CCW)"
+msgid "ROTATE FACE BUTTONS"
 msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
@@ -13020,11 +13024,6 @@ msgstr ""
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
-msgid "ENHANCED RENDERING RESOLUTION"
-msgstr "RESOLUCIÓ DE RENDERITZACIÓ MILLORADA"
-
-#. TRANSLATION: drastic
-msgctxt "game_options"
 msgid ""
 "Skip frames to improve performance, at the cost of choppy motion. Can cause "
 "visual glitches."
@@ -15700,6 +15699,11 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
+#. TRANSLATION: mame.mame.keys, c128.vice.keys, c64.vice.keys, singe.hypseus-singe.keys, daphne.hypseus-singe.keys, ...
+msgctxt "keys_files"
+msgid "Exit emulator"
+msgstr "Sortir de l'emulador"
+
 #. TRANSLATION: switch.ryujinx.keys
 msgctxt "keys_files"
 msgid "Emulator Config"
@@ -15713,11 +15717,6 @@ msgstr ""
 #. TRANSLATION: switch.ryujinx.keys, naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, ...
 msgctxt "keys_files"
 msgid "Exit the emulator"
-msgstr "Sortir de l'emulador"
-
-#. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys, xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, ...
-msgctxt "keys_files"
-msgid "Exit emulator"
 msgstr "Sortir de l'emulador"
 
 #. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys
@@ -15938,6 +15937,11 @@ msgstr ""
 #. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "State/Load from Selected Slot"
+msgstr ""
+
+#. TRANSLATION: wii.dolphin.keys
+msgctxt "keys_files"
+msgid "Exit Dolphin"
 msgstr ""
 
 #. TRANSLATION: dos.dosbox-x.keys
@@ -17352,14 +17356,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "ENabling will smooth out the image."
 #~ msgstr "Es suavitzarà la imatge."
-
-#~ msgctxt "game_options"
-#~ msgid "Double the rendering resolution."
-#~ msgstr "Dobla la resolució de renderitzat."
-
-#~ msgctxt "game_options"
-#~ msgid "On (Speed hack)"
-#~ msgstr "Engegat (Truc de velocitat)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
