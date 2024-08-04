@@ -1,25 +1,27 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-08-04|Aug 04, 2024
+Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|1fc99f07f354866ff9b89e8cab42c97228a9b9cf|Aug 04, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|e8fad1112807320f05b87a8cf2e1c2e7d9fa64ee|Aug 04, 2024
+Ports|[fheroes2](http://github.com/ihhub/fheroes2)|5a63b85b4c165fe11eeff575b2cc8ec474e0a4eb|Aug 04, 2024
+Ports|[stk](http://github.com/supertuxkart/stk-code)|e6d0df3435722dbf897a4835aa146e22e0d033b2|Aug 04, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|0f367d795e2dc2ea829d2a6c03ffb95d48fcf0e2|Aug 04, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240804|Aug 04, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240804|Aug 04, 2024
-Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|e285c5842ef18ad90492c8e73a60eab01a4914e6|Aug 04, 2024
+Ports|[doomretro](http://github.com/bradharding/doomretro)|a034b7b843c53ee56697d8fda603096b41c1f3fb|Aug 04, 2024
+Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|c42ab459d51974e9f4e494b5808df531f6ec2653|Aug 04, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|7645cbff9a263b9b77e14e0ea1ab46be34239469|Aug 03, 2024
 Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|e9f98bffa9d79dd213e3a1f12bd51e4d4459df3b|Aug 03, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|f6b55115469acde307c8b4417b6a230eb023c0df|Aug 03, 2024
 Emulators|[ryujinxng](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1368|Aug 03, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|70c116bb58a5efee667de91ab6aebb307d88f005|Aug 03, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45261|Aug 03, 2024
-Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|4919300aa6e9134c6882d3b617eb74efa64e1173|Aug 03, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|cf5fc8bb0f30ed149fbfd6d05c9e76b9bb6976eb|Aug 03, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|e7c58ad0ef23c6753133b3b5468a7946c6e830c0|Aug 03, 2024
-Ports|[fheroes2](http://github.com/ihhub/fheroes2)|8df5b989c3c16de557a5ac4f7ec95fdfb34db1a3|Aug 03, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|27e00416a77a9a985139ba3df34cb0e6bbfc2596|Aug 03, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|6af0edcf9008409b85b7888aaa870f80fbaeec15|Aug 03, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|e6e84c0548c0e68b2dd0a534da0ea65909187d4f|Aug 03, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|be2b788c6719dff953ce816a1246c49bd5cd30a5|Aug 03, 2024
-Ports|[doomretro](http://github.com/bradharding/doomretro)|8426274ad5b3d0e671b49dd80ace1789071deddd|Aug 03, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|6a281979d857c336a0a331507861a4e67ba3933b|Aug 03, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|4c569e1d5f3fae94d9b514a9ce718b4a26d2938c|Aug 03, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|c5615f97120e5f2738ae6c6a100bcf66a179f697|Aug 02, 2024
@@ -56,7 +58,6 @@ Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|fd8062072a7b158b936b7ef543bafbd6f3cd5f53|Jul 30, 2024
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|945d708fd0b200e62fcedd48236c7f9c43a44062|Jul 30, 2024
 Network|[rtl8812au](http://github.com/morrownr/8812au-20210820)|a88228be6215bd44c8c29792e240ac05387e8e20|Jul 30, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|27a8d19f31327c5c620c5037b4534b0cb200a2a9|Jul 30, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|11744ccbf00708faa600676652095d30902eafa3|Jul 30, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|2230fc25ff4a34259e612f2b843fb8034d6d00ad|Jul 30, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|0cd4126e4180821cd2e37d2cfbe8be7b59db3a86|Jul 30, 2024
@@ -72,7 +73,6 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|52cf10274c342c1dd97d9
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.2|Jul 29, 2024
 Hardware|[ayn-platform](http://github.com/ShadowBlip/ayn-platform)|v0.5.2|Jul 29, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|44f925d81dd62f88a9d73ae9ad24847c551b6557|Jul 29, 2024
-Ports|[stk](http://github.com/supertuxkart/stk-code)|4a9e5f0a8dd8d47b25ef078f789f218b6fb50c73|Jul 29, 2024
 Emulators|[wine-custom](http://github.com/Kron4ek/wine-tkg)|9.14|Jul 29, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|9487ac2f3be74dd0d3ce4580d3fd45cee0359cb1|Jul 29, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|45bf218df428123f739714ef4e65e1b96c0959b7|Jul 29, 2024
