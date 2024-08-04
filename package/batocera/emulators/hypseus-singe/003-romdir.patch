@@ -1,9 +1,9 @@
 diff --git a/doc/CmdLine.md b/doc/CmdLine.md
-index db2b025..b4fd24c 100644
+index 774ee5f..09f3745 100644
 --- a/doc/CmdLine.md
 +++ b/doc/CmdLine.md
-@@ -68,6 +68,7 @@ Refer also to **bezel arguments** [here](Bezels.md)
- | -gamepad                         | Enable SDL_GameController configuration. Use -haptic [0-4] to configure rumble. |
+@@ -69,6 +69,7 @@ Refer also to **bezel arguments** [here](Bezels.md)
+ | -gamepad_reorder 3 .. 0          | Reorder SDL_GameController indexes, will allow polling focus to the first specified Controllers in [hypinput.ini](hypinput_gamepad.ini):  &nbsp;_[Default: 0 1 2 3]_|
  | -grabmouse                       | Capture mouse in SDL window.                           |
  | -homedir \<dirname>              | Sets the Home Directory that Hypseus will use.         |
 +| -romdir \<dirname>               | Sets the ROM Directory that Hypseus will use.          |
@@ -11,7 +11,7 @@ index db2b025..b4fd24c 100644
  | -ignore_aspect_ratio             | Tells Hypseus to ignore the aspect ratio defined in the MPEG header. |
  | -keymapfile \<config>            | Specify an alternate hypinput.ini file.                |
 diff --git a/src/game/game.cpp b/src/game/game.cpp
-index 0c595c8..dd7e475 100644
+index db0ca34..a8125fe 100644
 --- a/src/game/game.cpp
 +++ b/src/game/game.cpp
 @@ -682,9 +682,14 @@ bool game::load_roms()
@@ -75,7 +75,7 @@ index 0c595c8..dd7e475 100644
  
      F = mpo_open(fullpath.c_str(), MPO_OPEN_READONLY);
 diff --git a/src/io/cmdline.cpp b/src/io/cmdline.cpp
-index 1324734..4e1b50f 100644
+index 79b23be..9aec566 100644
 --- a/src/io/cmdline.cpp
 +++ b/src/io/cmdline.cpp
 @@ -171,6 +171,43 @@ bool parse_homedir()

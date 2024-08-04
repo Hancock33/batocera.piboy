@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Jul 28, 2024
-RETROARCH_VERSION = c1f23a3b09d2ba4101f092559aeec7d016586847
+# Version: Commits on Aug 04, 2024
+RETROARCH_VERSION = 0f367d795e2dc2ea829d2a6c03ffb95d48fcf0e2
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts
@@ -204,6 +204,13 @@ define LIBRETRO_FFMPEG_INSTALL
 endef
 RETROARCH_POST_INSTALL_TARGET_HOOKS += LIBRETRO_FFMPEG_INSTALL
 endif
+
+define RETROARCH_EVMAPY
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/retroarch/libretro.keys $(TARGET_DIR)/usr/share/evmapy
+endef
+
+RETROARCH_POST_INSTALL_TARGET_HOOKS += RETROARCH_EVMAPY
 
 $(eval $(generic-package))
 

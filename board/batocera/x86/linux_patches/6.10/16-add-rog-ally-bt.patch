@@ -1,8 +1,8 @@
 diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
-index e384ef6ff050..2940c0d4e7a4 100644
+index 789c492df6fa..ff0f7b3c7570 100644
 --- a/drivers/bluetooth/btusb.c
 +++ b/drivers/bluetooth/btusb.c
-@@ -691,6 +691,9 @@ static const struct usb_device_id quirks_table[] = {
+@@ -695,6 +695,9 @@ static const struct usb_device_id quirks_table[] = {
  	{ USB_DEVICE(0x13d3, 0x3603), .driver_info = BTUSB_MEDIATEK |
  						     BTUSB_WIDEBAND_SPEECH |
  						     BTUSB_VALID_LE_STATES },

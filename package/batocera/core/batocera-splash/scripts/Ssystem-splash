@@ -20,32 +20,32 @@ do_start ()
     done
 
     if [ "$screen_rotate" = "1" ]; then
-        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -270 -quality 75 "/tmp/boot-logo.jpg"
-        image="/tmp/boot-logo.jpg"
+        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -270 -quality 75 "/tmp/boot-logo.png"
+        image="/tmp/boot-logo.png"
     elif [ "$screen_rotate" = "2" ]; then
-        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -180 -quality 75 "/tmp/boot-logo.jpg"
-        image="/tmp/boot-logo.jpg"
+        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -180 -quality 75 "/tmp/boot-logo.png"
+        image="/tmp/boot-logo.png"
     elif [ "$screen_rotate" = "3" ]; then
-        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -90 -quality 75 "/tmp/boot-logo.jpg"
-        image="/tmp/boot-logo.jpg"
+        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -90 -quality 75 "/tmp/boot-logo.png"
+        image="/tmp/boot-logo.png"
     fi
 
     if [ "$screen_rotate_edp" = "1" ]; then
-        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -270 -quality 75 "/tmp/boot-logo.jpg"
-        image="/tmp/boot-logo.jpg"
+        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -270 -quality 75 "/tmp/boot-logo.png"
+        image="/tmp/boot-logo.png"
     elif [ "$screen_rotate_edp" = "2" ]; then
-        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -180 -quality 75 "/tmp/boot-logo.jpg"
-        image="/tmp/boot-logo.jpg"
+        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -180 -quality 75 "/tmp/boot-logo.png"
+        image="/tmp/boot-logo.png"
     elif [ "$screen_rotate_edp" = "3" ]; then
-        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -90 -quality 75 "/tmp/boot-logo.jpg"
-        image="/tmp/boot-logo.jpg"
+        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -90 -quality 75 "/tmp/boot-logo.png"
+        image="/tmp/boot-logo.png"
     fi
 
-    convert "${image}" -resize "$screen_x"x"$screen_y"! -quality 75 "/tmp/boot-logo.jpg"
+    convert "${image}" -resize "$screen_x"x"$screen_y"! -quality 75 "/tmp/boot-logo.png"
 
     FBV_OPTS="-f -e -i"
     # FBV_OPTS can be set differently for some boards to work
-    test -e /dev/fb0 && fbv ${FBV_OPTS} -i "/tmp/boot-logo.jpg"
+    test -e /dev/fb0 && fbv ${FBV_OPTS} "/tmp/boot-logo.png"
 }
 
 case "$1" in

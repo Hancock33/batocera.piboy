@@ -33,7 +33,7 @@ LIBRETRO_PC98_PLATFORM = unix
 endif
 
 define LIBRETRO_PC98_BUILD_CMDS
-	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/sdl/Makefile.libretro
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION) -Wno-error=incompatible-pointer-types -Wno-int-conversion|g" $(@D)/sdl/Makefile.libretro
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/sdl/ -f Makefile.libretro platform="$(LIBRETRO_PC98_PLATFORM)" \
 		GIT_VERSION="-$(shell echo $(LIBRETRO_PC98_VERSION) | cut -c 1-7)"
 endef

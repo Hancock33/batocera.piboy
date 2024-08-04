@@ -3,8 +3,8 @@
 # opentyrian2000
 #
 ################################################################################
-# Version: Commits on May 16, 2024
-OPENTYRIAN2000_VERSION = 0bfca44a932fb6ad255d76cd2eda5fcbc2b01940
+# Version: Commits on Aug 02, 2024
+OPENTYRIAN2000_VERSION = bc13d979164e0d60806c2b034f96d9b4de1657f2
 OPENTYRIAN2000_SITE = $(call github,KScl,opentyrian2000,$(OPENTYRIAN2000_VERSION))
 
 OPENTYRIAN2000_DEPENDENCIES = sdl2 sdl2_mixer sdl2_ttf openal

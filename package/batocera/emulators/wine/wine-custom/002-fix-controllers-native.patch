@@ -1,5 +1,5 @@
 diff --git a/loader/wine.inf.in b/loader/wine.inf.in
-index f952ef84f43..c9960d44969 100644
+index 2903badd840..ea07859c733 100644
 --- a/loader/wine.inf.in
 +++ b/loader/wine.inf.in
 @@ -95,7 +95,8 @@ AddReg=\

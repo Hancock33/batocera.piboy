@@ -7,7 +7,7 @@ default:
     hud_support:  true
     bezel:        none
     gfxbackend: vulkan
-    audio_driver: alsathread
+    audio_driver: pulse
 
 c20:
   emulator: libretro

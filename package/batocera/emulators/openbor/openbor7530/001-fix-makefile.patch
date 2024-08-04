@@ -71,7 +71,7 @@ index 7f1792ae..fb608bec 100644
  
  CFLAGS 	       += $(addprefix -I", $(addsuffix ", $(INCS))) $(ARCHFLAGS) -D$(TARGET_PLATFORM)
 -CFLAGS 	       += -g -Wall -Werror -Wno-format-truncation -Wno-stringop-truncation -fsigned-char -std=gnu99
-+CFLAGS 	       += -g -Wall -Wno-format-truncation -Wno-stringop-truncation -fsigned-char -std=gnu99
++CFLAGS 	       += -g -Wall -Wno-format-truncation -Wno-stringop-truncation -fsigned-char -std=gnu99 -Wno-implicit-function-declaration
  
  
  ifndef BUILD_DARWIN

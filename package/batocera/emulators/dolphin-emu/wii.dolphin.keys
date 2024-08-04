@@ -31,4 +31,13 @@
             "description": "State/Load from Selected Slot"
         }
     ]
+    ,"actions_gun1": [
+    {
+            "trigger": ["left", "right", "middle"],
+            "type": "key",
+            "hold": "2.0",
+            "target": [ "KEY_LEFTALT", "KEY_F4" ],
+            "description": "Exit Dolphin"
+    }
+    ]
 }

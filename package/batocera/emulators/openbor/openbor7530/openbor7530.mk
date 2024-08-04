@@ -32,7 +32,7 @@ endef
 define OPENBOR7530_BUILD_CMDS
     cd $(@D)/engine && chmod +x $(@D)/engine/version.sh && $(@D)/engine/version.sh
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
-	    -C $(@D)/engine -f Makefile $(OPENBOR7530_EXTRAOPTS) VERBOSE=1
+		-C $(@D)/engine -f Makefile $(OPENBOR7530_EXTRAOPTS) VERBOSE=1
 endef
 
 define OPENBOR7530_INSTALL_TARGET_CMDS

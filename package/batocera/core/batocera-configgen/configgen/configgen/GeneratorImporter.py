@@ -395,6 +395,10 @@ def getGenerator(emulator):
         from generators.ryujinx.ryujinxGenerator import RyujinxGenerator
         return RyujinxGenerator()
 
+    if emulator == 'ryujinxng':
+        from generators.ryujinxng.ryujinxngGenerator import RyujinxNGGenerator
+        return RyujinxGenerator()
+
     if emulator == 'samcoupe':
         from generators.samcoupe.samcoupeGenerator import SamcoupeGenerator
         return SamcoupeGenerator()

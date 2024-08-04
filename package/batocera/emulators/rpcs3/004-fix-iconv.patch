@@ -1,5 +1,5 @@
 diff --git a/rpcs3/CMakeLists.txt b/rpcs3/CMakeLists.txt
-index 7ee5e005e..b95a75962 100644
+index a8675d945..db6b46166 100644
 --- a/rpcs3/CMakeLists.txt
 +++ b/rpcs3/CMakeLists.txt
 @@ -11,7 +11,7 @@ include(CheckFunctionExists)

@@ -1,0 +1,13 @@
+diff --git a/src/audio/port_eu.c b/src/audio/port_eu.c
+index 4fbc74d..dbedfb9 100644
+--- a/src/audio/port_eu.c
++++ b/src/audio/port_eu.c
+@@ -48,7 +48,7 @@ void create_next_audio_buffer(s16 *samples, u32 num_samples) {
+     }
+ 
+     if (gAudioResetStatus != 0) {
+-        audio_reset_session();
++        //audio_reset_session();
+         gAudioResetStatus = 0;
+     }
+     if (osRecvMesg(OSMesgQueues[1], &msg, OS_MESG_NOBLOCK) != -1) {

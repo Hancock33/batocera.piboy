@@ -1,20 +1,8 @@
-From 7e7356951540b3c485f141212e08e641b378c055 Mon Sep 17 00:00:00 2001
-From: Peter Jung <admin@ptr1337.dev>
-Date: Fri, 1 Mar 2024 17:53:29 +0100
-Subject: [PATCH] wine-reflex
-
-Signed-off-by: Peter Jung <admin@ptr1337.dev>
----
- dlls/winevulkan/make_vulkan      |  3 +++
- dlls/winevulkan/vulkan.c         | 29 +++++++++++++++++++++++++++++
- dlls/winevulkan/vulkan_private.h |  1 +
- 3 files changed, 33 insertions(+)
-
 diff --git a/dlls/winevulkan/make_vulkan b/dlls/winevulkan/make_vulkan
-index f8ac5976efe..8bb1323ae25 100755
+index 6f5e63ce528..63942461c17 100755
 --- a/dlls/winevulkan/make_vulkan
 +++ b/dlls/winevulkan/make_vulkan
-@@ -211,6 +211,9 @@ FUNCTION_OVERRIDES = {
+@@ -213,6 +213,9 @@ FUNCTION_OVERRIDES = {
      # VK_KHR_synchronization2
      "vkQueueSubmit2KHR" : {"dispatch" : True, "extra_param" : "pSubmits"},
  
@@ -25,10 +13,10 @@ index f8ac5976efe..8bb1323ae25 100755
      "wine_vkAcquireKeyedMutex" : {"dispatch": True},
      "wine_vkReleaseKeyedMutex" : {"dispatch": True},
 diff --git a/dlls/winevulkan/vulkan.c b/dlls/winevulkan/vulkan.c
-index 27cf80ee907..1fa47a35bfe 100644
+index 114e274ba8d..ece3fe09aba 100644
 --- a/dlls/winevulkan/vulkan.c
 +++ b/dlls/winevulkan/vulkan.c
-@@ -899,6 +899,24 @@ static void wine_vk_instance_free(struct wine_instance *instance)
+@@ -924,6 +924,24 @@ static void wine_vk_instance_free(struct wine_instance *instance)
      free(instance);
  }
  
@@ -53,7 +41,7 @@ index 27cf80ee907..1fa47a35bfe 100644
  VkResult wine_vkAllocateCommandBuffers(VkDevice handle, const VkCommandBufferAllocateInfo *allocate_info,
                                         VkCommandBuffer *buffers )
  {
-@@ -3880,6 +3898,8 @@ VkResult fshack_vk_queue_present(VkQueue queue_handle, const VkPresentInfoKHR *p
+@@ -4292,6 +4310,8 @@ VkResult fshack_vk_queue_present(VkQueue queue_handle, const VkPresentInfoKHR *p
      if (n_hacks > 0)
      {
          VkPipelineStageFlags waitStage, *waitStages, *waitStages_arr = NULL;
@@ -62,7 +50,7 @@ index 27cf80ee907..1fa47a35bfe 100644
  
          if (pPresentInfo->waitSemaphoreCount > 1)
          {
-@@ -3903,6 +3923,15 @@ VkResult fshack_vk_queue_present(VkQueue queue_handle, const VkPresentInfoKHR *p
+@@ -4315,6 +4335,15 @@ VkResult fshack_vk_queue_present(VkQueue queue_handle, const VkPresentInfoKHR *p
          submitInfo.signalSemaphoreCount = 1;
          submitInfo.pSignalSemaphores = &blit_sema;
  
@@ -79,7 +67,7 @@ index 27cf80ee907..1fa47a35bfe 100644
          if (res != VK_SUCCESS)
              ERR("vkQueueSubmit: %d\n", res);
 diff --git a/dlls/winevulkan/vulkan_private.h b/dlls/winevulkan/vulkan_private.h
-index ffae94adbe4..de2018733e4 100644
+index 3a439a6e760..bd05481819d 100644
 --- a/dlls/winevulkan/vulkan_private.h
 +++ b/dlls/winevulkan/vulkan_private.h
 @@ -99,6 +99,7 @@ struct wine_device
@@ -90,6 +78,3 @@ index ffae94adbe4..de2018733e4 100644
  };
  
  static inline struct wine_device *wine_device_from_handle(VkDevice handle)
--- 
-2.44.0
-

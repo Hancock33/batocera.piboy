@@ -3,8 +3,8 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Jul 28, 2024
-RPCS3_VERSION = 02aac2c52eb2c2aac2418d683bf270e50c0529b3
+# Version: Commits on Aug 04, 2024
+RPCS3_VERSION = 4030193f31d884e45352f49ce7a5caa3be9b834e
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
@@ -14,6 +14,8 @@ RPCS3_DEPENDENCIES += libglew libglu libpng libusb mesa3d ncurses openal rtmpdum
 RPCS3_DEPENDENCIES += qt6base qt6multimedia qt6svg wolfssl
 RPCS3_SUPPORTS_IN_SOURCE_BUILD = NO
 
+RPCS3_TARGET_CFLAGS = $(TARGET_CFLAGS) -Wno-missing-template-arg-list-after-template-kw
+RPCS3_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(RPCS3_TARGET_CFLAGS)"
 RPCS3_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 RPCS3_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
 RPCS3_CONF_OPTS += -DCMAKE_CROSSCOMPILING=ON

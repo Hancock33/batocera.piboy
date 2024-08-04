@@ -3,8 +3,8 @@
 # ryujinx
 #
 ################################################################################
-# Version: Commits on Jul 25, 2024
-RYUJINX_VERSION = 1.1.1361
+# Version: Commits on Nov 15, 2023
+RYUJINX_VERSION = 1.1.1083
 RYUJINX_SITE = https://github.com/Ryujinx/release-channel-master/releases/download/$(RYUJINX_VERSION)
 RYUJINX_LICENSE = MIT
 RYUJINX_DEPENDENCIES = sdl2 openal hicolor-icon-theme adwaita-icon-theme librsvg
@@ -24,7 +24,8 @@ define RYUJINX_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/bin/ryujinx
 	mkdir -p $(TARGET_DIR)/usr/bin/ryujinx
 	cp -avr $(@D)/target/publish/* $(TARGET_DIR)/usr/bin/ryujinx
-	rm -rf  $(TARGET_DIR)/usr/bin/ryujinx/Ryujinx.Ava
+	cp -avr $(@D)/target/publish/mime/Ryujinx.xml $(TARGET_DIR)/usr/share/mime
+	rm -rf  $(TARGET_DIR)/usr/bin/ryujinx/{libSDL2.so,libav*,libglfw.so*}
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ryujinx/switch.ryujinx.keys \
