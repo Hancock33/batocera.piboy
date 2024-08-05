@@ -291,6 +291,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                !BR2_PACKAGE_BATOCERA_TARGET_BCM2835        && !BR2_PACKAGE_BATOCERA_TARGET_RK3326 && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3128         # Improved Linux module driver for Logitech driving wheels (the lg4ff is disabled in kernels)
     select BR2_PACKAGE_JAMMASD
+    select BR2_PACKAGE_NSO_N64
 
     select BR2_PACKAGE_UPOWER                               # required by some cemuhook servers
 
