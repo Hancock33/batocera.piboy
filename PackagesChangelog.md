@@ -13,6 +13,9 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|e5e007cd3ca7
 Ports|[nblood](http://github.com/nukeykt/NBlood)|57835db651aad9864f20c0944a7538e645e766c8|Aug 05, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|45b163547e7e97664f47d3c50acb12a2316e9150|Aug 05, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|4b9b96153a8131452830691ea6426f97353e9150|Aug 05, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.14.r30.g1dfac2a252d|Aug 05, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240805|Aug 05, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240805|Aug 05, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|6a191f2027095ffa4349142213f59a3a16c22561|Aug 05, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|c4076e359dd1b998342a09c8890c00b3e5ee30d1|Aug 05, 2024
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|78e547bca0921ef33e22fb983a542d788d2d82ec|Aug 04, 2024
@@ -25,8 +28,6 @@ Ports|[fheroes2](http://github.com/ihhub/fheroes2)|5a63b85b4c165fe11eeff575b2cc8
 Ports|[stk](http://github.com/supertuxkart/stk-code)|e6d0df3435722dbf897a4835aa146e22e0d033b2|Aug 04, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|0eef4fb508b18715f356edb73deb9b990a5187f2|Aug 04, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|5313b5c82c83f959d79eb2ef2e68f5054d6b201f|Aug 04, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240804|Aug 04, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240804|Aug 04, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|93e64d8f5aacb74adaf6d7269781641b6ec62fc1|Aug 04, 2024
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|d0dc8b03c6fada57a157121b9c8b3b619bd52bcc|Aug 04, 2024
 Emulators|[libretro-mame](http://github.com/sonninnos/mame)|4159481825939a22d8e604b90aaae29ef9097b73|Aug 04, 2024
@@ -79,7 +80,6 @@ Emulators|[play](https://github.com/jpd002/Play-.git)|06517ef014305c8579f38fa757
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.2|Jul 29, 2024
 Hardware|[ayn-platform](http://github.com/ShadowBlip/ayn-platform)|v0.5.2|Jul 29, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|44f925d81dd62f88a9d73ae9ad24847c551b6557|Jul 29, 2024
-Emulators|[wine-custom](http://github.com/Kron4ek/wine-tkg)|9.14|Jul 29, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|9487ac2f3be74dd0d3ce4580d3fd45cee0359cb1|Jul 29, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|45bf218df428123f739714ef4e65e1b96c0959b7|Jul 29, 2024
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|18371424f21ef71b57e7e2eea962739418acca60|Jul 29, 2024
