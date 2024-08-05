@@ -1,0 +1,15 @@
+diff --git a/Source/Core/DolphinQt/Settings/GeneralPane.cpp b/Source/Core/DolphinQt/Settings/GeneralPane.cpp
+index 55dc4f0799..64cf9fef87 100644
+--- a/Source/Core/DolphinQt/Settings/GeneralPane.cpp
++++ b/Source/Core/DolphinQt/Settings/GeneralPane.cpp
+@@ -459,8 +459,10 @@ void GeneralPane::AddDescriptions()
+   m_combobox_fallback_region->SetTitle(tr("Fallback Region"));
+   m_combobox_fallback_region->SetDescription(tr(TR_FALLBACK_REGION_DESCRIPTION));
+ 
++#if defined(USE_ANALYTICS) && USE_ANALYTICS
+   m_checkbox_enable_analytics->SetDescription(tr(TR_ENABLE_ANALYTICS_DESCRIPTION));
+ 
+   m_button_generate_new_identity->SetTitle(tr("Generate a New Statistics Identity"));
+   m_button_generate_new_identity->SetDescription(tr(TR_GENERATE_NEW_IDENTITY_DESCRIPTION));
++#endif
+ }
