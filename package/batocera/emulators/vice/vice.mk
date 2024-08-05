@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Aug 04, 2024
-VICE_VERSION = r45262
+VICE_VERSION = r45265
 VICE_SOURCE = vice-$(VICE_VERSION).tar.gz
 VICE_SITE = $(call github,VICE-Team,svn-mirror,$(VICE_VERSION))
 VICE_LICENSE = GPLv2
