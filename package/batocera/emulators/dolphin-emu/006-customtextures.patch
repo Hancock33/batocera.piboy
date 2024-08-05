@@ -1,5 +1,5 @@
 diff --git a/Source/Core/Core/Config/MainSettings.cpp b/Source/Core/Core/Config/MainSettings.cpp
-index 432abbeb24..a9032a5bf1 100644
+index a45c014262..998058ca56 100644
 --- a/Source/Core/Core/Config/MainSettings.cpp
 +++ b/Source/Core/Core/Config/MainSettings.cpp
 @@ -294,6 +294,7 @@ bool ShouldUseDPL2Decoder()
@@ -11,7 +11,7 @@ index 432abbeb24..a9032a5bf1 100644
  const Info<std::string> MAIN_WII_SD_CARD_IMAGE_PATH{{System::Main, "General", "WiiSDCardPath"}, ""};
  const Info<std::string> MAIN_WII_SD_CARD_SYNC_FOLDER_PATH{
 diff --git a/Source/Core/Core/Config/MainSettings.h b/Source/Core/Core/Config/MainSettings.h
-index 5c028d9b36..305f10231f 100644
+index d7e78bf6e9..a4bea44b42 100644
 --- a/Source/Core/Core/Config/MainSettings.h
 +++ b/Source/Core/Core/Config/MainSettings.h
 @@ -191,6 +191,7 @@ extern const Info<bool> MAIN_DISABLE_SCREENSAVER;
@@ -23,10 +23,10 @@ index 5c028d9b36..305f10231f 100644
  extern const Info<std::string> MAIN_WII_SD_CARD_IMAGE_PATH;
  extern const Info<std::string> MAIN_WII_SD_CARD_SYNC_FOLDER_PATH;
 diff --git a/Source/Core/UICommon/UICommon.cpp b/Source/Core/UICommon/UICommon.cpp
-index 5ff9364dd0..da48aae086 100644
+index 4575498fb5..711a1d07b0 100644
 --- a/Source/Core/UICommon/UICommon.cpp
 +++ b/Source/Core/UICommon/UICommon.cpp
-@@ -94,6 +94,12 @@ static void CreateResourcePackPath(std::string path)
+@@ -95,6 +95,12 @@ static void CreateResourcePackPath(std::string path)
      File::SetUserPath(D_RESOURCEPACK_IDX, std::move(path));
  }
  
@@ -39,7 +39,7 @@ index 5ff9364dd0..da48aae086 100644
  static void CreateWFSPath(const std::string& path)
  {
    if (!path.empty())
-@@ -106,6 +112,7 @@ static void InitCustomPaths()
+@@ -107,6 +113,7 @@ static void InitCustomPaths()
    CreateLoadPath(Config::Get(Config::MAIN_LOAD_PATH));
    CreateDumpPath(Config::Get(Config::MAIN_DUMP_PATH));
    CreateResourcePackPath(Config::Get(Config::MAIN_RESOURCEPACK_PATH));
