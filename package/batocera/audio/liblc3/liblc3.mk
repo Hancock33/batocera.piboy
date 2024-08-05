@@ -3,7 +3,7 @@
 # liblc3
 #
 ################################################################################
-
+# Version: Commits on Apr 19, 2024
 LIBLC3_VERSION = v1.1.1
 LIBLC3_SOURCE = $(LIBLC3_VERSION).tar.gz
 LIBLC3_SITE = https://github.com/google/liblc3/archive/refs/tags
