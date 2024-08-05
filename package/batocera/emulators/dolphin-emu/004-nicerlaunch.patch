@@ -1,9 +1,9 @@
 diff --git a/Source/Core/DolphinQt/MainWindow.cpp b/Source/Core/DolphinQt/MainWindow.cpp
-index a7e9d5ce61..edc48361a3 100644
+index e68673a205..30cc14037d 100644
 --- a/Source/Core/DolphinQt/MainWindow.cpp
 +++ b/Source/Core/DolphinQt/MainWindow.cpp
-@@ -2077,7 +2077,12 @@ void MainWindow::Show()
-   // If the booting of a game was requested on start up, do that now
+@@ -911,8 +911,13 @@ void MainWindow::OnStopComplete()
+   // If the current emulation prevented the booting of another, do that now
    if (m_pending_boot != nullptr)
    {
 +    m_menu_bar->hide();
@@ -15,3 +15,4 @@ index a7e9d5ce61..edc48361a3 100644
 +    m_tool_bar->show();
    }
  }
+ 

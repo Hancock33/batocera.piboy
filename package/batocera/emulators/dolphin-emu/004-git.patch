@@ -1,9 +1,9 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 869862eb75..e00b4563cd 100644
+index ce5d64715f..c34f3e962c 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -782,7 +782,7 @@ if (NOT EXISTS ${CMAKE_CURRENT_BINARY_DIR}/Source/Core/Common/scmrev.h)
- 	file(TOUCH ${CMAKE_CURRENT_BINARY_DIR}/Source/Core/Common/scmrev.h)
+@@ -800,7 +800,7 @@ if(APPLE)
+   endif()
  endif()
  
 -find_package(Git)
