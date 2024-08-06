@@ -20,6 +20,12 @@ define CHROMEBOOK_LINUX_AUDIO_INSTALL_TARGET_CMDS
     mkdir -p $(TARGET_DIR)/lib/firmware/amd/sof-tplg
     rsync -arv $(@D)/conf/amd-sof/fw $(TARGET_DIR)/lib/firmware/amd/sof/community
     rsync -arv $(@D)/conf/amd-sof/tplg $(TARGET_DIR)/lib/firmware/amd/sof-tplg
+    # Wireplumber configs
+    mkdir -p $(TARGET_DIR)/etc/wireplumber/wireplumber.conf.d
+    cp -f $(@D)/conf/common/51-increase-headroom.conf \
+        $(TARGET_DIR)/etc/wireplumber/wireplumber.conf.d/51-increase-headroom.conf
+    cp -f $(@D)/conf/avs/51-avs-dmic.conf \
+        $(TARGET_DIR)/etc/wireplumber/wireplumber.conf.d/51-avs-dmic.conf
 endef
 
 $(eval $(generic-package))
