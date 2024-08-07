@@ -35,10 +35,6 @@ define BATOCERA_AUDIO_INSTALL_TARGET_CMDS
 	# sample audio files
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/*.wav $(TARGET_DIR)/usr/share/sounds
 
-	# extra ucm files
-	mkdir -p $(TARGET_DIR)/usr/share/alsa/ucm2
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/ucm2/* $(TARGET_DIR)/usr/share/alsa/ucm2/
-
 	# init script
 	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/Saudio \
 		$(TARGET_DIR)/etc/init.d/S06audio
@@ -64,7 +60,7 @@ define BATOCERA_AUDIO_INSTALL_TARGET_CMDS
 		/usr/share/alsa/alsa.conf.d/{50-pipewire,99-pipewire-default}.conf
 
 	# pipewire-media-session config: disable dbus device reservation
-    mkdir -p $(TARGET_DIR)/usr/share/wireplumber/wireplumber.conf.d
+	mkdir -p $(TARGET_DIR)/usr/share/wireplumber/wireplumber.conf.d
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/80-disable-alsa-reserve.conf \
 		$(TARGET_DIR)/usr/share/wireplumber/wireplumber.conf.d/80-disable-alsa-reserve.conf
 
@@ -77,8 +73,16 @@ define BATOCERA_AUDIO_X86_INTEL_DSP
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/intel-dsp.conf $(TARGET_DIR)/etc/modprobe.d/intel-dsp.conf
 endef
 
+# Steam Deck OLED SOF files are not in the sound-open-firmware package yet
+define BATOCERA_AUDIO_STEAM_DECK_OLED
+	# extra ucm files
+	mkdir -p $(TARGET_DIR)/usr/share/alsa/ucm2
+	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/ucm2/* $(TARGET_DIR)/usr/share/alsa/ucm2/
+endef
+
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
 	BATOCERA_AUDIO_POST_INSTALL_TARGET_HOOKS = BATOCERA_AUDIO_X86_INTEL_DSP
+	BATOCERA_AUDIO_POST_INSTALL_TARGET_HOOKS += BATOCERA_AUDIO_STEAM_DECK_OLED
 endif
 
 $(eval $(generic-package))
