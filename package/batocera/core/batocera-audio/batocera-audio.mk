@@ -60,9 +60,9 @@ define BATOCERA_AUDIO_INSTALL_TARGET_CMDS
 		/usr/share/alsa/alsa.conf.d/{50-pipewire,99-pipewire-default}.conf
 
 	# pipewire-media-session config: disable dbus device reservation
-	mkdir -p $(TARGET_DIR)/usr/share/wireplumber/wireplumber.conf.d
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/80-disable-alsa-reserve.conf \
-		$(TARGET_DIR)/usr/share/wireplumber/wireplumber.conf.d/80-disable-alsa-reserve.conf
+	#mkdir -p $(TARGET_DIR)/usr/share/wireplumber/wireplumber.conf.d
+	#cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/80-disable-alsa-reserve.conf \
+	#	$(TARGET_DIR)/usr/share/wireplumber/wireplumber.conf.d/80-disable-alsa-reserve.conf
 
 	# pipewire-media-session config: disable dbus device reservation
 	mkdir -p $(TARGET_DIR)/usr/share/wireplumber/main.lua.d
