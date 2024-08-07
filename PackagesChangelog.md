@@ -7,10 +7,11 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|1c5512a75d8704e175387
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-08-07|Aug 07, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45279|Aug 07, 2024
 Libraries|[cpuinfo](http://github.com/pytorch/cpuinfo)|16bfc1622c6902d6f91d316ec54894910c620325|Aug 07, 2024
-Ports|[avp](http://github.com/atsb/NakedAVP)|32b8fdaf07e7e80e7eb67bfc2f0f4bc7a8dad1f1|Aug 07, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|ed7ee12e7ec6d965ceef6a47dca7b92e726218d5|Aug 07, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|36837d01a9cf0a975e0a41b76f48fa5a15b34343|Aug 07, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|11d9a841f305f37c11beabe171a42847406a22fe|Aug 07, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240807|Aug 07, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240807|Aug 07, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|847f34f2c996bdeb2fe98a3f6b661c6598ffce66|Aug 07, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|409c508a7dcb1ec599bdccf96fb2f43a7b4690b8|Aug 07, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|8de9266c7130b1f40e8736dbd4aeec322c77c7ea|Aug 07, 2024
@@ -34,9 +35,7 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|1bfe698accb192ac4f0da474ba
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|d8eeaa0629e282f32a5c2256783fa9addc82b0d2|Aug 06, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.27.10|Aug 06, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|631f28fe305a34ef7194011cf77f07378fe9f51b|Aug 06, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240806|Aug 06, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|9811f140ce8faa5f12fc224afb5eda39cde85a09|Aug 06, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240806|Aug 06, 2024
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|9ff5ce4fa3e3b097adccbe17010757d95e46d416|Aug 06, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|f5175e88e0cdb7d639518e94758a7d39e8102e65|Aug 05, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|57835db651aad9864f20c0944a7538e645e766c8|Aug 05, 2024
@@ -292,6 +291,7 @@ Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|be89e134e6f19ca5a9d4442b1ecfa2ccf
 Firmwares|[extralinuxfirmwares](http://github.com/batocera-linux/extralinuxfirmwares)|e9c1d95f2d707ddd7bb0ef9e4711914de3cb60c2|May 10, 2024
 Ports|[raze](http://github.com/ZDoom/Raze)|f3cad8426cd808be5ded036ed12a497d27d3742e|May 07, 2024
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|5121aa6d36eff884bd56ccbadb6c112f1e951fee|May 06, 2024
+Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e246ded9|May 05, 2024
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|ffa3cc48b8f159a6ae88594f8b1ca67f22e3044c|May 04, 2024
 Ports|[raptorcots](http://github.com/skynettx/raptor)|e8d838c6db77084a6fb7f37b41de669fbf68b808|May 02, 2024
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|3265c0ac05ec595f9cedd020d76e7f39bf081538|May 02, 2024
