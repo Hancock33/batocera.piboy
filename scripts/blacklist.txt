@@ -1,7 +1,8 @@
-﻿batocera-luajit.mk
+﻿avp.mk
+batocera-luajit.mk
 dolphinCrosshairsPack.mk
-duckstation.mk
 duckstation-legacy.mk
+duckstation.mk
 firmware-armbian.mk
 firmware-orangepi.mk
 firmware-radxa-rkwifibt.mk

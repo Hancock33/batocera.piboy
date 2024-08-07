@@ -3,8 +3,8 @@
 # avp
 #
 ################################################################################
-# Version: Commits on Aug 07, 2024
-AVP_VERSION = 32b8fdaf07e7e80e7eb67bfc2f0f4bc7a8dad1f1
+# Version: Commits on May 05, 2024
+AVP_VERSION = 3ecf77038be5c054463c53bbf2e93991e246ded9
 AVP_SITE =  $(call github,atsb,NakedAVP,$(AVP_VERSION))
 
 AVP_DEPENDENCIES = sdl2 sdl2_mixer
