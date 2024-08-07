@@ -12,7 +12,7 @@
 ### Changed / Improved
 - Added bezel & sinden border support for the RPi5 with Model 3 games
 - Added bezel & sinden border support for the RPi5 with Wii games, requires Vulkan API (default)
-- Dolphin & PCSX2 standalone emulators will now center their notifications to avoid rendering under the bezel if enabled
+- Dolphin, Flycast & PCSX2 standalone emulators will now center their notifications to avoid rendering under the bezel if enabled
 ### Updated
 - RetroArch to v1.19.1
   - Libretro-Melonds-Ds to v1.1.5
@@ -23,15 +23,18 @@
   - Libretro-MrBoom to v5.5
   - Libretro-Mupen64plus-Next to July 19, 2024 build
   - Libretro-NeoCD to June 22 build
-- Cemu to v2.0-91
 - Amiberry to v5.7.3
 - BigPEmu to v115
+- C-Dogs SDL to 2.1.0
+- Cemu to v2.0-91
 - Citra to r518f723
+- Commander Genius to v3.5.1
 - Dolphin to 2407.130
 - Duckstaton to Jul 27, 2024 build
 - DXX-Rebirth to July 21 build
 - Eduke32 to Jul 25 build
 - Flycast to Jul 30 build
+- Ikemen to August 1st 2024 build
 - PCSX2 to v2.1.62
 - Redream to 1.5.0-1131-gafdfc1a
 - RPCS3 to Jul 28, 2024 build
