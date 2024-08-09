@@ -476,6 +476,7 @@ kodi:
   emulator: kodi
   options:
     videomode: default
+    hud_support: false
 konami:
   emulator: libretro
   core:     mame078plus
