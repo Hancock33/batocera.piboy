@@ -1,17 +1,17 @@
 diff --git a/src/joystick/SDL_joystick.c b/src/joystick/SDL_joystick.c
-index 7c2edb316..ca4902361 100644
+index 2cda33b73..1f359c4cf 100644
 --- a/src/joystick/SDL_joystick.c
 +++ b/src/joystick/SDL_joystick.c
-@@ -1488,7 +1488,7 @@ int SDL_JoystickRumble(SDL_Joystick *joystick, Uint16 low_frequency_rumble, Uint
-             if (!joystick->rumble_resend) {
-                 joystick->rumble_resend = 1;
+@@ -1493,7 +1493,7 @@ int SDL_JoystickRumble(SDL_Joystick *joystick, Uint16 low_frequency_rumble, Uint
+             } else {
+                 joystick->rumble_resend = 0;
              }
 -        }
 +
  
          if (retval == 0) {
              joystick->low_frequency_rumble = low_frequency_rumble;
-@@ -1504,6 +1504,8 @@ int SDL_JoystickRumble(SDL_Joystick *joystick, Uint16 low_frequency_rumble, Uint
+@@ -1509,6 +1509,8 @@ int SDL_JoystickRumble(SDL_Joystick *joystick, Uint16 low_frequency_rumble, Uint
                  joystick->rumble_resend = 0;
              }
          }
