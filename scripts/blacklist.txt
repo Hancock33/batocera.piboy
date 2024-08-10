@@ -17,11 +17,8 @@ openbor6412.mk
 openbor7142.mk
 python-pyxel.mk
 ryujinx.mk
-wine-cachyos.mk
-wine-custom.mk
 wine-ge.mk
 wine-native.mk
-wine-proton-cachyos.mk
 wine-proton.mk
 wine-staging.mk
 wine-x86.mk
