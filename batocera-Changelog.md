@@ -5,20 +5,40 @@
 - Khadis VIM4 optimizations and enhancements
 - Add Dockerpi Powerboard support initially for the RPi3
 - Add initial support for the OrangePi-5-Pro
+- Khadis VIM4, Vulkan support has now been added
 ### Added
 - Exit game with light gun (hold `TRIGGER`, `ACTION` and `START` buttons for 2 seconds)
 - Enhanced Bluetooth AD2P codec support for LDAC & aptX supported headphones or speakers
   - The supported AD2P codec may need to be selected under SYSTEM SETTINGS -> AUDIO PROFILES
 ### Fixed
+- Steam loading on a NAS drive
+- ScummVM forcing English which can prevent some non-english games from starting
 ### Changed / Improved
 - Added bezel & sinden border support for the RPi5 with Model 3 games
 - Added bezel & sinden border support for the RPi5 with Wii games, requires Vulkan API (default)
 - Dolphin, Flycast & PCSX2 standalone emulators will now center their notifications to avoid rendering under the bezel if enabled
+- Spectravideo system now has Libretro-BlueMSX as an emulator option
+- Libretro ScummVM: Persisting in-game settings will be used if a blank .scummvm file
 ### Updated
 - RetroArch to v1.19.1
+  - Libretro-81 to June 29, 2024 build
+  - Libretro-Atari800 to July 26, 2024 build
+  - Libretro-Beetle-Lynx to June 29, 2024 build
+  - Libretro-Beetle-NGP to June 29, 2024 build
+  - Libretro-Beetle-PCE to August 9, 2024 build
+  - Libretro-Beetle-PCE-Fast to August 9, 2024 build
+  - Libretro-Beetle-PCFX to August 8, 2024 build
+  - Libretro-Beetle-PSX to August 9, 2024 build
+  - Libretro-Beetle-Saturn to May 20, 2024 build
+  - Libretro-Beetle-Supergrafx to August 9, 2024 build
+  - Libretro-Beetle-VB to June 29, 2024 build
+  - Libretro-Beetle-WSwan to June 29, 2024 build
+  - Libretro-BlueMSX to August 8, 2024 build
+  - Libretro-BSnes to August 9, 2024 build
+  - Libretro-Cap32 to June 29, 2024 build
   - Libretro-Melonds-Ds to v1.1.5
   - Libretro-Ecwolf to June 28 build
-  - Libretro-Flycast to Jul 30 build
+  - Libretro-Flycast to July 30 build
   - Libretro-Freechaf to June 28 build
   - Libretro-Minivac to July 1 build
   - Libretro-MrBoom to v5.5
