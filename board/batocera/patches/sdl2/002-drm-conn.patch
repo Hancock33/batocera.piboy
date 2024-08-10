@@ -1,5 +1,5 @@
 diff --git a/src/video/kmsdrm/SDL_kmsdrmvideo.c b/src/video/kmsdrm/SDL_kmsdrmvideo.c
-index dbd721807..0d4acfbad 100644
+index 787752f18..e3a15f499 100644
 --- a/src/video/kmsdrm/SDL_kmsdrmvideo.c
 +++ b/src/video/kmsdrm/SDL_kmsdrmvideo.c
 @@ -78,6 +78,7 @@ static int get_driindex(void)
@@ -10,10 +10,11 @@ index dbd721807..0d4acfbad 100644
  
      hint = SDL_GetHint(SDL_HINT_KMSDRM_DEVICE_INDEX);
      if (hint && *hint) {
-@@ -118,13 +119,28 @@ static int get_driindex(void)
+@@ -118,13 +119,27 @@ static int get_driindex(void)
                                       resources->count_connectors,
                                       resources->count_encoders,
                                       resources->count_crtcs);
+-
 +			// batocera
 +			{
 +			  FILE* fdDrmConn;
@@ -27,12 +28,11 @@ index dbd721807..0d4acfbad 100644
 +			  }
 +			}
 +			//
- 
                          if (resources->count_connectors > 0 &&
                              resources->count_encoders > 0 &&
                              resources->count_crtcs > 0) {
                              available = -ENOENT;
-                             for (i = 0; i < resources->count_connectors; i++) {
+                             for (i = 0; i < resources->count_connectors && available < 0; i++) {
 -                                drmModeConnector *conn =
 +			        drmModeConnector *conn;
 +				if(i != drmConn) continue;
@@ -40,7 +40,7 @@ index dbd721807..0d4acfbad 100644
                                      KMSDRM_drmModeGetConnector(
                                          drm_fd, resources->connectors[i]);
  
-@@ -940,6 +956,7 @@ static int KMSDRM_InitDisplays(_THIS)
+@@ -940,6 +955,7 @@ static int KMSDRM_InitDisplays(_THIS)
      uint64_t async_pageflip = 0;
      int ret = 0;
      int i;
@@ -48,7 +48,7 @@ index dbd721807..0d4acfbad 100644
  
      /* Open /dev/dri/cardNN (/dev/drmN if on OpenBSD version less than 6.9) */
      (void)SDL_snprintf(viddata->devpath, sizeof(viddata->devpath), "%s%d",
-@@ -962,11 +979,27 @@ static int KMSDRM_InitDisplays(_THIS)
+@@ -962,11 +978,27 @@ static int KMSDRM_InitDisplays(_THIS)
          goto cleanup;
      }
  
