@@ -14,12 +14,14 @@
 ### Fixed
 - Steam loading on a NAS drive
 - ScummVM forcing English which can prevent some non-english games from starting
+- Fixed right controller LED for the Ayaneo Air Plus, it's now functional
 ### Changed / Improved
 - Added bezel & sinden border support for the RPi5 with Model 3 games
 - Added bezel & sinden border support for the RPi5 with Wii games, requires Vulkan API (default)
 - Dolphin, Flycast & PCSX2 standalone emulators will now center their notifications to avoid rendering under the bezel if enabled
 - Spectravideo system now has Libretro-BlueMSX as an emulator option
 - Libretro ScummVM: Persisting in-game settings will be used if a blank .scummvm file
+- You can now manually forget, connect or disconnect a bluetooth device
 ### Updated
 - RetroArch to v1.19.1
   - Libretro-81 to June 29, 2024 build
