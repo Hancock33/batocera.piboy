@@ -14,12 +14,11 @@ ifeq ($(BR2_PACKAGE_LIBDRM),y)
 	MANGOHUD_DEPENDENCIES += libdrm
 endif
 
-MANGOHUD_CONF_ENV += SSL_CERT_DIR=/etc/ssl/certs
-
 ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
 	MANGOHUD_DEPENDENCIES += xserver_xorg-server
 endif
 
+MANGOHUD_CONF_ENV += SSL_CERT_DIR=/etc/ssl/certs
 MANGOHUD_CONF_OPTS = -Dwith_xnvctrl=disabled -Dtests=disabled
 
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
