@@ -61,7 +61,7 @@ Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.6|Apr 12, 2
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|1ec19f3a5ca44a337867d4c0d3f54e4c06ecc3f2|Aug 11, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|1ec19f3a5ca44a337867d4c0d3f54e4c06ecc3f2|Aug 11, 2024
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|8968deb8fbfd5c96819fa22aba7bbd8890ed8113|Apr 25, 2024
-Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|bb1795d2e3785f7ae11df5da28ace9f7c48d5fd9|Aug 09, 2024
+Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|4f05e3a04eb49a8bc50e7ffaf3d1bc271ecec352|Aug 11, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|5da446a020411a404892549cbe2b1a0d05671a2d|Jul 25, 2024
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|72ce23dd989ced9df3f49d2021208eff1f99552c|Mar 19, 2023
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v115|Jul 16, 2024
@@ -209,7 +209,7 @@ Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|e2b1299d85564c29
 Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|978d977119eff1bd7214c0095eb91b15b859bb61|Aug 07, 2024
 Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|84b963a2f627bbc41198e357430619f34bbebc8a|Jun 28, 2024
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|3265c0ac05ec595f9cedd020d76e7f39bf081538|May 02, 2024
-Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|4a3cce724d30540ba722ba97c8b91b8f1c466c51|Aug 11, 2024
+Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|744838638d29a016e83258d3684441d21103e709|Aug 04, 2024
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|691543a319f489700f056b83ec89870db59fdf44|Aug 11, 2024
 Emulators|[libretro-stella2014](http://github.com/libretro/stella2014-libretro)|db6bee857f73138ae02755bf09e392b31fef4540|May 20, 2024
 Emulators|[libretro-supafaust](http://github.com/libretro/supafaust)|6b639c98372d1c9bac885c55d772c812d2a9d525|Jun 19, 2023
@@ -270,7 +270,7 @@ Emulators|[python-pygame2](http://github.com/pygame/pygame)|8d929587ec246e214408
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v1.9.18|Jul 08, 2023
 Emulators|[redream](https://redream.io/download)|1.5.0-1131-gafdfc1a|Jul 13, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|8a74442fabfc6f72c623dbf1f7a59bfeba771b9f|Aug 08, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|b815848501840cb5d65b020d2c017c5bd9e4f344|Aug 11, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|12def933dce1e8da8cd09731fd37a02a96ae6fba|Aug 11, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20240809|Aug 09, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|b0d07a75e51dd7377807275355a55964b240d2b9|Aug 11, 2024
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
