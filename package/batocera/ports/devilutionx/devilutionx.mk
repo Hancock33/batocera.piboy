@@ -3,8 +3,8 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Aug 09, 2024
-DEVILUTIONX_VERSION = df98042a1b3e9ae0156199d7ce28ca5bf84e408b
+# Version: Commits on Aug 08, 2024
+DEVILUTIONX_VERSION = 356d3aaad44b48a3f5a1be1a7929406bc28aab99
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
 DEVILUTIONX_DEPENDENCIES = sdl2 sdl2_image fmt libsodium libpng bzip2 lua luafilesystem lua-lpeg-patterns lpeg luasocket luasec
