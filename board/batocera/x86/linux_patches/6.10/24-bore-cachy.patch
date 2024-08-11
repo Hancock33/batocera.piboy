@@ -20,7 +20,7 @@ index 76214d7c819d..9f65d367bb31 100644
  	u64				slice;
  
 diff --git a/init/Kconfig b/init/Kconfig
-index 3ba6142f2f42..2966dec64df7 100644
+index bfc033b53242..2f7a9c534813 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -1303,6 +1303,23 @@ config CHECKPOINT_RESTORE
