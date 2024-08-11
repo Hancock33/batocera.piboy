@@ -1,7 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|e10535ae787363d07ffebaf889a84c1ee8a05ebc|Aug 11, 2024
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|e10535ae787363d07ffebaf889a84c1ee8a05ebc|Aug 11, 2024
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|1ec19f3a5ca44a337867d4c0d3f54e4c06ecc3f2|Aug 11, 2024
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|1ec19f3a5ca44a337867d4c0d3f54e4c06ecc3f2|Aug 11, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|430416484b36993f2d6a53aced764bfe1bc36840|Aug 11, 2024
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|e290c42360f5f2ae7182c5430234545f3b066876|Aug 11, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.83|Aug 11, 2024
