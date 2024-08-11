@@ -2,21 +2,22 @@
 -----|:-----:|:-----:|:-----:
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|1ec19f3a5ca44a337867d4c0d3f54e4c06ecc3f2|Aug 11, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|1ec19f3a5ca44a337867d4c0d3f54e4c06ecc3f2|Aug 11, 2024
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|6cc2133f27acf843c1b1cf244966111fecf54a95|Aug 11, 2024
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|e4bd14257f885f57fe6a2e14cf5187dc79b44b9b|Aug 11, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|9a58327cf226ec18359af0b1ea5dec4d01be48db|Aug 11, 2024
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|3fc966f524bcbf9ab76bf85a701be98fe657def3|Aug 11, 2024
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|e290c42360f5f2ae7182c5430234545f3b066876|Aug 11, 2024
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|d8f2b478bf0e33066fd9872155c067e93b24e39b|Aug 11, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.83|Aug 11, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|b0d07a75e51dd7377807275355a55964b240d2b9|Aug 11, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-08-11|Aug 11, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|309bf9856e0c4d626b2ece6bb142912abf104228|Aug 11, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|5218a6b1c320daf86098f96e99d1f27972738193|Aug 11, 2024
-Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45292|Aug 11, 2024
+Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45297|Aug 11, 2024
 Firmwares|[alllinuxfirmwares](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot)|20240811|Aug 11, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|730eb1f472d823201f65fab41c6880cd2462ec7d|Aug 11, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|c52af7d339849b2f075ce845309e3f2d9e96cdb4|Aug 11, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|8185a657a708646a185cf22cf22d87fabd7417da|Aug 11, 2024
-Ports|[stk](http://github.com/supertuxkart/stk-code)|386ac8f2ab563aef6565d5792769d28eeae5f91c|Aug 11, 2024
+Ports|[stk](http://github.com/supertuxkart/stk-code)|e7dd96a30bc73151aae75ecc1b9bf4dd73eea7ce|Aug 11, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|f5535d2397c3b4fc804c967ff6d02951d6ef12be|Aug 11, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|b815848501840cb5d65b020d2c017c5bd9e4f344|Aug 11, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.15.r0.gad8b2870312|Aug 11, 2024
@@ -24,13 +25,14 @@ Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|
 Ports|[box86](http://github.com/ptitseb/box86)|bcd36a3152cb07ba3f6704c8840cb0b9298036cb|Aug 11, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240811|Aug 11, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|e38fabfb6059254134116a5b9f9664daf74deb7a|Aug 11, 2024
-Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|95b264bdb6158c8e62ec2ded6c1e5ee7c0719c6c|Aug 11, 2024
+Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|c3853916e7dfb2786e8c27dbab70fe1fbedd8a74|Aug 11, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|18f7541138f4873305a9dc285e61835cb2ea256e|Aug 11, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|263fb92730b23c41b2671e33ca07c6001c2e3a4a|Aug 11, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|e222a74960cedd94623f135b5e9504b96f6ea2d6|Aug 11, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|1451d400c83502848ddd1aae5c0b2f42099dfd6c|Aug 11, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|12a4d7f9b04e9db2c15938dd166b2e15944ef4a8|Aug 11, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|4adf11f0eb893288c1f47df805dc88bce409303d|Aug 11, 2024
+Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|4a3cce724d30540ba722ba97c8b91b8f1c466c51|Aug 11, 2024
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|691543a319f489700f056b83ec89870db59fdf44|Aug 11, 2024
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|77902de1d2b19cb43aee1bb02cdbaa02d9761f7b|Aug 11, 2024
 Emulators|[wine-tkg](http://github.com/Kron4ek/wine-tkg)|9.15|Aug 11, 2024
@@ -81,7 +83,6 @@ Emulators|[libretro-beetle-pcfx](http://github.com/libretro/beetle-pcfx-libretro
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|d1c28b63e0c684025886787c39c4b7f92014d79e|Aug 07, 2024
 Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|978d977119eff1bd7214c0095eb91b15b859bb61|Aug 07, 2024
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|66247ec3ff7a3e764c44a56e910591c926322333|Aug 06, 2024
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|709707965a0aceef7f7e2db5733a39ab277ece4f|Aug 06, 2024
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|17a075c53247ae070be4614c9b4461398f52f2e7|Aug 06, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.27.10|Aug 06, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|b66eb9f53943f7d7582b7f3ba7969ce6e5182a32|Aug 06, 2024
@@ -92,7 +93,6 @@ Emulators|[hatari](http://github.com/hatari/hatari)|bc9504ded632048d7bf24cefc0e3
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|5313b5c82c83f959d79eb2ef2e68f5054d6b201f|Aug 04, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|93e64d8f5aacb74adaf6d7269781641b6ec62fc1|Aug 04, 2024
 Emulators|[libretro-mame](http://github.com/sonninnos/mame)|4159481825939a22d8e604b90aaae29ef9097b73|Aug 04, 2024
-Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|744838638d29a016e83258d3684441d21103e709|Aug 04, 2024
 Emulators|[libretro-vircon32](http://github.com/vircon32/vircon32-libretro)|bb87ba3471f5002d1246ae5bfbedeea441efef00|Aug 04, 2024
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|a3b80e208fa7bf586dcbf412b6eee1d803856b87|Aug 04, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|be2b788c6719dff953ce816a1246c49bd5cd30a5|Aug 03, 2024
