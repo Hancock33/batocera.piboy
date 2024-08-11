@@ -425,7 +425,7 @@ msgctxt "game_options"
 msgid "Use light guns instead of pads if light guns are connected."
 msgstr "Usa pistolas em vez de controles se as pistolas estiverem conectadas."
 
-#. TRANSLATION: shared, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3
+#. TRANSLATION: shared, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, dolphin, dolphin
 msgctxt "game_options"
 msgid "LIGHT GUNS"
 msgstr ""
@@ -2135,7 +2135,7 @@ msgctxt "game_options"
 msgid "Wii NAND's language setting."
 msgstr "Ajustes de idioma da NAND do Wii."
 
-#. TRANSLATION: libretro/dolphin, cemu, dolphin/vitaquake3, play, suyu, ...
+#. TRANSLATION: libretro/dolphin, cemu, dolphin, play, suyu, ...
 msgctxt "game_options"
 msgid "Dutch"
 msgstr "Holandês"
@@ -2224,7 +2224,7 @@ msgctxt "game_options"
 msgid "FAST DISK TRANSFER RATE"
 msgstr "TAXA DE TRANSFERÊNCIA DE DISCO RÁPIDO"
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, dolphin/vitaquake3, dolphin/vitaquake3
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid ""
 "Wii NAND's aspect ratio setting. Most games support both ratios natively."
@@ -2232,7 +2232,7 @@ msgstr ""
 "Ajusta de proporção de aspecto da NAND do Wii. A maioria dos jogos suporta "
 "ambas as proporções nativamente."
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, dolphin/vitaquake3, dolphin/vitaquake3
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "WII TV MODE"
 msgstr "MODO DE TV Wii"
@@ -3362,22 +3362,22 @@ msgctxt "game_options"
 msgid "Choose the Dreamcast console region."
 msgstr "Escolha a região do videogame Dreamcast."
 
-#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/vitaquake3, suyu, ...
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, suyu, ...
 msgctxt "game_options"
 msgid "USA"
 msgstr "EUA"
 
-#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/vitaquake3, pcsx2, ...
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, pcsx2, ...
 msgctxt "game_options"
 msgid "Europe"
 msgstr "Europa"
 
-#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/vitaquake3, redream, ...
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, redream, ...
 msgctxt "game_options"
 msgid "Japan"
 msgstr "Japão"
 
-#. TRANSLATION: libretro/flycast, flycast/vitaquake3
+#. TRANSLATION: libretro/flycast, flycast/dolphin
 msgctxt "game_options"
 msgid ""
 "Dreamcast BIOS's language setting. Can change the language of some games. "
@@ -3386,17 +3386,17 @@ msgstr ""
 "Configuração de idioma da BIOS do Dreamcast. Pode alterar o idioma de alguns "
 "jogos. Alguns jogos são padronizados em japonês."
 
-#. TRANSLATION: libretro/flycast, flycast/vitaquake3
+#. TRANSLATION: libretro/flycast, flycast/dolphin
 msgctxt "game_options"
 msgid "BIOS LANGUAGE"
 msgstr "IDIOMA DA BIOS"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/quasi88, flycast/vitaquake3
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/quasi88, flycast/dolphin
 msgctxt "game_options"
 msgid "Required for some games."
 msgstr "Necessário para alguns jogos."
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, flycast/vitaquake3
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, flycast/dolphin
 msgctxt "game_options"
 msgid "FORCE WINDOWS CE MODE"
 msgstr "FORÇAR MODO WINDOWS CE"
@@ -9303,146 +9303,16 @@ msgctxt "game_options"
 msgid "CUSTOM CONTROLLER"
 msgstr "CONTROLE PERSONALIZADO"
 
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin, dolphin, ...
-msgctxt "game_options"
-msgid "DISPLAY"
-msgstr "TELA"
-
-#. TRANSLATION: dolphin/vitaquake3
-msgctxt "game_options"
-msgid ""
-"Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
-"appropriate user directory)."
-msgstr ""
-"Ativa a animação de inicialização do Gamecube e o acesso a BIOS (requer BIOS "
-"IPL.bin no diretório de usuário apropriado)."
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin, dolphin, dolphin, ...
-msgctxt "game_options"
-msgid "EMULATION"
-msgstr "EMULAÇÃO"
-
-#. TRANSLATION: dolphin/vitaquake3
-msgctxt "game_options"
-msgid "ENABLE BOOT ANIMATION"
-msgstr "ATIVAR ANIMAÇÃO DE INICIALIZAÇÃO"
-
-#. TRANSLATION: dolphin/vitaquake3
-msgctxt "game_options"
-msgid "Change the GameCube system language."
-msgstr ""
-
-#. TRANSLATION: dolphin/vitaquake3
-msgctxt "game_options"
-msgid "GAMECUBE LANGUAGE"
-msgstr "IDIOMA DO GAMECUBE"
-
-#. TRANSLATION: dolphin/vitaquake3
-msgctxt "game_options"
-msgid "English/Japanese"
-msgstr "Inglês/Japonês"
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "Map your controller to an emulated Wii Remote."
-msgstr ""
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, ...
-msgctxt "game_options"
-msgid "WII CONTROLLERS"
-msgstr ""
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "EMULATE WIIMOTE"
-msgstr "EMULAR WIIMOTE"
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "Emulate a Wii Remote. Sideway with L2 for Shake and Nunchuk on R-stick."
-msgstr ""
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
-msgstr "PERSONALIZAR WIIMOTE E CONTROLES EMULADOS"
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "Classic Controller"
-msgstr "Controle Clássico"
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "Classic Controller Pro"
-msgstr "Controle Clássico Pro"
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "Wii Remote Sideway"
-msgstr ""
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "Wii Remote Sideway + Swing"
-msgstr ""
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "Wii Remote Sideway + Tilt"
-msgstr ""
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "Wii Remote Sideway + Nunchuk"
-msgstr ""
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid ""
-"Position of wii sensor bar relative to the disaply for real Wii Remotes."
-msgstr ""
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "SENSOR BAR POSITION"
-msgstr ""
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "Bottom (Default)"
-msgstr ""
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "Top"
-msgstr ""
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "Emulate the Wii Remote pointer with a DS4's gyroscope."
-msgstr ""
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "DUALSHOCK MOTION CONTROL"
-msgstr "CONTROLE DE MOVIMENTO DUALSHOCK"
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "Emulate the Wii Remote pointer with a mouse."
-msgstr ""
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-msgctxt "game_options"
-msgid "MOUSE AS Wii Remote POINTER"
-msgstr ""
-
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
 msgid "The final output image, unrelated to the Wii's emulated NAND setting."
 msgstr ""
 "A imagem de saída final, não relacionada ao ajuste da NAND emulada do Wii."
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
+msgctxt "game_options"
+msgid "DISPLAY"
+msgstr "TELA"
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -9511,6 +9381,11 @@ msgstr "AMOSTRAGEM MANUAL DE TEXTURA"
 msgctxt "game_options"
 msgid "Usually not much faster than single core mode."
 msgstr "Geralmente não muito mais rápido que o modo single core."
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
+msgctxt "game_options"
+msgid "EMULATION"
+msgstr "EMULAÇÃO"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9672,8 +9547,8 @@ msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid "Set joystick dead zone."
-msgstr ""
+msgid "Set joystick deadzone."
+msgstr "Definir zona morta do controle."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin, mupen64plus, ...
 msgctxt "game_options"
@@ -9740,6 +9615,131 @@ msgstr "Mostrar mensagens no visor da tela (cartão de memória salva...)."
 msgctxt "game_options"
 msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
 msgstr "MOSTRAR MENSAGENS DE EXIBIÇÃO NA TELA"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid ""
+"Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
+"appropriate user directory)."
+msgstr ""
+"Ativa a animação de inicialização do Gamecube e o acesso a BIOS (requer BIOS "
+"IPL.bin no diretório de usuário apropriado)."
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "ENABLE BOOT ANIMATION"
+msgstr "ATIVAR ANIMAÇÃO DE INICIALIZAÇÃO"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "Change the Gamecube system language."
+msgstr "Altera o idioma do sistema Gamecube."
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "GAMECUBE LANGUAGE"
+msgstr "IDIOMA DO GAMECUBE"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "English/Japanese"
+msgstr "Inglês/Japonês"
+
+#. TRANSLATION: dolphin, dolphin
+msgctxt "game_options"
+msgid "Map your controller to an emulated Wiimote."
+msgstr "Mapeia seu controle para um Wiimote emulado."
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
+msgctxt "game_options"
+msgid "WII CONTROLLERS"
+msgstr ""
+
+#. TRANSLATION: dolphin, dolphin
+msgctxt "game_options"
+msgid "EMULATE WIIMOTE"
+msgstr "EMULAR WIIMOTE"
+
+#. TRANSLATION: dolphin, dolphin
+msgctxt "game_options"
+msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
+msgstr ""
+"Emular um Wiimote de lado com L2 para Agitar e Nunchuk no analógico Direito."
+
+#. TRANSLATION: dolphin, dolphin
+msgctxt "game_options"
+msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
+msgstr "PERSONALIZAR WIIMOTE E CONTROLES EMULADOS"
+
+#. TRANSLATION: dolphin, dolphin
+msgctxt "game_options"
+msgid "Classic Controller"
+msgstr "Controle Clássico"
+
+#. TRANSLATION: dolphin, dolphin
+msgctxt "game_options"
+msgid "Classic Controller Pro"
+msgstr "Controle Clássico Pro"
+
+#. TRANSLATION: dolphin, dolphin
+msgctxt "game_options"
+msgid "Wiimote Sideway"
+msgstr "Wiimote de lado"
+
+#. TRANSLATION: dolphin, dolphin
+msgctxt "game_options"
+msgid "Wiimote Sideway + Swing"
+msgstr "Wiimote de lado + Balançar"
+
+#. TRANSLATION: dolphin, dolphin
+msgctxt "game_options"
+msgid "Wiimote Sideway + Tilt"
+msgstr "Wiimote de lado + Inclinar"
+
+#. TRANSLATION: dolphin, dolphin
+msgctxt "game_options"
+msgid "Wiimote Sideway + Nunchuk"
+msgstr "Wiimote de lado + Nunchuk"
+
+#. TRANSLATION: dolphin, dolphin
+msgctxt "game_options"
+msgid "Position of wii sensor bar relative to the disaply for real wiimotes."
+msgstr ""
+
+#. TRANSLATION: dolphin, dolphin
+msgctxt "game_options"
+msgid "SENSOR BAR POSITION"
+msgstr ""
+
+#. TRANSLATION: dolphin, dolphin
+msgctxt "game_options"
+msgid "Bottom (Default)"
+msgstr ""
+
+#. TRANSLATION: dolphin, dolphin
+msgctxt "game_options"
+msgid "Top"
+msgstr ""
+
+#. TRANSLATION: dolphin, dolphin
+msgctxt "game_options"
+msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
+msgstr "Emula o ponteiro do Wiimote com o giroscópio de um DS4."
+
+#. TRANSLATION: dolphin, dolphin
+msgctxt "game_options"
+msgid "DUALSHOCK MOTION CONTROL"
+msgstr "CONTROLE DE MOVIMENTO DUALSHOCK"
+
+#. TRANSLATION: dolphin, dolphin
+msgctxt "game_options"
+msgid "Emulate the Wiimote pointer with a mouse."
+msgstr "Emula o ponteiro do Wiimote com um mouse."
+
+#. TRANSLATION: dolphin, dolphin
+msgctxt "game_options"
+msgid "MOUSE AS WIIMOTE POINTER"
+msgstr "MOUSE COMO PONTEIRO DO WIIMOTE"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
@@ -10135,57 +10135,57 @@ msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr ""
 
-#. TRANSLATION: flycast/vitaquake3, flycast/vitaquake3
+#. TRANSLATION: flycast/dolphin, flycast/dolphin
 msgctxt "game_options"
 msgid "Game's default"
 msgstr "Jogo padrão"
 
-#. TRANSLATION: flycast/vitaquake3
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "AUTO LOAD ON GAME LAUNCH"
 msgstr "CARREGAR ESTADO AUTOMATICAMENTE AO INICIAR O JOGO"
 
-#. TRANSLATION: flycast/vitaquake3
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "AUTO SAVE ON GAME EXIT"
 msgstr "SALVAR ESTADO AUTOMATICAMENTE AO ENCERRAR O JOGO"
 
-#. TRANSLATION: flycast/vitaquake3, flycast/vitaquake3, flycast/vitaquake3, flycast/vitaquake3
+#. TRANSLATION: flycast/dolphin, flycast/dolphin, flycast/dolphin, flycast/dolphin
 msgctxt "game_options"
 msgid "Choose second feature pack for the controller."
 msgstr "Escolha um segundo pacote de recursos para o controle."
 
-#. TRANSLATION: flycast/vitaquake3
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "CONTROLLER 1 FEATURE PACK"
 msgstr "PACOTE DE RECURSOS DO CONTROLE 1"
 
-#. TRANSLATION: flycast/vitaquake3, flycast/vitaquake3, flycast/vitaquake3, flycast/vitaquake3
+#. TRANSLATION: flycast/dolphin, flycast/dolphin, flycast/dolphin, flycast/dolphin
 msgctxt "game_options"
 msgid "2nd VMU (Default)"
 msgstr "2º VMU (Padrão)"
 
-#. TRANSLATION: flycast/vitaquake3, flycast/vitaquake3, flycast/vitaquake3, flycast/vitaquake3
+#. TRANSLATION: flycast/dolphin, flycast/dolphin, flycast/dolphin, flycast/dolphin
 msgctxt "game_options"
 msgid "Purupuru Pack/Vibration Pack"
 msgstr "Purupuru Pack/Jump Pak/Vibration Pack (Vibração)"
 
-#. TRANSLATION: flycast/vitaquake3
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "CONTROLLER 2 FEATURE PACK"
 msgstr "PACOTE DE RECURSOS DO CONTROLE 2"
 
-#. TRANSLATION: flycast/vitaquake3
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "CONTROLLER 3 FEATURE PACK"
 msgstr "PACOTE DE RECURSOS DO CONTROLE 3"
 
-#. TRANSLATION: flycast/vitaquake3
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "CONTROLLER 4 FEATURE PACK"
 msgstr "PACOTE DE RECURSOS DO CONTROLE 4"
 
-#. TRANSLATION: flycast/vitaquake3
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid ""
 "Enable the Dreamcast DSP for more accurate audio. Only recommended for fast "
@@ -10194,7 +10194,7 @@ msgstr ""
 "Ativa o Processador de Áudio Digital (DSP) do Dreamcast para um áudio mais "
 "preciso. Recomendado apenas para sistemas rápidos."
 
-#. TRANSLATION: flycast/vitaquake3, virtualjaguar
+#. TRANSLATION: flycast/dolphin, virtualjaguar
 msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr "PROCESSADOR DE SOM DIGITAL"
@@ -16802,12 +16802,6 @@ msgstr "Salvamento rápido"
 #~ msgstr "Ativa ou desativa mensagens na tela."
 
 #~ msgctxt "game_options"
-#~ msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
-#~ msgstr ""
-#~ "Emular um Wiimote de lado com L2 para Agitar e Nunchuk no analógico "
-#~ "Direito."
-
-#~ msgctxt "game_options"
 #~ msgid "WiiMote"
 #~ msgstr "WiiMote"
 
@@ -17079,42 +17073,6 @@ msgstr "Salvamento rápido"
 #~ msgstr "5 Wiimotes de lado"
 
 #~ msgctxt "game_options"
-#~ msgid "Change the Gamecube system language."
-#~ msgstr "Altera o idioma do sistema Gamecube."
-
-#~ msgctxt "game_options"
-#~ msgid "Map your controller to an emulated Wiimote."
-#~ msgstr "Mapeia seu controle para um Wiimote emulado."
-
-#~ msgctxt "game_options"
-#~ msgid "Wiimote Sideway"
-#~ msgstr "Wiimote de lado"
-
-#~ msgctxt "game_options"
-#~ msgid "Wiimote Sideway + Swing"
-#~ msgstr "Wiimote de lado + Balançar"
-
-#~ msgctxt "game_options"
-#~ msgid "Wiimote Sideway + Tilt"
-#~ msgstr "Wiimote de lado + Inclinar"
-
-#~ msgctxt "game_options"
-#~ msgid "Wiimote Sideway + Nunchuk"
-#~ msgstr "Wiimote de lado + Nunchuk"
-
-#~ msgctxt "game_options"
-#~ msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
-#~ msgstr "Emula o ponteiro do Wiimote com o giroscópio de um DS4."
-
-#~ msgctxt "game_options"
-#~ msgid "Emulate the Wiimote pointer with a mouse."
-#~ msgstr "Emula o ponteiro do Wiimote com um mouse."
-
-#~ msgctxt "game_options"
-#~ msgid "MOUSE AS WIIMOTE POINTER"
-#~ msgstr "MOUSE COMO PONTEIRO DO WIIMOTE"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Use alternative input mappings. Only applies to Standard Controller type."
 #~ msgstr ""
@@ -17132,10 +17090,6 @@ msgstr "Salvamento rápido"
 #~ msgctxt "game_options"
 #~ msgid "Face Buttons (CCW)"
 #~ msgstr "Botões de Face (CCW)"
-
-#~ msgctxt "game_options"
-#~ msgid "Set joystick deadzone."
-#~ msgstr "Definir zona morta do controle."
 
 #~ msgctxt "game_options"
 #~ msgid "Determines the speed and the runahead behaviour of the system."

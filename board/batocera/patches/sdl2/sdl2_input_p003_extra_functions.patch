@@ -49,10 +49,10 @@ index 7f5d32525..d3d939906 100644
  SDL_DYNAPI_PROC(int,SDL_JoystickGetBall,(SDL_Joystick *a, int b, int *c, int *d),(a,b,c,d),return)
  SDL_DYNAPI_PROC(Uint8,SDL_JoystickGetButton,(SDL_Joystick *a, int b),(a,b),return)
 diff --git a/src/joystick/SDL_joystick.c b/src/joystick/SDL_joystick.c
-index ca4902361..a3d3ec111 100644
+index 1f359c4cf..39b1760a9 100644
 --- a/src/joystick/SDL_joystick.c
 +++ b/src/joystick/SDL_joystick.c
-@@ -3328,6 +3328,27 @@ SDL_JoystickGUID SDL_JoystickGetGUIDFromString(const char *pchGUID)
+@@ -3335,6 +3335,27 @@ SDL_JoystickGUID SDL_JoystickGetGUIDFromString(const char *pchGUID)
      return SDL_GUIDFromString(pchGUID);
  }
  

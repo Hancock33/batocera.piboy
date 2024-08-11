@@ -316,7 +316,10 @@ class LibretroGenerator(Generator):
                 romsInDir = glob.glob(glob.escape(rom) + '/*.scummvm')
                 rom = romsInDir[0].replace('.scummvm','')
             else:
-                rom = os.path.dirname(rom) + '/' + romName[0:-8]
+                rom = os.path.dirname(rom) + '/' + romName
+                if os.stat(rom).st_size == 0:
+                # File is empty, run game directly
+                    rom = rom[0:-8]
 
         if system.name == 'doom3' and system.config['core'] == "boom3":
             rom = '/userdata/roms/ports/doom3/base/pak000.pk4'

@@ -23,8 +23,8 @@ define DXX_REBIRTH_BUILD_CMDS
 	(cd $(@D); \
 		PKG_CONFIG_PATH="$(STAGING_DIR)/usr/lib/pkgconfig" \
 		$(DXX_REBIRTH_SCONS_ENV) \
-		CFLAGS="$(TARGET_CFLAGS) -funsigned-char -Wno-narrowing" \
-		CXXFLAGS="$(TARGET_CXXFLAGS) -funsigned-char -Wno-narrowing" \
+		CFLAGS="$(subst Os,O2,$(TARGET_CFLAGS)) -funsigned-char -Wno-narrowing" \
+		CXXFLAGS="$(subst Os,O2,$(TARGET_CFLAGS)) -funsigned-char -Wno-narrowing" \
 		$(SCONS) \
 		$(DXX_REBIRTH_SCONS_OPTS))
 endef

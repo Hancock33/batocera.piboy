@@ -8,13 +8,13 @@ fi
 save_governor() {
   for policy in $(cat /sys/devices/system/cpu/cpufreq/policy0/scaling_available_governors)
   do
-    if [ "$policy" = "schedutil" ]
-    then
-      /usr/bin/batocera-settings-set system.cpu.governor "schedutil"
-      exit 0
-    elif [ "$policy" = "performance" ]
+    if [ "$policy" = "performance" ]
     then
       /usr/bin/batocera-settings-set system.cpu.governor "performance"
+      exit 0
+    elif [ "$policy" = "schedutil" ]
+    then
+      /usr/bin/batocera-settings-set system.cpu.governor "schedutil"
     fi
   done
 }

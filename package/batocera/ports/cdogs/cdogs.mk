@@ -3,8 +3,8 @@
 # cdogs
 #
 ################################################################################
-# Version: Commits on Aug 03, 2024
-CDOGS_VERSION = cf5fc8bb0f30ed149fbfd6d05c9e76b9bb6976eb
+# Version: Commits on Aug 11, 2024
+CDOGS_VERSION = c52af7d339849b2f075ce845309e3f2d9e96cdb4
 CDOGS_SITE = $(call github,cxong,cdogs-sdl,$(CDOGS_VERSION))
 CDOGS_DEPENDENCIES = sdl2 sdl2_image sdl2_mixer python-protobuf enet
 CDOGS_LICENSE = GPL-2.0
@@ -23,10 +23,6 @@ CDOGS_CONF_OPTS += -DBUILD_EDITOR=OFF
 CDOGS_CONF_OPTS += -DUSE_SHARED_ENET=ON
 CDOGS_CONF_OPTS += -DBUILD_TESTING=OFF
 
-define CDOGS_REMOVE_TESTS
-	rm -Rf $(@D)/src/tests
-endef
-
 define CDOGS_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/buildroot-build/src/cdogs-sdl $(TARGET_DIR)/usr/bin/cdogs
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/cdogs
@@ -43,7 +39,5 @@ define CDOGS_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/cdogs/cdogs.keys $(TARGET_DIR)/usr/share/evmapy
 endef
-
-CDOGS_PRE_CONFIGURE_HOOKS += CDOGS_REMOVE_TESTS
 
 $(eval $(cmake-package))

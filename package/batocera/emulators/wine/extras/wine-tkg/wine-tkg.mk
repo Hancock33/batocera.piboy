@@ -3,8 +3,8 @@
 # wine-tkg
 #
 ################################################################################
-# Version: Commits on Jul 30, 2024
-WINE_TKG_VERSION = 9.14
+# Version: Commits on Aug 11, 2024
+WINE_TKG_VERSION = 9.15
 WINE_TKG_SOURCE = wine-tkg-$(WINE_TKG_VERSION).tar.gz
 WINE_TKG_SITE = $(call github,Kron4ek,wine-tkg,$(WINE_TKG_VERSION))
 WINE_TKG_LICENSE = LGPL-2.1+

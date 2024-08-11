@@ -14,6 +14,10 @@ default:
     bezel:              consoles
     forceNoBezel:       false
     gamemode_enable:    false
+    gfxbackend: vulkan
+    audio_driver: pulse
+    batterymode: highperformance
+    powermode: highperformance
 
 # 0-C
 twentyfourtyeight:
@@ -919,8 +923,8 @@ spacecadetpinball:
   emulator: spacecadetpinball
   core:     spacecadetpinball
 spectravideo:
-  emulator: openmsx
-  core:     openmsx
+  emulator: libretro
+  core:     bluemsx
 srb2:
   emulator: srb2
   core:     srb2
