@@ -1,7 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|35c13bbe12c9e1d8bc95f9245f49d66ac497e5bb|Aug 11, 2024
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|35c13bbe12c9e1d8bc95f9245f49d66ac497e5bb|Aug 11, 2024
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|e10535ae787363d07ffebaf889a84c1ee8a05ebc|Aug 11, 2024
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|e10535ae787363d07ffebaf889a84c1ee8a05ebc|Aug 11, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|430416484b36993f2d6a53aced764bfe1bc36840|Aug 11, 2024
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|e290c42360f5f2ae7182c5430234545f3b066876|Aug 11, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.83|Aug 11, 2024
@@ -62,7 +62,6 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|609fdcad2e082a1b62817
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|8a74442fabfc6f72c623dbf1f7a59bfeba771b9f|Aug 08, 2024
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|824690b5ac997ec9694e8db1595186459bb3b652|Aug 08, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|444bc10c2ab1553b3ed59b7d6afb54da39b891de|Aug 08, 2024
-Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|361d9fefc924b4ac3a1d99c621c21b7ab55b7eda|Aug 08, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|b3effa75d6bf21d9d883c9573c2dfdc7c839882f|Aug 07, 2024
 Emulators|[play](https://github.com/jpd002/Play-.git)|d1c28b63e0c684025886787c39c4b7f92014d79e|Aug 07, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|3f62275baa0315beb8eedddd379158dc41fbe1bc|Aug 07, 2024
@@ -86,6 +85,7 @@ Emulators|[hatari](http://github.com/hatari/hatari)|bc9504ded632048d7bf24cefc0e3
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|5313b5c82c83f959d79eb2ef2e68f5054d6b201f|Aug 04, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|93e64d8f5aacb74adaf6d7269781641b6ec62fc1|Aug 04, 2024
 Emulators|[libretro-mame](http://github.com/sonninnos/mame)|4159481825939a22d8e604b90aaae29ef9097b73|Aug 04, 2024
+Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|744838638d29a016e83258d3684441d21103e709|Aug 04, 2024
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|048df32657dac9a271aedbe1c3f89f6df7a43df5|Aug 04, 2024
 Emulators|[libretro-vircon32](http://github.com/vircon32/vircon32-libretro)|bb87ba3471f5002d1246ae5bfbedeea441efef00|Aug 04, 2024
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|a3b80e208fa7bf586dcbf412b6eee1d803856b87|Aug 04, 2024
