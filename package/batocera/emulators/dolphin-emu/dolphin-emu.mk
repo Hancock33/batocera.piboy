@@ -3,8 +3,10 @@
 # dolphin-emu
 #
 ################################################################################
-# Version: Commits on Aug 03, 2024
-DOLPHIN_EMU_VERSION = 7645cbff9a263b9b77e14e0ea1ab46be34239469
+# Version: Commits on Aug 11, 2024
+DOLPHIN_EMU_VERSION = e4bd14257f885f57fe6a2e14cf5187dc79b44b9b
+DOLPHIN_EMU_VERSION_MAJOR = 2407
+DOLPHIN_EMU_VERSION_MINOR = 130
 DOLPHIN_EMU_SITE = https://github.com/dolphin-emu/dolphin
 DOLPHIN_EMU_SITE_METHOD = git
 DOLPHIN_EMU_LICENSE = GPLv2+
@@ -53,6 +55,14 @@ define DOLPHIN_EMU_EVMAPY
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-emu/*.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
+define DOLPHIN_EMU_PRE_CONFIGURE_HOOK
+    sed -i 's/set(DOLPHIN_VERSION_MAJOR .*)/set(DOLPHIN_VERSION_MAJOR "$(DOLPHIN_EMU_VERSION_MAJOR)")/' \
+        $(@D)/CMake/ScmRevGen.cmake
+    sed -i 's/set(DOLPHIN_VERSION_MINOR .*)/set(DOLPHIN_VERSION_MINOR "$(DOLPHIN_EMU_VERSION_MINOR)")/' \
+        $(@D)/CMake/ScmRevGen.cmake
+endef
+
+DOLPHIN_EMU_PRE_CONFIGURE_HOOKS = DOLPHIN_EMU_PRE_CONFIGURE_HOOK
 DOLPHIN_EMU_POST_INSTALL_TARGET_HOOKS = DOLPHIN_EMU_EVMAPY
 
 $(eval $(cmake-package))
