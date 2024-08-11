@@ -80,9 +80,9 @@ endef
 
 # Steam Deck OLED SOF files are not in the sound-open-firmware package yet
 define BATOCERA_AUDIO_STEAM_DECK_OLED
-	# extra ucm files
-	mkdir -p $(TARGET_DIR)/usr/share/alsa/ucm2
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/ucm2/* $(TARGET_DIR)/usr/share/alsa/ucm2/
+    rm -rf $(TARGET_DIR)/usr/share/alsa/ucm2/AMD/acp5x
+    rm -rf $(TARGET_DIR)/usr/share/alsa/ucm2/conf.d/acp5x
+    rm -rf $(TARGET_DIR)/usr/share/alsa/ucm2/conf.d/sof-nau8821-max
 endef
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
