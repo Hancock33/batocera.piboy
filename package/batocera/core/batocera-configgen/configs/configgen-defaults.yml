@@ -920,8 +920,8 @@ spacecadetpinball:
   emulator: spacecadetpinball
   core:     spacecadetpinball
 spectravideo:
-  emulator: openmsx
-  core:     openmsx
+  emulator: libretro
+  core:     bluemsx
 srb2:
   emulator: srb2
   core:     srb2
