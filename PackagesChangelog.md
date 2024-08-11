@@ -2,6 +2,7 @@
 -----|:-----:|:-----:|:-----:
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|1ec19f3a5ca44a337867d4c0d3f54e4c06ecc3f2|Aug 11, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|1ec19f3a5ca44a337867d4c0d3f54e4c06ecc3f2|Aug 11, 2024
+Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|4f05e3a04eb49a8bc50e7ffaf3d1bc271ecec352|Aug 11, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|e4bd14257f885f57fe6a2e14cf5187dc79b44b9b|Aug 11, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|9a58327cf226ec18359af0b1ea5dec4d01be48db|Aug 11, 2024
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|3fc966f524bcbf9ab76bf85a701be98fe657def3|Aug 11, 2024
@@ -19,7 +20,7 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|c52af7d339849b2f075ce845309e3f2
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|8185a657a708646a185cf22cf22d87fabd7417da|Aug 11, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|e7dd96a30bc73151aae75ecc1b9bf4dd73eea7ce|Aug 11, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|f5535d2397c3b4fc804c967ff6d02951d6ef12be|Aug 11, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|b815848501840cb5d65b020d2c017c5bd9e4f344|Aug 11, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|12def933dce1e8da8cd09731fd37a02a96ae6fba|Aug 11, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.15.r0.gad8b2870312|Aug 11, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240811|Aug 11, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|bcd36a3152cb07ba3f6704c8840cb0b9298036cb|Aug 11, 2024
@@ -32,7 +33,6 @@ Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|e222a74960cedd94623
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|1451d400c83502848ddd1aae5c0b2f42099dfd6c|Aug 11, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|12a4d7f9b04e9db2c15938dd166b2e15944ef4a8|Aug 11, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|4adf11f0eb893288c1f47df805dc88bce409303d|Aug 11, 2024
-Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|4a3cce724d30540ba722ba97c8b91b8f1c466c51|Aug 11, 2024
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|691543a319f489700f056b83ec89870db59fdf44|Aug 11, 2024
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|77902de1d2b19cb43aee1bb02cdbaa02d9761f7b|Aug 11, 2024
 Emulators|[wine-tkg](http://github.com/Kron4ek/wine-tkg)|9.15|Aug 11, 2024
@@ -49,7 +49,6 @@ Emulators|[libretro-p2000t](http://github.com/p2000t/M2000)|720ffd2d86ee94566473
 Emulators|[libretro-px68k](http://github.com/libretro/px68k-libretro)|6bd8d244cc3fd058a4e1b3b44fc5b6b43cd2cb90|Aug 10, 2024
 Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-9.15|Aug 10, 2024
 Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.15|Aug 10, 2024
-Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|bb1795d2e3785f7ae11df5da28ace9f7c48d5fd9|Aug 09, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|169736dff64cb426d8eba559f76475d2f762e368|Aug 09, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|1208238984c6687e0b05ad144bdff1d327931160|Aug 09, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|c513d6b910542caaec57a5b065d2cdfeee5871bc|Aug 09, 2024
@@ -93,6 +92,7 @@ Emulators|[hatari](http://github.com/hatari/hatari)|bc9504ded632048d7bf24cefc0e3
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|5313b5c82c83f959d79eb2ef2e68f5054d6b201f|Aug 04, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|93e64d8f5aacb74adaf6d7269781641b6ec62fc1|Aug 04, 2024
 Emulators|[libretro-mame](http://github.com/sonninnos/mame)|4159481825939a22d8e604b90aaae29ef9097b73|Aug 04, 2024
+Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|744838638d29a016e83258d3684441d21103e709|Aug 04, 2024
 Emulators|[libretro-vircon32](http://github.com/vircon32/vircon32-libretro)|bb87ba3471f5002d1246ae5bfbedeea441efef00|Aug 04, 2024
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|a3b80e208fa7bf586dcbf412b6eee1d803856b87|Aug 04, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|be2b788c6719dff953ce816a1246c49bd5cd30a5|Aug 03, 2024
