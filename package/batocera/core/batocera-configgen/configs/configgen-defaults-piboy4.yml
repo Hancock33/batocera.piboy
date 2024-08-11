@@ -51,7 +51,7 @@ psp:
     frameskip: automatic
 psx:
   emulator: duckstation
-   core:    duckstation
+  core:     duckstation
 saturn:
   emulator: yabausesa
   core:     yabausesa
