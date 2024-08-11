@@ -8,6 +8,8 @@ default:
     bezel:        none
     gfxbackend: vulkan
     audio_driver: pulse
+    batterymode: highperformance
+    powermode: highperformance
 
 c20:
   emulator: libretro
@@ -35,6 +37,9 @@ model3:
     videomode: max-720x576
     decorations: none
     hud_support: none
+n64:
+  emulator: libretro
+  core:     mupen64plus-next
 nds:
   emulator: drastic
   core:     drastic
@@ -44,6 +49,9 @@ pet:
 psp:
   options:
     frameskip: automatic
+psx:
+  emulator: duckstation
+   core:    duckstation
 saturn:
   emulator: yabausesa
   core:     yabausesa
