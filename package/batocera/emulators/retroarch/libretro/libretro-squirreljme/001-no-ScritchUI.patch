@@ -1,0 +1,12 @@
+diff --git a/nanocoat/lib/CMakeLists.txt b/nanocoat/lib/CMakeLists.txt
+index 15178b9976..f25ae251ed 100644
+--- a/nanocoat/lib/CMakeLists.txt
++++ b/nanocoat/lib/CMakeLists.txt
+@@ -13,5 +13,5 @@
+ add_subdirectory(3rdparty)
+ 
+ # ScritchUI and related
+-add_subdirectory(scritchinput)
+-add_subdirectory(scritchui)
++#add_subdirectory(scritchinput)
++#add_subdirectory(scritchui)
