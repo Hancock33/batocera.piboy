@@ -7,7 +7,6 @@ firmware-orangepi.mk
 firmware-radxa-rkwifibt.mk
 firmware-rk3588.mk
 flatpak.mk
-ledspicer.mk
 lib32bit.mk
 libserum.mk
 model2emu.mk
