@@ -16,5 +16,3 @@ config BR2_PACKAGE_WF_RECORDER
 	  wf-recorder is a utility program for screenrecording
 	  of wlroots-based compositors (more specifically, those
 	  that support wlr-screencopy-v1 and xdg-output).
-
-	  https://github.com/ammen99/wf-recorder
