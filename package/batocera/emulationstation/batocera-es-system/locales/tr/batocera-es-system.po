@@ -169,7 +169,7 @@ msgctxt "game_options"
 msgid "GAME RENDERING & SHADERS"
 msgstr "OYUN İŞLEME VE GÖLGELENDİRME"
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, pcsx2
 msgctxt "game_options"
 msgid "SHADER SET"
 msgstr "GÖLGELENDİRİCİ SETİ"
@@ -3365,7 +3365,7 @@ msgctxt "game_options"
 msgid "USA"
 msgstr "ABD"
 
-#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, pcsx2, ...
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, redream, ...
 msgctxt "game_options"
 msgid "Europe"
 msgstr "Avrupa"
@@ -10934,6 +10934,41 @@ msgstr "Basit 2x"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
+msgid "scanlines"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "diagonal filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "triangular filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "wave filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "lottes crt"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "4xrgss"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "nxagss"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
@@ -11232,10 +11267,15 @@ msgctxt "game_options"
 msgid "Unscaled (Default)"
 msgstr "Ölçeklenmemiş (Varsayılan)"
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Basic (Recommended)"
-msgstr "Temel (Önerilen)"
+msgid "Scaled"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Force 32bit"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11255,6 +11295,11 @@ msgstr "HARMANLAMA DOĞRULUĞU"
 msgctxt "game_options"
 msgid "Minimum"
 msgstr "Asgari"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Basic (Recommended)"
+msgstr "Temel (Önerilen)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11289,21 +11334,6 @@ msgstr "Kısmen"
 msgctxt "game_options"
 msgid "Full (Hash Cache)"
 msgstr "Tam (Karma Önbellek)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "Choose PS2 Bios to use (USA Recommended)"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "PS2 BIOS"
-msgstr ""
-
-#. TRANSLATION: pcsx2, redream
-msgctxt "game_options"
-msgid "USA (Default)"
-msgstr "ABD (Varsayılan)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -12451,6 +12481,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "LLE"
 msgstr ""
+
+#. TRANSLATION: redream
+msgctxt "game_options"
+msgid "USA (Default)"
+msgstr "ABD (Varsayılan)"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
