@@ -170,7 +170,7 @@ msgctxt "game_options"
 msgid "GAME RENDERING & SHADERS"
 msgstr "RENDERIZAÇÃO & FILTROS DO JOGO"
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, pcsx2
 msgctxt "game_options"
 msgid "SHADER SET"
 msgstr "CONJUNTO DE FILTROS"
@@ -3359,7 +3359,7 @@ msgctxt "game_options"
 msgid "USA"
 msgstr "EUA"
 
-#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, pcsx2, ...
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, redream, ...
 msgctxt "game_options"
 msgid "Europe"
 msgstr "Europa"
@@ -10947,6 +10947,41 @@ msgstr "Simple 2x"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
+msgid "scanlines"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "diagonal filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "triangular filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "wave filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "lottes crt"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "4xrgss"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "nxagss"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
@@ -11245,10 +11280,15 @@ msgctxt "game_options"
 msgid "Unscaled (Default)"
 msgstr "Sem escala (Predefinição)"
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Basic (Recommended)"
-msgstr "Básico (recomendado)"
+msgid "Scaled"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Force 32bit"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11268,6 +11308,11 @@ msgstr "PRECISÃO DE BLENDING"
 msgctxt "game_options"
 msgid "Minimum"
 msgstr "Mínima"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Basic (Recommended)"
+msgstr "Básico (recomendado)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11302,21 +11347,6 @@ msgstr "Parcial"
 msgctxt "game_options"
 msgid "Full (Hash Cache)"
 msgstr "Completo (cache de hash)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "Choose PS2 Bios to use (USA Recommended)"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "PS2 BIOS"
-msgstr ""
-
-#. TRANSLATION: pcsx2, redream
-msgctxt "game_options"
-msgid "USA (Default)"
-msgstr "USA (Predefinição)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -12460,6 +12490,11 @@ msgstr "HLE (por pixel)"
 msgctxt "game_options"
 msgid "LLE"
 msgstr "LLE"
+
+#. TRANSLATION: redream
+msgctxt "game_options"
+msgid "USA (Default)"
+msgstr "USA (Predefinição)"
 
 #. TRANSLATION: redream
 msgctxt "game_options"

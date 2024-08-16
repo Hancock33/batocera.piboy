@@ -9568,11 +9568,9 @@ panda3ds:
                 "On":  1
 
 pcsx2:
-  cores:
-    'pcsx2':
-      shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns, use_wheels, wheel_rotation, wheel_deadzone, wheel_midzone]
-      features: [[padtokeyboard, cheevos]
-      cfeatures:
+  features: [padtokeyboard, cheevos]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns, use_wheels, wheel_rotation, wheel_deadzone, wheel_midzone]
+  cfeatures:
         pcsx2_shaderset:
             submenu: RENDERING
             prompt: SHADER SET
