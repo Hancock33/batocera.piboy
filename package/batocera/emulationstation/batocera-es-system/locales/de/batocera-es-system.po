@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-06-10 17:40+0000\n"
+"PO-Revision-Date: 2024-07-24 15:53+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -9203,12 +9203,12 @@ msgstr "ABSOLUTE MAUSEINGABE"
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "Hidden"
-msgstr "Versteckt"
+msgstr ""
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "Shown"
-msgstr "Zeigen"
+msgstr ""
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -16343,7 +16343,7 @@ msgstr "Emulator beenden mit SDL"
 #. TRANSLATION: mame.keys
 msgctxt "keys_files"
 msgid "Exit Emulator"
-msgstr ""
+msgstr "Emulator beenden"
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -17199,24 +17199,6 @@ msgstr "Schnellspeichern"
 #~ msgstr "5 Sideway Wiimote"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "Alternative Eingabebelegung. Gilt nur für den Typ Standard-Controller."
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "ALT EINGABEBELEGUNG"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "Aktionstasten (im Uhrzeigersinn)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "Aktionstasten (gegen Uhrzeigersinn)"
-
-#~ msgctxt "game_options"
 #~ msgid "Determines the speed and the runahead behaviour of the system."
 #~ msgstr "Festlegen der Systemgeschwindigkeit und der Runahead-Leistung."
 
@@ -17444,18 +17426,6 @@ msgstr "Schnellspeichern"
 #~ "ausgeschaltet ist."
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Dolphin-triforce Menü öffnen"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Spielstand laden Slot 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Spielstand speichern Slot 1"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad Nach Oben"
 
@@ -17551,10 +17521,32 @@ msgstr "Schnellspeichern"
 #~ msgid "FastForward"
 #~ msgstr "Schnelles Vorspulen"
 
-#~ msgctxt "game_options"
-#~ msgid "Enable or disable monsters in battle."
-#~ msgstr "Aktivieren oder Deaktivieren von Monstern im Kampf."
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Dolphin-triforce Menü öffnen"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Spielstand laden Slot 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Spielstand speichern Slot 1"
 
 #~ msgctxt "game_options"
-#~ msgid "MONSTERS"
-#~ msgstr "MONSTERS"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Alternative Eingabebelegung. Gilt nur für den Typ Standard-Controller."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "ALT EINGABEBELEGUNG"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Aktionstasten (im Uhrzeigersinn)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Aktionstasten (gegen Uhrzeigersinn)"

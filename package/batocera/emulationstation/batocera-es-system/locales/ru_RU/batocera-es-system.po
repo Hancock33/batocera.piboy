@@ -16225,7 +16225,7 @@ msgstr "Выйти из эмулятора с помощью SDL"
 #. TRANSLATION: mame.keys
 msgctxt "keys_files"
 msgid "Exit Emulator"
-msgstr ""
+msgstr "Выйти из эмулятора"
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -17083,25 +17083,6 @@ msgstr "Быстрое сохранение"
 #~ msgstr "5 Sideway Wiimote"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "Использовать альт. сопоставления кнопок. Применяется только к типу "
-#~ "\"Standard Controller\"."
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "АЛЬТ, СОПОСТАВЛЕНИЕ КНОПОК"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "Лицевые кнопки (по часовой стрелке)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "Лицевые кнопки (против часовой стрелки)"
-
-#~ msgctxt "game_options"
 #~ msgid "Determines the speed and the runahead behaviour of the system."
 #~ msgstr "Определяет скорость и поведение системы."
 
@@ -17321,18 +17302,6 @@ msgstr "Быстрое сохранение"
 #~ "Установите желаемую максимальную частоту обновления при выключенном Vsync."
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Открыть меню Dolphin-triforce"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Загрука из Слота 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Сохранение в Слот 1"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad вверх"
 
@@ -17427,6 +17396,37 @@ msgstr "Быстрое сохранение"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Перемотка"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Открыть меню Dolphin-triforce"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Загрука из Слота 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Сохранение в Слот 1"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Использовать альт. сопоставления кнопок. Применяется только к типу "
+#~ "\"Standard Controller\"."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "АЛЬТ, СОПОСТАВЛЕНИЕ КНОПОК"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Лицевые кнопки (по часовой стрелке)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Лицевые кнопки (против часовой стрелки)"
 
 #~ msgctxt "game_options"
 #~ msgid "Enable or disable monsters in battle."
