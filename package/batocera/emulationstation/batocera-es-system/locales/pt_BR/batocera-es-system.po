@@ -17108,25 +17108,6 @@ msgstr "Salvamento rápido"
 #~ msgstr "5 Wiimotes de lado"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "Usa mapeamentos de entrada alternativos. Aplica-se apenas ao tipo de "
-#~ "controle padrão."
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "MAPEAMENTO DE ENTRADA ALTERNATIVO"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "Botões de Face (CW)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "Botões de Face (CCW)"
-
-#~ msgctxt "game_options"
 #~ msgid "Determines the speed and the runahead behaviour of the system."
 #~ msgstr "Determina a velocidade e o comportamento de avanço do sistema."
 
@@ -17350,18 +17331,6 @@ msgstr "Salvamento rápido"
 #~ "Vertical (Vsync) estiver desativado."
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Abrir o menu do Dolphin-triforce"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Carregar Estado do Espaço 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Salvar Estado do Espaço 1"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad Cima"
 
@@ -17456,6 +17425,37 @@ msgstr "Salvamento rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Abrir o menu do Dolphin-triforce"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Carregar Estado do Espaço 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Salvar Estado do Espaço 1"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Usa mapeamentos de entrada alternativos. Aplica-se apenas ao tipo de "
+#~ "controle padrão."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "MAPEAMENTO DE ENTRADA ALTERNATIVO"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Botões de Face (CW)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Botões de Face (CCW)"
 
 #~ msgctxt "game_options"
 #~ msgid "Enable or disable monsters in battle."

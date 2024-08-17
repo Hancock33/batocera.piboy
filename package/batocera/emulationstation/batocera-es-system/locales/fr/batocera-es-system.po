@@ -17097,25 +17097,6 @@ msgstr "Sauvegarde rapide"
 #~ msgstr "5 Wiimote latérale"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "Utiliser un mapping d'entrée alternative. S'applique seulement au type de "
-#~ "manette standard."
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "MAPPING ENTRÉE ALTERNATIVE"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "Boutons de face (CW)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "Boutons de face (CCW)"
-
-#~ msgctxt "game_options"
 #~ msgid "Determines the speed and the runahead behaviour of the system."
 #~ msgstr "Déterminer la vitesse et le comportement prédictif du système."
 
@@ -17337,18 +17318,6 @@ msgstr "Sauvegarde rapide"
 #~ msgstr "Définir le taux de rafraîchissement maximal sans Vsync."
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Ouvrir le menu de Dolphin-triforce"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Charger la sauvegarde d'état a l'emplacement 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Ecrire la sauvegarde d'état à l'emplacement 1"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Haut Joy2Pad"
 
@@ -17443,6 +17412,37 @@ msgstr "Sauvegarde rapide"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rapide"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Ouvrir le menu de Dolphin-triforce"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Charger la sauvegarde d'état a l'emplacement 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Ecrire la sauvegarde d'état à l'emplacement 1"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Utiliser un mapping d'entrée alternative. S'applique seulement au type de "
+#~ "manette standard."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "MAPPING ENTRÉE ALTERNATIVE"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Boutons de face (CW)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Boutons de face (CCW)"
 
 #~ msgctxt "game_options"
 #~ msgid "Enable or disable monsters in battle."

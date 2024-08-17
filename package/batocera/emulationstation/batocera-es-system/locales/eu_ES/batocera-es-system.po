@@ -16984,25 +16984,6 @@ msgstr "Gordetze Azkarra"
 #~ msgstr "5 Alborako Wiimote"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "Erabili sarrera mapeo alternatiboak. Kontrolatzaile mota Standard-ari "
-#~ "eragiten dio bakarrik."
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "SARRERA MAPEO ALTERNATIBOA"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "Aurpegi botoiak (CW)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "Aurpegi botoiak (CCW)"
-
-#~ msgctxt "game_options"
 #~ msgid "Determines the speed and the runahead behaviour of the system."
 #~ msgstr "Sistemako exekuzioAurratze portaeraren abiadura zehazten du."
 
@@ -17202,18 +17183,6 @@ msgstr "Gordetze Azkarra"
 #~ "maximoa."
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Ireki Dolphin-triforce-aren menua"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Kargatu 1 Egoera Zirrikitua"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Gorde 1 Egoera Zirrikitua"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad Gora"
 
@@ -17308,6 +17277,37 @@ msgstr "Gordetze Azkarra"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Aurrera Azkar"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Ireki Dolphin-triforce-aren menua"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Kargatu 1 Egoera Zirrikitua"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Gorde 1 Egoera Zirrikitua"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Erabili sarrera mapeo alternatiboak. Kontrolatzaile mota Standard-ari "
+#~ "eragiten dio bakarrik."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "SARRERA MAPEO ALTERNATIBOA"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Aurpegi botoiak (CW)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Aurpegi botoiak (CCW)"
 
 #~ msgctxt "game_options"
 #~ msgid "Enable or disable monsters in battle."

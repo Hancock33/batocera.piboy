@@ -17150,18 +17150,6 @@ msgstr "Gyors mentés"
 #~ "van kapcsolva."
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Dolphin-triforce menü megnyitása"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Betöltési állapot Slot 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Állapot mentése Slot 1"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad fel"
 
@@ -17256,6 +17244,18 @@ msgstr "Gyors mentés"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Gyors előre"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Dolphin-triforce menü megnyitása"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Betöltési állapot Slot 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Állapot mentése Slot 1"
 
 #~ msgctxt "game_options"
 #~ msgid "Enable or disable monsters in battle."

@@ -17082,25 +17082,6 @@ msgstr "Hızlı Kaydet"
 #~ msgstr "5 Sideway Wiimote"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "Alternatif giriş eşlemelerini kullanın. Yalnızca Standart Denetleyici "
-#~ "türü için geçerlidir."
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "ALT GİRİŞ EŞLEME"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "Yüz Düğmeleri (CW)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "Yüz Düğmeleri (CCW)"
-
-#~ msgctxt "game_options"
 #~ msgid "Determines the speed and the runahead behaviour of the system."
 #~ msgstr "Sistemin hızını ve ilerleme davranışını belirler."
 
@@ -17320,18 +17301,6 @@ msgstr "Hızlı Kaydet"
 #~ msgstr "Vsync kapalıyken istediğiniz maksimum yenileme hızını ayarlayın."
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Dolphin-triforce menü aç"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Slot 1 Durumunu Yükle"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Slot 1 Durumunu Kaydet"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad Yukarı"
 
@@ -17426,6 +17395,37 @@ msgstr "Hızlı Kaydet"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Hızlı İleri"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Dolphin-triforce menü aç"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Slot 1 Durumunu Yükle"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Slot 1 Durumunu Kaydet"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Alternatif giriş eşlemelerini kullanın. Yalnızca Standart Denetleyici "
+#~ "türü için geçerlidir."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "ALT GİRİŞ EŞLEME"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Yüz Düğmeleri (CW)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Yüz Düğmeleri (CCW)"
 
 #~ msgctxt "game_options"
 #~ msgid "Enable or disable monsters in battle."
