@@ -4,8 +4,8 @@
 #
 ################################################################################
 # Note: shaderc patch required from:
-# https://github.com/PCSX2/pcsx2/blob/master/.github/workflows/scripts/common/shaderc-changes.patch
-STENZEK_SHADERC_VERSION = v2024.1
+# Version: Commits on Aug 09, 2024
+STENZEK_SHADERC_VERSION = 6d2848321250a19641800f8afb07738f3b0b7f18
 STENZEK_SHADERC_SITE = $(call github,google,shaderc,$(STENZEK_SHADERC_VERSION))
 STENZEK_SHADERC_LICENSE = Apache License v2
 STENZEK_SHADERC_LICENSE_FILES = LICENSE
