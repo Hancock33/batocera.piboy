@@ -1,0 +1,63 @@
+﻿<?xml version="1.0"?>
+<gameList>
+	<game>
+		<path>./fan100.sh</path>
+		<name>100% Fan Speed</name>
+		<desc>Set the PiBoy fan speed to 100%</desc>
+		<image>./images/fan.png</image>
+	</game>
+	<game>
+		<path>./fan12.sh</path>
+		<name>12.5% Fan Speed</name>
+		<desc>Set the PiBoy fan speed to 12.5%</desc>
+		<image>./images/fan.png</image>
+	</game>
+	<game>
+		<path>./fan25.sh</path>
+		<name>25% Fan Speed</name>
+		<desc>Set the PiBoy fan speed to 25%</desc>
+		<image>./images/fan.png</image>
+	</game>
+	<game>
+		<path>./fan37.sh</path>
+		<name>37.5% Fan Speed</name>
+		<desc>Set the PiBoy fan speed to 37.5%</desc>
+		<image>./images/fan.png</image>
+	</game>
+	<game>
+		<path>./fan50.sh</path>
+		<name>50% Fan Speed</name>
+		<desc>Set the PiBoy fan speed to 50%</desc>
+		<image>./images/fan.png</image>
+	</game>
+	<game>
+		<path>./fan62.sh</path>
+		<name>62.5% Fan Speed</name>
+		<desc>Set the PiBoy fan speed to 62.5%</desc>
+		<image>./images/fan.png</image>
+	</game>
+	<game>
+		<path>./fan75.sh</path>
+		<name>75% Fan Speed</name>
+		<desc>Set the PiBoy fan speed to 75%</desc>
+		<image>./images/fan.png</image>
+	</game>
+	<game>
+		<path>./fan87.sh</path>
+		<name>87.5% Fan Speed</name>
+		<desc>Set the PiBoy fan speed to 87.5%</desc>
+		<image>./images/fan.png</image>
+	</game>
+	<game>
+		<path>./fanauto.sh</path>
+		<name>Auto Fan Speed</name>
+		<desc>Set the PiBoy fan speed to automatic</desc>
+		<image>./images/fan.png</image>
+	</game>
+	<game>
+		<path>./fanoff.sh</path>
+		<name>0% Fan Speed (off)</name>
+		<desc>Set the PiBoy fan speed to 0% (Be careful if overclocking!)</desc>
+		<image>./images/fan.png</image>
+	</game>
+</gameList>
