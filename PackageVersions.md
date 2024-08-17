@@ -86,7 +86,7 @@ Emulators|[eka2l1](https://github.com/rtissera/EKA2L1.git)|8bf21e354c7aa3ea8f287
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|6061d402bdbd1a07d0ba43fe6db272365a309e9f|Aug 17, 2024
 Emulators|[fpinball](https://github.com/batocera-linux/fpinball/releases)|v1.9.1.20101231|Dec 31, 2010
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|bfa0c7522c6c5f73cceb340d677491d056febd01|Jul 30, 2022
-Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|e84d19981d1300ac03ec2d77b9ea5674e12a5f48|Aug 15, 2024
+Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|58ddbecc883896fe24b8c6ecdfecaf767b65b4a4|Aug 17, 2024
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
 Emulators|[hatari](http://github.com/hatari/hatari)|25142f255add64f35443331c55fee40a8127a8db|Aug 17, 2024
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|c1e95b9d12ccc9efd0a122326990ba6768583311|Aug 16, 2024
@@ -165,7 +165,7 @@ Emulators|[libretro-lowresnx](http://github.com/timoinutilis/lowres-nx)|c824ec16
 Emulators|[libretro-lrps2](http://github.com/libretro/LRPS2)|f3c8743d6a42fe429f703b476fecfdb5655a98a9|Jan 30, 2023
 Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|09a134eccad87127ec757503f736d6e4f9d06d4c|May 29, 2023
 Emulators|[libretro-mame](http://github.com/sonninnos/mame)|4159481825939a22d8e604b90aaae29ef9097b73|Aug 04, 2024
-Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|081f2fc388f4fbaebd33ce5beb80b63a8a9a3e24|Aug 17, 2024
+Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|c107ff48219317162d9da216292ccb350d901a5c|Aug 17, 2024
 Emulators|[libretro-mame2010](http://github.com/libretro/mame2010-libretro)|5f524dd5fca63ec1dcf5cca63885286109937587|Jun 14, 2022
 Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|6e48901ab9e54ff048a1bf6ea322372d7ae3ed29|Jul 26, 2024
 Emulators|[libretro-melonds](http://github.com/libretro/melonds)|c6488c88cb4c7583dbcd61609e0eef441572fae8|Apr 13, 2023
@@ -210,7 +210,7 @@ Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|e2b1299d85564c29
 Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|978d977119eff1bd7214c0095eb91b15b859bb61|Aug 07, 2024
 Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|84b963a2f627bbc41198e357430619f34bbebc8a|Jun 28, 2024
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|3265c0ac05ec595f9cedd020d76e7f39bf081538|May 02, 2024
-Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|3f1ef52ec28366884c62df504e35b3078535cc1e|Aug 16, 2024
+Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|0ffe3391e8a963e6c6b7c178dd4f9d76a72dd5b6|Aug 17, 2024
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|d64ff2e5b7cb202155b2782b55c8d359c2a9c8ce|Aug 16, 2024
 Emulators|[libretro-stella2014](http://github.com/libretro/stella2014-libretro)|db6bee857f73138ae02755bf09e392b31fef4540|May 20, 2024
 Emulators|[libretro-supafaust](http://github.com/libretro/supafaust)|6b639c98372d1c9bac885c55d772c812d2a9d525|Jun 19, 2023
@@ -291,7 +291,7 @@ Emulators|[supermodel](http://github.com/trzy/Supermodel)|6638c847c6061f5248e7fe
 Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|4eb41467f8cf39d666372b5ea78694df970252a3|Jul 04, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|7320e26801acd5c4ccce4627400021af21ccea29|Aug 17, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|ce28962c726813a5cc112734e8bef49cda70dd2b|Aug 10, 2024
-Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45310|Aug 17, 2024
+Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45311|Aug 17, 2024
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|3f62275baa0315beb8eedddd379158dc41fbe1bc|Aug 07, 2024
 Emulators|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v2.13|Jun 21, 2024
@@ -422,7 +422,7 @@ Network|[rtl8821au-morrownr](http://github.com/morrownr/8821au-20210708)|0b12ea5
 Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|3c8f59b5b05e5090e8593da1940a8d3ccac3f878|Jul 18, 2024
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|48e143d273d4de79d6e41bf7066592bffa5c84c5|Jul 23, 2024
 Ports|[abuse](http://github.com/Xenoveritas/abuse)|9d1f66f57377859bae10e28eabebea0b9c750490|Oct 27, 2022
-Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|d0b2df09d83feb802a5349d1dbc0874e20364afe|Aug 17, 2024
+Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|96275feed814cfe0554471925c2594df45f6a14a|Aug 17, 2024
 Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e246ded9|May 05, 2024
 Ports|[awgl](http://github.com/cyxx/rawgl)|1eeaa530c859bd6e37b3d3bd7d3136bc16afcc89|Mar 12, 2022
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
@@ -447,7 +447,7 @@ Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|ad8a2754fa99ceaf4
 Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|9fb917c357b20d95d597bed4d67904c29cd5c753|Apr 21, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|0b7700f185201de217ed87d3be9de5124f142399|Aug 17, 2024
 Ports|[freedroid](http://github.com/ReinhardPrix/FreedroidClassic)|126664e034d17bb7fd1e6c3cfa1e9e6f1ebf48ac|Jan 08, 2024
-Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|1b20c92ca51b5b6ca21bf02b034d8e2ca4cc23e9|Aug 16, 2024
+Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|4d18380956eaab3da9ccaf8a06043692b5d95cc5|Aug 17, 2024
 Ports|[hcl](http://github.com/ptitSeb/hydracastlelabyrinth)|229369c222f8604530f5e06f795b4505ef21d439|Feb 28, 2024
 Ports|[hlsdk-xash3d-dmc](http://github.com/FWGS/hlsdk-portable)|f67343d0b9fe2865c9706697575223f5d8eb0da5|Jul 21, 2024
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|1ad9ea8a2e4d31ac644bf9eed63de37201202ce3|Jul 21, 2024
