@@ -296,8 +296,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 
     select BR2_PACKAGE_UPOWER                               # required by some cemuhook servers
 
-	select BR2_PACKAGE_HID_T150 # Thrustmaster T150 and TMX Force Feedback Wheel Linux drivers
-
     # Case
     select BR2_PACKAGE_ELEMENT14_PI_DESKTOP                 if  BR2_PACKAGE_BATOCERA_TARGET_BCM2836      || BR2_PACKAGE_BATOCERA_TARGET_BCM2837 # rpi2/rpi3
     select BR2_PACKAGE_GPICASE                              if  BR2_PACKAGE_BATOCERA_TARGET_BCM2835      || BR2_PACKAGE_BATOCERA_TARGET_BCM2836 # retroflag gpicase

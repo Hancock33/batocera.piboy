@@ -65,7 +65,6 @@ define BATOCERA_AUDIO_INSTALL_TARGET_CMDS
 		$(TARGET_DIR)/usr/share/wireplumber/wireplumber.conf.d/80-disable-alsa-reserve.conf
 
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/pipewire.conf       $(TARGET_DIR)/usr/share/pipewire/pipewire.conf
-	#cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/pipewire.confsdoled $(TARGET_DIR)/usr/share/pipewire/pipewire.confsdoled
 endef
 
 define BATOCERA_AUDIO_X86_INTEL_DSP
