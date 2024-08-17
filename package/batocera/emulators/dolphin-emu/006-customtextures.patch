@@ -23,7 +23,7 @@ index d7e78bf6e9..a4bea44b42 100644
  extern const Info<std::string> MAIN_WII_SD_CARD_IMAGE_PATH;
  extern const Info<std::string> MAIN_WII_SD_CARD_SYNC_FOLDER_PATH;
 diff --git a/Source/Core/UICommon/UICommon.cpp b/Source/Core/UICommon/UICommon.cpp
-index 4575498fb5..711a1d07b0 100644
+index d0f8345852..c62fb7b1c5 100644
 --- a/Source/Core/UICommon/UICommon.cpp
 +++ b/Source/Core/UICommon/UICommon.cpp
 @@ -95,6 +95,12 @@ static void CreateResourcePackPath(std::string path)
