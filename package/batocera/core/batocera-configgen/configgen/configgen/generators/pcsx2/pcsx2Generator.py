@@ -438,7 +438,7 @@ def configureINI(config_directory, bios_directory, system, rom, controllers, met
     if system.isOptSet('pcsx2_shaderset'):
         pcsx2INIConfig.set("EmuCore", "TVShader", system.config["pcsx2_shaderset"])
     else:
-        pcsx2INIConfig.set("EmuCore", "TVShader", "0")    
+        pcsx2INIConfig.set("EmuCore", "TVShader", "0")
 
     ## [InputSources]
     if not pcsx2INIConfig.has_section("InputSources"):
