@@ -7,7 +7,7 @@ Audio|[chromebook-ucm-conf](http://github.com/WeirdTreeThing/alsa-ucm-conf-cros)
 Audio|[cubeb](http://github.com/mozilla/cubeb)|8f6c9a01ddd7c1ac8360b9a31c54e24826ad073f|Aug 15, 2024
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|24.08|Aug 01, 2024
 Audio|[freepats](https://freepats.zenvoid.org)|20060219|Feb 19, 2006
-Audio|[libfreeaptx](http://github.com/iamthehorker/libfreeaptx)|c176b7de9c2017d0fc1877659cea3bb6c330aafa|N/A
+Audio|[libfreeaptx](http://github.com/iamthehorker/libfreeaptx)|c176b7de9c2017d0fc1877659cea3bb6c330aafa|Aug 10, 2021
 Audio|[liblc3](https://github.com/google/liblc3/archive/refs/tags)|v1.1.1|Apr 19, 2024
 Audio|[libldac](https://github.com/EHfive/ldacBT.git)|af2dd23979453bcd1cad7c4086af5fb421a955c5|Mar 05, 2021
 Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.6.0|Jun 15, 2023
@@ -15,15 +15,15 @@ Audio|[portmidi](http://github.com/PortMidi/portmidi)|7a5de5b7597c46f963d72a83de
 Audio|[rtmidi](http://github.com/thestk/rtmidi)|6.0.0|Aug 03, 2023
 Audio|[wildmidi](http://github.com/Mindwerks/wildmidi)|wildmidi-0.4.6|Apr 11, 2024
 Audio|[zmusic](http://github.com/ZDoom/ZMusic)|1.1.13|Apr 28, 2024
-Boot|[batocera-initramfs](http://www.busybox.net/downloads)|1.36.1|N/A
-Boot|[batocera-shim-signed-efi-helpers-ia32](https://ftp.debian.org/debian/pool/main/s/shim-helpers-i386-signed)|1+15.7+1|N/A
-Boot|[batocera-shim-signed-efi-ia32](https://ftp.debian.org/debian/pool/main/s/shim-signed)|1.39+15.7-1|N/A
+Boot|[batocera-initramfs](http://www.busybox.net/downloads)|1.36.1|May 19, 2023
+Boot|[batocera-shim-signed-efi-helpers-ia32](https://ftp.debian.org/debian/pool/main/s/shim-helpers-i386-signed)|1+15.7+1|Mar 02, 2023
+Boot|[batocera-shim-signed-efi-ia32](https://ftp.debian.org/debian/pool/main/s/shim-signed)|1.39+15.7-1|Mar 09, 2023
 Boot|[batocera-shim-signed-efi-x64](https://launchpad.net/ubuntu/+archive/primary/+files)|1.56+15.7-0ubuntu1|Oct 09, 2023
 Boot|[batocera-shim](https://github.com/rhboot/shim/releases)|15.8|Jan 23, 2024
-Boot|[batocera-syslinux-efi](binaries)|6.04.pre2.r11.gbf6db5b4-2|N/A
+Boot|[batocera-syslinux-efi](binaries)|6.04.pre2.r11.gbf6db5b4-2|Nov 29, 2023
 Boot|[rk3128-blobs](https://github.com/rockchip-linux/rkbin.git)|a2a0b89b6c8c612dca5ed9ed8a68db8a07f68bc0|Feb 22, 2024
 Boot|[rockpro64-blobs](https://github.com/batocera-linux/rockpro64-blobs.git)|2.0|Mar 03, 2020
-Boot|[uboot-multiboard](https://ftp.denx.de/pub/u-boot)|2024.01|N/A
+Boot|[uboot-multiboard](https://ftp.denx.de/pub/u-boot)|2024.01|Jan 08, 2024
 Boot|[uboot-odroid-goa](https://github.com/hardkernel/u-boot.git)|0e26e35cb18a80005b7de45c95858c86a2f7f41e|Mar 03, 2021
 Boot|[uboot-odroid-xu4](https://github.com/hardkernel/u-boot.git)|42ac93dcfbbb8a08c2bdc02e19f96eb35a81891a|May 19, 2020
 Boot|[uboot-powkiddy-a13](http://github.com/alpgarcia/caesar-u-boot)|powkiddy-a13|Nov 27, 2021
@@ -349,7 +349,7 @@ Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.2|
 Hardware|[ayn-platform](http://github.com/ShadowBlip/ayn-platform)|v0.5.2|Jul 29, 2024
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|e421d1e6bd9afb545b6bbfc6b30e306975e77e44|Jul 23, 2024
 Hardware|[dmd-simulator](http://github.com/batocera-linux/dmd-simulator)|8aabef58f4c58efd981340c1a3cd66af39b3566a|Jun 22, 2024
-Hardware|[dockerpi-powerboard](http://github.com/geeekpi/dockerpi)|1e268b076bfb2bba0de053c780474239f4f88245|N/A
+Hardware|[dockerpi-powerboard](http://github.com/geeekpi/dockerpi)|1e268b076bfb2bba0de053c780474239f4f88245|Feb 28, 2024
 Hardware|[element14-pi-desktop](http://github.com/pi-desktop/deb-make)|v1.1.0|Jul 20, 2017
 Hardware|[pironman](http://github.com/sunfounder/pironman)|34b74f2a69b6a0b0c8867e2f830e569dd8eb6e12|Sept 15, 2023
 Hardware|[pironman5](http://github.com/sunfounder/pironman5)|ede7d6c63ae50295f28a5b52eb1cc1d39fb7be4c|Aug 16, 2024
@@ -372,7 +372,7 @@ Libraries|[cpuinfo](http://github.com/pytorch/cpuinfo)|16bfc1622c6902d6f91d316ec
 Libraries|[discord_rpc](http://github.com/stenzek/discord-rpc)|144f3a3f1209994d8d9e8a87964a989cb9911c1e|Aug 02, 2024
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.5.0|Nov 01, 2023
 Libraries|[ffmpeg-python](http://github.com/kkroening/ffmpeg-python)|df129c7ba30aaa9ffffb81a48f53aa7253b0b4e6|Jul 11, 2022
-Libraries|[ffmpeg4](https://ffmpeg.org/releases)|4.4.5|N/A
+Libraries|[ffmpeg4](https://ffmpeg.org/releases)|4.4.5|Jul 29, 2024
 Libraries|[iir](http://github.com/berndporr/iir1)|1.9.5|Aug 12, 2024
 Libraries|[libcapsimage](http://github.com/simonowen/capsimage)|502015b6e117e7c52fd143025856f9b5b242b6d6|Sept 01, 2022
 Libraries|[libgme](http://github.com/libgme/game-music-emu)|0.6.3|Oct 03, 2023
@@ -515,7 +515,7 @@ Utils|[innoextract](http://github.com/dscharrer/innoextract)|1.9|Aug 09, 2020
 Utils|[jstest2](https://github.com/Grumbel/sdl-jstest)|60f6e62109e100b6ef363841b71c2e37ed714d01|Mar 31, 2024
 Utils|[l3afpad](http://github.com/stevenhoneyman/l3afpad)|16f22222116b78b7f6a6fd83289937cdaabed624|Feb 14, 2022
 Utils|[ledspicer](http://github.com/meduzapat/LEDSpicer)|0.6.3|Aug 07, 2024
-Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|12620c91eaca0917a7939a92ec33915cadf24475|N/A
+Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|12620c91eaca0917a7939a92ec33915cadf24475|Jun 15, 2024
 Utils|[od-commander](http://github.com/od-contrib/commander)|9aa39d7bcb5d0f6faadaf027a1539d14177a3c7c|Jul 16, 2024
 Utils|[pacman](https://sources.archlinux.org/other/pacman)|5.2.2|Jun 26, 2020
 Utils|[picade](http://github.com/pimoroni/picade-hat)|df02844c0cd773af5b908f47eac5fb1f7f361531|Mar 05, 2020

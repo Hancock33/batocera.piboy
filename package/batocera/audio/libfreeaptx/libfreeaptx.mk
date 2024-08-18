@@ -3,6 +3,7 @@
 # libfreeaptx
 #
 ################################################################################
+# Version: Commits on Aug 10, 2021
 LIBFREEAPTX_VERSION = c176b7de9c2017d0fc1877659cea3bb6c330aafa
 LIBFREEAPTX_SITE =  $(call github,iamthehorker,libfreeaptx,$(LIBFREEAPTX_VERSION))
 LIBFREEAPTX_LICENSE = GPLv2.1
