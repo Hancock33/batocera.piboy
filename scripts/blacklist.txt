@@ -9,12 +9,14 @@ firmware-rk3588.mk
 flatpak.mk
 kodi-pvr-freebox.mk
 lib32bit.mk
+libretro-scummvm.mk
 model2emu.mk
 noto-cjk-fonts.mk
 openbor6412.mk
 openbor7142.mk
 python-pyxel.mk
 ryujinx.mk
+scummvm.mk
 wine-ge.mk
 wine-native.mk
 wine-proton.mk
