@@ -1,16 +1,17 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|c9af09eca7e754954b873931b6ccbd75ca4ddfd3|Aug 18, 2024
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|3175214c920d1f6591625d7cd80ee573dd962e91|Aug 18, 2024
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|a9e327b2821195bcce3ff9c4b7f948c00d675186|Aug 18, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|dc69e5d027b392aeca47ee01bc3cfbf9ee1d5bfa|Aug 18, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-08-18|Aug 18, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|60256b0ebfcef62b81ba688ffe345dffff75393f|Aug 18, 2024
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|b14146b61c318166d3f91fc51bc98c5f32517a04|Aug 18, 2024
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|1c4328757882d83cd11a2c923ff74e9f01d922b4|Aug 18, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|0ad1e3d5855cdf8e3c4ee20f7d3ba5ebc20c2edd|Aug 18, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|c384d53d75bb082ecbbbd4741f9b9a340ee912a0|Aug 18, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|a2961eafd2b97fe24bdc720c10295671a4fd3506|Aug 18, 2024
-Ports|[fheroes2](http://github.com/ihhub/fheroes2)|9585796f59e991551db20e4d0cba504f63afa4e0|Aug 18, 2024
+Ports|[fheroes2](http://github.com/ihhub/fheroes2)|929e9b9cf37472f2031f6468b63f8e78d38dad25|Aug 18, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|27bfe27dc8c493cd6a16f58fbf08ed9d28377a69|Aug 18, 2024
+Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|3de370f3d51afb9245a9a47427f15713b758373a|Aug 18, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|95806c35f7dcb7c88b07ff2ba15e6e0077e8e69f|Aug 18, 2024
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|60256b0ebfcef62b81ba688ffe345dffff75393f|Aug 18, 2024
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|aa6ed14b2ab36c558c483bc1c88d7034a3c93402|Aug 18, 2024
@@ -34,7 +35,6 @@ Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.15.r128
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240817|Aug 17, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240817|Aug 17, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|4d18380956eaab3da9ccaf8a06043692b5d95cc5|Aug 17, 2024
-Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|a6c7b67d0d381fc01da0c5b074ccc2610849a472|Aug 17, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|a77738cbe9c75823f62a23e35bdfcf05e23d45b3|Aug 17, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|6061d402bdbd1a07d0ba43fe6db272365a309e9f|Aug 17, 2024
 Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|0ffe3391e8a963e6c6b7c178dd4f9d76a72dd5b6|Aug 17, 2024
@@ -42,7 +42,7 @@ Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|58ddbecc883896
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|ef702029d83af7d8cb22be9c9b9b10679ccbc436|Aug 17, 2024
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|c1e95b9d12ccc9efd0a122326990ba6768583311|Aug 16, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.93|Aug 16, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|bd5fd66408f51bd5d3bac822dfa13669387b0b46|Aug 16, 2024
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|fd6ebe28952fd99e319c6d06fb5c855bb17a742d|Aug 16, 2024
 Hardware|[pironman5](http://github.com/sunfounder/pironman5)|ede7d6c63ae50295f28a5b52eb1cc1d39fb7be4c|Aug 16, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|dcc5fdb446d0e907f70fff882fc7f082d3f18fa4|Aug 16, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|68757ea396267f0526ce4243edaf2a3ff4b372be|Aug 16, 2024
