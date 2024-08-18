@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-07-10 13:27+0300\n"
+"PO-Revision-Date: 2024-08-01 21:58+0300\n"
 "Last-Translator: Mihai Vasiliu <mihai.vasiliu.93@gmail.com>\n"
 "Language-Team: \n"
 "Language: ro_RO\n"
@@ -128,7 +128,7 @@ msgstr "Asigurat de nucleu"
 #. TRANSLATION: shared, shared, libretro/mesen, libretro/gambatte
 msgctxt "game_options"
 msgid "Custom"
-msgstr "Particularizat"
+msgstr "Personalizat"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -160,14 +160,14 @@ msgstr ""
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "AUTO SAVE/LOAD ON GAME LAUNCH"
-msgstr "SALVEAZĂ/ÎNCARCĂ AUTOMAT LA LANSAREA JOCULUI"
+msgstr "SALVEAZĂ/ÎNCARCĂ AUTOMAT LA LANSARE"
 
 #. TRANSLATION: shared, shared, shared
 msgctxt "game_options"
 msgid "GAME RENDERING & SHADERS"
 msgstr "RANDAREA JOCULUI ȘI SHADERE"
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, pcsx2
 msgctxt "game_options"
 msgid "SHADER SET"
 msgstr "PACHET DE SHADERE"
@@ -284,7 +284,7 @@ msgstr "CONTROLERE DE SISTEM"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "CUSTOM IMAGE"
-msgstr "IMAGINE PARTICULARIZATĂ"
+msgstr "IMAGINE PERSONALIZATĂ"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -294,7 +294,7 @@ msgstr "LOCAȚIA TATUAJELOR"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "CUSTOM .PNG IMAGE PATH"
-msgstr "CALE IMAGINE PARTICULARIZATĂ .PNG"
+msgstr "CALE IMAGINE PERSONALIZATĂ .PNG"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -1156,7 +1156,7 @@ msgstr "Pentru utilizarea cu pachete de texturi HD."
 #. TRANSLATION: libretro/mesen, citra, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "LOAD CUSTOM TEXTURES"
-msgstr "ÎNCARCĂ TEXTURI PARTICULARIZATE"
+msgstr "ÎNCARCĂ TEXTURI PERSONALIZATE"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -1667,7 +1667,7 @@ msgid ""
 "Use this to play online with custom servers that reimplement the "
 "discontinued Nintendo Wi-Fi."
 msgstr ""
-"Folosește asta pentru a juca online cu servere particularizate care "
+"Folosește asta pentru a juca online cu servere personalizate care "
 "reimplementează serviciul întrerupt Nintendo Wi-Fi."
 
 #. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds
@@ -2792,7 +2792,7 @@ msgstr "Ambele joystick-uri (4 axe, 4 butoane)"
 #. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Custom Keyboard Binds (best for Pad2Key)"
-msgstr "Asocieri tastatură particularizate (potrivite pentru Pad2Key)"
+msgstr "Asocieri tastatură personalizate (potrivite pentru Pad2Key)"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -3365,7 +3365,7 @@ msgctxt "game_options"
 msgid "USA"
 msgstr "SUA"
 
-#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, pcsx2, ...
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, redream, ...
 msgctxt "game_options"
 msgid "Europe"
 msgstr "Europa"
@@ -4409,13 +4409,13 @@ msgstr "Limbă BIOS"
 msgctxt "game_options"
 msgid "Use a custom MAME config, do not overwrite config on launch."
 msgstr ""
-"Folosește o configurație particularizată MAME, nu suprascrie configurația la "
+"Folosește o configurație personalizată MAME, nu suprascrie configurația la "
 "lansare."
 
 #. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
 msgid "CUSTOM CONFIG"
-msgstr "CONFIGURAȚIE PARTICULARIZATĂ"
+msgstr "CONFIGURAȚIE PERSONALIZATĂ"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
@@ -4642,12 +4642,12 @@ msgstr "Pornit la început"
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
 msgid "Enable per-game custom configuration via MAME menu."
-msgstr "Activează configurație particularizată per joc din meniul MAME."
+msgstr "Activează configurație personalizată per joc din meniul MAME."
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
 msgid "CUSTOM GAME CONFIG"
-msgstr "CONFIGURAȚIE PARTICULARIZATĂ JOC"
+msgstr "CONFIGURAȚIE PERSONALIZATĂ JOC"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -9289,7 +9289,7 @@ msgstr "Folosește setările controlerelor definite manual în custom.ini."
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "CUSTOM CONTROLLER"
-msgstr "CONTROLER PARTICULARIZAT"
+msgstr "CONTROLER PERSONALIZAT"
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -9443,7 +9443,7 @@ msgstr "OMITERE VBI"
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
-msgstr "Caută profile particularizate de configurare a joystick-urilor."
+msgstr "Caută profile personalizate de configurare a joystick-urilor."
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -9661,7 +9661,7 @@ msgstr ""
 #. TRANSLATION: dolphin, dolphin
 msgctxt "game_options"
 msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
-msgstr "PARTICULARIZEAZĂ TELECOMANDA WII EMULATĂ ȘI GAMEPAD"
+msgstr "PERSONALIZEAZĂ TELECOMANDA WII EMULATĂ ȘI GAMEPAD"
 
 #. TRANSLATION: dolphin, dolphin
 msgctxt "game_options"
@@ -10951,6 +10951,41 @@ msgstr "Simplu 2x"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
+msgid "scanlines"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "diagonal filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "triangular filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "wave filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "lottes crt"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "4xrgss"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "nxagss"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
@@ -11249,10 +11284,15 @@ msgctxt "game_options"
 msgid "Unscaled (Default)"
 msgstr "Nescalat (implicit)"
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Basic (Recommended)"
-msgstr "De bază (Recomandat)"
+msgid "Scaled"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Force 32bit"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11272,6 +11312,11 @@ msgstr "ACURATEȚE CONTOPIRE"
 msgctxt "game_options"
 msgid "Minimum"
 msgstr "Minimă"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Basic (Recommended)"
+msgstr "De bază (Recomandat)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11306,21 +11351,6 @@ msgstr "Parțială"
 msgctxt "game_options"
 msgid "Full (Hash Cache)"
 msgstr "Întreagă (Cache cu hash)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "Choose PS2 Bios to use (USA Recommended)"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "PS2 BIOS"
-msgstr ""
-
-#. TRANSLATION: pcsx2, redream
-msgctxt "game_options"
-msgid "USA (Default)"
-msgstr "SUA (Implicit)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -12474,6 +12504,11 @@ msgstr "LLE"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
+msgid "USA (Default)"
+msgstr "SUA (Implicit)"
+
+#. TRANSLATION: redream
+msgctxt "game_options"
 msgid "Choose the Dreamcast console language."
 msgstr "Alege limba consolei Dreamcast."
 
@@ -12892,7 +12927,7 @@ msgstr "Setează controalele pentru sistem din meniul MAME"
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "CUSTOM MAME CONFIG"
-msgstr "CONFIGURAȚIE MAME PARTICULARIZATĂ"
+msgstr "CONFIGURAȚIE MAME PERSONALIZATĂ"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -12906,6 +12941,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "PLUGIN DATE"
+
+#. TRANSLATION: mame
+msgctxt "game_options"
+msgid "When moving"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -14818,8 +14858,8 @@ msgid ""
 "is set to true. You also don't have to worry about money."
 msgstr ""
 "Construcție liberă sau mod Sandbox. Nu poți câștiga sau pierde hărți "
-"particularizate dacă este setat pe adevărat. De asemenea nu trebuie să-ți "
-"faci griji pentru bani."
+"personalizate dacă este setat pe adevărat. De asemenea nu trebuie să-ți faci "
+"griji pentru bani."
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
@@ -15424,7 +15464,7 @@ msgstr "ECRAN ÎNTREG UNIC"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Enable the custom values below."
-msgstr "Activează valorile particularizate de mai jos."
+msgstr "Activează valorile personalizate de mai jos."
 
 #. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
 msgctxt "game_options"
@@ -15434,7 +15474,7 @@ msgstr "AMPLASAMENT ECRAN FIZIC"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "ENABLE CUSTOM DISPLAY PHYSICAL SETUP"
-msgstr "ACTIVEAZĂ PARTICULARIZARE AMPLASAMENT ECRAN"
+msgstr "ACTIVEAZĂ PERSONALIZARE AMPLASAMENT ECRAN"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -16232,7 +16272,7 @@ msgstr "Ieși din emulator folosind SDL"
 #. TRANSLATION: mame.keys
 msgctxt "keys_files"
 msgid "Exit Emulator"
-msgstr ""
+msgstr "Ieși din emulator"
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -17090,25 +17130,6 @@ msgstr "Salvare rapidă"
 #~ msgstr "5 Sideway Wiimote"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "Folosește asocieri de intrare alternative. Se aplică doar pentru "
-#~ "controlerele standard."
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "ASOCIERI DE INTRARE ALTERNATIVE"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "Butoane frontale (orar)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "Butoane frontale (anti-orar)"
-
-#~ msgctxt "game_options"
 #~ msgid "Determines the speed and the runahead behaviour of the system."
 #~ msgstr "Determină viteza și comportamentul sistemului la pre-rulare."
 
@@ -17329,18 +17350,6 @@ msgstr "Salvare rapidă"
 #~ "Setează rata de reîmprospătare maximă dorită când Vsync este dezactivat."
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Deschide meniul Dolphin-triforce"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Încarcă starea din slotul 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Salvează starea în slotul 1"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad Sus"
 
@@ -17435,6 +17444,37 @@ msgstr "Salvare rapidă"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Derulare rapidă"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Deschide meniul Dolphin-triforce"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Încarcă starea din slotul 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Salvează starea în slotul 1"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Folosește asocieri de intrare alternative. Se aplică doar pentru "
+#~ "controlerele standard."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "ASOCIERI DE INTRARE ALTERNATIVE"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Butoane frontale (orar)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Butoane frontale (anti-orar)"
 
 #~ msgctxt "game_options"
 #~ msgid "Enable or disable monsters in battle."

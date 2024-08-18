@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index ce5d64715f..c34f3e962c 100644
+index 7ca6679f28..28ea784505 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -800,7 +800,7 @@ if(APPLE)
+@@ -794,7 +794,7 @@ if(APPLE)
    endif()
  endif()
  

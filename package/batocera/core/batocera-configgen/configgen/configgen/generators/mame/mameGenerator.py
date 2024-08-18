@@ -85,13 +85,13 @@ class MameGenerator(Generator):
         # A lot more options can be configured, just run mame -showusage and have a look
         commandArray += [ "-skip_gameinfo" ]
         if messMode == -1:
-            commandArray += [ "-rompath",      romDirname + ";/userdata/bios/mame/;/userdata/bios/" ]
+            commandArray += [ "-rompath", f'"{romDirname};/userdata/bios/mame/;/userdata/bios/"' ]
         else:
             if softList in subdirSoftList:
-                commandArray += [ "-rompath",      romDirname + ";/userdata/bios/mame/;/userdata/bios/;/userdata/roms/mame/;/var/run/mame_software/" ]
+                commandArray += [ "-rompath", f'"{romDirname};/userdata/bios/mame/;/userdata/bios/;/userdata/roms/mame/;/var/run/mame_software/"' ]
             else:
-                commandArray += [ "-rompath",      romDirname + ";/userdata/bios/mame/;/userdata/bios/;/userdata/roms/mame/" ]
-
+                commandArray += [ "-rompath", f'"{romDirname};/userdata/bios/mame/;/userdata/bios/;/userdata/roms/mame/"' ]
+        
         # MAME various paths we can probably do better
         commandArray += [ "-bgfx_path",    "/usr/bin/mame/bgfx/" ]          # Core bgfx files can be left on ROM filesystem
         commandArray += [ "-fontpath",     "/usr/bin/mame/" ]               # Fonts can be left on ROM filesystem
@@ -750,7 +750,7 @@ class MameGenerator(Generator):
         if gunsBordersSize is not None:
             output_png_file = "/tmp/bezel_gunborders.png"
             innerSize, outerSize = bezelsUtil.gunBordersSize(gunsBordersSize)
-            borderSize = bezelsUtil.gunBorderImage(tmpZipDir + "/" + pngFile, None, output_png_file, innerSize, outerSize, bezelsUtil.gunsBordersColorFomConfig(system.config))
+            borderSize = bezelsUtil.gunBorderImage(tmpZipDir + "/" + pngFile, output_png_file, None, innerSize, outerSize, bezelsUtil.gunsBordersColorFomConfig(system.config))
             try:
                 os.remove(tmpZipDir + "/" + pngFile)
             except:

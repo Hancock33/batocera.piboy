@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v40b(2024/06/05)\n"
+"Project-Id-Version: batocera-es v40b(2024/07/31)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-06-05 23:29+0900\n"
+"PO-Revision-Date: 2024-07-31 13:04+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -163,7 +163,7 @@ msgctxt "game_options"
 msgid "GAME RENDERING & SHADERS"
 msgstr "ゲーム レンダリング & シェーダー"
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, pcsx2
 msgctxt "game_options"
 msgid "SHADER SET"
 msgstr "シェーダー設定"
@@ -327,12 +327,12 @@ msgstr "AIゲーム翻訳サービスを有効"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "The language to translate into."
-msgstr "翻訳する言語を選択します"
+msgstr "翻訳して表示する言語を選択します"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "TARGET LANGUAGE"
-msgstr "対象言語"
+msgstr "翻訳表示言語"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -1346,8 +1346,8 @@ msgid ""
 "Select language will be used if 'Use Firmware Settings' is disabled or if "
 "firmware file was not found."
 msgstr ""
-"[ファームウェア設定を使用] が無効の場合、またはファームウェア ファイルが見つ"
-"からない場合は、使用する言語を選択します"
+"[ファームウェア設定を使用] が無効、またはファームウェア ファイルが見つからな"
+"い場合は、使用する言語を選択します"
 
 #. TRANSLATION: libretro/melonds, libretro/melondsds, libretro/dolphin, libretro/flycast, libretro/kronos, ...
 msgctxt "game_options"
@@ -3329,7 +3329,7 @@ msgctxt "game_options"
 msgid "USA"
 msgstr "USA"
 
-#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, pcsx2, ...
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, redream, ...
 msgctxt "game_options"
 msgid "Europe"
 msgstr "ヨーロッパ"
@@ -10853,6 +10853,41 @@ msgstr "シンプル 2x"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
+msgid "scanlines"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "diagonal filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "triangular filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "wave filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "lottes crt"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "4xrgss"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "nxagss"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
@@ -11149,10 +11184,15 @@ msgctxt "game_options"
 msgid "Unscaled (Default)"
 msgstr "スケーリングなし (標準)"
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Basic (Recommended)"
-msgstr "基本(推奨)"
+msgid "Scaled"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Force 32bit"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11170,6 +11210,11 @@ msgstr "ブレンディング精度"
 msgctxt "game_options"
 msgid "Minimum"
 msgstr "最低"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Basic (Recommended)"
+msgstr "基本(推奨)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11202,21 +11247,6 @@ msgstr "部分的"
 msgctxt "game_options"
 msgid "Full (Hash Cache)"
 msgstr "フル (ハッシュキャッシュ)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "Choose PS2 Bios to use (USA Recommended)"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "PS2 BIOS"
-msgstr ""
-
-#. TRANSLATION: pcsx2, redream
-msgctxt "game_options"
-msgid "USA (Default)"
-msgstr "USA (標準)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -12353,6 +12383,11 @@ msgstr "LLE"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
+msgid "USA (Default)"
+msgstr "USA (標準)"
+
+#. TRANSLATION: redream
+msgctxt "game_options"
 msgid "Choose the Dreamcast console language."
 msgstr "ドリームキャストのコンソール言語を選択します"
 
@@ -12773,6 +12808,11 @@ msgstr "ゲーム履歴、セットアップ手順、必殺技コマンドなど
 msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "データ プラグイン"
+
+#. TRANSLATION: mame
+msgctxt "game_options"
+msgid "When moving"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -15954,7 +15994,7 @@ msgstr "ロックバー発射ボタン"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Buy extraball for a credit"
-msgstr "クレジットでボールを購入"
+msgstr "ボールを購入"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -16074,7 +16114,7 @@ msgstr "SDL を使用してエミュレータを終了"
 #. TRANSLATION: mame.keys
 msgctxt "keys_files"
 msgid "Exit Emulator"
-msgstr ""
+msgstr "エミュレータを終了"
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -16921,25 +16961,6 @@ msgstr "クイック セーブ"
 #~ msgstr "5 横向きWiiリモコン"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "代替の入力マッピングを使用します。標準コントローラ タイプにのみ適用されま"
-#~ "す"
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "ALT 入力マッピング"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "表ボタン（時計回り)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "表ボタン（反時計回り）"
-
-#~ msgctxt "game_options"
 #~ msgid "Determines the speed and the runahead behaviour of the system."
 #~ msgstr "システムの速度と先読み動作を決定します"
 
@@ -17144,18 +17165,6 @@ msgstr "クイック セーブ"
 #~ msgstr "Vsync がオフの場合に、希望の最大リフレッシュ レートを設定します"
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Dolphin-triforce　メニューを開く"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "ステートロード - スロット  1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "ステートセーブ - スロット  1"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad 上"
 
@@ -17250,6 +17259,37 @@ msgstr "クイック セーブ"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Dolphin-triforce　メニューを開く"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "ステートロード - スロット  1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "ステートセーブ - スロット  1"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "代替の入力マッピングを使用します。標準コントローラ タイプにのみ適用されま"
+#~ "す"
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "ALT 入力マッピング"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "表ボタン（時計回り)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "表ボタン（反時計回り）"
 
 #~ msgctxt "game_options"
 #~ msgid "Enable or disable monsters in battle."

@@ -69,7 +69,7 @@ def generateMAMEConfigs(playersControllers, system, rom, guns):
         else:
             commandLine += [ romDrivername ]
         commandLine += [ '-cfg_directory', cfgPath ]
-        commandLine += [ '-rompath', romDirname + ';/userdata/bios/mame/;/userdata/bios/' ]
+        commandLine += [ '-rompath', f'"{romDirname};/userdata/bios/mame/;/userdata/bios/"' ]
         pluginsToLoad = []
         if not (system.isOptSet("hiscoreplugin") and system.getOptBoolean("hiscoreplugin") == False):
             pluginsToLoad += [ "hiscore" ]
@@ -127,7 +127,7 @@ def generateMAMEConfigs(playersControllers, system, rom, guns):
                 os.makedirs(cfgPath)
             commandLine += [ romDrivername ]
             commandLine += [ '-cfg_directory', cfgPath ]
-            commandLine += [ '-rompath', romDirname + ";/userdata/bios/" ]
+            commandLine += [ '-rompath', f'"{romDirname};/userdata/bios/"' ]
         else:
             # Command line for MESS consoles/computers
             # TI-99 32k RAM expansion & speech modules
@@ -199,7 +199,7 @@ def generateMAMEConfigs(playersControllers, system, rom, guns):
                     commandLine += [ os.path.basename(romDirname) ]
                 else:
                     commandLine += [ romDrivername ]
-                commandLine += [ "-rompath", softDir + ";/userdata/bios/" ]
+                commandLine += [ "-rompath", f'"{softDir};/userdata/bios/"' ]
                 commandLine += [ "-swpath", softDir ]
                 commandLine += [ "-verbose" ]
             else:
@@ -263,7 +263,7 @@ def generateMAMEConfigs(playersControllers, system, rom, guns):
                     commandLine += [ f'"{rom}"' ]
 
                 commandLine += [ "-rompath", romDirname + ";/userdata/bios/" ]
-
+ 
                 # Boot disk for Macintosh
                 # Will use Floppy 1 or Hard Drive, depending on the disk.
                 if system.name == "macintosh" and system.isOptSet("bootdisk"):

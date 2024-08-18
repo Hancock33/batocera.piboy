@@ -3,12 +3,12 @@
 # mangohud
 #
 ################################################################################
-# Version: Commits from Jun 15, 2024
+# Version: Commits on Jun 15, 2024
 MANGOHUD_VERSION = 12620c91eaca0917a7939a92ec33915cadf24475
 MANGOHUD_SITE =  $(call github,flightlessmango,MangoHud,$(MANGOHUD_VERSION))
 MANGOHUD_BRANCH = simple-image-loader
 
-MANGOHUD_DEPENDENCIES = host-libcurl host-python-mako host-glslang dbus
+MANGOHUD_DEPENDENCIES = host-libcurl host-python-mako host-glslang dbus json-for-modern-cpp
 
 ifeq ($(BR2_PACKAGE_LIBDRM),y)
 	MANGOHUD_DEPENDENCIES += libdrm

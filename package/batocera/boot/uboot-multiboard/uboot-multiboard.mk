@@ -3,6 +3,7 @@
 # uboot-multiboard
 #
 ################################################################################
+# Version: Commits on Jan 08, 2024
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_H6)$(BR2_PACKAGE_BATOCERA_TARGET_H616),y)
 UBOOT_MULTIBOARD_VERSION = 2024.01
 else

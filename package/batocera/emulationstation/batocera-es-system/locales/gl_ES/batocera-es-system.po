@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-06-25 14:15+0200\n"
+"PO-Revision-Date: 2024-07-16 21:42+0200\n"
 "Last-Translator: \n"
 "Language-Team: Galician\n"
 "Language: gl_ES\n"
@@ -115,7 +115,7 @@ msgstr "RELACIÓN DE ASPECTO DO XOGO"
 #. TRANSLATION: shared, libretro/hatarib
 msgctxt "game_options"
 msgid "Full"
-msgstr "Cheo"
+msgstr "Completo"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -174,7 +174,7 @@ msgctxt "game_options"
 msgid "GAME RENDERING & SHADERS"
 msgstr "RENDERIZACIÓN DE XOGOS E SOMBREADOS"
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, pcsx2
 msgctxt "game_options"
 msgid "SHADER SET"
 msgstr "CONXUNTO DE SOMBREADOS"
@@ -271,12 +271,12 @@ msgstr "INFERIOR ESQUERDA (SW)"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Show an image overlaid on top of the bezel."
-msgstr "Mostra unha imaxe superposta na Sobre o bisel."
+msgstr "Amosa unha imaxe superposta na Sobre o bisel."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "SHOW TATTOO OVER BEZEL"
-msgstr "MOSTRA TATUAXE SOBRE O BISEL"
+msgstr "AMOSA TATUAXE SOBRE O BISEL"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -442,7 +442,7 @@ msgstr "PISTOLAS ÓPTICAS"
 #. TRANSLATION: shared, shared, shared, shared, shared, ...
 msgctxt "game_options"
 msgid "CONTROLS"
-msgstr ""
+msgstr "MANDOS"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -2134,7 +2134,7 @@ msgstr "6x 4K (3840x3168)"
 #. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
 msgid "Wii NAND's language setting."
-msgstr "Configuración dA LINGUA de Wii NAND."
+msgstr "Configuración do idioma de Wii NAND."
 
 #. TRANSLATION: libretro/dolphin, cemu, dolphin, play, suyu, ...
 msgctxt "game_options"
@@ -3065,7 +3065,7 @@ msgstr "Rato PlayStation"
 #. TRANSLATION: libretro/swanstation, libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, ...
 msgctxt "game_options"
 msgid "SHOW LIGHT GUN CROSSHAIRS"
-msgstr "MOSTRA MIRILLA DA PISTOLA ÓPTICA"
+msgstr "AMOSA MIRILLA DA PISTOLA ÓPTICA"
 
 #. TRANSLATION: libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, ...
 msgctxt "game_options"
@@ -3367,7 +3367,7 @@ msgctxt "game_options"
 msgid "USA"
 msgstr "USA"
 
-#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, pcsx2, ...
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, redream, ...
 msgctxt "game_options"
 msgid "Europe"
 msgstr "Europa"
@@ -3389,7 +3389,7 @@ msgstr ""
 #. TRANSLATION: libretro/flycast, flycast/dolphin
 msgctxt "game_options"
 msgid "BIOS LANGUAGE"
-msgstr "LINGUAXE DA BIOS"
+msgstr "IDIOMA DA BIOS"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/quasi88, flycast/dolphin
 msgctxt "game_options"
@@ -3892,37 +3892,37 @@ msgstr "CONFIGURACIÓN DO MANDO 4"
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad Auto"
-msgstr "Joypad Auto"
+msgstr "Mando Básico Auto"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, libretro/picodrive
 msgctxt "game_options"
 msgid "Joypad 3 Button"
-msgstr "Joypad 3 Botóns"
+msgstr "Mando Básico 3 Botóns"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, libretro/picodrive
 msgctxt "game_options"
 msgid "Joypad 6 Button"
-msgstr "Joypad 6 Botóns"
+msgstr "Mando Básico 6 Botóns"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad 3 Button + 4-WayPlay"
-msgstr "Joypad 3 botóns + 4-WayPlay"
+msgstr "Mando Básico 3 botóns + 4-WayPlay"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad 6 Button + 4-WayPlay"
-msgstr "Joypad 6 botóns + 4-WayPlay"
+msgstr "Mando Básico 6 botóns + 4-WayPlay"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad 3 Button + Teamplayer"
-msgstr "Joypad 3 Botóns + Teamplayer"
+msgstr "Mando Básico 3 Botóns + Teamplayer"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad 6 Button + Teamplayer"
-msgstr "Joypad 6 Botóns + Teamplayer"
+msgstr "Mando Básico 6 Botóns + Teamplayer"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/snes9x
 msgctxt "game_options"
@@ -4016,12 +4016,12 @@ msgstr "Compatibilidade coa saída de son mellorada para xogos compatibles."
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad 2 Button"
-msgstr "Joypad 2 Botóns"
+msgstr "Mando Básico 2 Botóns"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad 2 Button + Master Tap"
-msgstr "Joypad 2 Botóns + Master Tap"
+msgstr "Mando Básico 2 Botóns + Master Tap"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
@@ -4265,7 +4265,7 @@ msgid ""
 "software does not display anything in it."
 msgstr ""
 "Os monitores Atari ST tiñan un bordo visible arredor da área da pantalla "
-"principal, pero a maioría do software non mostraba nada nel."
+"principal, pero a maioría do software non Amosaba nada nel."
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -4405,7 +4405,7 @@ msgstr "Escolla o idioma da BIOS do sistema."
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
 msgid "BIOS Language"
-msgstr "Linguaxe da BIOS"
+msgstr "Idioma da BIOS"
 
 #. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -6272,7 +6272,7 @@ msgstr "JAST SOUND"
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
 msgid "Emulate a keyboard/mouse/joypad."
-msgstr "Emular un teclado/rato/joypad."
+msgstr "Emular un teclado/rato/Mando Básico."
 
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
@@ -6307,7 +6307,7 @@ msgstr "Teclado manual"
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
 msgid "Atari Joypad"
-msgstr "Joypad Atari"
+msgstr "Mando Básico Atari"
 
 #. TRANSLATION: libretro/o2em
 msgctxt "game_options"
@@ -6597,7 +6597,7 @@ msgstr "N64 3 puntos"
 #. TRANSLATION: libretro/pce, libretro/pce_fast
 msgctxt "game_options"
 msgid "PCE Joypad"
-msgstr "Joypad PCE"
+msgstr "Mando Básico PCE"
 
 #. TRANSLATION: libretro/pce, libretro/pce_fast
 msgctxt "game_options"
@@ -7199,7 +7199,7 @@ msgstr "Seleccione o tipo de mando para Amiga P1."
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, ...
 msgctxt "game_options"
 msgid "CD32 Pad"
-msgstr "Pad CD32"
+msgstr "Mando CD32"
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
@@ -7425,7 +7425,7 @@ msgstr "Aplícar a ambos os xogadores."
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
 msgid "JOYPAD TYPE"
-msgstr "TIPO DE JOYPAD"
+msgstr "TIPO DE MANDO BÁSICO"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -8110,7 +8110,7 @@ msgstr "PORTO DO MANDO"
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
 msgid "Paddles"
-msgstr "Paddles"
+msgstr "Pas"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
@@ -8812,12 +8812,12 @@ msgstr "Non todos os xogos admiten todas as linguas."
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "CONSOLE LANGUAGE"
-msgstr "LINGUAXE DA CONSOLA"
+msgstr "IDIOMA DA CONSOLA"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Current language"
-msgstr "Lingua actual"
+msgstr "Idioma actual"
 
 #. TRANSLATION: cemu, sonic2013, suyu, ryujinx, xenia, ...
 msgctxt "game_options"
@@ -8990,8 +8990,8 @@ msgid ""
 "Enable gamepad view for games that have interaction across two screens. Use "
 "Hotkey+R2 to switch screens."
 msgstr ""
-"Activa a vista do gamepad para xogos que teñen interacción en dúas "
-"pantallas. Use a tecla de atallo + R2 para cambiar de pantalla."
+"Activa a vista do mando para xogos que teñen interacción en dúas pantallas. "
+"Use a tecla de atallo + R2 para cambiar de pantalla."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -9206,56 +9206,58 @@ msgid ""
 "Enable or disable bezels being added when content is a 4:3 aspect with a "
 "widescreen display."
 msgstr ""
+"Activa ou desactiva os biseis que se engaden cando o contido ten un aspecto "
+"4:3 cunha pantalla panorámica."
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "BEZELS"
-msgstr ""
+msgstr "BISEIS"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 2"
-msgstr ""
+msgstr "Desviador 2"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 3"
-msgstr ""
+msgstr "Desviador 3"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 4"
-msgstr ""
+msgstr "Desviador 4"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 5"
-msgstr ""
+msgstr "Desviador 5"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 6"
-msgstr ""
+msgstr "Desviador 6"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 7"
-msgstr ""
+msgstr "Desviador 7"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 8"
-msgstr ""
+msgstr "Desviador 8"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 9"
-msgstr ""
+msgstr "Desviador 9"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Shunt 10"
-msgstr ""
+msgstr "Desviador 10"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -9328,6 +9330,8 @@ msgid ""
 "Compile shaders on next launch of game (one time). Reduces micro-freezes. "
 "Vulkan only."
 msgstr ""
+"Compila sombreadores no próximo lanzamento do xogo (unha vez). Reduce as "
+"microconxelacións.Só Vulkan."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9345,6 +9349,7 @@ msgid ""
 "Use SSAA instead of MSAA for anti-aliasing. SSAA may look better but has a "
 "higher performance cost."
 msgstr ""
+"Usa SSAA en lugar de MSAA para o anti-aliasing. SSAA pode parecer mellor."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9445,7 +9450,7 @@ msgstr "BuscaR perfís de joystick configurados personalizados."
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
 msgid "USE PAD PROFILES"
-msgstr "UTILIZA PERFILES DE PAD"
+msgstr "EMPREGA PERFÍS DE MANDO"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9460,7 +9465,7 @@ msgstr "Cambia o que está conectado aos portos virtuais de GameCube."
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 1"
-msgstr ""
+msgstr "MANDO GAMECUBE 1"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9495,7 +9500,7 @@ msgstr "DK Bongos"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 2"
-msgstr ""
+msgstr "MANDO GAMECUBE 2"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9505,7 +9510,7 @@ msgstr "GAMECUBE TIPO DE PORTO 2"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 3"
-msgstr ""
+msgstr "MANDO GAMECUBE 3"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9515,7 +9520,7 @@ msgstr "GAMECUBE TIPO DE PORTO 3"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 4"
-msgstr ""
+msgstr "MANDO GAMECUBE 4"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9624,7 +9629,7 @@ msgstr "Cambia a lingua do sistema Gamecube."
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "GAMECUBE LANGUAGE"
-msgstr "LINGUAXE GAMECUBE"
+msgstr "IDIOMA GAMECUBE"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9639,7 +9644,7 @@ msgstr "Asigne o seu mando a un Wiimote emulado."
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
 msgctxt "game_options"
 msgid "WII CONTROLLERS"
-msgstr ""
+msgstr "MANDOS WII"
 
 #. TRANSLATION: dolphin, dolphin
 msgctxt "game_options"
@@ -9802,7 +9807,7 @@ msgstr "SINCRONIZACIÓN COA FRECUENCIA DE ACTUALIZACIÓN DO HOST"
 msgctxt "game_options"
 msgid "Ensure every frame the console renders is displayed to screen."
 msgstr ""
-"Asegura de que cada fotograma que renderiza a consola se mostra na pantalla."
+"Asegura de que cada fotograma que renderiza a consola se Amosa na pantalla."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -9990,7 +9995,8 @@ msgstr "A precarga require máis memoria RAM."
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Use Analog joysticks in addition to D-Pad for DualShock controllers."
-msgstr "Use joysticks analóxicos ademais do D-Pad para os mandos DualShock."
+msgstr ""
+"Use joysticks analóxicos ademais do D-cruceta para os mandos DualShock."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -10127,7 +10133,7 @@ msgstr "Predeterminado do xogo"
 #. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "AUTO LOAD ON GAME LAUNCH"
-msgstr ""
+msgstr "CARGA AUTOMÁTICA AO COMEZAR O XOGO"
 
 #. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
@@ -10268,7 +10274,7 @@ msgstr "COR MIRILLA DO XOGADOR 4"
 #. TRANSLATION: fpinball
 msgctxt "game_options"
 msgid "Allow mapping Future Pinball with Pad to Keyboard."
-msgstr "Permitir asignar Future Pinball con Pad a teclado."
+msgstr "Permitir configurar Future Pinball con mando a teclado."
 
 #. TRANSLATION: fpinball
 msgctxt "game_options"
@@ -10942,6 +10948,41 @@ msgstr "Simple 2x"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
+msgid "scanlines"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "diagonal filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "triangular filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "wave filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "lottes crt"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "4xrgss"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "nxagss"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
@@ -11037,7 +11078,7 @@ msgid ""
 "Smooths the overall picture as it is displayed on the screen. Corrects "
 "positioning between pixels."
 msgstr ""
-"Suaviza a imaxe xeral tal como se mostra na pantalla. Corrixe o "
+"Suaviza a imaxe xeral tal como se amosa na pantalla. Corrixe o "
 "posicionamento entre píxeles."
 
 #. TRANSLATION: pcsx2, model2emu
@@ -11241,10 +11282,15 @@ msgctxt "game_options"
 msgid "Unscaled (Default)"
 msgstr "Sen escalar (predeterminada)"
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Basic (Recommended)"
-msgstr "Básico (recomendado)"
+msgid "Scaled"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Force 32bit"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11267,8 +11313,13 @@ msgstr "Mínimo"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
+msgid "Basic (Recommended)"
+msgstr "Básico (recomendado)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Full (Slow)"
-msgstr "Cheo (lento)"
+msgstr "Completo (lento)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11301,24 +11352,9 @@ msgstr "Completo (caché hash)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Choose PS2 Bios to use (USA Recommended)"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "PS2 BIOS"
-msgstr ""
-
-#. TRANSLATION: pcsx2, redream
-msgctxt "game_options"
-msgid "USA (Default)"
-msgstr "EUA (predeterminado)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
 msgid "Some games have issues when the animation is shown, others require it."
 msgstr ""
-"Algúns xogos teñen problemas cando se mostra a animación, outros o requiren."
+"Algúns xogos teñen problemas cando se amosa a animación, outros o requiren."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -12461,6 +12497,11 @@ msgstr "LLE"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
+msgid "USA (Default)"
+msgstr "EUA (predeterminado)"
+
+#. TRANSLATION: redream
+msgctxt "game_options"
 msgid "Choose the Dreamcast console language."
 msgstr "Escolla o idioma da consola Dreamcast."
 
@@ -12560,6 +12601,9 @@ msgid ""
 "use a value larger than 100%% so that the steering feels less sensitive on a "
 "thumbstick."
 msgstr ""
+"Para xogar con xogos de condución cun mando, ás veces é unha boa idea "
+"utilizar un valor superior a 100%% so para que a dirección sexa menos "
+"sensible nun stick."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -12891,6 +12935,11 @@ msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "COMPLEMENTO DE DATOS"
 
+#. TRANSLATION: mame
+msgctxt "game_options"
+msgid "When moving"
+msgstr ""
+
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -13117,7 +13166,7 @@ msgstr "ACTIVAR A DEPURACIÓN"
 #. TRANSLATION: solarus
 msgctxt "game_options"
 msgid "Choose which pad to control your hero."
-msgstr "Escolle que pad controlará o teu heroe."
+msgstr "Escolle cal mando controlará ao teu heroe."
 
 #. TRANSLATION: solarus
 msgctxt "game_options"
@@ -13127,7 +13176,7 @@ msgstr "ELECCIÓN DE CONTROL"
 #. TRANSLATION: solarus
 msgctxt "game_options"
 msgid "Joypad"
-msgstr "Joypad"
+msgstr "Mando Básico (Joypad)"
 
 #. TRANSLATION: solarus
 msgctxt "game_options"
@@ -13142,7 +13191,7 @@ msgstr "Pau dereito"
 #. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "Can improve frame rates and responsiveness."
-msgstr "Pode mellorar as taxas de cadros e a capacidade de resposta."
+msgstr "Pode mellorar as taxas de fotogramas e a capacidade de resposta."
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
@@ -13381,7 +13430,7 @@ msgstr "Acceso a modding e outras opcións avanzadas."
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
 msgid "DEV MENU"
-msgstr "MENÚ DESENROLADOR"
+msgstr "MENÚ DESENVOLVEDOR"
 
 #. TRANSLATION: soniccd
 msgctxt "game_options"
@@ -15122,7 +15171,7 @@ msgstr "CONFIGURACIÓN EXPERTOS"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "PER TABLE FOLDER"
-msgstr "CARPETA POR MESA"
+msgstr "CARTAFOL POR MESA"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15176,7 +15225,7 @@ msgid ""
 "Fix screen tearing. Adaptive Sync (Default) synchronizes on video sync, "
 "except for late frames (below target FPS) which are displayed immediately."
 msgstr ""
-"CorrixE o rasPado da pantalla. A sincronización adaptativa (predeterminada) "
+"CorrixE o raspado da pantalla. A sincronización adaptativa (predeterminada) "
 "sincronízase na sincronización de vídeo, excepto nos fotogramas atrasados "
 "(por debaixo do FPS de destino) que se amosan inmediatamente."
 
@@ -15324,7 +15373,7 @@ msgid ""
 "Upright glass panel displaying some illuminated artwork. By default, "
 "settings come from the VPinballX.ini configuration file."
 msgstr ""
-"Panel de vidro vertical que mostra algunhas obras de arte iluminadas. Por "
+"Panel de vidro vertical que amosa algunhas obras de arte iluminadas. Por "
 "defecto, a configuración procede do ficheiro de configuración VPinballX.ini."
 
 #. TRANSLATION: vpinball
@@ -15516,7 +15565,7 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "USE JOYPAD SOUTH BUTTON TO ADD CREDIT"
-msgstr "USE O BOTÓN SUR DO MANDO PARA ENGADIR CRÉDITO"
+msgstr "USE O BOTÓN SUR DO MANDO BÁSICO PARA ENGADIR CRÉDITO"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -16161,7 +16210,7 @@ msgstr "Saír de Dosbox-X"
 #. TRANSLATION: wiiu.keys
 msgctxt "keys_files"
 msgid "Display the controller screen"
-msgstr "Mostra a pantalla do mando"
+msgstr "Amosa a pantalla do mando"
 
 #. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys
 msgctxt "keys_files"
@@ -16511,7 +16560,7 @@ msgstr "Iniciar / Válidar"
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Shows or hides the menu bar"
-msgstr "Mostra ou oculta a barra de menú"
+msgstr "Amosa ou oculta a barra de menú"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -16591,7 +16640,7 @@ msgstr "Establece a velocidade normal"
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Show the cheat menu"
-msgstr "Mostra o menú de trucos"
+msgstr "Amosa o menú de trucos"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -17079,25 +17128,6 @@ msgstr "Gardado rápido"
 #~ msgstr "5 Sideway Wiimote"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "Usa mapas de entrada alternativos. Só se aplica ao tipo de controlador "
-#~ "estándar."
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "MAPEO ALTERNATIVO"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "Botóns da cara (CW)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "Botóns Frontais (CCW)"
-
-#~ msgctxt "game_options"
 #~ msgid "Determines the speed and the runahead behaviour of the system."
 #~ msgstr "Determina a velocidade e o comportamento do sistema."
 
@@ -17136,7 +17166,7 @@ msgstr "Gardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."
 #~ msgstr ""
-#~ "Mostra información en pantalla como partidas gardadas, aviso de "
+#~ "Amosa información en pantalla como partidas gardadas, aviso de "
 #~ "configuración, etc..."
 
 #~ msgctxt "game_options"
@@ -17318,18 +17348,6 @@ msgstr "Gardado rápido"
 #~ "desactivado."
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Abre o menú de Dolphin-triforce"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Rañura de estado de carga 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Gardar o estado 1"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad arriba"
 
@@ -17425,6 +17443,18 @@ msgstr "Gardado rápido"
 #~ msgid "FastForward"
 #~ msgstr "Avance rápido"
 
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Abre o menú de Dolphin-triforce"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Rañura de estado de carga 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Gardar o estado 1"
+
 #~ msgctxt "game_options"
 #~ msgid "Enable or disable monsters in battle."
 #~ msgstr "Activa ou desactiva os monstros na batalla."
@@ -17434,27 +17464,27 @@ msgstr "Gardado rápido"
 #~ msgstr "MONSTROS"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use with the stretch aspect ratio and adjust joystick sensitivity as "
-#~ "required."
-#~ msgstr ""
-#~ "Use a relación de aspecto estirable e axuste a sensibilidade do joystick "
-#~ "segundo sexa necesario."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Compile shaders on next launch of game (one time). Reduces micro-freezes."
-#~ msgstr ""
-#~ "Compila sombreadores no próximo lanzamento do xogo (unha vez). Reduce as "
-#~ "microconxelacións."
-
-#~ msgctxt "game_options"
 #~ msgid "Off (default)"
 #~ msgstr "Desactivado (predeterminado)"
 
 #~ msgctxt "game_options"
-#~ msgid "Toggle MSAA/SSAA. Depends on anti-aliasing being enabled."
-#~ msgstr "Alterna MSAA/SSAA. Depende de que o anti-aliasing estea activado."
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Usa mapas de entrada alternativos. Só se aplica ao tipo de controlador "
+#~ "estándar."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "MAPEO ALTERNATIVO"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Botóns da cara (CW)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Botóns Frontais (CCW)"
 
 #~ msgctxt "game_options"
 #~ msgid "MSAA (default)"
@@ -17463,14 +17493,3 @@ msgstr "Gardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "SSAA"
 #~ msgstr "SSAA"
-
-#, c-format
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "For playing driving games with a game pad, it is sometimes a good idea to "
-#~ "use a value larger than 100% so that the steering feels less sensitive on "
-#~ "a thumbstick."
-#~ msgstr ""
-#~ "Para xogar con xogos de condución cun mando, ás veces é unha boa idea "
-#~ "utilizar un valor superior a 100% so para que a dirección sexa menos "
-#~ "sensible nun stick."
