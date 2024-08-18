@@ -12944,6 +12944,11 @@ msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "WTYCZKA DANYCH"
 
+#. TRANSLATION: mame
+msgctxt "game_options"
+msgid "When moving"
+msgstr ""
+
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""

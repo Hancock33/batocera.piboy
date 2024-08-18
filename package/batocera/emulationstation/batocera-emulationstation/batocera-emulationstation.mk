@@ -112,7 +112,7 @@ define BATOCERA_EMULATIONSTATION_RESOURCES
 		$(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation
 
 	# savestates config
-	$(INSTALL) -m 0644 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/es_savestates.cfg $(TARGET_DIR)/usr/share/emulationstation
+	$(INSTALL) -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/es_savestates.cfg $(TARGET_DIR)/usr/share/emulationstation
 
 	# hooks
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/batocera-preupdate-gamelists-hook $(TARGET_DIR)/usr/bin/
