@@ -168,7 +168,7 @@ msgctxt "game_options"
 msgid "GAME RENDERING & SHADERS"
 msgstr "РЕНДЕРИНГ ИГРЫ И ШЕЙДЕРЫ"
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, pcsx2
 msgctxt "game_options"
 msgid "SHADER SET"
 msgstr "НАБОР ШЕЙДЕРОВ"
@@ -3350,7 +3350,7 @@ msgctxt "game_options"
 msgid "USA"
 msgstr "США"
 
-#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, pcsx2, ...
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, redream, ...
 msgctxt "game_options"
 msgid "Europe"
 msgstr "Европа"
@@ -10921,6 +10921,41 @@ msgstr "Простой 2x"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
+msgid "scanlines"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "diagonal filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "triangular filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "wave filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "lottes crt"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "4xrgss"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "nxagss"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
@@ -11219,10 +11254,15 @@ msgctxt "game_options"
 msgid "Unscaled (Default)"
 msgstr "Немасштабированный (по умолчанию)"
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Basic (Recommended)"
-msgstr "Базовый (рекомендуется)"
+msgid "Scaled"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Force 32bit"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11242,6 +11282,11 @@ msgstr "ТОЧНОСТЬ СМЕШИВАНИЯ"
 msgctxt "game_options"
 msgid "Minimum"
 msgstr "Минимум"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Basic (Recommended)"
+msgstr "Базовый (рекомендуется)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11276,21 +11321,6 @@ msgstr "Частичная"
 msgctxt "game_options"
 msgid "Full (Hash Cache)"
 msgstr "Полная (Хеш кэш)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "Choose PS2 Bios to use (USA Recommended)"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "PS2 BIOS"
-msgstr ""
-
-#. TRANSLATION: pcsx2, redream
-msgctxt "game_options"
-msgid "USA (Default)"
-msgstr "USA (по умолчанию)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -12442,6 +12472,11 @@ msgstr "LLE"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
+msgid "USA (Default)"
+msgstr "USA (по умолчанию)"
+
+#. TRANSLATION: redream
+msgctxt "game_options"
 msgid "Choose the Dreamcast console language."
 msgstr "Выберите язык консоли Dreamcast."
 
@@ -12873,6 +12908,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "DATA ПЛАГИН"
+
+#. TRANSLATION: mame
+msgctxt "game_options"
+msgid "When moving"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -16190,7 +16230,7 @@ msgstr "Выйти из эмулятора с помощью SDL"
 #. TRANSLATION: mame.keys
 msgctxt "keys_files"
 msgid "Exit Emulator"
-msgstr ""
+msgstr "Выйти из эмулятора"
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -17048,25 +17088,6 @@ msgstr "Быстрое сохранение"
 #~ msgstr "5 Sideway Wiimote"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "Использовать альт. сопоставления кнопок. Применяется только к типу "
-#~ "\"Standard Controller\"."
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "АЛЬТ, СОПОСТАВЛЕНИЕ КНОПОК"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "Лицевые кнопки (по часовой стрелке)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "Лицевые кнопки (против часовой стрелки)"
-
-#~ msgctxt "game_options"
 #~ msgid "Determines the speed and the runahead behaviour of the system."
 #~ msgstr "Определяет скорость и поведение системы."
 
@@ -17286,18 +17307,6 @@ msgstr "Быстрое сохранение"
 #~ "Установите желаемую максимальную частоту обновления при выключенном Vsync."
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Открыть меню Dolphin-triforce"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Загрука из Слота 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Сохранение в Слот 1"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad вверх"
 
@@ -17392,6 +17401,37 @@ msgstr "Быстрое сохранение"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Перемотка"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Открыть меню Dolphin-triforce"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Загрука из Слота 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Сохранение в Слот 1"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Использовать альт. сопоставления кнопок. Применяется только к типу "
+#~ "\"Standard Controller\"."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "АЛЬТ, СОПОСТАВЛЕНИЕ КНОПОК"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Лицевые кнопки (по часовой стрелке)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Лицевые кнопки (против часовой стрелки)"
 
 #~ msgctxt "game_options"
 #~ msgid "Enable or disable monsters in battle."

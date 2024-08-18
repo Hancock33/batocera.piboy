@@ -173,7 +173,7 @@ msgctxt "game_options"
 msgid "GAME RENDERING & SHADERS"
 msgstr "게임 렌더링 및 셰이더"
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, pcsx2
 #, fuzzy
 msgctxt "game_options"
 msgid "SHADER SET"
@@ -3665,7 +3665,7 @@ msgctxt "game_options"
 msgid "USA"
 msgstr "미국"
 
-#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, pcsx2, ...
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, redream, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Europe"
@@ -12052,6 +12052,41 @@ msgstr "단순성 2x"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
+msgid "scanlines"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "diagonal filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "triangular filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "wave filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "lottes crt"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "4xrgss"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "nxagss"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
@@ -12350,9 +12385,14 @@ msgctxt "game_options"
 msgid "Unscaled (Default)"
 msgstr ""
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Basic (Recommended)"
+msgid "Scaled"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Force 32bit"
 msgstr ""
 
 #. TRANSLATION: pcsx2
@@ -12370,6 +12410,11 @@ msgstr ""
 #. TRANSLATION: pcsx2, rpcs3
 msgctxt "game_options"
 msgid "Minimum"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Basic (Recommended)"
 msgstr ""
 
 #. TRANSLATION: pcsx2
@@ -12403,22 +12448,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Full (Hash Cache)"
 msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "Choose PS2 Bios to use (USA Recommended)"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "PS2 BIOS"
-msgstr ""
-
-#. TRANSLATION: pcsx2, redream
-#, fuzzy
-msgctxt "game_options"
-msgid "USA (Default)"
-msgstr "미국(기본값)"
 
 #. TRANSLATION: pcsx2
 #, fuzzy
@@ -13608,6 +13637,12 @@ msgstr ""
 #. TRANSLATION: redream
 #, fuzzy
 msgctxt "game_options"
+msgid "USA (Default)"
+msgstr "미국(기본값)"
+
+#. TRANSLATION: redream
+#, fuzzy
+msgctxt "game_options"
 msgid "Choose the Dreamcast console language."
 msgstr "드림캐스트 콘솔 언어를 선택합니다."
 
@@ -14080,6 +14115,11 @@ msgstr "게임 기록, 설정 지침 및 필살기를 메뉴에서 볼 수 있�
 msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "데이터 플러그인"
+
+#. TRANSLATION: mame
+msgctxt "game_options"
+msgid "When moving"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"

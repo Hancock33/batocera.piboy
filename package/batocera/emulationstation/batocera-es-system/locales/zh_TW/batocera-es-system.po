@@ -161,7 +161,7 @@ msgctxt "game_options"
 msgid "GAME RENDERING & SHADERS"
 msgstr "遊戲渲染與著色器"
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, pcsx2
 msgctxt "game_options"
 msgid "SHADER SET"
 msgstr "著色器集"
@@ -3296,7 +3296,7 @@ msgctxt "game_options"
 msgid "USA"
 msgstr "美國"
 
-#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, pcsx2, ...
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, redream, ...
 msgctxt "game_options"
 msgid "Europe"
 msgstr "歐洲"
@@ -10758,6 +10758,41 @@ msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
+msgid "scanlines"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "diagonal filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "triangular filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "wave filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "lottes crt"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "4xrgss"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "nxagss"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
@@ -11054,9 +11089,14 @@ msgctxt "game_options"
 msgid "Unscaled (Default)"
 msgstr ""
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Basic (Recommended)"
+msgid "Scaled"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Force 32bit"
 msgstr ""
 
 #. TRANSLATION: pcsx2
@@ -11074,6 +11114,11 @@ msgstr ""
 #. TRANSLATION: pcsx2, rpcs3
 msgctxt "game_options"
 msgid "Minimum"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Basic (Recommended)"
 msgstr ""
 
 #. TRANSLATION: pcsx2
@@ -11106,21 +11151,6 @@ msgstr ""
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Full (Hash Cache)"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "Choose PS2 Bios to use (USA Recommended)"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "PS2 BIOS"
-msgstr ""
-
-#. TRANSLATION: pcsx2, redream
-msgctxt "game_options"
-msgid "USA (Default)"
 msgstr ""
 
 #. TRANSLATION: pcsx2
@@ -12227,6 +12257,11 @@ msgstr ""
 
 #. TRANSLATION: redream
 msgctxt "game_options"
+msgid "USA (Default)"
+msgstr ""
+
+#. TRANSLATION: redream
+msgctxt "game_options"
 msgid "Choose the Dreamcast console language."
 msgstr ""
 
@@ -12642,6 +12677,11 @@ msgstr ""
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "DATA PLUGIN"
+msgstr ""
+
+#. TRANSLATION: mame
+msgctxt "game_options"
+msgid "When moving"
 msgstr ""
 
 #. TRANSLATION: wine
@@ -16421,18 +16461,6 @@ msgstr ""
 #~ msgstr "禁用 (預設)"
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "打開Dolphin-triforce的菜單"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "載入存檔1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "保存存檔1"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad上"
 
@@ -16527,6 +16555,18 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快進"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "打開Dolphin-triforce的菜單"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "載入存檔1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "保存存檔1"
 
 #~ msgctxt "game_options"
 #~ msgid "Off (default)"

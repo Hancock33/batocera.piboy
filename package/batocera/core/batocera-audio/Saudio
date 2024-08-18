@@ -9,13 +9,6 @@
 BOARD=$(cat /boot/boot/batocera.board)
 
 start_pipewire() {
-    if [ -f /sys/devices/virtual/dmi/id/board_name ]; then
-        board=`cat /sys/devices/virtual/dmi/id/board_name`
-        if [ "$board" = "Galileo" ]; then
-            cp /usr/share/pipewire/pipewire.confsdoled /usr/share/pipewire/pipewire.conf
-        fi
-    fi
-
     printf "Starting pipewire: "
     start-stop-daemon -S -b -q -m -p /var/run/pipewire.pid --exec /usr/bin/pipewire
     msg=OK

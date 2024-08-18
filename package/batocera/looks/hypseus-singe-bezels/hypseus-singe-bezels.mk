@@ -3,8 +3,8 @@
 # hypseus-singe-bezels
 #
 ################################################################################
-# Version: Commits on Jul 15, 2024
-HYPSEUS_SINGE_BEZELS_VERSION = 9c244e184596512207b5cb7363bff6e8eed83a10
+# Version: Commits on Aug 17, 2024
+HYPSEUS_SINGE_BEZELS_VERSION = a6cfde68642dd03cda4b300ed827506cadf1c054
 HYPSEUS_SINGE_BEZELS_SITE = $(call github,Tovarichtch,hypseus_singe_daphne_bezels,$(HYPSEUS_SINGE_BEZELS_VERSION))
 HYPSEUS_SINGE_BEZELS_LICENSE = LGPL-3.0
 HYPSEUS_SINGE_BEZELS_LICENSE_FILES = LICENSE

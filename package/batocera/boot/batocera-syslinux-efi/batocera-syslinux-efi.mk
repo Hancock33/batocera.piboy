@@ -3,7 +3,7 @@
 # batocera-syslinux-efi
 #
 ################################################################################
-
+# Version: Commits on Nov 29, 2023
 BATOCERA_SYSLINUX_EFI_VERSION = 6.04.pre2.r11.gbf6db5b4-2
 BATOCERA_SYSLINUX_EFI_SOURCE =
 BATOCERA_SYSLINUX_EFI_SITE = binaries

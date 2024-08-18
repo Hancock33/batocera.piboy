@@ -1,5 +1,5 @@
 diff --git a/Source/Core/Core/BootManager.cpp b/Source/Core/Core/BootManager.cpp
-index 81192b4821..0586f0675c 100644
+index 52a3ec910f..fb18a04835 100644
 --- a/Source/Core/Core/BootManager.cpp
 +++ b/Source/Core/Core/BootManager.cpp
 @@ -66,6 +66,11 @@ bool BootCore(Core::System& system, std::unique_ptr<BootParameters> boot,
@@ -84,7 +84,7 @@ index 48043d4b10..1a12a55f97 100644
  
  // This displays messages in a user-visible way.
 diff --git a/Source/Core/Core/State.cpp b/Source/Core/Core/State.cpp
-index 11c8e9660e..d7a8ffc3ae 100644
+index fe20d74ea4..df93022646 100644
 --- a/Source/Core/Core/State.cpp
 +++ b/Source/Core/Core/State.cpp
 @@ -293,7 +293,10 @@ static std::string SystemTimeAsDoubleToString(double time)

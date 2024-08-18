@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-06-10 17:40+0000\n"
+"PO-Revision-Date: 2024-07-24 15:53+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -172,7 +172,7 @@ msgctxt "game_options"
 msgid "GAME RENDERING & SHADERS"
 msgstr "RENDERING & SHADERS"
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, pcsx2
 msgctxt "game_options"
 msgid "SHADER SET"
 msgstr "SHADER SET"
@@ -3386,7 +3386,7 @@ msgctxt "game_options"
 msgid "USA"
 msgstr "USA"
 
-#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, pcsx2, ...
+#. TRANSLATION: libretro/flycast, libretro/geolith, libretro/neocd, flycast/dolphin, redream, ...
 msgctxt "game_options"
 msgid "Europe"
 msgstr "Europa"
@@ -9203,12 +9203,12 @@ msgstr "ABSOLUTE MAUSEINGABE"
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "Hidden"
-msgstr "Versteckt"
+msgstr ""
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "Shown"
-msgstr "Zeigen"
+msgstr ""
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -11007,6 +11007,41 @@ msgstr "Simple 2x"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
+msgid "scanlines"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "diagonal filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "triangular filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "wave filter"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "lottes crt"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "4xrgss"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "nxagss"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
@@ -11305,10 +11340,15 @@ msgctxt "game_options"
 msgid "Unscaled (Default)"
 msgstr "Unskaliert (Standard)"
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Basic (Recommended)"
-msgstr "Einfach (Empfohlen)"
+msgid "Scaled"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Force 32bit"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11328,6 +11368,11 @@ msgstr "BLENDINGEFFEKT GENAUIGKEIT"
 msgctxt "game_options"
 msgid "Minimum"
 msgstr "Minimum"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Basic (Recommended)"
+msgstr "Einfach (Empfohlen)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11362,21 +11407,6 @@ msgstr "Partiell"
 msgctxt "game_options"
 msgid "Full (Hash Cache)"
 msgstr "Vollständig (Hash-Cache)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "Choose PS2 Bios to use (USA Recommended)"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "PS2 BIOS"
-msgstr ""
-
-#. TRANSLATION: pcsx2, redream
-msgctxt "game_options"
-msgid "USA (Default)"
-msgstr "USA (Standard)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -12534,6 +12564,11 @@ msgstr "LLE"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
+msgid "USA (Default)"
+msgstr "USA (Standard)"
+
+#. TRANSLATION: redream
+msgctxt "game_options"
 msgid "Choose the Dreamcast console language."
 msgstr "Sprache für Dreamcast Konsole auswählen."
 
@@ -12969,6 +13004,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "DATEN-PLUGIN"
+
+#. TRANSLATION: mame
+msgctxt "game_options"
+msgid "When moving"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -16308,7 +16348,7 @@ msgstr "Emulator beenden mit SDL"
 #. TRANSLATION: mame.keys
 msgctxt "keys_files"
 msgid "Exit Emulator"
-msgstr ""
+msgstr "Emulator beenden"
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -17164,24 +17204,6 @@ msgstr "Schnellspeichern"
 #~ msgstr "5 Sideway Wiimote"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "Alternative Eingabebelegung. Gilt nur für den Typ Standard-Controller."
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "ALT EINGABEBELEGUNG"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "Aktionstasten (im Uhrzeigersinn)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "Aktionstasten (gegen Uhrzeigersinn)"
-
-#~ msgctxt "game_options"
 #~ msgid "Determines the speed and the runahead behaviour of the system."
 #~ msgstr "Festlegen der Systemgeschwindigkeit und der Runahead-Leistung."
 
@@ -17409,18 +17431,6 @@ msgstr "Schnellspeichern"
 #~ "ausgeschaltet ist."
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Dolphin-triforce Menü öffnen"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Spielstand laden Slot 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Spielstand speichern Slot 1"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad Nach Oben"
 
@@ -17516,10 +17526,32 @@ msgstr "Schnellspeichern"
 #~ msgid "FastForward"
 #~ msgstr "Schnelles Vorspulen"
 
-#~ msgctxt "game_options"
-#~ msgid "Enable or disable monsters in battle."
-#~ msgstr "Aktivieren oder Deaktivieren von Monstern im Kampf."
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Dolphin-triforce Menü öffnen"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Spielstand laden Slot 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Spielstand speichern Slot 1"
 
 #~ msgctxt "game_options"
-#~ msgid "MONSTERS"
-#~ msgstr "MONSTERS"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Alternative Eingabebelegung. Gilt nur für den Typ Standard-Controller."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "ALT EINGABEBELEGUNG"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Aktionstasten (im Uhrzeigersinn)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Aktionstasten (gegen Uhrzeigersinn)"

@@ -1,4 +1,4 @@
-# 2024/12/xx - batocera.linux 41 - xxx
+# 2024/12/xx - batocera.linux 41 - Golden-rayed Blue
 ### Special Notes
 ### Hardware
 - Add Blamcon Gun support
@@ -10,7 +10,8 @@
 - Exit game with light gun (hold `TRIGGER`, `ACTION` and `START` buttons for 2 seconds)
 - Enhanced Bluetooth AD2P codec support for LDAC & aptX supported headphones or speakers
   - The supported AD2P codec may need to be selected under SYSTEM SETTINGS -> AUDIO PROFILES
-- Steering wheel support for Microsoft SideWinder Precision Racing Wheel
+  - Steering wheel support for Microsoft SideWinder Precision Racing Wheel
+  - Thrustmaster T150 and TMX Force Feedback Wheel Linux drivers
 ### Fixed
 - Steam loading on a NAS drive
 - ScummVM forcing English which can prevent some non-english games from starting
@@ -70,7 +71,7 @@
 ### System
 - Nvidia Driver to 555.58.02
 - Nvidia Legacy Driver to 470.256.02
-- x86_64 Kernel to 6.10.3
+- x86_64 Kernel to 6.10.4
 - Ayaneo Platform driver to Jul 17, 2024 build
 - Ayn Platform driver to Jul 17, 2024 build
 - MangoHud to Jun 15, 2024 build
@@ -88,6 +89,7 @@
 - Intel Media Driver to 24.2.5
 - Sound Open Firmware to 2024.06
 - LibVA to 2.22.0
+- WF-Recorder to 14th of August build
 
 # 2024/08/11 - batocera.linux 40 - Swallowtail
 ### Special Notes
