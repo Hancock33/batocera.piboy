@@ -78,7 +78,7 @@ Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.0
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 12, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Emulators|[duckstation-legacy](https://github.com/stenzek/duckstation.git)|v0.1-6461|Mar 16, 2024
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|3175214c920d1f6591625d7cd80ee573dd962e91|Aug 18, 2024
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|a9e327b2821195bcce3ff9c4b7f948c00d675186|Aug 18, 2024
 Emulators|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.7.1|Jun 21, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.4|Jul 10, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|68757ea396267f0526ce4243edaf2a3ff4b372be|Aug 16, 2024
@@ -273,7 +273,7 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1131-gafdfc1a|Jul 13, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|8a74442fabfc6f72c623dbf1f7a59bfeba771b9f|Aug 08, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|fab86199a8bc150b3aa755d262acca0b4c63693f|Aug 17, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20240809|Aug 09, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|bd5fd66408f51bd5d3bac822dfa13669387b0b46|Aug 16, 2024
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|fd6ebe28952fd99e319c6d06fb5c855bb17a742d|Aug 16, 2024
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-08-18|Aug 18, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1083|Nov 15, 2023
@@ -289,7 +289,7 @@ Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|ed
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|b5bf8f8cd9eb4dd3d2bc19ac9ea1e08c0fc9252f|Aug 01, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|6638c847c6061f5248e7fe0f7b86f3ff744fa259|Aug 17, 2024
 Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|4eb41467f8cf39d666372b5ea78694df970252a3|Jul 04, 2024
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|b14146b61c318166d3f91fc51bc98c5f32517a04|Aug 18, 2024
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|1c4328757882d83cd11a2c923ff74e9f01d922b4|Aug 18, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|ce28962c726813a5cc112734e8bef49cda70dd2b|Aug 10, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45311|Aug 17, 2024
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
@@ -445,7 +445,7 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|dcc5fdb446d0e907f70ff
 Ports|[f2bgl](http://github.com/cyxx/f2bgl)|0b84f41c7cc13a41f5a1832549485b814a52070d|Oct 18, 2020
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|ad8a2754fa99ceaf40495185ad48191cf27559e2|Mar 05, 2024
 Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|9fb917c357b20d95d597bed4d67904c29cd5c753|Apr 21, 2024
-Ports|[fheroes2](http://github.com/ihhub/fheroes2)|9585796f59e991551db20e4d0cba504f63afa4e0|Aug 18, 2024
+Ports|[fheroes2](http://github.com/ihhub/fheroes2)|929e9b9cf37472f2031f6468b63f8e78d38dad25|Aug 18, 2024
 Ports|[freedroid](http://github.com/ReinhardPrix/FreedroidClassic)|126664e034d17bb7fd1e6c3cfa1e9e6f1ebf48ac|Jan 08, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|4d18380956eaab3da9ccaf8a06043692b5d95cc5|Aug 17, 2024
 Ports|[hcl](http://github.com/ptitSeb/hydracastlelabyrinth)|229369c222f8604530f5e06f795b4505ef21d439|Feb 28, 2024
@@ -492,7 +492,7 @@ Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|8034200d1f2d4
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|5313b5c82c83f959d79eb2ef2e68f5054d6b201f|Aug 04, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|dbd2e65ae76f42a3c06c14ee67c555bc3710f1bc|Aug 15, 2024
-Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|a6c7b67d0d381fc01da0c5b074ccc2610849a472|Aug 17, 2024
+Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|3de370f3d51afb9245a9a47427f15713b758373a|Aug 18, 2024
 Ports|[xatrix](http://github.com/yquake2/xatrix)|6fba354e6009d30d8b55459670ad2c5bd60d2173|Aug 12, 2024
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.1|Apr 12, 2024
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|b337bb07f88a30605c134d9e634f19fef39309f9|Jul 28, 2024
