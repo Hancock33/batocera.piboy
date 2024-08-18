@@ -4,6 +4,7 @@ Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|c9af09eca7e75495
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|3175214c920d1f6591625d7cd80ee573dd962e91|Aug 18, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|dc69e5d027b392aeca47ee01bc3cfbf9ee1d5bfa|Aug 18, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-08-18|Aug 18, 2024
+Emulators|[scummvm](http://github.com/scummvm/scummvm)|60256b0ebfcef62b81ba688ffe345dffff75393f|Aug 18, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|b14146b61c318166d3f91fc51bc98c5f32517a04|Aug 18, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|0ad1e3d5855cdf8e3c4ee20f7d3ba5ebc20c2edd|Aug 18, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|c384d53d75bb082ecbbbd4741f9b9a340ee912a0|Aug 18, 2024
@@ -11,6 +12,7 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|a2961eafd2b9
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|9585796f59e991551db20e4d0cba504f63afa4e0|Aug 18, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|27bfe27dc8c493cd6a16f58fbf08ed9d28377a69|Aug 18, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|95806c35f7dcb7c88b07ff2ba15e6e0077e8e69f|Aug 18, 2024
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|60256b0ebfcef62b81ba688ffe345dffff75393f|Aug 18, 2024
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|aa6ed14b2ab36c558c483bc1c88d7034a3c93402|Aug 18, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|6061d402bdbd1a07d0ba43fe6db272365a309e9f|Aug 17, 2024
 Emulators|[hatari](http://github.com/hatari/hatari)|25142f255add64f35443331c55fee40a8127a8db|Aug 17, 2024
@@ -317,9 +319,7 @@ Emulators|[libretro-dolphin](http://github.com/libretro/dolphin)|89a4df725d4eb24
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.12.9|Apr 18, 2024
 Emulators|[libretro-fake08](https://github.com/jtothebell/fake-08.git)|d98376fc41c34e3cd6d3ffc25ae9c2970efd5286|Apr 17, 2024
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|1e1adcd815bd79854b9787bc542fec6ad84f23e2|Apr 15, 2024
-Emulators|[scummvm](http://github.com/scummvm/scummvm)|e2b1299d85564c29a1642185aeb6b96e56ded206|Apr 13, 2024
 Emulators|[libframeutil](http://github.com/ppuc/libframeutil)|30048ca23d41ca0a8f7d5ab75d3f646a19a90182|Apr 13, 2024
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|e2b1299d85564c29a1642185aeb6b96e56ded206|Apr 13, 2024
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.6|Apr 12, 2024
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.1|Apr 12, 2024
 Audio|[wildmidi](http://github.com/Mindwerks/wildmidi)|wildmidi-0.4.6|Apr 11, 2024
