@@ -14,7 +14,7 @@ define XPI_GAMECON_RPI_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/pads/xpi_gamecon_rpi/piboy_fan_power_ctrl.py	$(TARGET_DIR)/usr/bin/piboy_fan_power_ctrl.py
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/pads/xpi_gamecon_rpi/piboy_audctrl.py			$(TARGET_DIR)/usr/bin/piboy_audctrl.py
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/pads/xpi_gamecon_rpi/piboy_powerswitch.rules	$(TARGET_DIR)/etc/udev/rules.d/60-piboy_powerswitch.rules
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/pads/xpi_gamecon_rpi/piboy_keys					$(TARGET_DIR)/usr/bin/piboy_keys
+	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/pads/xpi_gamecon_rpi/piboy_keys				$(TARGET_DIR)/usr/bin/piboy_keys
 	chmod 754 $(TARGET_DIR)/usr/sbin/volumed
 	chmod 754 $(TARGET_DIR)/usr/bin/piboy_keys
 
