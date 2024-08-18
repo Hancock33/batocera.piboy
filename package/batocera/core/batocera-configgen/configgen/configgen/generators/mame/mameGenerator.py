@@ -91,7 +91,7 @@ class MameGenerator(Generator):
                 commandArray += [ "-rompath", f'"{romDirname};/userdata/bios/mame/;/userdata/bios/;/userdata/roms/mame/;/var/run/mame_software/"' ]
             else:
                 commandArray += [ "-rompath", f'"{romDirname};/userdata/bios/mame/;/userdata/bios/;/userdata/roms/mame/"' ]
-        
+
         # MAME various paths we can probably do better
         commandArray += [ "-bgfx_path",    "/usr/bin/mame/bgfx/" ]          # Core bgfx files can be left on ROM filesystem
         commandArray += [ "-fontpath",     "/usr/bin/mame/" ]               # Fonts can be left on ROM filesystem
