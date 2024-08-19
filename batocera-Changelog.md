@@ -10,13 +10,16 @@
 - Exit game with light gun (hold `TRIGGER`, `ACTION` and `START` buttons for 2 seconds)
 - Enhanced Bluetooth AD2P codec support for LDAC & aptX supported headphones or speakers
   - The supported AD2P codec may need to be selected under SYSTEM SETTINGS -> AUDIO PROFILES
-  - Steering wheel support for Microsoft SideWinder Precision Racing Wheel
-  - Thrustmaster T150 and TMX Force Feedback Wheel Linux drivers
+- Steering wheel support for Microsoft SideWinder Precision Racing Wheel
+- Thrustmaster T150 and TMX Force Feedback Wheel Linux drivers
+- display reflection for x86_64 boards (display.reflection=x or y or xy in batocera.conf to enable it)
+- emulationstation now supports savestates for standalones (dolphin, pcsx2, mupen, ppsspp)
 ### Fixed
 - Steam loading on a NAS drive
 - ScummVM forcing English which can prevent some non-english games from starting
 - Fixed right controller LED for the Ayaneo Air Plus, it's now functional
 ### Changed / Improved
+- splash screen now disabled by default
 - Added bezel & sinden border support for the RPi5 with Model 3 games
 - Added bezel & sinden border support for the RPi5 with Wii games, requires Vulkan API (default)
 - Dolphin, Flycast & PCSX2 standalone emulators will now center their notifications to avoid rendering under the bezel if enabled
@@ -62,12 +65,12 @@
 - Ikemen to August 1st 2024 build
 - PCSX2 to v2.1.62
 - Redream to 1.5.0-1131-gafdfc1a
-- RPCS3 to Jul 28, 2024 build
+- RPCS3 to 0.0.32-16843
 - Sonic Mania to Jul 21, 2024 build
-- The Force Engine to Jul 27, 2024 build
+- The Force Engine to Aug 19, 2024 build
 - Vita3k to Jul 27 build
 - Xemu to v0.7.131
-- Xenia Canary to Jul 15, 2024 build
+- Xenia Canary to August 18, 2024 build
 ### System
 - Nvidia Driver to 555.58.02
 - Nvidia Legacy Driver to 470.256.02
