@@ -13,6 +13,9 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|ef498f2baffb
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|72bc2b615a60c188c06beaef7c51fab18b41bf5c|Aug 20, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|4a1dec75f5c88bd9ff804cb2eefb75d83d1e6d58|Aug 20, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|380bc73950cf6e0d513a02d04179dde514c8403e|Aug 20, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.15.r183.gba66d9c7151|Aug 20, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240820|Aug 20, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240820|Aug 20, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|f8944163b7e5fab8e74a03cb5c20c22c39db0364|Aug 20, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|ecfdff23382c16d6772d6be89f69afafcb3491b2|Aug 20, 2024
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|2421292c83861b792410d384d97603160833c930|Aug 20, 2024
@@ -42,9 +45,7 @@ Emulators|[scummvm](http://github.com/scummvm/scummvm)|60256b0ebfcef62b81ba688ff
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|0ad1e3d5855cdf8e3c4ee20f7d3ba5ebc20c2edd|Aug 18, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|929e9b9cf37472f2031f6468b63f8e78d38dad25|Aug 18, 2024
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|36ce38dc9f871426d0222e69e11f56d7a593c490|Aug 18, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240818|Aug 18, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|fdce530c029514e2f66296288f9ee26a05058ec1|Aug 18, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240818|Aug 18, 2024
 Ports|[xatrix](http://github.com/yquake2/xatrix)|de69b2a37dc69d37439b1294e6d98a823f28d30f|Aug 18, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|6066b3c97967ada440ee5cb5cd4bb1064f62d076|Aug 18, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|bd371b5c7052e985e37c0f1c9893bdc856683c23|Aug 18, 2024
@@ -58,7 +59,6 @@ Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|1d6dfdc33b86
 Looks|[hypseus-singe-bezels](http://github.com/Tovarichtch/hypseus_singe_daphne_bezels)|a6cfde68642dd03cda4b300ed827506cadf1c054|Aug 17, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|773102e89443c6a5bb04b0f33340b77ff85c57df|Aug 17, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|d8f77f9779cfdada9ffbebd8a26b00797a6293eb|Aug 17, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.15.r128.g16a6b0ad65e|Aug 17, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|4d18380956eaab3da9ccaf8a06043692b5d95cc5|Aug 17, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|a77738cbe9c75823f62a23e35bdfcf05e23d45b3|Aug 17, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|6061d402bdbd1a07d0ba43fe6db272365a309e9f|Aug 17, 2024
