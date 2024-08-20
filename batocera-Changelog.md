@@ -63,7 +63,7 @@
 - Eduke32 to Jul 25 build
 - Flycast to Jul 30 build
 - Ikemen to August 1st 2024 build
-- PCSX2 to v2.1.62
+- PCSX2 to v2.1.100
 - Redream to 1.5.0-1131-gafdfc1a
 - RPCS3 to 0.0.32-16843
 - Sonic Mania to Jul 21, 2024 build
@@ -284,7 +284,7 @@
 - Wlroots to 0.17.1
 - Sway to 1.9
 - Mesa3D to 24.1.4
-- RPi kernel to 6.6.41
+- RPi kernel to 6.6.45
 - Pipewire to 1.0.4
 - X86_64 kernel to 6.9.10
 - Switchres 0.220
