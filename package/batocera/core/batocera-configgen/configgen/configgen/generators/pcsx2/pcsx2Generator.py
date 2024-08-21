@@ -102,6 +102,10 @@ class Pcsx2Generator(Generator):
             source_file = "/usr/bin/pcsx2/resources/patches.zip"
             shutil.copy(source_file, pcsx2Patches)
 
+        # state_slot option
+        if system.isOptSet('state_filename'):
+            commandArray.extend(["-statefile", system.config['state_filename']])
+
         return Command.Command(
             array=commandArray,
             env=envcmd
