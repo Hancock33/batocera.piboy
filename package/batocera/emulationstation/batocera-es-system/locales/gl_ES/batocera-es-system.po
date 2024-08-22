@@ -6624,7 +6624,7 @@ msgstr "Desactivado é máis seguro, Activado para xogos específicos."
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Double the rendering resolution."
-msgstr ""
+msgstr "Dobra a resolución de renderizado."
 
 #. TRANSLATION: libretro/pcsx_rearmed, drastic
 msgctxt "game_options"
@@ -6634,7 +6634,7 @@ msgstr "RESOLUCIÓN DE RENDERIZADO MELLORADA"
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "On (Speed hack)"
-msgstr ""
+msgstr "Activado (truco de velocidade)"
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -9531,11 +9531,13 @@ msgstr "GAMECUBE TIPO DE PORTO 4"
 msgctxt "game_options"
 msgid "Moves South to West, West to North, etc. Standard controller type only."
 msgstr ""
+"Móvese de Sur a Oeste, de Oeste a Norte, etc. Só para o tipo de mando "
+"estándar."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "ROTATE FACE BUTTONS"
-msgstr ""
+msgstr "XIRAR BOTONS FRONTAIS"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -16200,7 +16202,7 @@ msgstr ""
 #. TRANSLATION: wii.dolphin.keys
 msgctxt "keys_files"
 msgid "Exit Dolphin"
-msgstr ""
+msgstr "Saír de Dolphin"
 
 #. TRANSLATION: dos.dosbox-x.keys
 msgctxt "keys_files"
@@ -16270,7 +16272,7 @@ msgstr "Sair do emulador usando SDL"
 #. TRANSLATION: mame.keys
 msgctxt "keys_files"
 msgid "Exit Emulator"
-msgstr ""
+msgstr "Saír do emulador"
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -17026,6 +17028,14 @@ msgstr "Gardado rápido"
 #~ msgstr "Cor"
 
 #~ msgctxt "game_options"
+#~ msgid "Enable or disable monsters in battle."
+#~ msgstr "Activa ou desactiva os monstros na batalla."
+
+#~ msgctxt "game_options"
+#~ msgid "MONSTERS"
+#~ msgstr "MONSTROS"
+
+#~ msgctxt "game_options"
 #~ msgid "Emulate a pak in the controller expansion port."
 #~ msgstr "Emula un pak no porto de expansión do mando."
 
@@ -17126,6 +17136,37 @@ msgstr "Gardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "5 Sideway Wiimote"
 #~ msgstr "5 Sideway Wiimote"
+
+#~ msgctxt "game_options"
+#~ msgid "Off (default)"
+#~ msgstr "Desactivado (predeterminado)"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Usa mapas de entrada alternativos. Só se aplica ao tipo de controlador "
+#~ "estándar."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "MAPEO ALTERNATIVO"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Botóns da cara (CW)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Botóns Frontais (CCW)"
+
+#~ msgctxt "game_options"
+#~ msgid "MSAA (default)"
+#~ msgstr "MSAA (predeterminado)"
+
+#~ msgctxt "game_options"
+#~ msgid "SSAA"
+#~ msgstr "SSAA"
 
 #~ msgctxt "game_options"
 #~ msgid "Determines the speed and the runahead behaviour of the system."
@@ -17348,6 +17389,18 @@ msgstr "Gardado rápido"
 #~ "desactivado."
 
 #~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Abre o menú de Dolphin-triforce"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Rañura de estado de carga 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Gardar o estado 1"
+
+#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad arriba"
 
@@ -17442,54 +17495,3 @@ msgstr "Gardado rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rápido"
-
-#~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Abre o menú de Dolphin-triforce"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Rañura de estado de carga 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Gardar o estado 1"
-
-#~ msgctxt "game_options"
-#~ msgid "Enable or disable monsters in battle."
-#~ msgstr "Activa ou desactiva os monstros na batalla."
-
-#~ msgctxt "game_options"
-#~ msgid "MONSTERS"
-#~ msgstr "MONSTROS"
-
-#~ msgctxt "game_options"
-#~ msgid "Off (default)"
-#~ msgstr "Desactivado (predeterminado)"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "Usa mapas de entrada alternativos. Só se aplica ao tipo de controlador "
-#~ "estándar."
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "MAPEO ALTERNATIVO"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "Botóns da cara (CW)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "Botóns Frontais (CCW)"
-
-#~ msgctxt "game_options"
-#~ msgid "MSAA (default)"
-#~ msgstr "MSAA (predeterminado)"
-
-#~ msgctxt "game_options"
-#~ msgid "SSAA"
-#~ msgstr "SSAA"

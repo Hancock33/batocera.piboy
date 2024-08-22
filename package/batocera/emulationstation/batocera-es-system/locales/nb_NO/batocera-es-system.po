@@ -17264,6 +17264,18 @@ msgstr "Hurtiglagring"
 #~ msgstr "Angi ønsket maksimal oppdateringsfrekvens når Vsync er av."
 
 #~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Åpne Dolphin-triforce-menyen"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Laste tilstand Spor 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Lagre tilstand Spor 1"
+
+#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad Opp"
 
@@ -17358,18 +17370,6 @@ msgstr "Hurtiglagring"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "FastForward"
-
-#~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Åpne Dolphin-triforce-menyen"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Laste tilstand Spor 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Lagre tilstand Spor 1"
 
 #~ msgctxt "game_options"
 #~ msgid ""

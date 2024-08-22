@@ -6608,7 +6608,7 @@ msgstr "Off e' più sicuro, On è per giochi specifici."
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Double the rendering resolution."
-msgstr ""
+msgstr "Raddoppia la risuluzione di rendering."
 
 #. TRANSLATION: libretro/pcsx_rearmed, drastic
 msgctxt "game_options"
@@ -6618,7 +6618,7 @@ msgstr "MIGLIORA LA RISOLUZIONE DI RENDERING"
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "On (Speed hack)"
-msgstr ""
+msgstr "On (Hack velocita')"
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -9516,11 +9516,12 @@ msgstr "TIPOLOGIA PORTA 4 GAMECUBE"
 msgctxt "game_options"
 msgid "Moves South to West, West to North, etc. Standard controller type only."
 msgstr ""
+"Muove Sud in Ovest, Ovest in Nord, etc. Solo per i controller standard."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "ROTATE FACE BUTTONS"
-msgstr ""
+msgstr "RUOTA I BOTTONI FRONTALI"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -16161,7 +16162,7 @@ msgstr ""
 #. TRANSLATION: wii.dolphin.keys
 msgctxt "keys_files"
 msgid "Exit Dolphin"
-msgstr ""
+msgstr "Esci da Dolphin"
 
 #. TRANSLATION: dos.dosbox-x.keys
 msgctxt "keys_files"
@@ -17298,6 +17299,18 @@ msgstr "Salvataggio Rapido"
 #~ "Imposta il refresh rate massimo desiderato quando Vsync è disabilitato."
 
 #~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Apri il menu Dolphin-triforce"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Carica Stato Slot 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Salva Stato Slot 1"
+
+#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad Su"
 
@@ -17392,18 +17405,6 @@ msgstr "Salvataggio Rapido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "AvanzamentoRapido"
-
-#~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Apri il menu Dolphin-triforce"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Carica Stato Slot 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Salva Stato Slot 1"
 
 #~ msgctxt "game_options"
 #~ msgid ""
