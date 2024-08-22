@@ -6,6 +6,7 @@
 - Add Dockerpi Powerboard support initially for the RPi3
 - Add initial support for the OrangePi-5-Pro
 - Khadis VIM4, Vulkan support has now been added
+- Added HyperX and Machenike Xbox360 compatible controllers
 ### Added
 - Exit game with light gun (hold `TRIGGER`, `ACTION` and `START` buttons for 2 seconds)
 - Enhanced Bluetooth AD2P codec support for LDAC & aptX supported headphones or speakers
@@ -71,11 +72,12 @@
 - The Force Engine to Aug 19, 2024 build
 - Vita3k to Jul 27 build
 - Xemu to v0.7.131
+- Xenia to v1.0.2817
 - Xenia Canary to August 18, 2024 build
 ### System
-- Nvidia Driver to 555.58.02
+- Nvidia Driver to 560.35.03 (Open kernel modules)
 - Nvidia Legacy Driver to 470.256.02
-- x86_64 Kernel to 6.10.4
+- x86_64 Kernel to 6.10.6
 - Ayaneo Platform driver to Jul 17, 2024 build
 - Ayn Platform driver to Jul 17, 2024 build
 - MangoHud to Jun 15, 2024 build
