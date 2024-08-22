@@ -8,11 +8,12 @@ VICE_VERSION = r45315
 VICE_SOURCE = vice-$(VICE_VERSION).tar.gz
 VICE_SITE = $(call github,VICE-Team,svn-mirror,$(VICE_VERSION))
 VICE_LICENSE = GPLv2
-VICE_DEPENDENCIES = ffmpeg sdl2 libpng giflib zlib lame alsa-lib jpeg host-xa host-dos2unix sdl2_image libcurl
+VICE_DEPENDENCIES = ffmpeg4 sdl2 libpng giflib zlib lame alsa-lib jpeg host-xa host-dos2unix sdl2_image libcurl
 VICE_SUBDIR  = vice
 
 VICE_CONF_OPTS += --disable-option-checking
 VICE_CONF_OPTS += --disable-pdf-docs
+VICE_CONF_OPTS += --enable-ffmpeg
 VICE_CONF_OPTS += --enable-midi
 VICE_CONF_OPTS += --with-lame
 VICE_CONF_OPTS += --with-alsa
@@ -26,7 +27,9 @@ VICE_CONF_OPTS += --enable-sdl2ui
 VICE_CONF_OPTS += --with-sdlsound
 VICE_CONF_OPTS += --disable-debug-gtk3ui
 
-VICE_CONF_ENV += LDFLAGS=-lSDL2
+VICE_CONF_ENV += PKG_CONFIG_PATH="$(STAGING_DIR)/usr/lib/ffmpeg4.4/pkgconfig"
+VICE_CONF_ENV += CFLAGS="-I$(STAGING_DIR)/usr/include/ffmpeg4.4:$(TARGET_CFLAGS)"
+VICE_CONF_ENV += LDFLAGS="-lSDL2 -L$(STAGING_DIR)/usr/lib/ffmpeg4.4"
 
 define VICE_POST_PROCESS
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
