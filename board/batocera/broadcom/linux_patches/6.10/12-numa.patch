@@ -54,10 +54,10 @@ index d44bf7bcc777..711126334f92 100644
  
  	__overrides__ {
 diff --git a/arch/arm64/Kconfig b/arch/arm64/Kconfig
-index 8e80df015bdd..49c1cdc545d3 100644
+index caf0209c924b..1f70b8d754e0 100644
 --- a/arch/arm64/Kconfig
 +++ b/arch/arm64/Kconfig
-@@ -1507,6 +1507,16 @@ config NODES_SHIFT
+@@ -1503,6 +1503,16 @@ config NODES_SHIFT
  	  Specify the maximum number of NUMA Nodes available on the target
  	  system.  Increases memory reserved to accommodate various tables.
  
@@ -75,10 +75,10 @@ index 8e80df015bdd..49c1cdc545d3 100644
  
  config ARCH_SPARSEMEM_ENABLE
 diff --git a/arch/arm64/boot/dts/broadcom/bcm2712-rpi-5-b.dts b/arch/arm64/boot/dts/broadcom/bcm2712-rpi-5-b.dts
-index 28fa2b45cf26..4aa88fa2fb6e 100644
+index 757de016cdb7..2c0dc9ba4f9c 100644
 --- a/arch/arm64/boot/dts/broadcom/bcm2712-rpi-5-b.dts
 +++ b/arch/arm64/boot/dts/broadcom/bcm2712-rpi-5-b.dts
-@@ -429,11 +429,6 @@ &i2c_rp1boot {
+@@ -430,11 +430,6 @@ &i2c_rp1boot {
  };
  
  / {
@@ -107,7 +107,7 @@ index 864fc5b95a66..905d8b20a7c6 100644
  		status = "disabled";
  		compatible = "pwm-fan";
 diff --git a/arch/arm64/boot/dts/broadcom/bcm2712-rpi.dtsi b/arch/arm64/boot/dts/broadcom/bcm2712-rpi.dtsi
-index 664b63237244..777a1e5bda77 100644
+index ca9833da402d..2aa9e9a1d11f 100644
 --- a/arch/arm64/boot/dts/broadcom/bcm2712-rpi.dtsi
 +++ b/arch/arm64/boot/dts/broadcom/bcm2712-rpi.dtsi
 @@ -98,6 +98,11 @@ vdd_5v0_reg: fixedregulator_5v0 {
@@ -123,7 +123,7 @@ index 664b63237244..777a1e5bda77 100644
  		blconfig = &blconfig;
  		blpubkey = &blpubkey;
 diff --git a/arch/arm64/configs/bcm2711_defconfig b/arch/arm64/configs/bcm2711_defconfig
-index 66694129d0f1..e3eaf253e773 100644
+index 2bf6caf9698d..374e497a6ab7 100644
 --- a/arch/arm64/configs/bcm2711_defconfig
 +++ b/arch/arm64/configs/bcm2711_defconfig
 @@ -48,6 +48,7 @@ CONFIG_ARM64_ERRATUM_2441009=y
@@ -134,13 +134,13 @@ index 66694129d0f1..e3eaf253e773 100644
  CONFIG_COMPAT=y
  CONFIG_ARMV8_DEPRECATED=y
  CONFIG_SWP_EMULATION=y
-@@ -1686,3 +1687,4 @@ CONFIG_SCHED_TRACER=y
+@@ -1692,3 +1693,4 @@ CONFIG_SCHED_TRACER=y
  CONFIG_BLK_DEV_IO_TRACE=y
  # CONFIG_UPROBE_EVENTS is not set
  # CONFIG_STRICT_DEVMEM is not set
 +CONFIG_NUMA_EMULATION=y
 diff --git a/arch/arm64/configs/bcm2712_defconfig b/arch/arm64/configs/bcm2712_defconfig
-index 1a90cc271eb8..3b1540c0f509 100644
+index 5c42cf8192aa..4dd85ed9f4d4 100644
 --- a/arch/arm64/configs/bcm2712_defconfig
 +++ b/arch/arm64/configs/bcm2712_defconfig
 @@ -49,6 +49,7 @@ CONFIG_ARM64_ERRATUM_2441009=y
@@ -151,7 +151,7 @@ index 1a90cc271eb8..3b1540c0f509 100644
  CONFIG_COMPAT=y
  CONFIG_ARMV8_DEPRECATED=y
  CONFIG_SWP_EMULATION=y
-@@ -1689,3 +1690,4 @@ CONFIG_SCHED_TRACER=y
+@@ -1695,3 +1696,4 @@ CONFIG_SCHED_TRACER=y
  CONFIG_BLK_DEV_IO_TRACE=y
  # CONFIG_UPROBE_EVENTS is not set
  # CONFIG_STRICT_DEVMEM is not set
@@ -353,7 +353,7 @@ index 9076d47ed2ef..9dc5dfeaca2a 100644
  }
  module_init(system_heap_create);
 diff --git a/mm/mempolicy.c b/mm/mempolicy.c
-index aec756ae5637..c44a0be6b73b 100644
+index a1bf9aa15c33..1b3f710259b2 100644
 --- a/mm/mempolicy.c
 +++ b/mm/mempolicy.c
 @@ -3133,7 +3133,9 @@ void __init numa_policy_init(void)
