@@ -6,6 +6,7 @@ Emulators|[duckstation](http://github.com/stenzek/duckstation)|330381c9393a261f2
 Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|2754df9b94fcc9daa89d633232aae3ec1957aafb|Aug 23, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.105|Aug 23, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-08-23|Aug 23, 2024
+Emulators|[scummvm](http://github.com/scummvm/scummvm)|feaad5cc2cd6ccb104696048ec5e968400f1f355|Aug 23, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|28474af78cb321468e9945fa9e6581646f73f3d9|Aug 23, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|13cb3aa829672d66905c2e5c2cc7798fdd9829d0|Aug 23, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|3aef2ef5df2d145102f60278d47d8f6ca5913ccf|Aug 23, 2024
@@ -24,6 +25,7 @@ Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|fcd4f
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|cdfdb9bd307b14da7255e001388af58ca95647a7|Aug 23, 2024
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|3de0ef0a9677f7356e4223bad3e7a05e5206bf5b|Aug 23, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|f6c88f739133fb791bc61efe995a83ff726ab64f|Aug 23, 2024
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|feaad5cc2cd6ccb104696048ec5e968400f1f355|Aug 23, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|0cededfa7fd6275e8fa5a51239c4abae8d0fa6e9|Aug 23, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|a55a83da57d286c14c46c284f5a69f94bbbb40dc|Aug 22, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|a55a83da57d286c14c46c284f5a69f94bbbb40dc|Aug 22, 2024
@@ -82,13 +84,11 @@ Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|840915e52d38
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|229933ea5aa6b4d2a6f00ed55b34d7b8bf5f63e3|Aug 19, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20240819|Aug 19, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|dc69e5d027b392aeca47ee01bc3cfbf9ee1d5bfa|Aug 18, 2024
-Emulators|[scummvm](http://github.com/scummvm/scummvm)|60256b0ebfcef62b81ba688ffe345dffff75393f|Aug 18, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|0ad1e3d5855cdf8e3c4ee20f7d3ba5ebc20c2edd|Aug 18, 2024
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|36ce38dc9f871426d0222e69e11f56d7a593c490|Aug 18, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|fdce530c029514e2f66296288f9ee26a05058ec1|Aug 18, 2024
 Network|[qrtr](http://github.com/linux-msm/qrtr)|ef44ad10f284410e2db4c4ce22c8645f988f8402|Aug 18, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|f0ff2736203506b4a0c1502ddbf95ba1766d28ef|Aug 18, 2024
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|60256b0ebfcef62b81ba688ffe345dffff75393f|Aug 18, 2024
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|5.2|Aug 17, 2024
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|1d6dfdc33b86b71dfab4fe631e72fe7ee5c01ee1|Aug 17, 2024
 Looks|[hypseus-singe-bezels](http://github.com/Tovarichtch/hypseus_singe_daphne_bezels)|a6cfde68642dd03cda4b300ed827506cadf1c054|Aug 17, 2024
