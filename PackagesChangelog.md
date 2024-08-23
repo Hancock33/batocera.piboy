@@ -11,6 +11,9 @@ Emulators|[thextech](https://github.com/TheXTech/TheXTech)|13cb3aa829672d66905c2
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|3aef2ef5df2d145102f60278d47d8f6ca5913ccf|Aug 23, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|f1be5b0e93cec9b7e5cbd422856bb1c985eb5a17|Aug 23, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|b4001f8b2dd55a7225c736dae043ab4e737bf0ff|Aug 23, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.15.r268.g6a7bfbab10d|Aug 23, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240823|Aug 23, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240823|Aug 23, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|6772bdc30f85dbbca0f9754c7183de6f47d89553|Aug 23, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|df6fbf45860e384d2e8f66fac2c95b18eebef0d6|Aug 23, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|f6613f4b26e04e9769a0c872cdac13f9dfaa61c8|Aug 23, 2024
@@ -47,9 +50,6 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|71650f981f06
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|5d8276ba5d244136e5f352046a4563966521abf3|Aug 21, 2024
 Ports|[spacecadetpinball](http://github.com/k4zmu2a/SpaceCadetPinball)|cb9b7b886244a27773f66b0b19fdc2998392565e|Aug 21, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|81f425a0e599e2d62bfb1fa2eb18f08f0e541b00|Aug 21, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.15.r232.g6e15604c48a|Aug 21, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240821|Aug 21, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240821|Aug 21, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|0af60549ab67251f54002d06bb03cbf01c6381a3|Aug 21, 2024
 Ports|[xatrix](http://github.com/yquake2/xatrix)|16db9eab3f864acb3f5cd181cb87c856983558f0|Aug 21, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|45fce1deb0da2b5cb0f64ef6624a5b27de702492|Aug 21, 2024
