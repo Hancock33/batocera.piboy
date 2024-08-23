@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|452305b7d043c81b985be5cfa612a449496343a2|Aug 23, 2024
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|452305b7d043c81b985be5cfa612a449496343a2|Aug 23, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|573c98b2f80826c2bf0a9994c4e7d1f0950b4dc7|Aug 23, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|1f5e100a0e6dd4f9ab3784fd6373d452054d08bf|Aug 23, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|330381c9393a261f22a62495956078c044502b95|Aug 23, 2024
@@ -27,8 +29,6 @@ Emulators|[libretro-kronos](http://github.com/FCare/kronos)|3de0ef0a9677f7356e42
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|f6c88f739133fb791bc61efe995a83ff726ab64f|Aug 23, 2024
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|feaad5cc2cd6ccb104696048ec5e968400f1f355|Aug 23, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|0cededfa7fd6275e8fa5a51239c4abae8d0fa6e9|Aug 23, 2024
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|a55a83da57d286c14c46c284f5a69f94bbbb40dc|Aug 22, 2024
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|a55a83da57d286c14c46c284f5a69f94bbbb40dc|Aug 22, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|2401021c5bfc636a3f53fff2ccc2fa399ccd02f2|Aug 22, 2024
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|9c1f778e797ed03dd07b5b554748900a433efe89|Aug 22, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|64510549c8129bfbfd5c611cefd51c8decb5af1f|Aug 22, 2024
