@@ -1,0 +1,59 @@
+diff --git a/main.c b/main.c
+index e6b1916..d9dc60b 100644
+--- a/main.c
++++ b/main.c
+@@ -27,6 +27,7 @@ static int opt_smartfit = -1;
+ static int opt_delay = 0;
+ static int opt_enlarge = 0;
+ static int opt_ignore_aspect = 0;
++static int opt_rotate = 0;
+ static int opt_orientation = 0;
+ static int opt_skip_tty = 0;
+ static char *imagename = NULL;
+@@ -250,7 +251,7 @@ int show_image(char *filename)
+ 
+ 	int transform_shrink = opt_shrink, transform_enlarge = opt_enlarge;
+ 	int transform_cal = (opt_shrink == 2), transform_iaspect = opt_ignore_aspect;
+-	int transform_rotation = 0;
++	int transform_rotation = opt_rotate;
+ 	int transform_widthonly = opt_widthonly, transform_heightonly = opt_heightonly;
+ 
+ 	double zoom = 1;
+@@ -617,7 +618,7 @@ void help(char *name)
+ 		   "  -s <delay>, --delay <d>  Slideshow, 'delay' is the slideshow delay in tenths of seconds.\n\n"
+ 		   "  -n imagename(s)     Image name(s) shown in help\n"
+ 		   "  -o <mode>, --orientation <mode>  Show image in specific orientation (0 = no rotation, 1 = 90° rotation, 2 = 180° rotation, 3 = 270° rotation)\n"
+-		   "  -y, --skiptty		  Shows the image only once and skips tty input mode.\n"
++		   "  -q, --skiptty		  Shows the image only once and skips tty input mode.\n"
+ 		   "Input keys:\n"
+ 		   " r          : Redraw the image\n"
+ 		   " < or ,     : Previous image\n"
+@@ -682,7 +683,7 @@ int main(int argc, char **argv)
+ 		return 1;
+ 	}
+ 
+-	while((c = getopt_long_only(argc, argv, "hn:cauifks:eltxro:y", long_options, NULL)) != EOF)
++	while((c = getopt_long_only(argc, argv, "hn:cauifks:eltxroy:q", long_options, NULL)) != EOF)
+ 	{
+ 		switch(c)
+ 		{
+@@ -731,9 +732,18 @@ int main(int argc, char **argv)
+ 			case 'o':
+ 				opt_orientation = atoi(optarg);
+ 				break;
+-			case 'y':
++			case 'q':
+ 				opt_skip_tty = 1;
+ 				break;
++			case 'x':
++				opt_rotate = 1;
++				break;
++			case 'y':
++				opt_rotate = 2;
++				break;
++			case 'z':
++				opt_rotate = 3;
++				break;
+ 		}
+ 	}
+ 
