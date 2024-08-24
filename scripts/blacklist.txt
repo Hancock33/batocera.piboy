@@ -19,6 +19,7 @@ ryujinx.mk
 scummvm.mk
 wine-ge.mk
 wine-native.mk
+wine-ntsync.mk
 wine-proton.mk
 wine-staging.mk
 wine-x86.mk

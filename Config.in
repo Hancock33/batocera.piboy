@@ -448,7 +448,6 @@ menu "Emulators"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/extras/wine-ntsync/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/extras/wine-proton/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/extras/wine-staging/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine/extras/wine-tkg/Config.in"
   endmenu
 
 endmenu
