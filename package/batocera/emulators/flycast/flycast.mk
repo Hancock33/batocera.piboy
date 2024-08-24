@@ -3,8 +3,8 @@
 # flycast
 #
 ################################################################################
-# Version: Commits on Aug 20, 2024
-FLYCAST_VERSION = b99b3450c8791bf46fa4866255c1347041fe372e
+# Version: Commits on Aug 23, 2024
+FLYCAST_VERSION = 349083030d85d9e7ae44bddf05090952c6e2bfbc
 FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 FLYCAST_SITE_METHOD=git
 FLYCAST_GIT_SUBMODULES=YES

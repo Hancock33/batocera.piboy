@@ -3,8 +3,8 @@
 # wine-ntsync
 #
 ################################################################################
-# Version: Commits on Jul 16, 2024
-WINE_NTSYNC_VERSION = 7935cdf856708ab45cc470d28672ff0c36cdb960
+# Version: Commits on Aug 24, 2024
+WINE_NTSYNC_VERSION = 8609f49768514a1ed6571747006575c2a24555e9
 WINE_NTSYNC_BRANCH = ntsync
 WINE_NTSYNC_SOURCE = wine-ntsync-$(WINE_NTSYNC_VERSION).tar.gz
 WINE_NTSYNC_SITE = $(call github,Kron4ek,wine-tkg,$(WINE_NTSYNC_VERSION))
