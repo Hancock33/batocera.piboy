@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Aug 23, 2024
-VKQUAKE_VERSION = d89bcb289a1ad0a9106007882254d90bb067e0cf
+VKQUAKE_VERSION = a95ef547544e87ed48593aa295876d3d6a856d03
 VKQUAKE_SITE = $(call github,Novum,vkQuake,$(VKQUAKE_VERSION))
 
 VKQUAKE_DEPENDENCIES = sdl2 sdl2_image
