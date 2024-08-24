@@ -1,5 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.16.r0.g6c5cb546|Aug 24, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240824|Aug 24, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240824|Aug 24, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|452305b7d043c81b985be5cfa612a449496343a2|Aug 23, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|452305b7d043c81b985be5cfa612a449496343a2|Aug 23, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|573c98b2f80826c2bf0a9994c4e7d1f0950b4dc7|Aug 23, 2024
@@ -14,9 +17,6 @@ Emulators|[thextech](https://github.com/TheXTech/TheXTech)|13cb3aa829672d66905c2
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|3aef2ef5df2d145102f60278d47d8f6ca5913ccf|Aug 23, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|f1be5b0e93cec9b7e5cbd422856bb1c985eb5a17|Aug 23, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|b4001f8b2dd55a7225c736dae043ab4e737bf0ff|Aug 23, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.15.r268.g6a7bfbab10d|Aug 23, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240823|Aug 23, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240823|Aug 23, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|6772bdc30f85dbbca0f9754c7183de6f47d89553|Aug 23, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|df6fbf45860e384d2e8f66fac2c95b18eebef0d6|Aug 23, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|f6613f4b26e04e9769a0c872cdac13f9dfaa61c8|Aug 23, 2024
