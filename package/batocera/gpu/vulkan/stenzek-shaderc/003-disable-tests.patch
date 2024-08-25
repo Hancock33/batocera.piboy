@@ -1,0 +1,22 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 79970ea..da1b936 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -33,7 +33,7 @@ endif()
+ 
+ option(SHADERC_SKIP_TESTS "Skip building tests" ${SHADERC_SKIP_TESTS})
+ if(NOT ${SHADERC_SKIP_TESTS})
+-  set(SHADERC_ENABLE_TESTS ON)
++  set(SHADERC_ENABLE_TESTS OFF)
+ endif()
+ if(${SHADERC_ENABLE_TESTS})
+   message(STATUS "Configuring Shaderc to build tests.")
+@@ -43,7 +43,7 @@ endif()
+ 
+ option(SHADERC_SKIP_EXAMPLES "Skip building examples" ${SHADERC_SKIP_EXAMPLES})
+ if(NOT ${SHADERC_SKIP_EXAMPLES})
+-  set(SHADERC_ENABLE_EXAMPLES ON)
++  set(SHADERC_ENABLE_EXAMPLES OFF)
+ endif()
+ if(${SHADERC_ENABLE_EXAMPLES})
+   message(STATUS "Configuring Shaderc to build examples.")

@@ -1,0 +1,26 @@
+diff --git a/CMakeModules/DuckStationDependencies.cmake b/CMakeModules/DuckStationDependencies.cmake
+index 1cc70b383..899bf1fe1 100644
+--- a/CMakeModules/DuckStationDependencies.cmake
++++ b/CMakeModules/DuckStationDependencies.cmake
+@@ -44,7 +44,7 @@ if(ENABLE_VULKAN)
+ 
+   if(LINUX)
+     # We need to add the rpath for shaderc to the executable.
+-    get_target_property(SHADERC_LIBRARY Shaderc::shaderc_shared IMPORTED_LOCATION)
++    get_target_property(SHADERC_LIBRARY Shaderc::shaderc_stenzek IMPORTED_LOCATION)
+     get_filename_component(SHADERC_LIBRARY_DIRECTORY ${SHADERC_LIBRARY} DIRECTORY)
+     list(APPEND CMAKE_BUILD_RPATH ${SHADERC_LIBRARY_DIRECTORY})
+     get_target_property(SPIRV_CROSS_LIBRARY spirv-cross-c-shared IMPORTED_LOCATION)
+diff --git a/src/util/CMakeLists.txt b/src/util/CMakeLists.txt
+index 65c771d61..316447e3b 100644
+--- a/src/util/CMakeLists.txt
++++ b/src/util/CMakeLists.txt
+@@ -169,7 +169,7 @@ endif()
+ 
+ if(ENABLE_VULKAN OR APPLE)
+   # shaderc is loaded dynamically to reduce module loads on startup.
+-  get_target_property(SHADERC_INCLUDE_DIR Shaderc::shaderc_shared INTERFACE_INCLUDE_DIRECTORIES)
++  get_target_property(SHADERC_INCLUDE_DIR Shaderc::shaderc_stenzek INTERFACE_INCLUDE_DIRECTORIES)
+   target_include_directories(util PUBLIC ${SHADERC_INCLUDE_DIR})
+ endif()
+ 

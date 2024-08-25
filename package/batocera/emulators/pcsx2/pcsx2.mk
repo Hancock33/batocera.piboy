@@ -12,7 +12,7 @@ PCSX2_LICENSE = GPLv3
 PCSX2_LICENSE_FILE = COPYING.GPLv3
 PCSX2_SUPPORTS_IN_SOURCE_BUILD = NO
 
-PCSX2_DEPENDENCIES += xorgproto alsa-lib freetype zlib libpng shaderc
+PCSX2_DEPENDENCIES += xorgproto alsa-lib freetype zlib libpng stenzek-shaderc
 PCSX2_DEPENDENCIES += libaio portaudio libsoundtouch sdl2 libpcap yaml-cpp
 PCSX2_DEPENDENCIES += libsamplerate fmt wxwidgets libgtk3 qt6base qt6tools qt6svg
 
@@ -21,6 +21,7 @@ PCSX2_CONF_OPTS += -DUSE_SYSTEM_LIBS=AUTO
 PCSX2_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
 PCSX2_CONF_OPTS += -DLTO_PCSX2_CORE=OFF
 PCSX2_CONF_OPTS += -DUSE_ACHIEVEMENTS=ON
+PCSX2_CONF_OPTS += -DCMAKE_PREFIX_PATH=$(STAGING_DIR)/stenzek-shaderc
 # The following flag is misleading and *needed* ON to avoid doing -march=native
 PCSX2_CONF_OPTS += -DDISABLE_ADVANCE_SIMD=ON
 
