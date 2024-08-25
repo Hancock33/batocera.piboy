@@ -10,7 +10,8 @@ Emulators|[openmsx](http://github.com/openMSX/openMSX)|33f468f67d3af1c947bbbab2e
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|11e3aa660e48bbde7c1af6368ed9f03c3ebdc36d|Aug 25, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-08-25|Aug 25, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|f01a4e9b63583aa901f37a54523360be33034ccb|Aug 25, 2024
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|7d385c3844f8edd0a290356a93663717907cd040|Aug 25, 2024
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|d6f0ab6a7ed7c167b317e3ffc7b9a87ade04e4b2|Aug 25, 2024
+Libraries|[lunasvg](http://github.com/stenzek/lunasvg)|9af1ac7b90658a279b372add52d6f77a4ebb482c|Aug 25, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|34f7e49e519913026648c611e5929b278de20943|Aug 25, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|a3f13b226874121422c8f967d69950809b8670ff|Aug 25, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240825|Aug 25, 2024
