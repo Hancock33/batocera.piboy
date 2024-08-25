@@ -3,7 +3,7 @@
 # nvidia390-legacy-driver
 #
 ################################################################################
-
+# Version: Commits on  Nov 22, 2022
 NVIDIA390_LEGACY_DRIVER_VERSION = 390.157
 NVIDIA390_LEGACY_DRIVER_SUFFIX = $(if $(BR2_x86_64),_64)
 NVIDIA390_LEGACY_DRIVER_SITE = http://download.nvidia.com/XFree86/Linux-x86$(NVIDIA390_LEGACY_DRIVER_SUFFIX)/$(NVIDIA390_LEGACY_DRIVER_VERSION)
@@ -137,9 +137,9 @@ define NVIDIA390_LEGACY_DRIVER_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0644 $(@D)/nvidia_drv.so \
 			$(TARGET_DIR)/usr/lib/xorg/modules/drivers/nvidia390_legacy_drv.so
 	$(INSTALL) -D -m 0644 $(@D)/libglx.so.$(NVIDIA390_LEGACY_DRIVER_VERSION) \
-	        $(TARGET_DIR)/usr/lib/xorg/modules/extensions/libglx.so.$(NVIDIA390_LEGACY_DRIVER_VERSION)
+			$(TARGET_DIR)/usr/lib/xorg/modules/extensions/libglx.so.$(NVIDIA390_LEGACY_DRIVER_VERSION)
 	$(NVIDIA390_LEGACY_DRIVER_INSTALL_KERNEL_MODULE)
-	
+
 	# batocera install files needed by libglvnd
 	$(INSTALL) -D -m 0644 $(@D)/10_nvidia.json \
 		$(TARGET_DIR)/usr/share/glvnd/egl_vendor.d/10_nvidia390_legacy.json
@@ -152,20 +152,20 @@ endef
 
 # move to avoid the production driver
 define NVIDIA390_LEGACY_DRIVER_RENAME_KERNEL_MODULES
-    mkdir -p $(TARGET_DIR)/usr/share/nvidia
+	mkdir -p $(TARGET_DIR)/usr/share/nvidia
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia/modules
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia/xorg/
-    # rename the kernel modules to avoid conflict
+	# rename the kernel modules to avoid conflict
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia390-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia390-legacy.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-modeset.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia390-modeset-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia390-modeset-legacy.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-drm.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia390-drm-legacy.ko	
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia390-drm-legacy.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-uvm.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia390-uvm-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia390-uvm-legacy.ko
 	mv -f $(TARGET_DIR)/usr/lib/xorg/modules/extensions/libglx.so.$(NVIDIA390_LEGACY_DRIVER_VERSION) \
-	    $(TARGET_DIR)/usr/share/nvidia/xorg/libglx.so.$(NVIDIA390_LEGACY_DRIVER_VERSION)
+		$(TARGET_DIR)/usr/share/nvidia/xorg/libglx.so.$(NVIDIA390_LEGACY_DRIVER_VERSION)
 	# set the driver version file
 	echo $(NVIDIA390_LEGACY_DRIVER_VERSION) > $(TARGET_DIR)/usr/share/nvidia/legacy390.version
 endef

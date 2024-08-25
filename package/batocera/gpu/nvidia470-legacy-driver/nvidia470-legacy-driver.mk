@@ -3,13 +3,13 @@
 # nvidia470-legacy-driver
 #
 ################################################################################
-
+# Version: Commits on  Jun 04, 2024
 NVIDIA470_LEGACY_DRIVER_VERSION = 470.256.02
 NVIDIA470_LEGACY_DRIVER_SUFFIX = $(if $(BR2_x86_64),_64)
 NVIDIA470_LEGACY_DRIVER_SITE = \
-    http://download.nvidia.com/XFree86/Linux-x86$(NVIDIA470_LEGACY_DRIVER_SUFFIX)/$(NVIDIA470_LEGACY_DRIVER_VERSION)
+	http://download.nvidia.com/XFree86/Linux-x86$(NVIDIA470_LEGACY_DRIVER_SUFFIX)/$(NVIDIA470_LEGACY_DRIVER_VERSION)
 NVIDIA470_LEGACY_DRIVER_SOURCE = \
-    NVIDIA-Linux-x86$(NVIDIA470_LEGACY_DRIVER_SUFFIX)-$(NVIDIA470_LEGACY_DRIVER_VERSION).run
+	NVIDIA-Linux-x86$(NVIDIA470_LEGACY_DRIVER_SUFFIX)-$(NVIDIA470_LEGACY_DRIVER_VERSION).run
 NVIDIA470_LEGACY_DRIVER_LICENSE = NVIDIA Software License
 NVIDIA470_LEGACY_DRIVER_LICENSE_FILES = LICENSE
 NVIDIA470_LEGACY_DRIVER_REDISTRIBUTE = NO
@@ -211,21 +211,21 @@ define NVIDIA470_LEGACY_DRIVER_INSTALL_TARGET_CMDS
 	 	$(TARGET_DIR)/usr/lib/xorg/modules/extensions/libglxserver_nvidia.so.$(NVIDIA470_LEGACY_DRIVER_VERSION)
 
 # firmware
-    mkdir -p $(TARGET_DIR)/lib/firmware/nvidia/$(NVIDIA470_LEGACY_DRIVER_VERSION)
+	mkdir -p $(TARGET_DIR)/lib/firmware/nvidia/$(NVIDIA470_LEGACY_DRIVER_VERSION)
 	$(INSTALL) -D -m 0644 $(@D)/firmware/* $(TARGET_DIR)/lib/firmware/nvidia/$(NVIDIA470_LEGACY_DRIVER_VERSION)
 
 endef
 
 define NVIDIA470_LEGACY_DRIVER_VULKANJSON_X86_64
-    mkdir -p $(TARGET_DIR)/usr/share/vulkan/nvidia
+	mkdir -p $(TARGET_DIR)/usr/share/vulkan/nvidia
 	$(INSTALL) -D -m 0644 $(@D)/nvidia_icd.json $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_legacy_icd.x86_64.json
-        sed -i -e s+'"library_path": "libGLX_nvidia'+'"library_path": "/usr/lib/libGLX_nvidia'+ $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_legacy_icd.x86_64.json
+		sed -i -e s+'"library_path": "libGLX_nvidia'+'"library_path": "/usr/lib/libGLX_nvidia'+ $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_legacy_icd.x86_64.json
 	$(INSTALL) -D -m 0644 $(@D)/nvidia_icd.json $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_legacy_icd.i686.json
-        sed -i -e s+'"library_path": "libGLX_nvidia'+'"library_path": "/lib32/libGLX_nvidia'+ $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_legacy_icd.i686.json
+		sed -i -e s+'"library_path": "libGLX_nvidia'+'"library_path": "/lib32/libGLX_nvidia'+ $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_legacy_icd.i686.json
 endef
 
 define NVIDIA470_LEGACY_DRIVER_VULKANJSON_X86
-    mkdir -p $(TARGET_DIR)/usr/share/vulkan/nvidia
+	mkdir -p $(TARGET_DIR)/usr/share/vulkan/nvidia
 	$(INSTALL) -D -m 0644 $(@D)/nvidia_icd.json $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_legacy_icd.i686.json
 endef
 
@@ -238,17 +238,17 @@ endif
 
 # move to avoid the production driver
 define NVIDIA470_LEGACY_DRIVER_RENAME_KERNEL_MODULES
-    mkdir -p $(TARGET_DIR)/usr/share/nvidia
+	mkdir -p $(TARGET_DIR)/usr/share/nvidia
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia/modules
 	# rename the kernel modules to avoid conflict
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia470-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia470-legacy.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-modeset.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia470-modeset-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia470-modeset-legacy.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-drm.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia470-drm-legacy.ko	
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia470-drm-legacy.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-uvm.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia470-uvm-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia470-uvm-legacy.ko
 	# set the driver version file
 	echo $(NVIDIA470_LEGACY_DRIVER_VERSION) > $(TARGET_DIR)/usr/share/nvidia/legacy470.version
 endef

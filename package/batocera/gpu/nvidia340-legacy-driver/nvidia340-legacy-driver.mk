@@ -3,13 +3,13 @@
 # nvidia340-legacy-driver
 #
 ################################################################################
-
+# Version: Commits on  Dec 23, 2019
 NVIDIA340_LEGACY_DRIVER_VERSION = 340.108
 NVIDIA340_LEGACY_DRIVER_SUFFIX = $(if $(BR2_x86_64),_64)
 NVIDIA340_LEGACY_DRIVER_SITE = \
-    http://download.nvidia.com/XFree86/Linux-x86$(NVIDIA340_LEGACY_DRIVER_SUFFIX)/$(NVIDIA340_LEGACY_DRIVER_VERSION)
+	http://download.nvidia.com/XFree86/Linux-x86$(NVIDIA340_LEGACY_DRIVER_SUFFIX)/$(NVIDIA340_LEGACY_DRIVER_VERSION)
 NVIDIA340_LEGACY_DRIVER_SOURCE = \
-    NVIDIA-Linux-x86$(NVIDIA340_LEGACY_DRIVER_SUFFIX)-$(NVIDIA340_LEGACY_DRIVER_VERSION).run
+	NVIDIA-Linux-x86$(NVIDIA340_LEGACY_DRIVER_SUFFIX)-$(NVIDIA340_LEGACY_DRIVER_VERSION).run
 NVIDIA340_LEGACY_DRIVER_LICENSE = NVIDIA Software License
 NVIDIA340_LEGACY_DRIVER_LICENSE_FILES = LICENSE
 NVIDIA340_LEGACY_DRIVER_REDISTRIBUTE = NO
@@ -47,10 +47,10 @@ NVIDIA340_LEGACY_DRIVER_LIBS_MISC = \
 	libnvidia-ml.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
 
 NVIDIA340_LEGACY_DRIVER_LIBS_TLS = \
-    libnvidia-tls.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
+	libnvidia-tls.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
 
 NVIDIA340_LEGACY_DRIVER_LIBS_VDPAU = \
-    libvdpau.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
+	libvdpau.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
 	libvdpau_trace.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
 	libvdpau_nvidia.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
 
@@ -80,9 +80,9 @@ define NVIDIA340_LEGACY_DRIVER_INSTALL_GL_DEV
 	$(SED) 's:__LIBGL_PATH__:/usr/lib:' $(STAGING_DIR)/usr/lib/libGL.la
 	$(SED) 's:-L[^[:space:]]\+::' $(STAGING_DIR)/usr/lib/libGL.la
 	$(INSTALL) -D -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/nvidia-driver/gl.pc \
-	    $(STAGING_DIR)/usr/lib/pkgconfig/gl.pc
+		$(STAGING_DIR)/usr/lib/pkgconfig/gl.pc
 	$(INSTALL) -D -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/nvidia-driver/egl.pc \
-	    $(STAGING_DIR)/usr/lib/pkgconfig/egl.pc
+		$(STAGING_DIR)/usr/lib/pkgconfig/egl.pc
 endef
 
 # Those libraries are 'private' libraries requiring an agreement with
@@ -144,7 +144,7 @@ endif # BR2_PACKAGE_NVIDIA340_LEGACY_DRIVER_MODULE == y
 # Except it can't extract into an existing (even empty) directory.
 define NVIDIA340_LEGACY_DRIVER_EXTRACT_CMDS
 	$(SHELL) $(NVIDIA340_LEGACY_DRIVER_DL_DIR)/$(NVIDIA340_LEGACY_DRIVER_SOURCE) \
-	    --extract-only --target $(@D)/tmp-extract
+		--extract-only --target $(@D)/tmp-extract
 	chmod u+w -R $(@D)
 	mv $(@D)/tmp-extract/* $(@D)/tmp-extract/.manifest $(@D)
 	rm -rf $(@D)/tmp-extract
@@ -183,9 +183,9 @@ define NVIDIA340_LEGACY_DRIVER_INSTALL_TARGET_CMDS
 	$(call NVIDIA340_LEGACY_DRIVER_INSTALL_LIBS,$(TARGET_DIR))
 	$(call NVIDIA340_LEGACY_DRIVER_INSTALL_32,$(TARGET_DIR))
 	$(INSTALL) -D -m 0644 $(@D)/nvidia_drv.so \
-	    $(TARGET_DIR)/usr/lib/xorg/modules/drivers/nvidia340_legacy_drv.so
+		$(TARGET_DIR)/usr/lib/xorg/modules/drivers/nvidia340_legacy_drv.so
 	$(INSTALL) -D -m 0644 $(@D)/libglx.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
-	    $(TARGET_DIR)/usr/lib/nvidia/xorg/libglx.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
+		$(TARGET_DIR)/usr/lib/nvidia/xorg/libglx.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
 	$(foreach p,$(NVIDIA340_LEGACY_DRIVER_PROGS), \
 		$(INSTALL) -D -m 0755 $(@D)/$(p) \
 			$(TARGET_DIR)/usr/bin/$(p)
@@ -193,7 +193,7 @@ define NVIDIA340_LEGACY_DRIVER_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia/X11
 	$(INSTALL) -D -m 0644 \
-	    $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/gpu/nvidia340-legacy-driver/20-nvidia.conf \
+		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/gpu/nvidia340-legacy-driver/20-nvidia.conf \
 		$(TARGET_DIR)/usr/share/nvidia/X11/20-nvidia.conf
 endef
 
@@ -203,30 +203,30 @@ KVER = $(shell expr $(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE))
 define NVIDIA340_LEGACY_DRIVER_RENAME_KERNEL_MODULES
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia/modules
-    # rename the kernel modules to avoid conflict
+	# rename the kernel modules to avoid conflict
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia340-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia340-legacy.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-uvm.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia340-uvm-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia340-uvm-legacy.ko
 	# move .so.340.108 files
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia/libraries
 	mv -f $(TARGET_DIR)/usr/lib/libGL.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
-	    $(TARGET_DIR)/usr/share/nvidia/libraries/libGL.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
+		$(TARGET_DIR)/usr/share/nvidia/libraries/libGL.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
 	mv -f $(TARGET_DIR)/usr/lib/libEGL.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
-	    $(TARGET_DIR)/usr/share/nvidia/libraries/libEGL.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
+		$(TARGET_DIR)/usr/share/nvidia/libraries/libEGL.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
 	mv -f $(TARGET_DIR)/usr/lib/libGLESv1_CM.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
-	    $(TARGET_DIR)/usr/share/nvidia/libraries/libGLESv1_CM.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
+		$(TARGET_DIR)/usr/share/nvidia/libraries/libGLESv1_CM.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
 	mv -f $(TARGET_DIR)/usr/lib/libGLESv2.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
-	    $(TARGET_DIR)/usr/share/nvidia/libraries/libGLESv2.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
+		$(TARGET_DIR)/usr/share/nvidia/libraries/libGLESv2.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia/libraries/32
 	mv -f $(TARGET_DIR)/lib32/libGL.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
-	    $(TARGET_DIR)/usr/share/nvidia/libraries/32/libGL.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
+		$(TARGET_DIR)/usr/share/nvidia/libraries/32/libGL.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
 	mv -f $(TARGET_DIR)/lib32/libEGL.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
-	    $(TARGET_DIR)/usr/share/nvidia/libraries/32/libEGL.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
+		$(TARGET_DIR)/usr/share/nvidia/libraries/32/libEGL.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
 	mv -f $(TARGET_DIR)/lib32/libGLESv1_CM.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
-	    $(TARGET_DIR)/usr/share/nvidia/libraries/32/libGLESv1_CM.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
+		$(TARGET_DIR)/usr/share/nvidia/libraries/32/libGLESv1_CM.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
 	mv -f $(TARGET_DIR)/lib32/libGLESv2.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
-	    $(TARGET_DIR)/usr/share/nvidia/libraries/32/libGLESv2.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
+		$(TARGET_DIR)/usr/share/nvidia/libraries/32/libGLESv2.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
 	# set the driver version file
 	echo $(NVIDIA340_LEGACY_DRIVER_VERSION) > $(TARGET_DIR)/usr/share/nvidia/legacy340.version
 endef

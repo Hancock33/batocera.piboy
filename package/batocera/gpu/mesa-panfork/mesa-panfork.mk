@@ -27,7 +27,7 @@ MESA_PANFORK_DEPENDENCIES = \
 
 # the src/mesa/main/formats.csv in mesa-22.1.3 offical tarball is msdos file format
 # patch the 0023-dri-add-support-for-YUV-DRI-config.patch will failed:
-#      Hunk #1 FAILED at 92 (different line endings).
+#	  Hunk #1 FAILED at 92 (different line endings).
 # so first change to the unix file format before patch
 define MESA_PANFORK_CHANEG_FILE_TO_UNIX_FORMAT
 	if [ -f $(@D)/src/mesa/main/formats.csv ]; then \
@@ -82,8 +82,8 @@ endif
 ifeq ($(BR2_PACKAGE_MESA_PANFORK_OPENGL_GLX),y)
 # Disable-mangling not yet supported by meson build system.
 # glx:
-#  dri          : dri based GLX requires at least one DRI driver || dri based GLX requires shared-glapi
-#  xlib         : xlib conflicts with any dri driver
+#  dri		  : dri based GLX requires at least one DRI driver || dri based GLX requires shared-glapi
+#  xlib		 : xlib conflicts with any dri driver
 #  gallium-xlib : Gallium-xlib based GLX requires at least one gallium driver || Gallium-xlib based GLX requires softpipe or llvmpipe || gallium-xlib conflicts with any dri driver.
 # Always enable glx-direct; without it, many GLX applications don't work.
 MESA_PANFORK_CONF_OPTS += \

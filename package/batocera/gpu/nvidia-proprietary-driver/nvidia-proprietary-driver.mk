@@ -7,9 +7,9 @@
 NVIDIA_PROPRIETARY_DRIVER_VERSION = $(NVIDIA_OPEN_DRIVER_VERSION)
 NVIDIA_PROPRIETARY_DRIVER_SUFFIX = $(if $(BR2_x86_64),_64)
 NVIDIA_PROPRIETARY_DRIVER_SITE = \
-    http://download.nvidia.com/XFree86/Linux-x86$(NVIDIA_PROPRIETARY_DRIVER_SUFFIX)/$(NVIDIA_PROPRIETARY_DRIVER_VERSION)
+	http://download.nvidia.com/XFree86/Linux-x86$(NVIDIA_PROPRIETARY_DRIVER_SUFFIX)/$(NVIDIA_PROPRIETARY_DRIVER_VERSION)
 NVIDIA_PROPRIETARY_DRIVER_SOURCE = \
-    NVIDIA-Linux-x86$(NVIDIA_PROPRIETARY_DRIVER_SUFFIX)-$(NVIDIA_PROPRIETARY_DRIVER_VERSION).run
+	NVIDIA-Linux-x86$(NVIDIA_PROPRIETARY_DRIVER_SUFFIX)-$(NVIDIA_PROPRIETARY_DRIVER_VERSION).run
 NVIDIA_PROPRIETARY_DRIVER_LICENSE = NVIDIA Software License
 NVIDIA_PROPRIETARY_DRIVER_LICENSE_FILES = LICENSE
 NVIDIA_PROPRIETARY_DRIVER_REDISTRIBUTE = NO
@@ -54,15 +54,15 @@ KVER = $(shell expr $(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE))
 define NVIDIA_PROPRIETARY_DRIVER_RENAME_KERNEL_MODULES
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia/modules
-    # rename the kernel modules to avoid conflict
+	# rename the kernel modules to avoid conflict
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia-proprietary.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia-proprietary.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-modeset.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia-modeset-proprietary.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia-modeset-proprietary.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-drm.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia-drm-proprietary.ko	
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia-drm-proprietary.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-uvm.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia-uvm-proprietary.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia-uvm-proprietary.ko
 endef
 
 NVIDIA_PROPRIETARY_DRIVER_POST_INSTALL_TARGET_HOOKS += NVIDIA_PROPRIETARY_DRIVER_RENAME_KERNEL_MODULES
