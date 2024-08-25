@@ -166,13 +166,13 @@ endef
 # batocera install 32bit libraries
 define NVIDIA340_LEGACY_DRIVER_INSTALL_32
 	$(foreach lib,$(NVIDIA340_LEGACY_DRIVER_32),\
-		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/lib32/$(notdir $(lib))
+		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/usr/lib32/$(notdir $(lib))
 	)
 	$(foreach lib,$(NVIDIA340_LEGACY_DRIVER_LIBS_TLS),\
-		$(INSTALL) -D -m 0644 $(@D)/32/tls/$(lib) $(1)/lib32/$(notdir $(lib))
+		$(INSTALL) -D -m 0644 $(@D)/32/tls/$(lib) $(1)/usr/lib32/$(notdir $(lib))
 	)
 	$(foreach lib,$(NVIDIA340_LEGACY_DRIVER_LIBS_VDPAU),\
-		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/lib32/vdpau/$(notdir $(lib))
+		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/usr/lib32/vdpau/$(notdir $(lib))
 	)
 endef
 
@@ -217,13 +217,13 @@ define NVIDIA340_LEGACY_DRIVER_RENAME_KERNEL_MODULES
 	mv -f $(TARGET_DIR)/usr/lib/libGLESv2.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
 		$(TARGET_DIR)/usr/share/nvidia/libraries/libGLESv2.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia/libraries/32
-	mv -f $(TARGET_DIR)/lib32/libGL.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
+	mv -f $(TARGET_DIR)/usr/lib32/libGL.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
 		$(TARGET_DIR)/usr/share/nvidia/libraries/32/libGL.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
-	mv -f $(TARGET_DIR)/lib32/libEGL.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
+	mv -f $(TARGET_DIR)/usr/lib32/libEGL.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
 		$(TARGET_DIR)/usr/share/nvidia/libraries/32/libEGL.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
-	mv -f $(TARGET_DIR)/lib32/libGLESv1_CM.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
+	mv -f $(TARGET_DIR)/usr/lib32/libGLESv1_CM.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
 		$(TARGET_DIR)/usr/share/nvidia/libraries/32/libGLESv1_CM.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
-	mv -f $(TARGET_DIR)/lib32/libGLESv2.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
+	mv -f $(TARGET_DIR)/usr/lib32/libGLESv2.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
 		$(TARGET_DIR)/usr/share/nvidia/libraries/32/libGLESv2.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
 	# set the driver version file
 	echo $(NVIDIA340_LEGACY_DRIVER_VERSION) > $(TARGET_DIR)/usr/share/nvidia/legacy340.version

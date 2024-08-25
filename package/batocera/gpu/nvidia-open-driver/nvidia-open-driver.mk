@@ -208,29 +208,29 @@ endef
 # batocera install 32bit libraries
 define NVIDIA_OPEN_DRIVER_INSTALL_32
 	$(foreach lib,$(NVIDIA_OPEN_DRIVER_32),\
-		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/lib32/$(notdir $(lib))
+		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/usr/lib32/$(notdir $(lib))
 		libsoname="$$( $(TARGET_READELF) -d "$(@D)/$(lib)" \
 			|sed -r -e '/.*\(SONAME\).*\[(.*)\]$$/!d; s//\1/;' )"; \
 		if [ -n "$${libsoname}" -a "$${libsoname}" != "$(notdir $(lib))" ]; then \
 			ln -sf $(notdir $(lib)) \
-				$(1)/lib32/$${libsoname}; \
+				$(1)/usr/lib32/$${libsoname}; \
 		fi
 		baseso=$(firstword $(subst .,$(space),$(notdir $(lib)))).so; \
 		if [ -n "$${baseso}" -a "$${baseso}" != "$(notdir $(lib))" ]; then \
-			ln -sf $(notdir $(lib)) $(1)/lib32/$${baseso}; \
+			ln -sf $(notdir $(lib)) $(1)/usr/lib32/$${baseso}; \
 		fi
 	)
 	$(foreach lib,$(NVIDIA_OPEN_DRIVER_LIBS_VDPAU),\
-		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/lib32/vdpau/$(notdir $(lib))
+		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/usr/lib32/vdpau/$(notdir $(lib))
 		libsoname="$$( $(TARGET_READELF) -d "$(@D)/$(lib)" \
 			|sed -r -e '/.*\(SONAME\).*\[(.*)\]$$/!d; s//\1/;' )"; \
 		if [ -n "$${libsoname}" -a "$${libsoname}" != "$(notdir $(lib))" ]; then \
 			ln -sf $(notdir $(lib)) \
-				$(1)/lib32/vdpau/$${libsoname}; \
+				$(1)/usr/lib32/vdpau/$${libsoname}; \
 		fi
 		baseso=$(firstword $(subst .,$(space),$(notdir $(lib)))).so; \
 		if [ -n "$${baseso}" -a "$${baseso}" != "$(notdir $(lib))" ]; then \
-			ln -sf $(notdir $(lib)) $(1)/lib32/vdpau/$${baseso}; \
+			ln -sf $(notdir $(lib)) $(1)/usr/lib32/vdpau/$${baseso}; \
 		fi
 	)
 endef
@@ -292,7 +292,7 @@ define NVIDIA_OPEN_DRIVER_VULKANJSON_X86_64
 	$(INSTALL) -D -m 0644 $(@D)/nvidia_icd.json $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_production_icd.x86_64.json
 		sed -i -e s+'"library_path": "libGLX_nvidia'+'"library_path": "/usr/lib/libGLX_nvidia'+ $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_production_icd.x86_64.json
 	$(INSTALL) -D -m 0644 $(@D)/nvidia_icd.json $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_production_icd.i686.json
-		sed -i -e s+'"library_path": "libGLX_nvidia'+'"library_path": "/lib32/libGLX_nvidia'+ $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_production_icd.i686.json
+		sed -i -e s+'"library_path": "libGLX_nvidia'+'"library_path": "/usr/lib32/libGLX_nvidia'+ $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_production_icd.i686.json
 endef
 
 define NVIDIA_OPEN_DRIVER_VULKANJSON_X86
