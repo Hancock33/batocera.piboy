@@ -17323,18 +17323,6 @@ msgstr "Sauvegarde rapide"
 #~ msgstr "Définir le taux de rafraîchissement maximal sans Vsync."
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Ouvrir le menu de Dolphin-triforce"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Charger la sauvegarde d'état a l'emplacement 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Ecrire la sauvegarde d'état à l'emplacement 1"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Haut Joy2Pad"
 
@@ -17429,6 +17417,18 @@ msgstr "Sauvegarde rapide"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rapide"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Ouvrir le menu de Dolphin-triforce"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Charger la sauvegarde d'état a l'emplacement 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Ecrire la sauvegarde d'état à l'emplacement 1"
 
 #~ msgctxt "game_options"
 #~ msgid ""

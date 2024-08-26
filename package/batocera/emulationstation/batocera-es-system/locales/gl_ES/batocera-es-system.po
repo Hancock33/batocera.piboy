@@ -17028,14 +17028,6 @@ msgstr "Gardado rápido"
 #~ msgstr "Cor"
 
 #~ msgctxt "game_options"
-#~ msgid "Enable or disable monsters in battle."
-#~ msgstr "Activa ou desactiva os monstros na batalla."
-
-#~ msgctxt "game_options"
-#~ msgid "MONSTERS"
-#~ msgstr "MONSTROS"
-
-#~ msgctxt "game_options"
 #~ msgid "Emulate a pak in the controller expansion port."
 #~ msgstr "Emula un pak no porto de expansión do mando."
 
@@ -17136,37 +17128,6 @@ msgstr "Gardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "5 Sideway Wiimote"
 #~ msgstr "5 Sideway Wiimote"
-
-#~ msgctxt "game_options"
-#~ msgid "Off (default)"
-#~ msgstr "Desactivado (predeterminado)"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "Usa mapas de entrada alternativos. Só se aplica ao tipo de controlador "
-#~ "estándar."
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "MAPEO ALTERNATIVO"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "Botóns da cara (CW)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "Botóns Frontais (CCW)"
-
-#~ msgctxt "game_options"
-#~ msgid "MSAA (default)"
-#~ msgstr "MSAA (predeterminado)"
-
-#~ msgctxt "game_options"
-#~ msgid "SSAA"
-#~ msgstr "SSAA"
 
 #~ msgctxt "game_options"
 #~ msgid "Determines the speed and the runahead behaviour of the system."
@@ -17389,18 +17350,6 @@ msgstr "Gardado rápido"
 #~ "desactivado."
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Abre o menú de Dolphin-triforce"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Rañura de estado de carga 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Gardar o estado 1"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad arriba"
 
@@ -17495,3 +17444,54 @@ msgstr "Gardado rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rápido"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Abre o menú de Dolphin-triforce"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Rañura de estado de carga 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Gardar o estado 1"
+
+#~ msgctxt "game_options"
+#~ msgid "Enable or disable monsters in battle."
+#~ msgstr "Activa ou desactiva os monstros na batalla."
+
+#~ msgctxt "game_options"
+#~ msgid "MONSTERS"
+#~ msgstr "MONSTROS"
+
+#~ msgctxt "game_options"
+#~ msgid "Off (default)"
+#~ msgstr "Desactivado (predeterminado)"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use alternative input mappings. Only applies to Standard Controller type."
+#~ msgstr ""
+#~ "Usa mapas de entrada alternativos. Só se aplica ao tipo de controlador "
+#~ "estándar."
+
+#~ msgctxt "game_options"
+#~ msgid "ALT INPUT MAPPING"
+#~ msgstr "MAPEO ALTERNATIVO"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CW)"
+#~ msgstr "Botóns da cara (CW)"
+
+#~ msgctxt "game_options"
+#~ msgid "Face Buttons (CCW)"
+#~ msgstr "Botóns Frontais (CCW)"
+
+#~ msgctxt "game_options"
+#~ msgid "MSAA (default)"
+#~ msgstr "MSAA (predeterminado)"
+
+#~ msgctxt "game_options"
+#~ msgid "SSAA"
+#~ msgstr "SSAA"
