@@ -139,8 +139,6 @@ msgstr "Anpassad"
 msgctxt "game_options"
 msgid "Store past states to rewind to in real-time, if the core supports it."
 msgstr ""
-"Lagra tidigare tillstånd för att spola tillbaka till i realtid, om kärnan "
-"stöder det."
 
 #. TRANSLATION: shared, duckstation
 msgctxt "game_options"
@@ -16443,6 +16441,12 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "Store past states to rewind to in realtime, if the core supports it."
+#~ msgstr ""
+#~ "Lagra tidigare tillstånd för att spola tillbaka till i realtid, om kärnan "
+#~ "stöder det."
 
 #~ msgctxt "game_options"
 #~ msgid "Game Boy Color"

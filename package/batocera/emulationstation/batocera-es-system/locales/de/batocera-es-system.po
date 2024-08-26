@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-08-12 13:53+0000\n"
+"PO-Revision-Date: 2024-08-23 11:53+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -10723,7 +10723,7 @@ msgstr "Anwendung beim Remote-Host schließen wenn Moonlight beendet wird."
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "QUIT ON HOST"
-msgstr "BEENDEN BEIM HOST"
+msgstr "BEIM HOST BEENDEN"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -10733,7 +10733,7 @@ msgstr "Verarbeitung aller Eingabesignale deaktivieren (Ansichtsmodus)"
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "VIEW ONLY"
-msgstr "ANSICHTSMODUS"
+msgstr "NUR ANSCHAUEN"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -11010,37 +11010,37 @@ msgstr "Simple 2x"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "scanlines"
-msgstr ""
+msgstr "Scanlines"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "diagonal filter"
-msgstr ""
+msgstr "Diagonal-Filter"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "triangular filter"
-msgstr ""
+msgstr "Triangular-Filter"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "wave filter"
-msgstr ""
+msgstr "Wave-Filter"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "lottes crt"
-msgstr ""
+msgstr "Lottes CRT"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "4xrgss"
-msgstr ""
+msgstr "4xrgss"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "nxagss"
-msgstr ""
+msgstr "nxagss"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11345,12 +11345,12 @@ msgstr "Unskaliert (Standard)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Scaled"
-msgstr ""
+msgstr "Skaliert"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Force 32bit"
-msgstr ""
+msgstr "32bit erzwingen"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -13010,7 +13010,7 @@ msgstr "DATEN-PLUGIN"
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "When moving"
-msgstr ""
+msgstr "Beim Bewegen"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13030,7 +13030,7 @@ msgstr "WINE RUNNER"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Converts DirectX 8/9/10/11/12 calls to Vulkan."
-msgstr "Konvertiert DirectX 8/9/10/11/12-Aufrufe in Vulkan."
+msgstr "Konvertiert DirectX 8/9/10/11/12-Aufrufe zu Vulkan."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -17433,18 +17433,6 @@ msgstr "Schnellspeichern"
 #~ "ausgeschaltet ist."
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Dolphin-triforce Menü öffnen"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Spielstand laden Slot 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Spielstand speichern Slot 1"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad Nach Oben"
 
@@ -17522,7 +17510,7 @@ msgstr "Schnellspeichern"
 
 #~ msgctxt "keys_files"
 #~ msgid "TouchScreen"
-#~ msgstr "Touch-Bildschirm"
+#~ msgstr "Touchscreen"
 
 #~ msgctxt "keys_files"
 #~ msgid "Exit Drastic"
@@ -17539,3 +17527,15 @@ msgstr "Schnellspeichern"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Schnelles Vorspulen"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Dolphin-triforce Menü öffnen"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Spielstand laden Slot 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Spielstand speichern Slot 1"
