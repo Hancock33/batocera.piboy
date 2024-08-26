@@ -3,8 +3,8 @@
 # sonic2013
 #
 ################################################################################
-# Version: Commits on Aug 07, 2024
-SONIC2013_VERSION = 8de9266c7130b1f40e8736dbd4aeec322c77c7ea
+# Version: Commits on Aug 21, 2024
+SONIC2013_VERSION = e5f88fef69499ead765f59d0d6a288f9f706f18b
 SONIC2013_SITE = https://github.com/RSDKModding/RSDKv4-Decompilation.git
 SONIC2013_SITE_METHOD = git
 SONIC2013_GIT_SUBMODULES = YES

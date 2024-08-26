@@ -6,23 +6,30 @@
 - Add Dockerpi Powerboard support initially for the RPi3
 - Add initial support for the OrangePi-5-Pro
 - Khadis VIM4, Vulkan support has now been added
+- Added HyperX and Machenike Xbox360 compatible controllers
 ### Added
 - Exit game with light gun (hold `TRIGGER`, `ACTION` and `START` buttons for 2 seconds)
 - Enhanced Bluetooth AD2P codec support for LDAC & aptX supported headphones or speakers
   - The supported AD2P codec may need to be selected under SYSTEM SETTINGS -> AUDIO PROFILES
-  - Steering wheel support for Microsoft SideWinder Precision Racing Wheel
-  - Thrustmaster T150 and TMX Force Feedback Wheel Linux drivers
+- Steering wheel support for Microsoft SideWinder Precision Racing Wheel
+- Thrustmaster T150 and TMX Force Feedback Wheel Linux drivers
+- Display reflection for x86_64 boards (display.reflection=x or y or xy in batocera.conf to enable it)
+- Emulationstation now supports savestates for standalones (dolphin, pcsx2, mupen, ppsspp)
+- Add Raspberry Pi patches for hardware accelerated HEVC decoding (RPi4 & RPi5 boards)
 ### Fixed
 - Steam loading on a NAS drive
 - ScummVM forcing English which can prevent some non-english games from starting
 - Fixed right controller LED for the Ayaneo Air Plus, it's now functional
 ### Changed / Improved
+- Splash screen now disabled by default
 - Added bezel & sinden border support for the RPi5 with Model 3 games
 - Added bezel & sinden border support for the RPi5 with Wii games, requires Vulkan API (default)
 - Dolphin, Flycast & PCSX2 standalone emulators will now center their notifications to avoid rendering under the bezel if enabled
 - Spectravideo system now has Libretro-BlueMSX as an emulator option
 - Libretro ScummVM: Persisting in-game settings will be used if a blank .scummvm file
 - You can now manually forget, connect or disconnect a bluetooth device
+- Udated Nvidia card detection
+  - Modern Nvidia cards will now use the OpenSource kernel modules when possible.
 ### Updated
 - RetroArch to v1.19.1
   - Libretro-81 to June 29, 2024 build
@@ -44,6 +51,7 @@
   - Libretro-Ecwolf to June 28 build
   - Libretro-Flycast to July 30 build
   - Libretro-Freechaf to June 28 build
+  - Libretro-MAME to 0.268
   - Libretro-Minivac to July 1 build
   - Libretro-MrBoom to v5.5
   - Libretro-Mupen64plus-Next to July 19, 2024 build
@@ -60,18 +68,20 @@
 - Eduke32 to Jul 25 build
 - Flycast to Jul 30 build
 - Ikemen to August 1st 2024 build
-- PCSX2 to v2.1.62
+- GroovyMAME to 0.268
+- PCSX2 to v2.1.100
 - Redream to 1.5.0-1131-gafdfc1a
-- RPCS3 to Jul 28, 2024 build
+- RPCS3 to 0.0.32-16843
 - Sonic Mania to Jul 21, 2024 build
-- The Force Engine to Jul 27, 2024 build
+- The Force Engine to Aug 19, 2024 build
 - Vita3k to Jul 27 build
 - Xemu to v0.7.131
-- Xenia Canary to Jul 15, 2024 build
+- Xenia to v1.0.2817
+- Xenia Canary to August 18, 2024 build
 ### System
-- Nvidia Driver to 555.58.02
+- Nvidia Driver to 560.35.03 (Open kernel modules)
 - Nvidia Legacy Driver to 470.256.02
-- x86_64 Kernel to 6.10.4
+- x86_64 Kernel to 6.10.6
 - Ayaneo Platform driver to Jul 17, 2024 build
 - Ayn Platform driver to Jul 17, 2024 build
 - MangoHud to Jun 15, 2024 build
@@ -90,6 +100,7 @@
 - Sound Open Firmware to 2024.06
 - LibVA to 2.22.0
 - WF-Recorder to 14th of August build
+- Switchres to 2.2.1
 
 # 2024/08/11 - batocera.linux 40 - Swallowtail
 ### Special Notes
@@ -281,7 +292,7 @@
 - Wlroots to 0.17.1
 - Sway to 1.9
 - Mesa3D to 24.1.4
-- RPi kernel to 6.6.41
+- RPi kernel to 6.6.45
 - Pipewire to 1.0.4
 - X86_64 kernel to 6.9.10
 - Switchres 0.220

@@ -1,0 +1,11 @@
+config BR2_PACKAGE_LUNASVG
+	bool "lunasvg"
+	depends on BR2_INSTALL_LIBSTDCPP
+
+	help
+	  lunasvg is a standalone SVG rendering library in C++
+
+	  https://github.com/stenzek/lunasvg
+
+comment "BR2_PACKAGE_LUNASVG needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

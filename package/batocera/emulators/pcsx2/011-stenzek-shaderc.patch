@@ -1,0 +1,24 @@
+diff --git a/cmake/FindShaderc.cmake b/cmake/FindShaderc.cmake
+index 760184aa0..b60780da1 100644
+--- a/cmake/FindShaderc.cmake
++++ b/cmake/FindShaderc.cmake
+@@ -11,7 +11,7 @@ find_path(
+ 
+ find_library(
+     SHADERC_LIBRARY
+-    NAMES shaderc_shared.1 shaderc_shared
++    NAMES shaderc_shared.1 shaderc_stenzek
+     PATHS ${ADDITIONAL_LIBRARY_PATHS} ${SHADERC_PATH_LIB}
+ )
+ 
+@@ -20,8 +20,8 @@ find_package_handle_standard_args(Shaderc DEFAULT_MSG
+                                   SHADERC_LIBRARY SHADERC_INCLUDE_DIR)
+ 
+ if(SHADERC_FOUND)
+-    add_library(Shaderc::shaderc_shared UNKNOWN IMPORTED)
+-    set_target_properties(Shaderc::shaderc_shared PROPERTIES
++    add_library(Shaderc::shaderc_stenzek UNKNOWN IMPORTED)
++    set_target_properties(Shaderc::shaderc_stenzek PROPERTIES
+         IMPORTED_LOCATION ${SHADERC_LIBRARY}
+         INTERFACE_INCLUDE_DIRECTORIES ${SHADERC_INCLUDE_DIR}
+         INTERFACE_COMPILE_DEFINITIONS "SHADERC_SHAREDLIB"
