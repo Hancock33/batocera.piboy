@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v40b(2024/07/31)\n"
+"Project-Id-Version: batocera-es v40r(2024/08/18)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-07-31 13:04+0900\n"
+"PO-Revision-Date: 2024-08-18 23:16+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -19,7 +19,7 @@ msgid ""
 "Adjust the cpu power frequency profile whilst in-game. Some systems will "
 "benefit from improved voltage handling."
 msgstr ""
-"ゲーム中に CPU 電力周波数プロファイルを調整します。一部のシステムでは、電圧処"
+"ゲーム中に CPU電力周波数プロファイルを調整します。 一部のシステムでは、電圧処"
 "理の改善によるメリットが得られます"
 
 #. TRANSLATION: shared, shared, shared, shared
@@ -53,7 +53,7 @@ msgid ""
 "Adjust the cpu power profile whist on battery. Overwrites previous Power "
 "Mode(s)."
 msgstr ""
-"バッテリーを使用しながら CPU 電力プロファイルを調整します。以前の電力モードを"
+"バッテリーを使用しながら CPU電力プロファイルを調整します。 以前の電力モードを"
 "上書きします"
 
 #. TRANSLATION: shared
@@ -6568,7 +6568,7 @@ msgstr "オフの方が安全です。特定のゲームの場合はオンです
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Double the rendering resolution."
-msgstr ""
+msgstr "レンダリング解像度を2倍にする"
 
 #. TRANSLATION: libretro/pcsx_rearmed, drastic
 msgctxt "game_options"
@@ -6578,7 +6578,7 @@ msgstr "レンダリング解像度を強化"
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "On (Speed hack)"
-msgstr ""
+msgstr "オン（スピードハック）"
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -9120,7 +9120,7 @@ msgstr "引き伸ばしは、映像ファイルによって、対応外のゲー
 #. TRANSLATION: hypseus-singe, dolphin, dolphin_triforce, suyu
 msgctxt "game_options"
 msgid "Force 4:3"
-msgstr "強制的に 4:3 にする"
+msgstr "4:3 に固定"
 
 #. TRANSLATION: hypseus-singe, flycast, melonds
 msgctxt "game_options"
@@ -9235,7 +9235,7 @@ msgstr "表示系設定"
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
 msgid "Force 16:9"
-msgstr "強制的に 16:9 にする"
+msgstr "16:9 に固定"
 
 #. TRANSLATION: dolphin, dolphin_triforce, suyu
 msgctxt "game_options"
@@ -9456,12 +9456,12 @@ msgstr "ゲームキューブ ポート 4 タイプ"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "Moves South to West, West to North, etc. Standard controller type only."
-msgstr ""
+msgstr "南から西、西から北などに移動します。標準コントローラのみ"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "ROTATE FACE BUTTONS"
-msgstr ""
+msgstr "ボタンの位置を回転"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -10854,37 +10854,37 @@ msgstr "シンプル 2x"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "scanlines"
-msgstr ""
+msgstr "スキャンライン"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "diagonal filter"
-msgstr ""
+msgstr "対角フィルタ"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "triangular filter"
-msgstr ""
+msgstr "三角フィルタ"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "wave filter"
-msgstr ""
+msgstr "波形フィルタ"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "lottes crt"
-msgstr ""
+msgstr "Lotte CRT"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "4xrgss"
-msgstr ""
+msgstr "4xRGSS"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "nxagss"
-msgstr ""
+msgstr "NxAGSS"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11141,7 +11141,7 @@ msgstr "バイリニア (PS2)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bilinear (Forced excluding sprite)"
-msgstr "バイリニア (強制除外スプライト)"
+msgstr "バイリニア (強制スプライト除外)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11187,12 +11187,12 @@ msgstr "スケーリングなし (標準)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Scaled"
-msgstr ""
+msgstr "拡大"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Force 32bit"
-msgstr ""
+msgstr "32ビット固定"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -12812,7 +12812,7 @@ msgstr "データ プラグイン"
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "When moving"
-msgstr ""
+msgstr "移動時"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13576,17 +13576,17 @@ msgstr "16:9 (標準)"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Force 21:9"
-msgstr "強制的に 21:9 にする"
+msgstr "21:9 に固定"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Force 16:10"
-msgstr "強制的に 16:10 にする"
+msgstr "16:10 に固定"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Force 32:9"
-msgstr "強制的に 32:9 にする"
+msgstr "32:9 に固定"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -16044,7 +16044,7 @@ msgstr ""
 #. TRANSLATION: wii.dolphin.keys
 msgctxt "keys_files"
 msgid "Exit Dolphin"
-msgstr ""
+msgstr "Dolphin を終了"
 
 #. TRANSLATION: dos.dosbox-x.keys
 msgctxt "keys_files"
@@ -17165,6 +17165,18 @@ msgstr "クイック セーブ"
 #~ msgstr "Vsync がオフの場合に、希望の最大リフレッシュ レートを設定します"
 
 #~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Dolphin-triforce　メニューを開く"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "ステートロード - スロット  1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "ステートセーブ - スロット  1"
+
+#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad 上"
 
@@ -17259,18 +17271,6 @@ msgstr "クイック セーブ"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
-
-#~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Dolphin-triforce　メニューを開く"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "ステートロード - スロット  1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "ステートセーブ - スロット  1"
 
 #~ msgctxt "game_options"
 #~ msgid ""

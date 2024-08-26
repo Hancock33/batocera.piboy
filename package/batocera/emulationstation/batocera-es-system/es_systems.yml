@@ -2105,7 +2105,7 @@ thextech:
   manufacturer:         Homebrew Systems
   release:              2020
   hardware:             library
-  extensions:           [smbx]
+  extensions:           [smbx, squashfs]
   emulators:
     thextech:
       thextech:         { requireAnyOf: [BR2_PACKAGE_THEXTECH] }

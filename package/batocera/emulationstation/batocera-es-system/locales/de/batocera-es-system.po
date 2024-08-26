@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-07-24 15:53+0000\n"
+"PO-Revision-Date: 2024-08-23 11:53+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -1319,7 +1319,7 @@ msgstr "Hybrid/Unten"
 msgctxt "game_options"
 msgid "Skip frames to improve performance, at the cost of choppy motion."
 msgstr ""
-"Überspringen einzelner Bilder zur Leistungssteigerung, kann zum Auftreten  "
+"Überspringen einzelner Bilder zur Leistungssteigerung, kann zum Auftreten "
 "ruckelnder Bewegungsabläufe führen."
 
 #. TRANSLATION: libretro/desmume, libretro/fbneo, libretro/flycast, libretro/flycast2021, libretro/mame078plus, ...
@@ -6651,7 +6651,7 @@ msgstr "Aus ist sicherer, Ein für spezielle Spiele."
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Double the rendering resolution."
-msgstr ""
+msgstr "Rendering-Auflösung verdoppeln."
 
 #. TRANSLATION: libretro/pcsx_rearmed, drastic
 msgctxt "game_options"
@@ -6661,7 +6661,7 @@ msgstr "VERBESSERTE RENDERING AUFLÖSUNG"
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "On (Speed hack)"
-msgstr ""
+msgstr "Ein (Speed-Hack)"
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -9579,11 +9579,13 @@ msgstr "GAMECUBE ANSCHLUSS 4 TYP"
 msgctxt "game_options"
 msgid "Moves South to West, West to North, etc. Standard controller type only."
 msgstr ""
+"Tausche Süden nach Westen, Westen nach Norden, usw. Nur Standard-Controller-"
+"Typ."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "ROTATE FACE BUTTONS"
-msgstr ""
+msgstr "FACE-BUTTONS ROTIEREN"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -10721,7 +10723,7 @@ msgstr "Anwendung beim Remote-Host schließen wenn Moonlight beendet wird."
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "QUIT ON HOST"
-msgstr "BEENDEN BEIM HOST"
+msgstr "BEIM HOST BEENDEN"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -10731,7 +10733,7 @@ msgstr "Verarbeitung aller Eingabesignale deaktivieren (Ansichtsmodus)"
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "VIEW ONLY"
-msgstr "ANSICHTSMODUS"
+msgstr "NUR ANSCHAUEN"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -11008,37 +11010,37 @@ msgstr "Simple 2x"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "scanlines"
-msgstr ""
+msgstr "Scanlines"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "diagonal filter"
-msgstr ""
+msgstr "Diagonal-Filter"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "triangular filter"
-msgstr ""
+msgstr "Triangular-Filter"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "wave filter"
-msgstr ""
+msgstr "Wave-Filter"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "lottes crt"
-msgstr ""
+msgstr "Lottes CRT"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "4xrgss"
-msgstr ""
+msgstr "4xrgss"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "nxagss"
-msgstr ""
+msgstr "nxagss"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11343,12 +11345,12 @@ msgstr "Unskaliert (Standard)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Scaled"
-msgstr ""
+msgstr "Skaliert"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Force 32bit"
-msgstr ""
+msgstr "32bit erzwingen"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -13008,7 +13010,7 @@ msgstr "DATEN-PLUGIN"
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "When moving"
-msgstr ""
+msgstr "Beim Bewegen"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13028,7 +13030,7 @@ msgstr "WINE RUNNER"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Converts DirectX 8/9/10/11/12 calls to Vulkan."
-msgstr "Konvertiert DirectX 8/9/10/11/12-Aufrufe in Vulkan."
+msgstr "Konvertiert DirectX 8/9/10/11/12-Aufrufe zu Vulkan."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -16278,7 +16280,7 @@ msgstr ""
 #. TRANSLATION: wii.dolphin.keys
 msgctxt "keys_files"
 msgid "Exit Dolphin"
-msgstr ""
+msgstr "Dolphin beenden"
 
 #. TRANSLATION: dos.dosbox-x.keys
 msgctxt "keys_files"
@@ -17508,7 +17510,7 @@ msgstr "Schnellspeichern"
 
 #~ msgctxt "keys_files"
 #~ msgid "TouchScreen"
-#~ msgstr "Touch-Bildschirm"
+#~ msgstr "Touchscreen"
 
 #~ msgctxt "keys_files"
 #~ msgid "Exit Drastic"
@@ -17537,21 +17539,3 @@ msgstr "Schnellspeichern"
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Spielstand speichern Slot 1"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use alternative input mappings. Only applies to Standard Controller type."
-#~ msgstr ""
-#~ "Alternative Eingabebelegung. Gilt nur für den Typ Standard-Controller."
-
-#~ msgctxt "game_options"
-#~ msgid "ALT INPUT MAPPING"
-#~ msgstr "ALT EINGABEBELEGUNG"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CW)"
-#~ msgstr "Aktionstasten (im Uhrzeigersinn)"
-
-#~ msgctxt "game_options"
-#~ msgid "Face Buttons (CCW)"
-#~ msgstr "Aktionstasten (gegen Uhrzeigersinn)"

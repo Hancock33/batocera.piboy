@@ -3,11 +3,11 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Aug 18, 2024
-DUCKSTATION_VERSION = b3c18ff8c77c0864b92ef5f95ec5500a9fb0b6a9
+# Version: Commits on Aug 26, 2024
+DUCKSTATION_VERSION = 71ca14a77a3fdc62b5b67d778ec121958bc32628
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
-DUCKSTATION_DEPENDENCIES = boost cpuinfo discord-rpc ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev libsoundtouch sdl2 shaderc webp zstd
+DUCKSTATION_DEPENDENCIES = boost cpuinfo discord-rpc ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev libsoundtouch lunasvg sdl2 stenzek-shaderc webp zstd
 DUCKSTATION_DEPENDENCIES += qt6base qt6tools qt6svg host-clang host-spirv-cross spirv-cross
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
 
@@ -17,7 +17,7 @@ DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=ON
 DUCKSTATION_CONF_OPTS += -DBUILD_NOGUI_FRONTEND=OFF
 DUCKSTATION_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/clang
 DUCKSTATION_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/clang++
-
+DUCKSTATION_CONF_OPTS += -DCMAKE_PREFIX_PATH=$(STAGING_DIR)/stenzek-shaderc
 DUCKSTATION_CONF_ENV += LDFLAGS=-lpthread
 
 ifeq ($(BR2_PACKAGE_WAYLAND),y)

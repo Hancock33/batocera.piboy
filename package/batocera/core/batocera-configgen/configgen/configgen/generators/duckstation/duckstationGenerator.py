@@ -119,7 +119,7 @@ class DuckstationGenerator(Generator):
 
         if not found_bios:
             raise Exception("No PSX1 BIOS found")
-        
+
         # Set BIOS paths
         if "Uni" in found_bios:
             uni_bios = found_bios["Uni"]
@@ -130,7 +130,7 @@ class DuckstationGenerator(Generator):
             region_mapping = {"NTSCU": "PathNTSCU", "PAL": "PathPAL", "NTSCJ": "PathNTSCJ"}
             for region, bios in found_bios.items():
                 settings.set("BIOS", region_mapping[region], bios)
-        
+
         ## [CPU]
         if not settings.has_section("CPU"):
             settings.add_section("CPU")
@@ -504,6 +504,11 @@ class DuckstationGenerator(Generator):
         else:
             settings.set("CDROM", "AllowBootingWithoutSBIFile", "false")
 
+        ## [UI]
+        if not settings.has_section("UI"):
+            settings.add_section("UI")
+        settings.set("UI", "UnofficialBuildWarningConfirmed", "true")
+
         # Save config
         if not os.path.exists(os.path.dirname(settings_path)):
             os.makedirs(os.path.dirname(settings_path))
@@ -519,10 +524,12 @@ class DuckstationGenerator(Generator):
             qt_qpa_platform = "wayland"
         else:
             qt_qpa_platform = "xcb"
-
+        
+        # use their modified shaderc library
         return Command.Command(
             array=commandArray,
             env={
+                "LD_LIBRARY_PATH": "/usr/stenzek-shaderc/lib:/usr/lib",
                 "XDG_CONFIG_HOME": batoceraFiles.CONF,
                 "QT_QPA_PLATFORM": qt_qpa_platform,
                 "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers),
@@ -573,7 +580,7 @@ def rewriteM3uFullPath(m3u):                                                    
 def find_bios(bios_lists):
     bios_dir = "/userdata/bios/"
     found_bios = {}
-    
+
     try:
         actual_files = os.listdir(bios_dir)
         files_lower = {f.lower(): f for f in actual_files}
@@ -585,7 +592,7 @@ def find_bios(bios_lists):
             if bios.lower() in files_lower:
                 found_bios[region] = files_lower[bios.lower()]
                 break
-    
+
     return found_bios
 
 # Define BIOS lists

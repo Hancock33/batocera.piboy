@@ -263,7 +263,7 @@ def generateMAMEConfigs(playersControllers, system, rom, guns):
                     commandLine += [ f'"{rom}"' ]
 
                 commandLine += [ "-rompath", romDirname + ";/userdata/bios/" ]
- 
+
                 # Boot disk for Macintosh
                 # Will use Floppy 1 or Hard Drive, depending on the disk.
                 if system.name == "macintosh" and system.isOptSet("bootdisk"):

@@ -1,6 +1,6 @@
 config BR2_PACKAGE_VICE
 	bool "vice"
-	select BR2_PACKAGE_FFMPEG
+	select BR2_PACKAGE_FFMPEG4
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_IMAGE
 	select BR2_PACKAGE_PNG

@@ -1,0 +1,62 @@
+diff --git a/ShadercConfig.cmake.in b/ShadercConfig.cmake.in
+index bfdf945..c5b39bc 100644
+--- a/ShadercConfig.cmake.in
++++ b/ShadercConfig.cmake.in
+@@ -4,7 +4,7 @@ include("${CMAKE_CURRENT_LIST_DIR}/ShadercTargets.cmake")
+ 
+ check_required_components(Shaderc)
+ 
+-get_target_property(TEMP_SHADERC_LOCATION Shaderc::shaderc_shared LOCATION)
++get_target_property(TEMP_SHADERC_LOCATION Shaderc::shaderc_stenzek LOCATION)
+ message(STATUS "Found Shaderc: ${TEMP_SHADERC_LOCATION}")
+ unset(TEMP_SHADERC_LOCATION)
+ 
+diff --git a/libshaderc/CMakeLists.txt b/libshaderc/CMakeLists.txt
+index 4192998..ad1695f 100644
+--- a/libshaderc/CMakeLists.txt
++++ b/libshaderc/CMakeLists.txt
+@@ -24,15 +24,15 @@ set(SHADERC_SOURCES
+   src/shaderc_private.h
+ )
+ 
+-add_library(shaderc_shared SHARED ${SHADERC_SOURCES})
+-shaderc_default_compile_options(shaderc_shared)
+-target_include_directories(shaderc_shared
++add_library(shaderc_stenzek SHARED ${SHADERC_SOURCES})
++shaderc_default_compile_options(shaderc_stenzek)
++target_include_directories(shaderc_stenzek
+     PRIVATE include
+             ${glslang_SOURCE_DIR}
+             ${SPIRV-Headers_SOURCE_DIR}/include)
+-target_compile_definitions(shaderc_shared
++target_compile_definitions(shaderc_stenzek
+     PRIVATE SHADERC_IMPLEMENTATION
+-    PUBLIC SHADERC_SHAREDLIB
++    PUBLIC shaderc_stenzekLIB
+ )
+ 
+ if(SHADERC_ENABLE_INSTALL)
+@@ -46,7 +46,7 @@ if(SHADERC_ENABLE_INSTALL)
+     DESTINATION
+       ${CMAKE_INSTALL_INCLUDEDIR}/shaderc)
+ 
+-  install(TARGETS shaderc_shared
++  install(TARGETS shaderc_stenzek
+     EXPORT ShadercTargets
+     INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+@@ -63,11 +63,11 @@ set(SHADERC_LIBS
+   SPIRV-Tools
+ )
+ 
+-target_link_libraries(shaderc_shared PRIVATE ${SHADERC_LIBS})
++target_link_libraries(shaderc_stenzek PRIVATE ${SHADERC_LIBS})
+ 
+ shaderc_add_tests(
+-  TEST_PREFIX shaderc_shared
+-  LINK_LIBS shaderc_shared SPIRV-Tools
++  TEST_PREFIX shaderc_stenzek
++  LINK_LIBS shaderc_stenzek SPIRV-Tools
+   INCLUDE_DIRS include ${shaderc_SOURCE_DIR}/libshaderc_util/include ${glslang_SOURCE_DIR}
+                ${spirv-tools_SOURCE_DIR}/include
+                ${SPIRV-Headers_SOURCE_DIR}/include

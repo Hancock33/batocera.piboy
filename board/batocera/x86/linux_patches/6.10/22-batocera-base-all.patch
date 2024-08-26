@@ -635,7 +635,7 @@ index 958e935449e5..064156d69e75 100644
  M:	Finn Thain <fthain@linux-m68k.org>
  L:	linux-m68k@lists.linux-m68k.org
 diff --git a/Makefile b/Makefile
-index b0cd6dc8cca2..42a4bfffdffe 100644
+index 95f392d34a56..6ae7d4c2d7d7 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -817,6 +817,9 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -12926,10 +12926,10 @@ index 47b8b49da8a7..943959d1f401 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 04e76df512ed..4908d2ff98fb 100644
+index 0a7c63146e90..64e5f90f0fd2 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -4119,7 +4119,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4125,7 +4125,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  		return r;
  	}
  
@@ -12983,7 +12983,7 @@ index e23a0a276e33..dd83cf50a89b 100644
  #endif
  	return 0;
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_plane.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_plane.c
-index 8a4c40b4c27e..779880c64575 100644
+index 311c62d2d1eb..8c8d0d209d7a 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_plane.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_plane.c
 @@ -1468,7 +1468,7 @@ static void amdgpu_dm_plane_drm_plane_destroy_state(struct drm_plane *plane,
@@ -52639,19 +52639,22 @@ index 2b812210b412..4c3a8cc6ef15 100755
  					}
 diff --git a/scripts/package/PKGBUILD b/scripts/package/PKGBUILD
 new file mode 100644
-index 000000000000..663ce300dd06
+index 000000000000..fbd7eb10a52c
 --- /dev/null
 +++ b/scripts/package/PKGBUILD
-@@ -0,0 +1,108 @@
+@@ -0,0 +1,114 @@
 +# SPDX-License-Identifier: GPL-2.0-only
 +# Maintainer: Thomas Weißschuh <linux@weissschuh.net>
 +# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 +
 +pkgbase=${PACMAN_PKGBASE:-linux-upstream}
-+pkgname=("${pkgbase}" "${pkgbase}-api-headers")
-+if grep -q CONFIG_MODULES=y include/config/auto.conf; then
-+	pkgname+=("${pkgbase}-headers")
-+fi
++pkgname=("${pkgbase}")
++
++_extrapackages=${PACMAN_EXTRAPACKAGES-headers api-headers}
++for pkg in $_extrapackages; do
++	pkgname+=("${pkgbase}-${pkg}")
++done
++
 +pkgver="${KERNELRELEASE//-/_}"
 +# The PKGBUILD is evaluated multiple times.
 +# Running scripts/build-version from here would introduce inconsistencies.
@@ -52722,10 +52725,13 @@ index 000000000000..663ce300dd06
 +	cd "${objtree}"
 +	local builddir="${pkgdir}/usr/${MODLIB}/build"
 +
-+	echo "Installing build files..."
-+	"${srctree}/scripts/package/install-extmod-build" "${builddir}"
++	if grep -q CONFIG_MODULES=y include/config/auto.conf; then
++		echo "Installing build files..."
++		"${srctree}/scripts/package/install-extmod-build" "${builddir}"
++	fi
 +
 +	echo "Installing System.map and config..."
++	mkdir -p "${builddir}"
 +	cp System.map "${builddir}/System.map"
 +	cp .config "${builddir}/.config"
 +

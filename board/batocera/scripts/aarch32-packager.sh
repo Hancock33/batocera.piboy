@@ -13,9 +13,9 @@ ln -sf libblkid.so.1                                     $DEST_DIR/lib32/libblki
 ln -sf libudev.so.1                                      $DEST_DIR/lib32/libudev.so
 ln -sf /usr/lib32/pulseaudio/libpulsecommon-17.0.so      $DEST_DIR/lib32/libpulsecommon-17.0.so
 
-#mv $DEST_DIR/lib32/dri                                   $DEST_DIR/lib32/dri.old
-#mkdir -p $DEST_DIR/lib32/dri
-#mv $DEST_DIR/lib32/dri.old/{v3d_dri.so,vc4_dri.so,libdril_dri.so,libgallium.so} $DEST_DIR/lib32/dri
+mv $DEST_DIR/lib32/dri                                   $DEST_DIR/lib32/dri.old
+mkdir -p $DEST_DIR/lib32/dri
+mv $DEST_DIR/lib32/dri.old/{v3d_dri.so,vc4_dri.so,libdril_dri.so,libgallium.so} $DEST_DIR/lib32/dri
 
 rm -rf $DEST_DIR/lib32/dri.old
 rm -rf $DEST_DIR/lib32/firmware

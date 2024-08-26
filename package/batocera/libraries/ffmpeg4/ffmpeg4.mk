@@ -58,7 +58,8 @@ FFMPEG4_CONF_OPTS = \
 	--disable-libilbc \
 	--disable-libvo-amrwbenc \
 	--disable-symver \
-	--disable-doc
+	--disable-doc \
+	--disable-programs # avoid overwriting ffmpeg 7
 
 # batocera - add pulse audio support for batocera-record
 ifeq ($(BR2_PACKAGE_PULSEAUDIO),y)
@@ -80,7 +81,7 @@ else
 FFMPEG4_CONF_OPTS += --disable-nonfree
 endif
 
-ifeq ($(BR2_PACKAGE_FFMPEG_FFMPEG),y)
+ifeq ($(BR2_PACKAGE_FFMPEG4_FFMPEG),y)
 FFMPEG4_CONF_OPTS += --enable-ffmpeg
 else
 FFMPEG4_CONF_OPTS += --disable-ffmpeg
@@ -107,7 +108,7 @@ else
 FFMPEG4_CONF_OPTS += --disable-avresample
 endif
 
-ifeq ($(BR2_PACKAGE_FFMPEG_FFPROBE),y)
+ifeq ($(BR2_PACKAGE_FFMPEG4_FFPROBE),y)
 FFMPEG4_CONF_OPTS += --enable-ffprobe
 else
 FFMPEG4_CONF_OPTS += --disable-ffprobe
@@ -302,6 +303,16 @@ else
 FFMPEG4_CONF_OPTS += --disable-mmal --disable-omx --disable-omx-rpi
 endif
 
+# Required for hw decoding on raspberry pi boards
+ifeq ($(BR2_PACKAGE_RPI_HEVC),y)
+FFMPEG4_CONF_OPTS += --disable-mmal
+FFMPEG4_CONF_OPTS += --enable-neon
+FFMPEG4_CONF_OPTS += --enable-v4l2-request
+FFMPEG4_CONF_OPTS += --enable-libudev
+FFMPEG4_CONF_OPTS += --enable-epoxy
+FFMPEG4_CONF_OPTS += --enable-sand
+endif
+
 # To avoid a circular dependency only use opencv if opencv itself does
 # not depend on ffmpeg.
 ifeq ($(BR2_PACKAGE_OPENCV3_LIB_IMGPROC)x$(BR2_PACKAGE_OPENCV3_WITH_FFMPEG),yx)
@@ -389,7 +400,7 @@ FFMPEG4_CONF_OPTS += --disable-iconv
 endif
 
 # batocera - add cuda
-ifeq ($(BR2_PACKAGE_BATOCERA_NVIDIA_DRIVER_CUDA),y)
+ifeq ($(BR2_PACKAGE_NVIDIA_OPEN_DRIVER_CUDA),y)
 FFMPEG4_CONF_OPTS += --enable-cuda
 FFMPEG4_DEPENDENCIES += nv-codec-headers
 endif

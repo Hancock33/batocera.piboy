@@ -38,7 +38,7 @@ IMG_MESA3D_CONF_OPTS = \
 	-Dpower8=disabled
 
 ifeq ($(BR2_TOOLCHAIN_EXTERNAL_CODESOURCERY_ARM),y)
-    IMG_MESA3D_CONF_OPTS += -Db_asneeded=false
+	IMG_MESA3D_CONF_OPTS += -Db_asneeded=false
 endif
 
 IMG_MESA3D_CONF_OPTS += -Ddri3=disabled
@@ -50,17 +50,17 @@ IMG_MESA3D_DEPENDENCIES += elfutils
 endif
 
 ifeq ($(BR2_PACKAGE_IMG_MESA3D_OPENGL_GLX),y)
-    IMG_MESA3D_CONF_OPTS += \
-	    -Dglx=dri \
+	IMG_MESA3D_CONF_OPTS += \
+		-Dglx=dri \
 		-Dglx-direct=true
 	ifeq ($(BR2_PACKAGE_IMG_MESA3D_NEEDS_XA),y)
-        IMG_MESA3D_CONF_OPTS += -Dgallium-xa=enabled
+		IMG_MESA3D_CONF_OPTS += -Dgallium-xa=enabled
 	else
-        IMG_MESA3D_CONF_OPTS += -Dgallium-xa=disabled
+		IMG_MESA3D_CONF_OPTS += -Dgallium-xa=disabled
 	endif
 else
-    IMG_MESA3D_CONF_OPTS += \
-	    -Dglx=disabled \
+	IMG_MESA3D_CONF_OPTS += \
+		-Dglx=disabled \
 		-Dgallium-xa=disabled
 endif
 
@@ -68,12 +68,12 @@ endif
 IMG_MESA3D_GALLIUM_DRIVERS-$(BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_PVR) += pvr
 
 ifeq ($(BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER),)
-    IMG_MESA3D_CONF_OPTS += \
-	    -Dgallium-drivers= \
+	IMG_MESA3D_CONF_OPTS += \
+		-Dgallium-drivers= \
 		-Dgallium-extra-hud=false
 else
-    IMG_MESA3D_CONF_OPTS += \
-	    -Dshared-glapi=enabled \
+	IMG_MESA3D_CONF_OPTS += \
+		-Dshared-glapi=enabled \
 		-Dgallium-drivers=$(subst $(space),$(comma),$(IMG_MESA3D_GALLIUM_DRIVERS-y)) \
 		-Dgallium-extra-hud=true
 endif
