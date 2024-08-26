@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240826|Aug 26, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240826|Aug 26, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|de269ca9a36c14af9118a2ff179ed7f00c703b87|Aug 25, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|de269ca9a36c14af9118a2ff179ed7f00c703b87|Aug 25, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|289f68a36a2d6bcbfa9ba745f373d404800a9e00|Aug 25, 2024
@@ -18,9 +20,7 @@ Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|34f7e49e519913026648c61
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|382767faa44d6c5f8385dd00e636bd52de42d0b9|Aug 25, 2024
 Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|552c1bcd443b2491c221fb3c66d1b0c13367c6be|Aug 25, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|a3f13b226874121422c8f967d69950809b8670ff|Aug 25, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240825|Aug 25, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|05017f46d2b251dcc18179ee7823d326a4df352d|Aug 25, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240825|Aug 25, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|2226db89adf190de1ad4fedf8586b0d0fc468186|Aug 25, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|b6eb0cf5812c09c661d51e3b95fc08d88da2288a|Aug 25, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|dd8d2989a652d56a7a1588b65a42cc58477638c2|Aug 25, 2024
