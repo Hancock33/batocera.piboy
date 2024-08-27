@@ -583,7 +583,7 @@ ifeq ($(BR2_ARM_INSTRUCTIONS_THUMB),y)
 FFMPEG4_CFLAGS += -marm
 endif
 
-FFMPEG4_CONF_ENV += CFLAGS="$(FFMPEG4_CFLAGS)"
+FFMPEG4_CONF_ENV += CFLAGS="$(FFMPEG4_CFLAGS) -Wno-int-conversion -Wno-incompatible-pointer-types"
 FFMPEG4_CONF_OPTS += $(call qstrip,$(BR2_PACKAGE_FFMPEG_EXTRACONF))
 
 # Override FFMPEG4_CONFIGURE_CMDS: FFmpeg does not support --target and others
