@@ -3,8 +3,8 @@
 # panda3ds
 #
 ################################################################################
-# Version: Commits on Aug 23, 2024
-PANDA3DS_VERSION = 2754df9b94fcc9daa89d633232aae3ec1957aafb
+# Version: Commits on Aug 27, 2024
+PANDA3DS_VERSION = 201edfb02df05025c3443fe067c4777915d9df6c
 PANDA3DS_SITE = https://github.com/wheremyfoodat/Panda3DS.git
 
 PANDA3DS_SITE_METHOD=git
