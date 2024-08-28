@@ -16,6 +16,8 @@ Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.27.11-rc.2|Aug 28, 2
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|6bc715702a77c379aec87c2621419170613dc25c|Aug 28, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|80a263eb4c089af92e64b92838b0f4e41ed2aed0|Aug 28, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|65701988a3ff511cbc3c2977d3481774b58501c4|Aug 28, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240828|Aug 28, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240828|Aug 28, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|c0797b0133062b5be5b82d711eb00fb1becf89c2|Aug 28, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|614dc7ee7ad82d11d8dbfc22612948e1847e48c6|Aug 28, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|ff3d91ceb44785ccd817fb4daabaf1ff955830b7|Aug 28, 2024
@@ -41,9 +43,7 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|fff2f224dcc0
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|202c545d3444f5cfdb1aa6d285d46731b9003f94|Aug 27, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|880f069b60f64e276cf69ecef546a98c6033b2ce|Aug 27, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|bb43fe3875fdf417753c277a16f0457492928027|Aug 27, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240827|Aug 27, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|a49c286214ca580ae1471b9ba0a73b207c2fe4bf|Aug 27, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240827|Aug 27, 2024
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|b0819ab842050bdb8380ee35566bb0a61ff6a7a1|Aug 27, 2024
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|663a1d9a75f72c34befc304901ad6063f34dc9d3|Aug 27, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|5fd8fae8b5bedafc97487d7bc004533d9612a6c7|Aug 27, 2024
