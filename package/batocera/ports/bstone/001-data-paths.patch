@@ -1,8 +1,8 @@
-diff --git a/src/3d_main.cpp b/src/3d_main.cpp
-index cdf0caf5..9287ef02 100644
---- a/src/3d_main.cpp
-+++ b/src/3d_main.cpp
-@@ -10700,7 +10700,7 @@ const std::string& get_profile_dir()
+diff --git a/src/bstone/src/3d_main.cpp b/src/bstone/src/3d_main.cpp
+index 5b52122a..73c44a8c 100644
+--- a/src/bstone/src/3d_main.cpp
++++ b/src/bstone/src/3d_main.cpp
+@@ -10778,7 +10778,7 @@ const std::string& get_profile_dir()
  {
  	static std::string profile_dir;
  	static auto is_initialized = false;
@@ -11,7 +11,7 @@ index cdf0caf5..9287ef02 100644
  	if (!is_initialized)
  	{
  		is_initialized = true;
-@@ -10740,8 +10740,9 @@ const std::string& get_screenshot_dir()
+@@ -10818,8 +10818,9 @@ const std::string& get_screenshot_dir()
  {
  	static auto is_initialized = false;
  	static auto screenshot_dir = std::string{};
@@ -22,7 +22,7 @@ index cdf0caf5..9287ef02 100644
  	{
  		is_initialized = true;
  
-@@ -10752,7 +10753,7 @@ const std::string& get_screenshot_dir()
+@@ -10830,7 +10831,7 @@ const std::string& get_screenshot_dir()
  		{
  			screenshot_dir = get_profile_dir();
  		}
