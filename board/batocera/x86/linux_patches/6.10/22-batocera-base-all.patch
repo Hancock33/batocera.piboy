@@ -635,7 +635,7 @@ index 958e935449e5..064156d69e75 100644
  M:	Finn Thain <fthain@linux-m68k.org>
  L:	linux-m68k@lists.linux-m68k.org
 diff --git a/Makefile b/Makefile
-index 95f392d34a56..6ae7d4c2d7d7 100644
+index f91c8baef4bb..ede0ba154d47 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -817,6 +817,9 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -10527,7 +10527,7 @@ index cb4f6c513c48..1ffe4260bef6 100644
  	// AMD Node ID and Nodes per Package info
  	u32			amd_node_id;
 diff --git a/arch/x86/include/asm/topology.h b/arch/x86/include/asm/topology.h
-index abe3a8f22cbd..8c2fea7dd065 100644
+index abe3a8f22cbd..672fccf9f845 100644
 --- a/arch/x86/include/asm/topology.h
 +++ b/arch/x86/include/asm/topology.h
 @@ -137,6 +137,7 @@ extern const struct cpumask *cpu_clustergroup_mask(int cpu);
@@ -10538,44 +10538,29 @@ index abe3a8f22cbd..8c2fea7dd065 100644
  #define topology_die_id(cpu)			(cpu_data(cpu).topo.die_id)
  #define topology_core_id(cpu)			(cpu_data(cpu).topo.core_id)
  #define topology_ppin(cpu)			(cpu_data(cpu).ppin)
-@@ -235,8 +236,6 @@ struct pci_bus;
- int x86_pci_root_bus_node(int bus);
- void x86_pci_root_bus_resources(int bus, struct list_head *resources);
- 
--extern bool x86_topology_update;
--
- #ifdef CONFIG_SCHED_MC_PRIO
- #include <asm/percpu.h>
- 
-@@ -282,11 +281,28 @@ static inline long arch_scale_freq_capacity(int cpu)
+@@ -282,9 +283,22 @@ static inline long arch_scale_freq_capacity(int cpu)
  }
  #define arch_scale_freq_capacity arch_scale_freq_capacity
  
 +bool arch_enable_hybrid_capacity_scale(void);
-+void arch_set_cpu_capacity(int cpu, unsigned long cap, unsigned long base_cap,
-+			   unsigned long max_freq, unsigned long base_freq);
++void arch_set_cpu_capacity(int cpu, unsigned long cap, unsigned long max_cap,
++			   unsigned long cap_freq, unsigned long base_freq);
 +
 +unsigned long arch_scale_cpu_capacity(int cpu);
 +#define arch_scale_cpu_capacity arch_scale_cpu_capacity
 +
  extern void arch_set_max_freq_ratio(bool turbo_disabled);
  extern void freq_invariance_set_perf_ratio(u64 ratio, bool turbo_disabled);
-+
-+void arch_rebuild_sched_domains(void);
  #else
 +static inline bool arch_enable_hybrid_capacity_scale(void) { return false; }
 +static inline void arch_set_cpu_capacity(int cpu, unsigned long cap,
-+					 unsigned long base_cap,
-+					 unsigned long max_freq,
++					 unsigned long max_cap,
++					 unsigned long cap_freq,
 +					 unsigned long base_freq) { }
 +
  static inline void arch_set_max_freq_ratio(bool turbo_disabled) { }
  static inline void freq_invariance_set_perf_ratio(u64 ratio, bool turbo_disabled) { }
-+
-+static inline void arch_rebuild_sched_domains(void) { }
  #endif
- 
- extern void arch_scale_freq_tick(void);
 diff --git a/arch/x86/include/asm/vermagic.h b/arch/x86/include/asm/vermagic.h
 index 75884d2cdec3..7acca9b5a9d5 100644
 --- a/arch/x86/include/asm/vermagic.h
@@ -10670,8 +10655,30 @@ index 75884d2cdec3..7acca9b5a9d5 100644
  #elif defined CONFIG_MELAN
  #define MODULE_PROC_FAMILY "ELAN "
  #elif defined CONFIG_MCRUSOE
+diff --git a/arch/x86/kernel/amd_nb.c b/arch/x86/kernel/amd_nb.c
+index 027a8c7a2c9e..41043d9b885a 100644
+--- a/arch/x86/kernel/amd_nb.c
++++ b/arch/x86/kernel/amd_nb.c
+@@ -43,6 +43,8 @@
+ #define PCI_DEVICE_ID_AMD_19H_M70H_DF_F4	0x14f4
+ #define PCI_DEVICE_ID_AMD_19H_M78H_DF_F4	0x12fc
+ #define PCI_DEVICE_ID_AMD_1AH_M00H_DF_F4	0x12c4
++#define PCI_DEVICE_ID_AMD_1AH_M60H_DF_F4	0x124c
++#define PCI_DEVICE_ID_AMD_1AH_M70H_DF_F4	0x12bc
+ #define PCI_DEVICE_ID_AMD_MI200_DF_F4		0x14d4
+ #define PCI_DEVICE_ID_AMD_MI300_DF_F4		0x152c
+ 
+@@ -122,6 +124,8 @@ static const struct pci_device_id amd_nb_link_ids[] = {
+ 	{ PCI_DEVICE(PCI_VENDOR_ID_AMD, PCI_DEVICE_ID_AMD_19H_M78H_DF_F4) },
+ 	{ PCI_DEVICE(PCI_VENDOR_ID_AMD, PCI_DEVICE_ID_AMD_CNB17H_F4) },
+ 	{ PCI_DEVICE(PCI_VENDOR_ID_AMD, PCI_DEVICE_ID_AMD_1AH_M00H_DF_F4) },
++	{ PCI_DEVICE(PCI_VENDOR_ID_AMD, PCI_DEVICE_ID_AMD_1AH_M60H_DF_F4) },
++	{ PCI_DEVICE(PCI_VENDOR_ID_AMD, PCI_DEVICE_ID_AMD_1AH_M70H_DF_F4) },
+ 	{ PCI_DEVICE(PCI_VENDOR_ID_AMD, PCI_DEVICE_ID_AMD_MI200_DF_F4) },
+ 	{ PCI_DEVICE(PCI_VENDOR_ID_AMD, PCI_DEVICE_ID_AMD_MI300_DF_F4) },
+ 	{}
 diff --git a/arch/x86/kernel/cpu/aperfmperf.c b/arch/x86/kernel/cpu/aperfmperf.c
-index b3fa61d45352..6ff86c02fe63 100644
+index b3fa61d45352..f85d3f4233d4 100644
 --- a/arch/x86/kernel/cpu/aperfmperf.c
 +++ b/arch/x86/kernel/cpu/aperfmperf.c
 @@ -347,9 +347,89 @@ static DECLARE_WORK(disable_freq_invariance_work,
@@ -10703,6 +10710,7 @@ index b3fa61d45352..6ff86c02fe63 100644
 +		WARN_ONCE(1, "Hybrid CPU capacity scaling already enabled");
 +		return true;
 +	}
++
 +	arch_cpu_scale = alloc_percpu(struct arch_hybrid_cpu_scale);
 +	if (!arch_cpu_scale)
 +		return false;
@@ -10722,27 +10730,27 @@ index b3fa61d45352..6ff86c02fe63 100644
 +/**
 + * arch_set_cpu_capacity - Set scale-invariance parameters for a CPU
 + * @cpu: Target CPU.
-+ * @cap: Capacity of @cpu, relative to @base_cap, at its maximum frequency.
-+ * @base_cap: System-wide maximum CPU capacity.
-+ * @max_freq: Frequency of @cpu corresponding to @cap.
++ * @cap: Capacity of @cpu at its maximum frequency, relative to @max_cap.
++ * @max_cap: System-wide maximum CPU capacity.
++ * @cap_freq: Frequency of @cpu corresponding to @cap.
 + * @base_freq: Frequency of @cpu at which MPERF counts.
 + *
-+ * The units in which @cap and @base_cap are expressed do not matter, so long
++ * The units in which @cap and @max_cap are expressed do not matter, so long
 + * as they are consistent, because the former is effectively divided by the
-+ * latter.  Analogously for @max_freq and @base_freq.
++ * latter.  Analogously for @cap_freq and @base_freq.
 + *
 + * After calling this function for all CPUs, call arch_rebuild_sched_domains()
 + * to let the scheduler know that capacity-aware scheduling can be used going
 + * forward.
 + */
-+void arch_set_cpu_capacity(int cpu, unsigned long cap, unsigned long base_cap,
-+			   unsigned long max_freq, unsigned long base_freq)
++void arch_set_cpu_capacity(int cpu, unsigned long cap, unsigned long max_cap,
++			   unsigned long cap_freq, unsigned long base_freq)
 +{
 +	if (static_branch_likely(&arch_hybrid_cap_scale_key)) {
 +		WRITE_ONCE(per_cpu_ptr(arch_cpu_scale, cpu)->capacity,
-+			   div_u64(cap << SCHED_CAPACITY_SHIFT, base_cap));
++			   div_u64(cap << SCHED_CAPACITY_SHIFT, max_cap));
 +		WRITE_ONCE(per_cpu_ptr(arch_cpu_scale, cpu)->freq_ratio,
-+			   div_u64(max_freq << SCHED_CAPACITY_SHIFT, base_freq));
++			   div_u64(cap_freq << SCHED_CAPACITY_SHIFT, base_freq));
 +	} else {
 +		WARN_ONCE(1, "Hybrid CPU capacity scaling not enabled");
 +	}
@@ -10759,8 +10767,8 @@ index b3fa61d45352..6ff86c02fe63 100644
 +
  static void scale_freq_tick(u64 acnt, u64 mcnt)
  {
- 	u64 freq_scale;
-+	u64 freq_ratio;
+-	u64 freq_scale;
++	u64 freq_scale, freq_ratio;
  
  	if (!arch_scale_freq_invariant())
  		return;
@@ -10814,78 +10822,6 @@ index 9a6069e7133c..23722aa21e2f 100644
  	}
  
  	/* Package relative core ID */
-diff --git a/arch/x86/kernel/itmt.c b/arch/x86/kernel/itmt.c
-index 9a7c03d47861..af2f60c094a8 100644
---- a/arch/x86/kernel/itmt.c
-+++ b/arch/x86/kernel/itmt.c
-@@ -54,10 +54,8 @@ static int sched_itmt_update_handler(struct ctl_table *table, int write,
- 	old_sysctl = sysctl_sched_itmt_enabled;
- 	ret = proc_dointvec_minmax(table, write, buffer, lenp, ppos);
- 
--	if (!ret && write && old_sysctl != sysctl_sched_itmt_enabled) {
--		x86_topology_update = true;
--		rebuild_sched_domains();
--	}
-+	if (!ret && write && old_sysctl != sysctl_sched_itmt_enabled)
-+		arch_rebuild_sched_domains();
- 
- 	mutex_unlock(&itmt_update_mutex);
- 
-@@ -114,8 +112,7 @@ int sched_set_itmt_support(void)
- 
- 	sysctl_sched_itmt_enabled = 1;
- 
--	x86_topology_update = true;
--	rebuild_sched_domains();
-+	arch_rebuild_sched_domains();
- 
- 	mutex_unlock(&itmt_update_mutex);
- 
-@@ -150,8 +147,7 @@ void sched_clear_itmt_support(void)
- 	if (sysctl_sched_itmt_enabled) {
- 		/* disable sched_itmt if we are no longer ITMT capable */
- 		sysctl_sched_itmt_enabled = 0;
--		x86_topology_update = true;
--		rebuild_sched_domains();
-+		arch_rebuild_sched_domains();
- 	}
- 
- 	mutex_unlock(&itmt_update_mutex);
-diff --git a/arch/x86/kernel/smpboot.c b/arch/x86/kernel/smpboot.c
-index 0c35207320cb..90a6fb54a128 100644
---- a/arch/x86/kernel/smpboot.c
-+++ b/arch/x86/kernel/smpboot.c
-@@ -39,6 +39,7 @@
- 
- #define pr_fmt(fmt) KBUILD_MODNAME ": " fmt
- 
-+#include <linux/cpuset.h>
- #include <linux/init.h>
- #include <linux/smp.h>
- #include <linux/export.h>
-@@ -125,7 +126,7 @@ static DEFINE_PER_CPU_ALIGNED(struct mwait_cpu_dead, mwait_cpu_dead);
- int __read_mostly __max_smt_threads = 1;
- 
- /* Flag to indicate if a complete sched domain rebuild is required */
--bool x86_topology_update;
-+static bool x86_topology_update;
- 
- int arch_update_cpu_topology(void)
- {
-@@ -135,6 +136,13 @@ int arch_update_cpu_topology(void)
- 	return retval;
- }
- 
-+#ifdef CONFIG_X86_64
-+void arch_rebuild_sched_domains(void) {
-+	x86_topology_update = true;
-+	rebuild_sched_domains();
-+}
-+#endif
-+
- static unsigned int smpboot_warm_reset_vector_count;
- 
- static inline void smpboot_setup_warm_reset_vector(unsigned long start_eip)
 diff --git a/arch/x86/pci/common.c b/arch/x86/pci/common.c
 index ddb798603201..7c20387d8202 100644
 --- a/arch/x86/pci/common.c
@@ -11490,10 +11426,10 @@ index fe9ceb0d2288..b58955caf19b 100644
  obj-$(CONFIG_MTD)		+= mtd/
  obj-$(CONFIG_SPI)		+= spi/
 diff --git a/drivers/acpi/video_detect.c b/drivers/acpi/video_detect.c
-index 2cc3821b2b16..c11cbe5b6eaa 100644
+index ff6f260433a1..674b9db7a1ef 100644
 --- a/drivers/acpi/video_detect.c
 +++ b/drivers/acpi/video_detect.c
-@@ -539,6 +539,14 @@ static const struct dmi_system_id video_detect_dmi_table[] = {
+@@ -541,6 +541,14 @@ static const struct dmi_system_id video_detect_dmi_table[] = {
  		DMI_MATCH(DMI_PRODUCT_NAME, "iMac12,2"),
  		},
  	},
@@ -11508,7 +11444,7 @@ index 2cc3821b2b16..c11cbe5b6eaa 100644
  	{
  	 /* https://bugzilla.redhat.com/show_bug.cgi?id=1217249 */
  	 .callback = video_detect_force_native,
-@@ -548,6 +556,14 @@ static const struct dmi_system_id video_detect_dmi_table[] = {
+@@ -550,6 +558,14 @@ static const struct dmi_system_id video_detect_dmi_table[] = {
  		DMI_MATCH(DMI_PRODUCT_NAME, "MacBookPro12,1"),
  		},
  	},
@@ -11629,7 +11565,7 @@ index 4ac3a35dcd98..f4f8587c4ea0 100644
  	return 0;
  }
 diff --git a/drivers/cpufreq/amd-pstate.c b/drivers/cpufreq/amd-pstate.c
-index 67c4a6a0ef12..d7c4a7d6d993 100644
+index 67c4a6a0ef12..82c2ffa93cf2 100644
 --- a/drivers/cpufreq/amd-pstate.c
 +++ b/drivers/cpufreq/amd-pstate.c
 @@ -51,6 +51,7 @@
@@ -12145,7 +12081,7 @@ index 67c4a6a0ef12..d7c4a7d6d993 100644
  	.name		= "amd-pstate-epp",
  	.attr		= amd_pstate_epp_attr,
  };
-@@ -1742,6 +1852,44 @@ static int __init amd_pstate_set_driver(int mode_idx)
+@@ -1742,6 +1852,60 @@ static int __init amd_pstate_set_driver(int mode_idx)
  	return -EINVAL;
  }
  
@@ -12164,18 +12100,34 @@ index 67c4a6a0ef12..d7c4a7d6d993 100644
 +	}
 +
 +	/*
-+	 * If the CPPC feature is disabled in the BIOS for processors that support MSR-based CPPC,
-+	 * the AMD Pstate driver may not function correctly.
-+	 * Check the CPPC flag and display a warning message if the platform supports CPPC.
-+	 * Note: below checking code will not abort the driver registeration process because of
-+	 * the code is added for debugging purposes.
++	 * If the CPPC feature is disabled in the BIOS for processors
++	 * that support MSR-based CPPC, the AMD Pstate driver may not
++	 * function correctly.
++	 *
++	 * For such processors, check the CPPC flag and display a
++	 * warning message if the platform supports CPPC.
++	 *
++	 * Note: The code check below will not abort the driver
++	 * registration process because of the code is added for
++	 * debugging purposes. Besides, it may still be possible for
++	 * the driver to work using the shared-memory mechanism.
 +	 */
 +	if (!cpu_feature_enabled(X86_FEATURE_CPPC)) {
-+		if (cpu_feature_enabled(X86_FEATURE_ZEN3) ||
-+		    cpu_feature_enabled(X86_FEATURE_ZEN4)) {
-+			if ((c->x86_model > 0x10 && c->x86_model < 0x1F) ||
-+					(c->x86_model > 0x40 && c->x86_model < 0xaf))
++		if (cpu_feature_enabled(X86_FEATURE_ZEN2)) {
++			switch (c->x86_model) {
++			case 0x60 ... 0x6F:
++			case 0x80 ... 0xAF:
 +				warn = true;
++				break;
++			}
++		} else if (cpu_feature_enabled(X86_FEATURE_ZEN3) ||
++			   cpu_feature_enabled(X86_FEATURE_ZEN4)) {
++			switch (c->x86_model) {
++			case 0x10 ... 0x1F:
++			case 0x40 ... 0xAF:
++				warn = true;
++				break;
++			}
 +		} else if (cpu_feature_enabled(X86_FEATURE_ZEN5)) {
 +			warn = true;
 +		}
@@ -12190,7 +12142,7 @@ index 67c4a6a0ef12..d7c4a7d6d993 100644
  static int __init amd_pstate_init(void)
  {
  	struct device *dev_root;
-@@ -1750,6 +1898,11 @@ static int __init amd_pstate_init(void)
+@@ -1750,6 +1914,11 @@ static int __init amd_pstate_init(void)
  	if (boot_cpu_data.x86_vendor != X86_VENDOR_AMD)
  		return -ENODEV;
  
@@ -12202,7 +12154,7 @@ index 67c4a6a0ef12..d7c4a7d6d993 100644
  	if (!acpi_cpc_valid()) {
  		pr_warn_once("the _CPC object is not present in SBIOS or ACPI disabled\n");
  		return -ENODEV;
-@@ -1774,11 +1927,9 @@ static int __init amd_pstate_init(void)
+@@ -1774,11 +1943,9 @@ static int __init amd_pstate_init(void)
  		/* Disable on the following configs by default:
  		 * 1. Undefined platforms
  		 * 2. Server platforms
@@ -12215,7 +12167,7 @@ index 67c4a6a0ef12..d7c4a7d6d993 100644
  			pr_info("driver load is disabled, boot with specific mode to enable this\n");
  			return -ENODEV;
  		}
-@@ -1802,7 +1953,7 @@ static int __init amd_pstate_init(void)
+@@ -1802,7 +1969,7 @@ static int __init amd_pstate_init(void)
  	}
  
  	/* capability check */
@@ -12224,7 +12176,7 @@ index 67c4a6a0ef12..d7c4a7d6d993 100644
  		pr_debug("AMD CPPC MSR based functionality is supported\n");
  		if (cppc_state != AMD_PSTATE_ACTIVE)
  			current_pstate_driver->adjust_perf = amd_pstate_adjust_perf;
-@@ -1821,8 +1972,10 @@ static int __init amd_pstate_init(void)
+@@ -1821,8 +1988,10 @@ static int __init amd_pstate_init(void)
  	}
  
  	ret = cpufreq_register_driver(current_pstate_driver);
@@ -12236,7 +12188,7 @@ index 67c4a6a0ef12..d7c4a7d6d993 100644
  
  	dev_root = bus_get_dev_root(&cpu_subsys);
  	if (dev_root) {
-@@ -1838,6 +1991,8 @@ static int __init amd_pstate_init(void)
+@@ -1838,6 +2007,8 @@ static int __init amd_pstate_init(void)
  
  global_attr_free:
  	cpufreq_unregister_driver(current_pstate_driver);
@@ -12324,7 +12276,7 @@ index 9e5060b27864..d7ae2a6bcd7b 100644
  
  	if (!cpufreq_driver->boost_enabled)
 diff --git a/drivers/cpufreq/intel_pstate.c b/drivers/cpufreq/intel_pstate.c
-index c31914a9876f..2ab495e1ba36 100644
+index c31914a9876f..4e59a5446861 100644
 --- a/drivers/cpufreq/intel_pstate.c
 +++ b/drivers/cpufreq/intel_pstate.c
 @@ -16,6 +16,7 @@
@@ -12359,7 +12311,7 @@ index c31914a9876f..2ab495e1ba36 100644
  
  static struct cpufreq_driver *intel_pstate_driver __read_mostly;
  
-@@ -933,6 +937,111 @@ static struct freq_attr *hwp_cpufreq_attrs[] = {
+@@ -933,6 +937,135 @@ static struct freq_attr *hwp_cpufreq_attrs[] = {
  	NULL,
  };
  
@@ -12461,17 +12413,41 @@ index c31914a9876f..2ab495e1ba36 100644
 +
 +static void hybrid_init_cpu_scaling(void)
 +{
++	bool disable_itmt = false;
++
 +	mutex_lock(&hybrid_capacity_lock);
 +
-+	__hybrid_init_cpu_scaling();
++	/*
++	 * If hybrid_max_perf_cpu is set at this point, the hybrid CPU capacity
++	 * scaling has been enabled already and the driver is just changing the
++	 * operation mode.
++	 */
++	if (hybrid_max_perf_cpu) {
++		__hybrid_init_cpu_scaling();
++		goto unlock;
++	}
 +
++	/*
++	 * On hybrid systems, use asym capacity instead of ITMT, but because
++	 * the capacity of SMT threads is not deterministic even approximately,
++	 * do not do that when SMT is in use.
++	 */
++	if (hwp_is_hybrid && !sched_smt_active() && arch_enable_hybrid_capacity_scale()) {
++		__hybrid_init_cpu_scaling();
++		disable_itmt = true;
++	}
++
++unlock:
 +	mutex_unlock(&hybrid_capacity_lock);
++
++	if (disable_itmt)
++		sched_clear_itmt_support();
 +}
 +
  static void __intel_pstate_get_hwp_cap(struct cpudata *cpu)
  {
  	u64 cap;
-@@ -961,6 +1070,43 @@ static void intel_pstate_get_hwp_cap(struct cpudata *cpu)
+@@ -961,6 +1094,43 @@ static void intel_pstate_get_hwp_cap(struct cpudata *cpu)
  	}
  }
  
@@ -12515,7 +12491,7 @@ index c31914a9876f..2ab495e1ba36 100644
  static void intel_pstate_hwp_set(unsigned int cpu)
  {
  	struct cpudata *cpu_data = all_cpu_data[cpu];
-@@ -1069,6 +1215,22 @@ static void intel_pstate_hwp_offline(struct cpudata *cpu)
+@@ -1069,6 +1239,22 @@ static void intel_pstate_hwp_offline(struct cpudata *cpu)
  		value |= HWP_ENERGY_PERF_PREFERENCE(HWP_EPP_POWERSAVE);
  
  	wrmsrl_on_cpu(cpu->cpu, MSR_HWP_REQUEST, value);
@@ -12538,7 +12514,7 @@ index c31914a9876f..2ab495e1ba36 100644
  }
  
  #define POWER_CTL_EE_ENABLE	1
-@@ -1164,21 +1326,46 @@ static void __intel_pstate_update_max_freq(struct cpudata *cpudata,
+@@ -1164,21 +1350,46 @@ static void __intel_pstate_update_max_freq(struct cpudata *cpudata,
  static void intel_pstate_update_limits(unsigned int cpu)
  {
  	struct cpufreq_policy *policy = cpufreq_cpu_acquire(cpu);
@@ -12588,7 +12564,7 @@ index c31914a9876f..2ab495e1ba36 100644
  }
  
  /************************** sysfs begin ************************/
-@@ -1617,6 +1804,13 @@ static void intel_pstate_notify_work(struct work_struct *work)
+@@ -1617,6 +1828,13 @@ static void intel_pstate_notify_work(struct work_struct *work)
  		__intel_pstate_update_max_freq(cpudata, policy);
  
  		cpufreq_cpu_release(policy);
@@ -12602,7 +12578,7 @@ index c31914a9876f..2ab495e1ba36 100644
  	}
  
  	wrmsrl_on_cpu(cpudata->cpu, MSR_HWP_STATUS, 0);
-@@ -2018,8 +2212,10 @@ static void intel_pstate_get_cpu_pstates(struct cpudata *cpu)
+@@ -2018,8 +2236,10 @@ static void intel_pstate_get_cpu_pstates(struct cpudata *cpu)
  
  		if (pstate_funcs.get_cpu_scaling) {
  			cpu->pstate.scaling = pstate_funcs.get_cpu_scaling(cpu->cpu);
@@ -12614,7 +12590,7 @@ index c31914a9876f..2ab495e1ba36 100644
  		} else {
  			cpu->pstate.scaling = perf_ctl_scaling;
  		}
-@@ -2687,6 +2883,8 @@ static int intel_pstate_cpu_online(struct cpufreq_policy *policy)
+@@ -2687,6 +2907,8 @@ static int intel_pstate_cpu_online(struct cpufreq_policy *policy)
  		 */
  		intel_pstate_hwp_reenable(cpu);
  		cpu->suspended = false;
@@ -12623,28 +12599,27 @@ index c31914a9876f..2ab495e1ba36 100644
  	}
  
  	return 0;
-@@ -3129,6 +3327,20 @@ static int intel_pstate_register_driver(struct cpufreq_driver *driver)
+@@ -3129,6 +3351,8 @@ static int intel_pstate_register_driver(struct cpufreq_driver *driver)
  
  	global.min_perf_pct = min_perf_pct_min();
  
-+	/*
-+	 * On hybrid systems, use asym capacity instead of ITMT, but because
-+	 * the capacity of SMT threads is not deterministic even approximately,
-+	 * do not do that when SMT is in use.
-+	 */
-+	if (hwp_is_hybrid && !sched_smt_active() &&
-+	    arch_enable_hybrid_capacity_scale()) {
-+		sched_clear_itmt_support();
-+
-+		hybrid_init_cpu_scaling();
-+
-+		arch_rebuild_sched_domains();
-+	}
++	hybrid_init_cpu_scaling();
 +
  	return 0;
  }
  
-@@ -3550,6 +3762,8 @@ static int __init intel_pstate_setup(char *str)
+@@ -3393,7 +3617,9 @@ static const struct x86_cpu_id intel_epp_default[] = {
+ 	X86_MATCH_INTEL_FAM6_MODEL(ALDERLAKE_L, HWP_SET_DEF_BALANCE_PERF_EPP(102)),
+ 	X86_MATCH_INTEL_FAM6_MODEL(SAPPHIRERAPIDS_X, HWP_SET_DEF_BALANCE_PERF_EPP(32)),
+ 	X86_MATCH_INTEL_FAM6_MODEL(METEORLAKE_L, HWP_SET_EPP_VALUES(HWP_EPP_POWERSAVE,
+-							HWP_EPP_BALANCE_POWERSAVE, 115, 16)),
++								    179, 64, 16)),
++	X86_MATCH_INTEL_FAM6_MODEL(ARROWLAKE, HWP_SET_EPP_VALUES(HWP_EPP_POWERSAVE,
++								 179, 64, 16)),
+ 	{}
+ };
+ 
+@@ -3550,6 +3776,8 @@ static int __init intel_pstate_setup(char *str)
  
  	if (!strcmp(str, "disable"))
  		no_load = 1;
@@ -12926,10 +12901,10 @@ index 47b8b49da8a7..943959d1f401 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 0a7c63146e90..64e5f90f0fd2 100644
+index 02ffc5173f49..dcf2f5fb34cf 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -4125,7 +4125,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4128,7 +4128,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  		return r;
  	}
  
@@ -23763,6 +23738,18 @@ index 1417e230edbd..e69785af8e1d 100644
  	/*
  	 * Retina MacBook Pros cannot switch the panel's AUX separately
  	 * and need eDP pre-calibration. They are distinguishable from
+diff --git a/drivers/powercap/intel_rapl_common.c b/drivers/powercap/intel_rapl_common.c
+index aac0744011a3..d51d4ec8d707 100644
+--- a/drivers/powercap/intel_rapl_common.c
++++ b/drivers/powercap/intel_rapl_common.c
+@@ -1285,6 +1285,7 @@ static const struct x86_cpu_id rapl_ids[] __initconst = {
+ 
+ 	X86_MATCH_VENDOR_FAM(AMD, 0x17, &rapl_defaults_amd),
+ 	X86_MATCH_VENDOR_FAM(AMD, 0x19, &rapl_defaults_amd),
++	X86_MATCH_VENDOR_FAM(AMD, 0x1A, &rapl_defaults_amd),
+ 	X86_MATCH_VENDOR_FAM(HYGON, 0x18, &rapl_defaults_amd),
+ 	{}
+ };
 diff --git a/drivers/staging/Kconfig b/drivers/staging/Kconfig
 index db4a392841b1..580df4ce4f9f 100644
 --- a/drivers/staging/Kconfig
@@ -29657,91 +29644,6 @@ index b610a2de4ae5..0cdbcf82554f 100644
  	.id_table = uas_usb_ids,
  };
  
-diff --git a/fs/btrfs/extent_map.c b/fs/btrfs/extent_map.c
-index b4c9a6aa118c..6853f043c2c1 100644
---- a/fs/btrfs/extent_map.c
-+++ b/fs/btrfs/extent_map.c
-@@ -1065,8 +1065,7 @@ static long btrfs_scan_inode(struct btrfs_inode *inode, struct btrfs_em_shrink_c
- 		return 0;
- 
- 	/*
--	 * We want to be fast because we can be called from any path trying to
--	 * allocate memory, so if the lock is busy we don't want to spend time
-+	 * We want to be fast so if the lock is busy we don't want to spend time
- 	 * waiting for it - either some task is about to do IO for the inode or
- 	 * we may have another task shrinking extent maps, here in this code, so
- 	 * skip this inode.
-@@ -1109,9 +1108,7 @@ static long btrfs_scan_inode(struct btrfs_inode *inode, struct btrfs_em_shrink_c
- 		/*
- 		 * Stop if we need to reschedule or there's contention on the
- 		 * lock. This is to avoid slowing other tasks trying to take the
--		 * lock and because the shrinker might be called during a memory
--		 * allocation path and we want to avoid taking a very long time
--		 * and slowing down all sorts of tasks.
-+		 * lock.
- 		 */
- 		if (need_resched() || rwlock_needbreak(&tree->lock))
- 			break;
-@@ -1139,12 +1136,7 @@ static long btrfs_scan_root(struct btrfs_root *root, struct btrfs_em_shrink_ctx
- 		if (ctx->scanned >= ctx->nr_to_scan)
- 			break;
- 
--		/*
--		 * We may be called from memory allocation paths, so we don't
--		 * want to take too much time and slowdown tasks.
--		 */
--		if (need_resched())
--			break;
-+		cond_resched();
- 
- 		inode = btrfs_find_first_inode(root, min_ino);
- 	}
-@@ -1202,14 +1194,12 @@ long btrfs_free_extent_maps(struct btrfs_fs_info *fs_info, long nr_to_scan)
- 							   ctx.last_ino);
- 	}
- 
--	/*
--	 * We may be called from memory allocation paths, so we don't want to
--	 * take too much time and slowdown tasks, so stop if we need reschedule.
--	 */
--	while (ctx.scanned < ctx.nr_to_scan && !need_resched()) {
-+	while (ctx.scanned < ctx.nr_to_scan) {
- 		struct btrfs_root *root;
- 		unsigned long count;
- 
-+		cond_resched();
-+
- 		spin_lock(&fs_info->fs_roots_radix_lock);
- 		count = radix_tree_gang_lookup(&fs_info->fs_roots_radix,
- 					       (void **)&root,
-diff --git a/fs/btrfs/super.c b/fs/btrfs/super.c
-index f05cce7c8b8d..11faf5e983ea 100644
---- a/fs/btrfs/super.c
-+++ b/fs/btrfs/super.c
-@@ -28,6 +28,7 @@
- #include <linux/btrfs.h>
- #include <linux/security.h>
- #include <linux/fs_parser.h>
-+#include <linux/swap.h>
- #include "messages.h"
- #include "delayed-inode.h"
- #include "ctree.h"
-@@ -2394,6 +2395,15 @@ static long btrfs_free_cached_objects(struct super_block *sb, struct shrink_cont
- 	const long nr_to_scan = min_t(unsigned long, LONG_MAX, sc->nr_to_scan);
- 	struct btrfs_fs_info *fs_info = btrfs_sb(sb);
- 
-+	/*
-+	 * We may be called from any task trying to allocate memory and we don't
-+	 * want to slow it down with scanning and dropping extent maps. It would
-+	 * also cause heavy lock contention if many tasks concurrently enter
-+	 * here. Therefore only allow kswapd tasks to scan and drop extent maps.
-+	 */
-+	if (!current_is_kswapd())
-+		return 0;
-+
- 	return btrfs_free_extent_maps(fs_info, nr_to_scan);
- }
- 
 diff --git a/include/drm/drm_format_helper.h b/include/drm/drm_format_helper.h
 index 428d81afe215..aa1604d92c1a 100644
 --- a/include/drm/drm_format_helper.h
@@ -31820,7 +31722,7 @@ index dbf896f3146c..4702cd2f1ffc 100644
  /*
   * Sender's congestion state indicating normal or abnormal situations
 diff --git a/init/Kconfig b/init/Kconfig
-index d8a971b804d3..bfc033b53242 100644
+index 9684e5d2b81c..fdfe1928de17 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -132,6 +132,10 @@ config THREAD_INFO_IN_TASK
@@ -49378,7 +49280,7 @@ index 739b1bf3d637..3a4269c02fb2 100644
  static int __read_mostly sysctl_compact_memory;
  
 diff --git a/mm/huge_memory.c b/mm/huge_memory.c
-index 5f32a196a612..99832eb64739 100644
+index 4d9c1277e5e4..8d551e3be086 100644
 --- a/mm/huge_memory.c
 +++ b/mm/huge_memory.c
 @@ -63,7 +63,11 @@ unsigned long transparent_hugepage_flags __read_mostly =
@@ -49422,7 +49324,7 @@ index 8a1c92090129..a415623cde8f 100644
  EXPORT_SYMBOL_GPL(dirty_writeback_interval);
  
 diff --git a/mm/page_alloc.c b/mm/page_alloc.c
-index df2c442f1c47..0d2e014af058 100644
+index b50060405d94..da9f688657f6 100644
 --- a/mm/page_alloc.c
 +++ b/mm/page_alloc.c
 @@ -271,7 +271,11 @@ const char * const migratetype_names[MIGRATE_TYPES] = {
@@ -52243,10 +52145,10 @@ index 28ffcfbeef14..7b13915ba288 100644
  		icsk->icsk_ca_ops->init(sk);
  	if (tcp_ca_needs_ecn(sk))
 diff --git a/net/ipv4/tcp_input.c b/net/ipv4/tcp_input.c
-index ecd521108559..83b4928bc014 100644
+index 2c52f6dcbd29..009917385bea 100644
 --- a/net/ipv4/tcp_input.c
 +++ b/net/ipv4/tcp_input.c
-@@ -365,7 +365,7 @@ static void __tcp_ecn_check_ce(struct sock *sk, const struct sk_buff *skb)
+@@ -370,7 +370,7 @@ static void __tcp_ecn_check_ce(struct sock *sk, const struct sk_buff *skb)
  			tcp_enter_quickack_mode(sk, 2);
  		break;
  	case INET_ECN_CE:
@@ -52255,7 +52157,7 @@ index ecd521108559..83b4928bc014 100644
  			tcp_ca_event(sk, CA_EVENT_ECN_IS_CE);
  
  		if (!(tp->ecn_flags & TCP_ECN_DEMAND_CWR)) {
-@@ -376,7 +376,7 @@ static void __tcp_ecn_check_ce(struct sock *sk, const struct sk_buff *skb)
+@@ -381,7 +381,7 @@ static void __tcp_ecn_check_ce(struct sock *sk, const struct sk_buff *skb)
  		tp->ecn_flags |= TCP_ECN_SEEN;
  		break;
  	default:
@@ -52264,7 +52166,7 @@ index ecd521108559..83b4928bc014 100644
  			tcp_ca_event(sk, CA_EVENT_ECN_NO_CE);
  		tp->ecn_flags |= TCP_ECN_SEEN;
  		break;
-@@ -1124,7 +1124,12 @@ static void tcp_verify_retransmit_hint(struct tcp_sock *tp, struct sk_buff *skb)
+@@ -1120,7 +1120,12 @@ static void tcp_verify_retransmit_hint(struct tcp_sock *tp, struct sk_buff *skb)
   */
  static void tcp_notify_skb_loss_event(struct tcp_sock *tp, const struct sk_buff *skb)
  {
@@ -52277,7 +52179,7 @@ index ecd521108559..83b4928bc014 100644
  }
  
  void tcp_mark_skb_lost(struct sock *sk, struct sk_buff *skb)
-@@ -1505,6 +1510,17 @@ static bool tcp_shifted_skb(struct sock *sk, struct sk_buff *prev,
+@@ -1501,6 +1506,17 @@ static bool tcp_shifted_skb(struct sock *sk, struct sk_buff *prev,
  	WARN_ON_ONCE(tcp_skb_pcount(skb) < pcount);
  	tcp_skb_pcount_add(skb, -pcount);
  
@@ -52295,7 +52197,7 @@ index ecd521108559..83b4928bc014 100644
  	/* When we're adding to gso_segs == 1, gso_size will be zero,
  	 * in theory this shouldn't be necessary but as long as DSACK
  	 * code can come after this skb later on it's better to keep
-@@ -3799,7 +3815,8 @@ static void tcp_replace_ts_recent(struct tcp_sock *tp, u32 seq)
+@@ -3795,7 +3811,8 @@ static void tcp_replace_ts_recent(struct tcp_sock *tp, u32 seq)
  /* This routine deals with acks during a TLP episode and ends an episode by
   * resetting tlp_high_seq. Ref: TLP algorithm in draft-ietf-tcpm-rack
   */
@@ -52305,7 +52207,7 @@ index ecd521108559..83b4928bc014 100644
  {
  	struct tcp_sock *tp = tcp_sk(sk);
  
-@@ -3816,6 +3833,7 @@ static void tcp_process_tlp_ack(struct sock *sk, u32 ack, int flag)
+@@ -3812,6 +3829,7 @@ static void tcp_process_tlp_ack(struct sock *sk, u32 ack, int flag)
  		/* ACK advances: there was a loss, so reduce cwnd. Reset
  		 * tlp_high_seq in tcp_init_cwnd_reduction()
  		 */
@@ -52313,7 +52215,7 @@ index ecd521108559..83b4928bc014 100644
  		tcp_init_cwnd_reduction(sk);
  		tcp_set_ca_state(sk, TCP_CA_CWR);
  		tcp_end_cwnd_reduction(sk);
-@@ -3826,6 +3844,11 @@ static void tcp_process_tlp_ack(struct sock *sk, u32 ack, int flag)
+@@ -3822,6 +3840,11 @@ static void tcp_process_tlp_ack(struct sock *sk, u32 ack, int flag)
  			     FLAG_NOT_DUP | FLAG_DATA_SACKED))) {
  		/* Pure dupack: original and TLP probe arrived; no loss */
  		tp->tlp_high_seq = 0;
@@ -52325,7 +52227,7 @@ index ecd521108559..83b4928bc014 100644
  	}
  }
  
-@@ -3934,6 +3957,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
+@@ -3930,6 +3953,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
  
  	prior_fack = tcp_is_sack(tp) ? tcp_highest_sack_seq(tp) : tp->snd_una;
  	rs.prior_in_flight = tcp_packets_in_flight(tp);
@@ -52333,7 +52235,7 @@ index ecd521108559..83b4928bc014 100644
  
  	/* ts_recent update must be made after we are sure that the packet
  	 * is in window.
-@@ -4008,7 +4032,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
+@@ -4004,7 +4028,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
  	tcp_rack_update_reo_wnd(sk, &rs);
  
  	if (tp->tlp_high_seq)
@@ -52342,7 +52244,7 @@ index ecd521108559..83b4928bc014 100644
  
  	if (tcp_ack_is_dubious(sk, flag)) {
  		if (!(flag & (FLAG_SND_UNA_ADVANCED |
-@@ -4032,6 +4056,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
+@@ -4028,6 +4052,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
  	delivered = tcp_newly_delivered(sk, delivered, flag);
  	lost = tp->lost - lost;			/* freshly marked lost */
  	rs.is_ack_delayed = !!(flag & FLAG_ACK_MAYBE_DELAYED);
@@ -52350,7 +52252,7 @@ index ecd521108559..83b4928bc014 100644
  	tcp_rate_gen(sk, delivered, lost, is_sack_reneg, sack_state.rate);
  	tcp_cong_control(sk, ack, delivered, flag, sack_state.rate);
  	tcp_xmit_recovery(sk, rexmit);
-@@ -4051,7 +4076,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
+@@ -4047,7 +4072,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
  	tcp_ack_probe(sk);
  
  	if (tp->tlp_high_seq)
@@ -52359,7 +52261,7 @@ index ecd521108559..83b4928bc014 100644
  	return 1;
  
  old_ack:
-@@ -5723,13 +5748,14 @@ static void __tcp_ack_snd_check(struct sock *sk, int ofo_possible)
+@@ -5719,13 +5744,14 @@ static void __tcp_ack_snd_check(struct sock *sk, int ofo_possible)
  
  	    /* More than one full frame received... */
  	if (((tp->rcv_nxt - tp->rcv_wup) > inet_csk(sk)->icsk_ack.rcv_mss &&
@@ -52593,10 +52495,10 @@ index 4d40615dc8fc..f27941201ef2 100644
  	event = icsk->icsk_pending;
  
 diff --git a/scripts/Makefile.package b/scripts/Makefile.package
-index bf016af8bf8a..4a80584ec771 100644
+index bf016af8bf8a..11d53f240a2b 100644
 --- a/scripts/Makefile.package
 +++ b/scripts/Makefile.package
-@@ -141,6 +141,19 @@ snap-pkg:
+@@ -141,6 +141,18 @@ snap-pkg:
  	cd $(objtree)/snap && \
  	snapcraft --target-arch=$(UTS_MACHINE)
  
@@ -52606,8 +52508,7 @@ index bf016af8bf8a..4a80584ec771 100644
 +PHONY += pacman-pkg
 +pacman-pkg:
 +	@ln -srf $(srctree)/scripts/package/PKGBUILD $(objtree)/PKGBUILD
-+	+objtree="$(realpath $(objtree))" \
-+		BUILDDIR="$(realpath $(objtree))/pacman" \
++	+BUILDDIR="$(realpath $(objtree))/pacman" \
 +		CARCH="$(UTS_MACHINE)" \
 +		KBUILD_MAKEFLAGS="$(MAKEFLAGS)" \
 +		KBUILD_REVISION="$(shell $(srctree)/scripts/build-version)" \
@@ -52616,7 +52517,7 @@ index bf016af8bf8a..4a80584ec771 100644
  # dir-pkg tar*-pkg - tarball targets
  # ---------------------------------------------------------------------------
  
-@@ -221,6 +234,7 @@ help:
+@@ -221,6 +233,7 @@ help:
  	@echo '  bindeb-pkg          - Build only the binary kernel deb package'
  	@echo '  snap-pkg            - Build only the binary kernel snap package'
  	@echo '                        (will connect to external hosts)'
@@ -52639,10 +52540,10 @@ index 2b812210b412..4c3a8cc6ef15 100755
  					}
 diff --git a/scripts/package/PKGBUILD b/scripts/package/PKGBUILD
 new file mode 100644
-index 000000000000..fbd7eb10a52c
+index 000000000000..839cd5e634d2
 --- /dev/null
 +++ b/scripts/package/PKGBUILD
-@@ -0,0 +1,114 @@
+@@ -0,0 +1,119 @@
 +# SPDX-License-Identifier: GPL-2.0-only
 +# Maintainer: Thomas Weißschuh <linux@weissschuh.net>
 +# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
@@ -52681,11 +52582,17 @@ index 000000000000..fbd7eb10a52c
 +)
 +options=(!debug !strip !buildflags !makeflags)
 +
-+build() {
++_prologue() {
 +	# MAKEFLAGS from makepkg.conf override the ones inherited from kbuild.
 +	# Bypass this override with a custom variable.
 +	export MAKEFLAGS="${KBUILD_MAKEFLAGS}"
-+	cd "${objtree}"
++
++	# Kbuild works in the output directory, where this PKGBUILD is located.
++	cd "$(dirname "${BASH_SOURCE[0]}")"
++}
++
++build() {
++	_prologue
 +
 +	${MAKE} KERNELRELEASE="${KERNELRELEASE}" KBUILD_BUILD_VERSION="${pkgrel}"
 +}
@@ -52693,9 +52600,9 @@ index 000000000000..fbd7eb10a52c
 +_package() {
 +	pkgdesc="The ${pkgdesc} kernel and modules"
 +
-+	export MAKEFLAGS="${KBUILD_MAKEFLAGS}"
-+	cd "${objtree}"
 +	local modulesdir="${pkgdir}/usr/${MODLIB}"
++
++	_prologue
 +
 +	echo "Installing boot image..."
 +	# systemd expects to find the kernel here to allow hibernation
@@ -52721,9 +52628,9 @@ index 000000000000..fbd7eb10a52c
 +_package-headers() {
 +	pkgdesc="Headers and scripts for building modules for the ${pkgdesc} kernel"
 +
-+	export MAKEFLAGS="${KBUILD_MAKEFLAGS}"
-+	cd "${objtree}"
 +	local builddir="${pkgdir}/usr/${MODLIB}/build"
++
++	_prologue
 +
 +	if grep -q CONFIG_MODULES=y include/config/auto.conf; then
 +		echo "Installing build files..."
@@ -52745,8 +52652,7 @@ index 000000000000..fbd7eb10a52c
 +	provides=(linux-api-headers)
 +	conflicts=(linux-api-headers)
 +
-+	export MAKEFLAGS="${KBUILD_MAKEFLAGS}"
-+	cd "${objtree}"
++	_prologue
 +
 +	${MAKE} headers_install INSTALL_HDR_PATH="${pkgdir}/usr"
 +}
