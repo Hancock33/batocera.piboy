@@ -62,8 +62,8 @@
 - Cemu to v2.1
 - Citra to r5115f64
 - Commander Genius to v3.5.1
-- Dolphin to 2407.130
-- Duckstaton to Jul 27, 2024 build
+- Dolphin to 2407.264
+- Duckstation to v0.1-7294
 - DXX-Rebirth to July 21 build
 - Eduke32 to Jul 25 build
 - Flycast to Jul 30 build
@@ -102,6 +102,7 @@
 - LibVA to 2.22.0
 - WF-Recorder to 14th of August build
 - Switchres to 2.2.1
+- Mesa3D to 24.2.1
 
 # 2024/08/11 - batocera.linux 40 - Swallowtail
 ### Special Notes
