@@ -4,6 +4,7 @@ Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/b
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|57a8c1b55f427a36f198da1ed140ffd84f96236f|Aug 30, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|9d6e6eeac144ca640af3faca7518c604a8cdb880|Aug 30, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|c575eac89b8619d23edee506ddc7dd01ff23208d|Aug 30, 2024
+Emulators|[scummvm](http://github.com/scummvm/scummvm)|2d66ce876b13df682c53fed17f2b58a1a57c2bab|Aug 30, 2024
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|15221d1bd7708feb1b52e468ae84c786992cf48f|Aug 30, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45323|Aug 30, 2024
 Libraries|[cpuinfo](http://github.com/pytorch/cpuinfo)|fa1c679da8d19e1d87f20175ae1ec10995cd3dd3|Aug 30, 2024
@@ -33,6 +34,7 @@ Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|1e1aa62175ca
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|c575eac89b8619d23edee506ddc7dd01ff23208d|Aug 30, 2024
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|1fbeee0a46b12d3ab28c4795172929ebb31808ea|Aug 30, 2024
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|f728594fa8ea3ab02a5b1bb261ea4a1ce172e612|Aug 30, 2024
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|2d66ce876b13df682c53fed17f2b58a1a57c2bab|Aug 30, 2024
 Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|427b912baa69ee8cf0c0374ee6c5b70b7b0f29e8|Aug 30, 2024
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|b462334b9ce40533d084d606b2f70739400581be|Aug 30, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|1b2ad364b7c512777c4886f2c84e2ff07c6e9eb1|Aug 30, 2024
@@ -86,11 +88,9 @@ Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|34f7e49e519913026648c61
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|a3e33215e3457e8d4f3c2093e873d73ea618c8ec|Aug 25, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|dd8d2989a652d56a7a1588b65a42cc58477638c2|Aug 25, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|f77634da81e469b103745c59857c92cbda5f013c|Aug 24, 2024
-Emulators|[scummvm](http://github.com/scummvm/scummvm)|cde46fed2eea73b260ffdf00cac569611e9577a5|Aug 24, 2024
 Utils|[wf-recorder](http://github.com/ammen99/wf-recorder)|a5485cf730cd9a4f64f2be18da65c7653f0fa37e|Aug 24, 2024
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|f60bb80e255144e71776e2ad570d89b78ea2ab4f|Aug 24, 2024
 Emulators|[libretro-gpsp](http://github.com/libretro/gpsp)|f2837be54aa680c4ec0c7be0669cdcd65582cc66|Aug 24, 2024
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|cde46fed2eea73b260ffdf00cac569611e9577a5|Aug 24, 2024
 Emulators|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|8609f49768514a1ed6571747006575c2a24555e9|Aug 24, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|b4001f8b2dd55a7225c736dae043ab4e737bf0ff|Aug 23, 2024
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|44eea22a31c4ece261590a3ae871fbd12f2fc811|Aug 23, 2024
