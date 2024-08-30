@@ -16,6 +16,9 @@ Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|1e1aa62175cab14772f
 Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|4483cb4c2b19a4e41882dab3432cd79bca3f85bf|Aug 30, 2024
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|04eb32e92d3e5d507e65591602d6a133776d9cb3|Aug 30, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|3d272d4714214c8001065d0f6bde2f909f838f55|Aug 30, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.16.r7.gacfbb642|Aug 30, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240830|Aug 30, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240830|Aug 30, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|bbbeb4ff7c8a4de78e6241ebf669dfb4ed8a1c61|Aug 30, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|4e563e5cf66f0e857afaf33a227b552eb632be90|Aug 30, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|3260947537deb14c4b464fd80a132dc9d3f80a4f|Aug 30, 2024
@@ -56,8 +59,6 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-08-28|Aug 28
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|dc1479ff178b592d6817906d1eb5100cf4e9921f|Aug 28, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|9e68208733f6523a9b69dd1c655238f3dfe54d44|Aug 28, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.27.11-rc.2|Aug 28, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240828|Aug 28, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240828|Aug 28, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|614dc7ee7ad82d11d8dbfc22612948e1847e48c6|Aug 28, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|7d4e2ccc0143451969e0efbcb207acc690249d4c|Aug 28, 2024
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|e39b1f2c536417deab6afbbd66c1fccd2c950dbf|Aug 28, 2024
@@ -87,7 +88,6 @@ Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|dd8d2
 Emulators|[applewin](https://github.com/audetto/AppleWin)|f77634da81e469b103745c59857c92cbda5f013c|Aug 24, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|cde46fed2eea73b260ffdf00cac569611e9577a5|Aug 24, 2024
 Utils|[wf-recorder](http://github.com/ammen99/wf-recorder)|a5485cf730cd9a4f64f2be18da65c7653f0fa37e|Aug 24, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.16.r0.g6c5cb546|Aug 24, 2024
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|f60bb80e255144e71776e2ad570d89b78ea2ab4f|Aug 24, 2024
 Emulators|[libretro-gpsp](http://github.com/libretro/gpsp)|f2837be54aa680c4ec0c7be0669cdcd65582cc66|Aug 24, 2024
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|cde46fed2eea73b260ffdf00cac569611e9577a5|Aug 24, 2024
