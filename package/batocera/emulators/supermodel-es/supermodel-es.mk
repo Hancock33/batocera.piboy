@@ -3,8 +3,8 @@
 # supermodel-es
 #
 ################################################################################
-# Version: Commits on Aug 23, 2024
-SUPERMODEL_ES_VERSION = e3506e659ad18f7f2eb910e88c82cf0f842e8fb0
+# Version: Commits on Aug 29, 2024
+SUPERMODEL_ES_VERSION = ecbc9102c0a09a352e33499f2aec94a701e5be95
 SUPERMODEL_ES_SITE = $(call github,DirtBagXon,model3emu-code-sinden,$(SUPERMODEL_ES_VERSION))
 SUPERMODEL_ES_DEPENDENCIES = sdl2 zlib libzip sdl2_net
 SUPERMODEL_ES_LICENSE = GPLv3
