@@ -1,5 +1,5 @@
 # Locally calculated after checking pgp signature
-sha256  ccf536620a45458d26ba83887a983b96827001e92a13847b45e4925cc8913178  libiconv-1.15.tar.gz
+sha256  8f74213b56238c85a50a5329f77e06198771e70dd9a739779f4c02f65d971313  libiconv-1.17.tar.gz
 
 # Hash for license files:
 sha256  8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903  COPYING
