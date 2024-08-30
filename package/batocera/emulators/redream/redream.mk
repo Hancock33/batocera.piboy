@@ -3,8 +3,8 @@
 # redream
 #
 ################################################################################
-# Version: Commits on Jul 13, 2024
-REDREAM_VERSION = 1.5.0-1131-gafdfc1a
+# Version: Commits on Aug 19, 2024
+REDREAM_VERSION = 1.5.0-1133-g03c2ae9
 REDREAM_SITE = https://redream.io/download
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711)$(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)

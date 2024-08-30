@@ -1,8 +1,8 @@
 diff --git a/src/gallium/targets/dri/meson.build b/src/gallium/targets/dri/meson.build
-index 66619bba0db..443923772e8 100644
+index 5b455164ced..c90e699b56a 100644
 --- a/src/gallium/targets/dri/meson.build
 +++ b/src/gallium/targets/dri/meson.build
-@@ -68,6 +68,9 @@ libgallium_dri = shared_library(
+@@ -70,6 +70,9 @@ libgallium_dri = shared_library(
  
  foreach d : [[with_gallium_kmsro, [
                 'armada-drm_dri.so',
@@ -10,13 +10,13 @@ index 66619bba0db..443923772e8 100644
 +               'drm-rp1-dsi_dri.so',
 +               'drm-rp1-vec_dri.so',
                 'exynos_dri.so',
+                'gm12u320_dri.so',
                 'hdlcd_dri.so',
-                'hx8357d_dri.so',
 diff --git a/src/gallium/targets/dri/target.c b/src/gallium/targets/dri/target.c
-index 9d3069eb004..79f60a7224a 100644
+index 0915a84480d..ff6edb32712 100644
 --- a/src/gallium/targets/dri/target.c
 +++ b/src/gallium/targets/dri/target.c
-@@ -98,6 +98,9 @@ DEFINE_LOADER_DRM_ENTRYPOINT(tegra);
+@@ -101,6 +101,9 @@ DEFINE_LOADER_DRM_ENTRYPOINT(tegra);
  
  #if defined(GALLIUM_KMSRO)
  DEFINE_LOADER_DRM_ENTRYPOINT(armada_drm)
@@ -24,6 +24,5 @@ index 9d3069eb004..79f60a7224a 100644
 +DEFINE_LOADER_DRM_ENTRYPOINT(drm_rp1_dsi)
 +DEFINE_LOADER_DRM_ENTRYPOINT(drm_rp1_vec)
  DEFINE_LOADER_DRM_ENTRYPOINT(exynos)
+ DEFINE_LOADER_DRM_ENTRYPOINT(gm12u320)
  DEFINE_LOADER_DRM_ENTRYPOINT(hdlcd)
- DEFINE_LOADER_DRM_ENTRYPOINT(hx8357d)
-

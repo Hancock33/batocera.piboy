@@ -51,7 +51,7 @@ index c0436881a533..71e748a9477e 100644
  
  static const struct h5_device_data h5_data_rtl8822cs = {
 diff --git a/drivers/bluetooth/hci_qca.c b/drivers/bluetooth/hci_qca.c
-index 9a0bc86f9aac..781030694ec0 100644
+index 34c36f0f781e..24003c147645 100644
 --- a/drivers/bluetooth/hci_qca.c
 +++ b/drivers/bluetooth/hci_qca.c
 @@ -225,7 +225,6 @@ struct qca_serdev {

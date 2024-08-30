@@ -1,8 +1,8 @@
 diff --git a/code/qcommon/q_shared.h b/code/qcommon/q_shared.h
-index 7d8b509c..e4fd156c 100644
+index d7ede8af..22454186 100644
 --- a/code/qcommon/q_shared.h
 +++ b/code/qcommon/q_shared.h
-@@ -45,7 +45,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+@@ -46,7 +46,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
    #define BASEGAME					"baseq3"
    #define CLIENT_WINDOW_TITLE		"ioquake3"
    #define CLIENT_WINDOW_MIN_TITLE	"ioq3"
@@ -12,23 +12,25 @@ index 7d8b509c..e4fd156c 100644
    #define HOMEPATH_NAME_MACOSX		HOMEPATH_NAME_WIN
    #define STEAMPATH_NAME			"Quake 3 Arena"
 diff --git a/code/sys/sys_unix.c b/code/sys/sys_unix.c
-index 1043b9a4..f4a42937 100644
+index 07de6500..81dcdcb6 100644
 --- a/code/sys/sys_unix.c
 +++ b/code/sys/sys_unix.c
-@@ -61,7 +61,7 @@ char *Sys_DefaultHomePath(void)
- 
- 	if( !*homePath && com_homepath != NULL )
- 	{
--		if( ( p = getenv( "HOME" ) ) != NULL )
-+		if( ( p = "/userdata/system/configs/" ) != NULL )
+@@ -105,7 +105,7 @@ char *Sys_DefaultHomePath(void)
+ 				Q_strcat(homePath, sizeof(homePath), dir);
+ 			}
+ 		}
+-		else if( ( p = getenv( "HOME" ) ) != NULL )
++		else if( ( p = "/userdata/system/configs/" ) != NULL )
  		{
  			Com_sprintf(homePath, sizeof(homePath), "%s%c", p, PATH_SEP);
- #ifdef __APPLE__
-@@ -80,7 +80,6 @@ char *Sys_DefaultHomePath(void)
- #endif
+ 
+@@ -116,8 +116,7 @@ char *Sys_DefaultHomePath(void)
  		}
+ #endif
  	}
 -
- 	return homePath;
+-	return homePath;
++	return "/userdata/system/configs/";
  }
  
+ /*
