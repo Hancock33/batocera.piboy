@@ -20,8 +20,8 @@ FFMPEG4_CPE_ID_VENDOR = ffmpeg
 
 FFMPEG4_CONF_OPTS = \
 	--prefix=/usr \
-    --incdir=/usr/include/ffmpeg4.4 \
-    --libdir=/usr/lib/ffmpeg4.4 \
+	--incdir=/usr/include/ffmpeg4.4 \
+	--libdir=/usr/lib/ffmpeg4.4 \
 	--enable-avfilter \
 	--disable-version3 \
 	--enable-logging \
