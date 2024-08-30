@@ -3,8 +3,8 @@
 # batocera-emulationstation
 #
 ################################################################################
-# Version: Commits on Aug 26, 2024
-BATOCERA_EMULATIONSTATION_VERSION = 6c0213db8d487c3341264c8ac446b9e9817a9e64
+# Version: Commits on Aug 30, 2024
+BATOCERA_EMULATIONSTATION_VERSION = 57a8c1b55f427a36f198da1ed140ffd84f96236f
 BATOCERA_EMULATIONSTATION_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_EMULATIONSTATION_SITE_METHOD = git
 BATOCERA_EMULATIONSTATION_LICENSE = MIT
@@ -44,7 +44,7 @@ BATOCERA_EMULATIONSTATION_CONF_OPTS += -DENABLE_TTS=ON
 BATOCERA_EMULATIONSTATION_DEPENDENCIES += espeak
 endif
 
-ifeq ($(BR2_PACKAGE_KODI)$(BR2_PACKAGE_KODI20),y)
+ifeq ($(BR2_PACKAGE_KODI)$(BR2_PACKAGE_KODI21),y)
 BATOCERA_EMULATIONSTATION_CONF_OPTS += -DDISABLE_KODI=OFF
 else
 BATOCERA_EMULATIONSTATION_CONF_OPTS += -DDISABLE_KODI=ON
@@ -98,6 +98,8 @@ define BATOCERA_EMULATIONSTATION_RESOURCES
 	$(INSTALL) -m 0755 -d $(TARGET_DIR)/usr/share/emulationstation/resources/flags
 	$(INSTALL) -m 0755 -d $(TARGET_DIR)/usr/share/emulationstation/resources/battery
 	$(INSTALL) -m 0755 -d $(TARGET_DIR)/usr/share/emulationstation/resources/services
+	$(INSTALL) -m 0755 -d $(TARGET_DIR)/usr/share/emulationstation/resources/shaders
+
 	$(INSTALL) -m 0644 -D $(@D)/resources/*.* $(TARGET_DIR)/usr/share/emulationstation/resources
 	$(INSTALL) -m 0644 -D $(@D)/resources/help/*.* $(TARGET_DIR)/usr/share/emulationstation/resources/help
 	$(INSTALL) -m 0644 -D $(@D)/resources/flags/*.* $(TARGET_DIR)/usr/share/emulationstation/resources/flags

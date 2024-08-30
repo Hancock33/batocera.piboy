@@ -1,5 +1,5 @@
 diff --git a/src/amd/llvm/ac_llvm_helper.cpp b/src/amd/llvm/ac_llvm_helper.cpp
-index 5d065279ad1fb..af4a50f8409d5 100644
+index 5d065279ad1..af4a50f8409 100644
 --- a/src/amd/llvm/ac_llvm_helper.cpp
 +++ b/src/amd/llvm/ac_llvm_helper.cpp
 @@ -8,6 +8,7 @@
@@ -10,4 +10,3 @@ index 5d065279ad1fb..af4a50f8409d5 100644
  #include <llvm/IR/Verifier.h>
  #include <llvm/Target/TargetMachine.h>
  #include <llvm/MC/MCSubtargetInfo.h>
-

@@ -3,8 +3,8 @@
 # libretro-flycast
 #
 ################################################################################
-# Version: Commits on Aug 24, 2024
-LIBRETRO_FLYCAST_VERSION = 308d9fc1acee55a58be5a21471680d4694ba983c
+# Version: Commits on Aug 30, 2024
+LIBRETRO_FLYCAST_VERSION = c575eac89b8619d23edee506ddc7dd01ff23208d
 LIBRETRO_FLYCAST_SOURCE = flycast-$(LIBRETRO_FLYCAST_VERSION)-git4.tar.gz
 LIBRETRO_FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 LIBRETRO_FLYCAST_SITE_METHOD=git
