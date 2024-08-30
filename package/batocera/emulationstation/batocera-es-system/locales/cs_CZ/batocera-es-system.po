@@ -17233,6 +17233,18 @@ msgstr "Rychlé uložení"
 #~ "Vsync."
 
 #~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Otevřít menu Dolphin-triforce"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Načtení pozice Slot 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Uložení pozice Slot 1"
+
+#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad nahoru"
 
@@ -17327,18 +17339,6 @@ msgstr "Rychlé uložení"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rychle vpřed"
-
-#~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Otevřít menu Dolphin-triforce"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Načtení pozice Slot 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Uložení pozice Slot 1"
 
 #~ msgctxt "game_options"
 #~ msgid ""
