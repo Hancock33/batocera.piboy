@@ -59,10 +59,10 @@ Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-control
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|e6241340d292dee20406a0567262a78ff34d45f7|Jun 02, 2021
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.6|Apr 12, 2024
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|eab377242f947d8ca06468d5da1cbf2c74049950|Aug 27, 2024
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|eab377242f947d8ca06468d5da1cbf2c74049950|Aug 27, 2024
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|57a8c1b55f427a36f198da1ed140ffd84f96236f|Aug 30, 2024
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|57a8c1b55f427a36f198da1ed140ffd84f96236f|Aug 30, 2024
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|8968deb8fbfd5c96819fa22aba7bbd8890ed8113|Apr 25, 2024
-Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|c55d3b3b322c8c18920d9a711c87c7c217078f77|Aug 27, 2024
+Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|9d6e6eeac144ca640af3faca7518c604a8cdb880|Aug 30, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|f77634da81e469b103745c59857c92cbda5f013c|Aug 24, 2024
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|72ce23dd989ced9df3f49d2021208eff1f99552c|Mar 19, 2023
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v115|Jul 16, 2024
@@ -280,7 +280,7 @@ Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|
 Emulators|[ryujinxng](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1380|Aug 27, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|cde46fed2eea73b260ffdf00cac569611e9577a5|Aug 24, 2024
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
-Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|b9e012f25ce06090fcac8323524a000fb94630bb|Aug 29, 2024
+Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|1b2ad364b7c512777c4886f2c84e2ff07c6e9eb1|Aug 30, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|85591435763dede7ef111aab8070cdf2d5a7da49|Aug 10, 2024
 Emulators|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|15221d1bd7708feb1b52e468ae84c786992cf48f|Aug 30, 2024
@@ -428,7 +428,7 @@ Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e24
 Ports|[awgl](http://github.com/cyxx/rawgl)|1eeaa530c859bd6e37b3d3bd7d3136bc16afcc89|Mar 12, 2022
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|1855c8ed66b771fb62ae66bf5b1cbc9ede9cd03a|Dec 26, 2023
-Ports|[box64](http://github.com/ptitseb/box64)|7ecdced4860d12b8f484e0b222d08192be4a56eb|Aug 30, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|723b94da053b15dcea48130e820a34fc8509381e|Aug 30, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|a49c286214ca580ae1471b9ba0a73b207c2fe4bf|Aug 27, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|9e68208733f6523a9b69dd1c655238f3dfe54d44|Aug 28, 2024
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
@@ -442,7 +442,7 @@ Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|bd3c033bdf1faa4606086dcae0436531fb2e7e5c|Aug 11, 2024
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|899bbd5c1ebf84105ca0616ee933a0ee113fbc79|Jul 08, 2024
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|19c21b9ab10b0c17147c9ad951cc15279ed33f77|Jul 25, 2024
-Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|fc382054440261ef7b29338ad5f639eaab2cec16|Aug 30, 2024
+Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|e27daaa4e2eda96ce6353fbce34c562bfb52c1fb|Aug 30, 2024
 Ports|[f2bgl](http://github.com/cyxx/f2bgl)|0b84f41c7cc13a41f5a1832549485b814a52070d|Oct 18, 2020
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|ad8a2754fa99ceaf40495185ad48191cf27559e2|Mar 05, 2024
 Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|9fb917c357b20d95d597bed4d67904c29cd5c753|Apr 21, 2024
