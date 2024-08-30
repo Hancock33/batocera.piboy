@@ -19,11 +19,12 @@ LIBICONV_KODI_CONF_OPTS += \
 	--disable-shared \
 	--enable-extra-encodings
 
-define LIBICONV_KODI_INSTALL_TARGET_CMDS
+define LIBICONV_KODI_MOVE_LIBS
 	$(RM) -rf $(TARGET_DIR)/usr/lib/libiconv-kodi/include
 	cp -av  $(TARGET_DIR)/usr/lib/libiconv-kodi/*  $(TARGET_DIR)/usr/
 	$(RM) -rf $(TARGET_DIR)/usr/lib/libiconv-kodi
 endef
 
+LIBICONV_KODI_POST_INSTALL_TARGET_HOOKS += LIBICONV_KODI_MOVE_LIBS
 
 $(eval $(autotools-package))
