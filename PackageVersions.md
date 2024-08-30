@@ -305,7 +305,7 @@ Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-9.16|Aug 23, 20
 Emulators|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|8609f49768514a1ed6571747006575c2a24555e9|Aug 24, 2024
 Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-3-rc1|Aug 19, 2024
 Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.16|Aug 23, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240830|Aug 30, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240831|Aug 31, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|72b934e1e10c041ec6986f5f2fb4f143d8f6b941|Aug 13, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|8707d2aa2626063cb67b5ea20382584a0848dce7|Nov 02, 2023
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|59eed7818fab6171ec79ec687315d1053ae449e4|Aug 29, 2024
@@ -455,7 +455,7 @@ Ports|[hlsdk-xash3d-zombiex](http://github.com/FWGS/hlsdk-portable)|1557424de63c
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|4087ebb0ef996447827253e00fa14d0cb0b84836|Aug 21, 2024
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|6ef53c34dda241fa185a90261b6b3c40c09dffa3|Jun 11, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240830|Aug 30, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240831|Aug 31, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|c073acf84a333b34e3d7f6756135836835151af7|Aug 14, 2024
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|4dbaabe1be7215144eed8515d4ab011f97966938|Aug 30, 2024

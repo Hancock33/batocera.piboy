@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240831|Aug 31, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240831|Aug 31, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|57a8c1b55f427a36f198da1ed140ffd84f96236f|Aug 30, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|57a8c1b55f427a36f198da1ed140ffd84f96236f|Aug 30, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|9d6e6eeac144ca640af3faca7518c604a8cdb880|Aug 30, 2024
@@ -23,8 +25,6 @@ Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|4483cb4c2b19a4e41882dab3432
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|04eb32e92d3e5d507e65591602d6a133776d9cb3|Aug 30, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|3d272d4714214c8001065d0f6bde2f909f838f55|Aug 30, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.16.r8.gfdd50791|Aug 30, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240830|Aug 30, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240830|Aug 30, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|2799a3f2a042180582d4a2abce26fefd03ef1bb4|Aug 30, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|4e563e5cf66f0e857afaf33a227b552eb632be90|Aug 30, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|c8fe3930499245423cab2adf9a7b9cb465390ee9|Aug 30, 2024
