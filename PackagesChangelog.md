@@ -9,8 +9,9 @@ Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|15221d1bd770
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45323|Aug 30, 2024
 Libraries|[cpuinfo](http://github.com/pytorch/cpuinfo)|fa1c679da8d19e1d87f20175ae1ec10995cd3dd3|Aug 30, 2024
 Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|cc35a78908d0bde020535af0095f00020f3a8099|Aug 30, 2024
-Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|836bcfd880f21d037fe1e25458dbc99bf3029750|Aug 30, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|723b94da053b15dcea48130e820a34fc8509381e|Aug 30, 2024
+Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|f54650be32dbf40e148ea0324699f65fd8cd11b1|Aug 30, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|f5dbe2156c2bd6d2a6eee7976d2d7ccd496a58d4|Aug 30, 2024
+Ports|[bstone](http://github.com/bibendovsky/bstone)|755c8c058a5d6559dc4711d8661f871c8d1c59ac|Aug 30, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|543d3694fdad3bd3af2397ea16ef8c3e7633d057|Aug 30, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|8f15509204d7684448d44c3d6e84091d830004d2|Aug 30, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|e27daaa4e2eda96ce6353fbce34c562bfb52c1fb|Aug 30, 2024
@@ -62,7 +63,6 @@ Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|39e266c5bf66a562
 Emulators|[panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|4adc50039cc22de2ee730dc83074760d72a8f3ce|Aug 28, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-08-28|Aug 28, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|dc1479ff178b592d6817906d1eb5100cf4e9921f|Aug 28, 2024
-Ports|[bstone](http://github.com/bibendovsky/bstone)|9e68208733f6523a9b69dd1c655238f3dfe54d44|Aug 28, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.27.11-rc.2|Aug 28, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|614dc7ee7ad82d11d8dbfc22612948e1847e48c6|Aug 28, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|7d4e2ccc0143451969e0efbcb207acc690249d4c|Aug 28, 2024
