@@ -3,11 +3,10 @@
 # wine-mono
 #
 ################################################################################
-# Version: Commits on Jun 25, 2024
-# Wine Mono addon (required)
-WINE_MONO_VERSION = 9.2.0
+# Version: Commits on Aug 16, 2024
+WINE_MONO_VERSION = wine-mono-9.3.0
 WINE_MONO_SOURCE = wine-mono-$(WINE_MONO_VERSION)-x86.tar.xz
-WINE_MONO_SITE = https://dl.winehq.org/wine/wine-mono/$(WINE_MONO_VERSION)
+WINE_MONO_SITE = https://github.com/madewokherd/wine-mono/releases/download/wine-mono-$(WINE_MONO_VERSION)
 
 define WINE_MONO_EXTRACT_CMDS
 	mkdir -p $(@D)/target/usr/wine/ge-custom/share/wine/mono/
