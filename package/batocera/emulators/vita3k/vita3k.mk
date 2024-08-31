@@ -21,35 +21,45 @@ VITA3K_CONF_OPTS += -DXXH_X86DISPATCH_ALLOW_AVX=ON
 VITA3K_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
 VITA3K_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
-ifeq ($(BR2_x86_x86_64_v3),y)
-    VITA3K_CONF_OPTS += -DXXH_X86DISPATCH_ALLOW_AVX=ON
+ifeq ($(BR2_x86_64),y)
+VITA3K_FFMPEG_NAME=ffmpeg-linux-x64.zip
+else ifeq ($(BR2_aarch64),y)
+VITA3K_FFMPEG_NAME=ffmpeg-linux-arm64.zip
+endif
+
+VITA3K_FFMPEG_VER=$(shell cd "$(DL_DIR)/$(VITA3K_DL_SUBDIR)/git/external/ffmpeg" \
+	&& git rev-parse --short HEAD)
+
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_ZEN3),y)
+	VITA3K_CONF_OPTS += -DXXH_X86DISPATCH_ALLOW_AVX=ON
 else
-    VITA3K_CONF_OPTS += -DXXH_X86DISPATCH_ALLOW_AVX=OFF
+	VITA3K_CONF_OPTS += -DXXH_X86DISPATCH_ALLOW_AVX=OFF
 endif
 
 define VITA3K_GET_SUBMODULE
-    mkdir -p $(@D)/external
-    cd $(@D)/external && git clone https://github.com/Vita3K/nativefiledialog-cmake
+	mkdir -p $(@D)/external
+	cd $(@D)/external && git clone https://github.com/Vita3K/nativefiledialog-cmake
 endef
 
-define VITA3K_FFMPEG_GIT
-    mkdir $(@D)/.git/
-    cp -ruv $(DL_DIR)/$(VITA3K_DL_SUBDIR)/git/.git/* $(@D)/.git/
+define VITA3K_FFMPEG_ZIP
+	mkdir -p $(@D)/buildroot-build/external
+	$(HOST_DIR)/bin/curl -L \
+		https://github.com/Vita3K/ffmpeg-core/releases/download/${VITA3K_FFMPEG_VER}/${VITA3K_FFMPEG_NAME} \
+		-o $(@D)/buildroot-build/external/ffmpeg.zip
 endef
 
 define VITA3K_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/usr/bin/vita3k/
+	mkdir -p $(TARGET_DIR)/usr/bin/vita3k/
 	cp -R $(@D)/buildroot-build/bin/* $(TARGET_DIR)/usr/bin/vita3k/
 endef
 
 define VITA3K_INSTALL_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/vita3k/psvita.vita3k.keys \
-        $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/vita3k/psvita.vita3k.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 VITA3K_PRE_CONFIGURE_HOOKS = VITA3K_GET_SUBMODULE
-VITA3K_PRE_CONFIGURE_HOOKS += VITA3K_FFMPEG_GIT
+VITA3K_PRE_CONFIGURE_HOOKS += VITA3K_FFMPEG_ZIP
 VITA3K_POST_INSTALL_TARGET_HOOKS = VITA3K_INSTALL_EVMAPY
 
 $(eval $(cmake-package))
