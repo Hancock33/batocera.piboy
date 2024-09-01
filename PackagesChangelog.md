@@ -1,5 +1,10 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-09-01|Sept 01, 2024
+Ports|[supertux2](https://github.com/SuperTux/supertux.git)|305321c74b37eebabbb66e99d7454f8b13a95afa|Sept 01, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|3c93054f5b35e397b0a2e342e18e5c1856cfdf5d|Sept 01, 2024
+Ports|[doomretro](http://github.com/bradharding/doomretro)|971370af08031d45e6476cc679ae8758333584a6|Sept 01, 2024
+Emulators|[libretro-stella](http://github.com/stella-emu/stella)|b1e297153b4e7013a28763253c425a6f4bf31f48|Sept 01, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|39183d3d251a5098781f1543878578baf85dbee5|Aug 31, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|39183d3d251a5098781f1543878578baf85dbee5|Aug 31, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|7e413210fbb32b986fb107b39d16f8f5eb15f67b|Aug 31, 2024
@@ -7,7 +12,6 @@ Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|a293abbfd053855b
 Emulators|[hatari](http://github.com/hatari/hatari)|e4636b94760326f6ed21356c2c40bc9616b39e1a|Aug 31, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.120|Aug 31, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|e56164f1e321fe2873c246a268af8ce1dc9281bd|Aug 31, 2024
-Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-08-31|Aug 31, 2024
 Emulators|[ryujinxng](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1382|Aug 31, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|f7060c028d18f1baed537ba454a17bb99d62c93a|Aug 31, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45326|Aug 31, 2024
@@ -16,13 +20,9 @@ Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|e6448b04e5bfdabffbd650e1ccc53b82cd8
 Ports|[box64](http://github.com/ptitseb/box64)|cce9e280ce2ab54eeba48729c51a88e2d2c5e770|Aug 31, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|825d2cfc86966c1395c0dd7738b7d66c1fe1b539|Aug 31, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|8f4138c5aec918c7080e822b696372d731598122|Aug 31, 2024
-Ports|[supertux2](https://github.com/SuperTux/supertux.git)|c0be88d91dae5d24279a56b87d4a9f60e0ee571e|Aug 31, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|73b456e30754c082636ede597ee5b4c8dc090012|Aug 31, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240831|Aug 31, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240831|Aug 31, 2024
-Ports|[doomretro](http://github.com/bradharding/doomretro)|307322d7cc3c6827c6fb78c52b69cc75197cf3f9|Aug 31, 2024
 Emulators|[libretro-mame](http://github.com/sonninnos/mame)|8b9b8f5f5b47161327d93522318c81fba2087b2f|Aug 31, 2024
-Emulators|[libretro-stella](http://github.com/stella-emu/stella)|1dd364bc8a8c8ad072b3ca74ed8ebee875e9805b|Aug 31, 2024
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|d4805065b3c0be06f8336f228c6d2b74716f6b9e|Aug 31, 2024
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|e3576377f820e007e3efb8f7de3022772a07b54a|Aug 31, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|9691fe962228ab0c08f3a4801e6fa0a3c47218ef|Aug 30, 2024
