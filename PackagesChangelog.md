@@ -3,6 +3,8 @@
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-09-01|Sept 01, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|305321c74b37eebabbb66e99d7454f8b13a95afa|Sept 01, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|3c93054f5b35e397b0a2e342e18e5c1856cfdf5d|Sept 01, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240901|Sept 01, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240901|Sept 01, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|971370af08031d45e6476cc679ae8758333584a6|Sept 01, 2024
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|b1e297153b4e7013a28763253c425a6f4bf31f48|Sept 01, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|39183d3d251a5098781f1543878578baf85dbee5|Aug 31, 2024
@@ -20,8 +22,6 @@ Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|e6448b04e5bfdabffbd650e1ccc53b82cd8
 Ports|[box64](http://github.com/ptitseb/box64)|cce9e280ce2ab54eeba48729c51a88e2d2c5e770|Aug 31, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|825d2cfc86966c1395c0dd7738b7d66c1fe1b539|Aug 31, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|8f4138c5aec918c7080e822b696372d731598122|Aug 31, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240831|Aug 31, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240831|Aug 31, 2024
 Emulators|[libretro-mame](http://github.com/sonninnos/mame)|8b9b8f5f5b47161327d93522318c81fba2087b2f|Aug 31, 2024
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|d4805065b3c0be06f8336f228c6d2b74716f6b9e|Aug 31, 2024
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|e3576377f820e007e3efb8f7de3022772a07b54a|Aug 31, 2024
