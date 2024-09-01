@@ -3,8 +3,8 @@
 # box64
 #
 ################################################################################
-# Version: Commits on Aug 30, 2024
-BOX64_VERSION = f5dbe2156c2bd6d2a6eee7976d2d7ccd496a58d4
+# Version: Commits on Sept 01, 2024
+BOX64_VERSION = 27ed10939430de6a1aa315082fa5b1f1cb546cd5
 BOX64_SITE = $(call github,ptitseb,box64,$(BOX64_VERSION))
 BOX64_SUPPORTS_IN_SOURCE_BUILD = NO
 
@@ -12,7 +12,7 @@ BOX64_DEPENDENCIES = sdl2 sdl2_image zlib libzip freetype bzip2 libpng openal
 BOX64_LICENSE = GPL-3.0
 
 BOX64_CONF_OPTS += -DRPI4ARM64=1
-BOX64_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=""
+BOX64_CONF_OPTS += -DWITH_MOLD=ON
 BOX64_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
 BOX64_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 BOX64_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_OPTIMIZATION)"

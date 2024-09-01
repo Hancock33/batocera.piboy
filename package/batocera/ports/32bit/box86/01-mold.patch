@@ -1,0 +1,30 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index af7f768f..9cb2968f 100755
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -36,6 +36,7 @@ option(NOGETCLOCK "Set to ON to avoid using clock_gettime with CLOCK_MONOTONIC_C
+ option(NOGIT "Set to ON if not building from a git clone repo (like when building from a zip download from github)" ${NOGIT})
+ option(NO_LIB_INSTALL "Set ON to not install a few x86 libs that are used by many program" ${NO_LIB_INSTALL})
+ option(NO_CONF_INSTALL "Set ON to not install config files" ${NO_CONF_INSTALL})
++option(WITH_MOLD "Set to ON to use with mold" ${WITH_MOLD})
+ 
+ if(PANDORA OR PYRA OR RPI2 OR RPI3 OR RPI4 OR GAMESHELL OR ODROIDXU4 OR GOA_CLONE OR RK3288 OR RK3399 OR ODROIDN2 OR TEGRAX1 OR TEGRAX1ARM32 OR TEGRA_T194 OR TEGRA_T234 OR RPI3ARM64 OR RPI4ARM64 OR PHYTIUM OR SD845 OR SD888 OR ADLINK OR A64 OR LX2160A OR ARM64 OR RK3588)
+     set(LD80BITS OFF CACHE BOOL "")
+@@ -758,7 +759,7 @@ endif()
+ 
+ if(${CMAKE_VERSION} VERSION_LESS "3.13")
+     if(NOT NOLOADADDR)
+-        if(CMAKE_C_COMPILER_ID STREQUAL "Clang")
++        if(CMAKE_C_COMPILER_ID STREQUAL "Clang" OR WITH_MOLD)
+             set_target_properties(${BOX86} PROPERTIES LINK_FLAGS "-rdynamic -Wl,--image-base,${BOX86_ELF_ADDRESS}")
+         else()
+             set_target_properties(${BOX86} PROPERTIES LINK_FLAGS "-rdynamic -Wl,-Ttext-segment,${BOX86_ELF_ADDRESS}")
+@@ -769,7 +770,7 @@ if(${CMAKE_VERSION} VERSION_LESS "3.13")
+ else()
+     target_link_options(${BOX86} PUBLIC -rdynamic)
+     if(NOT NOLOADADDR)
+-        if(CMAKE_C_COMPILER_ID STREQUAL "Clang")
++        if(CMAKE_C_COMPILER_ID STREQUAL "Clang" OR WITH_MOLD)
+             target_link_options(${BOX86} PUBLIC -Wl,--image-base,${BOX86_ELF_ADDRESS})
+         else()
+             target_link_options(${BOX86} PUBLIC -Wl,-Ttext-segment,${BOX86_ELF_ADDRESS})

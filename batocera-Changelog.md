@@ -7,6 +7,7 @@
 - Add initial support for the OrangePi-5-Pro
 - Khadis VIM4, Vulkan support has now been added
 - Added HyperX and Machenike Xbox360 compatible controllers
+- Support for Argon One v3 case for RPi5
 ### Added
 - Exit game with light gun (hold `TRIGGER`, `ACTION` and `START` buttons for 2 seconds)
 - Enhanced Bluetooth AD2P codec support for LDAC & aptX supported headphones or speakers
@@ -75,10 +76,10 @@
 - RPCS3 to 0.0.32-16843
 - Sonic Mania to Jul 21, 2024 build
 - The Force Engine to Aug 19, 2024 build
-- Vita3k to Jul 27 build
+- Vita3k to August 25, 2024 build
 - Xemu to v0.7.131
 - Xenia to v1.0.2817
-- Xenia Canary to August 18, 2024 build
+- Xenia Canary to August 31, 2024 build
 ### System
 - Nvidia Driver to 560.35.03 (Open kernel modules)
 - Nvidia Legacy Driver to 470.256.02
@@ -103,6 +104,8 @@
 - WF-Recorder to 14th of August build
 - Switchres to 2.2.1
 - Mesa3D to 24.2.1
+- Buildroot to the 2024.05.2 release base
+- GStreamer codecs to 1.24.7
 
 # 2024/08/11 - batocera.linux 40 - Swallowtail
 ### Special Notes

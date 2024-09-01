@@ -411,7 +411,7 @@ index 25feab188dfe..0243abb0e491 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index dcf2f5fb34cf..a58c18b72c40 100644
+index 02ffc5173f49..a1ab2bc88f16 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -157,6 +157,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_351_DMUB);
@@ -597,10 +597,10 @@ index 3860a8ce1e2d..c00d7e26bdfd 100644
  		.matches = {
  		  DMI_EXACT_MATCH(DMI_SYS_VENDOR, "VIOS"),
 diff --git a/drivers/hid/Kconfig b/drivers/hid/Kconfig
-index 35ef5d4ef068..58ec19eaa6fd 100644
+index 08446c89eff6..ea0dbe9111c4 100644
 --- a/drivers/hid/Kconfig
 +++ b/drivers/hid/Kconfig
-@@ -185,6 +185,15 @@ config HID_ASUS
+@@ -164,6 +164,15 @@ config HID_ASUS
  	- GL553V series
  	- GL753V series
  
@@ -617,11 +617,11 @@ index 35ef5d4ef068..58ec19eaa6fd 100644
  	tristate "Aureal"
  	help
 diff --git a/drivers/hid/Makefile b/drivers/hid/Makefile
-index fecec1d61393..092eed6555b7 100644
+index ce71b53ea6c5..98b346d8f783 100644
 --- a/drivers/hid/Makefile
 +++ b/drivers/hid/Makefile
-@@ -33,6 +33,7 @@ obj-$(CONFIG_HID_APPLETB_BL)	+= hid-appletb-bl.o
- obj-$(CONFIG_HID_APPLETB_KBD)	+= hid-appletb-kbd.o
+@@ -31,6 +31,7 @@ obj-$(CONFIG_HID_APPLE)		+= hid-apple.o
+ obj-$(CONFIG_HID_APPLEIR)	+= hid-appleir.o
  obj-$(CONFIG_HID_CREATIVE_SB0540)	+= hid-creative-sb0540.o
  obj-$(CONFIG_HID_ASUS)		+= hid-asus.o
 +obj-$(CONFIG_HID_ASUS_ALLY)	+= hid-asus-ally.o
@@ -4183,7 +4183,7 @@ index 000000000000..a60fa7db9141
 +MODULE_DESCRIPTION("Steam Deck EC MFD core driver");
 +MODULE_LICENSE("GPL");
 diff --git a/drivers/pci/quirks.c b/drivers/pci/quirks.c
-index 192d0557fb05..aaa5ddad300b 100644
+index 568410e64ce6..4b37e7042b6f 100644
 --- a/drivers/pci/quirks.c
 +++ b/drivers/pci/quirks.c
 @@ -697,7 +697,7 @@ DECLARE_PCI_FIXUP_FINAL(PCI_VENDOR_ID_ATI,	PCI_DEVICE_ID_ATI_RS100,   quirk_ati_

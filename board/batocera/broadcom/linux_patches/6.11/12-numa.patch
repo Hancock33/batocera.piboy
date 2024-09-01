@@ -1,0 +1,448 @@
+diff --git a/arch/arm/boot/dts/broadcom/bcm2711-rpi-4-b.dts b/arch/arm/boot/dts/broadcom/bcm2711-rpi-4-b.dts
+index 3906f7cc25af..a4aae12775dc 100644
+--- a/arch/arm/boot/dts/broadcom/bcm2711-rpi-4-b.dts
++++ b/arch/arm/boot/dts/broadcom/bcm2711-rpi-4-b.dts
+@@ -300,10 +300,6 @@ &phy1 {
+ #include "bcm283x-rpi-i2c0mux_0_44.dtsi"
+ 
+ / {
+-	chosen {
+-		bootargs = "coherent_pool=1M 8250.nr_uarts=1 snd_bcm2835.enable_headphones=0";
+-	};
+-
+ 	/delete-node/ wifi-pwrseq;
+ };
+ 
+diff --git a/arch/arm/boot/dts/broadcom/bcm2711-rpi-cm4.dts b/arch/arm/boot/dts/broadcom/bcm2711-rpi-cm4.dts
+index d876f3d8f0bd..668e31d67cf8 100644
+--- a/arch/arm/boot/dts/broadcom/bcm2711-rpi-cm4.dts
++++ b/arch/arm/boot/dts/broadcom/bcm2711-rpi-cm4.dts
+@@ -274,10 +274,6 @@ soc {
+ #include "bcm283x-rpi-i2c0mux_0_44.dtsi"
+ 
+ / {
+-	chosen {
+-		bootargs = "coherent_pool=1M 8250.nr_uarts=1 snd_bcm2835.enable_headphones=0";
+-	};
+-
+ 	/delete-node/ wifi-pwrseq;
+ };
+ 
+diff --git a/arch/arm/boot/dts/broadcom/bcm2711-rpi-cm4s.dts b/arch/arm/boot/dts/broadcom/bcm2711-rpi-cm4s.dts
+index 0a0dfcb733ec..c722352000de 100644
+--- a/arch/arm/boot/dts/broadcom/bcm2711-rpi-cm4s.dts
++++ b/arch/arm/boot/dts/broadcom/bcm2711-rpi-cm4s.dts
+@@ -148,7 +148,7 @@ soc {
+ 
+ / {
+ 	chosen {
+-		bootargs = "coherent_pool=1M snd_bcm2835.enable_headphones=0";
++		bootargs = "coherent_pool=1M snd_bcm2835.enable_headphones=0 numa=fake=8 numa_policy=interleave";
+ 	};
+ 
+ 	aliases {
+diff --git a/arch/arm/boot/dts/broadcom/bcm2711-rpi-ds.dtsi b/arch/arm/boot/dts/broadcom/bcm2711-rpi-ds.dtsi
+index d44bf7bcc777..711126334f92 100644
+--- a/arch/arm/boot/dts/broadcom/bcm2711-rpi-ds.dtsi
++++ b/arch/arm/boot/dts/broadcom/bcm2711-rpi-ds.dtsi
+@@ -3,6 +3,7 @@
+ 
+ / {
+ 	chosen: chosen {
++		bootargs = "coherent_pool=1M 8250.nr_uarts=1 snd_bcm2835.enable_headphones=0 numa=fake=8 numa_policy=interleave";
+ 	};
+ 
+ 	__overrides__ {
+diff --git a/arch/arm64/Kconfig b/arch/arm64/Kconfig
+index 2391e06e5e75..8e699d3dd02b 100644
+--- a/arch/arm64/Kconfig
++++ b/arch/arm64/Kconfig
+@@ -1503,6 +1503,16 @@ config NODES_SHIFT
+ 	  Specify the maximum number of NUMA Nodes available on the target
+ 	  system.  Increases memory reserved to accommodate various tables.
+ 
++config NUMA_EMULATION
++	bool "NUMA emulation"
++	depends on NUMA
++	select GENERIC_ARCH_NUMA_EMULATION
++	help
++	  Enable NUMA emulation support. A flat machine will be split into
++	  virtual nodes when booted with "numa=fake=N", where N is the number
++	  of nodes, the system RAM will be split into N equal chunks, and
++	  assigned to each node.
++
+ source "kernel/Kconfig.hz"
+ 
+ config ARCH_SPARSEMEM_ENABLE
+diff --git a/arch/arm64/boot/dts/broadcom/bcm2712-rpi-5-b.dts b/arch/arm64/boot/dts/broadcom/bcm2712-rpi-5-b.dts
+index 757de016cdb7..2c0dc9ba4f9c 100644
+--- a/arch/arm64/boot/dts/broadcom/bcm2712-rpi-5-b.dts
++++ b/arch/arm64/boot/dts/broadcom/bcm2712-rpi-5-b.dts
+@@ -430,11 +430,6 @@ &i2c_rp1boot {
+ };
+ 
+ / {
+-	chosen: chosen {
+-		bootargs = "reboot=w coherent_pool=1M 8250.nr_uarts=1 pci=pcie_bus_safe";
+-		stdout-path = "serial10:115200n8";
+-	};
+-
+ 	fan: cooling_fan {
+ 		status = "disabled";
+ 		compatible = "pwm-fan";
+diff --git a/arch/arm64/boot/dts/broadcom/bcm2712-rpi-cm5.dtsi b/arch/arm64/boot/dts/broadcom/bcm2712-rpi-cm5.dtsi
+index 864fc5b95a66..905d8b20a7c6 100644
+--- a/arch/arm64/boot/dts/broadcom/bcm2712-rpi-cm5.dtsi
++++ b/arch/arm64/boot/dts/broadcom/bcm2712-rpi-cm5.dtsi
+@@ -420,11 +420,6 @@ &i2c_rp1boot {
+ };
+ 
+ / {
+-	chosen: chosen {
+-		bootargs = "reboot=w coherent_pool=1M 8250.nr_uarts=1 pci=pcie_bus_safe";
+-		stdout-path = "serial10:115200n8";
+-	};
+-
+ 	fan: cooling_fan {
+ 		status = "disabled";
+ 		compatible = "pwm-fan";
+diff --git a/arch/arm64/boot/dts/broadcom/bcm2712-rpi.dtsi b/arch/arm64/boot/dts/broadcom/bcm2712-rpi.dtsi
+index ca9833da402d..2aa9e9a1d11f 100644
+--- a/arch/arm64/boot/dts/broadcom/bcm2712-rpi.dtsi
++++ b/arch/arm64/boot/dts/broadcom/bcm2712-rpi.dtsi
+@@ -98,6 +98,11 @@ vdd_5v0_reg: fixedregulator_5v0 {
+ };
+ 
+ / {
++	chosen: chosen {
++		bootargs = "reboot=w coherent_pool=1M 8250.nr_uarts=1 pci=pcie_bus_safe system_heap.max_order=0 numa=fake=8 numa_policy=interleave iommu_dma_numa_policy=interleave";
++		stdout-path = "serial10:115200n8";
++	};
++
+ 	aliases: aliases {
+ 		blconfig = &blconfig;
+ 		blpubkey = &blpubkey;
+diff --git a/arch/arm64/configs/bcm2711_defconfig b/arch/arm64/configs/bcm2711_defconfig
+index e37c9fd9a777..c848bf4f8105 100644
+--- a/arch/arm64/configs/bcm2711_defconfig
++++ b/arch/arm64/configs/bcm2711_defconfig
+@@ -48,6 +48,7 @@ CONFIG_ARM64_ERRATUM_2441009=y
+ # CONFIG_CAVIUM_ERRATUM_27456 is not set
+ CONFIG_ARM64_VA_BITS_39=y
+ CONFIG_NR_CPUS=4
++CONFIG_NUMA=y
+ CONFIG_COMPAT=y
+ CONFIG_ARMV8_DEPRECATED=y
+ CONFIG_SWP_EMULATION=y
+@@ -1694,3 +1695,4 @@ CONFIG_SCHED_TRACER=y
+ CONFIG_BLK_DEV_IO_TRACE=y
+ # CONFIG_UPROBE_EVENTS is not set
+ # CONFIG_STRICT_DEVMEM is not set
++CONFIG_NUMA_EMULATION=y
+diff --git a/arch/arm64/configs/bcm2712_defconfig b/arch/arm64/configs/bcm2712_defconfig
+index 6e20c60c8173..2624846784ad 100644
+--- a/arch/arm64/configs/bcm2712_defconfig
++++ b/arch/arm64/configs/bcm2712_defconfig
+@@ -49,6 +49,7 @@ CONFIG_ARM64_ERRATUM_2441009=y
+ CONFIG_ARM64_16K_PAGES=y
+ CONFIG_ARM64_VA_BITS_47=y
+ CONFIG_NR_CPUS=4
++CONFIG_NUMA=y
+ CONFIG_COMPAT=y
+ CONFIG_ARMV8_DEPRECATED=y
+ CONFIG_SWP_EMULATION=y
+@@ -1697,3 +1698,4 @@ CONFIG_SCHED_TRACER=y
+ CONFIG_BLK_DEV_IO_TRACE=y
+ # CONFIG_UPROBE_EVENTS is not set
+ # CONFIG_STRICT_DEVMEM is not set
++CONFIG_NUMA_EMULATION=y
+diff --git a/drivers/base/Kconfig b/drivers/base/Kconfig
+index 2b8fd6bb7da0..1f60cd4dd057 100644
+--- a/drivers/base/Kconfig
++++ b/drivers/base/Kconfig
+@@ -230,6 +230,13 @@ config GENERIC_ARCH_NUMA
+ 	  Enable support for generic NUMA implementation. Currently, RISC-V
+ 	  and ARM64 use it.
+ 
++config GENERIC_ARCH_NUMA_EMULATION
++	bool
++	depends on GENERIC_ARCH_NUMA
++	help
++	  Enable NUMA emulation. Note that NUMA emulation will only be used if
++	  the machine has no NUMA node.
++
+ config FW_DEVLINK_SYNC_STATE_TIMEOUT
+ 	bool "sync_state() behavior defaults to timeout instead of strict"
+ 	help
+diff --git a/drivers/base/Makefile b/drivers/base/Makefile
+index 7fb21768ca36..858498e28431 100644
+--- a/drivers/base/Makefile
++++ b/drivers/base/Makefile
+@@ -26,6 +26,7 @@ obj-$(CONFIG_DEV_COREDUMP) += devcoredump.o
+ obj-$(CONFIG_GENERIC_MSI_IRQ) += platform-msi.o
+ obj-$(CONFIG_GENERIC_ARCH_TOPOLOGY) += arch_topology.o
+ obj-$(CONFIG_GENERIC_ARCH_NUMA) += arch_numa.o
++obj-$(CONFIG_GENERIC_ARCH_NUMA_EMULATION) += numa_emulation.o
+ obj-$(CONFIG_ACPI) += physical_location.o
+ 
+ obj-y			+= test/
+diff --git a/drivers/base/arch_numa.c b/drivers/base/arch_numa.c
+index 555aee3ee8e7..8bf89885a2a4 100644
+--- a/drivers/base/arch_numa.c
++++ b/drivers/base/arch_numa.c
+@@ -15,6 +15,8 @@
+ 
+ #include <asm/sections.h>
+ 
++#include "numa_emulation.h"
++
+ struct pglist_data *node_data[MAX_NUMNODES] __read_mostly;
+ EXPORT_SYMBOL(node_data);
+ nodemask_t numa_nodes_parsed __initdata;
+@@ -30,6 +32,8 @@ static __init int numa_parse_early_param(char *opt)
+ 		return -EINVAL;
+ 	if (str_has_prefix(opt, "off"))
+ 		numa_off = true;
++	if (str_has_prefix(opt, "fake="))
++		return numa_emu_cmdline(opt + 5);
+ 
+ 	return 0;
+ }
+@@ -471,6 +475,8 @@ void __init arch_numa_init(void)
+ 			return;
+ 		if (acpi_disabled && !numa_init(of_numa_init))
+ 			return;
++		if (!numa_init(numa_emu_init))
++			return;
+ 	}
+ 
+ 	numa_init(dummy_numa_init);
+diff --git a/drivers/base/numa_emulation.c b/drivers/base/numa_emulation.c
+new file mode 100644
+index 000000000000..df652fa8351b
+--- /dev/null
++++ b/drivers/base/numa_emulation.c
+@@ -0,0 +1,67 @@
++// SPDX-License-Identifier: GPL-2.0-only
++/*
++ * Simple NUMA emulation.
++ *
++ * Copyright © 2024 Raspberry Pi Ltd
++ *
++ * Author: Maíra Canal <mcanal@igalia.com>
++ * Author: Tvrtko Ursulin <tursulin@igalia.com>
++ */
++#include <linux/memblock.h>
++
++#include "numa_emulation.h"
++
++static unsigned int emu_nodes;
++
++int __init numa_emu_cmdline(char *str)
++{
++	int ret;
++
++	ret = kstrtouint(str, 10, &emu_nodes);
++	if (ret)
++		return ret;
++
++	if (emu_nodes > MAX_NUMNODES) {
++		pr_notice("numa=fake=%u too large, reducing to %u\n",
++			  emu_nodes, MAX_NUMNODES);
++		emu_nodes = MAX_NUMNODES;
++	}
++
++	return 0;
++}
++
++int __init numa_emu_init(void)
++{
++	phys_addr_t start, end;
++	unsigned long size;
++	unsigned int i;
++	int ret;
++
++	if (!emu_nodes)
++		return -EINVAL;
++
++	start = memblock_start_of_DRAM();
++	end = memblock_end_of_DRAM() - 1;
++
++	size = DIV_ROUND_DOWN_ULL(end - start + 1, emu_nodes);
++	size = PAGE_ALIGN_DOWN(size);
++
++	for (i = 0; i < emu_nodes; i++) {
++		u64 s, e;
++
++		s = start + i * size;
++		e = s + size - 1;
++
++		if (i == (emu_nodes - 1) && e != end)
++			e = end;
++
++		pr_info("Faking a node at [mem %pap-%pap]\n", &s, &e);
++		ret = numa_add_memblk(i, s, e + 1);
++		if (ret) {
++			pr_err("Failed to add fake NUMA node %d!\n", i);
++			break;
++		}
++	}
++
++	return ret;
++}
+diff --git a/drivers/base/numa_emulation.h b/drivers/base/numa_emulation.h
+new file mode 100644
+index 000000000000..62b38215a2f0
+--- /dev/null
++++ b/drivers/base/numa_emulation.h
+@@ -0,0 +1,21 @@
++/* SPDX-License-Identifier: GPL-2.0-only */
++/*
++ * NUMA emulation header
++ *
++ * Copyright © 2024 Raspberry Pi Ltd
++ */
++
++#ifdef CONFIG_GENERIC_ARCH_NUMA_EMULATION
++int numa_emu_cmdline(char *str);
++int __init numa_emu_init(void);
++#else
++static inline int numa_emu_cmdline(char *str)
++{
++	return -EINVAL;
++}
++
++static int __init numa_emu_init(void)
++{
++	return -EOPNOTSUPP;
++}
++#endif /* CONFIG_NUMA_EMU */
+diff --git a/drivers/dma-buf/heaps/system_heap.c b/drivers/dma-buf/heaps/system_heap.c
+index d78cdb9d01e5..7518268e8824 100644
+--- a/drivers/dma-buf/heaps/system_heap.c
++++ b/drivers/dma-buf/heaps/system_heap.c
+@@ -54,6 +54,11 @@ static gfp_t order_flags[] = {HIGH_ORDER_GFP, HIGH_ORDER_GFP, LOW_ORDER_GFP};
+ static const unsigned int orders[] = {8, 4, 0};
+ #define NUM_ORDERS ARRAY_SIZE(orders)
+ 
++static unsigned int module_max_order = orders[0];
++
++module_param_named(max_order, module_max_order, uint, 0400);
++MODULE_PARM_DESC(max_order, "Maximum allocation order override.");
++
+ static struct sg_table *dup_sg_table(struct sg_table *table)
+ {
+ 	struct sg_table *new_table;
+@@ -339,7 +344,7 @@ static struct dma_buf *system_heap_allocate(struct dma_heap *heap,
+ 	struct system_heap_buffer *buffer;
+ 	DEFINE_DMA_BUF_EXPORT_INFO(exp_info);
+ 	unsigned long size_remaining = len;
+-	unsigned int max_order = orders[0];
++	unsigned int max_order = module_max_order;
+ 	struct dma_buf *dmabuf;
+ 	struct sg_table *table;
+ 	struct scatterlist *sg;
+@@ -433,6 +438,9 @@ static int system_heap_create(void)
+ 	if (IS_ERR(sys_heap))
+ 		return PTR_ERR(sys_heap);
+ 
++	if (module_max_order > orders[0])
++		module_max_order = orders[0];
++
+ 	return 0;
+ }
+ module_init(system_heap_create);
+diff --git a/mm/mempolicy.c b/mm/mempolicy.c
+index b858e22b259d..b92210a2c19a 100644
+--- a/mm/mempolicy.c
++++ b/mm/mempolicy.c
+@@ -3140,7 +3140,9 @@ void __init numa_policy_init(void)
+ /* Reset policy of current process to default */
+ void numa_default_policy(void)
+ {
+-	do_set_mempolicy(MPOL_DEFAULT, 0, NULL);
++	struct mempolicy *pol = &default_policy;
++
++	do_set_mempolicy(pol->mode, pol->flags, &pol->nodes);
+ }
+ 
+ /*
+@@ -3157,7 +3159,6 @@ static const char * const policy_modes[] =
+ 	[MPOL_PREFERRED_MANY]  = "prefer (many)",
+ };
+ 
+-#ifdef CONFIG_TMPFS
+ /**
+  * mpol_parse_str - parse string to mempolicy, for tmpfs mpol mount option.
+  * @str:  string containing mempolicy to parse
+@@ -3170,13 +3171,18 @@ static const char * const policy_modes[] =
+  */
+ int mpol_parse_str(char *str, struct mempolicy **mpol)
+ {
+-	struct mempolicy *new = NULL;
++	struct mempolicy *new;
+ 	unsigned short mode_flags;
+ 	nodemask_t nodes;
+ 	char *nodelist = strchr(str, ':');
+ 	char *flags = strchr(str, '=');
+ 	int err = 1, mode;
+ 
++	if (*mpol)
++		new = *mpol;
++	else
++		new = NULL;
++
+ 	if (flags)
+ 		*flags++ = '\0';	/* terminate mode string */
+ 
+@@ -3256,9 +3262,16 @@ int mpol_parse_str(char *str, struct mempolicy **mpol)
+ 			goto out;
+ 	}
+ 
+-	new = mpol_new(mode, mode_flags, &nodes);
+-	if (IS_ERR(new))
+-		goto out;
++	if (!new) {
++		new = mpol_new(mode, mode_flags, &nodes);
++		if (IS_ERR(new))
++			goto out;
++	} else {
++		atomic_set(&new->refcnt, 1);
++		new->mode = mode;
++		new->flags = mode_flags;
++		new->home_node = NUMA_NO_NODE;
++	}
+ 
+ 	/*
+ 	 * Save nodes for mpol_to_str() to show the tmpfs mount options
+@@ -3291,7 +3304,29 @@ int mpol_parse_str(char *str, struct mempolicy **mpol)
+ 		*mpol = new;
+ 	return err;
+ }
+-#endif /* CONFIG_TMPFS */
++
++static int __init setup_numapolicy(char *str)
++{
++	struct mempolicy pol = { }, *ppol = &pol;
++	char buf[128];
++	int ret;
++
++	if (str)
++		ret = mpol_parse_str(str, &ppol);
++	else
++		ret = -EINVAL;
++
++	if (!ret) {
++		default_policy = pol;
++		mpol_to_str(buf, sizeof(buf), &pol);
++		pr_info("NUMA default policy overridden to '%s'\n", buf);
++	} else {
++		pr_warn("Unable to parse numa_policy=\n");
++	}
++
++	return ret == 0;
++}
++__setup("numa_policy=", setup_numapolicy);
+ 
+ /**
+  * mpol_to_str - format a mempolicy structure for printing
