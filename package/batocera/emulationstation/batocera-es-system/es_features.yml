@@ -7411,6 +7411,7 @@ libretro:
     emuscv:
       shared: [autosave, rewind]
     uzem:
+      features: [cheevos]
       shared: [autosave, rewind]
     zmachine:
       shared: [autosave]
