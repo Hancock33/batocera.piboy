@@ -17306,18 +17306,6 @@ msgstr "Hızlı Kaydet"
 #~ msgstr "Vsync kapalıyken istediğiniz maksimum yenileme hızını ayarlayın."
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Dolphin-triforce menü aç"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Slot 1 Durumunu Yükle"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Slot 1 Durumunu Kaydet"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad Yukarı"
 
@@ -17412,6 +17400,18 @@ msgstr "Hızlı Kaydet"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Hızlı İleri"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Dolphin-triforce menü aç"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Slot 1 Durumunu Yükle"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Slot 1 Durumunu Kaydet"
 
 #~ msgctxt "game_options"
 #~ msgid ""

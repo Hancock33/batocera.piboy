@@ -17188,18 +17188,6 @@ msgstr "Gordetze Azkarra"
 #~ "maximoa."
 
 #~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Ireki Dolphin-triforce-aren menua"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Kargatu 1 Egoera Zirrikitua"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Gorde 1 Egoera Zirrikitua"
-
-#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad Gora"
 
@@ -17294,6 +17282,18 @@ msgstr "Gordetze Azkarra"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Aurrera Azkar"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Ireki Dolphin-triforce-aren menua"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Kargatu 1 Egoera Zirrikitua"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Gorde 1 Egoera Zirrikitua"
 
 #~ msgctxt "game_options"
 #~ msgid ""
