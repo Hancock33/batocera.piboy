@@ -17,6 +17,7 @@
 - Display reflection for x86_64 boards (display.reflection=x or y or xy in batocera.conf to enable it)
 - Emulationstation now supports savestates for standalones (dolphin, pcsx2, mupen, ppsspp)
 - Add Raspberry Pi patches for hardware accelerated HEVC decoding (RPi4 & RPi5 boards)
+- Nvidia Encoding support with `batocera-record` for Production driver systems
 ### Fixed
 - Steam loading on a NAS drive
 - ScummVM forcing English which can prevent some non-english games from starting
@@ -57,7 +58,7 @@
   - Libretro-MrBoom to v5.5
   - Libretro-Mupen64plus-Next to July 19, 2024 build
   - Libretro-NeoCD to June 22 build
-- Amiberry to v5.7.3
+- Amiberry to v5.7.4
 - BigPEmu to v115
 - C-Dogs SDL to 2.1.0
 - Cemu to v2.1
