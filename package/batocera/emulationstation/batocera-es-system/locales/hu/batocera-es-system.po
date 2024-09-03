@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-05-10 17:18+0200\n"
+"PO-Revision-Date: 2024-09-02 22:23+0200\n"
 "Last-Translator: Szoldán Albert\n"
 "Language-Team: \n"
 "Language: hu\n"
@@ -25,7 +25,7 @@ msgstr ""
 #. TRANSLATION: shared, shared, shared, shared
 msgctxt "game_options"
 msgid "POWER OPTIONS"
-msgstr ""
+msgstr "TELJESÍTMÉNY OPCIÓK"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -434,12 +434,12 @@ msgstr ""
 #. TRANSLATION: shared, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, dolphin, dolphin
 msgctxt "game_options"
 msgid "LIGHT GUNS"
-msgstr ""
+msgstr "FÉNYPISZTOLYOK"
 
 #. TRANSLATION: shared, shared, shared, shared, shared, ...
 msgctxt "game_options"
 msgid "CONTROLS"
-msgstr ""
+msgstr "VEZÉRLŐK"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -1722,7 +1722,7 @@ msgstr "Felülbírálja az emulált konzol nyelvi módját."
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Use Host"
-msgstr ""
+msgstr "Host használata"
 
 #. TRANSLATION: libretro/melondsds, libretro/dolphin, libretro/flycast, libretro/kronos, cemu, ...
 msgctxt "game_options"
@@ -1902,157 +1902,157 @@ msgstr "SZÜLETÉSI NAP"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "1st"
-msgstr ""
+msgstr "1."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "2nd"
-msgstr ""
+msgstr "2."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "3rd"
-msgstr ""
+msgstr "3."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "4th"
-msgstr ""
+msgstr "4."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "5th"
-msgstr ""
+msgstr "5."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "6th"
-msgstr ""
+msgstr "6."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "7th"
-msgstr ""
+msgstr "7."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "8th"
-msgstr ""
+msgstr "8."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "9th"
-msgstr ""
+msgstr "9."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "10th"
-msgstr ""
+msgstr "10"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "11th"
-msgstr ""
+msgstr "11."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "12th"
-msgstr ""
+msgstr "12."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "13th"
-msgstr ""
+msgstr "13."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "14th"
-msgstr ""
+msgstr "14."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "15th"
-msgstr ""
+msgstr "15."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "16th"
-msgstr ""
+msgstr "16."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "17th"
-msgstr ""
+msgstr "17."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "18th"
-msgstr ""
+msgstr "18."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "19th"
-msgstr ""
+msgstr "19."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "20th"
-msgstr ""
+msgstr "20."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "21st"
-msgstr ""
+msgstr "21."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "22nd"
-msgstr ""
+msgstr "22."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "23rd"
-msgstr ""
+msgstr "23."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "24th"
-msgstr ""
+msgstr "24."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "25th"
-msgstr ""
+msgstr "25."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "26th"
-msgstr ""
+msgstr "26."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "27th"
-msgstr ""
+msgstr "27."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "28th"
-msgstr ""
+msgstr "28."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "29th"
-msgstr ""
+msgstr "29."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "30th"
-msgstr ""
+msgstr "30."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "31st"
-msgstr ""
+msgstr "31."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -2928,12 +2928,12 @@ msgstr "SZOFTVERES RENDERELÉS HASZNÁLATA"
 #. TRANSLATION: libretro/swanstation, duckstation
 msgctxt "game_options"
 msgid "Reduces wobbly polygons & warping textures."
-msgstr ""
+msgstr "Csökkenti az imbolygó poligonokat és a torzuló textúrákat."
 
 #. TRANSLATION: libretro/swanstation, duckstation
 msgctxt "game_options"
 msgid "ENABLE PGXP CORRECTIONS"
-msgstr ""
+msgstr "PGXP KORREKCIÓK ENGEDÉLYEZÉSE"
 
 #. TRANSLATION: libretro/swanstation, libretro/mame, libretro/mame, duckstation, duckstation, ...
 msgctxt "game_options"
@@ -4373,7 +4373,7 @@ msgstr "Alkalmazzon gouraud árnyékolást a sima árnyékolás helyett."
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
 msgid "IMPROVED BANDING"
-msgstr ""
+msgstr "FEJLESZTETT SÁVÁZÁS"
 
 #. TRANSLATION: libretro/kronos, libretro/yabasanshiro
 msgctxt "game_options"
@@ -6627,7 +6627,7 @@ msgstr ""
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Double the rendering resolution."
-msgstr ""
+msgstr "Duplázza meg a renderelési felbontást."
 
 #. TRANSLATION: libretro/pcsx_rearmed, drastic
 msgctxt "game_options"
@@ -9285,12 +9285,12 @@ msgstr ""
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "SDL TEXTURE ACCESS STREAMING"
-msgstr ""
+msgstr "SDL TEXTÚRA HOZZÁFÉRÉS STREAMING"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Use controller settings manually defined in custom.ini."
-msgstr ""
+msgstr "A custom.ini fájlban kézzel megadott vezérlőbeállítások használata."
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -9301,6 +9301,7 @@ msgstr "EGYEDI VEZÉRLŐ"
 msgctxt "game_options"
 msgid "The final output image, unrelated to the Wii's emulated NAND setting."
 msgstr ""
+"A végső kimeneti kép, amely nem kapcsolódik a Wii emulált NAND beállításához."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
 msgctxt "game_options"
@@ -9310,7 +9311,7 @@ msgstr "KIJELZŐ"
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Automatic ratio"
-msgstr ""
+msgstr "Automatikus arány"
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -9411,7 +9412,7 @@ msgstr "TELJESÍTMÉNY HACKEK"
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
-msgstr ""
+msgstr "Játékcsalás vagy 16/9 képarány-javító kódok használata."
 
 #. TRANSLATION: dolphin, melonds
 msgctxt "game_options"
@@ -9463,17 +9464,17 @@ msgstr ""
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 1"
-msgstr ""
+msgstr "GAMECUBE VEZÉRLŐ 1"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "GAMECUBE PORT 1 TYPE"
-msgstr ""
+msgstr "GAMECUBE PORT 1 TÍPUS"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "Standard Controller"
-msgstr ""
+msgstr "Szabványos vezérlő"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -9498,7 +9499,7 @@ msgstr ""
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 2"
-msgstr ""
+msgstr "GAMECUBE VEZÉRLŐ 2"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9508,7 +9509,7 @@ msgstr "GAMECUBE PORT 2 TYPE"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 3"
-msgstr ""
+msgstr "GAMECUBE VEZÉRLŐ 3"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9518,7 +9519,7 @@ msgstr "GAMECUBE PORT 3 TYPE"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 4"
-msgstr ""
+msgstr "GAMECUBE VEZÉRLŐ 4"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9693,7 +9694,7 @@ msgstr ""
 #. TRANSLATION: dolphin, dolphin
 msgctxt "game_options"
 msgid "SENSOR BAR POSITION"
-msgstr ""
+msgstr "ÉRZÉKELŐRÁR POZÍCIÓJA"
 
 #. TRANSLATION: dolphin, dolphin
 msgctxt "game_options"
@@ -9718,12 +9719,12 @@ msgstr ""
 #. TRANSLATION: dolphin, dolphin
 msgctxt "game_options"
 msgid "Emulate the Wiimote pointer with a mouse."
-msgstr ""
+msgstr "Egérrel emulálja a Wiimote mutatót."
 
 #. TRANSLATION: dolphin, dolphin
 msgctxt "game_options"
 msgid "MOUSE AS WIIMOTE POINTER"
-msgstr ""
+msgstr "EGÉR, MINT WIIMOTE MUTATÓ"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
@@ -10061,37 +10062,37 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Per 0.05s, 5s total (550MB|100MB)"
-msgstr ""
+msgstr "0,05 másodpercenként, összesen 5 s (550 MB | 100 MB)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Per 0.1s, 10s total (1100MB|200MB)"
-msgstr ""
+msgstr "0,1 másodpercenként, összesen 10 mp (1100 MB | 200 MB)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Per 1s, 15s total (165MB|30MB)"
-msgstr ""
+msgstr "1 másodpercenként, összesen 15 mp (165 MB | 30 MB)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Per 1s, 30s total (330MB|60MB)"
-msgstr ""
+msgstr "1 másodpercenként, összesen 30 mp (330 MB|60 MB)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Per 1s, 60s total (660MB|120MB)"
-msgstr ""
+msgstr "1 másodpercenként, összesen 60 mp (660 MB|120 MB)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Per 1s, 90s total (990MB|180MB)"
-msgstr ""
+msgstr "1 másodpercenként, összesen 90 másodperc (990 MB|180 MB)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Per 1s, 120s total (1320MB|240MB)"
-msgstr ""
+msgstr "1 másodpercenként, összesen 120 mp (1320 MB | 240 MB)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -10108,7 +10109,7 @@ msgstr "EREDMÉNYEK"
 #. TRANSLATION: duckstation, mame, theforceengine
 msgctxt "game_options"
 msgid "CROSSHAIR"
-msgstr ""
+msgstr "CÉLKERESZT"
 
 #. TRANSLATION: flycast/dolphin, flycast/dolphin
 msgctxt "game_options"
@@ -10317,7 +10318,7 @@ msgstr "Mega STE 2.06"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "TOS languages."
-msgstr ""
+msgstr "TOS nyelvek."
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
@@ -11066,7 +11067,7 @@ msgstr "Bilineáris (éles)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN PATCHES"
-msgstr ""
+msgstr "SZÉLESKÉPERNYŐ JAVÍTÁSOK ENGEDÉLYEZÉSE"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11076,7 +11077,7 @@ msgstr ""
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "ANTI-BLUR"
-msgstr ""
+msgstr "ANTI-BLUR"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11176,7 +11177,7 @@ msgstr ""
 #. TRANSLATION: pcsx2, theforceengine
 msgctxt "game_options"
 msgid "MIPMAPPING"
-msgstr ""
+msgstr "MIPMAPPING"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11301,7 +11302,7 @@ msgstr ""
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "TEXTURE PRELOADING"
-msgstr ""
+msgstr "TEXTÚRA ELŐBETÖLTÉS"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -12841,7 +12842,7 @@ msgstr ""
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "MULTISCREENS"
-msgstr ""
+msgstr "TÖBBKÉPERNYŐK"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -12892,7 +12893,7 @@ msgstr "DATA PLUGIN"
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "When moving"
-msgstr ""
+msgstr "Mozgáskor"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -12909,7 +12910,7 @@ msgstr ""
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Converts DirectX 8/9/10/11/12 calls to Vulkan."
-msgstr ""
+msgstr "A DirectX 8/9/10/11/12 hívásokat Vulkanra konvertálja."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13662,7 +13663,7 @@ msgstr "Kényszerített 16:10"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Force 32:9"
-msgstr ""
+msgstr "Kényszerít 32:9"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13675,17 +13676,17 @@ msgstr ""
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Immediate"
-msgstr ""
+msgstr "Azonnali"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Mailbox (Recommended)"
-msgstr ""
+msgstr "Postaláda (ajánlott)"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "FIFO (VSync On)"
-msgstr ""
+msgstr "FIFO (VSync bekapcsolva)"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -13774,7 +13775,7 @@ msgstr "Dokkolatlan"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Docked (Default)"
-msgstr ""
+msgstr "Dokkolt (alapértelmezett)"
 
 #. TRANSLATION: suyu, ryujinx
 msgctxt "game_options"
@@ -14836,7 +14837,7 @@ msgstr "960p"
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "WIDESCREEN"
-msgstr ""
+msgstr "SZÉLESVÁSZNÚ"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -15094,7 +15095,7 @@ msgstr ""
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
 msgid "EXPERT SETTINGS"
-msgstr ""
+msgstr "SZAKÉRTŐI BEÁLLÍTÁSOK"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15738,13 +15739,15 @@ msgstr "45s"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "60s"
-msgstr ""
+msgstr "60 másodperc"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid ""
 "Enable cache mount. Can improve performance and compatibility in some games."
 msgstr ""
+"Engedélyezze a gyorsítótár csatlakoztatását. Egyes játékokban javíthatja a "
+"teljesítményt és a kompatibilitást."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15771,6 +15774,8 @@ msgid ""
 "Fix screen tearing. With Some games you need to turn VSync on in the games "
 "options."
 msgstr ""
+"Javítsa ki a képernyő törezedségét. Egyes játékoknál be kell kapcsolnia a "
+"VSync funkciót a játékbeállításokban."
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -15778,6 +15783,8 @@ msgid ""
 "Manually set VSYNC frames per second. Ideally this should match your monitor "
 "refresh rate."
 msgstr ""
+"Manuálisan állítsa be a VSYNC képkockákat másodpercenként. Ideális esetben "
+"ennek meg kell egyeznie a monitor frissítési gyakoriságával."
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -15856,7 +15863,7 @@ msgstr "Kilépés az emulátorból"
 #. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys
 msgctxt "keys_files"
 msgid "Service menu"
-msgstr ""
+msgstr "Szerviz menü"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
@@ -16076,7 +16083,7 @@ msgstr ""
 #. TRANSLATION: wii.dolphin.keys
 msgctxt "keys_files"
 msgid "Exit Dolphin"
-msgstr ""
+msgstr "Lépjen ki a Dolphinból"
 
 #. TRANSLATION: dos.dosbox-x.keys
 msgctxt "keys_files"
@@ -16146,7 +16153,7 @@ msgstr "Kilépés az emulátorból SDL használatával"
 #. TRANSLATION: mame.keys
 msgctxt "keys_files"
 msgid "Exit Emulator"
-msgstr ""
+msgstr "Lépjen ki az emulátorból"
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -17022,6 +17029,10 @@ msgstr "Gyors mentés"
 #~ "konfigurációs figyelmeztetés stb."
 
 #~ msgctxt "game_options"
+#~ msgid "Enable to improve bluriness."
+#~ msgstr "Engedélyezze a homályosság javítását."
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Most games already have an internal framelimit. Minor performance cost."
 #~ msgstr ""
@@ -17134,6 +17145,10 @@ msgstr "Gyors mentés"
 #~ msgstr "D3D12 (alapértelmezett)"
 
 #~ msgctxt "game_options"
+#~ msgid "Native Vulkan"
+#~ msgstr "Natív Vulkan"
+
+#~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "A vezérlők konfigurálása a GZDoomban problémákat okozhat."
 
@@ -17158,6 +17173,18 @@ msgstr "Gyors mentés"
 #~ msgstr ""
 #~ "Állítsa be a kívánt maximális frissítési gyakoriságot, amikor a Vsync ki "
 #~ "van kapcsolva."
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Dolphin-triforce menü megnyitása"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Betöltési állapot Slot 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Állapot mentése Slot 1"
 
 #~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
@@ -17254,18 +17281,6 @@ msgstr "Gyors mentés"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Gyors előre"
-
-#~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Dolphin-triforce menü megnyitása"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Betöltési állapot Slot 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Állapot mentése Slot 1"
 
 #~ msgctxt "game_options"
 #~ msgid "Enable or disable monsters in battle."
