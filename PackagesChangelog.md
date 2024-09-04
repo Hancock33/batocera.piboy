@@ -16,11 +16,15 @@ Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|1208d47ec7836
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|db939db2f0556e21fa703f32f305d6d2c0e1b629|Sept 04, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|5ed4a3c291cffbbcbe12fa232c0c7b4b4493b5d8|Sept 04, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|7a5a922fd3de0c440f08b36e287ad1d503242703|Sept 04, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.16.r10.gdeb70423|Sept 04, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240904|Sept 04, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240904|Sept 04, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|b2c33a6fe7f06c839b6e22a607e7d446d81b712d|Sept 04, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|7174ef11948b0c58ca0ff8237141265f1ecc26c0|Sept 04, 2024
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|1b344d7c4adc17484f53352ceef73e5a968ed8c2|Sept 04, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|61350897408c10db28420f71e2b9b4c2aeaefd72|Sept 04, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|de29604043fbe754c48330193b181a3bcd9121eb|Sept 04, 2024
+Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-3-rc2|Sep 04, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|265f75ca537d00e17353d33aa5d233bcd6c199c6|Sept 03, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|d9079d7e38e3e34224f12ae35e9ad57d713339f0|Sept 03, 2024
 Emulators|[hatari](http://github.com/hatari/hatari)|ccb45122addf88f373bd6052293bc2d20c5319b3|Sept 03, 2024
@@ -34,8 +38,6 @@ Ports|[omf2097](http://github.com/omf2097/openomf)|9fbbfd593fbe7ae14300120937700
 Ports|[openjk](http://github.com/JACoders/OpenJK)|ad98f609c4ac1c4b825db18f324fc54211296def|Sept 03, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.27.11|Sept 03, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|faa950266765c84d28ea4b024a25bffdf9cdc895|Sept 03, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240903|Sept 03, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240903|Sept 03, 2024
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|faa950266765c84d28ea4b024a25bffdf9cdc895|Sept 03, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|a03a6f526684067823de922f1b15d7eb27fd5394|Sept 03, 2024
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|237887e817e23800997466632deb8ba63797a4cb|Sept 03, 2024
@@ -75,7 +77,6 @@ Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|cc35a78908
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|f54650be32dbf40e148ea0324699f65fd8cd11b1|Aug 30, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|543d3694fdad3bd3af2397ea16ef8c3e7633d057|Aug 30, 2024
 Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|4483cb4c2b19a4e41882dab3432cd79bca3f85bf|Aug 30, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.16.r8.gfdd50791|Aug 30, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|4e563e5cf66f0e857afaf33a227b552eb632be90|Aug 30, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|c8fe3930499245423cab2adf9a7b9cb465390ee9|Aug 30, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|3260947537deb14c4b464fd80a132dc9d3f80a4f|Aug 30, 2024
@@ -134,7 +135,6 @@ Gpu|[nvidia-open-driver](http://download.nvidia.com/XFree86/Linux-x86)|560.35.03
 Gpu|[nvidia-proprietary-driver](http://download.nvidia.com/XFree86/Linux-x86)|$(NVIDIA_OPEN_DRIVER_VERSION)|Aug 19, 2024
 Hardware|[pironman5](http://github.com/sunfounder/pironman5)|a45d0594a2b046346d52f5ad13e1f1fd2a1c590b|Aug 19, 2024
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|229933ea5aa6b4d2a6f00ed55b34d7b8bf5f63e3|Aug 19, 2024
-Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-3-rc1|Aug 19, 2024
 Network|[qrtr](http://github.com/linux-msm/qrtr)|ef44ad10f284410e2db4c4ce22c8645f988f8402|Aug 18, 2024
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|5.2|Aug 17, 2024
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|1d6dfdc33b86b71dfab4fe631e72fe7ee5c01ee1|Aug 17, 2024
