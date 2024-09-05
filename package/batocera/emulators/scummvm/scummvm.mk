@@ -17,7 +17,16 @@ ifeq ($(BR2_PACKAGE_RPI_USERLAND),y)
 	SCUMMVM_CONF_OPTS += --host=raspberrypi
 endif
 
-SCUMMVM_CONF_ENV += RANLIB="$(TARGET_RANLIB)" STRIP="$(TARGET_STRIP)" AR="$(TARGET_AR) cru" AS="$(TARGET_AS)"
+ifeq ($(BR2_aarch64)$(BR2_arm),y)
+    SCUMMVM_CONF_OPTS += --host=arm-linux
+else ifeq ($(BR2_riscv),y)
+    SCUMMVM_CONF_OPTS += --host=riscv64-linux
+else
+    SCUMMVM_CONF_OPTS += --host=$(GNU_TARGET_NAME)
+endif
+
+SCUMMVM_CONF_ENV += RANLIB="$(TARGET_RANLIB)" STRIP="$(TARGET_STRIP)"
+SCUMMVM_CONF_ENV += AR="$(TARGET_AR) cru" AS="$(TARGET_AS)"
 
 SCUMMVM_CONF_OPTS += --disable-static --enable-c++11 --enable-opengl --disable-debug --enable-optimizations \
 			--enable-mt32emu --enable-flac --enable-mad --enable-vorbis --disable-tremor --enable-all-engines \
@@ -26,17 +35,24 @@ SCUMMVM_CONF_OPTS += --disable-static --enable-c++11 --enable-opengl --disable-d
 
 SCUMMVM_MAKE_OPTS += RANLIB="$(TARGET_RANLIB)" STRIP="$(TARGET_STRIP)" AR="$(TARGET_AR) cru" AS="$(TARGET_AS)" LD="$(TARGET_CXX)"
 
-ifeq ($(BR2_ARCH_IS_64),y)
-	SCUMMVM_CONF_OPTS += --disable-ext-neon
-endif
-
-ifeq ($(BR2_riscv),y)
-    SCUMMVM_CONF_OPTS += --host=riscv64-linux
-endif
-
 ifeq ($(BR2_PACKAGE_LIBMPEG2),y)
-    SCUMMVM_CONF_OPTS += --enable-mpeg2 --with-mpeg2-prefix="$(STAGING_DIR)/usr/lib"
+	SCUMMVM_CONF_OPTS += --enable-mpeg2 --with-mpeg2-prefix="$(STAGING_DIR)/usr/lib"
 endif
+
+define SCUMMVM_CONFIGURE_CMDS
+    (cd $(@D) && rm -rf config.cache && \
+	$(TARGET_CONFIGURE_OPTS) \
+	$(TARGET_CONFIGURE_ARGS) \
+	$(SCUMMVM_CONF_ENV) \
+	./configure \
+		--prefix=/usr \
+		--exec-prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--program-prefix="" \
+		$(SCUMMVM_CONF_OPTS) \
+	)
+endef
 
 define SCUMMVM_ADD_VIRTUAL_KEYBOARD
 	cp -f $(@D)/backends/vkeybd/packs/vkeybd_default.zip $(TARGET_DIR)/usr/share/scummvm
