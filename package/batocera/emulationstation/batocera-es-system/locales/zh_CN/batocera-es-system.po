@@ -378,6 +378,18 @@ msgstr "使用第二个实例进行提前运行"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid ""
+"Use preemptive frames instead of run-ahead. Only runs ahead when controller "
+"state changes."
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "USE PRE-EMPTIVE FRAMES"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
 "Automatically decrease frame delay temporarily to prevent frame drops. Can "
 "introduce stuttering."
 msgstr "自动临时减少帧延迟以防止帧丢失。可能导致卡顿。"
