@@ -59,7 +59,6 @@ define NVIDIA_PROPRIETARY_DRIVER_RENAME_KERNEL_MODULES
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-modeset.ko \
 		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia-modeset-proprietary.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-drm.ko \
-
 		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia-drm-proprietary.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-uvm.ko \
 		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia-uvm-proprietary.ko
