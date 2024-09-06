@@ -15,7 +15,9 @@ Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|7d2a2d6559a84
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.27.12|Sept 06, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|5e14f7b91493b15ab7e29b9594a04a9bed9acb62|Sept 06, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|8de0922ef08340d9160231d93a0bdbf551c2c12d|Sept 06, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240906|Sept 06, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|7665efbe3152f86abb8ebdd4a26f7bac0da1b91d|Sept 06, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240906|Sept 06, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|3b6c91e75989627838b79b3754c5521261ca20cc|Sept 06, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|eccfda7d65c6fa47d973eb7523cbcce3208a006b|Sept 06, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|3a75c7ce5fc62c524be8d0eb45cd4b39d08a885c|Sept 06, 2024
@@ -58,8 +60,6 @@ Ports|[fheroes2](http://github.com/ihhub/fheroes2)|d06c34833c6e86cedd99215e9d042
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|db939db2f0556e21fa703f32f305d6d2c0e1b629|Sept 04, 2024
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|bc99c69ff54a0f558c1b359754abc1c1f02e9189|Sept 04, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.16.r10.gdeb70423|Sept 04, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240904|Sept 04, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240904|Sept 04, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|7174ef11948b0c58ca0ff8237141265f1ecc26c0|Sept 04, 2024
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|1b344d7c4adc17484f53352ceef73e5a968ed8c2|Sept 04, 2024
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|9752b303037186a2e2581b864bc25136402cdc79|Sept 04, 2024
