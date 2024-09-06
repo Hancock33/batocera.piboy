@@ -8,7 +8,7 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-09-05|Sept 0
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|590838aec1a4633ef73676d036fd3413e138bc81|Sept 05, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|979235b4b7ebb3fbec5505a846b70f70333857dc|Sept 05, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45331|Sept 05, 2024
-Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|5f28534e859ecdf95906a2045ee1b1ab71a07a79|Sept 05, 2024
+Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|40134bc34bf6c835dc4b3735abc0ce13ea9a1891|Sept 05, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|64dd09becc811d4133f091c2eb2b8b533fd7b82f|Sept 05, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|8291ca53ddde75134ebd6d7783c856af44fc6278|Sept 05, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|88cddb0ccdeea3f5072455e9d86ea72583fca904|Sept 05, 2024
