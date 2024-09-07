@@ -1182,6 +1182,146 @@ msgctxt "game_options"
 msgid "Random Values"
 msgstr ""
 
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Enable shader JIT"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds, libretro/panda3ds, libretro/panda3ds, libretro/panda3ds, libretro/panda3ds, ...
+msgctxt "game_options"
+msgid "EMULATOR SETTINGS"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "USE SHADER JIT"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Enable accurate shader multiplication"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "ACCURATE SHADER MUL"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Use ubershaders (No stutter, maybe slower)"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "USE UBERSHADER"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Enable VSync"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "USE VSYNC"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "DSP emulation"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "DSP EMULATION"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "HLE"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds, redream
+msgctxt "game_options"
+msgid "LLE"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Null"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Enable audio"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "USE AUDIO"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Enable virtual SD card"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "USE VIRTUAL SD"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Write protect virtual SD card"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "WRITE PROTECT VIRTUAL SD"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Battery percentage"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "BATTERY LEVEL"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Charger plugged"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "USE CHARGER"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Force shadergen when rendering lights"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "UBERSHADER LIGHTING OVERRIDE"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Light threshold for forcing shadergen"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "UBERSHADER LIGHTING OVERRIDE THRESHOLD"
+msgstr ""
+
 #. TRANSLATION: libretro/desmume, libretro/dolphin, libretro/swanstation, libretro/duckstation, libretro/flycast, ...
 msgctxt "game_options"
 msgid ""
@@ -1228,7 +1368,7 @@ msgctxt "game_options"
 msgid "Arrange the dual screen layout."
 msgstr ""
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, citra, melonds, panda3ds, ...
+#. TRANSLATION: libretro/desmume, libretro/melonds, citra, melonds, drastic
 msgctxt "game_options"
 msgid "SCREEN LAYOUT"
 msgstr ""
@@ -1427,7 +1567,7 @@ msgctxt "game_options"
 msgid "RENDERER MODE"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, citra, duckstation, melonds, panda3ds, ...
+#. TRANSLATION: libretro/melondsds, citra, duckstation, melonds, pcsx2, ...
 msgctxt "game_options"
 msgid "Software"
 msgstr ""
@@ -8886,54 +9026,54 @@ msgctxt "game_options"
 msgid "ENABLE GAMEPAD VIEW"
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
 "Hotkey+R2."
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Top Only"
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Bottom Only"
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Large Top"
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Large Bottom"
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Left/Right"
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Right/Left"
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Separate Windows"
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
 msgstr ""
@@ -8943,49 +9083,49 @@ msgctxt "game_options"
 msgid "GRAPHICS"
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds, scummvm, play
+#. TRANSLATION: citra, scummvm, play
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (預設)"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, panda3ds, ...
+#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, pcsx2
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Off will help some games, others will run too fast."
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "FRAME LIMIT"
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Reduce stutter that happens when compiling shaders."
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid ""
 "Compile shaders using background threads to avoid shader compilation "
 "stutter. May cause graphical glitches."
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "ENABLE ASYNC SHADER COMPILATION"
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Preloading is impossible from ES."
 msgstr ""
@@ -8995,12 +9135,12 @@ msgctxt "game_options"
 msgid "Preload"
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
 msgstr ""
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "NEW 3DS MODE"
 msgstr ""
@@ -12265,11 +12405,6 @@ msgstr ""
 #. TRANSLATION: redream
 msgctxt "game_options"
 msgid "HLE (per-pixel)"
-msgstr ""
-
-#. TRANSLATION: redream
-msgctxt "game_options"
-msgid "LLE"
 msgstr ""
 
 #. TRANSLATION: redream
