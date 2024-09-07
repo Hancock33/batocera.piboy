@@ -12,6 +12,7 @@ NVIDIA_OPEN_DRIVER_LICENSE = NVIDIA Software License
 NVIDIA_OPEN_DRIVER_LICENSE_FILES = LICENSE
 NVIDIA_OPEN_DRIVER_REDISTRIBUTE = NO
 NVIDIA_OPEN_DRIVER_INSTALL_STAGING = YES
+NVIDIA_OPEN_DRIVER_EXTRACT_DEPENDENCIES = host-zstd
 
 ifeq ($(BR2_PACKAGE_NVIDIA_OPEN_DRIVER_XORG),y)
 
@@ -116,12 +117,13 @@ ifeq ($(BR2_PACKAGE_NVIDIA_OPEN_DRIVER_CUDA),y)
 NVIDIA_OPEN_DRIVER_LIBS += \
 	libcuda.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
 	libnvcuvid.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
+	libnvidia-encode.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
 	# libnvidia-ptxjitcompiler.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
-	#libnvidia-encode.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
 	#libnvidia-nvvm.so.$(NVIDIA_OPEN_DRIVER_VERSION)
 NVIDIA_OPEN_DRIVER_32 += \
 	libcuda.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
-	libnvcuvid.so.$(NVIDIA_OPEN_DRIVER_VERSION)
+	libnvcuvid.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
+	libnvidia-encode.so.$(NVIDIA_OPEN_DRIVER_VERSION)
 ifeq ($(BR2_PACKAGE_NVIDIA_OPEN_DRIVER_CUDA_PROGS),y)
 NVIDIA_OPEN_DRIVER_PROGS = nvidia-cuda-mps-control nvidia-cuda-mps-server
 endif
@@ -163,8 +165,8 @@ endif # BR2_PACKAGE_NVIDIA_OPEN_DRIVER_MODULE == y
 # virtually everywhere, and it is fine enough to provide useful options.
 # Except it can't extract into an existing (even empty) directory.
 define NVIDIA_OPEN_DRIVER_EXTRACT_CMDS
-	$(SHELL) $(NVIDIA_OPEN_DRIVER_DL_DIR)/$(NVIDIA_OPEN_DRIVER_SOURCE) --extract-only --target \
-		$(@D)/tmp-extract
+	PATH="$(HOST_DIR)/bin:$(PATH)" $(SHELL) $(NVIDIA_OPEN_DRIVER_DL_DIR)/$(NVIDIA_OPEN_DRIVER_SOURCE) \
+		--extract-only --target $(@D)/tmp-extract
 	chmod u+w -R $(@D)
 	mv $(@D)/tmp-extract/* $(@D)/tmp-extract/.manifest $(@D)
 	rm -rf $(@D)/tmp-extract

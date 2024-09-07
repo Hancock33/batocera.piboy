@@ -12,6 +12,7 @@ NVIDIA470_LEGACY_DRIVER_LICENSE = NVIDIA Software License
 NVIDIA470_LEGACY_DRIVER_LICENSE_FILES = LICENSE
 NVIDIA470_LEGACY_DRIVER_REDISTRIBUTE = NO
 NVIDIA470_LEGACY_DRIVER_INSTALL_STAGING = YES
+NVIDIA470_LEGACY_DRIVER_EXTRACT_DEPENDENCIES = host-xz
 
 ifeq ($(BR2_PACKAGE_NVIDIA470_LEGACY_DRIVER_XORG),y)
 
@@ -144,8 +145,8 @@ endif # NVIDIA470_LEGACY_DRIVER_MODULE == y
 # virtually everywhere, and it is fine enough to provide useful options.
 # Except it can't extract into an existing (even empty) directory.
 define NVIDIA470_LEGACY_DRIVER_EXTRACT_CMDS
-	$(SHELL) $(NVIDIA470_LEGACY_DRIVER_DL_DIR)/$(NVIDIA470_LEGACY_DRIVER_SOURCE) --extract-only --target \
-		$(@D)/tmp-extract
+	PATH="$(HOST_DIR)/bin:$(PATH)" $(SHELL) $(NVIDIA470_LEGACY_DRIVER_DL_DIR)/$(NVIDIA470_LEGACY_DRIVER_SOURCE) \
+		--extract-only --target $(@D)/tmp-extract
 	chmod u+w -R $(@D)
 	mv $(@D)/tmp-extract/* $(@D)/tmp-extract/.manifest $(@D)
 	rm -rf $(@D)/tmp-extract

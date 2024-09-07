@@ -3,8 +3,8 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Sept 01, 2024
-DEVILUTIONX_VERSION = 2386f90884a67f5768c46cb23fedc8ad76868fd9
+# Version: Commits on Sept 06, 2024
+DEVILUTIONX_VERSION = 77020db5ffcf37d296ebfc9805e8999a915f958f
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
 DEVILUTIONX_DEPENDENCIES = sdl2 sdl2_image fmt libsodium libpng bzip2 lua luafilesystem lua-lpeg-patterns lpeg luasocket luasec
@@ -16,6 +16,8 @@ DEVILUTIONX_CONF_OPTS += -DBUILD_TESTING=OFF
 DEVILUTIONX_CONF_OPTS += -DUSE_LD_MOLD=ON
 DEVILUTIONX_CONF_OPTS += -DPREFILL_PLAYER_NAME=ON
 DEVILUTIONX_CONF_OPTS += -DCPACK=ON
+DEVILUTIONX_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
+DEVILUTIONX_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 # ZeroTier on aarch64 uses ARMv8 Cryptography Extensions.
 # These extension are optional and only certain Armv8-A CPUs support them.
