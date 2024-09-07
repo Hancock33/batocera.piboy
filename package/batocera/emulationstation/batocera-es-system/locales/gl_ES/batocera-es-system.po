@@ -10942,7 +10942,7 @@ msgctxt "game_options"
 msgid "LIMIT FPS"
 msgstr "LÍMITAR FPS"
 
-#. TRANSLATION: openbor/openbor7530, supermodel
+#. TRANSLATION: openbor/openbor7530, supermodel, model2emu
 msgctxt "game_options"
 msgid "Only some games feature rumble. Not compatible with all controllers."
 msgstr ""
@@ -16236,51 +16236,6 @@ msgctxt "keys_files"
 msgid "Configuration menu"
 msgstr "Menú de configuración"
 
-#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Move Stylet Pointer"
-msgstr "Mover o punteiro do estilo"
-
-#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "Reiniciar a emulación"
-
-#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Continue/Pause emulation"
-msgstr "Continuar/Pausar a emulación"
-
-#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Swap Screen"
-msgstr "Intercambiar pantalla"
-
-#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Toggle Screen Layout"
-msgstr "Alternar o deseño da pantalla"
-
-#. TRANSLATION: 3ds.panda3ds.keys, mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Captura de pantalla"
-
-#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Toggle Speed Limit"
-msgstr "Cambiar o límite de velocidade"
-
-#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Swap screens"
-msgstr "Intercambiar pantallas"
-
-#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Mouse Click"
-msgstr "Clic do rato"
-
 #. TRANSLATION: moonlight.moonlight.keys
 msgctxt "keys_files"
 msgid "Exit emulator using SDL"
@@ -16300,6 +16255,11 @@ msgstr "Cargar estado"
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "Gardar Estado"
+
+#. TRANSLATION: mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "Captura de pantalla"
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -16425,6 +16385,46 @@ msgstr ""
 msgctxt "keys_files"
 msgid "State/Save to Selected Slot"
 msgstr ""
+
+#. TRANSLATION: 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Move Stylet Pointer"
+msgstr "Mover o punteiro do estilo"
+
+#. TRANSLATION: 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Restart Emulation"
+msgstr "Reiniciar a emulación"
+
+#. TRANSLATION: 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Continue/Pause emulation"
+msgstr "Continuar/Pausar a emulación"
+
+#. TRANSLATION: 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Swap Screen"
+msgstr "Intercambiar pantalla"
+
+#. TRANSLATION: 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Toggle Screen Layout"
+msgstr "Alternar o deseño da pantalla"
+
+#. TRANSLATION: 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Toggle Speed Limit"
+msgstr "Cambiar o límite de velocidade"
+
+#. TRANSLATION: 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Swap screens"
+msgstr "Intercambiar pantallas"
+
+#. TRANSLATION: 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Mouse Click"
+msgstr "Clic do rato"
 
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
