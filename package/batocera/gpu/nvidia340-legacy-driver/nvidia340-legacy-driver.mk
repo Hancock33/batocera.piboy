@@ -12,7 +12,7 @@ NVIDIA340_LEGACY_DRIVER_LICENSE = NVIDIA Software License
 NVIDIA340_LEGACY_DRIVER_LICENSE_FILES = LICENSE
 NVIDIA340_LEGACY_DRIVER_REDISTRIBUTE = NO
 NVIDIA340_LEGACY_DRIVER_INSTALL_STAGING = YES
-NVIDIA340_LEGACY_DRIVER_EXTRACT_DEPENDENCIES = host-xz
+NVIDIA340_LEGACY_DRIVER_EXTRACT_DEPENDENCIES += host-xz
 
 ifeq ($(BR2_PACKAGE_NVIDIA340_LEGACY_DRIVER_XORG),y)
 
@@ -22,7 +22,7 @@ ifeq ($(BR2_PACKAGE_NVIDIA340_LEGACY_DRIVER_XORG),y)
 # they should be built prior to those packages, and the only simple
 # way to do so is to make nvidia-driver depend on them.
 #batocera enable nvidia-driver and mesa3d to coexist in the same fs
-NVIDIA340_LEGACY_DRIVER_DEPENDENCIES = mesa3d xlib_libX11 xlib_libXext libglvnd kmod
+NVIDIA340_LEGACY_DRIVER_DEPENDENCIES += mesa3d xlib_libX11 xlib_libXext libglvnd kmod
 
 # batocera modified to suport the vendor-neutral "dispatching" API/ABI
 #   https://github.com/aritger/linux-opengl-abi-proposal/blob/master/linux-opengl-abi-proposal.txt
@@ -45,8 +45,7 @@ NVIDIA340_LEGACY_DRIVER_LIBS_MISC = \
 	libnvidia-glsi.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
 	libnvidia-ml.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
 
-NVIDIA340_LEGACY_DRIVER_LIBS_TLS = \
-	libnvidia-tls.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
+NVIDIA340_LEGACY_DRIVER_LIBS_TLS = libnvidia-tls.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
 
 NVIDIA340_LEGACY_DRIVER_LIBS_VDPAU = \
 	libvdpau.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \

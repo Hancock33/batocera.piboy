@@ -31,7 +31,7 @@ SYNCTHING_TARGET_ENV = \
 	PATH=$(BR_PATH) \
 	GOCACHE="$(HOST_GO_TARGET_CACHE)" \
 	GOMODCACHE="$(@D)" \
-	GOFLAGS="-modcacherw" \
+	GOFLAGS="-modcacherw"
 
 define SYNCTHING_BUILD_CMDS
 	cd $(@D) && $(SYNCTHING_TARGET_ENV) $(GO_BIN) run build.go -goos linux -goarch $(GOARCH) build

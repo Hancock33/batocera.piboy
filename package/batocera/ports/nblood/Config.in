@@ -6,6 +6,8 @@ config BR2_PACKAGE_NBLOOD
 	select BR2_PACKAGE_LIBVPX
 
 	help
-	  Reverse-engineered ports of Build games using EDuke32 engine technology and development principles (NBlood/Rednukem/PCExhumed)
+	  Reverse-engineered ports of Build games using EDuke32 engine
+	  technology and development principles
+	  (NBlood/Rednukem/PCExhumed)
 
 	  https://lerppu.net/wannabethesis/

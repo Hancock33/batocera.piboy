@@ -12,7 +12,7 @@ NVIDIA_OPEN_DRIVER_LICENSE = NVIDIA Software License
 NVIDIA_OPEN_DRIVER_LICENSE_FILES = LICENSE
 NVIDIA_OPEN_DRIVER_REDISTRIBUTE = NO
 NVIDIA_OPEN_DRIVER_INSTALL_STAGING = YES
-NVIDIA_OPEN_DRIVER_EXTRACT_DEPENDENCIES = host-zstd
+NVIDIA_OPEN_DRIVER_EXTRACT_DEPENDENCIES += host-zstd
 
 ifeq ($(BR2_PACKAGE_NVIDIA_OPEN_DRIVER_XORG),y)
 
@@ -22,9 +22,9 @@ ifeq ($(BR2_PACKAGE_NVIDIA_OPEN_DRIVER_XORG),y)
 # they should be built prior to those packages, and the only simple
 # way to do so is to make nvidia-driver depend on them.
 #batocera enable nvidia-driver and mesa3d to coexist in the same fs
-NVIDIA_OPEN_DRIVER_DEPENDENCIES = mesa3d xlib_libX11 xlib_libXext libglvnd \
+NVIDIA_OPEN_DRIVER_DEPENDENCIES += mesa3d xlib_libX11 xlib_libXext libglvnd \
 	nvidia-proprietary-driver # add proprietary driver
-	#nvidia340-legacy-driver nvidia390-legacy-driver nvidia470-legacy-driver
+#nvidia340-legacy-driver nvidia390-legacy-driver nvidia470-legacy-driver
 
 # NVIDIA_OPEN_DRIVER_PROVIDES = libgl libegl libgles
 
@@ -303,10 +303,10 @@ define NVIDIA_OPEN_DRIVER_VULKANJSON_X86
 endef
 
 ifeq ($(BR2_x86_64),y)
-	NVIDIA_OPEN_DRIVER_POST_INSTALL_TARGET_HOOKS += NVIDIA_OPEN_DRIVER_VULKANJSON_X86_64
+NVIDIA_OPEN_DRIVER_POST_INSTALL_TARGET_HOOKS += NVIDIA_OPEN_DRIVER_VULKANJSON_X86_64
 endif
 ifeq ($(BR2_i686),y)
-	NVIDIA_OPEN_DRIVER_POST_INSTALL_TARGET_HOOKS += NVIDIA_OPEN_DRIVER_VULKANJSON_X86
+NVIDIA_OPEN_DRIVER_POST_INSTALL_TARGET_HOOKS += NVIDIA_OPEN_DRIVER_VULKANJSON_X86
 endif
 
 KVER = $(shell expr $(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE))

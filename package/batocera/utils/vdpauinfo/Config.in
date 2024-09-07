@@ -4,4 +4,5 @@ config BR2_PACKAGE_VDPAUINFO
 	select BR2_PACKAGE_XLIB_LIBX11
 
 	help
-	  Command line utility for querying the capabilities of a VDPAU device.
+	  Command line utility for querying the capabilities
+	  of a VDPAU device.

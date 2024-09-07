@@ -3,7 +3,7 @@ config BR2_PACKAGE_XBOX_XCLOUD_CLIENT
 	select BR2_PACKAGE_LIBNSS
 
 	help
-	  Xbox-xCloud-Client is an open-source client for Xbox home streaming
-	  made in Javascript and Typescript.
+	  Xbox-xCloud-Client is an open-source client for
+	  Xbox home streaming made in Javascript and Typescript.
 
 	  https://github.com/unknownskl/xbox-xcloud-client

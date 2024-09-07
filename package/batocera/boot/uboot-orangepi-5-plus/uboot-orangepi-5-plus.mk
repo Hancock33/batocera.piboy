@@ -10,8 +10,7 @@ UBOOT_ORANGEPI_5_PLUS_SOURCE =
 define UBOOT_ORANGEPI_5_PLUS_BUILD_CMDS
 endef
 
-UBOOT_ORANGEPI_5_PLUS_PATH = \
-    $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/boot/uboot-orangepi-5-plus
+UBOOT_ORANGEPI_5_PLUS_PATH = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/boot/uboot-orangepi-5-plus
 
 define UBOOT_ORANGEPI_5_PLUS_INSTALL_TARGET_CMDS
 	mkdir -p $(BINARIES_DIR)/uboot-orangepi-5-plus

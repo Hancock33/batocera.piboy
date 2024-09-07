@@ -5,6 +5,6 @@ config BR2_PACKAGE_VKQUAKE
 	select BR2_PACKAGE_SDL2_IMAGE
 
 	help
-	  Vulkan Quake port based on QuakeSpasm/
+	  Vulkan Quake port based on QuakeSpasm
 
 	  https://github.com/Novum/vkQuake
