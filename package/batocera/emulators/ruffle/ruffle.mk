@@ -3,8 +3,8 @@
 # ruffle
 #
 ################################################################################
-# Version: Commits on Sept 01, 2024
-RUFFLE_VERSION = nightly-2024-09-01
+# Version: Commits on Sept 07, 2024
+RUFFLE_VERSION = nightly-2024-09-07
 RUFFLE_SITE = $(call github,ruffle-rs,ruffle,$(RUFFLE_VERSION))
 RUFFLE_LICENSE = GPLv2
 RUFFLE_DEPENDENCIES = host-rustc host-rust-bin openssl
@@ -12,7 +12,7 @@ RUFFLE_DEPENDENCIES = host-rustc host-rust-bin openssl
 RUFFLE_ARGS_FOR_BUILD = -L $(STAGING_DIR) -Wl,-rpath,$(STAGING_DIR)
 
 RUFFLE_CARGO_ENV = CARGO_HOME=$(HOST_DIR)/usr/share/cargo \
-	RUSTFLAGS='$(addprefix -C linker=$(TARGET_CC) -C link-args=,$(RUFFLE_ARGS_FOR_BUILD))'
+	RUSTFLAGS='$(addprefix -C linker=$(TARGET_CC) -C link-args=,$(RUFFLE_ARGS_FOR_BUILD))' PKG_CONFIG="$(PKG_CONFIG_HOST_BINARY)"
 
 RUFFLE_CARGO_MODE = $(if $(BR2_ENABLE_DEBUG),,release)
 RUFFLE_BIN_DIR = target/$(RUSTC_TARGET_NAME)/$(RUFFLE_CARGO_MODE)
@@ -28,8 +28,7 @@ define RUFFLE_BUILD_CMDS
 endef
 
 define RUFFLE_INSTALL_TARGET_CMDS
-	$(INSTALL) -D -m 0755 $(@D)/$(RUFFLE_BIN_DIR)/ruffle_desktop \
-			 $(TARGET_DIR)/usr/bin/ruffle
+	$(INSTALL) -D -m 0755 $(@D)/$(RUFFLE_BIN_DIR)/ruffle_desktop $(TARGET_DIR)/usr/bin/ruffle
 
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ruffle/flash.ruffle.keys $(TARGET_DIR)/usr/share/evmapy

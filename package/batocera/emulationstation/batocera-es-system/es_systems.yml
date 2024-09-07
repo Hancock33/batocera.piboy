@@ -237,7 +237,7 @@ alg:
   release:              198X
   hardware:             arcade
   extensions:           [daphne, squashfs]
-  platform:             daphne, arcade
+  platform:             alg, daphne, arcade
   emulators:
     hypseus-singe:
       hypseus-singe:    { requireAnyOf: [BR2_PACKAGE_HYPSEUS_SINGE] }
@@ -483,7 +483,7 @@ daphne:
   release:              1983
   hardware:             arcade
   extensions:           [daphne, squashfs]
-  platform:             daphne, arcade
+  platform:             alg, daphne, arcade
   emulators:
     hypseus-singe:
       hypseus-singe:    { requireAnyOf: [BR2_PACKAGE_HYPSEUS_SINGE] }
@@ -876,7 +876,7 @@ namco2x6:
   release:              2000
   hardware:             arcade
   extensions:           [zip]
-  platform:             namco2x6, arcade
+  platform:             namco, sega, arcade
   emulators:
     play:
       play:             { requireAnyOf: [BR2_PACKAGE_PLAY] }
@@ -1036,7 +1036,7 @@ singe:
   release:              1990
   hardware:             arcade
   extensions:           [daphne, squashfs]
-  platform:             daphne, arcade
+  platform:             alg, daphne, arcade
   emulators:
     hypseus-singe:
       hypseus-singe:    { requireAnyOf: [BR2_PACKAGE_HYPSEUS_SINGE] }
@@ -1581,7 +1581,7 @@ amigacd32:
     fsuae:
       CD32:             { requireAnyOf: [BR2_PACKAGE_FSUAE] }
     amiberry:
-      CD32:             { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [chd] }
+      CD32:             { requireAnyOf: [BR2_PACKAGE_AMIBERRY] }
     libretro:
       puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
       puae2021:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE2021] }
@@ -1598,6 +1598,8 @@ amigacdtv:
   emulators:
     fsuae:
       CDTV:             { requireAnyOf: [BR2_PACKAGE_FSUAE] }
+    amiberry:
+      CDTV:             { requireAnyOf: [BR2_PACKAGE_AMIBERRY] }
     libretro:
       puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
       puae2021:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE2021] }
@@ -2885,11 +2887,10 @@ tg-cd:
   extensions:           [3ds, 3dsx, app, axf, cxi, elf, squashfs]
   emulators:
     citra:
-      citra:            { requireAnyOf: [BR2_PACKAGE_CITRA]          }
+      citra:            { requireAnyOf: [BR2_PACKAGE_CITRA]             }
     libretro:
-      citra:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_CITRA] }
-    panda3ds:
-      panda3ds:         { requireAnyOf: [BR2_PACKAGE_PANDA3DS]       }
+      citra:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_CITRA]    }
+      panda3ds:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PANDA3DS] }
 
 fds:
   name:                 Family Computer Disk System
@@ -3072,7 +3073,7 @@ n64dd:
   manufacturer:         Nintendo
   release:              1999
   hardware:             console
-  extensions:           [z64, n64, squashfs, zip, 7z] # ndd, d64 : Not supported yet
+  extensions:           [z64, n64, ndd, squashfs, zip, 7z] # d64 : Not supported yet
   emulators:
     mupen64plus:
       gliden64:         { requireAnyOf: [BR2_PACKAGE_MUPEN64PLUS_GLIDEN64]         }
@@ -6337,7 +6338,7 @@ psvita:
   name:                 PlayStation Vita
   manufacturer:         Sony
   release:              2012
-  hardware:             console
+  hardware:             portable
   extensions:           [zip, psvita]
   emulators:
     vita3k:

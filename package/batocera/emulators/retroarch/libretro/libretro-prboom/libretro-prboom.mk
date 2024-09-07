@@ -3,8 +3,8 @@
 # libretro-prboom
 #
 ################################################################################
-# Version: Commits on Jun 28, 2024
-LIBRETRO_PRBOOM_VERSION = 2972aa92e0490194a37c9fb849ffc420abeb0ce4
+# Version: Commits on Sept 07, 2024
+LIBRETRO_PRBOOM_VERSION = 0b43954c75760d00737120db9d5009813778c7ae
 LIBRETRO_PRBOOM_SITE = $(call github,libretro,libretro-prboom,$(LIBRETRO_PRBOOM_VERSION))
 LIBRETRO_PRBOOM_LICENSE = GPLv2
 

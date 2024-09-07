@@ -1,0 +1,16 @@
+config BR2_PACKAGE_LIBRETRO_PANDA3DS
+	bool "libretro-panda3ds"
+	depends on BR2_PACKAGE_RETROARCH
+	depends on BR2_INSTALL_LIBSTDCPP
+	select BR2_PACKAGE_FDK_AAC
+	select BR2_PACKAGE_FFMPEG
+	select BR2_PACKAGE_FMT
+	select BR2_PACKAGE_LUA
+
+	help
+	  Panda3DS is an HLE, red-panda-themed Nintendo 3DS emulator.
+
+	  https://github.com/wheremyfoodat/Panda3DS
+
+comment "LIBRETRO_CITRA needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

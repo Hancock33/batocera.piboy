@@ -3,13 +3,14 @@
 # vita3k
 #
 ################################################################################
-# Version: Commits on Aug 25, 2024
-VITA3K_VERSION = f01a4e9b63583aa901f37a54523360be33034ccb
+# Version: Commits on Sept 06, 2024
+VITA3K_VERSION = 262424277018acca6d62928b58b4572f4b096ae5
 VITA3K_SITE = https://github.com/vita3k/vita3k
 VITA3K_SITE_METHOD=git
 VITA3K_GIT_SUBMODULES=YES
 VITA3K_LICENSE = GPLv3
 VITA3K_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf zlib libogg libvorbis python-ruamel-yaml
+VITA3K_EXTRACT_DEPENDENCIES = host-libcurl
 
 VITA3K_SUPPORTS_IN_SOURCE_BUILD = NO
 
@@ -58,8 +59,8 @@ define VITA3K_INSTALL_EVMAPY
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/vita3k/psvita.vita3k.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-VITA3K_PRE_CONFIGURE_HOOKS = VITA3K_GET_SUBMODULE
-VITA3K_PRE_CONFIGURE_HOOKS += VITA3K_FFMPEG_ZIP
+VITA3K_POST_EXTRACT_HOOKS = VITA3K_GET_SUBMODULE
+VITA3K_POST_EXTRACT_HOOKS += VITA3K_FFMPEG_ZIP
 VITA3K_POST_INSTALL_TARGET_HOOKS = VITA3K_INSTALL_EVMAPY
 
 $(eval $(cmake-package))

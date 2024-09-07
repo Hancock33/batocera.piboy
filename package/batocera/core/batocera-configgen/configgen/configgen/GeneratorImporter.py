@@ -315,10 +315,6 @@ def getGenerator(emulator):
         from generators.opentyrian.opentyrianGenerator import OpentyrianGenerator
         return OpentyrianGenerator()
 
-    if emulator == 'panda3ds':
-        from generators.panda3ds.panda3dsGenerator import Panda3dsGenerator
-        return Panda3dsGenerator()
-
     if emulator == 'pcexhumed':
         from generators.pcexhumed.pcexhumedGenerator import PcexhumedGenerator
         return PcexhumedGenerator()

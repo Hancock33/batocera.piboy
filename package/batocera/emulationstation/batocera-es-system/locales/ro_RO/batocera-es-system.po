@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-08-01 21:58+0300\n"
+"PO-Revision-Date: 2024-09-04 12:13+0300\n"
 "Last-Translator: Mihai Vasiliu <mihai.vasiliu.93@gmail.com>\n"
 "Language-Team: \n"
 "Language: ro_RO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -383,6 +383,18 @@ msgstr ""
 msgctxt "game_options"
 msgid "USE SECOND INSTANCE FOR RUN-AHEAD"
 msgstr "FOLOSEȘTE O A DOUA INSTANȚĂ PENTRU PRE-RULARE"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Use preemptive frames instead of run-ahead. Only runs ahead when controller "
+"state changes."
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "USE PRE-EMPTIVE FRAMES"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -1203,6 +1215,146 @@ msgctxt "game_options"
 msgid "Random Values"
 msgstr "Valori aleatoare"
 
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Enable shader JIT"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds, libretro/panda3ds, libretro/panda3ds, libretro/panda3ds, libretro/panda3ds, ...
+msgctxt "game_options"
+msgid "EMULATOR SETTINGS"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "USE SHADER JIT"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Enable accurate shader multiplication"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "ACCURATE SHADER MUL"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Use ubershaders (No stutter, maybe slower)"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "USE UBERSHADER"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Enable VSync"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "USE VSYNC"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "DSP emulation"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "DSP EMULATION"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "HLE"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds, redream
+msgctxt "game_options"
+msgid "LLE"
+msgstr "LLE"
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Null"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Enable audio"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "USE AUDIO"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Enable virtual SD card"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "USE VIRTUAL SD"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Write protect virtual SD card"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "WRITE PROTECT VIRTUAL SD"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Battery percentage"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "BATTERY LEVEL"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Charger plugged"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "USE CHARGER"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Force shadergen when rendering lights"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "UBERSHADER LIGHTING OVERRIDE"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "Light threshold for forcing shadergen"
+msgstr ""
+
+#. TRANSLATION: libretro/panda3ds
+msgctxt "game_options"
+msgid "UBERSHADER LIGHTING OVERRIDE THRESHOLD"
+msgstr ""
+
 #. TRANSLATION: libretro/desmume, libretro/dolphin, libretro/swanstation, libretro/duckstation, libretro/flycast, ...
 msgctxt "game_options"
 msgid ""
@@ -1249,7 +1401,7 @@ msgctxt "game_options"
 msgid "Arrange the dual screen layout."
 msgstr "Aranjează amplasarea cu două ecrane."
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, citra, melonds, panda3ds, ...
+#. TRANSLATION: libretro/desmume, libretro/melonds, citra, melonds, drastic
 msgctxt "game_options"
 msgid "SCREEN LAYOUT"
 msgstr "AMPLASARE ECRAN"
@@ -1455,7 +1607,7 @@ msgctxt "game_options"
 msgid "RENDERER MODE"
 msgstr "MOD RANDARE"
 
-#. TRANSLATION: libretro/melondsds, citra, duckstation, melonds, panda3ds, ...
+#. TRANSLATION: libretro/melondsds, citra, duckstation, melonds, pcsx2, ...
 msgctxt "game_options"
 msgid "Software"
 msgstr "Software"
@@ -6620,7 +6772,7 @@ msgstr "Oprit este mai sigur. Pornit pentru anumite jocuri."
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Double the rendering resolution."
-msgstr ""
+msgstr "Dublează rezoluția de redare."
 
 #. TRANSLATION: libretro/pcsx_rearmed, drastic
 msgctxt "game_options"
@@ -6630,7 +6782,7 @@ msgstr "REZOLUȚIE DE REDARE ÎMBUNĂTĂȚITĂ"
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "On (Speed hack)"
-msgstr ""
+msgstr "Activat (hack viteză)"
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -8999,7 +9151,7 @@ msgctxt "game_options"
 msgid "ENABLE GAMEPAD VIEW"
 msgstr "ACTIVEAZĂ VIZUALIZARE GAMEPAD"
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
@@ -9008,47 +9160,47 @@ msgstr ""
 "Aranjează amplasarea ecranelor. Ferestrele separate pot fi schimbate cu "
 "tasta rapidă+R2."
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Top Only"
 msgstr "Doar deasupra"
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Bottom Only"
 msgstr "Doar dedesubt"
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Large Top"
 msgstr "Deasupra mare"
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Large Bottom"
 msgstr "Dedesubt mare"
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Left/Right"
 msgstr "Stânga/Dreapta"
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Right/Left"
 msgstr "Dreapta/Stânga"
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Separate Windows"
 msgstr "Ferestre separate"
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
 msgstr "Ecran hibrid deasupra"
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
 msgstr "Ecran hibrid dedesubt"
@@ -9058,37 +9210,37 @@ msgctxt "game_options"
 msgid "GRAPHICS"
 msgstr "GRAFICĂ"
 
-#. TRANSLATION: citra, panda3ds, scummvm, play
+#. TRANSLATION: citra, scummvm, play
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (Implicit)"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, panda3ds, ...
+#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, pcsx2
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr "Repară ruperea ecranului. Solicitant pentru CPU."
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Off will help some games, others will run too fast."
 msgstr "Oprit va ajuta în anumite jocuri, altele vor rula prea repede."
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "FRAME LIMIT"
 msgstr "LIMITĂ DE CADRE"
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Reduce stutter that happens when compiling shaders."
 msgstr "Redu bâlbâielile care apar în timpul compilării shaderelor."
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
 msgstr "CACHE SHADER PE DISC"
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid ""
 "Compile shaders using background threads to avoid shader compilation "
@@ -9097,12 +9249,12 @@ msgstr ""
 "Compilează shaderele folosind fire de execuție în fundal pentru a evita "
 "bâlbâielile. Poate cauza probleme grafice."
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "ENABLE ASYNC SHADER COMPILATION"
 msgstr "ACTIVEAZĂ COMPILAREA SHADERELOR ASINCRON"
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Preloading is impossible from ES."
 msgstr "Preîncărcarea este imposibilă din ES."
@@ -9112,12 +9264,12 @@ msgctxt "game_options"
 msgid "Preload"
 msgstr "Preîncarcă"
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
 msgstr "Noul 3DS are un procesor mai rapid, butoane ZL/ZR și o manetă C."
 
-#. TRANSLATION: citra, panda3ds
+#. TRANSLATION: citra
 msgctxt "game_options"
 msgid "NEW 3DS MODE"
 msgstr "MOD NOU 3DS"
@@ -9300,6 +9452,11 @@ msgstr "Imaginea de ieșire finală, nelegată de setarea NAND a Wii-ului emulat
 msgctxt "game_options"
 msgid "DISPLAY"
 msgstr "ECRAN"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "Automatic ratio"
+msgstr "Raport automat"
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -9529,12 +9686,12 @@ msgstr "TIP PORT GAMECUBE 4"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "Moves South to West, West to North, etc. Standard controller type only."
-msgstr ""
+msgstr "Mută sud la vest, vest la nord etc. Doar pentru controlerele standard."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "ROTATE FACE BUTTONS"
-msgstr ""
+msgstr "ROTEȘTE BUTOANELE DE PE FAȚĂ"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -10926,7 +11083,7 @@ msgctxt "game_options"
 msgid "LIMIT FPS"
 msgstr "LIMITEAZĂ FPS"
 
-#. TRANSLATION: openbor/openbor7530, supermodel
+#. TRANSLATION: openbor/openbor7530, supermodel, model2emu
 msgctxt "game_options"
 msgid "Only some games feature rumble. Not compatible with all controllers."
 msgstr ""
@@ -10952,37 +11109,37 @@ msgstr "Simplu 2x"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "scanlines"
-msgstr ""
+msgstr "linii scanare"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "diagonal filter"
-msgstr ""
+msgstr "filtru diagonal"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "triangular filter"
-msgstr ""
+msgstr "filtru triunghiular"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "wave filter"
-msgstr ""
+msgstr "filtru în valuri"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "lottes crt"
-msgstr ""
+msgstr "crt lottes"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "4xrgss"
-msgstr ""
+msgstr "4xrgss"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "nxagss"
-msgstr ""
+msgstr "nxagss"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11287,12 +11444,12 @@ msgstr "Nescalat (implicit)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Scaled"
-msgstr ""
+msgstr "Scalat"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Force 32bit"
-msgstr ""
+msgstr "Forțează 32 biți"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -12499,11 +12656,6 @@ msgstr "HLE (per pixel)"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
-msgid "LLE"
-msgstr "LLE"
-
-#. TRANSLATION: redream
-msgctxt "game_options"
 msgid "USA (Default)"
 msgstr "SUA (Implicit)"
 
@@ -12945,7 +13097,7 @@ msgstr "PLUGIN DATE"
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "When moving"
-msgstr ""
+msgstr "În mișcare"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -16202,7 +16354,7 @@ msgstr ""
 #. TRANSLATION: wii.dolphin.keys
 msgctxt "keys_files"
 msgid "Exit Dolphin"
-msgstr ""
+msgstr "Ieși din Dolphin"
 
 #. TRANSLATION: dos.dosbox-x.keys
 msgctxt "keys_files"
@@ -16218,51 +16370,6 @@ msgstr "Afișează ecranul controlerului"
 msgctxt "keys_files"
 msgid "Configuration menu"
 msgstr "Meniu configurare"
-
-#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Move Stylet Pointer"
-msgstr "Mută pointerul stylet"
-
-#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "Repornește emularea"
-
-#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Continue/Pause emulation"
-msgstr "Continuă/suspendă emularea"
-
-#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Swap Screen"
-msgstr "Comută ecran"
-
-#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Toggle Screen Layout"
-msgstr "Comută așezare ecran"
-
-#. TRANSLATION: 3ds.panda3ds.keys, mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Captură de ecran"
-
-#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Toggle Speed Limit"
-msgstr "Comută limită de viteză"
-
-#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Swap screens"
-msgstr "Comută ecrane"
-
-#. TRANSLATION: 3ds.panda3ds.keys, 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Mouse Click"
-msgstr "Clic cu mausul"
 
 #. TRANSLATION: moonlight.moonlight.keys
 msgctxt "keys_files"
@@ -16283,6 +16390,11 @@ msgstr "Încarcă stare"
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "Salvează stare"
+
+#. TRANSLATION: mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "Captură de ecran"
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -16408,6 +16520,46 @@ msgstr ""
 msgctxt "keys_files"
 msgid "State/Save to Selected Slot"
 msgstr ""
+
+#. TRANSLATION: 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Move Stylet Pointer"
+msgstr "Mută pointerul stylet"
+
+#. TRANSLATION: 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Restart Emulation"
+msgstr "Repornește emularea"
+
+#. TRANSLATION: 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Continue/Pause emulation"
+msgstr "Continuă/suspendă emularea"
+
+#. TRANSLATION: 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Swap Screen"
+msgstr "Comută ecran"
+
+#. TRANSLATION: 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Toggle Screen Layout"
+msgstr "Comută așezare ecran"
+
+#. TRANSLATION: 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Toggle Speed Limit"
+msgstr "Comută limită de viteză"
+
+#. TRANSLATION: 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Swap screens"
+msgstr "Comută ecrane"
+
+#. TRANSLATION: 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Mouse Click"
+msgstr "Clic cu mausul"
 
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"

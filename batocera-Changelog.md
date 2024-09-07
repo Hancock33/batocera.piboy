@@ -17,10 +17,15 @@
 - Display reflection for x86_64 boards (display.reflection=x or y or xy in batocera.conf to enable it)
 - Emulationstation now supports savestates for standalones (dolphin, pcsx2, mupen, ppsspp)
 - Add Raspberry Pi patches for hardware accelerated HEVC decoding (RPi4 & RPi5 boards)
+- Nvidia Encoding support with `batocera-record` for Production driver systems
+- N64DD: support for standalone .ndd disk format (with libretro-paralleln64)
+- Amiberry: virtual keyboard (click on left stick)
 ### Fixed
 - Steam loading on a NAS drive
 - ScummVM forcing English which can prevent some non-english games from starting
 - Fixed right controller LED for the Ayaneo Air Plus, it's now functional
+- ES: RetroAchievements displayed for Gamecube and Uzebox
+- ES: Fixed a crash when selecting "descending order" for several parameters
 ### Changed / Improved
 - Splash screen now disabled by default
 - Added bezel & sinden border support for the RPi5 with Model 3 games
@@ -57,7 +62,7 @@
   - Libretro-MrBoom to v5.5
   - Libretro-Mupen64plus-Next to July 19, 2024 build
   - Libretro-NeoCD to June 22 build
-- Amiberry to v5.7.3
+- Amiberry to v5.7.4
 - BigPEmu to v115
 - C-Dogs SDL to 2.1.0
 - Cemu to v2.1
@@ -73,8 +78,9 @@
 - Kodi to 21.1
 - PCSX2 to v2.1.100
 - Redream to 1.5.0-1133-g03c2ae9
-- RPCS3 to 0.0.32-16843
+- RPCS3 to 0.0.33 (alpha on Aug 31, 2024)
 - Sonic Mania to Jul 21, 2024 build
+- Syncthing to 1.27.10
 - The Force Engine to Aug 19, 2024 build
 - Vita3k to August 25, 2024 build
 - Xemu to v0.7.131
