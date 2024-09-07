@@ -36,7 +36,7 @@ def setMupenConfig(iniConfig, system, controllers, gameResolution):
         iniConfig.set("Core", "AutoStateSlotIncrement", "False")
     else:
         iniConfig.set("Core", "AutoStateSlotIncrement", "True")
-        
+
     # Create section for Audio-SDL
     if not iniConfig.has_section("Audio-SDL"):
         iniConfig.add_section("Audio-SDL")
