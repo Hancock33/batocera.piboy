@@ -11,9 +11,9 @@ BATOCERA_AUDIO_ALSA_SOURCE=
 BATOCERA_AUDIO_ALSA_DEPENDENCIES += alsa-plugins
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI_ANY),y)
-ALSA_SUFFIX = "-bcm"
+BATOCERA_AUDIO_ALSA_SUFFIX = "-bcm"
 else
-ALSA_SUFFIX =
+BATOCERA_AUDIO_ALSA_SUFFIX =
 endif
 
 define BATOCERA_AUDIO_ALSA_INSTALL_TARGET_CMDS
@@ -31,7 +31,7 @@ define BATOCERA_AUDIO_ALSA_INSTALL_TARGET_CMDS
 		$(TARGET_DIR)/etc/udev/rules.d/90-alsa-setup.rules
 	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio-alsa/soundconfig \
 		$(TARGET_DIR)/usr/bin/soundconfig
-	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio-alsa/alsa/batocera-audio$(ALSA_SUFFIX) \
+	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio-alsa/alsa/batocera-audio$(BATOCERA_AUDIO_ALSA_SUFFIX) \
 		$(TARGET_DIR)/usr/bin/batocera-audio
 endef
 

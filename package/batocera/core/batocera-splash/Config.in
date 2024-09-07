@@ -1,6 +1,5 @@
 config BR2_PACKAGE_BATOCERA_SPLASH
 	bool "batocera-splash"
-
 	select BR2_PACKAGE_DEJAVU_SANS   if BR2_PACKAGE_BATOCERA_SPLASH_OMXPLAYER
 	select BR2_PACKAGE_OMXPLAYER     if BR2_PACKAGE_BATOCERA_SPLASH_OMXPLAYER
 	select BR2_PACKAGE_MPV           if BR2_PACKAGE_BATOCERA_SPLASH_MPV
@@ -15,7 +14,7 @@ choice
 	default BR2_PACKAGE_BATOCERA_SPLASH_IMAGE
 
 	help
-	Select batocera.linux splash type
+	  Select batocera.linux splash type
 
 config BR2_PACKAGE_BATOCERA_SPLASH_IMAGE
 	bool "image"

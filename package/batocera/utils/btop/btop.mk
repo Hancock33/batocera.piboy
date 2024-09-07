@@ -9,13 +9,13 @@ BTOP_SITE = $(call github,aristocratos,btop,$(BTOP_VERSION))
 BTOP_LICENSE = Apache-2.0
 
 ifeq ($(BR2_arm),y)
-	BTOP_EXTRA_ARGS += ARCH=aarch32
+BTOP_EXTRA_ARGS += ARCH=aarch32
 else ifeq ($(BR2_aarch64),y)
-	BTOP_EXTRA_ARGS += ARCH=aarch64
+BTOP_EXTRA_ARGS += ARCH=aarch64
 endif
 
 ifeq ($(BR2_x86_64),y)
-	BTOP_EXTRA_ARGS += ARCH=X86_64
+BTOP_EXTRA_ARGS += ARCH=X86_64
 endif
 
 define BTOP_BUILD_CMDS

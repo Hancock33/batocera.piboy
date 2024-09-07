@@ -19,35 +19,35 @@ ifeq ($(BR2_PACKAGE_PIGPIO),y)
 endif
 
 ifeq ($(BR2_PACKAGE_PULSEAUDIO),y)
-    LEDSPICER_CONF_OPTS += --enable-pulseaudio
-    LEDSPICER_DEPENDENCIES += pulseaudio
+LEDSPICER_CONF_OPTS += --enable-pulseaudio
+LEDSPICER_DEPENDENCIES += pulseaudio
 else
-    LEDSPICER_CONF_OPTS += --disable-pulseaudio
+LEDSPICER_CONF_OPTS += --disable-pulseaudio
 endif
 
 ifeq ($(BR2_PACKAGE_ALSA_LIB),y)
-    LEDSPICER_CONF_OPTS += --enable-alsaaudio
-    LEDSPICER_DEPENDENCIES += alsa-lib
+LEDSPICER_CONF_OPTS += --enable-alsaaudio
+LEDSPICER_DEPENDENCIES += alsa-lib
 else
-    LEDSPICER_CONF_OPTS += --disable-alsaaudio
+LEDSPICER_CONF_OPTS += --disable-alsaaudio
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_RPI_ANY),y)
-	LEDSPICER_DEPENDENCIES += pigpio
-	LEDSPICER_CONF_OPTS += --enable-raspberrypi
+LEDSPICER_DEPENDENCIES += pigpio
+LEDSPICER_CONF_OPTS += --enable-raspberrypi
 else
-	LEDSPICER_CONF_OPTS += --disable-raspberrypi
+LEDSPICER_CONF_OPTS += --disable-raspberrypi
 endif
 
 define LEDSPICER_UDEV_RULE
-    mkdir -p $(TARGET_DIR)/etc/udev/rules.d
-    cp $(@D)/data/21-ledspicer.rules $(TARGET_DIR)/etc/udev/rules.d/99-ledspicer.rules
+	mkdir -p $(TARGET_DIR)/etc/udev/rules.d
+	cp $(@D)/data/21-ledspicer.rules $(TARGET_DIR)/etc/udev/rules.d/99-ledspicer.rules
 endef
 
 define LEDSPICER_SERVICE_INSTALL
-    mkdir -p $(TARGET_DIR)/usr/share/batocera/services
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/services
 	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/ledspicer/ledspicer \
-        $(TARGET_DIR)/usr/share/batocera/services/
+		$(TARGET_DIR)/usr/share/batocera/services/
 endef
 
 LEDSPICER_POST_INSTALL_TARGET_HOOKS += LEDSPICER_UDEV_RULE

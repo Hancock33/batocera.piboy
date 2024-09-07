@@ -5,6 +5,7 @@ config BR2_PACKAGE_RYZENADJ
 	select BR2_PACKAGE_LIBPCIACCESS
 
 	help
-	  Adjust power management settings for Mobile Raven Ridge Ryzen Processors
+	  Adjust power management settings for
+	  Mobile Raven Ridge Ryzen Processors
 
 	  https://github.com/FlyGoat/RyzenAdj

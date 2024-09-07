@@ -1,12 +1,12 @@
 config BR2_PACKAGE_SRB2KART
 	bool "srb2kart"
+	depends on BR2_INSTALL_LIBSTDCPP
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
 	select BR2_PACKAGE_LIBGME
 
-	depends on BR2_INSTALL_LIBSTDCPP
-
 	help
-	  SRB2Kart is a kart racing mod based on the 3D Sonic the Hedgehog fangame Sonic Robo Blast 2
+	  SRB2Kart is a kart racing mod based on the 3D Sonic the
+	  Hedgehog fangame Sonic Robo Blast 2
 
 	  https://www.srb.org/

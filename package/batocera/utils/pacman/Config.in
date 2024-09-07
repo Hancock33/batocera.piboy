@@ -14,4 +14,5 @@ config BR2_PACKAGE_PACMAN
 	select BR2_PACKAGE_PYTHON_HTTPLIB2 # needed for batocera-pacman-batoexec
 
 	help
-	  Arch Linux PACkage MANager. Because of its name, it's the best choice for a retrogaming-oriented distribution :)
+	  Arch Linux PACkage MANager. Because of its name, it's the
+	  best choice for a retrogaming-oriented distribution :)
