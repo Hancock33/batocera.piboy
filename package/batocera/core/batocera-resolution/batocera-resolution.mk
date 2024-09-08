@@ -8,28 +8,33 @@ BATOCERA_RESOLUTION_VERSION = 1.3
 BATOCERA_RESOLUTION_LICENSE = GPL
 BATOCERA_RESOLUTION_DEPENDENCIES = pciutils
 BATOCERA_RESOLUTION_SOURCE=
-BATOCERA_RESOLUTION_PATH = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-resolution/scripts
+BATOCERA_RESOLUTION_CP_PATH = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-resolution/scripts
 
 ifeq ($(BR2_PACKAGE_RPI_USERLAND),y)
     BATOCERA_RESOLUTION_SCRIPT_TYPE = tvservice
-else ifeq ($(BR2_PACKAGE_LIBDRM),y)
-    BATOCERA_RESOLUTION_SCRIPT_TYPE = drm
+    BATOCERA_RESOLUTION_RECORDER_TYPE = basic
 else ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
     BATOCERA_RESOLUTION_SCRIPT_TYPE = xorg
+    BATOCERA_RESOLUTION_RECORDER_TYPE = xorg
 else ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND_SWAY),y)
     BATOCERA_RESOLUTION_SCRIPT_TYPE = wayland-sway
+    BATOCERA_RESOLUTION_RECORDER_TYPE = wayland-sway
     BATOCERA_RESOLUTION_DEPENDENCIES += grim wf-recorder
+else ifeq ($(BR2_PACKAGE_LIBDRM),y)
+    BATOCERA_RESOLUTION_SCRIPT_TYPE = drm
+    BATOCERA_RESOLUTION_RECORDER_TYPE = basic
 else
     BATOCERA_RESOLUTION_SCRIPT_TYPE = basic
+    BATOCERA_RESOLUTION_RECORDER_TYPE = basic
 endif
 
 define BATOCERA_RESOLUTION_INSTALL_TARGET_CMDS
-	install -m 0755 $(BATOCERA_RESOLUTION_PATH)/resolution/batocera-resolution.$(BATOCERA_RESOLUTION_SCRIPT_TYPE) $(TARGET_DIR)/usr/bin/batocera-resolution
-	install -m 0755 $(BATOCERA_RESOLUTION_PATH)/screenshot/batocera-screenshot.$(BATOCERA_RESOLUTION_SCRIPT_TYPE) $(TARGET_DIR)/usr/bin/batocera-screenshot
+	install -m 0755 $(BATOCERA_RESOLUTION_CP_PATH)/resolution/batocera-resolution.$(BATOCERA_RESOLUTION_SCRIPT_TYPE) $(TARGET_DIR)/usr/bin/batocera-resolution
+	install -m 0755 $(BATOCERA_RESOLUTION_CP_PATH)/screenshot/batocera-screenshot.$(BATOCERA_RESOLUTION_SCRIPT_TYPE) $(TARGET_DIR)/usr/bin/batocera-screenshot
 endef
 
 define BATOCERA_RESOLUTION_INSTALL_RK3128
-	install -m 0755 $(BATOCERA_RESOLUTION_PATH)/resolution/batocera-resolution-post-rk3128 $(TARGET_DIR)/usr/bin/batocera-resolution-post
+	install -m 0755 $(BATOCERA_RESOLUTION_CP_PATH)/resolution/batocera-resolution-post-rk3128 $(TARGET_DIR)/usr/bin/batocera-resolution-post
 endef
 
 define BATOCERA_RESOLUTION_INSTALL_XORG
@@ -38,7 +43,7 @@ define BATOCERA_RESOLUTION_INSTALL_XORG
 endef
 
 define BATOCERA_RESOLUTION_INSTALL_RECORDER
-	install -m 0755 $(BATOCERA_RESOLUTION_PATH)/recorder/batocera-record.$(BATOCERA_RESOLUTION_SCRIPT_TYPE) $(TARGET_DIR)/usr/bin/batocera-record
+	install -m 0755 $(BATOCERA_RESOLUTION_CP_PATH)/recorder/batocera-record.$(BATOCERA_RESOLUTION_RECORDER_TYPE) $(TARGET_DIR)/usr/bin/batocera-record
 endef
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3128),y)

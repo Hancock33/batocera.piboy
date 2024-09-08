@@ -10,10 +10,11 @@ BATOCERA_CONFIGGEN_SOURCE=
 BATOCERA_CONFIGGEN_DEPENDENCIES = python3 python-pyyaml
 BATOCERA_CONFIGGEN_INSTALL_STAGING = YES
 
-BATOCERA_CONFIGGEN_DIR = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen
+BATOCERA_CONFIGGEN_CP_DIR = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen
 
 define BATOCERA_CONFIGGEN_EXTRACT_CMDS
-	cp -avf $(BATOCERA_CONFIGGEN_DIR)/configgen/* $(@D)
+	echo $(BATOCERA_CONFIGGEN_CP_DIR)
+	cp -avf $(BATOCERA_CONFIGGEN_CP_DIR)/configgen/* $(@D)
 endef
 
 ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI),y)
@@ -82,24 +83,24 @@ endif
 
 define BATOCERA_CONFIGGEN_INSTALL_STAGING_CMDS
 	mkdir -p $(STAGING_DIR)/usr/share/batocera/configgen
-	cp $(BATOCERA_CONFIGGEN_DIR)/configs/configgen-defaults.yml									$(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults.yml
-	cp $(BATOCERA_CONFIGGEN_DIR)/configs/configgen-defaults-$(BATOCERA_CONFIGGEN_SYSTEM).yml		$(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml
+	cp $(BATOCERA_CONFIGGEN_CP_DIR)/configs/configgen-defaults.yml									$(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults.yml
+	cp $(BATOCERA_CONFIGGEN_CP_DIR)/configs/configgen-defaults-$(BATOCERA_CONFIGGEN_SYSTEM).yml		$(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml
 
 	@if [ "$(BATOCERA_CONFIGGEN_SYSTEM)" = "piboy4" ]; then \
-	cp $(BATOCERA_CONFIGGEN_DIR)/configs/configgen-defaults-bcm2711.yml							$(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
-	cp $(BATOCERA_CONFIGGEN_DIR)/configs/configgen-defaults-piboy4.yml							$(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-piboy4.yml ; fi
+	cp $(BATOCERA_CONFIGGEN_CP_DIR)/configs/configgen-defaults-bcm2711.yml							$(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
+	cp $(BATOCERA_CONFIGGEN_CP_DIR)/configs/configgen-defaults-piboy4.yml							$(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-piboy4.yml ; fi
 endef
 
 define BATOCERA_CONFIGGEN_CONFIGS
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/configgen
-	cp -pr $(BATOCERA_CONFIGGEN_DIR)/data														$(TARGET_DIR)/usr/share/batocera/configgen/
-	cp $(BATOCERA_CONFIGGEN_DIR)/configs/configgen-defaults.yml									$(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults.yml
-	cp $(BATOCERA_CONFIGGEN_DIR)/configs/configgen-defaults-$(BATOCERA_CONFIGGEN_SYSTEM).yml		$(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml
-	cp $(BATOCERA_CONFIGGEN_DIR)/scripts/call_achievements_hooks.sh								$(TARGET_DIR)/usr/share/batocera/configgen/
+	cp -pr $(BATOCERA_CONFIGGEN_CP_DIR)/data														$(TARGET_DIR)/usr/share/batocera/configgen/
+	cp $(BATOCERA_CONFIGGEN_CP_DIR)/configs/configgen-defaults.yml									$(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults.yml
+	cp $(BATOCERA_CONFIGGEN_CP_DIR)/configs/configgen-defaults-$(BATOCERA_CONFIGGEN_SYSTEM).yml		$(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml
+	cp $(BATOCERA_CONFIGGEN_CP_DIR)/scripts/call_achievements_hooks.sh								$(TARGET_DIR)/usr/share/batocera/configgen/
 
 	@if [ "$(BATOCERA_CONFIGGEN_SYSTEM)" = "piboy4" ]; then \
-	cp $(BATOCERA_CONFIGGEN_DIR)/configs/configgen-defaults-bcm2711.yml							$(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
-	cp $(BATOCERA_CONFIGGEN_DIR)/configs/configgen-defaults-piboy4.yml							$(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-piboy4.yml ; fi
+	cp $(BATOCERA_CONFIGGEN_CP_DIR)/configs/configgen-defaults-bcm2711.yml							$(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
+	cp $(BATOCERA_CONFIGGEN_CP_DIR)/configs/configgen-defaults-piboy4.yml							$(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-piboy4.yml ; fi
 endef
 
 define BATOCERA_CONFIGGEN_BINS
@@ -109,12 +110,12 @@ define BATOCERA_CONFIGGEN_BINS
 endef
 
 define BATOCERA_CONFIGGEN_ES_HOOKS
-	install -D -m 0755 $(BATOCERA_CONFIGGEN_DIR)/scripts/powermode_launch_hooks.sh $(TARGET_DIR)/usr/share/batocera/configgen/scripts/powermode_launch_hooks.sh
+	install -D -m 0755 $(BATOCERA_CONFIGGEN_CP_DIR)/scripts/powermode_launch_hooks.sh $(TARGET_DIR)/usr/share/batocera/configgen/scripts/powermode_launch_hooks.sh
 endef
 
 define BATOCERA_CONFIGGEN_X86_HOOKS
-	install -D -m 0755 $(BATOCERA_CONFIGGEN_DIR)/scripts/tdp_hooks.sh         $(TARGET_DIR)/usr/share/batocera/configgen/scripts/tdp_hooks.sh
-	install -D -m 0755 $(BATOCERA_CONFIGGEN_DIR)/scripts/nvidia-workaround.sh $(TARGET_DIR)/usr/share/batocera/configgen/scripts/nvidia-workaround.sh
+	install -D -m 0755 $(BATOCERA_CONFIGGEN_CP_DIR)/scripts/tdp_hooks.sh         $(TARGET_DIR)/usr/share/batocera/configgen/scripts/tdp_hooks.sh
+	install -D -m 0755 $(BATOCERA_CONFIGGEN_CP_DIR)/scripts/nvidia-workaround.sh $(TARGET_DIR)/usr/share/batocera/configgen/scripts/nvidia-workaround.sh
 endef
 
 BATOCERA_CONFIGGEN_POST_INSTALL_TARGET_HOOKS = BATOCERA_CONFIGGEN_CONFIGS
