@@ -4,7 +4,8 @@ config BR2_PACKAGE_FPINBALL
 	depends on BR2_PACKAGE_BATOCERA_WINE
 
 	help
-	  Future Pinball precompiled for 32bit Windows running through Wine.
+	  Future Pinball precompiled for 32bit Windows running
+	  through Wine.
 
 	  https://futurepinball.com
 

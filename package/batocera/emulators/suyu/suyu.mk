@@ -31,7 +31,7 @@ SUYU_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
 SUYU_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
-	SUYU_DEPENDENCIES += host-glslang vulkan-headers vulkan-loader
+    SUYU_DEPENDENCIES += host-glslang vulkan-headers vulkan-loader
 endif
 
 define SUYU_INSTALL_TARGET_CMDS

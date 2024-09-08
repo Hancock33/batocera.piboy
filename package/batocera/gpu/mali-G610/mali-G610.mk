@@ -19,13 +19,13 @@ MALI_G610_PLATFORM = gbm
 MALI_G610_MESA_HEADER_DIRS = KHR EGL GLES GLES2 GLES3
 MALI_G610_ROCKCHIP_HEADER_DIRS = GBM
 MALI_G610_CONF_OPTS += \
-   -Dwith-overlay=false \
-   -Dopencl-icd=false \
-   -Dkhr-header=true \
-   -Dgpu=$(MALI_G610_GPU) \
-   -Dversion=$(MALI_G610_VER) \
-   -Dplatform=$(subst $(eval) $(eval),-,$(MALI_G610_PLATFORM)) \
-   -Dwrappers=auto \
-   -Dhooks=true
+	-Dwith-overlay=false \
+	-Dopencl-icd=false \
+	-Dkhr-header=true \
+	-Dgpu=$(MALI_G610_GPU) \
+	-Dversion=$(MALI_G610_VER) \
+	-Dplatform=$(subst $(eval) $(eval),-,$(MALI_G610_PLATFORM)) \
+	-Dwrappers=auto \
+	-Dhooks=true
 
 $(eval $(meson-package))

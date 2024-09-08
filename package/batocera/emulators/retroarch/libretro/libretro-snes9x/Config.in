@@ -5,7 +5,7 @@ config BR2_PACKAGE_LIBRETRO_SNES9X
 	select BR2_PACKAGE_ZLIB
 
 	help
-	  Snes9x - Portable Super Nintendo Entertainment System (TM) emulator http://www.snes9x.com
+	  Snes9x - Portable Super Nintendo Entertainment System emulator
 
 	  http://www.libretro.com
 

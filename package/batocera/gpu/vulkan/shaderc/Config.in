@@ -9,6 +9,7 @@ config BR2_PACKAGE_SHADERC
 	select BR2_PACKAGE_WAYLAND
 
 	help
-	  A collection of tools, libraries, and tests for Vulkan shader compilation.
+	  A collection of tools, libraries, and tests for
+	  Vulkan shader compilation.
 
 	  https://github.com/google/shaderc.git

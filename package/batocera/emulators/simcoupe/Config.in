@@ -4,7 +4,8 @@ config BR2_PACKAGE_SIMCOUPE
 	select BR2_PACKAGE_SDL2
 
 	help
-	  SimCoupe emulates the SAM Coupe - a Britsh Z80-based home computer released in 1989 by Miles Gordon Technology.
+	  SimCoupe emulates the SAM Coupe - a Britsh Z80-based
+	  home computer released in 1989.
 
 	  https://github.com/simonowen/simcoupe
 

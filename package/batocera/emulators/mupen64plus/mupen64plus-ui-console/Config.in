@@ -6,7 +6,8 @@ config BR2_PACKAGE_MUPEN64PLUS_UI_CONSOLE
 	depends on BR2_PACKAGE_MUPEN64PLUS_CORE
 
 	help
-	  Console (command-line) front-end user interface for Mupen64Plus v2.0 project
+	  Console (command-line) front-end user interface for
+	  Mupen64Plus v2.0 project
 
 	  https://github.com/mupen64plus/
 	  https://github.com/mupen64plus/mupen64plus-ui-console

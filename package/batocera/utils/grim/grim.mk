@@ -5,7 +5,6 @@
 ################################################################################
 # Version: Commits on Jun 14, 2023
 GRIM_VERSION = 1.4.1
-GRIM_SOURCE = grim-$(GRIM_VERSION).tar.gz
 GRIM_SITE = https://git.sr.ht/~emersion/grim/refs/download/v$(GRIM_VERSION)
 GRIM_LICENSE = MIT
 GRIM_LICENSE_FILES = LICENSE

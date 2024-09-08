@@ -64,7 +64,8 @@ config BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER_PVR
 	select BR2_PACKAGE_IMG_MESA3D_GALLIUM_DRIVER
 	select BR2_PACKAGE_IMG_MESA3D_OPENGL_EGL
 	help
-	  pvr is the 3D acceleration backend for Imagination PowerVR GPUs
+	  pvr is the 3D acceleration backend for
+	  Imagination PowerVR GPUs
 
 if BR2_PACKAGE_IMG_MESA3D_DRIVER
 

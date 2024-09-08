@@ -3,6 +3,7 @@ config BR2_PACKAGE_XONE
 	select BR2_PACKAGE_LIBUSB
 
 	help
-	  Linux kernel driver for Xbox One and Xbox Series X|S accessories
+	  Linux kernel driver for Xbox One and
+	  Xbox Series X|S accessories
 
 	  https://github.com/medusalix/xone

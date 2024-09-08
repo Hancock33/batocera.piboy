@@ -13,13 +13,13 @@ define DRASTIC_EXTRACT_CMDS
 endef
 
 ifeq ($(BR2_arm),y)
-	DRASTIC_BINARYFILE=drastic_xu4
+    DRASTIC_BINARYFILE=drastic_xu4
 else ifeq ($(BR2_aarch64),y)
-	ifeq ($(BR2_PACKAGE_MESA3D),y)
-		DRASTIC_BINARYFILE=drastic_n2
-	else
-		DRASTIC_BINARYFILE=drastic_oga
-	endif
+    ifeq ($(BR2_PACKAGE_MESA3D),y)
+        DRASTIC_BINARYFILE=drastic_n2
+    else
+        DRASTIC_BINARYFILE=drastic_oga
+    endif
 endif
 
 define DRASTIC_INSTALL_TARGET_CMDS

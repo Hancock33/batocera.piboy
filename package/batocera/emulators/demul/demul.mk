@@ -11,7 +11,7 @@ DEMUL_SITE = http://demul.emulation64.com/files
 DEMUL_DEPENDENCIES = host-p7zip
 
 define DEMUL_EXTRACT_CMDS
-	mkdir -p $(@D) && cd $(@D) && $(HOST_DIR)/usr/bin/7zr x -y $(DL_DIR)/$(DEMUL_DL_SUBDIR)/$(DEMUL_SOURCE)
+	mkdir -p $(@D) && cd $(@D) && $(HOST_DIR)/bin/7zr x -y $(DL_DIR)/$(DEMUL_DL_SUBDIR)/$(DEMUL_SOURCE)
 endef
 
 define DEMUL_INSTALL_TARGET_CMDS

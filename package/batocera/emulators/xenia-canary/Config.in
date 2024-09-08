@@ -5,7 +5,7 @@ config BR2_PACKAGE_XENIA_CANARY
 	select BR2_PACKAGE_PYTHON_TOML
 
 	help
-	  Xenia is an open source research project for emulating Xbox 360 games on modern PCs.
-	  This is the bleeding edge canary release.
+	  Xenia is an open source research project for emulating Xbox360
+	  games on modern PCs. This is the bleeding edge canary release.
 
 	  https://xenia.jp/

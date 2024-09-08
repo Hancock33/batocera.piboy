@@ -17,20 +17,17 @@ EVSIEVE_CARGO_ENV = CARGO_HOME=$(HOST_DIR)/share/cargo RUSTFLAGS='$(addprefix -C
 EVSIEVE_BIN_DIR = target/$(RUSTC_TARGET_NAME)/$(EVSIEVE_CARGO_MODE)
 
 EVSIEVE_CARGO_OPTS = \
- 	$(if $(BR2_ENABLE_DEBUG),,--release) \
- 	--target=$(RUSTC_TARGET_NAME) \
- 	--manifest-path=$(@D)/Cargo.toml
+	$(if $(BR2_ENABLE_DEBUG),,--release) \
+	--target=$(RUSTC_TARGET_NAME) \
+	--manifest-path=$(@D)/Cargo.toml
 
 define EVSIEVE_BUILD_CMDS
- 	$(TARGET_MAKE_ENV) $(EVSIEVE_CARGO_ENV) \
- 		cargo build $(EVSIEVE_CARGO_OPTS)
+	$(TARGET_MAKE_ENV) $(EVSIEVE_CARGO_ENV) cargo build $(EVSIEVE_CARGO_OPTS)
 endef
 
 define EVSIEVE_INSTALL_TARGET_CMDS
- 	$(INSTALL) -D -m 0755 $(@D)/$(EVSIEVE_BIN_DIR)release/evsieve \
- 		$(TARGET_DIR)/usr/bin/evsieve
- 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/evsieve/evsieve-merge-devices \
- 		$(TARGET_DIR)/usr/bin/evsieve-merge-devices
+	$(INSTALL) -D -m 0755 $(@D)/$(EVSIEVE_BIN_DIR)release/evsieve $(TARGET_DIR)/usr/bin/evsieve
+	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/evsieve/evsieve-merge-devices $(TARGET_DIR)/usr/bin/evsieve-merge-devices
 	$(TARGET_STRIP) -s $(TARGET_DIR)/usr/bin/evsieve
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/evsieve/evsieve-helper $(TARGET_DIR)/usr/bin/evsieve-helper
 endef

@@ -10,9 +10,9 @@ RYUJINXNG_LICENSE = MIT
 RYUJINXNG_DEPENDENCIES = sdl2 openal hicolor-icon-theme adwaita-icon-theme librsvg
 
 ifeq ($(BR2_x86_64),y)
-	RYUJINXNG_SOURCE = ryujinx-$(RYUJINXNG_VERSION)-linux_x64.tar.gz
+    RYUJINXNG_SOURCE = ryujinx-$(RYUJINXNG_VERSION)-linux_x64.tar.gz
 else
-	RYUJINXNG_SOURCE = ryujinx-$(RYUJINXNG_VERSION)-linux_arm64.tar.gz
+    RYUJINXNG_SOURCE = ryujinx-$(RYUJINXNG_VERSION)-linux_arm64.tar.gz
 endif
 
 define RYUJINXNG_EXTRACT_CMDS

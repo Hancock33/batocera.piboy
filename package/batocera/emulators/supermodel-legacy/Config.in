@@ -10,7 +10,8 @@ config BR2_PACKAGE_SUPERMODEL_LEGACY
 	select BR2_PACKAGE_LIBZIP
 
 	help
-	  Supermodel is a SEGA Model 3 emulator that uses the SDL-Library.
+	  Supermodel is a SEGA Model 3 emulator that uses
+	  the SDL-Library.
 
 	  http://www.supermodel3.com
 	  source: https://github.com/trzy/Supermodel

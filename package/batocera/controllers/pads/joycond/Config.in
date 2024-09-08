@@ -5,7 +5,7 @@ config BR2_PACKAGE_JOYCOND
 	select BR2_PACKAGE_HAS_UDEV
 
 	help
-	  Joycond is a linux daemon which uses the evdev devices provided by
-	  hid-nintendo (now in the kernel) to implement joycon pairing.
+	  Joycond is a linux daemon which uses the evdev devices
+	  provided by hid-nintendo to implement joycon pairing.
 
 	  https://github.com/DanielOgorchock/joycond

@@ -8,7 +8,8 @@ config BR2_PACKAGE_MUPEN64PLUS_VIDEO_GLIDE64MK2
 	select BR2_PACKAGE_BOOST_FILESYSTEM
 
 	help
-	  Video plugin for Mupen64Plus 2.0 based on 10th anniversary release code from gonetz
+	  Video plugin for Mupen64Plus 2.0 based on 10th anniversary
+	  release code from gonetz
 
 	  https://github.com/mupen64plus/
 

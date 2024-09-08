@@ -7,6 +7,7 @@ config BR2_PACKAGE_EDUKE32
 	select BR2_PACKAGE_IONFURY
 
 	help
-	  EDuke32 is a Build Engine source port for playing games like Duke Nukem 3D and Ion Fury
+	  EDuke32 is a Build Engine source port for playing games like
+	  Duke Nukem 3D and Ion Fury
 
 	  https://www.eduke32.com/

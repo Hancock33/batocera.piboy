@@ -3,8 +3,8 @@
 # gzdoom
 #
 ################################################################################
-# Version: Commits on Aug 10, 2024
-GZDOOM_VERSION = 76c8b6da5742562a8eece3037f90ab71de4b1d77
+# Version: Commits on Sept 08, 2024
+GZDOOM_VERSION = afcd38907c07848a0ab3b7e710d91bea833a5305
 GZDOOM_SITE = $(call github,ZDoom,gzdoom,$(GZDOOM_VERSION))
 GZDOOM_LICENSE = GPL-3.0
 GZDOOM_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic libvpx webp host-zmusic host-gzdoom
@@ -30,28 +30,28 @@ GZDOOM_CONF_OPTS += -DINSTALL_SOUNDFONT_PATH="/usr/share/gzdoom"
 GZDOOM_CONF_OPTS += -DINSTALL_PK3_PATH="/usr/share/gzdoom"
 
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
-	ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
-		GZDOOM_DEPENDENCIES += xlib_libX11 vulkan-headers vulkan-loader
-		GZDOOM_CONF_OPTS += -DHAVE_VULKAN=ON
-		GZDOOM_CONF_OPTS += -DVULKAN_USE_XLIB=ON -DVULKAN_USE_WAYLAND=OFF
-	else ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND_SWAY),y)
-		GZDOOM_DEPENDENCIES += wayland vulkan-headers vulkan-loader
-		GZDOOM_CONF_OPTS += -DHAVE_VULKAN=ON
-		GZDOOM_CONF_OPTS += -DVULKAN_USE_XLIB=OFF -DVULKAN_USE_WAYLAND=ON
-	else
-		# no valid surface provider
-		GZDOOM_CONF_OPTS += -DHAVE_VULKAN=OFF
-	endif
+    ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
+        GZDOOM_DEPENDENCIES += xlib_libX11 vulkan-headers vulkan-loader
+        GZDOOM_CONF_OPTS += -DHAVE_VULKAN=ON
+        GZDOOM_CONF_OPTS += -DVULKAN_USE_XLIB=ON -DVULKAN_USE_WAYLAND=OFF
+    else ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND_SWAY),y)
+        GZDOOM_DEPENDENCIES += wayland vulkan-headers vulkan-loader
+        GZDOOM_CONF_OPTS += -DHAVE_VULKAN=ON
+        GZDOOM_CONF_OPTS += -DVULKAN_USE_XLIB=OFF -DVULKAN_USE_WAYLAND=ON
+    else
+        # no valid surface provider
+        GZDOOM_CONF_OPTS += -DHAVE_VULKAN=OFF
+    endif
 else
-	GZDOOM_CONF_OPTS += -DHAVE_VULKAN=OFF
+    GZDOOM_CONF_OPTS += -DHAVE_VULKAN=OFF
 endif
 
 ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
-	GZDOOM_CONF_OPTS += -DHAVE_GLES2=ON
-	GZDOOM_DEPENDENCIES += libgles
+    GZDOOM_CONF_OPTS += -DHAVE_GLES2=ON
+    GZDOOM_DEPENDENCIES += libgles
 else
-	GZDOOM_CONF_OPTS += -DHAVE_GLES2=OFF
-	GZDOOM_DEPENDENCIES += libgl
+    GZDOOM_CONF_OPTS += -DHAVE_GLES2=OFF
+    GZDOOM_DEPENDENCIES += libgl
 endif
 
 define GZDOOM_INSTALL

@@ -5,6 +5,7 @@ config BR2_PACKAGE_LIBRETRO_VAPORSPEC
 	depends on BR2_GCC_ENABLE_OPENMP
 
 	help
-	  A virtual game platform with capabilities similar to 80s game consoles.
+	  A virtual game platform with capabilities similar
+	  to 80s game consoles.
 
 	  https://github.com/minkcv/vm.git

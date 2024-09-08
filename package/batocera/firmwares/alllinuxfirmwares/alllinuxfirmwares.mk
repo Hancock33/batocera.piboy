@@ -27,25 +27,25 @@ ALLLINUXFIRMWARES_REMOVE_DIRS = $(@D)/bnx2* \
 								$(@D)/LICENSE*
 
 ifeq ($(BR2_arm)$(BR2_aarch64),y)
-	ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/*-fw-usb-*.sbcf \
-									$(@D)/amd \
-									$(@D)/amdgpu \
-									$(@D)/ath10k \
-									$(@D)/ath11k \
-									$(@D)/ath12k \
-									$(@D)/c*.bin \
-									$(@D)/cypress \
-									$(@D)/i915 \
-									$(@D)/intel \
-									$(@D)/iwlwifi* \
-									$(@D)/nvidia \
-									$(@D)/q*.bin \
-									$(@D)/qat_* \
-									$(@D)/radeon
+ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/*-fw-usb-*.sbcf \
+								$(@D)/amd \
+								$(@D)/amdgpu \
+								$(@D)/ath10k \
+								$(@D)/ath11k \
+								$(@D)/ath12k \
+								$(@D)/c*.bin \
+								$(@D)/cypress \
+								$(@D)/i915 \
+								$(@D)/intel \
+								$(@D)/iwlwifi* \
+								$(@D)/nvidia \
+								$(@D)/q*.bin \
+								$(@D)/qat_* \
+								$(@D)/radeon
 endif
 
 ifeq ($(BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI)$(BR2_PACKAGE_EXTRALINUXFIRMWARES),y)
-	ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/brcm
+ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/brcm
 endif
 
 define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
@@ -75,13 +75,13 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 	done
 endef
 
-define BATOCERA_STEAM_DECK_OLED_FW
+define ALLLINUXFIRMWARES_BATOCERA_STEAM_DECK_OLED_FW
 	mkdir -p $(TARGET_DIR)/lib/firmware
 	tar -xf $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/firmwares/alllinuxfirmwares/steamdeck-oled-firmware.tar.xz -C $(TARGET_DIR)/lib/firmware
 endef
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
-	ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += BATOCERA_STEAM_DECK_OLED_FW
+ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_BATOCERA_STEAM_DECK_OLED_FW
 endif
 
 $(eval $(generic-package))

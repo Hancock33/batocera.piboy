@@ -14,7 +14,7 @@ WINE_CUSTOM_DEPENDENCIES = host-bison host-flex host-wine-custom
 HOST_WINE_CUSTOM_DEPENDENCIES = host-bison host-flex
 
 ifeq ($(BR_CMAKE_USE_CLANG),y)
-	HOST_WINE_CUSTOM_DEPENDENCIES += host-clang host-lld
+    HOST_WINE_CUSTOM_DEPENDENCIES += host-clang host-lld
 endif
 
 define WINE_CUSTOM_AUTOGEN
@@ -47,9 +47,9 @@ WINE_CUSTOM_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 	--exec-prefix=/usr/wine/ge-custom
 
 ifeq ($(BR2_x86_64),y)
-	WINE_CUSTOM_CONF_OPTS += --enable-win64
+    WINE_CUSTOM_CONF_OPTS += --enable-win64
 else
-	WINE_CUSTOM_CONF_OPTS += --disable-win64
+    WINE_CUSTOM_CONF_OPTS += --disable-win64
 endif
 
 # Wine uses a wrapper around gcc, and uses the value of --host to
@@ -335,7 +335,7 @@ HOST_WINE_CUSTOM_CONF_OPTS += \
 
 # Cleanup final directory
 define WINE_CUSTOM_REMOVE_INCLUDES_HOOK
-        rm -Rf $(TARGET_DIR)/usr/wine/ge-custom/include
+	rm -Rf $(TARGET_DIR)/usr/wine/ge-custom/include
 endef
 
 WINE_CUSTOM_POST_INSTALL_TARGET_HOOKS += WINE_CUSTOM_REMOVE_INCLUDES_HOOK

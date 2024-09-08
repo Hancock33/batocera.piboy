@@ -3,6 +3,6 @@ config BR2_PACKAGE_SNES9X
 	select BR2_PACKAGE_BATOCERA_QT6
 
 	help
-	  Snes9x - Portable Super Nintendo Entertainment System (TM) emulator
+	  Snes9x - Portable Super Nintendo Entertainment System emulator
 
 	  https://github.com/snes9xgit/snes9x/

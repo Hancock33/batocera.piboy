@@ -4,6 +4,7 @@ config BR2_PACKAGE_RTCW
 	select BR2_PACKAGE_OPENAL
 
 	help
-	  Return to Castle Wolfenstein port using IOQuake3 functionality.
+	  Return to Castle Wolfenstein port using
+	  IOQuake3 functionality.
 
 	  https://github.com/iortcw/iortcw

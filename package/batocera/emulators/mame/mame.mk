@@ -72,7 +72,7 @@ define MAME_BUILD_CMDS
 	PATH="$(HOST_DIR)/bin:$$PATH" \
 	SYSROOT="$(STAGING_DIR)" \
 	LDFLAGS="--sysroot=$(STAGING_DIR) $(MAME_LDFLAGS)" \
-	PKG_CONFIG="$(HOST_DIR)/usr/bin/pkg-config --define-prefix" \
+	PKG_CONFIG="$(HOST_DIR)/bin/pkg-config --define-prefix" \
 	PKG_CONFIG_PATH="$(STAGING_DIR)/usr/lib/pkgconfig" \
 	CCACHE_SLOPPINESS="pch_defines,time_macros" \
 	$(MAKE) -j$(MAME_JOBS) TARGETOS=linux OSD=sdl \

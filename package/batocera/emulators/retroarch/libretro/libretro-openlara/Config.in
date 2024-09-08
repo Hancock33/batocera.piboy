@@ -4,7 +4,8 @@ config BR2_PACKAGE_LIBRETRO_OPENLARA
 	depends on BR2_INSTALL_LIBSTDCPP
 
 	help
-	  A libretro core using the classic Tomb Raider open-source engine.
+	  A libretro core using the classic Tomb Raider
+	  open-source engine.
 
 	  https://github.com/libretro/OpenLara
 

@@ -3,4 +3,5 @@ config BR2_PACKAGE_SDL12_COMPAT
 	select BR2_PACKAGE_SDL2
 
 	help
-	  An SDL-1.2 compatibility layer that uses SDL 2.0 behind the scenes.
+	  An SDL-1.2 compatibility layer that uses
+	  SDL 2.0 behind the scenes.

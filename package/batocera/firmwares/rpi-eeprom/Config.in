@@ -3,6 +3,7 @@ config BR2_PACKAGE_RPI_EEPROM
 	select BR2_PACKAGE_RPI_UTILS
 
 	help
-	  Installation scripts and binaries for the closed sourced Raspberry Pi 4 EEPROMs.
+	  Installation scripts and binaries for the closed
+	  sourced Raspberry Pi 4 EEPROMs.
 
 	  https://github.com/raspberrypi/rpi-eeprom.git

@@ -6,7 +6,8 @@ config BR2_PACKAGE_MODEL2EMU
 	help
 	  Model 2 Emulator 1.1a
 
-	  This is a Sega Model 2 Emulator for Windows which runs under Linux
-	  using WINE and appropriate supporting packages.
+	  This is a Sega Model 2 Emulator for Windows which runs
+	  under Linux using WINE and appropriate supporting
+	  packages.
 
 	  http://nebula.emulatronia.com/

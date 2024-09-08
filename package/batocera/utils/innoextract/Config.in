@@ -9,6 +9,7 @@ config BR2_PACKAGE_INNOEXTRACT
 	select BR2_PACKAGE_BOOST_SYSTEM
 
 	help
-	  innoextract - A tool to unpack installers created by Inno Setup
+	  innoextract - A tool to unpack installers created
+	  by Inno Setup
 
 	  https://constexpr.org/innoextract/

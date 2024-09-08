@@ -12,9 +12,9 @@ BATOCERA_AUDIO_SOURCE=
 BATOCERA_AUDIO_DEPENDENCIES = pipewire wireplumber
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3326),y)
-ALSA_SUFFIX = "-rk3326"
+BATOCERA_AUDIO_ALSA_SUFFIX = "-rk3326"
 else
-ALSA_SUFFIX =
+BATOCERA_AUDIO_ALSA_SUFFIX =
 endif
 
 define BATOCERA_AUDIO_INSTALL_TARGET_CMDS
@@ -46,7 +46,7 @@ define BATOCERA_AUDIO_INSTALL_TARGET_CMDS
 		$(TARGET_DIR)/etc/udev/rules.d/90-alsa-setup.rules
 	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/soundconfig \
 		$(TARGET_DIR)/usr/bin/soundconfig
-	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/alsa/batocera-audio$(ALSA_SUFFIX) \
+	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/alsa/batocera-audio$(BATOCERA_AUDIO_ALSA_SUFFIX) \
 		$(TARGET_DIR)/usr/bin/batocera-audio
 	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/alsa/batocera-mixer \
 		$(TARGET_DIR)/usr/bin/batocera-mixer
@@ -74,14 +74,14 @@ endef
 
 # Steam Deck OLED SOF files are not in the sound-open-firmware package yet
 define BATOCERA_AUDIO_STEAM_DECK_OLED
-    rm -rf $(TARGET_DIR)/usr/share/alsa/ucm2/AMD/acp5x
-    rm -rf $(TARGET_DIR)/usr/share/alsa/ucm2/conf.d/acp5x
-    rm -rf $(TARGET_DIR)/usr/share/alsa/ucm2/conf.d/sof-nau8821-max
+	rm -rf $(TARGET_DIR)/usr/share/alsa/ucm2/AMD/acp5x
+	rm -rf $(TARGET_DIR)/usr/share/alsa/ucm2/conf.d/acp5x
+	rm -rf $(TARGET_DIR)/usr/share/alsa/ucm2/conf.d/sof-nau8821-max
 endef
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
-	BATOCERA_AUDIO_POST_INSTALL_TARGET_HOOKS += BATOCERA_AUDIO_X86_INTEL_DSP
-	BATOCERA_AUDIO_POST_INSTALL_TARGET_HOOKS += BATOCERA_AUDIO_STEAM_DECK_OLED
+    BATOCERA_AUDIO_POST_INSTALL_TARGET_HOOKS += BATOCERA_AUDIO_X86_INTEL_DSP
+    BATOCERA_AUDIO_POST_INSTALL_TARGET_HOOKS += BATOCERA_AUDIO_STEAM_DECK_OLED
 endif
 
 $(eval $(generic-package))

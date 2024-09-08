@@ -6,18 +6,17 @@
 # Version: Commits on Jul 08, 2023
 PYTHON_PYXEL_VERSION = v1.9.18
 PYTHON_PYXEL_SITE =  $(call github,kitao,pyxel,$(PYTHON_PYXEL_VERSION))
-PYTHON_PYXEL_SETUP_TYPE = setuptools
-PYTHON_PYXEL_LICENSE = MIT
 PYTHON_PYXEL_SETUP_TYPE = maturin
+PYTHON_PYXEL_LICENSE = MIT
 PYTHON_PYXEL_CARGO_MANIFEST_PATH = crates/pyxel-extension/Cargo.toml
 PYTHON_PYXEL_DEPENDENCIES = host-rust-bin sdl2
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
-	PYXEL_CARGO_TARGET=x86_64-unknown-linux-gnu
+    PYXEL_CARGO_TARGET=x86_64-unknown-linux-gnu
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3288),y)
-	PYXEL_CARGO_TARGET=aarch64-unknown-linux-gnu
+    PYXEL_CARGO_TARGET=aarch64-unknown-linux-gnu
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3399),y)
-	PYXEL_CARGO_TARGET=aarch64-unknown-linux-gnu
+    PYXEL_CARGO_TARGET=aarch64-unknown-linux-gnu
 endif
 
 PYTHON_PYXEL_ENV = CARGO_HOME=$(@D) TARGET=$(PYXEL_CARGO_TARGET)

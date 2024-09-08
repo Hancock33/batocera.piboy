@@ -11,8 +11,8 @@ BATOCERA_ES_SYSTEM_VERSION=1.03
 define BATOCERA_ES_SYSTEM_BUILD_CMDS
 	$(HOST_DIR)/bin/python \
 		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/batocera-es-system.py \
-		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/es_systems.yml		\
-		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/es_features.yml	   \
+		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/es_systems.yml \
+		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/es_features.yml \
 		$(@D)/es_external_translations.h \
 		$(@D)/es_keys_translations.h \
 		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera \

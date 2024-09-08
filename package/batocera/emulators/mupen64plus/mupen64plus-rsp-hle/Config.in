@@ -6,7 +6,8 @@ config BR2_PACKAGE_MUPEN64PLUS_RSP_HLE
 
 	help
 	  RSP processor plugin for the Mupen64Plus v2.0 project.
-	  This plugin is based on the Mupen64 HLE RSP plugin v0.2 with Azimers code by Hacktarux
+	  This plugin is based on the Mupen64 HLE RSP plugin v0.2
+	  with Azimers code by Hacktarux
 
 	  https://github.com/mupen64plus/
 	  https://github.com/mupen64plus/mupen64plus-rsp-hle

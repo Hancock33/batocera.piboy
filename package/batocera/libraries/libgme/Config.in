@@ -2,4 +2,5 @@ config BR2_PACKAGE_LIBGME
 	bool "libgme"
 
 	help
-	  The approximate regex matching library and agrep command line tool.
+	  The approximate regex matching library
+	  and agrep command line tool.

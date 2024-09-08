@@ -20,7 +20,7 @@ SONIC3_AIR_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 SONIC3_AIR_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 
 define SONIC3_AIR_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/usr/bin/sonic3-air
+	mkdir -p $(TARGET_DIR)/usr/bin/sonic3-air
 	# copy binary
 	cp $(@D)/Oxygen/sonic3air/sonic3air_linux $(TARGET_DIR)/usr/bin/sonic3-air
 	# copy config files

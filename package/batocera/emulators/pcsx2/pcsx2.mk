@@ -3,8 +3,8 @@
 # pcsx2
 #
 ################################################################################
-# Version: Commits on Sept 06, 2024
-PCSX2_VERSION = v2.1.127
+# Version: Commits on Sept 08, 2024
+PCSX2_VERSION = v2.1.128
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES
@@ -26,27 +26,27 @@ PCSX2_CONF_OPTS += -DCMAKE_PREFIX_PATH=$(STAGING_DIR)/stenzek-shaderc
 PCSX2_CONF_OPTS += -DDISABLE_ADVANCE_SIMD=ON
 
 ifeq ($(BR2_PACKAGE_XORG7),y)
-	PCSX2_CONF_OPTS += -DX11_API=ON
+    PCSX2_CONF_OPTS += -DX11_API=ON
 else
-	PCSX2_CONF_OPTS += -DX11_API=OFF
+    PCSX2_CONF_OPTS += -DX11_API=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND),y)
-	PCSX2_CONF_OPTS += -DWAYLAND_API=ON
+    PCSX2_CONF_OPTS += -DWAYLAND_API=ON
 else
-	PCSX2_CONF_OPTS += -DWAYLAND_API=OFF
+    PCSX2_CONF_OPTS += -DWAYLAND_API=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
-	PCSX2_CONF_OPTS += -DUSE_OPENGL=ON
+    PCSX2_CONF_OPTS += -DUSE_OPENGL=ON
 else
-	PCSX2_CONF_OPTS += -DUSE_OPENGL=OFF
+    PCSX2_CONF_OPTS += -DUSE_OPENGL=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
-	PCSX2_CONF_OPTS += -DUSE_VULKAN=ON
+    PCSX2_CONF_OPTS += -DUSE_VULKAN=ON
 else
-	PCSX2_CONF_OPTS += -DUSE_VULKAN=OFF
+    PCSX2_CONF_OPTS += -DUSE_VULKAN=OFF
 endif
 
 define PCSX2_INSTALL_TARGET_CMDS
@@ -65,7 +65,7 @@ endef
 PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_EVMAPY
 
 define PCSX2_TEXTURES
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/textures/	$(TARGET_DIR)/usr/bin/pcsx2/resources/
+	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/textures/    $(TARGET_DIR)/usr/bin/pcsx2/resources/
 endef
 
 define PCSX2_PATCHES
@@ -75,7 +75,7 @@ define PCSX2_PATCHES
 endef
 
 define PCSX2_CROSSHAIRS
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/crosshairs/	$(TARGET_DIR)/usr/bin/pcsx2/resources/
+	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/crosshairs/    $(TARGET_DIR)/usr/bin/pcsx2/resources/
 endef
 
 PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_TEXTURES

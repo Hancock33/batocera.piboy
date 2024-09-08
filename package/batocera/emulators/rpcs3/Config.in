@@ -18,6 +18,7 @@ config BR2_PACKAGE_RPCS3
 	select BR2_PACKAGE_WOLFSSL_ALL
 
 	help
-	  RPCS3 is a multi-platform open-source Sony PlayStation 3 emulator.
+	  RPCS3 is a multi-platform open-source
+	  Sony PlayStation 3 emulator.
 
 	  https://rpcs3.net/

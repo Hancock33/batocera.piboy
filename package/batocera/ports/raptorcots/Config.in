@@ -1,12 +1,13 @@
 config BR2_PACKAGE_RAPTORCOTS
 	bool "raptorcots"
+	depends on BR2_INSTALL_LIBSTDCPP
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
 	select BR2_PACKAGE_SDL2_TTF
-	depends on BR2_INSTALL_LIBSTDCPP
 
 	help
-	  Reversed-engineered source port from Raptor Call Of The Shadows
+	  Reversed-engineered source port from
+	  Raptor Call Of The Shadows
 
 	  https://github.com/skynettx/raptor
 

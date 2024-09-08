@@ -3,6 +3,7 @@ config BR2_PACKAGE_VIRTUALJAGUAR
 	select BR2_PACKAGE_SDL12_COMPAT
 
 	help
-	  Virtual Jaguar, an Atari Jaguar emulator, with integrated debugger
+	  Virtual Jaguar, an Atari Jaguar emulator,
+	  with integrated debugger
 
 	  https://github.com/djipi/Virtual-Jaguar-Rx

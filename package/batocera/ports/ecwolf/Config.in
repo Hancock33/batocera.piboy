@@ -11,6 +11,7 @@ config BR2_PACKAGE_ECWOLF
 	select BR2_PACKAGE_LIBVORBIS
 
 	help
-	  ECWolf is a port of the Wolfenstein 3D engine based of Wolf4SDL.
+	  ECWolf is a port of the Wolfenstein 3D engine based
+	  of Wolf4SDL.
 
 	  http://maniacsvault.net/ecwolf/

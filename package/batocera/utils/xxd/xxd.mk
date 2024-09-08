@@ -12,7 +12,7 @@ define HOST_XXD_BUILD_CMDS
 endef
 
 define HOST_XXD_INSTALL_CMDS
-	$(INSTALL) -D $(@D)/xxd $(HOST_DIR)/usr/bin/xxd
+	$(INSTALL) -D $(@D)/xxd $(HOST_DIR)/bin/xxd
 endef
 
 $(eval $(host-generic-package))

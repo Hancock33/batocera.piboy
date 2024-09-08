@@ -1,7 +1,7 @@
 config BR2_PACKAGE_XPI_GAMECON_RPI
 	bool "xpi_gamecon_rpi"
-	select BR2_PACKAGE_BATOCERA_ES_PIBOY
 	depends on BR2_LINUX_KERNEL
+	select BR2_PACKAGE_BATOCERA_ES_PIBOY
 
 	help
 	  Kernel module to support hardware from piboy (experimental pi)

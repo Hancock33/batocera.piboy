@@ -6,6 +6,7 @@ config BR2_PACKAGE_SDLPOP
 
 	help
 	  SDLPoP
-	  An open-source port of Prince of Persia, based on the disassembly of the DOS version.
+	  An open-source port of Prince of Persia,
+	  based on the disassembly of the DOS version.
 
 	  https://github.com/NagyD/SDLPoP
