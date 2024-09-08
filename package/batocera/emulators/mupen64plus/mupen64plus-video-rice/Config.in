@@ -7,8 +7,9 @@ config BR2_PACKAGE_MUPEN64PLUS_VIDEO_RICE
 	select BR2_PACKAGE_BOOST_FILESYSTEM
 
 	help
-	  Video plugin for the Mupen64Plus v2.0 project, using OpenGL.
-	  This plugin is based on the RiceVideoLinux plugin from earlier versions of Mupen64Plus.
+	  Video plugin for the Mupen64Plus v2.0 project,
+	  using OpenGL. This plugin is based on the
+	  RiceVideoLinux plugin from earlier versions of Mupen64Plus.
 
 	  https://github.com/mupen64plus/
 	  https://github.com/mupen64plus/mupen64plus-video-rice
