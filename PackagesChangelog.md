@@ -24,7 +24,9 @@ Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|f4b0755e2722
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|01a9745f5ba6473e570715a0015b38b71bab99d4|Sept 08, 2024
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|bad83bc73e635d18524ca07753e6770be124cd71|Sept 08, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|824643baf0603397cf19f3b3477e2c6e55f077d6|Sept 08, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240908|Sept 08, 2024
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|3a655d0f8d3c946efd690edea31e138d4efef417|Sept 08, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240908|Sept 08, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|775f800e8d15684579e491c84f3c3d0d8e501cc0|Sept 08, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|afcd38907c07848a0ab3b7e710d91bea833a5305|Sept 08, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|5acb2676306436868779a54949e4cbdfa8221e77|Sept 08, 2024
@@ -45,9 +47,7 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|91f85dd10c332cdb76778fc832
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|5ff4f6146248e5057e2f40f119362e32b2f8b76d|Sept 07, 2024
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|3b087e8c6d082082bb3987ddfaa3cfa5c7bbdbb0|Sept 07, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.17.r0.g27b121f2|Sept 07, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240907|Sept 07, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|6227cc2e264c10c92b35c23b3454690fb349b508|Sept 07, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240907|Sept 07, 2024
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|41fd79180753a1c9702e032a9d0675b4e25cc3d5|Sept 07, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|5393235c4023e21bdfdb3c0dfe8ae6c553b86b1c|Sept 07, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|a6914b2ddb865bb3e67250cd22cbdc307085284e|Sept 07, 2024
