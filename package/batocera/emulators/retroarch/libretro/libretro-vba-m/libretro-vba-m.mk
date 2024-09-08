@@ -3,13 +3,13 @@
 # libretro-vba-m
 #
 ################################################################################
-# Version: Commits on Sept 07, 2024
-LIBRETRO_VBA_M_VERSION = 3bd7c918cc7eb93e1f5683c0cefa9599b88275c9
+# Version: Commits on Sept 08, 2024
+LIBRETRO_VBA_M_VERSION = e4a93404093b0e857595e7e278704d5705c9515f
 LIBRETRO_VBA_M_SITE = $(call github,visualboyadvance-m,visualboyadvance-m,$(LIBRETRO_VBA_M_VERSION))
 
 define LIBRETRO_VBA_M_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/src/libretro/Makefile
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/src/libretro -f Makefile platform="unix"  \
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/src/libretro -f Makefile platform="unix" \
 		CURRENT_COMMIT="-$(shell echo $(LIBRETRO_VBA_M_VERSION) | cut -c 1-7)"
 endef
 

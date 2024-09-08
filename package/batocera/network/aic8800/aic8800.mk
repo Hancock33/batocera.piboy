@@ -16,7 +16,7 @@ AIC8800_MODULE_MAKE_OPTS = \
 
 # only copy firmware for the Rock 5c for now
 define AIC8800_FIRMWARE_ETC
-    mkdir -p $(TARGET_DIR)/lib/firmware/aic8800D80
+	mkdir -p $(TARGET_DIR)/lib/firmware/aic8800D80
 	cp -f $(@D)/firmware/aic8800D80/* $(TARGET_DIR)/lib/firmware/aic8800D80
 endef
 

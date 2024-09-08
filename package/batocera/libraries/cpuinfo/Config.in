@@ -3,7 +3,8 @@ config BR2_PACKAGE_CPUINFO
 	depends on BR2_INSTALL_LIBSTDCPP
 
 	help
-	  CPU INFOrmation library (x86/x86-64/ARM/ARM64, Linux/Windows/Android/macOS/iOS)
+	  CPU INFOrmation library
+	  (x86/x86-64/ARM/ARM64, Linux/Windows/Android/macOS/iOS)
 
 	  https://github.com/pytorch/cpuinfo.git
 

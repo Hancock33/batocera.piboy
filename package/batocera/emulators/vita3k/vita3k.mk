@@ -3,8 +3,8 @@
 # vita3k
 #
 ################################################################################
-# Version: Commits on Sept 06, 2024
-VITA3K_VERSION = 262424277018acca6d62928b58b4572f4b096ae5
+# Version: Commits on Sept 08, 2024
+VITA3K_VERSION = 3224de069492da587db0b88b459810dcb8b2d896
 VITA3K_SITE = https://github.com/vita3k/vita3k
 VITA3K_SITE_METHOD=git
 VITA3K_GIT_SUBMODULES=YES
@@ -23,18 +23,18 @@ VITA3K_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
 VITA3K_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 ifeq ($(BR2_x86_64),y)
-VITA3K_FFMPEG_NAME=ffmpeg-linux-x64.zip
+    VITA3K_FFMPEG_NAME=ffmpeg-linux-x64.zip
 else ifeq ($(BR2_aarch64),y)
-VITA3K_FFMPEG_NAME=ffmpeg-linux-arm64.zip
+    VITA3K_FFMPEG_NAME=ffmpeg-linux-arm64.zip
 endif
 
 VITA3K_FFMPEG_VER=$(shell cd "$(DL_DIR)/$(VITA3K_DL_SUBDIR)/git/external/ffmpeg" \
 	&& git rev-parse --short HEAD)
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_ZEN3),y)
-	VITA3K_CONF_OPTS += -DXXH_X86DISPATCH_ALLOW_AVX=ON
+    VITA3K_CONF_OPTS += -DXXH_X86DISPATCH_ALLOW_AVX=ON
 else
-	VITA3K_CONF_OPTS += -DXXH_X86DISPATCH_ALLOW_AVX=OFF
+    VITA3K_CONF_OPTS += -DXXH_X86DISPATCH_ALLOW_AVX=OFF
 endif
 
 define VITA3K_GET_SUBMODULE
@@ -45,7 +45,7 @@ endef
 define VITA3K_FFMPEG_ZIP
 	mkdir -p $(@D)/buildroot-build/external
 	$(HOST_DIR)/bin/curl -L \
-		https://github.com/Vita3K/ffmpeg-core/releases/download/${VITA3K_FFMPEG_VER}/${VITA3K_FFMPEG_NAME} \
+		https://github.com/Vita3K/ffmpeg-core/releases/download/$(VITA3K_FFMPEG_VER)/$(VITA3K_FFMPEG_NAME) \
 		-o $(@D)/buildroot-build/external/ffmpeg.zip
 endef
 

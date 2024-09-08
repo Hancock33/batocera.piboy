@@ -5,7 +5,8 @@ config BR2_PACKAGE_LIBRETRO_MELONDS_DS
 	select BR2_PACKAGE_LIBPCAP
 
 	help
-	  A remake of the libretro melonDS core that prioritizes standalone parity, reliability, and usability.
+	  A remake of the libretro melonDS core that prioritizes
+	  standalone parity, reliability, and usability.
 
 	  http://www.libretro.com
 

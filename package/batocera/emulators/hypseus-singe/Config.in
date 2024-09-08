@@ -18,6 +18,7 @@ config BR2_PACKAGE_HYPSEUS_SINGE
 	select BR2_PACKAGE_GST1_PLUGINS_BASE
 
 	help
-	  Hypseus is a fork of Daphne with support for Action Max (Singe) games.
+	  Hypseus is a fork of Daphne with support for Action Max
+	  (Singe) games.
 
 	  https://github.com/DirtBagXon/hypseus-singe

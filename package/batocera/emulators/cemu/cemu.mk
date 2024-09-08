@@ -3,8 +3,8 @@
 # cemu
 #
 ################################################################################
-# Version: Commits on Sept 02, 2024
-CEMU_VERSION = 0d8fd7c0dc2ea6ff750f4ef5b193ebc6388d31d0
+# Version: Commits on Sept 08, 2024
+CEMU_VERSION = 1a4d9660e756f52a01589add71df619361543a2f
 CEMU_SITE = https://github.com/cemu-project/Cemu
 CEMU_LICENSE = GPLv2
 CEMU_SITE_METHOD=git
@@ -21,17 +21,17 @@ CEMU_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CXXFLAGS) -I$(STAGING_DIR)/usr/inc
 CEMU_CONF_OPTS += -DENABLE_FERAL_GAMEMODE=OFF
 
 ifeq ($(BR2_PACKAGE_HIDAPI),y)
-	CEMU_CONF_OPTS += -DENABLE_HIDAPI=ON
-	CEMU_DEPENDENCIES += hidapi
+    CEMU_CONF_OPTS += -DENABLE_HIDAPI=ON
+    CEMU_DEPENDENCIES += hidapi
 else
-	CEMU_CONF_OPTS += -DENABLE_HIDAPI=OFF
+    CEMU_CONF_OPTS += -DENABLE_HIDAPI=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
-	CEMU_CONF_OPTS += -DENABLE_WAYLAND=ON
-	CEMU_DEPENDENCIES += wayland wayland-protocols
+    CEMU_CONF_OPTS += -DENABLE_WAYLAND=ON
+    CEMU_DEPENDENCIES += wayland wayland-protocols
 else
-	CEMU_CONF_OPTS += -DENABLE_WAYLAND=OFF
+    CEMU_CONF_OPTS += -DENABLE_WAYLAND=OFF
 endif
 
 define CEMU_INSTALL_TARGET_CMDS

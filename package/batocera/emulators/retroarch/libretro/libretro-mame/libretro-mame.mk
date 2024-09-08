@@ -3,8 +3,8 @@
 # libretro-mame
 #
 ################################################################################
-# Version: Commits on Aug 31, 2024
-LIBRETRO_MAME_VERSION = 8b9b8f5f5b47161327d93522318c81fba2087b2f
+# Version: Commits on Sept 08, 2024
+LIBRETRO_MAME_VERSION = f50c9e1538a4024c004c17bceb2173d55843a65b
 LIBRETRO_MAME_SITE = $(call github,sonninnos,mame,$(LIBRETRO_MAME_VERSION))
 LIBRETRO_MAME_LICENSE = MAME
 
@@ -14,27 +14,27 @@ LIBRETRO_MAME_DEPENDENCIES = alsa-lib
 LIBRETRO_MAME_JOBS = $(shell expr $(shell nproc))
 
 ifeq ($(BR2_x86_64),y)
-LIBRETRO_MAME_EXTRA_ARGS += PTR64=1 LIBRETRO_CPU=x86_64 PLATFORM=x86_64
+    LIBRETRO_MAME_EXTRA_ARGS += PTR64=1 LIBRETRO_CPU=x86_64 PLATFORM=x86_64
 else ifeq ($(BR2_i386),y)
-LIBRETRO_MAME_EXTRA_ARGS += PTR64=0 LIBRETRO_CPU=x86 PLATFORM=x86
+    LIBRETRO_MAME_EXTRA_ARGS += PTR64=0 LIBRETRO_CPU=x86 PLATFORM=x86
 else ifeq ($(BR2_RISCV_64),y)
-LIBRETRO_MAME_EXTRA_ARGS += PTR64=1 LIBRETRO_CPU=riscv64 PLATFORM=riscv64
+    LIBRETRO_MAME_EXTRA_ARGS += PTR64=1 LIBRETRO_CPU=riscv64 PLATFORM=riscv64
 else ifeq ($(BR2_riscv),y)
-LIBRETRO_MAME_EXTRA_ARGS += PTR64=0 LIBRETRO_CPU=riscv PLATFORM=riscv
+    LIBRETRO_MAME_EXTRA_ARGS += PTR64=0 LIBRETRO_CPU=riscv PLATFORM=riscv
 else ifeq ($(BR2_arm),y)
-LIBRETRO_MAME_EXTRA_ARGS += PTR64=0 LIBRETRO_CPU=arm PLATFORM=arm
-# workaround for linkage failure using ld on arm 32-bit targets
-LIBRETRO_MAME_ARCHOPTS += -fuse-ld=gold -Wl,--long-plt
-# workaround for asmjit broken build system (arm backend is not public)
-LIBRETRO_MAME_ARCHOPTS += -D__arm__ -DASMJIT_BUILD_X86
+    LIBRETRO_MAME_EXTRA_ARGS += PTR64=0 LIBRETRO_CPU=arm PLATFORM=arm
+    # workaround for linkage failure using ld on arm 32-bit targets
+    LIBRETRO_MAME_ARCHOPTS += -fuse-ld=gold -Wl,--long-plt
+    # workaround for asmjit broken build system (arm backend is not public)
+    LIBRETRO_MAME_ARCHOPTS += -D__arm__ -DASMJIT_BUILD_X86
 else ifeq ($(BR2_aarch64),y)
-LIBRETRO_MAME_EXTRA_ARGS += PTR64=1 LIBRETRO_CPU= PLATFORM=arm64
-# workaround for asmjit broken build system (arm backend is not public)
-LIBRETRO_MAME_ARCHOPTS += -D__aarch64__ -DASMJIT_BUILD_X86
+    LIBRETRO_MAME_EXTRA_ARGS += PTR64=1 LIBRETRO_CPU= PLATFORM=arm64
+    # workaround for asmjit broken build system (arm backend is not public)
+    LIBRETRO_MAME_ARCHOPTS += -D__aarch64__ -DASMJIT_BUILD_X86
 endif
 
 ifeq ($(BR2_ENABLE_DEBUG),y)
-	LIBRETRO_MAME_EXTRA_ARGS += SYMBOLS=1 SYMLEVEL=2 OPTIMIZE=0
+    LIBRETRO_MAME_EXTRA_ARGS += SYMBOLS=1 SYMLEVEL=2 OPTIMIZE=0
 endif
 
 LIBRETRO_MAME_CFLAGS = $(TARGET_OPTIMIZATION)
@@ -54,11 +54,11 @@ define LIBRETRO_MAME_BUILD_CMDS
 
 	# Compile emulation target (MAME)
 	$(MAKE) -j$(LIBRETRO_MAME_JOBS) -C $(@D)/ OPENMP=1 REGENIE=1 VERBOSE=1 NOWERROR=1 PYTHON_EXECUTABLE=python3 \
-		CFLAGS="$(LIBRETRO_MAME_CFLAGS)" LDFLAGS="$(LIBRETRO_MAME_LDFLAGS)"							\
-		CONFIG=libretro LIBRETRO_OS="unix" ARCH="" PROJECT="" ARCHOPTS="$(LIBRETRO_MAME_ARCHOPTS)"	\
-		DISTRO="debian-stable" OVERRIDE_CC="$(TARGET_CC)" OVERRIDE_CXX="$(TARGET_CXX)"				\
-		OVERRIDE_LD="$(TARGET_LD)" RANLIB="$(TARGET_RANLIB)" AR="$(TARGET_AR)"						\
-		$(LIBRETRO_MAME_EXTRA_ARGS) CROSS_BUILD=1 TARGET="mame" SUBTARGET="mame" RETRO=1			\
+		CFLAGS="$(LIBRETRO_MAME_CFLAGS)" LDFLAGS="$(LIBRETRO_MAME_LDFLAGS)" \
+		CONFIG=libretro LIBRETRO_OS="unix" ARCH="" PROJECT="" ARCHOPTS="$(LIBRETRO_MAME_ARCHOPTS)" \
+		DISTRO="debian-stable" OVERRIDE_CC="$(TARGET_CC)" OVERRIDE_CXX="$(TARGET_CXX)" \
+		OVERRIDE_LD="$(TARGET_LD)" RANLIB="$(TARGET_RANLIB)" AR="$(TARGET_AR)" \
+		$(LIBRETRO_MAME_EXTRA_ARGS) CROSS_BUILD=1 TARGET="mame" SUBTARGET="mame" RETRO=1 \
 		OSD="retro" DEBUG=0 PRECOMPILE=0 OPTIMIZE=s
 endef
 

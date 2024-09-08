@@ -7,9 +7,8 @@
 BATOCERA_ES_PIBOY_VERSION = d110899f08ad153403b567d8c8bb50a07c889108
 BATOCERA_ES_PIBOY_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_ES_PIBOY_SITE_METHOD = git
-BATOCERA_ES_PIBOY_LICENSE = MIT
 BATOCERA_ES_PIBOY_GIT_SUBMODULES = YES
-BATOCERA_ES_PIBOY_LICENSE = MIT, Apache-2.0
+BATOCERA_ES_PIBOY_LICENSE = MIT
 BATOCERA_ES_PIBOY_DEPENDENCIES = sdl2 sdl2_mixer libfreeimage freetype alsa-lib libcurl vlc rapidjson pulseaudio batocera-es-system host-gettext
 
 # use gcc to build

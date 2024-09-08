@@ -4,4 +4,3 @@ config BR2_PACKAGE_FIRMWARE_ESP8089
 	  ESP8089 wifi firmware.
 
 	  https://github.com/jwrdegoede/esp8089.git
-

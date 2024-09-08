@@ -25,12 +25,11 @@ ifeq ($(BR2_arm)$(BR2_aarch64),y)
 endif
 
 define OPENBOR7530_PRE_CONFIGURE_VERSION
-    sed -i 's/VERSION_BUILD="[^"]*"/VERSION_BUILD="$(subst v,,$(OPENBOR7530_VERSION))"/' \
-	    $(@D)/engine/version.sh
+	sed -i 's/VERSION_BUILD="[^"]*"/VERSION_BUILD="$(subst v,,$(OPENBOR7530_VERSION))"/' $(@D)/engine/version.sh
 endef
 
 define OPENBOR7530_BUILD_CMDS
-    cd $(@D)/engine && chmod +x $(@D)/engine/version.sh && $(@D)/engine/version.sh
+	cd $(@D)/engine && chmod +x $(@D)/engine/version.sh && $(@D)/engine/version.sh
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
 		-C $(@D)/engine -f Makefile $(OPENBOR7530_EXTRAOPTS) VERBOSE=1
 endef

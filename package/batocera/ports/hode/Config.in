@@ -1,8 +1,8 @@
 config BR2_PACKAGE_HODE
 	bool "hode"
+	depends on BR2_INSTALL_LIBSTDCPP
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
-	depends on BR2_INSTALL_LIBSTDCPP
 
 	help
 	  Heart of Darkness

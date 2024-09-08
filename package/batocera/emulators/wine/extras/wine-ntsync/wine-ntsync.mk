@@ -44,9 +44,9 @@ WINE_NTSYNC_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 	--exec-prefix=/usr/wine/ntsync
 
 ifeq ($(BR2_x86_64),y)
-	WINE_NTSYNC_CONF_OPTS += --enable-win64
+    WINE_NTSYNC_CONF_OPTS += --enable-win64
 else
-	WINE_NTSYNC_CONF_OPTS += --disable-win64
+    WINE_NTSYNC_CONF_OPTS += --disable-win64
 endif
 
 # Wine uses a wrapper around gcc, and uses the value of --host to
@@ -194,10 +194,10 @@ WINE_NTSYNC_CONF_OPTS += --without-udev
 endif
 
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
-	WINE_NTSYNC_CONF_OPTS += --with-vulkan
-	WINE_NTSYNC_DEPENDENCIES += vulkan-headers vulkan-loader
+    WINE_NTSYNC_CONF_OPTS += --with-vulkan
+    WINE_NTSYNC_DEPENDENCIES += vulkan-headers vulkan-loader
 else
-	WINE_NTSYNC_CONF_OPTS += --without-vulkan
+    WINE_NTSYNC_CONF_OPTS += --without-vulkan
 endif
 
 ifeq ($(BR2_PACKAGE_XLIB_LIBX11),y)

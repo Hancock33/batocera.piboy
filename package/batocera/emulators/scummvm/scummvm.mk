@@ -3,8 +3,8 @@
 # scummvm
 #
 ################################################################################
-# Version: Commits on Sept 06, 2024
-SCUMMVM_VERSION = f77c31a8ca8963730c0dca8928fb38e7b7268a81
+# Version: Commits on Sept 08, 2024
+SCUMMVM_VERSION = 2295954e2f5aae03ad6db197006bfce89558b7d9
 SCUMMVM_SITE = $(call github,scummvm,scummvm,$(SCUMMVM_VERSION))
 SCUMMVM_LICENSE = GPLv2
 SCUMMVM_DEPENDENCIES += sdl2 zlib libmpeg2 libogg libvorbis flac libmad libpng libtheora faad2 freetype jpeg fluidsynth
@@ -12,9 +12,8 @@ SCUMMVM_DEPENDENCIES += sdl2 zlib libmpeg2 libogg libvorbis flac libmad libpng l
 SCUMMVM_ADDITIONAL_FLAGS= -I$(STAGING_DIR)/usr/include -lpthread -lm -L$(STAGING_DIR)/usr/lib -lGLESv2 -lEGL
 
 ifeq ($(BR2_PACKAGE_RPI_USERLAND),y)
-	SCUMMVM_ADDITIONAL_FLAGS += -I$(STAGING_DIR)/usr/include/interface/vcos/pthreads \
-								-I$(STAGING_DIR)/usr/include/interface/vmcs_host/linux -lbcm_host -lvchostif
-	SCUMMVM_CONF_OPTS += --host=raspberrypi
+    SCUMMVM_ADDITIONAL_FLAGS += -I$(STAGING_DIR)/usr/include/interface/vcos/pthreads -I$(STAGING_DIR)/usr/include/interface/vmcs_host/linux -lbcm_host -lvchostif
+    SCUMMVM_CONF_OPTS += --host=raspberrypi
 endif
 
 ifeq ($(BR2_aarch64)$(BR2_arm),y)
@@ -36,11 +35,11 @@ SCUMMVM_CONF_OPTS += --disable-static --enable-c++11 --enable-opengl --disable-d
 SCUMMVM_MAKE_OPTS += RANLIB="$(TARGET_RANLIB)" STRIP="$(TARGET_STRIP)" AR="$(TARGET_AR) cru" AS="$(TARGET_AS)" LD="$(TARGET_CXX)"
 
 ifeq ($(BR2_PACKAGE_LIBMPEG2),y)
-	SCUMMVM_CONF_OPTS += --enable-mpeg2 --with-mpeg2-prefix="$(STAGING_DIR)/usr/lib"
+    SCUMMVM_CONF_OPTS += --enable-mpeg2 --with-mpeg2-prefix="$(STAGING_DIR)/usr/lib"
 endif
 
 define SCUMMVM_CONFIGURE_CMDS
-    (cd $(@D) && rm -rf config.cache && \
+	(cd $(@D) && rm -rf config.cache && \
 	$(TARGET_CONFIGURE_OPTS) \
 	$(TARGET_CONFIGURE_ARGS) \
 	$(SCUMMVM_CONF_ENV) \

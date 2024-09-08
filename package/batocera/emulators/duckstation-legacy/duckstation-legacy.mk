@@ -20,27 +20,27 @@ DUCKSTATION_LEGACY_CONF_OPTS += -DBUILD_NOGUI_FRONTEND=ON
 DUCKSTATION_LEGACY_CONF_ENV += LDFLAGS=-lpthread
 
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
-	DUCKSTATION_LEGACY_CONF_OPTS += -DENABLE_WAYLAND=ON
+    DUCKSTATION_LEGACY_CONF_OPTS += -DENABLE_WAYLAND=ON
 else
-	DUCKSTATION_LEGACY_CONF_OPTS += -DENABLE_WAYLAND=OFF
+    DUCKSTATION_LEGACY_CONF_OPTS += -DENABLE_WAYLAND=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_XORG7),y)
-	DUCKSTATION_LEGACY_CONF_OPTS += -DENABLE_X11=ON
+    DUCKSTATION_LEGACY_CONF_OPTS += -DENABLE_X11=ON
 else
-	DUCKSTATION_LEGACY_CONF_OPTS += -DENABLE_X11=OFF
+    DUCKSTATION_LEGACY_CONF_OPTS += -DENABLE_X11=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
-	DUCKSTATION_LEGACY_CONF_OPTS += -DENABLE_VULKAN=ON
+    DUCKSTATION_LEGACY_CONF_OPTS += -DENABLE_VULKAN=ON
 else
-	DUCKSTATION_LEGACY_CONF_OPTS += -DENABLE_VULKAN=OFF
+    DUCKSTATION_LEGACY_CONF_OPTS += -DENABLE_VULKAN=OFF
 endif
 
 define DUCKSTATION_LEGACY_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/duckstation-legacy
-	$(INSTALL) -D $(@D)/buildroot-build/bin/duckstation*	$(TARGET_DIR)/usr/bin/duckstation-legacy
-	cp -pr	$(@D)/data/resources							$(TARGET_DIR)/usr/bin/duckstation-legacy/
+	$(INSTALL) -D $(@D)/buildroot-build/bin/duckstation* $(TARGET_DIR)/usr/bin/duckstation-legacy
+	cp -pr $(@D)/data/resources $(TARGET_DIR)/usr/bin/duckstation-legacy/
 
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation-legacy/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy
