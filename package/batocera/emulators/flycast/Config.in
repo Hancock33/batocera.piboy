@@ -9,4 +9,7 @@ config BR2_PACKAGE_FLYCAST
 	select BR2_PACKAGE_LIBMINIUPNPC
 
 	help
-	  Flycast is a multi-platform Sega Dreamcast, Naomi and Atomiswave emulator.
+	  Flycast is a multi-platform Sega emulator for
+	  - Dreamcast
+	  - Naomi
+	  - Atomiswave

@@ -4,8 +4,12 @@ config BR2_PACKAGE_DEMUL
 	depends on BR2_PACKAGE_WINE_PROTON
 
 	help
-	  Demul is Sega's multi-system game console and automaton emulator.
-	  Originally intended solely to emulate the Sega Dreamcast game console.
-	  Currently, the emulator also supports emulation of Sega Dreamcast-based slot machines: Naomi, Naomi 2 and Atomiswave.
+	  Demul is Sega's multi-system game console and automaton
+	  emulator. Originally intended solely to emulate the Sega
+	  Dreamcast game console. Currently, the emulator also
+	  supports emulation of Sega Dreamcast-based slot machines:
+	  - Naomi
+	  - Naomi 2
+	  - Atomiswave.
 
 	  http://demul.emulation64.com

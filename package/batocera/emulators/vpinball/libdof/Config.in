@@ -6,6 +6,7 @@ config BR2_PACKAGE_LIBDOF
 	select BR2_PACKAGE_CARGS
 
 	help
-	  libdof - A cross platform library for performing Direct Output Framework tasks.
+	  A cross platform library for performing Direct Output
+	  Framework tasks.
 
 	  https://github.com/jsm174/libdof

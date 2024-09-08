@@ -8,7 +8,7 @@ config BR2_PACKAGE_LIBDMDUTIL
 	select BR2_PACKAGE_SOCKPP
 
 	help
-	  libdmdutil - A cross platform library for performing DMD tasks.
+	  A cross platform library for performing DMD tasks.
 
 	  https://github.com/vpinball/libdmdutil
 	  www.vpforums.org

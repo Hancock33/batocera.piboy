@@ -3,6 +3,7 @@ config BR2_PACKAGE_RETROCRISIS
 	depends on BR2_PACKAGE_RETROARCH
 
 	help
-	  Retro Crisis libretro CRT shader presets, based on Guest Advanced NTSC shader
+	  Retro Crisis libretro CRT shader presets,
+	  based on Guest Advanced NTSC shader
 
 	  https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC

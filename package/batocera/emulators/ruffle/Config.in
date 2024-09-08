@@ -5,6 +5,7 @@ config BR2_PACKAGE_RUFFLE
 	select BR2_PACKAGE_OPENSSL
 
 	help
-	  ruffle is a Flash Player emulator built in the Rust programming language.
+	  ruffle is a Flash Player emulator built in the Rust
+	  programming language.
 
 	  https://ruffle.rs/
