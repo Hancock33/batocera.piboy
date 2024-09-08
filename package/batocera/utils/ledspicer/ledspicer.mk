@@ -3,8 +3,8 @@
 # ledspicer
 #
 ################################################################################
-# Version: Commits on Aug 07, 2024
-LEDSPICER_VERSION = 0.6.3
+# Version: Commits on Sept 08, 2024
+LEDSPICER_VERSION = 0.6.3.1
 LEDSPICER_SITE = $(call github,meduzapat,LEDSpicer,$(LEDSPICER_VERSION))
 LEDSPICER_LICENSE = GPLv3
 LEDSPICER_DEPENDENCIES = tinyxml2 libusb libtool udev
