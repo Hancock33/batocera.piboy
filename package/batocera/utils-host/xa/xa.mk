@@ -12,7 +12,7 @@ define HOST_XA_BUILD_CMDS
 endef
 
 define HOST_XA_INSTALL_CMDS
-	$(INSTALL) -m 0755 -D $(@D)/xa $(HOST_DIR)/usr/bin/xa
+	$(INSTALL) -m 0755 -D $(@D)/xa $(HOST_DIR)/bin/xa
 endef
 
 $(eval $(host-generic-package))

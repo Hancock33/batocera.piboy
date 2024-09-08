@@ -8,7 +8,7 @@ XASH3D_FWGS_VERSION = 178602ea1fa85f700a2a5873d983162b42b3e9f4
 XASH3D_FWGS_SITE = https://github.com/FWGS/xash3d-fwgs.git
 XASH3D_FWGS_SITE_METHOD = git
 XASH3D_FWGS_GIT_SUBMODULES = yes
-XASH3D_LICENSE = GPL-3.0+
+XASH3D_FWGS_LICENSE = GPL-3.0+
 XASH3D_FWGS_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf
 XASH3D_FWGS_DEPENDENCIES += freetype fontconfig hlsdk-xash3d
 
@@ -19,7 +19,7 @@ XASH3D_FWGS_CONF_OPTS += --disable-vgui
 XASH3D_FWGS_CONF_OPTS += --disable-menu-changegame
 
 ifeq ($(BR2_ARCH_IS_64),y)
-XASH3D_FWGS_CONF_OPTS += --64bits
+    XASH3D_FWGS_CONF_OPTS += --64bits
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)

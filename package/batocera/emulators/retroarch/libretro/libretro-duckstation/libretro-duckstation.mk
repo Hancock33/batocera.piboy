@@ -12,11 +12,11 @@ LIBRETRO_DUCKSTATION_LICENSE = non-commercial
 
 LIBRETRO_DUCKSTATION_PK = unknown
 ifeq ($(BR2_x86_64),y)
-LIBRETRO_DUCKSTATION_PK = duckstation_libretro_linux_x64.zip
+    LIBRETRO_DUCKSTATION_PK = duckstation_libretro_linux_x64.zip
 else ifeq ($(BR2_aarch64),y)
-LIBRETRO_DUCKSTATION_PK = duckstation_libretro_linux_aarch64.zip
+    LIBRETRO_DUCKSTATION_PK = duckstation_libretro_linux_aarch64.zip
 else ifeq ($(BR2_arm),y)
-LIBRETRO_DUCKSTATION_PK = duckstation_libretro_linux_armv7.zip
+    LIBRETRO_DUCKSTATION_PK = duckstation_libretro_linux_armv7.zip
 endif
 
 define LIBRETRO_DUCKSTATION_INSTALL_TARGET_CMDS

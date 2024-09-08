@@ -10,20 +10,21 @@ CANNONBALL_LICENSE = GPLv2
 CANNONBALL_DEPENDENCIES = sdl2 boost
 CANNONBALL_SUPPORTS_IN_SOURCE_BUILD = NO
 CANNONBALL_SUBDIR = cmake
-CANNONBALL_TARGET = linux.cmake
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2835),y)
-CANNONBALL_TARGET = pi-opengles.camke
+    CANNONBALL_TARGET = pi-opengles.camke
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
-CANNONBALL_TARGET = pi-opengles.cmake
+    CANNONBALL_TARGET = pi-opengles.cmake
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2837),y)
-CANNONBALL_TARGET = pi-opengles.cmake
+    CANNONBALL_TARGET = pi-opengles.cmake
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
-CANNONBALL_TARGET = pi-opengl.cmake
+    CANNONBALL_TARGET = pi-opengl.cmake
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86),y)
-CANNONBALL_TARGET = linux.cmake
+    CANNONBALL_TARGET = linux.cmake
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
-CANNONBALL_TARGET = linux.cmake
+    CANNONBALL_TARGET = linux.cmake
+else
+    CANNONBALL_TARGET = linux.cmake
 endif
 
 # Build as release with proper target and paths

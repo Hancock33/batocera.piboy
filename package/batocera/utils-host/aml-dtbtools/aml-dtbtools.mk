@@ -12,8 +12,8 @@ define HOST_AML_DTBTOOLS_BUILD_CMDS
 endef
 
 define HOST_AML_DTBTOOLS_INSTALL_CMDS
-	$(INSTALL) -m 0755 -D $(@D)/dtbTool $(HOST_DIR)/usr/bin/dtbTool
-	$(INSTALL) -m 0755 -D  $(@D)/dtbSplit $(HOST_DIR)/usr/bin/dtbSplit
+	$(INSTALL) -m 0755 -D $(@D)/dtbTool $(HOST_DIR)/bin/dtbTool
+	$(INSTALL) -m 0755 -D  $(@D)/dtbSplit $(HOST_DIR)/bin/dtbSplit
 endef
 
 $(eval $(host-generic-package))
