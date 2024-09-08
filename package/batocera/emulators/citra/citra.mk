@@ -42,11 +42,11 @@ define CITRA_EVMAP
 	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/citra/3ds.citra.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-define NO_DL_EXTERNAL
+define CITRA_NO_DL_EXTERNAL
 	sed -i '/(DownloadExternals)/d' $(@D)/CMakeLists.txt
 endef
 
 CITRA_POST_INSTALL_TARGET_HOOKS = CITRA_EVMAP
-CITRA_PRE_CONFIGURE_HOOKS += NO_DL_EXTERNAL
+CITRA_PRE_CONFIGURE_HOOKS += CITRA_NO_DL_EXTERNAL
 
 $(eval $(cmake-package))

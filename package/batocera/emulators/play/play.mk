@@ -28,7 +28,7 @@ else
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
-	PLAY_DEPENDENCIES += vulkan-headers vulkan-loader
+    PLAY_DEPENDENCIES += vulkan-headers vulkan-loader
 endif
 
 define PLAY_EVMAPY

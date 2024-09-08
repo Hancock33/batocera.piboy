@@ -24,21 +24,18 @@ EKA2L1_CONF_OPTS += -DEKA2L1_USE_SYSTEM_FFMPEG=ON
 EKA2L1_CONF_OPTS += -DENABLE_PROGRAMS=OFF # for mbedtls
 
 # use gcc to build
-#EKA2L1_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
-#EKA2L1_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
-EKA2L1_CONF_OPTS += -DCMAKE_C_COMPILER=/usr/bin/gcc
-EKA2L1_CONF_OPTS += -DCMAKE_CXX_COMPILER=/usr/bin/g++
+EKA2L1_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
+EKA2L1_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 ifneq ($(BR2_x86_64),y)
-EKA2L1_CONF_OPTS += -DEKA2L1_UNIX_USE_X11=OFF
-EKA2L1_CONF_OPTS += -DEKA2L1_UNIX_USE_WAYLAND=ON
+    EKA2L1_CONF_OPTS += -DEKA2L1_UNIX_USE_X11=OFF
+    EKA2L1_CONF_OPTS += -DEKA2L1_UNIX_USE_WAYLAND=ON
 endif
 
 define EKA2L1_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/usr/bin/eka2l1
-    $(TARGET_STRIP) $(@D)/buildroot-build/bin/eka2l1_qt
-    cp -R $(@D)/buildroot-build/bin/* \
-                $(TARGET_DIR)/usr/bin/eka2l1/
+	mkdir -p $(TARGET_DIR)/usr/bin/eka2l1
+	$(TARGET_STRIP) $(@D)/buildroot-build/bin/eka2l1_qt
+	cp -R $(@D)/buildroot-build/bin/* $(TARGET_DIR)/usr/bin/eka2l1/
 endef
 
 $(eval $(cmake-package))
