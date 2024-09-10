@@ -1,5 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|171e47acb1d0ff0116f960dc882432b6041206c2|Sept 10, 2024
+Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|f981ce209f4c76ba70113e24371a5b3aec5440d8|Sept 10, 2024
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|87c3ed4fa167ada31cc57a961a9d805171e10d2e|Sept 09, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|1a4d9660e756f52a01589add71df619361543a2f|Sept 08, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|5fe9e2f6ed69a7aabb4b20a2f375daa6d1e87968|Sept 08, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|0f8d512732ee9827d48fdc8391838c45ce7689d1|Sept 08, 2024
@@ -42,7 +45,6 @@ Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|8f
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|ee4d3102336784634141e32b91055c78293303eb|Sept 07, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45333|Sept 07, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|71de56416d14bcfb1ffc48ea669d8bd926f5b593|Sept 07, 2024
-Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|ccfc47b215c05eaeb5b6f5549bbe51051a47f8e5|Sept 07, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|91f85dd10c332cdb76778fc832717939fce91e12|Sept 07, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|5ff4f6146248e5057e2f40f119362e32b2f8b76d|Sept 07, 2024
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|3b087e8c6d082082bb3987ddfaa3cfa5c7bbdbb0|Sept 07, 2024
@@ -61,6 +63,7 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|b85a8189f5eca74ff3321
 Ports|[nblood](http://github.com/nukeykt/NBlood)|138ad0c61287195759e28d4ab28ae47f64518b19|Sept 06, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.27.12|Sept 06, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|6cc3a93eb9de1cb503a9df5b29d90f1fecd36c25|Sept 06, 2024
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|1.3.295|Sept 06, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|013f5e41716717a6029acb25e344374b642169fa|Sept 06, 2024
 Emulators|[libretro-atari800](http://github.com/libretro/libretro-atari800)|72884ccbf9ec8ce7b65d7fc6f44e127e3abdf799|Sept 06, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|3a75c7ce5fc62c524be8d0eb45cd4b39d08a885c|Sept 06, 2024
@@ -77,7 +80,6 @@ Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|979235b4b7ebb3fbec5505
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|8f34027736fa7d0154a9568fb6cd1b07010e92fa|Sept 05, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|178602ea1fa85f700a2a5873d983162b42b3e9f4|Sept 05, 2024
 Emulators|[libretro-ecwolf](https://github.com/libretro/ecwolf)|a5471a008cf7cc91aacd8c5ffca876cbe646b4dc|Sept 05, 2024
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|d110899f08ad153403b567d8c8bb50a07c889108|Sept 04, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|d110899f08ad153403b567d8c8bb50a07c889108|Sept 04, 2024
 Emulators|[play](https://github.com/jpd002/Play-.git)|9752b303037186a2e2581b864bc25136402cdc79|Sept 04, 2024
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|bc99c69ff54a0f558c1b359754abc1c1f02e9189|Sept 04, 2024
@@ -201,7 +203,6 @@ Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-
 Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64plus-video-glide64mk2)|2e2704194a6a188c8e5127970e9aa320f37e5156|Jul 15, 2024
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|fcf00779f08a9503ef30d26422f6b0350684820d|Jul 15, 2024
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|6c2c3f8ae10b7f0f6dfe06f45ca7ca598a6b659a|Jul 14, 2024
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.3.290.0|Jul 12, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.4|Jul 10, 2024
 Libraries|[python-adafruit-circuitpython-requests](https://files.pythonhosted.org/packages/6e/b0/afc5600f34105002f76ffa9afa5668ca3a4bce51ee6124cd3bcd1fd27128)|4.1.4|Jul 08, 2024
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|899bbd5c1ebf84105ca0616ee933a0ee113fbc79|Jul 08, 2024
@@ -428,7 +429,6 @@ Emulators|[libretro-melonds](http://github.com/libretro/melonds)|c6488c88cb4c758
 Emulators|[libretro-superflappybirds](http://github.com/IgniparousTempest/libretro-superflappybirds)|4b798ecc6948017ca79aad1ea20fe57e680228c8|Apr 13, 2023
 Controllers|[xarcade2jstick](http://github.com/petrockblog/xarcade2jstick)|7b579e9e9554e6d997978d069ddeb566ff381007|Apr 10, 2023
 Controllers|[guncon3](http://github.com/pcnimdock/guncon3_dkms)|0dfe0feaa2afc37a8a70f6cd0f6c803ee4d89f40|Mar 22, 2023
-Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|72ce23dd989ced9df3f49d2021208eff1f99552c|Mar 19, 2023
 Emulators|[libretro-vemulator](http://github.com/libretro/vemulator-libretro)|ff9c39714fe64960b4050c6884c70c24e63de4fd|Mar 11, 2023
 Boot|[batocera-shim-signed-efi-ia32](https://ftp.debian.org/debian/pool/main/s/shim-signed)|1.39+15.7-1|Mar 09, 2023
 Emulators|[libretro-theodore](http://github.com/Zlika/theodore)|503b2bb4fa747442fb91b89644238e5267637bcd|Mar 03, 2023
