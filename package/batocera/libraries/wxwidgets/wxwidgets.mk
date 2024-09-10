@@ -3,8 +3,8 @@
 # wxwidgets
 #
 ################################################################################
-# Version: Commits on May 13, 2024
-WXWIDGETS_VERSION = v3.2.5
+# Version: Commits on Sept 09, 2024
+WXWIDGETS_VERSION = v3.2.6
 WXWIDGETS_SITE = https://github.com/wxWidgets/wxWidgets
 WXWIDGETS_DEPENDENCIES = zlib libpng jpeg gdk-pixbuf host-libgtk3 libgtk3 libglu
 WXWIDGETS_SITE_METHOD = git
