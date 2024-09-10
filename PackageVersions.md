@@ -59,12 +59,12 @@ Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-control
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|e6241340d292dee20406a0567262a78ff34d45f7|Jun 02, 2021
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.6|Apr 12, 2024
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|d110899f08ad153403b567d8c8bb50a07c889108|Sept 04, 2024
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|87c3ed4fa167ada31cc57a961a9d805171e10d2e|Sept 09, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|d110899f08ad153403b567d8c8bb50a07c889108|Sept 04, 2024
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|8968deb8fbfd5c96819fa22aba7bbd8890ed8113|Apr 25, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|9b0c94229a5a4accb7bd9edabf01cd80aff1d8b0|Sept 05, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|3f2ed47c00ef6a8298c99c7d7161d1d3f4a90b39|Sept 05, 2024
-Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|72ce23dd989ced9df3f49d2021208eff1f99552c|Mar 19, 2023
+Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|f981ce209f4c76ba70113e24371a5b3aec5440d8|Sept 10, 2024
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v115|Jul 16, 2024
 Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|1a4d9660e756f52a01589add71df619361543a2f|Sept 08, 2024
@@ -317,7 +317,7 @@ Firmwares|[firmware-esp8089](http://github.com/jwrdegoede/esp8089)|38cb0c10d7075
 Firmwares|[firmware-orangepi](http://github.com/orangepi-xunlong/firmware)|76ead17a1770459560042a9a7c43fe615bbce5e7|Jan 24, 2024
 Firmwares|[firmware-radxa-rkwifibt](http://github.com/JeffyCN/rockchip_mirrors)|f17efc911891d0e50b86bc734754520164d326a2|Jun 06, 2024
 Firmwares|[firmware-rk3588](http://github.com/stvhay/rk3588-firmware)|dc92513ebf859d1213c999e44d4a7bf6a1fb04d7|Feb 16, 2023
-Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|ccfc47b215c05eaeb5b6f5549bbe51051a47f8e5|Sept 07, 2024
+Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|171e47acb1d0ff0116f960dc882432b6041206c2|Sept 10, 2024
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|d4f8fb543a892ba65bfc608511bf582c0425aa81|Sept 03, 2024
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2024.06|Jul 18, 2024
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|e6448b04e5bfdabffbd650e1ccc53b82cd8c1c5d|Aug 31, 2024
@@ -343,7 +343,7 @@ Gpu|[shaderc](http://github.com/google/shaderc)|v2024.1|Apr 30, 2024
 Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.3.290.0|Jun 18, 2024
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|3a655d0f8d3c946efd690edea31e138d4efef417|Sept 08, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|6227cc2e264c10c92b35c23b3454690fb349b508|Sept 07, 2024
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.3.290.0|Jul 12, 2024
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|1.3.295|Sept 06, 2024
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.2|Jul 29, 2024
 Hardware|[ayn-platform](http://github.com/ShadowBlip/ayn-platform)|v0.5.2|Jul 29, 2024
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|e421d1e6bd9afb545b6bbfc6b30e306975e77e44|Jul 23, 2024
