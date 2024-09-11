@@ -18,7 +18,10 @@ Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.27.13-rc.1|Sept 11, 
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|14b1af9e1adb134c7539746f250a15d06beed1e4|Sept 11, 2024
 Emulators|[libdof](http://github.com/jsm174/libdof)|5c43c99ea28b44bb58b74554c4303a505e208148|Sept 11, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|314099325d7b8fe2e8b44705a02099a4d4176600|Sept 11, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.17.r2.g52f5128a|Sept 11, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240911|Sept 11, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|b2f248492aad10cc84b189178b83ad922dad38b8|Sept 11, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240911|Sept 11, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|8c3f03c956a2529ee90ea4bfa85811d0db1609f7|Sept 11, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|77519332e8ed232619417ebbf6eb01e4b58236f5|Sept 11, 2024
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|9ddb5cb7e7e2461592ccea5e5ee14027a0fe5002|Sept 11, 2024
@@ -39,8 +42,6 @@ Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|312
 Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-console)|beddd15785663f1c3b4e9476998defea36223cf3|Sept 10, 2024
 Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64plus-video-glide64mk2)|d2b699ce9ee2d38d5985990cf74f1f89295353bd|Sept 10, 2024
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|f981ce209f4c76ba70113e24371a5b3aec5440d8|Sept 10, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240910|Sept 10, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240910|Sept 10, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|e0e772ef92f3739d52a51ddf9f898f4a12d44d7e|Sept 10, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|26004e8dc2fdc62095b2e53509909c8b1e88e4d9|Sept 10, 2024
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|609387c92c37bf96d6fc9116a502eed07b7b59b4|Sept 10, 2024
@@ -77,7 +78,6 @@ Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|fd3
 Emulators|[libretro-mame](http://github.com/sonninnos/mame)|f50c9e1538a4024c004c17bceb2173d55843a65b|Sept 08, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|5393235c4023e21bdfdb3c0dfe8ae6c553b86b1c|Sept 07, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45333|Sept 07, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.17.r0.g27b121f2|Sept 07, 2024
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|41fd79180753a1c9702e032a9d0675b4e25cc3d5|Sept 07, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|5393235c4023e21bdfdb3c0dfe8ae6c553b86b1c|Sept 07, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|a6914b2ddb865bb3e67250cd22cbdc307085284e|Sept 07, 2024
