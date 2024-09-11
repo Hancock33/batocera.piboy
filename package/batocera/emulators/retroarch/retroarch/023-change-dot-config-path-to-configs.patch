@@ -21,7 +21,7 @@ index 7478040e17..f9bf8a24ed 100644
  If RetroArch creates a new default config file, it will attempt to load the skeleton config file /etc/retroarch.cfg and use that as a basis.
  This allows distributions to set up default paths for libretro cores, and similar things.
 diff --git a/file_path_special.c b/file_path_special.c
-index 91516971d2..a392794a26 100644
+index 68a71eca18..1a100c8e39 100644
 --- a/file_path_special.c
 +++ b/file_path_special.c
 @@ -160,7 +160,7 @@ bool fill_pathname_application_data(char *s, size_t len)
@@ -43,7 +43,7 @@ index 91516971d2..a392794a26 100644
        return true;
     }
 diff --git a/frontend/drivers/platform_unix.c b/frontend/drivers/platform_unix.c
-index 0ae98afdd9..56a5300bd2 100644
+index 583d74a72e..1f3f1301bc 100644
 --- a/frontend/drivers/platform_unix.c
 +++ b/frontend/drivers/platform_unix.c
 @@ -1739,7 +1739,7 @@ static void frontend_unix_get_env(int *argc,
@@ -80,10 +80,10 @@ index aa9010eaab..5c8230286a 100644
     s|^# video_fullscreen =.*|video_fullscreen = "true"|;
     s|^# menu_driver =.*|menu_driver = "glui"|;
 diff --git a/retroarch.c b/retroarch.c
-index 350a9c4bb6..ae392d7189 100644
+index ceb29e3755..63427acae7 100644
 --- a/retroarch.c
 +++ b/retroarch.c
-@@ -6240,7 +6240,7 @@ static void retroarch_print_help(const char *arg0)
+@@ -6239,7 +6239,7 @@ static void retroarch_print_help(const char *arg0)
           "                                 "
           "  $XDG_CONFIG_HOME/retroarch/retroarch.cfg,\n"
           "                                 "
