@@ -1,8 +1,8 @@
 diff --git a/runloop.c b/runloop.c
-index a4bc004..65dab4e 100644
+index ce403a6647..184d87003f 100644
 --- a/runloop.c
 +++ b/runloop.c
-@@ -7436,7 +7436,9 @@ bool runloop_get_entry_state_path(char *path, size_t len, unsigned slot)
+@@ -7429,7 +7429,9 @@ bool runloop_get_entry_state_path(char *path, size_t len, unsigned slot)
        return false;
  
     _len = strlcpy(path, name_savestate, len);
