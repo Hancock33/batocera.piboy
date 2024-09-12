@@ -532,7 +532,7 @@ index 25feab188dfe..0243abb0e491 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 9b47482c059c..c7ba9220b765 100644
+index 3239c9f26832..6a973f24c54a 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -157,6 +157,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_351_DMUB);
@@ -610,7 +610,7 @@ index 9b47482c059c..c7ba9220b765 100644
  	return DIV_ROUND_CLOSEST(AMDGPU_MAX_BL_LEVEL * (brightness - min),
  				 max - min);
  }
-@@ -8409,7 +8431,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -8420,7 +8442,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -7026,7 +7026,7 @@ index 09f8397bae15..19734b297527 100644
  {
  	return state != PM_SUSPEND_TO_IDLE && suspend_ops->prepare ?
 diff --git a/sound/pci/hda/patch_realtek.c b/sound/pci/hda/patch_realtek.c
-index fa646772ae81..88dd3f5f2fb5 100644
+index 8715a3e97cda..0f98207101ae 100644
 --- a/sound/pci/hda/patch_realtek.c
 +++ b/sound/pci/hda/patch_realtek.c
 @@ -7423,6 +7423,7 @@ enum {
@@ -7037,7 +7037,7 @@ index fa646772ae81..88dd3f5f2fb5 100644
  	ALC294_FIXUP_ASUS_ALLY_PINS,
  	ALC294_FIXUP_ASUS_ALLY_VERBS,
  	ALC294_FIXUP_ASUS_ALLY_SPEAKER,
-@@ -8893,6 +8894,12 @@ static const struct hda_fixup alc269_fixups[] = {
+@@ -8895,6 +8896,12 @@ static const struct hda_fixup alc269_fixups[] = {
  		.chained = true,
  		.chain_id = ALC294_FIXUP_ASUS_ALLY_PINS
  	},
@@ -7050,7 +7050,7 @@ index fa646772ae81..88dd3f5f2fb5 100644
  	[ALC294_FIXUP_ASUS_ALLY_PINS] = {
  		.type = HDA_FIXUP_PINS,
  		.v.pins = (const struct hda_pintbl[]) {
-@@ -10327,6 +10334,7 @@ static const struct snd_pci_quirk alc269_fixup_tbl[] = {
+@@ -10343,6 +10350,7 @@ static const struct snd_pci_quirk alc269_fixup_tbl[] = {
  	SND_PCI_QUIRK(0x1043, 0x1740, "ASUS UX430UA", ALC295_FIXUP_ASUS_DACS),
  	SND_PCI_QUIRK(0x1043, 0x17d1, "ASUS UX431FL", ALC294_FIXUP_ASUS_DUAL_SPK),
  	SND_PCI_QUIRK(0x1043, 0x17f3, "ROG Ally NR2301L/X", ALC294_FIXUP_ASUS_ALLY),
