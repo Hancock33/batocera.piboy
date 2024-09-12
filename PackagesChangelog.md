@@ -12,7 +12,9 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|5e4ceff9017b4584cc9f4a41473e41a
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|0cf6b97004dc5c4e9850782201ec74c8a2ef1dde|Sept 12, 2024
 Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|8614f638e36d732eae3835c48aa44537b9e74fbc|Sept 12, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|05844c649faa2e233819b1e6cf5bae29a0795ae9|Sept 12, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240912|Sept 12, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|b01829b7d6603399efcbae1f7f00118b13ce2de7|Sept 12, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240912|Sept 12, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|ed39413532ad13c6e875c3b9b73047cbdff2ab11|Sept 12, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|369d2f09f262dcb60d7ea3c03f7e71f2b957094f|Sept 12, 2024
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|3caffa59c5f2e3bca152aad5be79c8a53c7d1884|Sept 12, 2024
@@ -38,9 +40,7 @@ Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.27.13-rc.1|Sept 11, 
 Emulators|[libdof](http://github.com/jsm174/libdof)|5c43c99ea28b44bb58b74554c4303a505e208148|Sept 11, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|ee6f88dd04eb84620a8f433d36a50736dac58b1a|Sept 11, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.17.r2.g52f5128a|Sept 11, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240911|Sept 11, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|b2f248492aad10cc84b189178b83ad922dad38b8|Sept 11, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240911|Sept 11, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|8c3f03c956a2529ee90ea4bfa85811d0db1609f7|Sept 11, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|17fc50853546047829dbea341594b3ab1380eac4|Sept 11, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|338fb278e84976912389d275d8eaa94183755987|Sept 10, 2024
