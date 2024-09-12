@@ -448,6 +448,7 @@ sandboxing_prefix() {
 
 createWineDirectory() {
 	WINEPREFIX=$1
+	trick_wine "${WINEPREFIX}" "sound=alsa" || cleanAndExit 1
 
 	# already created
 	[[ -e "${WINEPREFIX}" ]] && return 0
