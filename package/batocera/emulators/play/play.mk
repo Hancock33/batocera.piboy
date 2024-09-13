@@ -9,7 +9,7 @@ PLAY_SITE = https://github.com/jpd002/Play-.git
 PLAY_SITE_METHOD = git
 PLAY_GIT_SUBMODULES = YES
 PLAY_LICENSE = BSD
-PLAY_DEPENDENCIES = openal qt6base sqlite ecm
+PLAY_DEPENDENCIES = libglu openal qt6base sqlite ecm
 
 PLAY_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 PLAY_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF

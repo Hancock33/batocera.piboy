@@ -7,7 +7,7 @@
 MELONDS_VERSION = 50d32f3c96945d35840888a126de48c7739872cc
 MELONDS_SITE = $(call github,melonDS-emu,melonDS,$(MELONDS_VERSION))
 MELONDS_LICENSE = GPLv2
-MELONDS_DEPENDENCIES = sdl2 qt6base qt6multimedia slirp libepoxy libarchive
+MELONDS_DEPENDENCIES = ecm libarchive libegl libepoxy qt6base qt6multimedia sdl2 slirp
 MELONDS_SUPPORTS_IN_SOURCE_BUILD = NO
 
 MELONDS_CONF_OPTS += -DCMAKE_INSTALL_PREFIX="/usr"
