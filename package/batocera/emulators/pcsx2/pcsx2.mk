@@ -15,6 +15,7 @@ PCSX2_SUPPORTS_IN_SOURCE_BUILD = NO
 PCSX2_DEPENDENCIES += xorgproto alsa-lib freetype zlib libpng stenzek-shaderc
 PCSX2_DEPENDENCIES += libaio portaudio libsoundtouch sdl2 libpcap yaml-cpp
 PCSX2_DEPENDENCIES += libsamplerate fmt wxwidgets libgtk3 qt6base qt6tools qt6svg
+PCSX2_DEPENDENCIES += host-libcurl libcurl libbacktrace webp
 
 PCSX2_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 PCSX2_CONF_OPTS += -DUSE_SYSTEM_LIBS=AUTO
