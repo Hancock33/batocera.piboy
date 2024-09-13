@@ -12,7 +12,7 @@ index bfdf945..c5b39bc 100644
  unset(TEMP_SHADERC_LOCATION)
  
 diff --git a/libshaderc/CMakeLists.txt b/libshaderc/CMakeLists.txt
-index 4192998..ad1695f 100644
+index dc881f4..ca6633a 100644
 --- a/libshaderc/CMakeLists.txt
 +++ b/libshaderc/CMakeLists.txt
 @@ -24,15 +24,15 @@ set(SHADERC_SOURCES
@@ -35,8 +35,8 @@ index 4192998..ad1695f 100644
 +    PUBLIC shaderc_stenzekLIB
  )
  
- if(SHADERC_ENABLE_INSTALL)
-@@ -46,7 +46,7 @@ if(SHADERC_ENABLE_INSTALL)
+ # Use a different shared library name on Linux, to avoid conflicts with
+@@ -52,7 +52,7 @@ if(SHADERC_ENABLE_INSTALL)
      DESTINATION
        ${CMAKE_INSTALL_INCLUDEDIR}/shaderc)
  
@@ -45,7 +45,7 @@ index 4192998..ad1695f 100644
      EXPORT ShadercTargets
      INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
      LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-@@ -63,11 +63,11 @@ set(SHADERC_LIBS
+@@ -69,11 +69,11 @@ set(SHADERC_LIBS
    SPIRV-Tools
  )
  
