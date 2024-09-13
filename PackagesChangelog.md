@@ -15,17 +15,19 @@ Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|cae0ed2801
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|6bee384042ee8d968777557e77d7c0aaf6d3cb6c|Sept 13, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|0acd849f18bf12b4d170b0ab0d80d2f76d02af93|Sept 13, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|2023f7e28766560ed13ecfff3740756b34f399d1|Sept 13, 2024
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|b6dee54cc10fce4412ec698a6507c20650d27597|Sept 13, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|bd7dabd7eb2209f874b07a996fe893e399964489|Sept 13, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|2cc482f02a160b72ab7337ba672f505f76c54323|Sept 13, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|46160e1111f403daf2b47ea010831758c22bb77b|Sept 13, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|c738391433c96a1a347e8252f267aa3c946d22b4|Sept 13, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|bd8ed67205736e8f1f0912dd2fb79b009aebd7dd|Sept 13, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|71326a7eaafdba0d0e693490300f79cdedce91fa|Sept 13, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|a116eb389b4ebace85f2362c7478bfc684d275ca|Sept 13, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240913|Sept 13, 2024
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|3c12f7af773c547973138bee6d6ac70d91729479|Sept 13, 2024
+Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|16cd61ed45a11db87f647b6563ddd4ca3ec1ae3a|Sept 13, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|f97763cacd876e378677405309d63f45a3f9dea7|Sept 13, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240913|Sept 13, 2024
-Ports|[doomretro](http://github.com/bradharding/doomretro)|8f59de4e9eb73c65d0f99fe900559e9a2450270c|Sept 13, 2024
+Ports|[doomretro](http://github.com/bradharding/doomretro)|ef038b37b3a08a942f7e583de55e2df7984554ad|Sept 13, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|b1318e4b22c15eb08f402e0a55b6bf4046e75e91|Sept 13, 2024
 Emulators|[libretro-atari800](http://github.com/libretro/libretro-atari800)|173edee31172db46f46512918cda11192a2bd977|Sept 13, 2024
 Emulators|[libretro-fuse](http://github.com/libretro/fuse-libretro)|b7f789133970b69ab27d1d181bc8c8930a462130|Sept 13, 2024
@@ -53,7 +55,6 @@ Libraries|[cpuinfo](http://github.com/pytorch/cpuinfo)|a5ff6df40ce528721cfc310c7
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|08bee3c37a8bfa6eb27ec74f49ca07bcf8f60b6a|Sept 11, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.27.13-rc.1|Sept 11, 2024
 Emulators|[libdof](http://github.com/jsm174/libdof)|5c43c99ea28b44bb58b74554c4303a505e208148|Sept 11, 2024
-Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|b2f248492aad10cc84b189178b83ad922dad38b8|Sept 11, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|17fc50853546047829dbea341594b3ab1380eac4|Sept 11, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|f44e57bcf69ede9d557b06bf265dec6a9df35b53|Sept 10, 2024
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|b13fdd5029a246e8f90a1d70e2ed000779fee4f1|Sept 10, 2024
@@ -71,7 +72,6 @@ Emulators|[scummvm](http://github.com/scummvm/scummvm)|e84c6751fbbb554043675911b
 Firmwares|[alllinuxfirmwares](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot)|20240909|Sept 09, 2024
 Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.2.6|Sept 09, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|070924bfff3dab77099faa1504d5cc73ad03e74a|Sept 09, 2024
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|a0171b1b5a59464df57e10128548afb70382e5a5|Sept 09, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|15b5e9f4abfb1c5c691c468799816755a91a2e11|Sept 09, 2024
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.7.4|Sept 09, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|30bd5e964602ac3b95b11e01d1a52ef13c396bd7|Sept 09, 2024

@@ -270,7 +270,7 @@ Emulators|[python-pygame2](http://github.com/pygame/pygame)|88475d861931ce515bab
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v1.9.18|Jul 08, 2023
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|8a74442fabfc6f72c623dbf1f7a59bfeba771b9f|Aug 08, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|bd8ed67205736e8f1f0912dd2fb79b009aebd7dd|Sept 13, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|71326a7eaafdba0d0e693490300f79cdedce91fa|Sept 13, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20240910|Sept 10, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|8131f402698c93550da54686910eefc938c9ef2b|Sept 13, 2024
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
@@ -342,7 +342,7 @@ Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|8e2a51b1c3e5b569aabc0b476f
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.2|Jun 21, 2024
 Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.3.290.0|Jun 18, 2024
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|3c12f7af773c547973138bee6d6ac70d91729479|Sept 13, 2024
-Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|b2f248492aad10cc84b189178b83ad922dad38b8|Sept 11, 2024
+Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|16cd61ed45a11db87f647b6563ddd4ca3ec1ae3a|Sept 13, 2024
 Gpu|[vulkan-volk](http://github.com/zeux/volk)|1.3.295|Sept 06, 2024
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.2|Jul 29, 2024
 Hardware|[ayn-platform](http://github.com/ShadowBlip/ayn-platform)|v0.5.2|Jul 29, 2024
@@ -433,9 +433,9 @@ Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a4
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|2023f7e28766560ed13ecfff3740756b34f399d1|Sept 13, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|bd7f9a8e3875b34f35593099f2080bbacd2fb6b6|Jul 28, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|070924bfff3dab77099faa1504d5cc73ad03e74a|Sept 09, 2024
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|a0171b1b5a59464df57e10128548afb70382e5a5|Sept 09, 2024
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|b6dee54cc10fce4412ec698a6507c20650d27597|Sept 13, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|e0e772ef92f3739d52a51ddf9f898f4a12d44d7e|Sept 10, 2024
-Ports|[doomretro](http://github.com/bradharding/doomretro)|8f59de4e9eb73c65d0f99fe900559e9a2450270c|Sept 13, 2024
+Ports|[doomretro](http://github.com/bradharding/doomretro)|ef038b37b3a08a942f7e583de55e2df7984554ad|Sept 13, 2024
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|bd3c033bdf1faa4606086dcae0436531fb2e7e5c|Aug 11, 2024
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|899bbd5c1ebf84105ca0616ee933a0ee113fbc79|Jul 08, 2024
