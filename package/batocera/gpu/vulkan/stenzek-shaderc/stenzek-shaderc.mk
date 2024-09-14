@@ -27,7 +27,7 @@ STENZEK_SHADERC_POST_PATCH_HOOKS += STENZEK_SHADERC_THIRDPARTY
 
 define STENZEK_SHADERC_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib
-	$(INSTALL) -D $(@D)/buildroot-build/libshaderc/libshaderc_stenzek.so $(TARGET_DIR)/usr/lib
+	$(INSTALL) -D $(@D)/buildroot-build/libshaderc/libshaderc_ds.so $(TARGET_DIR)/usr/lib
 endef
 
 $(eval $(cmake-package))
