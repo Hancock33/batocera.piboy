@@ -71,6 +71,8 @@ else
     BATOCERA_EMULATIONSTATION_CONF_OPTS += -DCEC=ON
 endif
 
+BATOCERA_EMULATIONSTATION_SOURCE_PATH = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation
+
 BATOCERA_EMULATIONSTATION_KEY_SCREENSCRAPER_DEV_LOGIN=$(shell grep -E '^SCREENSCRAPER_DEV_LOGIN=' /home/lee/keys.txt | cut -d = -f 2-)
 BATOCERA_EMULATIONSTATION_KEY_GAMESDB_APIKEY=$(shell grep -E '^GAMESDB_APIKEY=' /home/lee/keys.txt | cut -d = -f 2-)
 BATOCERA_EMULATIONSTATION_KEY_CHEEVOS_DEV_LOGIN=$(shell grep -E '^CHEEVOS_DEV_LOGIN=' /home/lee/keys.txt | cut -d = -f 2-)
@@ -120,12 +122,11 @@ define BATOCERA_EMULATIONSTATION_RESOURCES
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation
 	cp $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/controllers/es_input.cfg $(TARGET_DIR)/usr/share/emulationstation
 
-
 	# savestates config
-	$(INSTALL) -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/es_savestates.cfg $(TARGET_DIR)/usr/share/emulationstation
+	$(INSTALL) -m 0644 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/es_savestates.cfg $(TARGET_DIR)/usr/share/emulationstation
 
 	# hooks
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/batocera-preupdate-gamelists-hook $(TARGET_DIR)/usr/bin/
+	cp $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/batocera-preupdate-gamelists-hook $(TARGET_DIR)/usr/bin/
 endef
 
 ### S31emulationstation
@@ -165,18 +166,18 @@ BATOCERA_EMULATIONSTATION_POST_INSTALL_TARGET_HOOKS += BATOCERA_EMULATIONSTATION
 endif
 
 define BATOCERA_EMULATIONSTATION_XORG
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/xorg/xinitrc $(TARGET_DIR)/etc/X11/xinit/xinitrc
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/xorg/xinitrc $(TARGET_DIR)/etc/X11/xinit/xinitrc
 endef
 
 define BATOCERA_EMULATIONSTATION_WAYLAND_SWAY
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/wayland/sway/04-sway.sh  $(TARGET_DIR)/etc/profile.d/04-sway.sh
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/wayland/sway/config      $(TARGET_DIR)/etc/sway/config
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/wayland/sway/sway-launch $(TARGET_DIR)/usr/bin/sway-launch
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/sway/04-sway.sh	$(TARGET_DIR)/etc/profile.d/04-sway.sh
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/sway/config		$(TARGET_DIR)/etc/sway/config
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/sway/sway-launch	$(TARGET_DIR)/usr/bin/sway-launch
 endef
 
 define BATOCERA_EMULATIONSTATION_BOOT
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/S31emulationstation			$(TARGET_DIR)/etc/init.d/S31emulationstation
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/emulationstation-standalone $(TARGET_DIR)/usr/bin/emulationstation-standalone
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/S31emulationstation			$(TARGET_DIR)/etc/init.d/S31emulationstation
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/emulationstation-standalone	$(TARGET_DIR)/usr/bin/emulationstation-standalone
 	sed -i -e 's;%BATOCERA_EMULATIONSTATION_PREFIX%;${BATOCERA_EMULATIONSTATION_PREFIX};g' \
 		-e 's;%BATOCERA_EMULATIONSTATION_CMD%;${BATOCERA_EMULATIONSTATION_CMD};g' \
 		-e 's;%BATOCERA_EMULATIONSTATION_ARGS%;${BATOCERA_EMULATIONSTATION_ARGS};g' \
