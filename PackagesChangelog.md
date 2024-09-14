@@ -99,7 +99,6 @@ Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|5393235c
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|a6914b2ddb865bb3e67250cd22cbdc307085284e|Sept 07, 2024
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|c12c3bce8d9c660ba09443cb7df6d1ab8178e4a7|Sept 07, 2024
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|0b43954c75760d00737120db9d5009813778c7ae|Sept 07, 2024
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|1.3.295|Sept 06, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|3a75c7ce5fc62c524be8d0eb45cd4b39d08a885c|Sept 06, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|12a9895466fc1d895e3f4570494af7b398470975|Sept 06, 2024
 Emulators|[libretro-beetle-supergrafx](http://github.com/libretro/beetle-supergrafx-libretro)|6c76ef9e83f7f3bed3aa747b01fd2d6c54687c65|Sept 06, 2024
@@ -208,6 +207,7 @@ Emulators|[mupen64plus-input-sdl](http://github.com/mupen64plus/mupen64plus-inpu
 Emulators|[mupen64plus-rsp-hle](http://github.com/mupen64plus/mupen64plus-rsp-hle)|2798e65d6fc89d89aace0b0d779af6406809b940|Jul 15, 2024
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|fcf00779f08a9503ef30d26422f6b0350684820d|Jul 15, 2024
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|6c2c3f8ae10b7f0f6dfe06f45ca7ca598a6b659a|Jul 14, 2024
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.3.290.0|Jul 12, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.4|Jul 10, 2024
 Libraries|[python-adafruit-circuitpython-requests](https://files.pythonhosted.org/packages/6e/b0/afc5600f34105002f76ffa9afa5668ca3a4bce51ee6124cd3bcd1fd27128)|4.1.4|Jul 08, 2024
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|899bbd5c1ebf84105ca0616ee933a0ee113fbc79|Jul 08, 2024
