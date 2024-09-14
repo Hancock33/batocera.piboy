@@ -13,6 +13,7 @@ spirv-headers.mk
 spirv-llvm-translator.mk
 vice.mk
 vulkan-headers.mk
+vulkan-volk.mk
 wine-custom.mk
 wine-native.mk
 wine-proton.mk
