@@ -3,8 +3,8 @@
 # vita3k
 #
 ################################################################################
-# Version: Commits on Sept 11, 2024
-VITA3K_VERSION = c94189dd9ba84ebf9e8da578f6157a2291c1e3b2
+# Version: Commits on Sept 10, 2024
+VITA3K_VERSION = e70999adcdd0537e882f8d5afe54843bc770d8b2
 VITA3K_SITE = https://github.com/vita3k/vita3k
 VITA3K_SITE_METHOD=git
 VITA3K_GIT_SUBMODULES=YES
