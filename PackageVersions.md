@@ -270,9 +270,9 @@ Emulators|[python-pygame2](http://github.com/pygame/pygame)|88475d861931ce515bab
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v1.9.18|Jul 08, 2023
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|8a74442fabfc6f72c623dbf1f7a59bfeba771b9f|Aug 08, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|39c48f73105e3ec9c7a30d92c9ec17d838fa0da8|Sept 14, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|b557bc9523eeb4a88ed06de24624a6f2887147c8|Sept 14, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20240913|Sept 13, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|7f2534819e9d91184b51c190d0f78ea5fb061025|Aug 05, 2024
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|d1648dd707687c336dff1397daf8a657881c230e|Sept 14, 2024
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-09-14|Sept 14, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1083|Nov 15, 2023
@@ -435,12 +435,12 @@ Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|bd7f9a8e3875b34f3
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|070924bfff3dab77099faa1504d5cc73ad03e74a|Sept 09, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|b6dee54cc10fce4412ec698a6507c20650d27597|Sept 13, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|e0e772ef92f3739d52a51ddf9f898f4a12d44d7e|Sept 10, 2024
-Ports|[doomretro](http://github.com/bradharding/doomretro)|82a7c8600b691737ef434eb29140ab73c225fa29|Sept 14, 2024
+Ports|[doomretro](http://github.com/bradharding/doomretro)|7330c5d9f5c70bfdb10a9bbe9e37682ea190e5b7|Sept 14, 2024
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|bd3c033bdf1faa4606086dcae0436531fb2e7e5c|Aug 11, 2024
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|899bbd5c1ebf84105ca0616ee933a0ee113fbc79|Jul 08, 2024
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|19c21b9ab10b0c17147c9ad951cc15279ed33f77|Jul 25, 2024
-Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|f2a36becfa6353f2722a5e4fa7518d5af02c7fda|Sept 14, 2024
+Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|455ffb8b190dbfeff2764fcf4cddae998d00eeab|Sept 14, 2024
 Ports|[f2bgl](http://github.com/cyxx/f2bgl)|0b84f41c7cc13a41f5a1832549485b814a52070d|Oct 18, 2020
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|ad8a2754fa99ceaf40495185ad48191cf27559e2|Mar 05, 2024
 Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|9fb917c357b20d95d597bed4d67904c29cd5c753|Apr 21, 2024
@@ -487,7 +487,7 @@ Ports|[stk](http://github.com/supertuxkart/stk-code)|5a0b15a30c9ffb653d553424982
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|89f503f4dc11dd05d8dec7e802cd0b24d9c9f08a|Feb 09, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|46160e1111f403daf2b47ea010831758c22bb77b|Sept 13, 2024
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|d327bfa6140af179a9409e0ba42f392e03da530b|Mar 03, 2024
-Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|fd8478777bc8d454e928937ccecc6230f4c2e603|Sept 14, 2024
+Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|fd5b11d55939a1727bc45f0f4fc943c2ce4c5c84|Sept 14, 2024
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|a3e33215e3457e8d4f3c2093e873d73ea618c8ec|Aug 25, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|26004e8dc2fdc62095b2e53509909c8b1e88e4d9|Sept 10, 2024
