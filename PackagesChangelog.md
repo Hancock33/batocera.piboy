@@ -5,6 +5,7 @@ Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|595090708ca9ef370392cb5e0c8c105f1a6bff88|Sept 14, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.143|Sept 14, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|62656b6e6f2066eda34b0dc932937a3b418983a2|Sept 14, 2024
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|d1648dd707687c336dff1397daf8a657881c230e|Sept 14, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-09-14|Sept 14, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|354a11880a4745da4afb114bd8748cf270ad7343|Sept 14, 2024
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|670f399168972fd4119d5c8b05ebf80bf0c21974|Sep 14, 2024
@@ -12,15 +13,15 @@ Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|cccdf5e1a7
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|fdb65a210166af564b2adfbbe54fa57b694211f3|Sept 14, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|9fa43f2386b6ee9370e69eda7f8023cf857f0bb9|Sept 14, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|ff311604c623984c4328a629756d04494a381c24|Sept 14, 2024
-Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|f2a36becfa6353f2722a5e4fa7518d5af02c7fda|Sept 14, 2024
-Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|fd8478777bc8d454e928937ccecc6230f4c2e603|Sept 14, 2024
+Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|455ffb8b190dbfeff2764fcf4cddae998d00eeab|Sept 14, 2024
+Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|fd5b11d55939a1727bc45f0f4fc943c2ce4c5c84|Sept 14, 2024
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|81f906e888bb79ed8dfe46f4b0b9f6b0027ff9bd|Sept 14, 2024
 Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64plus-video-glide64mk2)|39a8c11e8a041e16bcc6d67ebc2281b8632ba5ed|Sept 14, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|39c48f73105e3ec9c7a30d92c9ec17d838fa0da8|Sept 14, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|b557bc9523eeb4a88ed06de24624a6f2887147c8|Sept 14, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|fff79dffc10b4b51ef9c3ce650e7d770d01fae95|Sept 14, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240914|Sept 14, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240914|Sept 14, 2024
-Ports|[doomretro](http://github.com/bradharding/doomretro)|82a7c8600b691737ef434eb29140ab73c225fa29|Sept 14, 2024
+Ports|[doomretro](http://github.com/bradharding/doomretro)|7330c5d9f5c70bfdb10a9bbe9e37682ea190e5b7|Sept 14, 2024
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|86be24e630a803acc7cd40eaba274ca2f41a162a|Sept 14, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|62656b6e6f2066eda34b0dc932937a3b418983a2|Sept 14, 2024
 Emulators|[libretro-px68k](http://github.com/libretro/px68k-libretro)|f78813d74aa2d6f9aad19733727b40247065f07b|Sept 14, 2024
@@ -179,7 +180,6 @@ Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|824690
 Emulators|[libretro-beetle-pcfx](http://github.com/libretro/beetle-pcfx-libretro)|3a4e8d3665816a2938ea5029f05bc1537f0cbe40|Aug 07, 2024
 Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|978d977119eff1bd7214c0095eb91b15b859bb61|Aug 07, 2024
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|17a075c53247ae070be4614c9b4461398f52f2e7|Aug 06, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|7f2534819e9d91184b51c190d0f78ea5fb061025|Aug 05, 2024
 Libraries|[discord_rpc](http://github.com/stenzek/discord-rpc)|144f3a3f1209994d8d9e8a87964a989cb9911c1e|Aug 02, 2024
 Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|bc13d979164e0d60806c2b034f96d9b4de1657f2|Aug 02, 2024
 Network|[rtl8812au](http://github.com/morrownr/8812au-20210820)|a88228be6215bd44c8c29792e240ac05387e8e20|Jul 30, 2024
