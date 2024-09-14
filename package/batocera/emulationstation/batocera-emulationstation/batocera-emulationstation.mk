@@ -118,10 +118,8 @@ define BATOCERA_EMULATIONSTATION_RESOURCES
 
 	# es_input.cfg
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/controllers/es_input.cfg \
-		$(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/controllers/es_input.cfg \
-		$(TARGET_DIR)/usr/share/emulationstation
+	cp $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/controllers/es_input.cfg $(TARGET_DIR)/usr/share/emulationstation
+
 
 	# savestates config
 	$(INSTALL) -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/es_savestates.cfg $(TARGET_DIR)/usr/share/emulationstation
