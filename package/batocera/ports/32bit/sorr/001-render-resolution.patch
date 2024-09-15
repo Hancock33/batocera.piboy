@@ -1,34 +1,45 @@
 diff --git a/modules/libvideo/g_video.c b/modules/libvideo/g_video.c
-index a1d4f03..97865f6 100644
+index a1d4f03..2f7c15c 100644
 --- a/modules/libvideo/g_video.c
 +++ b/modules/libvideo/g_video.c
-@@ -54,21 +54,21 @@ SDL_Texture * texture = NULL;
+@@ -273,8 +273,8 @@ int gr_set_mode( int width, int height, int depth )
+ {
+     int n ;
+     int sdl_flags = 0;
+-    int surface_width = width;
+-    int surface_height = height;
++    int surface_width;
++    int surface_height;
+     int texture_depth = 0;
+     Uint32 format = 0;
+     Uint32 Rmask = 0;
+@@ -283,6 +283,20 @@ int gr_set_mode( int width, int height, int depth )
+     Uint32 Amask = 0;
+     char * e;
  
- char * apptitle = NULL ;
++    SDL_DisplayMode mode = {};
++    if ((SDL_GetDesktopDisplayMode(1, &mode) != 0)
++        && (SDL_GetDesktopDisplayMode(0, &mode) != 0))
++    {
++        SDL_Log("Unable to query display mode, using defaults.");
++        surface_width = 1920;
++        surface_height = 1080;
++    }
++    else
++    {
++        surface_width = mode.w;
++        surface_height = mode.h;
++    }
++
+     SDL_Log("Called set_mode with %dx%dx%d", width, height, depth);
  
--int scr_width = 320 ;
--int scr_height = 240 ;
--int renderer_width = 320 ;
--int renderer_height = 240 ;
-+int scr_width = 640 ;
-+int scr_height = 480 ;
-+int renderer_width = 640 ;
-+int renderer_height = 480 ;
+     full_screen = ( GLODWORD( libvideo, GRAPH_MODE ) & MODE_FULLSCREEN ) ? 1 : 0 ;
+@@ -373,7 +387,7 @@ int gr_set_mode( int width, int height, int depth )
+     // Enable SDL scaling, if needed
+     if(surface_width != width || surface_height != height) {
+         // I should add support for this from BennuGD
+-        SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");  // make the scaled rendering look smoother.
++        SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "nearest");  // make the scaled rendering look smoother.
+         SDL_RenderSetLogicalSize(renderer, width, height);
+     }
  
- int scr_initialized = 0 ;
- 
- int enable_16bits = 0 ;
- int enable_32bits = 0 ;
--int full_screen = 0 ;
--int double_buffer = 0 ;
-+int full_screen = 1 ;
-+int double_buffer = 1 ;
- int hardware_scr = 0 ;
- int grab_input = 0 ;
--int frameless = 0 ;
--int waitvsync = 0 ;
-+int frameless = 1 ;
-+int waitvsync = 1 ;
- 
- int scale_resolution = 0;
- int scale_resolution_aspectratio = 0;
