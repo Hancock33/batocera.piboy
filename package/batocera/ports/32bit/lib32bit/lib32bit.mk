@@ -33,7 +33,6 @@ define LIB32BIT_INSTALL_TARGET_CMDS
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy/piboy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/32bit/lib32bit/sorr.keys	   $(TARGET_DIR)/usr/share/evmapy/sorr.keys
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/32bit/lib32bit/sorr.piboy.keys $(TARGET_DIR)/usr/share/evmapy/piboy/sorr.keys
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/32bit/lib32bit/droidports.keys $(TARGET_DIR)/usr/share/evmapy/droidports.keys
 endef
 
