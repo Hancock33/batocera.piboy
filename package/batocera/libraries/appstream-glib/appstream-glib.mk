@@ -10,6 +10,6 @@ APPSTREAM_GLIB_INSTALL_STAGING = YES
 
 APPSTREAM_GLIB_DEPENDENCIES = libgtk3 libyaml json-glib libarchive libcurl
 
-APPSTREAM_GLIB_CONF_OPTS = -Dstemmer=false -Dintrospection=false -Dbuilder=false -Dman=false -Dgtk-doc=false -Drpm=false
+APPSTREAM_GLIB_CONF_OPTS = -Dintrospection=false -Dbuilder=false -Dman=false -Dgtk-doc=false -Drpm=false
 
 $(eval $(meson-package))
