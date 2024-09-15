@@ -180,6 +180,7 @@ Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|824690
 Emulators|[libretro-beetle-pcfx](http://github.com/libretro/beetle-pcfx-libretro)|3a4e8d3665816a2938ea5029f05bc1537f0cbe40|Aug 07, 2024
 Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|978d977119eff1bd7214c0095eb91b15b859bb61|Aug 07, 2024
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|17a075c53247ae070be4614c9b4461398f52f2e7|Aug 06, 2024
+Emulators|[xemu](https://github.com/xemu-project/xemu)|9ad18ee26559ca75218b049762675b99f8417fec|Aug 02, 2024
 Libraries|[discord_rpc](http://github.com/stenzek/discord-rpc)|144f3a3f1209994d8d9e8a87964a989cb9911c1e|Aug 02, 2024
 Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|bc13d979164e0d60806c2b034f96d9b4de1657f2|Aug 02, 2024
 Network|[rtl8812au](http://github.com/morrownr/8812au-20210820)|a88228be6215bd44c8c29792e240ac05387e8e20|Jul 30, 2024
@@ -387,7 +388,6 @@ Boot|[batocera-syslinux-efi](binaries)|6.04.pre2.r11.gbf6db5b4-2|Nov 29, 2023
 Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|d7d1d39111efb9c44fc956beea076ee243774dc1|Nov 29, 2023
 Utils|[tvtextviewer](https://github.com/lethal-guitar/TvTextViewer.git)|d3cc00a5009ece2d1df6cfc571709d0c5752bade|Nov 29, 2023
 Emulators|[ryujinx](https://github.com/Ryujinx/release-channel-master/releases)|1.1.1083|Nov 15, 2023
-Emulators|[xemu](https://github.com/xemu-project/xemu)|8707d2aa2626063cb67b5ea20382584a0848dce7|Nov 02, 2023
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[libretro-jumpnbump](http://github.com/libretro/jumpnbump-libretro)|4e68831f5576075c45c147f86865812afb816139|Nov 02, 2023
 Emulators|[libretro-craft](http://github.com/libretro/Craft)|34c1341caa094ff4fe4f06e8ceb6ec316062b1fa|Nov 01, 2023
