@@ -80,103 +80,6 @@ index d0324d44f548..210a808b74ec 100644
  ``energy_performance_available_preferences``
  
  A list of all the supported EPP preferences that could be used for
-diff --git a/Documentation/admin-guide/sysctl/vm.rst b/Documentation/admin-guide/sysctl/vm.rst
-index f48eaa98d22d..fc777c14cff6 100644
---- a/Documentation/admin-guide/sysctl/vm.rst
-+++ b/Documentation/admin-guide/sysctl/vm.rst
-@@ -25,6 +25,9 @@ files can be found in mm/swap.c.
- Currently, these files are in /proc/sys/vm:
- 
- - admin_reserve_kbytes
-+- anon_min_ratio
-+- clean_low_ratio
-+- clean_min_ratio
- - compact_memory
- - compaction_proactiveness
- - compact_unevictable_allowed
-@@ -108,6 +111,67 @@ On x86_64 this is about 128MB.
- Changing this takes effect whenever an application requests memory.
- 
- 
-+anon_min_ratio
-+==============
-+
-+This knob provides *hard* protection of anonymous pages. The anonymous pages
-+on the current node won't be reclaimed under any conditions when their amount
-+is below vm.anon_min_ratio.
-+
-+This knob may be used to prevent excessive swap thrashing when anonymous
-+memory is low (for example, when memory is going to be overfilled by
-+compressed data of zram module).
-+
-+Setting this value too high (close to 100) can result in inability to
-+swap and can lead to early OOM under memory pressure.
-+
-+The unit of measurement is the percentage of the total memory of the node.
-+
-+The default value is 15.
-+
-+
-+clean_low_ratio
-+================
-+
-+This knob provides *best-effort* protection of clean file pages. The file pages
-+on the current node won't be reclaimed under memory pressure when the amount of
-+clean file pages is below vm.clean_low_ratio *unless* we threaten to OOM.
-+
-+Protection of clean file pages using this knob may be used when swapping is
-+still possible to
-+  - prevent disk I/O thrashing under memory pressure;
-+  - improve performance in disk cache-bound tasks under memory pressure.
-+
-+Setting it to a high value may result in a early eviction of anonymous pages
-+into the swap space by attempting to hold the protected amount of clean file
-+pages in memory.
-+
-+The unit of measurement is the percentage of the total memory of the node.
-+
-+The default value is 0.
-+
-+
-+clean_min_ratio
-+================
-+
-+This knob provides *hard* protection of clean file pages. The file pages on the
-+current node won't be reclaimed under memory pressure when the amount of clean
-+file pages is below vm.clean_min_ratio.
-+
-+Hard protection of clean file pages using this knob may be used to
-+  - prevent disk I/O thrashing under memory pressure even with no free swap space;
-+  - improve performance in disk cache-bound tasks under memory pressure;
-+  - avoid high latency and prevent livelock in near-OOM conditions.
-+
-+Setting it to a high value may result in a early out-of-memory condition due to
-+the inability to reclaim the protected amount of clean file pages when other
-+types of pages cannot be reclaimed.
-+
-+The unit of measurement is the percentage of the total memory of the node.
-+
-+The default value is 15.
-+
-+
- compact_memory
- ==============
- 
-@@ -964,6 +1028,14 @@ be 133 (x + 2x = 200, 2x = 133.33).
- At 0, the kernel will not initiate swap until the amount of free and
- file-backed pages is less than the high watermark in a zone.
- 
-+This knob has no effect if the amount of clean file pages on the current
-+node is below vm.clean_low_ratio or vm.clean_min_ratio. In this case,
-+only anonymous pages can be reclaimed.
-+
-+If the number of anonymous pages on the current node is below
-+vm.anon_min_ratio, then only file pages can be reclaimed with
-+any vm.swappiness value.
-+
- 
- unprivileged_userfaultfd
- ========================
 diff --git a/Documentation/arch/x86/topology.rst b/Documentation/arch/x86/topology.rst
 index 7352ab89a55a..c12837e61bda 100644
 --- a/Documentation/arch/x86/topology.rst
@@ -23422,6 +23325,36 @@ index c00a86931f8c..d82213d68522 100644
  COND_SYSCALL(remap_file_pages);
  COND_SYSCALL(mbind);
  COND_SYSCALL(get_mempolicy);
+diff --git a/kernel/sysctl.c b/kernel/sysctl.c
+index 79e6cb1d5c48..676e89dc38c3 100644
+--- a/kernel/sysctl.c
++++ b/kernel/sysctl.c
+@@ -80,6 +80,9 @@
+ #ifdef CONFIG_RT_MUTEXES
+ #include <linux/rtmutex.h>
+ #endif
++#ifdef CONFIG_USER_NS
++#include <linux/user_namespace.h>
++#endif
+ 
+ /* shared constants to be used in various sysctls */
+ const int sysctl_vals[] = { 0, 1, 2, 3, 4, 100, 200, 1000, 3000, INT_MAX, 65535, -1 };
+@@ -1618,6 +1621,15 @@ static struct ctl_table kern_table[] = {
+ 		.mode		= 0644,
+ 		.proc_handler	= proc_dointvec,
+ 	},
++#ifdef CONFIG_USER_NS
++	{
++		.procname	= "unprivileged_userns_clone",
++		.data		= &unprivileged_userns_clone,
++		.maxlen		= sizeof(int),
++		.mode		= 0644,
++		.proc_handler	= proc_dointvec,
++	},
++#endif
+ #ifdef CONFIG_PROC_SYSCTL
+ 	{
+ 		.procname	= "tainted",
 diff --git a/kernel/user_namespace.c b/kernel/user_namespace.c
 index 0b0b95418b16..c4b835b91fc0 100644
 --- a/kernel/user_namespace.c
@@ -40568,80 +40501,10 @@ index f4ed952ed485..7d31518e9d5a 100644
  EXPORT_SYMBOL(zstd_reset_dstream);
  
 diff --git a/mm/Kconfig b/mm/Kconfig
-index b72e7d040f78..432f517fef8c 100644
+index b72e7d040f78..8feaa692ec87 100644
 --- a/mm/Kconfig
 +++ b/mm/Kconfig
-@@ -492,6 +492,69 @@ config ARCH_WANT_OPTIMIZE_DAX_VMEMMAP
- config ARCH_WANT_OPTIMIZE_HUGETLB_VMEMMAP
- 	bool
- 
-+config ANON_MIN_RATIO
-+	int "Default value for vm.anon_min_ratio"
-+	depends on SYSCTL
-+	range 0 100
-+	default 15
-+	help
-+	  This option sets the default value for vm.anon_min_ratio sysctl knob.
-+
-+	  The vm.anon_min_ratio sysctl knob provides *hard* protection of
-+	  anonymous pages. The anonymous pages on the current node won't be
-+	  reclaimed under any conditions when their amount is below
-+	  vm.anon_min_ratio. This knob may be used to prevent excessive swap
-+	  thrashing when anonymous memory is low (for example, when memory is
-+	  going to be overfilled by compressed data of zram module).
-+
-+	  Setting this value too high (close to MemTotal) can result in
-+	  inability to swap and can lead to early OOM under memory pressure.
-+
-+config CLEAN_LOW_RATIO
-+	int "Default value for vm.clean_low_ratio"
-+	depends on SYSCTL
-+	range 0 100
-+	default 0
-+	help
-+	  This option sets the default value for vm.clean_low_ratio sysctl knob.
-+
-+	  The vm.clean_low_ratio sysctl knob provides *best-effort*
-+	  protection of clean file pages. The file pages on the current node
-+	  won't be reclaimed under memory pressure when the amount of clean file
-+	  pages is below vm.clean_low_ratio *unless* we threaten to OOM.
-+	  Protection of clean file pages using this knob may be used when
-+	  swapping is still possible to
-+	    - prevent disk I/O thrashing under memory pressure;
-+	    - improve performance in disk cache-bound tasks under memory
-+	      pressure.
-+
-+	  Setting it to a high value may result in a early eviction of anonymous
-+	  pages into the swap space by attempting to hold the protected amount
-+	  of clean file pages in memory.
-+
-+config CLEAN_MIN_RATIO
-+	int "Default value for vm.clean_min_ratio"
-+	depends on SYSCTL
-+	range 0 100
-+	default 15
-+	help
-+	  This option sets the default value for vm.clean_min_ratio sysctl knob.
-+
-+	  The vm.clean_min_ratio sysctl knob provides *hard* protection of
-+	  clean file pages. The file pages on the current node won't be
-+	  reclaimed under memory pressure when the amount of clean file pages is
-+	  below vm.clean_min_ratio. Hard protection of clean file pages using
-+	  this knob may be used to
-+	    - prevent disk I/O thrashing under memory pressure even with no free
-+	      swap space;
-+	    - improve performance in disk cache-bound tasks under memory
-+	      pressure;
-+	    - avoid high latency and prevent livelock in near-OOM conditions.
-+
-+	  Setting it to a high value may result in a early out-of-memory condition
-+	  due to the inability to reclaim the protected amount of clean file pages
-+	  when other types of pages cannot be reclaimed.
-+
- config HAVE_MEMBLOCK_PHYS_MAP
- 	bool
- 
-@@ -636,7 +699,7 @@ config COMPACTION
+@@ -636,7 +636,7 @@ config COMPACTION
  config COMPACT_UNEVICTABLE_DEFAULT
  	int
  	depends on COMPACTION
@@ -40682,18 +40545,6 @@ index 67c86a5d64a6..90bc49d1ca92 100644
  	(1<<TRANSPARENT_HUGEPAGE_DEFRAG_KHUGEPAGED_FLAG)|
  	(1<<TRANSPARENT_HUGEPAGE_USE_ZERO_PAGE_FLAG);
  
-diff --git a/mm/mm_init.c b/mm/mm_init.c
-index 51960079875b..c0574557a8a1 100644
---- a/mm/mm_init.c
-+++ b/mm/mm_init.c
-@@ -2634,6 +2634,7 @@ static void __init mem_init_print_info(void)
- 		, K(totalhigh_pages())
- #endif
- 		);
-+	printk(KERN_INFO "le9 Unofficial (le9uo) working set protection 1.6 by Masahito Suzuki (forked from hakavlad's original le9 patch)");
- }
- 
- /*
 diff --git a/mm/page-writeback.c b/mm/page-writeback.c
 index 4430ac68e4c4..3bd08b60a9b3 100644
 --- a/mm/page-writeback.c
@@ -40775,6 +40626,34 @@ index bd5183dfd879..3a410f53a07c 100644
  static const unsigned int vmpressure_level_critical = 95;
  
  /*
+diff --git a/mm/vmscan.c b/mm/vmscan.c
+index bd489c1af228..47065ea3c47b 100644
+--- a/mm/vmscan.c
++++ b/mm/vmscan.c
+@@ -199,7 +199,11 @@ struct scan_control {
+ /*
+  * From 0 .. MAX_SWAPPINESS.  Higher means more swappy.
+  */
++#ifdef CONFIG_CACHY
++int vm_swappiness = 20;
++#else
+ int vm_swappiness = 60;
++#endif
+ 
+ #ifdef CONFIG_MEMCG
+ 
+@@ -3968,7 +3972,11 @@ static bool lruvec_is_reclaimable(struct lruvec *lruvec, struct scan_control *sc
+ }
+ 
+ /* to protect the working set of the last N jiffies */
++#ifdef CONFIG_CACHY
++static unsigned long lru_gen_min_ttl __read_mostly = 1000;
++#else
+ static unsigned long lru_gen_min_ttl __read_mostly;
++#endif
+ 
+ static void lru_gen_age_node(struct pglist_data *pgdat, struct scan_control *sc)
+ {
 diff --git a/net/ipv4/Kconfig b/net/ipv4/Kconfig
 index 8e94ed7c56a0..50dc9970cad2 100644
 --- a/net/ipv4/Kconfig
