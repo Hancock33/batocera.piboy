@@ -99,6 +99,20 @@ class XeniaGenerator(Generator):
             with open(canarypath + '/portable.txt', 'w') as fp:
                 pass
 
+        if not os.path.exists(wineprefix + "/alsa.done"):
+            cmd = ["/usr/wine/winetricks", "sound=alsa"]
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
+            env.update(os.environ)
+            env["PATH"] = "/usr/wine/ge-custom/bin:/bin:/usr/bin"
+            eslog.debug(f"command: {str(cmd)}")
+            proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            out, err = proc.communicate()
+            exitcode = proc.returncode
+            eslog.debug(out.decode())
+            eslog.error(err.decode())
+            with open(wineprefix + "/alsa.done", "w") as f:
+                f.write("done")
+
         if not os.path.exists(wineprefix + "/vkd3d.done"):
             cmd = ["/usr/wine/winetricks", "-q", "vkd3d"]
             env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }

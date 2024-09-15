@@ -3,12 +3,12 @@ DL_DIR         ?= $(PROJECT_DIR)/dl
 OUTPUT_DIR     ?= $(PROJECT_DIR)/output
 CCACHE_DIR     ?= $(PROJECT_DIR)/buildroot-ccache
 LOCAL_MK       ?= $(PROJECT_DIR)/batocera.mk
-EXTRA_PKGS     ?=
+EXTRA_OPTS     ?=
 DOCKER_OPTS    ?=
 MAKE_JLEVEL    ?= $(shell nproc)
 BATCH_MODE     ?=
 PARALLEL_BUILD ?=
-DOCKER         ?= docker
+DIRECT_BUILD   ?=
 
 -include $(LOCAL_MK)
 
@@ -17,14 +17,7 @@ ifdef PARALLEL_BUILD
 	MAKE_OPTS  += -j$(MAKE_JLEVEL)
 endif
 
-ifndef BATCH_MODE
-	DOCKER_OPTS += -i
-endif
-
-DOCKER_REPO := batoceralinux
-IMAGE_NAME  := batocera.linux-build
-
-TARGETS := $(sort $(shell find $(PROJECT_DIR)/configs/ -name 'b*' | sed -n 's/.*\/batocera-\(.*\).board/\1/p'))
+TARGETS := $(sort $(shell find $(PROJECT_DIR)/configs/ -name 'b*.board' | sed -n 's/.*\/batocera-\(.*\).board/\1/p'))
 UID  := $(shell id -u)
 GID  := $(shell id -g)
 OS := $(shell uname)
@@ -36,9 +29,52 @@ else
 FIND ?= find
 endif
 
-$(if $(shell which $(DOCKER) 2>/dev/null),, $(error "$(DOCKER) not found!"))
-
 UC = $(shell echo '$1' | tr '[:lower:]' '[:upper:]')
+
+# define build command based on whether we are building direct or inside a docker build container
+ifdef DIRECT_BUILD
+	# let buildroot know about our overrides
+	BR2_DL_DIR     := $(DL_DIR)
+	BR2_CCACHE_DIR := $(CCACHE_DIR)
+
+define MAKE_BUILDROOT
+	make $(MAKE_OPTS) O=$(OUTPUT_DIR)/$* \
+		BR2_EXTERNAL=$(PROJECT_DIR) \
+		-C $(PROJECT_DIR)/buildroot
+endef
+
+else # DIRECT_BUILD
+	DOCKER         ?= docker
+
+	ifndef BATCH_MODE
+		DOCKER_OPTS += -i
+	endif
+
+	DOCKER_REPO    ?= batoceralinux
+	IMAGE_NAME     ?= batocera.linux-build
+
+define RUN_DOCKER
+	$(DOCKER) run -t --init --rm \
+		-e HOME \
+		-v $(PROJECT_DIR):/build \
+		-v $(DL_DIR):/build/buildroot/dl \
+		-v $(OUTPUT_DIR)/$*:/$* \
+		-v $(CCACHE_DIR):$(HOME)/.buildroot-ccache \
+		-w /$* \
+		-v /etc/passwd:/etc/passwd:ro \
+		-v /etc/group:/etc/group:ro \
+		-u $(UID):$(GID) \
+		$(DOCKER_OPTS) \
+		$(DOCKER_REPO)/$(IMAGE_NAME)
+endef
+
+define MAKE_BUILDROOT
+	$(RUN_DOCKER) make $(MAKE_OPTS) O=/$* \
+			BR2_EXTERNAL=/build -C \
+			/build/buildroot
+endef
+
+endif # DIRECT_BUILD
 
 vars:
 	@echo "Supported targets:  $(TARGETS)"
@@ -47,25 +83,31 @@ vars:
 	@echo "Build directory:    $(OUTPUT_DIR)"
 	@echo "ccache directory:   $(CCACHE_DIR)"
 	@echo "Extra options:      $(EXTRA_OPTS)"
+ifndef DIRECT_BUILD
+	@echo "Docker repo/image:  $(DOCKER_REPO)/$(IMAGE_NAME)"
 	@echo "Docker options:     $(DOCKER_OPTS)"
+endif
 	@echo "Make options:       $(MAKE_OPTS)"
 
+_check_docker:
+	$(if $(shell which $(DOCKER) 2>/dev/null),, $(error "$(DOCKER) not found!"))
+	$(if $(DIRECT_BUILD),$(error "Not a docker environment!"))
 
-build-docker-image:
+build-docker-image: _check_docker
 	$(DOCKER) build . -t $(DOCKER_REPO)/$(IMAGE_NAME)
 	@touch .ba-docker-image-available
 
-.ba-docker-image-available:
+.ba-docker-image-available: _check_docker
 	@$(DOCKER) pull $(DOCKER_REPO)/$(IMAGE_NAME)
 	@touch .ba-docker-image-available
 
-batocera-docker-image: .ba-docker-image-available
+batocera-docker-image: $(if $(DIRECT_BUILD),,$(.ba-docker-image-available))
 
-update-docker-image:
+update-docker-image: _check_docker
 	-@rm .ba-docker-image-available > /dev/null
 	@$(MAKE) batocera-docker-image
 
-publish-docker-image:
+publish-docker-image: _check_docker
 	@$(DOCKER) push $(DOCKER_REPO)/$(IMAGE_NAME):latest
 
 output-dir-%: %-supported
@@ -81,138 +123,47 @@ dl-dir:
 	$(if $(findstring $*, $(TARGETS)),,$(error "$* not supported!"))
 
 %-clean: batocera-docker-image output-dir-%
-	@$(DOCKER) run -t --init --rm \
-		-v $(PROJECT_DIR):/build \
-		-v $(DL_DIR):/build/buildroot/dl \
-		-v $(OUTPUT_DIR)/$*:/$* \
-		-v /etc/passwd:/etc/passwd:ro \
-		-v /etc/group:/etc/group:ro \
-		-u $(UID):$(GID) \
-		$(DOCKER_OPTS) \
-		$(DOCKER_REPO)/$(IMAGE_NAME) \
-		make O=/$* BR2_EXTERNAL=/build -C /build/buildroot clean
+	@$(MAKE_BUILDROOT) clean
 
 %-config: batocera-docker-image output-dir-%
 	@$(PROJECT_DIR)/configs/createDefconfig.sh $(PROJECT_DIR)/configs/batocera-$*
 	@for opt in $(EXTRA_OPTS); do \
 		echo $$opt >> $(PROJECT_DIR)/configs/batocera-$*_defconfig ; \
 	done
-	@$(DOCKER) run -t --init --rm \
-		-v $(PROJECT_DIR):/build \
-		-v $(DL_DIR):/build/buildroot/dl \
-		-v $(OUTPUT_DIR)/$*:/$* \
-		-v /etc/passwd:/etc/passwd:ro \
-		-v /etc/group:/etc/group:ro \
-		-u $(UID):$(GID) \
-		$(DOCKER_OPTS) \
-		$(DOCKER_REPO)/$(IMAGE_NAME) \
-		make O=/$* BR2_EXTERNAL=/build -C /build/buildroot batocera-$*_defconfig
+	@$(MAKE_BUILDROOT) batocera-$*_defconfig
 
 %-build: batocera-docker-image %-config ccache-dir dl-dir
-	@$(DOCKER) run -t --init --rm \
-		-e HOME \
-		-v $(PROJECT_DIR):/build \
-		-v $(DL_DIR):/build/buildroot/dl \
-		-v $(OUTPUT_DIR)/$*:/$* \
-		-v $(CCACHE_DIR):$(HOME)/.buildroot-ccache \
-		-u $(UID):$(GID) \
-		-v /etc/passwd:/etc/passwd:ro \
-		-v /etc/group:/etc/group:ro \
-		$(DOCKER_OPTS) \
-		$(DOCKER_REPO)/$(IMAGE_NAME) \
-		make $(MAKE_OPTS) O=/$* BR2_EXTERNAL=/build -C /build/buildroot $(CMD)
+	@$(MAKE_BUILDROOT) $(CMD)
 
 %-source: batocera-docker-image %-config ccache-dir dl-dir
-	@$(DOCKER) run -t --init --rm \
-		-e HOME \
-		-v $(PROJECT_DIR):/build \
-		-v $(DL_DIR):/build/buildroot/dl \
-		-v $(OUTPUT_DIR)/$*:/$* \
-		-v $(CCACHE_DIR):$(HOME)/.buildroot-ccache \
-		-u $(UID):$(GID) \
-		-v /etc/passwd:/etc/passwd:ro \
-		-v /etc/group:/etc/group:ro \
-		$(DOCKER_OPTS) \
-		$(DOCKER_REPO)/$(IMAGE_NAME) \
-		make $(MAKE_OPTS) O=/$* BR2_EXTERNAL=/build -C /build/buildroot source
+	@$(MAKE_BUILDROOT) source
 
 %-show-build-order: batocera-docker-image %-config ccache-dir dl-dir
-	@$(DOCKER) run -t --init --rm \
-		-e HOME \
-		-v $(PROJECT_DIR):/build \
-		-v $(DL_DIR):/build/buildroot/dl \
-		-v $(OUTPUT_DIR)/$*:/$* \
-		-v $(CCACHE_DIR):$(HOME)/.buildroot-ccache \
-		-u $(UID):$(GID) \
-		-v /etc/passwd:/etc/passwd:ro \
-		-v /etc/group:/etc/group:ro \
-		$(DOCKER_OPTS) \
-		$(DOCKER_REPO)/$(IMAGE_NAME) \
-		make $(MAKE_OPTS) O=/$* BR2_EXTERNAL=/build -C /build/buildroot show-build-order
+	@$(MAKE_BUILDROOT) show-build-order
 
 %-kernel: batocera-docker-image %-config ccache-dir dl-dir
-	@$(DOCKER) run -t --init --rm \
-		-e HOME \
-		-v $(PROJECT_DIR):/build \
-		-v $(DL_DIR):/build/buildroot/dl \
-		-v $(OUTPUT_DIR)/$*:/$* \
-		-v $(CCACHE_DIR):$(HOME)/.buildroot-ccache \
-		-u $(UID):$(GID) \
-		-v /etc/passwd:/etc/passwd:ro \
-		-v /etc/group:/etc/group:ro \
-		$(DOCKER_OPTS) \
-		$(DOCKER_REPO)/$(IMAGE_NAME) \
-		make $(MAKE_OPTS) O=/$* BR2_EXTERNAL=/build -C /build/buildroot linux-menuconfig
+	@$(MAKE_BUILDROOT) linux-menuconfig
 
+# force -j1 or graph-depends python script will bail
 %-graph-depends: batocera-docker-image %-config ccache-dir dl-dir
-	@$(DOCKER) run -it --init --rm \
-		-e HOME \
-		-v $(PROJECT_DIR):/build \
-		-v $(DL_DIR):/build/buildroot/dl \
-		-v $(OUTPUT_DIR)/$*:/$* \
-		-v $(CCACHE_DIR):$(HOME)/.buildroot-ccache \
-		-u $(UID):$(GID) \
-		-v /etc/passwd:/etc/passwd:ro \
-		-v /etc/group:/etc/group:ro \
-		$(DOCKER_OPTS) \
-		$(DOCKER_REPO)/$(IMAGE_NAME) \
-		make O=/$* BR2_EXTERNAL=/build BR2_GRAPH_OUT=svg -C /build/buildroot graph-depends
+	@$(MAKE_BUILDROOT) -j1 BR2_GRAPH_OUT=svg graph-depends
 
-%-shell: batocera-docker-image output-dir-%
-	$(if $(BATCH_MODE),$(if $(CMD),,$(error "not suppoorted in BATCH_MODE if CMD not specified!")),)
-	@$(DOCKER) run -t --init --rm \
-		-e HOME \
-		-v $(PROJECT_DIR):/build \
-		-v $(DL_DIR):/build/buildroot/dl \
-		-v $(OUTPUT_DIR)/$*:/$* \
-		-w /$* \
-		-v $(CCACHE_DIR):$(HOME)/.buildroot-ccache \
-		-u $(UID):$(GID) \
-		$(DOCKER_OPTS) \
-		-v /etc/passwd:/etc/passwd:ro \
-		-v /etc/group:/etc/group:ro \
-		$(DOCKER_REPO)/$(IMAGE_NAME) \
-		$(CMD)
+%-shell: batocera-docker-image output-dir-% _check_docker
+	$(if $(BATCH_MODE),$(if $(CMD),,$(error "not supported in BATCH_MODE if CMD not specified!")),)
+	@$(RUN_DOCKER) $(CMD)
 
 %-ccache-stats: batocera-docker-image %-config ccache-dir dl-dir
-	@$(DOCKER) run -t --init --rm \
-		-e HOME \
-		-v $(PROJECT_DIR):/build \
-		-v $(DL_DIR):/build/buildroot/dl \
-		-v $(OUTPUT_DIR)/$*:/$* \
-		-v $(CCACHE_DIR):$(HOME)/.buildroot-ccache \
-		-u $(UID):$(GID) \
-		-v /etc/passwd:/etc/passwd:ro \
-		-v /etc/group:/etc/group:ro \
-		$(DOCKER_OPTS) \
-		$(DOCKER_REPO)/$(IMAGE_NAME) \
-		make $(MAKE_OPTS) O=/$* BR2_EXTERNAL=/build -C /build/buildroot ccache-stats
+	@$(MAKE_BUILDROOT) ccache-stats
+
+%-build-cmd:
+	@echo $(MAKE_BUILDROOT)
 
 %-cleanbuild: %-clean %-build
 	@echo
 
 %-pkg:
 	$(if $(PKG),,$(error "PKG not specified!"))
+
 	@$(MAKE) $*-build CMD=$(PKG)
 
 %-webserver: output-dir-%
@@ -254,12 +205,17 @@ endif
 %-upgrade: %-supported
 	$(if $(DEV),,$(error "DEV not specified!"))
 	-@sudo umount /tmp/mount
-	-@mkdir /tmp/mount
+	-@mkdir -p /tmp/mount
 	@sudo mount $(DEV)1 /tmp/mount
+	@lsblk
+	@ls /tmp/mount
+	@echo "continue BATOCERA upgrade $(DEV)1 with $* build? [y/N]"
+	@read line; if [ "$$line" != "y" ]; then echo aborting; exit 1 ; fi
 	-@sudo rm /tmp/mount/boot/batocera
-	@sudo tar xvf $(OUTPUT_DIR)/$*/images/batocera/boot.tar.xz -C /tmp/mount --no-same-owner
+	@sudo tar xvf $(OUTPUT_DIR)/$*/images/batocera/images/$*/boot.tar.xz -C /tmp/mount --no-same-owner --exclude=batocera-boot.conf --exclude=config.txt
 	@sudo umount /tmp/mount
 	-@rmdir /tmp/mount
+	@sudo fatlabel $(DEV)1 BATOCERA
 
 %-toolchain: %-supported
 	$(if $(shell which btrfs 2>/dev/null),, $(error "btrfs not found!"))
@@ -275,15 +231,15 @@ endif
 
 %-remove-build-dups: %-supported
 	@while [ -n "`$(FIND) $(OUTPUT_DIR)/$*/build -maxdepth 1 -type d -printf '%T@ %p %f\n' | sed -r 's:\-[0-9a-f\.]+$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | grep .`" ]; do \
-		find $(OUTPUT_DIR)/$*/build -maxdepth 1 -type d -printf '%T@ %p %f\n' | sed -r 's:\-[0-9a-f\.]+$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | xargs rm -rf ; \
+		$(FIND) $(OUTPUT_DIR)/$*/build -maxdepth 1 -type d -printf '%T@ %p %f\n' | sed -r 's:\-[0-9a-f\.]+$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | xargs rm -rf ; \
 	done
 
 find-dl-dups:
 	@$(FIND) $(DL_DIR)/ -maxdepth 2 -type f -name "*.zip" -o -name "*.tar.*" -print0 -printf '%T@ %p %f\n' | sed -r 's:\-[0-9a-f\.]+(\.zip|\.tar\.[2a-z]+)$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2
 
 remove-dl-dups:
-	@while [ -n "`$(FIND) $(DL_DIR)/ -maxdepth 2 -type f -name "*.zip" -o -name "*.tar.*" -printf '%T@ %p %f\n' | sed -r 's:\-[0-9a-f\.]+(\.zip|\.tar\.[2a-z]+)$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | grep .`" ] ; do \
-		find $(DL_DIR) -maxdepth 2 -type f -name "*.zip" -o -name "*.tar.*" -printf '%T@ %p %f\n' | sed -r 's:\-[0-9a-f\.]+(\.zip|\.tar\.[2a-z]+)$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | xargs rm -rf ; \
+	@while [ -n "`$(FIND) $(DL_DIR)/ -maxdepth 2 -type f -name "*.zip" -o -name "*.tar.*" -print0 -printf '%T@ %p %f\n' | sed -r 's:\-[0-9a-f\.]+(\.zip|\.tar\.[2a-z]+)$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | grep .`" ] ; do \
+		$(FIND) $(DL_DIR) -maxdepth 2 -type f -name "*.zip" -o -name "*.tar.*" -print0 -printf '%T@ %p %f\n' | sed -r 's:\-[0-9a-f\.]+(\.zip|\.tar\.[2a-z]+)$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | xargs rm -rf ; \
 	done
 
 uart:

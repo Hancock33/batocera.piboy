@@ -3,8 +3,8 @@
 # ryujinxng
 #
 ################################################################################
-# Version: Commits on Sept 02, 2024
-RYUJINXNG_VERSION = 1.1.1385
+# Version: Commits on Sept 12, 2024
+RYUJINXNG_VERSION = 1.1.1386
 RYUJINXNG_SITE = https://github.com/Ryujinx/release-channel-master/releases/download/$(RYUJINXNG_VERSION)
 RYUJINXNG_LICENSE = MIT
 RYUJINXNG_DEPENDENCIES = sdl2 openal hicolor-icon-theme adwaita-icon-theme librsvg

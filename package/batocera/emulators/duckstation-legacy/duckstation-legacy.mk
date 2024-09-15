@@ -3,13 +3,11 @@
 # duckstation-legacy
 #
 ################################################################################
-# Version: Commits on Mar 16, 2024
-DUCKSTATION_LEGACY_VERSION = v0.1-6461
-DUCKSTATION_LEGACY_SITE = https://github.com/stenzek/duckstation.git
-DUCKSTATION_LEGACY_SITE_METHOD=git
-DUCKSTATION_LEGACY_GIT_SUBMODULES=YES
+# Version: Commits on Aug 4, 2023 - DON'T BUMP
+DUCKSTATION_LEGACY_VERSION = 56ac3d6c324ec4520dac433b071ecab6227fb459
+DUCKSTATION_LEGACY_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_LEGACY_VERSION))
 DUCKSTATION_LEGACY_LICENSE = GPLv2
-DUCKSTATION_LEGACY_DEPENDENCIES = boost dbus ecm ffmpeg fmt libcurl libdrm libevdev sdl2 shaderc webp zstd
+DUCKSTATION_LEGACY_DEPENDENCIES = fmt boost ffmpeg libcurl ecm dbus
 
 DUCKSTATION_LEGACY_SUPPORTS_IN_SOURCE_BUILD = NO
 
@@ -17,18 +15,20 @@ DUCKSTATION_LEGACY_CONF_OPTS += -DBUILD_SHARED_LIBS=FALSE
 DUCKSTATION_LEGACY_CONF_OPTS += -DENABLE_DISCORD_PRESENCE=OFF
 DUCKSTATION_LEGACY_CONF_OPTS += -DBUILD_QT_FRONTEND=OFF
 DUCKSTATION_LEGACY_CONF_OPTS += -DBUILD_NOGUI_FRONTEND=ON
+DUCKSTATION_LEGACY_CONF_OPTS += -DUSE_DRMKMS=ON
+
 DUCKSTATION_LEGACY_CONF_ENV += LDFLAGS=-lpthread
 
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
-    DUCKSTATION_LEGACY_CONF_OPTS += -DENABLE_WAYLAND=ON
+    DUCKSTATION_LEGACY_CONF_OPTS += -DUSE_WAYLAND=ON
 else
-    DUCKSTATION_LEGACY_CONF_OPTS += -DENABLE_WAYLAND=OFF
+    DUCKSTATION_LEGACY_CONF_OPTS += -DUSE_WAYLAND=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_XORG7),y)
-    DUCKSTATION_LEGACY_CONF_OPTS += -DENABLE_X11=ON
+    DUCKSTATION_LEGACY_CONF_OPTS += -DUSE_X11=ON
 else
-    DUCKSTATION_LEGACY_CONF_OPTS += -DENABLE_X11=OFF
+    DUCKSTATION_LEGACY_CONF_OPTS += -DUSE_X11=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
@@ -37,13 +37,22 @@ else
     DUCKSTATION_LEGACY_CONF_OPTS += -DENABLE_VULKAN=OFF
 endif
 
-define DUCKSTATION_LEGACY_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin/duckstation-legacy
-	$(INSTALL) -D $(@D)/buildroot-build/bin/duckstation* $(TARGET_DIR)/usr/bin/duckstation-legacy
-	cp -pr $(@D)/data/resources $(TARGET_DIR)/usr/bin/duckstation-legacy/
+ifeq ($(BR2_PACKAGE_XORG7),y)
+    DUCKSTATION_LEGACY_CONF_OPTS += -DUSE_GLX=ON
+endif
 
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation-legacy/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy
+ifeq ($(BR2_PACKAGE_HAS_LIBEGL),y)
+    DUCKSTATION_LEGACY_CONF_OPTS += -DUSE_EGL=ON
+    ifeq ($(BR2_PACKAGE_HAS_LIBMALI),y)
+        DUCKSTATION_LEGACY_CONF_OPTS += -DUSE_MALI=ON
+    endif
+else
+    DUCKSTATION_LEGACY_CONF_OPTS += -DUSE_EGL=OFF
+endif
+
+define DUCKSTATION_LEGACY_INSTALL_TARGET_CMDS
+	rm -rf $(TARGET_DIR)/usr/bin/duckstation-legacy
+	cp -R $(@D)/buildroot-build/bin $(TARGET_DIR)/usr/bin/duckstation-legacy
 endef
 
 $(eval $(cmake-package))

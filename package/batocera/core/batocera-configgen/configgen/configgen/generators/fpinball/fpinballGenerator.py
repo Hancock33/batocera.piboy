@@ -22,6 +22,20 @@ class FpinballGenerator(Generator):
         if not os.path.exists(wineprefix):
             os.makedirs(wineprefix)
 
+        if not os.path.exists(wineprefix + "/alsa.done"):
+            cmd = ["/usr/wine/winetricks", "sound=alsa"]
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
+            env.update(os.environ)
+            env["PATH"] = "/usr/wine/ge-custom/bin:/bin:/usr/bin"
+            eslog.debug(f"command: {str(cmd)}")
+            proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            out, err = proc.communicate()
+            exitcode = proc.returncode
+            eslog.debug(out.decode())
+            eslog.error(err.decode())
+            with open(wineprefix + "/alsa.done", "w") as f:
+                f.write("done")
+
         if not os.path.exists(wineprefix + "/wsh57.done"):
             cmd = ["/usr/wine/winetricks", "-q", "wsh57"]
             env = {

@@ -3,8 +3,8 @@
 # sonic2013
 #
 ################################################################################
-# Version: Commits on Aug 21, 2024
-SONIC2013_VERSION = e5f88fef69499ead765f59d0d6a288f9f706f18b
+# Version: Commits on Sept 15, 2024
+SONIC2013_VERSION = 48c5f60ee28c2eeeec0af99a621f7e4b8a0ac43a
 SONIC2013_SITE = https://github.com/RSDKModding/RSDKv4-Decompilation.git
 SONIC2013_SITE_METHOD = git
 SONIC2013_GIT_SUBMODULES = YES
@@ -14,6 +14,10 @@ SONIC2013_LICENSE = Custom
 SONIC2013_DEPENDENCIES = sdl2 libogg libvorbis libglew
 
 SONIC2013_CONF_OPTS += -DRETRO_SDL_VERSION=2
+
+ifeq ($(BR2_PACKAGE_LIBGLU),y)
+SONIC2013_DEPENDENCIES += libglu
+endif
 
 define SONIC2013_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/RSDKv4 $(TARGET_DIR)/usr/bin/sonic2013

@@ -1,5 +1,5 @@
 diff --git a/cheevos/cheevos.c b/cheevos/cheevos.c
-index 407e8193b0..50f625db69 100644
+index 47f4cbc0ed..e249cbb84b 100644
 --- a/cheevos/cheevos.c
 +++ b/cheevos/cheevos.c
 @@ -486,6 +486,13 @@ static void rcheevos_award_achievement(const rc_client_achievement_t* cheevo)
@@ -16,7 +16,7 @@ index 407e8193b0..50f625db69 100644
  #ifdef HAVE_AUDIOMIXER
     /* Play the unlock sound */
     if (settings->bools.cheevos_unlock_sound_enable)
-@@ -795,6 +802,13 @@ void rcheevos_award_achievement(rcheevos_locals_t* locals,
+@@ -801,6 +808,13 @@ void rcheevos_award_achievement(rcheevos_locals_t* locals,
     CHEEVOS_LOG(RCHEEVOS_TAG "Awarding achievement %u: %s (%s)\n",
           cheevo->id, cheevo->title, cheevo->description);
  
@@ -31,7 +31,7 @@ index 407e8193b0..50f625db69 100644
     if (settings->bools.cheevos_visibility_unlock)
     {
 diff --git a/configuration.c b/configuration.c
-index 8ee8f501b9..285e0da797 100644
+index bff3b102d4..807fa8e9e9 100644
 --- a/configuration.c
 +++ b/configuration.c
 @@ -1561,6 +1561,7 @@ static struct config_array_setting *populate_settings_array(
@@ -43,13 +43,13 @@ index 8ee8f501b9..285e0da797 100644
     SETTING_ARRAY("cheevos_password",             settings->arrays.cheevos_password, false, NULL, true);
     SETTING_ARRAY("cheevos_token",                settings->arrays.cheevos_token, false, NULL, true);
 diff --git a/configuration.h b/configuration.h
-index c0b0119b4e..5b1af50648 100644
+index 525e2bce72..d3f8cdb1a7 100644
 --- a/configuration.h
 +++ b/configuration.h
-@@ -463,6 +463,7 @@ typedef struct settings
+@@ -468,6 +468,7 @@ typedef struct settings
+       char cheevos_unlock_sound[128];
        char cheevos_token[32];
        char cheevos_leaderboards_enable[32];
-       char cheevos_custom_host[64];
 +      char cheevos_cmd[256];
        char video_context_driver[32];
        char audio_driver[32];

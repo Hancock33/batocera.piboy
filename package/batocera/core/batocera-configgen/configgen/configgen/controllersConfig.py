@@ -54,31 +54,35 @@ class Controller:
 # Load all controllers from the es_input.cfg
 def loadAllControllersConfig():
     controllers = dict()
-    tree = ET.parse(batoceraFiles.esInputs)
-    root = tree.getroot()
-    for controller in root.findall(".//inputConfig"):
-        controllerInstance = Controller(controller.get("deviceName"), controller.get("type"),
-                                        controller.get("deviceGUID"), None, None)
-        uidname = controller.get("deviceGUID") + controller.get("deviceName")
-        controllers[uidname] = controllerInstance
-        for input in controller.findall("input"):
-            inputInstance = Input(input.get("name"), input.get("type"), input.get("id"), input.get("value"), input.get("code"))
-            controllerInstance.inputs[input.get("name")] = inputInstance
+    for conffile in ["/usr/share/emulationstation/es_input.cfg", batoceraFiles.CONF + '/emulationstation/es_input.cfg']:
+      if os.path.exists(conffile):
+          tree = ET.parse(conffile)
+          root = tree.getroot()
+          for controller in root.findall(".//inputConfig"):
+              controllerInstance = Controller(controller.get("deviceName"), controller.get("type"),
+                                              controller.get("deviceGUID"), None, None)
+              uidname = controller.get("deviceGUID") + controller.get("deviceName")
+              controllers[uidname] = controllerInstance
+              for input in controller.findall("input"):
+                  inputInstance = Input(input.get("name"), input.get("type"), input.get("id"), input.get("value"), input.get("code"))
+                  controllerInstance.inputs[input.get("name")] = inputInstance
     return controllers
 
 # Load all controllers from the es_input.cfg
 def loadAllControllersByNameConfig():
     controllers = dict()
-    tree = ET.parse(batoceraFiles.esInputs)
-    root = tree.getroot()
-    for controller in root.findall(".//inputConfig"):
-        controllerInstance = Controller(controller.get("deviceName"), controller.get("type"),
-                                        controller.get("deviceGUID"), None, None)
-        deviceName = controller.get("deviceName")
-        controllers[deviceName] = controllerInstance
-        for input in controller.findall("input"):
-            inputInstance = Input(input.get("name"), input.get("type"), input.get("id"), input.get("value"), input.get("code"))
-            controllerInstance.inputs[input.get("name")] = inputInstance
+    for conffile in ["/usr/share/emulationstation/es_input.cfg", batoceraFiles.CONF + '/emulationstation/es_input.cfg']:
+        if os.path.exists(conffile):
+            tree = ET.parse(conffile)
+            root = tree.getroot()
+            for controller in root.findall(".//inputConfig"):
+                controllerInstance = Controller(controller.get("deviceName"), controller.get("type"),
+                                                controller.get("deviceGUID"), None, None)
+                deviceName = controller.get("deviceName")
+                controllers[deviceName] = controllerInstance
+                for input in controller.findall("input"):
+                    inputInstance = Input(input.get("name"), input.get("type"), input.get("id"), input.get("value"), input.get("code"))
+                    controllerInstance.inputs[input.get("name")] = inputInstance
     return controllers
 
 # Create a controller array with the player id as a key
@@ -246,14 +250,8 @@ def gunsBordersSizeName(guns, config):
 
 # returns None to follow the bezel overlay size by default
 def gunsBorderRatioType(guns, config):
-    # add emulator specific configs here
-    if "m3_wideScreen" in config and config["m3_wideScreen"] == "1":
-        eslog.debug("Model 3 set to widescreen")
-        return None
-    else:
-        # check the display esolution is already 4:3
-        eslog.debug("Setting gun border ratio to 4:3")
-        return "4:3"
+    if "controllers.guns.bordersratio" in config:
+        return config["controllers.guns.bordersratio"] # "4:3"
     return None
 
 def getMouseButtons(device):

@@ -7,7 +7,7 @@ index 760184aa0..b60780da1 100644
  find_library(
      SHADERC_LIBRARY
 -    NAMES shaderc_shared.1 shaderc_shared
-+    NAMES shaderc_shared.1 shaderc_stenzek
++    NAMES shaderc_shared.1 shaderc_ds
      PATHS ${ADDITIONAL_LIBRARY_PATHS} ${SHADERC_PATH_LIB}
  )
  
@@ -17,8 +17,8 @@ index 760184aa0..b60780da1 100644
  if(SHADERC_FOUND)
 -    add_library(Shaderc::shaderc_shared UNKNOWN IMPORTED)
 -    set_target_properties(Shaderc::shaderc_shared PROPERTIES
-+    add_library(Shaderc::shaderc_stenzek UNKNOWN IMPORTED)
-+    set_target_properties(Shaderc::shaderc_stenzek PROPERTIES
++    add_library(Shaderc::shaderc_ds UNKNOWN IMPORTED)
++    set_target_properties(Shaderc::shaderc_ds PROPERTIES
          IMPORTED_LOCATION ${SHADERC_LIBRARY}
          INTERFACE_INCLUDE_DIRECTORIES ${SHADERC_INCLUDE_DIR}
          INTERFACE_COMPILE_DEFINITIONS "SHADERC_SHAREDLIB"

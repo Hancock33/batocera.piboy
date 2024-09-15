@@ -9,7 +9,7 @@ PYTHON_PYXEL_SITE =  $(call github,kitao,pyxel,$(PYTHON_PYXEL_VERSION))
 PYTHON_PYXEL_SETUP_TYPE = maturin
 PYTHON_PYXEL_LICENSE = MIT
 PYTHON_PYXEL_CARGO_MANIFEST_PATH = crates/pyxel-extension/Cargo.toml
-PYTHON_PYXEL_DEPENDENCIES = host-rust-bin sdl2
+PYTHON_PYXEL_DEPENDENCIES = host-rust-bin sdl2 evmapy
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
     PYXEL_CARGO_TARGET=x86_64-unknown-linux-gnu

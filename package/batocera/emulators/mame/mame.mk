@@ -6,7 +6,7 @@
 # Version: Commits on Aug 29, 2024
 MAME_VERSION = mame0269
 MAME_SITE = $(call github,mamedev,mame,$(MAME_VERSION))
-MAME_DEPENDENCIES = sdl2 sdl2_ttf zlib libpng fontconfig sqlite jpeg flac rapidjson expat glm
+MAME_DEPENDENCIES = sdl2 sdl2_ttf zlib libpng fontconfig sqlite jpeg flac rapidjson expat glm pulseaudio
 MAME_LICENSE = MAME
 
 MAME_CROSS_ARCH = unknown

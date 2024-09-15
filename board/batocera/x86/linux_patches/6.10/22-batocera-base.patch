@@ -635,7 +635,7 @@ index 958e935449e5..064156d69e75 100644
  M:	Finn Thain <fthain@linux-m68k.org>
  L:	linux-m68k@lists.linux-m68k.org
 diff --git a/Makefile b/Makefile
-index b6519119ec30..8845338c0103 100644
+index d78920aacbd2..21927dbff02b 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -817,6 +817,9 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -12893,20 +12893,6 @@ index ea14f1c8f430..a05ed98da785 100644
  	/* skip devices which are owned by radeon */
  	for (i = 0; i < ARRAY_SIZE(amdgpu_unsupported_pciidlist); i++) {
  		if (amdgpu_unsupported_pciidlist[i] == pdev->device)
-diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_gem.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_gem.c
-index 3adaa4670103..dc65c32bb1b2 100644
---- a/drivers/gpu/drm/amd/amdgpu/amdgpu_gem.c
-+++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_gem.c
-@@ -347,6 +347,9 @@ int amdgpu_gem_create_ioctl(struct drm_device *dev, void *data,
- 		return -EINVAL;
- 	}
- 
-+	/* always clear VRAM */
-+	flags |= AMDGPU_GEM_CREATE_VRAM_CLEARED;
-+
- 	/* create a gem object to contain this object in */
- 	if (args->in.domains & (AMDGPU_GEM_DOMAIN_GDS |
- 	    AMDGPU_GEM_DOMAIN_GWS | AMDGPU_GEM_DOMAIN_OA)) {
 diff --git a/drivers/gpu/drm/amd/display/Kconfig b/drivers/gpu/drm/amd/display/Kconfig
 index 47b8b49da8a7..943959d1f401 100644
 --- a/drivers/gpu/drm/amd/display/Kconfig
@@ -12923,7 +12909,7 @@ index 47b8b49da8a7..943959d1f401 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 01ea68e33547..9b47482c059c 100644
+index b1623d1d0582..3239c9f26832 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -4129,7 +4129,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
@@ -12980,10 +12966,10 @@ index e23a0a276e33..dd83cf50a89b 100644
  #endif
  	return 0;
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_plane.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_plane.c
-index 70e45d980bb9..915a8113a9f1 100644
+index 7d47acdd11d5..16acd2abdc9a 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_plane.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_plane.c
-@@ -1473,7 +1473,7 @@ static void amdgpu_dm_plane_drm_plane_destroy_state(struct drm_plane *plane,
+@@ -1476,7 +1476,7 @@ static void amdgpu_dm_plane_drm_plane_destroy_state(struct drm_plane *plane,
  	drm_atomic_helper_plane_destroy_state(plane, state);
  }
  
@@ -12992,7 +12978,7 @@ index 70e45d980bb9..915a8113a9f1 100644
  static void
  dm_atomic_plane_attach_color_mgmt_properties(struct amdgpu_display_manager *dm,
  					     struct drm_plane *plane)
-@@ -1664,7 +1664,7 @@ static const struct drm_plane_funcs dm_plane_funcs = {
+@@ -1667,7 +1667,7 @@ static const struct drm_plane_funcs dm_plane_funcs = {
  	.atomic_duplicate_state = amdgpu_dm_plane_drm_plane_duplicate_state,
  	.atomic_destroy_state = amdgpu_dm_plane_drm_plane_destroy_state,
  	.format_mod_supported = amdgpu_dm_plane_format_mod_supported,
@@ -13001,7 +12987,7 @@ index 70e45d980bb9..915a8113a9f1 100644
  	.atomic_set_property = dm_atomic_plane_set_property,
  	.atomic_get_property = dm_atomic_plane_get_property,
  #endif
-@@ -1747,7 +1747,7 @@ int amdgpu_dm_plane_init(struct amdgpu_display_manager *dm,
+@@ -1750,7 +1750,7 @@ int amdgpu_dm_plane_init(struct amdgpu_display_manager *dm,
  
  	drm_plane_helper_add(plane, &dm_plane_helper_funcs);
  
@@ -13025,10 +13011,10 @@ index c11952a4389b..52f54a228b39 100644
  }
  
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
-index 95f690b70c05..51ad4c22dfe6 100644
+index 45d053497f49..996b4d13805a 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
-@@ -2750,7 +2750,10 @@ int smu_get_power_limit(void *handle,
+@@ -2752,7 +2752,10 @@ int smu_get_power_limit(void *handle,
  			*limit = smu->max_power_limit;
  			break;
  		case SMU_PPT_LIMIT_MIN:
@@ -13040,7 +13026,7 @@ index 95f690b70c05..51ad4c22dfe6 100644
  			break;
  		default:
  			return -EINVAL;
-@@ -2774,7 +2777,14 @@ static int smu_set_power_limit(void *handle, uint32_t limit)
+@@ -2776,7 +2779,14 @@ static int smu_set_power_limit(void *handle, uint32_t limit)
  		if (smu->ppt_funcs->set_power_limit)
  			return smu->ppt_funcs->set_power_limit(smu, limit_type, limit);
  
@@ -13169,10 +13155,10 @@ index bda702c2cab8..1647e141ae78 100644
  			    intel_fb->base.width, intel_fb->base.height,
  			    sizes->fb_width, sizes->fb_height);
 diff --git a/drivers/gpu/drm/i915/display/intel_quirks.c b/drivers/gpu/drm/i915/display/intel_quirks.c
-index 14d5fefc9c5b..727639b8f6a6 100644
+index dfd8b4960e6d..7232f9acd0a0 100644
 --- a/drivers/gpu/drm/i915/display/intel_quirks.c
 +++ b/drivers/gpu/drm/i915/display/intel_quirks.c
-@@ -59,6 +59,18 @@ static void quirk_increase_ddi_disabled_time(struct intel_display *display)
+@@ -64,6 +64,18 @@ static void quirk_increase_ddi_disabled_time(struct intel_display *display)
  	drm_info(display->drm, "Applying Increase DDI Disabled quirk\n");
  }
  
@@ -13191,7 +13177,7 @@ index 14d5fefc9c5b..727639b8f6a6 100644
  static void quirk_no_pps_backlight_power_hook(struct intel_display *display)
  {
  	intel_set_quirk(display, QUIRK_NO_PPS_BACKLIGHT_POWER_HOOK);
-@@ -201,6 +213,9 @@ static struct intel_quirk intel_quirks[] = {
+@@ -229,6 +241,9 @@ static struct intel_quirk intel_quirks[] = {
  	{ 0x3184, 0x1019, 0xa94d, quirk_increase_ddi_disabled_time },
  	/* HP Notebook - 14-r206nv */
  	{ 0x0f31, 0x103c, 0x220f, quirk_invert_brightness },
@@ -13200,19 +13186,19 @@ index 14d5fefc9c5b..727639b8f6a6 100644
 +	{ 0x3e9b, 0x106b, 0x0176, quirk_ddi_a_force_4_lanes },
  };
  
- void intel_init_quirks(struct intel_display *display)
+ static struct intel_dpcd_quirk intel_dpcd_quirks[] = {
 diff --git a/drivers/gpu/drm/i915/display/intel_quirks.h b/drivers/gpu/drm/i915/display/intel_quirks.h
-index 151c8f4ae576..46e7feba88f4 100644
+index cafdebda7535..58f60b870781 100644
 --- a/drivers/gpu/drm/i915/display/intel_quirks.h
 +++ b/drivers/gpu/drm/i915/display/intel_quirks.h
-@@ -17,6 +17,7 @@ enum intel_quirk_id {
+@@ -19,6 +19,7 @@ enum intel_quirk_id {
  	QUIRK_INVERT_BRIGHTNESS,
  	QUIRK_LVDS_SSC_DISABLE,
  	QUIRK_NO_PPS_BACKLIGHT_POWER_HOOK,
 +	QUIRK_DDI_A_FORCE_4_LANES,
+ 	QUIRK_FW_SYNC_LEN,
  };
  
- void intel_init_quirks(struct intel_display *display);
 diff --git a/drivers/gpu/drm/nouveau/nouveau_bo.c b/drivers/gpu/drm/nouveau/nouveau_bo.c
 index 70fb003a6666..0712d0b15170 100644
 --- a/drivers/gpu/drm/nouveau/nouveau_bo.c
@@ -23103,6 +23089,30 @@ index 3c2f743c58b0..87a24798a5c7 100644
  	default:
  		return -ENOIOCTLCMD;
  	}
+diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/cfg80211.c b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/cfg80211.c
+index 826b768196e2..5fe0e671ecb3 100644
+--- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/cfg80211.c
++++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/cfg80211.c
+@@ -4320,16 +4320,9 @@ brcmf_pmksa_v3_op(struct brcmf_if *ifp, struct cfg80211_pmksa *pmksa,
+ 		/* Single PMK operation */
+ 		pmk_op->count = cpu_to_le16(1);
+ 		length += sizeof(struct brcmf_pmksa_v3);
+-		if (pmksa->bssid)
+-			memcpy(pmk_op->pmk[0].bssid, pmksa->bssid, ETH_ALEN);
+-		if (pmksa->pmkid) {
+-			memcpy(pmk_op->pmk[0].pmkid, pmksa->pmkid, WLAN_PMKID_LEN);
+-			pmk_op->pmk[0].pmkid_len = WLAN_PMKID_LEN;
+-		}
+-		if (pmksa->ssid && pmksa->ssid_len) {
+-			memcpy(pmk_op->pmk[0].ssid.SSID, pmksa->ssid, pmksa->ssid_len);
+-			pmk_op->pmk[0].ssid.SSID_len = pmksa->ssid_len;
+-		}
++		memcpy(pmk_op->pmk[0].bssid, pmksa->bssid, ETH_ALEN);
++		memcpy(pmk_op->pmk[0].pmkid, pmksa->pmkid, WLAN_PMKID_LEN);
++		pmk_op->pmk[0].pmkid_len = WLAN_PMKID_LEN;
+ 		pmk_op->pmk[0].time_left = cpu_to_le32(alive ? BRCMF_PMKSA_NO_EXPIRY : 0);
+ 	}
+ 
 diff --git a/drivers/pci/controller/Makefile b/drivers/pci/controller/Makefile
 index f2b19e6174af..4fef4b174321 100644
 --- a/drivers/pci/controller/Makefile
@@ -23772,6 +23782,33 @@ index aac0744011a3..d51d4ec8d707 100644
  	X86_MATCH_VENDOR_FAM(HYGON, 0x18, &rapl_defaults_amd),
  	{}
  };
+diff --git a/drivers/soundwire/stream.c b/drivers/soundwire/stream.c
+index 00191b1d2260..4e9e7d2a942d 100644
+--- a/drivers/soundwire/stream.c
++++ b/drivers/soundwire/stream.c
+@@ -1286,18 +1286,18 @@ struct sdw_dpn_prop *sdw_get_slave_dpn_prop(struct sdw_slave *slave,
+ 					    unsigned int port_num)
+ {
+ 	struct sdw_dpn_prop *dpn_prop;
+-	unsigned long mask;
++	u8 num_ports;
+ 	int i;
+ 
+ 	if (direction == SDW_DATA_DIR_TX) {
+-		mask = slave->prop.source_ports;
++		num_ports = hweight32(slave->prop.source_ports);
+ 		dpn_prop = slave->prop.src_dpn_prop;
+ 	} else {
+-		mask = slave->prop.sink_ports;
++		num_ports = hweight32(slave->prop.sink_ports);
+ 		dpn_prop = slave->prop.sink_dpn_prop;
+ 	}
+ 
+-	for_each_set_bit(i, &mask, 32) {
++	for (i = 0; i < num_ports; i++) {
+ 		if (dpn_prop[i].num == port_num)
+ 			return &dpn_prop[i];
+ 	}
 diff --git a/drivers/staging/Kconfig b/drivers/staging/Kconfig
 index db4a392841b1..580df4ce4f9f 100644
 --- a/drivers/staging/Kconfig
@@ -29643,10 +29680,10 @@ index e02ba15f6e34..b35734d03109 100644
  	new_driver->driver.mod_name = mod_name;
  	new_driver->driver.dev_groups = new_driver->dev_groups;
 diff --git a/drivers/usb/storage/uas.c b/drivers/usb/storage/uas.c
-index b610a2de4ae5..0cdbcf82554f 100644
+index a04b4cb1382d..e89dacd4657d 100644
 --- a/drivers/usb/storage/uas.c
 +++ b/drivers/usb/storage/uas.c
-@@ -1232,9 +1232,8 @@ static void uas_disconnect(struct usb_interface *intf)
+@@ -1233,9 +1233,8 @@ static void uas_disconnect(struct usb_interface *intf)
   * hang on reboot when the device is still in uas mode. Note the reset is
   * necessary as some devices won't revert to usb-storage mode without it.
   */
@@ -29657,7 +29694,7 @@ index b610a2de4ae5..0cdbcf82554f 100644
  	struct usb_device *udev = interface_to_usbdev(intf);
  	struct Scsi_Host *shost = usb_get_intfdata(intf);
  	struct uas_dev_info *devinfo = (struct uas_dev_info *)shost->hostdata;
-@@ -1257,7 +1256,7 @@ static struct usb_driver uas_driver = {
+@@ -1258,7 +1257,7 @@ static struct usb_driver uas_driver = {
  	.suspend = uas_suspend,
  	.resume = uas_resume,
  	.reset_resume = uas_reset_resume,
@@ -49346,7 +49383,7 @@ index 8a1c92090129..a415623cde8f 100644
  EXPORT_SYMBOL_GPL(dirty_writeback_interval);
  
 diff --git a/mm/page_alloc.c b/mm/page_alloc.c
-index b50060405d94..da9f688657f6 100644
+index 21016573f187..8afba9085a4b 100644
 --- a/mm/page_alloc.c
 +++ b/mm/page_alloc.c
 @@ -271,7 +271,11 @@ const char * const migratetype_names[MIGRATE_TYPES] = {
@@ -49399,7 +49436,7 @@ index bd5183dfd879..3a410f53a07c 100644
  
  /*
 diff --git a/mm/vmscan.c b/mm/vmscan.c
-index 68ac33bea3a3..9ede4f0c1c0e 100644
+index 99a0c152a85e..75bd34426f48 100644
 --- a/mm/vmscan.c
 +++ b/mm/vmscan.c
 @@ -191,7 +191,11 @@ struct scan_control {
@@ -49414,7 +49451,7 @@ index 68ac33bea3a3..9ede4f0c1c0e 100644
  
  #ifdef CONFIG_MEMCG
  
-@@ -3973,7 +3977,11 @@ static bool lruvec_is_reclaimable(struct lruvec *lruvec, struct scan_control *sc
+@@ -3953,7 +3957,11 @@ static bool lruvec_is_reclaimable(struct lruvec *lruvec, struct scan_control *sc
  }
  
  /* to protect the working set of the last N jiffies */
@@ -52167,7 +52204,7 @@ index 48617d99abb0..d8008ac10ef0 100644
  		icsk->icsk_ca_ops->init(sk);
  	if (tcp_ca_needs_ecn(sk))
 diff --git a/net/ipv4/tcp_input.c b/net/ipv4/tcp_input.c
-index 2c52f6dcbd29..009917385bea 100644
+index f130eccade39..3ccb30894a12 100644
 --- a/net/ipv4/tcp_input.c
 +++ b/net/ipv4/tcp_input.c
 @@ -370,7 +370,7 @@ static void __tcp_ecn_check_ce(struct sock *sk, const struct sk_buff *skb)

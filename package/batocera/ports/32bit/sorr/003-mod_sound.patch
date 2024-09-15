@@ -1,75 +1,24 @@
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 698ca84..4477cd2 100644
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt
-@@ -57,6 +57,7 @@ file(GLOB BGDRTM_SOURCES
-         ${CMAKE_SOURCE_DIR}/modules/libtext/*.c
-         ${CMAKE_SOURCE_DIR}/modules/libvideo/*.c
-         ${CMAKE_SOURCE_DIR}/modules/libwm/*.c
-+        ${CMAKE_SOURCE_DIR}/modules/mod_sound/*.c
-         )
- list(REMOVE_ITEM BGDRTM_SOURCES ${CMAKE_SOURCE_DIR}/core/common/b_crypt.c)
- 
-@@ -84,6 +85,7 @@ list(APPEND BGDRTM_INCLUDES
-         ${CMAKE_SOURCE_DIR}/modules/libtext
-         ${CMAKE_SOURCE_DIR}/modules/libvideo
-         ${CMAKE_SOURCE_DIR}/modules/libwm
-+        ${CMAKE_SOURCE_DIR}/modules/mod_sound
-         )
- 
- # build options
-@@ -139,4 +141,4 @@ if (PLATFORM_VITA)
- elseif (PLATFORM_SWITCH)
-     nx_generate_nacp(${PROJECT_NAME}.nacp NAME ${PROJECT_NAME} AUTHOR "isage & cpasjuste" VERSION "1.0")
-     nx_create_nro(${PROJECT_NAME} NACP ${PROJECT_NAME}.nacp)
--endif ()
-\ No newline at end of file
-+endif ()
 diff --git a/modules/mod_sound/mod_sound.c b/modules/mod_sound/mod_sound.c
-index ea800db..0953ad6 100644
+index ea800db..73ece80 100644
 --- a/modules/mod_sound/mod_sound.c
 +++ b/modules/mod_sound/mod_sound.c
-@@ -259,19 +259,18 @@ static int load_song( const char * filename )
-     Mix_Music *music = NULL;
-     file      *fp;
- 
--    SDL_Log("Trying to load %s", filename);
--
-     if ( !audio_initialized && sound_init() ) return ( 0 );
- 
-     if ( !( fp = file_open( filename, "rb0" ) ) ) return ( 0 );
- 
--    if ( !( music = Mix_LoadMUS_RW( SDL_RWFromBGDFP( fp ), 0 ) ) )
--    {
-+    SDL_RWops * rwops = SDL_RWFromBGDFP( fp );
-+    if ( !rwops ) {
-         file_close( fp );
--        fprintf( stderr, "Couldn't load %s: %s\n", filename, SDL_GetError() );
-         return( 0 );
-     }
--    SDL_Log("Loaded successfully");
-+
-+    // Don't need free rwops, SDL will do
-+    if ( !( music = Mix_LoadMUS(filename) ) ) return ( 0 );
- 
-     return (( int )music );
- }
-@@ -522,12 +521,15 @@ static int load_wav( const char * filename )
- 
-     if ( !( fp = file_open( filename, "rb0" ) ) ) return ( 0 );
- 
--    if ( !( music = Mix_LoadWAV_RW( SDL_RWFromBGDFP( fp ), 1 ) ) )
--    {
-+    SDL_RWops * rwops = SDL_RWFromBGDFP( fp );
-+    if ( !rwops ) {
-         file_close( fp );
--        fprintf( stderr, "Couldn't load %s: %s\n", filename, SDL_GetError() );
-         return( 0 );
-     }
-+
-+    // Don't need free rwops, SDL will do
-+    if ( !( music = Mix_LoadWAV_RW( rwops, 1 ) ) ) return ( 0 );
-+
-     return (( int )music );
+@@ -125,6 +125,11 @@ static int SDLCALL __modsound_close_cb( SDL_RWops *context )
+     return( 0 );
  }
  
++static Sint64 SDLCALL __modsound_size_cb( SDL_RWops *context )
++{
++    return (Sint64)file_size( context->hidden.unknown.data1 );
++}
++
+ static SDL_RWops *SDL_RWFromBGDFP( file *fp )
+ {
+     SDL_RWops *rwops = SDL_AllocRW();
+@@ -134,6 +139,7 @@ static SDL_RWops *SDL_RWFromBGDFP( file *fp )
+         rwops->read = __modsound_read_cb;
+         rwops->write = __modsound_write_cb;
+         rwops->close = __modsound_close_cb;
++        rwops->size = __modsound_size_cb;
+         rwops->hidden.unknown.data1 = fp;
+     }
+     return( rwops );

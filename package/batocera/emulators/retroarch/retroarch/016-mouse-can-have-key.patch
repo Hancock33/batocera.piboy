@@ -1,5 +1,5 @@
 diff --git a/input/drivers/udev_input.c b/input/drivers/udev_input.c
-index 3f8b157839..cdcfa96314 100644
+index b0ef90dc9e..58e96c6d93 100644
 --- a/input/drivers/udev_input.c
 +++ b/input/drivers/udev_input.c
 @@ -3250,11 +3250,8 @@ static int udev_input_add_device(udev_input_t *udev,
