@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2024-09-01 17:03+0000\n"
+"PO-Revision-Date: 2024-09-09 08:06+0000\n"
 "Last-Translator: THa_MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl-NL\n"
@@ -396,11 +396,13 @@ msgid ""
 "Use preemptive frames instead of run-ahead. Only runs ahead when controller "
 "state changes."
 msgstr ""
+"Gebruik preventieve frames in plaats van vooruitlopen. Loopt alleen vooruit "
+"wanneer de status van de controller verandert."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "USE PRE-EMPTIVE FRAMES"
-msgstr ""
+msgstr "GEBRUIK PREVENTIEVE FRAMES"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -9463,7 +9465,7 @@ msgstr "WEERGAVE"
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Automatic ratio"
-msgstr ""
+msgstr "Automatische verhouding"
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
