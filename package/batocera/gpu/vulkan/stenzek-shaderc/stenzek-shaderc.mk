@@ -3,8 +3,8 @@
 # stenzek-shaderc
 #
 ################################################################################
-# Version: Commits on Sept 08, 2024
-STENZEK_SHADERC_VERSION = 3a655d0f8d3c946efd690edea31e138d4efef417
+# Version: Commits on Sept 13, 2024
+STENZEK_SHADERC_VERSION = 3c12f7af773c547973138bee6d6ac70d91729479
 STENZEK_SHADERC_SITE =  $(call github,stenzek,shaderc,$(STENZEK_SHADERC_VERSION))
 STENZEK_SHADERC_DEPENDENCIES = vulkan-headers vulkan-loader glslang spirv-tools
 STENZEK_SHADERC_INSTALL_STAGING = YES
@@ -27,7 +27,7 @@ STENZEK_SHADERC_POST_PATCH_HOOKS += STENZEK_SHADERC_THIRDPARTY
 
 define STENZEK_SHADERC_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib
-	$(INSTALL) -D $(@D)/buildroot-build/libshaderc/libshaderc_stenzek.so $(TARGET_DIR)/usr/lib
+	$(INSTALL) -D $(@D)/buildroot-build/libshaderc/libshaderc_ds.so $(TARGET_DIR)/usr/lib
 endef
 
 $(eval $(cmake-package))

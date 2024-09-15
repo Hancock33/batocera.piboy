@@ -3,11 +3,11 @@
 # melonds
 #
 ################################################################################
-# Version: Commits on Sept 06, 2024
-MELONDS_VERSION = 268c4f14c194b72ced33f520688fb0d3d096fad5
+# Version: Commits on Sept 15, 2024
+MELONDS_VERSION = 7ac2eb2d7137caad07801fb4ebe49901d40e42bd
 MELONDS_SITE = $(call github,melonDS-emu,melonDS,$(MELONDS_VERSION))
 MELONDS_LICENSE = GPLv2
-MELONDS_DEPENDENCIES = sdl2 qt6base qt6multimedia slirp libepoxy libarchive
+MELONDS_DEPENDENCIES = ecm libarchive libegl libepoxy qt6base qt6multimedia sdl2 slirp
 MELONDS_SUPPORTS_IN_SOURCE_BUILD = NO
 
 MELONDS_CONF_OPTS += -DCMAKE_INSTALL_PREFIX="/usr"

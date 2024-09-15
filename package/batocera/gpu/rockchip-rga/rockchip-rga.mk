@@ -3,8 +3,8 @@
 # rockchip-rga
 #
 ################################################################################
-# Version: Commits on Dec 01, 2023
-ROCKCHIP_RGA_VERSION = d7a0a485ed6c201f882c20b3a8881e801f131385
+# Version: Commits on Aug 29, 2024
+ROCKCHIP_RGA_VERSION = 8e2a51b1c3e5b569aabc0b476f36550c1f332c41
 ROCKCHIP_RGA_SITE = $(call github,JeffyCN,mirrors,linux-rga,$(ROCKCHIP_RGA_VERSION))
 ROCKCHIP_RGA_BRANCH = linux-rga-multi
 

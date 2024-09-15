@@ -3,11 +3,15 @@
 # lightspark
 #
 ################################################################################
-# Version: Commits on Sept 01, 2024
-LIGHTSPARK_VERSION = f03052db93cd26cedac6e0c0f098e60195b3e19f
+# Version: Commits on Sept 14, 2024
+LIGHTSPARK_VERSION = 8d7095e09f8f13c380f0981dda2a2c3c8810186e
 LIGHTSPARK_SITE = $(call github,lightspark,lightspark,$(LIGHTSPARK_VERSION))
 LIGHTSPARK_LICENSE = LGPLv3
 LIGHTSPARK_DEPENDENCIES = sdl2 freetype pcre jpeg libpng cairo pango ffmpeg libcurl rtmpdump
+
+ifeq ($(BR2_PACKAGE_XORG7)$(BR2_PACKAGE_HAS_LIBGL),yy)
+LIGHTSPARK_DEPENDENCIES += libglew
+endif
 
 LIGHTSPARK_CONF_OPTS += -DCOMPILE_NPAPI_PLUGIN=FALSE -DCOMPILE_PPAPI_PLUGIN=FALSE
 ifeq ($(filter y,$(BR2_x86_64) $(BR2_PACKAGE_BATOCERA_BCM27XX)),)

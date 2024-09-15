@@ -3,10 +3,14 @@
 # libretro-kronos
 #
 ################################################################################
-# Version: Commits on Sept 08, 2024
-LIBRETRO_KRONOS_VERSION = 60566364a9eb9b4843d6aa750d63f7e14320c6ae
+# Version: Commits on Sept 15, 2024
+LIBRETRO_KRONOS_VERSION = 9594b83c57927778adb0aac0d747e36fba871f95
 LIBRETRO_KRONOS_SITE = $(call github,FCare,kronos,$(LIBRETRO_KRONOS_VERSION))
 LIBRETRO_KRONOS_LICENSE = BSD-3-Clause
+
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
+LIBRETRO_KRONOS_DEPENDENCIES += libglvnd
+endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_XU4),y)
     LIBRETRO_KRONOS_PLATFORM = odroid

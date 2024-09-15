@@ -3,15 +3,15 @@
 # etlegacy
 #
 ################################################################################
-# Version: Commits on Sept 06, 2024
-ETLEGACY_VERSION = b85a8189f5eca74ff33216321a38194f2b41a098
+# Version: Commits on Sept 14, 2024
+ETLEGACY_VERSION = 455ffb8b190dbfeff2764fcf4cddae998d00eeab
 ETLEGACY_SITE = https://github.com/etlegacy/etlegacy.git
 ETLEGACY_SITE_METHOD = git
 ETLEGACY_GIT_SUBMODULES = YES
 ETLEGACY_LICENSE = GPL-3.0
 ETLEGACY_LICENSE_FILE = COPYING.txt
 
-ETLEGACY_DEPENDENCIES += freetype libcurl libglew libpng libtheora
+ETLEGACY_DEPENDENCIES += freetype libcurl libglew libpng libtheora libglu
 ETLEGACY_DEPENDENCIES += libvorbis lua openal openssl sdl2
 
 ETLEGACY_SUPPORTS_IN_SOURCE_BUILD = NO

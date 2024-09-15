@@ -3,15 +3,15 @@
 # soniccd
 #
 ################################################################################
-# Version: Commits on Sept 02, 2024
-SONICCD_VERSION = 2cc9dcd19360982899322ad878315a3eedee7a36
+# Version: Commits on Sept 12, 2024
+SONICCD_VERSION = 3caffa59c5f2e3bca152aad5be79c8a53c7d1884
 SONICCD_SITE = https://github.com/RSDKModding/RSDKv3-Decompilation.git
 SONICCD_SITE_METHOD = git
 SONICCD_GIT_SUBMODULES = YES
 SONICCD_SUPPORTS_IN_SOURCE_BUILD = NO
 SONICCD_LICENSE = Custom
 
-SONICCD_DEPENDENCIES = sdl2 libogg libvorbis libtheora libglew
+SONICCD_DEPENDENCIES = sdl2 libogg libvorbis libtheora libglew libglu
 
 SONICCD_CONF_OPTS += -DRETRO_SDL_VERSION=2
 

@@ -3,8 +3,8 @@
 # scummvm
 #
 ################################################################################
-# Version: Commits on Sept 08, 2024
-SCUMMVM_VERSION = 2295954e2f5aae03ad6db197006bfce89558b7d9
+# Version: Commits on Sept 14, 2024
+SCUMMVM_VERSION = 354a11880a4745da4afb114bd8748cf270ad7343
 SCUMMVM_SITE = $(call github,scummvm,scummvm,$(SCUMMVM_VERSION))
 SCUMMVM_LICENSE = GPLv2
 SCUMMVM_DEPENDENCIES += sdl2 zlib libmpeg2 libogg libvorbis flac libmad libpng libtheora faad2 freetype jpeg fluidsynth

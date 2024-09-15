@@ -3,8 +3,8 @@
 # batocera-bezel
 #
 ################################################################################
-# Version: Commits on Mar 19, 2023
-BATOCERA_BEZEL_VERSION = 72ce23dd989ced9df3f49d2021208eff1f99552c
+# Version: Commits on Sept 10, 2024
+BATOCERA_BEZEL_VERSION = f981ce209f4c76ba70113e24371a5b3aec5440d8
 BATOCERA_BEZEL_SITE = $(call github,hancock33,batocera-bezel,$(BATOCERA_BEZEL_VERSION))
 
 define BATOCERA_BEZEL_INSTALL_TARGET_CMDS
@@ -16,7 +16,6 @@ define BATOCERA_BEZEL_INSTALL_TARGET_CMDS
 	cp -rf $(@D)/ambiance_vintage_tv		$(TARGET_DIR)/usr/share/batocera/datainit/decorations
 	cp -rf $(@D)/arcade_1980s				$(TARGET_DIR)/usr/share/batocera/datainit/decorations
 	cp -rf $(@D)/arcade_1980s_vertical		$(TARGET_DIR)/usr/share/batocera/datainit/decorations
-	cp -rf $(@D)/arcade_vertical_default	$(TARGET_DIR)/usr/share/batocera/datainit/decorations
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/decorations/consoles
 	# we don't have all systems with no_curve_night yet, so we copy first the "classic" bezels
 	cp -rf --remove-destination $(@D)/default_unglazed/*				$(TARGET_DIR)/usr/share/batocera/datainit/decorations/consoles/

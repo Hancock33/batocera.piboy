@@ -3,8 +3,8 @@
 # theforceengine
 #
 ################################################################################
-# Version: Commits on Sept 08, 2024
-THEFORCEENGINE_VERSION = 0f824f5a94146cdaf321f39a2485014bbc5083c2
+# Version: Commits on Sept 14, 2024
+THEFORCEENGINE_VERSION = fd5b11d55939a1727bc45f0f4fc943c2ce4c5c84
 THEFORCEENGINE_SITE = $(call github,luciusDXL,TheForceEngine,$(THEFORCEENGINE_VERSION))
 THEFORCEENGINE_LICENSE = GPLv2
 THEFORCEENGINE_LICENSE_FILE = LICENSE
@@ -17,7 +17,7 @@ THEFORCEENGINE_EXTRA_DOWNLOADS = \
 	https://df-21.net/downloads/patches/$(THEFORCEENGINE_PATCH_VERSION)/,\
 	$(THEFORCEENGINE_PATCH_SOURCE))
 
-THEFORCEENGINE_DEPENDENCIES = libglew sdl2
+THEFORCEENGINE_DEPENDENCIES = libglew sdl2 sdl2_image
 
 THEFORCEENGINE_SUPPORTS_IN_SOURCE_BUILD = NO
 

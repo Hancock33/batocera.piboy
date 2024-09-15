@@ -1,5 +1,5 @@
 diff --git a/CMakeModules/DuckStationUtils.cmake b/CMakeModules/DuckStationUtils.cmake
-index cdc01a52..34ab4792 100644
+index 8cb4c85f2..7ea3e058e 100644
 --- a/CMakeModules/DuckStationUtils.cmake
 +++ b/CMakeModules/DuckStationUtils.cmake
 @@ -11,7 +11,7 @@ function(detect_operating_system)
