@@ -3,8 +3,8 @@
 # libserum
 #
 ################################################################################
-# Version: Commits on Jul 03, 2024
-LIBSERUM_VERSION = v2.0.1
+# Version: Commits on Sept 15, 2024
+LIBSERUM_VERSION = v2.0.2
 LIBSERUM_SITE = $(call github,zesinger,libserum,$(LIBSERUM_VERSION))
 LIBSERUM_LICENSE = GPLv2+
 LIBSERUM_LICENSE_FILES = LICENSE.md
