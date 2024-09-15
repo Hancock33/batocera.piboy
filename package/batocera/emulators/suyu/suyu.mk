@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Sept 15, 2024
-SUYU_VERSION = 9490b5264e82cc22251bd4afd7fe5fb1611faf35
+SUYU_VERSION = 6be886d0ff5cc8bd2617c8cfc68b8934f0fc1317
 SUYU_BRANCH = dev
 SUYU_SITE = https://git.suyu.dev/suyu/suyu.git
 SUYU_SITE_METHOD=git

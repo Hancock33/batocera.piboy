@@ -1,12 +1,14 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|708f3c5ec72d9e2774856d8fc5d60bd44cd87c13|Sept 15, 2024
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|708f3c5ec72d9e2774856d8fc5d60bd44cd87c13|Sept 15, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|025560f3d6d17d6a262322c21457538537708a3a|Sept 15, 2024
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|7ac2eb2d7137caad07801fb4ebe49901d40e42bd|Sept 15, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.147|Sept 15, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|346dd0ad7c7c39fd0711064a657f6ada576990d9|Sept 15, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|790e9212f8bbcb04bd9f7910f0aba369abdcc677|Sept 15, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|e06f1887d46a5020d8de8c7f977759a2889b9d64|Sept 15, 2024
-Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|9490b5264e82cc22251bd4afd7fe5fb1611faf35|Sept 15, 2024
+Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|6be886d0ff5cc8bd2617c8cfc68b8934f0fc1317|Sept 15, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|edc829f3e61855a67436b24c58e18e4652d1da9f|Sept 15, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|9faa9f41e0efe81fe75ca61c6a4475fa62b35d0d|Sept 15, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|e949f41d838949947cf3f31ba014549cca051a5f|Sept 15, 2024
@@ -23,9 +25,7 @@ Emulators|[libretro-mame](http://github.com/sonninnos/mame)|184cebe571ab6b06f501
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|bb8a6e05f9fb440efdf2121f08448814d6a7ed1f|Sept 15, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|346dd0ad7c7c39fd0711064a657f6ada576990d9|Sept 15, 2024
 Emulators|[libretro-px68k](http://github.com/libretro/px68k-libretro)|b3308b5b87a4e5c21132f24104e7b6fdc97dbb8b|Sept 15, 2024
-Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|c8a4f66cf85beb65f99ba727c63124a0a74ceac0|Sept 15, 2024
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|f14cb7bc253add2d1667495d81cf8d64762f2d75|Sept 14, 2024
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|f14cb7bc253add2d1667495d81cf8d64762f2d75|Sept 14, 2024
+Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|557f897eade1856a9bf48ab45b180eab0b841847|Sept 15, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|595090708ca9ef370392cb5e0c8c105f1a6bff88|Sept 14, 2024
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|8d7095e09f8f13c380f0981dda2a2c3c8810186e|Sept 14, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|d1648dd707687c336dff1397daf8a657881c230e|Sept 14, 2024

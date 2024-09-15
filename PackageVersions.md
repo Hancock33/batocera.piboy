@@ -59,8 +59,8 @@ Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-control
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|e6241340d292dee20406a0567262a78ff34d45f7|Jun 02, 2021
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.6|Apr 12, 2024
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|f14cb7bc253add2d1667495d81cf8d64762f2d75|Sept 14, 2024
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|f14cb7bc253add2d1667495d81cf8d64762f2d75|Sept 14, 2024
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|708f3c5ec72d9e2774856d8fc5d60bd44cd87c13|Sept 15, 2024
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|708f3c5ec72d9e2774856d8fc5d60bd44cd87c13|Sept 15, 2024
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|8968deb8fbfd5c96819fa22aba7bbd8890ed8113|Apr 25, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|e0e6606f6eeed563cf85ea17bc60c660fcdb2ac4|Sept 13, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|3f2ed47c00ef6a8298c99c7d7161d1d3f4a90b39|Sept 05, 2024
@@ -225,7 +225,7 @@ Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|fcabaff759725
 Emulators|[libretro-uae4arm](http://github.com/chips-fr/uae4arm-rpi)|177c2f0e892adf2603ada9b150e31beffe0f76c3|Apr 22, 2022
 Emulators|[libretro-uzem](http://github.com/libretro/libretro-uzem)|08e39e19167727c89fb995e3fa70dde252e6aab0|Apr 14, 2022
 Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|40fe56212d13dda091034888ac2f9021bd6eb02c|Apr 25, 2024
-Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|c8a4f66cf85beb65f99ba727c63124a0a74ceac0|Sept 15, 2024
+Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|557f897eade1856a9bf48ab45b180eab0b841847|Sept 15, 2024
 Emulators|[libretro-vecx](http://github.com/libretro/libretro-vecx)|0e48a8903bd9cc359da3f7db783f83e22722c0cf|Jun 28, 2024
 Emulators|[libretro-vemulator](http://github.com/libretro/vemulator-libretro)|ff9c39714fe64960b4050c6884c70c24e63de4fd|Mar 11, 2023
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|00788a0244c5de249662c2bc815207ceef8810fc|Sept 13, 2024
@@ -287,7 +287,7 @@ Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|d7d1d39111efb9c4
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|5a5847f8b6b3b414d7ac81f25e8e88002c0c0ad9|Sept 13, 2024
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|b13fdd5029a246e8f90a1d70e2ed000779fee4f1|Sept 10, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|9d09b0717d175cbc403180eebc1a6ece4a7936e4|Sept 11, 2024
-Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|9490b5264e82cc22251bd4afd7fe5fb1611faf35|Sept 15, 2024
+Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|6be886d0ff5cc8bd2617c8cfc68b8934f0fc1317|Sept 15, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|bdcf376fa711aa9b828ba479485dcd461b1095c4|Sept 13, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|979235b4b7ebb3fbec5505a846b70f70333857dc|Sept 05, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45333|Sept 07, 2024
