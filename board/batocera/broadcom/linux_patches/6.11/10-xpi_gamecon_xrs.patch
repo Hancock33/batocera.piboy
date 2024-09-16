@@ -765,7 +765,7 @@ index 000000000000..917b9710548e
 +	return PTR_ERR(adc_bat->psy);
 +}
 +
-+static int expi_remove(struct platform_device *pdev)
++static void expi_remove(struct platform_device *pdev)
 +{
 +	struct expi *adc_bat = platform_get_drvdata(pdev);
 +
@@ -775,7 +775,7 @@ index 000000000000..917b9710548e
 +
 +	printk(KERN_INFO "Experimental Pi Driver unloaded");
 +
-+	return 0;
++	return;
 +}
 +
 +static struct platform_driver expi_driver = {
