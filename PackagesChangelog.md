@@ -13,7 +13,9 @@ Ports|[omf2097](http://github.com/omf2097/openomf)|18628db38ac78945ca88f73870cfd
 Utils|[ryzenadj](http://github.com/FlyGoat/RyzenAdj)|v0.16.0|Sept 18, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|414eaee7aacc0d2ccdf281663c3d3bc65a8dbedd|Sept 18, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|dbfb88721b69b0e4dc7da3b4bf16332c9764e5b0|Sept 18, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240918|Sept 18, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|63424712ef4172867975c86db5585099ef0c8e66|Sept 18, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240918|Sept 18, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|5a834343b18b78105704f84f140497eb622fb01b|Sept 18, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|915532f946da2ff740f6e06f831adc83b233e7d9|Sept 18, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|68804ca539a9b6955696a1a95cde3f0917c01b12|Sept 18, 2024
@@ -57,8 +59,6 @@ Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|d05f05c94fd7a19
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.3|Sept 15, 2024
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|a14613387af6a9e80b508b978d14ead6733e21e5|Sept 15, 2024
 Emulators|[libserum](http://github.com/zesinger/libserum)|v2.0.2|Sept 15, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240915|Sept 15, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240915|Sept 15, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|7b013d5009edfab4d66378ae6c2f403bac72930b|Sept 15, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|48c5f60ee28c2eeeec0af99a621f7e4b8a0ac43a|Sept 15, 2024
 Emulators|[libretro-mame](http://github.com/sonninnos/mame)|184cebe571ab6b06f5015404bd40404d25433d9a|Sept 15, 2024
