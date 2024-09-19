@@ -281,7 +281,7 @@ index 7a4a6af54cf5..068b10401c0d 100644
  EXPORT_SYMBOL(drm_connector_list_update);
  
 diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
-index 06b63979f26b..6ab1e6c8f6ec 100644
+index 4b6ce0a3d673..b6d648a777d7 100644
 --- a/drivers/gpu/drm/drm_probe_helper.c
 +++ b/drivers/gpu/drm/drm_probe_helper.c
 @@ -378,6 +378,23 @@ drm_helper_probe_detect_ctx(struct drm_connector *connector, bool force)
@@ -308,7 +308,7 @@ index 06b63979f26b..6ab1e6c8f6ec 100644
  /**
   * drm_helper_probe_detect - probe connector status
   * @connector: connector to probe
-@@ -579,6 +596,8 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
+@@ -578,6 +595,8 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
  
  	drm_modeset_acquire_init(&ctx, 0);
  
@@ -317,7 +317,7 @@ index 06b63979f26b..6ab1e6c8f6ec 100644
  	drm_dbg_kms(dev, "[CONNECTOR:%d:%s]\n", connector->base.id,
  		    connector->name);
  
-@@ -596,6 +615,10 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
+@@ -595,6 +614,10 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
  
  	old_status = connector->status;
  
@@ -328,7 +328,7 @@ index 06b63979f26b..6ab1e6c8f6ec 100644
  	if (connector->force) {
  		if (connector->force == DRM_FORCE_ON ||
  		    connector->force == DRM_FORCE_ON_DIGITAL)
-@@ -711,7 +734,13 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
+@@ -710,7 +733,13 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
  
  	drm_mode_sort(&connector->modes);
  
@@ -363,7 +363,7 @@ index ace4f6a2de45..5a1e39e63ad3 100644
  	 * @display_info: Display information is filled from EDID information
  	 * when a display is detected. For non hot-pluggable displays such as
 diff --git a/include/drm/drm_modes.h b/include/drm/drm_modes.h
-index b9bb92e4b029..2de437a308e9 100644
+index b9bb92e4b029..bf2cdcf1abb9 100644
 --- a/include/drm/drm_modes.h
 +++ b/include/drm/drm_modes.h
 @@ -460,6 +460,10 @@ int drm_mode_convert_umode(struct drm_device *dev,
@@ -377,3 +377,32 @@ index b9bb92e4b029..2de437a308e9 100644
  void drm_mode_debug_printmodeline(const struct drm_display_mode *mode);
  bool drm_mode_is_420_only(const struct drm_display_info *display,
  			  const struct drm_display_mode *mode);
+@@ -477,6 +481,14 @@ struct drm_display_mode *drm_analog_tv_mode(struct drm_device *dev,
+ 					    unsigned int vdisplay,
+ 					    bool interlace);
+ 
++void drm_mode_attachmode(struct drm_device *dev,
++                                struct drm_connector *connector,
++                                struct drm_display_mode *mode);
++
++int drm_mode_detachmode(struct drm_device *dev,
++                               struct drm_connector *connector,
++                               struct drm_display_mode *mode);
++
+ static inline struct drm_display_mode *drm_mode_analog_ntsc_480i(struct drm_device *dev)
+ {
+ 	return drm_analog_tv_mode(dev, DRM_MODE_TV_MODE_NTSC, 13500000, 720, 480, true);
+diff --git a/include/drm/drm_probe_helper.h b/include/drm/drm_probe_helper.h
+index d6ce7b218b77..592481292780 100644
+--- a/include/drm/drm_probe_helper.h
++++ b/include/drm/drm_probe_helper.h
+@@ -13,6 +13,9 @@ struct drm_modeset_acquire_ctx;
+ int drm_helper_probe_single_connector_modes(struct drm_connector
+ 					    *connector, uint32_t maxX,
+ 					    uint32_t maxY);
++void drm_mode_validate_user_mode(struct drm_device *dev,
++                                 struct drm_connector *connector,
++                                 struct drm_display_mode *mode);
+ int drm_helper_probe_detect(struct drm_connector *connector,
+ 			    struct drm_modeset_acquire_ctx *ctx,
+ 			    bool force);
