@@ -18,7 +18,9 @@ Ports|[stk](http://github.com/supertuxkart/stk-code)|35967b6831ab0c046ac7764c584
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|c754f1c444abb3a749a66409e9aba73228e13a34|Sept 19, 2024
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|eb22f91aa40a3bed2ffe5bd96a95d34b59782f98|Sept 19, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|bec4107412790e6e38002f4027847e52762337aa|Sept 19, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240919|Sept 19, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|7a09d7ed85e76515cfbe94e39fb542c49e84ec3e|Sept 19, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240919|Sept 19, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|53d19cc8a0023b2cb74ff6274de3993d85204224|Sept 19, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|b1f0c1f5cceecd0c328a5f365c7043b1c2e68f17|Sept 19, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|ef948b4e6e93837a46a67caec513b794ffdf6c86|Sept 19, 2024
@@ -39,8 +41,6 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|ac6b361605c2a3a86f2b625f85
 Utils|[ryzenadj](http://github.com/FlyGoat/RyzenAdj)|v0.16.0|Sept 18, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|414eaee7aacc0d2ccdf281663c3d3bc65a8dbedd|Sept 18, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|05916c182d4adf4e473f12a0b223c91c011a1768|Sept 18, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240918|Sept 18, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240918|Sept 18, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|5347cdf56919c6e15ea5ef01a88df4b61759104b|Sept 18, 2024
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|93292f1cd5c3e22f3123fd9262cbdcec3cb20d43|Sept 18, 2024
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|261d4213497855bb4ca73d825a78ef8e6efa7c8a|Sept 18, 2024
