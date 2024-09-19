@@ -1,8 +1,8 @@
 diff --git a/vita3k/renderer/src/vulkan/context.cpp b/vita3k/renderer/src/vulkan/context.cpp
-index cbe8ff0acb..2d8d618e7d 100644
+index 6cac83a3..7e736e9f 100644
 --- a/vita3k/renderer/src/vulkan/context.cpp
 +++ b/vita3k/renderer/src/vulkan/context.cpp
-@@ -247,21 +247,21 @@ void VKContext::start_render_pass(bool create_descriptor_set) {
+@@ -298,21 +298,21 @@ void VKContext::start_render_pass(bool create_descriptor_set) {
      if (!is_recording)
          start_recording();
  
