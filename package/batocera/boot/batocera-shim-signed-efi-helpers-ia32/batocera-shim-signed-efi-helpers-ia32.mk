@@ -3,8 +3,8 @@
 # batocera-shim-signed-efi-helpers-ia32
 #
 ################################################################################
-# Version: Commits on Mar 02, 2023
-BATOCERA_SHIM_SIGNED_EFI_HELPERS_IA32_VERSION = 1+15.7+1
+# Version: Commits on May 10, 2024
+BATOCERA_SHIM_SIGNED_EFI_HELPERS_IA32_VERSION = 1+15.8+1~deb12u1
 BATOCERA_SHIM_SIGNED_EFI_HELPERS_IA32_SITE = https://ftp.debian.org/debian/pool/main/s/shim-helpers-i386-signed
 BATOCERA_SHIM_SIGNED_EFI_HELPERS_IA32_SOURCE = shim-helpers-i386-signed_$(BATOCERA_SHIM_SIGNED_EFI_HELPERS_IA32_VERSION)_i386.deb
 
