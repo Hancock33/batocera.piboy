@@ -8,8 +8,8 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|f5c42d14870c5ef2e5a86
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|02362a480712a18cc3567eea2f9195fa65c4e117|Sept 21, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-09-21|Sept 21, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|c6afb82b9effe61e71ab6da92e1d756d49c97476|Sept 21, 2024
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|629707b935d62e2f67f601edf3d583cc6a535c90|Sept 21, 2024
-Libraries|[python3-configobj](https://github.com/DiffSK/configobj/releases)|v5.0.9|Sept 21, 2024
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|d246e3bc70292b2034ff153feb5ee0ac73cff97b|Sept 21, 2024
+Libraries|[python3-configobj](http://github.com/DiffSK/configobj)|v5.0.9|Sept 21, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|93459bcfe7758f98c16cdc09092fac619d6d851b|Sept 21, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|c2be0268b1fb96741c5a98b5b6c3a270d14e2c83|Sept 21, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|302fec69da101589414e15838f2a8f0a1f87c046|Sept 21, 2024
@@ -21,7 +21,7 @@ Emulators|[libpinmame](http://github.com/vpinball/pinmame)|0a7eef8cf072582640c72
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.18.r0.g42af68b8b7c|Sept 21, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240921|Sept 21, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240921|Sept 21, 2024
-Ports|[doomretro](http://github.com/bradharding/doomretro)|3579bfd17611d5296fc5fccfa63c1ce5c4be7d27|Sept 21, 2024
+Ports|[doomretro](http://github.com/bradharding/doomretro)|290503a66fe7b8218728d1c69abbc8122f6511cf|Sept 21, 2024
 Ports|[xatrix](http://github.com/yquake2/xatrix)|1957253b256180f9bbb5b52c8d63cc1578170211|Sept 21, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|9278772868fbe25a44df260627e1344609f47bbb|Sept 21, 2024
 Ports|[yrogue](http://github.com/yquake2/rogue)|7cf6cad6acfe88d74bca104839c4ff2b94cc6036|Sept 21, 2024

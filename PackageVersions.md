@@ -307,7 +307,7 @@ Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.16|Aug 23, 2
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240921|Sept 21, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|08ba97a89963d0672cf68f5d5c1e55322ff48448|Jul 21, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|8707d2aa2626063cb67b5ea20382584a0848dce7|Nov 02, 2023
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|629707b935d62e2f67f601edf3d583cc6a535c90|Sept 21, 2024
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|d246e3bc70292b2034ff153feb5ee0ac73cff97b|Sept 21, 2024
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Firmwares|[alllinuxfirmwares](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot)|20240909|Sept 09, 2024
@@ -400,7 +400,7 @@ Libraries|[python-pyftdi](https://files.pythonhosted.org/packages/8f/b4/8578b8e4
 Libraries|[python-pyqt5-sip](https://files.pythonhosted.org/packages/ee/81/fce2a475aa56c1f49707d9306b930695b6ff078c2242c9f2fd72a3214e1f)|12.13.0|Oct 14, 2023
 Libraries|[python-smbus2](https://files.pythonhosted.org/packages/98/17/9663936e52a348b3ad1c85e6ca6071d2abf00a5f64f2df50bec8dcca6e16)|0.4.3|Aug 25, 2023
 Libraries|[python-sysv-ipc](https://files.pythonhosted.org/packages/0c/d7/5d2f861155e9749f981e6c58f2a482d3ab458bf8c35ae24d4b4d5899ebf9)|1.1.0|Jan 17, 2021
-Libraries|[python3-configobj](https://github.com/DiffSK/configobj/releases)|v5.0.9|Sept 21, 2024
+Libraries|[python3-configobj](http://github.com/DiffSK/configobj)|v5.0.9|Sept 21, 2024
 Libraries|[python3-gpiod](https://files.pythonhosted.org/packages/aa/b7/12bda3ba884c7299ac461f84732583048d962145ad230447115758c32e6e)|2.2.0|Jun 18, 2024
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|5.2|Aug 17, 2024
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|1d6dfdc33b86b71dfab4fe631e72fe7ee5c01ee1|Aug 17, 2024
@@ -435,7 +435,7 @@ Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|bd7f9a8e3875b34f3
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|ac6b361605c2a3a86f2b625f853c97ec6d32b0c3|Sept 18, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|e90855b3c4393b60159970c3b5b346255428b4d5|Sept 20, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|e0e772ef92f3739d52a51ddf9f898f4a12d44d7e|Sept 10, 2024
-Ports|[doomretro](http://github.com/bradharding/doomretro)|3579bfd17611d5296fc5fccfa63c1ce5c4be7d27|Sept 21, 2024
+Ports|[doomretro](http://github.com/bradharding/doomretro)|290503a66fe7b8218728d1c69abbc8122f6511cf|Sept 21, 2024
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|bd3c033bdf1faa4606086dcae0436531fb2e7e5c|Aug 11, 2024
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|899bbd5c1ebf84105ca0616ee933a0ee113fbc79|Jul 08, 2024
