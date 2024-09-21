@@ -8,6 +8,7 @@ Ports|[omf2097](http://github.com/omf2097/openomf)|e738a0d242ec4ce149172195cc15d
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|be5d35e98d542f88752be46c369d15b9c2a4e980|Sept 21, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|0c468f9a443874b51bb48b3d4cc3ba52ef6ff584|Sept 21, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|0a7eef8cf072582640c72d9a74604d939ff0ce61|Sept 21, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.18.r0.g42af68b8b7c|Sept 21, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240921|Sept 21, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240921|Sept 21, 2024
 Ports|[xatrix](http://github.com/yquake2/xatrix)|1957253b256180f9bbb5b52c8d63cc1578170211|Sept 21, 2024
@@ -30,7 +31,6 @@ Ports|[box64](http://github.com/ptitseb/box64)|15842f3464decd5d5c0809f394cf48af9
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|e90855b3c4393b60159970c3b5b346255428b4d5|Sept 20, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|dc1e7f348f255e00e387afdb2819ef00fa55ba6a|Sept 20, 2024
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|8e110d87edab1b843d97ba831743c79519e07ad8|Sept 20, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.17.r8.g1baaa8fb|Sept 20, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|2fe2adc35761e87669821d86bf3895dce1b3abb3|Sept 20, 2024
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|6aaabc8e18279ac8a7c6facf26aa67e58375d177|Sept 20, 2024
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|61313f9a74d5dbce28f525036f046cd5ae9aefce|Sept 20, 2024
