@@ -1,6 +1,8 @@
---- a/src/core/opengl/render_gl_backend.cpp	2023-08-26 19:42:51.000000000 +0200
-+++ b/src/core/opengl/render_gl_backend.cpp	2023-09-24 12:25:08.628141009 +0200
-@@ -34,6 +34,10 @@
+diff --git a/src/core/opengl/render_gl_backend.cpp b/src/core/opengl/render_gl_backend.cpp
+index 8b9fa50b..46f61f9f 100644
+--- a/src/core/opengl/render_gl_backend.cpp
++++ b/src/core/opengl/render_gl_backend.cpp
+@@ -37,6 +37,10 @@
  #endif
  
  
@@ -11,9 +13,11 @@
  // arguments
  constexpr bool s_prefer_fb_copyTex = false;
  static int s_num_pass = 2;
---- a/src/core/opengl/render_gl_frontend.cpp	2023-08-26 19:42:51.000000000 +0200
-+++ b/src/core/opengl/render_gl_frontend.cpp	2023-09-24 12:28:15.656541030 +0200
-@@ -234,12 +234,13 @@
+diff --git a/src/core/opengl/render_gl_frontend.cpp b/src/core/opengl/render_gl_frontend.cpp
+index 7ee763ab..7a69f223 100644
+--- a/src/core/opengl/render_gl_frontend.cpp
++++ b/src/core/opengl/render_gl_frontend.cpp
+@@ -404,12 +404,13 @@ void RenderGL::close()
              m_vertex_buffer[i] = 0;
      }
  
