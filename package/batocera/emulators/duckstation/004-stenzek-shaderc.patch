@@ -12,10 +12,10 @@ index de296f406..90aede70e 100644
      list(APPEND CMAKE_BUILD_RPATH ${SHADERC_LIBRARY_DIRECTORY})
      get_target_property(SPIRV_CROSS_LIBRARY spirv-cross-c-shared IMPORTED_LOCATION)
 diff --git a/src/util/CMakeLists.txt b/src/util/CMakeLists.txt
-index c37eff443..9ddebeb08 100644
+index c26460c78..7c0266835 100644
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
-@@ -172,7 +172,7 @@ endif()
+@@ -171,7 +171,7 @@ endif()
  
  if(ENABLE_VULKAN OR APPLE)
    # shaderc is loaded dynamically to reduce module loads on startup.
