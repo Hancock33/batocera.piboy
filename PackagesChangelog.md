@@ -1,6 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-09-21|Sept 21, 2024
+Emulators|[scummvm](http://github.com/scummvm/scummvm)|8e7500dcb8f0f60854e79255f1722cd06e2ba7bd|Sept 21, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|eb785c8e353833c70097c19576507e7e47b78e5e|Sept 21, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|fedda6a48982fcfeeb6acf8861f0c8ee85ecbaa1|Sept 21, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|e738a0d242ec4ce149172195cc15d60d8debbcd0|Sept 21, 2024
@@ -13,6 +14,7 @@ Ports|[xatrix](http://github.com/yquake2/xatrix)|1957253b256180f9bbb5b52c8d63cc1
 Ports|[yquake2](http://github.com/yquake2/yquake2)|9278772868fbe25a44df260627e1344609f47bbb|Sept 21, 2024
 Ports|[yrogue](http://github.com/yquake2/rogue)|7cf6cad6acfe88d74bca104839c4ff2b94cc6036|Sept 21, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|c564a20970312ab463f5fcee7f8b72f78380b7c0|Sept 21, 2024
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|8e7500dcb8f0f60854e79255f1722cd06e2ba7bd|Sept 21, 2024
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|ed8a40fc492676e9b7aa5644159dba1d64953222|Sept 21, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|92555c68c6b2934cc1ad7f8930a443c600782565|Sept 20, 2024
 Emulators|[hatari](http://github.com/hatari/hatari)|1541a63bd971a65b5d5d1b5d12632700d4cba002|Sept 20, 2024
@@ -71,10 +73,8 @@ Audio|[cubeb](http://github.com/mozilla/cubeb)|877364f0509c9a54f2d7015a6a9b52b4c
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|6851ed73f41f43b9a2da23e7f4cb58f58a904fe2|Sept 16, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|5c2ab3a5e885e5913297f591ae10a8773b530dc1|Sept 16, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|2a1f0b3db29db1e997efbaf7eb1755bbae638d8d|Sept 16, 2024
-Emulators|[scummvm](http://github.com/scummvm/scummvm)|0b01e796ec4d7c731e2aad8d1120eba40368c808|Sept 16, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|261e52b7dd35e8fd2c8b1f760a3ba4cf7fce60c5|Sept 16, 2024
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|a8041bce8cb52bad50da771d9c819d8dd642ba11|Sept 16, 2024
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|0b01e796ec4d7c731e2aad8d1120eba40368c808|Sept 16, 2024
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|0ec72a122de5839ea50970835c29045b30386810|Sept 15, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|0727b4a474bf496d06ad42dd7ecc5527996aff3a|Sept 15, 2024
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|d05f05c94fd7a1916942e56d7f486c142ae5661e|Sept 15, 2024
