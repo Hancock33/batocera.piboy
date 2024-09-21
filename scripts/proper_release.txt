@@ -46,6 +46,7 @@ syncthing.mk
 touchegg.mk
 unclutter.mk
 vkd3d-proton.mk
+vulkan-volk.mk
 wf-recorder.mk
 wildmidi.mk
 winbtrfs.mk
