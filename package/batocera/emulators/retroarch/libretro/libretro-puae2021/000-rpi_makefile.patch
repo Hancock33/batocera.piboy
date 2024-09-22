@@ -1,9 +1,9 @@
 diff --git a/Makefile b/Makefile
-index b834962..c1f37dc 100644
+index 8acf4f5..30c990b 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -37,12 +37,28 @@ ifneq (,$(findstring unix,$(platform)))
-    endif
+@@ -46,12 +46,28 @@ else ifneq (,$(findstring rpi4,$(platform)))
+    SHARED := -shared -Wl,--version-script=$(CORE_DIR)/libretro/link.T -Wl,--no-undefined
  
  # RPI
 -else ifeq ($(platform), rpi)
