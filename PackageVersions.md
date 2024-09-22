@@ -288,7 +288,7 @@ Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|63
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|b13fdd5029a246e8f90a1d70e2ed000779fee4f1|Sept 10, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|905bfa2a2cabe86e8d2c1bb96dd8a0d480cf09e8|Sept 22, 2024
 Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|e5c47e911b2e94bc2864db915ed259af1ee9a765|Sept 20, 2024
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|d56a41951447b7e06141ebf80ace5d4b5672afca|Sept 19, 2024
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|0ce936b49a01607cfcead39064b03446566812dc|Sept 19, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|979235b4b7ebb3fbec5505a846b70f70333857dc|Sept 05, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45341|Sept 20, 2024
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
