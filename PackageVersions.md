@@ -137,7 +137,7 @@ Emulators|[libretro-emuscv](http://gitlab.com/MaaaX-EmuSCV/libretro-emuscv)|dfce
 Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|0747110b5a98b4c36dc8784780f5ae436a94a1bd|Mar 23, 2024
 Emulators|[libretro-fake08](https://github.com/jtothebell/fake-08.git)|0d26fd59103941e5f95e0ee665c6e0fb8c6b6f03|Sept 02, 2024
 Emulators|[libretro-fbalpha](http://github.com/libretro/fbalpha2012)|b7ac554c53561d41640372f23dab15cd6fc4f0c4|Nov 01, 2023
-Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|afaaf13ec383cc3b542669d9c21a8433d6e07d63|Sept 19, 2024
+Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|9c319ab79555acd1bfacd67add430a9e39dace40|Sept 22, 2024
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|7e7565ec1dad3d8dce2610bb55f12e9ee1104b90|Sept 20, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|92555c68c6b2934cc1ad7f8930a443c600782565|Sept 20, 2024
 Emulators|[libretro-flycast2021](http://github.com/libretro/flycast)|4c293f306bc16a265c2d768af5d0cea138426054|Apr 06, 2022
@@ -269,7 +269,7 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|1935bba789f6a1439a7c6
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|2a1f0b3db29db1e997efbaf7eb1755bbae638d8d|Sept 16, 2024
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v1.9.18|Jul 08, 2023
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
-Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|8a74442fabfc6f72c623dbf1f7a59bfeba771b9f|Aug 08, 2024
+Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|1b138de1023272b039273d7bbc8f57573073bd25|Sept 22, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|0c468f9a443874b51bb48b3d4cc3ba52ef6ff584|Sept 21, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20240913|Sept 13, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|02362a480712a18cc3567eea2f9195fa65c4e117|Sept 21, 2024
@@ -288,7 +288,7 @@ Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|63
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|b13fdd5029a246e8f90a1d70e2ed000779fee4f1|Sept 10, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|905bfa2a2cabe86e8d2c1bb96dd8a0d480cf09e8|Sept 22, 2024
 Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|e5c47e911b2e94bc2864db915ed259af1ee9a765|Sept 20, 2024
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|0ce936b49a01607cfcead39064b03446566812dc|Sept 19, 2024
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|d56a41951447b7e06141ebf80ace5d4b5672afca|Sept 19, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|979235b4b7ebb3fbec5505a846b70f70333857dc|Sept 05, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45341|Sept 20, 2024
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
@@ -307,7 +307,7 @@ Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.16|Aug 23, 2
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240922|Sept 22, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|08ba97a89963d0672cf68f5d5c1e55322ff48448|Jul 21, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|8707d2aa2626063cb67b5ea20382584a0848dce7|Nov 02, 2023
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|d246e3bc70292b2034ff153feb5ee0ac73cff97b|Sept 21, 2024
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|c9e85ce367e2796c77d6e4b9c8606652fdb54270|Feb 26, 2024
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Firmwares|[alllinuxfirmwares](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot)|20240909|Sept 09, 2024
@@ -425,14 +425,14 @@ Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e24
 Ports|[awgl](http://github.com/cyxx/rawgl)|1eeaa530c859bd6e37b3d3bd7d3136bc16afcc89|Mar 12, 2022
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|1855c8ed66b771fb62ae66bf5b1cbc9ede9cd03a|Dec 26, 2023
-Ports|[box64](http://github.com/ptitseb/box64)|5e49e3cfaa3a9cc83c7d3642f0bdeafb89c35d75|Sept 22, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|cf87ae2e71376a59191bea95f186c4f140978c21|Sept 22, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|54c806c5761b79d749d8b99eea0f79e8308bc4c1|Sept 17, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ca0c1a02abcf2513b1871a09f786162abb41caec|Sept 01, 2024
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|302fec69da101589414e15838f2a8f0a1f87c046|Sept 21, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|bd7f9a8e3875b34f35593099f2080bbacd2fb6b6|Jul 28, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|ac6b361605c2a3a86f2b625f853c97ec6d32b0c3|Sept 18, 2024
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|e90855b3c4393b60159970c3b5b346255428b4d5|Sept 20, 2024
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|109c3b165c4d8b09ffe8cf70485fe717839b427b|Sept 22, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|e0e772ef92f3739d52a51ddf9f898f4a12d44d7e|Sept 10, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|cdef198767d592241b5a4007666d9f5267bb8a4e|Sept 22, 2024
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
