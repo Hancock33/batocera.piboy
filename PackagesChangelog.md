@@ -58,7 +58,7 @@ Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|30a5
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|3c21291d7a8b4a2ae853c1996d989b015722ba46|Sept 19, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|3c21291d7a8b4a2ae853c1996d989b015722ba46|Sept 19, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|b382b083f70a39ae9cc5ea5508e5702090ebde1b|Sept 19, 2024
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|d56a41951447b7e06141ebf80ace5d4b5672afca|Sept 19, 2024
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|0ce936b49a01607cfcead39064b03446566812dc|Sept 19, 2024
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|1e7ab565205667032cf19834a7f9c4e1f375f59e|Sept 19, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|35967b6831ab0c046ac7764c584d0c7cfd932ae8|Sept 19, 2024
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|eb22f91aa40a3bed2ffe5bd96a95d34b59782f98|Sept 19, 2024
