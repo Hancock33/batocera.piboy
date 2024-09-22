@@ -3,8 +3,8 @@
 # batocera-shim-signed-efi-ia32
 #
 ################################################################################
-# Version: Commits on Mar 09, 2023
-BATOCERA_SHIM_SIGNED_EFI_IA32_VERSION = 1.39+15.7-1
+# Version: Commits on Aug 16, 2024
+BATOCERA_SHIM_SIGNED_EFI_IA32_VERSION = 1.44~1+deb12u1+15.8-1~deb12u1
 BATOCERA_SHIM_SIGNED_EFI_IA32_SITE = https://ftp.debian.org/debian/pool/main/s/shim-signed
 BATOCERA_SHIM_SIGNED_EFI_IA32_SOURCE = shim-signed_$(BATOCERA_SHIM_SIGNED_EFI_IA32_VERSION)_i386.deb
 

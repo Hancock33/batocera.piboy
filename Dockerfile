@@ -45,6 +45,7 @@ RUN dpkg --add-architecture i386 && \
 		gcc-multilib \
 		g++-multilib \ 
 		libgmock-dev \
+		po4a \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 

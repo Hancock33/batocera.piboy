@@ -1,0 +1,404 @@
+diff --git a/Makefile b/Makefile
+index 4e4e44f..18ea1b2 100644
+--- a/Makefile
++++ b/Makefile
+@@ -32,7 +32,7 @@ ifneq (,$(findstring unix,$(platform)))
+    TARGET := $(TARGET_NAME)_libretro.so
+    fpic := -fPIC
+    LDFLAGS += -lpthread
+-   CFLAGS += -Wstringop-overflow=0 -Wno-unused-result
++   CFLAGS += -Wstringop-overflow=0 -Wno-unused-result -DZSTD_DISABLE_ASM
+    SHARED := -shared -Wl,--version-script=$(CORE_DIR)/libretro/link.T -Wl,--gc-sections
+    ifneq ($(findstring Haiku,$(shell uname -s)),)
+       LDFLAGS += -lroot -lnetwork
+diff --git a/libretro/libretro-glue.c b/libretro/libretro-glue.c
+index dcea6cc..272b712 100644
+--- a/libretro/libretro-glue.c
++++ b/libretro/libretro-glue.c
+@@ -2527,33 +2527,33 @@ int make_hdf (char *hdf_path, char *hdf_size, char *device_name)
+ //  a byte buffer
+ //-------------------------------------------------
+ 
+-UINT64 be_read(const UINT8 *base, int numbytes)
++uint64_t be_read(const uint8_t *base, int numbytes)
+ {
+-	UINT64 result = 0;
++	uint64_t result = 0;
+ 	while (numbytes--)
+ 		result = (result << 8) | *base++;
+ 	return result;
+ }
+ 
+ /*-------------------------------------------------
+-    get_bigendian_uint32 - fetch a UINT32 from
++    get_bigendian_uint32 - fetch a uint32_t from
+     the data stream in bigendian order
+ -------------------------------------------------*/
+ 
+-UINT32 get_bigendian_uint32(const UINT8 *base)
++uint32_t get_bigendian_uint32(const uint8_t *base)
+ {
+ 	return (base[0] << 24) | (base[1] << 16) | (base[2] << 8) | base[3];
+ }
+ 
+ /*-------------------------------------------------
+-    get_bigendian_uint64 - fetch a UINT64 from
++    get_bigendian_uint64 - fetch a uint64_t from
+     the data stream in bigendian order
+ -------------------------------------------------*/
+ 
+-UINT64 get_bigendian_uint64(const UINT8 *base)
++uint64_t get_bigendian_uint64(const uint8_t *base)
+ {
+-	return ((UINT64)base[0] << 56) | ((UINT64)base[1] << 48) | ((UINT64)base[2] << 40) | ((UINT64)base[3] << 32) |
+-			((UINT64)base[4] << 24) | ((UINT64)base[5] << 16) | ((UINT64)base[6] << 8) | (UINT64)base[7];
++	return ((uint64_t)base[0] << 56) | ((uint64_t)base[1] << 48) | ((uint64_t)base[2] << 40) | ((uint64_t)base[3] << 32) |
++			((uint64_t)base[4] << 24) | ((uint64_t)base[5] << 16) | ((uint64_t)base[6] << 8) | (uint64_t)base[7];
+ }
+ 
+ // pseudo-codecs returned by hunk_info
+@@ -2600,9 +2600,9 @@ enum
+     and the track number
+ -------------------------------------------------*/
+ 
+-UINT32 physical_to_chd_lba(cdrom_file *file, UINT32 physlba, UINT32 *tracknum)
++uint32_t physical_to_chd_lba(cdrom_file *file, uint32_t physlba, uint32_t *tracknum)
+ {
+-	UINT32 chdlba;
++	uint32_t chdlba;
+ 	int track;
+ 
+ 	/* loop until our current LBA is less than the start LBA of the next track */
+@@ -2622,9 +2622,9 @@ UINT32 physical_to_chd_lba(cdrom_file *file, UINT32 physlba, UINT32 *tracknum)
+     and the track number
+ -------------------------------------------------*/
+ 
+-UINT32 logical_to_chd_lba(cdrom_file *file, UINT32 loglba, UINT32 *tracknum)
++uint32_t logical_to_chd_lba(cdrom_file *file, uint32_t loglba, uint32_t *tracknum)
+ {
+-	UINT32 chdlba, physlba;
++	uint32_t chdlba, physlba;
+ 	int track;
+ 
+ 	/* loop until our current LBA is less than the start LBA of the next track */
+@@ -2662,7 +2662,7 @@ cdrom_file *cdrom_open(chd_file *chd)
+ {
+ 	int i;
+ 	cdrom_file *file = NULL;
+-	UINT32 physofs, chdofs, logofs;
++	uint32_t physofs, chdofs, logofs;
+ 	chd_error err;
+ 
+ 	/* punt if no CHD */
+@@ -2784,8 +2784,8 @@ void cdrom_close(cdrom_file *file)
+ }
+ 
+ 
+-UINT8 m_cache[CD_FRAME_SIZE*CD_FRAMES_PER_HUNK*2] = {0};
+-UINT32 m_cachehunk = 0;
++uint8_t m_cache[CD_FRAME_SIZE*CD_FRAMES_PER_HUNK*2] = {0};
++uint32_t m_cachehunk = 0;
+ 
+ /**
+  * @fn  std::error_condition chd_file::read_bytes(uint64_t offset, void *buffer, uint32_t bytes)
+@@ -2802,19 +2802,19 @@ UINT32 m_cachehunk = 0;
+  * @return  The bytes.
+  */
+ 
+-chd_error chd_read_bytes(chd_file *chd, UINT64 offset, void *buffer, UINT32 bytes)
++chd_error chd_read_bytes(chd_file *chd, uint64_t offset, void *buffer, uint32_t bytes)
+ {
+-    UINT32 m_hunkbytes = chd->header.hunkbytes;
++    uint32_t m_hunkbytes = chd->header.hunkbytes;
+ 
+ 	// iterate over hunks
+-	UINT32 first_hunk = offset / m_hunkbytes;
+-	UINT32 last_hunk = (offset + bytes - 1) / m_hunkbytes;
+-	UINT8 *dest = (UINT8 *)buffer;
+-	for (UINT32 curhunk = first_hunk; curhunk <= last_hunk; curhunk++)
++	uint32_t first_hunk = offset / m_hunkbytes;
++	uint32_t last_hunk = (offset + bytes - 1) / m_hunkbytes;
++	uint8_t *dest = (uint8_t *)buffer;
++	for (uint32_t curhunk = first_hunk; curhunk <= last_hunk; curhunk++)
+ 	{
+ 		// determine start/end boundaries
+-		UINT32 startoffs = (curhunk == first_hunk) ? (offset % m_hunkbytes) : 0;
+-		UINT32 endoffs = (curhunk == last_hunk) ? ((offset + bytes - 1) % m_hunkbytes) : (m_hunkbytes - 1);
++		uint32_t startoffs = (curhunk == first_hunk) ? (offset % m_hunkbytes) : 0;
++		uint32_t endoffs = (curhunk == last_hunk) ? ((offset + bytes - 1) % m_hunkbytes) : (m_hunkbytes - 1);
+ 
+ 		// if it's a full block, just read directly from disk unless it's the cached hunk
+ 		chd_error err = CHDERR_NONE;
+@@ -2862,7 +2862,7 @@ chd_error chd_read_bytes(chd_file *chd, UINT64 offset, void *buffer, UINT32 byte
+  * @return  The partial sector.
+  */
+ 
+-chd_error read_partial_sector(cdrom_file *file, void *dest, UINT32 lbasector, UINT32 chdsector, UINT32 tracknum, UINT32 startoffs, UINT32 length, bool phys)
++chd_error read_partial_sector(cdrom_file *file, void *dest, uint32_t lbasector, uint32_t chdsector, uint32_t tracknum, uint32_t startoffs, uint32_t length, bool phys)
+ {
+ 	chd_error result = CHDERR_NONE;
+ 	bool needswap = false;
+@@ -2888,7 +2888,7 @@ chd_error read_partial_sector(cdrom_file *file, void *dest, UINT32 lbasector, UI
+ 			chdsector += file->cdtoc.tracks[tracknum].pregap;
+ 		}
+ 
+-		result = chd_read_bytes(file->chd, (UINT64)chdsector * (UINT64)CD_FRAME_SIZE + startoffs, dest, length);
++		result = chd_read_bytes(file->chd, (uint64_t)chdsector * (uint64_t)CD_FRAME_SIZE + startoffs, dest, length);
+ 
+ 		/* swap CDDA in the case of LE GDROMs */
+ 		if ((file->cdtoc.flags & CD_FLAG_GDROMLE) && (file->cdtoc.tracks[tracknum].trktype == CD_TRACK_AUDIO))
+@@ -2900,7 +2900,7 @@ chd_error read_partial_sector(cdrom_file *file, void *dest, UINT32 lbasector, UI
+ 		// else read from the appropriate file
+ 		core_file *srcfile = file->fhandle[tracknum];
+ 
+-		UINT64 sourcefileoffset = file->track_info.track[tracknum].offset;
++		uint64_t sourcefileoffset = file->track_info.track[tracknum].offset;
+ 		int bytespersector = file->cdtoc.tracks[tracknum].datasize + file->cdtoc.tracks[tracknum].subsize;
+ 
+ 		sourcefileoffset += chdsector * bytespersector + startoffs;
+@@ -2918,7 +2918,7 @@ chd_error read_partial_sector(cdrom_file *file, void *dest, UINT32 lbasector, UI
+ 
+ 	if (needswap)
+ 	{
+-		UINT8 *buffer = (UINT8 *)dest - startoffs;
++		uint8_t *buffer = (uint8_t *)dest - startoffs;
+ 		for (int swapindex = startoffs; swapindex < 2352; swapindex += 2 )
+ 		{
+ 			int swaptemp = buffer[ swapindex ];
+@@ -2929,11 +2929,11 @@ chd_error read_partial_sector(cdrom_file *file, void *dest, UINT32 lbasector, UI
+ 	return result;
+ }
+ 
+-UINT32 cdrom_read_data(cdrom_file *file, UINT32 lbasector, void *buffer, UINT32 datatype, bool phys)
++uint32_t cdrom_read_data(cdrom_file *file, uint32_t lbasector, void *buffer, uint32_t datatype, bool phys)
+ {
+ 	// compute CHD sector and tracknumber
+-	UINT32 tracknum = 0;
+-	UINT32 chdsector;
++	uint32_t tracknum = 0;
++	uint32_t chdsector;
+ 
+ 	if (file == NULL)
+ 		return 0;
+@@ -2948,7 +2948,7 @@ UINT32 cdrom_read_data(cdrom_file *file, UINT32 lbasector, void *buffer, UINT32
+ 	}
+ 
+ 	/* copy out the requested sector */
+-	UINT32 tracktype = file->cdtoc.tracks[tracknum].trktype;
++	uint32_t tracktype = file->cdtoc.tracks[tracknum].trktype;
+ 
+ 	if ((datatype == tracktype) || (datatype == CD_TRACK_RAW_DONTCARE))
+ 	{
+@@ -2965,10 +2965,10 @@ UINT32 cdrom_read_data(cdrom_file *file, UINT32 lbasector, void *buffer, UINT32
+ 		/* return 2352 byte mode 1 raw sector from 2048 bytes of mode 1 data */
+ 		if ((datatype == CD_TRACK_MODE1_RAW) && (tracktype == CD_TRACK_MODE1))
+ 		{
+-			UINT8 *bufptr = (UINT8 *)buffer;
+-			UINT32 msf = lba_to_msf(lbasector);
++			uint8_t *bufptr = (uint8_t *)buffer;
++			uint32_t msf = lba_to_msf(lbasector);
+ 
+-			static const UINT8 syncbytes[12] = {0x00, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x00};
++			static const uint8_t syncbytes[12] = {0x00, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x00};
+ 			memcpy(bufptr, syncbytes, 12);
+ 			bufptr[12] = msf>>16;
+ 			bufptr[13] = msf>>8;
+@@ -3007,11 +3007,11 @@ UINT32 cdrom_read_data(cdrom_file *file, UINT32 lbasector, void *buffer, UINT32
+ 	}
+ }
+ 
+-UINT32 cdrom_read_subcode(cdrom_file *file, UINT32 lbasector, void *buffer, bool phys)
++uint32_t cdrom_read_subcode(cdrom_file *file, uint32_t lbasector, void *buffer, bool phys)
+ {
+ 	// compute CHD sector and tracknumber
+-	UINT32 tracknum = 0;
+-	UINT32 chdsector;
++	uint32_t tracknum = 0;
++	uint32_t chdsector;
+ 
+ 	if (file == NULL)
+ 		return 0;
+@@ -3070,7 +3070,7 @@ const cdrom_toc *cdrom_get_toc(cdrom_file *file)
+     and track data size
+ -------------------------------------------------*/
+ 
+-static void cdrom_get_info_from_type_string(const char *typestring, UINT32 *trktype, UINT32 *datasize)
++static void cdrom_get_info_from_type_string(const char *typestring, uint32_t *trktype, uint32_t *datasize)
+ {
+ 	if (!strcmp(typestring, "MODE1"))
+ 	{
+@@ -3216,7 +3216,7 @@ void cdrom_convert_subtype_string_to_pregap_info(const char *typestring, cdrom_t
+     associated with the given type
+ -------------------------------------------------*/
+ 
+-const char *cdrom_get_type_string(UINT32 trktype)
++const char *cdrom_get_type_string(uint32_t trktype)
+ {
+ 	switch (trktype)
+ 	{
+@@ -3237,7 +3237,7 @@ const char *cdrom_get_type_string(UINT32 trktype)
+     associated with the given subcode type
+ -------------------------------------------------*/
+ 
+-const char *cdrom_get_subtype_string(UINT32 subtype)
++const char *cdrom_get_subtype_string(uint32_t subtype)
+ {
+ 	switch (subtype)
+ 	{
+@@ -3370,13 +3370,13 @@ chd_error cdrom_parse_metadata(chd_file *chd, cdrom_toc *toc)
+ 	printf("toc->numtrks = %d?!\n", toc->numtrks);
+ 
+ 	/* look for old-style metadata */
+-	UINT8 *oldmetadata;
++	uint8_t *oldmetadata;
+ 	err = chd_get_metadata(chd, CDROM_OLD_METADATA_TAG, 0, oldmetadata, sizeof(oldmetadata), NULL, NULL, NULL);
+ 	if (err != CHDERR_NONE)
+ 		return err;
+ 
+ 	/* reconstruct the TOC from it */
+-	UINT32 *mrp = (UINT32 *)(&oldmetadata[0]);
++	uint32_t *mrp = (uint32_t *)(&oldmetadata[0]);
+ 	toc->numtrks = *mrp++;
+ 
+ 	for (i = 0; i < CD_MAX_TRACKS; i++)
+@@ -3421,8 +3421,8 @@ chd_error cdrom_parse_metadata(chd_file *chd, cdrom_toc *toc)
+ //  CONSTANTS
+ //**************************************************************************
+ 
+-static const UINT8 V34_MAP_ENTRY_FLAG_TYPE_MASK = 0x0f;     // what type of hunk
+-static const UINT8 V34_MAP_ENTRY_FLAG_NO_CRC = 0x10;        // no CRC is present
++static const uint8_t V34_MAP_ENTRY_FLAG_TYPE_MASK = 0x0f;     // what type of hunk
++static const uint8_t V34_MAP_ENTRY_FLAG_NO_CRC = 0x10;        // no CRC is present
+ 
+ /**
+  * @fn  std::error_condition chd_file::hunk_info(uint32_t hunknum, chd_codec_type &compressor, uint32_t &compbytes)
+@@ -3438,14 +3438,14 @@ static const UINT8 V34_MAP_ENTRY_FLAG_NO_CRC = 0x10;        // no CRC is present
+  * @return  A std::error_condition.
+  */
+ 
+-chd_error chd_hunk_info(chd_file *cf, UINT32 hunknum, chd_codec_type *compressor, UINT32 *compbytes)
++chd_error chd_hunk_info(chd_file *cf, uint32_t hunknum, chd_codec_type *compressor, uint32_t *compbytes)
+ {
+ 	// error if invalid
+ 	if (hunknum >= cf->header.hunkcount)
+ 		return CHDERR_HUNK_OUT_OF_RANGE;
+ 
+ 	// get the map pointer
+-	UINT8 *rawmap;
++	uint8_t *rawmap;
+ 	switch (cf->header.version)
+ 	{
+ 		// v3/v4 map entries
+diff --git a/libretro/libretro-glue.h b/libretro/libretro-glue.h
+index be51285..42a37ae 100644
+--- a/libretro/libretro-glue.h
++++ b/libretro/libretro-glue.h
+@@ -26,39 +26,39 @@ extern struct vidbuf_description *gfxvidinfo;
+ #define MAX_ZLIB_ALLOCS             64
+ #define MAX_LZMA_ALLOCS             64
+ 
+-typedef UINT32 chd_codec_type;
+-typedef UINT32 chd_metadata_tag;
++typedef uint32_t chd_codec_type;
++typedef uint32_t chd_metadata_tag;
+ 
+ typedef struct cdrom_track_info
+ {
+ 	/* fields used by CHDMAN and in MAME */
+-	UINT32 trktype;     /* track type */
+-	UINT32 subtype;     /* subcode data type */
+-	UINT32 datasize;    /* size of data in each sector of this track */
+-	UINT32 subsize;     /* size of subchannel data in each sector of this track */
+-	UINT32 frames;      /* number of frames in this track */
+-	UINT32 extraframes; /* number of "spillage" frames in this track */
+-	UINT32 pregap;      /* number of pregap frames */
+-	UINT32 postgap;     /* number of postgap frames */
+-	UINT32 pgtype;      /* type of sectors in pregap */
+-	UINT32 pgsub;       /* type of subchannel data in pregap */
+-	UINT32 pgdatasize;  /* size of data in each sector of the pregap */
+-	UINT32 pgsubsize;   /* size of subchannel data in each sector of the pregap */
++	uint32_t trktype;     /* track type */
++	uint32_t subtype;     /* subcode data type */
++	uint32_t datasize;    /* size of data in each sector of this track */
++	uint32_t subsize;     /* size of subchannel data in each sector of this track */
++	uint32_t frames;      /* number of frames in this track */
++	uint32_t extraframes; /* number of "spillage" frames in this track */
++	uint32_t pregap;      /* number of pregap frames */
++	uint32_t postgap;     /* number of postgap frames */
++	uint32_t pgtype;      /* type of sectors in pregap */
++	uint32_t pgsub;       /* type of subchannel data in pregap */
++	uint32_t pgdatasize;  /* size of data in each sector of the pregap */
++	uint32_t pgsubsize;   /* size of subchannel data in each sector of the pregap */
+ 
+ 	/* fields used in CHDMAN only */
+-	UINT32 padframes;   /* number of frames of padding to add to the end of the track; needed for GDI */
++	uint32_t padframes;   /* number of frames of padding to add to the end of the track; needed for GDI */
+ 
+ 	/* fields used in MAME/MESS only */
+-	UINT32 logframeofs; /* logical frame of actual track data - offset by pregap size if pregap not physically present */
+-	UINT32 physframeofs;/* physical frame of actual track data in CHD data */
+-	UINT32 chdframeofs; /* frame number this track starts at on the CHD */
+-	UINT32 logframes;   /* number of frames from logframeofs until end of track data */
++	uint32_t logframeofs; /* logical frame of actual track data - offset by pregap size if pregap not physically present */
++	uint32_t physframeofs;/* physical frame of actual track data in CHD data */
++	uint32_t chdframeofs; /* frame number this track starts at on the CHD */
++	uint32_t logframes;   /* number of frames from logframeofs until end of track data */
+ } cdrom_track_info;
+ 
+ typedef struct cdrom_toc
+ {
+-	UINT32 numtrks;     /* number of tracks */
+-	UINT32 flags;       /* see FLAG_ above */
++	uint32_t numtrks;     /* number of tracks */
++	uint32_t flags;       /* see FLAG_ above */
+ 	cdrom_track_info tracks[CD_MAX_TRACKS];
+ } cdrom_toc;
+ 
+@@ -77,10 +77,10 @@ typedef struct cdrom_file
+ typedef struct _codec_interface codec_interface;
+ struct _codec_interface
+ {
+-	UINT32		compression;								/* type of compression */
++	uint32_t		compression;								/* type of compression */
+ 	const char *compname;									/* name of the algorithm */
+-	UINT8		lossy;										/* is this a lossy algorithm? */
+-	chd_error	(*init)(void *codec, UINT32 hunkbytes);		/* codec initialize */
++	uint8_t		lossy;										/* is this a lossy algorithm? */
++	chd_error	(*init)(void *codec, uint32_t hunkbytes);		/* codec initialize */
+ 	void		(*free)(void *codec);						/* codec free */
+ 	chd_error	(*decompress)(void *codec, const uint8_t *src, uint32_t complen, uint8_t *dest, uint32_t destlen); /* decompress data */
+ 	chd_error	(*config)(void *codec, int param, void *config); /* configure */
+@@ -245,24 +245,24 @@ struct _chd_file
+ 	uint8_t *               file_cache;		/* cache of underlying file */
+ };
+ 
+-chd_error chd_hunk_info(chd_file *chd, UINT32 hunknum, chd_codec_type *compressor, UINT32 *compbytes);
+-chd_error read_partial_sector(cdrom_file *file, void *dest, UINT32 lbasector, UINT32 chdsector, UINT32 tracknum, UINT32 startoffs, UINT32 length, bool phys);
++chd_error chd_hunk_info(chd_file *chd, uint32_t hunknum, chd_codec_type *compressor, uint32_t *compbytes);
++chd_error read_partial_sector(cdrom_file *file, void *dest, uint32_t lbasector, uint32_t chdsector, uint32_t tracknum, uint32_t startoffs, uint32_t length, bool phys);
+ chd_error cdrom_parse_metadata(chd_file *chd, cdrom_toc *toc);
+-chd_error chd_read_metadata(chd_file *chd, chd_metadata_tag searchtag, UINT32 searchindex, char *output);
+-chd_error metadata_find_entry(chd_file *chd, UINT32 metatag, UINT32 metaindex, metadata_entry *metaentry);
++chd_error chd_read_metadata(chd_file *chd, chd_metadata_tag searchtag, uint32_t searchindex, char *output);
++chd_error metadata_find_entry(chd_file *chd, uint32_t metatag, uint32_t metaindex, metadata_entry *metaentry);
+ 
+ /* base functionality */
+ cdrom_file *cdrom_open(chd_file *chd);
+ void cdrom_close(cdrom_file *file);
+ 
+ /* core read access */
+-UINT32 cdrom_read_data(cdrom_file *file, UINT32 lbasector, void *buffer, UINT32 datatype, bool phys);
+-UINT32 cdrom_read_subcode(cdrom_file *file, UINT32 lbasector, void *buffer, bool phys);
++uint32_t cdrom_read_data(cdrom_file *file, uint32_t lbasector, void *buffer, uint32_t datatype, bool phys);
++uint32_t cdrom_read_subcode(cdrom_file *file, uint32_t lbasector, void *buffer, bool phys);
+ 
+ /* handy utilities */
+-UINT32 cdrom_get_track(cdrom_file *file, UINT32 frame);
+-UINT32 cdrom_get_track_start(cdrom_file *file, UINT32 track);
+-UINT32 cdrom_get_track_start_phys(cdrom_file *file, UINT32 track);
++uint32_t cdrom_get_track(cdrom_file *file, uint32_t frame);
++uint32_t cdrom_get_track_start(cdrom_file *file, uint32_t track);
++uint32_t cdrom_get_track_start_phys(cdrom_file *file, uint32_t track);
+ 
+ /* TOC utilities */
+ int cdrom_get_last_track(cdrom_file *file);

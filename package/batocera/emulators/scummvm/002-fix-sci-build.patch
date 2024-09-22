@@ -1,0 +1,83 @@
+diff --git a/engines/sci/graphics/celobj32.cpp b/engines/sci/graphics/celobj32.cpp
+index 85d71853f2e..1c1d28d1451 100644
+--- a/engines/sci/graphics/celobj32.cpp
++++ b/engines/sci/graphics/celobj32.cpp
+@@ -105,7 +105,7 @@ void CelObj::deinit() {
+ 
+ template<bool FLIP, typename READER>
+ struct SCALER_NoScale {
+-#ifndef RELEASE_BUILD
++#ifndef NDEBUG
+ 	const byte *_rowEdge;
+ #endif
+ 	const byte *_row;
+@@ -125,13 +125,13 @@ struct SCALER_NoScale {
+ 		_row = _reader.getRow(y - _sourceY);
+ 
+ 		if (FLIP) {
+-#ifndef RELEASE_BUILD
++#ifndef NDEBUG
+ 			_rowEdge = _row - 1;
+ #endif
+ 			_row += _lastIndex - (x - _sourceX);
+ 			assert(_row > _rowEdge);
+ 		} else {
+-#ifndef RELEASE_BUILD
++#ifndef NDEBUG
+ 			_rowEdge = _row + _lastIndex + 1;
+ #endif
+ 			_row += x - _sourceX;
+@@ -152,7 +152,7 @@ struct SCALER_NoScale {
+ 
+ template<bool FLIP, typename READER>
+ struct SCALER_Scale {
+-#ifndef RELEASE_BUILD
++#ifndef NDEBUG
+ 	int16 _minX;
+ 	int16 _maxX;
+ #endif
+@@ -167,7 +167,7 @@ struct SCALER_Scale {
+ 
+ 	SCALER_Scale(const CelObj &celObj, const Common::Rect &targetRect, const Common::Point &scaledPosition, const Ratio scaleX, const Ratio scaleY) :
+ 	_row(nullptr),
+-#ifndef RELEASE_BUILD
++#ifndef NDEBUG
+ 	_minX(targetRect.left),
+ 	_maxX(targetRect.right - 1),
+ #endif
+@@ -176,7 +176,7 @@ struct SCALER_Scale {
+ 	// decompress an entire line of source data when scaling
+ 	_reader(celObj, celObj._width),
+ 	_sourceBuffer() {
+-#ifndef RELEASE_BUILD
++#ifndef NDEBUG
+ 		assert(_minX <= _maxX);
+ #endif
+ 
+@@ -316,7 +316,7 @@ int16 SCALER_Scale<FLIP, READER>::_valuesY[kCelScalerTableSize];
+ 
+ struct READER_Uncompressed {
+ private:
+-#ifndef RELEASE_BUILD
++#ifndef NDEBUG
+ 	int16 _sourceHeight;
+ #endif
+ 	const byte *_pixels;
+@@ -324,7 +324,7 @@ private:
+ 
+ public:
+ 	READER_Uncompressed(const CelObj &celObj, const int16) :
+-#ifndef RELEASE_BUILD
++#ifndef NDEBUG
+ 	_sourceHeight(celObj._height),
+ #endif
+ 	_sourceWidth(celObj._width) {
+@@ -334,7 +334,7 @@ public:
+ 
+ 		if (numPixels < celObj._width * celObj._height) {
+ 			warning("%s is truncated", celObj._info.toString().c_str());
+-#ifndef RELEASE_BUILD
++#ifndef NDEBUG
+ 			_sourceHeight = numPixels / celObj._width;
+ #endif
+ 		}

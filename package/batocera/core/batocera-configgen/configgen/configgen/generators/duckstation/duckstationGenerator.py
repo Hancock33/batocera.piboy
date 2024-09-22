@@ -147,7 +147,7 @@ class DuckstationGenerator(Generator):
         if system.isOptSet("duckstation_gfxbackend"):
             settings.set("GPU", "Renderer", system.config["duckstation_gfxbackend"])
         else:
-            settings.set("GPU", "Renderer", "OpenGL")
+            settings.set("GPU", "Renderer", "Vulkan")
         # Multisampling force (MSAA or SSAA) - no GUI option anymore...
         settings.set("GPU", "PerSampleShading", "false")
         settings.set("GPU", "Multisamples", "1")
