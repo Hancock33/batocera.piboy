@@ -1,0 +1,10 @@
+config BR2_PACKAGE_7ZIP
+	bool "7zip"
+	depends on BR2_TOOLCHAIN_HAS_SYNC_4 # __sync_*_4 intrisics
+	depends on BR2_INSTALL_LIBSTDCPP
+	depends on BR2_TOOLCHAIN_HAS_THREADS
+	depends on BR2_USE_WCHAR
+	help
+	  7-Zip is a file archiver with a high compression ratio.
+
+	  http://www.7-zip.org

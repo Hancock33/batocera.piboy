@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-24 00:00+0100\n"
-"PO-Revision-Date: 2024-09-04 00:00+0100\n"
-"Last-Translator: roliverosc <roliveros@hotmail.com>, 2024\n"
+"PO-Revision-Date: 2024-09-17 00:00+0100\n"
+"Last-Translator: roliverosc, 2024\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
@@ -393,11 +393,13 @@ msgid ""
 "Use preemptive frames instead of run-ahead. Only runs ahead when controller "
 "state changes."
 msgstr ""
+"Utiliza fotogramas preventivos en lugar de run-ahead. Sólo avanza cuando "
+"cambia el estado del controlador."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "USE PRE-EMPTIVE FRAMES"
-msgstr ""
+msgstr "USAR FOTOGRAMAS PREVENTIVOS (PRE-EMPTIVE FRAMES)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -688,7 +690,7 @@ msgstr "TRUCAR JOYSTICK (PARA ROBOTRON 2084)"
 #. TRANSLATION: libretro/beetle-saturn
 msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIR"
-msgstr "PUNTERO PARA PISTOLA LIGHTGUN"
+msgstr "PUNTO DE MIRA PARA PISTOLA LIGHTGUN"
 
 #. TRANSLATION: libretro/beetle-saturn
 msgctxt "game_options"
@@ -11261,7 +11263,7 @@ msgstr ""
 #. TRANSLATION: pcsx2, model2emu
 msgctxt "game_options"
 msgid "BILINEAR FILTERING"
-msgstr "FILTRO BILINEAL"
+msgstr "FILTRADO BILINEAL"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -17478,7 +17480,7 @@ msgstr "Guardado rápido"
 #~ "frames consecutively."
 #~ msgstr ""
 #~ "Cuando el tipo de salto de fotogramas está en automático o manual, salta "
-#~ "hasta este número de frames de forma consecutiva."
+#~ "hasta este número de fotogramas de forma consecutiva."
 
 #~ msgctxt "game_options"
 #~ msgid "Enable scanlines for roms that support it."

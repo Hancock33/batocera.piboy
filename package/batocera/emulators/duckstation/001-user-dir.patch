@@ -1,8 +1,8 @@
 diff --git a/src/core/settings.cpp b/src/core/settings.cpp
-index 1e9151a35..2eaf7c24a 100644
+index 08f402654..8d297c778 100644
 --- a/src/core/settings.cpp
 +++ b/src/core/settings.cpp
-@@ -1935,19 +1935,19 @@ std::string EmuFolders::Videos;
+@@ -1925,19 +1925,19 @@ std::string EmuFolders::Videos;
  
  void EmuFolders::SetDefaults()
  {
@@ -35,7 +35,7 @@ index 1e9151a35..2eaf7c24a 100644
    UserResources = Path::Combine(DataRoot, "resources");
    Videos = Path::Combine(DataRoot, "videos");
  }
-@@ -2003,19 +2003,19 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
+@@ -1993,19 +1993,19 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
  void EmuFolders::Save(SettingsInterface& si)
  {
    // convert back to relative
