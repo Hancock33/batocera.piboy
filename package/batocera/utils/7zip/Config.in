@@ -6,5 +6,5 @@ config BR2_PACKAGE_7ZIP
 	depends on BR2_USE_WCHAR
 	help
 	  7-Zip is a file archiver with a high compression ratio.
-	  
+
 	  http://www.7-zip.org
