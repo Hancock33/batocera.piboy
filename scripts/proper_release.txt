@@ -26,7 +26,6 @@ mold.mk
 nv-codec-headers.mk
 pcsx2.mk
 projectm.mk
-python3-configobj.mk
 python3-gpiod.mk
 pywebview.mk
 rclone.mk
