@@ -1,17 +1,15 @@
-#!/usr/bin/env python
-
-import Command
-import batoceraFiles # GLOBAL VARIABLES
-from generators.Generator import Generator
-import shutil
 import os
 from os import environ
 import configparser
-import controllersConfig
 import subprocess
 import glob
 
-from utils.logger import get_logger
+from ... import batoceraFiles # GLOBAL VARIABLES
+from ... import Command
+from ... import controllersConfig
+from ...utils.logger import get_logger
+from ..Generator import Generator
+
 eslog = get_logger(__name__)
 
 class CitraGenerator(Generator):

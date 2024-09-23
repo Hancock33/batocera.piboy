@@ -1,16 +1,15 @@
-#!/usr/bin/env python
-
-from generators.Generator import Generator
-import Command
 import os
 from os import environ
-import batoceraFiles
-import controllersConfig
 import filecmp
 import json
 import shutil
 import evdev
 from evdev import InputDevice
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 ryujinxConf = batoceraFiles.CONF + "/Ryujinx"
 ryujinxConfFile = ryujinxConf + "/Config.json"

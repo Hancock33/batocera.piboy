@@ -1,10 +1,10 @@
-#!/usr/bin/env python
-import Command
-from generators.Generator import Generator
-import controllersConfig
 import os
 import shutil
-import batoceraFiles
+
+from ... import Command
+from ... import controllersConfig
+from ... import batoceraFiles
+from ..Generator import Generator
 
 class ETLegacyGenerator(Generator):
 

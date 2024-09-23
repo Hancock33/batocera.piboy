@@ -1,9 +1,8 @@
-#!/usr/bin/env python
-import Command
-import batoceraFiles
-from generators.Generator import Generator
 import os.path
-import glob
+
+from ... import batoceraFiles
+from ... import Command
+from ..Generator import Generator
 
 class DosBoxGenerator(Generator):
 

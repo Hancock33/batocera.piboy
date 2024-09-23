@@ -1,8 +1,6 @@
-#!/usr/bin/env python
-
-import Command
-from generators.Generator import Generator
-import batoceraFiles
+from ... import batoceraFiles
+from ... import Command
+from ..Generator import Generator
 from . import kodiConfig
 
 class KodiGenerator(Generator):

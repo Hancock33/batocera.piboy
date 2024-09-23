@@ -1,12 +1,10 @@
-#!/usr/bin/env python
-
-import Command
-from generators.Generator import Generator
-import controllersConfig
-from utils.logger import get_logger
 import os
 import configparser
-import batoceraFiles
+
+from ... import Command
+from ... import batoceraFiles
+from ...utils.logger import get_logger
+from ..Generator import Generator
 
 eslog = get_logger(__name__)
 

@@ -1,14 +1,14 @@
-#!/usr/bin/env python
-import Command
-import batoceraFiles
-from generators.Generator import Generator
 import shutil
 import os.path
 from os import environ
 import configparser
-from . import dolphinTriforceControllers
-from . import dolphinTriforceGameConfig
 import subprocess
+
+from ... import Command
+from ... import batoceraFiles
+from ..Generator import Generator
+from . import dolphinTriforceControllers
+
 
 class DolphinTriforceGenerator(Generator):
 

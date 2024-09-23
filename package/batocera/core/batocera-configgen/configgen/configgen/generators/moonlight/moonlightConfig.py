@@ -1,10 +1,8 @@
-#!/usr/bin/env python
-
-import batoceraFiles
 import os
 import shutil
-from Emulator import Emulator
-from settings.unixSettings import UnixSettings
+
+from ... import batoceraFiles
+from ...settings.unixSettings import UnixSettings
 
 def generateMoonlightConfig(system):
 

@@ -1,11 +1,11 @@
-#!/usr/bin/env python
-import Command
-from generators.Generator import Generator
-import controllersConfig
 import configparser
 import os
 import shutil
-import batoceraFiles
+
+from ... import Command
+from ... import controllersConfig
+from ... import batoceraFiles
+from ..Generator import Generator
 
 fout2ConfigDir = batoceraFiles.CONF + "/fallout2"
 fout2ConfigFile = fout2ConfigDir + "/fallout2.cfg"

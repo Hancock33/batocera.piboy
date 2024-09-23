@@ -1,8 +1,11 @@
-#!/usr/bin/env python
+import os
 
-import Command
-from generators.Generator import Generator
-import controllersConfig
+from ... import Command
+from ... import controllersConfig
+from ...utils.logger import get_logger
+from ..Generator import Generator
+
+eslog = get_logger(__name__)
 
 class CdogsGenerator(Generator):
 

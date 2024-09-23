@@ -1,14 +1,10 @@
-#!/usr/bin/env python
-import Command
-import batoceraFiles
-from generators.Generator import Generator
-import shutil
 import os.path
-import configparser
-# TODO: python3 - delete me!
-import codecs
-import controllersConfig
 from shutil import copyfile
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 from . import xemuConfig
 
 class XemuGenerator(Generator):

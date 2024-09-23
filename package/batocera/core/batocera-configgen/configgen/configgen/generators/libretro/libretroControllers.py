@@ -1,14 +1,11 @@
-#!/usr/bin/env python
 import sys
 import os
-from controllersConfig import getDevicesInformation
-from controllersConfig import getAssociatedMouse
+
+from ...controllersConfig import getDevicesInformation
+from ...controllersConfig import getAssociatedMouse
 
 sys.path.append(
     os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
-
-from settings.unixSettings import UnixSettings
-import batoceraFiles
 
 # Map an emulationstation direction to the corresponding retroarch
 retroarchdirs = {'up': 'up', 'down': 'down', 'left': 'left', 'right': 'right'}

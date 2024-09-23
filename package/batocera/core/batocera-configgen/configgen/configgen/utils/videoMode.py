@@ -1,12 +1,10 @@
-#!/usr/bin/env python
 import os
 import sys
-import batoceraFiles
 import re
 import time
 import subprocess
-import json
 import csv
+
 from .logger import get_logger
 
 eslog = get_logger(__name__)

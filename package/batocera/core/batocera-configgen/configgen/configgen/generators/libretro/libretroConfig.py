@@ -1,20 +1,18 @@
-#!/usr/bin/env python
 import sys
 import os
-import batoceraFiles
-from . import libretroOptions
-from . import libretroMAMEConfig
-from Emulator import Emulator
-import settings
-from settings.unixSettings import UnixSettings
 import json
 import subprocess
-from utils.logger import get_logger
 from PIL import Image, ImageOps
-import utils.bezels as bezelsUtil
-import utils.videoMode as videoMode
-import controllersConfig
 import xml.etree.ElementTree as ET
+
+from ... import batoceraFiles
+from ... import controllersConfig
+from ...settings.unixSettings import UnixSettings
+from ...utils.logger import get_logger
+from ...utils import bezels as bezelsUtil
+from ...utils import videoMode as videoMode
+from . import libretroOptions
+from . import libretroMAMEConfig
 
 eslog = get_logger(__name__)
 sys.path.append(

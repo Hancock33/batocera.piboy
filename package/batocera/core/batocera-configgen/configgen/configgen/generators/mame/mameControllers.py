@@ -1,22 +1,12 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import batoceraFiles
-import Command
-import shutil
 import os
-from utils.logger import get_logger
-from os import path
-from os import environ
-import configparser
-from xml.dom import minidom
 import codecs
-import shutil
-import utils.bezels as bezelsUtil
-import subprocess
 import csv
 from xml.dom import minidom
-from PIL import Image, ImageOps
+from xml.dom import minidom
+
+from ...utils.logger import get_logger
 
 eslog = get_logger(__name__)
 

@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-
-import sys
 import os
 
 def writeCfgFile(system, filename, init_line, defaults_to_add, controls_to_add, gameResolution):

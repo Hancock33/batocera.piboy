@@ -1,14 +1,11 @@
-#!/usr/bin/env python3
-
-from generators.Generator import Generator
-import Command
 import os
-import sys
 import json
-import utils.videoMode as videoMode
-import controllersConfig
-import math
-from utils.logger import get_logger
+
+from ... import Command
+from ... import controllersConfig
+from ...utils import videoMode
+from ...utils.logger import get_logger
+from ..Generator import Generator
 
 eslog = get_logger(__name__)
 

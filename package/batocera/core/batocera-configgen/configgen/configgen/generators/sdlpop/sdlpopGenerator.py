@@ -1,11 +1,10 @@
-#!/usr/bin/env python
-
-from generators.Generator import Generator
-import Command
-import controllersConfig
-import batoceraFiles
 import os
 import shutil
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 class SdlPopGenerator(Generator):
 

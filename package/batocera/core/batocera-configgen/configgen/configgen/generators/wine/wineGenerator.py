@@ -1,12 +1,10 @@
-#!/usr/bin/env python
-
-from generators.Generator import Generator
-import Command
 import os
-from os import path
-import controllersConfig
 import subprocess
 import glob
+
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 class WineGenerator(Generator):
 

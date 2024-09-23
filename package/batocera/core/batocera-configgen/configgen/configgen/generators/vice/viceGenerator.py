@@ -1,13 +1,12 @@
-#!/usr/bin/env python
-import Command
-import batoceraFiles
-from generators.Generator import Generator
 import os.path
-import glob
+import zipfile
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 from . import viceConfig
 from . import viceControllers
-import controllersConfig
-import zipfile
 
 class ViceGenerator(Generator):
 

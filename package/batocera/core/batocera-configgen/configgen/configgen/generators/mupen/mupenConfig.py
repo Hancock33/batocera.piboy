@@ -1,9 +1,4 @@
-#!/usr/bin/env python
-import os, sys
-import batoceraFiles
-import settings
-import subprocess
-import json
+from ... import batoceraFiles
 
 def setMupenConfig(iniConfig, system, controllers, gameResolution):
 

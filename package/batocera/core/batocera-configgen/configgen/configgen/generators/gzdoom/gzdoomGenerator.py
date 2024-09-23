@@ -1,11 +1,9 @@
-#!/usr/bin/env python
-import batoceraFiles
-import Command
-import controllersConfig
-from generators.Generator import Generator
 import os
-from os import path
 import shlex
+from os import path
+from ... import batoceraFiles
+from ... import Command
+from ..Generator import Generator
 
 class GzdoomGenerator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):

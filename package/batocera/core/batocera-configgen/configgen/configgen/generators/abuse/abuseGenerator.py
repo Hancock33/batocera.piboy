@@ -1,9 +1,6 @@
-#!/usr/bin/env python
-import os
-from os import path
-import Command
-from generators.Generator import Generator
-import controllersConfig
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 class AbuseGenerator(Generator):
     if os.path.isfile('/tmp/piboy'):

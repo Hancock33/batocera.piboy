@@ -1,11 +1,11 @@
-#!/usr/bin/env python
-import Command
-import batoceraFiles
-from generators.Generator import Generator
-import controllersConfig
 import os.path
 import glob
 import configparser
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 scummConfigDir = batoceraFiles.CONF + "/scummvm"
 scummConfigFile = scummConfigDir + "/scummvm.ini"

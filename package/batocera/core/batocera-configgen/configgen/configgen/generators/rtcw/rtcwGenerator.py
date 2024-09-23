@@ -1,11 +1,11 @@
-#!/usr/bin/env python
 import os
-import controllersConfig
-from generators.Generator import Generator
-from Command import Command
 import shutil
 from os import path
 import utils.videoMode as videoMode
+
+from ... import controllersConfig
+from ...Command import Command
+from ..Generator import Generator
 
 rtcw_src = "/usr/bin/rtcw/main"
 rtcw_dst = "/userdata/roms/ports/rtcw/main"

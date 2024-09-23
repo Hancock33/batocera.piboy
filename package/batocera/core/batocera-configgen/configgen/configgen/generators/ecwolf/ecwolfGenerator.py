@@ -1,12 +1,11 @@
-#!/usr/bin/env python
-
-import Command
-import batoceraFiles
-from generators.Generator import Generator
-import controllersConfig
 import os
 from os import path
 import codecs
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 class ECWolfGenerator(Generator):
 
