@@ -21,7 +21,6 @@ else
 endif
 
 define RYUJINX_BUILD_CMDS
-	echo $(HOME)
 	rm -rf $(HOME)/.local/share/NuGet
 	rm -rf $(HOME)/.nuget/packages
 	rm -rf /tmp/NuGetScratch*
