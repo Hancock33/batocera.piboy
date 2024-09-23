@@ -98,6 +98,7 @@ class RyujinxGenerator(Generator):
             conf = {}
 
         # Set defaults
+        conf['backend_threading'] = 'Auto'
         conf["enable_discord_integration"] = False
         conf["check_updates_on_start"] = False
         conf["show_confirm_exit"] = False
@@ -105,8 +106,9 @@ class RyujinxGenerator(Generator):
         conf["game_dirs"] = ["/userdata/roms/switch"]
         conf["start_fullscreen"] = True
         conf["docked_mode"] = True
-        conf["audio_backend"] = "OpenAl"
+        conf["audio_backend"] = "SDL2"
         conf["audio_volume"] = 1
+
         # set ryujinx app language
         conf["language_code"] = str(getLangFromEnvironment())
 
@@ -152,6 +154,9 @@ class RyujinxGenerator(Generator):
 
         # write / update the config file
         js_out = json.dumps(conf, indent=2)
+        js_out = js_out.replace("False","false")
+        js_out = js_out.replace("True","true")
+
         with open(ryujinxConfFile, "w") as jout:
             jout.write(js_out)
 
@@ -206,7 +211,7 @@ class RyujinxGenerator(Generator):
         if rom == "config":
             commandArray = ["/usr/bin/ryujinx/Ryujinx"]
         else:
-            commandArray = ["/usr/bin/ryujinx/Ryujinx", rom]
+            commandArray = ["/usr/bin/ryujinx/Ryujinx", "--fullscreen", rom]
 
         return Command.Command(
             array=commandArray,

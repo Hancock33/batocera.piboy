@@ -3,8 +3,8 @@
 # supertux2
 #
 ################################################################################
-# Version: Commits on Sept 21, 2024
-SUPERTUX2_VERSION = f2baa1216676626de6c5d773484927e755d55849
+# Version: Commits on Sept 23, 2024
+SUPERTUX2_VERSION = aa31e7336e2c943f35a8436972536954058dded5
 SUPERTUX2_SITE = https://github.com/SuperTux/supertux.git
 SUPERTUX2_SITE_METHOD=git
 SUPERTUX2_GIT_SUBMODULES=YES
@@ -21,11 +21,6 @@ SUPERTUX2_CONF_OPTS +=-DBUILD_DOCUMENTATION=OFF
 SUPERTUX2_CONF_OPTS +=-DINSTALL_SUBDIR_BIN="bin"
 SUPERTUX2_CONF_OPTS +=-DINSTALL_SUBDIR_SHARE="share/supertux2"
 SUPERTUX2_CONF_OPTS +=-DGIT_VERSION="$(shell echo $(SUPERTUX2_VERSION) | cut -c 1-7)"
-
-ifeq ($(BR2_arm)$(BR2_aarch64),y)
-SUPERTUX2_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
-SUPERTUX2_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
-endif
 
 define SUPERTUX2_INSTALL_TARGET_CMDS
 	# install media

@@ -3,8 +3,8 @@
 # thextech
 #
 ################################################################################
-# Version: Commits on Sept 19, 2024
-THEXTECH_VERSION = 0ce936b49a01607cfcead39064b03446566812dc
+# Version: Commits on Sept 23, 2024
+THEXTECH_VERSION = f0c3e9eb0df893ff7d14c664bcfeb55a794d91d4
 THEXTECH_SITE = https://github.com/TheXTech/TheXTech
 THEXTECH_SITE_METHOD = git
 THEXTECH_GIT_SUBMODULES = YES
@@ -41,5 +41,11 @@ define THEXTECH_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp -avf $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/thextech/thextech.keys $(TARGET_DIR)/usr/share/evmapy/
 endef
+
+define THEXTECH_NO_ASM
+	$(SED) "s|OPUS_ARM_ASM AND CMAKE_COMPILER_IS_GNUCC|OPUS_ARM_NO_ASM AND CMAKE_COMPILER_IS_GNUCC|g" $(@D)/3rdparty/AudioCodecs/libopus/CMakeLists.txt
+endef
+
+THEXTECH_POST_EXTRACT_HOOKS = THEXTECH_NO_ASM
 
 $(eval $(cmake-package))

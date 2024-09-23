@@ -14,8 +14,6 @@ AVP_SUPPORTS_IN_SOURCE_BUILD = NO
 AVP_TARGET_CFLAGS = $(TARGET_CFLAGS) -Wno-incompatible-pointer-types -Wno-implicit-function-declaration -Wno-int-conversion
 AVP_CONF_OPTS += -DCMAKE_C_FLAGS="$(AVP_TARGET_CFLAGS)"
 AVP_CONF_OPTS += -DSDL_TYPE=SDL2 -DOPENGL_TYPE=OPENGL
-AVP_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
-AVP_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 define AVP_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/buildroot-build/avp $(TARGET_DIR)/usr/bin/avp

@@ -3,8 +3,8 @@
 # libretro-scummvm
 #
 ################################################################################
-# Version: Commits on Sept 21, 2024
-LIBRETRO_SCUMMVM_VERSION = c6afb82b9effe61e71ab6da92e1d756d49c97476
+# Version: Commits on Sept 20, 2024
+LIBRETRO_SCUMMVM_VERSION = 630d45332f2b15e02f5e5f637b778e85e6015f1f
 LIBRETRO_SCUMMVM_SOURCE = scummvm-$(LIBRETRO_SCUMMVM_VERSION).tar.gz
 LIBRETRO_SCUMMVM_SITE = $(call github,scummvm,scummvm,$(LIBRETRO_SCUMMVM_VERSION))
 LIBRETRO_SCUMMVM_LICENSE = GPLv2
@@ -23,6 +23,9 @@ else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S812),y)
     LIBRETRO_SCUMMVM_PLATFORM = armv cortexa9 neon hardfloat
 else ifeq ($(BR2_aarch64),y)
+    LIBRETRO_SCUMMVM_PLATFORM = unix
+    LIBRETRO_SCUMMVM_MAKE_OPTS += TARGET_64BIT=1
+else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
     LIBRETRO_SCUMMVM_PLATFORM = unix
     LIBRETRO_SCUMMVM_MAKE_OPTS += TARGET_64BIT=1
 else
