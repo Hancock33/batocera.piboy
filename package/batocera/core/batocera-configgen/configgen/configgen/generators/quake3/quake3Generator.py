@@ -1,12 +1,9 @@
-#!/usr/bin/env python
-import Command
-import batoceraFiles
-from generators.Generator import Generator
 import shutil
 import os.path
-import configparser
-import controllersConfig
 from shutil import copyfile
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 from . import quake3Config
 
 class Quake3Generator(Generator):
