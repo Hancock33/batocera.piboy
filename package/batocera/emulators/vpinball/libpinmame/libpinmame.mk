@@ -3,17 +3,13 @@
 # libpinmame
 #
 ################################################################################
-# Version: Commits on Sept 22, 2024
-LIBPINMAME_VERSION = 064b52fff3efd4c6bfe5a065559b2461e7a102aa
+# Version: Commits on Sept 23, 2024
+LIBPINMAME_VERSION = 1a2f0a14cd6edd76d579552e009b5d49811d495f
 LIBPINMAME_SITE = $(call github,vpinball,pinmame,$(LIBPINMAME_VERSION))
 LIBPINMAME_LICENSE = BSD-3-Clause
 LIBPINMAME_LICENSE_FILES = LICENSE
 LIBPINMAME_DEPENDENCIES = zlib
 LIBPINMAME_SUPPORTS_IN_SOURCE_BUILD = NO
-
-# use gcc to build
-LIBPINMAME_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
-LIBPINMAME_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 define LIBPINMAME_RENAME_CMAKE
 	cp $(@D)/cmake/libpinmame/CMakeLists_linux-x64.txt $(@D)/CMakeLists.txt

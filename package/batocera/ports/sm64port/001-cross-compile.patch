@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index 3c7898a..1584196 100644
+index 9012456..1cad153 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -31,7 +31,7 @@ TARGET_WEB ?= 0
@@ -11,7 +11,7 @@ index 3c7898a..1584196 100644
  
  # Specify the target you are building for, TARGET_BITS=0 means native
  TARGET_ARCH ?= native
-@@ -563,12 +563,12 @@ ifneq ($(SDL1_USED)$(SDL2_USED),00)
+@@ -562,12 +562,12 @@ ifneq ($(SDL1_USED)$(SDL2_USED),00)
      OSX_PREFIX := $(shell $(SDLCONFIG) --prefix)
      BACKEND_CFLAGS += -I$(OSX_PREFIX)/include $(shell $(SDLCONFIG) --cflags)
    else
@@ -26,7 +26,7 @@ index 3c7898a..1584196 100644
    endif
  endif
  
-@@ -675,7 +675,7 @@ else ifeq ($(HOST_OS),Haiku)
+@@ -674,7 +674,7 @@ else ifeq ($(HOST_OS),Haiku)
    LDFLAGS := $(BACKEND_LDFLAGS) -no-pie
  
  else
