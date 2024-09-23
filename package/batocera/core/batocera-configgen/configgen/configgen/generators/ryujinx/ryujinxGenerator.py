@@ -182,7 +182,7 @@ class RyujinxGenerator(Generator):
                 for dev in devices:
                     if dev.path == pad.dev:
                         bustype = "%x" % dev.info.bustype
-                        bustype = bustype.zfill(4)
+                        bustype = bustype.zfill(8)
                         vendor = "%x" % dev.info.vendor
                         vendor = vendor.zfill(4)
                         product = "%x" % dev.info.product
@@ -197,7 +197,7 @@ class RyujinxGenerator(Generator):
                         version1 = (version)[-2::]
                         version2 = (version)[:-2]
                         version = version1 + version2
-                        ctrlUUID = (f"{pad.index}-17f6{bustype}-{vendor}-0000-{product}-0000{version}0000")
+                        ctrlUUID = (f"{pad.index}-{bustype}-{vendor}-0000-{product}-0000{version}0000")
                         ctrlConf["id"] = ctrlUUID
                         # always configure a pro controller for now
                         ctrlConf["controller_type"] = "ProController"
