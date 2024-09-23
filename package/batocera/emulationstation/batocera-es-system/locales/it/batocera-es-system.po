@@ -395,8 +395,8 @@ msgid ""
 "Use preemptive frames instead of run-ahead. Only runs ahead when controller "
 "state changes."
 msgstr ""
-"Usa frames peemptivi invece di run-ahead. Usa run ahead solo quando lo stato"
-"del controller cambia."
+"Usa frames peemptivi invece di run-ahead. Usa run ahead solo quando lo "
+"statodel controller cambia."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
