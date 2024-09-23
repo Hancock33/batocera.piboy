@@ -1,10 +1,9 @@
-#!/usr/bin/env python
 import os
 import shutil
 from os import path
-import Command
-from generators.Generator import Generator
-import controllersConfig
+from ... import Command
+from ... import batoceraFiles
+from ..Generator import Generator
 
 baseq2_src = "/usr/share/game_assets/quake2/baseq2"
 rogue_src = "/usr/share/game_assets/quake2/rogue"

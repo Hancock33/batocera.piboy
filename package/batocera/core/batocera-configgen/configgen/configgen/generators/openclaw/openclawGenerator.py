@@ -1,10 +1,10 @@
-#!/usr/bin/env python
 import os
 import shutil
 from os import path
-import Command
-from generators.Generator import Generator
-import controllersConfig
+
+from ... import Command
+from ... import batoceraFiles
+from ..Generator import Generator
 
 claw_src = "/usr/share/game_assets/openclaw"
 clawzip_src = "/usr/share/game_assets/openclaw_zip"

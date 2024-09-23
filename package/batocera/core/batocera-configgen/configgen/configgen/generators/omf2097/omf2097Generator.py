@@ -1,10 +1,10 @@
-#!/usr/bin/env python
 import os
 import shutil
 from os import path
-import Command
-from generators.Generator import Generator
-import controllersConfig
+
+from ... import Command
+from ... import batoceraFiles
+from ..Generator import Generator
 
 omf_src = "/usr/share/game_assets/omf2097"
 omf_dst = "/userdata/roms/ports/omf2097"

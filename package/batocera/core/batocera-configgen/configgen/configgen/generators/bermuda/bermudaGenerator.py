@@ -1,9 +1,9 @@
-#!/usr/bin/env python
-
-import Command
-from generators.Generator import Generator
-import controllersConfig
 import os
+from os import path
+
+from ... import Command
+from ... import batoceraFiles
+from ..Generator import Generator
 
 class BermudaGenerator(Generator):
 

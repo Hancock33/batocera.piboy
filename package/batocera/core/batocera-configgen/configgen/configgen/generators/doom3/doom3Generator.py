@@ -1,11 +1,11 @@
-#!/usr/bin/env python
 import os
 import shutil
 from os import path
-import Command
-from generators.Generator import Generator
-import controllersConfig
-import utils.videoMode as videoMode
+
+from ... import Command
+from ... import batoceraFiles
+from ..Generator import Generator
+from ...utils import videoMode as videoMode
 
 class Doom3Generator(Generator):
 

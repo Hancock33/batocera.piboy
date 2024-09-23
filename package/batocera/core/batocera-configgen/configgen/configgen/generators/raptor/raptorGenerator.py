@@ -1,10 +1,10 @@
-#!/usr/bin/env python
 import os
 import shutil
 from os import path
-import Command
-from generators.Generator import Generator
-import controllersConfig
+
+from ... import Command
+from ... import batoceraFiles
+from ..Generator import Generator
 
 class RaptorGenerator(Generator):
     if not os.path.exists('/userdata/system/configs/raptor'):

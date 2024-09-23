@@ -1,10 +1,9 @@
-#!/usr/bin/env python
-import batoceraFiles
-import Command
-import controllersConfig
-from generators.Generator import Generator
 import os
 from os import path
+
+from ... import Command
+from ... import batoceraFiles
+from ..Generator import Generator
 
 base_dir = f"{batoceraFiles.HOME}/.local/share/GSC Game World"
 cop_dir = f"{batoceraFiles.HOME}/.local/share/GSC Game World/S.T.A.L.K.E.R. - Call of Pripyat"

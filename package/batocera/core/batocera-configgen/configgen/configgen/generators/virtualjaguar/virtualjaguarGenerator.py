@@ -1,9 +1,9 @@
-#!/usr/bin/env python
 import os
 from os import path
-import Command
-from generators.Generator import Generator
-import controllersConfig
+
+from ... import Command
+from ... import batoceraFiles
+from ..Generator import Generator
 
 class VirtualjaguarGenerator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
