@@ -1,10 +1,8 @@
-#!/usr/bin/env python
-
-import Command
-from generators.Generator import Generator
-import controllersConfig
-import configparser
 import os
+
+from ... import Command
+from ... import batoceraFiles
+from ..Generator import Generator
 
 class AwglGenerator(Generator):
 

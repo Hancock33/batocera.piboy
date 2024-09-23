@@ -1,10 +1,9 @@
-#!/usr/bin/env python
-from generators.Generator import Generator
-import Command
 import os
-import controllersConfig
 import json
-import batoceraFiles
+
+from ... import Command
+from ... import batoceraFiles
+from ..Generator import Generator
 
 class YabasanshiroGenerator(Generator):
 
