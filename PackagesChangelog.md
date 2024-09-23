@@ -21,6 +21,8 @@ Emulators|[libpinmame](http://github.com/vpinball/pinmame)|1a2f0a14cd6edd76d5795
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|4c911f774c4069cafa215d61bdb9a9a2dfa18b22|Sept 23, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|63f1495dbc73ba0ba526701b42fd29fe40b18f1b|Sept 23, 2024
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|e226068f979cd8fbfc3be9780d16cfb1405095b0|Sept 23, 2024
+Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|07488c3aa356d9aca1a18f42553d641fee9248f1|Sept 23, 2024
+Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|2eab5d2fb4ee7b78e25d3526c8fd20a78cd80abe|Sept 23, 2024
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|5fa22832fd2370486561bfe80026a4fc91072778|Sept 23, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|de67c4c93bd15846f68df4006dd2c93fba5720d2|Sept 22, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.165|Sept 22, 2024
@@ -40,8 +42,6 @@ Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|91232dfaa827f48af1db9a8903ad29f38f5432dc|Sept 22, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|9c319ab79555acd1bfacd67add430a9e39dace40|Sept 22, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|1935bba789f6a1439a7c6b3f1cb902a2917f8a13|Sept 22, 2024
-Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|f7f08e72a2f224a87e2b0c3d085d9759a0f6e079|Sept 22, 2024
-Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|587f8e75ee4ae8633132573c6a97c01131a979d4|Sept 22, 2024
 Emulators|[hatari](http://github.com/hatari/hatari)|0dd31b6665a49a778018412af749c91f9488d25d|Sept 21, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|e738a0d242ec4ce149172195cc15d60d8debbcd0|Sept 21, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|0f4081f054c85b983c5464f0d0ee759b9fddaa0a|Sept 21, 2024
