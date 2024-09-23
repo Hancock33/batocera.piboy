@@ -1,11 +1,10 @@
-#!/usr/bin/env python
-
-import Command
-import batoceraFiles
-from generators.Generator import Generator
 import os
 from os import path
 import xml.etree.ElementTree as ET
+
+from ... import Command
+from ... import batoceraFiles
+from ..Generator import Generator
 
 playConfig = batoceraFiles.CONF + '/play'
 playSaves = batoceraFiles.SAVES + '/play'

@@ -1,17 +1,16 @@
 import os
 from os import path
-import Command
-import batoceraFiles
-import shutil
-from generators.Generator import Generator
-import controllersConfig
+from os.path import dirname
 import os.path
 import zipfile
-import configparser
-from settings.unixSettings import UnixSettings
-from generators.libretro import libretroControllers
-from os.path import dirname
-from utils.logger import get_logger
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ...settings.unixSettings import UnixSettings
+from ...utils.logger import get_logger
+from ..Generator import Generator
+from ..libretro import libretroControllers
 
 eslog = get_logger(__name__)
 

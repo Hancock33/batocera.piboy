@@ -1,11 +1,10 @@
-#!/usr/bin/env python
-import Command
-from generators.Generator import Generator
-import controllersConfig
 import configparser
 import os
-import shutil
-import batoceraFiles
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 forceConfigDir = batoceraFiles.CONF + "/theforceengine"
 forceModsDir = forceConfigDir + "/Mods"

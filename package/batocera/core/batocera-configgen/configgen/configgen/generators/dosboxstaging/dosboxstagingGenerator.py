@@ -1,9 +1,8 @@
-#!/usr/bin/env python
-import Command
-import batoceraFiles
-from generators.Generator import Generator
 import os.path
-import glob
+
+from ... import Command
+from ... import batoceraFiles
+from ..Generator import Generator
 
 class DosBoxStagingGenerator(Generator):
 
@@ -17,6 +16,7 @@ class DosBoxStagingGenerator(Generator):
 
         commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
 			"-fullscreen",
+			"-userconf",
 			"-exit",
 			f"""{batFile}""",
 			"-c", f"""set ROOT={gameDir}"""]

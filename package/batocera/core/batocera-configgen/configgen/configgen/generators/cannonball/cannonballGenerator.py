@@ -1,12 +1,10 @@
-#!/usr/bin/env python
-
-from generators.Generator import Generator
-import batoceraFiles
 import os
 from xml.dom import minidom
 import codecs
-import Command
-from . import cannonballControllers
+
+from ... import batoceraFiles
+from ... import Command
+from ..Generator import Generator
 
 class CannonballGenerator(Generator):
 
@@ -49,7 +47,8 @@ class CannonballGenerator(Generator):
             CannonballGenerator.setSectionConfig(config, xml_video, "hires", "0")
 
         # controllers
-        # cannonballControllers.generateControllerConfig(config, xml_root, playersControllers)
+        #from .cannonballControllers import generateControllerConfig
+        #generateControllerConfig(config, xml_root, playersControllers)
 
         # save the config file
         #cannonballXml = open(configFile, "w")
@@ -59,8 +58,8 @@ class CannonballGenerator(Generator):
         cannonballXml.write(dom_string)
 
         return Command.Command(array=["cannonball", "-cfgfile", "/userdata/system/configs/cannonball/config.xml"],
-		env={
-		'SDL_AUTO_UPDATE_JOYSTICKS': '0'
+        env={
+        'SDL_AUTO_UPDATE_JOYSTICKS': '0'
         })
 
     @staticmethod

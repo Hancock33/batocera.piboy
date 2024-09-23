@@ -1,8 +1,8 @@
-#!/usr/bin/env python
-import Command
-from generators.Generator import Generator
-import controllersConfig
 import pathlib
+
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 class PyxelGenerator(Generator):
 

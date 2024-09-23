@@ -1,15 +1,11 @@
-#!/usr/bin/env python
-
-from generators.Generator import Generator
-import Command
-import controllersConfig
-import batoceraFiles
 import os
 import subprocess
-import sys
 import shutil
-from pathlib import Path, PureWindowsPath
-from utils.logger import get_logger
+from pathlib import PureWindowsPath
+
+from ... import Command
+from ...utils.logger import get_logger
+from ..Generator import Generator
 
 eslog = get_logger(__name__)
 

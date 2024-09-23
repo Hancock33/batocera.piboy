@@ -1,12 +1,9 @@
-#!/usr/bin/env python
-
-import Command
-import batoceraFiles
-from generators.Generator import Generator
-import shutil
 import os
-import configparser
-import controllersConfig
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 from . import ppssppConfig
 from . import ppssppControllers
 

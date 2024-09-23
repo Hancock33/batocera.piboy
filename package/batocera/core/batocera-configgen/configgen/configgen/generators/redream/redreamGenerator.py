@@ -1,13 +1,12 @@
-#!/usr/bin/env python
-
-import Command
-from generators.Generator import Generator
-import controllersConfig
 from shutil import copyfile
 import os
-import batoceraFiles
 import filecmp
 import codecs
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 redream_file = "/usr/bin/redream"
 redreamConfig = batoceraFiles.CONF + "/redream"

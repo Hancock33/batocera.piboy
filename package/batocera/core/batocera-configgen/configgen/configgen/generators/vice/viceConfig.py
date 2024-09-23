@@ -1,10 +1,5 @@
-#!/usr/bin/env python
-
-import batoceraFiles
 import os
-from Emulator import Emulator
 import configparser
-import controllersConfig
 
 def setViceConfig(viceConfigFile, system, metadata, guns, rom):
 

@@ -1,10 +1,6 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import batoceraFiles
 import os
-from Emulator import Emulator
-import configparser
 
 # inputtype:
 # 0      axis

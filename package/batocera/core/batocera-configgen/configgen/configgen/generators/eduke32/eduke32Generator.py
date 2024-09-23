@@ -1,12 +1,11 @@
-#!/usr/bin/env python
-import batoceraFiles
-import Command
 from configparser import ConfigParser
-import controllersConfig
-from generators.Generator import Generator
 import os
-from os import path
-from utils.buildargs import parse_args
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ...utils.buildargs import parse_args
+from ..Generator import Generator
 
 class Eduke32Generator(Generator):
 

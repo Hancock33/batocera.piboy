@@ -1,17 +1,16 @@
-#!/usr/bin/env python
-import Command
-import batoceraFiles
-from generators.Generator import Generator
-import shutil
 import os.path
 from os import environ
 import configparser
-from . import dolphinControllers
-from . import dolphinSYSCONF
-import controllersConfig
 import subprocess
 
-from utils.logger import get_logger
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ...utils.logger import get_logger
+from ..Generator import Generator
+from . import dolphinControllers
+from . import dolphinSYSCONF
+
 eslog = get_logger(__name__)
 
 class DolphinGenerator(Generator):

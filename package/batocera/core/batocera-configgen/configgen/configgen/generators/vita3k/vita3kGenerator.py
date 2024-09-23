@@ -1,15 +1,13 @@
-#!/usr/bin/env python
-
-import Command
-import batoceraFiles
-from generators.Generator import Generator
-import controllersConfig
 import os
 from os import path
 import ruamel.yaml
 import ruamel.yaml.util
-from distutils.dir_util import copy_tree
 import shutil
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 vitaConfig = batoceraFiles.CONF + '/vita3k'
 vitaSaves = batoceraFiles.SAVES + '/psvita'
