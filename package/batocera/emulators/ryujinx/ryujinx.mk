@@ -51,5 +51,4 @@ endef
 
 RYUJINX_POST_EXTRACT_HOOKS += RYUJINX_DOTNET_INSTALL
 
-
 $(eval $(generic-package))
