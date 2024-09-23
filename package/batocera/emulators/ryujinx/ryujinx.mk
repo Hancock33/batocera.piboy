@@ -18,7 +18,8 @@ define RYUJINX_BUILD_CMDS
 	rm -rf /tmp/NuGetScratch*
 	$(SED) "s|1.0.0-dirty|$(RYUJINX_VERSION)|g" $(@D)/src/*/*.csproj
 	
-	cd $(@D) && PATH=/home/lee/ryu/dotnet:$(PATH) DOTNET_CLI_TELEMETRY_OPTOUT=1 && dotnet clean && \
+	#Probably need to download .dotnet instead of using a local copy
+	cd $(@D) && PATH=$(HOME)/ryu/dotnet:$(PATH) DOTNET_CLI_TELEMETRY_OPTOUT=1 && dotnet clean && \
 	dotnet nuget locals all -c && \
 	dotnet publish -c Release -r linux-x64 --nologo --self-contained true -p:DebugType=none -p:ExtraDefineConstants=DISABLE_UPDATER -o ./publish src/Ryujinx
 endef
