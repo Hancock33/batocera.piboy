@@ -21,9 +21,7 @@ define RYUJINX_BUILD_CMDS
 	cd $(@D) && PATH=/home/lee/ryu/dotnet:$(PATH) DOTNET_CLI_TELEMETRY_OPTOUT=1 && dotnet clean && \
 	dotnet nuget locals all -c && \
 	dotnet publish -c Release -r linux-x64 --nologo --self-contained true -p:DebugType=none -p:ExtraDefineConstants=DISABLE_UPDATER -o ./publish src/Ryujinx
-	
 endef
-
 
 define RYUJINX_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/bin/ryujinx
