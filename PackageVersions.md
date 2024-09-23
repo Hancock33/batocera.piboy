@@ -197,8 +197,8 @@ Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|a62d157d2fc10
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|1935bba789f6a1439a7c6b3f1cb902a2917f8a13|Sept 22, 2024
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|0b43954c75760d00737120db9d5009813778c7ae|Sept 07, 2024
 Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|a639359434cde73e6cdc651763afc587c1afb678|Jun 28, 2024
-Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|f7f08e72a2f224a87e2b0c3d085d9759a0f6e079|Sept 22, 2024
-Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|587f8e75ee4ae8633132573c6a97c01131a979d4|Sept 22, 2024
+Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|07488c3aa356d9aca1a18f42553d641fee9248f1|Sept 23, 2024
+Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|2eab5d2fb4ee7b78e25d3526c8fd20a78cd80abe|Sept 23, 2024
 Emulators|[libretro-px68k](http://github.com/libretro/px68k-libretro)|a50c2498ae3c85fd466a8f1085a07b9857f5d79d|Sept 15, 2024
 Emulators|[libretro-quicknes](http://github.com/libretro/QuickNES_Core)|89d649a544e7d37a5cdbc77c811e88753fa23131|Jun 28, 2024
 Emulators|[libretro-race](http://github.com/libretro/RACE)|f65011e6639ccbbbb44b6ffa63ca50c070475df4|May 28, 2023
