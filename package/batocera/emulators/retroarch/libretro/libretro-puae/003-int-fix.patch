@@ -12,10 +12,10 @@ index 4e4e44f..18ea1b2 100644
     ifneq ($(findstring Haiku,$(shell uname -s)),)
        LDFLAGS += -lroot -lnetwork
 diff --git a/libretro/libretro-glue.c b/libretro/libretro-glue.c
-index dcea6cc..272b712 100644
+index 6f00de5..1f73040 100644
 --- a/libretro/libretro-glue.c
 +++ b/libretro/libretro-glue.c
-@@ -2527,33 +2527,33 @@ int make_hdf (char *hdf_path, char *hdf_size, char *device_name)
+@@ -2526,33 +2526,33 @@ int make_hdf (char *hdf_path, char *hdf_size, char *device_name)
  //  a byte buffer
  //-------------------------------------------------
  
@@ -57,7 +57,7 @@ index dcea6cc..272b712 100644
  }
  
  // pseudo-codecs returned by hunk_info
-@@ -2600,9 +2600,9 @@ enum
+@@ -2599,9 +2599,9 @@ enum
      and the track number
  -------------------------------------------------*/
  
@@ -69,7 +69,7 @@ index dcea6cc..272b712 100644
  	int track;
  
  	/* loop until our current LBA is less than the start LBA of the next track */
-@@ -2622,9 +2622,9 @@ UINT32 physical_to_chd_lba(cdrom_file *file, UINT32 physlba, UINT32 *tracknum)
+@@ -2621,9 +2621,9 @@ UINT32 physical_to_chd_lba(cdrom_file *file, UINT32 physlba, UINT32 *tracknum)
      and the track number
  -------------------------------------------------*/
  
@@ -81,7 +81,7 @@ index dcea6cc..272b712 100644
  	int track;
  
  	/* loop until our current LBA is less than the start LBA of the next track */
-@@ -2662,7 +2662,7 @@ cdrom_file *cdrom_open(chd_file *chd)
+@@ -2661,7 +2661,7 @@ cdrom_file *cdrom_open(chd_file *chd)
  {
  	int i;
  	cdrom_file *file = NULL;
@@ -90,7 +90,7 @@ index dcea6cc..272b712 100644
  	chd_error err;
  
  	/* punt if no CHD */
-@@ -2784,8 +2784,8 @@ void cdrom_close(cdrom_file *file)
+@@ -2783,8 +2783,8 @@ void cdrom_close(cdrom_file *file)
  }
  
  
@@ -101,7 +101,7 @@ index dcea6cc..272b712 100644
  
  /**
   * @fn  std::error_condition chd_file::read_bytes(uint64_t offset, void *buffer, uint32_t bytes)
-@@ -2802,19 +2802,19 @@ UINT32 m_cachehunk = 0;
+@@ -2801,19 +2801,19 @@ UINT32 m_cachehunk = 0;
   * @return  The bytes.
   */
  
@@ -129,7 +129,7 @@ index dcea6cc..272b712 100644
  
  		// if it's a full block, just read directly from disk unless it's the cached hunk
  		chd_error err = CHDERR_NONE;
-@@ -2862,7 +2862,7 @@ chd_error chd_read_bytes(chd_file *chd, UINT64 offset, void *buffer, UINT32 byte
+@@ -2861,7 +2861,7 @@ chd_error chd_read_bytes(chd_file *chd, UINT64 offset, void *buffer, UINT32 byte
   * @return  The partial sector.
   */
  
@@ -138,7 +138,7 @@ index dcea6cc..272b712 100644
  {
  	chd_error result = CHDERR_NONE;
  	bool needswap = false;
-@@ -2888,7 +2888,7 @@ chd_error read_partial_sector(cdrom_file *file, void *dest, UINT32 lbasector, UI
+@@ -2887,7 +2887,7 @@ chd_error read_partial_sector(cdrom_file *file, void *dest, UINT32 lbasector, UI
  			chdsector += file->cdtoc.tracks[tracknum].pregap;
  		}
  
@@ -147,7 +147,7 @@ index dcea6cc..272b712 100644
  
  		/* swap CDDA in the case of LE GDROMs */
  		if ((file->cdtoc.flags & CD_FLAG_GDROMLE) && (file->cdtoc.tracks[tracknum].trktype == CD_TRACK_AUDIO))
-@@ -2900,7 +2900,7 @@ chd_error read_partial_sector(cdrom_file *file, void *dest, UINT32 lbasector, UI
+@@ -2899,7 +2899,7 @@ chd_error read_partial_sector(cdrom_file *file, void *dest, UINT32 lbasector, UI
  		// else read from the appropriate file
  		core_file *srcfile = file->fhandle[tracknum];
  
@@ -156,7 +156,7 @@ index dcea6cc..272b712 100644
  		int bytespersector = file->cdtoc.tracks[tracknum].datasize + file->cdtoc.tracks[tracknum].subsize;
  
  		sourcefileoffset += chdsector * bytespersector + startoffs;
-@@ -2918,7 +2918,7 @@ chd_error read_partial_sector(cdrom_file *file, void *dest, UINT32 lbasector, UI
+@@ -2917,7 +2917,7 @@ chd_error read_partial_sector(cdrom_file *file, void *dest, UINT32 lbasector, UI
  
  	if (needswap)
  	{
@@ -165,7 +165,7 @@ index dcea6cc..272b712 100644
  		for (int swapindex = startoffs; swapindex < 2352; swapindex += 2 )
  		{
  			int swaptemp = buffer[ swapindex ];
-@@ -2929,11 +2929,11 @@ chd_error read_partial_sector(cdrom_file *file, void *dest, UINT32 lbasector, UI
+@@ -2928,11 +2928,11 @@ chd_error read_partial_sector(cdrom_file *file, void *dest, UINT32 lbasector, UI
  	return result;
  }
  
@@ -180,7 +180,7 @@ index dcea6cc..272b712 100644
  
  	if (file == NULL)
  		return 0;
-@@ -2948,7 +2948,7 @@ UINT32 cdrom_read_data(cdrom_file *file, UINT32 lbasector, void *buffer, UINT32
+@@ -2947,7 +2947,7 @@ UINT32 cdrom_read_data(cdrom_file *file, UINT32 lbasector, void *buffer, UINT32
  	}
  
  	/* copy out the requested sector */
@@ -189,7 +189,7 @@ index dcea6cc..272b712 100644
  
  	if ((datatype == tracktype) || (datatype == CD_TRACK_RAW_DONTCARE))
  	{
-@@ -2965,10 +2965,10 @@ UINT32 cdrom_read_data(cdrom_file *file, UINT32 lbasector, void *buffer, UINT32
+@@ -2964,10 +2964,10 @@ UINT32 cdrom_read_data(cdrom_file *file, UINT32 lbasector, void *buffer, UINT32
  		/* return 2352 byte mode 1 raw sector from 2048 bytes of mode 1 data */
  		if ((datatype == CD_TRACK_MODE1_RAW) && (tracktype == CD_TRACK_MODE1))
  		{
@@ -203,7 +203,7 @@ index dcea6cc..272b712 100644
  			memcpy(bufptr, syncbytes, 12);
  			bufptr[12] = msf>>16;
  			bufptr[13] = msf>>8;
-@@ -3007,11 +3007,11 @@ UINT32 cdrom_read_data(cdrom_file *file, UINT32 lbasector, void *buffer, UINT32
+@@ -3006,11 +3006,11 @@ UINT32 cdrom_read_data(cdrom_file *file, UINT32 lbasector, void *buffer, UINT32
  	}
  }
  
@@ -218,7 +218,7 @@ index dcea6cc..272b712 100644
  
  	if (file == NULL)
  		return 0;
-@@ -3070,7 +3070,7 @@ const cdrom_toc *cdrom_get_toc(cdrom_file *file)
+@@ -3069,7 +3069,7 @@ const cdrom_toc *cdrom_get_toc(cdrom_file *file)
      and track data size
  -------------------------------------------------*/
  
@@ -227,7 +227,7 @@ index dcea6cc..272b712 100644
  {
  	if (!strcmp(typestring, "MODE1"))
  	{
-@@ -3216,7 +3216,7 @@ void cdrom_convert_subtype_string_to_pregap_info(const char *typestring, cdrom_t
+@@ -3215,7 +3215,7 @@ void cdrom_convert_subtype_string_to_pregap_info(const char *typestring, cdrom_t
      associated with the given type
  -------------------------------------------------*/
  
@@ -236,7 +236,7 @@ index dcea6cc..272b712 100644
  {
  	switch (trktype)
  	{
-@@ -3237,7 +3237,7 @@ const char *cdrom_get_type_string(UINT32 trktype)
+@@ -3236,7 +3236,7 @@ const char *cdrom_get_type_string(UINT32 trktype)
      associated with the given subcode type
  -------------------------------------------------*/
  
@@ -245,7 +245,7 @@ index dcea6cc..272b712 100644
  {
  	switch (subtype)
  	{
-@@ -3370,13 +3370,13 @@ chd_error cdrom_parse_metadata(chd_file *chd, cdrom_toc *toc)
+@@ -3369,13 +3369,13 @@ chd_error cdrom_parse_metadata(chd_file *chd, cdrom_toc *toc)
  	printf("toc->numtrks = %d?!\n", toc->numtrks);
  
  	/* look for old-style metadata */
@@ -261,7 +261,7 @@ index dcea6cc..272b712 100644
  	toc->numtrks = *mrp++;
  
  	for (i = 0; i < CD_MAX_TRACKS; i++)
-@@ -3421,8 +3421,8 @@ chd_error cdrom_parse_metadata(chd_file *chd, cdrom_toc *toc)
+@@ -3420,8 +3420,8 @@ chd_error cdrom_parse_metadata(chd_file *chd, cdrom_toc *toc)
  //  CONSTANTS
  //**************************************************************************
  
@@ -272,7 +272,7 @@ index dcea6cc..272b712 100644
  
  /**
   * @fn  std::error_condition chd_file::hunk_info(uint32_t hunknum, chd_codec_type &compressor, uint32_t &compbytes)
-@@ -3438,14 +3438,14 @@ static const UINT8 V34_MAP_ENTRY_FLAG_NO_CRC = 0x10;        // no CRC is present
+@@ -3437,14 +3437,14 @@ static const UINT8 V34_MAP_ENTRY_FLAG_NO_CRC = 0x10;        // no CRC is present
   * @return  A std::error_condition.
   */
  
