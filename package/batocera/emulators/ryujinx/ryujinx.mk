@@ -42,7 +42,6 @@ define RYUJINX_INSTALL_TARGET_CMDS
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ryujinx/switch.ryujinx.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-
 define RYUJINX_DOTNET_INSTALL
 	rm -rf $(HOST_DIR)/dotnet
 	mkdir $(HOST_DIR)/dotnet
