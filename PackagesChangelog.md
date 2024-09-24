@@ -3,6 +3,9 @@
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|de38e27d8931d82faf5e568ef3d2a68b3bcae74b|Sept 24, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-09-24|Sept 24, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|637bb3ede2ecb6e0a5fa3889c3453025ef8b6602|Sept 24, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.18.r1.g3dfacea3|Sept 24, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240924|Sept 24, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240924|Sept 24, 2024
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|0758f6b75f04480827c9a3c9c297f06f66d161df|Sept 24, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|62f1a34baddcdeeea4d148cdbaf5345e7baa4473|Sept 23, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|62f1a34baddcdeeea4d148cdbaf5345e7baa4473|Sept 23, 2024
@@ -45,14 +48,11 @@ Emulators|[ryujinx](https://github.com/Ryujinx/Ryujinx.git)|1.1.1398|Sept 22, 20
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|a94e36df15c7f486bb550f584514d12faa26e8f9|Sept 22, 2024
 Utils|[btop](http://github.com/aristocratos/btop)|v1.4.0|Sept 22, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|1b138de1023272b039273d7bbc8f57573073bd25|Sept 22, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240922|Sept 22, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|80136a8d80e8124896cdfb97badcc85e8ef2facd|Sept 22, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240922|Sept 22, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|9c319ab79555acd1bfacd67add430a9e39dace40|Sept 22, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|1935bba789f6a1439a7c6b3f1cb902a2917f8a13|Sept 22, 2024
 Emulators|[hatari](http://github.com/hatari/hatari)|0dd31b6665a49a778018412af749c91f9488d25d|Sept 21, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|0f4081f054c85b983c5464f0d0ee759b9fddaa0a|Sept 21, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.18.r0.g42af68b8b7c|Sept 21, 2024
 Ports|[xatrix](http://github.com/yquake2/xatrix)|1957253b256180f9bbb5b52c8d63cc1578170211|Sept 21, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|9278772868fbe25a44df260627e1344609f47bbb|Sept 21, 2024
 Ports|[yrogue](http://github.com/yquake2/rogue)|7cf6cad6acfe88d74bca104839c4ff2b94cc6036|Sept 21, 2024
