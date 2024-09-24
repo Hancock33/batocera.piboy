@@ -14,10 +14,10 @@ class SuyuGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
-        if not os.path.exists(batoceraFiles.CONF+"/suyu"):
-            os.makedirs(batoceraFiles.CONF+"/suyu")
+        if not os.path.exists(batoceraFiles.CONF+"/yuzu"):
+            os.makedirs(batoceraFiles.CONF+"/yuzu")
 
-        SuyuGenerator.writeSuyuConfig(batoceraFiles.CONF + "/suyu/qt-config.ini", system, playersControllers)
+        SuyuGenerator.writeSuyuConfig(batoceraFiles.CONF + "/yuzu/qt-config.ini", system, playersControllers)
 
         commandArray = ["/usr/bin/suyu", "-f", "-g", rom ]
         return Command.Command(array=commandArray, env={
