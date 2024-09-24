@@ -5,8 +5,8 @@ from os import path
 from ... import Command
 from ... import batoceraFiles
 from ... import controllersConfig
-from ..Generator import Generator
 from ...utils import videoMode as videoMode
+from ..Generator import Generator
 
 q1_src = "/usr/share/game_assets/quake1/id1/quakespasm.pak"
 q1_dst = "/userdata/roms/ports/quake1/id1/quakespasm.pak"

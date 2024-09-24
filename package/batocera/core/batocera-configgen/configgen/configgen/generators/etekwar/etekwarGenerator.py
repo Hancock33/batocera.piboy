@@ -3,7 +3,9 @@ import shutil
 from os import path
 
 from ... import Command
+from ... import batoceraFiles
 from ... import controllersConfig
+from ...utils import videoMode as videoMode
 from ..Generator import Generator
 
 class EtekwarGenerator(Generator):

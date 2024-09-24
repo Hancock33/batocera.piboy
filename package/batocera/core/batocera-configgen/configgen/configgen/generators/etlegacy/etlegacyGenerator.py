@@ -27,9 +27,11 @@ class ETLegacyGenerator(Generator):
         # Define the options to add or modify
         options_to_set = {
             "seta r_mode": "-1",
+            "seta r_noborder": "1",
             "seta r_fullscreen": "1",
             "seta r_allowResize": "0",
             "seta r_centerWindow": "1",
+            "seta r_inGameVideo": "1",
             "seta r_customheight": f'"{gameResolution["height"]}"',
             "seta r_customwidth": f'"{gameResolution["width"]}"'
         }

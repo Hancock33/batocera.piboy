@@ -1,3 +1,5 @@
+import os
+
 from ... import Command
 from ... import controllersConfig
 from ..Generator import Generator
