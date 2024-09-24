@@ -1,14 +1,17 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|7b92b442c7e35888b67f2f8e18e839876d8eb13d|Sept 24, 2024
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|7b92b442c7e35888b67f2f8e18e839876d8eb13d|Sept 24, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|764113be10e524c5a427c8eca773c8560b2f1298|Sept 24, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|5ed96fcfe45390410aaa4d05ee379db53879d5cd|Sept 24, 2024
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|beaf290e27fb8c3fc5710102e1d7d6a1aea7407f|Sept 24, 2024
+Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|2eb6d44c2c5e366e05946e3e36ec596bd73eed10|Sept 24, 2024
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|9396f6cfaeb735b79f38683b82c52af11e065c77|Sept 24, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|0b34c3ad42a7a07580d6271b9178f71191e8e0e2|Sept 24, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-09-24|Sept 24, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|637bb3ede2ecb6e0a5fa3889c3453025ef8b6602|Sept 24, 2024
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|c8fffcda5ae0f923857a73fedbeb07e81d2eb813|Sept 24, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|9c10b29cf71fa2afe9336150db27a5b2e2bca13b|Sept 24, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|2d0b60898cc4b7d7feaa49f47d3d569d407e93c1|Sept 24, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|e44c43deeb91899d6cdf37ba750fcd228d4721bd|Sept 24, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|ebefb023432a021d3803e375af443130b1b9b782|Sept 24, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|b78ec233625201a57c467e4db73ff3ce3a50637c|Sept 24, 2024
 Utils|[rclone](http://github.com/rclone/rclone)|v1.68.1|Sept 24, 2024
@@ -20,8 +23,6 @@ Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|715727fee938df52064ffddd424cc28c69f19a79|Sept 24, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|0b34c3ad42a7a07580d6271b9178f71191e8e0e2|Sept 24, 2024
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|0758f6b75f04480827c9a3c9c297f06f66d161df|Sept 24, 2024
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|62f1a34baddcdeeea4d148cdbaf5345e7baa4473|Sept 23, 2024
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|62f1a34baddcdeeea4d148cdbaf5345e7baa4473|Sept 23, 2024
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|a652fb16975a278c3521735695f9721ae9ec143c|Sept 23, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|0d6af7c9a4b933c80dc0d6448dbbcd39f26d0cec|Sept 23, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.168|Sept 23, 2024
@@ -77,7 +78,6 @@ Ports|[openjazz](http://github.com/AlisterT/openjazz)|1e7ab565205667032cf19834a7
 Ports|[stk](http://github.com/supertuxkart/stk-code)|35967b6831ab0c046ac7764c584d0c7cfd932ae8|Sept 19, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|b1f0c1f5cceecd0c328a5f365c7043b1c2e68f17|Sept 19, 2024
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|4c450ab360ee003439ba9adc27056c4665e5e09b|Sept 19, 2024
-Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|2179ca2a417e356f23a09cd88707b20c1bcaf66f|Sept 18, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|ac6b361605c2a3a86f2b625f853c97ec6d32b0c3|Sept 18, 2024
 Utils|[ryzenadj](http://github.com/FlyGoat/RyzenAdj)|v0.16.0|Sept 18, 2024
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|93292f1cd5c3e22f3123fd9262cbdcec3cb20d43|Sept 18, 2024
