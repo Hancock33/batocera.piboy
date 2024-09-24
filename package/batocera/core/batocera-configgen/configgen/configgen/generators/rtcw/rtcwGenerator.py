@@ -1,10 +1,11 @@
 import os
 import shutil
 from os import path
-import utils.videoMode as videoMode
 
+from ... import Command
+from ... import batoceraFiles
 from ... import controllersConfig
-from ...Command import Command
+from ...utils import videoMode as videoMode
 from ..Generator import Generator
 
 rtcw_src = "/usr/bin/rtcw/main"
@@ -120,7 +121,7 @@ class RtcwGenerator(Generator):
         commandArray = ["/usr/bin/rtcw/iowolfsp"]
 
         # iortcw looks for roms in home + /rtcw
-        return Command(
+        return Command.Command(
             array=commandArray,
             env={
                 "XDG_DATA_HOME": "/userdata/roms/ports",
