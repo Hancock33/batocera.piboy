@@ -233,7 +233,7 @@ Emulators|[libretro-virtualjaguar](http://github.com/libretro/virtualjaguar-libr
 Emulators|[libretro-vitaquake2](http://github.com/libretro/vitaquake2)|f17824b379b1b43c48b4cffb7b6715758bb6af1c|Jun 28, 2024
 Emulators|[libretro-vitaquake3](http://github.com/libretro/vitaquake3)|7a633867cf0a35c71701aef6fc9dd9dfab9c33a9|Jan 31, 2021
 Emulators|[libretro-vitavoyager](http://github.com/libretro/vitaVoyager)|58b70dd7ea891c2e8ddc37d03a5d58116b0ea118|Jan 02, 2020
-Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|be6bc297d77592b37d1c1bd53dcbc168a06a2ce1|Sept 03, 2024
+Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|5758644213fcf6b0783976780a263ffd960eaf3a|Sept 24, 2024
 Emulators|[libretro-watara](http://github.com/libretro/potator)|aed31f9254cada9826c65ff4528cc8bdda338275|May 28, 2023
 Emulators|[libretro-xmil](http://github.com/libretro/xmil-libretro)|927e2eb8c097e88f623efdf15c4372b973a6c5e5|Jun 28, 2024
 Emulators|[libretro-xrick](http://github.com/libretro/xrick-libretro)|58e544ee8de08ca8421e97c064d52ef6cdd73bd2|Nov 01, 2023
@@ -277,7 +277,7 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-09-24|Sept 2
 Emulators|[ryujinx](https://github.com/Ryujinx/Ryujinx.git)|1.1.1398|Sept 22, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|630d45332f2b15e02f5e5f637b778e85e6015f1f|Sept 20, 2024
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
-Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|901441a496121a9c12a9d72d30860e8be3fe4cf6|Sept 21, 2024
+Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|a8e35920c5a53448bf6ce78dfe4575485a20a41f|Sept 24, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|0727b4a474bf496d06ad42dd7ecc5527996aff3a|Sept 15, 2024
 Emulators|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|aa44b4cbc3f281c9d20e02cce3f55ca36e140dc1|Sep 23, 2024
@@ -288,9 +288,9 @@ Emulators|[supermodel](http://github.com/trzy/Supermodel)|9724c3e205a33d8c7e814d
 Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|e5c47e911b2e94bc2864db915ed259af1ee9a765|Sept 20, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|637bb3ede2ecb6e0a5fa3889c3453025ef8b6602|Sept 24, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|979235b4b7ebb3fbec5505a846b70f70333857dc|Sept 05, 2024
-Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45342|Sept 23, 2024
+Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45343|Sept 24, 2024
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
-Emulators|[vita3k](https://github.com/vita3k/vita3k)|9ad860e14e609afdc72bd187f0fc048dd023b36f|Sept 23, 2024
+Emulators|[vita3k](https://github.com/vita3k/vita3k)|3fb83f88145e5c30d4e19d6f82618c076fa52f90|Sept 24, 2024
 Emulators|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v2.13|Jun 21, 2024
 Emulators|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.13|Aug 29, 2024
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|bee8834ea050b347f7dc91aeb1f2a0d43ad04d10|Jul 23, 2024
@@ -423,7 +423,7 @@ Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e24
 Ports|[awgl](http://github.com/cyxx/rawgl)|1eeaa530c859bd6e37b3d3bd7d3136bc16afcc89|Mar 12, 2022
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|1855c8ed66b771fb62ae66bf5b1cbc9ede9cd03a|Dec 26, 2023
-Ports|[box64](http://github.com/ptitseb/box64)|e44c43deeb91899d6cdf37ba750fcd228d4721bd|Sept 24, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|b38c5f095cfd3712a0562aef5127a699d7264603|Sept 24, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|54c806c5761b79d749d8b99eea0f79e8308bc4c1|Sept 17, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ca0c1a02abcf2513b1871a09f786162abb41caec|Sept 01, 2024
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
