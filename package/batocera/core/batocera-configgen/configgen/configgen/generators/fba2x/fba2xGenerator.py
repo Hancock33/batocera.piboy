@@ -1,8 +1,9 @@
 import os
 import configparser
 
-from ... import batoceraFiles
 from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
 from ..Generator import Generator
 from . import fba2xConfig
 from . import fba2xControllers

@@ -1,5 +1,6 @@
 from ... import Command
 from ... import batoceraFiles
+from ... import controllersConfig
 from ..Generator import Generator
 
 class Nukem2Generator(Generator):

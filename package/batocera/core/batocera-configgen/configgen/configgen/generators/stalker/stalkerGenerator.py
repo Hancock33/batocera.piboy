@@ -3,6 +3,7 @@ from os import path
 
 from ... import Command
 from ... import batoceraFiles
+from ... import controllersConfig
 from ..Generator import Generator
 
 base_dir = f"{batoceraFiles.HOME}/.local/share/GSC Game World"

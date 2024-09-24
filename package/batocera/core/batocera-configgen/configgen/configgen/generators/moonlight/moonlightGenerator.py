@@ -1,8 +1,8 @@
 import os.path
 
 from ... import Command
-from ... import controllersConfig
 from ... import batoceraFiles
+from ... import controllersConfig
 from ..Generator import Generator
 from . import moonlightConfig
 

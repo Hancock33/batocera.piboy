@@ -4,6 +4,7 @@ from os import path
 
 from ... import Command
 from ... import batoceraFiles
+from ... import controllersConfig
 from ..Generator import Generator
 
 hl2_src = "/usr/bin/hl2/hl2_assets"

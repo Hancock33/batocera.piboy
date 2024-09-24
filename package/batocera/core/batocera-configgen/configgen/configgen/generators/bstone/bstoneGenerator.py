@@ -1,5 +1,6 @@
 from ... import Command
 from ... import batoceraFiles
+from ... import controllersConfig
 from ..Generator import Generator
 from ...utils import videoMode as videoMode
 

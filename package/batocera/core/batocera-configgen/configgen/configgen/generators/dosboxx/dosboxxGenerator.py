@@ -3,6 +3,7 @@ import configparser
 
 from ... import Command
 from ... import batoceraFiles
+from ... import controllersConfig
 from ..Generator import Generator
 
 class DosBoxxGenerator(Generator):

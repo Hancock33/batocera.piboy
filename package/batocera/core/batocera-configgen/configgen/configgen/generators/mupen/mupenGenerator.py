@@ -3,6 +3,7 @@ import os
 
 from ... import Command
 from ... import batoceraFiles
+from ... import controllersConfig
 from ..Generator import Generator
 from . import mupenConfig
 from . import mupenControllers

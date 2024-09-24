@@ -2,8 +2,8 @@ import os
 import shutil
 
 from ... import Command
-from ... import controllersConfig
 from ... import batoceraFiles
+from ... import controllersConfig
 from ..Generator import Generator
 
 class ETLegacyGenerator(Generator):

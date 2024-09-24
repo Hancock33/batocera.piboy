@@ -1,8 +1,9 @@
 import os
 import shlex
 from os import path
-from ... import batoceraFiles
 from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
 from ..Generator import Generator
 
 class GzdoomGenerator(Generator):
