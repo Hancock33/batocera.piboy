@@ -2,8 +2,9 @@ import os
 from xml.dom import minidom
 import codecs
 
-from ... import batoceraFiles
 from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
 from ..Generator import Generator
 
 class CannonballGenerator(Generator):

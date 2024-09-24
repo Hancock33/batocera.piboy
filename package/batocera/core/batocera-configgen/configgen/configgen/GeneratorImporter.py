@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-
-import generators
-
 # not the nicest way, possibly one of the faster i think
 # some naming rules may allow to modify this function to less than 10 lines
 

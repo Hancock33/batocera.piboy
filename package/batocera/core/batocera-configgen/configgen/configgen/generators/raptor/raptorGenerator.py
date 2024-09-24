@@ -4,6 +4,7 @@ from os import path
 
 from ... import Command
 from ... import batoceraFiles
+from ... import controllersConfig
 from ..Generator import Generator
 
 class RaptorGenerator(Generator):

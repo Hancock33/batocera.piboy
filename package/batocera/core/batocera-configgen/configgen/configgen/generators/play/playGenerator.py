@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 
 from ... import Command
 from ... import batoceraFiles
+from ... import controllersConfig
 from ..Generator import Generator
 
 playConfig = batoceraFiles.CONF + '/play'
