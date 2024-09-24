@@ -1,12 +1,20 @@
 import os
+import shutil
+from os import path
 
 from ... import Command
 from ... import controllersConfig
 from ..Generator import Generator
 
+mpq_src = "/usr/share/diasurgical/devilutionx"
+mpq_dst = "/userdata/roms/ports/devilutionx"
+
 class DevilutionXGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+        # copy latest devilutionx.mpq to rom dir
+        shutil.copytree(mpq_src, mpq_dst, dirs_exist_ok=True)
+        
         configDir = '/userdata/system/configs/devilutionx'
         saveDir = '/userdata/saves/devilutionx'
         os.makedirs(configDir, exist_ok=True)
