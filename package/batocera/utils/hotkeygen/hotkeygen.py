@@ -80,7 +80,7 @@ def loadContext(data):
                     raise Exception("invalid key '{}'".format(data["keys"][k]))
         else:
             raise Exception("invalid entry '{}'".format(k))
-    
+
     if gdebug:
         printContext(context)
     return context
@@ -96,7 +96,7 @@ def saveContext(context, gcontext_file):
             save["keys"][k] = ecodesNames[context["keys"][k]]
 
     with open(gcontext_file, "w") as fd:
-        json.dump(save, fd, indent=2) 
+        json.dump(save, fd, indent=2)
 
 def printContext(context):
     print("Context [{}]:".format(context["name"]))
@@ -265,7 +265,7 @@ def readPid():
 def writePid():
     with open(gpid_file, "w") as fd:
         fd.write(str(os.getpid()))
-    
+
 def do_new_context(context_name = None, context_json = None):
     if context_name is not None and context_json is not None:
         data = {}
