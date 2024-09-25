@@ -12,7 +12,7 @@ PM_AUTO_LICENSE_FILES = LICENSE
 
 PM_AUTO_DEPENDENCIES += python-adafruit-circuitpython-neopixel-spi
 PM_AUTO_DEPENDENCIES += python-smbus3 python-psutil python-lgpio
-PM_AUTO_DEPENDENCIES += python-pillow python3-gpiod python-gpiozero
+PM_AUTO_DEPENDENCIES += python-pillow python-gpiod python-gpiozero
 PM_AUTO_DEPENDENCIES += python-adafruit-circuitpython-requests
 
 $(eval $(python-package))
