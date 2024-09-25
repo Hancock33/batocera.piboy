@@ -1,0 +1,8 @@
+config BR2_PACKAGE_PYTHON_GPIOD
+	bool "python-gpiod"
+
+	help
+	  gpiod Python library with almost the same
+	  usage as libgpiodcxx.
+
+	  https://pypi.org/project/gpiod/

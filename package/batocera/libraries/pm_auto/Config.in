@@ -8,7 +8,7 @@ config BR2_PACKAGE_PM_AUTO
 	select BR2_PACKAGE_PYTHON_PILLOW
 	select BR2_PACKAGE_PYTHON_PSUTIL
 	select BR2_PACKAGE_PYTHON_SMBUS3
-	select BR2_PACKAGE_PYTHON3_GPIOD
+	select BR2_PACKAGE_PYTHON_GPIOD
 
 	help
 	  Library for monitoring Raspberry Pi system status.
