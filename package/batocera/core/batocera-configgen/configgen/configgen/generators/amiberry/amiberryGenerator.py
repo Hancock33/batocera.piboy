@@ -17,6 +17,10 @@ eslog = get_logger(__name__)
 class AmiberryGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+        if not os.path.exists('/userdata/system/configs/amiberry'):
+            os.makedirs('/userdata/system/configs/amiberry')
+            os.makedirs('/userdata/system/configs/amiberry/conf')
+
         retroconfig = UnixSettings(batoceraFiles.amiberryRetroarchCustom, separator=' ')
         amiberryconf = UnixSettings(batoceraFiles.amiberryConf, separator=' ')
         amiberryconf.save('saveimage_dir', '/userdata/saves/amiga/')
