@@ -2,6 +2,7 @@
 alsa-ucm-conf.mk
 appstream-glib.mk
 batocera-settings.mk
+cabextract.mk
 drastic.mk
 ecm.mk
 fpinball.mk
