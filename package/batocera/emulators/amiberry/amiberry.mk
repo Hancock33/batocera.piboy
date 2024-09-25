@@ -8,18 +8,7 @@ AMIBERRY_VERSION = 090641c8ef1dcbb5edb9e2dcccd13c2a1278ec6f
 AMIBERRY_SITE = $(call github,BlitterStudio,amiberry,$(AMIBERRY_VERSION))
 AMIBERRY_LICENSE = GPLv3
 AMIBERRY_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf mpg123 libxml2 libmpeg2 flac libpng libserialport portmidi
-
-define AMIBERRY_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/amiberry 						$(TARGET_DIR)/usr/bin/amiberry
-	mkdir -p											$(TARGET_DIR)/usr/share/amiberry
-	cp -rf $(@D)/data									$(TARGET_DIR)/usr/share/amiberry
-	cp -rf $(@D)/plugins								$(TARGET_DIR)/usr/share/amiberry
-	ln -sf /userdata/system/configs/amiberry/whdboot	$(TARGET_DIR)/usr/share/amiberry/whdboot
-	ln -sf /usr/lib/libcapsimage.so.5.1 				$(TARGET_DIR)/usr/share/amiberry/capsimg.so
-
-	mkdir -p 											$(TARGET_DIR)/usr/share/batocera/datainit/system/configs/amiberry
-	cp -pvr $(@D)/whdboot 								$(TARGET_DIR)/usr/share/batocera/datainit/system/configs/amiberry
-endef
+AMIBERRY_SUPPORTS_IN_SOURCE_BUILD = NO
 
 define AMIBERRY_EVMAP
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
