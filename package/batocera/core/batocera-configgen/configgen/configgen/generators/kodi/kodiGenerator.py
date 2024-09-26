@@ -12,3 +12,9 @@ class KodiGenerator(Generator):
         kodiConfig.writeKodiConfig(playersControllers)
         commandArray = ["kodi", rom]
         return Command.Command(array=commandArray)
+
+    def getHotkeysContext(self):
+        return {
+            "name": "kodi",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
