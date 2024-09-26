@@ -1,0 +1,52 @@
+diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
+index c50cd71e..a272da3a 100644
+--- a/src/osdep/amiberry.cpp
++++ b/src/osdep/amiberry.cpp
+@@ -4065,36 +4065,36 @@ static void init_amiberry_paths(const std::string& data_directory, const std::st
+ 	amiberry_conf_file.append("amiberry.conf");
+ #else
+ 	data_dir = data_directory;
+-	config_path = config_directory;
++	config_path = "/userdata/system/configs/amiberry/conf";
+ 	controllers_path = whdboot_path = whdload_arch_path = floppy_path = harddrive_path = cdrom_path =
+ 		logfile_path = rom_path = rp9_path = saveimage_dir = savestate_dir = ripper_path =
+ 		input_dir = screenshot_dir = nvram_dir = plugins_dir = video_dir = 
+ 		home_directory;
+ 
+-	controllers_path.append("/controllers/");
+-	data_dir.append("/data/");
+-	whdboot_path.append("/whdboot/");
++	controllers_path = "/userdata/system/configs/amiberry/conf/retroarch/inputs";
++	data_dir = "/usr/share/amiberry/data/";
++	whdboot_path = "/usr/share/amiberry/whdboot/";
+ 	whdload_arch_path.append("/lha/");
+ 	floppy_path.append("/floppies/");
+ 	harddrive_path.append("/harddrives/");
+ 	cdrom_path.append("/cdroms/");
+-	logfile_path.append("/amiberry.log");
+-	rom_path.append("/kickstarts/");
++	logfile_path = "/usrdata/system/logs/amiberry.log";
++	rom_path = "/userdata/bios/amiga";
+ 	rp9_path.append("/rp9/");
+-	saveimage_dir.append("/savestates/");
+-	savestate_dir.append("/savestates/");
++	saveimage_dir = "/userdata/saves/amiga/";
++	savestate_dir = "/userdata/saves/amiga/";
+ 	ripper_path.append("/ripper/");
+ 	input_dir.append("/inputrecordings/");
+-	screenshot_dir.append("/screenshots/");
++	screenshot_dir = "/userdata/screenshots/";
+ 	nvram_dir.append("/nvram/");
+-	plugins_dir.append("/plugins/");
++	plugins_dir = "/usr/share/amiberry/plugins/";
+ 	video_dir.append("/videos/");
+ 
+ 	amiberry_conf_file = config_path;
+ 	amiberry_conf_file.append("/amiberry.conf");
+ #endif
+ 
+-	retroarch_file = config_path;
++	retroarch_file = controllers_path;
+ 	retroarch_file.append("/retroarch.cfg");
+ 
+ 	floppy_sounds_dir = data_dir;
