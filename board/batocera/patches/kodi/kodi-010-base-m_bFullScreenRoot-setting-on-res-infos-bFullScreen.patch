@@ -1,8 +1,8 @@
 diff --git a/xbmc/windowing/GraphicContext.cpp b/xbmc/windowing/GraphicContext.cpp
-index 888be5bf28..a6889ef7b9 100644
+index e3300e925c..476923fb56 100644
 --- a/xbmc/windowing/GraphicContext.cpp
 +++ b/xbmc/windowing/GraphicContext.cpp
-@@ -413,7 +413,7 @@ void CGraphicContext::SetVideoResolutionInternal(RESOLUTION res, bool forceUpdat
+@@ -411,7 +411,7 @@ void CGraphicContext::SetVideoResolutionInternal(RESOLUTION res, bool forceUpdat
      return;
    }
  
@@ -12,7 +12,7 @@ index 888be5bf28..a6889ef7b9 100644
      CServiceBroker::GetSettingsComponent()->GetAdvancedSettings()->m_fullScreen = true;
      m_bFullScreenRoot = true;
 diff --git a/xbmc/windowing/wayland/WinSystemWayland.cpp b/xbmc/windowing/wayland/WinSystemWayland.cpp
-index 01d7c8b7ea..e29ce832ab 100644
+index e226563a35..a98ea28d43 100644
 --- a/xbmc/windowing/wayland/WinSystemWayland.cpp
 +++ b/xbmc/windowing/wayland/WinSystemWayland.cpp
 @@ -332,7 +332,7 @@ bool CWinSystemWayland::CreateNewWindow(const std::string& name,
