@@ -9,6 +9,7 @@ Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|b079492ad5c3cf3c0c2cd88
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|67afdc9caba981f8860c9f4239d1c6ab838a9d2b|Sept 26, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|cae587f7a6873a77fe39c7433bbac3b2287b3a0a|Sept 26, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.4.1|Sept 26, 2024
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|59d26900f53c7621a8ba8ab0e3f18d3bd883fa9a|Sept 26, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|2ca9168e41e18595cd9718a36ee5e2663082979a|Sept 25, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|4bc1546596994c3f6e82b0be421c82f6fbf86a86|Sept 25, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|7907100b9cffe326dce458d7c5febdd47fc0926e|Sept 25, 2024
@@ -138,7 +139,6 @@ Emulators|[moonlight-embedded](https://github.com/moonlight-stream/moonlight-emb
 Utils|[ledspicer](http://github.com/meduzapat/LEDSpicer)|0.6.3.1|Sept 08, 2024
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|f4b0755e2722d59fe1c20d7e470f7b8929dcae85|Sept 08, 2024
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|0b43954c75760d00737120db9d5009813778c7ae|Sept 07, 2024
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|1.3.295|Sept 06, 2024
 Emulators|[libretro-beetle-supergrafx](http://github.com/libretro/beetle-supergrafx-libretro)|6c76ef9e83f7f3bed3aa747b01fd2d6c54687c65|Sept 06, 2024
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|20c55eb6333a11395ba637df8583066483e58cb2|Sept 06, 2024
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|6508730c524420e05626b0b06dbc603e02d3af64|Sept 06, 2024
