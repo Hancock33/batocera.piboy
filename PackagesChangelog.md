@@ -27,6 +27,7 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|f76500248e78fcf9ec138
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|2f937ba6c921b5c4494e957ce103e14992704ebe|Sept 25, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.18.r1.g3dfacea3|Sept 25, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240925|Sept 25, 2024
+Gpu|[glslang](http://github.com/KhronosGroup/glslang)|15.0.0|Sept 25, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240925|Sept 25, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|326480cb3143dd80a25005e36348220f9a5f4486|Sept 25, 2024
 Ports|[quake3](http://github.com/ioquake/ioq3)|4ee389b6b27feed82b19145ef49948839ed8dc9b|Sept 25, 2024
@@ -268,7 +269,6 @@ Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|fcabaff759725
 Emulators|[libretro-vecx](http://github.com/libretro/libretro-vecx)|0e48a8903bd9cc359da3f7db783f83e22722c0cf|Jun 28, 2024
 Emulators|[libretro-vitaquake2](http://github.com/libretro/vitaquake2)|f17824b379b1b43c48b4cffb7b6715758bb6af1c|Jun 28, 2024
 Emulators|[libretro-xmil](http://github.com/libretro/xmil-libretro)|927e2eb8c097e88f623efdf15c4372b973a6c5e5|Jun 28, 2024
-Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.3.290.0|Jun 25, 2024
 Emulators|[libretro-mu](http://github.com/libretro/Mu)|d7dd7e2a33ba405b0794c2931ddc6c2d75e59d36|Jun 25, 2024
 Libraries|[python-adafruit-circuitpython-connectionmanager](https://files.pythonhosted.org/packages/21/8c/a7d5e38ae4b41c6a7c3aa9b3c9c8f742faed570acdcb48b634e2e1dde573)|3.1.1|Jun 24, 2024
 Network|[aic8800](http://github.com/batocera-linux/aic8800)|ccba7fffed8554fe861bd631ff6f852d2d6eec39|Jun 24, 2024
