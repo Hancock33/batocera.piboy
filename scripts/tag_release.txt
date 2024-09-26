@@ -6,7 +6,6 @@ cabextract.mk
 drastic.mk
 ecm.mk
 fpinball.mk
-glslang.mk
 liblc3.mk
 ryujinx.mk
 shaderc.mk

@@ -319,7 +319,7 @@ Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|c8fffcda5ae0f92
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|193d1bec1c6db7e29b7ac4732e7bb396fbdd843d|Sept 12, 2024
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2024.06|Jul 18, 2024
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|e6448b04e5bfdabffbd650e1ccc53b82cd8c1c5d|Aug 31, 2024
-Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.3.290.0|Jun 25, 2024
+Gpu|[glslang](http://github.com/KhronosGroup/glslang)|15.0.0|Sept 25, 2024
 Gpu|[img-gpu-powervr](https://github.com/starfive-tech/soft_3rdpart/raw/JH7110_VisionFive2_devel/IMG_GPU/out)|c43d4fab94b0ef3b492a6382e2282fa7a2695b9b|Mar 06, 2024
 Gpu|[img-mesa3d](https://archive.mesa3d.org)|22.1.3|Jun 29, 2022
 Gpu|[mali-g31-gbm](https://github.com/batocera-linux/rockchip-packages/releases)|ad4c28932c3d07c75fc41dd4a3333f9013a25e7f|Jun 11, 2021
