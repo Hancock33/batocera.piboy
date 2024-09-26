@@ -28,8 +28,7 @@ define SUPERTUX2_INSTALL_TARGET_CMDS
 	touch $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2/SuperTux2.game
 	cp -a $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/supertux2/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2
 	ln -sf /userdata/roms/ports/supertux2 $(TARGET_DIR)/usr/share/supertux2
-	# copy libraries
-	cp -a $(@D)/buildroot-build/libLibPartioZip.so $(TARGET_DIR)/usr/lib
+	# copy binaries
 	cp -a $(@D)/buildroot-build/supertux2 $(TARGET_DIR)/usr/bin
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy

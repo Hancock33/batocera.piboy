@@ -1,0 +1,33 @@
+diff --git a/mk/cmake/SuperTux/ProvidePartioZip.cmake b/mk/cmake/SuperTux/ProvidePartioZip.cmake
+index f41ebce34..9dc64a6cf 100644
+--- a/mk/cmake/SuperTux/ProvidePartioZip.cmake
++++ b/mk/cmake/SuperTux/ProvidePartioZip.cmake
+@@ -5,7 +5,7 @@ else()
+   find_package(ZLIB REQUIRED)
+ endif()
+ 
+-add_library(LibPartioZip ${CMAKE_CURRENT_SOURCE_DIR}/external/partio_zip/zip_manager.cpp)
++add_library(LibPartioZip STATIC ${CMAKE_CURRENT_SOURCE_DIR}/external/partio_zip/zip_manager.cpp)
+ target_link_libraries(LibPartioZip PUBLIC ${ZLIB_LIBRARIES})
+ target_include_directories(LibPartioZip SYSTEM PRIVATE ${ZLIB_INCLUDE_DIRS})
+ target_include_directories(LibPartioZip SYSTEM PUBLIC external/partio_zip)
+diff --git a/mk/cmake/SuperTux/ProvideSimpleSquirrel.cmake b/mk/cmake/SuperTux/ProvideSimpleSquirrel.cmake
+index 8e9c41373..80b2f4cdb 100644
+--- a/mk/cmake/SuperTux/ProvideSimpleSquirrel.cmake
++++ b/mk/cmake/SuperTux/ProvideSimpleSquirrel.cmake
+@@ -4,11 +4,11 @@ endif()
+ 
+ add_subdirectory("${CMAKE_SOURCE_DIR}/external/simplesquirrel/")
+ 
+-if(MSVC)
++#if(MSVC)
+   add_library(LibSimpleSquirrel ALIAS simplesquirrel_static)
+-else()
+-  add_library(LibSimpleSquirrel ALIAS simplesquirrel)
+-endif()
++#else()
++#  add_library(LibSimpleSquirrel ALIAS simplesquirrel)
++#endif()
+ 
+ # Set variables
+ set(SQUIRREL_PREFIX ${CMAKE_BINARY_DIR}/external/simplesquirrel/libs/squirrel)
