@@ -34,7 +34,7 @@ Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|207ea64e959e2bc6fa
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|38671fab79898d60525143c091e627c07b5677ab|Sept 25, 2024
 Emulators|[mame](http://github.com/mamedev/mame)|mame0270|Sept 25, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|9e460ebe0a9507eb05a5e17c2f8b86d9bcabc993|Sept 25, 2024
-Emulators|[scummvm](http://github.com/scummvm/scummvm)|a34566f390e51fc7d10ceb796edf0f85fb200d9d|Sept 25, 2024
+Emulators|[scummvm](http://github.com/scummvm/scummvm)|23ed97401559d3f874996d318d237795be5107b2|Sept 25, 2024
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|1d1446f808a44b144aa5502a5089b7d437e06041|Sep 25, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|70e034efc57379ae90653987b0406a8ee8a659df|Sept 25, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|afcc4c2f22587091d5651e257d830eb6f8a061dd|Sept 25, 2024
@@ -46,7 +46,7 @@ Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|7907100b
 Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|603c1dd5b6e8464dddce2ef299cad201d1e02ddb|Sept 25, 2024
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|527564f2748901068a5fef891c5073a4d6cd089b|Sept 25, 2024
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|1a534dee02a093c7812d23632f2bfd6779d1c934|Sept 25, 2024
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|a34566f390e51fc7d10ceb796edf0f85fb200d9d|Sept 25, 2024
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|23ed97401559d3f874996d318d237795be5107b2|Sept 25, 2024
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|7d00e9e28aafa115f557d7283335756b5ff2172d|Sept 25, 2024
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|0795bd9936d640f6d46a6137a80f790e7d3ca1cf|Sept 25, 2024
 Emulators|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.18.r1.g3dfacea3|Sept 25, 2024
