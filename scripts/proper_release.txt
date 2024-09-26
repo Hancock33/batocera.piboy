@@ -3,6 +3,7 @@ ayn-platform.mk
 batocera-shim.mk
 bauh.mk
 btop.mk
+cargs.mk
 chromebook-ucm-conf.mk
 d8vk.mk
 dosbox-x.mk
