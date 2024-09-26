@@ -8,6 +8,7 @@ Ports|[omf2097](http://github.com/omf2097/openomf)|e79ef0cde49b28c6802d9a1d2d06d
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|b079492ad5c3cf3c0c2cd886e0483d804cc8a129|Sept 26, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|67afdc9caba981f8860c9f4239d1c6ab838a9d2b|Sept 26, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|cae587f7a6873a77fe39c7433bbac3b2287b3a0a|Sept 26, 2024
+Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.4.1|Sept 26, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|2ca9168e41e18595cd9718a36ee5e2663082979a|Sept 25, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|4bc1546596994c3f6e82b0be421c82f6fbf86a86|Sept 25, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|7907100b9cffe326dce458d7c5febdd47fc0926e|Sept 25, 2024
@@ -222,7 +223,6 @@ Emulators|[mupen64plus-input-sdl](http://github.com/mupen64plus/mupen64plus-inpu
 Emulators|[mupen64plus-rsp-hle](http://github.com/mupen64plus/mupen64plus-rsp-hle)|2798e65d6fc89d89aace0b0d779af6406809b940|Jul 15, 2024
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|fcf00779f08a9503ef30d26422f6b0350684820d|Jul 15, 2024
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|6c2c3f8ae10b7f0f6dfe06f45ca7ca598a6b659a|Jul 14, 2024
-Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.4|Jul 10, 2024
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|899bbd5c1ebf84105ca0616ee933a0ee113fbc79|Jul 08, 2024
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|d8f7a87376ab614d464d46ee408d29b2dec163ff|Jul 07, 2024
 Emulators|[libretro-hatarib](https://github.com/bbbradsmith/hatariB)|e8187a7be75ff1c547cdcef214a8da26847561c1|Jul 05, 2024
