@@ -12,6 +12,7 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|43115ab3455d30eadd6604ffec6cc9c
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|5b6204fe9658108026ba2c20cbcd7c8b0e75a1f0|Sept 27, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|a5de3ccb510aa7615c8ef7e8e49622114f223430|Sept 27, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|443348f0148b3a9b66e25be428845326426eb720|Sept 27, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.18.r127.gfb256d8b950|Sept 27, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240927|Sept 27, 2024
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|1c0d3d18819aa75ec74f1fbd9ff0461e1b69a4d6|Sept 27, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240927|Sept 27, 2024
@@ -48,7 +49,6 @@ Emulators|[mame](http://github.com/mamedev/mame)|mame0270|Sept 25, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|23ed97401559d3f874996d318d237795be5107b2|Sept 25, 2024
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|1d1446f808a44b144aa5502a5089b7d437e06041|Sep 25, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|70e034efc57379ae90653987b0406a8ee8a659df|Sept 25, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.18.r1.g3dfacea3|Sept 25, 2024
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|15.0.0|Sept 25, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|326480cb3143dd80a25005e36348220f9a5f4486|Sept 25, 2024
 Ports|[quake3](http://github.com/ioquake/ioq3)|4ee389b6b27feed82b19145ef49948839ed8dc9b|Sept 25, 2024
