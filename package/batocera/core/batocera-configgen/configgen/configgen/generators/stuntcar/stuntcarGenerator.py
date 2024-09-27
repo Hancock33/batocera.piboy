@@ -21,3 +21,9 @@ class StuntcarGenerator(Generator):
 
     def getInGameRatio(self, config, gameResolution, rom):
         return 16/9
+
+    def getHotkeysContext(self):
+        return {
+            "name": "tyrian",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
