@@ -10,3 +10,9 @@ class RuffleGenerator(Generator):
 
     def getMouseMode(self, config, rom):
         return True
+
+    def getHotkeysContext(self):
+        return {
+            "name": "ruffle",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

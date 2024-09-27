@@ -16,3 +16,9 @@ class AbuseGenerator(Generator):
             env={
                 'SDL_AUTO_UPDATE_JOYSTICKS': '0'
             })
+
+    def getHotkeysContext(self):
+        return {
+            "name": "abuse",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
