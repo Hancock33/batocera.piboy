@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Aug 12, 2024
-PYTHON_ADAFRUIT_CIRCUITPYTHON_TYPING_VERSION = 1.10.3
+PYTHON_ADAFRUIT_CIRCUITPYTHON_TYPING_VERSION = 1.11.0
 PYTHON_ADAFRUIT_CIRCUITPYTHON_TYPING_SOURCE = adafruit_circuitpython_typing-$(PYTHON_ADAFRUIT_CIRCUITPYTHON_TYPING_VERSION).tar.gz
 PYTHON_ADAFRUIT_CIRCUITPYTHON_TYPING_SITE = https://files.pythonhosted.org/packages/4a/31/e1414252d8dfd4ddaaa6b5ae11eab47bea20965d5059f6fae01ee6aac442
 PYTHON_ADAFRUIT_CIRCUITPYTHON_TYPING_SETUP_TYPE = setuptools
