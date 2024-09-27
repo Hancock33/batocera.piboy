@@ -3,8 +3,8 @@
 # libretro-mame
 #
 ################################################################################
-# Version: Commits on Sept 15, 2024
-LIBRETRO_MAME_VERSION = 184cebe571ab6b06f5015404bd40404d25433d9a
+# Version: Commits on Sept 27, 2024
+LIBRETRO_MAME_VERSION = 231b5e6d621ed93168ad19eed6c0e3390d4e81ff
 LIBRETRO_MAME_SITE = $(call github,sonninnos,mame,$(LIBRETRO_MAME_VERSION))
 LIBRETRO_MAME_LICENSE = MAME
 
@@ -69,7 +69,6 @@ define LIBRETRO_MAME_INSTALL_TARGET_CMDS
 
 	mkdir -p $(TARGET_DIR)/usr/share/lr-mame
 	ln -sf /usr/bin/mame/hash $(TARGET_DIR)/usr/share/lr-mame/hash
-	cp -R $(@D)/hash $(TARGET_DIR)/usr/share/lr-mame
 
 	mkdir -p $(TARGET_DIR)/usr/share/mame
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/blank.fmtowns $(TARGET_DIR)/usr/share/mame/blank.fmtowns
