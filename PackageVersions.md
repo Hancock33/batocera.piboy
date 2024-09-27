@@ -271,7 +271,7 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|1b138de1023272b039273d7bbc8f57573073bd25|Sept 22, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|443348f0148b3a9b66e25be428845326426eb720|Sept 27, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20230927|Sept 27, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|ad3d8675e770eaa2d72224f8187a7e171245c24a|Sept 25, 2024
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|4ba4268282c853d854df1ac1df8110a500a6716f|Sept 27, 2024
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-09-27|Sept 27, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/Ryujinx.git)|1.1.1400|Sept 26, 2024
@@ -284,7 +284,7 @@ Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|1d1446f808a4
 Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|d7d1d39111efb9c44fc956beea076ee243774dc1|Nov 29, 2023
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|a94e36df15c7f486bb550f584514d12faa26e8f9|Sept 22, 2024
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|b13fdd5029a246e8f90a1d70e2ed000779fee4f1|Sept 10, 2024
-Emulators|[supermodel](http://github.com/trzy/Supermodel)|9724c3e205a33d8c7e814df10db58295d5b0d943|Sept 23, 2024
+Emulators|[supermodel](http://github.com/trzy/Supermodel)|6da55ab0bc0472dbf0724c89c98f040744e63d9a|Sept 27, 2024
 Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|e5c47e911b2e94bc2864db915ed259af1ee9a765|Sept 20, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|637bb3ede2ecb6e0a5fa3889c3453025ef8b6602|Sept 24, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|979235b4b7ebb3fbec5505a846b70f70333857dc|Sept 05, 2024
@@ -423,14 +423,14 @@ Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e24
 Ports|[awgl](http://github.com/cyxx/rawgl)|1eeaa530c859bd6e37b3d3bd7d3136bc16afcc89|Mar 12, 2022
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|1855c8ed66b771fb62ae66bf5b1cbc9ede9cd03a|Dec 26, 2023
-Ports|[box64](http://github.com/ptitseb/box64)|34d4cde7c431c020248ba275fa3921775463780b|Sept 27, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|93dc8fce10bf7ee7da52aeead17723beea1157d7|Sept 27, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|54c806c5761b79d749d8b99eea0f79e8308bc4c1|Sept 17, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ca0c1a02abcf2513b1871a09f786162abb41caec|Sept 01, 2024
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|43115ab3455d30eadd6604ffec6cc9ce908760a4|Sept 27, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|bd7f9a8e3875b34f35593099f2080bbacd2fb6b6|Jul 28, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|5b6204fe9658108026ba2c20cbcd7c8b0e75a1f0|Sept 27, 2024
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|67f822f65998f4d23319241a63a83f4e3e92f6a9|Sept 26, 2024
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|92aeb01ebbc60c3aafd8d6b8fde98e6307840040|Sept 27, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|e0e772ef92f3739d52a51ddf9f898f4a12d44d7e|Sept 10, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|24ae608469b1e4d479006fea55e36a7ccdd4c84b|Sept 27, 2024
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
@@ -441,7 +441,7 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|af6404d1b335cf8160b7f
 Ports|[f2bgl](http://github.com/cyxx/f2bgl)|0b84f41c7cc13a41f5a1832549485b814a52070d|Oct 18, 2020
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|ad8a2754fa99ceaf40495185ad48191cf27559e2|Mar 05, 2024
 Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|9fb917c357b20d95d597bed4d67904c29cd5c753|Apr 21, 2024
-Ports|[fheroes2](http://github.com/ihhub/fheroes2)|c9086f3c736adffd4c8ac438cfefc0489854b8a5|Sept 27, 2024
+Ports|[fheroes2](http://github.com/ihhub/fheroes2)|f735370f3a753f150cca931dae71d8bca0d93ef9|Sept 27, 2024
 Ports|[freedroid](http://github.com/ReinhardPrix/FreedroidClassic)|126664e034d17bb7fd1e6c3cfa1e9e6f1ebf48ac|Jan 08, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|326480cb3143dd80a25005e36348220f9a5f4486|Sept 25, 2024
 Ports|[hcl](http://github.com/ptitSeb/hydracastlelabyrinth)|229369c222f8604530f5e06f795b4505ef21d439|Feb 28, 2024
@@ -487,7 +487,7 @@ Ports|[tekwar](https://github.com/jonof/jftekwar.git)|d327bfa6140af179a9409e0ba4
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|fd5b11d55939a1727bc45f0f4fc943c2ce4c5c84|Sept 14, 2024
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|a3e33215e3457e8d4f3c2093e873d73ea618c8ec|Aug 25, 2024
-Ports|[vkquake](http://github.com/Novum/vkQuake)|b1f0c1f5cceecd0c328a5f365c7043b1c2e68f17|Sept 19, 2024
+Ports|[vkquake](http://github.com/Novum/vkQuake)|8462a89eb0747ec726f88b1fb4e38d5fed8e39e6|Sept 22, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|178602ea1fa85f700a2a5873d983162b42b3e9f4|Sept 05, 2024
 Ports|[xatrix](http://github.com/yquake2/xatrix)|1957253b256180f9bbb5b52c8d63cc1578170211|Sept 21, 2024
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.1|Apr 12, 2024

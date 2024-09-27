@@ -5,15 +5,18 @@ Emulators|[duckstation](http://github.com/stenzek/duckstation)|036e11f7a82f6fb8c
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|1f286934b75a99e6d7f03852489c529ff4147160|Sept 27, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.173|Sept 27, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|6b383e40e0f79a0017b9e1fd59f8de27a951a6f8|Sept 27, 2024
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|4ba4268282c853d854df1ac1df8110a500a6716f|Sept 27, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-09-27|Sept 27, 2024
+Emulators|[supermodel](http://github.com/trzy/Supermodel)|6da55ab0bc0472dbf0724c89c98f040744e63d9a|Sept 27, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45347|Sept 27, 2024
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2024.09|Sept 27, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|951fb27e0f79efc9838f580dc0f781f62cbc3b9b|Sept 27, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|34d4cde7c431c020248ba275fa3921775463780b|Sept 27, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|93dc8fce10bf7ee7da52aeead17723beea1157d7|Sept 27, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|43115ab3455d30eadd6604ffec6cc9ce908760a4|Sept 27, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|5b6204fe9658108026ba2c20cbcd7c8b0e75a1f0|Sept 27, 2024
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|92aeb01ebbc60c3aafd8d6b8fde98e6307840040|Sept 27, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|af6404d1b335cf8160b7fdb93a6b5dce6a5d708a|Sept 27, 2024
-Ports|[fheroes2](http://github.com/ihhub/fheroes2)|c9086f3c736adffd4c8ac438cfefc0489854b8a5|Sept 27, 2024
+Ports|[fheroes2](http://github.com/ihhub/fheroes2)|f735370f3a753f150cca931dae71d8bca0d93ef9|Sept 27, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|443348f0148b3a9b66e25be428845326426eb720|Sept 27, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.18.r127.gfb256d8b950|Sept 27, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240927|Sept 27, 2024
@@ -32,7 +35,6 @@ Emulators|[openmsx](http://github.com/openMSX/openMSX)|b3f3d00d3becaa743a648154e
 Emulators|[ryujinx](https://github.com/Ryujinx/Ryujinx.git)|1.1.1400|Sept 26, 2024
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|50a3aa3d42ed1c0c4d829c4ca78bca20699c62c3|Sept 26, 2024
 Libraries|[cpuinfo](http://github.com/pytorch/cpuinfo)|1e83a2fdd3102f65c6f1fb602c1b320486218a99|Sept 26, 2024
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|67f822f65998f4d23319241a63a83f4e3e92f6a9|Sept 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|509d8d56fa2386746698336c26b741e65e92bdfb|Sept 26, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|b079492ad5c3cf3c0c2cd886e0483d804cc8a129|Sept 26, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|67afdc9caba981f8860c9f4239d1c6ab838a9d2b|Sept 26, 2024
@@ -47,7 +49,6 @@ Emulators|[flycast](https://github.com/flyinghead/flycast.git)|7907100b9cffe326d
 Emulators|[hatari](http://github.com/hatari/hatari)|17bec54ec9a194d8311553f3fa12011ce81beecb|Sept 25, 2024
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|38671fab79898d60525143c091e627c07b5677ab|Sept 25, 2024
 Emulators|[mame](http://github.com/mamedev/mame)|mame0270|Sept 25, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|ad3d8675e770eaa2d72224f8187a7e171245c24a|Sept 25, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|23ed97401559d3f874996d318d237795be5107b2|Sept 25, 2024
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|1d1446f808a44b144aa5502a5089b7d437e06041|Sep 25, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|70e034efc57379ae90653987b0406a8ee8a659df|Sept 25, 2024
@@ -74,7 +75,6 @@ Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|0758f6b75f0448
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|a8e35920c5a53448bf6ce78dfe4575485a20a41f|Sept 24, 2024
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|a652fb16975a278c3521735695f9721ae9ec143c|Sept 23, 2024
 Emulators|[play](https://github.com/jpd002/Play-.git)|e70ee1608f9bc3a075c85ce1aab0cf9074201f12|Sept 23, 2024
-Emulators|[supermodel](http://github.com/trzy/Supermodel)|9724c3e205a33d8c7e814df10db58295d5b0d943|Sept 23, 2024
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|0ea993532c5cea6afce03e4933f55041216e8fea|Sept 23, 2024
 Utils|[re2c](http://github.com/skvadrik/re2c)|5c84dfc5aadc411808d6996d3ce47638962eb734|Sept 23, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|1a2f0a14cd6edd76d579552e009b5d49811d495f|Sept 23, 2024
@@ -86,6 +86,7 @@ Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|
 Utils|[btop](http://github.com/aristocratos/btop)|v1.4.0|Sept 22, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|1b138de1023272b039273d7bbc8f57573073bd25|Sept 22, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|80136a8d80e8124896cdfb97badcc85e8ef2facd|Sept 22, 2024
+Ports|[vkquake](http://github.com/Novum/vkQuake)|8462a89eb0747ec726f88b1fb4e38d5fed8e39e6|Sept 22, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|0f4081f054c85b983c5464f0d0ee759b9fddaa0a|Sept 21, 2024
 Ports|[xatrix](http://github.com/yquake2/xatrix)|1957253b256180f9bbb5b52c8d63cc1578170211|Sept 21, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|9278772868fbe25a44df260627e1344609f47bbb|Sept 21, 2024
@@ -97,7 +98,6 @@ Emulators|[libretro-fuse](http://github.com/libretro/fuse-libretro)|6fd07d90acc3
 Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-9.18|Sept 20, 2024
 Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.18|Sept 20, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|35967b6831ab0c046ac7764c584d0c7cfd932ae8|Sept 19, 2024
-Ports|[vkquake](http://github.com/Novum/vkQuake)|b1f0c1f5cceecd0c328a5f365c7043b1c2e68f17|Sept 19, 2024
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|4c450ab360ee003439ba9adc27056c4665e5e09b|Sept 19, 2024
 Audio|[cubeb](http://github.com/mozilla/cubeb)|2bee6bcbd37b121ab197193fe466eef0e91b62b1|Sept 18, 2024
 Utils|[ryzenadj](http://github.com/FlyGoat/RyzenAdj)|v0.16.0|Sept 18, 2024
