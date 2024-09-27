@@ -15,6 +15,10 @@ ALEPHONE_CONF_OPTS = \
 					--with-boost-libdir="$(STAGING_DIR)/usr/lib" \
 					--prefix=/usr
 
+ALEPHONE_CONF_ENV += PKG_CONFIG_PATH="$(STAGING_DIR)/usr/lib/ffmpeg4.4/pkgconfig"
+ALEPHONE_CONF_ENV += CFLAGS="-I$(STAGING_DIR)/usr/include/ffmpeg4.4:$(TARGET_CFLAGS)"
+ALEPHONE_CONF_ENV += LDFLAGS="-lSDL2 -L$(STAGING_DIR)/usr/lib/ffmpeg4.4"
+
 define ALEPHONE_AUTOCONFIG
 	cd $(@D) && autoreconf -f -i
 endef
