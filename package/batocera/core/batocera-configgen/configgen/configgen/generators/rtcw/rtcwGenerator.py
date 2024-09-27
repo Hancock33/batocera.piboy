@@ -13,6 +13,12 @@ rtcw_dst = "/userdata/roms/ports/rtcw/main"
 
 class RtcwGenerator(Generator):
 
+    def getHotkeysContext(self):
+        return {
+            "name": "iortcw",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ESC", "save_state": "KEY_F5", "restore_state": "KEY_F9" }
+        }
+
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
         shutil.copytree(rtcw_src, rtcw_dst, dirs_exist_ok=True)
