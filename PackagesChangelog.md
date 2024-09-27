@@ -1,17 +1,21 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|7c43b74063b150016152a9bcd505589b0e4e6e2a|Sept 27, 2024
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|7c43b74063b150016152a9bcd505589b0e4e6e2a|Sept 27, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|2cb124bd3ae0392a3fd7b683b55790d2fe826da8|Sept 27, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|036e11f7a82f6fb8ce4836278b6f1365400c83a5|Sept 27, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|1f286934b75a99e6d7f03852489c529ff4147160|Sept 27, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.173|Sept 27, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|6b383e40e0f79a0017b9e1fd59f8de27a951a6f8|Sept 27, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|4ba4268282c853d854df1ac1df8110a500a6716f|Sept 27, 2024
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|88adaa9d2d1d9b15e1f6b5493861dffb46bdc7ff|Sept 27, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-09-27|Sept 27, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|6da55ab0bc0472dbf0724c89c98f040744e63d9a|Sept 27, 2024
+Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|0ed836df469e08b2fcfcb11bc880d0347f20ffa9|Sept 27, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45347|Sept 27, 2024
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|6f65ec382cb847ade606bacdaf71eb8c04c9cb15|Sept 27, 2024
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2024.09|Sept 27, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|951fb27e0f79efc9838f580dc0f781f62cbc3b9b|Sept 27, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|93dc8fce10bf7ee7da52aeead17723beea1157d7|Sept 27, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|42e60bc7c52d49805a74d19745574e28d76ab46f|Sept 27, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|43115ab3455d30eadd6604ffec6cc9ce908760a4|Sept 27, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|5b6204fe9658108026ba2c20cbcd7c8b0e75a1f0|Sept 27, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|92aeb01ebbc60c3aafd8d6b8fde98e6307840040|Sept 27, 2024
@@ -63,8 +67,6 @@ Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|23ed97401559d3f8
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|7d00e9e28aafa115f557d7283335756b5ff2172d|Sept 25, 2024
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|0795bd9936d640f6d46a6137a80f790e7d3ca1cf|Sept 25, 2024
 Emulators|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.18.r1.g3dfacea3|Sept 25, 2024
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|7b92b442c7e35888b67f2f8e18e839876d8eb13d|Sept 24, 2024
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|7b92b442c7e35888b67f2f8e18e839876d8eb13d|Sept 24, 2024
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|2eb6d44c2c5e366e05946e3e36ec596bd73eed10|Sept 24, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|637bb3ede2ecb6e0a5fa3889c3453025ef8b6602|Sept 24, 2024
 Utils|[rclone](http://github.com/rclone/rclone)|v1.68.1|Sept 24, 2024
@@ -81,8 +83,6 @@ Emulators|[libpinmame](http://github.com/vpinball/pinmame)|1a2f0a14cd6edd76d5795
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.3|Sept 23, 2024
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|e226068f979cd8fbfc3be9780d16cfb1405095b0|Sept 23, 2024
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|e70ee1608f9bc3a075c85ce1aab0cf9074201f12|Sept 23, 2024
-Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|a94e36df15c7f486bb550f584514d12faa26e8f9|Sept 22, 2024
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|7003e54e510fa2169a9434cdb8d608bff7f7be1e|Sept 22, 2024
 Utils|[btop](http://github.com/aristocratos/btop)|v1.4.0|Sept 22, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|1b138de1023272b039273d7bbc8f57573073bd25|Sept 22, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|80136a8d80e8124896cdfb97badcc85e8ef2facd|Sept 22, 2024
