@@ -9,6 +9,7 @@ Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.173|Sept 27, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|6b383e40e0f79a0017b9e1fd59f8de27a951a6f8|Sept 27, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|88adaa9d2d1d9b15e1f6b5493861dffb46bdc7ff|Sept 27, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-09-27|Sept 27, 2024
+Emulators|[scummvm](http://github.com/scummvm/scummvm)|ec0c864c98144d85032b57a14cb87fafb7fe7ac2|Sept 27, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|6da55ab0bc0472dbf0724c89c98f040744e63d9a|Sept 27, 2024
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|0ed836df469e08b2fcfcb11bc880d0347f20ffa9|Sept 27, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45347|Sept 27, 2024
@@ -34,7 +35,8 @@ Emulators|[libretro-kronos](http://github.com/FCare/kronos)|986e6ef004fb47d5f984
 Emulators|[libretro-mame](http://github.com/sonninnos/mame)|231b5e6d621ed93168ad19eed6c0e3390d4e81ff|Sept 27, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|4b0b6b5d37406f1bb8a4d58ec4a378d756082569|Sept 27, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|6b383e40e0f79a0017b9e1fd59f8de27a951a6f8|Sept 27, 2024
-Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20230927|Sept 27, 2024
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|ec0c864c98144d85032b57a14cb87fafb7fe7ac2|Sept 27, 2024
+Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20240927|Sept 27, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|b3f3d00d3becaa743a648154e0cc19f69ca7ea0f|Sept 26, 2024
 Emulators|[ryujinx](https://github.com/Ryujinx/Ryujinx.git)|1.1.1400|Sept 26, 2024
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|50a3aa3d42ed1c0c4d829c4ca78bca20699c62c3|Sept 26, 2024
@@ -53,7 +55,6 @@ Emulators|[flycast](https://github.com/flyinghead/flycast.git)|7907100b9cffe326d
 Emulators|[hatari](http://github.com/hatari/hatari)|17bec54ec9a194d8311553f3fa12011ce81beecb|Sept 25, 2024
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|38671fab79898d60525143c091e627c07b5677ab|Sept 25, 2024
 Emulators|[mame](http://github.com/mamedev/mame)|mame0270|Sept 25, 2024
-Emulators|[scummvm](http://github.com/scummvm/scummvm)|23ed97401559d3f874996d318d237795be5107b2|Sept 25, 2024
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|1d1446f808a44b144aa5502a5089b7d437e06041|Sep 25, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|70e034efc57379ae90653987b0406a8ee8a659df|Sept 25, 2024
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|15.0.0|Sept 25, 2024
@@ -63,7 +64,6 @@ Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|7907100b
 Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|603c1dd5b6e8464dddce2ef299cad201d1e02ddb|Sept 25, 2024
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|527564f2748901068a5fef891c5073a4d6cd089b|Sept 25, 2024
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|1a534dee02a093c7812d23632f2bfd6779d1c934|Sept 25, 2024
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|23ed97401559d3f874996d318d237795be5107b2|Sept 25, 2024
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|7d00e9e28aafa115f557d7283335756b5ff2172d|Sept 25, 2024
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|0795bd9936d640f6d46a6137a80f790e7d3ca1cf|Sept 25, 2024
 Emulators|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.18.r1.g3dfacea3|Sept 25, 2024
