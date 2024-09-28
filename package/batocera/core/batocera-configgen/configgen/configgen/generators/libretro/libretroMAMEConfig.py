@@ -428,6 +428,7 @@ def generateMAMEConfigs(playersControllers, system, rom, guns):
     if not system.name == "ti99":
         commandLine += [ "-pluginspath", "/usr/bin/mame/plugins/;/userdata/saves/mame/plugins" ]
         commandLine += [ "-homepath" , "/userdata/saves/mame/plugins/" ]
+    if not system.name == "cdi":
         commandLine += [ "-samplepath", "/userdata/bios/mame/samples/" ]
     if not os.path.exists("/userdata/saves/mame/plugins/"):
         os.makedirs("/userdata/saves/mame/plugins/")
