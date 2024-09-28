@@ -1,11 +1,8 @@
-#!/usr/bin/env python
-import Command
-import batoceraFiles
-from generators.Generator import Generator
-import shutil
 import os.path
-from os import environ
-import configparser
+
+from ... import Command
+from ... import batoceraFiles
+from ..Generator import Generator
 
 cfg_fzero = batoceraFiles.dolphinTriforceGameSettings + "/SBGG.ini"
 cfg_vs42006 = batoceraFiles.dolphinTriforceGameSettings + "/SBLL.ini"

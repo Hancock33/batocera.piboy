@@ -9,13 +9,13 @@ from ... import batoceraFiles
 from ... import controllersConfig
 from ..Generator import Generator
 from . import dolphinTriforceControllers
-
+from . import dolphinTriforceGameConfig
 
 class DolphinTriforceGenerator(Generator):
 
     def getHotkeysContext(self):
         return {
-            "name": "dolphin",
+            "name": "dolphin-triforce",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
         }
 
