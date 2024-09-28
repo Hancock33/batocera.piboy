@@ -1,47 +1,76 @@
 diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
-index c50cd71e..a272da3a 100644
+index b2c82237..88ed39b2 100644
 --- a/src/osdep/amiberry.cpp
 +++ b/src/osdep/amiberry.cpp
-@@ -4065,36 +4065,36 @@ static void init_amiberry_paths(const std::string& data_directory, const std::st
+@@ -4064,11 +4064,10 @@ static void init_amiberry_paths(const std::string& data_directory, const std::st
+ 	amiberry_conf_file = data_dir;
  	amiberry_conf_file.append("amiberry.conf");
  #else
- 	data_dir = data_directory;
+-	data_dir = data_directory;
+-    data_dir.append("/data/");
++	data_dir = "/usr/share/amiberry/data/";
+ 
 -	config_path = config_directory;
+-    plugins_dir = plugins_directory;
 +	config_path = "/userdata/system/configs/amiberry/conf";
- 	controllers_path = whdboot_path = whdload_arch_path = floppy_path = harddrive_path = cdrom_path =
- 		logfile_path = rom_path = rp9_path = saveimage_dir = savestate_dir = ripper_path =
- 		input_dir = screenshot_dir = nvram_dir = plugins_dir = video_dir = 
++	plugins_dir = "/usr/share/amiberry/plugins/";
+     // Just in case this is missing, and we need to create it (e.g. not installed system-wide)
+     if (!my_existsdir(plugins_dir.c_str()))
+         my_mkdir(plugins_dir.c_str());
+@@ -4078,7 +4077,7 @@ static void init_amiberry_paths(const std::string& data_directory, const std::st
+ 		input_dir = screenshot_dir = nvram_dir = video_dir =
  		home_directory;
  
 -	controllers_path.append("/controllers/");
--	data_dir.append("/data/");
--	whdboot_path.append("/whdboot/");
 +	controllers_path = "/userdata/system/configs/amiberry/conf/retroarch/inputs";
-+	data_dir = "/usr/share/amiberry/data/";
+     if (!my_existsdir(controllers_path.c_str()))
+     {
+         my_mkdir(controllers_path.c_str());
+@@ -4093,7 +4092,7 @@ static void init_amiberry_paths(const std::string& data_directory, const std::st
+         std::string command = "chmod -R 755 " + controllers_path;
+     }
+ 
+-	whdboot_path.append("/whdboot/");
 +	whdboot_path = "/usr/share/amiberry/whdboot/";
- 	whdload_arch_path.append("/lha/");
- 	floppy_path.append("/floppies/");
- 	harddrive_path.append("/harddrives/");
- 	cdrom_path.append("/cdroms/");
+     if (!my_existsdir(whdboot_path.c_str()))
+     {
+         my_mkdir(whdboot_path.c_str());
+@@ -4124,9 +4123,9 @@ static void init_amiberry_paths(const std::string& data_directory, const std::st
+     if (!my_existsdir(cdrom_path.c_str()))
+         my_mkdir(cdrom_path.c_str());
+ 
 -	logfile_path.append("/amiberry.log");
--	rom_path.append("/kickstarts/");
 +	logfile_path = "/usrdata/system/logs/amiberry.log";
+ 
+-	rom_path.append("/roms/");
 +	rom_path = "/userdata/bios/amiga";
- 	rp9_path.append("/rp9/");
+     if (!my_existsdir(rom_path.c_str()))
+     {
+         my_mkdir(rom_path.c_str());
+@@ -4145,11 +4144,11 @@ static void init_amiberry_paths(const std::string& data_directory, const std::st
+     if (!my_existsdir(rp9_path.c_str()))
+         my_mkdir(rp9_path.c_str());
+ 
 -	saveimage_dir.append("/savestates/");
--	savestate_dir.append("/savestates/");
 +	saveimage_dir = "/userdata/saves/amiga/";
+     if (!my_existsdir(saveimage_dir.c_str()))
+         my_mkdir(saveimage_dir.c_str());
+ 
+-	savestate_dir.append("/savestates/");
 +	savestate_dir = "/userdata/saves/amiga/";
- 	ripper_path.append("/ripper/");
- 	input_dir.append("/inputrecordings/");
+     if (!my_existsdir(savestate_dir.c_str()))
+         my_mkdir(savestate_dir.c_str());
+ 
+@@ -4161,7 +4160,7 @@ static void init_amiberry_paths(const std::string& data_directory, const std::st
+     if (!my_existsdir(input_dir.c_str()))
+         my_mkdir(input_dir.c_str());
+ 
 -	screenshot_dir.append("/screenshots/");
 +	screenshot_dir = "/userdata/screenshots/";
- 	nvram_dir.append("/nvram/");
--	plugins_dir.append("/plugins/");
-+	plugins_dir = "/usr/share/amiberry/plugins/";
- 	video_dir.append("/videos/");
+     if (!my_existsdir(screenshot_dir.c_str()))
+         my_mkdir(screenshot_dir.c_str());
  
- 	amiberry_conf_file = config_path;
+@@ -4180,7 +4179,7 @@ static void init_amiberry_paths(const std::string& data_directory, const std::st
  	amiberry_conf_file.append("/amiberry.conf");
  #endif
  
