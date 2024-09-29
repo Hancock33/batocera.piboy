@@ -1,10 +1,15 @@
-#!/usr/bin/env python
-
-import Command
-from generators.Generator import Generator
 import os
 
+from ... import Command
+from ..Generator import Generator
+
 class PygameGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "pygame",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["pygame", rom]

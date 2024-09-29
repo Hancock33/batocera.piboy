@@ -1,19 +1,10 @@
-#!/usr/bin/env python
-from PIL import Image, ImageOps
 from pathlib import Path
-from settings.unixSettings import UnixSettings
-from utils.logger import get_logger
 from xml.dom import minidom
 import xml.etree.ElementTree as ET
-import Command
-import batoceraFiles
 import codecs
-import configparser
 import csv
 import os
 import shutil
-import subprocess
-import sys
 import zipfile
 
 # Define RetroPad inputs for mapping
@@ -437,6 +428,7 @@ def generateMAMEConfigs(playersControllers, system, rom, guns):
     if not system.name == "ti99":
         commandLine += [ "-pluginspath", "/usr/bin/mame/plugins/;/userdata/saves/mame/plugins" ]
         commandLine += [ "-homepath" , "/userdata/saves/mame/plugins/" ]
+    if not system.name == "cdi":
         commandLine += [ "-samplepath", "/userdata/bios/mame/samples/" ]
     if not os.path.exists("/userdata/saves/mame/plugins/"):
         os.makedirs("/userdata/saves/mame/plugins/")
@@ -811,7 +803,10 @@ def generateSpecialPortElement(pad, config, tag, nplayer, padindex, mapping, key
     xml_newseq = config.createElement("newseq")
     xml_newseq.setAttribute("type", "standard")
     xml_port.appendChild(xml_newseq)
-    value = config.createTextNode(input2definition(pad, key, input, padindex + 1, reversed, 0))
+    txt = input2definition(pad, key, input, padindex + 1, reversed, 0)
+    if mapping == "COIN" + str(nplayer) and nplayer == 1:
+        txt = txt + " OR KEYCODE_{}_F{}".format(nplayer, str(nplayer + 11)) # f12 for player 1
+    value = config.createTextNode(txt)
     xml_newseq.appendChild(value)
     return xml_port
 

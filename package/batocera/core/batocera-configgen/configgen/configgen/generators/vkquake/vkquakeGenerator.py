@@ -2,9 +2,11 @@
 import os
 import shutil
 from os import path
-import Command
-from generators.Generator import Generator
-import controllersConfig
+
+from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
+from ..Generator import Generator
 
 q1_src = "/usr/share/game_assets/quake1/id1/vkquake.pak"
 q1_dst = "/userdata/roms/ports/quake1/id1/vkquake.pak"

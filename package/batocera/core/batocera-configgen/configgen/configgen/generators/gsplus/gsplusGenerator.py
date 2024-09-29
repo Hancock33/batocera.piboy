@@ -1,17 +1,24 @@
-#!/usr/bin/env python
-import Command
-import batoceraFiles
-from generators.Generator import Generator
-from settings.unixSettings import UnixSettings
-import controllersConfig
 import os
-from utils.logger import get_logger
+
+from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
+from ...settings.unixSettings import UnixSettings
+from ...utils.logger import get_logger
+from ..Generator import Generator
 
 eslog = get_logger(__name__)
 CONFIGDIR  = batoceraFiles.CONF + '/GSplus'
 CONFIGFILE = CONFIGDIR + '/config.txt'
 
 class GSplusGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "gsplus",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_F4" }
+        }
+
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         if not os.path.exists(CONFIGDIR):
             os.makedirs(CONFIGDIR)

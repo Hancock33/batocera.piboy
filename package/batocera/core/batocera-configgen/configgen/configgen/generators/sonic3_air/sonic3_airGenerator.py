@@ -1,13 +1,19 @@
-#!/usr/bin/env python
-import Command
-from generators.Generator import Generator
-import controllersConfig
 import os
 import shutil
-import batoceraFiles
 import json
 
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
+
 class Sonic3AIRGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "sonic3_air",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "save_state": "KEY_F5", "restore_state": "KEY_F8" }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 

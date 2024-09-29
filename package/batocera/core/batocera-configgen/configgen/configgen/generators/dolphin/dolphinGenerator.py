@@ -1,17 +1,16 @@
-#!/usr/bin/env python
-import Command
-import batoceraFiles
-from generators.Generator import Generator
-import shutil
 import os.path
 from os import environ
 import configparser
-from . import dolphinControllers
-from . import dolphinSYSCONF
-import controllersConfig
 import subprocess
 
-from utils.logger import get_logger
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ...utils.logger import get_logger
+from ..Generator import Generator
+from . import dolphinControllers
+from . import dolphinSYSCONF
+
 eslog = get_logger(__name__)
 
 class DolphinGenerator(Generator):
@@ -532,6 +531,12 @@ class DolphinGenerator(Generator):
             return gameResolution["width"] / gameResolution["height"]
 
         return 4/3
+
+    def getHotkeysContext(self):
+        return {
+            "name": "dolphin",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
 # Get the language from the environment if user didn't set it in ES.
 # Seem to be only for the gamecube. However, while this is not in a gamecube section

@@ -1,14 +1,13 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import batoceraFiles
 import os
 import codecs
-from Emulator import Emulator
-from utils.logger import get_logger
 import glob
 import configparser
 import re
+
+from ... import batoceraFiles
+from ...utils.logger import get_logger
 
 eslog = get_logger(__name__)
 

@@ -1,16 +1,23 @@
-#!/usr/bin/env python
-import Command
-import batoceraFiles
-from generators.Generator import Generator
 import shutil
 import os.path
 from os import environ
 import configparser
-from . import dolphinTriforceControllers
-from . import dolphinTriforceGameConfig
 import subprocess
 
+from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
+from ..Generator import Generator
+from . import dolphinTriforceControllers
+from . import dolphinTriforceGameConfig
+
 class DolphinTriforceGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "dolphin-triforce",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         if not os.path.exists(os.path.dirname(batoceraFiles.dolphinTriforceIni)):

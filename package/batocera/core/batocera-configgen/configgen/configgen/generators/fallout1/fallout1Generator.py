@@ -1,11 +1,11 @@
-#!/usr/bin/env python
-import Command
-from generators.Generator import Generator
-import controllersConfig
 import configparser
 import os
 import shutil
-import batoceraFiles
+
+from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
+from ..Generator import Generator
 
 fout1ConfigDir = batoceraFiles.CONF + "/fallout1"
 fout1ConfigFile = fout1ConfigDir + "/fallout.cfg"
@@ -17,6 +17,12 @@ fout1ExeFile = fout1RomDir + "/fallout1-ce"
 fout1SourceFile = '/usr/bin/fallout1-ce'
 
 class Fallout1Generator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "fallout1",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ESC", "save_state": "KEY_F6", "restore_state": "KEY_F7" }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 

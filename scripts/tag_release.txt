@@ -2,10 +2,10 @@
 alsa-ucm-conf.mk
 appstream-glib.mk
 batocera-settings.mk
+cabextract.mk
 drastic.mk
 ecm.mk
 fpinball.mk
-glslang.mk
 liblc3.mk
 ryujinx.mk
 shaderc.mk

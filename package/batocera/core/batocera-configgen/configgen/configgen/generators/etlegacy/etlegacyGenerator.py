@@ -1,12 +1,18 @@
-#!/usr/bin/env python
-import Command
-from generators.Generator import Generator
-import controllersConfig
 import os
 import shutil
-import batoceraFiles
+
+from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
+from ..Generator import Generator
 
 class ETLegacyGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "etlegacy",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ESC" }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
@@ -27,9 +33,11 @@ class ETLegacyGenerator(Generator):
         # Define the options to add or modify
         options_to_set = {
             "seta r_mode": "-1",
+            "seta r_noborder": "1",
             "seta r_fullscreen": "1",
             "seta r_allowResize": "0",
             "seta r_centerWindow": "1",
+            "seta r_inGameVideo": "1",
             "seta r_customheight": f'"{gameResolution["height"]}"',
             "seta r_customwidth": f'"{gameResolution["width"]}"'
         }

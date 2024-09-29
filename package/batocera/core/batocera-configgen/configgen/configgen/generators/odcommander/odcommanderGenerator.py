@@ -1,8 +1,6 @@
-#!/usr/bin/env python
-
-from generators.Generator import Generator
-import Command
-import controllersConfig
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 class OdcommanderGenerator(Generator):
 
@@ -12,3 +10,9 @@ class OdcommanderGenerator(Generator):
         return Command.Command(array=commandArray,env={
             "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
         })
+
+    def getHotkeysContext(self):
+        return {
+            "name": "odcommander",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

@@ -1,27 +1,23 @@
-#!/usr/bin/env python
-
-from generators.Generator import Generator
-import batoceraFiles
-import Command
 import shutil
 import os
-from utils.logger import get_logger
 from os import path
-from os import environ
-import configparser
 from xml.dom import minidom
 import xml.etree.ElementTree as ET
-import codecs
 import shutil
-import utils.bezels as bezelsUtil
 import subprocess
 from xml.dom import minidom
-from PIL import Image, ImageOps
-from . import mameControllers
+from PIL import Image
 from pathlib import Path
 import csv
-import controllersConfig
-import utils.videoMode as videoMode
+
+from ...import batoceraFiles
+from ...import Command
+from ...import controllersConfig
+from ...utils.logger import get_logger
+from ...utils import bezels as bezelsUtil
+from ...utils import videoMode as videoMode
+from ..Generator import Generator
+from . import mameControllers
 
 eslog = get_logger(__name__)
 
@@ -29,6 +25,12 @@ class MameGenerator(Generator):
 
     def supportsInternalBezels(self):
         return True
+
+    def getHotkeysContext(self):
+        return {
+            "name": "mame",
+            "keys": { "exit": "KEY_ESC", "menu": "KEY_TAB", "coin": "KEY_5" }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         # Extract "<romfile.zip>"

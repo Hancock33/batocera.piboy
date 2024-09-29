@@ -1,15 +1,20 @@
-#!/usr/bin/env python
-import Command
-import batoceraFiles
-from generators.Generator import Generator
 import os.path
-import glob
-from . import viceConfig
-from . import viceControllers
-import controllersConfig
 import zipfile
 
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
+from . import viceConfig
+from . import viceControllers
+
 class ViceGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "vice",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     def getResolutionMode(self, config):
         return 'default'

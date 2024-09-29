@@ -1,11 +1,10 @@
-#!/usr/bin/env python
-import Command
-from generators.Generator import Generator
-import controllersConfig
 import configparser
 import os
-import shutil
-import batoceraFiles
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 forceConfigDir = batoceraFiles.CONF + "/theforceengine"
 forceModsDir = forceConfigDir + "/Mods"
@@ -14,6 +13,12 @@ forceModFile = forceModsDir + "/" + forcePatchFile
 forceConfigFile = forceConfigDir + "/settings.ini"
 
 class TheForceEngineGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "theforceengine",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 

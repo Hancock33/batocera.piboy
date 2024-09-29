@@ -8,6 +8,13 @@ from os import path
 import shlex
 
 class GzdoomGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "gzdoom",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
+
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         config_dir = f"{batoceraFiles.CONF}/gzdoom"
         if not os.path.exists(config_dir):

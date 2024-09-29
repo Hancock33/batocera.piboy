@@ -1,17 +1,21 @@
-#!/usr/bin/env python
-
-from generators.Generator import Generator
-import Command
 import os
 from os import path
-import controllersConfig
-import batoceraFiles
 import codecs
-from utils.logger import get_logger
+
+from ... import Command
+from ... import batoceraFiles
+from ...utils.logger import get_logger
+from ..Generator import Generator
 
 eslog = get_logger(__name__)
 
 class MelonDSGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "melonds",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         romBasename = path.basename(rom)

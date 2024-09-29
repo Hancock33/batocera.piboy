@@ -1,21 +1,26 @@
-#!/usr/bin/env python
-
-import Command
-import batoceraFiles
-from generators.Generator import Generator
-import controllersConfig
 import os
 from os import path
 import ruamel.yaml
 import ruamel.yaml.util
-from distutils.dir_util import copy_tree
 import shutil
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 vitaConfig = batoceraFiles.CONF + '/vita3k'
 vitaSaves = batoceraFiles.SAVES + '/psvita'
 vitaConfigFile = vitaConfig + '/config.yml'
 
 class Vita3kGenerator(Generator):
+
+
+    def getHotkeysContext(self):
+        return {
+            "name": "vita3k",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ENTER" }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 

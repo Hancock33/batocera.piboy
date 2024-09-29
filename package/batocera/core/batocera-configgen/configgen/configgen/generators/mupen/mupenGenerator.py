@@ -1,14 +1,21 @@
-#!/usr/bin/env python
-import Command
-import batoceraFiles
-from generators.Generator import Generator
 import configparser
 import os
+
+from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
+from ..Generator import Generator
 from . import mupenConfig
 from . import mupenControllers
 import glob
 
 class MupenGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "mupen64",
+            "keys": { "exit": "KEY_ESC", "save_state": "KEY_F5", "restore_state": "KEY_F7", "menu": "KEY_P" }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 

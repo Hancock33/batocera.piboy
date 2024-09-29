@@ -1,25 +1,28 @@
-#!/usr/bin/env python
-
-from generators.Generator import Generator
-import batoceraFiles
-import Command
 import shutil
 import os
 from os import path
-from os import environ
 import configparser
 import ruamel.yaml as yaml
-import json
 import re
-import controllersConfig
-from . import rpcs3Controllers
 import yaml
 import subprocess
 
-from utils.logger import get_logger
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ...utils.logger import get_logger
+from ..Generator import Generator
+from . import rpcs3Controllers
+
 eslog = get_logger(__name__)
 
 class Rpcs3Generator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "rpcs3",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 

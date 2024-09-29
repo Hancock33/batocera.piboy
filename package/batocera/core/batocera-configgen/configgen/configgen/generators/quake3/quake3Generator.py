@@ -1,12 +1,9 @@
-#!/usr/bin/env python
-import Command
-import batoceraFiles
-from generators.Generator import Generator
 import shutil
 import os.path
-import configparser
-import controllersConfig
 from shutil import copyfile
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 from . import quake3Config
 
 class Quake3Generator(Generator):
@@ -33,3 +30,9 @@ class Quake3Generator(Generator):
         if gameResolution["width"] / float(gameResolution["height"]) > ((16.0 / 9.0) - 0.1):
             return 16/9
         return 4/3
+
+    def getHotkeysContext(self):
+        return {
+            "name": "ioquake3",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

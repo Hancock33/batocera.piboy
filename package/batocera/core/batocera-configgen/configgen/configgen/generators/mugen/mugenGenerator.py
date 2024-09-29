@@ -1,11 +1,17 @@
-#!/usr/bin/env python
-from generators.Generator import Generator
-import Command
-import os
-import controllersConfig
 import re
+import os
+
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 class MugenGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "mugen",
+            "keys": { "exit": ["KEY_ESC"] }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 

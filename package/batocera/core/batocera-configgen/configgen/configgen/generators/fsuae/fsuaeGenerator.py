@@ -1,17 +1,22 @@
-#!/usr/bin/env python
-
-import Command
-import batoceraFiles
 import zipfile
-import shutil
-from generators.Generator import Generator
 from os import path
+import shutil
+
+from ... import Command
+from ... import batoceraFiles
+from ...utils.logger import get_logger
+from ..Generator import Generator
 from . import fsuaeControllers
-from utils.logger import get_logger
 
 eslog = get_logger(__name__)
 
 class FsuaeGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "fsuae",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     # from one file (x1.zip), get the list of all existing files with the same extension + last char (as number) suffix
     # for example, "/path/toto0.zip" becomes ["/path/toto0.zip", "/path/toto1.zip", "/path/toto2.zip"]

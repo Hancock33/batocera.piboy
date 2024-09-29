@@ -1,13 +1,20 @@
-#!/usr/bin/env python
+from __future__ import annotations
 
-import xml.etree.ElementTree as ET
-import batoceraFiles
 import os
-import pyudev
-import evdev
 import re
+import xml.etree.ElementTree as ET
+from collections.abc import Mapping
+from typing import TYPE_CHECKING, TypeAlias
 
-from utils.logger import get_logger
+import evdev
+import pyudev
+
+from .batoceraPaths import BATOCERA_ES_DIR, ES_GAMES_METADATA, USER_ES_DIR
+from .utils.logger import get_logger
+
+if TYPE_CHECKING:
+    from pathlib import Path
+
 eslog = get_logger(__name__)
 
 """Default mapping of Batocera keys to SDL_GAMECONTROLLERCONFIG keys."""
@@ -23,16 +30,31 @@ _DEFAULT_SDL_MAPPING = {
     'joystick2up': 'righty', 'joystick2left': 'rightx', 'hotkey': 'guide'
 }
 
+
 class Input:
-    def __init__(self, name, type, id, value, code):
+    def __init__(self, name: str, type: str, id: str, value: str, code: str) -> None:
         self.name = name
         self.type = type
         self.id = id
         self.value = value
         self.code = code
 
+InputMapping: TypeAlias = Mapping[str, Input]
+InputDict: TypeAlias = dict[str, Input]
+
 class Controller:
-    def __init__(self, configName, type, guid, player, index="-1", realName="", inputs=None, dev=None, nbbuttons=None, nbhats=None, nbaxes=None):
+    def __init__(
+        self,
+        configName: str,
+        type: str,
+        guid: str,
+        player: str | None,
+        index: int | str ="-1",
+        realName: str = "",
+        inputs: InputMapping | None = None,
+        dev: str | None = None,
+        nbbuttons: int | None = None, nbhats: int | None = None, nbaxes: int | None = None
+    ) -> None:
         self.type = type
         self.configName = configName
         self.index = index
@@ -43,19 +65,20 @@ class Controller:
         self.nbbuttons = nbbuttons
         self.nbhats = nbhats
         self.nbaxes = nbaxes
-        if inputs == None:
-            self.inputs = dict()
-        else:
-            self.inputs = inputs
+        self.inputs: InputDict = dict(inputs) if inputs is not None else dict()
 
     def generateSDLGameDBLine(self):
         return _generateSdlGameControllerConfig(self)
 
+ControllerMapping: TypeAlias = Mapping[str, Controller]
+ControllerDict: TypeAlias = dict[str, Controller]
+
+
 # Load all controllers from the es_input.cfg
 def loadAllControllersConfig():
     controllers = dict()
-    for conffile in ["/usr/share/emulationstation/es_input.cfg", batoceraFiles.CONF + '/emulationstation/es_input.cfg']:
-      if os.path.exists(conffile):
+    for conffile in [BATOCERA_ES_DIR / "es_input.cfg", USER_ES_DIR / 'es_input.cfg']:
+      if conffile.exists():
           tree = ET.parse(conffile)
           root = tree.getroot()
           for controller in root.findall(".//inputConfig"):
@@ -71,8 +94,8 @@ def loadAllControllersConfig():
 # Load all controllers from the es_input.cfg
 def loadAllControllersByNameConfig():
     controllers = dict()
-    for conffile in ["/usr/share/emulationstation/es_input.cfg", batoceraFiles.CONF + '/emulationstation/es_input.cfg']:
-        if os.path.exists(conffile):
+    for conffile in [BATOCERA_ES_DIR / "es_input.cfg", USER_ES_DIR / 'es_input.cfg']:
+        if conffile.exists():
             tree = ET.parse(conffile)
             root = tree.getroot()
             for controller in root.findall(".//inputConfig"):
@@ -201,7 +224,7 @@ def generateSdlGameControllerConfig(controllers):
         configs.append(controller.generateSDLGameDBLine())
     return "\n".join(configs)
 
-def writeSDLGameDBAllControllers(controllers, outputFile = "/tmp/gamecontrollerdb.txt"):
+def writeSDLGameDBAllControllers(controllers, outputFile: str | Path = "/tmp/gamecontrollerdb.txt"):
     with open(outputFile, "w") as text_file:
         text_file.write(generateSdlGameControllerConfig(controllers))
     return outputFile
@@ -310,8 +333,9 @@ def mouseButtonToCode(button):
     return None
 
 def getGuns():
-    import pyudev
     import re
+
+    import pyudev
 
     guns = {}
     context = pyudev.Context()
@@ -371,7 +395,7 @@ def shortNameFromPath(path):
 
 def getGamesMetaData(system, rom):
     # load the database
-    tree = ET.parse(batoceraFiles.esGamesMetadata)
+    tree = ET.parse(ES_GAMES_METADATA)
     root = tree.getroot()
     game = shortNameFromPath(rom)
     res = {}

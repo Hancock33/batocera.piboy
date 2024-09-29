@@ -1,22 +1,25 @@
-#!/usr/bin/env python3
-
-from generators.Generator import Generator
-import Command
 import os
-import batoceraFiles
 import subprocess
-import sys
 import shutil
 import stat
-from pathlib import Path, PureWindowsPath
+from pathlib import PureWindowsPath
 import configparser
 import filecmp
-import controllersConfig
 
-from utils.logger import get_logger
+from ... import Command
+from ... import controllersConfig
+from ...utils.logger import get_logger
+from ..Generator import Generator
+
 eslog = get_logger(__name__)
 
 class Model2EmuGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "model2emu",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         wineprefix = "/userdata/system/wine-bottles/model2"

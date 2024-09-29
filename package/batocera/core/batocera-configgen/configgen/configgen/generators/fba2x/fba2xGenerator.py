@@ -1,11 +1,10 @@
-#!/usr/bin/env python
-
-import batoceraFiles
-from generators.Generator import Generator
 import os
 import configparser
-import io
-import Command
+
+from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
+from ..Generator import Generator
 from . import fba2xConfig
 from . import fba2xControllers
 

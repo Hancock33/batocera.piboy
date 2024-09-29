@@ -1,9 +1,9 @@
-#!/usr/bin/env python
-import Command
-import batoceraFiles
-from generators.Generator import Generator
 import os.path
-import glob
+
+from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
+from ..Generator import Generator
 
 class DosBoxGenerator(Generator):
 
@@ -29,3 +29,9 @@ class DosBoxGenerator(Generator):
             commandArray.append(f"""{batoceraFiles.dosboxConfig}""")
 
         return Command.Command(array=commandArray)
+
+    def getHotkeysContext(self):
+        return {
+            "name": "dosbox",
+            "keys": { "exit": ["KEY_LEFTCTRL", "KEY_F9"] }
+        }

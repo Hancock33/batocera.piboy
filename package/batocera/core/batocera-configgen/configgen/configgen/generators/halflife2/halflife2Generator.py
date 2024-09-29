@@ -1,10 +1,11 @@
-#!/usr/bin/env python
 import os
 import shutil
 from os import path
-import Command
-from generators.Generator import Generator
-import controllersConfig
+
+from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
+from ..Generator import Generator
 
 hl2_src = "/usr/bin/hl2/hl2_assets"
 hl2_dst = "/userdata/roms/ports/halflife2/hl2"

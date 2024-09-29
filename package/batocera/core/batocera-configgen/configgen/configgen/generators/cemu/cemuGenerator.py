@@ -1,21 +1,18 @@
-#!/usr/bin/env python
-
-from generators.Generator import Generator
-import Command
 import os
 from os import path
 from os import environ
-import batoceraFiles
 from xml.dom import minidom
 import codecs
-import controllersConfig
-import shutil
-import filecmp
 import subprocess
 import glob
+
+from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
+from ...utils.logger import get_logger
+from ..Generator import Generator
 from . import cemuControllers
 
-from utils.logger import get_logger
 eslog = get_logger(__name__)
 
 cemuConfig  = batoceraFiles.CONF + '/cemu'
@@ -24,6 +21,12 @@ cemuSaves = '/userdata/saves/wiiu'
 cemuDatadir = '/usr/bin/cemu'
 
 class CemuGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "cemu",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     # disable hud & bezels for now - causes game issues
     def hasInternalMangoHUDCall(self):

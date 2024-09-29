@@ -3,8 +3,8 @@
 # supertux2
 #
 ################################################################################
-# Version: Commits on Sept 23, 2024
-SUPERTUX2_VERSION = aa31e7336e2c943f35a8436972536954058dded5
+# Version: Commits on Sept 29, 2024
+SUPERTUX2_VERSION = 0fbe13667e5603a179656a1723a674fc97f00e0c
 SUPERTUX2_SITE = https://github.com/SuperTux/supertux.git
 SUPERTUX2_SITE_METHOD=git
 SUPERTUX2_GIT_SUBMODULES=YES
@@ -28,8 +28,7 @@ define SUPERTUX2_INSTALL_TARGET_CMDS
 	touch $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2/SuperTux2.game
 	cp -a $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/supertux2/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2
 	ln -sf /userdata/roms/ports/supertux2 $(TARGET_DIR)/usr/share/supertux2
-	# copy libraries
-	cp -a $(@D)/buildroot-build/libLibPartioZip.so $(TARGET_DIR)/usr/lib
+	# copy binaries
 	cp -a $(@D)/buildroot-build/supertux2 $(TARGET_DIR)/usr/bin
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy

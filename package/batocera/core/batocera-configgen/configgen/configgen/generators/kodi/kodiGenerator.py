@@ -1,8 +1,7 @@
-#!/usr/bin/env python
-
-import Command
-from generators.Generator import Generator
-import batoceraFiles
+from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
+from ..Generator import Generator
 from . import kodiConfig
 
 class KodiGenerator(Generator):
@@ -13,3 +12,9 @@ class KodiGenerator(Generator):
         kodiConfig.writeKodiConfig(playersControllers)
         commandArray = ["kodi", rom]
         return Command.Command(array=commandArray)
+
+    def getHotkeysContext(self):
+        return {
+            "name": "kodi",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

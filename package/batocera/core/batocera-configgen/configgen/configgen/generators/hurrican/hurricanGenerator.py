@@ -1,9 +1,11 @@
-#!/usr/bin/env python
 import os
-from os import path
-import Command
-from generators.Generator import Generator
-import controllersConfig
+
+from ... import Command
+from ... import controllersConfig
+from ...utils.logger import get_logger
+from ..Generator import Generator
+
+eslog = get_logger(__name__)
 
 class HurricanGenerator(Generator):
 
@@ -43,3 +45,9 @@ class HurricanGenerator(Generator):
             env={
                 "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })
+
+    def getHotkeysContext(self):
+        return {
+            "name": "hurrican",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

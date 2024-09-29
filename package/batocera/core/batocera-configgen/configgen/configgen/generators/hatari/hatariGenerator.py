@@ -1,16 +1,20 @@
-#!/usr/bin/env python
-
-import Command
-from generators.Generator import Generator
-import controllersConfig
-from utils.logger import get_logger
 import os
 import configparser
-import batoceraFiles
+
+from ... import Command
+from ... import batoceraFiles
+from ...utils.logger import get_logger
+from ..Generator import Generator
 
 eslog = get_logger(__name__)
 
 class HatariGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "hatari",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 

@@ -1,11 +1,9 @@
-#!/usr/bin/env python
-import sys
 import os
-import batoceraFiles
-import configparser
-from settings.unixSettings import UnixSettings
 
-def generateRetroarchCustom():
+from ... import batoceraFiles
+from ...settings.unixSettings import UnixSettings
+
+def generateRetroarchCustom() -> None:
     # retroarchcustom.cfg
     if not os.path.exists(os.path.dirname(batoceraFiles.retroarchCustom)):
         os.makedirs(os.path.dirname(batoceraFiles.retroarchCustom))
@@ -83,12 +81,9 @@ def generateRetroarchCustom():
     # Set fps counter interval (in frames)
     retroarchSettings.save('fps_update_interval',               '"30"')
 
-    # Set fps counter interval (in frames)
-    retroarchSettings.save('fps_update_interval',               '"30"')
-
     retroarchSettings.write()
 
-def generateRetroarchCustomPathes(retroarchSettings):
+def generateRetroarchCustomPathes(retroarchSettings: UnixSettings) -> None:
     # Path Retroarch
     retroarchSettings.save('core_options_path',             '"/userdata/system/configs/retroarch/cores/retroarch-core-options.cfg"')
     retroarchSettings.save('assets_directory',              '"/usr/share/libretro/assets"')

@@ -1,14 +1,11 @@
-#!/usr/bin/env python3
-
-from generators.Generator import Generator
-import Command
 import os
-import sys
 import json
-import utils.videoMode as videoMode
-import controllersConfig
-import math
-from utils.logger import get_logger
+
+from ... import Command
+from ... import controllersConfig
+from ...utils import videoMode
+from ...utils.logger import get_logger
+from ..Generator import Generator
 
 eslog = get_logger(__name__)
 
@@ -216,6 +213,12 @@ def generate_keyb_bindings(keyb_id):
     return bindings
 
 class BigPEmuGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "bigpemu",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 

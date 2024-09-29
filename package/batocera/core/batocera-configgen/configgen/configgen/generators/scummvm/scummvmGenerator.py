@@ -1,17 +1,23 @@
-#!/usr/bin/env python
-import Command
-import batoceraFiles
-from generators.Generator import Generator
-import controllersConfig
 import os.path
 import glob
 import configparser
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 scummConfigDir = batoceraFiles.CONF + "/scummvm"
 scummConfigFile = scummConfigDir + "/scummvm.ini"
 scummExtra = "/userdata/bios/scummvm/extra"
 
 class ScummVMGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "scummvm",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         # crete /userdata/bios/scummvm/extra folder if it doesn't exist

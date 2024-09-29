@@ -1,8 +1,9 @@
-#!/usr/bin/env python
 import os
-import Command
-from generators.Generator import Generator
-import controllersConfig
+
+from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
+from ..Generator import Generator
 
 class WitchavenGenerator(Generator):
 
