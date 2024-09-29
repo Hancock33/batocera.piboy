@@ -3,8 +3,8 @@
 # evsieve
 #
 ################################################################################
-# Version: Commits on Sept 23, 2024
-EVSIEVE_VERSION = 0ea993532c5cea6afce03e4933f55041216e8fea
+# Version: Commits on Sept 29, 2024
+EVSIEVE_VERSION = 9ea34b0ff543dc8e0b2b1e811e16a8f956c13580
 EVSIEVE_SITE = $(call github,KarsMulder,evsieve,$(EVSIEVE_VERSION))
 EVSIEVE_LICENSE = GPLv2
 EVSIEVE_LICENSE_FILES = COPYING
