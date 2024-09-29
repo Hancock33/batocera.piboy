@@ -1347,6 +1347,18 @@ sufami:
     libretro:
       snes9x:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SNES9X] }
 
+tamagotchi:
+  name:                 Tamagotchi P1
+  manufacturer:         Bandai
+  release:              1996
+  hardware:             portable
+  extensions:           [b, bin, rom]
+  theme:                tamagotchi
+  platform:             tamagotchi
+  emulators:
+    libretro:
+      tamalibretro:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TAMALIBRETRO] }
+
 wswan:
   name:                 WonderSwan
   manufacturer:         Bandai
@@ -3094,6 +3106,7 @@ nds:
       desmume:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DESMUME]    }
       melonds:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MELONDS]    }
       melondsds:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MELONDS_DS] }
+      noods:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_NOODS]      }
     melonds:
       melonds:          { requireAnyOf: [BR2_PACKAGE_MELONDS] }
     drastic:
@@ -3195,6 +3208,7 @@ snes:
       snes9x:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SNES9X]      }
       bsnes:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BSNES]       }
       bsnes_hd:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BSNES_HD]    }
+      bsnes-jg:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BSNES_JG]    }
       mesens:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]      }
       supafaust:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SUPAFAUST]   }
   comment_en:           |
