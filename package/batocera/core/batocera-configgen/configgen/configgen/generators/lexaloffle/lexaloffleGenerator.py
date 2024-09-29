@@ -1,10 +1,9 @@
-#!/usr/bin/env python
-import Command
-import batoceraFiles
-from generators.Generator import Generator
-from utils.logger import get_logger
-import controllersConfig
 import os
+
+from ... import Command
+from ... import controllersConfig
+from ...utils.logger import get_logger
+from ..Generator import Generator
 
 eslog = get_logger(__name__)
 PICO8_BIN_PATH="/userdata/bios/pico-8/pico8"
@@ -16,6 +15,13 @@ VOX_CONTROLLERS="/userdata/system/.lexaloffle/Voxatron/sdl_controllers.txt"
 
 # Generator for the official pico8 binary from Lexaloffle
 class LexaloffleGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "lexaloffle",
+            "keys": { "exit": ["KEY_LEFTCTRL", "KEY_Q"] }
+        }
+
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         if (system.name == "pico8"):
             BIN_PATH=PICO8_BIN_PATH

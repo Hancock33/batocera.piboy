@@ -1,16 +1,15 @@
-#!/usr/bin/env python
-
-from generators.Generator import Generator
-import Command
 import os
 from os import environ
-import batoceraFiles
-import controllersConfig
 import filecmp
 import json
 import shutil
 import evdev
 from evdev import InputDevice
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 ryujinxConf = batoceraFiles.CONF + "/Ryujinx"
 ryujinxConfFile = ryujinxConf + "/Config.json"
@@ -78,6 +77,12 @@ ryujinxCtrl = {
 }
 
 class RyujinxGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "ryujinx",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         if not os.path.exists(ryujinxConf):

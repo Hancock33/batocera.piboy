@@ -1,24 +1,29 @@
-#!/usr/bin/env python
-
-from generators.Generator import Generator
-import Command
 import os
-import batoceraFiles
 import configparser
 from os import environ
 import subprocess
 
-from utils.logger import get_logger
+from ... import batoceraFiles
+from ... import Command
+from ...utils.logger import get_logger
+from ..Generator import Generator
+
 eslog = get_logger(__name__)
 
 class SuyuGenerator(Generator):
 
+    def getHotkeysContext(self):
+        return {
+            "name": "suyu",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
+
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
-        if not os.path.exists(batoceraFiles.CONF+"/suyu"):
-            os.makedirs(batoceraFiles.CONF+"/suyu")
+        if not os.path.exists(batoceraFiles.CONF+"/yuzu"):
+            os.makedirs(batoceraFiles.CONF+"/yuzu")
 
-        SuyuGenerator.writeSuyuConfig(batoceraFiles.CONF + "/suyu/qt-config.ini", system, playersControllers)
+        SuyuGenerator.writeSuyuConfig(batoceraFiles.CONF + "/yuzu/qt-config.ini", system, playersControllers)
 
         commandArray = ["/usr/bin/suyu", "-f", "-g", rom ]
         return Command.Command(array=commandArray, env={

@@ -1292,7 +1292,7 @@ lynx:
   manufacturer:         Atari
   release:              1989
   hardware:             portable
-  extensions:           [lnx, lyx, o, zip]
+  extensions:           [bll, lnx, lyx, o, zip, 7z]
   theme:                atarilynx
   platform:             atarilynx
   emulators:
@@ -1346,6 +1346,18 @@ sufami:
   emulators:
     libretro:
       snes9x:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SNES9X] }
+
+tamagotchi:
+  name:                 Tamagotchi P1
+  manufacturer:         Bandai
+  release:              1996
+  hardware:             portable
+  extensions:           [b, bin, rom]
+  theme:                tamagotchi
+  platform:             tamagotchi
+  emulators:
+    libretro:
+      tamalibretro:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TAMALIBRETRO] }
 
 wswan:
   name:                 WonderSwan
@@ -2221,6 +2233,18 @@ scummvm:
 
                         Para mais informações: https://wiki.batocera.org/systems:scummvm
 
+hyprscan:
+  name:                 HyperScan
+  manufacturer:         Mattel
+  release:              2006
+  hardware:             console
+  extensions:           [chd, cue, toc, nrg, gdi, iso, cdr, zip, 7z]
+  emulators:
+    libretro:
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+    mame:
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
+
 intellivision:
   name:                 Mattel Intellivision
   manufacturer:         Mattel
@@ -3094,6 +3118,7 @@ nds:
       desmume:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DESMUME]    }
       melonds:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MELONDS]    }
       melondsds:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MELONDS_DS] }
+      noods:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_NOODS]      }
     melonds:
       melonds:          { requireAnyOf: [BR2_PACKAGE_MELONDS] }
     drastic:
@@ -3195,6 +3220,7 @@ snes:
       snes9x:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SNES9X]      }
       bsnes:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BSNES]       }
       bsnes_hd:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BSNES_HD]    }
+      bsnes-jg:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BSNES_JG]    }
       mesens:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]      }
       supafaust:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SUPAFAUST]   }
   comment_en:           |

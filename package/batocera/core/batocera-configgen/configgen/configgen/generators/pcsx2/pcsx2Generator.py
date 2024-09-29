@@ -1,20 +1,17 @@
-#!/usr/bin/env python
-
-from generators.Generator import Generator
-import batoceraFiles
-import Command
 import os
-from settings.unixSettings import UnixSettings
-from utils.logger import get_logger
 import re
 import configparser
-import io
-import controllersConfig
 import json
 import httplib2
 import time
 import shutil
 import subprocess
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ...utils.logger import get_logger
+from ..Generator import Generator
 
 eslog = get_logger(__name__)
 
@@ -25,6 +22,12 @@ class Pcsx2Generator(Generator):
         "DrivingForcePro": "1",
         "GTForce":         "3"
     }
+
+    def getHotkeysContext(self):
+        return {
+            "name": "pcsx2",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     def getInGameRatio(self, config, gameResolution, rom):
         if getGfxRatioFromConfig(config, gameResolution) == "16:9" or (getGfxRatioFromConfig(config, gameResolution) == "Stretch" and gameResolution["width"] / float(gameResolution["height"]) > ((16.0 / 9.0) - 0.1)):

@@ -1,15 +1,23 @@
-import batoceraFiles
-import Command
-import controllersConfig
-from generators.Generator import Generator
 import os
-from utils.buildargs import parse_args
 import platform
-from utils.logger import get_logger
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ...utils.buildargs import parse_args
+from ...utils.logger import get_logger
+from ..Generator import Generator
 
 eslog = get_logger(__name__)
 
 class RazeGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "raze",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "save_state": "KEY_F6", "restore_state": "KEY_F9" }
+        }
+
     config_dir = f"{batoceraFiles.CONF}/raze"
     saves_dir = f"{batoceraFiles.SAVES}/raze"
     # The main config file, which is emitted with duplicate keys and makes working with ConfigParser very annoying
@@ -80,6 +88,7 @@ class RazeGenerator(Generator):
         for path in [self.config_dir, self.saves_dir]:
             if not os.path.exists(path):
                 os.mkdir(path)
+
         if not os.path.exists(self.config_file):
             with open(self.config_file, "w") as config:
                 for section in self.config_defaults:
@@ -148,6 +157,8 @@ class RazeGenerator(Generator):
                 f"vid_fps {'true' if system.getOptBoolean('showFPS') else 'false'}\n"
                 "echo BATOCERA\n"  # easy check that script ran in console
             )
+
+        # Launch arguments
         launch_args = ["/usr/share/raze/raze"]
         result = parse_args(launch_args, rom)
         if not result.okay:

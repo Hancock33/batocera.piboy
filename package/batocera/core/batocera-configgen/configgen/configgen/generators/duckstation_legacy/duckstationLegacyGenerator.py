@@ -1,19 +1,23 @@
-#!/usr/bin/env python
-
-from generators.Generator import Generator
-import Command
-import batoceraFiles
-import controllersConfig
 import configparser
 import os.path
-import httplib2
-import json
-from utils.logger import get_logger
 from os import environ
+
+from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
+from ...utils.logger import get_logger
+from ..Generator import Generator
 
 eslog = get_logger(__name__)
 
 class DuckstationLegacyGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "duckstation",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
+
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         # Test if it's a m3u file
         if os.path.splitext(rom)[1] == ".m3u":

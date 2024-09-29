@@ -1,8 +1,9 @@
 import os
-import batoceraFiles
 from os import path
 import codecs
-from utils.logger import get_logger
+
+from ... import batoceraFiles
+from ...utils.logger import get_logger
 
 eslog = get_logger(__name__)
 

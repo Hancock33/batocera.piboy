@@ -1,12 +1,18 @@
-#!/usr/bin/env python
-import Command
-from generators.Generator import Generator
-import controllersConfig
 import os
 import shutil
 import configparser
 
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
+
 class SonicManiaGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "sonic_mania",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ENTER" }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 

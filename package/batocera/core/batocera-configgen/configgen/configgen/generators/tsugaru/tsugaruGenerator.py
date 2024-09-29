@@ -1,11 +1,7 @@
-#!/usr/bin/env python
-
-import Command
-from generators.Generator import Generator
-import controllersConfig
 import os
-import configparser
-import batoceraFiles
+
+from ... import Command
+from ..Generator import Generator
 
 class TsugaruGenerator(Generator):
 
@@ -35,3 +31,9 @@ class TsugaruGenerator(Generator):
             commandArray += ["-FD0", rom]
 
         return Command.Command(array=commandArray)
+
+    def getHotkeysContext(self):
+        return {
+            "name": "tsugaru",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

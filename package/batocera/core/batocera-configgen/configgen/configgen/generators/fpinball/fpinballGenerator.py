@@ -1,19 +1,21 @@
-#!/usr/bin/env python
-
-from generators.Generator import Generator
-import Command
-import controllersConfig
-import batoceraFiles
 import os
 import subprocess
-import sys
 import shutil
-from pathlib import Path, PureWindowsPath
-from utils.logger import get_logger
+from pathlib import PureWindowsPath
+
+from ... import Command
+from ...utils.logger import get_logger
+from ..Generator import Generator
 
 eslog = get_logger(__name__)
 
 class FpinballGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "fpinball",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         wineprefix = "/userdata/system/wine-bottles/fpinball"

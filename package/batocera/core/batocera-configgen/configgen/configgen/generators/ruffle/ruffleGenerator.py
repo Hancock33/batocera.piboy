@@ -1,8 +1,5 @@
-#!/usr/bin/env python
-
-import Command
-from generators.Generator import Generator
-import controllersConfig
+from ... import Command
+from ..Generator import Generator
 
 class RuffleGenerator(Generator):
 
@@ -13,3 +10,9 @@ class RuffleGenerator(Generator):
 
     def getMouseMode(self, config, rom):
         return True
+
+    def getHotkeysContext(self):
+        return {
+            "name": "ruffle",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

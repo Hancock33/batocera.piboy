@@ -1,19 +1,22 @@
-#!/usr/bin/env python
-import Command
-#~ import flycastControllers
-import batoceraFiles
-from generators.Generator import Generator
-import shutil
 import os.path
 import configparser
-import controllersConfig
 from shutil import copyfile
-from os.path import dirname
 from os.path import isdir
 from os.path import isfile
+
+from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
+from ..Generator import Generator
 from . import flycastControllers
 
 class FlycastGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "flycast",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     # Main entry of the module
     # Configure fba and return a command

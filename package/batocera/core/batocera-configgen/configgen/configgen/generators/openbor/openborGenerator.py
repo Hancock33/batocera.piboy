@@ -1,17 +1,22 @@
-#!/usr/bin/env python
-
-import Command
-import batoceraFiles
-from generators.Generator import Generator
 import os
 import re
-from settings.unixSettings import UnixSettings
-from utils.logger import get_logger
+
+from ... import Command
+from ... import batoceraFiles
+from ...settings.unixSettings import UnixSettings
+from ...utils.logger import get_logger
+from ..Generator import Generator
 from . import openborControllers
 
 eslog = get_logger(__name__)
 
 class OpenborGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "openbor",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     # Main entry of the module
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):

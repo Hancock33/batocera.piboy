@@ -3,14 +3,15 @@
 # openjazz
 #
 ################################################################################
-# Version: Commits on Sept 19, 2024
-OPENJAZZ_VERSION = 1e7ab565205667032cf19834a7f9c4e1f375f59e
+# Version: Commits on Mar 10, 2024
+OPENJAZZ_VERSION = ba01ebad45d982c075a79ad8a5825e163b0fc84b
 OPENJAZZ_SITE =  $(call github,AlisterT,openjazz,$(OPENJAZZ_VERSION))
 
 OPENJAZZ_DEPENDENCIES = sdl2 sdl2_net
 OPENJAZZ_LICENSE = GPLv2
 
 OPENJAZZ_CONF_OPTS += -DDATAPATH=/userdata/roms/ports/openjazz
+OPENJAZZ_CONF_OPTS += -DFULLSCREEN_ONLY=ON
 OPENJAZZ_CONF_OPTS += -DNETWORK=ON
 
 define OPENJAZZ_INSTALL_TARGET_CMDS

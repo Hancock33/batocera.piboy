@@ -1,15 +1,11 @@
-#!/usr/bin/env python
-
-import sys
 import os
 import io
-import batoceraFiles
-import settings
-from Emulator import Emulator
 import configparser
 import subprocess
 
-from utils.logger import get_logger
+from ... import batoceraFiles
+from ...utils.logger import get_logger
+
 eslog = get_logger(__name__)
 
 ppssppConf     = batoceraFiles.CONF + '/ppsspp/PSP/SYSTEM'

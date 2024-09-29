@@ -1,13 +1,11 @@
-#!/usr/bin/env python
-
 import subprocess
 import json
-import re
 import os
 import evdev
-import controllersConfig as controllers
 
-from utils.logger import get_logger
+from . import controllersConfig as controllers
+from .utils.logger import get_logger
+
 eslog = get_logger(__name__)
 
 class Evmapy():

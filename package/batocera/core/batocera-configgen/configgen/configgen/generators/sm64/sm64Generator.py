@@ -1,12 +1,11 @@
-#!/usr/bin/env python
-
-import Command
 import os
 import shutil
 from os import path
-import Command
-from generators.Generator import Generator
-import controllersConfig
+
+from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
+from ..Generator import Generator
 
 eu_dir = '/userdata/saves/sm64/eu'
 jp_dir = '/userdata/saves/sm64/jp'

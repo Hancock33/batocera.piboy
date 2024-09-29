@@ -1,0 +1,7 @@
+config BR2_PACKAGE_PYTHON_SMBUS3
+	bool "python-smbus3"
+	help
+	  A drop-in replacement for smbus-cffi/smbus-python
+	  in pure Python.
+
+	  https://pypi.org/project/smbus3

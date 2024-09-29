@@ -1,9 +1,8 @@
-#!/usr/bin/env python
 import os
-from os import path
-import Command
-from generators.Generator import Generator
-import controllersConfig
+
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 class AbuseGenerator(Generator):
     if os.path.isfile('/tmp/piboy'):
@@ -17,3 +16,9 @@ class AbuseGenerator(Generator):
             env={
                 'SDL_AUTO_UPDATE_JOYSTICKS': '0'
             })
+
+    def getHotkeysContext(self):
+        return {
+            "name": "abuse",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

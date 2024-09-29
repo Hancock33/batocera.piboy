@@ -1,0 +1,12 @@
+config BR2_PACKAGE_LIBRETRO_BSNES_JG
+	bool "libretro-bsnes-jg"
+	depends on BR2_PACKAGE_RETROARCH
+	depends on BR2_INSTALL_LIBSTDCPP
+
+	help
+	  bsnes-jg is a cycle accurate emulator for the
+	  Super Famicom/Super Nintendo Entertainment System,
+	  including support for the Super Game Boy, BS-X
+	  Satellaview, and Sufami Turbo.
+
+	  https://github.com/libretro/bsnes-jg

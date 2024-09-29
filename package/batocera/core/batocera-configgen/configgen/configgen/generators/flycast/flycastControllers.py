@@ -1,17 +1,15 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
 import sys
 import os
 import configparser
-import batoceraFiles
-from utils.logger import get_logger
+from ... import batoceraFiles
+from ...utils.logger import get_logger
 
 eslog = get_logger(__name__)
 
 sys.path.append(
     os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
-
-import batoceraFiles
 
 flycastMapping = { # Directions
                    # The DPAD can be an axis (for gpio sticks for example) or a hat

@@ -1,20 +1,18 @@
-#!/usr/bin/env python
 import sys
 import os
-import batoceraFiles
-from . import libretroOptions
-from . import libretroMAMEConfig
-from Emulator import Emulator
-import settings
-from settings.unixSettings import UnixSettings
 import json
 import subprocess
-from utils.logger import get_logger
 from PIL import Image, ImageOps
-import utils.bezels as bezelsUtil
-import utils.videoMode as videoMode
-import controllersConfig
 import xml.etree.ElementTree as ET
+
+from ... import batoceraFiles
+from ... import controllersConfig
+from ...settings.unixSettings import UnixSettings
+from ...utils.logger import get_logger
+from ...utils import bezels as bezelsUtil
+from ...utils import videoMode as videoMode
+from . import libretroOptions
+from . import libretroMAMEConfig
 
 eslog = get_logger(__name__)
 sys.path.append(
@@ -90,7 +88,7 @@ def connected_to_internet():
             eslog.error("Not connected to the internet")
             return False
 
-def writeLibretroConfig(generator, retroconfig, system, controllers, metadata, guns, wheels, rom, bezel, shaderBezel, gameResolution, gfxBackend):
+def writeLibretroConfig(generator, retroconfig: UnixSettings, system, controllers, metadata, guns, wheels, rom, bezel, shaderBezel, gameResolution, gfxBackend):
     writeLibretroConfigToFile(retroconfig, createLibretroConfig(generator, system, controllers, metadata, guns, wheels, rom, bezel, shaderBezel, gameResolution, gfxBackend))
 
 # Take a system, and returns a dict of retroarch.cfg compatible parameters
@@ -1198,7 +1196,7 @@ def configureGunInputsForPlayer(n, gun, controllers, retroarchConfig, core, meta
                         retroarchConfig['input_player{}_{}_axis'.format(n, m)] = aval + pad.inputs[mapping[m]].id
         nplayer += 1
 
-def writeLibretroConfigToFile(retroconfig, config):
+def writeLibretroConfigToFile(retroconfig: UnixSettings, config):
     for setting in config:
         retroconfig.save(setting, config[setting])
 

@@ -1,10 +1,7 @@
-#!/usr/bin/env python
-
 import os
-import Command
-from generators.Generator import Generator
-import controllersConfig
-import utils.videoMode as videoMode
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 class UqmGenerator(Generator):
 

@@ -1,12 +1,16 @@
-#!/usr/bin/env python
-
-import Command
-from generators.Generator import Generator
-import controllersConfig
 import os
 import codecs
 
+from ... import Command
+from ..Generator import Generator
+
 class EasyRPGGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "cgenius",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ESC" }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["easyrpg-player"]

@@ -1,13 +1,43 @@
-diff --git a/config.h.in b/config.h.in
-index c2967ec..702df9f 100644
---- a/config.h.in
-+++ b/config.h.in
-@@ -180,7 +180,7 @@
- #undef const
+From 705027888dca352f85141caab85b2e6d80116adc Mon Sep 17 00:00:00 2001
+From: Dmitry Baryshkov <dmitry.baryshkov@linaro.org>
+Date: Wed, 12 Jun 2024 10:13:34 +0300
+Subject: [PATCH] Don't play with fnmatch.c replacement
+
+Currently fnmatch.c, even if it is selected, conditionally disables compilation
+of fnmatch() funciton even though the rest of the code expects to get it (e.g.
+because Autoconf didn't detect the working implementation and enabled fnmatch.c
+to replace it). Drop the extra conditionals, to fix Autoconf magic.
+
+Observed error:
+
+ld: src/cabextract.o: in function `process_cabinet':
+/usr/src/debug/cabextract/1.11/src/cabextract.c:499:(.text.startup+0xf1c): undefined reference to `rpl_fnmatch'
+collect2: error: ld returned 1 exit status
+
+Signed-off-by: Dmitry Baryshkov <dmitry.baryshkov@linaro.org>
+---
+ cabextract/fnmatch.c | 7 -------
+ 1 file changed, 7 deletions(-)
+
+diff --git a/cabextract/fnmatch.c b/cabextract/fnmatch.c
+index 868bdae..d2b6f05 100644
+--- a/cabextract/fnmatch.c
++++ b/cabextract/fnmatch.c
+@@ -49,11 +49,6 @@ static const char rcsid[] =
+    it is simpler to just do this in the source for each such file.
+ */
  
- /* Define to rpl_fnmatch if the replacement function should be used. */
--#undef fnmatch
-+//#undef fnmatch
+-#if defined (_LIBC) || !defined (__GNU_LIBRARY__)
+-
+-#if !defined(__GNU_LIBRARY__) && !defined(STDC_HEADERS)
+-#endif
+-
+ /* Match STRING against the filename pattern PATTERN, returning zero if
+    it matches, nonzero if not.  */
+ int
+@@ -216,5 +211,3 @@ int         flags;
  
- /* Define to `__inline__' or `__inline' if that's what the C compiler
-    calls it, or to nothing if 'inline' is not supported under any name.  */
+         return FNM_NOMATCH;
+ }
+-
+-#endif /* _LIBC or not __GNU_LIBRARY__.  */

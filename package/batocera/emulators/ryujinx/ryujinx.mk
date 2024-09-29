@@ -3,8 +3,8 @@
 # ryujinx
 #
 ################################################################################
-# Version: Commits on Sept 22, 2024
-RYUJINX_VERSION = 1.1.1398
+# Version: Commits on Sept 28, 2024
+RYUJINX_VERSION = 1.1.1401
 RYUJINX_SITE = https://github.com/Ryujinx/Ryujinx.git
 RYUJINX_SITE_METHOD=git
 RYUJINX_GIT_SUBMODULES=YES
@@ -21,7 +21,6 @@ else
 endif
 
 define RYUJINX_BUILD_CMDS
-	echo $(HOME)
 	rm -rf $(HOME)/.local/share/NuGet
 	rm -rf $(HOME)/.nuget/packages
 	rm -rf /tmp/NuGetScratch*

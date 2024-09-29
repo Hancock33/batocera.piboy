@@ -1,14 +1,18 @@
-#!/usr/bin/env python
-
-import Command
-from generators.Generator import Generator
-import controllersConfig
 import os
 import configparser
-import shutil
 import hashlib
 
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
+
 class SonicRetroGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "sonicretro",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ENTER" }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 

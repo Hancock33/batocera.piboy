@@ -1,12 +1,8 @@
-#!/usr/bin/env python
-
-import sys
 import os
 import io
-import batoceraFiles
-import settings
-from Emulator import Emulator
 import configparser
+
+from ... import batoceraFiles
 
 def writeIniFile(system, rom, playersControllers, gameResolution):
     iniConfig = configparser.ConfigParser(interpolation=None)

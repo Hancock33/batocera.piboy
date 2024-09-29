@@ -1,11 +1,11 @@
-#!/usr/bin/env python
-
-import Command
-import batoceraFiles
-from generators.Generator import Generator
 import os
 from os import path
 import xml.etree.ElementTree as ET
+
+from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
+from ..Generator import Generator
 
 playConfig = batoceraFiles.CONF + '/play'
 playSaves = batoceraFiles.SAVES + '/play'
@@ -14,6 +14,12 @@ playConfigFile = playConfig + '/Play Data Files/config.xml'
 playInputFile = playConfig + '/Play Data Files/inputprofiles/default.xml'
 
 class PlayGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "play",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 

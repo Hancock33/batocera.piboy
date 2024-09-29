@@ -1,18 +1,12 @@
-#!/usr/bin/env python
-
-import Command
-from generators.Generator import Generator
-import controllersConfig
 import shutil
-from shutil import copyfile
-import subprocess
-from subprocess import Popen
 import filecmp
-import configparser
 import os
-import sys
-import settings
 from os import environ
+
+from ... import Command
+from ... import controllersConfig
+from ... import settings
+from ..Generator import Generator
 
 class DrasticGenerator(Generator):
 

@@ -1,19 +1,16 @@
-#!/usr/bin/env python
-import sys
-import Command
-import batoceraFiles
+import os
+import shutil
+import glob
+
+from ... import Command
+from ... import batoceraFiles
+from ...settings.unixSettings import UnixSettings
+from ...utils.logger import get_logger
+from ...utils import videoMode as videoMode
+from ..Generator import Generator
 from . import libretroConfig
 from . import libretroRetroarchCustom
 from . import libretroControllers
-from generators.Generator import Generator
-import os
-import stat
-import subprocess
-from settings.unixSettings import UnixSettings
-from utils.logger import get_logger
-import utils.videoMode as videoMode
-import shutil
-import glob
 
 eslog = get_logger(__name__)
 
@@ -21,6 +18,15 @@ class LibretroGenerator(Generator):
 
     def supportsInternalBezels(self):
         return True
+
+    def getHotkeysContext(self):
+        # f12 for coin : set in libretroMameConfig.py, others in libretroControllers.py
+        return {
+            "name": "retroarch",
+            "keys": { "exit": ["KEY_LEFTSHIFT", "KEY_ESC"], "menu": ["KEY_LEFTSHIFT", "KEY_F1"], "coin": "KEY_F12",
+                      "save_state": ["KEY_LEFTSHIFT", "KEY_F3"], "restore_state": ["KEY_LEFTSHIFT", "KEY_F4"], "next_slot": ["KEY_LEFTSHIFT", "KEY_F6"], "previous_slot": ["KEY_LEFTSHIFT", "KEY_F5"]
+                     }
+        }
 
     # Main entry of the module
     # Configure retroarch and return a command

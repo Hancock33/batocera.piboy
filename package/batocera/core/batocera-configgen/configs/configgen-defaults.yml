@@ -1189,3 +1189,154 @@ vpinball:
   core:     vpinball
   options:
     powersave: '1'
+# Extra Mame cores
+abc80:
+  emulator: libretro
+  core:     mame
+alice32:
+  emulator: libretro
+  core:     mame
+aquarius:
+  emulator: libretro
+  core:     mame
+beena:
+  emulator: libretro
+  core:     mame
+bk001001:
+  emulator: libretro
+  core:     mame
+bml3:
+  emulator: libretro
+  core:     mame
+casloopy:
+  emulator: libretro
+  core:     mame
+cpc464p:
+  emulator: libretro
+  core:     mame
+digiblst:
+  emulator: libretro
+  core:     mame
+dragon32:
+  emulator: libretro
+  core:     mame
+ep128:
+  emulator: libretro
+  core:     mame
+exl100:
+  emulator: libretro
+  core:     mame
+galaxy:
+  emulator: libretro
+  core:     mame
+gamekin3:
+  emulator: libretro
+  core:     mame
+hec2hr:
+  emulator: libretro
+  core:     mame
+hyprscan:
+  emulator: libretro
+  core:     mame
+ibmpcjr:
+  emulator: libretro
+  core:     mame
+jupace:
+  emulator: libretro
+  core:     mame
+konamilcd:
+  emulator: libretro
+  core:     mame
+m24:
+  emulator: libretro
+  core:     mame
+m5:
+  emulator: libretro
+  core:     mame
+mbee:
+  emulator: libretro
+  core:     mame
+microvsn:
+  emulator: libretro
+  core:     mame
+model1:
+  emulator: libretro
+  core:     mame
+mononcol:
+  emulator: libretro
+  core:     mame
+mpu1000:
+  emulator: libretro
+  core:     mame
+mtx512:
+  emulator: libretro
+  core:     mame
+myvision:
+  emulator: libretro
+  core:     mame
+n501:
+  emulator: libretro
+  core:     mame
+neogeo64:
+  emulator: libretro
+  core:     mame
+oric1:
+  emulator: libretro
+  core:     mame
+pecom64:
+  emulator: libretro
+  core:     mame
+pegasus:
+  emulator: libretro
+  core:     mame
+pippin:
+  emulator: libretro
+  core:     mame
+pockstat:
+  emulator: libretro
+  core:     mame
+pv2000:
+  emulator: libretro
+  core:     mame
+rx78:
+  emulator: libretro
+  core:     mame
+snotec:
+  emulator: libretro
+  core:     mame
+sorcerer:
+  emulator: libretro
+  core:     mame
+studio2:
+  emulator: libretro
+  core:     mame
+sv8000:
+  emulator: libretro
+  core:     mame
+svmu:
+  emulator: libretro
+  core:     mame
+sys80:
+  emulator: libretro
+  core:     mame
+tiger:
+  emulator: libretro
+  core:     mame
+tvc64:
+  emulator: libretro
+  core:     mame
+vg5k:
+  emulator: libretro
+  core:     mame
+vic10:
+  emulator: libretro
+  core:     mame
+vidbrain:
+  emulator: libretro
+  core:     mame
+vii:
+  emulator: libretro
+  core:     mame
+zinc:
+  emulator: libretro
+  core:     mame

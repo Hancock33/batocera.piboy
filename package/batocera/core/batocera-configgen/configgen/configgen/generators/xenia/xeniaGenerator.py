@@ -1,22 +1,26 @@
-#!/usr/bin/env python3
-
-from generators.Generator import Generator
-import Command
 import os
-import batoceraFiles
 import sys
 import shutil
-import controllersConfig
 import filecmp
 import subprocess
 import toml
 import glob
 import re
-from utils.logger import get_logger
+
+from ... import Command
+from ... import controllersConfig
+from ...utils.logger import get_logger
+from ..Generator import Generator
 
 eslog = get_logger(__name__)
 
 class XeniaGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "xenia",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     @staticmethod
     def sync_directories(source_dir, dest_dir):

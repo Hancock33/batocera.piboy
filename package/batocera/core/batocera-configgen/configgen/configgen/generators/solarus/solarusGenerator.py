@@ -1,14 +1,18 @@
-#!/usr/bin/env python
-
-import Command
-from generators.Generator import Generator
-import controllersConfig
-import batoceraFiles
 import codecs
 import os
-import zipfile
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
 
 class SolarusGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "solarus",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 

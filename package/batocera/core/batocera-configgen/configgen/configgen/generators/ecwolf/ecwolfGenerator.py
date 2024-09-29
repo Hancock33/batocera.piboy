@@ -1,14 +1,19 @@
-#!/usr/bin/env python
-
-import Command
-import batoceraFiles
-from generators.Generator import Generator
-import controllersConfig
 import os
 from os import path
 import codecs
 
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ..Generator import Generator
+
 class ECWolfGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "ecwolf",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ESC", "save_state": "KEY_F8", "restore_state": "KEY_F9" }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 

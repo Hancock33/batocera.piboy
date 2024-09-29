@@ -1,16 +1,23 @@
-#!/usr/bin/env python
 import os
-import controllersConfig
-from generators.Generator import Generator
-from Command import Command
 import shutil
 from os import path
-import utils.videoMode as videoMode
+
+from ... import Command
+from ... import batoceraFiles
+from ... import controllersConfig
+from ...utils import videoMode as videoMode
+from ..Generator import Generator
 
 rtcw_src = "/usr/bin/rtcw/main"
 rtcw_dst = "/userdata/roms/ports/rtcw/main"
 
 class RtcwGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "iortcw",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ESC", "save_state": "KEY_F5", "restore_state": "KEY_F9" }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
@@ -120,7 +127,7 @@ class RtcwGenerator(Generator):
         commandArray = ["/usr/bin/rtcw/iowolfsp"]
 
         # iortcw looks for roms in home + /rtcw
-        return Command(
+        return Command.Command(
             array=commandArray,
             env={
                 "XDG_DATA_HOME": "/userdata/roms/ports",

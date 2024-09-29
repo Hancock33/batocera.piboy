@@ -1,22 +1,12 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import batoceraFiles
-import Command
-import shutil
 import os
-from utils.logger import get_logger
-from os import path
-from os import environ
-import configparser
-from xml.dom import minidom
 import codecs
-import shutil
-import utils.bezels as bezelsUtil
-import subprocess
 import csv
 from xml.dom import minidom
-from PIL import Image, ImageOps
+from xml.dom import minidom
+
+from ...utils.logger import get_logger
 
 eslog = get_logger(__name__)
 
@@ -380,6 +370,8 @@ def generateSpecialPortElementPlayer(pad, config, tag, nplayer, padindex, mappin
     xml_newseq.setAttribute("type", "standard")
     xml_port.appendChild(xml_newseq)
     keyval = input2definition(pad, key, input, padindex + 1, reversed, 0)
+    if mapping == "COIN" and nplayer <= 4:
+        keyval = keyval + " OR KEYCODE_{}_{}".format(nplayer, str(nplayer + 4)) # 5 for player 1, 6 for player 2, 7 for player 3 and 8 for player 4
     if mapping in gunmappings:
         keyval = keyval + " OR GUNCODE_{}_{}".format(nplayer, gunmappings[mapping])
         if gunmappings[mapping] == "BUTTON2" and pedalkey is not None:

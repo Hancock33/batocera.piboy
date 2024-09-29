@@ -1,10 +1,11 @@
-#!/usr/bin/env python
-import Command
-from generators.Generator import Generator
-import controllersConfig
 import os
-import batoceraFiles
 import subprocess
+
+from ... import batoceraFiles
+from ... import Command
+from ... import controllersConfig
+from ...utils.logger import get_logger
+from ..Generator import Generator
 
 corsixthConfigPath = batoceraFiles.CONF + "/corsixth"
 corsixthConfigFile = corsixthConfigPath + "/config.txt"
@@ -13,10 +14,15 @@ corsixthDataPath = "/userdata/roms/corsixth"
 corsixthFontPath = "/usr/share/fonts/dejavu/DejaVuSans.ttf"
 corsixthScreenshotsPath = "/userdata/screenshots"
 
-from utils.logger import get_logger
 eslog = get_logger(__name__)
 
 class ThemehospitalGenerator(Generator):
+
+    def getHotkeysContext(self):
+        return {
+            "name": "corsixth",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ESC", "save_state": ["KEY_LEFTALT", "KEY_LEFTSHIFT", "KEY_S"], "restore_state": ["KEY_LEFTALT", "KEY_LEFTSHIFT", "KEY_L"] }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         # Create corsixth config directory if needed
