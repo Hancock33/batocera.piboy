@@ -2233,6 +2233,18 @@ scummvm:
 
                         Para mais informações: https://wiki.batocera.org/systems:scummvm
 
+hyprscan:
+  name:                 HyperScan
+  manufacturer:         Mattel
+  release:              2006
+  hardware:             console
+  extensions:           [chd, cue, toc, nrg, gdi, iso, cdr, zip, 7z]
+  emulators:
+    libretro:
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+    mame:
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
+
 intellivision:
   name:                 Mattel Intellivision
   manufacturer:         Mattel
