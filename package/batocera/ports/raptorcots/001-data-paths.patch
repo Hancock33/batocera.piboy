@@ -1,5 +1,5 @@
 diff --git a/src/glbapi.cpp b/src/glbapi.cpp
-index c2e195e..1ae872a 100644
+index 45b00f3..68fc39d 100644
 --- a/src/glbapi.cpp
 +++ b/src/glbapi.cpp
 @@ -8,6 +8,7 @@
@@ -19,7 +19,7 @@ index c2e195e..1ae872a 100644
  static int num_glbs;
  static KEYFILE g_key;
  static char prefix[5] = "FILE";
-@@ -898,4 +899,4 @@ GLB_SaveFile(
+@@ -899,4 +900,4 @@ GLB_SaveFile(
  	}
  	
  	fclose(handle);
@@ -27,21 +27,21 @@ index c2e195e..1ae872a 100644
 \ No newline at end of file
 +}
 diff --git a/src/loadsave.cpp b/src/loadsave.cpp
-index 4433a9e..fbfdcf3 100644
+index 2146985..e1aeb1a 100644
 --- a/src/loadsave.cpp
 +++ b/src/loadsave.cpp
-@@ -43,8 +43,8 @@ int filepos = -1;
- int map_item = -1;
+@@ -46,8 +46,8 @@ int map_item = -1;
  int curplr_diff = 2;
+ int srwpos = 0;
  
 -static const char *fmt = "CHAR%04u.FIL";
--static const char* cdfmt = "%s\\CHAR%04u.FIL";
+-static const char *cdfmt = "%sCHAR%04u.FIL";
 +static const char *fmt = "/userdata/roms/ports/raptor/CHAR%04u.FIL";
 +static const char *cdfmt = "/userdata/roms/ports/raptor/CHAR%04u.FIL";
  
  MAZELEVEL *mapmem;
  CSPRITE *csprite;
-@@ -138,7 +138,7 @@ RAP_AreSavedFiles(
+@@ -373,7 +373,7 @@ RAP_AreSavedFiles(
          else
              sprintf(temp, fmt, loop);
          
@@ -50,7 +50,7 @@ index 4433a9e..fbfdcf3 100644
              return 1;
      }
      
-@@ -194,7 +194,7 @@ RAP_FFSaveFile(
+@@ -433,7 +433,7 @@ RAP_FFSaveFile(
          else
              sprintf(temp, fmt, loop);
          
@@ -59,7 +59,7 @@ index 4433a9e..fbfdcf3 100644
          {
              RAP_ClearPlayer();
              filepos = loop;
-@@ -468,7 +468,7 @@ RAP_LoadWin(
+@@ -765,7 +765,7 @@ RAP_LoadWin(
          else
              sprintf(temp, fmt, loop);
          
@@ -68,15 +68,22 @@ index 4433a9e..fbfdcf3 100644
          {
              if (pos == -1)
                  pos = loop;
-@@ -654,7 +654,7 @@ RAP_InitLoadSave(
-     
+@@ -971,7 +971,7 @@ RAP_InitLoadSave(
+ 
      cdflag = 0;
-     
+ 
 -    strcpy(g_setup_ini, "SETUP.INI");
 +    strcpy(g_setup_ini, "/usr/share/raptor/SETUP.INI");
-     
+ 
      return cdpath;
- }
+ #endif // _WIN32 || __linux__ || __APPLE__
+@@ -1078,4 +1078,4 @@ RAP_CheckFileInPath(
+         return 1;
+     else
+         return 0;
+-}
+\ No newline at end of file
++}
 diff --git a/src/prefapi.cpp b/src/prefapi.cpp
 index faab246..df2c2e6 100644
 --- a/src/prefapi.cpp
@@ -90,7 +97,7 @@ index faab246..df2c2e6 100644
  #ifdef _WIN32
  #include <io.h>
 diff --git a/src/rap.cpp b/src/rap.cpp
-index a6c0182..42b2593 100644
+index c601a7d..9991b70 100644
 --- a/src/rap.cpp
 +++ b/src/rap.cpp
 @@ -32,6 +32,7 @@
@@ -131,38 +138,37 @@ index a6c0182..42b2593 100644
  /***************************************************************************
  main() -
   ***************************************************************************/
-@@ -1293,13 +1306,13 @@ main(
+@@ -1301,13 +1314,13 @@ main(
      
      cur_diff = 0;
  
--    if (!access("FILE0001.GLB", 0))
+-    if (!access("FILE0001.GLB", 0) || RAP_CheckFileInPath("FILE0001.GLB"))
 +    if (checkfile("/userdata/roms/ports/raptor/FILE0001.GLB"))
          gameflag[0] = 1;
      
--    if (!access("FILE0002.GLB", 0))
+-    if (!access("FILE0002.GLB", 0) || RAP_CheckFileInPath("FILE0002.GLB"))
 +    if (checkfile("/userdata/roms/ports/raptor/FILE0002.GLB"))
          gameflag[1] = 1;
      
--    if (!access("FILE0003.GLB", 0) && !access("FILE0004.GLB", 0))
+-    if (!access("FILE0003.GLB", 0) && !access("FILE0004.GLB", 0) || RAP_CheckFileInPath("FILE0003.GLB") && RAP_CheckFileInPath("FILE0004.GLB"))
 +    if (checkfile("/userdata/roms/ports/raptor/FILE0003.GLB") && checkfile("/userdata/roms/ports/raptor/FILE0004.GLB"))
      {
          gameflag[2] = 1;
          gameflag[3] = 1;
-@@ -1316,15 +1329,15 @@ main(
+@@ -1324,15 +1337,15 @@ main(
              numfiles++;
      }
  
--    if (access("FILE0000.GLB", 0) || !numfiles)
--    {
-+   if (!checkfile("/userdata/roms/ports/raptor/FILE0000.GLB") || !numfiles)
-+   {
+-    if (access("FILE0000.GLB", 0) && !RAP_CheckFileInPath("FILE0000.GLB") || !numfiles)
++    if (!checkfile("/userdata/roms/ports/raptor/FILE0000.GLB") || !numfiles)
+     {
          printf("All game data files NOT FOUND cannot proceed !!\n");
 -        SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR,
 -            "Raptor", "All game data files NOT FOUND cannot proceed !!", NULL);
 -        exit(0);
-+    //    SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR,
-+    //        "Raptor", "All game data files NOT FOUND cannot proceed !!", NULL);
-+    //    exit(0);
++       // SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR,
++       //     "Raptor", "All game data files NOT FOUND cannot proceed !!", NULL);
++       // exit(0);
      }
      
 -    printf("Init -\n");
@@ -170,7 +176,7 @@ index a6c0182..42b2593 100644
      EXIT_Install(ShutDown);
      
      // ================================================
-@@ -1371,10 +1384,10 @@ main(
+@@ -1379,10 +1392,10 @@ main(
      // ================================================
  
      if (access(RAP_SetupFilename(), 0))
