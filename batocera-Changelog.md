@@ -84,6 +84,7 @@
 - GroovyMAME to 0.268
 - Ikemen to August 1st 2024 build
 - Kodi to 21.1
+- Mupen64 core & plugins to v2.6.0
 - PCSX2 to v2.1.100
 - Redream to 1.5.0-1133-g03c2ae9
 - RPCS3 to 0.0.33 (alpha on Aug 31, 2024)
@@ -91,7 +92,7 @@
 - Syncthing to 1.27.10
 - The Force Engine to Aug 19, 2024 build
 - Vita3k to August 25, 2024 build
-- Xemu to v0.7.131
+- Xemu to v0.7.130
 - Xenia to v1.0.2817
 - Xenia Canary to August 31, 2024 build
 ### System

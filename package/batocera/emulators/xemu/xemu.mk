@@ -17,7 +17,7 @@ XEMU_CONF_ENV += PATH="/x86_64/host/x86_64-buildroot-linux-gnu/sysroot/usr/bin:$
 
 XEMU_CONF_OPTS += --target-list=i386-softmmu
 XEMU_CONF_OPTS += --cross-prefix="$(STAGING_DIR)"
-XEMU_CONF_OPTS += --extra-cflags="-DXBOX=1 -O3 -Wno-error=redundant-decls -Wno-error=unused-but-set-variable"
+XEMU_CONF_OPTS += --extra-cflags="-DXBOX=1 $(TARGET_OPTIMIZATION) -Wno-error=redundant-decls -Wno-error=unused-but-set-variable"
 XEMU_CONF_OPTS += --extra-ldflags=""
 XEMU_CONF_OPTS += --enable-sdl
 XEMU_CONF_OPTS += --enable-opengl
@@ -92,10 +92,16 @@ define XEMU_INSTALL_TARGET_CMDS
 	# Binaries
 	cp $(@D)/build/qemu-system-i386 $(TARGET_DIR)/usr/bin/xemu
 
-	# XEmu app data
+	# Xemu app data
 	mkdir -p $(TARGET_DIR)/usr/share/xemu/data
 	cp $(@D)/data/* $(TARGET_DIR)/usr/share/xemu/data/
 	$(UNZIP) -ob $(XEMU_DL_DIR)/xbox_hdd.qcow2.zip xbox_hdd.qcow2 -d $(TARGET_DIR)/usr/share/xemu/data
+endef
+
+define XEMU_VERSION_DETAILS
+    $(GIT) -C $(XEMU_DL_DIR)/git rev-parse HEAD 2>/dev/null | tr -d '\n' > $(@D)/XEMU_COMMIT
+    $(GIT) -C $(XEMU_DL_DIR)/git symbolic-ref --short HEAD | cut -d'/' -f2- > $(@D)/XEMU_BRANCH
+    $(GIT) -C $(XEMU_DL_DIR)/git describe --tags --match 'v*' | cut -c 2- | tr -d '\n' > $(@D)/XEMU_VERSION
 endef
 
 define XEMU_EVMAPY
@@ -104,6 +110,7 @@ define XEMU_EVMAPY
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/xemu/xbox.xemu.keys $(TARGET_DIR)/usr/share/evmapy/chihiro.keys
 endef
 
+XEMU_PRE_CONFIGURE_HOOKS = XEMU_VERSION_DETAILS
 XEMU_POST_INSTALL_TARGET_HOOKS += XEMU_EVMAPY
 
 $(eval $(autotools-package))
