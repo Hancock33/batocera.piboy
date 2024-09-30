@@ -16,8 +16,15 @@ eslog = get_logger(__name__)
 
 class AmiberryGenerator(Generator):
 
+    def getHotkeysContext(self):
+        return {
+            "name": "amiberry",
+            "keys": { "exit": "KEY_F10" }
+        }
+
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         retroconfig = UnixSettings(batoceraFiles.amiberryRetroarchCustom, separator=' ')
+
         if not os.path.exists(dirname(batoceraFiles.amiberryRetroarchCustom)):
             os.makedirs(dirname(batoceraFiles.amiberryRetroarchCustom))
 
