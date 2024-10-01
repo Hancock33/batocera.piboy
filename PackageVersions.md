@@ -73,7 +73,7 @@ Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8
 Emulators|[demul](http://demul.emulation64.com/files)|demul07_280418|Apr 28, 2018
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|c7cbac538ab22b00c8b20d329fb02141430751bd|Sept 29, 2024
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|bfefd38d2500103d32f5da9f7fcd80090b7836fb|May 23, 2024
-Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|349e41bc6a4be6bbf4f4cb8fa787add7944d3117|Jul 21, 2024
+Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|07e04ee28e453a4a33590c187a37d5aa91180b47|Sept 28, 2024
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.07.01|Jul 02, 2024
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 12, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
@@ -288,7 +288,7 @@ Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|d7d1d39111efb9c4
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|0ed836df469e08b2fcfcb11bc880d0347f20ffa9|Sept 27, 2024
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|b13fdd5029a246e8f90a1d70e2ed000779fee4f1|Sept 10, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|6da55ab0bc0472dbf0724c89c98f040744e63d9a|Sept 27, 2024
-Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|8d6b694569d6407614048f01104728e0c3c237b4|Sept 30, 2024
+Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|e5c47e911b2e94bc2864db915ed259af1ee9a765|Sept 20, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|3bb40cb927238ee238ecf3233064f35d8c1b7c9c|Sept 29, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|979235b4b7ebb3fbec5505a846b70f70333857dc|Sept 05, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45348|Sept 28, 2024
@@ -307,7 +307,7 @@ Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-3|
 Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.18|Sept 20, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240928|Sept 28, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|80136a8d80e8124896cdfb97badcc85e8ef2facd|Sept 22, 2024
-Emulators|[xemu](https://github.com/xemu-project/xemu)|8707d2aa2626063cb67b5ea20382584a0848dce7|Nov 02, 2023
+Emulators|[xemu](https://github.com/xemu-project/xemu)|9ad18ee26559ca75218b049762675b99f8417fec|Aug 02, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|952526a78e7e9a449151ea4e947d0ce19401b3b6|Sept 27, 2024
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
