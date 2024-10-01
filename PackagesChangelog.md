@@ -1,5 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.18.r164.g3a6e226e9ae|Oct 01, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241001|Oct 01, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241001|Oct 01, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|048c04112746fde463930484caedca73a5be2d8b|Sept 30, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|048c04112746fde463930484caedca73a5be2d8b|Sept 30, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|6e84d721c96f895b13f0d297dcf5d1bf620ccfe5|Sept 30, 2024
@@ -49,9 +52,6 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45348|Sept 28, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|1078598226b0b154415ffca51ab29b619cbd04e6|Sept 28, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|d9ad79a3b8eaa72c4e4f179dc289201867bf9251|Sept 28, 2024
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|c0e7b76d02504754de67a1318f93089f1e29f15f|Sept 28, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.18.r151.g658df7f2121|Sept 28, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240928|Sept 28, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20240928|Sept 28, 2024
 Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|0d42dea0cb20aba8bfec05b928e4aed2b295352a|Sept 28, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|9b4147fd14332a7354c9b76fa72653bda2d919e9|Sept 28, 2024
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|96f684e51cedcaaf32ce450469d0afdc7c72610b|Sept 28, 2024
