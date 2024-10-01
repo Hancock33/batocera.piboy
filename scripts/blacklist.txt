@@ -16,6 +16,7 @@ openbor6412.mk
 openbor7142.mk
 python-pyxel.mk
 scummvm.mk
+suyu.mk
 wine-ge.mk
 wine-native.mk
 wine-ntsync.mk
