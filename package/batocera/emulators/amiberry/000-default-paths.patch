@@ -1,15 +1,15 @@
 diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
-index 6e1fc58c..94734c67 100644
+index 9f47efca..18de5c1c 100644
 --- a/src/osdep/amiberry.cpp
 +++ b/src/osdep/amiberry.cpp
 @@ -3969,7 +3969,7 @@ void create_missing_amiberry_folders()
  #ifdef __MACH__
          const std::string default_roms_path = directory + "/Resources/roms/";
  #else
--        const std::string default_roms_path = "/usr/share/amiberry/roms/";
+-        const std::string default_roms_path = AMIBERRY_DATADIR "/roms/";
 +        const std::string default_roms_path = "/userdata/bios/amiga";
  #endif
-         // copy default kickstart files, if they exist in /usr/share/amiberry/roms
+         // copy default kickstart files, if they exist in AMIBERRY_DATADIR/roms
          if (my_existsdir(default_roms_path.c_str()))
 @@ -3999,9 +3999,9 @@ void create_missing_amiberry_folders()
  static void init_amiberry_paths(const std::string& data_directory, const std::string& home_directory, const std::string& config_directory, const std::string& plugins_directory)
