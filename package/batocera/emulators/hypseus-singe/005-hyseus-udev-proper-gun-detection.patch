@@ -1,5 +1,5 @@
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index e629557..c02fc8c 100644
+index 5bbb5b7..79d9b80 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
 @@ -103,13 +103,14 @@ find_package(SDL2 REQUIRED)
