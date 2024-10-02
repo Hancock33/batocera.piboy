@@ -10,6 +10,7 @@
 - Support for Argon One v3 case for RPi5
 - wayland multi screens support (including rpi*)
 - Xtension 2 Players Controller and Xtension 4 Players Controller
+- Initial support for the Retroid Pocket Mini (https://github.com/batocera-linux/batocera.linux/issues/12562)
 ### Added
 - Exit game with light gun (hold `TRIGGER`, `ACTION` and `START` buttons for 2 seconds)
 - Enhanced Bluetooth AD2P codec support for LDAC & aptX supported headphones or speakers
@@ -63,7 +64,7 @@
   - Libretro-Cap32 to June 29, 2024 build
   - Libretro-Melonds-Ds to v1.1.5
   - Libretro-Ecwolf to June 28 build
-  - Libretro-Flycast to July 30 build
+  - Libretro-Flycast to September 29, 2024 build
   - Libretro-Freechaf to June 28 build
   - Libretro-MAME to 0.268
   - Libretro-Minivac to July 1 build
@@ -74,27 +75,29 @@
 - BigPEmu to v115
 - C-Dogs SDL to 2.1.0
 - Cemu to v2.1
-- Citra to r5115f64
+- Citra to r608383e
 - Commander Genius to v3.5.1
-- Dolphin to 2407.264
+- DevilutionX to 1.5.3
+- Dolphin to 2409-78
 - Duckstation to v0.1-7294
 - DXX-Rebirth to July 21 build
 - Eduke32 to Jul 25 build
-- Flycast to Jul 30 build
+- Flycast to September 29, 2024 build
 - GroovyMAME to 0.268
 - Ikemen to August 1st 2024 build
 - Kodi to 21.1
 - Mupen64 core & plugins to v2.6.0
-- PCSX2 to v2.1.100
+- PCSX2 to 2.1.179
 - Redream to 1.5.0-1133-g03c2ae9
 - RPCS3 to 0.0.33 (alpha on Aug 31, 2024)
 - Sonic Mania to Jul 21, 2024 build
+- Supermodel to 1st October build
 - Syncthing to 1.27.10
 - The Force Engine to Aug 19, 2024 build
 - Vita3k to August 25, 2024 build
 - Xemu to v0.7.130
 - Xenia to v1.0.2817
-- Xenia Canary to August 31, 2024 build
+- Xenia Canary to October 1, 2024 build
 ### System
 - Nvidia Driver to 560.35.03 (Open kernel modules)
 - Nvidia Legacy Driver to 470.256.02
