@@ -1,8 +1,8 @@
 diff --git a/src/video/video.cpp b/src/video/video.cpp
-index ce6f01a..175419b 100644
+index 50408f9..2ea4139 100644
 --- a/src/video/video.cpp
 +++ b/src/video/video.cpp
-@@ -1868,14 +1868,14 @@ void vid_blit () {
+@@ -1965,14 +1965,14 @@ void vid_blit () {
      // If there's a subtitle overlay
      if (g_bSubtitleShown) draw_subtitle(subchar, false, false);
  

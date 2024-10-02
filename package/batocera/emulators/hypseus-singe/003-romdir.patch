@@ -1,5 +1,5 @@
 diff --git a/doc/CmdLine.md b/doc/CmdLine.md
-index 774ee5f..09f3745 100644
+index 7f97efc..02eab07 100644
 --- a/doc/CmdLine.md
 +++ b/doc/CmdLine.md
 @@ -69,6 +69,7 @@ Refer also to **bezel arguments** [here](Bezels.md)
@@ -7,14 +7,14 @@ index 774ee5f..09f3745 100644
  | -grabmouse                       | Capture mouse in SDL window.                           |
  | -homedir \<dirname>              | Sets the Home Directory that Hypseus will use.         |
 +| -romdir \<dirname>               | Sets the ROM Directory that Hypseus will use.          |
+ | -horizontal_stretch \<value>     | Horizontally stretches the video screen outward from the center. |
  | -idleexit \<seconds>             | Tells Hypseus to exit after a certain number of seconds if no input has been received. |
  | -ignore_aspect_ratio             | Tells Hypseus to ignore the aspect ratio defined in the MPEG header. |
- | -keymapfile \<config>            | Specify an alternate hypinput.ini file.                |
 diff --git a/src/game/game.cpp b/src/game/game.cpp
-index db0ca34..a8125fe 100644
+index 3bb409c..e484a6e 100644
 --- a/src/game/game.cpp
 +++ b/src/game/game.cpp
-@@ -682,9 +682,14 @@ bool game::load_roms()
+@@ -687,9 +687,14 @@ bool game::load_roms()
                  zip_path = path + ".zip"; // append zip extension ...
              }
  
@@ -31,7 +31,7 @@ index db0ca34..a8125fe 100644
              // if we have not opened a ZIP file, or if we need to open a new zip
              // file ...
              if ((!zip_file) || (zip_path.compare(opened_zip_name) != 0)) {
-@@ -795,7 +800,12 @@ bool game::verify_required_file(const char *filename, const char *gamedir, Uint3
+@@ -800,7 +805,12 @@ bool game::verify_required_file(const char *filename, const char *gamedir, Uint3
      path += filename;
  
      // TRY UNCOMPRESSED FIRST
@@ -45,7 +45,7 @@ index db0ca34..a8125fe 100644
  
      struct mpo_io *io;
  
-@@ -829,7 +839,12 @@ bool game::verify_required_file(const char *filename, const char *gamedir, Uint3
+@@ -834,7 +844,12 @@ bool game::verify_required_file(const char *filename, const char *gamedir, Uint3
      if (!passed_test) {
          string zip_path = gamedir;
          zip_path += ".zip"; // we now have "/gamename.zip"
@@ -59,7 +59,7 @@ index db0ca34..a8125fe 100644
  
          unzFile zip_file = NULL; // pointer to open zip file (NULL if file is
                                   // closed)
-@@ -859,8 +874,12 @@ bool game::load_rom(const char *filename, Uint8 *buf, Uint32 size)
+@@ -864,8 +879,12 @@ bool game::load_rom(const char *filename, Uint8 *buf, Uint32 size)
      struct mpo_io *F;
      MPO_BYTES_READ bytes_read = 0;
      bool result               = false;
@@ -75,7 +75,7 @@ index db0ca34..a8125fe 100644
  
      F = mpo_open(fullpath.c_str(), MPO_OPEN_READONLY);
 diff --git a/src/io/cmdline.cpp b/src/io/cmdline.cpp
-index 79b23be..9aec566 100644
+index ed9a954..4913da4 100644
 --- a/src/io/cmdline.cpp
 +++ b/src/io/cmdline.cpp
 @@ -171,6 +171,43 @@ bool parse_homedir()
