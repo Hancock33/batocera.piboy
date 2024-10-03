@@ -1,8 +1,16 @@
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
 from ... import Command
 from ... import batoceraFiles
 from ... import controllersConfig
 from ..Generator import Generator
 from . import kodiConfig
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
+
 
 class KodiGenerator(Generator):
 
@@ -11,9 +19,10 @@ class KodiGenerator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         kodiConfig.writeKodiConfig(playersControllers)
         commandArray = ["kodi", rom]
+
         return Command.Command(array=commandArray)
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "kodi",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
