@@ -1,5 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.19.r0.g858bf979|Oct 06, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241006|Oct 06, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241006|Oct 06, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|add4a3b6b705aeaa980b0a1290a6d29a731127a9|Oct 02, 2024
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.10.01|Oct 02, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|64f7c9ad5fef121c6c4dacad315e5ff49aeb102f|Oct 02, 2024
@@ -31,10 +34,7 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45350|Oct 01, 2024
 Libraries|[lunasvg](http://github.com/stenzek/lunasvg)|70b2fc188ae9628f4313335a0d628eef10c842dd|Oct 01, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|e41180623b98125f99c0c83f283c67fea46d947b|Oct 01, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|a4bec44f0ae5f72664e7c723c6c0ff7e6b28a84a|Oct 01, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.18.r164.g3a6e226e9ae|Oct 01, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241001|Oct 01, 2024
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|f68b10fd46dc0401474d039144320d6ac521818e|Oct 01, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241001|Oct 01, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|ad4eef3b6c7806680032b95d95f199b5febb7e64|Oct 01, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|56982376433f116a86679a46514ff7a2903548b0|Oct 01, 2024
 Emulators|[libretro-atari800](http://github.com/libretro/libretro-atari800)|683a37f25e34af6cb22ee4c4f9acf9db53d49662|Oct 01, 2024
@@ -94,6 +94,7 @@ Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|e9a1941276e932813dc742796ffd1d0939c5d1d5|Sept 27, 2024
 Emulators|[libretro-mame](http://github.com/sonninnos/mame)|231b5e6d621ed93168ad19eed6c0e3390d4e81ff|Sept 27, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20230927|Sept 27, 2024
+Boot|[batocera-initramfs](http://www.busybox.net/downloads)|1.37.0|Sept 26, 2024
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|50a3aa3d42ed1c0c4d829c4ca78bca20699c62c3|Sept 26, 2024
 Libraries|[cpuinfo](http://github.com/pytorch/cpuinfo)|1e83a2fdd3102f65c6f1fb602c1b320486218a99|Sept 26, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.4.1|Sept 26, 2024
@@ -113,6 +114,7 @@ Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|537eb5722f4
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|0758f6b75f04480827c9a3c9c297f06f66d161df|Sept 24, 2024
 Emulators|[play](https://github.com/jpd002/Play-.git)|e70ee1608f9bc3a075c85ce1aab0cf9074201f12|Sept 23, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|10b8bf32d926042ea2496b889a03334254fad720|Sept 23, 2024
+Ports|[taradino](https://github.com/fabiangreffrath/taradino.git)|1e70c8a46b597a99b1063ed6e18b422f98ffa33c|Sep 23, 2024
 Utils|[re2c](http://github.com/skvadrik/re2c)|5c84dfc5aadc411808d6996d3ce47638962eb734|Sept 23, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|1a2f0a14cd6edd76d579552e009b5d49811d495f|Sept 23, 2024
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.3|Sept 23, 2024
@@ -427,7 +429,6 @@ Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|09a134ecca
 Emulators|[libretro-race](http://github.com/libretro/RACE)|f65011e6639ccbbbb44b6ffa63ca50c070475df4|May 28, 2023
 Emulators|[libretro-watara](http://github.com/libretro/potator)|aed31f9254cada9826c65ff4528cc8bdda338275|May 28, 2023
 Libraries|[python-adafruit-pureio](https://files.pythonhosted.org/packages/e5/b7/f1672435116822079bbdab42163f9e6424769b7db778873d95d18c085230)|1.1.11|May 25, 2023
-Boot|[batocera-initramfs](http://www.busybox.net/downloads)|1.36.1|May 19, 2023
 Emulators|[libretro-bsnes-hd](http://github.com/DerKoun/bsnes-hd)|f46b6d6368ea93943a30b5d4e79e8ed51c2da5e8|Apr 26, 2023
 Emulators|[libretro-pcsx2](https://github.com/libretro/pcsx2.git)|5112943bbe90cba420b5e8526297e2d12b881905|Apr 26, 2023
 Emulators|[libretro-melonds](http://github.com/libretro/melonds)|c6488c88cb4c7583dbcd61609e0eef441572fae8|Apr 13, 2023
@@ -535,5 +536,6 @@ Utils|[xxd](http://github.com/ConorOG/xxd)|084dc9dec6b6a6d048934916aa9a539d49ba8
 Emulators|[fpinball](https://github.com/batocera-linux/fpinball/releases)|v1.9.1.20101231|Dec 31, 2010
 Utils|[pm-utils](http://pm-utils.freedesktop.org/releases)|1.4.1|Jul 04, 2010
 Audio|[freepats](https://freepats.zenvoid.org)|20060219|Feb 19, 2006
+Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|48|N/A
 Utils|[7zip](https://www.7-zip.org/a)|2408|N/A
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
