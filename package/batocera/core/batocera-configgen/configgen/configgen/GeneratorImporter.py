@@ -413,6 +413,14 @@ def getGenerator(emulator: str) -> Generator:
     if emulator == "uqm":
         from .generators.uqm.uqmGenerator import UqmGenerator
         return UqmGenerator()
+    
+    if emulator == "taradino":
+        from .generators.taradino.taradinoGenerator import TaradinoGenerator
+        return TaradinoGenerator()
+
+    if emulator == "x16emu":
+        from .generators.x16emu.x16emuGenerator import X16emuGenerator
+        return X16emuGenerator()
 
     if emulator == 'sh':
         from .generators.sh.shGenerator import ShGenerator
