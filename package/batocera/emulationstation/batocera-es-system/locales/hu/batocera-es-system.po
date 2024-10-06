@@ -445,7 +445,7 @@ msgstr ""
 "Használjon fénypisztolyokat kontrollerek helyett, ha fénypisztolyok vannak "
 "csatlakoztatva."
 
-#. TRANSLATION: shared, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, dolphin, dolphin
+#. TRANSLATION: shared, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, dolphin, dolphin, ...
 msgctxt "game_options"
 msgid "LIGHT GUNS"
 msgstr "FÉNYPISZTOLYOK"
@@ -2333,7 +2333,7 @@ msgstr ""
 "Előfordulhat, hogy nem működik jól minden hardveren. A hibrid előnyben "
 "részesített, ahol támogatott."
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/swanstation, libretro/flycast, libretro/genesisplusgx, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/swanstation, libretro/flycast, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "BŐVÍTETT OPCIÓK"
@@ -2373,15 +2373,15 @@ msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "ANIZOTRÓP SZŰRÉS"
 
-#. TRANSLATION: libretro/dolphin, dolphin
+#. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
-msgid "Enhancement. Removes disc loading."
-msgstr "Fejlesztés. Eltávolítja a lemez betöltését."
+msgid "Enables or disable on screen messages."
+msgstr "Engedélyezi vagy letiltja a képernyőn megjelenő üzeneteket."
 
-#. TRANSLATION: libretro/dolphin, dolphin
+#. TRANSLATION: libretro/dolphin, pcsx2
 msgctxt "game_options"
-msgid "FAST DISK TRANSFER RATE"
-msgstr "GYORS LEMEZÁTVITELI SEBESSÉG"
+msgid "OSD MESSAGES"
+msgstr "OSD ÜZENETEK"
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -8624,7 +8624,7 @@ msgctxt "game_options"
 msgid "GLCore"
 msgstr "GLCore"
 
-#. TRANSLATION: libretro, libretro, libretro, libretro, rpcs3, ...
+#. TRANSLATION: libretro, libretro, libretro, libretro
 msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
@@ -9603,6 +9603,16 @@ msgstr "MEMÓRIAKEZELŐ EGYSÉG"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
+msgid "Enhancement. Removes disc loading."
+msgstr "Fejlesztés. Eltávolítja a lemez betöltését."
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "FAST DISK TRANSFER RATE"
+msgstr "GYORS LEMEZÁTVITELI SEBESSÉG"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
 msgid ""
 "Skips Vertical Blank Interrupts when lag is detected, allowing for smooth "
 "audio playback when emulation speed is not 100%."
@@ -9625,7 +9635,7 @@ msgctxt "game_options"
 msgid "USE PAD PROFILES"
 msgstr "PAD PROFILOK HASZNÁLATA"
 
-#. TRANSLATION: dolphin
+#. TRANSLATION: dolphin, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "Enable controller rumble capabilities if supported by the controller."
 msgstr "Engedélyezze a vezérlő rezgő képességeit, ha a vezérlő támogatja."
@@ -11166,11 +11176,6 @@ msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "OSD MESSAGES"
-msgstr "OSD ÜZENETEK"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
 msgid "Fit to Window / Fullscreen"
 msgstr "Illesztés ablakhoz / teljes képernyőhöz"
 
@@ -12371,50 +12376,35 @@ msgstr ""
 "Az alapértelmezett SDL2-t használ, ellenkező esetben engedélyezze a "
 "vezérlőspecifikus képességeket. A Sony DS nem működik klónvezérlőkkel."
 
-#. TRANSLATION: rpcs3
+#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
-msgid "PS3 CONTROLLER 1"
-msgstr "PS3 KONTROLLER 1"
+msgid "PS3 CONTROLLER"
+msgstr ""
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
-msgid "Evdev (Default)"
-msgstr ""
+msgid "Legacy Evdev"
+msgstr "Legacy Evdev"
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "Sony DS"
 msgstr "Sony DS"
 
-#. TRANSLATION: rpcs3
+#. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
-msgid "PS3 CONTROLLER 2"
-msgstr "PS3 KONTROLLER 2"
+msgid "CONTROLLER 5"
+msgstr ""
 
-#. TRANSLATION: rpcs3
+#. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
-msgid "PS3 CONTROLLER 3"
-msgstr "PS3 KONTROLLER 3"
+msgid "CONTROLLER 6"
+msgstr ""
 
-#. TRANSLATION: rpcs3
+#. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
-msgid "PS3 CONTROLLER 4"
-msgstr "PS3 KONTROLLER 4"
-
-#. TRANSLATION: rpcs3
-msgctxt "game_options"
-msgid "PS3 CONTROLLER 5"
-msgstr "PS3 kONTROLLER 5"
-
-#. TRANSLATION: rpcs3
-msgctxt "game_options"
-msgid "PS3 CONTROLLER 6"
-msgstr "PS3 KONTROLLER 6"
-
-#. TRANSLATION: rpcs3
-msgctxt "game_options"
-msgid "PS3 CONTROLLER 7"
-msgstr "PS3 KONTROLLER 7"
+msgid "CONTROLLER 7"
+msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -12897,7 +12887,7 @@ msgctxt "game_options"
 msgid "Sinden"
 msgstr ""
 
-#. TRANSLATION: cgenius
+#. TRANSLATION: cgenius, x16emu
 msgctxt "game_options"
 msgid "4x3 (Default)"
 msgstr "4x3 (alapértelmezett)"
@@ -16191,6 +16181,41 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Enhancement. Increase the rendering resolution."
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "1280x960 (Default)"
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Change image scaling algorithm quality."
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "IMAGE QUALITY"
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Nearest pixel sampling"
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Linear filtering"
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Anisotropic filtering"
+msgstr ""
+
 #. TRANSLATION: mame.mame.keys, c128.vice.keys, c64.vice.keys, singe.hypseus-singe.keys, daphne.hypseus-singe.keys, ...
 msgctxt "keys_files"
 msgid "Exit emulator"
@@ -16696,7 +16721,7 @@ msgctxt "keys_files"
 msgid "Look"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, openjazz.keys, raze.keys
+#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, openjazz.keys, rott.keys, raze.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr ""
@@ -16736,7 +16761,7 @@ msgctxt "keys_files"
 msgid "Use / Open"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
+#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr ""
@@ -16966,6 +16991,71 @@ msgctxt "keys_files"
 msgid "Stats"
 msgstr ""
 
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Open door"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Toggle weapon"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Drop weapon"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Aim up"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Aim down"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Strafe left"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Strafe right"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Menu back"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move left"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move right"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move forward"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move backward"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Toggle run"
+msgstr ""
+
 #. TRANSLATION: sonicnexus.keys
 msgctxt "keys_files"
 msgid "Dev Menu"
@@ -17083,10 +17173,6 @@ msgstr "Gyors mentés"
 #~ msgctxt "game_options"
 #~ msgid "Useful for speedruns/glitches."
 #~ msgstr "Hasznos speedruns/glitches esetén."
-
-#~ msgctxt "game_options"
-#~ msgid "Enables or disable on screen messages."
-#~ msgstr "Engedélyezi vagy letiltja a képernyőn megjelenő üzeneteket."
 
 #~ msgctxt "game_options"
 #~ msgid "WiiMote"
@@ -17457,8 +17543,32 @@ msgstr "Gyors mentés"
 #~ "teljesítményű GPU-kon, amelyeknek van tartalék fejterülete."
 
 #~ msgctxt "game_options"
-#~ msgid "Legacy Evdev"
-#~ msgstr "Legacy Evdev"
+#~ msgid "PS3 CONTROLLER 1"
+#~ msgstr "PS3 KONTROLLER 1"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 2"
+#~ msgstr "PS3 KONTROLLER 2"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 3"
+#~ msgstr "PS3 KONTROLLER 3"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 4"
+#~ msgstr "PS3 KONTROLLER 4"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 5"
+#~ msgstr "PS3 kONTROLLER 5"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 6"
+#~ msgstr "PS3 KONTROLLER 6"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 7"
+#~ msgstr "PS3 KONTROLLER 7"
 
 #~ msgctxt "game_options"
 #~ msgid "Center (Default)"

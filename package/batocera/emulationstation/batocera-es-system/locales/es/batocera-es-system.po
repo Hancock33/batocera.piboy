@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-24 00:00+0100\n"
 "PO-Revision-Date: 2024-09-17 00:00+0100\n"
-"Last-Translator: roliverosc, 2024\n"
+"Last-Translator: roliverosc <roliverosc@hotmail.com>, 2024\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
@@ -443,7 +443,7 @@ msgctxt "game_options"
 msgid "Use light guns instead of pads if light guns are connected."
 msgstr "Utilizar pistolas (light guns) en lugar de mandos si están conectadas."
 
-#. TRANSLATION: shared, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, dolphin, dolphin
+#. TRANSLATION: shared, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, dolphin, dolphin, ...
 msgctxt "game_options"
 msgid "LIGHT GUNS"
 msgstr "LIGHT GUNS"
@@ -2328,7 +2328,7 @@ msgstr ""
 "Puede que no funcione bien en todo el hardware. Se prefiere híbrido, cuando "
 "sea compatible."
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/swanstation, libretro/flycast, libretro/genesisplusgx, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/swanstation, libretro/flycast, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "OPCIONES AVANZADAS"
@@ -2368,15 +2368,15 @@ msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "FILTRADO ANISOTRÓPICO"
 
-#. TRANSLATION: libretro/dolphin, dolphin
+#. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
-msgid "Enhancement. Removes disc loading."
-msgstr "Mejora. Elimina la carga del disco."
+msgid "Enables or disable on screen messages."
+msgstr "Habilita o deshabilita mensajes en pantalla."
 
-#. TRANSLATION: libretro/dolphin, dolphin
+#. TRANSLATION: libretro/dolphin, pcsx2
 msgctxt "game_options"
-msgid "FAST DISK TRANSFER RATE"
-msgstr "TASA DE TRANSFERENCIA DE DISCO RÁPIDA"
+msgid "OSD MESSAGES"
+msgstr "MENSAJES OSD"
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -7769,7 +7769,7 @@ msgstr ""
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
 msgid "REDUCE SPRITE FLICKERING (UNSTABLE)"
-msgstr "REDUCIR PARPADEO DE LOS SPRITES (INESTABLE)"
+msgstr "REDUCIR PARPADEO DE SPRITES (INESTABLE)"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -8615,7 +8615,7 @@ msgctxt "game_options"
 msgid "GLCore"
 msgstr "GLCore"
 
-#. TRANSLATION: libretro, libretro, libretro, libretro, rpcs3, ...
+#. TRANSLATION: libretro, libretro, libretro, libretro
 msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
@@ -9600,6 +9600,16 @@ msgstr "UNIDAD DE GESTIÓN DE MEMORIA"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
+msgid "Enhancement. Removes disc loading."
+msgstr "Mejora. Elimina la carga del disco."
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "FAST DISK TRANSFER RATE"
+msgstr "TASA DE TRANSFERENCIA DE DISCO RÁPIDA"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
 msgid ""
 "Skips Vertical Blank Interrupts when lag is detected, allowing for smooth "
 "audio playback when emulation speed is not 100%."
@@ -9623,7 +9633,7 @@ msgctxt "game_options"
 msgid "USE PAD PROFILES"
 msgstr "USAR PERFILES DE MANDOS"
 
-#. TRANSLATION: dolphin
+#. TRANSLATION: dolphin, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "Enable controller rumble capabilities if supported by the controller."
 msgstr ""
@@ -10557,7 +10567,7 @@ msgstr "Inglés británico (uk)"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "English (us)"
-msgstr "Inglés (us)"
+msgstr "Inglés (EE.UU)"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
@@ -10712,7 +10722,7 @@ msgstr "Sólo inferior"
 #. TRANSLATION: melonds, pcsx2
 msgctxt "game_options"
 msgid "INTEGER SCALING"
-msgstr "ESCALADO DE NÚMEROS ENTEROS"
+msgstr "ESCALADO POR ENTEROS"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -11164,11 +11174,6 @@ msgstr "NxAGSS"
 msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "OSD MESSAGES"
-msgstr "MENSAJES OSD"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -12058,7 +12063,7 @@ msgstr "ESCALADO DE SALIDA"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "FidelityFX Super Resolution"
-msgstr "Súper resolución FidelityFX"
+msgstr "Super resolución FidelityFX"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -12075,12 +12080,12 @@ msgstr "MODO DE SHADER"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Legacy (single threaded)"
-msgstr "Legacy (un solo subproceso)"
+msgstr "Legacy (un sólo proceso)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Async (multi threaded)(Default)"
-msgstr "Async (multiproceso)(Defecto)"
+msgstr "Async (multi proceso)(Defecto)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -12374,50 +12379,35 @@ msgstr ""
 "El valor predeterminado utiliza SDL2, de lo contrario habilita las "
 "capacidades específicas del mando. Sony DS no funciona con mandos clónicos."
 
-#. TRANSLATION: rpcs3
+#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
-msgid "PS3 CONTROLLER 1"
-msgstr "MANDO PS3 1"
+msgid "PS3 CONTROLLER"
+msgstr ""
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
-msgid "Evdev (Default)"
-msgstr ""
+msgid "Legacy Evdev"
+msgstr "Evdev heredado"
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "Sony DS"
 msgstr "Sony DS"
 
-#. TRANSLATION: rpcs3
+#. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
-msgid "PS3 CONTROLLER 2"
-msgstr "MANDO PS3 2"
+msgid "CONTROLLER 5"
+msgstr ""
 
-#. TRANSLATION: rpcs3
+#. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
-msgid "PS3 CONTROLLER 3"
-msgstr "MANDO PS3 3"
+msgid "CONTROLLER 6"
+msgstr ""
 
-#. TRANSLATION: rpcs3
+#. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
-msgid "PS3 CONTROLLER 4"
-msgstr "MANDO PS3 4"
-
-#. TRANSLATION: rpcs3
-msgctxt "game_options"
-msgid "PS3 CONTROLLER 5"
-msgstr "MANDO PS3 5"
-
-#. TRANSLATION: rpcs3
-msgctxt "game_options"
-msgid "PS3 CONTROLLER 6"
-msgstr "MANDO PS3 6"
-
-#. TRANSLATION: rpcs3
-msgctxt "game_options"
-msgid "PS3 CONTROLLER 7"
-msgstr "MANDO PS3 7"
+msgid "CONTROLLER 7"
+msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -12758,56 +12748,62 @@ msgstr "RENDERIZADO CUÁDRUPLE"
 msgctxt "game_options"
 msgid "CRT-like colour adaption. Requires New 3D engine."
 msgstr ""
+"Adaptación de color similar a la de un monitor CRT. Requiere un nuevo motor "
+"3D."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "CRT COLOUR"
-msgstr ""
+msgstr "COLOR CRT"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "ARI/D93 (recommended for all JP developed games)"
-msgstr ""
+msgstr "ARI/D93 (recomendado para todos los juegos desarrollados en Japón)"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "PVM_20M2U/D93"
-msgstr ""
+msgstr "PVM_20M2U/D93"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "BT601_525/D93"
-msgstr ""
+msgstr "BT601_525/D93"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "BT601_525/D65 (recommended for all US developed games)"
 msgstr ""
+"BT601_525/D65 (recomendado para todos los juegos desarrollados en EE. UU.)"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "BT601_625/D65 (recommended for all EUR/AUS developed games)"
 msgstr ""
+"BT601_625/D65 (recomendado para todos los juegos desarrollados en EUR/AUS)"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "Upscale filter used for the 2D layers. Requires New 3D engine."
 msgstr ""
+"Filtro de aumento de escala utilizado para las capas 2D. Requiere un nuevo "
+"motor 3D."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "UPSCALE MODE"
-msgstr ""
+msgstr "MODO DE ESCALADO"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "None/Sharp Pixels"
-msgstr ""
+msgstr "Ninguno/Píxeles nítidos"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "Biquintic"
-msgstr ""
+msgstr "Biquintico"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -12897,7 +12893,7 @@ msgctxt "game_options"
 msgid "Sinden"
 msgstr ""
 
-#. TRANSLATION: cgenius
+#. TRANSLATION: cgenius, x16emu
 msgctxt "game_options"
 msgid "4x3 (Default)"
 msgstr "4:3 (Defecto)"
@@ -15976,7 +15972,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "HARD TEXTURE CACHE MEMORY LIMIT"
-msgstr "LÍMITE DE MEMORIA CACHÉ DE TEXTURA DURA"
+msgstr "LÍMITE MEMORIA CACHÉ PARA TEXTURA PERSISTENTES"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -16204,6 +16200,41 @@ msgstr "Analógico"
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Enhancement. Increase the rendering resolution."
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "1280x960 (Default)"
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Change image scaling algorithm quality."
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "IMAGE QUALITY"
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Nearest pixel sampling"
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Linear filtering"
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Anisotropic filtering"
 msgstr ""
 
 #. TRANSLATION: mame.mame.keys, c128.vice.keys, c64.vice.keys, singe.hypseus-singe.keys, daphne.hypseus-singe.keys, ...
@@ -16711,7 +16742,7 @@ msgctxt "keys_files"
 msgid "Look"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, openjazz.keys, raze.keys
+#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, openjazz.keys, rott.keys, raze.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr ""
@@ -16751,7 +16782,7 @@ msgctxt "keys_files"
 msgid "Use / Open"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
+#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr ""
@@ -16981,6 +17012,71 @@ msgctxt "keys_files"
 msgid "Stats"
 msgstr ""
 
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Open door"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Toggle weapon"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Drop weapon"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Aim up"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Aim down"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Strafe left"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Strafe right"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Menu back"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move left"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move right"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move forward"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move backward"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Toggle run"
+msgstr ""
+
 #. TRANSLATION: sonicnexus.keys
 msgctxt "keys_files"
 msgid "Dev Menu"
@@ -17098,10 +17194,6 @@ msgstr "Guardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "Useful for speedruns/glitches."
 #~ msgstr "Útil para speedruns/glitches."
-
-#~ msgctxt "game_options"
-#~ msgid "Enables or disable on screen messages."
-#~ msgstr "Habilita o deshabilita mensajes en pantalla."
 
 #~ msgctxt "game_options"
 #~ msgid "WiiMote"
@@ -17478,8 +17570,32 @@ msgstr "Guardado rápido"
 #~ "versiones de GPUs más potentes que tienen disponible capacidad adicional."
 
 #~ msgctxt "game_options"
-#~ msgid "Legacy Evdev"
-#~ msgstr "Evdev heredado"
+#~ msgid "PS3 CONTROLLER 1"
+#~ msgstr "MANDO PS3 1"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 2"
+#~ msgstr "MANDO PS3 2"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 3"
+#~ msgstr "MANDO PS3 3"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 4"
+#~ msgstr "MANDO PS3 4"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 5"
+#~ msgstr "MANDO PS3 5"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 6"
+#~ msgstr "MANDO PS3 6"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 7"
+#~ msgstr "MANDO PS3 7"
 
 #~ msgctxt "game_options"
 #~ msgid "Center (Default)"
