@@ -6,6 +6,7 @@ Emulators|[duckstation](http://github.com/stenzek/duckstation)|9edd957ade32e883a
 Emulators|[hatari](http://github.com/hatari/hatari)|03fdd795e514707ff345cb24dd7495aca0955595|Oct 06, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.185|Oct 06, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-10-06|Oct 06, 2024
+Emulators|[scummvm](http://github.com/scummvm/scummvm)|90924542c3a1b3e4376c86b560c82d36978eb1ab|Oct 06, 2024
 Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|ee365bad9501c73ff49936e72ec91cd9c3ce5c24|Oct 06, 2024
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|555c9536776e60b8dbab4c7ebb2ab78edeafdc1c|Oct 06, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|a06b22e75b0b703de00315e9c032e14744610186|Oct 06, 2024
@@ -24,6 +25,7 @@ Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|f5c06551e4a974cc326aac994ee685913
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|6a8b72e061cb8afcc696f528a0839d2d9b6fa7b8|Oct 06, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|0e52f7054fae93794706611b71a9190d726052b0|Oct 06, 2024
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|778896e3888aaaea996e81f0e641cb35b4b74694|Oct 06, 2024
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|90924542c3a1b3e4376c86b560c82d36978eb1ab|Oct 06, 2024
 Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|26a8a924e50b91202f6ba964ecfea7f8b136fc5f|Oct 06, 2024
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|3ec8082dd870ed5adfdc70d546b7f02fa53b8930|Oct 06, 2024
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|709a322337f18deac0cde5d70ae7081b8e99e919|Oct 06, 2024
@@ -95,10 +97,8 @@ Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|f72bac75d0d2840fece78
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|cb99e8f3ce03fabdbfa272104e258af1bb12265b|Sept 29, 2024
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|1f5a7fb5fd9fd727cd5fe8971ab7ef1633095f4e|Sept 29, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a177763e14c924e3b15e2|Sept 29, 2024
-Emulators|[scummvm](http://github.com/scummvm/scummvm)|43eaac667faeab52b2a8e68305c7015a77f5e253|Sept 29, 2024
 Ports|[raptorcots](http://github.com/skynettx/raptor)|6e630152ac4842281b492c77add34e866228572f|Sept 29, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|d984b850bbb23971c53df57b5ea6eddb96e04dc0|Sept 29, 2024
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|43eaac667faeab52b2a8e68305c7015a77f5e253|Sept 29, 2024
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|7d00f47c5ead75db0a9f24d70aa4b609e85125d8|Sept 28, 2024
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|04a9cd0ecc52711f616b725c391553c89c42293e|Sep 28, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|d9ad79a3b8eaa72c4e4f179dc289201867bf9251|Sept 28, 2024
