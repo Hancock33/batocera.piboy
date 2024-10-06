@@ -11,6 +11,7 @@
 - wayland multi screens support (including rpi*)
 - Xtension 2 Players Controller and Xtension 4 Players Controller
 - Initial support for the Retroid Pocket Mini (https://github.com/batocera-linux/batocera.linux/issues/12562)
+- arcade machine inputs have now a better supported thanks to keyboardToPads (xarcadejoystick removed)
 ### Added
 - Exit game with light gun (hold `TRIGGER`, `ACTION` and `START` buttons for 2 seconds)
 - Enhanced Bluetooth AD2P codec support for LDAC & aptX supported headphones or speakers
@@ -26,6 +27,8 @@
 - Arcade games: automatically switch to vertical bezels (default 'consoles' decorations)
 - /boot/preshare.sh script (to be able to wake up a nas for example)
 - Sinden light gun ratio option (you can select 4:3 ratio instead of fullscreen)
+- Taradino - Rise of the Triad port
+- X16-Emulator for Commander X16 system support
 ### Fixed
 - Steam loading on a NAS drive
 - ScummVM forcing English which can prevent some non-english games from starting
@@ -45,6 +48,7 @@
 - You can now manually forget, connect or disconnect a bluetooth device
 - Updated Nvidia card detection
 - Modern Nvidia cards will now use the OpenSource kernel modules when possible.
+- New ES web UI on http://<batocera>:1234 (with a new es_web_notifier service to enable)
 ### Updated
 - RetroArch to v1.19.1
   - Libretro-81 to June 29, 2024 build
@@ -64,6 +68,7 @@
   - Libretro-Cap32 to June 29, 2024 build
   - Libretro-Melonds-Ds to v1.1.5
   - Libretro-Ecwolf to June 28 build
+  - Libretro-Fbneo to October 3, 2024 build
   - Libretro-Flycast to September 29, 2024 build
   - Libretro-Freechaf to June 28 build
   - Libretro-MAME to 0.268
@@ -101,7 +106,7 @@
 ### System
 - Nvidia Driver to 560.35.03 (Open kernel modules)
 - Nvidia Legacy Driver to 470.256.02
-- x86_64 Kernel to 6.10.6
+- x86_64 Kernel to 6.11.2
 - Ayaneo Platform driver to Jul 17, 2024 build
 - Ayn Platform driver to Jul 17, 2024 build
 - MangoHud to Jun 15, 2024 build
@@ -122,7 +127,7 @@
 - LibVA to 2.22.0
 - WF-Recorder to 14th of August build
 - Switchres to 2.2.1
-- Mesa3D to 24.2.3
+- Mesa3D to 24.2.4
 - Buildroot to the 2024.05.2 release base
 - GStreamer codecs to 1.24.8
 - Shim signed IA32 EFI bootloader to 1.44~1+deb12u1+15.8-1~deb12u1

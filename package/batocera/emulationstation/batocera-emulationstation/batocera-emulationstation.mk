@@ -112,7 +112,6 @@ define BATOCERA_EMULATIONSTATION_RESOURCES
 	$(INSTALL) -m 0644 -D $(@D)/resources/help/*.*     $(TARGET_DIR)/usr/share/emulationstation/resources/help
 	$(INSTALL) -m 0644 -D $(@D)/resources/flags/*.*    $(TARGET_DIR)/usr/share/emulationstation/resources/flags
 	$(INSTALL) -m 0644 -D $(@D)/resources/battery/*.*  $(TARGET_DIR)/usr/share/emulationstation/resources/battery
-	$(INSTALL) -m 0644 -D $(@D)/resources/services/*.* $(TARGET_DIR)/usr/share/emulationstation/resources/services
 	$(INSTALL) -m 0644 -D $(@D)/resources/shaders/*.*  $(TARGET_DIR)/usr/share/emulationstation/resources/shaders
 	$(INSTALL) -m 0644 -D $(@D)/resources/shaders/*.*  $(TARGET_DIR)/usr/share/emulationstation/resources/shaders/kawase
 	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/resources/loading.jpg	$(TARGET_DIR)/usr/share/emulationstation/resources/loading.jpg

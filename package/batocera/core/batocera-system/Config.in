@@ -158,7 +158,8 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_BATOCERA_BATTERY_CHECKER             if  BR2_PACKAGE_XOSD
     select BR2_PACKAGE_BATOCERA_CONFIGGEN                   # emulation station external command launcher
     select BR2_PACKAGE_BATOCERA_EMULATIONSTATION            # emulationstation
-    select BR2_PACKAGE_BATOCERA_ES_SYSTEM                   # emulation station es_systems.cfg generator + default roms
+    select BR2_PACKAGE_BATOCERA_ES_SYSTEM                   # emulationstation es_systems.cfg generator + default roms
+    select BR2_PACKAGE_BATOCERA_ES_WEB_UI                   # emulationstation web ui
     select BR2_PACKAGE_BATOCERA_IMAGE                       # tools to generate batocera image
     select BR2_PACKAGE_BATOCERA_INITRAMFS                   # initramfs to boot the system
     select BR2_PACKAGE_BATOCERA_TRIGGERHAPPY                # multimedia/power buttons
@@ -214,7 +215,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_WIRELESS_REGDB                       # wireless regulatory DB
     select BR2_PACKAGE_WIRELESS_TOOLS                       # wireless tools
     select BR2_PACKAGE_WIRELESS_TOOLS_LIB                   # wireless tools
-    select BR2_PACKAGE_XARCADE2JSTICK                       # keyboard events of the Xarcade Tankstick
     select BR2_PACKAGE_XOSD                                 if  BR2_PACKAGE_XSERVER_XORG_SERVER # osd information displaying
     select BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     select BR2_TARGET_ROOTFS_SQUASHFS                       # tool to generate the target image
@@ -293,7 +293,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3128         # Improved Linux module driver for Logitech driving wheels (the lg4ff is disabled in kernels)
     select BR2_PACKAGE_HID_T150                             if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # Thrustmaster T150 and TMX Force Feedback Wheel Linux drivers
     select BR2_PACKAGE_JAMMASD
-    select BR2_PACKAGE_ULTIMARC_MINI_PAC
+    select BR2_PACKAGE_KEYBOARDTOPADS
     select BR2_PACKAGE_NSO_N64
 
     select BR2_PACKAGE_UPOWER                               # required by some cemuhook servers
@@ -1082,6 +1082,9 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     # Macintosh
     select BR2_PACKAGE_LIBRETRO_MINIVMAC                    # ALL
 
+    # Commander X16
+    select BR2_PACKAGE_X16EMU                               # ALL
+
     help
         Old computers
 
@@ -1415,6 +1418,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_PROTOTYPE                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Prototype (R-Type Clone)
     select BR2_PACKAGE_RAPTORCOTS                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Raptor Call of the Shadows
     select BR2_PACKAGE_ROTT                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Rise of the Triad Dark War
+    select BR2_PACKAGE_TARADINO                                                                                                            # Rise of the Triad
     select BR2_PACKAGE_SERIOUSSAM                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Serious Sam - The First / Second Encounter
     select BR2_PACKAGE_SM64PORT                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Super Mario 64
     select BR2_PACKAGE_SPACECADETPINBALL                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Space Cadet Pinball
@@ -1479,7 +1483,6 @@ config BR2_PACKAGE_BATOCERA_KODI
 
     # Kodi game controllers
     select BR2_PACKAGE_KODI_PERIPHERAL_JOYSTICK             # joysticks for kodi
-    select BR2_PACKAGE_KODI_PERIPHERAL_XARCADE              # xarcade for kodi
 
     # ffmpeg enabler that i'am not sure it has an impact on kodi
     select BR2_PACKAGE_FFMPEG_GPL                           # video recording
@@ -1943,3 +1946,4 @@ config BR2_PACKAGE_BATOCERA_VIDEO_CODECS
     select BR2_PACKAGE_GST1_VAAPI_ENCODERS                  if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
 ### ### ###
+

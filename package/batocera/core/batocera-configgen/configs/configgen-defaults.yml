@@ -221,6 +221,9 @@ colecovision:
 comad:
   emulator: libretro
   core:     mame078plus
+commanderx16:
+  emulator: x16emu
+  core:     x16emu
 cplus4:
   emulator: vice
   core:     xplus4

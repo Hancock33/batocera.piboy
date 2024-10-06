@@ -1,14 +1,33 @@
-import os
+from __future__ import annotations
+
 import struct
+from pathlib import Path
+from typing import TYPE_CHECKING, TypedDict
+
 from PIL import Image, ImageOps
 
-from ..batoceraPaths import SYSTEM_DECORATIONS, USER_DECORATIONS
-from .videoMode import getAltDecoration
+from ..batoceraPaths import BATOCERA_SHARE_DIR, SYSTEM_DECORATIONS, USER_DECORATIONS
 from .logger import get_logger
+from .videoMode import getAltDecoration
+
+if TYPE_CHECKING:
+    from collections.abc import Mapping
+
+    from PIL.ImageFile import ImageFile
+
+    from ..Emulator import Emulator
 
 eslog = get_logger(__name__)
 
-def getBezelInfos(rom: str, bezel: str, systemName: str, emulator: str):
+class BezelInfos(TypedDict):
+    png: Path
+    info: Path
+    layout: Path
+    mamezip: Path
+    specific_to_game: bool
+
+
+def getBezelInfos(rom: str | Path, bezel: str, systemName: str, emulator: str) -> BezelInfos | None:
     # by order choose :
     # rom name in the system subfolder of the user directory (gb/mario.png)
     # rom name in the system subfolder of the system directory (gb/mario.png)
@@ -22,7 +41,7 @@ def getBezelInfos(rom: str, bezel: str, systemName: str, emulator: str):
     # else return
     # mamezip files are for MAME-specific advanced artwork (bezels with overlays and backdrops, animated LEDs, etc)
     altDecoration = getAltDecoration(systemName, rom, emulator)
-    romBase = os.path.splitext(os.path.basename(rom))[0] # filename without extension
+    romBase = Path(rom).stem # filename without extension
     overlay_info_file = USER_DECORATIONS / bezel / "games" / systemName / f"{romBase}.info"
     overlay_png_file  = USER_DECORATIONS / bezel / "games" / systemName / f"{romBase}.png"
     overlay_layout_file  = USER_DECORATIONS / bezel / "games" / systemName / f"{romBase}.lay"
@@ -102,10 +121,11 @@ def getBezelInfos(rom: str, bezel: str, systemName: str, emulator: str):
     return { "png": overlay_png_file, "info": overlay_info_file, "layout": overlay_layout_file, "mamezip": overlay_mamezip_file, "specific_to_game": bezel_game }
 
 # Much faster than PIL Image.size
-def fast_image_size(image_file):
-    if not os.path.exists(image_file):
+def fast_image_size(image_file: str | Path) -> tuple[int, int]:
+    image_file = Path(image_file)
+    if not image_file.exists():
         return -1, -1
-    with open(image_file, 'rb') as fhandle:
+    with image_file.open('rb') as fhandle:
         head = fhandle.read(32)
         if len(head) != 32:
            # corrupted header, or not a PNG
@@ -116,7 +136,7 @@ def fast_image_size(image_file):
            return -1, -1
         return struct.unpack('>ii', head[16:24]) #image width, height
 
-def resizeImage(input_png, output_png, screen_width, screen_height, bezel_stretch=False):
+def resizeImage(input_png: str | Path, output_png: str | Path, screen_width: int, screen_height: int, bezel_stretch: bool = False) -> None:
     imgin = Image.open(input_png)
     fillcolor = 'black'
     eslog.debug(f"Resizing bezel: image mode {imgin.mode}")
@@ -126,7 +146,7 @@ def resizeImage(input_png, output_png, screen_width, screen_height, bezel_stretc
         imgout = imgin.resize((screen_width, screen_height), Image.BICUBIC)
         imgout.save(output_png, mode="RGBA", format="PNG")
 
-def padImage(input_png, output_png, screen_width, screen_height, bezel_width, bezel_height, bezel_stretch=False):
+def padImage(input_png: str | Path, output_png: str | Path, screen_width: int, screen_height: int, bezel_width: int, bezel_height: int, bezel_stretch: bool = False) -> None:
     imgin = Image.open(input_png)
     fillcolor = 'black'
     eslog.debug(f"Padding bezel: image mode {imgin.mode}")
@@ -139,24 +159,23 @@ def padImage(input_png, output_png, screen_width, screen_height, bezel_width, be
           imgout = ImageOps.pad(imgin, (screen_width, screen_height), color=fillcolor, centering=(0.5,0.5))
         imgout.save(output_png, mode="RGBA", format="PNG")
 
-def tatooImage(input_png, output_png, system):
+def tatooImage(input_png: str | Path, output_png: str | Path, system: Emulator) -> None:
   if system.config['bezel.tattoo'] == 'system':
       try:
-          tattoo_file = '/usr/share/batocera/controller-overlays/'+system.name+'.png'
-          if not os.path.exists(tattoo_file):
-              tattoo_file = '/usr/share/batocera/controller-overlays/generic.png'
+          tattoo_file = BATOCERA_SHARE_DIR / 'controller-overlays' / f'{system.name}.png'
+          if not tattoo_file.exists():
+              tattoo_file = BATOCERA_SHARE_DIR / 'controller-overlays' / 'generic.png'
           tattoo = Image.open(tattoo_file)
       except:
           eslog.error(f"Error opening controller overlay: {tattoo_file}")
-  elif system.config['bezel.tattoo'] == 'custom' and os.path.exists(system.config['bezel.tattoo_file']):
+  elif system.config['bezel.tattoo'] == 'custom' and (tattoo_file := Path(system.config['bezel.tattoo_file'])).exists():
       try:
-          tattoo_file = system.config['bezel.tattoo_file']
           tattoo = Image.open(tattoo_file)
       except:
           eslog.error(f"Error opening custom file: {tattoo_file}")
   else:
       try:
-          tattoo_file = '/usr/share/batocera/controller-overlays/generic.png'
+          tattoo_file = BATOCERA_SHARE_DIR / 'controller-overlays' / 'generic.png'
           tattoo = Image.open(tattoo_file)
       except:
           eslog.error(f"Error opening custom file: {tattoo_file}")
@@ -206,7 +225,7 @@ def tatooImage(input_png, output_png, system):
   imgnew.paste(back, (0,0,w,h))
   imgnew.save(output_png, mode="RGBA", format="PNG")
 
-def alphaPaste(input_png, output_png, imgin, fillcolor, screensize, bezel_stretch):
+def alphaPaste(input_png: str | Path, output_png: str | Path, imgin: ImageFile, fillcolor: str, screensize: tuple[int, int], bezel_stretch: bool) -> None:
   # screensize=(screen_width, screen_height)
   imgin = Image.open(input_png)
   # TheBezelProject have Palette + alpha, not RGBA. PIL can't convert from P+A to RGBA.
@@ -236,7 +255,7 @@ def alphaPaste(input_png, output_png, imgin, fillcolor, screensize, bezel_stretc
       imgout = ImageOps.pad(imgnew, screensize, color=fillcolor, centering=(0.5,0.5))
   imgout.save(output_png, mode="RGBA", format="PNG")
 
-def gunBordersSize(bordersSize):
+def gunBordersSize(bordersSize: str) -> tuple[int, int]:
     if bordersSize == "thin":
         return 1, 0
     if bordersSize == "medium":
@@ -245,7 +264,7 @@ def gunBordersSize(bordersSize):
         return 2, 1
     return 0, 0
 
-def gunBorderImage(input_png, output_png, aspect_ratio, innerBorderSizePer=2, outerBorderSizePer=3, innerBorderColor="#ffffff", outerBorderColor="#000000"):
+def gunBorderImage(input_png: str | Path, output_png: str | Path, aspect_ratio: str | None, innerBorderSizePer: int = 2, outerBorderSizePer: int = 3, innerBorderColor: str = "#ffffff", outerBorderColor: str = "#000000") -> int:
     # good default border that works in most circumstances is:
     #
     # 2% of the screen width in white.  Surrounded by 3% screen width of
@@ -310,10 +329,10 @@ def gunBorderImage(input_png, output_png, aspect_ratio, innerBorderSizePer=2, ou
 
     return outerBorderSize + innerBorderSize
 
-def gunsBorderSize(w, h, innerBorderSizePer = 2, outerBorderSizePer = 3):
+def gunsBorderSize(w: int, h: int, innerBorderSizePer: int = 2, outerBorderSizePer: int = 3) -> int:
     return (w * (innerBorderSizePer + outerBorderSizePer)) // 100
 
-def gunsBordersColorFomConfig(config):
+def gunsBordersColorFomConfig(config: Mapping[str, object]) -> str:
     if "controllers.guns.borderscolor" in config:
         if config["controllers.guns.borderscolor"] == "red":
             return "#ff0000"
@@ -325,7 +344,7 @@ def gunsBordersColorFomConfig(config):
             return "#ffffff"
     return "#ffffff"
 
-def createTransparentBezel(output_png, width, height):
+def createTransparentBezel(output_png: Path, width: int, height: int) -> None:
     from PIL import ImageDraw
     imgnew = Image.new("RGBA", (width,height), (0,0,0,0))
     imgnewdraw = ImageDraw.Draw(imgnew)
