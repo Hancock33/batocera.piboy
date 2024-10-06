@@ -29,9 +29,14 @@ endif
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
     CEMU_CONF_OPTS += -DENABLE_WAYLAND=ON
     CEMU_DEPENDENCIES += wayland wayland-protocols
+    CEMU_PRE_CONFIGURE_HOOKS = CEMU_WAYLAND_CMAKE
 else
     CEMU_CONF_OPTS += -DENABLE_WAYLAND=OFF
 endif
+
+define CEMU_WAYLAND_CMAKE
+	$(SED) 's:$${WaylandProtocols_DATADIR}:$(STAGING_DIR)/usr/share/wayland-protocols:g' $(@D)/CMakeLists.txt
+endef
 
 define CEMU_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/cemu/
