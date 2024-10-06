@@ -6,6 +6,7 @@ Emulators|[duckstation](http://github.com/stenzek/duckstation)|9edd957ade32e883a
 Emulators|[hatari](http://github.com/hatari/hatari)|03fdd795e514707ff345cb24dd7495aca0955595|Oct 06, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.185|Oct 06, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-10-06|Oct 06, 2024
+Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|ee365bad9501c73ff49936e72ec91cd9c3ce5c24|Oct 06, 2024
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|555c9536776e60b8dbab4c7ebb2ab78edeafdc1c|Oct 06, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|a06b22e75b0b703de00315e9c032e14744610186|Oct 06, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|e783e3c794ac60aa662985c079b3148ae8c41a2b|Oct 06, 2024
@@ -135,7 +136,6 @@ Utils|[btop](http://github.com/aristocratos/btop)|v1.4.0|Sept 22, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|1b138de1023272b039273d7bbc8f57573073bd25|Sept 22, 2024
 Ports|[xatrix](http://github.com/yquake2/xatrix)|1957253b256180f9bbb5b52c8d63cc1578170211|Sept 21, 2024
 Ports|[yrogue](http://github.com/yquake2/rogue)|7cf6cad6acfe88d74bca104839c4ff2b94cc6036|Sept 21, 2024
-Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|e5c47e911b2e94bc2864db915ed259af1ee9a765|Sept 20, 2024
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|8e110d87edab1b843d97ba831743c79519e07ad8|Sept 20, 2024
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|6aaabc8e18279ac8a7c6facf26aa67e58375d177|Sept 20, 2024
 Emulators|[libretro-fuse](http://github.com/libretro/fuse-libretro)|6fd07d90acc38a1b8835bf16539b833f21aaa38f|Sept 20, 2024
