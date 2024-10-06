@@ -401,7 +401,7 @@ index d002b845d8ac..78a8aac99f24 100644
  	struct amdgpu_encoder *encoder;
  	uint8_t negative;
 diff --git a/drivers/gpu/drm/amd/amdgpu/atombios_encoders.c b/drivers/gpu/drm/amd/amdgpu/atombios_encoders.c
-index 25feab188dfe..0243abb0e491 100644
+index ebf83fee43bb..f0b759e8683d 100644
 --- a/drivers/gpu/drm/amd/amdgpu/atombios_encoders.c
 +++ b/drivers/gpu/drm/amd/amdgpu/atombios_encoders.c
 @@ -39,6 +39,10 @@
@@ -436,7 +436,7 @@ index 25feab188dfe..0243abb0e491 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index ae34a88e510e..a00b173c46ac 100644
+index 5eed0dfb7184..efa9ef959534 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -162,6 +162,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -449,17 +449,17 @@ index ae34a88e510e..a00b173c46ac 100644
  /**
   * DOC: overview
   *
-@@ -4426,7 +4429,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4455,7 +4458,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  	return 0;
  }
  
 -#define AMDGPU_DM_DEFAULT_MIN_BACKLIGHT 12
 +#define AMDGPU_DM_DEFAULT_MIN_BACKLIGHT 0
  #define AMDGPU_DM_DEFAULT_MAX_BACKLIGHT 255
+ #define AMDGPU_DM_MIN_SPREAD ((AMDGPU_DM_DEFAULT_MAX_BACKLIGHT - AMDGPU_DM_DEFAULT_MIN_BACKLIGHT) / 2)
  #define AUX_BL_DEFAULT_TRANSITION_TIME_MS 50
+@@ -4489,11 +4492,27 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
  
-@@ -4444,11 +4447,27 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
- 	amdgpu_acpi_get_backlight_caps(&caps);
  	if (caps.caps_valid) {
  		dm->backlight_caps[bl_idx].caps_valid = true;
 +
@@ -486,7 +486,7 @@ index ae34a88e510e..a00b173c46ac 100644
  		dm->backlight_caps[bl_idx].min_input_signal =
  				AMDGPU_DM_DEFAULT_MIN_BACKLIGHT;
  		dm->backlight_caps[bl_idx].max_input_signal =
-@@ -4458,6 +4477,9 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
+@@ -4503,6 +4522,9 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
  	if (dm->backlight_caps[bl_idx].aux_support)
  		return;
  
@@ -496,7 +496,7 @@ index ae34a88e510e..a00b173c46ac 100644
  	dm->backlight_caps[bl_idx].min_input_signal = AMDGPU_DM_DEFAULT_MIN_BACKLIGHT;
  	dm->backlight_caps[bl_idx].max_input_signal = AMDGPU_DM_DEFAULT_MAX_BACKLIGHT;
  #endif
-@@ -4489,7 +4511,7 @@ static u32 convert_brightness_from_user(const struct amdgpu_dm_backlight_caps *c
+@@ -4534,7 +4556,7 @@ static u32 convert_brightness_from_user(const struct amdgpu_dm_backlight_caps *c
  	if (!get_brightness_range(caps, &min, &max))
  		return brightness;
  
@@ -505,7 +505,7 @@ index ae34a88e510e..a00b173c46ac 100644
  	return min + DIV_ROUND_CLOSEST((max - min) * brightness,
  				       AMDGPU_MAX_BL_LEVEL);
  }
-@@ -4504,7 +4526,7 @@ static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *cap
+@@ -4549,7 +4571,7 @@ static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *cap
  
  	if (brightness < min)
  		return 0;
@@ -514,7 +514,7 @@ index ae34a88e510e..a00b173c46ac 100644
  	return DIV_ROUND_CLOSEST(AMDGPU_MAX_BL_LEVEL * (brightness - min),
  				 max - min);
  }
-@@ -8789,7 +8811,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -8835,7 +8857,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -524,7 +524,7 @@ index ae34a88e510e..a00b173c46ac 100644
  	bool pflip_present = false;
  	bool dirty_rects_changed = false;
 diff --git a/drivers/gpu/drm/amd/display/dc/core/dc.c b/drivers/gpu/drm/amd/display/dc/core/dc.c
-index 85a2ef82afa5..114f1b4fab8e 100644
+index 70bdc9d95f34..2cbe89580c19 100644
 --- a/drivers/gpu/drm/amd/display/dc/core/dc.c
 +++ b/drivers/gpu/drm/amd/display/dc/core/dc.c
 @@ -4955,11 +4955,6 @@ static bool update_planes_and_stream_v2(struct dc *dc,
@@ -4294,10 +4294,10 @@ index 000000000000..a60fa7db9141
 +MODULE_DESCRIPTION("Steam Deck EC MFD core driver");
 +MODULE_LICENSE("GPL");
 diff --git a/drivers/pci/quirks.c b/drivers/pci/quirks.c
-index 7db97a14b34a..d60b5034d503 100644
+index 0f7f8c737ae3..10338fd1148b 100644
 --- a/drivers/pci/quirks.c
 +++ b/drivers/pci/quirks.c
-@@ -697,7 +697,7 @@ DECLARE_PCI_FIXUP_FINAL(PCI_VENDOR_ID_ATI,	PCI_DEVICE_ID_ATI_RS100,   quirk_ati_
+@@ -710,7 +710,7 @@ DECLARE_PCI_FIXUP_FINAL(PCI_VENDOR_ID_ATI,	PCI_DEVICE_ID_ATI_RS100,   quirk_ati_
  /*
   * In the AMD NL platform, this device ([1022:7912]) has a class code of
   * PCI_CLASS_SERIAL_USB_XHCI (0x0c0330), which means the xhci driver will
@@ -4306,7 +4306,7 @@ index 7db97a14b34a..d60b5034d503 100644
   *
   * But the dwc3 driver is a more specific driver for this device, and we'd
   * prefer to use it instead of xhci. To prevent xhci from claiming the
-@@ -705,7 +705,7 @@ DECLARE_PCI_FIXUP_FINAL(PCI_VENDOR_ID_ATI,	PCI_DEVICE_ID_ATI_RS100,   quirk_ati_
+@@ -718,7 +718,7 @@ DECLARE_PCI_FIXUP_FINAL(PCI_VENDOR_ID_ATI,	PCI_DEVICE_ID_ATI_RS100,   quirk_ati_
   * defines as "USB device (not host controller)". The dwc3 driver can then
   * claim it based on its Vendor and Device ID.
   */
@@ -4315,7 +4315,7 @@ index 7db97a14b34a..d60b5034d503 100644
  {
  	u32 class = pdev->class;
  
-@@ -718,9 +718,7 @@ static void quirk_amd_dwc_class(struct pci_dev *pdev)
+@@ -731,9 +731,7 @@ static void quirk_amd_dwc_class(struct pci_dev *pdev)
  	}
  }
  DECLARE_PCI_FIXUP_HEADER(PCI_VENDOR_ID_AMD, PCI_DEVICE_ID_AMD_NL_USB,
