@@ -307,7 +307,7 @@ Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-3|
 Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.18|Sept 20, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241006|Oct 06, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|84215ecb3a771a564575edced8497f81a52a3770|Oct 01, 2024
-Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|555c9536776e60b8dbab4c7ebb2ab78edeafdc1c|Oct 06, 2024
+Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r48|Sept 06, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|9ad18ee26559ca75218b049762675b99f8417fec|Aug 02, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|32b3151132cff98eeb6e1629db26bde9aa4c464f|Oct 05, 2024
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024
