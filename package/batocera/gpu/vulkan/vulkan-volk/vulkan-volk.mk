@@ -3,8 +3,8 @@
 # vulkan-volk
 #
 ################################################################################
-# Version: Commits on Oct 04, 2024
-VULKAN_VOLK_VERSION = 447e21b5d92ed8d5271b0d39b071f938fcfa875f
+# Version: Commits on Oct 07, 2024
+VULKAN_VOLK_VERSION = e816744c664fe7e914fd08dfbef99fac669157ad
 VULKAN_VOLK_SITE = $(call github,zeux,volk,$(VULKAN_VOLK_VERSION))
 VULKAN_VOLK_DEPENDENCIES = vulkan-headers vulkan-loader
 VULKAN_VOLK_INSTALL_STAGING = YES
