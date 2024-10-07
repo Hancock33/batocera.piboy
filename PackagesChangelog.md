@@ -8,7 +8,6 @@ Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.185|Oct 06, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-10-06|Oct 06, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|90924542c3a1b3e4376c86b560c82d36978eb1ab|Oct 06, 2024
 Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|ee365bad9501c73ff49936e72ec91cd9c3ce5c24|Oct 06, 2024
-Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|555c9536776e60b8dbab4c7ebb2ab78edeafdc1c|Oct 06, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|a06b22e75b0b703de00315e9c032e14744610186|Oct 06, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|e783e3c794ac60aa662985c079b3148ae8c41a2b|Oct 06, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|1edbb0b0b82c40f2cc0504150978a4bda4a9e28f|Oct 06, 2024
@@ -169,6 +168,7 @@ Emulators|[moonlight-embedded](https://github.com/moonlight-stream/moonlight-emb
 Utils|[ledspicer](http://github.com/meduzapat/LEDSpicer)|0.6.3.1|Sept 08, 2024
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|f4b0755e2722d59fe1c20d7e470f7b8929dcae85|Sept 08, 2024
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|0b43954c75760d00737120db9d5009813778c7ae|Sept 07, 2024
+Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r48|Sept 06, 2024
 Emulators|[libretro-beetle-supergrafx](http://github.com/libretro/beetle-supergrafx-libretro)|6c76ef9e83f7f3bed3aa747b01fd2d6c54687c65|Sept 06, 2024
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|20c55eb6333a11395ba637df8583066483e58cb2|Sept 06, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|3f2ed47c00ef6a8298c99c7d7161d1d3f4a90b39|Sept 05, 2024
