@@ -1017,9 +1017,6 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     # Sonic 3 A.I.R. (Angel Island Revisited)
     select BR2_PACKAGE_SONIC3_AIR                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
-    # Ur-Quan Masters
-    select BR2_PACKAGE_UQM                                  # ALL
-
     help
         Ports
 
@@ -1416,6 +1413,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_OPENJK                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # OpenJK: JediAcademy / Jedi Outcast
     select BR2_PACKAGE_OPENLARA                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Tomb Raider
     select BR2_PACKAGE_PROTOTYPE                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Prototype (R-Type Clone)
+    select BR2_PACKAGE_UQM                                                                                                                 # Ur-Quan Masters
     select BR2_PACKAGE_RAPTORCOTS                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Raptor Call of the Shadows
     select BR2_PACKAGE_ROTT                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Rise of the Triad Dark War
     select BR2_PACKAGE_TARADINO                                                                                                            # Rise of the Triad
