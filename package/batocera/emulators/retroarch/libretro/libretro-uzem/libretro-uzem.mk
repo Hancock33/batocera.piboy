@@ -3,8 +3,8 @@
 # libretro-uzem
 #
 ################################################################################
-# Version: Commits on Oct 01, 2024
-LIBRETRO_UZEM_VERSION = a37b3c633168cac043d8efb7ae96c29193a325bf
+# Version: Commits on Oct 06, 2024
+LIBRETRO_UZEM_VERSION = bb06756a289f569810aac74691d6d585f9e70885
 LIBRETRO_UZEM_SITE = $(call github,libretro,libretro-uzem,$(LIBRETRO_UZEM_VERSION))
 LIBRETRO_UZEM_LICENSE = MIT
 

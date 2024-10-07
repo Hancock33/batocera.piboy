@@ -3,8 +3,8 @@
 # libretro-gpsp
 #
 ################################################################################
-# Version: Commits on Oct 01, 2024
-LIBRETRO_GPSP_VERSION = 01ca530d0797021fb519a49c18f5df15c5093605
+# Version: Commits on Oct 06, 2024
+LIBRETRO_GPSP_VERSION = 1d3ca75b6b1607036b0f4cb1b16d854bf8d60444
 LIBRETRO_GPSP_SITE = $(call github,libretro,gpsp,$(LIBRETRO_GPSP_VERSION))
 LIBRETRO_GPSP_LICENSE = GPLv2
 
