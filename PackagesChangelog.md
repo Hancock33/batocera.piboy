@@ -12,7 +12,6 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|baaa90658380
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|c8fb1a2d6ccbecef48ca535934cb53e679edb8ad|Oct 07, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|bd68f136f343ee10dfacfac21fdfb0c8015e44c4|Oct 07, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|7d15e86ce7ff99d6ee10cec98bc8b3f16021053c|Oct 07, 2024
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|e816744c664fe7e914fd08dfbef99fac669157ad|Oct 07, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|b2356f5ee756bc100754e110c16d36e74cd10599|Oct 07, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|dd037231445c37f9d395fb202f440e2ffeb4da02|Oct 07, 2024
 Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|8b0b03cf633c4d7f151d3db0ea1138dc2b024d48|Oct 07, 2024
@@ -120,8 +119,8 @@ Boot|[batocera-initramfs](http://www.busybox.net/downloads)|1.37.0|Sept 26, 2024
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|50a3aa3d42ed1c0c4d829c4ca78bca20699c62c3|Sept 26, 2024
 Libraries|[cpuinfo](http://github.com/pytorch/cpuinfo)|1e83a2fdd3102f65c6f1fb602c1b320486218a99|Sept 26, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.4.1|Sept 26, 2024
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.3.296.0|Sept 26, 2024
 Emulators|[mame](http://github.com/mamedev/mame)|mame0270|Sept 25, 2024
-Gpu|[glslang](http://github.com/KhronosGroup/glslang)|15.0.0|Sept 25, 2024
 Ports|[quake3](http://github.com/ioquake/ioq3)|4ee389b6b27feed82b19145ef49948839ed8dc9b|Sept 25, 2024
 Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|603c1dd5b6e8464dddce2ef299cad201d1e02ddb|Sept 25, 2024
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|527564f2748901068a5fef891c5073a4d6cd089b|Sept 25, 2024
@@ -133,6 +132,7 @@ Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|0758f6b75f0448
 Emulators|[play](https://github.com/jpd002/Play-.git)|e70ee1608f9bc3a075c85ce1aab0cf9074201f12|Sept 23, 2024
 Ports|[taradino](https://github.com/fabiangreffrath/taradino.git)|1e70c8a46b597a99b1063ed6e18b422f98ffa33c|Sep 23, 2024
 Utils|[re2c](http://github.com/skvadrik/re2c)|5c84dfc5aadc411808d6996d3ce47638962eb734|Sept 23, 2024
+Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.3.296.0|Sept 23, 2024
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.3|Sept 23, 2024
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|e226068f979cd8fbfc3be9780d16cfb1405095b0|Sept 23, 2024
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|e70ee1608f9bc3a075c85ce1aab0cf9074201f12|Sept 23, 2024
@@ -148,6 +148,7 @@ Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-9.18|Sept 20, 2
 Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.18|Sept 20, 2024
 Audio|[cubeb](http://github.com/mozilla/cubeb)|2bee6bcbd37b121ab197193fe466eef0e91b62b1|Sept 18, 2024
 Utils|[ryzenadj](http://github.com/FlyGoat/RyzenAdj)|v0.16.0|Sept 18, 2024
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.3.296.0|Sept 18, 2024
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|93292f1cd5c3e22f3123fd9262cbdcec3cb20d43|Sept 18, 2024
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|261d4213497855bb4ca73d825a78ef8e6efa7c8a|Sept 18, 2024
 Emulators|[libretro-noods](http://github.com/jonian/libretro-noods)|9c4b2bf58b2344e41fe36964b9d8b629f9bb1a38|Sept 18, 2024
@@ -297,7 +298,6 @@ Emulators|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/relea
 Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Network|[pd-mapper](http://github.com/linux-msm/pd-mapper)|e7c42e1522249593302a5b8920b9e7b42dc3f25e|Jun 19, 2024
 Controllers|[new-lg4ff](http://github.com/berarma/new-lg4ff)|1a2d5727876dd7befce23d9695924e9446b31c4b|Jun 18, 2024
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.3.290.0|Jun 18, 2024
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|12620c91eaca0917a7939a92ec33915cadf24475|Jun 15, 2024
 Network|[rtl8821au-morrownr](http://github.com/morrownr/8821au-20210708)|0b12ea54b7d6dcbfa4ce94eb403b1447565407f1|Jun 13, 2024
 Kodi|[kodi_resource_language_el_gr](http://mirrors.kodi.tv/addons/omega/resource.language.el_gr)|11.0.62|Jun 11, 2024
