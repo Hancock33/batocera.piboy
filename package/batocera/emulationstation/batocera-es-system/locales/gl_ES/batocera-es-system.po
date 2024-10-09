@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-09-14 13:27+0200\n"
+"PO-Revision-Date: 2024-10-07 14:02+0200\n"
 "Last-Translator: \n"
 "Language-Team: Galician\n"
 "Language: gl_ES\n"
@@ -11140,7 +11140,7 @@ msgstr "filtro de onda"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "lottes crt"
-msgstr "Lottes CRT"
+msgstr "lottes CRT"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11451,7 +11451,7 @@ msgstr "Sen escalar (predeterminada)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Scaled"
-msgstr "escalado"
+msgstr "Escalado"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -12357,7 +12357,7 @@ msgstr ""
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "PS3 CONTROLLER"
-msgstr ""
+msgstr "MANDO PS3"
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
@@ -12372,17 +12372,17 @@ msgstr "Sony DS"
 #. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 5"
-msgstr ""
+msgstr "MANDO 5"
 
 #. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 6"
-msgstr ""
+msgstr "MANDO 6"
 
 #. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 7"
-msgstr ""
+msgstr "MANDO 7"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -12722,57 +12722,59 @@ msgstr "RENDERIZADO QUAD"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "CRT-like colour adaption. Requires New 3D engine."
-msgstr ""
+msgstr "Adaptación de cores similar a CRT. Require un motor 3D novo."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "CRT COLOUR"
-msgstr ""
+msgstr "COR CRT"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "ARI/D93 (recommended for all JP developed games)"
-msgstr ""
+msgstr "ARI/D93 (recomendado para todos os xogos desenvolvidos en Xapón)"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "PVM_20M2U/D93"
-msgstr ""
+msgstr "PVM_20M2U/D93"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "BT601_525/D93"
-msgstr ""
+msgstr "BT601_525/D93"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "BT601_525/D65 (recommended for all US developed games)"
-msgstr ""
+msgstr "BT601_525/D65 (recomendado para todos os xogos desenvolvidos nos EUA)"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "BT601_625/D65 (recommended for all EUR/AUS developed games)"
 msgstr ""
+"BT601_625/D65 (recomendado para todos os xogos desenvolvidos en Europa/"
+"Australia)"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "Upscale filter used for the 2D layers. Requires New 3D engine."
-msgstr ""
+msgstr "Filtro de aumento usado para as capas 2D. Require un motor 3D novo."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "UPSCALE MODE"
-msgstr ""
+msgstr "MODO DE AUMENTO"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "None/Sharp Pixels"
-msgstr ""
+msgstr "Ningún/Píxeis nítidos"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "Biquintic"
-msgstr ""
+msgstr "Biquintic"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -16161,37 +16163,37 @@ msgstr ""
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Enhancement. Increase the rendering resolution."
-msgstr ""
+msgstr "Mellora. Aumentar a resolución de renderizado."
 
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "1280x960 (Default)"
-msgstr ""
+msgstr "1280x960 (Predeterminado)"
 
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Change image scaling algorithm quality."
-msgstr ""
+msgstr "Cambiar a calidade do algoritmo de escalado de imaxes."
 
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "IMAGE QUALITY"
-msgstr ""
+msgstr "CALIDADE DA IMAXE"
 
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Nearest pixel sampling"
-msgstr ""
+msgstr "Mestura de píxeis máis próxima"
 
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Linear filtering"
-msgstr ""
+msgstr "Filtrado lineal"
 
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Anisotropic filtering"
-msgstr ""
+msgstr "Filtrado anisotrópico"
 
 #. TRANSLATION: mame.mame.keys, c128.vice.keys, c64.vice.keys, singe.hypseus-singe.keys, daphne.hypseus-singe.keys, ...
 msgctxt "keys_files"
@@ -16701,7 +16703,7 @@ msgstr ""
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, openjazz.keys, rott.keys, raze.keys
 msgctxt "keys_files"
 msgid "Fire"
-msgstr ""
+msgstr "Disparar"
 
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -16741,7 +16743,7 @@ msgstr ""
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
-msgstr ""
+msgstr "Correr"
 
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -16971,67 +16973,67 @@ msgstr ""
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Open door"
-msgstr ""
+msgstr "Porta aberta"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle weapon"
-msgstr ""
+msgstr "Alternar arma"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Drop weapon"
-msgstr ""
+msgstr "Soltar arma"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Aim up"
-msgstr ""
+msgstr "Apuntar cara arriba"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Aim down"
-msgstr ""
+msgstr "Apuntar cara abaixo"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Strafe left"
-msgstr ""
+msgstr "Desviar á esquerda"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Strafe right"
-msgstr ""
+msgstr "Desviar á dereita"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
-msgstr ""
+msgstr "Voltar ao menú"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move left"
-msgstr ""
+msgstr "Mover á esquerda"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move right"
-msgstr ""
+msgstr "Mover á dereita"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move forward"
-msgstr ""
+msgstr "Mover cara adiante"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move backward"
-msgstr ""
+msgstr "Mover cara atrás"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
-msgstr ""
+msgstr "Alternar correr"
 
 #. TRANSLATION: sonicnexus.keys
 msgctxt "keys_files"

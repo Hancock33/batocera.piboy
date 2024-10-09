@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-10-05 07:49+0000\n"
+"PO-Revision-Date: 2024-10-05 20:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -16910,7 +16910,7 @@ msgstr "Verkleinern x5"
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Take a screenshot"
-msgstr "Ein Screenshot machen"
+msgstr "Screenshot erstellen"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -16920,7 +16920,7 @@ msgstr "Zurücksetzen der Anwendung"
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Hire staff"
-msgstr "Personal anstellen"
+msgstr "Leute einladen"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -16930,12 +16930,12 @@ msgstr "Raum bearbeiten"
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open build room menu"
-msgstr "Bauraummenü öffnen"
+msgstr "Build Room-Menü öffnen"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open furnish corridor menu"
-msgstr "Einrichtungsgegenständemenu öffnen"
+msgstr "Menü „Korridor einrichten“ öffnen"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -16990,7 +16990,7 @@ msgstr "Forschung"
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Manage Staff"
-msgstr "Personal verwalten"
+msgstr "Leute verwalten"
 
 #. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys
 msgctxt "keys_files"
@@ -17075,12 +17075,12 @@ msgstr "Nach unten zielen"
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Strafe left"
-msgstr "Strafe (links)"
+msgstr "Ausweichen (links)"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Strafe right"
-msgstr "Strafe (rechts)"
+msgstr "Ausweichen (rechts)"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
