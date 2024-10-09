@@ -226,7 +226,6 @@ acclaim:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -254,7 +253,6 @@ alphadenshi:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -271,7 +269,6 @@ amcoe:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -288,7 +285,6 @@ atari:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -305,7 +301,6 @@ atlus:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -322,7 +317,6 @@ banpresto:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -339,7 +333,6 @@ cave:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -356,7 +349,6 @@ centurye:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -404,7 +396,6 @@ cinematronics:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -421,7 +412,6 @@ comad:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -438,7 +428,6 @@ cps1:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -455,7 +444,6 @@ cps2:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -472,7 +460,6 @@ cps3:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -545,7 +532,6 @@ dataeast:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -562,7 +548,6 @@ dynax:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -579,7 +564,6 @@ eighting:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -596,7 +580,6 @@ exidy:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -645,7 +628,6 @@ gaelco:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -662,7 +644,6 @@ gottlieb:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -679,7 +660,6 @@ igs:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -696,7 +676,6 @@ incredibletech:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -713,7 +692,6 @@ irem:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -730,7 +708,6 @@ jaleco:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -747,7 +724,6 @@ kaneko:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -764,7 +740,6 @@ konami:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -780,7 +755,6 @@ mame:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME]                    }
@@ -831,7 +805,6 @@ midway:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -848,7 +821,6 @@ mitchell:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -865,7 +837,6 @@ namco:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -906,7 +877,6 @@ nichibutsu:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -923,7 +893,6 @@ nintendo:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -940,7 +909,6 @@ nmk:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -957,7 +925,6 @@ psikyo:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -974,7 +941,6 @@ sammy:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -991,7 +957,6 @@ sega:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -1008,7 +973,6 @@ semicom:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -1025,7 +989,6 @@ seta:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -1068,7 +1031,6 @@ snk:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -1085,7 +1047,6 @@ taito:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -1102,7 +1063,6 @@ technos:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -1119,7 +1079,6 @@ tecmo:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -1136,7 +1095,6 @@ toaplan:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -1171,7 +1129,6 @@ universal:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -1188,7 +1145,6 @@ visco:
     libretro:
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
@@ -6212,7 +6168,6 @@ neogeo:
       fbneo:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FBNEO]          }
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME]                    }
