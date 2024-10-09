@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-24 00:00+0100\n"
-"PO-Revision-Date: 2024-09-17 00:00+0100\n"
+"PO-Revision-Date: 2024-10-09 00:00+0100\n"
 "Last-Translator: roliverosc <roliverosc@hotmail.com>, 2024\n"
-"Language-Team: Spanish\n"
-"Language: es_ES\n"
+"Language-Team: spanish\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -196,7 +196,7 @@ msgstr "Aumenta el tamaño de la imagen sólo en múltiplos enteros."
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "INTEGER SCALING (PIXEL PERFECT)"
-msgstr "INTEGER SCALING (PIXEL PERFECT)"
+msgstr "ESCALADO DE NÚMEROS ENTEROS (PIXEL PERFECT)"
 
 #. TRANSLATION: shared, shared, shared, shared, shared, ...
 msgctxt "game_options"
@@ -9541,7 +9541,7 @@ msgstr "MUESTREO MANUAL DE TEXTURA"
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Usually not much faster than single core mode."
-msgstr "Por lo general, no es mucho más rápido que el modo de un solo núcleo."
+msgstr "Por lo general, no es mucho más rápido que el modo de un sólo núcleo."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
 msgctxt "game_options"
@@ -12382,7 +12382,7 @@ msgstr ""
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "PS3 CONTROLLER"
-msgstr ""
+msgstr "MANDO PS3"
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
@@ -12397,17 +12397,17 @@ msgstr "Sony DS"
 #. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 5"
-msgstr ""
+msgstr "MANDO 5"
 
 #. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 6"
-msgstr ""
+msgstr "MANDO 6"
 
 #. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 7"
-msgstr ""
+msgstr "MANDO 7"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -15399,7 +15399,7 @@ msgid ""
 "Per Table Folder requires all files to be in the associated rom table "
 "folder. If disabled, consult the Wiki for further details."
 msgstr ""
-"La Carpeta por mesa requiere que todos los archivos estén en la carpeta de "
+"La carpeta por mesa requiere que todos los archivos estén en la carpeta de "
 "la mesa ROM asociada. Si está deshabilitado, consulte la Wiki para obtener "
 "más detalles."
 
@@ -15431,7 +15431,7 @@ msgstr "0% (Por defecto)"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Affects just the visual effect of nudging."
-msgstr "Afecta solo al efecto visual de golpeo."
+msgstr "Afecta sólo al efecto visual de golpeo."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15677,7 +15677,7 @@ msgid ""
 "multi-window on desktop."
 msgstr ""
 "PANTALLA COMPLETA te ofrece una vista desde arriba hacia abajo del campo de "
-"juego. Para uso en gabinete o múlti-ventana en el escritorio."
+"juego. Para uso en gabinete o multiventana en el escritorio."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -16205,37 +16205,37 @@ msgstr ""
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Enhancement. Increase the rendering resolution."
-msgstr ""
+msgstr "Mejora. Aumenta la resolución de renderizado."
 
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "1280x960 (Default)"
-msgstr ""
+msgstr "1280x960 (Defecto)"
 
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Change image scaling algorithm quality."
-msgstr ""
+msgstr "Cambia la calidad del algoritmo de escalado de la imagen."
 
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "IMAGE QUALITY"
-msgstr ""
+msgstr "CALIDAD DE IMAGEN"
 
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Nearest pixel sampling"
-msgstr ""
+msgstr "Muestreo de píxeles más cercanos"
 
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Linear filtering"
-msgstr ""
+msgstr "Filtrado lineal"
 
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Anisotropic filtering"
-msgstr ""
+msgstr "Filtrado anisotrópico"
 
 #. TRANSLATION: mame.mame.keys, c128.vice.keys, c64.vice.keys, singe.hypseus-singe.keys, daphne.hypseus-singe.keys, ...
 msgctxt "keys_files"
@@ -16745,7 +16745,7 @@ msgstr ""
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, openjazz.keys, rott.keys, raze.keys
 msgctxt "keys_files"
 msgid "Fire"
-msgstr ""
+msgstr "Disparo"
 
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -16785,7 +16785,7 @@ msgstr ""
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
-msgstr ""
+msgstr "Ejecutar"
 
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -17015,67 +17015,67 @@ msgstr ""
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Open door"
-msgstr ""
+msgstr "Abrir puerta"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle weapon"
-msgstr ""
+msgstr "Cambiar arma"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Drop weapon"
-msgstr ""
+msgstr "Soltar arma"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Aim up"
-msgstr ""
+msgstr "Apuntar hacia arriba"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Aim down"
-msgstr ""
+msgstr "Apuntar hacia abajo"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Strafe left"
-msgstr ""
+msgstr "Disparar a la izquierda"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Strafe right"
-msgstr ""
+msgstr "Disparar a la derecha"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
-msgstr ""
+msgstr "Menú atrás"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move left"
-msgstr ""
+msgstr "Mover a la izquierda"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move right"
-msgstr ""
+msgstr "Mover a la derecha"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move forward"
-msgstr ""
+msgstr "Avanzar"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move backward"
-msgstr ""
+msgstr "Moverse hacia atrás"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
-msgstr ""
+msgstr "Activar o desactivar ejecución"
 
 #. TRANSLATION: sonicnexus.keys
 msgctxt "keys_files"
@@ -17568,34 +17568,6 @@ msgstr "Guardado rápido"
 #~ msgstr ""
 #~ "Transmite textura a la GPU en paralelo. Puede mejorar el rendimiento en "
 #~ "versiones de GPUs más potentes que tienen disponible capacidad adicional."
-
-#~ msgctxt "game_options"
-#~ msgid "PS3 CONTROLLER 1"
-#~ msgstr "MANDO PS3 1"
-
-#~ msgctxt "game_options"
-#~ msgid "PS3 CONTROLLER 2"
-#~ msgstr "MANDO PS3 2"
-
-#~ msgctxt "game_options"
-#~ msgid "PS3 CONTROLLER 3"
-#~ msgstr "MANDO PS3 3"
-
-#~ msgctxt "game_options"
-#~ msgid "PS3 CONTROLLER 4"
-#~ msgstr "MANDO PS3 4"
-
-#~ msgctxt "game_options"
-#~ msgid "PS3 CONTROLLER 5"
-#~ msgstr "MANDO PS3 5"
-
-#~ msgctxt "game_options"
-#~ msgid "PS3 CONTROLLER 6"
-#~ msgstr "MANDO PS3 6"
-
-#~ msgctxt "game_options"
-#~ msgid "PS3 CONTROLLER 7"
-#~ msgstr "MANDO PS3 7"
 
 #~ msgctxt "game_options"
 #~ msgid "Center (Default)"
