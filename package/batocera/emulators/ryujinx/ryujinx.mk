@@ -3,8 +3,8 @@
 # ryujinx
 #
 ################################################################################
-# Version: Commits on Oct 06, 2024
-RYUJINX_VERSION = r.dc545c3
+# Version: Commits on Oct 09, 2024
+RYUJINX_VERSION = r.b4cac89
 RYUJINX_SITE = https://github.com/ryujinx-mirror/ryujinx.git
 RYUJINX_SITE_METHOD=git
 RYUJINX_GIT_SUBMODULES=YES
