@@ -4264,8 +4264,6 @@ libretro:
                       choices:
                           "On":  1
                           "Off": 0
-    mame0139:
-      shared: [use_guns]
     mame078plus:
       features: [padtokeyboard, netplay]
       shared: [autosave, rewind, use_guns]
@@ -12759,24 +12757,6 @@ openmsx:
             choices:
                 "Floppy Disk Image": "disk"
                 "Hard Disk Image":   "hda"
-demul:
-  features: [padtokeyboard]
-  shared: [powermode, tdp, videomode, powersave, use_wheels, wheel_rotation, wheel_deadzone, wheel_midzone]
-  cfeatures:
-        demulRatio:
-            group: VIDEO SETTINGS
-            prompt:      GAME ASPECT RATIO
-            choices:
-                "Stretch":       0
-                "4:3 (Default)": 1
-                "16:9":          2
-        demulVSync:
-            group: VIDEO SETTINGS
-            prompt:      VSYNC
-            description: Fix screen tearing.
-            choices:
-                "Off": 0
-                "On":  1
 alephone:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
