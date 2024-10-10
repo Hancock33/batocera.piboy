@@ -13,7 +13,7 @@ define DB9_GPIO_RPI_RPI2_HOOK
 endef
 
 define DB9_GPIO_RPI_FIX_EXTRACT
-	mv $(@D)/db9_gpio_rpi-1.2/* $(@D)/
+	mv $(@D)/db9_gpio_rpi/* $(@D)/
 endef
 DB9_GPIO_RPI_POST_EXTRACT_HOOKS += DB9_GPIO_RPI_FIX_EXTRACT
 
