@@ -21,3 +21,5 @@ wine-native.mk
 wine-proton.mk
 wine-staging.mk
 wine-tkg.mk
+vulkan-utility-libraries.mk
+vulkan-validationlayers.mk
