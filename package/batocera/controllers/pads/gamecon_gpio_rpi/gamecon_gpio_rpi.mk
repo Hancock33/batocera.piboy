@@ -8,7 +8,7 @@ GAMECON_GPIO_RPI_VERSION = 8332c9c7567d708406c24903386f3e5f42a31ede
 GAMECON_GPIO_RPI_SITE = $(call github,marqs85,gamecon_gpio_rpi,$(GAMECON_GPIO_RPI_VERSION))
 
 define GAMECON_GPIO_RPI_FIX_EXTRACT
-	mv $(@D)/gamecon_gpio_rpi-1.4/* $(@D)/
+	mv $(@D)/gamecon_gpio_rpi/* $(@D)/
 endef
 GAMECON_GPIO_RPI_POST_EXTRACT_HOOKS += GAMECON_GPIO_RPI_FIX_EXTRACT
 
