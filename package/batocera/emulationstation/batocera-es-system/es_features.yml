@@ -14209,7 +14209,7 @@ yquake2:
                 "Software": soft
 x16emu:
   features: [padtokeyboard]
-  shared: [powermode, tdp, videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
     x16emu_scale:
       prompt: RENDERING RESOLUTION
@@ -14232,3 +14232,6 @@ x16emu:
         "Nearest pixel sampling": "nearest"
         "Linear filtering":       "linear"
         "Anisotropic filtering":  "best"
+shadps4:
+  features: [padtokeyboard]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

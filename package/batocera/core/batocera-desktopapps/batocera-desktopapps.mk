@@ -164,6 +164,7 @@ ifeq ($(BR2_PACKAGE_XBOX_XCLOUD_CLIENT),y)
   BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-greenlight
   BATOCERA_DESKTOPAPPS_APPS	+= greenlight.desktop
   BATOCERA_DESKTOPAPPS_ICONS   += greenlight.png
+endif
 
 # shadPS4
 ifeq ($(BR2_PACKAGE_SHADPS4),y)
