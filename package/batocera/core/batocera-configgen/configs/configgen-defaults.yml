@@ -764,6 +764,11 @@ ps3:
   core:     rpcs3
   options:
     powersave: '2'
+ps4:
+  emulator: shadps4
+  core:     shadps4
+  options:
+    powersave: '2'
 psikyo:
   emulator: libretro
   core:     mame078plus

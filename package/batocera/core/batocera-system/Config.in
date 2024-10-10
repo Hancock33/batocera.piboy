@@ -773,10 +773,6 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
     # Naomi and Atomiswave
     select BR2_PACKAGE_BATOCERA_SEGADC
 
-    # Demul emulator - multiple Sega arcade systems
-    # Disabled until controllers can be resolved under Wine.
-    #select BR2_PACKAGE_DEMUL                               if  BR2_PACKAGE_BATOCERA_WINE
-
     # Laserdisc emulation
     select BR2_PACKAGE_HYPSEUS_SINGE                        # daphne
     select BR2_PACKAGE_HYPSEUS_SINGE_BEZELS                 if  BR2_PACKAGE_HYPSEUS_SINGE
@@ -1378,6 +1374,9 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     # Emulators
     select BR2_PACKAGE_VIRTUALJAGUAR                        if  BR2_PACKAGE_BATOCERA_BCM27XX     # Atari Jaguar
 
+    # Sony PS4
+    select BR2_PACKAGE_SHADPS4                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+
     #Extra Ports
     #32bit Applications
     #select BR2_SORR                                        if  BR2_PACKAGE_BATOCERA_BCM27XX     # Streets of Rage Remake - 32bit Only
@@ -1748,8 +1747,8 @@ config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H6          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H616
 
-	# broadcom bluetooth firware
-	select BR2_PACKAGE_BROADCOM_BT_FIRMWARE                 if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    # broadcom bluetooth firware
+    select BR2_PACKAGE_BROADCOM_BT_FIRMWARE                 if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
 config BR2_PACKAGE_BATOCERA_SDL2
     bool "BATOCERA SDL2"
