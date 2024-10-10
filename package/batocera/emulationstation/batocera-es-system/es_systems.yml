@@ -5316,6 +5316,8 @@ hikaru:
   extensions:           [zip, 7z]
   platform:             hikaru, arcade
   emulators:
+    demul:
+      demul:            { requireAnyOf: [BR2_PACKAGE_DEMUL] }
   comment_en:           |
                         ---------------------------------
                         ## HIKARU IMPORTANT INFO ##
