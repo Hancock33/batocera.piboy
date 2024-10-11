@@ -40,8 +40,8 @@ endef
 
 define CEMU_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/cemu/
-	mv -f $(@D)/bin/Cemu_release $(@D)/bin/cemu
-	cp -pr $(@D)/bin/{cemu,gameProfiles,resources} $(TARGET_DIR)/usr/bin/cemu/
+	$(INSTALL) -D -m 0755 $(@D)/bin/Cemu_release $(TARGET_DIR)/usr/bin/cemu/cemu
+	cp -pr $(@D)/bin/{gameProfiles,resources}    $(TARGET_DIR)/usr/bin/cemu/
 	$(INSTALL) -m 0755 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/cemu/get-audio-device $(TARGET_DIR)/usr/bin/cemu/
 	# keys.txt
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/cemu
