@@ -10,7 +10,7 @@ SHADPS4_SITE_METHOD=git
 SHADPS4_GIT_SUBMODULES=YES
 SHADPS4_LICENSE = GPLv2
 SHADPS4_LICENSE_FILE = LICENSE
-SHADPS4_DEPENDENCIES += alsa-lib pulseaudio openal openssl libzlib libedit udev
+SHADPS4_DEPENDENCIES += alsa-lib pulseaudio openal openssl libedit udev
 SHADPS4_DEPENDENCIES += libevdev jack2 qt6base qt6svg qt6tools qt6multimedia
 SHADPS4_DEPENDENCIES += vulkan-headers vulkan-loader vulkan-validationlayers
 
