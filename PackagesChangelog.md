@@ -63,6 +63,7 @@ Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|049dd8bb79cd
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|9fec8afac8b0771065b767a09d7e7b5f92ba356a|Oct 10, 2024
 Emulators|[libretro-superbroswar](https://github.com/libretro/superbroswar-libretro.git)|61fd509f107ab8300b2f677abd7459fbdf255ff3|Oct 10, 2024
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|01315f6c5af98f685321fc162c228653baeec66d|Oct 10, 2024
+Emulators|[ryujinx](https://github.com/ryujinx-mirror/ryujinx.git)|r.b4cac89|Oct 09, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45355|Oct 09, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|5a5fe97efbefebbb07a1f1bd58c0d588a324732a|Oct 09, 2024
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|371ae96ff6d8b869d4125137fdc73b86fe154245|Oct 09, 2024
@@ -109,7 +110,6 @@ Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.28.0-rc.3|Oct 04, 20
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.3.296.0|Oct 04, 2024
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|3eeb65e9bcf4b2a7ca24c5cebdfa7e342177ef0f|Oct 04, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|6dc73f5d797082c25a68ad162377077547948d26|Oct 03, 2024
-Emulators|[ryujinx](https://github.com/ryujinx-mirror/ryujinx.git)|r67111a5|Oct 03, 2024
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.7.0|Oct 03, 2024
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.10.01|Oct 02, 2024
 Ports|[openjk](http://github.com/JACoders/OpenJK)|cb52f9fb2f4a80fd59bae799d3bb0f8ace730ad7|Oct 02, 2024
