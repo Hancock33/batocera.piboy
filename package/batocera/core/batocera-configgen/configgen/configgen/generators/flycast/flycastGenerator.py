@@ -134,7 +134,6 @@ class FlycastGenerator(Generator):
             Config.set("config", "rend.AnisotropicFiltering", str(system.config["flycast_anisotropic"]))
         else:
             Config.set("config", "rend.AnisotropicFiltering", "1")
-
         # transparent sorting
         # per strip
         if system.isOptSet("flycast_sorting") and system.config["flycast_sorting"] == "2":
@@ -172,7 +171,6 @@ class FlycastGenerator(Generator):
              Config.set("config", "aica.DSPEnabled", str(system.config["flycast_DSP"]))
         else:
             Config.set("config", "aica.DSPEnabled", "no")
-
         # Guns (WIP)
         # Guns crosshairs
         if system.isOptSet("flycast_lightgun1_crosshair"):
@@ -209,8 +207,8 @@ class FlycastGenerator(Generator):
                 Config.set("achievements", "HardcoreMode", "yes")
             else:
                 Config.set("achievements", "HardcoreMode", "no")
-                Config.set("achievements", "Token", token)
-                Config.set("achievements", "UserName" , username)
+            Config.set("achievements", "Token", token)
+            Config.set("achievements", "UserName" , username)
         else:
             Config.set("achievements", "Enabled", "no")
 
@@ -223,7 +221,7 @@ class FlycastGenerator(Generator):
                 custom_option = section_option[section_option_splitter+1:]
                 if not Config.has_section(custom_section):
                     Config.add_section(custom_section)
-                    Config.set(custom_section, custom_option, system.config[user_config])
+                Config.set(custom_section, custom_option, system.config[user_config])
 
         ### update the configuration file
         with ensure_parents_and_open(FLYCAST_CONFIG, 'w+') as cfgfile:

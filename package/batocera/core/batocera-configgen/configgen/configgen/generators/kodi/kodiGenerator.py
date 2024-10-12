@@ -3,8 +3,6 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
 from ..Generator import Generator
 from . import kodiConfig
 

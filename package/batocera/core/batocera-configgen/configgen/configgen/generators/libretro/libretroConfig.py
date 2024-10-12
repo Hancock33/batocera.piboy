@@ -46,6 +46,7 @@ def getInvertButtonsValue() -> bool:
 def defined(key: str, dict: Mapping[str, Any]) -> bool:
     return key in dict and isinstance(dict[key], str) and len(dict[key]) > 0
 
+
 # Warning the values in the array must be exactly at the same index than
 # https://github.com/libretro/RetroArch/blob/master/gfx/video_driver.c#L188
 ratioIndexes = ["4/3", "16/9", "16/10", "16/15", "21/9", "1/1", "2/1", "3/2", "3/4", "4/1", "9/16", "5/4", "6/5", "7/9", "8/3",
@@ -170,7 +171,7 @@ def createLibretroConfig(generator: Generator, system: Emulator, controllers: co
     if (system.isOptSet("audio_driver")):
         retroarchConfig['audio_driver'] = system.config['audio_driver']
 
-    retroarchConfig['audio_latency'] = '96'                       # best balance with audio perf
+    retroarchConfig['audio_latency'] = '64'                     # best balance with audio perf
     if (system.isOptSet("audio_latency")):
         retroarchConfig['audio_latency'] = system.config['audio_latency']
 
@@ -635,6 +636,7 @@ def createLibretroConfig(generator: Generator, system: Emulator, controllers: co
 
             for btn, value in remap_values.items():
                 retroarchConfig[f'input_player{controller_number}_{btn}'] = value
+
 
         if system.config['core'] == 'mupen64plus-next':
             option = 'mupen64plus'
@@ -1315,6 +1317,7 @@ def writeBezelConfig(generator: Generator, bezel: str | None, shaderBezel: bool,
                 if system.config['ratio'] in ratioIndexes:
                     retroarchConfig['aspect_ratio_index'] = ratioIndexes.index(system.config['ratio'])
                     retroarchConfig['video_aspect_ratio_auto'] = 'false'
+
 
     if not shaderBezel:
         retroarchConfig['input_overlay_enable']       = "true"

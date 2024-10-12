@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import configparser
+import glob
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -13,6 +14,7 @@ if TYPE_CHECKING:
     from pathlib import Path
 
     from ...types import HotkeysContext
+
 
 class MupenGenerator(Generator):
 

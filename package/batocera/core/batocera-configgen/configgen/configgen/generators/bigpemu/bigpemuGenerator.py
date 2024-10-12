@@ -267,7 +267,7 @@ class BigPEmuGenerator(Generator):
         else:
             config["BigPEmuConfig"]["Video"]["VSync"] = 1
         if system.isOptSet("bigpemu_ratio"):
-            config["BigPEmuConfig"]["Video"]["ScreenAspect"] = str(system.config["bigpemu_ratio"])
+            config["BigPEmuConfig"]["Video"]["ScreenAspect"] = int(system.config["bigpemu_ratio"])
         else:
             config["BigPEmuConfig"]["Video"]["ScreenAspect"] = 2
         config["BigPEmuConfig"]["Video"]["LockAspect"] = 1

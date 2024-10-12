@@ -218,3 +218,4 @@ class Emulator():
         except:
             self.config['showFPS'] = False
             self.config['uimode'] = "Full"
+

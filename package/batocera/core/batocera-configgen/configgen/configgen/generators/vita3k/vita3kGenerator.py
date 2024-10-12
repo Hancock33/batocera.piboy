@@ -28,12 +28,6 @@ class Vita3kGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
-        # Create config folder
-        if not path.isdir(vitaConfig):
-            os.mkdir(vitaConfig)
-            # copy /usr/bin/vita3k contents here
-            copy_tree("/usr/bin/vita3k", vitaConfig)
-
         # Create save folder
         mkdir_if_not_exists(vitaSaves)
 

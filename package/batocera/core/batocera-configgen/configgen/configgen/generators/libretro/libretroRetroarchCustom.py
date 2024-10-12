@@ -82,6 +82,7 @@ def generateRetroarchCustom() -> None:
     # Set fps counter interval (in frames)
     retroarchSettings.save('fps_update_interval',               '"30"')
 
+
     retroarchSettings.write()
 
 def generateRetroarchCustomPathes(retroarchSettings: UnixSettings) -> None:

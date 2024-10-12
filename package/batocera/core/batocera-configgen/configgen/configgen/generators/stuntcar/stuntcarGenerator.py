@@ -1,26 +1,16 @@
 from __future__ import annotations
 
-import logging
-import os
 from typing import TYPE_CHECKING
+import os
 
 from ... import Command, controllersConfig
-from ...batoceraPaths import ROMS
 from ..Generator import Generator
 
-if TYPE_CHECKING:
-    from ...types import HotkeysContext
-
-eslog = logging.getLogger(__name__)
-
-class TyrianGenerator(Generator):
+class StuntcarGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        try:
-            os.chdir(ROMS / "tyrian" / "data")
-        except:
-            eslog.error("ERROR: Game assets not installed. You can get them from the Batocera Content Downloader.")
-        commandArray = ["opentyrian"]
+        os.chdir("/usr/share/stuntcar")
+        commandArray = ["/usr/share/stuntcar/stuntcar", "-f"]
 
         return Command.Command(
             array=commandArray,
@@ -31,8 +21,8 @@ class TyrianGenerator(Generator):
     def getInGameRatio(self, config, gameResolution, rom):
         return 16/9
 
-    def getHotkeysContext(self) -> HotkeysContext:
+    def getHotkeysContext(self):
         return {
-            "name": "tyrian",
+            "name": "stuntcar",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
         }

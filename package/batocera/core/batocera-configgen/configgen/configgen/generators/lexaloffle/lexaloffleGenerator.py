@@ -21,6 +21,7 @@ VOX_BIN_PATH: Final = BIOS / "voxatron" / "vox"
 VOX_ROOT_PATH: Final = ROMS / "voxatron"
 VOX_CONTROLLERS: Final = HOME / ".lexaloffle" / "Voxatron" / "sdl_controllers.txt"
 
+
 # Generator for the official pico8 binary from Lexaloffle
 class LexaloffleGenerator(Generator):
 
