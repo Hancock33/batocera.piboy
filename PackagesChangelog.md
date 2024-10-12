@@ -2,6 +2,7 @@
 -----|:-----:|:-----:|:-----:
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|77b17a5d9098d3986e44e0d2c4eea6889abf456d|Oct 12, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|77b17a5d9098d3986e44e0d2c4eea6889abf456d|Oct 12, 2024
+Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|f4cd0c3701ddbf0db4942d67604f1ff8f36e4118|Oct 12, 2024
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|cdce02607abf1b43cdf93c6f367825158f23a467|Oct 12, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|35ec2e97a8ea90730cb33eceec701f81597f98f7|Oct 12, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|07cb8d9c86f433e5749741cd5664251dbadd6c98|Oct 12, 2024
@@ -29,7 +30,6 @@ Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|46a8887f910c9794e617c35a4b3e3da6c867dc5e|Oct 12, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|6d2ed417be047868fe71227b2d4aa7419e34ceb1|Oct 12, 2024
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|da5658690a02020a101e69a09e544a167953926b|Oct 12, 2024
-Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|16d4f14153b09d78d8092efe5ce8e21763b9e87b|Oct 11, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|44fa30332ed4190cb0a8eb2d5bcf0da0fdd76aba|Oct 11, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.198|Oct 11, 2024
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.2.4|Oct 11, 2024
