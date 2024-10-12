@@ -4,8 +4,8 @@
 #
 ################################################################################
 # Keep the version aligned to buildroot ffmpeg 
-# We overwrite that version for hwaccel
-FFMPEG_ROCKCHIP_VERSION = 6a166dcef156898ca69ba3654ff26fcd75d204ff
+# Version: Commits on Sept 19, 2024
+FFMPEG_ROCKCHIP_VERSION = 5ddd3d4f5b98c4abd7e2e3633c35ee4a93f2f33e
 FFMPEG_ROCKCHIP_SITE = https://github.com/nyanmisaka/ffmpeg-rockchip.git
 FFMPEG_ROCKCHIP_SITE_METHOD = git
 FFMPEG_ROCKCHIP_GIT_SUBMODULES = YES
