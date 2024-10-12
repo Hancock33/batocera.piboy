@@ -1,5 +1,5 @@
 diff --git a/include/linux/sched.h b/include/linux/sched.h
-index e6ee4258169a..526ab74e653b 100644
+index 449dd64ed9ac..b1900353238b 100644
 --- a/include/linux/sched.h
 +++ b/include/linux/sched.h
 @@ -538,6 +538,14 @@ struct sched_statistics {
@@ -550,7 +550,7 @@ index 000000000000..62a0191a32d7
 +#endif // CONFIG_SYSCTL
 +#endif // CONFIG_SCHED_BORE
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 43e453ab7e20..0e1bc836e555 100644
+index aeb595514461..2fa622960b44 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -97,6 +97,8 @@
@@ -562,7 +562,7 @@ index 43e453ab7e20..0e1bc836e555 100644
  EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_send_cpu);
  EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_send_cpumask);
  
-@@ -8355,6 +8357,11 @@ void __init sched_init(void)
+@@ -8362,6 +8364,11 @@ void __init sched_init(void)
  	BUG_ON(!sched_class_above(&ext_sched_class, &idle_sched_class));
  #endif
  
@@ -920,7 +920,7 @@ index ae29f0d42213..a9ea5c56f325 100644
  	/*
  	 * Since this is called after changing class, this is a little weird
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 46436598ca18..7ca67cd3d70f 100644
+index c9e5ef0af192..b309c2c7f733 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -2074,7 +2074,11 @@ static inline void update_sched_domain_debugfs(void) { }
@@ -935,7 +935,7 @@ index 46436598ca18..7ca67cd3d70f 100644
  
  static inline const struct cpumask *task_user_cpus(struct task_struct *p)
  {
-@@ -2792,6 +2796,9 @@ extern const_debug unsigned int sysctl_sched_nr_migrate;
+@@ -2795,6 +2799,9 @@ extern const_debug unsigned int sysctl_sched_nr_migrate;
  extern const_debug unsigned int sysctl_sched_migration_cost;
  
  extern unsigned int sysctl_sched_base_slice;
