@@ -1,10 +1,10 @@
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 import os
 import shutil
-from os import path
 
-from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
+from ... import Command, controllersConfig
 from ..Generator import Generator
 
 class RaptorGenerator(Generator):
@@ -23,3 +23,9 @@ class RaptorGenerator(Generator):
             env={
                 'SDL_AUTO_UPDATE_JOYSTICKS': '0'
             })
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "raptor",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

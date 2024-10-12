@@ -10,6 +10,7 @@ from ..Generator import Generator
 if TYPE_CHECKING:
     from ...types import HotkeysContext
 
+
 class DosBoxStagingGenerator(Generator):
 
     # Main entry of the module

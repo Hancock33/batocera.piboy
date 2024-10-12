@@ -14,6 +14,10 @@ def getGenerator(emulator: str) -> Generator:
         from .generators.abuse.abuseGenerator import AbuseGenerator
         return AbuseGenerator()
 
+    if emulator == 'alephone':
+        from .generators.alephone.alephoneGenerator import AlephoneGenerator
+        return AlephoneGenerator()
+
     if emulator == 'amiberry':
         from .generators.amiberry.amiberryGenerator import AmiberryGenerator
         return AmiberryGenerator()
@@ -21,10 +25,6 @@ def getGenerator(emulator: str) -> Generator:
     if emulator == 'applewin':
         from .generators.applewin.applewinGenerator import AppleWinGenerator
         return AppleWinGenerator()
-
-    if emulator == 'alephone':
-        from .generators.alephone.alephoneGenerator import AlephoneGenerator
-        return AlephoneGenerator()
 
     if emulator == 'avp':
         from .generators.avp.avpGenerator import AvpGenerator
@@ -122,7 +122,7 @@ def getGenerator(emulator: str) -> Generator:
         from .generators.duckstation_legacy.duckstationLegacyGenerator import DuckstationLegacyGenerator
         return DuckstationLegacyGenerator()
 
-    if emulator == "dxx-rebirth":
+    if emulator == 'dxx-rebirth':
         from .generators.dxx_rebirth.dxx_rebirthGenerator import DXX_RebirthGenerator
         return DXX_RebirthGenerator()
 
@@ -142,7 +142,7 @@ def getGenerator(emulator: str) -> Generator:
         from .generators.etekwar.etekwarGenerator import EtekwarGenerator
         return EtekwarGenerator()
 
-    if emulator == "etlegacy":
+    if emulator == 'etlegacy':
         from .generators.etlegacy.etlegacyGenerator import ETLegacyGenerator
         return ETLegacyGenerator()
 
@@ -150,11 +150,11 @@ def getGenerator(emulator: str) -> Generator:
         from .generators.f2bgl.f2bglGenerator import F2bglGenerator
         return F2bglGenerator()
 
-    if emulator == "fallout1-ce":
+    if emulator == 'fallout1-ce':
         from .generators.fallout1.fallout1Generator import Fallout1Generator
         return Fallout1Generator()
 
-    if emulator == "fallout2-ce":
+    if emulator == 'fallout2-ce':
         from .generators.fallout2.fallout2Generator import Fallout2Generator
         return Fallout2Generator()
 
@@ -170,13 +170,13 @@ def getGenerator(emulator: str) -> Generator:
         from .generators.flycast.flycastGenerator import FlycastGenerator
         return FlycastGenerator()
 
-    if emulator == 'freedroid':
-        from .generators.freedroid.freedroidGenerator import FreedroidGenerator
-        return FreedroidGenerator()
-
     if emulator == 'fpinball':
         from .generators.fpinball.fpinballGenerator import FpinballGenerator
         return FpinballGenerator()
+
+    if emulator == 'freedroid':
+        from .generators.freedroid.freedroidGenerator import FreedroidGenerator
+        return FreedroidGenerator()
 
     if emulator == 'fsuae':
         from .generators.fsuae.fsuaeGenerator import FsuaeGenerator
@@ -189,10 +189,6 @@ def getGenerator(emulator: str) -> Generator:
     if emulator == 'gzdoom':
         from .generators.gzdoom.gzdoomGenerator import GzdoomGenerator
         return GzdoomGenerator()
-
-    if emulator == 'halflife2':
-        from .generators.halflife2.halflife2Generator import Halflife2Generator
-        return Halflife2Generator()
 
     if emulator == 'hatari':
         from .generators.hatari.hatariGenerator import HatariGenerator
@@ -214,7 +210,7 @@ def getGenerator(emulator: str) -> Generator:
         from .generators.hypseus_singe.hypseusSingeGenerator import HypseusSingeGenerator
         return HypseusSingeGenerator()
 
-    if emulator == "ikemen":
+    if emulator == 'ikemen':
         from .generators.ikemen.ikemenGenerator import IkemenGenerator
         return IkemenGenerator()
 
@@ -254,10 +250,6 @@ def getGenerator(emulator: str) -> Generator:
         from .generators.moonlight.moonlightGenerator import MoonlightGenerator
         return MoonlightGenerator()
 
-    if emulator == 'mplayer':
-        from .generators.mplayer.mplayerGenerator import MplayerGenerator
-        return MplayerGenerator()
-
     if emulator == 'mugen':
         from .generators.mugen.mugenGenerator import MugenGenerator
         return MugenGenerator()
@@ -277,6 +269,10 @@ def getGenerator(emulator: str) -> Generator:
     if emulator == 'odcommander':
         from .generators.odcommander.odcommanderGenerator import OdcommanderGenerator
         return OdcommanderGenerator()
+
+    if emulator == 'omf2097':
+        from .generators.omf2097.omf2097Generator import Omf2097Generator
+        return Omf2097Generator()
 
     if emulator == 'openbor':
         from .generators.openbor.openborGenerator import OpenborGenerator
@@ -305,10 +301,6 @@ def getGenerator(emulator: str) -> Generator:
     if emulator == 'openmsx':
         from .generators.openmsx.openmsxGenerator import OpenmsxGenerator
         return OpenmsxGenerator()
-
-    if emulator == 'omf2097':
-        from .generators.omf2097.omf2097Generator import Omf2097Generator
-        return Omf2097Generator()
 
     if emulator == 'opentyrian':
         from .generators.opentyrian.opentyrianGenerator import OpentyrianGenerator
@@ -346,19 +338,19 @@ def getGenerator(emulator: str) -> Generator:
         from .generators.pyxel.pyxelGenerator import PyxelGenerator
         return PyxelGenerator()
 
-    if emulator == 'quakespasm':
-        from .generators.quakespasm.quakespasmGenerator import QuakespasmGenerator
-        return QuakespasmGenerator()
-
     if emulator == 'quake3':
         from .generators.quake3.quake3Generator import Quake3Generator
         return Quake3Generator()
+
+    if emulator == 'quakespasm':
+        from .generators.quakespasm.quakespasmGenerator import QuakespasmGenerator
+        return QuakespasmGenerator()
 
     if emulator == 'raptor':
         from .generators.raptor.raptorGenerator import RaptorGenerator
         return RaptorGenerator()
 
-    if emulator == "raze":
+    if emulator == 'raze':
         from .generators.raze.razeGenerator import RazeGenerator
         return RazeGenerator()
 
@@ -370,13 +362,13 @@ def getGenerator(emulator: str) -> Generator:
         from .generators.redream.redreamGenerator import RedreamGenerator
         return RedreamGenerator()
 
-    if emulator == 'rpcs3':
-        from .generators.rpcs3.rpcs3Generator import Rpcs3Generator
-        return Rpcs3Generator()
-
     if emulator == 'rott':
         from .generators.rott.rottGenerator import RottGenerator
         return RottGenerator()
+
+    if emulator == 'rpcs3':
+        from .generators.rpcs3.rpcs3Generator import Rpcs3Generator
+        return Rpcs3Generator()
 
     if emulator == 'rtcw':
         from .generators.rtcw.rtcwGenerator import RtcwGenerator
@@ -406,25 +398,13 @@ def getGenerator(emulator: str) -> Generator:
         from .generators.serioussam.serioussamGenerator import SerioussamGenerator
         return SerioussamGenerator()
 
-    if emulator == "uqm":
-        from .generators.uqm.uqmGenerator import UqmGenerator
-        return UqmGenerator()
-    
-    if emulator == "taradino":
-        from .generators.taradino.taradinoGenerator import TaradinoGenerator
-        return TaradinoGenerator()
-
-    if emulator == "x16emu":
-        from .generators.x16emu.x16emuGenerator import X16emuGenerator
-        return X16emuGenerator()
+    if emulator == 'sh':
+        from .generators.sh.shGenerator import ShGenerator
+        return ShGenerator()
 
     if emulator == 'shadps4' :
         from .generators.shadps4.shadps4Generator import shadPS4Generator
         return shadPS4Generator()
-
-    if emulator == 'sh':
-        from .generators.sh.shGenerator import ShGenerator
-        return ShGenerator()
 
     if emulator == 'sm64':
         from .generators.sm64.sm64Generator import Sm64Generator
@@ -434,23 +414,23 @@ def getGenerator(emulator: str) -> Generator:
         from .generators.solarus.solarusGenerator import SolarusGenerator
         return SolarusGenerator()
 
-    if emulator == "sonic3-air":
-        from .generators.sonic3_air.sonic3_airGenerator import Sonic3AIRGenerator
-        return Sonic3AIRGenerator()
-
     if emulator == 'sonic2013':
         from .generators.sonicretro.sonicretroGenerator import SonicRetroGenerator
         return SonicRetroGenerator()
+
+    if emulator == 'sonic3-air':
+        from .generators.sonic3_air.sonic3_airGenerator import Sonic3AIRGenerator
+        return Sonic3AIRGenerator()
 
     if emulator == 'soniccd':
         from .generators.sonicretro.sonicretroGenerator import SonicRetroGenerator
         return SonicRetroGenerator()
 
-    if emulator == "sonicmania":
+    if emulator == 'sonicmania':
         from .generators.sonicmania.sonicmaniaGenerator import SonicManiaGenerator
         return SonicManiaGenerator()
 
-    if emulator == "sonicnexus":
+    if emulator == 'sonicnexus':
         from .generators.sonicnexus.sonicnexusGenerator import SonicNexusGenerator
         return SonicNexusGenerator()
 
@@ -470,21 +450,17 @@ def getGenerator(emulator: str) -> Generator:
         from .generators.srb2kart.srb2kartGenerator import Srb2kartGenerator
         return Srb2kartGenerator()
 
-    if emulator == 'steam':
-        from .generators.steam.steamGenerator import SteamGenerator
-        return SteamGenerator()
-
     if emulator == 'stalker':
         from .generators.stalker.stalkerGenerator import StalkerGenerator
         return StalkerGenerator()
 
+    if emulator == 'steam':
+        from .generators.steam.steamGenerator import SteamGenerator
+        return SteamGenerator()
+
     if emulator == 'stella':
         from .generators.stella.stellaGenerator import StellaGenerator
         return StellaGenerator()
-
-    if emulator == "theforceengine":
-        from .generators.theforceengine.theforceengineGenerator import TheForceEngineGenerator
-        return TheForceEngineGenerator()
 
     if emulator == 'stk':
         from .generators.stk.stkGenerator import StkGenerator
@@ -506,18 +482,30 @@ def getGenerator(emulator: str) -> Generator:
         from .generators.suyu.suyuGenerator import SuyuGenerator
         return SuyuGenerator()
 
+    if emulator == 'taradino':
+        from .generators.taradino.taradinoGenerator import TaradinoGenerator
+        return TaradinoGenerator()
+
+    if emulator == 'theforceengine':
+        from .generators.theforceengine.theforceengineGenerator import TheForceEngineGenerator
+        return TheForceEngineGenerator()
+
     if emulator == 'themehospital':
         from .generators.themehospital.themehospitalGenerator import ThemehospitalGenerator
         return ThemehospitalGenerator()
+
+    if emulator == 'thextech':
+        from .generators.thextech.thextechGenerator import TheXTechGenerator
+        return TheXTechGenerator()
 
     if emulator == 'tsugaru':
         from .generators.tsugaru.tsugaruGenerator import TsugaruGenerator
         return TsugaruGenerator()
 
-    if emulator == "thextech":
-        from .generators.thextech.thextechGenerator import TheXTechGenerator
-        return TheXTechGenerator()
-
+    if emulator == 'uqm':
+        from .generators.uqm.uqmGenerator import UqmGenerator
+        return UqmGenerator()
+    
     if emulator == 'vanillara':
         from .generators.vanillara.vanillaraGenerator import VanillaraGenerator
         return VanillaraGenerator()
@@ -530,10 +518,6 @@ def getGenerator(emulator: str) -> Generator:
         from .generators.vcmi.vcmiGenerator import VcmiGenerator
         return VcmiGenerator()
 
-    if emulator == 'vkquake':
-        from .generators.vkquake.vkquakeGenerator import VkquakeGenerator
-        return VkquakeGenerator()
-
     if emulator == 'vice':
         from .generators.vice.viceGenerator import ViceGenerator
         return ViceGenerator()
@@ -542,9 +526,13 @@ def getGenerator(emulator: str) -> Generator:
         from .generators.virtualjaguar.virtualjaguarGenerator import VirtualjaguarGenerator
         return VirtualjaguarGenerator()
 
-    if emulator == "vita3k":
+    if emulator == 'vita3k':
         from .generators.vita3k.vita3kGenerator import Vita3kGenerator
         return Vita3kGenerator()
+
+    if emulator == 'vkquake':
+        from .generators.vkquake.vkquakeGenerator import VkquakeGenerator
+        return VkquakeGenerator()
 
     if emulator == 'voidsw':
         from .generators.voidsw.voidswGenerator import VoidswGenerator
@@ -561,6 +549,10 @@ def getGenerator(emulator: str) -> Generator:
     if emulator == 'witchaven':
         from .generators.witchaven.witchavenGenerator import WitchavenGenerator
         return WitchavenGenerator()
+
+    if emulator == 'x16emu':
+        from .generators.x16emu.x16emuGenerator import X16emuGenerator
+        return X16emuGenerator()
 
     if emulator == 'xash3d_fwgs':
         from .generators.xash3d_fwgs.xash3dFwgsGenerator import Xash3dFwgsGenerator

@@ -1,10 +1,8 @@
-import os
-import shutil
-from os import path
+from __future__ import annotations
 
-from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
+from typing import TYPE_CHECKING
+
+from ... import Command, controllersConfig
 from ..Generator import Generator
 from ...utils import videoMode as videoMode
 
@@ -24,3 +22,9 @@ class Doom3Generator(Generator):
             env={
                 "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "doom3",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

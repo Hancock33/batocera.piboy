@@ -488,11 +488,11 @@ class DolphinGenerator(Generator):
             pass # don't fail in case of SYSCONF update
 
         # Check what version we've got
-        if Path("/usr/bin/dolphin-emu").is_file():
+        if Path("/usr/bin/dolphin-emu-nogui").is_file():
+            commandArray = ["dolphin-emu-nogui", "-e", rom]
+        else:
             # use the -b 'batch' option for nicer exit
             commandArray = ["dolphin-emu", "-b", "-e", rom]
-        else:
-            commandArray = ["dolphin-emu-nogui", "-e", rom]
 
         # state_slot option
         if system.isOptSet('state_filename'):
@@ -500,8 +500,7 @@ class DolphinGenerator(Generator):
 
         return Command.Command(array=commandArray, \
             env={ "XDG_CONFIG_HOME":CONFIGS, \
-            "XDG_DATA_HOME":SAVES, \
-            "QT_QPA_PLATFORM":"xcb"})
+            "XDG_DATA_HOME":SAVES})
 
     def getInGameRatio(self, config, gameResolution, rom):
 

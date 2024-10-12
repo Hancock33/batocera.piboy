@@ -1,9 +1,9 @@
-import os
-from os import path
+from __future__ import annotations
 
-from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
+from typing import TYPE_CHECKING
+import os
+
+from ... import Command, controllersConfig
 from ..Generator import Generator
 
 class PcexhumedGenerator(Generator):
@@ -18,3 +18,9 @@ class PcexhumedGenerator(Generator):
                 'SDL_AUTO_UPDATE_JOYSTICKS': '0',
                 'SDL_MOUSE_RELATIVE_SPEED_SCALE': '2.0'
             })
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "pcexhumed",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

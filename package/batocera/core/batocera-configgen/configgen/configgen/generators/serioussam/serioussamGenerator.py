@@ -1,9 +1,9 @@
-import os
-from os import path
+from __future__ import annotations
 
-from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
+from typing import TYPE_CHECKING
+import os
+
+from ... import Command, controllersConfig
 from ..Generator import Generator
 
 class SerioussamGenerator(Generator):
@@ -27,3 +27,9 @@ class SerioussamGenerator(Generator):
                 'LD_LIBRARY_PATH': '/usr/lib:/lib:' + data_dir,
                 'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
         })
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "serioussam",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

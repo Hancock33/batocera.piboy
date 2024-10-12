@@ -31,3 +31,9 @@ class StkGenerator(Generator):
                 "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
             }
         )
+
+    def getHotkeysContext(self):
+        return {
+            "name": "supertuxkart",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

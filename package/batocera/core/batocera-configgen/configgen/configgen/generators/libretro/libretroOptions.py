@@ -1628,6 +1628,7 @@ def generateCoreSettings(coreSettings: UnixSettings, system: Emulator, rom: Path
             # Boot device
             coreSettings.save('parallel-n64-boot-device',   '"64DD IPL"')
 
+
     # Nintendo DS
     if (system.config['core'] == 'desmume'):
         # Emulate Stylus on Right Stick

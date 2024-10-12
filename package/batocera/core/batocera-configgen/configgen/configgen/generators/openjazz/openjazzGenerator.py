@@ -13,11 +13,8 @@ eslog = logging.getLogger(__name__)
 class OpenJazzGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        try:
-            os.chdir(ROMS / "openjazz")
-        except:
-            eslog.error("ERROR: Game assets not installed. You can get them from the Batocera Content Downloader.")
-        commandArray = ["OpenJazz"]
+        gamedir = rom.replace('openjazz.game', '')
+        commandArray = ["OpenJazz", gamedir]
 
         return Command.Command(
             array=commandArray,

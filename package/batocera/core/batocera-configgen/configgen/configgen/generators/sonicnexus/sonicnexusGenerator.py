@@ -81,3 +81,9 @@ class SonicNexusGenerator(Generator):
 
     def getInGameRatio(self, config, gameResolution, rom):
         return 16/9
+
+    def getHotkeysContext(self):
+        return {
+            "name": "sonicnexus",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

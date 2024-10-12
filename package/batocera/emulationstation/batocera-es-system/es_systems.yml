@@ -1159,6 +1159,8 @@ atari2600:
     libretro:
       stella:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_STELLA]     }
       stella2014:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_STELLA2014] }
+    stella:
+      stella:           { requireAnyOf: [BR2_PACKAGE_BATOCERA_STELLA]     }
 
 atari5200:
   name:                 Atari 5200
@@ -4775,19 +4777,6 @@ xash3d_fwgs:
                         para /userdata/roms/xash3d_fwgs/<pasta do jogo> e crie um arquivo `<pasta do jogo>.game` vazio no mesmo diretório.
 
                         Para Half-Life 1, a pasta do jogo é `valve/`.
-
-halflife2:
-  name:                 Half-Life 2
-  manufacturer:         Ports
-  release:
-  hardware:             port
-  extensions:           [game]
-  platform:             pc
-  group:                ports
-  path:                 /userdata/roms/ports/halflife2
-  emulators:
-    halflife2:
-      halflife2:      { requireAnyOf: [BR2_PACKAGE_HALFLIFE2] }
 
 xrick:
   name:                 Rick Dangerous

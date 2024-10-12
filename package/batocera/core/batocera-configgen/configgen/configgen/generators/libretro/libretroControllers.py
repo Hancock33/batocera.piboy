@@ -94,11 +94,13 @@ def cleanControllerConfig(retroconfig: UnixSettings, controllers, retroarchspeci
     for specialkey in retroarchspecials:
         retroconfig.disable_all(f'input_{retroarchspecials[specialkey]}')
 
+
 # Write the hotkey for player 1
 def writeHotKeyConfig(retroconfig: UnixSettings, controllers):
     if '1' in controllers:
         if 'hotkey' in controllers['1'].inputs and controllers['1'].inputs['hotkey'].type == 'button':
             retroconfig.save('input_enable_hotkey_btn', controllers['1'].inputs['hotkey'].id)
+
 
 # Write a configuration for a specified controller
 def writeControllerConfig(retroconfig: UnixSettings, controller, playerIndex, system, retroarchspecials, lightgun, mouseIndex=0):
@@ -108,6 +110,7 @@ def writeControllerConfig(retroconfig: UnixSettings, controller, playerIndex, sy
 
     retroconfig.save(f'input_player{playerIndex}_joypad_index', controller.index)
     retroconfig.save(f'input_player{playerIndex}_analog_dpad_mode', getAnalogMode(controller, system))
+
 
 # Create a configuration for a given controller
 def generateControllerConfig(controller, retroarchspecials, system, lightgun, mouseIndex=0):
@@ -182,6 +185,7 @@ def generateControllerConfig(controller, retroarchspecials, system, lightgun, mo
         # dont touch to it when there are connected lightguns
         config['input_player{}_mouse_index'.format(controller.player)] = mouseIndex
     return config
+
 
 # Returns the value to write in retroarch config file, depending on the type
 def getConfigValue(input):

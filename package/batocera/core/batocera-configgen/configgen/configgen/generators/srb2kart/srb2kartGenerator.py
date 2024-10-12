@@ -1,6 +1,9 @@
-from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+import os
+
+from ... import Command, controllersConfig
 from ..Generator import Generator
 
 class Srb2kartGenerator(Generator):
@@ -13,3 +16,9 @@ class Srb2kartGenerator(Generator):
             env={
                 'SRB2WADDIR': '/userdata/roms/ports/srb2kart'
             })
+
+    def getHotkeysContext(self):
+        return {
+            "name": "srb2kart",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

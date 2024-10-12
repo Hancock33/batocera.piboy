@@ -1,6 +1,8 @@
-from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
+from ... import Command, controllersConfig
 from ..Generator import Generator
 
 class OpentyrianGenerator(Generator):
@@ -19,3 +21,9 @@ class OpentyrianGenerator(Generator):
 
     def getInGameRatio(self, config, gameResolution, rom):
         return 16/9
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "opentyrian",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

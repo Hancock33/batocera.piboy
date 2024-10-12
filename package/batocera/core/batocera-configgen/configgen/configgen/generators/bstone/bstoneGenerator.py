@@ -1,8 +1,14 @@
-from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
-from ..Generator import Generator
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
+import os
+from ... import Command, controllersConfig
 from ...utils import videoMode as videoMode
+from ..Generator import Generator
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
 
 class BstoneGenerator(Generator):
 
@@ -30,3 +36,9 @@ class BstoneGenerator(Generator):
             env={
                 'SDL_AUTO_UPDATE_JOYSTICKS': '0'
             })
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "bstone",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

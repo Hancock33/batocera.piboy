@@ -1,19 +1,27 @@
-import shutil
-import os
+from __future__ import annotations
+
 import filecmp
+import logging
+import os
+import shutil
+from pathlib import Path
+from typing import TYPE_CHECKING, Final, cast
+
 import ffmpeg
 
-from ... import Command
+from ... import Command, controllersConfig
 from ... import batoceraFiles
-from ... import controllersConfig
-from ...utils.logger import get_logger
+from ...batoceraPaths import CONFIGS, ROMS, mkdir_if_not_exists
 from ..Generator import Generator
 
-eslog = get_logger(__name__)
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
+
+eslog = logging.getLogger(__name__)
 
 class HypseusSingeGenerator(Generator):
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "hypseus-singe",
             "keys": { "exit": "KEY_ESC" }
