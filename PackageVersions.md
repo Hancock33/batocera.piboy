@@ -70,7 +70,7 @@ Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|6dc73f5d797082c25a68ad162377077547948d26|Oct 03, 2024
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|cdce02607abf1b43cdf93c6f367825158f23a467|Oct 12, 2024
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|35ec2e97a8ea90730cb33eceec701f81597f98f7|Oct 12, 2024
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|d43c6dc555fea0b0ec84d05779a62dc876b70bf4|Oct 12, 2024
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|bfefd38d2500103d32f5da9f7fcd80090b7836fb|May 23, 2024
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|349e41bc6a4be6bbf4f4cb8fa787add7944d3117|Jul 21, 2024
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.10.01|Oct 02, 2024
@@ -270,14 +270,14 @@ Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.2.4|Oct 11, 2024
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|1b138de1023272b039273d7bbc8f57573073bd25|Sept 22, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|228426880babb529fae8f01598a6d34698ad3b18|Oct 11, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|d362c88ac2afd640b96336963164c8682eacc740|Oct 12, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20241007|Oct 07, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|8fac136056775c353202ee4b23f0a32984233922|Oct 11, 2024
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-10-12|Oct 12, 2024
 Emulators|[ryujinx](https://github.com/ryujinxemu/Ryujinx)|1.1.1403|Oct 01, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|53bdb233d76d9a0317ad4a8264a2662f44a89e00|Oct 12, 2024
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|97b5289f15cc1e654d42ec9703426e7afdadbb04|Oct 12, 2024
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|1e16fe534948aa95a343aa17c15abf7971ac721c|Oct 12, 2024
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|263a54c414681b45fd9428143a8320f4024a99ab|Oct 06, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|8028d3b6ca994f21fdff220d513a08382e37afc3|Oct 11, 2024
@@ -489,7 +489,7 @@ Ports|[srb2kart](http://github.com/STJr/Kart-Public)|44b4a6852858eebba5f9f50da2a
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|287726679cb57602bc63ee276de69feb7bb3a154|Oct 10, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|a1595cad3d9a44f3d60cef8881737111cfa08932|Oct 12, 2024
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|f72bac75d0d2840fece788dfa8c7791bff3b8992|Sept 30, 2024
-Ports|[supertux2](https://github.com/SuperTux/supertux.git)|486e209e48791f96226491d6aa90227d07d8844a|Oct 12, 2024
+Ports|[supertux2](https://github.com/SuperTux/supertux.git)|e2363a305b5db62d9533b32c91c8723c9984e4ff|Oct 12, 2024
 Ports|[taradino](https://github.com/fabiangreffrath/taradino.git)|1e70c8a46b597a99b1063ed6e18b422f98ffa33c|Sep 23, 2024
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|d327bfa6140af179a9409e0ba42f392e03da530b|Mar 03, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|d9ad79a3b8eaa72c4e4f179dc289201867bf9251|Sept 28, 2024

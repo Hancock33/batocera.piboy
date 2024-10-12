@@ -4,14 +4,14 @@ Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/b
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|77b17a5d9098d3986e44e0d2c4eea6889abf456d|Oct 12, 2024
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|f4cd0c3701ddbf0db4942d67604f1ff8f36e4118|Oct 12, 2024
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|cdce02607abf1b43cdf93c6f367825158f23a467|Oct 12, 2024
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|35ec2e97a8ea90730cb33eceec701f81597f98f7|Oct 12, 2024
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|d43c6dc555fea0b0ec84d05779a62dc876b70bf4|Oct 12, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|07cb8d9c86f433e5749741cd5664251dbadd6c98|Oct 12, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|6d2ed417be047868fe71227b2d4aa7419e34ceb1|Oct 12, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|13cf6038dca847cbb6739326e0a985f24fd38aab|Oct 12, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|1afaa52df47c34e41de78c87a4caf661d36ddd21|Oct 12, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-10-12|Oct 12, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|53bdb233d76d9a0317ad4a8264a2662f44a89e00|Oct 12, 2024
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|97b5289f15cc1e654d42ec9703426e7afdadbb04|Oct 12, 2024
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|1e16fe534948aa95a343aa17c15abf7971ac721c|Oct 12, 2024
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|bbf9dc380a7d94856bba7a86c2f708c939bd7c43|Oct 12, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|8e182bb9ec17576cc3b6e32088d367a5482a7736|Oct 12, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|b6cd19b78bf3cce7cdc55c4210f5174eb8b76e28|Oct 12, 2024
@@ -20,7 +20,8 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|dbfa2feb48f7
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|8e9bb78f568db0da1a50822b996cb0a07c363605|Oct 12, 2024
 Ports|[raze](http://github.com/ZDoom/Raze)|e48911dcc98bcd22141797c02d98e8278033caae|Oct 12, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|a1595cad3d9a44f3d60cef8881737111cfa08932|Oct 12, 2024
-Ports|[supertux2](https://github.com/SuperTux/supertux.git)|486e209e48791f96226491d6aa90227d07d8844a|Oct 12, 2024
+Ports|[supertux2](https://github.com/SuperTux/supertux.git)|e2363a305b5db62d9533b32c91c8723c9984e4ff|Oct 12, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|d362c88ac2afd640b96336963164c8682eacc740|Oct 12, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.19.r92.g7ce580d1fa0|Oct 12, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241012|Oct 12, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241012|Oct 12, 2024
@@ -39,7 +40,6 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|be98b3adf916524573eff
 Ports|[omf2097](http://github.com/omf2097/openomf)|a1281523e1c86eedc773f56ba6fbe5e38edff003|Oct 11, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|3b2cb2553c288c6b7b6f8ff440940f7792163efa|Oct 11, 2024
 Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|268873b6d9d433690a0cebbeb0467b159f2ebf4e|Oct 11, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|228426880babb529fae8f01598a6d34698ad3b18|Oct 11, 2024
 Ports|[quake3](http://github.com/ioquake/ioq3)|cc18246f22ab033e1b17af4616a68e9ea2e873db|Oct 11, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|10bfadb556b9043f4dd1b4672d2342485be0e457|Oct 11, 2024
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|97b1fae8abb99d219d2022c30f6d7b486b2bc1a2|Oct 11, 2024
