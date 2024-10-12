@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Oct 12, 2024
-FHEROES2_VERSION = 5ece730148d0cc84a78b5e0d049122f14e08a52a
+FHEROES2_VERSION = 8e9bb78f568db0da1a50822b996cb0a07c363605
 FHEROES2_SITE = $(call github,ihhub,fheroes2,$(FHEROES2_VERSION))
 FHEROES2_DEPENDENCIES = sdl2 sdl2_image
 
