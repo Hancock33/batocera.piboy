@@ -158,7 +158,8 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_BATOCERA_BATTERY_CHECKER             if  BR2_PACKAGE_XOSD
     select BR2_PACKAGE_BATOCERA_CONFIGGEN                   # emulation station external command launcher
     select BR2_PACKAGE_BATOCERA_EMULATIONSTATION            # emulationstation
-    select BR2_PACKAGE_BATOCERA_ES_SYSTEM                   # emulation station es_systems.cfg generator + default roms
+    select BR2_PACKAGE_BATOCERA_ES_SYSTEM                   # emulationstation es_systems.cfg generator + default roms
+    select BR2_PACKAGE_BATOCERA_ES_WEB_UI                   # emulationstation web ui
     select BR2_PACKAGE_BATOCERA_IMAGE                       # tools to generate batocera image
     select BR2_PACKAGE_BATOCERA_INITRAMFS                   # initramfs to boot the system
     select BR2_PACKAGE_BATOCERA_TRIGGERHAPPY                # multimedia/power buttons
@@ -214,7 +215,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_WIRELESS_REGDB                       # wireless regulatory DB
     select BR2_PACKAGE_WIRELESS_TOOLS                       # wireless tools
     select BR2_PACKAGE_WIRELESS_TOOLS_LIB                   # wireless tools
-    select BR2_PACKAGE_XARCADE2JSTICK                       # keyboard events of the Xarcade Tankstick
     select BR2_PACKAGE_XOSD                                 if  BR2_PACKAGE_XSERVER_XORG_SERVER # osd information displaying
     select BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     select BR2_TARGET_ROOTFS_SQUASHFS                       # tool to generate the target image
@@ -242,7 +242,9 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_LIBCURL_CURL                         # download tools
     select BR2_PACKAGE_NGHTTP2                              # required for curl http2
     select BR2_PACKAGE_CA_CERTIFICATES                      # ssl certificates
-    select BR2_PACKAGE_ROCKCHIP_RGA                         if  BR2_PACKAGE_BATOCERA_TARGET_RK3128           # Used for screen rotation (SDL, Retroarch, Moonlight)
+    select BR2_PACKAGE_ROCKCHIP_RGA                         if  BR2_PACKAGE_BATOCERA_TARGET_RK3326      || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3128      || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588      # Used for screen rotation (SDL, Retroarch, Moonlight)
     select BR2_PACKAGE_LIBDRM                               if !BR2_PACKAGE_BATOCERA_RPI_VCORE
     select BR2_PACKAGE_BATOCERA_DRMINFO                     if  BR2_PACKAGE_LIBDRM
     select BR2_PACKAGE_LIRC_TOOLS                           # lirc (remote control)
@@ -293,14 +295,14 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3128         # Improved Linux module driver for Logitech driving wheels (the lg4ff is disabled in kernels)
     select BR2_PACKAGE_HID_T150                             if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # Thrustmaster T150 and TMX Force Feedback Wheel Linux drivers
     select BR2_PACKAGE_JAMMASD
-    select BR2_PACKAGE_ULTIMARC_MINI_PAC
+    select BR2_PACKAGE_KEYBOARDTOPADS
     select BR2_PACKAGE_NSO_N64
 
     select BR2_PACKAGE_UPOWER                               # required by some cemuhook servers
 
     # Case
-    select BR2_PACKAGE_ELEMENT14_PI_DESKTOP                 if  BR2_PACKAGE_BATOCERA_TARGET_BCM2836      || BR2_PACKAGE_BATOCERA_TARGET_BCM2837 # rpi2/rpi3
-    select BR2_PACKAGE_GPICASE                              if  BR2_PACKAGE_BATOCERA_TARGET_BCM2835      || BR2_PACKAGE_BATOCERA_TARGET_BCM2836 # retroflag gpicase
+    select BR2_PACKAGE_ELEMENT14_PI_DESKTOP                 if  BR2_PACKAGE_BATOCERA_TARGET_BCM2836     || BR2_PACKAGE_BATOCERA_TARGET_BCM2837  # rpi2/rpi3
+    select BR2_PACKAGE_GPICASE                              if  BR2_PACKAGE_BATOCERA_TARGET_BCM2835     || BR2_PACKAGE_BATOCERA_TARGET_BCM2836  # retroflag gpicase
     select BR2_PACKAGE_ROSHAMBO_CASE                        if  BR2_PACKAGE_BATOCERA_TARGET_RK3399                                              # roshambo case
     select BR2_PACKAGE_RPIGPIOSWITCH                        if  BR2_PACKAGE_BATOCERA_RPI_ANY                                                    # gpio switches
     select BR2_PACKAGE_RETROGAME                            if  BR2_PACKAGE_BATOCERA_RPI_ANY                                                    # gpio pads
@@ -314,7 +316,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_DMD_SIMULATOR                        if  BR2_PACKAGE_VPINBALL
     select BR2_PACKAGE_DMD_SIMULATOR_PLAYER                 if  BR2_PACKAGE_VPINBALL
     select BR2_PACKAGE_LIBDMDUTIL                           if  BR2_PACKAGE_VPINBALL
-   #select BR2_PACKAGE_BATOCERA_BACKGLASS                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY || BR2_PACKAGE_BATOCERA_WAYLAND
+   #select BR2_PACKAGE_BATOCERA_BACKGLASS                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     || BR2_PACKAGE_BATOCERA_WAYLAND
 
     # Hats
     select BR2_PACKAGE_DOCKERPI_POWERBOARD                  if BR2_PACKAGE_BATOCERA_TARGET_BCM2837
@@ -407,12 +409,13 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_PYTHON_GPIOD                         if  BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     # GPIO kernel driver
-    select BR2_PACKAGE_LIBGPIOD                             if  BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_BCM2711     && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_BCM2836     && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_BCM2837     && \
-                                                                BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_8
+    select BR2_PACKAGE_LIBGPIOD                             if BR2_PACKAGE_BATOCERA_TARGET_BCM2712      || \
+                                                               BR2_PACKAGE_BATOCERA_TARGET_BCM2711      || \
+                                                               BR2_PACKAGE_BATOCERA_TARGET_BCM2835      || \
+                                                               BR2_PACKAGE_BATOCERA_TARGET_BCM2836      || \
+                                                               BR2_PACKAGE_BATOCERA_TARGET_BCM2837      && BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_8
+
+    select BR2_PACKAGE_LIBGPIOD_TOOLS                       if BR2_PACKAGE_LIBGPIOD
 
     # joy 2 pad
     select BR2_PACKAGE_EVMAPY
@@ -630,7 +633,7 @@ config BR2_PACKAGE_BATOCERA_TOOLS
     select BR2_PACKAGE_NCDU                                 # Disk Usage
     select BR2_PACKAGE_FFMPEG_XCBGRAB                       if  BR2_PACKAGE_XORG7
     select BR2_PACKAGE_SWITCHRES                            if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835 && !BR2_PACKAGE_BATOCERA_WAYLAND # switchres 15kHz
-    select BR2_PACKAGE_LIBGPIOD_TOOLS                       if  BR2_PACKAGE_LIBGPIOD
+
     help
         System tools
 
@@ -772,10 +775,6 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
     # Naomi and Atomiswave
     select BR2_PACKAGE_BATOCERA_SEGADC
 
-    # Demul emulator - multiple Sega arcade systems
-    # Disabled until controllers can be resolved under Wine.
-    #select BR2_PACKAGE_DEMUL                               if  BR2_PACKAGE_BATOCERA_WINE
-
     # Laserdisc emulation
     select BR2_PACKAGE_HYPSEUS_SINGE                        # daphne
     select BR2_PACKAGE_HYPSEUS_SINGE_BEZELS                 if  BR2_PACKAGE_HYPSEUS_SINGE
@@ -791,7 +790,6 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
     # RetroArch MAME derivatives
     select BR2_PACKAGE_LIBRETRO_MAME2003_PLUS               # ALL
     select BR2_PACKAGE_LIBRETRO_IMAME                       if  BR2_PACKAGE_BATOCERA_TARGET_BCM2835     # IMAME
-    select BR2_PACKAGE_LIBRETRO_MAME2010                    if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     # MAME2010
     select BR2_PACKAGE_LIBRETRO_MAME                        if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_H3          && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3128
@@ -1017,9 +1015,6 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     # Sonic 3 A.I.R. (Angel Island Revisited)
     select BR2_PACKAGE_SONIC3_AIR                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
-    # Ur-Quan Masters
-    select BR2_PACKAGE_UQM                                  # ALL
-
     help
         Ports
 
@@ -1081,6 +1076,9 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
 
     # Macintosh
     select BR2_PACKAGE_LIBRETRO_MINIVMAC                    # ALL
+
+    # Commander X16
+    select BR2_PACKAGE_X16EMU                               # ALL
 
     help
         Old computers
@@ -1157,8 +1155,8 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     # Gamecube / Wii
     select BR2_PACKAGE_DOLPHIN_EMU                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588
+                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2712
+                                                                # cannot use BR2_PACKAGE_BATOCERA_TARGET_RK3588 as Dolphin requires OpenGL
 
     select BR2_PACKAGE_LIBRETRO_DOLPHIN                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || \
@@ -1378,6 +1376,9 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     # Emulators
     select BR2_PACKAGE_VIRTUALJAGUAR                        if  BR2_PACKAGE_BATOCERA_BCM27XX     # Atari Jaguar
 
+    # Sony PS4
+    select BR2_PACKAGE_SHADPS4                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+
     #Extra Ports
     #32bit Applications
     #select BR2_SORR                                        if  BR2_PACKAGE_BATOCERA_BCM27XX     # Streets of Rage Remake - 32bit Only
@@ -1413,8 +1414,10 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_OPENJK                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # OpenJK: JediAcademy / Jedi Outcast
     select BR2_PACKAGE_OPENLARA                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Tomb Raider
     select BR2_PACKAGE_PROTOTYPE                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Prototype (R-Type Clone)
+    select BR2_PACKAGE_UQM                                                                                                                 # Ur-Quan Masters
     select BR2_PACKAGE_RAPTORCOTS                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Raptor Call of the Shadows
     select BR2_PACKAGE_ROTT                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Rise of the Triad Dark War
+    select BR2_PACKAGE_TARADINO                                                                                                            # Rise of the Triad
     select BR2_PACKAGE_SERIOUSSAM                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Serious Sam - The First / Second Encounter
     select BR2_PACKAGE_SM64PORT                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Super Mario 64
     select BR2_PACKAGE_SPACECADETPINBALL                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Space Cadet Pinball
@@ -1479,7 +1482,6 @@ config BR2_PACKAGE_BATOCERA_KODI
 
     # Kodi game controllers
     select BR2_PACKAGE_KODI_PERIPHERAL_JOYSTICK             # joysticks for kodi
-    select BR2_PACKAGE_KODI_PERIPHERAL_XARCADE              # xarcade for kodi
 
     # ffmpeg enabler that i'am not sure it has an impact on kodi
     select BR2_PACKAGE_FFMPEG_GPL                           # video recording
@@ -1747,6 +1749,9 @@ config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H6          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H616
 
+    # broadcom bluetooth firware
+    select BR2_PACKAGE_BROADCOM_BT_FIRMWARE                 if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+
 config BR2_PACKAGE_BATOCERA_SDL2
     bool "BATOCERA SDL2"
 
@@ -1943,3 +1948,4 @@ config BR2_PACKAGE_BATOCERA_VIDEO_CODECS
     select BR2_PACKAGE_GST1_VAAPI_ENCODERS                  if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
 ### ### ###
+

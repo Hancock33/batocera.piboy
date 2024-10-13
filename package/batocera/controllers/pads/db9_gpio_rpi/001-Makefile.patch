@@ -1,10 +1,11 @@
-diff --git a/Makefile b/db9_gpio_rpi-1.2/Makefile
-index 20b0d3d..59abf9d 100644
+diff --git a/Makefile b/Makefile
+index 4d2a091..59abf9d 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -1,8 +1,15 @@
+@@ -1,9 +1,15 @@
 -obj-m := db9_gpio_rpi.o
 -KVERSION := `uname -r`
+-CFLAGS_gamecon_gpio_rpi.o := -O3 -Wno-implicit-fallthrough
 +obj-m  = db9_gpio_rpi.o
  
 -all:

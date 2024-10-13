@@ -1,7 +1,13 @@
-from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
+import os
+from ... import Command, controllersConfig
 from ..Generator import Generator
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
 
 class AlephoneGenerator(Generator):
 
@@ -20,3 +26,9 @@ class AlephoneGenerator(Generator):
             env={
                 "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "alephone",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

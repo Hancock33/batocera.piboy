@@ -30,7 +30,7 @@ index 2f257c961822..d7fb3ef12d24 100644
  obj-$(CONFIG_GPIO_REGMAP)	+= gpio-regmap.o
 diff --git a/drivers/gpio/xpi_gamecon_xrs.c b/drivers/gpio/xpi_gamecon_xrs.c
 new file mode 100644
-index 000000000000..917b9710548e
+index 000000000000..40f7e6c34a73
 --- /dev/null
 +++ b/drivers/gpio/xpi_gamecon_xrs.c
 @@ -0,0 +1,758 @@

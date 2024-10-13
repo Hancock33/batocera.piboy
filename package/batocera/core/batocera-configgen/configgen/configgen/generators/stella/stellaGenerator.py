@@ -1,15 +1,17 @@
-from ... import Command
-from ... import controllersConfig
-from ...utils.logger import get_logger
+from __future__ import annotations
+
+import logging
+
+from ... import Command, controllersConfig
 from ..Generator import Generator
 
-eslog = get_logger(__name__)
+eslog = logging.getLogger(__name__)
 
 class StellaGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         # Launch Stella
-        commandArray = ["stella" , rom ]
+        commandArray = ["stella " , rom ]
 
         return Command.Command(
             array=commandArray,

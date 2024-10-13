@@ -1,6 +1,19 @@
-from ... import batoceraFiles
+from __future__ import annotations
 
-def setMupenConfig(iniConfig, system, controllers, gameResolution):
+from typing import TYPE_CHECKING
+
+from ...batoceraPaths import BIOS, SCREENSHOTS
+from .mupenPaths import MUPEN_CONFIG_DIR, MUPEN_SAVES
+
+if TYPE_CHECKING:
+    from configparser import ConfigParser
+
+    from ...controllersConfig import ControllerMapping
+    from ...Emulator import Emulator
+    from ...types import Resolution
+
+
+def setMupenConfig(iniConfig: ConfigParser, system: Emulator, controllers: ControllerMapping, gameResolution: Resolution):
 
     # Hotkeys
     setHotKeyConfig(iniConfig, controllers, system)
@@ -9,10 +22,10 @@ def setMupenConfig(iniConfig, system, controllers, gameResolution):
     if not iniConfig.has_section("Core"):
         iniConfig.add_section("Core")
     iniConfig.set("Core", "Version", "1.01") # Version is important for the .ini creation otherwise, mupen remove the section
-    iniConfig.set("Core", "ScreenshotPath", batoceraFiles.SCREENSHOTS)
-    iniConfig.set("Core", "SaveStatePath",  batoceraFiles.mupenSaves)
-    iniConfig.set("Core", "SaveSRAMPath",   batoceraFiles.mupenSaves)
-    iniConfig.set("Core", "SharedDataPath", batoceraFiles.mupenConf)
+    iniConfig.set("Core", "ScreenshotPath", str(SCREENSHOTS))
+    iniConfig.set("Core", "SaveStatePath",  str(MUPEN_SAVES))
+    iniConfig.set("Core", "SaveSRAMPath",   str(MUPEN_SAVES))
+    iniConfig.set("Core", "SharedDataPath", str(MUPEN_CONFIG_DIR))
     iniConfig.set("Core", "SaveFilenameFormat", "1000") # forces savesstates with rom name
     # TODO : Miss Mupen64Plus\hires_texture
 
@@ -155,11 +168,13 @@ def setMupenConfig(iniConfig, system, controllers, gameResolution):
         iniConfig.set("Video-Rice", "LoadHiResTextures", "False")
         iniConfig.set("Video-Glide64mk2", "ghq_hirs",    "0")    # Hi-res texture pack format (0 for none, 1 for Rice)
 
+
     # Texture Enhencement XBRZ -> ONLY for RICE
     if system.isOptSet("mupen64plus_TextureEnhancement") and system.config["mupen64plus_TextureEnhancement"] != 0:
         iniConfig.set("Video-Rice", "TextureEnhancement", system.config["mupen64plus_TextureEnhancement"])
     else:
         iniConfig.set("Video-Rice", "TextureEnhancement", "0")   # 0=None, 1=2X, 2=2XSAI, 3=HQ2X, 4=LQ2X, 5=HQ4X, 6=Sharpen, 7=Sharpen More, 8=External, 9=Mirrored
+
 
     # Frameskip -> ONLY for GLIDE64MK2
     iniConfig.set("Video-Glide64mk2", "autoframeskip", "0")
@@ -185,10 +200,11 @@ def setMupenConfig(iniConfig, system, controllers, gameResolution):
         iniConfig.add_section("64DD")
     # Filename of the 64DD IPL ROM
     if (system.name == 'n64dd'):
-        iniConfig.set("64DD", "IPL-ROM", batoceraFiles.BIOS + "/64DD_IPL.bin")
+        iniConfig.set("64DD", "IPL-ROM", str(BIOS / "64DD_IPL.bin"))
     else:
         iniConfig.set("64DD", "IPL-ROM", "")
     iniConfig.set("64DD", "Disk", "")
+
 
     # Display FPS
     if system.config['showFPS'] == 'true':
@@ -209,7 +225,7 @@ def setMupenConfig(iniConfig, system, controllers, gameResolution):
                     iniConfig.add_section(custom_section)
                 iniConfig.set(custom_section, custom_option, str(system.config[user_config]))
 
-def setHotKeyConfig(iniConfig, controllers, system):
+def setHotKeyConfig(iniConfig: ConfigParser, controllers: ControllerMapping, system: Emulator):
     if not iniConfig.has_section("CoreEvents"):
         iniConfig.add_section("CoreEvents")
     iniConfig.set("CoreEvents", "Version", "1")
@@ -250,6 +266,7 @@ def setHotKeyConfig(iniConfig, controllers, system):
             if 'b' in controllers['1'].inputs:
                 #iniConfig.set("CoreEvents", "Joy Mapping Pause", "\"J{}{}/{}\"".format(controllers['1'].index, createButtonCode(controllers['1'].inputs['hotkey']), createButtonCode(controllers['1'].inputs['b'])))
                 iniConfig.set("CoreEvents", "Joy Mapping Pause", "")
+
 
 def createButtonCode(button):
     if(button.type == 'axis'):

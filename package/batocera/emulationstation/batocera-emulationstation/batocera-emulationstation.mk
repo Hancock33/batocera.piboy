@@ -3,8 +3,8 @@
 # batocera-emulationstation
 #
 ################################################################################
-# Version: Commits on Sept 27, 2024
-BATOCERA_EMULATIONSTATION_VERSION = 7c43b74063b150016152a9bcd505589b0e4e6e2a
+# Version: Commits on Oct 12, 2024
+BATOCERA_EMULATIONSTATION_VERSION = 77b17a5d9098d3986e44e0d2c4eea6889abf456d
 BATOCERA_EMULATIONSTATION_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_EMULATIONSTATION_SITE_METHOD = git
 BATOCERA_EMULATIONSTATION_GIT_SUBMODULES = YES
@@ -112,7 +112,6 @@ define BATOCERA_EMULATIONSTATION_RESOURCES
 	$(INSTALL) -m 0644 -D $(@D)/resources/help/*.*     $(TARGET_DIR)/usr/share/emulationstation/resources/help
 	$(INSTALL) -m 0644 -D $(@D)/resources/flags/*.*    $(TARGET_DIR)/usr/share/emulationstation/resources/flags
 	$(INSTALL) -m 0644 -D $(@D)/resources/battery/*.*  $(TARGET_DIR)/usr/share/emulationstation/resources/battery
-	$(INSTALL) -m 0644 -D $(@D)/resources/services/*.* $(TARGET_DIR)/usr/share/emulationstation/resources/services
 	$(INSTALL) -m 0644 -D $(@D)/resources/shaders/*.*  $(TARGET_DIR)/usr/share/emulationstation/resources/shaders
 	$(INSTALL) -m 0644 -D $(@D)/resources/shaders/*.*  $(TARGET_DIR)/usr/share/emulationstation/resources/shaders/kawase
 	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/resources/loading.jpg	$(TARGET_DIR)/usr/share/emulationstation/resources/loading.jpg

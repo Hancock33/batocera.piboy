@@ -24,3 +24,9 @@ class VcmiGenerator(Generator):
                 'LD_LIBRARY_PATH': '/lib:/usr/lib:/usr/lib/vcmi:/usr/lib/vcmi/AI',
                 'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })
+
+    def getHotkeysContext(self):
+        return {
+            "name": "vcmiclient",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

@@ -1,5 +1,5 @@
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 8d4c9a7..da3e284 100644
+index cb0916c..a25af2c 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
 @@ -49,7 +49,6 @@ string(CONCAT TARGET_ARCH TARGET_ ${TARGET_ARCH})

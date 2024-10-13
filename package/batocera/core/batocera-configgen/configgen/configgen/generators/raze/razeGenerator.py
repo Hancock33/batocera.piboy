@@ -1,18 +1,25 @@
+from __future__ import annotations
+
+import logging
 import os
 import platform
+from pathlib import Path
+from typing import TYPE_CHECKING
 
+from ... import Command, controllersConfig
 from ... import batoceraFiles
-from ... import Command
-from ... import controllersConfig
+from ...batoceraPaths import CONFIGS, SAVES, mkdir_if_not_exists
 from ...utils.buildargs import parse_args
-from ...utils.logger import get_logger
 from ..Generator import Generator
 
-eslog = get_logger(__name__)
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
+
+eslog = logging.getLogger(__name__)
 
 class RazeGenerator(Generator):
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "raze",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "save_state": "KEY_F6", "restore_state": "KEY_F9" }
@@ -160,7 +167,7 @@ class RazeGenerator(Generator):
 
         # Launch arguments
         launch_args = ["/usr/share/raze/raze"]
-        result = parse_args(launch_args, rom)
+        result = parse_args(launch_args, Path(rom))
         if not result.okay:
             raise Exception(result.message)
 
@@ -185,12 +192,12 @@ class RazeGenerator(Generator):
         return Command.Command(
             array=launch_args,
             env={
-                'SDL_AUTO_UPDATE_JOYSTICKS': '0'
+                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
             }
         )
 
-def getInGameRatio(self, config, gameResolution, rom):
-    return 16/9
+    def getInGameRatio(self, config, gameResolution, rom):
+        return 16/9
 
 def get_cpu_architecture():
     return platform.uname().machine

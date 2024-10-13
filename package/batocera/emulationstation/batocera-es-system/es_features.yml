@@ -1257,12 +1257,13 @@ libretro:
                             "4x":   4x
                             "8x":   8x
                             "16x":  16x
-                    wii_fast_disc_speed:
-                        prompt:      FAST DISK TRANSFER RATE
-                        description: Enhancement. Removes disc loading.
+                    wii_osd:
+                        group: ADVANCED OPTIONS
+                        prompt: OSD MESSAGES
+                        description: Enables or disable on screen messages.
                         choices:
-                            "Off": disabled
-                            "On":  enabled
+                            "Disabled": disabled
+                            "Enabled":  enabled
       systems:
             wii:
                 cfeatures:
@@ -4263,8 +4264,6 @@ libretro:
                       choices:
                           "On":  1
                           "Off": 0
-    mame0139:
-      shared: [use_guns]
     mame078plus:
       features: [padtokeyboard, netplay]
       shared: [autosave, rewind, use_guns]
@@ -10220,67 +10219,111 @@ rpcs3:
                 "Off": 0
                 "On":  1
         rpcs3_crosshairs:
-            group: LIGHT GUN
+            order: 99
+            group: CONTROLS
+            submenu: LIGHT GUNS
             prompt: SHOW LIGHT GUN CROSSHAIRS
             choices:
                 "Off": False
                 "On":  True
         rpcs3_controller1:
-            submenu: CONTROLLERS
-            prompt: PS3 CONTROLLER 1
+            group: CONTROLS
+            submenu: CONTROLLER 1
+            prompt: PS3 CONTROLLER
             description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "Evdev (Default)": "Evdev"
-                "SDL2":            "Sdl2"
-                "Sony DS":         "Sony"
+                "Legacy Evdev": "Evdev"
+                "Sony DS":      "Sony"
         rpcs3_controller2:
-            submenu: CONTROLLERS
-            prompt: PS3 CONTROLLER 2
+            group: CONTROLS
+            submenu: CONTROLLER 2
+            prompt: PS3 CONTROLLER
             description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "Evdev (Default)": "Evdev"
-                "SDL2":            "Sdl2"
-                "Sony DS":         "Sony"
+                "Legacy Evdev": "Evdev"
+                "Sony DS":      "Sony"
         rpcs3_controller3:
-            submenu: CONTROLLERS
-            prompt: PS3 CONTROLLER 3
+            group: CONTROLS
+            submenu: CONTROLLER 3
+            prompt: PS3 CONTROLLER
             description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "Evdev (Default)": "Evdev"
-                "SDL2":            "Sdl2"
-                "Sony DS":         "Sony"
+                "Legacy Evdev": "Evdev"
+                "Sony DS":      "Sony"
         rpcs3_controller4:
-            submenu: CONTROLLERS
-            prompt: PS3 CONTROLLER 4
+            group: CONTROLS
+            submenu: CONTROLLER 4
+            prompt: PS3 CONTROLLER
             description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "Evdev (Default)": "Evdev"
-                "SDL2":            "Sdl2"
-                "Sony DS":         "Sony"
+                "Legacy Evdev": "Evdev"
+                "Sony DS":      "Sony"
         rpcs3_controller5:
-            submenu: CONTROLLERS
-            prompt: PS3 CONTROLLER 5
+            group: CONTROLS
+            submenu: CONTROLLER 5
+            prompt: PS3 CONTROLLER
             description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "Evdev (Default)": "Evdev"
-                "SDL2":            "Sdl2"
-                "Sony DS":         "Sony"
+                "Legacy Evdev": "Evdev"
+                "Sony DS":      "Sony"
         rpcs3_controller6:
-            submenu: CONTROLLERS
-            prompt: PS3 CONTROLLER 6
+            group: CONTROLS
+            submenu: CONTROLLER 6
+            prompt: PS3 CONTROLLER
             description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "Evdev (Default)": "Evdev"
-                "SDL2":            "Sdl2"
-                "Sony DS":         "Sony"
+                "Legacy Evdev": "Evdev"
+                "Sony DS":      "Sony"
         rpcs3_controller7:
-            submenu: CONTROLLERS
-            prompt: PS3 CONTROLLER 7
+            group: CONTROLS
+            submenu: CONTROLLER 7
+            prompt: PS3 CONTROLLER
             description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "Evdev (Default)": "Evdev"
-                "SDL2":            "Sdl2"
-                "Sony DS":         "Sony"
+                "Legacy Evdev": "Evdev"
+                "Sony DS":      "Sony"
+        rpcs3_rumble1:
+            group: CONTROLS
+            submenu: CONTROLLER 1
+            prompt: RUMBLE
+            description: Enable controller rumble capabilities if supported by the controller.
+            preset: switchon
+        rpcs3_rumble2:
+            group: CONTROLS
+            submenu: CONTROLLER 2
+            prompt: RUMBLE
+            description: Enable controller rumble capabilities if supported by the controller.
+            preset: switchon
+        rpcs3_rumble3:
+            group: CONTROLS
+            submenu: CONTROLLER 3
+            prompt: RUMBLE
+            description: Enable controller rumble capabilities if supported by the controller.
+            preset: switchon
+        rpcs3_rumble4:
+            group: CONTROLS
+            submenu: CONTROLLER 4
+            prompt: RUMBLE
+            description: Enable controller rumble capabilities if supported by the controller.
+            preset: switchon
+        rpcs3_rumble5:
+            group: CONTROLS
+            submenu: CONTROLLER 5
+            prompt: RUMBLE
+            description: Enable controller rumble capabilities if supported by the controller.
+            preset: switchon
+        rpcs3_rumble6:
+            group: CONTROLS
+            submenu: CONTROLLER 6
+            prompt: RUMBLE
+            description: Enable controller rumble capabilities if supported by the controller.
+            preset: switchon
+        rpcs3_rumble7:
+            group: CONTROLS
+            submenu: CONTROLLER 7
+            prompt: RUMBLE
+            description: Enable controller rumble capabilities if supported by the controller.
+            preset: switchon
 scummvm:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -10471,6 +10514,25 @@ supermodel:
             choices:
                 "Off":      0
                 "On":       1
+        crt_colour:
+            group: ADVANCED OPTIONS
+            prompt: CRT COLOUR
+            description: CRT-like colour adaption. Requires New 3D engine.
+            choices:
+                "None (Default)":                                              0
+                "ARI/D93 (recommended for all JP developed games)":            1
+                "PVM_20M2U/D93":                                               2
+                "BT601_525/D93":                                               3
+                "BT601_525/D65 (recommended for all US developed games)":      4
+                "BT601_625/D65 (recommended for all EUR/AUS developed games)": 5
+        upscale_mode:
+            prompt: UPSCALE MODE
+            description: Upscale filter used for the 2D layers. Requires New 3D engine.
+            choices:
+                "None/Sharp Pixels":  0
+                "Biquintic":          1
+                "Bilinear (Default)": 2
+                "Bicubic":            3
         crosshairs:
             group:       LIGHT GUN
             prompt:      SHOW LIGHT GUN CROSSHAIRS
@@ -12695,24 +12757,6 @@ openmsx:
             choices:
                 "Floppy Disk Image": "disk"
                 "Hard Disk Image":   "hda"
-demul:
-  features: [padtokeyboard]
-  shared: [powermode, tdp, videomode, powersave, use_wheels, wheel_rotation, wheel_deadzone, wheel_midzone]
-  cfeatures:
-        demulRatio:
-            group: VIDEO SETTINGS
-            prompt:      GAME ASPECT RATIO
-            choices:
-                "Stretch":       0
-                "4:3 (Default)": 1
-                "16:9":          2
-        demulVSync:
-            group: VIDEO SETTINGS
-            prompt:      VSYNC
-            description: Fix screen tearing.
-            choices:
-                "Off": 0
-                "On":  1
 alephone:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -13148,6 +13192,9 @@ rednukem:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 rott:
+  features: [padtokeyboard]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+taradino:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 rtcw:
@@ -14160,3 +14207,31 @@ yquake2:
                 "Vulkan":   vulkan
                 "OpenGL":   gl
                 "Software": soft
+x16emu:
+  features: [padtokeyboard]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+    x16emu_scale:
+      prompt: RENDERING RESOLUTION
+      description: Enhancement. Increase the rendering resolution.
+      choices:
+        "640x480":            1
+        "1280x960 (Default)": 2
+        "1920x1440":          3
+        "2560x1920":          4
+    x16emu_ratio:
+      prompt: ASPECT RATIO
+      description: Change the output resolution ratio.
+      choices:
+        "4x3 (Default)": "4:3"
+        "16x9":          "16:9"
+    x16emu_quality:
+      prompt: IMAGE QUALITY
+      description: Change image scaling algorithm quality.
+      choices:
+        "Nearest pixel sampling": "nearest"
+        "Linear filtering":       "linear"
+        "Anisotropic filtering":  "best"
+shadps4:
+  features: [padtokeyboard]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

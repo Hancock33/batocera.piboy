@@ -1,11 +1,10 @@
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 import os
 
-from ... import Command
-from ... import controllersConfig
-from ...utils.logger import get_logger
+from ... import Command, controllersConfig
 from ..Generator import Generator
-
-eslog = get_logger(__name__)
 
 class StuntcarGenerator(Generator):
 
@@ -24,6 +23,6 @@ class StuntcarGenerator(Generator):
 
     def getHotkeysContext(self):
         return {
-            "name": "tyrian",
+            "name": "stuntcar",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
         }

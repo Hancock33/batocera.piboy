@@ -434,7 +434,7 @@ msgctxt "game_options"
 msgid "Use light guns instead of pads if light guns are connected."
 msgstr "Použiť svetelné pištole namiesto ovládačov, ak sú pripojené."
 
-#. TRANSLATION: shared, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, dolphin, dolphin
+#. TRANSLATION: shared, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, dolphin, dolphin, ...
 msgctxt "game_options"
 msgid "LIGHT GUNS"
 msgstr ""
@@ -2299,7 +2299,7 @@ msgstr ""
 "Nemusí fungovať dobre na všetkých hardvéroch. Hybrid je preferovaný, ak je "
 "podporovaný."
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/swanstation, libretro/flycast, libretro/genesisplusgx, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/swanstation, libretro/flycast, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "Pokročilé voľby"
@@ -2339,15 +2339,15 @@ msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "Anizotropické filtrovanie"
 
-#. TRANSLATION: libretro/dolphin, dolphin
+#. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
-msgid "Enhancement. Removes disc loading."
-msgstr "Rozšírenie. Odstráni načítavanie disku."
+msgid "Enables or disable on screen messages."
+msgstr "Povolí alebo zakáže správy na obrazovke."
 
-#. TRANSLATION: libretro/dolphin, dolphin
+#. TRANSLATION: libretro/dolphin, pcsx2
 msgctxt "game_options"
-msgid "FAST DISK TRANSFER RATE"
-msgstr "Rýchla prenosová rýchlosť disku"
+msgid "OSD MESSAGES"
+msgstr "OSD správy"
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -4960,7 +4960,7 @@ msgctxt "game_options"
 msgid "Select which joystick to emulate."
 msgstr "Vyberte, ktorý joystick emulovať."
 
-#. TRANSLATION: libretro/mame, cgenius, mame/openbor7530, rtcw
+#. TRANSLATION: libretro/mame, supermodel, cgenius, mame/openbor7530, rtcw
 msgctxt "game_options"
 msgid "None (Default)"
 msgstr "Žiadne (predvolené)"
@@ -8560,7 +8560,7 @@ msgctxt "game_options"
 msgid "GLCore"
 msgstr "GLCore"
 
-#. TRANSLATION: libretro, libretro, libretro, libretro, rpcs3, ...
+#. TRANSLATION: libretro, libretro, libretro, libretro
 msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
@@ -9014,7 +9014,7 @@ msgctxt "game_options"
 msgid "UPSCALE FILTER"
 msgstr "Filter zväčšenia"
 
-#. TRANSLATION: cemu, cemu, ppsspp, suyu
+#. TRANSLATION: cemu, cemu, ppsspp, supermodel, suyu
 msgctxt "game_options"
 msgid "Bicubic"
 msgstr "Bikubické"
@@ -9039,7 +9039,7 @@ msgctxt "game_options"
 msgid "DOWNSCALE FILTER"
 msgstr "Zmenšovací filter"
 
-#. TRANSLATION: cemu, rpcs3
+#. TRANSLATION: cemu, rpcs3, supermodel
 msgctxt "game_options"
 msgid "Bilinear (Default)"
 msgstr "Bilineárne (predvolené)"
@@ -9054,7 +9054,7 @@ msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
 msgstr "Ponechať pomer strán (predvolené)"
 
-#. TRANSLATION: cemu, hypseus-singe, openbor, redream, demul
+#. TRANSLATION: cemu, hypseus-singe, openbor, redream
 msgctxt "game_options"
 msgid "Stretch"
 msgstr "Roztiahnuť"
@@ -9527,6 +9527,16 @@ msgstr "Jednotka správy pamäte"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
+msgid "Enhancement. Removes disc loading."
+msgstr "Rozšírenie. Odstráni načítavanie disku."
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "FAST DISK TRANSFER RATE"
+msgstr "Rýchla prenosová rýchlosť disku"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
 msgid ""
 "Skips Vertical Blank Interrupts when lag is detected, allowing for smooth "
 "audio playback when emulation speed is not 100%."
@@ -9549,7 +9559,7 @@ msgctxt "game_options"
 msgid "USE PAD PROFILES"
 msgstr "Použiť profily ovládačov"
 
-#. TRANSLATION: dolphin
+#. TRANSLATION: dolphin, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "Enable controller rumble capabilities if supported by the controller."
 msgstr "Povoliť schopnosti vibrácií, ak ich podporuje ovládač."
@@ -11071,11 +11081,6 @@ msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "OSD MESSAGES"
-msgstr "OSD správy"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
 msgid "Fit to Window / Fullscreen"
 msgstr "Roztiahnuť do okna / obrzovky"
 
@@ -12263,50 +12268,35 @@ msgstr ""
 "V predvolenom nastavení sa používa SDL2, inak povoľte funkcie špecifické pre "
 "ovládač. Sony DS nebude fungovať s klonovými ovládačmi."
 
-#. TRANSLATION: rpcs3
+#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
-msgid "PS3 CONTROLLER 1"
-msgstr "PS3 ovládač 1"
+msgid "PS3 CONTROLLER"
+msgstr ""
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
-msgid "Evdev (Default)"
-msgstr ""
+msgid "Legacy Evdev"
+msgstr "Staré Evdev"
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "Sony DS"
 msgstr "Sony DS"
 
-#. TRANSLATION: rpcs3
+#. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
-msgid "PS3 CONTROLLER 2"
-msgstr "PS3 ovládač 2"
+msgid "CONTROLLER 5"
+msgstr ""
 
-#. TRANSLATION: rpcs3
+#. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
-msgid "PS3 CONTROLLER 3"
-msgstr "PS3 ovládač 3"
+msgid "CONTROLLER 6"
+msgstr ""
 
-#. TRANSLATION: rpcs3
+#. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
-msgid "PS3 CONTROLLER 4"
-msgstr "PS3 ovládač 4"
-
-#. TRANSLATION: rpcs3
-msgctxt "game_options"
-msgid "PS3 CONTROLLER 5"
-msgstr "PS3 ovládač"
-
-#. TRANSLATION: rpcs3
-msgctxt "game_options"
-msgid "PS3 CONTROLLER 6"
-msgstr "PS3 ovládač 6"
-
-#. TRANSLATION: rpcs3
-msgctxt "game_options"
-msgid "PS3 CONTROLLER 7"
-msgstr "PS3 ovládač 7"
+msgid "CONTROLLER 7"
+msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -12533,7 +12523,7 @@ msgctxt "game_options"
 msgid "Choose your preferred aspect ratio."
 msgstr "Vyberte preferovaný pomer strán."
 
-#. TRANSLATION: redream, demul, bermuda, bigpemu
+#. TRANSLATION: redream, bermuda, bigpemu
 msgctxt "game_options"
 msgid "4:3 (Default)"
 msgstr "4:3 (predvolené)"
@@ -12643,6 +12633,61 @@ msgstr "Štvorité renderovanie"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
+msgid "CRT-like colour adaption. Requires New 3D engine."
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "CRT COLOUR"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "ARI/D93 (recommended for all JP developed games)"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "PVM_20M2U/D93"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "BT601_525/D93"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "BT601_525/D65 (recommended for all US developed games)"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "BT601_625/D65 (recommended for all EUR/AUS developed games)"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "Upscale filter used for the 2D layers. Requires New 3D engine."
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "UPSCALE MODE"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "None/Sharp Pixels"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "Biquintic"
+msgstr ""
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
 msgid "Enable crosshairs in shooting games for the selected players."
 msgstr "Povoliť nitkový kríž v strieľačkách pre vybraných hráčov."
 
@@ -12723,7 +12768,7 @@ msgctxt "game_options"
 msgid "Sinden"
 msgstr ""
 
-#. TRANSLATION: cgenius
+#. TRANSLATION: cgenius, x16emu
 msgctxt "game_options"
 msgid "4x3 (Default)"
 msgstr "4:3 (predvolené)"
@@ -15929,6 +15974,41 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Enhancement. Increase the rendering resolution."
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "1280x960 (Default)"
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Change image scaling algorithm quality."
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "IMAGE QUALITY"
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Nearest pixel sampling"
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Linear filtering"
+msgstr ""
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Anisotropic filtering"
+msgstr ""
+
 #. TRANSLATION: mame.mame.keys, c128.vice.keys, c64.vice.keys, singe.hypseus-singe.keys, daphne.hypseus-singe.keys, ...
 msgctxt "keys_files"
 msgid "Exit emulator"
@@ -15944,7 +16024,7 @@ msgctxt "keys_files"
 msgid "Take Screenshot"
 msgstr ""
 
-#. TRANSLATION: switch.ryujinx.keys, naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, ...
+#. TRANSLATION: switch.ryujinx.keys, vpinball.keys, amigacd32.amiberry.keys, amiga500.amiberry.keys, amiga1200.amiberry.keys, ...
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Ukončiť emulátor"
@@ -15953,121 +16033,6 @@ msgstr "Ukončiť emulátor"
 msgctxt "keys_files"
 msgid "Service menu"
 msgstr ""
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Start"
-msgstr "Spustiť"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Coin"
-msgstr "Minca"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Push 2"
-msgstr "Push 2"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Push 1"
-msgstr "Stlačiť 1"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Push 4"
-msgstr "Stlačiť 4"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Push 3"
-msgstr "Stlačiť 3"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Push 5"
-msgstr "Stlačiť 5"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Push 6"
-msgstr "Stlačiť 6"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Push 7"
-msgstr "Stlačiť 7"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Push 8"
-msgstr "Stlačiť 8"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Digital Left"
-msgstr "Digitál vľavo"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Digital Right"
-msgstr "Digitál vpravo"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Digital Up"
-msgstr "Digitálne hore"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Digital Down"
-msgstr "Digitálne dolu"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Analog 1 Left"
-msgstr "Analóg 1 vľavo"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Analog 1 Right"
-msgstr "Analóg 1 vpravo"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Analog 1 Up"
-msgstr "Analóg 1 hore"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Analog 1 Down"
-msgstr "Analóg 1 dolu"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Analog 2 Left"
-msgstr "Analóg 2 vľavo"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Analog 2 Right"
-msgstr "Analóg 2 vpravo"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Analog 2 Up"
-msgstr "Analóg 2 hore"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Analog 2 Down"
-msgstr "Analóg 2 dolu"
-
-#. TRANSLATION: hikaru.demul.keys, gaelco.demul.keys
-msgctxt "keys_files"
-msgid "Set to full screen"
-msgstr "Nastaviť na celú obrazovku"
 
 #. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
 msgctxt "keys_files"
@@ -16174,6 +16139,21 @@ msgctxt "keys_files"
 msgid "Exit Dolphin"
 msgstr ""
 
+#. TRANSLATION: doom3.dhewm3.keys, mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "Snímka obrazovky"
+
+#. TRANSLATION: doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+msgctxt "keys_files"
+msgid "Quick Save"
+msgstr "Rýchle uloženie"
+
+#. TRANSLATION: doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+msgctxt "keys_files"
+msgid "Quick Load"
+msgstr "Rýchle načítanie"
+
 #. TRANSLATION: dos.dosbox-x.keys
 msgctxt "keys_files"
 msgid "Exit Dosbox-X"
@@ -16208,11 +16188,6 @@ msgstr "Načítať stav"
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "Uložiť stav"
-
-#. TRANSLATION: mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Snímka obrazovky"
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -16434,7 +16409,7 @@ msgctxt "keys_files"
 msgid "Look"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, openjazz.keys, raze.keys
+#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, openjazz.keys, rott.keys, raze.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr ""
@@ -16474,7 +16449,7 @@ msgctxt "keys_files"
 msgid "Use / Open"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
+#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr ""
@@ -16704,6 +16679,71 @@ msgctxt "keys_files"
 msgid "Stats"
 msgstr ""
 
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Open door"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Toggle weapon"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Drop weapon"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Aim up"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Aim down"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Strafe left"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Strafe right"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Menu back"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move left"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move right"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move forward"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move backward"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Toggle run"
+msgstr ""
+
 #. TRANSLATION: sonicnexus.keys
 msgctxt "keys_files"
 msgid "Dev Menu"
@@ -16764,16 +16804,6 @@ msgctxt "keys_files"
 msgid "Open"
 msgstr ""
 
-#. TRANSLATION: theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Load"
-msgstr "Rýchle načítanie"
-
-#. TRANSLATION: theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Save"
-msgstr "Rýchle uloženie"
-
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
@@ -16817,10 +16847,6 @@ msgstr "Rýchle uloženie"
 #~ msgctxt "game_options"
 #~ msgid "Useful for speedruns/glitches."
 #~ msgstr "Užitočné pre speedruns/glitche."
-
-#~ msgctxt "game_options"
-#~ msgid "Enables or disable on screen messages."
-#~ msgstr "Povolí alebo zakáže správy na obrazovke."
 
 #~ msgctxt "game_options"
 #~ msgid "WiiMote"
@@ -17182,10 +17208,6 @@ msgstr "Rýchle uloženie"
 #~ "GPU, ktoré majú rezervný priestor."
 
 #~ msgctxt "game_options"
-#~ msgid "Legacy Evdev"
-#~ msgstr "Staré Evdev"
-
-#~ msgctxt "game_options"
 #~ msgid "Center (Default)"
 #~ msgstr "Stred (predvolené)"
 
@@ -17409,6 +17431,126 @@ msgstr "Rýchle uloženie"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rýchlo dopredu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Start"
+#~ msgstr "Spustiť"
+
+#~ msgctxt "keys_files"
+#~ msgid "Coin"
+#~ msgstr "Minca"
+
+#~ msgctxt "keys_files"
+#~ msgid "Push 2"
+#~ msgstr "Push 2"
+
+#~ msgctxt "keys_files"
+#~ msgid "Push 1"
+#~ msgstr "Stlačiť 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Push 4"
+#~ msgstr "Stlačiť 4"
+
+#~ msgctxt "keys_files"
+#~ msgid "Push 3"
+#~ msgstr "Stlačiť 3"
+
+#~ msgctxt "keys_files"
+#~ msgid "Push 5"
+#~ msgstr "Stlačiť 5"
+
+#~ msgctxt "keys_files"
+#~ msgid "Push 6"
+#~ msgstr "Stlačiť 6"
+
+#~ msgctxt "keys_files"
+#~ msgid "Push 7"
+#~ msgstr "Stlačiť 7"
+
+#~ msgctxt "keys_files"
+#~ msgid "Push 8"
+#~ msgstr "Stlačiť 8"
+
+#~ msgctxt "keys_files"
+#~ msgid "Digital Left"
+#~ msgstr "Digitál vľavo"
+
+#~ msgctxt "keys_files"
+#~ msgid "Digital Right"
+#~ msgstr "Digitál vpravo"
+
+#~ msgctxt "keys_files"
+#~ msgid "Digital Up"
+#~ msgstr "Digitálne hore"
+
+#~ msgctxt "keys_files"
+#~ msgid "Digital Down"
+#~ msgstr "Digitálne dolu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Analog 1 Left"
+#~ msgstr "Analóg 1 vľavo"
+
+#~ msgctxt "keys_files"
+#~ msgid "Analog 1 Right"
+#~ msgstr "Analóg 1 vpravo"
+
+#~ msgctxt "keys_files"
+#~ msgid "Analog 1 Up"
+#~ msgstr "Analóg 1 hore"
+
+#~ msgctxt "keys_files"
+#~ msgid "Analog 1 Down"
+#~ msgstr "Analóg 1 dolu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Analog 2 Left"
+#~ msgstr "Analóg 2 vľavo"
+
+#~ msgctxt "keys_files"
+#~ msgid "Analog 2 Right"
+#~ msgstr "Analóg 2 vpravo"
+
+#~ msgctxt "keys_files"
+#~ msgid "Analog 2 Up"
+#~ msgstr "Analóg 2 hore"
+
+#~ msgctxt "keys_files"
+#~ msgid "Analog 2 Down"
+#~ msgstr "Analóg 2 dolu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Set to full screen"
+#~ msgstr "Nastaviť na celú obrazovku"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 1"
+#~ msgstr "PS3 ovládač 1"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 2"
+#~ msgstr "PS3 ovládač 2"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 3"
+#~ msgstr "PS3 ovládač 3"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 4"
+#~ msgstr "PS3 ovládač 4"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 5"
+#~ msgstr "PS3 ovládač"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 6"
+#~ msgstr "PS3 ovládač 6"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 7"
+#~ msgstr "PS3 ovládač 7"
 
 #~ msgctxt "game_options"
 #~ msgid ""

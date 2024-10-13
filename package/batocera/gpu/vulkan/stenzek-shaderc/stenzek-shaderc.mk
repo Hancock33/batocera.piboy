@@ -3,8 +3,8 @@
 # stenzek-shaderc
 #
 ################################################################################
-# Version: Commits on Sept 27, 2024
-STENZEK_SHADERC_VERSION = 1c0d3d18819aa75ec74f1fbd9ff0461e1b69a4d6
+# Version: Commits on Oct 01, 2024
+STENZEK_SHADERC_VERSION = f68b10fd46dc0401474d039144320d6ac521818e
 STENZEK_SHADERC_SITE =  $(call github,stenzek,shaderc,$(STENZEK_SHADERC_VERSION))
 STENZEK_SHADERC_DEPENDENCIES = vulkan-headers vulkan-loader glslang spirv-tools
 STENZEK_SHADERC_INSTALL_STAGING = YES

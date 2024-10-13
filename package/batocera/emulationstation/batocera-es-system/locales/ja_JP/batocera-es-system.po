@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v41b(2024/09/06)\n"
+"Project-Id-Version: batocera-es v41b(2024/10/06)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-09-08 13:12+0900\n"
+"PO-Revision-Date: 2024-10-05 22:06+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -151,7 +151,9 @@ msgstr "使用しない"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Load latest save state on game launch and save state when exiting game."
-msgstr "ゲーム開始時に最新ステートを読込み、ゲーム終了時にステートセーブします"
+msgstr ""
+"ゲーム開始時にステートを読込み、終了時にステートセーブします\n"
+"(ステートセーブ保存方法－「ゲームごとにセーブ」に設定)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -432,7 +434,7 @@ msgctxt "game_options"
 msgid "Use light guns instead of pads if light guns are connected."
 msgstr "システムでガンコンが検出された場合は、パッドの代わりに使用します"
 
-#. TRANSLATION: shared, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, dolphin, dolphin
+#. TRANSLATION: shared, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, dolphin, dolphin, ...
 msgctxt "game_options"
 msgid "LIGHT GUNS"
 msgstr "ライトガン(ガンコン)"
@@ -2299,7 +2301,7 @@ msgid ""
 msgstr ""
 "うまく機能しない場合があります。対応している場合は、ハイブリッドを推奨します"
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/swanstation, libretro/flycast, libretro/genesisplusgx, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/swanstation, libretro/flycast, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "詳細設定"
@@ -2339,15 +2341,15 @@ msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "異方性フィルタリング"
 
-#. TRANSLATION: libretro/dolphin, dolphin
+#. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
-msgid "Enhancement. Removes disc loading."
-msgstr "強化：ディスク読み込みをなくします"
+msgid "Enables or disable on screen messages."
+msgstr "画面上のメッセージを有効/無効にします"
 
-#. TRANSLATION: libretro/dolphin, dolphin
+#. TRANSLATION: libretro/dolphin, pcsx2
 msgctxt "game_options"
-msgid "FAST DISK TRANSFER RATE"
-msgstr "高速ディスク転送速度"
+msgid "OSD MESSAGES"
+msgstr "OSD メッセージを表示"
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -2839,7 +2841,7 @@ msgstr "巻き戻しはCPUに負担がかかります"
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SAVESTATE/REWIND"
-msgstr "ステートセーブ(巻き戻し)"
+msgstr "ステートセーブ/巻き戻し"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -4957,7 +4959,7 @@ msgctxt "game_options"
 msgid "Select which joystick to emulate."
 msgstr "エミュレートするジョイスティックを選択します"
 
-#. TRANSLATION: libretro/mame, cgenius, mame/openbor7530, rtcw
+#. TRANSLATION: libretro/mame, supermodel, cgenius, mame/openbor7530, rtcw
 msgctxt "game_options"
 msgid "None (Default)"
 msgstr "なし (標準)"
@@ -8549,7 +8551,7 @@ msgctxt "game_options"
 msgid "GLCore"
 msgstr "GL コア"
 
-#. TRANSLATION: libretro, libretro, libretro, libretro, rpcs3, ...
+#. TRANSLATION: libretro, libretro, libretro, libretro
 msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
@@ -9002,7 +9004,7 @@ msgctxt "game_options"
 msgid "UPSCALE FILTER"
 msgstr "アップスケールフィルター"
 
-#. TRANSLATION: cemu, cemu, ppsspp, suyu
+#. TRANSLATION: cemu, cemu, ppsspp, supermodel, suyu
 msgctxt "game_options"
 msgid "Bicubic"
 msgstr "バイキュービック"
@@ -9027,7 +9029,7 @@ msgctxt "game_options"
 msgid "DOWNSCALE FILTER"
 msgstr "ダウンスケール フィルター"
 
-#. TRANSLATION: cemu, rpcs3
+#. TRANSLATION: cemu, rpcs3, supermodel
 msgctxt "game_options"
 msgid "Bilinear (Default)"
 msgstr "バイリニア (標準)"
@@ -9042,7 +9044,7 @@ msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
 msgstr "アスペクト比を維持 (標準)"
 
-#. TRANSLATION: cemu, hypseus-singe, openbor, redream, demul
+#. TRANSLATION: cemu, hypseus-singe, openbor, redream
 msgctxt "game_options"
 msgid "Stretch"
 msgstr "引き伸ばし"
@@ -9516,6 +9518,16 @@ msgstr "メモリ管理ユニット"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
+msgid "Enhancement. Removes disc loading."
+msgstr "強化：ディスク読み込みをなくします"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "FAST DISK TRANSFER RATE"
+msgstr "高速ディスク転送速度"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
 msgid ""
 "Skips Vertical Blank Interrupts when lag is detected, allowing for smooth "
 "audio playback when emulation speed is not 100%."
@@ -9538,7 +9550,7 @@ msgctxt "game_options"
 msgid "USE PAD PROFILES"
 msgstr "パッドプロファイルを使用"
 
-#. TRANSLATION: dolphin
+#. TRANSLATION: dolphin, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "Enable controller rumble capabilities if supported by the controller."
 msgstr "サポートされている場合、コントローラーの振動機能を有効にします"
@@ -11053,11 +11065,6 @@ msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "OSD MESSAGES"
-msgstr "OSD メッセージを表示"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
 msgid "Fit to Window / Fullscreen"
 msgstr "ウィンドウ合わせ/ フルスクリーン"
 
@@ -12236,50 +12243,35 @@ msgstr ""
 "通常、SDL2 を使用します。それ以外は、コントローラー固有の機能を有効にしま"
 "す。 Sony DualSense のクローンコントローラーは動作しません"
 
-#. TRANSLATION: rpcs3
+#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
-msgid "PS3 CONTROLLER 1"
-msgstr "PS3 コントローラ 1"
+msgid "PS3 CONTROLLER"
+msgstr "PS3 コントローラー"
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
-msgid "Evdev (Default)"
-msgstr ""
+msgid "Legacy Evdev"
+msgstr "レガシー Evdev"
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "Sony DS"
 msgstr "ソニー DS"
 
-#. TRANSLATION: rpcs3
+#. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
-msgid "PS3 CONTROLLER 2"
-msgstr "PS3 コントローラ 2"
+msgid "CONTROLLER 5"
+msgstr "コントローラー 5"
 
-#. TRANSLATION: rpcs3
+#. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
-msgid "PS3 CONTROLLER 3"
-msgstr "PS3 コントローラ 3"
+msgid "CONTROLLER 6"
+msgstr "コントローラー 6"
 
-#. TRANSLATION: rpcs3
+#. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
-msgid "PS3 CONTROLLER 4"
-msgstr "PS3 コントローラ 4"
-
-#. TRANSLATION: rpcs3
-msgctxt "game_options"
-msgid "PS3 CONTROLLER 5"
-msgstr "PS3 コントローラ 5"
-
-#. TRANSLATION: rpcs3
-msgctxt "game_options"
-msgid "PS3 CONTROLLER 6"
-msgstr "PS3 コントローラ 6"
-
-#. TRANSLATION: rpcs3
-msgctxt "game_options"
-msgid "PS3 CONTROLLER 7"
-msgstr "PS3 コントローラ 7"
+msgid "CONTROLLER 7"
+msgstr "コントローラー 7"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -12506,7 +12498,7 @@ msgctxt "game_options"
 msgid "Choose your preferred aspect ratio."
 msgstr "アスペクト比を選択します"
 
-#. TRANSLATION: redream, demul, bermuda, bigpemu
+#. TRANSLATION: redream, bermuda, bigpemu
 msgctxt "game_options"
 msgid "4:3 (Default)"
 msgstr "4:3（標準）"
@@ -12613,6 +12605,61 @@ msgstr "クワッド レンダリング"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
+msgid "CRT-like colour adaption. Requires New 3D engine."
+msgstr "CRT のような色適応。新しい 3D エンジンが必要"
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "CRT COLOUR"
+msgstr "CRT の色"
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "ARI/D93 (recommended for all JP developed games)"
+msgstr "ARI/D93 (すべての 日本 開発ゲームに推奨)"
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "PVM_20M2U/D93"
+msgstr "PVM_20M2U/D93"
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "BT601_525/D93"
+msgstr "BT601_525/D93"
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "BT601_525/D65 (recommended for all US developed games)"
+msgstr "BT601_525/D65 (米国で開発されたすべてのゲームに推奨)"
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "BT601_625/D65 (recommended for all EUR/AUS developed games)"
+msgstr "BT601_625/D65 (EUR/AUS で開発されたすべてのゲームに推奨)"
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "Upscale filter used for the 2D layers. Requires New 3D engine."
+msgstr "2D レイヤーに使用される高級フィルタ。新しい 3D エンジンが必要"
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "UPSCALE MODE"
+msgstr "アップスケール モード"
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "None/Sharp Pixels"
+msgstr "なし/シャープピクセル"
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
+msgid "Biquintic"
+msgstr "二五分法"
+
+#. TRANSLATION: supermodel
+msgctxt "game_options"
 msgid "Enable crosshairs in shooting games for the selected players."
 msgstr "選択したプレーヤーのゲームで十字線(照準)表示を有効にします"
 
@@ -12694,7 +12741,7 @@ msgctxt "game_options"
 msgid "Sinden"
 msgstr ""
 
-#. TRANSLATION: cgenius
+#. TRANSLATION: cgenius, x16emu
 msgctxt "game_options"
 msgid "4x3 (Default)"
 msgstr "4:3（標準）"
@@ -15956,6 +16003,41 @@ msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
 
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Enhancement. Increase the rendering resolution."
+msgstr "強化：レンダリング解像度を上げます"
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "1280x960 (Default)"
+msgstr "1280x960 (標準)"
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Change image scaling algorithm quality."
+msgstr "画像スケーリングアルゴリズムの品質を変更します"
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "IMAGE QUALITY"
+msgstr "映像品質"
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Nearest pixel sampling"
+msgstr "最も近いピクセルサンプリング"
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Linear filtering"
+msgstr "線形フィルタリング"
+
+#. TRANSLATION: x16emu
+msgctxt "game_options"
+msgid "Anisotropic filtering"
+msgstr "異方性フィルタリング"
+
 #. TRANSLATION: mame.mame.keys, c128.vice.keys, c64.vice.keys, singe.hypseus-singe.keys, daphne.hypseus-singe.keys, ...
 msgctxt "keys_files"
 msgid "Exit emulator"
@@ -15971,7 +16053,7 @@ msgctxt "keys_files"
 msgid "Take Screenshot"
 msgstr ""
 
-#. TRANSLATION: switch.ryujinx.keys, naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, ...
+#. TRANSLATION: switch.ryujinx.keys, vpinball.keys, amigacd32.amiberry.keys, amiga500.amiberry.keys, amiga1200.amiberry.keys, ...
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "エミュレータを終了"
@@ -15980,121 +16062,6 @@ msgstr "エミュレータを終了"
 msgctxt "keys_files"
 msgid "Service menu"
 msgstr "サービスメニュー"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Start"
-msgstr "スタート"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Coin"
-msgstr "コイン"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Push 2"
-msgstr "２"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Push 1"
-msgstr "１押す"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Push 4"
-msgstr "４"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Push 3"
-msgstr "３"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Push 5"
-msgstr "５"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Push 6"
-msgstr "６"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Push 7"
-msgstr "７"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Push 8"
-msgstr "８押す"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Digital Left"
-msgstr "デジタル　左"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Digital Right"
-msgstr "デジタル　右"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Digital Up"
-msgstr "デジタル　上"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Digital Down"
-msgstr "デジタル 下"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Analog 1 Left"
-msgstr "アナログ１ 左"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Analog 1 Right"
-msgstr "アナログ１ 右"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Analog 1 Up"
-msgstr "アナログ１ 上"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Analog 1 Down"
-msgstr "アナログ１ 下"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Analog 2 Left"
-msgstr "アナログ 2 左"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Analog 2 Right"
-msgstr "アナログ 2 右"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Analog 2 Up"
-msgstr "アナログ 2 上"
-
-#. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
-msgctxt "keys_files"
-msgid "Analog 2 Down"
-msgstr "アナログ 2 下"
-
-#. TRANSLATION: hikaru.demul.keys, gaelco.demul.keys
-msgctxt "keys_files"
-msgid "Set to full screen"
-msgstr "フルスクリーンに設定"
 
 #. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
 msgctxt "keys_files"
@@ -16201,6 +16168,21 @@ msgctxt "keys_files"
 msgid "Exit Dolphin"
 msgstr "Dolphin を終了"
 
+#. TRANSLATION: doom3.dhewm3.keys, mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "スクリーンショット"
+
+#. TRANSLATION: doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+msgctxt "keys_files"
+msgid "Quick Save"
+msgstr "クイック セーブ"
+
+#. TRANSLATION: doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+msgctxt "keys_files"
+msgid "Quick Load"
+msgstr "クイック ロード"
+
 #. TRANSLATION: dos.dosbox-x.keys
 msgctxt "keys_files"
 msgid "Exit Dosbox-X"
@@ -16235,11 +16217,6 @@ msgstr "ステートロード"
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "ステートセーブ"
-
-#. TRANSLATION: mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "スクリーンショット"
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -16461,10 +16438,10 @@ msgctxt "keys_files"
 msgid "Look"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, openjazz.keys, raze.keys
+#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, openjazz.keys, rott.keys, raze.keys
 msgctxt "keys_files"
 msgid "Fire"
-msgstr ""
+msgstr "発射"
 
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -16501,10 +16478,10 @@ msgctxt "keys_files"
 msgid "Use / Open"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
+#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
-msgstr ""
+msgstr "走る"
 
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -16731,6 +16708,71 @@ msgctxt "keys_files"
 msgid "Stats"
 msgstr ""
 
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Open door"
+msgstr "ドアを開ける"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Toggle weapon"
+msgstr "武器切り替え"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Drop weapon"
+msgstr "武器 捨てる"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Aim up"
+msgstr "照準上げる"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Aim down"
+msgstr "照準下げる"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Strafe left"
+msgstr "機銃掃射 左"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Strafe right"
+msgstr "機銃掃射 右"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Menu back"
+msgstr "メニューに戻る"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move left"
+msgstr "左移動"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move right"
+msgstr "右移動"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move forward"
+msgstr "前進"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move backward"
+msgstr "後退"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Toggle run"
+msgstr "移動速度切り替え"
+
 #. TRANSLATION: sonicnexus.keys
 msgctxt "keys_files"
 msgid "Dev Menu"
@@ -16791,16 +16833,6 @@ msgctxt "keys_files"
 msgid "Open"
 msgstr ""
 
-#. TRANSLATION: theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Load"
-msgstr "クイック ロード"
-
-#. TRANSLATION: theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Save"
-msgstr "クイック セーブ"
-
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
@@ -16843,10 +16875,6 @@ msgstr "クイック セーブ"
 #~ msgctxt "game_options"
 #~ msgid "Useful for speedruns/glitches."
 #~ msgstr "タイムアタック／バグに便利です"
-
-#~ msgctxt "game_options"
-#~ msgid "Enables or disable on screen messages."
-#~ msgstr "画面上のメッセージを有効/無効にします"
 
 #~ msgctxt "game_options"
 #~ msgid "WiiMote"
@@ -17202,10 +17230,6 @@ msgstr "クイック セーブ"
 #~ "フォーマンスを向上させることができます"
 
 #~ msgctxt "game_options"
-#~ msgid "Legacy Evdev"
-#~ msgstr "レガシー Evdev"
-
-#~ msgctxt "game_options"
 #~ msgid "Center (Default)"
 #~ msgstr "中央 (標準)"
 
@@ -17324,11 +17348,11 @@ msgstr "クイック セーブ"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
-#~ msgstr "ステートロード - スロット  1"
+#~ msgstr "ステートロード - スロット 1"
 
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
-#~ msgstr "ステートセーブ - スロット  1"
+#~ msgstr "ステートセーブ - スロット 1"
 
 #~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
@@ -17425,6 +17449,126 @@ msgstr "クイック セーブ"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "keys_files"
+#~ msgid "Start"
+#~ msgstr "スタート"
+
+#~ msgctxt "keys_files"
+#~ msgid "Coin"
+#~ msgstr "コイン"
+
+#~ msgctxt "keys_files"
+#~ msgid "Push 2"
+#~ msgstr "２"
+
+#~ msgctxt "keys_files"
+#~ msgid "Push 1"
+#~ msgstr "１押す"
+
+#~ msgctxt "keys_files"
+#~ msgid "Push 4"
+#~ msgstr "４"
+
+#~ msgctxt "keys_files"
+#~ msgid "Push 3"
+#~ msgstr "３"
+
+#~ msgctxt "keys_files"
+#~ msgid "Push 5"
+#~ msgstr "５"
+
+#~ msgctxt "keys_files"
+#~ msgid "Push 6"
+#~ msgstr "６"
+
+#~ msgctxt "keys_files"
+#~ msgid "Push 7"
+#~ msgstr "７"
+
+#~ msgctxt "keys_files"
+#~ msgid "Push 8"
+#~ msgstr "８押す"
+
+#~ msgctxt "keys_files"
+#~ msgid "Digital Left"
+#~ msgstr "デジタル　左"
+
+#~ msgctxt "keys_files"
+#~ msgid "Digital Right"
+#~ msgstr "デジタル　右"
+
+#~ msgctxt "keys_files"
+#~ msgid "Digital Up"
+#~ msgstr "デジタル　上"
+
+#~ msgctxt "keys_files"
+#~ msgid "Digital Down"
+#~ msgstr "デジタル 下"
+
+#~ msgctxt "keys_files"
+#~ msgid "Analog 1 Left"
+#~ msgstr "アナログ１ 左"
+
+#~ msgctxt "keys_files"
+#~ msgid "Analog 1 Right"
+#~ msgstr "アナログ１ 右"
+
+#~ msgctxt "keys_files"
+#~ msgid "Analog 1 Up"
+#~ msgstr "アナログ１ 上"
+
+#~ msgctxt "keys_files"
+#~ msgid "Analog 1 Down"
+#~ msgstr "アナログ１ 下"
+
+#~ msgctxt "keys_files"
+#~ msgid "Analog 2 Left"
+#~ msgstr "アナログ 2 左"
+
+#~ msgctxt "keys_files"
+#~ msgid "Analog 2 Right"
+#~ msgstr "アナログ 2 右"
+
+#~ msgctxt "keys_files"
+#~ msgid "Analog 2 Up"
+#~ msgstr "アナログ 2 上"
+
+#~ msgctxt "keys_files"
+#~ msgid "Analog 2 Down"
+#~ msgstr "アナログ 2 下"
+
+#~ msgctxt "keys_files"
+#~ msgid "Set to full screen"
+#~ msgstr "フルスクリーンに設定"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 1"
+#~ msgstr "PS3 コントローラ 1"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 2"
+#~ msgstr "PS3 コントローラ 2"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 3"
+#~ msgstr "PS3 コントローラ 3"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 4"
+#~ msgstr "PS3 コントローラ 4"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 5"
+#~ msgstr "PS3 コントローラ 5"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 6"
+#~ msgstr "PS3 コントローラ 6"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 7"
+#~ msgstr "PS3 コントローラ 7"
 
 #~ msgid "FORGET A BLUETOOTH DEVICE"
 #~ msgstr "BLUETOOTH デバイスの削除"

@@ -124,13 +124,6 @@ ifeq ($(BR2_PACKAGE_RYUJINX),y)
   BATOCERA_DESKTOPAPPS_ICONS   += ryujinx.png
 endif
 
-# demul
-ifeq ($(BR2_PACKAGE_DEMUL),y)
-  BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-demul
-  BATOCERA_DESKTOPAPPS_APPS	+= demul-config.desktop
-  BATOCERA_DESKTOPAPPS_ICONS   += demul.png
-endif
-
 # melonds
 ifeq ($(BR2_PACKAGE_DEMUL),y)
   BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-melonds
@@ -171,6 +164,13 @@ ifeq ($(BR2_PACKAGE_XBOX_XCLOUD_CLIENT),y)
   BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-greenlight
   BATOCERA_DESKTOPAPPS_APPS	+= greenlight.desktop
   BATOCERA_DESKTOPAPPS_ICONS   += greenlight.png
+endif
+
+# shadPS4
+ifeq ($(BR2_PACKAGE_SHADPS4),y)
+  BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-shadps4
+  BATOCERA_DESKTOPAPPS_APPS    += shadps4-config.desktop
+  BATOCERA_DESKTOPAPPS_ICONS   += shadps4.png
 endif
 
 define BATOCERA_DESKTOPAPPS_INSTALL_TARGET_CMDS

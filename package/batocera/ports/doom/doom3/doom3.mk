@@ -3,14 +3,14 @@
 # doom3
 #
 ################################################################################
-# Version: Commits on Sept 10, 2024
-DOOM3_VERSION = e0e772ef92f3739d52a51ddf9f898f4a12d44d7e
+# Version: Commits on Oct 10, 2024
+DOOM3_VERSION = 7354fff4062a62df7a68632586863a854d0ea9c2
 DOOM3_SITE = $(call github,dhewm,dhewm3,$(DOOM3_VERSION))
-
-DOOM3_DEPENDENCIES = sdl2 sdl2_mixer
-DOOM3_LICENSE = GPL-2.0
+DOOM3_LICENSE = GPL-3.0
+DOOM3_LICENSE_FILES = COPYING.txt
 DOOM3_SUPPORTS_IN_SOURCE_BUILD = NO
 DOOM3_SUBDIR = neo
+DOOM3_DEPENDENCIES = host-libjpeg libcurl libogg libvorbis openal sdl2 zlib 
 
 DOOM3_CONF_OPTS += -DSDL2=ON
 

@@ -3,8 +3,8 @@
 # libretro-hatari
 #
 ################################################################################
-# Version: Commits on Jun 28, 2024
-LIBRETRO_HATARI_VERSION = c10a21dbe99277b06ccf7de10eceb74f5d57e921
+# Version: Commits on Oct 06, 2024
+LIBRETRO_HATARI_VERSION = a4dcfcb91912066fa2a8cb613205b71dc19cab7a
 LIBRETRO_HATARI_SITE = $(call github,libretro,hatari,$(LIBRETRO_HATARI_VERSION))
 LIBRETRO_HATARI_DEPENDENCIES = libcapsimage zlib
 LIBRETRO_HATARI_LICENSE = GPLv2

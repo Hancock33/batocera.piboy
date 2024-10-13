@@ -1,11 +1,17 @@
-import os
+from __future__ import annotations
 
-from ... import Command
-from ... import controllersConfig
-from ...utils.logger import get_logger
+import logging
+import os
+from typing import TYPE_CHECKING
+
+from ... import Command, controllersConfig
+from ...batoceraPaths import ROMS
 from ..Generator import Generator
 
-eslog = get_logger(__name__)
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
+
+eslog = logging.getLogger(__name__)
 
 class HurricanGenerator(Generator):
 
@@ -43,10 +49,10 @@ class HurricanGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "hurrican",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }

@@ -1,8 +1,14 @@
+from __future__ import annotations
+
+import logging
 import os
 
-from ... import Command
-from ... import controllersConfig
+from ... import Command, controllersConfig
+from ...batoceraPaths import ROMS
 from ..Generator import Generator
+
+eslog = logging.getLogger(__name__)
+
 
 class OpenJazzGenerator(Generator):
 
@@ -13,5 +19,5 @@ class OpenJazzGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_AUTO_UPDATE_JOYSTICKS': '0'
+                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })

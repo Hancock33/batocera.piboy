@@ -1,37 +1,50 @@
-import os.path
-from os import environ
+from __future__ import annotations
+
 import configparser
+import logging
 import subprocess
+from os import environ
+from pathlib import Path
+from typing import TYPE_CHECKING
 
-from ... import batoceraFiles
-from ... import Command
-from ... import controllersConfig
-from ...utils.logger import get_logger
+from ... import Command, controllersConfig
+from ...batoceraPaths import CONFIGS, SAVES, mkdir_if_not_exists
 from ..Generator import Generator
-from . import dolphinControllers
-from . import dolphinSYSCONF
+from . import dolphinControllers, dolphinSYSCONF
+from .dolphinPaths import (
+    DOLPHIN_BIOS,
+    DOLPHIN_CONFIG,
+    DOLPHIN_GFX_INI,
+    DOLPHIN_INI,
+    DOLPHIN_QT_INI,
+    DOLPHIN_SAVES,
+    DOLPHIN_SYSCONF,
+)
 
-eslog = get_logger(__name__)
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
+
+eslog = logging.getLogger(__name__)
 
 class DolphinGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        if not os.path.exists(os.path.dirname(batoceraFiles.dolphinIni)):
-            os.makedirs(os.path.dirname(batoceraFiles.dolphinIni))
+        rom_path = Path(rom)
+
+        mkdir_if_not_exists(DOLPHIN_INI.parent)
 
         # Dir required for saves
-        if not os.path.exists(batoceraFiles.dolphinData + "/StateSaves"):
-            os.makedirs(batoceraFiles.dolphinData + "/StateSaves")
+        mkdir_if_not_exists(DOLPHIN_SAVES / "StateSaves")
 
         # Generate the controller config(s)
-        dolphinControllers.generateControllerConfig(system, playersControllers, metadata, wheels, rom, guns)
+        dolphinControllers.generateControllerConfig(system, playersControllers, metadata, wheels, rom_path, guns)
 
         ## [ Qt.ini ] ##
         qtIni = configparser.ConfigParser(interpolation=None)
         # To prevent ConfigParser from converting to lower case
         qtIni.optionxform = str
-        if os.path.exists(batoceraFiles.dolphinConfig + "/Qt.ini"):
-            qtIni.read(batoceraFiles.dolphinConfig + "/Qt.ini")
+        if DOLPHIN_QT_INI.exists():
+            qtIni.read(DOLPHIN_QT_INI)
 
         # Sections
         if not qtIni.has_section("Emulation"):
@@ -42,15 +55,15 @@ class DolphinGenerator(Generator):
             qtIni.set("Emulation", "StateSlot", "1")
 
         # Save Qt.ini
-        with open(batoceraFiles.dolphinConfig + "/Qt.ini", 'w') as configfile:
+        with DOLPHIN_QT_INI.open('w') as configfile:
             qtIni.write(configfile)
 
         ## [ dolphin.ini ] ##
         dolphinSettings = configparser.ConfigParser(interpolation=None)
         # To prevent ConfigParser from converting to lower case
         dolphinSettings.optionxform = str
-        if os.path.exists(batoceraFiles.dolphinIni):
-            dolphinSettings.read(batoceraFiles.dolphinIni)
+        if DOLPHIN_INI.exists():
+            dolphinSettings.read(DOLPHIN_INI)
 
         # Sections
         if not dolphinSettings.has_section("General"):
@@ -186,8 +199,7 @@ class DolphinGenerator(Generator):
         if system.isOptSet("dolphin_SkipIPL") and system.getOptBoolean("dolphin_SkipIPL"):
             # check files exist to avoid crashes
             ipl_regions = ["USA", "EUR", "JAP"]
-            base_path = "/userdata/bios/GC"
-            if any(os.path.exists(os.path.join(base_path, region, "IPL.bin")) for region in ipl_regions):
+            if any((DOLPHIN_BIOS / region / "IPL.bin").exists() for region in ipl_regions):
                 dolphinSettings.set("Core", "SkipIPL", "False")
             else:
                 dolphinSettings.set("Core", "SkipIPL", "True")
@@ -209,14 +221,14 @@ class DolphinGenerator(Generator):
             dolphinSettings.set("DSP", "EnableJIT", "False")
 
         # Save dolphin.ini
-        with open(batoceraFiles.dolphinIni, 'w') as configfile:
+        with DOLPHIN_INI.open('w') as configfile:
             dolphinSettings.write(configfile)
 
         ## [ gfx.ini ] ##
         dolphinGFXSettings = configparser.ConfigParser(interpolation=None)
         # To prevent ConfigParser from converting to lower case
         dolphinGFXSettings.optionxform = str
-        dolphinGFXSettings.read(batoceraFiles.dolphinGfxIni)
+        dolphinGFXSettings.read(DOLPHIN_GFX_INI)
 
         # Add Default Sections
         if not dolphinGFXSettings.has_section("Settings"):
@@ -376,7 +388,7 @@ class DolphinGenerator(Generator):
             dolphinGFXSettings.set("Hacks", "FastTextureSampling", "True")
 
         # Save gfx.ini
-        with open(batoceraFiles.dolphinGfxIni, 'w') as configfile:
+        with DOLPHIN_GFX_INI.open('w') as configfile:
             dolphinGFXSettings.write(configfile)
 
         ## Hotkeys.ini - overwrite to avoid issues
@@ -434,8 +446,7 @@ class DolphinGenerator(Generator):
         hotkeyConfig.set('Hotkeys', 'USB Emulation Devices/Show Infinity Base', '@(Ctrl+I)')
         #
         # Write the configuration to the file
-        hotkey_path = '/userdata/system/configs/dolphin-emu/Hotkeys.ini'
-        with open(hotkey_path, 'w') as configfile:
+        with (DOLPHIN_CONFIG / 'Hotkeys.ini').open('w') as configfile:
             hotkeyConfig.write(configfile)
 
         ## Retroachievements
@@ -467,18 +478,17 @@ class DolphinGenerator(Generator):
             RacConfig.set('Achievements', 'Enabled', 'False')
             RacConfig.set('Achievements', 'AchievementsEnabled', 'False')
         # Write the configuration to the file
-        rac_path = '/userdata/system/configs/dolphin-emu/RetroAchievements.ini'
-        with open(rac_path, 'w') as rac_configfile:
+        with (DOLPHIN_CONFIG / 'RetroAchievements.ini').open('w') as rac_configfile:
             RacConfig.write(rac_configfile)
 
         # Update SYSCONF
         try:
-            dolphinSYSCONF.update(system.config, batoceraFiles.dolphinSYSCONF, gameResolution)
+            dolphinSYSCONF.update(system.config, DOLPHIN_SYSCONF, gameResolution)
         except Exception:
             pass # don't fail in case of SYSCONF update
 
         # Check what version we've got
-        if os.path.isfile("/usr/bin/dolphin-emu-nogui"):
+        if Path("/usr/bin/dolphin-emu-nogui").is_file():
             commandArray = ["dolphin-emu-nogui", "-e", rom]
         else:
             # use the -b 'batch' option for nicer exit
@@ -489,16 +499,15 @@ class DolphinGenerator(Generator):
             commandArray.extend(["--save_state", system.config['state_filename']])
 
         return Command.Command(array=commandArray, \
-            env={ "XDG_CONFIG_HOME":batoceraFiles.CONF, \
-            "XDG_DATA_HOME":batoceraFiles.SAVES, \
-            "QT_QPA_PLATFORM":"xcb"})
+            env={ "XDG_CONFIG_HOME":CONFIGS, \
+            "XDG_DATA_HOME":SAVES})
 
     def getInGameRatio(self, config, gameResolution, rom):
 
         dolphinGFXSettings = configparser.ConfigParser(interpolation=None)
         # To prevent ConfigParser from converting to lower case
         dolphinGFXSettings.optionxform = str
-        dolphinGFXSettings.read(batoceraFiles.dolphinGfxIni)
+        dolphinGFXSettings.read(DOLPHIN_GFX_INI)
 
         dolphin_aspect_ratio = dolphinGFXSettings.get("Settings", "AspectRatio")
         # What if we're playing a GameCube game with the widescreen patch or not?
@@ -532,7 +541,7 @@ class DolphinGenerator(Generator):
 
         return 4/3
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "dolphin",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }

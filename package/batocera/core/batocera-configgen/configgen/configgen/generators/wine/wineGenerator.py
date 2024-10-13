@@ -1,14 +1,21 @@
+from __future__ import annotations
+
 import os
 import subprocess
 import glob
+from pathlib import Path
+from typing import TYPE_CHECKING
 
-from ... import Command
-from ... import controllersConfig
+from ... import Command, controllersConfig
 from ..Generator import Generator
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
+
 
 class WineGenerator(Generator):
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "wine",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
@@ -32,7 +39,6 @@ class WineGenerator(Generator):
                 language = subprocess.check_output("batocera-settings-get system.language", shell=True, text=True).strip()
             except subprocess.CalledProcessError:
                 language = 'en_US'
-
             if language:
                 environment.update({
                     "LANG": language + ".UTF-8",
@@ -48,7 +54,7 @@ class WineGenerator(Generator):
                     }
                 )
             # ensure nvidia driver used for vulkan
-            if os.path.exists('/var/tmp/nvidia.prime'):
+            if Path('/var/tmp/nvidia.prime').exists():
                 variables_to_remove = ['__NV_PRIME_RENDER_OFFLOAD', '__VK_LAYER_NV_optimus', '__GLX_VENDOR_LIBRARY_NAME']
                 for variable_name in variables_to_remove:
                     if variable_name in os.environ:

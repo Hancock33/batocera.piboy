@@ -3,21 +3,21 @@
 # ryujinx
 #
 ################################################################################
-# Version: Commits on Sept 28, 2024
-RYUJINX_VERSION = 1.1.1401
-RYUJINX_SITE = https://github.com/Ryujinx/Ryujinx.git
+# Version: Commits on Oct 01, 2024
+RYUJINX_VERSION = 1.1.1403
+RYUJINX_SITE = https://github.com/ryujinxemu/Ryujinx
 RYUJINX_SITE_METHOD=git
 RYUJINX_GIT_SUBMODULES=YES
 RYUJINX_LICENSE = MIT
 RYUJINX_DEPENDENCIES = sdl2 openal hicolor-icon-theme adwaita-icon-theme librsvg
-RYUJINX_DOTNET_VERSION = 9.0.100-rc.1.24452.12
+RYUJINX_DOTNET_VERSION = 9.0.100-rc.2.24474.11
 
 ifeq ($(BR2_x86_64),y)
     RYUJINX_DOTNET_FILE = dotnet-sdk-$(RYUJINX_DOTNET_VERSION)-linux-x64.tar.gz
-    RYUJINX_EXTRA_DOWNLOADS = https://download.visualstudio.microsoft.com/download/pr/3b2b3c23-574b-45d7-b2b0-c67f0e935308/23ed647eb71a8f07414124422c15927d/$(RYUJINX_DOTNET_FILE)
+    RYUJINX_EXTRA_DOWNLOADS = https://download.visualstudio.microsoft.com/download/pr/202e929a-e985-4eab-a78a-d7159fc204e4/0c85219d441cd3bbffd4fb65b7e36fe5/$(RYUJINX_DOTNET_FILE)
 else
     RYUJINX_DOTNET_FILE = dotnet-sdk-$(RYUJINX_DOTNET_VERSION)-linux-arm64.tar.gz
-    RYUJINX_EXTRA_DOWNLOADS = https://download.visualstudio.microsoft.com/download/pr/f7739964-9e84-4bb7-9435-509458a15f9c/a95ad7f9deb8ce2fd30173dfe86f55ba/$(RYUJINX_DOTNET_FILE)
+    RYUJINX_EXTRA_DOWNLOADS = https://download.visualstudio.microsoft.com/download/pr/817f5589-0347-4254-b19a-67c30d9ce4f8/3dfe6b98927c4003fc004a1a32132a76/$(RYUJINX_DOTNET_FILE)
 endif
 
 define RYUJINX_BUILD_CMDS
