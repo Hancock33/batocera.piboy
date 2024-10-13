@@ -32,10 +32,10 @@ class DuckstationGenerator(Generator):
         if rom_path.suffix == ".m3u":
             rom_path = rewriteM3uFullPath(rom_path)
 
-        if Path('/usr/bin/duckstation-qt').exists():
-            commandArray = ["duckstation-qt", "-batch", "-nogui", "--", rom_path ]
+        if Path('/usr/bin/duckstation/duckstation-qt').exists():
+            commandArray = ["/usr/bin/duckstation/duckstation-qt", "-batch", "-nogui", "--", rom_path ]
         else:
-            commandArray = ["duckstation-nogui", "-batch", "-fullscreen", "--", rom_path ]
+            commandArray = ["/usr/bin/duckstation/duckstation-nogui", "-batch", "-fullscreen", "--", rom_path ]
 
         settings = configparser.ConfigParser(interpolation=None)
         # To prevent ConfigParser from converting to lower case
@@ -521,7 +521,7 @@ class DuckstationGenerator(Generator):
             settings.write(configfile)
 
         # write our own gamecontrollerdb.txt file before launching the game
-        dbfile = "/usr/share/duckstation/resources/gamecontrollerdb.txt"
+        dbfile = "/usr/share/gamecontrollerdb.txt"
         controllersConfig.writeSDLGameDBAllControllers(playersControllers, dbfile)
 
         # check if we're running wayland
