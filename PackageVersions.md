@@ -18,7 +18,7 @@ Audio|[zmusic](http://github.com/ZDoom/ZMusic)|3944bbc7568a6e945c7ae8c7f7e126731
 Boot|[batocera-initramfs](http://www.busybox.net/downloads)|1.37.0|Sept 26, 2024
 Boot|[batocera-shim-signed-efi-helpers-ia32](https://ftp.debian.org/debian/pool/main/s/shim-helpers-i386-signed)|1+15.8+1~deb12u1|May 10, 2024
 Boot|[batocera-shim-signed-efi-ia32](https://ftp.debian.org/debian/pool/main/s/shim-signed)|1.44~1+deb12u1+15.8-1~deb12u1|Aug 16, 2024
-Boot|[batocera-shim-signed-efi-x64](https://launchpad.net/ubuntu/+archive/primary/+files)|1.56+15.7-0ubuntu1|Oct 09, 2023
+Boot|[batocera-shim-signed-efi-x64](https://launchpad.net/ubuntu/+archive/primary/+files)|1.58+15.8-0ubuntu1|Apr 04, 2023
 Boot|[batocera-shim](https://github.com/rhboot/shim/releases)|15.8|Jan 23, 2024
 Boot|[batocera-syslinux-efi](binaries)|6.04.pre2.r11.gbf6db5b4-2|Nov 29, 2023
 Boot|[rk3128-blobs](https://github.com/rockchip-linux/rkbin.git)|a2a0b89b6c8c612dca5ed9ed8a68db8a07f68bc0|Feb 22, 2024
@@ -71,7 +71,7 @@ Emulators|[cemu](https://github.com/cemu-project/Cemu)|6dc73f5d797082c25a68ad162
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|cdce02607abf1b43cdf93c6f367825158f23a467|Oct 12, 2024
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
 Emulators|[dhewm3](http://github.com/dhewm/dhewm3)|7354fff4062a62df7a68632586863a854d0ea9c2|Oct 11, 2024
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|7e951aa2d469013227911cbbc0aaecd27c592ec9|Oct 13, 2024
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|8d5b6e8e8690b6c1470aa66d33aea3a7c1da24b3|Oct 13, 2024
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|bfefd38d2500103d32f5da9f7fcd80090b7836fb|May 23, 2024
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|349e41bc6a4be6bbf4f4cb8fa787add7944d3117|Jul 21, 2024
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.10.01|Oct 02, 2024
@@ -88,7 +88,7 @@ Emulators|[fpinball](https://github.com/batocera-linux/fpinball/releases)|v1.9.1
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|bfa0c7522c6c5f73cceb340d677491d056febd01|Jul 30, 2022
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|0758f6b75f04480827c9a3c9c297f06f66d161df|Sept 24, 2024
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
-Emulators|[hatari](http://github.com/hatari/hatari)|03fdd795e514707ff345cb24dd7495aca0955595|Oct 06, 2024
+Emulators|[hatari](http://github.com/hatari/hatari)|4ee6102e8603c6af2d060fb5a5dfb2325ac7a86a|Oct 12, 2024
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|b353e1728bf56d8b6c6fb606df78b7296a203702|Oct 01, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|d2937f59d567cbdc292e22c52d2599e77dfd7043|Oct 13, 2024
 Emulators|[libaltsound](http://github.com/vpinball/libaltsound)|b8f397858cbc7a879f7392c14a509f00c8bdc7dd|Jun 28, 2024
@@ -96,7 +96,7 @@ Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|8e110d87edab1b843d
 Emulators|[libdof](http://github.com/jsm174/libdof)|5c43c99ea28b44bb58b74554c4303a505e208148|Sept 11, 2024
 Emulators|[libframeutil](http://github.com/ppuc/libframeutil)|30048ca23d41ca0a8f7d5ab75d3f646a19a90182|Apr 13, 2024
 Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|268873b6d9d433690a0cebbeb0467b159f2ebf4e|Oct 11, 2024
-Emulators|[libpinmame](http://github.com/vpinball/pinmame)|19938c59cd4adfc8f4a6afadbe5b706d35e80577|Oct 10, 2024
+Emulators|[libpinmame](http://github.com/vpinball/pinmame)|9957b6d1c810d62fa2abe482f08b976a525fa8ae|Oct 13, 2024
 Emulators|[libpupdmd](http://github.com/PPUC/libpupdmd)|124f45e5ddd59ceb339591de88fcca72f8c54612|Jun 28, 2024
 Emulators|[libretro-2048](http://github.com/libretro/libretro-2048)|5474ed1ab880b3296c9860d0943d7de1970c79dd|Jun 28, 2024
 Emulators|[libretro-81](http://github.com/libretro/81-libretro)|c0d56c5bc5cd48715b4e83cbb3d241a6bed94c2a|Jun 28, 2024
@@ -161,7 +161,7 @@ Emulators|[libretro-hatarib](https://github.com/bbbradsmith/hatariB)|e8187a7be75
 Emulators|[libretro-imame](http://github.com/libretro/mame2000-libretro)|2ec60f6e1078cf9ba173e80432cc28fd4eea200f|Jul 01, 2024
 Emulators|[libretro-jaxe](https://github.com/kurtjd/jaxe.git)|22115d58de5f80cfafbbeece19d723f4892ed75c|Apr 25, 2024
 Emulators|[libretro-jumpnbump](http://github.com/libretro/jumpnbump-libretro)|4e68831f5576075c45c147f86865812afb816139|Nov 02, 2023
-Emulators|[libretro-kronos](http://github.com/FCare/kronos)|812e712d0ab843babc10f0d3b2f7ec3409d6ba27|Oct 13, 2024
+Emulators|[libretro-kronos](http://github.com/FCare/kronos)|db329738790a6522fdd13b4f5af1925ad024a072|Oct 13, 2024
 Emulators|[libretro-lowresnx](http://github.com/timoinutilis/lowres-nx)|c824ec163a1945cc48e4319054c7eb1024667497|Jun 29, 2024
 Emulators|[libretro-lrps2](http://github.com/libretro/LRPS2)|f3c8743d6a42fe429f703b476fecfdb5655a98a9|Jan 30, 2023
 Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|09a134eccad87127ec757503f736d6e4f9d06d4c|May 29, 2023
@@ -262,7 +262,7 @@ Emulators|[openbor4432](http://github.com/Darknior/OpenBORv3b4432)|49505541b858d
 Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678291bbedc0b9fe4c8f898|Aug 29, 2018
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|4b50195d00cc612f9312cb49c991c43a8d440187|Oct 13, 2024
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|58d96eccc557f86699ce7b589f894e4070812cea|Oct 13, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.200|Oct 13, 2024
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|e70ee1608f9bc3a075c85ce1aab0cf9074201f12|Sept 23, 2024
@@ -423,7 +423,7 @@ Network|[r8168](http://github.com/mtorromeo/r8168)|503086686ea7b08b8b9b323ab5299
 Network|[rmtfs](http://github.com/linux-msm/rmtfs)|33e1e40615efc59b17a515afe857c51b8b8c1ad1|Mar 18, 2024
 Network|[rtl8812au](http://github.com/morrownr/8812au-20210820)|c01259932bfdee01e871b1468d4e75153fef1a12|Oct 04, 2024
 Network|[rtl8821au-morrownr](http://github.com/morrownr/8821au-20210708)|0b12ea54b7d6dcbfa4ce94eb403b1447565407f1|Jun 13, 2024
-Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|3c8f59b5b05e5090e8593da1940a8d3ccac3f878|Jul 18, 2024
+Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|8be2da859cbd9515e8365a448280bea5e44110b6|Oct 13, 2024
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|48e143d273d4de79d6e41bf7066592bffa5c84c5|Jul 23, 2024
 Ports|[abuse](http://github.com/Xenoveritas/abuse)|9d1f66f57377859bae10e28eabebea0b9c750490|Oct 27, 2022
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|189faf664f8d6de9981bcdf2657bea5898c5008d|Oct 12, 2024
