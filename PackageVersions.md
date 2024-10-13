@@ -207,7 +207,7 @@ Emulators|[libretro-reminiscence](http://github.com/libretro/REminiscence)|b7c3f
 Emulators|[libretro-retro8](http://github.com/libretro/retro8)|c9a3a9791f147043c08a3c8ee42aad231f37fe42|Jul 01, 2024
 Emulators|[libretro-sameboy](http://github.com/libretro/SameBoy)|51433012a871a44555492273fd22f29867d12655|Jun 28, 2024
 Emulators|[libretro-sameduck](http://github.com/LIJI32/SameBoy)|5619abdb01cee6bedb47599cdb5532c318443b52|Dec 10, 2023
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|da5658690a02020a101e69a09e544a167953926b|Oct 12, 2024
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|6d8c7dc1c7456fc00d374c67b0c0760b00bc2c15|Oct 13, 2024
 Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|978d977119eff1bd7214c0095eb91b15b859bb61|Aug 07, 2024
 Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|84b963a2f627bbc41198e357430619f34bbebc8a|Jun 28, 2024
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|229933ea5aa6b4d2a6f00ed55b34d7b8bf5f63e3|Aug 19, 2024
@@ -277,7 +277,7 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|8fac136056775c353202ee4b23
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-10-13|Oct 13, 2024
 Emulators|[ryujinx](https://github.com/ryujinxemu/Ryujinx)|1.1.1403|Oct 01, 2024
-Emulators|[scummvm](http://github.com/scummvm/scummvm)|53bdb233d76d9a0317ad4a8264a2662f44a89e00|Oct 12, 2024
+Emulators|[scummvm](http://github.com/scummvm/scummvm)|6d8c7dc1c7456fc00d374c67b0c0760b00bc2c15|Oct 13, 2024
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|bd9f82df94847b4a5f3d2676ae938f064505c992|Oct 13, 2024
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|263a54c414681b45fd9428143a8320f4024a99ab|Oct 06, 2024
