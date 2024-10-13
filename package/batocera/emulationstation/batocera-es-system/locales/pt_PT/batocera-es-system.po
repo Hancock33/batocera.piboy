@@ -16311,6 +16311,21 @@ msgctxt "keys_files"
 msgid "Exit Dolphin"
 msgstr "Sair do Dolphin"
 
+#. TRANSLATION: doom3.dhewm3.keys, mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "Captura de ecrã"
+
+#. TRANSLATION: doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+msgctxt "keys_files"
+msgid "Quick Save"
+msgstr "Guardar Rápido"
+
+#. TRANSLATION: doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+msgctxt "keys_files"
+msgid "Quick Load"
+msgstr "Carregamento Rápido"
+
 #. TRANSLATION: dos.dosbox-x.keys
 msgctxt "keys_files"
 msgid "Exit Dosbox-X"
@@ -16345,11 +16360,6 @@ msgstr "Carregar Estado"
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "Guardar Estado"
-
-#. TRANSLATION: mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Captura de ecrã"
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -16965,16 +16975,6 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Open"
 msgstr ""
-
-#. TRANSLATION: theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Load"
-msgstr "Carregamento Rápido"
-
-#. TRANSLATION: theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Save"
-msgstr "Guardar Rápido"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."

@@ -16286,6 +16286,21 @@ msgctxt "keys_files"
 msgid "Exit Dolphin"
 msgstr ""
 
+#. TRANSLATION: doom3.dhewm3.keys, mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "Ekran Kaydı"
+
+#. TRANSLATION: doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+msgctxt "keys_files"
+msgid "Quick Save"
+msgstr "Hızlı Kaydet"
+
+#. TRANSLATION: doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+msgctxt "keys_files"
+msgid "Quick Load"
+msgstr "Hızlı Yükle"
+
 #. TRANSLATION: dos.dosbox-x.keys
 msgctxt "keys_files"
 msgid "Exit Dosbox-X"
@@ -16320,11 +16335,6 @@ msgstr "Durumu Yükle"
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "Durumu Kaydet"
-
-#. TRANSLATION: mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Ekran Kaydı"
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -16940,16 +16950,6 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Open"
 msgstr ""
-
-#. TRANSLATION: theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Load"
-msgstr "Hızlı Yükle"
-
-#. TRANSLATION: theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Save"
-msgstr "Hızlı Kaydet"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
