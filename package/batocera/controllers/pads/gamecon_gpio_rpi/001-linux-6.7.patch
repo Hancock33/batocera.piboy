@@ -1,5 +1,5 @@
 diff --git a/gamecon_gpio_rpi.c b/gamecon_gpio_rpi.c
-index 3d6c423..5dd3896 100644
+index 95f63b9..62c6aba 100644
 --- a/gamecon_gpio_rpi.c
 +++ b/gamecon_gpio_rpi.c
 @@ -31,7 +31,11 @@

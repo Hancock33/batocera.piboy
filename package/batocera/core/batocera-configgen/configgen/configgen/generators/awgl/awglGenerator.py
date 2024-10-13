@@ -1,9 +1,13 @@
-import os
+from __future__ import annotations
 
-from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
+from typing import TYPE_CHECKING
+
+import os
+from ... import Command, controllersConfig
 from ..Generator import Generator
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
 
 class AwglGenerator(Generator):
 
@@ -98,3 +102,9 @@ class AwglGenerator(Generator):
             env={
                 "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "awgl",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

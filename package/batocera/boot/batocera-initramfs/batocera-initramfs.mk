@@ -3,8 +3,8 @@
 # batocera-initramfs
 #
 ################################################################################
-# Version: Commits on May 19, 2023
-BATOCERA_INITRAMFS_VERSION = 1.36.1
+# Version: Commits on Sept 26, 2024
+BATOCERA_INITRAMFS_VERSION = 1.37.0
 BATOCERA_INITRAMFS_SITE = http://www.busybox.net/downloads
 BATOCERA_INITRAMFS_SOURCE = busybox-$(BATOCERA_INITRAMFS_VERSION).tar.bz2
 BATOCERA_INITRAMFS_LICENSE = GPLv2

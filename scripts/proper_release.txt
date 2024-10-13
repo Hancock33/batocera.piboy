@@ -2,6 +2,7 @@
 ayn-platform.mk
 batocera-shim.mk
 bauh.mk
+broadcom-bt-firmware.mk
 btop.mk
 cargs.mk
 chromebook-ucm-conf.mk
@@ -12,7 +13,6 @@ dxvk.mk
 element14-pi-desktop.mk
 faudio.mk
 fdupes.mk
-glslang.mk
 iir.mk
 innoextract.mk
 kodi-pvr-freebox
@@ -51,5 +51,6 @@ wine-lutris.mk
 wine-mono.mk
 wsdd.mk
 wxwidgets.mk
+x16emu.mk
 xbox-xcloud-client.mk
 xenia.mk

@@ -3,8 +3,8 @@
 # db9_gpio_rpi
 #
 ################################################################################
-# Version: Commits on Feb 01, 2021
-DB9_GPIO_RPI_VERSION = a3c16921a812ec2cf24a043a184cf445813bac08
+# Version: Commits on Oct 09, 2024
+DB9_GPIO_RPI_VERSION = 4318dc14dab75ba0d150bbedf1a8155ef3284669
 DB9_GPIO_RPI_SITE = $(call github,marqs85,db9_gpio_rpi,$(DB9_GPIO_RPI_VERSION))
 
 # Needed because can't pass cflags to cc
@@ -13,7 +13,7 @@ define DB9_GPIO_RPI_RPI2_HOOK
 endef
 
 define DB9_GPIO_RPI_FIX_EXTRACT
-	mv $(@D)/db9_gpio_rpi-1.2/* $(@D)/
+	mv $(@D)/db9_gpio_rpi/* $(@D)/
 endef
 DB9_GPIO_RPI_POST_EXTRACT_HOOKS += DB9_GPIO_RPI_FIX_EXTRACT
 

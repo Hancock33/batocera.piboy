@@ -1,6 +1,8 @@
-from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
+from ... import Command, controllersConfig
 from ..Generator import Generator
 
 class PrototypeGenerator(Generator):
@@ -13,3 +15,9 @@ class PrototypeGenerator(Generator):
             env={
                 'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "prototype",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

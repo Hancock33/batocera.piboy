@@ -42,7 +42,7 @@ index 0a0dfcb733ec..c722352000de 100644
  
  	aliases {
 diff --git a/arch/arm/boot/dts/broadcom/bcm2711-rpi-ds.dtsi b/arch/arm/boot/dts/broadcom/bcm2711-rpi-ds.dtsi
-index d44bf7bcc777..711126334f92 100644
+index ba2ab2b88262..a76837e02749 100644
 --- a/arch/arm/boot/dts/broadcom/bcm2711-rpi-ds.dtsi
 +++ b/arch/arm/boot/dts/broadcom/bcm2711-rpi-ds.dtsi
 @@ -3,6 +3,7 @@
@@ -54,10 +54,10 @@ index d44bf7bcc777..711126334f92 100644
  
  	__overrides__ {
 diff --git a/arch/arm64/Kconfig b/arch/arm64/Kconfig
-index 2391e06e5e75..8e699d3dd02b 100644
+index 9e3ad190b491..d9c817ec9ffa 100644
 --- a/arch/arm64/Kconfig
 +++ b/arch/arm64/Kconfig
-@@ -1503,6 +1503,16 @@ config NODES_SHIFT
+@@ -1504,6 +1504,16 @@ config NODES_SHIFT
  	  Specify the maximum number of NUMA Nodes available on the target
  	  system.  Increases memory reserved to accommodate various tables.
  
@@ -123,7 +123,7 @@ index ca9833da402d..2aa9e9a1d11f 100644
  		blconfig = &blconfig;
  		blpubkey = &blpubkey;
 diff --git a/arch/arm64/configs/bcm2711_defconfig b/arch/arm64/configs/bcm2711_defconfig
-index b2b5cd735b39..9c22edbb937c 100644
+index 32799cd21a82..85ecf5c27e88 100644
 --- a/arch/arm64/configs/bcm2711_defconfig
 +++ b/arch/arm64/configs/bcm2711_defconfig
 @@ -48,6 +48,7 @@ CONFIG_ARM64_ERRATUM_2441009=y
@@ -134,13 +134,13 @@ index b2b5cd735b39..9c22edbb937c 100644
  CONFIG_COMPAT=y
  CONFIG_ARMV8_DEPRECATED=y
  CONFIG_SWP_EMULATION=y
-@@ -1701,3 +1702,4 @@ CONFIG_SCHED_TRACER=y
+@@ -1703,3 +1704,4 @@ CONFIG_SCHED_TRACER=y
  CONFIG_BLK_DEV_IO_TRACE=y
  # CONFIG_UPROBE_EVENTS is not set
  # CONFIG_STRICT_DEVMEM is not set
 +CONFIG_NUMA_EMULATION=y
 diff --git a/arch/arm64/configs/bcm2712_defconfig b/arch/arm64/configs/bcm2712_defconfig
-index caa9a504e7c7..1e252403a24f 100644
+index bf91aae76453..772bdf954b8e 100644
 --- a/arch/arm64/configs/bcm2712_defconfig
 +++ b/arch/arm64/configs/bcm2712_defconfig
 @@ -49,6 +49,7 @@ CONFIG_ARM64_ERRATUM_2441009=y
@@ -151,7 +151,7 @@ index caa9a504e7c7..1e252403a24f 100644
  CONFIG_COMPAT=y
  CONFIG_ARMV8_DEPRECATED=y
  CONFIG_SWP_EMULATION=y
-@@ -1704,3 +1705,4 @@ CONFIG_SCHED_TRACER=y
+@@ -1706,3 +1707,4 @@ CONFIG_SCHED_TRACER=y
  CONFIG_BLK_DEV_IO_TRACE=y
  # CONFIG_UPROBE_EVENTS is not set
  # CONFIG_STRICT_DEVMEM is not set

@@ -3,8 +3,8 @@
 # lunasvg
 #
 ################################################################################
-# Version: Commits on Aug 25, 2024
-LUNASVG_VERSION = 9af1ac7b90658a279b372add52d6f77a4ebb482c
+# Version: Commits on Oct 01, 2024
+LUNASVG_VERSION = 70b2fc188ae9628f4313335a0d628eef10c842dd
 LUNASVG_SITE = $(call github,stenzek,lunasvg,$(LUNASVG_VERSION))
 
 LUNASVG_LICENSE = BSD-2-Clause

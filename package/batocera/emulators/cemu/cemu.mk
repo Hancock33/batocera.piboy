@@ -3,8 +3,8 @@
 # cemu
 #
 ################################################################################
-# Version: Commits on Sept 17, 2024
-CEMU_VERSION = 8508c625407e80a5a7fcb9cf02c5355d018ff64b
+# Version: Commits on Oct 03, 2024
+CEMU_VERSION = 6dc73f5d797082c25a68ad162377077547948d26
 CEMU_SITE = https://github.com/cemu-project/Cemu
 CEMU_LICENSE = GPLv2
 CEMU_SITE_METHOD=git
@@ -29,14 +29,19 @@ endif
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
     CEMU_CONF_OPTS += -DENABLE_WAYLAND=ON
     CEMU_DEPENDENCIES += wayland wayland-protocols
+    CEMU_PRE_CONFIGURE_HOOKS = CEMU_WAYLAND_CMAKE
 else
     CEMU_CONF_OPTS += -DENABLE_WAYLAND=OFF
 endif
 
+define CEMU_WAYLAND_CMAKE
+	$(SED) 's:$${WaylandProtocols_DATADIR}:$(STAGING_DIR)/usr/share/wayland-protocols:g' $(@D)/CMakeLists.txt
+endef
+
 define CEMU_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/cemu/
-	mv -f $(@D)/bin/Cemu_release $(@D)/bin/cemu
-	cp -pr $(@D)/bin/{cemu,gameProfiles,resources} $(TARGET_DIR)/usr/bin/cemu/
+	$(INSTALL) -D -m 0755 $(@D)/bin/Cemu_release $(TARGET_DIR)/usr/bin/cemu/cemu
+	cp -pr $(@D)/bin/{gameProfiles,resources}    $(TARGET_DIR)/usr/bin/cemu/
 	$(INSTALL) -m 0755 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/cemu/get-audio-device $(TARGET_DIR)/usr/bin/cemu/
 	# keys.txt
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/cemu

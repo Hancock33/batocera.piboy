@@ -1,5 +1,5 @@
 diff --git a/src/util/input_manager.cpp b/src/util/input_manager.cpp
-index 4c17cee8c..896f953ae 100644
+index c98c2815c..df662be46 100644
 --- a/src/util/input_manager.cpp
 +++ b/src/util/input_manager.cpp
 @@ -1945,30 +1945,30 @@ std::vector<InputBindingKey> InputManager::EnumerateMotors()

@@ -1,0 +1,12 @@
+diff --git a/src/common/common_types.h b/src/common/common_types.h
+index ae04c4d605..99fff66bed 100644
+--- a/src/common/common_types.h
++++ b/src/common/common_types.h
+@@ -30,6 +30,7 @@
+ 
+ #include <array>
+ #include <cstdint>
++#include <memory>
+ 
+ using u8 = std::uint8_t;   ///< 8-bit unsigned byte
+ using u16 = std::uint16_t; ///< 16-bit unsigned short

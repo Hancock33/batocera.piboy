@@ -1,10 +1,17 @@
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 import os
 import json
 
-from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
+from ...batoceraPaths import CONFIGS, mkdir_if_not_exists
+from ... import Command, controllersConfig
 from ..Generator import Generator
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
+
+yabConfigPath = CONFIGS / "yabasanshiro"
 
 class YabasanshiroGenerator(Generator):
 
@@ -29,10 +36,10 @@ class YabasanshiroGenerator(Generator):
             "joystick1left":  "analogx"
         }
 
-        yabaConfig  = batoceraFiles.CONF + "/yabasanshiro"
+        mkdir_if_not_exists(yabConfigPath)
         rom_file = os.path.basename(rom)
-        config_file = f"{yabaConfig}/{rom_file}.config"
-        ctrl_config_file = f"{yabaConfig}/keymapv2.json"
+        config_file = f"{yabConfigPath}/{rom_file}.config"
+        ctrl_config_file = f"{yabConfigPath}/keymapv2.json"
 
         # Check if the configuration file exists
         if os.path.exists(config_file):
@@ -127,3 +134,9 @@ class YabasanshiroGenerator(Generator):
             array=commandArray,
             env={ "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)}
             )
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "yabasanshiro",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

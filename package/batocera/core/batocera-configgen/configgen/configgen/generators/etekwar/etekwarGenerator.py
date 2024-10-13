@@ -55,3 +55,9 @@ class EtekwarGenerator(Generator):
         f.close()
 
         return Command.Command(array=commandArray)
+
+    def getHotkeysContext(self):
+        return {
+            "name": "etekwar",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

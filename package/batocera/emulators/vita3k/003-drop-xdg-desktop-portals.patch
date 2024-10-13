@@ -16,10 +16,10 @@ index 83486efc..4a494bb2 100644
  	path = external/cubeb
  	url = https://github.com/mozilla/cubeb.git
 diff --git a/external/CMakeLists.txt b/external/CMakeLists.txt
-index b9ac5972..3370b608 100644
+index a3e8082c..13f660a7 100644
 --- a/external/CMakeLists.txt
 +++ b/external/CMakeLists.txt
-@@ -431,11 +431,17 @@ target_compile_definitions(tracy PUBLIC $<$<CONFIG:Debug,RelWithDebInfo>:TRACY_E
+@@ -436,11 +436,17 @@ target_compile_definitions(tracy PUBLIC $<$<CONFIG:Debug,RelWithDebInfo>:TRACY_E
  #
  # target_compile_definitions(tracy PUBLIC TRACY_ENABLE)
  
@@ -44,7 +44,7 @@ index b9ac5972..3370b608 100644
 +
 +set_property(TARGET nativefiledialog PROPERTY FOLDER externals)
 diff --git a/vita3k/CMakeLists.txt b/vita3k/CMakeLists.txt
-index 7e1e5723..76fccd4d 100644
+index 6925e85d..9b647505 100644
 --- a/vita3k/CMakeLists.txt
 +++ b/vita3k/CMakeLists.txt
 @@ -103,7 +103,6 @@ add_subdirectory(features)
@@ -317,7 +317,7 @@ index 5b066f75..4ebf7592 100644
              }
              license_path = "";
 diff --git a/vita3k/gui/src/pkg_install_dialog.cpp b/vita3k/gui/src/pkg_install_dialog.cpp
-index 048c0a61..8caef619 100644
+index 3d32843e..2c24e976 100644
 --- a/vita3k/gui/src/pkg_install_dialog.cpp
 +++ b/vita3k/gui/src/pkg_install_dialog.cpp
 @@ -19,25 +19,25 @@
@@ -350,17 +350,30 @@ index 048c0a61..8caef619 100644
      static std::atomic<float> progress(0);
      static std::mutex install_mutex;
      static const auto progress_callback = [&](float updated_progress) {
-@@ -46,15 +46,15 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+@@ -46,10 +46,10 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
      std::lock_guard<std::mutex> lock(install_mutex);
  
      if (draw_file_dialog) {
 -        result = host::dialog::filesystem::open_file(pkg_path, { { "PlayStation Store Downloaded Package", { "pkg" } } });
 +        result = NFD_OpenDialog("pkg", nullptr, &pkg_path);
          draw_file_dialog = false;
--        if (result == host::dialog::filesystem::Result::SUCCESS)
+-        if (result == host::dialog::filesystem::Result::SUCCESS) {
+-            fs::ifstream infile(pkg_path.native(), std::ios::binary);
 +        if (result == NFD_OKAY)
-             ImGui::OpenPopup("install");
--        else if (result == host::dialog::filesystem::Result::CANCEL) {
++            /*fs::ifstream infile(pkg_path.native(), std::ios::binary);
+             PkgHeader pkg_header{};
+             infile.read(reinterpret_cast<char *>(&pkg_header), sizeof(PkgHeader));
+             std::string title_id_str(pkg_header.content_id);
+@@ -61,14 +61,14 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+                 zRIF = rif2zrif(binfile);
+                 ImGui::OpenPopup("install");
+                 gui::state = "install";
+-            } else {
++            } else {*/
+                 ImGui::OpenPopup("install");
+-            }
+-        } else if (result == host::dialog::filesystem::Result::CANCEL) {
++           // }
 +        else if (result == NFD_CANCEL) {
              gui.file_menu.pkg_install_dialog = false;
              draw_file_dialog = true;
@@ -370,7 +383,7 @@ index 048c0a61..8caef619 100644
              gui.file_menu.pkg_install_dialog = false;
              draw_file_dialog = true;
          }
-@@ -97,14 +97,13 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+@@ -111,14 +111,13 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
                  draw_file_dialog = true;
              }
          } else if (state == "license") {
@@ -389,7 +402,7 @@ index 048c0a61..8caef619 100644
                  state.clear();
              }
          } else if (state == "zrif") {
-@@ -126,7 +125,7 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+@@ -140,7 +139,7 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
                  state = "install";
          } else if (state == "install") {
              std::thread installation([&emuenv]() {
@@ -398,7 +411,7 @@ index 048c0a61..8caef619 100644
                      std::lock_guard<std::mutex> lock(install_mutex);
                      state = "success";
                  } else {
-@@ -145,17 +144,17 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+@@ -159,17 +158,17 @@ void draw_pkg_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
              ImGui::Separator();
              ImGui::Spacing();
              ImGui::Checkbox(lang["delete_pkg"].c_str(), &delete_pkg_file);

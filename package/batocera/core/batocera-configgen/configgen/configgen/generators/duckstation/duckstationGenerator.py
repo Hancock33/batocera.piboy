@@ -1,38 +1,47 @@
-import configparser
-import os.path
-from os import environ
+from __future__ import annotations
 
-from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
-from ...utils.logger import get_logger
+import configparser
+import logging
+from os import environ
+from pathlib import Path
+from typing import TYPE_CHECKING
+
+from ... import Command, controllersConfig
+from ...batoceraPaths import BIOS, CONFIGS, ensure_parents_and_open
 from ..Generator import Generator
 
-eslog = get_logger(__name__)
+if TYPE_CHECKING:
+    from collections.abc import Mapping, Sequence
+
+    from ...types import HotkeysContext
+
+eslog = logging.getLogger(__name__)
 
 class DuckstationGenerator(Generator):
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "duckstation",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        # Test if it's a m3u file
-        if os.path.splitext(rom)[1] == ".m3u":
-            rom = rewriteM3uFullPath(rom)
+        rom_path = Path(rom)
 
-        if os.path.exists('/usr/bin/duckstation/duckstation-qt'):
-            commandArray = ["/usr/bin/duckstation/duckstation-qt", "-batch", "-nogui", rom ]
+        # Test if it's a m3u file
+        if rom_path.suffix == ".m3u":
+            rom_path = rewriteM3uFullPath(rom_path)
+
+        if Path('/usr/bin/duckstation/duckstation-qt').exists():
+            commandArray = ["/usr/bin/duckstation/duckstation-qt", "-batch", "-nogui", "--", rom_path ]
         else:
-            commandArray = ["/usr/bin/duckstation/duckstation-nogui", "-batch", "-fullscreen", "--", rom ]
+            commandArray = ["/usr/bin/duckstation/duckstation-nogui", "-batch", "-fullscreen", "--", rom_path ]
 
         settings = configparser.ConfigParser(interpolation=None)
         # To prevent ConfigParser from converting to lower case
         settings.optionxform = str
-        settings_path = batoceraFiles.CONF + "/duckstation/settings.ini"
-        if os.path.exists(settings_path):
+        settings_path = CONFIGS / "duckstation" / "settings.ini"
+        if settings_path.exists():
             settings.read(settings_path)
 
         ## [Main]
@@ -117,7 +126,6 @@ class DuckstationGenerator(Generator):
             settings.set("BIOS", "PatchFastBoot", system.config["duckstation_PatchFastBoot"])
         else:
             settings.set("BIOS", "PatchFastBoot", "false")
-
         # Find & populate BIOS
         found_bios = find_bios(bios_lists)
 
@@ -151,7 +159,7 @@ class DuckstationGenerator(Generator):
         if system.isOptSet("duckstation_gfxbackend"):
             settings.set("GPU", "Renderer", system.config["duckstation_gfxbackend"])
         else:
-            settings.set("GPU", "Renderer", "Vulkan")
+            settings.set("GPU", "Renderer", "OpenGL")
         # Multisampling force (MSAA or SSAA) - no GUI option anymore...
         settings.set("GPU", "PerSampleShading", "false")
         settings.set("GPU", "Multisamples", "1")
@@ -159,7 +167,7 @@ class DuckstationGenerator(Generator):
         if system.isOptSet("duckstation_threadedpresentation"):
             settings.set("GPU", "ThreadedPresentation", system.config["duckstation_threadedpresentation"])
         else:
-            settings.set("GPU", "ThreadedPresentation", "true")
+            settings.set("GPU", "ThreadedPresentation", "false")
         # Internal resolution
         if system.isOptSet("duckstation_resolution_scale"):
             settings.set("GPU", "ResolutionScale", system.config["duckstation_resolution_scale"])
@@ -318,11 +326,6 @@ class DuckstationGenerator(Generator):
         else:
             settings.set("Cheevos", "Enabled", "false")
 
-        ## [UI]
-        if not settings.has_section("UI"):
-            settings.add_section("UI")
-            settings.set("UI", "UnofficialBuildWarningConfirmed", "true")
-
         ## [ControllerPorts]
         if not settings.has_section("ControllerPorts"):
             settings.add_section("ControllerPorts")
@@ -354,16 +357,16 @@ class DuckstationGenerator(Generator):
         if not settings.has_section("MemoryCards"):
             settings.add_section("MemoryCards")
         # Set memory card location
-        settings.set("MemoryCards", "Directory", "/userdata/saves/psx/duckstation/memcards")
+        settings.set("MemoryCards", "Directory", "../../../saves/duckstation/memcards")
 
         ## [Folders]
         if not settings.has_section("Folders"):
             settings.add_section("Folders")
         # Set other folder locations too
-        settings.set("Folders", "Cache", "/userdata/system/.cache/duckstation")
-        settings.set("Folders", "Screenshots", "/userdata/screenshots")
-        settings.set("Folders", "SaveStates", "/userdata/saves/psxduckstation")
-        settings.set("Folders", "Cheats", "/userdata/cheats/duckstation")
+        settings.set("Folders", "Cache", "../../cache/duckstation")
+        settings.set("Folders", "Screenshots", "../../../screenshots")
+        settings.set("Folders", "SaveStates", "../../../saves/duckstation")
+        settings.set("Folders", "Cheats", "../../../cheats/duckstation")
 
         ## [Pad]
         # Clear existing Pad(x) configs
@@ -514,9 +517,7 @@ class DuckstationGenerator(Generator):
         settings.set("UI", "UnofficialBuildWarningConfirmed", "true")
 
         # Save config
-        if not os.path.exists(os.path.dirname(settings_path)):
-            os.makedirs(os.path.dirname(settings_path))
-        with open(settings_path, 'w') as configfile:
+        with ensure_parents_and_open(settings_path, 'w') as configfile:
             settings.write(configfile)
 
         # write our own gamecontrollerdb.txt file before launching the game
@@ -524,7 +525,7 @@ class DuckstationGenerator(Generator):
         controllersConfig.writeSDLGameDBAllControllers(playersControllers, dbfile)
 
         # check if we're running wayland
-        if os.environ.get("WAYLAND_DISPLAY"):
+        if environ.get("WAYLAND_DISPLAY"):
             qt_qpa_platform = "wayland"
         else:
             qt_qpa_platform = "xcb"
@@ -534,7 +535,7 @@ class DuckstationGenerator(Generator):
             array=commandArray,
             env={
                 "LD_LIBRARY_PATH": "/usr/stenzek-shaderc/lib:/usr/lib",
-                "XDG_CONFIG_HOME": batoceraFiles.CONF,
+                "XDG_CONFIG_HOME": CONFIGS,
                 "QT_QPA_PLATFORM": qt_qpa_platform,
                 "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers),
                 "SDL_JOYSTICK_HIDAPI": "0"
@@ -561,35 +562,38 @@ def getLangFromEnvironment():
         return availableLanguages[lang]
     return availableLanguages["en_US"]
 
-def rewriteM3uFullPath(m3u):                                                                    # Rewrite a clean m3u file with valid fullpath
+def rewriteM3uFullPath(m3u: Path) -> Path:
+    # Rewrite a clean m3u file with valid fullpath
+
     # get initialm3u
-    firstline = open(m3u).readline().rstrip()                                                   # Get first line in m3u
-    initialfirstdisc = "/tmp/" + os.path.splitext(os.path.basename(firstline))[0] + ".m3u"      # Generating a temp path with the first iso filename in m3u
+    with m3u.open() as f:
+        firstline = f.readline().rstrip()  # Get first line in m3u
+
+    initialfirstdisc = Path("/tmp") / Path(firstline).with_suffix(".m3u").name  # Generating a temp path with the first iso filename in m3u
 
     # create a temp m3u to bypass Duckstation m3u bad pathfile
-    fulldirname = os.path.dirname(m3u)
-    readtempm3u = open(initialfirstdisc, "w")
+    fulldirname = m3u.parent
+    with initialfirstdisc.open("w"):
+        pass
 
-    initialm3u = open(m3u, "r")
-    with open(initialfirstdisc, 'a') as f1:
+    with m3u.open() as initialm3u, initialfirstdisc.open('a') as f1:
         for line in initialm3u:
-            if line[0] == "/":                          # for /MGScd1.chd
-                newpath = fulldirname + line
+            # handle both "/MGScd1.chd" and "MGScd1.chd"
+            if line[0] == "/":
+                newpath = fulldirname / line[1:]
             else:
-                newpath = fulldirname + "/" + line      # for MGScd1.chd
-            f1.write(newpath)
+                newpath = fulldirname / line
+            f1.write(str(newpath))
 
-    return initialfirstdisc                                                                      # Return the tempm3u pathfile written with valid fullpath
+    return initialfirstdisc  # Return the tempm3u pathfile written with valid fullpath
 
-def find_bios(bios_lists):
-    bios_dir = "/userdata/bios/"
-    found_bios = {}
+def find_bios(bios_lists: Mapping[str, Sequence[str]]):
+    found_bios: dict[str, str] = {}
 
     try:
-        actual_files = os.listdir(bios_dir)
-        files_lower = {f.lower(): f for f in actual_files}
+        files_lower = {f.name.lower(): f.name for f in BIOS.iterdir()}
     except OSError:
-        raise Exception(f"Unable to read BIOS directory: {bios_dir}")
+        raise Exception(f"Unable to read BIOS directory: {BIOS}")
 
     for region, bios_list in bios_lists.items():
         for bios in bios_list:

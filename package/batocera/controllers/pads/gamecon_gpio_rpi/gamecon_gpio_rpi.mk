@@ -3,12 +3,12 @@
 # gamecon_gpio_rpi
 #
 ################################################################################
-# Version: Commits on Aug 24, 2020
-GAMECON_GPIO_RPI_VERSION = 5fe34e2fb05d0480439553a9d287ceebce2fc9f9
+# Version: Commits on Oct 09, 2024
+GAMECON_GPIO_RPI_VERSION = 315388cbd3a3a63385e30e9a451fd059e5ab9a44
 GAMECON_GPIO_RPI_SITE = $(call github,marqs85,gamecon_gpio_rpi,$(GAMECON_GPIO_RPI_VERSION))
 
 define GAMECON_GPIO_RPI_FIX_EXTRACT
-	mv $(@D)/gamecon_gpio_rpi-1.4/* $(@D)/
+	mv $(@D)/gamecon_gpio_rpi/* $(@D)/
 endef
 GAMECON_GPIO_RPI_POST_EXTRACT_HOOKS += GAMECON_GPIO_RPI_FIX_EXTRACT
 

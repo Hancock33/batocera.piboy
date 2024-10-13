@@ -1,12 +1,11 @@
-import os
-import shutil
-from os import path
+from __future__ import annotations
 
-from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
-from ...utils import videoMode as videoMode
+from typing import TYPE_CHECKING
+import shutil
+
+from ... import Command, controllersConfig
 from ..Generator import Generator
+from ...utils import videoMode as videoMode
 
 q1_src = "/usr/share/game_assets/quake1/id1/quakespasm.pak"
 q1_dst = "/userdata/roms/ports/quake1/id1/quakespasm.pak"
@@ -33,3 +32,9 @@ class QuakespasmGenerator(Generator):
             env={
                 'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "tyrquake",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

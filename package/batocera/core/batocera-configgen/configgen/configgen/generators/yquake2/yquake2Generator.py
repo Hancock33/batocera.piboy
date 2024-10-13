@@ -1,9 +1,10 @@
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 import os
 import shutil
-from os import path
-from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
+
+from ... import Command, controllersConfig
 from ..Generator import Generator
 
 baseq2_src = "/usr/share/game_assets/quake2/baseq2"
@@ -48,3 +49,9 @@ class Yquake2Generator(Generator):
             env={
             'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
         })
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "yquake2",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

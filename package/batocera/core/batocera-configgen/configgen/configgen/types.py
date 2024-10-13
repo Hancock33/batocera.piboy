@@ -1,12 +1,19 @@
 from __future__ import annotations
 
-from collections.abc import Mapping
-from typing import NotRequired, Sequence, TypeAlias, TypedDict
+from collections.abc import Mapping, Sequence
+from typing import NotRequired, TypeAlias, TypedDict
 
 
 class Resolution(TypedDict):
     width: int
     height: int
+
+
+class ScreenInfo(TypedDict):
+    width: int
+    height: int
+    x: int
+    y: int
 
 
 class Gun(TypedDict):

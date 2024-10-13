@@ -1,10 +1,9 @@
-import os
-from os import path
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 import shlex
 
-from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
+from ... import Command, controllersConfig
 from ..Generator import Generator
 
 class DoomretroGenerator(Generator):
@@ -35,3 +34,9 @@ class DoomretroGenerator(Generator):
             'DOOMWADDIR': '/userdata/roms/ports/doom',
             'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
         })
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "prboom",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

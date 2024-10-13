@@ -8,8 +8,11 @@
 - Khadis VIM4, Vulkan support has now been added
 - Added HyperX and Machenike Xbox360 compatible controllers
 - Support for Argon One v3 case for RPi5
-- wayland multi screens support (including rpi*)
+- Wayland multi screens support (including rpi*)
 - Xtension 2 Players Controller and Xtension 4 Players Controller
+- Initial support for the Retroid Pocket Mini & Retroid Pocket 5
+  - (https://github.com/batocera-linux/batocera.linux/issues/12562)
+- Arcade machine inputs have now a better supported thanks to keyboardToPads (xarcadejoystick removed)
 ### Added
 - Exit game with light gun (hold `TRIGGER`, `ACTION` and `START` buttons for 2 seconds)
 - Enhanced Bluetooth AD2P codec support for LDAC & aptX supported headphones or speakers
@@ -25,6 +28,9 @@
 - Arcade games: automatically switch to vertical bezels (default 'consoles' decorations)
 - /boot/preshare.sh script (to be able to wake up a nas for example)
 - Sinden light gun ratio option (you can select 4:3 ratio instead of fullscreen)
+- Taradino - Rise of the Triad port
+- X16-Emulator for Commander X16 system support
+- Dhewm 3 - A Doom 3 port
 ### Fixed
 - Steam loading on a NAS drive
 - ScummVM forcing English which can prevent some non-english games from starting
@@ -44,6 +50,7 @@
 - You can now manually forget, connect or disconnect a bluetooth device
 - Updated Nvidia card detection
 - Modern Nvidia cards will now use the OpenSource kernel modules when possible.
+- New ES web UI on http://<batocera>:1234 (with a new es_web_notifier service to enable)
 ### Updated
 - RetroArch to v1.19.1
   - Libretro-81 to June 29, 2024 build
@@ -63,7 +70,8 @@
   - Libretro-Cap32 to June 29, 2024 build
   - Libretro-Melonds-Ds to v1.1.5
   - Libretro-Ecwolf to June 28 build
-  - Libretro-Flycast to July 30 build
+  - Libretro-Fbneo to October 3, 2024 build
+  - Libretro-Flycast to September 29, 2024 build
   - Libretro-Freechaf to June 28 build
   - Libretro-MAME to 0.268
   - Libretro-Minivac to July 1 build
@@ -74,30 +82,34 @@
 - BigPEmu to v115
 - C-Dogs SDL to 2.1.0
 - Cemu to v2.1
-- Citra to r5115f64
+- Citra to r608383e
 - Commander Genius to v3.5.1
-- Dolphin to 2407.264
+- DevilutionX to 1.5.3
+- Dolphin to 2409-78
 - Duckstation to v0.1-7294
 - DXX-Rebirth to July 21 build
 - Eduke32 to Jul 25 build
-- Flycast to Jul 30 build
+- Flycast to September 29, 2024 build
 - GroovyMAME to 0.268
 - Ikemen to August 1st 2024 build
 - Kodi to 21.1
-- PCSX2 to v2.1.100
+- Mupen64 core & plugins to v2.6.0
+- PCSX2 to 2.1.179
+- Pyxel to 2.2.4
 - Redream to 1.5.0-1133-g03c2ae9
 - RPCS3 to 0.0.33 (alpha on Aug 31, 2024)
 - Sonic Mania to Jul 21, 2024 build
+- Supermodel to 1st October build
 - Syncthing to 1.27.10
 - The Force Engine to Aug 19, 2024 build
 - Vita3k to August 25, 2024 build
-- Xemu to v0.7.131
+- Xemu to v0.7.130
 - Xenia to v1.0.2817
-- Xenia Canary to August 31, 2024 build
+- Xenia Canary to October 1, 2024 build
 ### System
 - Nvidia Driver to 560.35.03 (Open kernel modules)
 - Nvidia Legacy Driver to 470.256.02
-- x86_64 Kernel to 6.10.6
+- x86_64 Kernel to 6.11.2
 - Ayaneo Platform driver to Jul 17, 2024 build
 - Ayn Platform driver to Jul 17, 2024 build
 - MangoHud to Jun 15, 2024 build
@@ -118,10 +130,12 @@
 - LibVA to 2.22.0
 - WF-Recorder to 14th of August build
 - Switchres to 2.2.1
-- Mesa3D to 24.2.3
+- Mesa3D to 24.2.4
 - Buildroot to the 2024.05.2 release base
 - GStreamer codecs to 1.24.8
-- shim-signed ia32 EFI bootloader to 1.44~1+deb12u1+15.8-1~deb12u1
+- Shim signed IA32 EFI bootloader to 1.44~1+deb12u1+15.8-1~deb12u1
+- FFMPEG to 7.1
+- Shim signed x64 EFI bootloader to 1.58+15.8-0ubuntu1
 
 # 2024/08/11 - batocera.linux 40 - Swallowtail
 ### Special Notes

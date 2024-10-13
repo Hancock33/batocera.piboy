@@ -24,6 +24,8 @@ import time
 from sys import exit
 import subprocess
 import json
+import logging
+from pathlib import Path
 
 from . import controllersConfig as controllers
 from . import GeneratorImporter
@@ -33,9 +35,10 @@ from .utils import bezels as bezelsUtil
 from .utils import videoMode
 from .utils import gunsUtils
 from .utils import wheelsUtils
-from .utils.logger import get_logger
+from .utils.logger import setup_logging
+from .utils.hotkeygen import set_hotkeygen_context
 
-eslog = get_logger(__name__)
+eslog = logging.getLogger(__name__)
 
 def squashfs_begin(rom):
     eslog.debug(f"squashfs_begin({rom})")
@@ -70,6 +73,14 @@ def squashfs_begin(rom):
     if len(os.listdir(rommountpoint)) == 1 and  os.path.exists(romsingle):
         eslog.debug(f"squashfs: single rom {romsingle}")
         return True, rommountpoint, romsingle
+
+    # If a .ROM symlink is present, use the linked file as the ROM.
+    try:
+        romlinked = os.path.realpath(os.path.join(rommountpoint, ".ROM"), strict=True)
+        eslog.debug(f"squashfs: linked rom {romlinked}")
+        return True, rommountpoint, romlinked
+    except:
+        pass
 
     return True, rommountpoint, rommountpoint
 
@@ -289,15 +300,11 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
                 eslog.debug("CPU power config set to maximum power saving")
 
         # run the emulator
-        try:
-            from .Evmapy import Evmapy
-            Evmapy.start(systemName, system.config['emulator'], effectiveCore, effectiveRomConfiguration, playersControllers, guns)
-
-            # hotkeygen context
-            hkc = generator.getHotkeysContext()
-            eslog.debug("hotkeygen: updating context to {}".format(hkc["name"]))
-            subprocess.call(["hotkeygen", "--new-context", hkc["name"], json.dumps(hkc["keys"])])
-
+        from .utils.evmapy import evmapy
+        with (
+            evmapy(systemName, system.config['emulator'], effectiveCore, effectiveRomConfiguration, playersControllers, guns),
+            set_hotkeygen_context(generator)
+        ):
             # change directory if wanted
             executionDirectory = generator.executionDirectory(system.config, effectiveRom)
             if executionDirectory is not None:
@@ -322,12 +329,6 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
             exitCode = runCommand(cmd)
             if profiler:
                 profiler.enable()
-        finally:
-            # reset hotkeygen context
-            eslog.debug("hotkeygen: resetting to default context")
-            subprocess.call(["hotkeygen", "--default-context"])
-
-            Evmapy.stop()
 
         # run a script after emulator shuts down
         callExternalScripts("/userdata/system/scripts", "gameStop", [systemName, system.config['emulator'], effectiveCore, effectiveRom])
@@ -617,59 +618,61 @@ def signal_handler(signal, frame):
         proc.kill()
 
 def launch():
-    global proc
-    proc = None
-    signal.signal(signal.SIGINT, signal_handler)
-    parser = argparse.ArgumentParser(description='emulator-launcher script')
+    with setup_logging():
+        global proc
+        proc = None
+        signal.signal(signal.SIGINT, signal_handler)
+        parser = argparse.ArgumentParser(description='emulator-launcher script')
 
-    maxnbplayers = 8
-    for p in range(1, maxnbplayers+1):
-        parser.add_argument("-p{}index"     .format(p), help="player{} controller index"            .format(p), type=int, required=False)
-        parser.add_argument("-p{}guid"      .format(p), help="player{} controller SDL2 guid"        .format(p), type=str, required=False)
-        parser.add_argument("-p{}name"      .format(p), help="player{} controller name"             .format(p), type=str, required=False)
-        parser.add_argument("-p{}devicepath".format(p), help="player{} controller device"           .format(p), type=str, required=False)
-        parser.add_argument("-p{}nbbuttons" .format(p), help="player{} controller number of buttons".format(p), type=str, required=False)
-        parser.add_argument("-p{}nbhats"    .format(p), help="player{} controller number of hats"   .format(p), type=str, required=False)
-        parser.add_argument("-p{}nbaxes"    .format(p), help="player{} controller number of axes"   .format(p), type=str, required=False)
+        maxnbplayers = 8
+        for p in range(1, maxnbplayers+1):
+            parser.add_argument("-p{}index"     .format(p), help="player{} controller index"            .format(p), type=int, required=False)
+            parser.add_argument("-p{}guid"      .format(p), help="player{} controller SDL2 guid"        .format(p), type=str, required=False)
+            parser.add_argument("-p{}name"      .format(p), help="player{} controller name"             .format(p), type=str, required=False)
+            parser.add_argument("-p{}devicepath".format(p), help="player{} controller device"           .format(p), type=str, required=False)
+            parser.add_argument("-p{}nbbuttons" .format(p), help="player{} controller number of buttons".format(p), type=str, required=False)
+            parser.add_argument("-p{}nbhats"    .format(p), help="player{} controller number of hats"   .format(p), type=str, required=False)
+            parser.add_argument("-p{}nbaxes"    .format(p), help="player{} controller number of axes"   .format(p), type=str, required=False)
 
-    parser.add_argument("-system",         help="select the system to launch", type=str, required=True)
-    parser.add_argument("-rom",            help="rom absolute path",           type=str, required=True)
-    parser.add_argument("-emulator",       help="force emulator",              type=str, required=False)
-    parser.add_argument("-core",           help="force emulator core",         type=str, required=False)
-    parser.add_argument("-netplaymode",    help="host/client",                 type=str, required=False)
-    parser.add_argument("-netplaypass",    help="enable spectator mode",       type=str, required=False)
-    parser.add_argument("-netplayip",      help="remote ip",                   type=str, required=False)
-    parser.add_argument("-netplayport",    help="remote port",                 type=str, required=False)
-    parser.add_argument("-netplaysession", help="netplay session",             type=str, required=False)
-    parser.add_argument("-state_slot",     help="state slot",                  type=str, required=False)
-    parser.add_argument("-state_filename", help="state filename",              type=str, required=False)
-    parser.add_argument("-autosave",       help="autosave",                    type=str, required=False)
-    parser.add_argument("-systemname",     help="system fancy name",           type=str, required=False)
-    parser.add_argument("-gameinfoxml",    help="game info xml",               type=str, nargs='?', default='/dev/null', required=False)
-    parser.add_argument("-lightgun",       help="configure lightguns",         action="store_true")
-    parser.add_argument("-wheel",          help="configure wheel",             action="store_true")
+        parser.add_argument("-system",         help="select the system to launch", type=str, required=True)
+        parser.add_argument("-rom",            help="rom absolute path",           type=str, required=True)
+        parser.add_argument("-emulator",       help="force emulator",              type=str, required=False)
+        parser.add_argument("-core",           help="force emulator core",         type=str, required=False)
+        parser.add_argument("-netplaymode",    help="host/client",                 type=str, required=False)
+        parser.add_argument("-netplaypass",    help="enable spectator mode",       type=str, required=False)
+        parser.add_argument("-netplayip",      help="remote ip",                   type=str, required=False)
+        parser.add_argument("-netplayport",    help="remote port",                 type=str, required=False)
+        parser.add_argument("-netplaysession", help="netplay session",             type=str, required=False)
+        parser.add_argument("-state_slot",     help="state slot",                  type=str, required=False)
+        parser.add_argument("-state_filename", help="state filename",              type=str, required=False)
+        parser.add_argument("-autosave",       help="autosave",                    type=str, required=False)
+        parser.add_argument("-systemname",     help="system fancy name",           type=str, required=False)
+        parser.add_argument("-gameinfoxml",    help="game info xml",               type=str, nargs='?', default='/dev/null', required=False)
+        parser.add_argument("-lightgun",       help="configure lightguns",         action="store_true")
+        parser.add_argument("-wheel",          help="configure wheel",             action="store_true")
+        parser.add_argument("-trackball",      help="configure trackball",         action="store_true")
 
-    args = parser.parse_args()
-    try:
-        exitcode = -1
-        exitcode = main(args, maxnbplayers)
-    except Exception as e:
-        eslog.error("configgen exception: ", exc_info=True)
+        args = parser.parse_args()
+        try:
+            exitcode = -1
+            exitcode = main(args, maxnbplayers)
+        except Exception as e:
+            eslog.error("configgen exception: ", exc_info=True)
 
-    if profiler:
-        import io
-        import pstats
-        profiler.disable()
-        profiler.dump_stats('/var/run/emulatorlauncher.prof')
+        if profiler:
+            import io
+            import pstats
+            profiler.disable()
+            profiler.dump_stats('/var/run/emulatorlauncher.prof')
 
-    time.sleep(1) # this seems to be required so that the gpu memory is restituated and available for es
-    eslog.debug(f"Exiting configgen with status {str(exitcode)}")
+        time.sleep(1) # this seems to be required so that the gpu memory is restituated and available for es
+        eslog.debug(f"Exiting configgen with status {str(exitcode)}")
 
-    if not endSystem == "settings":
-        shutil.copy('/userdata/system/logs/es_launch_stderr.log', '/tmp')
-        shutil.copy('/userdata/system/logs/es_launch_stdout.log', '/tmp')
+        if not endSystem == "settings":
+            shutil.copy('/userdata/system/logs/es_launch_stderr.log', '/tmp')
+            shutil.copy('/userdata/system/logs/es_launch_stdout.log', '/tmp')
 
-    exit(exitcode)
+        exit(exitcode)
 
 if __name__ == '__main__':
     launch()

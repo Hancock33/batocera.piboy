@@ -1,59 +1,62 @@
+from __future__ import annotations
+
+import logging
 import os
 import subprocess
+from pathlib import Path
+from typing import TYPE_CHECKING
 
-from ... import batoceraFiles
-from ... import Command
-from ... import controllersConfig
-from ...utils.logger import get_logger
+from ... import Command, controllersConfig
+from ...batoceraPaths import CONFIGS, ROMS, SAVES, SCREENSHOTS, mkdir_if_not_exists
 from ..Generator import Generator
 
-corsixthConfigPath = batoceraFiles.CONF + "/corsixth"
-corsixthConfigFile = corsixthConfigPath + "/config.txt"
-corsixthSavesPath = "/userdata/saves/corsixth"
-corsixthDataPath = "/userdata/roms/corsixth"
-corsixthFontPath = "/usr/share/fonts/dejavu/DejaVuSans.ttf"
-corsixthScreenshotsPath = "/userdata/screenshots"
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
 
-eslog = get_logger(__name__)
+corsixthConfigPath = CONFIGS / "corsixth"
+corsixthConfigFile = corsixthConfigPath / "config.txt"
+corsixthSavesPath = SAVES / "corsixth"
+corsixthDataPath = "/userdata/roms/ports/themehospital"
+corsixthFontPath = Path("/usr/share/fonts/dejavu/DejaVuSans.ttf")
+
+eslog = logging.getLogger(__name__)
 
 class ThemehospitalGenerator(Generator):
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
-            "name": "corsixth",
-            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ESC", "save_state": ["KEY_LEFTALT", "KEY_LEFTSHIFT", "KEY_S"], "restore_state": ["KEY_LEFTALT", "KEY_LEFTSHIFT", "KEY_L"] }
+            "name": "themehospital",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ESC", "pause": "KEY_ESC", "save_state": ["KEY_LEFTALT", "KEY_LEFTSHIFT", "KEY_S"], "restore_state": ["KEY_LEFTALT", "KEY_LEFTSHIFT", "KEY_L"] }
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         # Create corsixth config directory if needed
-        if not os.path.exists(corsixthConfigPath):
-            os.makedirs(corsixthConfigPath)
+        mkdir_if_not_exists(corsixthConfigPath)
 
         # Create corsixth savesg directory if needed
-        if not os.path.exists(corsixthSavesPath):
-            os.makedirs(corsixthSavesPath)
+        mkdir_if_not_exists(corsixthSavesPath)
 
         # Check game data is installed
         try:
-            os.chdir("/userdata/roms/ports/themehospital/ANIMS/")
-            os.chdir("/userdata/roms/ports/themehospital/DATA/")
-            os.chdir("/userdata/roms/ports/themehospital/INTRO/")
-            os.chdir("/userdata/roms/ports/themehospital/LEVELS/")
-            os.chdir("/userdata/roms/ports/themehospital/QDATA/")
+            os.chdir(corsixthDataPath / "ANIMS")
+            os.chdir(corsixthDataPath / "DATA")
+            os.chdir(corsixthDataPath / "INTRO")
+            os.chdir(corsixthDataPath / "LEVELS")
+            os.chdir(corsixthDataPath / "QDATA")
         except:
             eslog.error("ERROR: Game assets not installed. You can get them from the game Theme Hospital.")
 
         # If config file already exists, delete it
-        if os.path.exists(corsixthConfigFile):
-            os.unlink(corsixthConfigFile)
+        if corsixthConfigFile.exists():
+            corsixthConfigFile.unlink()
 
         # Create the config file and fill it with basic data
-        source_config_file = open(corsixthConfigFile, "w")
+        source_config_file = corsixthConfigFile.open("w")
         source_config_file.write("check_for_updates = false\n")
-        source_config_file.write("theme_hospital_install = [[" + corsixthDataPath +"]]\n")
-        source_config_file.write("unicode_font = [[" + corsixthFontPath + "]]\n")
-        source_config_file.write("savegames = [[" + corsixthSavesPath + "]]\n")
-        source_config_file.write("screenshots = [[" + corsixthScreenshotsPath +"]]\n")
+        source_config_file.write(f"theme_hospital_install = [[{corsixthDataPath!s}]]\n")
+        source_config_file.write(f"unicode_font = [[{corsixthFontPath!s}]]\n")
+        source_config_file.write(f"savegames = [[{corsixthSavesPath!s}]]\n")
+        source_config_file.write(f"screenshots = [[{SCREENSHOTS!s}]]\n")
 
         # Values coming from ES configuration : Resolution
         source_config_file.write("fullscreen = true\n")
@@ -115,8 +118,8 @@ class ThemehospitalGenerator(Generator):
 
         # Check custom music is installed
         try:
-            os.chdir(corsixthDataPath +"/MP3")
-            source_config_file.write("audio_music = [[" + corsixthDataPath + "/MP3" +"]]\n")
+            os.chdir(corsixthDataPath / "MP3")
+            source_config_file.write(f"audio_music = [[{corsixthDataPath / 'MP3'}]]\n")
         except:
             eslog.warning("NOTICE: Audio & Music system loaded, but found no external background tracks. Missing MP3 folder")
             source_config_file.write("audio_music = nil\n")
@@ -125,7 +128,7 @@ class ThemehospitalGenerator(Generator):
         source_config_file.close()
 
         # Launch engine with config file path
-        commandArray = ["corsix-th", "--config-file=" + corsixthConfigFile]
+        commandArray = ["corsix-th", f"--config-file={corsixthConfigFile}"]
 
         return Command.Command(
             array=commandArray,

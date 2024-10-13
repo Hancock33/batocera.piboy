@@ -1,11 +1,9 @@
-#!/usr/bin/env python
-import os
-import shutil
-from os import path
+from __future__ import annotations
 
-from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
+from typing import TYPE_CHECKING
+import shutil
+
+from ... import Command, controllersConfig
 from ..Generator import Generator
 
 q1_src = "/usr/share/game_assets/quake1/id1/vkquake.pak"
@@ -32,3 +30,9 @@ class VkquakeGenerator(Generator):
             env={
                 'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "vkquake",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

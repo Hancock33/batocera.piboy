@@ -3,8 +3,8 @@
 # libretro-mu
 #
 ################################################################################
-# Version: Commits on Jun 25, 2024
-LIBRETRO_MU_VERSION = d7dd7e2a33ba405b0794c2931ddc6c2d75e59d36
+# Version: Commits on Oct 10, 2024
+LIBRETRO_MU_VERSION = a053b1f2722cfc22238b38940993c68542500e8d
 LIBRETRO_MU_SITE = $(call github,libretro,Mu,$(LIBRETRO_MU_VERSION))
 LIBRETRO_MU_LICENSE = CCANC-3.0
 

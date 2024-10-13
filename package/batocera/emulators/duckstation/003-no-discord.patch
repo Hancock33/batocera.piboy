@@ -12,10 +12,10 @@ index cc23c80a7..de296f406 100644
  
  if(NOT WIN32)
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index a3e238584..446cca3f1 100644
+index 5e3f3f0b7..f8128d24b 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
-@@ -90,7 +90,7 @@ LOG_CHANNEL(System);
+@@ -89,7 +89,7 @@ LOG_CHANNEL(System);
  #endif
  
  #ifndef __ANDROID__

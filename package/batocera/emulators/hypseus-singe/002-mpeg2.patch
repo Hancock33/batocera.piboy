@@ -1,5 +1,5 @@
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index da3e284..e629557 100644
+index a25af2c..5bbb5b7 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
 @@ -51,14 +51,12 @@ include(BuildSupport)

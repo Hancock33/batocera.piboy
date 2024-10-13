@@ -1,31 +1,36 @@
-import os
-from os import environ
-import configparser
-import subprocess
+from __future__ import annotations
 
-from ... import batoceraFiles # GLOBAL VARIABLES
-from ... import Command
-from ... import controllersConfig
-from ...utils.logger import get_logger
+import configparser
+import logging
+import subprocess
+from os import environ
+from pathlib import Path
+from typing import TYPE_CHECKING
+
+from ... import Command, controllersConfig
+from ...batoceraPaths import CACHE, CONFIGS, SAVES, ensure_parents_and_open
 from ..Generator import Generator
 
-eslog = get_logger(__name__)
+if TYPE_CHECKING:
+    from ...Emulator import Emulator
+
+eslog = logging.getLogger(__name__)
 
 class LemonadeGenerator(Generator):
 
     # Main entry of the module
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        LemonadeGenerator.writeLEMONADEConfig(batoceraFiles.CONF + "/citra-emu/qt-config.ini", system, playersControllers)
+        LemonadeGenerator.writeLEMONADEConfig(CONFIGS / "lemonade-emu" / "qt-config.ini", system, playersControllers)
 
-        if os.path.exists('/usr/bin/lemonade-qt'):
+        if Path('/usr/bin/lemonade-qt').exists():
             commandArray = ['/usr/bin/lemonade-qt', rom]
         else:
             commandArray = ['/usr/bin/lemonade', rom]
         return Command.Command(array=commandArray, env={
-            "XDG_CONFIG_HOME":batoceraFiles.CONF,
-            "XDG_DATA_HOME":batoceraFiles.SAVES + "/3ds",
-            "XDG_CACHE_HOME":batoceraFiles.CACHE,
-            "XDG_RUNTIME_DIR":batoceraFiles.SAVES + "/3ds/lemonade-emu",
+            "XDG_CONFIG_HOME":CONFIGS,
+            "XDG_DATA_HOME":SAVES / "3ds",
+            "XDG_CACHE_HOME":CACHE,
+            "XDG_RUNTIME_DIR":SAVES / "3ds" / "lemonade-emu",
             "QT_QPA_PLATFORM":"xcb",
             "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers),
             "SDL_JOYSTICK_HIDAPI": "0"
@@ -40,7 +45,7 @@ class LemonadeGenerator(Generator):
             return True
 
     @staticmethod
-    def writeLEMONADEConfig(lemonadeConfigFile, system, playersControllers):
+    def writeLEMONADEConfig(lemonadeConfigFile: Path, system: Emulator, playersControllers: controllersConfig.ControllerMapping):
         # Pads
         lemonadeButtons = {
             "button_a":      "a",
@@ -68,7 +73,7 @@ class LemonadeGenerator(Generator):
         # ini file
         lemonadeConfig = configparser.RawConfigParser(strict=False)
         lemonadeConfig.optionxform=str             # Add Case Sensitive comportement
-        if os.path.exists(lemonadeConfigFile):
+        if lemonadeConfigFile.exists():
             lemonadeConfig.read(lemonadeConfigFile)
 
         ## [LAYOUT]
@@ -249,9 +254,7 @@ class LemonadeGenerator(Generator):
             break
 
         ## Update the configuration file
-        if not os.path.exists(os.path.dirname(lemonadeConfigFile)):
-            os.makedirs(os.path.dirname(lemonadeConfigFile))
-        with open(lemonadeConfigFile, 'w') as configfile:
+        with ensure_parents_and_open(lemonadeConfigFile, 'w') as configfile:
             lemonadeConfig.write(configfile)
 
     @staticmethod

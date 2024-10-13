@@ -11,7 +11,7 @@ class SonicManiaGenerator(Generator):
     def getHotkeysContext(self):
         return {
             "name": "sonic_mania",
-            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ENTER" }
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ENTER", "pause": "KEY_ENTER" }
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
