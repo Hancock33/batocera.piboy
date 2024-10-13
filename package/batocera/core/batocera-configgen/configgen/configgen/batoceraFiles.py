@@ -21,6 +21,7 @@ logdir = HOME + '/logs/'
 # This dict is indexed on the emulator name, not on the system
 batoceraBins = {'amiberry'       : '/usr/bin/amiberry'
               , 'applewin'       : '/usr/bin/applewin'
+              , 'doom3'          : '/usr/bin/dhewm3'
               , 'dosbox'         : '/usr/bin/dosbox'
               , 'dosbox_staging' : '/usr/bin/dosbox-staging/dosbox-staging'
               , 'dosboxx'        : '/usr/bin/dosbox-x'
