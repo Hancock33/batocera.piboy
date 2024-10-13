@@ -15947,6 +15947,21 @@ msgctxt "keys_files"
 msgid "Exit Dolphin"
 msgstr ""
 
+#. TRANSLATION: doom3.dhewm3.keys, mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "載圖"
+
+#. TRANSLATION: doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+msgctxt "keys_files"
+msgid "Quick Save"
+msgstr ""
+
+#. TRANSLATION: doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+msgctxt "keys_files"
+msgid "Quick Load"
+msgstr ""
+
 #. TRANSLATION: dos.dosbox-x.keys
 msgctxt "keys_files"
 msgid "Exit Dosbox-X"
@@ -15981,11 +15996,6 @@ msgstr "讀檔"
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "存檔"
-
-#. TRANSLATION: mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "載圖"
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -16600,16 +16610,6 @@ msgstr ""
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
 msgid "Open"
-msgstr ""
-
-#. TRANSLATION: theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Load"
-msgstr ""
-
-#. TRANSLATION: theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Save"
 msgstr ""
 
 #~ msgctxt "game_options"

@@ -16346,6 +16346,21 @@ msgctxt "keys_files"
 msgid "Exit Dolphin"
 msgstr "Lépjen ki a Dolphinból"
 
+#. TRANSLATION: doom3.dhewm3.keys, mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
+msgstr "Pillanatkép"
+
+#. TRANSLATION: doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+msgctxt "keys_files"
+msgid "Quick Save"
+msgstr "Gyors mentés"
+
+#. TRANSLATION: doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+msgctxt "keys_files"
+msgid "Quick Load"
+msgstr "Mentés betöltése"
+
 #. TRANSLATION: dos.dosbox-x.keys
 msgctxt "keys_files"
 msgid "Exit Dosbox-X"
@@ -16380,11 +16395,6 @@ msgstr "Játékállás betöltése"
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "Állam mentése"
-
-#. TRANSLATION: mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Pillanatkép"
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -17000,16 +17010,6 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Open"
 msgstr ""
-
-#. TRANSLATION: theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Load"
-msgstr "Mentés betöltése"
-
-#. TRANSLATION: theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Save"
-msgstr "Gyors mentés"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
