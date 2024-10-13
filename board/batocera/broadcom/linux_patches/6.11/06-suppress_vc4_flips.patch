@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/vc4/vc4_firmware_kms.c b/drivers/gpu/drm/vc4/vc4_firmware_kms.c
-index 844c41991af0..1c8fca4a536a 100644
+index fd1c528ec69c..dc2350359eb7 100644
 --- a/drivers/gpu/drm/vc4/vc4_firmware_kms.c
 +++ b/drivers/gpu/drm/vc4/vc4_firmware_kms.c
 @@ -1293,7 +1293,7 @@ static int vc4_fkms_page_flip(struct drm_crtc *crtc,
