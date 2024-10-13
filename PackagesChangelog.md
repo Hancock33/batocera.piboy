@@ -3,6 +3,7 @@
 Audio|[zmusic](http://github.com/ZDoom/ZMusic)|3944bbc7568a6e945c7ae8c7f7e126731db62b83|Oct 13, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|8ff8a1886102ac35645ada4cd2ac2299a8fc903a|Oct 13, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|bf0582c83697809529ea9ec06d4710a992b6b742|Oct 13, 2024
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|7e951aa2d469013227911cbbc0aaecd27c592ec9|Oct 13, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|a11ed649bf61bd75135600bfe8b19c346d64229d|Oct 13, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|a50164a91b562b0d17d9c2d7166012d4b14143ed|Oct 13, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|d2937f59d567cbdc292e22c52d2599e77dfd7043|Oct 13, 2024
@@ -24,13 +25,12 @@ Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|653f0841e4365ff41a3
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|a9db82ffc162fa2f9b28af0823effb9c22ed4995|Oct 13, 2024
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|f6419e3bc17ad1e4b8123380a724ff4a63e0f4aa|Oct 13, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|a50164a91b562b0d17d9c2d7166012d4b14143ed|Oct 13, 2024
-Emulators|[libretro-kronos](http://github.com/FCare/kronos)|80c11c638603e977b8665f85f8c54b00251737ed|Oct 13, 2024
+Emulators|[libretro-kronos](http://github.com/FCare/kronos)|812e712d0ab843babc10f0d3b2f7ec3409d6ba27|Oct 13, 2024
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|6d8c7dc1c7456fc00d374c67b0c0760b00bc2c15|Oct 13, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|77b17a5d9098d3986e44e0d2c4eea6889abf456d|Oct 12, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|77b17a5d9098d3986e44e0d2c4eea6889abf456d|Oct 12, 2024
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|f4cd0c3701ddbf0db4942d67604f1ff8f36e4118|Oct 12, 2024
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|cdce02607abf1b43cdf93c6f367825158f23a467|Oct 12, 2024
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|8e619b73021d0c824c529b8fd1e1e18ccfd22685|Oct 12, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|0c228f0e0cae7039bd321f539652e9044250895d|Oct 12, 2024
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|0237bb56fe5a782d53e4f97719b0063c2b610526|Oct 12, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|189faf664f8d6de9981bcdf2657bea5898c5008d|Oct 12, 2024
