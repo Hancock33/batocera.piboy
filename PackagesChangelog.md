@@ -17,6 +17,8 @@ Ports|[box64](http://github.com/ptitseb/box64)|cce43790d273243f81ef51d4c6be38ff5
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|3eef0d3f1a956fa4d796d9140a521e364638bcec|Oct 13, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|f6419e3bc17ad1e4b8123380a724ff4a63e0f4aa|Oct 13, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|1e4b81c6b2af21d4bf3937adbd6cb76f664e40b7|Oct 13, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241013|Oct 13, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241013|Oct 13, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|b389035ce9bb3b00dfea774757bcae0b7c4066d1|Oct 13, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|653f0841e4365ff41a30a980201744cb8b90d68e|Oct 13, 2024
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|a9db82ffc162fa2f9b28af0823effb9c22ed4995|Oct 13, 2024
@@ -39,8 +41,6 @@ Ports|[raze](http://github.com/ZDoom/Raze)|e48911dcc98bcd22141797c02d98e8278033c
 Ports|[stk](http://github.com/supertuxkart/stk-code)|a1595cad3d9a44f3d60cef8881737111cfa08932|Oct 12, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|e2363a305b5db62d9533b32c91c8723c9984e4ff|Oct 12, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.19.r92.g7ce580d1fa0|Oct 12, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241012|Oct 12, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241012|Oct 12, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|8e4080f8d16695b9c26475a1732feda2c7efe7f8|Oct 12, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|e576d24d5bc9d3b15d0ce7355fd779d9ca56a74e|Oct 12, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|6f28995385a6d6906c953b82103b7fc61e97c18d|Oct 12, 2024
