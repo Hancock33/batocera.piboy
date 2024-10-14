@@ -40,6 +40,7 @@
 - DuckStation light gun crosshair
 - ES: Sinden light gun border now have the exact same size in-game
 - Custom boot splash image now displays when intended
+- Dualshock controllers not enabled on some Arm boards
 ### Changed / Improved
 - Splash screen now disabled by default
 - Added bezel & sinden border support for the RPi5 with Model 3 games
@@ -51,6 +52,7 @@
 - Updated Nvidia card detection
 - Modern Nvidia cards will now use the OpenSource kernel modules when possible.
 - New ES web UI on http://<batocera>:1234 (with a new es_web_notifier service to enable)
+- Enabled more force feedback capabilities on various controllers
 ### Updated
 - RetroArch to v1.19.1
   - Libretro-81 to June 29, 2024 build
@@ -110,6 +112,8 @@
 - Nvidia Driver to 560.35.03 (Open kernel modules)
 - Nvidia Legacy Driver to 470.256.02
 - x86_64 Kernel to 6.11.2
+- RPi Kernel to 6.6.56
+- ARM mainline Kernel boards to 6.6.56
 - Ayaneo Platform driver to Jul 17, 2024 build
 - Ayn Platform driver to Jul 17, 2024 build
 - MangoHud to Jun 15, 2024 build
@@ -117,7 +121,7 @@
 - DXVK to 2.4.1
 - DXVK NVAPI to v0.7.1
 - VKD3D Proton to 2.13
-- Linux Firmware to 20240811
+- Linux Firmware to 20240909
 - Pipewire to 1.2.2
 - ALSA stack to 1.2.12
 - ALSA UCM configuration to 1.2.12
