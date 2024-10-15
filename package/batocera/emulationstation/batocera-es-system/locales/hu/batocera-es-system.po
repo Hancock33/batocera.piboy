@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-10-06 16:21+0200\n"
+"PO-Revision-Date: 2024-10-13 23:07+0200\n"
 "Last-Translator: Szoldán Albert\n"
 "Language-Team: \n"
 "Language: hu\n"
@@ -12149,7 +12149,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "STRETCH TO DISPLAY AREA"
-msgstr "NYÚJTJON A KIJELZÉSI TERÜLETRE"
+msgstr "NYÚJTÁS A KIJELZŐTERÜLETRE"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -17546,6 +17546,18 @@ msgstr ""
 #~ msgstr ""
 #~ "Állítsa be a kívánt maximális frissítési gyakoriságot, amikor a Vsync ki "
 #~ "van kapcsolva."
+
+#~ msgctxt "game_options"
+#~ msgid "Change the game's brightness."
+#~ msgstr "A játék fényerejének módosítása."
+
+#~ msgctxt "game_options"
+#~ msgid "BRIGHTNESS"
+#~ msgstr "FÉNYERŐ"
+
+#~ msgctxt "game_options"
+#~ msgid "200% (Maximum)"
+#~ msgstr "200% (Maximum)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
