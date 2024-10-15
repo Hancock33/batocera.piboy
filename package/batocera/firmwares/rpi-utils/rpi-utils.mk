@@ -3,8 +3,8 @@
 # rpi-utils
 #
 ################################################################################
-# Version: Commits on Oct 09, 2024
-RPI_UTILS_VERSION = 371ae96ff6d8b869d4125137fdc73b86fe154245
+# Version: Commits on Oct 07, 2024
+RPI_UTILS_VERSION = 30c8c789291e5aeebae9f3b0f5336a1e492841f4
 RPI_UTILS_SITE = $(call github,raspberrypi,utils,$(RPI_UTILS_VERSION))
 RPI_UTILS_LICENSE = BSD-3-Clause
 RPI_UTILS_LICENSE_FILES = LICENCE
