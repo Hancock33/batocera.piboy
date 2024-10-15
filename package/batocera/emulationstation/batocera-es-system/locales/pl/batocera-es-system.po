@@ -17528,6 +17528,18 @@ msgstr ""
 #~ "Ustaw żądaną maksymalną częstotliwość odświeżania, gdy funkcja Vsync jest "
 #~ "wyłączona."
 
+#~ msgctxt "game_options"
+#~ msgid "Change the game's brightness."
+#~ msgstr "Zmień jasność gry."
+
+#~ msgctxt "game_options"
+#~ msgid "BRIGHTNESS"
+#~ msgstr "JASNOŚĆ"
+
+#~ msgctxt "game_options"
+#~ msgid "200% (Maximum)"
+#~ msgstr "200% (Maksymalnie)"
+
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Otwarcie menu Dolphin-triforce"

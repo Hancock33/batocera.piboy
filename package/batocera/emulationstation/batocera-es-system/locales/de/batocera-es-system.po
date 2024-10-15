@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-10-05 20:21+0000\n"
+"PO-Revision-Date: 2024-10-15 14:42+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -17609,6 +17609,18 @@ msgstr ""
 #~ "Einstellen der gewünschten maximalen Bildwiederholfrequenz, wenn Vsync "
 #~ "ausgeschaltet ist."
 
+#~ msgctxt "game_options"
+#~ msgid "Change the game's brightness."
+#~ msgstr "Helligkeit des Spiels ändern."
+
+#~ msgctxt "game_options"
+#~ msgid "BRIGHTNESS"
+#~ msgstr "HELLIGKEIT"
+
+#~ msgctxt "game_options"
+#~ msgid "200% (Maximum)"
+#~ msgstr "200% (Maximum)"
+
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Dolphin-triforce Menü öffnen"
@@ -17716,95 +17728,3 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Schnelles Vorspulen"
-
-#~ msgctxt "keys_files"
-#~ msgid "Start"
-#~ msgstr "Start"
-
-#~ msgctxt "keys_files"
-#~ msgid "Coin"
-#~ msgstr "Münze"
-
-#~ msgctxt "keys_files"
-#~ msgid "Push 2"
-#~ msgstr "Drücke 2"
-
-#~ msgctxt "keys_files"
-#~ msgid "Push 1"
-#~ msgstr "Drücke 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Push 4"
-#~ msgstr "Drücke 4"
-
-#~ msgctxt "keys_files"
-#~ msgid "Push 3"
-#~ msgstr "Drücke 3"
-
-#~ msgctxt "keys_files"
-#~ msgid "Push 5"
-#~ msgstr "Drücke 5"
-
-#~ msgctxt "keys_files"
-#~ msgid "Push 6"
-#~ msgstr "Drücke 6"
-
-#~ msgctxt "keys_files"
-#~ msgid "Push 7"
-#~ msgstr "Drücke 7"
-
-#~ msgctxt "keys_files"
-#~ msgid "Push 8"
-#~ msgstr "Drücke 8"
-
-#~ msgctxt "keys_files"
-#~ msgid "Digital Left"
-#~ msgstr "Digital Nach Links"
-
-#~ msgctxt "keys_files"
-#~ msgid "Digital Right"
-#~ msgstr "Digital Nach Rechts"
-
-#~ msgctxt "keys_files"
-#~ msgid "Digital Up"
-#~ msgstr "Digital Nach Oben"
-
-#~ msgctxt "keys_files"
-#~ msgid "Digital Down"
-#~ msgstr "Digital Nach Unten"
-
-#~ msgctxt "keys_files"
-#~ msgid "Analog 1 Left"
-#~ msgstr "Analog 1 Nach Links"
-
-#~ msgctxt "keys_files"
-#~ msgid "Analog 1 Right"
-#~ msgstr "Analog 1 Nach Rechts"
-
-#~ msgctxt "keys_files"
-#~ msgid "Analog 1 Up"
-#~ msgstr "Analog 1 Nach Oben"
-
-#~ msgctxt "keys_files"
-#~ msgid "Analog 1 Down"
-#~ msgstr "Analog 1 Nach Unten"
-
-#~ msgctxt "keys_files"
-#~ msgid "Analog 2 Left"
-#~ msgstr "Analog 2 Nach Links"
-
-#~ msgctxt "keys_files"
-#~ msgid "Analog 2 Right"
-#~ msgstr "Analog 2 Nach Rechts"
-
-#~ msgctxt "keys_files"
-#~ msgid "Analog 2 Up"
-#~ msgstr "Analog 2 Nach Oben"
-
-#~ msgctxt "keys_files"
-#~ msgid "Analog 2 Down"
-#~ msgstr "Analog 2 Nach Unten"
-
-#~ msgctxt "keys_files"
-#~ msgid "Set to full screen"
-#~ msgstr "Vollbildmodus festlegen"
