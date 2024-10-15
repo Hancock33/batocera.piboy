@@ -21,6 +21,9 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|654b888ad2997b079e684df9e0
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|5e86ba1900f1ea0eaa002a68cfa2b71300300a11|Oct 15, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|5f5f2a143ec8b85fde48a05c47af4c8995f28c72|Oct 15, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|de38db7d10abf10c50617ee594650347fa856e09|Oct 15, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.19.r113.g100645ac4de|Oct 15, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241015|Oct 15, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241015|Oct 15, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|7559f9278d2175a01e7ab84fcfa43d33d76995d1|Oct 15, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|70eb4b974dfc7381d1b72e7c66acdd83f69f7359|Oct 15, 2024
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|0ae3c8174559dd50091304dc0792c941b80f3b2d|Oct 15, 2024
@@ -52,8 +55,6 @@ Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|8be2da859cbd9515
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|fade1d0b2297013e581a90c197d97a377fcf0b3a|Oct 13, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|f6419e3bc17ad1e4b8123380a724ff4a63e0f4aa|Oct 13, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|9957b6d1c810d62fa2abe482f08b976a525fa8ae|Oct 13, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241013|Oct 13, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241013|Oct 13, 2024
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|8d19fdd58627c9063f6b81bf485d7ceea6dce1f8|Oct 13, 2024
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|1d79d2cd037415564d488c6b09928f6550dcd4bd|Oct 13, 2024
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|a9db82ffc162fa2f9b28af0823effb9c22ed4995|Oct 13, 2024
@@ -66,7 +67,6 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|6cf2a47a9ee8395164e173654dc9b23
 Ports|[omf2097](http://github.com/omf2097/openomf)|9cc7f527bf8ae716bd1e9e6ed1c8b094d3856eb3|Oct 12, 2024
 Ports|[raze](http://github.com/ZDoom/Raze)|e48911dcc98bcd22141797c02d98e8278033caae|Oct 12, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|a1595cad3d9a44f3d60cef8881737111cfa08932|Oct 12, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.19.r92.g7ce580d1fa0|Oct 12, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|e576d24d5bc9d3b15d0ce7355fd779d9ca56a74e|Oct 12, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|6f28995385a6d6906c953b82103b7fc61e97c18d|Oct 12, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|46a8887f910c9794e617c35a4b3e3da6c867dc5e|Oct 12, 2024
