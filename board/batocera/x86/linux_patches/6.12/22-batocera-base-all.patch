@@ -1,3 +1,23 @@
+diff --git a/Documentation/ABI/testing/sysfs-bus-platform-drivers-amd_x3d_vcache b/Documentation/ABI/testing/sysfs-bus-platform-drivers-amd_x3d_vcache
+new file mode 100644
+index 000000000000..1aa6ed0c10d9
+--- /dev/null
++++ b/Documentation/ABI/testing/sysfs-bus-platform-drivers-amd_x3d_vcache
+@@ -0,0 +1,14 @@
++What:		/sys/bus/platform/drivers/amd_x3d_vcache/AMDI0101\:00/amd_x3d_mode
++Date:           October 2024
++KernelVersion:	6.13
++Contact:	Basavaraj Natikar <Basavaraj.Natikar@amd.com>
++Description:	(RW) AMD 3D V-Cache optimizer allows users to switch CPU core
++		rankings dynamically.
++
++		This file switches between these two modes:
++		- "frequency" cores within the faster CCD are prioritized before
++		those in the slower CCD.
++		- "cache" cores within the larger L3 CCD are prioritized before
++		those in the smaller L3 CCD.
++
++		Format: %s.
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
 index 1518343bbe22..a1773a699743 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
@@ -838,10 +858,25 @@ index 000000000000..767844637a7d
 +  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 7ad507f49324..47f8262072b7 100644
+index 7ad507f49324..b5dbe068368c 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -16540,6 +16540,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
+@@ -972,6 +972,14 @@ Q:	https://patchwork.kernel.org/project/linux-rdma/list/
+ F:	drivers/infiniband/hw/efa/
+ F:	include/uapi/rdma/efa-abi.h
+ 
++AMD 3D V-CACHE PERFORMANCE OPTIMIZER DRIVER
++M:	Basavaraj Natikar <Basavaraj.Natikar@amd.com>
++R:	Mario Limonciello <mario.limonciello@amd.com>
++L:	platform-driver-x86@vger.kernel.org
++S:	Supported
++F:	Documentation/ABI/testing/sysfs-bus-platform-drivers-amd_x3d_vcache
++F:	drivers/platform/x86/amd/x3d_vcache.c
++
+ AMD ADDRESS TRANSLATION LIBRARY (ATL)
+ M:	Yazen Ghannam <Yazen.Ghannam@amd.com>
+ L:	linux-edac@vger.kernel.org
+@@ -16540,6 +16548,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
  F:	Documentation/filesystems/ntfs3.rst
  F:	fs/ntfs3/
  
@@ -857,7 +892,7 @@ index 7ad507f49324..47f8262072b7 100644
  NUBUS SUBSYSTEM
  M:	Finn Thain <fthain@linux-m68k.org>
  L:	linux-m68k@lists.linux-m68k.org
-@@ -17460,6 +17469,17 @@ T:	git git://git.kernel.org/pub/scm/linux/kernel/git/overlayfs/vfs.git
+@@ -17460,6 +17477,17 @@ T:	git git://git.kernel.org/pub/scm/linux/kernel/git/overlayfs/vfs.git
  F:	Documentation/filesystems/overlayfs.rst
  F:	fs/overlayfs/
  
@@ -876,7 +911,7 @@ index 7ad507f49324..47f8262072b7 100644
  M:	Christian Lamparter <chunkeey@googlemail.com>
  L:	linux-wireless@vger.kernel.org
 diff --git a/Makefile b/Makefile
-index 1fa16997c6cc..05c1c2680a59 100644
+index 08b2f136ca67..79f0a9ca1644 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -801,11 +801,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -2090,7 +2125,7 @@ index 97c2d4f15d76..5a3af44d785a 100644
  	  This driver adds a CPUFreq driver which utilizes a fine grain
  	  processor performance frequency control range instead of legacy
 diff --git a/drivers/cpufreq/amd-pstate.c b/drivers/cpufreq/amd-pstate.c
-index 15e201d5e911..75709ba7550b 100644
+index 15e201d5e911..8d24f62353df 100644
 --- a/drivers/cpufreq/amd-pstate.c
 +++ b/drivers/cpufreq/amd-pstate.c
 @@ -233,7 +233,7 @@ static int amd_pstate_get_energy_pref_index(struct amd_cpudata *cpudata)
@@ -2172,7 +2207,63 @@ index 15e201d5e911..75709ba7550b 100644
  			     u32 min_perf, u32 des_perf,
  			     u32 max_perf, bool fast_switch)
  {
-@@ -696,7 +696,7 @@ static int amd_pstate_cpu_boost_update(struct cpufreq_policy *policy, bool on)
+@@ -536,11 +536,16 @@ static int amd_pstate_verify(struct cpufreq_policy_data *policy)
+ 
+ static int amd_pstate_update_min_max_limit(struct cpufreq_policy *policy)
+ {
+-	u32 max_limit_perf, min_limit_perf, lowest_perf;
++	u32 max_limit_perf, min_limit_perf, lowest_perf, max_perf;
+ 	struct amd_cpudata *cpudata = policy->driver_data;
+ 
+-	max_limit_perf = div_u64(policy->max * cpudata->highest_perf, cpudata->max_freq);
+-	min_limit_perf = div_u64(policy->min * cpudata->highest_perf, cpudata->max_freq);
++	if (cpudata->boost_supported && !policy->boost_enabled)
++		max_perf = READ_ONCE(cpudata->nominal_perf);
++	else
++		max_perf = READ_ONCE(cpudata->highest_perf);
++
++	max_limit_perf = div_u64(policy->max * max_perf, policy->cpuinfo.max_freq);
++	min_limit_perf = div_u64(policy->min * max_perf, policy->cpuinfo.max_freq);
+ 
+ 	lowest_perf = READ_ONCE(cpudata->lowest_perf);
+ 	if (min_limit_perf < lowest_perf)
+@@ -660,34 +665,12 @@ static void amd_pstate_adjust_perf(unsigned int cpu,
+ static int amd_pstate_cpu_boost_update(struct cpufreq_policy *policy, bool on)
+ {
+ 	struct amd_cpudata *cpudata = policy->driver_data;
+-	struct cppc_perf_ctrls perf_ctrls;
+-	u32 highest_perf, nominal_perf, nominal_freq, max_freq;
++	u32 nominal_freq, max_freq;
+ 	int ret = 0;
+ 
+-	highest_perf = READ_ONCE(cpudata->highest_perf);
+-	nominal_perf = READ_ONCE(cpudata->nominal_perf);
+ 	nominal_freq = READ_ONCE(cpudata->nominal_freq);
+ 	max_freq = READ_ONCE(cpudata->max_freq);
+ 
+-	if (boot_cpu_has(X86_FEATURE_CPPC)) {
+-		u64 value = READ_ONCE(cpudata->cppc_req_cached);
+-
+-		value &= ~GENMASK_ULL(7, 0);
+-		value |= on ? highest_perf : nominal_perf;
+-		WRITE_ONCE(cpudata->cppc_req_cached, value);
+-
+-		wrmsrl_on_cpu(cpudata->cpu, MSR_AMD_CPPC_REQ, value);
+-	} else {
+-		perf_ctrls.max_perf = on ? highest_perf : nominal_perf;
+-		ret = cppc_set_perf(cpudata->cpu, &perf_ctrls);
+-		if (ret) {
+-			cpufreq_cpu_release(policy);
+-			pr_debug("Failed to set max perf on CPU:%d. ret:%d\n",
+-				cpudata->cpu, ret);
+-			return ret;
+-		}
+-	}
+-
+ 	if (on)
+ 		policy->cpuinfo.max_freq = max_freq;
+ 	else if (policy->cpuinfo.max_freq > nominal_freq * 1000)
+@@ -696,7 +679,7 @@ static int amd_pstate_cpu_boost_update(struct cpufreq_policy *policy, bool on)
  	policy->max = policy->cpuinfo.max_freq;
  
  	if (cppc_state == AMD_PSTATE_PASSIVE) {
@@ -2181,7 +2272,7 @@ index 15e201d5e911..75709ba7550b 100644
  		if (ret < 0)
  			pr_debug("Failed to update freq constraint: CPU%d\n", cpudata->cpu);
  	}
-@@ -963,17 +963,17 @@ static int amd_pstate_cpu_init(struct cpufreq_policy *policy)
+@@ -963,17 +946,17 @@ static int amd_pstate_cpu_init(struct cpufreq_policy *policy)
  
  	ret = amd_pstate_init_perf(cpudata);
  	if (ret)
@@ -2202,7 +2293,7 @@ index 15e201d5e911..75709ba7550b 100644
  
  	min_freq = READ_ONCE(cpudata->min_freq);
  	max_freq = READ_ONCE(cpudata->max_freq);
-@@ -995,18 +995,11 @@ static int amd_pstate_cpu_init(struct cpufreq_policy *policy)
+@@ -995,18 +978,11 @@ static int amd_pstate_cpu_init(struct cpufreq_policy *policy)
  	if (cpu_feature_enabled(X86_FEATURE_CPPC))
  		policy->fast_switch_possible = true;
  
@@ -2223,7 +2314,7 @@ index 15e201d5e911..75709ba7550b 100644
  	}
  
  	cpudata->max_limit_freq = max_freq;
-@@ -1019,9 +1012,7 @@ static int amd_pstate_cpu_init(struct cpufreq_policy *policy)
+@@ -1019,9 +995,7 @@ static int amd_pstate_cpu_init(struct cpufreq_policy *policy)
  
  	return 0;
  
@@ -2234,7 +2325,7 @@ index 15e201d5e911..75709ba7550b 100644
  	kfree(cpudata);
  	return ret;
  }
-@@ -1030,8 +1021,7 @@ static void amd_pstate_cpu_exit(struct cpufreq_policy *policy)
+@@ -1030,8 +1004,7 @@ static void amd_pstate_cpu_exit(struct cpufreq_policy *policy)
  {
  	struct amd_cpudata *cpudata = policy->driver_data;
  
@@ -2244,7 +2335,46 @@ index 15e201d5e911..75709ba7550b 100644
  	policy->fast_switch_possible = false;
  	kfree(cpudata);
  }
-@@ -1706,6 +1696,13 @@ static int amd_pstate_epp_resume(struct cpufreq_policy *policy)
+@@ -1492,23 +1465,13 @@ static void amd_pstate_epp_cpu_exit(struct cpufreq_policy *policy)
+ static int amd_pstate_epp_update_limit(struct cpufreq_policy *policy)
+ {
+ 	struct amd_cpudata *cpudata = policy->driver_data;
+-	u32 max_perf, min_perf, min_limit_perf, max_limit_perf;
++	u32 max_perf, min_perf;
+ 	u64 value;
+ 	s16 epp;
+ 
+ 	max_perf = READ_ONCE(cpudata->highest_perf);
+ 	min_perf = READ_ONCE(cpudata->lowest_perf);
+-	max_limit_perf = div_u64(policy->max * cpudata->highest_perf, cpudata->max_freq);
+-	min_limit_perf = div_u64(policy->min * cpudata->highest_perf, cpudata->max_freq);
+-
+-	if (min_limit_perf < min_perf)
+-		min_limit_perf = min_perf;
+-
+-	if (max_limit_perf < min_limit_perf)
+-		max_limit_perf = min_limit_perf;
+-
+-	WRITE_ONCE(cpudata->max_limit_perf, max_limit_perf);
+-	WRITE_ONCE(cpudata->min_limit_perf, min_limit_perf);
++	amd_pstate_update_min_max_limit(policy);
+ 
+ 	max_perf = clamp_t(unsigned long, max_perf, cpudata->min_limit_perf,
+ 			cpudata->max_limit_perf);
+@@ -1545,12 +1508,6 @@ static int amd_pstate_epp_update_limit(struct cpufreq_policy *policy)
+ 	if (cpudata->policy == CPUFREQ_POLICY_PERFORMANCE)
+ 		epp = 0;
+ 
+-	/* Set initial EPP value */
+-	if (cpu_feature_enabled(X86_FEATURE_CPPC)) {
+-		value &= ~GENMASK_ULL(31, 24);
+-		value |= (u64)epp << 24;
+-	}
+-
+ 	WRITE_ONCE(cpudata->cppc_req_cached, value);
+ 	return amd_pstate_set_epp(cpudata, epp);
+ }
+@@ -1706,6 +1663,13 @@ static int amd_pstate_epp_resume(struct cpufreq_policy *policy)
  	return 0;
  }
  
@@ -2258,7 +2388,7 @@ index 15e201d5e911..75709ba7550b 100644
  static struct cpufreq_driver amd_pstate_driver = {
  	.flags		= CPUFREQ_CONST_LOOPS | CPUFREQ_NEED_UPDATE_LIMITS,
  	.verify		= amd_pstate_verify,
-@@ -1719,6 +1716,7 @@ static struct cpufreq_driver amd_pstate_driver = {
+@@ -1719,6 +1683,7 @@ static struct cpufreq_driver amd_pstate_driver = {
  	.update_limits	= amd_pstate_update_limits,
  	.name		= "amd-pstate",
  	.attr		= amd_pstate_attr,
@@ -2266,7 +2396,7 @@ index 15e201d5e911..75709ba7550b 100644
  };
  
  static struct cpufreq_driver amd_pstate_epp_driver = {
-@@ -1735,6 +1733,7 @@ static struct cpufreq_driver amd_pstate_epp_driver = {
+@@ -1735,6 +1700,7 @@ static struct cpufreq_driver amd_pstate_epp_driver = {
  	.set_boost	= amd_pstate_set_boost,
  	.name		= "amd-pstate-epp",
  	.attr		= amd_pstate_epp_attr,
@@ -2274,7 +2404,7 @@ index 15e201d5e911..75709ba7550b 100644
  };
  
  static int __init amd_pstate_set_driver(int mode_idx)
-@@ -1756,7 +1755,7 @@ static int __init amd_pstate_set_driver(int mode_idx)
+@@ -1756,7 +1722,7 @@ static int __init amd_pstate_set_driver(int mode_idx)
  	return -EINVAL;
  }
  
@@ -2283,7 +2413,7 @@ index 15e201d5e911..75709ba7550b 100644
   * CPPC function is not supported for family ID 17H with model_ID ranging from 0x10 to 0x2F.
   * show the debug message that helps to check if the CPU has CPPC support for loading issue.
   */
-@@ -1879,9 +1878,9 @@ static int __init amd_pstate_init(void)
+@@ -1879,9 +1845,9 @@ static int __init amd_pstate_init(void)
  			current_pstate_driver->adjust_perf = amd_pstate_adjust_perf;
  	} else {
  		pr_debug("AMD CPPC shared memory based functionality is supported\n");
@@ -2357,42 +2487,6 @@ index b0018f371ea3..23f51eb073e4 100644
  	else if (!strcmp(str, "active"))
  		default_driver = &intel_pstate;
  	else if (!strcmp(str, "passive"))
-diff --git a/drivers/firmware/sysfb.c b/drivers/firmware/sysfb.c
-index a3df782fa687..940d8f514341 100644
---- a/drivers/firmware/sysfb.c
-+++ b/drivers/firmware/sysfb.c
-@@ -35,6 +35,22 @@
- #include <linux/screen_info.h>
- #include <linux/sysfb.h>
- 
-+static int skip_simpledrm;
-+
-+static int __init simpledrm_disable(char *opt)
-+{
-+	if (!opt)
-+                return -EINVAL;
-+
-+	get_option(&opt, &skip_simpledrm);
-+
-+	if (skip_simpledrm)
-+		pr_info("The simpledrm driver will not be probed\n");
-+
-+	return 0;
-+}
-+early_param("nvidia-drm.modeset", simpledrm_disable);
-+
- static struct platform_device *pd;
- static DEFINE_MUTEX(disable_lock);
- static bool disabled;
-@@ -145,7 +161,7 @@ static __init int sysfb_init(void)
- 
- 	/* try to create a simple-framebuffer device */
- 	compatible = sysfb_parse_mode(si, &mode);
--	if (compatible) {
-+	if (compatible && !skip_simpledrm) {
- 		pd = sysfb_create_simplefb(si, &mode, parent);
- 		if (!IS_ERR(pd))
- 			goto put_device;
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu.h b/drivers/gpu/drm/amd/amdgpu/amdgpu.h
 index 9b1e0ede05a4..7617963901fa 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu.h
@@ -16408,6 +16502,241 @@ index dccb60c1d9cc..d9a8af789de8 100644
  	{ 0 }
  };
  
+diff --git a/drivers/platform/x86/amd/Kconfig b/drivers/platform/x86/amd/Kconfig
+index f88682d36447..d73f691020d0 100644
+--- a/drivers/platform/x86/amd/Kconfig
++++ b/drivers/platform/x86/amd/Kconfig
+@@ -6,6 +6,18 @@
+ source "drivers/platform/x86/amd/pmf/Kconfig"
+ source "drivers/platform/x86/amd/pmc/Kconfig"
+ 
++config AMD_3D_VCACHE
++	tristate "AMD 3D V-Cache Performance Optimizer Driver"
++	depends on X86_64 && ACPI
++	help
++	  The driver provides a sysfs interface, enabling the setting of a bias
++	  that alters CPU core reordering. This bias prefers cores with higher
++	  frequencies or larger L3 caches on processors supporting AMD 3D V-Cache
++	  technology.
++
++	  If you choose to compile this driver as a module the module will be
++	  called amd_3d_vcache.
++
+ config AMD_HSMP
+ 	tristate "AMD HSMP Driver"
+ 	depends on AMD_NB && X86_64 && ACPI
+diff --git a/drivers/platform/x86/amd/Makefile b/drivers/platform/x86/amd/Makefile
+index dcec0a46f8af..16e4cce02242 100644
+--- a/drivers/platform/x86/amd/Makefile
++++ b/drivers/platform/x86/amd/Makefile
+@@ -4,6 +4,8 @@
+ # AMD x86 Platform-Specific Drivers
+ #
+ 
++obj-$(CONFIG_AMD_3D_VCACHE)     += amd_3d_vcache.o
++amd_3d_vcache-objs              := x3d_vcache.o
+ obj-$(CONFIG_AMD_PMC)		+= pmc/
+ amd_hsmp-y			:= hsmp.o
+ obj-$(CONFIG_AMD_HSMP)		+= amd_hsmp.o
+diff --git a/drivers/platform/x86/amd/x3d_vcache.c b/drivers/platform/x86/amd/x3d_vcache.c
+new file mode 100644
+index 000000000000..679613d02b9a
+--- /dev/null
++++ b/drivers/platform/x86/amd/x3d_vcache.c
+@@ -0,0 +1,193 @@
++// SPDX-License-Identifier: GPL-2.0-or-later
++/*
++ * AMD 3D V-Cache Performance Optimizer Driver
++ *
++ * Copyright (c) 2024, Advanced Micro Devices, Inc.
++ * All Rights Reserved.
++ *
++ * Authors: Basavaraj Natikar <Basavaraj.Natikar@amd.com>
++ *          Perry Yuan <perry.yuan@amd.com>
++ *          Mario Limonciello <mario.limonciello@amd.com>
++ *
++ */
++
++#define pr_fmt(fmt) KBUILD_MODNAME ": " fmt
++
++#include <linux/acpi.h>
++#include <linux/device.h>
++#include <linux/errno.h>
++#include <linux/module.h>
++#include <linux/mutex.h>
++#include <linux/platform_device.h>
++
++static char *x3d_mode = "frequency";
++module_param(x3d_mode, charp, 0444);
++MODULE_PARM_DESC(x3d_mode, "Initial 3D-VCache mode; 'frequency' (default) or 'cache'");
++
++#define DSM_REVISION_ID			0
++#define DSM_GET_FUNCS_SUPPORTED		0
++#define DSM_SET_X3D_MODE		1
++
++static guid_t x3d_guid = GUID_INIT(0xdff8e55f, 0xbcfd, 0x46fb, 0xba, 0x0a,
++				   0xef, 0xd0, 0x45, 0x0f, 0x34, 0xee);
++
++enum amd_x3d_mode_type {
++	MODE_INDEX_FREQ,
++	MODE_INDEX_CACHE,
++};
++
++static const char * const amd_x3d_mode_strings[] = {
++	[MODE_INDEX_FREQ] = "frequency",
++	[MODE_INDEX_CACHE] = "cache",
++};
++
++struct amd_x3d_dev {
++	struct device *dev;
++	acpi_handle ahandle;
++	/* To protect x3d mode setting */
++	struct mutex lock;
++	enum amd_x3d_mode_type curr_mode;
++};
++
++static int amd_x3d_mode_switch(struct amd_x3d_dev *data, int new_state)
++{
++	union acpi_object *out, argv;
++
++	guard(mutex)(&data->lock);
++	argv.type = ACPI_TYPE_INTEGER;
++	argv.integer.value = new_state;
++
++	out = acpi_evaluate_dsm(data->ahandle, &x3d_guid, DSM_REVISION_ID, DSM_SET_X3D_MODE,
++				&argv);
++	if (!out) {
++		dev_err(data->dev, "failed to evaluate _DSM\n");
++		return -EINVAL;
++	}
++
++	data->curr_mode = new_state;
++
++	ACPI_FREE(out);
++
++	return 0;
++}
++
++static ssize_t amd_x3d_mode_store(struct device *dev, struct device_attribute *attr,
++				  const char *buf, size_t count)
++{
++	struct amd_x3d_dev *data = dev_get_drvdata(dev);
++	int ret;
++
++	ret = sysfs_match_string(amd_x3d_mode_strings, buf);
++	if (ret < 0) {
++		dev_err(dev, "no matching mode to set %s\n", buf);
++		return ret;
++	}
++
++	ret = amd_x3d_mode_switch(data, ret);
++
++	return ret ? ret : count;
++}
++
++static ssize_t amd_x3d_mode_show(struct device *dev, struct device_attribute *attr, char *buf)
++{
++	struct amd_x3d_dev *data = dev_get_drvdata(dev);
++
++	if (data->curr_mode > MODE_INDEX_CACHE || data->curr_mode < MODE_INDEX_FREQ)
++		return -EINVAL;
++
++	return sysfs_emit(buf, "%s\n", amd_x3d_mode_strings[data->curr_mode]);
++}
++static DEVICE_ATTR_RW(amd_x3d_mode);
++
++static struct attribute *amd_x3d_attrs[] = {
++	&dev_attr_amd_x3d_mode.attr,
++	NULL
++};
++ATTRIBUTE_GROUPS(amd_x3d);
++
++static int amd_x3d_supported(struct amd_x3d_dev *data)
++{
++	union acpi_object *out;
++
++	out = acpi_evaluate_dsm(data->ahandle, &x3d_guid, DSM_REVISION_ID,
++				DSM_GET_FUNCS_SUPPORTED, NULL);
++	if (!out) {
++		dev_err(data->dev, "failed to evaluate _DSM\n");
++		return -ENODEV;
++	}
++
++	if (out->type != ACPI_TYPE_BUFFER) {
++		dev_err(data->dev, "invalid type %d\n", out->type);
++		ACPI_FREE(out);
++		return -EINVAL;
++	}
++
++	ACPI_FREE(out);
++	return 0;
++}
++
++static const struct acpi_device_id amd_x3d_acpi_ids[] = {
++	{"AMDI0101"},
++	{ },
++};
++MODULE_DEVICE_TABLE(acpi, amd_x3d_acpi_ids);
++
++static void amd_x3d_remove(void *context)
++{
++	struct amd_x3d_dev *data = context;
++
++	mutex_destroy(&data->lock);
++}
++
++static int amd_x3d_probe(struct platform_device *pdev)
++{
++	const struct acpi_device_id *id;
++	struct amd_x3d_dev *data;
++	acpi_handle handle;
++	int ret;
++
++	handle = ACPI_HANDLE(&pdev->dev);
++	if (!handle)
++		return -ENODEV;
++
++	id = acpi_match_device(amd_x3d_acpi_ids, &pdev->dev);
++	if (!id)
++		dev_err_probe(&pdev->dev, -ENODEV, "unable to match ACPI ID and data\n");
++
++	data = devm_kzalloc(&pdev->dev, sizeof(*data), GFP_KERNEL);
++	if (!data)
++		return -ENOMEM;
++
++	data->dev = &pdev->dev;
++	data->ahandle = handle;
++	platform_set_drvdata(pdev, data);
++
++	ret = amd_x3d_supported(data);
++	if (ret)
++		dev_err_probe(&pdev->dev, ret, "not supported on this platform\n");
++
++	ret = match_string(amd_x3d_mode_strings, ARRAY_SIZE(amd_x3d_mode_strings), x3d_mode);
++	if (ret < 0)
++		return dev_err_probe(&pdev->dev, -EINVAL, "invalid mode %s\n", x3d_mode);
++
++	mutex_init(&data->lock);
++
++	ret = amd_x3d_mode_switch(data, ret);
++	if (ret < 0)
++		return ret;
++
++	return devm_add_action_or_reset(&pdev->dev, amd_x3d_remove, data);
++}
++
++static struct platform_driver amd_3d_vcache_driver = {
++	.driver = {
++		.name = "amd_x3d_vcache",
++		.dev_groups = amd_x3d_groups,
++		.acpi_match_table = amd_x3d_acpi_ids,
++	},
++	.probe = amd_x3d_probe,
++};
++module_platform_driver(amd_3d_vcache_driver);
++
++MODULE_DESCRIPTION("AMD 3D V-Cache Performance Optimizer Driver");
++MODULE_LICENSE("GPL");
 diff --git a/include/linux/cpufreq.h b/include/linux/cpufreq.h
 index 7fe0981a7e46..8a2e1fece90c 100644
 --- a/include/linux/cpufreq.h
@@ -18693,6 +19022,84 @@ index 2bbb6eca5144..125cdf85741c 100644
  	}
  
  	return state;
+diff --git a/kernel/sched/core.c b/kernel/sched/core.c
+index aeb595514461..9dd091ad5a60 100644
+--- a/kernel/sched/core.c
++++ b/kernel/sched/core.c
+@@ -2009,12 +2009,19 @@ unsigned long get_wchan(struct task_struct *p)
+ 
+ void enqueue_task(struct rq *rq, struct task_struct *p, int flags)
+ {
++	bool wakee_not_migrated = (flags & ENQUEUE_WAKEUP) && !(flags & ENQUEUE_MIGRATED);
++
+ 	if (!(flags & ENQUEUE_NOCLOCK))
+ 		update_rq_clock(rq);
+ 
+ 	if (!(flags & ENQUEUE_RESTORE)) {
+ 		sched_info_enqueue(rq, p);
+-		psi_enqueue(p, (flags & ENQUEUE_WAKEUP) && !(flags & ENQUEUE_MIGRATED));
++
++		/* Notify PSI that the task was migrated in a delayed state before wakeup. */
++		if ((p->migration_flags & DELAYED_MIGRATED) && !task_on_rq_migrating(p)) {
++			wakee_not_migrated = false;
++			p->migration_flags &= ~DELAYED_MIGRATED;
++		}
+ 	}
+ 
+ 	p->sched_class->enqueue_task(rq, p, flags);
+@@ -2023,6 +2030,8 @@ void enqueue_task(struct rq *rq, struct task_struct *p, int flags)
+ 	 * ->sched_delayed.
+ 	 */
+ 	uclamp_rq_inc(rq, p);
++	if (!(flags & ENQUEUE_RESTORE))
++		psi_enqueue(p, wakee_not_migrated);
+ 
+ 	if (sched_core_enabled(rq))
+ 		sched_core_enqueue(rq, p);
+@@ -2042,6 +2051,9 @@ inline bool dequeue_task(struct rq *rq, struct task_struct *p, int flags)
+ 	if (!(flags & DEQUEUE_SAVE)) {
+ 		sched_info_dequeue(rq, p);
+ 		psi_dequeue(p, flags & DEQUEUE_SLEEP);
++
++		if (p->se.sched_delayed && task_on_rq_migrating(p))
++			p->migration_flags |= DELAYED_MIGRATED;
+ 	}
+ 
+ 	/*
+@@ -3737,7 +3749,7 @@ static int ttwu_runnable(struct task_struct *p, int wake_flags)
+ 	if (task_on_rq_queued(p)) {
+ 		update_rq_clock(rq);
+ 		if (p->se.sched_delayed)
+-			enqueue_task(rq, p, ENQUEUE_NOCLOCK | ENQUEUE_DELAYED);
++			enqueue_task(rq, p, ENQUEUE_NOCLOCK | ENQUEUE_WAKEUP | ENQUEUE_DELAYED);
+ 		if (!task_on_cpu(rq, p)) {
+ 			/*
+ 			 * When on_rq && !on_cpu the task is preempted, see if
+@@ -6544,6 +6556,7 @@ static void __sched notrace __schedule(int sched_mode)
+ 	 * as a preemption by schedule_debug() and RCU.
+ 	 */
+ 	bool preempt = sched_mode > SM_NONE;
++	bool block = false;
+ 	unsigned long *switch_count;
+ 	unsigned long prev_state;
+ 	struct rq_flags rf;
+@@ -6629,6 +6642,7 @@ static void __sched notrace __schedule(int sched_mode)
+ 			 * After this, schedule() must not care about p->state any more.
+ 			 */
+ 			block_task(rq, prev, flags);
++			block = true;
+ 		}
+ 		switch_count = &prev->nvcsw;
+ 	}
+@@ -6674,7 +6688,7 @@ static void __sched notrace __schedule(int sched_mode)
+ 
+ 		migrate_disable_switch(rq, prev);
+ 		psi_account_irqtime(rq, prev, next);
+-		psi_sched_switch(prev, next, !task_on_rq_queued(prev));
++		psi_sched_switch(prev, next, block);
+ 
+ 		trace_sched_switch(preempt, prev, next, prev_state);
+ 
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
 index 225b31aaee55..ae29f0d42213 100644
 --- a/kernel/sched/fair.c
@@ -18731,10 +19138,18 @@ index 225b31aaee55..ae29f0d42213 100644
  #ifdef CONFIG_NUMA_BALANCING
  /* Restrict the NUMA promotion throughput (MB/s) for each target node. */
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 6085ef50febf..c9e5ef0af192 100644
+index 6085ef50febf..808bfaded2af 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
-@@ -2785,7 +2785,7 @@ extern void deactivate_task(struct rq *rq, struct task_struct *p, int flags);
+@@ -1326,6 +1326,7 @@ static inline int cpu_of(struct rq *rq)
+ }
+ 
+ #define MDF_PUSH		0x01
++#define DELAYED_MIGRATED	0x02 /* Task was migrated when in DELAYED_DEQUEUE state */
+ 
+ static inline bool is_migration_disabled(struct task_struct *p)
+ {
+@@ -2785,7 +2786,7 @@ extern void deactivate_task(struct rq *rq, struct task_struct *p, int flags);
  
  extern void wakeup_preempt(struct rq *rq, struct task_struct *p, int flags);
  
@@ -18743,6 +19158,34 @@ index 6085ef50febf..c9e5ef0af192 100644
  # define SCHED_NR_MIGRATE_BREAK 8
  #else
  # define SCHED_NR_MIGRATE_BREAK 32
+diff --git a/kernel/sched/stats.h b/kernel/sched/stats.h
+index 237780aa3c53..06a2c6d3ec1e 100644
+--- a/kernel/sched/stats.h
++++ b/kernel/sched/stats.h
+@@ -129,6 +129,13 @@ static inline void psi_enqueue(struct task_struct *p, bool wakeup)
+ 	if (static_branch_likely(&psi_disabled))
+ 		return;
+ 
++	/*
++	 * Delayed task is not ready to run yet!
++	 * Wait for a requeue before accounting.
++	 */
++	if (p->se.sched_delayed)
++		return;
++
+ 	if (p->in_memstall)
+ 		set |= TSK_MEMSTALL_RUNNING;
+ 
+@@ -148,6 +155,9 @@ static inline void psi_dequeue(struct task_struct *p, bool sleep)
+ 	if (static_branch_likely(&psi_disabled))
+ 		return;
+ 
++	/* Delayed task can only be dequeued for migration. */
++	WARN_ON_ONCE(p->se.sched_delayed && sleep);
++
+ 	/*
+ 	 * A voluntary sleep is a dequeue followed by a task switch. To
+ 	 * avoid walking all ancestors twice, psi_task_switch() handles
 diff --git a/kernel/sched/wait.c b/kernel/sched/wait.c
 index 51e38f5f4701..c5cc616484ba 100644
 --- a/kernel/sched/wait.c
