@@ -123,35 +123,35 @@ index a6c7d737428c..cbd2f18015dd 100644
  		blconfig = &blconfig;
  		blpubkey = &blpubkey;
 diff --git a/arch/arm64/configs/bcm2711_defconfig b/arch/arm64/configs/bcm2711_defconfig
-index cf7fff84db51..4b1c533bd816 100644
+index 574d867dde98..a978818e80d2 100644
 --- a/arch/arm64/configs/bcm2711_defconfig
 +++ b/arch/arm64/configs/bcm2711_defconfig
-@@ -49,6 +49,7 @@ CONFIG_ARM64_ERRATUM_2441009=y
- # CONFIG_CAVIUM_ERRATUM_27456 is not set
+@@ -50,6 +50,7 @@ CONFIG_ARM64_ERRATUM_2441009=y
  CONFIG_ARM64_VA_BITS_39=y
  CONFIG_NR_CPUS=4
+ CONFIG_HOTPLUG_CPU=y
 +CONFIG_NUMA=y
  CONFIG_COMPAT=y
  CONFIG_ARMV8_DEPRECATED=y
  CONFIG_SWP_EMULATION=y
-@@ -1704,3 +1705,4 @@ CONFIG_SCHED_TRACER=y
+@@ -1705,3 +1706,4 @@ CONFIG_SCHED_TRACER=y
  CONFIG_BLK_DEV_IO_TRACE=y
  # CONFIG_UPROBE_EVENTS is not set
  # CONFIG_STRICT_DEVMEM is not set
 +CONFIG_NUMA_EMULATION=y
 diff --git a/arch/arm64/configs/bcm2712_defconfig b/arch/arm64/configs/bcm2712_defconfig
-index 2ef3eab9d87c..ff5d1714d16e 100644
+index 2f62f1d6f165..9c561dd02f22 100644
 --- a/arch/arm64/configs/bcm2712_defconfig
 +++ b/arch/arm64/configs/bcm2712_defconfig
-@@ -50,6 +50,7 @@ CONFIG_ARM64_ERRATUM_2441009=y
- CONFIG_ARM64_16K_PAGES=y
+@@ -51,6 +51,7 @@ CONFIG_ARM64_16K_PAGES=y
  CONFIG_ARM64_VA_BITS_47=y
  CONFIG_NR_CPUS=4
+ CONFIG_HOTPLUG_CPU=y
 +CONFIG_NUMA=y
  CONFIG_COMPAT=y
  CONFIG_ARMV8_DEPRECATED=y
  CONFIG_SWP_EMULATION=y
-@@ -1707,3 +1708,4 @@ CONFIG_SCHED_TRACER=y
+@@ -1708,3 +1709,4 @@ CONFIG_SCHED_TRACER=y
  CONFIG_BLK_DEV_IO_TRACE=y
  # CONFIG_UPROBE_EVENTS is not set
  # CONFIG_STRICT_DEVMEM is not set
