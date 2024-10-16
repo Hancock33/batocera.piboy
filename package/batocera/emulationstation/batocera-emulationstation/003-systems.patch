@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index 6178bc82..2ba0d52b 100644
+index 8b7517220..ec2586ea0 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -9,195 +9,282 @@ namespace PlatformIds
+@@ -9,196 +9,283 @@ namespace PlatformIds
  	static std::map<std::string, PlatformId> Platforms =
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
@@ -250,6 +250,7 @@ index 6178bc82..2ba0d52b 100644
 +		{ "uzebox",					UZEBOX },
 +		{ "vectrex",				VECTREX },
 +		{ "vg5000",					VG5000 },
++		{ "vircon32",				VIRCON32 },
 +		{ "c20",					VIC20 },
 +		{ "o2em",					VIDEOPAC_ODYSSEY2 },
 +		{ "vidsysco",				VIDSYSCO },
@@ -414,6 +415,7 @@ index 6178bc82..2ba0d52b 100644
 -		{ "camplynx",				CAMPUTER_LYNX },
 -		{ "gamepock",				EPOCH_GAMEPOCKET },	
 -		{ "wasm4",					WASM4 },
+-		{ "vircon32",				VIRCON32 },
 -		{ "vis",					TANDY_VIS },
 -			
  		{ "pcarcade",				TEKNOPARROT },
@@ -424,7 +426,7 @@ index 6178bc82..2ba0d52b 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index 516608a5..81edc5ee 100644
+index a085406aa..179e2319b 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
 @@ -11,54 +11,170 @@ namespace PlatformIds
@@ -614,7 +616,7 @@ index 516608a5..81edc5ee 100644
  		SEGA_32X,
  		SEGA_CD,
  		SEGA_CHIHIRO,
-@@ -66,112 +182,80 @@ namespace PlatformIds
+@@ -66,113 +182,81 @@ namespace PlatformIds
  		SEGA_GAME_GEAR,
  		SEGA_GENESIS,
  		SEGA_MASTER_SYSTEM,
@@ -742,6 +744,7 @@ index 516608a5..81edc5ee 100644
 +		VIC20,
 +		VIDEOPAC_ODYSSEY2,
 +		VIDSYSCO,
++		VIRCON32,
 +		VISCO,
 +		VISUALPINBALL,
  		VTECH_CREATIVISION,
@@ -783,13 +786,14 @@ index 516608a5..81edc5ee 100644
 -		CAMPUTER_LYNX,
 -		EPOCH_GAMEPOCKET,
 -		WASM4,
+-		VIRCON32,
 -		TANDY_VIS,
 -		LOWRESNX,
  
  		TEKNOPARROT,
  
 diff --git a/es-app/src/scrapers/GamesDBJSONScraper.cpp b/es-app/src/scrapers/GamesDBJSONScraper.cpp
-index 66de7c31..1390f3cb 100644
+index 66de7c31e..1390f3cb8 100644
 --- a/es-app/src/scrapers/GamesDBJSONScraper.cpp
 +++ b/es-app/src/scrapers/GamesDBJSONScraper.cpp
 @@ -38,11 +38,8 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
@@ -851,7 +855,7 @@ index 66de7c31..1390f3cb 100644
  	/* Non existing systems
  	{ AMIGACDTV, "129" },
 diff --git a/es-app/src/scrapers/HfsDBScraper.cpp b/es-app/src/scrapers/HfsDBScraper.cpp
-index a252ef60..25223140 100644
+index a252ef607..252231404 100644
 --- a/es-app/src/scrapers/HfsDBScraper.cpp
 +++ b/es-app/src/scrapers/HfsDBScraper.cpp
 @@ -74,7 +74,6 @@ const std::map<PlatformId, std::string> hfsdb_platformids
@@ -881,10 +885,10 @@ index a252ef60..25223140 100644
  
  const std::set<Scraper::ScraperMediaSource>& HfsDBScraper::getSupportedMedias()
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index a1ca84ed..30bf2eb3 100644
+index e140fa1df..c8457bd26 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
-@@ -30,160 +30,235 @@ using namespace PlatformIds;
+@@ -30,161 +30,236 @@ using namespace PlatformIds;
  	https://www.screenscraper.fr/api/systemesListe.php?devid=xxx&devpassword=yyy&softname=zzz&output=XML
  **/
  const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
@@ -1234,10 +1238,12 @@ index a1ca84ed..30bf2eb3 100644
 +	{ HIKARU, 258 },
 +	{ VG5000, 261 },
  	{ WASM4, 262 },
+-	{ VIRCON32, 272 },
 -	{ GAMATE, 266 },
  	{ ARDUBOY, 263 },
 -	{ LOWRESNX, 244 }
-+	{ GAMATE, 266 }
++	{ GAMATE, 266 },
++	{ VIRCON32, 272 }
  };
  
  const std::set<Scraper::ScraperMediaSource>& ScreenScraperScraper::getSupportedMedias()
