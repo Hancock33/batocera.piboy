@@ -3405,6 +3405,24 @@ msgctxt "game_options"
 msgid "2.5x (1600x1200)"
 msgstr "2.5x (1600x1200)"
 
+#. TRANSLATION: libretro/flycast, flycast/dolphin
+msgctxt "game_options"
+msgid ""
+"Enable the Dreamcast DSP for more accurate audio. Only recommended for fast "
+"systems."
+msgstr ""
+"Aktiver Dreamcast DSP for mer nøyaktig lyd. Anbefales kun for raske systemer."
+
+#. TRANSLATION: libretro/flycast, flycast/dolphin, virtualjaguar
+msgctxt "game_options"
+msgid "DIGITAL SOUND PROCESSOR"
+msgstr "DIGITAL LYDPROSESSOR"
+
+#. TRANSLATION: libretro/flycast, libretro/mame, libretro/mame, cemu, cemu, ...
+msgctxt "game_options"
+msgid "Disabled (Default)"
+msgstr "Deaktivert (standard)"
+
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "PLAYER 1 CROSSHAIR COLOUR"
@@ -4623,11 +4641,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "PLUGIN FOR MYNTLYD"
-
-#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
-msgctxt "game_options"
-msgid "Disabled (Default)"
-msgstr "Deaktivert (standard)"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -10312,19 +10325,6 @@ msgstr "CONTROLLER 3-FUNKSJONSPAKKE"
 msgctxt "game_options"
 msgid "CONTROLLER 4 FEATURE PACK"
 msgstr "CONTROLLER 4-FUNKSJONSPAKKE"
-
-#. TRANSLATION: flycast/dolphin
-msgctxt "game_options"
-msgid ""
-"Enable the Dreamcast DSP for more accurate audio. Only recommended for fast "
-"systems."
-msgstr ""
-"Aktiver Dreamcast DSP for mer nøyaktig lyd. Anbefales kun for raske systemer."
-
-#. TRANSLATION: flycast/dolphin, virtualjaguar
-msgctxt "game_options"
-msgid "DIGITAL SOUND PROCESSOR"
-msgstr "DIGITAL LYDPROSESSOR"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"

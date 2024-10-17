@@ -3416,6 +3416,25 @@ msgctxt "game_options"
 msgid "2.5x (1600x1200)"
 msgstr "2.5x (1600x1200)"
 
+#. TRANSLATION: libretro/flycast, flycast/dolphin
+msgctxt "game_options"
+msgid ""
+"Enable the Dreamcast DSP for more accurate audio. Only recommended for fast "
+"systems."
+msgstr ""
+"Activer le DSP de la Dreamcast pour un meilleur rendu audio. Recommendé "
+"seulement pour les systems performants."
+
+#. TRANSLATION: libretro/flycast, flycast/dolphin, virtualjaguar
+msgctxt "game_options"
+msgid "DIGITAL SOUND PROCESSOR"
+msgstr "PROCESSEUR AUDIO NUMÉRIQUE (DSP)"
+
+#. TRANSLATION: libretro/flycast, libretro/mame, libretro/mame, cemu, cemu, ...
+msgctxt "game_options"
+msgid "Disabled (Default)"
+msgstr "Désactivé (Défaut)"
+
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "PLAYER 1 CROSSHAIR COLOUR"
@@ -4636,11 +4655,6 @@ msgstr "Jouer un son de pièce insérée quand le bouton crédits est pressé"
 msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "PLUGIN POUR LE SON DES PIÈCES"
-
-#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
-msgctxt "game_options"
-msgid "Disabled (Default)"
-msgstr "Désactivé (Défaut)"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -10343,20 +10357,6 @@ msgstr "PACK FONCTIONNEL DE LA MANETTE 3"
 msgctxt "game_options"
 msgid "CONTROLLER 4 FEATURE PACK"
 msgstr "PACK FONCTIONNEL DE LA MANETTE 4"
-
-#. TRANSLATION: flycast/dolphin
-msgctxt "game_options"
-msgid ""
-"Enable the Dreamcast DSP for more accurate audio. Only recommended for fast "
-"systems."
-msgstr ""
-"Activer le DSP de la Dreamcast pour un meilleur rendu audio. Recommendé "
-"seulement pour les systems performants."
-
-#. TRANSLATION: flycast/dolphin, virtualjaguar
-msgctxt "game_options"
-msgid "DIGITAL SOUND PROCESSOR"
-msgstr "PROCESSEUR AUDIO NUMÉRIQUE (DSP)"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"

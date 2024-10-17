@@ -3706,6 +3706,28 @@ msgctxt "game_options"
 msgid "2.5x (1600x1200)"
 msgstr "2.5x (1600x1200)"
 
+#. TRANSLATION: libretro/flycast, flycast/dolphin
+#, fuzzy
+msgctxt "game_options"
+msgid ""
+"Enable the Dreamcast DSP for more accurate audio. Only recommended for fast "
+"systems."
+msgstr ""
+"보다 정확한 오디오를 위해 드림캐스트 DSP를 활성화합니다. 빠른 시스템에만 권장"
+"됩니다."
+
+#. TRANSLATION: libretro/flycast, flycast/dolphin, virtualjaguar
+#, fuzzy
+msgctxt "game_options"
+msgid "DIGITAL SOUND PROCESSOR"
+msgstr "디지털 음향처리기"
+
+#. TRANSLATION: libretro/flycast, libretro/mame, libretro/mame, cemu, cemu, ...
+#, fuzzy
+msgctxt "game_options"
+msgid "Disabled (Default)"
+msgstr "사용 안 함(기본값)"
+
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "PLAYER 1 CROSSHAIR COLOUR"
@@ -5042,12 +5064,6 @@ msgstr "동전 삽입 버튼을 눌렀을 때 동전 떨어뜨리기 사운드 �
 msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "코인 사운드 플러그인"
-
-#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
-#, fuzzy
-msgctxt "game_options"
-msgid "Disabled (Default)"
-msgstr "사용 안 함(기본값)"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 #, fuzzy
@@ -11370,22 +11386,6 @@ msgstr "컨트롤러 3 기능 팩"
 msgctxt "game_options"
 msgid "CONTROLLER 4 FEATURE PACK"
 msgstr "컨트롤러 4 기능 팩"
-
-#. TRANSLATION: flycast/dolphin
-#, fuzzy
-msgctxt "game_options"
-msgid ""
-"Enable the Dreamcast DSP for more accurate audio. Only recommended for fast "
-"systems."
-msgstr ""
-"보다 정확한 오디오를 위해 드림캐스트 DSP를 활성화합니다. 빠른 시스템에만 권장"
-"됩니다."
-
-#. TRANSLATION: flycast/dolphin, virtualjaguar
-#, fuzzy
-msgctxt "game_options"
-msgid "DIGITAL SOUND PROCESSOR"
-msgstr "디지털 음향처리기"
 
 #. TRANSLATION: flycast
 #, fuzzy

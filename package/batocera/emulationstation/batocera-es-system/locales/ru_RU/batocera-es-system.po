@@ -3402,6 +3402,25 @@ msgctxt "game_options"
 msgid "2.5x (1600x1200)"
 msgstr "2.5x (1600x1200)"
 
+#. TRANSLATION: libretro/flycast, flycast/dolphin
+msgctxt "game_options"
+msgid ""
+"Enable the Dreamcast DSP for more accurate audio. Only recommended for fast "
+"systems."
+msgstr ""
+"Включить DSP Dreamcast для более точного звука. Рекомендуется только для "
+"быстрых систем."
+
+#. TRANSLATION: libretro/flycast, flycast/dolphin, virtualjaguar
+msgctxt "game_options"
+msgid "DIGITAL SOUND PROCESSOR"
+msgstr "DIGITAL SOUND PROCESSOR"
+
+#. TRANSLATION: libretro/flycast, libretro/mame, libretro/mame, cemu, cemu, ...
+msgctxt "game_options"
+msgid "Disabled (Default)"
+msgstr "Отключено (по умолчанию)"
+
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "PLAYER 1 CROSSHAIR COLOUR"
@@ -4625,11 +4644,6 @@ msgstr "Звуковой эффект падения монеты при наж�
 msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "ЗВУКОВОЙ ПЛАГИН ДЛЯ МОНЕТ"
-
-#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
-msgctxt "game_options"
-msgid "Disabled (Default)"
-msgstr "Отключено (по умолчанию)"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -10318,20 +10332,6 @@ msgstr "КОТРОЛЛЕР 3 FEATURE PACK"
 msgctxt "game_options"
 msgid "CONTROLLER 4 FEATURE PACK"
 msgstr "КОТРОЛЛЕР 4 FEATURE PACK"
-
-#. TRANSLATION: flycast/dolphin
-msgctxt "game_options"
-msgid ""
-"Enable the Dreamcast DSP for more accurate audio. Only recommended for fast "
-"systems."
-msgstr ""
-"Включить DSP Dreamcast для более точного звука. Рекомендуется только для "
-"быстрых систем."
-
-#. TRANSLATION: flycast/dolphin, virtualjaguar
-msgctxt "game_options"
-msgid "DIGITAL SOUND PROCESSOR"
-msgstr "DIGITAL SOUND PROCESSOR"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"

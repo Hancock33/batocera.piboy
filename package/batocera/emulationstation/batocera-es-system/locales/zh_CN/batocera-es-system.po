@@ -3354,6 +3354,23 @@ msgctxt "game_options"
 msgid "2.5x (1600x1200)"
 msgstr "2.5x（1600x1200）"
 
+#. TRANSLATION: libretro/flycast, flycast/dolphin
+msgctxt "game_options"
+msgid ""
+"Enable the Dreamcast DSP for more accurate audio. Only recommended for fast "
+"systems."
+msgstr "启用Dreamcast DSP以获得更精确的音频。仅推荐用于较快的系统。"
+
+#. TRANSLATION: libretro/flycast, flycast/dolphin, virtualjaguar
+msgctxt "game_options"
+msgid "DIGITAL SOUND PROCESSOR"
+msgstr "数字音频处理器"
+
+#. TRANSLATION: libretro/flycast, libretro/mame, libretro/mame, cemu, cemu, ...
+msgctxt "game_options"
+msgid "Disabled (Default)"
+msgstr "禁用（默认）"
+
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "PLAYER 1 CROSSHAIR COLOUR"
@@ -4563,11 +4580,6 @@ msgstr "按下投币按钮时播放硬币掉落音效"
 msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "硬币声音插件"
-
-#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
-msgctxt "game_options"
-msgid "Disabled (Default)"
-msgstr "禁用（默认）"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -10190,18 +10202,6 @@ msgstr "控制器3功能包"
 msgctxt "game_options"
 msgid "CONTROLLER 4 FEATURE PACK"
 msgstr "控制器4功能包"
-
-#. TRANSLATION: flycast/dolphin
-msgctxt "game_options"
-msgid ""
-"Enable the Dreamcast DSP for more accurate audio. Only recommended for fast "
-"systems."
-msgstr "启用Dreamcast DSP以获得更精确的音频。仅推荐用于较快的系统。"
-
-#. TRANSLATION: flycast/dolphin, virtualjaguar
-msgctxt "game_options"
-msgid "DIGITAL SOUND PROCESSOR"
-msgstr "数字音频处理器"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
