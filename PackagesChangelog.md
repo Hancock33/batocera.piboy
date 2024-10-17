@@ -14,8 +14,10 @@ Ports|[nblood](http://github.com/nukeykt/NBlood)|fce0bb8852cd7827bbf30686c73331f
 Ports|[omf2097](http://github.com/omf2097/openomf)|e2ed746b8349dde384348e975b68ae47cdf09d36|Oct 17, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|fd79c60304c9295903a312abb71a272aaf8f50fd|Oct 17, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|bc6d1fcfbf4d3880fa876ad164ce7abe147dd231|Oct 17, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241017|Oct 17, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|a06ea8795482d2f49a5461ab5f23e0036e38d12b|Oct 17, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|6505639cd6d1fddc6c22d9005f278e4ce6cfe2d0|Oct 17, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241017|Oct 17, 2024
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|d898cd78e2dc89c4cd190e6e9f56d07caa607d28|Oct 17, 2024
 Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|0f4d1d7328a70b7677d6a9dc94b7780b8692e07a|Oct 17, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|1c4accc60085408b88c067ecaa1c79beab5e8946|Oct 17, 2024
@@ -57,8 +59,6 @@ Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|f2e314d29442e0b
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|001d5b160622118d93eb62b2bc72392d1f6f1425|Oct 15, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|5e86ba1900f1ea0eaa002a68cfa2b71300300a11|Oct 15, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.19.r113.g100645ac4de|Oct 15, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241015|Oct 15, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241015|Oct 15, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|7559f9278d2175a01e7ab84fcfa43d33d76995d1|Oct 15, 2024
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|0ae3c8174559dd50091304dc0792c941b80f3b2d|Oct 15, 2024
 Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)|5984230c441fca1dc77d823467e94acf125478c8|Oct 15, 2024
