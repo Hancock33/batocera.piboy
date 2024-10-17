@@ -175,8 +175,8 @@ class XeniaGenerator(Generator):
         if "/squashfs" in rom:
             squashrom = rom + rom.replace('/var/run/squashfs','') + '.xbox360'
             if os.path.exists(squashrom):
-                rom = squashrom
-                eslog.debug(f'Found squashfs playlist: {rom}')
+                rom_path = Path(squashrom)
+                eslog.debug(f'Found squashfs playlist: {rom_path}')
 
         # are we loading a digital title?
         if rom_path.suffix == '.xbox360':
