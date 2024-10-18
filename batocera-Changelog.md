@@ -84,12 +84,14 @@
   - Libretro-MrBoom to v5.5
   - Libretro-Mupen64plus-Next to July 19, 2024 build
   - Libretro-NeoCD to June 22 build
+  - Libretro-Play to 0.67
 - Amiberry to v5.7.4
 - BigPEmu to v115
 - C-Dogs SDL to 2.1.0
 - Cemu to v2.1
 - Citra to r608383e
 - Commander Genius to v3.5.1
+- Corsixth to v0.68.0
 - DevilutionX to 1.5.3
 - Dolphin to 2409-78
 - Duckstation to v0.1-7294
@@ -97,10 +99,12 @@
 - Eduke32 to Jul 25 build
 - Flycast to September 29, 2024 build
 - GroovyMAME to 0.268
+- GZDoom to g4.13.0
 - Ikemen to August 1st 2024 build
 - Kodi to 21.1
 - Mupen64 core & plugins to v2.6.0
 - PCSX2 to 2.1.179
+- Play to 0.67
 - Pyxel to 2.2.4
 - Redream to 1.5.0-1133-g03c2ae9
 - RPCS3 to 0.0.33 (alpha on Aug 31, 2024)
@@ -112,12 +116,11 @@
 - Xemu to v0.7.130
 - Xenia to v1.0.2817
 - Xenia Canary to October 1, 2024 build
-- Bauh to 0.10.7 (flatpak-config)
-- Corsixth to v0.68.0
 ### System
+- Bauh to 0.10.7 (flatpak-config)
 - Nvidia Driver to 560.35.03 (Open kernel modules)
 - Nvidia Legacy Driver to 470.256.02
-- x86_64 Kernel to 6.11.2
+- x86_64 Kernel to 6.11.4
 - RPi Kernel to 6.6.56
 - ARM mainline Kernel boards to 6.6.56
 - Ayaneo Platform driver to Jul 17, 2024 build
@@ -140,7 +143,7 @@
 - LibVA to 2.22.0
 - WF-Recorder to 14th of August build
 - Switchres to 2.2.1
-- Mesa3D to 24.2.4
+- Mesa3D to 24.2.5
 - Buildroot to the 2024.05.2 release base
 - GStreamer codecs to 1.24.8
 - Shim signed IA32 EFI bootloader to 1.44~1+deb12u1+15.8-1~deb12u1
