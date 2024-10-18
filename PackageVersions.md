@@ -270,7 +270,7 @@ Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.2.4|Oct 11, 2024
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|1b138de1023272b039273d7bbc8f57573073bd25|Sept 22, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|9c7919dc581079ea959ac0dff40ca52e226935ac|Oct 18, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|09979e26b9b081d5586b37a1f00ad40030f5b511|Oct 18, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20241007|Oct 07, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|3e516df214f5c36d4b613aa0580182155247d2ad|Oct 15, 2024
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
@@ -308,7 +308,7 @@ Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|a06ea8795482d2f49a5461ab5f23e0036e38d12b|Oct 17, 2024
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r48|Sept 06, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|9ad18ee26559ca75218b049762675b99f8417fec|Aug 02, 2024
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|d2921a09ebab899f62f7a0e44161f871828b36f6|Oct 18, 2024
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|6c0f026824b73384c96740abd6180c0025a05843|Oct 18, 2024
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Firmwares|[alllinuxfirmwares](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot)|20240909|Sept 09, 2024

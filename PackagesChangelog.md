@@ -7,7 +7,7 @@ Emulators|[flycast](https://github.com/flyinghead/flycast.git)|54e8589f6379c34cf
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.211|Oct 18, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-10-18|Oct 18, 2024
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|47ba6c6344fefb0a0112e8a1874588e3c37ceb11|Oct 18, 2024
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|d2921a09ebab899f62f7a0e44161f871828b36f6|Oct 18, 2024
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|6c0f026824b73384c96740abd6180c0025a05843|Oct 18, 2024
 Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|c793d92ca0039f29ba1cc8e049ab59bc79b99258|Oct 18, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|0821e6acc230b4cc9806ce29f4def74c76465394|Oct 18, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|e4e185cc462b3192ce15c33352f8f4a74246ddb4|Oct 18, 2024
@@ -16,7 +16,7 @@ Ports|[fheroes2](http://github.com/ihhub/fheroes2)|fcd24e9ce6bce35e3bd07e359182b
 Ports|[omf2097](http://github.com/omf2097/openomf)|5ebc0dc5a67390eb429a92a5ad79e9f7eac41f3f|Oct 18, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|bd73c34fd1c3eb59c1cef018114a7b2bb9995cdf|Oct 18, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|8d79ac7ce4db5e42258c6fbd7e93bfb5a11f2f82|Oct 18, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|9c7919dc581079ea959ac0dff40ca52e226935ac|Oct 18, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|09979e26b9b081d5586b37a1f00ad40030f5b511|Oct 18, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20|Oct 18, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241018|Oct 18, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241018|Oct 18, 2024
