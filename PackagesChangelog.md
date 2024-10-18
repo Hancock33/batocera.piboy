@@ -17,6 +17,9 @@ Ports|[omf2097](http://github.com/omf2097/openomf)|5ebc0dc5a67390eb429a92a5ad79e
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|bd73c34fd1c3eb59c1cef018114a7b2bb9995cdf|Oct 18, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|8d79ac7ce4db5e42258c6fbd7e93bfb5a11f2f82|Oct 18, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|9c7919dc581079ea959ac0dff40ca52e226935ac|Oct 18, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20|Oct 18, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241018|Oct 18, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241018|Oct 18, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|2d6dea1b6c3a3d3d13f599b6c3ffdbfcd49f7f8f|Oct 18, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|2d546ccbf785123ae2b172ca0b069f891be0f7ce|Oct 18, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|045c89510f0ec7857db0479dec6317205198817c|Oct 18, 2024
@@ -39,10 +42,8 @@ Ports|[nblood](http://github.com/nukeykt/NBlood)|fce0bb8852cd7827bbf30686c73331f
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|428f38fbbbc55a0a11a8955121b57f982f61dfcf|Oct 17, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|bc6d1fcfbf4d3880fa876ad164ce7abe147dd231|Oct 17, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|65cdbf58bc7be6ef414ea273d1bb8d4cb42471c8|Oct 17, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241017|Oct 17, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|a06ea8795482d2f49a5461ab5f23e0036e38d12b|Oct 17, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|6505639cd6d1fddc6c22d9005f278e4ce6cfe2d0|Oct 17, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241017|Oct 17, 2024
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|d898cd78e2dc89c4cd190e6e9f56d07caa607d28|Oct 17, 2024
 Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|0f4d1d7328a70b7677d6a9dc94b7780b8692e07a|Oct 17, 2024
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|38f749148b196531b36e7096c0609d9c00429168|Oct 17, 2024
@@ -71,7 +72,6 @@ Emulators|[scummvm](http://github.com/scummvm/scummvm)|5a6470e3f24c63601f8765d33
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45356|Oct 15, 2024
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|f2e314d29442e0b332caa2a26cd156dd3d3e1797|Oct 15, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|001d5b160622118d93eb62b2bc72392d1f6f1425|Oct 15, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.19.r113.g100645ac4de|Oct 15, 2024
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|0ae3c8174559dd50091304dc0792c941b80f3b2d|Oct 15, 2024
 Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)|5984230c441fca1dc77d823467e94acf125478c8|Oct 15, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|40a25f849fd6719080bb7496f3f3c4751930c714|Oct 15, 2024
