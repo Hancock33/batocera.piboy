@@ -9,6 +9,7 @@ Ports|[fheroes2](http://github.com/ihhub/fheroes2)|328a254fe9af91d781121d7654f1c
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|b418301a6f7fea1fb4c9093e35110ac8f78e2d87|Oct 19, 2024
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|51100408d69a6732e79afcc1b2f1b2173147c7e4|Oct 19, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|ec4c11268b49d526a6450d5c3d7bcaab9e39fdb9|Oct 19, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20.r0.g5a1b9d50|Oct 19, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241019|Oct 19, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241019|Oct 19, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|8f4d504b1a23c9778f2f1f37a8b1baee1c5c457e|Oct 19, 2024
@@ -25,7 +26,7 @@ Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|c793d92ca0
 Ports|[box64](http://github.com/ptitseb/box64)|0821e6acc230b4cc9806ce29f4def74c76465394|Oct 18, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|4377f6142075bc1f961ec2ca9bfe0319dbb6260a|Oct 18, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|bd73c34fd1c3eb59c1cef018114a7b2bb9995cdf|Oct 18, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20|Oct 18, 2024
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|086957f3b39ac0a37fb7f344a523bef9b194ba8f|Oct 18, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|2d546ccbf785123ae2b172ca0b069f891be0f7ce|Oct 18, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|045c89510f0ec7857db0479dec6317205198817c|Oct 18, 2024
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|9fc96933b1e8d9c40ca6602910e937fb7584260a|Oct 18, 2024
@@ -158,7 +159,6 @@ Emulators|[libretro-mame](http://github.com/sonninnos/mame)|231b5e6d621ed93168ad
 Boot|[batocera-initramfs](http://www.busybox.net/downloads)|1.37.0|Sept 26, 2024
 Libraries|[cpuinfo](http://github.com/pytorch/cpuinfo)|1e83a2fdd3102f65c6f1fb602c1b320486218a99|Sept 26, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.4.1|Sept 26, 2024
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.3.296.0|Sept 26, 2024
 Emulators|[mame](http://github.com/mamedev/mame)|mame0270|Sept 25, 2024
 Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|603c1dd5b6e8464dddce2ef299cad201d1e02ddb|Sept 25, 2024
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|527564f2748901068a5fef891c5073a4d6cd089b|Sept 25, 2024
