@@ -3,8 +3,8 @@
 # shadps4
 #
 ################################################################################
-# Version: Commits on Oct 18, 2024
-SHADPS4_VERSION = 47ba6c6344fefb0a0112e8a1874588e3c37ceb11
+# Version: Commits on Oct 19, 2024
+SHADPS4_VERSION = 0ecb6695de271a354eb5950ea13a25d03edbb34b
 SHADPS4_SITE = https://github.com/shadps4-emu/shadPS4.git
 SHADPS4_SITE_METHOD=git
 SHADPS4_GIT_SUBMODULES=YES
@@ -12,11 +12,10 @@ SHADPS4_LICENSE = GPLv2
 SHADPS4_LICENSE_FILE = LICENSE
 SHADPS4_DEPENDENCIES += alsa-lib pulseaudio openal openssl libedit udev
 SHADPS4_DEPENDENCIES += libevdev jack2 qt6base qt6svg qt6tools qt6multimedia
-SHADPS4_DEPENDENCIES += vulkan-headers vulkan-loader vulkan-validationlayers
+SHADPS4_DEPENDENCIES += glslang vulkan-headers vulkan-loader vulkan-validationlayers
 
 SHADPS4_SUPPORTS_IN_SOURCE_BUILD = NO
 
-SHADPS4_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 SHADPS4_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
 SHADPS4_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 SHADPS4_CONF_OPTS += -DENABLE_QT_GUI=ON

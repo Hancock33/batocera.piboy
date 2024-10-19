@@ -4,6 +4,7 @@ Emulators|[duckstation](http://github.com/stenzek/duckstation)|c279376cff7285062
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.212|Oct 19, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-10-19|Oct 19, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|7d36a2ebbd4ae2d781f8156d6b321cad149ab920|Oct 19, 2024
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|0ecb6695de271a354eb5950ea13a25d03edbb34b|Oct 19, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|70387a7774fdbae3847f65ee67b33e2273e828fe|Oct 19, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|55e7ec0a08ed33e83d7d618a3161d2f3cfa19e11|Oct 19, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|b418301a6f7fea1fb4c9093e35110ac8f78e2d87|Oct 19, 2024
@@ -21,7 +22,6 @@ Emulators|[cemu](https://github.com/cemu-project/Cemu)|f9a4b2dbb1ae8de07223a3d98
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|9b8df48d8401336dab812188419396e57eb6841b|Oct 18, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|82925c4e817a5a8232db22967e1602bc6d2caccc|Oct 18, 2024
 Emulators|[hatari](http://github.com/hatari/hatari)|64f88f15483adcaee47ab9681c7d1c83b9498eb6|Oct 18, 2024
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|47ba6c6344fefb0a0112e8a1874588e3c37ceb11|Oct 18, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|6c0f026824b73384c96740abd6180c0025a05843|Oct 18, 2024
 Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|c793d92ca0039f29ba1cc8e049ab59bc79b99258|Oct 18, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|0821e6acc230b4cc9806ce29f4def74c76465394|Oct 18, 2024
@@ -80,6 +80,7 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|3e516df214f5c36d4b613aa058
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45356|Oct 15, 2024
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|f2e314d29442e0b332caa2a26cd156dd3d3e1797|Oct 15, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|001d5b160622118d93eb62b2bc72392d1f6f1425|Oct 15, 2024
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|e670b39cfced2f7258c73dc7cd708c6c639beaf0|Oct 15, 2024
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|0ae3c8174559dd50091304dc0792c941b80f3b2d|Oct 15, 2024
 Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)|5984230c441fca1dc77d823467e94acf125478c8|Oct 15, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|40a25f849fd6719080bb7496f3f3c4751930c714|Oct 15, 2024
@@ -136,7 +137,6 @@ Emulators|[libretro-uzem](http://github.com/libretro/libretro-uzem)|bb06756a289f
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|263a54c414681b45fd9428143a8320f4024a99ab|Oct 06, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|6cace80c89b5d1c3d630e05e0182d5bf88227032|Oct 05, 2024
 Network|[rtl8812au](http://github.com/morrownr/8812au-20210820)|c01259932bfdee01e871b1468d4e75153fef1a12|Oct 04, 2024
-Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.3.296.0|Oct 04, 2024
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.7.0|Oct 03, 2024
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.10.01|Oct 02, 2024
 Ports|[openjk](http://github.com/JACoders/OpenJK)|cb52f9fb2f4a80fd59bae799d3bb0f8ace730ad7|Oct 02, 2024
@@ -151,7 +151,6 @@ Emulators|[libretro-supafaust](http://github.com/libretro/supafaust)|e25f6676593
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|f72bac75d0d2840fece788dfa8c7791bff3b8992|Sept 30, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a177763e14c924e3b15e2|Sept 29, 2024
 Ports|[raptorcots](http://github.com/skynettx/raptor)|6e630152ac4842281b492c77add34e866228572f|Sept 29, 2024
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.3.296.0|Sept 29, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|d984b850bbb23971c53df57b5ea6eddb96e04dc0|Sept 29, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|d9ad79a3b8eaa72c4e4f179dc289201867bf9251|Sept 28, 2024
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2024.09|Sept 27, 2024
@@ -183,7 +182,6 @@ Emulators|[libretro-fuse](http://github.com/libretro/fuse-libretro)|6fd07d90acc3
 Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-9.18|Sept 20, 2024
 Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.18|Sept 20, 2024
 Utils|[ryzenadj](http://github.com/FlyGoat/RyzenAdj)|v0.16.0|Sept 18, 2024
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.3.296.0|Sept 18, 2024
 Emulators|[libretro-noods](http://github.com/jonian/libretro-noods)|9c4b2bf58b2344e41fe36964b9d8b629f9bb1a38|Sept 18, 2024
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|15652c2680b20f79cb01b3b2e004c3507cb53725|Sept 17, 2024
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.3|Sept 15, 2024
@@ -540,3 +538,5 @@ Utils|[pm-utils](http://pm-utils.freedesktop.org/releases)|1.4.1|Jul 04, 2010
 Audio|[freepats](https://freepats.zenvoid.org)|20060219|Feb 19, 2006
 Utils|[7zip](https://www.7-zip.org/a)|2408|N/A
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|$(VULKAN_HEADERS_VERSION)|N/A
+Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|$(VULKAN_HEADERS_VERSION)|N/A
