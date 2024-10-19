@@ -10,13 +10,9 @@ glslang.mk
 liblc3.mk
 ryujinx.mk
 shaderc.mk
-spirv-cross.mk
-spirv-headers.mk
 spirv-llvm-translator.mk
 vice.mk
 vulkan-headers.mk
-vulkan-utility-libraries.mk
-vulkan-validationlayers.mk
 wine-custom.mk
 wine-native.mk
 wine-proton.mk
