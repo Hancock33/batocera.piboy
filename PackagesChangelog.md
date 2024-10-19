@@ -3,12 +3,14 @@
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|41c709ef6f3e64c0b359b05823d1ae04bcde34ea|Oct 19, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.1.212|Oct 19, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-10-19|Oct 19, 2024
+Emulators|[scummvm](http://github.com/scummvm/scummvm)|1898f81dab8290737757a079899e70f33d1be234|Oct 19, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|70387a7774fdbae3847f65ee67b33e2273e828fe|Oct 19, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|328a254fe9af91d781121d7654f1cae8b1d6cdd1|Oct 19, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|b418301a6f7fea1fb4c9093e35110ac8f78e2d87|Oct 19, 2024
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|51100408d69a6732e79afcc1b2f1b2173147c7e4|Oct 19, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|ec4c11268b49d526a6450d5c3d7bcaab9e39fdb9|Oct 19, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|8f4d504b1a23c9778f2f1f37a8b1baee1c5c457e|Oct 19, 2024
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|1898f81dab8290737757a079899e70f33d1be234|Oct 19, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|e57b2eee549f43fdda3dd2e5c4d720c733901369|Oct 18, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|e57b2eee549f43fdda3dd2e5c4d720c733901369|Oct 18, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|f9a4b2dbb1ae8de07223a3d988b1605b941f35a8|Oct 18, 2024
@@ -74,7 +76,6 @@ Emulators|[libretro-vircon32](http://github.com/vircon32/vircon32-libretro)|9a44
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|979be845216ee9d613cb6555fb8b11c01bec39a0|Oct 16, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|81434ccbc28b27b47dc343f22cf7c1cf1da12673|Oct 15, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|3e516df214f5c36d4b613aa0580182155247d2ad|Oct 15, 2024
-Emulators|[scummvm](http://github.com/scummvm/scummvm)|5a6470e3f24c63601f8765d337bbaaf9780a6254|Oct 15, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45356|Oct 15, 2024
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|f2e314d29442e0b332caa2a26cd156dd3d3e1797|Oct 15, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|001d5b160622118d93eb62b2bc72392d1f6f1425|Oct 15, 2024
@@ -83,7 +84,6 @@ Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|40a25f849fd6719080bb7496f3f3c4751930c714|Oct 15, 2024
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|9f53af4e332476ba99d0c056668fbb35cfb527c3|Oct 15, 2024
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|3316e0ed3076f77066c792fdbff753b082e5aa65|Oct 15, 2024
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|5a6470e3f24c63601f8765d337bbaaf9780a6254|Oct 15, 2024
 Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|4d15beede01f6a2a366dc98f2226f56cfd944f6f|Oct 14, 2024
 Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|0c58c93f8c507a5b6e5815d339e5bc275bc9cfe1|Oct 14, 2024
 Audio|[zmusic](http://github.com/ZDoom/ZMusic)|3944bbc7568a6e945c7ae8c7f7e126731db62b83|Oct 13, 2024
