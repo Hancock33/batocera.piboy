@@ -10199,7 +10199,7 @@ msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "오픈GL (기본값)"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, pcsx2
+#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, melonds, ...
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr "화면 찢어짐을 수정합니다. CPU가 성능을 많이 소모합니다."
@@ -11637,6 +11637,16 @@ msgstr ""
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "ASCI"
+msgstr ""
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "OpenGL (Classic)"
+msgstr ""
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "OpenGL (Compute shader)"
 msgstr ""
 
 #. TRANSLATION: melonds

@@ -9097,7 +9097,7 @@ msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr ""
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, pcsx2
+#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, melonds, ...
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr ""
@@ -10416,6 +10416,16 @@ msgstr ""
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "ASCI"
+msgstr ""
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "OpenGL (Classic)"
+msgstr ""
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "OpenGL (Compute shader)"
 msgstr ""
 
 #. TRANSLATION: melonds
