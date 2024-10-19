@@ -9201,7 +9201,7 @@ msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (Defektuz)"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, pcsx2
+#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, melonds, ...
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr "Konpondu pantaila urratzea. CPU erabilera handia."
@@ -10551,6 +10551,16 @@ msgstr "IDE (Defektuz)"
 msgctxt "game_options"
 msgid "ASCI"
 msgstr "ASCI"
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "OpenGL (Classic)"
+msgstr ""
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "OpenGL (Compute shader)"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
