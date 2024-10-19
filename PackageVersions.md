@@ -342,12 +342,12 @@ Gpu|[nvidia470-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|470.
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.5|Apr 23, 2024
 Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|8e2a51b1c3e5b569aabc0b476f36550c1f332c41|Aug 29, 2024
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.3|Sept 23, 2024
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|e670b39cfced2f7258c73dc7cd708c6c639beaf0|Oct 15, 2024
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.3.296.0|Sept 18, 2024
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|f68b10fd46dc0401474d039144320d6ac521818e|Oct 01, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|6505639cd6d1fddc6c22d9005f278e4ce6cfe2d0|Oct 17, 2024
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|$(VULKAN_HEADERS_VERSION)|N/A
-Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|$(VULKAN_HEADERS_VERSION)|N/A
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|086957f3b39ac0a37fb7f344a523bef9b194ba8f|Oct 18, 2024
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.3.296.0|Sept 29, 2024
+Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.3.296.0|Oct 04, 2024
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.3.296.0|Sept 26, 2024
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.3|Sept 15, 2024
 Hardware|[ayn-platform](http://github.com/ShadowBlip/ayn-platform)|v0.5.2|Jul 29, 2024
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|e421d1e6bd9afb545b6bbfc6b30e306975e77e44|Jul 23, 2024
