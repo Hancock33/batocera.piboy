@@ -286,7 +286,7 @@ Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|0237bb56fe5a
 Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|d7d1d39111efb9c44fc956beea076ee243774dc1|Nov 29, 2023
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|cdffc74d991918c8f6e344a689a8669c56281b91|Oct 19, 2024
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|b13fdd5029a246e8f90a1d70e2ed000779fee4f1|Sept 10, 2024
-Emulators|[supermodel](http://github.com/trzy/Supermodel)|e2538e2043fdaaed29a35e9acca36439de04a80b|Oct 19, 2024
+Emulators|[supermodel](http://github.com/trzy/Supermodel)|f9cb795d6abd7a18ba3f3d44b62018f0be15b1a6|Oct 20, 2024
 Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|ee365bad9501c73ff49936e72ec91cd9c3ce5c24|Oct 06, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|46a83965db00bbdc4e951cb3666fa83fd955d484|Oct 19, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|6cace80c89b5d1c3d630e05e0182d5bf88227032|Oct 05, 2024
@@ -434,7 +434,7 @@ Ports|[bstone](http://github.com/bibendovsky/bstone)|ca0c1a02abcf2513b1871a09f78
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|0a8a9a4ebb4c80ca9202063c5c8c0fcd7c78d42d|Oct 20, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|bd7f9a8e3875b34f35593099f2080bbacd2fb6b6|Jul 28, 2024
-Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|9f94e72906e1945c05a6173b1f2d7ba48fe84149|Oct 19, 2024
+Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|f373150fef0656e9327c1c000b3ae23ccffda319|Oct 20, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|fade1d0b2297013e581a90c197d97a377fcf0b3a|Oct 13, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|7354fff4062a62df7a68632586863a854d0ea9c2|Oct 10, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|5f7614bb8c078cd53c573723937d3ab80df08945|Oct 19, 2024
