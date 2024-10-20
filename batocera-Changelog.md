@@ -31,6 +31,7 @@
 - Taradino - Rise of the Triad port
 - X16-Emulator for Commander X16 system support
 - Dhewm 3 - A Doom 3 port
+- Vircon32 - a 32-bit inspired Fantasy Console
 ### Fixed
 - Steam loading on a NAS drive
 - ScummVM forcing English which can prevent some non-english games from starting
@@ -40,6 +41,7 @@
 - DuckStation light gun crosshair
 - ES: Sinden light gun border now have the exact same size in-game
 - Custom boot splash image now displays when intended
+- Dualshock controllers not enabled on some Arm boards
 ### Changed / Improved
 - Splash screen now disabled by default
 - Added bezel & sinden border support for the RPi5 with Model 3 games
@@ -51,10 +53,14 @@
 - Updated Nvidia card detection
 - Modern Nvidia cards will now use the OpenSource kernel modules when possible.
 - New ES web UI on http://<batocera>:1234 (with a new es_web_notifier service to enable)
+- Enabled more force feedback capabilities on various controllers
+- Share commands in /boot/batocera-boot.conf now allow pipes and other shell metacharacters
 ### Updated
 - RetroArch to v1.19.1
   - Libretro-81 to June 29, 2024 build
   - Libretro-Atari800 to July 26, 2024 build
+  - Libretro-Applewin to Oct 14, 2024 build
+  - Libretro-Arduous to Oct 10, 2024 build
   - Libretro-Beetle-Lynx to June 29, 2024 build
   - Libretro-Beetle-NGP to June 29, 2024 build
   - Libretro-Beetle-PCE to August 9, 2024 build
@@ -70,6 +76,7 @@
   - Libretro-Cap32 to June 29, 2024 build
   - Libretro-Melonds-Ds to v1.1.5
   - Libretro-Ecwolf to June 28 build
+  - Libretro-Fake08 to Sept 2 build
   - Libretro-Fbneo to October 3, 2024 build
   - Libretro-Flycast to September 29, 2024 build
   - Libretro-Freechaf to June 28 build
@@ -78,12 +85,14 @@
   - Libretro-MrBoom to v5.5
   - Libretro-Mupen64plus-Next to July 19, 2024 build
   - Libretro-NeoCD to June 22 build
+  - Libretro-Play to 0.67
 - Amiberry to v5.7.4
 - BigPEmu to v115
 - C-Dogs SDL to 2.1.0
 - Cemu to v2.1
 - Citra to r608383e
 - Commander Genius to v3.5.1
+- Corsixth to v0.68.0
 - DevilutionX to 1.5.3
 - Dolphin to 2409-78
 - Duckstation to v0.1-7294
@@ -91,10 +100,13 @@
 - Eduke32 to Jul 25 build
 - Flycast to September 29, 2024 build
 - GroovyMAME to 0.268
+- GZDoom to g4.13.0
 - Ikemen to August 1st 2024 build
 - Kodi to 21.1
+- MelonDS to 7th October build
 - Mupen64 core & plugins to v2.6.0
 - PCSX2 to 2.1.179
+- Play to 0.67
 - Pyxel to 2.2.4
 - Redream to 1.5.0-1133-g03c2ae9
 - RPCS3 to 0.0.33 (alpha on Aug 31, 2024)
@@ -107,9 +119,12 @@
 - Xenia to v1.0.2817
 - Xenia Canary to October 1, 2024 build
 ### System
+- Bauh to 0.10.7 (flatpak-config)
 - Nvidia Driver to 560.35.03 (Open kernel modules)
 - Nvidia Legacy Driver to 470.256.02
-- x86_64 Kernel to 6.11.2
+- x86_64 Kernel to 6.11.4
+- RPi Kernel to 6.6.56
+- ARM mainline Kernel boards to 6.6.56
 - Ayaneo Platform driver to Jul 17, 2024 build
 - Ayn Platform driver to Jul 17, 2024 build
 - MangoHud to Jun 15, 2024 build
@@ -117,7 +132,7 @@
 - DXVK to 2.4.1
 - DXVK NVAPI to v0.7.1
 - VKD3D Proton to 2.13
-- Linux Firmware to 20240811
+- Linux Firmware to 20241017
 - Pipewire to 1.2.2
 - ALSA stack to 1.2.12
 - ALSA UCM configuration to 1.2.12
@@ -130,12 +145,14 @@
 - LibVA to 2.22.0
 - WF-Recorder to 14th of August build
 - Switchres to 2.2.1
-- Mesa3D to 24.2.4
+- Mesa3D to 24.2.5
 - Buildroot to the 2024.05.2 release base
 - GStreamer codecs to 1.24.8
 - Shim signed IA32 EFI bootloader to 1.44~1+deb12u1+15.8-1~deb12u1
 - FFMPEG to 7.1
 - Shim signed x64 EFI bootloader to 1.58+15.8-0ubuntu1
+- WinBTRFS Driver to 1.9
+- Added tmux
 
 # 2024/08/11 - batocera.linux 40 - Swallowtail
 ### Special Notes

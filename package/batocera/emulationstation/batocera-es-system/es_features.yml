@@ -1977,6 +1977,13 @@ libretro:
                     "10x (6400x4800)":   6400x4800
                     "11x (7040x5280)":   7040x5280
                     "12x (7680x5760)":   7680x5760
+            reicast_dsp:
+                group: ADVANCED OPTIONS
+                prompt:      DIGITAL SOUND PROCESSOR
+                description: Enable the Dreamcast DSP for more accurate audio. Only recommended for fast systems.
+                choices:
+                    "Disabled (Default)": disabled
+                    "Enabled"           : enabled
             reicast_lightgun1_crosshair:
                 group: LIGHT GUN
                 prompt:      PLAYER 1 CROSSHAIR COLOUR
@@ -7377,6 +7384,9 @@ libretro:
                 choices:
                     "Off":                      disabled
                     "On":                       enabled
+    vircon32:
+      features: [netplay, padtokeyboard]
+      shared: [rewind, autosave]
     virtualjaguar:
       features: [padtokeyboard, cheevos]
       shared: [autosave]
@@ -9116,64 +9126,71 @@ melonds:
             prompt: GRAPHICS API
             description: Choose which graphics API library to use.
             choices:
-                "Software": 0
-                "OpenGL":   1
+                "Software":                0
+                "OpenGL (Classic)":        1
+                "OpenGL (Compute shader)": 2
+        melonds_vsync:
+            prompt: VSYNC
+            description: Fix screen tearing. CPU heavy.
+            choices:
+                "Off": False
+                "On":  True
         melonds_framerate:
             group: ADVANCED OPTIONS
             prompt: LIMIT FRAME RATE
             choices:
-                "No Limit":          0
-                "As game specifies": 1
+                "No Limit":          False
+                "As game specifies": True
         melonds_resolution:
             group: VIDEO SETTINGS
             prompt: RENDERING RESOLUTION
             description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
             choices:
-                "1x (256x192)":           1
-                "2x (512x384)":           2
-                "3x (768x576)":           3
-                "4x (1024x768)":          4
-                "5x (1280x960)":          5
-                "6x (1536x1152)":         6
-                "7x (1792x1344)":         7
-                "8x (2048x1536)":         8
-                "9x (2304x1728)":         9
-                "10x (2560x1920)":        10
-                "11x (2816x2112)":        11
-                "12x (3072x2304)":        12
-                "13x (3328x2496)":        13
-                "14x (3584x2688)":        14
-                "15x (3840x2880)":        15
-                "16x (4096x3072)":        16
+                "1x (256x192)":    1
+                "2x (512x384)":    2
+                "3x (768x576)":    3
+                "4x (1024x768)":   4
+                "5x (1280x960)":   5
+                "6x (1536x1152)":  6
+                "7x (1792x1344)":  7
+                "8x (2048x1536)":  8
+                "9x (2304x1728)":  9
+                "10x (2560x1920)": 10
+                "11x (2816x2112)": 11
+                "12x (3072x2304)": 12
+                "13x (3328x2496)": 13
+                "14x (3584x2688)": 14
+                "15x (3840x2880)": 15
+                "16x (4096x3072)": 16
         melonds_polygons:
             prompt: ENABLE POLYGON SPLITTING
             description: Enhancement. Enables improved polygon splitting.
             choices:
-                "Off": 0
-                "On":  1
+                "Off": False
+                "On":  True
         melonds_rotation:
             group: VIDEO SETTINGS
             prompt: SCREEN ROTATION
             description: Rotates the screens, to simulate holding the DS sideways.
             choices:
-                "0 degrees":           0
-                "90 degrees":          1
-                "180 degrees":         2
-                "270 degrees":         3
+                "0 degrees":   0
+                "90 degrees":  1
+                "180 degrees": 2
+                "270 degrees": 3
         melonds_screenswap:
             prompt: SCREEN SWAP
             description: Swap the position of the dual displays.
             choices:
-                "Off":           0
-                "On":            1
+                "Off": False
+                "On":  True
         melonds_screensize:
             prompt: SCREEN SIZE
             description: Sets the window size to an integer size.
             choices:
-                "1x":           0
-                "2x":           1
-                "3x":           2
-                "4x":           3
+                "1x": 0
+                "2x": 1
+                "3x": 2
+                "4x": 3
         melonds_layout:
             prompt: SCREEN LAYOUT
             description: Adjusts the positions of the screens.
@@ -9195,18 +9212,18 @@ melonds:
         melonds_scaling:
             prompt: INTEGER SCALING
             choices:
-                "Off":             0
-                "On":              1
+                "Off": False
+                "On":  True
         melonds_cheats:
             prompt: ENABLE CHEATS
             choices:
-                "Off (Default)":   0
-                "On":              1
+                "Off (Default)": False
+                "On":            True
         melonds_osd:
             prompt: SHOW ON-SCREEN DISPLAY MESSAGES
             choices:
-                "Off":          0
-                "On":           1
+                "Off": False
+                "On":  True
         melonds_console:
             prompt: CONSOLE TYPE
             choices:
@@ -12845,6 +12862,66 @@ bigpemu:
       choices:
         "4:3 (Default)": 2
         "16:9":          8
+    bigpemu_screenfilter:
+      prompt: SCREEN FILTER
+      description: Basic Filtering type for the jaguar display when rendering to the native display.
+      choices:
+        "Point (Default)": 0
+        "Bilinear":        1
+    bigpemu_avp:
+      group: ADVANCED OPTIONS
+      submenu: SCRIPT MODULES
+      prompt: ALIEN VS PREDATOR
+      description: Supports uncapped frame rates, analog controllers, and mouse look functionality.
+      preset: switchauto
+    bigpemu_avp_mp:
+      group: ADVANCED OPTIONS
+      submenu: SCRIPT MODULES
+      prompt: ALIEN VS PREDATOR MULTIPLAYER
+      description: Switches the game to multiplayer mode.
+      preset: switchauto
+    bigpemu_brett_hull_hockey:
+      group: ADVANCED OPTIONS
+      submenu: SCRIPT MODULES
+      prompt: BRETT HULL HOCKEY
+      description: Fixes flickering.
+      preset: switchauto
+    bigpemu_checkered_flag:
+      group: ADVANCED OPTIONS
+      submenu: SCRIPT MODULES
+      prompt: CHECKERED FLAG
+      description: Features native resolution rendering, analog controller and mouse support, frame rate unlocking up to 60Hz, an improved camera with a disable tilt option, custom sky/background functionality, and various other tweaks and options.
+      preset: switchauto
+    bigpemu_cybermorph:
+      group: ADVANCED OPTIONS
+      submenu: SCRIPT MODULES
+      prompt: CYBERMORPH
+      description: Renders polygons and textures at the native resolution.
+      preset: switchauto
+    bigpemu_iron_soldier:
+      group: ADVANCED OPTIONS
+      submenu: SCRIPT MODULES
+      prompt: IRON SOLDIER
+      description: Offers support for analog controllers and mouse look functionality for improved control.
+      preset: switchauto
+    bigpemu_mc3d_vr:
+      group: ADVANCED OPTIONS
+      submenu: SCRIPT MODULES
+      prompt: MISSILE COMMAND 3D VR
+      description: Includes VR head tracking and stereoscopic rendering for both VR and 3D TVs, along with mouse support (Mouse Look), and introduces a new Head Tracker input device type with options to convert analog inputs to tracker angles for enhanced analog controller support.
+      preset: switchauto
+    bigpemu_t2k_rotary:
+      group: ADVANCED OPTIONS
+      submenu: SCRIPT MODULES
+      prompt: TEMPEST 2000
+      description: Provides analog controller and mouse support while patching existing rotary controller bugs found in hardware.
+      preset: switchauto
+    bigpemu_wolf3d:
+      group: ADVANCED OPTIONS
+      submenu: SCRIPT MODULES
+      prompt: WOLFENSTEIN 3D
+      description: Offers analog controller and mouse support (Mouse Look), along with options for always-strafe and always-run functionalities.
+      preset: switchauto
 blues:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

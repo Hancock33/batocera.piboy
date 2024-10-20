@@ -1,22 +1,8 @@
-@@ -1,21 +1,8 @@
-From 5d6794045292c532cd6a42eb85574fc96db05062 Mon Sep 17 00:00:00 2001
-From: Davide Garberi <dade.garberi@gmail.com>
-Date: Sat, 22 Oct 2022 17:49:16 +0200
-Subject: [PATCH] input: xpad - Switch to workqueue for xpad360w button
- poweroff
-
-This allows to turn off the pad without having to release the Xbox (mode) button
-
-Signed-off-by: Davide Garberi <dade.garberi@gmail.com>
----
- xpad.c | 35 ++++++++++++++++++++++++-----------
- 1 file changed, 24 insertions(+), 11 deletions(-)
-
 diff --git a/xpad.c b/xpad.c
-index 8fcd429..998b4d0 100644
+index 73492b5..c8d2fce 100644
 --- a/xpad.c
 +++ b/xpad.c
-@@ -489,6 +489,7 @@ struct usb_xpad {
+@@ -482,6 +482,7 @@ struct usb_xpad {
  	int quirks;
  	const char *name;		/* name of the device */
  	struct work_struct work;	/* init/remove device from callback */
@@ -24,7 +10,7 @@ index 8fcd429..998b4d0 100644
  	time64_t mode_btn_down_ts;
  };
  
-@@ -667,20 +668,29 @@ static void xpad360_process_packet(struct usb_xpad *xpad, struct input_dev *dev,
+@@ -643,20 +644,29 @@ static void xpad360_process_packet(struct usb_xpad *xpad, struct input_dev *dev,
  
  	/* XBOX360W controllers can't be turned off without driver assistance */
  	if (xpad->xtype == XTYPE_XBOX360W) {
@@ -43,15 +29,15 @@ index 8fcd429..998b4d0 100644
  		}
 +	}
 +}
++
++static void xpad360w_poweroff_work(struct work_struct *work) {
++	struct usb_xpad *xpad = container_of(to_delayed_work(work), struct usb_xpad, poweroff_work);
  
 -		/* mode button down/up */
 -		if (data[3] & BIT(2))
 -			xpad->mode_btn_down_ts = ktime_get_seconds();
 -		else
 -			xpad->mode_btn_down_ts = 0;
-+static void xpad360w_poweroff_work(struct work_struct *work) {
-+	struct usb_xpad *xpad = container_of(to_delayed_work(work), struct usb_xpad, poweroff_work);
-+
 +	if (xpad->mode_btn_down_ts == 0)
 +		return;
 +
@@ -65,7 +51,7 @@ index 8fcd429..998b4d0 100644
  }
  
  static void xpad_presence_work(struct work_struct *work)
-@@ -1399,6 +1409,8 @@ static int xpad360w_start_input(struct usb_xpad *xpad)
+@@ -1375,6 +1385,8 @@ static int xpad360w_start_input(struct usb_xpad *xpad)
  		return error;
  	}
  
@@ -74,7 +60,7 @@ index 8fcd429..998b4d0 100644
  	return 0;
  }
  
-@@ -1408,6 +1420,7 @@ static void xpad360w_stop_input(struct usb_xpad *xpad)
+@@ -1384,6 +1396,7 @@ static void xpad360w_stop_input(struct usb_xpad *xpad)
  
  	/* Make sure we are done with presence work if it was scheduled */
  	flush_work(&xpad->work);

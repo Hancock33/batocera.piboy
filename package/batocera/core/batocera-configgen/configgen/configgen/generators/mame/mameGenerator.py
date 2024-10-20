@@ -617,6 +617,9 @@ class MameGenerator(Generator):
         if bezelSet is None and gunsBordersSize is None:
             return
 
+        if (float (gameResolution["width"]) / float (gameResolution["height"]) < 1.6) and gunsBorderSize is None:
+            return
+
         # let's generate the zip file
         tmpZipDir.mkdir(parents=True)
 

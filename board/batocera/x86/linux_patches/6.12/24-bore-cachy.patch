@@ -165,10 +165,10 @@ index 976092b7bd45..293aad675444 100644
 +obj-y += bore.o
 diff --git a/kernel/sched/bore.c b/kernel/sched/bore.c
 new file mode 100644
-index 000000000000..62a0191a32d7
+index 000000000000..cd7e8a8d6075
 --- /dev/null
 +++ b/kernel/sched/bore.c
-@@ -0,0 +1,380 @@
+@@ -0,0 +1,381 @@
 +/*
 + *  Burst-Oriented Response Enhancer (BORE) CPU Scheduler
 + *  Copyright (C) 2021-2024 Masahito Suzuki <firelzrd@gmail.com>
@@ -289,6 +289,9 @@ index 000000000000..62a0191a32d7
 +	}
 +}
 +
++static inline bool task_is_bore_eligible(struct task_struct *p)
++{return p->sched_class == &fair_sched_class;}
++
 +static void reset_task_weights_bore(void) {
 +	struct task_struct *task;
 +	struct rq *rq;
@@ -296,6 +299,7 @@ index 000000000000..62a0191a32d7
 +
 +	write_lock_irq(&tasklist_lock);
 +	for_each_process(task) {
++		if (!task_is_bore_eligible(task)) continue;
 +		rq = task_rq(task);
 +		rq_lock_irqsave(rq, &rf);
 +		reweight_task_by_prio(task, effective_prio(task));
@@ -321,9 +325,6 @@ index 000000000000..62a0191a32d7
 +	list_for_each_entry(child, &p->children, sibling) {cnt++;}
 +	return cnt;
 +}
-+
-+static inline bool task_is_bore_eligible(struct task_struct *p)
-+{return p->sched_class == &fair_sched_class;}
 +
 +static inline bool burst_cache_expired(struct sched_burst_cache *bc, u64 now)
 +{return (s64)(bc->timestamp + sched_burst_cache_lifetime - now) < 0;}
@@ -550,7 +551,7 @@ index 000000000000..62a0191a32d7
 +#endif // CONFIG_SYSCTL
 +#endif // CONFIG_SCHED_BORE
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index aeb595514461..2fa622960b44 100644
+index 9dd091ad5a60..903619e16311 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -97,6 +97,8 @@
@@ -562,12 +563,12 @@ index aeb595514461..2fa622960b44 100644
  EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_send_cpu);
  EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_send_cpumask);
  
-@@ -8362,6 +8364,11 @@ void __init sched_init(void)
+@@ -8376,6 +8378,11 @@ void __init sched_init(void)
  	BUG_ON(!sched_class_above(&ext_sched_class, &idle_sched_class));
  #endif
  
 +#ifdef CONFIG_SCHED_BORE
-+	printk(KERN_INFO "BORE (Burst-Oriented Response Enhancer) CPU Scheduler modification 5.6.0 by Masahito Suzuki");
++	printk(KERN_INFO "BORE (Burst-Oriented Response Enhancer) CPU Scheduler modification 5.6.1 by Masahito Suzuki");
 +	init_task_bore(&init_task);
 +#endif // CONFIG_SCHED_BORE
 +
@@ -920,10 +921,10 @@ index ae29f0d42213..a9ea5c56f325 100644
  	/*
  	 * Since this is called after changing class, this is a little weird
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index c9e5ef0af192..b309c2c7f733 100644
+index 808bfaded2af..f8a37d01ee34 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
-@@ -2074,7 +2074,11 @@ static inline void update_sched_domain_debugfs(void) { }
+@@ -2075,7 +2075,11 @@ static inline void update_sched_domain_debugfs(void) { }
  static inline void dirty_sched_domain_sysctl(int cpu) { }
  #endif
  
@@ -935,7 +936,7 @@ index c9e5ef0af192..b309c2c7f733 100644
  
  static inline const struct cpumask *task_user_cpus(struct task_struct *p)
  {
-@@ -2795,6 +2799,9 @@ extern const_debug unsigned int sysctl_sched_nr_migrate;
+@@ -2796,6 +2800,9 @@ extern const_debug unsigned int sysctl_sched_nr_migrate;
  extern const_debug unsigned int sysctl_sched_migration_cost;
  
  extern unsigned int sysctl_sched_base_slice;

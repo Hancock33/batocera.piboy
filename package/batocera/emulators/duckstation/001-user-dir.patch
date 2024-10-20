@@ -1,8 +1,8 @@
 diff --git a/src/core/settings.cpp b/src/core/settings.cpp
-index a154a0dcc..2b783a03c 100644
+index 420cb5f07..270fdd870 100644
 --- a/src/core/settings.cpp
 +++ b/src/core/settings.cpp
-@@ -2174,20 +2174,20 @@ static std::string LoadPathFromSettings(SettingsInterface& si, const std::string
+@@ -2133,22 +2133,22 @@ static std::string LoadPathFromSettings(SettingsInterface& si, const std::string
  
  void EmuFolders::LoadConfig(SettingsInterface& si)
  {
@@ -10,7 +10,6 @@ index a154a0dcc..2b783a03c 100644
 -  Cache = LoadPathFromSettings(si, DataRoot, "Folders", "Cache", "cache");
 -  Cheats = LoadPathFromSettings(si, DataRoot, "Folders", "Cheats", "cheats");
 -  Covers = LoadPathFromSettings(si, DataRoot, "Folders", "Covers", "covers");
--  Dumps = LoadPathFromSettings(si, DataRoot, "Folders", "Dumps", "dump");
 -  GameIcons = LoadPathFromSettings(si, DataRoot, "Folders", "GameIcons", "gameicons");
 -  GameSettings = LoadPathFromSettings(si, DataRoot, "Folders", "GameSettings", "gamesettings");
 -  InputProfiles = LoadPathFromSettings(si, DataRoot, "Folders", "InputProfiles", "inputprofiles");
@@ -19,7 +18,6 @@ index a154a0dcc..2b783a03c 100644
 +  Cache = "/userdata/system/cache/psx";
 +  Cheats = "/userdata/cheats/psx";
 +  Covers = "/userdata/system/configs/duckstation/covers";
-+  Dumps = "/userdata/system/configs/duckstation/dump";
 +  GameIcons = "/userdata/system/configs/duckstation/gameicons";
 +  GameSettings = "/userdata/system/configs/duckstation/gamesettings";
 +  InputProfiles = "/userdata/system/configs/duckstation/inputprofiles";
@@ -35,8 +33,12 @@ index a154a0dcc..2b783a03c 100644
 +  Textures = "/userdata/system/configs/duckstation/textures";
    UserResources = LoadPathFromSettings(si, DataRoot, "Folders", "UserResources", "resources");
    Videos = LoadPathFromSettings(si, DataRoot, "Folders", "Videos", "videos");
- 
-@@ -2213,20 +2213,20 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
+-
++ 
+   DEV_LOG("BIOS Directory: {}", Bios);
+   DEV_LOG("Cache Directory: {}", Cache);
+   DEV_LOG("Cheats Directory: {}", Cheats);
+@@ -2170,19 +2170,19 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
  void EmuFolders::Save(SettingsInterface& si)
  {
    // convert back to relative
@@ -44,7 +46,6 @@ index a154a0dcc..2b783a03c 100644
 -  si.SetStringValue("Folders", "Cache", Path::MakeRelative(Cache, DataRoot).c_str());
 -  si.SetStringValue("Folders", "Cheats", Path::MakeRelative(Cheats, DataRoot).c_str());
 -  si.SetStringValue("Folders", "Covers", Path::MakeRelative(Covers, DataRoot).c_str());
--  si.SetStringValue("Folders", "Dumps", Path::MakeRelative(Dumps, DataRoot).c_str());
 -  si.SetStringValue("Folders", "GameIcons", Path::MakeRelative(GameIcons, DataRoot).c_str());
 -  si.SetStringValue("Folders", "GameSettings", Path::MakeRelative(GameSettings, DataRoot).c_str());
 -  si.SetStringValue("Folders", "InputProfiles", Path::MakeRelative(InputProfiles, DataRoot).c_str());
@@ -53,7 +54,6 @@ index a154a0dcc..2b783a03c 100644
 +  si.SetStringValue("Folders", "Cache", Cache.c_str());
 +  si.SetStringValue("Folders", "Cheats", Cheats.c_str());
 +  si.SetStringValue("Folders", "Covers", Covers.c_str());
-+  si.SetStringValue("Folders", "Dumps", Dumps.c_str());
 +  si.SetStringValue("Folders", "GameIcons", GameIcons.c_str());
 +  si.SetStringValue("Folders", "GameSettings", GameSettings.c_str());
 +  si.SetStringValue("Folders", "InputProfiles", InputProfiles.c_str());
