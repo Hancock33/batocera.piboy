@@ -4,6 +4,7 @@ import yaml
 import argparse
 import json
 import subprocess
+import sys
 
 import pyudev
 import evdev
@@ -87,7 +88,7 @@ class KeyboardController:
                     cmd.extend(["--map", "yield", "{}:0".format(mappingtypename), "{}:0".format(value)])
 
             # output device
-            cmd.extend(["--output", "name={}".format(target_device["name"])])
+            cmd.extend(["--output", "name={}".format(target_device["name"]), "device-id=ba10:ce8a"])
 
             # output filter (remove doubles)
             keyslist = {}
@@ -115,6 +116,11 @@ class KeyboardController:
                     userconfig = Path(f"/userdata/system/configs/keyboardToPads/inputs/{safename}")
                     if userconfig.exists():
                         print(f"  user config found at {userconfig}")
+                        try:
+                            cmd = KeyboardController().generateCommand(userconfig, device.device_node)
+                        except Exception as e:
+                            print(f"\n\nSome errors were found in the user configuration file {userconfig}:")
+                            print(e)
                     else:
                         print(f"  you can create a custom config at {userconfig}. Take example on files in /usr/share/keyboardToPads/inputs.")
 

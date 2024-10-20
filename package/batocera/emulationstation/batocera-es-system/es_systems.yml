@@ -2107,7 +2107,7 @@ vircon32:
   manufacturer:         Homebrew Systems
   release:              2023
   hardware:             console
-  extensions:           [v32]
+  extensions:           [v32, zip]
   emulators:
     libretro:
       vircon32:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VIRCON32] }

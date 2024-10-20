@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-10-07 23:44+0800\n"
+"PO-Revision-Date: 2024-10-14 10:08+0800\n"
 "Last-Translator: wanger\n"
 "Language-Team: 王二,monyxie\n"
 "Language: zh_CN\n"
@@ -3354,6 +3354,23 @@ msgctxt "game_options"
 msgid "2.5x (1600x1200)"
 msgstr "2.5x（1600x1200）"
 
+#. TRANSLATION: libretro/flycast, flycast/dolphin
+msgctxt "game_options"
+msgid ""
+"Enable the Dreamcast DSP for more accurate audio. Only recommended for fast "
+"systems."
+msgstr "启用Dreamcast DSP以获得更精确的音频。仅推荐用于较快的系统。"
+
+#. TRANSLATION: libretro/flycast, flycast/dolphin, virtualjaguar
+msgctxt "game_options"
+msgid "DIGITAL SOUND PROCESSOR"
+msgstr "数字音频处理器"
+
+#. TRANSLATION: libretro/flycast, libretro/mame, libretro/mame, cemu, cemu, ...
+msgctxt "game_options"
+msgid "Disabled (Default)"
+msgstr "禁用（默认）"
+
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "PLAYER 1 CROSSHAIR COLOUR"
@@ -4563,11 +4580,6 @@ msgstr "按下投币按钮时播放硬币掉落音效"
 msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "硬币声音插件"
-
-#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
-msgctxt "game_options"
-msgid "Disabled (Default)"
-msgstr "禁用（默认）"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -9098,7 +9110,7 @@ msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL（默认）"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, pcsx2
+#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, melonds, ...
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr "修复屏幕撕裂。会增加CPU占用。"
@@ -10191,18 +10203,6 @@ msgctxt "game_options"
 msgid "CONTROLLER 4 FEATURE PACK"
 msgstr "控制器4功能包"
 
-#. TRANSLATION: flycast/dolphin
-msgctxt "game_options"
-msgid ""
-"Enable the Dreamcast DSP for more accurate audio. Only recommended for fast "
-"systems."
-msgstr "启用Dreamcast DSP以获得更精确的音频。仅推荐用于较快的系统。"
-
-#. TRANSLATION: flycast/dolphin, virtualjaguar
-msgctxt "game_options"
-msgid "DIGITAL SOUND PROCESSOR"
-msgstr "数字音频处理器"
-
 #. TRANSLATION: flycast
 msgctxt "game_options"
 msgid "Force the game to render in this aspect ratio."
@@ -10434,6 +10434,16 @@ msgstr "IDE（默认）"
 msgctxt "game_options"
 msgid "ASCI"
 msgstr "ASCI"
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "OpenGL (Classic)"
+msgstr ""
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "OpenGL (Compute shader)"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -14382,6 +14392,134 @@ msgctxt "game_options"
 msgid "EGA GRAPHICS MODE"
 msgstr ""
 
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Basic Filtering type for the jaguar display when rendering to the native "
+"display."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "SCREEN FILTER"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "Point (Default)"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Supports uncapped frame rates, analog controllers, and mouse look "
+"functionality."
+msgstr ""
+
+#. TRANSLATION: bigpemu, bigpemu, bigpemu, bigpemu, bigpemu, ...
+msgctxt "game_options"
+msgid "SCRIPT MODULES"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "ALIEN VS PREDATOR"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "Switches the game to multiplayer mode."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "ALIEN VS PREDATOR MULTIPLAYER"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "Fixes flickering."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "BRETT HULL HOCKEY"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Features native resolution rendering, analog controller and mouse support, "
+"frame rate unlocking up to 60Hz, an improved camera with a disable tilt "
+"option, custom sky/background functionality, and various other tweaks and "
+"options."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "CHECKERED FLAG"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "Renders polygons and textures at the native resolution."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "CYBERMORPH"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Offers support for analog controllers and mouse look functionality for "
+"improved control."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "IRON SOLDIER"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Includes VR head tracking and stereoscopic rendering for both VR and 3D TVs, "
+"along with mouse support (Mouse Look), and introduces a new Head Tracker "
+"input device type with options to convert analog inputs to tracker angles "
+"for enhanced analog controller support."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "MISSILE COMMAND 3D VR"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Provides analog controller and mouse support while patching existing rotary "
+"controller bugs found in hardware."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "TEMPEST 2000"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Offers analog controller and mouse support (Mouse Look), along with options "
+"for always-strafe and always-run functionalities."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "WOLFENSTEIN 3D"
+msgstr ""
+
 #. TRANSLATION: dxx-rebirth
 msgctxt "game_options"
 msgid "Classic (Default)"
@@ -17164,6 +17302,18 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
 #~ msgstr "在Vsync关闭时设置所需的最大刷新率。"
+
+#~ msgctxt "game_options"
+#~ msgid "Change the game's brightness."
+#~ msgstr "更改游戏的亮度."
+
+#~ msgctxt "game_options"
+#~ msgid "BRIGHTNESS"
+#~ msgstr "亮度"
+
+#~ msgctxt "game_options"
+#~ msgid "200% (Maximum)"
+#~ msgstr "200% (最大值)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"

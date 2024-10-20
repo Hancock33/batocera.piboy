@@ -3347,6 +3347,23 @@ msgctxt "game_options"
 msgid "2.5x (1600x1200)"
 msgstr ""
 
+#. TRANSLATION: libretro/flycast, flycast/dolphin
+msgctxt "game_options"
+msgid ""
+"Enable the Dreamcast DSP for more accurate audio. Only recommended for fast "
+"systems."
+msgstr ""
+
+#. TRANSLATION: libretro/flycast, flycast/dolphin, virtualjaguar
+msgctxt "game_options"
+msgid "DIGITAL SOUND PROCESSOR"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast, libretro/mame, libretro/mame, cemu, cemu, ...
+msgctxt "game_options"
+msgid "Disabled (Default)"
+msgstr ""
+
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "PLAYER 1 CROSSHAIR COLOUR"
@@ -4551,11 +4568,6 @@ msgstr ""
 #. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
-msgstr ""
-
-#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
-msgctxt "game_options"
-msgid "Disabled (Default)"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
@@ -9087,7 +9099,7 @@ msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr ""
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, pcsx2
+#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, melonds, ...
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr ""
@@ -10176,18 +10188,6 @@ msgctxt "game_options"
 msgid "CONTROLLER 4 FEATURE PACK"
 msgstr ""
 
-#. TRANSLATION: flycast/dolphin
-msgctxt "game_options"
-msgid ""
-"Enable the Dreamcast DSP for more accurate audio. Only recommended for fast "
-"systems."
-msgstr ""
-
-#. TRANSLATION: flycast/dolphin, virtualjaguar
-msgctxt "game_options"
-msgid "DIGITAL SOUND PROCESSOR"
-msgstr ""
-
 #. TRANSLATION: flycast
 msgctxt "game_options"
 msgid "Force the game to render in this aspect ratio."
@@ -10418,6 +10418,16 @@ msgstr ""
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "ASCI"
+msgstr ""
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "OpenGL (Classic)"
+msgstr ""
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "OpenGL (Compute shader)"
 msgstr ""
 
 #. TRANSLATION: melonds
@@ -14345,6 +14355,134 @@ msgstr ""
 #. TRANSLATION: awgl
 msgctxt "game_options"
 msgid "EGA GRAPHICS MODE"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Basic Filtering type for the jaguar display when rendering to the native "
+"display."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "SCREEN FILTER"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "Point (Default)"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Supports uncapped frame rates, analog controllers, and mouse look "
+"functionality."
+msgstr ""
+
+#. TRANSLATION: bigpemu, bigpemu, bigpemu, bigpemu, bigpemu, ...
+msgctxt "game_options"
+msgid "SCRIPT MODULES"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "ALIEN VS PREDATOR"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "Switches the game to multiplayer mode."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "ALIEN VS PREDATOR MULTIPLAYER"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "Fixes flickering."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "BRETT HULL HOCKEY"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Features native resolution rendering, analog controller and mouse support, "
+"frame rate unlocking up to 60Hz, an improved camera with a disable tilt "
+"option, custom sky/background functionality, and various other tweaks and "
+"options."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "CHECKERED FLAG"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "Renders polygons and textures at the native resolution."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "CYBERMORPH"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Offers support for analog controllers and mouse look functionality for "
+"improved control."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "IRON SOLDIER"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Includes VR head tracking and stereoscopic rendering for both VR and 3D TVs, "
+"along with mouse support (Mouse Look), and introduces a new Head Tracker "
+"input device type with options to convert analog inputs to tracker angles "
+"for enhanced analog controller support."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "MISSILE COMMAND 3D VR"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Provides analog controller and mouse support while patching existing rotary "
+"controller bugs found in hardware."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "TEMPEST 2000"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Offers analog controller and mouse support (Mouse Look), along with options "
+"for always-strafe and always-run functionalities."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "WOLFENSTEIN 3D"
 msgstr ""
 
 #. TRANSLATION: dxx-rebirth

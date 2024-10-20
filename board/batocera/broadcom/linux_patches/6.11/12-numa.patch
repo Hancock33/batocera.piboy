@@ -75,10 +75,10 @@ index 9e3ad190b491..d9c817ec9ffa 100644
  
  config ARCH_SPARSEMEM_ENABLE
 diff --git a/arch/arm64/boot/dts/broadcom/bcm2712-rpi-5-b.dts b/arch/arm64/boot/dts/broadcom/bcm2712-rpi-5-b.dts
-index 757de016cdb7..2c0dc9ba4f9c 100644
+index 28fa2b45cf26..4aa88fa2fb6e 100644
 --- a/arch/arm64/boot/dts/broadcom/bcm2712-rpi-5-b.dts
 +++ b/arch/arm64/boot/dts/broadcom/bcm2712-rpi-5-b.dts
-@@ -430,11 +430,6 @@ &i2c_rp1boot {
+@@ -429,11 +429,6 @@ &i2c_rp1boot {
  };
  
  / {
@@ -123,13 +123,13 @@ index ca9833da402d..2aa9e9a1d11f 100644
  		blconfig = &blconfig;
  		blpubkey = &blpubkey;
 diff --git a/arch/arm64/configs/bcm2711_defconfig b/arch/arm64/configs/bcm2711_defconfig
-index 32799cd21a82..85ecf5c27e88 100644
+index c814bf8dd4d3..4ee9c4c544ff 100644
 --- a/arch/arm64/configs/bcm2711_defconfig
 +++ b/arch/arm64/configs/bcm2711_defconfig
-@@ -48,6 +48,7 @@ CONFIG_ARM64_ERRATUM_2441009=y
- # CONFIG_CAVIUM_ERRATUM_27456 is not set
+@@ -49,6 +49,7 @@ CONFIG_ARM64_ERRATUM_2441009=y
  CONFIG_ARM64_VA_BITS_39=y
  CONFIG_NR_CPUS=4
+ CONFIG_HOTPLUG_CPU=y
 +CONFIG_NUMA=y
  CONFIG_COMPAT=y
  CONFIG_ARMV8_DEPRECATED=y
@@ -140,13 +140,13 @@ index 32799cd21a82..85ecf5c27e88 100644
  # CONFIG_STRICT_DEVMEM is not set
 +CONFIG_NUMA_EMULATION=y
 diff --git a/arch/arm64/configs/bcm2712_defconfig b/arch/arm64/configs/bcm2712_defconfig
-index bf91aae76453..772bdf954b8e 100644
+index 649ddeceded7..a9f89d904334 100644
 --- a/arch/arm64/configs/bcm2712_defconfig
 +++ b/arch/arm64/configs/bcm2712_defconfig
-@@ -49,6 +49,7 @@ CONFIG_ARM64_ERRATUM_2441009=y
- CONFIG_ARM64_16K_PAGES=y
+@@ -50,6 +50,7 @@ CONFIG_ARM64_16K_PAGES=y
  CONFIG_ARM64_VA_BITS_47=y
  CONFIG_NR_CPUS=4
+ CONFIG_HOTPLUG_CPU=y
 +CONFIG_NUMA=y
  CONFIG_COMPAT=y
  CONFIG_ARMV8_DEPRECATED=y

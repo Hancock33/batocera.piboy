@@ -175,8 +175,8 @@ class XeniaGenerator(Generator):
         if "/squashfs" in rom:
             squashrom = rom + rom.replace('/var/run/squashfs','') + '.xbox360'
             if os.path.exists(squashrom):
-                rom = squashrom
-                eslog.debug(f'Found squashfs playlist: {rom}')
+                rom_path = Path(squashrom)
+                eslog.debug(f'Found squashfs playlist: {rom_path}')
 
         # are we loading a digital title?
         if rom_path.suffix == '.xbox360':
@@ -200,8 +200,10 @@ class XeniaGenerator(Generator):
         config = {}
         if core == 'xenia-canary':
             toml_file = canarypath / 'xenia-canary.config.toml'
+            os.chdir(Path(canarypath))
         else:
             toml_file = emupath / 'xenia.config.toml'
+            os.chdir(Path(emupath))
         if toml_file.is_file():
             with toml_file.open() as f:
                 config = toml.load(f)

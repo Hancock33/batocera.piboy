@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2024-09-09 08:06+0000\n"
+"PO-Revision-Date: 2024-10-13 14:59+0000\n"
 "Last-Translator: THa_MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl-NL\n"
@@ -3422,6 +3422,25 @@ msgctxt "game_options"
 msgid "2.5x (1600x1200)"
 msgstr "2.5x (1600x1200)"
 
+#. TRANSLATION: libretro/flycast, flycast/dolphin
+msgctxt "game_options"
+msgid ""
+"Enable the Dreamcast DSP for more accurate audio. Only recommended for fast "
+"systems."
+msgstr ""
+"Schakel de Dreamcast DSP in voor nauwkeurigere audio. Alleen aanbevolen voor "
+"snelle systemen."
+
+#. TRANSLATION: libretro/flycast, flycast/dolphin, virtualjaguar
+msgctxt "game_options"
+msgid "DIGITAL SOUND PROCESSOR"
+msgstr "DIGITALE GELUIDSPROCESSOR"
+
+#. TRANSLATION: libretro/flycast, libretro/mame, libretro/mame, cemu, cemu, ...
+msgctxt "game_options"
+msgid "Disabled (Default)"
+msgstr "Uitgeschakeld (Standaard)"
+
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "PLAYER 1 CROSSHAIR COLOUR"
@@ -4645,11 +4664,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "MUNT GELUID PLUGIN"
-
-#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
-msgctxt "game_options"
-msgid "Disabled (Default)"
-msgstr "Uitgeschakeld (Standaard)"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -9217,7 +9231,7 @@ msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (Standaard)"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, pcsx2
+#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, melonds, ...
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr "Verhelp screen tearing. Zwaar voor de CPU."
@@ -10354,20 +10368,6 @@ msgctxt "game_options"
 msgid "CONTROLLER 4 FEATURE PACK"
 msgstr "CONTROLLER 4 FEATURE PACK"
 
-#. TRANSLATION: flycast/dolphin
-msgctxt "game_options"
-msgid ""
-"Enable the Dreamcast DSP for more accurate audio. Only recommended for fast "
-"systems."
-msgstr ""
-"Schakel de Dreamcast DSP in voor nauwkeurigere audio. Alleen aanbevolen voor "
-"snelle systemen."
-
-#. TRANSLATION: flycast/dolphin, virtualjaguar
-msgctxt "game_options"
-msgid "DIGITAL SOUND PROCESSOR"
-msgstr "DIGITALE GELUIDSPROCESSOR"
-
 #. TRANSLATION: flycast
 msgctxt "game_options"
 msgid "Force the game to render in this aspect ratio."
@@ -10599,6 +10599,16 @@ msgstr "IDE (Standaard)"
 msgctxt "game_options"
 msgid "ASCI"
 msgstr "ASCI"
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "OpenGL (Classic)"
+msgstr ""
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "OpenGL (Compute shader)"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -12374,7 +12384,7 @@ msgstr ""
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "PS3 CONTROLLER"
-msgstr ""
+msgstr "PS3 CONTROLLER"
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
@@ -12389,17 +12399,17 @@ msgstr "Sony DS"
 #. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 5"
-msgstr ""
+msgstr "CONTROLLER 5"
 
 #. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 6"
-msgstr ""
+msgstr "CONTROLLER 6"
 
 #. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 7"
-msgstr ""
+msgstr "CONTROLLER 7"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -12736,57 +12746,58 @@ msgstr "QUAD RENDEREN"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "CRT-like colour adaption. Requires New 3D engine."
-msgstr ""
+msgstr "CRT-achtige kleuraanpassing. Vereist nieuwe 3D-engine."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "CRT COLOUR"
-msgstr ""
+msgstr "CRT KLEUR"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "ARI/D93 (recommended for all JP developed games)"
-msgstr ""
+msgstr "ARI/D93 (aanbevolen voor alle door JP ontwikkelde games)"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "PVM_20M2U/D93"
-msgstr ""
+msgstr "PVM_20M2U/D93"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "BT601_525/D93"
-msgstr ""
+msgstr "BT601_525/D93"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "BT601_525/D65 (recommended for all US developed games)"
-msgstr ""
+msgstr "BT601_525/D65 (aanbevolen voor alle in de VS ontwikkelde games)"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "BT601_625/D65 (recommended for all EUR/AUS developed games)"
 msgstr ""
+"BT601_625/D65 (aanbevolen voor alle door in de EU/AUS ontwikkelde games)"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "Upscale filter used for the 2D layers. Requires New 3D engine."
-msgstr ""
+msgstr "Upscale-filter gebruikt voor de 2D-lagen. Vereist nieuwe 3D-engine."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "UPSCALE MODE"
-msgstr ""
+msgstr "UPSCALE-MODUS"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "None/Sharp Pixels"
-msgstr ""
+msgstr "Geen/scherpe pixels"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "Biquintic"
-msgstr ""
+msgstr "Biquintisch"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -14667,6 +14678,134 @@ msgctxt "game_options"
 msgid "EGA GRAPHICS MODE"
 msgstr ""
 
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Basic Filtering type for the jaguar display when rendering to the native "
+"display."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "SCREEN FILTER"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "Point (Default)"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Supports uncapped frame rates, analog controllers, and mouse look "
+"functionality."
+msgstr ""
+
+#. TRANSLATION: bigpemu, bigpemu, bigpemu, bigpemu, bigpemu, ...
+msgctxt "game_options"
+msgid "SCRIPT MODULES"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "ALIEN VS PREDATOR"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "Switches the game to multiplayer mode."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "ALIEN VS PREDATOR MULTIPLAYER"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "Fixes flickering."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "BRETT HULL HOCKEY"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Features native resolution rendering, analog controller and mouse support, "
+"frame rate unlocking up to 60Hz, an improved camera with a disable tilt "
+"option, custom sky/background functionality, and various other tweaks and "
+"options."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "CHECKERED FLAG"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "Renders polygons and textures at the native resolution."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "CYBERMORPH"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Offers support for analog controllers and mouse look functionality for "
+"improved control."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "IRON SOLDIER"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Includes VR head tracking and stereoscopic rendering for both VR and 3D TVs, "
+"along with mouse support (Mouse Look), and introduces a new Head Tracker "
+"input device type with options to convert analog inputs to tracker angles "
+"for enhanced analog controller support."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "MISSILE COMMAND 3D VR"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Provides analog controller and mouse support while patching existing rotary "
+"controller bugs found in hardware."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "TEMPEST 2000"
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid ""
+"Offers analog controller and mouse support (Mouse Look), along with options "
+"for always-strafe and always-run functionalities."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "WOLFENSTEIN 3D"
+msgstr ""
+
 #. TRANSLATION: dxx-rebirth
 msgctxt "game_options"
 msgid "Classic (Default)"
@@ -16173,37 +16312,37 @@ msgstr ""
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Enhancement. Increase the rendering resolution."
-msgstr ""
+msgstr "Verbetering. Verhoog de weergaveresolutie."
 
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "1280x960 (Default)"
-msgstr ""
+msgstr "1280x960 (Standaard)"
 
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Change image scaling algorithm quality."
-msgstr ""
+msgstr "Wijzig de kwaliteit van het beeldschalingsalgoritme."
 
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "IMAGE QUALITY"
-msgstr ""
+msgstr "BEELDKWALITEIT"
 
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Nearest pixel sampling"
-msgstr ""
+msgstr "Dichtstbijzijnde pixel sampling"
 
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Linear filtering"
-msgstr ""
+msgstr "Lineaire filtering"
 
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Anisotropic filtering"
-msgstr ""
+msgstr "Anisotrope filtering"
 
 #. TRANSLATION: mame.mame.keys, c128.vice.keys, c64.vice.keys, singe.hypseus-singe.keys, daphne.hypseus-singe.keys, ...
 msgctxt "keys_files"
@@ -16608,7 +16747,7 @@ msgstr ""
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, openjazz.keys, rott.keys, raze.keys
 msgctxt "keys_files"
 msgid "Fire"
-msgstr ""
+msgstr "Vuur"
 
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -16648,7 +16787,7 @@ msgstr ""
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
-msgstr ""
+msgstr "Rennen"
 
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -16878,67 +17017,67 @@ msgstr ""
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Open door"
-msgstr ""
+msgstr "Open deur"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle weapon"
-msgstr ""
+msgstr "Schakel wapen"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Drop weapon"
-msgstr ""
+msgstr "Laat wapen vallen"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Aim up"
-msgstr ""
+msgstr "Richt naar boven"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Aim down"
-msgstr ""
+msgstr "Richt naar beneden"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Strafe left"
-msgstr ""
+msgstr "Strafe naar links"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Strafe right"
-msgstr ""
+msgstr "Strafe naar rechts"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
-msgstr ""
+msgstr "Menu terug"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move left"
-msgstr ""
+msgstr "Ga naar links"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move right"
-msgstr ""
+msgstr "Ga naar rechts"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move forward"
-msgstr ""
+msgstr "Ga naar voren"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move backward"
-msgstr ""
+msgstr "Ga naar achteren"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
-msgstr ""
+msgstr "Schakel rennen"
 
 #. TRANSLATION: sonicnexus.keys
 msgctxt "keys_files"
@@ -17533,6 +17672,18 @@ msgstr ""
 #~ "Stel de gewenste maximale verversingssnelheid in wanneer V-SYNC is "
 #~ "uitgeschakeld."
 
+#~ msgctxt "game_options"
+#~ msgid "Change the game's brightness."
+#~ msgstr "Verander de helderheid van het spel."
+
+#~ msgctxt "game_options"
+#~ msgid "BRIGHTNESS"
+#~ msgstr "HELDERHEID"
+
+#~ msgctxt "game_options"
+#~ msgid "200% (Maximum)"
+#~ msgstr "200% (Maximum)"
+
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Open het menu van Dolphin-triforce"
@@ -17640,123 +17791,3 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Vooruitspoelen"
-
-#~ msgctxt "keys_files"
-#~ msgid "Start"
-#~ msgstr "Start"
-
-#~ msgctxt "keys_files"
-#~ msgid "Coin"
-#~ msgstr "Munt"
-
-#~ msgctxt "keys_files"
-#~ msgid "Push 2"
-#~ msgstr "Druk 2"
-
-#~ msgctxt "keys_files"
-#~ msgid "Push 1"
-#~ msgstr "Druk 1"
-
-#~ msgctxt "keys_files"
-#~ msgid "Push 4"
-#~ msgstr "Druk 4"
-
-#~ msgctxt "keys_files"
-#~ msgid "Push 3"
-#~ msgstr "Druk 3"
-
-#~ msgctxt "keys_files"
-#~ msgid "Push 5"
-#~ msgstr "Druk 5"
-
-#~ msgctxt "keys_files"
-#~ msgid "Push 6"
-#~ msgstr "Druk 6"
-
-#~ msgctxt "keys_files"
-#~ msgid "Push 7"
-#~ msgstr "Druk 7"
-
-#~ msgctxt "keys_files"
-#~ msgid "Push 8"
-#~ msgstr "Druk 8"
-
-#~ msgctxt "keys_files"
-#~ msgid "Digital Left"
-#~ msgstr "Digitaal Links"
-
-#~ msgctxt "keys_files"
-#~ msgid "Digital Right"
-#~ msgstr "Digitaal Rechts"
-
-#~ msgctxt "keys_files"
-#~ msgid "Digital Up"
-#~ msgstr "Digitaal Omhoog"
-
-#~ msgctxt "keys_files"
-#~ msgid "Digital Down"
-#~ msgstr "Digitaal Omlaag"
-
-#~ msgctxt "keys_files"
-#~ msgid "Analog 1 Left"
-#~ msgstr "Analoog 1 Links"
-
-#~ msgctxt "keys_files"
-#~ msgid "Analog 1 Right"
-#~ msgstr "Analoog 1 Rechts"
-
-#~ msgctxt "keys_files"
-#~ msgid "Analog 1 Up"
-#~ msgstr "Analoog 1 Omhoog"
-
-#~ msgctxt "keys_files"
-#~ msgid "Analog 1 Down"
-#~ msgstr "Analoog 1 Omlaag"
-
-#~ msgctxt "keys_files"
-#~ msgid "Analog 2 Left"
-#~ msgstr "Analoog 2 Links"
-
-#~ msgctxt "keys_files"
-#~ msgid "Analog 2 Right"
-#~ msgstr "Analoog 2 Rechts"
-
-#~ msgctxt "keys_files"
-#~ msgid "Analog 2 Up"
-#~ msgstr "Analoog 2 Omhoog"
-
-#~ msgctxt "keys_files"
-#~ msgid "Analog 2 Down"
-#~ msgstr "Analoog 2 Omlaag"
-
-#~ msgctxt "keys_files"
-#~ msgid "Set to full screen"
-#~ msgstr "Instellen op volledig scherm"
-
-#~ msgctxt "game_options"
-#~ msgid "PS3 CONTROLLER 1"
-#~ msgstr "PS3 CONTROLLER 1"
-
-#~ msgctxt "game_options"
-#~ msgid "PS3 CONTROLLER 2"
-#~ msgstr "PS3 CONTROLLER 2"
-
-#~ msgctxt "game_options"
-#~ msgid "PS3 CONTROLLER 3"
-#~ msgstr "PS3 CONTROLLER 3"
-
-#~ msgctxt "game_options"
-#~ msgid "PS3 CONTROLLER 4"
-#~ msgstr "PS3 CONTROLLER 4"
-
-#~ msgctxt "game_options"
-#~ msgid "PS3 CONTROLLER 5"
-#~ msgstr "PS3 CONTROLLER 5"
-
-#~ msgctxt "game_options"
-#~ msgid "PS3 CONTROLLER 6"
-#~ msgstr "PS3 CONTROLLER 6"
-
-#~ msgctxt "game_options"
-#~ msgid "PS3 CONTROLLER 7"
-#~ msgstr "PS3 CONTROLLER 7"
