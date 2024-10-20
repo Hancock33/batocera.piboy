@@ -343,13 +343,13 @@ class LibretroGenerator(Generator):
             with open(rom_path, 'r') as file:
                 first_line = file.readline().strip()
             directory_path = '/'.join(rom.split('/')[:-1])
-            rom_path = f"{directory_path}/{first_line}"
+            rom_path = rom_path.parent / first_line
 
         if system.name == 'openlara':
             with open(rom_path, 'r') as file:
                 first_line = file.readline().strip()
             directory_path = '/'.join(rom.split('/')[:-1])
-            rom_path = f"{directory_path}/{first_line}"
+            rom_path = rom_path.parent / first_line
 
         if system.name == '3ds':
             if "squashfs" in rom:
