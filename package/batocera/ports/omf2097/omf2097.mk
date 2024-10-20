@@ -13,7 +13,7 @@ OMF2097_SUPPORTS_IN_SOURCE_BUILD = NO
 define OMF2097_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/openomf  $(TARGET_DIR)/usr/bin/openomf
 	rm -rf $(TARGET_DIR)/usr/share/game_assets/omf2097
-	rm -rf mkdir -p $(TARGET_DIR)/usr/share/games/openomf
+	rm -rf $(TARGET_DIR)/usr/share/games/openomf
 	mkdir -p $(TARGET_DIR)/usr/share/game_assets/omf2097
 	mkdir -p $(TARGET_DIR)/usr/share/games/openomf
 	cp  $(@D)/buildroot-build/resources/openomf.bk $(TARGET_DIR)/usr/share/game_assets/omf2097
