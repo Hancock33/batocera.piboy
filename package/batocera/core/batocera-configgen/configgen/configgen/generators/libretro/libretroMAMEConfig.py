@@ -429,7 +429,7 @@ def generateMAMEConfigs(playersControllers: ControllerMapping, system: Emulator,
             commandLine += [ "-artwork_crop" ]
 
     # Share plugins & samples with standalone MAME (except TI99)
-    if not system.name == "ti99":
+    if not (system.name == "ti99" or system.name == "cdi"):
         commandLine += [ "-pluginspath", f"/usr/bin/mame/plugins/;{SAVES / 'mame' / 'plugins'}" ]
         commandLine += [ "-homepath" , SAVES / 'mame' / 'plugins' ]
         commandLine += [ "-samplepath", BIOS / "mame" / "samples" ]
