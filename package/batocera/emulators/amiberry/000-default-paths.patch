@@ -1,8 +1,8 @@
 diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
-index 3328d830..89ad5e51 100644
+index 5d42399a..d5168fdb 100644
 --- a/src/osdep/amiberry.cpp
 +++ b/src/osdep/amiberry.cpp
-@@ -4202,7 +4202,7 @@ void create_missing_amiberry_folders()
+@@ -4014,7 +4014,7 @@ void create_missing_amiberry_folders()
  #ifdef __MACH__
          const std::string default_roms_path = app_directory + "/Resources/roms/";
  #else
@@ -11,7 +11,7 @@ index 3328d830..89ad5e51 100644
  #endif
          // copy default kickstart files, if they exist in AMIBERRY_DATADIR/roms
          if (my_existsdir(default_roms_path.c_str()))
-@@ -4237,9 +4237,9 @@ static void init_amiberry_dirs()
+@@ -4059,9 +4059,9 @@ static void init_amiberry_dirs()
  	const std::string amiberry_dir = "amiberry";
  #endif
  	current_dir = home_dir = get_home_directory();
@@ -24,9 +24,9 @@ index 3328d830..89ad5e51 100644
  
  	std::string xdg_data_home = get_xdg_data_home();
  	xdg_data_home += "/" + amiberry_dir;
-@@ -4282,25 +4282,25 @@ static void init_amiberry_dirs()
-     nvram_dir.append("/Nvram/");
+@@ -4106,26 +4106,26 @@ static void init_amiberry_dirs()
      video_dir.append("/Videos/");
+ 	themes_path.append("/Themes/");
  #else
 -	controllers_path.append("/controllers/");
 -	whdboot_path.append("/whdboot/");
@@ -51,6 +51,7 @@ index 3328d830..89ad5e51 100644
 +	screenshot_dir = "/userdata/screenshots/";
  	nvram_dir.append("/nvram/");
  	video_dir.append("/videos/");
+ 	themes_path.append("/themes/");
  #endif
  
 -	retroarch_file = config_path;
