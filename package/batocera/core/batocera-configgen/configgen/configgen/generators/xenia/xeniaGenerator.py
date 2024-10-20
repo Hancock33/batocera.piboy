@@ -200,8 +200,10 @@ class XeniaGenerator(Generator):
         config = {}
         if core == 'xenia-canary':
             toml_file = canarypath / 'xenia-canary.config.toml'
+            os.chdir(Path(canarypath))
         else:
             toml_file = emupath / 'xenia.config.toml'
+            os.chdir(Path(emupath))
         if toml_file.is_file():
             with toml_file.open() as f:
                 config = toml.load(f)
