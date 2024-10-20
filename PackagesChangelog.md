@@ -8,10 +8,12 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|c16682c4c72319b0d6377
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-10-20|Oct 20, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|caf06a0b201f485aad1edd7b3a5f41e46cd09858|Oct 20, 2024
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|8e08756b6ed7f41a7bbf4c432dd1c6ad48c514c3|Oct 20, 2024
+Emulators|[supermodel](http://github.com/trzy/Supermodel)|f9cb795d6abd7a18ba3f3d44b62018f0be15b1a6|Oct 20, 2024
 Looks|[hypseus-singe-bezels](http://github.com/Tovarichtch/hypseus_singe_daphne_bezels)|354e25be60e4f8e97dfa31e5668e1f98eabeddc5|Oct 20, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|18ee62a8bad7eb38437309517909da1977e7bed9|Oct 20, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|29beabd6831dd51a1dd0a0cbf6c241a2ba45b612|Oct 20, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|0a8a9a4ebb4c80ca9202063c5c8c0fcd7c78d42d|Oct 20, 2024
+Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|f373150fef0656e9327c1c000b3ae23ccffda319|Oct 20, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|7b5a9a4d0f8965e0f69836198256034a408f69c9|Oct 20, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|a70c7af9f172a3f037275a0f6b23690afefe7103|Oct 20, 2024
 Ports|[raze](http://github.com/ZDoom/Raze)|c6f19904954c34a23913ec431ca39fb28b024fd8|Oct 20, 2024
@@ -30,12 +32,10 @@ Emulators|[flycast](https://github.com/flyinghead/flycast.git)|c86ed291cf614ee4f
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|ae66af33e5f70a81fbfa15d5fa8f372f7fd7f56e|Oct 19, 2024
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|fbf753257b74072d2c95c10b2f40c0534959cf8d|Oct 19, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|bb18df8c864469563db24f95ea55a0baeee0db8f|Oct 19, 2024
-Emulators|[supermodel](http://github.com/trzy/Supermodel)|e2538e2043fdaaed29a35e9acca36439de04a80b|Oct 19, 2024
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|cdffc74d991918c8f6e344a689a8669c56281b91|Oct 19, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|46a83965db00bbdc4e951cb3666fa83fd955d484|Oct 19, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45359|Oct 19, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|8af296a200b732b92c489a2f8b949492f56c789f|Oct 19, 2024
-Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|9f94e72906e1945c05a6173b1f2d7ba48fe84149|Oct 19, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|0f15ffe34a0bf05b5823148efdc2545b9cf0ff3f|Oct 19, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|5cce4de6a93d62e5286ad4e1e93e25efe877842c|Oct 19, 2024
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|a1320da566c03503ea755447458bb2b79a610cb5|Oct 19, 2024
