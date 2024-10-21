@@ -3469,7 +3469,7 @@ index a4b47319ad8e..1b445f8473f8 100644
  	    USB_DEVICE_ID_ASUSTEK_ROG_CLAYMORE_II_KEYBOARD),
  	  QUIRK_ROG_CLAYMORE_II_KEYBOARD },
 diff --git a/drivers/hid/hid-ids.h b/drivers/hid/hid-ids.h
-index 86820a3d9766..d2af473449c4 100644
+index 8a991b30e3c6..b15a4e44324c 100644
 --- a/drivers/hid/hid-ids.h
 +++ b/drivers/hid/hid-ids.h
 @@ -209,6 +209,7 @@
