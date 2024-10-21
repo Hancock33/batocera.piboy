@@ -1,5 +1,5 @@
 diff --git a/include/linux/sched.h b/include/linux/sched.h
-index 449dd64ed9ac..b1900353238b 100644
+index bb343136ddd0..c86185f87e7b 100644
 --- a/include/linux/sched.h
 +++ b/include/linux/sched.h
 @@ -538,6 +538,14 @@ struct sched_statistics {
@@ -77,10 +77,10 @@ index 000000000000..12a613a94ff0
 +#endif // CONFIG_SCHED_BORE
 +#endif // _LINUX_SCHED_BORE_H
 diff --git a/init/Kconfig b/init/Kconfig
-index d77b5b46f4d3..50c15d4b9c4a 100644
+index 38dbd16da6a9..d405ee2f35f1 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
-@@ -1348,6 +1348,23 @@ config CHECKPOINT_RESTORE
+@@ -1352,6 +1352,23 @@ config CHECKPOINT_RESTORE
  
  	  If unsure, say N here.
  
@@ -551,7 +551,7 @@ index 000000000000..cd7e8a8d6075
 +#endif // CONFIG_SYSCTL
 +#endif // CONFIG_SCHED_BORE
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 9dd091ad5a60..903619e16311 100644
+index dbfb5717d6af..1aa65e287042 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -97,6 +97,8 @@
@@ -563,7 +563,7 @@ index 9dd091ad5a60..903619e16311 100644
  EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_send_cpu);
  EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_send_cpumask);
  
-@@ -8376,6 +8378,11 @@ void __init sched_init(void)
+@@ -8377,6 +8379,11 @@ void __init sched_init(void)
  	BUG_ON(!sched_class_above(&ext_sched_class, &idle_sched_class));
  #endif
  
@@ -683,7 +683,7 @@ index f4035c7a0fa1..7676ad895b92 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index ae29f0d42213..a9ea5c56f325 100644
+index b55fa314df37..2edce57f74ab 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -55,6 +55,8 @@
@@ -858,7 +858,7 @@ index ae29f0d42213..a9ea5c56f325 100644
  	/*
  	 * When joining the competition; the existing tasks will be,
  	 * on average, halfway through their slice, as such start tasks
-@@ -7106,6 +7140,14 @@ static int dequeue_entities(struct rq *rq, struct sched_entity *se, int flags)
+@@ -7109,6 +7143,14 @@ static int dequeue_entities(struct rq *rq, struct sched_entity *se, int flags)
  		p = task_of(se);
  		h_nr_running = 1;
  		idle_h_nr_running = task_has_idle_policy(p);
@@ -873,7 +873,7 @@ index ae29f0d42213..a9ea5c56f325 100644
  	} else {
  		cfs_rq = group_cfs_rq(se);
  		slice = cfs_rq_min_slice(cfs_rq);
-@@ -9015,16 +9057,25 @@ static void yield_task_fair(struct rq *rq)
+@@ -9018,16 +9060,25 @@ static void yield_task_fair(struct rq *rq)
  	/*
  	 * Are we the only task in the tree?
  	 */
@@ -899,7 +899,7 @@ index ae29f0d42213..a9ea5c56f325 100644
  	/*
  	 * Tell update_rq_clock() that we've just updated,
  	 * so we don't do microscopic update in schedule()
-@@ -13076,6 +13127,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
+@@ -13079,6 +13130,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
  static void task_fork_fair(struct task_struct *p)
  {
  	set_task_max_allowed_capacity(p);
@@ -909,7 +909,7 @@ index ae29f0d42213..a9ea5c56f325 100644
  }
  
  /*
-@@ -13186,6 +13240,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
+@@ -13189,6 +13243,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
  
  static void switched_from_fair(struct rq *rq, struct task_struct *p)
  {
@@ -918,13 +918,13 @@ index ae29f0d42213..a9ea5c56f325 100644
 +	init_task_bore(p);
 +#endif // CONFIG_SCHED_BORE
  	detach_task_cfs_rq(p);
- 	/*
- 	 * Since this is called after changing class, this is a little weird
+ }
+ 
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 808bfaded2af..f8a37d01ee34 100644
+index 991226ab5250..f441db4c4811 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
-@@ -2075,7 +2075,11 @@ static inline void update_sched_domain_debugfs(void) { }
+@@ -2074,7 +2074,11 @@ static inline void update_sched_domain_debugfs(void) { }
  static inline void dirty_sched_domain_sysctl(int cpu) { }
  #endif
  
@@ -936,7 +936,7 @@ index 808bfaded2af..f8a37d01ee34 100644
  
  static inline const struct cpumask *task_user_cpus(struct task_struct *p)
  {
-@@ -2796,6 +2800,9 @@ extern const_debug unsigned int sysctl_sched_nr_migrate;
+@@ -2795,6 +2799,9 @@ extern const_debug unsigned int sysctl_sched_nr_migrate;
  extern const_debug unsigned int sysctl_sched_migration_cost;
  
  extern unsigned int sysctl_sched_base_slice;
