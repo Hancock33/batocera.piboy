@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-10-15 14:42+0000\n"
+"PO-Revision-Date: 2024-10-19 12:57+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -10650,12 +10650,12 @@ msgstr "ASCI"
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "OpenGL (Classic)"
-msgstr ""
+msgstr "OpenGL (klassisch)"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
-msgstr ""
+msgstr "OpenGL (Compute-Shader)"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
