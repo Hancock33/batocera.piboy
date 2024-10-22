@@ -3,7 +3,8 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 import shlex
 
-from ... import Command, controllersConfig
+from ... import Command
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 class DoomretroGenerator(Generator):
@@ -32,7 +33,7 @@ class DoomretroGenerator(Generator):
             array=commandArray,
             env={
             'DOOMWADDIR': '/userdata/roms/ports/doom',
-            'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+            'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
         })
 
     def getHotkeysContext(self) -> HotkeysContext:
