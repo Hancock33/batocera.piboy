@@ -2,9 +2,9 @@ import os
 import shutil
 from os import path
 
-from ... import Command
 from ... import batoceraFiles
-from ... import controllersConfig
+from ...Command import Command
+from ...controller import generate_sdl_game_controller_config
 from ...utils import videoMode as videoMode
 from ..Generator import Generator
 
@@ -131,7 +131,7 @@ class RtcwGenerator(Generator):
             array=commandArray,
             env={
                 "XDG_DATA_HOME": "/userdata/roms/ports",
-                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers)
             }
         )
 

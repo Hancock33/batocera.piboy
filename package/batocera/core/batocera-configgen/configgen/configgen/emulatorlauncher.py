@@ -33,6 +33,7 @@ from typing import TYPE_CHECKING
 
 from . import controllersConfig as controllers
 from .batoceraPaths import SAVES, SYSTEM_SCRIPTS, USER_SCRIPTS
+from .controller import Controller
 from .Emulator import Emulator
 from .generators import get_generator
 from .utils import bezels as bezelsUtil, gunsUtils, videoMode, wheelsUtils
@@ -58,20 +59,7 @@ def main(args: argparse.Namespace, maxnbplayers: int) -> int:
         return start_rom(args, maxnbplayers, args.rom, args.rom)
 
 def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: str, romConfiguration: str) -> int:
-    controllersInput = []
-    for p in range(1, maxnbplayers+1):
-        ci = {}
-        ci["index"]      = getattr(args, f"p{p}index"     )
-        ci["guid"]       = getattr(args, f"p{p}guid"      )
-        ci["name"]       = getattr(args, f"p{p}name"      )
-        ci["devicepath"] = getattr(args, f"p{p}devicepath")
-        ci["nbbuttons"]  = getattr(args, f"p{p}nbbuttons" )
-        ci["nbhats"]     = getattr(args, f"p{p}nbhats"    )
-        ci["nbaxes"]     = getattr(args, f"p{p}nbaxes"    )
-        controllersInput.append(ci)
-
-    # Read the controller configuration
-    playersControllers = controllers.loadControllerConfig(controllersInput)
+    player_controllers = Controller.load_for_players(maxnbplayers, args)
 
     # find the system to run
     systemName = args.system
@@ -121,7 +109,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: str, romConfigur
         system.config["use_wheels"] = True
     if system.isOptSet('use_wheels') and system.getOptBoolean('use_wheels'):
         deviceInfos = controllers.getDevicesInformation()
-        (wheelProcesses, playersControllers, deviceInfos) = wheelsUtils.reconfigureControllers(playersControllers, system, rom, metadata, deviceInfos)
+        (wheelProcesses, player_controllers, deviceInfos) = wheelsUtils.reconfigureControllers(player_controllers, system, rom, metadata, deviceInfos)
         wheels = wheelsUtils.getWheelsFromDevicesInfos(deviceInfos)
     else:
         eslog.info("wheels disabled.")
@@ -242,7 +230,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: str, romConfigur
         # run the emulator
         from .utils.evmapy import evmapy
         with (
-            evmapy(systemName, system.config['emulator'], effectiveCore, effectiveRomConfiguration, playersControllers, guns),
+            evmapy(systemName, system.config['emulator'], effectiveCore, effectiveRomConfiguration, player_controllers, guns),
             set_hotkeygen_context(generator)
         ):
             # change directory if wanted
@@ -250,7 +238,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: str, romConfigur
             if executionDirectory is not None:
                 os.chdir(executionDirectory)
 
-            cmd = generator.generate(system, rom, playersControllers, metadata, guns, wheels, gameResolution)
+            cmd = generator.generate(system, rom, player_controllers, metadata, guns, wheels, gameResolution)
 
             if system.isOptSet('hud_support') and system.getOptBoolean('hud_support'):
                 hud_bezel = getHudBezel(system, generator, rom, gameResolution, controllers.gunsBordersSizeName(guns, system.config), controllers.gunsBorderRatioType(guns, system.config))
@@ -573,9 +561,9 @@ def launch() -> None:
             parser.add_argument(f"-p{p}guid"      , help=f"player{p} controller SDL2 guid"        , type=str, required=False)
             parser.add_argument(f"-p{p}name"      , help=f"player{p} controller name"             , type=str, required=False)
             parser.add_argument(f"-p{p}devicepath", help=f"player{p} controller device"           , type=str, required=False)
-            parser.add_argument(f"-p{p}nbbuttons" , help=f"player{p} controller number of buttons", type=str, required=False)
-            parser.add_argument(f"-p{p}nbhats"    , help=f"player{p} controller number of hats"   , type=str, required=False)
-            parser.add_argument(f"-p{p}nbaxes"    , help=f"player{p} controller number of axes"   , type=str, required=False)
+            parser.add_argument(f"-p{p}nbbuttons" , help=f"player{p} controller number of buttons", type=int, required=False)
+            parser.add_argument(f"-p{p}nbhats"    , help=f"player{p} controller number of hats"   , type=int, required=False)
+            parser.add_argument(f"-p{p}nbaxes"    , help=f"player{p} controller number of axes"   , type=int, required=False)
 
         parser.add_argument("-system",         help="select the system to launch", type=str, required=True)
         parser.add_argument("-rom",            help="rom absolute path",           type=str, required=True)

@@ -4,7 +4,8 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 import os
-from ... import Command, controllersConfig
+from ... import Command
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 if TYPE_CHECKING:
@@ -20,7 +21,7 @@ class AbuseGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_AUTO_UPDATE_JOYSTICKS': '0'
+                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
 
     def getHotkeysContext(self) -> HotkeysContext:

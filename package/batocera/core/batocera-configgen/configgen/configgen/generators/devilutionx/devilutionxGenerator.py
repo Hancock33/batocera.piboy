@@ -3,8 +3,9 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 import shutil
 
-from ... import Command, controllersConfig
+from ... import Command
 from ...batoceraPaths import CONFIGS, SAVES
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 mpq_src = "/usr/share/diasurgical/devilutionx"
@@ -36,7 +37,7 @@ class DevilutionXGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
 
     def getHotkeysContext(self) -> HotkeysContext:
