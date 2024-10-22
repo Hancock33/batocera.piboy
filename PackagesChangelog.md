@@ -18,6 +18,8 @@ Ports|[omf2097](http://github.com/omf2097/openomf)|c09029d55f95cdac541703c542180
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|b7f9a476f7a3595a1b5ea8dc5555d85fe3271482|Oct 22, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|fe9d890331117d478bcebdcefa61ba3154bee87d|Oct 22, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|79a301d35091a2c935f92e3e257f72e10505c0fc|Oct 22, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241022|Oct 22, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241022|Oct 22, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|55eda892813c6f5cfe45f0481d8c531037726519|Oct 22, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|a0b0db6f648e6b79c7b03ad86dbf51374de3bc87|Oct 22, 2024
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|f9d0aea31314fc00064a3f2a369feaf7f55f5bb3|Oct 22, 2024
@@ -117,8 +119,6 @@ Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|18ee62a8bad7eb38
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|f373150fef0656e9327c1c000b3ae23ccffda319|Oct 20, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|7b5a9a4d0f8965e0f69836198256034a408f69c9|Oct 20, 2024
 Ports|[raze](http://github.com/ZDoom/Raze)|c6f19904954c34a23913ec431ca39fb28b024fd8|Oct 20, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241020|Oct 20, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241020|Oct 20, 2024
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|ee652293655dd34a4b58bd9e1fb8d98abad00f00|Oct 20, 2024
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|caf06a0b201f485aad1edd7b3a5f41e46cd09858|Oct 20, 2024
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|cdffc74d991918c8f6e344a689a8669c56281b91|Oct 19, 2024
