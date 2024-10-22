@@ -5,7 +5,8 @@ import shutil
 from os import path
 
 from ... import Command
-from ... import controllersConfig
+from ...batoceraPaths import CONFIGS, ROMS, SAVES, ensure_parents_and_open, mkdir_if_not_exists
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 _ROMS_DIR = '/userdata/roms/ports/xash3d_fwgs'
@@ -118,7 +119,7 @@ class Xash3dFwgsGenerator(Generator):
                 'XASH3D_BASEDIR': _ROMS_DIR,
                 'XASH3D_EXTRAS_PAK1': '/usr/share/xash3d/valve/extras.pk3',
                 'LD_LIBRARY_PATH': '/usr/lib/xash3d',
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
 
     def _maybeInitConfig(self, game):
