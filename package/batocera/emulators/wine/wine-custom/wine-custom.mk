@@ -3,8 +3,8 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Oct 19, 2024
-WINE_CUSTOM_VERSION = ntsynch-9.20.r0.g5a1b9d50
+# Version: Commits on Oct 24, 2024
+WINE_CUSTOM_VERSION = ntsynch-9.20.r3.g78bd3f0c
 WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
 WINE_CUSTOM_SITE = $(call github,Hancock33,wine-tkg-batocera,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+

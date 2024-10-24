@@ -20,6 +20,9 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|bda676b8c82b66d471b5
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|620d3b6a2e8d175e60e801b4f4e49525e1db5764|Oct 24, 2024
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|485afc5ff361b1e0074d21ff794a3ac2b1d3ef2f|Oct 24, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|be92b974d21f6648fc3eb7ac77c41ef023b7f3f8|Oct 24, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20.r3.g78bd3f0c|Oct 24, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241024|Oct 24, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241024|Oct 24, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|fc11fd82d68b3582ad8e293ecaa4876c334b6732|Oct 24, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|59dab4438037cb9acbe43ce2b4b9d19c88727764|Oct 24, 2024
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|3bc2ecb0fc514fba8cfffc560c661de5130e713e|Oct 24, 2024
@@ -47,8 +50,6 @@ Libraries|[cpuinfo](http://github.com/pytorch/cpuinfo)|dff2616ddd49122b63abcf44d
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|5.3.2|Oct 22, 2024
 Looks|[hypseus-singe-bezels](http://github.com/Tovarichtch/hypseus_singe_daphne_bezels)|b836daf3e294d15dc36a7267f86622b261d8bcba|Oct 22, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|1456e5eb58524c9fac98221f2de19bc0f10288b2|Oct 22, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241022|Oct 22, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241022|Oct 22, 2024
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|01ce142ccb85c302420cb962d1b6e6a68a6ce076|Oct 22, 2024
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|b9c5c4d8d3bf2e2da91e0a3afe590a63aef57a62|Oct 22, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|4f3d214b314d84c6a3e25b27c77bd1d0ee3a1697|Oct 22, 2024
@@ -138,7 +139,6 @@ Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerD
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|a1320da566c03503ea755447458bb2b79a610cb5|Oct 19, 2024
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|51100408d69a6732e79afcc1b2f1b2173147c7e4|Oct 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|19d9ff76710dafa6dcb32c3e707b09a787798e26|Oct 19, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20.r0.g5a1b9d50|Oct 19, 2024
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|859c6e3969ffd5e4e53b07991ab9a5b46d89042d|Oct 19, 2024
 Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|08862a8aa4cf185606fbf54aafc0b5b8f8ee0220|Oct 19, 2024
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|0daf92b57fba1fdbc124651573e88373eef28aa5|Oct 19, 2024
