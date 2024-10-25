@@ -42,6 +42,7 @@
 - ES: Sinden light gun border now have the exact same size in-game
 - Custom boot splash image now displays when intended
 - Dualshock controllers not enabled on some Arm boards
+- Hotkey handling for Flycast
 ### Changed / Improved
 - Splash screen now disabled by default
 - Added bezel & sinden border support for the RPi5 with Model 3 games
@@ -79,7 +80,7 @@
   - Libretro-Ecwolf to June 28 build
   - Libretro-Fake08 to Sept 2 build
   - Libretro-Fbneo to October 3, 2024 build
-  - Libretro-Flycast to September 29, 2024 build
+  - Libretro-Flycast to v2.4
   - Libretro-Freechaf to June 28 build
   - Libretro-MAME to 0.268
   - Libretro-Minivac to July 1 build
@@ -99,9 +100,9 @@
 - Duckstation to v0.1-7294
 - DXX-Rebirth to July 21 build
 - Eduke32 to Jul 25 build
-- Flycast to September 29, 2024 build
+- Flycast to v2.4
 - GroovyMAME to 0.268
-- GZDoom to g4.13.0
+- GZDoom to g4.13.1
 - Ikemen to August 1st 2024 build
 - Kodi to 21.1
 - MelonDS to 7th October build
@@ -115,10 +116,11 @@
 - Supermodel to 1st October build
 - Syncthing to 1.27.10
 - The Force Engine to Aug 19, 2024 build
+- TheXTech to v1.3.6.6
 - Vita3k to August 25, 2024 build
 - Xemu to v0.7.130
 - Xenia to v1.0.2817
-- Xenia Canary to October 1, 2024 build
+- Xenia Canary to October 23, 2024 build
 ### System
 - Bauh to 0.10.7 (flatpak-config)
 - Nvidia Driver to 560.35.03 (Open kernel modules)
