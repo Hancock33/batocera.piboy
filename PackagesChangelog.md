@@ -23,6 +23,7 @@ Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|a8f45860fadd5
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|08715f75b459129d08b918e411c1a91c71a3cd0a|Oct 25, 2024
 Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-console)|210309c5255fc829b90513266938d2bf4c3f949a|Oct 25, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|562e4ba40f0fe29c558644b107e2b8cc69238d5b|Oct 25, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20.r86.ga0e2cbd46a7|Oct 25, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241025|Oct 25, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241025|Oct 25, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|e9d1c79e07ab87806fede5a5efc698b6c5a2b6f5|Oct 25, 2024
@@ -49,7 +50,6 @@ Ports|[stk](http://github.com/supertuxkart/stk-code)|9e62028bf919b982c29b2871fe4
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|bda676b8c82b66d471b5288c9b9914882b8f9117|Oct 24, 2024
 Utils|[re2c](http://github.com/skvadrik/re2c)|3f0f46ff75e15e68abeb1a62de5bc55acb084988|Oct 24, 2024
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|485afc5ff361b1e0074d21ff794a3ac2b1d3ef2f|Oct 24, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20.r3.g78bd3f0c|Oct 24, 2024
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|3bc2ecb0fc514fba8cfffc560c661de5130e713e|Oct 24, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|25b2c0f7e3bd26482e3fcebebe0d57f5c6055e25|Oct 24, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|19eae98ea997b92756423fca0333e15d0b27760a|Oct 24, 2024
@@ -173,6 +173,8 @@ Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|06b03a2494
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|8e19cb634738254e92610f362af177d8a10b948a|Oct 16, 2024
 Emulators|[libretro-vircon32](http://github.com/vircon32/vircon32-libretro)|9a44a83e5aaa82be7f1a127eb0c9ec0b287b58fa|Oct 16, 2024
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|979be845216ee9d613cb6555fb8b11c01bec39a0|Oct 16, 2024
+Gpu|[nvidia-open-driver](http://download.nvidia.com/XFree86/Linux-x86)|565.57.01|Oct 15, 2024
+Gpu|[nvidia-proprietary-driver](http://download.nvidia.com/XFree86/Linux-x86)|$(NVIDIA_OPEN_DRIVER_VERSION)|Oct 15, 2024
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|0ae3c8174559dd50091304dc0792c941b80f3b2d|Oct 15, 2024
 Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)|5984230c441fca1dc77d823467e94acf125478c8|Oct 15, 2024
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|9f53af4e332476ba99d0c056668fbb35cfb527c3|Oct 15, 2024
@@ -280,8 +282,6 @@ Ports|[hlsdk-xash3d-dmc](http://github.com/FWGS/hlsdk-portable)|01474b39612f657b
 Ports|[hlsdk-xash3d-zombiex](http://github.com/FWGS/hlsdk-portable)|1557424de63ca90abbd4cae020f130feb1f140a6|Aug 21, 2024
 Emulators|[libretro-mupen64plus-next](http://github.com/libretro/mupen64plus-libretro-nx)|c2f6acfe3b7b07ab86c3e4cd89f61a9911191793|Aug 21, 2024
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
-Gpu|[nvidia-open-driver](http://download.nvidia.com/XFree86/Linux-x86)|560.35.03|Aug 19, 2024
-Gpu|[nvidia-proprietary-driver](http://download.nvidia.com/XFree86/Linux-x86)|$(NVIDIA_OPEN_DRIVER_VERSION)|Aug 19, 2024
 Hardware|[pironman5](http://github.com/sunfounder/pironman5)|a45d0594a2b046346d52f5ad13e1f1fd2a1c590b|Aug 19, 2024
 Network|[qrtr](http://github.com/linux-msm/qrtr)|ef44ad10f284410e2db4c4ce22c8645f988f8402|Aug 18, 2024
 Boot|[batocera-shim-signed-efi-ia32](https://ftp.debian.org/debian/pool/main/s/shim-signed)|1.44~1+deb12u1+15.8-1~deb12u1|Aug 16, 2024
