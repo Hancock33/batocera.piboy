@@ -23,6 +23,8 @@ Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|a8f45860fadd5
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|08715f75b459129d08b918e411c1a91c71a3cd0a|Oct 25, 2024
 Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-console)|210309c5255fc829b90513266938d2bf4c3f949a|Oct 25, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|562e4ba40f0fe29c558644b107e2b8cc69238d5b|Oct 25, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241025|Oct 25, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241025|Oct 25, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|e9d1c79e07ab87806fede5a5efc698b6c5a2b6f5|Oct 25, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|a14bba3561e59fff86e4a3a04c829c6bbdeb189a|Oct 25, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|8b42de740d41158aa3726181f6e4c88f57bee02f|Oct 25, 2024
@@ -48,8 +50,6 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|bda676b8c82b66d471b5
 Utils|[re2c](http://github.com/skvadrik/re2c)|3f0f46ff75e15e68abeb1a62de5bc55acb084988|Oct 24, 2024
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|485afc5ff361b1e0074d21ff794a3ac2b1d3ef2f|Oct 24, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20.r3.g78bd3f0c|Oct 24, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241024|Oct 24, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241024|Oct 24, 2024
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|3bc2ecb0fc514fba8cfffc560c661de5130e713e|Oct 24, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|25b2c0f7e3bd26482e3fcebebe0d57f5c6055e25|Oct 24, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|19eae98ea997b92756423fca0333e15d0b27760a|Oct 24, 2024
