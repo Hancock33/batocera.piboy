@@ -16331,7 +16331,7 @@ msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr "コントローラー画面を表示"
 
-#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Configuration menu"
 msgstr "設定メニュー"
@@ -16346,17 +16346,17 @@ msgctxt "keys_files"
 msgid "Exit Emulator"
 msgstr "エミュレータを終了"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Load State"
 msgstr "ステートロード"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "ステートセーブ"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Fast Forward"
 msgstr "早送り"
