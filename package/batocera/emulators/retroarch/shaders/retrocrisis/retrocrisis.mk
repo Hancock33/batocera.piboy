@@ -17,7 +17,7 @@ endef
 
 define RETROCRISIS_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/shaders
-	cp -ar $(@D)/shaders $(TARGET_DIR)/usr/share/batocera
+	cp -ar $(@D)/shaders_slang $(TARGET_DIR)/usr/share/batocera/shaders
 endef
 
 $(eval $(generic-package))
