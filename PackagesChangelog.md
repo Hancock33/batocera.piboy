@@ -7,6 +7,9 @@ Emulators|[scummvm](http://github.com/scummvm/scummvm)|2a20049ac750ddebbc2a6dac9
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|9e7a5a17b6cc6325c43433f4a7d03c8feeb062fe|Oct 26, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|bcc03eb3575bb908ef4f041ef8aa04e82333449f|Oct 26, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|a118963dc9372bf864d5910cf438f08085bd3939|Oct 26, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20.r104.g3a736901cdd|Oct 26, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241026|Oct 26, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241026|Oct 26, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|70688751bcafd20e10f085503bdf2a7609ffbc93|Oct 26, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|cf532d7c7675d3ffa5d69009d63869daf73955cb|Oct 26, 2024
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|1c38f0cff707b340910667f0b9a5fea4cbac7790|Oct 26, 2024
@@ -39,9 +42,6 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|196844f2e6fd42b9d253
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|93ce678eaa535c1cc6471ba14b809faa485515d4|Oct 25, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|08715f75b459129d08b918e411c1a91c71a3cd0a|Oct 25, 2024
 Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-console)|210309c5255fc829b90513266938d2bf4c3f949a|Oct 25, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20.r86.ga0e2cbd46a7|Oct 25, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241025|Oct 25, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241025|Oct 25, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|bcd63b28a79bab3da66de85f242e4fc404978c01|Oct 25, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|4a525cca240ac3cff7438329aa35508aea48d684|Oct 25, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|ac476d621c3f0996da68fda7017c8f6d208ae253|Oct 25, 2024
