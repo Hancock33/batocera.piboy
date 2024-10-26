@@ -1,5 +1,5 @@
 diff --git a/Directory.Packages.props b/Directory.Packages.props
-index 301024cf..e835a58d 100644
+index e6be60790..57cefbce1 100644
 --- a/Directory.Packages.props
 +++ b/Directory.Packages.props
 @@ -1,6 +1,7 @@
@@ -11,7 +11,7 @@ index 301024cf..e835a58d 100644
    <ItemGroup>
      <PackageVersion Include="Avalonia" Version="11.0.10" />
 diff --git a/src/ARMeilleure/Translation/Cache/JitCache.cs b/src/ARMeilleure/Translation/Cache/JitCache.cs
-index e2b5e2d1..76327113 100644
+index e2b5e2d10..763271134 100644
 --- a/src/ARMeilleure/Translation/Cache/JitCache.cs
 +++ b/src/ARMeilleure/Translation/Cache/JitCache.cs
 @@ -8,6 +8,7 @@ using System.Collections.Generic;
@@ -32,7 +32,7 @@ index e2b5e2d1..76327113 100644
  
          [SupportedOSPlatform("windows")]
 diff --git a/src/ARMeilleure/Translation/PTC/Ptc.cs b/src/ARMeilleure/Translation/PTC/Ptc.cs
-index c2eed7a5..e166430f 100644
+index fa178eace..fff90f57c 100644
 --- a/src/ARMeilleure/Translation/PTC/Ptc.cs
 +++ b/src/ARMeilleure/Translation/PTC/Ptc.cs
 @@ -57,7 +57,7 @@ namespace ARMeilleure.Translation.PTC
@@ -54,7 +54,7 @@ index c2eed7a5..e166430f 100644
              _disposed = false;
  
 diff --git a/src/ARMeilleure/Translation/PTC/PtcProfiler.cs b/src/ARMeilleure/Translation/PTC/PtcProfiler.cs
-index 0fe78eda..62c596d6 100644
+index 8e95c5e4b..d17b20004 100644
 --- a/src/ARMeilleure/Translation/PTC/PtcProfiler.cs
 +++ b/src/ARMeilleure/Translation/PTC/PtcProfiler.cs
 @@ -41,7 +41,7 @@ namespace ARMeilleure.Translation.PTC
@@ -76,7 +76,7 @@ index 0fe78eda..62c596d6 100644
              _disposed = false;
  
 diff --git a/src/Ryujinx.Audio.Backends.OpenAL/OpenALHardwareDeviceSession.cs b/src/Ryujinx.Audio.Backends.OpenAL/OpenALHardwareDeviceSession.cs
-index 3b912913..7292450a 100644
+index 3b9129130..7292450a6 100644
 --- a/src/Ryujinx.Audio.Backends.OpenAL/OpenALHardwareDeviceSession.cs
 +++ b/src/Ryujinx.Audio.Backends.OpenAL/OpenALHardwareDeviceSession.cs
 @@ -5,6 +5,7 @@ using Ryujinx.Memory;
@@ -97,7 +97,7 @@ index 3b912913..7292450a 100644
          public OpenALHardwareDeviceSession(OpenALHardwareDeviceDriver driver, IVirtualMemoryManager memoryManager, SampleFormat requestedSampleFormat, uint requestedSampleRate, uint requestedChannelCount) : base(memoryManager, requestedSampleFormat, requestedSampleRate, requestedChannelCount)
          {
 diff --git a/src/Ryujinx.Audio/AudioManager.cs b/src/Ryujinx.Audio/AudioManager.cs
-index 370d3d09..8c2c0ef6 100644
+index 370d3d098..8c2c0ef6b 100644
 --- a/src/Ryujinx.Audio/AudioManager.cs
 +++ b/src/Ryujinx.Audio/AudioManager.cs
 @@ -11,7 +11,7 @@ namespace Ryujinx.Audio
@@ -110,7 +110,7 @@ index 370d3d09..8c2c0ef6 100644
          /// <summary>
          /// Events signaled when the driver played audio buffers.
 diff --git a/src/Ryujinx.Audio/Backends/Common/DynamicRingBuffer.cs b/src/Ryujinx.Audio/Backends/Common/DynamicRingBuffer.cs
-index 7aefe886..6f31755a 100644
+index 7aefe8865..6f31755a3 100644
 --- a/src/Ryujinx.Audio/Backends/Common/DynamicRingBuffer.cs
 +++ b/src/Ryujinx.Audio/Backends/Common/DynamicRingBuffer.cs
 @@ -2,6 +2,7 @@ using Ryujinx.Common;
@@ -131,7 +131,7 @@ index 7aefe886..6f31755a 100644
          private MemoryOwner<byte> _bufferOwner;
          private Memory<byte> _buffer;
 diff --git a/src/Ryujinx.Audio/Input/AudioInputManager.cs b/src/Ryujinx.Audio/Input/AudioInputManager.cs
-index d56997e9..ffc3e6da 100644
+index d56997e9c..ffc3e6da2 100644
 --- a/src/Ryujinx.Audio/Input/AudioInputManager.cs
 +++ b/src/Ryujinx.Audio/Input/AudioInputManager.cs
 @@ -14,12 +14,12 @@ namespace Ryujinx.Audio.Input
@@ -150,7 +150,7 @@ index d56997e9..ffc3e6da 100644
          /// <summary>
          /// The session ids allocation table.
 diff --git a/src/Ryujinx.Audio/Input/AudioInputSystem.cs b/src/Ryujinx.Audio/Input/AudioInputSystem.cs
-index 34623b34..65b99745 100644
+index 34623b34f..65b99745d 100644
 --- a/src/Ryujinx.Audio/Input/AudioInputSystem.cs
 +++ b/src/Ryujinx.Audio/Input/AudioInputSystem.cs
 @@ -48,7 +48,7 @@ namespace Ryujinx.Audio.Input
@@ -172,7 +172,7 @@ index 34623b34..65b99745 100644
              _manager = manager;
              _parentLock = parentLock;
 diff --git a/src/Ryujinx.Audio/Output/AudioOutputManager.cs b/src/Ryujinx.Audio/Output/AudioOutputManager.cs
-index 308cd156..13e169a2 100644
+index 308cd1564..13e169a24 100644
 --- a/src/Ryujinx.Audio/Output/AudioOutputManager.cs
 +++ b/src/Ryujinx.Audio/Output/AudioOutputManager.cs
 @@ -14,12 +14,12 @@ namespace Ryujinx.Audio.Output
@@ -191,7 +191,7 @@ index 308cd156..13e169a2 100644
          /// <summary>
          /// The session ids allocation table.
 diff --git a/src/Ryujinx.Audio/Output/AudioOutputSystem.cs b/src/Ryujinx.Audio/Output/AudioOutputSystem.cs
-index f9b9bdcf..dc7d52ce 100644
+index f9b9bdcf1..dc7d52ced 100644
 --- a/src/Ryujinx.Audio/Output/AudioOutputSystem.cs
 +++ b/src/Ryujinx.Audio/Output/AudioOutputSystem.cs
 @@ -48,7 +48,7 @@ namespace Ryujinx.Audio.Output
@@ -213,7 +213,7 @@ index f9b9bdcf..dc7d52ce 100644
              _manager = manager;
              _parentLock = parentLock;
 diff --git a/src/Ryujinx.Audio/Renderer/Server/AudioRenderSystem.cs b/src/Ryujinx.Audio/Renderer/Server/AudioRenderSystem.cs
-index 246889c4..65a134af 100644
+index 246889c48..65a134af1 100644
 --- a/src/Ryujinx.Audio/Renderer/Server/AudioRenderSystem.cs
 +++ b/src/Ryujinx.Audio/Renderer/Server/AudioRenderSystem.cs
 @@ -26,7 +26,7 @@ namespace Ryujinx.Audio.Renderer.Server
@@ -226,7 +226,7 @@ index 246889c4..65a134af 100644
          private AudioRendererRenderingDevice _renderingDevice;
          private AudioRendererExecutionMode _executionMode;
 diff --git a/src/Ryujinx.Audio/Renderer/Server/AudioRendererManager.cs b/src/Ryujinx.Audio/Renderer/Server/AudioRendererManager.cs
-index e334a89f..6d7db059 100644
+index e334a89f6..6d7db059f 100644
 --- a/src/Ryujinx.Audio/Renderer/Server/AudioRendererManager.cs
 +++ b/src/Ryujinx.Audio/Renderer/Server/AudioRendererManager.cs
 @@ -19,12 +19,12 @@ namespace Ryujinx.Audio.Renderer.Server
@@ -245,7 +245,7 @@ index e334a89f..6d7db059 100644
          /// <summary>
          /// The session ids allocation table.
 diff --git a/src/Ryujinx.Audio/Renderer/Server/Upsampler/UpsamplerManager.cs b/src/Ryujinx.Audio/Renderer/Server/Upsampler/UpsamplerManager.cs
-index dbc2c9b3..8b3f3943 100644
+index dbc2c9b3f..8b3f39439 100644
 --- a/src/Ryujinx.Audio/Renderer/Server/Upsampler/UpsamplerManager.cs
 +++ b/src/Ryujinx.Audio/Renderer/Server/Upsampler/UpsamplerManager.cs
 @@ -1,5 +1,6 @@
@@ -265,7 +265,7 @@ index dbc2c9b3..8b3f3943 100644
          /// <summary>
          /// The upsamplers instances.
 diff --git a/src/Ryujinx.Common/PreciseSleep/NanosleepPool.cs b/src/Ryujinx.Common/PreciseSleep/NanosleepPool.cs
-index c0973dcb..45b8e95f 100644
+index c0973dcb3..45b8e95fa 100644
 --- a/src/Ryujinx.Common/PreciseSleep/NanosleepPool.cs
 +++ b/src/Ryujinx.Common/PreciseSleep/NanosleepPool.cs
 @@ -124,7 +124,7 @@ namespace Ryujinx.Common.PreciseSleep
@@ -278,7 +278,7 @@ index c0973dcb..45b8e95f 100644
          private readonly List<NanosleepThread> _active = new();
          private readonly Stack<NanosleepThread> _free = new();
 diff --git a/src/Ryujinx.Common/PreciseSleep/WindowsGranularTimer.cs b/src/Ryujinx.Common/PreciseSleep/WindowsGranularTimer.cs
-index 3bf09270..cef4dc92 100644
+index 3bf092704..cef4dc927 100644
 --- a/src/Ryujinx.Common/PreciseSleep/WindowsGranularTimer.cs
 +++ b/src/Ryujinx.Common/PreciseSleep/WindowsGranularTimer.cs
 @@ -50,7 +50,7 @@ namespace Ryujinx.Common.SystemInterop
@@ -291,7 +291,7 @@ index 3bf09270..cef4dc92 100644
  
          private WindowsGranularTimer()
 diff --git a/src/Ryujinx.Cpu/AppleHv/HvVm.cs b/src/Ryujinx.Cpu/AppleHv/HvVm.cs
-index c4f10753..93dc48ff 100644
+index c4f107532..93dc48ff6 100644
 --- a/src/Ryujinx.Cpu/AppleHv/HvVm.cs
 +++ b/src/Ryujinx.Cpu/AppleHv/HvVm.cs
 @@ -1,6 +1,7 @@
@@ -312,7 +312,7 @@ index c4f10753..93dc48ff 100644
          public static (ulong, HvIpaAllocator) CreateAddressSpace(MemoryBlock block)
          {
 diff --git a/src/Ryujinx.Cpu/LightningJit/Cache/JitCache.cs b/src/Ryujinx.Cpu/LightningJit/Cache/JitCache.cs
-index 6f1191ca..d4f68eb6 100644
+index 6f1191ca5..d4f68eb65 100644
 --- a/src/Ryujinx.Cpu/LightningJit/Cache/JitCache.cs
 +++ b/src/Ryujinx.Cpu/LightningJit/Cache/JitCache.cs
 @@ -5,6 +5,7 @@ using System.Collections.Generic;
@@ -333,7 +333,7 @@ index 6f1191ca..d4f68eb6 100644
  
          [SupportedOSPlatform("windows")]
 diff --git a/src/Ryujinx.Cpu/LightningJit/Cache/NoWxCache.cs b/src/Ryujinx.Cpu/LightningJit/Cache/NoWxCache.cs
-index a7107499..573af359 100644
+index a71074995..573af359f 100644
 --- a/src/Ryujinx.Cpu/LightningJit/Cache/NoWxCache.cs
 +++ b/src/Ryujinx.Cpu/LightningJit/Cache/NoWxCache.cs
 @@ -4,6 +4,7 @@ using Ryujinx.Memory;
@@ -354,7 +354,7 @@ index a7107499..573af359 100644
          class ThreadLocalCacheEntry
          {
 diff --git a/src/Ryujinx.Cpu/Signal/NativeSignalHandler.cs b/src/Ryujinx.Cpu/Signal/NativeSignalHandler.cs
-index 93e60832..e467710d 100644
+index 93e608329..e467710d7 100644
 --- a/src/Ryujinx.Cpu/Signal/NativeSignalHandler.cs
 +++ b/src/Ryujinx.Cpu/Signal/NativeSignalHandler.cs
 @@ -5,6 +5,7 @@ using System;
@@ -375,11 +375,11 @@ index 93e60832..e467710d 100644
  
          static NativeSignalHandler()
 diff --git a/src/Ryujinx.Graphics.GAL/Multithreading/ThreadedRenderer.cs b/src/Ryujinx.Graphics.GAL/Multithreading/ThreadedRenderer.cs
-index cc3d2e5c..05e57bfd 100644
+index 0bd3dc592..6375d290c 100644
 --- a/src/Ryujinx.Graphics.GAL/Multithreading/ThreadedRenderer.cs
 +++ b/src/Ryujinx.Graphics.GAL/Multithreading/ThreadedRenderer.cs
-@@ -56,7 +56,7 @@ namespace Ryujinx.Graphics.GAL.Multithreading
-         private int _refConsumerPtr;
+@@ -58,7 +58,7 @@ namespace Ryujinx.Graphics.GAL.Multithreading
+         public uint ProgramCount { get; set; } = 0;
  
          private Action _interruptAction;
 -        private readonly object _interruptLock = new();
@@ -388,7 +388,7 @@ index cc3d2e5c..05e57bfd 100644
          public event EventHandler<ScreenCaptureImageInfo> ScreenCaptured;
  
 diff --git a/src/Ryujinx.Graphics.Gpu/Memory/BufferModifiedRangeList.cs b/src/Ryujinx.Graphics.Gpu/Memory/BufferModifiedRangeList.cs
-index d330de63..825b8fe1 100644
+index d330de638..825b8fe18 100644
 --- a/src/Ryujinx.Graphics.Gpu/Memory/BufferModifiedRangeList.cs
 +++ b/src/Ryujinx.Graphics.Gpu/Memory/BufferModifiedRangeList.cs
 @@ -2,6 +2,7 @@ using Ryujinx.Common.Pools;
@@ -409,7 +409,7 @@ index d330de63..825b8fe1 100644
          /// <summary>
          /// Whether the modified range list has any entries or not.
 diff --git a/src/Ryujinx.Graphics.OpenGL/Queries/CounterQueue.cs b/src/Ryujinx.Graphics.OpenGL/Queries/CounterQueue.cs
-index 345a99ff..7e031140 100644
+index 345a99ffa..7e0311407 100644
 --- a/src/Ryujinx.Graphics.OpenGL/Queries/CounterQueue.cs
 +++ b/src/Ryujinx.Graphics.OpenGL/Queries/CounterQueue.cs
 @@ -19,7 +19,7 @@ namespace Ryujinx.Graphics.OpenGL.Queries
@@ -422,7 +422,7 @@ index 345a99ff..7e031140 100644
          private readonly Queue<BufferedQuery> _queryPool;
          private readonly AutoResetEvent _queuedEvent = new(false);
 diff --git a/src/Ryujinx.Graphics.OpenGL/Queries/CounterQueueEvent.cs b/src/Ryujinx.Graphics.OpenGL/Queries/CounterQueueEvent.cs
-index 32b75c61..88951748 100644
+index 32b75c615..889517480 100644
 --- a/src/Ryujinx.Graphics.OpenGL/Queries/CounterQueueEvent.cs
 +++ b/src/Ryujinx.Graphics.OpenGL/Queries/CounterQueueEvent.cs
 @@ -24,7 +24,7 @@ namespace Ryujinx.Graphics.OpenGL.Queries
@@ -435,7 +435,7 @@ index 32b75c61..88951748 100644
          private double _divisor = 1f;
  
 diff --git a/src/Ryujinx.Graphics.OpenGL/ResourcePool.cs b/src/Ryujinx.Graphics.OpenGL/ResourcePool.cs
-index 6385f57b..c8ff30a0 100644
+index 6385f57b5..c8ff30a07 100644
 --- a/src/Ryujinx.Graphics.OpenGL/ResourcePool.cs
 +++ b/src/Ryujinx.Graphics.OpenGL/ResourcePool.cs
 @@ -2,6 +2,7 @@ using Ryujinx.Graphics.GAL;
@@ -456,7 +456,7 @@ index 6385f57b..c8ff30a0 100644
  
          /// <summary>
 diff --git a/src/Ryujinx.Graphics.Shader/CodeGen/Spirv/SpirvGenerator.cs b/src/Ryujinx.Graphics.Shader/CodeGen/Spirv/SpirvGenerator.cs
-index b259dde2..e707aaca 100644
+index b259dde28..e707aacaf 100644
 --- a/src/Ryujinx.Graphics.Shader/CodeGen/Spirv/SpirvGenerator.cs
 +++ b/src/Ryujinx.Graphics.Shader/CodeGen/Spirv/SpirvGenerator.cs
 @@ -4,6 +4,7 @@ using Ryujinx.Graphics.Shader.StructuredIr;
@@ -484,7 +484,7 @@ index b259dde2..e707aaca 100644
  
          private const HelperFunctionsMask NeedsInvocationIdMask = HelperFunctionsMask.SwizzleAdd;
 diff --git a/src/Ryujinx.Graphics.Vulkan/BackgroundResources.cs b/src/Ryujinx.Graphics.Vulkan/BackgroundResources.cs
-index 0290987f..e4b68fa4 100644
+index 0290987fd..e4b68fa40 100644
 --- a/src/Ryujinx.Graphics.Vulkan/BackgroundResources.cs
 +++ b/src/Ryujinx.Graphics.Vulkan/BackgroundResources.cs
 @@ -25,7 +25,7 @@ namespace Ryujinx.Graphics.Vulkan
@@ -497,7 +497,7 @@ index 0290987f..e4b68fa4 100644
                  lock (queueLock)
                  {
 diff --git a/src/Ryujinx.Graphics.Vulkan/CommandBufferPool.cs b/src/Ryujinx.Graphics.Vulkan/CommandBufferPool.cs
-index e1fd3fb9..ed76c656 100644
+index e1fd3fb9d..ed76c6566 100644
 --- a/src/Ryujinx.Graphics.Vulkan/CommandBufferPool.cs
 +++ b/src/Ryujinx.Graphics.Vulkan/CommandBufferPool.cs
 @@ -17,7 +17,7 @@ namespace Ryujinx.Graphics.Vulkan
@@ -519,7 +519,7 @@ index e1fd3fb9..ed76c656 100644
              bool concurrentFenceWaitUnsupported,
              bool isLight = false)
 diff --git a/src/Ryujinx.Graphics.Vulkan/HostMemoryAllocator.cs b/src/Ryujinx.Graphics.Vulkan/HostMemoryAllocator.cs
-index ff156524..ebf0a8bb 100644
+index ff1565246..ebf0a8bba 100644
 --- a/src/Ryujinx.Graphics.Vulkan/HostMemoryAllocator.cs
 +++ b/src/Ryujinx.Graphics.Vulkan/HostMemoryAllocator.cs
 @@ -5,6 +5,7 @@ using Silk.NET.Vulkan;
@@ -540,7 +540,7 @@ index ff156524..ebf0a8bb 100644
          private readonly List<HostMemoryAllocation> _allocations;
          private readonly IntervalTree<ulong, HostMemoryAllocation> _allocationTree;
 diff --git a/src/Ryujinx.Graphics.Vulkan/Queries/CounterQueue.cs b/src/Ryujinx.Graphics.Vulkan/Queries/CounterQueue.cs
-index 0d133e50..fa10f13b 100644
+index 0d133e50e..fa10f13b9 100644
 --- a/src/Ryujinx.Graphics.Vulkan/Queries/CounterQueue.cs
 +++ b/src/Ryujinx.Graphics.Vulkan/Queries/CounterQueue.cs
 @@ -24,7 +24,7 @@ namespace Ryujinx.Graphics.Vulkan.Queries
@@ -553,7 +553,7 @@ index 0d133e50..fa10f13b 100644
          private readonly Queue<BufferedQuery> _queryPool;
          private readonly AutoResetEvent _queuedEvent = new(false);
 diff --git a/src/Ryujinx.Graphics.Vulkan/Queries/CounterQueueEvent.cs b/src/Ryujinx.Graphics.Vulkan/Queries/CounterQueueEvent.cs
-index 14d3050b..0bac3be1 100644
+index 14d3050bf..0bac3be12 100644
 --- a/src/Ryujinx.Graphics.Vulkan/Queries/CounterQueueEvent.cs
 +++ b/src/Ryujinx.Graphics.Vulkan/Queries/CounterQueueEvent.cs
 @@ -22,7 +22,7 @@ namespace Ryujinx.Graphics.Vulkan.Queries
@@ -566,7 +566,7 @@ index 14d3050b..0bac3be1 100644
          private double _divisor = 1f;
  
 diff --git a/src/Ryujinx.Graphics.Vulkan/Shader.cs b/src/Ryujinx.Graphics.Vulkan/Shader.cs
-index 1c8caffd..05fcce0d 100644
+index 1c8caffd9..05fcce0d7 100644
 --- a/src/Ryujinx.Graphics.Vulkan/Shader.cs
 +++ b/src/Ryujinx.Graphics.Vulkan/Shader.cs
 @@ -5,6 +5,7 @@ using shaderc;
@@ -587,7 +587,7 @@ index 1c8caffd..05fcce0d 100644
          private static readonly IntPtr _ptrMainEntryPointName = Marshal.StringToHGlobalAnsi("main");
  
 diff --git a/src/Ryujinx.Graphics.Vulkan/VulkanRenderer.cs b/src/Ryujinx.Graphics.Vulkan/VulkanRenderer.cs
-index 33e41ab4..a2bd0d0c 100644
+index a40b20f14..517c95bdf 100644
 --- a/src/Ryujinx.Graphics.Vulkan/VulkanRenderer.cs
 +++ b/src/Ryujinx.Graphics.Vulkan/VulkanRenderer.cs
 @@ -11,6 +11,7 @@ using Silk.NET.Vulkan.Extensions.KHR;
@@ -598,7 +598,7 @@ index 33e41ab4..a2bd0d0c 100644
  using Format = Ryujinx.Graphics.GAL.Format;
  using PrimitiveTopology = Ryujinx.Graphics.GAL.PrimitiveTopology;
  using SamplerCreateInfo = Ryujinx.Graphics.GAL.SamplerCreateInfo;
-@@ -43,8 +44,8 @@ namespace Ryujinx.Graphics.Vulkan
+@@ -45,8 +46,8 @@ namespace Ryujinx.Graphics.Vulkan
          internal uint QueueFamilyIndex { get; private set; }
          internal Queue Queue { get; private set; }
          internal Queue BackgroundQueue { get; private set; }
@@ -609,7 +609,7 @@ index 33e41ab4..a2bd0d0c 100644
  
          internal MemoryAllocator MemoryAllocator { get; private set; }
          internal HostMemoryAllocator HostMemoryAllocator { get; private set; }
-@@ -159,7 +160,7 @@ namespace Ryujinx.Graphics.Vulkan
+@@ -161,7 +162,7 @@ namespace Ryujinx.Graphics.Vulkan
              {
                  Api.GetDeviceQueue(_device, queueFamilyIndex, 1, out var backgroundQueue);
                  BackgroundQueue = backgroundQueue;
@@ -618,7 +618,7 @@ index 33e41ab4..a2bd0d0c 100644
              }
  
              PhysicalDeviceProperties2 properties2 = new()
-@@ -492,7 +493,7 @@ namespace Ryujinx.Graphics.Vulkan
+@@ -494,7 +495,7 @@ namespace Ryujinx.Graphics.Vulkan
  
              Api.GetDeviceQueue(_device, queueFamilyIndex, 0, out var queue);
              Queue = queue;
@@ -627,29 +627,8 @@ index 33e41ab4..a2bd0d0c 100644
  
              LoadFeatures(maxQueueCount, queueFamilyIndex);
  
-diff --git a/src/Ryujinx.Gtk3/Input/GTK3/GTK3Keyboard.cs b/src/Ryujinx.Gtk3/Input/GTK3/GTK3Keyboard.cs
-index ff7a2c3b..33857e0e 100644
---- a/src/Ryujinx.Gtk3/Input/GTK3/GTK3Keyboard.cs
-+++ b/src/Ryujinx.Gtk3/Input/GTK3/GTK3Keyboard.cs
-@@ -3,6 +3,7 @@ using Ryujinx.Common.Configuration.Hid.Keyboard;
- using System;
- using System.Collections.Generic;
- using System.Numerics;
-+using System.Threading;
- using ConfigKey = Ryujinx.Common.Configuration.Hid.Key;
- 
- namespace Ryujinx.Input.GTK3
-@@ -21,7 +22,7 @@ namespace Ryujinx.Input.GTK3
-             }
-         }
- 
--        private readonly object _userMappingLock = new();
-+        private readonly Lock _userMappingLock = new();
- 
-         private readonly GTK3KeyboardDriver _driver;
-         private StandardKeyboardInputConfig _configuration;
 diff --git a/src/Ryujinx.HLE/FileSystem/ContentManager.cs b/src/Ryujinx.HLE/FileSystem/ContentManager.cs
-index e6c0fce0..29703114 100644
+index 952271fa1..303c63f43 100644
 --- a/src/Ryujinx.HLE/FileSystem/ContentManager.cs
 +++ b/src/Ryujinx.HLE/FileSystem/ContentManager.cs
 @@ -21,6 +21,7 @@ using System.IO;
@@ -670,7 +649,7 @@ index e6c0fce0..29703114 100644
          public ContentManager(VirtualFileSystem virtualFileSystem)
          {
 diff --git a/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/SoftwareKeyboardApplet.cs b/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/SoftwareKeyboardApplet.cs
-index 0462a5b0..7a572d21 100644
+index 0462a5b00..7a572d21c 100644
 --- a/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/SoftwareKeyboardApplet.cs
 +++ b/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/SoftwareKeyboardApplet.cs
 @@ -14,6 +14,7 @@ using System.IO;
@@ -691,7 +670,7 @@ index 0462a5b0..7a572d21 100644
          public event EventHandler AppletStateChanged;
  
 diff --git a/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/SoftwareKeyboardRendererBase.cs b/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/SoftwareKeyboardRendererBase.cs
-index cc62eca1..fa59197d 100644
+index cc62eca1d..fa59197d1 100644
 --- a/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/SoftwareKeyboardRendererBase.cs
 +++ b/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/SoftwareKeyboardRendererBase.cs
 @@ -6,6 +6,7 @@ using System.Diagnostics;
@@ -712,7 +691,7 @@ index cc62eca1..fa59197d 100644
          private RenderingSurfaceInfo _surfaceInfo = null;
          private SKImageInfo _imageInfo;
 diff --git a/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/TimedAction.cs b/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/TimedAction.cs
-index 3eaf6459..a8b137df 100644
+index 3eaf64596..a8b137df2 100644
 --- a/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/TimedAction.cs
 +++ b/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/TimedAction.cs
 @@ -27,7 +27,7 @@ namespace Ryujinx.HLE.HOS.Applets.SoftwareKeyboard
@@ -725,7 +704,7 @@ index 3eaf6459..a8b137df 100644
          public bool IsRunning
          {
 diff --git a/src/Ryujinx.HLE/HOS/Services/Ldn/Types/NodeLatestUpdate.cs b/src/Ryujinx.HLE/HOS/Services/Ldn/Types/NodeLatestUpdate.cs
-index 0461e783..826a5045 100644
+index 0461e783e..826a50458 100644
 --- a/src/Ryujinx.HLE/HOS/Services/Ldn/Types/NodeLatestUpdate.cs
 +++ b/src/Ryujinx.HLE/HOS/Services/Ldn/Types/NodeLatestUpdate.cs
 @@ -1,5 +1,6 @@
@@ -745,7 +724,7 @@ index 0461e783..826a5045 100644
          public static void CalculateLatestUpdate(this Array8<NodeLatestUpdate> array, Array8<NodeInfo> beforeNodes, Array8<NodeInfo> afterNodes)
          {
 diff --git a/src/Ryujinx.HLE/PerformanceStatistics.cs b/src/Ryujinx.HLE/PerformanceStatistics.cs
-index 3767a7fb..f674298e 100644
+index 3767a7fb4..f674298e6 100644
 --- a/src/Ryujinx.HLE/PerformanceStatistics.cs
 +++ b/src/Ryujinx.HLE/PerformanceStatistics.cs
 @@ -1,5 +1,7 @@
@@ -779,7 +758,7 @@ index 3767a7fb..f674298e 100644
              _resetTimer = new Timer(750);
  
 diff --git a/src/Ryujinx.Horizon/Sdk/Friends/Detail/Ipc/NotificationService.cs b/src/Ryujinx.Horizon/Sdk/Friends/Detail/Ipc/NotificationService.cs
-index 534bf63e..585b40df 100644
+index 534bf63ed..585b40df3 100644
 --- a/src/Ryujinx.Horizon/Sdk/Friends/Detail/Ipc/NotificationService.cs
 +++ b/src/Ryujinx.Horizon/Sdk/Friends/Detail/Ipc/NotificationService.cs
 @@ -4,6 +4,7 @@ using Ryujinx.Horizon.Sdk.OsTypes;
@@ -800,7 +779,7 @@ index 534bf63e..585b40df 100644
          private SystemEventType _notificationEvent;
  
 diff --git a/src/Ryujinx.Horizon/Sdk/OsTypes/Impl/MultiWaitImpl.cs b/src/Ryujinx.Horizon/Sdk/OsTypes/Impl/MultiWaitImpl.cs
-index 40635200..879a3a58 100644
+index 406352003..879a3a58f 100644
 --- a/src/Ryujinx.Horizon/Sdk/OsTypes/Impl/MultiWaitImpl.cs
 +++ b/src/Ryujinx.Horizon/Sdk/OsTypes/Impl/MultiWaitImpl.cs
 @@ -2,6 +2,7 @@ using Ryujinx.Common;
@@ -821,7 +800,7 @@ index 40635200..879a3a58 100644
          private int _waitingThreadHandle;
  
 diff --git a/src/Ryujinx.Horizon/Sdk/Sf/Cmif/ServerDomainManager.cs b/src/Ryujinx.Horizon/Sdk/Sf/Cmif/ServerDomainManager.cs
-index 7762345a..a8385a17 100644
+index 7762345af..a8385a17f 100644
 --- a/src/Ryujinx.Horizon/Sdk/Sf/Cmif/ServerDomainManager.cs
 +++ b/src/Ryujinx.Horizon/Sdk/Sf/Cmif/ServerDomainManager.cs
 @@ -1,6 +1,7 @@
@@ -850,7 +829,7 @@ index 7762345a..a8385a17 100644
              _maxDomains = maxDomains;
          }
 diff --git a/src/Ryujinx.Horizon/Sdk/Sf/Hipc/ServerManager.cs b/src/Ryujinx.Horizon/Sdk/Sf/Hipc/ServerManager.cs
-index e8957b75..ba37fa13 100644
+index e8957b758..ba37fa137 100644
 --- a/src/Ryujinx.Horizon/Sdk/Sf/Hipc/ServerManager.cs
 +++ b/src/Ryujinx.Horizon/Sdk/Sf/Hipc/ServerManager.cs
 @@ -4,6 +4,7 @@ using Ryujinx.Horizon.Sdk.Sm;
@@ -880,7 +859,7 @@ index e8957b75..ba37fa13 100644
              _sessions = new HashSet<ServerSession>();
              _servers = new HashSet<Server>();
 diff --git a/src/Ryujinx.Horizon/Sdk/Sf/Hipc/ServerManagerBase.cs b/src/Ryujinx.Horizon/Sdk/Sf/Hipc/ServerManagerBase.cs
-index 570e3c80..e79846fd 100644
+index 570e3c802..e79846fdd 100644
 --- a/src/Ryujinx.Horizon/Sdk/Sf/Hipc/ServerManagerBase.cs
 +++ b/src/Ryujinx.Horizon/Sdk/Sf/Hipc/ServerManagerBase.cs
 @@ -4,6 +4,7 @@ using Ryujinx.Horizon.Sdk.Sf.Cmif;
@@ -914,7 +893,7 @@ index 570e3c80..e79846fd 100644
              _requestStopEvent = new Event(EventClearMode.ManualClear);
              _notifyEvent = new Event(EventClearMode.ManualClear);
 diff --git a/src/Ryujinx.Input.SDL2/SDL2Gamepad.cs b/src/Ryujinx.Input.SDL2/SDL2Gamepad.cs
-index 187ca48d..d635b878 100644
+index 475855fd5..76d25b6bb 100644
 --- a/src/Ryujinx.Input.SDL2/SDL2Gamepad.cs
 +++ b/src/Ryujinx.Input.SDL2/SDL2Gamepad.cs
 @@ -4,6 +4,7 @@ using Ryujinx.Common.Logging;
@@ -925,7 +904,7 @@ index 187ca48d..d635b878 100644
  using static SDL2.SDL;
  
  namespace Ryujinx.Input.SDL2
-@@ -55,7 +56,7 @@ namespace Ryujinx.Input.SDL2
+@@ -58,7 +59,7 @@ namespace Ryujinx.Input.SDL2
              SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_INVALID,
          };
  
@@ -935,7 +914,7 @@ index 187ca48d..d635b878 100644
          private readonly List<ButtonMappingEntry> _buttonsUserMapping;
  
 diff --git a/src/Ryujinx.Input.SDL2/SDL2GamepadDriver.cs b/src/Ryujinx.Input.SDL2/SDL2GamepadDriver.cs
-index c741493c..f6ccd40a 100644
+index 012d72d7c..f5bf234e4 100644
 --- a/src/Ryujinx.Input.SDL2/SDL2GamepadDriver.cs
 +++ b/src/Ryujinx.Input.SDL2/SDL2GamepadDriver.cs
 @@ -1,6 +1,7 @@
@@ -950,13 +929,13 @@ index c741493c..f6ccd40a 100644
      {
          private readonly Dictionary<int, string> _gamepadsInstanceIdsMapping;
          private readonly List<string> _gamepadsIds;
--        private readonly object _lock = new object();
+-        private readonly object _lock = new();
 +        private readonly Lock _lock = new();
  
          public ReadOnlySpan<string> GamepadsIds
          {
 diff --git a/src/Ryujinx.Input.SDL2/SDL2Keyboard.cs b/src/Ryujinx.Input.SDL2/SDL2Keyboard.cs
-index bc0a7e66..ee7f6fa8 100644
+index 08eacc4ee..bd2eddeb1 100644
 --- a/src/Ryujinx.Input.SDL2/SDL2Keyboard.cs
 +++ b/src/Ryujinx.Input.SDL2/SDL2Keyboard.cs
 @@ -4,6 +4,7 @@ using System;
@@ -967,8 +946,8 @@ index bc0a7e66..ee7f6fa8 100644
  using static SDL2.SDL;
  
  using ConfigKey = Ryujinx.Common.Configuration.Hid.Key;
-@@ -24,7 +25,7 @@ namespace Ryujinx.Input.SDL2
-             }
+@@ -17,7 +18,7 @@ namespace Ryujinx.Input.SDL2
+             public bool IsValid => To is not GamepadButtonInputId.Unbound && From is not Key.Unbound;
          }
  
 -        private readonly object _userMappingLock = new();
@@ -977,7 +956,7 @@ index bc0a7e66..ee7f6fa8 100644
  #pragma warning disable IDE0052 // Remove unread private member
          private readonly SDL2KeyboardDriver _driver;
 diff --git a/src/Ryujinx.Input/HLE/NpadManager.cs b/src/Ryujinx.Input/HLE/NpadManager.cs
-index 1dc87358..a77aa216 100644
+index 1dc87358d..a77aa2168 100644
 --- a/src/Ryujinx.Input/HLE/NpadManager.cs
 +++ b/src/Ryujinx.Input/HLE/NpadManager.cs
 @@ -7,6 +7,7 @@ using System.Collections.Generic;
@@ -998,7 +977,7 @@ index 1dc87358..a77aa216 100644
          private bool _blockInputUpdates;
  
 diff --git a/src/Ryujinx.Memory/Tracking/MemoryTracking.cs b/src/Ryujinx.Memory/Tracking/MemoryTracking.cs
-index 96cb2c5f..5a530583 100644
+index 96cb2c5f5..5a5305837 100644
 --- a/src/Ryujinx.Memory/Tracking/MemoryTracking.cs
 +++ b/src/Ryujinx.Memory/Tracking/MemoryTracking.cs
 @@ -1,6 +1,7 @@
@@ -1019,7 +998,7 @@ index 96cb2c5f..5a530583 100644
          /// <summary>
          /// Create a new tracking structure for the given "physical" memory block,
 diff --git a/src/Ryujinx.Memory/Tracking/RegionHandle.cs b/src/Ryujinx.Memory/Tracking/RegionHandle.cs
-index a94ffa43..deb83aeb 100644
+index a94ffa43c..deb83aebd 100644
 --- a/src/Ryujinx.Memory/Tracking/RegionHandle.cs
 +++ b/src/Ryujinx.Memory/Tracking/RegionHandle.cs
 @@ -51,7 +51,7 @@ namespace Ryujinx.Memory.Tracking
@@ -1050,7 +1029,7 @@ index a94ffa43..deb83aeb 100644
              }
  
 diff --git a/src/Ryujinx.SDL2.Common/SDL2Driver.cs b/src/Ryujinx.SDL2.Common/SDL2Driver.cs
-index ed6d9419..b4dfe589 100644
+index 4d8961335..851c07867 100644
 --- a/src/Ryujinx.SDL2.Common/SDL2Driver.cs
 +++ b/src/Ryujinx.SDL2.Common/SDL2Driver.cs
 @@ -36,7 +36,7 @@ namespace Ryujinx.SDL2.Common
@@ -1063,10 +1042,10 @@ index ed6d9419..b4dfe589 100644
          private SDL2Driver() { }
  
 diff --git a/src/Ryujinx/AppHost.cs b/src/Ryujinx/AppHost.cs
-index f4bfd116..f4348f6f 100644
+index 9c9898a87..3ae714a74 100644
 --- a/src/Ryujinx/AppHost.cs
 +++ b/src/Ryujinx/AppHost.cs
-@@ -117,7 +117,7 @@ namespace Ryujinx.Ava
+@@ -120,7 +120,7 @@ namespace Ryujinx.Ava
          private bool _dialogShown;
          private readonly bool _isFirmwareTitle;
  
@@ -1074,8 +1053,8 @@ index f4bfd116..f4348f6f 100644
 +        private readonly Lock _lock = new();
  
          public event EventHandler AppExit;
-         public event EventHandler<StatusInitEventArgs> StatusInitEvent;
-@@ -339,7 +339,7 @@ namespace Ryujinx.Ava
+         public event EventHandler<StatusUpdatedEventArgs> StatusUpdatedEvent;
+@@ -341,7 +341,7 @@ namespace Ryujinx.Ava
              {
                  Task.Run(() =>
                  {
@@ -1085,7 +1064,7 @@ index f4bfd116..f4348f6f 100644
                          string applicationName = Device.Processes.ActiveApplication.Name;
                          string sanitizedApplicationName = FileSystemUtils.SanitizeFileName(applicationName);
 diff --git a/src/Ryujinx/Input/AvaloniaKeyboard.cs b/src/Ryujinx/Input/AvaloniaKeyboard.cs
-index ff88de79..7c82519e 100644
+index ff88de79e..7c82519ed 100644
 --- a/src/Ryujinx/Input/AvaloniaKeyboard.cs
 +++ b/src/Ryujinx/Input/AvaloniaKeyboard.cs
 @@ -4,6 +4,7 @@ using Ryujinx.Input;
