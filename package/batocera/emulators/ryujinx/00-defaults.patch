@@ -1,8 +1,8 @@
 diff --git a/src/Ryujinx.UI.Common/Configuration/ConfigurationState.cs b/src/Ryujinx.UI.Common/Configuration/ConfigurationState.cs
-index 8420dc5d..2d153d7e 100644
+index 89aaaabbe..8f8670090 100644
 --- a/src/Ryujinx.UI.Common/Configuration/ConfigurationState.cs
 +++ b/src/Ryujinx.UI.Common/Configuration/ConfigurationState.cs
-@@ -773,19 +773,19 @@ namespace Ryujinx.UI.Common.Configuration
+@@ -797,19 +797,19 @@ namespace Ryujinx.UI.Common.Configuration
  
          public void LoadDefault()
          {
@@ -27,7 +27,7 @@ index 8420dc5d..2d153d7e 100644
              Logger.EnableError.Value = true;
              Logger.EnableTrace.Value = false;
              Logger.EnableGuest.Value = true;
-@@ -797,9 +797,9 @@ namespace Ryujinx.UI.Common.Configuration
+@@ -821,9 +821,9 @@ namespace Ryujinx.UI.Common.Configuration
              System.TimeZone.Value = "UTC";
              System.SystemTimeOffset.Value = 0;
              System.EnableDockedMode.Value = true;
@@ -37,10 +37,10 @@ index 8420dc5d..2d153d7e 100644
 +            EnableDiscordIntegration.Value = false;
 +            CheckUpdatesOnStart.Value = false;
 +            ShowConfirmExit.Value = false;
+             IgnoreApplet.Value = false;
              RememberWindowState.Value = true;
              EnableHardwareAcceleration.Value = true;
-             HideCursor.Value = HideCursorMode.OnIdle;
-@@ -851,8 +851,8 @@ namespace Ryujinx.UI.Common.Configuration
+@@ -877,8 +877,8 @@ namespace Ryujinx.UI.Common.Configuration
              UI.GridSize.Value = 2;
              UI.ApplicationSort.Value = 0;
              UI.IsAscendingOrder.Value = true;
