@@ -10591,12 +10591,12 @@ msgstr "ASCI"
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "OpenGL (Classic)"
-msgstr ""
+msgstr "OpenGL (Clássico)"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
-msgstr ""
+msgstr "OpenGL (Computação de Shader)"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -12087,7 +12087,7 @@ msgstr "Somente Interpretador de Shaders"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Only applicable when either Async Shader mode is set."
-msgstr "Aplicável apenas quando o modo Sombreador assíncrono está definido."
+msgstr "Aplicável apenas quando o modo Shader assíncrono está definido."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
