@@ -16469,7 +16469,7 @@ msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr "Exibir a tela do controlador"
 
-#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Configuration menu"
 msgstr ""
@@ -16484,17 +16484,17 @@ msgctxt "keys_files"
 msgid "Exit Emulator"
 msgstr ""
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Load State"
 msgstr "Carregar Estado"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "Salvar Estado"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Fast Forward"
 msgstr "Avanço Rápido"
