@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ... import Command
-from ...batoceraPaths import BIOS, CONFIGS, ensure_parents_and_open
+from ...batoceraPaths import BIOS, CONFIGS, ensure_parents_and_open, mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config, write_sdl_controller_db
 from ...utils.configparser import CaseSensitiveConfigParser
 from ..Generator import Generator
@@ -27,6 +27,8 @@ class DuckstationGenerator(Generator):
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+        mkdir_if_not_exists(Path("/userdata/system/cache/psx"))
+        
         rom_path = Path(rom)
 
         # Test if it's a m3u file
