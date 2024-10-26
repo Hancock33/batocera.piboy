@@ -3,8 +3,8 @@
 # ryujinx
 #
 ################################################################################
-# Version: Commits on Oct 25, 2024
-RYUJINX_VERSION = 1.2.45
+# Version: Commits on Oct 26, 2024
+RYUJINX_VERSION = 1.2.50
 RYUJINX_SITE = https://github.com/GreemDev/Ryujinx.git
 RYUJINX_SITE_METHOD=git
 RYUJINX_GIT_SUBMODULES=YES
