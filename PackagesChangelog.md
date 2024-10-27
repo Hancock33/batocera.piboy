@@ -14,6 +14,8 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|7140d53520207ed9c871
 Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-console)|12d57e4098a457188815daa4c1732b22600ddd54|Oct 27, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|a0bcf7945d4e46e4088ca36ba2fe9c2877036c6d|Oct 27, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|ccc19ece88657242ea81d379b40e34fee554dcbd|Oct 27, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241027|Oct 27, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241027|Oct 27, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|8af07f46175d4abe4fe115466dd2c3db91110a61|Oct 27, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|417b9d61d43960d3a631453a6beeda6045001006|Oct 27, 2024
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|9593502677a9109fc612a02f23a6985701713d84|Oct 27, 2024
@@ -34,8 +36,6 @@ Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|bcc03eb3575bb908ef4f041
 Ports|[stk](http://github.com/supertuxkart/stk-code)|e079089d999538d96f215d7efd8a23a22bb69f39|Oct 26, 2024
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|1378796c70b062a43b56568ccb6cf6beadcd9d5f|Oct 26, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20.r104.g3a736901cdd|Oct 26, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241026|Oct 26, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241026|Oct 26, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|7b95977e2afdb0e8eff514d0406d609a2856b973|Oct 26, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|97a341952ac5bbd615b4c4b6ab3af2e8ab56e56e|Oct 26, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|07ee830712126dd0f50540eb6095bdb122c20c68|Oct 26, 2024
