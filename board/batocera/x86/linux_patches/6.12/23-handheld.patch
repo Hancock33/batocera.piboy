@@ -271,7 +271,7 @@ index a51f3414b65d..bc0f9759c5c5 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index c37aa59107bc..03361dc60f52 100644
+index 6425de26e046..8df43f63f462 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -162,6 +162,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -349,7 +349,7 @@ index c37aa59107bc..03361dc60f52 100644
  	return DIV_ROUND_CLOSEST(AMDGPU_MAX_BL_LEVEL * (brightness - min),
  				 max - min);
  }
-@@ -8896,7 +8918,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -8897,7 +8919,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -3469,7 +3469,7 @@ index a4b47319ad8e..1b445f8473f8 100644
  	    USB_DEVICE_ID_ASUSTEK_ROG_CLAYMORE_II_KEYBOARD),
  	  QUIRK_ROG_CLAYMORE_II_KEYBOARD },
 diff --git a/drivers/hid/hid-ids.h b/drivers/hid/hid-ids.h
-index 8a991b30e3c6..b15a4e44324c 100644
+index 92cff3f2658c..44c54419d93c 100644
 --- a/drivers/hid/hid-ids.h
 +++ b/drivers/hid/hid-ids.h
 @@ -209,6 +209,7 @@
@@ -4370,7 +4370,7 @@ index 93d9e3886b7e..620e7c18d82c 100644
  	MAX98388,
  	ES83XX,
 diff --git a/sound/soc/codecs/max98388.c b/sound/soc/codecs/max98388.c
-index b847d7c59ec0..bb03fb0c62b4 100644
+index 99986090b4a6..e259be44ce8f 100644
 --- a/sound/soc/codecs/max98388.c
 +++ b/sound/soc/codecs/max98388.c
 @@ -390,27 +390,43 @@ static void max98388_reset(struct max98388_priv *max98388, struct device *dev)
@@ -4427,7 +4427,7 @@ index b847d7c59ec0..bb03fb0c62b4 100644
  
  	/* General channel source configuration */
  	regmap_write(max98388->regmap,
-@@ -811,6 +828,7 @@ static bool max98388_readable_register(struct device *dev,
+@@ -812,6 +829,7 @@ static bool max98388_readable_register(struct device *dev,
  	case MAX98388_R210E_AUTO_RESTART:
  	case MAX98388_R210F_GLOBAL_EN:
  	case MAX98388_R22FF_REV_ID:
@@ -4435,7 +4435,7 @@ index b847d7c59ec0..bb03fb0c62b4 100644
  		return true;
  	default:
  		return false;
-@@ -823,6 +841,7 @@ static bool max98388_volatile_reg(struct device *dev, unsigned int reg)
+@@ -824,6 +842,7 @@ static bool max98388_volatile_reg(struct device *dev, unsigned int reg)
  	case MAX98388_R2001_INT_RAW1 ... MAX98388_R2005_INT_STATE2:
  	case MAX98388_R210F_GLOBAL_EN:
  	case MAX98388_R22FF_REV_ID:
@@ -4443,7 +4443,7 @@ index b847d7c59ec0..bb03fb0c62b4 100644
  		return true;
  	default:
  		return false;
-@@ -866,6 +885,7 @@ static int max98388_resume(struct device *dev)
+@@ -867,6 +886,7 @@ static int max98388_resume(struct device *dev)
  
  	regcache_cache_only(max98388->regmap, false);
  	max98388_reset(max98388, dev);
