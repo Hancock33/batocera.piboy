@@ -3,8 +3,8 @@
 # libretro-flycast
 #
 ################################################################################
-# Version: Commits on Oct 19, 2024
-LIBRETRO_FLYCAST_VERSION = c86ed291cf614ee4f2bcfc2dc6cad7a3c950bf1c
+# Version: Commits on Oct 25, 2024
+LIBRETRO_FLYCAST_VERSION = e221f6fed2964d83c871384fc19a06541ce76aba
 LIBRETRO_FLYCAST_SOURCE = flycast-$(LIBRETRO_FLYCAST_VERSION)-git4.tar.gz
 LIBRETRO_FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 LIBRETRO_FLYCAST_SITE_METHOD=git
@@ -23,6 +23,14 @@ LIBRETRO_FLYCAST_CONF_OPTS += -DUSE_OPENMP=ON
 LIBRETRO_FLYCAST_CONF_OPTS += -DBUILD_EXTERNAL=OFF
 LIBRETRO_FLYCAST_CONF_OPTS += -DUSE_DX9=OFF
 LIBRETRO_FLYCAST_CONF_OPTS += -DUSE_DX11=OFF
+
+# Get version details
+LIBRETRO_FLYCAST_GIT_TAG = \
+    $(shell $(GIT) -C $(LIBRETRO_FLYCAST_DL_DIR)/git describe --tags --always | tr -d '\n')
+LIBRETRO_FLYCAST_GIT_HASH = \
+    $(shell $(GIT) -C $(LIBRETRO_FLYCAST_DL_DIR)/git rev-parse --short HEAD | tr -d '\n')
+LIBRETRO_FLYCAST_CONF_OPTS += -DGIT_VERSION=$(LIBRETRO_FLYCAST_GIT_TAG)
+LIBRETRO_FLYCAST_CONF_OPTS += -DGIT_HASH=$(LIBRETRO_FLYCAST_GIT_HASH)
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
     LIBRETRO_FLYCAST_DEPENDENCIES += libgl

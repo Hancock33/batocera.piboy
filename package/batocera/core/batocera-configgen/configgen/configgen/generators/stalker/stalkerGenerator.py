@@ -4,10 +4,9 @@ from typing import TYPE_CHECKING
 import os
 from pathlib import Path
 
-from ...batoceraPaths import CONFIGS, mkdir_if_not_exists
-from ... import Command, controllersConfig
+from ... import Command
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
-
 
 base_dir = "/userdata/system/.local/share/GSC Game World"
 cop_dir = base_dir + "/S.T.A.L.K.E.R. - Call of Pripyat"
@@ -43,7 +42,7 @@ class StalkerGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
 
     def getHotkeysContext(self):

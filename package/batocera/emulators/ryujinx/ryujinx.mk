@@ -3,9 +3,9 @@
 # ryujinx
 #
 ################################################################################
-# Version: Commits on Oct 01, 2024
-RYUJINX_VERSION = 1.1.1403
-RYUJINX_SITE = https://github.com/ryujinxemu/Ryujinx
+# Version: Commits on Oct 27, 2024
+RYUJINX_VERSION = 1.2.57
+RYUJINX_SITE = https://github.com/GreemDev/Ryujinx.git
 RYUJINX_SITE_METHOD=git
 RYUJINX_GIT_SUBMODULES=YES
 RYUJINX_LICENSE = MIT

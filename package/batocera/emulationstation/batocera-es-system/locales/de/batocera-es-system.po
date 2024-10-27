@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-10-15 14:42+0000\n"
+"PO-Revision-Date: 2024-10-23 15:47+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -10650,12 +10650,12 @@ msgstr "ASCI"
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "OpenGL (Classic)"
-msgstr ""
+msgstr "OpenGL (klassisch)"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
-msgstr ""
+msgstr "OpenGL (Compute-Shader)"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -14745,16 +14745,18 @@ msgid ""
 "Basic Filtering type for the jaguar display when rendering to the native "
 "display."
 msgstr ""
+"Grundlegender Filtertyp für das Jaguar-Display beim Rendern auf dem nativen "
+"Display."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "SCREEN FILTER"
-msgstr ""
+msgstr "BILDSCHIRM-FILTER"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Point (Default)"
-msgstr ""
+msgstr "Point (Standard)"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -14762,36 +14764,38 @@ msgid ""
 "Supports uncapped frame rates, analog controllers, and mouse look "
 "functionality."
 msgstr ""
+"Unterstützt unbegrenzte Bildraten, analoge Controller und Maus-Look-"
+"Funktionalität."
 
 #. TRANSLATION: bigpemu, bigpemu, bigpemu, bigpemu, bigpemu, ...
 msgctxt "game_options"
 msgid "SCRIPT MODULES"
-msgstr ""
+msgstr "SCRIPT-MODULE"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "ALIEN VS PREDATOR"
-msgstr ""
+msgstr "ALIEN VS PREDATOR"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Switches the game to multiplayer mode."
-msgstr ""
+msgstr "Schaltet das Spiel in den Mehrspielermodus."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "ALIEN VS PREDATOR MULTIPLAYER"
-msgstr ""
+msgstr "ALIEN VS PREDATOR MULTIPLAYER"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Fixes flickering."
-msgstr ""
+msgstr "Behebt das Flackern."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "BRETT HULL HOCKEY"
-msgstr ""
+msgstr "BRETT HULL HOCKEY"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -14801,21 +14805,25 @@ msgid ""
 "option, custom sky/background functionality, and various other tweaks and "
 "options."
 msgstr ""
+"Bietet Rendering in nativer Auflösung, Unterstützung für analoge Controller "
+"und Mäuse, Freischaltung der Bildfrequenz bis zu 60Hz, eine verbesserte "
+"Kamera mit deaktivierbarer Neigungsoption, benutzerdefinierte Himmel-/"
+"Hintergrundfunktionalität und verschiedene andere Optimierungen und Optionen."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "CHECKERED FLAG"
-msgstr ""
+msgstr "CHECKERED FLAG"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Renders polygons and textures at the native resolution."
-msgstr ""
+msgstr "Rendert Polygone und Texturen in der nativen Auflösung."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "CYBERMORPH"
-msgstr ""
+msgstr "CYBERMORPH"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -14823,11 +14831,13 @@ msgid ""
 "Offers support for analog controllers and mouse look functionality for "
 "improved control."
 msgstr ""
+"Bietet Unterstützung für analoge Controller und Maus-Look-Funktionalität für "
+"eine verbesserte Steuerung."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "IRON SOLDIER"
-msgstr ""
+msgstr "IRON SOLDIER"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -14837,11 +14847,15 @@ msgid ""
 "input device type with options to convert analog inputs to tracker angles "
 "for enhanced analog controller support."
 msgstr ""
+"Beinhaltet VR-Headtracking und stereoskopisches Rendering für VR- und 3D-"
+"Fernseher sowie Mausunterstützung (Mouse Look) und führt einen neuen Head-"
+"Tracker-Eingabegerätetyp mit Optionen zum Konvertieren analoger Eingaben in "
+"Tracker-Winkel für eine verbesserte analoge Controller-Unterstützung ein."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "MISSILE COMMAND 3D VR"
-msgstr ""
+msgstr "MISSILE COMMAND 3D VR"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -14849,11 +14863,13 @@ msgid ""
 "Provides analog controller and mouse support while patching existing rotary "
 "controller bugs found in hardware."
 msgstr ""
+"Bietet Unterstützung für analoge Controller und Mäuse und behebt "
+"gleichzeitig vorhandene Fehler im Drehregler der Hardware."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "TEMPEST 2000"
-msgstr ""
+msgstr "TEMPEST 2000"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -14861,11 +14877,13 @@ msgid ""
 "Offers analog controller and mouse support (Mouse Look), along with options "
 "for always-strafe and always-run functionalities."
 msgstr ""
+"Bietet Unterstützung für analoge Controller und Mäuse (Mouse Look) sowie "
+"Optionen für die Funktionen „Always-Strafe“ und „Always-Run“."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "WOLFENSTEIN 3D"
-msgstr ""
+msgstr "WOLFENSTEIN 3D"
 
 #. TRANSLATION: dxx-rebirth
 msgctxt "game_options"
@@ -16565,7 +16583,7 @@ msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr "Controller-Bildschirm anzeigen"
 
-#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Configuration menu"
 msgstr "Konfigurationsmenü"
@@ -16580,17 +16598,17 @@ msgctxt "keys_files"
 msgid "Exit Emulator"
 msgstr "Emulator beenden"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Load State"
 msgstr "Spielstand laden"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "Spielstand speichern"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Fast Forward"
 msgstr "Vorspulen"

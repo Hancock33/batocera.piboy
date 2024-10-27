@@ -6,9 +6,10 @@ import platform
 from pathlib import Path
 from typing import TYPE_CHECKING
 
-from ... import Command, controllersConfig
 from ... import batoceraFiles
+from ... import Command
 from ...batoceraPaths import CONFIGS, SAVES, mkdir_if_not_exists
+from ...controller import generate_sdl_game_controller_config
 from ...utils.buildargs import parse_args
 from ..Generator import Generator
 
@@ -192,7 +193,7 @@ class RazeGenerator(Generator):
         return Command.Command(
             array=launch_args,
             env={
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             }
         )
 

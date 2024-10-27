@@ -1,10 +1,10 @@
 diff --git a/standalone/inc/vpinmame/VPinMAMEController.cpp b/standalone/inc/vpinmame/VPinMAMEController.cpp
-index 58dee9aa..8483b643 100644
+index afaf53690..3fd7dc90a 100644
 --- a/standalone/inc/vpinmame/VPinMAMEController.cpp
 +++ b/standalone/inc/vpinmame/VPinMAMEController.cpp
-@@ -153,7 +153,7 @@ VPinMAMEController::VPinMAMEController()
+@@ -174,7 +174,7 @@ VPinMAMEController::VPinMAMEController()
  #if (defined(__APPLE__) && ((defined(TARGET_OS_IOS) && TARGET_OS_IOS) || (defined(TARGET_OS_TV) && TARGET_OS_TV))) || defined(__ANDROID__)
-          m_szPath = g_pvp->m_szMyPath + "pinmame" + PATH_SEPARATOR_CHAR;
+          m_szPath = find_directory_case_insensitive(g_pvp->m_szMyPath, "pinmame");
  #else
 -         m_szPath = string(getenv("HOME")) + PATH_SEPARATOR_CHAR + ".pinmame" + PATH_SEPARATOR_CHAR;
 +         m_szPath = string("/userdata/system/configs/vpinball/pinmame/");
@@ -12,10 +12,10 @@ index 58dee9aa..8483b643 100644
        }
     }
 diff --git a/vpinball.cpp b/vpinball.cpp
-index 784ba3ab..e2661ecd 100644
+index 9bd231109..90a38a135 100644
 --- a/vpinball.cpp
 +++ b/vpinball.cpp
-@@ -230,7 +230,7 @@ void VPinball::GetMyPrefPath()
+@@ -233,7 +233,7 @@ void VPinball::GetMyPrefPath()
     m_szMyPrefPath = szPrefPath;
     SDL_free(szPrefPath);
  #else

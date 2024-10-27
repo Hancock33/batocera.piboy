@@ -8,7 +8,7 @@ from evdev import InputDevice
 
 from ... import batoceraFiles
 from ... import Command
-from ... import controllersConfig
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 ryujinxConf = batoceraFiles.CONF + "/Ryujinx"
@@ -185,7 +185,7 @@ class RyujinxGenerator(Generator):
                 # example xbox 360 - "id": "0-00000003-045e-0000-8e02-000014010000"
                 devices = [InputDevice(fn) for fn in evdev.list_devices()]
                 for dev in devices:
-                    if dev.path == pad.dev:
+                    if dev.path == pad.device_path:
                         bustype = "%x" % dev.info.bustype
                         bustype = bustype.zfill(8)
                         vendor = "%x" % dev.info.vendor
@@ -224,7 +224,7 @@ class RyujinxGenerator(Generator):
             "XDG_DATA_HOME":batoceraFiles.SAVES + "/switch", \
             "XDG_CACHE_HOME":batoceraFiles.CACHE, \
             "LD_LIBRARY_PATH": "/usr/bin/ryujinx/:/usr/lib",
-            "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)})
+            "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers)})
 
 def writeControllerIntoJson(new_controller, filename=ryujinxConfFile):
     with open(filename,'r+') as file:

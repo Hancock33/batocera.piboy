@@ -3,7 +3,8 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 import os
 
-from ... import Command, controllersConfig
+from ... import Command
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 class SerioussamGenerator(Generator):
@@ -25,7 +26,7 @@ class SerioussamGenerator(Generator):
             array=commandArray,
             env={
                 'LD_LIBRARY_PATH': '/usr/lib:/lib:' + data_dir,
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
         })
 
     def getHotkeysContext(self) -> HotkeysContext:

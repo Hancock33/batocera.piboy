@@ -3,8 +3,8 @@
 # libretro-race
 #
 ################################################################################
-# Version: Commits on May 28, 2023
-LIBRETRO_RACE_VERSION = f65011e6639ccbbbb44b6ffa63ca50c070475df4
+# Version: Commits on Oct 21, 2024
+LIBRETRO_RACE_VERSION = 171950ea64c96ead503340ed60fa7ba18f56325c
 LIBRETRO_RACE_SITE = $(call github,libretro,RACE,$(LIBRETRO_RACE_VERSION))
 LIBRETRO_RACE_LICENSE = GPL-2.0
 

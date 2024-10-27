@@ -1,5 +1,5 @@
 diff --git a/input/drivers/udev_input.c b/input/drivers/udev_input.c
-index 3dcbd98cda..6e71507b83 100644
+index 294aaa27e0..fb2af973cd 100644
 --- a/input/drivers/udev_input.c
 +++ b/input/drivers/udev_input.c
 @@ -4016,6 +4016,65 @@ static void udev_input_free(void *data)

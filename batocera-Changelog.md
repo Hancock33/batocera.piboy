@@ -32,6 +32,7 @@
 - X16-Emulator for Commander X16 system support
 - Dhewm 3 - A Doom 3 port
 - Vircon32 - a 32-bit inspired Fantasy Console
+- Automatic controller configuration for the play! standalone emulator
 ### Fixed
 - Steam loading on a NAS drive
 - ScummVM forcing English which can prevent some non-english games from starting
@@ -42,6 +43,7 @@
 - ES: Sinden light gun border now have the exact same size in-game
 - Custom boot splash image now displays when intended
 - Dualshock controllers not enabled on some Arm boards
+- Hotkey handling for Flycast
 ### Changed / Improved
 - Splash screen now disabled by default
 - Added bezel & sinden border support for the RPi5 with Model 3 games
@@ -53,6 +55,7 @@
 - Updated Nvidia card detection
 - Modern Nvidia cards will now use the OpenSource kernel modules when possible.
 - New ES web UI on http://<batocera>:1234 (with a new es_web_notifier service to enable)
+- ES: simplified launch for netplay games
 - Enabled more force feedback capabilities on various controllers
 - Share commands in /boot/batocera-boot.conf now allow pipes and other shell metacharacters
 ### Updated
@@ -74,18 +77,19 @@
   - Libretro-BlueMSX to August 8, 2024 build
   - Libretro-BSnes to August 9, 2024 build
   - Libretro-Cap32 to June 29, 2024 build
-  - Libretro-Melonds-Ds to v1.1.5
   - Libretro-Ecwolf to June 28 build
   - Libretro-Fake08 to Sept 2 build
   - Libretro-Fbneo to October 3, 2024 build
-  - Libretro-Flycast to September 29, 2024 build
+  - Libretro-Flycast to v2.4
   - Libretro-Freechaf to June 28 build
   - Libretro-MAME to 0.268
+  - Libretro-Melonds-DS to v1.1.5
   - Libretro-Minivac to July 1 build
   - Libretro-MrBoom to v5.5
   - Libretro-Mupen64plus-Next to July 19, 2024 build
-  - Libretro-NeoCD to June 22 build
-  - Libretro-Play to 0.67
+  - Libretro-NeoCD to Oct 21, 2024 build
+  - Libretro-Play to 0.67-1
+  - Libretro-SuperBrosWar to Oct 21, 2024 build
 - Amiberry to v5.7.4
 - BigPEmu to v115
 - C-Dogs SDL to 2.1.0
@@ -94,30 +98,34 @@
 - Commander Genius to v3.5.1
 - Corsixth to v0.68.0
 - DevilutionX to 1.5.3
-- Dolphin to 2409-78
+- Dolphin to 2409-233
 - Duckstation to v0.1-7294
-- DXX-Rebirth to July 21 build
+- DXX-Rebirth to Aug 12, 2024 build
 - Eduke32 to Jul 25 build
-- Flycast to September 29, 2024 build
+- Flycast to v2.4
 - GroovyMAME to 0.268
-- GZDoom to g4.13.0
+- GZDoom to g4.13.1
 - Ikemen to August 1st 2024 build
+- IORTCW to May 27, 20024 build
 - Kodi to 21.1
 - MelonDS to 7th October build
 - Mupen64 core & plugins to v2.6.0
-- PCSX2 to 2.1.179
-- Play to 0.67
+- PCSX2 to v2.1.229
+- Play to 0.67-1
 - Pyxel to 2.2.4
 - Redream to 1.5.0-1133-g03c2ae9
 - RPCS3 to 0.0.33 (alpha on Aug 31, 2024)
-- Sonic Mania to Jul 21, 2024 build
+- Sonic 2013 to 1.3.2
+- Sonic CD to 1.3.2
+- Sonic Mania to v1.1.0
 - Supermodel to 1st October build
 - Syncthing to 1.27.10
-- The Force Engine to Aug 19, 2024 build
+- The Force Engine to Oct 26, 2024 build
+- TheXTech to v1.3.6.6
 - Vita3k to August 25, 2024 build
 - Xemu to v0.7.130
 - Xenia to v1.0.2817
-- Xenia Canary to October 1, 2024 build
+- Xenia Canary to October 26, 2024 build
 ### System
 - Bauh to 0.10.7 (flatpak-config)
 - Nvidia Driver to 560.35.03 (Open kernel modules)
@@ -153,6 +161,8 @@
 - Shim signed x64 EFI bootloader to 1.58+15.8-0ubuntu1
 - WinBTRFS Driver to 1.9
 - Added tmux
+- Support for LUKS-encrypted disk volumes with clevis automated decryption
+  (tpm2 and tang) at boot time
 
 # 2024/08/11 - batocera.linux 40 - Swallowtail
 ### Special Notes

@@ -1,5 +1,5 @@
 diff --git a/CMakeModules/DuckStationDependencies.cmake b/CMakeModules/DuckStationDependencies.cmake
-index cc23c80a7..de296f406 100644
+index f7e592bb0..2fd2a5d61 100644
 --- a/CMakeModules/DuckStationDependencies.cmake
 +++ b/CMakeModules/DuckStationDependencies.cmake
 @@ -18,7 +18,7 @@ find_package(JPEG REQUIRED)
@@ -9,13 +9,13 @@ index cc23c80a7..de296f406 100644
 -find_package(DiscordRPC 3.4.0 REQUIRED)
 +#find_package(DiscordRPC 3.4.0 REQUIRED)
  find_package(SoundTouch 2.3.3 REQUIRED)
+ find_package(libzip 1.11.1 REQUIRED)
  
- if(NOT WIN32)
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index 5e3f3f0b7..f8128d24b 100644
+index 529963e60..771c92865 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
-@@ -89,7 +89,7 @@ LOG_CHANNEL(System);
+@@ -90,7 +90,7 @@ LOG_CHANNEL(System);
  #endif
  
  #ifndef __ANDROID__

@@ -1,6 +1,5 @@
 from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 class XboxcloudGenerator(Generator):
@@ -11,5 +10,5 @@ class XboxcloudGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-              'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+              'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
         })

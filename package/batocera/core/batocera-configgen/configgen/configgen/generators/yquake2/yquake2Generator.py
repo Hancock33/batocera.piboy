@@ -4,7 +4,8 @@ from typing import TYPE_CHECKING
 import os
 import shutil
 
-from ... import Command, controllersConfig
+from ... import Command
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 baseq2_src = "/usr/share/game_assets/quake2/baseq2"
@@ -47,7 +48,7 @@ class Yquake2Generator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-            'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+            'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
         })
 
     def getHotkeysContext(self) -> HotkeysContext:

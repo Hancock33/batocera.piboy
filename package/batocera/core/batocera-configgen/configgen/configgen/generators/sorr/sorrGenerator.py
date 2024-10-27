@@ -2,8 +2,7 @@ import os
 from os import path
 
 from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 class SorrGenerator(Generator):
@@ -19,7 +18,7 @@ class SorrGenerator(Generator):
             'ALSA_PLUGIN_DIR': '/usr/lib32/alsa-lib',
             'SPA_PLUGIN_DIR': '/usr/lib32/spa-0.2',
             'PIPEWIRE_MODULE_DIR': '/usr/lib32/pipewire-0.3',
-            "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
+            'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
         })
 
     def getHotkeysContext(self):

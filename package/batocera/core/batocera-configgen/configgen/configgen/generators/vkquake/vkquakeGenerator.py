@@ -3,7 +3,8 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 import shutil
 
-from ... import Command, controllersConfig
+from ... import Command
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 q1_src = "/usr/share/game_assets/quake1/id1/vkquake.pak"
@@ -28,7 +29,7 @@ class VkquakeGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
 
     def getHotkeysContext(self) -> HotkeysContext:

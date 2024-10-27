@@ -3,10 +3,9 @@ import shutil
 from os import path
 
 from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
-from ...utils import videoMode as videoMode
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
+from ...utils import videoMode as videoMode
 
 class VcmiGenerator(Generator):
 
@@ -22,7 +21,7 @@ class VcmiGenerator(Generator):
             array=commandArray,
             env={
                 'LD_LIBRARY_PATH': '/lib:/usr/lib:/usr/lib/vcmi:/usr/lib/vcmi/AI',
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
 
     def getHotkeysContext(self):

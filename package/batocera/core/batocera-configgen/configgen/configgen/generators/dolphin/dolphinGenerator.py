@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ... import Command, controllersConfig
-from ...batoceraPaths import CONFIGS, SAVES, mkdir_if_not_exists
+from ...batoceraPaths import CONFIGS, SAVES, CACHE, mkdir_if_not_exists
 from ...utils.configparser import CaseSensitiveConfigParser
 from ..Generator import Generator
 from . import dolphinControllers, dolphinSYSCONF
@@ -177,7 +177,7 @@ class DolphinGenerator(Generator):
                 dolphinSettings.set("Core", "SIDevice" + str(i - 1), value)
             else:
                 # if the pad is a wheel and on gamecube, use it
-                if system.name == "gamecube" and system.isOptSet('use_wheels') and system.getOptBoolean('use_wheels') and len(wheels) > 0 and str(i) in playersControllers and playersControllers[str(i)].dev in wheels:
+                if system.name == "gamecube" and system.isOptSet('use_wheels') and system.getOptBoolean('use_wheels') and len(wheels) > 0 and i in playersControllers and playersControllers[i].device_path in wheels:
                     dolphinSettings.set("Core", "SIDevice" + str(i - 1), "8")
                 else:
                     dolphinSettings.set("Core", "SIDevice" + str(i - 1), "6")
@@ -488,9 +488,14 @@ class DolphinGenerator(Generator):
         if system.isOptSet('state_filename'):
             commandArray.extend(["--save_state", system.config['state_filename']])
 
-        return Command.Command(array=commandArray, \
-            env={ "XDG_CONFIG_HOME":CONFIGS, \
-            "XDG_DATA_HOME":SAVES})
+        return Command.Command(
+            array=commandArray, 
+            env={ 
+                "XDG_CONFIG_HOME": CONFIGS,
+                "XDG_DATA_HOME": SAVES,
+                "XDG_CACHE_HOME": CACHE
+            }
+        )
 
     def getInGameRatio(self, config, gameResolution, rom):
 

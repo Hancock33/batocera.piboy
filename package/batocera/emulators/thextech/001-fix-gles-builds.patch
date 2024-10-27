@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index c0c6bfd2..89a41a38 100644
+index 3d6b3e11..c02ada88 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -1300,6 +1300,7 @@ endif()
+@@ -1321,6 +1321,7 @@ endif()
  
  if(THEXTECH_BUILD_GL_ES_MODERN)
      target_compile_definitions(thextech PRIVATE -DTHEXTECH_BUILD_GL_ES_MODERN)
@@ -10,7 +10,7 @@ index c0c6bfd2..89a41a38 100644
  endif()
  
  if(THEXTECH_BUILD_GL_DESKTOP_MODERN OR THEXTECH_BUILD_GL_ES_MODERN)
-@@ -1312,6 +1313,7 @@ endif()
+@@ -1333,6 +1334,7 @@ endif()
  
  if(THEXTECH_BUILD_GL_ES_LEGACY)
      target_compile_definitions(thextech PRIVATE -DTHEXTECH_BUILD_GL_ES_LEGACY)

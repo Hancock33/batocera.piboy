@@ -10591,12 +10591,12 @@ msgstr "ASCI"
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "OpenGL (Classic)"
-msgstr ""
+msgstr "OpenGL (Clássico)"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
-msgstr ""
+msgstr "OpenGL (Computação de Shader)"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -12087,7 +12087,7 @@ msgstr "Somente Interpretador de Shaders"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Only applicable when either Async Shader mode is set."
-msgstr "Aplicável apenas quando o modo Sombreador assíncrono está definido."
+msgstr "Aplicável apenas quando o modo Shader assíncrono está definido."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -16474,7 +16474,7 @@ msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr "Mostrar o ecrã do comando"
 
-#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Configuration menu"
 msgstr "Menu de configuração"
@@ -16489,17 +16489,17 @@ msgctxt "keys_files"
 msgid "Exit Emulator"
 msgstr "Sair do Emulador"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Load State"
 msgstr "Carregar Estado"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "Guardar Estado"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Fast Forward"
 msgstr "Avanço Rápido"

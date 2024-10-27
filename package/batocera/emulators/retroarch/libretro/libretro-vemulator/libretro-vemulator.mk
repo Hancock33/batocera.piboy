@@ -3,8 +3,8 @@
 # libretro-vemulator
 #
 ################################################################################
-# Version: Commits on Mar 11, 2023
-LIBRETRO_VEMULATOR_VERSION = ff9c39714fe64960b4050c6884c70c24e63de4fd
+# Version: Commits on Oct 21, 2024
+LIBRETRO_VEMULATOR_VERSION = 45d7556667549bb1c1b84d27fbffb7d2a633f5d3
 LIBRETRO_VEMULATOR_SITE = $(call github,libretro,vemulator-libretro,$(LIBRETRO_VEMULATOR_VERSION))
 LIBRETRO_VEMULATOR_LICENSE = GPLv3
 

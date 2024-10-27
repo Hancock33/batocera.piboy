@@ -5,7 +5,8 @@ import os
 import json
 
 from ...batoceraPaths import CONFIGS, mkdir_if_not_exists
-from ... import Command, controllersConfig
+from ... import Command
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 if TYPE_CHECKING:
@@ -132,7 +133,7 @@ class YabasanshiroGenerator(Generator):
 
         return Command.Command(
             array=commandArray,
-            env={ "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)}
+            env={ 'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)}
             )
 
     def getHotkeysContext(self) -> HotkeysContext:

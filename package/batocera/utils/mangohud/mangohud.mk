@@ -41,4 +41,9 @@ else
 MANGOHUD_CONF_OPTS += -Dwith_wayland=disabled
 endif
 
+define MANGOHUD_POST_INSTALL_CLEAN
+	rm -f $(TARGET_DIR)/usr/share/man/man1/mangohud.1
+endef
+MANGOHUD_POST_INSTALL_TARGET_HOOKS = MANGOHUD_POST_INSTALL_CLEAN
+
 $(eval $(meson-package))
