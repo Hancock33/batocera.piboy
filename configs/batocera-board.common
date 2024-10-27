@@ -112,6 +112,9 @@ BR2_PACKAGE_DROPBEAR_LOCALOPTIONS_FILE="$(BR2_EXTERNAL_BATOCERA_PATH)/board/bato
 BR2_PACKAGE_MONO_SPECIFY_FOLDERS_TO_INSTALL=y
 BR2_PACKAGE_MONO_FOLDERS_TO_INSTALL="4.0  4.5  gac"
 
+# Experimental, build cmake packages with clang
+BR_CMAKE_USE_CLANG=y
+
 # Disable generating rootfs tar (speedup)
 BR2_TARGET_ROOTFS_TAR=n
 
