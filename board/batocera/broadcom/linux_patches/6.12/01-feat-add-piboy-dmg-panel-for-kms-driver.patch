@@ -1,5 +1,5 @@
 diff --git a/arch/arm/boot/dts/overlays/Makefile b/arch/arm/boot/dts/overlays/Makefile
-index e14dc0857327..60f94b669a5d 100644
+index 21222f244c3a..64180388c830 100644
 --- a/arch/arm/boot/dts/overlays/Makefile
 +++ b/arch/arm/boot/dts/overlays/Makefile
 @@ -315,6 +315,7 @@ dtbo-$(CONFIG_ARCH_BCM2835) += \

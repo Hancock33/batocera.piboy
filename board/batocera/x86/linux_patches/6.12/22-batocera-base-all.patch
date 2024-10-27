@@ -989,7 +989,7 @@ index 000000000000..767844637a7d
 +  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index e9659a5a7fb3..e0ebe31139f5 100644
+index a27407950242..04177ac324bc 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -965,6 +965,14 @@ Q:	https://patchwork.kernel.org/project/linux-rdma/list/
@@ -1023,7 +1023,7 @@ index e9659a5a7fb3..e0ebe31139f5 100644
  AMD IOMMU (AMD-VI)
  M:	Joerg Roedel <joro@8bytes.org>
  R:	Suravee Suthikulpanit <suravee.suthikulpanit@amd.com>
-@@ -16425,6 +16442,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
+@@ -16431,6 +16448,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
  F:	Documentation/filesystems/ntfs3.rst
  F:	fs/ntfs3/
  
@@ -1039,7 +1039,7 @@ index e9659a5a7fb3..e0ebe31139f5 100644
  NUBUS SUBSYSTEM
  M:	Finn Thain <fthain@linux-m68k.org>
  L:	linux-m68k@lists.linux-m68k.org
-@@ -17345,6 +17371,17 @@ T:	git git://git.kernel.org/pub/scm/linux/kernel/git/overlayfs/vfs.git
+@@ -17351,6 +17377,17 @@ T:	git git://git.kernel.org/pub/scm/linux/kernel/git/overlayfs/vfs.git
  F:	Documentation/filesystems/overlayfs.rst
  F:	fs/overlayfs/
  
@@ -2095,7 +2095,7 @@ index fab5caec0b72..788aa88625b6 100644
 +}
 +EXPORT_SYMBOL_GPL(amd_get_core_type);
 diff --git a/arch/x86/kernel/cpu/common.c b/arch/x86/kernel/cpu/common.c
-index f1040cb64841..873b4dc90f9f 100644
+index a5f221ea5688..e4b8d4f850e7 100644
 --- a/arch/x86/kernel/cpu/common.c
 +++ b/arch/x86/kernel/cpu/common.c
 @@ -57,6 +57,7 @@
@@ -2106,7 +2106,7 @@ index f1040cb64841..873b4dc90f9f 100644
  #include <asm/memtype.h>
  #include <asm/microcode.h>
  #include <asm/intel-family.h>
-@@ -403,6 +404,7 @@ static const unsigned long cr4_pinned_mask = X86_CR4_SMEP | X86_CR4_SMAP | X86_C
+@@ -404,6 +405,7 @@ static const unsigned long cr4_pinned_mask = X86_CR4_SMEP | X86_CR4_SMAP | X86_C
  					     X86_CR4_FSGSBASE | X86_CR4_CET | X86_CR4_FRED;
  static DEFINE_STATIC_KEY_FALSE_RO(cr_pinning);
  static unsigned long cr4_pinned_bits __ro_after_init;
@@ -2114,7 +2114,7 @@ index f1040cb64841..873b4dc90f9f 100644
  
  void native_write_cr0(unsigned long val)
  {
-@@ -481,6 +483,12 @@ void cr4_init(void)
+@@ -482,6 +484,12 @@ void cr4_init(void)
  	this_cpu_write(cpu_tlbstate.cr4, cr4);
  }
  
@@ -2127,7 +2127,7 @@ index f1040cb64841..873b4dc90f9f 100644
  /*
   * Once CPU feature detection is finished (and boot params have been
   * parsed), record any of the sensitive CR bits that are set, and
-@@ -1847,6 +1855,7 @@ static void identify_cpu(struct cpuinfo_x86 *c)
+@@ -1848,6 +1856,7 @@ static void identify_cpu(struct cpuinfo_x86 *c)
  	setup_smep(c);
  	setup_smap(c);
  	setup_umip(c);
@@ -2135,7 +2135,7 @@ index f1040cb64841..873b4dc90f9f 100644
  
  	/* Enable FSGSBASE instructions if available. */
  	if (cpu_has(c, X86_FEATURE_FSGSBASE)) {
-@@ -2413,3 +2422,9 @@ void __init arch_cpu_finalize_init(void)
+@@ -2423,3 +2432,9 @@ void __init arch_cpu_finalize_init(void)
  	 */
  	mem_encrypt_init();
  }
@@ -2219,6 +2219,20 @@ index 766f092dab80..c01bb75d0375 100644
  
  	return 0;
  }
+diff --git a/arch/x86/kernel/tsc.c b/arch/x86/kernel/tsc.c
+index dfe6847fd99e..8bc41b2ac6c3 100644
+--- a/arch/x86/kernel/tsc.c
++++ b/arch/x86/kernel/tsc.c
+@@ -1592,6 +1592,9 @@ unsigned long calibrate_delay_is_known(void)
+ 	if (!constant_tsc || !mask)
+ 		return 0;
+ 
++	if (cpu != 0)
++		return cpu_data(0).loops_per_jiffy;
++
+ 	sibling = cpumask_any_but(mask, cpu);
+ 	if (sibling < nr_cpu_ids)
+ 		return cpu_data(sibling).loops_per_jiffy;
 diff --git a/arch/x86/pci/common.c b/arch/x86/pci/common.c
 index ddb798603201..7c20387d8202 100644
 --- a/arch/x86/pci/common.c
@@ -2252,57 +2266,6 @@ index 67083fc1b2f5..c1aecee4ad9b 100644
 +463	common	process_ksm_enable		sys_process_ksm_enable
 +464	common	process_ksm_disable		sys_process_ksm_disable
 +465	common	process_ksm_status		sys_process_ksm_status
-diff --git a/block/bfq-iosched.c b/block/bfq-iosched.c
-index 0747d9d0e48c..7e195b6fa18c 100644
---- a/block/bfq-iosched.c
-+++ b/block/bfq-iosched.c
-@@ -7649,6 +7649,7 @@ MODULE_ALIAS("bfq-iosched");
- static int __init bfq_init(void)
- {
- 	int ret;
-+	char msg[60] = "BFQ I/O-scheduler: BFQ-CachyOS v6.11";
- 
- #ifdef CONFIG_BFQ_GROUP_IOSCHED
- 	ret = blkcg_policy_register(&blkcg_policy_bfq);
-@@ -7680,6 +7681,11 @@ static int __init bfq_init(void)
- 	if (ret)
- 		goto slab_kill;
- 
-+#ifdef CONFIG_BFQ_GROUP_IOSCHED
-+	strcat(msg, " (with cgroups support)");
-+#endif
-+	pr_info("%s", msg);
-+
- 	return 0;
- 
- slab_kill:
-diff --git a/block/elevator.c b/block/elevator.c
-index 9430cde13d1a..260743031686 100644
---- a/block/elevator.c
-+++ b/block/elevator.c
-@@ -566,9 +566,19 @@ static struct elevator_type *elevator_get_default(struct request_queue *q)
- 
- 	if (q->nr_hw_queues != 1 &&
- 	    !blk_mq_is_shared_tags(q->tag_set->flags))
--		return NULL;
--
--	return elevator_find_get("mq-deadline");
-+#if defined(CONFIG_CACHY) && defined(CONFIG_MQ_IOSCHED_KYBER)
-+		return elevator_find_get("kyber");
-+#elif defined(CONFIG_CACHY)
-+		return elevator_find_get("mq-deadline");
-+#else
-+ 		return NULL;
-+#endif
-+
-+#if defined(CONFIG_CACHY) && defined(CONFIG_IOSCHED_BFQ)
-+	return elevator_find_get("bfq");
-+#else
-+ 	return elevator_find_get("mq-deadline");
-+#endif
- }
- 
- /*
 diff --git a/drivers/Makefile b/drivers/Makefile
 index 45d1c3e630f7..4f5ab2429a7f 100644
 --- a/drivers/Makefile
@@ -2751,7 +2714,7 @@ index df17e79c45c7..e454488c1a31 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index ec63cd098ccc..c37aa59107bc 100644
+index d84ef3bc2bbf..6425de26e046 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -4473,7 +4473,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
@@ -2853,7 +2816,7 @@ index d5d6ab484e5a..dccba7bcdf97 100644
  }
  
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
-index 9ad9cf7a9c98..18eaab929540 100644
+index 80e60ea2d11e..02a35fd44bcb 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
 @@ -140,7 +140,8 @@ int smu_set_soft_freq_range(struct smu_context *smu,
@@ -2866,17 +2829,7 @@ index 9ad9cf7a9c98..18eaab929540 100644
  
  	return ret;
  }
-@@ -1265,7 +1266,8 @@ static int smu_sw_init(void *handle)
- 	smu->workload_prority[PP_SMC_POWER_PROFILE_COMPUTE] = 5;
- 	smu->workload_prority[PP_SMC_POWER_PROFILE_CUSTOM] = 6;
- 
--	if (smu->is_apu)
-+	if (smu->is_apu ||
-+	    (amdgpu_ip_version(adev, GC_HWIP, 0) == IP_VERSION(9, 4, 1)))
- 		smu->workload_mask = 1 << smu->workload_prority[PP_SMC_POWER_PROFILE_BOOTUP_DEFAULT];
- 	else
- 		smu->workload_mask = 1 << smu->workload_prority[PP_SMC_POWER_PROFILE_FULLSCREEN3D];
-@@ -2766,7 +2768,10 @@ int smu_get_power_limit(void *handle,
+@@ -2775,7 +2776,10 @@ int smu_get_power_limit(void *handle,
  			*limit = smu->max_power_limit;
  			break;
  		case SMU_PPT_LIMIT_MIN:
@@ -2888,7 +2841,7 @@ index 9ad9cf7a9c98..18eaab929540 100644
  			break;
  		default:
  			return -EINVAL;
-@@ -2790,7 +2795,14 @@ static int smu_set_power_limit(void *handle, uint32_t limit)
+@@ -2799,7 +2803,14 @@ static int smu_set_power_limit(void *handle, uint32_t limit)
  		if (smu->ppt_funcs->set_power_limit)
  			return smu->ppt_funcs->set_power_limit(smu, limit_type, limit);
  
@@ -2958,7 +2911,7 @@ index e58220a7ee2f..044d6893b43e 100644
  int smu_v13_0_set_hard_freq_limited_range(struct smu_context *smu,
  					  enum smu_clk_type clk_type,
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/inc/smu_v14_0.h b/drivers/gpu/drm/amd/pm/swsmu/inc/smu_v14_0.h
-index 46b456590a08..6cada19a8482 100644
+index 727d5b405435..07c220102c1d 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/inc/smu_v14_0.h
 +++ b/drivers/gpu/drm/amd/pm/swsmu/inc/smu_v14_0.h
 @@ -186,7 +186,7 @@ int smu_v14_0_get_dpm_ultimate_freq(struct smu_context *smu, enum smu_clk_type c
@@ -3764,10 +3717,10 @@ index 865e916fc425..f7745eaf118e 100644
  			return ret;
  
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/smu14/smu_v14_0_2_ppt.c b/drivers/gpu/drm/amd/pm/swsmu/smu14/smu_v14_0_2_ppt.c
-index 5899d01fa73d..8d093b5f130b 100644
+index e83ea2bc7f9c..ceb2b02621f1 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/smu14/smu_v14_0_2_ppt.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/smu14/smu_v14_0_2_ppt.c
-@@ -1516,7 +1516,8 @@ static int smu_v14_0_2_force_clk_levels(struct smu_context *smu,
+@@ -1519,7 +1519,8 @@ static int smu_v14_0_2_force_clk_levels(struct smu_context *smu,
  		ret = smu_v14_0_set_soft_freq_limited_range(smu,
  							    clk_type,
  							    min_freq,
@@ -9586,6 +9539,19 @@ index 13743d0e83b5..5152b3330e28 100644
  obj-$(CONFIG_EQUALIZER) += eql.o
  obj-$(CONFIG_IFB) += ifb.o
  obj-$(CONFIG_MACSEC) += macsec.o
+diff --git a/drivers/net/dummy.c b/drivers/net/dummy.c
+index e9c5e1e11fa0..d912cdbd26a4 100644
+--- a/drivers/net/dummy.c
++++ b/drivers/net/dummy.c
+@@ -43,7 +43,7 @@
+ 
+ #define DRV_NAME	"dummy"
+ 
+-static int numdummies = 1;
++static int numdummies = 0;
+ 
+ /* fake multicast ability */
+ static void set_multicast_list(struct net_device *dev)
 diff --git a/drivers/net/ovpn/Makefile b/drivers/net/ovpn/Makefile
 new file mode 100644
 index 000000000000..f4d4bd87c851
@@ -17557,6 +17523,35 @@ index 000000000000..679613d02b9a
 +
 +MODULE_DESCRIPTION("AMD 3D V-Cache Performance Optimizer Driver");
 +MODULE_LICENSE("GPL");
+diff --git a/fs/binfmt_elf.c b/fs/binfmt_elf.c
+index 06dc4a57ba78..fef929ddfe59 100644
+--- a/fs/binfmt_elf.c
++++ b/fs/binfmt_elf.c
+@@ -1281,6 +1281,8 @@ static int load_elf_binary(struct linux_binprm *bprm)
+ 	mm = current->mm;
+ 	mm->end_code = end_code;
+ 	mm->start_code = start_code;
++	if (start_code >= ELF_ET_DYN_BASE)
++		mm->mmap_base = start_code;
+ 	mm->start_data = start_data;
+ 	mm->end_data = end_data;
+ 	mm->start_stack = bprm->p;
+diff --git a/include/linux/pageblock-flags.h b/include/linux/pageblock-flags.h
+index fc6b9c87cb0a..6cd31c93b65f 100644
+--- a/include/linux/pageblock-flags.h
++++ b/include/linux/pageblock-flags.h
+@@ -52,7 +52,11 @@ extern unsigned int pageblock_order;
+ #else /* CONFIG_TRANSPARENT_HUGEPAGE */
+ 
+ /* If huge pages are not used, group by MAX_ORDER_NR_PAGES */
++#ifdef CONFIG_CACHY
++#define pageblock_order		PAGE_ALLOC_COSTLY_ORDER
++#else
+ #define pageblock_order		MAX_PAGE_ORDER
++#endif
+ 
+ #endif /* CONFIG_HUGETLB_PAGE */
+ 
 diff --git a/include/linux/pagemap.h b/include/linux/pagemap.h
 index 68a5f1ff3301..291873a34079 100644
 --- a/include/linux/pagemap.h
@@ -19227,6 +19222,38 @@ index db6af207287c..2dc671c977ff 100644
  
  /**
   * struct nl_info - netlink source information
+diff --git a/include/net/sock.h b/include/net/sock.h
+index f29c14448938..2fbdb4a78e45 100644
+--- a/include/net/sock.h
++++ b/include/net/sock.h
+@@ -1573,10 +1573,17 @@ static inline void sk_mem_charge(struct sock *sk, int size)
+ 
+ static inline void sk_mem_uncharge(struct sock *sk, int size)
+ {
++	int reclaimable, reclaim_threshold;
++
++	reclaim_threshold = 64 * 1024;
+ 	if (!sk_has_account(sk))
+ 		return;
+ 	sk_forward_alloc_add(sk, size);
+-	sk_mem_reclaim(sk);
++	reclaimable = sk->sk_forward_alloc - sk_unused_reserved_mem(sk);
++	if (reclaimable > reclaim_threshold) {
++		reclaimable -= reclaim_threshold;
++		__sk_mem_reclaim(sk, reclaimable);
++	}
+ }
+ 
+ /*
+@@ -2807,7 +2814,7 @@ void sk_get_meminfo(const struct sock *sk, u32 *meminfo);
+  * platforms.  This makes socket queueing behavior and performance
+  * not depend upon such differences.
+  */
+-#define _SK_MEM_PACKETS		256
++#define _SK_MEM_PACKETS		1024
+ #define _SK_MEM_OVERHEAD	SKB_TRUESIZE(256)
+ #define SK_WMEM_MAX		(_SK_MEM_OVERHEAD * _SK_MEM_PACKETS)
+ #define SK_RMEM_MAX		(_SK_MEM_OVERHEAD * _SK_MEM_PACKETS)
 diff --git a/include/net/tcp.h b/include/net/tcp.h
 index d1948d357dad..7d99f0bec5f2 100644
 --- a/include/net/tcp.h
@@ -19420,6 +19447,19 @@ index 5bf6148cac2b..613e559ad6e0 100644
  
  /*
   * 32 bit systems traditionally used different
+diff --git a/include/uapi/linux/if_bonding.h b/include/uapi/linux/if_bonding.h
+index d174914a837d..bf8e2af101a3 100644
+--- a/include/uapi/linux/if_bonding.h
++++ b/include/uapi/linux/if_bonding.h
+@@ -82,7 +82,7 @@
+ #define BOND_STATE_ACTIVE       0   /* link is active */
+ #define BOND_STATE_BACKUP       1   /* link is backup */
+ 
+-#define BOND_DEFAULT_MAX_BONDS  1   /* Default maximum number of devices to support */
++#define BOND_DEFAULT_MAX_BONDS  0   /* Default maximum number of devices to support */
+ 
+ #define BOND_DEFAULT_TX_QUEUES 16   /* Default number of tx queues per device */
+ 
 diff --git a/include/uapi/linux/inet_diag.h b/include/uapi/linux/inet_diag.h
 index 86bb2e8b17c9..9d9a3eb2ce9b 100644
 --- a/include/uapi/linux/inet_diag.h
@@ -19722,6 +19762,19 @@ index c521e1421ad4..38dbd16da6a9 100644
  config CC_OPTIMIZE_FOR_SIZE
  	bool "Optimize for size (-Os)"
  	help
+diff --git a/init/init_task.c b/init/init_task.c
+index 136a8231355a..15d7392020ca 100644
+--- a/init/init_task.c
++++ b/init/init_task.c
+@@ -139,7 +139,7 @@ struct task_struct init_task __aligned(L1_CACHE_BYTES) = {
+ 	.journal_info	= NULL,
+ 	INIT_CPU_TIMERS(init_task)
+ 	.pi_lock	= __RAW_SPIN_LOCK_UNLOCKED(init_task.pi_lock),
+-	.timer_slack_ns = 50000, /* 50 usec default slack */
++	.timer_slack_ns = 50, /* 50 nsec default slack */
+ 	.thread_pid	= &init_struct_pid,
+ 	.thread_node	= LIST_HEAD_INIT(init_signals.thread_head),
+ #ifdef CONFIG_AUDIT
 diff --git a/kernel/Kconfig.hz b/kernel/Kconfig.hz
 index 38ef6d06888e..0f78364efd4f 100644
 --- a/kernel/Kconfig.hz
@@ -19825,8 +19878,48 @@ index 2bbb6eca5144..125cdf85741c 100644
  	}
  
  	return state;
+diff --git a/kernel/sched/core.c b/kernel/sched/core.c
+index dbfb5717d6af..dd709388144d 100644
+--- a/kernel/sched/core.c
++++ b/kernel/sched/core.c
+@@ -594,7 +594,7 @@ void raw_spin_rq_lock_nested(struct rq *rq, int subclass)
+ 
+ 	/* Matches synchronize_rcu() in __sched_core_enable() */
+ 	preempt_disable();
+-	if (sched_core_disabled()) {
++	if (likely(sched_core_disabled())) {
+ 		raw_spin_lock_nested(&rq->__lock, subclass);
+ 		/* preempt_count *MUST* be > 1 */
+ 		preempt_enable_no_resched();
+@@ -802,7 +802,7 @@ void update_rq_clock(struct rq *rq)
+ #endif
+ 
+ 	delta = sched_clock_cpu(cpu_of(rq)) - rq->clock;
+-	if (delta < 0)
++	if (unlikely(delta < 0))
+ 		return;
+ 	rq->clock += delta;
+ 	update_rq_clock_task(rq, delta);
+@@ -6049,7 +6049,7 @@ pick_next_task(struct rq *rq, struct task_struct *prev, struct rq_flags *rf)
+ 	struct rq *rq_i;
+ 	bool need_sync;
+ 
+-	if (!sched_core_enabled(rq))
++	if (likely(!sched_core_enabled(rq)))
+ 		return __pick_next_task(rq, prev, rf);
+ 
+ 	cpu = cpu_of(rq);
+@@ -7210,7 +7210,7 @@ void rt_mutex_setprio(struct task_struct *p, struct task_struct *pi_task)
+ #if !defined(CONFIG_PREEMPTION) || defined(CONFIG_PREEMPT_DYNAMIC)
+ int __sched __cond_resched(void)
+ {
+-	if (should_resched(0)) {
++	if (unlikely(should_resched(0))) {
+ 		preempt_schedule_common();
+ 		return 1;
+ 	}
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index c157d4860a3b..b55fa314df37 100644
+index c157d4860a3b..895d9ef22bf5 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -73,10 +73,19 @@ unsigned int sysctl_sched_tunable_scaling = SCHED_TUNABLESCALING_LOG;
@@ -19862,6 +19955,15 @@ index c157d4860a3b..b55fa314df37 100644
  
  #ifdef CONFIG_NUMA_BALANCING
  /* Restrict the NUMA promotion throughput (MB/s) for each target node. */
+@@ -12780,7 +12793,7 @@ static int sched_balance_newidle(struct rq *this_rq, struct rq_flags *rf)
+ 
+ 		update_next_balance(sd, &next_balance);
+ 
+-		if (this_rq->avg_idle < curr_cost + sd->max_newidle_lb_cost)
++		if (this_rq->avg_idle/2 < curr_cost + sd->max_newidle_lb_cost)
+ 			break;
+ 
+ 		if (sd->flags & SD_BALANCE_NEWIDLE) {
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
 index 081519ffab46..991226ab5250 100644
 --- a/kernel/sched/sched.h
@@ -37162,38 +37264,6 @@ index 4c9f5ea13271..2b15257b168f 100644
  	default 1
  
  #
-diff --git a/mm/compaction.c b/mm/compaction.c
-index a2b16b08cbbf..48d611e58ad3 100644
---- a/mm/compaction.c
-+++ b/mm/compaction.c
-@@ -1920,7 +1920,11 @@ static int sysctl_compact_unevictable_allowed __read_mostly = CONFIG_COMPACT_UNE
-  * aggressively the kernel should compact memory in the
-  * background. It takes values in the range [0, 100].
-  */
-+#ifdef CONFIG_CACHY
-+static unsigned int __read_mostly sysctl_compaction_proactiveness;
-+#else
- static unsigned int __read_mostly sysctl_compaction_proactiveness = 20;
-+#endif
- static int sysctl_extfrag_threshold = 500;
- static int __read_mostly sysctl_compact_memory;
- 
-diff --git a/mm/huge_memory.c b/mm/huge_memory.c
-index 2fb328880b50..449a37b15617 100644
---- a/mm/huge_memory.c
-+++ b/mm/huge_memory.c
-@@ -65,7 +65,11 @@ unsigned long transparent_hugepage_flags __read_mostly =
- #ifdef CONFIG_TRANSPARENT_HUGEPAGE_MADVISE
- 	(1<<TRANSPARENT_HUGEPAGE_REQ_MADV_FLAG)|
- #endif
-+#ifdef CONFIG_CACHY
-+	(1<<TRANSPARENT_HUGEPAGE_DEFRAG_KSWAPD_OR_MADV_FLAG)|
-+#else
- 	(1<<TRANSPARENT_HUGEPAGE_DEFRAG_REQ_MADV_FLAG)|
-+#endif
- 	(1<<TRANSPARENT_HUGEPAGE_DEFRAG_KHUGEPAGED_FLAG)|
- 	(1<<TRANSPARENT_HUGEPAGE_USE_ZERO_PAGE_FLAG);
- 
 diff --git a/mm/mmap.c b/mm/mmap.c
 index 9c0fb43064b5..6ebb39859e8b 100644
 --- a/mm/mmap.c
@@ -37238,7 +37308,7 @@ index fcd4c1439cb9..e2f7d709e819 100644
  EXPORT_SYMBOL_GPL(dirty_writeback_interval);
  
 diff --git a/mm/page_alloc.c b/mm/page_alloc.c
-index 8afab64814dc..3e5ead85504a 100644
+index 8afab64814dc..4f96a97bbcfd 100644
 --- a/mm/page_alloc.c
 +++ b/mm/page_alloc.c
 @@ -271,7 +271,11 @@ const char * const migratetype_names[MIGRATE_TYPES] = {
@@ -37253,6 +37323,55 @@ index 8afab64814dc..3e5ead85504a 100644
  static int watermark_scale_factor = 10;
  
  /* movable_zone is the "real" zone pages in ZONE_MOVABLE are taken from */
+@@ -2274,14 +2278,15 @@ __rmqueue(struct zone *zone, unsigned int order, int migratetype,
+ }
+ 
+ /*
+- * Obtain a specified number of elements from the buddy allocator, all under
+- * a single hold of the lock, for efficiency.  Add them to the supplied list.
+- * Returns the number of new pages which were placed at *list.
++ * Obtain a specified number of elements from the buddy allocator, and relax the
++ * zone lock when needed. Add them to the supplied list. Returns the number of
++ * new pages which were placed at *list.
+  */
+ static int rmqueue_bulk(struct zone *zone, unsigned int order,
+ 			unsigned long count, struct list_head *list,
+ 			int migratetype, unsigned int alloc_flags)
+ {
++	const bool can_resched = !preempt_count() && !irqs_disabled();
+ 	unsigned long flags;
+ 	int i;
+ 
+@@ -2292,6 +2297,15 @@ static int rmqueue_bulk(struct zone *zone, unsigned int order,
+ 		if (unlikely(page == NULL))
+ 			break;
+ 
++		/* Reschedule and ease the contention on the lock if needed */
++		if (i + 1 < count && ((can_resched && need_resched()) ||
++				      spin_needbreak(&zone->lock))) {
++			spin_unlock_irqrestore(&zone->lock, flags);
++			if (can_resched)
++				cond_resched();
++			spin_lock_irqsave(&zone->lock, flags);
++		}
++
+ 		/*
+ 		 * Split buddy pages returned by expand() are received here in
+ 		 * physical page order. The page is added to the tail of
+@@ -5509,11 +5523,11 @@ static int zone_batchsize(struct zone *zone)
+ 
+ 	/*
+ 	 * The number of pages to batch allocate is either ~0.1%
+-	 * of the zone or 1MB, whichever is smaller. The batch
++	 * of the zone or 4MB, whichever is smaller. The batch
+ 	 * size is striking a balance between allocation latency
+ 	 * and zone lock contention.
+ 	 */
+-	batch = min(zone_managed_pages(zone) >> 10, SZ_1M / PAGE_SIZE);
++	batch = min(zone_managed_pages(zone) >> 10, 4 * SZ_1M / PAGE_SIZE);
+ 	batch /= 4;		/* We effectively *= 4 below */
+ 	if (batch < 1)
+ 		batch = 1;
 diff --git a/mm/shrinker.c b/mm/shrinker.c
 index dc5d2a6fcfc4..e4b795ee6d2e 100644
 --- a/mm/shrinker.c
@@ -37411,7 +37530,7 @@ index 2b698f8419fe..fd039c41d1c8 100644
  		release_sock(sk);
  		if (reqsk_queue_empty(&icsk->icsk_accept_queue))
 diff --git a/net/ipv4/tcp.c b/net/ipv4/tcp.c
-index 4f77bd862e95..fd3a5551eda7 100644
+index 4f77bd862e95..b28332cfe92c 100644
 --- a/net/ipv4/tcp.c
 +++ b/net/ipv4/tcp.c
 @@ -3384,6 +3384,7 @@ int tcp_disconnect(struct sock *sk, int flags)
@@ -37431,6 +37550,17 @@ index 4f77bd862e95..fd3a5551eda7 100644
  	if (tp->syn_data_acked)
  		info->tcpi_options |= TCPI_OPT_SYN_DATA;
  	if (tp->tcp_usec_ts)
+@@ -5131,8 +5134,8 @@ void __init tcp_init(void)
+ 	tcp_init_mem();
+ 	/* Set per-socket limits to no more than 1/128 the pressure threshold */
+ 	limit = nr_free_buffer_pages() << (PAGE_SHIFT - 7);
+-	max_wshare = min(4UL*1024*1024, limit);
+-	max_rshare = min(6UL*1024*1024, limit);
++	max_wshare = min(16UL*1024*1024, limit);
++	max_rshare = min(16UL*1024*1024, limit);
+ 
+ 	init_net.ipv4.sysctl_tcp_wmem[0] = PAGE_SIZE;
+ 	init_net.ipv4.sysctl_tcp_wmem[1] = 16*1024;
 diff --git a/net/ipv4/tcp_bbr.c b/net/ipv4/tcp_bbr.c
 index 760941e55153..a180fa648d5e 100644
 --- a/net/ipv4/tcp_bbr.c
@@ -40438,10 +40568,10 @@ index 79064580c8c0..697270ce1ea6 100644
  	event = icsk->icsk_pending;
  
 diff --git a/net/netfilter/xt_NFLOG.c b/net/netfilter/xt_NFLOG.c
-index d80abd6ccaf8..6dcf4bc7e30b 100644
+index 6dcf4bc7e30b..94c45bbeb6a8 100644
 --- a/net/netfilter/xt_NFLOG.c
 +++ b/net/netfilter/xt_NFLOG.c
-@@ -79,7 +79,7 @@ static struct xt_target nflog_tg_reg[] __read_mostly = {
+@@ -68,7 +68,7 @@ static struct xt_target nflog_tg_reg[] __read_mostly = {
  	{
  		.name       = "NFLOG",
  		.revision   = 0,
@@ -40450,23 +40580,11 @@ index d80abd6ccaf8..6dcf4bc7e30b 100644
  		.checkentry = nflog_tg_check,
  		.destroy    = nflog_tg_destroy,
  		.target     = nflog_tg,
-diff --git a/net/netfilter/xt_TRACE.c b/net/netfilter/xt_TRACE.c
-index f3fa4f11348c..a642ff09fc8e 100644
---- a/net/netfilter/xt_TRACE.c
-+++ b/net/netfilter/xt_TRACE.c
-@@ -49,6 +49,7 @@ static struct xt_target trace_tg_reg[] __read_mostly = {
- 		.target		= trace_tg,
- 		.checkentry	= trace_tg_check,
- 		.destroy	= trace_tg_destroy,
-+		.me		= THIS_MODULE,
- 	},
- #endif
- };
 diff --git a/net/netfilter/xt_mark.c b/net/netfilter/xt_mark.c
-index f76fe04fc9a4..65b965ca40ea 100644
+index 65b965ca40ea..ee5d4eab1ee0 100644
 --- a/net/netfilter/xt_mark.c
 +++ b/net/netfilter/xt_mark.c
-@@ -62,7 +62,7 @@ static struct xt_target mark_tg_reg[] __read_mostly = {
+@@ -43,7 +43,7 @@ static struct xt_target mark_tg_reg[] __read_mostly = {
  	{
  		.name           = "MARK",
  		.revision       = 2,

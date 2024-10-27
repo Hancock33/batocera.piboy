@@ -551,7 +551,7 @@ index 000000000000..cd7e8a8d6075
 +#endif // CONFIG_SYSCTL
 +#endif // CONFIG_SCHED_BORE
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index dbfb5717d6af..1aa65e287042 100644
+index dd709388144d..20ba36d240c8 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -97,6 +97,8 @@
@@ -683,7 +683,7 @@ index f4035c7a0fa1..7676ad895b92 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index b55fa314df37..2edce57f74ab 100644
+index 895d9ef22bf5..42edbbff6bb8 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -55,6 +55,8 @@
