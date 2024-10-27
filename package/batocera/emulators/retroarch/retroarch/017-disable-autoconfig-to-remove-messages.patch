@@ -1,8 +1,8 @@
 diff --git a/tasks/task_autodetect.c b/tasks/task_autodetect.c
-index 161ec00179..308748d88d 100644
+index b029166e2c..f594a5db56 100644
 --- a/tasks/task_autodetect.c
 +++ b/tasks/task_autodetect.c
-@@ -618,6 +618,8 @@ static void input_autoconfigure_connect_handler(retro_task_t *task)
+@@ -644,6 +644,8 @@ static void input_autoconfigure_connect_handler(retro_task_t *task)
         || !(autoconfig_handle->flags & AUTOCONF_FLAG_AUTOCONFIG_ENABLED))
        goto task_finished;
  

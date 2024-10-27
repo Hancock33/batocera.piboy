@@ -277,6 +277,8 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_RCLONE                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY      # sync files in the cloud (require x86_64)
     select BR2_PACKAGE_BTOP                                 # htop alternative
     select BR2_PACKAGE_MOKUTIL                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY      # mokutil machine owner key utility
+    select BR2_PACKAGE_CRYPTSETUP                           # LUKS encrypted volume userland support
+    select BR2_PACKAGE_CLEVIS                               # Automated decryption policy framework
 
     # Controllers
     select BR2_PACKAGE_XONE                                 if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # xbox receiver (require linux >= 4.15)
@@ -395,6 +397,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_PYTHON_SERIAL                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
     select BR2_PACKAGE_BATOCERA_ETHTOOL
     select BR2_PACKAGE_SMARTMONTOOLS
+    select BR2_PACKAGE_LIBDRM_INSTALL_TESTS                 if  BR2_PACKAGE_LIBDRM                      # modetest
 
     # gpio controllers
     select BR2_PACKAGE_DB9_GPIO_RPI                         if  BR2_PACKAGE_BATOCERA_RPI_ANY
@@ -440,7 +443,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 config BR2_PACKAGE_BATOCERA_DEV
     bool "add dev options"
 
-    select BR2_PACKAGE_TMUX
     select BR2_PACKAGE_X11VNC                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
     help
@@ -1106,7 +1108,8 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_A3GEN2      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2712
+                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_SM8250
 
     # Dreamcast
     select BR2_PACKAGE_BATOCERA_SEGADC

@@ -75,7 +75,7 @@ class CannonballGenerator(Generator):
         })
 
     @staticmethod
-    def getRoot(config, name):
+    def getRoot(config: minidom.Document, name: str) -> minidom.Element:
         xml_section = config.getElementsByTagName(name)
 
         if len(xml_section) == 0:
@@ -87,7 +87,7 @@ class CannonballGenerator(Generator):
         return xml_section
 
     @staticmethod
-    def getSection(config, xml_root, name):
+    def getSection(config: minidom.Document, xml_root: minidom.Element, name: str) -> minidom.Element:
         xml_section = xml_root.getElementsByTagName(name)
 
         if len(xml_section) == 0:
@@ -99,7 +99,7 @@ class CannonballGenerator(Generator):
         return xml_section
 
     @staticmethod
-    def setSectionConfig(config, xml_section, name, value):
+    def setSectionConfig(config: minidom.Document, xml_section: minidom.Element, name: str, value: str) -> None:
         xml_elt = xml_section.getElementsByTagName(name)
         if len(xml_elt) == 0:
             xml_elt = config.createElement(name)

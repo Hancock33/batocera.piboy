@@ -2,7 +2,7 @@ import shutil
 import os.path
 from shutil import copyfile
 from ... import Command
-from ... import controllersConfig
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 from . import quake3Config
 
@@ -23,7 +23,7 @@ class Quake3Generator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
 
     def getInGameRatio(self, config, gameResolution, rom):

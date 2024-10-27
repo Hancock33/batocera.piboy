@@ -1,8 +1,8 @@
 diff --git a/src/core/settings.cpp b/src/core/settings.cpp
-index 420cb5f07..270fdd870 100644
+index 0144056e5..2bd245fd5 100644
 --- a/src/core/settings.cpp
 +++ b/src/core/settings.cpp
-@@ -2133,22 +2133,22 @@ static std::string LoadPathFromSettings(SettingsInterface& si, const std::string
+@@ -2181,20 +2181,20 @@ static std::string LoadPathFromSettings(SettingsInterface& si, const std::string
  
  void EmuFolders::LoadConfig(SettingsInterface& si)
  {
@@ -26,19 +26,16 @@ index 420cb5f07..270fdd870 100644
 -  SaveStates = LoadPathFromSettings(si, DataRoot, "Folders", "SaveStates", "savestates");
 -  Screenshots = LoadPathFromSettings(si, DataRoot, "Folders", "Screenshots", "screenshots");
 -  Shaders = LoadPathFromSettings(si, DataRoot, "Folders", "Shaders", "shaders");
--  Textures = LoadPathFromSettings(si, DataRoot, "Folders", "Textures", "textures");
 +  SaveStates = "/userdata/saves/psx";
 +  Screenshots = "/userdata/screenshots";
 +  Shaders = "/usr/bin/duckstation/resources/shaders";
+   Subchannels = LoadPathFromSettings(si, DataRoot, "Folders", "Subchannels", "subchannels");
+-  Textures = LoadPathFromSettings(si, DataRoot, "Folders", "Textures", "textures");
 +  Textures = "/userdata/system/configs/duckstation/textures";
    UserResources = LoadPathFromSettings(si, DataRoot, "Folders", "UserResources", "resources");
    Videos = LoadPathFromSettings(si, DataRoot, "Folders", "Videos", "videos");
--
-+ 
-   DEV_LOG("BIOS Directory: {}", Bios);
-   DEV_LOG("Cache Directory: {}", Cache);
-   DEV_LOG("Cheats Directory: {}", Cheats);
-@@ -2170,19 +2170,19 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
+ 
+@@ -2220,20 +2220,20 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
  void EmuFolders::Save(SettingsInterface& si)
  {
    // convert back to relative
@@ -62,10 +59,11 @@ index 420cb5f07..270fdd870 100644
 -  si.SetStringValue("Folders", "SaveStates", Path::MakeRelative(SaveStates, DataRoot).c_str());
 -  si.SetStringValue("Folders", "Screenshots", Path::MakeRelative(Screenshots, DataRoot).c_str());
 -  si.SetStringValue("Folders", "Shaders", Path::MakeRelative(Shaders, DataRoot).c_str());
--  si.SetStringValue("Folders", "Textures", Path::MakeRelative(Textures, DataRoot).c_str());
 +  si.SetStringValue("Folders", "SaveStates", SaveStates.c_str());
 +  si.SetStringValue("Folders", "Screenshots", Screenshots.c_str());
 +  si.SetStringValue("Folders", "Shaders", Shaders.c_str());
+   si.SetStringValue("Folders", "Subchannels", Path::MakeRelative(Subchannels, DataRoot).c_str());
+-  si.SetStringValue("Folders", "Textures", Path::MakeRelative(Textures, DataRoot).c_str());
 +  si.SetStringValue("Folders", "Textures", Textures.c_str());
    si.SetStringValue("Folders", "UserResources", Path::MakeRelative(UserResources, DataRoot).c_str());
    si.SetStringValue("Folders", "Videos", Path::MakeRelative(Videos, DataRoot).c_str());

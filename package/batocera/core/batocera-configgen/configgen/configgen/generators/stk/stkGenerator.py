@@ -3,8 +3,7 @@ import shutil
 from os import path
 
 from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 class StkGenerator(Generator):
@@ -28,7 +27,7 @@ class StkGenerator(Generator):
             array=commandArray,
             env={
                 'SUPERTUXKART_DATADIR': '/userdata/roms/ports/stk',
-                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             }
         )
 

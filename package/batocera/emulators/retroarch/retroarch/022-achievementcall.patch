@@ -1,8 +1,8 @@
 diff --git a/cheevos/cheevos.c b/cheevos/cheevos.c
-index 47f4cbc0ed..e249cbb84b 100644
+index ace1600552..e954e3c33a 100644
 --- a/cheevos/cheevos.c
 +++ b/cheevos/cheevos.c
-@@ -486,6 +486,13 @@ static void rcheevos_award_achievement(const rc_client_achievement_t* cheevo)
+@@ -329,6 +329,13 @@ static void rcheevos_award_achievement(const rc_client_achievement_t* cheevo)
        }
     }
  
@@ -16,25 +16,11 @@ index 47f4cbc0ed..e249cbb84b 100644
  #ifdef HAVE_AUDIOMIXER
     /* Play the unlock sound */
     if (settings->bools.cheevos_unlock_sound_enable)
-@@ -801,6 +808,13 @@ void rcheevos_award_achievement(rcheevos_locals_t* locals,
-    CHEEVOS_LOG(RCHEEVOS_TAG "Awarding achievement %u: %s (%s)\n",
-          cheevo->id, cheevo->title, cheevo->description);
- 
-+   const char* cheevos_cmd = settings->arrays.cheevos_cmd;
-+   if (cheevos_cmd[0]) {
-+     char cmdargs[256];
-+     snprintf(cmdargs, sizeof(cmdargs), "%s %u \"%s\" \"%s\" > /dev/null 2>/dev/null", cheevos_cmd, cheevo->id, cheevo->title, cheevo->description);
-+     system(cmdargs);
-+   }
-+
-    /* Show the on screen message. */
-    if (settings->bools.cheevos_visibility_unlock)
-    {
 diff --git a/configuration.c b/configuration.c
-index bff3b102d4..807fa8e9e9 100644
+index 39beb2eb7e..328771f255 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -1561,6 +1561,7 @@ static struct config_array_setting *populate_settings_array(
+@@ -1568,6 +1568,7 @@ static struct config_array_setting *populate_settings_array(
  
  #ifdef HAVE_CHEEVOS
     SETTING_ARRAY("cheevos_custom_host",          settings->arrays.cheevos_custom_host, false, NULL, true);
@@ -43,11 +29,11 @@ index bff3b102d4..807fa8e9e9 100644
     SETTING_ARRAY("cheevos_password",             settings->arrays.cheevos_password, false, NULL, true);
     SETTING_ARRAY("cheevos_token",                settings->arrays.cheevos_token, false, NULL, true);
 diff --git a/configuration.h b/configuration.h
-index 525e2bce72..d3f8cdb1a7 100644
+index 17748e956e..c72361e091 100644
 --- a/configuration.h
 +++ b/configuration.h
-@@ -468,6 +468,7 @@ typedef struct settings
-       char cheevos_unlock_sound[128];
+@@ -469,6 +469,7 @@ typedef struct settings
+       char cheevos_username[32];
        char cheevos_token[32];
        char cheevos_leaderboards_enable[32];
 +      char cheevos_cmd[256];

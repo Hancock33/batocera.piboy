@@ -1,20 +1,20 @@
 diff --git a/doc/CmdLine.md b/doc/CmdLine.md
-index 7f97efc..02eab07 100644
+index db2b025..b4fd24c 100644
 --- a/doc/CmdLine.md
 +++ b/doc/CmdLine.md
-@@ -69,6 +69,7 @@ Refer also to **bezel arguments** [here](Bezels.md)
- | -gamepad_reorder 3 .. 0          | Reorder SDL_GameController indexes, will allow polling focus to the first specified Controllers in [hypinput.ini](hypinput_gamepad.ini):  &nbsp;_[Default: 0 1 2 3]_|
- | -grabmouse                       | Capture mouse in SDL window.                           |
- | -homedir \<dirname>              | Sets the Home Directory that Hypseus will use.         |
-+| -romdir \<dirname>               | Sets the ROM Directory that Hypseus will use.          |
- | -horizontal_stretch \<value>     | Horizontally stretches the video screen outward from the center. |
- | -idleexit \<seconds>             | Tells Hypseus to exit after a certain number of seconds if no input has been received. |
- | -ignore_aspect_ratio             | Tells Hypseus to ignore the aspect ratio defined in the MPEG header. |
+@@ -95,6 +95,7 @@ Refer also to **bezel arguments** [here](Bezels.md)
+ | -pal_sa_sc                       | Tells Hypseus that you are using a PAL Software Corner Space Ace disc instead of an NTSC Space Ace disc. *Only relevant when playing the USA version of Space Ace.* |
+ | -prefer_samples                  | Same games can emulate sound or use samples of sounds. If both emulated and sampled sounds are available, this option will force sampled sounds to be used. Otherwise, emulated sounds will always be used. |
+ | -preset \<number>                | A simple way to pass arguments directly to the game driver. Tells the game driver to use a specific preset configuration. Different for each game. |
++| -romdir \<dirname>               | Sets the ROM Directory that Hypseus will use.         |
+ | -rotate \<degrees>               | Rotates the screen a certain number of degrees counter-clockwise. Valid values are from 0-359. *This is a somewhat limited feature.* |
+ | -sboverlaymono                   | Use white LED's in (lair, ace) scoreboard overlay     |
+ | -seek_frames_per_ms \<frames> | The # of frames that we can seek per millisecond (to simulate seek delay). Typical values for real laserdisc players are about 30.0 for 29.97fps discs and 20.0 for 23.976fps discs (dragon's lair and space ace). FLOATING POINT VALUES ARE ALLOWED HERE. Minimum value is 12.0 (5 seconds for 60,000 frames), maximum value is 600.0 (100 milliseconds for 60,000 frames). If you want a value higher than the max, you should just use 0 (as fast as possible). *This option may be replaced by something more accurate in the future.* |
 diff --git a/src/game/game.cpp b/src/game/game.cpp
-index 3bb409c..e484a6e 100644
+index 0c595c8..dd7e475 100644
 --- a/src/game/game.cpp
 +++ b/src/game/game.cpp
-@@ -687,9 +687,14 @@ bool game::load_roms()
+@@ -682,9 +682,14 @@ bool game::load_roms()
                  zip_path = path + ".zip"; // append zip extension ...
              }
  
@@ -31,7 +31,7 @@ index 3bb409c..e484a6e 100644
              // if we have not opened a ZIP file, or if we need to open a new zip
              // file ...
              if ((!zip_file) || (zip_path.compare(opened_zip_name) != 0)) {
-@@ -800,7 +805,12 @@ bool game::verify_required_file(const char *filename, const char *gamedir, Uint3
+@@ -795,7 +800,12 @@ bool game::verify_required_file(const char *filename, const char *gamedir, Uint3
      path += filename;
  
      // TRY UNCOMPRESSED FIRST
@@ -45,7 +45,7 @@ index 3bb409c..e484a6e 100644
  
      struct mpo_io *io;
  
-@@ -834,7 +844,12 @@ bool game::verify_required_file(const char *filename, const char *gamedir, Uint3
+@@ -829,7 +839,12 @@ bool game::verify_required_file(const char *filename, const char *gamedir, Uint3
      if (!passed_test) {
          string zip_path = gamedir;
          zip_path += ".zip"; // we now have "/gamename.zip"
@@ -59,7 +59,7 @@ index 3bb409c..e484a6e 100644
  
          unzFile zip_file = NULL; // pointer to open zip file (NULL if file is
                                   // closed)
-@@ -864,8 +879,12 @@ bool game::load_rom(const char *filename, Uint8 *buf, Uint32 size)
+@@ -859,8 +874,12 @@ bool game::load_rom(const char *filename, Uint8 *buf, Uint32 size)
      struct mpo_io *F;
      MPO_BYTES_READ bytes_read = 0;
      bool result               = false;
@@ -75,7 +75,7 @@ index 3bb409c..e484a6e 100644
  
      F = mpo_open(fullpath.c_str(), MPO_OPEN_READONLY);
 diff --git a/src/io/cmdline.cpp b/src/io/cmdline.cpp
-index ed9a954..4913da4 100644
+index 1324734..4e1b50f 100644
 --- a/src/io/cmdline.cpp
 +++ b/src/io/cmdline.cpp
 @@ -171,6 +171,43 @@ bool parse_homedir()

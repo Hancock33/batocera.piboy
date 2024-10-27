@@ -5,8 +5,9 @@ from os import environ
 from pathlib import Path
 from typing import TYPE_CHECKING
 
-from ... import Command, controllersConfig
-from ...batoceraPaths import BIOS, CONFIGS, ensure_parents_and_open
+from ... import Command
+from ...batoceraPaths import BIOS, CONFIGS, ensure_parents_and_open, mkdir_if_not_exists
+from ...controller import generate_sdl_game_controller_config, write_sdl_controller_db
 from ...utils.configparser import CaseSensitiveConfigParser
 from ..Generator import Generator
 
@@ -26,6 +27,8 @@ class DuckstationGenerator(Generator):
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+        mkdir_if_not_exists(Path("/userdata/system/cache/psx"))
+        
         rom_path = Path(rom)
 
         # Test if it's a m3u file
@@ -520,7 +523,7 @@ class DuckstationGenerator(Generator):
 
         # write our own gamecontrollerdb.txt file before launching the game
         dbfile = "/usr/share/gamecontrollerdb.txt"
-        controllersConfig.writeSDLGameDBAllControllers(playersControllers, dbfile)
+        write_sdl_controller_db(playersControllers, dbfile)
 
         # check if we're running wayland
         if environ.get("WAYLAND_DISPLAY"):
@@ -535,7 +538,7 @@ class DuckstationGenerator(Generator):
                 "LD_LIBRARY_PATH": "/usr/stenzek-shaderc/lib:/usr/lib",
                 "XDG_CONFIG_HOME": CONFIGS,
                 "QT_QPA_PLATFORM": qt_qpa_platform,
-                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers),
+                "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
                 "SDL_JOYSTICK_HIDAPI": "0"
             }
         )
