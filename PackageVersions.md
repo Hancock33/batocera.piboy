@@ -70,7 +70,7 @@ Emulators|[cemu](https://github.com/cemu-project/Cemu)|63e1289bb518562ae62033389
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|cdce02607abf1b43cdf93c6f367825158f23a467|Oct 12, 2024
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
 Emulators|[dhewm3](http://github.com/dhewm/dhewm3)|7354fff4062a62df7a68632586863a854d0ea9c2|Oct 11, 2024
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|92b8d57e6f298f373c6146f730981d5c0cdf7a0d|Oct 27, 2024
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|b2f9e02b62a27de2364545cd64d69a095d3110f7|Oct 27, 2024
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|bfefd38d2500103d32f5da9f7fcd80090b7836fb|May 23, 2024
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|349e41bc6a4be6bbf4f4cb8fa787add7944d3117|Jul 21, 2024
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.10.01|Oct 02, 2024
@@ -87,7 +87,7 @@ Emulators|[fpinball](https://github.com/batocera-linux/fpinball/releases)|v1.9.1
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|bfa0c7522c6c5f73cceb340d677491d056febd01|Jul 30, 2022
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|943473727b46f369aa5df12ce3b8285b6a87df55|Oct 23, 2024
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
-Emulators|[hatari](http://github.com/hatari/hatari)|778078f186707409f9f91f6f8ef156008e5b606b|Oct 25, 2024
+Emulators|[hatari](http://github.com/hatari/hatari)|22cb60c8649a3b7248b0616d8b81122191310f7f|Oct 27, 2024
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|b353e1728bf56d8b6c6fb606df78b7296a203702|Oct 01, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|3168a6b1b201d6787531fb091e081ecf94e26d4b|Oct 26, 2024
 Emulators|[libaltsound](http://github.com/vpinball/libaltsound)|b8f397858cbc7a879f7392c14a509f00c8bdc7dd|Jun 28, 2024
@@ -206,7 +206,7 @@ Emulators|[libretro-reminiscence](http://github.com/libretro/REminiscence)|e80d7
 Emulators|[libretro-retro8](http://github.com/libretro/retro8)|a235ff8e3ca1b44bcf88293748d5a492c76a2c7b|Oct 21, 2024
 Emulators|[libretro-sameboy](http://github.com/libretro/SameBoy)|51433012a871a44555492273fd22f29867d12655|Jun 28, 2024
 Emulators|[libretro-sameduck](http://github.com/LIJI32/SameBoy)|5619abdb01cee6bedb47599cdb5532c318443b52|Dec 10, 2023
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|07e04aeb20c773d362d9202b5a7392ce1780a770|Oct 27, 2024
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|0e86eda0be239a6324105c1ca67cfe5ea0e0b0da|Oct 27, 2024
 Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|c642bbd0680b5959180a420036108893d0aec961|Oct 21, 2024
 Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|a99c16c87c3b482336f218d1789b6fb9896bd107|Oct 21, 2024
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|49f484569ff2aec7ff08e7598a97d6c9e6eae72d|Oct 21, 2024
@@ -246,7 +246,7 @@ Emulators|[libserum](http://github.com/zesinger/libserum)|v2.0.2|Sept 15, 2024
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.7.4|Sept 09, 2024
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|de2b6fc6dd8777e00c772d8684a89212aab0bdab|Oct 22, 2024
 Emulators|[mame](http://github.com/mamedev/mame)|mame0270|Sept 25, 2024
-Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|e6f0d77aa00f490875430c95ab30c4157ace5c05|Oct 27, 2024
+Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|f2dce621ceb50f8f617fa4bd252821660ab6ef0e|Oct 27, 2024
 Emulators|[model2emu](https://github.com/batocera-linux/model2emu/raw/main)|1.1a|Jan 02, 2014
 Emulators|[moonlight-embedded](https://github.com/moonlight-stream/moonlight-embedded.git)|a6bf7154a743d4f74a1b377e730f188352a1b80c|Sept 08, 2024
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|6c2c3f8ae10b7f0f6dfe06f45ca7ca598a6b659a|Jul 14, 2024
@@ -275,8 +275,8 @@ Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/rel
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|431221f1725577d1eba6fe439ed1f2cdc4c09600|Oct 25, 2024
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-10-27|Oct 27, 2024
-Emulators|[ryujinx](https://github.com/GreemDev/Ryujinx.git)|1.2.50|Oct 26, 2024
-Emulators|[scummvm](http://github.com/scummvm/scummvm)|07e04aeb20c773d362d9202b5a7392ce1780a770|Oct 27, 2024
+Emulators|[ryujinx](https://github.com/GreemDev/Ryujinx.git)|1.2.57|Oct 27, 2024
+Emulators|[scummvm](http://github.com/scummvm/scummvm)|0e86eda0be239a6324105c1ca67cfe5ea0e0b0da|Oct 27, 2024
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|c59f6fd5c31412264d1f2297a60fdacf21c92617|Oct 26, 2024
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|4f3d214b314d84c6a3e25b27c77bd1d0ee3a1697|Oct 22, 2024
@@ -493,7 +493,7 @@ Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|93ce678eaa535
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|a3e33215e3457e8d4f3c2093e873d73ea618c8ec|Aug 25, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|97a341952ac5bbd615b4c4b6ab3af2e8ab56e56e|Oct 26, 2024
-Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|2656eb1aebd518fe73e72da0471ee38b6fb613c9|Oct 26, 2024
+Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|6c6cb65b30e8abbf37e16bd43426a4ff6f221156|Oct 27, 2024
 Ports|[xatrix](http://github.com/yquake2/xatrix)|1957253b256180f9bbb5b52c8d63cc1578170211|Sept 21, 2024
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.1|Apr 12, 2024
 Ports|[yquake2_refvk](http://github.com/yquake2/ref_vk)|0ae3c8174559dd50091304dc0792c941b80f3b2d|Oct 15, 2024
