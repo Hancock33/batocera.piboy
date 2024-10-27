@@ -2,7 +2,7 @@
 #
 # libretro-superbroswar
 #
-
+################################################################################
 # Version: Commits on Oct 21, 2024
 LIBRETRO_SUPERBROSWAR_VERSION = d8d5d58f3cbc1e08f91a0e218bc990ec47282c08
 LIBRETRO_SUPERBROSWAR_SITE = https://github.com/libretro/superbroswar-libretro.git
