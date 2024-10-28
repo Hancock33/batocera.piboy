@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Oct 27, 2024
-RYUJINX_VERSION = 1.2.57
+RYUJINX_VERSION = 1.2.59
 RYUJINX_SITE = https://github.com/GreemDev/Ryujinx.git
 RYUJINX_SITE_METHOD=git
 RYUJINX_GIT_SUBMODULES=YES
