@@ -184,6 +184,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_EVSIEVE                              # linux tool to manipulate events (like joining them) ; armv8 in 32 bits seems not supported
     select BR2_PACKAGE_EXFAT                                # exfat
     select BR2_PACKAGE_EXFAT_UTILS                          # exfat
+    select BR2_PACKAGE_FAKE_HWCLOCK                         # Save/restore system clock on machines without working RTC hardware
     select BR2_PACKAGE_FBDUMP                               # tool to capture snapshots from the Linux kernel framebuffer device and write them out as a PPM file
     select BR2_PACKAGE_FBGRAB                               # framebuffer screenshot program, capturing the linux framebuffer and converting it to a png-picture
     select BR2_PACKAGE_FBV                                  # very simple graphic file viewer for the framebuffer console, capable of displaying GIF, JPEG, PNG and BMP files using libungif, libjpeg and libpng
