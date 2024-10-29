@@ -158,7 +158,7 @@ index 0f78364efd4f..4cf2d88916bd 100644
  config SCHED_HRTICK
  	def_bool HIGH_RES_TIMERS
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 671b85ce818b..370cfd9886d3 100644
+index 673fc652616b..c7ea7c839afc 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -116,6 +116,8 @@
@@ -577,7 +577,7 @@ index 000000000000..cd7e8a8d6075
 +#endif // CONFIG_SYSCTL
 +#endif // CONFIG_SCHED_BORE
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index dbfb5717d6af..ba346381464d 100644
+index 1c9e75f2025c..b2dd185a2e9f 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -97,6 +97,8 @@
@@ -589,7 +589,7 @@ index dbfb5717d6af..ba346381464d 100644
  EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_send_cpu);
  EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_send_cpumask);
  
-@@ -8377,6 +8379,11 @@ void __init sched_init(void)
+@@ -8378,6 +8380,11 @@ void __init sched_init(void)
  	BUG_ON(!sched_class_above(&ext_sched_class, &idle_sched_class));
  #endif
  
@@ -976,7 +976,7 @@ index b55fa314df37..837551923cd6 100644
  }
  
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 991226ab5250..8e3b3e69346e 100644
+index 7b6eb8c868e8..e70c406573c6 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -2074,7 +2074,12 @@ static inline void update_sched_domain_debugfs(void) { }
