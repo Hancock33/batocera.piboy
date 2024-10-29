@@ -1006,13 +1006,16 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_FALLOUT2_CE                          # ALL
 
     # Descent 1 & 2 open source engine
-    select BR2_PACKAGE_DXX_REBIRTH                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
+    select BR2_PACKAGE_DXX_REBIRTH                          if  BR2_PACKAGE_HAS_LIBGL
 
     # Wolfenstein: Enemy Territory
     select BR2_PACKAGE_ETLEGACY                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
     # Sonic 3 A.I.R. (Angel Island Revisited)
     select BR2_PACKAGE_SONIC3_AIR                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
+
+    # Jazz Jackrabbit
+    select BR2_PACKAGE_OPENJAZZ                             # ALL
 
     help
         Ports
@@ -1342,9 +1345,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
     # CorsixTH (Theme Hospital engine)
     select BR2_PACKAGE_CORSIXTH                             if  BR2_x86_64 || BR2_aarch64 || BR2_riscv
-
-    # Jazz Jackrabbit
-    select BR2_PACKAGE_OPENJAZZ                             # ALL
 
     #Extra libretro-cores
     select BR2_PACKAGE_LIBRETRO_2048
