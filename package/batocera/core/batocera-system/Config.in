@@ -1006,7 +1006,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_FALLOUT2_CE                          # ALL
 
     # Descent 1 & 2 open source engine
-    select BR2_PACKAGE_DXX_REBIRTH                          if  BR2_PACKAGE_HAS_LIBGL
+    select BR2_PACKAGE_DXX_REBIRTH                          if  BR2_PACKAGE_HAS_LIBGL                   || BR2_PACKAGE_BATOCERA_RPI_VCORE
 
     # Wolfenstein: Enemy Territory
     select BR2_PACKAGE_ETLEGACY                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
