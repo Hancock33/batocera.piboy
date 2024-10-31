@@ -7,7 +7,7 @@ index 1b3fa52ce9..7d79a9505f 100644
  			if (!localStorage.empty()) {
  				// Use "$XDG_DATA_HOME/Jazz² Resurrection/" if exists (for backward compatibility), otherwise "$XDG_DATA_HOME/{NCINE_LINUX_PACKAGE}/"
 -				_sourcePath = fs::CombinePath(localStorage, "Jazz² Resurrection/Source/"_s);
-+				_sourcePath = "/userdata/roms/jazz2/";
++				_sourcePath = "/userdata/roms/ports/jazz2/";
  				if (fs::DirectoryExists(_sourcePath)) {
 -					_cachePath = fs::CombinePath(localStorage, "Jazz² Resurrection/Cache/"_s);
 +					_cachePath = "/userdata/system/cache/jazz2/";
