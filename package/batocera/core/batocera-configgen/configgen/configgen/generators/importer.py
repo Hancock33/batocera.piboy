@@ -60,6 +60,7 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'hypseus-singe': ('hypseus_singe.hypseusSingeGenerator', 'HypseusSingeGenerator'),
     'ikemen': ('ikemen.ikemenGenerator', 'IkemenGenerator'),
     'ionfury': ('ionfury.ionfuryGenerator', 'IonfuryGenerator'),
+    'jazz2-native': ('jazz2_native.jazz2_nativeGenerator', 'Jazz2_NativeGenerator'),
     'kodi': ('kodi.kodiGenerator', 'KodiGenerator'),
     'lexaloffle': ('lexaloffle.lexaloffleGenerator', 'LexaloffleGenerator'),
     'libretro': ('libretro.libretroGenerator', 'LibretroGenerator'),

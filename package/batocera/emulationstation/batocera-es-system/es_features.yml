@@ -12770,6 +12770,9 @@ openjazz:
         "2560 x 1440": 2560x1440
         "2560 x 1600": 2560x1600
         "3840 x 2160": 3840x2160
+jazz2-native:
+  features: [padtokeyboard]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 etekwar:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
