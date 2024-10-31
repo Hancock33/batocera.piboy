@@ -30,7 +30,7 @@ class Jazz2_NativeGenerator(Generator):
             env={
                 "XDG_CONFIG_HOME": CONFIGS,
                 "XDG_CACHE_HOME": CACHE,
-                "XDG_DATA_HOME": "/userdata/roms/jazz2",
+                "XDG_DATA_HOME": "/userdata/roms/ports/jazz2",
                 "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
                 "SDL_JOYSTICK_HIDAPI": "0"
             }
