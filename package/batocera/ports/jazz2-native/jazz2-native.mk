@@ -3,8 +3,8 @@
 # jazz2-native
 #
 ################################################################################
-
-JAZZ2_NATIVE_VERSION = 2.9.0
+# Version: Commits on Oct 31, 2024
+JAZZ2_NATIVE_VERSION = a228b2813a0247d70fc3183b7711757d886d9527
 JAZZ2_NATIVE_SITE = https://github.com/deathkiller/jazz2-native.git
 JAZZ2_NATIVE_SITE_METHOD = git
 JAZZ2_NATIVE_GIT_SUBMODULES = YES
