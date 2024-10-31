@@ -16834,7 +16834,7 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
-#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, sonicmania.keys, sonicnexus.keys, ...
+#. TRANSLATION: jazz2.keys, etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, sonicmania.keys, ...
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr "Oyundan Çık"
