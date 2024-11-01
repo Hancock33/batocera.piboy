@@ -34,7 +34,7 @@ endef
 define RYUJINX_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/bin/ryujinx
 	mkdir -p $(TARGET_DIR)/usr/bin/ryujinx
-	cp -avr $(@D)/publish/{libHarfBuzzSharp.so,libSkiaSharp.so,libsoundio.so,LICENSE.txt,Ryujinx,THIRDPARTY.md} $(TARGET_DIR)/usr/bin/ryujinx
+	cp -avr $(@D)/publish/* $(TARGET_DIR)/usr/bin/ryujinx
 	cp -avr $(@D)/publish/mime/Ryujinx.xml $(TARGET_DIR)/usr/share/mime
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
