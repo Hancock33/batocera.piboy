@@ -19,6 +19,8 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|d3185ca0b409de9
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|16c1081d5d5b76a7789425828af71a1c666b76aa|Nov 01, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|a51160a1557720963e92add4df024c2e98943a71|Nov 01, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|21c154a0018d2764fb406f9ee485e316ccc6d542|Nov 01, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241101|Nov 01, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241101|Nov 01, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|05cfd4d1f950d2e8a9194af13c4883bb1d12675b|Nov 01, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|6fc256709c01fc7f08031b1ff14d86ccc24c1695|Nov 01, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|002100b58f6d08177573acaaa897c452c11696f2|Nov 01, 2024
@@ -40,8 +42,6 @@ Ports|[taradino](https://github.com/fabiangreffrath/taradino.git)|7fc2dac0dd8955
 Utils|[re2c](http://github.com/skvadrik/re2c)|cffecf2bc5f3dc95183a2880bccab0deb1b0c1c6|Oct 31, 2024
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|4bfe0a1c356a0fc475a014d835ba97a710c624b8|Oct 31, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20.r126.g7d5ddd37fab|Oct 31, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241031|Oct 31, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241031|Oct 31, 2024
 Emulators|[libretro-atari800](http://github.com/libretro/libretro-atari800)|6a18cb23cc4a7cecabd9b16143d2d7332ae8d44b|Oct 31, 2024
 Emulators|[libretro-fuse](http://github.com/libretro/fuse-libretro)|12f066911482d70cfd0a7afcf1e3390f20e40111|Oct 31, 2024
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|760c67c759803dbf1c30d837f93e78676a433fcb|Oct 31, 2024
