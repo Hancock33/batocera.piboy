@@ -80,8 +80,25 @@ define ALLLINUXFIRMWARES_BATOCERA_STEAM_DECK_OLED_FW
 	tar -xf $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/firmwares/alllinuxfirmwares/steamdeck-oled-firmware.tar.xz -C $(TARGET_DIR)/lib/firmware
 endef
 
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
-ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_BATOCERA_STEAM_DECK_OLED_FW
+# symlink AMD GPU firmware for 890M devices
+define ALLLINUXFIRMWARES_FIX_AMD_890M
+	ln -sf /lib/firmware/amdgpu/isp_4_1_1.bin $(TARGET_DIR)/lib/firmware/amdgpu/isp_4_1_0.bin
+endef
+
+# Copy Qualcomm firmware for Steam Deck OLED etc
+ifeq ($(BR2_x86_64),y)
+	ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS = ALLLINUXFIRMWARES_BATOCERA_STEAM_DECK_OLED_FW
+	ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_FIX_AMD_890M
+endif
+
+# symlink BT firmware for RK3588 kernel
+define ALLLINUXFIRMWARES_LINK_RTL_BT
+	ln -sf /lib/firmware/rtl_bt/rtl8852bu_fw.bin     $(TARGET_DIR)/lib/firmware/rtl8852bu_fw
+	ln -sf /lib/firmware/rtl_bt/rtl8852bu_config.bin $(TARGET_DIR)/lib/firmware/rtl8852bu_config
+endef
+
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588),y)
+	ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS = ALLLINUXFIRMWARES_LINK_RTL_BT
 endif
 
 $(eval $(generic-package))
