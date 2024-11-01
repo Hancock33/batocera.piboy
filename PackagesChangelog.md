@@ -1,6 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|24.11|Nov 01, 2024
+Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|b36143f92ebdcc3ffb104d03f78ad2f1752c8bfe|Nov 01, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|bd11afa5bcd06ada3f8aa65cbc8980d706967084|Nov 01, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|54b37f6bc4feee39c1383a449da229304f6a8f80|Nov 01, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|2e5309bfa31d89940e2ba3c68ada043e5070153d|Nov 01, 2024
@@ -83,7 +84,6 @@ Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|1c38f0c
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|ed7d94d1581224dff52628171a130996e979398e|Oct 26, 2024
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|f0bf9aafeacf12edff38400d7c21e3825650a57d|Oct 26, 2024
 Emulators|[libretro-noods](http://github.com/jonian/libretro-noods)|db7fbc76c96a5ebf8d5e2c310bca97bf7c901926|Oct 26, 2024
-Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|8a6a0312bc55e3d7deb24ca0a68a4be3f1f1f080|Oct 25, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45360|Oct 25, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|cf0ee05da60a5e7aaf4ed852e557629aca0c05ee|Oct 25, 2024
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|6a2a6becebbc38fde34a94386457ac8210f9119b|Oct 25, 2024
