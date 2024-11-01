@@ -10,6 +10,7 @@ flatpak.mk
 glslang.mk
 kodi-pvr-freebox.mk
 lib32bit.mk
+libretro-scummvm.mk
 model2emu.mk
 noto-cjk-fonts.mk
 openbor6412.mk
