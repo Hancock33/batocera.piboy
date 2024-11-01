@@ -38,10 +38,10 @@ index 6b205d2..74120a4 100644
  
  	exit(0);
 diff --git a/src/gui/CemuApp.cpp b/src/gui/CemuApp.cpp
-index baa8388..5a136cf 100644
+index 50ff3b8..dfa62fb 100644
 --- a/src/gui/CemuApp.cpp
 +++ b/src/gui/CemuApp.cpp
-@@ -135,7 +135,7 @@ void CemuApp::DeterminePaths(std::set<fs::path>& failedWriteAccess) // for Linux
+@@ -138,7 +138,7 @@ void CemuApp::DeterminePaths(std::set<fs::path>& failedWriteAccess) // for Linux
  	}
  	else
  	{
@@ -50,7 +50,7 @@ index baa8388..5a136cf 100644
  		wxString appName = GetAppName();
  		standardPaths.SetFileLayout(wxStandardPaths::FileLayout::FileLayout_XDG);
  		auto getEnvDir = [&](const wxString& varName, const wxString& defaultValue)
-@@ -146,11 +146,10 @@ void CemuApp::DeterminePaths(std::set<fs::path>& failedWriteAccess) // for Linux
+@@ -149,11 +149,10 @@ void CemuApp::DeterminePaths(std::set<fs::path>& failedWriteAccess) // for Linux
  			return dir;
  		};
  		wxString homeDir = wxFileName::GetHomeDir();
