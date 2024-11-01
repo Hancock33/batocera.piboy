@@ -191,7 +191,7 @@ Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|c2ca4046860264cb307e7
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|61745af67e9645b45e153d4347ace8531934c9f0|Oct 27, 2024
 Emulators|[libretro-pcsx2](https://github.com/libretro/pcsx2.git)|5112943bbe90cba420b5e8526297e2d12b881905|Apr 26, 2023
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|0daf92b57fba1fdbc124651573e88373eef28aa5|Oct 19, 2024
-Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|6ce05c4d6b0a8a2adaf14cb4b13485279218e8b3|Oct 16, 2024
+Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|336f70d5ee49c0760fd92b075eb89045b66051b5|Nov 01, 2024
 Emulators|[libretro-pocketsnes](http://github.com/libretro/snes9x2002)|a0709ec7dcd6de2fbebb43106bd757b649e3b7cf|Oct 21, 2024
 Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|78656d4615691c393e65e48672ce5fff5b1f97d3|Oct 21, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|55b00d698262797e25c12a602a67875a046d21ce|Nov 01, 2024
@@ -261,10 +261,10 @@ Emulators|[openbor4432](http://github.com/Darknior/OpenBORv3b4432)|49505541b858d
 Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678291bbedc0b9fe4c8f898|Aug 29, 2018
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|41bee0b67d756d97ee4f22f8317b605e7485e186|Nov 01, 2024
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|51f5176e586442a93830781a9cdcbebcd39cdede|Nov 01, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.2.0|Oct 31, 2024
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
-Emulators|[play](https://github.com/jpd002/Play-.git)|6ce05c4d6b0a8a2adaf14cb4b13485279218e8b3|Oct 16, 2024
+Emulators|[play](https://github.com/jpd002/Play-.git)|336f70d5ee49c0760fd92b075eb89045b66051b5|Nov 01, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|55b00d698262797e25c12a602a67875a046d21ce|Nov 01, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a177763e14c924e3b15e2|Sept 29, 2024
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.2.4|Oct 11, 2024
@@ -296,7 +296,7 @@ Emulators|[vita3k](https://github.com/vita3k/vita3k)|9143a14fcd2c1cf7732f92bde87
 Emulators|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v2.13|Jun 21, 2024
 Emulators|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.13|Aug 29, 2024
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|de275b5c26ef324a4b9af614f3c8be30db59d9c1|Jul 23, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20.r126.g7d5ddd37fab|Oct 31, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20.r143.gff2070b7900|Nov 01, 2024
 Emulators|[wine-ge](http://github.com/GloriousEggroll/proton-wine)|39021e609a24b6aeffdf9c4695a286d71e7dffbc|Feb 04, 2024
 Emulators|[wine-lutris](http://github.com/lutris/wine)|lutris-wine-7.2-2|Jul 06, 2022
 Emulators|[wine-mono](https://github.com/madewokherd/wine-mono/releases)|wine-mono-9.3.0|Aug 16, 2024
@@ -323,7 +323,7 @@ Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|e9717985d26205a
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|6a2a6becebbc38fde34a94386457ac8210f9119b|Oct 25, 2024
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2024.09|Sept 27, 2024
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|e6448b04e5bfdabffbd650e1ccc53b82cd8c1c5d|Aug 31, 2024
-Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.3.290.0|Sept 23, 2024
+Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.3.296.0|Sept 23, 2024
 Gpu|[img-gpu-powervr](https://github.com/starfive-tech/soft_3rdpart/raw/JH7110_VisionFive2_devel/IMG_GPU/out)|4918bd0772edbfd9ccf26e97b55091f72053ec81|Aug 27, 2024
 Gpu|[img-mesa3d](https://archive.mesa3d.org)|22.1.3|Jun 29, 2022
 Gpu|[mali-g31-gbm](https://github.com/batocera-linux/rockchip-packages/releases)|ad4c28932c3d07c75fc41dd4a3333f9013a25e7f|Jun 11, 2021
@@ -427,7 +427,7 @@ Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e24
 Ports|[awgl](http://github.com/cyxx/rawgl)|1eeaa530c859bd6e37b3d3bd7d3136bc16afcc89|Mar 12, 2022
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|1855c8ed66b771fb62ae66bf5b1cbc9ede9cd03a|Dec 26, 2023
-Ports|[box64](http://github.com/ptitseb/box64)|5d03ad24c38dbd451cf9341edc41fe6bd5cab4e2|Nov 01, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|9e43737e1823ee49649307c799df98a910ae236e|Nov 01, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|c993aacd044300ea1ab52c67e2434ae517048477|Oct 29, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ca0c1a02abcf2513b1871a09f786162abb41caec|Sept 01, 2024
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
@@ -479,7 +479,7 @@ Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|cf532
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|4e563e5cf66f0e857afaf33a227b552eb632be90|Aug 30, 2024
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|1c38f0cff707b340910667f0b9a5fea4cbac7790|Oct 26, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|f92e8e33120cc8fe6cfe21a48e31b089a6856fdf|Sept 12, 2024
-Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|ed7d94d1581224dff52628171a130996e979398e|Oct 26, 2024
+Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|17540a395182aeca0570f489daf83fa4899da91d|Nov 01, 2024
 Ports|[sorr](http://github.com/Cpasjuste/bennugd-monolithic)|0290c3719fd74121ff9c9e690c955285e4ba391c|Oct 07, 2021
 Ports|[spacecadetpinball](http://github.com/k4zmu2a/SpaceCadetPinball)|cb9b7b886244a27773f66b0b19fdc2998392565e|Aug 21, 2024
 Ports|[srb2](http://github.com/STJr/SRB2)|dd54f749f2371804ca08a574801cd88a951a0e1e|Feb 19, 2024
