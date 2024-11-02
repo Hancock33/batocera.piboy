@@ -158,7 +158,7 @@ index 0f78364efd4f..4cf2d88916bd 100644
  config SCHED_HRTICK
  	def_bool HIGH_RES_TIMERS
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 673fc652616b..c7ea7c839afc 100644
+index dd3963bfd820..4a0bf4d67944 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -116,6 +116,8 @@

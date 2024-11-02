@@ -219,7 +219,7 @@ index 136a8231355a..15d7392020ca 100644
  	.thread_node	= LIST_HEAD_INIT(init_signals.thread_head),
  #ifdef CONFIG_AUDIT
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 671b85ce818b..673fc652616b 100644
+index 22e6497af272..dd3963bfd820 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -1302,7 +1302,7 @@ static struct mm_struct *mm_init(struct mm_struct *mm, struct task_struct *p,
@@ -495,7 +495,7 @@ index 48d611e58ad3..a2b16b08cbbf 100644
  static int __read_mostly sysctl_compact_memory;
  
 diff --git a/mm/page_alloc.c b/mm/page_alloc.c
-index 15ee81e4631f..88300f461ebf 100644
+index e6e51d4a6f3e..13b02e376346 100644
 --- a/mm/page_alloc.c
 +++ b/mm/page_alloc.c
 @@ -5512,11 +5512,11 @@ static int zone_batchsize(struct zone *zone)
