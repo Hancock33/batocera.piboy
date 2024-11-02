@@ -524,7 +524,7 @@ index 6c3160b013bc..be2b6119973a 100644
  # depends on `opt-level` and `debug-assertions`, respectively.
  KBUILD_RUSTFLAGS += -Cdebug-assertions=$(if $(CONFIG_RUST_DEBUG_ASSERTIONS),y,n)
 diff --git a/arch/Kconfig b/arch/Kconfig
-index 00163e4a237c..b23a472d12f0 100644
+index bd9f095d69fa..5fc4aa6b6b67 100644
 --- a/arch/Kconfig
 +++ b/arch/Kconfig
 @@ -1089,7 +1089,7 @@ config ARCH_MMAP_RND_BITS
@@ -9232,90 +9232,6 @@ index 4954553b7baa..3fac06270549 100644
  	default:
  		return -ENOIOCTLCMD;
  	}
-diff --git a/drivers/net/wireless/realtek/rtw89/pci.c b/drivers/net/wireless/realtek/rtw89/pci.c
-index 02afeb3acce4..5aef7fa37878 100644
---- a/drivers/net/wireless/realtek/rtw89/pci.c
-+++ b/drivers/net/wireless/realtek/rtw89/pci.c
-@@ -3026,24 +3026,54 @@ static void rtw89_pci_declaim_device(struct rtw89_dev *rtwdev,
- 	pci_disable_device(pdev);
- }
- 
--static void rtw89_pci_cfg_dac(struct rtw89_dev *rtwdev)
-+static bool rtw89_pci_chip_is_manual_dac(struct rtw89_dev *rtwdev)
- {
--	struct rtw89_pci *rtwpci = (struct rtw89_pci *)rtwdev->priv;
- 	const struct rtw89_chip_info *chip = rtwdev->chip;
- 
--	if (!rtwpci->enable_dac)
--		return;
--
- 	switch (chip->chip_id) {
- 	case RTL8852A:
- 	case RTL8852B:
- 	case RTL8851B:
- 	case RTL8852BT:
--		break;
-+		return true;
- 	default:
--		return;
-+		return false;
-+	}
-+}
-+
-+static bool rtw89_pci_is_dac_compatible_bridge(struct rtw89_dev *rtwdev)
-+{
-+	struct rtw89_pci *rtwpci = (struct rtw89_pci *)rtwdev->priv;
-+	struct pci_dev *bridge = pci_upstream_bridge(rtwpci->pdev);
-+
-+	if (!rtw89_pci_chip_is_manual_dac(rtwdev))
-+		return true;
-+
-+	if (!bridge)
-+		return false;
-+
-+	switch (bridge->vendor) {
-+	case PCI_VENDOR_ID_INTEL:
-+		return true;
-+	case PCI_VENDOR_ID_ASMEDIA:
-+		if (bridge->device == 0x2806)
-+			return true;
-+		break;
- 	}
- 
-+	return false;
-+}
-+
-+static void rtw89_pci_cfg_dac(struct rtw89_dev *rtwdev)
-+{
-+	struct rtw89_pci *rtwpci = (struct rtw89_pci *)rtwdev->priv;
-+
-+	if (!rtwpci->enable_dac)
-+		return;
-+
-+	if (!rtw89_pci_chip_is_manual_dac(rtwdev))
-+		return;
-+
- 	rtw89_pci_config_byte_set(rtwdev, RTW89_PCIE_L1_CTRL, RTW89_PCIE_BIT_EN_64BITS);
- }
- 
-@@ -3061,6 +3091,9 @@ static int rtw89_pci_setup_mapping(struct rtw89_dev *rtwdev,
- 		goto err;
- 	}
- 
-+	if (!rtw89_pci_is_dac_compatible_bridge(rtwdev))
-+		goto no_dac;
-+
- 	ret = dma_set_mask_and_coherent(&pdev->dev, DMA_BIT_MASK(36));
- 	if (!ret) {
- 		rtwpci->enable_dac = true;
-@@ -3073,6 +3106,7 @@ static int rtw89_pci_setup_mapping(struct rtw89_dev *rtwdev,
- 			goto err_release_regions;
- 		}
- 	}
-+no_dac:
- 
- 	resource_len = pci_resource_len(pdev, bar_id);
- 	rtwpci->mmap = pci_iomap(pdev, bar_id, resource_len);
 diff --git a/drivers/pci/controller/Makefile b/drivers/pci/controller/Makefile
 index 038ccbd9e3ba..de5e4f5145af 100644
 --- a/drivers/pci/controller/Makefile
@@ -12285,7 +12201,7 @@ index 38ef6d06888e..0f78364efd4f 100644
  
  config SCHED_HRTICK
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 89ceb4a68af2..671b85ce818b 100644
+index 3bf38d260cb3..22e6497af272 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -106,6 +106,10 @@
@@ -29683,7 +29599,7 @@ index 469fc3059be0..0ae819f0c927 100644
  EXPORT_SYMBOL(zstd_reset_dstream);
  
 diff --git a/mm/Kconfig b/mm/Kconfig
-index 4c9f5ea13271..2b15257b168f 100644
+index 33fa51d608dc..6bfea371341e 100644
 --- a/mm/Kconfig
 +++ b/mm/Kconfig
 @@ -648,7 +648,7 @@ config COMPACTION
@@ -29772,7 +29688,7 @@ index 7845c64a2c57..2703227cce88 100644
  	/*
  	 * Nobody should be changing or seriously looking at
 diff --git a/mm/mmap.c b/mm/mmap.c
-index 9c0fb43064b5..a5297cfb1dfc 100644
+index 1e0e34cb993f..9841b41e3c76 100644
 --- a/mm/mmap.c
 +++ b/mm/mmap.c
 @@ -900,7 +900,8 @@ __get_unmapped_area(struct file *file, unsigned long addr, unsigned long len,
@@ -29814,7 +29730,7 @@ index fcd4c1439cb9..e2f7d709e819 100644
  EXPORT_SYMBOL_GPL(dirty_writeback_interval);
  
 diff --git a/mm/page_alloc.c b/mm/page_alloc.c
-index 8afab64814dc..15ee81e4631f 100644
+index 94a2ffe28008..e6e51d4a6f3e 100644
 --- a/mm/page_alloc.c
 +++ b/mm/page_alloc.c
 @@ -271,7 +271,11 @@ const char * const migratetype_names[MIGRATE_TYPES] = {
