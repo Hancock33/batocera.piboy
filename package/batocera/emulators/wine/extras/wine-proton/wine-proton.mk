@@ -3,8 +3,8 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Sep 04, 2024
-WINE_PROTON_VERSION = proton-wine-9.0-3
+# Version: Commits on Oct 28, 2024
+WINE_PROTON_VERSION = 9c0d54ced88ff42e87389f342dc7dbb0c33c7969
 WINE_PROTON_BRANCH = bleeding-edge
 WINE_PROTON_SOURCE = wine-proton-$(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
