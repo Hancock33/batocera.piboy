@@ -5,6 +5,7 @@ Emulators|[duckstation](http://github.com/stenzek/duckstation)|2c3d1d9e60c25382c
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|da3cfd9d587d892aa7a3abefe919faa1078f4766|Nov 02, 2024
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|a5389286e861ac13ec1f21412b1160d494c2cfbe|Nov 02, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-11-02|Nov 02, 2024
+Emulators|[scummvm](http://github.com/scummvm/scummvm)|d24cf46d4e772ebc6a8a5c44885f13d20d6832cb|Nov 02, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|939486fa05aabd43e78e8228412ba69ed5f5ed05|Nov 02, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|409da7b862cd60964d69a1444a6cdee501a8f336|Nov 02, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|722315f30b147f6889d603de70d0c305de21c247|Nov 02, 2024
@@ -23,6 +24,7 @@ Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|9e1965fffcea5996a6e
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|da3cfd9d587d892aa7a3abefe919faa1078f4766|Nov 02, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|e915f1ed77cb2da43a861695d04b3047a32a8dce|Nov 02, 2024
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|e752bba68dbab2dd1bffeffda7890602ebc1307a|Nov 02, 2024
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|d24cf46d4e772ebc6a8a5c44885f13d20d6832cb|Nov 02, 2024
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|24.11|Nov 01, 2024
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|b36143f92ebdcc3ffb104d03f78ad2f1752c8bfe|Nov 01, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|bd11afa5bcd06ada3f8aa65cbc8980d706967084|Nov 01, 2024
@@ -32,7 +34,6 @@ Emulators|[play](https://github.com/jpd002/Play-.git)|b3be9d4840ab947448aedf2228
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|e8ea225a0f9978b66ff807f273ee16a1a1cc871f|Nov 01, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|17e78a9e6f2bae69e61a16a10609a1e64e5c06f9|Nov 01, 2024
 Emulators|[ryujinx](https://github.com/GreemDev/Ryujinx.git)|1.2.69|Nov 01, 2024
-Emulators|[scummvm](http://github.com/scummvm/scummvm)|10601d3b674d8099ed855d4c75d0ff3335763637|Nov 01, 2024
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|0b015daff73a58ad8ee8fca27938fa9e7d09e32b|Nov 01, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|afd2e218f7292edb8fdfcf4757064ac45e1d5965|Nov 01, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|f71962469e925e79760cf720c834065745f9d7c7|Nov 01, 2024
@@ -49,7 +50,6 @@ Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|49130
 Emulators|[libretro-mame](http://github.com/sonninnos/mame)|a67797ad2f7516906ed7acef87569c6f35ca8739|Nov 01, 2024
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|b3be9d4840ab947448aedf2228496510257726ac|Nov 01, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|e8ea225a0f9978b66ff807f273ee16a1a1cc871f|Nov 01, 2024
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|10601d3b674d8099ed855d4c75d0ff3335763637|Nov 01, 2024
 Emulators|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20.r143.gff2070b7900|Nov 01, 2024
 Emulators|[mame](http://github.com/mamedev/mame)|mame0271|Oct 31, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.2.0|Oct 31, 2024
