@@ -9,7 +9,10 @@ JAZZ2_NATIVE_SITE =  $(call github,deathkiller,jazz2-native,$(JAZZ2_NATIVE_VERSI
 JAZZ2_NATIVE_LICENSE = GPL-3.0
 JAZZ2_NATIVE_LICENSE_FILE = LICENSE
 
-JAZZ2_NATIVE_DEPENDENCIES += libglew libglfw sdl2 openal libopenmpt zlib
+ifeq ($(BR2_PACKAGE_XORG7)$(BR2_PACKAGE_HAS_LIBGL),yy)
+JAZZ2_NATIVE_DEPENDENCIES += libglew
+endif
+JAZZ2_NATIVE_DEPENDENCIES += libglfw sdl2 openal libopenmpt zlib
 
 JAZZ2_NATIVE_SUPPORTS_IN_SOURCE_BUILD = NO
 
