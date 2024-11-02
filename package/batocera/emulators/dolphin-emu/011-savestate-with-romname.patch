@@ -15,7 +15,7 @@ index 52a3ec910f..fb18a04835 100644
    auto& movie = system.GetMovie();
    if (movie.IsPlayingInput() && movie.IsConfigSaved())
 diff --git a/Source/Core/Core/ConfigManager.cpp b/Source/Core/Core/ConfigManager.cpp
-index a284cbe266..cec815e678 100644
+index 21d722290e..3ad9225025 100644
 --- a/Source/Core/Core/ConfigManager.cpp
 +++ b/Source/Core/Core/ConfigManager.cpp
 @@ -142,6 +142,10 @@ void SConfig::SetRunningGameMetadata(const std::string& game_id)
@@ -51,10 +51,10 @@ index 999cc9f86c..dd649a037a 100644
    std::string m_gametdb_id;
    std::string m_title_name;
 diff --git a/Source/Core/Core/Core.cpp b/Source/Core/Core/Core.cpp
-index bf850a253d..b77d11b77b 100644
+index bc6289af97..cf90d9b89f 100644
 --- a/Source/Core/Core/Core.cpp
 +++ b/Source/Core/Core/Core.cpp
-@@ -783,10 +783,14 @@ void SaveScreenShot()
+@@ -786,10 +786,14 @@ void SaveScreenShot()
    g_frame_dumper->SaveScreenshot(GenerateScreenshotName());
  }
  
@@ -72,10 +72,10 @@ index bf850a253d..b77d11b77b 100644
  
  static bool PauseAndLock(Core::System& system, bool do_lock, bool unpause_on_unlock)
 diff --git a/Source/Core/Core/Core.h b/Source/Core/Core/Core.h
-index 48043d4b10..1a12a55f97 100644
+index 0b414534a5..699d95a3a6 100644
 --- a/Source/Core/Core/Core.h
 +++ b/Source/Core/Core/Core.h
-@@ -148,6 +148,7 @@ void SetState(Core::System& system, State state, bool report_state_change = true
+@@ -153,6 +153,7 @@ void SetState(Core::System& system, State state, bool report_state_change = true
  State GetState(Core::System& system);
  
  void SaveScreenShot();
@@ -84,7 +84,7 @@ index 48043d4b10..1a12a55f97 100644
  
  // This displays messages in a user-visible way.
 diff --git a/Source/Core/Core/State.cpp b/Source/Core/Core/State.cpp
-index fe20d74ea4..df93022646 100644
+index f9964c0fa8..2e36d28164 100644
 --- a/Source/Core/Core/State.cpp
 +++ b/Source/Core/Core/State.cpp
 @@ -293,7 +293,10 @@ static std::string SystemTimeAsDoubleToString(double time)
