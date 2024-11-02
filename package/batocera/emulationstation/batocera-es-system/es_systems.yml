@@ -4363,8 +4363,6 @@ rott:
   emulators:
     rott:
       rott:             { requireAnyOf: [BR2_PACKAGE_ROTT] }
-    taradino:
-      taradino:         { requireAnyOf: [BR2_PACKAGE_TARADINO] }
   comment_en:           |
                         Place your commercial version of Rise of the Triad installation files in here.
                         You should include DARKWAR.WAD, DARKWAR.RTL, DARKWAR.RTC & REMOTE1.RTS as a minimum.
