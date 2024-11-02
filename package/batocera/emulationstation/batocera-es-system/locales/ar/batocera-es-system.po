@@ -17044,10 +17044,6 @@ msgstr ""
 #~ msgstr "ألوان غريبة"
 
 #~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "معطل (افتراضي)"
-
-#~ msgctxt "game_options"
 #~ msgid "Per Pixel"
 #~ msgstr "لكل بكسل"
 
@@ -17124,6 +17120,10 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "تسريع إلى الأمام"
+
+#~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "معطل (افتراضي)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Start"

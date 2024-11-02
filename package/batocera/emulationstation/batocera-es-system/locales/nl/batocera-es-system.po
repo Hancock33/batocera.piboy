@@ -17581,10 +17581,6 @@ msgstr ""
 #~ msgstr "PS1 Analoge Joystick"
 
 #~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "Uitgeschakeld (Standaard)"
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "Per pixel is het meest nauwkeurig, maar ook het meest veeleisend."
 
@@ -17685,10 +17681,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "Kies de gewenste beeldverhouding.."
-
-#~ msgctxt "game_options"
-#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
-#~ msgstr "De muiscursor in- of uitschakelen. Handig voor menu's van CG."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -17906,3 +17898,11 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Vooruitspoelen"
+
+#~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "Uitgeschakeld (Standaard)"
+
+#~ msgctxt "game_options"
+#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+#~ msgstr "De muiscursor in- of uitschakelen. Handig voor menu's van CG."

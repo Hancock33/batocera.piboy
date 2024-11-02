@@ -17243,10 +17243,6 @@ msgstr ""
 #~ msgstr "PS1 模拟操纵杆"
 
 #~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "禁用（默认）"
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "每像素是最准确的，但也是最苛刻的。"
 
@@ -17332,10 +17328,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "选择您偏好的纵横比.."
-
-#~ msgctxt "game_options"
-#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
-#~ msgstr "启用或禁用鼠标光标。对CG菜单很有用。"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -17543,6 +17535,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快进"
+
+#~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "禁用（默认）"
+
+#~ msgctxt "game_options"
+#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+#~ msgstr "启用或禁用鼠标光标。对CG菜单很有用。"
 
 #~ msgctxt "keys_files"
 #~ msgid "Start"

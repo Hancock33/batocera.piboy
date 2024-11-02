@@ -16891,10 +16891,6 @@ msgstr ""
 #~ msgid "Game Boy Color"
 #~ msgstr "Game Boy Color"
 
-#~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "禁用 (預設)"
-
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "打開Dolphin-triforce的菜單"
@@ -17002,6 +16998,10 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快進"
+
+#~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "禁用 (預設)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Start"
