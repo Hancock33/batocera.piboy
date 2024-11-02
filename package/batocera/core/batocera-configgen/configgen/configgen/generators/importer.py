@@ -127,7 +127,6 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'supermodel': ('supermodel.supermodelGenerator', 'SupermodelGenerator'),
     'supertux2': ('supertux2.supertux2Generator', 'Supertux2Generator'),
     'suyu': ('suyu.suyuGenerator', 'SuyuGenerator'),
-    'taradino': ('taradino.taradinoGenerator', 'TaradinoGenerator'),
     'theforceengine': ('theforceengine.theforceengineGenerator', 'TheForceEngineGenerator'),
     'themehospital': ('themehospital.themehospitalGenerator', 'ThemehospitalGenerator'),
     'thextech': ('thextech.thextechGenerator', 'TheXTechGenerator'),

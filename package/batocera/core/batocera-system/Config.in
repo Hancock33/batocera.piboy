@@ -1424,7 +1424,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_UQM                                                                                                                 # Ur-Quan Masters
     select BR2_PACKAGE_RAPTORCOTS                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Raptor Call of the Shadows
     select BR2_PACKAGE_ROTT                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Rise of the Triad Dark War
-    select BR2_PACKAGE_TARADINO                                                                                                            # Rise of the Triad
     select BR2_PACKAGE_SERIOUSSAM                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Serious Sam - The First / Second Encounter
     select BR2_PACKAGE_SM64PORT                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Super Mario 64
     select BR2_PACKAGE_SPACECADETPINBALL                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Space Cadet Pinball
