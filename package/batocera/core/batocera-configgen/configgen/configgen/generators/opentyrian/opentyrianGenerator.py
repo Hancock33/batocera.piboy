@@ -1,9 +1,18 @@
 from __future__ import annotations
 
+import logging
+import os
 from typing import TYPE_CHECKING
 
-from ... import Command, controllersConfig
+from ... import Command
+from ...batoceraPaths import ROMS
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
+
+eslog = logging.getLogger(__name__)
 
 class OpentyrianGenerator(Generator):
 
@@ -16,7 +25,7 @@ class OpentyrianGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
 
     def getInGameRatio(self, config, gameResolution, rom):
