@@ -16873,6 +16873,71 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Open door"
+msgstr "Porta aberta"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Toggle weapon"
+msgstr "Alternar arma"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Drop weapon"
+msgstr "Soltar arma"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Aim up"
+msgstr "Apuntar cara arriba"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Aim down"
+msgstr "Apuntar cara abaixo"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Strafe left"
+msgstr "Desviar á esquerda"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Strafe right"
+msgstr "Desviar á dereita"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Menu back"
+msgstr "Voltar ao menú"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move left"
+msgstr "Mover á esquerda"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move right"
+msgstr "Mover á dereita"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move forward"
+msgstr "Mover cara adiante"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move backward"
+msgstr "Mover cara atrás"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Toggle run"
+msgstr "Alternar correr"
+
 #. TRANSLATION: jazz2.keys, etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, sonicmania.keys, ...
 msgctxt "keys_files"
 msgid "Exit game"
@@ -17032,71 +17097,6 @@ msgstr "Xestionar Persoal"
 msgctxt "keys_files"
 msgid "Bring up menu"
 msgstr "Abrir menú"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Open door"
-msgstr "Porta aberta"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Toggle weapon"
-msgstr "Alternar arma"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Drop weapon"
-msgstr "Soltar arma"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Aim up"
-msgstr "Apuntar cara arriba"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Aim down"
-msgstr "Apuntar cara abaixo"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Strafe left"
-msgstr "Desviar á esquerda"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Strafe right"
-msgstr "Desviar á dereita"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Menu back"
-msgstr "Voltar ao menú"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Move left"
-msgstr "Mover á esquerda"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Move right"
-msgstr "Mover á dereita"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Move forward"
-msgstr "Mover cara adiante"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Move backward"
-msgstr "Mover cara atrás"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Toggle run"
-msgstr "Alternar correr"
 
 #. TRANSLATION: sonicnexus.keys
 msgctxt "keys_files"
