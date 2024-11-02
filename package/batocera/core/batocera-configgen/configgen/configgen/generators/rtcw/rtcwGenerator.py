@@ -3,7 +3,7 @@ import shutil
 from os import path
 
 from ... import batoceraFiles
-from ...Command import Command
+from ... import Command
 from ...controller import generate_sdl_game_controller_config
 from ...utils import videoMode as videoMode
 from ..Generator import Generator
