@@ -18361,11 +18361,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "디스발링됨(기본값)"
-
-#, fuzzy
-#~ msgctxt "game_options"
 #~ msgid "Per Strip"
 #~ msgstr "스트립 당"
 
@@ -18502,6 +18497,11 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GZDOOM 조이스틱 구성 사용"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "디스발링됨(기본값)"
 
 #, fuzzy
 #~ msgctxt "game_options"

@@ -17541,10 +17541,6 @@ msgstr ""
 #~ msgstr "Joystick analogique PS1"
 
 #~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "Désactivé (par défaut)"
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "Par pixel est plus précis, mais aussi gourmand."
 
@@ -17649,10 +17645,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "Choisir le ratio d'écran préféré."
-
-#~ msgctxt "game_options"
-#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
-#~ msgstr "Activer ou non le pointeur de la souris, utile pour les menus."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -17856,6 +17848,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rapide"
+
+#~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "Désactivé (par défaut)"
+
+#~ msgctxt "game_options"
+#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+#~ msgstr "Activer ou non le pointeur de la souris, utile pour les menus."
 
 #~ msgctxt "keys_files"
 #~ msgid "Start"

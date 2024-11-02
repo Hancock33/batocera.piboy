@@ -17526,10 +17526,6 @@ msgstr ""
 #~ msgstr "PS1 Analog Joystick"
 
 #~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "Devre Dışı (Varsayılan)"
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "Piksel başına, en doğru ama aynı zamanda en ısrarcı olanıdır."
 
@@ -17630,12 +17626,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "Tercih ettiğiniz en boy oranını seçin."
-
-#~ msgctxt "game_options"
-#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
-#~ msgstr ""
-#~ "Fare imlecini etkinleştirin veya devre dışı bırakın. CG'nin menüleri için "
-#~ "kullanışlıdır."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -17839,6 +17829,16 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Hızlı İleri"
+
+#~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "Devre Dışı (Varsayılan)"
+
+#~ msgctxt "game_options"
+#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+#~ msgstr ""
+#~ "Fare imlecini etkinleştirin veya devre dışı bırakın. CG'nin menüleri için "
+#~ "kullanışlıdır."
 
 #~ msgctxt "keys_files"
 #~ msgid "Start"

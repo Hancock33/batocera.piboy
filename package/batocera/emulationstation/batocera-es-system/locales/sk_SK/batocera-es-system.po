@@ -17376,10 +17376,6 @@ msgstr ""
 #~ msgstr "PS1 analógový joystick"
 
 #~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "Zakázané (predvolené)"
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "Podľa bodu je najpresnejšie, ale aj najnáročnejšie."
 
@@ -17475,10 +17471,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "Vyberte preferovaný pomer strán."
-
-#~ msgctxt "game_options"
-#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
-#~ msgstr "Povoliť alebo zakázať kurzor myši. Vhodné pre ponuku CG."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -17684,6 +17676,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rýchlo dopredu"
+
+#~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "Zakázané (predvolené)"
+
+#~ msgctxt "game_options"
+#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+#~ msgstr "Povoliť alebo zakázať kurzor myši. Vhodné pre ponuku CG."
 
 #~ msgctxt "keys_files"
 #~ msgid "Start"

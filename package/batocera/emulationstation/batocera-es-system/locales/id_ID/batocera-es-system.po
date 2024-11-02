@@ -17285,10 +17285,6 @@ msgstr ""
 #~ msgstr "Analog Joystick - PS1"
 
 #~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "Matikan (Standar)"
-
-#~ msgctxt "game_options"
 #~ msgid "Per Strip"
 #~ msgstr "Setiap Strip"
 
@@ -17405,6 +17401,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GUNAKAN KONFIGURASI JOYSTICK GZDOOM"
+
+#~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "Matikan (Standar)"
 
 #~ msgctxt "game_options"
 #~ msgid "Enable or disable monsters in battle."

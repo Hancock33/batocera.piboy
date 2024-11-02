@@ -17318,10 +17318,6 @@ msgstr ""
 #~ msgstr "Palanca analògica PS1"
 
 #~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "Deshabilitat (Per defecte)"
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "Per píxel és el més precís, però també el més demandant."
 
@@ -17557,6 +17553,10 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avançar"
+
+#~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "Deshabilitat (Per defecte)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Start"

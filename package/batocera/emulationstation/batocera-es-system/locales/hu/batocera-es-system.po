@@ -17613,10 +17613,6 @@ msgstr ""
 #~ msgstr "PS1 analóg joystick"
 
 #~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "Kikapcsolva (alapértelmezett)"
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "A képpontonként a legpontosabb, de egyben a legigényesebb is."
 
@@ -17716,10 +17712,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "Válassza ki a kívánt képarányt.."
-
-#~ msgctxt "game_options"
-#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
-#~ msgstr "Az egérkurzor engedélyezése vagy letiltása. Hasznos a CG menüihez."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -17937,6 +17929,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Gyors előre"
+
+#~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "Kikapcsolva (alapértelmezett)"
+
+#~ msgctxt "game_options"
+#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+#~ msgstr "Az egérkurzor engedélyezése vagy letiltása. Hasznos a CG menüihez."
 
 #~ msgctxt "keys_files"
 #~ msgid "Start"
