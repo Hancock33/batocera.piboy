@@ -12,6 +12,8 @@ Ports|[stk](http://github.com/supertuxkart/stk-code)|3f7958b9f4ecd90fcde76a8d48c
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|6c58fb23d7c31c8382ac630eaa46cbc6811a705c|Nov 02, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|da5ecaa45a862e51783eca1280f46fbfb7984ede|Nov 02, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|fb71d0ecf74bc79d8e8c131d0bb8f9b610e8348b|Nov 02, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241102|Nov 02, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241102|Nov 02, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|fd16372e129aed050e4d4cf083e11866cb1e0f19|Nov 02, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|a899571d8c104ac2d267a4544487d73bbd2a9d21|Nov 02, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|8bf16119d940016c87c01953c7df152595feb445|Nov 02, 2024
@@ -37,8 +39,6 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|d3185ca0b409de9
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|16c1081d5d5b76a7789425828af71a1c666b76aa|Nov 01, 2024
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|be65dbb793b09241c4a525ce3363f797672b3301|Nov 01, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20.r143.gff2070b7900|Nov 01, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241101|Nov 01, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241101|Nov 01, 2024
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|17540a395182aeca0570f489daf83fa4899da91d|Nov 01, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|c3de4a5c3b66d5163ee66642a291993eb90a23f7|Nov 01, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|002100b58f6d08177573acaaa897c452c11696f2|Nov 01, 2024
