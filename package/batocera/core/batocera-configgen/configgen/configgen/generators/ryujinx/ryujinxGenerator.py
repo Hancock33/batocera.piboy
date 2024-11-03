@@ -1,19 +1,27 @@
-import os
-from os import environ
+from __future__ import annotations
+
 import filecmp
 import json
 import shutil
+from os import environ
+from typing import TYPE_CHECKING, Final
+
 import evdev
 from evdev import InputDevice
 
-from ... import batoceraFiles
 from ... import Command
+from ...batoceraPaths import BIOS, CACHE, CONFIGS, ROMS, SAVES, mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
-ryujinxConf = batoceraFiles.CONF + "/Ryujinx"
-ryujinxConfFile = ryujinxConf + "/Config.json"
-ryujinxKeys = batoceraFiles.BIOS + "/switch/prod.keys"
+if TYPE_CHECKING:
+    from pathlib import Path
+
+    from ...types import HotkeysContext
+
+ryujinxConf: Final = CONFIGS / "Ryujinx"
+ryujinxConfFile: Final = ryujinxConf / "Config.json"
+ryujinxKeys: Final = BIOS / "switch" / "prod.keys"
 btn_a = "A"
 btn_b = "B"
 btn_x = "X"
@@ -78,42 +86,36 @@ ryujinxCtrl = {
 
 class RyujinxGenerator(Generator):
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "ryujinx",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        if not os.path.exists(ryujinxConf):
-            os.makedirs(ryujinxConf)
-        if not os.path.exists(ryujinxConf + "/system"):
-            os.makedirs(ryujinxConf + "/system")
+        mkdir_if_not_exists(ryujinxConf / "system")
 
         # Copy the prod.keys file to where ryujinx reads it
-        if os.path.exists(ryujinxKeys):
-            shutil.copyfile(ryujinxKeys, ryujinxConf + "/system/prod.keys")
+        if ryujinxKeys.exists():
+            shutil.copyfile(ryujinxKeys, ryujinxConf / "system" / "prod.keys")
 
         # [Configuration]
-        if not os.path.exists(os.path.dirname(ryujinxConfFile)):
-            os.makedirs(os.path.dirname(ryujinxConfFile))
+        mkdir_if_not_exists(ryujinxConfFile.parent)
         try:
-            conf = json.load(open(ryujinxConfFile, "r"))
+            conf = json.load(ryujinxConfFile.open("r"))
         except:
             conf = {}
 
         # Set defaults
-        conf['backend_threading'] = 'Auto'
         conf["enable_discord_integration"] = False
         conf["check_updates_on_start"] = False
         conf["show_confirm_exit"] = False
         conf["hide_cursor_on_idle"] = True
-        conf["game_dirs"] = ["/userdata/roms/switch"]
+        conf["game_dirs"] = [str(ROMS / "switch")]
         conf["start_fullscreen"] = True
         conf["docked_mode"] = True
-        conf["audio_backend"] = "SDL2"
+        conf["audio_backend"] = "OpenAl"
         conf["audio_volume"] = 1
-
         # set ryujinx app language
         conf["language_code"] = str(getLangFromEnvironment())
 
@@ -159,10 +161,7 @@ class RyujinxGenerator(Generator):
 
         # write / update the config file
         js_out = json.dumps(conf, indent=2)
-        js_out = js_out.replace("False","false")
-        js_out = js_out.replace("True","true")
-
-        with open(ryujinxConfFile, "w") as jout:
+        with ryujinxConfFile.open("w") as jout:
             jout.write(js_out)
 
         # Now add Controllers
@@ -216,18 +215,17 @@ class RyujinxGenerator(Generator):
         if rom == "config":
             commandArray = ["/usr/bin/ryujinx/Ryujinx"]
         else:
-            commandArray = ["/usr/bin/ryujinx/Ryujinx", "--fullscreen", rom]
+            commandArray = ["/usr/bin/ryujinx/Ryujinx", rom]
 
         return Command.Command(
             array=commandArray,
-            env={"XDG_CONFIG_HOME":batoceraFiles.CONF, \
-            "XDG_DATA_HOME":batoceraFiles.SAVES + "/switch", \
-            "XDG_CACHE_HOME":batoceraFiles.CACHE, \
-            "LD_LIBRARY_PATH": "/usr/bin/ryujinx/:/usr/lib",
+            env={"XDG_CONFIG_HOME":CONFIGS, \
+            "XDG_DATA_HOME":SAVES / "switch", \
+            "XDG_CACHE_HOME":CACHE, \
             "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers)})
 
-def writeControllerIntoJson(new_controller, filename=ryujinxConfFile):
-    with open(filename,'r+') as file:
+def writeControllerIntoJson(new_controller, filename: Path = ryujinxConfFile):
+    with filename.open('r+') as file:
         file_data = json.load(file)
         file_data["input_config"].append(new_controller)
         file.seek(0)
