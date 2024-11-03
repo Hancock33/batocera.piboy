@@ -7,8 +7,6 @@
 RYUJINX_VERSION = 1.2.69
 RYUJINX_SOURCE = ryujinx-$(RYUJINX_VERSION)-linux_x64.tar.gz
 RYUJINX_SITE = https://github.com/GreemDev/Ryujinx/releases/download/$(RYUJINX_VERSION)
-
-https://github.com/GreemDev/Ryujinx/releases/download/1.2.69/ryujinx-1.2.69-linux_x64.tar.gz
 RYUJINX_LICENSE = MIT
 RYUJINX_DEPENDENCIES = sdl2 openal hicolor-icon-theme adwaita-icon-theme librsvg
 
