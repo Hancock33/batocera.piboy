@@ -3,8 +3,8 @@
 # batocera-emulationstation
 #
 ################################################################################
-# Version: Commits on Oct 26, 2024
-BATOCERA_EMULATIONSTATION_VERSION = 2942fc8db93bdceb1c37a2323293ef35f116b259
+# Version: Commits on Oct 30, 2024
+BATOCERA_EMULATIONSTATION_VERSION = c032c2a969aacc3dd8ab8f0ed93f5d9048ac490c
 BATOCERA_EMULATIONSTATION_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_EMULATIONSTATION_SITE_METHOD = git
 BATOCERA_EMULATIONSTATION_GIT_SUBMODULES = YES
@@ -34,7 +34,6 @@ endif
 endif
 
 ifeq ($(BR2_PACKAGE_RPI_USERLAND),y)
-BATOCERA_EMULATIONSTATION_DEPENDENCIES += omxplayer
 BATOCERA_EMULATIONSTATION_CONF_OPTS += -DBCM=ON -DRPI=ON
 endif
 
@@ -134,10 +133,6 @@ BATOCERA_EMULATIONSTATION_PREFIX = SDL_NOMOUSE=1
 BATOCERA_EMULATIONSTATION_CMD = emulationstation-standalone
 BATOCERA_EMULATIONSTATION_ARGS = --no-splash $${EXTRA_OPTS}
 BATOCERA_EMULATIONSTATION_POSTFIX = \>/dev/null 2>\&1 \&
-
-ifeq ($(BR2_PACKAGE_BATOCERA_SPLASH_OMXPLAYER),y)
-BATOCERA_EMULATIONSTATION_ARGS = $${EXTRA_OPTS}
-endif
 
 # on SPLASH_MPV, the splash with video + es splash is ok
 ifeq ($(BR2_PACKAGE_BATOCERA_SPLASH_MPV),y)

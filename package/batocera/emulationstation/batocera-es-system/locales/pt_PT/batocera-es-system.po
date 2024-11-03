@@ -14508,6 +14508,86 @@ msgctxt "game_options"
 msgid "Walkers World"
 msgstr ""
 
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "320 x 200"
+msgstr "320 x 200"
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "640 x 480"
+msgstr "640 x 480"
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "800 x 600"
+msgstr "800 x 600"
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1024 x 768"
+msgstr "1024 x 768"
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1280 x 720"
+msgstr "1280 x 720"
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1280 x 800"
+msgstr "1280 x 800"
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1280 x 1024"
+msgstr "1280 x 1024"
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1366 x 768"
+msgstr "1366 x 768"
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1440 x 900"
+msgstr "1440 x 900"
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1600 x 900"
+msgstr "1600 x 900"
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1680 x 1050"
+msgstr "1680 x 1050"
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1920 x 1080"
+msgstr "1920 x 1080"
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1920 x 1200"
+msgstr "1920 x 1200"
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "2560 x 1440"
+msgstr "2560 x 1440"
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "2560 x 1600"
+msgstr "2560 x 1600"
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "3840 x 2160"
+msgstr "3840 x 2160"
+
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "This can be convenient if you're using laserdiscs."
@@ -14659,16 +14739,18 @@ msgid ""
 "Basic Filtering type for the jaguar display when rendering to the native "
 "display."
 msgstr ""
+"Tipo de filtragem básica para a execução do jaguar ao renderizar para o ecrã "
+"nativo"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "SCREEN FILTER"
-msgstr ""
+msgstr "FILTRO DO ECRÃ"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Point (Default)"
-msgstr ""
+msgstr "Ponto (Padrão)"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -14676,36 +14758,38 @@ msgid ""
 "Supports uncapped frame rates, analog controllers, and mouse look "
 "functionality."
 msgstr ""
+"Suporta fps ilimitadas, controladores analógicos e aparência de rato "
+"funcionalidade."
 
 #. TRANSLATION: bigpemu, bigpemu, bigpemu, bigpemu, bigpemu, ...
 msgctxt "game_options"
 msgid "SCRIPT MODULES"
-msgstr ""
+msgstr "MÓDULOS DE SCRIPT"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "ALIEN VS PREDATOR"
-msgstr ""
+msgstr "ALIEN VS PREDATOR"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Switches the game to multiplayer mode."
-msgstr ""
+msgstr "Muda o jogo para o modo multijogador."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "ALIEN VS PREDATOR MULTIPLAYER"
-msgstr ""
+msgstr "ALIEN VS PREDATOR MULTIPLAYER"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Fixes flickering."
-msgstr ""
+msgstr "Corrige a cintilação."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "BRETT HULL HOCKEY"
-msgstr ""
+msgstr "BRETT HULL HOCKEY"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -14715,21 +14799,25 @@ msgid ""
 "option, custom sky/background functionality, and various other tweaks and "
 "options."
 msgstr ""
+"Apresenta renderização de resolução nativa, controlador analógico e suporte "
+"para rato, desbloqueio de fps até 60 Hz, uma câmara melhorada com inclinação "
+"desativada opção, funcionalidade personalizada de céu/fundo e vários outros "
+"ajustes e opções"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "CHECKERED FLAG"
-msgstr ""
+msgstr "BANDEIRA XADREZ"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Renders polygons and textures at the native resolution."
-msgstr ""
+msgstr "Renderiza polígonos e texturas na resolução nativa."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "CYBERMORPH"
-msgstr ""
+msgstr "CYBERMORPH"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -14737,11 +14825,13 @@ msgid ""
 "Offers support for analog controllers and mouse look functionality for "
 "improved control."
 msgstr ""
+"Oferece suporte para comandos analógicos e funcionalidade de aparência de "
+"rato para controlo aprimorado."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "IRON SOLDIER"
-msgstr ""
+msgstr "SOLDADO DE FERRO"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -14751,11 +14841,16 @@ msgid ""
 "input device type with options to convert analog inputs to tracker angles "
 "for enhanced analog controller support."
 msgstr ""
+"Inclui seguimento de cabeça VR e renderização estereoscópica para TVs VR e "
+"3D, juntamente com suporte para rato (Mouse Look) e apresenta um novo Head "
+"Tracker tipo de dispositivo de entrada com opções para converter entradas "
+"analógicas em ângulos de rastreio para um suporte melhorado do comando "
+"analógico."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "MISSILE COMMAND 3D VR"
-msgstr ""
+msgstr "COMANDO DE MÍSSEIS 3D VR"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -14763,11 +14858,13 @@ msgid ""
 "Provides analog controller and mouse support while patching existing rotary "
 "controller bugs found in hardware."
 msgstr ""
+"Fornece suporte para comando analógico e rato enquanto corrige o rotativo "
+"existente bugs do comando encontrados no hardware."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "TEMPEST 2000"
-msgstr ""
+msgstr "TEMPEST 2000"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -14775,11 +14872,13 @@ msgid ""
 "Offers analog controller and mouse support (Mouse Look), along with options "
 "for always-strafe and always-run functionalities."
 msgstr ""
+"Oferece suporte para comandos analógico e rato (Mouse Look), juntamente com "
+"opções para funcionalidades sempre seguras e sempre executadas."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "WOLFENSTEIN 3D"
-msgstr ""
+msgstr "WOLFENSTEIN 3D"
 
 #. TRANSLATION: dxx-rebirth
 msgctxt "game_options"
@@ -16719,7 +16818,7 @@ msgctxt "keys_files"
 msgid "Look"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, openjazz.keys, rott.keys, raze.keys
+#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, rott.keys, raze.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "Disparar"
@@ -16779,7 +16878,72 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
-#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, sonicmania.keys, sonicnexus.keys, ...
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Open door"
+msgstr "Porta aberta"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Toggle weapon"
+msgstr "Alternar arma"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Drop weapon"
+msgstr "Soltar arma"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Aim up"
+msgstr "Mire para cima"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Aim down"
+msgstr "Mire para baixo"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Strafe left"
+msgstr "Metralhar para a esquerda"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Strafe right"
+msgstr "Metralhar para a direita"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Menu back"
+msgstr "Menu voltar"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move left"
+msgstr "Deslocar para a esquerda"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move right"
+msgstr "Deslocar para a direita"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move forward"
+msgstr "Seguir em frente"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move backward"
+msgstr "Mover para trás"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Toggle run"
+msgstr "Alternar corrida"
+
+#. TRANSLATION: jazz2.keys, etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, sonicmania.keys, ...
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr "Sair do jogo"
@@ -16939,121 +17103,6 @@ msgctxt "keys_files"
 msgid "Bring up menu"
 msgstr "Abra o menu"
 
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Start Game / Menu Select"
-msgstr ""
-
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Quit Game / Pause"
-msgstr ""
-
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Quit Game"
-msgstr ""
-
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Move Up"
-msgstr ""
-
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Move Down"
-msgstr ""
-
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Move Left"
-msgstr ""
-
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Move Right"
-msgstr ""
-
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Jump / Swim Up"
-msgstr ""
-
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Weapon Select"
-msgstr ""
-
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Stats"
-msgstr ""
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Open door"
-msgstr "Porta aberta"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Toggle weapon"
-msgstr "Alternar arma"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Drop weapon"
-msgstr "Soltar arma"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Aim up"
-msgstr "Mire para cima"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Aim down"
-msgstr "Mire para baixo"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Strafe left"
-msgstr "Metralhar para a esquerda"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Strafe right"
-msgstr "Metralhar para a direita"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Menu back"
-msgstr "Menu voltar"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Move left"
-msgstr "Deslocar para a esquerda"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Move right"
-msgstr "Deslocar para a direita"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Move forward"
-msgstr "Seguir em frente"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Move backward"
-msgstr "Mover para trás"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Toggle run"
-msgstr "Alternar corrida"
-
 #. TRANSLATION: sonicnexus.keys
 msgctxt "keys_files"
 msgid "Dev Menu"
@@ -17112,6 +17161,91 @@ msgstr ""
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
 msgid "Open"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "exit game"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "map"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "rear view"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "fire primary"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "fire secondary"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "drop proximity bomb"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "flare"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "laser"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "vulcan cannon"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "spreadfire cannon"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "plasma cannon"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "concussion missile"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "homing missile"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "proximity bomb"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "smart missile"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "quick save"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "quick load"
 msgstr ""
 
 #~ msgctxt "game_options"
@@ -17443,10 +17577,6 @@ msgstr ""
 #~ msgstr "Comando analógico PS1"
 
 #~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "Desativado (Predefinição)"
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "Por pixel é mais preciso, porém também é mais exigente."
 
@@ -17546,11 +17676,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "Escolha a sua proporção de ecrã preferida.."
-
-#~ msgctxt "game_options"
-#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
-#~ msgstr ""
-#~ "Ativar ou desativar o cursor do rato. Útil para menus de Commander Genius."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -17769,3 +17894,12 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
+
+#~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "Desativado (Predefinição)"
+
+#~ msgctxt "game_options"
+#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+#~ msgstr ""
+#~ "Ativar ou desativar o cursor do rato. Útil para menus de Commander Genius."

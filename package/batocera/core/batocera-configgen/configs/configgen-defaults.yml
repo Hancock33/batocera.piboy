@@ -469,6 +469,9 @@ jaleco:
 jaxe:
   emulator: libretro
   core:     jaxe
+jazz2:
+  emulator: jazz2-native
+  core:     jazz2-native
 jumpnbump:
   emulator: libretro
   core:     jumpnbump

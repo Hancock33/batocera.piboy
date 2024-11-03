@@ -3,8 +3,8 @@
 # libretro-pc98
 #
 ################################################################################
-# Version: Commits on Jan 10, 2024
-LIBRETRO_PC98_VERSION = c2ca4046860264cb307e768f529f180caee5e224
+# Version: Commits on Nov 03, 2024
+LIBRETRO_PC98_VERSION = 4b109eaac4f79b04065ff5025319fce51537e04d
 LIBRETRO_PC98_SITE = $(call github,AZO234,NP2kai,$(LIBRETRO_PC98_VERSION))
 LIBRETRO_PC98_LICENSE = GPLv3
 

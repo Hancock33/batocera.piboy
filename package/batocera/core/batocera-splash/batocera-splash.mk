@@ -3,16 +3,14 @@
 # batocera-splash
 #
 ################################################################################
-BATOCERA_SPLASH_VERSION = 5.3
+
+BATOCERA_SPLASH_VERSION = 5.5
 BATOCERA_SPLASH_SOURCE=
 
 BATOCERA_SPLASH_TGVERSION=$(BATOCERA_SYSTEM_VERSION) $(BATOCERA_SYSTEM_DATE)
 
 # video or image
-ifeq ($(BR2_PACKAGE_BATOCERA_SPLASH_OMXPLAYER),y)
-    BATOCERA_SPLASH_SCRIPT=Ssplash-omx
-    BATOCERA_SPLASH_MEDIA=video
-else ifeq ($(BR2_PACKAGE_BATOCERA_SPLASH_MPV),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_SPLASH_MPV),y)
     BATOCERA_SPLASH_SCRIPT=Ssplash-mpv
     BATOCERA_SPLASH_MEDIA=video
 else

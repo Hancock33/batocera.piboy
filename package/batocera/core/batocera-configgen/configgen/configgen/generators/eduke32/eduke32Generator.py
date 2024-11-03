@@ -1,11 +1,18 @@
-from configparser import ConfigParser
+from __future__ import annotations
+
+from pathlib import Path
+from typing import TYPE_CHECKING
+
+from ... import Command
+from ...batoceraPaths import CONFIGS, SAVES, SCREENSHOTS, mkdir_if_not_exists
+from ...controller import generate_sdl_game_controller_config
+from ...utils.buildargs import parse_args
+from ...utils.configparser import CaseSensitiveConfigParser
+from ..Generator import Generator
 import os
 
-from ... import batoceraFiles
-from ... import Command
-from ... import controllersConfig
-from ...utils.buildargs import parse_args
-from ..Generator import Generator
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
 
 class Eduke32Generator(Generator):
 
@@ -42,5 +49,5 @@ class Eduke32Generator(Generator):
             return Command.Command(
                 array=commandArray,
                 env={
-                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
