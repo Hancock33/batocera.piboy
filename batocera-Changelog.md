@@ -13,12 +13,14 @@
 - Initial support for the Retroid Pocket Mini & Retroid Pocket 5
   - (https://github.com/batocera-linux/batocera.linux/issues/12562)
 - Arcade machine inputs have now a better supported thanks to keyboardToPads (xarcadejoystick removed)
+- Handheld devices with RGB LEDs can now display the battery level and status with a color code
 ### Added
 - Exit game with light gun (hold `TRIGGER`, `ACTION` and `START` buttons for 2 seconds)
 - Enhanced Bluetooth AD2P codec support for LDAC & aptX supported headphones or speakers
   - The supported AD2P codec may need to be selected under SYSTEM SETTINGS -> AUDIO PROFILES
-- Steering wheel support for Microsoft SideWinder Precision Racing Wheel
-- Thrustmaster T150 and TMX Force Feedback Wheel Linux drivers
+- Steering wheel support added for :
+  - Thurstmaster T150, TMX and T248 with force Feedback (new driver)
+  - Microsoft SideWinder Precision Racing Wheel
 - Display reflection for x86_64 boards (display.reflection=x or y or xy in batocera.conf to enable it)
 - Emulationstation now supports savestates for standalones (dolphin, pcsx2, mupen, ppsspp)
 - Add Raspberry Pi patches for hardware accelerated HEVC decoding (RPi4 & RPi5 boards)
@@ -32,6 +34,7 @@
 - X16-Emulator for Commander X16 system support
 - Dhewm 3 - A Doom 3 port
 - Vircon32 - a 32-bit inspired Fantasy Console
+- DXX-Rebirth enabled for ARM (Retroid Pocket Mini)
 - Automatic controller configuration for the play! standalone emulator
 ### Fixed
 - Steam loading on a NAS drive
@@ -58,6 +61,7 @@
 - ES: simplified launch for netplay games
 - Enabled more force feedback capabilities on various controllers
 - Share commands in /boot/batocera-boot.conf now allow pipes and other shell metacharacters
+- X68000: Default emulated RAM size is now 12MB (libretro-px68k)
 ### Updated
 - RetroArch to v1.19.1
   - Libretro-81 to June 29, 2024 build
@@ -110,7 +114,7 @@
 - Kodi to 21.1
 - MelonDS to 7th October build
 - Mupen64 core & plugins to v2.6.0
-- PCSX2 to v2.1.229
+- PCSX2 to v2.2.0
 - Play to 0.67-1
 - Pyxel to 2.2.4
 - Redream to 1.5.0-1133-g03c2ae9
@@ -153,16 +157,18 @@
 - LibVA to 2.22.0
 - WF-Recorder to 14th of August build
 - Switchres to 2.2.1
-- Mesa3D to 24.2.5
+- Mesa3D to 24.2.6
 - Buildroot to the 2024.05.2 release base
 - GStreamer codecs to 1.24.8
 - Shim signed IA32 EFI bootloader to 1.44~1+deb12u1+15.8-1~deb12u1
 - FFMPEG to 7.1
 - Shim signed x64 EFI bootloader to 1.58+15.8-0ubuntu1
 - WinBTRFS Driver to 1.9
+- flatpak to 1.12.9
 - Added tmux
 - Support for LUKS-encrypted disk volumes with clevis automated decryption
   (tpm2 and tang) at boot time
+- Added fake-hwclock
 
 # 2024/08/11 - batocera.linux 40 - Swallowtail
 ### Special Notes

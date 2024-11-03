@@ -76,7 +76,7 @@ index fc20f4ec4..87edfcca7 100644
    </PropertyGroup>
  
 diff --git a/src/Ryujinx.Common/Ryujinx.Common.csproj b/src/Ryujinx.Common/Ryujinx.Common.csproj
-index 722509f33..bc0e7ebf0 100644
+index dee462fdb..248b3aabd 100644
 --- a/src/Ryujinx.Common/Ryujinx.Common.csproj
 +++ b/src/Ryujinx.Common/Ryujinx.Common.csproj
 @@ -1,7 +1,7 @@
@@ -426,7 +426,7 @@ index 3be9787a3..cbf1a848a 100644
      <IsPackable>false</IsPackable>
  
 diff --git a/src/Ryujinx.UI.Common/Ryujinx.UI.Common.csproj b/src/Ryujinx.UI.Common/Ryujinx.UI.Common.csproj
-index 142cd44a5..6dae49f8c 100644
+index df6532a63..995a896a1 100644
 --- a/src/Ryujinx.UI.Common/Ryujinx.UI.Common.csproj
 +++ b/src/Ryujinx.UI.Common/Ryujinx.UI.Common.csproj
 @@ -1,7 +1,7 @@

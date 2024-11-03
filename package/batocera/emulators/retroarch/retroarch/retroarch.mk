@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Oct 27, 2024
-RETROARCH_VERSION = dbf6c192093ec46c1983bf880b980f819b8bae25
+# Version: Commits on Nov 03, 2024
+RETROARCH_VERSION = 02716844fd6bb7f263cd68a87cf8ac3b260f44cd
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts
@@ -144,6 +144,9 @@ endif
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
     ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
         RETROARCH_CONF_OPTS += --enable-wayland
+        # disable libdecor : A client-side decorations library for Wayland client
+        # it makes retroarch unable to start on dual screen. It looks like a ra bug
+        RETROARCH_CONF_OPTS += --disable-libdecor
         RETROARCH_DEPENDENCIES += wayland
     else
         RETROARCH_CONF_OPTS += --disable-wayland

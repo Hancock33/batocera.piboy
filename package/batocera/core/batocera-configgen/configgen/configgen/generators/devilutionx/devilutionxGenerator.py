@@ -8,6 +8,9 @@ from ...batoceraPaths import CONFIGS, SAVES
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
+
 mpq_src = "/usr/share/diasurgical/devilutionx"
 mpq_dst = "/userdata/roms/ports/devilutionx"
 

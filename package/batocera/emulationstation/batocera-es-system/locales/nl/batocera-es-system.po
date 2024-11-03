@@ -14533,6 +14533,86 @@ msgctxt "game_options"
 msgid "Walkers World"
 msgstr ""
 
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "320 x 200"
+msgstr ""
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "640 x 480"
+msgstr ""
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "800 x 600"
+msgstr ""
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1024 x 768"
+msgstr ""
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1280 x 720"
+msgstr ""
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1280 x 800"
+msgstr ""
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1280 x 1024"
+msgstr ""
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1366 x 768"
+msgstr ""
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1440 x 900"
+msgstr ""
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1600 x 900"
+msgstr ""
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1680 x 1050"
+msgstr ""
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1920 x 1080"
+msgstr ""
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "1920 x 1200"
+msgstr ""
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "2560 x 1440"
+msgstr ""
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "2560 x 1600"
+msgstr ""
+
+#. TRANSLATION: openjazz
+msgctxt "game_options"
+msgid "3840 x 2160"
+msgstr ""
+
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "This can be convenient if you're using laserdiscs."
@@ -16744,7 +16824,7 @@ msgctxt "keys_files"
 msgid "Look"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, openjazz.keys, rott.keys, raze.keys
+#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, rott.keys, raze.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "Vuur"
@@ -16804,7 +16884,72 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
-#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, sonicmania.keys, sonicnexus.keys, ...
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Open door"
+msgstr "Open deur"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Toggle weapon"
+msgstr "Schakel wapen"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Drop weapon"
+msgstr "Laat wapen vallen"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Aim up"
+msgstr "Richt naar boven"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Aim down"
+msgstr "Richt naar beneden"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Strafe left"
+msgstr "Strafe naar links"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Strafe right"
+msgstr "Strafe naar rechts"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Menu back"
+msgstr "Menu terug"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move left"
+msgstr "Ga naar links"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move right"
+msgstr "Ga naar rechts"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move forward"
+msgstr "Ga naar voren"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Move backward"
+msgstr "Ga naar achteren"
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Toggle run"
+msgstr "Schakel rennen"
+
+#. TRANSLATION: jazz2.keys, etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, sonicmania.keys, ...
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr "Stop spel"
@@ -16964,121 +17109,6 @@ msgctxt "keys_files"
 msgid "Bring up menu"
 msgstr "Toon menu"
 
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Start Game / Menu Select"
-msgstr ""
-
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Quit Game / Pause"
-msgstr ""
-
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Quit Game"
-msgstr ""
-
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Move Up"
-msgstr ""
-
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Move Down"
-msgstr ""
-
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Move Left"
-msgstr ""
-
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Move Right"
-msgstr ""
-
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Jump / Swim Up"
-msgstr ""
-
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Weapon Select"
-msgstr ""
-
-#. TRANSLATION: openjazz.keys
-msgctxt "keys_files"
-msgid "Stats"
-msgstr ""
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Open door"
-msgstr "Open deur"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Toggle weapon"
-msgstr "Schakel wapen"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Drop weapon"
-msgstr "Laat wapen vallen"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Aim up"
-msgstr "Richt naar boven"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Aim down"
-msgstr "Richt naar beneden"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Strafe left"
-msgstr "Strafe naar links"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Strafe right"
-msgstr "Strafe naar rechts"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Menu back"
-msgstr "Menu terug"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Move left"
-msgstr "Ga naar links"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Move right"
-msgstr "Ga naar rechts"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Move forward"
-msgstr "Ga naar voren"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Move backward"
-msgstr "Ga naar achteren"
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Toggle run"
-msgstr "Schakel rennen"
-
 #. TRANSLATION: sonicnexus.keys
 msgctxt "keys_files"
 msgid "Dev Menu"
@@ -17137,6 +17167,91 @@ msgstr ""
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
 msgid "Open"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "exit game"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "map"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "rear view"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "fire primary"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "fire secondary"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "drop proximity bomb"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "flare"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "laser"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "vulcan cannon"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "spreadfire cannon"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "plasma cannon"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "concussion missile"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "homing missile"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "proximity bomb"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "smart missile"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "quick save"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "quick load"
 msgstr ""
 
 #~ msgctxt "game_options"
@@ -17466,10 +17581,6 @@ msgstr ""
 #~ msgstr "PS1 Analoge Joystick"
 
 #~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "Uitgeschakeld (Standaard)"
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "Per pixel is het meest nauwkeurig, maar ook het meest veeleisend."
 
@@ -17570,10 +17681,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "Kies de gewenste beeldverhouding.."
-
-#~ msgctxt "game_options"
-#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
-#~ msgstr "De muiscursor in- of uitschakelen. Handig voor menu's van CG."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -17791,3 +17898,11 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Vooruitspoelen"
+
+#~ msgctxt "game_options"
+#~ msgid "Disbaled (Default)"
+#~ msgstr "Uitgeschakeld (Standaard)"
+
+#~ msgctxt "game_options"
+#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+#~ msgstr "De muiscursor in- of uitschakelen. Handig voor menu's van CG."

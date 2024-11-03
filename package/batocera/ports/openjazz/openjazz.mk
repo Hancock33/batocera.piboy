@@ -6,8 +6,7 @@
 # Version: Commits on Oct 06, 2024
 OPENJAZZ_VERSION = da531235f63fc8cff273996573c803386d8ddbeb
 OPENJAZZ_SITE =  $(call github,AlisterT,openjazz,$(OPENJAZZ_VERSION))
-
-OPENJAZZ_DEPENDENCIES = sdl2 sdl2_net
+OPENJAZZ_DEPENDENCIES = sdl2
 OPENJAZZ_LICENSE = GPLv2
 
 OPENJAZZ_CONF_OPTS += -DDATAPATH=/userdata/roms/ports/openjazz

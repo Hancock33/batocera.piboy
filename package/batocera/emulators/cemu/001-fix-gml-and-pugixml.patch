@@ -1,8 +1,8 @@
 diff --git a/src/Cafe/CMakeLists.txt b/src/Cafe/CMakeLists.txt
-index 0fb7a44..035c62e 100644
+index 91d257b..12bd636 100644
 --- a/src/Cafe/CMakeLists.txt
 +++ b/src/Cafe/CMakeLists.txt
-@@ -548,7 +548,7 @@ target_link_libraries(CemuCafe PRIVATE
+@@ -550,7 +550,7 @@ target_link_libraries(CemuCafe PRIVATE
  	OpenSSL::Crypto
  	OpenSSL::SSL
  	PNG::PNG

@@ -11,7 +11,7 @@ index e6be60790..57cefbce1 100644
    <ItemGroup>
      <PackageVersion Include="Avalonia" Version="11.0.10" />
 diff --git a/src/ARMeilleure/Translation/Cache/JitCache.cs b/src/ARMeilleure/Translation/Cache/JitCache.cs
-index e2b5e2d10..763271134 100644
+index cf13cd6cb..3bbec482c 100644
 --- a/src/ARMeilleure/Translation/Cache/JitCache.cs
 +++ b/src/ARMeilleure/Translation/Cache/JitCache.cs
 @@ -8,6 +8,7 @@ using System.Collections.Generic;
@@ -32,7 +32,7 @@ index e2b5e2d10..763271134 100644
  
          [SupportedOSPlatform("windows")]
 diff --git a/src/ARMeilleure/Translation/PTC/Ptc.cs b/src/ARMeilleure/Translation/PTC/Ptc.cs
-index fa178eace..fff90f57c 100644
+index 6dd38ed89..4775685bf 100644
 --- a/src/ARMeilleure/Translation/PTC/Ptc.cs
 +++ b/src/ARMeilleure/Translation/PTC/Ptc.cs
 @@ -57,7 +57,7 @@ namespace ARMeilleure.Translation.PTC
@@ -291,7 +291,7 @@ index 3bf092704..cef4dc927 100644
  
          private WindowsGranularTimer()
 diff --git a/src/Ryujinx.Cpu/AppleHv/HvVm.cs b/src/Ryujinx.Cpu/AppleHv/HvVm.cs
-index c4f107532..93dc48ff6 100644
+index a12bbea9b..b4d45f36d 100644
 --- a/src/Ryujinx.Cpu/AppleHv/HvVm.cs
 +++ b/src/Ryujinx.Cpu/AppleHv/HvVm.cs
 @@ -1,6 +1,7 @@
@@ -312,7 +312,7 @@ index c4f107532..93dc48ff6 100644
          public static (ulong, HvIpaAllocator) CreateAddressSpace(MemoryBlock block)
          {
 diff --git a/src/Ryujinx.Cpu/LightningJit/Cache/JitCache.cs b/src/Ryujinx.Cpu/LightningJit/Cache/JitCache.cs
-index 6f1191ca5..d4f68eb65 100644
+index ac1274bf6..10ae050b6 100644
 --- a/src/Ryujinx.Cpu/LightningJit/Cache/JitCache.cs
 +++ b/src/Ryujinx.Cpu/LightningJit/Cache/JitCache.cs
 @@ -5,6 +5,7 @@ using System.Collections.Generic;
@@ -333,7 +333,7 @@ index 6f1191ca5..d4f68eb65 100644
  
          [SupportedOSPlatform("windows")]
 diff --git a/src/Ryujinx.Cpu/LightningJit/Cache/NoWxCache.cs b/src/Ryujinx.Cpu/LightningJit/Cache/NoWxCache.cs
-index a71074995..573af359f 100644
+index 3cf279ae3..5e5c6eab3 100644
 --- a/src/Ryujinx.Cpu/LightningJit/Cache/NoWxCache.cs
 +++ b/src/Ryujinx.Cpu/LightningJit/Cache/NoWxCache.cs
 @@ -4,6 +4,7 @@ using Ryujinx.Memory;
@@ -354,7 +354,7 @@ index a71074995..573af359f 100644
          class ThreadLocalCacheEntry
          {
 diff --git a/src/Ryujinx.Cpu/Signal/NativeSignalHandler.cs b/src/Ryujinx.Cpu/Signal/NativeSignalHandler.cs
-index 93e608329..e467710d7 100644
+index 2985f1c21..75a6d3bf8 100644
 --- a/src/Ryujinx.Cpu/Signal/NativeSignalHandler.cs
 +++ b/src/Ryujinx.Cpu/Signal/NativeSignalHandler.cs
 @@ -5,6 +5,7 @@ using System;
@@ -519,7 +519,7 @@ index e1fd3fb9d..ed76c6566 100644
              bool concurrentFenceWaitUnsupported,
              bool isLight = false)
 diff --git a/src/Ryujinx.Graphics.Vulkan/HostMemoryAllocator.cs b/src/Ryujinx.Graphics.Vulkan/HostMemoryAllocator.cs
-index ff1565246..ebf0a8bba 100644
+index 77c5f95c9..5c8b2a761 100644
 --- a/src/Ryujinx.Graphics.Vulkan/HostMemoryAllocator.cs
 +++ b/src/Ryujinx.Graphics.Vulkan/HostMemoryAllocator.cs
 @@ -5,6 +5,7 @@ using Silk.NET.Vulkan;
@@ -566,7 +566,7 @@ index 14d3050bf..0bac3be12 100644
          private double _divisor = 1f;
  
 diff --git a/src/Ryujinx.Graphics.Vulkan/Shader.cs b/src/Ryujinx.Graphics.Vulkan/Shader.cs
-index 1c8caffd9..05fcce0d7 100644
+index f23b78f51..79e2f712a 100644
 --- a/src/Ryujinx.Graphics.Vulkan/Shader.cs
 +++ b/src/Ryujinx.Graphics.Vulkan/Shader.cs
 @@ -5,6 +5,7 @@ using shaderc;
@@ -584,10 +584,10 @@ index 1c8caffd9..05fcce0d7 100644
 -        private static readonly object _shaderOptionsLock = new();
 +        private static readonly Lock _shaderOptionsLock = new();
  
-         private static readonly IntPtr _ptrMainEntryPointName = Marshal.StringToHGlobalAnsi("main");
+         private static readonly nint _ptrMainEntryPointName = Marshal.StringToHGlobalAnsi("main");
  
 diff --git a/src/Ryujinx.Graphics.Vulkan/VulkanRenderer.cs b/src/Ryujinx.Graphics.Vulkan/VulkanRenderer.cs
-index a40b20f14..517c95bdf 100644
+index 8d324957a..d6cbb91a6 100644
 --- a/src/Ryujinx.Graphics.Vulkan/VulkanRenderer.cs
 +++ b/src/Ryujinx.Graphics.Vulkan/VulkanRenderer.cs
 @@ -11,6 +11,7 @@ using Silk.NET.Vulkan.Extensions.KHR;
@@ -609,7 +609,7 @@ index a40b20f14..517c95bdf 100644
  
          internal MemoryAllocator MemoryAllocator { get; private set; }
          internal HostMemoryAllocator HostMemoryAllocator { get; private set; }
-@@ -161,7 +162,7 @@ namespace Ryujinx.Graphics.Vulkan
+@@ -163,7 +164,7 @@ namespace Ryujinx.Graphics.Vulkan
              {
                  Api.GetDeviceQueue(_device, queueFamilyIndex, 1, out var backgroundQueue);
                  BackgroundQueue = backgroundQueue;
@@ -618,7 +618,7 @@ index a40b20f14..517c95bdf 100644
              }
  
              PhysicalDeviceProperties2 properties2 = new()
-@@ -494,7 +495,7 @@ namespace Ryujinx.Graphics.Vulkan
+@@ -496,7 +497,7 @@ namespace Ryujinx.Graphics.Vulkan
  
              Api.GetDeviceQueue(_device, queueFamilyIndex, 0, out var queue);
              Queue = queue;
@@ -628,7 +628,7 @@ index a40b20f14..517c95bdf 100644
              LoadFeatures(maxQueueCount, queueFamilyIndex);
  
 diff --git a/src/Ryujinx.HLE/FileSystem/ContentManager.cs b/src/Ryujinx.HLE/FileSystem/ContentManager.cs
-index 952271fa1..303c63f43 100644
+index fc8def9d2..b23598247 100644
 --- a/src/Ryujinx.HLE/FileSystem/ContentManager.cs
 +++ b/src/Ryujinx.HLE/FileSystem/ContentManager.cs
 @@ -21,6 +21,7 @@ using System.IO;
@@ -649,7 +649,7 @@ index 952271fa1..303c63f43 100644
          public ContentManager(VirtualFileSystem virtualFileSystem)
          {
 diff --git a/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/SoftwareKeyboardApplet.cs b/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/SoftwareKeyboardApplet.cs
-index 0462a5b00..7a572d21c 100644
+index e04fc64fe..9e129f0d2 100644
 --- a/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/SoftwareKeyboardApplet.cs
 +++ b/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/SoftwareKeyboardApplet.cs
 @@ -14,6 +14,7 @@ using System.IO;
@@ -670,7 +670,7 @@ index 0462a5b00..7a572d21c 100644
          public event EventHandler AppletStateChanged;
  
 diff --git a/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/SoftwareKeyboardRendererBase.cs b/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/SoftwareKeyboardRendererBase.cs
-index cc62eca1d..fa59197d1 100644
+index 67b5f2b1f..e17b36911 100644
 --- a/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/SoftwareKeyboardRendererBase.cs
 +++ b/src/Ryujinx.HLE/HOS/Applets/SoftwareKeyboard/SoftwareKeyboardRendererBase.cs
 @@ -6,6 +6,7 @@ using System.Diagnostics;
@@ -893,7 +893,7 @@ index 570e3c802..e79846fdd 100644
              _requestStopEvent = new Event(EventClearMode.ManualClear);
              _notifyEvent = new Event(EventClearMode.ManualClear);
 diff --git a/src/Ryujinx.Input.SDL2/SDL2Gamepad.cs b/src/Ryujinx.Input.SDL2/SDL2Gamepad.cs
-index 475855fd5..76d25b6bb 100644
+index af6f4c625..12bfab4bb 100644
 --- a/src/Ryujinx.Input.SDL2/SDL2Gamepad.cs
 +++ b/src/Ryujinx.Input.SDL2/SDL2Gamepad.cs
 @@ -4,6 +4,7 @@ using Ryujinx.Common.Logging;
@@ -914,7 +914,7 @@ index 475855fd5..76d25b6bb 100644
          private readonly List<ButtonMappingEntry> _buttonsUserMapping;
  
 diff --git a/src/Ryujinx.Input.SDL2/SDL2GamepadDriver.cs b/src/Ryujinx.Input.SDL2/SDL2GamepadDriver.cs
-index 012d72d7c..f5bf234e4 100644
+index 0acbaaa19..a023e4b0e 100644
 --- a/src/Ryujinx.Input.SDL2/SDL2GamepadDriver.cs
 +++ b/src/Ryujinx.Input.SDL2/SDL2GamepadDriver.cs
 @@ -1,6 +1,7 @@
@@ -935,7 +935,7 @@ index 012d72d7c..f5bf234e4 100644
          public ReadOnlySpan<string> GamepadsIds
          {
 diff --git a/src/Ryujinx.Input.SDL2/SDL2Keyboard.cs b/src/Ryujinx.Input.SDL2/SDL2Keyboard.cs
-index 08eacc4ee..bd2eddeb1 100644
+index a0dd8ab95..8d6a30d11 100644
 --- a/src/Ryujinx.Input.SDL2/SDL2Keyboard.cs
 +++ b/src/Ryujinx.Input.SDL2/SDL2Keyboard.cs
 @@ -4,6 +4,7 @@ using System;
@@ -1042,7 +1042,7 @@ index 4d8961335..851c07867 100644
          private SDL2Driver() { }
  
 diff --git a/src/Ryujinx/AppHost.cs b/src/Ryujinx/AppHost.cs
-index 9c9898a87..3ae714a74 100644
+index dc4f4ff36..4b8bf8143 100644
 --- a/src/Ryujinx/AppHost.cs
 +++ b/src/Ryujinx/AppHost.cs
 @@ -120,7 +120,7 @@ namespace Ryujinx.Ava

@@ -46,7 +46,7 @@ fi
 
 dmesg 	         	> "${DSYSTEM}/dmesg.txt"
 lsmod 	         	> "${DSYSTEM}/lsmod.txt"
-ps    	         	> "${DSYSTEM}/ps.txt"
+ps -ef 	         	> "${DSYSTEM}/ps.txt"
 df -h 	         	> "${DSYSTEM}/df.txt"
 netstat -tuan    	> "${DSYSTEM}/netstat.txt"
 lsusb -v         	> "${DSYSTEM}/lsusb.txt" 2>/dev/null
@@ -88,6 +88,10 @@ f_cp /var/log/bluetooth-agent.log                              "${DSYSTEM}"
 # resize.log
 if [ -f /tmp/resize.log ]; then
     f_cp /tmp/resize.log                                       "${DSYSTEM}"
+fi
+# boot.log
+if [ -f /var/run/boot.log ]; then
+    f_cp /var/run/boot.log                                     "${DSYSTEM}"
 fi
 
 # clear passwords

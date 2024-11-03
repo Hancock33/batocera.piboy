@@ -11,7 +11,7 @@ if TYPE_CHECKING:
     from ...types import HotkeysContext
 
 _UQM_SAVES: Final = SAVES / 'uqm'
-_UQM_ROMS: Final = ROMS / "ports" / 'uqm'
+_UQM_ROMS: Final = ROMS / 'ports' / 'uqm'
 
 
 class UqmGenerator(Generator):

@@ -1,8 +1,8 @@
 diff --git a/Source/Core/Core/Config/MainSettings.cpp b/Source/Core/Core/Config/MainSettings.cpp
-index 775e6b1..b4f4dae 100644
+index 7c747d3a35..f0750e5a22 100644
 --- a/Source/Core/Core/Config/MainSettings.cpp
 +++ b/Source/Core/Core/Config/MainSettings.cpp
-@@ -308,6 +308,7 @@ const Info<int> MAIN_GDB_PORT{{System::Main, "General", "GDBPort"}, -1};
+@@ -310,6 +310,7 @@ const Info<int> MAIN_GDB_PORT{{System::Main, "General", "GDBPort"}, -1};
  const Info<int> MAIN_ISO_PATH_COUNT{{System::Main, "General", "ISOPaths"}, 0};
  const Info<std::string> MAIN_SKYLANDERS_PATH{{System::Main, "General", "SkylandersCollectionPath"},
                                               ""};
@@ -11,10 +11,10 @@ index 775e6b1..b4f4dae 100644
  static Info<std::string> MakeISOPathConfigInfo(size_t idx)
  {
 diff --git a/Source/Core/Core/Config/MainSettings.h b/Source/Core/Core/Config/MainSettings.h
-index a4bea44..c7c65d3 100644
+index 99deb98af7..a4b138351c 100644
 --- a/Source/Core/Core/Config/MainSettings.h
 +++ b/Source/Core/Core/Config/MainSettings.h
-@@ -203,6 +203,8 @@ extern const Info<std::string> MAIN_GDB_SOCKET;
+@@ -204,6 +204,8 @@ extern const Info<std::string> MAIN_GDB_SOCKET;
  extern const Info<int> MAIN_GDB_PORT;
  extern const Info<int> MAIN_ISO_PATH_COUNT;
  extern const Info<std::string> MAIN_SKYLANDERS_PATH;
@@ -24,16 +24,16 @@ index a4bea44..c7c65d3 100644
  void SetIsoPaths(const std::vector<std::string>& paths);
  
 diff --git a/Source/Core/DolphinQt/MainWindow.cpp b/Source/Core/DolphinQt/MainWindow.cpp
-index 06a98b1..7339f9c 100644
+index 6eb1a1bd23..0b6850085f 100644
 --- a/Source/Core/DolphinQt/MainWindow.cpp
 +++ b/Source/Core/DolphinQt/MainWindow.cpp
-@@ -1452,6 +1452,9 @@ void MainWindow::StateLoadSlot()
+@@ -1449,6 +1449,9 @@ void MainWindow::StateLoadSlot()
  
  void MainWindow::StateSaveSlot()
  {
 +  if (Config::Get(Config::MAIN_AUTO_INCREMENT_SLOT_COUNT)) {
 +    m_state_slot++;
 +  }
-   State::Save(Core::System::GetInstance(), m_state_slot);
+   State::Save(m_system, m_state_slot);
  }
  

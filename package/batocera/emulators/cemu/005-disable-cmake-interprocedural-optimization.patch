@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 6b5f388..206f545 100644
+index 5b5cff6..a825c74 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -47,8 +47,8 @@ add_compile_definitions($<$<CONFIG:Debug>:CEMU_DEBUG_ASSERT>) # if build type is
+@@ -70,8 +70,8 @@ add_definitions(-DEMULATOR_VERSION_PATCH=${EMULATOR_VERSION_PATCH})
  set_property(GLOBAL PROPERTY USE_FOLDERS ON)
  
  # enable link time optimization for release builds

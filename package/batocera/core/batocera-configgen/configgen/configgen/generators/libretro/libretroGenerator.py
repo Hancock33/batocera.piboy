@@ -355,17 +355,17 @@ class LibretroGenerator(Generator):
             if "squashfs" in rom:
                 romsInDir = glob.glob(glob.escape(rom) + '/*.3ds')
                 if len(romsInDir) >= 1:
-                    rom = romsInDir[0]
+                    rom_path = romsInDir[0]
 
         if system.name == 'n64':
             if "squashfs" in rom:
                 romsInDir = glob.glob(glob.escape(rom) + '/*')
-                rom = romsInDir[0]
+                rom_path = romsInDir[0]
 
         if system.name == 'n64dd':
             if "squashfs" in rom:
                 romsInDir = glob.glob(glob.escape(rom) + '/*')
-                rom = romsInDir[0]
+                rom_path = romsInDir[0]
 
         if system.name == 'doom3' and system.config['core'] == "boom3":
             rom_path = '/userdata/roms/ports/doom3/base/pak000.pk4'
