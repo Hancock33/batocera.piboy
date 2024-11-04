@@ -747,10 +747,10 @@ index 0830cae9a4d0..d710a016f093 100644
  		.matches = {
  		  DMI_EXACT_MATCH(DMI_SYS_VENDOR, "VIOS"),
 diff --git a/drivers/hid/Kconfig b/drivers/hid/Kconfig
-index f8a56d631242..d477df3a3f35 100644
+index 6c8e9e004907..809d5f2684ff 100644
 --- a/drivers/hid/Kconfig
 +++ b/drivers/hid/Kconfig
-@@ -164,6 +164,15 @@ config HID_ASUS
+@@ -185,6 +185,15 @@ config HID_ASUS
  	- GL553V series
  	- GL753V series
  
@@ -767,11 +767,11 @@ index f8a56d631242..d477df3a3f35 100644
  	tristate "Aureal"
  	help
 diff --git a/drivers/hid/Makefile b/drivers/hid/Makefile
-index 496dab54c73a..5fa65e1e1e3b 100644
+index 13d32f55e5d4..c4b93a15a4d5 100644
 --- a/drivers/hid/Makefile
 +++ b/drivers/hid/Makefile
-@@ -31,6 +31,7 @@ obj-$(CONFIG_HID_APPLE)		+= hid-apple.o
- obj-$(CONFIG_HID_APPLEIR)	+= hid-appleir.o
+@@ -33,6 +33,7 @@ obj-$(CONFIG_HID_APPLETB_BL)	+= hid-appletb-bl.o
+ obj-$(CONFIG_HID_APPLETB_KBD)	+= hid-appletb-kbd.o
  obj-$(CONFIG_HID_CREATIVE_SB0540)	+= hid-creative-sb0540.o
  obj-$(CONFIG_HID_ASUS)		+= hid-asus.o
 +obj-$(CONFIG_HID_ASUS_ALLY)	+= hid-asus-ally.o
