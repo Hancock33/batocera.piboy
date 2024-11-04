@@ -105,7 +105,7 @@ index 504e8a7c4e2a..43daffa3ee03 100644
  	bool "Automatic process group scheduling"
  	select CGROUPS
 diff --git a/kernel/Kconfig.hz b/kernel/Kconfig.hz
-index 0f78364efd4f..4cf2d88916bd 100644
+index 0f78364efd4f..b412ea29d0b3 100644
 --- a/kernel/Kconfig.hz
 +++ b/kernel/Kconfig.hz
 @@ -79,5 +79,48 @@ config HZ
@@ -131,7 +131,7 @@ index 0f78364efd4f..4cf2d88916bd 100644
 +
 +config MIGRATION_COST_BASE_NS
 +	int "Default value for migration_cost_base_ns"
-+	default 300000
++	default 500000
 +	help
 +	 The BORE Scheduler automatically calculates the optimal
 +	 migration_cost_ns using the following equation:
@@ -144,7 +144,7 @@ index 0f78364efd4f..4cf2d88916bd 100644
 +
 +config MIGRATION_COST_STEP_NS
 +	int "Default value for migration_cost_step_ns"
-+	default 50000
++	default 0
 +	help
 +	 The BORE Scheduler automatically calculates the optimal
 +	 migration_cost_ns using the following equation:
@@ -158,10 +158,10 @@ index 0f78364efd4f..4cf2d88916bd 100644
  config SCHED_HRTICK
  	def_bool HIGH_RES_TIMERS
 diff --git a/kernel/fork.c b/kernel/fork.c
-index dd3963bfd820..4a0bf4d67944 100644
+index c5b2a2c8beb7..358f8918befe 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
-@@ -116,6 +116,8 @@
+@@ -117,6 +117,8 @@
  #include <asm/cacheflush.h>
  #include <asm/tlbflush.h>
  
@@ -170,7 +170,7 @@ index dd3963bfd820..4a0bf4d67944 100644
  #include <trace/events/sched.h>
  
  #define CREATE_TRACE_POINTS
-@@ -2350,6 +2352,9 @@ __latent_entropy struct task_struct *copy_process(
+@@ -2352,6 +2354,9 @@ __latent_entropy struct task_struct *copy_process(
  	retval = sched_fork(clone_flags, p);
  	if (retval)
  		goto bad_fork_cleanup_policy;
@@ -577,7 +577,7 @@ index 000000000000..cd7e8a8d6075
 +#endif // CONFIG_SYSCTL
 +#endif // CONFIG_SCHED_BORE
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 1c9e75f2025c..b2dd185a2e9f 100644
+index 9d489ef50a51..d23eb642b471 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -97,6 +97,8 @@
@@ -594,7 +594,7 @@ index 1c9e75f2025c..b2dd185a2e9f 100644
  #endif
  
 +#ifdef CONFIG_SCHED_BORE
-+	printk(KERN_INFO "BORE (Burst-Oriented Response Enhancer) CPU Scheduler modification 5.7.1 by Masahito Suzuki");
++	printk(KERN_INFO "BORE (Burst-Oriented Response Enhancer) CPU Scheduler modification 5.7.2 by Masahito Suzuki");
 +	init_task_bore(&init_task);
 +#endif // CONFIG_SCHED_BORE
 +
@@ -717,7 +717,7 @@ index f4035c7a0fa1..ddd03cd517c7 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index b55fa314df37..837551923cd6 100644
+index 54e7c4c3e2c5..70e478672ca2 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -55,6 +55,8 @@
@@ -756,8 +756,8 @@ index b55fa314df37..837551923cd6 100644
 -static unsigned int normalized_sysctl_sched_base_slice	= 350000ULL;
 -#else
 +#ifdef CONFIG_SCHED_BORE
-+const static  uint nsecs_per_tick              = 1000000000ULL / HZ;
-+const_debug   uint sysctl_sched_min_base_slice = CONFIG_MIN_BASE_SLICE_NS;
++const static unsigned int nsecs_per_tick       = 1000000000ULL / HZ;
++unsigned int sysctl_sched_min_base_slice       = CONFIG_MIN_BASE_SLICE_NS;
 +__read_mostly uint sysctl_sched_base_slice     = nsecs_per_tick;
 +#else // !CONFIG_SCHED_BORE
  unsigned int sysctl_sched_base_slice			= 750000ULL;
@@ -769,8 +769,8 @@ index b55fa314df37..837551923cd6 100644
 -const_debug unsigned int sysctl_sched_migration_cost	= 300000UL;
 -#else
 +#ifdef CONFIG_SCHED_BORE
-+const_debug uint sysctl_sched_migration_cost_base = CONFIG_MIGRATION_COST_BASE_NS;
-+const_debug uint sysctl_sched_migration_cost_step = CONFIG_MIGRATION_COST_STEP_NS;
++unsigned int sysctl_sched_migration_cost_base  = CONFIG_MIGRATION_COST_BASE_NS;
++unsigned int sysctl_sched_migration_cost_step  = CONFIG_MIGRATION_COST_STEP_NS;
 +__read_mostly uint sysctl_sched_migration_cost = CONFIG_MIGRATION_COST_BASE_NS;
 +#else // !CONFIG_SCHED_BORE
  const_debug unsigned int sysctl_sched_migration_cost	= 500000UL;
@@ -913,7 +913,7 @@ index b55fa314df37..837551923cd6 100644
  	/*
  	 * When joining the competition; the existing tasks will be,
  	 * on average, halfway through their slice, as such start tasks
-@@ -7109,6 +7155,14 @@ static int dequeue_entities(struct rq *rq, struct sched_entity *se, int flags)
+@@ -7110,6 +7156,14 @@ static int dequeue_entities(struct rq *rq, struct sched_entity *se, int flags)
  		p = task_of(se);
  		h_nr_running = 1;
  		idle_h_nr_running = task_has_idle_policy(p);
@@ -928,7 +928,7 @@ index b55fa314df37..837551923cd6 100644
  	} else {
  		cfs_rq = group_cfs_rq(se);
  		slice = cfs_rq_min_slice(cfs_rq);
-@@ -9018,16 +9072,25 @@ static void yield_task_fair(struct rq *rq)
+@@ -9025,16 +9079,25 @@ static void yield_task_fair(struct rq *rq)
  	/*
  	 * Are we the only task in the tree?
  	 */
@@ -954,7 +954,7 @@ index b55fa314df37..837551923cd6 100644
  	/*
  	 * Tell update_rq_clock() that we've just updated,
  	 * so we don't do microscopic update in schedule()
-@@ -13079,6 +13142,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
+@@ -13086,6 +13149,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
  static void task_fork_fair(struct task_struct *p)
  {
  	set_task_max_allowed_capacity(p);
@@ -964,7 +964,7 @@ index b55fa314df37..837551923cd6 100644
  }
  
  /*
-@@ -13189,6 +13255,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
+@@ -13196,6 +13262,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
  
  static void switched_from_fair(struct rq *rq, struct task_struct *p)
  {
@@ -976,7 +976,7 @@ index b55fa314df37..837551923cd6 100644
  }
  
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 7b6eb8c868e8..e70c406573c6 100644
+index 3d1deb7186f5..86c76596cc38 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -2074,7 +2074,12 @@ static inline void update_sched_domain_debugfs(void) { }
@@ -992,21 +992,21 @@ index 7b6eb8c868e8..e70c406573c6 100644
  
  static inline const struct cpumask *task_user_cpus(struct task_struct *p)
  {
-@@ -2792,9 +2797,20 @@ extern void wakeup_preempt(struct rq *rq, struct task_struct *p, int flags);
+@@ -2822,9 +2827,20 @@ extern void wakeup_preempt(struct rq *rq, struct task_struct *p, int flags);
  #endif
  
  extern const_debug unsigned int sysctl_sched_nr_migrate;
 +#ifdef CONFIG_SCHED_BORE
-+extern const_debug unsigned int sysctl_sched_migration_cost_base;
-+extern const_debug unsigned int sysctl_sched_migration_cost_step;
-+extern __read_mostly unsigned int sysctl_sched_migration_cost;
++extern unsigned int sysctl_sched_migration_cost_base;
++extern unsigned int sysctl_sched_migration_cost_step;
++extern __read_mostly uint sysctl_sched_migration_cost;
 +#else // !CONFIG_SCHED_BORE
  extern const_debug unsigned int sysctl_sched_migration_cost;
 +#endif // CONFIG_SCHED_BORE
  
 +#ifdef CONFIG_SCHED_BORE
-+extern const_debug unsigned int sysctl_sched_min_base_slice;
-+extern __read_mostly unsigned int sysctl_sched_base_slice;
++extern unsigned int sysctl_sched_min_base_slice;
++extern __read_mostly uint sysctl_sched_base_slice;
 +#else // !CONFIG_SCHED_BORE
  extern unsigned int sysctl_sched_base_slice;
 +#endif // CONFIG_SCHED_BORE
