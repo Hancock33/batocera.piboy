@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-10-29 17:29+0000\n"
+"PO-Revision-Date: 2024-10-31 17:23+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -12986,7 +12986,7 @@ msgstr "Beste"
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "Enabled or disable the mouse cursor. Useful for CG's menus."
-msgstr ""
+msgstr "Mauszeiger aktivieren oder deaktivieren. Nützlich für CG-Menüs."
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
@@ -15976,7 +15976,7 @@ msgstr "EINZEL-BILDSCHIRM (FULLSCREEN)"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Enable the custom values below."
-msgstr "Aktivieren Sie die unten stehenden benutzerdefinierten Werte."
+msgstr "Aktiviere den unten stehenden benutzerdefinierten Werte."
 
 #. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
 msgctxt "game_options"
@@ -16871,12 +16871,12 @@ msgstr "Beende laufendes Flatpak"
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
 msgid "quicksave"
-msgstr "Schnelles Speichern"
+msgstr "Quick Save"
 
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
 msgid "quickload"
-msgstr "Schnelles Laden"
+msgstr "Quick Load"
 
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
@@ -17256,87 +17256,87 @@ msgstr ""
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "exit game"
-msgstr ""
+msgstr "Spiel beenden"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "map"
-msgstr ""
+msgstr "Karte"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "rear view"
-msgstr ""
+msgstr "Rückansicht"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "fire primary"
-msgstr ""
+msgstr "Feuer (primär)"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "fire secondary"
-msgstr ""
+msgstr "Feuer (sekundär)"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "drop proximity bomb"
-msgstr ""
+msgstr "Proximity-Bomb abwerfen"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "flare"
-msgstr ""
+msgstr "Täuschkörper"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "laser"
-msgstr ""
+msgstr "Laser"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "vulcan cannon"
-msgstr ""
+msgstr "Vulcan-Kanone"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "spreadfire cannon"
-msgstr ""
+msgstr "Spreadfire-Kanone"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "plasma cannon"
-msgstr ""
+msgstr "Plasma-Kanone"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "concussion missile"
-msgstr ""
+msgstr "Concussion-Rakete"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "homing missile"
-msgstr ""
+msgstr "zielsuchende Rakete"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "proximity bomb"
-msgstr ""
+msgstr "Proximity-Bombe"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "smart missile"
-msgstr ""
+msgstr "Smart-Rakete"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "quick save"
-msgstr ""
+msgstr "Quick Save"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "quick load"
-msgstr ""
+msgstr "Quick Load"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
@@ -17990,12 +17990,3 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Schnelles Vorspulen"
-
-#~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "Deaktiviert (Standard)"
-
-#~ msgctxt "game_options"
-#~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
-#~ msgstr ""
-#~ "Anzeige des Mauszeigers an- oder ausschalten. Nützlich für CG-Menüs."
