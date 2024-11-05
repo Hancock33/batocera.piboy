@@ -495,10 +495,10 @@ index 48d611e58ad3..a2b16b08cbbf 100644
  static int __read_mostly sysctl_compact_memory;
  
 diff --git a/mm/page_alloc.c b/mm/page_alloc.c
-index 43f8f7290bf0..6f6e48ca9bfd 100644
+index e6e51d4a6f3e..13b02e376346 100644
 --- a/mm/page_alloc.c
 +++ b/mm/page_alloc.c
-@@ -5513,11 +5513,11 @@ static int zone_batchsize(struct zone *zone)
+@@ -5512,11 +5512,11 @@ static int zone_batchsize(struct zone *zone)
  
  	/*
  	 * The number of pages to batch allocate is either ~0.1%
