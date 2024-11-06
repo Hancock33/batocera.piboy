@@ -2,17 +2,17 @@
 -----|:-----:|:-----:|:-----:
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|8c6f21a843ad43bf34ff19eae2fcf72155a8b456|Nov 06, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|4303975063dfed26eb68f64747725b4f8e7d8cd2|Nov 06, 2024
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.8|Nov 06, 2024
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|673c22a9c4a3218a9ec0f2a9e764076c3b24ff9c|Nov 06, 2024
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.10|Nov 06, 2024
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|2891f6374bc9287c5cc72205fba12203eff2fec5|Nov 06, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-11-06|Nov 06, 2024
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|f98b9f7726057ad525bdab2e0f45298a052744a0|Nov 06, 2024
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|f45cad6bc970d97f5a2b00913f8014a5ef08aeb3|Nov 06, 2024
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|46ddf6215101a46c59eb549d25da2bbd4f5fc11f|Nov 06, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|2dea11a9e3fed043e368d2e99067d69151c2e694|Nov 06, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|394e81af452f64439fb8d8ab7254ce19f71d4390|Nov 06, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|b319a8172d740b080e72b3d74e1f2107bdc28da2|Nov 06, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|bb4f3262883d024574f26039c1ca80ccdf50dc11|Nov 06, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|dea58c0588be277aa4d7f150a19b9a3e85a5bf5a|Nov 06, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|ca1e9df584174216563e8fa14fc3a539d78211be|Nov 06, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|767be489d9d741f5f6a4c5e72908d169d7ac44a5|Nov 06, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|ae202515f6fc6a6cf461a53b33e59377bab51bd7|Nov 06, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20.r206.g64462c82da5|Nov 06, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241106|Nov 06, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|6f99ebecc383133be4f96c2eb8fb359743864a1d|Nov 06, 2024
@@ -22,7 +22,7 @@ Ports|[doomretro](http://github.com/bradharding/doomretro)|1aa820256443a012f1245
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|a9313e25418d854e03a69bbaeb4fc5b2ceeba156|Nov 06, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|fb9550dc7c60322a7618140df2f9bf0e7a6c7634|Nov 06, 2024
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|a1601b5c8b6b42596bf27b4577461785d954fa81|Nov 06, 2024
-Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|673c22a9c4a3218a9ec0f2a9e764076c3b24ff9c|Nov 06, 2024
+Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|2891f6374bc9287c5cc72205fba12203eff2fec5|Nov 06, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|56daee6510832fa8f5aef6551f1b5493f9ac60ec|Nov 05, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|9941e00b545a9c99a8e62c8c33ebe790d38de26e|Nov 05, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|7e1074b140809b0da7aa7d02b6303a68cc351be2|Nov 05, 2024
