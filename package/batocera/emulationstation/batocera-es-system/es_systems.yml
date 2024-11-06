@@ -4767,7 +4767,7 @@ vpinball:
 xash3d_fwgs:
   name:                 Half-Life
   manufacturer:         Ports
-  release:
+  release:              1998
   hardware:             port
   extensions:           [game]
   platform:             pc
