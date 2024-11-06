@@ -16913,6 +16913,11 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
+#. TRANSLATION: cannonball.keys, corsixth.keys
+msgctxt "keys_files"
+msgid "Quit the application"
+msgstr "Lépjen ki az alkalmazásból"
+
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Open door"
@@ -17002,11 +17007,6 @@ msgstr "Mozgassa balra a kamerát"
 msgctxt "keys_files"
 msgid "Move camera to the right"
 msgstr "Mozgassa jobbra a kamerát"
-
-#. TRANSLATION: corsixth.keys
-msgctxt "keys_files"
-msgid "Quit the application"
-msgstr "Lépjen ki az alkalmazásból"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
