@@ -3273,11 +3273,20 @@ def generateCoreSettings(coreSettings: UnixSettings, system: Emulator, rom: Path
         coreSettings.save('hatarib_statusbar', '"0"')
         coreSettings.save('hatarib_fast_floppy', '"1"')
         coreSettings.save('hatarib_show_welcome', '"0"')
+        coreSettings.save('hatarib_tos', '"<etos1024k>"')
+
         # Machine Type
         if system.isOptSet('hatarib_machine'):
             coreSettings.save('hatarib_machine', '"' + system.config['hatarib_machine'] + '"')
         else:
             coreSettings.save('hatarib_machine', '"0"')
+
+        # Language/Region
+        if system.isOptSet("hatarib_language"):
+            coreSettings.save('hatarib_region', '"' + system.config['hatarib_language'] + '"')
+        else:
+            coreSettings.save('hatarib_region', '"127"')
+
         # CPU
         if system.isOptSet('hatarib_cpu'):
             coreSettings.save('hatarib_cpu', '"' + system.config['hatarib_cpu'] + '"')
@@ -3292,7 +3301,7 @@ def generateCoreSettings(coreSettings: UnixSettings, system: Emulator, rom: Path
         if system.isOptSet('hatarib_memory'):
             coreSettings.save('hatarib_memory', '"' + system.config['hatarib_memory'] + '"')
         else:
-            coreSettings.save('hatarib_memory', '"0"')
+            coreSettings.save('hatarib_memory', '"1024"')
         # Pause Screen
         if system.isOptSet('hatarib_pause'):
             coreSettings.save('hatarib_pause_osk', '"' + system.config['hatarib_pause'] + '"')
@@ -3308,6 +3317,28 @@ def generateCoreSettings(coreSettings: UnixSettings, system: Emulator, rom: Path
             coreSettings.save('hatarib_borders', '"' + system.config['hatarib_borders'] + '"')
         else:
             coreSettings.save('hatarib_borders', '"0"')
+        # Harddrive image support
+        rom_extension = os.path.splitext(os.path.basename(rom))[1].lower()
+        if rom_extension == '.hd':
+            coreSettings.save('hatarib_hardimg', '"hatarib/hdd"')
+            coreSettings.save('hatarib_hardboot', '"1"')
+            coreSettings.save('hatarib_hard_readonly', '"1"')
+            if system.isOptSet("hatarib_drive") and system.config["hatarib_drive"] == "ASCI":
+                coreSettings.save('hatarib_hardtype', '"2"')
+            elif system.isOptSet("hatarib_drive") and system.config["hatarib_drive"] == "SCSI":
+                coreSettings.save('hatarib_hardtype', '"3"')
+            else:
+                coreSettings.save('hatarib_hardtype', '"4"')
+        elif rom_extension == '.gemdos':
+            coreSettings.save('hatarib_hardimg', '"hatarib/hdd"')
+            coreSettings.save('hatarib_hardboot', '"1"')
+            coreSettings.save('hatarib_hardtype', '"0"')
+            coreSettings.save('hatarib_hard_readonly', '"0"')
+        else:
+            coreSettings.save('hatarib_hardimg', '')
+            coreSettings.save('hatarib_hardtype', '"0"')
+            coreSettings.save('hatarib_hardboot', '"0"')
+            coreSettings.save('hatarib_hard_readonly', '"1"')
 
     # Panda3ds
     if (system.config['core'] == 'panda3ds'):
