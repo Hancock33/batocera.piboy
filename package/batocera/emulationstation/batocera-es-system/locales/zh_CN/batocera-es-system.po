@@ -16560,11 +16560,6 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
-#. TRANSLATION: cannonball.keys, corsixth.keys
-msgctxt "keys_files"
-msgid "Quit the application"
-msgstr "退出应用程序"
-
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Open door"
@@ -16654,6 +16649,11 @@ msgstr "向左移动相机"
 msgctxt "keys_files"
 msgid "Move camera to the right"
 msgstr "向右移动相机"
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Quit the application"
+msgstr "退出应用程序"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"

@@ -16934,11 +16934,6 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
-#. TRANSLATION: cannonball.keys, corsixth.keys
-msgctxt "keys_files"
-msgid "Quit the application"
-msgstr "Salir de la aplicación"
-
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Open door"
@@ -17028,6 +17023,11 @@ msgstr "Mover cámara hacia la izquierda"
 msgctxt "keys_files"
 msgid "Move camera to the right"
 msgstr "Mover cámara hacia la derecha"
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Quit the application"
+msgstr "Salir de la aplicación"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
