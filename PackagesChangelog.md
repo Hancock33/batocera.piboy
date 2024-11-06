@@ -14,8 +14,10 @@ Ports|[omf2097](http://github.com/omf2097/openomf)|dea58c0588be277aa4d7f150a19b9
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|ca1e9df584174216563e8fa14fc3a539d78211be|Nov 06, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|767be489d9d741f5f6a4c5e72908d169d7ac44a5|Nov 06, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20.r206.g64462c82da5|Nov 06, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241106|Nov 06, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|6f99ebecc383133be4f96c2eb8fb359743864a1d|Nov 06, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|450347f099af0e89c7fd9123c190b30badb98243|Nov 06, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241106|Nov 06, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|1aa820256443a012f1245fede9f04c301b6c5e20|Nov 06, 2024
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|a9313e25418d854e03a69bbaeb4fc5b2ceeba156|Nov 06, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|fb9550dc7c60322a7618140df2f9bf0e7a6c7634|Nov 06, 2024
@@ -63,8 +65,6 @@ Emulators|[applewin](https://github.com/audetto/AppleWin)|f7ecc9538674950f569197
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|d24cf46d4e772ebc6a8a5c44885f13d20d6832cb|Nov 02, 2024
 Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|573ccd6e5a174d12ffadae151cfc26376a3e6aaa|Nov 02, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|fb71d0ecf74bc79d8e8c131d0bb8f9b610e8348b|Nov 02, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241102|Nov 02, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241102|Nov 02, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|8e0159ea82bb5a4e6cd96be8a423f4387fe0c187|Nov 02, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|d5f8694e7bbdfeb0d61e3333a2403a182827371d|Nov 02, 2024
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|d24cf46d4e772ebc6a8a5c44885f13d20d6832cb|Nov 02, 2024
