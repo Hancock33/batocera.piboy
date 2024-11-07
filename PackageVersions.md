@@ -194,7 +194,7 @@ Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|0daf92
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|11faba079790029df97c91be929ef46a8e0c800d|Nov 06, 2024
 Emulators|[libretro-pocketsnes](http://github.com/libretro/snes9x2002)|a0709ec7dcd6de2fbebb43106bd757b649e3b7cf|Oct 21, 2024
 Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|78656d4615691c393e65e48672ce5fff5b1f97d3|Oct 21, 2024
-Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|da9bfa62566156634dd70ba504fd41d8897a01b9|Nov 07, 2024
+Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|da0168f41aeb69dcef6a59ba355c8273afed681e|Nov 07, 2024
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|d25ccfb9739069824d8fff99e3ae78a58a09df01|Oct 21, 2024
 Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|acae250da8d98b8b9707cd499e2a0bf6d8500652|Oct 21, 2024
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|527564f2748901068a5fef891c5073a4d6cd089b|Sept 25, 2024
@@ -265,7 +265,7 @@ Emulators|[openmsx](http://github.com/openMSX/openMSX)|4303975063dfed26eb68f6474
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.10|Nov 06, 2024
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|11faba079790029df97c91be929ef46a8e0c800d|Nov 06, 2024
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|da9bfa62566156634dd70ba504fd41d8897a01b9|Nov 07, 2024
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|da0168f41aeb69dcef6a59ba355c8273afed681e|Nov 07, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a177763e14c924e3b15e2|Sept 29, 2024
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.2.4|Oct 11, 2024
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
@@ -344,7 +344,7 @@ Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|8e2a51b1c3e5b569aabc0b476f
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.3|Sept 23, 2024
 Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.3.296.0|Sept 18, 2024
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|f68b10fd46dc0401474d039144320d6ac521818e|Oct 01, 2024
-Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|6f99ebecc383133be4f96c2eb8fb359743864a1d|Nov 06, 2024
+Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|e86a1e1f9a468f77b5dd8eaa4ab7f25944659fda|Nov 07, 2024
 Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.3.296.0|Sept 29, 2024
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.3.296.0|Oct 04, 2024
 Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.3.296.0|Sept 26, 2024
@@ -459,7 +459,7 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|a065da59e9eea5c
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241106|Nov 06, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|838c72e593340fba7dd902a2f43ff651343120b0|Nov 03, 2024
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
-Ports|[omf2097](http://github.com/omf2097/openomf)|dea58c0588be277aa4d7f150a19b9a3e85a5bf5a|Nov 06, 2024
+Ports|[omf2097](http://github.com/omf2097/openomf)|e2a82787e2251d51427b773517f1ddca94cca749|Nov 07, 2024
 Ports|[openclaw](http://github.com/pjasicek/OpenClaw)|5ee5740ca98377c76b13b50c84f610b0066a4717|Jul 13, 2022
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|da531235f63fc8cff273996573c803386d8ddbeb|Oct 06, 2024
 Ports|[openjk](http://github.com/JACoders/OpenJK)|cb52f9fb2f4a80fd59bae799d3bb0f8ace730ad7|Oct 02, 2024
@@ -508,7 +508,7 @@ Utils|[batocera-pygame](http://github.com/lbrpdx/retrotrivia)|e3238c736dfbde20d7
 Utils|[bauh](http://github.com/vinifmor/bauh)|0.10.7|Jan 10, 2024
 Utils|[btop](http://github.com/aristocratos/btop)|v1.4.0|Sept 22, 2024
 Utils|[cabextract](http://github.com/kyz/libmspack)|v1.11|Feb 24, 2023
-Utils|[clevis](http://github.com/latchset/clevis)|4fc81301b442c4c6b336600823fd4ef385691c28|Oct 12, 2024
+Utils|[clevis](http://github.com/latchset/clevis)|4ba3f7928fcaba3af9f908661b16007dbb1ee46b|Nov 07, 2024
 Utils|[evmapy](http://github.com/kempniu/evmapy)|bd65338c236cd30b4f2d7835733ea5d6b108b75d|Jul 09, 2015
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|edee981519609d315880d1dcff30fe241c8df54a|Nov 05, 2024
 Utils|[fake-hwclock](https://git.einval.com/git/fake-hwclock.git)|00a0feb706bfc11e1e0dbaa887c603b8f9875c78|N/A
