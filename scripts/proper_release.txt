@@ -35,7 +35,8 @@ rockchip-mpp.mk
 rockpro64-blobs.mk
 rpi-firmware.mk
 rtmidi.mk
-ruffle.mk
+ruffle.
+ryujinx.mk
 ryzenadj.mk
 sockpp.mk
 sound-open-firmware.mk

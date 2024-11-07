@@ -8,7 +8,6 @@ ecm.mk
 fpinball.mk
 glslang.mk
 liblc3.mk
-ryujinx.mk
 shaderc.mk
 spirv-cross.mk
 spirv-headers.mk
