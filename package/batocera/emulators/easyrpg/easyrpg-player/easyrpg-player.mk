@@ -3,8 +3,8 @@
 # easyrpg-player
 #
 ################################################################################
-# Version: Commits on Oct 16, 2024
-EASYRPG_PLAYER_VERSION = 32ebfa5726b3cedee1d19cffdda13871e9804b1f
+# Version: Commits on Nov 08, 2024
+EASYRPG_PLAYER_VERSION = edc13773e6cc4f6ef2ff501d91aad5431576b37c
 EASYRPG_PLAYER_SITE = $(call github,EasyRPG,Player,$(EASYRPG_PLAYER_VERSION))
 EASYRPG_PLAYER_LICENSE = MIT
 EASYRPG_PLAYER_SUPPORTS_IN_SOURCE_BUILD = NO
