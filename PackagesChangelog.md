@@ -16,6 +16,7 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|1e5d75366aa5c190e8f1
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|edc13773e6cc4f6ef2ff501d91aad5431576b37c|Nov 08, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|c752312a19b9e32042e924aab8b9b2244cf6c20d|Nov 08, 2024
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|819d67ac33e0ff5c339bc372b6e11a0caf07d31b|Nov 08, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.21.r0.gc9a8333c0f2|Nov 08, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241108|Nov 08, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|c5a77064c1aea95d069e48e9f019b21649109d80|Nov 08, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|4caece4c0c7f8d0c56f5b81adc05d56bd1b58237|Nov 08, 2024
@@ -56,7 +57,6 @@ Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|46ddf6215101
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|b319a8172d740b080e72b3d74e1f2107bdc28da2|Nov 06, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|9cf0e68721acf09dbedc26f3ab121365f6f5bf64|Nov 06, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|23ddb4f529f616594dada0aa84ee101d9ff77787|Nov 06, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.20.r206.g64462c82da5|Nov 06, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|1aa820256443a012f1245fede9f04c301b6c5e20|Nov 06, 2024
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|a1601b5c8b6b42596bf27b4577461785d954fa81|Nov 06, 2024
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|11faba079790029df97c91be929ef46a8e0c800d|Nov 06, 2024
