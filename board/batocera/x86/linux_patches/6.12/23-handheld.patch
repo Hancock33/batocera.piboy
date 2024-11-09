@@ -507,7 +507,7 @@ index a51f3414b65d..bc0f9759c5c5 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 6425de26e046..8df43f63f462 100644
+index 1396041e23fd..5cecf9d0bda5 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -162,6 +162,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -697,7 +697,7 @@ index 43cdf39019a4..66ffa7ce7b08 100644
  	drm_atomic_state_put(state);
  
 diff --git a/drivers/gpu/drm/drm_panel_orientation_quirks.c b/drivers/gpu/drm/drm_panel_orientation_quirks.c
-index 0830cae9a4d0..d710a016f093 100644
+index 2d84d7ea1ab7..9329c1760c73 100644
 --- a/drivers/gpu/drm/drm_panel_orientation_quirks.c
 +++ b/drivers/gpu/drm/drm_panel_orientation_quirks.c
 @@ -184,6 +184,12 @@ static const struct dmi_system_id orientation_data[] = {
@@ -732,7 +732,7 @@ index 0830cae9a4d0..d710a016f093 100644
  	}, {	/* AYA NEO NEXT */
  		.matches = {
  		  DMI_EXACT_MATCH(DMI_BOARD_VENDOR, "AYANEO"),
-@@ -452,6 +470,13 @@ static const struct dmi_system_id orientation_data[] = {
+@@ -451,6 +469,13 @@ static const struct dmi_system_id orientation_data[] = {
  		  DMI_EXACT_MATCH(DMI_PRODUCT_VERSION, "1"),
  		},
  		.driver_data = (void *)&lcd800x1280_rightside_up,

@@ -897,7 +897,7 @@ index 000000000000..767844637a7d
 +  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index bdae0faf000c..7ab5ca2fef7e 100644
+index 21fdaa19229a..b0837cf9d500 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -965,6 +965,14 @@ Q:	https://patchwork.kernel.org/project/linux-rdma/list/
@@ -915,7 +915,7 @@ index bdae0faf000c..7ab5ca2fef7e 100644
  AMD ADDRESS TRANSLATION LIBRARY (ATL)
  M:	Yazen Ghannam <Yazen.Ghannam@amd.com>
  L:	linux-edac@vger.kernel.org
-@@ -3665,6 +3673,13 @@ F:	kernel/audit*
+@@ -3666,6 +3674,13 @@ F:	kernel/audit*
  F:	lib/*audit.c
  K:	\baudit_[a-z_0-9]\+\b
  
@@ -929,7 +929,7 @@ index bdae0faf000c..7ab5ca2fef7e 100644
  AUXILIARY BUS DRIVER
  M:	Greg Kroah-Hartman <gregkh@linuxfoundation.org>
  R:	Dave Ertman <david.m.ertman@intel.com>
-@@ -6996,6 +7011,12 @@ S:	Supported
+@@ -6998,6 +7013,12 @@ S:	Supported
  T:	git https://gitlab.freedesktop.org/drm/misc/kernel.git
  F:	drivers/gpu/drm/sun4i/sun8i*
  
@@ -942,7 +942,7 @@ index bdae0faf000c..7ab5ca2fef7e 100644
  DRM DRIVER FOR ARM PL111 CLCD
  S:	Orphan
  T:	git https://gitlab.freedesktop.org/drm/misc/kernel.git
-@@ -16485,6 +16506,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
+@@ -16486,6 +16507,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
  F:	Documentation/filesystems/ntfs3.rst
  F:	fs/ntfs3/
  
@@ -958,7 +958,7 @@ index bdae0faf000c..7ab5ca2fef7e 100644
  NUBUS SUBSYSTEM
  M:	Finn Thain <fthain@linux-m68k.org>
  L:	linux-m68k@lists.linux-m68k.org
-@@ -18496,6 +18526,13 @@ S:	Maintained
+@@ -18497,6 +18527,13 @@ S:	Maintained
  F:	include/linux/psi*
  F:	kernel/sched/psi.c
  
@@ -4300,7 +4300,7 @@ index 4a686f0e5dbf..cfd8a5591421 100644
  
  struct cpuinfo_x86 {
 diff --git a/arch/x86/include/asm/topology.h b/arch/x86/include/asm/topology.h
-index aef70336d624..1c55229efb1e 100644
+index 92f3664dd933..3973cb9bb2e6 100644
 --- a/arch/x86/include/asm/topology.h
 +++ b/arch/x86/include/asm/topology.h
 @@ -114,6 +114,12 @@ enum x86_topology_domains {
@@ -4423,10 +4423,10 @@ index 75884d2cdec3..f4e29563473d 100644
  #define MODULE_PROC_FAMILY "ELAN "
  #elif defined CONFIG_MCRUSOE
 diff --git a/arch/x86/kernel/acpi/cppc.c b/arch/x86/kernel/acpi/cppc.c
-index 956984054bf3..59edf64ad9ed 100644
+index aab9d0570841..d745dd586303 100644
 --- a/arch/x86/kernel/acpi/cppc.c
 +++ b/arch/x86/kernel/acpi/cppc.c
-@@ -234,8 +234,10 @@ EXPORT_SYMBOL_GPL(amd_detect_prefcore);
+@@ -239,8 +239,10 @@ EXPORT_SYMBOL_GPL(amd_detect_prefcore);
   */
  int amd_get_boost_ratio_numerator(unsigned int cpu, u64 *numerator)
  {
@@ -4437,7 +4437,7 @@ index 956984054bf3..59edf64ad9ed 100644
  
  	ret = amd_detect_prefcore(&prefcore);
  	if (ret)
-@@ -261,6 +263,27 @@ int amd_get_boost_ratio_numerator(unsigned int cpu, u64 *numerator)
+@@ -266,6 +268,27 @@ int amd_get_boost_ratio_numerator(unsigned int cpu, u64 *numerator)
  			break;
  		}
  	}
@@ -5313,10 +5313,10 @@ index b63863f77c67..d7630bab2516 100644
  }
  device_initcall(amd_pstate_init);
 diff --git a/drivers/cpufreq/intel_pstate.c b/drivers/cpufreq/intel_pstate.c
-index b0018f371ea3..23f51eb073e4 100644
+index cd2ac1ba53d2..ac3647df1431 100644
 --- a/drivers/cpufreq/intel_pstate.c
 +++ b/drivers/cpufreq/intel_pstate.c
-@@ -3800,6 +3800,8 @@ static int __init intel_pstate_setup(char *str)
+@@ -3820,6 +3820,8 @@ static int __init intel_pstate_setup(char *str)
  
  	if (!strcmp(str, "disable"))
  		no_load = 1;
@@ -5403,7 +5403,7 @@ index df17e79c45c7..e454488c1a31 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index d84ef3bc2bbf..6425de26e046 100644
+index 825a35cfadd7..1396041e23fd 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -4473,7 +4473,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
@@ -5505,10 +5505,10 @@ index d5d6ab484e5a..dccba7bcdf97 100644
  }
  
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
-index 80e60ea2d11e..51dea35848f6 100644
+index ee1bcfaae3e3..3388604f222b 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
-@@ -2775,7 +2775,10 @@ int smu_get_power_limit(void *handle,
+@@ -2785,7 +2785,10 @@ int smu_get_power_limit(void *handle,
  			*limit = smu->max_power_limit;
  			break;
  		case SMU_PPT_LIMIT_MIN:
@@ -5520,7 +5520,7 @@ index 80e60ea2d11e..51dea35848f6 100644
  			break;
  		default:
  			return -EINVAL;
-@@ -2799,7 +2802,14 @@ static int smu_set_power_limit(void *handle, uint32_t limit)
+@@ -2809,7 +2812,14 @@ static int smu_set_power_limit(void *handle, uint32_t limit)
  		if (smu->ppt_funcs->set_power_limit)
  			return smu->ppt_funcs->set_power_limit(smu, limit_type, limit);
  
