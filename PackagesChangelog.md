@@ -2,8 +2,10 @@
 -----|:-----:|:-----:|:-----:
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|2e829479d9f63dcfbd8ef67d456793a70f684b18|Nov 09, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|deee3ee410ad24821428376035a96de1e86c356a|Nov 09, 2024
+Emulators|[scummvm](http://github.com/scummvm/scummvm)|238c38d1fad2d772aa2219264e72bf7a8f0d4f9c|Nov 09, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|0e8d8c4811f68e1dc345e870a2cb51e6c4d2d715|Nov 09, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|cfd30b7a95edf1dafaf5cfb6d691578d8b6554c5|Nov 09, 2024
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|238c38d1fad2d772aa2219264e72bf7a8f0d4f9c|Nov 09, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|085b138fe50cbab353097ce5bfb8bfe10af4e39d|Nov 08, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|085b138fe50cbab353097ce5bfb8bfe10af4e39d|Nov 08, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|0de7f3a83ce0f30798302e8ae4ea04ccddb65688|Nov 08, 2024
@@ -82,11 +84,9 @@ Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|4b109eaac4f79b04065ff5025319fce51537e04d|Nov 03, 2024
 Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|a13dcf8a40afa6e45d004f158f4f9cebead65704|Nov 03, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|f7ecc9538674950f5691978971e96f36d730dcb0|Nov 02, 2024
-Emulators|[scummvm](http://github.com/scummvm/scummvm)|d24cf46d4e772ebc6a8a5c44885f13d20d6832cb|Nov 02, 2024
 Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|573ccd6e5a174d12ffadae151cfc26376a3e6aaa|Nov 02, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|fb71d0ecf74bc79d8e8c131d0bb8f9b610e8348b|Nov 02, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|8e0159ea82bb5a4e6cd96be8a423f4387fe0c187|Nov 02, 2024
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|d24cf46d4e772ebc6a8a5c44885f13d20d6832cb|Nov 02, 2024
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|24.11|Nov 01, 2024
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|b36143f92ebdcc3ffb104d03f78ad2f1752c8bfe|Nov 01, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|fbad66e5bcf7796d23d21054b2730aea39a57069|Nov 01, 2024
