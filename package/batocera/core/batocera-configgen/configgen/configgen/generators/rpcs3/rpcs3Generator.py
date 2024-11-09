@@ -60,7 +60,7 @@ class Rpcs3Generator(Generator):
         rpcs3ymlconfig = {}
         if RPCS3_CONFIG.is_file():
             with RPCS3_CONFIG.open("r") as stream:
-                rpcs3ymlconfig = yaml.safe_load(stream)
+                rpcs3ymlconfig = yaml.YAML(typ='safe', pure=True).load(stream)
 
         if rpcs3ymlconfig is None: # in case the file is empty
             rpcs3ymlconfig = {}
@@ -325,7 +325,7 @@ class Rpcs3Generator(Generator):
         rpcs3ymlconfig["Miscellaneous"]["Show trophy popups"] = False
 
         with RPCS3_CONFIG.open("w") as file:
-            yaml.dump(rpcs3ymlconfig, file, default_flow_style=False)
+            yaml.YAML(typ='safe', pure=True).dump(rpcs3ymlconfig, file)
 
         # copy icon files to config
         icon_target = RPCS3_CONFIG_DIR / 'Icons'
