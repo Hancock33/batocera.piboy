@@ -3,8 +3,8 @@
 # wine-native
 #
 ################################################################################
-# Version: Commits on Oct 18, 2024
-WINE_NATIVE_VERSION = wine-9.20
+# Version: Commits on Nov 08, 2024
+WINE_NATIVE_VERSION = wine-9.21
 WINE_NATIVE_SOURCE = wine-$(WINE_NATIVE_VERSION).tar.gz
 WINE_NATIVE_SITE = $(call github,wine-mirror,wine,$(WINE_NATIVE_VERSION))
 WINE_NATIVE_LICENSE = LGPL-2.1+
@@ -19,7 +19,7 @@ define WINE_NATIVE_AUTOGEN
 	# Autotools generation
 	cd $(@D); ./tools/make_requests
 	cd $(@D); ./tools/make_specfiles
-	cd $(@D); ./dlls/winevulkan/make_vulkan && rm dlls/winevulkan/vk-*.xml
+	cd $(@D); ./dlls/winevulkan/make_vulkan && rm -rf dlls/winevulkan/vk-*.xml
 	cd $(@D); autoreconf -fiv
 endef
 
