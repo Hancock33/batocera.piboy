@@ -17,7 +17,8 @@ class KeyboardController:
         rules = ""
         config = {}
         with open(configFile, 'r') as file:
-            config = yaml.safe_load(file)
+            config = yaml.YAML(typ='safe', pure=True).load(file)
+
 
         if "target_devices" not in config:
             raise Exception("missing target_devices entry in config file")
@@ -41,7 +42,7 @@ class KeyboardController:
     def generateCommand(self, configFile, inputFile) -> list[str]:
         config = {}
         with open(configFile, 'r') as file:
-            config = yaml.safe_load(file)
+            config = yaml.YAML(typ='safe', pure=True).load(file)
 
         cmd = ["evsieve", "--input", inputFile, "persist=exit" ]
 
