@@ -52,9 +52,13 @@ def squashfs_rom(rom: str | Path, /) -> Iterator[str]:
     try:
         # if the squashfs contains a single file with the same name, take it as the rom file
         rom_single = mount_point / rom.stem
+        rom_ps = mount_point / "PS3_GAME"
         if len(list(mount_point.iterdir())) == 1 and rom_single.exists():
             eslog.debug(f"squashfs: single rom {rom_single}")
             yield str(rom_single)
+        elif len(list(mount_point.iterdir())) == 1 and rom_ps.exists():
+            eslog.debug(f"squashfs: ps3 rom {rom_ps}")
+            yield str(mount_point)
         else:
             try:
                 rom_linked = (mount_point / ".ROM").resolve(strict=True)
