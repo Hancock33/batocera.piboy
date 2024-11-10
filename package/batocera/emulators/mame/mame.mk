@@ -187,9 +187,9 @@ define MAME_INSTALL_TARGET_CMDS
 	cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/history			$(TARGET_DIR)/usr/bin/mame/
 
 	# gameStop script when exiting a rotated screen (xorg)
-	if [ "$(BR2_PACKAGE_XSERVER_XORG_SERVER)" = "y" ]; then
-		mkdir -p $(TARGET_DIR)/usr/share/batocera/configgen/scripts
-		cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/rotation_fix.sh $(TARGET_DIR)/usr/share/batocera/configgen/scripts/rotation_fix.sh
+	if [ "$(BR2_PACKAGE_XSERVER_XORG_SERVER)" = "y" ]; then \
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/configgen/scripts; \
+		cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/rotation_fix.sh $(TARGET_DIR)/usr/share/batocera/configgen/scripts/rotation_fix.sh; \
 	fi
 
 	# Copy user -autoboot_command overrides (batocera.linux/batocera.linux#11706)
@@ -292,7 +292,6 @@ define MAME_EVMAPY
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/mame.mame.keys $(TARGET_DIR)/usr/share/evmapy/unico.mame.keys
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/mame.mame.keys $(TARGET_DIR)/usr/share/evmapy/universal.mame.keys
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/mame.mame.keys $(TARGET_DIR)/usr/share/evmapy/visco.mame.keys
-
 endef
 
 MAME_POST_INSTALL_TARGET_HOOKS += MAME_EVMAPY
