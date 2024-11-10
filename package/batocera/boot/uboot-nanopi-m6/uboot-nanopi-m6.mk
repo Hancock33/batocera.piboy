@@ -15,7 +15,7 @@ define UBOOT_NANOPI_M6_INSTALL_TARGET_CMDS
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/boot/uboot-nanopi-m6/idbloader.img \
 	    $(BINARIES_DIR)/uboot-nanopi-m6/idbloader.img
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/boot/uboot-nanopi-m6/u-boot.itb \
-	    $(BINARIES_DIR)/uboot-nanopi-m6/u-boot.itb	   
+	    $(BINARIES_DIR)/uboot-nanopi-m6/u-boot.itb
 endef
 
 $(eval $(generic-package))

@@ -6,5 +6,5 @@ config BR2_PACKAGE_VULKAN_UTILITY_LIBRARIES
 
 	help
 	  Utility libraries for Vulkan developers.
-	
+
 	  https://github.com/KhronosGroup/Vulkan-Utility-Libraries

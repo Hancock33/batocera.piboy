@@ -12,5 +12,5 @@ config BR2_PACKAGE_CORSIXTH
 	select BR2_PACKAGE_FFMPEG
 	help
 	  Open source clone of Theme Hospital
-	  
+
 	  https://github.com/CorsixTH/CorsixTH

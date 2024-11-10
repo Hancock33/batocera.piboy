@@ -1020,9 +1020,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_OPENJAZZ                             # ALL
 
     # Jazz Jackrabbit 2
-    select BR2_PACKAGE_JAZZ2_NATIVE                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     || \
-                                                                BR2_PACKAGE_BATOCERA_GLES3              && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3326
+    select BR2_PACKAGE_JAZZ2_NATIVE                         if !BR2_PACKAGE_BATOCERA_TARGET_RISCV
 
     help
         Ports
@@ -1762,7 +1760,6 @@ config BR2_PACKAGE_BATOCERA_SDL2
     bool "BATOCERA SDL2"
 
     select BR2_PACKAGE_SDL2
-    select BR2_PACKAGE_SDL12_COMPAT                         if !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_SDL2_GFX
     select BR2_PACKAGE_SDL2_IMAGE
     select BR2_PACKAGE_SDL2_MIXER

@@ -4,7 +4,7 @@
 #
 ################################################################################
 BATOCERA_ES_WEB_UI_VERSION = 0.1
-BATOCERA_ES_WEB_UI_LICENSE = LGPL 
+BATOCERA_ES_WEB_UI_LICENSE = LGPL
 BATOCERA_ES_WEB_UI_DEPENDENCIES = batocera-emulationstation
 BATOCERA_ES_WEB_UI_SOURCE =
 

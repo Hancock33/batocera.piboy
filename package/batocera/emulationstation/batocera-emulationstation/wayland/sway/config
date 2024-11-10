@@ -1,3 +1,5 @@
+include /var/run/sway-display.conf
+
 # Modifier key
 set $alt Mod1
 

@@ -24,6 +24,7 @@ libxmp.mk
 libzedmd.mk
 mame.mk
 mold.mk
+nblood.mk
 nv-codec-headers.mk
 pcsx2.mk
 projectm.mk
@@ -36,6 +37,7 @@ rockpro64-blobs.mk
 rpi-firmware.mk
 rtmidi.mk
 ruffle.mk
+ryujinx.mk
 ryzenadj.mk
 sockpp.mk
 sound-open-firmware.mk

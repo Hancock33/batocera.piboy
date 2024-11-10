@@ -9,7 +9,17 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ... import Command
-from ...batoceraPaths import BATOCERA_SHADERS, CONFIGS, HOME, OVERLAYS, ROMS, SAVES, USER_SHADERS, mkdir_if_not_exists
+from ...batoceraPaths import (
+    BATOCERA_SHADERS,
+    BIOS,
+    CONFIGS,
+    HOME,
+    OVERLAYS,
+    ROMS,
+    SAVES,
+    USER_SHADERS,
+    mkdir_if_not_exists,
+)
 from ...settings.unixSettings import UnixSettings
 from ...utils import videoMode as videoMode
 from ..Generator import Generator
@@ -384,6 +394,19 @@ class LibretroGenerator(Generator):
             else:
                 corePath = system.config['core']
             commandArray.append(f'/var/run/cmdfiles/{rom_path.stem}.cmd')
+
+        if system.config['core'] == 'hatarib':
+            biosdir = BIOS / "hatarib"
+            if not biosdir.exists():
+                biosdir.mkdir()
+            targetlink = biosdir / "hdd"
+            #retroarch can't use hdd files outside his system directory (/userdata/bios)
+            if targetlink.exists():
+                targetlink.unlink()
+            if rom_path.suffix.lower() in ['.hd', '.gemdos']:
+                #don't pass hd drive as parameter, it need to be added in configuration
+                dontAppendROM = True
+                targetlink.symlink_to(rom_path)
 
         if dontAppendROM == False:
             commandArray.append(rom_path)

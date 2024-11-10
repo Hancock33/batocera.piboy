@@ -28,7 +28,7 @@ class DuckstationGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         mkdir_if_not_exists(Path("/userdata/system/cache/psx"))
-        
+
         rom_path = Path(rom)
 
         # Test if it's a m3u file

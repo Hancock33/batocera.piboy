@@ -19,7 +19,7 @@ class ECWolfGenerator(Generator):
     def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "ecwolf",
-            "keys": { 
+            "keys": {
                 "exit": ["KEY_LEFTALT", "KEY_F4"],
                 "menu": "KEY_ESC",
                 "pause": "KEY_ESC",

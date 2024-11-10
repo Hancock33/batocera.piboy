@@ -3,8 +3,8 @@
 # wine-ntsync
 #
 ################################################################################
-# Version: Commits on Nov 01, 2024
-WINE_NTSYNC_VERSION = ntsynch-9.20.r143.gff2070b7900
+# Version: Commits on Nov 08, 2024
+WINE_NTSYNC_VERSION = 78d260ddb8c8edc3d1a581218c0b844107b98ec5
 WINE_NTSYNC_BRANCH = ntsynch
 WINE_NTSYNC_SOURCE = wine-ntsync-$(WINE_NTSYNC_VERSION).tar.gz
 WINE_NTSYNC_SITE = $(call github,Hancock33,wine-tkg-batocera,$(WINE_NTSYNC_VERSION))

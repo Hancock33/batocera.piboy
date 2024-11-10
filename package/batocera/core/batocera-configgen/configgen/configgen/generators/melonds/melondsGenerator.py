@@ -31,7 +31,7 @@ class MelonDSGenerator(Generator):
 
         # Config file path
         configFileName = _MELONDS_CONFIG / "melonDS.toml"
-        
+
         # Load existing config if file exists
         if configFileName.exists():
             with open(configFileName, "r") as toml_file:
@@ -103,23 +103,23 @@ class MelonDSGenerator(Generator):
         # Override Renderer if system option is set
         if system.isOptSet("melonds_renderer"):
             base_config["3D"]["Renderer"] = int(system.config["melonds_renderer"])
-        
+
         if system.isOptSet("melonds_vsync"):
             base_config["Screen"]["VSync"] = system.config["melonds_vsync"]
             base_config["Screen"]["VSyncInterval"] = 1
-        
+
         # Cheater! Enable cheats if the option is set
         if system.isOptSet("melonds_cheats"):
             base_config["Instance0"]["EnableCheats"] = system.config["melonds_cheats"]
         else:
             base_config["Instance0"]["EnableCheats"] = False
-        
+
         # Framerate
         if system.isOptSet("melonds_framerate"):
             base_config["LimitFPS"] = system.config["melonds_framerate"]
         else:
             base_config["LimitFPS"] = True
-        
+
         # Resolution
         if system.isOptSet("melonds_resolution"):
             base_config["3D"]["GL"]["ScaleFactor"] = int(system.config["melonds_resolution"])
@@ -127,11 +127,11 @@ class MelonDSGenerator(Generator):
                 base_config["3D"]["GL"]["HiresCoordinates"] = True
             else:
                 base_config["3D"]["GL"]["HiresCoordinates"] = False
-        
+
         # Polygons
         if system.isOptSet("melonds_polygons"):
             base_config["3D"]["GL"]["BetterPolygons"] = system.config["melonds_polygons"]
-        
+
         # Rotation
         if system.isOptSet("melonds_rotation"):
             base_config["Instance0"]["Window0"]["ScreenRotation"] = int(system.config["melonds_rotation"])
@@ -149,25 +149,25 @@ class MelonDSGenerator(Generator):
             base_config["Instance0"]["Window0"]["ScreenLayout"] = int(system.config["melonds_layout"])
         else:
             base_config["Instance0"]["Window0"]["ScreenLayout"] = 0
-        
+
         # Screen Sizing
         if system.isOptSet("melonds_screensizing"):
             base_config["Instance0"]["Window0"]["ScreenSizing"] = int(system.config["melonds_screensizing"])
         else:
             base_config["Instance0"]["Window0"]["ScreenSizing"] = 0
-        
+
         # Integer Scaling
         if system.isOptSet("melonds_scaling"):
             base_config["Instance0"]["Window0"]["IntegerScaling"] = system.config["melonds_scaling"]
         else:
             base_config["Instance0"]["Window0"]["IntegerScaling"] = 0
-        
+
         # OSD
         if system.isOptSet("melonds_osd"):
             base_config["Instance0"]["Window0"]["ShowOSD"] = system.config["melonds_osd"]
         else:
             base_config["Instance0"]["Window0"]["ShowOSD"] = False
-        
+
         # Console
         if system.isOptSet("melonds_console"):
             base_config["Emu"]["ConsoleType"] = int(system.config["melonds_console"])
@@ -189,7 +189,7 @@ class MelonDSGenerator(Generator):
             "x":        "X",
             "y":        "Y"
         }
-        
+
         val = -1
         for controller, pad in sorted(playersControllers.items()):
             # Only use Player 1 controls
