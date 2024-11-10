@@ -9431,6 +9431,16 @@ msgctxt "game_options"
 msgid "CUSTOM CONTROLLER"
 msgstr ""
 
+#. TRANSLATION: devilutionx
+msgctxt "game_options"
+msgid "Fills the screen."
+msgstr ""
+
+#. TRANSLATION: devilutionx, duckstation
+msgctxt "game_options"
+msgid "STRETCH TO FILL"
+msgstr ""
+
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
 msgid "The final output image, unrelated to the Wii's emulated NAND setting."
@@ -9993,11 +10003,6 @@ msgctxt "game_options"
 msgid ""
 "Fills the screen regardless of the aspect ratio. Doesn't work with Integer "
 "Upscaling."
-msgstr ""
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "STRETCH TO FILL"
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -16274,17 +16279,17 @@ msgctxt "keys_files"
 msgid "Exit Dolphin"
 msgstr ""
 
-#. TRANSLATION: doom3.dhewm3.keys, mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
+#. TRANSLATION: doom3.dhewm3.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, ...
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr ""
 
-#. TRANSLATION: doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: doom3.dhewm3.keys, cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr ""
 
-#. TRANSLATION: doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: doom3.dhewm3.keys, cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Load"
 msgstr ""
@@ -16304,6 +16309,21 @@ msgctxt "keys_files"
 msgid "Configuration menu"
 msgstr ""
 
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, psp.ppsspp.keys, ...
+msgctxt "keys_files"
+msgid "Save State"
+msgstr ""
+
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, psp.ppsspp.keys, ...
+msgctxt "keys_files"
+msgid "Load State"
+msgstr ""
+
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, dreamcast.redream.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
+msgctxt "keys_files"
+msgid "Hide the bezel"
+msgstr ""
+
 #. TRANSLATION: moonlight.moonlight.keys
 msgctxt "keys_files"
 msgid "Exit emulator using SDL"
@@ -16312,16 +16332,6 @@ msgstr ""
 #. TRANSLATION: mame.keys
 msgctxt "keys_files"
 msgid "Exit Emulator"
-msgstr ""
-
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Load State"
-msgstr ""
-
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Save State"
 msgstr ""
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
@@ -16362,11 +16372,6 @@ msgstr ""
 #. TRANSLATION: psx.duckstation.keys
 msgctxt "keys_files"
 msgid "Next Disc (m3u)"
-msgstr ""
-
-#. TRANSLATION: dreamcast.redream.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, dreamcast.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Hide the bezel"
 msgstr ""
 
 #. TRANSLATION: scummvm.keys
