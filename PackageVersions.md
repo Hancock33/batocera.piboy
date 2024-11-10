@@ -275,7 +275,7 @@ Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/rel
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|2262ac1684cc9f770b5212f23648ca1b1b1737b3|Nov 05, 2024
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-11-10|Nov 10, 2024
-Emulators|[ryujinx](https://github.com/GreemDev/Ryujinx/releases)|1.2.72|Nov 03, 2024
+Emulators|[ryujinx](https://github.com/GreemDev/Ryujinx-Canary/releases)|1.2.19|Nov 10, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|bd07ef9a4cdf8096b0959c92f7998ed40762d9f4|Nov 09, 2024
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|7ab851592bca44c27e5c6a8f86d50361199b7082|Nov 10, 2024
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
