@@ -457,7 +457,7 @@ Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|5ac76b8ed17a1cc6de46539039e17e3a73b8f1bd|Sept 03, 2024
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|7fad51314417d4aea742a21226a8d01e84c2a4a1|Nov 09, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241109|Nov 09, 2024
-Ports|[nblood](http://github.com/nukeykt/NBlood)|70d980dbf3b6ce995d82de9791d003a366241317|Nov 07, 2024
+Ports|[nblood](http://github.com/nukeykt/NBlood)|r14122|Nov 10, 2024
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|d6f461a7085f18a4ae54caecd899f84ed2490a6f|Nov 09, 2024
 Ports|[openclaw](http://github.com/pjasicek/OpenClaw)|5ee5740ca98377c76b13b50c84f610b0066a4717|Jul 13, 2022
