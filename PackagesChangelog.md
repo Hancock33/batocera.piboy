@@ -2,15 +2,20 @@
 -----|:-----:|:-----:|:-----:
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|b13128bb0719a9f58e6e1af2f88242077fdc5ed9|Nov 10, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|b13128bb0719a9f58e6e1af2f88242077fdc5ed9|Nov 10, 2024
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|d1ef4d5cc17efed52520b37072c4988caa70f171|Nov 10, 2024
+Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|aed9c61e0a78e24644386f7329144f108b4f507c|Nov 10, 2024
+Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|3c7b6c1d8f7ee6030e283a9ad64651385865d246|Nov 10, 2024
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|375a990e411cc4739c5370276457e88d4f995d8f|Nov 10, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|439e05bbf2f29242ddec4ded5d0e24bb41206446|Nov 10, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-11-10|Nov 10, 2024
 Emulators|[ryujinx](https://github.com/GreemDev/Ryujinx-Canary/releases)|1.2.19|Nov 10, 2024
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|7ab851592bca44c27e5c6a8f86d50361199b7082|Nov 10, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|5d941f702aeb6d7b61bcb1ab3f2fbeddddc1f82b|Nov 10, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|cf5b94d4716875826a7928951b1d304d2f869e47|Nov 10, 2024
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|b50949a8d1ebab7cee1fc6d8ef1fa9fd953db110|Nov 10, 2024
+Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|9da8e776c28f881d9d328a33fe0dddfb5c5c1295|Nov 10, 2024
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|55afa276650e0e558d4dce5924792bf3c067f590|Nov 10, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|r14122|Nov 10, 2024
-Ports|[supertux2](https://github.com/SuperTux/supertux.git)|2255970bc82bc6e456e67cdacb7daaaa499b5cd5|Nov 10, 2024
+Ports|[omf2097](http://github.com/omf2097/openomf)|96fdc351a8abf8a26c8255189e47b9784acb5745|Nov 10, 2024
+Ports|[supertux2](https://github.com/SuperTux/supertux.git)|ecd70425ce510aa65751c575a757c39aeb04390a|Nov 10, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|2cb2956b055907ca5adbe842adec6f19261e502b|Nov 10, 2024
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|d5be3c6086bdf94baa52b54f155092563085624c|Nov 10, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|77362378720e94d968f233d4723ad8476a1bc762|Nov 10, 2024
@@ -21,7 +26,6 @@ Ports|[yquake2](http://github.com/yquake2/yquake2)|b64ae0ed6ee9bec21dd48a67ec05e
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|2cb2956b055907ca5adbe842adec6f19261e502b|Nov 10, 2024
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|2b3a288b304250567a897148fc327c8a251e7863|Nov 10, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|ba1a04bfeff18e6b15faba1b1084b4b1b19bf744|Nov 10, 2024
-Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|336e13457ae8488de3c3f5232ffb447ef2bcf942|Nov 09, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|2e829479d9f63dcfbd8ef67d456793a70f684b18|Nov 09, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|fc33002284d74d85f45ec6f7c5255474c70d6ad5|Nov 09, 2024
 Emulators|[hatari](http://github.com/hatari/hatari)|c50bbfcf8519cded03b6e5a6a79a78f4649cb4a0|Nov 09, 2024
@@ -32,9 +36,6 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|fe6db07f0db71f219c5b3
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|bd07ef9a4cdf8096b0959c92f7998ed40762d9f4|Nov 09, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|6ffe53b779cd1ffab765837876ae99f41e7b05d0|Nov 09, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|15a9e614aa7d61c803ff36a9b9f51d6afac43342|Nov 09, 2024
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|66b0f4373187b5529db0d37dc2c0e8626495f12f|Nov 09, 2024
-Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|1316f4ac380e92569044e8f5a579dee2e8354b8c|Nov 09, 2024
-Ports|[omf2097](http://github.com/omf2097/openomf)|d6f461a7085f18a4ae54caecd899f84ed2490a6f|Nov 09, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|proton-9.0.133505.20241108|Nov 09, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|1e749beb2e84401344337b2f3865f156a667d946|Nov 09, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|4019226f80262fc47175e590c75d2f616aeac72c|Nov 09, 2024
@@ -96,7 +97,6 @@ Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|573ccd6e5a174d12ff
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|fb71d0ecf74bc79d8e8c131d0bb8f9b610e8348b|Nov 02, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|8e0159ea82bb5a4e6cd96be8a423f4387fe0c187|Nov 02, 2024
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|24.11|Nov 01, 2024
-Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|b36143f92ebdcc3ffb104d03f78ad2f1752c8bfe|Nov 01, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|fbad66e5bcf7796d23d21054b2730aea39a57069|Nov 01, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|f71962469e925e79760cf720c834065745f9d7c7|Nov 01, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|16c1081d5d5b76a7789425828af71a1c666b76aa|Nov 01, 2024

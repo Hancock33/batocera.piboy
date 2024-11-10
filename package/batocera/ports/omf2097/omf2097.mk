@@ -3,8 +3,8 @@
 # omf2097
 #
 ################################################################################
-# Version: Commits on Nov 09, 2024
-OMF2097_VERSION = d6f461a7085f18a4ae54caecd899f84ed2490a6f
+# Version: Commits on Nov 10, 2024
+OMF2097_VERSION = 96fdc351a8abf8a26c8255189e47b9784acb5745
 OMF2097_SITE = $(call github,omf2097,openomf,$(OMF2097_VERSION))
 OMF2097_DEPENDENCIES = sdl2 sdl2_mixer libargtable2 enet libconfuse
 OMF2097_LICENSE = MIT
