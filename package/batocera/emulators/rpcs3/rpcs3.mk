@@ -29,11 +29,14 @@ RPCS3_CONF_OPTS += -DUSE_SYSTEM_CURL=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_LIBPNG=ON
 RPCS3_CONF_OPTS += -DUSE_LIBEVDEV=ON
 RPCS3_CONF_OPTS += -DUSE_FAUDIO=ON
-# sdl controller config seems broken...
-RPCS3_CONF_OPTS += -DUSE_SDL=OFF
 
 RPCS3_CONF_ENV = LIBS="-ncurses -ltinfo"
 
+ifeq ($(BR2_PACKAGE_SDL2),y)
+    RPCS3_CONF_OPTS += -DUSE_SDL=ON
+else
+    RPCS3_CONF_OPTS += -DUSE_SDL=OFF
+endif
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
     RPCS3_CONF_OPTS += -DUSE_VULKAN=ON
 else
@@ -41,15 +44,12 @@ else
 endif
 
 define RPCS3_BUILD_CMDS
-	$(TARGET_CONFIGURE_OPTS) \
-		$(NINJA) -C $(@D)/buildroot-build
+	$(TARGET_CONFIGURE_OPTS) $(NINJA) -C $(@D)/buildroot-build
 endef
 
 define RPCS3_INSTALL_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	$(INSTALL) -D -m 0644 \
-		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/rpcs3/evmapy.keys \
-		$(TARGET_DIR)/usr/share/evmapy/ps3.keys
+	$(INSTALL) -D -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/rpcs3/evmapy.keys $(TARGET_DIR)/usr/share/evmapy/ps3.keys
 endef
 
 RPCS3_POST_INSTALL_TARGET_HOOKS = RPCS3_INSTALL_EVMAPY
