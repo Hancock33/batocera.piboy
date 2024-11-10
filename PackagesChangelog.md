@@ -2,23 +2,25 @@
 -----|:-----:|:-----:|:-----:
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|b13128bb0719a9f58e6e1af2f88242077fdc5ed9|Nov 10, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|b13128bb0719a9f58e6e1af2f88242077fdc5ed9|Nov 10, 2024
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|d1ef4d5cc17efed52520b37072c4988caa70f171|Nov 10, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|439e05bbf2f29242ddec4ded5d0e24bb41206446|Nov 10, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-11-10|Nov 10, 2024
 Emulators|[ryujinx](https://github.com/GreemDev/Ryujinx-Canary/releases)|1.2.19|Nov 10, 2024
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|7ab851592bca44c27e5c6a8f86d50361199b7082|Nov 10, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|5d941f702aeb6d7b61bcb1ab3f2fbeddddc1f82b|Nov 10, 2024
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|e692acb049cc4092564ee7ef76a58fe718835ad3|Nov 10, 2024
+Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|55afa276650e0e558d4dce5924792bf3c067f590|Nov 10, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|r14122|Nov 10, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|2255970bc82bc6e456e67cdacb7daaaa499b5cd5|Nov 10, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|2cb2956b055907ca5adbe842adec6f19261e502b|Nov 10, 2024
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|d5be3c6086bdf94baa52b54f155092563085624c|Nov 10, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|77362378720e94d968f233d4723ad8476a1bc762|Nov 10, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|4b089feb9bf5145a420071c6094aa539812e4b75|Nov 10, 2024
+Ports|[yquake2](http://github.com/yquake2/yquake2)|b64ae0ed6ee9bec21dd48a67ec05e386a38772e5|Nov 10, 2024
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|2cb2956b055907ca5adbe842adec6f19261e502b|Nov 10, 2024
-Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|7a8876bba71832993c9adb8b5916aa4a81339a9a|Nov 10, 2024
+Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|2b3a288b304250567a897148fc327c8a251e7863|Nov 10, 2024
+Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|ba1a04bfeff18e6b15faba1b1084b4b1b19bf744|Nov 10, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|336e13457ae8488de3c3f5232ffb447ef2bcf942|Nov 09, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|2e829479d9f63dcfbd8ef67d456793a70f684b18|Nov 09, 2024
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|deee3ee410ad24821428376035a96de1e86c356a|Nov 09, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|fc33002284d74d85f45ec6f7c5255474c70d6ad5|Nov 09, 2024
 Emulators|[hatari](http://github.com/hatari/hatari)|c50bbfcf8519cded03b6e5a6a79a78f4649cb4a0|Nov 09, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|e355e62eb09d076741e5b16a3c057a1aa51b5eb6|Nov 09, 2024
@@ -28,8 +30,8 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|fe6db07f0db71f219c5b3
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|bd07ef9a4cdf8096b0959c92f7998ed40762d9f4|Nov 09, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|6ffe53b779cd1ffab765837876ae99f41e7b05d0|Nov 09, 2024
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|15a9e614aa7d61c803ff36a9b9f51d6afac43342|Nov 09, 2024
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|66b0f4373187b5529db0d37dc2c0e8626495f12f|Nov 09, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|1316f4ac380e92569044e8f5a579dee2e8354b8c|Nov 09, 2024
-Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|7fad51314417d4aea742a21226a8d01e84c2a4a1|Nov 09, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|d6f461a7085f18a4ae54caecd899f84ed2490a6f|Nov 09, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|proton-9.0.133505.20241108|Nov 09, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241109|Nov 09, 2024
@@ -115,7 +117,6 @@ Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|7e2975e90632
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|fd05ca7df5259a2cd0aa9204f331e0b05126c376|Oct 28, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|ec2263a26286bff5304cad74430bdbce98409e1c|Oct 28, 2024
 Ports|[raze](http://github.com/ZDoom/Raze)|0fa0e3da23d8711a4bb69500fef64e3c982d8979|Oct 27, 2024
-Ports|[yquake2](http://github.com/yquake2/yquake2)|19a119417c0a437fbe3243ca42d2a7d3fa9443b9|Oct 27, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|cf532d7c7675d3ffa5d69009d63869daf73955cb|Oct 26, 2024
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|1c38f0cff707b340910667f0b9a5fea4cbac7790|Oct 26, 2024
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|f0bf9aafeacf12edff38400d7c21e3825650a57d|Oct 26, 2024
@@ -208,7 +209,6 @@ Emulators|[libretro-nestopia](http://github.com/libretro/nestopia)|b932740e8abbe
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|67a29e60a4d194b675c9272b21b61eaa022f3ba3|Oct 17, 2024
 Emulators|[libretro-p2000t](http://github.com/p2000t/M2000)|82d07bb44b70e349d1843accdb01bea57dd355a8|Oct 17, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.28.0|Oct 16, 2024
-Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|365db37d919031d11abb07e1eb3010cf9ced270b|Oct 16, 2024
 Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|06b03a2494a366f6c664fb66f7d8be5cfe7338b9|Oct 16, 2024
 Emulators|[libretro-vircon32](http://github.com/vircon32/vircon32-libretro)|9a44a83e5aaa82be7f1a127eb0c9ec0b287b58fa|Oct 16, 2024
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|979be845216ee9d613cb6555fb8b11c01bec39a0|Oct 16, 2024
