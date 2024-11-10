@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PWM + RGB unified LED driver 
+PWM + RGB unified LED driver
 Written for Batocera - @lbrpdx
 """
 import os
@@ -17,7 +17,7 @@ DEFAULT_ES_COLOR = '255 0 165'
 ####################
 # Is your handheld supported by this library?
 def batocera_model():
-    l = '/sys/class/leds/multicolor:chassis/multi_intensity' 
+    l = '/sys/class/leds/multicolor:chassis/multi_intensity'
     if os.path.exists(l):
         return("rgb")
     c = glob.glob('/sys/class/pwm/pwmchip*/device/name')
@@ -145,7 +145,7 @@ class pwmled(object):
         self.led = []
         for t in c:
             ret = self.pwmchip_init(t)
-            if ret: 
+            if ret:
                 self.led.append(ret)
         self.brightness     = -1
         self.max_brightness = -1
@@ -306,7 +306,7 @@ class led(object):
         elif m == "rgb":
             return rgbled()
         else:
-            print(m) 
+            print(m)
 
 ####################
 # Helper functions and effects
@@ -357,7 +357,7 @@ def getPulseRGB(num, step, rgb): # num = order from 0 to step
     nr, ng, nb = int(coeff*float(r)), int(coeff*float(g)), int(coeff*float(b))
     out = f'{nr:0>2X}{ng:0>2X}{nb:0>2X}'
     return (out)
-    
+
 
 ####################
 # if invoked as a command line: respond with supported Model, or None

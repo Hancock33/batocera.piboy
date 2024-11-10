@@ -10,7 +10,7 @@ DHEWM3_LICENSE = GPLv3
 DHEWM3_LICENSE_FILES = COPYING.txt
 DHEWM3_SUBDIR = neo
 
-DHEWM3_DEPENDENCIES = host-libjpeg libcurl libogg libvorbis openal sdl2 zlib 
+DHEWM3_DEPENDENCIES = host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
 
 define DHEWM3_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
