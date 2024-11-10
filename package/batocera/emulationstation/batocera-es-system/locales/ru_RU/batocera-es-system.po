@@ -7604,6 +7604,11 @@ msgstr ""
 "Заполняет экран независимо от соотношения сторон. Не работает с "
 "целочисленным масштабированием."
 
+#. TRANSLATION: devilutionx
+msgctxt "game_options"
+msgid "Fills the screen."
+msgstr ""
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Final image filtering."
@@ -8850,7 +8855,7 @@ msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 msgstr "Скрыть прицел в поддерживаемых играх, например в ActionMax, Maddog II."
 
-#. TRANSLATION: dreamcast.redream.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, dreamcast.flycast.keys, ...
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, dreamcast.redream.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Hide the bezel"
 msgstr "Скрыть рамку"
@@ -9947,7 +9952,7 @@ msgctxt "game_options"
 msgid "Linear filtering"
 msgstr ""
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, psp.ppsspp.keys, ...
 msgctxt "keys_files"
 msgid "Load State"
 msgstr "Загрузка"
@@ -12367,12 +12372,12 @@ msgctxt "keys_files"
 msgid "Quick Kick"
 msgstr ""
 
-#. TRANSLATION: doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: doom3.dhewm3.keys, cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Load"
 msgstr "Быстрая загрузка"
 
-#. TRANSLATION: doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: doom3.dhewm3.keys, cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Быстрое сохранение"
@@ -13479,7 +13484,7 @@ msgctxt "game_options"
 msgid "STRETCH TO DISPLAY AREA"
 msgstr "РАСТЯНУТЬ ПО ЭКРАНУ"
 
-#. TRANSLATION: duckstation
+#. TRANSLATION: devilutionx, duckstation
 msgctxt "game_options"
 msgid "STRETCH TO FILL"
 msgstr "РАСТЯНУТЬ ДЛЯ ЗАПОЛНЕНИЯ"
@@ -13584,7 +13589,7 @@ msgctxt "game_options"
 msgid "Saturn Pad"
 msgstr "Saturn Pad"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, psp.ppsspp.keys, ...
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "Сохранение"
@@ -13649,7 +13654,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Наклон экрана (градус)"
 
-#. TRANSLATION: doom3.dhewm3.keys, mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
+#. TRANSLATION: doom3.dhewm3.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, ...
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Скриншот"

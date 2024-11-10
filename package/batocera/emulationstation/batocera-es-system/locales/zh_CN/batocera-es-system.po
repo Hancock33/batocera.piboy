@@ -7491,6 +7491,11 @@ msgid ""
 "Upscaling."
 msgstr "仅填充屏幕而不考虑长宽比，不适用于整数放大。"
 
+#. TRANSLATION: devilutionx
+msgctxt "game_options"
+msgid "Fills the screen."
+msgstr ""
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Final image filtering."
@@ -8718,7 +8723,7 @@ msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 msgstr "在支持的游戏中隐藏十字光标, 例如ActionMax、Maddog II."
 
-#. TRANSLATION: dreamcast.redream.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, dreamcast.flycast.keys, ...
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, dreamcast.redream.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Hide the bezel"
 msgstr "隐藏挡板"
@@ -9799,7 +9804,7 @@ msgctxt "game_options"
 msgid "Linear filtering"
 msgstr "线性滤波"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, psp.ppsspp.keys, ...
 msgctxt "keys_files"
 msgid "Load State"
 msgstr "载入状态"
@@ -12180,12 +12185,12 @@ msgctxt "keys_files"
 msgid "Quick Kick"
 msgstr ""
 
-#. TRANSLATION: doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: doom3.dhewm3.keys, cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Load"
 msgstr "快速载入"
 
-#. TRANSLATION: doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: doom3.dhewm3.keys, cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "快速保存"
@@ -13280,7 +13285,7 @@ msgctxt "game_options"
 msgid "STRETCH TO DISPLAY AREA"
 msgstr "拉伸至显示区域"
 
-#. TRANSLATION: duckstation
+#. TRANSLATION: devilutionx, duckstation
 msgctxt "game_options"
 msgid "STRETCH TO FILL"
 msgstr "拉伸填充"
@@ -13385,7 +13390,7 @@ msgctxt "game_options"
 msgid "Saturn Pad"
 msgstr "世嘉土星 Pad"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, psp.ppsspp.keys, ...
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "保存状态"
@@ -13450,7 +13455,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "屏幕倾斜度(度)"
 
-#. TRANSLATION: doom3.dhewm3.keys, mame.keys, psx.duckstation.keys, scummvm.keys, triforce.dolphin_triforce.keys, ...
+#. TRANSLATION: doom3.dhewm3.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, ...
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "截图"
