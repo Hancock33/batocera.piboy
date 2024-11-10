@@ -4,6 +4,7 @@ Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/b
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|b13128bb0719a9f58e6e1af2f88242077fdc5ed9|Nov 10, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|439e05bbf2f29242ddec4ded5d0e24bb41206446|Nov 10, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-11-10|Nov 10, 2024
+Emulators|[ryujinx](https://github.com/GreemDev/Ryujinx-Canary/releases)|1.2.19|Nov 10, 2024
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|7ab851592bca44c27e5c6a8f86d50361199b7082|Nov 10, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|5d941f702aeb6d7b61bcb1ab3f2fbeddddc1f82b|Nov 10, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|e692acb049cc4092564ee7ef76a58fe718835ad3|Nov 10, 2024
@@ -82,7 +83,6 @@ Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|42e8f2140b6535058d156a4fab0500468d98ba17|Nov 05, 2024
 Emulators|[mupen64plus-rsp-hle](http://github.com/mupen64plus/mupen64plus-rsp-hle)|47f8e92e9a8bb9e49195ecfb03e9df0b63add242|Nov 04, 2024
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|611f3a340900e4c5e8a492cfee713870da66b056|Nov 04, 2024
-Emulators|[ryujinx](https://github.com/GreemDev/Ryujinx/releases)|1.2.72|Nov 03, 2024
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|72559114c86910209b60910758645754cc5f91a3|Nov 03, 2024
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|e170c409fb006aa38fd02031b5eefab6886ec125|Nov 03, 2024
 Emulators|[mupen64plus-input-sdl](http://github.com/mupen64plus/mupen64plus-input-sdl)|a4dc0d295e55dbe5ab42c2bc76742631d68b1b83|Nov 03, 2024

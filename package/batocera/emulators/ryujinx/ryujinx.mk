@@ -3,10 +3,10 @@
 # ryujinx
 #
 ################################################################################
-# Version: Commits on Nov 03, 2024
-RYUJINX_VERSION = 1.2.72
+# Version: Commits on Nov 10, 2024
+RYUJINX_VERSION = 1.2.19
 RYUJINX_SOURCE = ryujinx-$(RYUJINX_VERSION)-linux_x64.tar.gz
-RYUJINX_SITE = https://github.com/GreemDev/Ryujinx/releases/download/$(RYUJINX_VERSION)
+RYUJINX_SITE = https://github.com/GreemDev/Ryujinx-Canary/releases/download/1.2.19/$(RYUJINX_VERSION)
 RYUJINX_LICENSE = MIT
 RYUJINX_DEPENDENCIES = sdl2 openal hicolor-icon-theme adwaita-icon-theme librsvg
 
