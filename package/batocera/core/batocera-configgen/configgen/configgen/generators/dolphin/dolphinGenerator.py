@@ -489,8 +489,8 @@ class DolphinGenerator(Generator):
             commandArray.extend(["--save_state", system.config['state_filename']])
 
         return Command.Command(
-            array=commandArray, 
-            env={ 
+            array=commandArray,
+            env={
                 "XDG_CONFIG_HOME": CONFIGS,
                 "XDG_DATA_HOME": SAVES,
                 "XDG_CACHE_HOME": CACHE

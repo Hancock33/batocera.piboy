@@ -219,10 +219,10 @@ index 136a8231355a..15d7392020ca 100644
  	.thread_node	= LIST_HEAD_INIT(init_signals.thread_head),
  #ifdef CONFIG_AUDIT
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 22e6497af272..dd3963bfd820 100644
+index 8287afdd01d2..c5b2a2c8beb7 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
-@@ -1302,7 +1302,7 @@ static struct mm_struct *mm_init(struct mm_struct *mm, struct task_struct *p,
+@@ -1303,7 +1303,7 @@ static struct mm_struct *mm_init(struct mm_struct *mm, struct task_struct *p,
  	if (init_new_context(p, mm))
  		goto fail_nocontext;
  
@@ -232,7 +232,7 @@ index 22e6497af272..dd3963bfd820 100644
  
  	if (percpu_counter_init_many(mm->rss_stat, 0, GFP_KERNEL_ACCOUNT,
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index dbfb5717d6af..1c9e75f2025c 100644
+index 719e0ed1e976..9d489ef50a51 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -594,7 +594,7 @@ void raw_spin_rq_lock_nested(struct rq *rq, int subclass)
@@ -361,10 +361,10 @@ index d2f096bb274c..ab911d1335ba 100644
  		/*
  		 * Interrupts shouldn't be re-enabled from that point on until
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 991226ab5250..7b6eb8c868e8 100644
+index f610df2e0811..3d1deb7186f5 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
-@@ -3599,24 +3599,41 @@ static inline void mm_cid_put(struct mm_struct *mm)
+@@ -3629,24 +3629,41 @@ static inline void mm_cid_put(struct mm_struct *mm)
  	__mm_cid_put(mm, mm_cid_clear_lazy_put(cid));
  }
  
@@ -413,7 +413,7 @@ index 991226ab5250..7b6eb8c868e8 100644
  		return -1;
  
  	return cid;
-@@ -3634,7 +3651,8 @@ static inline void mm_cid_snapshot_time(struct rq *rq, struct mm_struct *mm)
+@@ -3664,7 +3681,8 @@ static inline void mm_cid_snapshot_time(struct rq *rq, struct mm_struct *mm)
  	WRITE_ONCE(pcpu_cid->time, rq->clock);
  }
  
@@ -423,7 +423,7 @@ index 991226ab5250..7b6eb8c868e8 100644
  {
  	int cid;
  
-@@ -3644,13 +3662,13 @@ static inline int __mm_cid_get(struct rq *rq, struct mm_struct *mm)
+@@ -3674,13 +3692,13 @@ static inline int __mm_cid_get(struct rq *rq, struct mm_struct *mm)
  	 * guarantee forward progress.
  	 */
  	if (!READ_ONCE(use_cid_lock)) {
@@ -439,7 +439,7 @@ index 991226ab5250..7b6eb8c868e8 100644
  		if (cid >= 0)
  			goto unlock;
  	}
-@@ -3670,7 +3688,7 @@ static inline int __mm_cid_get(struct rq *rq, struct mm_struct *mm)
+@@ -3700,7 +3718,7 @@ static inline int __mm_cid_get(struct rq *rq, struct mm_struct *mm)
  	 * all newcoming allocations observe the use_cid_lock flag set.
  	 */
  	do {
@@ -448,7 +448,7 @@ index 991226ab5250..7b6eb8c868e8 100644
  		cpu_relax();
  	} while (cid < 0);
  	/*
-@@ -3687,7 +3705,8 @@ static inline int __mm_cid_get(struct rq *rq, struct mm_struct *mm)
+@@ -3717,7 +3735,8 @@ static inline int __mm_cid_get(struct rq *rq, struct mm_struct *mm)
  	return cid;
  }
  
@@ -458,7 +458,7 @@ index 991226ab5250..7b6eb8c868e8 100644
  {
  	struct mm_cid __percpu *pcpu_cid = mm->pcpu_cid;
  	struct cpumask *cpumask;
-@@ -3704,8 +3723,9 @@ static inline int mm_cid_get(struct rq *rq, struct mm_struct *mm)
+@@ -3734,8 +3753,9 @@ static inline int mm_cid_get(struct rq *rq, struct mm_struct *mm)
  		if (try_cmpxchg(&this_cpu_ptr(pcpu_cid)->cid, &cid, MM_CID_UNSET))
  			__mm_cid_put(mm, mm_cid_clear_lazy_put(cid));
  	}
@@ -469,7 +469,7 @@ index 991226ab5250..7b6eb8c868e8 100644
  
  	return cid;
  }
-@@ -3758,7 +3778,7 @@ static inline void switch_mm_cid(struct rq *rq,
+@@ -3788,7 +3808,7 @@ static inline void switch_mm_cid(struct rq *rq,
  		prev->mm_cid = -1;
  	}
  	if (next->mm_cid_active)
@@ -513,10 +513,10 @@ index e6e51d4a6f3e..13b02e376346 100644
  	if (batch < 1)
  		batch = 1;
 diff --git a/mm/vmscan.c b/mm/vmscan.c
-index 6e560ca4890d..630ae64c679b 100644
+index 6a8a68b2f7f2..e7f7f047bae1 100644
 --- a/mm/vmscan.c
 +++ b/mm/vmscan.c
-@@ -200,7 +200,7 @@ struct scan_control {
+@@ -201,7 +201,7 @@ struct scan_control {
   * From 0 .. MAX_SWAPPINESS.  Higher means more swappy.
   */
  #ifdef CONFIG_CACHY
@@ -525,7 +525,7 @@ index 6e560ca4890d..630ae64c679b 100644
  #else
  int vm_swappiness = 60;
  #endif
-@@ -3996,7 +3996,7 @@ static bool lruvec_is_reclaimable(struct lruvec *lruvec, struct scan_control *sc
+@@ -3997,7 +3997,7 @@ static bool lruvec_is_reclaimable(struct lruvec *lruvec, struct scan_control *sc
  
  /* to protect the working set of the last N jiffies */
  #ifdef CONFIG_CACHY

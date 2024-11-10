@@ -6,7 +6,7 @@
 
 KEYBOARDTOPADS_VERSION = 1
 KEYBOARDTOPADS_LICENCE = GPL
-KEYBOARDTOPADS_SOURCE = 
+KEYBOARDTOPADS_SOURCE =
 
 define KEYBOARDTOPADS_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0644 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/pads/keyboardtopads/99-keyboardtopads.rules   $(TARGET_DIR)/etc/udev/rules.d/99-keyboardtopads.rules

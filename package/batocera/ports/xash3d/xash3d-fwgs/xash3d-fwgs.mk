@@ -3,8 +3,8 @@
 # xash3d-fwgs
 #
 ################################################################################
-# Version: Commits on Nov 03, 2024
-XASH3D_FWGS_VERSION = 2972d7c3096c45bfd53207dd3b8409e51a205096
+# Version: Commits on Nov 07, 2024
+XASH3D_FWGS_VERSION = 16ed6cbdcb0be519389be729dc59ff010de17507
 XASH3D_FWGS_SITE = https://github.com/FWGS/xash3d-fwgs.git
 XASH3D_FWGS_SITE_METHOD = git
 XASH3D_FWGS_GIT_SUBMODULES = yes
@@ -17,7 +17,7 @@ XASH3D_FWGS_CONF_OPTS += --enable-packaging
 XASH3D_FWGS_CONF_OPTS += --sdl2=$(STAGING_DIR)/usr
 XASH3D_FWGS_CONF_OPTS += --disable-vgui
 XASH3D_FWGS_CONF_OPTS += --disable-menu-changegame
-XASH3D_FWGS_CONF_ENV += CFLAGS="$(TARGET_CFLAGS) -fPIC" CXXFLAGS="$(TARGET_CXXFLAGS) -fPIC" 
+XASH3D_FWGS_CONF_ENV += CFLAGS="$(TARGET_CFLAGS) -fPIC" CXXFLAGS="$(TARGET_CXXFLAGS) -fPIC"
 
 ifeq ($(BR2_ARCH_IS_64),y)
     XASH3D_FWGS_CONF_OPTS += --64bits

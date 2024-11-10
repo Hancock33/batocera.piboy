@@ -25,6 +25,13 @@ else
 MAME_CROSS_OPTS += NO_X11=1 NO_OPENGL=1 NO_USE_XINPUT=1 NO_USE_BGFX_KHRONOS=1 FORCE_DRC_C_BACKEND=1
 endif
 
+# Wayland
+ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND),y)
+MAME_CROSS_OPTS += USE_WAYLAND=1
+else
+MAME_CROSS_OPTS += USE_WAYLAND=0
+endif
+
 # allow cross-architecture compilation with MAME build system
 ifeq ($(BR2_aarch64),y)
 MAME_CROSS_ARCH = arm64
@@ -56,6 +63,10 @@ endif
 
 ifeq ($(BR2_cortex_a73_a53),y)
 MAME_CFLAGS += -mcpu=cortex-a73.cortex-a53 -mtune=cortex-a73.cortex-a53
+endif
+
+ifeq ($(BR2_cortex_a76_a55),y)
+MAME_CFLAGS += -mcpu=cortex-a76.cortex-a55 -mtune=cortex-a76.cortex-a55
 endif
 
 define MAME_BUILD_CMDS
@@ -175,9 +186,11 @@ define MAME_INSTALL_TARGET_CMDS
 	cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/dats			$(TARGET_DIR)/usr/bin/mame/
 	cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/history			$(TARGET_DIR)/usr/bin/mame/
 
-	# gameStop script when exiting a rotated screen
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/configgen/scripts
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/rotation_fix.sh $(TARGET_DIR)/usr/share/batocera/configgen/scripts/rotation_fix.sh
+	# gameStop script when exiting a rotated screen (xorg)
+	if [ "$(BR2_PACKAGE_XSERVER_XORG_SERVER)" = "y" ]; then \
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/configgen/scripts; \
+		cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/rotation_fix.sh $(TARGET_DIR)/usr/share/batocera/configgen/scripts/rotation_fix.sh; \
+	fi
 
 	# Copy user -autoboot_command overrides (batocera.linux/batocera.linux#11706)
 	mkdir -p $(MAME_CONF_INIT)/autoload
@@ -279,7 +292,6 @@ define MAME_EVMAPY
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/mame.mame.keys $(TARGET_DIR)/usr/share/evmapy/unico.mame.keys
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/mame.mame.keys $(TARGET_DIR)/usr/share/evmapy/universal.mame.keys
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/mame.mame.keys $(TARGET_DIR)/usr/share/evmapy/visco.mame.keys
-
 endef
 
 MAME_POST_INSTALL_TARGET_HOOKS += MAME_EVMAPY

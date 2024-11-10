@@ -3,8 +3,8 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Oct 28, 2024
-RPCS3_VERSION = d2d76bb560aa64f73ef6fbc6fef783ef42e3cdf3
+# Version: Commits on Nov 05, 2024
+RPCS3_VERSION = 2262ac1684cc9f770b5212f23648ca1b1b1737b3
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
@@ -14,9 +14,6 @@ RPCS3_DEPENDENCIES += libglew libglu libpng libusb mesa3d ncurses openal rtmpdum
 RPCS3_DEPENDENCIES += qt6base qt6multimedia qt6svg wolfssl
 RPCS3_SUPPORTS_IN_SOURCE_BUILD = NO
 
-RPCS3_TARGET_CFLAGS = $(TARGET_CFLAGS) -Wno-missing-template-arg-list-after-template-kw
-RPCS3_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(RPCS3_TARGET_CFLAGS)"
-RPCS3_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 RPCS3_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
 RPCS3_CONF_OPTS += -DCMAKE_CROSSCOMPILING=ON
 RPCS3_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
@@ -29,11 +26,14 @@ RPCS3_CONF_OPTS += -DUSE_SYSTEM_CURL=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_LIBPNG=ON
 RPCS3_CONF_OPTS += -DUSE_LIBEVDEV=ON
 RPCS3_CONF_OPTS += -DUSE_FAUDIO=ON
-# sdl controller config seems broken...
-RPCS3_CONF_OPTS += -DUSE_SDL=OFF
 
 RPCS3_CONF_ENV = LIBS="-ncurses -ltinfo"
 
+ifeq ($(BR2_PACKAGE_SDL2),y)
+    RPCS3_CONF_OPTS += -DUSE_SDL=ON
+else
+    RPCS3_CONF_OPTS += -DUSE_SDL=OFF
+endif
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
     RPCS3_CONF_OPTS += -DUSE_VULKAN=ON
 else
@@ -41,15 +41,12 @@ else
 endif
 
 define RPCS3_BUILD_CMDS
-	$(TARGET_CONFIGURE_OPTS) \
-		$(NINJA) -C $(@D)/buildroot-build
+	$(TARGET_CONFIGURE_OPTS) $(NINJA) -C $(@D)/buildroot-build
 endef
 
 define RPCS3_INSTALL_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	$(INSTALL) -D -m 0644 \
-		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/rpcs3/evmapy.keys \
-		$(TARGET_DIR)/usr/share/evmapy/ps3.keys
+	$(INSTALL) -D -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/rpcs3/evmapy.keys $(TARGET_DIR)/usr/share/evmapy/ps3.keys
 endef
 
 RPCS3_POST_INSTALL_TARGET_HOOKS = RPCS3_INSTALL_EVMAPY
