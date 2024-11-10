@@ -125,7 +125,7 @@ def led_check(led):
                 if color_changes_allowed():
                     led.set_color(block)
             except Exception as e:
-                print (f"Error: {e}") 
+                print (f"Error: {e}")
             time.sleep(CHECK_INTERVAL)
 
 # Prevent color changes when entering color selection

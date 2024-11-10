@@ -113,10 +113,10 @@ class PlayGenerator(Generator):
         # Functions to convert the GUID
         def get_device_id(dev: InputDevice) -> str:
             uniq = dev.uniq  # Unique string (e.g., MAC) for the device
-            
+
             if uniq and re.match(r"^([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}$", uniq):
                 return uniq.lower()  # Return the MAC address as-is, in lowercase
-            
+
             # Fallback: use vendor, product, and version if uniq is not a valid MAC
             device = [0] * 6
             vendor = dev.info.vendor
@@ -128,7 +128,7 @@ class PlayGenerator(Generator):
             device[3] = (product >> 8) & 0xFF
             device[4] = version & 0xFF
             device[5] = (version >> 8) & 0xFF
-            
+
             return ':'.join(f"{byte:x}" for byte in device)
 
         def create_input_preferences(input_config, pad_guid, key_id, key_type, provider_id, nplayer, joystick_name, binding_type, hat_value):
@@ -178,7 +178,7 @@ class PlayGenerator(Generator):
             dev = InputDevice(pad.device_path)
             pad_guid = get_device_id(dev)
             provider_id = 1702257782
-            
+
             if nplayer <= 2:
                 # Write this per pad
                 ET.SubElement(
@@ -188,13 +188,13 @@ class PlayGenerator(Generator):
                     Type="float",
                     Value=str(1.000000)
                 )
-                
+
                 # Handle joystick inputs
                 for index in controller.inputs:
                     input = controller.inputs[index]
                     if input.name not in playMapping:
                         continue
-                    
+
                     if input.type == 'axis':
                         key_type = 1
                         binding_type = 1
@@ -218,7 +218,7 @@ class PlayGenerator(Generator):
                         create_input_preferences(input_config, pad_guid, key_id, key_type, provider_id, nplayer, input.name, binding_type, hat_value)
 
                 nplayer += 1
-        
+
         # Save the controller settings to the specified input file
         input_tree = ET.ElementTree(input_config)
         ET.indent(input_tree, space="    ", level=0)

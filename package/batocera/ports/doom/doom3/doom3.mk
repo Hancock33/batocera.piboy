@@ -10,7 +10,7 @@ DOOM3_LICENSE = GPL-3.0
 DOOM3_LICENSE_FILES = COPYING.txt
 DOOM3_SUPPORTS_IN_SOURCE_BUILD = NO
 DOOM3_SUBDIR = neo
-DOOM3_DEPENDENCIES = host-libjpeg libcurl libogg libvorbis openal sdl2 zlib 
+DOOM3_DEPENDENCIES = host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
 
 DOOM3_CONF_OPTS += -DSDL2=ON
 
