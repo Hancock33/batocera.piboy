@@ -7994,7 +7994,15 @@ hypseus-singe:
                 "On":  1
 devilutionx:
   features: [padtokeyboard]
-  shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+        devilutionx_stretch:
+            prompt: STRETCH TO FILL
+            description: Fills the screen.
+            choices:
+                "Disabled (Default)": "false"
+                "Enabled":            "true"
+
 dolphin:
   cores:
     'dolphin':
@@ -9572,7 +9580,7 @@ mupen64plus:
                 "20%": 0.2
                 "25%": 0.25
 openbor:
-  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave]
   cfeatures:
         openbor_ratio:
             prompt: SCREEN RATIO
