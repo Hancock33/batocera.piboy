@@ -14,6 +14,8 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|2255970bc82bc6e456e6
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|2cb2956b055907ca5adbe842adec6f19261e502b|Nov 10, 2024
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|d5be3c6086bdf94baa52b54f155092563085624c|Nov 10, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|77362378720e94d968f233d4723ad8476a1bc762|Nov 10, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241110|Nov 10, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241110|Nov 10, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|4b089feb9bf5145a420071c6094aa539812e4b75|Nov 10, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|b64ae0ed6ee9bec21dd48a67ec05e386a38772e5|Nov 10, 2024
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|2cb2956b055907ca5adbe842adec6f19261e502b|Nov 10, 2024
@@ -34,9 +36,7 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|66b0f4373187
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|1316f4ac380e92569044e8f5a579dee2e8354b8c|Nov 09, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|d6f461a7085f18a4ae54caecd899f84ed2490a6f|Nov 09, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|proton-9.0.133505.20241108|Nov 09, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241109|Nov 09, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|1e749beb2e84401344337b2f3865f156a667d946|Nov 09, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241109|Nov 09, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|4019226f80262fc47175e590c75d2f616aeac72c|Nov 09, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|21dd58988b14351d7c0d442d9011786660a306ec|Nov 09, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|fc33002284d74d85f45ec6f7c5255474c70d6ad5|Nov 09, 2024
