@@ -3592,7 +3592,7 @@ craft:
 devilutionx:
   name:                 Diablo
   manufacturer:         Ports
-  release:
+  release:              1996
   hardware:             port
   extensions:           [mpq]
   platform:             pc
