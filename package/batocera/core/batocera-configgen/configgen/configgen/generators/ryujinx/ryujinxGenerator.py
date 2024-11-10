@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import filecmp
 import json
+import logging
 import shutil
 from os import environ
 from typing import TYPE_CHECKING, Final
@@ -19,6 +20,7 @@ if TYPE_CHECKING:
 
     from ...types import HotkeysContext
 
+eslog = logging.getLogger(__name__)
 ryujinxConf: Final = CONFIGS / "Ryujinx"
 ryujinxConfFile: Final = ryujinxConf / "Config.json"
 ryujinxKeys: Final = BIOS / "switch" / "prod.keys"
@@ -185,8 +187,9 @@ class RyujinxGenerator(Generator):
                 devices = [InputDevice(fn) for fn in evdev.list_devices()]
                 for dev in devices:
                     if dev.path == pad.device_path:
+                        eslog.debug(f"Ryujinx Controller: {dev.info}")
                         bustype = "%x" % dev.info.bustype
-                        bustype = bustype.zfill(8)
+                        bustype = "17f6" + bustype.zfill(4)
                         vendor = "%x" % dev.info.vendor
                         vendor = vendor.zfill(4)
                         product = "%x" % dev.info.product
@@ -222,6 +225,7 @@ class RyujinxGenerator(Generator):
             env={"XDG_CONFIG_HOME":CONFIGS, \
             "XDG_DATA_HOME":SAVES / "switch", \
             "XDG_CACHE_HOME":CACHE, \
+            "SDL_JOYSTICK_HIDAPI": "0", \
             "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers)})
 
 def writeControllerIntoJson(new_controller, filename: Path = ryujinxConfFile):
