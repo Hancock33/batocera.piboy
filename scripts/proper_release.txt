@@ -24,6 +24,7 @@ libxmp.mk
 libzedmd.mk
 mame.mk
 mold.mk
+nblood.mk
 nv-codec-headers.mk
 pcsx2.mk
 projectm.mk

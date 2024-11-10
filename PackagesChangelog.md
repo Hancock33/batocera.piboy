@@ -7,6 +7,7 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-11-10|Nov 10
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|7ab851592bca44c27e5c6a8f86d50361199b7082|Nov 10, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|5d941f702aeb6d7b61bcb1ab3f2fbeddddc1f82b|Nov 10, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|e692acb049cc4092564ee7ef76a58fe718835ad3|Nov 10, 2024
+Ports|[nblood](http://github.com/nukeykt/NBlood)|r14122|Nov 10, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|2255970bc82bc6e456e67cdacb7daaaa499b5cd5|Nov 10, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|2cb2956b055907ca5adbe842adec6f19261e502b|Nov 10, 2024
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|d5be3c6086bdf94baa52b54f155092563085624c|Nov 10, 2024
@@ -61,7 +62,6 @@ Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.21|Nov 08, 2
 Emulators|[dhewm3](http://github.com/dhewm/dhewm3)|d94bb42d5048148f5358a3d7cf0f5bd6eb817f4a|Nov 07, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|4e7356ab2c077aa3bc3d75fb6e164a1c943fe4c1|Nov 07, 2024
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|f4bd0f991cee8439682a31b9dd2ec56012c23efc|Nov 07, 2024
-Ports|[nblood](http://github.com/nukeykt/NBlood)|70d980dbf3b6ce995d82de9791d003a366241317|Nov 07, 2024
 Utils|[clevis](http://github.com/latchset/clevis)|4ba3f7928fcaba3af9f908661b16007dbb1ee46b|Nov 07, 2024
 Utils|[re2c](http://github.com/skvadrik/re2c)|a2d53615456605ec2acddf14631c6308a98d2f98|Nov 07, 2024
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.7.5|Nov 07, 2024
