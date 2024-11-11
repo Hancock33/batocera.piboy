@@ -551,7 +551,7 @@ index 000000000000..cd7e8a8d6075
 +#endif // CONFIG_SYSCTL
 +#endif // CONFIG_SCHED_BORE
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 9d489ef50a51..7366ad2da74d 100644
+index 16112d6af0c0..cc0a0a9ad6e4 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -97,6 +97,8 @@
@@ -563,7 +563,7 @@ index 9d489ef50a51..7366ad2da74d 100644
  EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_send_cpu);
  EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_send_cpumask);
  
-@@ -8378,6 +8380,11 @@ void __init sched_init(void)
+@@ -8388,6 +8390,11 @@ void __init sched_init(void)
  	BUG_ON(!sched_class_above(&ext_sched_class, &idle_sched_class));
  #endif
  
@@ -918,10 +918,10 @@ index 54e7c4c3e2c5..94c54154a175 100644
  }
  
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 3d1deb7186f5..3b6952abcc5c 100644
+index 672c64394809..27371248415e 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
-@@ -2074,7 +2074,11 @@ static inline void update_sched_domain_debugfs(void) { }
+@@ -2079,7 +2079,11 @@ static inline void update_sched_domain_debugfs(void) { }
  static inline void dirty_sched_domain_sysctl(int cpu) { }
  #endif
  
@@ -933,7 +933,7 @@ index 3d1deb7186f5..3b6952abcc5c 100644
  
  static inline const struct cpumask *task_user_cpus(struct task_struct *p)
  {
-@@ -2824,7 +2828,12 @@ extern void wakeup_preempt(struct rq *rq, struct task_struct *p, int flags);
+@@ -2829,7 +2833,12 @@ extern void wakeup_preempt(struct rq *rq, struct task_struct *p, int flags);
  extern const_debug unsigned int sysctl_sched_nr_migrate;
  extern const_debug unsigned int sysctl_sched_migration_cost;
  
