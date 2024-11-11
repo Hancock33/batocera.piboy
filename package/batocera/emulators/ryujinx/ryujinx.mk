@@ -3,8 +3,8 @@
 # ryujinx
 #
 ################################################################################
-# Version: Commits on Nov 10, 2024
-RYUJINX_VERSION = 1.2.19
+# Version: Commits on Nov 11, 2024
+RYUJINX_VERSION = 1.2.27
 RYUJINX_SOURCE = ryujinx-$(RYUJINX_VERSION)-linux_x64.tar.gz
 RYUJINX_SITE = https://github.com/GreemDev/Ryujinx-Canary/releases/download/$(RYUJINX_VERSION)
 RYUJINX_LICENSE = MIT
