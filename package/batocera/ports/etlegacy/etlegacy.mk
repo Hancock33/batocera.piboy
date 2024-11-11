@@ -3,8 +3,8 @@
 # etlegacy
 #
 ################################################################################
-# Version: Commits on Nov 10, 2024
-ETLEGACY_VERSION = 9da8e776c28f881d9d328a33fe0dddfb5c5c1295
+# Version: Commits on Nov 11, 2024
+ETLEGACY_VERSION = eb5b8282f469935c2077a6b70c861f04f272c7dd
 ETLEGACY_SITE = https://github.com/etlegacy/etlegacy.git
 ETLEGACY_SITE_METHOD = git
 ETLEGACY_GIT_SUBMODULES = YES
@@ -16,7 +16,6 @@ ETLEGACY_DEPENDENCIES += libvorbis lua openal openssl sdl2
 
 ETLEGACY_SUPPORTS_IN_SOURCE_BUILD = NO
 
-ETLEGACY_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 ETLEGACY_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 # build
 ETLEGACY_CONF_OPTS += -DINSTALL_DEFAULT_BASEDIR=/userdata/roms/ports/etlegacy

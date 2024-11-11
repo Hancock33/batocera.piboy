@@ -39,7 +39,7 @@ index 6c53920795c2..aaa605529a75 100644
  	 * This prevents preemption while active_mm is being loaded and
  	 * it and mm are being updated, which could cause problems for
 diff --git a/include/linux/mm_types.h b/include/linux/mm_types.h
-index 6e3bdf8e38bc..381d22eba088 100644
+index 6b6f05404304..d2f98aea340a 100644
 --- a/include/linux/mm_types.h
 +++ b/include/linux/mm_types.h
 @@ -782,6 +782,7 @@ struct vm_area_struct {
@@ -232,7 +232,7 @@ index 8287afdd01d2..c5b2a2c8beb7 100644
  
  	if (percpu_counter_init_many(mm->rss_stat, 0, GFP_KERNEL_ACCOUNT,
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 719e0ed1e976..9d489ef50a51 100644
+index b35752fdbcc0..16112d6af0c0 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -594,7 +594,7 @@ void raw_spin_rq_lock_nested(struct rq *rq, int subclass)
@@ -261,7 +261,7 @@ index 719e0ed1e976..9d489ef50a51 100644
  
  	if (queued)
  		enqueue_task(rq, p, ENQUEUE_RESTORE | ENQUEUE_NOCLOCK);
-@@ -6049,7 +6050,7 @@ pick_next_task(struct rq *rq, struct task_struct *prev, struct rq_flags *rf)
+@@ -6059,7 +6060,7 @@ pick_next_task(struct rq *rq, struct task_struct *prev, struct rq_flags *rf)
  	struct rq *rq_i;
  	bool need_sync;
  
@@ -270,7 +270,7 @@ index 719e0ed1e976..9d489ef50a51 100644
  		return __pick_next_task(rq, prev, rf);
  
  	cpu = cpu_of(rq);
-@@ -7210,7 +7211,7 @@ void rt_mutex_setprio(struct task_struct *p, struct task_struct *pi_task)
+@@ -7220,7 +7221,7 @@ void rt_mutex_setprio(struct task_struct *p, struct task_struct *pi_task)
  #if !defined(CONFIG_PREEMPTION) || defined(CONFIG_PREEMPT_DYNAMIC)
  int __sched __cond_resched(void)
  {
@@ -279,7 +279,7 @@ index 719e0ed1e976..9d489ef50a51 100644
  		preempt_schedule_common();
  		return 1;
  	}
-@@ -10250,6 +10251,7 @@ int __sched_mm_cid_migrate_from_try_steal_cid(struct rq *src_rq,
+@@ -10260,6 +10261,7 @@ int __sched_mm_cid_migrate_from_try_steal_cid(struct rq *src_rq,
  	 */
  	if (!try_cmpxchg(&src_pcpu_cid->cid, &lazy_cid, MM_CID_UNSET))
  		return -1;
@@ -287,7 +287,7 @@ index 719e0ed1e976..9d489ef50a51 100644
  	return src_cid;
  }
  
-@@ -10262,7 +10264,8 @@ void sched_mm_cid_migrate_to(struct rq *dst_rq, struct task_struct *t)
+@@ -10272,7 +10274,8 @@ void sched_mm_cid_migrate_to(struct rq *dst_rq, struct task_struct *t)
  {
  	struct mm_cid *src_pcpu_cid, *dst_pcpu_cid;
  	struct mm_struct *mm = t->mm;
@@ -297,7 +297,7 @@ index 719e0ed1e976..9d489ef50a51 100644
  	struct rq *src_rq;
  
  	lockdep_assert_rq_held(dst_rq);
-@@ -10279,9 +10282,9 @@ void sched_mm_cid_migrate_to(struct rq *dst_rq, struct task_struct *t)
+@@ -10289,9 +10292,9 @@ void sched_mm_cid_migrate_to(struct rq *dst_rq, struct task_struct *t)
  	 * allocation closest to 0 in cases where few threads migrate around
  	 * many CPUs.
  	 *
@@ -310,7 +310,7 @@ index 719e0ed1e976..9d489ef50a51 100644
  	 *
  	 * It is not useful to clear the src cid when the number of threads is
  	 * greater or equal to the number of allowed CPUs, because user-space
-@@ -10289,9 +10292,9 @@ void sched_mm_cid_migrate_to(struct rq *dst_rq, struct task_struct *t)
+@@ -10299,9 +10302,9 @@ void sched_mm_cid_migrate_to(struct rq *dst_rq, struct task_struct *t)
  	 * allowed CPUs.
  	 */
  	dst_pcpu_cid = per_cpu_ptr(mm->pcpu_cid, cpu_of(dst_rq));
@@ -323,7 +323,7 @@ index 719e0ed1e976..9d489ef50a51 100644
  		return;
  	src_pcpu_cid = per_cpu_ptr(mm->pcpu_cid, src_cpu);
  	src_rq = cpu_rq(src_cpu);
-@@ -10302,13 +10305,14 @@ void sched_mm_cid_migrate_to(struct rq *dst_rq, struct task_struct *t)
+@@ -10312,13 +10315,14 @@ void sched_mm_cid_migrate_to(struct rq *dst_rq, struct task_struct *t)
  							    src_cid);
  	if (src_cid == -1)
  		return;
@@ -339,7 +339,7 @@ index 719e0ed1e976..9d489ef50a51 100644
  }
  
  static void sched_mm_cid_remote_clear(struct mm_struct *mm, struct mm_cid *pcpu_cid,
-@@ -10547,7 +10551,7 @@ void sched_mm_cid_after_execve(struct task_struct *t)
+@@ -10557,7 +10561,7 @@ void sched_mm_cid_after_execve(struct task_struct *t)
  		 * Matches barrier in sched_mm_cid_remote_clear_old().
  		 */
  		smp_mb();
@@ -361,10 +361,10 @@ index d2f096bb274c..ab911d1335ba 100644
  		/*
  		 * Interrupts shouldn't be re-enabled from that point on until
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index f610df2e0811..3d1deb7186f5 100644
+index e7fbb1d0f316..672c64394809 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
-@@ -3629,24 +3629,41 @@ static inline void mm_cid_put(struct mm_struct *mm)
+@@ -3634,24 +3634,41 @@ static inline void mm_cid_put(struct mm_struct *mm)
  	__mm_cid_put(mm, mm_cid_clear_lazy_put(cid));
  }
  
@@ -413,7 +413,7 @@ index f610df2e0811..3d1deb7186f5 100644
  		return -1;
  
  	return cid;
-@@ -3664,7 +3681,8 @@ static inline void mm_cid_snapshot_time(struct rq *rq, struct mm_struct *mm)
+@@ -3669,7 +3686,8 @@ static inline void mm_cid_snapshot_time(struct rq *rq, struct mm_struct *mm)
  	WRITE_ONCE(pcpu_cid->time, rq->clock);
  }
  
@@ -423,7 +423,7 @@ index f610df2e0811..3d1deb7186f5 100644
  {
  	int cid;
  
-@@ -3674,13 +3692,13 @@ static inline int __mm_cid_get(struct rq *rq, struct mm_struct *mm)
+@@ -3679,13 +3697,13 @@ static inline int __mm_cid_get(struct rq *rq, struct mm_struct *mm)
  	 * guarantee forward progress.
  	 */
  	if (!READ_ONCE(use_cid_lock)) {
@@ -439,7 +439,7 @@ index f610df2e0811..3d1deb7186f5 100644
  		if (cid >= 0)
  			goto unlock;
  	}
-@@ -3700,7 +3718,7 @@ static inline int __mm_cid_get(struct rq *rq, struct mm_struct *mm)
+@@ -3705,7 +3723,7 @@ static inline int __mm_cid_get(struct rq *rq, struct mm_struct *mm)
  	 * all newcoming allocations observe the use_cid_lock flag set.
  	 */
  	do {
@@ -448,7 +448,7 @@ index f610df2e0811..3d1deb7186f5 100644
  		cpu_relax();
  	} while (cid < 0);
  	/*
-@@ -3717,7 +3735,8 @@ static inline int __mm_cid_get(struct rq *rq, struct mm_struct *mm)
+@@ -3722,7 +3740,8 @@ static inline int __mm_cid_get(struct rq *rq, struct mm_struct *mm)
  	return cid;
  }
  
@@ -458,7 +458,7 @@ index f610df2e0811..3d1deb7186f5 100644
  {
  	struct mm_cid __percpu *pcpu_cid = mm->pcpu_cid;
  	struct cpumask *cpumask;
-@@ -3734,8 +3753,9 @@ static inline int mm_cid_get(struct rq *rq, struct mm_struct *mm)
+@@ -3739,8 +3758,9 @@ static inline int mm_cid_get(struct rq *rq, struct mm_struct *mm)
  		if (try_cmpxchg(&this_cpu_ptr(pcpu_cid)->cid, &cid, MM_CID_UNSET))
  			__mm_cid_put(mm, mm_cid_clear_lazy_put(cid));
  	}
@@ -469,7 +469,7 @@ index f610df2e0811..3d1deb7186f5 100644
  
  	return cid;
  }
-@@ -3788,7 +3808,7 @@ static inline void switch_mm_cid(struct rq *rq,
+@@ -3793,7 +3813,7 @@ static inline void switch_mm_cid(struct rq *rq,
  		prev->mm_cid = -1;
  	}
  	if (next->mm_cid_active)
@@ -495,10 +495,10 @@ index 48d611e58ad3..a2b16b08cbbf 100644
  static int __read_mostly sysctl_compact_memory;
  
 diff --git a/mm/page_alloc.c b/mm/page_alloc.c
-index e6e51d4a6f3e..13b02e376346 100644
+index d8ba1df0b5e1..8005bcfaad13 100644
 --- a/mm/page_alloc.c
 +++ b/mm/page_alloc.c
-@@ -5512,11 +5512,11 @@ static int zone_batchsize(struct zone *zone)
+@@ -5515,11 +5515,11 @@ static int zone_batchsize(struct zone *zone)
  
  	/*
  	 * The number of pages to batch allocate is either ~0.1%
@@ -513,7 +513,7 @@ index e6e51d4a6f3e..13b02e376346 100644
  	if (batch < 1)
  		batch = 1;
 diff --git a/mm/vmscan.c b/mm/vmscan.c
-index 6a8a68b2f7f2..e7f7f047bae1 100644
+index 99568ccfb0fd..683cee5ba279 100644
 --- a/mm/vmscan.c
 +++ b/mm/vmscan.c
 @@ -201,7 +201,7 @@ struct scan_control {

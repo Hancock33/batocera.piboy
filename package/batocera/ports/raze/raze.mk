@@ -12,7 +12,6 @@ RAZE_SUPPORTS_IN_SOURCE_BUILD = NO
 
 # We need the tools from the host package to build the target package
 HOST_RAZE_DEPENDENCIES = zlib bzip2 host-webp
-HOST_RAZE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 HOST_RAZE_CONF_OPTS += -DSKIP_INSTALL_ALL=ON
 
 # The TOOLS_ONLY=ON option is not implemented in Raze yet.
