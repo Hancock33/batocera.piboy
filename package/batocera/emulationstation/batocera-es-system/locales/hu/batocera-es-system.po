@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-11-02 21:47+0100\n"
-"Last-Translator: Szoldán Albert\n"
+"PO-Revision-Date: 2024-11-10 16:11+0100\n"
+"Last-Translator: pigator\n"
 "Language-Team: \n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
@@ -346,7 +346,7 @@ msgstr "1040 STE AUTO"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "1040 STE ETOS 256k"
-msgstr ""
+msgstr "1040 STE ETOS 256k"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -1656,7 +1656,7 @@ msgstr "520 ST AUTO"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "520 ST EMUTOS 256k"
-msgstr ""
+msgstr "520 ST EMUTOS 256k"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
@@ -2141,7 +2141,7 @@ msgstr "EREDMÉNYEK"
 #. TRANSLATION: hatari, libretro/hatarib
 msgctxt "game_options"
 msgid "ACSI"
-msgstr ""
+msgstr "ACSI"
 
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
@@ -2356,7 +2356,7 @@ msgstr "ASZINKRON TEXTÚRA streamelés"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "ATARI CPU CLOCK RATE"
-msgstr "ATARI CPU órajele"
+msgstr "ATARI CPU ÓRAJELE"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -3075,7 +3075,7 @@ msgstr "Április"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Arabic (ar)"
-msgstr ""
+msgstr "Arab (ar)"
 
 #. TRANSLATION: libretro/fbneo, libretro/mame078plus
 msgctxt "game_options"
@@ -5408,7 +5408,7 @@ msgstr "Cseh"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Czech (cz)"
-msgstr ""
+msgstr "Cseh (cz)"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -5688,7 +5688,7 @@ msgstr "Dán"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Danish (dk)"
-msgstr ""
+msgstr "Dán (dk)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -6490,7 +6490,7 @@ msgstr ""
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Emutos language && region setting."
-msgstr ""
+msgstr "Emutos nyelvi és terüleit beállítások."
 
 #. TRANSLATION: mupen64plus, ppsspp
 msgctxt "game_options"
@@ -7559,27 +7559,27 @@ msgstr "Falcon"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Falcon 4.0"
-msgstr ""
+msgstr "Falcon 4.0"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Falcon 4.02"
-msgstr ""
+msgstr "Falcon 4.02"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Falcon 4.04"
-msgstr ""
+msgstr "Falcon 4.04"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Falcon AUTO"
-msgstr ""
+msgstr "Falcon AUTO"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Falcon ETOS 512k"
-msgstr ""
+msgstr "Falcon ETOS 512k"
 
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
@@ -7667,7 +7667,7 @@ msgstr "Finn"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Finnish (fi)"
-msgstr ""
+msgstr "Finn (fi)"
 
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, rott.keys, raze.keys
 msgctxt "keys_files"
@@ -8620,7 +8620,7 @@ msgstr "Görög"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Greek (gk)"
-msgstr ""
+msgstr "Görög (gk)"
 
 #. TRANSLATION: flycast, flycast, flycast, flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -8988,7 +8988,7 @@ msgstr "Magyar"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Hungarian (hg)"
-msgstr ""
+msgstr "Magyar (hg)"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -10563,7 +10563,7 @@ msgstr "Mega STE AUTO"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Mega STE ETOS 256k"
-msgstr ""
+msgstr "Mega STE ETOS 256k"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -11102,7 +11102,7 @@ msgstr "Hollandia"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Netherlands (nl)"
-msgstr ""
+msgstr "Holland (nl)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -11202,7 +11202,7 @@ msgstr "Norvég"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Norwegian (no)"
-msgstr ""
+msgstr "Norvég (no)"
 
 #. TRANSLATION: duckstation, duckstation
 msgctxt "game_options"
@@ -12229,7 +12229,7 @@ msgstr "Lengyelország"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Poland (pl)"
-msgstr ""
+msgstr "Lengyel (pl)"
 
 #. TRANSLATION: etlegacy, xenia, xenia-canary
 msgctxt "game_options"
@@ -14998,12 +14998,12 @@ msgstr "Svéd (se)"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Swiss French (ch)"
-msgstr ""
+msgstr "Svájci francia (ch)"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Swiss German (ch)"
-msgstr ""
+msgstr "Svájci német (ch)"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -15261,17 +15261,17 @@ msgstr "TT"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "TT 3.06"
-msgstr ""
+msgstr "TT 3.06"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "TT AUTO"
-msgstr ""
+msgstr "TT AUTO"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "TT ETOS 512k"
-msgstr ""
+msgstr "TT ETOS 512k"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -15666,7 +15666,7 @@ msgstr "Török"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Turkish (tr)"
-msgstr ""
+msgstr "Török (tr)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
