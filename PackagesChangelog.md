@@ -19,6 +19,8 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|5e55f33aaa67e7603fd1d20dc1
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|1412e25eff9eeff586f24bed0beb9502caa4f582|Nov 12, 2024
 Ports|[openjk](http://github.com/JACoders/OpenJK)|199ddc7642d0ed0e2bf007fe63d0dce3a4bb4908|Nov 12, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|76cb1acefd2a0658a909ada4b650e35b80e4de2f|Nov 12, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241112|Nov 12, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241112|Nov 12, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|1e4f17639556daed8ff44a4d85e7753fafd538c0|Nov 12, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|a6592e77763d8cc4db8e8897f8e90e1defef85b0|Nov 12, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|88837408b8bec4dbe26b9324d832046fef42e6ab|Nov 12, 2024
@@ -53,8 +55,6 @@ Ports|[omf2097](http://github.com/omf2097/openomf)|96fdc351a8abf8a26c8255189e47b
 Utils|[re2c](http://github.com/skvadrik/re2c)|c4e779cab5596ff326acbecac33fea9bd5b4a184|Nov 10, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|2cb2956b055907ca5adbe842adec6f19261e502b|Nov 10, 2024
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|d5be3c6086bdf94baa52b54f155092563085624c|Nov 10, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241110|Nov 10, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241110|Nov 10, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|b64ae0ed6ee9bec21dd48a67ec05e386a38772e5|Nov 10, 2024
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|2cb2956b055907ca5adbe842adec6f19261e502b|Nov 10, 2024
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|2b3a288b304250567a897148fc327c8a251e7863|Nov 10, 2024
