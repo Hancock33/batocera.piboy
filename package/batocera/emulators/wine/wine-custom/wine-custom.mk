@@ -19,7 +19,7 @@ endif
 
 define WINE_CUSTOM_AUTOGEN
 	# Create folder for install
-	mkdir -p $(TARGET_DIR)/usr/wine/ge-custom
+	mkdir -p $(TARGET_DIR)/usr/wine/wine-custom
 	# Autotools generation
 	cd $(@D); ./tools/make_requests
 	cd $(@D); ./tools/make_specfiles
@@ -43,8 +43,8 @@ WINE_CUSTOM_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 	--without-mingw \
 	--without-opencl \
 	--without-oss \
-	--prefix=/usr/wine/ge-custom \
-	--exec-prefix=/usr/wine/ge-custom
+	--prefix=/usr/wine/wine-custom \
+	--exec-prefix=/usr/wine/wine-custom
 
 ifeq ($(BR2_x86_64),y)
     WINE_CUSTOM_CONF_OPTS += --enable-win64
@@ -335,7 +335,7 @@ HOST_WINE_CUSTOM_CONF_OPTS += \
 
 # Cleanup final directory
 define WINE_CUSTOM_REMOVE_INCLUDES_HOOK
-	rm -Rf $(TARGET_DIR)/usr/wine/ge-custom/include
+	rm -Rf $(TARGET_DIR)/usr/wine/wine-custom/include
 endef
 
 WINE_CUSTOM_POST_INSTALL_TARGET_HOOKS += WINE_CUSTOM_REMOVE_INCLUDES_HOOK

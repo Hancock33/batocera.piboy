@@ -9,8 +9,8 @@ WINE_MONO_SOURCE = $(WINE_MONO_VERSION)-x86.tar.xz
 WINE_MONO_SITE = https://github.com/madewokherd/wine-mono/releases/download/$(WINE_MONO_VERSION)
 
 define WINE_MONO_EXTRACT_CMDS
-	mkdir -p $(@D)/target/usr/wine/ge-custom/share/wine/mono/
-	cd $(@D)/target/usr/wine/ge-custom/share/wine/mono/ && \
+	mkdir -p $(@D)/target/usr/wine/wine-custom/share/wine/mono/
+	cd $(@D)/target/usr/wine/wine-custom/share/wine/mono/ && \
 	    tar xf $(DL_DIR)/$(WINE_MONO_DL_SUBDIR)/$(WINE_MONO_SOURCE)
 endef
 

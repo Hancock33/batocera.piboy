@@ -45,7 +45,7 @@ class XeniaGenerator(Generator):
         rom_path = Path(rom)
 
         wineprefix = HOME / 'wine-bottles' / 'xbox360'
-        wineBinary = Path('/usr/wine/wine-tkg/bin/wine64')
+        wineBinary = Path('/usr/wine/wine-custom/bin/wine64')
         xeniaConfig = CONFIGS / 'xenia'
         xeniaCache = CACHE / 'xenia'
         xeniaSaves = SAVES / 'xbox360'
@@ -114,9 +114,9 @@ class XeniaGenerator(Generator):
         alsa_done = wineprefix / "alsa.done"
         if not alsa_done.exists():
             cmd = ["/usr/wine/winetricks", "sound=alsa"]
-            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/wine-tkg/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/wine-custom/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
-            env["PATH"] = "/usr/wine/wine-tkg/bin:/bin:/usr/bin"
+            env["PATH"] = "/usr/wine/wine-custom/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
             proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             out, err = proc.communicate()
@@ -129,9 +129,9 @@ class XeniaGenerator(Generator):
         vkd3d_done = wineprefix / "vkd3d.done"
         if not vkd3d_done.exists():
             cmd = ["/usr/wine/winetricks", "-q", "vkd3d"]
-            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/wine-tkg/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/wine-custom/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
-            env["PATH"] = "/usr/wine/wine-tkg/bin:/bin:/usr/bin"
+            env["PATH"] = "/usr/wine/wine-custom/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
             proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             out, err = proc.communicate()
@@ -144,9 +144,9 @@ class XeniaGenerator(Generator):
         vcrun2019_done = wineprefix / "vcrun2019.done"
         if not vcrun2019_done.exists():
             cmd = ["/usr/wine/winetricks", "-q", "vcrun2019"]
-            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/wine-tkg/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/wine-custom/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
-            env["PATH"] = "/usr/wine/wine-tkg/bin:/bin:/usr/bin"
+            env["PATH"] = "/usr/wine/wine-custom/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
             proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             out, err = proc.communicate()
@@ -159,9 +159,9 @@ class XeniaGenerator(Generator):
         dxvk_done = wineprefix / "dxvk.done"
         if not dxvk_done.exists():
             cmd = ["/usr/wine/winetricks", "-q", "dxvk"]
-            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/wine-tkg/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/wine-custom/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
-            env["PATH"] = "/usr/wine/wine-tkg/bin:/bin:/usr/bin"
+            env["PATH"] = "/usr/wine/wine-custom/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
             proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             out, err = proc.communicate()
@@ -408,7 +408,7 @@ class XeniaGenerator(Generator):
 
         environment={
                 'WINEPREFIX': wineprefix,
-                'LD_LIBRARY_PATH': '/usr/lib:/lib32:/usr/wine/wine-tkg/lib/wine',
+                'LD_LIBRARY_PATH': '/usr/lib:/lib32:/usr/wine/wine-custom/lib/wine',
                 'LIBGL_DRIVERS_PATH': '/usr/lib/dri',
                 'WINEESYNC': '1',
                 'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers),
