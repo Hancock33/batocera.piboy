@@ -1748,7 +1748,7 @@ mugen:
   extensions:           [pc]
   emulators:
     mugen:
-      ge-custom:        { requireAnyOf: [BR2_PACKAGE_WINE_CUSTOM] }
+      wine-tkg:        { requireAnyOf: [BR2_PACKAGE_WINE_TKG] }
 
 bk:
   name:                 BK
@@ -2623,7 +2623,7 @@ windows:
   theme:                windows
   emulators:
     wine:
-      ge-custom:        { requireAnyOf: [BR2_PACKAGE_WINE_CUSTOM] }
+      wine-tkg:        { requireAnyOf: [BR2_PACKAGE_WINE_TKG] }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:windows
   comment_fr:           |
@@ -2641,7 +2641,7 @@ windows_installers:
   group:                windows
   emulators:
     wine:
-      ge-custom:        { requireAnyOf: [BR2_PACKAGE_WINE_CUSTOM] }
+      wine-tkg:        { requireAnyOf: [BR2_PACKAGE_WINE_TKG] }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:windows
   comment_fr:           |
@@ -5087,7 +5087,7 @@ bigfish:
   platform:             pc
   emulators:
     wine:
-      ge-custom:        { requireAnyOf: [BR2_PACKAGE_WINE_CUSTOM] }
+      wine-tkg:        { requireAnyOf: [BR2_PACKAGE_WINE_TKG] }
 
 popcap:
   name:                 Popcap
@@ -5098,7 +5098,7 @@ popcap:
   platform:             pc
   emulators:
     wine:
-      ge-custom:        { requireAnyOf: [BR2_PACKAGE_WINE_CUSTOM] }
+      wine-tkg:        { requireAnyOf: [BR2_PACKAGE_WINE_TKG] }
 
 atomiswave:
   name:                 Atomiswave
