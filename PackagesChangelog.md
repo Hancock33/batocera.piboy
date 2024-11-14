@@ -1,5 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|2a79d719687d5cea097927069434b8075df06850|Nov 14, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241114|Nov 14, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241114|Nov 14, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|50e11896b5dbcc6d2a56b6d3e60f6126ffc7b33d|Nov 13, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|50e11896b5dbcc6d2a56b6d3e60f6126ffc7b33d|Nov 13, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|62fa27e2a231a2096ce2e240ce33a9a1d2d03a0c|Nov 13, 2024
@@ -34,8 +37,6 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|1412e25eff9e
 Ports|[openjk](http://github.com/JACoders/OpenJK)|199ddc7642d0ed0e2bf007fe63d0dce3a4bb4908|Nov 12, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|7027212b2f268281b9b532e42abbd30bf0f6dae7|Nov 12, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|126e60e47c85ba3bae6b2c111bbe24cb1211b658|Nov 12, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241112|Nov 12, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241112|Nov 12, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|a6592e77763d8cc4db8e8897f8e90e1defef85b0|Nov 12, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|88837408b8bec4dbe26b9324d832046fef42e6ab|Nov 12, 2024
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|b85dba277fb777b095623a24cd924d0725e1596b|Nov 12, 2024
@@ -127,7 +128,6 @@ Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|cf532
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|1c38f0cff707b340910667f0b9a5fea4cbac7790|Oct 26, 2024
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|f0bf9aafeacf12edff38400d7c21e3825650a57d|Oct 26, 2024
 Emulators|[libretro-noods](http://github.com/jonian/libretro-noods)|db7fbc76c96a5ebf8d5e2c310bca97bf7c901926|Oct 26, 2024
-Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|6a2a6becebbc38fde34a94386457ac8210f9119b|Oct 25, 2024
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|923de3203a000f8d8ffefb5ca15d296eb5d3c425|Oct 25, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20241025|Oct 25, 2024
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|3bc2ecb0fc514fba8cfffc560c661de5130e713e|Oct 24, 2024
