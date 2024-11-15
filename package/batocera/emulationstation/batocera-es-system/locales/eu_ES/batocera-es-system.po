@@ -2906,6 +2906,26 @@ msgctxt "game_options"
 msgid "Analog"
 msgstr "Analogoa"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Down"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Left"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Right"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Up"
+msgstr ""
+
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Analogue"
@@ -3887,10 +3907,45 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr ""
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button A"
+msgstr "A Botoia"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button B"
+msgstr "B Botoia"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button C"
+msgstr ""
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
 msgstr "Botoi Aukerak"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Start"
+msgstr "Hasi Botoia"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button X"
+msgstr "X Botoia"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Y"
+msgstr "Y Botoia"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Z"
+msgstr ""
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -5825,7 +5880,7 @@ msgstr ""
 "Defektuz SDL2 erabiltzen du, bestela kontrolatzailearen gaitasun zehatzak "
 "gaitzen dira. Sony DS-a ez dabil kontrolatzaile klonetan."
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Define the resolution and a new dedicated window."
 msgstr "Definitu bereizmena eta leiho dedikatu berria"
@@ -6103,6 +6158,11 @@ msgstr "Buffer bikoitza"
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Double the rendering resolution."
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Down"
 msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
@@ -9946,6 +10006,11 @@ msgctxt "game_options"
 msgid "Lebanon"
 msgstr ""
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Left"
+msgstr ""
+
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Left Analogue (Auto)"
@@ -10716,7 +10781,7 @@ msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
 msgstr ""
@@ -13128,6 +13193,11 @@ msgstr "Atzeratzeak CPU asko eska dezake"
 msgctxt "game_options"
 msgid "Rice"
 msgstr "Rice"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Right"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -16249,6 +16319,11 @@ msgctxt "game_options"
 msgid "Until Timeout"
 msgstr ""
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Up"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
@@ -16628,7 +16703,7 @@ msgctxt "game_options"
 msgid "VIOLENCE LEVEL"
 msgstr ""
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr "MAHAIGAIN BIRTUALA"
@@ -17735,14 +17810,6 @@ msgstr "horia/urdina"
 #~ msgstr "BGFX post-prozesatzerako, azeleratu/opengl irudi gordinentzat."
 
 #~ msgctxt "keys_files"
-#~ msgid "Button A"
-#~ msgstr "A Botoia"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button B"
-#~ msgstr "B Botoia"
-
-#~ msgctxt "keys_files"
 #~ msgid "Button L"
 #~ msgstr "L Botoia"
 
@@ -17753,18 +17820,6 @@ msgstr "horia/urdina"
 #~ msgctxt "keys_files"
 #~ msgid "Button Select"
 #~ msgstr "Aukeratu Botoia"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Start"
-#~ msgstr "Hasi Botoia"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button X"
-#~ msgstr "X Botoia"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Y"
-#~ msgstr "Y Botoia"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"

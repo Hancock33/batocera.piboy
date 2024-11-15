@@ -2911,6 +2911,26 @@ msgctxt "game_options"
 msgid "Analog"
 msgstr "Analogic"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Down"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Left"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Right"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Up"
+msgstr ""
+
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Analogue"
@@ -3900,10 +3920,45 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr "Bulgară"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button A"
+msgstr "Buton A"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button B"
+msgstr "Buton B"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button C"
+msgstr ""
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
 msgstr "Opțiuni butoane"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Start"
+msgstr "Buton Start"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button X"
+msgstr "Buton X"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Y"
+msgstr "Buton Y"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Z"
+msgstr ""
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -5848,7 +5903,7 @@ msgstr ""
 "Implicit se folosește SDL2, altfel activează capabilitățile specifice pentru "
 "controler. Sony DS nu va funcționa cu controlere clone."
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Define the resolution and a new dedicated window."
 msgstr "Definește rezoluția și o nouă fereastră dedicată."
@@ -6132,6 +6187,11 @@ msgstr "Buffering dublu"
 msgctxt "game_options"
 msgid "Double the rendering resolution."
 msgstr "Dublează rezoluția de redare."
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Down"
+msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -10033,6 +10093,11 @@ msgctxt "game_options"
 msgid "Lebanon"
 msgstr ""
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Left"
+msgstr ""
+
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Left Analogue (Auto)"
@@ -10811,7 +10876,7 @@ msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Înapoi în meniu"
@@ -13242,6 +13307,11 @@ msgstr "Revenirea poate îngreuna CPU-ul."
 msgctxt "game_options"
 msgid "Rice"
 msgstr "Rice"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Right"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -16384,6 +16454,11 @@ msgctxt "game_options"
 msgid "Until Timeout"
 msgstr "Până la expirarea timpului"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Up"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
@@ -16781,7 +16856,7 @@ msgctxt "game_options"
 msgid "VIOLENCE LEVEL"
 msgstr "NIVEL VIOLENȚĂ"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr "DESKTOP VIRTUAL"
@@ -17884,14 +17959,6 @@ msgstr "galben/albastru"
 #~ msgstr "LUMINOZITATE"
 
 #~ msgctxt "keys_files"
-#~ msgid "Button A"
-#~ msgstr "Buton A"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button B"
-#~ msgstr "Buton B"
-
-#~ msgctxt "keys_files"
 #~ msgid "Button L"
 #~ msgstr "Buton L"
 
@@ -17902,18 +17969,6 @@ msgstr "galben/albastru"
 #~ msgctxt "keys_files"
 #~ msgid "Button Select"
 #~ msgstr "Buton Select"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Start"
-#~ msgstr "Buton Start"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button X"
-#~ msgstr "Buton X"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Y"
-#~ msgstr "Buton Y"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"

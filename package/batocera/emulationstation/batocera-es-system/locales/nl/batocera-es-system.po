@@ -2917,6 +2917,26 @@ msgctxt "game_options"
 msgid "Analog"
 msgstr "Analoog"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Down"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Left"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Right"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Up"
+msgstr ""
+
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Analogue"
@@ -3906,10 +3926,45 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr "Bulgaars"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button A"
+msgstr "Knop A"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button B"
+msgstr "Knop B"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button C"
+msgstr ""
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
 msgstr "Knop Opties"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Start"
+msgstr "Knop Start"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button X"
+msgstr "Knop X"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Y"
+msgstr "Knop Y"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Z"
+msgstr ""
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -5856,7 +5911,7 @@ msgstr ""
 "Standaard wordt SDL2 gebruikt, schakel anders controller specifieke "
 "mogelijkheden in. Sony DS werkt niet met klooncontrollers."
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Define the resolution and a new dedicated window."
 msgstr "Definieer de resolutie en een nieuw toegewijde window."
@@ -6139,6 +6194,11 @@ msgstr "Tweevoudige buffering"
 msgctxt "game_options"
 msgid "Double the rendering resolution."
 msgstr "Verdubbel de render-resolutie"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Down"
+msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -10029,6 +10089,11 @@ msgctxt "game_options"
 msgid "Lebanon"
 msgstr ""
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Left"
+msgstr ""
+
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Left Analogue (Auto)"
@@ -10807,7 +10872,7 @@ msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Menu terug"
@@ -13231,6 +13296,11 @@ msgstr "Terugspoelen kan zwaar zijn voor de CPU."
 msgctxt "game_options"
 msgid "Rice"
 msgstr "Rice"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Right"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -16376,6 +16446,11 @@ msgctxt "game_options"
 msgid "Until Timeout"
 msgstr "Tot time-out"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Up"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
@@ -16772,7 +16847,7 @@ msgctxt "game_options"
 msgid "VIOLENCE LEVEL"
 msgstr "GEWELD LEVEL"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr "VIRTUELE DESKTOP"
@@ -17840,14 +17915,6 @@ msgstr "geel/blauw"
 #~ msgstr "HELDERHEID"
 
 #~ msgctxt "keys_files"
-#~ msgid "Button A"
-#~ msgstr "Knop A"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button B"
-#~ msgstr "Knop B"
-
-#~ msgctxt "keys_files"
 #~ msgid "Button L"
 #~ msgstr "Knop L"
 
@@ -17858,18 +17925,6 @@ msgstr "geel/blauw"
 #~ msgctxt "keys_files"
 #~ msgid "Button Select"
 #~ msgstr "Knop Select"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Start"
-#~ msgstr "Knop Start"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button X"
-#~ msgstr "Knop X"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Y"
-#~ msgstr "Knop Y"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"

@@ -2909,6 +2909,26 @@ msgctxt "game_options"
 msgid "Analog"
 msgstr "Analog"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Down"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Left"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Right"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Up"
+msgstr ""
+
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Analogue"
@@ -3893,10 +3913,45 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr "Bulgarsk"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button A"
+msgstr "A-Knappen"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button B"
+msgstr "B-Knappen"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button C"
+msgstr ""
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
 msgstr "Knappealternativer"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Start"
+msgstr "Start-Knappen"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button X"
+msgstr "X-Knappen"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Y"
+msgstr "Y-Knappen"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Z"
+msgstr ""
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -5839,7 +5894,7 @@ msgstr ""
 "Standard bruker SDL2, ellers aktiverer du kontroller-spesifikke funksjoner. "
 "Sony DS fungerer ikke med klonekontrollere."
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Define the resolution and a new dedicated window."
 msgstr "Definer oppløsningen og et nytt dedikert vindu."
@@ -6122,6 +6177,11 @@ msgstr "Dobbel bufring"
 msgctxt "game_options"
 msgid "Double the rendering resolution."
 msgstr "Doble gjengivelsesoppløsningen."
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Down"
+msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -9983,6 +10043,11 @@ msgctxt "game_options"
 msgid "Lebanon"
 msgstr ""
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Left"
+msgstr ""
+
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Left Analogue (Auto)"
@@ -10759,7 +10824,7 @@ msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
 msgstr ""
@@ -13166,6 +13231,11 @@ msgstr "Tilbakespoling kan være CPU-krevende."
 msgctxt "game_options"
 msgid "Rice"
 msgstr "Ris"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Right"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -16300,6 +16370,11 @@ msgctxt "game_options"
 msgid "Until Timeout"
 msgstr "Inntil tidsavbrudd"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Up"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
@@ -16694,7 +16769,7 @@ msgctxt "game_options"
 msgid "VIOLENCE LEVEL"
 msgstr "VOLDSNIVÅ"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr "VIRTUELT SKRIVEBORD"
@@ -17828,14 +17903,6 @@ msgstr "gul/blå"
 #~ msgstr "Bakglasset er deaktivert"
 
 #~ msgctxt "keys_files"
-#~ msgid "Button A"
-#~ msgstr "A-Knappen"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button B"
-#~ msgstr "B-Knappen"
-
-#~ msgctxt "keys_files"
 #~ msgid "Button L"
 #~ msgstr "L-Knappen"
 
@@ -17846,18 +17913,6 @@ msgstr "gul/blå"
 #~ msgctxt "keys_files"
 #~ msgid "Button Select"
 #~ msgstr "Select-Knappen"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Start"
-#~ msgstr "Start-Knappen"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button X"
-#~ msgstr "X-Knappen"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Y"
-#~ msgstr "Y-Knappen"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"

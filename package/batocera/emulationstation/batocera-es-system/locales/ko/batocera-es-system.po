@@ -2915,6 +2915,26 @@ msgctxt "game_options"
 msgid "Analog"
 msgstr "아날로그"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Down"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Left"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Right"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Up"
+msgstr ""
+
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Analogue"
@@ -3895,10 +3915,45 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr "불가리아어"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button A"
+msgstr "A 버튼"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button B"
+msgstr "B 버튼"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button C"
+msgstr ""
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
 msgstr "옵션 버튼"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Start"
+msgstr "시작 버튼"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button X"
+msgstr "X 버튼"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Y"
+msgstr "Y 버튼"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Z"
+msgstr ""
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -5836,7 +5891,7 @@ msgstr ""
 "기본값은 SDL2를 사용하고, 그렇지 않으면 컨트롤러별 기능을 활성화합니다. 소니 "
 "DS는 클론 컨트롤러와 작동하지 않습니다."
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Define the resolution and a new dedicated window."
 msgstr "해상도와 새 전용 창을 정의합니다."
@@ -6116,6 +6171,11 @@ msgstr "더블 버퍼링"
 msgctxt "game_options"
 msgid "Double the rendering resolution."
 msgstr "렌더링 해상도를 두 배로 높입니다."
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Down"
+msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -9963,6 +10023,11 @@ msgctxt "game_options"
 msgid "Lebanon"
 msgstr ""
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Left"
+msgstr ""
+
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Left Analogue (Auto)"
@@ -10738,7 +10803,7 @@ msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
 msgstr "메뉴 뒤로가기"
@@ -13207,6 +13272,11 @@ msgstr "되감기는 CPU에 많은 부담을 줄 수 있습니다."
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
 msgid "Rice"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Right"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
@@ -16413,6 +16483,11 @@ msgctxt "game_options"
 msgid "Until Timeout"
 msgstr "시간 초과까지"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Up"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
@@ -16799,7 +16874,7 @@ msgctxt "game_options"
 msgid "VIOLENCE LEVEL"
 msgstr ""
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr "가상 데스크톱"
@@ -17952,14 +18027,6 @@ msgstr "옐로우/블루"
 #~ msgstr "쌍선형(가장자리 혼합 없음)"
 
 #~ msgctxt "keys_files"
-#~ msgid "Button A"
-#~ msgstr "A 버튼"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button B"
-#~ msgstr "B 버튼"
-
-#~ msgctxt "keys_files"
 #~ msgid "Button L"
 #~ msgstr "L 버튼"
 
@@ -17970,18 +18037,6 @@ msgstr "옐로우/블루"
 #~ msgctxt "keys_files"
 #~ msgid "Button Select"
 #~ msgstr "선택 버튼"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Start"
-#~ msgstr "시작 버튼"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button X"
-#~ msgstr "X 버튼"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Y"
-#~ msgstr "Y 버튼"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"

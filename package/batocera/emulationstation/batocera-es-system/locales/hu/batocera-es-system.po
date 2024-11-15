@@ -2919,6 +2919,26 @@ msgctxt "game_options"
 msgid "Analog"
 msgstr "Analóg"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Down"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Left"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Right"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Up"
+msgstr ""
+
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Analogue"
@@ -3908,10 +3928,45 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr "Bulgár"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button A"
+msgstr "A gomb"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button B"
+msgstr "B gomb"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button C"
+msgstr ""
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
 msgstr "Gomb beállítások"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Start"
+msgstr "Start gomb"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button X"
+msgstr "X gomb"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Y"
+msgstr "Y gomb"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Z"
+msgstr ""
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -5859,7 +5914,7 @@ msgstr ""
 "Az alapértelmezett SDL2-t használ, ellenkező esetben engedélyezze a "
 "vezérlőspecifikus képességeket. A Sony DS nem működik klónvezérlőkkel."
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Define the resolution and a new dedicated window."
 msgstr "Határozza meg a felbontást és egy új dedikált ablakot."
@@ -6141,6 +6196,11 @@ msgstr "Dupla pufferelés"
 msgctxt "game_options"
 msgid "Double the rendering resolution."
 msgstr "Duplázza meg a renderelési felbontást."
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Down"
+msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -10045,6 +10105,11 @@ msgctxt "game_options"
 msgid "Lebanon"
 msgstr ""
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Left"
+msgstr ""
+
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Left Analogue (Auto)"
@@ -10829,7 +10894,7 @@ msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Vissza menü"
@@ -13258,6 +13323,11 @@ msgstr "A visszatekerés processzorigényes lehet."
 msgctxt "game_options"
 msgid "Rice"
 msgstr "Rice"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Right"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -16404,6 +16474,11 @@ msgctxt "game_options"
 msgid "Until Timeout"
 msgstr "Időtúllépésig"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Up"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
@@ -16801,7 +16876,7 @@ msgctxt "game_options"
 msgid "VIOLENCE LEVEL"
 msgstr "ERŐSZAK SZINT"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr "VIRTUÁLIS ASZTAL"
@@ -17938,14 +18013,6 @@ msgstr "sárga/kék"
 #~ msgstr "FÉNYERŐ"
 
 #~ msgctxt "keys_files"
-#~ msgid "Button A"
-#~ msgstr "A gomb"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button B"
-#~ msgstr "B gomb"
-
-#~ msgctxt "keys_files"
 #~ msgid "Button L"
 #~ msgstr "L gomb"
 
@@ -17956,18 +18023,6 @@ msgstr "sárga/kék"
 #~ msgctxt "keys_files"
 #~ msgid "Button Select"
 #~ msgstr "Kiválasztás gomb"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Start"
-#~ msgstr "Start gomb"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button X"
-#~ msgstr "X gomb"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Y"
-#~ msgstr "Y gomb"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"

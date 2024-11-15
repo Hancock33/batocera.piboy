@@ -2908,6 +2908,26 @@ msgctxt "game_options"
 msgid "Analog"
 msgstr "Analóg"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Down"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Left"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Right"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Up"
+msgstr ""
+
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Analogue"
@@ -3891,10 +3911,45 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr "Bulharčina"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button A"
+msgstr "Tlačidlo A"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button B"
+msgstr "Tlačidlo B"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button C"
+msgstr ""
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
 msgstr "Voľby tlačidiel"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Start"
+msgstr "Tlačidlo Start"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button X"
+msgstr "Tlačidlo X"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Y"
+msgstr "Tlačidlo Y"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Z"
+msgstr ""
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -5824,7 +5879,7 @@ msgstr ""
 "V predvolenom nastavení sa používa SDL2, inak povoľte funkcie špecifické pre "
 "ovládač. Sony DS nebude fungovať s klonovými ovládačmi."
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Define the resolution and a new dedicated window."
 msgstr "Definovať rozlíšenie a nové vyhradené okno."
@@ -6102,6 +6157,11 @@ msgstr "Dvojité bufferovanie"
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Double the rendering resolution."
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Down"
 msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
@@ -9928,6 +9988,11 @@ msgctxt "game_options"
 msgid "Lebanon"
 msgstr ""
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Left"
+msgstr ""
+
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Left Analogue (Auto)"
@@ -10696,7 +10761,7 @@ msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
 msgstr ""
@@ -13094,6 +13159,11 @@ msgstr "Pretočenie môže byť náročné na CPU."
 msgctxt "game_options"
 msgid "Rice"
 msgstr "Rice"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Right"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -16205,6 +16275,11 @@ msgctxt "game_options"
 msgid "Until Timeout"
 msgstr ""
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Up"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
@@ -16578,7 +16653,7 @@ msgctxt "game_options"
 msgid "VIOLENCE LEVEL"
 msgstr "Úroveň násilia"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr "Virtuálna plocha"
@@ -17720,14 +17795,6 @@ msgstr "žltá/modrá"
 #~ "BGFX pre následné spracovanie, accel/opengl pre nespracovaný obrázok."
 
 #~ msgctxt "keys_files"
-#~ msgid "Button A"
-#~ msgstr "Tlačidlo A"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button B"
-#~ msgstr "Tlačidlo B"
-
-#~ msgctxt "keys_files"
 #~ msgid "Button L"
 #~ msgstr "Tlačidlo L"
 
@@ -17738,18 +17805,6 @@ msgstr "žltá/modrá"
 #~ msgctxt "keys_files"
 #~ msgid "Button Select"
 #~ msgstr "Tlačidlo Select"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Start"
-#~ msgstr "Tlačidlo Start"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button X"
-#~ msgstr "Tlačidlo X"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Y"
-#~ msgstr "Tlačidlo Y"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"

@@ -2918,6 +2918,26 @@ msgctxt "game_options"
 msgid "Analog"
 msgstr "Analog"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Down"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Left"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Right"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Up"
+msgstr ""
+
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Analogue"
@@ -3907,10 +3927,45 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr "Bulgarisch"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button A"
+msgstr "A-Taste"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button B"
+msgstr "B-Taste"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button C"
+msgstr ""
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
 msgstr "Tasteneinstellungen"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Start"
+msgstr "Start-Taste"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button X"
+msgstr "X-Taste"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Y"
+msgstr "Y-Taste"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Z"
+msgstr ""
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -5864,7 +5919,7 @@ msgstr ""
 "Standardmäßig wird SDL2 verwendet, andernfalls werden Controller-spezifische "
 "Funktionen aktiviert. Sony DS funktioniert nicht mit Klon-Controllern."
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Define the resolution and a new dedicated window."
 msgstr "Auflösung und neues dediziertes Fenster festlegen."
@@ -6149,6 +6204,11 @@ msgstr "Doppelte Pufferung"
 msgctxt "game_options"
 msgid "Double the rendering resolution."
 msgstr "Rendering-Auflösung verdoppeln."
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Down"
+msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -10065,6 +10125,11 @@ msgctxt "game_options"
 msgid "Lebanon"
 msgstr ""
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Left"
+msgstr ""
+
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Left Analogue (Auto)"
@@ -10851,7 +10916,7 @@ msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Zurück zum Menu"
@@ -13290,6 +13355,11 @@ msgstr "Beim Anwenden der Rückspulfunktion kann es zu hoher CPU-Last kommen."
 msgctxt "game_options"
 msgid "Rice"
 msgstr "Rice"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Right"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -16452,6 +16522,11 @@ msgctxt "game_options"
 msgid "Until Timeout"
 msgstr "Bis zur Zeitüberschreitung"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Up"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
@@ -16854,7 +16929,7 @@ msgctxt "game_options"
 msgid "VIOLENCE LEVEL"
 msgstr "GEWALTGRAD"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr "VIRTUELLER DESKTOP"
@@ -17926,14 +18001,6 @@ msgstr "gelb/blau"
 #~ msgstr "HELLIGKEIT"
 
 #~ msgctxt "keys_files"
-#~ msgid "Button A"
-#~ msgstr "A-Taste"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button B"
-#~ msgstr "B-Taste"
-
-#~ msgctxt "keys_files"
 #~ msgid "Button L"
 #~ msgstr "L-Taste"
 
@@ -17944,18 +18011,6 @@ msgstr "gelb/blau"
 #~ msgctxt "keys_files"
 #~ msgid "Button Select"
 #~ msgstr "Select-Taste"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Start"
-#~ msgstr "Start-Taste"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button X"
-#~ msgstr "X-Taste"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Y"
-#~ msgstr "Y-Taste"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"
