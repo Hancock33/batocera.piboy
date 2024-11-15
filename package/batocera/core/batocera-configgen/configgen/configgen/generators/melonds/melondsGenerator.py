@@ -2,8 +2,9 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Final
 
-from ... import Command
 import toml
+
+from ... import Command
 from ...batoceraPaths import BIOS, CHEATS, CONFIGS, ROMS, SAVES, mkdir_if_not_exists
 from ..Generator import Generator
 
@@ -34,7 +35,7 @@ class MelonDSGenerator(Generator):
 
         # Load existing config if file exists
         if configFileName.exists():
-            with open(configFileName, "r") as toml_file:
+            with configFileName.open() as toml_file:
                 config = toml.load(toml_file)
         else:
             config = {}
@@ -217,7 +218,7 @@ class MelonDSGenerator(Generator):
         config.update(base_config)
 
         # Write updated configuration back to the file
-        with open(configFileName, "w") as toml_file:
+        with configFileName.open("w") as toml_file:
             toml.dump(config, toml_file)
 
         commandArray = ["/usr/bin/melonDS", "-f", rom]
