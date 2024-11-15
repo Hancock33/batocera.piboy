@@ -8,16 +8,18 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|2402eea4b16908ad59079
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|e7faec6b0ef7eefc39f99a00fab21c1795182a58|Nov 15, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-11-15|Nov 15, 2024
 Emulators|[ryujinx](https://github.com/GreemDev/Ryujinx-Canary/releases)|1.2.37|Nov 15, 2024
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|ab00d2967d6cce2bf3a88fe9a684a74ae521a24b|Nov 15, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|8c1335626f69bf93e43ba701b89e0686b35875f7|Nov 15, 2024
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|c0644d090d92c09754494aac4d02f4f6952671c3|Nov 15, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|5ab8a6f6f4dd8cfce669963571f401e632f66769|Nov 15, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|b85335272f1bda9fc5cf462f098ea13cab431ff0|Nov 15, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|4ec2492b0bee0ffe0e26017a32fbfe0a86e44e64|Nov 15, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|2c26b58b770f1f68f65d07240849ba0c631bcd4b|Nov 15, 2024
 Utils|[rclone](http://github.com/rclone/rclone)|v1.68.2|Nov 15, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|3d8c981ac9ecff292527ccd9390d0e40344e8531|Nov 15, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.21.r3.g3f86dff4|Nov 15, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.21.r3.g3f86dff4|Nov 15, 2024
+Emulators|[wine-mono](https://github.com/madewokherd/wine-mono/releases)|wine-mono-9.3.1|Nov 15, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241115|Nov 15, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241115|Nov 15, 2024
+Ports|[vkquake](http://github.com/Novum/vkQuake)|40cdc6f718d0b2b8174f56ef41c7f5e9ded1ff89|Nov 15, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|77fb2d0eb2106fe66dd4ef41163aefe5dc8cd094|Nov 15, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|af28fb0385d00e0292c4703b3aa7e72762b564d2|Nov 15, 2024
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|931586f0512663f625a6e981d3047a6620281ab5|Nov 15, 2024
@@ -26,8 +28,10 @@ Emulators|[libretro-beetle-supergrafx](http://github.com/libretro/beetle-supergr
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|e1a80ed700a9402ab0dc41f107316906aca245bf|Nov 15, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|785d5d664f995da47c2186f35d95e10b0e2856cd|Nov 15, 2024
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|ff81710f9ca5d0a3d6fbe346429856c168d910b1|Nov 15, 2024
-Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|fda76d238d955c266c469ce90b6034598de9bb40|Nov 15, 2024
+Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|19cf00255c54f1f18a50eae7b2a9a580ce2f35ff|Nov 15, 2024
+Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|b7596f26f27eddc4eebab1ce687f816a71444740|Nov 15, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|2402eea4b16908ad59079bcf3fab06ba63531a3c|Nov 15, 2024
+Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20241115|Nov 15, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|ef1c73c84540f9b989a1a0f8b1b4bd8c20026353|Nov 14, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|0fd8061a527d2d93fa15f6bef1bc60b0cdf81a1a|Nov 14, 2024
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|ce158290fbd7871a3f890323501e6fe3e8bec832|Nov 14, 2024
@@ -66,7 +70,6 @@ Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|b2fca4b6745f4dff
 Emulators|[play](https://github.com/jpd002/Play-.git)|aad9ef7f5a57b34759690455ec35a1a43535eddf|Nov 11, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|r14124|Nov 11, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.5|Nov 11, 2024
-Ports|[vkquake](http://github.com/Novum/vkQuake)|fa26828b55896e22c9e8c1076abc7662145fad48|Nov 11, 2024
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|aad9ef7f5a57b34759690455ec35a1a43535eddf|Nov 11, 2024
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|e3c3bc68fc260e8f2ee431a4c031d2c89ebe27c8|Nov 11, 2024
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|aed9c61e0a78e24644386f7329144f108b4f507c|Nov 10, 2024
@@ -78,7 +81,6 @@ Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|2cb2956b055907ca5ad
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|d5be3c6086bdf94baa52b54f155092563085624c|Nov 10, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|b64ae0ed6ee9bec21dd48a67ec05e386a38772e5|Nov 10, 2024
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|2cb2956b055907ca5adbe842adec6f19261e502b|Nov 10, 2024
-Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|2b3a288b304250567a897148fc327c8a251e7863|Nov 10, 2024
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|2c5882edffc4ccfcc9f969e1212c49177aad93e6|Nov 10, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|1e749beb2e84401344337b2f3865f156a667d946|Nov 09, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|4019226f80262fc47175e590c75d2f616aeac72c|Nov 09, 2024
@@ -134,7 +136,6 @@ Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|1c38f0c
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|f0bf9aafeacf12edff38400d7c21e3825650a57d|Oct 26, 2024
 Emulators|[libretro-noods](http://github.com/jonian/libretro-noods)|db7fbc76c96a5ebf8d5e2c310bca97bf7c901926|Oct 26, 2024
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|923de3203a000f8d8ffefb5ca15d296eb5d3c425|Oct 25, 2024
-Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20241025|Oct 25, 2024
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|3bc2ecb0fc514fba8cfffc560c661de5130e713e|Oct 24, 2024
 Audio|[cubeb](http://github.com/mozilla/cubeb)|78b2bce70e0d1c21d3c175b72f322c50801b2e94|Oct 23, 2024
 Boot|[rk3128-blobs](https://github.com/rockchip-linux/rkbin.git)|7c35e21a8529b3758d1f051d1a5dc62aae934b2b|Oct 23, 2024
@@ -296,7 +297,6 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 202
 Hardware|[pironman5](http://github.com/sunfounder/pironman5)|a45d0594a2b046346d52f5ad13e1f1fd2a1c590b|Aug 19, 2024
 Network|[qrtr](http://github.com/linux-msm/qrtr)|ef44ad10f284410e2db4c4ce22c8645f988f8402|Aug 18, 2024
 Boot|[batocera-shim-signed-efi-ia32](https://ftp.debian.org/debian/pool/main/s/shim-signed)|1.44~1+deb12u1+15.8-1~deb12u1|Aug 16, 2024
-Emulators|[wine-mono](https://github.com/madewokherd/wine-mono/releases)|wine-mono-9.3.0|Aug 16, 2024
 Libraries|[projectm](http://github.com/projectM-visualizer/projectm)|v4.1.2|Aug 14, 2024
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|7a5de5b7597c46f963d72a83defe7592f901e5f1|Aug 13, 2024
 Libraries|[iir](http://github.com/berndporr/iir1)|1.9.5|Aug 12, 2024
