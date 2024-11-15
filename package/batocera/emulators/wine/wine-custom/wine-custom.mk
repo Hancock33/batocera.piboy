@@ -3,8 +3,9 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Nov 09, 2024
-WINE_CUSTOM_VERSION = proton-9.0.133505.20241108
+# Version: Commits on Nov 15, 2024
+WINE_CUSTOM_VERSION = ntsynch-9.21.r3.g3f86dff4
+WINE_CUSTOM_BRANCH = ntsynch
 WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
 WINE_CUSTOM_SITE = $(call github,Hancock33,wine-tkg-batocera,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
