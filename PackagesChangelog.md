@@ -1,5 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.21.r3.g3f86dff4|Nov 15, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241115|Nov 15, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241115|Nov 15, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|ef1c73c84540f9b989a1a0f8b1b4bd8c20026353|Nov 14, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|0fd8061a527d2d93fa15f6bef1bc60b0cdf81a1a|Nov 14, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.16|Nov 14, 2024
@@ -17,8 +20,6 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|043fa19510e570a15dfbe
 Utils|[re2c](http://github.com/skvadrik/re2c)|cf7e2c76397159c666a97bea208e69af029f5817|Nov 14, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.28.1-rc.1|Nov 14, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|61357712c12842cbc241147f2957939547843817|Nov 14, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241114|Nov 14, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241114|Nov 14, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|d041a18a013e6011a947712c7b1221ddeaa15898|Nov 14, 2024
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|a2e0b5d5fe76dc16890548fddd8c6fba3822add7|Nov 14, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|3b8fd05b7fc64e0eed1898c9a336c0833e7120da|Nov 14, 2024
@@ -70,7 +71,6 @@ Ports|[yquake2](http://github.com/yquake2/yquake2)|b64ae0ed6ee9bec21dd48a67ec05e
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|2cb2956b055907ca5adbe842adec6f19261e502b|Nov 10, 2024
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|2b3a288b304250567a897148fc327c8a251e7863|Nov 10, 2024
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|2c5882edffc4ccfcc9f969e1212c49177aad93e6|Nov 10, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|proton-9.0.133505.20241108|Nov 09, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|1e749beb2e84401344337b2f3865f156a667d946|Nov 09, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|4019226f80262fc47175e590c75d2f616aeac72c|Nov 09, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|cfd30b7a95edf1dafaf5cfb6d691578d8b6554c5|Nov 09, 2024
