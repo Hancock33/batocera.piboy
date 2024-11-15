@@ -2906,6 +2906,26 @@ msgctxt "game_options"
 msgid "Analog"
 msgstr "模拟"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Down"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Left"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Right"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Up"
+msgstr ""
+
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Analogue"
@@ -3878,10 +3898,45 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr "保加利亚"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button A"
+msgstr "A键"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button B"
+msgstr "B键"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button C"
+msgstr ""
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
 msgstr "按钮选项"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Start"
+msgstr "开始键"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button X"
+msgstr "X键"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Y"
+msgstr "Y键"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Z"
+msgstr ""
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -5794,7 +5849,7 @@ msgstr ""
 "默认情况下使用SDL2，否则启用特定控制器功能。 Sony DS控制器无法与克隆控制器兼"
 "容。"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Define the resolution and a new dedicated window."
 msgstr "定义分辨率和新的专用窗口。"
@@ -6069,6 +6124,11 @@ msgstr "双重缓冲"
 msgctxt "game_options"
 msgid "Double the rendering resolution."
 msgstr "将渲染分辨率提高一倍."
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Down"
+msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -9845,6 +9905,11 @@ msgctxt "game_options"
 msgid "Lebanon"
 msgstr ""
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Left"
+msgstr ""
+
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Left Analogue (Auto)"
@@ -10605,7 +10670,7 @@ msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
 msgstr "返回菜单"
@@ -12990,6 +13055,11 @@ msgstr "倒带功能可能会占用很多CPU资源。"
 msgctxt "game_options"
 msgid "Rice"
 msgstr "Rice"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Right"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -16089,6 +16159,11 @@ msgctxt "game_options"
 msgid "Until Timeout"
 msgstr "直到超时"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Up"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
@@ -16457,7 +16532,7 @@ msgctxt "game_options"
 msgid "VIOLENCE LEVEL"
 msgstr "暴力级别"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr "虚拟桌面"
@@ -17591,14 +17666,6 @@ msgstr "黄色/蓝色"
 #~ msgstr "禁用背景玻璃"
 
 #~ msgctxt "keys_files"
-#~ msgid "Button A"
-#~ msgstr "A键"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button B"
-#~ msgstr "B键"
-
-#~ msgctxt "keys_files"
 #~ msgid "Button L"
 #~ msgstr "L键"
 
@@ -17609,18 +17676,6 @@ msgstr "黄色/蓝色"
 #~ msgctxt "keys_files"
 #~ msgid "Button Select"
 #~ msgstr "选择键"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Start"
-#~ msgstr "开始键"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button X"
-#~ msgstr "X键"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Y"
-#~ msgstr "Y键"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"

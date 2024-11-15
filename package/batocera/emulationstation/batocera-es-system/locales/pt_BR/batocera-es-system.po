@@ -2916,6 +2916,26 @@ msgctxt "game_options"
 msgid "Analog"
 msgstr "Analógico"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Down"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Left"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Right"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Up"
+msgstr ""
+
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Analogue"
@@ -3910,10 +3930,45 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr "Búlgaro"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button A"
+msgstr "Botão A"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button B"
+msgstr "Botão B"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button C"
+msgstr ""
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
 msgstr "Opções de botão"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Start"
+msgstr "Botão Iniciar"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button X"
+msgstr "Botão X"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Y"
+msgstr "Botão Y"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Z"
+msgstr ""
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -5856,7 +5911,7 @@ msgstr ""
 "O padrão usa SDL2; caso contrário, habilite recursos específicos do "
 "controlador. Sony DS não funciona com controles alternativos."
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Define the resolution and a new dedicated window."
 msgstr "Define a resolução e uma nova janela dedicada."
@@ -6139,6 +6194,11 @@ msgstr "Dobrar memória temporária de reserva"
 msgctxt "game_options"
 msgid "Double the rendering resolution."
 msgstr "Dobra a resolução de renderização."
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Down"
+msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -10009,6 +10069,11 @@ msgctxt "game_options"
 msgid "Lebanon"
 msgstr ""
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Left"
+msgstr ""
+
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Left Analogue (Auto)"
@@ -10791,7 +10856,7 @@ msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
 msgstr ""
@@ -13215,6 +13280,11 @@ msgstr "Rebobinar pode sobrecarregar o processador."
 msgctxt "game_options"
 msgid "Rice"
 msgstr "Rice"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Right"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -16354,6 +16424,11 @@ msgctxt "game_options"
 msgid "Until Timeout"
 msgstr "Até o tempo limite"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Up"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
@@ -16742,7 +16817,7 @@ msgctxt "game_options"
 msgid "VIOLENCE LEVEL"
 msgstr "NÍVEL DE VIOLÊNCIA"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr "ÁREA DE TRABALHO VIRTUAL"
@@ -18188,14 +18263,6 @@ msgstr "amarelo/azul"
 #~ msgstr "Bilinear (sem mesclagem de bordas)"
 
 #~ msgctxt "keys_files"
-#~ msgid "Button A"
-#~ msgstr "Botão A"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button B"
-#~ msgstr "Botão B"
-
-#~ msgctxt "keys_files"
 #~ msgid "Button L"
 #~ msgstr "Botão L"
 
@@ -18206,18 +18273,6 @@ msgstr "amarelo/azul"
 #~ msgctxt "keys_files"
 #~ msgid "Button Select"
 #~ msgstr "Botão Selecionar"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Start"
-#~ msgstr "Botão Iniciar"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button X"
-#~ msgstr "Botão X"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Y"
-#~ msgstr "Botão Y"
 
 #~ msgctxt "game_options"
 #~ msgid "CDZ (MAME)"

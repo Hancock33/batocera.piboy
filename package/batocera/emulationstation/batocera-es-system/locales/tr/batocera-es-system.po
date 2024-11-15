@@ -2917,6 +2917,26 @@ msgctxt "game_options"
 msgid "Analog"
 msgstr "Analog"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Down"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Left"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Right"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Up"
+msgstr ""
+
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Analogue"
@@ -3905,10 +3925,45 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr "Bulgarca"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button A"
+msgstr "Düğme A"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button B"
+msgstr "Düğme B"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button C"
+msgstr ""
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
 msgstr "Tuş Seçenekleri"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Start"
+msgstr "Düğme Başlat"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button X"
+msgstr "Düğme X"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Y"
+msgstr "Düğme Y"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Z"
+msgstr ""
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -5852,7 +5907,7 @@ msgstr ""
 "Varsayılan SDL2'yi kullanır, aksi takdirde denetleyiciye özgü yetenekleri "
 "etkinleştirir. Sony DS, klon denetleyicilerle çalışmaz."
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Define the resolution and a new dedicated window."
 msgstr "Çözünürlüğü ve yeni bir özel pencere tanımla."
@@ -6134,6 +6189,11 @@ msgstr "Çift arabellek"
 msgctxt "game_options"
 msgid "Double the rendering resolution."
 msgstr "İşleme çözünürlüğünü ikiye katla."
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Down"
+msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -10011,6 +10071,11 @@ msgctxt "game_options"
 msgid "Lebanon"
 msgstr ""
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Left"
+msgstr ""
+
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Left Analogue (Auto)"
@@ -10792,7 +10857,7 @@ msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
 msgstr ""
@@ -13207,6 +13272,11 @@ msgstr "Geri sarma, CPU açısından ağır olabilir."
 msgctxt "game_options"
 msgid "Rice"
 msgstr "Rice"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Right"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -16341,6 +16411,11 @@ msgctxt "game_options"
 msgid "Until Timeout"
 msgstr "Zaman Aşımına Kadar"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Up"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
@@ -16734,7 +16809,7 @@ msgctxt "game_options"
 msgid "VIOLENCE LEVEL"
 msgstr "ŞİDDET DÜZEYİ"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr "SANAL MASAÜSTÜ"
@@ -17939,14 +18014,6 @@ msgstr "sarı/mavi"
 #~ msgstr "Bilinear (kenar karıştırma yok)"
 
 #~ msgctxt "keys_files"
-#~ msgid "Button A"
-#~ msgstr "Düğme A"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button B"
-#~ msgstr "Düğme B"
-
-#~ msgctxt "keys_files"
 #~ msgid "Button L"
 #~ msgstr "Düğme L"
 
@@ -17957,18 +18024,6 @@ msgstr "sarı/mavi"
 #~ msgctxt "keys_files"
 #~ msgid "Button Select"
 #~ msgstr "Düğme Seç"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Start"
-#~ msgstr "Düğme Başlat"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button X"
-#~ msgstr "Düğme X"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Y"
-#~ msgstr "Düğme Y"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"
