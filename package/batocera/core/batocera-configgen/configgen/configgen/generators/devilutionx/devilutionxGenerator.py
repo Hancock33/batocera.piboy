@@ -43,7 +43,7 @@ class DevilutionXGenerator(Generator):
         else:
             config['Graphics']['Fit to Screen'] = '0'
 
-        with open(configFile, 'w') as file:
+        with configFile.open('w') as file:
             config.write(file)
 
         commandArray = [
