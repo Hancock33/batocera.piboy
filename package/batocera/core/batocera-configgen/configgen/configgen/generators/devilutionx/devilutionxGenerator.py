@@ -33,11 +33,11 @@ class DevilutionXGenerator(Generator):
 
         if configFile.exists():
             config.read(configFile)
-        
+
         # Ensure the [Graphics] section exists
         if 'Graphics' not in config:
             config['Graphics'] = {}
-        
+
         if system.isOptSet("devilutionx_stretch") and system.config["devilutionx_stretch"] == "true":
             config['Graphics']['Fit to Screen'] = '1'
         else:
@@ -59,7 +59,7 @@ class DevilutionXGenerator(Generator):
 
         if system.isOptSet('showFPS') and system.getOptBoolean('showFPS'):
             commandArray.append('-f')
-        
+
         return Command.Command(
             array=commandArray,
             env={
