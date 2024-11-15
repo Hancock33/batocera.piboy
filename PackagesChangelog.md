@@ -8,6 +8,7 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|2402eea4b16908ad59079
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|e7faec6b0ef7eefc39f99a00fab21c1795182a58|Nov 15, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-11-15|Nov 15, 2024
 Emulators|[ryujinx](https://github.com/GreemDev/Ryujinx-Canary/releases)|1.2.37|Nov 15, 2024
+Emulators|[scummvm](http://github.com/scummvm/scummvm)|84c967e27ba6d5a0f74cc756ea088248e4c1a1d9|Nov 15, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|c0644d090d92c09754494aac4d02f4f6952671c3|Nov 15, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|5ab8a6f6f4dd8cfce669963571f401e632f66769|Nov 15, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|b85335272f1bda9fc5cf462f098ea13cab431ff0|Nov 15, 2024
@@ -31,6 +32,7 @@ Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|ff81
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|19cf00255c54f1f18a50eae7b2a9a580ce2f35ff|Nov 15, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|b7596f26f27eddc4eebab1ce687f816a71444740|Nov 15, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|2402eea4b16908ad59079bcf3fab06ba63531a3c|Nov 15, 2024
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|84c967e27ba6d5a0f74cc756ea088248e4c1a1d9|Nov 15, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20241115|Nov 15, 2024
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|ef1c73c84540f9b989a1a0f8b1b4bd8c20026353|Nov 14, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|0fd8061a527d2d93fa15f6bef1bc60b0cdf81a1a|Nov 14, 2024
@@ -58,7 +60,6 @@ Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|21e
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|d259a2e2f5356b08ee281fd9abb06c755d9798ad|Nov 13, 2024
 Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.13|Nov 12, 2024
 Emulators|[hatari](http://github.com/hatari/hatari)|9b115c14fe94342a7613f73c2e805566a35464c0|Nov 12, 2024
-Emulators|[scummvm](http://github.com/scummvm/scummvm)|b2fca4b6745f4dffa5387b9f50277895335a225e|Nov 12, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45368|Nov 12, 2024
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|cc0ad4698ee2c1b415285270a4e91229c63e19b5|Nov 12, 2024
 Network|[rtl8812au](http://github.com/morrownr/8812au-20210820)|ef03a275c04981ab2a200a267e577beac881d7a3|Nov 12, 2024
@@ -66,7 +67,6 @@ Ports|[openjk](http://github.com/JACoders/OpenJK)|199ddc7642d0ed0e2bf007fe63d0dc
 Ports|[stk](http://github.com/supertuxkart/stk-code)|7027212b2f268281b9b532e42abbd30bf0f6dae7|Nov 12, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|126e60e47c85ba3bae6b2c111bbe24cb1211b658|Nov 12, 2024
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|b85dba277fb777b095623a24cd924d0725e1596b|Nov 12, 2024
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|b2fca4b6745f4dffa5387b9f50277895335a225e|Nov 12, 2024
 Emulators|[play](https://github.com/jpd002/Play-.git)|aad9ef7f5a57b34759690455ec35a1a43535eddf|Nov 11, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|r14124|Nov 11, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.5|Nov 11, 2024
