@@ -23,8 +23,12 @@ class HclGenerator(Generator):
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        os.chdir("/usr/share/hcl")
-        commandArray = ["hcl", "--fullscreen"]
+        try:
+            os.chdir("/usr/share/hcl/data/map")
+            os.chdir("/usr/share/hcl")
+        except:
+            eslog.error("ERROR: Game assets not installed. You can get them from the Batocera Content Downloader.")
+        commandArray = ["hcl", "-d"]
 
         return Command.Command(
             array=commandArray,
