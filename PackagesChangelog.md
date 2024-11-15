@@ -16,7 +16,7 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|4ec2492b0bee
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|2c26b58b770f1f68f65d07240849ba0c631bcd4b|Nov 15, 2024
 Utils|[rclone](http://github.com/rclone/rclone)|v1.68.2|Nov 15, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|3d8c981ac9ecff292527ccd9390d0e40344e8531|Nov 15, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.21.r3.g3f86dff4|Nov 15, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.21.r138.gae6366b33c7|Nov 15, 2024
 Emulators|[wine-mono](https://github.com/madewokherd/wine-mono/releases)|wine-mono-9.3.1|Nov 15, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241115|Nov 15, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241115|Nov 15, 2024
