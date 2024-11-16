@@ -3400,11 +3400,11 @@ def generateCoreSettings(coreSettings: UnixSettings, system: Emulator, rom: Path
     # bennugd
     if (system.config['core'] == 'bennugd'):
         # FRAME LIMITER
-        if system.isOptSet('bennugd_force_frame_limiter') == False:
-            coreSettings.save('force_frame_limiter', '"false"')
-        else:
+        if system.isOptSet("bennugd_force_frame_limiter") == False:
             coreSettings.save('force_frame_limiter', '"true"')
-            
+        else:
+            coreSettings.save('force_frame_limiter', '"false"')
+
     # Custom : Allow the user to configure directly retroarchcore.cfg via batocera.conf via lines like : snes.retroarchcore.opt=val
     for user_config in system.config:
         if user_config[:14] == "retroarchcore.":

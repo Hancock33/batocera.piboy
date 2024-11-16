@@ -351,7 +351,7 @@ msgid ""
 "visible jitter."
 msgstr ""
 
-#. TRANSLATION: libretro, shared, shared, shared, shared, ...
+#. TRANSLATION: libretro, libretro, shared, shared, shared, ...
 msgctxt "game_options"
 msgid "LATENCY REDUCTION"
 msgstr ""
@@ -486,6 +486,11 @@ msgstr ""
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "For emulators and controllers supporting force feedback."
+msgstr ""
+
+#. TRANSLATION: dolphin_triforce, dolphin_triforce, libretro, libretro, libretro/atari800, ...
+msgctxt "game_options"
+msgid "CONTROLLER SETTINGS"
 msgstr ""
 
 #. TRANSLATION: shared
@@ -653,11 +658,6 @@ msgstr ""
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
 msgid "Treats the right analogue stick as the second joystick."
-msgstr ""
-
-#. TRANSLATION: dolphin_triforce, dolphin_triforce, libretro, libretro, libretro/atari800, ...
-msgctxt "game_options"
-msgid "CONTROLLER SETTINGS"
 msgstr ""
 
 #. TRANSLATION: libretro/atari800
