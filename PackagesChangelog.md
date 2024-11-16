@@ -1,5 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[cemu](https://github.com/cemu-project/Cemu)|269d5b9aabc2a346f441cae5e662fb32fbb7da41|Nov 16, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|5cfb76e3f560217009226ec1328f3bf5c63580a5|Nov 16, 2024
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|c972e7b2e08beb9fd2caa093157b6c9cf50c5197|Nov 16, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-11-16|Nov 16, 2024
@@ -57,7 +58,6 @@ Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|c3cba5418b4e5618b
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|50e11896b5dbcc6d2a56b6d3e60f6126ffc7b33d|Nov 13, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|50e11896b5dbcc6d2a56b6d3e60f6126ffc7b33d|Nov 13, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|62fa27e2a231a2096ce2e240ce33a9a1d2d03a0c|Nov 13, 2024
-Emulators|[cemu](https://github.com/cemu-project/Cemu)|6f9f3d52ea12d3951b2d9d71806f18fea46140e3|Nov 13, 2024
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|5e8beb3ab7277e0fae9a9a1cae8d26a357c570e5|Nov 13, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|1cea0da3e24ba71f872a28008ae4d2cd7634a7e7|Nov 13, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|21e7b80e7077e542297127b1419089175c5ad099|Nov 13, 2024
