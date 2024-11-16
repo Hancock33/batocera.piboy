@@ -4457,6 +4457,8 @@ sorr:
   emulators:
     sorr:
       sorr:             { requireAnyOf: [BR2_PACKAGE_LIB32BIT] }
+    libretro:
+      bennugd:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BENNUGD] }
 
 spacecadetpinball:
   name:                 3D Pinball Space Cadet

@@ -573,6 +573,14 @@ libretro:
                     #"None":          0
                     "Saturn Pad":    1
                     "Saturn 3D Pad": 261
+    bennugd:
+      cfeatures:
+            bennugd_force_frame_limiter:
+                prompt:      FRAME LIMITER
+                description: Force internal frame limiter even if content and frontend frame rate matches.
+                choices:
+                    "Off":       "False"
+                    "On":        "True"
     fmsx:
       features: [padtokeyboard, cheevos, netplay]
       shared: [autosave, rewind]

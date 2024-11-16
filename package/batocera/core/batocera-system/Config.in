@@ -1349,6 +1349,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
     #Extra libretro-cores
     select BR2_PACKAGE_LIBRETRO_2048
+    select BR2_PACKAGE_LIBRETRO_BENNUGD                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Streets of Rage Remake
     select BR2_PACKAGE_LIBRETRO_BK_EMULATOR
     select BR2_PACKAGE_LIBRETRO_BSNES_JG                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_CANNONBALL
@@ -1382,7 +1383,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
     #Extra Ports
     #32bit Applications
-    #select BR2_SORR                                        if  BR2_PACKAGE_BATOCERA_BCM27XX     # Streets of Rage Remake - 32bit Only
     select BR2_PACKAGE_BOX64                                if  BR2_PACKAGE_BATOCERA_BCM27XX
     select BR2_PACKAGE_LIB32BIT                             if  BR2_PACKAGE_BATOCERA_BCM27XX
 
