@@ -9922,7 +9922,7 @@ msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr "DİL"
 
-#. TRANSLATION: libretro, shared, shared, shared, shared, ...
+#. TRANSLATION: libretro, libretro, shared, shared, shared, ...
 msgctxt "game_options"
 msgid "LATENCY REDUCTION"
 msgstr "GECİKME AZALTMA"

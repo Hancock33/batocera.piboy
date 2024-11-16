@@ -9955,7 +9955,7 @@ msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr "NYELV"
 
-#. TRANSLATION: libretro, shared, shared, shared, shared, ...
+#. TRANSLATION: libretro, libretro, shared, shared, shared, ...
 msgctxt "game_options"
 msgid "LATENCY REDUCTION"
 msgstr "KÉSLELTETÉS CSÖKKENTÉSE"

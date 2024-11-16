@@ -223,6 +223,7 @@ shared:
         "On": 1
         "Off": 0
     preemptiveframes:
+       group: LATENCY REDUCTION
        submenu:     LATENCY REDUCTION
        prompt:      USE PRE-EMPTIVE FRAMES
        description: Use preemptive frames instead of run-ahead. Only runs ahead when controller state changes.
@@ -322,6 +323,7 @@ shared:
         "9":   9
         "10": 10
     rumble_gain:
+      group: CONTROLLER SETTINGS
       prompt:      RUMBLE LEVEL
       description: For emulators and controllers supporting force feedback.
       choices:
@@ -417,6 +419,7 @@ libretro:
         "HID": hid
     audio_latency:
       group: LATENCY REDUCTION
+      submenu:     LATENCY REDUCTION
       prompt:      AUDIO LATENCY
       description: In milliseconds. Can reduce crackling/cutting out.
       choices:
@@ -578,9 +581,7 @@ libretro:
             bennugd_force_frame_limiter:
                 prompt:      FRAME LIMITER
                 description: Force internal frame limiter even if content and frontend frame rate matches.
-                choices:
-                    "Off":       "False"
-                    "On":        "True"
+                preset: switchon
     fmsx:
       features: [padtokeyboard, cheevos, netplay]
       shared: [autosave, rewind]

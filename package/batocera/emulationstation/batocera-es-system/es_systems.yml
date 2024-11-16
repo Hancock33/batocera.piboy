@@ -4450,7 +4450,7 @@ sorr:
   manufacturer:         Ports
   release:              2011
   hardware:             port
-  extensions:           [dat]
+  extensions:           [dat, dcb]
   platform:             pc
   group:                ports
   path:                 /userdata/roms/ports/sorr
