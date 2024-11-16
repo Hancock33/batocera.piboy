@@ -7570,6 +7570,11 @@ msgctxt "game_options"
 msgid "FRAME LIMIT"
 msgstr "프레임 제한"
 
+#. TRANSLATION: libretro/bennugd
+msgctxt "game_options"
+msgid "FRAME LIMITER"
+msgstr ""
+
 #. TRANSLATION: libretro, libretro
 msgctxt "game_options"
 msgid "FRAME MONITORING SETTINGS"
@@ -8007,6 +8012,12 @@ msgstr "WINE이 큰 주소로 게임을 실행하도록 강제합니다."
 msgctxt "game_options"
 msgid "Force a specific model and prevent tags detection."
 msgstr "특정 모델을 강제 적용하고 태그 감지를 방지합니다."
+
+#. TRANSLATION: libretro/bennugd
+msgctxt "game_options"
+msgid ""
+"Force internal frame limiter even if content and frontend frame rate matches."
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"

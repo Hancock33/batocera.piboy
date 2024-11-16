@@ -3397,6 +3397,14 @@ def generateCoreSettings(coreSettings: UnixSettings, system: Emulator, rom: Path
         # UBERSHADER LIGHTING OVERRIDE THRESHOLD
         coreSettings.save('panda3ds_ubershader_lighting_override_threshold', '"' + str(int(float(system.config["panda3ds_ubershader_lighting_override_threshold"]))) +'"')
 
+    # bennugd
+    if (system.config['core'] == 'bennugd'):
+        # FRAME LIMITER
+        if system.isOptSet('bennugd_force_frame_limiter') == False:
+            coreSettings.save('force_frame_limiter', '"false"')
+        else:
+            coreSettings.save('force_frame_limiter', '"true"')
+            
     # Custom : Allow the user to configure directly retroarchcore.cfg via batocera.conf via lines like : snes.retroarchcore.opt=val
     for user_config in system.config:
         if user_config[:14] == "retroarchcore.":

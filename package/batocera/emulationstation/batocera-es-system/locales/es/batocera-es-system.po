@@ -7638,6 +7638,11 @@ msgctxt "game_options"
 msgid "FRAME LIMIT"
 msgstr "LÍMITE DE FOTOGRAMAS"
 
+#. TRANSLATION: libretro/bennugd
+msgctxt "game_options"
+msgid "FRAME LIMITER"
+msgstr ""
+
 #. TRANSLATION: libretro, libretro
 msgctxt "game_options"
 msgid "FRAME MONITORING SETTINGS"
@@ -8080,6 +8085,12 @@ msgstr "Obliga a WINE a ejecutar juegos con direcciones grandes."
 msgctxt "game_options"
 msgid "Force a specific model and prevent tags detection."
 msgstr "Fuerza un modelo específico y evita la detección de etiquetas."
+
+#. TRANSLATION: libretro/bennugd
+msgctxt "game_options"
+msgid ""
+"Force internal frame limiter even if content and frontend frame rate matches."
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"

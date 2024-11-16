@@ -722,6 +722,17 @@ msgctxt "game_options"
 msgid "CONTROLLER 2 TYPE"
 msgstr ""
 
+#. TRANSLATION: libretro/bennugd
+msgctxt "game_options"
+msgid ""
+"Force internal frame limiter even if content and frontend frame rate matches."
+msgstr ""
+
+#. TRANSLATION: libretro/bennugd
+msgctxt "game_options"
+msgid "FRAME LIMITER"
+msgstr ""
+
 #. TRANSLATION: libretro/bluemsx, libretro/fuse, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
 msgid "Hides borders on many games. Some games used the borders."

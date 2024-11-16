@@ -925,8 +925,8 @@ sonicretro:
   emulator: soniccd
   core:     soniccd
 sorr:
-  emulator: sorr
-  core:     sorr
+  emulator: libretro
+  core:     bennugd
 spacecadetpinball:
   emulator: spacecadetpinball
   core:     spacecadetpinball
