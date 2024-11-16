@@ -66,7 +66,7 @@ Emulators|[applewin](https://github.com/audetto/AppleWin)|a100f0b7451dc91dcb6854
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|51100408d69a6732e79afcc1b2f1b2173147c7e4|Oct 19, 2024
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v115|Jul 16, 2024
 Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
-Emulators|[cemu](https://github.com/cemu-project/Cemu)|6f9f3d52ea12d3951b2d9d71806f18fea46140e3|Nov 13, 2024
+Emulators|[cemu](https://github.com/cemu-project/Cemu)|269d5b9aabc2a346f441cae5e662fb32fbb7da41|Nov 16, 2024
 Emulators|[citra](https://github.com/PabloMK7/citra.git)|864414f8fd79c90feff29f674898993f0053552f|Oct 29, 2024
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
 Emulators|[dhewm3](http://github.com/dhewm/dhewm3)|d94bb42d5048148f5358a3d7cf0f5bd6eb817f4a|Nov 07, 2024
