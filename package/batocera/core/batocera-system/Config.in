@@ -407,15 +407,11 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_PYTHON_RPI_GPIO                      if  BR2_PACKAGE_BATOCERA_RPI_ANY            && !BR2_PACKAGE_BATOCERA_TARGET_BCM2712
     select BR2_PACKAGE_PYTHON_GPIOZERO                      if  BR2_PACKAGE_BATOCERA_TARGET_BCM2835     ||  BR2_PACKAGE_BATOCERA_TARGET_BCM2836
     select BR2_PACKAGE_PYTHON_ADAFRUIT_CIRCUITPYTHON_WS2801 if  BR2_PACKAGE_BATOCERA_RPI_ANY            && !BR2_PACKAGE_BATOCERA_TARGET_BCM2712
-    select BR2_PACKAGE_PYTHON_GPIOD                         if  BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
-    select BR2_PACKAGE_BATOCERA_LED_HANDHELD                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_SM8250
+    select BR2_PACKAGE_PYTHON_GPIOD                         if  BR2_PACKAGE_BATOCERA_TARGET_BCM2712     ||  BR2_PACKAGE_BATOCERA_TARGET_BCM2711 || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2835     ||  BR2_PACKAGE_BATOCERA_TARGET_BCM2836 || \
+                                                               (BR2_PACKAGE_BATOCERA_TARGET_BCM2837     &&  BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_8)
 
-    # GPIO kernel driver
-    select BR2_PACKAGE_LIBGPIOD                             if BR2_PACKAGE_BATOCERA_TARGET_BCM2712      || \
-                                                               BR2_PACKAGE_BATOCERA_TARGET_BCM2711      || \
-                                                               BR2_PACKAGE_BATOCERA_TARGET_BCM2835      || \
-                                                               BR2_PACKAGE_BATOCERA_TARGET_BCM2836      || \
-                                                               BR2_PACKAGE_BATOCERA_TARGET_BCM2837      && BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_8
+    select BR2_PACKAGE_BATOCERA_LED_HANDHELD                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_SM8250
 
     select BR2_PACKAGE_LIBGPIOD_TOOLS                       if BR2_PACKAGE_LIBGPIOD
 
