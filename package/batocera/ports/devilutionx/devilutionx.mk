@@ -19,17 +19,6 @@ DEVILUTIONX_CONF_OPTS += -DCPACK=ON
 DEVILUTIONX_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
 DEVILUTIONX_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
-# ZeroTier on aarch64 uses ARMv8 Cryptography Extensions.
-# These extension are optional and only certain Armv8-A CPUs support them.
-# Disables ZeroTier if the CPU compilation flags do not specify the "+crypto" extension.
-ifeq ($(BR2_aarch64)$(BR2_ARM_CPU_ARMV8A),yy)
-    ifneq ($(findstring +crypto,$(BR2_TARGET_OPTIMIZATION)),+crypto)
-        DEVILUTIONX_CONF_OPTS += -DDISABLE_ZERO_TIER=ON
-    endif
-else ifeq ($(BR2_arm),y)
-    DEVILUTIONX_CONF_OPTS += -DDISABLE_ZERO_TIER=ON
-endif
-
 define DEVILUTIONX_FIX_SDL2MAIN
 	sed -i -e s+"SDL2::SDL2main"+"-lSDL2main"+ $(@D)/CMakeLists.txt
 	sed -i -e s+"SDL2::SDL2_image"+"-lSDL2_image"+ $(@D)/Source/CMakeLists.txt
