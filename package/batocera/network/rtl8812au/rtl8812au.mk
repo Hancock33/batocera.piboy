@@ -3,8 +3,8 @@
 # rtl8812au
 #
 ################################################################################
-# Version: Commits on Oct 25, 2024
-RTL8812AU_VERSION = da1538205d360c680e7ce72979ce2f975959ad82
+# Version: Commits on Nov 12, 2024
+RTL8812AU_VERSION = ef03a275c04981ab2a200a267e577beac881d7a3
 RTL8812AU_SITE = $(call github,morrownr,8812au-20210820,$(RTL8812AU_VERSION))
 RTL8812AU_LICENSE = GPL-2.0
 RTL8812AU_LICENSE_FILES = LICENSE

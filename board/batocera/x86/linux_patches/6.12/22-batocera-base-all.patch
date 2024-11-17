@@ -38,7 +38,7 @@ index 000000000000..2a19584d091e
 +		3  None
 +		== =================
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index 1666576acc0e..5b0b02e6988a 100644
+index d401577b5a6a..e6ec15a89924 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
 @@ -2248,6 +2248,9 @@
@@ -897,7 +897,7 @@ index 000000000000..767844637a7d
 +  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 21fdaa19229a..b0837cf9d500 100644
+index b878ddc99f94..b737a7b5e767 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -965,6 +965,14 @@ Q:	https://patchwork.kernel.org/project/linux-rdma/list/
@@ -973,7 +973,7 @@ index 21fdaa19229a..b0837cf9d500 100644
  M:	Petr Mladek <pmladek@suse.com>
  R:	Steven Rostedt <rostedt@goodmis.org>
 diff --git a/Makefile b/Makefile
-index 1bdd1f0e1c17..81f7bb0f1389 100644
+index 4456647f3b66..46721ab85839 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -801,11 +801,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -5375,10 +5375,10 @@ index b63863f77c67..d7630bab2516 100644
  }
  device_initcall(amd_pstate_init);
 diff --git a/drivers/cpufreq/intel_pstate.c b/drivers/cpufreq/intel_pstate.c
-index cd2ac1ba53d2..ac3647df1431 100644
+index 400337f3b572..d413b60c6001 100644
 --- a/drivers/cpufreq/intel_pstate.c
 +++ b/drivers/cpufreq/intel_pstate.c
-@@ -3820,6 +3820,8 @@ static int __init intel_pstate_setup(char *str)
+@@ -3817,6 +3817,8 @@ static int __init intel_pstate_setup(char *str)
  
  	if (!strcmp(str, "disable"))
  		no_load = 1;
@@ -5465,7 +5465,7 @@ index df17e79c45c7..e454488c1a31 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 825a35cfadd7..1396041e23fd 100644
+index eab22bbf28c4..7738c7fe1735 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -4473,7 +4473,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
@@ -5491,10 +5491,10 @@ index ebabfe3a512f..4d3ebcaacca1 100644
   *
   * AMD driver supports pre-defined mathematical functions for transferring
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_crtc.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_crtc.c
-index a2cf2c066a76..285f5a045ca5 100644
+index 288be19db7c1..9d48d01d5217 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_crtc.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_crtc.c
-@@ -474,7 +474,7 @@ static int amdgpu_dm_crtc_late_register(struct drm_crtc *crtc)
+@@ -473,7 +473,7 @@ static int amdgpu_dm_crtc_late_register(struct drm_crtc *crtc)
  }
  #endif
  
@@ -5503,7 +5503,7 @@ index a2cf2c066a76..285f5a045ca5 100644
  /**
   * dm_crtc_additional_color_mgmt - enable additional color properties
   * @crtc: DRM CRTC
-@@ -556,7 +556,7 @@ static const struct drm_crtc_funcs amdgpu_dm_crtc_funcs = {
+@@ -555,7 +555,7 @@ static const struct drm_crtc_funcs amdgpu_dm_crtc_funcs = {
  #if defined(CONFIG_DEBUG_FS)
  	.late_register = amdgpu_dm_crtc_late_register,
  #endif
@@ -5512,7 +5512,7 @@ index a2cf2c066a76..285f5a045ca5 100644
  	.atomic_set_property = amdgpu_dm_atomic_crtc_set_property,
  	.atomic_get_property = amdgpu_dm_atomic_crtc_get_property,
  #endif
-@@ -735,7 +735,7 @@ int amdgpu_dm_crtc_init(struct amdgpu_display_manager *dm,
+@@ -734,7 +734,7 @@ int amdgpu_dm_crtc_init(struct amdgpu_display_manager *dm,
  
  	drm_mode_crtc_set_gamma_size(&acrtc->base, MAX_COLOR_LEGACY_LUT_ENTRIES);
  
@@ -25124,7 +25124,7 @@ index 2bbb6eca5144..125cdf85741c 100644
  
  	return state;
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 719e0ed1e976..b35752fdbcc0 100644
+index a1c353a62c56..a55dfdf8e790 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -3734,28 +3734,38 @@ ttwu_do_activate(struct rq *rq, struct task_struct *p, int wake_flags,
@@ -25222,10 +25222,10 @@ index 2d16c8545c71..54e7c4c3e2c5 100644
  #ifdef CONFIG_NUMA_BALANCING
  /* Restrict the NUMA promotion throughput (MB/s) for each target node. */
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 6c54a57275cc..e7fbb1d0f316 100644
+index c03b3d7b320e..90f8c5ab3ee2 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
-@@ -1779,6 +1779,11 @@ task_rq_unlock(struct rq *rq, struct task_struct *p, struct rq_flags *rf)
+@@ -1780,6 +1780,11 @@ task_rq_unlock(struct rq *rq, struct task_struct *p, struct rq_flags *rf)
  	raw_spin_unlock_irqrestore(&p->pi_lock, rf->flags);
  }
  
@@ -25237,7 +25237,7 @@ index 6c54a57275cc..e7fbb1d0f316 100644
  DEFINE_LOCK_GUARD_1(task_rq_lock, struct task_struct,
  		    _T->rq = task_rq_lock(_T->lock, &_T->rf),
  		    task_rq_unlock(_T->rq, _T->lock, &_T->rf),
-@@ -2815,7 +2820,7 @@ extern void deactivate_task(struct rq *rq, struct task_struct *p, int flags);
+@@ -2816,7 +2821,7 @@ extern void deactivate_task(struct rq *rq, struct task_struct *p, int flags);
  
  extern void wakeup_preempt(struct rq *rq, struct task_struct *p, int flags);
  
@@ -42697,7 +42697,7 @@ index fcd4c1439cb9..e2f7d709e819 100644
  EXPORT_SYMBOL_GPL(dirty_writeback_interval);
  
 diff --git a/mm/page_alloc.c b/mm/page_alloc.c
-index c6c7bb3ea71b..d8ba1df0b5e1 100644
+index 216fbbfbedcf..4a34593481c6 100644
 --- a/mm/page_alloc.c
 +++ b/mm/page_alloc.c
 @@ -271,7 +271,11 @@ const char * const migratetype_names[MIGRATE_TYPES] = {
@@ -42713,10 +42713,10 @@ index c6c7bb3ea71b..d8ba1df0b5e1 100644
  
  /* movable_zone is the "real" zone pages in ZONE_MOVABLE are taken from */
 diff --git a/mm/swap.c b/mm/swap.c
-index b8e3259ea2c4..4e7d140d422c 100644
+index 59f30a981c6f..6dc9c0a86d9a 100644
 --- a/mm/swap.c
 +++ b/mm/swap.c
-@@ -1094,6 +1094,10 @@ void folio_batch_remove_exceptionals(struct folio_batch *fbatch)
+@@ -1080,6 +1080,10 @@ void folio_batch_remove_exceptionals(struct folio_batch *fbatch)
   */
  void __init swap_setup(void)
  {
@@ -42727,7 +42727,7 @@ index b8e3259ea2c4..4e7d140d422c 100644
  	unsigned long megs = totalram_pages() >> (20 - PAGE_SHIFT);
  
  	/* Use a smaller cluster for small-memory machines */
-@@ -1105,4 +1109,5 @@ void __init swap_setup(void)
+@@ -1091,4 +1095,5 @@ void __init swap_setup(void)
  	 * Right now other parts of the system means that we
  	 * _really_ don't want to cluster much more
  	 */

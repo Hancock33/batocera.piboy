@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-import os
-
 from typing import TYPE_CHECKING
 
 from ... import controllersConfig
@@ -3320,7 +3318,7 @@ def generateCoreSettings(coreSettings: UnixSettings, system: Emulator, rom: Path
         else:
             coreSettings.save('hatarib_borders', '"0"')
         # Harddrive image support
-        rom_extension = os.path.splitext(os.path.basename(rom))[1].lower()
+        rom_extension = rom.suffix.lower()
         if rom_extension == '.hd':
             coreSettings.save('hatarib_hardimg', '"hatarib/hdd"')
             coreSettings.save('hatarib_hardboot', '"1"')
@@ -3398,6 +3396,14 @@ def generateCoreSettings(coreSettings: UnixSettings, system: Emulator, rom: Path
             coreSettings.save('panda3ds_ubershader_lighting_override', '"disabled"')
         # UBERSHADER LIGHTING OVERRIDE THRESHOLD
         coreSettings.save('panda3ds_ubershader_lighting_override_threshold', '"' + str(int(float(system.config["panda3ds_ubershader_lighting_override_threshold"]))) +'"')
+
+    # bennugd
+    if (system.config['core'] == 'bennugd'):
+        # FRAME LIMITER
+        if system.isOptSet("bennugd_force_frame_limiter") == False:
+            coreSettings.save('force_frame_limiter', '"true"')
+        else:
+            coreSettings.save('force_frame_limiter', '"false"')
 
     # Custom : Allow the user to configure directly retroarchcore.cfg via batocera.conf via lines like : snes.retroarchcore.opt=val
     for user_config in system.config:

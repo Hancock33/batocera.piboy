@@ -45,7 +45,8 @@ class XeniaGenerator(Generator):
         rom_path = Path(rom)
 
         wineprefix = HOME / 'wine-bottles' / 'xbox360'
-        wineBinary = Path('/usr/wine/ge-custom/bin/wine64')
+        winePath = Path('/usr/wine/wine-custom')
+        wineBinary = winePath / 'bin' / 'wine64'
         xeniaConfig = CONFIGS / 'xenia'
         xeniaCache = CACHE / 'xenia'
         xeniaSaves = SAVES / 'xbox360'
@@ -114,9 +115,9 @@ class XeniaGenerator(Generator):
         alsa_done = wineprefix / "alsa.done"
         if not alsa_done.exists():
             cmd = ["/usr/wine/winetricks", "sound=alsa"]
-            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/wine-custom/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
-            env["PATH"] = "/usr/wine/ge-custom/bin:/bin:/usr/bin"
+            env["PATH"] = "/usr/wine/wine-custom/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
             proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             out, err = proc.communicate()
@@ -126,27 +127,12 @@ class XeniaGenerator(Generator):
             with alsa_done.open("w") as f:
                 f.write("done")
 
-        vkd3d_done = wineprefix / "vkd3d.done"
-        if not vkd3d_done.exists():
-            cmd = ["/usr/wine/winetricks", "-q", "vkd3d"]
-            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
-            env.update(os.environ)
-            env["PATH"] = "/usr/wine/ge-custom/bin:/bin:/usr/bin"
-            eslog.debug(f"command: {str(cmd)}")
-            proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            out, err = proc.communicate()
-            exitcode = proc.returncode
-            eslog.debug(out.decode())
-            eslog.error(err.decode())
-            with vkd3d_done.open("w") as f:
-                f.write("done")
-
         vcrun2019_done = wineprefix / "vcrun2019.done"
         if not vcrun2019_done.exists():
             cmd = ["/usr/wine/winetricks", "-q", "vcrun2019"]
-            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/wine-custom/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
-            env["PATH"] = "/usr/wine/ge-custom/bin:/bin:/usr/bin"
+            env["PATH"] = "/usr/wine/wine-custom/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
             proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             out, err = proc.communicate()
@@ -156,23 +142,30 @@ class XeniaGenerator(Generator):
             with vcrun2019_done.open("w") as f:
                 f.write("done")
 
-        dxvk_done = wineprefix / "dxvk.done"
-        if not dxvk_done.exists():
-            cmd = ["/usr/wine/winetricks", "-q", "dxvk"]
-            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/ge-custom/lib/wine", "WINEPREFIX": wineprefix }
-            env.update(os.environ)
-            env["PATH"] = "/usr/wine/ge-custom/bin:/bin:/usr/bin"
-            eslog.debug(f"command: {str(cmd)}")
-            proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            out, err = proc.communicate()
-            exitcode = proc.returncode
-            eslog.debug(out.decode())
-            eslog.error(err.decode())
-            with dxvk_done.open("w") as f:
-                f.write("done")
+        dll_files = ["d3d12.dll", "d3d12core.dll", "d3d11.dll", "d3d10core.dll", "d3d9.dll", "d3d8.dll", "dxgi.dll"]
+        # Create symbolic links for 64-bit DLLs
+        try:
+            for dll in dll_files:
+                src_path = Path("/usr/wine/dxvk/x64") / dll
+                dest_path = wineprefix / "drive_c" / "windows" / "system32" / dll
+                # Remove existing link if it already exists
+                if dest_path.exists() or dest_path.is_symlink():
+                    dest_path.unlink()
+                dest_path.symlink_to(src_path)
+        except Exception as e:
+            eslog.debug(f"Error creating 64-bit link for {dll}: {e}")
 
-        # check & copy newer dxvk files
-        #self.sync_directories(Path("/usr/wine/dxvk/x64"), wineprefix / "drive_c/windows/system32")
+        # Create symbolic links for 32-bit DLLs
+        try:
+            for dll in dll_files:
+                src_path = Path("/usr/wine/dxvk/x32") / dll
+                dest_path = wineprefix / "drive_c" / "windows" / "syswow64" / dll
+                # Remove existing link if it already exists
+                if dest_path.exists() or dest_path.is_symlink():
+                    dest_path.unlink()
+                dest_path.symlink_to(src_path)
+        except Exception as e:
+            eslog.debug(f"Error creating 32-bit link for {dll}: {e}")
 
         # squashfs
         if "/squashfs" in rom:
@@ -228,7 +221,11 @@ class XeniaGenerator(Generator):
         # add node D3D12
         if 'D3D12' not in config:
             config['D3D12'] = {}
-        config['D3D12'] = {'d3d12_readback_resolve': False}
+        # readback resolve
+        if system.isOptSet('xenia_readback_resolve') and system.config['xenia_readback_resolve'] == 'True':
+            config['D3D12']['d3d12_readback_resolve'] = True
+        else:
+            config['D3D12']['d3d12_readback_resolve'] = False
         # add node Display
         if 'Display' not in config:
             config['Display'] = {}
@@ -244,20 +241,10 @@ class XeniaGenerator(Generator):
             config['GPU'] = {}
         # may be used to bypass fetch constant type errors in certain games.
         # set the API to use
-        if system.isOptSet('xenia_api') and system.config['xenia_api'] == 'D3D12':
-            config['GPU'] = {
-                'depth_float24_convert_in_pixel_shader': True,
-                'gpu_allow_invalid_fetch_constants': True,
-                'gpu': 'd3d12',
-                'render_target_path_d3d12': 'rtv'
-            }
+        if system.isOptSet('xenia_api') and system.config['xenia_api'] == 'Vulkan':
+            config['GPU']['gpu'] = 'vulkan'
         else:
-            config['GPU'] = {
-                'depth_float24_convert_in_pixel_shader': True,
-                'gpu': 'vulkan',
-                'gpu_allow_invalid_fetch_constants': True,
-                'render_target_path_vulkan': 'fbo'
-            }
+            config['GPU']['gpu'] = 'd3d12'
         # vsync
         if system.isOptSet('xenia_vsync') and system.config['xenia_vsync'] == 'False':
             config['GPU']['vsync'] = False
@@ -273,11 +260,6 @@ class XeniaGenerator(Generator):
         config['GPU']['render_target_path_d3d12'] = system.config.get('xenia_target_path', 'rtv')
         # query occlusion
         config['GPU']['query_occlusion_fake_sample_count'] = int(system.config.get('xenia_query_occlusion', 1000))
-        # readback resolve
-        if system.isOptSet('xenia_readback_resolve') and system.config['xenia_readback_resolve'] == 'True':
-            config['GPU']['d3d12_readback_resolve'] = True
-        else:
-            config['GPU']['d3d12_readback_resolve'] = False
         # cache
         config['GPU']['texture_cache_memory_limit_hard'] = int(system.config.get('xenia_limit_hard', 768))
         config['GPU']['texture_cache_memory_limit_render_to_texture'] = int(system.config.get('xenia_limit_render_to_texture', 24))
@@ -325,7 +307,7 @@ class XeniaGenerator(Generator):
             config['Storage']['mount_cache'] = False
         else:
             config['Storage']['mount_cache'] = True
-        
+
         # add node UI
         if 'UI' not in config:
             config['UI'] = {}
@@ -356,14 +338,6 @@ class XeniaGenerator(Generator):
             config['XConfig'] = {'user_language': int(system.config['xenia_language'])}
         else:
             config['XConfig'] = {'user_language': 1}
-        # profiles (xenia cananry specific currently)
-        if core == 'xenia-canary':
-            if 'Profiles' not in config:
-                config['Profiles'] = {}
-            # add batocera gamertag as initial save profile
-            # for some reason some games need slot 1 too
-            config['Profiles']['logged_profile_slot_0_xuid'] = "B13EBABEBABEBABE"
-            config['Profiles']['logged_profile_slot_1_xuid'] = "B13EBABEBABEBABE"
 
         # now write the updated toml
         with toml_file.open('w') as f:
@@ -408,15 +382,16 @@ class XeniaGenerator(Generator):
 
         environment={
                 'WINEPREFIX': wineprefix,
-                'LD_LIBRARY_PATH': '/usr/lib:/lib32:/usr/wine/ge-custom/lib/wine',
+                'LD_LIBRARY_PATH': '/usr/lib:/lib32:/usr/wine/wine-custom/lib/wine',
                 'LIBGL_DRIVERS_PATH': '/usr/lib/dri',
-                'WINEESYNC': '1',
+                'WINEFSYNC': '1',
                 'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers),
                 'SDL_JOYSTICK_HIDAPI': '0',
                 # hum pw 0.2 and 0.3 are hardcoded, not nice
                 'SPA_PLUGIN_DIR': '/usr/lib/spa-0.2:/lib32/spa-0.2',
                 'PIPEWIRE_MODULE_DIR': '/usr/lib/pipewire-0.3:/lib32/pipewire-0.3',
-                'VKD3D_SHADER_CACHE_PATH': xeniaCache
+                'VKD3D_SHADER_CACHE_PATH': xeniaCache,
+                'WINEDLLOVERRIDES': "winemenubuilder.exe=;dxgi,d3d8,d3d9,d3d10core,d3d11,d3d12,d3d12core=n",
             }
 
         # ensure nvidia driver used for vulkan
