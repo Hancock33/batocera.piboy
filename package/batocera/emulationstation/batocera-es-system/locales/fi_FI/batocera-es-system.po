@@ -2904,6 +2904,26 @@ msgctxt "game_options"
 msgid "Analog"
 msgstr ""
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Down"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Left"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Right"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Up"
+msgstr ""
+
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Analogue"
@@ -3874,9 +3894,44 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr ""
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button A"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button B"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button C"
+msgstr ""
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Start"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button X"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Y"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Z"
 msgstr ""
 
 #. TRANSLATION: vpinball.keys
@@ -5787,7 +5842,7 @@ msgid ""
 "DS won't work with clone controllers."
 msgstr ""
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Define the resolution and a new dedicated window."
 msgstr ""
@@ -6060,6 +6115,11 @@ msgstr ""
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Double the rendering resolution."
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Down"
 msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
@@ -7412,6 +7472,11 @@ msgctxt "game_options"
 msgid "FRAME LIMIT"
 msgstr ""
 
+#. TRANSLATION: libretro/bennugd
+msgctxt "game_options"
+msgid "FRAME LIMITER"
+msgstr ""
+
 #. TRANSLATION: libretro, libretro
 msgctxt "game_options"
 msgid "FRAME MONITORING SETTINGS"
@@ -7826,6 +7891,12 @@ msgstr ""
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "Force a specific model and prevent tags detection."
+msgstr ""
+
+#. TRANSLATION: libretro/bennugd
+msgctxt "game_options"
+msgid ""
+"Force internal frame limiter even if content and frontend frame rate matches."
 msgstr ""
 
 #. TRANSLATION: wine
@@ -9663,7 +9734,7 @@ msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr "KIELI"
 
-#. TRANSLATION: libretro, shared, shared, shared, shared, ...
+#. TRANSLATION: libretro, libretro, shared, shared, shared, ...
 msgctxt "game_options"
 msgid "LATENCY REDUCTION"
 msgstr ""
@@ -9821,6 +9892,11 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Lebanon"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Left"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
@@ -10579,7 +10655,7 @@ msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
 msgstr ""
@@ -12956,6 +13032,11 @@ msgstr "Takaisinkelaus saattaa olla prosessorilla raskasta."
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
 msgid "Rice"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Right"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
@@ -16046,6 +16127,11 @@ msgctxt "game_options"
 msgid "Until Timeout"
 msgstr ""
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Up"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
@@ -16410,7 +16496,7 @@ msgctxt "game_options"
 msgid "VIOLENCE LEVEL"
 msgstr ""
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr ""

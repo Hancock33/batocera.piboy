@@ -1,12 +1,13 @@
 from __future__ import annotations
-from typing import TYPE_CHECKING, Final
+
 import logging
 import os
 import struct
 from pathlib import Path
+from typing import TYPE_CHECKING, Final
 
 from ... import Command
-from ...batoceraPaths import ROMS, CONFIGS, CACHE, SAVES
+from ...batoceraPaths import CACHE, CONFIGS, ROMS, SAVES, mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
@@ -85,7 +86,7 @@ class OpenJazzGenerator(Generator):
             return
 
         try:
-            with open(filename, "rb") as file:
+            with filename.open("rb") as file:
                 # Read version
                 data = file.read(1)
                 if not data:
@@ -153,12 +154,12 @@ class OpenJazzGenerator(Generator):
             eslog.info("Creating new default configuration")
             self.create_default_config(filename)
 
-    def create_default_config(self, filename):
+    def create_default_config(self, filename: Path):
         eslog.info("Creating default configuration file")
-        os.makedirs(os.path.dirname(filename), exist_ok=True)
+        mkdir_if_not_exists(filename.parent)
 
         try:
-            with open(filename, "wb") as file:
+            with filename.open("wb") as file:
                 # Version
                 file.write(struct.pack("B", self.version))
 
@@ -210,7 +211,7 @@ class OpenJazzGenerator(Generator):
     def save(self, filename=_CONFIG):
         eslog.info("Saving configuration")
         try:
-            with open(filename, "wb") as file:
+            with filename.open("wb") as file:
                 # Version
                 file.write(struct.pack("B", self.version))
 
@@ -333,8 +334,12 @@ class OpenJazzGenerator(Generator):
         # Save the changes
         self.save()
 
-
+        # Attempt to change directory to the game's assets
         gamedir = rom.replace('openjazz.game', '')
+        try:
+            os.chdir(gamedir)
+        except Exception as e:
+            eslog.error(f"Error: {e}")
         commandArray = ["OpenJazz", gamedir]
 
         return Command.Command(

@@ -522,7 +522,7 @@ class DuckstationGenerator(Generator):
             settings.write(configfile)
 
         # write our own gamecontrollerdb.txt file before launching the game
-        dbfile = "/usr/share/gamecontrollerdb.txt"
+        dbfile = "/usr/bin/duckstation/resources/gamecontrollerdb.txt"
         write_sdl_controller_db(playersControllers, dbfile)
 
         # check if we're running wayland

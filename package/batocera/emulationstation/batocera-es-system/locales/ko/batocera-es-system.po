@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-11-10 20:45+0900\n"
+"PO-Revision-Date: 2024-11-14 23:39+0900\n"
 "Last-Translator: DDinghoya <ddinghoya@gmail.com>\n"
 "Language-Team: \n"
 "Language: ko_KO\n"
@@ -2915,6 +2915,26 @@ msgctxt "game_options"
 msgid "Analog"
 msgstr "아날로그"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Down"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Left"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Right"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Up"
+msgstr ""
+
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Analogue"
@@ -3652,7 +3672,7 @@ msgstr "하드웨어 렌더링으로 더 나은 성능을 제공합니다."
 #. TRANSLATION: cemu, cemu, ppsspp, supermodel, suyu
 msgctxt "game_options"
 msgid "Bicubic"
-msgstr "쌍입방"
+msgstr "고등차수"
 
 #. TRANSLATION: bigpemu, cemu, duckstation, libretro/duckstation, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -3895,10 +3915,45 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr "불가리아어"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button A"
+msgstr "A 버튼"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button B"
+msgstr "B 버튼"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button C"
+msgstr ""
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
 msgstr "옵션 버튼"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Start"
+msgstr "시작 버튼"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button X"
+msgstr "X 버튼"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Y"
+msgstr "Y 버튼"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Z"
+msgstr ""
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -5461,7 +5516,7 @@ msgstr "사이클 타이밍 확인"
 #. TRANSLATION: libretro/puae2021
 msgctxt "game_options"
 msgid "Cycle-exact"
-msgstr "정확한 사이클"
+msgstr "주기 정확"
 
 #. TRANSLATION: libretro/puae
 msgctxt "game_options"
@@ -5836,7 +5891,7 @@ msgstr ""
 "기본값은 SDL2를 사용하고, 그렇지 않으면 컨트롤러별 기능을 활성화합니다. 소니 "
 "DS는 클론 컨트롤러와 작동하지 않습니다."
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Define the resolution and a new dedicated window."
 msgstr "해상도와 새 전용 창을 정의합니다."
@@ -6116,6 +6171,11 @@ msgstr "더블 버퍼링"
 msgctxt "game_options"
 msgid "Double the rendering resolution."
 msgstr "렌더링 해상도를 두 배로 높입니다."
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Down"
+msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -6671,7 +6731,7 @@ msgctxt "game_options"
 msgid ""
 "Enable cache mount. Can improve performance and compatibility in some games."
 msgstr ""
-"캐시 마운트를 활성화합니다. 일부 게임에서 성능과 호환성을 개선할 수 있습니다."
+"캐시 마운트를 활성화합니다. 일부 게임에서 성능과 호환성을 향상할 수 있습니다."
 
 #. TRANSLATION: dolphin, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
@@ -7378,12 +7438,12 @@ msgstr "피델리티 FX 슈퍼 해상도"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "FIFO (VSync On)"
-msgstr ""
+msgstr "FIFO (수직동기화 켜기)"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "FIFO Relaxed"
-msgstr ""
+msgstr "FIFO 완화"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -7391,10 +7451,9 @@ msgid "FIGHT MUSIC"
 msgstr "대전 음악"
 
 #. TRANSLATION: model2emu
-#, fuzzy
 msgctxt "game_options"
 msgid "FILTER TILEMAPS"
-msgstr "타일맵 필터링"
+msgstr "필터 타일맵"
 
 #. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds
 msgctxt "game_options"
@@ -7404,7 +7463,7 @@ msgstr "펌웨어 설정"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "FLEX DMD"
-msgstr ""
+msgstr "FLEX DMD (디지털 마이크로미러 장치)"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -7454,12 +7513,12 @@ msgstr "FM-7 모델"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "FMV ASPECT RATIO"
-msgstr ""
+msgstr "FMV 화면비"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "FMV movie deinterlacing."
-msgstr ""
+msgstr "FMV 영화 디인터레이싱."
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -7472,10 +7531,9 @@ msgid "FORCE 386DX CPU"
 msgstr "강제 386DX CPU"
 
 #. TRANSLATION: wine
-#, fuzzy
 msgctxt "game_options"
 msgid "FORCE LARGE ADDRESS"
-msgstr "큰 주소 강제 적용"
+msgstr "강제 큰 주소"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -7483,10 +7541,9 @@ msgid "FORCE MANAGED"
 msgstr "강제 관리"
 
 #. TRANSLATION: duckstation
-#, fuzzy
 msgctxt "game_options"
 msgid "FORCE NTSC TIMINGS ON PAL"
-msgstr "PAL에서 NTSC 타이밍 강제 적용"
+msgstr "PAL에서 NTSC 타이밍 강제"
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
@@ -7504,15 +7561,19 @@ msgid "FR"
 msgstr ""
 
 #. TRANSLATION: libretro/mednafen_psx
-#, fuzzy
 msgctxt "game_options"
 msgid "FRAME DUPING (SPEED UP)"
-msgstr "프레임 복제(속도 향상)"
+msgstr "프레임 복제 (속도 향상)"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "FRAME LIMIT"
 msgstr "프레임 제한"
+
+#. TRANSLATION: libretro/bennugd
+msgctxt "game_options"
+msgid "FRAME LIMITER"
+msgstr ""
 
 #. TRANSLATION: libretro, libretro
 msgctxt "game_options"
@@ -7537,7 +7598,7 @@ msgstr ""
 #. TRANSLATION: libretro, libretro/openlara
 msgctxt "game_options"
 msgid "FRAMERATE"
-msgstr ""
+msgstr "프레임속도"
 
 #. TRANSLATION: flycast, libretro/desmume, libretro/fbneo, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
@@ -7545,22 +7606,19 @@ msgid "FRAMESKIP"
 msgstr "프레임 건너뛰기"
 
 #. TRANSLATION: mupen64plus
-#, fuzzy
 msgctxt "game_options"
 msgid "FRAMESKIP (GL64MK2 ONLY)"
-msgstr "프레임스킵(GL64MK2 전용)"
+msgstr "프레임 건너뛰기 (GL64MK2 전용)"
 
 #. TRANSLATION: drastic
-#, fuzzy
 msgctxt "game_options"
 msgid "FRAMESKIP TYPE"
-msgstr "프레임스킵 타입"
+msgstr "프레임 건너뛰기 유형"
 
 #. TRANSLATION: drastic
-#, fuzzy
 msgctxt "game_options"
 msgid "FRAMESKIP VALUE"
-msgstr "프레임스킵 값"
+msgstr "프레임 건너뛰기 값"
 
 #. TRANSLATION: mugen, wine
 msgctxt "game_options"
@@ -7575,12 +7633,12 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "FULL SINGLE SCREEN"
-msgstr ""
+msgstr "전체 단일 화면"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "FULLSCREEN"
-msgstr ""
+msgstr "전체화면"
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
@@ -7593,12 +7651,13 @@ msgid ""
 "FULLSCREEN gives you a top-down view on the playfield. For cabinet use or "
 "multi-window on desktop."
 msgstr ""
+"전체화면은 플레이필드를 위에서 아래로 볼 수 있게 해줍니다. 캐비닛 사용이나 데"
+"스크탑의 멀티윈도우에 적합합니다."
 
 #. TRANSLATION: pcsx2, suyu, vita3k
-#, fuzzy
 msgctxt "game_options"
 msgid "FXAA"
-msgstr "FXAA"
+msgstr "FXAA (빠른 대략적 안티에일리어싱)"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -7606,6 +7665,8 @@ msgid ""
 "FXAA has a lower performance impact, goof for low resolutions. SMAA offers "
 "best quality."
 msgstr ""
+"FXAA는 성능에 미치는 영향이 낮아 낮은 해상도에 좋습니다. SMAA는 최상의 품질"
+"을 제공합니다."
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -7672,7 +7733,7 @@ msgid ""
 "options."
 msgstr ""
 "기본 해상도 렌더링, 아날로그 컨트롤러 및 마우스 지원, 최대 60Hz의 프레임 속"
-"도 잠금 해제, 틸트 비활성화 옵션이 있는 개선된 카메라, 커스텀 하늘/배경 기"
+"도 잠금 해제, 틸트 비활성화 옵션이 있는 향상된 카메라, 커스텀 하늘/배경 기"
 "능, 기타 다양한 조정 및 옵션이 제공됩니다."
 
 #. TRANSLATION: libretro/melondsds
@@ -7683,7 +7744,7 @@ msgstr "2월"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "FidelityFX Super Resolution"
-msgstr ""
+msgstr "피델리티FX 슈퍼 해상도"
 
 #. TRANSLATION: libretro/uae4arm
 msgctxt "game_options"
@@ -7693,7 +7754,7 @@ msgstr ""
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Fill Screen"
-msgstr ""
+msgstr "전체 화면"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7701,6 +7762,8 @@ msgid ""
 "Fills the screen regardless of the aspect ratio. Doesn't work with Integer "
 "Upscaling."
 msgstr ""
+"화면 비율에 관계없이 화면을 채웁니다. 정수 업스케일링에서는 작동하지 않습니"
+"다."
 
 #. TRANSLATION: devilutionx
 msgctxt "game_options"
@@ -7710,7 +7773,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Final image filtering."
-msgstr ""
+msgstr "최종 이미지 필터링."
 
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
@@ -7720,40 +7783,39 @@ msgstr "핀란드"
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Finnish"
-msgstr ""
+msgstr "핀란드어"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Finnish (fi)"
-msgstr ""
+msgstr "핀란드어 (fi)"
 
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, rott.keys, raze.keys
 msgctxt "keys_files"
 msgid "Fire"
-msgstr ""
+msgstr "발사"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Fit 4:3 Aspect Ratio"
-msgstr ""
+msgstr "4:3 화면비율 맞추기"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Fit Screen"
-msgstr ""
+msgstr "화면 맞추기"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Fit resolution scale"
-msgstr ""
+msgstr "해상도 스케일 맞추기"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Fit to Window / Fullscreen"
-msgstr ""
+msgstr "창 / 전체 화면에 맞추기"
 
 #. TRANSLATION: amiberry
-#, fuzzy
 msgctxt "game_options"
 msgid "Fix flickering in a static screen like Workbench."
 msgstr "Workbench와 같은 정적 화면에서 깜박임을 수정합니다."
@@ -7774,6 +7836,8 @@ msgid ""
 "Fix screen tearing. Adaptive Sync (Default) synchronizes on video sync, "
 "except for late frames (below target FPS) which are displayed immediately."
 msgstr ""
+"화면 찢어짐 문제를 수정합니다. 적응형 동기화(기본)는 즉시 표시되는 늦은 프레"
+"임(대상 FPS 미만)을 제외하고 비디오 동기화 시 동기화합니다."
 
 #. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, melonds, ...
 msgctxt "game_options"
@@ -7787,6 +7851,9 @@ msgid ""
 "tearing as it recovers from a slow down. Mailbox can have lower latency but "
 "may drop frames."
 msgstr ""
+"화면 잘림 문제를 수정합니다. FIFO(수직동기화)는 프레임을 삭제하지 않습니다. "
+"FIFO 완화는 속도 저하에서 회복되면서 찢어짐을 허용합니다. 메일박스는 대기 시"
+"간이 낮을 수 있지만 프레임이 삭제될 수 있습니다."
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -7794,15 +7861,15 @@ msgid ""
 "Fix screen tearing. With Some games you need to turn VSync on in the games "
 "options."
 msgstr ""
+"화면 잘림 문제를 수정합니다. 일부 게임의 경우 게임 옵션에서 수직동기화를 켜"
+"야 합니다."
 
 #. TRANSLATION: ppsspp
-#, fuzzy
 msgctxt "game_options"
 msgid "Fix texture banding when upscaling."
 msgstr "업스케일링 시 텍스처 밴딩을 수정합니다."
 
 #. TRANSLATION: libretro/opera
-#, fuzzy
 msgctxt "game_options"
 msgid "Fixes a possible bug with multiple controllers detection."
 msgstr "여러 컨트롤러 검색에서 발생할 수 있는 버그를 수정합니다."
@@ -7810,7 +7877,7 @@ msgstr "여러 컨트롤러 검색에서 발생할 수 있는 버그를 수정�
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Fixes flickering."
-msgstr ""
+msgstr "깜박이는 현상이 수정되었습니다."
 
 #. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
 msgctxt "game_options"
@@ -7835,7 +7902,7 @@ msgstr "플로피 디스크 (드라이브 2 - 모델 1/2 & II UX)"
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "Floppy Disk Image"
-msgstr ""
+msgstr "플로피 디스크 이미지"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -7870,6 +7937,8 @@ msgid ""
 "use a value larger than 100%% so that the steering feels less sensitive on a "
 "thumbstick."
 msgstr ""
+"게임 패드로 운전 게임을 하는 경우, 엄지 스틱에 대한 조향의 민감성을 낮추기 위"
+"해 100%%보다 큰 값을 사용하는 것이 좋은 경우가 있습니다."
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -7877,7 +7946,6 @@ msgid "For use with HD texture packs."
 msgstr "고선명 텍스처 팩과 함께 사용합니다."
 
 #. TRANSLATION: libretro/virtualjaguar
-#, fuzzy
 msgctxt "game_options"
 msgid "For weak machines. Some games will not work with this."
 msgstr "약한 기계의 경우. 일부 게임은 이것으로 작동하지 않습니다."
@@ -7908,14 +7976,13 @@ msgid "Force 32bit"
 msgstr "강제 32비트"
 
 #. TRANSLATION: drastic
-#, fuzzy
 msgctxt "game_options"
 msgid ""
 "Force 3D geometry to always render on the top screen. Useful for single-"
 "screen devices/games."
 msgstr ""
-"3D 지오메트리가 항상 상단 화면에 렌더링되도록 합니다. 단일 화면 장치/게임에 "
-"유용합니다."
+"3D 지오메트리가 항상 상단 화면에 렌더링되도록 강제합니다. 단일 화면 장치/게임"
+"에 유용합니다."
 
 #. TRANSLATION: dolphin, dolphin_triforce, hypseus-singe, suyu
 msgctxt "game_options"
@@ -7933,29 +8000,34 @@ msgid ""
 "Force Nvidia GPUs to always be reported as AMD GPUs to workaround game "
 "issues."
 msgstr ""
+"게임 문제를 해결하기 위해 엔비디아 GPU가 항상 AMD GPU로 보고되도록 강제합니"
+"다."
 
 #. TRANSLATION: wine
-#, fuzzy
 msgctxt "game_options"
 msgid "Force WINE to run games with large addresses."
-msgstr "WINE이 큰 주소로 게임을 실행하도록합니다."
+msgstr "WINE이 큰 주소로 게임을 실행하도록 강제합니다."
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
-#, fuzzy
 msgctxt "game_options"
 msgid "Force a specific model and prevent tags detection."
 msgstr "특정 모델을 강제 적용하고 태그 감지를 방지합니다."
 
+#. TRANSLATION: libretro/bennugd
+msgctxt "game_options"
+msgid ""
+"Force internal frame limiter even if content and frontend frame rate matches."
+msgstr ""
+
 #. TRANSLATION: wine
-#, fuzzy
 msgctxt "game_options"
 msgid "Force mouse in games."
-msgstr "게임에서 마우스를 강제합니다."
+msgstr "게임에서 마우스 강제."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Force progressive render / scan."
-msgstr ""
+msgstr "점진적 렌더링/스캔을 강제합니다."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -7963,10 +8035,9 @@ msgid "Force shadergen when rendering lights"
 msgstr ""
 
 #. TRANSLATION: flycast
-#, fuzzy
 msgctxt "game_options"
 msgid "Force the game to render in this aspect ratio."
-msgstr "게임이 이 종횡비로 렌더링되도록 강제합니다."
+msgstr "게임을 이 화면비로 렌더링하도록 강제합니다."
 
 #. TRANSLATION: pcsx2, shared
 msgctxt "game_options"
@@ -7978,7 +8049,6 @@ msgstr ""
 "는 것은 아닙니다."
 
 #. TRANSLATION: model2emu
-#, fuzzy
 msgctxt "game_options"
 msgid "Forces the DX driver to use Managed textures instead of Dynamic."
 msgstr "DX 드라이버가 동적 대신 관리되는 텍스처를 사용하도록 강제합니다."
@@ -7986,7 +8056,7 @@ msgstr "DX 드라이버가 동적 대신 관리되는 텍스처를 사용하도�
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Framerate limiter to reduce CPU utilisation."
-msgstr ""
+msgstr "CPU 사용률을 줄이기 위한 프레임 속도 제한기."
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
@@ -8004,6 +8074,8 @@ msgid ""
 "Free Build or Sandbox mode. You cannot win or lose custom made maps if this "
 "is set to true. You also don't have to worry about money."
 msgstr ""
+"무료 빌드 또는 샌드박스 모드입니다. 이것이 참으로 설정되어 있으면 사용자 지"
+"정 맵에서 이기거나 질 수 없습니다. 또한 돈에 대해 걱정할 필요가 없습니다."
 
 #. TRANSLATION: cemu, dolphin, etlegacy, fallout1-ce, fallout2-ce, ...
 msgctxt "game_options"
@@ -8063,28 +8135,27 @@ msgstr "전체"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Full (Hash Cache)"
-msgstr ""
+msgstr "전체 (해시 캐시)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Full (PS2 Mipmaps)"
-msgstr ""
+msgstr "전체 (PS2 밉맵)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Full (Slow)"
-msgstr ""
+msgstr "전체 (느림)"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Full (more compatible)"
-msgstr "전체(호환성 향상)"
+msgstr "전체 (호환성 향상)"
 
 #. TRANSLATION: libretro/np2kai
-#, fuzzy
 msgctxt "game_options"
 msgid "Full 255 lines"
-msgstr "전체 255줄"
+msgstr "전체 255 줄"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -8099,19 +8170,17 @@ msgstr ""
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "Full Speed (Default)"
-msgstr ""
+msgstr "전속력 (기본)"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
-#, fuzzy
 msgctxt "game_options"
 msgid "Full speed"
 msgstr "전속력"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
-#, fuzzy
 msgctxt "game_options"
 msgid "Full speed can break some games."
-msgstr "최고 속도로 일부 게임이 중단 될 수 있습니다."
+msgstr "일부 게임은 전속력으로 플레이하면 망가질 수 있습니다."
 
 #. TRANSLATION: libretro/fuse, libretro/fuse
 msgctxt "game_options"
@@ -8141,7 +8210,7 @@ msgstr "게임 치트"
 #. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "GAME DIFFICULTY"
-msgstr ""
+msgstr "게임 난이도"
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
@@ -8151,7 +8220,7 @@ msgstr ""
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "GAME PATCHES"
-msgstr ""
+msgstr "게임 패치"
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
@@ -8159,10 +8228,9 @@ msgid "GAME PLAY"
 msgstr ""
 
 #. TRANSLATION: easyrpg
-#, fuzzy
 msgctxt "game_options"
 msgid "GAME REGION (ENCODING)"
-msgstr "게임 지역(인코딩)"
+msgstr "게임 지역 (인코딩)"
 
 #. TRANSLATION: awgl, yquake2
 msgctxt "game_options"
@@ -8182,56 +8250,52 @@ msgstr ""
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 1"
-msgstr ""
+msgstr "게임큐브 컨트롤러 1"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 2"
-msgstr ""
+msgstr "게임큐브 컨트롤러 2"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 3"
-msgstr ""
+msgstr "게임큐브 컨트롤러 3"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 4"
-msgstr ""
+msgstr "게임큐브 컨트롤러 4"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "GAMECUBE LANGUAGE"
-msgstr ""
+msgstr "게임큐브 언어"
 
 #. TRANSLATION: dolphin
-#, fuzzy
 msgctxt "game_options"
 msgid "GAMECUBE PORT 1 TYPE"
-msgstr "게임큐브 포트 1형"
+msgstr "게임큐브 포트 1 유형"
 
 #. TRANSLATION: dolphin
-#, fuzzy
 msgctxt "game_options"
 msgid "GAMECUBE PORT 2 TYPE"
-msgstr "게임큐브 포트 2형"
+msgstr "게임큐브 포트 2 유형"
 
 #. TRANSLATION: dolphin
-#, fuzzy
 msgctxt "game_options"
 msgid "GAMECUBE PORT 3 TYPE"
-msgstr "게임큐브 포트 3형"
+msgstr "게임큐브 포트 3 유형"
 
 #. TRANSLATION: dolphin
-#, fuzzy
 msgctxt "game_options"
 msgid "GAMECUBE PORT 4 TYPE"
-msgstr "게임큐브 포트 4형"
+msgstr "게임큐브 포트 4 유형"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "GAMEPAD AUTOMATIC MAPPING"
-msgstr "게임 패드 자동 매핑"
+msgstr "게임패드 자동 매핑"
 
 #. TRANSLATION: libretro/scummvm
 msgctxt "game_options"
@@ -8241,32 +8305,32 @@ msgstr "게임패드 커서 속도"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "GB"
-msgstr "GB"
+msgstr "게임보이"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GB - Black and White"
-msgstr "GB - 흑백"
+msgstr "게임보이 - 흑백"
 
 #. TRANSLATION: libretro/gambatte, libretro/potator
 msgctxt "game_options"
 msgid "GB - DMG"
-msgstr "GB - DMG"
+msgstr "게임보이 - DMG"
 
 #. TRANSLATION: libretro/gambatte, libretro/potator
 msgctxt "game_options"
 msgid "GB - Light"
-msgstr "GB - 라이트"
+msgstr "게임보이 - 라이트"
 
 #. TRANSLATION: libretro/gambatte, libretro/potator
 msgctxt "game_options"
 msgid "GB - Pocket"
-msgstr "GB - 포켓"
+msgstr "게임보이 - 포켓"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GB - Smart Coloring"
-msgstr "GB - 스마트 컬러링"
+msgstr "게임보이 - 스마트 컬러링"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -8276,70 +8340,69 @@ msgstr ""
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "GB-Eire"
-msgstr "GB-Eire"
+msgstr "게임보이-에이레"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GBC - Blue"
-msgstr "GBC - 블루"
+msgstr "게임보이 컬러 - 블루"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GBC - Brown"
-msgstr "GBC - 브라운"
+msgstr "게임보이 컬러 - 브라운"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GBC - Dark Blue"
-msgstr "GBC - 다크 블루"
+msgstr "게임보이 컬러 - 다크 블루"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GBC - Dark Brown"
-msgstr "GBC - 다크 브라운"
+msgstr "게임보이 컬러 - 다크 브라운"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GBC - Dark Green"
-msgstr "GBC - 다크 그린"
+msgstr "게임보이 컬러 - 다크 그린"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GBC - Grayscale"
-msgstr "GBC - 그레이스케일"
+msgstr "게임보이 컬러 - 그레이스케일"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GBC - Green"
-msgstr "GBC - 그린"
+msgstr "게임보이 컬러 - 그린"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GBC - Inverted"
-msgstr "GBC - 반전"
+msgstr "게임보이 컬러 - 반전"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GBC - Orange"
-msgstr "GBC - 오렌지"
+msgstr "게임보이 컬러 - 오렌지"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GBC - Pastel Mix"
-msgstr "GBC - 파스텔 믹스"
+msgstr "게임보이 컬러 - 파스텔 믹스"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GBC - Red"
-msgstr "GBC - 레드"
+msgstr "게임보이 컬러 - 레드"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GBC - Yellow"
-msgstr "GBC - 옐로우"
+msgstr "게임보이 컬러 - 옐로우"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
-#, fuzzy
 msgctxt "game_options"
 msgid "GCE Vectrex cartridges"
 msgstr "GCE 벡트렉스 카트리지"
@@ -8347,7 +8410,7 @@ msgstr "GCE 벡트렉스 카트리지"
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
 msgid "GDC"
-msgstr "GDC"
+msgstr "GDC (게임 개발자 회의)"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -8355,7 +8418,6 @@ msgid "GLCore"
 msgstr "GLCore"
 
 #. TRANSLATION: libretro/mupen64plus-next
-#, fuzzy
 msgctxt "game_options"
 msgid "GLideN64 (Fastest)"
 msgstr "글라이드N64 (가장 빠름)"
@@ -8363,7 +8425,7 @@ msgstr "글라이드N64 (가장 빠름)"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "GMT"
-msgstr "GMT"
+msgstr "그리니치 표준시"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -8388,10 +8450,9 @@ msgstr ""
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "GPU / OpenGL (Default)"
-msgstr ""
+msgstr "GPU / OpenGL (기본)"
 
 #. TRANSLATION: dolphin, dolphin_triforce
-#, fuzzy
 msgctxt "game_options"
 msgid "GPU SYNC"
 msgstr "GPU 동기화"
@@ -8402,6 +8463,8 @@ msgid ""
 "GPU emulation accuracy. Most games render fine with Normal. High is required "
 "to ensure particles render correctly."
 msgstr ""
+"GPU 에뮬레이션 정확도입니다. 대부분 게임은 보통으로 렌더링이 잘 됩니다. 높음"
+"은 파티클이 올바르게 렌더링되도록 하는 데 필요합니다."
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -8409,7 +8472,6 @@ msgid "GR"
 msgstr ""
 
 #. TRANSLATION: rpcs3
-#, fuzzy
 msgctxt "game_options"
 msgid "GRAPHICAL USER INTERFACE"
 msgstr "그래픽 사용자 인터페이스"
@@ -8417,7 +8479,7 @@ msgstr "그래픽 사용자 인터페이스"
 #. TRANSLATION: citra, citra, citra, citra, citra, ...
 msgctxt "game_options"
 msgid "GRAPHICS"
-msgstr ""
+msgstr "그래픽"
 
 #. TRANSLATION: cemu, citra, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
@@ -8432,22 +8494,22 @@ msgstr "그래픽 칩 유형"
 #. TRANSLATION: quake3
 msgctxt "game_options"
 msgid "GRAPHICS MEMORY"
-msgstr ""
+msgstr "그래픽 메모리"
 
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
 msgid "GRAPHICS PLUGIN"
-msgstr ""
+msgstr "그래픽 플러그인"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "GRAPHICS RENDERER"
-msgstr ""
+msgstr "그래픽 렌더러"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "GT Force"
-msgstr ""
+msgstr "GT 포스"
 
 #. TRANSLATION: libretro/mesens
 msgctxt "game_options"
@@ -8460,7 +8522,6 @@ msgid "Game Boy Colour"
 msgstr ""
 
 #. TRANSLATION: mupen64plus
-#, fuzzy
 msgctxt "game_options"
 msgid "Game default"
 msgstr "게임 기본값"
@@ -8471,7 +8532,6 @@ msgid "Game info/art"
 msgstr "게임 정보/아트"
 
 #. TRANSLATION: flycast/dolphin, flycast/dolphin
-#, fuzzy
 msgctxt "game_options"
 msgid "Game's default"
 msgstr "게임의 기본값"
@@ -8482,7 +8542,6 @@ msgid "GameBlaster"
 msgstr "게임블라스터"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-#, fuzzy
 msgctxt "game_options"
 msgid "GameCube Adapter for Wii U"
 msgstr "Wii U용 게임큐브 어댑터"
@@ -8523,16 +8582,14 @@ msgid "Gamepad Classic"
 msgstr "게임패드 클래식"
 
 #. TRANSLATION: libretro/tyrquake
-#, fuzzy
 msgctxt "game_options"
 msgid "Gamepad Classic Alt"
-msgstr "게임 패드 클래식 Alt"
+msgstr "게임패드 클래식 대체"
 
 #. TRANSLATION: libretro/prboom, libretro/tyrquake
-#, fuzzy
 msgctxt "game_options"
 msgid "Gamepad Modern"
-msgstr "게임패드 모던"
+msgstr "게임패드 현대식"
 
 #. TRANSLATION: libretro/genesisplusgx, virtualjaguar
 msgctxt "game_options"
@@ -8582,7 +8639,6 @@ msgid "German"
 msgstr "독일어"
 
 #. TRANSLATION: hatari, libretro/hatarib
-#, fuzzy
 msgctxt "game_options"
 msgid "German (de)"
 msgstr "독일어 (de)"
@@ -8615,7 +8671,7 @@ msgstr "고스팅 (95%)"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Giga"
-msgstr ""
+msgstr "기가"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -8625,33 +8681,29 @@ msgstr "기즈모 (1버튼 디지털)"
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
 msgid "Glide64"
-msgstr ""
+msgstr "글라이드64"
 
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
 msgid "Gln64"
-msgstr ""
+msgstr "Gln64"
 
 #. TRANSLATION: libretro/potator
-#, fuzzy
 msgctxt "game_options"
 msgid "Gold - Golden Wild"
 msgstr "골드 - 골든 와일드"
 
 #. TRANSLATION: libretro/potator
-#, fuzzy
 msgctxt "game_options"
 msgid "Gold - Labo Fawn"
 msgstr "골드 - 라보 폰"
 
 #. TRANSLATION: libretro/potator
-#, fuzzy
 msgctxt "game_options"
 msgid "Gold - Million Live Gold"
 msgstr "골드 - 밀리언 라이브 골드"
 
 #. TRANSLATION: libretro/potator
-#, fuzzy
 msgctxt "game_options"
 msgid "Gold - Odyssey Gold"
 msgstr "골드 - 오디세이 골드"
@@ -8662,7 +8714,6 @@ msgid "Grab Mouse Input"
 msgstr ""
 
 #. TRANSLATION: libretro/np2kai
-#, fuzzy
 msgctxt "game_options"
 msgid "Graphic Display Controller model."
 msgstr "그래픽 디스플레이 컨트롤러 모델."
@@ -8670,7 +8721,7 @@ msgstr "그래픽 디스플레이 컨트롤러 모델."
 #. TRANSLATION: scummvm.keys
 msgctxt "keys_files"
 msgid "Graphics filtering on/off"
-msgstr ""
+msgstr "그래픽 필터링 켜기/끄기"
 
 #. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
 msgctxt "game_options"
@@ -8688,7 +8739,6 @@ msgid "Greece"
 msgstr "그리스"
 
 #. TRANSLATION: easyrpg, etlegacy
-#, fuzzy
 msgctxt "game_options"
 msgid "Greek"
 msgstr "그리스어"
@@ -8696,7 +8746,7 @@ msgstr "그리스어"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Greek (gk)"
-msgstr ""
+msgstr "그리스어 (gk)"
 
 #. TRANSLATION: flycast, flycast, flycast, flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -8704,60 +8754,51 @@ msgid "Green"
 msgstr "초록색"
 
 #. TRANSLATION: libretro/potator
-#, fuzzy
 msgctxt "game_options"
 msgid "Green - Buttercup Green"
-msgstr "그린 - 미나리 그린"
+msgstr "초록색 - 미나리 그린"
 
 #. TRANSLATION: libretro/potator
-#, fuzzy
 msgctxt "game_options"
 msgid "Green - Game.com"
-msgstr "그린 - Game.com"
+msgstr "초록색 - Game.com"
 
 #. TRANSLATION: libretro/potator
-#, fuzzy
 msgctxt "game_options"
 msgid "Green - GameKing"
-msgstr "그린 - 게임킹"
+msgstr "초록색 - 게임킹"
 
 #. TRANSLATION: libretro/potator
-#, fuzzy
 msgctxt "game_options"
 msgid "Green - Greenscale"
-msgstr "그린 - 그린스케일"
+msgstr "초록색 - 그린스케일"
 
 #. TRANSLATION: libretro/potator
-#, fuzzy
 msgctxt "game_options"
 msgid "Green - Legendary Super Saiyan"
-msgstr "녹색 - 전설적인 초사이어인"
+msgstr "초록색 - 전설적인 초사이어인"
 
 #. TRANSLATION: libretro/potator
-#, fuzzy
 msgctxt "game_options"
 msgid "Green - TI-83"
-msgstr "그린 - TI-83"
+msgstr "초록색 - TI-83"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Greenwich"
-msgstr "Greenwich"
+msgstr "그리니치"
 
 #. TRANSLATION: libretro/potator
-#, fuzzy
 msgctxt "game_options"
 msgid "Grey - Digivice"
-msgstr "그레이 - 디지바이스"
+msgstr "회색 - 디지바이스"
 
 #. TRANSLATION: libretro/potator
-#, fuzzy
 msgctxt "game_options"
 msgid "Grey - Greyscale"
-msgstr "그레이 - 그레이스케일"
+msgstr "회색 - 그레이스케일"
 
 #. TRANSLATION: libretro/potator
-#, fuzzy
 msgctxt "game_options"
 msgid "Grey - Microvision"
 msgstr "회색 - 마이크로비전"
@@ -8775,12 +8816,12 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "HARD TEXTURE CACHE MEMORY LIMIT"
-msgstr ""
+msgstr "하드 텍스처 캐시 메모리 제한"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "HD TEXTURES"
-msgstr ""
+msgstr "고선명 텍스처"
 
 #. TRANSLATION: libretro/uae4arm
 msgctxt "game_options"
@@ -8798,10 +8839,9 @@ msgid "HEADS UP DISPLAY CORNER"
 msgstr "전방 시현기 코너"
 
 #. TRANSLATION: wine
-#, fuzzy
 msgctxt "game_options"
 msgid "HEAP DELAY FREE"
-msgstr "힙 지연 없음"
+msgstr "HEAP 지연 없음"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -8814,19 +8854,16 @@ msgid "HID"
 msgstr ""
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
-#, fuzzy
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
 msgstr "라이트 건 십자선 숨기기"
 
 #. TRANSLATION: wine
-#, fuzzy
 msgctxt "game_options"
 msgid "HIDE NVIDIA GPU"
 msgstr "엔비디아 GPU 숨기기"
 
 #. TRANSLATION: cannonball
-#, fuzzy
 msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
 msgstr "고해상도 모드"
@@ -8849,17 +8886,17 @@ msgstr ""
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "HLE (Fastest)"
-msgstr "HLE (가장 빠름)"
+msgstr "고수준 에뮬레이션 (가장 빠름)"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
 msgid "HLE (per-pixel)"
-msgstr ""
+msgstr "고수준 에뮬레이션 (픽셀당)"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
 msgid "HLE (per-strip)"
-msgstr ""
+msgstr "고수준 에뮬레이션 (스트립당)"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
@@ -8874,12 +8911,12 @@ msgstr ""
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "HQ (bilinear filter)"
-msgstr ""
+msgstr "고품질 (이중선형 필터)"
 
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
 msgid "HQ MODE"
-msgstr "HQ 모드"
+msgstr "고품질 모드"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -8887,7 +8924,6 @@ msgid "HST"
 msgstr "HST"
 
 #. TRANSLATION: duckstation
-#, fuzzy
 msgctxt "game_options"
 msgid "Hack. Increases most PAL games' speed by 17%."
 msgstr "해킹. 대부분의 PAL 게임의 속도가 17% 증가합니다."
@@ -8895,12 +8931,12 @@ msgstr "해킹. 대부분의 PAL 게임의 속도가 17% 증가합니다."
 #. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Hard"
-msgstr ""
+msgstr "하드"
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "Hard Disk Image"
-msgstr ""
+msgstr "하드 디스크 이미지"
 
 #. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
@@ -8920,7 +8956,7 @@ msgstr ""
 #. TRANSLATION: thextech
 msgctxt "game_options"
 msgid "Hardware (default)"
-msgstr ""
+msgstr "하드웨어 (기본)"
 
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
@@ -8935,12 +8971,12 @@ msgstr "하르퉁 게임 마스터 카트리지"
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Have Batocera set the first audio output device."
-msgstr "첫 번째 오디오 출력 장치를 설정하도록하십시오."
+msgstr "바토세라에서 첫 번째 오디오 출력 장치를 설정합니다."
 
 #. TRANSLATION: etlegacy, scummvm
 msgctxt "game_options"
 msgid "Hebrew"
-msgstr ""
+msgstr "히브리어"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -8948,10 +8984,9 @@ msgid "Help and Information"
 msgstr "도움말과 정보"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
-#, fuzzy
 msgctxt "game_options"
 msgid "Help games which are too quick or that have bugs."
-msgstr "너무 빠르거나 버그가있는 게임을 도와주세요."
+msgstr "너무 빠르거나 버그가 있는 게임을 도와주세요."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -8959,6 +8994,8 @@ msgid ""
 "Helps reduce CPU power consumption by throttling the CPU when not needed. "
 "Useful for handhelds."
 msgstr ""
+"필요하지 않을 때 CPU를 조절하여 CPU 전력 소모를 줄이는 데 도움이 됩니다. 핸드"
+"헬드에 유용합니다."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -8966,16 +9003,14 @@ msgid "Hercules"
 msgstr "허큘리스"
 
 #. TRANSLATION: cemu
-#, fuzzy
 msgctxt "game_options"
 msgid "Hermite"
-msgstr "에르마이트"
+msgstr "에르미트"
 
 #. TRANSLATION: cemu
-#, fuzzy
 msgctxt "game_options"
 msgid "Hermite (Default)"
-msgstr "에르마이트 (기본값)"
+msgstr "에르미트 (기본)"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
@@ -8985,23 +9020,22 @@ msgstr ""
 #. TRANSLATION: hypseus-singe/vitaquake3, libretro/hatarib
 msgctxt "game_options"
 msgid "Hide"
-msgstr "숨김"
+msgstr "숨기기"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
-msgstr ""
+msgstr "지원되는 게임(예: 액션맥스, 매드독 II)에서 조준선을 숨깁니다."
 
 #. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, dreamcast.redream.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Hide the bezel"
-msgstr ""
+msgstr "베젤 숨기기"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
-#, fuzzy
 msgctxt "game_options"
 msgid "Hides borders on many games. Some games use the borders."
-msgstr "많은 게임에서 테두리를 숨 깁니다. 일부 게임은 테두리를 사용합니다."
+msgstr "많은 게임에서 테두리를 숨깁니다. 어떤 게임은 테두리를 사용합니다."
 
 #. TRANSLATION: libretro/bluemsx, libretro/fuse, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
@@ -9016,7 +9050,7 @@ msgstr "높음"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "High (Default)"
-msgstr ""
+msgstr "높음 (기타)"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -9031,16 +9065,14 @@ msgstr "고성능"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "High-end Computer"
-msgstr ""
+msgstr "고급 컴퓨터"
 
 #. TRANSLATION: moonlight
-#, fuzzy
 msgctxt "game_options"
 msgid "Higher number for higher picture quality, but requires more bandwidth."
-msgstr "더 높은 화질을 위해 더 높은 숫자이지만 더 많은 대역폭이 필요합니다."
+msgstr "숫자가 높을수록 사진 품질이 좋아지지만, 더 많은 대역폭이 필요합니다."
 
 #. TRANSLATION: libretro/xrick
-#, fuzzy
 msgctxt "game_options"
 msgid "Highlight all entities on the game map."
 msgstr "게임 맵의 모든 개체를 강조 표시합니다."
@@ -9048,7 +9080,7 @@ msgstr "게임 맵의 모든 개체를 강조 표시합니다."
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Hire staff"
-msgstr ""
+msgstr "직원 고용"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -9056,7 +9088,6 @@ msgid "Honduras"
 msgstr ""
 
 #. TRANSLATION: suyu, xenia, xenia-canary
-#, fuzzy
 msgctxt "game_options"
 msgid "Hong Kong"
 msgstr "홍콩"
@@ -9069,7 +9100,7 @@ msgstr "수평 (가로)"
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "How much RAM the emulated FM Towns will have installed"
-msgstr "에뮬레이션된 FM 타운에 얼마나 많은 램이 설치될까요"
+msgstr "에뮬레이션된 FM 타운에 설치된 램 용량"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -9078,20 +9109,19 @@ msgid ""
 msgstr "에뮬레이트된 맥에 설치된 램 용량 (맥 IIx 및 맥 LC 3만 해당)"
 
 #. TRANSLATION: melonds
-#, fuzzy
 msgctxt "game_options"
 msgid "How the window space is distributed between the screens."
-msgstr "창 공간이 화면 간에 분산되는 방식입니다."
+msgstr "창 공간이 화면 사이에 분산되는 방식입니다."
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Hungarian"
-msgstr ""
+msgstr "헝가리어"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Hungarian (hg)"
-msgstr ""
+msgstr "헝가리어 (hg)"
 
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
@@ -9104,20 +9134,19 @@ msgid "Hybrid"
 msgstr "하이브리드"
 
 #. TRANSLATION: ppsspp
-#, fuzzy
 msgctxt "game_options"
 msgid "Hybrid + Bicubic"
-msgstr "하이브리드 + 바이큐빅"
+msgstr "하이브리드 + 고등차수"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
-msgstr ""
+msgstr "하이브리드 화면 하단"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
-msgstr ""
+msgstr "하이브리드 화면 상단"
 
 #. TRANSLATION: dolphin, libretro/dolphin
 msgctxt "game_options"
@@ -9127,12 +9156,12 @@ msgstr "하이브리드 우버셰이더"
 #. TRANSLATION: libretro/pcsx_rearmed, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Hyper Blaster/Justifier"
-msgstr ""
+msgstr "하이퍼 블래스터/저스티파이어"
 
 #. TRANSLATION: hatari, libretro/hatarib
 msgctxt "game_options"
 msgid "IDE (Default)"
-msgstr ""
+msgstr "IDE (기본)"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -9142,7 +9171,7 @@ msgstr ""
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "IMAGE QUALITY"
-msgstr ""
+msgstr "이미지 품질"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -9162,7 +9191,7 @@ msgstr "향상된 메시"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "IMPROVED POLYGON SPLITTING"
-msgstr "개선된 폴리곤 분할"
+msgstr "향상된 폴리곤 분할"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -9170,13 +9199,11 @@ msgid "INPUT API"
 msgstr ""
 
 #. TRANSLATION: libretro/mame078plus
-#, fuzzy
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
 msgstr "입력 인터페이스"
 
 #. TRANSLATION: melonds, pcsx2
-#, fuzzy
 msgctxt "game_options"
 msgid "INTEGER SCALING"
 msgstr "정수 스케일링"
@@ -9184,17 +9211,17 @@ msgstr "정수 스케일링"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "INTEGER SCALING (PIXEL PERFECT)"
-msgstr "정수 스케일링 (픽셀 완벽함)"
+msgstr "정수 스케일링 (픽셀 완벽)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "INTEGER UPSCALING"
-msgstr ""
+msgstr "정수 업스케일링"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "INTERLACING PATCHES"
-msgstr ""
+msgstr "인터레이싱 패치"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -9204,7 +9231,7 @@ msgstr "내부 기본 해석기"
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "INTERNAL DISPLAY RESOLUTION"
-msgstr ""
+msgstr "내부 디스플레이 해상도"
 
 #. TRANSLATION: libretro/atari800, libretro/melondsds, libretro/uae4arm
 msgctxt "game_options"
@@ -9214,7 +9241,7 @@ msgstr "내부 해상도"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "INVERSE PLAYFIELD AND B2S"
-msgstr ""
+msgstr "플레이필드 및 B2S 반전"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -9234,7 +9261,7 @@ msgstr "무적 모드"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "IRON SOLDIER"
-msgstr ""
+msgstr "아이언 솔저"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -9252,12 +9279,11 @@ msgid "If enabled, passes all physical keyboard events to the core."
 msgstr ""
 
 #. TRANSLATION: rpcs3
-#, fuzzy
 msgctxt "game_options"
 msgid "If game crashes, try ASMJIT. If still crashing, try Fast Interpreter."
 msgstr ""
-"게임이 충돌하면 ASMJIT를 사용해 보세요. 여전히 충돌이 발생하면 빠른 통역사를 "
-"사용해 보십시오."
+"게임이 충돌하면 ASMJIT를 사용해 보세요. 여전히 충돌이 발생하면 빠른 해석기를 "
+"시도하세요."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -9265,42 +9291,37 @@ msgid "If nothing is specified, will use ZTranslate by default."
 msgstr "아무것도 지정하지 않으면 기본적으로 ZTranslate를 사용합니다."
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
-#, fuzzy
 msgctxt "game_options"
 msgid "Ignored with 'Cycle-exact'."
-msgstr "'정확한 주기'로 무시됩니다."
+msgstr "'주기 정확'에서 무시됩니다."
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Immediate"
-msgstr ""
+msgstr "즉시"
 
 #. TRANSLATION: xemu
-#, fuzzy
 msgctxt "game_options"
 msgid "Improve audio accuracy (experimental)."
-msgstr "오디오 정확도를 개선합니다(실험적)."
+msgstr "오디오 정확도 향상 (실험적)."
 
 #. TRANSLATION: duckstation
-#, fuzzy
 msgctxt "game_options"
 msgid "Improve performance if VSync is disabled and using Vulkan."
-msgstr "VSync가 비활성화되어 있고 Vulkan을 사용하는 경우 성능이 향상됩니다."
+msgstr "수직동기화가 비활성화하고 Vulkan을 사용하면 성능이 향상됩니다."
 
 #. TRANSLATION: libretro/scummvm
-#, fuzzy
 msgctxt "game_options"
 msgid "Improve speed, at a minor cost of accuracy."
-msgstr "약간의 정확도 비용으로 속도를 향상시킵니다."
+msgstr "정확도는 약간 떨어지지만 속도는 향상됩니다."
 
 #. TRANSLATION: cannonball
-#, fuzzy
 msgctxt "game_options"
 msgid ""
 "Improves both sprite scaling and road rendering. Does not affect the car "
 "sprite."
 msgstr ""
-"스프라이트 스케일링과 로드 렌더링을 모두 개선합니다. 자동차 스프라이트에는 영"
+"스프라이트 스케일링과 로드 렌더링을 모두 향상합니다. 자동차 스프라이트에는 영"
 "향을 미치지 않습니다."
 
 #. TRANSLATION: flycast
@@ -9312,7 +9333,7 @@ msgstr ""
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Improves clarity of distant textures when mip-mapping is enabled."
-msgstr "밉 매핑이 활성화되면 멀리 있는 텍스처의 선명도가 향상됩니다."
+msgstr "밉매핑이 활성화되면 멀리 있는 텍스처의 선명도가 향상됩니다."
 
 #. TRANSLATION: libretro/flycast2021
 msgctxt "game_options"
@@ -9330,16 +9351,14 @@ msgid "Improves performance at the cost of latency and more video stuttering."
 msgstr "대기 시간과 더 많은 비디오 끊김을 희생시키면서 성능을 향상시킵니다."
 
 #. TRANSLATION: drastic
-#, fuzzy
 msgctxt "game_options"
 msgid "Improves performance in 3D games. Can cause glitches."
 msgstr "3D 게임의 성능을 향상시킵니다. 결함이 발생할 수 있습니다."
 
 #. TRANSLATION: libretro
-#, fuzzy
 msgctxt "game_options"
 msgid "In milliseconds. Can reduce crackling/cutting out."
-msgstr "밀리초 단위입니다. 딱딱 거리는 소리 / 절단을 줄일 수 있습니다."
+msgstr "밀리초 단위입니다. 딱딱거림/끊김을 줄일 수 있습니다."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -9349,9 +9368,11 @@ msgid ""
 "input device type with options to convert analog inputs to tracker angles "
 "for enhanced analog controller support."
 msgstr ""
+"VR 및 3D TV를 위한 VR 헤드 트래킹 및 입체 렌더링, 마우스 지원(마우스 룩)이 포"
+"함되고, 향상된 아날로그 컨트롤러 지원을 위해 아날로그 입력을 트래커 각도로 변"
+"환하는 옵션이 있는 새로운 헤드 트래커 입력 장치 유형이 도입되었습니다."
 
 #. TRANSLATION: dolphin, dolphin_triforce
-#, fuzzy
 msgctxt "game_options"
 msgid "Increase emulator performance, at the cost of accuracy/stability."
 msgstr "에뮬레이터 성능을 높이지만 정확성/안정성이 저하됩니다."
@@ -9359,7 +9380,7 @@ msgstr "에뮬레이터 성능을 높이지만 정확성/안정성이 저하됩�
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "Increase to 128 MiB for debug or homebrew applications."
-msgstr ""
+msgstr "디버그 또는 홈브류 애플리케이션의 경우 128MiB로 늘립니다."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -9388,25 +9409,22 @@ msgstr ""
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Insert coin"
-msgstr ""
+msgstr "동전 넣기"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
-#, fuzzy
 msgctxt "game_options"
 msgid "Inserts CD during boot animation prevent loading fail."
-msgstr "부팅 애니메이션 중에 CD를 삽입하여 로드 실패를 방지합니다."
+msgstr "부팅 애니메이션 중에 CD를 넣어 로딩 실패를 방지합니다."
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
-#, fuzzy
 msgctxt "game_options"
 msgid "Inserts CD during boot animation to prevent loading fail."
-msgstr "로드 실패를 방지하기 위해 부팅 애니메이션 중에 CD를 삽입합니다."
+msgstr "로딩 실패를 방지하기 위해 부팅 애니메이션 중에 CD를 넣습니다."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
-#, fuzzy
 msgctxt "game_options"
 msgid "Install the image reader card to read idks image files (Mac IIx only)"
-msgstr "이미지 판독기 카드를 설치하여 idks 이미지 파일 읽기(Mac IIx만 해당)"
+msgstr "이미지 판독기 카드를 설치하여 idks 이미지 파일 읽기 (Mac IIx만 해당)"
 
 #. TRANSLATION: sonic2013, soniccd
 #, fuzzy
@@ -9427,24 +9445,22 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Interpreter (Slowest)"
-msgstr "인터프리터(가장 느림)"
+msgstr "해석기 (가장 느림)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Interpreter is the most accurate, but is the slowest."
-msgstr "인터프리터가 가장 정확하지만 가장 느립니다."
+msgstr "해석기가 가장 정확하지만 가장 느립니다."
 
 #. TRANSLATION: mame/openbor7530
-#, fuzzy
 msgctxt "game_options"
 msgid "Interton VC 4000 cartridges"
 msgstr "인터톤 VC 4000 카트리지"
 
 #. TRANSLATION: libretro/pcsx_rearmed
-#, fuzzy
 msgctxt "game_options"
 msgid "InuYasha Sengoku Battle Fix"
-msgstr "이누야샤 센고쿠 전투 수정"
+msgstr "이누야샤 전국 전투 수정"
 
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
@@ -9462,6 +9478,8 @@ msgid ""
 "Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
 "main screen for other emulators."
 msgstr ""
+"백글라스와 플레이필드를 반전합니다. 다른 에뮬레이터의 메인 화면으로 백글라스"
+"를 사용하는 데 유용합니다."
 
 #. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
 msgctxt "game_options"
@@ -9469,10 +9487,9 @@ msgid "Invert the gamepad right analogue stick's Y axis."
 msgstr ""
 
 #. TRANSLATION: hypseus-singe
-#, fuzzy
 msgctxt "game_options"
 msgid "Invert the vertical joystick axis on flight games."
-msgstr "비행 게임에서 수직 조이스틱 축을 뒤집습니다."
+msgstr "비행 게임에서 수직 조이스틱 축을 반전합니다."
 
 #. TRANSLATION: suyu, xenia, xenia-canary
 msgctxt "game_options"
@@ -9492,7 +9509,7 @@ msgstr ""
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Irish"
-msgstr ""
+msgstr "아일랜드어"
 
 #. TRANSLATION: suyu, xenia, xenia-canary
 msgctxt "game_options"
@@ -9527,12 +9544,12 @@ msgstr "재스트 사운드"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "JINC2 (Slow)"
-msgstr ""
+msgstr "JINC2 (느림)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "JINC2 (Slow, No Edge Blending)"
-msgstr ""
+msgstr "JINC2 (느림, 에지 블렌딩 없음)"
 
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
@@ -9557,7 +9574,7 @@ msgstr "조이스틱 데드존"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "JOYSTICK GATE SIZE"
-msgstr ""
+msgstr "조이스틱 게이트 크기"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -9567,19 +9584,17 @@ msgstr "조이스틱 해킹 (로보트론 2084 용)"
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "JOYSTICK SENSITIVITY"
-msgstr ""
+msgstr "조이스틱 감도"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
-#, fuzzy
 msgctxt "game_options"
 msgid "JOYSTICK TO CURSOR SENSITIVITY"
-msgstr "조이스틱 대 커서 감도"
+msgstr "조이스틱 커서 감도"
 
 #. TRANSLATION: duckstation
-#, fuzzy
 msgctxt "game_options"
 msgid "JOYSTICK TO DPAD"
-msgstr "조이스틱에서 DPAD로"
+msgstr "조이스틱 십자 패드"
 
 #. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
@@ -9734,7 +9749,7 @@ msgstr ""
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
-msgstr "와면비 유지 (기본)"
+msgstr "화면비 유지 (기본)"
 
 #. TRANSLATION: libretro/fuse, libretro/fuse
 msgctxt "game_options"
@@ -9767,13 +9782,11 @@ msgid "Keyboard + Mouse (Right An.)"
 msgstr "키보드 + 마우스 (오른쪽 An.)"
 
 #. TRANSLATION: libretro/mame078plus
-#, fuzzy
 msgctxt "game_options"
 msgid "Keyboard passthrough"
 msgstr "키보드 패스스루"
 
 #. TRANSLATION: libretro/mame078plus, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xpet, ...
-#, fuzzy
 msgctxt "game_options"
 msgid "Keyboard shortcuts unavailable if passing through the keyboard."
 msgstr "키보드를 통과하는 경우 키보드 단축키를 사용할 수 없습니다."
@@ -9809,7 +9822,6 @@ msgid "Konami Justifier (P2)"
 msgstr "코나미 저스티파이어 (P2)"
 
 #. TRANSLATION: libretro/snes9x
-#, fuzzy
 msgctxt "game_options"
 msgid ""
 "Konami Justifier P2 is daisy chained from controller 2, appears as port 3 to "
@@ -9824,7 +9836,6 @@ msgid "Konami Justifiers"
 msgstr "코나미 저스티파이어"
 
 #. TRANSLATION: ryujinx, suyu
-#, fuzzy
 msgctxt "game_options"
 msgid "Korea"
 msgstr "대한민국"
@@ -9840,7 +9851,6 @@ msgid "Kuwait"
 msgstr ""
 
 #. TRANSLATION: suyu
-#, fuzzy
 msgctxt "game_options"
 msgid "Kwajalein"
 msgstr "콰잘레인"
@@ -9853,28 +9863,27 @@ msgstr ""
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "LAN (Default)"
-msgstr ""
+msgstr "LAN (기본)"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "LAN / WAN STREAMING"
-msgstr ""
+msgstr "LAN / WAN 스트리밍"
 
 #. TRANSLATION: etlegacy, f2bgl, fallout1-ce, fallout2-ce, hatari, ...
 msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr "언어"
 
-#. TRANSLATION: libretro, shared, shared, shared, shared, ...
+#. TRANSLATION: libretro, libretro, shared, shared, shared, ...
 msgctxt "game_options"
 msgid "LATENCY REDUCTION"
 msgstr "대기 시간 감소"
 
 #. TRANSLATION: libretro/pokemini
-#, fuzzy
 msgctxt "game_options"
 msgid "LCD FILTER"
-msgstr "액정 필터"
+msgstr "LCD 필터"
 
 #. TRANSLATION: libretro/gambatte, libretro/potator
 msgctxt "game_options"
@@ -9882,7 +9891,6 @@ msgid "LCD GHOSTING EFFECT"
 msgstr "LCD 고스팅 효과"
 
 #. TRANSLATION: libretro/pokemini
-#, fuzzy
 msgctxt "game_options"
 msgid "LCD GHOSTING EFFECTS"
 msgstr "LCD 고스팅 효과"
@@ -9923,7 +9931,6 @@ msgid "LIMIT FPS"
 msgstr "FPS 제한"
 
 #. TRANSLATION: melonds
-#, fuzzy
 msgctxt "game_options"
 msgid "LIMIT FRAME RATE"
 msgstr "프레임 속도 제한"
@@ -9934,7 +9941,6 @@ msgid "LINE DOUBLING (DEINTERLACE)"
 msgstr ""
 
 #. TRANSLATION: amiberry
-#, fuzzy
 msgctxt "game_options"
 msgid "LINE MODE"
 msgstr "라인 모드"
@@ -9957,19 +9963,17 @@ msgstr ""
 #. TRANSLATION: libretro/panda3ds, redream
 msgctxt "game_options"
 msgid "LLE"
-msgstr "LLE"
+msgstr "저수준 에뮬레이션"
 
 #. TRANSLATION: rpcs3, rpcs3
-#, fuzzy
 msgctxt "game_options"
 msgid "LLVM Recompiler"
-msgstr "LLVM 리컴파일러"
+msgstr "LLVM 재컴파일러"
 
 #. TRANSLATION: rpcs3
-#, fuzzy
 msgctxt "game_options"
 msgid "LLVM is fastest, use the Interpreter settings if there are issues."
-msgstr "LLVM이 가장 빠르며 문제가있는 경우 통역사 설정을 사용하십시오."
+msgstr "LLVM이 가장 빠르며 문제가있는 경우 해석기 설정을 사용하십시오."
 
 #. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, libretro/mesen, ...
 msgctxt "game_options"
@@ -9979,7 +9983,7 @@ msgstr "커스텀 텍스처 로드"
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "LOADING SPEED"
-msgstr ""
+msgstr "로딩 속도"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -9989,22 +9993,22 @@ msgstr "링스 모델"
 #. TRANSLATION: libretro/mednafen_wswan
 msgctxt "game_options"
 msgid "Landscape"
-msgstr "가로화면"
+msgstr "가로 화면"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Large Bottom"
-msgstr ""
+msgstr "큰 하단"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Large Top"
-msgstr ""
+msgstr "큰 상단"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "Larger"
-msgstr ""
+msgstr "더 큰"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -10017,7 +10021,6 @@ msgid "Laser/VZ 64k Memory (Default)"
 msgstr "레이저/VZ 64k 메모리 (기본)"
 
 #. TRANSLATION: ryujinx, suyu
-#, fuzzy
 msgctxt "game_options"
 msgid "Latin American Spanish"
 msgstr "라틴 아메리카 스페인어"
@@ -10030,6 +10033,11 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Lebanon"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Left"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
@@ -10045,15 +10053,14 @@ msgstr ""
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left flipper"
-msgstr ""
+msgstr "왼쪽 플리퍼"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left magnasave"
-msgstr ""
+msgstr "왼쪽 마그나세이브"
 
 #. TRANSLATION: solarus
-#, fuzzy
 msgctxt "game_options"
 msgid "Left stick"
 msgstr "왼쪽 스틱"
@@ -10061,26 +10068,24 @@ msgstr "왼쪽 스틱"
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Left/Right"
-msgstr ""
+msgstr "왼쪽/오른쪽"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Legacy (single threaded)"
-msgstr ""
+msgstr "레거시 (단일 스레드)"
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "Legacy Evdev"
-msgstr ""
+msgstr "레거시 이벤트 장치"
 
 #. TRANSLATION: supermodel
-#, fuzzy
 msgctxt "game_options"
 msgid "Legacy3D"
 msgstr "레거시3D"
 
 #. TRANSLATION: suyu, xenia, xenia-canary
-#, fuzzy
 msgctxt "game_options"
 msgid "Libya"
 msgstr "리비아"
@@ -10091,7 +10096,6 @@ msgid "Liechtenstein"
 msgstr ""
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
-#, fuzzy
 msgctxt "game_options"
 msgid "Light (load times)"
 msgstr "라이트 (로드 시간)"
@@ -10142,10 +10146,9 @@ msgid "Light threshold for forcing shadergen"
 msgstr ""
 
 #. TRANSLATION: libretro/mednafen_psx
-#, fuzzy
 msgctxt "game_options"
 msgid "Lightrec Interpreter"
-msgstr "라이트렉 인터프리터"
+msgstr "Lightrec 해석기"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10160,10 +10163,9 @@ msgstr ""
 #. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
 msgid "Limit FPS to reduce high CPU usage."
-msgstr ""
+msgstr "CPU 사용량을 줄이려면 FPS를 제한하세요."
 
 #. TRANSLATION: rpcs3
-#, fuzzy
 msgctxt "game_options"
 msgid ""
 "Limiting to 1 or 2 may fix audio stuttering on weaker CPUs in some games. "
@@ -10195,7 +10197,7 @@ msgstr ""
 #. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, psp.ppsspp.keys, ...
 msgctxt "keys_files"
 msgid "Load State"
-msgstr ""
+msgstr "상태 로드"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -10209,11 +10211,13 @@ msgid ""
 "Local address and port to receive packets on. Leave this empty if you want "
 "to enter it manually in the xemu.toml configuration file."
 msgstr ""
+"패킷을 수신할 로컬 주소와 포트입니다. xemu.toml 구성 파일에 수동으로 입력하려"
+"면 이 값을 비워두세요."
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Lockbar Fire Button"
-msgstr ""
+msgstr "록바 발사 버튼"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -10223,7 +10227,7 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
-msgstr ""
+msgstr "긴 가시 화면 가장자리 (cm)"
 
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, raze.keys
 msgctxt "keys_files"
@@ -10243,16 +10247,15 @@ msgstr "낮음 360p"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Low-end Computer"
-msgstr ""
+msgstr "하급 컴퓨터"
 
 #. TRANSLATION: mupen64plus
-#, fuzzy
 msgctxt "game_options"
 msgid ""
 "Lower values reduce audio latency and improve performance, but can cause "
 "audio issues."
 msgstr ""
-"값이 낮을수록 오디오 대기 시간이 줄어들고 성능이 향상되지만 오디오 문제가 발"
+"값이 낮을수록 오디오 대기 시간이 줄어들고 성능이 향상되지만, 오디오 문제가 발"
 "생할 수 있습니다."
 
 #. TRANSLATION: libretro/pcsx_rearmed
@@ -10308,27 +10311,27 @@ msgstr "마메 (YM2612)"
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "MAME Detect"
-msgstr "MAME 감지"
+msgstr "마메 감지"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "MANUAL TEXTURE SAMPLING"
-msgstr ""
+msgstr "수동 텍스처 샘플링"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "MAX (as many as possible)"
-msgstr "MAX (가능한 한 많이)"
+msgstr "최대 (가능한 한 많이)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "MAX POWER SAVING CPU-PREEMPTIONS"
-msgstr ""
+msgstr "최대 전력 절약 CPU 선점"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "MAXIMUM FRAMERATE"
-msgstr ""
+msgstr "최대 프레임 속도"
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -10353,7 +10356,7 @@ msgstr "메모리 슬롯"
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "MENU SOUNDS"
-msgstr ""
+msgstr "메뉴 사운드"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -10368,12 +10371,12 @@ msgstr "미디 출력"
 #. TRANSLATION: pcsx2, theforceengine
 msgctxt "game_options"
 msgid "MIPMAPPING"
-msgstr ""
+msgstr "밉맵핑"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "MISSILE COMMAND 3D VR"
-msgstr ""
+msgstr "미사일 커맨드 3D VR"
 
 #. TRANSLATION: hatari, libretro/fuse, libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -10386,15 +10389,14 @@ msgid "MODEL TYPE"
 msgstr "모델 유형"
 
 #. TRANSLATION: supermodel
-#, fuzzy
 msgctxt "game_options"
 msgid "MODERN PEDAL CONTROLS"
-msgstr "현대적인 페달 컨트롤"
+msgstr "현대식 페달 컨트롤"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "MOUNT CACHE"
-msgstr ""
+msgstr "캐시 마운트"
 
 #. TRANSLATION: dolphin, dolphin
 msgctxt "game_options"
@@ -10409,10 +10411,9 @@ msgstr "마우스 속도"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "MST"
-msgstr "MST"
+msgstr "산악 표준시"
 
 #. TRANSLATION: suyu
-#, fuzzy
 msgctxt "game_options"
 msgid "MST7MDT"
 msgstr "MST7MDT"
@@ -10425,7 +10426,7 @@ msgstr "MSX2"
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "MULTISCREENS"
-msgstr ""
+msgstr "멀티스크린"
 
 #. TRANSLATION: libretro/kronos, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro, pcsx2
 msgctxt "game_options"
@@ -10435,12 +10436,12 @@ msgstr "멀티탭"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "MULTITHREADED RSX"
-msgstr ""
+msgstr "멀티스레드 RSX"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "MUSIC VOLUME"
-msgstr ""
+msgstr "음악 볼륨"
 
 #. TRANSLATION: libretro/geolith
 msgctxt "game_options"
@@ -10515,23 +10516,20 @@ msgstr "매킨토시 고밀도 디스크 이미지"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Mailbox (Recommended)"
-msgstr ""
+msgstr "메일박스 (권장)"
 
 #. TRANSLATION: mame
-#, fuzzy
 msgctxt "game_options"
 msgid ""
 "Make game history, setup instructions, and special moves viewable in the menu"
 msgstr "게임 기록, 설정 지침 및 필살기를 메뉴에서 볼 수 있도록 설정"
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/vice_x64, ...
-#, fuzzy
 msgctxt "game_options"
 msgid "Makes second fire button press up instead."
 msgstr "대신 두 번째 발사 버튼을 위로 누릅니다."
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
-#, fuzzy
 msgctxt "game_options"
 msgid "Makes the blue button press up instead."
 msgstr "대신 파란색 버튼을 위로 누릅니다."
@@ -10539,7 +10537,7 @@ msgstr "대신 파란색 버튼을 위로 누릅니다."
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Makes the dither pattern much less obvious at higher resolutions."
-msgstr ""
+msgstr "고해상도에서 디더 패턴이 훨씬 덜 눈에 띄게 됩니다."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -10554,10 +10552,9 @@ msgstr ""
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Manage Staff"
-msgstr ""
+msgstr "직원 관리"
 
 #. TRANSLATION: drastic, libretro/mednafen_wswan, vpinball, vpinball, vpinball, ...
-#, fuzzy
 msgctxt "game_options"
 msgid "Manual"
 msgstr "수동"
@@ -10568,13 +10565,11 @@ msgid "Manual keyboard"
 msgstr "수동 키보드"
 
 #. TRANSLATION: libretro/nestopia
-#, fuzzy
 msgctxt "game_options"
 msgid "Manually activate the adapter for supported games."
 msgstr "지원되는 게임에 대한 어댑터를 수동으로 활성화합니다."
 
 #. TRANSLATION: amiberry
-#, fuzzy
 msgctxt "game_options"
 msgid "Manually define which internal resolution to use. AUTO = High."
 msgstr "사용할 내부 해상도를 수동으로 정의합니다. 자동 = 높음."
@@ -10590,6 +10585,8 @@ msgid ""
 "Manually set VSYNC frames per second. Ideally this should match your monitor "
 "refresh rate."
 msgstr ""
+"초당 수직동기화 프레임을 수동으로 설정합니다. 이상적으로는 모니터 재생 빈도"
+"와 일치해야 합니다."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -10602,16 +10599,14 @@ msgid "Map"
 msgstr ""
 
 #. TRANSLATION: libretro
-#, fuzzy
 msgctxt "game_options"
 msgid "Map controller inputs to light gun inputs."
 msgstr "컨트롤러 입력을 라이트 건 입력에 매핑합니다."
 
 #. TRANSLATION: dolphin, dolphin
-#, fuzzy
 msgctxt "game_options"
 msgid "Map your controller to an emulated Wiimote."
-msgstr "컨트롤러를 에뮬레이트된 Wiimote에 매핑합니다."
+msgstr "컨트롤러를 에뮬레이트된 위모트에 매핑합니다."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10621,16 +10616,14 @@ msgstr "3월"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Match Window"
-msgstr ""
+msgstr "일치하는 창"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
-#, fuzzy
 msgctxt "game_options"
 msgid "Max (demanding games)"
-msgstr "맥스 (까다로운 게임)"
+msgstr "최대 (요구 사항이 높은 게임)"
 
 #. TRANSLATION: libretro/mednafen_psx
-#, fuzzy
 msgctxt "game_options"
 msgid "Max Performance"
 msgstr "최대 성능"
@@ -10643,32 +10636,32 @@ msgstr ""
 #. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, rpcs3
 msgctxt "game_options"
 msgid "Maximum"
-msgstr ""
+msgstr "최대"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Maximum (Very Slow)"
-msgstr ""
+msgstr "최대 (매우 느림)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Maximum 2 Players (Default)"
-msgstr ""
+msgstr "최대 2인 플레이어 (기본)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Maximum 4 Players"
-msgstr ""
+msgstr "최대 4인 플레이어"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Maximum 8 Players"
-msgstr ""
+msgstr "최대 8인 플레이어"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Maximum Blood"
-msgstr ""
+msgstr "최대 피"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -10676,6 +10669,8 @@ msgid ""
 "Maximum host texture memory usage (in megabytes) above which old textures "
 "will be destroyed. Set below hard limit."
 msgstr ""
+"최대 호스트 텍스처 메모리 사용량(메가바이트)으로, 이보다 높으면 오래된 텍스처"
+"가 파괴됩니다. 하드 한도 아래로 설정하세요."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -10683,6 +10678,8 @@ msgid ""
 "Maximum host texture memory usage (in megabytes) above which textures will "
 "be destroyed as soon as possible."
 msgstr ""
+"텍스처가 가능한 한 빨리 삭제되는 최대 호스트 텍스처 메모리 사용량(메가바이트)"
+"입니다."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -10695,7 +10692,6 @@ msgid "May"
 msgstr "5월"
 
 #. TRANSLATION: rpcs3
-#, fuzzy
 msgctxt "game_options"
 msgid ""
 "May fix missing graphics and broken lighting at the cost of performance."
@@ -10715,11 +10711,13 @@ msgid ""
 "May provide performance gain on CPUs with low core/thread count at the "
 "expense of possible broken timings."
 msgstr ""
+"코어/스레드 수가 적은 CPU에서는 타이밍이 깨질 가능성이 있지만 성능 향상을 가"
+"져올 수 있습니다."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
-msgstr ""
+msgstr "일부 2D 게임에서는 이미지가 더 선명해질 수 있습니다."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -10747,13 +10745,11 @@ msgid "Mega STE"
 msgstr "메가 STE"
 
 #. TRANSLATION: hatari
-#, fuzzy
 msgctxt "game_options"
 msgid "Mega STE 2.05"
 msgstr "메가 STE 2.05"
 
 #. TRANSLATION: hatari
-#, fuzzy
 msgctxt "game_options"
 msgid "Mega STE 2.06"
 msgstr "메가 STE 2.06"
@@ -10761,12 +10757,12 @@ msgstr "메가 STE 2.06"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Mega STE AUTO"
-msgstr "메가 STE 자도"
+msgstr "메가 STE 자동"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Mega STE ETOS 256k"
-msgstr ""
+msgstr "메가 STE ETOS 256k"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10774,6 +10770,8 @@ msgid ""
 "Mega and Giga modes may improve performance. Use the Safe mode for maximum "
 "compatibility."
 msgstr ""
+"메가 및 기가 모드는 성능을 향상할 수 있습니다. 최대 호환성을 위해 안전 모드"
+"를 사용하세요."
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
@@ -10803,7 +10801,7 @@ msgstr "메나서 라이트 건"
 #. TRANSLATION: scummvm.keys
 msgctxt "keys_files"
 msgid "Menu"
-msgstr ""
+msgstr "메뉴"
 
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -10815,10 +10813,10 @@ msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
-msgstr ""
+msgstr "메뉴 뒤로가기"
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
@@ -10831,15 +10829,14 @@ msgid "Mexico"
 msgstr ""
 
 #. TRANSLATION: libretro/opera
-#, fuzzy
 msgctxt "game_options"
 msgid "Microcosm"
-msgstr "소우주"
+msgstr "Microcosm"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Minimal"
-msgstr ""
+msgstr "최소"
 
 #. TRANSLATION: pcsx2, rpcs3
 msgctxt "game_options"
@@ -10847,10 +10844,9 @@ msgid "Minimum"
 msgstr "최소"
 
 #. TRANSLATION: mupen64plus
-#, fuzzy
 msgctxt "game_options"
 msgid "Mirrored"
-msgstr "미러"
+msgstr "거울"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -10860,7 +10856,7 @@ msgstr "에뮬레이트 된 애플 II의 모델."
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Moderate"
-msgstr ""
+msgstr "보통"
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
@@ -10875,7 +10871,7 @@ msgstr ""
 #. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Modern Fightstick Style"
-msgstr "모던 파이트 스틱 스타일"
+msgstr "현대식 파이트 스틱 스타일"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -10934,10 +10930,9 @@ msgid "Most games use port 2, some use port 1."
 msgstr "대부분 게임은 포트 2를 사용하고, 일부 게임은 포트 1을 사용합니다."
 
 #. TRANSLATION: mame/openbor7530
-#, fuzzy
 msgctxt "game_options"
 msgid "Mount a floppy for user data, creates if needed"
-msgstr "사용자 데이터용 플로피 탑재, 필요한 경우 만들기"
+msgstr "사용자 데이터용 플로피 마운트, 필요한 경우 만들기"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
@@ -10952,7 +10947,7 @@ msgstr "마우스 (1351)"
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
-msgstr ""
+msgstr "마우스 킬릭"
 
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, raze.keys
 msgctxt "keys_files"
@@ -10967,57 +10962,59 @@ msgstr ""
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
-msgstr ""
+msgstr "스타일릿 포인터 이동"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move backward"
-msgstr ""
+msgstr "뒤로 이동"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera down"
-msgstr ""
+msgstr "카메라를 아래쪽으로 이동"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera to the left"
-msgstr ""
+msgstr "카메라를 왼쪽으로 이동"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera to the right"
-msgstr ""
+msgstr "카메라를 오른쪽으로 이동"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera up"
-msgstr ""
+msgstr "카메라를 위쪽으로 이동"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move forward"
-msgstr ""
+msgstr "앞으로 이동"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move left"
-msgstr ""
+msgstr "왼쪽으로 이동"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move right"
-msgstr ""
+msgstr "오른쪽으로 이동"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "Moves South to West, West to North, etc. Standard controller type only."
 msgstr ""
+"남쪽에서 서쪽으로, 서쪽에서 북쪽으로 이동합니다. 표준 컨트롤러 유형만 해당됩"
+"니다."
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Much faster than interpreter (but may have issues)."
-msgstr "인터프리터보다 훨씬 빠릅니다 (그러나 문제가있을 수 있음)."
+msgstr "해석기보다 훨씬 빠릅니다 (그러나 문제가있을 수 있음)."
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -11032,12 +11029,12 @@ msgstr "N64 (제한된 단축키)"
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
 msgid "N64 3-point"
-msgstr "N64 3-포인트"
+msgstr "N64 3 점"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "NAT"
-msgstr ""
+msgstr "NAT"
 
 #. TRANSLATION: libretro/melonds, libretro/melondsds
 msgctxt "game_options"
@@ -11067,18 +11064,17 @@ msgstr "NES 재퍼"
 #. TRANSLATION: xemu, xemu, xemu, xemu, xemu, ...
 msgctxt "game_options"
 msgid "NETWORK"
-msgstr ""
+msgstr "네트워크"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "NETWORK TYPE"
-msgstr ""
+msgstr "네트워크 유형"
 
 #. TRANSLATION: citra
-#, fuzzy
 msgctxt "game_options"
 msgid "NEW 3DS MODE"
-msgstr "새로운 3DS 모드"
+msgstr "새 3DS 모드"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -11091,10 +11087,9 @@ msgid "NO (DEFAULT)"
 msgstr "아니요 (기본)"
 
 #. TRANSLATION: wine
-#, fuzzy
 msgctxt "game_options"
 msgid "NO WRITE WATCH"
-msgstr "쓰기 없음 시계"
+msgstr "WRITE WATCH 없음"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -11184,30 +11179,30 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "NUMBER OF SHADER COMPILER THREADS"
-msgstr ""
+msgstr "셰이더 컴파일러 스레드 수"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
 "NVAPI is NVIDIA's core software that allows direct access to NVIDIA GPU."
 msgstr ""
+"NVAPI는 엔비디아 GPU에 직접 접속할 수 있게 해주는 엔비디아의 핵심 소프트웨어"
+"입니다."
 
 #. TRANSLATION: libretro/opera
-#, fuzzy
 msgctxt "game_options"
 msgid "NVRAM STORAGE"
 msgstr "NVRAM 스토리지"
 
 #. TRANSLATION: suyu
-#, fuzzy
 msgctxt "game_options"
 msgid "NZ"
-msgstr "뉴질랜드"
+msgstr "NZ"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "NZ-CHAT"
-msgstr "NZ-CHAT"
+msgstr "NZ 채팅"
 
 #. TRANSLATION: duckstation, duckstation, libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, ...
 msgctxt "game_options"
@@ -11220,21 +11215,23 @@ msgid ""
 "Nat to access internet from xemu machine. Udp for System Link. Default "
 "(Auto) disables network access."
 msgstr ""
+"Nat은 xemu 장치에서 인터넷에 접속합니다. 시스템 링크용 UDP입니다. 기본값 (자"
+"동)은 네트워크 접속을 비활성화합니다."
 
 #. TRANSLATION: xemu, yabasanshiro
 msgctxt "game_options"
 msgid "Native"
-msgstr ""
+msgstr "원본"
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
 msgid "Native (720p/1080p)"
-msgstr "Native (720p/1080p)"
+msgstr "원본 (720p/1080p)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Native (PS2)(Default)"
-msgstr ""
+msgstr "원본 (PS2)(기본)"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -11242,7 +11239,6 @@ msgid "Native Vulkan (Default)"
 msgstr ""
 
 #. TRANSLATION: suyu
-#, fuzzy
 msgctxt "game_options"
 msgid "Navajo"
 msgstr "나바호어"
@@ -11258,10 +11254,9 @@ msgid "NeGcon"
 msgstr "네지콘"
 
 #. TRANSLATION: duckstation, duckstation
-#, fuzzy
 msgctxt "game_options"
 msgid "NeGcon (Rumble)"
-msgstr "네그콘 (럼블)"
+msgstr "네지콘 (진동)"
 
 #. TRANSLATION: f2bgl, libretro/duckstation, libretro/melondsds, libretro/parallel_n64, libretro/swanstation, ...
 msgctxt "game_options"
@@ -11269,7 +11264,6 @@ msgid "Nearest"
 msgstr "가장 가까운"
 
 #. TRANSLATION: cemu, cemu, sonic2013, soniccd, suyu
-#, fuzzy
 msgctxt "game_options"
 msgid "Nearest Neighbour"
 msgstr "가장 가까운 이웃"
@@ -11277,13 +11271,12 @@ msgstr "가장 가까운 이웃"
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Nearest pixel sampling"
-msgstr ""
+msgstr "가장 가까운 픽셀 샘플링"
 
 #. TRANSLATION: duckstation
-#, fuzzy
 msgctxt "game_options"
 msgid "Nearest-Neighbor"
-msgstr "최근접 이웃"
+msgstr "가장 가까운 이웃"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11291,6 +11284,8 @@ msgid ""
 "Necessary for some guns to replace fog textures as a workaround in Time "
 "Crisis - Crisis Zone."
 msgstr ""
+"타임 크라이시스 - 크라이시스 존에서 일부 총의 안개 텍스처를 대체하기 위한 해"
+"결책이 필요합니다."
 
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
@@ -11325,7 +11320,7 @@ msgstr "네덜란드"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Netherlands (nl)"
-msgstr ""
+msgstr "네덜란드 (nl)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -11338,7 +11333,6 @@ msgid "New Zealand"
 msgstr ""
 
 #. TRANSLATION: supermodel
-#, fuzzy
 msgctxt "game_options"
 msgid "New3D"
 msgstr "New3D"
@@ -11346,7 +11340,7 @@ msgstr "New3D"
 #. TRANSLATION: psx.duckstation.keys
 msgctxt "keys_files"
 msgid "Next Disc (m3u)"
-msgstr ""
+msgstr "다음 디스크 (m3u)"
 
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, raze.keys
 msgctxt "keys_files"
@@ -11386,7 +11380,7 @@ msgstr "우버셰이더 없음"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "No licenses enabled"
-msgstr ""
+msgstr "라이선스가 활성화되지 않았음"
 
 #. TRANSLATION: libretro/fbneo
 msgctxt "game_options"
@@ -11406,7 +11400,7 @@ msgstr "없음 (기본)"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "None/Sharp Pixels"
-msgstr ""
+msgstr "없음/선명한 픽셀"
 
 #. TRANSLATION: awgl, duckstation, flycast, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
@@ -11416,12 +11410,12 @@ msgstr "보통"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin, fallout1-ce, ...
 msgctxt "game_options"
 msgid "Normal (Default)"
-msgstr ""
+msgstr "보통 (기본)"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Normal (interpreter)"
-msgstr "일반 (해석기)"
+msgstr "보통 (해석기)"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -11436,17 +11430,17 @@ msgstr "노르웨이"
 #. TRANSLATION: etlegacy, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Norwegian"
-msgstr ""
+msgstr "노르웨이어"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Norwegian (no)"
-msgstr ""
+msgstr "노르웨이어 (no)"
 
 #. TRANSLATION: duckstation, duckstation
 msgctxt "game_options"
 msgid "Not Connected"
-msgstr ""
+msgstr "연결되지 않음"
 
 #. TRANSLATION: libretro/beetle-saturn, libretro/beetle-saturn, libretro/yabasanshiro, libretro/yabasanshiro
 msgctxt "game_options"
@@ -11454,7 +11448,6 @@ msgid "Not all games support 3D pad."
 msgstr "모든 게임이 3D 패드를 지원하는 것은 아닙니다."
 
 #. TRANSLATION: cemu
-#, fuzzy
 msgctxt "game_options"
 msgid "Not all games support all languages."
 msgstr "모든 게임이 모든 언어를 지원하는 것은 아닙니다."
@@ -11465,10 +11458,9 @@ msgid "Not all games support stretching, depending on their video files."
 msgstr "모든 게임이 비디오 파일에 따라 늘리기를 지원하는 것은 아닙니다."
 
 #. TRANSLATION: libretro/xrick
-#, fuzzy
 msgctxt "game_options"
 msgid "Nothing can kill Rick, may break the game."
-msgstr "아무것도 릭을 죽일 수 없으며 게임을 깨뜨릴 수 있습니다."
+msgstr "아무것도 릭을 죽일 수 없으며, 게임을 망칠 수 있습니다."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -11478,27 +11470,27 @@ msgstr "11월"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Nudge left"
-msgstr ""
+msgstr "왼쪽으로 밀기"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Nudge right"
-msgstr ""
+msgstr "오른쪽으로 밀기"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Nudge up"
-msgstr ""
+msgstr "위쪽으로 밀기"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Nuked (YM2612)"
-msgstr "Nuked (YM2612)"
+msgstr "누크드 (YM2612)"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Nuked (YM3438)"
-msgstr "Nuked (YM3438)"
+msgstr "누크드 (YM3438)"
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -11538,12 +11530,12 @@ msgstr ""
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "OPENGL RENDERING RESOLUTION"
-msgstr ""
+msgstr "OPENGL 렌더링 해상도"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "OPTIMAL FRAME PACING"
-msgstr ""
+msgstr "최적의 프레임 페이싱"
 
 #. TRANSLATION: libretro/dolphin, pcsx2
 msgctxt "game_options"
@@ -11553,7 +11545,7 @@ msgstr "OSD 메시지"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "OUTPUT SCALING"
-msgstr ""
+msgstr "출력 스케일링"
 
 #. TRANSLATION: libretro/fceumm, libretro/mame, libretro/mamevirtual, libretro/mednafen_psx, libretro/mesen, ...
 msgctxt "game_options"
@@ -11561,7 +11553,6 @@ msgid "OVERCLOCK (UNSTABLE)"
 msgstr "오버클럭 (불안정)"
 
 #. TRANSLATION: libretro/np2kai
-#, fuzzy
 msgctxt "game_options"
 msgid "OVERCLOCK MULTIPLIER"
 msgstr "오버클럭 승수"
@@ -11589,18 +11580,17 @@ msgstr "끄기 (기본)"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Off (Noisy)"
-msgstr ""
+msgstr "끄기 (소음)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Off (None)"
-msgstr ""
+msgstr "끄기 (없음)"
 
 #. TRANSLATION: rpcs3
-#, fuzzy
 msgctxt "game_options"
 msgid "Off (faster, unstable)"
-msgstr "꺼짐(더 빠름, 불안정함)"
+msgstr "끄기 (더 빠름, 불안정함)"
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -11608,16 +11598,14 @@ msgid "Off at Start"
 msgstr "시작 시 끄기"
 
 #. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar, virtualjaguar
-#, fuzzy
 msgctxt "game_options"
 msgid "Off is safer, On for specific games."
-msgstr "꺼짐이 더 안전하고, 특정 게임의 경우 켜짐이 더 안전합니다."
+msgstr "끄기가 더 안전하고, 특정 게임의 경우 켜기가 더 안전합니다."
 
 #. TRANSLATION: citra
-#, fuzzy
 msgctxt "game_options"
 msgid "Off will help some games, others will run too fast."
-msgstr "꺼짐은 일부 게임에 도움이되고 다른 게임은 너무 빨리 실행됩니다."
+msgstr "끄기가 일부 게임에 도움이되고 다른 게임은 너무 빨리 실행됩니다."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -11625,13 +11613,15 @@ msgid ""
 "Offers analog controller and mouse support (Mouse Look), along with options "
 "for always-strafe and always-run functionalities."
 msgstr ""
+"아날로그 컨트롤러와 마우스 지원(마우스 룩)을 제공하며, 항상 스트레이프 및 항"
+"상 실행 기능에 대한 옵션도 제공합니다."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid ""
 "Offers support for analog controllers and mouse look functionality for "
 "improved control."
-msgstr ""
+msgstr "향상된 제어를 위해 아날로그 컨트롤러와 마우스 모양 기능을 지원합니다."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -11639,12 +11629,15 @@ msgid ""
 "Offloads some RSX operations to a secondary thread. Improves performance in "
 "high-core processors."
 msgstr ""
+"일부 RSX 작업을 보조 스레드로 오프로드합니다. 고코어 프로세서에서 성능을 향상"
+"시킵니다."
 
 #. TRANSLATION: libretro/np2kai
-#, fuzzy
 msgctxt "game_options"
 msgid "Older games skipped drawing every second line, this masks that."
-msgstr "오래된 게임은 두 번째 줄마다 그리기를 건너 뛰었습니다."
+msgstr ""
+"이전 게임에서는 두 번째 줄마다 그리기를 건너뛰었지만, 이 기능은 그 점을 가리"
+"고 있습니다."
 
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
@@ -11689,7 +11682,7 @@ msgstr "켜기 (기본)"
 #. TRANSLATION: libretro/81, libretro/81, libretro/genesisplusgx
 msgctxt "game_options"
 msgid "On (forced)"
-msgstr "켜짐 (강제)"
+msgstr "켜기 (강제)"
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -11699,12 +11692,12 @@ msgstr "시작 시 켜기"
 #. TRANSLATION: vpinball, vpinball, vpinball
 msgctxt "game_options"
 msgid "On screen 2 if available"
-msgstr ""
+msgstr "사용 가능한 경우 화면 2"
 
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
 msgid "On screen 3 if available"
-msgstr ""
+msgstr "사용 가능한 경우 화면 3"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -11717,11 +11710,10 @@ msgid "On with rewind support"
 msgstr "되감기 지원으로 켜기"
 
 #. TRANSLATION: rpcs3
-#, fuzzy
 msgctxt "game_options"
 msgid "Only Async (skip draw) avoids freezing while compiling shaders."
 msgstr ""
-"Async(그리기 건너뛰기)만 셰이더를 컴파일하는 동안 중지되는 것을 방지합니다."
+"비동기(그리기 건너뛰기)만 셰이더를 컴파일하는 동안 중지되는 것을 방지합니다."
 
 #. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -11731,29 +11723,27 @@ msgstr "오버스캔 영역만"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Only applicable when either Async Shader mode is set."
-msgstr ""
+msgstr "비동기 셰이더 모드가 설정된 경우에만 적용됩니다."
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Only applicable when using OpenGL."
-msgstr ""
+msgstr "OpenGL을 사용할 때만 적용됩니다."
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
-msgstr ""
+msgstr "선택한 RDP 플러그인으로 Parallel-RDP를 사용하는 경우에만 적용됩니다."
 
 #. TRANSLATION: libretro/mgba, libretro/mgba, libretro/vba-m, libretro/vba-m
-#, fuzzy
 msgctxt "game_options"
 msgid "Only for Super Game Boy enhanced games."
-msgstr "슈퍼 게임 보이 강화 게임에만 해당됩니다."
+msgstr "슈퍼 게임보이 강화 게임에만 해당됩니다."
 
 #. TRANSLATION: libretro/vba-m
-#, fuzzy
 msgctxt "game_options"
 msgid "Only for games that employed it (for Boktai)"
-msgstr "그것을 사용한 게임에만 해당(복타이용)"
+msgstr "이를 사용한 게임에만 해당 (우리들의 태양용)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -11761,10 +11751,9 @@ msgid "Only increase the image size in integer multiples."
 msgstr "이미지 크기는 정수의 배수로만 늘립니다."
 
 #. TRANSLATION: model2emu, openbor/openbor7530, supermodel
-#, fuzzy
 msgctxt "game_options"
 msgid "Only some games feature rumble. Not compatible with all controllers."
-msgstr "일부 게임에만 럼블 기능이 있습니다. 모든 컨트롤러와 호환되지 않습니다."
+msgstr "일부 게임만 진동 기능이 있습니다. 모든 컨트롤러와 호환되지 않습니다."
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -11780,27 +11769,27 @@ msgstr ""
 #. TRANSLATION: psx.duckstation.keys
 msgctxt "keys_files"
 msgid "Open DuckStation Quick Menu"
-msgstr ""
+msgstr "덕스테이션 빠른 메뉴 열기"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open LUA console"
-msgstr ""
+msgstr "LUA 콘솔 열기"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open build room menu"
-msgstr ""
+msgstr "빌드 룸 메뉴 열기"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Open door"
-msgstr ""
+msgstr "문 열기"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open furnish corridor menu"
-msgstr ""
+msgstr "가구 복도 메뉴 열기"
 
 #. TRANSLATION: awgl, cemu, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
@@ -11810,18 +11799,17 @@ msgstr "OpenGL"
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "OpenGL (Classic)"
-msgstr ""
+msgstr "OpenGL (클래식)"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
-msgstr ""
+msgstr "OpenGL (컴퓨트 셰이더)"
 
 #. TRANSLATION: citra, play, scummvm
-#, fuzzy
 msgctxt "game_options"
 msgid "OpenGL (Default)"
-msgstr "오픈GL (기본값)"
+msgstr "OpenGL (기본)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -11836,7 +11824,7 @@ msgstr "OpenGL ES"
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "OpenGL with Shaders"
-msgstr ""
+msgstr "셰이더를 사용한 OpenGL"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -11849,46 +11837,41 @@ msgid "Orange"
 msgstr "주황색"
 
 #. TRANSLATION: libretro/potator
-#, fuzzy
 msgctxt "game_options"
 msgid "Orange - Hokage Orange"
-msgstr "오렌지 - 호카게 오렌지"
+msgstr "주황색 - 호카게 오렌지"
 
 #. TRANSLATION: awgl, awgl, hurrican, hypseus-singe, libretro/mupen64plus-next, ...
-#, fuzzy
 msgctxt "game_options"
 msgid "Original"
-msgstr "원문 언어"
+msgstr "오리지널"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
 msgid "Original Hardware (FirebrandX)"
-msgstr "오리지널 하드웨어 (파이어브랜드엑스)"
+msgstr "오리지널 하드웨어 (파이어브랜드X)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Original Size"
-msgstr ""
+msgstr "오리지널 크기"
 
 #. TRANSLATION: xemu
-#, fuzzy
 msgctxt "game_options"
 msgid "Original resolution"
-msgstr "원래 해상도"
+msgstr "오리지널 해상도"
 
 #. TRANSLATION: melonds
-#, fuzzy
 msgctxt "game_options"
 msgid "Original screen positions"
-msgstr "원래 화면 위치"
+msgstr "오리지널 화면 위치"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "Output rotation independent of xrandr or framebuffer settings."
-msgstr ""
+msgstr "출력 회전은 xrandr 또는 프레임 버퍼 설정과 무관합니다."
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
-#, fuzzy
 msgctxt "game_options"
 msgid "Overclock the SNES CPU (Gradius 3, Super R-Type)."
 msgstr "SNES CPU (그라디우스 3, 슈퍼 R 타입)를 오버 클럭합니다."
@@ -11899,19 +11882,16 @@ msgid "Overrides the language mode of the emulated console."
 msgstr "에뮬레이션된 콘솔의 언어 모드를 재정의합니다."
 
 #. TRANSLATION: supermodel
-#, fuzzy
 msgctxt "game_options"
 msgid "P1 & P2"
 msgstr "P1 및 P2"
 
 #. TRANSLATION: supermodel
-#, fuzzy
 msgctxt "game_options"
 msgid "P1 only"
 msgstr "P1 전용"
 
 #. TRANSLATION: supermodel
-#, fuzzy
 msgctxt "game_options"
 msgid "P2 only"
 msgstr "P2 전용"
@@ -11952,13 +11932,11 @@ msgid "PAL/N"
 msgstr ""
 
 #. TRANSLATION: redream
-#, fuzzy
 msgctxt "game_options"
 msgid "PAL_M"
 msgstr "PAL_M"
 
 #. TRANSLATION: redream
-#, fuzzy
 msgctxt "game_options"
 msgid "PAL_N"
 msgstr "PAL_N"
@@ -11966,7 +11944,7 @@ msgstr "PAL_N"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "PAR 1:1"
-msgstr ""
+msgstr "PAR 1:1"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -12237,7 +12215,6 @@ msgid "Panama"
 msgstr ""
 
 #. TRANSLATION: libretro/pcsx_rearmed
-#, fuzzy
 msgctxt "game_options"
 msgid "Pandemonium 2 Lazy Screen Update Fix"
 msgstr "판데모니엄 2 지연 화면 업데이트 수정"
@@ -13287,6 +13264,11 @@ msgctxt "game_options"
 msgid "Rice"
 msgstr ""
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Right"
+msgstr ""
+
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Right Analogue (Auto)"
@@ -13453,27 +13435,24 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "SCALED DITHERING"
-msgstr ""
+msgstr "스케일 디더링"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "SCALER MODE"
-msgstr ""
+msgstr "스케일러 모드"
 
 #. TRANSLATION: amiberry
-#, fuzzy
 msgctxt "game_options"
 msgid "SCALING METHOD"
 msgstr "스케일링 방법"
 
 #. TRANSLATION: sonic2013, soniccd, xemu
-#, fuzzy
 msgctxt "game_options"
 msgid "SCALING MODE"
 msgstr "스케일링 모드"
 
 #. TRANSLATION: amiberry, hypseus-singe
-#, fuzzy
 msgctxt "game_options"
 msgid "SCANLINES"
 msgstr "스캔라인"
@@ -13486,7 +13465,7 @@ msgstr "화면 테두리"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "SCREEN FILTER"
-msgstr ""
+msgstr "화면 필터"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -13496,12 +13475,12 @@ msgstr "화면 필터링"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "SCREEN HEIGHT"
-msgstr ""
+msgstr "화면 높이"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "SCREEN INCLINATION"
-msgstr ""
+msgstr "화면 기울기"
 
 #. TRANSLATION: citra, drastic, libretro/desmume, libretro/melonds, melonds
 msgctxt "game_options"
@@ -13516,12 +13495,12 @@ msgstr "화면 방향"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "SCREEN PLAYER Y"
-msgstr ""
+msgstr "화면 플레이어 Y"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "SCREEN PLAYER Z"
-msgstr ""
+msgstr "화면 플레이어 Z"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -13544,13 +13523,11 @@ msgid "SCREEN SIZE"
 msgstr "화면 크기"
 
 #. TRANSLATION: melonds
-#, fuzzy
 msgctxt "game_options"
 msgid "SCREEN SIZING"
 msgstr "화면 크기 조정"
 
 #. TRANSLATION: melonds
-#, fuzzy
 msgctxt "game_options"
 msgid "SCREEN SWAP"
 msgstr "화면 교체"
@@ -13558,28 +13535,27 @@ msgstr "화면 교체"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "SCREEN WIDTH"
-msgstr ""
+msgstr "화면 너비"
 
 #. TRANSLATION: bigpemu, bigpemu, bigpemu, bigpemu, bigpemu, ...
 msgctxt "game_options"
 msgid "SCRIPT MODULES"
-msgstr ""
+msgstr "스크립트 모듈"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "SDL CONFIG"
-msgstr ""
+msgstr "SDL 구성"
 
 #. TRANSLATION: hypseus-singe
-#, fuzzy
 msgctxt "game_options"
 msgid "SDL TEXTURE ACCESS STREAMING"
-msgstr "SDL 텍스처 액세스 스트리밍"
+msgstr "SDL 텍스처 접속 스트리밍"
 
 #. TRANSLATION: libretro, libretro, libretro, libretro
 msgctxt "game_options"
 msgid "SDL2"
-msgstr ""
+msgstr "SDL2"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
@@ -13729,7 +13705,7 @@ msgstr "시작 메뉴 건너뛰기"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "SMAA"
-msgstr ""
+msgstr "SMAA (향상된 서브픽셀 형태학적 안티에일리어싱)"
 
 #. TRANSLATION: hypseus-singe, play, shared
 msgctxt "game_options"
@@ -13739,22 +13715,19 @@ msgstr "부드러운 게임 (이중선형 필터링)"
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "SMOOTH VUES"
-msgstr ""
+msgstr "부드러운 전망"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x, libretro/snes9x, libretro/snes9x_next, libretro/snes9x_next
-#, fuzzy
 msgctxt "game_options"
 msgid "SNES Gamepad"
 msgstr "SNES 게임패드"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x, libretro/snes9x_next, libretro/snes9x_next
-#, fuzzy
 msgctxt "game_options"
 msgid "SNES Mouse"
 msgstr "SNES 마우스"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
-#, fuzzy
 msgctxt "game_options"
 msgid "SNES Multitap"
 msgstr "SNES 멀티탭"
@@ -13767,12 +13740,12 @@ msgstr "SNES 스타일"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "SOFT TEXTURE CACHE MEMORY LIMIT"
-msgstr ""
+msgstr "소프트 텍스처 캐시 메모리 제한"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "SOFT TEXTURE CACHE MEMORY TIMEOUT"
-msgstr ""
+msgstr "소프트 텍스처 캐시 메모리 시간 초과"
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -13780,13 +13753,11 @@ msgid "SOFTWARE LIST"
 msgstr "소프트웨어 목록"
 
 #. TRANSLATION: libretro/mgba, libretro/vba-m
-#, fuzzy
 msgctxt "game_options"
 msgid "SOLAR SENSOR LEVEL"
 msgstr "태양 광 센서 레벨"
 
 #. TRANSLATION: libretro/np2kai
-#, fuzzy
 msgctxt "game_options"
 msgid "SOUND BOARD"
 msgstr "사운드 보드"
@@ -13799,7 +13770,7 @@ msgstr ""
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
 msgid "SOUND QUALITY"
-msgstr "음질"
+msgstr "사운드 품질"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -13809,7 +13780,7 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "SOUND VOLUME"
-msgstr ""
+msgstr "사운드 볼륨"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -13827,7 +13798,6 @@ msgid "SPECIAL CONTROL LAYOUTS"
 msgstr "스페셜 컨트롤 레이아웃"
 
 #. TRANSLATION: libretro/opera, libretro/pcsx_rearmed
-#, fuzzy
 msgctxt "game_options"
 msgid "SPECIFIC GAME FIXES"
 msgstr "특정 게임 수정"
@@ -13861,10 +13831,9 @@ msgstr "SPU 디코더"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "SPU LOOP DETECTION"
-msgstr ""
+msgstr "SPU 루프 감지"
 
 #. TRANSLATION: rpcs3
-#, fuzzy
 msgctxt "game_options"
 msgid "SPU XFloat Accuracy"
 msgstr "SPU X플로트 정확도"
@@ -13887,38 +13856,37 @@ msgstr "STE"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "STEERING SENSITIVITY"
-msgstr ""
+msgstr "조향 민감도"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "STRETCH BEZELS (4K & ULTRAWIDE)"
-msgstr "베젤 늘이기 (4K & 울트라 와이드)"
+msgstr "베젤 늘리기 (4K & 울트라 와이드)"
 
 #. TRANSLATION: duckstation, scummvm
 msgctxt "game_options"
 msgid "STRETCH MODE"
-msgstr ""
+msgstr "늘리기 모드"
 
 #. TRANSLATION: rpcs3
-#, fuzzy
 msgctxt "game_options"
 msgid "STRETCH TO DISPLAY AREA"
-msgstr "표시 영역으로 늘이기"
+msgstr "표시 영역에 맞게 늘리기"
 
 #. TRANSLATION: devilutionx, duckstation
 msgctxt "game_options"
 msgid "STRETCH TO FILL"
-msgstr ""
+msgstr "채우기 위해 늘리기"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "STRICT RENDERING MODE"
-msgstr ""
+msgstr "엄격한 렌더링 모드"
 
 #. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "SUBTITLES"
-msgstr ""
+msgstr "자막"
 
 #. TRANSLATION: libretro/mesens, libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -13936,13 +13904,11 @@ msgid "SUPER GAME BOY MODEL"
 msgstr ""
 
 #. TRANSLATION: libretro/mgba, libretro/mgba, libretro/vba-m, libretro/vba-m
-#, fuzzy
 msgctxt "game_options"
 msgid "SUPER GB BORDERS"
 msgstr "슈퍼 GB 테두리"
 
 #. TRANSLATION: libretro/vice_xpet
-#, fuzzy
 msgctxt "game_options"
 msgid "SUPERPET"
 msgstr "슈퍼펫"
@@ -13968,7 +13934,6 @@ msgid "SWAP GAMEPADS"
 msgstr "게임패드 교체"
 
 #. TRANSLATION: libretro/doublecherrygb, libretro/tgbdual
-#, fuzzy
 msgctxt "game_options"
 msgid "SYNC SAVE FILES"
 msgstr "저장 파일 동기화"
@@ -13976,7 +13941,7 @@ msgstr "저장 파일 동기화"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "SYNC TO HOST REFRESH RATE"
-msgstr ""
+msgstr "호스트 새로 고침 빈도와 동기화"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
@@ -13991,7 +13956,7 @@ msgstr "시스템 컨트롤러"
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "SYSTEM MEMORY"
-msgstr ""
+msgstr "시스템 메모리"
 
 #. TRANSLATION: libretro/geolith
 msgctxt "game_options"
@@ -14055,7 +14020,6 @@ msgid "Scale4x"
 msgstr ""
 
 #. TRANSLATION: suyu
-#, fuzzy
 msgctxt "game_options"
 msgid "ScaleForce"
 msgstr "스케일포스"
@@ -14068,7 +14032,7 @@ msgstr ""
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Scanline Interpolation Filter (SAI)"
-msgstr ""
+msgstr "스캔라인 보간 필터 (SAI)"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -14078,23 +14042,22 @@ msgstr "스콜피온 256K"
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Screen Resolution (Default)"
-msgstr ""
+msgstr "화면 해상도 (기본)"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
-msgstr ""
+msgstr "화면 기울기 (°)"
 
 #. TRANSLATION: doom3.dhewm3.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, ...
 msgctxt "keys_files"
 msgid "Screenshot"
-msgstr ""
+msgstr "스크린샷"
 
 #. TRANSLATION: dolphin, dolphin_triforce
-#, fuzzy
 msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
-msgstr "사용자 지정 구성된 조이스틱 프로파일을 검색합니다."
+msgstr "커스텀 구성된 조이스틱 프로파일을 검색합니다."
 
 #. TRANSLATION: hurrican
 msgctxt "game_options"
@@ -14107,6 +14070,9 @@ msgid ""
 "Seconds a texture should be unused to be considered old enough to be deleted "
 "if texture memory usage exceeds Soft Texture Cache limit."
 msgstr ""
+"텍스처 메모리 사용량이 소프트 텍스처 캐시 한도를 초과하는 경우, 텍스처가 삭제"
+"될 만큼 오래된 것으로 간주되려면 몇 초 동안 텍스처가 사용되지 않아야 하는지"
+"가 중요합니다."
 
 #. TRANSLATION: hurrican
 msgctxt "game_options"
@@ -14127,7 +14093,7 @@ msgstr "세가/메가 CD"
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Select"
-msgstr ""
+msgstr "선택"
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
@@ -14248,10 +14214,9 @@ msgid "Select the model of Colour Computer to emulate"
 msgstr ""
 
 #. TRANSLATION: libretro/np2kai
-#, fuzzy
 msgctxt "game_options"
 msgid "Select the processor model."
-msgstr "프로세서 모델을 선택합니다."
+msgstr "프로세서 모델을 선택하세요."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -14274,7 +14239,6 @@ msgid "Select which scaler is used to scale up the resolution."
 msgstr ""
 
 #. TRANSLATION: libretro/mrboom
-#, fuzzy
 msgctxt "game_options"
 msgid "Selfie"
 msgstr "셀카"
@@ -14292,7 +14256,7 @@ msgstr "9월"
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Serbian"
-msgstr ""
+msgstr "세르비아어"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -14302,7 +14266,7 @@ msgstr ""
 #. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys
 msgctxt "keys_files"
 msgid "Service menu"
-msgstr ""
+msgstr "서비스 메뉴"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -14730,6 +14694,8 @@ msgid ""
 "Skips Vertical Blank Interrupts when lag is detected, allowing for smooth "
 "audio playback when emulation speed is not 100%."
 msgstr ""
+"지연이 감지되면 수직 공백 인터럽트를 건너뛰어 에뮬레이션 속도가 100%가 아닐 "
+"때에도 원활한 오디오 재생이 가능합니다."
 
 #. TRANSLATION: sm64
 msgctxt "game_options"
@@ -14737,7 +14703,6 @@ msgid "Skips the Peach and Castle intro when starting a new game."
 msgstr ""
 
 #. TRANSLATION: libretro/mrboom
-#, fuzzy
 msgctxt "game_options"
 msgid "Skynet"
 msgstr "스카이넷"
@@ -14745,12 +14710,12 @@ msgstr "스카이넷"
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Slot +"
-msgstr ""
+msgstr "슬롯 +"
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Slot -"
-msgstr ""
+msgstr "슬롯 -"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -14780,7 +14745,7 @@ msgstr "슬롯 E"
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Slovak"
-msgstr ""
+msgstr "슬로바키아어"
 
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
@@ -14795,57 +14760,54 @@ msgstr "슬로베니아"
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Slovenian"
-msgstr ""
+msgstr "슬로베니아어"
 
 #. TRANSLATION: libretro/px68k, libretro/quasi88
-#, fuzzy
 msgctxt "game_options"
 msgid "Slow down or speed up games as appropriate."
 msgstr "적절하게 게임 속도를 늦추거나 높입니다."
 
 #. TRANSLATION: libretro/mednafen_psx
-#, fuzzy
 msgctxt "game_options"
 msgid "Small performance increase (may drop frames)."
-msgstr "약간의 성능 향상(프레임이 떨어질 수 있음)."
+msgstr "약간의 성능 향상 (프레임이 떨어질 수 있음)."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "Smaller"
-msgstr ""
+msgstr "더 작음"
 
 #. TRANSLATION: dxx-rebirth
 msgctxt "game_options"
 msgid "Smooth"
-msgstr ""
+msgstr "부드러움"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Smooth (Linear)"
-msgstr "스무스(선형)"
+msgstr "부드러움 (선형)"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "Smooth 1"
-msgstr "스무스 1"
+msgstr "부드러움 1"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "Smooth 2"
-msgstr "스무스 2"
+msgstr "부드러움 2"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "Smooth 3"
-msgstr "스무스 3"
+msgstr "부드러움 3"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "Smooth 4"
-msgstr "스무스 4"
+msgstr "부드러움 4"
 
 #. TRANSLATION: dxx-rebirth, libretro/mupen64plus-next, libretro/parallel_n64, ppsspp, suyu
-#, fuzzy
 msgctxt "game_options"
 msgid "Smooth textures on 3D objects."
 msgstr "3D 개체의 부드러운 텍스처."
@@ -14856,10 +14818,9 @@ msgid "Smooth textures on distant 3D objects based on angle."
 msgstr "각도에 따라 멀리 떨어진 3D 개체의 부드러운 텍스처."
 
 #. TRANSLATION: model2emu
-#, fuzzy
 msgctxt "game_options"
 msgid "Smooth textures."
-msgstr "부드러운 질감."
+msgstr "부드러운 텍스처."
 
 #. TRANSLATION: libretro/desmume
 msgctxt "game_options"
@@ -14872,6 +14833,7 @@ msgid ""
 "Smooths the overall picture as it is displayed on the screen. Corrects "
 "positioning between pixels."
 msgstr ""
+"화면에 표시되는 전체 그림을 부드럽게 합니다. 픽셀 간의 위치를 ​​수정합니다."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -14884,7 +14846,6 @@ msgid "Snow"
 msgstr "눈"
 
 #. TRANSLATION: libretro/o2em
-#, fuzzy
 msgctxt "game_options"
 msgid "Soften the hash sound effect from some games."
 msgstr "일부 게임의 해시 사운드 효과를 부드럽게합니다."
@@ -14904,7 +14865,6 @@ msgstr ""
 "원합니다."
 
 #. TRANSLATION: libretro/o2em
-#, fuzzy
 msgctxt "game_options"
 msgid "Some games accept input from port 2 instead of port 1."
 msgstr "일부 게임은 포트 1 대신 포트 2의 입력을 허용합니다."
@@ -14915,7 +14875,6 @@ msgid "Some games and homebrews require more RAM"
 msgstr "일부 게임과 홈브류에는 더 많은 램이 필요함"
 
 #. TRANSLATION: pcsx2
-#, fuzzy
 msgctxt "game_options"
 msgid "Some games have issues when the animation is shown, others require it."
 msgstr ""
@@ -14923,22 +14882,19 @@ msgstr ""
 "니다."
 
 #. TRANSLATION: libretro/np2kai
-#, fuzzy
 msgctxt "game_options"
 msgid "Some games rely on this (Apros)."
 msgstr "일부 게임은 이것에 의존합니다 (Apros)."
 
 #. TRANSLATION: soniccd
-#, fuzzy
 msgctxt "game_options"
 msgid "Sonic 2 (tap jump)"
 msgstr "소닉 2 (탭 점프)"
 
 #. TRANSLATION: soniccd
-#, fuzzy
 msgctxt "game_options"
 msgid "Sonic CD (hold jump)"
-msgstr "소닉 CD (홀드 점프)"
+msgstr "소닉 CD (점프 홀드)"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -14948,7 +14904,7 @@ msgstr "소니 CXA2025AS"
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "Sony DS"
-msgstr ""
+msgstr "소니 DS"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -15122,10 +15078,9 @@ msgstr "정사각형 픽셀"
 #. TRANSLATION: pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Standard (4:3)"
-msgstr ""
+msgstr "표준 (4:3)"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-#, fuzzy
 msgctxt "game_options"
 msgid "Standard Controller"
 msgstr "표준 컨트롤러"
@@ -15133,12 +15088,12 @@ msgstr "표준 컨트롤러"
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "Standard OpenGL (Default)"
-msgstr ""
+msgstr "표준 OpenGL (기본)"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Start / Valid"
-msgstr ""
+msgstr "시작 / 유효"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -15153,7 +15108,7 @@ msgstr ""
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Start game"
-msgstr ""
+msgstr "게임 시작"
 
 #. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -15166,19 +15121,16 @@ msgid "State/Save to Selected Slot"
 msgstr ""
 
 #. TRANSLATION: rpcs3
-#, fuzzy
 msgctxt "game_options"
 msgid "Static Interpreter"
-msgstr "정적 인터프리터"
+msgstr "정적 해석기"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
-#, fuzzy
 msgctxt "game_options"
 msgid "Steering Wheel"
-msgstr "핸들"
+msgstr "스티어링 핸들"
 
 #. TRANSLATION: rpcs3, suyu
-#, fuzzy
 msgctxt "game_options"
 msgid "Stereo"
 msgstr "스테레오"
@@ -15206,12 +15158,12 @@ msgstr ""
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Strafe left"
-msgstr ""
+msgstr "왼쪽으로 폭격"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Strafe right"
-msgstr ""
+msgstr "오른쪽으로 폭격"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -15221,7 +15173,6 @@ msgid ""
 msgstr ""
 
 #. TRANSLATION: moonlight
-#, fuzzy
 msgctxt "game_options"
 msgid ""
 "Streaming Optimal Playable Settings, overrides other settings if enabled."
@@ -15234,33 +15185,29 @@ msgid "Stretch"
 msgstr "늘리기"
 
 #. TRANSLATION: openbor
-#, fuzzy
 msgctxt "game_options"
 msgid "Stretch games to full-screen, but may distort the aspect ratio"
-msgstr "게임을 전체 화면으로 늘이지만 종횡비가 왜곡될 수 있음"
+msgstr "게임을 전체 화면으로 늘리지만 화면비가 왜곡될 수 있음"
 
 #. TRANSLATION: ryujinx
-#, fuzzy
 msgctxt "game_options"
 msgid "Stretch to fit window"
-msgstr "창에 맞게 늘이기"
+msgstr "창에 맞게 늘리기"
 
 #. TRANSLATION: xemu
-#, fuzzy
 msgctxt "game_options"
 msgid "Stretch to full"
-msgstr "완전히 스트레칭"
+msgstr "전체 늘리기"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Stretch to screen"
-msgstr ""
+msgstr "화면에 맞게 늘이기"
 
 #. TRANSLATION: dolphin, dolphin_triforce, suyu
-#, fuzzy
 msgctxt "game_options"
 msgid "Stretch to window"
-msgstr "창으로 늘이기"
+msgstr "창에 맞게 늘리기"
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
@@ -15270,7 +15217,7 @@ msgstr ""
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Stretches the output to fill the display area."
-msgstr ""
+msgstr "출력을 늘려 디스플레이 영역을 채웁니다."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -15305,7 +15252,6 @@ msgid "Super Game Boy PAL"
 msgstr ""
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
-#, fuzzy
 msgctxt "game_options"
 msgid "Super Scope"
 msgstr "슈퍼 스코프"
@@ -15313,10 +15259,9 @@ msgstr "슈퍼 스코프"
 #. TRANSLATION: libretro/vice_xvic
 msgctxt "game_options"
 msgid "Super VIC (+16K) NTSC"
-msgstr "Super VIC (+16K) NTSC"
+msgstr "슈퍼 VIC (+16K) NTSC"
 
 #. TRANSLATION: amiberry
-#, fuzzy
 msgctxt "game_options"
 msgid "Super high"
 msgstr "슈퍼 하이"
@@ -15329,12 +15274,12 @@ msgstr "최대 1440p"
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "SuperEagle"
-msgstr ""
+msgstr "슈퍼이글"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "SuperSAI"
-msgstr ""
+msgstr "슈퍼SAI"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -15342,6 +15287,7 @@ msgid ""
 "Supports uncapped frame rates, analog controllers, and mouse look "
 "functionality."
 msgstr ""
+"제한 없는 프레임 속도, 아날로그 컨트롤러 및 마우스 모양 기능을 지원합니다."
 
 #. TRANSLATION: cemu, suyu
 msgctxt "game_options"
@@ -15369,7 +15315,6 @@ msgid "Swap screens"
 msgstr "화면 교체"
 
 #. TRANSLATION: melonds
-#, fuzzy
 msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr "듀얼 디스플레이의 위치를 바꿉니다."
@@ -15382,28 +15327,27 @@ msgstr "스웨덴"
 #. TRANSLATION: etlegacy, scummvm, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Swedish"
-msgstr ""
+msgstr "스웨덴어"
 
 #. TRANSLATION: hatari, libretro/hatarib
-#, fuzzy
 msgctxt "game_options"
 msgid "Swedish (se)"
-msgstr "스웨덴어(se)"
+msgstr "스웨덴어 (se)"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Swiss French (ch)"
-msgstr ""
+msgstr "스위스 프랑스어 (ch)"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Swiss German (ch)"
-msgstr ""
+msgstr "스위스 독일어 (ch)"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Switches the game to multiplayer mode."
-msgstr ""
+msgstr "게임을 멀티플레이어 모드로 전환합니다."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15421,7 +15365,6 @@ msgid "Switzerland (German)"
 msgstr "스위스 (독일어)"
 
 #. TRANSLATION: libretro/doublecherrygb, libretro/tgbdual
-#, fuzzy
 msgctxt "game_options"
 msgid ""
 "Sync GB2Player/GBC2Player saves with saves in \"saves/gb\" or \"saves/gbc\"."
@@ -15469,10 +15412,9 @@ msgid "System 7.5.5 (Hard Drive)"
 msgstr "시스템 7.5.5 (하드 드라이브)"
 
 #. TRANSLATION: duckstation
-#, fuzzy
 msgctxt "game_options"
 msgid "System requirements at native; (RAM|VRAM)."
-msgstr "네이티브의 시스템 요구 사항; (램| VRAM)을 참조하십시오."
+msgstr "원본 시스템 요구 사항; (램|V램)."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -15492,19 +15434,17 @@ msgstr ""
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "TEMPEST 2000"
-msgstr ""
+msgstr "템페스트 2000"
 
 #. TRANSLATION: easyrpg
-#, fuzzy
 msgctxt "game_options"
 msgid "TEST PLAY"
 msgstr "테스트 플레이"
 
 #. TRANSLATION: ppsspp
-#, fuzzy
 msgctxt "game_options"
 msgid "TEXTURE DEPOSTERIZE"
-msgstr "텍스처 디포스터화"
+msgstr "텍스처 색조융합"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -15517,7 +15457,6 @@ msgid "TEXTURE FILTERING"
 msgstr "텍스처 필터링"
 
 #. TRANSLATION: libretro/mupen64plus-next
-#, fuzzy
 msgctxt "game_options"
 msgid "TEXTURE FILTERING MODE"
 msgstr "텍스처 필터링 모드"
@@ -15525,7 +15464,7 @@ msgstr "텍스처 필터링 모드"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "TEXTURE MEMORY SCALE SIZE"
-msgstr ""
+msgstr "텍스처 메모리 스케일 크기"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, mupen64plus
 msgctxt "game_options"
@@ -15535,12 +15474,12 @@ msgstr "텍스처 밉 매핑 (흐림)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "TEXTURE PRELOADING"
-msgstr ""
+msgstr "텍스처 사전 로딩"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "TEXTURE REPLACEMENTS"
-msgstr ""
+msgstr "텍스처 교체"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -15553,16 +15492,14 @@ msgid "TEXTURE SMOOTHING"
 msgstr "텍스처 스무딩"
 
 #. TRANSLATION: libretro/mupen64plus-next
-#, fuzzy
 msgctxt "game_options"
 msgid "TEXTURE UPSCALING"
 msgstr "텍스처 업스케일링"
 
 #. TRANSLATION: mupen64plus
-#, fuzzy
 msgctxt "game_options"
 msgid "TEXTURE UPSCALING (RICE ONLY)"
-msgstr "텍스처 업 스케일링 (쌀 만 해당)"
+msgstr "텍스처 업스케일링 (RICE 전용)"
 
 #. TRANSLATION: libretro/desmume, libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
@@ -15570,25 +15507,21 @@ msgid "TEXTURE UPSCALING (XBRZ)"
 msgstr "텍스처 업스케일링 (XBRZ)"
 
 #. TRANSLATION: ppsspp
-#, fuzzy
 msgctxt "game_options"
 msgid "TEXTURE UPSCALING LEVEL"
 msgstr "텍스처 업스케일링 수준"
 
 #. TRANSLATION: ppsspp
-#, fuzzy
 msgctxt "game_options"
 msgid "TEXTURE UPSCALING TYPE"
-msgstr "텍스처 업 스케일링 타입"
+msgstr "텍스처 업 스케일링 유형"
 
 #. TRANSLATION: drastic
-#, fuzzy
 msgctxt "game_options"
 msgid "THREADED 3D"
 msgstr "스레드 3D"
 
 #. TRANSLATION: duckstation
-#, fuzzy
 msgctxt "game_options"
 msgid "THREADED PRESENTATION"
 msgstr "스레드 프레젠테이션"
@@ -15606,12 +15539,12 @@ msgstr "TI-99 / 4A 카트리지"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "TIME CRISIS FOG HACK"
-msgstr ""
+msgstr "타임 크라이시스 안개 해킹"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "TIME STRETCHING THRESHOLD"
-msgstr ""
+msgstr "시간 늘리기 임계값"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -15645,21 +15578,19 @@ msgid "TOUCH SCREEN MODE"
 msgstr "터치 스크린 모드"
 
 #. TRANSLATION: libretro/xrick
-#, fuzzy
 msgctxt "game_options"
 msgid "TRAINER MODE"
 msgstr "트레이너 모드"
 
 #. TRANSLATION: model2emu, pcsx2
-#, fuzzy
 msgctxt "game_options"
 msgid "TRILINEAR FILTERING"
-msgstr "삼선형 필터링"
+msgstr "삼중선형 필터링"
 
 #. TRANSLATION: sonicmania
 msgctxt "game_options"
 msgid "TRIPLE BUFFERING"
-msgstr ""
+msgstr "트리플 버퍼링"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -15669,7 +15600,7 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "TRUE COLOUR RENDERING"
-msgstr ""
+msgstr "트루 컬러 렌더링"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -15712,7 +15643,6 @@ msgid "TWB64 - Pack 2"
 msgstr "TWB64 - 팩 2"
 
 #. TRANSLATION: ryujinx, suyu, xenia, xenia-canary
-#, fuzzy
 msgctxt "game_options"
 msgid "Taiwan"
 msgstr "대만"
@@ -15730,7 +15660,7 @@ msgstr ""
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Take a screenshot"
-msgstr ""
+msgstr "스크린샷 찍기"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -15793,10 +15723,9 @@ msgid "Thailand"
 msgstr ""
 
 #. TRANSLATION: citra
-#, fuzzy
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
-msgstr "새로운 3DS에는 더 빠른 프로세서, ZL / ZR 버튼 및 C- 스틱이 있습니다."
+msgstr "새로운 3DS에는 더 빠른 프로세서, ZL / ZR 버튼, C 스틱이 있습니다."
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
@@ -15804,6 +15733,8 @@ msgid ""
 "The area around the joystick's neutral position where input is ignored. Can "
 "help reduce unintended inputs."
 msgstr ""
+"조이스틱의 중립 위치 주변에서 입력이 무시되는 영역입니다. 의도치 않은 입력을 "
+"줄이는 데 도움이 될 수 있습니다."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -15816,7 +15747,6 @@ msgid "The emulated graphics card."
 msgstr "에뮬레이트된 그래픽 카드입니다."
 
 #. TRANSLATION: dolphin, dolphin_triforce
-#, fuzzy
 msgctxt "game_options"
 msgid "The final output image, unrelated to the Wii's emulated NAND setting."
 msgstr "Wii의 에뮬레이트된 NAND 설정과 관련이 없는 최종 출력 이미지입니다."
@@ -15827,11 +15757,13 @@ msgid ""
 "The higher the setting, the more blending is emulated in the shader "
 "accurately, and the higher the speed penalty will be."
 msgstr ""
+"설정이 높을수록 셰이더에서 블렌딩이 더 정확하게 에뮬레이션되고 속도 저하가 "
+"더 커집니다."
 
 #. TRANSLATION: vita3k
 msgctxt "game_options"
 msgid "The image will be softer which could help with aliasing."
-msgstr ""
+msgstr "이미지가 부드러워져 에일리어싱을 해결하는 데 도움이 될 수 있습니다."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -15849,6 +15781,8 @@ msgid ""
 "The sample count of every tile will be incremented on every EVENT_WRITE_ZPD "
 "by this number. Setting this to 0 means everything is reported as occluded."
 msgstr ""
+"모든 타일의 샘플 카운트는 EVENT_WRITE_ZPD마다 이 숫자만큼 증가합니다. 이것을 "
+"0으로 설정하면 모든 것이 가려진 것으로 보고됩니다."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -15856,7 +15790,6 @@ msgid "The theme colour of the emulated console."
 msgstr "에뮬레이션된 콘솔의 테마 색상입니다."
 
 #. TRANSLATION: ppsspp
-#, fuzzy
 msgctxt "game_options"
 msgid "The upscaling method used when enabled."
 msgstr "사용하도록 설정된 경우 사용되는 업스케일링 방법입니다."
@@ -15864,7 +15797,7 @@ msgstr "사용하도록 설정된 경우 사용되는 업스케일링 방법입�
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "This can be convenient if you're using laserdiscs."
-msgstr ""
+msgstr "레이저디스크를 사용하는 경우 편리할 수 있습니다."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15872,9 +15805,10 @@ msgid ""
 "This option enables the ability to play Xbox Live Arcade games. May cause "
 "compatibility issues with non-XBLA games."
 msgstr ""
+"이 옵션은 엑스박스 라이브 아케이드 게임을 플레이할 수 있는 기능을 제공합니"
+"다. XBLA가 아닌 게임과 호환성 문제가 발생할 수 있습니다."
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
-#, fuzzy
 msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr "이 옵션은 마우스로 플레이할 때 일부 총기 게임에 필요합니다."
@@ -15885,6 +15819,7 @@ msgid ""
 "This should not be necessary, unless you are not using the default pad2key "
 "mapping."
 msgstr ""
+"기본 패드투키 매핑을 사용하지 않는 경우가 아니면 이 작업은 필요하지 않습니다."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -15894,7 +15829,7 @@ msgstr "타이거 Game.com 카트리지"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Time Stretch (Tempo Change, Best Sound)"
-msgstr ""
+msgstr "시간 늘리기 (템포 변경, 베스트 사운드)"
 
 #. TRANSLATION: libretro/fuse, libretro/fuse
 msgctxt "game_options"
@@ -15919,19 +15854,17 @@ msgstr "타이멕스 TS2068"
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "TinyALSA"
-msgstr ""
+msgstr "TinyALSA (아주 작은 오디오 리눅스 사운드 아키텍처)"
 
 #. TRANSLATION: libretro/np2kai
-#, fuzzy
 msgctxt "game_options"
 msgid "To have music and not only sound in games (Owl-Zoo)."
-msgstr "게임에서 소리뿐만 아니라 음악을 갖기 위해 (Owl-Zoo)."
+msgstr "게임에서 사운드뿐만 아니라 음악도 즐길 수 있게 해주세요(Owl-Zoo)."
 
 #. TRANSLATION: dolphin
-#, fuzzy
 msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
-msgstr "게임 치트 또는 16/9 종횡비 수정 코드를 사용합니다."
+msgstr "게임 치트나 16/9 화면비 수정 코드를 사용하세요."
 
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
@@ -15941,22 +15874,22 @@ msgstr ""
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Screen Layout"
-msgstr ""
+msgstr "화면 레이아웃 전환"
 
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
-msgstr ""
+msgstr "속도 제한 전환"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
-msgstr ""
+msgstr "실행 전환"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle weapon"
-msgstr ""
+msgstr "무기 전환"
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -15964,10 +15897,9 @@ msgid "Toggle with hotkey + D-pad up or Scroll Lock in-game."
 msgstr "게임 내에서 단축키 + 십자 패드 위쪽 또는 스크롤 잠금으로 전환합니다."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
-#, fuzzy
 msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
-msgstr "Tomy Tutor & Pyuuta 카트리지"
+msgstr "토미 튜터 & 퓨타 카트리지"
 
 #. TRANSLATION: dolphin, dolphin
 msgctxt "game_options"
@@ -16052,12 +15984,12 @@ msgstr ""
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Trilinear (Forced)"
-msgstr ""
+msgstr "삼중선형 (강제)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Trilinear (PS2)"
-msgstr ""
+msgstr "삼중선형 (PS2)"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -16067,12 +15999,12 @@ msgstr ""
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Triple buffering"
-msgstr "삼중 버퍼링"
+msgstr "트리플 버퍼링"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "True Colour"
-msgstr ""
+msgstr "트루 컬러"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -16092,7 +16024,7 @@ msgstr "튀르키예어"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Turkish (tr)"
-msgstr ""
+msgstr "튀르키예어 (tr)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -16233,7 +16165,7 @@ msgstr "펌웨어 설정 사용"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "USE JOYPAD SOUTH BUTTON TO ADD CREDIT"
-msgstr ""
+msgstr "조이패드 아래쪽 버튼을 사용하여 크레딧을 추가하세요"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -16243,10 +16175,9 @@ msgstr "라이트 건 사용"
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "USE NEW GRAPHICS"
-msgstr ""
+msgstr "새 그래픽 사용"
 
 #. TRANSLATION: dolphin, dolphin_triforce
-#, fuzzy
 msgctxt "game_options"
 msgid "USE PAD PROFILES"
 msgstr "패드 프로파일 사용"
@@ -16429,7 +16360,7 @@ msgstr ""
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Ukrainian"
-msgstr ""
+msgstr "우크라이나어"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -16490,6 +16421,11 @@ msgstr "크기 조정 안 함 (기본)"
 msgctxt "game_options"
 msgid "Until Timeout"
 msgstr "시간 초과까지"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Up"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -16555,12 +16491,11 @@ msgid "Use Host"
 msgstr "호스트 사용"
 
 #. TRANSLATION: supermodel
-#, fuzzy
 msgctxt "game_options"
 msgid ""
 "Use L2/R2 for Accel/Brake and L1/R1 or R-stick Up/Down for Shift Up/Down."
 msgstr ""
-"가속/브레이크에는 L2/R2를 사용하고 변속 위/아래에는 L1/R1 또는 R-스틱 위/아래"
+"가속/브레이크에는 L2/R2를 사용하고 변속 위/아래에는 L1/R1 또는 R 스틱 위/아래"
 "를 사용합니다."
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
@@ -16583,6 +16518,8 @@ msgid ""
 "Use SSAA instead of MSAA for anti-aliasing. SSAA may look better but has a "
 "higher performance cost."
 msgstr ""
+"안티에일리어싱을 위해 MSAA 대신 SSAA를 사용합니다. SSAA는 보기에는 더 좋지만 "
+"성능 비용이 더 높습니다."
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi
 msgctxt "game_options"
@@ -16600,7 +16537,6 @@ msgid "Use controller settings manually defined in custom.ini."
 msgstr "수동으로 정의한 custom.ini에서 컨트롤러 설정을 사용합니다."
 
 #. TRANSLATION: model2emu
-#, fuzzy
 msgctxt "game_options"
 msgid ""
 "Use if you're having graphical issues or GPU problems with this emulator."
@@ -16619,10 +16555,9 @@ msgstr "라이트 건이 연결되어 있는 경우 패드 대신 라이트 건�
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "Use new graphics created from CorsixTH project"
-msgstr ""
+msgstr "CorsixTH 프로젝트에서 생성된 새로운 그래픽을 사용하세요"
 
 #. TRANSLATION: libretro/neocd
-#, fuzzy
 msgctxt "game_options"
 msgid "Use one save file per game."
 msgstr "게임당 하나의 저장 파일을 사용합니다."
@@ -16660,7 +16595,6 @@ msgstr ""
 "로 플레이할 수 있습니다."
 
 #. TRANSLATION: libretro/scummvm
-#, fuzzy
 msgctxt "game_options"
 msgid "Use to eliminate cursor drift/unwanted input."
 msgstr "커서 드리프트/원치 않는 입력을 제거하는 데 사용합니다."
@@ -16670,6 +16604,8 @@ msgctxt "game_options"
 msgid ""
 "Use to eliminate joystick drift/unwanted input. Effects all controllers."
 msgstr ""
+"조이스틱 드리프트/원치 않는 입력을 제거하는 데 사용합니다. 모든 컨트롤러에 영"
+"향을 미칩니다."
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
@@ -16677,6 +16613,8 @@ msgid ""
 "Use to make joystick movement more or less sensitive. Effects all "
 "controllers."
 msgstr ""
+"조이스틱 움직임을 더 민감하게 또는 덜 민감하게 만드는 데 사용합니다. 모든 컨"
+"트롤러에 영향을 미칩니다."
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
@@ -16701,7 +16639,7 @@ msgstr ""
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "Useful for N64 style controllers."
-msgstr ""
+msgstr "N64 스타일 컨트롤러에 유용합니다."
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
@@ -16709,6 +16647,8 @@ msgid ""
 "Useful for N64 style controllers. Limited hotkeys for controllers without "
 "dedicated hotkey."
 msgstr ""
+"N64 스타일 컨트롤러에 유용합니다. 전용 단축키가 없는 컨트롤러의 경우 단축키"
+"가 제한적입니다."
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
 msgctxt "game_options"
@@ -16724,6 +16664,7 @@ msgstr ""
 msgctxt "game_options"
 msgid "Useful to troubleshoot when your Windows game won't start of crashes."
 msgstr ""
+"윈도우 게임이 시작되지 않거나 충돌이 발생할 때 문제를 해결하는 데 유용합니다."
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
@@ -16764,7 +16705,7 @@ msgstr "VB - 가상 소년"
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "VBI SKIP"
-msgstr ""
+msgstr "VBI 건너뛰기"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -16870,14 +16811,14 @@ msgstr "비디오 스트림 해상도"
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "VIEW ONLY"
-msgstr ""
+msgstr "보기 전용"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "VIOLENCE LEVEL"
-msgstr ""
+msgstr "폭력 수준"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr "가상 데스크톱"
@@ -16885,7 +16826,7 @@ msgstr "가상 데스크톱"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "VISUAL NUDGE STRENGTH"
-msgstr ""
+msgstr "시각적 찌르기 강도"
 
 #. TRANSLATION: bigpemu, cemu, citra, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
@@ -16910,16 +16851,14 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "VSync and Audio Resampling need to be enabled."
-msgstr ""
+msgstr "수직동기화 및 오디오 리샘플링을 활성화해야 합니다."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
-#, fuzzy
 msgctxt "game_options"
 msgid "VTech V.Smile Motion cartridges"
 msgstr "VTech V.스마일 모션 카트리지"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
-#, fuzzy
 msgctxt "game_options"
 msgid "VTech V.Smile cartridges"
 msgstr "VTech V.스마일 카트리지"
@@ -16954,7 +16893,7 @@ msgstr "수직 (세로)"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Vertical Sync"
-msgstr ""
+msgstr "수직 동기화"
 
 #. TRANSLATION: libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus
 msgctxt "game_options"
@@ -16994,12 +16933,12 @@ msgstr ""
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Virtual"
-msgstr ""
+msgstr "가상"
 
 #. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
 msgctxt "keys_files"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "가상 키보드"
 
 #. TRANSLATION: hurrican
 msgctxt "game_options"
@@ -17029,7 +16968,7 @@ msgstr "W-SU"
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "WAN"
-msgstr ""
+msgstr "WAN"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -17110,12 +17049,12 @@ msgstr "창 위치"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "WINE RUNNER"
-msgstr ""
+msgstr "WINE 런너"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "WOLFENSTEIN 3D"
-msgstr ""
+msgstr "울펜슈타인 3D"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -17270,10 +17209,9 @@ msgid "Wimpy"
 msgstr "Wimpy"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
-#, fuzzy
 msgctxt "game_options"
 msgid "Works with 'Cycle-exact' mode and for a few games."
-msgstr "'사이클 정확'모드 및 몇 가지 게임에서 작동합니다."
+msgstr "'주기 정확' 모드 및 몇 가지 게임에서 작동합니다."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -17286,7 +17224,6 @@ msgid "X"
 msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next
-#, fuzzy
 msgctxt "game_options"
 msgid "X2"
 msgstr "X2"
@@ -17334,12 +17271,12 @@ msgstr ""
 #. TRANSLATION: vita3k
 msgctxt "game_options"
 msgid "You can hide the pointer on touchscreen devices."
-msgstr ""
+msgstr "터치스크린 장치에서 포인터를 숨길 수 있습니다."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ZCULL ACCURACY"
-msgstr ""
+msgstr "ZCULL 정확도"
 
 #. TRANSLATION: libretro/bluemsx, libretro/fuse, vice
 msgctxt "game_options"
@@ -17377,7 +17314,6 @@ msgid "Zoom the camera out"
 msgstr "카메라 축소"
 
 #. TRANSLATION: libretro/o2em, libretro/picodrive
-#, fuzzy
 msgctxt "game_options"
 msgid "Zooms in to hide black borders."
 msgstr "확대하여 검은색 테두리를 숨깁니다."
@@ -17505,62 +17441,56 @@ msgstr "게임 나가기"
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "fire primary"
-msgstr ""
+msgstr "기본 발사"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "fire secondary"
-msgstr ""
+msgstr "보조 발사"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "flare"
-msgstr ""
+msgstr "불꽃"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
 msgid "gba sp"
-msgstr "gba sp"
+msgstr "게임보이 어드밴스 스페셜"
 
 #. TRANSLATION: libretro/vice_xpet
-#, fuzzy
 msgctxt "game_options"
 msgid "green"
-msgstr "녹색"
+msgstr "초록색"
 
 #. TRANSLATION: libretro/vba-m
-#, fuzzy
 msgctxt "game_options"
 msgid "green forest"
 msgstr "푸른 숲"
 
 #. TRANSLATION: libretro/vb
-#, fuzzy
 msgctxt "game_options"
 msgid "green/magenta"
-msgstr "녹색/마젠타"
+msgstr "초록색/자홍색"
 
 #. TRANSLATION: moonlight
-#, fuzzy
 msgctxt "game_options"
 msgid "h264 (less latency)"
-msgstr "H264(대기 시간 단축)"
+msgstr "h264 (대기 시간 단축)"
 
 #. TRANSLATION: moonlight
-#, fuzzy
 msgctxt "game_options"
 msgid "h265 (HEVC) (higher quality at lower bitrates)"
-msgstr "h265(HEVC)(낮은 비트 전송률에서 더 높은 품질)"
+msgstr "h265 (HEVC:고효율 비디오 코딩) (낮은 비트 전송률에서 더 높은 품질)"
 
 #. TRANSLATION: moonlight
-#, fuzzy
 msgctxt "game_options"
 msgid ""
 "h265 (HEVC) is CPU heavy and increases latency, but is more bandwidth "
 "efficient."
 msgstr ""
-"h265(HEVC)는 CPU를 많이 사용하고 대기 시간을 늘리지만 대역폭 효율성이 더 높습"
-"니다."
+"h265 (HEVC:고효율 비디오 코딩)는 CPU를 많이 사용하고 대기 시간을 늘리지만 대"
+"역폭 효율성이 더 높습니다."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -17570,10 +17500,9 @@ msgstr "숨김"
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "homing missile"
-msgstr ""
+msgstr "추적 미사일"
 
 #. TRANSLATION: libretro/vba-m
-#, fuzzy
 msgctxt "game_options"
 msgid "hot desert"
 msgstr "뜨거운 사막"
@@ -17609,16 +17538,14 @@ msgid "hybrid/top"
 msgstr "하이브리드/상단"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
-#, fuzzy
 msgctxt "game_options"
 msgid "large"
 msgstr "큰"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
-#, fuzzy
 msgctxt "game_options"
 msgid "larger"
-msgstr "큰"
+msgstr "더 큰"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
@@ -17638,12 +17565,12 @@ msgstr "선형"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "lottes crt"
-msgstr ""
+msgstr "로테 CRT"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "map"
-msgstr ""
+msgstr "맵"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
@@ -17651,7 +17578,6 @@ msgid "maximum"
 msgstr "최대"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
-#, fuzzy
 msgctxt "game_options"
 msgid "medium"
 msgstr "보통"
@@ -17667,13 +17593,11 @@ msgid "mike-pal"
 msgstr "mike-pal"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
-#, fuzzy
 msgctxt "game_options"
 msgid "minimum"
 msgstr "최소"
 
 #. TRANSLATION: cgenius, mupen64plus
-#, fuzzy
 msgctxt "game_options"
 msgid "nearest"
 msgstr "가장 가까운"
@@ -17686,7 +17610,7 @@ msgstr "보통"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "nxagss"
-msgstr ""
+msgstr "회전 격자 슈퍼 샘플링"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -17699,7 +17623,6 @@ msgid "original"
 msgstr "오리지널"
 
 #. TRANSLATION: libretro/vba-m
-#, fuzzy
 msgctxt "game_options"
 msgid "original gameboy"
 msgstr "오리지널 게임보이"
@@ -17776,12 +17699,12 @@ msgstr "오른쪽/왼쪽"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "scanlines"
-msgstr ""
+msgstr "스캔라인"
 
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
 msgid "screenshot"
-msgstr ""
+msgstr "스크린샷"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
@@ -17789,15 +17712,14 @@ msgid "small"
 msgstr "작음"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
-#, fuzzy
 msgctxt "game_options"
 msgid "smaller"
-msgstr "작은"
+msgstr "더 작음"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "smart missile"
-msgstr ""
+msgstr "스마트 미사일"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
@@ -17805,7 +17727,6 @@ msgid "spreadfire cannon"
 msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next
-#, fuzzy
 msgctxt "game_options"
 msgid "standard"
 msgstr "표준"
@@ -17826,20 +17747,19 @@ msgid "triangular filter"
 msgstr ""
 
 #. TRANSLATION: mupen64plus
-#, fuzzy
 msgctxt "game_options"
 msgid "trilinear"
-msgstr "삼선형"
+msgstr "삼중선형"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "vulcan cannon"
-msgstr ""
+msgstr "발탄포"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "wave filter"
-msgstr ""
+msgstr "웨이브 필터"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -17847,26 +17767,24 @@ msgid "weird colours"
 msgstr ""
 
 #. TRANSLATION: libretro/vice_xpet
-#, fuzzy
 msgctxt "game_options"
 msgid "white"
-msgstr "하얀"
+msgstr "하얀색"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "xBR (Very Slow)"
-msgstr ""
+msgstr "xBR (매우 느림)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "xBR (Very Slow, No Edge Blending)"
-msgstr ""
+msgstr "xBR (매우 느림, 엣지 블랜딩 없음)"
 
 #. TRANSLATION: ppsspp
-#, fuzzy
 msgctxt "game_options"
 msgid "xBRZ (Default)"
-msgstr "xBRZ(기본값)"
+msgstr "xBRZ (기본)"
 
 #. TRANSLATION: libretro/vice_xplus4
 msgctxt "game_options"
@@ -17879,10 +17797,9 @@ msgid "yape-pal"
 msgstr "yape-pal"
 
 #. TRANSLATION: libretro/vb
-#, fuzzy
 msgctxt "game_options"
 msgid "yellow/blue"
-msgstr "옐로우/블루"
+msgstr "노란색/파란색"
 
 #, fuzzy
 #~ msgctxt "game_options"
@@ -18042,14 +17959,6 @@ msgstr "옐로우/블루"
 #~ msgstr "쌍선형(가장자리 혼합 없음)"
 
 #~ msgctxt "keys_files"
-#~ msgid "Button A"
-#~ msgstr "A 버튼"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button B"
-#~ msgstr "B 버튼"
-
-#~ msgctxt "keys_files"
 #~ msgid "Button L"
 #~ msgstr "L 버튼"
 
@@ -18060,18 +17969,6 @@ msgstr "옐로우/블루"
 #~ msgctxt "keys_files"
 #~ msgid "Button Select"
 #~ msgstr "선택 버튼"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Start"
-#~ msgstr "시작 버튼"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button X"
-#~ msgstr "X 버튼"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Y"
-#~ msgstr "Y 버튼"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"
@@ -18351,7 +18248,7 @@ msgstr "옐로우/블루"
 
 #~ msgctxt "game_options"
 #~ msgid "Enable to improve bluriness."
-#~ msgstr "흐릿함을 개선할 수 있습니다."
+#~ msgstr "흐릿함을 향상할 수 있습니다."
 
 #~ msgctxt "game_options"
 #~ msgid "Enabled UI prompts (Default)"
@@ -18374,7 +18271,7 @@ msgstr "옐로우/블루"
 #~ "Enhancement. Improves clarity of distant textures when mip-mapping is "
 #~ "enabled."
 #~ msgstr ""
-#~ "향상. 밉매핑을 사용하도록 설정한 경우 멀리 있는 텍스처의 선명도를 개선합니"
+#~ "향상. 밉매핑을 사용하도록 설정한 경우 멀리 있는 텍스처의 선명도를 향상합니"
 #~ "다."
 
 #~ msgctxt "keys_files"
@@ -18405,15 +18302,13 @@ msgstr "옐로우/블루"
 #~ msgid "FastForward"
 #~ msgstr "빨리감기"
 
-#, fuzzy
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
-#~ msgstr "자이로 지원 게임용(왼쪽 아날로그 스틱에 바인딩됨)"
+#~ msgstr "자이로 지원 게임용 (왼쪽 아날로그 스틱에 바인딩됨)"
 
-#, fuzzy
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to right analog stick)"
-#~ msgstr "자이로 지원 게임용(오른쪽 아날로그 스틱에 바인딩됨)"
+#~ msgstr "자이로 지원 게임용 (오른쪽 아날로그 스틱에 바인딩됨)"
 
 #, fuzzy
 #~ msgctxt "game_options"
@@ -18425,16 +18320,14 @@ msgstr "옐로우/블루"
 #~ msgid "Force Nvidia GPUs to always be reported as AMD GPUs."
 #~ msgstr "엔비디아 GPU가 항상 AMD GPU로 보고되도록 강제합니다."
 
-#, fuzzy
 #~ msgctxt "game_options"
 #~ msgid "GB COLORIZATION"
-#~ msgstr "GB 채색"
+#~ msgstr "게임보이 전자 채색"
 
 #~ msgctxt "game_options"
 #~ msgid "Game Boy Color"
 #~ msgstr "게임보이 컬러"
 
-#, fuzzy
 #~ msgctxt "game_options"
 #~ msgid "GamePad + 4 Sideway Wiimote"
 #~ msgstr "게임패드 + 4 사이드웨이 위모트"
@@ -18455,6 +18348,22 @@ msgstr "옐로우/블루"
 #~ msgctxt "game_options"
 #~ msgid "Handle DMAC writes when it busy"
 #~ msgstr "DMAC 쓰기 처리"
+
+#~ msgctxt "keys_files"
+#~ msgid "Hat Down"
+#~ msgstr "햇 아래쪽"
+
+#~ msgctxt "keys_files"
+#~ msgid "Hat Left"
+#~ msgstr "햇 왼쪽"
+
+#~ msgctxt "keys_files"
+#~ msgid "Hat Right"
+#~ msgstr "햇 오른쪽"
+
+#~ msgctxt "keys_files"
+#~ msgid "Hat Up"
+#~ msgstr "햇 위쪽"
 
 #, fuzzy
 #~ msgctxt "game_options"
@@ -18502,17 +18411,35 @@ msgstr "옐로우/블루"
 #~ msgid "JUMP ON B"
 #~ msgstr "B 버튼을 눌러 점프"
 
-#, fuzzy
+#~ msgctxt "keys_files"
+#~ msgid "Joy2Pad Down"
+#~ msgstr "조이투키 아래쪽"
+
+#~ msgctxt "keys_files"
+#~ msgid "Joy2Pad Left"
+#~ msgstr "조이투키 왼쪽"
+
+#~ msgctxt "keys_files"
+#~ msgid "Joy2Pad Right"
+#~ msgstr "조이투키 오른쪽"
+
+#~ msgctxt "keys_files"
+#~ msgid "Joy2Pad Up"
+#~ msgstr "조이투키 위쪽"
+
 #~ msgctxt "game_options"
 #~ msgid "Keypad to joyport mappings for 2 players."
-#~ msgstr "2인용 조이포트 매핑에 대한 키패드."
+#~ msgstr "2명의 플레이어를 위한 키패드에서 조이포트로의 매핑."
 
 #, fuzzy
 #~ msgctxt "game_options"
 #~ msgid "Legacy (laggy)"
 #~ msgstr "레거시(지연)"
 
-#, fuzzy
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "상태 슬롯 1 로드"
+
 #~ msgctxt "game_options"
 #~ msgid "Lunar Ignore Brightness Color Fix"
 #~ msgstr "달의 밝기 무시 색상 수정"
@@ -18546,21 +18473,23 @@ msgstr "옐로우/블루"
 #~ msgid "MTVU. May cause hanging (recommended on 3+ cores)"
 #~ msgstr "MTVU. 중단이 발생할 수 있음(3+ 코어에서 권장)"
 
-#, fuzzy
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
 #~ "switches to Super-High when needed."
 #~ msgstr ""
-#~ "사용할 해상도를 수동으로 정의합니다.\n"
-#~ "자동은 기본적으로 높음으로 설정되고 필요한 경우 매우 높음으로 전환됩니다."
+#~ "사용할 해상도를 수동으로 정의합니다. 자동은 높음으로 기본 설정되어 있으며 "
+#~ "필요할 때 매우 높음으로 전환됩니다."
 
 #, fuzzy
 #~ msgctxt "game_options"
 #~ msgid "May fix broken graphics in some games."
 #~ msgstr "일부 게임에서 깨진 그래픽을 수정할 수 있습니다."
 
-#, fuzzy
+#~ msgctxt "keys_files"
+#~ msgid "Microphone"
+#~ msgstr "마이크"
+
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Most games already have an internal framelimit. Minor performance cost."
@@ -18572,7 +18501,10 @@ msgstr "옐로우/블루"
 #~ msgid "Namco GunCon (Rumble)"
 #~ msgstr "남코 건콘 (럼블)"
 
-#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Native Vulkan"
+#~ msgstr "원본 Vulkan"
+
 #~ msgctxt "game_options"
 #~ msgid "Needed by some games that use special unicode characters."
 #~ msgstr "특수 유니 코드 문자를 사용하는 일부 게임에 필요합니다."
@@ -18591,6 +18523,18 @@ msgstr "옐로우/블루"
 #~ msgctxt "game_options"
 #~ msgid "Off (default)"
 #~ msgstr "끄기(기본값)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "돌핀 드라이포스의 메뉴 열기"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGL (x86 only)"
+#~ msgstr "OpenGL (x86 전용)"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGLES (기본t)"
 
 #~ msgctxt "game_options"
 #~ msgid "Optimized (auto)"
@@ -18739,6 +18683,10 @@ msgstr "옐로우/블루"
 #~ msgstr "조이스틱 아날로그 스틱의 데드존을 설정합니다."
 
 #~ msgctxt "game_options"
+#~ msgid "Set the desired maximum refresh rate when Vsync is off."
+#~ msgstr "수직동기화가 꺼져 있을 때 원하는 최대 재생 빈도를 설정합니다."
+
+#~ msgctxt "game_options"
 #~ msgid "Simulate LCD color inaccuracy."
 #~ msgstr "LCD 색상 부정확성을 시뮬레이션합니다."
 
@@ -18789,6 +18737,21 @@ msgstr "옐로우/블루"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr "코어가 지원하는 경우, 실시간으로 되감기할 과거 상태를 저장합니다."
 
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Straict API specification. Can resolve rare cases of missing graphics and "
+#~ "flickering."
+#~ msgstr ""
+#~ "엄격한 API 사양. 그래픽 누락 및 깜빡임의 드문 경우를 해결할 수 있습니다."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Stream texture to GPU in parrallel. Can improve performance on more "
+#~ "powerful GPU's that have spare headroom."
+#~ msgstr ""
+#~ "GPU에 텍스처를 병렬로 스트리밍합니다. 여유 헤드룸이 있는 더 강력한 GPU에"
+#~ "서 성능을 개선할 수 있습니다."
+
 #, fuzzy
 #~ msgctxt "game_options"
 #~ msgid "Stretch to 16:9"
@@ -18803,7 +18766,6 @@ msgstr "옐로우/블루"
 #~ msgid "Swap Screens"
 #~ msgstr "화면 교체"
 
-#, fuzzy
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "팀 색상 모드"
@@ -18835,11 +18797,14 @@ msgstr "옐로우/블루"
 #~ msgid "Toggle MSAA/SSAA. Depends on anti-aliasing being enabled."
 #~ msgstr "MSAA/SSAA를 전환합니다. 활성화되는 앤티앨리어싱에 따라 다릅니다."
 
+#~ msgctxt "keys_files"
+#~ msgid "TouchScreen"
+#~ msgstr "터치스크린"
+
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
 #~ msgstr "오른쪽 아날로그 스틱을 두 번째 조이스틱으로 취급합니다."
 
-#, fuzzy
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GZDOOM 조이스틱 구성 사용"
@@ -18865,10 +18830,9 @@ msgstr "옐로우/블루"
 #~ msgstr ""
 #~ "늘리기 종횡비와 함께 사용하고 필요에 따라 조이스틱 감도를 조정합니다."
 
-#, fuzzy
 #~ msgctxt "game_options"
 #~ msgid "Use your physical anaglypth 3D glasses!"
-#~ msgstr "실제 애너글립스 3D 안경을 사용하십시오!"
+#~ msgstr "실제 애너글리프 3D 안경을 사용하십시오!"
 
 #~ msgctxt "game_options"
 #~ msgid "Useful for speedruns/glitches."
@@ -18904,12 +18868,15 @@ msgstr "옐로우/블루"
 #~ msgid "VU0 Kickstart to avoid sync problems with VU1"
 #~ msgstr "VU1과의 동기화 문제를 방지하기 위한 VU0 킥스타트"
 
+#~ msgctxt "game_options"
+#~ msgid "Vsync"
+#~ msgstr "수직동기화"
+
 #, fuzzy
 #~ msgctxt "game_options"
 #~ msgid "WIDESCREEN PATCHES"
 #~ msgstr "와이드스크린 패치"
 
-#, fuzzy
 #~ msgctxt "game_options"
 #~ msgid "WRITE COLOR BUFFERS"
 #~ msgstr "색상 버퍼 쓰기"

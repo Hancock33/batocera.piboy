@@ -223,6 +223,7 @@ shared:
         "On": 1
         "Off": 0
     preemptiveframes:
+       group: LATENCY REDUCTION
        submenu:     LATENCY REDUCTION
        prompt:      USE PRE-EMPTIVE FRAMES
        description: Use preemptive frames instead of run-ahead. Only runs ahead when controller state changes.
@@ -322,6 +323,7 @@ shared:
         "9":   9
         "10": 10
     rumble_gain:
+      group: CONTROLLER SETTINGS
       prompt:      RUMBLE LEVEL
       description: For emulators and controllers supporting force feedback.
       choices:
@@ -417,6 +419,7 @@ libretro:
         "HID": hid
     audio_latency:
       group: LATENCY REDUCTION
+      submenu:     LATENCY REDUCTION
       prompt:      AUDIO LATENCY
       description: In milliseconds. Can reduce crackling/cutting out.
       choices:
@@ -573,6 +576,12 @@ libretro:
                     #"None":          0
                     "Saturn Pad":    1
                     "Saturn 3D Pad": 261
+    bennugd:
+      cfeatures:
+            bennugd_force_frame_limiter:
+                prompt:      FRAME LIMITER
+                description: Force internal frame limiter even if content and frontend frame rate matches.
+                preset: switchon
     fmsx:
       features: [padtokeyboard, cheevos, netplay]
       shared: [autosave, rewind]
@@ -11979,7 +11988,7 @@ solarus:
                 "Right stick":      joystick2
 mugen:
   features: [padtokeyboard]
-  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [powermode, tdp, videomode, powersave]
   cfeatures:
         esync:
             prompt:      ESYNC
@@ -11999,12 +12008,7 @@ mugen:
             choices:
                 "Off": 0
                 "On":  1
-        virtual_desktop:
-            prompt:      VIRTUAL DESKTOP
-            description: Define the resolution and a new dedicated window.
-            choices:
-                "Off": 0
-                "On":  1
+
 ikemen:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

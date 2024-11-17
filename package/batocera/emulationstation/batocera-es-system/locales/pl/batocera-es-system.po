@@ -2920,6 +2920,26 @@ msgctxt "game_options"
 msgid "Analog"
 msgstr "Analogowe"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Down"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Left"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Right"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Up"
+msgstr ""
+
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Analogue"
@@ -3907,10 +3927,45 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr "Bulgarski"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button A"
+msgstr "Przycisk A"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button B"
+msgstr "Przycisk B"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button C"
+msgstr ""
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
 msgstr "Opcje przycisków"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Start"
+msgstr "Przycisk Start"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button X"
+msgstr "Przycisk X"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Y"
+msgstr "Przycisk Y"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Z"
+msgstr ""
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -5859,7 +5914,7 @@ msgstr ""
 "Domyślnie używa SDL2, w przeciwnym razie włącz funkcje specyficzne dla "
 "kontrolera. Sony DS nie będzie działać z kontrolerami-klonami."
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Define the resolution and a new dedicated window."
 msgstr "Zdefiniuj rozdzielczość i nowe dedykowane okno."
@@ -6141,6 +6196,11 @@ msgstr "Podwójne buforowanie"
 msgctxt "game_options"
 msgid "Double the rendering resolution."
 msgstr "Podwojenie rozdzielczości renderowania."
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Down"
+msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -7560,6 +7620,11 @@ msgctxt "game_options"
 msgid "FRAME LIMIT"
 msgstr "LIMIT KLATEK"
 
+#. TRANSLATION: libretro/bennugd
+msgctxt "game_options"
+msgid "FRAME LIMITER"
+msgstr ""
+
 #. TRANSLATION: libretro, libretro
 msgctxt "game_options"
 msgid "FRAME MONITORING SETTINGS"
@@ -8000,6 +8065,12 @@ msgstr "Zmuszaj WINE do uruchamiania gier z dużym adresem."
 msgctxt "game_options"
 msgid "Force a specific model and prevent tags detection."
 msgstr "Wymuś określony model i zapobiegaj wykrywaniu znaczników."
+
+#. TRANSLATION: libretro/bennugd
+msgctxt "game_options"
+msgid ""
+"Force internal frame limiter even if content and frontend frame rate matches."
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -9876,7 +9947,7 @@ msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr "JĘZYK"
 
-#. TRANSLATION: libretro, shared, shared, shared, shared, ...
+#. TRANSLATION: libretro, libretro, shared, shared, shared, ...
 msgctxt "game_options"
 msgid "LATENCY REDUCTION"
 msgstr "REDUKCJA OPÓŹNIEŃ"
@@ -10034,6 +10105,11 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Lebanon"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Left"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
@@ -10818,7 +10894,7 @@ msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Powrót menu"
@@ -13247,6 +13323,11 @@ msgstr "Przewijanie może obciążać procesor."
 msgctxt "game_options"
 msgid "Rice"
 msgstr "Rice"
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Right"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -16386,6 +16467,11 @@ msgctxt "game_options"
 msgid "Until Timeout"
 msgstr "Limitowany czasowo"
 
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Up"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
@@ -16780,7 +16866,7 @@ msgctxt "game_options"
 msgid "VIOLENCE LEVEL"
 msgstr "POZIOM PRZEMOCY"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr "WIRTUALNY PULPIT"
@@ -18223,14 +18309,6 @@ msgstr "żółty/niebieski"
 #~ msgstr "Dwuliniowe (bez mieszania krawędzi)"
 
 #~ msgctxt "keys_files"
-#~ msgid "Button A"
-#~ msgstr "Przycisk A"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button B"
-#~ msgstr "Przycisk B"
-
-#~ msgctxt "keys_files"
 #~ msgid "Button L"
 #~ msgstr "Przycisk L"
 
@@ -18241,18 +18319,6 @@ msgstr "żółty/niebieski"
 #~ msgctxt "keys_files"
 #~ msgid "Button Select"
 #~ msgstr "Przycisk Select"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Start"
-#~ msgstr "Przycisk Start"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button X"
-#~ msgstr "Przycisk X"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Y"
-#~ msgstr "Przycisk Y"
 
 #~ msgctxt "game_options"
 #~ msgid "CDZ (MAME)"

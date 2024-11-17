@@ -152,7 +152,7 @@ bermuda:
   core:     bermuda
 bigfish:
   emulator: wine
-  core:     ge-custom
+  core:     wine-custom
   options:
     powersave: '1'
     hud_support: false
@@ -568,7 +568,7 @@ mu:
   core:     mu
 mugen:
   emulator: mugen
-  core:     ge-custom
+  core:     wine-custom
 multivision:
   emulator: libretro
   core:     gearsystem
@@ -740,7 +740,7 @@ ports:
     bezel: none
 popcap:
   emulator: wine
-  core:     ge-custom
+  core:     wine-custom
   options:
     powersave: '1'
     hud_support: false
@@ -917,8 +917,8 @@ sonicretro:
   emulator: soniccd
   core:     soniccd
 sorr:
-  emulator: sorr
-  core:     sorr
+  emulator: libretro
+  core:     bennugd
 spacecadetpinball:
   emulator: spacecadetpinball
   core:     spacecadetpinball
@@ -1116,13 +1116,13 @@ wiiware:
     powersave: '1'
 windows:
   emulator: wine
-  core:     ge-custom
+  core:     wine-custom
   options:
     powersave: '2'
     hud_support: false
 windows_installers:
   emulator: wine
-  core:     ge-custom
+  core:     wine-custom
   options:
     powersave: '2'
     hud_support: false

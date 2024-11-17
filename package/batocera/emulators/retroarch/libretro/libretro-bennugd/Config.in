@@ -1,0 +1,12 @@
+config BR2_PACKAGE_LIBRETRO_BENNUGD
+	bool "libretro-bennugd"
+	depends on BR2_PACKAGE_RETROARCH
+	depends on BR2_INSTALL_LIBSTDCPP
+
+	help
+	  libretro core for for BennuGD
+
+	  https://github.com/diekleinekuh/BennuGD_libretro
+
+comment "BR2_PACKAGE_LIBRETRO_BENNUGD needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP
