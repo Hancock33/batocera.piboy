@@ -3,12 +3,12 @@
 # flatpak
 #
 ################################################################################
-# Version: Commits on Apr 18, 2024
-FLATPAK_VERSION = 1.12.9
+# Version: Commits on Aug 14, 2024
+FLATPAK_VERSION = 1.14.10
 FLATPAK_SOURCE = flatpak-$(FLATPAK_VERSION).tar.xz
 FLATPAK_SITE = https://github.com/flatpak/flatpak/releases/download/$(FLATPAK_VERSION)
 
-FLATPAK_DEPENDENCIES += appstream-glib glib-networking host-pkgconf host-python-pyparsing
+FLATPAK_DEPENDENCIES += appstream glib-networking host-pkgconf host-python-pyparsing
 FLATPAK_DEPENDENCIES += json-glib libarchive libcap libfuse libglib2 libgpgme libostree
 FLATPAK_DEPENDENCIES += libseccomp libsoup libsoup3 pkgconf polkit python-pyparsing yaml-cpp
 FLATPAK_DEPENDENCIES += hicolor-icon-theme adwaita-icon-theme adwaita-icon-theme-light
