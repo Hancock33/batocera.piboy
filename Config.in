@@ -629,7 +629,7 @@ menu "Hardware"
 endmenu
 
 menu "Libraries"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/appstream-glib/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/appstream/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/batocera-luajit/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/cpuinfo/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/discord-rpc/Config.in"
