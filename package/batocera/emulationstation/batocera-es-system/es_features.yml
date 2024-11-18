@@ -13010,6 +13010,7 @@ bstone:
 doom3:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
     dhewm3_brightness:
       prompt: BRIGHTNESS
       description: Change the game's brightness.
