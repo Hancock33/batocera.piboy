@@ -282,7 +282,7 @@ msgctxt "game_options"
 msgid "10 seconds"
 msgstr "10 secunde"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+#. TRANSLATION: doom3, libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "100% (Default)"
 msgstr "100% (Implicit)"
@@ -866,6 +866,11 @@ msgstr "20 MHz"
 msgctxt "game_options"
 msgid "20 seconds"
 msgstr "20 de secunde"
+
+#. TRANSLATION: doom3
+msgctxt "game_options"
+msgid "200% (Maximum)"
+msgstr "200% (maxim)"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -3575,6 +3580,11 @@ msgctxt "game_options"
 msgid "BRETT HULL HOCKEY"
 msgstr "BRETT HULL HOCKEY"
 
+#. TRANSLATION: doom3
+msgctxt "game_options"
+msgid "BRIGHTNESS"
+msgstr "LUMINOZITATE"
+
 #. TRANSLATION: flycast, redream
 msgctxt "game_options"
 msgid "BROADCAST"
@@ -4847,10 +4857,22 @@ msgctxt "game_options"
 msgid "Change the consoles country from the default of the United States."
 msgstr ""
 
+#. TRANSLATION: doom3
+msgctxt "game_options"
+msgid "Change the game's brightness."
+msgstr "Modifică luminozitatea jocului."
+
 #. TRANSLATION: etlegacy, fallout1-ce, fallout2-ce, libretro/cap32, play, ...
 msgctxt "game_options"
 msgid "Change the game's language."
 msgstr "Schimbă limba jocului."
+
+#. TRANSLATION: doom3
+msgctxt "game_options"
+msgid ""
+"Change the game's language. Game files require the supported language "
+"strings in the .pk4 files."
+msgstr ""
 
 #. TRANSLATION: bigpemu, cemu, duckstation, libretro/vice_x128, libretro/vice_x64, ...
 msgctxt "game_options"
@@ -4887,7 +4909,7 @@ msgctxt "game_options"
 msgid "China"
 msgstr "China"
 
-#. TRANSLATION: cemu, ryujinx, sonic2013, suyu, xenia, ...
+#. TRANSLATION: cemu, doom3, ryujinx, sonic2013, suyu, ...
 msgctxt "game_options"
 msgid "Chinese"
 msgstr "Chineză"
@@ -7091,7 +7113,7 @@ msgctxt "game_options"
 msgid "Enabling will smooth out the image."
 msgstr "Activând asta va netezi imaginea."
 
-#. TRANSLATION: awgl, cemu, etlegacy, flycast/dolphin, libretro/dolphin, ...
+#. TRANSLATION: awgl, cemu, doom3, etlegacy, flycast/dolphin, ...
 msgctxt "game_options"
 msgid "English"
 msgstr "Engleză"
@@ -8127,7 +8149,7 @@ msgstr ""
 "personalizate dacă este setat pe adevărat. De asemenea nu trebuie să-ți faci "
 "griji pentru bani."
 
-#. TRANSLATION: cemu, dolphin, etlegacy, fallout1-ce, fallout2-ce, ...
+#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
 msgctxt "game_options"
 msgid "French"
 msgstr "Franceză"
@@ -8684,7 +8706,7 @@ msgctxt "game_options"
 msgid "Georgia"
 msgstr ""
 
-#. TRANSLATION: cemu, dolphin, etlegacy, fallout1-ce, fallout2-ce, ...
+#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
 msgctxt "game_options"
 msgid "German"
 msgstr "Germană"
@@ -9582,7 +9604,7 @@ msgctxt "game_options"
 msgid "Israel"
 msgstr "Israel"
 
-#. TRANSLATION: cemu, dolphin, etlegacy, fallout1-ce, fallout2-ce, ...
+#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
 msgctxt "game_options"
 msgid "Italian"
 msgstr "Italiană"
@@ -9687,7 +9709,7 @@ msgctxt "game_options"
 msgid "Japan"
 msgstr "Japonia"
 
-#. TRANSLATION: cemu, etlegacy, flycast/dolphin, libretro/dolphin, libretro/flycast, ...
+#. TRANSLATION: cemu, doom3, etlegacy, flycast/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "Japanese"
 msgstr "Japoneză"
@@ -9907,7 +9929,7 @@ msgctxt "game_options"
 msgid "Korea"
 msgstr "Coreea"
 
-#. TRANSLATION: cemu, easyrpg, etlegacy, libretro/dolphin, play, ...
+#. TRANSLATION: cemu, doom3, easyrpg, etlegacy, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "Korean"
 msgstr "Coreană"
@@ -9937,7 +9959,7 @@ msgctxt "game_options"
 msgid "LAN / WAN STREAMING"
 msgstr "STREAMING LAN / WAN"
 
-#. TRANSLATION: etlegacy, f2bgl, fallout1-ce, fallout2-ce, hatari, ...
+#. TRANSLATION: doom3, etlegacy, f2bgl, fallout1-ce, fallout2-ce, ...
 msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr "LIMBĂ"
@@ -12568,7 +12590,7 @@ msgctxt "game_options"
 msgid "Poland (pl)"
 msgstr ""
 
-#. TRANSLATION: etlegacy, xenia, xenia-canary
+#. TRANSLATION: doom3, etlegacy, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Polish"
 msgstr "Poloneză"
@@ -13453,7 +13475,7 @@ msgctxt "game_options"
 msgid "Russia"
 msgstr "Rusia"
 
-#. TRANSLATION: cemu, etlegacy, play, ryujinx, scummvm, ...
+#. TRANSLATION: cemu, doom3, etlegacy, play, ryujinx, ...
 msgctxt "game_options"
 msgid "Russian"
 msgstr "Rusă"
@@ -14986,7 +15008,7 @@ msgctxt "game_options"
 msgid "Spain"
 msgstr "Spania"
 
-#. TRANSLATION: cemu, dolphin, etlegacy, fallout1-ce, fallout2-ce, ...
+#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
 msgctxt "game_options"
 msgid "Spanish"
 msgstr "Spaniolă"
@@ -17850,10 +17872,6 @@ msgid "yellow/blue"
 msgstr "galben/albastru"
 
 #~ msgctxt "game_options"
-#~ msgid "200% (Maximum)"
-#~ msgstr "200% (maxim)"
-
-#~ msgctxt "game_options"
 #~ msgid "256 KB"
 #~ msgstr "256 KO"
 
@@ -17965,10 +17983,6 @@ msgstr "galben/albastru"
 #~ msgid "BGFX for post-processing, accel/opengl for raw image."
 #~ msgstr "BGFX pentru post-procesare, accel/opengl pentru imaginile crude."
 
-#~ msgctxt "game_options"
-#~ msgid "BRIGHTNESS"
-#~ msgstr "LUMINOZITATE"
-
 #~ msgctxt "keys_files"
 #~ msgid "Button L"
 #~ msgstr "Buton L"
@@ -18008,10 +18022,6 @@ msgstr "galben/albastru"
 #~ msgctxt "game_options"
 #~ msgid "Center (Default)"
 #~ msgstr "Centru (Implicit)"
-
-#~ msgctxt "game_options"
-#~ msgid "Change the game's brightness."
-#~ msgstr "Modifică luminozitatea jocului."
 
 #~ msgctxt "game_options"
 #~ msgid ""

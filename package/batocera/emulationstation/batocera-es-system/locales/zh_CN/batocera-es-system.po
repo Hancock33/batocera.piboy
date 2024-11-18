@@ -288,7 +288,7 @@ msgctxt "game_options"
 msgid "10 seconds"
 msgstr "10秒"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+#. TRANSLATION: doom3, libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "100% (Default)"
 msgstr "100%（默认）"
@@ -872,6 +872,11 @@ msgstr "20 MHz"
 msgctxt "game_options"
 msgid "20 seconds"
 msgstr "20秒"
+
+#. TRANSLATION: doom3
+msgctxt "game_options"
+msgid "200% (Maximum)"
+msgstr "200% (最大值)"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -3560,6 +3565,11 @@ msgctxt "game_options"
 msgid "BRETT HULL HOCKEY"
 msgstr "布雷特赫尔冰球"
 
+#. TRANSLATION: doom3
+msgctxt "game_options"
+msgid "BRIGHTNESS"
+msgstr "亮度"
+
 #. TRANSLATION: flycast, redream
 msgctxt "game_options"
 msgid "BROADCAST"
@@ -4813,10 +4823,22 @@ msgctxt "game_options"
 msgid "Change the consoles country from the default of the United States."
 msgstr ""
 
+#. TRANSLATION: doom3
+msgctxt "game_options"
+msgid "Change the game's brightness."
+msgstr "更改游戏的亮度."
+
 #. TRANSLATION: etlegacy, fallout1-ce, fallout2-ce, libretro/cap32, play, ...
 msgctxt "game_options"
 msgid "Change the game's language."
 msgstr "切换游戏语言。"
+
+#. TRANSLATION: doom3
+msgctxt "game_options"
+msgid ""
+"Change the game's language. Game files require the supported language "
+"strings in the .pk4 files."
+msgstr ""
 
 #. TRANSLATION: bigpemu, cemu, duckstation, libretro/vice_x128, libretro/vice_x64, ...
 msgctxt "game_options"
@@ -4853,7 +4875,7 @@ msgctxt "game_options"
 msgid "China"
 msgstr "中国"
 
-#. TRANSLATION: cemu, ryujinx, sonic2013, suyu, xenia, ...
+#. TRANSLATION: cemu, doom3, ryujinx, sonic2013, suyu, ...
 msgctxt "game_options"
 msgid "Chinese"
 msgstr "中文"
@@ -6977,7 +6999,7 @@ msgctxt "game_options"
 msgid "Enabling will smooth out the image."
 msgstr "启用将使图像更加平滑。"
 
-#. TRANSLATION: awgl, cemu, etlegacy, flycast/dolphin, libretro/dolphin, ...
+#. TRANSLATION: awgl, cemu, doom3, etlegacy, flycast/dolphin, ...
 msgctxt "game_options"
 msgid "English"
 msgstr "英语"
@@ -7974,7 +7996,7 @@ msgstr ""
 "自由建造或沙盒模式，如果设置为true，则您无法在定制地图中获胜或失败，您也不必"
 "担心金钱问题。"
 
-#. TRANSLATION: cemu, dolphin, etlegacy, fallout1-ce, fallout2-ce, ...
+#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
 msgctxt "game_options"
 msgid "French"
 msgstr "法语"
@@ -8527,7 +8549,7 @@ msgctxt "game_options"
 msgid "Georgia"
 msgstr ""
 
-#. TRANSLATION: cemu, dolphin, etlegacy, fallout1-ce, fallout2-ce, ...
+#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
 msgctxt "game_options"
 msgid "German"
 msgstr "德语"
@@ -9399,7 +9421,7 @@ msgctxt "game_options"
 msgid "Israel"
 msgstr "以色列"
 
-#. TRANSLATION: cemu, dolphin, etlegacy, fallout1-ce, fallout2-ce, ...
+#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
 msgctxt "game_options"
 msgid "Italian"
 msgstr "意大利语"
@@ -9504,7 +9526,7 @@ msgctxt "game_options"
 msgid "Japan"
 msgstr "日本"
 
-#. TRANSLATION: cemu, etlegacy, flycast/dolphin, libretro/dolphin, libretro/flycast, ...
+#. TRANSLATION: cemu, doom3, etlegacy, flycast/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "Japanese"
 msgstr "日语"
@@ -9721,7 +9743,7 @@ msgctxt "game_options"
 msgid "Korea"
 msgstr "韩国"
 
-#. TRANSLATION: cemu, easyrpg, etlegacy, libretro/dolphin, play, ...
+#. TRANSLATION: cemu, doom3, easyrpg, etlegacy, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "Korean"
 msgstr "韩语"
@@ -9751,7 +9773,7 @@ msgctxt "game_options"
 msgid "LAN / WAN STREAMING"
 msgstr "局域网/广域网流媒体"
 
-#. TRANSLATION: etlegacy, f2bgl, fallout1-ce, fallout2-ce, hatari, ...
+#. TRANSLATION: doom3, etlegacy, f2bgl, fallout1-ce, fallout2-ce, ...
 msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr "语言"
@@ -12337,7 +12359,7 @@ msgctxt "game_options"
 msgid "Poland (pl)"
 msgstr "波兰语 (pl)"
 
-#. TRANSLATION: etlegacy, xenia, xenia-canary
+#. TRANSLATION: doom3, etlegacy, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Polish"
 msgstr "波兰"
@@ -13201,7 +13223,7 @@ msgctxt "game_options"
 msgid "Russia"
 msgstr "俄罗斯"
 
-#. TRANSLATION: cemu, etlegacy, play, ryujinx, scummvm, ...
+#. TRANSLATION: cemu, doom3, etlegacy, play, ryujinx, ...
 msgctxt "game_options"
 msgid "Russian"
 msgstr "俄语"
@@ -14717,7 +14739,7 @@ msgctxt "game_options"
 msgid "Spain"
 msgstr "西班牙"
 
-#. TRANSLATION: cemu, dolphin, etlegacy, fallout1-ce, fallout2-ce, ...
+#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
 msgctxt "game_options"
 msgid "Spanish"
 msgstr "西班牙语"
@@ -17541,10 +17563,6 @@ msgstr "黄色/蓝色"
 #~ msgstr "130%（你完全疯了！）"
 
 #~ msgctxt "game_options"
-#~ msgid "200% (Maximum)"
-#~ msgstr "200% (最大值)"
-
-#~ msgctxt "game_options"
 #~ msgid "256 KB"
 #~ msgstr "256 KB"
 
@@ -17669,10 +17687,6 @@ msgstr "黄色/蓝色"
 #~ msgstr "BGFX用于后期处理，accel/opengl用于原始图像。"
 
 #~ msgctxt "game_options"
-#~ msgid "BRIGHTNESS"
-#~ msgstr "亮度"
-
-#~ msgctxt "game_options"
 #~ msgid "Backglass disabled"
 #~ msgstr "禁用背景玻璃"
 
@@ -17715,10 +17729,6 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Center (Default)"
 #~ msgstr "居中（默认）"
-
-#~ msgctxt "game_options"
-#~ msgid "Change the game's brightness."
-#~ msgstr "更改游戏的亮度."
 
 #~ msgctxt "game_options"
 #~ msgid ""
