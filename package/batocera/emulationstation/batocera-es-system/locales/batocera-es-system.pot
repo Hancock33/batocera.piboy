@@ -848,7 +848,7 @@ msgctxt "game_options"
 msgid "Change the game's language."
 msgstr ""
 
-#. TRANSLATION: etlegacy, f2bgl, fallout1-ce, fallout2-ce, hatari, ...
+#. TRANSLATION: doom3, etlegacy, f2bgl, fallout1-ce, fallout2-ce, ...
 msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr ""
@@ -858,12 +858,12 @@ msgctxt "game_options"
 msgid "English (Default)"
 msgstr ""
 
-#. TRANSLATION: cemu, dolphin, etlegacy, fallout1-ce, fallout2-ce, ...
+#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
 msgctxt "game_options"
 msgid "Spanish"
 msgstr ""
 
-#. TRANSLATION: cemu, dolphin, etlegacy, fallout1-ce, fallout2-ce, ...
+#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
 msgctxt "game_options"
 msgid "French"
 msgstr ""
@@ -1495,17 +1495,17 @@ msgid ""
 "firmware file was not found."
 msgstr ""
 
-#. TRANSLATION: cemu, dolphin, etlegacy, fallout1-ce, fallout2-ce, ...
+#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
 msgctxt "game_options"
 msgid "German"
 msgstr ""
 
-#. TRANSLATION: cemu, dolphin, etlegacy, fallout1-ce, fallout2-ce, ...
+#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
 msgctxt "game_options"
 msgid "Italian"
 msgstr ""
 
-#. TRANSLATION: cemu, etlegacy, flycast/dolphin, libretro/dolphin, libretro/flycast, ...
+#. TRANSLATION: cemu, doom3, etlegacy, flycast/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "Japanese"
 msgstr ""
@@ -1831,7 +1831,7 @@ msgctxt "game_options"
 msgid "Use Host"
 msgstr ""
 
-#. TRANSLATION: awgl, cemu, etlegacy, flycast/dolphin, libretro/dolphin, ...
+#. TRANSLATION: awgl, cemu, doom3, etlegacy, flycast/dolphin, ...
 msgctxt "game_options"
 msgid "English"
 msgstr ""
@@ -2258,7 +2258,7 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr ""
 
-#. TRANSLATION: cemu, easyrpg, etlegacy, libretro/dolphin, play, ...
+#. TRANSLATION: cemu, doom3, easyrpg, etlegacy, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "Korean"
 msgstr ""
@@ -6226,7 +6226,7 @@ msgctxt "game_options"
 msgid "JOYSTICK SENSITIVITY"
 msgstr ""
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+#. TRANSLATION: doom3, libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "100% (Default)"
 msgstr ""
@@ -8986,7 +8986,7 @@ msgctxt "game_options"
 msgid "Current language"
 msgstr ""
 
-#. TRANSLATION: cemu, ryujinx, sonic2013, suyu, xenia, ...
+#. TRANSLATION: cemu, doom3, ryujinx, sonic2013, suyu, ...
 msgctxt "game_options"
 msgid "Chinese"
 msgstr ""
@@ -8996,7 +8996,7 @@ msgctxt "game_options"
 msgid "Portuguese"
 msgstr ""
 
-#. TRANSLATION: cemu, etlegacy, play, ryujinx, scummvm, ...
+#. TRANSLATION: cemu, doom3, etlegacy, play, ryujinx, ...
 msgctxt "game_options"
 msgid "Russian"
 msgstr ""
@@ -14691,6 +14691,33 @@ msgctxt "game_options"
 msgid "WOLFENSTEIN 3D"
 msgstr ""
 
+#. TRANSLATION: doom3
+msgctxt "game_options"
+msgid "Change the game's brightness."
+msgstr ""
+
+#. TRANSLATION: doom3
+msgctxt "game_options"
+msgid "BRIGHTNESS"
+msgstr ""
+
+#. TRANSLATION: doom3
+msgctxt "game_options"
+msgid "200% (Maximum)"
+msgstr ""
+
+#. TRANSLATION: doom3
+msgctxt "game_options"
+msgid ""
+"Change the game's language. Game files require the supported language "
+"strings in the .pk4 files."
+msgstr ""
+
+#. TRANSLATION: doom3, etlegacy, xenia, xenia-canary
+msgctxt "game_options"
+msgid "Polish"
+msgstr ""
+
 #. TRANSLATION: dxx-rebirth
 msgctxt "game_options"
 msgid "Classic (Default)"
@@ -14889,11 +14916,6 @@ msgstr ""
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Punjabi"
-msgstr ""
-
-#. TRANSLATION: etlegacy, xenia, xenia-canary
-msgctxt "game_options"
-msgid "Polish"
 msgstr ""
 
 #. TRANSLATION: etlegacy
