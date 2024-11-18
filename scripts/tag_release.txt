@@ -1,6 +1,6 @@
 ﻿alsa-topology-conf.mk
 alsa-ucm-conf.mk
-appstream-glib.mk
+appstream.mk
 batocera-settings.mk
 cabextract.mk
 drastic.mk

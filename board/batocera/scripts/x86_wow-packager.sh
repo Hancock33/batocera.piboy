@@ -28,7 +28,7 @@ rm -rf $DEST_DIR/usr/lib32/{pcmanfm,python3.*,terminfo,udev,xorg,X11}
 rm -rf $DEST_DIR/usr/lib32/firmware
 rm -rf $DEST_DIR/usr/wine/proton/share
 rm -rf $DEST_DIR/usr/wine/lutris/share
-rm -rf $DEST_DIR/usr/wine/ge-custom/share
+rm -rf $DEST_DIR/usr/wine/wine-custom/share
 rm -rf $DEST_DIR/usr/lib32/*/include
 
 find $DEST_DIR/ -type f -name "*.a" -exec rm {} \;

@@ -3,8 +3,8 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Nov 16, 2024
-DEVILUTIONX_VERSION = f1d48d7124ea955c772c9e25a0d5d36fcba6e9ab
+# Version: Commits on Nov 18, 2024
+DEVILUTIONX_VERSION = 8615d311919ccb31886b44ed6ced4c77e1dec25c
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
 DEVILUTIONX_DEPENDENCIES = sdl2 sdl2_image fmt libsodium libpng bzip2 lua luafilesystem lua-lpeg-patterns lpeg luasocket luasec
@@ -18,17 +18,6 @@ DEVILUTIONX_CONF_OPTS += -DPREFILL_PLAYER_NAME=ON
 DEVILUTIONX_CONF_OPTS += -DCPACK=ON
 DEVILUTIONX_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
 DEVILUTIONX_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
-
-# ZeroTier on aarch64 uses ARMv8 Cryptography Extensions.
-# These extension are optional and only certain Armv8-A CPUs support them.
-# Disables ZeroTier if the CPU compilation flags do not specify the "+crypto" extension.
-ifeq ($(BR2_aarch64)$(BR2_ARM_CPU_ARMV8A),yy)
-    ifneq ($(findstring +crypto,$(BR2_TARGET_OPTIMIZATION)),+crypto)
-        DEVILUTIONX_CONF_OPTS += -DDISABLE_ZERO_TIER=ON
-    endif
-else ifeq ($(BR2_arm),y)
-    DEVILUTIONX_CONF_OPTS += -DDISABLE_ZERO_TIER=ON
-endif
 
 define DEVILUTIONX_FIX_SDL2MAIN
 	sed -i -e s+"SDL2::SDL2main"+"-lSDL2main"+ $(@D)/CMakeLists.txt
