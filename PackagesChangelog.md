@@ -19,6 +19,8 @@ Ports|[nblood](http://github.com/nukeykt/NBlood)|r14125|Nov 19, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|22c3e8dc93c101b66bab47d054e1fb2d54edb01d|Nov 19, 2024
 Utils|[re2c](http://github.com/skvadrik/re2c)|b8a4cddf80692486e8780d2a3ffc8a7e82acebbc|Nov 19, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|aff99e3e104025d5e0012c20567554b393ebe8a4|Nov 19, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241119|Nov 19, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241119|Nov 19, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|f0db09948c87bd473f81de1871728bcd43437b79|Nov 19, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|c31f45c6533e0ffb3acaff6543dacc07d287e1ae|Nov 19, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|b00ea1c9574126d75ae7b80c3b41e1186421fc1d|Nov 19, 2024
@@ -37,16 +39,13 @@ Ports|[omf2097](http://github.com/omf2097/openomf)|d45f4d5c6797e201536ff5c7ae278
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|ff4c302b2b3d146674c8b23a524fea96f1d83150|Nov 18, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|09f68d358a5f18fc58551c00eccf81190f587646|Nov 18, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.5.1|Nov 18, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241118|Nov 18, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|f5b1b7f35b5c89e04e5fdba61c7202f664fc214d|Nov 18, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241118|Nov 18, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|8b0d49f03635e7664f0679f336f62d011ecf6c91|Nov 18, 2024
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|ff4c302b2b3d146674c8b23a524fea96f1d83150|Nov 18, 2024
 Emulators|[libretro-fuse](http://github.com/libretro/fuse-libretro)|99df66eac096400d4d6d8fae2215192b6f03277e|Nov 18, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|2a0ed00d0d41e44f587168ea354f0a5ab15acba5|Nov 18, 2024
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|452510b932149759d788d47d4ac9219c74cd5f4d|Nov 18, 2024
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|8837c103d29e4e38d8b2e30eb3dd7d26e1e974c3|Nov 18, 2024
-Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|f9ae8fd28b13070a945a829ccf41cbf90a21d0f7|Nov 18, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|e808946fd056b3fba3b11d97a98586a14ad74d91|Nov 17, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|0f2c2c7ae0be8e624eee94053d63ea2fd7473327|Nov 17, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|d618abc3205fe185b26afe58eb5472b800ae0b42|Nov 17, 2024
@@ -194,6 +193,7 @@ Emulators|[libretro-reminiscence](http://github.com/libretro/REminiscence)|e80d7
 Emulators|[libretro-retro8](http://github.com/libretro/retro8)|a235ff8e3ca1b44bcf88293748d5a492c76a2c7b|Oct 21, 2024
 Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|c642bbd0680b5959180a420036108893d0aec961|Oct 21, 2024
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|49f484569ff2aec7ff08e7598a97d6c9e6eae72d|Oct 21, 2024
+Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|a99c16c87c3b482336f218d1789b6fb9896bd107|Oct 21, 2024
 Emulators|[libretro-stella2014](http://github.com/libretro/stella2014-libretro)|3cc89f0d316d6c924a5e3f4011d17421df58e615|Oct 21, 2024
 Emulators|[libretro-superbroswar](https://github.com/libretro/superbroswar-libretro.git)|d8d5d58f3cbc1e08f91a0e218bc990ec47282c08|Oct 21, 2024
 Emulators|[libretro-tamalibretro](https://github.com/celerizer/tamalibretro.git)|67605e4209a025840fcd2f1062d39998e627381c|Oct 21, 2024
@@ -300,7 +300,7 @@ Hardware|[pironman5](http://github.com/sunfounder/pironman5)|a45d0594a2b046346d5
 Network|[qrtr](http://github.com/linux-msm/qrtr)|ef44ad10f284410e2db4c4ce22c8645f988f8402|Aug 18, 2024
 Boot|[batocera-shim-signed-efi-ia32](https://ftp.debian.org/debian/pool/main/s/shim-signed)|1.44~1+deb12u1+15.8-1~deb12u1|Aug 16, 2024
 Libraries|[projectm](http://github.com/projectM-visualizer/projectm)|v4.1.2|Aug 14, 2024
-Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.14.10|Aug 14, 2024
+Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.15.10|Aug 14, 2024
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|7a5de5b7597c46f963d72a83defe7592f901e5f1|Aug 13, 2024
 Libraries|[iir](http://github.com/berndporr/iir1)|1.9.5|Aug 12, 2024
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|bd3c033bdf1faa4606086dcae0436531fb2e7e5c|Aug 11, 2024
