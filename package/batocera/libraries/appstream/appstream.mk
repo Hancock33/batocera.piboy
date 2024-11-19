@@ -8,8 +8,8 @@ APPSTREAM_VERSION = v1.0.3
 APPSTREAM_SITE = $(call github,ximion,appstream,$(APPSTREAM_VERSION))
 APPSTREAM_INSTALL_STAGING = YES
 
-APPSTREAM_DEPENDENCIES = libxmlb host-appstream
-HOST_APPSTREAM_DEPENDENCIES = host-brotli host-libxmlb
+APPSTREAM_DEPENDENCIES = libcurl libxmlb host-appstream
+HOST_APPSTREAM_DEPENDENCIES = host-brotli host-libcurl host-libxmlb
 
 APPSTREAM_CONF_OPTS = -Dgir=true -Dstemming=false -Dsystemd=false -Dzstd-support=true
 APPSTREAM_CONF_OPTS += -Ddocs=false -Dapidocs=false -Dinstall-docs=false

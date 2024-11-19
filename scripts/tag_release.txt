@@ -6,6 +6,7 @@ cabextract.mk
 drastic.mk
 ecm.mk
 fpinball.mk
+flatpak.mk
 glslang.mk
 liblc3.mk
 shaderc.mk
