@@ -18,7 +18,7 @@ FLATPAK_CONF_OPTS += -Drun_media_dir=/media
 FLATPAK_CONF_OPTS += -Dselinux_module=disabled
 FLATPAK_CONF_OPTS += -Dsystemd=disabled
 FLATPAK_CONF_OPTS += -Ddocbook_docs=disabled
-
+FLATPAK_CONF_OPTS += -Dtests=false
 
 FLATPAK_CONF_ENV += LDFLAGS=-lpthread
 
