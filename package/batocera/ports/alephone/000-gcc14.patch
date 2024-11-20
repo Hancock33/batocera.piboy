@@ -1,0 +1,65 @@
+diff --git a/Source_Files/Files/game_wad.cpp b/Source_Files/Files/game_wad.cpp
+index 6eaafcc0..6fdb0bba 100644
+--- a/Source_Files/Files/game_wad.cpp
++++ b/Source_Files/Files/game_wad.cpp
+@@ -129,7 +129,7 @@ Feb 15, 2002 (Br'fin (Jeremy Parsons)):
+ #include "motion_sensor.h"	// ZZZ for reset_motion_sensor()
+ 
+ #include "Music.h"
+-
++#define effects (EffectList.data())
+ // unify the save game code into one structure.
+ 
+ /* -------- local globals */
+diff --git a/Source_Files/GameWorld/effects.cpp b/Source_Files/GameWorld/effects.cpp
+index f1ba927b..3d25b781 100644
+--- a/Source_Files/GameWorld/effects.cpp
++++ b/Source_Files/GameWorld/effects.cpp
+@@ -58,7 +58,7 @@ ryan reports get_object_data() failing on effect->data after a teleport effect t
+ 
+ /* import effect definition constants, structures and globals */
+ #include "effect_definitions.h"
+-
++#define effects (EffectList.data())
+ // Moved the definition over to map.cpp
+ 
+ // struct effect_data *effects = NULL;
+diff --git a/Source_Files/GameWorld/effects.h b/Source_Files/GameWorld/effects.h
+index 7f3d1104..4af754ea 100644
+--- a/Source_Files/GameWorld/effects.h
++++ b/Source_Files/GameWorld/effects.h
+@@ -153,7 +153,7 @@ const int SIZEOF_effect_definition = 14;
+ // Turned the list of active effects into a variable array
+ 
+ extern std::vector<effect_data> EffectList;
+-#define effects (EffectList.data())
++//#define effects (EffectList.data())
+ 
+ // extern struct effect_data *effects;
+ 
+diff --git a/Source_Files/GameWorld/map.cpp b/Source_Files/GameWorld/map.cpp
+index e7188947..7bd2a3fa 100644
+--- a/Source_Files/GameWorld/map.cpp
++++ b/Source_Files/GameWorld/map.cpp
+@@ -124,7 +124,7 @@ find_line_crossed leaving polygon could be sped up considerable by reversing the
+ #include <limits.h>
+ 
+ #include <list>
+-
++#define effects (EffectList.data())
+ /* ---------- structures */
+ 
+ /*
+diff --git a/Source_Files/Lua/lua_objects.cpp b/Source_Files/Lua/lua_objects.cpp
+index fb14c633..32ffc767 100644
+--- a/Source_Files/Lua/lua_objects.cpp
++++ b/Source_Files/Lua/lua_objects.cpp
+@@ -36,7 +36,7 @@ LUA_OBJECTS.CPP
+ #include <functional>
+ 
+ #include "SoundManager.h"
+-
++#define effects (EffectList.data())
+ const float AngleConvert = 360/float(FULL_CIRCLE);
+ 
+ template<class T>
