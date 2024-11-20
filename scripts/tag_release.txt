@@ -5,8 +5,8 @@ batocera-settings.mk
 cabextract.mk
 drastic.mk
 ecm.mk
-fpinball.mk
 flatpak.mk
+fpinball.mk
 glslang.mk
 liblc3.mk
 shaderc.mk
