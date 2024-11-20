@@ -19,7 +19,7 @@ Ports|[omf2097](http://github.com/omf2097/openomf)|9f19161514a3442c9a5e7ca00da92
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|c74981580a542731a087dc6a63d04dd5002f3817|Nov 20, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|b0db9684546ea506154399c174a73fa5fe291c1e|Nov 20, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|bca3784c3b4d8870565422d5b5fce6b9e40e1320|Nov 20, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.21.r5.g8b3f47c1|Nov 20, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.21.r5.g8b3f47c1|Nov 20, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241120|Nov 20, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|58f1b5d1e3e629a902a7ed2fa4bf80a61f1e669f|Nov 20, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241120|Nov 20, 2024
