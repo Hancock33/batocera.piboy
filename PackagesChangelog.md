@@ -19,7 +19,10 @@ Ports|[omf2097](http://github.com/omf2097/openomf)|9f19161514a3442c9a5e7ca00da92
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|c74981580a542731a087dc6a63d04dd5002f3817|Nov 20, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|b0db9684546ea506154399c174a73fa5fe291c1e|Nov 20, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|bca3784c3b4d8870565422d5b5fce6b9e40e1320|Nov 20, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.21.r5.g8b3f47c1|Nov 20, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241120|Nov 20, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|58f1b5d1e3e629a902a7ed2fa4bf80a61f1e669f|Nov 20, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241120|Nov 20, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|6e952e37d12bac7f99ec4c76592a255426ca875a|Nov 20, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|99c058d168d0e840ed51eca8d06a2266796a38c5|Nov 20, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|3a02d8fb0eda66b97721109174229fff52f37efc|Nov 20, 2024
@@ -42,9 +45,7 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|df2ba126319ec75
 Ports|[nblood](http://github.com/nukeykt/NBlood)|r14125|Nov 19, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|22c3e8dc93c101b66bab47d054e1fb2d54edb01d|Nov 19, 2024
 Utils|[re2c](http://github.com/skvadrik/re2c)|b8a4cddf80692486e8780d2a3ffc8a7e82acebbc|Nov 19, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241119|Nov 19, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|4838e02a4b08236931bec0532fc26ee3871b466a|Nov 19, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241119|Nov 19, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|f903e2e110626e16f65686a7c7ae186f116d02b0|Nov 19, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|489db6b92c75d9f16bc4eb3216a3bed7fe8cc34a|Nov 19, 2024
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|493e75f3703981849a37bf5cf813db40f4857eac|Nov 19, 2024
@@ -70,7 +71,6 @@ Emulators|[cemu](https://github.com/cemu-project/Cemu)|269d5b9aabc2a346f441cae5e
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|39dd77adff71cd2ae17d80a0e48fad8583ade8e4|Nov 16, 2024
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|10a371a5e8ca975c71c8228a4131f21657d066da|Nov 16, 2024
 Utils|[rclone](http://github.com/rclone/rclone)|v1.68.2|Nov 15, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.21.r138.gae6366b33c7|Nov 15, 2024
 Emulators|[wine-mono](https://github.com/madewokherd/wine-mono/releases)|wine-mono-9.3.1|Nov 15, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|40cdc6f718d0b2b8174f56ef41c7f5e9ded1ff89|Nov 15, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|af28fb0385d00e0292c4703b3aa7e72762b564d2|Nov 15, 2024
