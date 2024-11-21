@@ -10,11 +10,12 @@ FLATPAK_SITE = https://github.com/flatpak/flatpak/releases/download/$(FLATPAK_VE
 
 FLATPAK_DEPENDENCIES += appstream glib-networking host-pkgconf host-python-pyparsing
 FLATPAK_DEPENDENCIES += json-glib libarchive libcap libcurl libfuse libglib2 libgpgme libostree
-FLATPAK_DEPENDENCIES += libseccomp pkgconf polkit python-pyparsing yaml-cpp
+FLATPAK_DEPENDENCIES += libseccomp libsoup pkgconf polkit python-pyparsing yaml-cpp
 FLATPAK_DEPENDENCIES += hicolor-icon-theme adwaita-icon-theme adwaita-icon-theme-light
 
 FLATPAK_CONF_OPTS += -Dsystem_install_dir=/userdata/saves/flatpak/binaries
 FLATPAK_CONF_OPTS += -Drun_media_dir=/media
+FLATPAK_CONF_OPTS += -Dhttp_backend=soup
 FLATPAK_CONF_OPTS += -Dselinux_module=disabled
 FLATPAK_CONF_OPTS += -Dsystemd=disabled
 FLATPAK_CONF_OPTS += -Ddocbook_docs=disabled
