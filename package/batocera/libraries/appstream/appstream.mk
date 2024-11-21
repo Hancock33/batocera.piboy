@@ -11,7 +11,7 @@ APPSTREAM_INSTALL_STAGING = YES
 APPSTREAM_DEPENDENCIES = libcurl libxmlb host-appstream
 HOST_APPSTREAM_DEPENDENCIES = host-brotli host-libcurl host-libxmlb
 
-APPSTREAM_CONF_OPTS = -Dgir=true -Dstemming=false -Dsystemd=false -Dzstd-support=true
+APPSTREAM_CONF_OPTS = -Dgir=true -Dstemming=false -Dsystemd=false -Dzstd-support=true -Dvapi=true -Dcompose=true
 APPSTREAM_CONF_OPTS += -Ddocs=false -Dapidocs=false -Dinstall-docs=false
 HOST_APPSTREAM_CONF_OPTS = -Dgir=false -Dstemming=false -Dsystemd=false -Dzstd-support=true
 HOST_APPSTREAM_CONF_OPTS += -Ddocs=false -Dapidocs=false -Dinstall-docs=false
