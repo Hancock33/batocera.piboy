@@ -15,6 +15,7 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|5c76e29e47cc7722c5a9aa959f3a74c
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|f3c09ccb5d0579cddf9ab61ec1a043a80f795709|Nov 21, 2024
 Utils|[re2c](http://github.com/skvadrik/re2c)|92c3ae5a99651e8cc7fb457057ff0c92061cb5f6|Nov 21, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|dd24e46ea17577ad584f27fe8de2a1eda7fe67f9|Nov 21, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.21.r6.ge7a74d70|Nov 21, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241121|Nov 21, 2024
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|533779cb8a1843581d5422a7f0aae1a35e6ab956|Nov 21, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241121|Nov 21, 2024
@@ -41,7 +42,6 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|674bfa6518db3c599ce7a
 Ports|[omf2097](http://github.com/omf2097/openomf)|b45723e56dcbd89cce877425703ace8822f78d02|Nov 20, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|c74981580a542731a087dc6a63d04dd5002f3817|Nov 20, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|bca3784c3b4d8870565422d5b5fce6b9e40e1320|Nov 20, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.21.r5.g8b3f47c1|Nov 20, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|58f1b5d1e3e629a902a7ed2fa4bf80a61f1e669f|Nov 20, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|3a02d8fb0eda66b97721109174229fff52f37efc|Nov 20, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|c4d77165a6e725651f61d50535919039b35e530d|Nov 20, 2024
