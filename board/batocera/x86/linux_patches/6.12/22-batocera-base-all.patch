@@ -994,7 +994,7 @@ index b878ddc99f94..b737a7b5e767 100644
  M:	Petr Mladek <pmladek@suse.com>
  R:	Steven Rostedt <rostedt@goodmis.org>
 diff --git a/Makefile b/Makefile
-index 2c4257eeb6d5..b7ebf80030f6 100644
+index 23a0d05a0ced..062ca7672e9e 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -801,11 +801,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -45376,7 +45376,7 @@ index 5734d5d5060f..af595df5b65f 100644
  	(1<<TRANSPARENT_HUGEPAGE_USE_ZERO_PAGE_FLAG);
  
 diff --git a/mm/mmap.c b/mm/mmap.c
-index 79d541f1502b..2f01f1a8e304 100644
+index 4f6e566d52fa..7fb4c1e97175 100644
 --- a/mm/mmap.c
 +++ b/mm/mmap.c
 @@ -901,6 +901,7 @@ __get_unmapped_area(struct file *file, unsigned long addr, unsigned long len,
