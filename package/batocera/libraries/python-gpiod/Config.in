@@ -1,8 +1,6 @@
 config BR2_PACKAGE_PYTHON_GPIOD
 	bool "python-gpiod"
-
 	help
-	  gpiod Python library with almost the same
-	  usage as libgpiodcxx.
+	  Python bindings for libgpiod.
 
-	  https://pypi.org/project/gpiod/
+	  https://git.kernel.org/pub/scm/libs/libgpiod/libgpiod.git
