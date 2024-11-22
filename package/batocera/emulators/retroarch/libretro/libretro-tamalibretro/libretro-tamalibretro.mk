@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Nov 21, 2024
-LIBRETRO_TAMALIBRETRO_VERSION = bea316c04306c5b14ef51e0a4b3ca6b78ce42bd9
+LIBRETRO_TAMALIBRETRO_VERSION = 8d92086ab8dbf9e8478f70c128c82756dc3f1c6a
 LIBRETRO_TAMALIBRETRO_SITE = https://github.com/celerizer/tamalibretro.git
 LIBRETRO_TAMALIBRETRO_SITE_METHOD=git
 LIBRETRO_TAMALIBRETRO_GIT_SUBMODULES=YES

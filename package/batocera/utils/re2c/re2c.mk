@@ -3,8 +3,8 @@
 # re2c
 #
 ################################################################################
-# Version: Commits on Nov 21, 2024
-RE2C_VERSION = 92c3ae5a99651e8cc7fb457057ff0c92061cb5f6
+# Version: Commits on Nov 22, 2024
+RE2C_VERSION = a75eb2b3fd5f0518aa93d62f6f61ed63d392d032
 RE2C_SITE =  $(call github,skvadrik,re2c,$(RE2C_VERSION))
 RE2C_AUTORECONF = YES
 
