@@ -36,6 +36,7 @@ Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|f3c95e7f5d135165
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|8731861b22946faf71bb94ce25147484db61eb6f|Nov 22, 2024
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|e45a2d0ad56df260b4c9a5a76dfc6d180ceb8e00|Nov 21, 2024
 Audio|[cubeb](http://github.com/mozilla/cubeb)|9a9d034c51859a045a34f201334f612c51e6c19d|Nov 21, 2024
+Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v116|Nov 21, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|5c76e29e47cc7722c5a9aa959f3a74ca0267830d|Nov 21, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|b34675822248836787ef602ab8bc73edc8420714|Nov 21, 2024
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|533779cb8a1843581d5422a7f0aae1a35e6ab956|Nov 21, 2024
@@ -318,7 +319,6 @@ Libraries|[python-hidapi](https://files.pythonhosted.org/packages/bf/6f/90c536b0
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|0630fced7e271b6c2f34315eb68801b90fb58f0c|Jul 23, 2024
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|349e41bc6a4be6bbf4f4cb8fa787add7944d3117|Jul 21, 2024
 Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|d1e0d5e0d91b202c9954a9b6432a1b9ff1e39c38|Jul 19, 2024
-Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v115|Jul 16, 2024
 Utils|[od-commander](http://github.com/od-contrib/commander)|9aa39d7bcb5d0f6faadaf027a1539d14177a3c7c|Jul 16, 2024
 Utils|[fdupes](http://github.com/adrianlopezroche/fdupes)|v2.3.2|Jul 15, 2024
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|fcf00779f08a9503ef30d26422f6b0350684820d|Jul 15, 2024
