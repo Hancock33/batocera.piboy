@@ -19,6 +19,7 @@ Utils|[re2c](http://github.com/skvadrik/re2c)|61c88fbf5ad4b34956c2c42331d1812f21
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|289d3bfa49511a285173d69e0d4a99f03e1b9a6f|Nov 24, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|d9dd9be210eb0383784a855a770b4e03901cf232|Nov 24, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|022288a9255f97a92855a6445d336f6ee6611ed7|Nov 24, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-9.22.r0.g7ba8823e|Nov 24, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241124|Nov 24, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241124|Nov 24, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|d1abc3eb8c4445409d08a96c31e83b09e60ccc2f|Nov 24, 2024
@@ -40,7 +41,6 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45375|Nov 23, 2024
 Libraries|[ffmpeg-rockchip](https://github.com/nyanmisaka/ffmpeg-rockchip.git)|b81c3bf1c40bbc34de3950451287fd4f5213bdd3|Nov 23, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|b61b47dcbe628bacb37f61974c1d1e36fbc7c867|Nov 23, 2024
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|bad3f3e4e6a7087149c5930e69234a1c77b15caa|Nov 23, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|9.22.r0.g7ba8823e|Nov 23, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|b9d565f4449257712b929c21ec70959bc1b4da37|Nov 23, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|87b1797b20b67520df4d1ab5d27a0d36e433ab0e|Nov 23, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|6ff7413b65f0698813e42092895446078e574501|Nov 23, 2024
