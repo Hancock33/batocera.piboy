@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-11-10 09:46+0800\n"
+"PO-Revision-Date: 2024-11-19 23:51+0800\n"
 "Last-Translator: wanger\n"
 "Language-Team: 王二,monyxie\n"
 "Language: zh_CN\n"
@@ -2767,7 +2767,7 @@ msgstr "瞄准上方"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Albania"
-msgstr ""
+msgstr "阿尔巴尼亚"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
@@ -2777,7 +2777,7 @@ msgstr "阿尔巴尼亚"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Algeria"
-msgstr ""
+msgstr "阿尔及利亚"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -2914,22 +2914,22 @@ msgstr "模拟"
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Down"
-msgstr ""
+msgstr "摇杆下"
 
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Left"
-msgstr ""
+msgstr "摇杆左"
 
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Right"
-msgstr ""
+msgstr "摇杆右"
 
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Up"
-msgstr ""
+msgstr "摇杆上"
 
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
@@ -3133,7 +3133,7 @@ msgstr "Archimedes 540"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Argentina"
-msgstr ""
+msgstr "阿根廷"
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -3143,7 +3143,7 @@ msgstr "方舟划桨"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Armenia"
-msgstr ""
+msgstr "亚美尼亚"
 
 #. TRANSLATION: drastic, libretro/desmume, libretro/melonds
 msgctxt "game_options"
@@ -3234,7 +3234,7 @@ msgstr "澳大利亚"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Austria"
-msgstr ""
+msgstr "奥地利"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -3338,7 +3338,7 @@ msgstr "避免每次都需要手动加载A面。"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Azerbaijan"
-msgstr ""
+msgstr "阿塞拜疆"
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
@@ -3593,7 +3593,7 @@ msgstr "BT601_625/D65 (推荐欧洲公司开发的游戏)"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Bahrain"
-msgstr ""
+msgstr "巴林"
 
 #. TRANSLATION: shared, shared
 msgctxt "game_options"
@@ -3645,17 +3645,17 @@ msgstr "NMI之前"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Belarus"
-msgstr ""
+msgstr "白俄罗斯"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Belgium"
-msgstr ""
+msgstr "比利时"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Belize"
-msgstr ""
+msgstr "伯利兹"
 
 #. TRANSLATION: thextech
 msgctxt "game_options"
@@ -3800,7 +3800,7 @@ msgstr "波巴·费特玩家脸部修正"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Bolivia"
-msgstr ""
+msgstr "玻利维亚"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -3885,7 +3885,7 @@ msgstr "棕色-旅行木"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Brunei"
-msgstr ""
+msgstr "文莱"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -3901,7 +3901,7 @@ msgstr "缓冲渲染"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Bulgaria"
-msgstr ""
+msgstr "保加利亚"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
@@ -3921,7 +3921,7 @@ msgstr "B键"
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Button C"
-msgstr ""
+msgstr "按键 C"
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
@@ -3946,7 +3946,7 @@ msgstr "Y键"
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Button Z"
-msgstr ""
+msgstr "按键 Z"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -4201,7 +4201,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "CONSOLE COUNTRY"
-msgstr ""
+msgstr "国家"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -4694,7 +4694,7 @@ msgstr "可以平滑图像。"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Canada"
-msgstr ""
+msgstr "加拿大"
 
 #. TRANSLATION: ryujinx, suyu
 msgctxt "game_options"
@@ -4821,7 +4821,7 @@ msgstr "更改Gamecube系统语言。"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Change the consoles country from the default of the United States."
-msgstr ""
+msgstr "将游戏机的国家从默认的美国更改为其他国家."
 
 #. TRANSLATION: doom3
 msgctxt "game_options"
@@ -4838,7 +4838,7 @@ msgctxt "game_options"
 msgid ""
 "Change the game's language. Game files require the supported language "
 "strings in the .pk4 files."
-msgstr ""
+msgstr "更改游戏语言. 游戏文件需要.pk4文件中支持的语言字符串."
 
 #. TRANSLATION: bigpemu, cemu, duckstation, libretro/vice_x128, libretro/vice_x64, ...
 msgctxt "game_options"
@@ -4868,7 +4868,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Chile"
-msgstr ""
+msgstr "智利"
 
 #. TRANSLATION: ryujinx, suyu, xenia, xenia-canary
 msgctxt "game_options"
@@ -5008,7 +5008,7 @@ msgstr "选择显示UI提示或接受默认值。"
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "Choose to display achievement messages in the UI."
-msgstr ""
+msgstr "在UI中选择显示的成就消息."
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -5258,7 +5258,7 @@ msgstr "Coleco ColecoVision 盒式磁带"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Colombia"
-msgstr ""
+msgstr "哥伦比亚"
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -5404,7 +5404,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Costa Rica"
-msgstr ""
+msgstr "哥斯达黎加"
 
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
@@ -6109,7 +6109,7 @@ msgstr "不影响屏幕键盘。"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Dominican Republic"
-msgstr ""
+msgstr "多米尼加共和国"
 
 #. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds
 msgctxt "game_options"
@@ -6150,7 +6150,7 @@ msgstr "将渲染分辨率提高一倍."
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Down"
-msgstr ""
+msgstr "下键"
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -6481,7 +6481,7 @@ msgstr "简单"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Ecuador"
-msgstr ""
+msgstr "厄瓜多尔"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -6506,7 +6506,7 @@ msgstr "爱尔兰"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "El Salvador"
-msgstr ""
+msgstr "萨尔瓦多"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -7218,7 +7218,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Estonia"
-msgstr ""
+msgstr "爱沙尼亚"
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, redream, ...
 msgctxt "game_options"
@@ -7637,7 +7637,7 @@ msgstr "Famicom（FDS）"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Faroe Islands"
-msgstr ""
+msgstr "法罗群岛"
 
 #. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
 msgctxt "keys_files"
@@ -7696,7 +7696,7 @@ msgstr "仅填充屏幕而不考虑长宽比，不适用于整数放大。"
 #. TRANSLATION: devilutionx
 msgctxt "game_options"
 msgid "Fills the screen."
-msgstr ""
+msgstr "填满屏幕."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -8547,7 +8547,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Georgia"
-msgstr ""
+msgstr "格鲁吉亚"
 
 #. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
 msgctxt "game_options"
@@ -8727,7 +8727,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Guatemala"
-msgstr ""
+msgstr "危地马拉"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -8999,7 +8999,7 @@ msgstr "雇佣员工"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Honduras"
-msgstr ""
+msgstr "洪都拉斯"
 
 #. TRANSLATION: suyu, xenia, xenia-canary
 msgctxt "game_options"
@@ -9295,12 +9295,12 @@ msgstr "将内存增加到128 MiB，用于调试或自制应用程序。"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "India"
-msgstr ""
+msgstr "印度"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Indonesia"
-msgstr ""
+msgstr "印度尼西亚"
 
 #. TRANSLATION: libretro/mednafen_wswan
 msgctxt "game_options"
@@ -9404,12 +9404,12 @@ msgstr "伊朗"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Iraq"
-msgstr ""
+msgstr "伊拉克"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Ireland"
-msgstr ""
+msgstr "爱尔兰"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
@@ -9539,7 +9539,7 @@ msgstr "日语 [Shift-JIS]"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Jordan"
-msgstr ""
+msgstr "约旦"
 
 #. TRANSLATION: solarus
 msgctxt "game_options"
@@ -9649,7 +9649,7 @@ msgstr "Kaeru WFC（178.62.43.212）"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Kazakhstan"
-msgstr ""
+msgstr "哈萨克斯坦"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -9664,7 +9664,7 @@ msgstr "Kempston游戏手柄"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Kenya"
-msgstr ""
+msgstr "肯尼亚"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin, libretro/flycast, ...
 msgctxt "game_options"
@@ -9751,7 +9751,7 @@ msgstr "韩语"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Kuwait"
-msgstr ""
+msgstr "科威特"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -9761,7 +9761,7 @@ msgstr "夸贾林"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Kyrgyzstan"
-msgstr ""
+msgstr "吉尔吉斯斯坦"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -9931,17 +9931,17 @@ msgstr "拉丁美洲西班牙语"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Latvia"
-msgstr ""
+msgstr "拉脱维亚"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Lebanon"
-msgstr ""
+msgstr "黎巴嫩"
 
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Left"
-msgstr ""
+msgstr "左键"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -9996,7 +9996,7 @@ msgstr "利比亚"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Liechtenstein"
-msgstr ""
+msgstr "列支敦士登"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -10095,7 +10095,7 @@ msgstr "线性滤波"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Lithuania"
-msgstr ""
+msgstr "立陶宛"
 
 #. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, psp.ppsspp.keys, ...
 msgctxt "keys_files"
@@ -10166,7 +10166,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Luxembourg"
-msgstr ""
+msgstr "卢森堡"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -10401,7 +10401,7 @@ msgstr "Mac SE（4MB RAM，2 ld软驱/HDD）"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Macau"
-msgstr ""
+msgstr "澳门"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -10442,12 +10442,12 @@ msgstr "使抖动模式在更高的分辨率下不那么明显。"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Malaysia"
-msgstr ""
+msgstr "马来西亚"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Maldives"
-msgstr ""
+msgstr "马尔代夫"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -10716,7 +10716,7 @@ msgstr "合并"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Mexico"
-msgstr ""
+msgstr "墨西哥"
 
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
@@ -10766,12 +10766,12 @@ msgstr "现代格斗风格"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Monaco"
-msgstr ""
+msgstr "摩纳哥"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Mongolia"
-msgstr ""
+msgstr "蒙古"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -10806,7 +10806,7 @@ msgstr "兼容性更好"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Morocco"
-msgstr ""
+msgstr "摩洛哥"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -11214,7 +11214,7 @@ msgstr "从不"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "New Zealand"
-msgstr ""
+msgstr "新西兰"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -11234,7 +11234,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Nicaragua"
-msgstr ""
+msgstr "尼加拉瓜"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -11304,7 +11304,7 @@ msgstr "常规（解释器）"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "North Macedonia"
-msgstr ""
+msgstr "北马其顿"
 
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
@@ -11531,7 +11531,7 @@ msgstr "Olivetti Prodest PC 128S磁盘（BBC Master Compact）"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Oman"
-msgstr ""
+msgstr "阿曼"
 
 #. TRANSLATION: awgl, cannonball, citra, citra, citra, ...
 msgctxt "game_options"
@@ -12076,12 +12076,12 @@ msgstr "Paddles手柄"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Pakistan"
-msgstr ""
+msgstr "巴基斯坦"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Panama"
-msgstr ""
+msgstr "巴拿马"
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -12101,7 +12101,7 @@ msgstr "ParaLLEl-RDP"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Paraguay"
-msgstr ""
+msgstr "巴拉圭"
 
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
@@ -12247,12 +12247,12 @@ msgstr "性能"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Peru"
-msgstr ""
+msgstr "秘鲁"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Philippines"
-msgstr ""
+msgstr "菲律宾"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -12521,7 +12521,7 @@ msgstr "提供模拟控制器和鼠标支持，同时修补硬件中发现的现
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Puerto Rico"
-msgstr ""
+msgstr "波多黎各"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -12566,7 +12566,7 @@ msgstr "退出主机"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Qatar"
-msgstr ""
+msgstr "卡塔尔"
 
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
@@ -13092,7 +13092,7 @@ msgstr "Rice"
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Right"
-msgstr ""
+msgstr "右键"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -13142,7 +13142,7 @@ msgstr "Roland MT-32/CM-32L"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Romania"
-msgstr ""
+msgstr "罗马尼亚"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
@@ -13421,7 +13421,7 @@ msgstr "分享MAME艺术品"
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "SHOW ACHIEVEMENT MESSAGES"
-msgstr ""
+msgstr "显示成就信息"
 
 #. TRANSLATION: duckstation, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, ...
 msgctxt "game_options"
@@ -13796,7 +13796,7 @@ msgstr "世嘉土星 Pad"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Saudi Arabia"
-msgstr ""
+msgstr "沙特阿拉伯"
 
 #. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, psp.ppsspp.keys, ...
 msgctxt "keys_files"
@@ -14727,12 +14727,12 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "South Africa"
-msgstr ""
+msgstr "南非"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "South Korea"
-msgstr ""
+msgstr "韩国"
 
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
@@ -15133,7 +15133,7 @@ msgstr "将游戏切换到多人模式."
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Switzerland"
-msgstr ""
+msgstr "瑞士"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -15154,7 +15154,7 @@ msgstr "将GB2Player/GBC2Player的保存与“保存/gb”或“保存/gbc”中
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Syria"
-msgstr ""
+msgstr "叙利亚"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -15499,7 +15499,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Thailand"
-msgstr ""
+msgstr "泰国"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
@@ -15765,7 +15765,7 @@ msgstr "三线性（PS2）"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Trinidad and Tobago"
-msgstr ""
+msgstr "特立尼达和多巴哥"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -15780,7 +15780,7 @@ msgstr "真彩色"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Tunisia"
-msgstr ""
+msgstr "突尼斯"
 
 #. TRANSLATION: libretro/dosbox_pure, suyu, xenia, xenia-canary
 msgctxt "game_options"
@@ -16125,7 +16125,7 @@ msgstr "UTC-9"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Ukraine"
-msgstr ""
+msgstr "乌克兰"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
@@ -16145,17 +16145,17 @@ msgstr "未连接"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "United Arab Emirates"
-msgstr ""
+msgstr "阿联酋"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "United Kingdom"
-msgstr ""
+msgstr "英国"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "United States"
-msgstr ""
+msgstr "美国"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -16195,7 +16195,7 @@ msgstr "直到超时"
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Up"
-msgstr ""
+msgstr "上键"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -16226,7 +16226,7 @@ msgstr "放大3D物体上的纹理。"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Uruguay"
-msgstr ""
+msgstr "乌拉圭"
 
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
@@ -16428,7 +16428,7 @@ msgstr "通常不会比单核模式快多少。"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Uzbekistan"
-msgstr ""
+msgstr "乌兹别克斯坦"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -16628,7 +16628,7 @@ msgstr "大大提高了缓冲区地图的速度。"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Venezuela"
-msgstr ""
+msgstr "委内瑞拉"
 
 #. TRANSLATION: drastic, libretro/fceumm, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -16673,7 +16673,7 @@ msgstr "Videopac+ G7400（法国版）"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Vietnam"
-msgstr ""
+msgstr "越南"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -17009,7 +17009,7 @@ msgstr "黄色"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Yemen"
-msgstr ""
+msgstr "也门"
 
 #. TRANSLATION: vita3k
 msgctxt "game_options"

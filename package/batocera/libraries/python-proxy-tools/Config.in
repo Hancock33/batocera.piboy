@@ -1,2 +1,6 @@
 config BR2_PACKAGE_PYTHON_PROXY_TOOLS
 	bool "python-proxy-tools"
+	help
+	  Proxy Implementation.
+
+	  http://github.com/jtushman/proxy_tools

@@ -5,7 +5,8 @@
 ################################################################################
 # Version: Commits on Nov 27, 2021
 UBOOT_POWKIDDY_A13_VERSION = powkiddy-a13
-UBOOT_POWKIDDY_A13_SITE = $(call github,alpgarcia,caesar-u-boot,$(UBOOT_POWKIDDY_A13_VERSION))
+UBOOT_POWKIDDY_A13_SITE = \
+    $(call github,alpgarcia,caesar-u-boot,$(UBOOT_POWKIDDY_A13_VERSION))
 UBOOT_POWKIDDY_A13_LICENSE = GPLv2
 
 UBOOT_POWKIDDY_A13_DEPENDENCIES = rk3128-blobs
@@ -15,7 +16,6 @@ define UBOOT_POWKIDDY_A13_BUILD_CMDS
 	# Build uboot for wx8-rk3128
 	cd $(@D) && ARCH=arm CHIP=rk3128 CROSS_COMPILE=$(HOST_DIR)/bin/arm-buildroot-linux-gnueabihf- make powkiddy-a13-rk3128_defconfig
 	cd $(@D) && ARCH=arm CHIP=rk3128 CROSS_COMPILE=$(HOST_DIR)/bin/arm-buildroot-linux-gnueabihf- make
-	#cd $(@D) && $(@D)/make.sh wx8-rk3128
 
 	# Generate idbloader.img
 	$(@D)/tools/mkimage -n rk3128 -T rksd -d $(BINARIES_DIR)/rkbin/bin/rk31/rk3128_ddr_300MHz_v2.12.bin $(@D)/idbloader.img

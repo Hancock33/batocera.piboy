@@ -3,8 +3,8 @@
 # cubeb
 #
 ################################################################################
-# Version: Commits on Oct 23, 2024
-CUBEB_VERSION = 78b2bce70e0d1c21d3c175b72f322c50801b2e94
+# Version: Commits on Nov 21, 2024
+CUBEB_VERSION = 9a9d034c51859a045a34f201334f612c51e6c19d
 CUBEB_SITE = $(call github,mozilla,cubeb,$(CUBEB_VERSION))
 
 CUBEB_LICENSE = ISC
