@@ -4,8 +4,8 @@
 #
 ################################################################################
 # Keep the version aligned to buildroot ffmpeg
-# Version: Commits on Nov 19, 2024
-FFMPEG_ROCKCHIP_VERSION = abfc47f288d10ea9ea4ff05ea4deea5e153ac709
+# Version: Commits on Nov 23, 2024
+FFMPEG_ROCKCHIP_VERSION = b81c3bf1c40bbc34de3950451287fd4f5213bdd3
 FFMPEG_ROCKCHIP_SITE = https://github.com/nyanmisaka/ffmpeg-rockchip.git
 FFMPEG_ROCKCHIP_SITE_METHOD = git
 FFMPEG_ROCKCHIP_GIT_SUBMODULES = YES
