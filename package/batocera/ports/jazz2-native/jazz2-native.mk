@@ -3,8 +3,8 @@
 # jazz2-native
 #
 ################################################################################
-# Version: Commits on Nov 18, 2024
-JAZZ2_NATIVE_VERSION = 251461139a86524353f14484693dd1d5bde28fca
+# Version: Commits on Nov 23, 2024
+JAZZ2_NATIVE_VERSION = bad3f3e4e6a7087149c5930e69234a1c77b15caa
 JAZZ2_NATIVE_SITE =  $(call github,deathkiller,jazz2-native,$(JAZZ2_NATIVE_VERSION))
 JAZZ2_NATIVE_LICENSE = GPL-3.0
 JAZZ2_NATIVE_LICENSE_FILE = LICENSE
@@ -24,11 +24,9 @@ endif
 ifeq ($(BR2_PACKAGE_LIBGLFW),y)
     JAZZ2_NATIVE_DEPENDENCIES += libglfw
     JAZZ2_NATIVE_CONF_OPTS += -DNCINE_PREFERRED_BACKEND=GLFW
-else
+else ifeq ($(BR2_PACKAGE_BATOCERA_GLES3),y)
     JAZZ2_NATIVE_CONF_OPTS += -DNCINE_PREFERRED_BACKEND=SDL2
-    ifeq ($(BR2_PACKAGE_HAS_LIBGLES),y)
-        JAZZ2_NATIVE_CONF_OPTS += -DNCINE_WITH_OPENGLES=ON
-    endif
+    JAZZ2_NATIVE_CONF_OPTS += -DNCINE_WITH_OPENGLES=ON
 endif
 
 define JAZZ2_NATIVE_EVMAPY

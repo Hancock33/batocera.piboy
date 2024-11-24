@@ -13,4 +13,4 @@ config BR2_PACKAGE_PYTHON_ADAFRUIT_BLINKA
 	  CircuitPython APIs for non-CircuitPython versions of Python
 	  such as CPython on Linux and MicroPython.
 
-	  https://pypi.org/project/Adafruit-Blinka
+	  https://github.com/adafruit/Adafruit_Blinka

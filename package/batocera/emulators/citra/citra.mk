@@ -3,9 +3,9 @@
 # citra
 #
 ################################################################################
-# Version: Commits on Oct 29, 2024
-CITRA_VERSION = 864414f8fd79c90feff29f674898993f0053552f
-CITRA_SITE = https://github.com/PabloMK7/citra.git
+# Version: Commits on Nov 24, 2024
+CITRA_VERSION = db7a68c28b1f12c87ad27f72f76880dbf100aac1
+CITRA_SITE = https://github.com/Borked3DS/Borked3DS.git
 CITRA_SITE_METHOD=git
 CITRA_GIT_SUBMODULES=YES
 CITRA_LICENSE = GPLv2
@@ -35,7 +35,7 @@ CITRA_CONF_ENV += LDFLAGS=-lpthread
 
 define CITRA_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin
-	$(INSTALL) -D $(@D)/buildroot-build/bin/Release/citra-qt $(TARGET_DIR)/usr/bin/citra-qt
+	$(INSTALL) -D $(@D)/buildroot-build/bin/Release/borked3ds $(TARGET_DIR)/usr/bin/citra-qt
 endef
 
 define CITRA_EVMAP

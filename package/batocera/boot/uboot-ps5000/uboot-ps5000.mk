@@ -15,7 +15,6 @@ define UBOOT_PS5000_BUILD_CMDS
 	# Build uboot for wx8-rk3128
 	cd $(@D) && ARCH=arm CHIP=rk3128 CROSS_COMPILE=$(HOST_DIR)/bin/arm-buildroot-linux-gnueabihf- make ps5000-rk3128_defconfig
 	cd $(@D) && ARCH=arm CHIP=rk3128 CROSS_COMPILE=$(HOST_DIR)/bin/arm-buildroot-linux-gnueabihf- make
-	#cd $(@D) && $(@D)/make.sh wx8-rk3128
 
 	# Generate idbloader.img
 	$(@D)/tools/mkimage -n rk3128 -T rksd -d $(BINARIES_DIR)/rkbin/bin/rk31/rk3128_ddr_300MHz_v2.12.bin $(@D)/idbloader.img

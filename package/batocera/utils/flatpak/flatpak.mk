@@ -4,20 +4,22 @@
 #
 ################################################################################
 # Version: Commits on Aug 14, 2024
-FLATPAK_VERSION = 1.14.10
+FLATPAK_VERSION = 1.15.10
 FLATPAK_SOURCE = flatpak-$(FLATPAK_VERSION).tar.xz
 FLATPAK_SITE = https://github.com/flatpak/flatpak/releases/download/$(FLATPAK_VERSION)
 
 FLATPAK_DEPENDENCIES += appstream glib-networking host-pkgconf host-python-pyparsing
 FLATPAK_DEPENDENCIES += json-glib libarchive libcap libcurl libfuse libglib2 libgpgme libostree
-FLATPAK_DEPENDENCIES += libseccomp pkgconf polkit python-pyparsing yaml-cpp
+FLATPAK_DEPENDENCIES += libseccomp libsoup pkgconf polkit python-pyparsing yaml-cpp
 FLATPAK_DEPENDENCIES += hicolor-icon-theme adwaita-icon-theme adwaita-icon-theme-light
 
-FLATPAK_CONF_OPTS += --with-sysroot="$(STAGING_DIR)"
-FLATPAK_CONF_OPTS += --with-gpgme-prefix="$(STAGING_DIR)/usr"
-FLATPAK_CONF_OPTS += --with-system-install-dir="/userdata/saves/flatpak/binaries"
-FLATPAK_CONF_OPTS += --with-run-media-dir="/media"
-FLATPAK_CONF_OPTS += --disable-selinux-module
+FLATPAK_CONF_OPTS += -Dsystem_install_dir=/userdata/saves/flatpak/binaries
+FLATPAK_CONF_OPTS += -Drun_media_dir=/media
+FLATPAK_CONF_OPTS += -Dhttp_backend=soup
+FLATPAK_CONF_OPTS += -Dselinux_module=disabled
+FLATPAK_CONF_OPTS += -Dsystemd=disabled
+FLATPAK_CONF_OPTS += -Ddocbook_docs=disabled
+FLATPAK_CONF_OPTS += -Dtests=false
 
 FLATPAK_CONF_ENV += LDFLAGS=-lpthread
 
@@ -33,5 +35,5 @@ endef
 
 FLATPAK_POST_INSTALL_TARGET_HOOKS += FLATPAK_INSTALL_SCRIPTS
 
-$(eval $(autotools-package))
-$(eval $(host-autotools-package))
+$(eval $(meson-package))
+$(eval $(host-meson-package))
