@@ -7,7 +7,7 @@
 OMF2097_VERSION = a434ae36363a6c3274c87f4e2101b7b3c8141bd9
 OMF2097_SITE = $(call github,omf2097,openomf,$(OMF2097_VERSION))
 OMF2097_DEPENDENCIES = sdl2 sdl2_mixer libargtable2 enet libconfuse libminiupnpc
-OMF2097_DEPENDENCIES += host-libminiupnpc host-omf2097 
+OMF2097_DEPENDENCIES += host-omf2097 
 OMF2097_LICENSE = MIT
 OMF2097_SUPPORTS_IN_SOURCE_BUILD = NO
 
