@@ -18,6 +18,8 @@ Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|297918d2c28e7
 Utils|[re2c](http://github.com/skvadrik/re2c)|e5cb9a1ebd9efab6604930b9f773fd684df6edd5|Nov 25, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.28.1-rc.2|Nov 25, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|b2af02f9fb34c8e32c67f5948957b9045c01258e|Nov 25, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241125|Nov 25, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241125|Nov 25, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|b581eda6c7f195ff86d1c3bc6d721f142870bae4|Nov 25, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|7ec56763f9d6c68f8d3f7f16a9e34fffcd765492|Nov 25, 2024
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|2f5633d3a94b5075f089c74566017ea8f44e0901|Nov 25, 2024
@@ -36,8 +38,6 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|7994ff3a75512f47bee3
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|289d3bfa49511a285173d69e0d4a99f03e1b9a6f|Nov 24, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|d9dd9be210eb0383784a855a770b4e03901cf232|Nov 24, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-9.22.r0.g7ba8823e|Nov 24, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241124|Nov 24, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241124|Nov 24, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|5576e66670c98989851acb319c7e3c8ae4948534|Nov 24, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|cee78f36bcc81bd77368147d51e7184f254645c0|Nov 24, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|6b24b263ab61fb717ac6254611cce50ea21999ed|Nov 24, 2024
