@@ -1,8 +1,8 @@
 diff --git a/dlls/winebus.sys/main.c b/dlls/winebus.sys/main.c
-index f7a634dbf..f1ebdcb1d 100644
+index 5128f737af1..268d54c6922 100644
 --- a/dlls/winebus.sys/main.c
 +++ b/dlls/winebus.sys/main.c
-@@ -919,7 +919,7 @@ static NTSTATUS udev_driver_init(BOOL enable_sdl)
+@@ -933,7 +933,7 @@ static NTSTATUS udev_driver_init(BOOL enable_sdl)
          .wait_code = udev_wait,
      };
  
