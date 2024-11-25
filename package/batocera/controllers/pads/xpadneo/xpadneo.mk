@@ -9,8 +9,6 @@ XPADNEO_SITE = $(call github,atar-axis,xpadneo,$(XPADNEO_VERSION))
 XPADNEO_DEPENDENCIES = host-cabextract bluez5_utils
 XPADNEO_MODULE_SUBDIRS = hid-xpadneo/src
 
-XPADNEO_USER_EXTRA_CFLAGS = -w -Wno-error=unused-function -Wno-incompatible-pointer-types
-
 XPADNEO_MODULE_MAKE_OPTS = \
 	KCFLAGS="$$KCFLAGS $(XPADNEO_USER_EXTRA_CFLAGS)"
 
