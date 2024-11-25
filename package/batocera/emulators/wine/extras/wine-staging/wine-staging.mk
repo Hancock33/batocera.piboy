@@ -3,8 +3,8 @@
 # wine-staging
 #
 ################################################################################
-# Version: Commits on Nov 08, 2024
-WINE_STAGING_VERSION = wine-9.21
+# Version: Commits on Nov 22, 2024
+WINE_STAGING_VERSION = wine-9.22
 WINE_STAGING_SOURCE = wine-$(WINE_STAGING_VERSION).tar.gz
 WINE_STAGING_SITE = $(call github,wine-mirror,wine,$(WINE_STAGING_VERSION))
 WINE_STAGING_LICENSE = LGPL-2.1+
@@ -12,7 +12,7 @@ WINE_STAGING_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_STAGING_SELINUX_MODULES = wine
 WINE_STAGING_DEPENDENCIES = host-bison host-flex host-wine-custom
 HOST_WINE_STAGING_DEPENDENCIES = host-bison host-flex
-WINE_STAGING_STAGING_VERSION = v9.21
+WINE_STAGING_STAGING_VERSION = v9.22
 HOST_WINE_STAGING_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/$(WINE_STAGING_STAGING_VERSION).tar.gz
 
 define WINE_STAGING_AUTOGEN
