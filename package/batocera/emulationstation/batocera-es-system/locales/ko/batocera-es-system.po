@@ -7354,11 +7354,6 @@ msgctxt "keys_files"
 msgid "Exit Duckstation"
 msgstr "덕스테이션 나가기"
 
-#. TRANSLATION: mame.keys
-msgctxt "keys_files"
-msgid "Exit Emulator"
-msgstr "에뮬레이터 나가기"
-
 #. TRANSLATION: steam.keys
 msgctxt "keys_files"
 msgid "Exit Steam"
@@ -7732,7 +7727,7 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "페로 제도"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Fast Forward"
 msgstr "빨리 감기"
@@ -10217,7 +10212,7 @@ msgctxt "game_options"
 msgid "Lithuania"
 msgstr "리투아니아"
 
-#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, psp.ppsspp.keys, ...
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Load State"
 msgstr "상태 로드"
@@ -13959,7 +13954,7 @@ msgctxt "game_options"
 msgid "Saudi Arabia"
 msgstr "사우디아라비아"
 
-#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, psp.ppsspp.keys, ...
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "저장 상태"
@@ -14024,7 +14019,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "화면 기울기 (°)"
 
-#. TRANSLATION: doom3.dhewm3.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, ...
+#. TRANSLATION: doom3.dhewm3.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, psx.duckstation.keys, scummvm.keys, ...
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "스크린샷"
@@ -14667,12 +14662,12 @@ msgctxt "game_options"
 msgid "Skynet"
 msgstr "스카이넷"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Slot +"
 msgstr "슬롯 +"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Slot -"
 msgstr "슬롯 -"
@@ -18213,6 +18208,10 @@ msgstr "노란색/파란색"
 #~ msgctxt "keys_files"
 #~ msgid "Exit Drastic"
 #~ msgstr "드라스틱 나가기"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Emulator"
+#~ msgstr "에뮬레이터 나가기"
 
 #, fuzzy
 #~ msgctxt "game_options"
