@@ -3,8 +3,8 @@
 # new-lg4ff
 #
 ################################################################################
-# Version: Commits on Jun 18, 2024
-NEW_LG4FF_VERSION = 1a2d5727876dd7befce23d9695924e9446b31c4b
+# Version: Commits on Nov 18, 2024
+NEW_LG4FF_VERSION = 6100a34c182536c607af80e119d54a66c6fb2a23
 NEW_LG4FF_SITE = $(call github,berarma,new-lg4ff,$(NEW_LG4FF_VERSION))
 
 NEW_LG4FF_USER_EXTRA_CFLAGS = -w -Wno-incompatible-pointer-types
