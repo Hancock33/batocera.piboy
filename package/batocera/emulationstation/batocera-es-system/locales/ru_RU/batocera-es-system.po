@@ -7374,11 +7374,6 @@ msgctxt "keys_files"
 msgid "Exit Duckstation"
 msgstr "Выйти из DuckStation"
 
-#. TRANSLATION: mame.keys
-msgctxt "keys_files"
-msgid "Exit Emulator"
-msgstr "Выйти из эмулятора"
-
 #. TRANSLATION: steam.keys
 msgctxt "keys_files"
 msgid "Exit Steam"
@@ -7752,7 +7747,7 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr ""
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Fast Forward"
 msgstr "Быстрая перемотка"
@@ -10245,7 +10240,7 @@ msgctxt "game_options"
 msgid "Lithuania"
 msgstr ""
 
-#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, psp.ppsspp.keys, ...
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Load State"
 msgstr "Загрузка"
@@ -13997,7 +13992,7 @@ msgctxt "game_options"
 msgid "Saudi Arabia"
 msgstr ""
 
-#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, psp.ppsspp.keys, ...
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "Сохранение"
@@ -14062,7 +14057,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Наклон экрана (градус)"
 
-#. TRANSLATION: doom3.dhewm3.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, ...
+#. TRANSLATION: doom3.dhewm3.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, psx.duckstation.keys, scummvm.keys, ...
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Скриншот"
@@ -14710,12 +14705,12 @@ msgctxt "game_options"
 msgid "Skynet"
 msgstr "Скайнет"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Slot +"
 msgstr "Слот +"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Slot -"
 msgstr "Слот -"
@@ -18696,6 +18691,10 @@ msgstr "жёлтая/синяя"
 #~ msgctxt "keys_files"
 #~ msgid "Exit Drastic"
 #~ msgstr "Выйти из Drastic"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Emulator"
+#~ msgstr "Выйти из эмулятора"
 
 #~ msgctxt "game_options"
 #~ msgid "FFX videos fix (Fixes bad graphic overlays)"

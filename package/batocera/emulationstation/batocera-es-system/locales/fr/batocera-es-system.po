@@ -7408,11 +7408,6 @@ msgctxt "keys_files"
 msgid "Exit Duckstation"
 msgstr "Quitter Duckstation"
 
-#. TRANSLATION: mame.keys
-msgctxt "keys_files"
-msgid "Exit Emulator"
-msgstr "Quitter l'émulateur"
-
 #. TRANSLATION: steam.keys
 msgctxt "keys_files"
 msgid "Exit Steam"
@@ -7789,7 +7784,7 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "Faroe Islands"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Fast Forward"
 msgstr "Avance rapide"
@@ -10300,7 +10295,7 @@ msgctxt "game_options"
 msgid "Lithuania"
 msgstr "Lituanie"
 
-#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, psp.ppsspp.keys, ...
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Load State"
 msgstr "Charger une sauvegarde d'état"
@@ -14073,7 +14068,7 @@ msgctxt "game_options"
 msgid "Saudi Arabia"
 msgstr "Arabie Saoudite"
 
-#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, psp.ppsspp.keys, ...
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "Écrire une sauvegarde d'état"
@@ -14138,7 +14133,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Inclinaison de l'écran (degré)"
 
-#. TRANSLATION: doom3.dhewm3.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, ...
+#. TRANSLATION: doom3.dhewm3.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, psx.duckstation.keys, scummvm.keys, ...
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Capture d'écran"
@@ -14788,12 +14783,12 @@ msgctxt "game_options"
 msgid "Skynet"
 msgstr "Skynet"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Slot +"
 msgstr "Emplacement +"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Slot -"
 msgstr "Emplacement -"
@@ -18819,6 +18814,10 @@ msgstr "jaune/bleu"
 #~ msgctxt "keys_files"
 #~ msgid "Exit Drastic"
 #~ msgstr "Quitter Drastic"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Emulator"
+#~ msgstr "Quitter l'émulateur"
 
 #~ msgctxt "game_options"
 #~ msgid "FFX videos fix (Fixes bad graphic overlays)"

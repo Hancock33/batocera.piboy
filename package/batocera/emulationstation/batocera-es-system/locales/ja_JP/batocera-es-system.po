@@ -7337,11 +7337,6 @@ msgctxt "keys_files"
 msgid "Exit Duckstation"
 msgstr "Duckstation を終了"
 
-#. TRANSLATION: mame.keys
-msgctxt "keys_files"
-msgid "Exit Emulator"
-msgstr "エミュレータを終了"
-
 #. TRANSLATION: steam.keys
 msgctxt "keys_files"
 msgid "Exit Steam"
@@ -7715,7 +7710,7 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "フェロー諸島"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Fast Forward"
 msgstr "早送り"
@@ -10202,7 +10197,7 @@ msgctxt "game_options"
 msgid "Lithuania"
 msgstr "リトアニア"
 
-#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, psp.ppsspp.keys, ...
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Load State"
 msgstr "ステートロード"
@@ -13934,7 +13929,7 @@ msgctxt "game_options"
 msgid "Saudi Arabia"
 msgstr "サウジアラビア"
 
-#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, psp.ppsspp.keys, ...
+#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "ステートセーブ"
@@ -13999,7 +13994,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "画面の傾き（度）"
 
-#. TRANSLATION: doom3.dhewm3.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, mame.keys, psx.duckstation.keys, ...
+#. TRANSLATION: doom3.dhewm3.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, psx.duckstation.keys, scummvm.keys, ...
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "スクリーンショット"
@@ -14640,12 +14635,12 @@ msgctxt "game_options"
 msgid "Skynet"
 msgstr "Skynet"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Slot +"
 msgstr "スロット +"
 
-#. TRANSLATION: mame.keys, psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Slot -"
 msgstr "スロット -"
@@ -18045,6 +18040,10 @@ msgstr "黄/青"
 #~ msgctxt "keys_files"
 #~ msgid "Exit Drastic"
 #~ msgstr "Drastic を終了"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Emulator"
+#~ msgstr "エミュレータを終了"
 
 #~ msgid "FORGET A BLUETOOTH DEVICE"
 #~ msgstr "BLUETOOTH デバイスの削除"
