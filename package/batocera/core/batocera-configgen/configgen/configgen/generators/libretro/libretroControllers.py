@@ -116,7 +116,7 @@ def writeControllerConfig(retroconfig: UnixSettings, controller: Controller, pla
 # Create a configuration for a given controller
 def generateControllerConfig(controller: Controller, retroarchspecials: Mapping[str, str], system: Emulator, lightgun: bool, mouseIndex: int | None = 0):
 # Map an emulationstation button name to the corresponding retroarch name
-    retroarchbtns = {'b': 'a', 'a': 'b', 'y': 'x', 'x': 'y', \
+    retroarchbtns = {'a': 'a', 'b': 'b', 'x': 'x', 'y': 'y', \
                      'pageup': 'l', 'pagedown': 'r', 'l2': 'l2', 'r2': 'r2', \
                      'l3': 'l3', 'r3': 'r3', \
                      'start': 'start', 'select': 'select'}
