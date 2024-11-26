@@ -162,7 +162,7 @@ class MugenGenerator(Generator):
         # Save the configuration
         with settings_path.open("w", encoding="utf-8-sig") as f:
             f.writelines(new_config)
-        
+
         # Foce use of virtual desktop
         subprocess.run(['/usr/bin/batocera-settings-set', 'mugen.virtual_desktop', '1'], check=True)
 
@@ -181,7 +181,7 @@ class MugenGenerator(Generator):
             })
 
         commandArray = ["batocera-wine", "mugen", "play", str(rom_path)]
-        
+
         return Command.Command(
             array=commandArray,
             env=environment
