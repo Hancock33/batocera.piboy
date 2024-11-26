@@ -3,7 +3,7 @@
 # fsuae
 #
 ################################################################################
-# Version: Commits on Jul 30, 2022
+# Version: Commits on Jul 29, 2022
 FSUAE_VERSION = bfa0c7522c6c5f73cceb340d677491d056febd01
 FSUAE_SITE = $(call github,FrodeSolheim,fs-uae,$(FSUAE_VERSION))
 FSUAE_LICENSE = GPLv2
