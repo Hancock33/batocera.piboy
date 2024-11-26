@@ -9,6 +9,7 @@ Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|3f1be5a4cea1c8b3
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|173129cca3a449d3c6a12385ad40c99835254ba3|Nov 26, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|b207ecad6a35b43649496db5ea6e3042c773f1ac|Nov 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|7a2cadafb1fd4dd34f7a95f6e2f29a1152b35910|Nov 26, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-9.22_20241126|Nov 26, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241126|Nov 26, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241126|Nov 26, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|a9bddb92e3152f58df6242f1f773fc8d9421af79|Nov 26, 2024
@@ -48,7 +49,6 @@ Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|72d808cc4d6db5d38e5d8
 Ports|[raze](http://github.com/ZDoom/Raze)|5eaa53dcc98d96faa42c1554025b8565a9a81d34|Nov 24, 2024
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|289d3bfa49511a285173d69e0d4a99f03e1b9a6f|Nov 24, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|d9dd9be210eb0383784a855a770b4e03901cf232|Nov 24, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-9.22.r0.g7ba8823e|Nov 24, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|5576e66670c98989851acb319c7e3c8ae4948534|Nov 24, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|cee78f36bcc81bd77368147d51e7184f254645c0|Nov 24, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|6b24b263ab61fb717ac6254611cce50ea21999ed|Nov 24, 2024
