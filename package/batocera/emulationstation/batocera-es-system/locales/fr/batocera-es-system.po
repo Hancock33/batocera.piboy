@@ -4884,6 +4884,8 @@ msgid ""
 "Change the game's language. Game files require the supported language "
 "strings in the .pk4 files."
 msgstr ""
+"Modifiez la langue du jeu. Les fichiers de jeu nécessitent les chaînes de "
+"langue prises en charge dans les fichiers .pk4."
 
 #. TRANSLATION: bigpemu, cemu, duckstation, libretro/vice_x128, libretro/vice_x64, ...
 msgctxt "game_options"
