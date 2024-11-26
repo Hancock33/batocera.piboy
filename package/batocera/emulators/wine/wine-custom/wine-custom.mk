@@ -196,7 +196,7 @@ else
 WINE_CUSTOM_CONF_OPTS += --without-udev
 endif
 
-ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
+ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
     WINE_CUSTOM_CONF_OPTS += --with-vulkan
     WINE_CUSTOM_DEPENDENCIES += vulkan-headers vulkan-loader
 else
