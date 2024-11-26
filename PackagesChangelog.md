@@ -80,6 +80,7 @@ Emulators|[cemu](https://github.com/cemu-project/Cemu)|90eb2e01f405e502ed33fea33
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|58c8a33d1165de2a3ce22483aeccb51601cb1a41|Nov 22, 2024
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|eefb7b83bc9b602455d9eaf34a51149a6e9cca96|Nov 22, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|f3a69a9cf174c4f31c5e7cd2a6c9b17b7eaa535a|Nov 22, 2024
+Emulators|[wine-mono](https://github.com/madewokherd/wine-mono/releases)|wine-mono-9.4.0|Nov 22, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|ba7a13a0b8ae9dc4857544ddeb923e627ece971b|Nov 22, 2024
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|1a81045d3f4ad288f323edd09eaffc89ae27755d|Nov 22, 2024
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|58c8a33d1165de2a3ce22483aeccb51601cb1a41|Nov 22, 2024
@@ -111,7 +112,6 @@ Emulators|[libretro-stella](http://github.com/stella-emu/stella)|0e2ce2771c7d0c9
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|ebe4aceb721894ff614481e97c50df0fd7e3e814|Nov 16, 2024
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|10a371a5e8ca975c71c8228a4131f21657d066da|Nov 16, 2024
 Utils|[rclone](http://github.com/rclone/rclone)|v1.68.2|Nov 15, 2024
-Emulators|[wine-mono](https://github.com/madewokherd/wine-mono/releases)|wine-mono-9.3.1|Nov 15, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|af28fb0385d00e0292c4703b3aa7e72762b564d2|Nov 15, 2024
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|931586f0512663f625a6e981d3047a6620281ab5|Nov 15, 2024
 Emulators|[libretro-beetle-supergrafx](http://github.com/libretro/beetle-supergrafx-libretro)|a776133c34ae8da5daf7d9ccb43e3e292e2b07b0|Nov 15, 2024

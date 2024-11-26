@@ -301,7 +301,7 @@ Emulators|[vpinball](http://github.com/vpinball/vpinball)|0630fced7e271b6c2f3431
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-9.22_20241126|Nov 26, 2024
 Emulators|[wine-ge](http://github.com/GloriousEggroll/proton-wine)|39021e609a24b6aeffdf9c4695a286d71e7dffbc|Feb 04, 2024
 Emulators|[wine-lutris](http://github.com/lutris/wine)|lutris-wine-7.2-2|Jul 06, 2022
-Emulators|[wine-mono](https://github.com/madewokherd/wine-mono/releases)|wine-mono-9.3.1|Nov 15, 2024
+Emulators|[wine-mono](https://github.com/madewokherd/wine-mono/releases)|wine-mono-9.4.0|Nov 22, 2024
 Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-9.22|Nov 22, 2024
 Emulators|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-9.22.r0.g7ba8823e|Nov 24, 2024
 Emulators|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-9.0-20241123-proton|Nov 23, 2024

@@ -50,7 +50,6 @@ wf-recorder.mk
 wildmidi.mk
 winbtrfs.mk
 wine-lutris.mk
-wine-mono.mk
 wsdd.mk
 wxwidgets.mk
 x16emu.mk
