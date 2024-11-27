@@ -261,8 +261,8 @@ Libraries|[python-adafruit-circuitpython-typing](https://files.pythonhosted.org/
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|aa08f606eb20f3652efacedfdbb22ef5e44423eb|Oct 10, 2024
 Emulators|[libretro-arduous](https://github.com/libretro/arduous.git)|2273b485628790a2ce954941341b5b071c3fb30e|Oct 10, 2024
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|6f0f603fb374f28a4680d4ab99d159d69877065e|Oct 09, 2024
-Controllers|[db9_gpio_rpi](http://github.com/marqs85/db9_gpio_rpi)|4318dc14dab75ba0d150bbedf1a8155ef3284669|Oct 09, 2024
-Controllers|[gamecon_gpio_rpi](http://github.com/marqs85/gamecon_gpio_rpi)|315388cbd3a3a63385e30e9a451fd059e5ab9a44|Oct 09, 2024
+Controllers|[db9_gpio_rpi](http://github.com/marqs85/db9_gpio_rpi)|v1.3|Oct 09, 2024
+Controllers|[gamecon_gpio_rpi](http://github.com/marqs85/gamecon_gpio_rpi)|v1.5|Oct 09, 2024
 Libraries|[python-adafruit-circuitpython-busdevice](https://files.pythonhosted.org/packages/af/8d/c1178adc99d2dc686874e4369482f5678af95b82a9ad22276d8c446d146c)|5.2.10|Oct 07, 2024
 Libraries|[python-adafruit-circuitpython-connectionmanager](https://files.pythonhosted.org/packages/51/fb/83a1160eb2112abe84bf0ad41427439b253199565cc1a710d57ca30bf44c)|3.1.2|Oct 07, 2024
 Libraries|[python-adafruit-circuitpython-neopixel-spi](https://files.pythonhosted.org/packages/1c/9d/70e1352338269bfbd634fa76267c8831467373c14325860a4bd11aca6bf1)|1.0.10|Oct 07, 2024

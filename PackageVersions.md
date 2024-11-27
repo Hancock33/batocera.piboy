@@ -31,9 +31,9 @@ Boot|[uboot-ps5000](http://github.com/rk3128-cfw/caesar-u-boot)|e20e9d85d326345f
 Boot|[uboot-ps7000](http://github.com/rk3128-cfw/caesar-u-boot)|e20e9d85d326345fb2e80105a79263c95757414f|Nov 02, 2021
 Boot|[uboot-rk3588](http://github.com/stvhay/u-boot)|e1bb28dd5be8e347096be7b0ea4e64716d054268|Feb 21, 2023
 Boot|[uboot-visionfive2](https://github.com/starfive-tech/VisionFive2/releases)|3.6.1|Aug 31, 2023
-Controllers|[db9_gpio_rpi](http://github.com/marqs85/db9_gpio_rpi)|4318dc14dab75ba0d150bbedf1a8155ef3284669|Oct 09, 2024
+Controllers|[db9_gpio_rpi](http://github.com/marqs85/db9_gpio_rpi)|v1.3|Oct 09, 2024
 Controllers|[dolphinCrosshairsPack](http://github.com/ProfgLX/Dolphin-Lightguns-Accuracy-Inis)|0f86d4e80813339b057a425198a3adc446658408|Jan 11, 2022
-Controllers|[gamecon_gpio_rpi](http://github.com/marqs85/gamecon_gpio_rpi)|315388cbd3a3a63385e30e9a451fd059e5ab9a44|Oct 09, 2024
+Controllers|[gamecon_gpio_rpi](http://github.com/marqs85/gamecon_gpio_rpi)|v1.5|Oct 09, 2024
 Controllers|[guncon](http://github.com/Redemp/guncon2)|c5fa9fa19fe32c67b4e36eb9557d8fb06c9d200f|Sept 23, 2023
 Controllers|[guncon3](http://github.com/pcnimdock/guncon3_dkms)|0dfe0feaa2afc37a8a70f6cd0f6c803ee4d89f40|Mar 22, 2023
 Controllers|[hid-nx](http://github.com/emilyst/hid-nx-dkms)|e0d36613969b51564e1e5a48c82d40314abf97c7|Sept 17, 2023
