@@ -13,6 +13,7 @@ dxvk.mk
 element14-pi-desktop.mk
 faudio.mk
 fdupes.mk
+fheroes2.mk
 iir.mk
 innoextract.mk
 kodi-pvr-freebox
