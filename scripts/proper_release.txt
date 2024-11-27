@@ -1,4 +1,6 @@
-﻿ayaneo-platform.mk
+﻿gamecon_gpio_rpi.mk
+db9_gpio_rpi.mk
+ayaneo-platform.mk
 ayn-platform.mk
 batocera-shim.mk
 bauh.mk
