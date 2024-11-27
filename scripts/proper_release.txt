@@ -32,6 +32,7 @@ projectm.mk
 python3-gpiod.mk
 pywebview.mk
 rclone.mk
+re2c.mk
 retrocrisis.mk
 rockchip-mpp.mk
 rockpro64-blobs.mk

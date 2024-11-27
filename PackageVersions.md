@@ -528,7 +528,7 @@ Utils|[picade](http://github.com/pimoroni/picade-hat)|df02844c0cd773af5b908f47ea
 Utils|[pm-utils](http://pm-utils.freedesktop.org/releases)|1.4.1|Jul 04, 2010
 Utils|[raspi2png](http://github.com/AndrewFromMelbourne/raspi2png)|b3c5599c2e2652a3f585dc89075ff65dcd36a0dc|Jan 28, 2020
 Utils|[rclone](http://github.com/rclone/rclone)|v1.68.2|Nov 15, 2024
-Utils|[re2c](http://github.com/skvadrik/re2c)|e5cb9a1ebd9efab6604930b9f773fd684df6edd5|Nov 25, 2024
+Utils|[re2c](http://github.com/skvadrik/re2c)|4.0.1|Nov 25, 2024
 Utils|[ryzenadj](http://github.com/FlyGoat/RyzenAdj)|v0.16.0|Sept 18, 2024
 Utils|[switchres](http://github.com/antonioginer/switchres)|v2.2.1|May 15, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.28.1-rc.2|Nov 25, 2024
