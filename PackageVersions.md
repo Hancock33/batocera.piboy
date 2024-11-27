@@ -423,7 +423,7 @@ Network|[rtl8812au](http://github.com/morrownr/8812au-20210820)|ad90dfb072ed4aed
 Network|[rtl8821au-morrownr](http://github.com/morrownr/8821au-20210708)|0b12ea54b7d6dcbfa4ce94eb403b1447565407f1|Jun 13, 2024
 Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|8be2da859cbd9515e8365a448280bea5e44110b6|Oct 13, 2024
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|533779cb8a1843581d5422a7f0aae1a35e6ab956|Nov 21, 2024
-Ports|[abuse](http://github.com/Xenoveritas/abuse)|9d1f66f57377859bae10e28eabebea0b9c750490|Oct 27, 2022
+Ports|[abuse](http://github.com/Xenoveritas/abuse)|v0.9.1|Oct 27, 2022
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|5854de0bcbf9dd3febbf70148cc551e0710520ed|Nov 17, 2024
 Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e246ded9|May 05, 2024
 Ports|[awgl](http://github.com/cyxx/rawgl)|1eeaa530c859bd6e37b3d3bd7d3136bc16afcc89|Mar 12, 2022
