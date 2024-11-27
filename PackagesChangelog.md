@@ -8,7 +8,6 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|db63bce77af0d2ba91c54
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-11-27|Nov 27, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|7118b7e16e36d86934e54be654edf44852771dab|Nov 27, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|d8811ebc13149f72e5c2fc687f9c2cda9b0d0a7e|Nov 27, 2024
-Ports|[fheroes2](http://github.com/ihhub/fheroes2)|03980b4ababb9947d9579bee967b09e0e2ba7bc5|Nov 27, 2024
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|aed40ba98c4d4534e0dde6c5f12a4100899ed6ea|Nov 27, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-9.22_20241127|Nov 27, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241127|Nov 27, 2024
@@ -166,6 +165,7 @@ Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|923de3203a000f8d8ffefb5ca15d296eb5d3c425|Oct 25, 2024
 Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/a3/61/e849ab2fd7a0a154d30535aa7b4cf11cb9fbcc6a5817cbc1307e509e0b34)|8.50.0|Oct 24, 2024
 Boot|[rk3128-blobs](https://github.com/rockchip-linux/rkbin.git)|7c35e21a8529b3758d1f051d1a5dc62aae934b2b|Oct 23, 2024
+Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.3|Oct 23, 2024
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|943473727b46f369aa5df12ce3b8285b6a87df55|Oct 23, 2024
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|5.3.2|Oct 22, 2024
 Looks|[hypseus-singe-bezels](http://github.com/Tovarichtch/hypseus_singe_daphne_bezels)|b836daf3e294d15dc36a7267f86622b261d8bcba|Oct 22, 2024
