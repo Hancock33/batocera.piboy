@@ -47,7 +47,7 @@ Emulators|[supermodel](http://github.com/trzy/Supermodel)|d043dc0c6a99f5fff87d70
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|9b35b8637d98d37c15dcb307851bd22dedfc82da|Nov 25, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|r14127|Nov 25, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|297918d2c28e79f8844d98654ab10fefa643180c|Nov 25, 2024
-Utils|[re2c](http://github.com/skvadrik/re2c)|e5cb9a1ebd9efab6604930b9f773fd684df6edd5|Nov 25, 2024
+Utils|[re2c](http://github.com/skvadrik/re2c)|4.0.1|Nov 25, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.28.1-rc.2|Nov 25, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|78e8b9fc33973585b56834fb9d6903f9bd46520b|Nov 25, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|b581eda6c7f195ff86d1c3bc6d721f142870bae4|Nov 25, 2024
