@@ -1,5 +1,4 @@
-﻿gamecon_gpio_rpi.mk
-db9_gpio_rpi.mk
+﻿abuse.mk
 ayaneo-platform.mk
 ayn-platform.mk
 batocera-shim.mk
@@ -9,6 +8,7 @@ btop.mk
 cargs.mk
 chromebook-ucm-conf.mk
 d8vk.mk
+db9_gpio_rpi.mk
 dosbox-x.mk
 dxvk-nvapi.mk
 dxvk.mk
@@ -16,6 +16,7 @@ element14-pi-desktop.mk
 faudio.mk
 fdupes.mk
 fheroes2.mk
+gamecon_gpio_rpi.mk
 iir.mk
 innoextract.mk
 kodi-pvr-freebox
