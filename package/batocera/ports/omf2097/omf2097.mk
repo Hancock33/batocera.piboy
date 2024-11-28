@@ -7,12 +7,14 @@
 OMF2097_VERSION = 3f85d64461fdf63cd6d59f737fcf3ba0a88fea12
 OMF2097_SITE = $(call github,omf2097,openomf,$(OMF2097_VERSION))
 OMF2097_DEPENDENCIES = sdl2 sdl2_mixer libargtable2 enet libconfuse libminiupnpc
-OMF2097_DEPENDENCIES += host-omf2097
 OMF2097_LICENSE = MIT
 OMF2097_SUPPORTS_IN_SOURCE_BUILD = NO
 
-OMF2097_CONF_OPTS += -DOMF_COMMAND_WRAPPER=$(BUILD_DIR)/host-omf2097-$(OMF2097_VERSION)/buildroot-build/languagetool
-HOST_OMF2097_CONF_OPTS += -DUSE_TOOLS=ON
+ifeq ($(BR2_arm)$(BR2_aarch64),y)
+    OMF2097_DEPENDENCIES += host-omf2097
+    OMF2097_CONF_OPTS += -DOMF_COMMAND_WRAPPER=$(BUILD_DIR)/host-omf2097-$(OMF2097_VERSION)/buildroot-build/languagetool
+    HOST_OMF2097_CONF_OPTS += -DUSE_TOOLS=ON
+endif
 
 define OMF2097_POST_PROCESS
 	rm -rf $(TARGET_DIR)/usr/share/game_assets/omf2097
