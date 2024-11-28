@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Nov 28, 2024
-CORSIXTH_VERSION = 19cd77d9a1926be48077f99bdcacea95cb01665b
+CORSIXTH_VERSION = c79bb6b0fda4803efb6ccf8f42e2d9a46abe3fe5
 CORSIXTH_SITE = $(call github,CorsixTH,CorsixTH,$(CORSIXTH_VERSION))
 CORSIXTH_DEPENDENCIES = sdl2 sdl2_image lua luafilesystem lua-lpeg-patterns lpeg luasocket luasec sdl2_mixer ffmpeg
 CORSIXTH_LICENSE = GPL-2.0
