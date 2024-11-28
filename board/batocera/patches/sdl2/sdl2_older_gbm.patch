@@ -1,5 +1,5 @@
 diff --git a/configure b/configure
-index 6f1b30d58..e76808c4d 100755
+index ecba971b0..588162b2a 100755
 --- a/configure
 +++ b/configure
 @@ -25663,19 +25663,19 @@ printf "%s\n" "yes" >&6; }
@@ -56,7 +56,7 @@ index 6f1b30d58..e76808c4d 100755
  	# Put the nasty error message in config.log where it belongs
  	echo "$LIBGBM_PKG_ERRORS" >&5
 diff --git a/configure.ac b/configure.ac
-index 4278b9ff4..eb2c43bb1 100644
+index 7e5d05a39..6e6f0313b 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -2407,7 +2407,7 @@ CheckKMSDRM()
