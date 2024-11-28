@@ -11,6 +11,9 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|19cd77d9a1926be48077f99bdc
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|eba0b85f1cb659427138119785935201441f88aa|Nov 28, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|3f85d64461fdf63cd6d59f737fcf3ba0a88fea12|Nov 28, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|b67ee2afeb1a13b3734b113843f7434fb4fc26ad|Nov 28, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-9.22.20241128|Nov 28, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241128|Nov 28, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241128|Nov 28, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|784f9e2dcfacb80d2a48e19edd8802d723321d50|Nov 28, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|69cb0f9a86ddf5c81c39e850f393a6097f419bd7|Nov 28, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|95e54b5af72fec8dd8218acb0b41ac9312be233b|Nov 27, 2024
@@ -25,10 +28,7 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|e81121a4584c
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.4|Nov 27, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|be1fa481ed6dd584a7695379c1a9d614c5975132|Nov 27, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|fad91acd3adea918fe7019a0b461e4fe1991a7e4|Nov 27, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-9.22_20241127|Nov 27, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241127|Nov 27, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|06924b56d837e5306791caccb5cb3311ebd0b0e1|Nov 27, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241127|Nov 27, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|72ed0c437722d033251aa1eba6bfae657e73264a|Nov 27, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|21e9fa0a589255efb6d03a7f68d45dc5b859ac3e|Nov 27, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|22da42b12141711983465353c56cc7ca20b1a72d|Nov 27, 2024
