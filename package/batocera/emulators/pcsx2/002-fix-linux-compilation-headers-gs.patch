@@ -1,5 +1,5 @@
 diff --git a/pcsx2/CDVD/CDVD.cpp b/pcsx2/CDVD/CDVD.cpp
-index 41d13581d..08c269478 100644
+index 34bea0e58..5e65e1b5b 100644
 --- a/pcsx2/CDVD/CDVD.cpp
 +++ b/pcsx2/CDVD/CDVD.cpp
 @@ -6,7 +6,7 @@
@@ -12,7 +12,7 @@ index 41d13581d..08c269478 100644
  #include "Elfheader.h"
  #include "ps2/BiosTools.h"
 diff --git a/pcsx2/DebugTools/DebugInterface.cpp b/pcsx2/DebugTools/DebugInterface.cpp
-index b9eb5982c..79ac0f181 100644
+index db4ac668d..a015881e7 100644
 --- a/pcsx2/DebugTools/DebugInterface.cpp
 +++ b/pcsx2/DebugTools/DebugInterface.cpp
 @@ -7,7 +7,7 @@
@@ -23,4 +23,4 @@ index b9eb5982c..79ac0f181 100644
 +#include "../GS.h" // Required for gsNonMirroredRead()
  #include "Counters.h"
  
- #include "R3000A.h"
+ #include "Host.h"
