@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Nov 28, 2024
-BOX64_VERSION = 0da561cd2034a2df700a050a288f92dfa2c79e40
+BOX64_VERSION = 843fe30e4622a361923a9a748a4262c91f8af630
 BOX64_SITE = $(call github,ptitseb,box64,$(BOX64_VERSION))
 BOX64_SUPPORTS_IN_SOURCE_BUILD = NO
 
