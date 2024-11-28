@@ -3,8 +3,8 @@
 # omf2097
 #
 ################################################################################
-# Version: Commits on Nov 26, 2024
-OMF2097_VERSION = 01436af0d7743186462fe1f3c2fdb93767083dc2
+# Version: Commits on Nov 28, 2024
+OMF2097_VERSION = 3f85d64461fdf63cd6d59f737fcf3ba0a88fea12
 OMF2097_SITE = $(call github,omf2097,openomf,$(OMF2097_VERSION))
 OMF2097_DEPENDENCIES = sdl2 sdl2_mixer libargtable2 enet libconfuse libminiupnpc
 OMF2097_DEPENDENCIES += host-omf2097
