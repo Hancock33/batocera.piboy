@@ -12819,12 +12819,12 @@ msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Salvare rapidă"
 
-#. TRANSLATION: corsixth.keys, fallout2-ce.keys, rtcw.keys, fallout1-ce.keys
+#. TRANSLATION: mame.mame.keys, corsixth.keys, fallout2-ce.keys, rtcw.keys, fallout1-ce.keys
 msgctxt "keys_files"
 msgid "Quick load"
 msgstr "Încărcare rapidă"
 
-#. TRANSLATION: corsixth.keys, fallout2-ce.keys, rtcw.keys, fallout1-ce.keys
+#. TRANSLATION: mame.mame.keys, corsixth.keys, fallout2-ce.keys, rtcw.keys, fallout1-ce.keys
 msgctxt "keys_files"
 msgid "Quick save"
 msgstr "Salvare rapidă"
