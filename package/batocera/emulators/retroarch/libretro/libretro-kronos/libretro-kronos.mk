@@ -29,10 +29,10 @@ else
 endif
 
 define LIBRETRO_KRONOS_BUILD_CMDS
-	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/yabause/src/libretro/Makefile
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION) -Wno-implicit-function-declaration|g" $(@D)/yabause/src/libretro/Makefile
 	$(MAKE) -C $(@D)/yabause/src/libretro -f Makefile generate-files && \
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C \
-	    $(@D)/yabause/src/libretro -f Makefile \
+		$(@D)/yabause/src/libretro -f Makefile \
 		platform="$(LIBRETRO_KRONOS_PLATFORM)" $(LIBRETRO_KRONOS_EXTRA_ARGS)
 endef
 
