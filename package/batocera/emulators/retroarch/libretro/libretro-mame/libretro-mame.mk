@@ -3,7 +3,7 @@
 # libretro-mame
 #
 ################################################################################
-# Version: Commits on Nov 01, 2024
+# Version: Commits on Nov 29, 2024
 LIBRETRO_MAME_VERSION = mame0271
 LIBRETRO_MAME_SITE = https://github.com/Hancock33/batocera-mame-builds/releases/download/$(MAME_VERSION)
 LIBRETRO_MAME_LICENSE = MAME
@@ -15,7 +15,7 @@ define LIBRETRO_MAME_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/lib/libretro/mame_libretro.so
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	tar xf $(DL_DIR)/$(LIBRETRO_MAME_DL_SUBDIR)/$(LIBRETRO_MAME_SOURCE) -C $(TARGET_DIR)
-	
+
 	mkdir -p $(TARGET_DIR)/usr/share/lr-mame
 	ln -sf /usr/bin/mame/hash $(TARGET_DIR)/usr/share/lr-mame/hash
 
