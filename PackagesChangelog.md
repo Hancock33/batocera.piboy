@@ -7,6 +7,9 @@ Ports|[box64](http://github.com/ptitseb/box64)|f15a187087b037c1b042279db2526170c
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|8ecd46b0a4a7d25ff89476ce84f189ee24d617c2|Nov 29, 2024
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|a2376ebc779ec6b447c8cab4d68f941544e4ae8f|Nov 29, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|972ef65ec3df2269ba5209177bf012407ea1659e|Nov 29, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-9.22-20241129|Nov 29, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241129|Nov 29, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241129|Nov 29, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|43b267b5870e002b162adcffa96db758cb377906|Nov 29, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|3bd17575b0ac2cbd30743d586b309394917a9866|Nov 29, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|798e77e90bf5f17b4961c988ebbbfaa16c2153f7|Nov 29, 2024
@@ -32,9 +35,6 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|8c4846727514cd7a939a
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.15.12|Nov 28, 2024
 Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|f166025e23326695ea2a8deda18f5c98a057a628|Nov 28, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|b67ee2afeb1a13b3734b113843f7434fb4fc26ad|Nov 28, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-9.22.20241128|Nov 28, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241128|Nov 28, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241128|Nov 28, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|df4194ca57ff56b4046cb19c177954258b651dd2|Nov 28, 2024
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|566c9d0df0941e887148922f37816401ee001a8f|Nov 28, 2024
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|286ec8a5f5a7370ba23e674da115edf8558a4b87|Nov 28, 2024
