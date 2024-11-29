@@ -23,11 +23,12 @@ kodi-pvr-freebox
 ledspicer.mk
 libgme.mk
 libgraphene.mk
+libretro-mame.mk
 libserum.mk
 libxmp.mk
 libzedmd.mk
-mame.mk
 mame-src.mk
+mame.mk
 mold.mk
 nblood.mk
 nv-codec-headers.mk
