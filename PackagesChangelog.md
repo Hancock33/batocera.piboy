@@ -162,9 +162,11 @@ Emulators|[mupen64plus-input-sdl](http://github.com/mupen64plus/mupen64plus-inpu
 Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-console)|198eeaa08c9ba34b3da33ff10727a7342ec9a4bb|Nov 03, 2024
 Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|573ccd6e5a174d12ffadae151cfc26376a3e6aaa|Nov 02, 2024
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|24.11|Nov 01, 2024
-Emulators|[libretro-mame](http://github.com/sonninnos/mame)|a67797ad2f7516906ed7acef87569c6f35ca8739|Nov 01, 2024
-Emulators|[mame](http://github.com/mamedev/mame)|mame0271|Oct 31, 2024
+Sources|[libretro-mame-src](http://github.com/sonninnos/mame)|a67797ad2f7516906ed7acef87569c6f35ca8739|Nov 01, 2024
+Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0271|Nov 01, 2024
+Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0271|Oct 31, 2024
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|7fc2dac0dd895514b84063dc99aaaa93d2df69ed|Oct 31, 2024
+Sources|[mame-src](http://github.com/mamedev/mame)|mame0271|Oct 31, 2024
 Emulators|[libretro-atari800](http://github.com/libretro/libretro-atari800)|6a18cb23cc4a7cecabd9b16143d2d7332ae8d44b|Oct 31, 2024
 Emulators|[libretro-bennugd](http://github.com/diekleinekuh/BennuGD_libretro)|a0f3b60d093b7ec0f885e08c18a5ca5943bbc172|Oct 30, 2024
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.8.0|Oct 29, 2024
