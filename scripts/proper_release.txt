@@ -27,6 +27,7 @@ libserum.mk
 libxmp.mk
 libzedmd.mk
 mame.mk
+mame-src.mk
 mold.mk
 nblood.mk
 nv-codec-headers.mk
