@@ -299,7 +299,7 @@ Emulators|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/relea
 Emulators|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.13|Aug 29, 2024
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|0630fced7e271b6c2f34315eb68801b90fb58f0c|Jul 23, 2024
 Emulators|[wine-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos-9.0-20241123-proton|Nov 23, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-9.22.20241128|Nov 28, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-9.22-20241129|Nov 29, 2024
 Emulators|[wine-ge](http://github.com/GloriousEggroll/proton-wine)|39021e609a24b6aeffdf9c4695a286d71e7dffbc|Feb 04, 2024
 Emulators|[wine-lutris](http://github.com/lutris/wine)|lutris-wine-7.2-2|Jul 06, 2022
 Emulators|[wine-mono](https://github.com/madewokherd/wine-mono/releases)|wine-mono-9.4.0|Nov 22, 2024
@@ -307,7 +307,7 @@ Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-9.22|Nov 22, 20
 Emulators|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-9.22.r0.g7ba8823e|Nov 24, 2024
 Emulators|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-4-rc5|Nov 26, 2024
 Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-9.22|Nov 22, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241128|Nov 28, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241129|Nov 29, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|a06ea8795482d2f49a5461ab5f23e0036e38d12b|Oct 17, 2024
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r48|Sept 06, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|98a03e944c5d4c9f3f4973a51bf3b707819d1a89|Nov 14, 2024
@@ -459,7 +459,7 @@ Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|291a40127703914be2d8
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|72d808cc4d6db5d38e5d87ab95ab0b1bcfd89ede|Nov 24, 2024
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|a2376ebc779ec6b447c8cab4d68f941544e4ae8f|Nov 29, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241128|Nov 28, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241129|Nov 29, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|r14127|Nov 25, 2024
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|73efda9ffd3ed27a2d6d79a269f932ff048a3222|Nov 28, 2024
