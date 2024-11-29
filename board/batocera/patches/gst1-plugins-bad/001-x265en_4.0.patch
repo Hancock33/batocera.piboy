@@ -1,82 +1,20 @@
 diff --git a/ext/x265/gstx265enc.c b/ext/x265/gstx265enc.c
-index e6aa973ac7..a3fe400ab4 100644
+index e6aa973ac7cc..ee72389720ef 100644
 --- a/ext/x265/gstx265enc.c
 +++ b/ext/x265/gstx265enc.c
-@@ -935,7 +935,7 @@ gst_x265_enc_init_encoder_locked (GstX265Enc * encoder)
-   } else if (encoder->keyintmax > 0) {
-     encoder->x265param.keyframeMax = encoder->keyintmax;
-   }
--#if (X265_BUILD >= 79)
-+#if (X265_BUILD <= 79)
-   {
-     GstVideoMasteringDisplayInfo minfo;
-     GstVideoContentLightLevel cll;
-@@ -1514,7 +1514,12 @@ gst_x265_enc_encode_frame (GstX265Enc * encoder, x265_picture * pic_in,
- {
-   GstVideoCodecFrame *frame = NULL;
-   GstBuffer *out_buf = NULL;
--  x265_picture pic_out;
-+#if (X265_BUILD >= 210) && (X265_BUILD < 213)
-+  x265_picture pics_out[MAX_SCALABLE_LAYERS], *pics_outp[MAX_SCALABLE_LAYERS];
+@@ -948,8 +948,13 @@ gst_x265_enc_init_encoder_locked (GstX265Enc * encoder)
+        * HEVC uses gbr order
+        * See spec D.3.28 display_primaries_x and display_primaries_y
+        */
+-      encoder->x265param.masteringDisplayColorVolume =
+-          g_strdup_printf ("G(%hu,%hu)B(%hu,%hu)R(%hu,%hu)WP(%hu,%hu)L(%u,%u)",
++#if X265_BUILD < 214
++      encoder->x265param.masteringDisplayColorVolume = g_strdup_printf (
 +#else
-+  x265_picture pics_out[1];
++      snprintf (encoder->x265param.masteringDisplayColorVolume,
++          X265_MAX_STRING_SIZE,
 +#endif
-+  x265_picture *pic_out = &pics_out[0];
-   x265_nal *nal;
-   int i_size, i, offset;
-   int encoder_return;
-@@ -1549,8 +1554,16 @@ gst_x265_enc_encode_frame (GstX265Enc * encoder, x265_picture * pic_in,
-   if (G_UNLIKELY (update_latency))
-     gst_x265_enc_set_latency (encoder);
- 
-+#if (X265_BUILD >= 210) && (X265_BUILD < 213)
-+  for (i = 0; i < MAX_SCALABLE_LAYERS; i++)
-+    pics_outp[i] = &pics_out[i];
-+
-   encoder_return = api->encoder_encode (encoder->x265enc,
--      &nal, i_nal, pic_in, &pic_out);
-+      &nal, i_nal, pic_in, pics_outp);
-+#else
-+  encoder_return = api->encoder_encode (encoder->x265enc,
-+      &nal, i_nal, pic_in, pic_out);
-+#endif
- 
-   GST_DEBUG_OBJECT (encoder, "encoder result (%d) with %u nal units",
-       encoder_return, *i_nal);
-@@ -1575,12 +1588,12 @@ gst_x265_enc_encode_frame (GstX265Enc * encoder, x265_picture * pic_in,
-   }
- 
-   frame = gst_video_encoder_get_frame (GST_VIDEO_ENCODER (encoder),
--      GPOINTER_TO_INT (pic_out.userData));
-+      GPOINTER_TO_INT (pic_out->userData));
-   g_assert (frame || !send);
- 
-   GST_DEBUG_OBJECT (encoder,
--      "output picture ready POC=%d system=%d frame found %d", pic_out.poc,
--      GPOINTER_TO_INT (pic_out.userData), frame != NULL);
-+      "output picture ready POC=%d system=%d frame found %d", pic_out->poc,
-+      GPOINTER_TO_INT (pic_out->userData), frame != NULL);
- 
-   if (!send || !frame) {
-     GST_LOG_OBJECT (encoder, "not sending (%d) or frame not found (%d)", send,
-@@ -1599,7 +1612,7 @@ gst_x265_enc_encode_frame (GstX265Enc * encoder, x265_picture * pic_in,
-     offset += nal[i].sizeBytes;
-   }
- 
--  if (pic_out.sliceType == X265_TYPE_IDR || pic_out.sliceType == X265_TYPE_I) {
-+  if (pic_out->sliceType == X265_TYPE_IDR || pic_out->sliceType == X265_TYPE_I) {
-     GST_VIDEO_CODEC_FRAME_SET_SYNC_POINT (frame);
-   }
- 
-@@ -1615,9 +1628,9 @@ gst_x265_enc_encode_frame (GstX265Enc * encoder, x265_picture * pic_in,
- 
-   GST_LOG_OBJECT (encoder,
-       "output: dts %" G_GINT64_FORMAT " pts %" G_GINT64_FORMAT,
--      (gint64) pic_out.dts, (gint64) pic_out.pts);
-+      (gint64) pic_out->dts, (gint64) pic_out->pts);
- 
--  frame->dts = pic_out.dts + encoder->dts_offset;
-+  frame->dts = pic_out->dts + encoder->dts_offset;
- 
- out:
-   if (frame) {
++          "G(%hu,%hu)B(%hu,%hu)R(%hu,%hu)WP(%hu,%hu)L(%u,%u)",
+           minfo.display_primaries[1].x, minfo.display_primaries[1].y,
+           minfo.display_primaries[2].x, minfo.display_primaries[2].y,
+           minfo.display_primaries[0].x, minfo.display_primaries[0].y,
