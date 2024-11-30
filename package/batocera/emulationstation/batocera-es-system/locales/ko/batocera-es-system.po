@@ -4801,6 +4801,11 @@ msgctxt "game_options"
 msgid "ChJees"
 msgstr ""
 
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Change Camera Angle"
+msgstr ""
+
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "Change View 1 / Right"
@@ -5272,6 +5277,11 @@ msgstr "클래식 소프트웨어"
 msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
 msgstr "문라이트를 종료할 때 원격 호스트에서 앱을 닫습니다."
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Coin"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -6728,6 +6738,11 @@ msgctxt "game_options"
 msgid "Enable VSync"
 msgstr ""
 
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "Enable X-Input mode for Xbox type controllers."
+msgstr ""
+
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Enable accurate shader multiplication"
@@ -8071,6 +8086,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Forces the DX driver to use Managed textures instead of Dynamic."
 msgstr "DX 드라이버가 동적 대신 관리되는 텍스처를 사용하도록 강제합니다."
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Forward Nudge"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10068,6 +10088,21 @@ msgctxt "game_options"
 msgid "Left Analogue (Forced)"
 msgstr ""
 
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Left Flipper"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Left Manga Save"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Left Nudge"
+msgstr ""
+
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left flipper"
@@ -10736,6 +10771,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
 msgstr "일부 2D 게임에서는 이미지가 더 선명해질 수 있습니다."
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Mech Tilt"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -11768,10 +11808,17 @@ msgctxt "game_options"
 msgid "Only increase the image size in integer multiples."
 msgstr "이미지 크기는 정수의 배수로만 늘립니다."
 
-#. TRANSLATION: model2emu, openbor/openbor7530, supermodel
+#. TRANSLATION: openbor/openbor7530, supermodel
 msgctxt "game_options"
 msgid "Only some games feature rumble. Not compatible with all controllers."
 msgstr "일부 게임만 진동 기능이 있습니다. 모든 컨트롤러와 호환되지 않습니다."
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid ""
+"Only some games support rumble. Requires X-Input mode and may not be "
+"compatible with all controllers."
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -12466,6 +12513,11 @@ msgstr "플레이어의 눈과 화면 하단 가장자리 사이의 거리 (cm)"
 msgctxt "game_options"
 msgid "Playfield configuration"
 msgstr "경기장 구성"
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Plunger"
+msgstr ""
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -13258,6 +13310,21 @@ msgstr ""
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Right Analogue (Forced)"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Right Flipper"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Right Manga Save"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Right Nudge"
 msgstr ""
 
 #. TRANSLATION: libretro/melonds
@@ -15045,6 +15112,11 @@ msgctxt "game_options"
 msgid "Standard OpenGL (Default)"
 msgstr "표준 OpenGL (기본)"
 
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Start"
+msgstr ""
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Start / Valid"
@@ -16445,10 +16517,8 @@ msgstr "호스트 사용"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid ""
-"Use L2/R2 for Accel/Brake and L1/R1 or R-stick Up/Down for Shift Up/Down."
+"Use L2/R2 for Brake/Accel and L1/R1 or R-stick Up/Down for Shift Up/Down."
 msgstr ""
-"가속/브레이크에는 L2/R2를 사용하고 변속 위/아래에는 L1/R1 또는 R 스틱 위/아래"
-"를 사용합니다."
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -17168,6 +17238,11 @@ msgstr ""
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "X"
+msgstr ""
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "X-INPUT"
 msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next
@@ -18765,6 +18840,13 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "USE ZINK RENDERER"
 #~ msgstr "ZINK 렌더러 사용"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use L2/R2 for Accel/Brake and L1/R1 or R-stick Up/Down for Shift Up/Down."
+#~ msgstr ""
+#~ "가속/브레이크에는 L2/R2를 사용하고 변속 위/아래에는 L1/R1 또는 R 스틱 위/"
+#~ "아래를 사용합니다."
 
 #, fuzzy
 #~ msgctxt "game_options"

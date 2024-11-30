@@ -4771,6 +4771,11 @@ msgctxt "game_options"
 msgid "ChJees"
 msgstr ""
 
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Change Camera Angle"
+msgstr ""
+
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "Change View 1 / Right"
@@ -5228,6 +5233,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
 msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Coin"
+msgstr "投幣"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -6655,6 +6665,11 @@ msgctxt "game_options"
 msgid "Enable VSync"
 msgstr ""
 
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "Enable X-Input mode for Xbox type controllers."
+msgstr ""
+
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Enable accurate shader multiplication"
@@ -7939,6 +7954,11 @@ msgstr "強制遊戲以這個長寬比渲染。並非所有系統都支持所有
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Forces the DX driver to use Managed textures instead of Dynamic."
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Forward Nudge"
 msgstr ""
 
 #. TRANSLATION: vpinball
@@ -9917,6 +9937,21 @@ msgctxt "game_options"
 msgid "Left Analogue (Forced)"
 msgstr ""
 
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Left Flipper"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Left Manga Save"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Left Nudge"
+msgstr ""
+
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left flipper"
@@ -10567,6 +10602,11 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Mech Tilt"
 msgstr ""
 
 #. TRANSLATION: shared
@@ -11583,9 +11623,16 @@ msgctxt "game_options"
 msgid "Only increase the image size in integer multiples."
 msgstr "僅以整數倍放大圖像"
 
-#. TRANSLATION: model2emu, openbor/openbor7530, supermodel
+#. TRANSLATION: openbor/openbor7530, supermodel
 msgctxt "game_options"
 msgid "Only some games feature rumble. Not compatible with all controllers."
+msgstr ""
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid ""
+"Only some games support rumble. Requires X-Input mode and may not be "
+"compatible with all controllers."
 msgstr ""
 
 #. TRANSLATION: libretro/fceumm
@@ -12275,6 +12322,11 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Playfield configuration"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Plunger"
 msgstr ""
 
 #. TRANSLATION: bigpemu
@@ -13053,6 +13105,21 @@ msgstr ""
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Right Analogue (Forced)"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Right Flipper"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Right Manga Save"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Right Nudge"
 msgstr ""
 
 #. TRANSLATION: libretro/melonds
@@ -14812,6 +14879,11 @@ msgctxt "game_options"
 msgid "Standard OpenGL (Default)"
 msgstr ""
 
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Start"
+msgstr "開始"
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Start / Valid"
@@ -16191,7 +16263,7 @@ msgstr ""
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid ""
-"Use L2/R2 for Accel/Brake and L1/R1 or R-stick Up/Down for Shift Up/Down."
+"Use L2/R2 for Brake/Accel and L1/R1 or R-stick Up/Down for Shift Up/Down."
 msgstr ""
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
@@ -16896,6 +16968,11 @@ msgctxt "game_options"
 msgid "X"
 msgstr ""
 
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "X-INPUT"
+msgstr ""
+
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "X2"
@@ -17521,10 +17598,6 @@ msgstr ""
 #~ msgstr "彩色化"
 
 #~ msgctxt "keys_files"
-#~ msgid "Coin"
-#~ msgstr "投幣"
-
-#~ msgctxt "keys_files"
 #~ msgid "Cycle through stretch modes"
 #~ msgstr "循環拉伸模式"
 
@@ -17677,10 +17750,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Standard"
 #~ msgstr "標準"
-
-#~ msgctxt "keys_files"
-#~ msgid "Start"
-#~ msgstr "開始"
 
 #~ msgctxt "keys_files"
 #~ msgid "Swap Screens"
