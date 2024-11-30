@@ -3,8 +3,8 @@
 # doom3
 #
 ################################################################################
-# Version: Commits on Nov 07, 2024
-DOOM3_VERSION = d94bb42d5048148f5358a3d7cf0f5bd6eb817f4a
+# Version: Commits on Nov 30, 2024
+DOOM3_VERSION = 3d921a0aa5ee4b341fa1924c87eda60ada438d77
 DOOM3_SITE = $(call github,dhewm,dhewm3,$(DOOM3_VERSION))
 DOOM3_LICENSE = GPL-3.0
 DOOM3_LICENSE_FILES = COPYING.txt
