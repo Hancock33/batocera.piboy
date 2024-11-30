@@ -10630,7 +10630,7 @@ supermodel:
             preset_parameters: 70 200 10 100 %
         pedalSwap:
             prompt:      MODERN PEDAL CONTROLS
-            description: Use L2/R2 for Accel/Brake and L1/R1 or R-stick Up/Down for Shift Up/Down.
+            description: Use L2/R2 for Brake/Accel and L1/R1 or R-stick Up/Down for Shift Up/Down.
             choices:
                 "Off":      0
                 "On":       1
@@ -12309,6 +12309,7 @@ srb2kart:
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 model2emu:
   features: [padtokeyboard]
+  shared: [powermode, tdp, videomode]
   cfeatures:
         model2_renderRes:
             prompt: RENDERING RESOLUTION
@@ -12406,12 +12407,18 @@ model2emu:
             choices:
                 "Off (Default)": 0
                 "On":            1
-        model2_forceFeedback:
-            prompt:      RUMBLE
-            description: Only some games feature rumble. Not compatible with all controllers.
+        model2_xinput:
+            prompt: X-INPUT
+            description: Enable X-Input mode for Xbox type controllers.
             choices:
-                "Off":      0
-                "On":       1
+                "Off": 0
+                "On":  1
+        model2_forceFeedback:
+            prompt: RUMBLE
+            description: Only some games support rumble. Requires X-Input mode and may not be compatible with all controllers.
+            choices:
+                "Off": 0
+                "On":  1
 gsplus:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
