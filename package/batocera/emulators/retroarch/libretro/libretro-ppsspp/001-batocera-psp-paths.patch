@@ -1,8 +1,8 @@
 diff --git a/Core/System.cpp b/Core/System.cpp
-index 0c46edec3c..845062dc28 100644
+index b2cba6f185..06425bd314 100644
 --- a/Core/System.cpp
 +++ b/Core/System.cpp
-@@ -650,63 +650,58 @@ std::string PSP_GetLoading() {
+@@ -659,63 +659,58 @@ std::string PSP_GetLoading() {
  }
  
  Path GetSysDirectory(PSPDirectories directoryType) {
