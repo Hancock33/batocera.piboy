@@ -2743,7 +2743,7 @@ msgctxt "game_options"
 msgid "After NMI"
 msgstr "NMI ondoren"
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Aim"
 msgstr ""
@@ -3864,7 +3864,7 @@ msgctxt "game_options"
 msgid "Brazilian Portuguese"
 msgstr "Brasildar Portugalera"
 
-#. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys
+#. TRANSLATION: fallout1-ce.keys, fallout2-ce.keys
 msgctxt "keys_files"
 msgid "Bring up menu"
 msgstr ""
@@ -5373,7 +5373,7 @@ msgctxt "game_options"
 msgid "Config"
 msgstr "Konfiguraioa"
 
-#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, ...
+#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Configuration menu"
 msgstr ""
@@ -5496,7 +5496,7 @@ msgctxt "keys_files"
 msgid "Crouch"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Crouch Toggle"
 msgstr ""
@@ -6646,7 +6646,7 @@ msgctxt "keys_files"
 msgid "Emulator Config"
 msgstr ""
 
-#. TRANSLATION: amigacd32.amiberry.keys, amiga500.amiberry.keys, amiga1200.amiberry.keys
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
 msgctxt "keys_files"
 msgid "Emulator configuration"
 msgstr ""
@@ -7366,7 +7366,7 @@ msgctxt "keys_files"
 msgid "Exit Steam"
 msgstr ""
 
-#. TRANSLATION: mame.mame.keys, c128.vice.keys, c64.vice.keys, singe.hypseus-singe.keys, daphne.hypseus-singe.keys, ...
+#. TRANSLATION: 3ds.citra.keys, actionmax.keys, amiga1200.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, ...
 msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "Irten emuladorea"
@@ -7376,7 +7376,7 @@ msgctxt "keys_files"
 msgid "Exit emulator using SDL"
 msgstr "Irten emuladoretik SDL erabiliz"
 
-#. TRANSLATION: jazz2.keys, etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, sonicmania.keys, ...
+#. TRANSLATION: etlegacy.keys, fallout1-ce.keys, fallout2-ce.keys, jazz2.keys, sonic3-air.keys, ...
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr ""
@@ -7386,7 +7386,7 @@ msgctxt "keys_files"
 msgid "Exit running Flatpak"
 msgstr ""
 
-#. TRANSLATION: switch.ryujinx.keys, vpinball.keys, amigacd32.amiberry.keys, amiga500.amiberry.keys, amiga1200.amiberry.keys, ...
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, fpinball.keys, jaguar.bigpemu.keys, ...
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Irten emuladoretik"
@@ -7726,7 +7726,7 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr ""
 
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, ...
+#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, naomi.flycast.keys, naomi2.flycast.keys, psp.ppsspp.keys, ...
 msgctxt "keys_files"
 msgid "Fast Forward"
 msgstr "Azkar aurreratu"
@@ -7805,7 +7805,7 @@ msgctxt "game_options"
 msgid "Finnish (fi)"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, rott.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys, rott.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr ""
@@ -9037,7 +9037,7 @@ msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 msgstr ""
 
-#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, dreamcast.redream.keys, naomi2.flycast.keys, atomiswave.flycast.keys, ...
+#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, dreamcast.redream.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, ...
 msgctxt "keys_files"
 msgid "Hide the bezel"
 msgstr "Ezkutatu bezel-a"
@@ -9719,7 +9719,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr ""
@@ -9820,7 +9820,7 @@ msgctxt "game_options"
 msgid "Keypad 3button"
 msgstr "Keypad-a 3botoi"
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Kick"
 msgstr ""
@@ -10228,7 +10228,7 @@ msgctxt "game_options"
 msgid "Lithuania"
 msgstr ""
 
-#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, ...
+#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Load State"
 msgstr "Kargatu Egoera"
@@ -10262,7 +10262,7 @@ msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr ""
@@ -10626,7 +10626,7 @@ msgctxt "game_options"
 msgid "Manually set cycles per second. Use with caution."
 msgstr "Manualki ezarri segunduko zikloak. Kontuz erabili"
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr ""
@@ -10839,12 +10839,12 @@ msgctxt "keys_files"
 msgid "Menu"
 msgstr "Menua"
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Menu Down"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
@@ -10987,12 +10987,12 @@ msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Xagu Klik-a"
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Move Backward"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Move Forward"
 msgstr ""
@@ -11376,7 +11376,7 @@ msgctxt "keys_files"
 msgid "Next Disc (m3u)"
 msgstr "Hurrengo diska (m3u)"
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
@@ -12752,22 +12752,22 @@ msgctxt "keys_files"
 msgid "Quick Kick"
 msgstr ""
 
-#. TRANSLATION: doom3.dhewm3.keys, cgenius.cgenius.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Load"
 msgstr "Karga Azkarra"
 
-#. TRANSLATION: doom3.dhewm3.keys, cgenius.cgenius.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Gordetze Azkarra"
 
-#. TRANSLATION: mame.mame.keys, corsixth.keys, fallout2-ce.keys, rtcw.keys, fallout1-ce.keys
+#. TRANSLATION: corsixth.keys, fallout1-ce.keys, fallout2-ce.keys, mame.mame.keys, rtcw.keys
 msgctxt "keys_files"
 msgid "Quick load"
 msgstr "Karga azkarra"
 
-#. TRANSLATION: mame.mame.keys, corsixth.keys, fallout2-ce.keys, rtcw.keys, fallout1-ce.keys
+#. TRANSLATION: corsixth.keys, fallout1-ce.keys, fallout2-ce.keys, mame.mame.keys, rtcw.keys
 msgctxt "keys_files"
 msgid "Quick save"
 msgstr "Godetze azkarra"
@@ -13259,7 +13259,7 @@ msgctxt "game_options"
 msgid "Retropad (Default)"
 msgstr ""
 
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "Atzera bota"
@@ -13407,7 +13407,7 @@ msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, rott.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr ""
@@ -13999,12 +13999,12 @@ msgctxt "game_options"
 msgid "Saudi Arabia"
 msgstr ""
 
-#. TRANSLATION: jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, psx.duckstation.keys, psp.ppsspp.keys, naomi2.flycast.keys, ...
+#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "Gorde Egoera"
 
-#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys
+#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Save State/Save to Selected Slot"
 msgstr ""
@@ -14064,7 +14064,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr ""
 
-#. TRANSLATION: doom3.dhewm3.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, psx.duckstation.keys, scummvm.keys, ...
+#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.dhewm3.keys, doom3.keys, dreamcast.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Pantaila argazkia"
@@ -14111,12 +14111,12 @@ msgctxt "game_options"
 msgid "Select Keyboard, Joystick or Gamepad mode"
 msgstr "Aukeratu Teklatua, Joystick edo Pad modua"
 
-#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys
+#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Select State/Select State Slot 1"
 msgstr ""
 
-#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys
+#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Select State/Select State Slot 2"
 msgstr ""
@@ -14274,7 +14274,7 @@ msgctxt "keys_files"
 msgid "Service / Insert Coins Button"
 msgstr ""
 
-#. TRANSLATION: singe.hypseus-singe.keys, daphne.hypseus-singe.keys
+#. TRANSLATION: daphne.hypseus-singe.keys, singe.hypseus-singe.keys
 msgctxt "keys_files"
 msgid "Service menu"
 msgstr ""
@@ -14364,7 +14364,7 @@ msgctxt "game_options"
 msgid "Sets the window size to an integer size."
 msgstr "Leihoaren tamaina osozko tamaina batera ezartzen du."
 
-#. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
+#. TRANSLATION: amiga1200.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amigacdtv.fsuae.keys
 msgctxt "keys_files"
 msgid "Settings GUI"
 msgstr "GUI Ezarpenak"
@@ -14705,12 +14705,12 @@ msgctxt "game_options"
 msgid "Skynet"
 msgstr "Skynet"
 
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
 msgctxt "keys_files"
 msgid "Slot +"
 msgstr "Zirrikitua +"
 
-#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
+#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
 msgctxt "keys_files"
 msgid "Slot -"
 msgstr "Zirrikitua -"
@@ -15112,7 +15112,7 @@ msgctxt "keys_files"
 msgid "Start game"
 msgstr "Hasi jokoa"
 
-#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, triforce.dolphin_triforce.keys
+#. TRANSLATION: gamecube.dolphin.keys, triforce.dolphin_triforce.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "State/Load from Selected Slot"
 msgstr ""
@@ -15147,12 +15147,12 @@ msgctxt "game_options"
 msgid "Store past states to rewind to in real-time, if the core supports it."
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr ""
@@ -15704,7 +15704,7 @@ msgctxt "game_options"
 msgid "Target colour for player 4."
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Taunt"
 msgstr ""
@@ -16460,7 +16460,7 @@ msgctxt "keys_files"
 msgid "Use"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Use / Open"
 msgstr ""
@@ -16916,7 +16916,7 @@ msgctxt "game_options"
 msgid "Virtual"
 msgstr ""
 
-#. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
+#. TRANSLATION: amiga1200.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amigacdtv.fsuae.keys
 msgctxt "keys_files"
 msgid "Virtual Keyboard"
 msgstr "Teklatu birtuala"
@@ -17646,12 +17646,12 @@ msgctxt "game_options"
 msgid "quick switch"
 msgstr "aldatze azkarra"
 
-#. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "quickload"
 msgstr "karga azkarra"
 
-#. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "quicksave"
 msgstr "gordetze azkarra"
@@ -17686,7 +17686,7 @@ msgctxt "game_options"
 msgid "scanlines"
 msgstr ""
 
-#. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "screenshot"
 msgstr "pantaila kaptura"
