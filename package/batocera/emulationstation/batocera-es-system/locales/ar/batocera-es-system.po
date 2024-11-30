@@ -4821,6 +4821,11 @@ msgctxt "game_options"
 msgid "ChJees"
 msgstr ""
 
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Change Camera Angle"
+msgstr ""
+
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "Change View 1 / Right"
@@ -5281,6 +5286,11 @@ msgstr ""
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Coin"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
@@ -6714,6 +6724,11 @@ msgctxt "game_options"
 msgid "Enable VSync"
 msgstr ""
 
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "Enable X-Input mode for Xbox type controllers."
+msgstr ""
+
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Enable accurate shader multiplication"
@@ -8008,6 +8023,11 @@ msgstr "إرغام اللعبة على العرض بهذا التحجيم. لي�
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Forces the DX driver to use Managed textures instead of Dynamic."
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Forward Nudge"
 msgstr ""
 
 #. TRANSLATION: vpinball
@@ -9993,6 +10013,21 @@ msgctxt "game_options"
 msgid "Left Analogue (Forced)"
 msgstr ""
 
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Left Flipper"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Left Manga Save"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Left Nudge"
+msgstr ""
+
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left flipper"
@@ -10644,6 +10679,11 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Mech Tilt"
 msgstr ""
 
 #. TRANSLATION: shared
@@ -11661,9 +11701,16 @@ msgctxt "game_options"
 msgid "Only increase the image size in integer multiples."
 msgstr "زيادة حجم الصورة بمضاعفاتها فقط."
 
-#. TRANSLATION: model2emu, openbor/openbor7530, supermodel
+#. TRANSLATION: openbor/openbor7530, supermodel
 msgctxt "game_options"
 msgid "Only some games feature rumble. Not compatible with all controllers."
+msgstr ""
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid ""
+"Only some games support rumble. Requires X-Input mode and may not be "
+"compatible with all controllers."
 msgstr ""
 
 #. TRANSLATION: libretro/fceumm
@@ -12354,6 +12401,11 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Playfield configuration"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Plunger"
 msgstr ""
 
 #. TRANSLATION: bigpemu
@@ -13135,6 +13187,21 @@ msgstr ""
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Right Analogue (Forced)"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Right Flipper"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Right Manga Save"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Right Nudge"
 msgstr ""
 
 #. TRANSLATION: libretro/melonds
@@ -14905,6 +14972,11 @@ msgctxt "game_options"
 msgid "Standard OpenGL (Default)"
 msgstr ""
 
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Start"
+msgstr "بدء"
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Start / Valid"
@@ -16284,7 +16356,7 @@ msgstr ""
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid ""
-"Use L2/R2 for Accel/Brake and L1/R1 or R-stick Up/Down for Shift Up/Down."
+"Use L2/R2 for Brake/Accel and L1/R1 or R-stick Up/Down for Shift Up/Down."
 msgstr ""
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
@@ -16991,6 +17063,11 @@ msgctxt "game_options"
 msgid "X"
 msgstr ""
 
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "X-INPUT"
+msgstr ""
+
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "X2"
@@ -17693,10 +17770,6 @@ msgstr "أصفر/أزرق"
 #~ msgctxt "keys_files"
 #~ msgid "Set to full screen"
 #~ msgstr "اضبط إلى ملء الشاشة"
-
-#~ msgctxt "keys_files"
-#~ msgid "Start"
-#~ msgstr "بدء"
 
 #, fuzzy
 #~ msgctxt "game_options"

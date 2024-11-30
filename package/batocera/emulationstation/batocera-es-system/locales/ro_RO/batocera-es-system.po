@@ -4808,6 +4808,11 @@ msgctxt "game_options"
 msgid "ChJees"
 msgstr ""
 
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Change Camera Angle"
+msgstr ""
+
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "Change View 1 / Right"
@@ -5277,6 +5282,11 @@ msgstr "Clasic software"
 msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
 msgstr "Închide aplicația pe gazda de la distanță când se iese din Moonlight."
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Coin"
+msgstr "Monedă"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -6744,6 +6754,11 @@ msgctxt "game_options"
 msgid "Enable VSync"
 msgstr ""
 
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "Enable X-Input mode for Xbox type controllers."
+msgstr ""
+
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Enable accurate shader multiplication"
@@ -8118,6 +8133,11 @@ msgctxt "game_options"
 msgid "Forces the DX driver to use Managed textures instead of Dynamic."
 msgstr ""
 "Forțează driver-ul DX să folosească texturi manageriate în loc de dinamice."
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Forward Nudge"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10136,6 +10156,21 @@ msgctxt "game_options"
 msgid "Left Analogue (Forced)"
 msgstr ""
 
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Left Flipper"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Left Manga Save"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Left Nudge"
+msgstr ""
+
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left flipper"
@@ -10809,6 +10844,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
 msgstr "Poate rezulta într-o imagine mai clară în unele jocuri 2D."
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Mech Tilt"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -11845,12 +11885,19 @@ msgctxt "game_options"
 msgid "Only increase the image size in integer multiples."
 msgstr "Crește mărimea imaginii doar în multipli întregi."
 
-#. TRANSLATION: model2emu, openbor/openbor7530, supermodel
+#. TRANSLATION: openbor/openbor7530, supermodel
 msgctxt "game_options"
 msgid "Only some games feature rumble. Not compatible with all controllers."
 msgstr ""
 "Doar anumite jocuri suportă vibrații. Nu este compatibil cu toate "
 "controlerele."
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid ""
+"Only some games support rumble. Requires X-Input mode and may not be "
+"compatible with all controllers."
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -12549,6 +12596,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Playfield configuration"
 msgstr "Configurația câmpului de joc"
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Plunger"
+msgstr ""
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -13349,6 +13401,21 @@ msgstr ""
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Right Analogue (Forced)"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Right Flipper"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Right Manga Save"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Right Nudge"
 msgstr ""
 
 #. TRANSLATION: libretro/melonds
@@ -15141,6 +15208,11 @@ msgctxt "game_options"
 msgid "Standard OpenGL (Default)"
 msgstr "OpenGL Standard (Implicit)"
 
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Start"
+msgstr "Start"
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Start / Valid"
@@ -16555,10 +16627,8 @@ msgstr "Folosește gazda"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid ""
-"Use L2/R2 for Accel/Brake and L1/R1 or R-stick Up/Down for Shift Up/Down."
+"Use L2/R2 for Brake/Accel and L1/R1 or R-stick Up/Down for Shift Up/Down."
 msgstr ""
-"Folosește L2/R2 pentru accelerație/frână și L1/R1 sau sus/jos al manetei "
-"drepte pentru schimbare viteză sus/jos."
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -17289,6 +17359,11 @@ msgstr ""
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "X"
+msgstr ""
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "X-INPUT"
 msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next
@@ -18038,10 +18113,6 @@ msgstr "galben/albastru"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "Alege-ți raportul de aspect preferat."
 
-#~ msgctxt "keys_files"
-#~ msgid "Coin"
-#~ msgstr "Monedă"
-
 #~ msgctxt "game_options"
 #~ msgid "Color"
 #~ msgstr "Culoare"
@@ -18537,10 +18608,6 @@ msgstr "galben/albastru"
 #~ "Omiterea buffer-ului dezactivează omiterea automată a cadrelor și redă la "
 #~ "rezoluția de ieșire a ecranului."
 
-#~ msgctxt "keys_files"
-#~ msgid "Start"
-#~ msgstr "Start"
-
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
@@ -18594,6 +18661,13 @@ msgstr "galben/albastru"
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "FOLOSEȘTE CONFIGURAREA GZDOOM PENTRU JOYSTICK"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use L2/R2 for Accel/Brake and L1/R1 or R-stick Up/Down for Shift Up/Down."
+#~ msgstr ""
+#~ "Folosește L2/R2 pentru accelerație/frână și L1/R1 sau sus/jos al manetei "
+#~ "drepte pentru schimbare viteză sus/jos."
 
 #~ msgctxt "game_options"
 #~ msgid ""

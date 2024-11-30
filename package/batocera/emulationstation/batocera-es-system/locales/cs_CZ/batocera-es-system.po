@@ -4795,6 +4795,11 @@ msgctxt "game_options"
 msgid "ChJees"
 msgstr ""
 
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Change Camera Angle"
+msgstr ""
+
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "Change View 1 / Right"
@@ -5265,6 +5270,11 @@ msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
 msgstr ""
 "Zavření aplikace na vzdáleném hostiteli při ukončení aplikace Moonlight."
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Coin"
+msgstr "Mince"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -6720,6 +6730,11 @@ msgctxt "game_options"
 msgid "Enable VSync"
 msgstr ""
 
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "Enable X-Input mode for Xbox type controllers."
+msgstr ""
+
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Enable accurate shader multiplication"
@@ -8062,6 +8077,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Forces the DX driver to use Managed textures instead of Dynamic."
 msgstr "Přinutí ovladač DX používat spravované textury místo dynamických."
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Forward Nudge"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10057,6 +10077,21 @@ msgctxt "game_options"
 msgid "Left Analogue (Forced)"
 msgstr ""
 
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Left Flipper"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Left Manga Save"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Left Nudge"
+msgstr ""
+
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left flipper"
@@ -10728,6 +10763,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
 msgstr "V některých 2D hrách může být obraz ostřejší."
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Mech Tilt"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -11756,11 +11796,18 @@ msgctxt "game_options"
 msgid "Only increase the image size in integer multiples."
 msgstr "Velikost obrázku zvětšujte pouze v celočíselných násobcích."
 
-#. TRANSLATION: model2emu, openbor/openbor7530, supermodel
+#. TRANSLATION: openbor/openbor7530, supermodel
 msgctxt "game_options"
 msgid "Only some games feature rumble. Not compatible with all controllers."
 msgstr ""
 "Funkci vibrace mají jen některé hry. Není kompatibilní se všemi ovladači."
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid ""
+"Only some games support rumble. Requires X-Input mode and may not be "
+"compatible with all controllers."
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -12455,6 +12502,11 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Playfield configuration"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Plunger"
 msgstr ""
 
 #. TRANSLATION: bigpemu
@@ -13247,6 +13299,21 @@ msgstr ""
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Right Analogue (Forced)"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Right Flipper"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Right Manga Save"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Right Nudge"
 msgstr ""
 
 #. TRANSLATION: libretro/melonds
@@ -15035,6 +15102,11 @@ msgctxt "game_options"
 msgid "Standard OpenGL (Default)"
 msgstr "Standardní OpenGL (Výchozí)"
 
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Start"
+msgstr "Start"
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Start / Valid"
@@ -16437,10 +16509,8 @@ msgstr "Použit hostitele"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid ""
-"Use L2/R2 for Accel/Brake and L1/R1 or R-stick Up/Down for Shift Up/Down."
+"Use L2/R2 for Brake/Accel and L1/R1 or R-stick Up/Down for Shift Up/Down."
 msgstr ""
-"Použije L2/R2 pro akceleraci/brzdu a L1/R1 nebo R-Páčku nahoru/dolů pro "
-"řazení nahoru/dolů."
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -17160,6 +17230,11 @@ msgstr ""
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "X"
+msgstr ""
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "X-INPUT"
 msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next
@@ -18315,10 +18390,6 @@ msgstr "žlutá/modrá"
 #~ "Choose your rendered resolution (Requires personal redream.key file)."
 #~ msgstr ""
 #~ "Zvolte své vykreslené rozlišení (Vyžaduje osobní soubor redream.key)."
-
-#~ msgctxt "keys_files"
-#~ msgid "Coin"
-#~ msgstr "Mince"
 
 #~ msgctxt "game_options"
 #~ msgid "Color"
@@ -19512,10 +19583,6 @@ msgstr "žlutá/modrá"
 #~ msgid "Standard (Default)"
 #~ msgstr "Standardní (Výchozí)"
 
-#~ msgctxt "keys_files"
-#~ msgid "Start"
-#~ msgstr "Start"
-
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
@@ -19652,6 +19719,13 @@ msgstr "žlutá/modrá"
 #~ msgctxt "game_options"
 #~ msgid "USE ZINK RENDERER"
 #~ msgstr "POUŽÍT VYKRESLOVAČ ZINK"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use L2/R2 for Accel/Brake and L1/R1 or R-stick Up/Down for Shift Up/Down."
+#~ msgstr ""
+#~ "Použije L2/R2 pro akceleraci/brzdu a L1/R1 nebo R-Páčku nahoru/dolů pro "
+#~ "řazení nahoru/dolů."
 
 #~ msgctxt "game_options"
 #~ msgid ""
