@@ -14,7 +14,7 @@ LIBRETRO_MAME_DEPENDENCIES = alsa-lib
 define LIBRETRO_MAME_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/lib/libretro/mame_libretro.so
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	tar xf $(DL_DIR)/$(LIBRETRO_MAME_DL_SUBDIR)/$(LIBRETRO_MAME_SOURCE) -C $(TARGET_DIR)
+	tar -xf $(DL_DIR)/$(LIBRETRO_MAME_DL_SUBDIR)/$(LIBRETRO_MAME_SOURCE) -C $(TARGET_DIR)
 
 	mkdir -p $(TARGET_DIR)/usr/share/lr-mame
 	ln -sf /usr/bin/mame/hash $(TARGET_DIR)/usr/share/lr-mame/hash
