@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-11-18 19:42+0000\n"
+"PO-Revision-Date: 2024-11-30 22:12+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -4822,7 +4822,7 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Change Camera Angle"
-msgstr ""
+msgstr "Kamerawinkel ändern"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -5304,7 +5304,7 @@ msgstr "Anwendung beim Remote-Host schließen wenn Moonlight beendet wird."
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Coin"
-msgstr ""
+msgstr "Coin"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -6775,7 +6775,7 @@ msgstr ""
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Enable X-Input mode for Xbox type controllers."
-msgstr ""
+msgstr "X-Input-Modus für Xbox-Controller aktivieren."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -8168,7 +8168,7 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Forward Nudge"
-msgstr ""
+msgstr "Nach vorne schubsen"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10193,17 +10193,17 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Flipper"
-msgstr ""
+msgstr "Linker Flipper"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Manga Save"
-msgstr ""
+msgstr "Linker Magnasave"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Nudge"
-msgstr ""
+msgstr "Nach links schubsen"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -10890,7 +10890,7 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Mech Tilt"
-msgstr ""
+msgstr "Mech Tilt"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -11657,7 +11657,7 @@ msgstr "Nach rechts schubsen"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Nudge up"
-msgstr "Nach oben schubsen"
+msgstr "Nach vorne schubsen"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
@@ -11946,6 +11946,8 @@ msgid ""
 "Only some games support rumble. Requires X-Input mode and may not be "
 "compatible with all controllers."
 msgstr ""
+"Nur manche Spiele unterstützen Rumble. Erfordert den X-Input-Modus und ist "
+"möglicherweise nicht mit allen Controllern kompatibel."
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -12652,7 +12654,7 @@ msgstr "Spielfeld-Konfiguration"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Plunger"
-msgstr ""
+msgstr "Plunger"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -13456,17 +13458,17 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Flipper"
-msgstr ""
+msgstr "Rechter Flipper"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Manga Save"
-msgstr ""
+msgstr "Rechter Magnasave"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Nudge"
-msgstr ""
+msgstr "Nach rechts schubsen"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -15276,7 +15278,7 @@ msgstr "Standard OpenGL (Standard)"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Start"
-msgstr ""
+msgstr "Start"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -16700,6 +16702,8 @@ msgctxt "game_options"
 msgid ""
 "Use L2/R2 for Brake/Accel and L1/R1 or R-stick Up/Down for Shift Up/Down."
 msgstr ""
+"Benutze L2/R2 zum Bremsen/Beschleunigen und L1/R1 oder den rechten Stick "
+"nach oben/unten zum Hoch-/Runterschalten."
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -17439,7 +17443,7 @@ msgstr ""
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "X-INPUT"
-msgstr ""
+msgstr "X-INPUT"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -18288,10 +18292,6 @@ msgstr "gelb/blau"
 #~ msgstr "Drastic beenden"
 
 #~ msgctxt "keys_files"
-#~ msgid "Exit Emulator"
-#~ msgstr "Emulator beenden"
-
-#~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Schnelles Vorspulen"
 
@@ -18582,13 +18582,6 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GZDOOM JOYSTICKKONFIGURATION VERWENDEN"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use L2/R2 for Accel/Brake and L1/R1 or R-stick Up/Down for Shift Up/Down."
-#~ msgstr ""
-#~ "L2-/R2-Tasten für Beschleunigen/Bremsen verwenden, sowie L1/R1 oder NACH-"
-#~ "OBEN/NACH-UNTEN am R-Stick für die Gangschaltung."
 
 #~ msgctxt "game_options"
 #~ msgid "Use your physical anaglypth 3D glasses!"
