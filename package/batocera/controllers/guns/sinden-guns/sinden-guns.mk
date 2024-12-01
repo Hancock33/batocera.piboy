@@ -8,7 +8,7 @@ SINDEN_GUNS_VERSION = 1.09
 SINDEN_GUNS_SOURCE=SindenLightgunSoftwareReleaseV$(SINDEN_GUNS_VERSION).zip
 SINDEN_GUNS_SITE=https://www.sindenlightgun.com/software
 
-SINDEN_GUNS_DEPENDENCIES = sinden-guns-libs
+SINDEN_GUNS_DEPENDENCIES = mono-bin sinden-guns-libs
 
 # always take the x86 binary, while this is the only one working, bundles required for others
 SINDEN_GUNS_ARCHIVE_DIR_PLAYER1=SindenLightgunSoftwareReleaseV$(SINDEN_GUNS_VERSION)/SindenLightgunLinuxSoftwareV$(SINDEN_GUNS_VERSION)/X86/64bit/Lightgun/Player1
