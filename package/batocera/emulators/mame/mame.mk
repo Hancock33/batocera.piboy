@@ -10,15 +10,15 @@ MAME_DEPENDENCIES = sdl2 sdl2_ttf zlib libpng fontconfig sqlite jpeg flac rapidj
 MAME_LICENSE = MAME
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
-MAME_CROSS_ARCH = x86_64
+    MAME_CROSS_ARCH = x86_64
 endif
 
 ifeq ($(BR2_aarch64),y)
-MAME_CROSS_ARCH = arm64
+    MAME_CROSS_ARCH = arm64
 endif
 
 ifeq ($(BR2_arm),y)
-MAME_CROSS_ARCH = arm
+    MAME_CROSS_ARCH = arm
 endif
 
 MAME_SOURCE = mame-$(MAME_CROSS_ARCH)-$(subst mame,,$(MAME_VERSION)).tar.xz
@@ -28,7 +28,7 @@ MAME_CONF_INIT = $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/mame/
 define MAME_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/bin/mame
 	mkdir -p $(TARGET_DIR)/usr/bin/mame
-	tar xf $(DL_DIR)/$(MAME_DL_SUBDIR)/$(MAME_SOURCE) -C $(TARGET_DIR)
+	tar -xf $(DL_DIR)/$(MAME_DL_SUBDIR)/$(MAME_SOURCE) -C $(TARGET_DIR)
 
 	# Copy extra bgfx shaders
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/crt-geom-deluxe-rgb.json $(TARGET_DIR)/usr/bin/mame/bgfx/chains
