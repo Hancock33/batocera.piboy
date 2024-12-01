@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Nov 24, 2024
-RETROARCH_VERSION = 022288a9255f97a92855a6445d336f6ee6611ed7
+# Version: Commits on Dec 01, 2024
+RETROARCH_VERSION = 900ec71cba1720105f55e08231b750762800de7f
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts
@@ -155,7 +155,7 @@ else
     RETROARCH_CONF_OPTS += --disable-wayland
 endif
 
-ifeq ($(BR2_PACKAGE_VULKAN_LOADER)$(BR2_PACKAGE_VULKAN_HEADERS),yy)
+ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
     RETROARCH_CONF_OPTS += --enable-vulkan
     RETROARCH_DEPENDENCIES += vulkan-headers vulkan-loader slang-shaders
 endif

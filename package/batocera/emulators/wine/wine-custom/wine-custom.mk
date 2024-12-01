@@ -3,8 +3,8 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Nov 23, 2024
-WINE_CUSTOM_VERSION = 9.22.r0.g7ba8823e
+# Version: Commits on Nov 30, 2024
+WINE_CUSTOM_VERSION = ntsync-9.22-20241130
 WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
 WINE_CUSTOM_SITE = $(call github,Hancock33,wine-tkg-batocera,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
@@ -196,7 +196,7 @@ else
 WINE_CUSTOM_CONF_OPTS += --without-udev
 endif
 
-ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
+ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
     WINE_CUSTOM_CONF_OPTS += --with-vulkan
     WINE_CUSTOM_DEPENDENCIES += vulkan-headers vulkan-loader
 else

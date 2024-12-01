@@ -3,8 +3,8 @@
 # libretro-kronos
 #
 ################################################################################
-# Version: Commits on Nov 16, 2024
-LIBRETRO_KRONOS_VERSION = 10a371a5e8ca975c71c8228a4131f21657d066da
+# Version: Commits on Dec 01, 2024
+LIBRETRO_KRONOS_VERSION = 8bc434fd6e92d1d971b40de5afa4feb4cea8f5a7
 LIBRETRO_KRONOS_SITE = $(call github,FCare,kronos,$(LIBRETRO_KRONOS_VERSION))
 LIBRETRO_KRONOS_LICENSE = BSD-3-Clause
 
@@ -29,10 +29,10 @@ else
 endif
 
 define LIBRETRO_KRONOS_BUILD_CMDS
-	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/yabause/src/libretro/Makefile
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION) -Wno-implicit-function-declaration|g" $(@D)/yabause/src/libretro/Makefile
 	$(MAKE) -C $(@D)/yabause/src/libretro -f Makefile generate-files && \
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C \
-	    $(@D)/yabause/src/libretro -f Makefile \
+		$(@D)/yabause/src/libretro -f Makefile \
 		platform="$(LIBRETRO_KRONOS_PLATFORM)" $(LIBRETRO_KRONOS_EXTRA_ARGS)
 endef
 

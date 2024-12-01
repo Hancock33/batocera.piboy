@@ -3,8 +3,8 @@
 # ppsspp
 #
 ################################################################################
-# Version: Commits on Nov 24, 2024
-PPSSPP_VERSION = 32d8b12d476c31610dd6df5bcd630e92dedd2532
+# Version: Commits on Dec 01, 2024
+PPSSPP_VERSION = 7db6114187e4adeef955eb6cf7530caacd119152
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
@@ -40,7 +40,7 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
 endif
 
 # enable vulkan if we are building with it
-ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
+ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
     PPSSPP_CONF_OPTS += -DVULKAN=ON
     PPSSPP_CONF_OPTS += -DUSE_VULKAN_DISPLAY_KHR=ON
 else

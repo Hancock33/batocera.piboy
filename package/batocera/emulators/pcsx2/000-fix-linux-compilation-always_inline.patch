@@ -1,8 +1,8 @@
 diff --git a/common/Pcsx2Defs.h b/common/Pcsx2Defs.h
-index 557713c0c..6d0659a29 100644
+index 26fad2df8..ab0e71596 100644
 --- a/common/Pcsx2Defs.h
 +++ b/common/Pcsx2Defs.h
-@@ -57,7 +57,7 @@ static constexpr unsigned int __pagemask = __pagesize - 1;
+@@ -81,7 +81,7 @@ static constexpr unsigned int __pagealignsize = 0x1000;
  // __forceinline_odr is for member functions that are defined in headers. MSVC can't specify
  // inline and __forceinline at the same time, but it required to not get ODR errors in GCC.
  

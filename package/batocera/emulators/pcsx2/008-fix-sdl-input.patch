@@ -1,7 +1,7 @@
-diff --git a/pcsx2/Input/SDLInputSource.cpp b/pcsx2/Input/SDLInputSource.cpp.new
-index 9b7995fb12..0cebf805e4 100644
+diff --git a/pcsx2/Input/SDLInputSource.cpp b/pcsx2/Input/SDLInputSource.cpp
+index ae30b106f..f17cbfcae 100644
 --- a/pcsx2/Input/SDLInputSource.cpp
-+++ b/pcsx2/Input/SDLInputSource.cpp.new
++++ b/pcsx2/Input/SDLInputSource.cpp
 @@ -789,9 +789,12 @@ bool SDLInputSource::CloseDevice(int joystick_index)
  	if (it == m_controllers.end())
  		return false;

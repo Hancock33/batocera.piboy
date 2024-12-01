@@ -3,13 +3,11 @@
 # xpadneo
 #
 ################################################################################
-# Version: Commits on Nov 24, 2024
-XPADNEO_VERSION = 289d3bfa49511a285173d69e0d4a99f03e1b9a6f
+# Version: Commits on Nov 30, 2024
+XPADNEO_VERSION = 6a43a7648052343056a501a2c11f3d24a852ee59
 XPADNEO_SITE = $(call github,atar-axis,xpadneo,$(XPADNEO_VERSION))
 XPADNEO_DEPENDENCIES = host-cabextract bluez5_utils
 XPADNEO_MODULE_SUBDIRS = hid-xpadneo/src
-
-XPADNEO_USER_EXTRA_CFLAGS = -w -Wno-error=unused-function -Wno-incompatible-pointer-types
 
 XPADNEO_MODULE_MAKE_OPTS = \
 	KCFLAGS="$$KCFLAGS $(XPADNEO_USER_EXTRA_CFLAGS)"

@@ -3,8 +3,8 @@
 # kodi_resource_language_sv_se
 #
 ################################################################################
-# Version: Commits on Jun 11, 2024
-KODI_RESOURCE_LANGUAGE_SV_SE_VERSION = 11.0.76
+# Version: Commits on Nov 17, 2024
+KODI_RESOURCE_LANGUAGE_SV_SE_VERSION = 11.0.77
 KODI_RESOURCE_LANGUAGE_SV_SE_SOURCE = resource.language.sv_se-$(KODI_RESOURCE_LANGUAGE_SV_SE_VERSION).zip
 KODI_RESOURCE_LANGUAGE_SV_SE_SITE = http://mirrors.kodi.tv/addons/omega/resource.language.sv_se
 KODI_RESOURCE_LANGUAGE_SV_SE_PLUGINNAME=resource.language.sv_se

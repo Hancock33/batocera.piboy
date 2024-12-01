@@ -3,7 +3,7 @@
 # nanum_font
 #
 ################################################################################
-# Version: Commits on Oct 4, 2014
+# Version: Commits on Oct 04, 2014
 NANUM_FONT_VERSION = 33a5dec3cd6467979fed8ebfa64430d7cebdff9d
 NANUM_FONT_SITE = $(call github,ujuc,nanum-font,$(NANUM_FONT_VERSION))
 

@@ -3,9 +3,8 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Oct 22, 2024
-WINE_PROTON_VERSION = experimental-wine-9.0-20241022
-WINE_PROTON_BRANCH = experimental_9.0
+# Version: Commits on Nov 26, 2024
+WINE_PROTON_VERSION = proton-wine-9.0-4-rc5
 WINE_PROTON_SOURCE = wine-proton-$(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
@@ -200,7 +199,7 @@ else
 WINE_PROTON_CONF_OPTS += --without-udev
 endif
 
-ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
+ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
     WINE_PROTON_CONF_OPTS += --with-vulkan
     WINE_PROTON_DEPENDENCIES += vulkan-headers vulkan-loader
 else

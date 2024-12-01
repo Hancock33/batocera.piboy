@@ -3,7 +3,7 @@
 # libretro-vitavoyager
 #
 ################################################################################
-# Version: Commits on Jan 02, 2020
+# Version: Commits on Oct 23, 2019
 LIBRETRO_VITAVOYAGER_VERSION = 58b70dd7ea891c2e8ddc37d03a5d58116b0ea118
 LIBRETRO_VITAVOYAGER_SITE = $(call github,libretro,vitaVoyager,$(LIBRETRO_VITAVOYAGER_VERSION))
 LIBRETRO_VITAVOYAGER_LICENSE = GPL-2.0

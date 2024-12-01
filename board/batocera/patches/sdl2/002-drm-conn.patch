@@ -1,5 +1,5 @@
 diff --git a/src/video/kmsdrm/SDL_kmsdrmvideo.c b/src/video/kmsdrm/SDL_kmsdrmvideo.c
-index 787752f18..e3a15f499 100644
+index 2f49259e3..7a1e53d26 100644
 --- a/src/video/kmsdrm/SDL_kmsdrmvideo.c
 +++ b/src/video/kmsdrm/SDL_kmsdrmvideo.c
 @@ -78,6 +78,7 @@ static int get_driindex(void)
@@ -40,7 +40,7 @@ index 787752f18..e3a15f499 100644
                                      KMSDRM_drmModeGetConnector(
                                          drm_fd, resources->connectors[i]);
  
-@@ -940,6 +955,7 @@ static int KMSDRM_InitDisplays(_THIS)
+@@ -959,6 +974,7 @@ static int KMSDRM_InitDisplays(_THIS)
      uint64_t async_pageflip = 0;
      int ret = 0;
      int i;
@@ -48,7 +48,7 @@ index 787752f18..e3a15f499 100644
  
      /* Open /dev/dri/cardNN (/dev/drmN if on OpenBSD version less than 6.9) */
      (void)SDL_snprintf(viddata->devpath, sizeof(viddata->devpath), "%s%d",
-@@ -962,11 +978,27 @@ static int KMSDRM_InitDisplays(_THIS)
+@@ -981,11 +997,27 @@ static int KMSDRM_InitDisplays(_THIS)
          goto cleanup;
      }
  

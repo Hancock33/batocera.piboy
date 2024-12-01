@@ -1,4 +1,4 @@
-h# Target definition
+# Target definition
 BR2_arm=y
 BR2_cortex_a72=y
 BR2_ARM_FPU_NEON_VFPV4=y
@@ -16,7 +16,7 @@ BR2_TARGET_LDFLAGS="-fuse-ld=mold"
 BR2_TOOLCHAIN_BUILDROOT_GLIBC=y
 BR2_TOOLCHAIN_BUILDROOT_CXX=y
 BR2_REMOVE_SOURCE_AFTER_COMPILE=n
-BR2_GLOBAL_PATCH_DIR="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/patches"
+BR2_GLOBAL_PATCH_DIR="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/patches $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/patches $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/piboy4/patches"
 BR2_ZCAT="pigz -d -c"
 
 # required for utf-8
@@ -25,7 +25,7 @@ BR2_TOOLCHAIN_GLIBC_GCONV_LIBS_COPY=y
 # Kernel 6.12
 BR2_LINUX_KERNEL=n
 BR2_KERNEL_HEADERS_CUSTOM_TARBALL=y
-BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,521f2baed818c04981fd61b275c996a8ef03b833)/521f2baed818c04981fd61b275c996a8ef03b833.tar.gz"
+BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,fcadf633eb574f99c13b8dcd127a3934343ea404)/fcadf633eb574f99c13b8dcd127a3934343ea404.tar.gz"
 BR2_KERNEL_HEADERS_PATCHES="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/linux_patches/6.12"
 
 BR2_TARGET_ROOTFS_TAR=n

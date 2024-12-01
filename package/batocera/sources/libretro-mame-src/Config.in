@@ -1,0 +1,13 @@
+config BR2_PACKAGE_LIBRETRO_MAME_SRC
+	bool "libretro-mame-src"
+	depends on BR2_PACKAGE_RETROARCH
+	depends on BR2_INSTALL_LIBSTDCPP
+	select BR2_PACKAGE_ALSA_LIB
+
+	help
+	  A libretro mame core for Mame.
+
+	  http://www.libretro.com
+
+comment "LIBRETRO_MAME_SRC needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

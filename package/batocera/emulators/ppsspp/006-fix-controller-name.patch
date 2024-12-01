@@ -1,5 +1,5 @@
 diff --git a/SDL/SDLJoystick.cpp b/SDL/SDLJoystick.cpp
-index cab70aee8b..326eab88de 100644
+index 0492da3fc5..6ec8d97402 100644
 --- a/SDL/SDLJoystick.cpp
 +++ b/SDL/SDLJoystick.cpp
 @@ -50,7 +50,7 @@ void SDLJoystick::setUpControllers() {
@@ -24,7 +24,7 @@ index cab70aee8b..326eab88de 100644
  			auto mapping = SDL_GameControllerMapping(controller);
  			if (mapping == NULL) {
  				//cout << "FAILED" << endl;
-@@ -231,7 +231,7 @@ void SDLJoystick::ProcessInput(const SDL_Event &event){
+@@ -239,7 +239,7 @@ void SDLJoystick::ProcessInput(const SDL_Event &event){
  		int prevNumControllers = controllers.size();
  		setUpController(event.cdevice.which);
  		if (prevNumControllers == 0 && controllers.size() > 0) {

@@ -3,8 +3,8 @@
 # wine-mono
 #
 ################################################################################
-# Version: Commits on Nov 15, 2024
-WINE_MONO_VERSION = wine-mono-9.3.1
+# Version: Commits on Nov 22, 2024
+WINE_MONO_VERSION = wine-mono-9.4.0
 WINE_MONO_SOURCE = $(WINE_MONO_VERSION)-x86.tar.xz
 WINE_MONO_SITE = https://github.com/madewokherd/wine-mono/releases/download/$(WINE_MONO_VERSION)
 

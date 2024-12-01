@@ -1,5 +1,5 @@
 diff --git a/pcsx2/USB/usb-lightgun/guncon2.cpp b/pcsx2/USB/usb-lightgun/guncon2.cpp
-index c1feb7d4c..4e3c9d3ca 100644
+index 2fe57b060..245034caa 100644
 --- a/pcsx2/USB/usb-lightgun/guncon2.cpp
 +++ b/pcsx2/USB/usb-lightgun/guncon2.cpp
 @@ -18,6 +18,12 @@
@@ -335,7 +335,7 @@ index c1feb7d4c..4e3c9d3ca 100644
  		s->desc.str = desc_strings;
  
 diff --git a/pcsx2/USB/usb-lightgun/guncon2.h b/pcsx2/USB/usb-lightgun/guncon2.h
-index cad8e0bbc..1530026a6 100644
+index 9fd8bd39b..dee4c8e9a 100644
 --- a/pcsx2/USB/usb-lightgun/guncon2.h
 +++ b/pcsx2/USB/usb-lightgun/guncon2.h
 @@ -6,6 +6,8 @@

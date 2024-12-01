@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Oct 09, 2024
-GAMECON_GPIO_RPI_VERSION = 315388cbd3a3a63385e30e9a451fd059e5ab9a44
+GAMECON_GPIO_RPI_VERSION = v1.5
 GAMECON_GPIO_RPI_SITE = $(call github,marqs85,gamecon_gpio_rpi,$(GAMECON_GPIO_RPI_VERSION))
 
 define GAMECON_GPIO_RPI_FIX_EXTRACT
