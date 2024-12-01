@@ -12,6 +12,8 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|e621e1de318b00e
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|dfbd3b9e32c7a6d4e66f35e4e885c4e3ca113613|Dec 01, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|edec5383b5f423ebab13379d29a58b17a9d1f9e9|Dec 01, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|900ec71cba1720105f55e08231b750762800de7f|Dec 01, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241201|Dec 01, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241201|Dec 01, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|c4a1b29e08d731dba6843ce87f1a2173992f14f8|Dec 01, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|fb964b86861f754ea85cb293e34837dc4da17489|Dec 01, 2024
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|edec5383b5f423ebab13379d29a58b17a9d1f9e9|Dec 01, 2024
@@ -38,8 +40,6 @@ Sources|[mame-src](http://github.com/mamedev/mame)|mame0272|Nov 30, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|35377db9ef4e7969f06e52a7b26ba415f20e2ea3|Nov 30, 2024
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|6a43a7648052343056a501a2c11f3d24a852ee59|Nov 30, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-9.22-20241130|Nov 30, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241130|Nov 30, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241130|Nov 30, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|a04b1a567091f024f2a5b1496374476598f5226d|Nov 30, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|7ea6b9034a197790a769fad6d3a8d8b1253526cd|Nov 30, 2024
 Ports|[yquake2](http://github.com/yquake2/yquake2)|9f6c455b458ce7a4ff11ca073f4696bcab2a010d|Nov 30, 2024
