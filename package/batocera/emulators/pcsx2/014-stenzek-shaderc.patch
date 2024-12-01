@@ -23,18 +23,10 @@ index 760184aa0..a8862100d 100644
          INTERFACE_INCLUDE_DIRECTORIES ${SHADERC_INCLUDE_DIR}
          INTERFACE_COMPILE_DEFINITIONS "SHADERC_SHAREDLIB"
 diff --git a/pcsx2/GS/Renderers/Vulkan/VKShaderCache.cpp b/pcsx2/GS/Renderers/Vulkan/VKShaderCache.cpp
-index f360178be..f5825e0d2 100644
+index 6128a8177..d707dcdcd 100644
 --- a/pcsx2/GS/Renderers/Vulkan/VKShaderCache.cpp
 +++ b/pcsx2/GS/Renderers/Vulkan/VKShaderCache.cpp
-@@ -114,6 +114,7 @@ static void FillPipelineCacheHeader(VK_PIPELINE_CACHE_HEADER* header)
- 	X(shaderc_result_get_length) \
- 	X(shaderc_result_get_num_warnings) \
- 	X(shaderc_result_get_bytes) \
-+	X(shaderc_result_get_compilation_status) \
- 	X(shaderc_result_get_error_message)
- 
- // TODO: NOT thread safe, yet.
-@@ -142,7 +143,7 @@ bool dyn_shaderc::Open()
+@@ -142,7 +142,7 @@ bool dyn_shaderc::Open()
  	const std::string libname = DynamicLibrary::GetVersionedFilename("shaderc_shared");
  #else
  	// Use versioned, bundle post-processing adds it..
@@ -43,20 +35,14 @@ index f360178be..f5825e0d2 100644
  #endif
  	if (!s_library.Open(libname.c_str(), &error))
  	{
-@@ -221,10 +222,12 @@ std::optional<VKShaderCache::SPIRVCodeVector> VKShaderCache::CompileShaderToSPV(
+@@ -239,8 +239,8 @@ std::optional<VKShaderCache::SPIRVCodeVector> VKShaderCache::CompileShaderToSPV(
+ 	dyn_shaderc::shaderc_compile_options_set_generate_debug_info(options, debug,
+ 		debug && GSDeviceVK::GetInstance()->GetOptionalExtensions().vk_khr_shader_non_semantic_info);
+ #else
+-	if (debug)
+-		dyn_shaderc::shaderc_compile_options_set_generate_debug_info(options);
++	dyn_shaderc::shaderc_compile_options_set_generate_debug_info(options, debug,
++		debug && GSDeviceVK::GetInstance()->GetOptionalExtensions().vk_khr_shader_non_semantic_info);
+ #endif
  	dyn_shaderc::shaderc_compile_options_set_optimization_level(
  		options, debug ? shaderc_optimization_level_zero : shaderc_optimization_level_performance);
- 
--	shaderc_compilation_result_t result;
--	const shaderc_compilation_status status = dyn_shaderc::shaderc_compile_into_spv(
--		dyn_shaderc::s_compiler, source.data(), source.length(), static_cast<shaderc_shader_kind>(stage), "source",
--		"main", options, &result);
-+	const shaderc_compilation_result_t result = dyn_shaderc::shaderc_compile_into_spv(
-+               dyn_shaderc::s_compiler, source.data(), source.length(), static_cast<shaderc_shader_kind>(stage), "source",
-+               "main", options);
-+
-+	const shaderc_compilation_status status = result ? dyn_shaderc::shaderc_result_get_compilation_status(result) : shaderc_compilation_status_internal_error;
-+
- 	if (status != shaderc_compilation_status_success)
- 	{
- 		const std::string_view errors(result ? dyn_shaderc::shaderc_result_get_error_message(result) :

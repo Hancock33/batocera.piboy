@@ -1,8 +1,8 @@
 diff --git a/pcsx2/Input/InputManager.cpp b/pcsx2/Input/InputManager.cpp
-index 7017e8486..4fe560aa5 100644
+index 33dde367a..9f8c90463 100644
 --- a/pcsx2/Input/InputManager.cpp
 +++ b/pcsx2/Input/InputManager.cpp
-@@ -1522,30 +1522,30 @@ std::vector<InputBindingKey> InputManager::EnumerateMotors()
+@@ -1539,30 +1539,30 @@ std::vector<InputBindingKey> InputManager::EnumerateMotors()
  
  static void GetKeyboardGenericBindingMapping(std::vector<std::pair<GenericInputBinding, std::string>>* mapping)
  {
@@ -56,4 +56,4 @@ index 7017e8486..4fe560aa5 100644
 +	mapping->emplace_back(GenericInputBinding::R3, "SDL-0/RightStick");
  }
  
- static bool GetInternalGenericBindingMapping(const std::string_view& device, InputManager::GenericInputBindingMapping* mapping)
+ static bool GetInternalGenericBindingMapping(const std::string_view device, InputManager::GenericInputBindingMapping* mapping)

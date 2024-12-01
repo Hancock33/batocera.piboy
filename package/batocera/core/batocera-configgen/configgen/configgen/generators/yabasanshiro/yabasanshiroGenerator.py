@@ -85,7 +85,7 @@ class YabasanshiroGenerator(Generator):
         nplayer = 1
         for playercontroller, pad in sorted(playersControllers.items()):
             if nplayer <= 2:
-                ctrl_id = str(pad.index) + "_" + pad.realName + "_" + pad.guid
+                ctrl_id = str(pad.index) + "_" + pad.real_name + "_" + pad.guid
                 if ctrl_id not in data:
                     data[ctrl_id] = {}
 
@@ -101,7 +101,7 @@ class YabasanshiroGenerator(Generator):
                 data[player] = {
                     "DeviceID": int(pad.index),
                     "deviceGUID": pad.guid,
-                    "deviceName": pad.realName,
+                    "deviceName": pad.real_name,
                     "padmode": pad_mode
                 }
                 for x in pad.inputs:

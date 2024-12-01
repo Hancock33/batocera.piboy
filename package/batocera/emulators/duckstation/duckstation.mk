@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Nov 24, 2024
-DUCKSTATION_VERSION = 0076af6974a285fe7d884b12d258323c0848f53c
+# Version: Commits on Dec 01, 2024
+DUCKSTATION_VERSION = 2a7625e67c1a7fd9e97cfa4d85333c21f5d5db16
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_DEPENDENCIES = boost cpuinfo ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev libsoundtouch lunasvg sdl2 stenzek-shaderc webp zstd
@@ -33,7 +33,7 @@ else
     DUCKSTATION_CONF_OPTS += -DENABLE_X11=OFF
 endif
 
-ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
+ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
     DUCKSTATION_CONF_OPTS += -DENABLE_VULKAN=ON
 else
     DUCKSTATION_CONF_OPTS += -DENABLE_VULKAN=OFF

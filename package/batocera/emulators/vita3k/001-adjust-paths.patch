@@ -1,10 +1,10 @@
 diff --git a/vita3k/app/src/app_init.cpp b/vita3k/app/src/app_init.cpp
-index 1a6b5f63..752e79ad 100644
+index f433b263..df2034e1 100644
 --- a/vita3k/app/src/app_init.cpp
 +++ b/vita3k/app/src/app_init.cpp
-@@ -127,11 +127,7 @@ void init_paths(Root &root_paths) {
-         root_paths.set_shared_path(portable_path);
+@@ -128,11 +128,7 @@ void init_paths(Root &root_paths) {
          root_paths.set_cache_path(portable_path / "cache" / "");
+         root_paths.set_patch_path(portable_path / "patch" / "");
      } else {
 -        // SDL_GetPrefPath is deferred as it creates the directory.
 -        // When using a portable directory, it is not needed.
@@ -15,7 +15,7 @@ index 1a6b5f63..752e79ad 100644
  
  #if defined(__APPLE__)
          // Store other data in the user-wide path. Otherwise we may end up dumping
-@@ -168,12 +164,12 @@ void init_paths(Root &root_paths) {
+@@ -170,12 +166,12 @@ void init_paths(Root &root_paths) {
          auto APPDIR = getenv("APPDIR"); // Used in AppImage
  
          if (XDG_DATA_HOME != NULL)
@@ -30,21 +30,16 @@ index 1a6b5f63..752e79ad 100644
  
          if (XDG_CACHE_HOME != NULL) {
              root_paths.set_cache_path(fs::path(XDG_CACHE_HOME) / app_name / "");
-@@ -208,7 +204,7 @@ void init_paths(Root &root_paths) {
+@@ -210,10 +206,10 @@ void init_paths(Root &root_paths) {
  
          // shared path
          if (env_home != NULL)
 -            root_paths.set_shared_path(fs::path(env_home) / ".local/share" / app_name / "");
 +            root_paths.set_shared_path(fs::path("/userdata/saves/psvita/"));
  
-         if (XDG_DATA_DIRS != NULL) {
-             auto env_paths = string_utils::split_string(XDG_DATA_DIRS, ':');
-@@ -219,7 +215,7 @@ void init_paths(Root &root_paths) {
-                 }
-             }
-         } else if (XDG_DATA_HOME != NULL) {
+         if (XDG_DATA_HOME != NULL) {
 -            root_paths.set_shared_path(fs::path(XDG_DATA_HOME) / app_name / "");
-+            root_paths.set_shared_path(fs::path(XDG_DATA_HOME) / "psvita" / "");
++            root_paths.set_shared_path(fs::path("psvita") / app_name / "");
          }
- #endif
-     }
+ 
+         // patch path should be in shared path

@@ -3,7 +3,7 @@
 # fpinball
 #
 ################################################################################
-# Version: Commits on Dec 31, 2010
+# Version: Commits on Apr 04, 2021
 FPINBALL_VERSION = v1.9.1.20101231
 FPINBALL_SOURCE = fpinball-$(FPINBALL_VERSION).zip
 FPINBALL_SITE = https://github.com/batocera-linux/fpinball/releases/download/$(FPINBALL_VERSION)

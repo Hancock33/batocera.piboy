@@ -3,8 +3,8 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Nov 23, 2024
-RPCS3_VERSION = b94ddb0cd36c53cc17273e79a3f7150a9a370fc9
+# Version: Commits on Nov 30, 2024
+RPCS3_VERSION = b4505600c7d9ea164b5b7bbfa53abde7cd21d3ba
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
@@ -36,7 +36,7 @@ ifeq ($(BR2_PACKAGE_SDL2),y)
 else
     RPCS3_CONF_OPTS += -DUSE_SDL=OFF
 endif
-ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
+ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
     RPCS3_CONF_OPTS += -DUSE_VULKAN=ON
 else
     RPCS3_CONF_OPTS += -DUSE_VULKAN=OFF

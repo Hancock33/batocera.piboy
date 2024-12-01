@@ -1,5 +1,5 @@
 diff --git a/loader/wine.inf.in b/loader/wine.inf.in
-index fd5d5137d3e..03d75274538 100644
+index fd5d5137d3e..b5c59a26808 100644
 --- a/loader/wine.inf.in
 +++ b/loader/wine.inf.in
 @@ -99,6 +99,7 @@ AddReg=\
@@ -26,7 +26,7 @@ index fd5d5137d3e..03d75274538 100644
      SteamClient.ntamd64
  
  [Wow64Install.ntarm]
-@@ -2910,3 +2913,8 @@ HKCU,Software\Wine\AppDefaults\RiftApart.exe\DllOverrides,"atiadlxx",,"builtin"
+@@ -2910,3 +2913,7 @@ HKCU,Software\Wine\AppDefaults\RiftApart.exe\DllOverrides,"atiadlxx",,"builtin"
  HKCU,Software\Wine\AppDefaults\ffxvi.exe\DllOverrides,"atiadlxx",,"builtin"
  HKLM,Software\Wow6432Node\lucasarts entertainment company llc\Star Wars: Episode I Racer\v1.0,"Display Height",0x10001,480
  HKLM,Software\Wow6432Node\lucasarts entertainment company llc\Star Wars: Episode I Racer\v1.0,"Display Width",0x10001,640
@@ -34,4 +34,3 @@ index fd5d5137d3e..03d75274538 100644
 +[BatoceraOverrides]
 +HKLM,System\CurrentControlSet\Services\winebus,"DisableHidraw",0x10001,"1"
 +HKLM,System\CurrentControlSet\Services\winebus,"Enable SDL",0x10001,"1"
-+
