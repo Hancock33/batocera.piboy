@@ -34,23 +34,23 @@ class SNES:
 
         #Set the GPIOs
         self.chip = gpiod.Chip('gpiochip0')  # Access the GPIO chip
-        
+
         # Use get_lines for multiple pin configuration
         self.gpio_lines = self.chip.get_lines([
-            self.led_pin, 
-            self.fan_pin, 
-            self.reset_pin, 
-            self.power_pin, 
+            self.led_pin,
+            self.fan_pin,
+            self.reset_pin,
+            self.power_pin,
             self.check_pin
         ])
 
         # Request lines with appropriate configurations
         self.gpio_lines.request(
             consumers=[
-                "SNES_LED", 
-                "SNES_FAN", 
-                "SNES_RESET", 
-                "SNES_POWER", 
+                "SNES_LED",
+                "SNES_FAN",
+                "SNES_RESET",
+                "SNES_POWER",
                 "SNES_CHECK"
             ],
             types=[
@@ -70,10 +70,10 @@ class SNES:
         )
 
         # Unpack the lines for easier access
-        (self.led, 
-         self.fan, 
-         self.reset, 
-         self.power, 
+        (self.led,
+         self.fan,
+         self.reset,
+         self.power,
          self.check) = self.gpio_lines
 
         #PWM for the fan
