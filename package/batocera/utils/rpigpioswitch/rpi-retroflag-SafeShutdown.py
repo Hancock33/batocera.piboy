@@ -14,7 +14,7 @@ POWER_EN_PIN = 4    # GPIO 4 in BCM mode (pin 7)
 def init_gpio():
     try:
         chip = gpiod.Chip(GPIO_CHIP)
-        
+
         power_button = chip.get_line(POWER_PIN)
         reset_button = chip.get_line(RESET_PIN)
         led = chip.get_line(LED_PIN)
@@ -78,7 +78,7 @@ def handle_reset(reset_button):
 
 def main():
     power_button, reset_button, led = init_gpio()
-    
+
     # Run handlers (no need for multiprocessing; they are independent loops)
     handle_poweroff(power_button)  # Power off handler
     handle_led_blink(power_button, led)  # LED blink handler

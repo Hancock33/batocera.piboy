@@ -39,7 +39,7 @@ class Vita3kGenerator(Generator):
                 if item.name not in ['data', 'lang', 'shaders-builtin']:
                     if item.is_dir():
                         shutil.move(item, vitaSaves)
-        
+
         # Create the config.yml file if it doesn't exist
         mkdir_if_not_exists(vitaConfig)
 

@@ -14,27 +14,27 @@ LED_PIN = 4   # pin 7
 def init_gpio():
     try:
         chip = gpiod.Chip(POWER_CHIP)
-        
+
         power_button = chip.get_line(POWER_PIN)
         reset_button = chip.get_line(RESET_PIN)
         led = chip.get_line(LED_PIN)
 
         power_button.request(
-            consumer='power', 
-            type=gpiod.LINE_REQ_EV_FALLING_EDGE, 
+            consumer='power',
+            type=gpiod.LINE_REQ_EV_FALLING_EDGE,
             flags=gpiod.LINE_REQ_FLAG_PULL_UP
         )
         reset_button.request(
-            consumer='reset', 
-            type=gpiod.LINE_REQ_EV_FALLING_EDGE, 
+            consumer='reset',
+            type=gpiod.LINE_REQ_EV_FALLING_EDGE,
             flags=gpiod.LINE_REQ_FLAG_PULL_UP
         )
         led.request(consumer='led', type=gpiod.LINE_REQ_DIR_OUT)
-        
+
         led.set_value(1)  # Turn on LED
-        
+
         return chip, power_button, reset_button, led
-    
+
     except Exception as e:
         print(f"Failed to initialize GPIO: {e}")
         exit(1)
@@ -57,23 +57,23 @@ def handle_emulator_exit():
 def watch_gpio_events():
     try:
         chip, power_button, reset_button, led = init_gpio()
-        
+
         print("GPIO event monitoring started")
-        
+
         while True:
             reset_event = reset_button.event_wait(sec=1)
             power_event = power_button.event_wait(sec=1)
-            
+
             if reset_event:
                 reset_button.event_read()
                 handle_emulator_exit()
-            
+
             if power_event:
                 power_button.event_read()
                 handle_shutdown()
                 blinkLED(led)
-            
-    
+
+
     except Exception as e:
         print(f"Error watching GPIO events: {e}")
         exit(1)
