@@ -30,6 +30,7 @@ libzedmd.mk
 mame-src.mk
 mame.mk
 mold.mk
+mono-bin.mk
 nblood.mk
 nv-codec-headers.mk
 pcsx2.mk
