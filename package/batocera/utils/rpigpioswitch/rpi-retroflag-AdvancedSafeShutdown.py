@@ -18,11 +18,11 @@ def init_gpio():
         gpiod.request_lines(POWER_CHIP,
             config={
                 LED_PIN: gpiod.LineSettings(
-                    direction=Direction.OUTPUT, 
+                    direction=Direction.OUTPUT,
                     output_value=Value.ACTIVE
                 ),
                 POWEREN_PIN: gpiod.LineSettings(
-                    direction=Direction.OUTPUT, 
+                    direction=Direction.OUTPUT,
                     output_value=Value.ACTIVE
                 )
             }
@@ -38,7 +38,7 @@ def handle_gpio_event(event_line_offset):
         try:
             output = int(subprocess.check_output(['batocera-es-swissknife', '--espid']))
             output_rc = int(subprocess.check_output(['batocera-es-swissknife', '--emupid']))
-            
+
             if output_rc:
                 subprocess.run("batocera-es-swissknife --emukill", shell=True, check=True)
             elif output:
@@ -47,7 +47,7 @@ def handle_gpio_event(event_line_offset):
                 subprocess.run("shutdown -r now", shell=True, check=True)
         except Exception as e:
             print(f"Reset command error: {e}")
-    
+
     elif event_line_offset == POWER_PIN:
         print("POWER button pressed")
         try:

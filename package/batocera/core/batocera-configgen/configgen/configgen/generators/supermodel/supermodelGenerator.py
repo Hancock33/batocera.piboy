@@ -119,7 +119,7 @@ class SupermodelGenerator(Generator):
                 "SDL_JOYSTICK_HIDAPI": "0"
             }
         )
-    
+
     def getInGameRatio(self, config, gameResolution, rom):
         if 'm3_wideScreen' in config and config["m3_wideScreen"] == "1":
             return 16 / 9

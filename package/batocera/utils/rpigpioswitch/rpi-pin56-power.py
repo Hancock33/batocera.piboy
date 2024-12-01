@@ -37,7 +37,7 @@ def watch_gpio_events():
             if shutdown_button.event_wait(sec=1):
                 shutdown_button.event_read()
                 handle_shutdown()
-            
+
     except Exception as e:
         print(f"Error watching GPIO events: {e}")
         exit(1)
