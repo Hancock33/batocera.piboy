@@ -12,7 +12,7 @@ def init_gpio():
     try:
         chip = gpiod.Chip(GPIO_CHIP)
         lines = chip.get_lines([POWER_PIN, POWER_EN_PIN])
-        
+
         power_button = lines[POWER_PIN]
         power_en = lines[POWER_EN_PIN]
 
