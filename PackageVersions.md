@@ -431,7 +431,7 @@ Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e24
 Ports|[awgl](http://github.com/cyxx/rawgl)|1eeaa530c859bd6e37b3d3bd7d3136bc16afcc89|Mar 12, 2022
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|1855c8ed66b771fb62ae66bf5b1cbc9ede9cd03a|Dec 26, 2023
-Ports|[box64](http://github.com/ptitseb/box64)|fb276bdc6bf02cc1781da2eaf1b60e824d840b8b|Dec 03, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|474a43a424494acc8e3d62dc1de2038d97d16937|Dec 03, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|20432122de2634dfa8da79f97a3695fce6c97498|Dec 03, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ca0c1a02abcf2513b1871a09f786162abb41caec|Sept 01, 2024
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
@@ -445,7 +445,7 @@ Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|ebe4aceb721894ff614481e97c50df0fd7e3e814|Nov 16, 2024
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|82fa9e2f5c6cbedb757829bc6688ff413e0b06f7|Oct 06, 2024
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|19c21b9ab10b0c17147c9ad951cc15279ed33f77|Jul 25, 2024
-Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|dc470da32d192169b4bd8b7c65eff309262a5294|Dec 01, 2024
+Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|47ffc38cf25617b76c19f994d56ab4c73262f8e0|Dec 03, 2024
 Ports|[f2bgl](http://github.com/cyxx/f2bgl)|0b84f41c7cc13a41f5a1832549485b814a52070d|Oct 18, 2020
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|ad8a2754fa99ceaf40495185ad48191cf27559e2|Mar 05, 2024
 Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|9fb917c357b20d95d597bed4d67904c29cd5c753|Apr 21, 2024
