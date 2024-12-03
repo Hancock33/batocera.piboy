@@ -11,8 +11,9 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-12-03|Dec 03
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|852cebbc9b91a36526bc6ce65ece604958b92e87|Dec 03, 2024
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|6bf93071cf43f19b428fb1f4f34039a71cb315ee|Dec 03, 2024
 Hardware|[pironman5](http://github.com/sunfounder/pironman5)|123ca93430ce9b68097c680c639f96613455a5c7|Dec 03, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|fb276bdc6bf02cc1781da2eaf1b60e824d840b8b|Dec 03, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|474a43a424494acc8e3d62dc1de2038d97d16937|Dec 03, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|57ee13967b8a3ba06d63b3e1c67a7eacf874f518|Dec 03, 2024
+Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|47ffc38cf25617b76c19f994d56ab4c73262f8e0|Dec 03, 2024
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|7b8cfa87102ce951f86090beb5d05c01696edad5|Dec 03, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|77c707f29e0b5dbda75f71f3cd9bd551fff011e1|Dec 03, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|e5545fe4345cebb46921cb3d65545b25eefaf8d2|Dec 03, 2024
@@ -48,7 +49,6 @@ Emulators|[openmsx](http://github.com/openMSX/openMSX)|8aec16256d2cbc2dd7f43092c
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|2f392f5948486cf4486d153f5960e1639f01cd3a|Dec 01, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|6ce2713ac09e4dded5776a1eefd905bb42953c14|Dec 01, 2024
 Libraries|[mono-bin](https://github.com/Hancock33/batocera-mono/releases)|6.12.0.206|Dec 01, 2024
-Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|dc470da32d192169b4bd8b7c65eff309262a5294|Dec 01, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|f46a88411595a092ed14bac67ee739b8e9cef5a8|Dec 01, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|edec5383b5f423ebab13379d29a58b17a9d1f9e9|Dec 01, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|f73e3d204f40907d5f6ae483da2fe7cef3dcb9df|Dec 01, 2024
