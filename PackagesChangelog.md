@@ -19,7 +19,9 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|e5545fe4345cebb46921
 Sources|[libretro-mame-src](http://github.com/sonninnos/mame)|750b36ca4cc65e7142f97d0ffd0235085bbd20f7|Dec 03, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.28.1|Dec 03, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch-9.22|Dec 03, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241203|Dec 03, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|20432122de2634dfa8da79f97a3695fce6c97498|Dec 03, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241203|Dec 03, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|ce4e6f076f3ebbfd4c71021773c90c13ecdc79df|Dec 03, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|18a973d4f28033afaa844bd093966e3bb623f125|Dec 03, 2024
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|28461a1d449940e1fa954579923ee6add62f25c7|Dec 03, 2024
@@ -49,8 +51,6 @@ Libraries|[mono-bin](https://github.com/Hancock33/batocera-mono/releases)|6.12.0
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|dc470da32d192169b4bd8b7c65eff309262a5294|Dec 01, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|f46a88411595a092ed14bac67ee739b8e9cef5a8|Dec 01, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|edec5383b5f423ebab13379d29a58b17a9d1f9e9|Dec 01, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241201|Dec 01, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241201|Dec 01, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|f73e3d204f40907d5f6ae483da2fe7cef3dcb9df|Dec 01, 2024
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|edec5383b5f423ebab13379d29a58b17a9d1f9e9|Dec 01, 2024
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|837973fd6dd295a5694432c1f091b2221e93da36|Dec 01, 2024
