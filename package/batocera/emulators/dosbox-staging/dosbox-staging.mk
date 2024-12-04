@@ -11,12 +11,7 @@ DOSBOX_STAGING_DEPENDENCIES = alsa-lib sdl2 sdl2_net sdl2_image fluidsynth speex
 DOSBOX_STAGING_DEPENDENCIES += zlib libpng libogg libvorbis opus opusfile slirp iir
 DOSBOX_STAGING_LICENSE = GPLv2
 
-DOSBOX_STAGING_CPPFLAGS = -DNDEBUG
-DOSBOX_STAGING_CFLAGS   = -O3 -fstrict-aliasing -fno-signed-zeros -fno-trapping-math -fassociative-math -frename-registers -ffunction-sections -fdata-sections
-DOSBOX_STAGING_CXXFLAGS = -O3 -fstrict-aliasing -fno-signed-zeros -fno-trapping-math -fassociative-math -frename-registers -ffunction-sections -fdata-sections
-
 DOSBOX_STAGING_CONF_ENV += SSL_CERT_DIR=/etc/ssl/certs
-DOSBOX_STAGING_CONF_OPTS += -Duse_zlib_ng=sse2,ssse3,neon -Dcpp_std=c++17
 
 ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 DOSBOX_STAGING_CONF_OPTS += -Duse_opengl=false
