@@ -3,8 +3,8 @@
 # pm_dashboard
 #
 ################################################################################
-# Version: Commits on Dec 02, 2024
-PM_DASHBOARD_VERSION = 3a21784ee0832592f1aca76513161b624280f462
+# Version: Commits on Dec 04, 2024
+PM_DASHBOARD_VERSION = 04925a0af89c87cc5af994309513d01798c72431
 PM_DASHBOARD_SITE = $(call github,sunfounder,pm_dashboard,$(PM_DASHBOARD_VERSION))
 PM_DASHBOARD_SETUP_TYPE = setuptools
 PM_DASHBOARD_LICENSE = GPL-2.0
