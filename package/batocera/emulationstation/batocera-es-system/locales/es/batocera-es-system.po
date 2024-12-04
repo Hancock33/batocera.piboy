@@ -4875,8 +4875,7 @@ msgstr "Cambia el idioma del sistema de Gamecube."
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Change the consoles country from the default of the United States."
-msgstr ""
-"Cambia el país de las consolas de valor predeterminado Estados Unidos."
+msgstr "Cambia el país de las consolas de valor predeterminado Estados Unidos."
 
 #. TRANSLATION: doom3
 msgctxt "game_options"
@@ -4894,8 +4893,8 @@ msgid ""
 "Change the game's language. Game files require the supported language "
 "strings in the .pk4 files."
 msgstr ""
-"Cambia el idioma del juego. Los archivos del juego requieren las cadenas "
-"de idioma compatibles en los archivos .pk4."
+"Cambia el idioma del juego. Los archivos del juego requieren las cadenas de "
+"idioma compatibles en los archivos .pk4."
 
 #. TRANSLATION: bigpemu, cemu, duckstation, libretro/vice_x128, libretro/vice_x64, ...
 msgctxt "game_options"
@@ -10820,9 +10819,9 @@ msgid ""
 "Maximum host texture memory usage (in megabytes) above which old textures "
 "will be destroyed. Set below hard limit."
 msgstr ""
-"Uso máximo de memoria de textura del host (en megabytes) por encima del "
-"cual las texturas antiguas serán eliminadas. Establecer por debajo del "
-"límite de textura dura."
+"Uso máximo de memoria de textura del host (en megabytes) por encima del cual "
+"las texturas antiguas serán eliminadas. Establecer por debajo del límite de "
+"textura dura."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -10830,8 +10829,8 @@ msgid ""
 "Maximum host texture memory usage (in megabytes) above which textures will "
 "be destroyed as soon as possible."
 msgstr ""
-"Uso máximo de memoria de textura del host (en megabytes) por encima del "
-"cual las texturas se eliminarán lo antes posible."
+"Uso máximo de memoria de textura del host (en megabytes) por encima del cual "
+"las texturas se eliminarán lo antes posible."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -11930,8 +11929,8 @@ msgid ""
 "Only some games support rumble. Requires X-Input mode and may not be "
 "compatible with all controllers."
 msgstr ""
-"Sólo algunos juegos admiten vibración. Requiere el modo X-Input y es "
-"posible que no sea compatible con todos los mandos."
+"Sólo algunos juegos admiten vibración. Requiere el modo X-Input y es posible "
+"que no sea compatible con todos los mandos."
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
