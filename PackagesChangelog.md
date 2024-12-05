@@ -1,15 +1,15 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|631be7d6c04fb738a615c69ac9bae32ac6fac6b9|Dec 05, 2024
-Emulators|[citra](https://github.com/Borked3DS/Borked3DS.git)|388cedd0b0a93f9d18cdabec57b709674ef13689|Dec 05, 2024
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|c6b06292756116f7547aac6c5bfa68c1b2fc7f78|Dec 05, 2024
+Emulators|[citra](https://github.com/Borked3DS/Borked3DS.git)|c6f67b6536250fdc3fe0158431bcd81ae24b2878|Dec 05, 2024
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|a5d1172d974bc2ac405534610d382253a66aeb5f|Dec 05, 2024
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.12.04|Dec 05, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|3670c131e3379ea0f9a796264268315181563eb0|Dec 05, 2024
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|7d718ada390bc54749fa35389437147e1bbefae1|Dec 05, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.44|Dec 05, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|9297d2fc49b1b5203f20bbb1dfdfe8e525c5b83d|Dec 05, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-12-05|Dec 05, 2024
-Emulators|[scummvm](http://github.com/scummvm/scummvm)|5f771deca6a69e577194ced611319d739282d5de|Dec 05, 2024
+Emulators|[scummvm](http://github.com/scummvm/scummvm)|5f84c7f931e782e0e7a38a46db493cab5b8cf8ff|Dec 05, 2024
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|15ae7a094d3a4430ac2e7358c3a85af1409de404|Dec 05, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45390|Dec 05, 2024
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2024.09.2|Dec 05, 2024
@@ -22,7 +22,8 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|4992b43f77d7ae4b356b793c6df921f
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|5767f77800bb497cf07a34cfd5d8dd557f4139c4|Dec 05, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|87ac222710fc3fa389e47041d578c582a6207cde|Dec 05, 2024
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|dc8fc10631e92c776ccb57af9fdab43e091599d1|Dec 05, 2024
-Ports|[supertux2](https://github.com/SuperTux/supertux.git)|f6241d1ab179aa41350cd2f2cc783171161c76c9|Dec 05, 2024
+Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|fc3dcd287a92e4f9ea6fc48109f4fc84c73f680b|Dec 05, 2024
+Ports|[supertux2](https://github.com/SuperTux/supertux.git)|0cd710a483f845edd189deb40ee97616b9d971cd|Dec 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|7a75aafc88288473c3090511c244562ab357c13f|Dec 05, 2024
 Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-console)|a3a53cc73a2377104e3ee4ef3963a12e55521502|Dec 05, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|e3c1ebfbde7b83f88a23a522224880c09e95f660|Dec 05, 2024
@@ -31,10 +32,11 @@ Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241205|Dec 05, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|fb660fa3c196754393b437ac26bd451a1699b07c|Dec 05, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|f63402ca12f100d847b740ae163f6811125cff6c|Dec 05, 2024
-Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|0a85734ae7c486dc95cd68d860340e20fa85268c|Dec 05, 2024
+Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|45787a87b34009ad1b5a77f4d08efe26751f6cca|Dec 05, 2024
+Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|ab1276f90d2f4a7f36ab3f667a421a14839cfeca|Dec 05, 2024
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|30829ae29630611a7c39ac93602fcad27bc6d35b|Dec 05, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|9297d2fc49b1b5203f20bbb1dfdfe8e525c5b83d|Dec 05, 2024
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|5f771deca6a69e577194ced611319d739282d5de|Dec 05, 2024
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|5f84c7f931e782e0e7a38a46db493cab5b8cf8ff|Dec 05, 2024
 Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|2b458b523eff405be415bbe209c76472727e3c3c|Dec 05, 2024
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|4aec246a20f13d135516c99625f1155302272fb2|Dec 05, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|05d12f68ad01d64fed29320d76771fae174300e5|Dec 04, 2024
@@ -48,7 +50,6 @@ Ports|[doomretro](http://github.com/bradharding/doomretro)|191109f510914436dbd92
 Ports|[quake3](http://github.com/ioquake/ioq3)|9901144641f700422c2aaa0c342c137ba5d999fe|Dec 04, 2024
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|9f78161a96c38613e12a2bc821fb4888590eee06|Dec 04, 2024
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|572c91856a5288b7433c619af651e31f00f3ce7e|Dec 04, 2024
-Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|6d469936e23121043a32d217efe6cd51249dcfae|Dec 04, 2024
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|873fca076a13e401edacdf30030e0ca32a877955|Dec 04, 2024
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|a941ae520e3b2a94da3c0cb517e1a2c40a3139ac|Dec 03, 2024
 Emulators|[dhewm3](http://github.com/dhewm/dhewm3)|ce4e6f076f3ebbfd4c71021773c90c13ecdc79df|Dec 03, 2024
@@ -181,7 +182,6 @@ Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.8.0|Oct 29, 2024
 Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|39680acbc051c877d4f57f55ec27d4194240f115|Oct 29, 2024
 Emulators|[libretro-mupen64plus-next](http://github.com/libretro/mupen64plus-libretro-nx)|4249e39b2c200e5f0895385f76d99928785f2bea|Oct 29, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|fd05ca7df5259a2cd0aa9204f331e0b05126c376|Oct 28, 2024
-Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|ec2263a26286bff5304cad74430bdbce98409e1c|Oct 28, 2024
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|abc260bcad4417a18b663f41c2e9ca47105ed870|Oct 26, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|cf532d7c7675d3ffa5d69009d63869daf73955cb|Oct 26, 2024
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|1c38f0cff707b340910667f0b9a5fea4cbac7790|Oct 26, 2024
