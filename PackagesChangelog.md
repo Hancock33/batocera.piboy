@@ -17,7 +17,9 @@ Ports|[box64](http://github.com/ptitseb/box64)|b735a8663e067bb0f5c996f8ddd7fa556
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|38ae30a1a8c7a79d8884d3a50d24beebbd737f9f|Dec 06, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|c2e6b766db3d4bf7f9ede0496bd8ba30656499b3|Dec 06, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|3115894307f271610ed234c6f5172d7551541325|Dec 06, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241206|Dec 06, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|ec278bd7843252d7bfc6e5e91d7074f9c0310de7|Dec 06, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241206|Dec 06, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|3592df50f02f337c1840ccd485f8f6e825998862|Dec 06, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|dd9bad4ec6d5b5af4bad46d05be10d9e0dc7d876|Dec 06, 2024
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|8940d78ea4a93d069aa1b1a62269ffdf7c7b8f40|Dec 06, 2024
@@ -40,8 +42,6 @@ Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|6a45364861a791a688c
 Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-console)|a3a53cc73a2377104e3ee4ef3963a12e55521502|Dec 05, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|e3c1ebfbde7b83f88a23a522224880c09e95f660|Dec 05, 2024
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|1a3d8d4db120c6ffef4d29c62424ab585c683ef0|Dec 05, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241205|Dec 05, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241205|Dec 05, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|fb660fa3c196754393b437ac26bd451a1699b07c|Dec 05, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|f63402ca12f100d847b740ae163f6811125cff6c|Dec 05, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|45787a87b34009ad1b5a77f4d08efe26751f6cca|Dec 05, 2024
