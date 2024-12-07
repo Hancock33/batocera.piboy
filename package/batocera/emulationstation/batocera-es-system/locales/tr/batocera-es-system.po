@@ -11616,7 +11616,7 @@ msgctxt "game_options"
 msgid "OFF (Default)"
 msgstr "KAPAT (Varsayılan)"
 
-#. TRANSLATION: flycast, libretro/mame, mame
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "EKRAN DIŞI YENİDEN YÜKLE TUŞU"
@@ -14375,7 +14375,7 @@ msgctxt "game_options"
 msgid "Set game audio level gain in dB."
 msgstr "Oyun ses seviyesi kazancını dB olarak ayarla."
 
-#. TRANSLATION: flycast, libretro/mame, mame
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Doldurma için tabanca tuşunu 2 ayarla."

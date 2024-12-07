@@ -11648,7 +11648,7 @@ msgctxt "game_options"
 msgid "OFF (Default)"
 msgstr "WYŁ. (domyślnie)"
 
-#. TRANSLATION: flycast, libretro/mame, mame
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "PRZYCISK PRZEŁADOWANIA POZA EKRANEM"
@@ -14420,7 +14420,7 @@ msgctxt "game_options"
 msgid "Set game audio level gain in dB."
 msgstr "Ustaw wzmocnienie poziomu dźwięku gry w dB."
 
-#. TRANSLATION: flycast, libretro/mame, mame
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Ustaw przycisk pistoletu 2 na przeładowanie."
