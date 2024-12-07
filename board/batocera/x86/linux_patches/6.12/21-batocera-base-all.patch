@@ -918,7 +918,7 @@ index 000000000000..767844637a7d
 +  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 6bb4ec0c162a..63ee2eb3ab41 100644
+index b878ddc99f94..b737a7b5e767 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -965,6 +965,14 @@ Q:	https://patchwork.kernel.org/project/linux-rdma/list/
@@ -994,7 +994,7 @@ index 6bb4ec0c162a..63ee2eb3ab41 100644
  M:	Petr Mladek <pmladek@suse.com>
  R:	Steven Rostedt <rostedt@goodmis.org>
 diff --git a/Makefile b/Makefile
-index cb1a5c358231..069cdd4e1db7 100644
+index 23a0d05a0ced..062ca7672e9e 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -801,11 +801,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -1256,7 +1256,7 @@ index 7b9a7e8f39ac..f127d0f1024e 100644
  	select ARCH_USE_CMPXCHG_LOCKREF		if X86_CMPXCHG64
  	select ARCH_USE_MEMTEST
 diff --git a/arch/x86/Kconfig.cpu b/arch/x86/Kconfig.cpu
-index 2a7279d80460..786fcf84d128 100644
+index 2a7279d80460..f5849153b385 100644
 --- a/arch/x86/Kconfig.cpu
 +++ b/arch/x86/Kconfig.cpu
 @@ -155,9 +155,8 @@ config MPENTIUM4
@@ -1414,7 +1414,7 @@ index 2a7279d80460..786fcf84d128 100644
  	help
  
  	  Select this for Intel Core 2 and newer Core 2 Xeons (Xeon 51xx and
-@@ -278,14 +388,199 @@ config MCORE2
+@@ -278,14 +388,191 @@ config MCORE2
  	  family in /proc/cpuinfo. Newer ones have 6 and older ones 15
  	  (not a typo)
  
@@ -1522,21 +1522,13 @@ index 2a7279d80460..786fcf84d128 100644
 +
 +	  Enables -march=cannonlake
 +
-+config MICELAKE_CLIENT
-+	bool "Intel Ice Lake (Client)"
++config MICELAKE
++	bool "Intel Ice Lake"
 +	help
 +
 +	  Select this for 10th Gen Core processors in the Ice Lake family.
 +
 +	  Enables -march=icelake-client
-+
-+config MICELAKE_SERVER
-+	bool "Intel Ice lake (Server)"
-+	help
-+
-+	  Select this for the 3rd Gen Xeon processors in the Ice lake family.
-+
-+	  Enables -march=icelake-server
 +
 +config MCASCADELAKE
 +	bool "Intel Cascade Lake"
@@ -1620,7 +1612,7 @@ index 2a7279d80460..786fcf84d128 100644
  
  config GENERIC_CPU
  	bool "Generic-x86-64"
-@@ -294,6 +589,26 @@ config GENERIC_CPU
+@@ -294,6 +581,26 @@ config GENERIC_CPU
  	  Generic x86-64 CPU.
  	  Run equally well on all x86-64 CPUs.
  
@@ -1647,7 +1639,7 @@ index 2a7279d80460..786fcf84d128 100644
  endchoice
  
  config X86_GENERIC
-@@ -308,6 +623,30 @@ config X86_GENERIC
+@@ -308,6 +615,30 @@ config X86_GENERIC
  	  This is really intended for distributors who need more
  	  generic optimizations.
  
@@ -1678,34 +1670,34 @@ index 2a7279d80460..786fcf84d128 100644
  #
  # Define implied options from the CPU selection here
  config X86_INTERNODE_CACHE_SHIFT
-@@ -318,7 +657,7 @@ config X86_INTERNODE_CACHE_SHIFT
+@@ -318,7 +649,7 @@ config X86_INTERNODE_CACHE_SHIFT
  config X86_L1_CACHE_SHIFT
  	int
  	default "7" if MPENTIUM4 || MPSC
 -	default "6" if MK7 || MK8 || MPENTIUMM || MCORE2 || MATOM || MVIAC7 || X86_GENERIC || GENERIC_CPU
-+	default "6" if MK7 || MK8 || MPENTIUMM || MCORE2 || MATOM || MVIAC7 || X86_GENERIC || GENERIC_CPU || MK8SSE3 || MK10 || MBARCELONA || MBOBCAT || MJAGUAR || MBULLDOZER || MPILEDRIVER || MSTEAMROLLER || MEXCAVATOR || MZEN || MZEN2 || MZEN3 || MZEN4 || MZEN5 || MNEHALEM || MWESTMERE || MSILVERMONT || MGOLDMONT || MGOLDMONTPLUS || MSANDYBRIDGE || MIVYBRIDGE || MHASWELL || MBROADWELL || MSKYLAKE || MSKYLAKEX || MCANNONLAKE || MICELAKE_CLIENT || MICELAKE_SERVER || MCASCADELAKE || MCOOPERLAKE || MTIGERLAKE || MSAPPHIRERAPIDS || MROCKETLAKE || MALDERLAKE || MRAPTORLAKE || MMETEORLAKE || MEMERALDRAPIDS || MNATIVE_INTEL || MNATIVE_AMD
++	default "6" if MK7 || MK8 || MPENTIUMM || MCORE2 || MATOM || MVIAC7 || X86_GENERIC || GENERIC_CPU || MK8SSE3 || MK10 || MBARCELONA || MBOBCAT || MJAGUAR || MBULLDOZER || MPILEDRIVER || MSTEAMROLLER || MEXCAVATOR || MZEN || MZEN2 || MZEN3 || MZEN4 || MZEN5 || MNEHALEM || MWESTMERE || MSILVERMONT || MGOLDMONT || MGOLDMONTPLUS || MSANDYBRIDGE || MIVYBRIDGE || MHASWELL || MBROADWELL || MSKYLAKE || MSKYLAKEX || MCANNONLAKE || MICELAKE || MCASCADELAKE || MCOOPERLAKE || MTIGERLAKE || MSAPPHIRERAPIDS || MROCKETLAKE || MALDERLAKE || MRAPTORLAKE || MMETEORLAKE || MEMERALDRAPIDS || MNATIVE_INTEL || MNATIVE_AMD
  	default "4" if MELAN || M486SX || M486 || MGEODEGX1
  	default "5" if MWINCHIP3D || MWINCHIPC6 || MCRUSOE || MEFFICEON || MCYRIXIII || MK6 || MPENTIUMIII || MPENTIUMII || M686 || M586MMX || M586TSC || M586 || MVIAC3_2 || MGEODE_LX
  
-@@ -336,11 +675,11 @@ config X86_ALIGNMENT_16
+@@ -336,11 +667,11 @@ config X86_ALIGNMENT_16
  
  config X86_INTEL_USERCOPY
  	def_bool y
 -	depends on MPENTIUM4 || MPENTIUMM || MPENTIUMIII || MPENTIUMII || M586MMX || X86_GENERIC || MK8 || MK7 || MEFFICEON || MCORE2
-+	depends on MPENTIUM4 || MPENTIUMM || MPENTIUMIII || MPENTIUMII || M586MMX || X86_GENERIC || MK8 || MK7 || MEFFICEON || MCORE2 || MNEHALEM || MWESTMERE || MSILVERMONT || MGOLDMONT || MGOLDMONTPLUS || MSANDYBRIDGE || MIVYBRIDGE || MHASWELL || MBROADWELL || MSKYLAKE || MSKYLAKEX || MCANNONLAKE || MICELAKE_CLIENT || MICELAKE_SERVER || MCASCADELAKE || MCOOPERLAKE || MTIGERLAKE || MSAPPHIRERAPIDS || MROCKETLAKE || MALDERLAKE || MRAPTORLAKE || MMETEORLAKE || MEMERALDRAPIDS || MNATIVE_INTEL
++	depends on MPENTIUM4 || MPENTIUMM || MPENTIUMIII || MPENTIUMII || M586MMX || X86_GENERIC || MK8 || MK7 || MEFFICEON || MCORE2 || MNEHALEM || MWESTMERE || MSILVERMONT || MGOLDMONT || MGOLDMONTPLUS || MSANDYBRIDGE || MIVYBRIDGE || MHASWELL || MBROADWELL || MSKYLAKE || MSKYLAKEX || MCANNONLAKE || MICELAKE || MCASCADELAKE || MCOOPERLAKE || MTIGERLAKE || MSAPPHIRERAPIDS || MROCKETLAKE || MALDERLAKE || MRAPTORLAKE || MMETEORLAKE || MEMERALDRAPIDS || MNATIVE_INTEL
  
  config X86_USE_PPRO_CHECKSUM
  	def_bool y
 -	depends on MWINCHIP3D || MWINCHIPC6 || MCYRIXIII || MK7 || MK6 || MPENTIUM4 || MPENTIUMM || MPENTIUMIII || MPENTIUMII || M686 || MK8 || MVIAC3_2 || MVIAC7 || MEFFICEON || MGEODE_LX || MCORE2 || MATOM
-+	depends on MWINCHIP3D || MWINCHIPC6 || MCYRIXIII || MK7 || MK6 || MPENTIUM4 || MPENTIUMM || MPENTIUMIII || MPENTIUMII || M686 || MK8 || MVIAC3_2 || MVIAC7 || MEFFICEON || MGEODE_LX || MCORE2 || MATOM || MK8SSE3 || MK10 || MBARCELONA || MBOBCAT || MJAGUAR || MBULLDOZER || MPILEDRIVER || MSTEAMROLLER || MEXCAVATOR || MZEN || MZEN2 || MZEN3 || MZEN4 || MZEN5 || MNEHALEM || MWESTMERE || MSILVERMONT || MGOLDMONT || MGOLDMONTPLUS || MSANDYBRIDGE || MIVYBRIDGE || MHASWELL || MBROADWELL || MSKYLAKE || MSKYLAKEX || MCANNONLAKE || MICELAKE_CLIENT || MICELAKE_SERVER || MCASCADELAKE || MCOOPERLAKE || MTIGERLAKE || MSAPPHIRERAPIDS || MROCKETLAKE || MALDERLAKE || MRAPTORLAKE || MMETEORLAKE || MEMERALDRAPIDS || MNATIVE_INTEL || MNATIVE_AMD
++	depends on MWINCHIP3D || MWINCHIPC6 || MCYRIXIII || MK7 || MK6 || MPENTIUM4 || MPENTIUMM || MPENTIUMIII || MPENTIUMII || M686 || MK8 || MVIAC3_2 || MVIAC7 || MEFFICEON || MGEODE_LX || MCORE2 || MATOM || MK8SSE3 || MK10 || MBARCELONA || MBOBCAT || MJAGUAR || MBULLDOZER || MPILEDRIVER || MSTEAMROLLER || MEXCAVATOR || MZEN || MZEN2 || MZEN3 || MZEN4 || MZEN5 || MNEHALEM || MWESTMERE || MSILVERMONT || MGOLDMONT || MGOLDMONTPLUS || MSANDYBRIDGE || MIVYBRIDGE || MHASWELL || MBROADWELL || MSKYLAKE || MSKYLAKEX || MCANNONLAKE || MICELAKE || MCASCADELAKE || MCOOPERLAKE || MTIGERLAKE || MSAPPHIRERAPIDS || MROCKETLAKE || MALDERLAKE || MRAPTORLAKE || MMETEORLAKE || MEMERALDRAPIDS || MNATIVE_INTEL || MNATIVE_AMD
  
  #
  # P6_NOPs are a relatively minor optimization that require a family >=
 diff --git a/arch/x86/Makefile b/arch/x86/Makefile
-index 5b773b34768d..5f57fd8750c6 100644
+index 5b773b34768d..74e94c9ba198 100644
 --- a/arch/x86/Makefile
 +++ b/arch/x86/Makefile
-@@ -182,15 +182,98 @@ else
+@@ -182,15 +182,96 @@ else
          cflags-$(CONFIG_MK8)		+= -march=k8
          cflags-$(CONFIG_MPSC)		+= -march=nocona
          cflags-$(CONFIG_MCORE2)		+= -march=core2
@@ -1747,8 +1739,7 @@ index 5b773b34768d..5f57fd8750c6 100644
 +        cflags-$(CONFIG_MSKYLAKE) 	+= -march=skylake
 +        cflags-$(CONFIG_MSKYLAKEX) 	+= -march=skylake-avx512
 +        cflags-$(CONFIG_MCANNONLAKE) 	+= -march=cannonlake
-+        cflags-$(CONFIG_MICELAKE_CLIENT) 	+= -march=icelake-client
-+        cflags-$(CONFIG_MICELAKE_SERVER) 	+= -march=icelake-server
++        cflags-$(CONFIG_MICELAKE) 	+= -march=icelake-client
 +        cflags-$(CONFIG_MCASCADELAKE) 	+= -march=cascadelake
 +        cflags-$(CONFIG_MCOOPERLAKE) 	+= -march=cooperlake
 +        cflags-$(CONFIG_MTIGERLAKE) 	+= -march=tigerlake
@@ -1793,8 +1784,7 @@ index 5b773b34768d..5f57fd8750c6 100644
 +        rustflags-$(CONFIG_MSKYLAKE) 	+= -Ctarget-cpu=skylake
 +        rustflags-$(CONFIG_MSKYLAKEX) 	+= -Ctarget-cpu=skylake-avx512
 +        rustflags-$(CONFIG_MCANNONLAKE) 	+= -Ctarget-cpu=cannonlake
-+        rustflags-$(CONFIG_MICELAKE_CLIENT) 	+= -Ctarget-cpu=icelake-client
-+        rustflags-$(CONFIG_MICELAKE_SERVER) 	+= -Ctarget-cpu=icelake-server
++        rustflags-$(CONFIG_MICELAKE) 	+= -Ctarget-cpu=icelake-client
 +        rustflags-$(CONFIG_MCASCADELAKE) 	+= -Ctarget-cpu=cascadelake
 +        rustflags-$(CONFIG_MCOOPERLAKE) 	+= -Ctarget-cpu=cooperlake
 +        rustflags-$(CONFIG_MTIGERLAKE) 	+= -Ctarget-cpu=tigerlake
@@ -1830,7 +1820,7 @@ index 7b1bebed879d..3d2e38ba5240 100644
  config CRYPTO_NHPOLY1305_SSE2
  	tristate "Hash functions: NHPoly1305 (SSE2)"
 diff --git a/arch/x86/crypto/aegis128-aesni-asm.S b/arch/x86/crypto/aegis128-aesni-asm.S
-index 2de859173940..7294dc0ee7ba 100644
+index ad7f4c891625..7294dc0ee7ba 100644
 --- a/arch/x86/crypto/aegis128-aesni-asm.S
 +++ b/arch/x86/crypto/aegis128-aesni-asm.S
 @@ -1,14 +1,13 @@
@@ -1855,7 +1845,7 @@ index 2de859173940..7294dc0ee7ba 100644
  #define T1	%xmm7
  
 -#define STATEP	%rdi
--#define LEN	%esi
+-#define LEN	%rsi
 -#define SRC	%rdx
 -#define DST	%rcx
 -
@@ -1900,32 +1890,32 @@ index 2de859173940..7294dc0ee7ba 100644
 -	xor %r9d, %r9d
 -	pxor MSG, MSG
 -
--	mov LEN, %r8d
+-	mov LEN, %r8
 -	and $0x1, %r8
 -	jz .Lld_partial_1
 -
--	mov LEN, %r8d
+-	mov LEN, %r8
 -	and $0x1E, %r8
 -	add SRC, %r8
 -	mov (%r8), %r9b
 -
 -.Lld_partial_1:
--	mov LEN, %r8d
+-	mov LEN, %r8
 -	and $0x2, %r8
 -	jz .Lld_partial_2
 -
--	mov LEN, %r8d
+-	mov LEN, %r8
 -	and $0x1C, %r8
 -	add SRC, %r8
 -	shl $0x10, %r9
 -	mov (%r8), %r9w
 -
 -.Lld_partial_2:
--	mov LEN, %r8d
+-	mov LEN, %r8
 -	and $0x4, %r8
 -	jz .Lld_partial_4
 -
--	mov LEN, %r8d
+-	mov LEN, %r8
 -	and $0x18, %r8
 -	add SRC, %r8
 -	shl $32, %r9
@@ -1935,11 +1925,11 @@ index 2de859173940..7294dc0ee7ba 100644
 -.Lld_partial_4:
 -	movq %r9, MSG
 -
--	mov LEN, %r8d
+-	mov LEN, %r8
 -	and $0x8, %r8
 -	jz .Lld_partial_8
 -
--	mov LEN, %r8d
+-	mov LEN, %r8
 -	and $0x10, %r8
 -	add SRC, %r8
 -	pslldq $8, MSG
@@ -2001,7 +1991,7 @@ index 2de859173940..7294dc0ee7ba 100644
 + * DST.  Clobbers %rax, %rcx, and %r8.
   */
 -SYM_FUNC_START_LOCAL(__store_partial)
--	mov LEN, %r8d
+-	mov LEN, %r8
 -	mov DST, %r9
 -
 -	movq T0, %r10
@@ -2620,7 +2610,7 @@ index 2de859173940..7294dc0ee7ba 100644
 +	store_partial MSG
  
  	/* mask with byte count: */
--	movd LEN, T0
+-	movq LEN, T0
 -	punpcklbw T0, T0
 -	punpcklbw T0, T0
 -	punpcklbw T0, T0
@@ -2633,7 +2623,7 @@ index 2de859173940..7294dc0ee7ba 100644
  	pand T0, MSG
  
  	aegis128_update
-@@ -695,18 +551,19 @@ SYM_TYPED_FUNC_START(crypto_aegis128_aesni_dec_tail)
+@@ -695,17 +551,19 @@ SYM_TYPED_FUNC_START(crypto_aegis128_aesni_dec_tail)
  	movdqu STATE1, 0x20(STATEP)
  	movdqu STATE2, 0x30(STATEP)
  	movdqu STATE3, 0x40(STATEP)
@@ -2645,8 +2635,7 @@ index 2de859173940..7294dc0ee7ba 100644
  
  /*
 - * void crypto_aegis128_aesni_final(void *state, void *tag_xor,
-- *                                  unsigned int assoclen,
-- *                                  unsigned int cryptlen);
+- *                                  u64 assoclen, u64 cryptlen);
 + * void aegis128_aesni_final(struct aegis_state *state,
 + *			     struct aegis_block *tag_xor,
 + *			     unsigned int assoclen, unsigned int cryptlen);
@@ -2661,12 +2650,12 @@ index 2de859173940..7294dc0ee7ba 100644
  
  	/* load the state: */
  	movdqu 0x00(STATEP), STATE0
-@@ -716,10 +573,8 @@ SYM_FUNC_START(crypto_aegis128_aesni_final)
+@@ -715,10 +573,8 @@ SYM_FUNC_START(crypto_aegis128_aesni_final)
  	movdqu 0x40(STATEP), STATE4
  
  	/* prepare length block: */
--	movd %edx, MSG
--	movd %ecx, T0
+-	movq %rdx, MSG
+-	movq %rcx, T0
 -	pslldq $8, T0
 -	pxor T0, MSG
 +	movd ASSOCLEN, MSG
@@ -2674,7 +2663,7 @@ index 2de859173940..7294dc0ee7ba 100644
  	psllq $3, MSG /* multiply by 8 (to get bit count) */
  
  	pxor STATE3, MSG
-@@ -734,7 +589,7 @@ SYM_FUNC_START(crypto_aegis128_aesni_final)
+@@ -733,7 +589,7 @@ SYM_FUNC_START(crypto_aegis128_aesni_final)
  	aegis128_update; pxor MSG, STATE3
  
  	/* xor tag: */
@@ -2683,7 +2672,7 @@ index 2de859173940..7294dc0ee7ba 100644
  
  	pxor STATE0, MSG
  	pxor STATE1, MSG
-@@ -742,8 +597,6 @@ SYM_FUNC_START(crypto_aegis128_aesni_final)
+@@ -741,8 +597,6 @@ SYM_FUNC_START(crypto_aegis128_aesni_final)
  	pxor STATE3, MSG
  	pxor STATE4, MSG
  
@@ -4338,32 +4327,6 @@ index 913fd3a7bac6..a7c93191b7c6 100644
  
  /*
   * BUG word(s)
-diff --git a/arch/x86/include/asm/futex.h b/arch/x86/include/asm/futex.h
-index 99d345b686fa..6e2458088800 100644
---- a/arch/x86/include/asm/futex.h
-+++ b/arch/x86/include/asm/futex.h
-@@ -48,7 +48,9 @@ do {								\
- static __always_inline int arch_futex_atomic_op_inuser(int op, int oparg, int *oval,
- 		u32 __user *uaddr)
- {
--	if (!user_access_begin(uaddr, sizeof(u32)))
-+	if (can_do_masked_user_access())
-+		uaddr = masked_user_access_begin(uaddr);
-+	else if (!user_access_begin(uaddr, sizeof(u32)))
- 		return -EFAULT;
- 
- 	switch (op) {
-@@ -84,7 +86,9 @@ static inline int futex_atomic_cmpxchg_inatomic(u32 *uval, u32 __user *uaddr,
- {
- 	int ret = 0;
- 
--	if (!user_access_begin(uaddr, sizeof(u32)))
-+	if (can_do_masked_user_access())
-+		uaddr = masked_user_access_begin(uaddr);
-+	else if (!user_access_begin(uaddr, sizeof(u32)))
- 		return -EFAULT;
- 	asm volatile("\n"
- 		"1:\t" LOCK_PREFIX "cmpxchgl %3, %2\n"
 diff --git a/arch/x86/include/asm/intel-family.h b/arch/x86/include/asm/intel-family.h
 index 1a42f829667a..736764472048 100644
 --- a/arch/x86/include/asm/intel-family.h
@@ -4476,10 +4439,10 @@ index 92f3664dd933..3973cb9bb2e6 100644
  {
  	return __max_logical_packages;
 diff --git a/arch/x86/include/asm/vermagic.h b/arch/x86/include/asm/vermagic.h
-index 75884d2cdec3..2fdae271f47f 100644
+index 75884d2cdec3..f4e29563473d 100644
 --- a/arch/x86/include/asm/vermagic.h
 +++ b/arch/x86/include/asm/vermagic.h
-@@ -17,6 +17,56 @@
+@@ -17,6 +17,54 @@
  #define MODULE_PROC_FAMILY "586MMX "
  #elif defined CONFIG_MCORE2
  #define MODULE_PROC_FAMILY "CORE2 "
@@ -4511,10 +4474,8 @@ index 75884d2cdec3..2fdae271f47f 100644
 +#define MODULE_PROC_FAMILY "SKYLAKEX "
 +#elif defined CONFIG_MCANNONLAKE
 +#define MODULE_PROC_FAMILY "CANNONLAKE "
-+#elif defined CONFIG_MICELAKE_CLIENT
-+#define MODULE_PROC_FAMILY "ICELAKE_CLIENT "
-+#elif defined CONFIG_MICELAKE_SERVER
-+#define MODULE_PROC_FAMILY "ICELAKE_SERVER "
++#elif defined CONFIG_MICELAKE
++#define MODULE_PROC_FAMILY "ICELAKE "
 +#elif defined CONFIG_MCASCADELAKE
 +#define MODULE_PROC_FAMILY "CASCADELAKE "
 +#elif defined CONFIG_MCOOPERLAKE
@@ -4536,7 +4497,7 @@ index 75884d2cdec3..2fdae271f47f 100644
  #elif defined CONFIG_MATOM
  #define MODULE_PROC_FAMILY "ATOM "
  #elif defined CONFIG_M686
-@@ -35,6 +85,28 @@
+@@ -35,6 +83,28 @@
  #define MODULE_PROC_FAMILY "K7 "
  #elif defined CONFIG_MK8
  #define MODULE_PROC_FAMILY "K8 "
@@ -4608,6 +4569,39 @@ index aab9d0570841..d745dd586303 100644
  	*numerator = CPPC_HIGHEST_PERF_PREFCORE;
  
  	return 0;
+diff --git a/arch/x86/kernel/alternative.c b/arch/x86/kernel/alternative.c
+index d17518ca19b8..8b66a555d2f0 100644
+--- a/arch/x86/kernel/alternative.c
++++ b/arch/x86/kernel/alternative.c
+@@ -1825,11 +1825,18 @@ static inline temp_mm_state_t use_temporary_mm(struct mm_struct *mm)
+ 	return temp_state;
+ }
+ 
++__ro_after_init struct mm_struct *poking_mm;
++__ro_after_init unsigned long poking_addr;
++
+ static inline void unuse_temporary_mm(temp_mm_state_t prev_state)
+ {
+ 	lockdep_assert_irqs_disabled();
++
+ 	switch_mm_irqs_off(NULL, prev_state.mm, current);
+ 
++	/* Clear the cpumask, to indicate no TLB flushing is needed anywhere */
++	cpumask_clear_cpu(raw_smp_processor_id(), mm_cpumask(poking_mm));
++
+ 	/*
+ 	 * Restore the breakpoints if they were disabled before the temporary mm
+ 	 * was loaded.
+@@ -1838,9 +1845,6 @@ static inline void unuse_temporary_mm(temp_mm_state_t prev_state)
+ 		hw_breakpoint_restore();
+ }
+ 
+-__ro_after_init struct mm_struct *poking_mm;
+-__ro_after_init unsigned long poking_addr;
+-
+ static void text_poke_memcpy(void *dst, const void *src, size_t len)
+ {
+ 	memcpy(dst, src, len);
 diff --git a/arch/x86/kernel/cpu/debugfs.c b/arch/x86/kernel/cpu/debugfs.c
 index 3baf3e435834..cacfd3f6abef 100644
 --- a/arch/x86/kernel/cpu/debugfs.c
@@ -4826,10 +4820,10 @@ index eb503f53c319..101725c149c4 100644
  		setup_clear_cpu_cap(X86_FEATURE_PCID);
  		return;
 diff --git a/arch/x86/mm/tlb.c b/arch/x86/mm/tlb.c
-index b0678d59ebdb..a2becb85bea7 100644
+index 86593d1b787d..1aac4fa90d3d 100644
 --- a/arch/x86/mm/tlb.c
 +++ b/arch/x86/mm/tlb.c
-@@ -569,7 +569,7 @@ void switch_mm_irqs_off(struct mm_struct *unused, struct mm_struct *next,
+@@ -568,7 +568,7 @@ void switch_mm_irqs_off(struct mm_struct *unused, struct mm_struct *next,
  		 * mm_cpumask. The TLB shootdown code can figure out from
  		 * cpu_tlbstate_shared.is_lazy whether or not to send an IPI.
  		 */
@@ -4838,6 +4832,44 @@ index b0678d59ebdb..a2becb85bea7 100644
  				 !cpumask_test_cpu(cpu, mm_cpumask(next))))
  			cpumask_set_cpu(cpu, mm_cpumask(next));
  
+@@ -606,18 +606,15 @@ void switch_mm_irqs_off(struct mm_struct *unused, struct mm_struct *next,
+ 		cond_mitigation(tsk);
+ 
+ 		/*
+-		 * Stop remote flushes for the previous mm.
+-		 * Skip kernel threads; we never send init_mm TLB flushing IPIs,
+-		 * but the bitmap manipulation can cause cache line contention.
++		 * Leave this CPU in prev's mm_cpumask. Atomic writes to
++		 * mm_cpumask can be expensive under contention. The CPU
++		 * will be removed lazily at TLB flush time.
+ 		 */
+-		if (prev != &init_mm) {
+-			VM_WARN_ON_ONCE(!cpumask_test_cpu(cpu,
+-						mm_cpumask(prev)));
+-			cpumask_clear_cpu(cpu, mm_cpumask(prev));
+-		}
++		VM_WARN_ON_ONCE(prev != &init_mm && !cpumask_test_cpu(cpu,
++				mm_cpumask(prev)));
+ 
+ 		/* Start receiving IPIs and then read tlb_gen (and LAM below) */
+-		if (next != &init_mm)
++		if (next != &init_mm && !cpumask_test_cpu(cpu, mm_cpumask(next)))
+ 			cpumask_set_cpu(cpu, mm_cpumask(next));
+ 		next_tlb_gen = atomic64_read(&next->context.tlb_gen);
+ 
+@@ -761,8 +758,11 @@ static void flush_tlb_func(void *info)
+ 		count_vm_tlb_event(NR_TLB_REMOTE_FLUSH_RECEIVED);
+ 
+ 		/* Can only happen on remote CPUs */
+-		if (f->mm && f->mm != loaded_mm)
++		if (f->mm && f->mm != loaded_mm) {
++			cpumask_clear_cpu(raw_smp_processor_id(), mm_cpumask(f->mm));
++			trace_tlb_flush(TLB_REMOTE_WRONG_CPU, 0);
+ 			return;
++		}
+ 	}
+ 
+ 	if (unlikely(loaded_mm == &init_mm))
 diff --git a/arch/x86/pci/common.c b/arch/x86/pci/common.c
 index ddb798603201..7c20387d8202 100644
 --- a/arch/x86/pci/common.c
@@ -4961,10 +4993,10 @@ index 45f63b09828a..d8bcb8b7544f 100644
  	sysfs_add_file_to_group(&pdev->dev.kobj,
  				&dev_attr_remapped_nvme.attr,
 diff --git a/drivers/bluetooth/btmtk.c b/drivers/bluetooth/btmtk.c
-index 480e4adba9fa..3626faab9c91 100644
+index 9bbf20502163..67219ac262f1 100644
 --- a/drivers/bluetooth/btmtk.c
 +++ b/drivers/bluetooth/btmtk.c
-@@ -1325,7 +1325,6 @@ int btmtk_usb_setup(struct hci_dev *hdev)
+@@ -1326,7 +1326,6 @@ int btmtk_usb_setup(struct hci_dev *hdev)
  		fwname = FIRMWARE_MT7668;
  		break;
  	case 0x7922:
@@ -4972,7 +5004,7 @@ index 480e4adba9fa..3626faab9c91 100644
  	case 0x7925:
  		/* Reset the device to ensure it's in the initial state before
  		 * downloading the firmware to ensure.
-@@ -1333,7 +1332,8 @@ int btmtk_usb_setup(struct hci_dev *hdev)
+@@ -1334,7 +1333,8 @@ int btmtk_usb_setup(struct hci_dev *hdev)
  
  		if (!test_bit(BTMTK_FIRMWARE_LOADED, &btmtk_data->flags))
  			btmtk_usb_subsys_reset(hdev, dev_id);
@@ -4982,19 +5014,6 @@ index 480e4adba9fa..3626faab9c91 100644
  		btmtk_fw_get_filename(fw_bin_name, sizeof(fw_bin_name), dev_id,
  				      fw_version, fw_flavor);
  
-diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
-index 4ccaddb46ddd..80f9e88f89b8 100644
---- a/drivers/bluetooth/btusb.c
-+++ b/drivers/bluetooth/btusb.c
-@@ -636,6 +636,8 @@ static const struct usb_device_id quirks_table[] = {
- 						     BTUSB_WIDEBAND_SPEECH },
- 	{ USB_DEVICE(0x0489, 0xe11e), .driver_info = BTUSB_MEDIATEK |
- 						     BTUSB_WIDEBAND_SPEECH },
-+	{ USB_DEVICE(0x0489, 0xe124), .driver_info = BTUSB_MEDIATEK |
-+						     BTUSB_WIDEBAND_SPEECH },
- 	{ USB_DEVICE(0x13d3, 0x3602), .driver_info = BTUSB_MEDIATEK |
- 						     BTUSB_WIDEBAND_SPEECH },
- 	{ USB_DEVICE(0x13d3, 0x3603), .driver_info = BTUSB_MEDIATEK |
 diff --git a/drivers/cpufreq/Kconfig.x86 b/drivers/cpufreq/Kconfig.x86
 index 97c2d4f15d76..5a3af44d785a 100644
 --- a/drivers/cpufreq/Kconfig.x86
@@ -5034,7 +5053,7 @@ index f66701514d90..a261d7300951 100644
  		}
  
 diff --git a/drivers/cpufreq/amd-pstate.c b/drivers/cpufreq/amd-pstate.c
-index 91d3c3b1c2d3..d7630bab2516 100644
+index b63863f77c67..d7630bab2516 100644
 --- a/drivers/cpufreq/amd-pstate.c
 +++ b/drivers/cpufreq/amd-pstate.c
 @@ -233,7 +233,7 @@ static int amd_pstate_get_energy_pref_index(struct amd_cpudata *cpudata)
@@ -5159,7 +5178,43 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  
  	return 0;
  }
-@@ -825,7 +850,7 @@ static u32 amd_pstate_get_transition_delay_us(unsigned int cpu)
+@@ -665,34 +690,12 @@ static void amd_pstate_adjust_perf(unsigned int cpu,
+ static int amd_pstate_cpu_boost_update(struct cpufreq_policy *policy, bool on)
+ {
+ 	struct amd_cpudata *cpudata = policy->driver_data;
+-	struct cppc_perf_ctrls perf_ctrls;
+-	u32 highest_perf, nominal_perf, nominal_freq, max_freq;
++	u32 nominal_freq, max_freq;
+ 	int ret = 0;
+ 
+-	highest_perf = READ_ONCE(cpudata->highest_perf);
+-	nominal_perf = READ_ONCE(cpudata->nominal_perf);
+ 	nominal_freq = READ_ONCE(cpudata->nominal_freq);
+ 	max_freq = READ_ONCE(cpudata->max_freq);
+ 
+-	if (boot_cpu_has(X86_FEATURE_CPPC)) {
+-		u64 value = READ_ONCE(cpudata->cppc_req_cached);
+-
+-		value &= ~GENMASK_ULL(7, 0);
+-		value |= on ? highest_perf : nominal_perf;
+-		WRITE_ONCE(cpudata->cppc_req_cached, value);
+-
+-		wrmsrl_on_cpu(cpudata->cpu, MSR_AMD_CPPC_REQ, value);
+-	} else {
+-		perf_ctrls.max_perf = on ? highest_perf : nominal_perf;
+-		ret = cppc_set_perf(cpudata->cpu, &perf_ctrls);
+-		if (ret) {
+-			cpufreq_cpu_release(policy);
+-			pr_debug("Failed to set max perf on CPU:%d. ret:%d\n",
+-				cpudata->cpu, ret);
+-			return ret;
+-		}
+-	}
+-
+ 	if (on)
+ 		policy->cpuinfo.max_freq = max_freq;
+ 	else if (policy->cpuinfo.max_freq > nominal_freq * 1000)
+@@ -847,7 +850,7 @@ static u32 amd_pstate_get_transition_delay_us(unsigned int cpu)
  
  	transition_delay_ns = cppc_get_transition_latency(cpu);
  	if (transition_delay_ns == CPUFREQ_ETERNAL) {
@@ -5168,7 +5223,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  			return AMD_PSTATE_FAST_CPPC_TRANSITION_DELAY;
  		else
  			return AMD_PSTATE_TRANSITION_DELAY;
-@@ -979,7 +1004,7 @@ static int amd_pstate_cpu_init(struct cpufreq_policy *policy)
+@@ -1001,7 +1004,7 @@ static int amd_pstate_cpu_init(struct cpufreq_policy *policy)
  		policy->fast_switch_possible = true;
  
  	ret = freq_qos_add_request(&policy->constraints, &cpudata->req[0],
@@ -5177,7 +5232,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	if (ret < 0) {
  		dev_err(dev, "Failed to add min-freq constraint (%d)\n", ret);
  		goto free_cpudata1;
-@@ -1023,7 +1048,7 @@ static int amd_pstate_cpu_resume(struct cpufreq_policy *policy)
+@@ -1045,7 +1048,7 @@ static int amd_pstate_cpu_resume(struct cpufreq_policy *policy)
  {
  	int ret;
  
@@ -5186,7 +5241,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	if (ret)
  		pr_err("failed to enable amd-pstate during resume, return %d\n", ret);
  
-@@ -1034,7 +1059,7 @@ static int amd_pstate_cpu_suspend(struct cpufreq_policy *policy)
+@@ -1056,7 +1059,7 @@ static int amd_pstate_cpu_suspend(struct cpufreq_policy *policy)
  {
  	int ret;
  
@@ -5195,7 +5250,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	if (ret)
  		pr_err("failed to disable amd-pstate during suspend, return %d\n", ret);
  
-@@ -1167,25 +1192,41 @@ static ssize_t show_energy_performance_preference(
+@@ -1189,25 +1192,41 @@ static ssize_t show_energy_performance_preference(
  
  static void amd_pstate_driver_cleanup(void)
  {
@@ -5245,7 +5300,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	if (ret) {
  		pr_err("failed to enable cppc during amd-pstate driver registration, return %d\n",
  		       ret);
-@@ -1463,6 +1504,8 @@ static int amd_pstate_epp_cpu_init(struct cpufreq_policy *policy)
+@@ -1485,6 +1504,8 @@ static int amd_pstate_epp_cpu_init(struct cpufreq_policy *policy)
  		WRITE_ONCE(cpudata->cppc_cap1_cached, value);
  	}
  
@@ -5254,7 +5309,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	return 0;
  
  free_cpudata1:
-@@ -1485,26 +1528,13 @@ static void amd_pstate_epp_cpu_exit(struct cpufreq_policy *policy)
+@@ -1507,26 +1528,13 @@ static void amd_pstate_epp_cpu_exit(struct cpufreq_policy *policy)
  static int amd_pstate_epp_update_limit(struct cpufreq_policy *policy)
  {
  	struct amd_cpudata *cpudata = policy->driver_data;
@@ -5284,7 +5339,16 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  
  	max_perf = clamp_t(unsigned long, max_perf, cpudata->min_limit_perf,
  			cpudata->max_limit_perf);
-@@ -1541,12 +1571,6 @@ static int amd_pstate_epp_update_limit(struct cpufreq_policy *policy)
+@@ -1535,7 +1543,7 @@ static int amd_pstate_epp_update_limit(struct cpufreq_policy *policy)
+ 	value = READ_ONCE(cpudata->cppc_req_cached);
+ 
+ 	if (cpudata->policy == CPUFREQ_POLICY_PERFORMANCE)
+-		min_perf = max_perf;
++		min_perf = min(cpudata->nominal_perf, max_perf);
+ 
+ 	/* Initial min/max values for CPPC Performance Controls Register */
+ 	value &= ~AMD_CPPC_MIN_PERF(~0L);
+@@ -1563,12 +1571,6 @@ static int amd_pstate_epp_update_limit(struct cpufreq_policy *policy)
  	if (cpudata->policy == CPUFREQ_POLICY_PERFORMANCE)
  		epp = 0;
  
@@ -5297,7 +5361,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	WRITE_ONCE(cpudata->cppc_req_cached, value);
  	return amd_pstate_set_epp(cpudata, epp);
  }
-@@ -1583,7 +1607,7 @@ static void amd_pstate_epp_reenable(struct amd_cpudata *cpudata)
+@@ -1605,7 +1607,7 @@ static void amd_pstate_epp_reenable(struct amd_cpudata *cpudata)
  	u64 value, max_perf;
  	int ret;
  
@@ -5306,7 +5370,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	if (ret)
  		pr_err("failed to enable amd pstate during resume, return %d\n", ret);
  
-@@ -1594,8 +1618,9 @@ static void amd_pstate_epp_reenable(struct amd_cpudata *cpudata)
+@@ -1616,8 +1618,9 @@ static void amd_pstate_epp_reenable(struct amd_cpudata *cpudata)
  		wrmsrl_on_cpu(cpudata->cpu, MSR_AMD_CPPC_REQ, value);
  	} else {
  		perf_ctrls.max_perf = max_perf;
@@ -5317,7 +5381,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	}
  }
  
-@@ -1635,9 +1660,11 @@ static void amd_pstate_epp_offline(struct cpufreq_policy *policy)
+@@ -1657,9 +1660,11 @@ static void amd_pstate_epp_offline(struct cpufreq_policy *policy)
  		wrmsrl_on_cpu(cpudata->cpu, MSR_AMD_CPPC_REQ, value);
  	} else {
  		perf_ctrls.desired_perf = 0;
@@ -5330,7 +5394,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	}
  	mutex_unlock(&amd_pstate_limits_lock);
  }
-@@ -1657,13 +1684,6 @@ static int amd_pstate_epp_cpu_offline(struct cpufreq_policy *policy)
+@@ -1679,13 +1684,6 @@ static int amd_pstate_epp_cpu_offline(struct cpufreq_policy *policy)
  	return 0;
  }
  
@@ -5344,7 +5408,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  static int amd_pstate_epp_suspend(struct cpufreq_policy *policy)
  {
  	struct amd_cpudata *cpudata = policy->driver_data;
-@@ -1677,7 +1697,7 @@ static int amd_pstate_epp_suspend(struct cpufreq_policy *policy)
+@@ -1699,7 +1697,7 @@ static int amd_pstate_epp_suspend(struct cpufreq_policy *policy)
  	cpudata->suspended = true;
  
  	/* disable CPPC in lowlevel firmware */
@@ -5353,7 +5417,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	if (ret)
  		pr_err("failed to suspend, return %d\n", ret);
  
-@@ -1719,7 +1739,7 @@ static struct cpufreq_driver amd_pstate_driver = {
+@@ -1741,7 +1739,7 @@ static struct cpufreq_driver amd_pstate_driver = {
  
  static struct cpufreq_driver amd_pstate_epp_driver = {
  	.flags		= CPUFREQ_CONST_LOOPS,
@@ -5362,7 +5426,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	.setpolicy	= amd_pstate_epp_set_policy,
  	.init		= amd_pstate_epp_cpu_init,
  	.exit		= amd_pstate_epp_cpu_exit,
-@@ -1733,26 +1753,7 @@ static struct cpufreq_driver amd_pstate_epp_driver = {
+@@ -1755,26 +1753,7 @@ static struct cpufreq_driver amd_pstate_epp_driver = {
  	.attr		= amd_pstate_epp_attr,
  };
  
@@ -5390,7 +5454,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
   * CPPC function is not supported for family ID 17H with model_ID ranging from 0x10 to 0x2F.
   * show the debug message that helps to check if the CPU has CPPC support for loading issue.
   */
-@@ -1842,10 +1843,10 @@ static int __init amd_pstate_init(void)
+@@ -1864,10 +1843,10 @@ static int __init amd_pstate_init(void)
  	if (cppc_state == AMD_PSTATE_UNDEFINED) {
  		/* Disable on the following configs by default:
  		 * 1. Undefined platforms
@@ -5403,7 +5467,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  			pr_info("driver load is disabled, boot with specific mode to enable this\n");
  			return -ENODEV;
  		}
-@@ -1853,50 +1854,31 @@ static int __init amd_pstate_init(void)
+@@ -1875,50 +1854,31 @@ static int __init amd_pstate_init(void)
  		cppc_state = CONFIG_X86_AMD_PSTATE_DEFAULT_MODE;
  	}
  
@@ -5433,17 +5497,17 @@ index 91d3c3b1c2d3..d7630bab2516 100644
 -		static_call_update(amd_pstate_enable, cppc_enable);
 -		static_call_update(amd_pstate_init_perf, cppc_init_perf);
 -		static_call_update(amd_pstate_update_perf, cppc_update_perf);
--	}
--
--	if (amd_pstate_prefcore) {
--		ret = amd_detect_prefcore(&amd_pstate_prefcore);
--		if (ret)
--			return ret;
 +		static_call_update(amd_pstate_cppc_enable, shmem_cppc_enable);
 +		static_call_update(amd_pstate_init_perf, shmem_init_perf);
 +		static_call_update(amd_pstate_update_perf, shmem_update_perf);
  	}
  
+-	if (amd_pstate_prefcore) {
+-		ret = amd_detect_prefcore(&amd_pstate_prefcore);
+-		if (ret)
+-			return ret;
+-	}
+-
 -	/* enable amd pstate feature */
 -	ret = amd_pstate_enable(true);
 +	ret = amd_pstate_register_driver(cppc_state);
@@ -5464,7 +5528,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	}
  
  	dev_root = bus_get_dev_root(&cpu_subsys);
-@@ -1913,8 +1895,7 @@ static int __init amd_pstate_init(void)
+@@ -1935,8 +1895,7 @@ static int __init amd_pstate_init(void)
  
  global_attr_free:
  	cpufreq_unregister_driver(current_pstate_driver);
@@ -5488,7 +5552,7 @@ index 400337f3b572..d413b60c6001 100644
  		default_driver = &intel_pstate;
  	else if (!strcmp(str, "passive"))
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu.h b/drivers/gpu/drm/amd/amdgpu/amdgpu.h
-index 9b1e0ede05a4..9f992e09de86 100644
+index 9b1e0ede05a4..9726c4a5842a 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu.h
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu.h
 @@ -164,6 +164,7 @@ struct amdgpu_watchdog_timer {
@@ -5508,112 +5572,8 @@ index 9b1e0ede05a4..9f992e09de86 100644
  #define AMDGPU_VM_MAX_NUM_CTX			4096
  #define AMDGPU_SG_THRESHOLD			(256*1024*1024)
  #define AMDGPU_WAIT_IDLE_TIMEOUT_IN_MS	        3000
-@@ -854,6 +857,7 @@ struct amdgpu_device {
- 	bool				need_swiotlb;
- 	bool				accel_working;
- 	struct notifier_block		acpi_nb;
-+	struct notifier_block		pm_nb;
- 	struct amdgpu_i2c_chan		*i2c_bus[AMDGPU_MAX_I2C_BUS];
- 	struct debugfs_blob_wrapper     debugfs_vbios_blob;
- 	struct debugfs_blob_wrapper     debugfs_discovery_blob;
-diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
-index c2394c8b4d6b..046a2c8ec0bd 100644
---- a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
-+++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
-@@ -145,6 +145,8 @@ const char *amdgpu_asic_name[] = {
- };
- 
- static inline void amdgpu_device_stop_pending_resets(struct amdgpu_device *adev);
-+static int amdgpu_device_pm_notifier(struct notifier_block *nb, unsigned long mode,
-+				     void *data);
- 
- /**
-  * DOC: pcie_replay_count
-@@ -4469,6 +4471,11 @@ int amdgpu_device_init(struct amdgpu_device *adev,
- 
- 	amdgpu_device_check_iommu_direct_map(adev);
- 
-+	adev->pm_nb.notifier_call = amdgpu_device_pm_notifier;
-+	r = register_pm_notifier(&adev->pm_nb);
-+	if (r)
-+		goto failed;
-+
- 	return 0;
- 
- release_ras_con:
-@@ -4533,6 +4540,8 @@ void amdgpu_device_fini_hw(struct amdgpu_device *adev)
- 		drain_workqueue(adev->mman.bdev.wq);
- 	adev->shutdown = true;
- 
-+	unregister_pm_notifier(&adev->pm_nb);
-+
- 	/* make sure IB test finished before entering exclusive mode
- 	 * to avoid preemption on IB test
- 	 */
-@@ -4650,8 +4659,8 @@ static int amdgpu_device_evict_resources(struct amdgpu_device *adev)
- {
- 	int ret;
- 
--	/* No need to evict vram on APUs for suspend to ram or s2idle */
--	if ((adev->in_s3 || adev->in_s0ix) && (adev->flags & AMD_IS_APU))
-+	/* No need to evict vram on APUs unless going to S4 */
-+	if (!adev->in_s4 && (adev->flags & AMD_IS_APU))
- 		return 0;
- 
- 	ret = amdgpu_ttm_evict_resources(adev, TTM_PL_VRAM);
-@@ -4663,6 +4672,41 @@ static int amdgpu_device_evict_resources(struct amdgpu_device *adev)
- /*
-  * Suspend & resume.
-  */
-+/**
-+ * amdgpu_device_pm_notifier - Notification block for Suspend/Hibernate events
-+ * @nb: notifier block
-+ * @mode: suspend mode
-+ * @data: data
-+ *
-+ * This function is called when the system is about to suspend or hibernate.
-+ * It is used to evict resources from the device before the system goes to
-+ * sleep while there is still access to swap.
-+ */
-+static int amdgpu_device_pm_notifier(struct notifier_block *nb, unsigned long mode,
-+				     void *data)
-+{
-+	struct amdgpu_device *adev = container_of(nb, struct amdgpu_device, pm_nb);
-+	int r;
-+
-+	switch (mode) {
-+	case PM_HIBERNATION_PREPARE:
-+		adev->in_s4 = true;
-+		fallthrough;
-+	case PM_SUSPEND_PREPARE:
-+		r = amdgpu_device_evict_resources(adev);
-+		/*
-+		 * This is considered non-fatal at this time because
-+		 * amdgpu_device_prepare() will also fatally evict resources.
-+		 * See https://gitlab.freedesktop.org/drm/amd/-/issues/3781
-+		 */
-+		if (r)
-+			drm_warn(adev_to_drm(adev), "Failed to evict resources, freeze active processes if problems occur: %d\n", r);
-+		break;
-+	}
-+
-+	return NOTIFY_DONE;
-+}
-+
- /**
-  * amdgpu_device_prepare - prepare for device suspend
-  *
-@@ -4702,7 +4746,7 @@ int amdgpu_device_prepare(struct drm_device *dev)
- 	return 0;
- 
- unprepare:
--	adev->in_s0ix = adev->in_s3 = false;
-+	adev->in_s0ix = adev->in_s3 = adev->in_s4 = false;
- 
- 	return r;
- }
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
-index 81d9877c8735..88d7acde9d3e 100644
+index 81d9877c8735..b232245cf6b2 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
 @@ -136,6 +136,7 @@ enum AMDGPU_DEBUG_MASK {
@@ -5652,15 +5612,7 @@ index 81d9877c8735..88d7acde9d3e 100644
  	/* skip devices which are owned by radeon */
  	for (i = 0; i < ARRAY_SIZE(amdgpu_unsupported_pciidlist); i++) {
  		if (amdgpu_unsupported_pciidlist[i] == pdev->device)
-@@ -2629,7 +2644,6 @@ static int amdgpu_pmops_freeze(struct device *dev)
- 	struct amdgpu_device *adev = drm_to_adev(drm_dev);
- 	int r;
- 
--	adev->in_s4 = true;
- 	r = amdgpu_device_suspend(drm_dev, true);
- 	adev->in_s4 = false;
- 	if (r)
-@@ -3046,6 +3060,21 @@ static struct pci_driver amdgpu_kms_pci_driver = {
+@@ -3046,6 +3061,21 @@ static struct pci_driver amdgpu_kms_pci_driver = {
  	.dev_groups = amdgpu_sysfs_groups,
  };
  
@@ -5682,7 +5634,7 @@ index 81d9877c8735..88d7acde9d3e 100644
  static int __init amdgpu_init(void)
  {
  	int r;
-@@ -3053,6 +3082,10 @@ static int __init amdgpu_init(void)
+@@ -3053,6 +3083,10 @@ static int __init amdgpu_init(void)
  	if (drm_firmware_drivers_only())
  		return -EINVAL;
  
@@ -5693,7 +5645,7 @@ index 81d9877c8735..88d7acde9d3e 100644
  	r = amdgpu_sync_init();
  	if (r)
  		goto error_sync;
-@@ -3068,6 +3101,11 @@ static int __init amdgpu_init(void)
+@@ -3068,6 +3102,11 @@ static int __init amdgpu_init(void)
  	/* Ignore KFD init failures. Normal when CONFIG_HSA_AMD is not set. */
  	amdgpu_amdkfd_init();
  
@@ -5705,7 +5657,7 @@ index 81d9877c8735..88d7acde9d3e 100644
  	/* let modprobe override vga console setting */
  	return pci_register_driver(&amdgpu_kms_pci_driver);
  
-@@ -3075,6 +3113,9 @@ static int __init amdgpu_init(void)
+@@ -3075,6 +3114,9 @@ static int __init amdgpu_init(void)
  	amdgpu_sync_fini();
  
  error_sync:
@@ -5715,7 +5667,7 @@ index 81d9877c8735..88d7acde9d3e 100644
  	return r;
  }
  
-@@ -3086,6 +3127,7 @@ static void __exit amdgpu_exit(void)
+@@ -3086,6 +3128,7 @@ static void __exit amdgpu_exit(void)
  	amdgpu_acpi_release();
  	amdgpu_sync_fini();
  	amdgpu_fence_slab_fini();
@@ -5724,10 +5676,10 @@ index 81d9877c8735..88d7acde9d3e 100644
  	amdgpu_xcp_drv_release();
  }
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_gfx.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_gfx.c
-index 156abd2ba5a6..72a528f73000 100644
+index f1ffab5a1eae..15614e43be5a 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_gfx.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_gfx.c
-@@ -827,8 +827,9 @@ void amdgpu_gfx_off_ctrl(struct amdgpu_device *adev, bool enable)
+@@ -800,8 +800,9 @@ void amdgpu_gfx_off_ctrl(struct amdgpu_device *adev, bool enable)
  						AMD_IP_BLOCK_TYPE_GFX, true))
  					adev->gfx.gfx_off_state = true;
  			} else {
@@ -5755,10 +5707,10 @@ index df17e79c45c7..e454488c1a31 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 40ef233265b3..5922a8e41eaa 100644
+index eab22bbf28c4..7738c7fe1735 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -4497,7 +4497,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4473,7 +4473,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  		return r;
  	}
  
@@ -5781,7 +5733,7 @@ index ebabfe3a512f..4d3ebcaacca1 100644
   *
   * AMD driver supports pre-defined mathematical functions for transferring
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_crtc.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_crtc.c
-index 9be87b532517..47e8cd9a756f 100644
+index 288be19db7c1..9d48d01d5217 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_crtc.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_crtc.c
 @@ -473,7 +473,7 @@ static int amdgpu_dm_crtc_late_register(struct drm_crtc *crtc)
@@ -5865,23 +5817,10 @@ index 19a48d98830a..2fca138419d4 100644
  
  struct pp_states_info {
 diff --git a/drivers/gpu/drm/amd/pm/amdgpu_pm.c b/drivers/gpu/drm/amd/pm/amdgpu_pm.c
-index d5d6ab484e5a..20d28c68593d 100644
+index d5d6ab484e5a..d4a6cf6e98e8 100644
 --- a/drivers/gpu/drm/amd/pm/amdgpu_pm.c
 +++ b/drivers/gpu/drm/amd/pm/amdgpu_pm.c
-@@ -1409,7 +1409,11 @@ static ssize_t amdgpu_set_pp_mclk_od(struct device *dev,
-  * create a custom set of heuristics, write a string of numbers to the file
-  * starting with the number of the custom profile along with a setting
-  * for each heuristic parameter.  Due to differences across asic families
-- * the heuristic parameters vary from family to family.
-+ * the heuristic parameters vary from family to family. Additionally,
-+ * you can apply the custom heuristics to different clock domains.  Each
-+ * clock domain is considered a distinct operation so if you modify the
-+ * gfxclk heuristics and then the memclk heuristics, the all of the
-+ * custom heuristics will be retained until you switch to another profile.
-  *
-  */
- 
-@@ -3272,6 +3276,9 @@ static ssize_t amdgpu_hwmon_show_power_cap_min(struct device *dev,
+@@ -3272,6 +3272,9 @@ static ssize_t amdgpu_hwmon_show_power_cap_min(struct device *dev,
  					 struct device_attribute *attr,
  					 char *buf)
  {
@@ -5891,7 +5830,7 @@ index d5d6ab484e5a..20d28c68593d 100644
  	return amdgpu_hwmon_show_power_cap_generic(dev, attr, buf, PP_PWR_LIMIT_MIN);
  }
  
-@@ -4213,6 +4220,117 @@ static umode_t fan_minimum_pwm_visible(struct amdgpu_device *adev)
+@@ -4213,6 +4216,117 @@ static umode_t fan_minimum_pwm_visible(struct amdgpu_device *adev)
  	return umode;
  }
  
@@ -6009,7 +5948,7 @@ index d5d6ab484e5a..20d28c68593d 100644
  static struct od_feature_set amdgpu_od_set = {
  	.containers = {
  		[0] = {
-@@ -4258,6 +4376,22 @@ static struct od_feature_set amdgpu_od_set = {
+@@ -4258,6 +4372,22 @@ static struct od_feature_set amdgpu_od_set = {
  						.store = fan_minimum_pwm_store,
  					},
  				},
@@ -6048,7 +5987,7 @@ index f5bf41f21c41..363af8990aa2 100644
  struct amdgpu_pm {
  	struct mutex		mutex;
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
-index 80e60ea2d11e..7abf6fc9cbbe 100644
+index 80e60ea2d11e..953fcd37749b 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
 @@ -72,6 +72,10 @@ static int smu_set_power_limit(void *handle, uint32_t limit);
@@ -6102,19 +6041,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  	smu->display_config = &adev->pm.pm_display_cfg;
  
  	smu->smu_dpm.dpm_level = AMD_DPM_FORCED_LEVEL_AUTO;
-@@ -1338,6 +1326,11 @@ static int smu_sw_fini(void *handle)
- 		return ret;
- 	}
- 
-+	if (smu->custom_profile_params) {
-+		kfree(smu->custom_profile_params);
-+		smu->custom_profile_params = NULL;
-+	}
-+
- 	smu_fini_microcode(smu);
- 
- 	return 0;
-@@ -2113,6 +2106,9 @@ static int smu_suspend(void *handle)
+@@ -2113,6 +2101,9 @@ static int smu_suspend(void *handle)
  	if (!ret)
  		adev->gfx.gfx_off_entrycount = count;
  
@@ -6124,14 +6051,14 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  	return 0;
  }
  
-@@ -2225,25 +2221,49 @@ static int smu_enable_umd_pstate(void *handle,
+@@ -2224,26 +2215,46 @@ static int smu_enable_umd_pstate(void *handle,
+ 	return 0;
  }
  
- static int smu_bump_power_profile_mode(struct smu_context *smu,
+-static int smu_bump_power_profile_mode(struct smu_context *smu,
 -					   long *param,
 -					   uint32_t param_size)
-+				       long *custom_params,
-+				       u32 custom_params_max_idx)
++static int smu_bump_power_profile_mode(struct smu_context *smu)
  {
 -	int ret = 0;
 +	u32 workload_mask = 0;
@@ -6147,9 +6074,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  
  	if (smu->ppt_funcs->set_power_profile_mode)
 -		ret = smu->ppt_funcs->set_power_profile_mode(smu, param, param_size);
-+		ret = smu->ppt_funcs->set_power_profile_mode(smu, workload_mask,
-+							     custom_params,
-+							     custom_params_max_idx);
++		ret = smu->ppt_funcs->set_power_profile_mode(smu, workload_mask);
 +
 +	if (!ret)
 +		smu->workload_mask = workload_mask;
@@ -6182,7 +6107,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  	struct smu_dpm_context *smu_dpm_ctx = &(smu->smu_dpm);
  
  	if (!skip_display_settings) {
-@@ -2280,14 +2300,8 @@ static int smu_adjust_power_state_dynamic(struct smu_context *smu,
+@@ -2280,14 +2291,8 @@ static int smu_adjust_power_state_dynamic(struct smu_context *smu,
  	}
  
  	if (smu_dpm_ctx->dpm_level != AMD_DPM_FORCED_LEVEL_MANUAL &&
@@ -6195,11 +6120,11 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
 -			smu_bump_power_profile_mode(smu, workload, 0);
 -	}
 +	    smu_dpm_ctx->dpm_level != AMD_DPM_FORCED_LEVEL_PERF_DETERMINISM)
-+		smu_bump_power_profile_mode(smu, NULL, 0);
++		smu_bump_power_profile_mode(smu);
  
  	return ret;
  }
-@@ -2306,13 +2320,13 @@ static int smu_handle_task(struct smu_context *smu,
+@@ -2306,13 +2311,13 @@ static int smu_handle_task(struct smu_context *smu,
  		ret = smu_pre_display_config_changed(smu);
  		if (ret)
  			return ret;
@@ -6216,7 +6141,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  		break;
  	default:
  		break;
-@@ -2334,12 +2348,11 @@ static int smu_handle_dpm_task(void *handle,
+@@ -2334,12 +2339,11 @@ static int smu_handle_dpm_task(void *handle,
  
  static int smu_switch_power_profile(void *handle,
  				    enum PP_SMC_POWER_PROFILE type,
@@ -6231,7 +6156,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  
  	if (!smu->pm_enabled || !smu->adev->pm.dpm_enabled)
  		return -EOPNOTSUPP;
-@@ -2347,21 +2360,21 @@ static int smu_switch_power_profile(void *handle,
+@@ -2347,21 +2351,21 @@ static int smu_switch_power_profile(void *handle,
  	if (!(type < PP_SMC_POWER_PROFILE_CUSTOM))
  		return -EINVAL;
  
@@ -6255,7 +6180,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
 +			smu_power_profile_mode_get(smu, type);
 +		else
 +			smu_power_profile_mode_put(smu, type);
-+		ret = smu_bump_power_profile_mode(smu, NULL, 0);
++		ret = smu_bump_power_profile_mode(smu);
 +		if (ret) {
 +			if (enable)
 +				smu_power_profile_mode_put(smu, type);
@@ -6267,7 +6192,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  
  	return 0;
  }
-@@ -2775,7 +2788,10 @@ int smu_get_power_limit(void *handle,
+@@ -2775,7 +2779,10 @@ int smu_get_power_limit(void *handle,
  			*limit = smu->max_power_limit;
  			break;
  		case SMU_PPT_LIMIT_MIN:
@@ -6279,7 +6204,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  			break;
  		default:
  			return -EINVAL;
-@@ -2799,7 +2815,14 @@ static int smu_set_power_limit(void *handle, uint32_t limit)
+@@ -2799,7 +2806,14 @@ static int smu_set_power_limit(void *handle, uint32_t limit)
  		if (smu->ppt_funcs->set_power_limit)
  			return smu->ppt_funcs->set_power_limit(smu, limit_type, limit);
  
@@ -6295,7 +6220,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  		dev_err(smu->adev->dev,
  			"New power limit (%d) is out of range [%d,%d]\n",
  			limit, smu->min_power_limit, smu->max_power_limit);
-@@ -2878,6 +2901,10 @@ static enum smu_clk_type smu_convert_to_smuclk(enum pp_clock_type type)
+@@ -2878,6 +2892,10 @@ static enum smu_clk_type smu_convert_to_smuclk(enum pp_clock_type type)
  		clk_type = SMU_OD_FAN_TARGET_TEMPERATURE; break;
  	case OD_FAN_MINIMUM_PWM:
  		clk_type = SMU_OD_FAN_MINIMUM_PWM; break;
@@ -6306,12 +6231,12 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  	default:
  		clk_type = SMU_CLK_COUNT; break;
  	}
-@@ -3049,12 +3076,35 @@ static int smu_set_power_profile_mode(void *handle,
+@@ -3049,12 +3067,48 @@ static int smu_set_power_profile_mode(void *handle,
  				      uint32_t param_size)
  {
  	struct smu_context *smu = handle;
-+	bool custom = false;
-+	int ret = 0;
++	bool custom_changed = false;
++	int ret = 0, i;
  
  	if (!smu->pm_enabled || !smu->adev->pm.dpm_enabled ||
  	    !smu->ppt_funcs->set_power_profile_mode)
@@ -6319,19 +6244,32 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  
 -	return smu_bump_power_profile_mode(smu, param, param_size);
 +	if (param[param_size] == PP_SMC_POWER_PROFILE_CUSTOM) {
-+		custom = true;
-+		/* clear frontend mask so custom changes propogate */
-+		smu->workload_mask = 0;
++		if (param_size > SMU_BACKEND_MAX_CUSTOM_PARAMETERS)
++			return -EINVAL;
++		/* param_size is actually a max index, not an array size */
++		for (i = 0; i <= param_size; i++) {
++			if (smu->custom_profile_input[i] != param[i]) {
++				custom_changed = true;
++				break;
++			}
++		}
 +	}
 +
-+	if ((param[param_size] != smu->power_profile_mode) || custom) {
++	if ((param[param_size] != smu->power_profile_mode) || custom_changed) {
++		/* save the parameters for custom */
++		if (custom_changed) {
++			/* param_size is actually a max index, not an array size */
++			for (i = 0; i <= param_size; i++)
++				smu->custom_profile_input[i] = param[i];
++			smu->custom_profile_size = param_size;
++			/* clear frontend mask so custom changes propogate */
++			smu->workload_mask = 0;
++		}
 +		/* clear the old user preference */
 +		smu_power_profile_mode_put(smu, smu->power_profile_mode);
 +		/* set the new user preference */
 +		smu_power_profile_mode_get(smu, param[param_size]);
-+		ret = smu_bump_power_profile_mode(smu,
-+						  custom ? param : NULL,
-+						  custom ? param_size : 0);
++		ret = smu_bump_power_profile_mode(smu);
 +		if (ret)
 +			smu_power_profile_mode_put(smu, param[param_size]);
 +		else
@@ -6344,10 +6282,19 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  
  static int smu_get_fan_control_mode(void *handle, u32 *fan_mode)
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/inc/amdgpu_smu.h b/drivers/gpu/drm/amd/pm/swsmu/inc/amdgpu_smu.h
-index b44a185d07e8..2b8a18ce25d9 100644
+index b44a185d07e8..cd71663462ff 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/inc/amdgpu_smu.h
 +++ b/drivers/gpu/drm/amd/pm/swsmu/inc/amdgpu_smu.h
-@@ -556,11 +556,13 @@ struct smu_context {
+@@ -509,6 +509,8 @@ enum smu_fw_status {
+  */
+ #define SMU_WBRF_EVENT_HANDLING_PACE	10
+ 
++#define SMU_BACKEND_MAX_CUSTOM_PARAMETERS	11
++
+ struct smu_context {
+ 	struct amdgpu_device            *adev;
+ 	struct amdgpu_irq_src		irq_source;
+@@ -556,11 +558,14 @@ struct smu_context {
  	uint32_t hard_min_uclk_req_from_dal;
  	bool disable_uclk_switch;
  
@@ -6360,22 +6307,20 @@ index b44a185d07e8..2b8a18ce25d9 100644
 -	uint32_t default_power_profile_mode;
 +	uint32_t workload_refcount[PP_SMC_POWER_PROFILE_COUNT];
 +	/* backend specific custom workload settings */
-+	long *custom_profile_params;
++	long custom_profile_input[SMU_BACKEND_MAX_CUSTOM_PARAMETERS];
++	bool custom_profile_size;
  	bool pm_enabled;
  	bool is_apu;
  
-@@ -731,9 +733,12 @@ struct pptable_funcs {
+@@ -731,9 +736,9 @@ struct pptable_funcs {
  	 * @set_power_profile_mode: Set a power profile mode. Also used to
  	 *                          create/set custom power profile modes.
  	 * &input: Power profile mode parameters.
 -	 * &size: Size of &input.
 +	 * &workload_mask: mask of workloads to enable
-+	 * &custom_params: custom profile parameters
-+	 * &custom_params_max_idx: max valid idx into custom_params
  	 */
 -	int (*set_power_profile_mode)(struct smu_context *smu, long *input, uint32_t size);
-+	int (*set_power_profile_mode)(struct smu_context *smu, u32 workload_mask,
-+				      long *custom_params, u32 custom_params_max_idx);
++	int (*set_power_profile_mode)(struct smu_context *smu, u32 workload_mask);
  
  	/**
  	 * @dpm_set_vcn_enable: Enable/disable VCN engine dynamic power
@@ -6393,32 +6338,31 @@ index e71a721c12b9..a299dc4a8071 100644
  };
  
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/smu11/arcturus_ppt.c b/drivers/gpu/drm/amd/pm/swsmu/smu11/arcturus_ppt.c
-index c0f6b59369b7..f4c64c46ff7a 100644
+index c0f6b59369b7..2d56ece1861f 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/smu11/arcturus_ppt.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/smu11/arcturus_ppt.c
-@@ -1441,98 +1441,120 @@ static int arcturus_get_power_profile_mode(struct smu_context *smu,
+@@ -1441,98 +1441,96 @@ static int arcturus_get_power_profile_mode(struct smu_context *smu,
  	return size;
  }
  
 -static int arcturus_set_power_profile_mode(struct smu_context *smu,
 -					   long *input,
 -					   uint32_t size)
-+#define ARCTURUS_CUSTOM_PARAMS_COUNT 10
-+#define ARCTURUS_CUSTOM_PARAMS_CLOCK_COUNT 2
-+#define ARCTURUS_CUSTOM_PARAMS_SIZE (ARCTURUS_CUSTOM_PARAMS_CLOCK_COUNT * ARCTURUS_CUSTOM_PARAMS_COUNT * sizeof(long))
-+
 +static int arcturus_set_power_profile_mode_coeff(struct smu_context *smu,
-+						 long *input)
++						 long *input,
++						 uint32_t size)
  {
  	DpmActivityMonitorCoeffInt_t activity_monitor;
 -	int workload_type = 0;
 -	uint32_t profile_mode = input[size];
 -	int ret = 0;
-+	int ret, idx;
++	int ret;
  
 -	if (profile_mode > PP_SMC_POWER_PROFILE_CUSTOM) {
 -		dev_err(smu->adev->dev, "Invalid power profile mode %d\n", profile_mode);
--		return -EINVAL;
++	if (size != 10)
+ 		return -EINVAL;
++
 +	ret = smu_cmn_update_table(smu,
 +				   SMU_TABLE_ACTIVITY_MONITOR_COEFF,
 +				   WORKLOAD_PPLIB_CUSTOM_BIT,
@@ -6429,31 +6373,31 @@ index c0f6b59369b7..f4c64c46ff7a 100644
 +		return ret;
  	}
  
-+	idx = 0 * ARCTURUS_CUSTOM_PARAMS_COUNT;
-+	if (input[idx]) {
-+		/* Gfxclk */
-+		activity_monitor.Gfx_FPS = input[idx + 1];
-+		activity_monitor.Gfx_UseRlcBusy = input[idx + 2];
-+		activity_monitor.Gfx_MinActiveFreqType = input[idx + 3];
-+		activity_monitor.Gfx_MinActiveFreq = input[idx + 4];
-+		activity_monitor.Gfx_BoosterFreqType = input[idx + 5];
-+		activity_monitor.Gfx_BoosterFreq = input[idx + 6];
-+		activity_monitor.Gfx_PD_Data_limit_c = input[idx + 7];
-+		activity_monitor.Gfx_PD_Data_error_coeff = input[idx + 8];
-+		activity_monitor.Gfx_PD_Data_error_rate_coeff = input[idx + 9];
-+	}
-+	idx = 1 * ARCTURUS_CUSTOM_PARAMS_COUNT;
-+	if (input[idx]) {
-+		/* Uclk */
-+		activity_monitor.Mem_FPS = input[idx + 1];
-+		activity_monitor.Mem_UseRlcBusy = input[idx + 2];
-+		activity_monitor.Mem_MinActiveFreqType = input[idx + 3];
-+		activity_monitor.Mem_MinActiveFreq = input[idx + 4];
-+		activity_monitor.Mem_BoosterFreqType = input[idx + 5];
-+		activity_monitor.Mem_BoosterFreq = input[idx + 6];
-+		activity_monitor.Mem_PD_Data_limit_c = input[idx + 7];
-+		activity_monitor.Mem_PD_Data_error_coeff = input[idx + 8];
-+		activity_monitor.Mem_PD_Data_error_rate_coeff = input[idx + 9];
++	switch (input[0]) {
++	case 0: /* Gfxclk */
++		activity_monitor.Gfx_FPS = input[1];
++		activity_monitor.Gfx_UseRlcBusy = input[2];
++		activity_monitor.Gfx_MinActiveFreqType = input[3];
++		activity_monitor.Gfx_MinActiveFreq = input[4];
++		activity_monitor.Gfx_BoosterFreqType = input[5];
++		activity_monitor.Gfx_BoosterFreq = input[6];
++		activity_monitor.Gfx_PD_Data_limit_c = input[7];
++		activity_monitor.Gfx_PD_Data_error_coeff = input[8];
++		activity_monitor.Gfx_PD_Data_error_rate_coeff = input[9];
++		break;
++	case 1: /* Uclk */
++		activity_monitor.Mem_FPS = input[1];
++		activity_monitor.Mem_UseRlcBusy = input[2];
++		activity_monitor.Mem_MinActiveFreqType = input[3];
++		activity_monitor.Mem_MinActiveFreq = input[4];
++		activity_monitor.Mem_BoosterFreqType = input[5];
++		activity_monitor.Mem_BoosterFreq = input[6];
++		activity_monitor.Mem_PD_Data_limit_c = input[7];
++		activity_monitor.Mem_PD_Data_error_coeff = input[8];
++		activity_monitor.Mem_PD_Data_error_rate_coeff = input[9];
++		break;
++	default:
++		return -EINVAL;
 +	}
  
 -	if ((profile_mode == PP_SMC_POWER_PROFILE_CUSTOM) &&
@@ -6506,52 +6450,29 @@ index c0f6b59369b7..f4c64c46ff7a 100644
 -			activity_monitor.Mem_PD_Data_error_rate_coeff = input[9];
 -			break;
 -		default:
+-			return -EINVAL;
+-		}
 +static int arcturus_set_power_profile_mode(struct smu_context *smu,
-+					   u32 workload_mask,
-+					   long *custom_params,
-+					   u32 custom_params_max_idx)
++					   u32 workload_mask)
 +{
 +	u32 backend_workload_mask = 0;
-+	int ret, idx = -1, i;
-+
-+	smu_cmn_get_backend_workload_mask(smu, workload_mask,
-+					  &backend_workload_mask);
-+
-+	if (workload_mask & (1 << PP_SMC_POWER_PROFILE_CUSTOM)) {
-+		if (smu->smc_fw_version < 0x360d00)
- 			return -EINVAL;
-+		if (!smu->custom_profile_params) {
-+			smu->custom_profile_params =
-+				kzalloc(ARCTURUS_CUSTOM_PARAMS_SIZE, GFP_KERNEL);
-+			if (!smu->custom_profile_params)
-+				return -ENOMEM;
- 		}
--
++	bool custom_enabled = false;
++	int ret;
+ 
 -		ret = smu_cmn_update_table(smu,
 -				       SMU_TABLE_ACTIVITY_MONITOR_COEFF,
 -				       WORKLOAD_PPLIB_CUSTOM_BIT,
 -				       (void *)(&activity_monitor),
 -				       true);
-+		if (custom_params && custom_params_max_idx) {
-+			if (custom_params_max_idx != ARCTURUS_CUSTOM_PARAMS_COUNT)
-+				return -EINVAL;
-+			if (custom_params[0] >= ARCTURUS_CUSTOM_PARAMS_CLOCK_COUNT)
-+				return -EINVAL;
-+			idx = custom_params[0] * ARCTURUS_CUSTOM_PARAMS_COUNT;
-+			smu->custom_profile_params[idx] = 1;
-+			for (i = 1; i < custom_params_max_idx; i++)
-+				smu->custom_profile_params[idx + i] = custom_params[i];
-+		}
-+		ret = arcturus_set_power_profile_mode_coeff(smu,
-+							    smu->custom_profile_params);
- 		if (ret) {
+-		if (ret) {
 -			dev_err(smu->adev->dev, "[%s] Failed to set activity monitor!", __func__);
-+			if (idx != -1)
-+				smu->custom_profile_params[idx] = 0;
- 			return ret;
- 		}
+-			return ret;
+-		}
 -	}
--
++	smu_cmn_get_backend_workload_mask(smu, workload_mask,
++					  &backend_workload_mask,
++					  &custom_enabled);
+ 
 -	/*
 -	 * Conv PP_SMC_POWER_PROFILE* to WORKLOAD_PPLIB_*_BIT
 -	 * Not all profile modes are supported on arcturus.
@@ -6562,8 +6483,12 @@ index c0f6b59369b7..f4c64c46ff7a 100644
 -	if (workload_type < 0) {
 -		dev_dbg(smu->adev->dev, "Unsupported power profile mode %d on arcturus\n", profile_mode);
 -		return -EINVAL;
-+	} else if (smu->custom_profile_params) {
-+		memset(smu->custom_profile_params, 0, ARCTURUS_CUSTOM_PARAMS_SIZE);
++	if (custom_enabled) {
++		ret = arcturus_set_power_profile_mode_coeff(smu,
++							    smu->custom_profile_input,
++							    smu->custom_profile_size);
++		if (ret)
++			return ret;
  	}
  
  	ret = smu_cmn_send_smc_msg_with_param(smu,
@@ -6577,8 +6502,6 @@ index c0f6b59369b7..f4c64c46ff7a 100644
 -		dev_err(smu->adev->dev, "Fail to set workload type %d\n", workload_type);
 +		dev_err(smu->adev->dev, "Failed to set workload mask 0x%08x\n",
 +			workload_mask);
-+		if (idx != -1)
-+			smu->custom_profile_params[idx] = 0;
  		return ret;
  	}
  
@@ -6590,26 +6513,28 @@ index c0f6b59369b7..f4c64c46ff7a 100644
  
  static int arcturus_set_performance_level(struct smu_context *smu,
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/smu11/navi10_ppt.c b/drivers/gpu/drm/amd/pm/swsmu/smu11/navi10_ppt.c
-index 16af1a329621..27c1892b2c74 100644
+index 16af1a329621..72e30a3d0242 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/smu11/navi10_ppt.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/smu11/navi10_ppt.c
-@@ -2004,87 +2004,122 @@ static int navi10_get_power_profile_mode(struct smu_context *smu, char *buf)
+@@ -2004,87 +2004,99 @@ static int navi10_get_power_profile_mode(struct smu_context *smu, char *buf)
  	return size;
  }
  
 -static int navi10_set_power_profile_mode(struct smu_context *smu, long *input, uint32_t size)
-+#define NAVI10_CUSTOM_PARAMS_COUNT 10
-+#define NAVI10_CUSTOM_PARAMS_CLOCKS_COUNT 3
-+#define NAVI10_CUSTOM_PARAMS_SIZE (NAVI10_CUSTOM_PARAMS_CLOCKS_COUNT * NAVI10_CUSTOM_PARAMS_COUNT * sizeof(long))
-+
 +static int navi10_set_power_profile_mode_coeff(struct smu_context *smu,
-+					       long *input)
++					       long *input,
++					       uint32_t size)
  {
  	DpmActivityMonitorCoeffInt_t activity_monitor;
 -	int workload_type, ret = 0;
-+	int ret, idx;
++	int ret;
  
 -	smu->power_profile_mode = input[size];
++	if (size != 10)
++		return -EINVAL;
+ 
+-	if (smu->power_profile_mode > PP_SMC_POWER_PROFILE_CUSTOM) {
+-		dev_err(smu->adev->dev, "Invalid power profile mode %d\n", smu->power_profile_mode);
 +	ret = smu_cmn_update_table(smu,
 +				   SMU_TABLE_ACTIVITY_MONITOR_COEFF, WORKLOAD_PPLIB_CUSTOM_BIT,
 +				   (void *)(&activity_monitor), false);
@@ -6617,63 +6542,55 @@ index 16af1a329621..27c1892b2c74 100644
 +		dev_err(smu->adev->dev, "[%s] Failed to get activity monitor!", __func__);
 +		return ret;
 +	}
- 
--	if (smu->power_profile_mode > PP_SMC_POWER_PROFILE_CUSTOM) {
--		dev_err(smu->adev->dev, "Invalid power profile mode %d\n", smu->power_profile_mode);
--		return -EINVAL;
-+	idx = 0 * NAVI10_CUSTOM_PARAMS_COUNT;
-+	if (input[idx]) {
-+		/* Gfxclk */
-+		activity_monitor.Gfx_FPS = input[idx + 1];
-+		activity_monitor.Gfx_MinFreqStep = input[idx + 2];
-+		activity_monitor.Gfx_MinActiveFreqType = input[idx + 3];
-+		activity_monitor.Gfx_MinActiveFreq = input[idx + 4];
-+		activity_monitor.Gfx_BoosterFreqType = input[idx + 5];
-+		activity_monitor.Gfx_BoosterFreq = input[idx + 6];
-+		activity_monitor.Gfx_PD_Data_limit_c = input[idx + 7];
-+		activity_monitor.Gfx_PD_Data_error_coeff = input[idx + 8];
-+		activity_monitor.Gfx_PD_Data_error_rate_coeff = input[idx + 9];
-+	}
-+	idx = 1 * NAVI10_CUSTOM_PARAMS_COUNT;
-+	if (input[idx]) {
-+		/* Socclk */
-+		activity_monitor.Soc_FPS = input[idx + 1];
-+		activity_monitor.Soc_MinFreqStep = input[idx + 2];
-+		activity_monitor.Soc_MinActiveFreqType = input[idx + 3];
-+		activity_monitor.Soc_MinActiveFreq = input[idx + 4];
-+		activity_monitor.Soc_BoosterFreqType = input[idx + 5];
-+		activity_monitor.Soc_BoosterFreq = input[idx + 6];
-+		activity_monitor.Soc_PD_Data_limit_c = input[idx + 7];
-+		activity_monitor.Soc_PD_Data_error_coeff = input[idx + 8];
-+		activity_monitor.Soc_PD_Data_error_rate_coeff = input[idx + 9];
-+	}
-+	idx = 2 * NAVI10_CUSTOM_PARAMS_COUNT;
-+	if (input[idx]) {
-+		/* Memclk */
-+		activity_monitor.Mem_FPS = input[idx + 1];
-+		activity_monitor.Mem_MinFreqStep = input[idx + 2];
-+		activity_monitor.Mem_MinActiveFreqType = input[idx + 3];
-+		activity_monitor.Mem_MinActiveFreq = input[idx + 4];
-+		activity_monitor.Mem_BoosterFreqType = input[idx + 5];
-+		activity_monitor.Mem_BoosterFreq = input[idx + 6];
-+		activity_monitor.Mem_PD_Data_limit_c = input[idx + 7];
-+		activity_monitor.Mem_PD_Data_error_coeff = input[idx + 8];
-+		activity_monitor.Mem_PD_Data_error_rate_coeff = input[idx + 9];
-+	}
 +
++	switch (input[0]) {
++	case 0: /* Gfxclk */
++		activity_monitor.Gfx_FPS = input[1];
++		activity_monitor.Gfx_MinFreqStep = input[2];
++		activity_monitor.Gfx_MinActiveFreqType = input[3];
++		activity_monitor.Gfx_MinActiveFreq = input[4];
++		activity_monitor.Gfx_BoosterFreqType = input[5];
++		activity_monitor.Gfx_BoosterFreq = input[6];
++		activity_monitor.Gfx_PD_Data_limit_c = input[7];
++		activity_monitor.Gfx_PD_Data_error_coeff = input[8];
++		activity_monitor.Gfx_PD_Data_error_rate_coeff = input[9];
++		break;
++	case 1: /* Socclk */
++		activity_monitor.Soc_FPS = input[1];
++		activity_monitor.Soc_MinFreqStep = input[2];
++		activity_monitor.Soc_MinActiveFreqType = input[3];
++		activity_monitor.Soc_MinActiveFreq = input[4];
++		activity_monitor.Soc_BoosterFreqType = input[5];
++		activity_monitor.Soc_BoosterFreq = input[6];
++		activity_monitor.Soc_PD_Data_limit_c = input[7];
++		activity_monitor.Soc_PD_Data_error_coeff = input[8];
++		activity_monitor.Soc_PD_Data_error_rate_coeff = input[9];
++		break;
++	case 2: /* Memclk */
++		activity_monitor.Mem_FPS = input[1];
++		activity_monitor.Mem_MinFreqStep = input[2];
++		activity_monitor.Mem_MinActiveFreqType = input[3];
++		activity_monitor.Mem_MinActiveFreq = input[4];
++		activity_monitor.Mem_BoosterFreqType = input[5];
++		activity_monitor.Mem_BoosterFreq = input[6];
++		activity_monitor.Mem_PD_Data_limit_c = input[7];
++		activity_monitor.Mem_PD_Data_error_coeff = input[8];
++		activity_monitor.Mem_PD_Data_error_rate_coeff = input[9];
++		break;
++	default:
+ 		return -EINVAL;
+ 	}
+ 
+-	if (smu->power_profile_mode == PP_SMC_POWER_PROFILE_CUSTOM) {
+-		if (size != 10)
+-			return -EINVAL;
 +	ret = smu_cmn_update_table(smu,
 +				   SMU_TABLE_ACTIVITY_MONITOR_COEFF, WORKLOAD_PPLIB_CUSTOM_BIT,
 +				   (void *)(&activity_monitor), true);
 +	if (ret) {
 +		dev_err(smu->adev->dev, "[%s] Failed to set activity monitor!", __func__);
 +		return ret;
- 	}
- 
--	if (smu->power_profile_mode == PP_SMC_POWER_PROFILE_CUSTOM) {
--		if (size != 10)
--			return -EINVAL;
-+	return ret;
-+}
++	}
  
 -		ret = smu_cmn_update_table(smu,
 -				       SMU_TABLE_ACTIVITY_MONITOR_COEFF, WORKLOAD_PPLIB_CUSTOM_BIT,
@@ -6682,13 +6599,8 @@ index 16af1a329621..27c1892b2c74 100644
 -			dev_err(smu->adev->dev, "[%s] Failed to get activity monitor!", __func__);
 -			return ret;
 -		}
-+static int navi10_set_power_profile_mode(struct smu_context *smu,
-+					 u32 workload_mask,
-+					 long *custom_params,
-+					 u32 custom_params_max_idx)
-+{
-+	u32 backend_workload_mask = 0;
-+	int ret, idx = -1, i;
++	return ret;
++}
  
 -		switch (input[0]) {
 -		case 0: /* Gfxclk */
@@ -6727,38 +6639,29 @@ index 16af1a329621..27c1892b2c74 100644
 -		default:
 -			return -EINVAL;
 -		}
-+	smu_cmn_get_backend_workload_mask(smu, workload_mask,
-+					  &backend_workload_mask);
++static int navi10_set_power_profile_mode(struct smu_context *smu,
++					 u32 workload_mask)
++{
++	u32 backend_workload_mask = 0;
++	bool custom_enabled = false;
++	int ret;
  
 -		ret = smu_cmn_update_table(smu,
 -				       SMU_TABLE_ACTIVITY_MONITOR_COEFF, WORKLOAD_PPLIB_CUSTOM_BIT,
 -				       (void *)(&activity_monitor), true);
-+	if (workload_mask & (1 << PP_SMC_POWER_PROFILE_CUSTOM)) {
-+		if (!smu->custom_profile_params) {
-+			smu->custom_profile_params = kzalloc(NAVI10_CUSTOM_PARAMS_SIZE, GFP_KERNEL);
-+			if (!smu->custom_profile_params)
-+				return -ENOMEM;
-+		}
-+		if (custom_params && custom_params_max_idx) {
-+			if (custom_params_max_idx != NAVI10_CUSTOM_PARAMS_COUNT)
-+				return -EINVAL;
-+			if (custom_params[0] >= NAVI10_CUSTOM_PARAMS_CLOCKS_COUNT)
-+				return -EINVAL;
-+			idx = custom_params[0] * NAVI10_CUSTOM_PARAMS_COUNT;
-+			smu->custom_profile_params[idx] = 1;
-+			for (i = 1; i < custom_params_max_idx; i++)
-+				smu->custom_profile_params[idx + i] = custom_params[i];
-+		}
-+		ret = navi10_set_power_profile_mode_coeff(smu,
-+							  smu->custom_profile_params);
- 		if (ret) {
+-		if (ret) {
 -			dev_err(smu->adev->dev, "[%s] Failed to set activity monitor!", __func__);
-+			if (idx != -1)
-+				smu->custom_profile_params[idx] = 0;
++	smu_cmn_get_backend_workload_mask(smu, workload_mask,
++					  &backend_workload_mask,
++					  &custom_enabled);
++
++	if (custom_enabled) {
++		ret = navi10_set_power_profile_mode_coeff(smu,
++							  smu->custom_profile_input,
++							  smu->custom_profile_size);
++		if (ret)
  			return ret;
- 		}
-+	} else if (smu->custom_profile_params) {
-+		memset(smu->custom_profile_params, 0, NAVI10_CUSTOM_PARAMS_SIZE);
+-		}
  	}
  
 -	/* conv PP_SMC_POWER_PROFILE* to WORKLOAD_PPLIB_*_BIT */
@@ -6775,35 +6678,32 @@ index 16af1a329621..27c1892b2c74 100644
 +	if (ret) {
 +		dev_err(smu->adev->dev, "Failed to set workload mask 0x%08x\n",
 +			workload_mask);
-+		if (idx != -1)
-+			smu->custom_profile_params[idx] = 0;
 +		return ret;
 +	}
  
  	return ret;
  }
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/smu11/sienna_cichlid_ppt.c b/drivers/gpu/drm/amd/pm/swsmu/smu11/sienna_cichlid_ppt.c
-index 9c3c48297cba..1af90990d05c 100644
+index 9c3c48297cba..4945a3dda73e 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/smu11/sienna_cichlid_ppt.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/smu11/sienna_cichlid_ppt.c
-@@ -1706,90 +1706,126 @@ static int sienna_cichlid_get_power_profile_mode(struct smu_context *smu, char *
+@@ -1706,90 +1706,101 @@ static int sienna_cichlid_get_power_profile_mode(struct smu_context *smu, char *
  	return size;
  }
  
 -static int sienna_cichlid_set_power_profile_mode(struct smu_context *smu, long *input, uint32_t size)
-+#define SIENNA_CICHLID_CUSTOM_PARAMS_COUNT 10
-+#define SIENNA_CICHLID_CUSTOM_PARAMS_CLOCK_COUNT 3
-+#define SIENNA_CICHLID_CUSTOM_PARAMS_SIZE (SIENNA_CICHLID_CUSTOM_PARAMS_CLOCK_COUNT * SIENNA_CICHLID_CUSTOM_PARAMS_COUNT * sizeof(long))
-+
 +static int sienna_cichlid_set_power_profile_mode_coeff(struct smu_context *smu,
-+						       long *input)
++						       long *input, uint32_t size)
  {
  
  	DpmActivityMonitorCoeffIntExternal_t activity_monitor_external;
  	DpmActivityMonitorCoeffInt_t *activity_monitor =
  		&(activity_monitor_external.DpmActivityMonitorCoeffInt);
 -	int workload_type, ret = 0;
-+	int ret, idx;
++	int ret;
++
++	if (size != 10)
++		return -EINVAL;
  
 -	smu->power_profile_mode = input[size];
 +	ret = smu_cmn_update_table(smu,
@@ -6816,45 +6716,42 @@ index 9c3c48297cba..1af90990d05c 100644
  
 -	if (smu->power_profile_mode > PP_SMC_POWER_PROFILE_CUSTOM) {
 -		dev_err(smu->adev->dev, "Invalid power profile mode %d\n", smu->power_profile_mode);
--		return -EINVAL;
-+	idx = 0 * SIENNA_CICHLID_CUSTOM_PARAMS_COUNT;
-+	if (input[idx]) {
-+		/* Gfxclk */
-+		activity_monitor->Gfx_FPS = input[idx + 1];
-+		activity_monitor->Gfx_MinFreqStep = input[idx + 2];
-+		activity_monitor->Gfx_MinActiveFreqType = input[idx + 3];
-+		activity_monitor->Gfx_MinActiveFreq = input[idx + 4];
-+		activity_monitor->Gfx_BoosterFreqType = input[idx + 5];
-+		activity_monitor->Gfx_BoosterFreq = input[idx + 6];
-+		activity_monitor->Gfx_PD_Data_limit_c = input[idx + 7];
-+		activity_monitor->Gfx_PD_Data_error_coeff = input[idx + 8];
-+		activity_monitor->Gfx_PD_Data_error_rate_coeff = input[idx + 9];
-+	}
-+	idx = 1 * SIENNA_CICHLID_CUSTOM_PARAMS_COUNT;
-+	if (input[idx]) {
-+		/* Socclk */
-+		activity_monitor->Fclk_FPS = input[idx + 1];
-+		activity_monitor->Fclk_MinFreqStep = input[idx + 2];
-+		activity_monitor->Fclk_MinActiveFreqType = input[idx + 3];
-+		activity_monitor->Fclk_MinActiveFreq = input[idx + 4];
-+		activity_monitor->Fclk_BoosterFreqType = input[idx + 5];
-+		activity_monitor->Fclk_BoosterFreq = input[idx + 6];
-+		activity_monitor->Fclk_PD_Data_limit_c = input[idx + 7];
-+		activity_monitor->Fclk_PD_Data_error_coeff = input[idx + 8];
-+		activity_monitor->Fclk_PD_Data_error_rate_coeff = input[idx + 9];
-+	}
-+	idx = 2 * SIENNA_CICHLID_CUSTOM_PARAMS_COUNT;
-+	if (input[idx]) {
-+		/* Memclk */
-+		activity_monitor->Mem_FPS = input[idx + 1];
-+		activity_monitor->Mem_MinFreqStep = input[idx + 2];
-+		activity_monitor->Mem_MinActiveFreqType = input[idx + 3];
-+		activity_monitor->Mem_MinActiveFreq = input[idx + 4];
-+		activity_monitor->Mem_BoosterFreqType = input[idx + 5];
-+		activity_monitor->Mem_BoosterFreq = input[idx + 6];
-+		activity_monitor->Mem_PD_Data_limit_c = input[idx + 7];
-+		activity_monitor->Mem_PD_Data_error_coeff = input[idx + 8];
-+		activity_monitor->Mem_PD_Data_error_rate_coeff = input[idx + 9];
++	switch (input[0]) {
++	case 0: /* Gfxclk */
++		activity_monitor->Gfx_FPS = input[1];
++		activity_monitor->Gfx_MinFreqStep = input[2];
++		activity_monitor->Gfx_MinActiveFreqType = input[3];
++		activity_monitor->Gfx_MinActiveFreq = input[4];
++		activity_monitor->Gfx_BoosterFreqType = input[5];
++		activity_monitor->Gfx_BoosterFreq = input[6];
++		activity_monitor->Gfx_PD_Data_limit_c = input[7];
++		activity_monitor->Gfx_PD_Data_error_coeff = input[8];
++		activity_monitor->Gfx_PD_Data_error_rate_coeff = input[9];
++		break;
++	case 1: /* Socclk */
++		activity_monitor->Fclk_FPS = input[1];
++		activity_monitor->Fclk_MinFreqStep = input[2];
++		activity_monitor->Fclk_MinActiveFreqType = input[3];
++		activity_monitor->Fclk_MinActiveFreq = input[4];
++		activity_monitor->Fclk_BoosterFreqType = input[5];
++		activity_monitor->Fclk_BoosterFreq = input[6];
++		activity_monitor->Fclk_PD_Data_limit_c = input[7];
++		activity_monitor->Fclk_PD_Data_error_coeff = input[8];
++		activity_monitor->Fclk_PD_Data_error_rate_coeff = input[9];
++		break;
++	case 2: /* Memclk */
++		activity_monitor->Mem_FPS = input[1];
++		activity_monitor->Mem_MinFreqStep = input[2];
++		activity_monitor->Mem_MinActiveFreqType = input[3];
++		activity_monitor->Mem_MinActiveFreq = input[4];
++		activity_monitor->Mem_BoosterFreqType = input[5];
++		activity_monitor->Mem_BoosterFreq = input[6];
++		activity_monitor->Mem_PD_Data_limit_c = input[7];
++		activity_monitor->Mem_PD_Data_error_coeff = input[8];
++		activity_monitor->Mem_PD_Data_error_rate_coeff = input[9];
++		break;
++	default:
+ 		return -EINVAL;
  	}
  
 -	if (smu->power_profile_mode == PP_SMC_POWER_PROFILE_CUSTOM) {
@@ -6914,48 +6811,30 @@ index 9c3c48297cba..1af90990d05c 100644
 -			break;
 -		default:
 -			return -EINVAL;
+-		}
 +static int sienna_cichlid_set_power_profile_mode(struct smu_context *smu,
-+						 u32 workload_mask,
-+						 long *custom_params,
-+						 u32 custom_params_max_idx)
++						 u32 workload_mask)
 +{
 +	u32 backend_workload_mask = 0;
-+	int ret, idx = -1, i;
-+
-+	smu_cmn_get_backend_workload_mask(smu, workload_mask,
-+					  &backend_workload_mask);
-+
-+	if (workload_mask & (1 << PP_SMC_POWER_PROFILE_CUSTOM)) {
-+		if (!smu->custom_profile_params) {
-+			smu->custom_profile_params =
-+				kzalloc(SIENNA_CICHLID_CUSTOM_PARAMS_SIZE, GFP_KERNEL);
-+			if (!smu->custom_profile_params)
-+				return -ENOMEM;
- 		}
--
++	bool custom_enabled = false;
++	int ret;
+ 
 -		ret = smu_cmn_update_table(smu,
 -				       SMU_TABLE_ACTIVITY_MONITOR_COEFF, WORKLOAD_PPLIB_CUSTOM_BIT,
 -				       (void *)(&activity_monitor_external), true);
-+		if (custom_params && custom_params_max_idx) {
-+			if (custom_params_max_idx != SIENNA_CICHLID_CUSTOM_PARAMS_COUNT)
-+				return -EINVAL;
-+			if (custom_params[0] >= SIENNA_CICHLID_CUSTOM_PARAMS_CLOCK_COUNT)
-+				return -EINVAL;
-+			idx = custom_params[0] * SIENNA_CICHLID_CUSTOM_PARAMS_COUNT;
-+			smu->custom_profile_params[idx] = 1;
-+			for (i = 1; i < custom_params_max_idx; i++)
-+				smu->custom_profile_params[idx + i] = custom_params[i];
-+		}
-+		ret = sienna_cichlid_set_power_profile_mode_coeff(smu,
-+								  smu->custom_profile_params);
- 		if (ret) {
+-		if (ret) {
 -			dev_err(smu->adev->dev, "[%s] Failed to set activity monitor!", __func__);
-+			if (idx != -1)
-+				smu->custom_profile_params[idx] = 0;
++	smu_cmn_get_backend_workload_mask(smu, workload_mask,
++					  &backend_workload_mask,
++					  &custom_enabled);
++
++	if (custom_enabled) {
++		ret = sienna_cichlid_set_power_profile_mode_coeff(smu,
++								  smu->custom_profile_input,
++								  smu->custom_profile_size);
++		if (ret)
  			return ret;
- 		}
-+	} else if (smu->custom_profile_params) {
-+		memset(smu->custom_profile_params, 0, SIENNA_CICHLID_CUSTOM_PARAMS_SIZE);
+-		}
  	}
  
 -	/* conv PP_SMC_POWER_PROFILE* to WORKLOAD_PPLIB_*_BIT */
@@ -6972,15 +6851,13 @@ index 9c3c48297cba..1af90990d05c 100644
 +	if (ret) {
 +		dev_err(smu->adev->dev, "Failed to set workload mask 0x%08x\n",
 +			workload_mask);
-+		if (idx != -1)
-+			smu->custom_profile_params[idx] = 0;
 +		return ret;
 +	}
  
  	return ret;
  }
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/smu11/vangogh_ppt.c b/drivers/gpu/drm/amd/pm/swsmu/smu11/vangogh_ppt.c
-index 1fe020f1f4db..9bca748ac2e9 100644
+index 1fe020f1f4db..85e2f926087b 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/smu11/vangogh_ppt.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/smu11/vangogh_ppt.c
 @@ -1054,42 +1054,27 @@ static int vangogh_get_power_profile_mode(struct smu_context *smu,
@@ -6989,13 +6866,12 @@ index 1fe020f1f4db..9bca748ac2e9 100644
  
 -static int vangogh_set_power_profile_mode(struct smu_context *smu, long *input, uint32_t size)
 +static int vangogh_set_power_profile_mode(struct smu_context *smu,
-+					  u32 workload_mask,
-+					  long *custom_params,
-+					  u32 custom_params_max_idx)
++					  u32 workload_mask)
  {
 -	int workload_type, ret;
 -	uint32_t profile_mode = input[size];
 +	u32 backend_workload_mask = 0;
++	bool custom_enabled = false;
 +	int ret;
  
 -	if (profile_mode >= PP_SMC_POWER_PROFILE_COUNT) {
@@ -7017,7 +6893,8 @@ index 1fe020f1f4db..9bca748ac2e9 100644
 -		return -EINVAL;
 -	}
 +	smu_cmn_get_backend_workload_mask(smu, workload_mask,
-+					  &backend_workload_mask);
++					  &backend_workload_mask,
++					  &custom_enabled);
  
  	ret = smu_cmn_send_smc_msg_with_param(smu, SMU_MSG_ActiveProcessNotify,
 -				    1 << workload_type,
@@ -7040,7 +6917,7 @@ index 1fe020f1f4db..9bca748ac2e9 100644
  
  static int vangogh_set_soft_freq_limited_range(struct smu_context *smu,
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/smu12/renoir_ppt.c b/drivers/gpu/drm/amd/pm/swsmu/smu12/renoir_ppt.c
-index cc0504b063fa..1a8a42b176e5 100644
+index cc0504b063fa..70dd631c46dc 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/smu12/renoir_ppt.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/smu12/renoir_ppt.c
 @@ -862,44 +862,27 @@ static int renoir_force_clk_levels(struct smu_context *smu,
@@ -7049,14 +6926,13 @@ index cc0504b063fa..1a8a42b176e5 100644
  
 -static int renoir_set_power_profile_mode(struct smu_context *smu, long *input, uint32_t size)
 +static int renoir_set_power_profile_mode(struct smu_context *smu,
-+					 u32 workload_mask,
-+					 long *custom_params,
-+					 u32 custom_params_max_idx)
++					 u32 workload_mask)
  {
 -	int workload_type, ret;
 -	uint32_t profile_mode = input[size];
 +	int ret;
 +	u32 backend_workload_mask = 0;
++	bool custom_enabled = false;
  
 -	if (profile_mode > PP_SMC_POWER_PROFILE_CUSTOM) {
 -		dev_err(smu->adev->dev, "Invalid power profile mode %d\n", profile_mode);
@@ -7080,7 +6956,8 @@ index cc0504b063fa..1a8a42b176e5 100644
 -		return -EINVAL;
 -	}
 +	smu_cmn_get_backend_workload_mask(smu, workload_mask,
-+					  &backend_workload_mask);
++					  &backend_workload_mask,
++					  &custom_enabled);
  
  	ret = smu_cmn_send_smc_msg_with_param(smu, SMU_MSG_ActiveProcessNotify,
 -				    1 << workload_type,
@@ -7102,7 +6979,7 @@ index cc0504b063fa..1a8a42b176e5 100644
  
  static int renoir_set_peak_clock_by_device(struct smu_context *smu)
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/smu13/smu_v13_0_0_ppt.c b/drivers/gpu/drm/amd/pm/swsmu/smu13/smu_v13_0_0_ppt.c
-index d53e162dcd8d..5fa58ef65371 100644
+index d53e162dcd8d..9dfa01db0ec0 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/smu13/smu_v13_0_0_ppt.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/smu13/smu_v13_0_0_ppt.c
 @@ -107,6 +107,8 @@
@@ -7269,12 +7146,9 @@ index d53e162dcd8d..5fa58ef65371 100644
 -static int smu_v13_0_0_set_power_profile_mode(struct smu_context *smu,
 -					      long *input,
 -					      uint32_t size)
-+#define SMU_13_0_0_CUSTOM_PARAMS_COUNT 9
-+#define SMU_13_0_0_CUSTOM_PARAMS_CLOCK_COUNT 2
-+#define SMU_13_0_0_CUSTOM_PARAMS_SIZE (SMU_13_0_0_CUSTOM_PARAMS_CLOCK_COUNT * SMU_13_0_0_CUSTOM_PARAMS_COUNT * sizeof(long))
-+
 +static int smu_v13_0_0_set_power_profile_mode_coeff(struct smu_context *smu,
-+						    long *input)
++						    long *input,
++						    uint32_t size)
  {
  	DpmActivityMonitorCoeffIntExternal_t activity_monitor_external;
  	DpmActivityMonitorCoeffInt_t *activity_monitor =
@@ -7283,20 +7157,13 @@ index d53e162dcd8d..5fa58ef65371 100644
 -	u32 workload_mask, selected_workload_mask;
 -
 -	smu->power_profile_mode = input[size];
-+	int ret, idx;
++	int ret;
  
 -	if (smu->power_profile_mode >= PP_SMC_POWER_PROFILE_COUNT) {
 -		dev_err(smu->adev->dev, "Invalid power profile mode %d\n", smu->power_profile_mode);
--		return -EINVAL;
-+	ret = smu_cmn_update_table(smu,
-+				   SMU_TABLE_ACTIVITY_MONITOR_COEFF,
-+				   WORKLOAD_PPLIB_CUSTOM_BIT,
-+				   (void *)(&activity_monitor_external),
-+				   false);
-+	if (ret) {
-+		dev_err(smu->adev->dev, "[%s] Failed to get activity monitor!", __func__);
-+		return ret;
- 	}
++	if (size != 9)
+ 		return -EINVAL;
+-	}
  
 -	if (smu->power_profile_mode == PP_SMC_POWER_PROFILE_CUSTOM) {
 -		if (size != 9)
@@ -7311,7 +7178,16 @@ index d53e162dcd8d..5fa58ef65371 100644
 -			dev_err(smu->adev->dev, "[%s] Failed to get activity monitor!", __func__);
 -			return ret;
 -		}
--
++	ret = smu_cmn_update_table(smu,
++				   SMU_TABLE_ACTIVITY_MONITOR_COEFF,
++				   WORKLOAD_PPLIB_CUSTOM_BIT,
++				   (void *)(&activity_monitor_external),
++				   false);
++	if (ret) {
++		dev_err(smu->adev->dev, "[%s] Failed to get activity monitor!", __func__);
++		return ret;
++	}
+ 
 -		switch (input[0]) {
 -		case 0: /* Gfxclk */
 -			activity_monitor->Gfx_FPS = input[1];
@@ -7336,29 +7212,29 @@ index d53e162dcd8d..5fa58ef65371 100644
 -		default:
 -			return -EINVAL;
 -		}
-+	idx = 0 * SMU_13_0_0_CUSTOM_PARAMS_COUNT;
-+	if (input[idx]) {
-+		/* Gfxclk */
-+		activity_monitor->Gfx_FPS = input[idx + 1];
-+		activity_monitor->Gfx_MinActiveFreqType = input[idx + 2];
-+		activity_monitor->Gfx_MinActiveFreq = input[idx + 3];
-+		activity_monitor->Gfx_BoosterFreqType = input[idx + 4];
-+		activity_monitor->Gfx_BoosterFreq = input[idx + 5];
-+		activity_monitor->Gfx_PD_Data_limit_c = input[idx + 6];
-+		activity_monitor->Gfx_PD_Data_error_coeff = input[idx + 7];
-+		activity_monitor->Gfx_PD_Data_error_rate_coeff = input[idx + 8];
-+	}
-+	idx = 1 * SMU_13_0_0_CUSTOM_PARAMS_COUNT;
-+	if (input[idx]) {
-+		/* Fclk */
-+		activity_monitor->Fclk_FPS = input[idx + 1];
-+		activity_monitor->Fclk_MinActiveFreqType = input[idx + 2];
-+		activity_monitor->Fclk_MinActiveFreq = input[idx + 3];
-+		activity_monitor->Fclk_BoosterFreqType = input[idx + 4];
-+		activity_monitor->Fclk_BoosterFreq = input[idx + 5];
-+		activity_monitor->Fclk_PD_Data_limit_c = input[idx + 6];
-+		activity_monitor->Fclk_PD_Data_error_coeff = input[idx + 7];
-+		activity_monitor->Fclk_PD_Data_error_rate_coeff = input[idx + 8];
++	switch (input[0]) {
++	case 0: /* Gfxclk */
++		activity_monitor->Gfx_FPS = input[1];
++		activity_monitor->Gfx_MinActiveFreqType = input[2];
++		activity_monitor->Gfx_MinActiveFreq = input[3];
++		activity_monitor->Gfx_BoosterFreqType = input[4];
++		activity_monitor->Gfx_BoosterFreq = input[5];
++		activity_monitor->Gfx_PD_Data_limit_c = input[6];
++		activity_monitor->Gfx_PD_Data_error_coeff = input[7];
++		activity_monitor->Gfx_PD_Data_error_rate_coeff = input[8];
++		break;
++	case 1: /* Fclk */
++		activity_monitor->Fclk_FPS = input[1];
++		activity_monitor->Fclk_MinActiveFreqType = input[2];
++		activity_monitor->Fclk_MinActiveFreq = input[3];
++		activity_monitor->Fclk_BoosterFreqType = input[4];
++		activity_monitor->Fclk_BoosterFreq = input[5];
++		activity_monitor->Fclk_PD_Data_limit_c = input[6];
++		activity_monitor->Fclk_PD_Data_error_coeff = input[7];
++		activity_monitor->Fclk_PD_Data_error_rate_coeff = input[8];
++		break;
++	default:
++		return -EINVAL;
 +	}
  
 -		ret = smu_cmn_update_table(smu,
@@ -7390,20 +7266,20 @@ index d53e162dcd8d..5fa58ef65371 100644
 -	if (workload_type < 0)
 -		return -EINVAL;
 +static int smu_v13_0_0_set_power_profile_mode(struct smu_context *smu,
-+					      u32 workload_mask,
-+					      long *custom_params,
-+					      u32 custom_params_max_idx)
++					      u32 workload_mask)
 +{
 +	u32 backend_workload_mask = 0;
-+	int workload_type, ret, idx = -1, i;
++	bool custom_enabled = false;
++	int workload_type, ret;
  
 -	selected_workload_mask = workload_mask = 1 << workload_type;
 +	smu_cmn_get_backend_workload_mask(smu, workload_mask,
-+					  &backend_workload_mask);
++					  &backend_workload_mask,
++					  &custom_enabled);
  
  	/* Add optimizations for SMU13.0.0/10.  Reuse the power saving profile */
  	if ((amdgpu_ip_version(smu->adev, MP1_HWIP, 0) == IP_VERSION(13, 0, 0) &&
-@@ -2564,15 +2664,48 @@ static int smu_v13_0_0_set_power_profile_mode(struct smu_context *smu,
+@@ -2564,15 +2664,26 @@ static int smu_v13_0_0_set_power_profile_mode(struct smu_context *smu,
  							       CMN2ASIC_MAPPING_WORKLOAD,
  							       PP_SMC_POWER_PROFILE_POWERSAVING);
  		if (workload_type >= 0)
@@ -7411,32 +7287,12 @@ index d53e162dcd8d..5fa58ef65371 100644
 +			backend_workload_mask |= 1 << workload_type;
 +	}
 +
-+	if (workload_mask & (1 << PP_SMC_POWER_PROFILE_CUSTOM)) {
-+		if (!smu->custom_profile_params) {
-+			smu->custom_profile_params =
-+				kzalloc(SMU_13_0_0_CUSTOM_PARAMS_SIZE, GFP_KERNEL);
-+			if (!smu->custom_profile_params)
-+				return -ENOMEM;
-+		}
-+		if (custom_params && custom_params_max_idx) {
-+			if (custom_params_max_idx != SMU_13_0_0_CUSTOM_PARAMS_COUNT)
-+				return -EINVAL;
-+			if (custom_params[0] >= SMU_13_0_0_CUSTOM_PARAMS_CLOCK_COUNT)
-+				return -EINVAL;
-+			idx = custom_params[0] * SMU_13_0_0_CUSTOM_PARAMS_COUNT;
-+			smu->custom_profile_params[idx] = 1;
-+			for (i = 1; i < custom_params_max_idx; i++)
-+				smu->custom_profile_params[idx + i] = custom_params[i];
-+		}
++	if (custom_enabled) {
 +		ret = smu_v13_0_0_set_power_profile_mode_coeff(smu,
-+							       smu->custom_profile_params);
-+		if (ret) {
-+			if (idx != -1)
-+				smu->custom_profile_params[idx] = 0;
++							       smu->custom_profile_input,
++							       smu->custom_profile_size);
++		if (ret)
 +			return ret;
-+		}
-+	} else if (smu->custom_profile_params) {
-+		memset(smu->custom_profile_params, 0, SMU_13_0_0_CUSTOM_PARAMS_SIZE);
  	}
  
  	ret = smu_cmn_send_smc_msg_with_param(smu,
@@ -7451,15 +7307,13 @@ index d53e162dcd8d..5fa58ef65371 100644
 +	if (ret) {
 +		dev_err(smu->adev->dev, "Failed to set workload mask 0x%08x\n",
 +			workload_mask);
-+		if (idx != -1)
-+			smu->custom_profile_params[idx] = 0;
 +		return ret;
 +	}
  
  	return ret;
  }
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/smu13/smu_v13_0_7_ppt.c b/drivers/gpu/drm/amd/pm/swsmu/smu13/smu_v13_0_7_ppt.c
-index b891a5e0a396..ed41de3d397a 100644
+index b891a5e0a396..3ae328348d6f 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/smu13/smu_v13_0_7_ppt.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/smu13/smu_v13_0_7_ppt.c
 @@ -83,6 +83,8 @@
@@ -7619,26 +7473,27 @@ index b891a5e0a396..ed41de3d397a 100644
  	}
  
  	smu_v13_0_7_set_supported_od_feature_mask(smu);
-@@ -2434,78 +2540,110 @@ do {													\
+@@ -2434,78 +2540,87 @@ do {													\
  	return result;
  }
  
 -static int smu_v13_0_7_set_power_profile_mode(struct smu_context *smu, long *input, uint32_t size)
-+#define SMU_13_0_7_CUSTOM_PARAMS_COUNT 8
-+#define SMU_13_0_7_CUSTOM_PARAMS_CLOCK_COUNT 2
-+#define SMU_13_0_7_CUSTOM_PARAMS_SIZE (SMU_13_0_7_CUSTOM_PARAMS_CLOCK_COUNT * SMU_13_0_7_CUSTOM_PARAMS_COUNT * sizeof(long))
-+
 +static int smu_v13_0_7_set_power_profile_mode_coeff(struct smu_context *smu,
-+						    long *input)
++						    long *input, uint32_t size)
  {
  
  	DpmActivityMonitorCoeffIntExternal_t activity_monitor_external;
  	DpmActivityMonitorCoeffInt_t *activity_monitor =
  		&(activity_monitor_external.DpmActivityMonitorCoeffInt);
 -	int workload_type, ret = 0;
-+	int ret, idx;
++	int ret;
  
 -	smu->power_profile_mode = input[size];
++	if (size != 8)
++		return -EINVAL;
+ 
+-	if (smu->power_profile_mode > PP_SMC_POWER_PROFILE_WINDOW3D) {
+-		dev_err(smu->adev->dev, "Invalid power profile mode %d\n", smu->power_profile_mode);
 +	ret = smu_cmn_update_table(smu,
 +				   SMU_TABLE_ACTIVITY_MONITOR_COEFF, WORKLOAD_PPLIB_CUSTOM_BIT,
 +				   (void *)(&activity_monitor_external), false);
@@ -7646,31 +7501,28 @@ index b891a5e0a396..ed41de3d397a 100644
 +		dev_err(smu->adev->dev, "[%s] Failed to get activity monitor!", __func__);
 +		return ret;
 +	}
- 
--	if (smu->power_profile_mode > PP_SMC_POWER_PROFILE_WINDOW3D) {
--		dev_err(smu->adev->dev, "Invalid power profile mode %d\n", smu->power_profile_mode);
--		return -EINVAL;
-+	idx = 0 * SMU_13_0_7_CUSTOM_PARAMS_COUNT;
-+	if (input[idx]) {
-+		/* Gfxclk */
-+		activity_monitor->Gfx_ActiveHystLimit = input[idx + 1];
-+		activity_monitor->Gfx_IdleHystLimit = input[idx + 2];
-+		activity_monitor->Gfx_FPS = input[idx + 3];
-+		activity_monitor->Gfx_MinActiveFreqType = input[idx + 4];
-+		activity_monitor->Gfx_BoosterFreqType = input[idx + 5];
-+		activity_monitor->Gfx_MinActiveFreq = input[idx + 6];
-+		activity_monitor->Gfx_BoosterFreq = input[idx + 7];
-+	}
-+	idx = 1 * SMU_13_0_7_CUSTOM_PARAMS_COUNT;
-+	if (input[idx]) {
-+		/* Fclk */
-+		activity_monitor->Fclk_ActiveHystLimit = input[idx + 1];
-+		activity_monitor->Fclk_IdleHystLimit = input[idx + 2];
-+		activity_monitor->Fclk_FPS = input[idx + 3];
-+		activity_monitor->Fclk_MinActiveFreqType = input[idx + 4];
-+		activity_monitor->Fclk_BoosterFreqType = input[idx + 5];
-+		activity_monitor->Fclk_MinActiveFreq = input[idx + 6];
-+		activity_monitor->Fclk_BoosterFreq = input[idx + 7];
++
++	switch (input[0]) {
++	case 0: /* Gfxclk */
++		activity_monitor->Gfx_ActiveHystLimit = input[1];
++		activity_monitor->Gfx_IdleHystLimit = input[2];
++		activity_monitor->Gfx_FPS = input[3];
++		activity_monitor->Gfx_MinActiveFreqType = input[4];
++		activity_monitor->Gfx_BoosterFreqType = input[5];
++		activity_monitor->Gfx_MinActiveFreq = input[6];
++		activity_monitor->Gfx_BoosterFreq = input[7];
++		break;
++	case 1: /* Fclk */
++		activity_monitor->Fclk_ActiveHystLimit = input[1];
++		activity_monitor->Fclk_IdleHystLimit = input[2];
++		activity_monitor->Fclk_FPS = input[3];
++		activity_monitor->Fclk_MinActiveFreqType = input[4];
++		activity_monitor->Fclk_BoosterFreqType = input[5];
++		activity_monitor->Fclk_MinActiveFreq = input[6];
++		activity_monitor->Fclk_BoosterFreq = input[7];
++		break;
++	default:
+ 		return -EINVAL;
  	}
  
 -	if (smu->power_profile_mode == PP_SMC_POWER_PROFILE_CUSTOM) {
@@ -7715,48 +7567,30 @@ index b891a5e0a396..ed41de3d397a 100644
 -			break;
 -		default:
 -			return -EINVAL;
+-		}
 +static int smu_v13_0_7_set_power_profile_mode(struct smu_context *smu,
-+					      u32 workload_mask,
-+					      long *custom_params,
-+					      u32 custom_params_max_idx)
++					      u32 workload_mask)
 +{
 +	u32 backend_workload_mask = 0;
-+	int ret, idx = -1, i;
-+
-+	smu_cmn_get_backend_workload_mask(smu, workload_mask,
-+					  &backend_workload_mask);
-+
-+	if (workload_mask & (1 << PP_SMC_POWER_PROFILE_CUSTOM)) {
-+		if (!smu->custom_profile_params) {
-+			smu->custom_profile_params =
-+				kzalloc(SMU_13_0_7_CUSTOM_PARAMS_SIZE, GFP_KERNEL);
-+			if (!smu->custom_profile_params)
-+				return -ENOMEM;
- 		}
--
++	bool custom_enabled = false;
++	int ret;
+ 
 -		ret = smu_cmn_update_table(smu,
 -				       SMU_TABLE_ACTIVITY_MONITOR_COEFF, WORKLOAD_PPLIB_CUSTOM_BIT,
 -				       (void *)(&activity_monitor_external), true);
-+		if (custom_params && custom_params_max_idx) {
-+			if (custom_params_max_idx != SMU_13_0_7_CUSTOM_PARAMS_COUNT)
-+				return -EINVAL;
-+			if (custom_params[0] >= SMU_13_0_7_CUSTOM_PARAMS_CLOCK_COUNT)
-+				return -EINVAL;
-+			idx = custom_params[0] * SMU_13_0_7_CUSTOM_PARAMS_COUNT;
-+			smu->custom_profile_params[idx] = 1;
-+			for (i = 1; i < custom_params_max_idx; i++)
-+				smu->custom_profile_params[idx + i] = custom_params[i];
-+		}
-+		ret = smu_v13_0_7_set_power_profile_mode_coeff(smu,
-+							       smu->custom_profile_params);
- 		if (ret) {
+-		if (ret) {
 -			dev_err(smu->adev->dev, "[%s] Failed to set activity monitor!", __func__);
-+			if (idx != -1)
-+				smu->custom_profile_params[idx] = 0;
++	smu_cmn_get_backend_workload_mask(smu, workload_mask,
++					  &backend_workload_mask,
++					  &custom_enabled);
++
++	if (custom_enabled) {
++		ret = smu_v13_0_7_set_power_profile_mode_coeff(smu,
++							       smu->custom_profile_input,
++							       smu->custom_profile_size);
++		if (ret)
  			return ret;
- 		}
-+	} else if (smu->custom_profile_params) {
-+		memset(smu->custom_profile_params, 0, SMU_13_0_7_CUSTOM_PARAMS_SIZE);
+-		}
  	}
  
 -	/* conv PP_SMC_POWER_PROFILE* to WORKLOAD_PPLIB_*_BIT */
@@ -7776,30 +7610,25 @@ index b891a5e0a396..ed41de3d397a 100644
 +	if (ret) {
 +		dev_err(smu->adev->dev, "Failed to set workload mask 0x%08x\n",
 +			workload_mask);
-+		if (idx != -1)
-+			smu->custom_profile_params[idx] = 0;
 +		return ret;
 +	}
  
  	return ret;
  }
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/smu14/smu_v14_0_2_ppt.c b/drivers/gpu/drm/amd/pm/swsmu/smu14/smu_v14_0_2_ppt.c
-index 1e16a281f2dc..bfaa9e43f92a 100644
+index 1e16a281f2dc..aa147105a742 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/smu14/smu_v14_0_2_ppt.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/smu14/smu_v14_0_2_ppt.c
-@@ -1729,90 +1729,120 @@ static int smu_v14_0_2_get_power_profile_mode(struct smu_context *smu,
+@@ -1729,90 +1729,98 @@ static int smu_v14_0_2_get_power_profile_mode(struct smu_context *smu,
  	return size;
  }
  
 -static int smu_v14_0_2_set_power_profile_mode(struct smu_context *smu,
 -					      long *input,
 -					      uint32_t size)
-+#define SMU_14_0_2_CUSTOM_PARAMS_COUNT 9
-+#define SMU_14_0_2_CUSTOM_PARAMS_CLOCK_COUNT 2
-+#define SMU_14_0_2_CUSTOM_PARAMS_SIZE (SMU_14_0_2_CUSTOM_PARAMS_CLOCK_COUNT * SMU_14_0_2_CUSTOM_PARAMS_COUNT * sizeof(long))
-+
 +static int smu_v14_0_2_set_power_profile_mode_coeff(struct smu_context *smu,
-+						    long *input)
++						    long *input,
++						    uint32_t size)
  {
  	DpmActivityMonitorCoeffIntExternal_t activity_monitor_external;
  	DpmActivityMonitorCoeffInt_t *activity_monitor =
@@ -7807,11 +7636,13 @@ index 1e16a281f2dc..bfaa9e43f92a 100644
 -	int workload_type, ret = 0;
 -	uint32_t current_profile_mode = smu->power_profile_mode;
 -	smu->power_profile_mode = input[size];
-+	int ret, idx;
++	int ret;
  
 -	if (smu->power_profile_mode >= PP_SMC_POWER_PROFILE_COUNT) {
 -		dev_err(smu->adev->dev, "Invalid power profile mode %d\n", smu->power_profile_mode);
--		return -EINVAL;
++	if (size != 9)
+ 		return -EINVAL;
++
 +	ret = smu_cmn_update_table(smu,
 +				   SMU_TABLE_ACTIVITY_MONITOR_COEFF,
 +				   WORKLOAD_PPLIB_CUSTOM_BIT,
@@ -7825,29 +7656,29 @@ index 1e16a281f2dc..bfaa9e43f92a 100644
 -	if (smu->power_profile_mode == PP_SMC_POWER_PROFILE_CUSTOM) {
 -		if (size != 9)
 -			return -EINVAL;
-+	idx = 0 * SMU_14_0_2_CUSTOM_PARAMS_COUNT;
-+	if (input[idx]) {
-+		/* Gfxclk */
-+		activity_monitor->Gfx_FPS = input[idx + 1];
-+		activity_monitor->Gfx_MinActiveFreqType = input[idx + 2];
-+		activity_monitor->Gfx_MinActiveFreq = input[idx + 3];
-+		activity_monitor->Gfx_BoosterFreqType = input[idx + 4];
-+		activity_monitor->Gfx_BoosterFreq = input[idx + 5];
-+		activity_monitor->Gfx_PD_Data_limit_c = input[idx + 6];
-+		activity_monitor->Gfx_PD_Data_error_coeff = input[idx + 7];
-+		activity_monitor->Gfx_PD_Data_error_rate_coeff = input[idx + 8];
-+	}
-+	idx = 1 * SMU_14_0_2_CUSTOM_PARAMS_COUNT;
-+	if (input[idx]) {
-+		/* Fclk */
-+		activity_monitor->Fclk_FPS = input[idx + 1];
-+		activity_monitor->Fclk_MinActiveFreqType = input[idx + 2];
-+		activity_monitor->Fclk_MinActiveFreq = input[idx + 3];
-+		activity_monitor->Fclk_BoosterFreqType = input[idx + 4];
-+		activity_monitor->Fclk_BoosterFreq = input[idx + 5];
-+		activity_monitor->Fclk_PD_Data_limit_c = input[idx + 6];
-+		activity_monitor->Fclk_PD_Data_error_coeff = input[idx + 7];
-+		activity_monitor->Fclk_PD_Data_error_rate_coeff = input[idx + 8];
++	switch (input[0]) {
++	case 0: /* Gfxclk */
++		activity_monitor->Gfx_FPS = input[1];
++		activity_monitor->Gfx_MinActiveFreqType = input[2];
++		activity_monitor->Gfx_MinActiveFreq = input[3];
++		activity_monitor->Gfx_BoosterFreqType = input[4];
++		activity_monitor->Gfx_BoosterFreq = input[5];
++		activity_monitor->Gfx_PD_Data_limit_c = input[6];
++		activity_monitor->Gfx_PD_Data_error_coeff = input[7];
++		activity_monitor->Gfx_PD_Data_error_rate_coeff = input[8];
++		break;
++	case 1: /* Fclk */
++		activity_monitor->Fclk_FPS = input[1];
++		activity_monitor->Fclk_MinActiveFreqType = input[2];
++		activity_monitor->Fclk_MinActiveFreq = input[3];
++		activity_monitor->Fclk_BoosterFreqType = input[4];
++		activity_monitor->Fclk_BoosterFreq = input[5];
++		activity_monitor->Fclk_PD_Data_limit_c = input[6];
++		activity_monitor->Fclk_PD_Data_error_coeff = input[7];
++		activity_monitor->Fclk_PD_Data_error_rate_coeff = input[8];
++		break;
++	default:
++		return -EINVAL;
 +	}
  
 -		ret = smu_cmn_update_table(smu,
@@ -7907,15 +7738,15 @@ index 1e16a281f2dc..bfaa9e43f92a 100644
 -		}
 -	}
 +static int smu_v14_0_2_set_power_profile_mode(struct smu_context *smu,
-+					      u32 workload_mask,
-+					      long *custom_params,
-+					      u32 custom_params_max_idx)
++					      u32 workload_mask)
 +{
 +	u32 backend_workload_mask = 0;
-+	int ret, idx = -1, i;
++	bool custom_enabled = false;
++	int ret;
 +
 +	smu_cmn_get_backend_workload_mask(smu, workload_mask,
-+					  &backend_workload_mask);
++					  &backend_workload_mask,
++					  &custom_enabled);
  
 -	if (smu->power_profile_mode == PP_SMC_POWER_PROFILE_COMPUTE)
 +	/* disable deep sleep if compute is enabled */
@@ -7931,32 +7762,12 @@ index 1e16a281f2dc..bfaa9e43f92a 100644
 -						       smu->power_profile_mode);
 -	if (workload_type < 0)
 -		return -EINVAL;
-+	if (workload_mask & (1 << PP_SMC_POWER_PROFILE_CUSTOM)) {
-+		if (!smu->custom_profile_params) {
-+			smu->custom_profile_params =
-+				kzalloc(SMU_14_0_2_CUSTOM_PARAMS_SIZE, GFP_KERNEL);
-+			if (!smu->custom_profile_params)
-+				return -ENOMEM;
-+		}
-+		if (custom_params && custom_params_max_idx) {
-+			if (custom_params_max_idx != SMU_14_0_2_CUSTOM_PARAMS_COUNT)
-+				return -EINVAL;
-+			if (custom_params[0] >= SMU_14_0_2_CUSTOM_PARAMS_CLOCK_COUNT)
-+				return -EINVAL;
-+			idx = custom_params[0] * SMU_14_0_2_CUSTOM_PARAMS_COUNT;
-+			smu->custom_profile_params[idx] = 1;
-+			for (i = 1; i < custom_params_max_idx; i++)
-+				smu->custom_profile_params[idx + i] = custom_params[i];
-+		}
++	if (custom_enabled) {
 +		ret = smu_v14_0_2_set_power_profile_mode_coeff(smu,
-+							       smu->custom_profile_params);
-+		if (ret) {
-+			if (idx != -1)
-+				smu->custom_profile_params[idx] = 0;
++							       smu->custom_profile_input,
++							       smu->custom_profile_size);
++		if (ret)
 +			return ret;
-+		}
-+	} else if (smu->custom_profile_params) {
-+		memset(smu->custom_profile_params, 0, SMU_14_0_2_CUSTOM_PARAMS_SIZE);
 +	}
  
 -	ret = smu_cmn_send_smc_msg_with_param(smu,
@@ -7970,29 +7781,29 @@ index 1e16a281f2dc..bfaa9e43f92a 100644
 +	if (ret) {
 +		dev_err(smu->adev->dev, "Failed to set workload mask 0x%08x\n",
 +			workload_mask);
-+		if (idx != -1)
-+			smu->custom_profile_params[idx] = 0;
 +		return ret;
 +	}
  
  	return ret;
  }
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/smu_cmn.c b/drivers/gpu/drm/amd/pm/swsmu/smu_cmn.c
-index 91ad434bcdae..0d71db7be325 100644
+index 91ad434bcdae..79406463a65a 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/smu_cmn.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/smu_cmn.c
-@@ -1215,3 +1215,28 @@ void smu_cmn_generic_plpd_policy_desc(struct smu_dpm_policy *policy)
+@@ -1215,3 +1215,33 @@ void smu_cmn_generic_plpd_policy_desc(struct smu_dpm_policy *policy)
  {
  	policy->desc = &xgmi_plpd_policy_desc;
  }
 +
 +void smu_cmn_get_backend_workload_mask(struct smu_context *smu,
 +				       u32 workload_mask,
-+				       u32 *backend_workload_mask)
++				       u32 *backend_workload_mask,
++				       bool *custom_enabled)
 +{
 +	int workload_type;
 +	u32 profile_mode;
 +
++	*custom_enabled = false;
 +	*backend_workload_mask = 0;
 +
 +	for (profile_mode = 0; profile_mode < PP_SMC_POWER_PROFILE_COUNT; profile_mode++) {
@@ -8008,19 +7819,23 @@ index 91ad434bcdae..0d71db7be325 100644
 +			continue;
 +
 +		*backend_workload_mask |= 1 << workload_type;
++
++		if (profile_mode == PP_SMC_POWER_PROFILE_CUSTOM)
++			*custom_enabled = true;
 +	}
 +}
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/smu_cmn.h b/drivers/gpu/drm/amd/pm/swsmu/smu_cmn.h
-index 1de685defe85..a020277dec3e 100644
+index 1de685defe85..8d40c02efa00 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/smu_cmn.h
 +++ b/drivers/gpu/drm/amd/pm/swsmu/smu_cmn.h
-@@ -147,5 +147,9 @@ bool smu_cmn_is_audio_func_enabled(struct amdgpu_device *adev);
+@@ -147,5 +147,10 @@ bool smu_cmn_is_audio_func_enabled(struct amdgpu_device *adev);
  void smu_cmn_generic_soc_policy_desc(struct smu_dpm_policy *policy);
  void smu_cmn_generic_plpd_policy_desc(struct smu_dpm_policy *policy);
  
 +void smu_cmn_get_backend_workload_mask(struct smu_context *smu,
 +				       u32 workload_mask,
-+				       u32 *backend_workload_mask);
++				       u32 *backend_workload_mask,
++				       bool *custom_enabled);
 +
  #endif
  #endif
@@ -9800,18 +9615,6 @@ index 000000000000..442c4d8848df
 +MODULE_AUTHOR("Kerem Karabay <kekrby@gmail.com>");
 +MODULE_DESCRIPTION("MacBookPro Touch Bar Keyboard Mode Driver");
 +MODULE_LICENSE("GPL");
-diff --git a/drivers/hid/hid-ids.h b/drivers/hid/hid-ids.h
-index 92cff3f2658c..44c54419d93c 100644
---- a/drivers/hid/hid-ids.h
-+++ b/drivers/hid/hid-ids.h
-@@ -209,6 +209,7 @@
- #define USB_DEVICE_ID_ASUSTEK_ROG_NKEY_KEYBOARD2	0x19b6
- #define USB_DEVICE_ID_ASUSTEK_ROG_NKEY_KEYBOARD3	0x1a30
- #define USB_DEVICE_ID_ASUSTEK_ROG_Z13_LIGHTBAR		0x18c6
-+#define USB_DEVICE_ID_ASUSTEK_ROG_RAIKIRI_PAD		0x1abb
- #define USB_DEVICE_ID_ASUSTEK_ROG_NKEY_ALLY		0x1abe
- #define USB_DEVICE_ID_ASUSTEK_ROG_NKEY_ALLY_X		0x1b4c
- #define USB_DEVICE_ID_ASUSTEK_ROG_CLAYMORE_II_KEYBOARD	0x196b
 diff --git a/drivers/hid/hid-multitouch.c b/drivers/hid/hid-multitouch.c
 index e936019d21fe..0d5382e965de 100644
 --- a/drivers/hid/hid-multitouch.c
@@ -16026,6 +15829,19 @@ index 3fe7e2a9bd29..6c8b999a5e08 100644
  	help
  	  This module provides kernel support for emulation of Windows NT
  	  synchronization primitives. It is not a hardware driver.
+diff --git a/drivers/misc/lkdtm/bugs.c b/drivers/misc/lkdtm/bugs.c
+index 62ba01525479..376047beea3d 100644
+--- a/drivers/misc/lkdtm/bugs.c
++++ b/drivers/misc/lkdtm/bugs.c
+@@ -445,7 +445,7 @@ static void lkdtm_FAM_BOUNDS(void)
+ 
+ 	pr_err("FAIL: survived access of invalid flexible array member index!\n");
+ 
+-	if (!__has_attribute(__counted_by__))
++	if (!IS_ENABLED(CONFIG_CC_HAS_COUNTED_BY))
+ 		pr_warn("This is expected since this %s was built with a compiler that does not support __counted_by\n",
+ 			lkdtm_kernel_info);
+ 	else if (IS_ENABLED(CONFIG_UBSAN_BOUNDS))
 diff --git a/drivers/misc/ntsync.c b/drivers/misc/ntsync.c
 index 4954553b7baa..3fac06270549 100644
 --- a/drivers/misc/ntsync.c
@@ -25248,7 +25064,7 @@ index cf4fe21a5039..04107b950717 100644
  	ret = true;
  
 diff --git a/fs/ntfs3/file.c b/fs/ntfs3/file.c
-index f704ceef9539..3f96a11804c9 100644
+index e370eaf9bfe2..3f96a11804c9 100644
 --- a/fs/ntfs3/file.c
 +++ b/fs/ntfs3/file.c
 @@ -182,13 +182,15 @@ static int ntfs_extend_initialized_size(struct file *file,
@@ -25268,6 +25084,15 @@ index f704ceef9539..3f96a11804c9 100644
  
  	for (;;) {
  		u32 zerofrom, len;
+@@ -222,7 +224,7 @@ static int ntfs_extend_initialized_size(struct file *file,
+ 		if (err)
+ 			goto out;
+ 
+-		folio_zero_range(folio, zerofrom, folio_size(folio));
++		folio_zero_range(folio, zerofrom, folio_size(folio) - zerofrom);
+ 
+ 		err = ntfs_write_end(file, mapping, pos, len, len, folio, NULL);
+ 		if (err < 0)
 @@ -987,6 +989,7 @@ static ssize_t ntfs_compress_write(struct kiocb *iocb, struct iov_iter *from)
  	u64 frame_vbo;
  	pgoff_t index;
@@ -25685,7 +25510,7 @@ index 58e988cd8049..6e86d66197ef 100644
  
  	return ret;
 diff --git a/include/asm-generic/vmlinux.lds.h b/include/asm-generic/vmlinux.lds.h
-index fa284b64b2de..54504013c749 100644
+index eeadbaeccf88..c995474e4c64 100644
 --- a/include/asm-generic/vmlinux.lds.h
 +++ b/include/asm-generic/vmlinux.lds.h
 @@ -95,18 +95,25 @@
@@ -25784,6 +25609,60 @@ index 428d81afe215..aa1604d92c1a 100644
  void drm_fb_xrgb8888_to_argb8888(struct iosys_map *dst, const unsigned int *dst_pitch,
  				 const struct iosys_map *src, const struct drm_framebuffer *fb,
  				 const struct drm_rect *clip, struct drm_format_conv_state *state);
+diff --git a/include/linux/compiler_attributes.h b/include/linux/compiler_attributes.h
+index 32284cd26d52..c16d4199bf92 100644
+--- a/include/linux/compiler_attributes.h
++++ b/include/linux/compiler_attributes.h
+@@ -94,19 +94,6 @@
+ # define __copy(symbol)
+ #endif
+ 
+-/*
+- * Optional: only supported since gcc >= 15
+- * Optional: only supported since clang >= 18
+- *
+- *   gcc: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=108896
+- * clang: https://github.com/llvm/llvm-project/pull/76348
+- */
+-#if __has_attribute(__counted_by__)
+-# define __counted_by(member)		__attribute__((__counted_by__(member)))
+-#else
+-# define __counted_by(member)
+-#endif
+-
+ /*
+  * Optional: not supported by gcc
+  * Optional: only supported since clang >= 14.0
+diff --git a/include/linux/compiler_types.h b/include/linux/compiler_types.h
+index 1a957ea2f4fe..639be0f30b45 100644
+--- a/include/linux/compiler_types.h
++++ b/include/linux/compiler_types.h
+@@ -323,6 +323,25 @@ struct ftrace_likely_data {
+ #define __no_sanitize_or_inline __always_inline
+ #endif
+ 
++/*
++ * Optional: only supported since gcc >= 15
++ * Optional: only supported since clang >= 18
++ *
++ *   gcc: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=108896
++ * clang: https://github.com/llvm/llvm-project/pull/76348
++ *
++ * __bdos on clang < 19.1.2 can erroneously return 0:
++ * https://github.com/llvm/llvm-project/pull/110497
++ *
++ * __bdos on clang < 19.1.3 can be off by 4:
++ * https://github.com/llvm/llvm-project/pull/112636
++ */
++#ifdef CONFIG_CC_HAS_COUNTED_BY
++# define __counted_by(member)		__attribute__((__counted_by__(member)))
++#else
++# define __counted_by(member)
++#endif
++
+ /*
+  * Apply __counted_by() when the Endianness matches to increase test coverage.
+  */
 diff --git a/include/linux/cpuhotplug.h b/include/linux/cpuhotplug.h
 index 2361ed4d2b15..37a9afffb59e 100644
 --- a/include/linux/cpuhotplug.h
@@ -25796,6 +25675,18 @@ index 2361ed4d2b15..37a9afffb59e 100644
  	CPUHP_AP_PERF_S390_CF_ONLINE,
  	CPUHP_AP_PERF_S390_SF_ONLINE,
  	CPUHP_AP_PERF_ARM_CCI_ONLINE,
+diff --git a/include/linux/mm_types.h b/include/linux/mm_types.h
+index 6e3bdf8e38bc..6b6f05404304 100644
+--- a/include/linux/mm_types.h
++++ b/include/linux/mm_types.h
+@@ -1335,6 +1335,7 @@ enum tlb_flush_reason {
+ 	TLB_LOCAL_SHOOTDOWN,
+ 	TLB_LOCAL_MM_SHOOTDOWN,
+ 	TLB_REMOTE_SEND_IPI,
++	TLB_REMOTE_WRONG_CPU,
+ 	NR_TLB_FLUSH_REASONS,
+ };
+ 
 diff --git a/include/linux/pagemap.h b/include/linux/pagemap.h
 index 68a5f1ff3301..291873a34079 100644
 --- a/include/linux/pagemap.h
@@ -27734,7 +27625,7 @@ index dcfa38fdc93c..4a8095a3fc34 100644
  
  #endif
 diff --git a/include/uapi/linux/rtnetlink.h b/include/uapi/linux/rtnetlink.h
-index db7254d52d93..38de18d921ea 100644
+index 3b687d20c9ed..a7c30c243b54 100644
 --- a/include/uapi/linux/rtnetlink.h
 +++ b/include/uapi/linux/rtnetlink.h
 @@ -507,12 +507,14 @@ enum {
@@ -27766,10 +27657,25 @@ index dbf896f3146c..4702cd2f1ffc 100644
  /*
   * Sender's congestion state indicating normal or abnormal situations
 diff --git a/init/Kconfig b/init/Kconfig
-index 7256fa127530..857869dbc22c 100644
+index c521e1421ad4..504e8a7c4e2a 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
-@@ -154,6 +154,10 @@ config THREAD_INFO_IN_TASK
+@@ -120,6 +120,14 @@ config CC_HAS_ASM_INLINE
+ config CC_HAS_NO_PROFILE_FN_ATTR
+ 	def_bool $(success,echo '__attribute__((no_profile_instrument_function)) int x();' | $(CC) -x c - -c -o /dev/null -Werror)
+ 
++# clang needs to be at least 19.1.3 to avoid __bdos miscalculations
++# https://github.com/llvm/llvm-project/pull/110497
++# https://github.com/llvm/llvm-project/pull/112636
++# TODO: when gcc 15 is released remove the build test and add gcc version check
++config CC_HAS_COUNTED_BY
++	def_bool $(success,echo 'struct flex { int count; int array[] __attribute__((__counted_by__(count))); };' | $(CC) $(CLANG_FLAGS) -x c - -c -o /dev/null -Werror)
++	depends on !(CC_IS_CLANG && CLANG_VERSION < 190103)
++
+ config PAHOLE_VERSION
+ 	int
+ 	default $(shell,$(srctree)/scripts/pahole-version.sh $(PAHOLE))
+@@ -145,6 +153,10 @@ config THREAD_INFO_IN_TASK
  
  menu "General setup"
  
@@ -27780,7 +27686,7 @@ index 7256fa127530..857869dbc22c 100644
  config BROKEN
  	bool
  
-@@ -1309,6 +1313,22 @@ config USER_NS
+@@ -1300,6 +1312,22 @@ config USER_NS
  
  	  If unsure, say N.
  
@@ -27803,7 +27709,7 @@ index 7256fa127530..857869dbc22c 100644
  config PID_NS
  	bool "PID Namespaces"
  	default y
-@@ -1451,6 +1471,12 @@ config CC_OPTIMIZE_FOR_PERFORMANCE
+@@ -1442,6 +1470,12 @@ config CC_OPTIMIZE_FOR_PERFORMANCE
  	  with the "-O2" compiler flag for best performance and most
  	  helpful compile-time warnings.
  
@@ -27858,8 +27764,21 @@ index 38ef6d06888e..0f78364efd4f 100644
  	default 1000 if HZ_1000
  
  config SCHED_HRTICK
+diff --git a/kernel/Kconfig.preempt b/kernel/Kconfig.preempt
+index fe782cd77388..a69475f2bca7 100644
+--- a/kernel/Kconfig.preempt
++++ b/kernel/Kconfig.preempt
+@@ -69,7 +69,7 @@ config PREEMPT
+ 
+ config PREEMPT_RT
+ 	bool "Fully Preemptible Kernel (Real-Time)"
+-	depends on EXPERT && ARCH_SUPPORTS_RT
++	depends on ARCH_SUPPORTS_RT
+ 	select PREEMPTION
+ 	help
+ 	  This option turns the kernel into a real-time kernel by replacing
 diff --git a/kernel/fork.c b/kernel/fork.c
-index ce8be55e5e04..e97e527cec69 100644
+index 22f43721d031..8287afdd01d2 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -107,6 +107,10 @@
@@ -27873,7 +27792,7 @@ index ce8be55e5e04..e97e527cec69 100644
  #include <asm/pgalloc.h>
  #include <linux/uaccess.h>
  #include <asm/mmu_context.h>
-@@ -2158,6 +2162,10 @@ __latent_entropy struct task_struct *copy_process(
+@@ -2138,6 +2142,10 @@ __latent_entropy struct task_struct *copy_process(
  	if ((clone_flags & (CLONE_NEWUSER|CLONE_FS)) == (CLONE_NEWUSER|CLONE_FS))
  		return ERR_PTR(-EINVAL);
  
@@ -27884,7 +27803,7 @@ index ce8be55e5e04..e97e527cec69 100644
  	/*
  	 * Thread groups must share signals as well, and detached threads
  	 * can only be started up within the thread group.
-@@ -3311,6 +3319,12 @@ int ksys_unshare(unsigned long unshare_flags)
+@@ -3291,6 +3299,12 @@ int ksys_unshare(unsigned long unshare_flags)
  	if (unshare_flags & CLONE_NEWNS)
  		unshare_flags |= CLONE_FS;
  
@@ -27897,186 +27816,6 @@ index ce8be55e5e04..e97e527cec69 100644
  	err = check_unshare_flags(unshare_flags);
  	if (err)
  		goto bad_unshare_out;
-diff --git a/kernel/futex/core.c b/kernel/futex/core.c
-index 136768ae2637..9107704a6574 100644
---- a/kernel/futex/core.c
-+++ b/kernel/futex/core.c
-@@ -451,28 +451,6 @@ struct futex_q *futex_top_waiter(struct futex_hash_bucket *hb, union futex_key *
- 	return NULL;
- }
- 
--int futex_cmpxchg_value_locked(u32 *curval, u32 __user *uaddr, u32 uval, u32 newval)
--{
--	int ret;
--
--	pagefault_disable();
--	ret = futex_atomic_cmpxchg_inatomic(curval, uaddr, uval, newval);
--	pagefault_enable();
--
--	return ret;
--}
--
--int futex_get_value_locked(u32 *dest, u32 __user *from)
--{
--	int ret;
--
--	pagefault_disable();
--	ret = __get_user(*dest, from);
--	pagefault_enable();
--
--	return ret ? -EFAULT : 0;
--}
--
- /**
-  * wait_for_owner_exiting - Block until the owner has exited
-  * @ret: owner's current futex lock status
-diff --git a/kernel/futex/futex.h b/kernel/futex/futex.h
-index 8b195d06f4e8..618ce1fe870e 100644
---- a/kernel/futex/futex.h
-+++ b/kernel/futex/futex.h
-@@ -6,6 +6,7 @@
- #include <linux/rtmutex.h>
- #include <linux/sched/wake_q.h>
- #include <linux/compat.h>
-+#include <linux/uaccess.h>
- 
- #ifdef CONFIG_PREEMPT_RT
- #include <linux/rcuwait.h>
-@@ -225,10 +226,64 @@ extern bool __futex_wake_mark(struct futex_q *q);
- extern void futex_wake_mark(struct wake_q_head *wake_q, struct futex_q *q);
- 
- extern int fault_in_user_writeable(u32 __user *uaddr);
--extern int futex_cmpxchg_value_locked(u32 *curval, u32 __user *uaddr, u32 uval, u32 newval);
--extern int futex_get_value_locked(u32 *dest, u32 __user *from);
- extern struct futex_q *futex_top_waiter(struct futex_hash_bucket *hb, union futex_key *key);
- 
-+static inline int futex_cmpxchg_value_locked(u32 *curval, u32 __user *uaddr, u32 uval, u32 newval)
-+{
-+	int ret;
-+
-+	pagefault_disable();
-+	ret = futex_atomic_cmpxchg_inatomic(curval, uaddr, uval, newval);
-+	pagefault_enable();
-+
-+	return ret;
-+}
-+
-+/*
-+ * This does a plain atomic user space read, and the user pointer has
-+ * already been verified earlier by get_futex_key() to be both aligned
-+ * and actually in user space, just like futex_atomic_cmpxchg_inatomic().
-+ *
-+ * We still want to avoid any speculation, and while __get_user() is
-+ * the traditional model for this, it's actually slower than doing
-+ * this manually these days.
-+ *
-+ * We could just have a per-architecture special function for it,
-+ * the same way we do futex_atomic_cmpxchg_inatomic(), but rather
-+ * than force everybody to do that, write it out long-hand using
-+ * the low-level user-access infrastructure.
-+ *
-+ * This looks a bit overkill, but generally just results in a couple
-+ * of instructions.
-+ */
-+static __always_inline int futex_read_inatomic(u32 *dest, u32 __user *from)
-+{
-+	u32 val;
-+
-+	if (can_do_masked_user_access())
-+		from = masked_user_access_begin(from);
-+	else if (!user_read_access_begin(from, sizeof(*from)))
-+		return -EFAULT;
-+	unsafe_get_user(val, from, Efault);
-+	user_access_end();
-+	*dest = val;
-+	return 0;
-+Efault:
-+	user_access_end();
-+	return -EFAULT;
-+}
-+
-+static inline int futex_get_value_locked(u32 *dest, u32 __user *from)
-+{
-+	int ret;
-+
-+	pagefault_disable();
-+	ret = futex_read_inatomic(dest, from);
-+	pagefault_enable();
-+
-+	return ret;
-+}
-+
- extern void __futex_unqueue(struct futex_q *q);
- extern void __futex_queue(struct futex_q *q, struct futex_hash_bucket *hb);
- extern int futex_unqueue(struct futex_q *q);
-diff --git a/kernel/kprobes.c b/kernel/kprobes.c
-index da59c68df841..55d0835ea0cf 100644
---- a/kernel/kprobes.c
-+++ b/kernel/kprobes.c
-@@ -1570,16 +1570,25 @@ static int check_kprobe_address_safe(struct kprobe *p,
- 	if (ret)
- 		return ret;
- 	jump_label_lock();
--	preempt_disable();
- 
- 	/* Ensure the address is in a text area, and find a module if exists. */
- 	*probed_mod = NULL;
- 	if (!core_kernel_text((unsigned long) p->addr)) {
-+		guard(preempt)();
- 		*probed_mod = __module_text_address((unsigned long) p->addr);
- 		if (!(*probed_mod)) {
- 			ret = -EINVAL;
- 			goto out;
- 		}
-+
-+		/*
-+		 * We must hold a refcount of the probed module while updating
-+		 * its code to prohibit unexpected unloading.
-+		 */
-+		if (unlikely(!try_module_get(*probed_mod))) {
-+			ret = -ENOENT;
-+			goto out;
-+		}
- 	}
- 	/* Ensure it is not in reserved area. */
- 	if (in_gate_area_no_mm((unsigned long) p->addr) ||
-@@ -1588,21 +1597,13 @@ static int check_kprobe_address_safe(struct kprobe *p,
- 	    static_call_text_reserved(p->addr, p->addr) ||
- 	    find_bug((unsigned long)p->addr) ||
- 	    is_cfi_preamble_symbol((unsigned long)p->addr)) {
-+		module_put(*probed_mod);
- 		ret = -EINVAL;
- 		goto out;
- 	}
- 
- 	/* Get module refcount and reject __init functions for loaded modules. */
- 	if (IS_ENABLED(CONFIG_MODULES) && *probed_mod) {
--		/*
--		 * We must hold a refcount of the probed module while updating
--		 * its code to prohibit unexpected unloading.
--		 */
--		if (unlikely(!try_module_get(*probed_mod))) {
--			ret = -ENOENT;
--			goto out;
--		}
--
- 		/*
- 		 * If the module freed '.init.text', we couldn't insert
- 		 * kprobes in there.
-@@ -1610,13 +1611,11 @@ static int check_kprobe_address_safe(struct kprobe *p,
- 		if (within_module_init((unsigned long)p->addr, *probed_mod) &&
- 		    !module_is_coming(*probed_mod)) {
- 			module_put(*probed_mod);
--			*probed_mod = NULL;
- 			ret = -ENOENT;
- 		}
- 	}
- 
- out:
--	preempt_enable();
- 	jump_label_unlock();
- 
- 	return ret;
 diff --git a/kernel/locking/rwsem.c b/kernel/locking/rwsem.c
 index 2bbb6eca5144..125cdf85741c 100644
 --- a/kernel/locking/rwsem.c
@@ -28451,6 +28190,19 @@ index 9949ffad8df0..8b07576814a5 100644
  	if (flush_color >= 0 && atomic_dec_and_test(&wq->nr_pwqs_to_flush))
  		complete(&wq->first_flusher->done);
  
+diff --git a/lib/overflow_kunit.c b/lib/overflow_kunit.c
+index 2abc78367dd1..5222c6393f11 100644
+--- a/lib/overflow_kunit.c
++++ b/lib/overflow_kunit.c
+@@ -1187,7 +1187,7 @@ static void DEFINE_FLEX_test(struct kunit *test)
+ {
+ 	/* Using _RAW_ on a __counted_by struct will initialize "counter" to zero */
+ 	DEFINE_RAW_FLEX(struct foo, two_but_zero, array, 2);
+-#if __has_attribute(__counted_by__)
++#ifdef CONFIG_CC_HAS_COUNTED_BY
+ 	int expected_raw_size = sizeof(struct foo);
+ #else
+ 	int expected_raw_size = sizeof(struct foo) + 2 * sizeof(s16);
 diff --git a/lib/test_printf.c b/lib/test_printf.c
 index 8448b6d02bd9..f63591b3ee69 100644
 --- a/lib/test_printf.c
@@ -45808,7 +45560,7 @@ index 554804774628..2279e6e7bc9c 100644
  	.undo_cwnd = bpf_tcp_ca_undo_cwnd,
  	.sndbuf_expand = bpf_tcp_ca_sndbuf_expand,
 diff --git a/net/ipv4/inet_connection_sock.c b/net/ipv4/inet_connection_sock.c
-index fe7947f77406..99e138cfdd95 100644
+index 2b698f8419fe..fd039c41d1c8 100644
 --- a/net/ipv4/inet_connection_sock.c
 +++ b/net/ipv4/inet_connection_sock.c
 @@ -634,7 +634,7 @@ static int inet_csk_wait_for_connect(struct sock *sk, long timeo)
@@ -48943,10 +48695,10 @@ index 000000000000..344190717e47
 +
 +export CFLAGS_PROPELLER_CLANG
 diff --git a/scripts/checkpatch.pl b/scripts/checkpatch.pl
-index b03d526e4c45..66d09cbec5a8 100755
+index 4427572b2477..b60c99d61882 100755
 --- a/scripts/checkpatch.pl
 +++ b/scripts/checkpatch.pl
-@@ -6912,7 +6912,7 @@ sub process {
+@@ -6917,7 +6917,7 @@ sub process {
  					    ($extension eq "f" &&
  					     defined $qualifier && $qualifier !~ /^w/) ||
  					    ($extension eq "4" &&
@@ -48982,19 +48734,6 @@ index 845e24eb372e..227d9cc12365 100644
 +463	common	process_ksm_enable			sys_process_ksm_enable
 +464	common	process_ksm_disable			sys_process_ksm_disable
 +465	common	process_ksm_status			sys_process_ksm_status
-diff --git a/sound/pci/hda/patch_realtek.c b/sound/pci/hda/patch_realtek.c
-index ed32cedc4449..970ac6eab6b6 100644
---- a/sound/pci/hda/patch_realtek.c
-+++ b/sound/pci/hda/patch_realtek.c
-@@ -10701,6 +10701,8 @@ static const struct snd_pci_quirk alc269_fixup_tbl[] = {
- 	SND_PCI_QUIRK(0x1043, 0x1e1f, "ASUS Vivobook 15 X1504VAP", ALC2XX_FIXUP_HEADSET_MIC),
- 	SND_PCI_QUIRK(0x1043, 0x1e51, "ASUS Zephyrus M15", ALC294_FIXUP_ASUS_GU502_PINS),
- 	SND_PCI_QUIRK(0x1043, 0x1e5e, "ASUS ROG Strix G513", ALC294_FIXUP_ASUS_G513_PINS),
-+	SND_PCI_QUIRK(0x1043, 0x1e63, "ASUS H7606W", ALC285_FIXUP_ASUS_GA403U_HEADSET_MIC),
-+	SND_PCI_QUIRK(0x1043, 0x1e83, "ASUS GA605W", ALC285_FIXUP_ASUS_GA403U_HEADSET_MIC),
- 	SND_PCI_QUIRK(0x1043, 0x1e8e, "ASUS Zephyrus G15", ALC289_FIXUP_ASUS_GA401),
- 	SND_PCI_QUIRK(0x1043, 0x1eb3, "ASUS Ally RCLA72", ALC287_FIXUP_TAS2781_I2C),
- 	SND_PCI_QUIRK(0x1043, 0x1ed3, "ASUS HN7306W", ALC287_FIXUP_CS35L41_I2C_2),
 diff --git a/tools/arch/x86/include/asm/cpufeatures.h b/tools/arch/x86/include/asm/cpufeatures.h
 index dd4682857c12..23698d0f4bb4 100644
 --- a/tools/arch/x86/include/asm/cpufeatures.h
