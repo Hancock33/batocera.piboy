@@ -54,13 +54,13 @@ class FpinballGenerator(Generator):
 
         # create dir & copy fpinball files to wine bottle as necessary
         if not emupath.exists():
-            shutil.copytree('/usr/fpinball', emupath)
+            shutil.copytree('/usr/bin/fpinball', emupath)
 
         # copy updated folder if we have a new BAM FPLoader.exe file
-        src_file = Path("/usr/fpinball/BAM/FPLoader.exe")
+        src_file = Path("/usr/bin/fpinball/BAM/FPLoader.exe")
         dest_file = emupath / "BAM" / "FPLoader.exe"
         if src_file.stat().st_mtime > dest_file.stat().st_mtime:
-            shutil.copytree('/usr/fpinball', emupath, dirs_exist_ok=True)
+            shutil.copytree('/usr/bin/fpinball', emupath, dirs_exist_ok=True)
 
         # convert rom path
         rompath = PureWindowsPath(rom)
