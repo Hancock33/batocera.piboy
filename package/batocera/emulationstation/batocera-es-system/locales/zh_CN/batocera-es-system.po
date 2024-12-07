@@ -11426,7 +11426,7 @@ msgctxt "game_options"
 msgid "OFF (Default)"
 msgstr "关闭（默认）"
 
-#. TRANSLATION: flycast, libretro/mame, mame
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "屏幕外的装弹按钮（RELOAD）"
@@ -14151,7 +14151,7 @@ msgctxt "game_options"
 msgid "Set game audio level gain in dB."
 msgstr "以dB为单位设置游戏音频增益等级。"
 
-#. TRANSLATION: flycast, libretro/mame, mame
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "将枪按钮2设置为装弹（RELOAD）。"

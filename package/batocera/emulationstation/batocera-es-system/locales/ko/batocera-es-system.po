@@ -11565,7 +11565,7 @@ msgctxt "game_options"
 msgid "OFF (Default)"
 msgstr "끄기 (기본)"
 
-#. TRANSLATION: flycast, libretro/mame, mame
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "화면 밖 재장전 버튼"
@@ -14321,7 +14321,7 @@ msgctxt "game_options"
 msgid "Set game audio level gain in dB."
 msgstr "게임 오디오 레벨 게인을 dB 단위로 설정합니다."
 
-#. TRANSLATION: flycast, libretro/mame, mame
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "버튼 2를 재장전으로 설정합니다."
