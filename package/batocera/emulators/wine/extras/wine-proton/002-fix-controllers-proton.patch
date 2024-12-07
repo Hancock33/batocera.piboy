@@ -1,5 +1,5 @@
 diff --git a/loader/wine.inf.in b/loader/wine.inf.in
-index cea98a5af54..c24b9c27b84 100644
+index ca18dc7a71a..6b22dbd0cb5 100644
 --- a/loader/wine.inf.in
 +++ b/loader/wine.inf.in
 @@ -102,6 +102,7 @@ AddReg=\
@@ -10,15 +10,15 @@ index cea98a5af54..c24b9c27b84 100644
      SteamClient
  
  [DefaultInstall.ntamd64]
-@@ -133,6 +134,7 @@ AddReg=\
-     WineDecorateWindows,\
+@@ -134,6 +135,7 @@ AddReg=\
      NVIDIANGX, \
+     TTS, \
      ProtonOverrides,\
 +    BatoceraOverrides,\
      SteamClient.ntamd64
  
  [DefaultInstall.ntarm64]
-@@ -180,6 +182,7 @@ AddReg=\
+@@ -181,6 +183,7 @@ AddReg=\
      WineDecorateWindows,\
      NVIDIANGX, \
      ProtonOverrides,\
@@ -26,7 +26,7 @@ index cea98a5af54..c24b9c27b84 100644
      SteamClient.ntamd64
  
  [Wow64Install.ntarm]
-@@ -3168,5 +3171,9 @@ HKCU,Software\Wine\AppDefaults\ffxvi.exe\DllOverrides,"atiadlxx",,"builtin"
+@@ -3209,5 +3212,9 @@ HKCU,Software\Wine\AppDefaults\ffxvi.exe\DllOverrides,"atiadlxx",,"builtin"
  HKLM,Software\Wow6432Node\lucasarts entertainment company llc\Star Wars: Episode I Racer\v1.0,"Display Height",0x10001,480
  HKLM,Software\Wow6432Node\lucasarts entertainment company llc\Star Wars: Episode I Racer\v1.0,"Display Width",0x10001,640
  

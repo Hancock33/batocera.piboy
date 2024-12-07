@@ -3,8 +3,8 @@
 # wine-cachyos
 #
 ################################################################################
-# Version: Commits on Nov 23, 2024
-WINE_CACHYOS_VERSION = cachyos-9.0-20241123-wine
+# Version: Commits on Dec 06, 2024
+WINE_CACHYOS_VERSION = cachyos-9.0-20241206-wine
 WINE_CACHYOS_SOURCE = wine-$(WINE_CACHYOS_VERSION).tar.gz
 WINE_CACHYOS_SITE = $(call github,CachyOS,wine-cachyos,$(WINE_CACHYOS_VERSION))
 WINE_CACHYOS_LICENSE = LGPL-2.1+
