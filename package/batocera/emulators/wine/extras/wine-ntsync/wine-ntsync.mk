@@ -3,9 +3,8 @@
 # wine-ntsync
 #
 ################################################################################
-# Version: Commits on Nov 24, 2024
-WINE_NTSYNC_VERSION = ntsync-9.22.r0.g7ba8823e
-WINE_NTSYNC_BRANCH = ntsynch
+# Version: Commits on Dec 06, 2024
+WINE_NTSYNC_VERSION = ntsync-10.0-rc1
 WINE_NTSYNC_SOURCE = wine-ntsync-$(WINE_NTSYNC_VERSION).tar.gz
 WINE_NTSYNC_SITE = $(call github,Hancock33,wine-tkg-batocera,$(WINE_NTSYNC_VERSION))
 WINE_NTSYNC_LICENSE = LGPL-2.1+

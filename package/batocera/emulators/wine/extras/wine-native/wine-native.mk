@@ -3,8 +3,8 @@
 # wine-native
 #
 ################################################################################
-# Version: Commits on Nov 22, 2024
-WINE_NATIVE_VERSION = wine-9.22
+# Version: Commits on Dec 06, 2024
+WINE_NATIVE_VERSION = wine-10.0-rc1
 WINE_NATIVE_SOURCE = wine-$(WINE_NATIVE_VERSION).tar.gz
 WINE_NATIVE_SITE = $(call github,wine-mirror,wine,$(WINE_NATIVE_VERSION))
 WINE_NATIVE_LICENSE = LGPL-2.1+

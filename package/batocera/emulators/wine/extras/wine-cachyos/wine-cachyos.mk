@@ -4,13 +4,13 @@
 #
 ################################################################################
 # Version: Commits on Nov 23, 2024
-WINE_CACHYOS_VERSION = cachyos-9.0-20241123-proton
-WINE_CACHYOS_SOURCE = wine-proton-$(WINE_CACHYOS_VERSION).tar.gz
+WINE_CACHYOS_VERSION = cachyos-9.0-20241123-wine
+WINE_CACHYOS_SOURCE = wine-$(WINE_CACHYOS_VERSION).tar.gz
 WINE_CACHYOS_SITE = $(call github,CachyOS,wine-cachyos,$(WINE_CACHYOS_VERSION))
 WINE_CACHYOS_LICENSE = LGPL-2.1+
 WINE_CACHYOS_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_CACHYOS_SELINUX_MODULES = wine
-WINE_CACHYOS_DEPENDENCIES = host-bison host-flex host-wine-proton
+WINE_CACHYOS_DEPENDENCIES = host-bison host-flex host-wine-cachyos
 HOST_WINE_CACHYOS_DEPENDENCIES = host-bison host-flex
 
 define WINE_CACHYOS_AUTOGEN
@@ -29,7 +29,7 @@ HOST_WINE_CACHYOS_PRE_CONFIGURE_HOOKS += WINE_CACHYOS_AUTOGEN
 # Wine needs its own directory structure and tools for cross compiling
 WINE_CACHYOS_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
 	CFLAGS="$(TARGET_CFLAGS) -Wno-incompatible-pointer-types" \
-	--with-wine-tools=$(BUILD_DIR)/host-wine-proton-$(WINE_CACHYOS_VERSION) \
+	--with-wine-tools=$(BUILD_DIR)/host-wine-cachyos-$(WINE_CACHYOS_VERSION) \
 	--disable-tests \
 	--without-capi \
 	--without-coreaudio \
