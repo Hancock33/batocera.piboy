@@ -1,19 +1,25 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[cemu](https://github.com/cemu-project/Cemu)|934cb5460577dd4f672ae3d9c918826e50073934|Dec 07, 2024
+Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|13ecf044c6eaab012a51da3b771a90c94a753552|Dec 07, 2024
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.47|Dec 07, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-12-07|Dec 07, 2024
+Emulators|[scummvm](http://github.com/scummvm/scummvm)|37855fcd10198b09e332b3d521b0efe5edbe60ac|Dec 07, 2024
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|9524f9474993885b53e963219e02e7184d33d5bb|Dec 07, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|eb299f500b296266a1da2f30495de3fb0805f41a|Dec 07, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|53bf676868f8e7038531e828df4cbe1668c20527|Dec 07, 2024
+Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|ed569629dbf0ef0033386a54826aff6da2af2a9f|Dec 07, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|7b29062e96feb7fd2deeaf51dbabdadbc5b8be5d|Dec 07, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241207|Dec 07, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241207|Dec 07, 2024
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|92bb759deeb4377b02795ba06a35a82281bd9cee|Dec 07, 2024
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|37855fcd10198b09e332b3d521b0efe5edbe60ac|Dec 07, 2024
 Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|43a1319f79d8e73aab0d057127adf7bb190bc90a|Dec 07, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|e93e5d9653d0da5fcd6393590663d7b01ed8f925|Dec 06, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|114eae2f78138b6ba078a4bdada353a85d1da6bd|Dec 06, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|5725a0360bd4235f003db56c488ab2bf1540af78|Dec 06, 2024
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.46|Dec 06, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|3ca3a797c99cc807bee83b1564278ed1d806c64a|Dec 06, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|24655fd9758ee7f568c121b39866e6ab23eb7d4c|Dec 06, 2024
-Emulators|[scummvm](http://github.com/scummvm/scummvm)|1133a2c7ec91ad35563c8ec22e50049ca263b9c5|Dec 06, 2024
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|8eacb88a865fd38d87ce1f2510ecd5e6b108ae27|Dec 06, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|0e309e5c7c5ade4124bba2466ebc77b5b1ebbdb4|Dec 06, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|c968897f0237fa15047e83e7b968b12631d91684|Dec 06, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45391|Dec 06, 2024
@@ -22,7 +28,6 @@ Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.4|
 Hardware|[pironman5](http://github.com/sunfounder/pironman5)|9608f1e1dad48b5b661ca6c09a1130c975c56ddd|Dec 06, 2024
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|5bc569a27fd8af0378c96be851c07c3e0ce4e6be|Dec 06, 2024
 Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|b31355471451e40673201c6d13233e2c4a816c40|Dec 06, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|b735a8663e067bb0f5c996f8ddd7fa556087c294|Dec 06, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|422a152caa46d6a1ec9630c7354fe5010c3591e0|Dec 06, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|66dd56b2151e673cb13314631c4df8e75b82e937|Dec 06, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|c2e6b766db3d4bf7f9ede0496bd8ba30656499b3|Dec 06, 2024
@@ -34,7 +39,6 @@ Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|c8a61b1d48d133302756bfc
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|dd9bad4ec6d5b5af4bad46d05be10d9e0dc7d876|Dec 06, 2024
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|1d2429c3ea9fffcd625c0de215f83562aa886fc2|Dec 06, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|3ca3a797c99cc807bee83b1564278ed1d806c64a|Dec 06, 2024
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|1133a2c7ec91ad35563c8ec22e50049ca263b9c5|Dec 06, 2024
 Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0-rc1|Dec 06, 2024
 Emulators|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-10.0-rc1|Dec 06, 2024
 Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.0-rc1|Dec 06, 2024
@@ -49,7 +53,6 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|5767f77800bb497cf07a34cfd5
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|dc8fc10631e92c776ccb57af9fdab43e091599d1|Dec 05, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|6a45364861a791a688c21285c21a84f0c381885b|Dec 05, 2024
 Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-console)|a3a53cc73a2377104e3ee4ef3963a12e55521502|Dec 05, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|e3c1ebfbde7b83f88a23a522224880c09e95f660|Dec 05, 2024
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|1a3d8d4db120c6ffef4d29c62424ab585c683ef0|Dec 05, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|fb660fa3c196754393b437ac26bd451a1699b07c|Dec 05, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|45787a87b34009ad1b5a77f4d08efe26751f6cca|Dec 05, 2024
@@ -72,8 +75,6 @@ Sources|[libretro-mame-src](http://github.com/sonninnos/mame)|750b36ca4cc65e7142
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.28.1|Dec 03, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|0f606bcfb81db51e9eb52d0c8c184ad46478aa59|Dec 03, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|ce4e6f076f3ebbfd4c71021773c90c13ecdc79df|Dec 03, 2024
-Emulators|[cemu](https://github.com/cemu-project/Cemu)|eca7374567bff66a22b0d210f15744bcaafb8ad3|Dec 02, 2024
-Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|1483ea23e420780cf4906635a9582807219f63af|Dec 02, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|585a8c92cf585eece6627294f817b537ade74a49|Dec 02, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|7c6a57befe9137843558710c1787df363ded432a|Dec 02, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|bee3fcfd73ac9f33d7139c1b0c6ff351e5ee259f|Dec 02, 2024
@@ -100,7 +101,6 @@ Ports|[vkquake](http://github.com/Novum/vkQuake)|3bd17575b0ac2cbd30743d586b30939
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|ad402c9100e5990bb4ac9158884e15a1e477ac98|Nov 29, 2024
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|9d92381643a6aad186054fa6019a47b710f73d2c|Nov 29, 2024
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.15.12|Nov 28, 2024
-Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|4cdccfde4d3e612fda0a1d619f4b3772a1b3f075|Nov 28, 2024
 Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|f166025e23326695ea2a8deda18f5c98a057a628|Nov 28, 2024
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|9621ef6a92ac3d6fd447b67b543e82587f5e0d16|Nov 27, 2024
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.4|Nov 27, 2024
