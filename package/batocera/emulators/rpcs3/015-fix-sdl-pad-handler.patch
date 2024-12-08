@@ -1,0 +1,13 @@
+diff --git a/rpcs3/Input/sdl_pad_handler.h b/rpcs3/Input/sdl_pad_handler.h
+index f4fa256d2..8610501b5 100644
+--- a/rpcs3/Input/sdl_pad_handler.h
++++ b/rpcs3/Input/sdl_pad_handler.h
+@@ -3,7 +3,7 @@
+ #ifdef HAVE_SDL2
+ 
+ #include "Emu/Io/PadHandler.h"
+-#include "SDL.h"
++#include "SDL2/SDL.h"
+ 
+ class SDLDevice : public PadDevice
+ {
