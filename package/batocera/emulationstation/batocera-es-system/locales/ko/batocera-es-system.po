@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-11-19 19:08+0900\n"
+"PO-Revision-Date: 2024-12-01 22:25+0900\n"
 "Last-Translator: DDinghoya <ddinghoya@gmail.com>\n"
 "Language-Team: \n"
 "Language: ko_KO\n"
@@ -4804,7 +4804,7 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Change Camera Angle"
-msgstr ""
+msgstr "카메라 각도 변경"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -5281,7 +5281,7 @@ msgstr "문라이트를 종료할 때 원격 호스트에서 앱을 닫습니다
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Coin"
-msgstr ""
+msgstr "동전"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -6741,7 +6741,7 @@ msgstr ""
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Enable X-Input mode for Xbox type controllers."
-msgstr ""
+msgstr "Xbox 유형 컨트롤러에 대해 X-Input 모드를 활성화합니다."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -8090,7 +8090,7 @@ msgstr "DX 드라이버가 동적 대신 관리되는 텍스처를 사용하도�
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Forward Nudge"
-msgstr ""
+msgstr "앞으로 살살 밀기"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10091,17 +10091,17 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Flipper"
-msgstr ""
+msgstr "왼쪽 플리퍼"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Manga Save"
-msgstr ""
+msgstr "왼쪽 망가 저장"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Nudge"
-msgstr ""
+msgstr "왼쪽으로 살살 밀기"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -10775,7 +10775,7 @@ msgstr "일부 2D 게임에서는 이미지가 더 선명해질 수 있습니다
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Mech Tilt"
-msgstr ""
+msgstr "기계적 기울기"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -11565,7 +11565,7 @@ msgctxt "game_options"
 msgid "OFF (Default)"
 msgstr "끄기 (기본)"
 
-#. TRANSLATION: flycast, libretro/mame, mame
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "화면 밖 재장전 버튼"
@@ -11819,6 +11819,8 @@ msgid ""
 "Only some games support rumble. Requires X-Input mode and may not be "
 "compatible with all controllers."
 msgstr ""
+"일부 게임만 진동을 지원합니다. X-Input 모드가 필요하며 모든 컨트롤러와 호환되"
+"지 않을 수 있습니다."
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -12517,7 +12519,7 @@ msgstr "경기장 구성"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Plunger"
-msgstr ""
+msgstr "플런저"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -13315,17 +13317,17 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Flipper"
-msgstr ""
+msgstr "오른쪽 플리퍼"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Manga Save"
-msgstr ""
+msgstr "오른쪽 망가 저장"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Nudge"
-msgstr ""
+msgstr "오른쪽으로 살살 밀기"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -14319,7 +14321,7 @@ msgctxt "game_options"
 msgid "Set game audio level gain in dB."
 msgstr "게임 오디오 레벨 게인을 dB 단위로 설정합니다."
 
-#. TRANSLATION: flycast, libretro/mame, mame
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "버튼 2를 재장전으로 설정합니다."
@@ -15115,7 +15117,7 @@ msgstr "표준 OpenGL (기본)"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Start"
-msgstr ""
+msgstr "시자"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -16519,6 +16521,8 @@ msgctxt "game_options"
 msgid ""
 "Use L2/R2 for Brake/Accel and L1/R1 or R-stick Up/Down for Shift Up/Down."
 msgstr ""
+"브레이크/가속 기어에는 L2/R2를 사용하고, 기어를 올리거나 내리려면 L1/R1 또는 "
+"R 스틱을 위/아래로 사용하세요."
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -17218,7 +17222,7 @@ msgstr "위모트 사이드웨이 + 스윙"
 #. TRANSLATION: dolphin, dolphin
 msgctxt "game_options"
 msgid "Wiimote Sideway + Tilt"
-msgstr "위모트 사이드웨이 + 틸트"
+msgstr "위모트 사이드웨이 + 기울기"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -17243,7 +17247,7 @@ msgstr ""
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "X-INPUT"
-msgstr ""
+msgstr "X-INPUT"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"

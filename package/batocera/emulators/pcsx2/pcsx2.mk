@@ -3,8 +3,8 @@
 # pcsx2
 #
 ################################################################################
-# Version: Commits on Nov 28, 2024
-PCSX2_VERSION = v2.3.39
+# Version: Commits on Dec 08, 2024
+PCSX2_VERSION = v2.3.49
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES
@@ -22,8 +22,6 @@ PCSX2_CONF_OPTS += -DUSE_SYSTEM_LIBS=AUTO
 PCSX2_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
 PCSX2_CONF_OPTS += -DLTO_PCSX2_CORE=OFF
 PCSX2_CONF_OPTS += -DUSE_ACHIEVEMENTS=ON
-PCSX2_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/clang
-PCSX2_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/clang++
 PCSX2_CONF_OPTS += -DCMAKE_PREFIX_PATH=$(STAGING_DIR)/stenzek-shaderc
 # The following flag is misleading and *needed* ON to avoid doing -march=native
 PCSX2_CONF_OPTS += -DDISABLE_ADVANCE_SIMD=ON

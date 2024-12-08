@@ -1,36 +1,38 @@
 diff --git a/loader/wine.inf.in b/loader/wine.inf.in
-index fd5d5137d3e..b5c59a26808 100644
+index ca18dc7a71a..6b22dbd0cb5 100644
 --- a/loader/wine.inf.in
 +++ b/loader/wine.inf.in
-@@ -99,6 +99,7 @@ AddReg=\
-     LicenseInformation,\
+@@ -102,6 +102,7 @@ AddReg=\
+     WineDecorateWindows,\
      NVIDIANGX, \
      ProtonOverrides,\
 +    BatoceraOverrides,\
      SteamClient
  
  [DefaultInstall.ntamd64]
-@@ -128,6 +129,7 @@ AddReg=\
-     LicenseInformation,\
+@@ -134,6 +135,7 @@ AddReg=\
      NVIDIANGX, \
+     TTS, \
      ProtonOverrides,\
 +    BatoceraOverrides,\
      SteamClient.ntamd64
  
  [DefaultInstall.ntarm64]
-@@ -173,6 +175,7 @@ AddReg=\
-     LicenseInformation,\
+@@ -181,6 +183,7 @@ AddReg=\
+     WineDecorateWindows,\
      NVIDIANGX, \
      ProtonOverrides,\
 +    BatoceraOverrides,\
      SteamClient.ntamd64
  
  [Wow64Install.ntarm]
-@@ -2910,3 +2913,7 @@ HKCU,Software\Wine\AppDefaults\RiftApart.exe\DllOverrides,"atiadlxx",,"builtin"
- HKCU,Software\Wine\AppDefaults\ffxvi.exe\DllOverrides,"atiadlxx",,"builtin"
+@@ -3209,5 +3212,9 @@ HKCU,Software\Wine\AppDefaults\ffxvi.exe\DllOverrides,"atiadlxx",,"builtin"
  HKLM,Software\Wow6432Node\lucasarts entertainment company llc\Star Wars: Episode I Racer\v1.0,"Display Height",0x10001,480
  HKLM,Software\Wow6432Node\lucasarts entertainment company llc\Star Wars: Episode I Racer\v1.0,"Display Width",0x10001,640
-+
+ 
 +[BatoceraOverrides]
 +HKLM,System\CurrentControlSet\Services\winebus,"DisableHidraw",0x10001,"1"
 +HKLM,System\CurrentControlSet\Services\winebus,"Enable SDL",0x10001,"1"
++
+ [WineDecorateWindows]
+ HKCU,Software\Wine\AppDefaults\DarkSoulsIII.exe\X11 Driver,"Decorated",,"N"

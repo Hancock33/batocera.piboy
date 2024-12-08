@@ -1,8 +1,8 @@
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 8d97f17ffe66..31528a7ca492 100644
+index 24fbde7dd1c4..fd0ca13988d5 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -6094,6 +6094,8 @@ static void fill_stream_properties_from_drm_display_mode(
+@@ -6118,6 +6118,8 @@ static void fill_stream_properties_from_drm_display_mode(
  			timing_out->flags.HSYNC_POSITIVE_POLARITY = 1;
  		if (mode_in->flags & DRM_MODE_FLAG_PVSYNC)
  			timing_out->flags.VSYNC_POSITIVE_POLARITY = 1;
@@ -11,7 +11,7 @@ index 8d97f17ffe66..31528a7ca492 100644
  	}
  
  	if (stream->signal == SIGNAL_TYPE_HDMI_TYPE_A) {
-@@ -6695,6 +6697,8 @@ create_stream_for_sink(struct drm_connector *connector,
+@@ -6719,6 +6721,8 @@ create_stream_for_sink(struct drm_connector *connector,
  
  	if (recalculate_timing)
  		drm_mode_set_crtcinfo(&saved_mode, 0);
@@ -20,7 +20,7 @@ index 8d97f17ffe66..31528a7ca492 100644
  
  	/*
  	 * If scaling is enabled and refresh rate didn't change
-@@ -7372,8 +7376,7 @@ enum drm_mode_status amdgpu_dm_connector_mode_valid(struct drm_connector *connec
+@@ -7396,8 +7400,7 @@ enum drm_mode_status amdgpu_dm_connector_mode_valid(struct drm_connector *connec
  	struct dc_stream_state *stream;
  	struct amdgpu_dm_connector *aconnector = to_amdgpu_dm_connector(connector);
  
@@ -30,7 +30,7 @@ index 8d97f17ffe66..31528a7ca492 100644
  		return result;
  
  	/*
-@@ -8081,7 +8084,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
+@@ -8105,7 +8108,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
  	aconnector->connector_id = link_index;
  	aconnector->bl_idx = -1;
  	aconnector->dc_link = link;
@@ -149,7 +149,7 @@ index a6a1db5ba8ba..e2f95a5bcaa8 100644
  	return asic_blank_end -
  			pipe_ctx->pipe_dlg_param.vstartup_start + 1;
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
-index a80c08582932..cae79f3a8eb8 100644
+index 36d12db8d022..2de099c79439 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
 @@ -1738,6 +1738,9 @@ static void dcn20_update_dchubp_dpp(

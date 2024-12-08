@@ -1,7 +1,7 @@
 # 2024/12/xx - batocera.linux 41 - Golden-rayed Blue
 ### Special Notes
 The Xenia Canary introduces GamerTags (user profiles).
-- On first run or game launch you may be prompted to create a Profle.
+- On first run or game launch you may be prompted to create a profile.
 - This will sometimes migrate your saves for you.
 - If not you can manually copy your saves from your /userdata/saves/xbox360 folder to the new profile folder which is created there.
 Note: The older Xenia version does not have this feature, therefore if you may need to transfer game saves back as necessary.
@@ -62,6 +62,7 @@ We have migrated to a more modern WINE runner, using WINE-TKG.
 - Hotkey handling for Flycast
 - M.U.G.E.N controllers
 - Libretro-FBNeo crosshairs for light guns now showing
+- Fixed multicast DNS
 ### Changed / Improved
 - Splash screen now disabled by default
 - Added bezel & sinden border support for the RPi5 with Model 3 games
@@ -507,6 +508,7 @@ We have migrated to a more modern WINE runner, using WINE-TKG.
 - Restore missing /sbin/hwclock binary
 - Daphne symlink failing
 - Emulators failing if Vulkan API is selected and no Vulkan capable GPU is in the system. We now fallback to OpenGL where possible.
+- NVIDIA VDPAU and VAAPI hardware acceleration failed to function correctly on hybrid graphics laptops when the NVIDIA GPU is not the primary. Particularly impacting Kodi.
 ### Changed
 - RPCS3 SPU cache enabled by default.
 - Changes made to Mupen64plus joystick sensitivity and deadzone.

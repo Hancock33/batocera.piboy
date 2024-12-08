@@ -1,0 +1,14 @@
+diff --git a/external/ffmpeg/CMakeLists.txt b/external/ffmpeg/CMakeLists.txt
+index c6c6a5e..650779b 100644
+--- a/external/ffmpeg/CMakeLists.txt
++++ b/external/ffmpeg/CMakeLists.txt
+
+@@ -39,6 +39,8 @@ execute_process(
+        OUTPUT_VARIABLE FFMPEG_GIT_SHA
+        OUTPUT_STRIP_TRAILING_WHITESPACE)
+ 
++set(FFMPEG_GIT_SHA "e30b7d7")
++
+ # Download prebuilt ffmpeg
+ if(NOT EXISTS "${CMAKE_BINARY_DIR}/external/ffmpeg.zip")
+        message(STATUS "Downloading FFMPEG prebuilts...")

@@ -11684,7 +11684,7 @@ msgctxt "game_options"
 msgid "OFF (Default)"
 msgstr "AUS (Standard)"
 
-#. TRANSLATION: flycast, libretro/mame, mame
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "OFF-SCREEN NACHLADE-TASTE"
@@ -14469,7 +14469,7 @@ msgctxt "game_options"
 msgid "Set game audio level gain in dB."
 msgstr "Erhöhung der Audiolautstärke in dB einstellen."
 
-#. TRANSLATION: flycast, libretro/mame, mame
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Nachlade-Funktion auf Taste 2 der Lightgun legen."
