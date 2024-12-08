@@ -3,8 +3,8 @@
 # dhewm3
 #
 ################################################################################
-# Version: Commits on Nov 30, 2024
-DHEWM3_VERSION = a04b1a567091f024f2a5b1496374476598f5226d
+# Version: Commits on Dec 03, 2024
+DHEWM3_VERSION = ce4e6f076f3ebbfd4c71021773c90c13ecdc79df
 DHEWM3_SITE = $(call github,dhewm,dhewm3,$(DHEWM3_VERSION))
 DHEWM3_LICENSE = GPLv3
 DHEWM3_LICENSE_FILES = COPYING.txt

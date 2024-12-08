@@ -1,0 +1,14 @@
+diff --git a/3rdparty/ffmpeg/CMakeLists.txt b/3rdparty/ffmpeg/CMakeLists.txt
+index c6c6a5e..650779b 100644
+--- a/3rdparty/ffmpeg/CMakeLists.txt
++++ b/3rdparty/ffmpeg/CMakeLists.txt
+
+@@ -39,6 +39,8 @@ execute_process(
+        OUTPUT_VARIABLE FFMPEG_GIT_SHA
+        OUTPUT_STRIP_TRAILING_WHITESPACE)
+ 
++set(FFMPEG_GIT_SHA "ec6367d")
++
+ # Download prebuilt ffmpeg
+ if(NOT EXISTS "${CMAKE_BINARY_DIR}/3rdparty/ffmpeg.zip")
+        message(STATUS "Downloading FFMPEG prebuilts...")

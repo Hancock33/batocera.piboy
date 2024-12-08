@@ -1,5 +1,5 @@
 diff --git a/vita3k/app/src/app_init.cpp b/vita3k/app/src/app_init.cpp
-index f433b263..df2034e1 100644
+index f433b263..592dfcbc 100644
 --- a/vita3k/app/src/app_init.cpp
 +++ b/vita3k/app/src/app_init.cpp
 @@ -128,11 +128,7 @@ void init_paths(Root &root_paths) {
@@ -39,7 +39,7 @@ index f433b263..df2034e1 100644
  
          if (XDG_DATA_HOME != NULL) {
 -            root_paths.set_shared_path(fs::path(XDG_DATA_HOME) / app_name / "");
-+            root_paths.set_shared_path(fs::path("psvita") / app_name / "");
++            root_paths.set_shared_path(fs::path(XDG_DATA_HOME) / "psvita" / "");
          }
  
          // patch path should be in shared path

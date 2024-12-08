@@ -3,20 +3,15 @@
 # dosbox-staging
 #
 ################################################################################
-# Version: Commits on Jul 21, 2024
-DOSBOX_STAGING_VERSION = 349e41bc6a4be6bbf4f4cb8fa787add7944d3117
-DOSBOX_STAGING_BRANCH = release/0.81.x
+# Version: Commits on Oct 26, 2024
+DOSBOX_STAGING_VERSION = abc260bcad4417a18b663f41c2e9ca47105ed870
+DOSBOX_STAGING_BRANCH = release/0.82.x
 DOSBOX_STAGING_SITE = $(call github,dosbox-staging,dosbox-staging,$(DOSBOX_STAGING_VERSION))
 DOSBOX_STAGING_DEPENDENCIES = alsa-lib sdl2 sdl2_net sdl2_image fluidsynth speexdsp
 DOSBOX_STAGING_DEPENDENCIES += zlib libpng libogg libvorbis opus opusfile slirp iir
 DOSBOX_STAGING_LICENSE = GPLv2
 
-DOSBOX_STAGING_CPPFLAGS = -DNDEBUG
-DOSBOX_STAGING_CFLAGS   = -O3 -fstrict-aliasing -fno-signed-zeros -fno-trapping-math -fassociative-math -frename-registers -ffunction-sections -fdata-sections
-DOSBOX_STAGING_CXXFLAGS = -O3 -fstrict-aliasing -fno-signed-zeros -fno-trapping-math -fassociative-math -frename-registers -ffunction-sections -fdata-sections
-
 DOSBOX_STAGING_CONF_ENV += SSL_CERT_DIR=/etc/ssl/certs
-DOSBOX_STAGING_CONF_OPTS += -Duse_zlib_ng=sse2,ssse3,neon -Dcpp_std=c++17
 
 ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 DOSBOX_STAGING_CONF_OPTS += -Duse_opengl=false

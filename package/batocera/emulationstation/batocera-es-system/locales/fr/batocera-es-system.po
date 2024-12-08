@@ -4822,7 +4822,7 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Change Camera Angle"
-msgstr ""
+msgstr "Changer l'angle de la caméra"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -6778,7 +6778,7 @@ msgstr ""
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Enable X-Input mode for Xbox type controllers."
-msgstr ""
+msgstr "Activer le mode X-Input pour les manettes de type Xbox."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -8156,7 +8156,7 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Forward Nudge"
-msgstr ""
+msgstr "Poussée vers l'avant"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10176,17 +10176,17 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Flipper"
-msgstr ""
+msgstr "Flipper gauche"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Manga Save"
-msgstr ""
+msgstr "Enregistrer Manga gauche"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Nudge"
-msgstr ""
+msgstr "Poussée vers la gauche"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -10868,7 +10868,7 @@ msgstr "Peut donner une image plus nette dans certains jeux 2D."
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Mech Tilt"
-msgstr ""
+msgstr "Inclinaison du méca"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -11659,7 +11659,7 @@ msgctxt "game_options"
 msgid "OFF (Default)"
 msgstr "DÉSACTIVÉ (par défaut)"
 
-#. TRANSLATION: flycast, libretro/mame, mame
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "BOUTON POUR RECHARGER EN DEHORS DE L'ÉCRAN"
@@ -11917,6 +11917,8 @@ msgid ""
 "Only some games support rumble. Requires X-Input mode and may not be "
 "compatible with all controllers."
 msgstr ""
+"Seuls certains jeux prennent en charge les vibrations. Nécessite le mode X-"
+"Input et peut ne pas être compatible avec tous les contrôleurs."
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -12622,7 +12624,7 @@ msgstr "Configuration du terrain de jeu"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Plunger"
-msgstr ""
+msgstr "Flambeur"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -13430,17 +13432,17 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Flipper"
-msgstr ""
+msgstr "Flipper droit"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Manga Save"
-msgstr ""
+msgstr "Enregistrer Manga droit"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Nudge"
-msgstr ""
+msgstr "Poussée vers la droite"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -14438,7 +14440,7 @@ msgctxt "game_options"
 msgid "Set game audio level gain in dB."
 msgstr "Règle le gain audio du jeu en dB."
 
-#. TRANSLATION: flycast, libretro/mame, mame
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Bouton 2 du pistolet pour recharger."
@@ -16664,6 +16666,8 @@ msgctxt "game_options"
 msgid ""
 "Use L2/R2 for Brake/Accel and L1/R1 or R-stick Up/Down for Shift Up/Down."
 msgstr ""
+"Utilisez L2/R2 pour freiner/accélérer et L1/R1 ou la manette droite haut/bas "
+"pour monter/descendre les vitesses."
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -17400,7 +17404,7 @@ msgstr ""
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "X-INPUT"
-msgstr ""
+msgstr "X-INPUT"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"

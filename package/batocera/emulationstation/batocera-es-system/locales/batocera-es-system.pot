@@ -3527,6 +3527,16 @@ msgctxt "game_options"
 msgid "Light Gun"
 msgstr ""
 
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
+msgctxt "game_options"
+msgid "Set gun button 2 to reload."
+msgstr ""
+
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
+msgctxt "game_options"
+msgid "OFF-SCREEN RELOAD BUTTON"
+msgstr ""
+
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
 msgctxt "game_options"
 msgid "Useful for certain arcade games."
@@ -4722,16 +4732,6 @@ msgstr ""
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "CROP ARTWORK"
-msgstr ""
-
-#. TRANSLATION: flycast, libretro/mame, mame
-msgctxt "game_options"
-msgid "Set gun button 2 to reload."
-msgstr ""
-
-#. TRANSLATION: flycast, libretro/mame, mame
-msgctxt "game_options"
-msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...

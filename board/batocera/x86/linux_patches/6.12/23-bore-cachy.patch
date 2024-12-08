@@ -35,16 +35,17 @@ index bb343136ddd0..c86185f87e7b 100644
  
 diff --git a/include/linux/sched/bore.h b/include/linux/sched/bore.h
 new file mode 100644
-index 000000000000..12a613a94ff0
+index 000000000000..c3db800bd6e3
 --- /dev/null
 +++ b/include/linux/sched/bore.h
-@@ -0,0 +1,37 @@
+@@ -0,0 +1,40 @@
 +
 +#include <linux/sched.h>
 +#include <linux/sched/cputime.h>
 +
 +#ifndef _LINUX_SCHED_BORE_H
 +#define _LINUX_SCHED_BORE_H
++#define SCHED_BORE_VERSION "5.8.10"
 +
 +#ifdef CONFIG_SCHED_BORE
 +extern u8   __read_mostly sched_bore;
@@ -55,6 +56,7 @@ index 000000000000..12a613a94ff0
 +extern u8   __read_mostly sched_burst_parity_threshold;
 +extern u8   __read_mostly sched_burst_penalty_offset;
 +extern uint __read_mostly sched_burst_penalty_scale;
++extern uint __read_mostly sched_burst_cache_stop_count;
 +extern uint __read_mostly sched_burst_cache_lifetime;
 +extern uint __read_mostly sched_deadline_boost_mask;
 +
@@ -71,16 +73,17 @@ index 000000000000..12a613a94ff0
 +	struct task_struct *p, struct task_struct *parent, u64 clone_flags);
 +
 +extern void init_task_bore(struct task_struct *p);
++extern void sched_bore_init(void);
 +
 +extern void reweight_entity(
 +	struct cfs_rq *cfs_rq, struct sched_entity *se, unsigned long weight);
 +#endif // CONFIG_SCHED_BORE
 +#endif // _LINUX_SCHED_BORE_H
 diff --git a/init/Kconfig b/init/Kconfig
-index 504e8a7c4e2a..43daffa3ee03 100644
+index 857869dbc22c..9bd4551a7c3a 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
-@@ -1360,6 +1360,23 @@ config CHECKPOINT_RESTORE
+@@ -1361,6 +1361,23 @@ config CHECKPOINT_RESTORE
  
  	  If unsure, say N here.
  
@@ -132,7 +135,7 @@ index 0f78364efd4f..83a6b919ab29 100644
  config SCHED_HRTICK
  	def_bool HIGH_RES_TIMERS
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 8287afdd01d2..e4274ce3ac32 100644
+index e97e527cec69..d40105f4b177 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -117,6 +117,8 @@
@@ -144,7 +147,7 @@ index 8287afdd01d2..e4274ce3ac32 100644
  #include <trace/events/sched.h>
  
  #define CREATE_TRACE_POINTS
-@@ -2352,6 +2354,9 @@ __latent_entropy struct task_struct *copy_process(
+@@ -2372,6 +2374,9 @@ __latent_entropy struct task_struct *copy_process(
  	retval = sched_fork(clone_flags, p);
  	if (retval)
  		goto bad_fork_cleanup_policy;
@@ -165,15 +168,18 @@ index 976092b7bd45..293aad675444 100644
 +obj-y += bore.o
 diff --git a/kernel/sched/bore.c b/kernel/sched/bore.c
 new file mode 100644
-index 000000000000..cd7e8a8d6075
+index 000000000000..94517f26ca60
 --- /dev/null
 +++ b/kernel/sched/bore.c
-@@ -0,0 +1,381 @@
+@@ -0,0 +1,426 @@
 +/*
 + *  Burst-Oriented Response Enhancer (BORE) CPU Scheduler
 + *  Copyright (C) 2021-2024 Masahito Suzuki <firelzrd@gmail.com>
 + */
 +#include <linux/cpuset.h>
++#include <linux/rculist.h>
++#include <linux/rcupdate.h>
++#include <linux/sched/task.h>
 +#include <linux/sched/bore.h>
 +#include "sched.h"
 +
@@ -186,7 +192,8 @@ index 000000000000..cd7e8a8d6075
 +u8   __read_mostly sched_burst_parity_threshold = 2;
 +u8   __read_mostly sched_burst_penalty_offset   = 24;
 +uint __read_mostly sched_burst_penalty_scale    = 1280;
-+uint __read_mostly sched_burst_cache_lifetime   = 60000000;
++uint __read_mostly sched_burst_cache_stop_count = 64;
++uint __read_mostly sched_burst_cache_lifetime   = 75000000;
 +uint __read_mostly sched_deadline_boost_mask    = ENQUEUE_INITIAL
 +                                                | ENQUEUE_WAKEUP;
 +static int __maybe_unused sixty_four     = 64;
@@ -319,10 +326,30 @@ index 000000000000..cd7e8a8d6075
 +	return 0;
 +}
 +
-+static u32 count_child_tasks(struct task_struct *p) {
-+	struct task_struct *child;
++#define for_each_child(p, t) \
++	list_for_each_entry_rcu(t, &(p)->children, sibling, \
++		lockdep_is_held(&tasklist_lock))
++
++static u32 count_children_max2(struct task_struct *p) {
 +	u32 cnt = 0;
-+	list_for_each_entry(child, &p->children, sibling) {cnt++;}
++	struct task_struct *child;
++	for_each_child(p, child) {if (2 <= ++cnt) break;}
++	return cnt;
++}
++
++static u32 count_children_max2_head(
++	struct task_struct *p, struct task_struct **first) {
++	struct list_head *head = &p->children;
++	struct task_struct *cursor;
++	u32 cnt = 0;
++	*first = cursor = list_first_or_null_rcu(head, struct task_struct, sibling);
++	if (cursor) {
++		cnt++;
++		list_for_each_entry_continue_rcu(cursor, head, sibling) {
++			cnt++;
++			break;
++		}
++	}
 +	return cnt;
 +}
 +
@@ -341,7 +368,7 @@ index 000000000000..cd7e8a8d6075
 +	u32 cnt = 0, sum = 0;
 +	struct task_struct *child;
 +
-+	list_for_each_entry(child, &p->children, sibling) {
++	for_each_child(p, child) {
 +		if (!task_is_bore_eligible(child)) continue;
 +		cnt++;
 +		sum += child->se.burst_penalty;
@@ -361,12 +388,11 @@ index 000000000000..cd7e8a8d6075
 +static void update_child_burst_topological(
 +	struct task_struct *p, u64 now, u32 depth, u32 *acnt, u32 *asum) {
 +	u32 cnt = 0, dcnt = 0, sum = 0;
-+	struct task_struct *child, *dec;
++	struct task_struct *child, *dec, *next;
 +
-+	list_for_each_entry(child, &p->children, sibling) {
++	for_each_child(p, child) {
 +		dec = child;
-+		while ((dcnt = count_child_tasks(dec)) == 1)
-+			dec = list_first_entry(&dec->children, struct task_struct, sibling);
++		while ((dcnt = count_children_max2_head(dec, &next)) == 1) {dec = next;}
 +		
 +		if (!dcnt || !depth) {
 +			if (!task_is_bore_eligible(dec)) continue;
@@ -377,6 +403,7 @@ index 000000000000..cd7e8a8d6075
 +		if (!burst_cache_expired(&dec->se.child_burst, now)) {
 +			cnt += dec->se.child_burst.count;
 +			sum += (u32)dec->se.child_burst.score * dec->se.child_burst.count;
++			if (sched_burst_cache_stop_count <= cnt) break;
 +			continue;
 +		}
 +		update_child_burst_topological(dec, now, depth - 1, &cnt, &sum);
@@ -391,8 +418,10 @@ index 000000000000..cd7e8a8d6075
 +	struct task_struct *anc = p;
 +	u32 cnt = 0, sum = 0;
 +
-+	while (anc->real_parent != anc && count_child_tasks(anc) == 1)
-+		anc = anc->real_parent;
++	for (struct task_struct *next;
++		 anc != (next = rcu_dereference(anc->real_parent)) &&
++		 	count_children_max2(anc) <= 1;
++		 anc = next) {}
 +
 +	if (burst_cache_expired(&anc->se.child_burst, now))
 +		update_child_burst_topological(
@@ -424,16 +453,23 @@ index 000000000000..cd7e8a8d6075
 +
 +void sched_clone_bore(
 +	struct task_struct *p, struct task_struct *parent, u64 clone_flags) {
++	u64 now;
++	u8 penalty;
++
 +	if (!task_is_bore_eligible(p)) return;
 +
-+	u64 now = ktime_get_ns();
-+	read_lock(&tasklist_lock);
-+	u8 penalty = (clone_flags & CLONE_THREAD) ?
-+		inherit_burst_tg(parent, now) :
-+		likely(sched_burst_fork_atavistic) ?
++	rcu_read_lock();
++	now = jiffies_to_nsecs(jiffies);
++	if (clone_flags & CLONE_THREAD) {
++		penalty = inherit_burst_tg(parent, now);
++	} else {
++		if (clone_flags & CLONE_PARENT)
++			parent = parent->real_parent;
++		penalty = likely(sched_burst_fork_atavistic) ?
 +			inherit_burst_topological(parent, now):
 +			inherit_burst_direct(parent, now);
-+	read_unlock(&tasklist_lock);
++	}
++	rcu_read_unlock();
 +
 +	struct sched_entity *se = &p->se;
 +	revolve_burst_penalty(se);
@@ -451,6 +487,11 @@ index 000000000000..cd7e8a8d6075
 +	p->se.burst_score = 0;
 +	memset(&p->se.child_burst, 0, sizeof(struct sched_burst_cache));
 +	memset(&p->se.group_burst, 0, sizeof(struct sched_burst_cache));
++}
++
++void __init sched_bore_init(void) {
++	printk(KERN_INFO "BORE (Burst-Oriented Response Enhancer) CPU Scheduler modification %s by Masahito Suzuki", SCHED_BORE_VERSION);
++    init_task_bore(&init_task);
 +}
 +
 +#ifdef CONFIG_SYSCTL
@@ -528,6 +569,13 @@ index 000000000000..cd7e8a8d6075
 +		.extra2		= &maxval_12_bits,
 +	},
 +	{
++		.procname	= "sched_burst_cache_stop_count",
++		.data		= &sched_burst_cache_stop_count,
++		.maxlen		= sizeof(uint),
++		.mode		= 0644,
++		.proc_handler = proc_douintvec,
++	},
++	{
 +		.procname	= "sched_burst_cache_lifetime",
 +		.data		= &sched_burst_cache_lifetime,
 +		.maxlen		= sizeof(uint),
@@ -551,7 +599,7 @@ index 000000000000..cd7e8a8d6075
 +#endif // CONFIG_SYSCTL
 +#endif // CONFIG_SCHED_BORE
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index a1c353a62c56..cb4af0634404 100644
+index 76b27b2a9c56..7371dff0c158 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -97,6 +97,8 @@
@@ -563,13 +611,12 @@ index a1c353a62c56..cb4af0634404 100644
  EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_send_cpu);
  EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_send_cpumask);
  
-@@ -8380,6 +8382,11 @@ void __init sched_init(void)
+@@ -8377,6 +8379,10 @@ void __init sched_init(void)
  	BUG_ON(!sched_class_above(&ext_sched_class, &idle_sched_class));
  #endif
  
 +#ifdef CONFIG_SCHED_BORE
-+	printk(KERN_INFO "BORE (Burst-Oriented Response Enhancer) CPU Scheduler modification 5.7.3 by Masahito Suzuki");
-+	init_task_bore(&init_task);
++	sched_bore_init();
 +#endif // CONFIG_SCHED_BORE
 +
  	wait_bit_init();

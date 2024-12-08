@@ -11638,7 +11638,7 @@ msgctxt "game_options"
 msgid "OFF (Default)"
 msgstr "NU (Implicit)"
 
-#. TRANSLATION: flycast, libretro/mame, mame
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "BUTON DE REÎNCĂRCARE ÎN AFARA ECRANULUI"
@@ -14410,7 +14410,7 @@ msgctxt "game_options"
 msgid "Set game audio level gain in dB."
 msgstr "Setează câștigul nivelului audio al jocului în dB."
 
-#. TRANSLATION: flycast, libretro/mame, mame
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Setează butonul 2 al pistolului pentru reîncărcare."

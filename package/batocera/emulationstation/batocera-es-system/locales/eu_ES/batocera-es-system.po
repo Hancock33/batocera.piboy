@@ -11543,7 +11543,7 @@ msgctxt "game_options"
 msgid "OFF (Default)"
 msgstr "DESGAITUTA (Defektuz)"
 
-#. TRANSLATION: flycast, libretro/mame, mame
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "PANTAILA KANPOKO BIRKARGA BOTOIA"
@@ -14294,7 +14294,7 @@ msgctxt "game_options"
 msgid "Set game audio level gain in dB."
 msgstr "Ezarri joko audio mailaren irabaztea dB-etan."
 
-#. TRANSLATION: flycast, libretro/mame, mame
+#. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Ezarri pistolaren 2. botoia birkargatu dezan"
