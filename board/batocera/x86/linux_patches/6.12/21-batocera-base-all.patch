@@ -994,7 +994,7 @@ index 6bb4ec0c162a..63ee2eb3ab41 100644
  M:	Petr Mladek <pmladek@suse.com>
  R:	Steven Rostedt <rostedt@goodmis.org>
 diff --git a/Makefile b/Makefile
-index cb1a5c358231..069cdd4e1db7 100644
+index 193d99740d94..22304f056680 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -801,11 +801,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -5517,7 +5517,7 @@ index 9b1e0ede05a4..9f992e09de86 100644
  	struct debugfs_blob_wrapper     debugfs_vbios_blob;
  	struct debugfs_blob_wrapper     debugfs_discovery_blob;
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
-index c2394c8b4d6b..046a2c8ec0bd 100644
+index 1f08cb88d51b..a317a66647f1 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
 @@ -145,6 +145,8 @@ const char *amdgpu_asic_name[] = {
@@ -6048,7 +6048,7 @@ index f5bf41f21c41..363af8990aa2 100644
  struct amdgpu_pm {
  	struct mutex		mutex;
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
-index 80e60ea2d11e..7abf6fc9cbbe 100644
+index 32bdeac2676b..c7d977890f47 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
 @@ -72,6 +72,10 @@ static int smu_set_power_limit(void *handle, uint32_t limit);
@@ -6114,7 +6114,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  	smu_fini_microcode(smu);
  
  	return 0;
-@@ -2113,6 +2106,9 @@ static int smu_suspend(void *handle)
+@@ -2117,6 +2110,9 @@ static int smu_suspend(void *handle)
  	if (!ret)
  		adev->gfx.gfx_off_entrycount = count;
  
@@ -6124,7 +6124,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  	return 0;
  }
  
-@@ -2225,25 +2221,49 @@ static int smu_enable_umd_pstate(void *handle,
+@@ -2229,25 +2225,49 @@ static int smu_enable_umd_pstate(void *handle,
  }
  
  static int smu_bump_power_profile_mode(struct smu_context *smu,
@@ -6182,7 +6182,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  	struct smu_dpm_context *smu_dpm_ctx = &(smu->smu_dpm);
  
  	if (!skip_display_settings) {
-@@ -2280,14 +2300,8 @@ static int smu_adjust_power_state_dynamic(struct smu_context *smu,
+@@ -2284,14 +2304,8 @@ static int smu_adjust_power_state_dynamic(struct smu_context *smu,
  	}
  
  	if (smu_dpm_ctx->dpm_level != AMD_DPM_FORCED_LEVEL_MANUAL &&
@@ -6199,7 +6199,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  
  	return ret;
  }
-@@ -2306,13 +2320,13 @@ static int smu_handle_task(struct smu_context *smu,
+@@ -2310,13 +2324,13 @@ static int smu_handle_task(struct smu_context *smu,
  		ret = smu_pre_display_config_changed(smu);
  		if (ret)
  			return ret;
@@ -6216,7 +6216,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  		break;
  	default:
  		break;
-@@ -2334,12 +2348,11 @@ static int smu_handle_dpm_task(void *handle,
+@@ -2338,12 +2352,11 @@ static int smu_handle_dpm_task(void *handle,
  
  static int smu_switch_power_profile(void *handle,
  				    enum PP_SMC_POWER_PROFILE type,
@@ -6231,7 +6231,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  
  	if (!smu->pm_enabled || !smu->adev->pm.dpm_enabled)
  		return -EOPNOTSUPP;
-@@ -2347,21 +2360,21 @@ static int smu_switch_power_profile(void *handle,
+@@ -2351,21 +2364,21 @@ static int smu_switch_power_profile(void *handle,
  	if (!(type < PP_SMC_POWER_PROFILE_CUSTOM))
  		return -EINVAL;
  
@@ -6267,7 +6267,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  
  	return 0;
  }
-@@ -2775,7 +2788,10 @@ int smu_get_power_limit(void *handle,
+@@ -2779,7 +2792,10 @@ int smu_get_power_limit(void *handle,
  			*limit = smu->max_power_limit;
  			break;
  		case SMU_PPT_LIMIT_MIN:
@@ -6279,7 +6279,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  			break;
  		default:
  			return -EINVAL;
-@@ -2799,7 +2815,14 @@ static int smu_set_power_limit(void *handle, uint32_t limit)
+@@ -2803,7 +2819,14 @@ static int smu_set_power_limit(void *handle, uint32_t limit)
  		if (smu->ppt_funcs->set_power_limit)
  			return smu->ppt_funcs->set_power_limit(smu, limit_type, limit);
  
@@ -6295,7 +6295,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  		dev_err(smu->adev->dev,
  			"New power limit (%d) is out of range [%d,%d]\n",
  			limit, smu->min_power_limit, smu->max_power_limit);
-@@ -2878,6 +2901,10 @@ static enum smu_clk_type smu_convert_to_smuclk(enum pp_clock_type type)
+@@ -2882,6 +2905,10 @@ static enum smu_clk_type smu_convert_to_smuclk(enum pp_clock_type type)
  		clk_type = SMU_OD_FAN_TARGET_TEMPERATURE; break;
  	case OD_FAN_MINIMUM_PWM:
  		clk_type = SMU_OD_FAN_MINIMUM_PWM; break;
@@ -6306,7 +6306,7 @@ index 80e60ea2d11e..7abf6fc9cbbe 100644
  	default:
  		clk_type = SMU_CLK_COUNT; break;
  	}
-@@ -3049,12 +3076,35 @@ static int smu_set_power_profile_mode(void *handle,
+@@ -3053,12 +3080,35 @@ static int smu_set_power_profile_mode(void *handle,
  				      uint32_t param_size)
  {
  	struct smu_context *smu = handle;
@@ -6393,10 +6393,10 @@ index e71a721c12b9..a299dc4a8071 100644
  };
  
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/smu11/arcturus_ppt.c b/drivers/gpu/drm/amd/pm/swsmu/smu11/arcturus_ppt.c
-index c0f6b59369b7..f4c64c46ff7a 100644
+index d52512f5f1bd..fc1297fecc62 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/smu11/arcturus_ppt.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/smu11/arcturus_ppt.c
-@@ -1441,98 +1441,120 @@ static int arcturus_get_power_profile_mode(struct smu_context *smu,
+@@ -1445,98 +1445,120 @@ static int arcturus_get_power_profile_mode(struct smu_context *smu,
  	return size;
  }
  
@@ -7459,7 +7459,7 @@ index d53e162dcd8d..5fa58ef65371 100644
  	return ret;
  }
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/smu13/smu_v13_0_7_ppt.c b/drivers/gpu/drm/amd/pm/swsmu/smu13/smu_v13_0_7_ppt.c
-index b891a5e0a396..ed41de3d397a 100644
+index ceaf4572db25..31996f8c6e3a 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/smu13/smu_v13_0_7_ppt.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/smu13/smu_v13_0_7_ppt.c
 @@ -83,6 +83,8 @@
@@ -7595,7 +7595,7 @@ index b891a5e0a396..ed41de3d397a 100644
  	case PP_OD_RESTORE_DEFAULT_TABLE:
  		if (size == 1) {
  			ret = smu_v13_0_7_od_restore_table_single(smu, input[0]);
-@@ -2106,7 +2204,11 @@ static void smu_v13_0_7_set_supported_od_feature_mask(struct smu_context *smu)
+@@ -2108,7 +2206,11 @@ static void smu_v13_0_7_set_supported_od_feature_mask(struct smu_context *smu)
  					    OD_OPS_SUPPORT_FAN_TARGET_TEMPERATURE_RETRIEVE |
  					    OD_OPS_SUPPORT_FAN_TARGET_TEMPERATURE_SET |
  					    OD_OPS_SUPPORT_FAN_MINIMUM_PWM_RETRIEVE |
@@ -7608,7 +7608,7 @@ index b891a5e0a396..ed41de3d397a 100644
  }
  
  static int smu_v13_0_7_set_default_od_settings(struct smu_context *smu)
-@@ -2172,6 +2274,10 @@ static int smu_v13_0_7_set_default_od_settings(struct smu_context *smu)
+@@ -2174,6 +2276,10 @@ static int smu_v13_0_7_set_default_od_settings(struct smu_context *smu)
  			user_od_table_bak.OverDriveTable.FanTargetTemperature;
  		user_od_table->OverDriveTable.FanMinimumPwm =
  			user_od_table_bak.OverDriveTable.FanMinimumPwm;
@@ -7619,7 +7619,7 @@ index b891a5e0a396..ed41de3d397a 100644
  	}
  
  	smu_v13_0_7_set_supported_od_feature_mask(smu);
-@@ -2434,78 +2540,110 @@ do {													\
+@@ -2436,78 +2542,110 @@ do {													\
  	return result;
  }
  
@@ -7784,10 +7784,10 @@ index b891a5e0a396..ed41de3d397a 100644
  	return ret;
  }
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/smu14/smu_v14_0_2_ppt.c b/drivers/gpu/drm/amd/pm/swsmu/smu14/smu_v14_0_2_ppt.c
-index 1e16a281f2dc..bfaa9e43f92a 100644
+index 82aef8626afa..b22fb7eafcd3 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/smu14/smu_v14_0_2_ppt.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/smu14/smu_v14_0_2_ppt.c
-@@ -1729,90 +1729,120 @@ static int smu_v14_0_2_get_power_profile_mode(struct smu_context *smu,
+@@ -1751,90 +1751,120 @@ static int smu_v14_0_2_get_power_profile_mode(struct smu_context *smu,
  	return size;
  }
  
@@ -45717,7 +45717,7 @@ index bd5183dfd879..3a410f53a07c 100644
  
  /*
 diff --git a/mm/vmscan.c b/mm/vmscan.c
-index 28ba2b06fc7d..99568ccfb0fd 100644
+index 28ba2b06fc7d..a334eadae9be 100644
 --- a/mm/vmscan.c
 +++ b/mm/vmscan.c
 @@ -200,7 +200,11 @@ struct scan_control {
@@ -45732,18 +45732,6 @@ index 28ba2b06fc7d..99568ccfb0fd 100644
  
  #ifdef CONFIG_MEMCG
  
-@@ -3992,7 +3996,11 @@ static bool lruvec_is_reclaimable(struct lruvec *lruvec, struct scan_control *sc
- }
- 
- /* to protect the working set of the last N jiffies */
-+#ifdef CONFIG_CACHY
-+static unsigned long lru_gen_min_ttl __read_mostly = 1000;
-+#else
- static unsigned long lru_gen_min_ttl __read_mostly;
-+#endif
- 
- static void lru_gen_age_node(struct pglist_data *pgdat, struct scan_control *sc)
- {
 diff --git a/net/ipv4/Kconfig b/net/ipv4/Kconfig
 index 6d2c97f8e9ef..ddc116ef22cb 100644
 --- a/net/ipv4/Kconfig
