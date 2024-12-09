@@ -557,10 +557,10 @@ index 000000000000..767844637a7d
 +  ``objs`` and in ``alert``. If this is attempted, the function fails
 +  with ``EINVAL``.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 1e930c7a58b1..0d687fa2b5de 100644
+index 17daa9ee9384..ce1ca6eed235 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -6056,6 +6056,18 @@ S:	Maintained
+@@ -6058,6 +6058,18 @@ S:	Maintained
  F:	Documentation/filesystems/cramfs.rst
  F:	fs/cramfs/
  
@@ -579,7 +579,7 @@ index 1e930c7a58b1..0d687fa2b5de 100644
  CREATIVE SB0540
  M:	Bastien Nocera <hadess@hadess.net>
  L:	linux-input@vger.kernel.org
-@@ -16708,6 +16720,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
+@@ -16711,6 +16723,15 @@ T:	git https://github.com/Paragon-Software-Group/linux-ntfs3.git
  F:	Documentation/filesystems/ntfs3.rst
  F:	fs/ntfs3/
  
@@ -596,7 +596,7 @@ index 1e930c7a58b1..0d687fa2b5de 100644
  M:	Finn Thain <fthain@linux-m68k.org>
  L:	linux-m68k@lists.linux-m68k.org
 diff --git a/Makefile b/Makefile
-index 1bb6d1599bd4..03cd79fb0c77 100644
+index 6e5f3006a180..37574d506140 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -860,11 +860,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -3958,7 +3958,7 @@ index 10719aba6276..cacfd3f6abef 100644
  	seq_printf(m, "l2c_id:              %u\n", c->topo.l2c_id);
  	seq_printf(m, "amd_node_id:         %u\n", c->topo.amd_node_id);
 diff --git a/arch/x86/kernel/cpu/intel.c b/arch/x86/kernel/cpu/intel.c
-index d1de300af173..514f2f68ec13 100644
+index 8ded9f859a3a..2a81dfdb32ba 100644
 --- a/arch/x86/kernel/cpu/intel.c
 +++ b/arch/x86/kernel/cpu/intel.c
 @@ -521,6 +521,25 @@ static void init_intel_misc_features(struct cpuinfo_x86 *c)
@@ -3987,7 +3987,7 @@ index d1de300af173..514f2f68ec13 100644
  static void init_intel(struct cpuinfo_x86 *c)
  {
  	early_init_intel(c);
-@@ -604,6 +623,9 @@ static void init_intel(struct cpuinfo_x86 *c)
+@@ -606,6 +625,9 @@ static void init_intel(struct cpuinfo_x86 *c)
  		set_cpu_cap(c, X86_FEATURE_P3);
  #endif
  
@@ -5795,10 +5795,10 @@ index 11e3f2f3b174..7b1bd69dc29e 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index bf4bb703fd88..d8e15cbafab2 100644
+index 08d06051894e..0f0a70957e46 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -4514,7 +4514,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4516,7 +4516,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  		return r;
  	}
  
@@ -5883,10 +5883,10 @@ index 495e3cd70426..704a48209657 100644
  #endif
  	/* Create (reset) the plane state */
 diff --git a/drivers/gpu/drm/amd/pm/amdgpu_pm.c b/drivers/gpu/drm/amd/pm/amdgpu_pm.c
-index 136e8193867c..aa3b1f22413d 100644
+index e8ae7681bf0a..8a0d873983f3 100644
 --- a/drivers/gpu/drm/amd/pm/amdgpu_pm.c
 +++ b/drivers/gpu/drm/amd/pm/amdgpu_pm.c
-@@ -3174,6 +3174,9 @@ static ssize_t amdgpu_hwmon_show_power_cap_min(struct device *dev,
+@@ -3178,6 +3178,9 @@ static ssize_t amdgpu_hwmon_show_power_cap_min(struct device *dev,
  					 struct device_attribute *attr,
  					 char *buf)
  {
@@ -5897,10 +5897,10 @@ index 136e8193867c..aa3b1f22413d 100644
  }
  
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
-index b8355293518f..bc8e8939fd7c 100644
+index 5eae14fe79f1..1b152b26d4c8 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
-@@ -2796,7 +2796,10 @@ int smu_get_power_limit(void *handle,
+@@ -2799,7 +2799,10 @@ int smu_get_power_limit(void *handle,
  			*limit = smu->max_power_limit;
  			break;
  		case SMU_PPT_LIMIT_MIN:
@@ -5912,7 +5912,7 @@ index b8355293518f..bc8e8939fd7c 100644
  			break;
  		default:
  			return -EINVAL;
-@@ -2820,7 +2823,14 @@ static int smu_set_power_limit(void *handle, uint32_t limit)
+@@ -2823,7 +2826,14 @@ static int smu_set_power_limit(void *handle, uint32_t limit)
  		if (smu->ppt_funcs->set_power_limit)
  			return smu->ppt_funcs->set_power_limit(smu, limit_type, limit);
  
@@ -15950,7 +15950,7 @@ index 2ddb827e3bea..464049c4af3f 100644
  
  	return state;
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index fbdca89c677f..3c2d39267930 100644
+index a59ae2e23daf..875da667d48c 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -73,10 +73,19 @@ unsigned int sysctl_sched_tunable_scaling = SCHED_TUNABLESCALING_LOG;
@@ -38665,10 +38665,10 @@ index 5bdf13ac26ef..da7e36874003 100644
  	    tcp_in_quickack_mode(sk) ||
  	    /* Protocol state mandates a one-time immediate ACK */
 diff --git a/net/ipv4/tcp_minisocks.c b/net/ipv4/tcp_minisocks.c
-index bb1fe1ba867a..050a80769de6 100644
+index 7121d8573928..696afe8cfda8 100644
 --- a/net/ipv4/tcp_minisocks.c
 +++ b/net/ipv4/tcp_minisocks.c
-@@ -462,6 +462,8 @@ void tcp_ca_openreq_child(struct sock *sk, const struct dst_entry *dst)
+@@ -466,6 +466,8 @@ void tcp_ca_openreq_child(struct sock *sk, const struct dst_entry *dst)
  	u32 ca_key = dst_metric(dst, RTAX_CC_ALGO);
  	bool ca_got_dst = false;
  
