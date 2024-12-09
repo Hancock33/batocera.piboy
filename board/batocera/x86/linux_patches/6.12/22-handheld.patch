@@ -595,10 +595,10 @@ index 5922a8e41eaa..fbac6ba2155a 100644
  	bool pflip_present = false;
  	bool dirty_rects_changed = false;
 diff --git a/drivers/gpu/drm/amd/display/dc/core/dc.c b/drivers/gpu/drm/amd/display/dc/core/dc.c
-index a88f1b6ea64c..dba2607ce28c 100644
+index a6911bb2cf0c..2499460eaf2e 100644
 --- a/drivers/gpu/drm/amd/display/dc/core/dc.c
 +++ b/drivers/gpu/drm/amd/display/dc/core/dc.c
-@@ -4901,11 +4901,6 @@ static bool update_planes_and_stream_v2(struct dc *dc,
+@@ -4904,11 +4904,6 @@ static bool update_planes_and_stream_v2(struct dc *dc,
  			surface_count,
  			&is_plane_addition);
  
@@ -610,7 +610,7 @@ index a88f1b6ea64c..dba2607ce28c 100644
  	if (!update_planes_and_stream_state(
  			dc,
  			srf_updates,
-@@ -4916,13 +4911,14 @@ static bool update_planes_and_stream_v2(struct dc *dc,
+@@ -4919,13 +4914,14 @@ static bool update_planes_and_stream_v2(struct dc *dc,
  			&context))
  		return false;
  
@@ -658,7 +658,7 @@ index 60f15a9ba7a5..c3da48c213d4 100644
  
  	/* TODO: DYNAMIC_VALIDATION needs to be implemented */
 diff --git a/drivers/gpu/drm/drm_atomic_helper.c b/drivers/gpu/drm/drm_atomic_helper.c
-index 43cdf39019a4..66ffa7ce7b08 100644
+index 5186d2114a50..25dbdcad53bc 100644
 --- a/drivers/gpu/drm/drm_atomic_helper.c
 +++ b/drivers/gpu/drm/drm_atomic_helper.c
 @@ -27,6 +27,7 @@
