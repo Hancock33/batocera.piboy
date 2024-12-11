@@ -307,7 +307,7 @@ Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0-rc1|Dec 06
 Emulators|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-10.0-rc1|Dec 06, 2024
 Emulators|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-9.0-20241206-proton|Dec 06, 2024
 Emulators|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.0-rc1|Dec 06, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241207|Dec 07, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241211|Dec 11, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|a06ea8795482d2f49a5461ab5f23e0036e38d12b|Oct 17, 2024
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r48|Sept 06, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|98a03e944c5d4c9f3f4973a51bf3b707819d1a89|Nov 14, 2024
@@ -326,7 +326,7 @@ Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|d57c084c9fd2cb7
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|bf273698a9c16c07abc6d54827d976e73eb87e41|Dec 11, 2024
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2024.09.2|Dec 05, 2024
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|e6448b04e5bfdabffbd650e1ccc53b82cd8c1c5d|Aug 31, 2024
-Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.3.296.0|Sept 23, 2024
+Gpu|[glslang](http://github.com/KhronosGroup/glslang)|a0995c49ebcaca2c6d3b03efbabf74f3843decdb|Dec 02, 2024
 Gpu|[img-gpu-powervr](https://github.com/starfive-tech/soft_3rdpart/raw/JH7110_VisionFive2_devel/IMG_GPU/out)|4918bd0772edbfd9ccf26e97b55091f72053ec81|Aug 27, 2024
 Gpu|[img-mesa3d](https://archive.mesa3d.org)|22.1.3|Jun 29, 2022
 Gpu|[mali-g31-gbm](https://github.com/batocera-linux/rockchip-packages/releases)|ad4c28932c3d07c75fc41dd4a3333f9013a25e7f|Jun 11, 2021
@@ -345,12 +345,12 @@ Gpu|[nvidia470-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|470.
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.5|Apr 23, 2024
 Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|8e2a51b1c3e5b569aabc0b476f36550c1f332c41|Aug 29, 2024
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.4|Dec 06, 2024
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.3.296.0|Sept 18, 2024
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|d2478b2028dbde45d7caa9dca0de0d697bc27223|Dec 11, 2024
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|f68b10fd46dc0401474d039144320d6ac521818e|Oct 01, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|375177089a34914bf1ec49bd902f97b8085d3731|Dec 09, 2024
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.3.296.0|Sept 29, 2024
-Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.3.296.0|Oct 04, 2024
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.3.296.0|Sept 26, 2024
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|160e946f5d4b3a657f47b7fc4b0bd3cc8d0d6afd|Dec 09, 2024
+Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|ca82303b6bad637c08d94baa80dea17b541649ed|Dec 11, 2024
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|e767d0ee782709f2bd2df148927ddab02f2dbfe4|Dec 02, 2024
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.4|Dec 06, 2024
 Hardware|[ayn-platform](http://github.com/ShadowBlip/ayn-platform)|v0.5.2|Jul 29, 2024
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|923de3203a000f8d8ffefb5ca15d296eb5d3c425|Oct 25, 2024
@@ -460,7 +460,7 @@ Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|2f73c40ec6d9bd4096ac
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|72d808cc4d6db5d38e5d87ab95ab0b1bcfd89ede|Nov 24, 2024
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|5ea51a0cc122b436ff6888c8d5f374c37df859b3|Dec 11, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241207|Dec 07, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241211|Dec 11, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|r14134|Dec 09, 2024
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|a78bced5e2bcb974c05d911c94ea89d5a450021a|Dec 09, 2024

@@ -3,8 +3,8 @@
 # glslang
 #
 ################################################################################
-# Version: Commits on Sept 23, 2024
-GLSLANG_VERSION = vulkan-sdk-1.3.296.0
+# Version: Commits on Dec 02, 2024
+GLSLANG_VERSION = a0995c49ebcaca2c6d3b03efbabf74f3843decdb
 GLSLANG_SITE = $(call github,KhronosGroup,glslang,$(GLSLANG_VERSION))
 GLSLANG_DEPENDENCIES = vulkan-headers vulkan-loader spirv-tools
 GLSLANG_INSTALL_STAGING = YES
