@@ -3027,6 +3027,18 @@ gbc2players:
   comment_br:           |
                         Para mais informações: https://wiki.batocera.org/systems:gbc2players
 
+
+sgb-msu1:
+  name:                 Super Game Boy MSU1
+  manufacturer:         Nintendo
+  release:              1994
+  hardware:             console
+  extensions:           [gb, gbc, zip, 7z, squashfs]
+  emulators:
+    libretro:
+      bsnes:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BSNES]     }
+      bsnes_hd:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BSNES_HD]  }
+
 n64:
   name:                 Nintendo 64
   manufacturer:         Nintendo
