@@ -14,6 +14,8 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|5ea51a0cc122b43
 Utils|[re2c](http://github.com/skvadrik/re2c)|4.0.2|Dec 11, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|cf986c042487e5c4985f2746ba3950e8bca7dc61|Dec 11, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|2bb1803071acad225bc851603fdc97d6ae73e71c|Dec 11, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241211|Dec 11, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241211|Dec 11, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|e36630999f6c0b6d2a755804340c2f04d5500196|Dec 11, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|6ff5e47def714175ac040acc6c49359e57a85607|Dec 11, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|bd51bc81b8616ce10480d3928dfa908f62df97d7|Dec 11, 2024
@@ -67,8 +69,6 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|53bf676868f8e7038531e828df4cbe1
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|755f25ac5eafb66a39da657bf51d3d9ad4c88064|Dec 07, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|543ce94132b8e3820e02bdf5dee6f676d8202170|Dec 07, 2024
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|ed569629dbf0ef0033386a54826aff6da2af2a9f|Dec 07, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241207|Dec 07, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241207|Dec 07, 2024
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|2f73c40ec6d9bd4096ac878073f8e917fd101ce9|Dec 07, 2024
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|4fb8f8fbcbd43f564a7df14f08e9cef97ec7f7b0|Dec 07, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|3d30dc8d02e5e88802a58466bef1f398baac2799|Dec 07, 2024
