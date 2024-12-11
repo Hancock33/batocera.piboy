@@ -15,6 +15,8 @@ Utils|[re2c](http://github.com/skvadrik/re2c)|4.0.2|Dec 11, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|cf986c042487e5c4985f2746ba3950e8bca7dc61|Dec 11, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|2bb1803071acad225bc851603fdc97d6ae73e71c|Dec 11, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241211|Dec 11, 2024
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|d2478b2028dbde45d7caa9dca0de0d697bc27223|Dec 11, 2024
+Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|ca82303b6bad637c08d94baa80dea17b541649ed|Dec 11, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241211|Dec 11, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|e36630999f6c0b6d2a755804340c2f04d5500196|Dec 11, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|6ff5e47def714175ac040acc6c49359e57a85607|Dec 11, 2024
@@ -47,6 +49,7 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|596dbac27370a6e5cef3
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.29.0-rc.1|Dec 09, 2024
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|564cf49062033145f10cd824b6bfc244c47a4eea|Dec 09, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|375177089a34914bf1ec49bd902f97b8085d3731|Dec 09, 2024
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|160e946f5d4b3a657f47b7fc4b0bd3cc8d0d6afd|Dec 09, 2024
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|ee07de2bec291e18a4d66210eeeeee77854b4c1f|Dec 09, 2024
 Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|1b1695ea7d1f473019c2e2ebb64693dd390106eb|Dec 09, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|eb4dbaabb57fb9829d4b97b41594f9046876ee0f|Dec 08, 2024
@@ -105,6 +108,8 @@ Emulators|[lightspark](http://github.com/lightspark/lightspark)|79371cef3160c426
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|2e202ac776f9e857e577380797239e800239ac3e|Dec 03, 2024
 Sources|[libretro-mame-src](http://github.com/sonninnos/mame)|750b36ca4cc65e7142f97d0ffd0235085bbd20f7|Dec 03, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|ce4e6f076f3ebbfd4c71021773c90c13ecdc79df|Dec 03, 2024
+Gpu|[glslang](http://github.com/KhronosGroup/glslang)|a0995c49ebcaca2c6d3b03efbabf74f3843decdb|Dec 02, 2024
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|e767d0ee782709f2bd2df148927ddab02f2dbfe4|Dec 02, 2024
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|d83967b2ea38eda8b43437167d93c86021bb4de1|Dec 02, 2024
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|24.12|Dec 01, 2024
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.9.0-rc1|Dec 01, 2024
@@ -285,7 +290,6 @@ Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|ee365bad9501c73ff49936e72ec
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|82fa9e2f5c6cbedb757829bc6688ff413e0b06f7|Oct 06, 2024
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|da531235f63fc8cff273996573c803386d8ddbeb|Oct 06, 2024
 Emulators|[libretro-craft](http://github.com/libretro/Craft)|675c5b2fc690d2e80f6099f46407bf23827c59d4|Oct 06, 2024
-Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.3.296.0|Oct 04, 2024
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|b353e1728bf56d8b6c6fb606df78b7296a203702|Oct 01, 2024
 Libraries|[lunasvg](http://github.com/stenzek/lunasvg)|70b2fc188ae9628f4313335a0d628eef10c842dd|Oct 01, 2024
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|f68b10fd46dc0401474d039144320d6ac521818e|Oct 01, 2024
@@ -293,18 +297,14 @@ Emulators|[libretro-supafaust](http://github.com/libretro/supafaust)|e25f6676593
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|f72bac75d0d2840fece788dfa8c7791bff3b8992|Sept 30, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a177763e14c924e3b15e2|Sept 29, 2024
 Ports|[raptorcots](http://github.com/skynettx/raptor)|6e630152ac4842281b492c77add34e866228572f|Sept 29, 2024
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.3.296.0|Sept 29, 2024
 Boot|[batocera-initramfs](http://www.busybox.net/downloads)|1.37.0|Sept 26, 2024
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.3.296.0|Sept 26, 2024
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|527564f2748901068a5fef891c5073a4d6cd089b|Sept 25, 2024
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|1a534dee02a093c7812d23632f2bfd6779d1c934|Sept 25, 2024
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|7d00e9e28aafa115f557d7283335756b5ff2172d|Sept 25, 2024
-Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.3.296.0|Sept 23, 2024
 Utils|[btop](http://github.com/aristocratos/btop)|v1.4.0|Sept 22, 2024
 Ports|[xatrix](http://github.com/yquake2/xatrix)|1957253b256180f9bbb5b52c8d63cc1578170211|Sept 21, 2024
 Ports|[yrogue](http://github.com/yquake2/rogue)|7cf6cad6acfe88d74bca104839c4ff2b94cc6036|Sept 21, 2024
 Utils|[ryzenadj](http://github.com/FlyGoat/RyzenAdj)|v0.16.0|Sept 18, 2024
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.3.296.0|Sept 18, 2024
 Emulators|[libserum](http://github.com/zesinger/libserum)|v2.0.2|Sept 15, 2024
 Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64plus-video-glide64mk2)|39a8c11e8a041e16bcc6d67ebc2281b8632ba5ed|Sept 14, 2024
 Emulators|[libdof](http://github.com/jsm174/libdof)|5c43c99ea28b44bb58b74554c4303a505e208148|Sept 11, 2024
