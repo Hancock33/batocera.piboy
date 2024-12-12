@@ -1,0 +1,16 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 67bdf6afe9..62fd366007 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -19,9 +19,9 @@ include(CTest)
+ # Set bundled sdl2/qt as dependent options.
+ # OFF by default, but if ENABLE_SDL2 and MSVC are true then ON
+ option(ENABLE_SDL2 "Enable the SDL2 frontend" ON)
+-CMAKE_DEPENDENT_OPTION(SUYU_USE_BUNDLED_SDL2 "Download bundled SDL2 binaries" ON "ENABLE_SDL2;MSVC" OFF)
++# CMAKE_DEPENDENT_OPTION(SUYU_USE_BUNDLED_SDL2 "Download bundled SDL2 binaries" ON "ENABLE_SDL2;MSVC" OFF)
+ # On Linux system SDL2 is likely to be lacking HIDAPI support which have drawbacks but is needed for SDL motion
+-CMAKE_DEPENDENT_OPTION(SUYU_USE_EXTERNAL_SDL2 "Compile external SDL2" ON "ENABLE_SDL2;NOT MSVC" OFF)
++# CMAKE_DEPENDENT_OPTION(SUYU_USE_EXTERNAL_SDL2 "Compile external SDL2" ON "ENABLE_SDL2;NOT MSVC" OFF)
+ 
+ cmake_dependent_option(ENABLE_LIBUSB "Enable the use of LibUSB" ON "NOT ANDROID" OFF)
+ 
