@@ -6285,7 +6285,7 @@ index 09f8397bae15..19734b297527 100644
  {
  	return state != PM_SUSPEND_TO_IDLE && suspend_ops->prepare ?
 diff --git a/sound/soc/amd/acp/acp-mach-common.c b/sound/soc/amd/acp/acp-mach-common.c
-index f7602c1769bf..410554543ad2 100644
+index f7602c1769bf..dfcdf7e3c1dc 100644
 --- a/sound/soc/amd/acp/acp-mach-common.c
 +++ b/sound/soc/amd/acp/acp-mach-common.c
 @@ -26,6 +26,7 @@
@@ -6375,25 +6375,23 @@ index f7602c1769bf..410554543ad2 100644
  /* Declare DMIC codec components */
  SND_SOC_DAILINK_DEF(dmic_codec,
  		DAILINK_COMP_ARRAY(COMP_CODEC("dmic-codec", "dmic-hifi")));
-@@ -1407,6 +1480,8 @@ int acp_sofdsp_dai_links_create(struct snd_soc_card *card)
- 		links[i].num_cpus = ARRAY_SIZE(sof_sp);
+@@ -1477,6 +1550,7 @@ int acp_sofdsp_dai_links_create(struct snd_soc_card *card)
  		links[i].platforms = sof_component;
  		links[i].num_platforms = ARRAY_SIZE(sof_component);
-+		links[i].dpcm_playback = 1;
+ 		links[i].playback_only = 1;
 +		links[i].dpcm_capture = 1;
  		links[i].nonatomic = true;
  		links[i].no_pcm = 1;
- 		if (!drv_data->hs_codec_id) {
-@@ -1442,6 +1517,8 @@ int acp_sofdsp_dai_links_create(struct snd_soc_card *card)
- 		links[i].num_cpus = ARRAY_SIZE(sof_hs);
+ 		if (!drv_data->amp_codec_id) {
+@@ -1509,6 +1583,7 @@ int acp_sofdsp_dai_links_create(struct snd_soc_card *card)
  		links[i].platforms = sof_component;
  		links[i].num_platforms = ARRAY_SIZE(sof_component);
-+		links[i].dpcm_playback = 1;
+ 		links[i].playback_only = 1;
 +		links[i].dpcm_capture = 1;
  		links[i].nonatomic = true;
  		links[i].no_pcm = 1;
- 		if (!drv_data->hs_codec_id) {
-@@ -1591,6 +1668,8 @@ int acp_legacy_dai_links_create(struct snd_soc_card *card)
+ 		if (!drv_data->amp_codec_id) {
+@@ -1591,6 +1666,8 @@ int acp_legacy_dai_links_create(struct snd_soc_card *card)
  
  	if (drv_data->hs_cpu_id)
  		num_links++;
@@ -6402,7 +6400,7 @@ index f7602c1769bf..410554543ad2 100644
  	if (drv_data->amp_cpu_id)
  		num_links++;
  	if (drv_data->dmic_cpu_id)
-@@ -1744,6 +1823,33 @@ int acp_legacy_dai_links_create(struct snd_soc_card *card)
+@@ -1744,6 +1821,33 @@ int acp_legacy_dai_links_create(struct snd_soc_card *card)
  			card->codec_conf = rt1019_conf;
  			card->num_configs = ARRAY_SIZE(rt1019_conf);
  		}
