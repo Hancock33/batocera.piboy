@@ -596,7 +596,7 @@ index 000000000000..da1edca15414
 +#endif // CONFIG_SYSCTL
 +#endif // CONFIG_SCHED_BORE
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 76b27b2a9c56..7371dff0c158 100644
+index 6cc12777bb11..aa131e05dbbc 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -97,6 +97,8 @@
@@ -728,7 +728,7 @@ index f4035c7a0fa1..0edb3a216f5d 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index 54e7c4c3e2c5..94c54154a175 100644
+index b793e9db30ad..48dea624ccf0 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -55,6 +55,8 @@
@@ -867,7 +867,7 @@ index 54e7c4c3e2c5..94c54154a175 100644
  	curr->vruntime += calc_delta_fair(delta_exec, curr);
  	resched = update_deadline(cfs_rq, curr);
  	update_min_vruntime(cfs_rq);
-@@ -3884,7 +3907,7 @@ static void reweight_eevdf(struct sched_entity *se, u64 avruntime,
+@@ -3890,7 +3913,7 @@ static void reweight_eevdf(struct sched_entity *se, u64 avruntime,
  	se->deadline = avruntime + vslice;
  }
  
@@ -876,7 +876,7 @@ index 54e7c4c3e2c5..94c54154a175 100644
  			    unsigned long weight)
  {
  	bool curr = cfs_rq->curr == se;
-@@ -5293,6 +5316,9 @@ place_entity(struct cfs_rq *cfs_rq, struct sched_entity *se, int flags)
+@@ -5299,6 +5322,9 @@ place_entity(struct cfs_rq *cfs_rq, struct sched_entity *se, int flags)
  	 *
  	 * EEVDF: placement strategy #1 / #2
  	 */
@@ -886,7 +886,7 @@ index 54e7c4c3e2c5..94c54154a175 100644
  	if (sched_feat(PLACE_LAG) && cfs_rq->nr_running) {
  		struct sched_entity *curr = cfs_rq->curr;
  		unsigned long load;
-@@ -5368,7 +5394,11 @@ place_entity(struct cfs_rq *cfs_rq, struct sched_entity *se, int flags)
+@@ -5374,7 +5400,11 @@ place_entity(struct cfs_rq *cfs_rq, struct sched_entity *se, int flags)
  		se->rel_deadline = 0;
  		return;
  	}
@@ -899,7 +899,7 @@ index 54e7c4c3e2c5..94c54154a175 100644
  	/*
  	 * When joining the competition; the existing tasks will be,
  	 * on average, halfway through their slice, as such start tasks
-@@ -7110,6 +7140,14 @@ static int dequeue_entities(struct rq *rq, struct sched_entity *se, int flags)
+@@ -7116,6 +7146,14 @@ static int dequeue_entities(struct rq *rq, struct sched_entity *se, int flags)
  		p = task_of(se);
  		h_nr_running = 1;
  		idle_h_nr_running = task_has_idle_policy(p);
@@ -914,7 +914,7 @@ index 54e7c4c3e2c5..94c54154a175 100644
  	} else {
  		cfs_rq = group_cfs_rq(se);
  		slice = cfs_rq_min_slice(cfs_rq);
-@@ -9025,16 +9063,25 @@ static void yield_task_fair(struct rq *rq)
+@@ -9031,16 +9069,25 @@ static void yield_task_fair(struct rq *rq)
  	/*
  	 * Are we the only task in the tree?
  	 */
@@ -940,7 +940,7 @@ index 54e7c4c3e2c5..94c54154a175 100644
  	/*
  	 * Tell update_rq_clock() that we've just updated,
  	 * so we don't do microscopic update in schedule()
-@@ -13086,6 +13133,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
+@@ -13092,6 +13139,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
  static void task_fork_fair(struct task_struct *p)
  {
  	set_task_max_allowed_capacity(p);
@@ -950,7 +950,7 @@ index 54e7c4c3e2c5..94c54154a175 100644
  }
  
  /*
-@@ -13196,6 +13246,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
+@@ -13202,6 +13252,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
  
  static void switched_from_fair(struct rq *rq, struct task_struct *p)
  {
