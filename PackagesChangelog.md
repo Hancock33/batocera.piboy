@@ -41,6 +41,7 @@ Emulators|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.8.0|Dec
 Emulators|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v2.14|Dec 13, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-10.0rc2.r0|Dec 13, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241213|Dec 13, 2024
+Gpu|[glslang](http://github.com/KhronosGroup/glslang)|15.1.0|Dec 13, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241213|Dec 13, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|16eee81f321e98c7f47d49bf28c80d795ee8e9b9|Dec 13, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|e82c7d242825a746fa4bd10cdf14aeefa1ebcac3|Dec 13, 2024
@@ -72,6 +73,7 @@ Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|6ff5e47def714175ac0
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|1f29dcdf938c3aea4cbfec611585cf444aff754f|Dec 10, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|84439c643197540aba84eeee98533847c6705569|Dec 10, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|b5215dbee7483d2052caca48fd25ce0a01e558fc|Dec 10, 2024
+Firmwares|[alllinuxfirmwares](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot)|20241210|Dec 10, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|38f875c93be10b3f5fa40f2c56a2a5a6cf01be9d|Dec 10, 2024
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|4650327a4959321c8d28b89693abbda41fa69e6e|Dec 10, 2024
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|84439c643197540aba84eeee98533847c6705569|Dec 10, 2024
@@ -119,7 +121,6 @@ Audio|[portmidi](http://github.com/PortMidi/portmidi)|a941ae520e3b2a94da3c0cb517
 Emulators|[dhewm3](http://github.com/dhewm/dhewm3)|ce4e6f076f3ebbfd4c71021773c90c13ecdc79df|Dec 03, 2024
 Sources|[libretro-mame-src](http://github.com/sonninnos/mame)|750b36ca4cc65e7142f97d0ffd0235085bbd20f7|Dec 03, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|ce4e6f076f3ebbfd4c71021773c90c13ecdc79df|Dec 03, 2024
-Gpu|[glslang](http://github.com/KhronosGroup/glslang)|a0995c49ebcaca2c6d3b03efbabf74f3843decdb|Dec 02, 2024
 Gpu|[vulkan-volk](http://github.com/zeux/volk)|e767d0ee782709f2bd2df148927ddab02f2dbfe4|Dec 02, 2024
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|d83967b2ea38eda8b43437167d93c86021bb4de1|Dec 02, 2024
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|24.12|Dec 01, 2024
@@ -184,7 +185,6 @@ Libraries|[python-gpiod](https://files.pythonhosted.org/packages/5a/be/9876843be
 Ports|[openjk](http://github.com/JACoders/OpenJK)|199ddc7642d0ed0e2bf007fe63d0dce3a4bb4908|Nov 12, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|7027212b2f268281b9b532e42abbd30bf0f6dae7|Nov 12, 2024
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|aed9c61e0a78e24644386f7329144f108b4f507c|Nov 10, 2024
-Firmwares|[alllinuxfirmwares](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot)|20241110|Nov 10, 2024
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|d5be3c6086bdf94baa52b54f155092563085624c|Nov 10, 2024
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.7.5|Nov 07, 2024
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|edee981519609d315880d1dcff30fe241c8df54a|Nov 05, 2024
