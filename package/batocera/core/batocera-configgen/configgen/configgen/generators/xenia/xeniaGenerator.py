@@ -121,6 +121,21 @@ class XeniaGenerator(Generator):
             with alsa_done.open("w") as f:
                 f.write("done")
 
+        disclamier_done = wineprefix / "disclaimer.done"
+        if not disclamier_done.exists():
+            cmd = ["/usr/wine/winetricks", "xeniadisclaimer"]
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/wine-custom/lib/wine", "WINEPREFIX": wineprefix }
+            env.update(os.environ)
+            env["PATH"] = "/usr/wine/wine-custom/bin:/bin:/usr/bin"
+            eslog.debug(f"command: {str(cmd)}")
+            proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            out, err = proc.communicate()
+            exitcode = proc.returncode
+            eslog.debug(out.decode())
+            eslog.error(err.decode())
+            with disclamier_done.open("w") as f:
+                f.write("done")
+
         vcrun2019_done = wineprefix / "vcrun2019.done"
         if not vcrun2019_done.exists():
             cmd = ["/usr/wine/winetricks", "-q", "vcrun2019"]
