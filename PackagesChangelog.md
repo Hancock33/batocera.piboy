@@ -20,6 +20,9 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|27060a68d52cf22
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|823240579101536bda0a1a44cef407fc8814d79a|Dec 14, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|928249b20b0fde005a0b8ce1ffd1bd7347108b45|Dec 14, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|3f10196a900a3b149a8b12af46e549848cffd691|Dec 14, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-10.0rc2.r1|Dec 14, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241214|Dec 14, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241214|Dec 14, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|9b84fcd8383e84a479ba5675a6e0b698ccf3c117|Dec 14, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|5634a07433ecd9806e952e1529941d8df53faa3f|Dec 14, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|981b6ac6e54d01cd24a5ac3e14a523fe0c683cbe|Dec 14, 2024
@@ -39,10 +42,7 @@ Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|5d1878ce2a8646d1a61563e
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|b67b2502d8e836a65de9963cfe26a4cdd6d03e37|Dec 13, 2024
 Emulators|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.8.0|Dec 13, 2024
 Emulators|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v2.14|Dec 13, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-10.0rc2.r0|Dec 13, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241213|Dec 13, 2024
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|15.1.0|Dec 13, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241213|Dec 13, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|16eee81f321e98c7f47d49bf28c80d795ee8e9b9|Dec 13, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|e82c7d242825a746fa4bd10cdf14aeefa1ebcac3|Dec 13, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|80d3eba272cf6efab6b76e4dc44ea2834c6f910d|Dec 13, 2024
