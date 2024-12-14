@@ -62,7 +62,7 @@ Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.6|Apr 12, 2
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|c4e311e245bad8717c7ef0d812b0ad7210c80fa5|Dec 14, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|c4e311e245bad8717c7ef0d812b0ad7210c80fa5|Dec 14, 2024
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|aed9c61e0a78e24644386f7329144f108b4f507c|Nov 10, 2024
-Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|1f837eb3658f883582ab815c19ac7e44f5b9fbaf|Dec 14, 2024
+Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|89ceee05c48cc943945d8409398557a14eb31627|Dec 14, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|e1f71f4d9924ff6e50909871c3ddb70a6309d96c|Dec 14, 2024
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|51100408d69a6732e79afcc1b2f1b2173147c7e4|Oct 19, 2024
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v116|Nov 21, 2024
@@ -279,7 +279,7 @@ Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b4
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-12-14|Dec 14, 2024
 Emulators|[ryujinx](https://github.com/GreemDev/Ryujinx/releases)|1.2.76|Nov 19, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|84439c643197540aba84eeee98533847c6705569|Dec 10, 2024
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|876445faf1b0ef63ddb9d0111e35b74bd31b4a42|Dec 14, 2024
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|0fd1ab674bbb6b41f5cc6d46ca5ed4bcd6d6052c|Dec 14, 2024
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|dfce87bbbc43141ec675ecd616d67113a7382b0a|Dec 13, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|b83f789343e7d2cc2df10d1c54e9b9fb01d5be87|Dec 14, 2024
@@ -292,7 +292,7 @@ Emulators|[supermodel](http://github.com/trzy/Supermodel)|d043dc0c6a99f5fff87d70
 Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|ee365bad9501c73ff49936e72ec91cd9c3ce5c24|Oct 06, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|cb85c911ca3b22fb9961fccfddfa8980b15c4719|Dec 13, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|b5215dbee7483d2052caca48fd25ce0a01e558fc|Dec 10, 2024
-Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45396|Dec 12, 2024
+Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45398|Dec 14, 2024
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|ad1ba0c083da454196c68361ba03ec4f51bb1e87|Dec 13, 2024
 Emulators|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v2.14|Dec 13, 2024
@@ -311,7 +311,7 @@ Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|a06ea8795482d2f49a5461ab5f23e0036e38d12b|Oct 17, 2024
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r48|Sept 06, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|98a03e944c5d4c9f3f4973a51bf3b707819d1a89|Nov 14, 2024
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|c2a03fe4b337bfded5576ff6c35ca88b777f0d92|Dec 14, 2024
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|b449937553c5dc0c6ef222f87822060fe3b35de8|Dec 14, 2024
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Firmwares|[alllinuxfirmwares](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot)|20241210|Dec 10, 2024
@@ -410,7 +410,7 @@ Libraries|[python-pyftdi](https://files.pythonhosted.org/packages/8f/b4/8578b8e4
 Libraries|[python-smbus3](https://files.pythonhosted.org/packages/75/39/4b7fe2b7cfb42a39e5bb4ef2970a3befc0febbf2b5b8ef85fac04ca6dcb3)|0.5.5|Jun 29, 2024
 Libraries|[python-sysv-ipc](https://files.pythonhosted.org/packages/0c/d7/5d2f861155e9749f981e6c58f2a482d3ab458bf8c35ae24d4b4d5899ebf9)|1.1.0|Jan 17, 2021
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|5.3.2|Oct 22, 2024
-Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|6f0f603fb374f28a4680d4ab99d159d69877065e|Oct 09, 2024
+Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|75ac6c6e39cf897d30958c603e004bc0d1cbfa63|Dec 14, 2024
 Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|05c445e7ad7317f2587527eec61b5010eee50f8d|Dec 11, 2024
 Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.2.6|Sept 09, 2024
 Looks|[adwaita-icon-theme-light](http://ftp.gnome.org/pub/gnome/sources/adwaita-icon-theme/)|$(ADWAITA_ICON_THEME_LIGHT_VERSION_MAJOR).0|Sep 10, 2021
@@ -431,7 +431,7 @@ Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e24
 Ports|[awgl](http://github.com/cyxx/rawgl)|1eeaa530c859bd6e37b3d3bd7d3136bc16afcc89|Mar 12, 2022
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|1855c8ed66b771fb62ae66bf5b1cbc9ede9cd03a|Dec 26, 2023
-Ports|[box64](http://github.com/ptitseb/box64)|6a5d8313312ca254b7382019dc99912cabc5dafd|Dec 14, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|6a3c56c1312a98ce2cf04ca72c5c4889a93070b3|Dec 14, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|ec278bd7843252d7bfc6e5e91d7074f9c0310de7|Dec 06, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ac86299e75e3fffae4bf60a20b92b510b1de2684|Dec 14, 2024
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
@@ -480,7 +480,7 @@ Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|be89e134e6f19ca5a9d4442b1ecfa2ccf
 Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|6facc3b09b67593cf9151a44cc59afd490f2ea62|Mar 25, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|20bb444562aa1dba79cf6adcb5da632ba580eec3|Jul 03, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|cf532d7c7675d3ffa5d69009d63869daf73955cb|Oct 26, 2024
-Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|5634a07433ecd9806e952e1529941d8df53faa3f|Dec 14, 2024
+Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|c878e0a3af8f2a5e22d35034270e3cf694d31c2d|Dec 14, 2024
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|4650327a4959321c8d28b89693abbda41fa69e6e|Dec 10, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|981b6ac6e54d01cd24a5ac3e14a523fe0c683cbe|Dec 14, 2024
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|d83967b2ea38eda8b43437167d93c86021bb4de1|Dec 02, 2024
