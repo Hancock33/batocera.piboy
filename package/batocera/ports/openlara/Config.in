@@ -1,13 +1,11 @@
 config BR2_PACKAGE_OPENLARA
 	bool "openlara"
-	depends on BR2_INSTALL_LIBSTDCPP
+	select BR2_PACKAGE_OPENAL
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
+	select BR2_PACKAGE_ZLIB
 
 	help
 	  Classic Tomb Raider open-source engine
 
 	  https://github.com/XProger/OpenLara
-
-comment "BR2_PACKAGE_OPENLARA needs a toolchain w/ C++"
-	depends on !BR2_INSTALL_LIBSTDCPP
