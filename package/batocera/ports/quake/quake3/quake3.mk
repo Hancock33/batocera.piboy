@@ -51,6 +51,6 @@ define QUAKE3_EVMAPY
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/quake3/quake3.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-IOQUAKE3_POST_INSTALL_TARGET_HOOKS += QUAKE3_EVMAPY
+QUAKE3_POST_INSTALL_TARGET_HOOKS += QUAKE3_EVMAPY
 
 $(eval $(generic-package))
