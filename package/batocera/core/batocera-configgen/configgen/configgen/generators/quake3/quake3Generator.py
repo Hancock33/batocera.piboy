@@ -11,7 +11,7 @@ class Quake3Generator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         quake3Config.writeCfgFiles(system, rom, playersControllers, gameResolution)
 
-        commandArray = ["ioquake3", "+set", "fs_basePath", "/userdata/roms/ports/quake3" ]
+        commandArray = ["/usr/bin/quake3/ioquake3", "+set", "fs_basePath", "/userdata/roms/ports/quake3" ]
 
         # get the game / mod to launch
         with open(rom, "r") as file:
