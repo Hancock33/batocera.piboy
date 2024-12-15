@@ -3,21 +3,19 @@
 # solarus-engine
 #
 ################################################################################
-# Version: Commits on Dec 04, 2024
-SOLARUS_ENGINE_VERSION = 6a6eb7c6c5a487f8f6edca729b51ded135e68cdf
+# Version: Commits on Dec 13, 2024
+SOLARUS_ENGINE_VERSION = 531cfecf6bfd7febb06d59ab1f7010643a3cf0be
 SOLARUS_ENGINE_SITE = $(call gitlab,solarus-games,solarus,$(SOLARUS_ENGINE_VERSION))
 SOLARUS_ENGINE_LICENSE = GPL-3.0 (code), CC-BY-SA-4.0 (Solarus logos and icons), CC-BY-SA-3.0 (GUI icons)
 SOLARUS_ENGINE_LICENSE_FILES = license.txt
-
-# Install libsolarus.so
 SOLARUS_ENGINE_INSTALL_STAGING = YES
+SOLARUS_ENGINE_DEPENDENCIES = batocera-luajit glm libmodplug libogg libpng libvorbis openal physfs sdl2 sdl2_image sdl2_ttf
 
-SOLARUS_ENGINE_DEPENDENCIES = glm libmodplug libogg libvorbis batocera-luajit openal physfs sdl2 sdl2_image sdl2_ttf
-
-# Disable launcher GUI (requires Qt5)
-SOLARUS_ENGINE_CONF_OPTS = \
-	-DSOLARUS_GUI=OFF \
-	-DSOLARUS_TESTS=OFF
+SOLARUS_ENGINE_CONF_OPTS += -DSOLARUS_GUI=OFF
+SOLARUS_ENGINE_CONF_OPTS += -DSOLARUS_TESTS=OFF
+SOLARUS_ENGINE_CONF_OPTS += -DSOLARUS_BASE_WRITE_DIR=/userdata/saves
+SOLARUS_ENGINE_CONF_OPTS += -DSOLARUS_WRITE_DIR=solarus
+SOLARUS_ENGINE_CONF_OPTS += -DSOLARUS_USE_LUAJIT=ON
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGLES),y)
 SOLARUS_ENGINE_DEPENDENCIES += libgles

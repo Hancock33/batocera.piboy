@@ -3,31 +3,31 @@
 # sonicmania
 #
 ################################################################################
-# Version: Commits on Nov 26, 2024
-SONICMANIA_VERSION = 952056c56214676de97aff684cea818efc2334f3
+# Version: Commits on Dec 14, 2024
+SONICMANIA_VERSION = 981b6ac6e54d01cd24a5ac3e14a523fe0c683cbe
 SONICMANIA_SITE = https://github.com/RSDKModding/Sonic-Mania-Decompilation
 SONICMANIA_SITE_METHOD = git
 SONICMANIA_GIT_SUBMODULES = YES
 SONICMANIA_LICENSE = Proprietary
 SONICMANIA_LICENSE_FILE = LICENSE.md
 
-SONICMANIA_DEPENDENCIES += libglu libglew libglfw libogg libtheora portaudio
+SONICMANIA_DEPENDENCIES += libglu libglew libglfw libogg libtheora portaudio sdl2
 
 SONICMANIA_SUPPORTS_IN_SOURCE_BUILD = NO
 
 SONICMANIA_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 SONICMANIA_CONF_OPTS += -DGAME_STATIC=ON
+SONICMANIA_CONF_OPTS += -DGAME_INCLUDE_EDITOR=OFF
 SONICMANIA_CONF_OPTS += -DRETRO_OUTPUT_NAME=sonicmania
+SONICMANIA_CONF_OPTS += -DRETRO_SUBSYSTEM=SDL2
 
 define SONICMANIA_INSTALL_TARGET_CMDS
-	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/dependencies/RSDKv5/sonicmania \
-		$(TARGET_DIR)/usr/bin/sonicmania
+	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/dependencies/RSDKv5/sonicmania $(TARGET_DIR)/usr/bin/sonicmania
 endef
 
 define SONICMANIA_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sonic/sonicmania/sonicmania.keys \
-		$(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sonic/sonicmania/sonicmania.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 SONICMANIA_POST_INSTALL_TARGET_HOOKS += SONICMANIA_EVMAPY

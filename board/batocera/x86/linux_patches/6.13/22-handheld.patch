@@ -507,7 +507,7 @@ index a51f3414b65d..bc0f9759c5c5 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index d8e15cbafab2..6e6a8f463652 100644
+index 0f0a70957e46..9f2810b0fbef 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -162,6 +162,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -520,7 +520,7 @@ index d8e15cbafab2..6e6a8f463652 100644
  /**
   * DOC: overview
   *
-@@ -4532,7 +4535,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4534,7 +4537,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  	return 0;
  }
  
@@ -529,7 +529,7 @@ index d8e15cbafab2..6e6a8f463652 100644
  #define AMDGPU_DM_DEFAULT_MAX_BACKLIGHT 255
  #define AMDGPU_DM_MIN_SPREAD ((AMDGPU_DM_DEFAULT_MAX_BACKLIGHT - AMDGPU_DM_DEFAULT_MIN_BACKLIGHT) / 2)
  #define AUX_BL_DEFAULT_TRANSITION_TIME_MS 50
-@@ -4566,11 +4569,27 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
+@@ -4568,11 +4571,27 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
  
  	if (caps.caps_valid) {
  		dm->backlight_caps[bl_idx].caps_valid = true;
@@ -557,7 +557,7 @@ index d8e15cbafab2..6e6a8f463652 100644
  		dm->backlight_caps[bl_idx].min_input_signal =
  				AMDGPU_DM_DEFAULT_MIN_BACKLIGHT;
  		dm->backlight_caps[bl_idx].max_input_signal =
-@@ -4580,6 +4599,9 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
+@@ -4582,6 +4601,9 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
  	if (dm->backlight_caps[bl_idx].aux_support)
  		return;
  
@@ -567,7 +567,7 @@ index d8e15cbafab2..6e6a8f463652 100644
  	dm->backlight_caps[bl_idx].min_input_signal = AMDGPU_DM_DEFAULT_MIN_BACKLIGHT;
  	dm->backlight_caps[bl_idx].max_input_signal = AMDGPU_DM_DEFAULT_MAX_BACKLIGHT;
  #endif
-@@ -4611,7 +4633,7 @@ static u32 convert_brightness_from_user(const struct amdgpu_dm_backlight_caps *c
+@@ -4613,7 +4635,7 @@ static u32 convert_brightness_from_user(const struct amdgpu_dm_backlight_caps *c
  	if (!get_brightness_range(caps, &min, &max))
  		return brightness;
  
@@ -576,7 +576,7 @@ index d8e15cbafab2..6e6a8f463652 100644
  	return min + DIV_ROUND_CLOSEST((max - min) * brightness,
  				       AMDGPU_MAX_BL_LEVEL);
  }
-@@ -4626,7 +4648,7 @@ static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *cap
+@@ -4628,7 +4650,7 @@ static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *cap
  
  	if (brightness < min)
  		return 0;
@@ -585,7 +585,7 @@ index d8e15cbafab2..6e6a8f463652 100644
  	return DIV_ROUND_CLOSEST(AMDGPU_MAX_BL_LEVEL * (brightness - min),
  				 max - min);
  }
-@@ -8989,7 +9011,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -8991,7 +9013,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -595,7 +595,7 @@ index d8e15cbafab2..6e6a8f463652 100644
  	bool pflip_present = false;
  	bool dirty_rects_changed = false;
 diff --git a/drivers/gpu/drm/amd/display/dc/core/dc.c b/drivers/gpu/drm/amd/display/dc/core/dc.c
-index 1dd26d5df6b9..6640f51908a4 100644
+index 49fe7dcf9372..86093f34e0b9 100644
 --- a/drivers/gpu/drm/amd/display/dc/core/dc.c
 +++ b/drivers/gpu/drm/amd/display/dc/core/dc.c
 @@ -4998,11 +4998,6 @@ static bool update_planes_and_stream_v2(struct dc *dc,
@@ -3432,18 +3432,6 @@ index 506c6f377e7d..53ed8d5b26ab 100644
  
 +MODULE_IMPORT_NS(ASUS_WMI);
  MODULE_LICENSE("GPL");
-diff --git a/drivers/hid/hid-ids.h b/drivers/hid/hid-ids.h
-index 1f47fda809b9..6c2df0d37b3b 100644
---- a/drivers/hid/hid-ids.h
-+++ b/drivers/hid/hid-ids.h
-@@ -210,6 +210,7 @@
- #define USB_DEVICE_ID_ASUSTEK_ROG_NKEY_KEYBOARD2	0x19b6
- #define USB_DEVICE_ID_ASUSTEK_ROG_NKEY_KEYBOARD3	0x1a30
- #define USB_DEVICE_ID_ASUSTEK_ROG_Z13_LIGHTBAR		0x18c6
-+#define USB_DEVICE_ID_ASUSTEK_ROG_RAIKIRI_PAD		0x1abb
- #define USB_DEVICE_ID_ASUSTEK_ROG_NKEY_ALLY		0x1abe
- #define USB_DEVICE_ID_ASUSTEK_ROG_NKEY_ALLY_X		0x1b4c
- #define USB_DEVICE_ID_ASUSTEK_ROG_CLAYMORE_II_KEYBOARD	0x196b
 diff --git a/drivers/hwmon/Kconfig b/drivers/hwmon/Kconfig
 index dd376602f3f1..825966b9d109 100644
 --- a/drivers/hwmon/Kconfig
@@ -5507,7 +5495,7 @@ index 000000000000..2620708d3994
 +
 +#endif /* _ASUS_BIOSCFG_H_ */
 diff --git a/drivers/platform/x86/asus-wmi.c b/drivers/platform/x86/asus-wmi.c
-index ba8b6d028f9f..49fa0f490490 100644
+index 8bd187e8b47f..90ba9d2373ee 100644
 --- a/drivers/platform/x86/asus-wmi.c
 +++ b/drivers/platform/x86/asus-wmi.c
 @@ -55,8 +55,6 @@ module_param(fnlock_default, bool, 0444);
@@ -5950,7 +5938,7 @@ index ba8b6d028f9f..49fa0f490490 100644
  
  /* Quirks *********************************************************************/
  
-@@ -3755,6 +3861,7 @@ static int throttle_thermal_policy_set_default(struct asus_wmi *asus)
+@@ -3748,6 +3854,7 @@ static int throttle_thermal_policy_set_default(struct asus_wmi *asus)
  	return throttle_thermal_policy_write(asus);
  }
  
@@ -5958,7 +5946,7 @@ index ba8b6d028f9f..49fa0f490490 100644
  static ssize_t throttle_thermal_policy_show(struct device *dev,
  				   struct device_attribute *attr, char *buf)
  {
-@@ -3798,6 +3905,7 @@ static ssize_t throttle_thermal_policy_store(struct device *dev,
+@@ -3791,6 +3898,7 @@ static ssize_t throttle_thermal_policy_store(struct device *dev,
   * Throttle thermal policy: 0 - default, 1 - overboost, 2 - silent
   */
  static DEVICE_ATTR_RW(throttle_thermal_policy);
@@ -5966,7 +5954,7 @@ index ba8b6d028f9f..49fa0f490490 100644
  
  /* Platform profile ***********************************************************/
  static int asus_wmi_platform_profile_get(struct platform_profile_handler *pprof,
-@@ -4395,27 +4503,29 @@ static struct attribute *platform_attributes[] = {
+@@ -4388,27 +4496,29 @@ static struct attribute *platform_attributes[] = {
  	&dev_attr_camera.attr,
  	&dev_attr_cardr.attr,
  	&dev_attr_touchpad.attr,
@@ -6014,7 +6002,7 @@ index ba8b6d028f9f..49fa0f490490 100644
  	NULL
  };
  
-@@ -4437,7 +4547,11 @@ static umode_t asus_sysfs_is_visible(struct kobject *kobj,
+@@ -4430,7 +4540,11 @@ static umode_t asus_sysfs_is_visible(struct kobject *kobj,
  		devid = ASUS_WMI_DEVID_LID_RESUME;
  	else if (attr == &dev_attr_als_enable.attr)
  		devid = ASUS_WMI_DEVID_ALS_ENABLE;
@@ -6027,7 +6015,7 @@ index ba8b6d028f9f..49fa0f490490 100644
  		devid = ASUS_WMI_DEVID_CHARGE_MODE;
  	else if (attr == &dev_attr_egpu_enable.attr)
  		ok = asus->egpu_enable_available;
-@@ -4475,6 +4589,7 @@ static umode_t asus_sysfs_is_visible(struct kobject *kobj,
+@@ -4468,6 +4582,7 @@ static umode_t asus_sysfs_is_visible(struct kobject *kobj,
  		ok = asus->mini_led_dev_id != 0;
  	else if (attr == &dev_attr_available_mini_led_mode.attr)
  		ok = asus->mini_led_dev_id != 0;
@@ -6035,7 +6023,7 @@ index ba8b6d028f9f..49fa0f490490 100644
  
  	if (devid != -1) {
  		ok = !(asus_wmi_get_devstate_simple(asus, devid) < 0);
-@@ -4714,7 +4829,20 @@ static int asus_wmi_add(struct platform_device *pdev)
+@@ -4707,7 +4822,20 @@ static int asus_wmi_add(struct platform_device *pdev)
  	if (err)
  		goto fail_platform;
  
@@ -6056,7 +6044,7 @@ index ba8b6d028f9f..49fa0f490490 100644
  	asus->ppt_pl2_sppt = 5;
  	asus->ppt_pl1_spl = 5;
  	asus->ppt_apu_sppt = 5;
-@@ -4726,8 +4854,6 @@ static int asus_wmi_add(struct platform_device *pdev)
+@@ -4719,8 +4847,6 @@ static int asus_wmi_add(struct platform_device *pdev)
  	asus->egpu_enable_available = asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_EGPU);
  	asus->dgpu_disable_available = asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_DGPU);
  	asus->kbd_rgb_state_available = asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_TUF_RGB_STATE);
@@ -6065,7 +6053,7 @@ index ba8b6d028f9f..49fa0f490490 100644
  
  	if (asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_MINI_LED_MODE))
  		asus->mini_led_dev_id = ASUS_WMI_DEVID_MINI_LED_MODE;
-@@ -4738,23 +4864,24 @@ static int asus_wmi_add(struct platform_device *pdev)
+@@ -4731,23 +4857,24 @@ static int asus_wmi_add(struct platform_device *pdev)
  		asus->gpu_mux_dev = ASUS_WMI_DEVID_GPU_MUX;
  	else if (asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_GPU_MUX_VIVO))
  		asus->gpu_mux_dev = ASUS_WMI_DEVID_GPU_MUX_VIVO;
@@ -6096,7 +6084,7 @@ index ba8b6d028f9f..49fa0f490490 100644
  		goto fail_platform_profile_setup;
  
  	err = asus_wmi_sysfs_init(asus->platform_device);
-@@ -4918,34 +5045,6 @@ static int asus_hotk_resume(struct device *device)
+@@ -4911,34 +5038,6 @@ static int asus_hotk_resume(struct device *device)
  	return 0;
  }
  
@@ -6131,7 +6119,7 @@ index ba8b6d028f9f..49fa0f490490 100644
  static int asus_hotk_restore(struct device *device)
  {
  	struct asus_wmi *asus = dev_get_drvdata(device);
-@@ -4986,11 +5085,32 @@ static int asus_hotk_restore(struct device *device)
+@@ -4979,11 +5078,32 @@ static int asus_hotk_restore(struct device *device)
  	return 0;
  }
  
@@ -6165,7 +6153,7 @@ index ba8b6d028f9f..49fa0f490490 100644
  	.prepare = asus_hotk_prepare,
  };
  
-@@ -5018,6 +5138,10 @@ static int asus_wmi_probe(struct platform_device *pdev)
+@@ -5011,6 +5131,10 @@ static int asus_wmi_probe(struct platform_device *pdev)
  			return ret;
  	}
  
@@ -6176,7 +6164,7 @@ index ba8b6d028f9f..49fa0f490490 100644
  	return asus_wmi_add(pdev);
  }
  
-@@ -5050,6 +5174,7 @@ EXPORT_SYMBOL_GPL(asus_wmi_register_driver);
+@@ -5043,6 +5167,7 @@ EXPORT_SYMBOL_GPL(asus_wmi_register_driver);
  
  void asus_wmi_unregister_driver(struct asus_wmi_driver *driver)
  {
@@ -6296,21 +6284,8 @@ index 09f8397bae15..19734b297527 100644
  static int platform_suspend_prepare(suspend_state_t state)
  {
  	return state != PM_SUSPEND_TO_IDLE && suspend_ops->prepare ?
-diff --git a/sound/pci/hda/patch_realtek.c b/sound/pci/hda/patch_realtek.c
-index 5f6be44a95f3..29efeef84a88 100644
---- a/sound/pci/hda/patch_realtek.c
-+++ b/sound/pci/hda/patch_realtek.c
-@@ -10631,6 +10631,8 @@ static const struct hda_quirk alc269_fixup_tbl[] = {
- 	SND_PCI_QUIRK(0x1043, 0x1e1f, "ASUS Vivobook 15 X1504VAP", ALC2XX_FIXUP_HEADSET_MIC),
- 	SND_PCI_QUIRK(0x1043, 0x1e51, "ASUS Zephyrus M15", ALC294_FIXUP_ASUS_GU502_PINS),
- 	SND_PCI_QUIRK(0x1043, 0x1e5e, "ASUS ROG Strix G513", ALC294_FIXUP_ASUS_G513_PINS),
-+	SND_PCI_QUIRK(0x1043, 0x1e63, "ASUS H7606W", ALC285_FIXUP_ASUS_GA403U_HEADSET_MIC),
-+	SND_PCI_QUIRK(0x1043, 0x1e83, "ASUS GA605W", ALC285_FIXUP_ASUS_GA403U_HEADSET_MIC),
- 	SND_PCI_QUIRK(0x1043, 0x1e8e, "ASUS Zephyrus G15", ALC289_FIXUP_ASUS_GA401),
- 	SND_PCI_QUIRK(0x1043, 0x1eb3, "ASUS Ally RCLA72", ALC287_FIXUP_TAS2781_I2C),
- 	SND_PCI_QUIRK(0x1043, 0x1ed3, "ASUS HN7306W", ALC287_FIXUP_CS35L41_I2C_2),
 diff --git a/sound/soc/amd/acp/acp-mach-common.c b/sound/soc/amd/acp/acp-mach-common.c
-index d314253207d5..584a6ec89782 100644
+index f7602c1769bf..dfcdf7e3c1dc 100644
 --- a/sound/soc/amd/acp/acp-mach-common.c
 +++ b/sound/soc/amd/acp/acp-mach-common.c
 @@ -26,6 +26,7 @@
@@ -6400,7 +6375,23 @@ index d314253207d5..584a6ec89782 100644
  /* Declare DMIC codec components */
  SND_SOC_DAILINK_DEF(dmic_codec,
  		DAILINK_COMP_ARRAY(COMP_CODEC("dmic-codec", "dmic-hifi")));
-@@ -1591,6 +1664,8 @@ int acp_legacy_dai_links_create(struct snd_soc_card *card)
+@@ -1477,6 +1550,7 @@ int acp_sofdsp_dai_links_create(struct snd_soc_card *card)
+ 		links[i].platforms = sof_component;
+ 		links[i].num_platforms = ARRAY_SIZE(sof_component);
+ 		links[i].playback_only = 1;
++		links[i].dpcm_capture = 1;
+ 		links[i].nonatomic = true;
+ 		links[i].no_pcm = 1;
+ 		if (!drv_data->amp_codec_id) {
+@@ -1509,6 +1583,7 @@ int acp_sofdsp_dai_links_create(struct snd_soc_card *card)
+ 		links[i].platforms = sof_component;
+ 		links[i].num_platforms = ARRAY_SIZE(sof_component);
+ 		links[i].playback_only = 1;
++		links[i].dpcm_capture = 1;
+ 		links[i].nonatomic = true;
+ 		links[i].no_pcm = 1;
+ 		if (!drv_data->amp_codec_id) {
+@@ -1591,6 +1666,8 @@ int acp_legacy_dai_links_create(struct snd_soc_card *card)
  
  	if (drv_data->hs_cpu_id)
  		num_links++;
@@ -6409,7 +6400,7 @@ index d314253207d5..584a6ec89782 100644
  	if (drv_data->amp_cpu_id)
  		num_links++;
  	if (drv_data->dmic_cpu_id)
-@@ -1744,6 +1819,33 @@ int acp_legacy_dai_links_create(struct snd_soc_card *card)
+@@ -1744,6 +1821,33 @@ int acp_legacy_dai_links_create(struct snd_soc_card *card)
  			card->codec_conf = rt1019_conf;
  			card->num_configs = ARRAY_SIZE(rt1019_conf);
  		}
