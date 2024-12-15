@@ -1,14 +1,12 @@
 ################################################################################
 #
-# yquake2_refvk
+# yquake2-refvk
 #
 ################################################################################
 # Version: Commits on Oct 15, 2024
 YQUAKE2_REFVK_VERSION = 0ae3c8174559dd50091304dc0792c941b80f3b2d
 YQUAKE2_REFVK_SITE = $(call github,yquake2,ref_vk,$(YQUAKE2_REFVK_VERSION))
-
-YQUAKE2_REFVK_DEPENDENCIES = yquake2
-YQUAKE2_REFVK_LICENSE = GPL-2.0
+YQUAKE2_REFVK_DEPENDENCIES = yquake2-client
 
 define YQUAKE2_REFVK_FIXSDL2_PATH
 	sed -i "s+/usr+$(STAGING_DIR)/usr+g" $(@D)/Makefile
