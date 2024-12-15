@@ -1,0 +1,13 @@
+diff --git a/src/client/cl_keyboard.c b/src/client/cl_keyboard.c
+index e0aac061..24e46c12 100644
+--- a/src/client/cl_keyboard.c
++++ b/src/client/cl_keyboard.c
+@@ -1270,7 +1270,7 @@ Key_Event(int key, qboolean down, qboolean special)
+ 	if ((key >= K_MOUSE1 && key != K_JOY_BACK) && !keybindings[key] && (cls.key_dest != key_console) &&
+ 		(cls.state == ca_active))
+ 	{
+-		Com_Printf("%s (%d) is unbound, hit F4 to set.\n", Key_KeynumToString(key), key);
++		//Com_Printf("%s (%d) is unbound, hit F4 to set.\n", Key_KeynumToString(key), key);
+ 	}
+ 
+ 	/* While in attract loop all keys besides F1 to F12 (to

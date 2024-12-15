@@ -4,8 +4,8 @@
 #
 ################################################################################
 
-# Version: Commits on Sept 18, 2024
-SPIRV_CROSS_VERSION = vulkan-sdk-1.3.296.0
+# Version: Commits on Dec 11, 2024
+SPIRV_CROSS_VERSION = d2478b2028dbde45d7caa9dca0de0d697bc27223
 SPIRV_CROSS_SITE = $(call github,KhronosGroup,SPIRV-Cross,$(SPIRV_CROSS_VERSION))
 SPIRV_CROSS_LICENSE = Apache-2.0
 SPIRV_CROSS_LICENSE_FILES = LICENSE

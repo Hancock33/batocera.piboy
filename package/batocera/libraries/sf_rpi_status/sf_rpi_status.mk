@@ -3,8 +3,8 @@
 # sf_rpi_status
 #
 ################################################################################
-# Version: Commits on Oct 29, 2024
-SF_RPI_STATUS_VERSION = 39680acbc051c877d4f57f55ec27d4194240f115
+# Version: Commits on Dec 11, 2024
+SF_RPI_STATUS_VERSION = 05c445e7ad7317f2587527eec61b5010eee50f8d
 SF_RPI_STATUS_SITE = $(call github,sunfounder,sf_rpi_status,$(SF_RPI_STATUS_VERSION))
 SF_RPI_STATUS_SETUP_TYPE = setuptools
 SF_RPI_STATUS_LICENSE = GPL-2.0

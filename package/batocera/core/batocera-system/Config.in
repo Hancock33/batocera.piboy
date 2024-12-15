@@ -167,6 +167,9 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_BATOCERA_USERDATAINIT                # userdata init files
     select BR2_PACKAGE_BATOCERA_WPA                         # wireless tools
     select BR2_PACKAGE_BOOST_ATOMIC                         # library that provides atomic data types and operations on these data types
+    select BR2_PACKAGE_BOOST_CONTEXT
+    select BR2_PACKAGE_BOOST_RANDOM
+    select BR2_PACKAGE_BOOST_REGEX
     select BR2_PACKAGE_BTRFS_PROGS                          # btrfs
     select BR2_PACKAGE_CIFS_UTILS                           # required for boot mounts
     select BR2_PACKAGE_CONNMAN                              # network manager
@@ -1397,11 +1400,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_DOOMRETRO                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
     #Quake
-    select BR2_PACKAGE_YQUAKE2                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
-    select BR2_PACKAGE_YQUAKE2_REFVK                        if  BR2_PACKAGE_YQUAKE2
-    select BR2_PACKAGE_YROGUE                               if  BR2_PACKAGE_YQUAKE2
-    select BR2_PACKAGE_VKQUAKE                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
-    select BR2_PACKAGE_XATRIX                               if  BR2_PACKAGE_YQUAKE2
+    select BR2_PACKAGE_QUAKE2                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
     select BR2_PACKAGE_QUAKESPASM                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
     select BR2_PACKAGE_ALEPHONE                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Alephone

@@ -5,6 +5,7 @@ config BR2_PACKAGE_HURRICAN
 	select BR2_PACKAGE_SDL2_MIXER
 	select BR2_PACKAGE_SDL2_IMAGE
 	select BR2_PACKAGE_LIBEPOXY
+	select BR2_PACKAGE_LIBOPENMPT
 
 	help
 	  A fork of Hurrican, freeware jump and shoot game created

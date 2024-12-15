@@ -1,30 +1,31 @@
 diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
-index 5d42399a..d5168fdb 100644
+index 2d376486..802dd2a1 100644
 --- a/src/osdep/amiberry.cpp
 +++ b/src/osdep/amiberry.cpp
-@@ -4014,7 +4014,7 @@ void create_missing_amiberry_folders()
+@@ -4075,7 +4075,7 @@ void create_missing_amiberry_folders()
  #ifdef __MACH__
-         const std::string default_roms_path = app_directory + "/Resources/roms/";
+ 		const std::string default_roms_path = app_directory + "/Resources/roms/";
  #else
--        const std::string default_roms_path = AMIBERRY_DATADIR "/roms/";
-+        const std::string default_roms_path = "/userdata/bios/amiga";
+-		const std::string default_roms_path = AMIBERRY_DATADIR "/roms/";
++		const std::string default_roms_path = "/userdata/bios/amiga";
  #endif
-         // copy default kickstart files, if they exist in AMIBERRY_DATADIR/roms
-         if (my_existsdir(default_roms_path.c_str()))
-@@ -4059,9 +4059,9 @@ static void init_amiberry_dirs()
+ 		// copy default kickstart files, if they exist in AMIBERRY_DATADIR/roms
+ 		if (my_existsdir(default_roms_path.c_str()))
+@@ -4124,10 +4124,9 @@ static void init_amiberry_dirs(bool portable_mode)
+ #else
  	const std::string amiberry_dir = "amiberry";
  #endif
- 	current_dir = home_dir = get_home_directory();
--    data_dir = get_data_directory();
--    config_path = get_config_directory();
--    plugins_dir = get_plugins_directory();
+-	current_dir = home_dir = get_home_directory(portable_mode);
+-    data_dir = get_data_directory(portable_mode);
+-    config_path = get_config_directory(portable_mode);
+-    plugins_dir = get_plugins_directory(portable_mode);
 +    data_dir = "/usr/share/amiberry/data/";
 +    config_path = "/userdata/system/configs/amiberry/conf";
 +    plugins_dir = "/usr/share/amiberry/plugins/";
  
- 	std::string xdg_data_home = get_xdg_data_home();
- 	xdg_data_home += "/" + amiberry_dir;
-@@ -4106,26 +4106,26 @@ static void init_amiberry_dirs()
+ 	if (portable_mode)
+ 	{
+@@ -4206,26 +4205,26 @@ static void init_amiberry_dirs(bool portable_mode)
      video_dir.append("/Videos/");
  	themes_path.append("/Themes/");
  #else

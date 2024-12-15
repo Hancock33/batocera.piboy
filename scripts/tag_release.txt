@@ -17,7 +17,6 @@ vice.mk
 vulkan-headers.mk
 vulkan-utility-libraries.mk
 vulkan-validationlayers.mk
-vulkan-volk.mk
 wine-custom.mk
 wine-mono.mk
 wine-native.mk
