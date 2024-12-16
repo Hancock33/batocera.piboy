@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Batocera\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-05 13:13+0100\n"
-"PO-Revision-Date: 2024-11-20 13:25+0100\n"
+"PO-Revision-Date: 2024-12-16 12:29+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak (Slovakia)\n"
 "Language: sk_SK\n"
@@ -2641,7 +2641,7 @@ msgstr "Adaptívne (najprv horné pole)"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Adaptive Sync (Default)"
-msgstr ""
+msgstr "Adaptívna synchronizácia (predvolené)"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -2689,7 +2689,7 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Adjust the mechanical sounds of the table."
-msgstr ""
+msgstr "Upraviť mechanické zvuky stola."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -4547,7 +4547,7 @@ msgstr "Režim kurzora"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "CURSOR TIMEOUT"
-msgstr ""
+msgstr "Timeout kurzora"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -4597,7 +4597,7 @@ msgstr "CXD4 (LLE Fallback)"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "CYBERMORPH"
-msgstr ""
+msgstr "Cybermorph"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -4797,7 +4797,7 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Change Camera Angle"
-msgstr ""
+msgstr "Zmeniť uhol kamery"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -4830,7 +4830,7 @@ msgstr ""
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Change image scaling algorithm quality."
-msgstr ""
+msgstr "Zmeniť kvalitu algoritmu škálovania obrazu."
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -4840,7 +4840,7 @@ msgstr "Zmeniť metódu škálovania a filtrovania bodov."
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Change the Gamecube system language."
-msgstr ""
+msgstr "Zmeniť systémový jazyk Gamecube."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -5706,12 +5706,12 @@ msgstr "Iba DMA (mierne rýchlejšie)"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "DMD SIZE"
-msgstr ""
+msgstr "Veľkosť DMD"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "DMD window ratio"
-msgstr ""
+msgstr "Pomer okna DMD"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -5721,7 +5721,7 @@ msgstr "Prepísanie DNS"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "DOCK MODE"
-msgstr ""
+msgstr "Dokovaný režim"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -5836,7 +5836,7 @@ msgstr "Dánčina"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Danish (dk)"
-msgstr ""
+msgstr "Dánčina (dk)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -5891,7 +5891,7 @@ msgstr "Iba predvolené"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Default Performance Settings"
-msgstr ""
+msgstr "Predvolené nastavenia výkonu"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -6645,7 +6645,7 @@ msgstr ""
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Emutos language && region setting."
-msgstr ""
+msgstr "Nastavenie jazyka && regiónu Emutos."
 
 #. TRANSLATION: mupen64plus, ppsspp
 msgctxt "game_options"
@@ -6718,7 +6718,7 @@ msgstr ""
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Enable X-Input mode for Xbox type controllers."
-msgstr ""
+msgstr "Povoliť režim X-vstup pre ovládače typu Xbox."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -6894,7 +6894,7 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Enable the custom values below."
-msgstr ""
+msgstr "Povoliť vlastné hodnoty nižšie."
 
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
@@ -6930,7 +6930,7 @@ msgstr ""
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Enable to display if your BIOS haas known problems."
-msgstr ""
+msgstr "Povoľte na zobrazenie, či váš BIOS má známe problémy."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -6998,7 +6998,7 @@ msgstr "Pre priehľadnosť boli povolené sieťované polygóny."
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "Enabled or disable the mouse cursor. Useful for CG's menus."
-msgstr ""
+msgstr "Povoliť alebo zakázať kurzor myši. Užitočné pre ponuky CG."
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -7143,7 +7143,7 @@ msgstr ""
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Enhancement. Increase the rendering resolution."
-msgstr ""
+msgstr "Rozšírenie. Zvyšuje rozlíšenie zobrazenia."
 
 #. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, flycast, ...
 msgctxt "game_options"
@@ -7640,7 +7640,7 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "FULL SINGLE SCREEN"
-msgstr ""
+msgstr "Na celú obrazovku"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -11271,7 +11271,7 @@ msgstr "Najbližší sused"
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Nearest pixel sampling"
-msgstr ""
+msgstr "Najbližšie pixelové vzorkovanie"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -11400,7 +11400,7 @@ msgstr "Žiadne (predvolené)"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "None/Sharp Pixels"
-msgstr ""
+msgstr "Žiadne/ostré body"
 
 #. TRANSLATION: awgl, duckstation, flycast, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
@@ -11521,7 +11521,7 @@ msgstr "Zapnuté"
 #. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, ...
 msgctxt "game_options"
 msgid "ON-SCREEN DISPLAY & NOTIFCATIONS"
-msgstr ""
+msgstr "Zobrazenie na obrazovke a upozornenia"
 
 #. TRANSLATION: libretro/uae4arm
 msgctxt "game_options"
@@ -11665,7 +11665,7 @@ msgstr "Zapnuté (predvolené)"
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "On (Speed hack)"
-msgstr ""
+msgstr "Zapnuté (rýchlostný hack)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -12425,7 +12425,7 @@ msgstr ""
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "Play this game on several screens (if available)"
-msgstr ""
+msgstr "Hrať túto hru na viacerých obrazovkách (ak je dostupné)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -12450,7 +12450,7 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Playfield configuration"
-msgstr ""
+msgstr "Nastavenie hracieho poľa"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -13513,7 +13513,7 @@ msgstr "Šírka obrazovky"
 #. TRANSLATION: bigpemu, bigpemu, bigpemu, bigpemu, bigpemu, ...
 msgctxt "game_options"
 msgid "SCRIPT MODULES"
-msgstr ""
+msgstr "Moduly skriptov"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13573,7 +13573,7 @@ msgstr "Zdieľať MAME grafiku"
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "SHOW ACHIEVEMENT MESSAGES"
-msgstr ""
+msgstr "Zobraziť správy úspechov"
 
 #. TRANSLATION: duckstation, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, ...
 msgctxt "game_options"
@@ -13598,7 +13598,7 @@ msgstr ""
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "SHOW LID STATE"
-msgstr ""
+msgstr "Zobraziť stav veka"
 
 #. TRANSLATION: dolphin, dolphin, libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, ...
 msgctxt "game_options"
@@ -13613,12 +13613,12 @@ msgstr "Zobraziť správy na obrazovke"
 #. TRANSLATION: vita3k
 msgctxt "game_options"
 msgid "SHOW POINTER"
-msgstr ""
+msgstr "Zobraziť ukazovateľ"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "SHOW SCREEN LAYOUT"
-msgstr ""
+msgstr "Zobraziť rozloženie obrazovky"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -13823,7 +13823,7 @@ msgstr "STE"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "STEERING SENSITIVITY"
-msgstr ""
+msgstr "Citlivosť riadenia"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -14013,7 +14013,7 @@ msgstr "Rozlíšenie obrazovky (predvolené)"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
-msgstr ""
+msgstr "Naklonenie obrazovky (stupne)"
 
 #. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.dhewm3.keys, doom3.keys, dreamcast.flycast.keys, ...
 msgctxt "keys_files"
@@ -15292,7 +15292,7 @@ msgstr "Švajčiarska nemčina (ch)"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Switches the game to multiplayer mode."
-msgstr ""
+msgstr "Prepne hru do režimu multiplayera."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15684,7 +15684,7 @@ msgstr ""
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "The day within the month of your birthday."
-msgstr ""
+msgstr "Deň v mesiaci vašich narodenín."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -16030,7 +16030,7 @@ msgstr ""
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "UDP BIND ADDRESS"
-msgstr ""
+msgstr "UDP BIND adresa"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -16125,7 +16125,7 @@ msgstr "Použiť profily ovládačov"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "USE PRE-EMPTIVE FRAMES"
-msgstr ""
+msgstr "Použiť preemptívne snímky"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -16360,7 +16360,7 @@ msgstr "Bez mierky (predvolené)"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Until Timeout"
-msgstr ""
+msgstr "Do timeoutu"
 
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
@@ -16891,12 +16891,12 @@ msgstr "WAN"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "WARN ABOUT BIOS PROBLEMS"
-msgstr ""
+msgstr "Upozorniť na problémy BIOSu"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "WARN ABOUT UNSUPPORTED FEATURES"
-msgstr ""
+msgstr "Upozorniť na nepodporované funkcie"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -17143,7 +17143,7 @@ msgstr ""
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "X-INPUT"
-msgstr ""
+msgstr "X-vstup"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -17193,7 +17193,7 @@ msgstr "Jemen"
 #. TRANSLATION: vita3k
 msgctxt "game_options"
 msgid "You can hide the pointer on touchscreen devices."
-msgstr ""
+msgstr "Môžete skryť ukazovateľ na dotykových zariadeniach."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -17363,12 +17363,12 @@ msgstr "ukončiť hru"
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "fire primary"
-msgstr ""
+msgstr "primárna spúšť"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "fire secondary"
-msgstr ""
+msgstr "sekundárna spúšť"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
@@ -17637,7 +17637,7 @@ msgstr "menšie"
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "smart missile"
-msgstr ""
+msgstr "moderná strela"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
