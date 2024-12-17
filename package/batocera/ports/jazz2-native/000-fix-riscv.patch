@@ -1,5 +1,5 @@
 diff --git a/Sources/Shared/Core/Logger.h b/Sources/Shared/Core/Logger.h
-index eb1b938894..8ed7be185f 100644
+index eb1b9388..8ed7be18 100644
 --- a/Sources/Shared/Core/Logger.h
 +++ b/Sources/Shared/Core/Logger.h
 @@ -228,7 +228,7 @@ namespace Death { namespace Trace {
