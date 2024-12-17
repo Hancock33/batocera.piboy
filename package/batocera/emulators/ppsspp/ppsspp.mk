@@ -3,8 +3,8 @@
 # ppsspp
 #
 ################################################################################
-# Version: Commits on Dec 16, 2024
-PPSSPP_VERSION = 7496fcc33322f3d4dd47be2985b853ace2725ff7
+# Version: Commits on Dec 17, 2024
+PPSSPP_VERSION = 34148f46e2e01cc5db8c50a00bd7d02463b4ec78
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
