@@ -17,6 +17,8 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|158d454c22cd1eac83e4
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|bfaa251cda9549392f69b1b9ba74f5f191845110|Dec 17, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|e9d11d9bdbdd19269b18d85908bd96525a3cb277|Dec 17, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|d682917e440728d929e7e3fbda752c29483f0e0b|Dec 17, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241217|Dec 17, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241217|Dec 17, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|c9c54a32266be8ba8247b509ecd5a6cbbaede7a3|Dec 17, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|2aa13c834763e5bcfad79c14c3259875620bbd18|Dec 17, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|92442e999a99bf704fd22f7afec1e5be2c60d653|Dec 17, 2024
@@ -65,8 +67,6 @@ Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|75ac6c6e39cf
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ac86299e75e3fffae4bf60a20b92b510b1de2684|Dec 14, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|3f10196a900a3b149a8b12af46e549848cffd691|Dec 14, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-10.0rc2.r1|Dec 14, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241214|Dec 14, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241214|Dec 14, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|9b84fcd8383e84a479ba5675a6e0b698ccf3c117|Dec 14, 2024
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|028a11825f0c308be5193031f10c112803f8223b|Dec 14, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|989d3b1370ff6c843ecc5cfd8bcd8e247637c6a1|Dec 13, 2024
