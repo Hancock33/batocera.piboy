@@ -3,8 +3,8 @@
 # theforceengine
 #
 ################################################################################
-# Version: Commits on Dec 04, 2024
-THEFORCEENGINE_VERSION = e31c7d09dbec3c06fbb2efe5e95ec7fc60a5839f
+# Version: Commits on Dec 17, 2024
+THEFORCEENGINE_VERSION = bfaa251cda9549392f69b1b9ba74f5f191845110
 THEFORCEENGINE_SITE = $(call github,luciusDXL,TheForceEngine,$(THEFORCEENGINE_VERSION))
 THEFORCEENGINE_LICENSE = GPLv2
 THEFORCEENGINE_LICENSE_FILE = LICENSE
