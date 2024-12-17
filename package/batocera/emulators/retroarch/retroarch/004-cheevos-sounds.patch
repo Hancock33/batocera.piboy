@@ -1,8 +1,8 @@
 diff --git a/audio/audio_driver.c b/audio/audio_driver.c
-index bf3391cafa..9125b4f722 100644
+index 8c3ba0aac6..338f96fc50 100644
 --- a/audio/audio_driver.c
 +++ b/audio/audio_driver.c
-@@ -1331,8 +1331,8 @@ static void audio_driver_load_menu_bgm_callback(retro_task_t *task,
+@@ -1333,8 +1333,8 @@ static void audio_driver_load_menu_bgm_callback(retro_task_t *task,
  void audio_driver_load_system_sounds(void)
  {
     char basename_noext[NAME_MAX_LENGTH];
@@ -13,7 +13,7 @@ index bf3391cafa..9125b4f722 100644
     settings_t *settings                  = config_get_ptr();
     const char *dir_assets                = settings->paths.directory_assets;
     const bool audio_enable_menu          = settings->bools.audio_enable_menu;
-@@ -1357,19 +1357,6 @@ void audio_driver_load_system_sounds(void)
+@@ -1359,19 +1359,6 @@ void audio_driver_load_system_sounds(void)
     if (!audio_enable_menu && !audio_enable_cheevo_unlock)
        goto end;
  
@@ -33,7 +33,7 @@ index bf3391cafa..9125b4f722 100644
     list          = dir_list_new(sounds_path, MENU_SOUND_FORMATS, false, false, false, false);
     list_fallback = dir_list_new(sounds_fallback_path, MENU_SOUND_FORMATS, false, false, false, false);
  
-@@ -1415,8 +1402,13 @@ void audio_driver_load_system_sounds(void)
+@@ -1417,8 +1404,13 @@ void audio_driver_load_system_sounds(void)
              path_notice_back = path;
           else if (string_is_equal_noncase(basename_noext, "bgm"))
              path_bgm = path;
@@ -50,7 +50,7 @@ index bf3391cafa..9125b4f722 100644
              path_up = path;
           else if (string_is_equal_noncase(basename_noext, "down"))
 diff --git a/configuration.c b/configuration.c
-index 39beb2eb7e..8d23c832cd 100644
+index b8f947273e..15350405bb 100644
 --- a/configuration.c
 +++ b/configuration.c
 @@ -1571,6 +1571,7 @@ static struct config_array_setting *populate_settings_array(
