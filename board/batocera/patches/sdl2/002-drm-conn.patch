@@ -1,5 +1,5 @@
 diff --git a/src/video/kmsdrm/SDL_kmsdrmvideo.c b/src/video/kmsdrm/SDL_kmsdrmvideo.c
-index 2f49259e3..7a1e53d26 100644
+index 063c82ac7..a66d9c041 100644
 --- a/src/video/kmsdrm/SDL_kmsdrmvideo.c
 +++ b/src/video/kmsdrm/SDL_kmsdrmvideo.c
 @@ -78,6 +78,7 @@ static int get_driindex(void)
