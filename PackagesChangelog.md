@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241219|Dec 19, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241219|Dec 19, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|3738ccd2e676aa2c2cf2cdd5f08d5ac8dd221f57|Dec 18, 2024
 Emulators|[citra](https://github.com/Borked3DS/Borked3DS.git)|1dcf0fc721e812fc53dcc0680654e9f4e9265f6c|Dec 18, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|ac0d6cbaaaaaac9c371e16b156daa8fa9ce6a208|Dec 18, 2024
@@ -35,8 +37,6 @@ Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|fdf1ea9f007cb634fe18d73
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|158d454c22cd1eac83e4533f8f2d3115702fd762|Dec 17, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|bfaa251cda9549392f69b1b9ba74f5f191845110|Dec 17, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|e9d11d9bdbdd19269b18d85908bd96525a3cb277|Dec 17, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241217|Dec 17, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241217|Dec 17, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|1d7763864ba4c4bb772a67c9a0c1371e736aba88|Dec 17, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|c9c54a32266be8ba8247b509ecd5a6cbbaede7a3|Dec 17, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|e15ffeb47d98977d1a47f6128eb5e1b4da8026d5|Dec 17, 2024
