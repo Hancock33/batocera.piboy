@@ -14,6 +14,7 @@ Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.29.0-rc.2|Dec 20, 20
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|0ae2b87c571303ca8469905fedc04d44b9a677e4|Dec 20, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|618648a88ab1b6f2f6d6598672752f8125822227|Dec 20, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.5.2|Dec 20, 2024
+Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc3|Dec 20, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241220|Dec 20, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241220|Dec 20, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|63f3fef2a2239377b902616a7a23df91ed248d1b|Dec 20, 2024
@@ -78,7 +79,6 @@ Emulators|[libretro-nestopia](http://github.com/libretro/nestopia)|e7b65504ffc7f
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|3c8189a86d332259dc2c5560c41f1b5e630ed263|Dec 14, 2024
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|75ac6c6e39cf897d30958c603e004bc0d1cbfa63|Dec 14, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ac86299e75e3fffae4bf60a20b92b510b1de2684|Dec 14, 2024
-Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-10.0rc2.r1|Dec 14, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|9b84fcd8383e84a479ba5675a6e0b698ccf3c117|Dec 14, 2024
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|028a11825f0c308be5193031f10c112803f8223b|Dec 14, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|989d3b1370ff6c843ecc5cfd8bcd8e247637c6a1|Dec 13, 2024
