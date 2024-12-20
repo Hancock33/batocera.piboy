@@ -14,6 +14,8 @@ Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.29.0-rc.2|Dec 20, 20
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|0ae2b87c571303ca8469905fedc04d44b9a677e4|Dec 20, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|618648a88ab1b6f2f6d6598672752f8125822227|Dec 20, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.5.2|Dec 20, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241220|Dec 20, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241220|Dec 20, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|63f3fef2a2239377b902616a7a23df91ed248d1b|Dec 20, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|b9a5d5faad81d5bf559137dab7a8b83d22ae4a9a|Dec 20, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|e751092555975c7ec3a65e1da1144ca6a4e6a1b1|Dec 20, 2024
@@ -34,8 +36,6 @@ Libraries|[projectm](http://github.com/projectM-visualizer/projectm)|v4.1.3|Dec 
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|71000d7d05293d60e1c0fa108adf7b59899ce539|Dec 19, 2024
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.15.91|Dec 19, 2024
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|788f004bb1e598583531c9858d0ab49f26626322|Dec 19, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241219|Dec 19, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241219|Dec 19, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|62381cc7dedecd47e270c6c9241dd14bec79fa8f|Dec 19, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|21de8ff8dd20a7845488fa0b95b98d8ce87042b1|Dec 19, 2024
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|c387c0159642d6cf21a1c31c5fababf093c74f2f|Dec 19, 2024
