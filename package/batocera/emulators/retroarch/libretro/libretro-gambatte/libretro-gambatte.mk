@@ -3,8 +3,8 @@
 # libretro-gambatte
 #
 ################################################################################
-# Version: Commits on Nov 29, 2024
-LIBRETRO_GAMBATTE_VERSION = 9d92381643a6aad186054fa6019a47b710f73d2c
+# Version: Commits on Dec 20, 2024
+LIBRETRO_GAMBATTE_VERSION = a870b6dcde66fba00cd7aab5ae4bb699e458a91b
 LIBRETRO_GAMBATTE_SITE = $(call github,libretro,gambatte-libretro,$(LIBRETRO_GAMBATTE_VERSION))
 LIBRETRO_GAMBATTE_LICENSE = GPLv2
 
