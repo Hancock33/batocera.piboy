@@ -3,8 +3,8 @@
 # dxvk
 #
 ################################################################################
-# Version: Commits on Nov 18, 2024
-DXVK_VERSION = v2.5.1
+# Version: Commits on Dec 20, 2024
+DXVK_VERSION = v2.5.2
 DXVK_SOURCE = dxvk-$(subst v,,$(DXVK_VERSION)).tar.gz
 DXVK_SITE = https://github.com/doitsujin/dxvk/releases/download/$(DXVK_VERSION)
 
