@@ -8,7 +8,9 @@ Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|be863e4c3f9102aa9d979
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|2bf6dae2fa034839a816b539aa6307996590355a|Dec 21, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|739f2ff55ce9f2b31eade0c503c7f4e5578037a5|Dec 21, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|00574b4f79144865dd34dca74924436de01fd645|Dec 21, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241221|Dec 21, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|0d6c87165cfad2dd95c3d55200b332947b5af39b|Dec 21, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241221|Dec 21, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|524aabe9640f5efc201250eceabe4f9ec52f60e8|Dec 21, 2024
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|2bf6dae2fa034839a816b539aa6307996590355a|Dec 21, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|4175cbd8a18e4aca6b6b23ce2ee7d8060ba562cd|Dec 20, 2024
@@ -25,8 +27,6 @@ Ports|[vcmi](https://github.com/vcmi/vcmi.git)|370ecf6f660d098c4d95a22f53e981fdf
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.29.0-rc.2|Dec 20, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.5.2|Dec 20, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc3|Dec 20, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241220|Dec 20, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241220|Dec 20, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|b9a5d5faad81d5bf559137dab7a8b83d22ae4a9a|Dec 20, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|e751092555975c7ec3a65e1da1144ca6a4e6a1b1|Dec 20, 2024
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|a870b6dcde66fba00cd7aab5ae4bb699e458a91b|Dec 20, 2024
