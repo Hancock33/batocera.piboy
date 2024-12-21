@@ -19,7 +19,6 @@ Ports|[nblood](http://github.com/nukeykt/NBlood)|r14163|Dec 21, 2024
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|a99cab214cf39f387a2a92da2e730e093c8529cf|Dec 21, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|9f4a190245f94df7feb322059672e501b48a5ce1|Dec 21, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|7fa69d1e38969e0d9676cf8a0f50172c89125f63|Dec 21, 2024
-Ports|[vcmi](https://github.com/vcmi/vcmi.git)|367e1f192599e9788e60be5ce8af0095d8682541|Dec 21, 2024
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|be863e4c3f9102aa9d979c48dabce559fcd73d36|Dec 21, 2024
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|2bf6dae2fa034839a816b539aa6307996590355a|Dec 21, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|072d9493461a1c021621bc443dd3bb257bbe491e|Dec 21, 2024
@@ -44,6 +43,7 @@ Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|4175cbd8a18e4aca6
 Emulators|[citra](https://github.com/Borked3DS/Borked3DS.git)|13cc23705ac95178b6fe8ecefed075606e4f87aa|Dec 20, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|1ba8541da95128c784d03f9fe5cd53a227de1f89|Dec 20, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|9e4a07d3b7740d11f31a608d3f5dce1501d816a3|Dec 20, 2024
+Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.0|Dec 20, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.29.0-rc.2|Dec 20, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.5.2|Dec 20, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc3|Dec 20, 2024

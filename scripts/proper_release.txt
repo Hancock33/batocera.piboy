@@ -28,6 +28,7 @@ libretro-mame.mk
 libserum.mk
 libxmp.mk
 libzedmd.mk
+vcmi.mk
 mame-src.mk
 mame.mk
 mold.mk
