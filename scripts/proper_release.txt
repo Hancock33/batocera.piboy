@@ -28,7 +28,6 @@ libretro-mame.mk
 libserum.mk
 libxmp.mk
 libzedmd.mk
-vcmi.mk
 mame-src.mk
 mame.mk
 mold.mk
@@ -55,6 +54,7 @@ switchres.mk
 syncthing.mk
 touchegg.mk
 unclutter.mk
+vcmi.mk
 vkd3d-proton.mk
 wf-recorder.mk
 wildmidi.mk
