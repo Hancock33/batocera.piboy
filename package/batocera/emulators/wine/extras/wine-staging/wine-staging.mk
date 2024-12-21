@@ -3,8 +3,8 @@
 # wine-staging
 #
 ################################################################################
-# Version: Commits on Dec 06, 2024
-WINE_STAGING_VERSION = wine-10.0-rc1
+# Version: Commits on Dec 20, 2024
+WINE_STAGING_VERSION = wine-10.0-rc3
 WINE_STAGING_SOURCE = wine-$(WINE_STAGING_VERSION).tar.gz
 WINE_STAGING_SITE = $(call github,wine-mirror,wine,$(WINE_STAGING_VERSION))
 WINE_STAGING_LICENSE = LGPL-2.1+
@@ -12,7 +12,7 @@ WINE_STAGING_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_STAGING_SELINUX_MODULES = wine
 WINE_STAGING_DEPENDENCIES = host-bison host-flex host-wine-custom
 HOST_WINE_STAGING_DEPENDENCIES = host-bison host-flex
-WINE_STAGING_STAGING_VERSION = v10.0-rc1
+WINE_STAGING_STAGING_VERSION = v10.0-rc3
 HOST_WINE_STAGING_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/$(WINE_STAGING_STAGING_VERSION).tar.gz
 
 define WINE_STAGING_AUTOGEN
