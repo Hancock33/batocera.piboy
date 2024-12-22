@@ -3,8 +3,8 @@
 # yquake2-client
 #
 ################################################################################
-# Version: Commits on Dec 21, 2024
-YQUAKE2_CLIENT_VERSION = 7211e06c8c31e6cd5d60079041ef0ae82fedf4f1
+# Version: Commits on Dec 22, 2024
+YQUAKE2_CLIENT_VERSION = 49b4e97f5d62f6597fbcba7cfcd4db66031c232a
 YQUAKE2_CLIENT_SITE = $(call github,yquake2,yquake2,$(YQUAKE2_CLIENT_VERSION))
 
 YQUAKE2_CLIENT_DEPENDENCIES = sdl2 sdl2_mixer
