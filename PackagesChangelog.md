@@ -2,7 +2,7 @@
 -----|:-----:|:-----:|:-----:
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|fcf14be015a4398bf85cf48ac2599bcb7de3dfc6|Dec 22, 2024
 Emulators|[applewin](https://github.com/audetto/AppleWin)|cebe2ba0ef45dafb238a15687faee0ccf83eb792|Dec 22, 2024
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|bb8c0a795f35490c5959aade4ea0abb430d4edc8|Dec 22, 2024
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|5641b83d4ee5775dc244db0007dea582b559893e|Dec 22, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|a8361f985e459246ad7fd1b1276f222a7d1cb7ef|Dec 22, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|b8e27e031a3b24392a26c8e27e2b0f912fa17804|Dec 22, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.71|Dec 22, 2024
@@ -10,17 +10,17 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|79940fe58a487e503edd2
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|575a245f8d4bcd42039627533d1748c3af0f36a7|Dec 22, 2024
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|8abc43a03decaba8b82b5d507eec22fc6c864f00|Dec 22, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|c3e7d36db897885f4ced2c3eaa3e82d595b870d0|Dec 22, 2024
-Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45415|Dec 22, 2024
+Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45417|Dec 22, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|3f70ff53a35eb093e46939f0f364de2d3e9a49ef|Dec 22, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|1bb7d9efd88690bf8739f9d1aebd0d3476e7d90b|Dec 22, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|85fe4c628e29a18584cdd2e9ca7647196219d0b4|Dec 22, 2024
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|d745186e0625cb7c56b2d1c00407224d729b1a91|Dec 22, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|r14170|Dec 22, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|0dfcfaeecde0a2affda9d61cd135de8adfd38c7e|Dec 22, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|4a479ed6f507dd06e2a995df19f4aaf8debe5d5b|Dec 22, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|badd15a235a4de4b4716ceffebc70add8d3c3502|Dec 22, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|f429b152503f25b449afbe9d523eba0de5298b37|Dec 22, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|c09fd38c1d6430b82a3522f6ece8fac3ec83c429|Dec 22, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|454eeddff02a867c5c4f629a1d4314d0fc85f584|Dec 22, 2024
-Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|edb123fbf15eec3a67bfbdc31f4b897079835546|Dec 22, 2024
+Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|48dbe58803f0b16297836938ec9d5b5ca346f821|Dec 22, 2024
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|efe645d59607177d4a3868e1d2f0da4550179764|Dec 22, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|75853b49e6ea871860761792346bee3cf3da3e14|Dec 22, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|08430fc058c4a4ef57ddd40006bb356c1e3024a2|Dec 22, 2024
