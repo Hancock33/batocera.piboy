@@ -3,8 +3,8 @@
 # libretro-pc98
 #
 ################################################################################
-# Version: Commits on Dec 21, 2024
-LIBRETRO_PC98_VERSION = da219658c24c610ba82d5a07ea9897e8e0eef670
+# Version: Commits on Nov 23, 2024
+LIBRETRO_PC98_VERSION = 701092ac05e0714e7a6242f27a50f6090a6dcf16
 LIBRETRO_PC98_SITE = $(call github,AZO234,NP2kai,$(LIBRETRO_PC98_VERSION))
 LIBRETRO_PC98_LICENSE = GPLv3
 
@@ -33,7 +33,7 @@ else
 endif
 
 define LIBRETRO_PC98_BUILD_CMDS
-	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION) -Wno-error=incompatible-pointer-types -Wno-int-conversion|g" $(@D)/sdl/Makefile.libretro
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION) -Wno-error=incompatible-pointer-types -Wno-int-conversion -Wno-implicit-function-declaration|g" $(@D)/sdl/Makefile.libretro
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/sdl/ -f Makefile.libretro platform="$(LIBRETRO_PC98_PLATFORM)" \
 		GIT_VERSION="-$(shell echo $(LIBRETRO_PC98_VERSION) | cut -c 1-7)"
 endef
