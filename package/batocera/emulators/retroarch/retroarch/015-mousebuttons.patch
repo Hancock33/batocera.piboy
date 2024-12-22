@@ -1,8 +1,8 @@
 diff --git a/configuration.c b/configuration.c
-index 8c9ade5129..e346812afb 100644
+index 06a35c978a..e0c1d4449a 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -4930,12 +4930,33 @@ static void save_keybind_mbutton(config_file_t *conf,
+@@ -4933,12 +4933,33 @@ static void save_keybind_mbutton(config_file_t *conf,
        case RETRO_DEVICE_ID_MOUSE_MIDDLE:
           config_set_uint64(conf, key, 3);
           break;
@@ -38,7 +38,7 @@ index 8c9ade5129..e346812afb 100644
        case RETRO_DEVICE_ID_MOUSE_WHEELUP:
           config_set_string(conf, key, "wu");
           break;
-@@ -6497,11 +6518,32 @@ void input_config_parse_mouse_button(
+@@ -6504,11 +6525,32 @@ void input_config_parse_mouse_button(
                 bind->mbutton = RETRO_DEVICE_ID_MOUSE_MIDDLE;
                 break;
              case 4:
@@ -73,7 +73,7 @@ index 8c9ade5129..e346812afb 100644
        }
     }
 diff --git a/input/drivers/udev_input.c b/input/drivers/udev_input.c
-index fb2af973cd..e83ce18fda 100644
+index 6c016a8646..1950a72dab 100644
 --- a/input/drivers/udev_input.c
 +++ b/input/drivers/udev_input.c
 @@ -226,7 +226,7 @@ typedef struct
@@ -85,7 +85,7 @@ index fb2af973cd..e83ce18fda 100644
     bool wu, wd, whu, whd;
     bool pp;
  } udev_input_mouse_t;
-@@ -893,6 +893,33 @@ static void udev_handle_mouse(void *data,
+@@ -895,6 +895,33 @@ static void udev_handle_mouse(void *data,
              case BTN_TOUCH:
                 mouse->pp = event->value;
                 break;
@@ -119,7 +119,7 @@ index fb2af973cd..e83ce18fda 100644
              case BTN_SIDE:
                 mouse->b4 = event->value;
                 break;
-@@ -3667,10 +3694,24 @@ static int16_t udev_mouse_state(udev_input_t *udev,
+@@ -3669,10 +3696,24 @@ static int16_t udev_mouse_state(udev_input_t *udev,
              return mouse->r;
           case RETRO_DEVICE_ID_MOUSE_MIDDLE:
              return mouse->m;
@@ -144,7 +144,7 @@ index fb2af973cd..e83ce18fda 100644
           case RETRO_DEVICE_ID_MOUSE_WHEELUP:
              return mouse->wu;
           case RETRO_DEVICE_ID_MOUSE_WHEELDOWN:
-@@ -3707,10 +3748,24 @@ static bool udev_mouse_button_pressed(
+@@ -3709,10 +3750,24 @@ static bool udev_mouse_button_pressed(
              return mouse->r;
           case RETRO_DEVICE_ID_MOUSE_MIDDLE:
              return mouse->m;
@@ -192,7 +192,7 @@ index 288512b91f..0d9d691ce3 100644
  /* Id values for LIGHTGUN. */
  #define RETRO_DEVICE_ID_LIGHTGUN_SCREEN_X        13 /*Absolute Position*/
 diff --git a/menu/menu_driver.c b/menu/menu_driver.c
-index 436f8afdfa..43f58a39ff 100644
+index 6840e71032..996ef9a6ef 100644
 --- a/menu/menu_driver.c
 +++ b/menu/menu_driver.c
 @@ -1666,8 +1666,15 @@ static bool menu_input_key_bind_poll_find_trigger_pad(

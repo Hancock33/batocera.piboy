@@ -1,8 +1,8 @@
 diff --git a/SDL/SDLJoystick.cpp b/SDL/SDLJoystick.cpp
-index 6ec8d97402..9440daba6d 100644
+index 265094f56b..9cb6f44dc8 100644
 --- a/SDL/SDLJoystick.cpp
 +++ b/SDL/SDLJoystick.cpp
-@@ -19,7 +19,7 @@ static int SDLJoystickEventHandlerWrapper(void* userdata, SDL_Event* event)
+@@ -18,7 +18,7 @@ static int SDLJoystickEventHandlerWrapper(void* userdata, SDL_Event* event) {
  	return 0;
  }
  
@@ -11,10 +11,10 @@ index 6ec8d97402..9440daba6d 100644
  	SDL_SetHint(SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS, "1");
  	if (init_SDL) {
  		SDL_Init(SDL_INIT_JOYSTICK | SDL_INIT_VIDEO | SDL_INIT_GAMECONTROLLER);
-@@ -41,17 +41,17 @@ SDLJoystick::SDLJoystick(bool init_SDL ) : registeredAsEventHandler(false) {
- 		cout << "gamecontrollerdb.txt missing" << endl;
+@@ -39,17 +39,17 @@ SDLJoystick::SDLJoystick(bool init_SDL ) : registeredAsEventHandler(false) {
+ 	} else {
+ 		WARN_LOG(Log::System, "gamecontrollerdb.txt missing?");
  	}
- 	cout << "SUCCESS!" << endl;
 -	setUpControllers();
 +	_njoy = njoy;
  }
@@ -25,18 +25,18 @@ index 6ec8d97402..9440daba6d 100644
 -		setUpController(i);
 -	}
 -	if (controllers.size() > 0) {
--		cout << "pad 1 has been assigned to control pad: " << SDL_JoystickNameForIndex(0) << endl;
+-		INFO_LOG(Log::System, "pad 1 has been assigned to control pad: %s", SDL_GameControllerName(controllers.front()));
 -	}
 +	if(_njoy < numjoys) {
 +		setUpController(_njoy);
 +	  if (controllers.size() > 0) {
-+		cout << "pad 1 has been assigned to control pad: " << SDL_JoystickNameForIndex(_njoy) << " (" << _njoy << ")" << endl;
++		INFO_LOG(Log::System, "pad 1 has been assigned to control pad: %s", SDL_JoystickNameForIndex(_njoy));
 +	  }
 + 	}
  }
  
  void SDLJoystick::setUpController(int deviceIndex) {
-@@ -235,11 +235,9 @@ void SDLJoystick::ProcessInput(const SDL_Event &event){
+@@ -232,11 +232,9 @@ void SDLJoystick::ProcessInput(const SDL_Event &event){
  		}
  		break;
  	case SDL_CONTROLLERDEVICEADDED:
@@ -44,10 +44,10 @@ index 6ec8d97402..9440daba6d 100644
 -		int prevNumControllers = controllers.size();
 -		setUpController(event.cdevice.which);
 -		if (prevNumControllers == 0 && controllers.size() > 0) {
--                       cout << "pad 1 has been assigned to control pad: " << SDL_JoystickNameForIndex(0) << endl;
+-			INFO_LOG(Log::System, "pad 1 has been assigned to control pad: %s", SDL_GameControllerName(controllers.front()));
 +		if(event.cdevice.which == _njoy) {
 +			setUpController(_njoy);
-+			cout << "pad 1 has been assigned to control pad: " << SDL_JoystickNameForIndex(_njoy) << endl;
++			INFO_LOG(Log::System, "pad 1 has been assigned to control pad: %s", SDL_JoystickNameForIndex(_njoy));
  		}
  		break;
  	}
@@ -73,10 +73,10 @@ index 50cc43c4c7..9c287ade8a 100644
  	// Deduplicate axis events. Pair is device, axis.
  	std::map<std::pair<InputDeviceID, InputAxis>, float> prevAxisValue_;
 diff --git a/SDL/SDLMain.cpp b/SDL/SDLMain.cpp
-index 6189f594dd..42548dbb55 100644
+index 70aef0bd78..d9898b75b2 100644
 --- a/SDL/SDLMain.cpp
 +++ b/SDL/SDLMain.cpp
-@@ -1189,6 +1189,7 @@ int main(int argc, char *argv[]) {
+@@ -1192,6 +1192,7 @@ int main(int argc, char *argv[]) {
  	bool set_ipad = false;
  	float set_dpi = 0.0f;
  	float set_scale = 1.0f;
@@ -84,7 +84,7 @@ index 6189f594dd..42548dbb55 100644
  
  	// Produce a new set of arguments with the ones we skip.
  	int remain_argc = 1;
-@@ -1207,6 +1208,8 @@ int main(int argc, char *argv[]) {
+@@ -1210,6 +1211,8 @@ int main(int argc, char *argv[]) {
  			set_dpi = parseFloat(argv[i]);
  		else if (set_scale == -2)
  			set_scale = parseFloat(argv[i]);
@@ -93,7 +93,7 @@ index 6189f594dd..42548dbb55 100644
  		else if (!strcmp(argv[i],"--xres"))
  			set_xres = -2;
  		else if (!strcmp(argv[i],"--yres"))
-@@ -1219,6 +1222,8 @@ int main(int argc, char *argv[]) {
+@@ -1222,6 +1225,8 @@ int main(int argc, char *argv[]) {
  			set_ipad = true;
  		else if (!strcmp(argv[i],"--portrait"))
  			portrait = true;
@@ -102,7 +102,7 @@ index 6189f594dd..42548dbb55 100644
  		else {
  			remain_argv[remain_argc++] = argv[i];
  		}
-@@ -1473,7 +1478,7 @@ int main(int argc, char *argv[]) {
+@@ -1476,7 +1481,7 @@ int main(int argc, char *argv[]) {
  	InitSDLAudioDevice();
  
  	if (joystick_enabled) {

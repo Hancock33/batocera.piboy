@@ -3,8 +3,8 @@
 # citra
 #
 ################################################################################
-# Version: Commits on Dec 15, 2024
-CITRA_VERSION = 3319191160db114b41808aaca84f51fe8e8abe45
+# Version: Commits on Dec 20, 2024
+CITRA_VERSION = 13cc23705ac95178b6fe8ecefed075606e4f87aa
 CITRA_SITE = https://github.com/Borked3DS/Borked3DS.git
 CITRA_SITE_METHOD=git
 CITRA_GIT_SUBMODULES=YES

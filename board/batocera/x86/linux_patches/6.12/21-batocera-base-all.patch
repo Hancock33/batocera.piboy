@@ -65,6 +65,118 @@ index d401577b5a6a..e6ec15a89924 100644
  		noioapicquirk	[APIC] Disable all boot interrupt quirks.
  				Safety option to keep boot IRQs enabled. This
  				should never be necessary.
+diff --git a/Documentation/admin-guide/pm/amd-pstate.rst b/Documentation/admin-guide/pm/amd-pstate.rst
+index 210a808b74ec..412423c54f25 100644
+--- a/Documentation/admin-guide/pm/amd-pstate.rst
++++ b/Documentation/admin-guide/pm/amd-pstate.rst
+@@ -251,9 +251,7 @@ performance supported in `AMD CPPC Performance Capability <perf_cap_>`_).
+ In some ASICs, the highest CPPC performance is not the one in the ``_CPC``
+ table, so we need to expose it to sysfs. If boost is not active, but
+ still supported, this maximum frequency will be larger than the one in
+-``cpuinfo``. On systems that support preferred core, the driver will have
+-different values for some cores than others and this will reflect the values
+-advertised by the platform at bootup.
++``cpuinfo``.
+ This attribute is read-only.
+ 
+ ``amd_pstate_lowest_nonlinear_freq``
+diff --git a/Documentation/admin-guide/sysctl/vm.rst b/Documentation/admin-guide/sysctl/vm.rst
+index f48eaa98d22d..fc777c14cff6 100644
+--- a/Documentation/admin-guide/sysctl/vm.rst
++++ b/Documentation/admin-guide/sysctl/vm.rst
+@@ -25,6 +25,9 @@ files can be found in mm/swap.c.
+ Currently, these files are in /proc/sys/vm:
+ 
+ - admin_reserve_kbytes
++- anon_min_ratio
++- clean_low_ratio
++- clean_min_ratio
+ - compact_memory
+ - compaction_proactiveness
+ - compact_unevictable_allowed
+@@ -108,6 +111,67 @@ On x86_64 this is about 128MB.
+ Changing this takes effect whenever an application requests memory.
+ 
+ 
++anon_min_ratio
++==============
++
++This knob provides *hard* protection of anonymous pages. The anonymous pages
++on the current node won't be reclaimed under any conditions when their amount
++is below vm.anon_min_ratio.
++
++This knob may be used to prevent excessive swap thrashing when anonymous
++memory is low (for example, when memory is going to be overfilled by
++compressed data of zram module).
++
++Setting this value too high (close to 100) can result in inability to
++swap and can lead to early OOM under memory pressure.
++
++The unit of measurement is the percentage of the total memory of the node.
++
++The default value is 15.
++
++
++clean_low_ratio
++================
++
++This knob provides *best-effort* protection of clean file pages. The file pages
++on the current node won't be reclaimed under memory pressure when the amount of
++clean file pages is below vm.clean_low_ratio *unless* we threaten to OOM.
++
++Protection of clean file pages using this knob may be used when swapping is
++still possible to
++  - prevent disk I/O thrashing under memory pressure;
++  - improve performance in disk cache-bound tasks under memory pressure.
++
++Setting it to a high value may result in a early eviction of anonymous pages
++into the swap space by attempting to hold the protected amount of clean file
++pages in memory.
++
++The unit of measurement is the percentage of the total memory of the node.
++
++The default value is 0.
++
++
++clean_min_ratio
++================
++
++This knob provides *hard* protection of clean file pages. The file pages on the
++current node won't be reclaimed under memory pressure when the amount of clean
++file pages is below vm.clean_min_ratio.
++
++Hard protection of clean file pages using this knob may be used to
++  - prevent disk I/O thrashing under memory pressure even with no free swap space;
++  - improve performance in disk cache-bound tasks under memory pressure;
++  - avoid high latency and prevent livelock in near-OOM conditions.
++
++Setting it to a high value may result in a early out-of-memory condition due to
++the inability to reclaim the protected amount of clean file pages when other
++types of pages cannot be reclaimed.
++
++The unit of measurement is the percentage of the total memory of the node.
++
++The default value is 15.
++
++
+ compact_memory
+ ==============
+ 
+@@ -964,6 +1028,14 @@ be 133 (x + 2x = 200, 2x = 133.33).
+ At 0, the kernel will not initiate swap until the amount of free and
+ file-backed pages is less than the high watermark in a zone.
+ 
++This knob has no effect if the amount of clean file pages on the current
++node is below vm.clean_low_ratio or vm.clean_min_ratio. In this case,
++only anonymous pages can be reclaimed.
++
++If the number of anonymous pages on the current node is below
++vm.anon_min_ratio, then only file pages can be reclaimed with
++any vm.swappiness value.
++
+ 
+ unprivileged_userfaultfd
+ ========================
 diff --git a/Documentation/arch/x86/topology.rst b/Documentation/arch/x86/topology.rst
 index 7352ab89a55a..c12837e61bda 100644
 --- a/Documentation/arch/x86/topology.rst
@@ -515,10 +627,10 @@ index 274cc7546efc..9c1b15cd89ab 100644
  
 diff --git a/Documentation/userspace-api/ntsync.rst b/Documentation/userspace-api/ntsync.rst
 new file mode 100644
-index 000000000000..767844637a7d
+index 000000000000..25e7c4aef968
 --- /dev/null
 +++ b/Documentation/userspace-api/ntsync.rst
-@@ -0,0 +1,398 @@
+@@ -0,0 +1,385 @@
 +===================================
 +NT synchronization primitive driver
 +===================================
@@ -594,19 +706,16 @@ index 000000000000..767844637a7d
 +structures used in ioctl calls::
 +
 +   struct ntsync_sem_args {
-+   	__u32 sem;
 +   	__u32 count;
 +   	__u32 max;
 +   };
 +
 +   struct ntsync_mutex_args {
-+   	__u32 mutex;
 +   	__u32 owner;
 +   	__u32 count;
 +   };
 +
 +   struct ntsync_event_args {
-+   	__u32 event;
 +   	__u32 signaled;
 +   	__u32 manual;
 +   };
@@ -623,7 +732,7 @@ index 000000000000..767844637a7d
 +   };
 +
 +Depending on the ioctl, members of the structure may be used as input,
-+output, or not at all. All ioctls return 0 on success.
++output, or not at all.
 +
 +The ioctls on the device file are as follows:
 +
@@ -634,14 +743,13 @@ index 000000000000..767844637a7d
 +
 +  .. list-table::
 +
-+     * - ``sem``
-+       - On output, contains a file descriptor to the created semaphore.
 +     * - ``count``
 +       - Initial count of the semaphore.
 +     * - ``max``
 +       - Maximum count of the semaphore.
 +
 +  Fails with ``EINVAL`` if ``count`` is greater than ``max``.
++  On success, returns a file descriptor the created semaphore.
 +
 +.. c:macro:: NTSYNC_IOC_CREATE_MUTEX
 +
@@ -650,8 +758,6 @@ index 000000000000..767844637a7d
 +
 +  .. list-table::
 +
-+     * - ``mutex``
-+       - On output, contains a file descriptor to the created mutex.
 +     * - ``count``
 +       - Initial recursion count of the mutex.
 +     * - ``owner``
@@ -659,6 +765,7 @@ index 000000000000..767844637a7d
 +
 +  If ``owner`` is nonzero and ``count`` is zero, or if ``owner`` is
 +  zero and ``count`` is nonzero, the function fails with ``EINVAL``.
++  On success, returns a file descriptor the created mutex.
 +
 +.. c:macro:: NTSYNC_IOC_CREATE_EVENT
 +
@@ -667,14 +774,14 @@ index 000000000000..767844637a7d
 +
 +  .. list-table::
 +
-+     * - ``event``
-+       - On output, contains a file descriptor to the created event.
 +     * - ``signaled``
 +       - If nonzero, the event is initially signaled, otherwise
 +         nonsignaled.
 +     * - ``manual``
 +       - If nonzero, the event is a manual-reset event, otherwise
 +         auto-reset.
++
++  On success, returns a file descriptor the created event.
 +
 +The ioctls on the individual objects are as follows:
 +
@@ -698,8 +805,6 @@ index 000000000000..767844637a7d
 +
 +  .. list-table::
 +
-+     * - ``mutex``
-+       - Ignored.
 +     * - ``owner``
 +       - Specifies the owner trying to release this mutex.
 +     * - ``count``
@@ -748,8 +853,6 @@ index 000000000000..767844637a7d
 +
 +  .. list-table::
 +
-+     * - ``sem``
-+       - Ignored.
 +     * - ``count``
 +       - On output, contains the current count of the semaphore.
 +     * - ``max``
@@ -762,8 +865,6 @@ index 000000000000..767844637a7d
 +
 +  .. list-table::
 +
-+     * - ``mutex``
-+       - Ignored.
 +     * - ``owner``
 +       - On output, contains the current owner of the mutex, or zero
 +         if the mutex is not currently owned.
@@ -781,8 +882,6 @@ index 000000000000..767844637a7d
 +
 +  .. list-table::
 +
-+     * - ``event``
-+       - Ignored.
 +     * - ``signaled``
 +       - On output, contains the current state of the event.
 +     * - ``manual``
@@ -994,7 +1093,7 @@ index 6bb4ec0c162a..63ee2eb3ab41 100644
  M:	Petr Mladek <pmladek@suse.com>
  R:	Steven Rostedt <rostedt@goodmis.org>
 diff --git a/Makefile b/Makefile
-index 854916aaee7f..cd0f2c95f09b 100644
+index 916f0a759bdd..73765cc49a8d 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -802,11 +802,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -4404,7 +4503,7 @@ index b3ab80a03365..5e883b397ff3 100644
     already-configured bus numbers - to be used for buggy BIOSes
     or architectures with incomplete PCI setup by the loader */
 diff --git a/arch/x86/include/asm/processor.h b/arch/x86/include/asm/processor.h
-index 4a686f0e5dbf..cfd8a5591421 100644
+index 2d776635aa53..c0cd10182e90 100644
 --- a/arch/x86/include/asm/processor.h
 +++ b/arch/x86/include/asm/processor.h
 @@ -98,6 +98,7 @@ struct cpuinfo_topology {
@@ -4961,10 +5060,10 @@ index 45f63b09828a..d8bcb8b7544f 100644
  	sysfs_add_file_to_group(&pdev->dev.kobj,
  				&dev_attr_remapped_nvme.attr,
 diff --git a/drivers/bluetooth/btmtk.c b/drivers/bluetooth/btmtk.c
-index 480e4adba9fa..3626faab9c91 100644
+index 85e99641eaae..c1b6bcc6f7dd 100644
 --- a/drivers/bluetooth/btmtk.c
 +++ b/drivers/bluetooth/btmtk.c
-@@ -1325,7 +1325,6 @@ int btmtk_usb_setup(struct hci_dev *hdev)
+@@ -1329,7 +1329,6 @@ int btmtk_usb_setup(struct hci_dev *hdev)
  		fwname = FIRMWARE_MT7668;
  		break;
  	case 0x7922:
@@ -4972,7 +5071,7 @@ index 480e4adba9fa..3626faab9c91 100644
  	case 0x7925:
  		/* Reset the device to ensure it's in the initial state before
  		 * downloading the firmware to ensure.
-@@ -1333,7 +1332,8 @@ int btmtk_usb_setup(struct hci_dev *hdev)
+@@ -1337,7 +1336,8 @@ int btmtk_usb_setup(struct hci_dev *hdev)
  
  		if (!test_bit(BTMTK_FIRMWARE_LOADED, &btmtk_data->flags))
  			btmtk_usb_subsys_reset(hdev, dev_id);
@@ -5021,7 +5120,7 @@ index f66701514d90..a261d7300951 100644
  		}
  
 diff --git a/drivers/cpufreq/amd-pstate.c b/drivers/cpufreq/amd-pstate.c
-index 91d3c3b1c2d3..d7630bab2516 100644
+index 91d3c3b1c2d3..66e5dfc711c0 100644
 --- a/drivers/cpufreq/amd-pstate.c
 +++ b/drivers/cpufreq/amd-pstate.c
 @@ -233,7 +233,7 @@ static int amd_pstate_get_energy_pref_index(struct amd_cpudata *cpudata)
@@ -5070,7 +5169,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  {
  	int cpu, ret = 0;
  	struct cppc_perf_ctrls perf_ctrls;
-@@ -359,14 +365,14 @@ static int cppc_enable(bool enable)
+@@ -359,24 +365,28 @@ static int cppc_enable(bool enable)
  	return ret;
  }
  
@@ -5087,9 +5186,26 @@ index 91d3c3b1c2d3..d7630bab2516 100644
 -static int pstate_init_perf(struct amd_cpudata *cpudata)
 +static int msr_init_perf(struct amd_cpudata *cpudata)
  {
- 	u64 cap1;
+-	u64 cap1;
++	u64 cap1, numerator;
  
-@@ -385,7 +391,7 @@ static int pstate_init_perf(struct amd_cpudata *cpudata)
+ 	int ret = rdmsrl_safe_on_cpu(cpudata->cpu, MSR_AMD_CPPC_CAP1,
+ 				     &cap1);
+ 	if (ret)
+ 		return ret;
+ 
+-	WRITE_ONCE(cpudata->highest_perf, AMD_CPPC_HIGHEST_PERF(cap1));
+-	WRITE_ONCE(cpudata->max_limit_perf, AMD_CPPC_HIGHEST_PERF(cap1));
++	ret = amd_get_boost_ratio_numerator(cpudata->cpu, &numerator);
++	if (ret)
++		return ret;
++
++	WRITE_ONCE(cpudata->highest_perf, numerator);
++	WRITE_ONCE(cpudata->max_limit_perf, numerator);
+ 	WRITE_ONCE(cpudata->nominal_perf, AMD_CPPC_NOMINAL_PERF(cap1));
+ 	WRITE_ONCE(cpudata->lowest_nonlinear_perf, AMD_CPPC_LOWNONLIN_PERF(cap1));
+ 	WRITE_ONCE(cpudata->lowest_perf, AMD_CPPC_LOWEST_PERF(cap1));
+@@ -385,16 +395,21 @@ static int pstate_init_perf(struct amd_cpudata *cpudata)
  	return 0;
  }
  
@@ -5097,8 +5213,24 @@ index 91d3c3b1c2d3..d7630bab2516 100644
 +static int shmem_init_perf(struct amd_cpudata *cpudata)
  {
  	struct cppc_perf_caps cppc_perf;
++	u64 numerator;
  
-@@ -420,14 +426,14 @@ static int cppc_init_perf(struct amd_cpudata *cpudata)
+ 	int ret = cppc_get_perf_caps(cpudata->cpu, &cppc_perf);
+ 	if (ret)
+ 		return ret;
+ 
+-	WRITE_ONCE(cpudata->highest_perf, cppc_perf.highest_perf);
+-	WRITE_ONCE(cpudata->max_limit_perf, cppc_perf.highest_perf);
++	ret = amd_get_boost_ratio_numerator(cpudata->cpu, &numerator);
++	if (ret)
++		return ret;
++
++	WRITE_ONCE(cpudata->highest_perf, numerator);
++	WRITE_ONCE(cpudata->max_limit_perf, numerator);
+ 	WRITE_ONCE(cpudata->nominal_perf, cppc_perf.nominal_perf);
+ 	WRITE_ONCE(cpudata->lowest_nonlinear_perf,
+ 		   cppc_perf.lowest_nonlinear_perf);
+@@ -420,14 +435,14 @@ static int cppc_init_perf(struct amd_cpudata *cpudata)
  	return ret;
  }
  
@@ -5115,7 +5247,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  			     u32 min_perf, u32 des_perf,
  			     u32 max_perf, bool fast_switch)
  {
-@@ -527,9 +533,28 @@ static void amd_pstate_update(struct amd_cpudata *cpudata, u32 min_perf,
+@@ -527,25 +542,41 @@ static void amd_pstate_update(struct amd_cpudata *cpudata, u32 min_perf,
  	cpufreq_cpu_put(policy);
  }
  
@@ -5146,7 +5278,28 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  
  	return 0;
  }
-@@ -825,7 +850,7 @@ static u32 amd_pstate_get_transition_delay_us(unsigned int cpu)
+ 
+ static int amd_pstate_update_min_max_limit(struct cpufreq_policy *policy)
+ {
+-	u32 max_limit_perf, min_limit_perf, lowest_perf, max_perf;
++	u32 max_limit_perf, min_limit_perf, lowest_perf, max_perf, max_freq;
+ 	struct amd_cpudata *cpudata = policy->driver_data;
+ 
+-	if (cpudata->boost_supported && !policy->boost_enabled)
+-		max_perf = READ_ONCE(cpudata->nominal_perf);
+-	else
+-		max_perf = READ_ONCE(cpudata->highest_perf);
+-
+-	max_limit_perf = div_u64(policy->max * max_perf, policy->cpuinfo.max_freq);
+-	min_limit_perf = div_u64(policy->min * max_perf, policy->cpuinfo.max_freq);
++	max_perf = READ_ONCE(cpudata->highest_perf);
++	max_freq = READ_ONCE(cpudata->max_freq);
++	max_limit_perf = div_u64(policy->max * max_perf, max_freq);
++	min_limit_perf = div_u64(policy->min * max_perf, max_freq);
+ 
+ 	lowest_perf = READ_ONCE(cpudata->lowest_perf);
+ 	if (min_limit_perf < lowest_perf)
+@@ -825,7 +856,7 @@ static u32 amd_pstate_get_transition_delay_us(unsigned int cpu)
  
  	transition_delay_ns = cppc_get_transition_latency(cpu);
  	if (transition_delay_ns == CPUFREQ_ETERNAL) {
@@ -5155,7 +5308,27 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  			return AMD_PSTATE_FAST_CPPC_TRANSITION_DELAY;
  		else
  			return AMD_PSTATE_TRANSITION_DELAY;
-@@ -979,7 +1004,7 @@ static int amd_pstate_cpu_init(struct cpufreq_policy *policy)
+@@ -864,7 +895,6 @@ static int amd_pstate_init_freq(struct amd_cpudata *cpudata)
+ {
+ 	int ret;
+ 	u32 min_freq, max_freq;
+-	u64 numerator;
+ 	u32 nominal_perf, nominal_freq;
+ 	u32 lowest_nonlinear_perf, lowest_nonlinear_freq;
+ 	u32 boost_ratio, lowest_nonlinear_ratio;
+@@ -886,10 +916,7 @@ static int amd_pstate_init_freq(struct amd_cpudata *cpudata)
+ 
+ 	nominal_perf = READ_ONCE(cpudata->nominal_perf);
+ 
+-	ret = amd_get_boost_ratio_numerator(cpudata->cpu, &numerator);
+-	if (ret)
+-		return ret;
+-	boost_ratio = div_u64(numerator << SCHED_CAPACITY_SHIFT, nominal_perf);
++	boost_ratio = div_u64(cpudata->highest_perf << SCHED_CAPACITY_SHIFT, nominal_perf);
+ 	max_freq = (nominal_freq * boost_ratio >> SCHED_CAPACITY_SHIFT) * 1000;
+ 
+ 	lowest_nonlinear_perf = READ_ONCE(cpudata->lowest_nonlinear_perf);
+@@ -979,7 +1006,7 @@ static int amd_pstate_cpu_init(struct cpufreq_policy *policy)
  		policy->fast_switch_possible = true;
  
  	ret = freq_qos_add_request(&policy->constraints, &cpudata->req[0],
@@ -5164,7 +5337,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	if (ret < 0) {
  		dev_err(dev, "Failed to add min-freq constraint (%d)\n", ret);
  		goto free_cpudata1;
-@@ -1023,7 +1048,7 @@ static int amd_pstate_cpu_resume(struct cpufreq_policy *policy)
+@@ -1023,7 +1050,7 @@ static int amd_pstate_cpu_resume(struct cpufreq_policy *policy)
  {
  	int ret;
  
@@ -5173,7 +5346,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	if (ret)
  		pr_err("failed to enable amd-pstate during resume, return %d\n", ret);
  
-@@ -1034,7 +1059,7 @@ static int amd_pstate_cpu_suspend(struct cpufreq_policy *policy)
+@@ -1034,7 +1061,7 @@ static int amd_pstate_cpu_suspend(struct cpufreq_policy *policy)
  {
  	int ret;
  
@@ -5182,7 +5355,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	if (ret)
  		pr_err("failed to disable amd-pstate during suspend, return %d\n", ret);
  
-@@ -1167,25 +1192,41 @@ static ssize_t show_energy_performance_preference(
+@@ -1167,25 +1194,41 @@ static ssize_t show_energy_performance_preference(
  
  static void amd_pstate_driver_cleanup(void)
  {
@@ -5232,7 +5405,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	if (ret) {
  		pr_err("failed to enable cppc during amd-pstate driver registration, return %d\n",
  		       ret);
-@@ -1463,6 +1504,8 @@ static int amd_pstate_epp_cpu_init(struct cpufreq_policy *policy)
+@@ -1463,6 +1506,8 @@ static int amd_pstate_epp_cpu_init(struct cpufreq_policy *policy)
  		WRITE_ONCE(cpudata->cppc_cap1_cached, value);
  	}
  
@@ -5241,7 +5414,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	return 0;
  
  free_cpudata1:
-@@ -1485,26 +1528,13 @@ static void amd_pstate_epp_cpu_exit(struct cpufreq_policy *policy)
+@@ -1485,26 +1530,13 @@ static void amd_pstate_epp_cpu_exit(struct cpufreq_policy *policy)
  static int amd_pstate_epp_update_limit(struct cpufreq_policy *policy)
  {
  	struct amd_cpudata *cpudata = policy->driver_data;
@@ -5271,7 +5444,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  
  	max_perf = clamp_t(unsigned long, max_perf, cpudata->min_limit_perf,
  			cpudata->max_limit_perf);
-@@ -1541,12 +1571,6 @@ static int amd_pstate_epp_update_limit(struct cpufreq_policy *policy)
+@@ -1541,12 +1573,6 @@ static int amd_pstate_epp_update_limit(struct cpufreq_policy *policy)
  	if (cpudata->policy == CPUFREQ_POLICY_PERFORMANCE)
  		epp = 0;
  
@@ -5284,7 +5457,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	WRITE_ONCE(cpudata->cppc_req_cached, value);
  	return amd_pstate_set_epp(cpudata, epp);
  }
-@@ -1583,7 +1607,7 @@ static void amd_pstate_epp_reenable(struct amd_cpudata *cpudata)
+@@ -1583,7 +1609,7 @@ static void amd_pstate_epp_reenable(struct amd_cpudata *cpudata)
  	u64 value, max_perf;
  	int ret;
  
@@ -5293,7 +5466,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	if (ret)
  		pr_err("failed to enable amd pstate during resume, return %d\n", ret);
  
-@@ -1594,8 +1618,9 @@ static void amd_pstate_epp_reenable(struct amd_cpudata *cpudata)
+@@ -1594,8 +1620,9 @@ static void amd_pstate_epp_reenable(struct amd_cpudata *cpudata)
  		wrmsrl_on_cpu(cpudata->cpu, MSR_AMD_CPPC_REQ, value);
  	} else {
  		perf_ctrls.max_perf = max_perf;
@@ -5304,7 +5477,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	}
  }
  
-@@ -1635,9 +1660,11 @@ static void amd_pstate_epp_offline(struct cpufreq_policy *policy)
+@@ -1635,9 +1662,11 @@ static void amd_pstate_epp_offline(struct cpufreq_policy *policy)
  		wrmsrl_on_cpu(cpudata->cpu, MSR_AMD_CPPC_REQ, value);
  	} else {
  		perf_ctrls.desired_perf = 0;
@@ -5317,7 +5490,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	}
  	mutex_unlock(&amd_pstate_limits_lock);
  }
-@@ -1657,13 +1684,6 @@ static int amd_pstate_epp_cpu_offline(struct cpufreq_policy *policy)
+@@ -1657,13 +1686,6 @@ static int amd_pstate_epp_cpu_offline(struct cpufreq_policy *policy)
  	return 0;
  }
  
@@ -5331,7 +5504,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  static int amd_pstate_epp_suspend(struct cpufreq_policy *policy)
  {
  	struct amd_cpudata *cpudata = policy->driver_data;
-@@ -1677,7 +1697,7 @@ static int amd_pstate_epp_suspend(struct cpufreq_policy *policy)
+@@ -1677,7 +1699,7 @@ static int amd_pstate_epp_suspend(struct cpufreq_policy *policy)
  	cpudata->suspended = true;
  
  	/* disable CPPC in lowlevel firmware */
@@ -5340,7 +5513,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	if (ret)
  		pr_err("failed to suspend, return %d\n", ret);
  
-@@ -1719,7 +1739,7 @@ static struct cpufreq_driver amd_pstate_driver = {
+@@ -1719,7 +1741,7 @@ static struct cpufreq_driver amd_pstate_driver = {
  
  static struct cpufreq_driver amd_pstate_epp_driver = {
  	.flags		= CPUFREQ_CONST_LOOPS,
@@ -5349,7 +5522,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  	.setpolicy	= amd_pstate_epp_set_policy,
  	.init		= amd_pstate_epp_cpu_init,
  	.exit		= amd_pstate_epp_cpu_exit,
-@@ -1733,26 +1753,7 @@ static struct cpufreq_driver amd_pstate_epp_driver = {
+@@ -1733,26 +1755,7 @@ static struct cpufreq_driver amd_pstate_epp_driver = {
  	.attr		= amd_pstate_epp_attr,
  };
  
@@ -5377,7 +5550,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
   * CPPC function is not supported for family ID 17H with model_ID ranging from 0x10 to 0x2F.
   * show the debug message that helps to check if the CPU has CPPC support for loading issue.
   */
-@@ -1842,10 +1843,10 @@ static int __init amd_pstate_init(void)
+@@ -1842,10 +1845,10 @@ static int __init amd_pstate_init(void)
  	if (cppc_state == AMD_PSTATE_UNDEFINED) {
  		/* Disable on the following configs by default:
  		 * 1. Undefined platforms
@@ -5390,7 +5563,7 @@ index 91d3c3b1c2d3..d7630bab2516 100644
  			pr_info("driver load is disabled, boot with specific mode to enable this\n");
  			return -ENODEV;
  		}
-@@ -1853,50 +1854,31 @@ static int __init amd_pstate_init(void)
+@@ -1853,31 +1856,19 @@ static int __init amd_pstate_init(void)
  		cppc_state = CONFIG_X86_AMD_PSTATE_DEFAULT_MODE;
  	}
  
@@ -5420,38 +5593,33 @@ index 91d3c3b1c2d3..d7630bab2516 100644
 -		static_call_update(amd_pstate_enable, cppc_enable);
 -		static_call_update(amd_pstate_init_perf, cppc_init_perf);
 -		static_call_update(amd_pstate_update_perf, cppc_update_perf);
--	}
--
--	if (amd_pstate_prefcore) {
--		ret = amd_detect_prefcore(&amd_pstate_prefcore);
--		if (ret)
--			return ret;
 +		static_call_update(amd_pstate_cppc_enable, shmem_cppc_enable);
 +		static_call_update(amd_pstate_init_perf, shmem_init_perf);
 +		static_call_update(amd_pstate_update_perf, shmem_update_perf);
  	}
  
--	/* enable amd pstate feature */
--	ret = amd_pstate_enable(true);
-+	ret = amd_pstate_register_driver(cppc_state);
- 	if (ret) {
--		pr_err("failed to enable driver mode(%d)\n", cppc_state);
-+		pr_err("failed to register with return %d\n", ret);
- 		return ret;
+ 	if (amd_pstate_prefcore) {
+@@ -1886,17 +1877,10 @@ static int __init amd_pstate_init(void)
+ 			return ret;
  	}
  
--	ret = cpufreq_register_driver(current_pstate_driver);
+-	/* enable amd pstate feature */
+-	ret = amd_pstate_enable(true);
 -	if (ret) {
--		pr_err("failed to register with return %d\n", ret);
+-		pr_err("failed to enable driver mode(%d)\n", cppc_state);
+-		return ret;
+-	}
+-
+-	ret = cpufreq_register_driver(current_pstate_driver);
++	ret = amd_pstate_register_driver(cppc_state);
+ 	if (ret) {
+ 		pr_err("failed to register with return %d\n", ret);
 -		goto disable_driver;
-+	if (amd_pstate_prefcore) {
-+		ret = amd_detect_prefcore(&amd_pstate_prefcore);
-+		if (ret)
-+			return ret;
++		return ret;
  	}
  
  	dev_root = bus_get_dev_root(&cpu_subsys);
-@@ -1913,8 +1895,7 @@ static int __init amd_pstate_init(void)
+@@ -1913,8 +1897,7 @@ static int __init amd_pstate_init(void)
  
  global_attr_free:
  	cpufreq_unregister_driver(current_pstate_driver);
@@ -6161,7 +6329,7 @@ index a93739688071..5fa58ef65371 100644
  
  	smu_v13_0_0_set_supported_od_feature_mask(smu);
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/smu13/smu_v13_0_7_ppt.c b/drivers/gpu/drm/amd/pm/swsmu/smu13/smu_v13_0_7_ppt.c
-index d0e6d051e9cf..31996f8c6e3a 100644
+index 1aedfafa507f..d19c63a8459a 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/smu13/smu_v13_0_7_ppt.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/smu13/smu_v13_0_7_ppt.c
 @@ -83,6 +83,8 @@
@@ -14324,7 +14492,7 @@ index 3fe7e2a9bd29..6c8b999a5e08 100644
  	  This module provides kernel support for emulation of Windows NT
  	  synchronization primitives. It is not a hardware driver.
 diff --git a/drivers/misc/ntsync.c b/drivers/misc/ntsync.c
-index 4954553b7baa..3fac06270549 100644
+index 4954553b7baa..457ff28b789f 100644
 --- a/drivers/misc/ntsync.c
 +++ b/drivers/misc/ntsync.c
 @@ -6,11 +6,17 @@
@@ -14368,7 +14536,7 @@ index 4954553b7baa..3fac06270549 100644
  
  	enum ntsync_type type;
  
-@@ -46,13 +57,335 @@ struct ntsync_obj {
+@@ -46,22 +57,344 @@ struct ntsync_obj {
  			__u32 count;
  			__u32 max;
  		} sem;
@@ -14704,7 +14872,9 @@ index 4954553b7baa..3fac06270549 100644
  /*
   * Actually change the semaphore state, returning -EOVERFLOW if it is made
   * invalid.
-@@ -61,7 +394,7 @@ static int post_sem_state(struct ntsync_obj *sem, __u32 count)
+  */
+-static int post_sem_state(struct ntsync_obj *sem, __u32 count)
++static int release_sem_state(struct ntsync_obj *sem, __u32 count)
  {
  	__u32 sum;
  
@@ -14713,9 +14883,12 @@ index 4954553b7baa..3fac06270549 100644
  
  	if (check_add_overflow(sem->u.sem.count, count, &sum) ||
  	    sum > sem->u.sem.max)
-@@ -73,9 +406,11 @@ static int post_sem_state(struct ntsync_obj *sem, __u32 count)
+@@ -71,11 +404,13 @@ static int post_sem_state(struct ntsync_obj *sem, __u32 count)
+ 	return 0;
+ }
  
- static int ntsync_sem_post(struct ntsync_obj *sem, void __user *argp)
+-static int ntsync_sem_post(struct ntsync_obj *sem, void __user *argp)
++static int ntsync_sem_release(struct ntsync_obj *sem, void __user *argp)
  {
 +	struct ntsync_device *dev = sem->dev;
  	__u32 __user *user_args = argp;
@@ -14733,7 +14906,8 @@ index 4954553b7baa..3fac06270549 100644
 +	all = ntsync_lock_obj(dev, sem);
  
  	prev_count = sem->u.sem.count;
- 	ret = post_sem_state(sem, args);
+-	ret = post_sem_state(sem, args);
++	ret = release_sem_state(sem, args);
 +	if (!ret) {
 +		if (all)
 +			try_wake_all_obj(dev, sem);
@@ -14745,7 +14919,7 @@ index 4954553b7baa..3fac06270549 100644
  
  	if (!ret && put_user(prev_count, user_args))
  		ret = -EFAULT;
-@@ -97,6 +437,226 @@ static int ntsync_sem_post(struct ntsync_obj *sem, void __user *argp)
+@@ -97,6 +437,220 @@ static int ntsync_sem_post(struct ntsync_obj *sem, void __user *argp)
  	return ret;
  }
  
@@ -14905,8 +15079,6 @@ index 4954553b7baa..3fac06270549 100644
 +	if (sem->type != NTSYNC_TYPE_SEM)
 +		return -EINVAL;
 +
-+	args.sem = 0;
-+
 +	all = ntsync_lock_obj(dev, sem);
 +
 +	args.count = sem->u.sem.count;
@@ -14929,8 +15101,6 @@ index 4954553b7baa..3fac06270549 100644
 +
 +	if (mutex->type != NTSYNC_TYPE_MUTEX)
 +		return -EINVAL;
-+
-+	args.mutex = 0;
 +
 +	all = ntsync_lock_obj(dev, mutex);
 +
@@ -14955,8 +15125,6 @@ index 4954553b7baa..3fac06270549 100644
 +	if (event->type != NTSYNC_TYPE_EVENT)
 +		return -EINVAL;
 +
-+	args.event = 0;
-+
 +	all = ntsync_lock_obj(dev, event);
 +
 +	args.manual = event->u.event.manual;
@@ -14972,10 +15140,14 @@ index 4954553b7baa..3fac06270549 100644
  static int ntsync_obj_release(struct inode *inode, struct file *file)
  {
  	struct ntsync_obj *obj = file->private_data;
-@@ -116,6 +676,22 @@ static long ntsync_obj_ioctl(struct file *file, unsigned int cmd,
+@@ -114,8 +668,24 @@ static long ntsync_obj_ioctl(struct file *file, unsigned int cmd,
+ 	void __user *argp = (void __user *)parm;
+ 
  	switch (cmd) {
- 	case NTSYNC_IOC_SEM_POST:
- 		return ntsync_sem_post(obj, argp);
+-	case NTSYNC_IOC_SEM_POST:
+-		return ntsync_sem_post(obj, argp);
++	case NTSYNC_IOC_SEM_RELEASE:
++		return ntsync_sem_release(obj, argp);
 +	case NTSYNC_IOC_SEM_READ:
 +		return ntsync_sem_read(obj, argp);
 +	case NTSYNC_IOC_MUTEX_UNLOCK:
@@ -14995,7 +15167,7 @@ index 4954553b7baa..3fac06270549 100644
  	default:
  		return -ENOIOCTLCMD;
  	}
-@@ -140,6 +716,9 @@ static struct ntsync_obj *ntsync_alloc_obj(struct ntsync_device *dev,
+@@ -140,6 +710,9 @@ static struct ntsync_obj *ntsync_alloc_obj(struct ntsync_device *dev,
  	obj->dev = dev;
  	get_file(dev->file);
  	spin_lock_init(&obj->lock);
@@ -15005,13 +15177,28 @@ index 4954553b7baa..3fac06270549 100644
  
  	return obj;
  }
-@@ -190,6 +769,400 @@ static int ntsync_create_sem(struct ntsync_device *dev, void __user *argp)
- 	return put_user(fd, &user_args->sem);
- }
+@@ -165,7 +738,6 @@ static int ntsync_obj_get_fd(struct ntsync_obj *obj)
  
+ static int ntsync_create_sem(struct ntsync_device *dev, void __user *argp)
+ {
+-	struct ntsync_sem_args __user *user_args = argp;
+ 	struct ntsync_sem_args args;
+ 	struct ntsync_obj *sem;
+ 	int fd;
+@@ -182,12 +754,398 @@ static int ntsync_create_sem(struct ntsync_device *dev, void __user *argp)
+ 	sem->u.sem.count = args.count;
+ 	sem->u.sem.max = args.max;
+ 	fd = ntsync_obj_get_fd(sem);
+-	if (fd < 0) {
++	if (fd < 0)
+ 		kfree(sem);
+-		return fd;
++
++	return fd;
++}
++
 +static int ntsync_create_mutex(struct ntsync_device *dev, void __user *argp)
 +{
-+	struct ntsync_mutex_args __user *user_args = argp;
 +	struct ntsync_mutex_args args;
 +	struct ntsync_obj *mutex;
 +	int fd;
@@ -15028,17 +15215,14 @@ index 4954553b7baa..3fac06270549 100644
 +	mutex->u.mutex.count = args.count;
 +	mutex->u.mutex.owner = args.owner;
 +	fd = ntsync_obj_get_fd(mutex);
-+	if (fd < 0) {
++	if (fd < 0)
 +		kfree(mutex);
-+		return fd;
-+	}
 +
-+	return put_user(fd, &user_args->mutex);
++	return fd;
 +}
 +
 +static int ntsync_create_event(struct ntsync_device *dev, void __user *argp)
 +{
-+	struct ntsync_event_args __user *user_args = argp;
 +	struct ntsync_event_args args;
 +	struct ntsync_obj *event;
 +	int fd;
@@ -15052,12 +15236,10 @@ index 4954553b7baa..3fac06270549 100644
 +	event->u.event.manual = args.manual;
 +	event->u.event.signaled = args.signaled;
 +	fd = ntsync_obj_get_fd(event);
-+	if (fd < 0) {
++	if (fd < 0)
 +		kfree(event);
-+		return fd;
-+	}
 +
-+	return put_user(fd, &user_args->event);
++	return fd;
 +}
 +
 +static struct ntsync_obj *get_obj(struct ntsync_device *dev, int fd)
@@ -15071,8 +15253,9 @@ index 4954553b7baa..3fac06270549 100644
 +	if (file->f_op != &ntsync_obj_fops) {
 +		fput(file);
 +		return NULL;
-+	}
-+
+ 	}
+ 
+-	return put_user(fd, &user_args->sem);
 +	obj = file->private_data;
 +	if (obj->dev != dev) {
 +		fput(file);
@@ -15401,12 +15584,10 @@ index 4954553b7baa..3fac06270549 100644
 +
 +	kfree(q);
 +	return ret;
-+}
-+
+ }
+ 
  static int ntsync_char_open(struct inode *inode, struct file *file)
- {
- 	struct ntsync_device *dev;
-@@ -198,6 +1171,8 @@ static int ntsync_char_open(struct inode *inode, struct file *file)
+@@ -198,6 +1156,8 @@ static int ntsync_char_open(struct inode *inode, struct file *file)
  	if (!dev)
  		return -ENOMEM;
  
@@ -15415,7 +15596,7 @@ index 4954553b7baa..3fac06270549 100644
  	file->private_data = dev;
  	dev->file = file;
  	return nonseekable_open(inode, file);
-@@ -219,8 +1194,16 @@ static long ntsync_char_ioctl(struct file *file, unsigned int cmd,
+@@ -219,8 +1179,16 @@ static long ntsync_char_ioctl(struct file *file, unsigned int cmd,
  	void __user *argp = (void __user *)parm;
  
  	switch (cmd) {
@@ -23785,6 +23966,25 @@ index 2361ed4d2b15..37a9afffb59e 100644
  	CPUHP_AP_PERF_S390_CF_ONLINE,
  	CPUHP_AP_PERF_S390_SF_ONLINE,
  	CPUHP_AP_PERF_ARM_CCI_ONLINE,
+diff --git a/include/linux/mm.h b/include/linux/mm.h
+index 61fff5d34ed5..18dc2544700b 100644
+--- a/include/linux/mm.h
++++ b/include/linux/mm.h
+@@ -205,6 +205,14 @@ static inline void __mm_zero_struct_page(struct page *page)
+ 
+ extern int sysctl_max_map_count;
+ 
++extern bool sysctl_workingset_protection;
++extern u8 sysctl_anon_min_ratio;
++extern u8 sysctl_clean_low_ratio;
++extern u8 sysctl_clean_min_ratio;
++int vm_workingset_protection_update_handler(
++	const struct ctl_table *table, int write,
++	void __user *buffer, size_t *lenp, loff_t *ppos);
++
+ extern unsigned long sysctl_user_reserve_kbytes;
+ extern unsigned long sysctl_admin_reserve_kbytes;
+ 
 diff --git a/include/linux/pagemap.h b/include/linux/pagemap.h
 index 68a5f1ff3301..291873a34079 100644
 --- a/include/linux/pagemap.h
@@ -25671,21 +25871,25 @@ index 86bb2e8b17c9..9d9a3eb2ce9b 100644
  
  union tcp_cc_info {
 diff --git a/include/uapi/linux/ntsync.h b/include/uapi/linux/ntsync.h
-index dcfa38fdc93c..4a8095a3fc34 100644
+index dcfa38fdc93c..6d06793512b1 100644
 --- a/include/uapi/linux/ntsync.h
 +++ b/include/uapi/linux/ntsync.h
-@@ -16,8 +16,47 @@ struct ntsync_sem_args {
+@@ -11,13 +11,49 @@
+ #include <linux/types.h>
+ 
+ struct ntsync_sem_args {
+-	__u32 sem;
+ 	__u32 count;
  	__u32 max;
  };
  
+-#define NTSYNC_IOC_CREATE_SEM		_IOWR('N', 0x80, struct ntsync_sem_args)
 +struct ntsync_mutex_args {
-+	__u32 mutex;
 +	__u32 owner;
 +	__u32 count;
 +};
 +
 +struct ntsync_event_args {
-+	__u32 event;
 +	__u32 manual;
 +	__u32 signaled;
 +};
@@ -25705,13 +25909,14 @@ index dcfa38fdc93c..4a8095a3fc34 100644
 +
 +#define NTSYNC_MAX_WAIT_COUNT 64
 +
- #define NTSYNC_IOC_CREATE_SEM		_IOWR('N', 0x80, struct ntsync_sem_args)
++#define NTSYNC_IOC_CREATE_SEM		_IOW ('N', 0x80, struct ntsync_sem_args)
 +#define NTSYNC_IOC_WAIT_ANY		_IOWR('N', 0x82, struct ntsync_wait_args)
 +#define NTSYNC_IOC_WAIT_ALL		_IOWR('N', 0x83, struct ntsync_wait_args)
-+#define NTSYNC_IOC_CREATE_MUTEX		_IOWR('N', 0x84, struct ntsync_sem_args)
-+#define NTSYNC_IOC_CREATE_EVENT		_IOWR('N', 0x87, struct ntsync_event_args)
++#define NTSYNC_IOC_CREATE_MUTEX		_IOW ('N', 0x84, struct ntsync_mutex_args)
++#define NTSYNC_IOC_CREATE_EVENT		_IOW ('N', 0x87, struct ntsync_event_args)
  
- #define NTSYNC_IOC_SEM_POST		_IOWR('N', 0x81, __u32)
+-#define NTSYNC_IOC_SEM_POST		_IOWR('N', 0x81, __u32)
++#define NTSYNC_IOC_SEM_RELEASE		_IOWR('N', 0x81, __u32)
 +#define NTSYNC_IOC_MUTEX_UNLOCK		_IOWR('N', 0x85, struct ntsync_mutex_args)
 +#define NTSYNC_IOC_MUTEX_KILL		_IOW ('N', 0x86, __u32)
 +#define NTSYNC_IOC_EVENT_SET		_IOR ('N', 0x88, __u32)
@@ -26344,7 +26549,7 @@ index c00a86931f8c..d82213d68522 100644
  COND_SYSCALL(mbind);
  COND_SYSCALL(get_mempolicy);
 diff --git a/kernel/sysctl.c b/kernel/sysctl.c
-index 79e6cb1d5c48..676e89dc38c3 100644
+index 79e6cb1d5c48..4a62ae02a2c0 100644
 --- a/kernel/sysctl.c
 +++ b/kernel/sysctl.c
 @@ -80,6 +80,9 @@
@@ -26373,6 +26578,47 @@ index 79e6cb1d5c48..676e89dc38c3 100644
  #ifdef CONFIG_PROC_SYSCTL
  	{
  		.procname	= "tainted",
+@@ -2198,6 +2210,40 @@ static struct ctl_table vm_table[] = {
+ 		.extra1		= SYSCTL_ZERO,
+ 	},
+ #endif
++	{
++		.procname	= "workingset_protection",
++		.data		= &sysctl_workingset_protection,
++		.maxlen		= sizeof(bool),
++		.mode		= 0644,
++		.proc_handler	= &proc_dobool,
++	},
++	{
++		.procname	= "anon_min_ratio",
++		.data		= &sysctl_anon_min_ratio,
++		.maxlen		= sizeof(u8),
++		.mode		= 0644,
++		.proc_handler	= &vm_workingset_protection_update_handler,
++		.extra1		= SYSCTL_ZERO,
++		.extra2		= SYSCTL_ONE_HUNDRED,
++	},
++	{
++		.procname	= "clean_low_ratio",
++		.data		= &sysctl_clean_low_ratio,
++		.maxlen		= sizeof(u8),
++		.mode		= 0644,
++		.proc_handler	= &vm_workingset_protection_update_handler,
++		.extra1		= SYSCTL_ZERO,
++		.extra2		= SYSCTL_ONE_HUNDRED,
++	},
++	{
++		.procname	= "clean_min_ratio",
++		.data		= &sysctl_clean_min_ratio,
++		.maxlen		= sizeof(u8),
++		.mode		= 0644,
++		.proc_handler	= &vm_workingset_protection_update_handler,
++		.extra1		= SYSCTL_ZERO,
++		.extra2		= SYSCTL_ONE_HUNDRED,
++	},
+ 	{
+ 		.procname	= "user_reserve_kbytes",
+ 		.data		= &sysctl_user_reserve_kbytes,
 diff --git a/kernel/user_namespace.c b/kernel/user_namespace.c
 index aa0b2e47f2f2..d74d857b1696 100644
 --- a/kernel/user_namespace.c
@@ -43568,10 +43814,80 @@ index 469fc3059be0..0ae819f0c927 100644
  EXPORT_SYMBOL(zstd_reset_dstream);
  
 diff --git a/mm/Kconfig b/mm/Kconfig
-index 33fa51d608dc..6bfea371341e 100644
+index 33fa51d608dc..87cb63f7ca57 100644
 --- a/mm/Kconfig
 +++ b/mm/Kconfig
-@@ -648,7 +648,7 @@ config COMPACTION
+@@ -499,6 +499,69 @@ config ARCH_WANT_OPTIMIZE_DAX_VMEMMAP
+ config ARCH_WANT_OPTIMIZE_HUGETLB_VMEMMAP
+ 	bool
+ 
++config ANON_MIN_RATIO
++	int "Default value for vm.anon_min_ratio"
++	depends on SYSCTL
++	range 0 100
++	default 15
++	help
++	  This option sets the default value for vm.anon_min_ratio sysctl knob.
++
++	  The vm.anon_min_ratio sysctl knob provides *hard* protection of
++	  anonymous pages. The anonymous pages on the current node won't be
++	  reclaimed under any conditions when their amount is below
++	  vm.anon_min_ratio. This knob may be used to prevent excessive swap
++	  thrashing when anonymous memory is low (for example, when memory is
++	  going to be overfilled by compressed data of zram module).
++
++	  Setting this value too high (close to MemTotal) can result in
++	  inability to swap and can lead to early OOM under memory pressure.
++
++config CLEAN_LOW_RATIO
++	int "Default value for vm.clean_low_ratio"
++	depends on SYSCTL
++	range 0 100
++	default 0
++	help
++	  This option sets the default value for vm.clean_low_ratio sysctl knob.
++
++	  The vm.clean_low_ratio sysctl knob provides *best-effort*
++	  protection of clean file pages. The file pages on the current node
++	  won't be reclaimed under memory pressure when the amount of clean file
++	  pages is below vm.clean_low_ratio *unless* we threaten to OOM.
++	  Protection of clean file pages using this knob may be used when
++	  swapping is still possible to
++	    - prevent disk I/O thrashing under memory pressure;
++	    - improve performance in disk cache-bound tasks under memory
++	      pressure.
++
++	  Setting it to a high value may result in a early eviction of anonymous
++	  pages into the swap space by attempting to hold the protected amount
++	  of clean file pages in memory.
++
++config CLEAN_MIN_RATIO
++	int "Default value for vm.clean_min_ratio"
++	depends on SYSCTL
++	range 0 100
++	default 15
++	help
++	  This option sets the default value for vm.clean_min_ratio sysctl knob.
++
++	  The vm.clean_min_ratio sysctl knob provides *hard* protection of
++	  clean file pages. The file pages on the current node won't be
++	  reclaimed under memory pressure when the amount of clean file pages is
++	  below vm.clean_min_ratio. Hard protection of clean file pages using
++	  this knob may be used to
++	    - prevent disk I/O thrashing under memory pressure even with no free
++	      swap space;
++	    - improve performance in disk cache-bound tasks under memory
++	      pressure;
++	    - avoid high latency and prevent livelock in near-OOM conditions.
++
++	  Setting it to a high value may result in a early out-of-memory condition
++	  due to the inability to reclaim the protected amount of clean file pages
++	  when other types of pages cannot be reclaimed.
++
+ config HAVE_MEMBLOCK_PHYS_MAP
+ 	bool
+ 
+@@ -648,7 +711,7 @@ config COMPACTION
  config COMPACT_UNEVICTABLE_DEFAULT
  	int
  	depends on COMPACTION
@@ -43612,6 +43928,18 @@ index 5734d5d5060f..af595df5b65f 100644
  	(1<<TRANSPARENT_HUGEPAGE_DEFRAG_KHUGEPAGED_FLAG)|
  	(1<<TRANSPARENT_HUGEPAGE_USE_ZERO_PAGE_FLAG);
  
+diff --git a/mm/mm_init.c b/mm/mm_init.c
+index 4ba5607aaf19..c081fbac7e6b 100644
+--- a/mm/mm_init.c
++++ b/mm/mm_init.c
+@@ -2628,6 +2628,7 @@ static void __init mem_init_print_info(void)
+ 		, K(totalhigh_pages())
+ #endif
+ 		);
++	printk(KERN_INFO "le9 Unofficial (le9uo) working set protection 1.8 by Masahito Suzuki (forked from hakavlad's original le9 patch)");
+ }
+ 
+ /*
 diff --git a/mm/page-writeback.c b/mm/page-writeback.c
 index fcd4c1439cb9..e2f7d709e819 100644
 --- a/mm/page-writeback.c
@@ -43694,10 +44022,38 @@ index bd5183dfd879..3a410f53a07c 100644
  
  /*
 diff --git a/mm/vmscan.c b/mm/vmscan.c
-index 28ba2b06fc7d..a334eadae9be 100644
+index 28ba2b06fc7d..38602f8ad5aa 100644
 --- a/mm/vmscan.c
 +++ b/mm/vmscan.c
-@@ -200,7 +200,11 @@ struct scan_control {
+@@ -148,6 +148,15 @@ struct scan_control {
+ 	/* The file folios on the current node are dangerously low */
+ 	unsigned int file_is_tiny:1;
+ 
++	/* The anonymous pages on the current node are below vm.anon_min_ratio */
++	unsigned int anon_below_min:1;
++
++	/* The clean file pages on the current node are below vm.clean_low_ratio */
++	unsigned int clean_below_low:1;
++
++	/* The clean file pages on the current node are below vm.clean_min_ratio */
++	unsigned int clean_below_min:1;
++
+ 	/* Always discard instead of demoting to lower tier memory */
+ 	unsigned int no_demotion:1;
+ 
+@@ -197,10 +206,23 @@ struct scan_control {
+ #define prefetchw_prev_lru_folio(_folio, _base, _field) do { } while (0)
+ #endif
+ 
++bool sysctl_workingset_protection __read_mostly = true;
++u8 sysctl_anon_min_ratio  __read_mostly = CONFIG_ANON_MIN_RATIO;
++u8 sysctl_clean_low_ratio __read_mostly = CONFIG_CLEAN_LOW_RATIO;
++u8 sysctl_clean_min_ratio __read_mostly = CONFIG_CLEAN_MIN_RATIO;
++static u64 sysctl_anon_min_ratio_kb  __read_mostly = 0;
++static u64 sysctl_clean_low_ratio_kb __read_mostly = 0;
++static u64 sysctl_clean_min_ratio_kb __read_mostly = 0;
++static u64 workingset_protection_prev_totalram __read_mostly = 0;
++
  /*
   * From 0 .. MAX_SWAPPINESS.  Higher means more swappy.
   */
@@ -43709,6 +44065,176 @@ index 28ba2b06fc7d..a334eadae9be 100644
  
  #ifdef CONFIG_MEMCG
  
+@@ -1090,6 +1112,10 @@ static unsigned int shrink_folio_list(struct list_head *folio_list,
+ 		    folio_mapped(folio) && folio_test_referenced(folio))
+ 			goto keep_locked;
+ 
++		if (folio_is_file_lru(folio) ? sc->clean_below_min :
++				(sc->anon_below_min && !sc->clean_below_min))
++			goto keep_locked;
++
+ 		/*
+ 		 * The number of dirty pages determines if a node is marked
+ 		 * reclaim_congested. kswapd will stall and start writing
+@@ -2415,6 +2441,15 @@ static void get_scan_count(struct lruvec *lruvec, struct scan_control *sc,
+ 		goto out;
+ 	}
+ 
++	/*
++	 * Force-scan anon if clean file pages is under vm.clean_low_ratio
++	 * or vm.clean_min_ratio.
++	 */
++	if (sc->clean_below_low || sc->clean_below_min) {
++		scan_balance = SCAN_ANON;
++		goto out;
++	}
++
+ 	/*
+ 	 * If there is enough inactive page cache, we do not reclaim
+ 	 * anything from the anonymous working right now.
+@@ -2559,6 +2594,14 @@ static void get_scan_count(struct lruvec *lruvec, struct scan_control *sc,
+ 			BUG();
+ 		}
+ 
++		/*
++		 * Hard protection of the working set.
++		 * Don't reclaim anon/file pages when the amount is
++		 * below the watermark of the same type.
++		 */
++		if (file ? sc->clean_below_min : sc->anon_below_min)
++			scan = 0;
++
+ 		nr[lru] = scan;
+ 	}
+ }
+@@ -2578,6 +2621,96 @@ static bool can_age_anon_pages(struct pglist_data *pgdat,
+ 	return can_demote(pgdat->node_id, sc);
+ }
+ 
++int vm_workingset_protection_update_handler(const struct ctl_table *table, int write,
++		void __user *buffer, size_t *lenp, loff_t *ppos)
++{
++	int ret = proc_dou8vec_minmax(table, write, buffer, lenp, ppos);
++	if (ret || !write)
++		return ret;
++
++	workingset_protection_prev_totalram = 0;
++
++	return 0;
++}
++
++static void prepare_workingset_protection(pg_data_t *pgdat, struct scan_control *sc)
++{
++	unsigned long node_mem_total;
++	struct sysinfo i;
++
++	if (!(sysctl_workingset_protection)) {
++		sc->anon_below_min = 0;
++		sc->clean_below_low = 0;
++		sc->clean_below_min = 0;
++		return;
++	}
++
++	if (likely(sysctl_anon_min_ratio  ||
++	           sysctl_clean_low_ratio ||
++		       sysctl_clean_min_ratio)) {
++#ifdef CONFIG_NUMA
++		si_meminfo_node(&i, pgdat->node_id);
++#else //CONFIG_NUMA
++		si_meminfo(&i);
++#endif //CONFIG_NUMA
++		node_mem_total = i.totalram;
++
++		if (unlikely(workingset_protection_prev_totalram != node_mem_total)) {
++			sysctl_anon_min_ratio_kb  =
++				node_mem_total * sysctl_anon_min_ratio  / 100;
++			sysctl_clean_low_ratio_kb =
++				node_mem_total * sysctl_clean_low_ratio / 100;
++			sysctl_clean_min_ratio_kb =
++				node_mem_total * sysctl_clean_min_ratio / 100;
++			workingset_protection_prev_totalram = node_mem_total;
++		}
++	}
++
++	/*
++	 * Check the number of anonymous pages to protect them from
++	 * reclaiming if their amount is below the specified.
++	 */
++	if (sysctl_anon_min_ratio) {
++		unsigned long reclaimable_anon;
++
++		reclaimable_anon =
++			node_page_state(pgdat, NR_ACTIVE_ANON) +
++			node_page_state(pgdat, NR_INACTIVE_ANON) +
++			node_page_state(pgdat, NR_ISOLATED_ANON);
++
++		sc->anon_below_min = reclaimable_anon < sysctl_anon_min_ratio_kb;
++	} else
++		sc->anon_below_min = 0;
++
++	/*
++	 * Check the number of clean file pages to protect them from
++	 * reclaiming if their amount is below the specified.
++	 */
++	if (sysctl_clean_low_ratio || sysctl_clean_min_ratio) {
++		unsigned long reclaimable_file, dirty, clean;
++
++		reclaimable_file =
++			node_page_state(pgdat, NR_ACTIVE_FILE) +
++			node_page_state(pgdat, NR_INACTIVE_FILE) +
++			node_page_state(pgdat, NR_ISOLATED_FILE);
++		dirty = node_page_state(pgdat, NR_FILE_DIRTY);
++		/*
++		 * node_page_state() sum can go out of sync since
++		 * all the values are not read at once.
++		 */
++		if (likely(reclaimable_file > dirty))
++			clean = reclaimable_file - dirty;
++		else
++			clean = 0;
++
++		sc->clean_below_low = clean < sysctl_clean_low_ratio_kb;
++		sc->clean_below_min = clean < sysctl_clean_min_ratio_kb;
++	} else {
++		sc->clean_below_low = 0;
++		sc->clean_below_min = 0;
++	}
++}
++
+ #ifdef CONFIG_LRU_GEN
+ 
+ #ifdef CONFIG_LRU_GEN_ENABLED
+@@ -4528,6 +4661,12 @@ static int isolate_folios(struct lruvec *lruvec, struct scan_control *sc, int sw
+ 	 */
+ 	if (!swappiness)
+ 		type = LRU_GEN_FILE;
++	else if (sc->clean_below_min)
++		type = LRU_GEN_ANON;
++	else if (sc->anon_below_min)
++		type = LRU_GEN_FILE;
++	else if (sc->clean_below_low)
++		type = LRU_GEN_ANON;
+ 	else if (min_seq[LRU_GEN_ANON] < min_seq[LRU_GEN_FILE])
+ 		type = LRU_GEN_ANON;
+ 	else if (swappiness == 1)
+@@ -4807,6 +4946,8 @@ static int shrink_one(struct lruvec *lruvec, struct scan_control *sc)
+ 	struct mem_cgroup *memcg = lruvec_memcg(lruvec);
+ 	struct pglist_data *pgdat = lruvec_pgdat(lruvec);
+ 
++	prepare_workingset_protection(pgdat, sc);
++
+ 	/* lru_gen_age_node() called mem_cgroup_calculate_protection() */
+ 	if (mem_cgroup_below_min(NULL, memcg))
+ 		return MEMCG_LRU_YOUNG;
+@@ -5954,6 +6095,8 @@ static void shrink_node(pg_data_t *pgdat, struct scan_control *sc)
+ 
+ 	prepare_scan_control(pgdat, sc);
+ 
++	prepare_workingset_protection(pgdat, sc);
++
+ 	shrink_node_memcgs(pgdat, sc);
+ 
+ 	flush_reclaim_state(sc);
 diff --git a/net/ipv4/Kconfig b/net/ipv4/Kconfig
 index 6d2c97f8e9ef..ddc116ef22cb 100644
 --- a/net/ipv4/Kconfig
@@ -46610,7 +47136,7 @@ index bb1fe1ba867a..050a80769de6 100644
  		const struct tcp_congestion_ops *ca;
  
 diff --git a/net/ipv4/tcp_output.c b/net/ipv4/tcp_output.c
-index 68804fd01daf..afdb62febe42 100644
+index 8efc58716ce9..5798ce3db487 100644
 --- a/net/ipv4/tcp_output.c
 +++ b/net/ipv4/tcp_output.c
 @@ -336,10 +336,9 @@ static void tcp_ecn_send_syn(struct sock *sk, struct sk_buff *skb)
@@ -46645,7 +47171,7 @@ index 68804fd01daf..afdb62febe42 100644
  			/* ACK or retransmitted segment: clear ECT|CE */
  			INET_ECN_dontxmit(sk);
  		}
-@@ -1601,7 +1604,7 @@ int tcp_fragment(struct sock *sk, enum tcp_queue tcp_queue,
+@@ -1603,7 +1606,7 @@ int tcp_fragment(struct sock *sk, enum tcp_queue tcp_queue,
  {
  	struct tcp_sock *tp = tcp_sk(sk);
  	struct sk_buff *buff;
@@ -46654,7 +47180,7 @@ index 68804fd01daf..afdb62febe42 100644
  	long limit;
  	int nlen;
  	u8 flags;
-@@ -1676,6 +1679,30 @@ int tcp_fragment(struct sock *sk, enum tcp_queue tcp_queue,
+@@ -1678,6 +1681,30 @@ int tcp_fragment(struct sock *sk, enum tcp_queue tcp_queue,
  
  		if (diff)
  			tcp_adjust_pcount(sk, skb, diff);
@@ -46685,7 +47211,7 @@ index 68804fd01daf..afdb62febe42 100644
  	}
  
  	/* Link BUFF into the send queue. */
-@@ -2033,13 +2060,12 @@ static u32 tcp_tso_autosize(const struct sock *sk, unsigned int mss_now,
+@@ -2035,13 +2062,12 @@ static u32 tcp_tso_autosize(const struct sock *sk, unsigned int mss_now,
  static u32 tcp_tso_segs(struct sock *sk, unsigned int mss_now)
  {
  	const struct tcp_congestion_ops *ca_ops = inet_csk(sk)->icsk_ca_ops;
@@ -46704,7 +47230,7 @@ index 68804fd01daf..afdb62febe42 100644
  	return min_t(u32, tso_segs, sk->sk_gso_max_segs);
  }
  
-@@ -2765,6 +2791,7 @@ static bool tcp_write_xmit(struct sock *sk, unsigned int mss_now, int nonagle,
+@@ -2767,6 +2793,7 @@ static bool tcp_write_xmit(struct sock *sk, unsigned int mss_now, int nonagle,
  			skb_set_delivery_time(skb, tp->tcp_wstamp_ns, SKB_CLOCK_MONOTONIC);
  			list_move_tail(&skb->tcp_tsorted_anchor, &tp->tsorted_sent_queue);
  			tcp_init_tso_segs(skb, mss_now);
@@ -46712,7 +47238,7 @@ index 68804fd01daf..afdb62febe42 100644
  			goto repair; /* Skip network transmission */
  		}
  
-@@ -2979,6 +3006,7 @@ void tcp_send_loss_probe(struct sock *sk)
+@@ -2981,6 +3008,7 @@ void tcp_send_loss_probe(struct sock *sk)
  	if (WARN_ON(!skb || !tcp_skb_pcount(skb)))
  		goto rearm_timer;
  
@@ -46948,10 +47474,10 @@ index 845e24eb372e..227d9cc12365 100644
 +464	common	process_ksm_disable			sys_process_ksm_disable
 +465	common	process_ksm_status			sys_process_ksm_status
 diff --git a/sound/pci/hda/patch_realtek.c b/sound/pci/hda/patch_realtek.c
-index e901d4277c88..cf3ae20bf075 100644
+index dde123f8c856..13ded71586d8 100644
 --- a/sound/pci/hda/patch_realtek.c
 +++ b/sound/pci/hda/patch_realtek.c
-@@ -10622,6 +10622,8 @@ static const struct hda_quirk alc269_fixup_tbl[] = {
+@@ -10623,6 +10623,8 @@ static const struct hda_quirk alc269_fixup_tbl[] = {
  	SND_PCI_QUIRK(0x1043, 0x1e1f, "ASUS Vivobook 15 X1504VAP", ALC2XX_FIXUP_HEADSET_MIC),
  	SND_PCI_QUIRK(0x1043, 0x1e51, "ASUS Zephyrus M15", ALC294_FIXUP_ASUS_GU502_PINS),
  	SND_PCI_QUIRK(0x1043, 0x1e5e, "ASUS ROG Strix G513", ALC294_FIXUP_ASUS_G513_PINS),
@@ -46974,10 +47500,10 @@ index dd4682857c12..23698d0f4bb4 100644
  /*
   * BUG word(s)
 diff --git a/tools/objtool/check.c b/tools/objtool/check.c
-index 6604f5d038aa..05a0fb4a3d1a 100644
+index f0d8796b984a..634a67dba86c 100644
 --- a/tools/objtool/check.c
 +++ b/tools/objtool/check.c
-@@ -4557,6 +4557,8 @@ static int validate_ibt(struct objtool_file *file)
+@@ -4560,6 +4560,8 @@ static int validate_ibt(struct objtool_file *file)
  		    !strcmp(sec->name, "__jump_table")			||
  		    !strcmp(sec->name, "__mcount_loc")			||
  		    !strcmp(sec->name, ".kcfi_traps")			||
@@ -47076,10 +47602,10 @@ index 000000000000..60539c826d06
 +CONFIG_WINESYNC=y
 diff --git a/tools/testing/selftests/drivers/ntsync/ntsync.c b/tools/testing/selftests/drivers/ntsync/ntsync.c
 new file mode 100644
-index 000000000000..5fa2c9a0768c
+index 000000000000..3aad311574c4
 --- /dev/null
 +++ b/tools/testing/selftests/drivers/ntsync/ntsync.c
-@@ -0,0 +1,1407 @@
+@@ -0,0 +1,1343 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * Various unit tests for the "ntsync" synchronization primitive driver.
@@ -47117,9 +47643,9 @@ index 000000000000..5fa2c9a0768c
 +		EXPECT_EQ((max), __max); \
 +	})
 +
-+static int post_sem(int sem, __u32 *count)
++static int release_sem(int sem, __u32 *count)
 +{
-+	return ioctl(sem, NTSYNC_IOC_SEM_POST, count);
++	return ioctl(sem, NTSYNC_IOC_SEM_RELEASE, count);
 +}
 +
 +static int read_mutex_state(int mutex, __u32 *count, __u32 *owner)
@@ -47234,28 +47760,24 @@ index 000000000000..5fa2c9a0768c
 +
 +	sem_args.count = 3;
 +	sem_args.max = 2;
-+	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
-+	EXPECT_EQ(-1, ret);
++	sem = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
++	EXPECT_EQ(-1, sem);
 +	EXPECT_EQ(EINVAL, errno);
 +
 +	sem_args.count = 2;
 +	sem_args.max = 2;
-+	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
-+	EXPECT_EQ(0, ret);
-+	EXPECT_NE(0xdeadbeef, sem_args.sem);
-+	sem = sem_args.sem;
++	sem = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
++	EXPECT_LE(0, sem);
 +	check_sem_state(sem, 2, 2);
 +
 +	count = 0;
-+	ret = post_sem(sem, &count);
++	ret = release_sem(sem, &count);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(2, count);
 +	check_sem_state(sem, 2, 2);
 +
 +	count = 1;
-+	ret = post_sem(sem, &count);
++	ret = release_sem(sem, &count);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EOVERFLOW, errno);
 +	check_sem_state(sem, 2, 2);
@@ -47275,13 +47797,13 @@ index 000000000000..5fa2c9a0768c
 +	EXPECT_EQ(ETIMEDOUT, errno);
 +
 +	count = 3;
-+	ret = post_sem(sem, &count);
++	ret = release_sem(sem, &count);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EOVERFLOW, errno);
 +	check_sem_state(sem, 0, 2);
 +
 +	count = 2;
-+	ret = post_sem(sem, &count);
++	ret = release_sem(sem, &count);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, count);
 +	check_sem_state(sem, 2, 2);
@@ -47292,13 +47814,13 @@ index 000000000000..5fa2c9a0768c
 +	EXPECT_EQ(0, ret);
 +
 +	count = 1;
-+	ret = post_sem(sem, &count);
++	ret = release_sem(sem, &count);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, count);
 +	check_sem_state(sem, 1, 2);
 +
 +	count = ~0u;
-+	ret = post_sem(sem, &count);
++	ret = release_sem(sem, &count);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EOVERFLOW, errno);
 +	check_sem_state(sem, 1, 2);
@@ -47322,23 +47844,20 @@ index 000000000000..5fa2c9a0768c
 +
 +	mutex_args.owner = 123;
 +	mutex_args.count = 0;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
-+	EXPECT_EQ(-1, ret);
++	mutex = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
++	EXPECT_EQ(-1, mutex);
 +	EXPECT_EQ(EINVAL, errno);
 +
 +	mutex_args.owner = 0;
 +	mutex_args.count = 2;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
-+	EXPECT_EQ(-1, ret);
++	mutex = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
++	EXPECT_EQ(-1, mutex);
 +	EXPECT_EQ(EINVAL, errno);
 +
 +	mutex_args.owner = 123;
 +	mutex_args.count = 2;
-+	mutex_args.mutex = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
-+	EXPECT_EQ(0, ret);
-+	EXPECT_NE(0xdeadbeef, mutex_args.mutex);
-+	mutex = mutex_args.mutex;
++	mutex = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
++	EXPECT_LE(0, mutex);
 +	check_mutex_state(mutex, 2, 123);
 +
 +	ret = unlock_mutex(mutex, 0, &count);
@@ -47439,11 +47958,8 @@ index 000000000000..5fa2c9a0768c
 +
 +	mutex_args.owner = 0;
 +	mutex_args.count = 0;
-+	mutex_args.mutex = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
-+	EXPECT_EQ(0, ret);
-+	EXPECT_NE(0xdeadbeef, mutex_args.mutex);
-+	mutex = mutex_args.mutex;
++	mutex = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
++	EXPECT_LE(0, mutex);
 +	check_mutex_state(mutex, 0, 0);
 +
 +	ret = wait_any(fd, 1, &mutex, 123, &index);
@@ -47455,11 +47971,8 @@ index 000000000000..5fa2c9a0768c
 +
 +	mutex_args.owner = 123;
 +	mutex_args.count = ~0u;
-+	mutex_args.mutex = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
-+	EXPECT_EQ(0, ret);
-+	EXPECT_NE(0xdeadbeef, mutex_args.mutex);
-+	mutex = mutex_args.mutex;
++	mutex = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
++	EXPECT_LE(0, mutex);
 +	check_mutex_state(mutex, ~0u, 123);
 +
 +	ret = wait_any(fd, 1, &mutex, 123, &index);
@@ -47482,11 +47995,8 @@ index 000000000000..5fa2c9a0768c
 +
 +	event_args.manual = 1;
 +	event_args.signaled = 0;
-+	event_args.event = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
-+	EXPECT_EQ(0, ret);
-+	EXPECT_NE(0xdeadbeef, event_args.event);
-+	event = event_args.event;
++	event = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
++	EXPECT_LE(0, event);
 +	check_event_state(event, 0, 1);
 +
 +	signaled = 0xdeadbeef;
@@ -47550,11 +48060,8 @@ index 000000000000..5fa2c9a0768c
 +
 +	event_args.manual = 0;
 +	event_args.signaled = 1;
-+	event_args.event = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
-+	EXPECT_EQ(0, ret);
-+	EXPECT_NE(0xdeadbeef, event_args.event);
-+	event = event_args.event;
++	event = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
++	EXPECT_LE(0, event);
 +
 +	check_event_state(event, 1, 0);
 +
@@ -47613,62 +48120,55 @@ index 000000000000..5fa2c9a0768c
 +
 +	sem_args.count = 2;
 +	sem_args.max = 3;
-+	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
-+	EXPECT_EQ(0, ret);
-+	EXPECT_NE(0xdeadbeef, sem_args.sem);
++	objs[0] = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
++	EXPECT_LE(0, objs[0]);
 +
 +	mutex_args.owner = 0;
 +	mutex_args.count = 0;
-+	mutex_args.mutex = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
-+	EXPECT_EQ(0, ret);
-+	EXPECT_NE(0xdeadbeef, mutex_args.mutex);
-+
-+	objs[0] = sem_args.sem;
-+	objs[1] = mutex_args.mutex;
++	objs[1] = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
++	EXPECT_LE(0, objs[1]);
 +
 +	ret = wait_any(fd, 2, objs, 123, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, index);
-+	check_sem_state(sem_args.sem, 1, 3);
-+	check_mutex_state(mutex_args.mutex, 0, 0);
++	check_sem_state(objs[0], 1, 3);
++	check_mutex_state(objs[1], 0, 0);
 +
 +	ret = wait_any(fd, 2, objs, 123, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, index);
-+	check_sem_state(sem_args.sem, 0, 3);
-+	check_mutex_state(mutex_args.mutex, 0, 0);
++	check_sem_state(objs[0], 0, 3);
++	check_mutex_state(objs[1], 0, 0);
 +
 +	ret = wait_any(fd, 2, objs, 123, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(1, index);
-+	check_sem_state(sem_args.sem, 0, 3);
-+	check_mutex_state(mutex_args.mutex, 1, 123);
++	check_sem_state(objs[0], 0, 3);
++	check_mutex_state(objs[1], 1, 123);
 +
 +	count = 1;
-+	ret = post_sem(sem_args.sem, &count);
++	ret = release_sem(objs[0], &count);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, count);
 +
 +	ret = wait_any(fd, 2, objs, 123, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, index);
-+	check_sem_state(sem_args.sem, 0, 3);
-+	check_mutex_state(mutex_args.mutex, 1, 123);
++	check_sem_state(objs[0], 0, 3);
++	check_mutex_state(objs[1], 1, 123);
 +
 +	ret = wait_any(fd, 2, objs, 123, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(1, index);
-+	check_sem_state(sem_args.sem, 0, 3);
-+	check_mutex_state(mutex_args.mutex, 2, 123);
++	check_sem_state(objs[0], 0, 3);
++	check_mutex_state(objs[1], 2, 123);
 +
 +	ret = wait_any(fd, 2, objs, 456, &index);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(ETIMEDOUT, errno);
 +
 +	owner = 123;
-+	ret = ioctl(mutex_args.mutex, NTSYNC_IOC_MUTEX_KILL, &owner);
++	ret = ioctl(objs[1], NTSYNC_IOC_MUTEX_KILL, &owner);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_any(fd, 2, objs, 456, &index);
@@ -47680,24 +48180,27 @@ index 000000000000..5fa2c9a0768c
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(1, index);
 +
++	close(objs[1]);
++
 +	/* test waiting on the same object twice */
++
 +	count = 2;
-+	ret = post_sem(sem_args.sem, &count);
++	ret = release_sem(objs[0], &count);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, count);
 +
-+	objs[0] = objs[1] = sem_args.sem;
++	objs[1] = objs[0];
 +	ret = wait_any(fd, 2, objs, 456, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, index);
-+	check_sem_state(sem_args.sem, 1, 3);
++	check_sem_state(objs[0], 1, 3);
 +
 +	ret = wait_any(fd, 0, NULL, 456, &index);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(ETIMEDOUT, errno);
 +
-+	for (i = 0; i < NTSYNC_MAX_WAIT_COUNT + 1; ++i)
-+		objs[i] = sem_args.sem;
++	for (i = 1; i < NTSYNC_MAX_WAIT_COUNT + 1; ++i)
++		objs[i] = objs[0];
 +
 +	ret = wait_any(fd, NTSYNC_MAX_WAIT_COUNT, objs, 123, &index);
 +	EXPECT_EQ(0, ret);
@@ -47711,8 +48214,7 @@ index 000000000000..5fa2c9a0768c
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
-+	close(sem_args.sem);
-+	close(mutex_args.mutex);
++	close(objs[0]);
 +
 +	close(fd);
 +}
@@ -47730,88 +48232,81 @@ index 000000000000..5fa2c9a0768c
 +
 +	sem_args.count = 2;
 +	sem_args.max = 3;
-+	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
-+	EXPECT_EQ(0, ret);
-+	EXPECT_NE(0xdeadbeef, sem_args.sem);
++	objs[0] = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
++	EXPECT_LE(0, objs[0]);
 +
 +	mutex_args.owner = 0;
 +	mutex_args.count = 0;
-+	mutex_args.mutex = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
-+	EXPECT_EQ(0, ret);
-+	EXPECT_NE(0xdeadbeef, mutex_args.mutex);
-+
-+	event_args.manual = true;
-+	event_args.signaled = true;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
-+	EXPECT_EQ(0, ret);
-+
-+	objs[0] = sem_args.sem;
-+	objs[1] = mutex_args.mutex;
++	objs[1] = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
++	EXPECT_LE(0, objs[1]);
 +
 +	ret = wait_all(fd, 2, objs, 123, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, index);
-+	check_sem_state(sem_args.sem, 1, 3);
-+	check_mutex_state(mutex_args.mutex, 1, 123);
++	check_sem_state(objs[0], 1, 3);
++	check_mutex_state(objs[1], 1, 123);
 +
 +	ret = wait_all(fd, 2, objs, 456, &index);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(ETIMEDOUT, errno);
-+	check_sem_state(sem_args.sem, 1, 3);
-+	check_mutex_state(mutex_args.mutex, 1, 123);
++	check_sem_state(objs[0], 1, 3);
++	check_mutex_state(objs[1], 1, 123);
 +
 +	ret = wait_all(fd, 2, objs, 123, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, index);
-+	check_sem_state(sem_args.sem, 0, 3);
-+	check_mutex_state(mutex_args.mutex, 2, 123);
++	check_sem_state(objs[0], 0, 3);
++	check_mutex_state(objs[1], 2, 123);
 +
 +	ret = wait_all(fd, 2, objs, 123, &index);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(ETIMEDOUT, errno);
-+	check_sem_state(sem_args.sem, 0, 3);
-+	check_mutex_state(mutex_args.mutex, 2, 123);
++	check_sem_state(objs[0], 0, 3);
++	check_mutex_state(objs[1], 2, 123);
 +
 +	count = 3;
-+	ret = post_sem(sem_args.sem, &count);
++	ret = release_sem(objs[0], &count);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, count);
 +
 +	ret = wait_all(fd, 2, objs, 123, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, index);
-+	check_sem_state(sem_args.sem, 2, 3);
-+	check_mutex_state(mutex_args.mutex, 3, 123);
++	check_sem_state(objs[0], 2, 3);
++	check_mutex_state(objs[1], 3, 123);
 +
 +	owner = 123;
-+	ret = ioctl(mutex_args.mutex, NTSYNC_IOC_MUTEX_KILL, &owner);
++	ret = ioctl(objs[1], NTSYNC_IOC_MUTEX_KILL, &owner);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_all(fd, 2, objs, 123, &index);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EOWNERDEAD, errno);
-+	check_sem_state(sem_args.sem, 1, 3);
-+	check_mutex_state(mutex_args.mutex, 1, 123);
++	check_sem_state(objs[0], 1, 3);
++	check_mutex_state(objs[1], 1, 123);
 +
-+	objs[0] = sem_args.sem;
-+	objs[1] = event_args.event;
++	close(objs[1]);
++
++	event_args.manual = true;
++	event_args.signaled = true;
++	objs[1] = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
++	EXPECT_LE(0, objs[1]);
++
 +	ret = wait_all(fd, 2, objs, 123, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, index);
-+	check_sem_state(sem_args.sem, 0, 3);
-+	check_event_state(event_args.event, 1, 1);
++	check_sem_state(objs[0], 0, 3);
++	check_event_state(objs[1], 1, 1);
++
++	close(objs[1]);
 +
 +	/* test waiting on the same object twice */
-+	objs[0] = objs[1] = sem_args.sem;
++	objs[1] = objs[0];
 +	ret = wait_all(fd, 2, objs, 123, &index);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(EINVAL, errno);
 +
-+	close(sem_args.sem);
-+	close(mutex_args.mutex);
-+	close(event_args.event);
++	close(objs[0]);
 +
 +	close(fd);
 +}
@@ -47872,20 +48367,13 @@ index 000000000000..5fa2c9a0768c
 +
 +	sem_args.count = 0;
 +	sem_args.max = 3;
-+	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
-+	EXPECT_EQ(0, ret);
-+	EXPECT_NE(0xdeadbeef, sem_args.sem);
++	objs[0] = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
++	EXPECT_LE(0, objs[0]);
 +
 +	mutex_args.owner = 123;
 +	mutex_args.count = 1;
-+	mutex_args.mutex = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
-+	EXPECT_EQ(0, ret);
-+	EXPECT_NE(0xdeadbeef, mutex_args.mutex);
-+
-+	objs[0] = sem_args.sem;
-+	objs[1] = mutex_args.mutex;
++	objs[1] = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
++	EXPECT_LE(0, objs[1]);
 +
 +	/* test waking the semaphore */
 +
@@ -47904,10 +48392,10 @@ index 000000000000..5fa2c9a0768c
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
 +	count = 1;
-+	ret = post_sem(sem_args.sem, &count);
++	ret = release_sem(objs[0], &count);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, count);
-+	check_sem_state(sem_args.sem, 0, 3);
++	check_sem_state(objs[0], 0, 3);
 +
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(0, ret);
@@ -47917,7 +48405,7 @@ index 000000000000..5fa2c9a0768c
 +	/* test waking the mutex */
 +
 +	/* first grab it again for owner 123 */
-+	ret = wait_any(fd, 1, &mutex_args.mutex, 123, &index);
++	ret = wait_any(fd, 1, &objs[1], 123, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, index);
 +
@@ -47929,31 +48417,32 @@ index 000000000000..5fa2c9a0768c
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
-+	ret = unlock_mutex(mutex_args.mutex, 123, &count);
++	ret = unlock_mutex(objs[1], 123, &count);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(2, count);
 +
 +	ret = pthread_tryjoin_np(thread, NULL);
 +	EXPECT_EQ(EBUSY, ret);
 +
-+	ret = unlock_mutex(mutex_args.mutex, 123, &count);
++	ret = unlock_mutex(objs[1], 123, &count);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(1, mutex_args.count);
-+	check_mutex_state(mutex_args.mutex, 1, 456);
++	check_mutex_state(objs[1], 1, 456);
 +
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, thread_args.ret);
 +	EXPECT_EQ(1, wait_args.index);
++
++	close(objs[1]);
 +
 +	/* test waking events */
 +
 +	event_args.manual = false;
 +	event_args.signaled = false;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
-+	EXPECT_EQ(0, ret);
++	objs[1] = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
++	EXPECT_LE(0, objs[1]);
 +
-+	objs[1] = event_args.event;
 +	wait_args.timeout = get_abs_timeout(1000);
 +	ret = pthread_create(&thread, NULL, wait_thread, &thread_args);
 +	EXPECT_EQ(0, ret);
@@ -47961,10 +48450,10 @@ index 000000000000..5fa2c9a0768c
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
-+	ret = ioctl(event_args.event, NTSYNC_IOC_EVENT_SET, &signaled);
++	ret = ioctl(objs[1], NTSYNC_IOC_EVENT_SET, &signaled);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, signaled);
-+	check_event_state(event_args.event, 0, 0);
++	check_event_state(objs[1], 0, 0);
 +
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(0, ret);
@@ -47978,24 +48467,23 @@ index 000000000000..5fa2c9a0768c
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
-+	ret = ioctl(event_args.event, NTSYNC_IOC_EVENT_PULSE, &signaled);
++	ret = ioctl(objs[1], NTSYNC_IOC_EVENT_PULSE, &signaled);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, signaled);
-+	check_event_state(event_args.event, 0, 0);
++	check_event_state(objs[1], 0, 0);
 +
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, thread_args.ret);
 +	EXPECT_EQ(1, wait_args.index);
 +
-+	close(event_args.event);
++	close(objs[1]);
 +
 +	event_args.manual = true;
 +	event_args.signaled = false;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
-+	EXPECT_EQ(0, ret);
++	objs[1] = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
++	EXPECT_LE(0, objs[1]);
 +
-+	objs[1] = event_args.event;
 +	wait_args.timeout = get_abs_timeout(1000);
 +	ret = pthread_create(&thread, NULL, wait_thread, &thread_args);
 +	EXPECT_EQ(0, ret);
@@ -48003,17 +48491,17 @@ index 000000000000..5fa2c9a0768c
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
-+	ret = ioctl(event_args.event, NTSYNC_IOC_EVENT_SET, &signaled);
++	ret = ioctl(objs[1], NTSYNC_IOC_EVENT_SET, &signaled);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, signaled);
-+	check_event_state(event_args.event, 1, 1);
++	check_event_state(objs[1], 1, 1);
 +
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, thread_args.ret);
 +	EXPECT_EQ(1, wait_args.index);
 +
-+	ret = ioctl(event_args.event, NTSYNC_IOC_EVENT_RESET, &signaled);
++	ret = ioctl(objs[1], NTSYNC_IOC_EVENT_RESET, &signaled);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(1, signaled);
 +
@@ -48024,31 +48512,28 @@ index 000000000000..5fa2c9a0768c
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
-+	ret = ioctl(event_args.event, NTSYNC_IOC_EVENT_PULSE, &signaled);
++	ret = ioctl(objs[1], NTSYNC_IOC_EVENT_PULSE, &signaled);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, signaled);
-+	check_event_state(event_args.event, 0, 1);
++	check_event_state(objs[1], 0, 1);
 +
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, thread_args.ret);
 +	EXPECT_EQ(1, wait_args.index);
 +
-+	close(event_args.event);
-+
 +	/* delete an object while it's being waited on */
 +
 +	wait_args.timeout = get_abs_timeout(200);
 +	wait_args.owner = 123;
-+	objs[1] = mutex_args.mutex;
 +	ret = pthread_create(&thread, NULL, wait_thread, &thread_args);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
-+	close(sem_args.sem);
-+	close(mutex_args.mutex);
++	close(objs[0]);
++	close(objs[1]);
 +
 +	ret = wait_for_thread(thread, 200);
 +	EXPECT_EQ(0, ret);
@@ -48075,32 +48560,23 @@ index 000000000000..5fa2c9a0768c
 +
 +	sem_args.count = 0;
 +	sem_args.max = 3;
-+	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
-+	EXPECT_EQ(0, ret);
-+	EXPECT_NE(0xdeadbeef, sem_args.sem);
++	objs[0] = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
++	EXPECT_LE(0, objs[0]);
 +
 +	mutex_args.owner = 123;
 +	mutex_args.count = 1;
-+	mutex_args.mutex = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
-+	EXPECT_EQ(0, ret);
-+	EXPECT_NE(0xdeadbeef, mutex_args.mutex);
++	objs[1] = ioctl(fd, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
++	EXPECT_LE(0, objs[1]);
 +
 +	manual_event_args.manual = true;
 +	manual_event_args.signaled = true;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &manual_event_args);
-+	EXPECT_EQ(0, ret);
++	objs[2] = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &manual_event_args);
++	EXPECT_LE(0, objs[2]);
 +
 +	auto_event_args.manual = false;
 +	auto_event_args.signaled = true;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &auto_event_args);
-+	EXPECT_EQ(0, ret);
-+
-+	objs[0] = sem_args.sem;
-+	objs[1] = mutex_args.mutex;
-+	objs[2] = manual_event_args.event;
-+	objs[3] = auto_event_args.event;
++	objs[3] = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &auto_event_args);
++	EXPECT_EQ(0, objs[3]);
 +
 +	wait_args.timeout = get_abs_timeout(1000);
 +	wait_args.objs = (uintptr_t)objs;
@@ -48116,54 +48592,54 @@ index 000000000000..5fa2c9a0768c
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
 +	count = 1;
-+	ret = post_sem(sem_args.sem, &count);
++	ret = release_sem(objs[0], &count);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, count);
 +
 +	ret = pthread_tryjoin_np(thread, NULL);
 +	EXPECT_EQ(EBUSY, ret);
 +
-+	check_sem_state(sem_args.sem, 1, 3);
++	check_sem_state(objs[0], 1, 3);
 +
-+	ret = wait_any(fd, 1, &sem_args.sem, 123, &index);
++	ret = wait_any(fd, 1, &objs[0], 123, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, index);
 +
-+	ret = unlock_mutex(mutex_args.mutex, 123, &count);
++	ret = unlock_mutex(objs[1], 123, &count);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(1, count);
 +
 +	ret = pthread_tryjoin_np(thread, NULL);
 +	EXPECT_EQ(EBUSY, ret);
 +
-+	check_mutex_state(mutex_args.mutex, 0, 0);
++	check_mutex_state(objs[1], 0, 0);
 +
-+	ret = ioctl(manual_event_args.event, NTSYNC_IOC_EVENT_RESET, &signaled);
++	ret = ioctl(objs[2], NTSYNC_IOC_EVENT_RESET, &signaled);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(1, signaled);
 +
 +	count = 2;
-+	ret = post_sem(sem_args.sem, &count);
++	ret = release_sem(objs[0], &count);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, count);
-+	check_sem_state(sem_args.sem, 2, 3);
++	check_sem_state(objs[0], 2, 3);
 +
-+	ret = ioctl(auto_event_args.event, NTSYNC_IOC_EVENT_RESET, &signaled);
++	ret = ioctl(objs[3], NTSYNC_IOC_EVENT_RESET, &signaled);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(1, signaled);
 +
-+	ret = ioctl(manual_event_args.event, NTSYNC_IOC_EVENT_SET, &signaled);
++	ret = ioctl(objs[2], NTSYNC_IOC_EVENT_SET, &signaled);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, signaled);
 +
-+	ret = ioctl(auto_event_args.event, NTSYNC_IOC_EVENT_SET, &signaled);
++	ret = ioctl(objs[3], NTSYNC_IOC_EVENT_SET, &signaled);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, signaled);
 +
-+	check_sem_state(sem_args.sem, 1, 3);
-+	check_mutex_state(mutex_args.mutex, 1, 456);
-+	check_event_state(manual_event_args.event, 1, 1);
-+	check_event_state(auto_event_args.event, 0, 0);
++	check_sem_state(objs[0], 1, 3);
++	check_mutex_state(objs[1], 1, 456);
++	check_event_state(objs[2], 1, 1);
++	check_event_state(objs[3], 0, 0);
 +
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(0, ret);
@@ -48179,10 +48655,10 @@ index 000000000000..5fa2c9a0768c
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
-+	close(sem_args.sem);
-+	close(mutex_args.mutex);
-+	close(manual_event_args.event);
-+	close(auto_event_args.event);
++	close(objs[0]);
++	close(objs[1]);
++	close(objs[2]);
++	close(objs[3]);
 +
 +	ret = wait_for_thread(thread, 200);
 +	EXPECT_EQ(0, ret);
@@ -48199,7 +48675,7 @@ index 000000000000..5fa2c9a0768c
 +	struct ntsync_sem_args sem_args = {0};
 +	__u32 index, count, signaled;
 +	struct wait_args thread_args;
-+	int objs[2], fd, ret;
++	int objs[2], event, fd, ret;
 +	pthread_t thread;
 +
 +	fd = open("/dev/ntsync", O_CLOEXEC | O_RDONLY);
@@ -48207,50 +48683,44 @@ index 000000000000..5fa2c9a0768c
 +
 +	sem_args.count = 0;
 +	sem_args.max = 2;
-+	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
-+	EXPECT_EQ(0, ret);
-+	EXPECT_NE(0xdeadbeef, sem_args.sem);
-+	objs[0] = sem_args.sem;
++	objs[0] = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
++	EXPECT_LE(0, objs[0]);
 +
 +	sem_args.count = 1;
 +	sem_args.max = 2;
-+	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
-+	EXPECT_EQ(0, ret);
-+	EXPECT_NE(0xdeadbeef, sem_args.sem);
-+	objs[1] = sem_args.sem;
++	objs[1] = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
++	EXPECT_LE(0, objs[1]);
 +
 +	event_args.manual = true;
 +	event_args.signaled = true;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
-+	EXPECT_EQ(0, ret);
++	event = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
++	EXPECT_LE(0, event);
 +
-+	ret = wait_any_alert(fd, 0, NULL, 123, event_args.event, &index);
++	ret = wait_any_alert(fd, 0, NULL, 123, event, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, index);
 +
-+	ret = ioctl(event_args.event, NTSYNC_IOC_EVENT_RESET, &signaled);
++	ret = ioctl(event, NTSYNC_IOC_EVENT_RESET, &signaled);
 +	EXPECT_EQ(0, ret);
 +
-+	ret = wait_any_alert(fd, 0, NULL, 123, event_args.event, &index);
++	ret = wait_any_alert(fd, 0, NULL, 123, event, &index);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(ETIMEDOUT, errno);
 +
-+	ret = ioctl(event_args.event, NTSYNC_IOC_EVENT_SET, &signaled);
++	ret = ioctl(event, NTSYNC_IOC_EVENT_SET, &signaled);
 +	EXPECT_EQ(0, ret);
 +
-+	ret = wait_any_alert(fd, 2, objs, 123, event_args.event, &index);
++	ret = wait_any_alert(fd, 2, objs, 123, event, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(1, index);
 +
-+	ret = wait_any_alert(fd, 2, objs, 123, event_args.event, &index);
++	ret = wait_any_alert(fd, 2, objs, 123, event, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(2, index);
 +
 +	/* test wakeup via alert */
 +
-+	ret = ioctl(event_args.event, NTSYNC_IOC_EVENT_RESET, &signaled);
++	ret = ioctl(event, NTSYNC_IOC_EVENT_RESET, &signaled);
 +	EXPECT_EQ(0, ret);
 +
 +	wait_args.timeout = get_abs_timeout(1000);
@@ -48258,7 +48728,7 @@ index 000000000000..5fa2c9a0768c
 +	wait_args.count = 2;
 +	wait_args.owner = 123;
 +	wait_args.index = 0xdeadbeef;
-+	wait_args.alert = event_args.event;
++	wait_args.alert = event;
 +	thread_args.fd = fd;
 +	thread_args.args = &wait_args;
 +	thread_args.request = NTSYNC_IOC_WAIT_ANY;
@@ -48268,7 +48738,7 @@ index 000000000000..5fa2c9a0768c
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
-+	ret = ioctl(event_args.event, NTSYNC_IOC_EVENT_SET, &signaled);
++	ret = ioctl(event, NTSYNC_IOC_EVENT_SET, &signaled);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_for_thread(thread, 100);
@@ -48276,32 +48746,32 @@ index 000000000000..5fa2c9a0768c
 +	EXPECT_EQ(0, thread_args.ret);
 +	EXPECT_EQ(2, wait_args.index);
 +
-+	close(event_args.event);
++	close(event);
 +
 +	/* test with an auto-reset event */
 +
 +	event_args.manual = false;
 +	event_args.signaled = true;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
-+	EXPECT_EQ(0, ret);
++	event = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
++	EXPECT_LE(0, event);
 +
 +	count = 1;
-+	ret = post_sem(objs[0], &count);
++	ret = release_sem(objs[0], &count);
 +	EXPECT_EQ(0, ret);
 +
-+	ret = wait_any_alert(fd, 2, objs, 123, event_args.event, &index);
++	ret = wait_any_alert(fd, 2, objs, 123, event, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, index);
 +
-+	ret = wait_any_alert(fd, 2, objs, 123, event_args.event, &index);
++	ret = wait_any_alert(fd, 2, objs, 123, event, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(2, index);
 +
-+	ret = wait_any_alert(fd, 2, objs, 123, event_args.event, &index);
++	ret = wait_any_alert(fd, 2, objs, 123, event, &index);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(ETIMEDOUT, errno);
 +
-+	close(event_args.event);
++	close(event);
 +
 +	close(objs[0]);
 +	close(objs[1]);
@@ -48316,7 +48786,7 @@ index 000000000000..5fa2c9a0768c
 +	struct ntsync_sem_args sem_args = {0};
 +	struct wait_args thread_args;
 +	__u32 index, count, signaled;
-+	int objs[2], fd, ret;
++	int objs[2], event, fd, ret;
 +	pthread_t thread;
 +
 +	fd = open("/dev/ntsync", O_CLOEXEC | O_RDONLY);
@@ -48324,36 +48794,30 @@ index 000000000000..5fa2c9a0768c
 +
 +	sem_args.count = 2;
 +	sem_args.max = 2;
-+	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
-+	EXPECT_EQ(0, ret);
-+	EXPECT_NE(0xdeadbeef, sem_args.sem);
-+	objs[0] = sem_args.sem;
++	objs[0] = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
++	EXPECT_LE(0, objs[0]);
 +
 +	sem_args.count = 1;
 +	sem_args.max = 2;
-+	sem_args.sem = 0xdeadbeef;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
-+	EXPECT_EQ(0, ret);
-+	EXPECT_NE(0xdeadbeef, sem_args.sem);
-+	objs[1] = sem_args.sem;
++	objs[1] = ioctl(fd, NTSYNC_IOC_CREATE_SEM, &sem_args);
++	EXPECT_LE(0, objs[1]);
 +
 +	event_args.manual = true;
 +	event_args.signaled = true;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
-+	EXPECT_EQ(0, ret);
++	event = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
++	EXPECT_LE(0, event);
 +
-+	ret = wait_all_alert(fd, 2, objs, 123, event_args.event, &index);
++	ret = wait_all_alert(fd, 2, objs, 123, event, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, index);
 +
-+	ret = wait_all_alert(fd, 2, objs, 123, event_args.event, &index);
++	ret = wait_all_alert(fd, 2, objs, 123, event, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(2, index);
 +
 +	/* test wakeup via alert */
 +
-+	ret = ioctl(event_args.event, NTSYNC_IOC_EVENT_RESET, &signaled);
++	ret = ioctl(event, NTSYNC_IOC_EVENT_RESET, &signaled);
 +	EXPECT_EQ(0, ret);
 +
 +	wait_args.timeout = get_abs_timeout(1000);
@@ -48361,7 +48825,7 @@ index 000000000000..5fa2c9a0768c
 +	wait_args.count = 2;
 +	wait_args.owner = 123;
 +	wait_args.index = 0xdeadbeef;
-+	wait_args.alert = event_args.event;
++	wait_args.alert = event;
 +	thread_args.fd = fd;
 +	thread_args.args = &wait_args;
 +	thread_args.request = NTSYNC_IOC_WAIT_ALL;
@@ -48371,7 +48835,7 @@ index 000000000000..5fa2c9a0768c
 +	ret = wait_for_thread(thread, 100);
 +	EXPECT_EQ(ETIMEDOUT, ret);
 +
-+	ret = ioctl(event_args.event, NTSYNC_IOC_EVENT_SET, &signaled);
++	ret = ioctl(event, NTSYNC_IOC_EVENT_SET, &signaled);
 +	EXPECT_EQ(0, ret);
 +
 +	ret = wait_for_thread(thread, 100);
@@ -48379,32 +48843,32 @@ index 000000000000..5fa2c9a0768c
 +	EXPECT_EQ(0, thread_args.ret);
 +	EXPECT_EQ(2, wait_args.index);
 +
-+	close(event_args.event);
++	close(event);
 +
 +	/* test with an auto-reset event */
 +
 +	event_args.manual = false;
 +	event_args.signaled = true;
-+	ret = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
-+	EXPECT_EQ(0, ret);
++	event = ioctl(fd, NTSYNC_IOC_CREATE_EVENT, &event_args);
++	EXPECT_LE(0, event);
 +
 +	count = 2;
-+	ret = post_sem(objs[1], &count);
++	ret = release_sem(objs[1], &count);
 +	EXPECT_EQ(0, ret);
 +
-+	ret = wait_all_alert(fd, 2, objs, 123, event_args.event, &index);
++	ret = wait_all_alert(fd, 2, objs, 123, event, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(0, index);
 +
-+	ret = wait_all_alert(fd, 2, objs, 123, event_args.event, &index);
++	ret = wait_all_alert(fd, 2, objs, 123, event, &index);
 +	EXPECT_EQ(0, ret);
 +	EXPECT_EQ(2, index);
 +
-+	ret = wait_all_alert(fd, 2, objs, 123, event_args.event, &index);
++	ret = wait_all_alert(fd, 2, objs, 123, event, &index);
 +	EXPECT_EQ(-1, ret);
 +	EXPECT_EQ(ETIMEDOUT, errno);
 +
-+	close(event_args.event);
++	close(event);
 +
 +	close(objs[0]);
 +	close(objs[1]);
@@ -48458,15 +48922,13 @@ index 000000000000..5fa2c9a0768c
 +
 +	mutex_args.owner = 0;
 +	mutex_args.count = 0;
-+	ret = ioctl(stress_device, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
-+	EXPECT_EQ(0, ret);
-+	stress_mutex = mutex_args.mutex;
++	stress_mutex = ioctl(stress_device, NTSYNC_IOC_CREATE_MUTEX, &mutex_args);
++	EXPECT_LE(0, stress_mutex);
 +
 +	event_args.manual = 1;
 +	event_args.signaled = 0;
-+	ret = ioctl(stress_device, NTSYNC_IOC_CREATE_EVENT, &event_args);
-+	EXPECT_EQ(0, ret);
-+	stress_start_event = event_args.event;
++	stress_start_event = ioctl(stress_device, NTSYNC_IOC_CREATE_EVENT, &event_args);
++	EXPECT_LE(0, stress_start_event);
 +
 +	for (i = 0; i < STRESS_THREADS; ++i)
 +		pthread_create(&threads[i], NULL, stress_thread, NULL);

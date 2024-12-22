@@ -54,6 +54,7 @@ switchres.mk
 syncthing.mk
 touchegg.mk
 unclutter.mk
+vcmi.mk
 vkd3d-proton.mk
 wf-recorder.mk
 wildmidi.mk
