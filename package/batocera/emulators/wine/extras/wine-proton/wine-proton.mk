@@ -3,10 +3,10 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Dec 06, 2024
-WINE_PROTON_VERSION = cachyos-9.0-20241206-proton
+# Version: Commits on Dec 17, 2024
+WINE_PROTON_VERSION = experimental-wine-9.0-20241217
 WINE_PROTON_SOURCE = wine-$(WINE_PROTON_VERSION).tar.gz
-WINE_PROTON_SITE = $(call github,CachyOS,wine-cachyos,$(WINE_PROTON_VERSION))
+WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
 WINE_PROTON_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_PROTON_SELINUX_MODULES = wine

@@ -3,8 +3,8 @@
 # yquake2-xatrix
 #
 ################################################################################
-# Version: Commits on Sept 21, 2024
-YQUAKE2_XATRIX_VERSION = 1957253b256180f9bbb5b52c8d63cc1578170211
+# Version: Commits on Dec 21, 2024
+YQUAKE2_XATRIX_VERSION = d215802d1642d1a2a4850896f70d37cf94f81a9c
 YQUAKE2_XATRIX_SITE = $(call github,yquake2,xatrix,$(YQUAKE2_XATRIX_VERSION))
 YQUAKE2_XATRIX_DEPENDENCIES = sdl2
 YQUAKE2_XATRIX_SUPPORTS_IN_SOURCE_BUILD = NO

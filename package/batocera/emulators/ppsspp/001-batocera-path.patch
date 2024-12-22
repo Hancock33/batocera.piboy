@@ -1,5 +1,5 @@
 diff --git a/Core/Config.cpp b/Core/Config.cpp
-index 7f9c117eff..3a90f931a4 100644
+index 9adf001496..4dc0502575 100644
 --- a/Core/Config.cpp
 +++ b/Core/Config.cpp
 @@ -1091,10 +1091,10 @@ void Config::UpdateIniLocation(const char *iniFileName, const char *controllerIn
@@ -16,32 +16,32 @@ index 7f9c117eff..3a90f931a4 100644
  
  bool Config::LoadAppendedConfig() {
 diff --git a/SDL/SDLJoystick.cpp b/SDL/SDLJoystick.cpp
-index a0d206ee21..0492da3fc5 100644
+index 94a6f481ba..265094f56b 100644
 --- a/SDL/SDLJoystick.cpp
 +++ b/SDL/SDLJoystick.cpp
-@@ -25,7 +25,7 @@ SDLJoystick::SDLJoystick(bool init_SDL ) : registeredAsEventHandler(false) {
+@@ -24,7 +24,7 @@ SDLJoystick::SDLJoystick(bool init_SDL ) : registeredAsEventHandler(false) {
  		SDL_Init(SDL_INIT_JOYSTICK | SDL_INIT_VIDEO | SDL_INIT_GAMECONTROLLER);
  	}
  
 -	const char *dbPath = "gamecontrollerdb.txt";
 +	const char *dbPath = "/userdata/system/configs/ppsspp/gamecontrollerdb.txt";
- 	cout << "loading control pad mappings from " << dbPath << ": ";
+ 	INFO_LOG(Log::System, "loading control pad mappings from %s:", dbPath);
  
  	size_t size;
-@@ -34,7 +34,7 @@ SDLJoystick::SDLJoystick(bool init_SDL ) : registeredAsEventHandler(false) {
+@@ -33,7 +33,7 @@ SDLJoystick::SDLJoystick(bool init_SDL ) : registeredAsEventHandler(false) {
  		SDL_RWops *rw = SDL_RWFromConstMem(mappingData, size);
  		// 1 to free the rw after use
  		if (SDL_GameControllerAddMappingsFromRW(rw, 1) == -1) {
--			cout << "Failed to read mapping data - corrupt?" << endl;
-+			cout << "/userdata/system/configs/ppsspp/gamecontrollerdb.txt missing" << endl;
+-			ERROR_LOG(Log::System, "Failed to read mapping data - corrupt?");
++			ERROR_LOG(Log::System, "/userdata/system/configs/ppsspp/gamecontrollerdb.txt missing");
  		}
  		delete[] mappingData;
  	} else {
 diff --git a/UI/NativeApp.cpp b/UI/NativeApp.cpp
-index b45647ffc5..2851c41630 100644
+index 04257f98cc..a4d6e13485 100644
 --- a/UI/NativeApp.cpp
 +++ b/UI/NativeApp.cpp
-@@ -392,7 +392,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+@@ -368,7 +368,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
  	g_VFS.Register("", new DirectoryReader(File::GetExeDirectory()));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/ppsspp/assets")));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/games/ppsspp/assets")));
@@ -50,7 +50,7 @@ index b45647ffc5..2851c41630 100644
  	g_VFS.Register("", new DirectoryReader(Path("/usr/share/games/ppsspp/assets")));
  #endif
  
-@@ -497,7 +497,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+@@ -473,7 +473,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
  	else // Just in case
  		config = "./config";
  

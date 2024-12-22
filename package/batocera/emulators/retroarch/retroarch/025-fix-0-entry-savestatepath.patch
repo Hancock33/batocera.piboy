@@ -12,10 +12,10 @@ index 89230d7ec7..5758794629 100644
        return false;
     if (string_is_empty(path_basename(path_get(RARCH_PATH_BASENAME))))
 diff --git a/retroarch.c b/retroarch.c
-index 1ae1b2c665..6854a8661a 100644
+index b6bbedd02e..7594ed54c6 100644
 --- a/retroarch.c
 +++ b/retroarch.c
-@@ -6848,6 +6848,9 @@ static bool retroarch_parse_input_and_config(
+@@ -6850,6 +6850,9 @@ static bool retroarch_parse_input_and_config(
              exit(EXIT_FAILURE);
           }
  
@@ -25,7 +25,7 @@ index 1ae1b2c665..6854a8661a 100644
           switch (c)
           {
              case 'h':
-@@ -7305,9 +7308,9 @@ static bool retroarch_parse_input_and_config(
+@@ -7307,9 +7310,9 @@ static bool retroarch_parse_input_and_config(
                 break;
              case 'e':
                 {
@@ -37,7 +37,7 @@ index 1ae1b2c665..6854a8661a 100644
                       runloop_st->entry_state_slot = entry_state_slot;
                    else
                       RARCH_WARN("--entryslot argument \"%s\" is not a valid "
-@@ -7396,18 +7399,18 @@ static bool retroarch_parse_input_and_config(
+@@ -7398,18 +7401,18 @@ static bool retroarch_parse_input_and_config(
         * command line interface */
        cli_content_set = true;
     }

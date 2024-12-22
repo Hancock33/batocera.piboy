@@ -3,8 +3,8 @@
 # ryujinx
 #
 ################################################################################
-# Version: Commits on Nov 19, 2024
-RYUJINX_VERSION = 1.2.76
+# Version: Commits on Dec 19, 2024
+RYUJINX_VERSION = 1.2.78
 RYUJINX_SOURCE = ryujinx-$(RYUJINX_VERSION)-linux_x64.tar.gz
 RYUJINX_SITE = https://github.com/GreemDev/Ryujinx/releases/download/$(RYUJINX_VERSION)
 RYUJINX_LICENSE = MIT

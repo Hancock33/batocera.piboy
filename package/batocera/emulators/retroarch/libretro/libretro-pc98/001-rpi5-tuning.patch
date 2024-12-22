@@ -1,5 +1,5 @@
 diff --git a/sdl/Makefile.libretro b/sdl/Makefile.libretro
-index e149219..75a829e 100755
+index 29f72f9..f50ce02 100755
 --- a/sdl/Makefile.libretro
 +++ b/sdl/Makefile.libretro
 @@ -107,6 +107,9 @@ else ifneq (,$(findstring rpi,$(platform)))

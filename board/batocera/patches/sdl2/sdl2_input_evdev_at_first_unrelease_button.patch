@@ -1,5 +1,5 @@
 diff --git a/src/joystick/SDL_joystick.c b/src/joystick/SDL_joystick.c
-index 37f7b32bd..0d7fa7a16 100644
+index aed6ecf4b..6d85571f7 100644
 --- a/src/joystick/SDL_joystick.c
 +++ b/src/joystick/SDL_joystick.c
 @@ -27,6 +27,8 @@
