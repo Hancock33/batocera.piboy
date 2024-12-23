@@ -1,6 +1,8 @@
---- a/src/emu/qt/CMakeLists.txt	2023-09-18 11:48:50.534482929 +0200
-+++ b/src/emu/qt/CMakeLists.txt	2023-09-18 11:50:42.293015552 +0200
-@@ -13,7 +11,7 @@
+diff --git a/src/emu/qt/CMakeLists.txt b/src/emu/qt/CMakeLists.txt
+index 600bf6313..49859cd33 100644
+--- a/src/emu/qt/CMakeLists.txt
++++ b/src/emu/qt/CMakeLists.txt
+@@ -11,7 +11,7 @@ if(ANDROID)
      endif()
  endif()
  
