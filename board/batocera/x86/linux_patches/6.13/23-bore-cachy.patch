@@ -135,7 +135,7 @@ index 0f78364efd4f..83a6b919ab29 100644
  config SCHED_HRTICK
  	def_bool HIGH_RES_TIMERS
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 5c99a8908881..7294ab873d4f 100644
+index e919c8c3a121..7e1228b8aa70 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -116,6 +116,8 @@
@@ -147,7 +147,7 @@ index 5c99a8908881..7294ab873d4f 100644
  #include <trace/events/sched.h>
  
  #define CREATE_TRACE_POINTS
-@@ -2374,6 +2376,9 @@ __latent_entropy struct task_struct *copy_process(
+@@ -2373,6 +2375,9 @@ __latent_entropy struct task_struct *copy_process(
  	retval = sched_fork(clone_flags, p);
  	if (retval)
  		goto bad_fork_cleanup_policy;
