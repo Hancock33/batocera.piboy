@@ -1,7 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|33083cfae1caaed0062007223dd02f604533b809|Dec 23, 2024
-Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame-273|Dec 23, 2024
+Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0273|Dec 23, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|1763b61aa0c35766fc8e1dc6703041feda49c64b|Dec 23, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|53817dcc902053e17caf71888fdd1d5ec01bf08d|Dec 23, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-12-23|Dec 23, 2024
@@ -15,7 +15,7 @@ Emulators|[retroarch](http://github.com/libretro/RetroArch)|1340e751e05c13f24103
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|f4eed3630d809720cecb4d5502d550f12dbcf8c0|Dec 23, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|70897af36208a42fa3dc0bb5f9e9049757624ad6|Dec 23, 2024
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|c88d79ad23ca7c3a0363b4f8fc1f08287f1bbe99|Dec 23, 2024
-Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame-273|Dec 23, 2024
+Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0273|Dec 23, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|5ca1a2d01f0f5a5ae4579d9f5f45e05eb4aad720|Dec 23, 2024
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|7625ec4e1bd1a09b0328e5ecaacfee06a8ddbe9c|Dec 23, 2024
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|09d3cb634c337aa3a1ed6575267d37bc1fdf064e|Dec 23, 2024
