@@ -1,0 +1,38 @@
+diff --git a/src/core/renderer_vk/renderer_vk.cpp b/src/core/renderer_vk/renderer_vk.cpp
+index d05a070f..75815334 100644
+--- a/src/core/renderer_vk/renderer_vk.cpp
++++ b/src/core/renderer_vk/renderer_vk.cpp
+@@ -888,7 +888,7 @@ void RendererVK::display() {
+ void RendererVK::initGraphicsContext(SDL_Window* window) {
+ 	targetWindow = window;
+ 	// Resolve all instance function pointers
+-	static vk::DynamicLoader dl;
++	static vk::detail::DynamicLoader dl;
+ 	VULKAN_HPP_DEFAULT_DISPATCHER.init(dl.getProcAddress<PFN_vkGetInstanceProcAddr>("vkGetInstanceProcAddr"));
+ 
+ 	// Create Instance
+@@ -956,7 +956,7 @@ void RendererVK::initGraphicsContext(SDL_Window* window) {
+ 	VULKAN_HPP_DEFAULT_DISPATCHER.init(instance.get());
+ 
+ 	// Enable debug messenger if the instance was able to be created with debug_utils
+-	if (debugUtils) {
++	/*if (debugUtils) {
+ 		vk::DebugUtilsMessengerCreateInfoEXT debugCreateInfo{};
+ 		debugCreateInfo.messageSeverity = vk::DebugUtilsMessageSeverityFlagBitsEXT::eVerbose | vk::DebugUtilsMessageSeverityFlagBitsEXT::eInfo |
+ 										  vk::DebugUtilsMessageSeverityFlagBitsEXT::eError | vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning;
+@@ -968,7 +968,7 @@ void RendererVK::initGraphicsContext(SDL_Window* window) {
+ 		} else {
+ 			Helpers::warn("Error registering debug messenger: %s", vk::to_string(createResult.result).c_str());
+ 		}
+-	}
++	}*/
+ 
+ 	// Create surface
+ 	if (window) {
+@@ -1588,4 +1588,4 @@ void RendererVK::deinitGraphicsContext() {
+ 
+ 	// TODO: Make it so that depth and colour buffers get written back to 3DS memory
+ 	printf("RendererVK::DeinitGraphicsContext called\n");
+-}
+\ No newline at end of file
++}
