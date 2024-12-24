@@ -3098,7 +3098,7 @@ msgctxt "game_options"
 msgid "TEXTURE FILTERING"
 msgstr ""
 
-#. TRANSLATION: bigpemu, cemu, duckstation, libretro/duckstation, libretro/parallel_n64, ...
+#. TRANSLATION: bigpemu, cemu, drastic, duckstation, libretro/duckstation, ...
 msgctxt "game_options"
 msgid "Bilinear"
 msgstr ""
@@ -13289,6 +13289,23 @@ msgstr ""
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid "THREADED 3D"
+msgstr ""
+
+#. TRANSLATION: drastic
+msgctxt "game_options"
+msgid ""
+"Switches between smooth (Bilinear) and sharp (Nearest Neighbor) image "
+"scaling."
+msgstr ""
+
+#. TRANSLATION: drastic
+msgctxt "game_options"
+msgid "IMAGE SCALING"
+msgstr ""
+
+#. TRANSLATION: drastic
+msgctxt "game_options"
+msgid "Nearest-neighbor"
 msgstr ""
 
 #. TRANSLATION: drastic
