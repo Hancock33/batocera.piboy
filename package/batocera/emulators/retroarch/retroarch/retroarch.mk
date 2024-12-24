@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Dec 23, 2024
-RETROARCH_VERSION = 55c457e54814a39438580fee167f80eabbfd348b
+# Version: Commits on Dec 24, 2024
+RETROARCH_VERSION = 83a187784a9f0eb564bda43c3d71a47bb1f3ba12
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts
@@ -168,7 +168,7 @@ define RETROARCH_CONFIGURE_CMDS
 	(cd $(@D); rm -rf config.cache; \
 		$(TARGET_CONFIGURE_ARGS) \
 		$(TARGET_CONFIGURE_OPTS) \
-		CFLAGS="$(TARGET_CFLAGS) $(RETROARCH_TARGET_CFLAGS)" \
+		CFLAGS="$(TARGET_CFLAGS) $(RETROARCH_TARGET_CFLAGS) -Wno-return-mismatch" \
 		LDFLAGS="$(RETROARCH_TARGET_LDFLAGS) -lc" \
 		CROSS_COMPILE="$(HOST_DIR)/bin/" \
 		./configure \

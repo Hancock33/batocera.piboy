@@ -1,8 +1,8 @@
 diff --git a/configuration.c b/configuration.c
-index 06a35c978a..e0c1d4449a 100644
+index e67c99510d..3caefe97ec 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -4933,12 +4933,33 @@ static void save_keybind_mbutton(config_file_t *conf,
+@@ -4903,12 +4903,33 @@ static void save_keybind_mbutton(config_file_t *conf,
        case RETRO_DEVICE_ID_MOUSE_MIDDLE:
           config_set_uint64(conf, key, 3);
           break;
@@ -38,7 +38,7 @@ index 06a35c978a..e0c1d4449a 100644
        case RETRO_DEVICE_ID_MOUSE_WHEELUP:
           config_set_string(conf, key, "wu");
           break;
-@@ -6504,11 +6525,32 @@ void input_config_parse_mouse_button(
+@@ -6455,11 +6476,32 @@ void input_config_parse_mouse_button(
                 bind->mbutton = RETRO_DEVICE_ID_MOUSE_MIDDLE;
                 break;
              case 4:
@@ -73,7 +73,7 @@ index 06a35c978a..e0c1d4449a 100644
        }
     }
 diff --git a/input/drivers/udev_input.c b/input/drivers/udev_input.c
-index 6c016a8646..1950a72dab 100644
+index 3c5390fa7d..239333934e 100644
 --- a/input/drivers/udev_input.c
 +++ b/input/drivers/udev_input.c
 @@ -226,7 +226,7 @@ typedef struct
@@ -170,10 +170,10 @@ index 6c016a8646..1950a72dab 100644
              return mouse->wu;
           case RETRO_DEVICE_ID_MOUSE_WHEELDOWN:
 diff --git a/libretro-common/include/libretro.h b/libretro-common/include/libretro.h
-index 288512b91f..0d9d691ce3 100644
+index 1d7e765a55..bb59de7821 100644
 --- a/libretro-common/include/libretro.h
 +++ b/libretro-common/include/libretro.h
-@@ -401,8 +401,15 @@ extern "C" {
+@@ -404,8 +404,15 @@ extern "C" {
  #define RETRO_DEVICE_ID_MOUSE_MIDDLE           6
  #define RETRO_DEVICE_ID_MOUSE_HORIZ_WHEELUP    7
  #define RETRO_DEVICE_ID_MOUSE_HORIZ_WHEELDOWN  8
@@ -192,10 +192,10 @@ index 288512b91f..0d9d691ce3 100644
  /* Id values for LIGHTGUN. */
  #define RETRO_DEVICE_ID_LIGHTGUN_SCREEN_X        13 /*Absolute Position*/
 diff --git a/menu/menu_driver.c b/menu/menu_driver.c
-index 6840e71032..996ef9a6ef 100644
+index 2a34734eba..8a8f71f424 100644
 --- a/menu/menu_driver.c
 +++ b/menu/menu_driver.c
-@@ -1666,8 +1666,15 @@ static bool menu_input_key_bind_poll_find_trigger_pad(
+@@ -1659,8 +1659,15 @@ static bool menu_input_key_bind_poll_find_trigger_pad(
           case RETRO_DEVICE_ID_MOUSE_LEFT:
           case RETRO_DEVICE_ID_MOUSE_RIGHT:
           case RETRO_DEVICE_ID_MOUSE_MIDDLE:

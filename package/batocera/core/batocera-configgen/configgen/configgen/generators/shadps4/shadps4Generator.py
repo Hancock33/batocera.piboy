@@ -153,7 +153,7 @@ class shadPS4Generator(Generator):
         if rom == "config":
             commandArray: list[str | Path] = ["/usr/bin/shadps4/shadps4"]
         else:
-            commandArray: list[str | Path] = ["/usr/bin/shadps4/shadps4", str(romPath)]
+            commandArray: list[str | Path] = ["/usr/bin/shadps4/shadps4", "-g", str(romPath)]
 
         return Command.Command(
             array=commandArray,
