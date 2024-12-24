@@ -1457,8 +1457,8 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
     # Standalone SNES9X (Qt6)
     # select BR2_PACKAGE_SNES9X                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX         || BR2_PACKAGE_BATOCERA_TARGET_S922X || \ 
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3568      || BR2_PACKAGE_BATOCERA_TARGET_RK3588   || BR2_PACKAGE_BATOCERA_TARGET_H616  || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_SM8250      || BR2_PACKAGE_BATOCERA_TARGET_T527
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588      || BR2_PACKAGE_BATOCERA_TARGET_H616     || BR2_PACKAGE_BATOCERA_TARGET_SM8250||
+                                                                BR2_PACKAGE_BATOCERA_TARGET_T527
 
     help
         Emulators under development (Experimental)
