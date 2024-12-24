@@ -1,20 +1,24 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|4b8225a6e00e2c6c90e87180bfc318567a03200e|Dec 24, 2024
+Emulators|[applewin](https://github.com/audetto/AppleWin)|e0bb9f14c1ba8b6961a1b82c5e8981a6ade29871|Dec 24, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|05653200360d958ba5592e55a38fb87f68a42e75|Dec 24, 2024
+Emulators|[lightspark](http://github.com/lightspark/lightspark)|b3a1addd7f192757849ef577ace87dc46518b854|Dec 24, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|0b51f109651662bde00b65c9bb562eae28687a41|Dec 24, 2024
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.73|Dec 24, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-12-24|Dec 24, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|a108b03b35481d991692d376325675065a93887a|Dec 24, 2024
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|c284cf72e102a6f3a18e08b63f0f833811847d5a|Dec 24, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|05060803b243e143c1c95e4ec61be60f0e479181|Dec 24, 2024
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|7b24b42711287733b1f8732ecb22b85068c107f4|Dec 24, 2024
+Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45424|Dec 24, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|3b15ef1cb57180d3d68d56b67126101a46672188|Dec 24, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|2fac72bd05af89640f14d7be7c1f4b2e3388b0e1|Dec 24, 2024
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|8d20a23e38883f45c78f48c8574ac93945b4cb03|Dec 24, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|f8ffcef86c9ff27c19d4400ec4b2503e3d27ac7f|Dec 24, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|6a85844b4180ea99d6d5d406979331eabd7c5fc2|Dec 24, 2024
 Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241224|Dec 24, 2024
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241224|Dec 24, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|d430e239ee5c323be9b6b066631089bbd691027f|Dec 24, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|6469b0a5f5cc8c9a2cae326a87b1055aa93085c7|Dec 24, 2024
+Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|5b8211be60390fa39c8d15dc9b64568bbdea566a|Dec 24, 2024
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|a108b03b35481d991692d376325675065a93887a|Dec 24, 2024
 Emulators|[citra](https://github.com/Borked3DS/Borked3DS.git)|aab6614e9b574de160a874816050118547837712|Dec 23, 2024
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|f9ce2b9d764014ab59cf2c19e49c2c848604e6fc|Dec 23, 2024
@@ -22,7 +26,6 @@ Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mam
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|72c86ade31e52c14d0161b398b25aae325d86ddb|Dec 23, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|34f3b724cdeb6a7d2378760257330555fd905242|Dec 23, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|53817dcc902053e17caf71888fdd1d5ec01bf08d|Dec 23, 2024
-Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45420|Dec 23, 2024
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|a6e3d77504064f0f5392134cd55579d619599e41|Dec 23, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|20b91f66c039d529032cdfd221e0b4e277f3ab40|Dec 23, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|acbd4046a97cfd760d3f20c79cd0dcc280912254|Dec 23, 2024
@@ -35,7 +38,6 @@ Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|7625ec4e1bd1a
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|09d3cb634c337aa3a1ed6575267d37bc1fdf064e|Dec 23, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|34f3b724cdeb6a7d2378760257330555fd905242|Dec 23, 2024
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|d1eefcefcc54a542a6a9ca4cd779f6899e1d6c73|Dec 23, 2024
-Emulators|[applewin](https://github.com/audetto/AppleWin)|cebe2ba0ef45dafb238a15687faee0ccf83eb792|Dec 22, 2024
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|c3e7d36db897885f4ced2c3eaa3e82d595b870d0|Dec 22, 2024
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|3f70ff53a35eb093e46939f0f364de2d3e9a49ef|Dec 22, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|a0f995f0aba7f6db3d95c19a108c35cf6e1759ea|Dec 22, 2024
@@ -46,7 +48,6 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|badd15a235a4de4b4716
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|39b022f35bf45069165db5da23fbcf543eafbc97|Dec 22, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|b637a65418f853ad2ac83fa81c47979d8da85f49|Dec 22, 2024
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|39b022f35bf45069165db5da23fbcf543eafbc97|Dec 22, 2024
-Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|3f47339696e65dd351c581aea6fa4faff2457c10|Dec 22, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|08430fc058c4a4ef57ddd40006bb356c1e3024a2|Dec 22, 2024
 Emulators|[libretro-nestopia](http://github.com/libretro/nestopia)|6bbfff9a56ead67f0da696ab2c3aea3c11896964|Dec 22, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|e00bc159aee6b16250349f39f2becf390d2872e6|Dec 22, 2024
@@ -106,7 +107,6 @@ Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|04f03b32b86
 Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|05bee3d1c9948290803d24f67d733f85a2f80e8b|Dec 16, 2024
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|c6da07feb31e9e95ed001b062211489cdc3bf469|Dec 16, 2024
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|d384b22aca067a5d92f89f4eb0060496a20ea3e5|Dec 15, 2024
-Emulators|[lightspark](http://github.com/lightspark/lightspark)|3c8189a86d332259dc2c5560c41f1b5e630ed263|Dec 14, 2024
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|75ac6c6e39cf897d30958c603e004bc0d1cbfa63|Dec 14, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ac86299e75e3fffae4bf60a20b92b510b1de2684|Dec 14, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|9b84fcd8383e84a479ba5675a6e0b698ccf3c117|Dec 14, 2024
