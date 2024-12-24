@@ -6,6 +6,8 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-12-24|Dec 24
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|a108b03b35481d991692d376325675065a93887a|Dec 24, 2024
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|8d20a23e38883f45c78f48c8574ac93945b4cb03|Dec 24, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|f8ffcef86c9ff27c19d4400ec4b2503e3d27ac7f|Dec 24, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241224|Dec 24, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241224|Dec 24, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|d430e239ee5c323be9b6b066631089bbd691027f|Dec 24, 2024
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|a108b03b35481d991692d376325675065a93887a|Dec 24, 2024
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|202af212cde7b1e835678b7a0462418710ad3804|Dec 23, 2024
@@ -52,9 +54,7 @@ Ports|[yquake2-client](http://github.com/yquake2/yquake2)|9e127cf71f44afdba178b2
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|9bfd48cf401ae8ba786d19d7b3b5efcf2ac334dd|Dec 21, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|7cd0b28b52f42cf82f43f4ca1c41a5876bbabdfc|Dec 21, 2024
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|a99cab214cf39f387a2a92da2e730e093c8529cf|Dec 21, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241221|Dec 21, 2024
 Emulators|[winetricks](http://github.com/Winetricks/winetricks)|0d6c87165cfad2dd95c3d55200b332947b5af39b|Dec 21, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241221|Dec 21, 2024
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|d3e5cf77ab6410fad4b901e2dacac320744ca125|Dec 21, 2024
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|3f445317793b73561ecfe59739a1a55e370ed3ac|Dec 21, 2024
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|4ad9183c002063eed244754e50cb1ae2c90124f6|Dec 21, 2024
