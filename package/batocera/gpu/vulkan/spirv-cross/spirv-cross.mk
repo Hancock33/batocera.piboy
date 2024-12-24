@@ -4,8 +4,8 @@
 #
 ################################################################################
 
-# Version: Commits on Dec 11, 2024
-SPIRV_CROSS_VERSION = d2478b2028dbde45d7caa9dca0de0d697bc27223
+# Version: Commits on Dec 13, 2024
+SPIRV_CROSS_VERSION = 6173e24b31f09a0c3217103a130e74c4ddec14a6
 SPIRV_CROSS_SITE = $(call github,KhronosGroup,SPIRV-Cross,$(SPIRV_CROSS_VERSION))
 SPIRV_CROSS_LICENSE = Apache-2.0
 SPIRV_CROSS_LICENSE_FILES = LICENSE
