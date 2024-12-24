@@ -17,10 +17,10 @@ index d23bc5bb56..dd1b284b80 100644
     /* Play the unlock sound */
     if (settings->bools.cheevos_unlock_sound_enable)
 diff --git a/configuration.c b/configuration.c
-index e0c1d4449a..1fe9d8fcd4 100644
+index 3caefe97ec..7a37278d17 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -1568,6 +1568,7 @@ static struct config_array_setting *populate_settings_array(
+@@ -1578,6 +1578,7 @@ static struct config_array_setting *populate_settings_array(
  
  #ifdef HAVE_CHEEVOS
     SETTING_ARRAY("cheevos_custom_host",          settings->arrays.cheevos_custom_host, false, NULL, true);
