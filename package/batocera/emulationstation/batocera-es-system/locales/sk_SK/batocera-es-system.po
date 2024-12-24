@@ -3674,7 +3674,7 @@ msgctxt "game_options"
 msgid "Bicubic"
 msgstr "Bikubické"
 
-#. TRANSLATION: bigpemu, cemu, duckstation, libretro/duckstation, libretro/parallel_n64, ...
+#. TRANSLATION: bigpemu, cemu, drastic, duckstation, libretro/duckstation, ...
 msgctxt "game_options"
 msgid "Bilinear"
 msgstr "Bilineárne"
@@ -9173,6 +9173,11 @@ msgctxt "game_options"
 msgid "IMAGE READER"
 msgstr "Čítačka obrazu"
 
+#. TRANSLATION: drastic
+msgctxt "game_options"
+msgid "IMAGE SCALING"
+msgstr ""
+
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
 msgid "IMPROVED BANDING"
@@ -11277,6 +11282,11 @@ msgstr "Najbližšie pixelové vzorkovanie"
 msgctxt "game_options"
 msgid "Nearest-Neighbor"
 msgstr "Najbližší sused"
+
+#. TRANSLATION: drastic
+msgctxt "game_options"
+msgid "Nearest-neighbor"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -15288,6 +15298,13 @@ msgstr "Švajčiarska francúzština (ch)"
 msgctxt "game_options"
 msgid "Swiss German (ch)"
 msgstr "Švajčiarska nemčina (ch)"
+
+#. TRANSLATION: drastic
+msgctxt "game_options"
+msgid ""
+"Switches between smooth (Bilinear) and sharp (Nearest Neighbor) image "
+"scaling."
+msgstr ""
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
