@@ -1,0 +1,48 @@
+diff --git a/src/video_core/renderer_vulkan/vk_platform.cpp b/src/video_core/renderer_vulkan/vk_platform.cpp
+index cb51890a1..6cc583fef 100644
+--- a/src/video_core/renderer_vulkan/vk_platform.cpp
++++ b/src/video_core/renderer_vulkan/vk_platform.cpp
+@@ -368,7 +368,7 @@ vk::UniqueInstance CreateInstance(const Common::DynamicLibrary& library,
+ }
+ 
+ vk::UniqueDebugUtilsMessengerEXT CreateDebugMessenger(vk::Instance instance) {
+-    const vk::DebugUtilsMessengerCreateInfoEXT msg_ci = {
++    /*const vk::DebugUtilsMessengerCreateInfoEXT msg_ci = {
+         .messageSeverity = vk::DebugUtilsMessageSeverityFlagBitsEXT::eInfo |
+                            vk::DebugUtilsMessageSeverityFlagBitsEXT::eError |
+                            vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning |
+@@ -379,18 +379,18 @@ vk::UniqueDebugUtilsMessengerEXT CreateDebugMessenger(vk::Instance instance) {
+                        vk::DebugUtilsMessageTypeFlagBitsEXT::ePerformance,
+         .pfnUserCallback = DebugUtilsCallback,
+     };
+-    return instance.createDebugUtilsMessengerEXTUnique(msg_ci);
++    return instance.createDebugUtilsMessengerEXTUnique(msg_ci);*/
+ }
+ 
+ vk::UniqueDebugReportCallbackEXT CreateDebugReportCallback(vk::Instance instance) {
+-    const vk::DebugReportCallbackCreateInfoEXT callback_ci = {
++    /*const vk::DebugReportCallbackCreateInfoEXT callback_ci = {
+         .flags = vk::DebugReportFlagBitsEXT::eDebug | vk::DebugReportFlagBitsEXT::eInformation |
+                  vk::DebugReportFlagBitsEXT::eError |
+                  vk::DebugReportFlagBitsEXT::ePerformanceWarning |
+                  vk::DebugReportFlagBitsEXT::eWarning,
+         .pfnCallback = DebugReportCallback,
+     };
+-    return instance.createDebugReportCallbackEXTUnique(callback_ci);
++    return instance.createDebugReportCallbackEXTUnique(callback_ci)*/
+ }
+ 
+ DebugCallback CreateDebugCallback(vk::Instance instance, bool& debug_utils_supported) {
+@@ -407,9 +407,9 @@ DebugCallback CreateDebugCallback(vk::Instance instance, bool& debug_utils_suppo
+     });
+     // Prefer debug util messenger if available.
+     debug_utils_supported = it != properties.end();
+-    if (debug_utils_supported) {
+-        return CreateDebugMessenger(instance);
+-    }
++    //if (debug_utils_supported) {
++    //    return CreateDebugMessenger(instance);
++    //}
+     // Otherwise fallback to debug report callback.
+     return CreateDebugReportCallback(instance);
+ }

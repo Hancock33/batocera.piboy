@@ -3,11 +3,12 @@
 # lightspark
 #
 ################################################################################
-# Version: Commits on Dec 14, 2024
-LIGHTSPARK_VERSION = 3c8189a86d332259dc2c5560c41f1b5e630ed263
+# Version: Commits on Dec 24, 2024
+LIGHTSPARK_VERSION = 1e39767f2b5f3a65ef174b822637727c82176d76
 LIGHTSPARK_SITE = $(call github,lightspark,lightspark,$(LIGHTSPARK_VERSION))
 LIGHTSPARK_LICENSE = LGPLv3
 LIGHTSPARK_DEPENDENCIES = sdl2 freetype pcre jpeg libpng cairo pango ffmpeg libcurl rtmpdump
+LIGHTSPARK_SUPPORTS_IN_SOURCE_BUILD = NO
 
 ifeq ($(BR2_PACKAGE_XORG7)$(BR2_PACKAGE_HAS_LIBGL),yy)
 LIGHTSPARK_DEPENDENCIES += libglew
@@ -28,8 +29,8 @@ define LIGHTSPARK_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 
-	cp -pr $(@D)/$(LIGHTSPARK_ARCH)/Release/bin/lightspark	$(TARGET_DIR)/usr/bin/lightspark
-	cp -pr $(@D)/$(LIGHTSPARK_ARCH)/Release/lib/*			$(TARGET_DIR)/usr/lib/
+	cp -pr $(@D)/buildroot-build/$(LIGHTSPARK_ARCH)/Release/bin/lightspark	$(TARGET_DIR)/usr/bin/lightspark
+	cp -pr $(@D)/buildroot-build/$(LIGHTSPARK_ARCH)/Release/lib/*			$(TARGET_DIR)/usr/lib/
 
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
