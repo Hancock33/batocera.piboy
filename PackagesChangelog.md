@@ -68,6 +68,9 @@ Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.0|Dec 20, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.29.0-rc.2|Dec 20, 2024
 Emulators|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.5.2|Dec 20, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc3|Dec 20, 2024
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|v1.4.304|Dec 20, 2024
+Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|v1.4.304|Dec 20, 2024
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|0b17a763ba5643e32da1b2152f8140461b3b7345|Dec 20, 2024
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|a870b6dcde66fba00cd7aab5ae4bb699e458a91b|Dec 20, 2024
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|debec039001fba760f5412ccb85544ba1e832f2e|Dec 20, 2024
 Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0-rc3|Dec 20, 2024
@@ -112,6 +115,7 @@ Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|531cfecf6bfd
 Emulators|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.8.0|Dec 13, 2024
 Emulators|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v2.14|Dec 13, 2024
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|15.1.0|Dec 13, 2024
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|6173e24b31f09a0c3217103a130e74c4ddec14a6|Dec 13, 2024
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|80d3eba272cf6efab6b76e4dc44ea2834c6f910d|Dec 13, 2024
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|a0bb11bbb1fc5d6b478baca53c3efe526c43986c|Dec 13, 2024
 Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|6793b01f7cec237681af7c1dfd8d2d30238957f1|Dec 13, 2024
@@ -120,14 +124,11 @@ Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|378
 Emulators|[hatari](http://github.com/hatari/hatari)|d9791673de45c091a0ee5e61ca537cb90b49f442|Dec 11, 2024
 Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|05c445e7ad7317f2587527eec61b5010eee50f8d|Dec 11, 2024
 Utils|[re2c](http://github.com/skvadrik/re2c)|4.0.2|Dec 11, 2024
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|d2478b2028dbde45d7caa9dca0de0d697bc27223|Dec 11, 2024
-Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|ca82303b6bad637c08d94baa80dea17b541649ed|Dec 11, 2024
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|1f29dcdf938c3aea4cbfec611585cf444aff754f|Dec 10, 2024
 Firmwares|[alllinuxfirmwares](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot)|20241210|Dec 10, 2024
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|4650327a4959321c8d28b89693abbda41fa69e6e|Dec 10, 2024
 Libraries|[cpuinfo](http://github.com/pytorch/cpuinfo)|ca156f7bc9109c552973414a63d310f76ef0cbf8|Dec 09, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|a78bced5e2bcb974c05d911c94ea89d5a450021a|Dec 09, 2024
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|160e946f5d4b3a657f47b7fc4b0bd3cc8d0d6afd|Dec 09, 2024
 Libraries|[appstream](http://github.com/ximion/appstream)|v1.0.4|Dec 08, 2024
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|53bf676868f8e7038531e828df4cbe1668c20527|Dec 07, 2024
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.4|Dec 06, 2024
@@ -146,7 +147,6 @@ Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|572c91
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|a941ae520e3b2a94da3c0cb517e1a2c40a3139ac|Dec 03, 2024
 Emulators|[dhewm3](http://github.com/dhewm/dhewm3)|ce4e6f076f3ebbfd4c71021773c90c13ecdc79df|Dec 03, 2024
 Ports|[doom3](http://github.com/dhewm/dhewm3)|ce4e6f076f3ebbfd4c71021773c90c13ecdc79df|Dec 03, 2024
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|e767d0ee782709f2bd2df148927ddab02f2dbfe4|Dec 02, 2024
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|d83967b2ea38eda8b43437167d93c86021bb4de1|Dec 02, 2024
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|24.12|Dec 01, 2024
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.9.0|Dec 01, 2024
