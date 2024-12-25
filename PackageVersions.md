@@ -149,7 +149,7 @@ Emulators|[libretro-freeintv](http://github.com/libretro/freeintv)|beab9af119fc1
 Emulators|[libretro-freej2me](http://github.com/hex007/freej2me)|8b9bc8a19baf26e3d92f88934a64a32f1cbc2795|Feb 16, 2024
 Emulators|[libretro-fuse](http://github.com/libretro/fuse-libretro)|cad85b7b1b864c65734f71aa4a510b6f6536881c|Nov 24, 2024
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|a870b6dcde66fba00cd7aab5ae4bb699e458a91b|Dec 20, 2024
-Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|7b9909746a29e30b1a7fb56603fc60b53c54fc33|Dec 25, 2024
+Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|2ccbd99ffd03642af7890b8e95a2f13b0cdb0727|Dec 25, 2024
 Emulators|[libretro-genesisplusgx-wide](http://github.com/libretro/Genesis-Plus-GX-Wide)|b7d314220d755537aebb7bc1750ac21f764365c4|Oct 21, 2024
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|a6002bb25431c6ce03cf10e67c317403990312bc|Sept 01, 2024
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|38f749148b196531b36e7096c0609d9c00429168|Oct 17, 2024
@@ -159,6 +159,7 @@ Emulators|[libretro-gw](http://github.com/libretro/gw-libretro)|435e5cfd4bf6aea0
 Emulators|[libretro-handy](http://github.com/libretro/libretro-handy)|4e9e072796e5552a9d57f6ab83b3f85f27b17fb6|Oct 21, 2024
 Emulators|[libretro-hatari](http://github.com/libretro/hatari)|7008194d3f951a157997f67a820578f56f7feee0|Oct 21, 2024
 Emulators|[libretro-hatarib](https://github.com/bbbradsmith/hatariB)|e8187a7be75ff1c547cdcef214a8da26847561c1|Jul 05, 2024
+Emulators|[libretro-holani](http://github.com/LLeny/holani-retro)|345d2747dcbab511b83eb4c666ed239f87755545|Dec 20, 2024
 Emulators|[libretro-imame](http://github.com/libretro/mame2000-libretro)|2ec60f6e1078cf9ba173e80432cc28fd4eea200f|Jul 01, 2024
 Emulators|[libretro-jaxe](https://github.com/kurtjd/jaxe.git)|22115d58de5f80cfafbbeece19d723f4892ed75c|Apr 25, 2024
 Emulators|[libretro-jumpnbump](http://github.com/libretro/jumpnbump-libretro)|4e68831f5576075c45c147f86865812afb816139|Nov 02, 2023
@@ -245,7 +246,7 @@ Emulators|[libretro-yabause](http://github.com/libretro/yabause)|c35712c5ed33e18
 Emulators|[libretro-zc210](https://github.com/netux79/zc210-libretro.git)|b6426da40b074245fda097fd345fa7c9cdbf152a|Apr 26, 2022
 Emulators|[libretro-zc250x](https://github.com/netux79/zc250x-libretro.git)|cfe8da6aa8714f2a77dba81026a5a5560bc70ad6|Jan 25, 2023
 Emulators|[libserum](http://github.com/zesinger/libserum)|v2.0.2|Sept 15, 2024
-Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|385cfa7952df3a97c16faf14beb231253388cb9a|Dec 25, 2024
+Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|921eb25427a2f457cd9c33acd9f5335c2c0631bc|Dec 25, 2024
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|1e39767f2b5f3a65ef174b822637727c82176d76|Dec 24, 2024
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0273|Dec 23, 2024
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|c41951d49c78f0cbb335f8267a8acfac69714df3|Dec 25, 2024
@@ -272,14 +273,14 @@ Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.2.4|Oct 11, 2024
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|19d9ff76710dafa6dcb32c3e707b09a787798e26|Oct 19, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|9c71620c5305951bc653a3af849a05f9157c4ae8|Dec 25, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|1450cc04deef91c3b2a7d7bca1b8892d1db86d42|Dec 25, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20241221|Dec 21, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|b2949f114b144c0a7de6466d1f796706431dc191|Dec 23, 2024
 Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-12-25|Dec 25, 2024
 Emulators|[ryujinx](https://github.com/GreemDev/Ryujinx/releases)|1.2.78|Dec 19, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|a108b03b35481d991692d376325675065a93887a|Dec 24, 2024
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|3a1a3fc75e7a80a6e9439f0ef4eba234116ba8ef|Dec 25, 2024
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|0939082aca4e289a6e9804987949ea732eb923b9|Dec 25, 2024
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|0ed28f4fd5274ece49b2baf2c504d2c6393efb0f|Dec 25, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|48fe9344633001703782244651cdbf754532f9ab|Dec 18, 2024

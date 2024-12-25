@@ -8,14 +8,14 @@ Emulators|[openmsx](http://github.com/openMSX/openMSX)|3100ac82d9a1eb0a979be9554
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.75|Dec 25, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|5def50cca662b58fc9b59abea57c33e6444237c7|Dec 25, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-12-25|Dec 25, 2024
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|3a1a3fc75e7a80a6e9439f0ef4eba234116ba8ef|Dec 25, 2024
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|0939082aca4e289a6e9804987949ea732eb923b9|Dec 25, 2024
 Ports|[box64](http://github.com/ptitseb/box64)|145689783f91eae5248ade24edde61362a0a6ba0|Dec 25, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|2d1a09fe0d99475a655c12ec6b293dcbede92bf2|Dec 25, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|9c71620c5305951bc653a3af849a05f9157c4ae8|Dec 25, 2024
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|1450cc04deef91c3b2a7d7bca1b8892d1db86d42|Dec 25, 2024
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|9c28ddf9bf4a988f00f4bc936d9867dd705617c1|Dec 25, 2024
-Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|385cfa7952df3a97c16faf14beb231253388cb9a|Dec 25, 2024
+Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|921eb25427a2f457cd9c33acd9f5335c2c0631bc|Dec 25, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|f9aaefee17058cb10401c0214e4359bd4eb5844f|Dec 25, 2024
-Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|7b9909746a29e30b1a7fb56603fc60b53c54fc33|Dec 25, 2024
+Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|2ccbd99ffd03642af7890b8e95a2f13b0cdb0727|Dec 25, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|d82fc3dec1001dc5fd83e30c4e75e21ff8c69e59|Dec 25, 2024
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|8cc9bfbb36b2656f05c38bbb01275ef8c8f43c3e|Dec 25, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|5def50cca662b58fc9b59abea57c33e6444237c7|Dec 25, 2024
@@ -81,6 +81,7 @@ Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Li
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|v1.4.304|Dec 20, 2024
 Gpu|[vulkan-volk](http://github.com/zeux/volk)|0b17a763ba5643e32da1b2152f8140461b3b7345|Dec 20, 2024
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|a870b6dcde66fba00cd7aab5ae4bb699e458a91b|Dec 20, 2024
+Emulators|[libretro-holani](http://github.com/LLeny/holani-retro)|345d2747dcbab511b83eb4c666ed239f87755545|Dec 20, 2024
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|debec039001fba760f5412ccb85544ba1e832f2e|Dec 20, 2024
 Emulators|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0-rc3|Dec 20, 2024
 Emulators|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc3|Dec 20, 2024
