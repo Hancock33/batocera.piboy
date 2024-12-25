@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-12-01 22:25+0900\n"
+"PO-Revision-Date: 2024-12-25 09:20+0900\n"
 "Last-Translator: DDinghoya <ddinghoya@gmail.com>\n"
 "Language-Team: \n"
 "Language: ko_KO\n"
@@ -9220,7 +9220,7 @@ msgstr "이미지 리더"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid "IMAGE SCALING"
-msgstr ""
+msgstr "이미지 크기 조정"
 
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
@@ -11344,7 +11344,7 @@ msgstr "가장 가까운 이웃"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid "Nearest-neighbor"
-msgstr ""
+msgstr "최근접 이웃"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -15389,6 +15389,7 @@ msgid ""
 "Switches between smooth (Bilinear) and sharp (Nearest Neighbor) image "
 "scaling."
 msgstr ""
+"부드러운(이중선형) 및 선명한(최근접 이웃) 이미지 크기 조정 사이를 전환합니다."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
