@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Dec 25, 2024
-LIBRETRO_PANDA3DS_VERSION = 36c716d030b3a64ee6c11d185a9f0f1365f01b15
+LIBRETRO_PANDA3DS_VERSION = 8cc9bfbb36b2656f05c38bbb01275ef8c8f43c3e
 LIBRETRO_PANDA3DS_SITE = https://github.com/wheremyfoodat/Panda3DS.git
 LIBRETRO_PANDA3DS_SITE_METHOD=git
 LIBRETRO_PANDA3DS_GIT_SUBMODULES=YES
