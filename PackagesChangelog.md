@@ -15,7 +15,7 @@ Emulators|[retroarch](http://github.com/libretro/RetroArch)|9c71620c5305951bc653
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|9c28ddf9bf4a988f00f4bc936d9867dd705617c1|Dec 25, 2024
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|385cfa7952df3a97c16faf14beb231253388cb9a|Dec 25, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|f9aaefee17058cb10401c0214e4359bd4eb5844f|Dec 25, 2024
-Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|a0c4f13b7021f8548c4c7598a2a4fc301175d068|Dec 25, 2024
+Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|7b9909746a29e30b1a7fb56603fc60b53c54fc33|Dec 25, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|d82fc3dec1001dc5fd83e30c4e75e21ff8c69e59|Dec 25, 2024
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|8cc9bfbb36b2656f05c38bbb01275ef8c8f43c3e|Dec 25, 2024
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|5def50cca662b58fc9b59abea57c33e6444237c7|Dec 25, 2024
