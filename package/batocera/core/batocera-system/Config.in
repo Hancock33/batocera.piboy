@@ -402,7 +402,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 
     # tools
     select BR2_PACKAGE_I2C_TOOLS
-    select BR2_PACKAGE_MDADM # RAID
+    select BR2_PACKAGE_MDADM                                # RAID
     select BR2_PACKAGE_MC
     select BR2_PACKAGE_OD_COMMANDER
     select BR2_PACKAGE_FDUPES
@@ -443,8 +443,11 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_TQFTPSERV                            if  BR2_PACKAGE_BATOCERA_TARGET_ODIN
 
     # leds
-	select BR2_PACKAGE_AYN_PLATFORM                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
-	select BR2_PACKAGE_AYANEO_PLATFORM                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_AYN_PLATFORM                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_AYANEO_PLATFORM                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+
+    # bluetooth
+    select BR2_PACKAGE_BRCM_PATCHRAM_PLUS                   if  BR2_PACKAGE_BATOCERA_TARGET_T527
 
     help
         Install the batocera.linux system files
@@ -592,7 +595,7 @@ config BR2_PACKAGE_BATOCERA_TARGET_H6
     bool "h6"
 
 config BR2_PACKAGE_BATOCERA_TARGET_T527
-	bool "t527"
+    bool "t527"
 
 # PC
 # ------------------------------------
@@ -603,7 +606,7 @@ config BR2_PACKAGE_BATOCERA_TARGET_X86_64
     bool "x86_64"
 
 config BR2_PACKAGE_BATOCERA_TARGET_ZEN3
-	bool "x86-64-v3"
+    bool "x86-64-v3"
 
 # Snapdragon & Samsung
 # -------------------------------------
@@ -1715,7 +1718,6 @@ config BR2_PACKAGE_BATOCERA_FREEDRENO_MESA3D
     select BR2_PACKAGE_MESA3D_OPENGL_ES
     select BR2_PACKAGE_MESA3D_OPENGL_EGL
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_FREEDRENO
-	select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_FREEDRENO
     select BR2_PACKAGE_MESA3D_OPENGL_GLX                    if  BR2_PACKAGE_XORG7                                                                       # OpenGL GLX support
     select BR2_PACKAGE_MESA3D_DEMOS                         if  BR2_PACKAGE_XORG7                                                                       # glxinfo etc
     select BR2_PACKAGE_LIBGLVND                             if  BR2_PACKAGE_XORG7                                                                       # opengl vendor neutral dispatch
@@ -1761,6 +1763,13 @@ config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
     select BR2_PACKAGE_FIRMWARE_ORANGEPI                    if  BR2_PACKAGE_BATOCERA_TARGET_H3          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H5          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H6          || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_H616        || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_T527
+
+    # orangepi firmware
+    select BR2_PACKAGE_FIRMWARE_ORANGEPI                    if  BR2_PACKAGE_BATOCERA_TARGET_H3          || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_H5          || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_H6          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H616
 
     # broadcom bluetooth firware
@@ -1787,15 +1796,15 @@ config BR2_PACKAGE_BATOCERA_SDL2
     select BR2_PACKAGE_TVTEXTVIEWER                         if !BR2_PACKAGE_BATOCERA_LIB32
 
 config BR2_PACKAGE_BATOCERA_WAYLAND
-    	bool "batocera.linux wayland packages selection"
+    bool "batocera.linux wayland packages selection"
 
-	# Wayland Protocol
-	select BR2_PACKAGE_WAYLAND
-	select BR2_PACKAGE_WAYLAND_UTILS
-	select BR2_PACKAGE_WAYLAND_PROTOCOLS
+    # Wayland Protocol
+    select BR2_PACKAGE_WAYLAND
+    select BR2_PACKAGE_WAYLAND_UTILS
+    select BR2_PACKAGE_WAYLAND_PROTOCOLS
 
 config BR2_PACKAGE_BATOCERA_WAYLAND_SWAY
-        bool "batocera.linux wayland sway packages selection"
+    bool "batocera.linux wayland sway packages selection"
 
     # Wayland Protocol
     select BR2_PACKAGE_BATOCERA_WAYLAND
