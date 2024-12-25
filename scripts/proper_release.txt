@@ -27,7 +27,6 @@ libgraphene.mk
 libretro-mame.mk
 libserum.mk
 libxmp.mk
-libzedmd.mk
 mame-src.mk
 mame.mk
 mold.mk

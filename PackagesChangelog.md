@@ -12,6 +12,8 @@ Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|3a1a3fc75e7a80a6
 Ports|[box64](http://github.com/ptitseb/box64)|145689783f91eae5248ade24edde61362a0a6ba0|Dec 25, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|2d1a09fe0d99475a655c12ec6b293dcbede92bf2|Dec 25, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|9c71620c5305951bc653a3af849a05f9157c4ae8|Dec 25, 2024
+Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|9c28ddf9bf4a988f00f4bc936d9867dd705617c1|Dec 25, 2024
+Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|385cfa7952df3a97c16faf14beb231253388cb9a|Dec 25, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|f9aaefee17058cb10401c0214e4359bd4eb5844f|Dec 25, 2024
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|a0c4f13b7021f8548c4c7598a2a4fc301175d068|Dec 25, 2024
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|d82fc3dec1001dc5fd83e30c4e75e21ff8c69e59|Dec 25, 2024
@@ -105,7 +107,6 @@ Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerD
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|c9c54a32266be8ba8247b509ecd5a6cbbaede7a3|Dec 17, 2024
 Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|61c73b8e09a8da97aa96b7bb71e4cbf0073140b8|Dec 16, 2024
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|79bb2fa6f071ee34ddf5189afc847e3ed06e956e|Dec 16, 2024
-Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|54851118693a785ee510fa7725fc077989c5e19c|Dec 16, 2024
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|04f03b32b860ab25ab2731433597d9a23929c386|Dec 16, 2024
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|c6da07feb31e9e95ed001b062211489cdc3bf469|Dec 16, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|164ebb46bdc43b69231b3891690084f56cb03304|Dec 15, 2024
@@ -196,7 +197,6 @@ Ports|[openjk](http://github.com/JACoders/OpenJK)|199ddc7642d0ed0e2bf007fe63d0dc
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|aed9c61e0a78e24644386f7329144f108b4f507c|Nov 10, 2024
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|d5be3c6086bdf94baa52b54f155092563085624c|Nov 10, 2024
 Firmwares|[firmware-armbian](http://github.com/armbian/firmware)|8dbb28d2ee8fa3d5f67a9d9dbc64c3d2b3b0adac|Nov 07, 2024
-Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.7.5|Nov 07, 2024
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|edee981519609d315880d1dcff30fe241c8df54a|Nov 05, 2024
 Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)|b11c909336ca22e563659ad36564e24a0f869708|Nov 05, 2024
 Emulators|[mupen64plus-rsp-hle](http://github.com/mupen64plus/mupen64plus-rsp-hle)|47f8e92e9a8bb9e49195ecfb03e9df0b63add242|Nov 04, 2024
