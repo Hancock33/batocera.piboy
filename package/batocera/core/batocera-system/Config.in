@@ -216,7 +216,8 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_UTIL_LINUX_SETTERM                   # Set terminal attributes
     select BR2_PACKAGE_WINBTRFS                             # btrfs
     select BR2_PACKAGE_WIREGUARD_LINUX_COMPAT               if !BR2_TOOLCHAIN_HEADERS_AT_LEAST_5_6 && !BR2_PACKAGE_BATOCERA_TARGET_A3GEN2 && !BR2_PACKAGE_BATOCERA_TARGET_S9GEN4 # Kernel < 5.6 backwards compatibility
-    select BR2_PACKAGE_WIREGUARD_TOOLS                      # WireGuard VPN support
+    select BR2_PACKAGE_WIREGUARD_TOOLS                      if !BR2_TOOLCHAIN_HEADERS_AT_LEAST_5_6 && !BR2_PACKAGE_BATOCERA_TARGET_A3GEN2 && !BR2_PACKAGE_BATOCERA_TARGET_S9GEN4 && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3128                                                                               # WireGuard VPN support (match kernel compatibility)
     select BR2_PACKAGE_WIRELESS_REGDB                       # wireless regulatory DB
     select BR2_PACKAGE_WIRELESS_TOOLS                       # wireless tools
     select BR2_PACKAGE_WIRELESS_TOOLS_LIB                   # wireless tools
@@ -508,7 +509,7 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     default "amlogic/s905/odroidc2 amlogic/s905/tvbox amlogic/s905/lepotato amlogic/s905/vim amlogic/s905/p201 amlogic/s905/lepotatov2 amlogic/s905/minix-neo-u1"                              if  BR2_PACKAGE_BATOCERA_TARGET_S905
     default "rockchip/rk3399/orangepi-800 rockchip/rk3399/rg552 rockchip/rk3399/rockpro64 rockchip/rk3399/rock960 rockchip/rk3399/orangepi4-lts rockchip/rk3399/rock-pi-4 rockchip/rk3399/nanopi-m4v2 rockchip/rk3399/hugsun-x99" if  BR2_PACKAGE_BATOCERA_TARGET_RK3399
     default "rockchip/rk3588/orangepi-5-pro rockchip/rk3588/bananapi-m7 rockchip/rk3588/gameforce-ace rockchip/rk3588/rock-5c rockchip/rk3588/rock-5b rockchip/rk3588/rock-5a rockchip/rk3588/quartzpro64 rockchip/rk3588/orangepi-5 rockchip/rk3588/orangepi-5b rockchip/rk3588/orangepi-5-plus rockchip/rk3588/indiedroid-nova rockchip/rk3588/mekotronics-r58 rockchip/rk3588/khadas-edge-2 rockchip/rk3588/firefly-station-m3"  if BR2_PACKAGE_BATOCERA_TARGET_RK3588
-    default "rockchip/rk3568/anbernic-rgxx3 rockchip/rk3568/odroid-m1s rockchip/rk3568/odroid-m1 rockchip/rk3568/rock-3a rockchip/rk3568/rock-3c rockchip/rk3568/firefly-station-m2 ockchip/rk3568/firefly-station-p2"  if  BR2_PACKAGE_BATOCERA_TARGET_RK3568
+    default "rockchip/rk3568/orangepi-3b rockchip/rk3568/anbernic-rgxx3 rockchip/rk3568/odroid-m1s rockchip/rk3568/odroid-m1 rockchip/rk3568/rock-3a rockchip/rk3568/rock-3c rockchip/rk3568/firefly-station-m2 rockchip/rk3568/firefly-station-p2" if  BR2_PACKAGE_BATOCERA_TARGET_RK3568
     default "allwinner/h3/orangepi-pc allwinner/h3/orangepi-one allwinner/h3/orangepi-plus2e allwinner/h3/bananapi-m2-zero allwinner/h3/cha"                                                   if  BR2_PACKAGE_BATOCERA_TARGET_H3
     default "allwinner/t527/orangepi-4a"                                                                                                                                                       if  BR2_PACKAGE_BATOCERA_TARGET_T527
 choice
@@ -1765,7 +1766,8 @@ config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H5          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H6          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H616        || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_T527
+                                                                BR2_PACKAGE_BATOCERA_TARGET_T527        || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3568
 
     # orangepi firmware
     select BR2_PACKAGE_FIRMWARE_ORANGEPI                    if  BR2_PACKAGE_BATOCERA_TARGET_H3          || \

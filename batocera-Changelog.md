@@ -2,7 +2,9 @@
 ### Special Notes
 ### Hardware
 - Add OrangePi 4a board support
+- Add OrangePi 3b board support
 ### Added
+- Wireguard VPN for RK3326 boards
 - Image scaling option for Drastic
 ### Fixed
 - Fix some problems in ES and Batocera with IPv6 networks
