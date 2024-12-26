@@ -341,9 +341,6 @@ class LibretroGenerator(Generator):
         elif system.name == 'msu-md':
             if "squashfs" in str(rom_path) and rom_path.is_dir():
                 rom_path = next(rom_path.glob('*.md'))
-        elif system.name == 'sgb-msu1':
-            if "squashfs" in str(rom_path) and rom_path.is_dir():
-                rom_path = next(itertools.chain(rom_path.glob('*.gb'), rom_path.glob('*.gbc')))
 
         if system.name == 'scummvm':
             if "squashfs" in rom:
