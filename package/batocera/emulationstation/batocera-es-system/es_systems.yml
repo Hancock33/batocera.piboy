@@ -2383,7 +2383,7 @@ msx1:
   comment_br:           |
                         ## BIOS ##
 
-                        - BlueMSX (PADRÃO):
+                        - BlueMSX (PADR�fO):
                         Você deve baixar a versão independente do BlueMSX, disponível neste endereço: http://bluemsx.msxblue.com/rel_download/blueMSXv282full.zip
                         Em seguida, extraia as pastas "Databases" e "Machines" e adicione-as à pasta bios.
 
@@ -2481,7 +2481,7 @@ msx2:
   comment_br:           |
                         ## BIOS ##
 
-                        - BlueMSX (PADRÃO):
+                        - BlueMSX (PADR�fO):
                         Você deve baixar a versão independente do BlueMSX, disponível neste endereço: http://bluemsx.msxblue.com/rel_download/blueMSXv282full.zip
                         Em seguida, extraia as pastas "Databases" e "Machines" e adicione-as à pasta bios.
 
@@ -2579,7 +2579,7 @@ msx2+:
   comment_br:           |
                         ## BIOS ##
 
-                        - BlueMSX (PADRÃO):
+                        - BlueMSX (PADR�fO):
                         Você deve baixar a versão independente do BlueMSX, disponível neste endereço: http://bluemsx.msxblue.com/rel_download/blueMSXv282full.zip
                         Em seguida, extraia as pastas "Databases" e "Machines" e adicione-as à pasta bios.
 
@@ -2691,7 +2691,7 @@ xbox360:
                         Atualmente os emuladores Xenia rodam em WINE e estão restritos apenas a sistemas capazes de Vulkan 1.3+.
                         Os emuladores Xenia usarão Vulkan nativo por padrão, no entanto, uma opção experimental D3D12 -> Vulkan (VKD3D) é fornecida.
 
-                        Nota: É necessária uma ligação à Internet para criar a garrafa de WINE inicial.
+                        Nota: �? necessária uma ligação à Internet para criar a garrafa de WINE inicial.
 
 xboxcloud:
   name:                 Xbox Cloud Gaming
@@ -5020,7 +5020,7 @@ quake3:
                         Pour la configuration de base vous devez avoir les dossiers "baseq3" et "missionpack" dans le répertoire "/userdata/roms/quake3".
 
                         Pour lancer une partie, créez un fichier avec l'extension .quake3, par exemple "Quake III Arena.quake3".
-                        À l'intérieur de ce fichier, ajoutez la ligne suivante : "+set fs_game "baseq3" pour le jeu "Quake III Arena.
+                        �? l'intérieur de ce fichier, ajoutez la ligne suivante : "+set fs_game "baseq3" pour le jeu "Quake III Arena.
                         Pour le mode Quake III: Team Arena creez un autre fichier avec : "+set fs_game "missionpack".
 
                         Répétez cette étape pour chaque mod auquel vous souhaitez jouer, en donnant un nom logique au fichier pour vous aider à vous y retrouver avec les illustrations, etc.
@@ -5088,10 +5088,10 @@ yquake2:
                         The supported subdirectories for mission pack ROMs are: xatrix, rogue, and zaero.
                         For the standard Quake II directory, use 'baseq2' to utilize the standard vitaquake2 core.
   comment_fr:           |
-                        Le cœur libretro de vitaquake2 propose différents packs de missions.
-                        Pour vous assurer que le bon cœur vitaquake2 se charge pour un pack de missions, veillez à le placer dans un sous-répertoire de ce répertoire ROM.
+                        Le c�"ur libretro de vitaquake2 propose différents packs de missions.
+                        Pour vous assurer que le bon c�"ur vitaquake2 se charge pour un pack de missions, veillez à le placer dans un sous-répertoire de ce répertoire ROM.
                         Les sous-répertoires pris en charge pour les ROM de packs de missions sont : xatrix, rogue et zaero.
-                        Pour le répertoire standard de Quake II, utilisez 'baseq2' pour utiliser le cœur vitaquake2 standard.
+                        Pour le répertoire standard de Quake II, utilisez 'baseq2' pour utiliser le c�"ur vitaquake2 standard.
 
 bigfish:
   name:                 Big Fish Games
@@ -5180,7 +5180,7 @@ cave3rd:
                         Enjoy Sega Cave CV1000 games under Linux!
   comment_br:           |
                         ----------------------------------
-                        ## GAELCO INFORMAÇÕES IMPORTANTES ##
+                        ## GAELCO INFORMA�?�.ES IMPORTANTES ##
                         ----------------------------------
 
                         Agora você pode jogar jogos da Sega Cave CV1000 usando o Demul & Wine.
@@ -5290,7 +5290,7 @@ gaelco:
                         Enjoy Sega Gaelco games under Linux!
   comment_br:           |
                         ----------------------------------
-                        ## GAELCO INFORMAÇÕES IMPORTANTES ##
+                        ## GAELCO INFORMA�?�.ES IMPORTANTES ##
                         ----------------------------------
 
                         Agora você pode jogar jogos da Sega Cave CV1000 usando o Demul com o Wine.
@@ -5393,7 +5393,7 @@ hikaru:
                         Enjoy Sega Hikaru games under Linux!
   comment_br:           |
                         ----------------------------------
-                        ## HIKARU INFORMAÇÕES IMPORTANTES ##
+                        ## HIKARU INFORMA�?�.ES IMPORTANTES ##
                         ----------------------------------
 
                         Agora você pode jogar jogos da Sega Cave CV1000 usando o Demul com o Wine.
@@ -5536,7 +5536,7 @@ model2:
                         *** Enjoy the Sega Model 2 emulator running under Linux !!! ***
   comment_br:           |
                         ----------------------------------
-                        ## SEGA MODEL 2 INFORMAÇÕES IMPORTANTES ##
+                        ## SEGA MODEL 2 INFORMA�?�.ES IMPORTANTES ##
                         ----------------------------------
 
                         Agora você pode jogar jogos da Sega Model 2 usando o Demul & Wine.
@@ -5586,7 +5586,7 @@ model2:
                         Ao navegar usando o compartilhamento de rede, você não verá o diretório userdata, navegue até a pasta de saves.
                         O backup dessas pastas manterá suas pontuações, configurações de rom e controles.
 
-                        É recomendado remover seu diretório /userdata/saves/model2/ somente via ssh!
+                        �? recomendado remover seu diretório /userdata/saves/model2/ somente via ssh!
                         Quando logado via ssh execute:
                         cd /userdata/saves
                         rm -rf modelo2
@@ -5657,7 +5657,7 @@ model3:
 
                         See the Supermodel FAQ here - https://www.supermodel3.com/FAQ.html
   comment_br:           |
-                        ## SEGA MODEL 3 INFORMAÇÕES IMPORTANTES ##
+                        ## SEGA MODEL 3 INFORMA�?�.ES IMPORTANTES ##
 
                         Coloque suas roms model3 neste diretório.
 
@@ -5804,7 +5804,7 @@ naomi2:
                         Enjoy Naomi 2 games under Linux!
   comment_br:           |
                         ----------------------------------
-                        ## NAOMI 2 INFORMAÇÕES IMPORTANTES ##
+                        ## NAOMI 2 INFORMA�?�.ES IMPORTANTES ##
                         ----------------------------------
 
                         Agora você pode jogar jogos da Sega Cave CV1000 usando o Demul & Wine.
@@ -6495,9 +6495,9 @@ coco:
                         Default Autoload Behaviors
                         1. "usage" info field when using MAME software lists (if declared)
                         2. Cassette (.cas) files autoload as binary (CLOADM:EXEC)
-                        3. Disk (.dsk) files autoload based on basename (eg. ZONX.dsk autoloads as LOADM “ZONX”:EXEC)
+                        3. Disk (.dsk) files autoload based on basename (eg. ZONX.dsk autoloads as LOADM �?oZONX�?�:EXEC)
                         4. BASIC programs autorun if file basename ends with .bas
-                            3a. ALPHAII.BAS.dsk autoloads using RUN “ALPHAII”
+                            3a. ALPHAII.BAS.dsk autoloads using RUN �?oALPHAII�?�
                             3b. GROVER.bas.cas  autoloads using CLOAD:RUN
                         user definable autoload overrides in: `system/configs/mame/autoload/coco_{cass,flop}_autoload.csv`
                         syntax: <romBasename>;<autoload command> (see comments in .csv files for detailed help & examples)
