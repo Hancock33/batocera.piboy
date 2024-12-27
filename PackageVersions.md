@@ -71,7 +71,7 @@ Emulators|[cemu](https://github.com/cemu-project/Cemu)|2b0cbf7f6b6c34c748585d255
 Emulators|[citra](https://github.com/Borked3DS/Borked3DS.git)|aab6614e9b574de160a874816050118547837712|Dec 23, 2024
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
 Emulators|[dhewm3](http://github.com/dhewm/dhewm3)|ce4e6f076f3ebbfd4c71021773c90c13ecdc79df|Dec 03, 2024
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|532a8621daa5c0d8a3a55f64ffba9cb20209d455|Dec 26, 2024
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|05cad38abc1d25f57500e530d63b545fa7b56499|Dec 27, 2024
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|bfefd38d2500103d32f5da9f7fcd80090b7836fb|May 23, 2024
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|1f29dcdf938c3aea4cbfec611585cf444aff754f|Dec 10, 2024
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.12.04|Dec 05, 2024
@@ -90,7 +90,7 @@ Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|374d7c7d0364ba
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
 Emulators|[hatari](http://github.com/hatari/hatari)|d9791673de45c091a0ee5e61ca537cb90b49f442|Dec 11, 2024
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|b353e1728bf56d8b6c6fb606df78b7296a203702|Oct 01, 2024
-Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|21ebcd097e562528b6231d74eb6e7959f360c322|Dec 27, 2024
+Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|9bb44a3a46e644be103960d53f30f112e8543647|Dec 27, 2024
 Emulators|[libaltsound](http://github.com/vpinball/libaltsound)|b8f397858cbc7a879f7392c14a509f00c8bdc7dd|Jun 28, 2024
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|9c28ddf9bf4a988f00f4bc936d9867dd705617c1|Dec 25, 2024
 Emulators|[libdof](http://github.com/jsm174/libdof)|5c43c99ea28b44bb58b74554c4303a505e208148|Sept 11, 2024
@@ -125,7 +125,7 @@ Emulators|[libretro-cannonball](http://github.com/libretro/cannonball)|5137a791d
 Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|dbfa1aa2dc132f57289329252829174c1cea4230|Oct 21, 2024
 Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)|b11c909336ca22e563659ad36564e24a0f869708|Nov 05, 2024
 Emulators|[libretro-citra](https://github.com/zorn-v/citra-libretro.git)|947ea2c7e426632392cf4bf44eab70de034267be|Jan 30, 2024
-Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|0270f355b7ac7c184558c5e2da3553aa98dacfc8|Dec 18, 2024
+Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|a82ce90341a2963500bd07aa4e1a2bf84f4545b3|Dec 27, 2024
 Emulators|[libretro-craft](http://github.com/libretro/Craft)|675c5b2fc690d2e80f6099f46407bf23827c59d4|Oct 06, 2024
 Emulators|[libretro-desmume](http://github.com/libretro/desmume)|7f05a8d447b00acd9e0798aee97b4f72eb505ef9|Oct 21, 2024
 Emulators|[libretro-dinothawr](http://github.com/libretro/Dinothawr)|e57e780a963372b89736620d7e3b8608190f7581|Oct 21, 2024
@@ -280,7 +280,7 @@ Emulators|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b4
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-12-27|Dec 27, 2024
 Emulators|[ryujinx](https://github.com/GreemDev/Ryujinx/releases)|1.2.78|Dec 19, 2024
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|ae6f0ca378805db90425185f68b500a0c4b8547c|Dec 26, 2024
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|e40ede5db2aede2a51d481f5dc1df0baf8ea9c78|Dec 27, 2024
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|333f35ef2565fd24d93194893e04bd21fab32b20|Dec 27, 2024
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|8fe25d96e575dadfc8e8f14c36a9db26c68241ee|Dec 26, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|48fe9344633001703782244651cdbf754532f9ab|Dec 18, 2024
@@ -291,14 +291,14 @@ Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|17
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|b13fdd5029a246e8f90a1d70e2ed000779fee4f1|Sept 10, 2024
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|d043dc0c6a99f5fff87d7044e85a608508eae7e1|Nov 25, 2024
 Emulators|[suyu](https://git.suyu.dev/suyu/suyu.git)|ee365bad9501c73ff49936e72ec91cd9c3ce5c24|Oct 06, 2024
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|278fe1fc724d8a03cf81aafca9a773539f3eadd1|Dec 26, 2024
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|27ecd3d8ab62f3f37d0fef8556bcb10719d1dcae|Dec 26, 2024
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|7cd0b28b52f42cf82f43f4ca1c41a5876bbabdfc|Dec 21, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45432|Dec 26, 2024
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|0a3ba020c32777298add1f33d566a97d8e1562e3|Dec 18, 2024
 Emulators|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v2.14|Dec 13, 2024
 Emulators|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.13|Aug 29, 2024
-Emulators|[vpinball](http://github.com/vpinball/vpinball)|82507d0087bda175b9e1b0af7ab521cb54c147d3|Jul 23, 2024
+Emulators|[vpinball](http://github.com/vpinball/vpinball)|0b2dfb0ae7c84e92bc4a03b65dc18f078e56ac74|Jul 23, 2024
 Emulators|[wine-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos-9.0-20241206-wine|Dec 06, 2024
 Emulators|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc3|Dec 20, 2024
 Emulators|[wine-ge](http://github.com/GloriousEggroll/proton-wine)|39021e609a24b6aeffdf9c4695a286d71e7dffbc|Feb 04, 2024
@@ -432,7 +432,7 @@ Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e24
 Ports|[awgl](http://github.com/cyxx/rawgl)|1eeaa530c859bd6e37b3d3bd7d3136bc16afcc89|Mar 12, 2022
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|1855c8ed66b771fb62ae66bf5b1cbc9ede9cd03a|Dec 26, 2023
-Ports|[box64](http://github.com/ptitseb/box64)|26ba1148e8e9dac4b4ddc03030f3a883daf96824|Dec 27, 2024
+Ports|[box64](http://github.com/ptitseb/box64)|e2d7cc5011f8f88d7c96d4d395ea9927a9d9ce8e|Dec 27, 2024
 Ports|[box86](http://github.com/ptitseb/box86)|ec278bd7843252d7bfc6e5e91d7074f9c0310de7|Dec 06, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ac86299e75e3fffae4bf60a20b92b510b1de2684|Dec 14, 2024
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
@@ -489,10 +489,10 @@ Ports|[sorr](http://github.com/Cpasjuste/bennugd-monolithic)|0290c3719fd74121ff9
 Ports|[spacecadetpinball](http://github.com/k4zmu2a/SpaceCadetPinball)|cb9b7b886244a27773f66b0b19fdc2998392565e|Aug 21, 2024
 Ports|[srb2](http://github.com/STJr/SRB2)|dd54f749f2371804ca08a574801cd88a951a0e1e|Feb 19, 2024
 Ports|[srb2kart](http://github.com/STJr/Kart-Public)|44b4a6852858eebba5f9f50da2ac9f4b2889ad1a|Mar 31, 2024
-Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|fdc880671fd0b7225a332717fdaafc835f285878|Dec 27, 2024
+Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|6adea8e1466b3409475cb9c500795833d8b65972|Dec 27, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|2fac72bd05af89640f14d7be7c1f4b2e3388b0e1|Dec 24, 2024
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|f72bac75d0d2840fece788dfa8c7791bff3b8992|Sept 30, 2024
-Ports|[supertux2](https://github.com/SuperTux/supertux.git)|42e336cf6fab26dd551be44a6b31036d31bf7fac|Dec 27, 2024
+Ports|[supertux2](https://github.com/SuperTux/supertux.git)|0149034916b2aff85be99c961c9b0e60935ababe|Dec 27, 2024
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|d327bfa6140af179a9409e0ba42f392e03da530b|Mar 03, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|bfaa251cda9549392f69b1b9ba74f5f191845110|Dec 17, 2024
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
