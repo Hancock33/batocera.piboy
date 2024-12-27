@@ -22,6 +22,8 @@ Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|5e77d3e91efde9704a9716f5d18
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|4fc6bbe8c2d225f273513b52b838b60dfda4df46|Dec 27, 2024
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|c1cb225a722bf0a3f963b391dd0065846a936443|Dec 27, 2024
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|5ce76c3c174b191664cb1374f46aa446bf14b05f|Dec 27, 2024
+Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241227|Dec 27, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241227|Dec 27, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|3d4deeda107a578936a748ad68933a6f285fe8b4|Dec 27, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|6e8a220fd9b22c7f6eef6965c7db114750d7afb1|Dec 27, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|88949a9ee62a130f6d49145e96457bd7fb17811c|Dec 27, 2024
@@ -59,8 +61,6 @@ Emulators|[applewin](https://github.com/audetto/AppleWin)|e0bb9f14c1ba8b6961a1b8
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|1e39767f2b5f3a65ef174b822637727c82176d76|Dec 24, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|2fac72bd05af89640f14d7be7c1f4b2e3388b0e1|Dec 24, 2024
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|8d20a23e38883f45c78f48c8574ac93945b4cb03|Dec 24, 2024
-Emulators|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241224|Dec 24, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241224|Dec 24, 2024
 Ports|[quake3](http://github.com/ioquake/ioq3)|3fb9006e6461b877b67781cd0f0d94032804a475|Dec 24, 2024
 Emulators|[citra](https://github.com/Borked3DS/Borked3DS.git)|aab6614e9b574de160a874816050118547837712|Dec 23, 2024
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0273|Dec 23, 2024
