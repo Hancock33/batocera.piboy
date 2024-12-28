@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-11-30 22:12+0000\n"
+"PO-Revision-Date: 2024-12-27 19:03+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -6968,7 +6968,7 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Enable the cheat list (if available)."
-msgstr ""
+msgstr "Cheat-Liste aktivieren (falls verfügbar)."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -8495,7 +8495,7 @@ msgstr "GBC - Dunkelgrün"
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GBC - Game Specific"
-msgstr ""
+msgstr "GBC - Spielspezifisch"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
@@ -9321,7 +9321,7 @@ msgstr "IMAGE LESEGERÄT"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid "IMAGE SCALING"
-msgstr ""
+msgstr "BILDSKALIERUNG"
 
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
@@ -11471,7 +11471,7 @@ msgstr "Nearest-Neighbor"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid "Nearest-neighbor"
-msgstr ""
+msgstr "Nearest-neighbor"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -15564,6 +15564,8 @@ msgid ""
 "Switches between smooth (Bilinear) and sharp (Nearest Neighbor) image "
 "scaling."
 msgstr ""
+"Wechselt zwischen gleichmäßiger (bilinear) und scharfer (nearest-neighbor) "
+"Bildskalierung."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"

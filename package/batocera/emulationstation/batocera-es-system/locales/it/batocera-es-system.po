@@ -15465,8 +15465,8 @@ msgid ""
 "Switches between smooth (Bilinear) and sharp (Nearest Neighbor) image "
 "scaling."
 msgstr ""
-"Cambia tra ridimensionamento immagine smooth (Bilinear) e sharp"
-"(Nearest Neighbor)."
+"Cambia tra ridimensionamento immagine smooth (Bilinear) e sharp(Nearest "
+"Neighbor)."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
