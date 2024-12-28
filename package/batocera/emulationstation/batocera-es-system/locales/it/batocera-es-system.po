@@ -6937,7 +6937,7 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Enable the cheat list (if available)."
-msgstr ""
+msgstr "Abilita lista cheat (se disponibile)."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -8446,7 +8446,7 @@ msgstr "GBC - Verde Scuro"
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GBC - Game Specific"
-msgstr ""
+msgstr "GBC - Gioco Specifico"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
@@ -9263,7 +9263,7 @@ msgstr "LETTORE IMMAGINI"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid "IMAGE SCALING"
-msgstr ""
+msgstr "DIMENSIONAMENTO IMMAGINE"
 
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
@@ -11399,7 +11399,7 @@ msgstr "Nearest-Neighbor"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid "Nearest-neighbor"
-msgstr ""
+msgstr "Nearest-neighbor"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -15465,6 +15465,8 @@ msgid ""
 "Switches between smooth (Bilinear) and sharp (Nearest Neighbor) image "
 "scaling."
 msgstr ""
+"Cambia tra ridimensionamento immagine smooth (Bilinear) e sharp"
+"(Nearest Neighbor)."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
