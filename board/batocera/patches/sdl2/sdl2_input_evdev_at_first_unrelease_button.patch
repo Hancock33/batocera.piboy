@@ -157,7 +157,7 @@ index 173650e31..97efa888a 100644
  };
  
 diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
-index 800c441aa..8032fc887 100644
+index cf8ecfb07..f396731cb 100644
 --- a/src/joystick/linux/SDL_sysjoystick.c
 +++ b/src/joystick/linux/SDL_sysjoystick.c
 @@ -1971,7 +1971,7 @@ static void HandleInputEvents(SDL_Joystick *joystick)

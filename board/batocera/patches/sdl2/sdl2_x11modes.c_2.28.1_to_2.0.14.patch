@@ -1,5 +1,5 @@
 diff --git a/src/video/x11/SDL_x11modes.c b/src/video/x11/SDL_x11modes.c
-index 1b681760d..009154d74 100644
+index 80c08d3fe..01d7e0f94 100644
 --- a/src/video/x11/SDL_x11modes.c
 +++ b/src/video/x11/SDL_x11modes.c
 @@ -195,7 +195,7 @@ static SDL_bool CheckXRandR(Display *display, int *major, int *minor)
