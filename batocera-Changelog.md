@@ -13,9 +13,14 @@
 ### Changed / Improved
 - Significantly improve ES shutdown time, especially with large and medium collections
 ### Updated
+- Cemu to 2.5
+- Ruffle to Nightly-2024-12-28
 ### System
+- Buildroot to 2024.11.x with supporting package updates
 - Mesa3D to 24.3.2
 - Linux Kernel to 6.12.6
+- GStreamer codecs to 1.24.10
+- SDL2 to 2.30.9
 
 # 2024/12/xx - batocera.linux 41 - Golden-rayed Blue
 ### Special Notes
