@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-7ZIP_VERSION = 2408
+7ZIP_VERSION = 2409
 7ZIP_SOURCE = 7z$(7ZIP_VERSION)-src.tar.xz
 7ZIP_SITE = https://www.7-zip.org/a
 7ZIP_LICENSE = LGPL-2.1+ with unRAR restriction
