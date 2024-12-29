@@ -566,6 +566,7 @@ menu "Looks"
 endmenu
 
 menu "Utils"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/7zip/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/batocera-battery-checker/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/batocera-ethtool/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/batocera-led-handheld/Config.in"
