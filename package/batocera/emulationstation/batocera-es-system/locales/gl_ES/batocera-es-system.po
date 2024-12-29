@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-10-07 14:02+0200\n"
+"PO-Revision-Date: 2024-12-24 11:38+0100\n"
 "Last-Translator: \n"
 "Language-Team: Galician\n"
 "Language: gl_ES\n"
@@ -2935,7 +2935,7 @@ msgstr "Analóxico abaixo"
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Left"
-msgstr ""
+msgstr "Analóxico Esquerdo"
 
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
@@ -3654,8 +3654,8 @@ msgid ""
 "Basic Filtering type for the jaguar display when rendering to the native "
 "display."
 msgstr ""
-"Tipo de filtraxe básica para a pantalla de Jaguar ao renderizar na "
-"resolución nativa "
+"Tipo de filtrado básico para a pantalla de Jaguar ao renderizar na "
+"resolución nativa."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -4824,7 +4824,7 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Change Camera Angle"
-msgstr ""
+msgstr "Trocar o ángulo da cámara"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -6424,7 +6424,7 @@ msgctxt "game_options"
 msgid "ENABLE BOOT ANIMATION"
 msgstr "ACTIVAR A ANIMACIÓN DE ARRANQUE"
 
-#. TRANSLATION: dolphin, melonds
+#. TRANSLATION: dolphin, duckstation, melonds
 msgctxt "game_options"
 msgid "ENABLE CHEATS"
 msgstr "ACTIVAR TRUCOS"
@@ -6702,7 +6702,7 @@ msgstr ""
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Emutos language && region setting."
-msgstr "axuste de lingua e rexión de Emutos."
+msgstr "Axuste de lingua e rexión de Emutos."
 
 #. TRANSLATION: mupen64plus, ppsspp
 msgctxt "game_options"
@@ -6775,7 +6775,7 @@ msgstr ""
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Enable X-Input mode for Xbox type controllers."
-msgstr ""
+msgstr "Activar o modo X-Input para mandos de tipo Xbox."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -6956,6 +6956,11 @@ msgid ""
 msgstr ""
 "Activa o Dreamcast DSP para obter un audio máis preciso. Só recomendado para "
 "sistemas rápidos."
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Enable the cheat list (if available)."
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -7875,7 +7880,7 @@ msgstr "Finés"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Finnish (fi)"
-msgstr "finés (fi)"
+msgstr "Finés (fi)"
 
 #. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys, rott.keys
 msgctxt "keys_files"
@@ -8147,7 +8152,7 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Forward Nudge"
-msgstr ""
+msgstr "Empurrón cara adiante"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -8463,6 +8468,11 @@ msgstr "GBC - Marrón Escuro"
 msgctxt "game_options"
 msgid "GBC - Dark Green"
 msgstr "GBC - Verde escuro"
+
+#. TRANSLATION: libretro/gambatte
+msgctxt "game_options"
+msgid "GBC - Game Specific"
+msgstr ""
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
@@ -8844,7 +8854,7 @@ msgstr "Grego"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Greek (gk)"
-msgstr "grego (gk)"
+msgstr "Grego (gk)"
 
 #. TRANSLATION: flycast, flycast, flycast, flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -10163,22 +10173,22 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Flipper"
-msgstr ""
+msgstr "Pa esquerda"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Manga Save"
-msgstr ""
+msgstr "Salvado de Manga Esquerdo"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Nudge"
-msgstr ""
+msgstr "Empurrón esquerdo"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left flipper"
-msgstr "Flipper esquerdo"
+msgstr "Pa (flipper) esquerdo"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -10188,7 +10198,7 @@ msgstr "Magnasave esquerdo"
 #. TRANSLATION: solarus
 msgctxt "game_options"
 msgid "Left stick"
-msgstr "Pau esquerdo"
+msgstr "Stick esquerdo"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
@@ -10853,7 +10863,7 @@ msgstr "Pode producir unha imaxe máis nítida nalgúns xogos en 2D."
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Mech Tilt"
-msgstr ""
+msgstr "Inclinación Mecánica"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -11908,6 +11918,8 @@ msgid ""
 "Only some games support rumble. Requires X-Input mode and may not be "
 "compatible with all controllers."
 msgstr ""
+"Só algúns xogos admiten vibración. Requírese o modo X-Input e pode que non "
+"sexa compatible con todos os mandos."
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -12612,7 +12624,7 @@ msgstr "Configuración do campo de xogo"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Plunger"
-msgstr ""
+msgstr "Lanzabolas"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -12871,12 +12883,12 @@ msgctxt "keys_files"
 msgid "Quick Kick"
 msgstr ""
 
-#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Load"
 msgstr "Carga rápida"
 
-#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Gardado rápido"
@@ -13416,27 +13428,27 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Flipper"
-msgstr ""
+msgstr "Pa (flipper) dereito"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Manga Save"
-msgstr ""
+msgstr "Salvado de Manga Dereito"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Nudge"
-msgstr ""
+msgstr "Empurrón Dereito"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "Right Stick"
-msgstr "Pau dereito do mando"
+msgstr "Stick dereito"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Right flipper"
-msgstr "Flipper dereito"
+msgstr "Pa (flipper) dereita"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -13446,7 +13458,7 @@ msgstr "Magnasave dereito"
 #. TRANSLATION: solarus
 msgctxt "game_options"
 msgid "Right stick"
-msgstr "Pau dereito"
+msgstr "Stick dereito"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
@@ -14188,7 +14200,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Inclinación da pantalla (grao)"
 
-#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.dhewm3.keys, doom3.keys, dreamcast.flycast.keys, ...
+#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, ...
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Captura de pantalla"
@@ -16179,7 +16191,7 @@ msgstr "Turco"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Turkish (tr)"
-msgstr "turco (tr)"
+msgstr "Turco (tr)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -16651,6 +16663,8 @@ msgctxt "game_options"
 msgid ""
 "Use L2/R2 for Brake/Accel and L1/R1 or R-stick Up/Down for Shift Up/Down."
 msgstr ""
+"Usa L2/R2 para Frear/Acelerar e L1/R1 ou o stick dereito Arriba/Abaxo para "
+"Cambiar Arriba/Abaxo."
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -17382,7 +17396,7 @@ msgstr ""
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "X-INPUT"
-msgstr ""
+msgstr "X-INPUT"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -18062,7 +18076,7 @@ msgstr "amarelo/azul"
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Stick"
-#~ msgstr "Pau Analóxico"
+#~ msgstr "Stick Analóxico"
 
 #~ msgctxt "game_options"
 #~ msgid "Automatically reduce frameskip if the system has spare overhead."
@@ -18687,7 +18701,7 @@ msgstr "amarelo/azul"
 
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
-#~ msgstr "Tratar o pau analóxico dereito como o segundo joystick."
+#~ msgstr "Tratar o stick analóxico dereito como o segundo joystick."
 
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"

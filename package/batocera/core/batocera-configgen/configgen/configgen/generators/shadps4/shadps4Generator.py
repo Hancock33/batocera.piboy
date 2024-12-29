@@ -42,7 +42,7 @@ class shadPS4Generator(Generator):
         discrete_index = 0
         if vulkan.is_available():
             eslog.debug("Vulkan driver is available on the system.")
-            vulkan_version = vulkan.get_verson()
+            vulkan_version = vulkan.get_version()
             if vulkan_version > "1.3":
                 eslog.debug(f"Using Vulkan version: {vulkan_version}")
                 if vulkan.has_discrete_gpu():

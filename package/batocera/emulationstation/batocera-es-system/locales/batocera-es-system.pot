@@ -3844,6 +3844,11 @@ msgstr ""
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
+msgid "GBC - Game Specific"
+msgstr ""
+
+#. TRANSLATION: libretro/gambatte
+msgctxt "game_options"
 msgid "GBC - Blue"
 msgstr ""
 
@@ -9568,7 +9573,7 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr ""
 
-#. TRANSLATION: dolphin, melonds
+#. TRANSLATION: dolphin, duckstation, melonds
 msgctxt "game_options"
 msgid "ENABLE CHEATS"
 msgstr ""
@@ -10130,6 +10135,11 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "NTSC-U/C"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Enable the cheat list (if available)."
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -16601,36 +16611,6 @@ msgctxt "game_options"
 msgid "Anisotropic filtering"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys, fallout1-ce.keys, fallout2-ce.keys, mame.mame.keys, rtcw.keys
-msgctxt "keys_files"
-msgid "Quick load"
-msgstr ""
-
-#. TRANSLATION: corsixth.keys, fallout1-ce.keys, fallout2-ce.keys, mame.mame.keys, rtcw.keys
-msgctxt "keys_files"
-msgid "Quick save"
-msgstr ""
-
-#. TRANSLATION: 3ds.citra.keys, actionmax.keys, amiga1200.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, ...
-msgctxt "keys_files"
-msgid "Exit emulator"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys
-msgctxt "keys_files"
-msgid "Emulator Config"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys
-msgctxt "keys_files"
-msgid "Take Screenshot"
-msgstr ""
-
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, fpinball.keys, jaguar.bigpemu.keys, ...
-msgctxt "keys_files"
-msgid "Exit the emulator"
-msgstr ""
-
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Up"
@@ -16709,6 +16689,36 @@ msgstr ""
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Button Start"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys, fallout1-ce.keys, fallout2-ce.keys, mame.mame.keys, rtcw.keys
+msgctxt "keys_files"
+msgid "Quick load"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys, fallout1-ce.keys, fallout2-ce.keys, mame.mame.keys, rtcw.keys
+msgctxt "keys_files"
+msgid "Quick save"
+msgstr ""
+
+#. TRANSLATION: 3ds.citra.keys, actionmax.keys, amiga1200.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, ...
+msgctxt "keys_files"
+msgid "Exit emulator"
+msgstr ""
+
+#. TRANSLATION: switch.ryujinx.keys
+msgctxt "keys_files"
+msgid "Emulator Config"
+msgstr ""
+
+#. TRANSLATION: switch.ryujinx.keys
+msgctxt "keys_files"
+msgid "Take Screenshot"
+msgstr ""
+
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, fpinball.keys, jaguar.bigpemu.keys, ...
+msgctxt "keys_files"
+msgid "Exit the emulator"
 msgstr ""
 
 #. TRANSLATION: daphne.hypseus-singe.keys, singe.hypseus-singe.keys
@@ -16821,21 +16831,6 @@ msgctxt "keys_files"
 msgid "Exit Dolphin"
 msgstr ""
 
-#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.dhewm3.keys, doom3.keys, dreamcast.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr ""
-
-#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Save"
-msgstr ""
-
-#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Load"
-msgstr ""
-
 #. TRANSLATION: dos.dosbox-x.keys
 msgctxt "keys_files"
 msgid "Exit Dosbox-X"
@@ -16859,6 +16854,11 @@ msgstr ""
 #. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
 msgctxt "keys_files"
 msgid "Load State"
+msgstr ""
+
+#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, ...
+msgctxt "keys_files"
+msgid "Screenshot"
 msgstr ""
 
 #. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, dreamcast.redream.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, ...
@@ -17414,6 +17414,16 @@ msgstr ""
 #. TRANSLATION: fallout1-ce.keys, fallout2-ce.keys
 msgctxt "keys_files"
 msgid "Bring up menu"
+msgstr ""
+
+#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
+msgctxt "keys_files"
+msgid "Quick Save"
+msgstr ""
+
+#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
+msgctxt "keys_files"
+msgid "Quick Load"
 msgstr ""
 
 #. TRANSLATION: sonicnexus.keys

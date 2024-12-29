@@ -2,7 +2,9 @@
 ### Special Notes
 ### Hardware
 - Add OrangePi 4a board support
+- Add OrangePi 3b board support
 ### Added
+- Wireguard VPN for RK3326 boards
 - Image scaling option for Drastic
 ### Fixed
 - Fix some problems in ES and Batocera with IPv6 networks
@@ -11,8 +13,17 @@
 ### Changed / Improved
 - Significantly improve ES shutdown time, especially with large and medium collections
 ### Updated
+- Cemu to 2.5
+- Ruffle to Nightly-2024-12-28
+- RPCS3 to 0.0.34-17265
+- PCSX2 to 2.3.82
+- Play! to 28th December build
 ### System
+- Buildroot to 2024.11.x with supporting package updates
 - Mesa3D to 24.3.2
+- Linux Kernel to 6.12.6
+- GStreamer codecs to 1.24.10
+- SDL2 to 2.30.9
 
 # 2024/12/xx - batocera.linux 41 - Golden-rayed Blue
 ### Special Notes

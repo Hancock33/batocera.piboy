@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 61b86747e2..e4fc022cac 100644
+index 16520467e..27db475e2 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -103,8 +103,12 @@ if(GIT_FOUND AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/.git")
+@@ -110,8 +110,12 @@ if(GIT_FOUND AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/.git")
  		OUTPUT_STRIP_TRAILING_WHITESPACE
  	)
  else()

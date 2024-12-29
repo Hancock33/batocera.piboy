@@ -1,0 +1,12 @@
+config BR2_PACKAGE_LIBRETRO_HOLANI
+	bool "libretro-holani"
+	depends on BR2_PACKAGE_RETROARCH
+	depends on BR2_INSTALL_LIBSTDCPP
+
+	help
+	  A cycle-stepped Atari Lynx emulator
+
+	  https://github.com/LLeny/holani-retro
+
+comment "LIBRETRO_HOLANI needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

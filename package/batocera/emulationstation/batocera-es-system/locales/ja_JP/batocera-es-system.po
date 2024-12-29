@@ -6372,7 +6372,7 @@ msgctxt "game_options"
 msgid "ENABLE BOOT ANIMATION"
 msgstr "ブートアニメを有効"
 
-#. TRANSLATION: dolphin, melonds
+#. TRANSLATION: dolphin, duckstation, melonds
 msgctxt "game_options"
 msgid "ENABLE CHEATS"
 msgstr "チートを有効"
@@ -6899,6 +6899,11 @@ msgid ""
 msgstr ""
 "ドリームキャスト D.S.P.を有効にします(より正確な音声出力)高速システムにのみ推"
 "奨"
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Enable the cheat list (if available)."
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -8390,6 +8395,11 @@ msgstr "GBC - Dark Brown"
 msgctxt "game_options"
 msgid "GBC - Dark Green"
 msgstr "GBC - Dark Green"
+
+#. TRANSLATION: libretro/gambatte
+msgctxt "game_options"
+msgid "GBC - Game Specific"
+msgstr ""
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
@@ -12763,12 +12773,12 @@ msgctxt "keys_files"
 msgid "Quick Kick"
 msgstr ""
 
-#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Load"
 msgstr "クイック ロード"
 
-#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "クイック セーブ"
@@ -14073,7 +14083,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "画面の傾き（度）"
 
-#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.dhewm3.keys, doom3.keys, dreamcast.flycast.keys, ...
+#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, ...
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "スクリーンショット"

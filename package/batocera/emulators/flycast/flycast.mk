@@ -3,23 +3,23 @@
 # flycast
 #
 ################################################################################
-# Version: Commits on Dec 21, 2024
-FLYCAST_VERSION = 9bfd48cf401ae8ba786d19d7b3b5efcf2ac334dd
+# Version: Commits on Dec 29, 2024
+FLYCAST_VERSION = a06791780d7075c15beab97035d1111c8849a879
 FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 FLYCAST_SITE_METHOD=git
 FLYCAST_GIT_SUBMODULES=YES
 FLYCAST_LICENSE = GPLv2
-FLYCAST_DEPENDENCIES = sdl2 libpng libzip libcurl libao libminiupnpc
+FLYCAST_DEPENDENCIES = libao libcurl libminiupnpc libpng libzip sdl2
 FLYCAST_SUPPORTS_IN_SOURCE_BUILD = NO
 
 FLYCAST_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 FLYCAST_CONF_OPTS += -DGIT_VERSION="$(shell echo $(FLYCAST_VERSION) | cut -c 1-7)"
 FLYCAST_CONF_OPTS += -DLIBRETRO=OFF
-FLYCAST_CONF_OPTS += -DUSE_HOST_GLSLANG=OFF
+FLYCAST_CONF_OPTS += -DUSE_BREAKPAD=OFF
+FLYCAST_CONF_OPTS += -DUSE_DX11=OFF
+FLYCAST_CONF_OPTS += -DUSE_DX9=OFF
 FLYCAST_CONF_OPTS += -DUSE_HOST_SDL=ON
 FLYCAST_CONF_OPTS += -DWITH_SYSTEM_ZLIB=ON
-FLYCAST_CONF_OPTS += -DUSE_DX9=OFF
-FLYCAST_CONF_OPTS += -DUSE_DX11=OFF
 
 # Get version details
 FLYCAST_GIT_TAG = $(shell $(GIT) -C $(FLYCAST_DL_DIR)/git describe --tags --always | tr -d '\n')

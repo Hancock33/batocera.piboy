@@ -1093,7 +1093,7 @@ index 6bb4ec0c162a..63ee2eb3ab41 100644
  M:	Petr Mladek <pmladek@suse.com>
  R:	Steven Rostedt <rostedt@goodmis.org>
 diff --git a/Makefile b/Makefile
-index 916f0a759bdd..73765cc49a8d 100644
+index 769766cba249..9adda0bf2bb9 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -802,11 +802,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -5663,7 +5663,7 @@ index 9b1e0ede05a4..03933b2c5ebc 100644
  	struct debugfs_blob_wrapper     debugfs_vbios_blob;
  	struct debugfs_blob_wrapper     debugfs_discovery_blob;
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
-index 51904906545e..d5d3391cc788 100644
+index 51904906545e..2ba12047a95f 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
 @@ -145,6 +145,8 @@ const char *amdgpu_asic_name[] = {
@@ -5675,7 +5675,15 @@ index 51904906545e..d5d3391cc788 100644
  
  /**
   * DOC: pcie_replay_count
-@@ -4507,6 +4509,11 @@ int amdgpu_device_init(struct amdgpu_device *adev,
+@@ -3723,6 +3725,7 @@ static int amdgpu_device_ip_resume_phase3(struct amdgpu_device *adev)
+ 			r = adev->ip_blocks[i].version->funcs->resume(adev);
+ 			if (r)
+ 				return r;
++			adev->ip_blocks[i].status.hw = true;
+ 		}
+ 	}
+ 
+@@ -4507,6 +4510,11 @@ int amdgpu_device_init(struct amdgpu_device *adev,
  
  	amdgpu_device_check_iommu_direct_map(adev);
  
@@ -5687,7 +5695,7 @@ index 51904906545e..d5d3391cc788 100644
  	return 0;
  
  release_ras_con:
-@@ -4571,6 +4578,8 @@ void amdgpu_device_fini_hw(struct amdgpu_device *adev)
+@@ -4571,6 +4579,8 @@ void amdgpu_device_fini_hw(struct amdgpu_device *adev)
  		drain_workqueue(adev->mman.bdev.wq);
  	adev->shutdown = true;
  
@@ -5696,7 +5704,7 @@ index 51904906545e..d5d3391cc788 100644
  	/* make sure IB test finished before entering exclusive mode
  	 * to avoid preemption on IB test
  	 */
-@@ -4688,8 +4697,8 @@ static int amdgpu_device_evict_resources(struct amdgpu_device *adev)
+@@ -4688,8 +4698,8 @@ static int amdgpu_device_evict_resources(struct amdgpu_device *adev)
  {
  	int ret;
  
@@ -5707,7 +5715,7 @@ index 51904906545e..d5d3391cc788 100644
  		return 0;
  
  	ret = amdgpu_ttm_evict_resources(adev, TTM_PL_VRAM);
-@@ -4701,6 +4710,41 @@ static int amdgpu_device_evict_resources(struct amdgpu_device *adev)
+@@ -4701,6 +4711,41 @@ static int amdgpu_device_evict_resources(struct amdgpu_device *adev)
  /*
   * Suspend & resume.
   */
@@ -5749,7 +5757,7 @@ index 51904906545e..d5d3391cc788 100644
  /**
   * amdgpu_device_prepare - prepare for device suspend
   *
-@@ -4740,7 +4784,7 @@ int amdgpu_device_prepare(struct drm_device *dev)
+@@ -4740,7 +4785,7 @@ int amdgpu_device_prepare(struct drm_device *dev)
  	return 0;
  
  unprepare:
@@ -24050,7 +24058,7 @@ index 7183e5aca282..56573371a2f8 100644
  {
  	return &init_user_ns;
 diff --git a/include/linux/wait.h b/include/linux/wait.h
-index 8aa3372f21a0..924778a426ce 100644
+index 2b322a9b88a2..6f977c21fd81 100644
 --- a/include/linux/wait.h
 +++ b/include/linux/wait.h
 @@ -163,6 +163,7 @@ static inline bool wq_has_sleeper(struct wait_queue_head *wq_head)
@@ -24061,7 +24069,7 @@ index 8aa3372f21a0..924778a426ce 100644
  extern void add_wait_queue_priority(struct wait_queue_head *wq_head, struct wait_queue_entry *wq_entry);
  extern void remove_wait_queue(struct wait_queue_head *wq_head, struct wait_queue_entry *wq_entry);
  
-@@ -1191,6 +1192,7 @@ do {										\
+@@ -1192,6 +1193,7 @@ do {										\
   */
  void prepare_to_wait(struct wait_queue_head *wq_head, struct wait_queue_entry *wq_entry, int state);
  bool prepare_to_wait_exclusive(struct wait_queue_head *wq_head, struct wait_queue_entry *wq_entry, int state);
@@ -26294,7 +26302,7 @@ index 2bbb6eca5144..125cdf85741c 100644
  
  	return state;
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index 782ce70ebd1b..b793e9db30ad 100644
+index 1ca96c99872f..d06d306b7fba 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -73,10 +73,19 @@ unsigned int sysctl_sched_tunable_scaling = SCHED_TUNABLESCALING_LOG;
@@ -26331,10 +26339,10 @@ index 782ce70ebd1b..b793e9db30ad 100644
  #ifdef CONFIG_NUMA_BALANCING
  /* Restrict the NUMA promotion throughput (MB/s) for each target node. */
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index c03b3d7b320e..c5d6012794de 100644
+index f2ef520513c4..d6e2ca8c8cd2 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
-@@ -2816,7 +2816,7 @@ extern void deactivate_task(struct rq *rq, struct task_struct *p, int flags);
+@@ -2825,7 +2825,7 @@ extern void deactivate_task(struct rq *rq, struct task_struct *p, int flags);
  
  extern void wakeup_preempt(struct rq *rq, struct task_struct *p, int flags);
  
@@ -43913,7 +43921,7 @@ index a2b16b08cbbf..48d611e58ad3 100644
  static int __read_mostly sysctl_compact_memory;
  
 diff --git a/mm/huge_memory.c b/mm/huge_memory.c
-index 5734d5d5060f..af595df5b65f 100644
+index 7e0f72cd9fd4..4410a8b06db3 100644
 --- a/mm/huge_memory.c
 +++ b/mm/huge_memory.c
 @@ -65,7 +65,11 @@ unsigned long transparent_hugepage_flags __read_mostly =
@@ -43969,7 +43977,7 @@ index fcd4c1439cb9..e2f7d709e819 100644
  EXPORT_SYMBOL_GPL(dirty_writeback_interval);
  
 diff --git a/mm/page_alloc.c b/mm/page_alloc.c
-index b6958333054d..5f730fa84e6c 100644
+index de65e8b4f75f..ee05f9932c3b 100644
 --- a/mm/page_alloc.c
 +++ b/mm/page_alloc.c
 @@ -271,7 +271,11 @@ const char * const migratetype_names[MIGRATE_TYPES] = {

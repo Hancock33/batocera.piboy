@@ -6402,7 +6402,7 @@ msgctxt "game_options"
 msgid "ENABLE BOOT ANIMATION"
 msgstr "ABILITA ANIMAZIONE DI AVVIO"
 
-#. TRANSLATION: dolphin, melonds
+#. TRANSLATION: dolphin, duckstation, melonds
 msgctxt "game_options"
 msgid "ENABLE CHEATS"
 msgstr "ABILITA CHEATS"
@@ -6933,6 +6933,11 @@ msgid ""
 msgstr ""
 "Abilita il DSP Dreamcast per un audio accurato. Raccomandato solo per "
 "sistemi veloci."
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Enable the cheat list (if available)."
+msgstr "Abilita lista cheat (se disponibile)."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -8440,6 +8445,11 @@ msgstr "GBC - Verde Scuro"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
+msgid "GBC - Game Specific"
+msgstr "GBC - Gioco Specifico"
+
+#. TRANSLATION: libretro/gambatte
+msgctxt "game_options"
 msgid "GBC - Grayscale"
 msgstr "GBC - Scala di grigi"
 
@@ -9253,7 +9263,7 @@ msgstr "LETTORE IMMAGINI"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid "IMAGE SCALING"
-msgstr ""
+msgstr "DIMENSIONAMENTO IMMAGINE"
 
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
@@ -11389,7 +11399,7 @@ msgstr "Nearest-Neighbor"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid "Nearest-neighbor"
-msgstr ""
+msgstr "Nearest-neighbor"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -12842,12 +12852,12 @@ msgctxt "keys_files"
 msgid "Quick Kick"
 msgstr ""
 
-#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Load"
 msgstr "Caricamento Rapido"
 
-#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Salvataggio Rapido"
@@ -14159,7 +14169,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Inclinazione schermo (gradi)"
 
-#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.dhewm3.keys, doom3.keys, dreamcast.flycast.keys, ...
+#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, ...
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Screenshot"
@@ -15455,6 +15465,8 @@ msgid ""
 "Switches between smooth (Bilinear) and sharp (Nearest Neighbor) image "
 "scaling."
 msgstr ""
+"Cambia tra ridimensionamento immagine smooth (Bilinear) e sharp(Nearest "
+"Neighbor)."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
