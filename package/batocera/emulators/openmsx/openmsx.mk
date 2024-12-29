@@ -70,7 +70,7 @@ define OPENMSX_INSTALL_TARGET_CMDS
 endef
 
 define OPENMSX_POST_INSTALL_CLEANUP
-	mv -f $(STAGING_DIR)/usr/lib/tclConfig.sh.bak $(STAGING_DIR)/usr/lib/tclConfig.sh
+	if test -d $(STAGING_DIR)/usr/lib/tclConfig.sh.bak; then mv -f $(STAGING_DIR)/usr/lib/tclConfig.sh.bak $(STAGING_DIR)/usr/lib/tclConfig.sh; fi
 endef
 
 OPENMSX_PRE_CONFIGURE_HOOKS += OPENMSX_TCL_CONFIG_FIXUP
