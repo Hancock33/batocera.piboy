@@ -1,16 +1,16 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 928667710..00f99a9d4 100644
+index 8dd949e61..16520467e 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -70,6 +70,7 @@ option(ENABLE_GDB_SERVER "Build with GDB debugging support" OFF)
- option(ENABLE_DC_PROFILER "Build with support for target machine (SH4) profiler" OFF)
+@@ -77,6 +77,7 @@ option(ENABLE_DC_PROFILER "Build with support for target machine (SH4) profiler"
  option(ENABLE_FC_PROFILER "Build with support for host app (Flycast) profiler" OFF)
  option(USE_DISCORD "Use Discord Presence API" OFF)
+ option(USE_LIBCDIO "Use libcdio for CDROM access" OFF)
 +option(USE_MALI "Use mali" OFF)
  
  if(IOS AND NOT LIBRETRO)
  	set(USE_VULKAN OFF CACHE BOOL "Force vulkan off" FORCE)
-@@ -204,6 +205,10 @@ else()
+@@ -219,6 +220,10 @@ else()
  	add_executable(${PROJECT_NAME} core/emulator.cpp)
  endif()
  
