@@ -12807,12 +12807,12 @@ msgctxt "keys_files"
 msgid "Quick Kick"
 msgstr ""
 
-#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Load"
 msgstr "Rask lasting"
 
-#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Hurtiglagring"
@@ -14122,7 +14122,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Skjermhelling (grader)"
 
-#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.dhewm3.keys, doom3.keys, dreamcast.flycast.keys, ...
+#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, ...
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Skjermbilde"

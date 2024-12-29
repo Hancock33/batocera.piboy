@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: batocera-emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-15 21:09+0100\n"
-"PO-Revision-Date: 2024-12-27 21:58-0300\n"
-"Last-Translator: Maioni, Killer\n"
-"Language-Team: Portuguese (Brasil)\n"
+"PO-Revision-Date: 2024-12-28 20:47-0300\n"
+"Last-Translator: Leonardo Colman <dev@leonardo.colman.com.br>\n"
+"Language-Team: LeoColman\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3686,7 +3686,7 @@ msgstr "Belgica"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Belize"
-msgstr ""
+msgstr "Belize"
 
 #. TRANSLATION: thextech
 msgctxt "game_options"
@@ -7803,7 +7803,7 @@ msgstr "Famicom (FDS)"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Faroe Islands"
-msgstr ""
+msgstr "Ilhas Faroe"
 
 #. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, naomi.flycast.keys, naomi2.flycast.keys, psp.ppsspp.keys, ...
 msgctxt "keys_files"
@@ -12642,7 +12642,7 @@ msgstr "Configuracao do Campo de Jogo"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Plunger"
-msgstr ""
+msgstr "Êmbolo"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -12901,12 +12901,12 @@ msgctxt "keys_files"
 msgid "Quick Kick"
 msgstr ""
 
-#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Load"
 msgstr "Carregamento rapido"
 
-#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Salvamento rapido"
@@ -13129,7 +13129,7 @@ msgstr "GIRAR"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "ROTATE FACE BUTTONS"
-msgstr ""
+msgstr "GIRAR OS BOTÕES FRONTAIS"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -14219,7 +14219,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Inclinacao da tela (graus)"
 
-#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.dhewm3.keys, doom3.keys, dreamcast.flycast.keys, ...
+#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, ...
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Captura de tela"
@@ -16559,7 +16559,7 @@ msgstr "Ultra"
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Undocked"
-msgstr ""
+msgstr "Desacoplado"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -20066,6 +20066,10 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
 #~ msgstr "Cartuchos de PC Tandy Radio Shack Color"
+
+#~ msgctxt "game_options"
+#~ msgid "Tandy Radio Shack Color Computer cassettes"
+#~ msgstr "Cassetes do Tandy Radio Shack Color Computer"
 
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer disk images"
