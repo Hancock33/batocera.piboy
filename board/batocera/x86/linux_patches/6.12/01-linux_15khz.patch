@@ -11,7 +11,7 @@ index 784229d4504d..157932be3684 100644
  	drm_mode_config.o \
  	drm_mode_object.o \
 diff --git a/drivers/gpu/drm/drm_modes.c b/drivers/gpu/drm/drm_modes.c
-index 6ba167a33461..277b2ae9ade8 100644
+index 71573b85d924..88457c12f3b8 100644
 --- a/drivers/gpu/drm/drm_modes.c
 +++ b/drivers/gpu/drm/drm_modes.c
 @@ -48,6 +48,7 @@
@@ -22,7 +22,7 @@ index 6ba167a33461..277b2ae9ade8 100644
  
  /**
   * drm_mode_debug_printmodeline - print a mode to dmesg
-@@ -2028,7 +2029,7 @@ static int drm_mode_parse_cmdline_res_mode(const char *str, unsigned int length,
+@@ -2031,7 +2032,7 @@ static int drm_mode_parse_cmdline_res_mode(const char *str, unsigned int length,
  					   struct drm_cmdline_mode *mode)
  {
  	const char *str_start = str;
@@ -31,7 +31,7 @@ index 6ba167a33461..277b2ae9ade8 100644
  	int xres = 0, yres = 0;
  	int remaining, i;
  	char *end_ptr;
-@@ -2058,6 +2059,12 @@ static int drm_mode_parse_cmdline_res_mode(const char *str, unsigned int length,
+@@ -2061,6 +2062,12 @@ static int drm_mode_parse_cmdline_res_mode(const char *str, unsigned int length,
  		case 'R':
  			rb = true;
  			break;
@@ -44,7 +44,7 @@ index 6ba167a33461..277b2ae9ade8 100644
  		default:
  			/*
  			 * Try to pass that to our extras parsing
-@@ -2082,6 +2089,7 @@ static int drm_mode_parse_cmdline_res_mode(const char *str, unsigned int length,
+@@ -2085,6 +2092,7 @@ static int drm_mode_parse_cmdline_res_mode(const char *str, unsigned int length,
  	mode->yres = yres;
  	mode->cvt = cvt;
  	mode->rb = rb;
@@ -52,7 +52,7 @@ index 6ba167a33461..277b2ae9ade8 100644
  
  	return 0;
  }
-@@ -2545,7 +2553,11 @@ drm_mode_create_from_cmdline_mode(struct drm_device *dev,
+@@ -2548,7 +2556,11 @@ drm_mode_create_from_cmdline_mode(struct drm_device *dev,
  
  	if (strlen(cmd->name))
  		mode = drm_named_mode(dev, cmd);

@@ -3,8 +3,8 @@
 # openmsx
 #
 ################################################################################
-# Version: Commits on Dec 24, 2024
-OPENMSX_VERSION = 0b51f109651662bde00b65c9bb562eae28687a41
+# Version: Commits on Dec 29, 2024
+OPENMSX_VERSION = bc07613b6cc8b0631133334beb978205be241b47
 OPENMSX_SITE = $(call github,openMSX,openMSX,$(OPENMSX_VERSION))
 OPENMSX_LICENSE = GPLv2
 OPENMSX_DEPENDENCIES = freetype libogg libpng libtheora libvorbis sdl2 sdl2_ttf tcl zlib
@@ -70,7 +70,7 @@ define OPENMSX_INSTALL_TARGET_CMDS
 endef
 
 define OPENMSX_POST_INSTALL_CLEANUP
-	mv -f $(STAGING_DIR)/usr/lib/tclConfig.sh.bak $(STAGING_DIR)/usr/lib/tclConfig.sh
+	if test -d $(STAGING_DIR)/usr/lib/tclConfig.sh.bak; then mv -f $(STAGING_DIR)/usr/lib/tclConfig.sh.bak $(STAGING_DIR)/usr/lib/tclConfig.sh; fi
 endef
 
 OPENMSX_PRE_CONFIGURE_HOOKS += OPENMSX_TCL_CONFIG_FIXUP

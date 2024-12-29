@@ -97,7 +97,7 @@ index 97efa888a..cd66bbfbc 100644
  
  /* vi: set ts=4 sw=4 expandtab: */
 diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
-index 8032fc887..18fa0e627 100644
+index f396731cb..93d4af418 100644
 --- a/src/joystick/linux/SDL_sysjoystick.c
 +++ b/src/joystick/linux/SDL_sysjoystick.c
 @@ -1267,6 +1267,16 @@ static void ConfigJoystick(SDL_Joystick *joystick, int fd, int fd_sensor)

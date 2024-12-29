@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-11-30 22:12+0000\n"
+"PO-Revision-Date: 2024-12-27 19:03+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -6418,7 +6418,7 @@ msgctxt "game_options"
 msgid "ENABLE BOOT ANIMATION"
 msgstr "AKTIVIERE BOOT-ANIMATION"
 
-#. TRANSLATION: dolphin, melonds
+#. TRANSLATION: dolphin, duckstation, melonds
 msgctxt "game_options"
 msgid "ENABLE CHEATS"
 msgstr "CHEATS AKTIVIEREN"
@@ -6964,6 +6964,11 @@ msgid ""
 msgstr ""
 "Dreamcast DSP für höhere Audiogenauigkeit aktivieren. Nur für "
 "leistungsstarke Systeme."
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Enable the cheat list (if available)."
+msgstr "Cheat-Liste aktivieren (falls verfügbar)."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -8489,6 +8494,11 @@ msgstr "GBC - Dunkelgrün"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
+msgid "GBC - Game Specific"
+msgstr "GBC - Spielspezifisch"
+
+#. TRANSLATION: libretro/gambatte
+msgctxt "game_options"
 msgid "GBC - Grayscale"
 msgstr "GBC - Graustufen"
 
@@ -9311,7 +9321,7 @@ msgstr "IMAGE LESEGERÄT"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid "IMAGE SCALING"
-msgstr ""
+msgstr "BILDSKALIERUNG"
 
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
@@ -11461,7 +11471,7 @@ msgstr "Nearest-Neighbor"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid "Nearest-neighbor"
-msgstr ""
+msgstr "Nearest-neighbor"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -12923,12 +12933,12 @@ msgctxt "keys_files"
 msgid "Quick Kick"
 msgstr ""
 
-#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Load"
 msgstr "Schnellladen"
 
-#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Schnellspeichern"
@@ -14243,7 +14253,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Bildschirmneigung (Grad)"
 
-#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.dhewm3.keys, doom3.keys, dreamcast.flycast.keys, ...
+#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, ...
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Bildschirmfoto"
@@ -15554,6 +15564,8 @@ msgid ""
 "Switches between smooth (Bilinear) and sharp (Nearest Neighbor) image "
 "scaling."
 msgstr ""
+"Wechselt zwischen gleichmäßiger (bilinear) und scharfer (nearest-neighbor) "
+"Bildskalierung."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"

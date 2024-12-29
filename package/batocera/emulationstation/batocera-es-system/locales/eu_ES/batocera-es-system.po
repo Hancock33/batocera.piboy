@@ -6374,7 +6374,7 @@ msgctxt "game_options"
 msgid "ENABLE BOOT ANIMATION"
 msgstr "GAITU ABIO ANIMAZIOA"
 
-#. TRANSLATION: dolphin, melonds
+#. TRANSLATION: dolphin, duckstation, melonds
 msgctxt "game_options"
 msgid "ENABLE CHEATS"
 msgstr "GAITU TRANPAK"
@@ -6903,6 +6903,11 @@ msgid ""
 msgstr ""
 "Gaitu Dreamcast-aren DSP-a audio zehatzagorako. Sistema azkarretarako "
 "gomendatua soilik."
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Enable the cheat list (if available)."
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -8378,6 +8383,11 @@ msgstr "GBC - Marroi iluna"
 msgctxt "game_options"
 msgid "GBC - Dark Green"
 msgstr "GBC - Berde iluna"
+
+#. TRANSLATION: libretro/gambatte
+msgctxt "game_options"
+msgid "GBC - Game Specific"
+msgstr ""
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
@@ -12762,12 +12772,12 @@ msgctxt "keys_files"
 msgid "Quick Kick"
 msgstr ""
 
-#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Load"
 msgstr "Karga Azkarra"
 
-#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Gordetze Azkarra"
@@ -14074,7 +14084,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr ""
 
-#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.dhewm3.keys, doom3.keys, dreamcast.flycast.keys, ...
+#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, ...
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Pantaila argazkia"

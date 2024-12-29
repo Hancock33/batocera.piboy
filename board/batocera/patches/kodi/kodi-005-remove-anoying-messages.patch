@@ -7,7 +7,7 @@ index e1db281f08..791bfd2df6 100644
  
    case GUI_MSG_PLAYBACK_ERROR:
 -    HELPERS::ShowOKDialogText(CVariant{16026}, CVariant{16027});
-+    // hide unsupportable message even when we don't case the cause
++    // hide unsupportable message even when we don't care the cause
 +    //HELPERS::ShowOKDialogText(CVariant{16026}, CVariant{16027});
      return true;
  

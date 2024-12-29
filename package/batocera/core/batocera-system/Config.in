@@ -216,7 +216,8 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_UTIL_LINUX_SETTERM                   # Set terminal attributes
     select BR2_PACKAGE_WINBTRFS                             # btrfs
     select BR2_PACKAGE_WIREGUARD_LINUX_COMPAT               if !BR2_TOOLCHAIN_HEADERS_AT_LEAST_5_6 && !BR2_PACKAGE_BATOCERA_TARGET_A3GEN2 && !BR2_PACKAGE_BATOCERA_TARGET_S9GEN4 # Kernel < 5.6 backwards compatibility
-    select BR2_PACKAGE_WIREGUARD_TOOLS                      # WireGuard VPN support
+    select BR2_PACKAGE_WIREGUARD_TOOLS                      if !BR2_TOOLCHAIN_HEADERS_AT_LEAST_5_6 && !BR2_PACKAGE_BATOCERA_TARGET_A3GEN2 && !BR2_PACKAGE_BATOCERA_TARGET_S9GEN4 && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3128                                                                               # WireGuard VPN support (match kernel compatibility)
     select BR2_PACKAGE_WIRELESS_REGDB                       # wireless regulatory DB
     select BR2_PACKAGE_WIRELESS_TOOLS                       # wireless tools
     select BR2_PACKAGE_WIRELESS_TOOLS_LIB                   # wireless tools
@@ -402,7 +403,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 
     # tools
     select BR2_PACKAGE_I2C_TOOLS
-    select BR2_PACKAGE_MDADM # RAID
+    select BR2_PACKAGE_MDADM                                # RAID
     select BR2_PACKAGE_MC
     select BR2_PACKAGE_OD_COMMANDER
     select BR2_PACKAGE_FDUPES
@@ -443,8 +444,11 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_TQFTPSERV                            if  BR2_PACKAGE_BATOCERA_TARGET_ODIN
 
     # leds
-	select BR2_PACKAGE_AYN_PLATFORM                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
-	select BR2_PACKAGE_AYANEO_PLATFORM                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_AYN_PLATFORM                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_AYANEO_PLATFORM                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+
+    # bluetooth
+    select BR2_PACKAGE_BRCM_PATCHRAM_PLUS                   if  BR2_PACKAGE_BATOCERA_TARGET_T527
 
     help
         Install the batocera.linux system files
@@ -505,7 +509,7 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     default "amlogic/s905/odroidc2 amlogic/s905/tvbox amlogic/s905/lepotato amlogic/s905/vim amlogic/s905/p201 amlogic/s905/lepotatov2 amlogic/s905/minix-neo-u1"                              if  BR2_PACKAGE_BATOCERA_TARGET_S905
     default "rockchip/rk3399/orangepi-800 rockchip/rk3399/rg552 rockchip/rk3399/rockpro64 rockchip/rk3399/rock960 rockchip/rk3399/orangepi4-lts rockchip/rk3399/rock-pi-4 rockchip/rk3399/nanopi-m4v2 rockchip/rk3399/hugsun-x99" if  BR2_PACKAGE_BATOCERA_TARGET_RK3399
     default "rockchip/rk3588/orangepi-5-pro rockchip/rk3588/bananapi-m7 rockchip/rk3588/gameforce-ace rockchip/rk3588/rock-5c rockchip/rk3588/rock-5b rockchip/rk3588/rock-5a rockchip/rk3588/quartzpro64 rockchip/rk3588/orangepi-5 rockchip/rk3588/orangepi-5b rockchip/rk3588/orangepi-5-plus rockchip/rk3588/indiedroid-nova rockchip/rk3588/mekotronics-r58 rockchip/rk3588/khadas-edge-2 rockchip/rk3588/firefly-station-m3"  if BR2_PACKAGE_BATOCERA_TARGET_RK3588
-    default "rockchip/rk3568/anbernic-rgxx3 rockchip/rk3568/odroid-m1s rockchip/rk3568/odroid-m1 rockchip/rk3568/rock-3a rockchip/rk3568/rock-3c rockchip/rk3568/firefly-station-m2 ockchip/rk3568/firefly-station-p2"  if  BR2_PACKAGE_BATOCERA_TARGET_RK3568
+    default "rockchip/rk3568/orangepi-3b rockchip/rk3568/anbernic-rgxx3 rockchip/rk3568/odroid-m1s rockchip/rk3568/odroid-m1 rockchip/rk3568/rock-3a rockchip/rk3568/rock-3c rockchip/rk3568/firefly-station-m2 rockchip/rk3568/firefly-station-p2" if  BR2_PACKAGE_BATOCERA_TARGET_RK3568
     default "allwinner/h3/orangepi-pc allwinner/h3/orangepi-one allwinner/h3/orangepi-plus2e allwinner/h3/bananapi-m2-zero allwinner/h3/cha"                                                   if  BR2_PACKAGE_BATOCERA_TARGET_H3
     default "allwinner/t527/orangepi-4a"                                                                                                                                                       if  BR2_PACKAGE_BATOCERA_TARGET_T527
 choice
@@ -592,7 +596,7 @@ config BR2_PACKAGE_BATOCERA_TARGET_H6
     bool "h6"
 
 config BR2_PACKAGE_BATOCERA_TARGET_T527
-	bool "t527"
+    bool "t527"
 
 # PC
 # ------------------------------------
@@ -603,7 +607,7 @@ config BR2_PACKAGE_BATOCERA_TARGET_X86_64
     bool "x86_64"
 
 config BR2_PACKAGE_BATOCERA_TARGET_ZEN3
-	bool "x86-64-v3"
+    bool "x86-64-v3"
 
 # Snapdragon & Samsung
 # -------------------------------------
@@ -637,7 +641,7 @@ config BR2_PACKAGE_BATOCERA_TOOLS
     select BR2_PACKAGE_VIM                                  # basic vi emulator
     select BR2_PACKAGE_NANO                                 # basic nano emulator
     select BR2_PACKAGE_ZIP                                  # zip tool
-    select BR2_PACKAGE_P7ZIP                                # zip tool
+    select BR2_PACKAGE_7ZIP                                 # zip tool
     select BR2_PACKAGE_SQUASHFS                             # mksquash tool
     select BR2_PACKAGE_HTOP                                 # multi-cpus usage
     select BR2_PACKAGE_NCDU                                 # Disk Usage
@@ -859,6 +863,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
     # Atari Lynx
     select BR2_PACKAGE_LIBRETRO_BEETLE_LYNX                 # ALL
     select BR2_PACKAGE_LIBRETRO_HANDY                       # ALL
+   #select BR2_PACKAGE_LIBRETRO_HOLANI                      # ALL
 
     # Wonderswan
     select BR2_PACKAGE_LIBRETRO_BEETLE_WSWAN                # ALL
@@ -1649,6 +1654,7 @@ config BR2_PACKAGE_BATOCERA_QT6
     select BR2_PACKAGE_QT6BASE_PRINTSUPPORT
     select BR2_PACKAGE_QT6BASE_SQL
     select BR2_PACKAGE_QT6BASE_TEST
+    select BR2_PACKAGE_QT6BASE_VULKAN                       if BR2_PACKAGE_BATOCERA_VULKAN
     select BR2_PACKAGE_QT6BASE_WIDGETS
     select BR2_PACKAGE_QT6BASE_XML
     select BR2_PACKAGE_QT6BASE_OPENGL                       if  BR2_PACKAGE_HAS_LIBGL
@@ -1715,7 +1721,6 @@ config BR2_PACKAGE_BATOCERA_FREEDRENO_MESA3D
     select BR2_PACKAGE_MESA3D_OPENGL_ES
     select BR2_PACKAGE_MESA3D_OPENGL_EGL
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_FREEDRENO
-	select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_FREEDRENO
     select BR2_PACKAGE_MESA3D_OPENGL_GLX                    if  BR2_PACKAGE_XORG7                                                                       # OpenGL GLX support
     select BR2_PACKAGE_MESA3D_DEMOS                         if  BR2_PACKAGE_XORG7                                                                       # glxinfo etc
     select BR2_PACKAGE_LIBGLVND                             if  BR2_PACKAGE_XORG7                                                                       # opengl vendor neutral dispatch
@@ -1761,6 +1766,14 @@ config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
     select BR2_PACKAGE_FIRMWARE_ORANGEPI                    if  BR2_PACKAGE_BATOCERA_TARGET_H3          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H5          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H6          || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_H616        || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_T527        || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3568
+
+    # orangepi firmware
+    select BR2_PACKAGE_FIRMWARE_ORANGEPI                    if  BR2_PACKAGE_BATOCERA_TARGET_H3          || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_H5          || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_H6          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H616
 
     # broadcom bluetooth firware
@@ -1787,15 +1800,15 @@ config BR2_PACKAGE_BATOCERA_SDL2
     select BR2_PACKAGE_TVTEXTVIEWER                         if !BR2_PACKAGE_BATOCERA_LIB32
 
 config BR2_PACKAGE_BATOCERA_WAYLAND
-    	bool "batocera.linux wayland packages selection"
+    bool "batocera.linux wayland packages selection"
 
-	# Wayland Protocol
-	select BR2_PACKAGE_WAYLAND
-	select BR2_PACKAGE_WAYLAND_UTILS
-	select BR2_PACKAGE_WAYLAND_PROTOCOLS
+    # Wayland Protocol
+    select BR2_PACKAGE_WAYLAND
+    select BR2_PACKAGE_WAYLAND_UTILS
+    select BR2_PACKAGE_WAYLAND_PROTOCOLS
 
 config BR2_PACKAGE_BATOCERA_WAYLAND_SWAY
-        bool "batocera.linux wayland sway packages selection"
+    bool "batocera.linux wayland sway packages selection"
 
     # Wayland Protocol
     select BR2_PACKAGE_BATOCERA_WAYLAND

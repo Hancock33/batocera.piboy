@@ -59,7 +59,7 @@ class XeniaGenerator(Generator):
         # check Vulkan first before doing anything
         if vulkan.is_available():
             eslog.debug("Vulkan driver is available on the system.")
-            vulkan_version = vulkan.get_verson()
+            vulkan_version = vulkan.get_version()
             if vulkan_version > "1.3":
                 eslog.debug("Using Vulkan version: {}".format(vulkan_version))
             else:

@@ -3,8 +3,8 @@
 # firmware-armbian
 #
 ################################################################################
-# Version: Commits on Jun 02, 2024
-FIRMWARE_ARMBIAN_VERSION = 9d27a0dae0aa55caa1ac71525d19d4e9dad53330
+# Version: Commits on Nov 07, 2024
+FIRMWARE_ARMBIAN_VERSION = 8dbb28d2ee8fa3d5f67a9d9dbc64c3d2b3b0adac
 FIRMWARE_ARMBIAN_SITE = $(call github,armbian,firmware,$(FIRMWARE_ARMBIAN_VERSION))
 
 FIRMWARE_ARMBIAN_TARGET_DIR=$(TARGET_DIR)/lib/firmware/
