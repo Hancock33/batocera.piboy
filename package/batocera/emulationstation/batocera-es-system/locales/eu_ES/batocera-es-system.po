@@ -12772,12 +12772,12 @@ msgctxt "keys_files"
 msgid "Quick Kick"
 msgstr ""
 
-#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Load"
 msgstr "Karga Azkarra"
 
-#. TRANSLATION: cgenius.cgenius.keys, doom3.dhewm3.keys, doom3.keys, theforceengine.keys
+#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Gordetze Azkarra"
@@ -14084,7 +14084,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr ""
 
-#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.dhewm3.keys, doom3.keys, dreamcast.flycast.keys, ...
+#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, ...
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Pantaila argazkia"
