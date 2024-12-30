@@ -1,14 +1,37 @@
 config BR2_PACKAGE_DOOM3
 	bool "doom3"
-	select BR2_PACKAGE_LIBCURL
-	select BR2_PACKAGE_LIBJPEG
-	select BR2_PACKAGE_LIBOGG
-	select BR2_PACKAGE_LIBVORBIS
-	select BR2_PACKAGE_OPENAL
-	select BR2_PACKAGE_SDL2
-	select BR2_PACKAGE_ZLIB
+	select BR2_PACKAGE_DHEWM3
+	select BR2_PACKAGE_BLOODMOD
+	select BR2_PACKAGE_CDOOM
+	select BR2_PACKAGE_D3LE
+	select BR2_PACKAGE_DENTONMOD
+	select BR2_PACKAGE_DESOLATED
+	select BR2_PACKAGE_ELDOOM
+	select BR2_PACKAGE_FITZ
+	select BR2_PACKAGE_GRIMM
+	select BR2_PACKAGE_HARDCORPS
+	select BR2_PACKAGE_PERFECTED
+	select BR2_PACKAGE_REALGIBS
+	select BR2_PACKAGE_RIVENSIN
+	select BR2_PACKAGE_SIKKMOD
 
 	help
 	  dhewm 3 is a Doom 3 GPL source port
 
 	  https://dhewm3.org/
+
+source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/bloodmod/Config.in"
+source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/cdoom/Config.in"
+source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/d3le/Config.in"
+source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/dentonmod/Config.in"
+source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/desolated/Config.in"
+source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/dhewm3/Config.in"
+source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/eldoom/Config.in"
+source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/fitz/Config.in"
+source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/grimm/Config.in"
+source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/hardcorps/Config.in"
+source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/perfected/Config.in"
+source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/realgibs/Config.in"
+source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/rivensin/Config.in"
+source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/sikkmod/Config.in"
+
