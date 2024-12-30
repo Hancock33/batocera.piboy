@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Dec 30, 2024
-XEMU_VERSION = 4a0a8a2b4ebae3bd2d55e4278e4728fb9431627a
+XEMU_VERSION = 5f74f908ec01a3ceb6124b647990f59bdcdfb258
 XEMU_BRANCH = feat/vulkan
 XEMU_SITE = https://github.com/xemu-project/xemu
 XEMU_SITE_METHOD=git
