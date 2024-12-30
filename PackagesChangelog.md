@@ -15,7 +15,10 @@ Ports|[nblood](http://github.com/nukeykt/NBlood)|r14185|Dec 30, 2024
 Ports|[prototype](http://github.com/ptitSeb/prototype)|522e69ec8a7c69c67e9e6dfc79ccdcbaaec2a0e0|Dec 30, 2024
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|a2c87f395636f8e2a13c61d5d93eb6bde30331a1|Dec 30, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|05f34527455b6d35baf34bccf4faa8eb71405944|Dec 30, 2024
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc3.r9|Dec 30, 2024
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241230|Dec 30, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|6be18bfee940d73c38ade829f5767abc13571a22|Dec 30, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241230|Dec 30, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|885b086a752ebc2956bd76bce2d2b4a943419df8|Dec 30, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|4570e792823de70fcada056b5bb4d5439c362d33|Dec 30, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|d6ebff81e210f6d8cd2233a4e2f0a20bb9b6abec|Dec 30, 2024
@@ -37,10 +40,8 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45438|Dec 29, 2024
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|16b2b9440002e17a843b79c06d51444ed3c058bd|Dec 29, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|a12b5368c381cf1c910e77c506345995a149e717|Dec 29, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|656141fdbf746dcae5854965663ccafabb7db6b4|Dec 29, 2024
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241229|Dec 29, 2024
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|dba65884533e5f32e94f7290af5fedd534721b89|Dec 29, 2024
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|59aa8990d41c3d6857550f3384751a65ec77e869|Dec 29, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241229|Dec 29, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|3fd55538c979aaad3fd8d5665408c26862b1b163|Dec 29, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|49c8da92c22fac18946f0cbd60e8b2070a9cdf9a|Dec 29, 2024
 Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|ad7133dd231b796ef097b7c506f4ae61c60aae82|Dec 29, 2024
@@ -106,7 +107,6 @@ Ports|[yquake2-xatrix](http://github.com/yquake2/xatrix)|d215802d1642d1a2a485089
 Ports|[yquake2-zaero](https://github.com/yquake2/zaero.git)|c3322bec3fb9760fcdc615615a8dcab6d59b6bed|Dec 21, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.29.0-rc.2|Dec 20, 2024
 Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.5.2|Dec 20, 2024
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc3|Dec 20, 2024
 Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|v1.4.304|Dec 20, 2024
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|v1.4.304|Dec 20, 2024
 Gpu|[vulkan-volk](http://github.com/zeux/volk)|0b17a763ba5643e32da1b2152f8140461b3b7345|Dec 20, 2024
