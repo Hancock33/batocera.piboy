@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index f5a7f0689e..165acb8f64 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1001,7 +1001,7 @@ if(APPLE)
+   endif()
+ endif()
+ 
+-find_package(Git)
++#find_package(Git)
+ if(NOT GIT_FOUND)
+ 	set(GIT_EXECUTABLE "")
+ endif()
