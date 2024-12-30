@@ -3,8 +3,8 @@
 # prototype
 #
 ################################################################################
-# Version: Commits on Dec 20, 2020
-PROTOTYPE_VERSION = 12d2de8639982db12091ca37eeee9036b54f3fa7
+# Version: Commits on Dec 30, 2024
+PROTOTYPE_VERSION = 522e69ec8a7c69c67e9e6dfc79ccdcbaaec2a0e0
 PROTOTYPE_SITE = $(call github,ptitSeb,prototype,$(PROTOTYPE_VERSION))
 
 PROTOTYPE_DEPENDENCIES = sdl2 sdl2_mixer
