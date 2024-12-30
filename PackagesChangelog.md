@@ -159,7 +159,7 @@ Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|139e4fc2eeea7a14
 Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-console)|a3a53cc73a2377104e3ee4ef3963a12e55521502|Dec 05, 2024
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|572c91856a5288b7433c619af651e31f00f3ce7e|Dec 04, 2024
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|a941ae520e3b2a94da3c0cb517e1a2c40a3139ac|Dec 03, 2024
-Ports|[doom3](http://github.com/dhewm/dhewm3)|ce4e6f076f3ebbfd4c71021773c90c13ecdc79df|Dec 03, 2024
+Ports|[dhewm3](http://github.com/dhewm/dhewm3)|ce4e6f076f3ebbfd4c71021773c90c13ecdc79df|Dec 03, 2024
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|d83967b2ea38eda8b43437167d93c86021bb4de1|Dec 02, 2024
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|24.12|Dec 01, 2024
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.9.0|Dec 01, 2024
@@ -199,6 +199,7 @@ Utils|[rclone](http://github.com/rclone/rclone)|v1.68.2|Nov 15, 2024
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|af28fb0385d00e0292c4703b3aa7e72762b564d2|Nov 15, 2024
 Emulators|[libretro-beetle-supergrafx](http://github.com/libretro/beetle-supergrafx-libretro)|a776133c34ae8da5daf7d9ccb43e3e292e2b07b0|Nov 15, 2024
 Audio|[wm8960-audio-hat](http://github.com/waveshareteam/WM8960-Audio-HAT)|b1e4cf2f7def5ff841c593355c9fc31c31062860|Nov 13, 2024
+Ports|[grimm](http://github.com/dhewm/dhewm3-sdk)|009b958e4adaadc081b4953fe2ac4d8eb1db6917|Nov 13, 2024
 Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.13|Nov 12, 2024
 Libraries|[python-gpiod](https://files.pythonhosted.org/packages/5a/be/9876843be7d8d3e05582de8919077b9084beac5d9791b139653e3048e4fd)|2.2.2|Nov 12, 2024
 Ports|[openjk](http://github.com/JACoders/OpenJK)|199ddc7642d0ed0e2bf007fe63d0dce3a4bb4908|Nov 12, 2024
@@ -276,6 +277,8 @@ Emulators|[libretro-watara](http://github.com/libretro/potator)|735bc376974be564
 Emulators|[libretro-xmil](http://github.com/libretro/xmil-libretro)|6a52dc21a5ff106137670bb600ab2ce3fcebeb1b|Oct 21, 2024
 Emulators|[libretro-xrick](http://github.com/libretro/xrick-libretro)|fc1f9aa00523fd722caba0f2ef085f1df0ee906d|Oct 21, 2024
 Emulators|[libretro-yabause](http://github.com/libretro/yabause)|c35712c5ed33e18d77097f2059a036e19d1d66f2|Oct 21, 2024
+Ports|[eldoom](http://github.com/dhewm/dhewm3-sdk)|50dc874961cf14d3c7ca2182d655ba46ecc7f5a1|Oct 21, 2024
+Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|ee6addacfe721e587c3b2c9a2594953cd9c774bc|Oct 20, 2024
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|51100408d69a6732e79afcc1b2f1b2173147c7e4|Oct 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|19d9ff76710dafa6dcb32c3e707b09a787798e26|Oct 19, 2024
 Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|08862a8aa4cf185606fbf54aafc0b5b8f8ee0220|Oct 19, 2024
@@ -311,6 +314,8 @@ Emulators|[libretro-supafaust](http://github.com/libretro/supafaust)|e25f6676593
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|f72bac75d0d2840fece788dfa8c7791bff3b8992|Sept 30, 2024
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a177763e14c924e3b15e2|Sept 29, 2024
 Ports|[raptorcots](http://github.com/skynettx/raptor)|6e630152ac4842281b492c77add34e866228572f|Sept 29, 2024
+Ports|[bloodmod](http://github.com/dhewm/dhewm3-sdk)|f35e2718939b68c75f2f3a07749554129e049c30|Sept 27, 2024
+Ports|[realgibs](http://github.com/dhewm/dhewm3-sdk)|85d79f0565420a4e22598feecc84d3786a5a510d|Sept 27, 2024
 Boot|[batocera-initramfs](http://www.busybox.net/downloads)|1.37.0|Sept 26, 2024
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|527564f2748901068a5fef891c5073a4d6cd089b|Sept 25, 2024
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|1a534dee02a093c7812d23632f2bfd6779d1c934|Sept 25, 2024
@@ -343,6 +348,8 @@ Libraries|[discord_rpc](http://github.com/stenzek/discord-rpc)|144f3a3f1209994d8
 Hardware|[ayn-platform](http://github.com/ShadowBlip/ayn-platform)|v0.5.2|Jul 29, 2024
 Libraries|[ffmpeg4](https://ffmpeg.org/releases)|4.4.5|Jul 29, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|bd7f9a8e3875b34f35593099f2080bbacd2fb6b6|Jul 28, 2024
+Ports|[perfected](http://github.com/dhewm/dhewm3-sdk)|20a7240238f9dcd4864e841343550b18605ac34a|Jul 28, 2024
+Ports|[sikkmod](http://github.com/dhewm/dhewm3-sdk)|03aae2f5b74a18ed5fdbfe9c345a4d50203c7518|Jul 28, 2024
 Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|37cd87e14ca09ac1b558e5b2c7db4ad256865bbb|Jul 24, 2024
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|1137ccc33da81d62b0b3c840f0a516d346ab2d41|Jul 23, 2024
 Utils|[od-commander](http://github.com/od-contrib/commander)|9aa39d7bcb5d0f6faadaf027a1539d14177a3c7c|Jul 16, 2024
@@ -385,6 +392,12 @@ Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.5|Apr 23, 2024
 Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|9fb917c357b20d95d597bed4d67904c29cd5c753|Apr 21, 2024
 Audio|[liblc3](https://github.com/google/liblc3/archive/refs/tags)|v1.1.1|Apr 19, 2024
 Emulators|[libretro-dolphin](http://github.com/libretro/dolphin)|89a4df725d4eb24537728f7d655cddb1add25c18|Apr 19, 2024
+Ports|[cdoom](http://github.com/dhewm/dhewm3-sdk)|c6d2afac06b3b0b16e2efc7e23e27c60822eefa9|Apr 19, 2024
+Ports|[d3le](http://github.com/dhewm/dhewm3-sdk)|0e6e3519b21eae4690810180210cc90b0174dc3d|Apr 19, 2024
+Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|72d2c417645d47a382b061d2a6db4a46e060145d|Apr 19, 2024
+Ports|[fitz](http://github.com/dhewm/dhewm3-sdk)|41cfd224f9c3d4ba9b3882aae8c349efa4ae7148|Apr 19, 2024
+Ports|[hardcorps](http://github.com/dhewm/dhewm3-sdk)|d8d797c2481169743a8907c67f161b059f072a26|Apr 19, 2024
+Ports|[rivensin](http://github.com/dhewm/dhewm3-sdk)|4416ef0f7ebb4f9dd0e68442404621204ab5fdde|Apr 19, 2024
 Emulators|[libframeutil](http://github.com/ppuc/libframeutil)|30048ca23d41ca0a8f7d5ab75d3f646a19a90182|Apr 13, 2024
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.6|Apr 12, 2024
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.1|Apr 12, 2024
