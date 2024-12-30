@@ -18,4 +18,3 @@ define BLOODMOD_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
-ELDOOM_BRANCH = eldoom
