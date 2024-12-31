@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241231|Dec 31, 2024
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241231|Dec 31, 2024
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|4617151f8ade809b3ef92621d75bbc2a08589741|Dec 30, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|b0aeef18b408199982009956f18aaa2a877230a0|Dec 30, 2024
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|b0aeef18b408199982009956f18aaa2a877230a0|Dec 30, 2024
@@ -22,9 +24,7 @@ Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|a2c87f395636f8e2a13c61d5d93eb6bde
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|e01d122b8e6522c9e74b783d85b70b223b298d74|Dec 30, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|05f34527455b6d35baf34bccf4faa8eb71405944|Dec 30, 2024
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc3.r9|Dec 30, 2024
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241230|Dec 30, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|b66263a03424d7b13ae45c9b9c4a7eeb13f39757|Dec 30, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241230|Dec 30, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|885b086a752ebc2956bd76bce2d2b4a943419df8|Dec 30, 2024
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|4570e792823de70fcada056b5bb4d5439c362d33|Dec 30, 2024
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|d6ebff81e210f6d8cd2233a4e2f0a20bb9b6abec|Dec 30, 2024
@@ -540,7 +540,6 @@ Utils|[raspi2png](http://github.com/AndrewFromMelbourne/raspi2png)|b3c5599c2e265
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Gpu|[nvidia340-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|340.108|Dec 23, 2019
-Toolchain|[toolchain-optional-linaro-aarch64](https://releases.linaro.org/components/toolchain/binaries/)|7.5-2019.12|Dec 05, 2019
 Emulators|[libretro-vitavoyager](http://github.com/libretro/vitaVoyager)|58b70dd7ea891c2e8ddc37d03a5d58116b0ea118|Oct 23, 2019
 Utils|[unclutter](https://github.com/batocera-linux/unclutter-xfixes/archive/refs/tags)|v1.5-batocera|Aug 13, 2019
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
