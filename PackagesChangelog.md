@@ -1,5 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|096f85036e9e3760e51f94293714cfb1eb0972ac|Dec 31, 2024
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|f25302c84790a22842b8f4406d571157d40da347|Dec 31, 2024
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|0fa88652f1fab02a1e3dbe12bd8e37d29403f680|Dec 31, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-12-31|Dec 31, 2024
@@ -208,7 +209,6 @@ Ports|[grimm](http://github.com/dhewm/dhewm3-sdk)|009b958e4adaadc081b4953fe2ac4d
 Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.13|Nov 12, 2024
 Libraries|[python-gpiod](https://files.pythonhosted.org/packages/5a/be/9876843be7d8d3e05582de8919077b9084beac5d9791b139653e3048e4fd)|2.2.2|Nov 12, 2024
 Ports|[openjk](http://github.com/JACoders/OpenJK)|199ddc7642d0ed0e2bf007fe63d0dce3a4bb4908|Nov 12, 2024
-Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|aed9c61e0a78e24644386f7329144f108b4f507c|Nov 10, 2024
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|d5be3c6086bdf94baa52b54f155092563085624c|Nov 10, 2024
 Firmwares|[firmware-armbian](http://github.com/armbian/firmware)|8dbb28d2ee8fa3d5f67a9d9dbc64c3d2b3b0adac|Nov 07, 2024
 Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)|b11c909336ca22e563659ad36564e24a0f869708|Nov 05, 2024
