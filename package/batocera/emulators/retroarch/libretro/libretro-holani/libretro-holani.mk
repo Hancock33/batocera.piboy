@@ -10,7 +10,7 @@ LIBRETRO_HOLANI_LICENSE = GPLv3
 
 define LIBRETRO_HOLANI_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	$(INSTALL) -D $(@D)/libholani.so $(TARGET_DIR)/usr/lib/libretro/holani-libretro.so
+	$(INSTALL) -D $(@D)/target/*-linux-gnu/release/libholani.so $(TARGET_DIR)/usr/lib/libretro/holani-libretro.so
 endef
 
 $(eval $(cargo-package))
