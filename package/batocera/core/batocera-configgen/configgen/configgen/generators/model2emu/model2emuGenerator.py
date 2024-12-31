@@ -39,7 +39,7 @@ class Model2EmuGenerator(Generator):
 
         #copy model2emu to /userdata for rw & emulator directory creation reasons
         if not emupath.exists():
-            shutil.copytree("/usr/model2emu", emupath)
+            shutil.copytree("/usr/bin/model2emu", emupath)
             (emupath / "EMULATOR.INI").chmod(stat.S_IRWXO)
 
         # install windows libraries required
@@ -50,11 +50,11 @@ class Model2EmuGenerator(Generator):
         wine.install_wine_trick(wineprefix, 'xact_x64')
 
         # for existing bottles we want to ensure files are updated as necessary
-        copy_updated_files(Path("/usr/model2emu/scripts"), emupath / "scripts")
+        copy_updated_files(Path("/usr/bin/model2emu/scripts"), emupath / "scripts")
 
         xinput_cfg_done = wineprefix / "xinput_cfg.done"
         if not xinput_cfg_done.exists():
-            copy_updated_files(Path("/usr/model2emu/CFG"), emupath / "CFG")
+            copy_updated_files(Path("/usr/bin/model2emu/CFG"), emupath / "CFG")
             with xinput_cfg_done.open("w") as f:
                 f.write("done")
 

@@ -13,7 +13,7 @@ _logger = logging.getLogger(__name__)
 
 
 WINE_BASE: Final = Path('/usr/wine')
-WINE_PATH: Final = WINE_BASE / 'wine-tkg'
+WINE_PATH: Final = WINE_BASE / 'wine-custom'
 WINE_LIB: Final = WINE_PATH / 'lib' / 'wine'
 WINE_BIN: Final = WINE_PATH / 'bin'
 WINE: Final = WINE_BIN / 'wine'
