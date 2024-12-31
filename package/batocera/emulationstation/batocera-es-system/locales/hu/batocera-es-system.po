@@ -3305,6 +3305,11 @@ msgctxt "game_options"
 msgid "Autodetect (by game name tag)"
 msgstr "Automatikus felismerés (a játék névtáblája alapján)"
 
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Automap"
+msgstr ""
+
 #. TRANSLATION: amiberry, drastic, libretro/parallel_n64, libretro/tyrquake, melonds, ...
 msgctxt "game_options"
 msgid "Automatic"
@@ -7432,6 +7437,11 @@ msgctxt "keys_files"
 msgid "Exit Duckstation"
 msgstr "Kilépés Duckstation"
 
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Exit Game"
+msgstr ""
+
 #. TRANSLATION: steam.keys
 msgctxt "keys_files"
 msgid "Exit Steam"
@@ -11119,14 +11129,19 @@ msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Egérkattintás"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Move Backward"
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Move Forward"
+msgstr ""
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Move Forward, Can be use to press W"
 msgstr ""
 
 #. TRANSLATION: 3ds.citra.keys
@@ -11964,6 +11979,21 @@ msgstr "DuckStation gyorsmenü megnyitása"
 msgctxt "keys_files"
 msgid "Open LUA console"
 msgstr "Nyissa meg a LUA konzolt"
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Open Load Menu"
+msgstr ""
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Open Menu"
+msgstr ""
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Open Save Menu"
+msgstr ""
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -12819,6 +12849,11 @@ msgstr ""
 "Előbeállítások, amelyek javíthatják a teljesítményt a VPinballX.ini fájl "
 "kézi szerkesztése nélkül a teljesítmény finomhangolásához."
 
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Press N for Novice"
+msgstr ""
+
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
 msgid "Previous Weapon"
@@ -13562,7 +13597,7 @@ msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
 msgstr "Rumble Pak (automatikus)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr "Futás"
@@ -14570,6 +14605,21 @@ msgctxt "game_options"
 msgid "Sharpen More"
 msgstr "Többet élesít"
 
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Shoot"
+msgstr ""
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Shoot Xterm"
+msgstr ""
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Shoot Zappper"
+msgstr ""
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Short visible screen edge (cm)"
@@ -15260,6 +15310,11 @@ msgctxt "keys_files"
 msgid "Start"
 msgstr "Start"
 
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Start / Enter"
+msgstr ""
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Start / Valid"
@@ -15315,12 +15370,12 @@ msgctxt "game_options"
 msgid "Store past states to rewind to in real-time, if the core supports it."
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr ""
@@ -16211,6 +16266,16 @@ msgctxt "game_options"
 msgid "Turkish (tr)"
 msgstr "Török (tr)"
 
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Turn Left"
+msgstr ""
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Turn Right"
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Turquoise"
@@ -16697,6 +16762,11 @@ msgid ""
 msgstr ""
 "Használja a Megadrive-ot a 6 gombos Megadrive stílusú vezérlő bemeneteinek "
 "automatikus hozzárendeléséhez."
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Use Potion"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17945,6 +18015,11 @@ msgstr "háromszögszűrő"
 msgctxt "game_options"
 msgid "trilinear"
 msgstr "trilineáris"
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "use with R3 for cheat automap"
+msgstr ""
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
