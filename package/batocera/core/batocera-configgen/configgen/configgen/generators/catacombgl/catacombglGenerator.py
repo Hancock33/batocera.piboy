@@ -43,11 +43,11 @@ class CatacombGLGenerator(Generator):
 
         # Define the paths to be added or adjusted in the ini file
         required_paths = {
-            "pathabyssv113": "/userdata/roms/catacomb/Abyss_sw13",
-            "pathabyssv124": "/userdata/roms/catacomb/Abyss",
-            "patharmageddonv102": "/userdata/roms/catacomb/Armageddon",
-            "pathapocalypsev101": "/userdata/roms/catacomb/Apocalypse",
-            "pathcatacomb3dv122": "/userdata/roms/catacomb/Cat3D",
+            "pathabyssv113": "/userdata/roms/ports/catacomb/Abyss_sw13",
+            "pathabyssv124": "/userdata/roms/ports/catacomb/Abyss",
+            "patharmageddonv102": "/userdata/roms/ports/catacomb/Armageddon",
+            "pathapocalypsev101": "/userdata/roms/ports/catacomb/Apocalypse",
+            "pathcatacomb3dv122": "/userdata/roms/ports/catacomb/Cat3D",
             "screenmode": "fullscreen",
             "WindowedScreenWidth": str(gameResolution["width"]),
             "WindowedScreenHeight": str(gameResolution["height"])
