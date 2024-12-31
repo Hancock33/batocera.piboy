@@ -69,7 +69,7 @@ define LIBRETRO_MAME_SRC_INSTALL_TARGET_CMDS
 	cd /tmp/lr-mame && tar -cf /tmp/libretro-mame-$(MAME_SRC_CROSS_ARCH)-$(subst mame,,$(MAME_SRC_VERSION)).tar .
 	xz -T0 -7 -v /tmp/libretro-mame-$(MAME_SRC_CROSS_ARCH)-$(subst mame,,$(MAME_SRC_VERSION)).tar
 	mv /tmp/libretro-mame-$(MAME_SRC_CROSS_ARCH)-$(subst mame,,$(MAME_SRC_VERSION)).tar.xz /mnt/smb
-	rm -rf /tmp/mame*
+	rm -rf /tmp/lr-mame*
 endef
 
 $(eval $(generic-package))

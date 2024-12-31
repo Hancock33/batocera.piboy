@@ -3,8 +3,8 @@
 # libretro-holani
 #
 ################################################################################
-# Version: Commits on Dec 20, 2024
-LIBRETRO_HOLANI_VERSION = 345d2747dcbab511b83eb4c666ed239f87755545
+# Version: Commits on Dec 31, 2024
+LIBRETRO_HOLANI_VERSION = 61114880081cc518b54c898708ad1d162d9077ec
 LIBRETRO_HOLANI_SITE = $(call github,LLeny,holani-retro,$(LIBRETRO_HOLANI_VERSION))
 LIBRETRO_HOLANI_LICENSE = GPLv3
 
