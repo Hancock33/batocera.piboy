@@ -10,9 +10,9 @@ REALGIBS_BRANCH = realgibs
 REALGIBS_LICENSE = GPLv3
 REALGIBS_LICENSE_FILES = COPYING.txt
 
-REALGIBS_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib 
+REALGIBS_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
 
-define REALGIBS_INSTALL_TARGET_CMDS 
+define REALGIBS_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
 	cp $(@D)/realgibs*.so $(TARGET_DIR)/usr/lib/dhewm3/
 endef
