@@ -1,4 +1,3 @@
-
 ##### define variables to use in this file
 if  BR2_PACKAGE_BATOCERA_RPI_VCORE || BR2_PACKAGE_BATOCERA_RPI_MESA3D
 config BR2_PACKAGE_BATOCERA_RPI_ANY
@@ -1036,8 +1035,11 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_OPENJAZZ                             # ALL
 
     # Jazz Jackrabbit 2
-    select BR2_PACKAGE_JAZZ2_NATIVE                         if  BR2_PACKAGE_BATOCERA_GLES3               || \
+    select BR2_PACKAGE_JAZZ2_NATIVE                         if  BR2_PACKAGE_BATOCERA_GLES3              || \
                                                                (BR2_PACKAGE_LIBGLFW && !BR2_PACKAGE_BATOCERA_TARGET_JH7110)
+
+    # CatacombGL
+    select BR2_PACKAGE_CATACOMBGL                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
     help
         Ports
@@ -1974,3 +1976,4 @@ config BR2_PACKAGE_BATOCERA_VIDEO_CODECS
     select BR2_PACKAGE_GST1_VAAPI_ENCODERS                  if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
 ### ### ###
+
