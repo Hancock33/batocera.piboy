@@ -7,6 +7,7 @@ Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|052473e04882c871
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|74743b6c2c6fb376f39bbd9ba9277161807a4771|Dec 31, 2024
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45439|Dec 31, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|b6d6a4709d7563a0cc03a06cd80f7107b54a52e2|Dec 31, 2024
+Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|29032df5ea43a7f78a74b325c050612f9127f418|Dec 31, 2024
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0273|Dec 31, 2024
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241231|Dec 31, 2024
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|7d70223c2c1ca70cace7726914ef2ad4410d5875|Dec 31, 2024
@@ -128,7 +129,6 @@ Libraries|[projectm](http://github.com/projectM-visualizer/projectm)|v4.1.3|Dec 
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.15.91|Dec 19, 2024
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|48fe9344633001703782244651cdbf754532f9ab|Dec 18, 2024
 Hardware|[pironman5](http://github.com/sunfounder/pironman5)|d78654acc31839051b6b62f4afd1db77adb93968|Dec 18, 2024
-Sources|[libretro-mame-src](http://github.com/sonninnos/mame)|603e0a4f07d3f35deac8654208acb02e38d2627e|Dec 18, 2024
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|888905fb4a744c905785877ef894c91cd49b4aa5|Dec 18, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|d7ca2c04364a6dd0dac58b47151e04e26887e6f0|Dec 17, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|bfaa251cda9549392f69b1b9ba74f5f191845110|Dec 17, 2024

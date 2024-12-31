@@ -503,7 +503,7 @@ Ports|[yquake2-refvk](http://github.com/yquake2/ref_vk)|0ae3c8174559dd50091304dc
 Ports|[yquake2-rogue](http://github.com/yquake2/rogue)|830ad45774336194ae77351865f9d5b991be2979|Dec 21, 2024
 Ports|[yquake2-xatrix](http://github.com/yquake2/xatrix)|d215802d1642d1a2a4850896f70d37cf94f81a9c|Dec 21, 2024
 Ports|[yquake2-zaero](https://github.com/yquake2/zaero.git)|c3322bec3fb9760fcdc615615a8dcab6d59b6bed|Dec 21, 2024
-Sources|[libretro-mame-src](http://github.com/sonninnos/mame)|603e0a4f07d3f35deac8654208acb02e38d2627e|Dec 18, 2024
+Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|29032df5ea43a7f78a74b325c050612f9127f418|Dec 31, 2024
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0273|Dec 31, 2024
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
