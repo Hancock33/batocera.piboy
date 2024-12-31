@@ -14662,3 +14662,7 @@ x16emu:
 shadps4:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+
+catacombgl:
+  features: [padtokeyboard]
+  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
