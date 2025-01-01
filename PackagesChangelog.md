@@ -7,7 +7,9 @@ Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|d69341fd31a4209c
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|12d2ba5148091ef45a19ee5f8fbabb6f929e1bbb|Jan 01, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|c205e295da1d4dae80ab98b99c45469a21cf7f26|Jan 01, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|6307ab515dda33e1867d527b651e391c04c92e98|Jan 01, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250101|Jan 01, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|a590c514f93ade66001a9357548520d1f3513807|Jan 01, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250101|Jan 01, 2025
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|9f5c2aa00cc470bd20c0c29c5bfcb7a8451704c4|Jan 01, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|aea70dd7a14234d9d37555a80157597b2e12aa98|Jan 01, 2025
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|f5dddcb7c7954b663c2cbc9945a8564bb0e1f3ae|Jan 01, 2025
@@ -26,10 +28,8 @@ Ports|[nblood](http://github.com/nukeykt/NBlood)|r14186|Dec 31, 2024
 Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|29032df5ea43a7f78a74b325c050612f9127f418|Dec 31, 2024
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0273|Dec 31, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.29.0-rc.3|Dec 31, 2024
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241231|Dec 31, 2024
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|7d70223c2c1ca70cace7726914ef2ad4410d5875|Dec 31, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|c4f1ec8bddba15e1b1a00a7e56c50cf0eca8b5c9|Dec 31, 2024
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20241231|Dec 31, 2024
 Ports|[doomretro](http://github.com/bradharding/doomretro)|d933536085c13cde90e3affb8cf5e5eaf1280cb4|Dec 31, 2024
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|e4f66e3956280670e5dc8bc14450ae0de830d56c|Dec 31, 2024
 Ports|[vkquake](http://github.com/Novum/vkQuake)|ff0bcee943fad34956917b13392469bcacb97f15|Dec 31, 2024
