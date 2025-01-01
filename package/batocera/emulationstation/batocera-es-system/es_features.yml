@@ -12092,6 +12092,12 @@ xemu:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
+        xemu_api:
+            prompt: GRAPHICS API
+            description: Choose which graphics API library to use.
+            choices:
+                "OpenGL": "OPENGL"
+                "Vulkan": "VULKAN"
         xemu_scaling:
             group: VIDEO SETTINGS
             prompt: SCALING MODE
