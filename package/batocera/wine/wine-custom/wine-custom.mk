@@ -10,7 +10,7 @@ WINE_CUSTOM_SITE = $(call github,Hancock33,wine-tkg-batocera,$(WINE_CUSTOM_VERSI
 WINE_CUSTOM_LICENSE = LGPL-2.1+
 WINE_CUSTOM_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_CUSTOM_SELINUX_MODULES = wine
-WINE_CUSTOM_DEPENDENCIES = host-bison host-flex host-wine-custom wine-x86
+WINE_CUSTOM_DEPENDENCIES = host-bison host-flex host-wine-custom
 HOST_WINE_CUSTOM_DEPENDENCIES = host-bison host-flex
 
 ifeq ($(BR_CMAKE_USE_CLANG),y)
