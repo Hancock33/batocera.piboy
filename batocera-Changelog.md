@@ -7,18 +7,28 @@
 - Wireguard VPN for RK3326 boards
 - Image scaling option for Drastic
 - A selection of Dhewm3 mods
+- CatacombGL port for running various Catacomb games
+- Holani libretro core
 ### Fixed
 - Fix some problems in ES and Batocera with IPv6 networks
 - Fix ES behavior with usb network tethering
 - Fix handling of luks.enabled setting to allow disabling LUKS integration
 ### Changed / Improved
 - Significantly improve ES shutdown time, especially with large and medium collections
+- BigPEmu now supports .bigpimg CD images
 ### Updated
+- BigPEmu to v117
 - Cemu to 2.5
+- ETLegacy to v2.83.1
+- Jazz2 to 3.0.0
+- GroovyMAME to 0.272
+- Gzdoom to g4.14.0
+- Libretro-MAME to 0.272
 - Ruffle to Nightly-2024-12-28
 - RPCS3 to 0.0.34-17265
 - PCSX2 to 2.3.82
 - Play! to 28th December build
+- Xemu to v0.7.141
 ### System
 - Buildroot to 2024.11.x with supporting package updates
 - Mesa3D to 24.3.2

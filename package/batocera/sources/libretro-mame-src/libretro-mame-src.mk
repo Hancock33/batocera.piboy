@@ -3,9 +3,9 @@
 # libretro-mame-src
 #
 ################################################################################
-# Version: Commits on Dec 18, 2024
-LIBRETRO_MAME_SRC_VERSION = 603e0a4f07d3f35deac8654208acb02e38d2627e
-LIBRETRO_MAME_SRC_SITE = $(call github,sonninnos,mame,$(LIBRETRO_MAME_SRC_VERSION))
+# Version: Commits on Dec 31, 2024
+LIBRETRO_MAME_SRC_VERSION = 29032df5ea43a7f78a74b325c050612f9127f418
+LIBRETRO_MAME_SRC_SITE = $(call github,Hancock33,lr-mame,$(LIBRETRO_MAME_SRC_VERSION))
 LIBRETRO_MAME_SRC_LICENSE = MAME
 
 LIBRETRO_MAME_SRC_DEPENDENCIES = alsa-lib
@@ -69,7 +69,7 @@ define LIBRETRO_MAME_SRC_INSTALL_TARGET_CMDS
 	cd /tmp/lr-mame && tar -cf /tmp/libretro-mame-$(MAME_SRC_CROSS_ARCH)-$(subst mame,,$(MAME_SRC_VERSION)).tar .
 	xz -T0 -7 -v /tmp/libretro-mame-$(MAME_SRC_CROSS_ARCH)-$(subst mame,,$(MAME_SRC_VERSION)).tar
 	mv /tmp/libretro-mame-$(MAME_SRC_CROSS_ARCH)-$(subst mame,,$(MAME_SRC_VERSION)).tar.xz /mnt/smb
-	rm -rf /tmp/mame*
+	rm -rf /tmp/lr-mame*
 endef
 
 $(eval $(generic-package))

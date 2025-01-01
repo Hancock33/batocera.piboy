@@ -10,9 +10,9 @@ ELDOOM_BRANCH = eldoom
 ELDOOM_LICENSE = GPLv3
 ELDOOM_LICENSE_FILES = COPYING.txt
 
-ELDOOM_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib 
+ELDOOM_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
 
-define ELDOOM_INSTALL_TARGET_CMDS 
+define ELDOOM_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
 	cp $(@D)/eldoom*.so $(TARGET_DIR)/usr/lib/dhewm3/
 endef

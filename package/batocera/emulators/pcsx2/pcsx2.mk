@@ -3,8 +3,8 @@
 # pcsx2
 #
 ################################################################################
-# Version: Commits on Dec 29, 2024
-PCSX2_VERSION = v2.3.83
+# Version: Commits on Jan 01, 2025
+PCSX2_VERSION = v2.3.86
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES
@@ -12,7 +12,7 @@ PCSX2_LICENSE = GPLv3
 PCSX2_LICENSE_FILE = COPYING.GPLv3
 PCSX2_SUPPORTS_IN_SOURCE_BUILD = NO
 
-PCSX2_DEPENDENCIES += alsa-lib fmt freetype libaio libbacktrace libcurl libgtk3 libpcap libpng libsamplerate libsoundtouch 
+PCSX2_DEPENDENCIES += alsa-lib fmt freetype libaio libbacktrace libcurl libgtk3 libpcap libpng libsamplerate libsoundtouch
 PCSX2_DEPENDENCIES += qt6base qt6svg qt6tools portaudio sdl2 shaderc webp wxwidgets xorgproto yaml-cpp zlib
 PCSX2_DEPENDENCIES += host-clang host-libcurl
 
