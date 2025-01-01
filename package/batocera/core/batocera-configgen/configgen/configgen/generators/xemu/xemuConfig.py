@@ -92,7 +92,7 @@ def createXemuConfig(iniConfig: CaseSensitiveConfigParser, system: Emulator, rom
         iniConfig.set("display", "renderer", '"' + system.config["xemu_api"] + '"')
     else:
         iniConfig.set("display", "renderer", '"OPENGL"')
-    
+
     # Rendering resolution
     if system.isOptSet("xemu_render"):
         iniConfig.set("display.quality", "surface_scale", system.config["xemu_render"])
@@ -104,7 +104,7 @@ def createXemuConfig(iniConfig: CaseSensitiveConfigParser, system: Emulator, rom
 
     # Window size
     window_res = format(gameResolution["width"]) + "x" + format(gameResolution["height"])
-    iniConfig.set("display.window", "startup_size", '"' + window_res + '"')  
+    iniConfig.set("display.window", "startup_size", '"' + window_res + '"')
 
     # Vsync
     if system.isOptSet("xemu_vsync"):
