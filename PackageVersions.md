@@ -77,7 +77,7 @@ Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2024.1
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Emulators|[duckstation-legacy](http://github.com/stenzek/duckstation)|56ac3d6c324ec4520dac433b071ecab6227fb459|Aug 4, 2023 - DON'T BUMP
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|2ec50e757bc78a429101bdaeb3384815a62a8fc8|Jan 01, 2025
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|37e5e64ddc0bd129d8b272396be5c8657f7e3a1d|Jan 01, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|65478ef6d23e32f4f830244eed28334a6975b240|Dec 27, 2024
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|e18ada7225299599fe4930587691a386a096a595|Dec 31, 2024
@@ -165,7 +165,7 @@ Emulators|[libretro-lowresnx](http://github.com/timoinutilis/lowres-nx)|85c80181
 Emulators|[libretro-lrps2](http://github.com/libretro/LRPS2)|f3c8743d6a42fe429f703b476fecfdb5655a98a9|Jan 30, 2023
 Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|06b03a2494a366f6c664fb66f7d8be5cfe7338b9|Oct 16, 2024
 Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0273|Dec 23, 2024
-Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|aaf1a95728d9ca6d4cf6633b6a839f8daa27db81|Dec 29, 2024
+Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|38a426d27d545dd7e85e10760ef4645044506504|Jan 01, 2025
 Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|08862a8aa4cf185606fbf54aafc0b5b8f8ee0220|Oct 19, 2024
 Emulators|[libretro-melonds](http://github.com/libretro/melonds)|7a3c11ff970cd36ca806961fae6db94b30dd5401|Oct 21, 2024
 Emulators|[libretro-mesen](http://github.com/libretro/Mesen)|791c5e8153ee6e29691d45b5df2cf1151ff416f9|Oct 21, 2024
@@ -272,16 +272,16 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|c4f1ec8bddba15e1b1a00a7e56c50cf0eca8b5c9|Dec 31, 2024
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|a590c514f93ade66001a9357548520d1f3513807|Jan 01, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20241221|Dec 21, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|0bb2f72ee2cbdf1e7c9fbf36bf5026fabbf800fc|Dec 30, 2024
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|1c22cc2f52d0173b7bd1ffabf85a2cecd5c32045|Dec 31, 2024
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2024-12-31|Dec 31, 2024
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.206|Jan 01, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|aea70dd7a14234d9d37555a80157597b2e12aa98|Jan 01, 2025
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|283442b42f8593408d305be3b0cf2f83788b7f1e|Jan 01, 2025
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|a76e8f0211d540c1bd91ee4d457eb2294daeeaa9|Jan 01, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|f5dddcb7c7954b663c2cbc9945a8564bb0e1f3ae|Jan 01, 2025
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|48fe9344633001703782244651cdbf754532f9ab|Dec 18, 2024
 Emulators|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
-Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|c75e8fa9072a1bdff082dc01c768f91edca9c301|Dec 26, 2024
+Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|1997cd1b524e0b6302373141ee8610d01d956585|Jan 01, 2025
 Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|9b927f280322b6bb13998e06b83710201960181b|Nov 24, 2024
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|173129cca3a449d3c6a12385ad40c99835254ba3|Nov 26, 2024
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|b13fdd5029a246e8f90a1d70e2ed000779fee4f1|Sept 10, 2024
@@ -295,7 +295,7 @@ Emulators|[vita3k](https://github.com/vita3k/vita3k)|880365afb82d52f4bfee2c2e8ff
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|1137ccc33da81d62b0b3c840f0a516d346ab2d41|Jul 23, 2024
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r48|Sept 06, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|8f478e017a0f7bac7d72d4abe23e77233f221bce|Dec 31, 2024
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|ceb94e019a6fef82ff990c21fed100cbfdaccdbf|Dec 29, 2024
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|3f0a7f171f959948500137420cbd1c0bb25dc2e7|Jan 01, 2025
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Firmwares|[alllinuxfirmwares](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot)|20241210|Dec 10, 2024
@@ -478,7 +478,7 @@ Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|6facc3b09b6
 Ports|[sikkmod](http://github.com/dhewm/dhewm3-sdk)|03aae2f5b74a18ed5fdbfe9c345a4d50203c7518|Jul 28, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|d7ca2c04364a6dd0dac58b47151e04e26887e6f0|Dec 17, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|cf532d7c7675d3ffa5d69009d63869daf73955cb|Oct 26, 2024
-Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|4570e792823de70fcada056b5bb4d5439c362d33|Dec 30, 2024
+Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|74ed8ffa1ef318e444839ac12bf7678b9614cf11|Jan 01, 2025
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|4650327a4959321c8d28b89693abbda41fa69e6e|Dec 10, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|c9c54a32266be8ba8247b509ecd5a6cbbaede7a3|Dec 17, 2024
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|d83967b2ea38eda8b43437167d93c86021bb4de1|Dec 02, 2024
