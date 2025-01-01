@@ -103,7 +103,6 @@ class XeniaGenerator(Generator):
             with (canarypath / 'portable.txt').open('w'):
                 pass
 
-        wine.install_wine_trick(wineprefix, 'sound=alsa')
         wine.install_wine_trick(wineprefix, 'xeniadisclaimer')
         wine.install_wine_trick(wineprefix, 'vcrun2019')
 
