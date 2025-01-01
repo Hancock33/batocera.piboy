@@ -173,6 +173,9 @@ c64:
 camplynx:
   emulator: libretro
   core:     mame
+catacomb:
+  emulator: catacombgl
+  core:     catacombgl
 cannonball:
   emulator: cannonball
   core:     cannonball

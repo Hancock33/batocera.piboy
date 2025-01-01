@@ -200,11 +200,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: str, romConfigur
         #os.environ.update({'PIPEWIRE_LATENCY': '1024/48000'})
         os.environ.update({'QT_QPA_PLATFORM': 'xcb'})
         os.environ.update({'QT_XCB_NO_XI2': '1'})
-
-        if (system.config['core'] != 'flatpak'):
-            os.environ.update({'QT_PLUGIN_PATH': '/usr/lib/qt6/plugins'})
-        else:
-            os.environ.update({'QT_PLUGIN_PATH': '/usr/lib/qt/plugins'})
+        os.environ.update({'QT_PLUGIN_PATH': '/usr/lib/qt6/plugins'})
 
         # run a script before emulator starts
         callExternalScripts(SYSTEM_SCRIPTS, "gameStart", [systemName, system.config['emulator'], effectiveCore, effectiveRom])

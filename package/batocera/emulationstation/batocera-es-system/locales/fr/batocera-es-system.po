@@ -3302,6 +3302,11 @@ msgctxt "game_options"
 msgid "Autodetect (by game name tag)"
 msgstr "Détection automatique (par tag de nom de jeu)"
 
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Automap"
+msgstr ""
+
 #. TRANSLATION: amiberry, drastic, libretro/parallel_n64, libretro/tyrquake, melonds, ...
 msgctxt "game_options"
 msgid "Automatic"
@@ -7430,6 +7435,11 @@ msgctxt "keys_files"
 msgid "Exit Duckstation"
 msgstr "Quitter Duckstation"
 
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Exit Game"
+msgstr ""
+
 #. TRANSLATION: steam.keys
 msgctxt "keys_files"
 msgid "Exit Steam"
@@ -11115,14 +11125,19 @@ msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Clicks de la souris"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Move Backward"
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Move Forward"
+msgstr ""
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Move Forward, Can be use to press W"
 msgstr ""
 
 #. TRANSLATION: 3ds.citra.keys
@@ -11961,6 +11976,21 @@ msgstr "Ouvrir le menu rapide Duckstation"
 msgctxt "keys_files"
 msgid "Open LUA console"
 msgstr "Ouvrir la console LUA"
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Open Load Menu"
+msgstr ""
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Open Menu"
+msgstr ""
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Open Save Menu"
+msgstr ""
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -12819,6 +12849,11 @@ msgstr ""
 "Préréglages qui peuvent améliorer les performances sans devoir modifier "
 "manuellement le fichier VPinballX.ini pour affiner les performances."
 
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Press N for Novice"
+msgstr ""
+
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
 msgid "Previous Weapon"
@@ -13564,7 +13599,7 @@ msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
 msgstr "Vibration Pak (Automatique)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr "Run"
@@ -14575,6 +14610,21 @@ msgctxt "game_options"
 msgid "Sharpen More"
 msgstr "Encore plus affinée"
 
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Shoot"
+msgstr ""
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Shoot Xterm"
+msgstr ""
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Shoot Zappper"
+msgstr ""
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Short visible screen edge (cm)"
@@ -15265,6 +15315,11 @@ msgctxt "keys_files"
 msgid "Start"
 msgstr "Démarrrer"
 
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Start / Enter"
+msgstr ""
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Start / Valid"
@@ -15320,12 +15375,12 @@ msgctxt "game_options"
 msgid "Store past states to rewind to in real-time, if the core supports it."
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr ""
@@ -16220,6 +16275,16 @@ msgctxt "game_options"
 msgid "Turkish (tr)"
 msgstr "Turc (tr)"
 
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Turn Left"
+msgstr ""
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Turn Right"
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Turquoise"
@@ -16709,6 +16774,11 @@ msgid ""
 msgstr ""
 "Utilisez Megadrive pour auto mapper les boutons d'un contrôleur de style "
 "Megadrive avec une disposition à 6 boutons."
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Use Potion"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17959,6 +18029,11 @@ msgstr "filtre triangulaire"
 msgctxt "game_options"
 msgid "trilinear"
 msgstr "trilinéaire"
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "use with R3 for cheat automap"
+msgstr ""
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"

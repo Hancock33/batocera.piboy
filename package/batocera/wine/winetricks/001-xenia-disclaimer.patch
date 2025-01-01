@@ -1,8 +1,8 @@
 diff --git a/src/winetricks b/src/winetricks
-index 0a5884a..0357c9d 100755
+index ace07db..07c8f73 100755
 --- a/src/winetricks
 +++ b/src/winetricks
-@@ -19916,6 +19916,25 @@ load_winxp()
+@@ -18674,6 +18674,25 @@ load_winxp()
      w_set_winver winxp
  }
  

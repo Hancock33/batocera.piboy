@@ -10,9 +10,9 @@ CDOOM_BRANCH = cdoom
 CDOOM_LICENSE = GPLv3
 CDOOM_LICENSE_FILES = COPYING.txt
 
-CDOOM_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib 
+CDOOM_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
 
-define CDOOM_INSTALL_TARGET_CMDS 
+define CDOOM_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
 	cp $(@D)/cdoom*.so $(TARGET_DIR)/usr/lib/dhewm3/
 endef

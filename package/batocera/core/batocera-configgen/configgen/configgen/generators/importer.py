@@ -20,6 +20,7 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'blues': ('blues.bluesGenerator', 'BluesGenerator'),
     'bstone': ('bstone.bstoneGenerator', 'BstoneGenerator'),
     'cannonball': ('cannonball.cannonballGenerator', 'CannonballGenerator'),
+    'catacombgl': ('catacombgl.catacombglGenerator', 'CatacombGLGenerator'),
     'cdogs': ('cdogs.cdogsGenerator', 'CdogsGenerator'),
     'cemu': ('cemu.cemuGenerator', 'CemuGenerator'),
     'cgenius': ('cgenius.cgeniusGenerator', 'CGeniusGenerator'),
@@ -110,11 +111,11 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'shadps4': ('shadps4.shadps4Generator', 'shadPS4Generator'),
     'sm64': ('sm64.sm64Generator', 'Sm64Generator'),
     'solarus': ('solarus.solarusGenerator', 'SolarusGenerator'),
+    'sonic2013': ('sonicretro.sonicretroGenerator', 'SonicRetroGenerator'),
     'sonic3-air': ('sonic3_air.sonic3_airGenerator', 'Sonic3AIRGenerator'),
+    'soniccd': ('sonicretro.sonicretroGenerator', 'SonicRetroGenerator'),
     'sonicmania': ('sonicmania.sonicmaniaGenerator', 'SonicManiaGenerator'),
     'sonicnexus': ('sonicnexus.sonicnexusGenerator', 'SonicNexusGenerator'),
-    'sonic2013': ('sonicretro.sonicretroGenerator', 'SonicRetroGenerator'),
-    'soniccd': ('sonicretro.sonicretroGenerator', 'SonicRetroGenerator'),
     'sorr': ('sorr.sorrGenerator', 'SorrGenerator'),
     'spacecadetpinball': ('spacecadetpinball.spacecadetpinballGenerator', 'SpacecadetpinballGenerator'),
     'srb2': ('srb2.srb2Generator', 'Srb2Generator'),
@@ -152,7 +153,6 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'yabasanshiro': ('yabasanshiro.yabasanshiroGenerator', 'YabasanshiroGenerator'),
     'yquake2': ('yquake2.yquake2Generator', 'Yquake2Generator'),
 }
-
 
 def get_generator(emulator: str) -> Generator:
     if emulator in _GENERATOR_MAP:

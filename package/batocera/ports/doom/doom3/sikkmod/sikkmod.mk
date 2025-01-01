@@ -10,9 +10,9 @@ SIKKMOD_BRANCH = sikkmod
 SIKKMOD_LICENSE = GPLv3
 SIKKMOD_LICENSE_FILES = COPYING.txt
 
-SIKKMOD_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib 
+SIKKMOD_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
 
-define SIKKMOD_INSTALL_TARGET_CMDS 
+define SIKKMOD_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
 	cp $(@D)/sikkmod*.so $(TARGET_DIR)/usr/lib/dhewm3/
 endef
