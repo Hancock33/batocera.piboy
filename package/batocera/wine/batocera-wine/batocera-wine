@@ -461,9 +461,6 @@ createWineDirectory() {
 	# Workaround wine bottle creation issue with debug enabled
 	export WINEDLLOVERRIDES="winegstreamer="
 
-	# use alsa for sound
-	trick_wine "${WINEPREFIX}" "sound=alsa" || cleanAndExit 1
-
 	if ! WINEPREFIX=${WINEPREFIX} ${WINE} hostname; then
 		rm -rf "${WINEPREFIX}"
 		kill -15 "${BSODPID}"
