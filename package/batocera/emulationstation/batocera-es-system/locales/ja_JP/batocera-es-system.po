@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v41b(2024/12/31)\n"
+"Project-Id-Version: batocera-es v41b(2024/11/30)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-12-31 10:08+0900\n"
+"PO-Revision-Date: 2024-11-30 21:20+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -4495,7 +4495,7 @@ msgstr "オーバースキャンを削除"
 #. TRANSLATION: duckstation, mame, theforceengine
 msgctxt "game_options"
 msgid "CROSSHAIR"
-msgstr "クロスヘア(照準)"
+msgstr "十字線(照準)"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -4565,7 +4565,7 @@ msgstr "カスタム画像(png)のパス"
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mamevirtual, ...
 msgctxt "game_options"
 msgid "CUSTOM CONFIG"
-msgstr "カスタム設定"
+msgstr "カスタム構成"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -4575,7 +4575,7 @@ msgstr "カスタム コントローラー"
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
 msgid "CUSTOM GAME CONFIG"
-msgstr "カスタムゲーム設定"
+msgstr "カスタムゲーム構成"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -5527,7 +5527,7 @@ msgstr ""
 #. TRANSLATION: libretro/gambatte, libretro/mesen, shared, shared
 msgctxt "game_options"
 msgid "Custom"
-msgstr "その他カスタマイズ"
+msgstr "カスタム構成"
 
 #. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
 msgctxt "game_options"
@@ -6770,7 +6770,7 @@ msgstr "サポートされている場合、コントローラーの振動機能
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "Enable crosshairs in shooting games for the selected players."
-msgstr "選択したプレーヤーのゲームで照準表示を有効にします"
+msgstr "選択したプレーヤーのゲームで十字線(照準)表示を有効にします"
 
 #. TRANSLATION: libretro/virtualjaguar
 msgctxt "game_options"
@@ -6908,7 +6908,7 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Enable the cheat list (if available)."
-msgstr "チート リストを有効にします (利用可能な場合)"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -8409,7 +8409,7 @@ msgstr "GBC - Dark Green"
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GBC - Game Specific"
-msgstr "GBC - ゲーム専用"
+msgstr ""
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
@@ -8901,7 +8901,7 @@ msgstr ""
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
-msgstr "ガンコンクロスヘア(照準)を非表示"
+msgstr "ガンコンクロスエア(照準)を非表示"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -9070,7 +9070,7 @@ msgstr "非表示"
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
-msgstr "対応しているゲームで照準を隠します(例:ActionMax, Maddog II)"
+msgstr "対応しているゲームで十字線を隠します(例:ActionMax, Maddog II)"
 
 #. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, dreamcast.redream.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, ...
 msgctxt "keys_files"
@@ -9227,7 +9227,7 @@ msgstr "イメージリーダー"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid "IMAGE SCALING"
-msgstr "画像スケーリング"
+msgstr ""
 
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
@@ -9965,7 +9965,7 @@ msgstr "ライトガン(ガンコン)"
 #. TRANSLATION: libretro/beetle-saturn
 msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIR"
-msgstr "ガンコンのクロスヘア(照準)"
+msgstr "ガンコンの照準(クロスヘア)"
 
 #. TRANSLATION: dolphin, dolphin, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, rpcs3, ...
 msgctxt "game_options"
@@ -11350,7 +11350,7 @@ msgstr "最近傍"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid "Nearest-neighbor"
-msgstr "最近傍"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -13706,7 +13706,7 @@ msgstr "開閉の状態を表示"
 #. TRANSLATION: dolphin, dolphin, libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, ...
 msgctxt "game_options"
 msgid "SHOW LIGHT GUN CROSSHAIRS"
-msgstr "ガンコンのクロスヘア(照準)を表示"
+msgstr "ガンコンの照準(クロスヘア)を表示"
 
 #. TRANSLATION: dolphin, duckstation, melonds
 msgctxt "game_options"
@@ -15424,7 +15424,6 @@ msgid ""
 "Switches between smooth (Bilinear) and sharp (Nearest Neighbor) image "
 "scaling."
 msgstr ""
-"スムーズ (バイリニア) とシャープ (最近傍) の画像スケーリングを切り替えます"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
