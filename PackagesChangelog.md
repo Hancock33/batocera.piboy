@@ -7,6 +7,7 @@ Emulators|[duckstation](http://github.com/stenzek/duckstation)|2ec50e757bc78a429
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|b19e5801a5f0b060e5804d9a9bb59b88bba9c066|Jan 01, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.86|Jan 01, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|5b5bb0c6262fe0e12378559c6efa747839f57361|Jan 01, 2025
+Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.206|Jan 01, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|aea70dd7a14234d9d37555a80157597b2e12aa98|Jan 01, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|283442b42f8593408d305be3b0cf2f83788b7f1e|Jan 01, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|12d2ba5148091ef45a19ee5f8fbabb6f929e1bbb|Jan 01, 2025
@@ -128,7 +129,6 @@ Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0-rc3|Dec 20, 202
 Wine|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc3|Dec 20, 2024
 Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.0-rc3|Dec 20, 2024
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|a870b6dcde66fba00cd7aab5ae4bb699e458a91b|Dec 20, 2024
-Emulators|[ryujinx](https://github.com/GreemDev/Ryujinx/releases)|1.2.78|Dec 19, 2024
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|f02f0eaf4e681a618fad55e5cc09d4306a82ac47|Dec 19, 2024
 Libraries|[projectm](http://github.com/projectM-visualizer/projectm)|v4.1.3|Dec 19, 2024
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.15.91|Dec 19, 2024
