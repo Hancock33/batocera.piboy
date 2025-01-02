@@ -42,8 +42,7 @@ else
     DOLPHIN_TRIFORCE_CONF_OPTS += -DENABLE_VULKAN=OFF
 endif
 
-define DOLPHIN_TRIFORCE_INSTALL_TARGET_CMDS
-	cp $(@D)/buildroot-build/Binaries/dolphin-emu $(TARGET_DIR)/usr/bin/dolphin-triforce
+define DOLPHIN_TRIFORCE_EXTRAS
 	mkdir -p $(TARGET_DIR)/usr/share/triforce
 	# copy extra ini files
 	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-triforce/*.ini $(TARGET_DIR)/usr/share/triforce
@@ -51,5 +50,7 @@ define DOLPHIN_TRIFORCE_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-triforce/*.keys $(TARGET_DIR)/usr/share/evmapy
 endef
+
+DOLPHIN_TRIFORCE_POST_INSTALL_TARGET_HOOKS += DOLPHIN_TRIFORCE_EXTRAS
 
 $(eval $(cmake-package))

@@ -234,7 +234,7 @@ class DolphinTriforceGenerator(Generator):
         else:
             dolphinTriforceGFXSettings.set("Enhancements", "MaxAnisotropy", "0")
             dolphinTriforceGFXSettings.set("Enhancements", "ForceTextureFiltering", "0")
-        
+
         if system.isOptSet('triforce_resampling'):
             dolphinTriforceGFXSettings.set("Enhancements", "OutputResampling", system.config["triforce_resampling"])
         else:
@@ -280,7 +280,7 @@ class DolphinTriforceGenerator(Generator):
                 continue
 
             shutil.copy(source_path, destination_path)
-        
+
         commandArray = ["dolphin-triforce", "-b", "-u", str(DOLPHIN_TRIFORCE_CONFIG), "-e", rom]
 
         return Command.Command(
@@ -291,7 +291,7 @@ class DolphinTriforceGenerator(Generator):
                 "SDL_JOYSTICK_HIDAPI": "0"
             }
         )
-            
+
     def getInGameRatio(self, config, gameResolution, rom):
         if 'triforce_aspect_ratio' in config:
             if config['triforce_aspect_ratio'] == "1":
