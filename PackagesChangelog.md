@@ -19,8 +19,10 @@ Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|92d02691349bcd32fb7e
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|e0bf3f9d54a2435e77a4ea94a0828a55c767b477|Jan 02, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|34ef356f76cb0ed1814d8b3027f1ff91b7f2e30b|Jan 02, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|c7543348aac4e91c70ef848a9b587fac24ae6901|Jan 02, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250102|Jan 02, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|c2f0f3eaf4ae95e55a1876b808d3c0b49fa61dbe|Jan 02, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|864ad02177e5e39c9951082e127efcc6a693b1e5|Jan 02, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250102|Jan 02, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|f6b75060e258188f2f2a95da0a2b0ce7bf418782|Jan 02, 2025
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|661d027cbfe83a22d9e2504521e08f0fe0450588|Jan 02, 2025
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|d2c37c5e6891247e717839f7fb84864e6ec7e9ec|Jan 02, 2025
@@ -42,8 +44,6 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45447|Jan 01, 2025
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|e709cd6bc7b80646a99e8834eb872bd5189a3af9|Jan 01, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|c205e295da1d4dae80ab98b99c45469a21cf7f26|Jan 01, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|0d188dd073351c1d7fb22b85c36b514dadd402f1|Jan 01, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250101|Jan 01, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250101|Jan 01, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|786bfa64195c9e0a14733698bd1f470011774034|Jan 01, 2025
 Ports|[quakespasm](http://github.com/sezero/quakespasm)|271d588ef2d7d51328e0f349d1111f664c63cf6a|Jan 01, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|a60edbc51bb666eeaf056e46fe35ac3d695c5bd7|Jan 01, 2025
