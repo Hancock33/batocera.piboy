@@ -203,11 +203,6 @@ msgctxt "game_options"
 msgid "1.5x (960x720)"
 msgstr "1.5배 (960x720)"
 
-#. TRANSLATION: dolphin_triforce
-msgctxt "game_options"
-msgid "1.5x 720p (960x792)"
-msgstr "1.5배 720p (960x792)"
-
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "1.5x Native"
@@ -383,6 +378,11 @@ msgctxt "game_options"
 msgid "10th"
 msgstr "10일"
 
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "10x Native (6400x5280)"
+msgstr ""
+
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
 msgid "11 MHz"
@@ -402,6 +402,11 @@ msgstr "11MB"
 msgctxt "game_options"
 msgid "11th"
 msgstr "11일"
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "11x Native (7040x5808)"
+msgstr ""
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -487,6 +492,11 @@ msgstr "12MB"
 msgctxt "game_options"
 msgid "12th"
 msgstr "12일"
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "12x Native (7680x6336) for 8K"
+msgstr ""
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -673,30 +683,25 @@ msgctxt "game_options"
 msgid "16th"
 msgstr "16일"
 
-#. TRANSLATION: dolphin_triforce
-msgctxt "game_options"
-msgid "16x (CSAA)"
-msgstr "16배 (CSAA)"
-
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "16x (~7680p / 16k)"
 msgstr "16배 (~7680p / 16k)"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "16x Anistropic"
+msgstr ""
+
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "16x MSAA"
 msgstr "16배 MSAA"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "16x SSAA"
 msgstr "16배 SSAA"
-
-#. TRANSLATION: dolphin_triforce
-msgctxt "game_options"
-msgid "16xQ (CSAA)"
-msgstr "16배Q (CSAA)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -788,7 +793,7 @@ msgctxt "game_options"
 msgid "1x native (320x240)"
 msgstr "1배 원본 (320x240)"
 
-#. TRANSLATION: dolphin, dolphin_triforce, libretro/dolphin
+#. TRANSLATION: dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "1x native (640x528)"
 msgstr "1배 원본 (640x528)"
@@ -847,11 +852,6 @@ msgstr "2.5 MB"
 msgctxt "game_options"
 msgid "2.5x (1600x1200)"
 msgstr "2.5배 (1600x1200)"
-
-#. TRANSLATION: dolphin_triforce
-msgctxt "game_options"
-msgid "2.5x 1080p (1600x1320)"
-msgstr "2.5배 1080p (1600x1320)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -1138,17 +1138,27 @@ msgctxt "game_options"
 msgid "2x (~960)"
 msgstr "2배 (~960)"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "2x Anistropic"
+msgstr ""
+
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "2x MSAA"
 msgstr "2배 MSAA"
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "2x Native (1280x1056) for 720p"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "2x Native (~720p)"
 msgstr "2배 원본 (~720p)"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "2x SSAA"
 msgstr "2배 SSAA"
@@ -1358,6 +1368,11 @@ msgctxt "game_options"
 msgid "3x (2160p/3240p)"
 msgstr "3배 (2160p/3240p)"
 
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "3x Native (1920x1584) for 1080p"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "3x Native (~1080p)"
@@ -1528,17 +1543,17 @@ msgctxt "game_options"
 msgid "4x (2880p/4320p)"
 msgstr "4배 (2880p/4320p)"
 
-#. TRANSLATION: dolphin_triforce
-msgctxt "game_options"
-msgid "4x (SSAA)"
-msgstr "4배 (SSAA)"
-
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "4x (~1920p)"
 msgstr "4배 (~1920p)"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "4x Anistropic"
+msgstr ""
+
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "4x MSAA"
 msgstr "4배 MSAA"
@@ -1548,12 +1563,17 @@ msgctxt "game_options"
 msgid "4x MULTISAMPLING"
 msgstr "4배 멀티샘플링"
 
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "4x Native (2560x2112) for 1440p"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "4x Native (~1440p/2K)"
 msgstr "4배 원본 (~1440p/2K)"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "4x SSAA"
 msgstr "4배 SSAA"
@@ -1718,6 +1738,11 @@ msgctxt "game_options"
 msgid "5x (3600p/5400p)"
 msgstr "5배 (3600p/5400p)"
 
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "5x Native (3200x2640)"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "5x Native (~1620p)"
@@ -1838,6 +1863,11 @@ msgctxt "game_options"
 msgid "6x 4K (3840x3168)"
 msgstr "6배 4K (3840x3168)"
 
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "6x Native (3840x3168) for 4K"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "6x Native (~2160p/4K)"
@@ -1917,6 +1947,11 @@ msgstr "7일"
 msgctxt "game_options"
 msgid "7x (5040p/7560p)"
 msgstr "7배 (5040p/7560p)"
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "7x Native (4480x3696)"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -2013,11 +2048,6 @@ msgctxt "game_options"
 msgid "8x (5760p/8640p)"
 msgstr "8배 (5760p/8640p)"
 
-#. TRANSLATION: dolphin_triforce
-msgctxt "game_options"
-msgid "8x (CSAA)"
-msgstr "8x (CSAA)"
-
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "8x (~4320p / 8k)"
@@ -2033,17 +2063,27 @@ msgctxt "game_options"
 msgid "8x 5K (5120x4224)"
 msgstr "8배 5K (5120x4224)"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "8x Anistropic"
+msgstr ""
+
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "8x MSAA"
 msgstr "8배 MSAA"
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "8x Native (5120x4224) for 5K"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "8x Native (~2880p/5K)"
 msgstr "8배 원본 (~2880p/5K)"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "8x SSAA"
 msgstr "8배 SSAA"
@@ -2052,11 +2092,6 @@ msgstr "8배 SSAA"
 msgctxt "game_options"
 msgid "8x native (2048 x 1536)"
 msgstr "8배 원본 (2048 x 1536)"
-
-#. TRANSLATION: dolphin_triforce
-msgctxt "game_options"
-msgid "8xQ (CSAA)"
-msgstr "8배Q (CSAA)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -2097,6 +2132,11 @@ msgstr "9일"
 msgctxt "game_options"
 msgid "9x 4K (2880x2160)"
 msgstr "9배 4K (2880x2160)"
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "9x Native (5760x4752)"
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
@@ -2736,6 +2776,11 @@ msgstr ""
 "에뮬레이트된 화면의 크기 조절 방식에 영향을 줍니다. OpenGL 렌더러만 해당합니"
 "다."
 
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "Affects how the game output is scaled to the resolution."
+msgstr ""
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Affects just the visual effect of nudging."
@@ -3139,6 +3184,11 @@ msgstr "아르키메데스 440/1 (기본)"
 msgctxt "game_options"
 msgid "Archimedes 540"
 msgstr "아르키메데스 540"
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "Area Sampling"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -3689,7 +3739,22 @@ msgctxt "game_options"
 msgid "Bicubic"
 msgstr "고등차수"
 
-#. TRANSLATION: bigpemu, cemu, drastic, duckstation, libretro/duckstation, ...
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "Bicubic: B-Spine"
+msgstr ""
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "Bicubic: Catmull-Rom"
+msgstr ""
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "Bicubic: Mitchell-Netravali"
+msgstr ""
+
+#. TRANSLATION: bigpemu, cemu, dolphin_triforce, drastic, duckstation, ...
 msgctxt "game_options"
 msgid "Bilinear"
 msgstr "이중선형"
@@ -4375,7 +4440,7 @@ msgctxt "game_options"
 msgid "CONTROLLER PROFILE"
 msgstr "컨트롤러 프로파일"
 
-#. TRANSLATION: dolphin_triforce, dolphin_triforce, libretro, libretro, libretro/atari800, ...
+#. TRANSLATION: libretro, libretro, libretro/atari800, libretro/beetle-saturn, libretro/beetle-saturn, ...
 msgctxt "game_options"
 msgid "CONTROLLER SETTINGS"
 msgstr ""
@@ -5811,7 +5876,7 @@ msgctxt "game_options"
 msgid "DSi (experiemental)"
 msgstr "DSi (실험적)"
 
-#. TRANSLATION: dolphin
+#. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
 msgid "DUAL CORE MODE"
 msgstr "듀얼 코어 모드"
@@ -8042,6 +8107,36 @@ msgstr "강제 4:3"
 msgctxt "game_options"
 msgid "Force Default DNS"
 msgstr "기본 DNS 강제"
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "Force Linear"
+msgstr ""
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "Force Linear and 16x Anistropic"
+msgstr ""
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "Force Linear and 2x Anistropic"
+msgstr ""
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "Force Linear and 4x Anistropic"
+msgstr ""
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "Force Linear and 8x Anistropic"
+msgstr ""
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "Force Nearest"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -11311,6 +11406,11 @@ msgctxt "game_options"
 msgid "Native"
 msgstr "원본"
 
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "Native (640x528)"
+msgstr ""
+
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
 msgid "Native (720p/1080p)"
@@ -11480,7 +11580,7 @@ msgctxt "game_options"
 msgid "No skipping"
 msgstr "건너뛰기 없음"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, drastic, ...
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "None"
 msgstr "없음"
@@ -11634,6 +11734,11 @@ msgstr "최적의 프레임 페이싱"
 msgctxt "game_options"
 msgid "OSD MESSAGES"
 msgstr "OSD 메시지"
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "OUTPUT RESAMPLING"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -11908,7 +12013,7 @@ msgctxt "keys_files"
 msgid "Open furnish corridor menu"
 msgstr "가구 복도 메뉴 열기"
 
-#. TRANSLATION: awgl, cemu, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: awgl, cemu, dolphin, duckstation, flycast, ...
 msgctxt "game_options"
 msgid "OpenGL"
 msgstr "OpenGL"
@@ -11923,7 +12028,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL (컴퓨트 셰이더)"
 
-#. TRANSLATION: citra, play, scummvm
+#. TRANSLATION: citra, dolphin_triforce, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (기본)"
@@ -12742,7 +12847,12 @@ msgstr ""
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
-msgid "Press N for Novice"
+msgid "Press the N key for 'Novice' or 'No'"
+msgstr ""
+
+#. TRANSLATION: catacomb.keys
+msgctxt "keys_files"
+msgid "Press the Y key for 'Yes'"
 msgstr ""
 
 #. TRANSLATION: raze.keys
@@ -14476,7 +14586,7 @@ msgctxt "game_options"
 msgid "Sharp 2"
 msgstr "선명함 2"
 
-#. TRANSLATION: sonic2013, soniccd
+#. TRANSLATION: dolphin_triforce, sonic2013, soniccd
 msgctxt "game_options"
 msgid "Sharp Bilinear"
 msgstr "선명한 이중선형"
@@ -14689,6 +14799,11 @@ msgstr "싱클레어 2 컨트롤러가 자동으로 설정되었습니다."
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "Sinden"
+msgstr ""
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "Sine"
 msgstr ""
 
 #. TRANSLATION: suyu, xenia, xenia-canary
@@ -15293,6 +15408,11 @@ msgctxt "game_options"
 msgid "Stretch games to full-screen, but may distort the aspect ratio"
 msgstr "게임을 전체 화면으로 늘리지만 화면비가 왜곡될 수 있음"
 
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "Stretch to Window"
+msgstr ""
+
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
 msgid "Stretch to fit window"
@@ -15308,7 +15428,7 @@ msgctxt "game_options"
 msgid "Stretch to screen"
 msgstr "화면에 맞게 늘이기"
 
-#. TRANSLATION: dolphin, dolphin_triforce, suyu
+#. TRANSLATION: dolphin, suyu
 msgctxt "game_options"
 msgid "Stretch to window"
 msgstr "창에 맞게 늘리기"
@@ -15328,6 +15448,11 @@ msgctxt "game_options"
 msgid ""
 "Strict API specification. Can resolve rare cases of missing graphics and "
 "flickering."
+msgstr ""
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "Strong"
 msgstr ""
 
 #. TRANSLATION: libretro/px68k
@@ -16082,6 +16207,11 @@ msgctxt "game_options"
 msgid "Treats the right analogue stick as the second joystick."
 msgstr ""
 
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "Triangle"
+msgstr ""
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid ""
@@ -16795,7 +16925,7 @@ msgctxt "game_options"
 msgid "User XBOX button layout"
 msgstr ""
 
-#. TRANSLATION: dolphin
+#. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
 msgid "Usually not much faster than single core mode."
 msgstr "일반적으로 단일 코어 모드보다 훨씬 빠르지 않습니다."
@@ -17193,6 +17323,11 @@ msgstr "WRX 고해상도"
 #. TRANSLATION: hurrican
 msgctxt "game_options"
 msgid "Walkers World"
+msgstr ""
+
+#. TRANSLATION: dolphin_triforce
+msgctxt "game_options"
+msgid "Weak"
 msgstr ""
 
 #. TRANSLATION: pcsx2
@@ -17932,8 +18067,24 @@ msgstr "노란색/파란색"
 #~ msgstr "1 (포스트 FX)"
 
 #~ msgctxt "game_options"
+#~ msgid "1.5x 720p (960x792)"
+#~ msgstr "1.5배 720p (960x792)"
+
+#~ msgctxt "game_options"
+#~ msgid "16x (CSAA)"
+#~ msgstr "16배 (CSAA)"
+
+#~ msgctxt "game_options"
+#~ msgid "16xQ (CSAA)"
+#~ msgstr "16배Q (CSAA)"
+
+#~ msgctxt "game_options"
 #~ msgid "2 (shadows)"
 #~ msgstr "2 (그림자)"
+
+#~ msgctxt "game_options"
+#~ msgid "2.5x 1080p (1600x1320)"
+#~ msgstr "2.5배 1080p (1600x1320)"
 
 #~ msgctxt "game_options"
 #~ msgid "256 KB"
@@ -17952,6 +18103,10 @@ msgstr "노란색/파란색"
 #~ msgstr "4 (특수 FX)"
 
 #~ msgctxt "game_options"
+#~ msgid "4x (SSAA)"
+#~ msgstr "4배 (SSAA)"
+
+#~ msgctxt "game_options"
 #~ msgid "5 (other)"
 #~ msgstr "5 (기타)"
 
@@ -17962,6 +18117,14 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "512 KB"
 #~ msgstr "512 KB"
+
+#~ msgctxt "game_options"
+#~ msgid "8x (CSAA)"
+#~ msgstr "8x (CSAA)"
+
+#~ msgctxt "game_options"
+#~ msgid "8xQ (CSAA)"
+#~ msgstr "8배Q (CSAA)"
 
 #, fuzzy
 #~ msgctxt "game_options"
