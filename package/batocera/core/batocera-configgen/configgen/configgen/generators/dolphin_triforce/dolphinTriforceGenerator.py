@@ -1,57 +1,63 @@
-import shutil
-import os.path
-from os import environ
-import configparser
-import subprocess
+from __future__ import annotations
 
-from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
+from pathlib import Path
+import shutil
+from os import environ
+from pathlib import Path
+from typing import TYPE_CHECKING
+
+from ... import Command, controllersConfig
+from ...controller import generate_sdl_game_controller_config
+from ...batoceraPaths import CONFIGS, SAVES, mkdir_if_not_exists
+from ...utils.configparser import CaseSensitiveConfigParser
 from ..Generator import Generator
 from . import dolphinTriforceControllers
-from . import dolphinTriforceGameConfig
+from .dolphinTriforcePaths import (
+    DOLPHIN_TRIFORCE_GAME_SETTINGS,
+    DOLPHIN_TRIFORCE_GFX_INI,
+    DOLPHIN_TRIFORCE_INI,
+    DOLPHIN_TRIFORCE_LOGGER_INI,
+    DOLPHIN_TRIFORCE_SAVES,
+    DOLPHIN_TRIFORCE_CONFIG
+)
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
+
 
 class DolphinTriforceGenerator(Generator):
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
-            "name": "dolphin-triforce",
+            "name": "dolphin",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        if not os.path.exists(os.path.dirname(batoceraFiles.dolphinTriforceIni)):
-            os.makedirs(os.path.dirname(batoceraFiles.dolphinTriforceIni))
+        mkdir_if_not_exists(DOLPHIN_TRIFORCE_INI.parent)
 
         # Dir required for saves
-        if not os.path.exists(batoceraFiles.dolphinTriforceData + "/StateSaves"):
-            os.makedirs(batoceraFiles.dolphinTriforceData + "/StateSaves")
+        mkdir_if_not_exists(DOLPHIN_TRIFORCE_SAVES / "StateSaves")
 
-        dolphinTriforceGameConfig.generateGameConfig()
+        dolphinTriforceControllers.generateControllerConfig(system, playersControllers, Path(rom))
+
         ## dolphin.ini ##
 
-        dolphinTriforceSettings = configparser.ConfigParser(interpolation=None)
-        # To prevent ConfigParser from converting to lower case
-        dolphinTriforceSettings.optionxform = str
-        if os.path.exists(batoceraFiles.dolphinTriforceIni):
-            dolphinTriforceSettings.read(batoceraFiles.dolphinTriforceIni)
+        dolphinTriforceSettings = CaseSensitiveConfigParser(interpolation=None)
+        if DOLPHIN_TRIFORCE_INI.exists():
+            dolphinTriforceSettings.read(DOLPHIN_TRIFORCE_INI)
 
         # Sections
+        if not dolphinTriforceSettings.has_section("General"):
+            dolphinTriforceSettings.add_section("General")
+        if not dolphinTriforceSettings.has_section("Core"):
+            dolphinTriforceSettings.add_section("Core")
+        if not dolphinTriforceSettings.has_section("Interface"):
+            dolphinTriforceSettings.add_section("Interface")
         if not dolphinTriforceSettings.has_section("Analytics"):
             dolphinTriforceSettings.add_section("Analytics")
         if not dolphinTriforceSettings.has_section("Display"):
             dolphinTriforceSettings.add_section("Display")
-        if not dolphinTriforceSettings.has_section("General"):
-            dolphinTriforceSettings.add_section("General")
-        if not dolphinTriforceSettings.has_section("Interface"):
-            dolphinTriforceSettings.add_section("Interface")
-        if not dolphinTriforceSettings.has_section("Core"):
-            dolphinTriforceSettings.add_section("Core")
-
-        # only 1 window (fixes exit and gui display)
-        dolphinTriforceSettings.remove_option("Display", "RenderToMain")
-        dolphinTriforceSettings.remove_option("Display", "Fullscreen")
-        dolphinTriforceSettings.remove_option("Display", "RenderWindowAutoSize")
 
         # Define default games path
         if "ISOPaths" not in dolphinTriforceSettings["General"]:
@@ -63,15 +69,15 @@ class DolphinTriforceGenerator(Generator):
 
         # Save file location
         if "MemcardAPath" not in dolphinTriforceSettings["Core"]:
-            dolphinTriforceSettings.set("Core", "MemcardAPath", "/userdata/saves/dolphin-triforce/GC/MemoryCardA.USA.raw")
-            dolphinTriforceSettings.set("Core", "MemcardBPath", "/userdata/saves/dolphin-triforce/GC/MemoryCardB.USA.raw")
+            dolphinTriforceSettings.set("Core", "MemcardAPath", str(DOLPHIN_TRIFORCE_SAVES / "GC" / "MemoryCardA.USA.raw"))
+            dolphinTriforceSettings.set("Core", "MemcardBPath", str(DOLPHIN_TRIFORCE_SAVES / "GC" / "MemoryCardB.USA.raw"))
 
         # Draw or not FPS
         if system.isOptSet("showFPS") and system.getOptBoolean("showFPS"):
-            dolphinTriforceSettings.set("General", "ShowLag",        "True")
+            dolphinTriforceSettings.set("General", "ShowLag", "True")
             dolphinTriforceSettings.set("General", "ShowFrameCount", "True")
         else:
-            dolphinTriforceSettings.set("General", "ShowLag",        "False")
+            dolphinTriforceSettings.set("General", "ShowLag", "False")
             dolphinTriforceSettings.set("General", "ShowFrameCount", "False")
 
         # Don't ask about statistics
@@ -81,7 +87,7 @@ class DolphinTriforceGenerator(Generator):
         dolphinTriforceSettings.set("Interface", "UsePanicHandlers",        "False")
 
         # Disable OSD Messages
-        if system.isOptSet("disable_osd_messages") and system.getOptBoolean("disable_osd_messages"):
+        if system.isOptSet("triforce_osd_messages") and system.getOptBoolean("triforce_osd_messages"):
             dolphinTriforceSettings.set("Interface", "OnScreenDisplayMessages", "False")
         else:
             dolphinTriforceSettings.set("Interface", "OnScreenDisplayMessages", "True")
@@ -89,15 +95,21 @@ class DolphinTriforceGenerator(Generator):
         # Don't confirm at stop
         dolphinTriforceSettings.set("Interface", "ConfirmStop", "False")
 
+        # Fixes gui display
+        dolphinTriforceSettings.set("Display", "RenderToMain", "False")
+        dolphinTriforceSettings.set("Display", "Fullscreen", "False")
+
         # Enable Cheats
         dolphinTriforceSettings.set("Core", "EnableCheats", "True")
 
         # Dual Core
-        dolphinTriforceSettings.set("Core", "CPUThread", "True")
-        dolphinTriforceSettings.set("Core", "FPRF", "True")
+        if system.isOptSet("triforce_dual_core") and system.getOptBoolean("triforce_dual_core"):
+            dolphinTriforceSettings.set("Core", "CPUThread", "True")
+        else:
+            dolphinTriforceSettings.set("Core", "CPUThread", "False")
 
         # Gpu Sync
-        if system.isOptSet("gpu_sync") and system.getOptBoolean("gpu_sync"):
+        if system.isOptSet("triforce_gpu_sync") and system.getOptBoolean("triforce_gpu_sync"):
             dolphinTriforceSettings.set("Core", "SyncGPU", "True")
         else:
             dolphinTriforceSettings.set("Core", "SyncGPU", "False")
@@ -107,39 +119,32 @@ class DolphinTriforceGenerator(Generator):
         dolphinTriforceSettings.set("Core", "GameCubeLanguage", str(getGameCubeLangFromEnvironment())) # GC
 
         # Enable MMU
-        if system.isOptSet("enable_mmu") and system.getOptBoolean("enable_mmu"):
+        if system.isOptSet("triforce_enable_mmu") and system.getOptBoolean("triforce_enable_mmu"):
             dolphinTriforceSettings.set("Core", "MMU", "True")
         else:
             dolphinTriforceSettings.set("Core", "MMU", "False")
 
         # Backend - Default OpenGL
-        if system.isOptSet("gfxbackend") and system.config["gfxbackend"] == "Vulkan":
-            dolphinTriforceSettings.set("Core", "GFXBackend", "Vulkan")
-            # Check Vulkan
-            try:
-                have_vulkan = subprocess.check_output(["/usr/bin/batocera-vulkan", "hasVulkan"], text=True).strip()
-                if have_vulkan != "true":
-                    eslog.debug("Vulkan driver is not available on the system. Using OpenGL instead.")
-                    dolphinTriforceSettings.set("Core", "GFXBackend", "OGL")
-            except subprocess.CalledProcessError:
-                eslog.debug("Error checking for discrete GPU.")
+        if system.isOptSet("triforce_api"):
+            dolphinTriforceSettings.set("Core", "GFXBackend", system.config["triforce_api"])
         else:
             dolphinTriforceSettings.set("Core", "GFXBackend", "OGL")
 
         # Serial Port 1 to AM-Baseband
         dolphinTriforceSettings.set("Core", "SerialPort1", "6")
+
+        # Gamecube pads forced as AM-Baseband
         dolphinTriforceSettings.set("Core", "SIDevice0", "11")
+        dolphinTriforceSettings.set("Core", "SIDevice1", "11")
 
         # Save dolphin.ini
-        with open(batoceraFiles.dolphinTriforceIni, 'w') as configfile:
+        with DOLPHIN_TRIFORCE_INI.open('w') as configfile:
             dolphinTriforceSettings.write(configfile)
 
         ## gfx.ini ##
 
-        dolphinTriforceGFXSettings = configparser.ConfigParser(interpolation=None)
-        # To prevent ConfigParser from converting to lower case
-        dolphinTriforceGFXSettings.optionxform = str
-        dolphinTriforceGFXSettings.read(batoceraFiles.dolphinTriforceGfxIni)
+        dolphinTriforceGFXSettings = CaseSensitiveConfigParser(interpolation=None)
+        dolphinTriforceGFXSettings.read(DOLPHIN_TRIFORCE_GFX_INI)
 
         # Add Default Sections
         if not dolphinTriforceGFXSettings.has_section("Settings"):
@@ -152,11 +157,10 @@ class DolphinTriforceGenerator(Generator):
             dolphinTriforceGFXSettings.add_section("Hardware")
 
         # Graphics setting Aspect Ratio
-        if system.isOptSet('dolphin_aspect_ratio'):
-            dolphinTriforceGFXSettings.set("Settings", "AspectRatio", system.config["dolphin_aspect_ratio"])
+        if system.isOptSet('triforce_aspect_ratio'):
+            dolphinTriforceGFXSettings.set("Settings", "AspectRatio", system.config["triforce_aspect_ratio"])
         else:
-            # set to two, which is '4:3' in Dolphin and stops auto switching ingame
-            dolphinTriforceGFXSettings.set("Settings", "AspectRatio", "2")
+            dolphinTriforceGFXSettings.set("Settings", "AspectRatio", "0")
 
         # Show fps
         if system.isOptSet("showFPS") and system.getOptBoolean("showFPS"):
@@ -165,7 +169,7 @@ class DolphinTriforceGenerator(Generator):
             dolphinTriforceGFXSettings.set("Settings", "ShowFPS", "False")
 
         # HiResTextures
-        if system.isOptSet('hires_textures') and system.getOptBoolean('hires_textures'):
+        if system.isOptSet('triforce_hires_textures') and system.getOptBoolean('triforce_hires_textures'):
             dolphinTriforceGFXSettings.set("Settings", "HiresTextures",      "True")
             dolphinTriforceGFXSettings.set("Settings", "CacheHiresTextures", "True")
         else:
@@ -183,7 +187,7 @@ class DolphinTriforceGenerator(Generator):
             dolphinTriforceGFXSettings.set("Settings", "wideScreenHack", "False")
 
         # Various performance hacks - Default Off
-        if system.isOptSet('perf_hacks') and system.getOptBoolean('perf_hacks'):
+        if system.isOptSet('triforce_perf_hacks') and system.getOptBoolean('triforce_perf_hacks'):
             dolphinTriforceGFXSettings.set("Hacks", "BBoxEnable", "False")
             dolphinTriforceGFXSettings.set("Hacks", "DeferEFBCopies", "True")
             dolphinTriforceGFXSettings.set("Hacks", "EFBEmulateFormatChanges", "False")
@@ -211,98 +215,48 @@ class DolphinTriforceGenerator(Generator):
                 dolphinTriforceGFXSettings.remove_option("Enhancements", "ForceTrueColor")
 
         # Internal resolution settings
-        if system.isOptSet('internal_resolution'):
-            dolphinTriforceGFXSettings.set("Settings", "EFBScale", system.config["internal_resolution"])
+        if system.isOptSet('triforce_resolution'):
+            dolphinTriforceGFXSettings.set("Settings", "EFBScale", system.config["triforce_resolution"])
         else:
             dolphinTriforceGFXSettings.set("Settings", "EFBScale", "2")
 
         # VSync
-        if system.isOptSet('vsync'):
-            dolphinTriforceGFXSettings.set("Hardware", "VSync", str(system.getOptBoolean('vsync')))
+        if system.isOptSet('triforce_vsync'):
+            dolphinTriforceGFXSettings.set("Hardware", "VSync", str(system.getOptBoolean('triforce_vsync')))
         else:
             dolphinTriforceGFXSettings.set("Hardware", "VSync", "True")
 
         # Anisotropic filtering
-        if system.isOptSet('anisotropic_filtering'):
-            dolphinTriforceGFXSettings.set("Enhancements", "MaxAnisotropy", system.config["anisotropic_filtering"])
+        if system.isOptSet('triforce_filtering'):
+            filtering = system.config["triforce_filtering"].split('/')
+            dolphinTriforceGFXSettings.set("Enhancements", "MaxAnisotropy", filtering[0])
+            dolphinTriforceGFXSettings.set("Enhancements", "ForceTextureFiltering", filtering[1])
         else:
             dolphinTriforceGFXSettings.set("Enhancements", "MaxAnisotropy", "0")
+            dolphinTriforceGFXSettings.set("Enhancements", "ForceTextureFiltering", "0")
+        
+        if system.isOptSet('triforce_resampling'):
+            dolphinTriforceGFXSettings.set("Enhancements", "OutputResampling", system.config["triforce_resampling"])
+        else:
+            dolphinTriforceGFXSettings.set("Enhancements", "OutputResampling", "0")
 
         # Anti aliasing
-        if system.isOptSet('antialiasing'):
-            dolphinTriforceGFXSettings.set("Settings", "MSAA", system.config["antialiasing"])
+        if system.isOptSet('triforce_antialiasing'):
+            msaa, ssaa = system.config["triforce_antialiasing"].split('/')
+            dolphinTriforceGFXSettings.set("Settings", "MSAA", msaa)
+            dolphinTriforceGFXSettings.set("Settings", "SSAA", ssaa)
         else:
-            dolphinTriforceGFXSettings.set("Settings", "MSAA", "0")
+            dolphinTriforceGFXSettings.set("Settings", "MSAA", "0x00000000")
+            dolphinTriforceGFXSettings.set("Settings", "SSAA", "False")
 
         # Save gfx.ini
-        with open(batoceraFiles.dolphinTriforceGfxIni, 'w') as configfile:
+        with DOLPHIN_TRIFORCE_GFX_INI.open('w') as configfile:
             dolphinTriforceGFXSettings.write(configfile)
-
-        ## Hotkeys.ini - overwrite to avoid issues
-        hotkeyConfig = configparser.ConfigParser(interpolation=None)
-        # To prevent ConfigParser from converting to lower case
-        hotkeyConfig.optionxform = str
-        # [Hotkeys]
-        hotkeyConfig.add_section('Hotkeys')
-        # General - use virtual for now
-        hotkeyConfig.set('Hotkeys', 'Device', 'XInput2/0/Virtual core pointer')
-        hotkeyConfig.set('Hotkeys', 'General/Open', '@(Ctrl+O)')
-        hotkeyConfig.set('Hotkeys', 'General/Toggle Pause', 'F10')
-        hotkeyConfig.set('Hotkeys', 'General/Stop', 'Escape')
-        hotkeyConfig.set('Hotkeys', 'General/Toggle Fullscreen', '@(Alt+Return)')
-        hotkeyConfig.set('Hotkeys', 'General/Take Screenshot', 'F9')
-        hotkeyConfig.set('Hotkeys', 'General/Exit', '@(Shift+F11)')
-        # Emulation Speed
-        hotkeyConfig.set('Hotkeys', 'Emulation Speed/Disable Emulation Speed Limit', 'Tab')
-        # Stepping
-        hotkeyConfig.set('Hotkeys', 'Stepping/Step Into', 'F11')
-        hotkeyConfig.set('Hotkeys', 'Stepping/Step Over', '@(Shift+F10)')
-        hotkeyConfig.set('Hotkeys', 'Stepping/Step Out', '@(Shift+F11)')
-        # Breakpoint
-        hotkeyConfig.set('Hotkeys', 'Breakpoint/Toggle Breakpoint', '@(Shift+F9)')
-        # Wii
-        hotkeyConfig.set('Hotkeys', 'Wii/Connect Wii Remote 1', '@(Alt+F5)')
-        hotkeyConfig.set('Hotkeys', 'Wii/Connect Wii Remote 2', '@(Alt+F6)')
-        hotkeyConfig.set('Hotkeys', 'Wii/Connect Wii Remote 3', '@(Alt+F7)')
-        hotkeyConfig.set('Hotkeys', 'Wii/Connect Wii Remote 4', '@(Alt+F8)')
-        hotkeyConfig.set('Hotkeys', 'Wii/Connect Balance Board', '@(Alt+F9)')
-        # Select
-        hotkeyConfig.set('Hotkeys', 'Select State/Select State Slot 1', '@(Shift+F1)')
-        hotkeyConfig.set('Hotkeys', 'Select State/Select State Slot 2', '@(Shift+F2)')
-        # Load
-        hotkeyConfig.set('Hotkeys', 'Load State/Load from Selected Slot', 'F8')
-        # Save State
-        hotkeyConfig.set('Hotkeys', 'Save State/Save to Selected Slot', 'F5')
-        # Other State Hotkeys
-        hotkeyConfig.set('Hotkeys', 'Other State Hotkeys/Undo Load State', '@(Shift+F12)')
-        # GBA Core
-        hotkeyConfig.set('Hotkeys', 'GBA Core/Load ROM', '@(`Ctrl`+`Shift`+`O`)')
-        hotkeyConfig.set('Hotkeys', 'GBA Core/Unload ROM', '@(`Ctrl`+`Shift`+`W`)')
-        hotkeyConfig.set('Hotkeys', 'GBA Core/Reset', '@(`Ctrl`+`Shift`+`R`)')
-        # GBA Volume
-        hotkeyConfig.set('Hotkeys', 'GBA Volume/Volume Down', '`KP_Subtract`')
-        hotkeyConfig.set('Hotkeys', 'GBA Volume/Volume Up', '`KP_Add`')
-        hotkeyConfig.set('Hotkeys', 'GBA Volume/Volume Toggle Mute', '`M`')
-        # GBA Window Size
-        hotkeyConfig.set('Hotkeys', 'GBA Window Size/1x', '`KP_1`')
-        hotkeyConfig.set('Hotkeys', 'GBA Window Size/2x', '`KP_2`')
-        hotkeyConfig.set('Hotkeys', 'GBA Window Size/3x', '`KP_3`')
-        hotkeyConfig.set('Hotkeys', 'GBA Window Size/4x', '`KP_4`')
-        # Skylanders Portal
-        hotkeyConfig.set('Hotkeys', 'USB Emulation Devices/Show Skylanders Portal', '@(Ctrl+P)')
-        hotkeyConfig.set('Hotkeys', 'USB Emulation Devices/Show Infinity Base', '@(Ctrl+I)')
-        #
-        # Write the configuration to the file
-        hotkey_path = '/userdata/system/configs/dolphin-triforce/Config/Hotkeys.ini'
-        with open(hotkey_path, 'w') as configfile:
-            hotkeyConfig.write(configfile)
 
         ## logger settings ##
 
-        dolphinTriforceLogSettings = configparser.ConfigParser(interpolation=None)
-        # To prevent ConfigParser from converting to lower case
-        dolphinTriforceLogSettings.optionxform = str
-        dolphinTriforceLogSettings.read(batoceraFiles.dolphinTriforceLoggerIni)
+        dolphinTriforceLogSettings = CaseSensitiveConfigParser(interpolation=None)
+        dolphinTriforceLogSettings.read(DOLPHIN_TRIFORCE_LOGGER_INI)
 
         # Sections
         if not dolphinTriforceLogSettings.has_section("Logs"):
@@ -312,19 +266,37 @@ class DolphinTriforceGenerator(Generator):
         dolphinTriforceLogSettings.set("Logs", "DVD", "False")
 
         # Save Logger.ini
-        with open(batoceraFiles.dolphinTriforceLoggerIni, 'w') as configfile:
+        with DOLPHIN_TRIFORCE_LOGGER_INI.open('w') as configfile:
             dolphinTriforceLogSettings.write(configfile)
 
-        commandArray = ["dolphin-triforce", "-b", "-u", "/userdata/system/configs/dolphin-triforce", "-e", rom]
+        # These ini files are required to launch Triforce games, and thus should always be present and enabled.
+        mkdir_if_not_exists(DOLPHIN_TRIFORCE_GAME_SETTINGS)
+        source_dir = Path("/usr/share/triforce")
+        for source_path in source_dir.iterdir():
+            destination_path = DOLPHIN_TRIFORCE_GAME_SETTINGS / source_path.name
 
-        # No environment variables work for now, paths are coded in above.
-        return Command.Command(array=commandArray, env={"XDG_CONFIG_HOME":batoceraFiles.CONF, "XDG_DATA_HOME":batoceraFiles.SAVES})
+            # Check if the destination file exists and if it is older than the source file
+            if destination_path.exists() and source_path.stat().st_mtime <= destination_path.stat().st_mtime:
+                continue
 
+            shutil.copy(source_path, destination_path)
+        
+        commandArray = ["dolphin-triforce", "-b", "-u", str(DOLPHIN_TRIFORCE_CONFIG), "-e", rom]
+
+        return Command.Command(
+            array=commandArray,
+            env={
+                "QT_QPA_PLATFORM":"xcb",
+                "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
+                "SDL_JOYSTICK_HIDAPI": "0"
+            }
+        )
+            
     def getInGameRatio(self, config, gameResolution, rom):
-        if 'dolphin_aspect_ratio' in config:
-            if config['dolphin_aspect_ratio'] == "1":
+        if 'triforce_aspect_ratio' in config:
+            if config['triforce_aspect_ratio'] == "1":
                 return 16/9
-            elif config['dolphin_aspect_ratio'] == "3" and (gameResolution["width"] / float(gameResolution["height"]) > ((16.0 / 9.0) - 0.1)):
+            elif config['triforce_aspect_ratio'] == "3" and (gameResolution["width"] / float(gameResolution["height"]) > ((16.0 / 9.0) - 0.1)):
                 return 16/9
         return 4/3
 
