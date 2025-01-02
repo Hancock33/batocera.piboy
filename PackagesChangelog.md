@@ -77,7 +77,6 @@ Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.5|Dec 30, 2024
 Ports|[prototype](http://github.com/ptitSeb/prototype)|522e69ec8a7c69c67e9e6dfc79ccdcbaaec2a0e0|Dec 30, 2024
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|a2c87f395636f8e2a13c61d5d93eb6bde30331a1|Dec 30, 2024
 Ports|[stk](http://github.com/supertuxkart/stk-code)|05f34527455b6d35baf34bccf4faa8eb71405944|Dec 30, 2024
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc3.r9|Dec 30, 2024
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|9e468f0087454c6c1b68975ead933977d5cf33b2|Dec 30, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|a70622172cee7ed33b5de2e71944f089d77e05d5|Dec 30, 2024
 Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|38010d63daca68e5e996d584252d58480fb10fc9|Dec 30, 2024
@@ -438,6 +437,7 @@ Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f
 Utils|[bauh](http://github.com/vinifmor/bauh)|0.10.7|Jan 10, 2024
 Boot|[uboot-multiboard](https://ftp.denx.de/pub/u-boot)|2024.01|Jan 08, 2024
 Ports|[freedroid](http://github.com/ReinhardPrix/FreedroidClassic)|126664e034d17bb7fd1e6c3cfa1e9e6f1ebf48ac|Jan 08, 2024
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|10.0rc3.r14|Jan 01, 2024
 Emulators|[libretro-mojozork](http://github.com/icculus/mojozork)|5c8d81f8db53c206ace6952472e7a7e68bd8e752|Dec 31, 2023
 Controllers|[hid-t150](http://github.com/scarburato/t150_driver)|580b79b7b479076ba470fcc21fbd8484f5328546|Dec 18, 2023
 Emulators|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
