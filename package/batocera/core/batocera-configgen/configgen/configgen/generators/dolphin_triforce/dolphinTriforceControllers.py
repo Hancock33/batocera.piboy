@@ -153,9 +153,9 @@ def generateHotkeys(playersControllers: ControllerMapping) -> None:
                 # Write the configuration for this key
                 if keyname is not None:
                     write_key(f, keyname, input.type, input.id, input.value, pad.axis_count, False, hotkey.id)
-        
+
         nplayer += 1
-    
+
     f.write
     f.close()
 
@@ -173,7 +173,7 @@ def generateControllerConfig_any(system: Emulator, playersControllers: Controlle
             nsamepad = double_pads[pad.real_name.strip()]
         else:
             nsamepad = 0
-        
+
         double_pads[pad.real_name.strip()] = nsamepad+1
         f.write("[" + anyDefKey + str(nplayer) + "]" + "\n")
         f.write("Device = SDL/" + str(nsamepad).strip() + "/" + pad.real_name.strip() + "\n")
@@ -189,7 +189,7 @@ def generateControllerConfig_any(system: Emulator, playersControllers: Controlle
         else:
             f.write("Rumble/Motor = \n")
         nplayer += 1
-    
+
     f.write
     f.close()
 
@@ -263,7 +263,7 @@ def write_key(f: codecs.StreamReaderWriter, keyname: str, input_type: str, input
         elif input_value == "8": # left
             f.write("Hat 0 W")
         elif input_value == "2": # right
-            f.write("Hat 0 E")   
+            f.write("Hat 0 E")
     elif input_type == "axis":
         if (reverse and input_value == "-1") or (not reverse and input_value == "1") or (not reverse and input_value == "0"):
             if "-Analog" in keyname:
