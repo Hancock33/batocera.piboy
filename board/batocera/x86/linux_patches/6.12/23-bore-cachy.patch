@@ -1,5 +1,5 @@
 diff --git a/include/linux/sched.h b/include/linux/sched.h
-index c14446c6164d..83e35dfbbc50 100644
+index 02eaf84c8626..ee565c072dd4 100644
 --- a/include/linux/sched.h
 +++ b/include/linux/sched.h
 @@ -538,6 +538,14 @@ struct sched_statistics {
@@ -135,7 +135,7 @@ index 0f78364efd4f..83a6b919ab29 100644
  config SCHED_HRTICK
  	def_bool HIGH_RES_TIMERS
 diff --git a/kernel/fork.c b/kernel/fork.c
-index e97e527cec69..d40105f4b177 100644
+index d27b8f5582df..1396abfb7d2b 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -117,6 +117,8 @@
@@ -147,7 +147,7 @@ index e97e527cec69..d40105f4b177 100644
  #include <trace/events/sched.h>
  
  #define CREATE_TRACE_POINTS
-@@ -2372,6 +2374,9 @@ __latent_entropy struct task_struct *copy_process(
+@@ -2371,6 +2373,9 @@ __latent_entropy struct task_struct *copy_process(
  	retval = sched_fork(clone_flags, p);
  	if (retval)
  		goto bad_fork_cleanup_policy;
