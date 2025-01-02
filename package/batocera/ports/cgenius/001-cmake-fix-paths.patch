@@ -1,6 +1,8 @@
---- a/CMakeLists.txt	2021-03-14 21:33:52.327608475 +0100
-+++ b/CMakeLists.txt	2021-03-14 21:35:24.632299509 +0100
-@@ -12,9 +12,9 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index e34eb281e..b87d505de 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -12,9 +12,9 @@ SET(GAMES_SHAREDIR "${APPDIR}" CACHE PATH "Game data root dir")
  SET(DOCDIR ${DATADIR} CACHE PATH "Docs destination")
  ELSE(WIN32)
  SET(SHAREDIR "/usr/share" CACHE PATH "System share dir location")

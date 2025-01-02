@@ -1,7 +1,7 @@
-diff --git a/GsKit/base/CInput.cpp b/GsKit/base/CInput.cpp.new
-index 56959473f1..05297181b0 100644
+diff --git a/GsKit/base/CInput.cpp b/GsKit/base/CInput.cpp
+index 56959473f..05297181b 100644
 --- a/GsKit/base/CInput.cpp
-+++ b/GsKit/base/CInput.cpp.new
++++ b/GsKit/base/CInput.cpp
 @@ -219,57 +219,99 @@ void CInput::resetControls(const int player)
      setTwoButtonFiring(player, false);
  }
