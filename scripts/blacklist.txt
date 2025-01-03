@@ -18,6 +18,7 @@ vulkan-utility-libraries.mk
 vulkan-validationlayers.mk
 vulkan-volk.mk
 wine-cachyos.mk
+wine-custom.mk
 wine-ge.mk
 wine-native.mk
 wine-ntsync.mk
