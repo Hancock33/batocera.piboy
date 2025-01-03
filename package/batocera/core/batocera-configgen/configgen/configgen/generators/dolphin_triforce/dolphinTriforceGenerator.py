@@ -29,7 +29,7 @@ class DolphinTriforceGenerator(Generator):
 
     def getHotkeysContext(self) -> HotkeysContext:
         return {
-            "name": "dolphin",
+            "name": "dolphin-triforce",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
         }
 
@@ -39,7 +39,7 @@ class DolphinTriforceGenerator(Generator):
         # Dir required for saves
         mkdir_if_not_exists(DOLPHIN_TRIFORCE_SAVES / "StateSaves")
 
-        dolphinTriforceControllers.generateControllerConfig(system, playersControllers, Path(rom))
+        #dolphinTriforceControllers.generateControllerConfig(system, playersControllers, Path(rom))
 
         ## dolphin.ini ##
 
@@ -103,10 +103,8 @@ class DolphinTriforceGenerator(Generator):
         dolphinTriforceSettings.set("Core", "EnableCheats", "True")
 
         # Dual Core
-        if system.isOptSet("triforce_dual_core") and system.getOptBoolean("triforce_dual_core"):
-            dolphinTriforceSettings.set("Core", "CPUThread", "True")
-        else:
-            dolphinTriforceSettings.set("Core", "CPUThread", "False")
+        dolphinTriforceSettings.set("Core", "CPUThread", "True")
+        dolphinTriforceSettings.set("Core", "FPRF", "True")
 
         # Gpu Sync
         if system.isOptSet("triforce_gpu_sync") and system.getOptBoolean("triforce_gpu_sync"):
@@ -124,18 +122,15 @@ class DolphinTriforceGenerator(Generator):
         else:
             dolphinTriforceSettings.set("Core", "MMU", "False")
 
-        # Backend - Default OpenGL
+        # Backend - Default Vulkan
         if system.isOptSet("triforce_api"):
             dolphinTriforceSettings.set("Core", "GFXBackend", system.config["triforce_api"])
         else:
-            dolphinTriforceSettings.set("Core", "GFXBackend", "OGL")
+            dolphinTriforceSettings.set("Core", "GFXBackend", "Vulkan")
 
         # Serial Port 1 to AM-Baseband
         dolphinTriforceSettings.set("Core", "SerialPort1", "6")
-
-        # Gamecube pads forced as AM-Baseband
         dolphinTriforceSettings.set("Core", "SIDevice0", "11")
-        dolphinTriforceSettings.set("Core", "SIDevice1", "11")
 
         # Save dolphin.ini
         with DOLPHIN_TRIFORCE_INI.open('w') as configfile:

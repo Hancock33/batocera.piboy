@@ -8560,13 +8560,6 @@ dolphin_triforce:
             choices:
                 "Off": 0
                 "On":  1
-        triforce_dual_core:
-            group: ADVANCED OPTIONS
-            prompt: DUAL CORE MODE
-            description: Usually not much faster than single core mode.
-            choices:
-                "Off": 0
-                "On":  1
         triforce_gpu_sync:
             group: ADVANCED OPTIONS
             prompt: GPU SYNC
