@@ -5890,7 +5890,7 @@ msgctxt "game_options"
 msgid "DSi (experiemental)"
 msgstr "DSi (deneysel)"
 
-#. TRANSLATION: dolphin, dolphin_triforce
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "DUAL CORE MODE"
 msgstr "ÇİFT ÇEKİRDEK MODU"
@@ -16989,7 +16989,7 @@ msgctxt "game_options"
 msgid "User XBOX button layout"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin_triforce
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Usually not much faster than single core mode."
 msgstr "Genellikle tek çekirdekli moddan çok daha hızlı değildir."
