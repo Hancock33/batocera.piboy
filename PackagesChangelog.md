@@ -11,6 +11,7 @@ Emulators|[xemu](https://github.com/xemu-project/xemu)|956ef0b2ebe50896b7801d4f5
 Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|1db6227265fa4ef566946844ceb8cec2ea30482b|Jan 03, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|4065e61ec5fce97d1be4f1e0657037061742d25e|Jan 03, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|a292c86cc91463b32f5579caec278c038d6bb724|Jan 03, 2025
+Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|559db2178d31d0efe2569504ffe1bcb6238d6885|Jan 03, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|ee191f3064e84565e4e4aa14270be2c9a58f0a22|Jan 03, 2025
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|0474eb3656aba7aed23e5e879eb8e84518201d19|Jan 03, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|0ef14642dd47b0c94acb672dd9d2dbacd4b43f0e|Jan 03, 2025
@@ -63,7 +64,6 @@ Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|aea70dd7a14234d9
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|096f85036e9e3760e51f94293714cfb1eb0972ac|Dec 31, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|e18ada7225299599fe4930587691a386a096a595|Dec 31, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|r14186|Dec 31, 2024
-Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|29032df5ea43a7f78a74b325c050612f9127f418|Dec 31, 2024
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0273|Dec 31, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.29.0-rc.3|Dec 31, 2024
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|7d70223c2c1ca70cace7726914ef2ad4410d5875|Dec 31, 2024

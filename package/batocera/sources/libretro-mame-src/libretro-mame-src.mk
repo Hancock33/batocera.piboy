@@ -3,8 +3,8 @@
 # libretro-mame-src
 #
 ################################################################################
-# Version: Commits on Dec 31, 2024
-LIBRETRO_MAME_SRC_VERSION = 29032df5ea43a7f78a74b325c050612f9127f418
+# Version: Commits on Jan 03, 2025
+LIBRETRO_MAME_SRC_VERSION = 559db2178d31d0efe2569504ffe1bcb6238d6885
 LIBRETRO_MAME_SRC_SITE = $(call github,Hancock33,lr-mame,$(LIBRETRO_MAME_SRC_VERSION))
 LIBRETRO_MAME_SRC_LICENSE = MAME
 
