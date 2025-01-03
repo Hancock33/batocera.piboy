@@ -9533,7 +9533,7 @@ msgctxt "game_options"
 msgid "MANUAL TEXTURE SAMPLING"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin_triforce
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Usually not much faster than single core mode."
 msgstr ""
@@ -9543,7 +9543,7 @@ msgctxt "game_options"
 msgid "EMULATION"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin_triforce
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "DUAL CORE MODE"
 msgstr ""

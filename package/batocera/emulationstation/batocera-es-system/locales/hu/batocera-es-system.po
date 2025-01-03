@@ -5901,7 +5901,7 @@ msgctxt "game_options"
 msgid "DSi (experiemental)"
 msgstr "DSi (kísérleti)"
 
-#. TRANSLATION: dolphin, dolphin_triforce
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "DUAL CORE MODE"
 msgstr "KETTŐS MAG ÜZEMMÓD"
@@ -17064,7 +17064,7 @@ msgctxt "game_options"
 msgid "User XBOX button layout"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin_triforce
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Usually not much faster than single core mode."
 msgstr "Általában nem sokkal gyorsabb, mint az egymagos üzemmód."

@@ -5888,7 +5888,7 @@ msgctxt "game_options"
 msgid "DSi (experiemental)"
 msgstr "DSi (experiemental)"
 
-#. TRANSLATION: dolphin, dolphin_triforce
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "DUAL CORE MODE"
 msgstr "MOD CU DOUĂ NUCLEE"
@@ -17045,7 +17045,7 @@ msgctxt "game_options"
 msgid "User XBOX button layout"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin_triforce
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Usually not much faster than single core mode."
 msgstr "De regulă nu este cu mult mai rapid decât modul cu un singur nucleu."

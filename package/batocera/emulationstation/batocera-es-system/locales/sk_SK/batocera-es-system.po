@@ -5858,7 +5858,7 @@ msgctxt "game_options"
 msgid "DSi (experiemental)"
 msgstr "DSi (experiementálne)"
 
-#. TRANSLATION: dolphin, dolphin_triforce
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "DUAL CORE MODE"
 msgstr "Dvojjadrový režim"
@@ -16820,7 +16820,7 @@ msgctxt "game_options"
 msgid "User XBOX button layout"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin_triforce
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Usually not much faster than single core mode."
 msgstr "Obyčajne nie oveľa rýchlejšie ako režim jedného jadra."
