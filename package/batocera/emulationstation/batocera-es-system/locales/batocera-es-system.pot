@@ -12494,7 +12494,12 @@ msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Centre (Default)"
+msgid "Fit resolution scale (Default)"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Center"
 msgstr ""
 
 #. TRANSLATION: scummvm
@@ -12505,11 +12510,6 @@ msgstr ""
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Even Pixels"
-msgstr ""
-
-#. TRANSLATION: scummvm
-msgctxt "game_options"
-msgid "Fit resolution scale"
 msgstr ""
 
 #. TRANSLATION: scummvm

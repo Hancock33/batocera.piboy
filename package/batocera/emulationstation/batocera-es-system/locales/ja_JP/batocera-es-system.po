@@ -4849,7 +4849,7 @@ msgstr "カタロニア語"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Centre (Default)"
+msgid "Center"
 msgstr ""
 
 #. TRANSLATION: amiberry
@@ -7904,8 +7904,8 @@ msgstr "画面に合わせる(アス比維持)"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale"
-msgstr "解像度スケールに合わせる"
+msgid "Fit resolution scale (Default)"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18392,6 +18392,10 @@ msgstr "黄/青"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "game_options"
+#~ msgid "Fit resolution scale"
+#~ msgstr "解像度スケールに合わせる"
 
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"

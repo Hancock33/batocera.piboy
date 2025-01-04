@@ -4868,7 +4868,7 @@ msgstr "Katalanca"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Centre (Default)"
+msgid "Center"
 msgstr ""
 
 #. TRANSLATION: amiberry
@@ -7961,8 +7961,8 @@ msgstr "Ekrana Sığdır"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale"
-msgstr "Çözünürlük ölçeğini sığdır"
+msgid "Fit resolution scale (Default)"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18748,6 +18748,10 @@ msgstr "sarı/mavi"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Hızlı İleri"
+
+#~ msgctxt "game_options"
+#~ msgid "Fit resolution scale"
+#~ msgstr "Çözünürlük ölçeğini sığdır"
 
 #~ msgctxt "game_options"
 #~ msgid "FlexDMD disabled"

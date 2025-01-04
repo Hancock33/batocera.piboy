@@ -4878,8 +4878,8 @@ msgstr "Catalao"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Centre (Default)"
-msgstr ""
+msgid "Center"
+msgstr "Central"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -7978,8 +7978,8 @@ msgstr "Ajustar Tela"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale"
-msgstr "Ajustar escala de resolucao"
+msgid "Fit resolution scale (Default)"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18788,10 +18788,6 @@ msgstr "amarelo/azul"
 #~ msgstr "Pode ser usado para simular cores de telas especÃ­ficas."
 
 #~ msgctxt "game_options"
-#~ msgid "Center"
-#~ msgstr "Central"
-
-#~ msgctxt "game_options"
 #~ msgid "Center (Default)"
 #~ msgstr "Centro (Padrao)"
 
@@ -19346,6 +19342,10 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Fills the screen regardless of the aspect ratio."
 #~ msgstr "Preenche a tela independentemente da proporcao de aspecto."
+
+#~ msgctxt "game_options"
+#~ msgid "Fit resolution scale"
+#~ msgstr "Ajustar escala de resolucao"
 
 #~ msgctxt "game_options"
 #~ msgid "Fix main 2D screen to follow action."

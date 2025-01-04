@@ -4863,8 +4863,8 @@ msgstr "Каталонский"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Centre (Default)"
-msgstr ""
+msgid "Center"
+msgstr "Центр"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -7946,8 +7946,8 @@ msgstr "По размеру экрана"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale"
-msgstr "Соответствует разрешению"
+msgid "Fit resolution scale (Default)"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18638,10 +18638,6 @@ msgstr "жёлтая/синяя"
 #~ msgstr "Может использоваться для имитации цветов конкретных дисплеев."
 
 #~ msgctxt "game_options"
-#~ msgid "Center"
-#~ msgstr "Центр"
-
-#~ msgctxt "game_options"
 #~ msgid "Center (Default)"
 #~ msgstr "По центру (по умолчанию)"
 
@@ -19100,6 +19096,10 @@ msgstr "жёлтая/синяя"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Перемотка"
+
+#~ msgctxt "game_options"
+#~ msgid "Fit resolution scale"
+#~ msgstr "Соответствует разрешению"
 
 #~ msgctxt "game_options"
 #~ msgid "Fix main 2D screen to follow action."

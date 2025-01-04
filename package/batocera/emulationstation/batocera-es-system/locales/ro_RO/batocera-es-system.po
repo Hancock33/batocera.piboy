@@ -4865,7 +4865,7 @@ msgstr "Catalană"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Centre (Default)"
+msgid "Center"
 msgstr ""
 
 #. TRANSLATION: amiberry
@@ -7968,8 +7968,8 @@ msgstr "Potrivește la ecran"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale"
-msgstr "Potrivire la scara rezoluției"
+msgid "Fit resolution scale (Default)"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18580,6 +18580,10 @@ msgstr "galben/albastru"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Derulare rapidă"
+
+#~ msgctxt "game_options"
+#~ msgid "Fit resolution scale"
+#~ msgstr "Potrivire la scara rezoluției"
 
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
