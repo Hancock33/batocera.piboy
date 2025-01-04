@@ -4851,7 +4851,7 @@ msgstr "Katalánčina"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Centre (Default)"
+msgid "Center"
 msgstr ""
 
 #. TRANSLATION: amiberry
@@ -7887,8 +7887,8 @@ msgstr "Prispôsobiť obrazovke"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale"
-msgstr "Prispôsobiť mierku rozlíšenia"
+msgid "Fit resolution scale (Default)"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18495,6 +18495,10 @@ msgstr "žltá/modrá"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rýchlo dopredu"
+
+#~ msgctxt "game_options"
+#~ msgid "Fit resolution scale"
+#~ msgstr "Prispôsobiť mierku rozlíšenia"
 
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"

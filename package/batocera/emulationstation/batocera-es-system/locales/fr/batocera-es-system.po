@@ -4876,7 +4876,7 @@ msgstr "Catalan"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Centre (Default)"
+msgid "Center"
 msgstr ""
 
 #. TRANSLATION: amiberry
@@ -7982,8 +7982,8 @@ msgstr "Se caler à l'écran"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale"
-msgstr "Satisfaire l'échelle de résolution"
+msgid "Fit resolution scale (Default)"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -19206,6 +19206,10 @@ msgstr "jaune/bleu"
 #~ msgctxt "game_options"
 #~ msgid "Fills the screen regardless of the aspect ratio."
 #~ msgstr "Remplir l'écran peu importe le ratio d'écran."
+
+#~ msgctxt "game_options"
+#~ msgid "Fit resolution scale"
+#~ msgstr "Satisfaire l'échelle de résolution"
 
 #~ msgctxt "game_options"
 #~ msgid "Fix main 2D screen to follow action."

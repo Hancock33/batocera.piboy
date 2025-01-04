@@ -4850,7 +4850,7 @@ msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Centre (Default)"
+msgid "Center"
 msgstr ""
 
 #. TRANSLATION: amiberry
@@ -7902,8 +7902,8 @@ msgstr "Pantailara egokitu"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale"
-msgstr "Egokitu bereizmen eskala"
+msgid "Fit resolution scale (Default)"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18470,6 +18470,10 @@ msgstr "horia/urdina"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Aurrera Azkar"
+
+#~ msgctxt "game_options"
+#~ msgid "Fit resolution scale"
+#~ msgstr "Egokitu bereizmen eskala"
 
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"

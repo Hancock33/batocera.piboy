@@ -58,7 +58,6 @@ vkd3d-proton.mk
 wf-recorder.mk
 wildmidi.mk
 winbtrfs.mk
-wine-lutris.mk
 wsdd.mk
 wxwidgets.mk
 x16emu.mk

@@ -4866,7 +4866,7 @@ msgstr "Catalano"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Centre (Default)"
+msgid "Center"
 msgstr ""
 
 #. TRANSLATION: amiberry
@@ -7950,8 +7950,8 @@ msgstr "Adatta allo Schermo"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale"
-msgstr "Adatta scalando alla risoluzione"
+msgid "Fit resolution scale (Default)"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18688,6 +18688,10 @@ msgstr "giallo/blu"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avanzamento Rapido"
+
+#~ msgctxt "game_options"
+#~ msgid "Fit resolution scale"
+#~ msgstr "Adatta scalando alla risoluzione"
 
 #~ msgctxt "game_options"
 #~ msgid "FlexDMD disabled"

@@ -4880,7 +4880,7 @@ msgstr "Catalán"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Centre (Default)"
+msgid "Center"
 msgstr ""
 
 #. TRANSLATION: amiberry
@@ -7990,8 +7990,8 @@ msgstr "Ajustar pantalla"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale"
-msgstr "Ajustar escala de resolución"
+msgid "Fit resolution scale (Default)"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18605,6 +18605,10 @@ msgstr "amarillo/azul"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rápido"
+
+#~ msgctxt "game_options"
+#~ msgid "Fit resolution scale"
+#~ msgstr "Ajustar escala de resolución"
 
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"

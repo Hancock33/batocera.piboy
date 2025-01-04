@@ -4870,8 +4870,8 @@ msgstr "Katalonski"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Centre (Default)"
-msgstr ""
+msgid "Center"
+msgstr "Wyśrodkuj"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -7973,8 +7973,8 @@ msgstr "Dopasuj do ekranu"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale"
-msgstr "Dopasuj skalę rozdzielczości"
+msgid "Fit resolution scale (Default)"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18756,10 +18756,6 @@ msgstr "żółty/niebieski"
 #~ "Może być używany do symulowania kolorów poszczególnych wyświetlaczy."
 
 #~ msgctxt "game_options"
-#~ msgid "Center"
-#~ msgstr "Wyśrodkuj"
-
-#~ msgctxt "game_options"
 #~ msgid "Center (Default)"
 #~ msgstr "Wyśrodkuj (domyślnie)"
 
@@ -19283,6 +19279,10 @@ msgstr "żółty/niebieski"
 #~ msgctxt "game_options"
 #~ msgid "Fills the screen regardless of the aspect ratio."
 #~ msgstr "Wypełnia ekran niezależnie od współczynnika proporcji."
+
+#~ msgctxt "game_options"
+#~ msgid "Fit resolution scale"
+#~ msgstr "Dopasuj skalę rozdzielczości"
 
 #~ msgctxt "game_options"
 #~ msgid "Fix main 2D screen to follow action."
