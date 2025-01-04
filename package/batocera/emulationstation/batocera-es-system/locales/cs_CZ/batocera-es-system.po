@@ -4852,8 +4852,8 @@ msgstr "Katalánština"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Centre (Default)"
-msgstr ""
+msgid "Center"
+msgstr "Střed"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -7916,8 +7916,8 @@ msgstr "Vhodná obrazovka"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale"
-msgstr "Měřítko rozlišení Fit"
+msgid "Fit resolution scale (Default)"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18570,10 +18570,6 @@ msgstr "žlutá/modrá"
 #~ msgstr "Lze použít k simulaci barev určitých displejů."
 
 #~ msgctxt "game_options"
-#~ msgid "Center"
-#~ msgstr "Střed"
-
-#~ msgctxt "game_options"
 #~ msgid "Center (Default)"
 #~ msgstr "Střed (Výchozí)"
 
@@ -19042,6 +19038,10 @@ msgstr "žlutá/modrá"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rychle vpřed"
+
+#~ msgctxt "game_options"
+#~ msgid "Fit resolution scale"
+#~ msgstr "Měřítko rozlišení Fit"
 
 #~ msgctxt "game_options"
 #~ msgid "Fix main 2D screen to follow action."
