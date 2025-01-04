@@ -4872,7 +4872,7 @@ msgstr "Katalán"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Centre (Default)"
+msgid "Center"
 msgstr ""
 
 #. TRANSLATION: amiberry
@@ -7982,8 +7982,8 @@ msgstr "Képernyőhöz igazítás"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale"
-msgstr "Fit felbontás skála"
+msgid "Fit resolution scale (Default)"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18680,6 +18680,10 @@ msgstr "sárga/kék"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Gyors előre"
+
+#~ msgctxt "game_options"
+#~ msgid "Fit resolution scale"
+#~ msgstr "Fit felbontás skála"
 
 #~ msgctxt "game_options"
 #~ msgid "FlexDMD disabled"

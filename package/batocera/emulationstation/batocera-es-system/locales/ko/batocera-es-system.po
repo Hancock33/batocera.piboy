@@ -4858,7 +4858,7 @@ msgstr "카탈로니아어"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Centre (Default)"
+msgid "Center"
 msgstr ""
 
 #. TRANSLATION: amiberry
@@ -7921,8 +7921,8 @@ msgstr "화면 맞추기"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale"
-msgstr "해상도 스케일 맞추기"
+msgid "Fit resolution scale (Default)"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18581,6 +18581,10 @@ msgstr "노란색/파란색"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "빨리감기"
+
+#~ msgctxt "game_options"
+#~ msgid "Fit resolution scale"
+#~ msgstr "해상도 스케일 맞추기"
 
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"

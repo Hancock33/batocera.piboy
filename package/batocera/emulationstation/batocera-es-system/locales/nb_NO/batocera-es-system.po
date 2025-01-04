@@ -4854,7 +4854,7 @@ msgstr "Katalansk"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Centre (Default)"
+msgid "Center"
 msgstr ""
 
 #. TRANSLATION: amiberry
@@ -7932,8 +7932,8 @@ msgstr "Fit-skjerm"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale"
-msgstr "Tilpass oppløsningsskala"
+msgid "Fit resolution scale (Default)"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18560,6 +18560,10 @@ msgstr "gul/blå"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "FastForward"
+
+#~ msgctxt "game_options"
+#~ msgid "Fit resolution scale"
+#~ msgstr "Tilpass oppløsningsskala"
 
 #~ msgctxt "game_options"
 #~ msgid "FlexDMD disabled"
