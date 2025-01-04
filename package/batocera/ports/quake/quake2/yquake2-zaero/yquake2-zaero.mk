@@ -3,8 +3,8 @@
 # yquake2-zaero
 #
 ################################################################################
-# Version: Commits on Dec 21, 2024
-YQUAKE2_ZAERO_VERSION = c3322bec3fb9760fcdc615615a8dcab6d59b6bed
+# Version: Commits on Jan 04, 2025
+YQUAKE2_ZAERO_VERSION = 093aaefdfd2b7396fd518e3be6ff197552a3d072
 YQUAKE2_ZAERO_SITE = https://github.com/yquake2/zaero.git
 YQUAKE2_ZAERO_SITE_METHOD = git
 YQUAKE2_ZAERO_DEPENDENCIES = sdl2
