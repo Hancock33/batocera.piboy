@@ -3,10 +3,10 @@
 # python-gpiod
 #
 ################################################################################
-# Version: Commits on Nov 12, 2024
-PYTHON_GPIOD_VERSION = 2.2.2
+# Version: Commits on Dec 20, 2024
+PYTHON_GPIOD_VERSION = 2.2.3
 PYTHON_GPIOD_SOURCE = gpiod-$(PYTHON_GPIOD_VERSION).tar.gz
-PYTHON_GPIOD_SITE = https://files.pythonhosted.org/packages/5a/be/9876843be7d8d3e05582de8919077b9084beac5d9791b139653e3048e4fd
+PYTHON_GPIOD_SITE = https://files.pythonhosted.org/packages/17/3f/774043a7328048e506a80425d8c114f8faf445cfc958f7a59dedc0fcaf36
 PYTHON_GPIOD_SETUP_TYPE = setuptools
 
 $(eval $(python-package))
