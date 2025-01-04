@@ -202,7 +202,7 @@ msgstr "1.5x (960x720)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "1.5x Native"
-msgstr "1.5x"
+msgstr "1.5x Native"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
@@ -377,7 +377,7 @@ msgstr "10"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "10x Native (6400x5280)"
-msgstr ""
+msgstr "10x Native (6400x5280)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -402,7 +402,7 @@ msgstr "11"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "11x Native (7040x5808)"
-msgstr ""
+msgstr "11x Native (7040x5808)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -492,7 +492,7 @@ msgstr "12"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "12x Native (7680x6336) for 8K"
-msgstr ""
+msgstr "12x Native (7680x6336) для 8K"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -687,7 +687,7 @@ msgstr "16x (~7680p / 16k)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "16x Anistropic"
-msgstr ""
+msgstr "16x Anistropic"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -1137,7 +1137,7 @@ msgstr "2x (~960)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "2x Anistropic"
-msgstr ""
+msgstr "2x Anistropic"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -1147,7 +1147,7 @@ msgstr "2x MSAA"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "2x Native (1280x1056) for 720p"
-msgstr ""
+msgstr "2x Native (1280x1056) для 720p"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -1367,7 +1367,7 @@ msgstr "3x (2160p/3240p)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "3x Native (1920x1584) for 1080p"
-msgstr ""
+msgstr "3x Native (1920x1584) для 1080p"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -1547,7 +1547,7 @@ msgstr "4x (~1920p)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "4x Anistropic"
-msgstr ""
+msgstr "4x Anistropic"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -1562,7 +1562,7 @@ msgstr "4x МУЛЬТИСЭМПЛИНГ"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "4x Native (2560x2112) for 1440p"
-msgstr ""
+msgstr "4x Native (2560x2112) для 1440p"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -1737,7 +1737,7 @@ msgstr "5x (3600p/5400p)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "5x Native (3200x2640)"
-msgstr ""
+msgstr "5x Native (3200x2640)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -1862,7 +1862,7 @@ msgstr "6x 4K (3840x3168)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "6x Native (3840x3168) for 4K"
-msgstr ""
+msgstr "6x Native (3840x3168) для 4K"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -1947,7 +1947,7 @@ msgstr "7x (5040p/7560p)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "7x Native (4480x3696)"
-msgstr ""
+msgstr "7x Native (4480x3696)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -2062,7 +2062,7 @@ msgstr "8x 5K (5120x4224)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "8x Anistropic"
-msgstr ""
+msgstr "8x Anistropic"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -2072,7 +2072,7 @@ msgstr "8x MSAA"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "8x Native (5120x4224) for 5K"
-msgstr ""
+msgstr "8x Native (5120x4224) для 5K"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -2132,7 +2132,7 @@ msgstr "9x 4K (2880x2160)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "9x Native (5760x4752)"
-msgstr ""
+msgstr "9x Native (5760x4752)"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
@@ -2778,6 +2778,7 @@ msgstr "Влияет на масштабирование эмулируемых 
 msgctxt "game_options"
 msgid "Affects how the game output is scaled to the resolution."
 msgstr ""
+"Влияет на то, как вывод игры масштабируется в соответствии с разрешением."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -3188,7 +3189,7 @@ msgstr "Archimedes 540"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Area Sampling"
-msgstr ""
+msgstr "Area Sampling"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -3351,7 +3352,7 @@ msgstr "Авто-обнаружение (по тегу названия игры
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Automap"
-msgstr ""
+msgstr "Automap"
 
 #. TRANSLATION: amiberry, drastic, libretro/parallel_n64, libretro/tyrquake, melonds, ...
 msgctxt "game_options"
@@ -3743,17 +3744,17 @@ msgstr "Bicubic"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Bicubic: B-Spine"
-msgstr ""
+msgstr "Bicubic: B-Spine"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Bicubic: Catmull-Rom"
-msgstr ""
+msgstr "Bicubic: Catmull-Rom"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Bicubic: Mitchell-Netravali"
-msgstr ""
+msgstr "Bicubic: Mitchell-Netravali"
 
 #. TRANSLATION: bigpemu, cemu, dolphin_triforce, drastic, duckstation, ...
 msgctxt "game_options"
@@ -7006,7 +7007,7 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Enable the cheat list (if available)."
-msgstr ""
+msgstr "Включить список читов (если доступен)."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -7471,7 +7472,7 @@ msgstr "Выйти из DuckStation"
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Exit Game"
-msgstr ""
+msgstr "Выйти из игры"
 
 #. TRANSLATION: steam.keys
 msgctxt "keys_files"
@@ -8137,32 +8138,32 @@ msgstr "Принудительно исп. DNS по умолчанию"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear"
-msgstr ""
+msgstr "Force Linear"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear and 16x Anistropic"
-msgstr ""
+msgstr "Force Linear and 16x Anistropic"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear and 2x Anistropic"
-msgstr ""
+msgstr "Force Linear and 2x Anistropic"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear and 4x Anistropic"
-msgstr ""
+msgstr "Force Linear and 4x Anistropic"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear and 8x Anistropic"
-msgstr ""
+msgstr "Force Linear and 8x Anistropic"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Nearest"
-msgstr ""
+msgstr "Force Nearest"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -8548,7 +8549,7 @@ msgstr "GBC - Тёмно-зелёный"
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GBC - Game Specific"
-msgstr ""
+msgstr "GBC - Game Specific"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
@@ -9368,7 +9369,7 @@ msgstr "ЧТЕНИЕ ИЗОБРАЖЕНИЙ"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid "IMAGE SCALING"
-msgstr ""
+msgstr "МАСШТАБИРОВАНИЕ ИЗОБРАЖЕНИЯ"
 
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
@@ -11176,17 +11177,17 @@ msgstr "Клик мышью"
 #. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Move Backward"
-msgstr ""
+msgstr "Двигаться назад"
 
 #. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Move Forward"
-msgstr ""
+msgstr "Двигайтесь вперед"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
-msgstr ""
+msgstr "Двигаться вперед. Можно нажать W."
 
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
@@ -11454,7 +11455,7 @@ msgstr "Родное"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Native (640x528)"
-msgstr ""
+msgstr "Native (640x528)"
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
@@ -11514,7 +11515,7 @@ msgstr "Ближайший сосед"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid "Nearest-neighbor"
-msgstr ""
+msgstr "Nearest-neighbor"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11783,7 +11784,7 @@ msgstr "ЭКРАННЫЕ СООБЩЕНИЯ"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "OUTPUT RESAMPLING"
-msgstr ""
+msgstr "OUTPUT RESAMPLING"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -12036,17 +12037,17 @@ msgstr "Открыть консоль LUA"
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Open Load Menu"
-msgstr ""
+msgstr "Открыть меню загрузки"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Open Menu"
-msgstr ""
+msgstr "Открыть меню"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Open Save Menu"
-msgstr ""
+msgstr "Открыть меню сохранения"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -12902,12 +12903,12 @@ msgstr ""
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Press the N key for 'Novice' or 'No'"
-msgstr ""
+msgstr "Нажмите клавишу N для 'Novice' или 'No'"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Press the Y key for 'Yes'"
-msgstr ""
+msgstr "Нажмите клавишу N для 'Yes'"
 
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
@@ -14663,17 +14664,17 @@ msgstr "Больше резкости"
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Shoot"
-msgstr ""
+msgstr "Стрелять"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Shoot Xterm"
-msgstr ""
+msgstr "Shoot Xterm"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Shoot Zappper"
-msgstr ""
+msgstr "Shoot Zappper"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -14863,7 +14864,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Sine"
-msgstr ""
+msgstr "Sine"
 
 #. TRANSLATION: suyu, xenia, xenia-canary
 msgctxt "game_options"
@@ -15370,7 +15371,7 @@ msgstr "Старт"
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Start / Enter"
-msgstr ""
+msgstr "Start / Enter"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -15430,12 +15431,12 @@ msgstr ""
 #. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
-msgstr ""
+msgstr "Стрейф влево"
 
 #. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
-msgstr ""
+msgstr "Стрейф вправо"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -15475,7 +15476,7 @@ msgstr "Растягивает игры на весь экран, но може�
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Stretch to Window"
-msgstr ""
+msgstr "Растянуть окно"
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
@@ -15517,7 +15518,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Strong"
-msgstr ""
+msgstr "Сильный"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -15644,6 +15645,8 @@ msgid ""
 "Switches between smooth (Bilinear) and sharp (Nearest Neighbor) image "
 "scaling."
 msgstr ""
+"Переключение между плавным (Bilinear) и резким (Nearest Neighbor) "
+"масштабированием изображения."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -16280,7 +16283,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Triangle"
-msgstr ""
+msgstr "Треугольник"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -16339,12 +16342,12 @@ msgstr "Turkish (tr)"
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Turn Left"
-msgstr ""
+msgstr "Поворот налево"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Turn Right"
-msgstr ""
+msgstr "Поворот направо"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -16836,7 +16839,7 @@ msgstr ""
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Use Potion"
-msgstr ""
+msgstr "Использовать зелье"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17403,7 +17406,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Weak"
-msgstr ""
+msgstr "Слабый"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18089,7 +18092,7 @@ msgstr "трилинейная"
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "use with R3 for cheat automap"
-msgstr ""
+msgstr "использовать с R3 для чит-автокарты"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
