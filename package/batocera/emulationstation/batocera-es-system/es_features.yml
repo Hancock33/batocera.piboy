@@ -10464,19 +10464,19 @@ scummvm:
           prompt: STRETCH MODE
           description: Stretches the output to fill the display area.
           choices:
-              "Centre (Default)":     "centre"
+              "Fit resolution scale (Default)": "fit"
+              "Center":     "center"
               "Pixel Perfect":        "pixel-perfect"
               "Even Pixels":          "even-pixels"
-              "Fit resolution scale": "fit"
               "Stretch to screen":    "stretch"
               "Fit 4:3 Aspect Ratio": "fit_force_aspect"
       scumm_renderer:
           prompt: RENDERER
           description: Choose your preferred renderer.
           choices:
-                "Software":            "software"
-                "OpenGL (Default)":    "opengl"
-                "OpenGL with Shaders": "opengl_shaders"
+              "Software":            "software"
+              "OpenGL (Default)":    "opengl"
+              "OpenGL with Shaders": "opengl_shaders"
       scumm_language:
           prompt: LANGUAGE
           description: Choose your preferred language.
