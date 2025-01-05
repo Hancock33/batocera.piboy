@@ -29,7 +29,6 @@ define LIBRETRO_CORE_INFO_INSTALL_TARGET_CMDS
 	mv $(@D)/mednafen_supafaust_libretro.info	$(TARGET_DIR)/usr/share/libretro/info/supafaust_libretro.info
 	mv $(@D)/mednafen_vb_libretro.info			$(TARGET_DIR)/usr/share/libretro/info/vb_libretro.info
 	mv $(@D)/mupen64plus_next_libretro.info		$(TARGET_DIR)/usr/share/libretro/info/mupen64plus-next_libretro.info
-	cp $(@D)/pcsx2_libretro.info				$(TARGET_DIR)/usr/share/libretro/info/lrps2_libretro.info.info
 	cp $(@D)/snes9x2010_libretro.info			$(TARGET_DIR)/usr/share/libretro/info/pocketsnes_libretro.info
 	mv $(@D)/snes9x2010_libretro.info			$(TARGET_DIR)/usr/share/libretro/info/snes9x_next_libretro.info
 	mv $(@D)/vbam_libretro.info					$(TARGET_DIR)/usr/share/libretro/info/vba-m_libretro.info
