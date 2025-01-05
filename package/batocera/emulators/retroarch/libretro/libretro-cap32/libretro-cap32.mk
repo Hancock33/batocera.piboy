@@ -3,8 +3,8 @@
 # libretro-cap32
 #
 ################################################################################
-# Version: Commits on Dec 28, 2024
-LIBRETRO_CAP32_VERSION = 87324412065dec08c5a4f290d966772ed14560fe
+# Version: Commits on Jan 05, 2025
+LIBRETRO_CAP32_VERSION = a1690625a761ddedfce99d23d91c9590917b69c1
 LIBRETRO_CAP32_SITE = $(call github,libretro,libretro-cap32,$(LIBRETRO_CAP32_VERSION))
 LIBRETRO_CAP32_LICENSE = GPLv2
 
