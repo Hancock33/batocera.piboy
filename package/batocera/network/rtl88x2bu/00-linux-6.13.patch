@@ -1,0 +1,38 @@
+diff --git a/os_dep/linux/ioctl_cfg80211.c b/os_dep/linux/ioctl_cfg80211.c
+index b5b3e38..b2bc9f6 100644
+--- a/os_dep/linux/ioctl_cfg80211.c
++++ b/os_dep/linux/ioctl_cfg80211.c
+@@ -1682,7 +1682,7 @@ exit:
+ 	return ret;
+ }
+ #endif /* CONFIG_AP_MODE */
+-
++__attribute__((no_sanitize("bounds")))
+ static int rtw_cfg80211_set_encryption(struct net_device *dev, struct ieee_param *param)
+ {
+ 	int ret = 0;
+@@ -6912,7 +6912,10 @@ static void rtw_get_chbwoff_from_cfg80211_chan_def(
+ 
+ static int cfg80211_rtw_set_monitor_channel(struct wiphy *wiphy
+ #if (LINUX_VERSION_CODE >= KERNEL_VERSION(3, 8, 0))
+-	, struct cfg80211_chan_def *chandef
++  #if (LINUX_VERSION_CODE >= KERNEL_VERSION(6, 13, 0))
++        , struct net_device *netdev
++  #endif
++        , struct cfg80211_chan_def *chandef
+ #else
+ 	, struct ieee80211_channel *chan
+ 	, enum nl80211_channel_type channel_type
+diff --git a/os_dep/linux/os_intfs.c b/os_dep/linux/os_intfs.c
+index 05b9120..010bec9 100644
+--- a/os_dep/linux/os_intfs.c
++++ b/os_dep/linux/os_intfs.c
+@@ -32,7 +32,7 @@ MODULE_VERSION(DRIVERVERSION);
+  * You can modify or add flags in the fs/Makefile.
+  */
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 10, 0)
+-	MODULE_IMPORT_NS(VFS_internal_I_am_really_a_filesystem_and_am_NOT_a_driver);
++	MODULE_IMPORT_NS("VFS_internal_I_am_really_a_filesystem_and_am_NOT_a_driver");
+ #endif
+ 
+ /* module param defaults */
