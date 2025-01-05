@@ -17,7 +17,6 @@ DROIDPORTS_SUPPORTS_IN_SOURCE_BUILD = NO
 DROIDPORTS_CONF_OPTS += -DPLATFORM=linux
 DROIDPORTS_CONF_OPTS += -DPORT=gmloader
 DROIDPORTS_CONF_OPTS += -DCMAKE_TOOLCHAIN_FILE=$(HOST_DIR)/share/buildroot/toolchainfile.cmake
-DROIDPORTS_CONF_OPTS += -DCMAKE_CXX_FLAGS="-Wno-error -Wno-incompatible-pointer-types -Wno-int-conversion -Wno-implicit-function-declaration"
 DROIDPORTS_CONF_OPTS += -DCMAKE_C_FLAGS="-Wno-error -Wno-incompatible-pointer-types -Wno-int-conversion -Wno-implicit-function-declaration"
 
 define DROIDPORTS_INSTALL_TARGET_CMDS
