@@ -563,10 +563,10 @@ index 60f15a9ba7a5..c3da48c213d4 100644
  
  	/* TODO: DYNAMIC_VALIDATION needs to be implemented */
 diff --git a/drivers/hid/Kconfig b/drivers/hid/Kconfig
-index 4d2a89d65b65..89357822c27b 100644
+index 4ef6e1579e4c..afc73b1093fb 100644
 --- a/drivers/hid/Kconfig
 +++ b/drivers/hid/Kconfig
-@@ -164,6 +164,15 @@ config HID_ASUS
+@@ -188,6 +188,15 @@ config HID_ASUS
  	- GL553V series
  	- GL753V series
  
@@ -583,11 +583,11 @@ index 4d2a89d65b65..89357822c27b 100644
  	tristate "Aureal"
  	help
 diff --git a/drivers/hid/Makefile b/drivers/hid/Makefile
-index 24de45f3677d..f338c9eb4600 100644
+index 1989288e0438..a6a50ebf9b17 100644
 --- a/drivers/hid/Makefile
 +++ b/drivers/hid/Makefile
-@@ -31,6 +31,7 @@ obj-$(CONFIG_HID_APPLE)		+= hid-apple.o
- obj-$(CONFIG_HID_APPLEIR)	+= hid-appleir.o
+@@ -33,6 +33,7 @@ obj-$(CONFIG_HID_APPLETB_BL)	+= hid-appletb-bl.o
+ obj-$(CONFIG_HID_APPLETB_KBD)	+= hid-appletb-kbd.o
  obj-$(CONFIG_HID_CREATIVE_SB0540)	+= hid-creative-sb0540.o
  obj-$(CONFIG_HID_ASUS)		+= hid-asus.o
 +obj-$(CONFIG_HID_ASUS_ALLY)	+= hid-asus-ally.o
@@ -3246,7 +3246,7 @@ index 000000000000..518d8db3af5e
 +	ALLY_DEVICE_ATTR_RW(btn_mapping_##_fname##_turbo, turbo);          \
 +	ALLY_BTN_ATTRS_GROUP_WITH_TURBO(btn_##_fname, btn_mapping_##_fname)
 diff --git a/drivers/hid/hid-asus.c b/drivers/hid/hid-asus.c
-index 506c6f377e7d..53ed8d5b26ab 100644
+index 506c6f377e7d..ef18f721e2ff 100644
 --- a/drivers/hid/hid-asus.c
 +++ b/drivers/hid/hid-asus.c
 @@ -52,6 +52,10 @@ MODULE_DESCRIPTION("Asus HID Keyboard and TouchPad");
@@ -3986,7 +3986,7 @@ index e1b142947067..fe3e7e7dede8 100644
  obj-$(CONFIG_ASUS_TF103C_DOCK)	+= asus-tf103c-dock.o
 diff --git a/drivers/platform/x86/asus-armoury.c b/drivers/platform/x86/asus-armoury.c
 new file mode 100644
-index 000000000000..fb4ae804521d
+index 000000000000..e41de5690327
 --- /dev/null
 +++ b/drivers/platform/x86/asus-armoury.c
 @@ -0,0 +1,1075 @@
