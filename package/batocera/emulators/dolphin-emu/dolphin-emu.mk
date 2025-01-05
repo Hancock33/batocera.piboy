@@ -3,8 +3,8 @@
 # dolphin-emu
 #
 ################################################################################
-# Version: Commits on Jan 01, 2025
-DOLPHIN_EMU_VERSION = f15a78ed380c696764068905cf823984a2a488e1
+# Version: Commits on Jan 05, 2025
+DOLPHIN_EMU_VERSION = 6b686be5f167d0b6ce7181d8d15a88bf9273e372
 DOLPHIN_EMU_VERSION_MAJOR = 2409
 DOLPHIN_EMU_VERSION_MINOR = 233
 DOLPHIN_EMU_SITE = https://github.com/dolphin-emu/dolphin
@@ -15,6 +15,10 @@ DOLPHIN_EMU_SUPPORTS_IN_SOURCE_BUILD = NO
 
 DOLPHIN_EMU_DEPENDENCIES = libevdev ffmpeg zlib libpng lzo libusb libcurl
 DOLPHIN_EMU_DEPENDENCIES += bluez5_utils hidapi xz host-xz sdl2
+# add dolphin-triforce as a dependency so it builds first
+ifeq ($(BR2_PACKAGE_DOLPHIN_TRIFORCE),y)
+DOLPHIN_EMU_DEPENDENCIES += dolphin-triforce
+endif
 
 DOLPHIN_EMU_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 DOLPHIN_EMU_CONF_OPTS += -DDISTRIBUTOR='batocera.linux'

@@ -1,6 +1,8 @@
---- a/yabause/src/libretro/Makefile	2020-11-03 16:31:05.936244755 +0100
-+++ b/yabause/src/libretro/Makefile	2020-11-03 16:36:16.969838603 +0100
-@@ -134,6 +134,22 @@
+diff --git a/yabause/src/libretro/Makefile b/yabause/src/libretro/Makefile
+index 20168e50e..5e33d7f92 100644
+--- a/yabause/src/libretro/Makefile
++++ b/yabause/src/libretro/Makefile
+@@ -134,6 +134,22 @@ else ifeq ($(platform), odroid-n2)
  		FLAGS += -march=armv8-a+crc -mtune=cortex-a73.cortex-a53
  	endif
  

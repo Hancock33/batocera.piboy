@@ -3,13 +3,13 @@
 # xemu
 #
 ################################################################################
-# Version: Commits on Dec 31, 2024
-XEMU_VERSION = 8f478e017a0f7bac7d72d4abe23e77233f221bce
+# Version: Commits on Jan 03, 2025
+XEMU_VERSION = 956ef0b2ebe50896b7801d4f5ea621e431d9e3ae
 XEMU_SITE = https://github.com/xemu-project/xemu
 XEMU_SITE_METHOD=git
 XEMU_GIT_SUBMODULES=YES
 XEMU_LICENSE = GPLv2
-XEMU_DEPENDENCIES = sdl2 libsamplerate slirp libepoxy libgtk3 libpcap pixman
+XEMU_DEPENDENCIES = dtc libepoxy libgtk3 libpcap libsamplerate pixman sdl2 slirp
 
 XEMU_EXTRA_DOWNLOADS = https://github.com/mborgerson/xemu-hdd-image/releases/download/1.0/xbox_hdd.qcow2.zip
 
@@ -73,9 +73,10 @@ XEMU_CONF_OPTS += --disable-whpx
 XEMU_CONF_OPTS += --with-default-devices
 XEMU_CONF_OPTS += --disable-renderdoc
 XEMU_CONF_OPTS += --enable-avx2
+XEMU_CONF_OPTS += --enable-fdt
 
 define XEMU_CONFIGURE_CMDS
-	cd $(@D) && $(TARGET_CONFIGURE_OPTS) ./configure $(XEMU_CONF_OPTS)
+	cd $(@D) && $(TARGET_CONFIGURE_OPTS) SSL_CERT_DIR=/etc/ssl/certs ./configure $(XEMU_CONF_OPTS)
 endef
 
 define XEMU_BUILD_CMDS
@@ -98,10 +99,19 @@ define XEMU_INSTALL_TARGET_CMDS
 	$(UNZIP) -ob $(XEMU_DL_DIR)/xbox_hdd.qcow2.zip xbox_hdd.qcow2 -d $(TARGET_DIR)/usr/share/xemu/data
 endef
 
+define XEMU_SUBMODULES
+	rm -rf $(@D)/subprojects/cpp-httplib
+	rm -rf $(@D)/subprojects/nv2a_vsh_cpu
+	rm -rf $(@D)/subprojects/tomlplusplus
+	cd $(@D)/subprojects && git clone https://github.com/yhirose/cpp-httplib
+	cd $(@D)/subprojects && git clone https://github.com/xemu-project/nv2a_vsh_cpu
+	cd $(@D)/subprojects && git clone https://github.com/marzer/tomlplusplus
+endef
+
 define XEMU_VERSION_DETAILS
-    $(GIT) -C $(XEMU_DL_DIR)/git rev-parse HEAD 2>/dev/null | tr -d '\n' > $(@D)/XEMU_COMMIT
-    $(GIT) -C $(XEMU_DL_DIR)/git symbolic-ref --short HEAD | cut -d'/' -f2- > $(@D)/XEMU_BRANCH
-    $(GIT) -C $(XEMU_DL_DIR)/git describe --tags --match 'v*' | cut -c 2- | tr -d '\n' > $(@D)/XEMU_VERSION
+	$(GIT) -C $(XEMU_DL_DIR)/git rev-parse HEAD 2>/dev/null | tr -d '\n' > $(@D)/XEMU_COMMIT
+	$(GIT) -C $(XEMU_DL_DIR)/git symbolic-ref --short HEAD | cut -d'/' -f2- > $(@D)/XEMU_BRANCH
+	$(GIT) -C $(XEMU_DL_DIR)/git describe --tags --match 'v*' | cut -c 2- | tr -d '\n' > $(@D)/XEMU_VERSION
 endef
 
 define XEMU_EVMAPY
@@ -110,6 +120,7 @@ define XEMU_EVMAPY
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/xemu/xbox.xemu.keys $(TARGET_DIR)/usr/share/evmapy/chihiro.keys
 endef
 
+XEMU_POST_EXTRACT_HOOKS = XEMU_SUBMODULES
 XEMU_PRE_CONFIGURE_HOOKS = XEMU_VERSION_DETAILS
 XEMU_POST_INSTALL_TARGET_HOOKS += XEMU_EVMAPY
 

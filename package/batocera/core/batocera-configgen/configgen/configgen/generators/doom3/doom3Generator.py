@@ -119,7 +119,7 @@ class Doom3Generator(Generator):
             commandArray.extend(
                 ["+set", "fs_game_base", "d3xp"]
             )
-        
+
         if directory == "d3le":
             commandArray.extend(
                 ["+set", "fs_game_base", "d3xp", "+seta", "com_allowconsole", "1"]
