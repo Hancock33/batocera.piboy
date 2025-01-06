@@ -563,10 +563,10 @@ index 60f15a9ba7a5..c3da48c213d4 100644
  
  	/* TODO: DYNAMIC_VALIDATION needs to be implemented */
 diff --git a/drivers/hid/Kconfig b/drivers/hid/Kconfig
-index 4ef6e1579e4c..afc73b1093fb 100644
+index 311f0ab5d42f..79426232a460 100644
 --- a/drivers/hid/Kconfig
 +++ b/drivers/hid/Kconfig
-@@ -188,6 +188,15 @@ config HID_ASUS
+@@ -189,6 +189,15 @@ config HID_ASUS
  	- GL553V series
  	- GL753V series
  
