@@ -3,8 +3,8 @@
 # dolphin-emu
 #
 ################################################################################
-# Version: Commits on Jan 05, 2025
-DOLPHIN_EMU_VERSION = 6b686be5f167d0b6ce7181d8d15a88bf9273e372
+# Version: Commits on Jan 06, 2025
+DOLPHIN_EMU_VERSION = b35f7af355dad22b1b2d408c5d17d781e506686f
 DOLPHIN_EMU_VERSION_MAJOR = 2409
 DOLPHIN_EMU_VERSION_MINOR = 233
 DOLPHIN_EMU_SITE = https://github.com/dolphin-emu/dolphin
