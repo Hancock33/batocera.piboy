@@ -23,6 +23,7 @@ Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.29.0|Jan 06, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|7976386dcc3efad39159a71a60b747e3842af3ff|Jan 06, 2025
 Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|c359e1d9a013e95f6f2031093c07a6c8f49ec6e7|Jan 06, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|5399faaa9d6e625fd462cb92d7d203c88df2cd10|Jan 06, 2025
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|1.4.304|Jan 06, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|22690bbb7635e46f14c3f40a90b602cb64cc6e28|Jan 06, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|83b5edea8856775833aba1184acc072d4a4fa994|Jan 06, 2025
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|7976386dcc3efad39159a71a60b747e3842af3ff|Jan 06, 2025
@@ -140,7 +141,6 @@ Libraries|[python-gpiod](https://files.pythonhosted.org/packages/17/3f/774043a73
 Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.5.2|Dec 20, 2024
 Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|v1.4.304|Dec 20, 2024
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|v1.4.304|Dec 20, 2024
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|0b17a763ba5643e32da1b2152f8140461b3b7345|Dec 20, 2024
 Libraries|[projectm](http://github.com/projectM-visualizer/projectm)|v4.1.3|Dec 19, 2024
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.15.91|Dec 19, 2024
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|cede5047101299802a9756f0885e24a5b6f2fbb5|Dec 19, 2024
