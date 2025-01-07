@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jan 06, 2025
-THEXTECH_VERSION = c77a205e6a2ca3c338d089e736eed469c0b91879
+THEXTECH_VERSION = 82b965122339542b3ae977bf2a3169de5de7db7b
 THEXTECH_SITE = https://github.com/TheXTech/TheXTech
 THEXTECH_SITE_METHOD = git
 THEXTECH_GIT_SUBMODULES = YES
