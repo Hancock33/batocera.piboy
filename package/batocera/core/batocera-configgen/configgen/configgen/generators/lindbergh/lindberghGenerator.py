@@ -79,7 +79,7 @@ class LindberghGenerator(Generator):
                 modified_lines.append("FULLSCREEN 1\n")
             else:
                 modified_lines.append(line)
-                
+
         ## ES options
 
         # Handle freeplay option
@@ -94,7 +94,7 @@ class LindberghGenerator(Generator):
 
         if not freeplay_replaced:
             modified_lines.append(f"FREEPLAY {freeplay_value}\n")
-        
+
         # Handle region option
         region_value = system.config["lindbergh_region"] if system.isOptSet("lindbergh_region") else "JP"
         region_replaced = False
@@ -107,7 +107,7 @@ class LindberghGenerator(Generator):
 
         if not region_replaced:
             modified_lines.append(f"REGION {region_value}\n")
-        
+
         # Handle the aspect ratio option
         aspect_value = "1" if system.isOptSet("lindbergh_aspect") and system.getOptBoolean("lindbergh_aspect") else "0"
         aspect_replaced = False
@@ -120,7 +120,7 @@ class LindberghGenerator(Generator):
 
         if not aspect_replaced:
             modified_lines.append(f"KEEP_ASPECT_RATIO {aspect_value}\n")
-        
+
         # FPS limit option
         limit_value = "1" if system.isOptSet("lindbergh_limit") and system.getOptBoolean("lindbergh_limit") else "0"
         limit_replaced = False
@@ -146,7 +146,7 @@ class LindberghGenerator(Generator):
 
         if not fps_replaced:
             modified_lines.append(f"FPS_TARGET {fps_value}\n")
-        
+
         # Non ES option but to set automatically in the rom is OutRun
         outrun_value = "1" if "outrun" in romName.lower() else "0"
         outrun_replaced = False
@@ -159,7 +159,7 @@ class LindberghGenerator(Generator):
 
         if not outrun_replaced:
             modified_lines.append(f"SKIP_OUTRUN_CABINET_CHECK {outrun_value}\n")
-        
+
         # Replace or append controller configuration
         nplayer = 1
         for playercontroller, pad in sorted(playersControllers.items()):
@@ -197,7 +197,7 @@ class LindberghGenerator(Generator):
         # Write back the modified configuration
         with _LINDBERGH_CONFIG_FILE.open('w') as file:
             file.writelines(modified_lines)
-        
+
         # Setup some library quirks for GPU support (NVIDIA?)
         source = Path("/lib32/libkswapapi.so")
         if source.exists():
@@ -205,7 +205,7 @@ class LindberghGenerator(Generator):
             if not destination.exists():
                 shutil.copy2(source, destination)
                 eslog.debug(f"Copied: {destination} from {source}")
-        
+
         # -= Game specific library versions =-
         if "harley" in romName.lower() or "spicy" in romName.lower():
             destCg = Path(romDir) / "libCg.so"
@@ -216,7 +216,7 @@ class LindberghGenerator(Generator):
             if not destCgGL.exists():
                 shutil.copy2("/lib32/extralibs/libCgGL.so.other", destCgGL)
                 eslog.debug(f"Copied: {destCgGL}")
-        
+
         if "stage 4" in romName.lower():
             destination = Path(romDir) / "libCgGL.so"
             if not destination.exists():
@@ -232,7 +232,7 @@ class LindberghGenerator(Generator):
             if not destCgGL.exists():
                 shutil.copy2("/lib32/extralibs/libCgGL.so.tennis", destCgGL)
                 eslog.debug(f"Copied: {destCgGL}")
-        
+
         # Change to the ROM path before launching
         os.chdir(romDir)
 
