@@ -1,8 +1,8 @@
 diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
-index 2d376486..802dd2a1 100644
+index 50f4927f..46a50447 100644
 --- a/src/osdep/amiberry.cpp
 +++ b/src/osdep/amiberry.cpp
-@@ -4075,7 +4075,7 @@ void create_missing_amiberry_folders()
+@@ -4078,7 +4078,7 @@ void create_missing_amiberry_folders()
  #ifdef __MACH__
  		const std::string default_roms_path = app_directory + "/Resources/roms/";
  #else
@@ -11,7 +11,7 @@ index 2d376486..802dd2a1 100644
  #endif
  		// copy default kickstart files, if they exist in AMIBERRY_DATADIR/roms
  		if (my_existsdir(default_roms_path.c_str()))
-@@ -4124,10 +4124,9 @@ static void init_amiberry_dirs(bool portable_mode)
+@@ -4125,10 +4125,9 @@ static void init_amiberry_dirs(const bool portable_mode)
  #else
  	const std::string amiberry_dir = "amiberry";
  #endif
@@ -23,9 +23,9 @@ index 2d376486..802dd2a1 100644
 +    config_path = "/userdata/system/configs/amiberry/conf";
 +    plugins_dir = "/usr/share/amiberry/plugins/";
  
- 	if (portable_mode)
- 	{
-@@ -4206,26 +4205,26 @@ static void init_amiberry_dirs(bool portable_mode)
+ #ifdef __MACH__
+ 	if constexpr (true)
+@@ -4210,26 +4209,26 @@ static void init_amiberry_dirs(const bool portable_mode)
      video_dir.append("/Videos/");
  	themes_path.append("/Themes/");
  #else
@@ -42,7 +42,7 @@ index 2d376486..802dd2a1 100644
 +	logfile_path = "/usrdata/system/logs/amiberry.log";
 +	rom_path = "/userdata/bios/amiga";
  	rp9_path.append("/rp9/");
--	saveimage_dir.append("/savestates/");
+-	saveimage_dir.append("/");
 -	savestate_dir.append("/savestates/");
 +	saveimage_dir = "/userdata/saves/amiga/";
 +	savestate_dir = "/userdata/saves/amiga/";
@@ -60,3 +60,10 @@ index 2d376486..802dd2a1 100644
  	retroarch_file.append("/retroarch.cfg");
  
  	floppy_sounds_dir = data_dir;
+@@ -4919,4 +4918,4 @@ void target_setdefaultstatefilename(const TCHAR* name)
+ 		}
+ 	}
+ 	_tcscpy(savestate_fname, path);
+-}
+\ No newline at end of file
++}
