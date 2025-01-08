@@ -12,7 +12,7 @@ Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.229
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|65f9bbbfed83cc6504332012681bcda0874e7268|Jan 08, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|e59fb2607ee69fc2d6a2a89381d741a31dc47c78|Jan 08, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45453|Jan 08, 2025
-Emulators|[xemu](https://github.com/xemu-project/xemu)|26db3b504f6801bfb60b6f7b74af43c27b18d2de|Jan 08, 2025
+Emulators|[xemu](https://github.com/xemu-project/xemu)|956ef0b2ebe50896b7801d4f5ea621e431d9e3ae|Jan 08, 2025
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|34da1682840c4da10222f3085f9fb29af4f2b7bb|Jan 08, 2025
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|54d9c333a9d39941b4fc881275f433821c7b5cde|Jan 08, 2025
 Hardware|[pironman5](http://github.com/sunfounder/pironman5)|94f6c8936a6a84f95ecbc1e3e08b466c4598fd5d|Jan 08, 2025
@@ -22,7 +22,9 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|dd76f17e4bcc
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|870e361ca40313a22b94bf96365b28d56bec2121|Jan 08, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|2feb9da823a4f9e849c6ba4984cf65285cdc3445|Jan 08, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|e2b2a1c65841a79708cb3f67523d8d6071660f54|Jan 08, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250108|Jan 08, 2025
 Ports|[box86](http://github.com/ptitseb/box86)|eaf2e84e199689d79af09cf4cb1562c0e2ae2e7e|Jan 08, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250108|Jan 08, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|eb23339bcb138f21c242ea5c99344a77df035c86|Jan 08, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|ceb603488ab433eadc28d096bad3fa0fb87bdaec|Jan 08, 2025
 Emulators|[libretro-pcsx2](https://github.com/libretro/ps2.git)|b7bcfcdc7cbbebb182f4b399e64de45f4fd9d31f|Jan 08, 2025
@@ -76,9 +78,7 @@ Emulators|[play](https://github.com/jpd002/Play-.git)|178a466139e1a973f3c66beb37
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|1bd619a8449a2f88cb4b9af19c155f044982e5aa|Jan 04, 2025
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|0c3655cdb544d02d0df222896d959f96d5421bfc|Jan 04, 2025
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.2|Jan 04, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250104|Jan 04, 2025
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|42ea1e4f8b57da52c6c1d8c7d26ade1e9087e9f5|Jan 04, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250104|Jan 04, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|2d90c74755c89c3f4d5b3fcd9f0c24c0060d69b6|Jan 04, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|7a4f9d8667e942c51feab1be0c78bb297a590c2c|Jan 04, 2025
 Emulators|[libretro-p2000t](http://github.com/p2000t/M2000)|7ff18200ac790b4992a1c2ae1ebcfe7b46160693|Jan 04, 2025
