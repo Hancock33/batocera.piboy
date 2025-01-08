@@ -35,7 +35,6 @@ config BR2_PACKAGE_LINDBERGH_LOADER
 	select BR2_PACKAGE_XLIB_LIBXMU
 	select BR2_PACKAGE_XLIB_LIBXXF86VM
 
-
 	help
 	  A SEGA Lindbergh Emulator for Linux.
 
