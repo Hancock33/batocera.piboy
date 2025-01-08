@@ -294,7 +294,7 @@ Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d5
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|a670313cb49de1823c19cf5fab3b1e97e49a0451|Jan 02, 2025
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|9389eb502340d46d4246865ba2450a7f8f8e5e2a|Jul 23, 2024
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r48|Sept 06, 2024
-Emulators|[xemu](https://github.com/xemu-project/xemu)|26db3b504f6801bfb60b6f7b74af43c27b18d2de|Jan 08, 2025
+Emulators|[xemu](https://github.com/xemu-project/xemu)|956ef0b2ebe50896b7801d4f5ea621e431d9e3ae|Jan 08, 2025
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|34da1682840c4da10222f3085f9fb29af4f2b7bb|Jan 08, 2025
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
@@ -454,7 +454,7 @@ Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|c525400a30b6b96b22e0
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|72d808cc4d6db5d38e5d87ab95ab0b1bcfd89ede|Nov 24, 2024
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|870e361ca40313a22b94bf96365b28d56bec2121|Jan 08, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250104|Jan 04, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250108|Jan 08, 2025
 Ports|[nblood](http://github.com/nukeykt/NBlood)|r14186|Dec 31, 2024
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|a78bced5e2bcb974c05d911c94ea89d5a450021a|Dec 09, 2024
@@ -559,5 +559,5 @@ Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0-rc4|Jan 03, 202
 Wine|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc4|Jan 04, 2024
 Wine|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-4c|Dec 23, 2024
 Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.0-rc4|Jan 03, 2024
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250104|Jan 04, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250108|Jan 08, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|cede5047101299802a9756f0885e24a5b6f2fbb5|Dec 19, 2024
