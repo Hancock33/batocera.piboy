@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jan 08, 2025
-XEMU_VERSION = 26db3b504f6801bfb60b6f7b74af43c27b18d2de
+XEMU_VERSION = 956ef0b2ebe50896b7801d4f5ea621e431d9e3ae
 XEMU_SITE = https://github.com/xemu-project/xemu
 XEMU_SITE_METHOD=git
 XEMU_GIT_SUBMODULES=YES
@@ -32,7 +32,6 @@ XEMU_CONF_OPTS += --disable-docs
 XEMU_CONF_OPTS += --disable-tools
 XEMU_CONF_OPTS += --disable-guest-agent
 XEMU_CONF_OPTS += --disable-tpm
-XEMU_CONF_OPTS += --disable-live-block-migration
 XEMU_CONF_OPTS += --disable-rdma
 XEMU_CONF_OPTS += --disable-replication
 XEMU_CONF_OPTS += --disable-capstone
@@ -67,7 +66,6 @@ XEMU_CONF_OPTS += --disable-vvfat
 XEMU_CONF_OPTS += --disable-qcow1
 XEMU_CONF_OPTS += --disable-qed
 XEMU_CONF_OPTS += --disable-parallels
-XEMU_CONF_OPTS += --disable-hax
 XEMU_CONF_OPTS += --disable-hvf
 XEMU_CONF_OPTS += --disable-whpx
 XEMU_CONF_OPTS += --with-default-devices
@@ -100,12 +98,26 @@ define XEMU_INSTALL_TARGET_CMDS
 endef
 
 define XEMU_SUBMODULES
+	rm -rf $(@D)/subprojects/berkeley-softfloat-3
+	rm -rf $(@D)/subprojects/berkeley-testfloat-3
 	rm -rf $(@D)/subprojects/cpp-httplib
+	rm -rf $(@D)/subprojects/genconfig
+	rm -rf $(@D)/subprojects/imgui
+	rm -rf $(@D)/subprojects/implot
+	rm -rf $(@D)/subprojects/keycodemapdb
 	rm -rf $(@D)/subprojects/nv2a_vsh_cpu
 	rm -rf $(@D)/subprojects/tomlplusplus
-	cd $(@D)/subprojects && git clone https://github.com/yhirose/cpp-httplib
-	cd $(@D)/subprojects && git clone https://github.com/xemu-project/nv2a_vsh_cpu
+
 	cd $(@D)/subprojects && git clone https://github.com/marzer/tomlplusplus
+	cd $(@D)/subprojects && git clone https://github.com/mborgerson/genconfig
+	cd $(@D)/subprojects && git clone https://gitlab.com/qemu-project/berkeley-softfloat-3
+	cd $(@D)/subprojects && git clone https://gitlab.com/qemu-project/berkeley-testfloat-3.git
+	cd $(@D)/subprojects && git clone https://gitlab.com/qemu-project/keycodemapdb
+	cd $(@D)/subprojects && git clone https://github.com/xemu-project/imgui
+	cd $(@D)/subprojects && git clone https://github.com/xemu-project/implot
+	cd $(@D)/subprojects/implot && git checkout 006a1c23e5706bbe816968163b4d589162257a57
+	cd $(@D)/subprojects && git clone https://github.com/xemu-project/nv2a_vsh_cpu
+	cd $(@D)/subprojects && git clone https://github.com/yhirose/cpp-httplib
 endef
 
 define XEMU_VERSION_DETAILS
