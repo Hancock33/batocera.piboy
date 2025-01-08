@@ -29,7 +29,7 @@ LINDBERGH_LOADER_LDFLAGS += -lglut -lX11 -lSDL2 -lFAudio -lm -lpthread -shared
 LINDBERGH_LOADER_LDFLAGS += -nostdlib -lasound -L./src/libxdiff -lxdiff
 
 define LINDBERGH_LOADER_BUILD_CMDS
-    $(MAKE) \
+	$(MAKE) \
 	CC="$(HOSTCC) -m32 -pthread" \
 	CFLAGS_FOR_BUILD="-I$(STAGING_DIR)/usr/include" \
 	CFLAGS="$(LINDBERGH_LOADER_CFLAGS)" \
@@ -44,15 +44,14 @@ define LINDBERGH_LOADER_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/lindbergh/extralibs
 	cp -fv $(@D)/build/* $(TARGET_DIR)/usr/bin/lindbergh/
 	cp -fv $(@D)/docs/lindbergh.conf $(TARGET_DIR)/usr/bin/lindbergh/
-	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lib*.so* \
-	    $(TARGET_DIR)/usr/bin/lindbergh/extralibs
+	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lib*.so* $(TARGET_DIR)/usr/bin/lindbergh/extralibs
+	chmod 754 $(TARGET_DIR)/usr/bin/lindbergh/extralibs/*
 endef
 endif
 
 define LINDBERGH_LOADER_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lindbergh.keys \
-		$(TARGET_DIR)/usr/share/evmapy
+	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lindbergh.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 ifeq ($(BR2_x86_64),y)
