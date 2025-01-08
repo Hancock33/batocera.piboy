@@ -24,6 +24,10 @@ BR2_TARGET_TZ_INFO=n
 # Disable native language support
 BR2_SYSTEM_ENABLE_NLS=n
 
+# Lindbergh Loader
+BR2_PACKAGE_LINDBERGH_LOADER=y
+BR2_PACKAGE_BATOCERA_SDL2=y
+
 # Enables ccache
 BR2_CCACHE_DIR="$(HOME)/build-dir/ccache/x86_wow64"
 
