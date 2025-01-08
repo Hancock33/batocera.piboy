@@ -3943,7 +3943,7 @@ msgid ""
 "Games may run faster/slower than normal if the incorrect region is selected."
 msgstr ""
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/geolith, redream, virtualjaguar
+#. TRANSLATION: libretro/genesisplusgx, libretro/geolith, lindbergh-loader, redream, virtualjaguar
 msgctxt "game_options"
 msgid "REGION"
 msgstr ""
@@ -13188,7 +13188,7 @@ msgctxt "game_options"
 msgid "Allows you to limit FPS to 60."
 msgstr ""
 
-#. TRANSLATION: wine
+#. TRANSLATION: lindbergh-loader, wine
 msgctxt "game_options"
 msgid "FPS LIMITER"
 msgstr ""
@@ -15204,27 +15204,27 @@ msgctxt "game_options"
 msgid "REFRESH RATE"
 msgstr ""
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "30 fps"
 msgstr ""
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "50 fps"
 msgstr ""
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "60 fps (Default)"
 msgstr ""
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "75 fps"
 msgstr ""
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "120 fps"
 msgstr ""
@@ -16371,7 +16371,7 @@ msgctxt "game_options"
 msgid "Ukraine"
 msgstr ""
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: lindbergh-loader, xenia, xenia-canary
 msgctxt "game_options"
 msgid "United States"
 msgstr ""
@@ -16741,6 +16741,70 @@ msgctxt "game_options"
 msgid "Anisotropic filtering"
 msgstr ""
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Enable free play for supported games."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "FREE PLAY"
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Choose the arcade machine console region. May be required to start the game."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Japan (Default)"
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Export"
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Set to keep the aspect ratio (4:3) in games like Sega Race TV and Primeval "
+"Hunt."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Set if you want to limit the FPS in games that are not limited like OutRun2."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Set the target FPS (will only work if FPS LIMITER is enabled)."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "FPS TARGET"
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "100 fps"
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Run the game in test mode to configure certain game options."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "RUN TEST MODE"
+msgstr ""
+
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Up"
@@ -16966,6 +17030,16 @@ msgctxt "keys_files"
 msgid "Exit Dosbox-X"
 msgstr ""
 
+#. TRANSLATION: catacomb.keys, lindbergh.keys
+msgctxt "keys_files"
+msgid "Exit Game"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys, lindbergh.keys
+msgctxt "keys_files"
+msgid "Coin"
+msgstr ""
+
 #. TRANSLATION: wiiu.keys
 msgctxt "keys_files"
 msgid "Display the controller screen"
@@ -17004,11 +17078,6 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Start"
-msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Coin"
 msgstr ""
 
 #. TRANSLATION: fpinball.keys
@@ -17659,11 +17728,6 @@ msgstr ""
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Shoot Xterm"
-msgstr ""
-
-#. TRANSLATION: catacomb.keys
-msgctxt "keys_files"
-msgid "Exit Game"
 msgstr ""
 
 #. TRANSLATION: catacomb.keys

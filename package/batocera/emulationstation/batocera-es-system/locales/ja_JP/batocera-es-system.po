@@ -278,6 +278,11 @@ msgctxt "game_options"
 msgid "10 seconds"
 msgstr "10 秒"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "100 fps"
+msgstr ""
+
 #. TRANSLATION: doom3, libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "100% (Default)"
@@ -408,7 +413,7 @@ msgctxt "game_options"
 msgid "12 MHz"
 msgstr "12 MHz"
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "120 fps"
 msgstr "120 fps"
@@ -1213,7 +1218,7 @@ msgctxt "game_options"
 msgid "30 MHz"
 msgstr "30 MHz"
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "30 fps"
 msgstr "30 fps"
@@ -1638,7 +1643,7 @@ msgctxt "game_options"
 msgid "50 (Default)"
 msgstr "50（標準）"
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "50 fps"
 msgstr "50 fps"
@@ -1758,7 +1763,7 @@ msgctxt "game_options"
 msgid "6 threads"
 msgstr "6 スレッド"
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "60 fps (Default)"
 msgstr "60fps（標準）"
@@ -1898,7 +1903,7 @@ msgctxt "game_options"
 msgid "72fps"
 msgstr "72fps"
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "75 fps"
 msgstr "75 fps"
@@ -5053,6 +5058,12 @@ msgctxt "game_options"
 msgid "Choose the appropriate media for disk image."
 msgstr "ディスク イメージに合ったメディアを選択します"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Choose the arcade machine console region. May be required to start the game."
+msgstr ""
+
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Choose the audio output type."
@@ -5333,7 +5344,7 @@ msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
 msgstr "Moonlightの終了は、リモートホストのアプリを閉じます"
 
-#. TRANSLATION: fpinball.keys
+#. TRANSLATION: fpinball.keys, lindbergh.keys
 msgctxt "keys_files"
 msgid "Coin"
 msgstr "コイン"
@@ -6847,6 +6858,11 @@ msgctxt "game_options"
 msgid "Enable for more fluidity, disable if screen tearing."
 msgstr "流動性を高めるために有効にし、画面が乱れる場合は無効にします"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Enable free play for supported games."
+msgstr ""
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Enable full-screen antialiasing in Direct3D."
@@ -7427,7 +7443,7 @@ msgctxt "keys_files"
 msgid "Exit Duckstation"
 msgstr "Duckstation を終了"
 
-#. TRANSLATION: catacomb.keys
+#. TRANSLATION: catacomb.keys, lindbergh.keys
 msgctxt "keys_files"
 msgid "Exit Game"
 msgstr "ゲームを終了"
@@ -7461,6 +7477,11 @@ msgstr "Flatpakを終了する"
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "エミュレータを終了"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Export"
+msgstr ""
 
 #. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
@@ -7647,10 +7668,15 @@ msgctxt "game_options"
 msgid "FORCE WINDOWS CE MODE"
 msgstr "強制的にWINDOWS CE モード"
 
-#. TRANSLATION: wine
+#. TRANSLATION: lindbergh-loader, wine
 msgctxt "game_options"
 msgid "FPS LIMITER"
 msgstr "FPS 制限"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "FPS TARGET"
+msgstr ""
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -7716,6 +7742,11 @@ msgstr "フレームスキップ タイプ"
 msgctxt "game_options"
 msgid "FRAMESKIP VALUE"
 msgstr "フレームスキップ 値"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "FREE PLAY"
+msgstr ""
 
 #. TRANSLATION: mugen, wine
 msgctxt "game_options"
@@ -9763,6 +9794,11 @@ msgstr "1月"
 msgctxt "game_options"
 msgid "Japan"
 msgstr "日本"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Japan (Default)"
+msgstr ""
 
 #. TRANSLATION: cemu, doom3, etlegacy, flycast/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
@@ -12998,7 +13034,7 @@ msgctxt "game_options"
 msgid "REFRESH RATE"
 msgstr "リフレッシュレート"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/geolith, redream, virtualjaguar
+#. TRANSLATION: libretro/genesisplusgx, libretro/geolith, lindbergh-loader, redream, virtualjaguar
 msgctxt "game_options"
 msgid "REGION"
 msgstr "リージョン(地域)"
@@ -13172,6 +13208,11 @@ msgstr "振動機能"
 msgctxt "game_options"
 msgid "RUMBLE LEVEL"
 msgstr "振動レベル"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "RUN TEST MODE"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -13573,6 +13614,11 @@ msgstr "振動パック (自動)"
 msgctxt "keys_files"
 msgid "Run"
 msgstr "走る"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Run the game in test mode to configure certain game options."
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -14465,6 +14511,12 @@ msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "画面外射撃の代わりに銃ボタン2をリロードに設定します"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Set if you want to limit the FPS in games that are not limited like OutRun2."
+msgstr ""
+
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Set in Config - choose if no audio output"
@@ -14509,6 +14561,18 @@ msgstr ""
 msgctxt "game_options"
 msgid "Set the display's resolution. Does not affect the rendering resolution."
 msgstr "ディスプレイ解像度を設定(レンダリング解像度には影響しません)"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Set the target FPS (will only work if FPS LIMITER is enabled)."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Set to keep the aspect ratio (4:3) in games like Sega Race TV and Primeval "
+"Hunt."
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -16600,7 +16664,7 @@ msgctxt "game_options"
 msgid "United Kingdom"
 msgstr "イギリス"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: lindbergh-loader, xenia, xenia-canary
 msgctxt "game_options"
 msgid "United States"
 msgstr "米国"
