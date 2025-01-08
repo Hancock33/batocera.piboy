@@ -54,7 +54,7 @@ class LindberghGenerator(Generator):
         _LINDBERGH_CONFIG_FILE = romDir / "lindbergh.conf"
 
         # Copy essential files into romDir if they're newer
-        source_dir = Path("/usr/bin/lindbergh")
+        source_dir = Path("/usr/bin32/lindbergh")
         files_to_copy = ["lindbergh", "lindbergh.so", "lindbergh.conf"]
 
         for file_name in files_to_copy:
