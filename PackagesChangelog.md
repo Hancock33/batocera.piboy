@@ -13,9 +13,11 @@ Hardware|[pironman5](http://github.com/sunfounder/pironman5)|10ca1b68aca2fad0b67
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|3d11244956a4bfeb6e29176d1406bc06d7aef781|Jan 09, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|6cdfa05604085a15f407fb41b35f326bbdaf84fa|Jan 09, 2025
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.16.0|Jan 09, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250109|Jan 09, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|793346bc4eaefe25af23c042cc4d74a52b9bc99e|Jan 09, 2025
 Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|34db5415e5a1c40bb89253cf473d4e98cc6e348a|Jan 09, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|74e7a62e911adb9a7645e7090c4e21e41244653d|Jan 09, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250109|Jan 09, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|a7f29bde4623923a897669b5ccab64026d80875a|Jan 09, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|90e493fa3a7fee51123078d02f988fa6d1f07a84|Jan 09, 2025
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|080a79fdeebd556645b019f1e33047f6a675655e|Jan 09, 2025
@@ -44,11 +46,9 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|a7651f15d934
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|622092f1f65ef0f0d91c6156eb31739e84e2dd7d|Jan 08, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|eabe17251a0d3b1915c8b3eb794a233f0322dfba|Jan 08, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|e2b2a1c65841a79708cb3f67523d8d6071660f54|Jan 08, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250108|Jan 08, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|85d12a2468b294fad91e2a67bd3028bcb499dabf|Jan 08, 2025
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|9a36fd8a7dce32dae80d9d745998810641999e22|Jan 08, 2025
 Ports|[box86](http://github.com/ptitseb/box86)|eaf2e84e199689d79af09cf4cb1562c0e2ae2e7e|Jan 08, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250108|Jan 08, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|eb23339bcb138f21c242ea5c99344a77df035c86|Jan 08, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|2f4714e0c75aafb1b86cf9eb257395c7759f62d2|Jan 08, 2025
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|85d12a2468b294fad91e2a67bd3028bcb499dabf|Jan 08, 2025
