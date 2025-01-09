@@ -51,7 +51,7 @@ endif
 
 define LINDBERGH_LOADER_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lindbergh.keys $(TARGET_DIR)/usr/share/evmapy
+	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lindbergh.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 ifeq ($(BR2_x86_64),y)
