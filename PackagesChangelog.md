@@ -1,5 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|00f59bc6f2e873fd2898b5d00146e7e61ef16876|Jan 09, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|b3365c9120159138389e6eac2deb58d9626f3e85|Jan 09, 2025
 Emulators|[citra](https://github.com/Borked3DS/Borked3DS.git)|468816cfaed6f1d92745375e1ac6e3e2a63d98c6|Jan 09, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|29934d62c4b1e0e1f9aca47c32031f54f02a56a4|Jan 09, 2025
@@ -106,7 +107,6 @@ Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.01|Jan 01, 2025
 Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.6.1|Jan 01, 2025
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.01.01|Jan 01, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|c205e295da1d4dae80ab98b99c45469a21cf7f26|Jan 01, 2025
-Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|096f85036e9e3760e51f94293714cfb1eb0972ac|Dec 31, 2024
 Ports|[nblood](http://github.com/nukeykt/NBlood)|r14186|Dec 31, 2024
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0273|Dec 31, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|c4f1ec8bddba15e1b1a00a7e56c50cf0eca8b5c9|Dec 31, 2024
