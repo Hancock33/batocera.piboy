@@ -2691,6 +2691,11 @@ msgctxt "game_options"
 msgid "Add colour to Game Boy games."
 msgstr ""
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Add debug logging to help troubleshoot issues."
+msgstr ""
+
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
 msgctxt "game_options"
 msgid "Adds d-pad mapping to the analogue stick (Controller 1)."
@@ -5632,6 +5637,11 @@ msgstr ""
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin, mupen64plus, ...
 msgctxt "game_options"
 msgid "DEADZONE"
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "DEBUG MODE"
 msgstr ""
 
 #. TRANSLATION: shared

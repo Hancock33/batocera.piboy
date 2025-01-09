@@ -16805,6 +16805,16 @@ msgctxt "game_options"
 msgid "RUN TEST MODE"
 msgstr ""
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Add debug logging to help troubleshoot issues."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "DEBUG MODE"
+msgstr ""
+
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Up"
