@@ -5,16 +5,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: batocera-emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-15 21:09+0100\n"
-"PO-Revision-Date: 2025-01-02 09:00-0300\n"
-"Last-Translator: LeoColman <dev@leonardo.colman.com.br>\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2025-01-08 22:44-0300\n"
+"Last-Translator: Leonardo Colman <dev@leonardo.colman.com.br>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Poedit 3.5\n"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -384,7 +384,7 @@ msgstr "10o"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "10x Native (6400x5280)"
-msgstr ""
+msgstr "1x nativo (640x528)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -409,7 +409,7 @@ msgstr "11o"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "11x Native (7040x5808)"
-msgstr ""
+msgstr "1x nativo (640x528)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -499,7 +499,7 @@ msgstr "12o"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "12x Native (7680x6336) for 8K"
-msgstr ""
+msgstr "3x nativo (768x576)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -694,7 +694,7 @@ msgstr "16x (~7680p / 16k)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "16x Anistropic"
-msgstr ""
+msgstr "16x Anistropic"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -1144,7 +1144,7 @@ msgstr "2x (~960)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "2x Anistropic"
-msgstr ""
+msgstr "2x Anistropic"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -1154,7 +1154,7 @@ msgstr "2x MSAA"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "2x Native (1280x1056) for 720p"
-msgstr ""
+msgstr "5x nativo (1280x960)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -1374,7 +1374,7 @@ msgstr "3x (2160p/3240p)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "3x Native (1920x1584) for 1080p"
-msgstr ""
+msgstr "3x Nativo (~1080p)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -1554,7 +1554,7 @@ msgstr "4x (~1920p)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "4x Anistropic"
-msgstr ""
+msgstr "4x Anistropic"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -1569,7 +1569,7 @@ msgstr "4x MULTISAMPLIFICACAO"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "4x Native (2560x2112) for 1440p"
-msgstr ""
+msgstr "10x nativo (2560x1920)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -1744,7 +1744,7 @@ msgstr "5x (3600p/5400p)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "5x Native (3200x2640)"
-msgstr ""
+msgstr "1x nativo (320x240)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -1869,7 +1869,7 @@ msgstr "6x 4K (3840x3168)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "6x Native (3840x3168) for 4K"
-msgstr ""
+msgstr "6x 4K (3840x3168)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -1954,7 +1954,7 @@ msgstr "7x (5040p/7560p)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "7x Native (4480x3696)"
-msgstr ""
+msgstr "5x nativo (1280x960)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -2069,7 +2069,7 @@ msgstr "8x 5K (5120x4224)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "8x Anistropic"
-msgstr ""
+msgstr "8x Anistropic"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -2079,7 +2079,7 @@ msgstr "8x MSAA"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "8x Native (5120x4224) for 5K"
-msgstr ""
+msgstr "8x Native (5120x4224) pra 5K"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -2139,7 +2139,7 @@ msgstr "9x 4K (2880x2160)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "9x Native (5760x4752)"
-msgstr ""
+msgstr "1x nativo (640x528)"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
@@ -2791,7 +2791,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Affects how the game output is scaled to the resolution."
-msgstr ""
+msgstr "Afeta como a saída do jogo é escalada para a resolução."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -3206,7 +3206,7 @@ msgstr "Archimedes 540"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Area Sampling"
-msgstr ""
+msgstr "Amostragem de Área"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -3764,17 +3764,17 @@ msgstr "Bicubico"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Bicubic: B-Spine"
-msgstr ""
+msgstr "Bicubico: B-Spine"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Bicubic: Catmull-Rom"
-msgstr ""
+msgstr "Bicúbica: Catmull-Rom"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Bicubic: Mitchell-Netravali"
-msgstr ""
+msgstr "Bicúbica: Mitchell-Netravali"
 
 #. TRANSLATION: bigpemu, cemu, dolphin_triforce, drastic, duckstation, ...
 msgctxt "game_options"
@@ -8213,32 +8213,32 @@ msgstr "Forcar DNS Padrao"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear"
-msgstr ""
+msgstr "Forçar Linear"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear and 16x Anistropic"
-msgstr ""
+msgstr "Forçar Linear e 16x Anistropic"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear and 2x Anistropic"
-msgstr ""
+msgstr "Forçar Linear e 2x Anistropic"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear and 4x Anistropic"
-msgstr ""
+msgstr "Forçar Linear e 4x Anistropic"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear and 8x Anistropic"
-msgstr ""
+msgstr "Forçar Linear e 8x Anistropic"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Nearest"
-msgstr ""
+msgstr "Forçar Mais proximo"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -11224,7 +11224,7 @@ msgstr "Emulacao mais precisa, porÃ©m mais lenta."
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "More compatible"
-msgstr "Mais compatÃ­vel"
+msgstr "Mais compatível"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -11543,7 +11543,7 @@ msgstr "Nativa"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Native (640x528)"
-msgstr ""
+msgstr "1x nativo (640x528)"
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
@@ -11874,7 +11874,7 @@ msgstr "MENSAGENS EXIBIDAS NA TELA"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "OUTPUT RESAMPLING"
-msgstr ""
+msgstr "REAMOSTRAGEM DE SAIDA"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -12998,12 +12998,12 @@ msgstr ""
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Press the N key for 'Novice' or 'No'"
-msgstr ""
+msgstr "Pressione a tecla N para 'Novato' ou 'No'"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Press the Y key for 'Yes'"
-msgstr ""
+msgstr "Aperte Y para 'Sim'"
 
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
@@ -14781,7 +14781,7 @@ msgstr "NÃ­tido"
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "Sharpen More"
-msgstr "Mais NÃ­tido"
+msgstr "Mais Nítido"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
@@ -14986,7 +14986,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Sine"
-msgstr ""
+msgstr "Seno"
 
 #. TRANSLATION: suyu, xenia, xenia-canary
 msgctxt "game_options"
@@ -15604,7 +15604,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Stretch to Window"
-msgstr ""
+msgstr "Esticar a janela"
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
@@ -15646,7 +15646,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Strong"
-msgstr ""
+msgstr "Forte"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -16415,7 +16415,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Triangle"
-msgstr ""
+msgstr "Triângulo"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -17540,7 +17540,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Weak"
-msgstr ""
+msgstr "Fraco"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18302,10 +18302,6 @@ msgstr "amarelo/azul"
 #~ msgstr "105% (Use com cautela)"
 
 #~ msgctxt "game_options"
-#~ msgid "10x native (2560x1920)"
-#~ msgstr "10x nativo (2560x1920)"
-
-#~ msgctxt "game_options"
 #~ msgid "110% (Use caution)"
 #~ msgstr "110% (Use com cautela)"
 
@@ -18426,10 +18422,6 @@ msgstr "amarelo/azul"
 #~ msgstr "3x (720p)"
 
 #~ msgctxt "game_options"
-#~ msgid "3x native (768x576)"
-#~ msgstr "3x nativo (768x576)"
-
-#~ msgctxt "game_options"
 #~ msgid "3x/720p"
 #~ msgstr "3x/720p"
 
@@ -18456,10 +18448,6 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "512 KB"
 #~ msgstr "512 KB"
-
-#~ msgctxt "game_options"
-#~ msgid "5x native (1280x960)"
-#~ msgstr "5x nativo (1280x960)"
 
 #~ msgctxt "game_options"
 #~ msgid "5x/1080p"
@@ -19992,10 +19980,6 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Preload TLB hack to avoid tlb miss on Goemon"
 #~ msgstr "Truque de prÃ©-carregamento para evitar erros em Goemon"
-
-#~ msgctxt "keys_files"
-#~ msgid "Press N for Novice"
-#~ msgstr "Pressione N para Novato"
 
 #~ msgctxt "game_options"
 #~ msgid "Pulse (Default)"
