@@ -7,7 +7,10 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|a23cbec574cbce24991a1
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-01-11|Jan 11, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.237|Jan 11, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|5c845d4ecc3350302f0cc1899b355a055d444d6e|Jan 11, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc5|Jan 11, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250111|Jan 11, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|8ef798ea5102cd56c1d9c15da95f6e3c791c1306|Jan 11, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250111|Jan 11, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|a33b7d9c15190fe48f16d3fa8df167f081b5be1f|Jan 11, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|61305d60329d6a9abf7ddad1c3657b3253c5e64d|Jan 11, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|a23cbec574cbce24991a1790398c2856b02e697b|Jan 11, 2025
@@ -34,9 +37,7 @@ Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|2556b8bdf315bcd2ad8235c
 Ports|[stk](http://github.com/supertuxkart/stk-code)|8a46f5a6a9f289453d87b11b3cda13608fcbb24d|Jan 10, 2025
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.3|Jan 10, 2025
 Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v2.14.1|Jan 10, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250110|Jan 10, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|89c9036d3761b220736253de3191be51327825b2|Jan 10, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250110|Jan 10, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|2061caba18f1ce5d1bbfa41b096ab46e80a27b93|Jan 10, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|a7b776f3b91030fe007cb6613a112dcbbcdc8bc4|Jan 10, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|60cf49e94e65d4023d93718161dc03b9e24da47a|Jan 10, 2025
@@ -101,7 +102,6 @@ Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|d348ab1d028e4da
 Ports|[yquake2-zaero](https://github.com/yquake2/zaero.git)|093aaefdfd2b7396fd518e3be6ff197552a3d072|Jan 04, 2025
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.10.0|Jan 03, 2025
 Libraries|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/79/96/1f72b50ed5402e79085433036ef0ac692072df86860c6d200bd28d562b27)|3.76.1|Jan 03, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|10.0rc4|Jan 03, 2025
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|377f37cadbd48afd87fe0d9882e5eab983b24376|Jan 03, 2025
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|c525400a30b6b96b22e0fa4e3f39712c7a390b08|Jan 03, 2025
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|0310381f4ae681bde4bfb3e23c9932e4fc610621|Jan 03, 2025
