@@ -65,7 +65,7 @@ class CatacombGLGenerator(Generator):
                 ini_file.write(f"{key}={value}\n")
 
         # Run command
-        commandArray = ["/usr/bin/CatacombGL"]
+        commandArray = ["/usr/bin/CatacombGL", "--savedir", "/userdata/saves/CatacombGL"]
 
         # Version
         rom_file_name = os.path.basename(rom).lower()
