@@ -348,7 +348,7 @@ index 000000000000..bb9eafa0a82d
 +
 +MODULE_AUTHOR("Andrey Smirnov <andrew.smirnov@gmail.com>");
 +MODULE_DESCRIPTION("Steam Deck extcon driver");
-+MODULE_LICENSE("GPL");diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_mode.h b/drivers/gpu/drm/amd/amdgpu/amdgpu_mode.h
++MODULE_LICENSE("GPL");
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_mode.h b/drivers/gpu/drm/amd/amdgpu/amdgpu_mode.h
 index 5e3faefc5510..09748a2c5aba 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_mode.h
