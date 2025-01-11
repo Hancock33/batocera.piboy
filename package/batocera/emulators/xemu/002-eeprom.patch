@@ -1,8 +1,8 @@
-diff --git a/softmmu/vl.c b/softmmu/vl.c
-index cdc485e3d3..8eefc0305d 100644
---- a/softmmu/vl.c
-+++ b/softmmu/vl.c
-@@ -2683,11 +2683,11 @@ static const char *get_eeprom_path(void)
+diff --git a/system/vl.c b/system/vl.c
+index 9168fcec9a..b18ce9661a 100644
+--- a/system/vl.c
++++ b/system/vl.c
+@@ -2803,11 +2803,11 @@ static const char *get_eeprom_path(void)
  
      if (qemu_access(path, F_OK) == -1) {
          if (!xbox_eeprom_generate(path, XBOX_EEPROM_VERSION_R1)) {
@@ -19,7 +19,7 @@ index cdc485e3d3..8eefc0305d 100644
              return NULL;
          }
      }
-@@ -2695,10 +2695,10 @@ static const char *get_eeprom_path(void)
+@@ -2815,10 +2815,10 @@ static const char *get_eeprom_path(void)
      int size = get_image_size(path);
  
      if (size < 0) {
