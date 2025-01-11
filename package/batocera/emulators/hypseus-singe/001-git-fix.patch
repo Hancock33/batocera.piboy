@@ -1,5 +1,5 @@
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index cb0916c..a25af2c 100644
+index 780b802..248bb3d 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
 @@ -49,7 +49,6 @@ string(CONCAT TARGET_ARCH TARGET_ ${TARGET_ARCH})
@@ -10,7 +10,7 @@ index cb0916c..a25af2c 100644
  include(InstallRequiredSystemLibraries)
  include(FindPkgConfig)
  include(ExternalProject)
-@@ -63,25 +62,10 @@ build_libmpeg2( )
+@@ -64,25 +63,10 @@ build_libmpeg2( )
  
  message(STATUS "Target: ${CMAKE_SYSTEM_NAME} ${CMAKE_TARGET_ARCHITECTURES}")
  
