@@ -14865,6 +14865,16 @@ msgctxt "game_options"
 msgid "WOLFENSTEIN 3D"
 msgstr ""
 
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "Activate Doom DOS original music and throttle the Doom frame rate."
+msgstr ""
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "DOOM"
+msgstr ""
+
 #. TRANSLATION: doom3
 msgctxt "game_options"
 msgid "Change the game's brightness."

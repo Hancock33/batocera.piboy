@@ -2668,6 +2668,11 @@ msgctxt "game_options"
 msgid "Acorn Electron ROMs"
 msgstr ""
 
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "Activate Doom DOS original music and throttle the Doom frame rate."
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Adaptive (Bottom Field First)"
@@ -5830,6 +5835,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "DOLBY PRO LOGIC II"
 msgstr "DOLBY PRO LOGIC II"
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "DOOM"
+msgstr ""
 
 #. TRANSLATION: libretro/virtualjaguar
 msgctxt "game_options"

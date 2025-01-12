@@ -2670,6 +2670,11 @@ msgctxt "game_options"
 msgid "Acorn Electron ROMs"
 msgstr ""
 
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "Activate Doom DOS original music and throttle the Doom frame rate."
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Adaptive (Bottom Field First)"
@@ -5092,7 +5097,9 @@ msgstr "Escolha o formato apropriado para a imagem do disco."
 msgctxt "game_options"
 msgid ""
 "Choose the arcade machine console region. May be required to start the game."
-msgstr "Escolha a região da consola da máquina arcade. Pode ser necessário para iniciar o jogo."
+msgstr ""
+"Escolha a região da consola da máquina arcade. Pode ser necessário para "
+"iniciar o jogo."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -5858,6 +5865,11 @@ msgstr "MODO DOCA"
 msgctxt "game_options"
 msgid "DOLBY PRO LOGIC II"
 msgstr "DOLBY PRO LOGIC II"
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "DOOM"
+msgstr ""
 
 #. TRANSLATION: libretro/virtualjaguar
 msgctxt "game_options"
@@ -13735,7 +13747,8 @@ msgstr "Correr"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Run the game in test mode to configure certain game options."
-msgstr "Executar o jogo no modo de teste para configurar determinadas opções do jogo."
+msgstr ""
+"Executar o jogo no modo de teste para configurar determinadas opções do jogo."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -14634,7 +14647,8 @@ msgstr "Defina o botão 2 da pistola para recarregar."
 msgctxt "game_options"
 msgid ""
 "Set if you want to limit the FPS in games that are not limited like OutRun2."
-msgstr "Defina se deseja limitar o FPS em jogos que não são limitados como OutRun2."
+msgstr ""
+"Defina se deseja limitar o FPS em jogos que não são limitados como OutRun2."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"

@@ -330,7 +330,7 @@ class LindberghGenerator(Generator):
             array=commandArray,
             env={
                 # Libraries
-                "LD_LIBRARY_PATH": "/lib32:/lib32/extralibs:/lib:/usr/lib:" + str(romDir),
+                "LD_LIBRARY_PATH": "/lib32:/lib32/extralibs:/lib:/usr/lib:/usr/bin32/lindbergh:" + str(romDir),
                 # Graphics
                 "GST_PLUGIN_SYSTEM_PATH_1_0": "/lib32/gstreamer-1.0:/usr/lib/gstreamer-1.0",
                 "GST_REGISTRY_1_0": "/userdata/system/.cache/gstreamer-1.0/registry..bin:/userdata/system/.cache/gstreamer-1.0/registry.x86_64.bin",
