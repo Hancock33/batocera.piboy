@@ -31,7 +31,7 @@ rm -rf $DEST_DIR/usr/wine/proton/share
 rm -rf $DEST_DIR/usr/wine/lutris/share
 rm -rf $DEST_DIR/usr/wine/wine-custom/share
 rm -rf $DEST_DIR/usr/lib32/*/include
-rm -rf $DEST_DIR//usr/wine/wine-*/bin/wineserver
+rm -rf $DEST_DIR/usr/wine-*/bin/wineserver
 
 find $DEST_DIR/ -type f -name "*.a" -exec rm {} \;
 
