@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jan 11, 2025
-LIBPINMAME_VERSION = c59bcbac5e898fa532935062fc2be0df8fe8b2bd
+LIBPINMAME_VERSION = 65871a3d574631dfc5a7fc824895fecf2b6c2cf6
 LIBPINMAME_SITE = $(call github,vpinball,pinmame,$(LIBPINMAME_VERSION))
 LIBPINMAME_LICENSE = BSD-3-Clause
 LIBPINMAME_LICENSE_FILES = LICENSE
