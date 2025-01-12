@@ -7623,7 +7623,7 @@ msgstr "帧率限制器"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "FPS TARGET"
-msgstr ""
+msgstr "目标帧率"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"

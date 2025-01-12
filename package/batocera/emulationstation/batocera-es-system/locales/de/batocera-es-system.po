@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-01-06 21:15+0000\n"
+"PO-Revision-Date: 2025-01-11 21:59+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -283,7 +283,7 @@ msgstr "10 Sekunden"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "100 fps"
-msgstr ""
+msgstr "100 fps"
 
 #. TRANSLATION: doom3, libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
@@ -2699,6 +2699,7 @@ msgstr ""
 msgctxt "game_options"
 msgid "Add debug logging to help troubleshoot issues."
 msgstr ""
+"Debugprotokollierung hinzufügen, um die Problembehebung zu erleichtern."
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
 msgctxt "game_options"
@@ -5106,6 +5107,8 @@ msgctxt "game_options"
 msgid ""
 "Choose the arcade machine console region. May be required to start the game."
 msgstr ""
+"Wählen Sie die Region des Arcade-Automaten. Dies kann zum Starten des Spiels "
+"erforderlich sein."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -5728,7 +5731,7 @@ msgstr "TOTBEREICH"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "DEBUG MODE"
-msgstr ""
+msgstr "DEBUG-MODUS"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -6936,7 +6939,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Enable free play for supported games."
-msgstr ""
+msgstr "Free play aktivieren für unterstützte Spiele."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -7582,7 +7585,7 @@ msgstr "Emulator beenden"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Export"
-msgstr ""
+msgstr "Export"
 
 #. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
@@ -7774,12 +7777,12 @@ msgstr "WINDOWS CE-MODUS ERZWINGEN"
 #. TRANSLATION: lindbergh-loader, wine
 msgctxt "game_options"
 msgid "FPS LIMITER"
-msgstr "FPS-LIMIT"
+msgstr "FPS-LIMITER"
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "FPS TARGET"
-msgstr ""
+msgstr "FPS-ZIEL"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -7849,7 +7852,7 @@ msgstr "FRAMESKIP WERT"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "FREE PLAY"
-msgstr ""
+msgstr "FREE PLAY"
 
 #. TRANSLATION: mugen, wine
 msgctxt "game_options"
@@ -9932,7 +9935,7 @@ msgstr "Japan"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Japan (Default)"
-msgstr ""
+msgstr "Japan (Standard)"
 
 #. TRANSLATION: cemu, doom3, etlegacy, flycast/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
@@ -13392,7 +13395,7 @@ msgstr "RUMBLE LEVEL"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "RUN TEST MODE"
-msgstr ""
+msgstr "STARTE TESTMODUS"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -13402,7 +13405,7 @@ msgstr "RUN-AHEAD FRAMES"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "RYZEN THERMAL DESIGN POWER"
-msgstr "RYZEN LEISTUNG THERMISCHES DESIGN"
+msgstr "RYZEN THERMAL DESIGN POWER"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -13808,6 +13811,7 @@ msgstr "Rennen"
 msgctxt "game_options"
 msgid "Run the game in test mode to configure certain game options."
 msgstr ""
+"Spiel im Testmodus starten, um bestimmte Spieloptionen zu konfigurieren."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -14710,6 +14714,8 @@ msgctxt "game_options"
 msgid ""
 "Set if you want to limit the FPS in games that are not limited like OutRun2."
 msgstr ""
+"Festlegen, ob Sie die FPS in Spielen begrenzen möchten, die nicht begrenzt "
+"sind, wie z.B. OutRun2."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -14763,6 +14769,7 @@ msgstr ""
 msgctxt "game_options"
 msgid "Set the target FPS (will only work if FPS LIMITER is enabled)."
 msgstr ""
+"Ziel-FPS einstellen (funktioniert nur, wenn FPS-LIMITER aktiviert ist)."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14770,6 +14777,8 @@ msgid ""
 "Set to keep the aspect ratio (4:3) in games like Sega Race TV and Primeval "
 "Hunt."
 msgstr ""
+"Einstellen, ob das Seitenverhältnis (4:3) in Spielen wie Sega Race TV und "
+"Primeval Hunt beibehalten wird."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
