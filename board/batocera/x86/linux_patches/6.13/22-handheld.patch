@@ -165,7 +165,7 @@ index 0d6d23faf748..6eb613e0bcba 100644
 +obj-$(CONFIG_EXTCON_STEAMDECK)  += extcon-steamdeck.o
 diff --git a/drivers/extcon/extcon-steamdeck.c b/drivers/extcon/extcon-steamdeck.c
 new file mode 100644
-index 000000000000..bb9eafa0a82d
+index 000000000000..49cb5d30bf6b
 --- /dev/null
 +++ b/drivers/extcon/extcon-steamdeck.c
 @@ -0,0 +1,180 @@
