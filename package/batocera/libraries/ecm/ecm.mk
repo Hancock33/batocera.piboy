@@ -3,8 +3,8 @@
 # ecm
 #
 ################################################################################
-# Version: Commits on Dec 01, 2024
-ECM_VERSION = v6.9.0
+# Version: Commits on Jan 03, 2025
+ECM_VERSION = v6.10.0
 ECM_SITE =  $(call github,KDE,extra-cmake-modules,$(ECM_VERSION))
 ECM_INSTALL_STAGING = YES
 ECM_INSTALL_TARGET = NO

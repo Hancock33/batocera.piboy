@@ -1,0 +1,23 @@
+diff --git a/resources/gamesdb.xml b/resources/gamesdb.xml
+index 59f2e8a11..c08b7806f 100644
+--- a/resources/gamesdb.xml
++++ b/resources/gamesdb.xml
+@@ -6629,15 +6629,15 @@
+     <game name="duckhunt">
+       <gun/>
+     </game>
++    <game name="arkanoidii">
++      <spinner type="arkanoid"/>
++    </game>
+     <game name="arkanoid">
+       <spinner type="arkanoid"/>
+     </game>
+     <game name="gunsight">
+       <gun/>
+     </game>
+-    <game name="arkanoidii">
+-      <spinner type="arkanoid"/>
+-    </game>
+     <game name="hitmarmot">
+       <gun/>
+     </game>

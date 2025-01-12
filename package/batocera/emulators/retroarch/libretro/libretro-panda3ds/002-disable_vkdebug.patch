@@ -1,8 +1,8 @@
 diff --git a/src/core/renderer_vk/renderer_vk.cpp b/src/core/renderer_vk/renderer_vk.cpp
-index d05a070f..df7fc114 100644
+index 57533bde..e99e4f6a 100644
 --- a/src/core/renderer_vk/renderer_vk.cpp
 +++ b/src/core/renderer_vk/renderer_vk.cpp
-@@ -956,7 +956,7 @@ void RendererVK::initGraphicsContext(SDL_Window* window) {
+@@ -963,7 +963,7 @@ void RendererVK::initGraphicsContext(SDL_Window* window) {
  	VULKAN_HPP_DEFAULT_DISPATCHER.init(instance.get());
  
  	// Enable debug messenger if the instance was able to be created with debug_utils
@@ -11,7 +11,7 @@ index d05a070f..df7fc114 100644
  		vk::DebugUtilsMessengerCreateInfoEXT debugCreateInfo{};
  		debugCreateInfo.messageSeverity = vk::DebugUtilsMessageSeverityFlagBitsEXT::eVerbose | vk::DebugUtilsMessageSeverityFlagBitsEXT::eInfo |
  										  vk::DebugUtilsMessageSeverityFlagBitsEXT::eError | vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning;
-@@ -968,7 +968,7 @@ void RendererVK::initGraphicsContext(SDL_Window* window) {
+@@ -975,7 +975,7 @@ void RendererVK::initGraphicsContext(SDL_Window* window) {
  		} else {
  			Helpers::warn("Error registering debug messenger: %s", vk::to_string(createResult.result).c_str());
  		}

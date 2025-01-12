@@ -1,8 +1,8 @@
 diff --git a/src/System/SystemSDL.cpp b/src/System/SystemSDL.cpp
-index 1b11d7bb28..33ce0ffb32 100644
+index 7451844..e803507 100644
 --- a/src/System/SystemSDL.cpp
 +++ b/src/System/SystemSDL.cpp
-@@ -89,7 +89,7 @@ fs::path SystemSDL::FindConfigurationFile() const
+@@ -99,7 +99,7 @@ fs::path SystemSDL::FindConfigurationFile() const
      filenamePath = fs::path(appDataPath);
  
  #elif defined (__linux__)

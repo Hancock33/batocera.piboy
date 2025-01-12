@@ -3,8 +3,8 @@
 # hlsdk-xash3d-dmc
 #
 ################################################################################
-# Version: Commits on Dec 31, 2024
-HLSDK_XASH3D_DMC_VERSION = b41c1a2a4d77de74665d4b6cbf372e8da60a0788
+# Version: Commits on Jan 05, 2025
+HLSDK_XASH3D_DMC_VERSION = 2eaaf125bebf9c1a72dc130b0bef55ce321d9ef7
 HLSDK_XASH3D_DMC_BRANCH = dmc
 HLSDK_XASH3D_DMC_SITE = $(call github,FWGS,hlsdk-portable,$(HLSDK_XASH3D_DMC_VERSION))
 HLSDK_XASH3D_DMC_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf libsodium
@@ -12,7 +12,7 @@ HLSDK_XASH3D_DMC_LICENSE = Half Life 1 SDK LICENSE
 HLSDK_XASH3D_DMC_LICENSE_FILES = LICENSE
 
 HLSDK_XASH3D_DMC_CONF_OPTS = -DGOLDSOURCE_SUPPORT=1 -DSERVER_LIBRARY_NAME=dmc -DGAMEDIR=dmc
-HLSDK_XASH3D_DMC_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -Wno-implicit-function-declaration"
+HLSDK_XASH3D_DMC_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS)"
 
 ifeq ($(BR2_ARCH_IS_64),y)
 HLSDK_XASH3D_DMC_CONF_OPTS += -D64BIT=ON

@@ -278,6 +278,11 @@ msgctxt "game_options"
 msgid "10 seconds"
 msgstr "10 sekund"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "100 fps"
+msgstr ""
+
 #. TRANSLATION: doom3, libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "100% (Default)"
@@ -408,7 +413,7 @@ msgctxt "game_options"
 msgid "12 MHz"
 msgstr "12 MHz"
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "120 fps"
 msgstr "120 fps"
@@ -1213,7 +1218,7 @@ msgctxt "game_options"
 msgid "30 MHz"
 msgstr "30 MHz"
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "30 fps"
 msgstr "30 fps"
@@ -1638,7 +1643,7 @@ msgctxt "game_options"
 msgid "50 (Default)"
 msgstr "50 (Výchozí)"
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "50 fps"
 msgstr "50 fps"
@@ -1758,7 +1763,7 @@ msgctxt "game_options"
 msgid "6 threads"
 msgstr "6 vláken"
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "60 fps (Default)"
 msgstr "60 fps (výchozí)"
@@ -1898,7 +1903,7 @@ msgctxt "game_options"
 msgid "72fps"
 msgstr "72fps"
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "75 fps"
 msgstr "75 fps"
@@ -2663,6 +2668,11 @@ msgctxt "game_options"
 msgid "Acorn Electron ROMs"
 msgstr ""
 
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "Activate Doom DOS original music and throttle the Doom frame rate."
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Adaptive (Bottom Field First)"
@@ -2681,6 +2691,11 @@ msgstr "Adaptivní synchronizace (výchozí)"
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
 msgid "Add colour to Game Boy games."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Add debug logging to help troubleshoot issues."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
@@ -5056,6 +5071,12 @@ msgctxt "game_options"
 msgid "Choose the appropriate media for disk image."
 msgstr "Vyberte vhodné médium pro bitovou kopii disku."
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Choose the arcade machine console region. May be required to start the game."
+msgstr ""
+
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Choose the audio output type."
@@ -5341,7 +5362,7 @@ msgid "Close app on the remote host when quitting Moonlight."
 msgstr ""
 "Zavření aplikace na vzdáleném hostiteli při ukončení aplikace Moonlight."
 
-#. TRANSLATION: fpinball.keys
+#. TRANSLATION: fpinball.keys, lindbergh.keys
 msgctxt "keys_files"
 msgid "Coin"
 msgstr "Mince"
@@ -5670,6 +5691,11 @@ msgctxt "game_options"
 msgid "DEADZONE"
 msgstr "Mrtvá zóna"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "DEBUG MODE"
+msgstr ""
+
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "DECORATION SET"
@@ -5809,6 +5835,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "DOLBY PRO LOGIC II"
 msgstr "DOLBY PRO LOGIC II"
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "DOOM"
+msgstr ""
 
 #. TRANSLATION: libretro/virtualjaguar
 msgctxt "game_options"
@@ -6855,6 +6886,11 @@ msgctxt "game_options"
 msgid "Enable for more fluidity, disable if screen tearing."
 msgstr "Povolte pro větší plynulost, zakažte v případě trhání obrazovky."
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Enable free play for supported games."
+msgstr ""
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Enable full-screen antialiasing in Direct3D."
@@ -7444,7 +7480,7 @@ msgctxt "keys_files"
 msgid "Exit Duckstation"
 msgstr "Odchod z Duckstation"
 
-#. TRANSLATION: catacomb.keys
+#. TRANSLATION: catacomb.keys, lindbergh.keys
 msgctxt "keys_files"
 msgid "Exit Game"
 msgstr ""
@@ -7478,6 +7514,11 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Ukončení emulátoru"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Export"
+msgstr ""
 
 #. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
@@ -7666,10 +7707,15 @@ msgctxt "game_options"
 msgid "FORCE WINDOWS CE MODE"
 msgstr "VYNUCENÍ REŽIMU WINDOWS CE"
 
-#. TRANSLATION: wine
+#. TRANSLATION: lindbergh-loader, wine
 msgctxt "game_options"
 msgid "FPS LIMITER"
 msgstr "OMEZOVAČ FPS"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "FPS TARGET"
+msgstr ""
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -7735,6 +7781,11 @@ msgstr "TYP PŘESKOČENÍ SNÍMKU"
 msgctxt "game_options"
 msgid "FRAMESKIP VALUE"
 msgstr "HODNOTA PŘESKOČENÍ SNÍMKU"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "FREE PLAY"
+msgstr ""
 
 #. TRANSLATION: mugen, wine
 msgctxt "game_options"
@@ -9766,6 +9817,11 @@ msgstr "Leden"
 msgctxt "game_options"
 msgid "Japan"
 msgstr "Japonsko"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Japan (Default)"
+msgstr ""
 
 #. TRANSLATION: cemu, doom3, etlegacy, flycast/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
@@ -13007,7 +13063,7 @@ msgctxt "game_options"
 msgid "REFRESH RATE"
 msgstr "RYCHLOST OBNOVENÍ"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/geolith, redream, virtualjaguar
+#. TRANSLATION: libretro/genesisplusgx, libretro/geolith, lindbergh-loader, redream, virtualjaguar
 msgctxt "game_options"
 msgid "REGION"
 msgstr "REGION"
@@ -13181,6 +13237,11 @@ msgstr "VIBRACE"
 msgctxt "game_options"
 msgid "RUMBLE LEVEL"
 msgstr "LEVEL VYBRACE"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "RUN TEST MODE"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -13586,6 +13647,11 @@ msgstr "Vibrační Pak (automaticky)"
 #. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Run the game in test mode to configure certain game options."
 msgstr ""
 
 #. TRANSLATION: wine
@@ -14479,6 +14545,12 @@ msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Nastavte tlačítko zbraně 2 na nabíjení."
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Set if you want to limit the FPS in games that are not limited like OutRun2."
+msgstr ""
+
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Set in Config - choose if no audio output"
@@ -14526,6 +14598,18 @@ msgstr ""
 msgctxt "game_options"
 msgid "Set the display's resolution. Does not affect the rendering resolution."
 msgstr "Nastavení rozlišení displeje. Nemá vliv na rozlišení vykreslování."
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Set the target FPS (will only work if FPS LIMITER is enabled)."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Set to keep the aspect ratio (4:3) in games like Sega Race TV and Primeval "
+"Hunt."
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -16620,7 +16704,7 @@ msgctxt "game_options"
 msgid "United Kingdom"
 msgstr ""
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: lindbergh-loader, xenia, xenia-canary
 msgctxt "game_options"
 msgid "United States"
 msgstr ""

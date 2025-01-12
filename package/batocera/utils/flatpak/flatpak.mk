@@ -3,8 +3,8 @@
 # flatpak
 #
 ################################################################################
-# Version: Commits on Dec 19, 2024
-FLATPAK_VERSION = 1.15.91
+# Version: Commits on Jan 09, 2025
+FLATPAK_VERSION = 1.16.0
 FLATPAK_SOURCE = flatpak-$(FLATPAK_VERSION).tar.xz
 FLATPAK_SITE = https://github.com/flatpak/flatpak/releases/download/$(FLATPAK_VERSION)
 

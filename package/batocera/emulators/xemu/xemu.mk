@@ -3,13 +3,13 @@
 # xemu
 #
 ################################################################################
-# Version: Commits on Jan 03, 2025
-XEMU_VERSION = 956ef0b2ebe50896b7801d4f5ea621e431d9e3ae
+# Version: Commits on Jan 09, 2025
+XEMU_VERSION = ebcacad78b496604291a168aa3bc64ac96823cf9
 XEMU_SITE = https://github.com/xemu-project/xemu
 XEMU_SITE_METHOD=git
 XEMU_GIT_SUBMODULES=YES
 XEMU_LICENSE = GPLv2
-XEMU_DEPENDENCIES = dtc libepoxy libgtk3 libpcap libsamplerate pixman sdl2 slirp
+XEMU_DEPENDENCIES = libepoxy libgtk3 libpcap libsamplerate pixman sdl2 slirp
 
 XEMU_EXTRA_DOWNLOADS = https://github.com/mborgerson/xemu-hdd-image/releases/download/1.0/xbox_hdd.qcow2.zip
 
@@ -32,7 +32,6 @@ XEMU_CONF_OPTS += --disable-docs
 XEMU_CONF_OPTS += --disable-tools
 XEMU_CONF_OPTS += --disable-guest-agent
 XEMU_CONF_OPTS += --disable-tpm
-XEMU_CONF_OPTS += --disable-live-block-migration
 XEMU_CONF_OPTS += --disable-rdma
 XEMU_CONF_OPTS += --disable-replication
 XEMU_CONF_OPTS += --disable-capstone
@@ -67,13 +66,11 @@ XEMU_CONF_OPTS += --disable-vvfat
 XEMU_CONF_OPTS += --disable-qcow1
 XEMU_CONF_OPTS += --disable-qed
 XEMU_CONF_OPTS += --disable-parallels
-XEMU_CONF_OPTS += --disable-hax
 XEMU_CONF_OPTS += --disable-hvf
 XEMU_CONF_OPTS += --disable-whpx
 XEMU_CONF_OPTS += --with-default-devices
 XEMU_CONF_OPTS += --disable-renderdoc
 XEMU_CONF_OPTS += --enable-avx2
-XEMU_CONF_OPTS += --enable-fdt
 
 define XEMU_CONFIGURE_CMDS
 	cd $(@D) && $(TARGET_CONFIGURE_OPTS) SSL_CERT_DIR=/etc/ssl/certs ./configure $(XEMU_CONF_OPTS)
@@ -99,13 +96,26 @@ define XEMU_INSTALL_TARGET_CMDS
 	$(UNZIP) -ob $(XEMU_DL_DIR)/xbox_hdd.qcow2.zip xbox_hdd.qcow2 -d $(TARGET_DIR)/usr/share/xemu/data
 endef
 
-define XEMU_SUBMODULES
-	rm -rf $(@D)/subprojects/cpp-httplib
-	rm -rf $(@D)/subprojects/nv2a_vsh_cpu
-	rm -rf $(@D)/subprojects/tomlplusplus
+XEMU_SUBMODULES=berkeley-softfloat-3 berkeley-testfloat-3 cpp-httplib genconfig imgui implot keycodemapdb nv2a_vsh_cpu tomlplusplus
+define XEMU_SUBMODULES_DL
+	for set in $(XEMU_SUBMODULES); do \
+		rm -rf $(@D)/subprojects/$$set; \
+	done
+
+	# Download submodules
+	cd $(@D)/subprojects && git clone https://gitlab.com/qemu-project/berkeley-softfloat-3
+	cd $(@D)/subprojects && git clone https://gitlab.com/qemu-project/berkeley-testfloat-3.git
 	cd $(@D)/subprojects && git clone https://github.com/yhirose/cpp-httplib
+	cd $(@D)/subprojects && git clone https://github.com/mborgerson/genconfig
+	cd $(@D)/subprojects && git clone https://github.com/xemu-project/imgui
+	cd $(@D)/subprojects && git clone https://github.com/xemu-project/implot
+	cd $(@D)/subprojects && git clone https://gitlab.com/qemu-project/keycodemapdb
 	cd $(@D)/subprojects && git clone https://github.com/xemu-project/nv2a_vsh_cpu
 	cd $(@D)/subprojects && git clone https://github.com/marzer/tomlplusplus
+	# Patch submodules
+	cd $(@D)/subprojects/implot && git checkout 006a1c23e5706bbe816968163b4d589162257a57
+	cp -a $(@D)/subprojects/packagefiles/berkeley-softfloat-3/* $(@D)/subprojects/berkeley-softfloat-3
+	cp -a $(@D)/subprojects/packagefiles/berkeley-testfloat-3/* $(@D)/subprojects/berkeley-testfloat-3
 endef
 
 define XEMU_VERSION_DETAILS
@@ -120,7 +130,7 @@ define XEMU_EVMAPY
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/xemu/xbox.xemu.keys $(TARGET_DIR)/usr/share/evmapy/chihiro.keys
 endef
 
-XEMU_POST_EXTRACT_HOOKS = XEMU_SUBMODULES
+XEMU_POST_EXTRACT_HOOKS = XEMU_SUBMODULES_DL
 XEMU_PRE_CONFIGURE_HOOKS = XEMU_VERSION_DETAILS
 XEMU_POST_INSTALL_TARGET_HOOKS += XEMU_EVMAPY
 

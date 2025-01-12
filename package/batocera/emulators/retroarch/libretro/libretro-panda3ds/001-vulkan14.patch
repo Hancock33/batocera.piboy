@@ -1,13 +1,13 @@
 diff --git a/src/core/renderer_vk/renderer_vk.cpp b/src/core/renderer_vk/renderer_vk.cpp
-index d05a070f..56d93f72 100644
+index 14bde2c8..57533bde 100644
 --- a/src/core/renderer_vk/renderer_vk.cpp
 +++ b/src/core/renderer_vk/renderer_vk.cpp
-@@ -888,7 +888,7 @@ void RendererVK::display() {
- void RendererVK::initGraphicsContext(SDL_Window* window) {
- 	targetWindow = window;
- 	// Resolve all instance function pointers
--	static vk::DynamicLoader dl;
-+	static vk::detail::DynamicLoader dl;
- 	VULKAN_HPP_DEFAULT_DISPATCHER.init(dl.getProcAddress<PFN_vkGetInstanceProcAddr>("vkGetInstanceProcAddr"));
+@@ -887,7 +887,7 @@ void RendererVK::display() {
  
- 	// Create Instance
+ // DynamicLoader is in a different namespace in different versions of Vulkan-Hpp
+ #if VK_HEADER_VERSION >= 301
+-using VulkanDynamicLoader = vk::detail::DynamicLoader
++using VulkanDynamicLoader = vk::detail::DynamicLoader;
+ #else
+ using VulkanDynamicLoader = vk::DynamicLoader;
+ #endif

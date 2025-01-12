@@ -1,21 +1,20 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2025 LeoColman <dev@leonardo.colman.com.br>
 msgid ""
 msgstr ""
 "Project-Id-Version: batocera-emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-15 21:09+0100\n"
-"PO-Revision-Date: 2025-01-02 09:00-0300\n"
-"Last-Translator: LeoColman <dev@leonardo.colman.com.br>\n"
+"PO-Revision-Date: 2025-01-10 18:37-0300\n"
+"Last-Translator: Leonardo Colman <dev@leonardo.colman.com.br>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Poedit 3.5\n"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -282,6 +281,11 @@ msgctxt "game_options"
 msgid "10 seconds"
 msgstr "10 segundos"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "100 fps"
+msgstr "100 fps"
+
 #. TRANSLATION: doom3, libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "100% (Default)"
@@ -380,7 +384,7 @@ msgstr "10o"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "10x Native (6400x5280)"
-msgstr ""
+msgstr "10x Nativo (6400x5280)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -405,14 +409,14 @@ msgstr "11o"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "11x Native (7040x5808)"
-msgstr ""
+msgstr "11x Nativo (7040x5808)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
 msgid "12 MHz"
 msgstr "12 MHz"
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "120 fps"
 msgstr "120 fps"
@@ -495,7 +499,7 @@ msgstr "12o"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "12x Native (7680x6336) for 8K"
-msgstr ""
+msgstr "12x Nativo (7680x6336) para 8K"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -690,7 +694,7 @@ msgstr "16x (~7680p / 16k)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "16x Anistropic"
-msgstr ""
+msgstr "16x Anistropic"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -1140,7 +1144,7 @@ msgstr "2x (~960)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "2x Anistropic"
-msgstr ""
+msgstr "2x Anistropic"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -1150,7 +1154,7 @@ msgstr "2x MSAA"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "2x Native (1280x1056) for 720p"
-msgstr ""
+msgstr "2x Nativo (1280x1056) para 720p"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -1217,7 +1221,7 @@ msgctxt "game_options"
 msgid "30 MHz"
 msgstr "30 MHz"
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "30 fps"
 msgstr "30 fps"
@@ -1370,7 +1374,7 @@ msgstr "3x (2160p/3240p)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "3x Native (1920x1584) for 1080p"
-msgstr ""
+msgstr "3x Nativo (1920x1584) para 1080p"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -1550,7 +1554,7 @@ msgstr "4x (~1920p)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "4x Anistropic"
-msgstr ""
+msgstr "4x Anistropic"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -1565,7 +1569,7 @@ msgstr "4x MULTISAMPLIFICACAO"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "4x Native (2560x2112) for 1440p"
-msgstr ""
+msgstr "4x Nativo (2560x2112) pra 1440p"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -1642,7 +1646,7 @@ msgctxt "game_options"
 msgid "50 (Default)"
 msgstr "50 (Padrao)"
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "50 fps"
 msgstr "50 fps"
@@ -1740,7 +1744,7 @@ msgstr "5x (3600p/5400p)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "5x Native (3200x2640)"
-msgstr ""
+msgstr "5x Nativo (3200x2640)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -1762,7 +1766,7 @@ msgctxt "game_options"
 msgid "6 threads"
 msgstr "6 encadeamentos de execucao"
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "60 fps (Default)"
 msgstr "60 fps (Padrao)"
@@ -1865,7 +1869,7 @@ msgstr "6x 4K (3840x3168)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "6x Native (3840x3168) for 4K"
-msgstr ""
+msgstr "6x Nativo (3840x3168) para 4K"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -1902,7 +1906,7 @@ msgctxt "game_options"
 msgid "72fps"
 msgstr "72fps"
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
 msgid "75 fps"
 msgstr "75 fps"
@@ -1950,7 +1954,7 @@ msgstr "7x (5040p/7560p)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "7x Native (4480x3696)"
-msgstr ""
+msgstr "7x Nativo (4480x3696)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -2065,7 +2069,7 @@ msgstr "8x 5K (5120x4224)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "8x Anistropic"
-msgstr ""
+msgstr "8x Anistropic"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -2075,7 +2079,7 @@ msgstr "8x MSAA"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "8x Native (5120x4224) for 5K"
-msgstr ""
+msgstr "8x Nativo (5120x4224) para 5K"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -2135,7 +2139,7 @@ msgstr "9x 4K (2880x2160)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "9x Native (5760x4752)"
-msgstr ""
+msgstr "9x Nativo (5760x4752)"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
@@ -2667,6 +2671,11 @@ msgctxt "game_options"
 msgid "Acorn Electron ROMs"
 msgstr ""
 
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "Activate Doom DOS original music and throttle the Doom frame rate."
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Adaptive (Bottom Field First)"
@@ -2686,6 +2695,11 @@ msgstr "Sincronizacao Adaptiva (Padrao)"
 msgctxt "game_options"
 msgid "Add colour to Game Boy games."
 msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Add debug logging to help troubleshoot issues."
+msgstr "Incluirs logs de depuração para ajudar com resolução de problemas."
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
 msgctxt "game_options"
@@ -2782,7 +2796,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Affects how the game output is scaled to the resolution."
-msgstr ""
+msgstr "Aftea como a saída do jogo é redimensionada para a resolução."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -3197,7 +3211,7 @@ msgstr "Archimedes 540"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Area Sampling"
-msgstr ""
+msgstr "Amostragem de Área"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -3755,17 +3769,17 @@ msgstr "Bicubico"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Bicubic: B-Spine"
-msgstr ""
+msgstr "Bicubico: B-Spine"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Bicubic: Catmull-Rom"
-msgstr ""
+msgstr "Bicúbica: Catmull-Rom"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Bicubic: Mitchell-Netravali"
-msgstr ""
+msgstr "Bicúbica: Mitchell-Netravali"
 
 #. TRANSLATION: bigpemu, cemu, dolphin_triforce, drastic, duckstation, ...
 msgctxt "game_options"
@@ -5085,6 +5099,14 @@ msgctxt "game_options"
 msgid "Choose the appropriate media for disk image."
 msgstr "Escolha a mÃ­dia apropriada para a imagem do disco."
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Choose the arcade machine console region. May be required to start the game."
+msgstr ""
+"Escolha uma região para a máquina de Arcade. Pode ser necessário para "
+"começar o jogo."
+
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Choose the audio output type."
@@ -5371,7 +5393,7 @@ msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
 msgstr "Fecha o aplicativo na maquina anfitria remota ao sair do Moonlight."
 
-#. TRANSLATION: fpinball.keys
+#. TRANSLATION: fpinball.keys, lindbergh.keys
 msgctxt "keys_files"
 msgid "Coin"
 msgstr "Moeda"
@@ -5707,6 +5729,11 @@ msgctxt "game_options"
 msgid "DEADZONE"
 msgstr "ZONA-MORTA"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "DEBUG MODE"
+msgstr "MODO DE DEPURAÇÃO"
+
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "DECORATION SET"
@@ -5846,6 +5873,11 @@ msgstr "MODO DOCK"
 msgctxt "game_options"
 msgid "DOLBY PRO LOGIC II"
 msgstr "DOLBY PRO LOGIC II"
+
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "DOOM"
+msgstr ""
 
 #. TRANSLATION: libretro/virtualjaguar
 msgctxt "game_options"
@@ -6898,6 +6930,11 @@ msgctxt "game_options"
 msgid "Enable for more fluidity, disable if screen tearing."
 msgstr "Ative para mais fluidez, e Desative caso a tela esteja com engasgando."
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Enable free play for supported games."
+msgstr "Habilitar jogo gratuito para jogos suportados."
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Enable full-screen antialiasing in Direct3D."
@@ -7499,7 +7536,7 @@ msgctxt "keys_files"
 msgid "Exit Duckstation"
 msgstr "Sair do Duckstation"
 
-#. TRANSLATION: catacomb.keys
+#. TRANSLATION: catacomb.keys, lindbergh.keys
 msgctxt "keys_files"
 msgid "Exit Game"
 msgstr "Sair do Jogo"
@@ -7533,6 +7570,11 @@ msgstr "Sair da execução Flatpak"
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Sair do emulador"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Export"
+msgstr "Exportar"
 
 #. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
@@ -7721,10 +7763,15 @@ msgctxt "game_options"
 msgid "FORCE WINDOWS CE MODE"
 msgstr "FORCAR MODO WINDOWS CE"
 
-#. TRANSLATION: wine
+#. TRANSLATION: lindbergh-loader, wine
 msgctxt "game_options"
 msgid "FPS LIMITER"
 msgstr "LIMITAR QUADROS POR SEGUNDO"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "FPS TARGET"
+msgstr "FPS ALVO"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -7790,6 +7837,11 @@ msgstr "TIPO DE SALTO DE QUADROS"
 msgctxt "game_options"
 msgid "FRAMESKIP VALUE"
 msgstr "VALOR DO SALTO DE QUADRO"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "FREE PLAY"
+msgstr "JOGO LIVRE"
 
 #. TRANSLATION: mugen, wine
 msgctxt "game_options"
@@ -8173,32 +8225,32 @@ msgstr "Forcar DNS Padrao"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear"
-msgstr ""
+msgstr "Forçar Linear"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear and 16x Anistropic"
-msgstr ""
+msgstr "Forçar Linear e 16x Anistropic"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear and 2x Anistropic"
-msgstr ""
+msgstr "Forçar Linear e 2x Anistropic"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear and 4x Anistropic"
-msgstr ""
+msgstr "Forçar Linear e 4x Anistropic"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear and 8x Anistropic"
-msgstr ""
+msgstr "Forçar Linear e 8x Anistropic"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Nearest"
-msgstr ""
+msgstr "Forçar Mais proximo"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -9859,6 +9911,11 @@ msgctxt "game_options"
 msgid "Japan"
 msgstr "Japao"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Japan (Default)"
+msgstr "Japão (Padrão)"
+
 #. TRANSLATION: cemu, doom3, etlegacy, flycast/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "Japanese"
@@ -11498,7 +11555,7 @@ msgstr "Nativa"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Native (640x528)"
-msgstr ""
+msgstr "Nativo (640x528)"
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
@@ -11829,7 +11886,7 @@ msgstr "MENSAGENS EXIBIDAS NA TELA"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "OUTPUT RESAMPLING"
-msgstr ""
+msgstr "REAMOSTRAGEM DE SAIDA"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -12953,12 +13010,12 @@ msgstr ""
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Press the N key for 'Novice' or 'No'"
-msgstr ""
+msgstr "Pressione N para 'Novato' ou 'No'"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Press the Y key for 'Yes'"
-msgstr ""
+msgstr "Pressione Y para 'Sim'"
 
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
@@ -13125,7 +13182,7 @@ msgctxt "game_options"
 msgid "REFRESH RATE"
 msgstr "TAXA DE ATUALIZACAO"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/geolith, redream, virtualjaguar
+#. TRANSLATION: libretro/genesisplusgx, libretro/geolith, lindbergh-loader, redream, virtualjaguar
 msgctxt "game_options"
 msgid "REGION"
 msgstr "REGIAO"
@@ -13299,6 +13356,11 @@ msgstr "VIBRACAO"
 msgctxt "game_options"
 msgid "RUMBLE LEVEL"
 msgstr "NIVEL DE VIBRACAO"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "RUN TEST MODE"
+msgstr "EXECUTAR MODO DE TESTE"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -13707,6 +13769,12 @@ msgstr "Rumble Pak (Automatico)"
 msgctxt "keys_files"
 msgid "Run"
 msgstr "Correr"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Run the game in test mode to configure certain game options."
+msgstr ""
+"Executa o jogo em modo de testes para configurar algumas opções de jogo."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -14601,6 +14669,14 @@ msgctxt "game_options"
 msgid "Set gun button 2 to reload."
 msgstr "Define o botao 2 da pistola para recarregar."
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Set if you want to limit the FPS in games that are not limited like OutRun2."
+msgstr ""
+"Configure se você desejar limitar o FPS de jogos que não são limitados como "
+"OutRun2"
+
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Set in Config - choose if no audio output"
@@ -14645,6 +14721,22 @@ msgstr ""
 msgctxt "game_options"
 msgid "Set the display's resolution. Does not affect the rendering resolution."
 msgstr "Define a resolucao do monitor. Nao afeta a resolucao de renderizacao."
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Set the target FPS (will only work if FPS LIMITER is enabled)."
+msgstr ""
+"Configura o FPS alvo (só funcionará se o LIMITADOR DE FPS estiver "
+"habilitado)."
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Set to keep the aspect ratio (4:3) in games like Sega Race TV and Primeval "
+"Hunt."
+msgstr ""
+"Configure para manter a proporção (4:3) em jogos como Sega Race TV e "
+"Primeval Hunt"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -14913,7 +15005,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Sine"
-msgstr ""
+msgstr "Seno"
 
 #. TRANSLATION: suyu, xenia, xenia-canary
 msgctxt "game_options"
@@ -15531,7 +15623,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Stretch to Window"
-msgstr ""
+msgstr "Esticar para Janela"
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
@@ -15573,7 +15665,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Strong"
-msgstr ""
+msgstr "Forte"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -16342,7 +16434,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Triangle"
-msgstr ""
+msgstr "Triângulo"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -16765,7 +16857,7 @@ msgctxt "game_options"
 msgid "United Kingdom"
 msgstr "Reino Unido"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: lindbergh-loader, xenia, xenia-canary
 msgctxt "game_options"
 msgid "United States"
 msgstr "Estados Unidos"
@@ -17467,7 +17559,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Weak"
-msgstr ""
+msgstr "Fraco"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"

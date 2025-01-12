@@ -1,11 +1,11 @@
 diff --git a/Makefile b/Makefile
-index 184e64d..7cba4ff 100644
+index 4df9598..ba9c257 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -80,6 +80,35 @@ ifeq ($(platform), unix)
- 	SHARED := -shared -Wl,--no-as-needed,--no-undefined
+@@ -83,6 +83,35 @@ ifeq ($(platform), unix)
  	LUA_SYSCFLAGS := -DLUA_USE_POSIX
  	LDFLAGS += -Wl,-E
+ 	CFLAGS += -includefi-warnings.h
 +
 +# Raspberry Pi
 +else ifneq (,$(findstring rpi,$(platform)))

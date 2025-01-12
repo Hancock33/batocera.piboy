@@ -4916,7 +4916,7 @@ doom3:
 
                         With the inclusion of the Dhewm3 emulator from v42 onwards we supply a selection of mods.
                         Provided mods are:
-                        bloodmod, cdoom, d3le, dontonmod, desolated, eldoom, fitz, grimm, hardcorps, perfected, realgibs, rivensin & sikkmod
+                        bloodmod, cdoom, d3le, dentonmod, desolated, eldoom, fitz, grimm, hardcorps, perfected, realgibs, rivensin & sikkmod
 
                         Associated mod pk4 files should be in the folder name related to the mod (lowecase).
                         Then create your appropriately named .d3 launch file with appropriate contents to the first pk4 file as above.
@@ -5499,6 +5499,58 @@ hikaru:
                         Você pode acessar o Menu de Serviço usando o F4 e depois usar o F2 para navegar e o F4 para selecionar.
 
                         Desfrute dos jogos Sega Hiraku no Linux!
+
+
+lindbergh:
+  name:                 Sega Lindbergh
+  manufacturer:         Sega
+  release:              2005
+  hardware:             arcade
+  extensions:           [game]
+  platform:             lindbergh, arcade
+  emulators:
+    lindbergh-loader:
+      lindbergh-loader: { requireAnyOf: [BR2_PACKAGE_LINDBERGH_LOADER] }
+
+  comment_en:           |
+                        Sega Lindbergh requires good knowledge of rom dumps.
+                        We strongly recommend you read the wiki before asking for support.
+                        To launch a game, create an file name with the .game extension as suggested below in the location where the rom will execute from.
+                        Here are the working games and associated extensions at the time of writing:
+                        Game                                Filename               Game ID
+                        ----                              | --------             | -------
+                        2 Spicy                           | apacheM.elf          | 2spicy.game
+                        After Burner Climax               | abc                  | abclimax.game
+                        Ghost Squad Evolution             | vsg or gsevo         | gsevo.game
+                        Harley Davidson King of the Road  | chopperM.elf         | hdkotr.game
+                        Hummer                            | a.elf                | hummer.game
+                        Hummer Extreme Edition            | hummer_Master.elf    | hummerxt.game
+                        Initial D Arcade Stage 4          | id4.elf              | initiad4.game
+                        Initial D Arcade Stage 4 (Export) | id4.elf              | initiad4exp.game
+                        Initial D Arcade Stage 5          | id5.elf              | initiad5.game
+                        Let's Go Jungle                   | lgj_final            | letsgoju.game
+                        Let's Go Jungle Special           | lgjsp_app            | letsgojusp.game
+                        OutRun 2 SP SDX                   | Jennifer             | outr2sdx.game
+                        Primeval Hunt                     | main.exe             | primevah.game
+                        R-Tuned Ultimate Street Racing    | dsr                  | rtuned.game
+                        Rambo                             | ramboM.elf           | rambo.game
+                        Sega Race TV                      | drive.elf            | segartv.game
+                        The House of the Dead 4           | hod4M.elf            | hotd4.game
+                        The House of the Dead 4 Special   | hod4M.elf            | hotd4sp.game
+                        The House of the Dead EX          | hodexRI.elf          | hotdex.game
+                        Virtua Fighter 5                  | vf5                  | vf5.game
+                        Virtua Fighter 5 R                | vf5                  | vf5r.game
+                        Virtua Fighter 5 FS               | vf5                  | vf5fs.game
+                        Virtua Tennis 3                   | vt3 or vt3_Lindbergh | vtennis3.game
+                        i.e . Create Ghost Squad Evolution.game in the /userdata/roms/lindbergh/Ghost Squad Evolution/vsg_l directory
+                        EmulationStation will then see the game & launch it accordingly.
+                        Lindbergh loader compatibility list is here:
+                        https://github.com/lindbergh-loader/lindbergh-loader/blob/master/docs/guide.md
+                        For more info: https://wiki.batocera.org/systems:lindbergh
+  comment_fr:           |
+                        Trouvez la documentation ici : https://wiki.batocera.org/systems:lindbergh
+  comment_br:           |
+                        Para mais informações: https://wiki.batocera.org/systems:lindbergh
 
 mastersystem:
   name:                 Master System
