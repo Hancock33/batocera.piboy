@@ -5,7 +5,7 @@ DEST_DIR=/tmp/batocera-x86-32bit-libs-$CURRENTDATE
 mkdir -p $DEST_DIR/lib
 mkdir -p $DEST_DIR/usr/bin32
 mkdir -p $DEST_DIR/usr/share/vulkan/icd.d
-cp -a  ${TARGET_DIR}/usr/bin/lindbergh                   $DEST_DIR/usr/bin32
+cp -a ${TARGET_DIR}/usr/bin/lindbergh                    $DEST_DIR/usr/bin32
 cp -a ${TARGET_DIR}/usr/bin/gst-*                        $DEST_DIR/usr/bin32
 cp -a ${TARGET_DIR}/usr/share/gst-plugins-base           $DEST_DIR/usr/share
 cp -a ${TARGET_DIR}/usr/share/gstreamer-*                $DEST_DIR/usr/share
@@ -31,6 +31,7 @@ rm -rf $DEST_DIR/usr/wine/proton/share
 rm -rf $DEST_DIR/usr/wine/lutris/share
 rm -rf $DEST_DIR/usr/wine/wine-custom/share
 rm -rf $DEST_DIR/usr/lib32/*/include
+rm -rf $DEST_DIR//usr/wine/wine-*/bin/wineserver
 
 find $DEST_DIR/ -type f -name "*.a" -exec rm {} \;
 
