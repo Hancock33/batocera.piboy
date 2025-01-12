@@ -115,7 +115,7 @@ amiberryConf = amiberryRoot + '/conf/amiberry.conf'
 
 hatariConf = CONF + '/hatari/hatari.cfg'
 
-daphneRomdir = ROMS + '/daphne'
+daphneRomdir = ROMS + '/daphne/roms'
 singeRomdir = ROMS + '/singe'
 hypseusDatadir = CONF + '/hypseus-singe'
 hypseusConfig = hypseusDatadir+ '/hypinput.ini'
