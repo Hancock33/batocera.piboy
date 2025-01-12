@@ -19,9 +19,11 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|908fb470739e
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|80796767db7b9753779f0afcd0597b4ce54f6f64|Jan 12, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|f8c6c66d157adc18fa87cfd0ddd8a692c4f75846|Jan 12, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|31b3c60f8ac111f91cd450f866dc535ae5012cfc|Jan 12, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250112|Jan 12, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|1039db7bf8148e9f0d0bd24d811e61d92d7c1cf0|Jan 12, 2025
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|be442cba9fc3a62bb7d0386cc926ba3a02a19f2e|Jan 12, 2025
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|a77d27877ed4504cc329592606e1976171562329|Jan 12, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250112|Jan 12, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|54006d4f917cdd2acae4b5cd704b18a7bac49f06|Jan 12, 2025
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|de4acab04bfac0e298c43f80e38ef81a4f3e0d21|Jan 12, 2025
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|6be223d84a4f319f82d07b9569541934cc1f66d9|Jan 12, 2025
@@ -41,8 +43,6 @@ Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.237
 Ports|[prototype](http://github.com/ptitSeb/prototype)|80a045a3a3796c3d7506d2e6fdeada5ec3eedf73|Jan 11, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|f5bbb31cffba93ff1eda4ff9bde675ed49d5553c|Jan 11, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|10.0rc5|Jan 11, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250111|Jan 11, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250111|Jan 11, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|e1a07de1e1b209ee683b9be88f8fe51b4530542a|Jan 11, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|61df13306f5884ebb91a20ac6f0743a751741d1e|Jan 11, 2025
 Emulators|[libretro-bennugd](http://github.com/diekleinekuh/BennuGD_libretro)|5c131c6b2fb2da72da438ef8191679871ffc1feb|Jan 11, 2025
