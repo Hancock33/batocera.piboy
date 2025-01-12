@@ -46,6 +46,7 @@ define LINDBERGH_LOADER_INSTALL_TARGET_CMDS
 	cp -fv $(@D)/build/* $(TARGET_DIR)/usr/bin/lindbergh/
 	cp -fv $(@D)/docs/lindbergh.conf $(TARGET_DIR)/usr/bin/lindbergh/
 	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lib*.so* $(TARGET_DIR)/usr/lib32/extralibs
+	mv $(TARGET_DIR)/usr/bin/lindbergh/lib* $(TARGET_DIR)/usr/lib32/extralibs
 	chmod 754 $(TARGET_DIR)/usr/lib32/extralibs/*
 endef
 endif
