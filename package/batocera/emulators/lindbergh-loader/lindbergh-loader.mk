@@ -41,11 +41,11 @@ endef
 
 define LINDBERGH_LOADER_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/lindbergh
-	mkdir -p $(TARGET_DIR)/usr/bin/lindbergh/extralibs
+	mkdir -p $(TARGET_DIR)/usr/lib32/extralibs
 	cp -fv $(@D)/build/* $(TARGET_DIR)/usr/bin/lindbergh/
 	cp -fv $(@D)/docs/lindbergh.conf $(TARGET_DIR)/usr/bin/lindbergh/
-	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lib*.so* $(TARGET_DIR)/usr/bin/lindbergh/extralibs
-	chmod 754 $(TARGET_DIR)/usr/bin/lindbergh/extralibs/*
+	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lib*.so* $(TARGET_DIR)/usr/lib32/extralibs
+	chmod 754 $(TARGET_DIR)/usr/lib32/extralibs/*
 endef
 endif
 
