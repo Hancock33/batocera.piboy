@@ -48,6 +48,7 @@ endif
 
 #fix tclConfig.sh paths!
 define OPENMSX_TCL_CONFIG_FIXUP
+	rm -rf $(TARGET_DIR)/usr/share/openmsx
 	cp $(STAGING_DIR)/usr/lib/tclConfig.sh $(STAGING_DIR)/usr/lib/tclConfig.sh.bak
 	sed -i "s@TCL_LIB_SPEC='-L/usr/lib -ltcl8.6'@TCL_LIB_SPEC='-L$(STAGING_DIR)/usr/lib -ltcl8.6'@" $(STAGING_DIR)/usr/lib/tclConfig.sh
 	sed -i "s@TCL_INCLUDE_SPEC='-I/usr/include'@TCL_INCLUDE_SPEC='-I$(STAGING_DIR)/usr/include'@" $(STAGING_DIR)/usr/lib/tclConfig.sh
