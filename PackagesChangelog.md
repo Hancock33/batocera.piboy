@@ -17,9 +17,11 @@ Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|3dbea2e4001cd598a
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|261daaab33261190f2d8529396d1ae3bf80ef761|Jan 13, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|691add8a366f7e9d91ede8f4b37a67fe54ed8070|Jan 13, 2025
 Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.5.3|Jan 13, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250113|Jan 13, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|bd413de842bdf7770b2445618c187c64b1d2e43b|Jan 13, 2025
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|7915412fc7e86e39fc5dbafa508d6eefd5d8fd69|Jan 13, 2025
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|271b1e91e2b3027488303717b3aef9cf45367e1e|Jan 13, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250113|Jan 13, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|201d9c8f8020677bc70609cef504e687efc50af3|Jan 13, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|274cdf95a16981c130015a8b4808a95ef5b46203|Jan 13, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|0fcccae96eb722d58be329977eb49173c5c97981|Jan 13, 2025
@@ -47,9 +49,7 @@ Ports|[stk](http://github.com/supertuxkart/stk-code)|f8c6c66d157adc18fa87cfd0ddd
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|31b3c60f8ac111f91cd450f866dc535ae5012cfc|Jan 12, 2025
 Utils|[rclone](http://github.com/rclone/rclone)|v1.69.0|Jan 12, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.29.2|Jan 12, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250112|Jan 12, 2025
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|a77d27877ed4504cc329592606e1976171562329|Jan 12, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250112|Jan 12, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|3cdb78149b2fe3fed1b213e29c6c0b71b9889561|Jan 12, 2025
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|de4acab04bfac0e298c43f80e38ef81a4f3e0d21|Jan 12, 2025
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|560fa8379f8a4b384b2de42addb79e65259c0b5e|Jan 12, 2025
