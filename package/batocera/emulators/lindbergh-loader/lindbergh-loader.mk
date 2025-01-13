@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jan 11, 2025
-LINDBERGH_LOADER_VERSION = ab87b07038cce883607abcb6079f92537248df7a
+LINDBERGH_LOADER_VERSION = a0ad7a8ba0405bf5497faf6d700be69fa50c0757
 LINDBERGH_LOADER_SITE = $(call github,dmanlfc,lindbergh-loader,$(LINDBERGH_LOADER_VERSION))
 LINDBERGH_LOADER_BRANCH = sdl2-ctrl
 LINDBERGH_LOADER_LICENSE = ShareAlike 4.0 International
@@ -46,6 +46,7 @@ define LINDBERGH_LOADER_INSTALL_TARGET_CMDS
 	cp -fv $(@D)/build/* $(TARGET_DIR)/usr/bin/lindbergh/
 	cp -fv $(@D)/docs/lindbergh.conf $(TARGET_DIR)/usr/bin/lindbergh/
 	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lib*.so* $(TARGET_DIR)/usr/lib32/extralibs
+	mv $(TARGET_DIR)/usr/bin/lindbergh/lib* $(TARGET_DIR)/usr/lib32/extralibs
 	chmod 754 $(TARGET_DIR)/usr/lib32/extralibs/*
 endef
 endif
