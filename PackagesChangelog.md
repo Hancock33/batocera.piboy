@@ -1,6 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|cc58b7d6ce9f026d4d2a05f65ddc1aa89090fa78|Jan 14, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250114|Jan 14, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250114|Jan 14, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|3e1293ee827b741e2a6d33704a79f85e70a9d931|Jan 13, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|134a6c2f9925f96f44cf5a7a5daea5bb8696ff6b|Jan 13, 2025
 Emulators|[citra](https://github.com/Borked3DS/Borked3DS.git)|ead9ded897b3d90027222f9559495dde02a1b67a|Jan 13, 2025
@@ -18,13 +20,11 @@ Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|67375a58578503733
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|1e2d7a85a4cc35c55b4f3a3d6684a65bfda3d748|Jan 13, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|691add8a366f7e9d91ede8f4b37a67fe54ed8070|Jan 13, 2025
 Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.5.3|Jan 13, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250113|Jan 13, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|d6ff81fd9fdc9eaa8ff4768b6cbfcff448367d58|Jan 13, 2025
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|80aa2e384d040e8625212c31943712d37771fa29|Jan 13, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|e081bde06494762300a52b907792fe32352d02b0|Jan 13, 2025
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|7915412fc7e86e39fc5dbafa508d6eefd5d8fd69|Jan 13, 2025
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|271b1e91e2b3027488303717b3aef9cf45367e1e|Jan 13, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250113|Jan 13, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|201d9c8f8020677bc70609cef504e687efc50af3|Jan 13, 2025
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|d6ff81fd9fdc9eaa8ff4768b6cbfcff448367d58|Jan 13, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|274cdf95a16981c130015a8b4808a95ef5b46203|Jan 13, 2025
