@@ -3,8 +3,8 @@
 # vulkan-volk
 #
 ################################################################################
-# Version: Commits on Jan 06, 2025
-VULKAN_VOLK_VERSION = 1.4.304
+# Version: Commits on Dec 20, 2024
+VULKAN_VOLK_VERSION = vulkan-sdk-1.4.304.0
 VULKAN_VOLK_SITE = $(call github,zeux,volk,$(VULKAN_VOLK_VERSION))
 VULKAN_VOLK_DEPENDENCIES = vulkan-headers vulkan-loader
 VULKAN_VOLK_INSTALL_STAGING = YES
