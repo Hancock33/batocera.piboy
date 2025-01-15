@@ -1,8 +1,8 @@
 diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
-index 50f4927f..46a50447 100644
+index e5ba9667..b08fe006 100644
 --- a/src/osdep/amiberry.cpp
 +++ b/src/osdep/amiberry.cpp
-@@ -4078,7 +4078,7 @@ void create_missing_amiberry_folders()
+@@ -4077,7 +4077,7 @@ void create_missing_amiberry_folders()
  #ifdef __MACH__
  		const std::string default_roms_path = app_directory + "/Resources/roms/";
  #else
@@ -11,7 +11,7 @@ index 50f4927f..46a50447 100644
  #endif
  		// copy default kickstart files, if they exist in AMIBERRY_DATADIR/roms
  		if (my_existsdir(default_roms_path.c_str()))
-@@ -4125,10 +4125,9 @@ static void init_amiberry_dirs(const bool portable_mode)
+@@ -4124,10 +4124,9 @@ static void init_amiberry_dirs(const bool portable_mode)
  #else
  	const std::string amiberry_dir = "amiberry";
  #endif
@@ -25,7 +25,7 @@ index 50f4927f..46a50447 100644
  
  #ifdef __MACH__
  	if constexpr (true)
-@@ -4210,26 +4209,26 @@ static void init_amiberry_dirs(const bool portable_mode)
+@@ -4209,26 +4208,26 @@ static void init_amiberry_dirs(const bool portable_mode)
      video_dir.append("/Videos/");
  	themes_path.append("/Themes/");
  #else
@@ -60,7 +60,7 @@ index 50f4927f..46a50447 100644
  	retroarch_file.append("/retroarch.cfg");
  
  	floppy_sounds_dir = data_dir;
-@@ -4919,4 +4918,4 @@ void target_setdefaultstatefilename(const TCHAR* name)
+@@ -4918,4 +4917,4 @@ void target_setdefaultstatefilename(const TCHAR* name)
  		}
  	}
  	_tcscpy(savestate_fname, path);

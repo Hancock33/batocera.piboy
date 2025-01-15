@@ -7,8 +7,11 @@
 AMIBERRY_VERSION = 8196671d573c07d45fa90f9d3d55d3e67d4ad959
 AMIBERRY_SITE = $(call github,BlitterStudio,amiberry,$(AMIBERRY_VERSION))
 AMIBERRY_LICENSE = GPLv3
-AMIBERRY_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf mpg123 libxml2 libmpeg2 flac libpng libserialport portmidi
+AMIBERRY_DEPENDENCIES += sdl2 sdl2_image sdl2_ttf mpg123 libxml2 libmpeg2 flac
+AMIBERRY_DEPENDENCIES += libpng libserialport portmidi
 AMIBERRY_SUPPORTS_IN_SOURCE_BUILD = NO
+
+AMIBERRY_CONF_OPTS += -DWITH_LTO=ON
 
 define AMIBERRY_EVMAP
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
