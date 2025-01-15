@@ -1,5 +1,5 @@
 diff --git a/gfx/common/x11_common.c b/gfx/common/x11_common.c
-index 8a7cc783d6..409a64aa67 100644
+index 36efb980be..d2e6399ecc 100644
 --- a/gfx/common/x11_common.c
 +++ b/gfx/common/x11_common.c
 @@ -555,22 +555,10 @@ static void x11_handle_key_event(unsigned keycode, XEvent *event,
