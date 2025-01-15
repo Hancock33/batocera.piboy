@@ -50,10 +50,10 @@ index 01a727eb95..c54f2ddb0a 100644
              path_up = path;
           else if (string_is_equal_noncase(basename_noext, "down"))
 diff --git a/configuration.c b/configuration.c
-index 21e35a90e7..e67c99510d 100644
+index 6771ca4979..24e9be29fb 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -1581,6 +1581,7 @@ static struct config_array_setting *populate_settings_array(
+@@ -1568,6 +1568,7 @@ static struct config_array_setting *populate_settings_array(
     SETTING_ARRAY("cheevos_username",             settings->arrays.cheevos_username, false, NULL, true);
     SETTING_ARRAY("cheevos_password",             settings->arrays.cheevos_password, false, NULL, true);
     SETTING_ARRAY("cheevos_token",                settings->arrays.cheevos_token, false, NULL, true);
@@ -61,7 +61,7 @@ index 21e35a90e7..e67c99510d 100644
     SETTING_ARRAY("cheevos_leaderboards_enable",  settings->arrays.cheevos_leaderboards_enable, true, "", true); /* deprecated */
  #endif
  
-@@ -2970,6 +2971,7 @@ void config_set_defaults(void *data)
+@@ -2958,6 +2959,7 @@ void config_set_defaults(void *data)
  #ifdef HAVE_CHEEVOS
     *settings->arrays.cheevos_username                 = '\0';
     *settings->arrays.cheevos_password                 = '\0';
@@ -70,10 +70,10 @@ index 21e35a90e7..e67c99510d 100644
  #endif
  
 diff --git a/configuration.h b/configuration.h
-index 17748e956e..0f44d6dcbf 100644
+index b61d3a22c9..b426be8e99 100644
 --- a/configuration.h
 +++ b/configuration.h
-@@ -467,6 +467,7 @@ typedef struct settings
+@@ -468,6 +468,7 @@ typedef struct settings
        char cloud_sync_driver[32];
        char menu_driver[32];
        char cheevos_username[32];
