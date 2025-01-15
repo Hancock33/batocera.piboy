@@ -17055,11 +17055,6 @@ msgctxt "keys_files"
 msgid "Exit Game"
 msgstr ""
 
-#. TRANSLATION: fpinball.keys, lindbergh.keys
-msgctxt "keys_files"
-msgid "Coin"
-msgstr ""
-
 #. TRANSLATION: wiiu.keys
 msgctxt "keys_files"
 msgid "Display the controller screen"
@@ -17098,6 +17093,11 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Start"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Coin"
 msgstr ""
 
 #. TRANSLATION: fpinball.keys

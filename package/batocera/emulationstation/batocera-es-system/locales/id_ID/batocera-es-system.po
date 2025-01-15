@@ -5347,7 +5347,7 @@ msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
 msgstr "Keluar dari aplikasi saat keluar dari remot house moonlight"
 
-#. TRANSLATION: fpinball.keys, lindbergh.keys
+#. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Coin"
 msgstr ""
