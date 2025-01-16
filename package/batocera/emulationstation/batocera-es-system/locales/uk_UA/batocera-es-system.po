@@ -2674,6 +2674,11 @@ msgctxt "game_options"
 msgid "Activate Doom DOS original music and throttle the Doom frame rate."
 msgstr ""
 
+#. TRANSLATION: bigpemu
+msgctxt "game_options"
+msgid "Activate Doom DOS original music and throttle the Doom frame rate."
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Adaptive (Bottom Field First)"
