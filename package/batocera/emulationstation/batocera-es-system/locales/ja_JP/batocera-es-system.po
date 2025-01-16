@@ -9116,6 +9116,11 @@ msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "HUMMER FLICKER FIX"
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Hack. Increases most PAL games' speed by 17%."
@@ -14597,6 +14602,11 @@ msgid ""
 msgstr ""
 "Sega Race TV や Primeval Hunt などのゲームでアスペクト比 (4:3) を維持する設定"
 "にします"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Set to on if you experience flickering in hummer."
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
