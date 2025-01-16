@@ -2673,7 +2673,7 @@ msgstr ""
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Activate Doom DOS original music and throttle the Doom frame rate."
-msgstr ""
+msgstr "Ativar a música original do Doom DOS e reduzir os fps do Doom."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -5869,7 +5869,7 @@ msgstr "DOLBY PRO LOGIC II"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "DOOM"
-msgstr ""
+msgstr "DOOM"
 
 #. TRANSLATION: libretro/virtualjaguar
 msgctxt "game_options"
