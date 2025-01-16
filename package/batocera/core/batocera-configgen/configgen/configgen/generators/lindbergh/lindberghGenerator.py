@@ -133,13 +133,13 @@ class LindberghGenerator(Generator):
                         border_thickness = "2"
                     else:
                         border_thickness = "3"
-                    
+
                     for i, line in enumerate(modified_lines):
                         if line.strip().startswith(("# WHITE_BORDER_PERCENTAGE", "WHITE_BORDER_PERCENTAGE")):
                             modified_lines[i] = f"WHITE_BORDER_PERCENTAGE {border_thickness}\n"
                             thickness_replaced = True
                             break
-                        
+
                     if not thickness_replaced:
                         modified_lines.append(f"WHITE_BORDER_PERCENTAGE {border_thickness}\n")
 
@@ -218,7 +218,7 @@ class LindberghGenerator(Generator):
 
         if not outrun_replaced:
             modified_lines.append(f"SKIP_OUTRUN_CABINET_CHECK {outrun_value}\n")
-        
+
         input_type = 1 # SDL controls only
 
         # Handle gun games by name until they're tagged accordingly
@@ -257,7 +257,7 @@ class LindberghGenerator(Generator):
                                 eslog.debug(f"Appended: {key_pattern} {controller_name}_{input_value}")
                                 modified_lines.append(modified_line)
                     nplayer += 1
-        
+
         input_replaced = False
 
         for i, line in enumerate(modified_lines):
@@ -265,10 +265,10 @@ class LindberghGenerator(Generator):
                 modified_lines[i] = f"INPUT_MODE {input_type}\n"
                 input_replaced = True
                 break
-        
+
         if not input_replaced:
             modified_lines.append(f"INPUT_MODE {input_type}\n")
-        
+
         # Write back the modified configuration
         with _LINDBERGH_CONFIG_FILE.open('w') as file:
             file.writelines(modified_lines)

@@ -31,7 +31,7 @@ class CatacombGLGenerator(Generator):
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        
+
         mkdir_if_not_exists(_CATACOMBGL_SAVES)
         # Path to the ini file
         _CATACOMBGL_CONFIG_FILE = _CATACOMBGL_CONFIG / "CatacombGL.ini"
