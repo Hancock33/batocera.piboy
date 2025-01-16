@@ -59,8 +59,8 @@ Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-control
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|e6241340d292dee20406a0567262a78ff34d45f7|Jun 02, 2021
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.6|Apr 12, 2024
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|6e8da6877dd8682aa190ccee5dd33edeb39c6c24|Jan 15, 2025
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|6e8da6877dd8682aa190ccee5dd33edeb39c6c24|Jan 15, 2025
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|bc3c5c528ab51688091f3ee254a12457d6aa9019|Jan 16, 2025
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|bc3c5c528ab51688091f3ee254a12457d6aa9019|Jan 16, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|3e1293ee827b741e2a6d33704a79f85e70a9d931|Jan 13, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|e8ed4c8a6aa7f067e90111fdfba3a61a97704fa6|Jan 16, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|0c0b7628b30bba6eb80ffc53c3d1fe566da3c4c5|Jan 16, 2025
@@ -270,13 +270,13 @@ Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.2.4|Oct 11, 2024
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|c4f1ec8bddba15e1b1a00a7e56c50cf0eca8b5c9|Dec 31, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|beceb88cd7d722b86057898c2f47ecad64a7b233|Jan 16, 2025
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|86c9a43b08014bf75c6a53be7e4bad556d6275ff|Jan 16, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20241221|Dec 21, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|5c2c4a66490db0bc5a8e282699939fdd823e0dae|Jan 13, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|a7edfa221e1853be823fc6949fe32c7d1b88b1f6|Jan 02, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-01-16|Jan 16, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.247|Jan 16, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|84f609e69562c61afc9f1905fc22e523e556ccc3|Jan 12, 2025
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|440a693fae49468ea1b46d4afb548e5697f946de|Jan 16, 2025
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|56a6c95730a89aec7056a12603ae63a01a8b4a8f|Jan 16, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|7eb56567e7cc72d67f21e2698c067021832e8985|Jan 16, 2025
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|48fe9344633001703782244651cdbf754532f9ab|Dec 18, 2024
@@ -430,7 +430,7 @@ Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|72d2c417645d47a382b061d2a6
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|ee6addacfe721e587c3b2c9a2594953cd9c774bc|Oct 20, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|f7603b76c96c98538d8cfc25d807114f9557c1aa|Jan 15, 2025
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|c23d819f5e8b1fe6fbc3bf32dae893eb48163468|Jan 15, 2025
-Ports|[doomretro](http://github.com/bradharding/doomretro)|5b4d8a9ba1b20ff83173cdbcc20416174344de14|Jan 15, 2025
+Ports|[doomretro](http://github.com/bradharding/doomretro)|25455cb7c67c7d20368d7e7b284c6eb084d18ec1|Jan 16, 2025
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|f3a2afc43880899d570d97bf4e3392f325870116|Jan 12, 2025
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|82fa9e2f5c6cbedb757829bc6688ff413e0b06f7|Oct 06, 2024
