@@ -9468,10 +9468,10 @@ index e936019d21fe..0d5382e965de 100644
  	{ .driver_data = MT_CLS_GOOGLE,
  		HID_DEVICE(HID_BUS_ANY, HID_GROUP_ANY, USB_VENDOR_ID_GOOGLE,
 diff --git a/drivers/hid/hid-quirks.c b/drivers/hid/hid-quirks.c
-index ee4e2358ab0e..aa8c0e394540 100644
+index b85fc0a6de5c..5f165ea8d92e 100644
 --- a/drivers/hid/hid-quirks.c
 +++ b/drivers/hid/hid-quirks.c
-@@ -376,8 +376,6 @@ static const struct hid_device_id hid_have_special_driver[] = {
+@@ -379,8 +379,6 @@ static const struct hid_device_id hid_have_special_driver[] = {
  	{ HID_USB_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_GEYSER1_TP_ONLY) },
  	{ HID_USB_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_MAGIC_KEYBOARD_2021) },
  	{ HID_USB_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_MAGIC_KEYBOARD_FINGERPRINT_2021) },
@@ -9480,7 +9480,7 @@ index ee4e2358ab0e..aa8c0e394540 100644
  #endif
  #if IS_ENABLED(CONFIG_HID_APPLEIR)
  	{ HID_USB_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_IRCONTROL) },
-@@ -386,6 +384,12 @@ static const struct hid_device_id hid_have_special_driver[] = {
+@@ -389,6 +387,12 @@ static const struct hid_device_id hid_have_special_driver[] = {
  	{ HID_USB_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_IRCONTROL4) },
  	{ HID_USB_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_IRCONTROL5) },
  #endif
