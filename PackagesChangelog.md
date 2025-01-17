@@ -13,11 +13,13 @@ Kodi|[kodi-audiodecoder-openmpt](http://github.com/xbmc/audiodecoder.openmpt)|e6
 Ports|[box64](http://github.com/ptitseb/box64)|666506e8347bb13dc0441105f952ea1e9d717d9f|Jan 17, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|940dec638646dea00baa9939c6a4250b2cc22382|Jan 17, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|60ea0bc3c9d3ff2096c40d756f98f0ee1a79314c|Jan 17, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc6|Jan 17, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250117|Jan 17, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|dda78a4fc80394da38c8c3c95a26ee4eccff5230|Jan 17, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250117|Jan 17, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|750e6068d4c8c81c1ab0f82eadee121c4878625b|Jan 17, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|2d51d23d8953e81d55dfb136cfefd258d6b04766|Jan 17, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|2896029197c245c022ecc581a4830e54df5c16a0|Jan 17, 2025
-Emulators|[libretro-bennugd](http://github.com/diekleinekuh/BennuGD_libretro)|f80e53be86d63997aca810e989854bb7368ce18f|Jan 17, 2025
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|05e820a436d2e2cbbb1b871400f84a96e76e2359|Jan 17, 2025
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|57460138b0485041d6732061aa52b8c567b2deec|Jan 17, 2025
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|54a78902bc1a6b5e6476e6f7dc89baca612e40bc|Jan 17, 2025
@@ -36,11 +38,9 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|0a6f9ed9676d6886bb2aa678ab
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|b296221d42d4553152b4df0266561f0828f7a3f4|Jan 16, 2025
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|55bbb28a8010135809a7499f22aed1f6c6a7c004|Jan 16, 2025
 Hardware|[pironman5](http://github.com/sunfounder/pironman5)|58553cf5e8de3c2ca712e596a796d576bef12da3|Jan 16, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250116|Jan 16, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|2e7c722502a4491c110092f5408ec31130592cec|Jan 16, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|a557aa6cd20cdba4a80813e64083687791aa6a78|Jan 16, 2025
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|a97161bff6528ea363222689dba13cf5c767b001|Jan 16, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250116|Jan 16, 2025
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|a557aa6cd20cdba4a80813e64083687791aa6a78|Jan 16, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|e61b30a14d430671fb79c6c146c5b7f863bff72a|Jan 16, 2025
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|cf0cd7c10ffa449ccf0e00d387d4c8b4ff8263fc|Jan 16, 2025
@@ -85,7 +85,7 @@ Audio|[zmusic](http://github.com/ZDoom/ZMusic)|f6facdaa683e7159b7569d5287a088da3
 Emulators|[lindbergh-loader](http://github.com/dmanlfc/lindbergh-loader)|a0ad7a8ba0405bf5497faf6d700be69fa50c0757|Jan 11, 2025
 Emulators|[play](https://github.com/jpd002/Play-.git)|b35ef5663b809a449a4c89f6e9808fd0a63e7e49|Jan 11, 2025
 Ports|[prototype](http://github.com/ptitSeb/prototype)|80a045a3a3796c3d7506d2e6fdeada5ec3eedf73|Jan 11, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|10.0rc5|Jan 11, 2025
+Emulators|[libretro-bennugd](http://github.com/diekleinekuh/BennuGD_libretro)|5c131c6b2fb2da72da438ef8191679871ffc1feb|Jan 11, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|e69a36a83c09f6660f7683d64eb8077a2da9a487|Jan 11, 2025
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|b35ef5663b809a449a4c89f6e9808fd0a63e7e49|Jan 11, 2025
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|67785f95db6e96dc081a2207751ab98b06b422ab|Jan 11, 2025
