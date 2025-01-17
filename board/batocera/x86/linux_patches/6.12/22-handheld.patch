@@ -411,7 +411,7 @@ index bc9b240a3488..6e65dfa224cc 100644
  
  		DRM_INFO("use_doorbell being set to: [%s]\n",
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 28b919ab4072..87825978ef9e 100644
+index fa5c770acd5a..31ad0a9893fc 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -162,6 +162,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -497,7 +497,7 @@ index 28b919ab4072..87825978ef9e 100644
  }
  
  static void amdgpu_dm_backlight_set_level(struct amdgpu_display_manager *dm,
-@@ -8984,7 +9006,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -8953,7 +8975,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
