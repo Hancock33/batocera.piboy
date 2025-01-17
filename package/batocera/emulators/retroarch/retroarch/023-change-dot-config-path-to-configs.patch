@@ -21,7 +21,7 @@ index 7478040e17..f9bf8a24ed 100644
  If RetroArch creates a new default config file, it will attempt to load the skeleton config file /etc/retroarch.cfg and use that as a basis.
  This allows distributions to set up default paths for libretro cores, and similar things.
 diff --git a/file_path_special.c b/file_path_special.c
-index b8167068ff..fa9137f484 100644
+index 78007d0738..0b9af56a69 100644
 --- a/file_path_special.c
 +++ b/file_path_special.c
 @@ -160,7 +160,7 @@ bool fill_pathname_application_data(char *s, size_t len)
@@ -80,7 +80,7 @@ index e23e47b869..6effba67b2 100644
     s|^# video_fullscreen =.*|video_fullscreen = "true"|;
     s|^# menu_driver =.*|menu_driver = "glui"|;
 diff --git a/retroarch.c b/retroarch.c
-index 5e73360891..3504f6a6bb 100644
+index 82b670e67d..a426443552 100644
 --- a/retroarch.c
 +++ b/retroarch.c
 @@ -6314,7 +6314,7 @@ static void retroarch_print_help(const char *arg0)

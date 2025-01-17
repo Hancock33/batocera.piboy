@@ -1,21 +1,21 @@
 diff --git a/command.c b/command.c
-index d26ca11a11..f5d6f2abca 100644
+index ff962d4d44..5176604a09 100644
 --- a/command.c
 +++ b/command.c
-@@ -1261,8 +1261,6 @@ bool command_event_save_auto_state(void)
+@@ -1259,8 +1259,6 @@ size_t command_event_save_auto_state(void)
+    size_t _len;
     runloop_state_t *runloop_st = runloop_state_get_ptr();
     char savestate_name_auto[PATH_MAX_LENGTH];
- 
 -   if (runloop_st->entry_state_slot)
--      return false;
+-      return 0;
     if (!core_info_current_supports_savestate())
-       return false;
+       return 0;
     if (string_is_empty(path_basename(path_get(RARCH_PATH_BASENAME))))
 diff --git a/retroarch.c b/retroarch.c
-index 3504f6a6bb..fcedf8475a 100644
+index a426443552..3c355b6da9 100644
 --- a/retroarch.c
 +++ b/retroarch.c
-@@ -6928,6 +6928,9 @@ static bool retroarch_parse_input_and_config(
+@@ -6926,6 +6926,9 @@ static bool retroarch_parse_input_and_config(
              exit(EXIT_FAILURE);
           }
  
@@ -25,7 +25,7 @@ index 3504f6a6bb..fcedf8475a 100644
           switch (c)
           {
              case 'h':
-@@ -7385,9 +7388,9 @@ static bool retroarch_parse_input_and_config(
+@@ -7383,9 +7386,9 @@ static bool retroarch_parse_input_and_config(
                 break;
              case 'e':
                 {
@@ -37,7 +37,7 @@ index 3504f6a6bb..fcedf8475a 100644
                       runloop_st->entry_state_slot = entry_state_slot;
                    else
                       RARCH_WARN("--entryslot argument \"%s\" is not a valid "
-@@ -7481,18 +7484,18 @@ static bool retroarch_parse_input_and_config(
+@@ -7479,18 +7482,18 @@ static bool retroarch_parse_input_and_config(
         * command line interface */
        cli_content_set = true;
     }
@@ -61,10 +61,10 @@ index 3504f6a6bb..fcedf8475a 100644
       }
     }
 diff --git a/runloop.c b/runloop.c
-index 6326750f90..9c49c71e9e 100644
+index 5564176709..42665043c1 100644
 --- a/runloop.c
 +++ b/runloop.c
-@@ -4279,11 +4279,11 @@ static bool event_init_content(
+@@ -4277,11 +4277,11 @@ static bool event_init_content(
       if (!(input_st->bsv_movie_state.flags & BSV_FLAG_MOVIE_START_PLAYBACK))
  #endif
        {
@@ -78,7 +78,7 @@ index 6326750f90..9c49c71e9e 100644
           }
        }
  #ifdef HAVE_BSV_MOVIE
-@@ -4291,7 +4291,7 @@ static bool event_init_content(
+@@ -4289,7 +4289,7 @@ static bool event_init_content(
       if (!(input_st->bsv_movie_state.flags & (BSV_FLAG_MOVIE_START_RECORDING | BSV_FLAG_MOVIE_START_PLAYBACK)))
  #endif
        {
@@ -87,7 +87,7 @@ index 6326750f90..9c49c71e9e 100644
            command_event_load_auto_state();
        }
     }
-@@ -7404,13 +7404,13 @@ bool runloop_get_replay_path(char *s, size_t len, unsigned slot)
+@@ -7412,13 +7412,13 @@ bool runloop_get_replay_path(char *s, size_t len, unsigned slot)
  }
  
  
