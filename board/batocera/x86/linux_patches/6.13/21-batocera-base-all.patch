@@ -7865,7 +7865,7 @@ index 785743036647..2c3845cbb451 100644
  	{ .driver_data = MT_CLS_GOOGLE,
  		HID_DEVICE(HID_BUS_ANY, HID_GROUP_ANY, USB_VENDOR_ID_GOOGLE,
 diff --git a/drivers/hid/hid-quirks.c b/drivers/hid/hid-quirks.c
-index ca63e414e4c2..81f3771cbc06 100644
+index 8d1263024136..68248ef37f6b 100644
 --- a/drivers/hid/hid-quirks.c
 +++ b/drivers/hid/hid-quirks.c
 @@ -382,8 +382,6 @@ static const struct hid_device_id hid_have_special_driver[] = {
