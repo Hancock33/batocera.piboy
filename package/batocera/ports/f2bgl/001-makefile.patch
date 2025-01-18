@@ -1,13 +1,31 @@
-diff --git a/Makefile b/Makefile
-index 2246bb1..1827a67 100644
---- a/Makefile
-+++ b/Makefile
-@@ -1,6 +1,6 @@
- 
--SDL_CFLAGS = `sdl2-config --cflags`
--SDL_LIBS = `sdl2-config --libs`
-+SDL_CFLAGS = `pkg-config sdl2 --cflags`
-+SDL_LIBS = `pkg-config sdl2 --libs`
- 
- LIBS = $(SDL_LIBS) -lGL -lz -lWildMidi -lfluidsynth -lm
- 
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+new file mode 100644
+index 0000000..8659607
+--- /dev/null
++++ b/CMakeLists.txt
+@@ -0,0 +1,25 @@
++cmake_minimum_required(VERSION 3.0)
++project("f2bgl")
++add_executable(f2bgl
++    cabinet.cpp      cutscene.cpp     decoder.h  game.cpp   installer.cpp  mdec_coeffs.h  mixer.cpp    raycast.cpp   resource.h    screenshot.cpp   spritecache.h     texturecache.h  util.h
++    camera.cpp       cutscenedps.cpp  file.cpp   game.h     intern.h       mdec.cpp       mixer.h      render.cpp    saveload.cpp  sound.cpp        stub.cpp          trigo.cpp       xmiplayer.cpp
++    collision.cpp    cutscene.h       file.h     icons.cpp  inventory.cpp  mdec.h         opcodes.cpp  render.h      scaler.cpp    sound.h          stub.h            trigo.h         xmiplayer.h
++    cutscenecin.cpp  decoder.cpp      font.cpp   input.cpp  main.cpp       menu.cpp       random.h     resource.cpp  scaler.h      spritecache.cpp  texturecache.cpp  util.cpp
++)
++
++target_compile_options(f2bgl PRIVATE -g -O -MMD -Wall -Wpedantic)
++set_property(TARGET f2bgl PROPERTY CXX_STANDARD 11)
++
++include(FindPkgConfig)
++
++pkg_search_module(SDL2 REQUIRED IMPORTED_TARGET sdl2)
++pkg_search_module(SDL2MIXER REQUIRED IMPORTED_TARGET SDL2_mixer)
++
++find_library(GL OpenGL)
++find_library(ZLIB z)
++find_library(WILDMIDI WildMidi)
++find_library(FLUIDSYNTH fluidsynth)
++
++target_include_directories(f2bgl PUBLIC PkgConfig::SDL2)
++target_link_libraries(f2bgl PkgConfig::SDL2 PkgConfig::SDL2MIXER ${GL} ${ZLIB} ${WILDMIDI} ${FLUIDSYNTH})
++
