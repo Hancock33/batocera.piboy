@@ -11,9 +11,11 @@ SONICCD_GIT_SUBMODULES = YES
 SONICCD_SUPPORTS_IN_SOURCE_BUILD = NO
 SONICCD_LICENSE = Custom
 
-SONICCD_DEPENDENCIES = sdl2 libogg libvorbis libtheora libglew libglu
+SONICCD_DEPENDENCIES = libogg libtheora libvorbis sdl2
 
-SONICCD_CONF_OPTS += -DRETRO_SDL_VERSION=2
+ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
+    SONICCD_DEPENDENCIES += libglew libglu
+endif
 
 define SONICCD_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/RSDKv3 $(TARGET_DIR)/usr/bin/soniccd
