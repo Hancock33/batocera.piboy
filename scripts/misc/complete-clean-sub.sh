@@ -58,9 +58,8 @@ do
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/*/.stamp*_installed
 
 	echo "Removing Package Sources: "${RED}$i${ENDCOLOR}
+	cd  $HOME/build-dir/batocera.$i/build && find -maxdepth 1 -type d ! -name 'host*' -exec rm -rf {} \;
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-skeleton*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-gcc-final-*/.stamp_built
-	sudo rm -rf $HOME/build-dir/batocera.$i/build/gcc-final-*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-libopenssl*
-	sudo rm -rf $HOME/build-dir/batocera.$i/build/mesa3d*
 done

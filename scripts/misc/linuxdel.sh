@@ -10,51 +10,47 @@ echo  ${STARTLINE}"Cleaning Batocera Linux Kernel                    "${ENDLINE}
 delkern="linux-custom*
 linux-6.*
 linux-headers*
+aic8800*
+ayaneo-platform*
+ayn-platform*
+batman-adv*
 *-nvidia*
-pd-mapper*
-qrtr*
-r81*
-rmtfs*
-rtl*
-tqftpserv*
-aelightgun*
-aimtrak-guns*
-anbernic-gpio-pad*
-ayn-platform-*
-batocera-gun-calibrator*
-batocera-wheel-calibrator*
+cryptodev-linux*
+dahdi-linux*
 db9_gpio_rpi*
-dolphinbar-guns*
-dolphinCrosshairsPack*
-fun-r1-gamepad*
-fusion-lightguns*
+dtbocfg*
+emlog*
+esp-hosted*
+falcosecurity-libs*
+fwts*
 gamecon_gpio_rpi*
-gun4ir-guns*
+gcnano-binaries*
 guncon*
+guncon3*
 hid-nx*
-input-wrapper*
-jammasd*
-joycond*
-lightguns-games-precalibrations*
+hid-t150*
+igh-ethercat*
+kernel-module-imx-gpu-viv*
+libargtable2*
+linux-backports*
+lttng-modules*
+mali-driver*
+mdio-tools*
 new-lg4ff*
-qtsixa*
-qtsixa-shanwan*
-retrogame*
-retroshooter-guns*
-samco-guns*
-sdl2-gamecontrollerdb*
-sinden-guns*
-steamdeckgun*
-uinput-joystick*
-umtool*
-wiimote-3rdparty*
-wiimotes-rules*
-xarcade2jstick*
+nvidia-driver*
+openvmtools*
+owl-linux*
+r81*
+rtl8*
+v4l2loopback*
+wilc-driver*
+wireguard-linux-compat*
 xone*
-xow*
 xpadneo*
 xpad-noone*
-xpi_gamecon_rpi*"
+xr819-xradio*
+zfs*
+nvidia-*"
 
 read -p "Delete RPI Kerenl? (y/n)" yn
 case $yn in 
@@ -70,6 +66,7 @@ if [ $DEL_RPI4 = '1' ]; then
     do
         echo "Deleting: "${RED}$i${ENDCOLOR}
         sudo rm -rf $HOME/build-dir/batocera.rpi4/build/$i
+        sudo rm -rf $HOME/build-dir/batocera.aarch32/build/$i
     done
 fi
 
@@ -87,5 +84,6 @@ if [ $DEL_X86 = '1' ]; then
     do
         echo "Deleting: "${RED}$i${ENDCOLOR}
         sudo rm -rf $HOME/build-dir/batocera.x86_64/build/$i
+        sudo rm -rf $HOME/build-dir/batocera.x86_wow64/build/$i
     done
 fi

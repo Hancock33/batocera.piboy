@@ -5,21 +5,21 @@ ENDCOLOR="\e[0m"
 STARTLINE="\e[1;44m--------------------------------------------------\n"
 ENDLINE="\n--------------------------------------------------"${ENDCOLOR}
 clear
-echo  ${STARTLINE}"Cleaning Batocera Subsystems                      "${ENDLINE}
+echo  ${STARTLINE}"Cleaning Batocera Image(s)                        "${ENDLINE}
 
 cd $HOME/batocera.se && 
 git pull
 git submodule init
 git submodule update
-./build.sh $HOME/build-dir/batocera.aarch32 aarch32-subsystem > /dev/null 2>&1
-./build.sh $HOME/build-dir/batocera.x86_wow64 x86_wow64 > /dev/null 2>&1
+./build.sh $HOME/build-dir/batocera.rpi4 piboy4 > /dev/null 2>&1
+./build.sh $HOME/build-dir/batocera.x86_64 x86_64 > /dev/null 2>&1
 
 # Variables
 BUILD_RPI=0
 BUILD_X86=0
-make_sub_sys=""
+make_bato=""
 
-# Build RPI subsystems
+# Build RPI image
 read -p "Clean Build RPI? (y/n)" yn
 case $yn in 
 	y )
@@ -28,7 +28,7 @@ case $yn in
         BUILD_RPI=0;;
 esac
 
-# Build X86 subsystems
+# Build X86 image
 read -p "Clean Build X86? (y/n)" yn
 case $yn in 
 	y )
@@ -38,15 +38,15 @@ case $yn in
 esac
 
 if [ $BUILD_X86 = '1' ]; then
-	make_sub_sys="x86_wow64"
+	make_bato="x86_64"
 fi
 
 if [ $BUILD_RPI = '1' ]; then
-	make_sub_sys=$make_sub_sys" aarch32"
+	make_bato=$make_bato" rpi4"
 fi
 
-# Build selected subsystems
-for i in $make_sub_sys
+# Build selected images
+for i in $make_bato
 do
 	echo "Removing Directories: "${RED}$i${ENDCOLOR}
 	sudo rm -rf $HOME/build-dir/batocera.$i/host
@@ -58,9 +58,9 @@ do
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/*/.stamp*_installed
 
 	echo "Removing Package Sources: "${RED}$i${ENDCOLOR}
+	cd  $HOME/build-dir/batocera.$i/build && find -maxdepth 1 -type d ! -name 'host*' -exec rm -rf {} \;
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-skeleton*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-gcc-final-*/.stamp_built
-	sudo rm -rf $HOME/build-dir/batocera.$i/build/gcc-final-*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-libopenssl*
-	sudo rm -rf $HOME/build-dir/batocera.$i/build/mesa3d*
+	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-perl-parse-yapp*
 done

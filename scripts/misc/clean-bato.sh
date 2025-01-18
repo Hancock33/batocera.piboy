@@ -59,8 +59,10 @@ do
 
 	echo "Removing Package Sources: "${RED}$i${ENDCOLOR}
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-skeleton*
-	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-gcc-final-*
+	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-gcc-final-*/.stamp_built
+	sudo rm -rf $HOME/build-dir/batocera.$i/build/gcc-final-*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-libopenssl*
+	sudo rm -rf $HOME/build-dir/batocera.$i/build/mesa3d*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/batocera-*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/gobject-introspection*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-perl-parse-yapp-*
@@ -70,15 +72,11 @@ do
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/redream-*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/scummvm-*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/adwaita-icon-theme-light*
+	sudo rm -rf $HOME/build-dir/batocera.$i/build/*firmware*
 	# rpi
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/lib32bit-*
 	# x86
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/syslinux*
-	sudo rm -rf $HOME/build-dir/batocera.$i/build/cemu*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/xbox-xcloud-client*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/wine-x86-*
-
-	#echo "Building Batocera: "$i
-	#cd $HOME/build-dir/batocera.$i
-	#make -j33 > /dev/null
 done
