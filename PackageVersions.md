@@ -44,7 +44,7 @@ Controllers|[lightguns-games-precalibrations](http://github.com/batocera-linux/l
 Controllers|[new-lg4ff](http://github.com/berarma/new-lg4ff)|e5ca8d620c077d5829d24b0efa4ee0e52148d499|Dec 27, 2024
 Controllers|[qtsixa-shanwan](http://github.com/batocera-linux/qtsixa)|f01193703070a0d0f5db582bb0a6fe8c21ebf517|May 01, 2016
 Controllers|[qtsixa](http://github.com/batocera-linux/qtsixa)|eec727030f341cf543a56bd9aeb821ea901bca64|May 01, 2016
-Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|2e7c722502a4491c110092f5408ec31130592cec|Jan 16, 2025
+Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|3637a0861b6bc1bf8a702588ff4eb0f5e9e7998d|Jan 16, 2025
 Controllers|[sinden-guns-libs](http://github.com/batocera-linux/batocera-sinden-bundles)|a18005ab0ce07d0d18f8575ba21162c58fbd2520|Sept 18, 2023
 Controllers|[sinden-guns](https://www.sindenlightgun.com/software)|1.09|Mar 20, 2024
 Controllers|[uinput-joystick](http://github.com/shantigilbert/uinput_joystick)|bea7d56f4947b547db2b827640bc9966fe770f84|Feb 11, 2022
@@ -87,7 +87,7 @@ Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|821487a5bf6658
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
 Emulators|[hatari](http://github.com/hatari/hatari)|e5b9cf0dd96a30cc02a58fcae9d236398cb0f7bf|Jan 18, 2025
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|fc34a26cd097b29aef8b1bebc1db786a28f0f6ae|Jan 10, 2025
-Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|de1026a3ddb567b7a730745ffa4091d5847e656c|Jan 18, 2025
+Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|cbe2f4970fbab096e36da2fbd15bd9bc4717c454|Jan 18, 2025
 Emulators|[libaltsound](http://github.com/vpinball/libaltsound)|b8f397858cbc7a879f7392c14a509f00c8bdc7dd|Jun 28, 2024
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|833aad283b1f66441af66f512a99cfb883f232e9|Jan 14, 2025
 Emulators|[libdof](http://github.com/jsm174/libdof)|5c43c99ea28b44bb58b74554c4303a505e208148|Sept 11, 2024
@@ -428,7 +428,7 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|b1457b11c0e3f5ae3a1178ec90
 Ports|[d3le](http://github.com/dhewm/dhewm3-sdk)|0e6e3519b21eae4690810180210cc90b0174dc3d|Apr 19, 2024
 Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|72d2c417645d47a382b061d2a6db4a46e060145d|Apr 19, 2024
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|ee6addacfe721e587c3b2c9a2594953cd9c774bc|Oct 20, 2024
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|f7603b76c96c98538d8cfc25d807114f9557c1aa|Jan 15, 2025
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|f793d33e80983b33762723289cf762334c97ea6f|Jan 18, 2025
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|e3795a36e0624d2e97b64deb0b1d18ecb66db405|Jan 17, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|28b918879b0e3b3428ac09f41c0129296b037b2d|Jan 18, 2025
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
@@ -489,7 +489,7 @@ Ports|[srb2kart](http://github.com/STJr/Kart-Public)|44b4a6852858eebba5f9f50da2a
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|62dfaafe1c1ba673cbc6c6450f7cafb87ebc4235|Jan 18, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|b180a49600ea530bbc1f455bfd56889919992043|Jan 18, 2025
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|f72bac75d0d2840fece788dfa8c7791bff3b8992|Sept 30, 2024
-Ports|[supertux2](https://github.com/SuperTux/supertux.git)|c7420cff8e1fea4518691ddad5511a4cc60c05db|Jan 18, 2025
+Ports|[supertux2](https://github.com/SuperTux/supertux.git)|040dd4bce4f199cb4c723aa67fe927936b0bc987|Jan 18, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|a27a428f31fc582a9e298ddc7fa3ebcf1635cdfc|Dec 07, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|bfaa251cda9549392f69b1b9ba74f5f191845110|Dec 17, 2024
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
@@ -503,7 +503,7 @@ Ports|[yquake2-refvk](http://github.com/yquake2/ref_vk)|0ae3c8174559dd50091304dc
 Ports|[yquake2-rogue](http://github.com/yquake2/rogue)|830ad45774336194ae77351865f9d5b991be2979|Dec 21, 2024
 Ports|[yquake2-xatrix](http://github.com/yquake2/xatrix)|d215802d1642d1a2a4850896f70d37cf94f81a9c|Dec 21, 2024
 Ports|[yquake2-zaero](https://github.com/yquake2/zaero.git)|093aaefdfd2b7396fd518e3be6ff197552a3d072|Jan 04, 2025
-Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|8de8f20be9ba42d55a662bc9c5dfb2f8584f5b52|Jan 05, 2025
+Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|d74f0dc89771b926a3406dc2adf905e1e3697545|Jan 18, 2025
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0273|Dec 31, 2024
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
