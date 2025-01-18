@@ -2,12 +2,15 @@
 -----|:-----:|:-----:|:-----:
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|ce508ba4343ca98263c800da9d027e57d3dd7824|Jan 18, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.251|Jan 18, 2025
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|90b04e8cc0227a35aa5b01d6c361b4eaaefaee44|Jan 18, 2025
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|81ad575b2294224194a365d087b2a6240a0b9161|Jan 18, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|a755dec1bd2aaaf0d9ea1baba53b89a6d8bfefbe|Jan 18, 2025
 Kodi|[kodi-audiodecoder-openmpt](http://github.com/xbmc/audiodecoder.openmpt)|67df2ab898eef887d3471bb563d7b66eccefed9b|Jan 18, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|dbc8a5c1c0feb663c8a1bf61e3d5132c3f4a5104|Jan 18, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|84830a726cdb0e0471c6931c43443f50f5e41fe6|Jan 18, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc6|Jan 18, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250118|Jan 18, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|445547f00a0feaeabb1dcc6a11fcbc3ec72d4615|Jan 18, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250118|Jan 18, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|36edc6497138e0dbe447cbdd65b53cb8d18d6826|Jan 18, 2025
 Ports|[srb2](http://github.com/STJr/SRB2)|04c67be84ade781d985dcfd97a04066ebaea25dc|Jan 18, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|3e93aa459d7168e0088dd1476ba723c33add7333|Jan 18, 2025
@@ -27,9 +30,6 @@ Ports|[box64](http://github.com/ptitseb/box64)|666506e8347bb13dc0441105f952ea1e9
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|940dec638646dea00baa9939c6a4250b2cc22382|Jan 17, 2025
 Ports|[omf2097](http://github.com/omf2097/openomf)|586334c4f25a9cd95277bec8a060cb722ec3cf61|Jan 17, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|d0c3be5de831533ad016e3c51833168f27cc9bd5|Jan 17, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc6|Jan 17, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250117|Jan 17, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250117|Jan 17, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|2896029197c245c022ecc581a4830e54df5c16a0|Jan 17, 2025
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|05e820a436d2e2cbbb1b871400f84a96e76e2359|Jan 17, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|a93f3697d6d810f6d3e96c73914f33c7a80b2102|Jan 17, 2025
