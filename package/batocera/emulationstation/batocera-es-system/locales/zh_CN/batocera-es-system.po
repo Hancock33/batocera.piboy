@@ -8311,6 +8311,11 @@ msgctxt "game_options"
 msgid "GAME LANGUAGE"
 msgstr ""
 
+#. TRANSLATION: lindbergh-loader, lindbergh-loader
+msgctxt "game_options"
+msgid "GAME OPTIONS"
+msgstr ""
+
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "GAME PATCHES"
@@ -11666,6 +11671,11 @@ msgctxt "game_options"
 msgid "OUTPUT SCALING"
 msgstr "输出比例"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "OUTRUN LENS GLARE"
+msgstr ""
+
 #. TRANSLATION: libretro/fceumm, libretro/mame, libretro/mamevirtual, libretro/mednafen_psx, libretro/mesen, ...
 msgctxt "game_options"
 msgid "OVERCLOCK (UNSTABLE)"
@@ -14449,6 +14459,11 @@ msgstr "设置目标帧率（仅当启用帧率限制器时有效）。"
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
+msgid "Set to enable lens glare in Outrun 2."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
 msgid ""
 "Set to keep the aspect ratio (4:3) in games like Sega Race TV and Primeval "
 "Hunt."
@@ -14456,7 +14471,7 @@ msgstr "设置游戏纵横比为 4:3（如 Sega Race TV 和 Primeval Hunt）。"
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
-msgid "Set to on if you experience flickering in hummer."
+msgid "Set to on if you experience flickering in Hummer."
 msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
