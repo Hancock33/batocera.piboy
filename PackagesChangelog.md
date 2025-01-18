@@ -1,19 +1,20 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|ce508ba4343ca98263c800da9d027e57d3dd7824|Jan 18, 2025
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|51c357dad9ce9e57e7fdcf1f935a8608fb9947be|Jan 18, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.251|Jan 18, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|81ad575b2294224194a365d087b2a6240a0b9161|Jan 18, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|a755dec1bd2aaaf0d9ea1baba53b89a6d8bfefbe|Jan 18, 2025
 Kodi|[kodi-audiodecoder-openmpt](http://github.com/xbmc/audiodecoder.openmpt)|67df2ab898eef887d3471bb563d7b66eccefed9b|Jan 18, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|dbc8a5c1c0feb663c8a1bf61e3d5132c3f4a5104|Jan 18, 2025
-Ports|[stk](http://github.com/supertuxkart/stk-code)|84830a726cdb0e0471c6931c43443f50f5e41fe6|Jan 18, 2025
+Ports|[stk](http://github.com/supertuxkart/stk-code)|b180a49600ea530bbc1f455bfd56889919992043|Jan 18, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc6|Jan 18, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250118|Jan 18, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|445547f00a0feaeabb1dcc6a11fcbc3ec72d4615|Jan 18, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250118|Jan 18, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|36edc6497138e0dbe447cbdd65b53cb8d18d6826|Jan 18, 2025
 Ports|[srb2](http://github.com/STJr/SRB2)|04c67be84ade781d985dcfd97a04066ebaea25dc|Jan 18, 2025
-Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|3e93aa459d7168e0088dd1476ba723c33add7333|Jan 18, 2025
+Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|7811b6029292ccfb665ace25a9c317ddc310e3e9|Jan 18, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|51c357dad9ce9e57e7fdcf1f935a8608fb9947be|Jan 18, 2025
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|4f5abb2d8eff2f75770cacd1577113a5195d5484|Jan 18, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|e2feb3ca05971fc792de0b5fa72ad44956011573|Jan 17, 2025
@@ -23,7 +24,6 @@ Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|7a855b77a40f7bf675
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|15c3faa26e879bdcff615558ded6dd886681ccae|Jan 17, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|917dc55646a17b4aa3fdb860951755735dfbabb3|Jan 17, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.117|Jan 17, 2025
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|c3209aa86867fd328a1be2c371d1bd8845f46dcc|Jan 17, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-01-17|Jan 17, 2025
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|0474053931ed09271c1446aaaef8b0dffaf9d84d|Jan 17, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|666506e8347bb13dc0441105f952ea1e9d717d9f|Jan 17, 2025

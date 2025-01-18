@@ -265,7 +265,7 @@ Emulators|[openmsx](http://github.com/openMSX/openMSX)|917dc55646a17b4aa3fdb8609
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.117|Jan 17, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|b35ef5663b809a449a4c89f6e9808fd0a63e7e49|Jan 11, 2025
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|c3209aa86867fd328a1be2c371d1bd8845f46dcc|Jan 17, 2025
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|51c357dad9ce9e57e7fdcf1f935a8608fb9947be|Jan 18, 2025
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a177763e14c924e3b15e2|Sept 29, 2024
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.2.4|Oct 11, 2024
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
@@ -487,7 +487,7 @@ Ports|[spacecadetpinball](http://github.com/k4zmu2a/SpaceCadetPinball)|cb9b7b886
 Ports|[srb2](http://github.com/STJr/SRB2)|04c67be84ade781d985dcfd97a04066ebaea25dc|Jan 18, 2025
 Ports|[srb2kart](http://github.com/STJr/Kart-Public)|44b4a6852858eebba5f9f50da2ac9f4b2889ad1a|Mar 31, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|dbc8a5c1c0feb663c8a1bf61e3d5132c3f4a5104|Jan 18, 2025
-Ports|[stk](http://github.com/supertuxkart/stk-code)|84830a726cdb0e0471c6931c43443f50f5e41fe6|Jan 18, 2025
+Ports|[stk](http://github.com/supertuxkart/stk-code)|b180a49600ea530bbc1f455bfd56889919992043|Jan 18, 2025
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|f72bac75d0d2840fece788dfa8c7791bff3b8992|Sept 30, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|d0c3be5de831533ad016e3c51833168f27cc9bd5|Jan 17, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|a27a428f31fc582a9e298ddc7fa3ebcf1635cdfc|Dec 07, 2024
@@ -495,7 +495,7 @@ Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|bfaa251cda954
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.3|Jan 10, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|ea6d5eb86e5186b622f3ddf909ba57233a79430f|Jan 09, 2025
-Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|3e93aa459d7168e0088dd1476ba723c33add7333|Jan 18, 2025
+Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|7811b6029292ccfb665ace25a9c317ddc310e3e9|Jan 18, 2025
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.1|Apr 12, 2024
 Ports|[yquake2-client](http://github.com/yquake2/yquake2)|9e127cf71f44afdba178b232c206af74f257f9cd|Dec 22, 2024
 Ports|[yquake2-ctf](http://github.com/yquake2/ctf)|6a2d5125f6ef4f2bdaa45e5d0979d47409535d84|Aug 12, 2024
