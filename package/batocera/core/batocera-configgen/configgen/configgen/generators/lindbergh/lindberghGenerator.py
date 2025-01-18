@@ -5,10 +5,14 @@ import os
 import re
 import shutil
 import stat
+import tarfile
+import lzma
+import requests
 from pathlib import Path
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Final
 
 from ... import Command, controllersConfig
+from ...batoceraPaths import SAVES, mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
@@ -17,7 +21,37 @@ if TYPE_CHECKING:
 
 eslog = logging.getLogger(__name__)
 
+_LINDBERGH_SAVES: Final = SAVES / "lindbergh"
+DOWNLOADED_FLAG: Final = _LINDBERGH_SAVES / "downloaded.txt"
+RAW_URL: Final = "https://raw.githubusercontent.com/batocera-linux/lindbergh-eeprom/main/lindbergh-eeprom.tar.xz"
+DOWNLOAD_PATH: Final = _LINDBERGH_SAVES / "lindbergh-eeprom.tar.xz"
+
 class LindberghGenerator(Generator):
+
+    @staticmethod
+    def download_file(url, destination):
+        eslog.debug("Downloading the file...")
+        response = requests.get(url, stream=True)
+        if response.status_code == 200:
+            with open(destination, "wb") as file:
+                for chunk in response.iter_content(chunk_size=8192):
+                    file.write(chunk)
+            eslog.debug(f"File downloaded to {destination}")
+        else:
+            raise Exception(f"Failed to download file. Status code: {response.status_code}")
+            eslog.debug("Do you have internet!?")
+
+    @staticmethod
+    def extract_tar_xz(file_path, extract_to):
+        eslog.debug("Extracting the file...")
+        with tarfile.open(file_path, "r:xz") as tar:
+            for member in tar.getmembers():
+                file_path_to_extract = os.path.join(extract_to, member.name)
+                if not os.path.exists(file_path_to_extract):
+                    tar.extract(member, path=extract_to)
+                else:
+                    eslog.debug(f"Skipping {member.name}, file already exists.")
+        eslog.debug(f"Files extracted to {extract_to}")
 
     def getHotkeysContext(self) -> HotkeysContext:
         return {
@@ -60,71 +94,72 @@ class LindberghGenerator(Generator):
         for file_name in files_to_copy:
             source_file = source_dir / file_name
             destination_file = romDir / file_name
-            shutil.copy2(source_file, destination_file)
-            eslog.debug(f"Updated {file_name}")
+            if not destination_file.exists() or source_file.stat().st_mtime > destination_file.stat().st_mtime:
+                shutil.copy2(source_file, destination_file)
+                eslog.debug(f"Updated {file_name}")
+
+        # Setup eeprom files as necessary
+        mkdir_if_not_exists(_LINDBERGH_SAVES)
+        if not DOWNLOADED_FLAG.exists():
+            try:
+                # Download the file
+                self.download_file(RAW_URL, str(DOWNLOAD_PATH))
+                # Extract the file
+                self.extract_tar_xz(str(DOWNLOAD_PATH), _LINDBERGH_SAVES)
+                # Create the downloaded.txt flag file so we don't download again
+                DOWNLOADED_FLAG.write_text("Download and extraction successful.\n")
+                eslog.debug(f"Created flag file: {DOWNLOADED_FLAG}")
+
+            except Exception as e:
+                eslog.debug(f"An error occurred: {e}")
+            finally:
+                # Cleanup the downloaded .tar.xz file
+                if DOWNLOAD_PATH.exists():
+                    DOWNLOAD_PATH.unlink()
+                    eslog.debug(f"Temporary file {DOWNLOAD_PATH} deleted.")
+
+        # Define a dictionary to map configuration keys to values
+        config_values = {
+            "WIDTH": gameResolution['width'],
+            "HEIGHT": gameResolution['height'],
+            "FULLSCREEN": 1,
+            "FREEPLAY": 1 if system.isOptSet("lindbergh_freeplay") and system.getOptBoolean("lindbergh_freeplay") else 0,
+            "REGION": system.config["lindbergh_region"] if system.isOptSet("lindbergh_region") else "EX",
+            "BORDER_ENABLED": 1 if system.isOptSet('use_guns') and system.getOptBoolean('use_guns') and len(guns) > 0 else 0,
+            "KEEP_ASPECT_RATIO": 1 if system.isOptSet("lindbergh_aspect") and system.getOptBoolean("lindbergh_aspect") else 0,
+            "FPS_LIMITER_ENABLED": 1 if system.isOptSet("lindbergh_limit") and system.getOptBoolean("lindbergh_limit") else 0,
+            "FPS_TARGET": system.config["lindbergh_fps"] if system.isOptSet("lindbergh_fps") else "60",
+            "DEBUG_MSGS": 1 if system.isOptSet("lindbergh_debug") and system.getOptBoolean("lindbergh_debug") else 0,
+            "HUMMER_FLICKER_FIX": 1 if system.isOptSet("lindbergh_hummer") and system.getOptBoolean("lindbergh_hummer") else 0,
+            "OUTRUN_LENS_GLARE_ENABLED": 1 if system.isOptSet("lindbergh_lens") and system.getOptBoolean("lindbergh_lens") else 0,
+            "SKIP_OUTRUN_CABINET_CHECK": 1 if "outrun" in romName.lower() or "outr2sdx" in romName.lower() else 0,
+            "SRAM_PATH": f"{_LINDBERGH_SAVES}/sram.bin.{Path(romName).stem}",
+            "EEPROM_PATH": f"{_LINDBERGH_SAVES}/eeprom.bin.{Path(romName).stem}",
+        }
 
         # Read the configuration file
-        with _LINDBERGH_CONFIG_FILE.open('r') as file:
-            lines = file.readlines()
+        try:
+            with _LINDBERGH_CONFIG_FILE.open('r') as file:
+                lines = file.readlines()
+        except FileNotFoundError:
+            eslog.debug(f"Configuration file {_LINDBERGH_CONFIG_FILE} not found.")
+            lines = []
 
+        # Update the configuration values
         modified_lines = []
-
-        # Update WIDTH, HEIGHT, FULLSCREEN settings
         for line in lines:
-            if line.strip().startswith("# WIDTH") or line.strip().startswith("WIDTH"):
-                modified_lines.append(f"WIDTH {gameResolution['width']}\n")
-            elif line.strip().startswith("# HEIGHT") or line.strip().startswith("HEIGHT"):
-                modified_lines.append(f"HEIGHT {gameResolution['height']}\n")
-            elif line.strip().startswith("# FULLSCREEN") or line.strip().startswith("FULLSCREEN"):
-                modified_lines.append("FULLSCREEN 1\n")
+            line = line.strip()
+            for key, value in config_values.items():
+                if line.startswith(key):
+                    modified_lines.append(f"{key} {value}\n")
+                    break
             else:
-                modified_lines.append(line)
+                modified_lines.append(line + "\n")
 
-        ## ES options ##
-
-        # Handle freeplay option
-        freeplay_value = "1" if system.isOptSet("lindbergh_freeplay") and system.getOptBoolean("lindbergh_freeplay") else "0"
-        freeplay_replaced = False
-
-        for i, line in enumerate(modified_lines):
-            if line.strip().startswith(("# FREEPLAY", "FREEPLAY")):
-                modified_lines[i] = f"FREEPLAY {freeplay_value}\n"
-                freeplay_replaced = True
-                break
-
-        if not freeplay_replaced:
-            modified_lines.append(f"FREEPLAY {freeplay_value}\n")
-
-        # Handle region option
-        region_value = system.config["lindbergh_region"] if system.isOptSet("lindbergh_region") else "EX"
-        region_replaced = False
-
-        for i, line in enumerate(modified_lines):
-            if line.strip().startswith(("# REGION", "REGION")):
-                modified_lines[i] = f"REGION {region_value}\n"
-                region_replaced = True
-                break
-
-        if not region_replaced:
-            modified_lines.append(f"REGION {region_value}\n")
-
-        # Handle border option(s)
-        border_value = "1" if system.isOptSet('use_guns') and system.getOptBoolean('use_guns') and len(guns) > 0 else "0"
-        border_replaced = False
-
-        for i, line in enumerate(modified_lines):
-            if line.strip().startswith(("# BORDER_ENABLED", "BORDER_ENABLED")):
-                modified_lines[i] = f"BORDER_ENABLED {border_value}\n"
-                border_replaced = True
-                break
-
-        if not border_replaced:
-            modified_lines.append(f"BORDER_ENABLED {border_value}\n")
-
-        if border_value == "1":
+        # susan to determine border enablement & use
+        if system.isOptSet('use_guns') and system.getOptBoolean('use_guns') and len(guns) > 0:
             for gun in guns:
                 if guns[gun]["need_borders"]:
-                    thickness_replaced = False
                     border_thickness = "1"
                     bordersSize = controllersConfig.gunsBordersSizeName(guns, system.config)
                     if bordersSize == "thin":
@@ -140,85 +175,7 @@ class LindberghGenerator(Generator):
                             thickness_replaced = True
                             break
 
-                    if not thickness_replaced:
-                        modified_lines.append(f"WHITE_BORDER_PERCENTAGE {border_thickness}\n")
-
-        # Handle the aspect ratio option
-        aspect_value = "1" if system.isOptSet("lindbergh_aspect") and system.getOptBoolean("lindbergh_aspect") else "0"
-        aspect_replaced = False
-
-        for i, line in enumerate(modified_lines):
-            if line.strip().startswith(("# KEEP_ASPECT_RATIO", "KEEP_ASPECT_RATIO")):
-                modified_lines[i] = f"KEEP_ASPECT_RATIO {aspect_value}\n"
-                aspect_replaced = True
-                break
-
-        if not aspect_replaced:
-            modified_lines.append(f"KEEP_ASPECT_RATIO {aspect_value}\n")
-
-        # FPS limit option
-        limit_value = "1" if system.isOptSet("lindbergh_limit") and system.getOptBoolean("lindbergh_limit") else "0"
-        limit_replaced = False
-
-        for i, line in enumerate(modified_lines):
-            if line.strip().startswith(("# FPS_LIMITER_ENABLED", "FPS_LIMITER_ENABLED")):
-                modified_lines[i] = f"FPS_LIMITER_ENABLED {limit_value}\n"
-                limit_replaced = True
-                break
-
-        if not limit_replaced:
-            modified_lines.append(f"FPS_LIMITER_ENABLED {limit_value}\n")
-
-        # FPS value option
-        fps_value = system.config["lindbergh_fps"] if system.isOptSet("lindbergh_fps") else "60"
-        fps_replaced = False
-
-        for i, line in enumerate(modified_lines):
-            if line.strip().startswith(("# FPS_TARGET", "FPS_TARGET")):
-                modified_lines[i] = f"FPS_TARGET {fps_value}\n"
-                fps_replaced = True
-                break
-
-        if not fps_replaced:
-            modified_lines.append(f"FPS_TARGET {fps_value}\n")
-
-        # Debug logging option
-        debug_value = "1" if system.isOptSet("lindbergh_debug") and system.getOptBoolean("lindbergh_debug") else "0"
-        debug_replaced = False
-
-        for i, line in enumerate(modified_lines):
-            if line.strip().startswith(("# DEBUG_MSGS", "DEBUG_MSGS")):
-                modified_lines[i] = f"DEBUG_MSGS {debug_value}\n"
-                debug_replaced = True
-                break
-
-        if not debug_replaced:
-            modified_lines.append(f"DEBUG_MSGS {debug_value}\n")
-
-        # HUMMER_FLICKER_FIX
-        hummer_value = "1" if system.isOptSet("lindbergh_hummer") and system.getOptBoolean("lindbergh_hummer") else "0"
-        hummer_replaced = False
-        for i, line in enumerate(modified_lines):
-            if line.strip().startswith(("# HUMMER_FLICKER_FIX", "HUMMER_FLICKER_FIX")):
-                modified_lines[i] = f"HUMMER_FLICKER_FIX {hummer_value}\n"
-                hummer_replaced = True
-                break
-        if not hummer_replaced:
-            modified_lines.append(f"HUMMER_FLICKER_FIX {hummer_value}\n")
-
-        # Not an ES option but to set automatically if the rom is OutRun
-        outrun_value = "1" if "outrun" in romName.lower() or "outr2sdx" in romName.lower() else "0"
-        outrun_replaced = False
-
-        for i, line in enumerate(modified_lines):
-            if line.strip().startswith(("# SKIP_OUTRUN_CABINET_CHECK", "SKIP_OUTRUN_CABINET_CHECK")):
-                modified_lines[i] = f"SKIP_OUTRUN_CABINET_CHECK {outrun_value}\n"
-                outrun_replaced = True
-                break
-
-        if not outrun_replaced:
-            modified_lines.append(f"SKIP_OUTRUN_CABINET_CHECK {outrun_value}\n")
-
+        ## Controllers
         input_type = 1 # SDL controls only
 
         # Handle gun games by name until they're tagged accordingly
@@ -258,20 +215,18 @@ class LindberghGenerator(Generator):
                                 modified_lines.append(modified_line)
                     nplayer += 1
 
-        input_replaced = False
-
         for i, line in enumerate(modified_lines):
-            if line.strip().startswith(("# INPUT_MODE", "INPUT_MODE")):
+            if line.strip().startswith(("INPUT_MODE")):
                 modified_lines[i] = f"INPUT_MODE {input_type}\n"
-                input_replaced = True
                 break
 
-        if not input_replaced:
-            modified_lines.append(f"INPUT_MODE {input_type}\n")
-
         # Write back the modified configuration
-        with _LINDBERGH_CONFIG_FILE.open('w') as file:
-            file.writelines(modified_lines)
+        try:
+            with _LINDBERGH_CONFIG_FILE.open('w') as file:
+                file.writelines(modified_lines)
+            eslog.debug(f"Configuration file {_LINDBERGH_CONFIG_FILE} updated successfully.")
+        except Exception as e:
+            eslog.debug(f"Error updating configuration file: {e}")
 
         # Setup some library quirks for GPU support (NVIDIA?)
         source = Path("/lib32/libkswapapi.so")
@@ -362,4 +317,3 @@ class LindberghGenerator(Generator):
 
     def getInGameRatio(self, config, gameResolution, rom):
         return 16 / 9
-
