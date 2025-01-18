@@ -11,14 +11,8 @@ CANNONBALL_DEPENDENCIES = sdl2 boost
 CANNONBALL_SUPPORTS_IN_SOURCE_BUILD = NO
 CANNONBALL_SUBDIR = cmake
 
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2835),y)
-    CANNONBALL_TARGET = pi-opengles.camke
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
-    CANNONBALL_TARGET = pi-opengles.cmake
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2837),y)
-    CANNONBALL_TARGET = pi-opengles.cmake
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
-    CANNONBALL_TARGET = pi-opengl.cmake
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
+    CANNONBALL_TARGET = pi4-opengles.cmake
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86),y)
     CANNONBALL_TARGET = linux.cmake
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
@@ -29,19 +23,6 @@ endif
 
 # Build as release with proper target and paths
 CANNONBALL_CONF_OPTS += -DTARGET=$(CANNONBALL_TARGET)
-
-# Cannonball cmake files are hopelessly broken.
-# Link libmali manually. Ideally we should fix cannonball to use pkg-config instead.
-ifeq ($(BR2_PACKAGE_HAS_LIBMALI),y)
-CANNONBALL_DEPENDENCIES += libmali
-CANNONBALL_EXE_LINKER_FLAGS += -lmali
-CANNONBALL_SHARED_LINKER_FLAGS += -lmali
-endif
-
-# Enabling LTO as hires mode tends to be slow, it does help video rendering loops
-CANNONBALL_EXE_LINKER_FLAGS += -flto
-CANNONBALL_SHARED_LINKER_FLAGS += -flto
-CANNONBALL_CONF_OPTS += -DCMAKE_CXX_FLAGS=-flto -DCMAKE_EXE_LINKER_FLAGS="$(CANNONBALL_EXE_LINKER_FLAGS)" -DCMAKE_SHARED_LINKER_FLAGS="$(CANNONBALL_SHARED_LINKER_FLAGS)"
 
 define CANNONBALL_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/cmake/buildroot-build/cannonball $(TARGET_DIR)/usr/bin/
