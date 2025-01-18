@@ -3,8 +3,8 @@
 # shadps4
 #
 ################################################################################
-# Version: Commits on Jan 17, 2025
-SHADPS4_VERSION = 0cee59cbe6b7ab2471484234e5e7f98c0f6c55e5
+# Version: Commits on Jan 18, 2025
+SHADPS4_VERSION = 90b04e8cc0227a35aa5b01d6c361b4eaaefaee44
 SHADPS4_SITE = https://github.com/shadps4-emu/shadPS4.git
 SHADPS4_SITE_METHOD=git
 SHADPS4_GIT_SUBMODULES=YES
