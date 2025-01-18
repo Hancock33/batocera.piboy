@@ -1,15 +1,15 @@
 diff --git a/runloop.c b/runloop.c
-index 62c6487629..8a34496b42 100644
+index 1d5339c34e..5564176709 100644
 --- a/runloop.c
 +++ b/runloop.c
-@@ -7396,7 +7396,9 @@ bool runloop_get_entry_state_path(char *path, size_t len, unsigned slot)
+@@ -7426,7 +7426,9 @@ bool runloop_get_entry_state_path(char *s, size_t len, unsigned slot)
        return false;
  
-    _len = strlcpy(path, name_savestate, len);
--   snprintf(path + _len, len - _len, "%d.entry", slot);
-+
+    _len = strlcpy(s, name_savestate, len);
+-   snprintf(s + _len, len - _len, "%d.entry", slot);
++   
 +   if (slot > 0)
-+     snprintf(path + _len, len - _len, "%d", slot);
++     snprintf(s + _len, len - _len, "%d", slot);
  
     return true;
  }

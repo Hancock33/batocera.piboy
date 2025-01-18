@@ -1,5 +1,5 @@
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 780b802..248bb3d 100644
+index 780b802..6787633 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
 @@ -49,7 +49,6 @@ string(CONCAT TARGET_ARCH TARGET_ ${TARGET_ARCH})
@@ -36,7 +36,7 @@ index 780b802..248bb3d 100644
 +set (VER_TAG "batocera")
 +set (VER_MAJOR 2)
 +set (VER_MINOR 11)
-+set (VER_PATCH 1)
++set (VER_PATCH 4)
  message(STATUS "Version: ${VER_TAG}")
  
  include_directories(

@@ -3,7 +3,6 @@ config BR2_PACKAGE_AWGL
 	depends on BR2_INSTALL_LIBSTDCPP
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
-	select BR2_PACKAGE_FREEPATS
 
 	help
 	  awgl is a re-implementation of the engine used in the

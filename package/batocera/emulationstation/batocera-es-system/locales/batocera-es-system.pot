@@ -16807,6 +16807,31 @@ msgstr ""
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
+msgid "Set to on if you experience flickering in Hummer."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader, lindbergh-loader
+msgctxt "game_options"
+msgid "GAME OPTIONS"
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "HUMMER FLICKER FIX"
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Set to enable lens glare in Outrun 2."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "OUTRUN LENS GLARE"
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
 msgid "Run the game in test mode to configure certain game options."
 msgstr ""
 
@@ -17055,11 +17080,6 @@ msgctxt "keys_files"
 msgid "Exit Game"
 msgstr ""
 
-#. TRANSLATION: fpinball.keys, lindbergh.keys
-msgctxt "keys_files"
-msgid "Coin"
-msgstr ""
-
 #. TRANSLATION: wiiu.keys
 msgctxt "keys_files"
 msgid "Display the controller screen"
@@ -17098,6 +17118,11 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Start"
+msgstr ""
+
+#. TRANSLATION: fpinball.keys
+msgctxt "keys_files"
+msgid "Coin"
 msgstr ""
 
 #. TRANSLATION: fpinball.keys

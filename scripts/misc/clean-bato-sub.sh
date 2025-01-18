@@ -59,7 +59,8 @@ do
 
 	echo "Removing Package Sources: "${RED}$i${ENDCOLOR}
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-skeleton*
-	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-gcc-final-*
+	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-gcc-final-*/.stamp_built
+	sudo rm -rf $HOME/build-dir/batocera.$i/build/gcc-final-*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-libopenssl*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/mesa3d*
 done

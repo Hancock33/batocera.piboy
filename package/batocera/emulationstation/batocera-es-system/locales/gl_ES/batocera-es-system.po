@@ -5395,7 +5395,7 @@ msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
 msgstr "Pecha a aplicación no anfitrión remoto ao saír de Moonlight."
 
-#. TRANSLATION: fpinball.keys, lindbergh.keys
+#. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Coin"
 msgstr "Moeda"
@@ -8475,6 +8475,11 @@ msgctxt "game_options"
 msgid "GAME LANGUAGE"
 msgstr ""
 
+#. TRANSLATION: lindbergh-loader, lindbergh-loader
+msgctxt "game_options"
+msgid "GAME OPTIONS"
+msgstr ""
+
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "GAME PATCHES"
@@ -9186,6 +9191,11 @@ msgstr "MODO HQ"
 msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "HUMMER FLICKER FIX"
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -11875,6 +11885,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "OUTPUT SCALING"
 msgstr "ESCALADO DE SAÍDA"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "OUTRUN LENS GLARE"
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/mame, libretro/mamevirtual, libretro/mednafen_psx, libretro/mesen, ...
 msgctxt "game_options"
@@ -14709,9 +14724,19 @@ msgstr ""
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
+msgid "Set to enable lens glare in Outrun 2."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
 msgid ""
 "Set to keep the aspect ratio (4:3) in games like Sega Race TV and Primeval "
 "Hunt."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Set to on if you experience flickering in Hummer."
 msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin

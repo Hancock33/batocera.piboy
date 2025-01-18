@@ -425,7 +425,7 @@ class BigPEmuGenerator(Generator):
         # ScriptSettings
         if "ScriptSettings" not in config["BigPEmuConfig"]:
             config["BigPEmuConfig"]["ScriptSettings"] = {}
-        
+
         if system.isOptSet("bigpemu_doom"):
             config["BigPEmuConfig"]["ScriptSettings"]["DOOM-Music"] = system.config["bigpemu_doom"]
         else:

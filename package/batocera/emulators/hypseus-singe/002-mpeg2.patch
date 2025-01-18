@@ -1,16 +1,8 @@
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 248bb3d..23476f1 100644
+index 6787633..546e69a 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -51,15 +51,13 @@ include(BuildSupport)
- include(GNUInstallDirs)
- include(InstallRequiredSystemLibraries)
- include(FindPkgConfig)
--include(ExternalProject)
--include(BuildLibMPEG2)
- 
- use_cxx11( )
- 
+@@ -59,7 +59,7 @@ use_cxx11( )
  PKG_SEARCH_MODULE(SDL2 REQUIRED sdl2)
  PKG_SEARCH_MODULE(SDL2_TTF REQUIRED SDL2_ttf)
  PKG_SEARCH_MODULE(SDL2_MIXER REQUIRED SDL2_mixer)
@@ -19,7 +11,7 @@ index 248bb3d..23476f1 100644
  
  message(STATUS "Target: ${CMAKE_SYSTEM_NAME} ${CMAKE_TARGET_ARCHITECTURES}")
  
-@@ -98,7 +96,6 @@ add_subdirectory(timer)
+@@ -98,7 +98,6 @@ add_subdirectory(timer)
  add_subdirectory(video)
  add_subdirectory(vldp)
  

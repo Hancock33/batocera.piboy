@@ -5515,8 +5515,10 @@ lindbergh:
   comment_en:           |
                         Sega Lindbergh requires good knowledge of rom dumps.
                         We strongly recommend you read the wiki before asking for support.
+
                         To launch a game, create an file name with the .game extension as suggested below in the location where the rom will execute from.
                         Here are the working games and associated extensions at the time of writing:
+
                         Game                                Filename               Game ID
                         ----                              | --------             | -------
                         2 Spicy                           | apacheM.elf          | 2spicy.game
@@ -5539,11 +5541,16 @@ lindbergh:
                         The House of the Dead 4 Special   | hod4M.elf            | hotd4sp.game
                         The House of the Dead EX          | hodexRI.elf          | hotdex.game
                         Virtua Fighter 5                  | vf5                  | vf5.game
+                        Virtua Fighter 5 C                | vf5                  | vf5c.game
                         Virtua Fighter 5 R                | vf5                  | vf5r.game
                         Virtua Fighter 5 FS               | vf5                  | vf5fs.game
                         Virtua Tennis 3                   | vt3 or vt3_Lindbergh | vtennis3.game
-                        i.e . Create Ghost Squad Evolution.game in the /userdata/roms/lindbergh/Ghost Squad Evolution/vsg_l directory
+
+                        i.e . Create gsevo.game in the /userdata/roms/lindbergh/Ghost Squad Evolution/vsg_l directory
                         EmulationStation will then see the game & launch it accordingly.
+
+                        The Game ID naming helps identify gun & steering wheel games as well as scrapers.
+
                         Lindbergh loader compatibility list is here:
                         https://github.com/lindbergh-loader/lindbergh-loader/blob/master/docs/guide.md
                         For more info: https://wiki.batocera.org/systems:lindbergh
@@ -6389,7 +6396,7 @@ ps2:
     pcsx2:
       pcsx2:            { requireAnyOf: [BR2_PACKAGE_PCSX2], incompatible_extensions: [m3u] }
     libretro:
-      pcsx2:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PCSX2] }
+      ps2:              { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PS2] }
       play:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PLAY], incompatible_extensions: [m3u]  }
     play:
       play:             { requireAnyOf: [BR2_PACKAGE_PLAY], incompatible_extensions: [m3u] }

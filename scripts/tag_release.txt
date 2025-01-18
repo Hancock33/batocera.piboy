@@ -8,6 +8,7 @@ ecm.mk
 flatpak.mk
 fpinball.mk
 glslang.mk
+glslang.mk
 liblc3.mk
 shaderc.mk
 spirv-cross.mk
@@ -17,6 +18,7 @@ vice.mk
 vulkan-headers.mk
 vulkan-utility-libraries.mk
 vulkan-validationlayers.mk
+vulkan-volk.mk
 wine-custom.mk
 wine-mono.mk
 wine-native.mk

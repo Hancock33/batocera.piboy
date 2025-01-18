@@ -20,14 +20,15 @@ for file in /tmp/patches/*.patch; do
     echo "----------------------------------------------------------------------------------------"${ENDCOLOR}
     git stash &&
     patch -Np1 -i $file &&
-    rm $file &&
+    rm $file
+    
+     echo ${RED}
+        find . -type f -name "*.orig" -exec rm -v {} \;
+        find . -type f -name "*.rej" -exec rm -v {} \;
+     echo ${ENDCOLOR}
+     
     git add . &&
     git diff --cached > $file &&
     git commit -m $file
-
-    echo ${RED}
-        find . -type f -name "*.orig" -exec rm -v {} \;
-        find . -type f -name "*.rej" -exec rm -v {} \;
-    echo ${ENDCOLOR}
 done
 git stash

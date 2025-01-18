@@ -3,8 +3,8 @@
 # ppsspp
 #
 ################################################################################
-# Version: Commits on Jan 13, 2025
-PPSSPP_VERSION = a11b1287a1bf5ad20ec0d94d10ac438efe3873de
+# Version: Commits on Jan 18, 2025
+PPSSPP_VERSION = fd36a7981a5cdee591ddaa9b2b15dafde802b026
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
@@ -82,9 +82,7 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 endif
 
 # rpi4/5 vulkan support
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
-    PPSSPP_CONF_OPTS += -DARM_NO_VULKAN=OFF
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_BCM27XX),y)
     PPSSPP_CONF_OPTS += -DARM_NO_VULKAN=OFF
 else ifeq ($(BR2_arm)$(BR2_aarch64),y)
     PPSSPP_CONF_OPTS += -DARM_NO_VULKAN=ON

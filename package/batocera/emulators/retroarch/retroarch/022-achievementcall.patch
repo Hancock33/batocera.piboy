@@ -1,8 +1,8 @@
 diff --git a/cheevos/cheevos.c b/cheevos/cheevos.c
-index d23bc5bb56..dd1b284b80 100644
+index 17eeb957a3..8b96e4cd5d 100644
 --- a/cheevos/cheevos.c
 +++ b/cheevos/cheevos.c
-@@ -329,6 +329,13 @@ static void rcheevos_award_achievement(const rc_client_achievement_t* cheevo)
+@@ -328,6 +328,13 @@ static void rcheevos_award_achievement(const rc_client_achievement_t* cheevo)
        }
     }
  
@@ -17,10 +17,10 @@ index d23bc5bb56..dd1b284b80 100644
     /* Play the unlock sound */
     if (settings->bools.cheevos_unlock_sound_enable)
 diff --git a/configuration.c b/configuration.c
-index 3caefe97ec..7a37278d17 100644
+index 8cdc851c75..7fed75079e 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -1578,6 +1578,7 @@ static struct config_array_setting *populate_settings_array(
+@@ -1565,6 +1565,7 @@ static struct config_array_setting *populate_settings_array(
  
  #ifdef HAVE_CHEEVOS
     SETTING_ARRAY("cheevos_custom_host",          settings->arrays.cheevos_custom_host, false, NULL, true);
@@ -29,10 +29,10 @@ index 3caefe97ec..7a37278d17 100644
     SETTING_ARRAY("cheevos_password",             settings->arrays.cheevos_password, false, NULL, true);
     SETTING_ARRAY("cheevos_token",                settings->arrays.cheevos_token, false, NULL, true);
 diff --git a/configuration.h b/configuration.h
-index 0f44d6dcbf..b3a186c74c 100644
+index b426be8e99..638a5006d0 100644
 --- a/configuration.h
 +++ b/configuration.h
-@@ -470,6 +470,7 @@ typedef struct settings
+@@ -471,6 +471,7 @@ typedef struct settings
        char cheevos_unlock_sound[128];
        char cheevos_token[32];
        char cheevos_leaderboards_enable[32];

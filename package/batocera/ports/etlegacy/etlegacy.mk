@@ -3,8 +3,8 @@
 # etlegacy
 #
 ################################################################################
-# Version: Commits on Jan 06, 2025
-ETLEGACY_VERSION = 08769e18574734c03fa44b814ed12542e905877d
+# Version: Commits on Jan 14, 2025
+ETLEGACY_VERSION = 48f0f93766a1bfb748dff535718d6f6263a1d85d
 ETLEGACY_SITE = https://github.com/etlegacy/etlegacy.git
 ETLEGACY_SITE_METHOD = git
 ETLEGACY_GIT_SUBMODULES = YES
@@ -46,7 +46,7 @@ ETLEGACY_CONF_OPTS += -DFEATURE_IRC_SERVER=OFF
 ETLEGACY_CONF_OPTS += -DINSTALL_EXTRA=OFF
 
 # RPi4/5 needs XWayland support so OpenGL runs under the required X11
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711)$(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_BCM27XX),y)
 ETLEGACY_CONF_OPTS += -DARM=ON
 endif
 

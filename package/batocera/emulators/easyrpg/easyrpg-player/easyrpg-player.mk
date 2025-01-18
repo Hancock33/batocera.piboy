@@ -3,8 +3,8 @@
 # easyrpg-player
 #
 ################################################################################
-# Version: Commits on Jan 13, 2025
-EASYRPG_PLAYER_VERSION = d6ff81fd9fdc9eaa8ff4768b6cbfcff448367d58
+# Version: Commits on Jan 16, 2025
+EASYRPG_PLAYER_VERSION = a557aa6cd20cdba4a80813e64083687791aa6a78
 EASYRPG_PLAYER_SITE = $(call github,EasyRPG,Player,$(EASYRPG_PLAYER_VERSION))
 EASYRPG_PLAYER_LICENSE = MIT
 EASYRPG_PLAYER_SUPPORTS_IN_SOURCE_BUILD = NO
@@ -12,8 +12,6 @@ EASYRPG_PLAYER_SUPPORTS_IN_SOURCE_BUILD = NO
 EASYRPG_PLAYER_DEPENDENCIES += sdl2 zlib fmt libpng freetype mpg123 libvorbis
 EASYRPG_PLAYER_DEPENDENCIES += opusfile liblcf pixman speexdsp libxmp wildmidi fluidsynth
 
-EASYRPG_PLAYER_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
-EASYRPG_PLAYER_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 EASYRPG_PLAYER_CONF_OPTS += -DPLAYER_BUILD_EXECUTABLE=ON
 EASYRPG_PLAYER_CONF_ENV += LDFLAGS=-lpthread
 

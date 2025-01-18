@@ -1,12 +1,43 @@
-diff -Naur rawgl-071d98199ec88e5bbc69aa5e7c6a1be1de075e81.orig/Makefile rawgl-071d98199ec88e5bbc69aa5e7c6a1be1de075e81/Makefile
---- rawgl-071d98199ec88e5bbc69aa5e7c6a1be1de075e81.orig/Makefile	2020-04-18 15:02:23.000000000 +0100
-+++ rawgl-071d98199ec88e5bbc69aa5e7c6a1be1de075e81/Makefile	2021-10-30 21:09:14.648168189 +0100
-@@ -1,6 +1,6 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+new file mode 100644
+index 0000000..9d05fc8
+--- /dev/null
++++ b/CMakeLists.txt
+@@ -0,0 +1,22 @@
++cmake_minimum_required(VERSION 3.0)
++project("rawgl")
++add_executable(rawgl
++    aifcplayer.cpp  engine.cpp  graphics_gl.cpp    main.cpp          pak.cpp           resource.cpp      resource_nth.cpp    scaler.cpp      script.cpp     staticres.cpp       unpack.h   video.h
++    aifcplayer.h    engine.h    graphics.h         mixer.cpp         pak.h             resource.h        resource_nth.h      scaler.h        script.h       systemstub.h        util.cpp
++    bitmap.cpp      file.cpp    graphics_soft.cpp  mixer.h           resource_3do.cpp  resource_mac.cpp  resource_win31.cpp  screenshot.cpp  sfxplayer.cpp  systemstub_sdl.cpp  util.h
++    bitmap.h        file.h      intern.h           mixer_platform.h  resource_3do.h    resource_mac.h    resource_win31.h    screenshot.h    sfxplayer.h    unpack.cpp          video.cpp
++)
++
++target_compile_options(rawgl PRIVATE -g -O -MMD -Wall -Wpedantic -DBYPASS_PROTECTION -DUSE_GL)
++set_property(TARGET rawgl PROPERTY CXX_STANDARD 11)
++
++include(FindPkgConfig)
++
++pkg_search_module(SDL2 REQUIRED IMPORTED_TARGET sdl2)
++pkg_search_module(SDL2MIXER REQUIRED IMPORTED_TARGET SDL2_mixer)
++
++find_library(GL OpenGL)
++find_library(ZLIB z)
++
++target_include_directories(rawgl PUBLIC PkgConfig::SDL2)
++target_link_libraries(rawgl PkgConfig::SDL2 PkgConfig::SDL2MIXER ${GL} ${ZLIB})
+diff --git a/Makefile b/Makefile
+index 75655cb..91ec479 100644
+--- a/Makefile
++++ b/Makefile
+@@ -4,8 +4,8 @@ SRCS = aifcplayer.cpp bitmap.cpp file.cpp engine.cpp graphics_soft.cpp \
+ 	resource_win31.cpp resource_3do.cpp scaler.cpp screenshot.cpp systemstub_sdl.cpp sfxplayer.cpp \
+ 	staticres.cpp unpack.cpp util.cpp video.cpp main.cpp
  
 -SDL_CFLAGS = `sdl2-config --cflags`
--SDL_LIBS = `sdl2-config --libs` -lSDL2_mixer -lGL
+-SDL_LIBS = `sdl2-config --libs` -lSDL2_mixer
 +SDL_CFLAGS = `pkg-config sdl2 --cflags`
 +SDL_LIBS = `pkg-config sdl2 --libs` -lSDL2_mixer -lGL
  
- DEFINES = -DBYPASS_PROTECTION -DUSE_GL
+ DEFINES = -DBYPASS_PROTECTION
  

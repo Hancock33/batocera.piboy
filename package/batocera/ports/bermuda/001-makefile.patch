@@ -1,15 +1,31 @@
-diff --git a/Makefile b/Makefile
-index d843de0..79afdee 100644
---- a/Makefile
-+++ b/Makefile
-@@ -8,8 +8,8 @@
- DEFINES = -DBERMUDA_POSIX -DBERMUDA_VORBIS -DBERMUDA_ZLIB
- VORBIS_LIBS = -lvorbisfile -lvorbis -logg
- 
--SDL_CFLAGS = `sdl2-config --cflags`
--SDL_LIBS = `sdl2-config --libs` -lSDL2_mixer
-+SDL_CFLAGS = `pkg-config sdl2 --cflags`
-+SDL_LIBS = `pkg-config sdl2 --libs` -lSDL2_mixer
- 
- CXXFLAGS = -g -O -Wall $(SDL_CFLAGS) $(DEFINES)
- 
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+new file mode 100644
+index 0000000..f4516fe
+--- /dev/null
++++ b/CMakeLists.txt
+@@ -0,0 +1,25 @@
++cmake_minimum_required(VERSION 3.0)
++project("bermuda")
++add_executable(bs
++    avi_player.cpp  decoder.cpp   file.cpp  fs.h      intern.h           menu.cpp         opcodes.cpp     random.cpp    saveload.cpp    screenshot.h    str.h               util.cpp
++    avi_player.h    decoder.h     file.h    game.cpp  main.cpp           mixer.h          parser_scn.cpp  random.h      scaler.h        staticres.cpp   systemstub.h        util.h
++    bag.cpp         dialogue.cpp  fs.cpp    game.h    mixer_sdl.cpp      mixer_soft.cpp   parser_dlg.cpp  resource.cpp  screenshot.cpp  str.cpp         systemstub_sdl.cpp  win16.cpp
++)
++
++target_compile_options(bs PRIVATE -g -O -MMD -Wall -Wpedantic -DBERMUDA_POSIX -DBERMUDA_VORBIS -DBERMUDA_ZLIB)
++set_property(TARGET bs PROPERTY CXX_STANDARD 11)
++
++include(FindPkgConfig)
++
++pkg_search_module(SDL2 REQUIRED IMPORTED_TARGET sdl2)
++pkg_search_module(SDL2MIXER REQUIRED IMPORTED_TARGET SDL2_mixer)
++
++find_library(GL OpenGL)
++find_library(ZLIB z)
++find_library(VORBISFILE vorbisfile)
++find_library(VORBIS vorbis)
++find_library(OGG ogg)
++
++target_include_directories(bs PUBLIC PkgConfig::SDL2)
++target_link_libraries(bs PkgConfig::SDL2 PkgConfig::SDL2MIXER ${GL} ${ZLIB} ${VORBISFILE} ${VORBIS} ${OGG})
++

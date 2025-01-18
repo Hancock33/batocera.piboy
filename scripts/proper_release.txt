@@ -17,7 +17,6 @@ faudio.mk
 fdupes.mk
 fheroes2.mk
 gamecon_gpio_rpi.mk
-glslang.mk
 iir.mk
 innoextract.mk
 kodi-pvr-freebox
@@ -55,7 +54,6 @@ touchegg.mk
 unclutter.mk
 vcmi.mk
 vkd3d-proton.mk
-vulkan-volk.mk
 wf-recorder.mk
 wildmidi.mk
 winbtrfs.mk
