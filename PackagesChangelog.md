@@ -54,6 +54,8 @@ Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|4189a4d7317040cc0b631
 Emulators|[libretro-vircon32](http://github.com/vircon32/vircon32-libretro)|d8a92430e887286b4e5351916ef0bd35d8cb40e8|Jan 18, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|a93f3697d6d810f6d3e96c73914f33c7a80b2102|Jan 17, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|15c3faa26e879bdcff615558ded6dd886681ccae|Jan 17, 2025
+Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0-rc6|Jan 17, 2025
+Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.0-rc6|Jan 17, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|2896029197c245c022ecc581a4830e54df5c16a0|Jan 17, 2025
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|05e820a436d2e2cbbb1b871400f84a96e76e2359|Jan 17, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|a93f3697d6d810f6d3e96c73914f33c7a80b2102|Jan 17, 2025
@@ -205,6 +207,7 @@ Libraries|[python-adafruit-circuitpython-typing](https://files.pythonhosted.org/
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|d83967b2ea38eda8b43437167d93c86021bb4de1|Dec 02, 2024
 Libraries|[mono-bin](https://github.com/Hancock33/batocera-mono/releases)|6.12.0.206|Dec 01, 2024
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v117|Nov 29, 2024
+Utils|[7zip](https://www.7-zip.org/a)|2409|Nov 29, 2024
 Emulators|[libretro-tamalibretro](https://github.com/celerizer/tamalibretro.git)|ec83dc1a5ea8bdbcd02cee81779c6dbe0e996ed2|Nov 27, 2024
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|173129cca3a449d3c6a12385ad40c99835254ba3|Nov 26, 2024
 Audio|[chromebook-ucm-conf](http://github.com/WeirdTreeThing/alsa-ucm-conf-cros)|0.7|Nov 25, 2024
@@ -434,8 +437,6 @@ Utils|[xwiimote](http://github.com/xwiimote/xwiimote)|4df713d9037d814cc0c64197f6
 Emulators|[libretro-freej2me](http://github.com/hex007/freej2me)|8b9bc8a19baf26e3d92f88934a64a32f1cbc2795|Feb 16, 2024
 Emulators|[libretro-citra](https://github.com/zorn-v/citra-libretro.git)|947ea2c7e426632392cf4bf44eab70de034267be|Jan 30, 2024
 Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-controller-overlays)|a77301e60ae6fef28d4ffd149b9618cbc697a4a2|Jan 20, 2024
-Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0-rc6|Jan 17, 2024
-Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.0-rc6|Jan 17, 2024
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
 Utils|[bauh](http://github.com/vinifmor/bauh)|0.10.7|Jan 10, 2024
 Boot|[uboot-multiboard](https://ftp.denx.de/pub/u-boot)|2024.01|Jan 08, 2024
@@ -557,6 +558,5 @@ Emulators|[model2emu](https://github.com/batocera-linux/model2emu/raw/main)|1.1a
 Utils|[xxd](http://github.com/ConorOG/xxd)|084dc9dec6b6a6d048934916aa9a539d49ba898d|Jul 25, 2013
 Utils|[pm-utils](http://pm-utils.freedesktop.org/releases)|1.4.1|Jul 04, 2010
 Audio|[freepats](https://freepats.zenvoid.org)|20060219|Feb 19, 2006
-Utils|[7zip](https://www.7-zip.org/a)|2409|N/A
 Utils|[fake-hwclock](https://git.einval.com/git/fake-hwclock.git)|00a0feb706bfc11e1e0dbaa887c603b8f9875c78|N/A
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A

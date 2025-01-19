@@ -508,7 +508,7 @@ Sources|[mame-src](http://github.com/mamedev/mame)|mame0273|Dec 31, 2024
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
 Utils-host|[xa](https://www.floodgap.com/retrotech/xa/dists)|2.4.1|Mar 05, 2024
-Utils|[7zip](https://www.7-zip.org/a)|2409|N/A
+Utils|[7zip](https://www.7-zip.org/a)|2409|Nov 29, 2024
 Utils|[batocera-pygame](http://github.com/lbrpdx/retrotrivia)|e3238c736dfbde20d7ee402828ec57d89586d4de|Dec 31, 2021
 Utils|[bauh](http://github.com/vinifmor/bauh)|0.10.7|Jan 10, 2024
 Utils|[btop](http://github.com/aristocratos/btop)|v1.4.0|Sept 22, 2024
@@ -555,9 +555,9 @@ Wine|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.13|Aug 29, 2024
 Wine|[wine-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos-9.0-20250106-wine|Jan 02, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc6|Jan 18, 2025
 Wine|[wine-mono](https://github.com/madewokherd/wine-mono/releases)|wine-mono-9.4.0|Nov 22, 2024
-Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0-rc6|Jan 17, 2024
+Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0-rc6|Jan 17, 2025
 Wine|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc6|Jan 18, 2025
 Wine|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-4c|Dec 23, 2024
-Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.0-rc6|Jan 17, 2024
+Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.0-rc6|Jan 17, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250119|Jan 19, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|cede5047101299802a9756f0885e24a5b6f2fbb5|Dec 19, 2024

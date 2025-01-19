@@ -3,7 +3,7 @@
 # wine-staging
 #
 ################################################################################
-# Version: Commits on Jan 17, 2024
+# Version: Commits on Jan 17, 2025
 WINE_STAGING_VERSION = wine-10.0-rc6
 WINE_STAGING_SOURCE = wine-$(WINE_STAGING_VERSION).tar.gz
 WINE_STAGING_SITE = $(call github,wine-mirror,wine,$(WINE_STAGING_VERSION))
