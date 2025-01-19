@@ -406,9 +406,7 @@ msgstr "11"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "11x Native (7040x5808)"
-msgstr ""
-"11x Natif\n"
-" (7040x5808)"
+msgstr "11x Natif (7040x5808)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
