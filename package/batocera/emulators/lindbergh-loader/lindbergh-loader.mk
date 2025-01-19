@@ -20,22 +20,20 @@ LINDBERGH_LOADER_DEPENDENCIES += libglew sdl2 ncurses openal pipewire xlib_libX1
 LINDBERGH_LOADER_DEPENDENCIES += xlib_libXext xlib_libXi xlib_libXmu xlib_libXScrnSaver
 
 # match the makefile cflags
-LINDBERGH_LOADER_CFLAGS = -g -fPIC -m32 -Wall -Werror -Wno-unused-but-set-variable
-LINDBERGH_LOADER_CFLAGS += -Wno-unused-variable -Wno-unused-function -D_GNU_SOURCE -Wno-char-subscripts
-LINDBERGH_LOADER_CFLAGS += -I$(STAGING_DIR)/usr/include
+LINDBERGH_LOADER_CFLAGS = -g -pipe -fPIC -I$(STAGING_DIR)/usr/include -flto
 # match the makefile ldflags
 LINDBERGH_LOADER_LDFLAGS += -L$(STAGING_DIR)/usr/lib
-LINDBERGH_LOADER_LDFLAGS += -Wl,-z,defs -rdynamic -static-libgcc -lc -ldl -lGL
+LINDBERGH_LOADER_LDFLAGS += -flto -Wl,-z,defs -rdynamic -static-libgcc -lc -ldl -lGL
 LINDBERGH_LOADER_LDFLAGS += -lglut -lX11 -lSDL2 -lFAudio -lm -lpthread -shared
 LINDBERGH_LOADER_LDFLAGS += -nostdlib -lasound -L./src/libxdiff -lxdiff
 
 define LINDBERGH_LOADER_BUILD_CMDS
 	$(MAKE) \
-	CC="$(HOSTCC) -m32 -pthread" \
+	CC="$(TARGET_CC)" \
 	CFLAGS_FOR_BUILD="-I$(STAGING_DIR)/usr/include" \
 	CFLAGS="$(LINDBERGH_LOADER_CFLAGS)" \
 	CPPFLAGS="-I$(STAGING_DIR)/usr/include" \
-	LD="$(TARGET_CC) -m32" \
+	LD="$(TARGET_CC)" \
 	LDFLAGS="$(LINDBERGH_LOADER_LDFLAGS)" \
 	-C $(@D) all
 endef
