@@ -205,10 +205,10 @@ class XeniaGenerator(Generator):
             config['GPU'] = {}
         # may be used to bypass fetch constant type errors in certain games.
         # set the API to use
-        if system.isOptSet('xenia_api') and system.config['xenia_api'] == 'Vulkan':
-            config['GPU']['gpu'] = 'vulkan'
-        else:
+        if system.isOptSet('xenia_api') and system.config['xenia_api'] == 'D3D12':
             config['GPU']['gpu'] = 'd3d12'
+        else:
+            config['GPU']['gpu'] = 'vulkan'
         # vsync
         if system.isOptSet('xenia_vsync') and system.config['xenia_vsync'] == 'False':
             config['GPU']['vsync'] = False
