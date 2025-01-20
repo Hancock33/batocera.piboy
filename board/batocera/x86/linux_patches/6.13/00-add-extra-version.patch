@@ -1,13 +1,13 @@
 diff --git a/Makefile b/Makefile
-index e20a62ad397f..8a35ef2fed72 100644
+index b9464c88ac72..11a4021414d9 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -2,7 +2,7 @@
  VERSION = 6
  PATCHLEVEL = 13
  SUBLEVEL = 0
--EXTRAVERSION = -rc7
-+EXTRAVERSION = -rc7-batocera
+-EXTRAVERSION =
++EXTRAVERSION = -batocera
  NAME = Baby Opossum Posse
  
  # *DOCUMENTATION*
