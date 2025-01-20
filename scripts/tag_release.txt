@@ -9,9 +9,9 @@ flatpak.mk
 fpinball.mk
 glslang.mk
 glslang.mk
-libzedmd.mk
 liblc3.mk
 libpinmame.mk
+libzedmd.mk
 shaderc.mk
 spirv-cross.mk
 spirv-headers.mk

@@ -350,7 +350,7 @@ index 000000000000..49cb5d30bf6b
 +MODULE_DESCRIPTION("Steam Deck extcon driver");
 +MODULE_LICENSE("GPL");
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_mode.h b/drivers/gpu/drm/amd/amdgpu/amdgpu_mode.h
-index 5e3faefc5510..09748a2c5aba 100644
+index 6da4f946cac0..5b639276939d 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_mode.h
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_mode.h
 @@ -435,8 +435,6 @@ struct amdgpu_mode_info {
@@ -411,7 +411,7 @@ index ba5160399ab2..ee80e748597e 100644
  
  		DRM_INFO("use_doorbell being set to: [%s]\n",
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 24fe467e7c51..7a4ed9b18836 100644
+index aea78d5c0a0f..e2536ad56d9f 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -162,6 +162,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -424,7 +424,7 @@ index 24fe467e7c51..7a4ed9b18836 100644
  /**
   * DOC: overview
   *
-@@ -4534,7 +4537,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4569,7 +4572,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  	return 0;
  }
  
@@ -433,7 +433,7 @@ index 24fe467e7c51..7a4ed9b18836 100644
  #define AMDGPU_DM_DEFAULT_MAX_BACKLIGHT 255
  #define AMDGPU_DM_MIN_SPREAD ((AMDGPU_DM_DEFAULT_MAX_BACKLIGHT - AMDGPU_DM_DEFAULT_MIN_BACKLIGHT) / 2)
  #define AUX_BL_DEFAULT_TRANSITION_TIME_MS 50
-@@ -4568,11 +4571,27 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
+@@ -4603,11 +4606,27 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
  
  	if (caps.caps_valid) {
  		dm->backlight_caps[bl_idx].caps_valid = true;
@@ -461,7 +461,7 @@ index 24fe467e7c51..7a4ed9b18836 100644
  		dm->backlight_caps[bl_idx].min_input_signal =
  				AMDGPU_DM_DEFAULT_MIN_BACKLIGHT;
  		dm->backlight_caps[bl_idx].max_input_signal =
-@@ -4582,6 +4601,9 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
+@@ -4617,6 +4636,9 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
  	if (dm->backlight_caps[bl_idx].aux_support)
  		return;
  
@@ -471,7 +471,7 @@ index 24fe467e7c51..7a4ed9b18836 100644
  	dm->backlight_caps[bl_idx].min_input_signal = AMDGPU_DM_DEFAULT_MIN_BACKLIGHT;
  	dm->backlight_caps[bl_idx].max_input_signal = AMDGPU_DM_DEFAULT_MAX_BACKLIGHT;
  #endif
-@@ -4613,9 +4635,9 @@ static u32 convert_brightness_from_user(const struct amdgpu_dm_backlight_caps *c
+@@ -4648,9 +4670,9 @@ static u32 convert_brightness_from_user(const struct amdgpu_dm_backlight_caps *c
  	if (!get_brightness_range(caps, &min, &max))
  		return brightness;
  
@@ -484,7 +484,7 @@ index 24fe467e7c51..7a4ed9b18836 100644
  }
  
  static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *caps,
-@@ -4628,9 +4650,9 @@ static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *cap
+@@ -4663,9 +4685,9 @@ static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *cap
  
  	if (brightness < min)
  		return 0;
@@ -497,7 +497,7 @@ index 24fe467e7c51..7a4ed9b18836 100644
  }
  
  static void amdgpu_dm_backlight_set_level(struct amdgpu_display_manager *dm,
-@@ -8960,7 +8982,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -9007,7 +9029,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -3246,7 +3246,7 @@ index 000000000000..518d8db3af5e
 +	ALLY_DEVICE_ATTR_RW(btn_mapping_##_fname##_turbo, turbo);          \
 +	ALLY_BTN_ATTRS_GROUP_WITH_TURBO(btn_##_fname, btn_mapping_##_fname)
 diff --git a/drivers/hid/hid-asus.c b/drivers/hid/hid-asus.c
-index 506c6f377e7d..ef18f721e2ff 100644
+index 46e3e42f9eb5..b89329f78257 100644
 --- a/drivers/hid/hid-asus.c
 +++ b/drivers/hid/hid-asus.c
 @@ -52,6 +52,10 @@ MODULE_DESCRIPTION("Asus HID Keyboard and TouchPad");
@@ -3268,7 +3268,7 @@ index 506c6f377e7d..ef18f721e2ff 100644
  
  #define I2C_KEYBOARD_QUIRKS			(QUIRK_FIX_NOTEBOOK_REPORT | \
  						 QUIRK_NO_INIT_REPORTS | \
-@@ -1003,6 +1008,17 @@ static int asus_probe(struct hid_device *hdev, const struct hid_device_id *id)
+@@ -1029,6 +1034,17 @@ static int asus_probe(struct hid_device *hdev, const struct hid_device_id *id)
  
  	drvdata->quirks = id->driver_data;
  
@@ -3286,7 +3286,7 @@ index 506c6f377e7d..ef18f721e2ff 100644
  	/*
  	 * T90CHI's keyboard dock returns same ID values as T100CHI's dock.
  	 * Thus, identify T90CHI dock with product name string.
-@@ -1254,10 +1270,10 @@ static const struct hid_device_id asus_devices[] = {
+@@ -1280,10 +1296,10 @@ static const struct hid_device_id asus_devices[] = {
  	  QUIRK_USE_KBD_BACKLIGHT | QUIRK_ROG_NKEY_KEYBOARD },
  	{ HID_USB_DEVICE(USB_VENDOR_ID_ASUSTEK,
  	    USB_DEVICE_ID_ASUSTEK_ROG_NKEY_ALLY),
@@ -3299,7 +3299,7 @@ index 506c6f377e7d..ef18f721e2ff 100644
  	{ HID_USB_DEVICE(USB_VENDOR_ID_ASUSTEK,
  	    USB_DEVICE_ID_ASUSTEK_ROG_CLAYMORE_II_KEYBOARD),
  	  QUIRK_ROG_CLAYMORE_II_KEYBOARD },
-@@ -1301,4 +1317,5 @@ static struct hid_driver asus_driver = {
+@@ -1327,4 +1343,5 @@ static struct hid_driver asus_driver = {
  };
  module_hid_driver(asus_driver);
  
@@ -6021,7 +6021,7 @@ index f699e5827ccb..99e86b983c77 100644
  }
  
 diff --git a/include/linux/platform_data/x86/asus-wmi.h b/include/linux/platform_data/x86/asus-wmi.h
-index 365e119bebaa..cc21e4272460 100644
+index 783e2a336861..c427b6c20d3f 100644
 --- a/include/linux/platform_data/x86/asus-wmi.h
 +++ b/include/linux/platform_data/x86/asus-wmi.h
 @@ -6,6 +6,9 @@

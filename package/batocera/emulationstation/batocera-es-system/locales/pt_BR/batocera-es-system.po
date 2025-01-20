@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: batocera-emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-01-17 05:31-0300\n"
+"POT-Creation-Date: 2019-01-15 21:09+0100\n"
+"PO-Revision-Date: 2025-01-19 17:30-0300\n"
 "Last-Translator: Leonardo Colman <dev@leonardo.colman.com.br>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: pt_BR\n"
@@ -8486,7 +8486,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader, lindbergh-loader
 msgctxt "game_options"
 msgid "GAME OPTIONS"
-msgstr ""
+msgstr "OPÇÕES DE JOGO"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -11907,7 +11907,7 @@ msgstr "ESCALA DE SAIDA"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "OUTRUN LENS GLARE"
-msgstr ""
+msgstr "OFUSCAMENTO DAS LENTES"
 
 #. TRANSLATION: libretro/fceumm, libretro/mame, libretro/mamevirtual, libretro/mednafen_psx, libretro/mesen, ...
 msgctxt "game_options"
@@ -14748,7 +14748,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set to enable lens glare in Outrun 2."
-msgstr ""
+msgstr "Definido para ativar o brilho da lente em Outrun 2."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14762,7 +14762,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set to on if you experience flickering in Hummer."
-msgstr ""
+msgstr "Defina como ativado se você tiver uma cintilação no Hummer."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -20263,10 +20263,6 @@ msgstr "amarelo/azul"
 #~ msgctxt "keys_files"
 #~ msgid "Set to full screen"
 #~ msgstr "Define para tela cheia"
-
-#~ msgctxt "game_options"
-#~ msgid "Set to on if you experience flickering in hummer."
-#~ msgstr "Defina como ativado se você perceber cintilação no hummer."
 
 #~ msgctxt "game_options"
 #~ msgid "Set vsync on to avoid tearing."
