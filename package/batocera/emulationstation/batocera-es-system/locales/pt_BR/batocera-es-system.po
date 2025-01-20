@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: batocera-emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-15 21:09+0100\n"
-"PO-Revision-Date: 2025-01-10 18:37-0300\n"
+"PO-Revision-Date: 2025-01-19 17:30-0300\n"
 "Last-Translator: Leonardo Colman <dev@leonardo.colman.com.br>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: pt_BR\n"
@@ -2675,6 +2675,7 @@ msgstr ""
 msgctxt "game_options"
 msgid "Activate Doom DOS original music and throttle the Doom frame rate."
 msgstr ""
+"Ative a música original do Doom DOS e limite a taxa de quadros do Doom."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -5877,7 +5878,7 @@ msgstr "DOLBY PRO LOGIC II"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "DOOM"
-msgstr ""
+msgstr "DOOM"
 
 #. TRANSLATION: libretro/virtualjaguar
 msgctxt "game_options"
@@ -8485,7 +8486,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader, lindbergh-loader
 msgctxt "game_options"
 msgid "GAME OPTIONS"
-msgstr ""
+msgstr "OPÇÕES DE JOGO"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -9203,7 +9204,7 @@ msgstr "HST"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "HUMMER FLICKER FIX"
-msgstr ""
+msgstr "CONSERTO DE CINTILAÇÃO DO HUMMER"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -11906,7 +11907,7 @@ msgstr "ESCALA DE SAIDA"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "OUTRUN LENS GLARE"
-msgstr ""
+msgstr "OFUSCAMENTO DAS LENTES"
 
 #. TRANSLATION: libretro/fceumm, libretro/mame, libretro/mamevirtual, libretro/mednafen_psx, libretro/mesen, ...
 msgctxt "game_options"
@@ -14690,7 +14691,7 @@ msgid ""
 "Set if you want to limit the FPS in games that are not limited like OutRun2."
 msgstr ""
 "Configure se você desejar limitar o FPS de jogos que não são limitados como "
-"OutRun2"
+"OutRun2."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -14747,7 +14748,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set to enable lens glare in Outrun 2."
-msgstr ""
+msgstr "Definido para ativar o brilho da lente em Outrun 2."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14756,12 +14757,12 @@ msgid ""
 "Hunt."
 msgstr ""
 "Configure para manter a proporção (4:3) em jogos como Sega Race TV e "
-"Primeval Hunt"
+"Primeval Hunt."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set to on if you experience flickering in Hummer."
-msgstr ""
+msgstr "Defina como ativado se você tiver uma cintilação no Hummer."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
