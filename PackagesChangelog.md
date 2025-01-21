@@ -9,7 +9,10 @@ Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.276
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|e2d6a87f78ffd2b0d7370997b780be5ab47d2b01|Jan 21, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|fe28bd93bd2ddf2737960cea84ff406a3f3922dc|Jan 21, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|f8530cd4190ac76100b2245b98a360f40026bd77|Jan 21, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0|Jan 21, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250121|Jan 21, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|66e23fca7982158c648d1a40c93ff23c4bf9b07f|Jan 21, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250121|Jan 21, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|4eaa32fc10eb78c510602256dd56f5f99a893608|Jan 21, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|0a362b314debbc536980a7fe3fec780f68ff38ef|Jan 21, 2025
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|92e10f31eaadb64b96c73e0da23406c8565a0ed3|Jan 21, 2025
@@ -40,8 +43,6 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|3de0ed4a5c6d00b48bb5888edd6b200
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|b2fe51272b46d43911cb1886e8d4a5c086205e5c|Jan 19, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|f79b3b186695e1ff53a6cee44b9c5aa9c30d8ebd|Jan 19, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|e43838b1d6426848a65c75d85d0a26a70053bbb8|Jan 19, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250119|Jan 19, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250119|Jan 19, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|7b30f9350cfe8b0c15ca35cc080983eafdc7c8e6|Jan 19, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|dca7adcb5269b06fa9c6527117dd44ae0f8dde40|Jan 19, 2025
 Emulators|[libretro-bennugd](http://github.com/diekleinekuh/BennuGD_libretro)|abaa3c96e971ea338f672e6486ddbefe02cdbfc7|Jan 19, 2025
@@ -55,7 +56,6 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|f793d33e8098
 Ports|[omf2097](http://github.com/omf2097/openomf)|1dcd5e09163933d6fb0e695c9f0e00af4fb167c3|Jan 18, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|b180a49600ea530bbc1f455bfd56889919992043|Jan 18, 2025
 Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|d74f0dc89771b926a3406dc2adf905e1e3697545|Jan 18, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc6|Jan 18, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|2ab3df7d389033b64fe45b93861d40143dca9100|Jan 18, 2025
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.8.1|Jan 18, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|28b918879b0e3b3428ac09f41c0129296b037b2d|Jan 18, 2025
