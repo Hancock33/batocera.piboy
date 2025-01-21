@@ -12,7 +12,6 @@ model2emu.mk
 noto-cjk-fonts.mk
 openbor6412.mk
 openbor7142.mk
-python-pyxel.mk
 wine-cachyos.mk
 wine-custom.mk
 wine-native.mk
