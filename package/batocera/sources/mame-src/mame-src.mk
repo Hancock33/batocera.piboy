@@ -11,7 +11,6 @@ MAME_SRC_LICENSE = MAME
 
 MAME_SRC_CROSS_ARCH = unknown
 MAME_SRC_CROSS_OPTS = PRECOMPILE=0
-MAME_SRC_LDFLAGS = -fuse-ld=mold
 
 # Limit number of jobs not to eat too much RAM....
 MAME_SRC_JOBS = $(shell expr $(shell nproc))
@@ -82,7 +81,7 @@ define MAME_SRC_BUILD_CMDS
 	cd $(@D); \
 	PATH="$(HOST_DIR)/bin:$$PATH" \
 	SYSROOT="$(STAGING_DIR)" \
-	LDFLAGS="--sysroot=$(STAGING_DIR) $(MAME_SRC_LDFLAGS)" \
+	LDFLAGS="--sysroot=$(STAGING_DIR)" \
 	PKG_CONFIG="$(HOST_DIR)/bin/pkg-config --define-prefix" \
 	PKG_CONFIG_PATH="$(STAGING_DIR)/usr/lib/pkgconfig" \
 	CCACHE_SLOPPINESS="pch_defines,time_macros" \
@@ -112,7 +111,7 @@ define MAME_SRC_BUILD_CMDS
 	LDOPTS="-lasound -lfontconfig" \
 	SYMBOLS=0 \
 	STRIP_SYMBOLS=1 \
-	TOOLS=1 NOWERROR=1 OPTIMIZE=s OPT_FLAGS="$(TARGET_OPTIMIZATION)"
+	TOOLS=1 NOWERROR=1 OPTIMIZE=s OPT_FLAGS=$(BR2_TARGET_OPTIMIZATION) ARCHOPTS=-fuse-ld=mold
 endef
 
 define MAME_SRC_INSTALL_TARGET_CMDS

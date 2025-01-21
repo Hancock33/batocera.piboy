@@ -37,9 +37,6 @@ ifeq ($(BR2_ENABLE_DEBUG),y)
     LIBRETRO_MAME_SRC_EXTRA_ARGS += SYMBOLS=1 SYMLEVEL=2 OPTIMIZE=0
 endif
 
-LIBRETRO_MAME_SRC_CFLAGS = $(TARGET_OPTIMIZATION)
-LIBRETRO_MAME_SRC_LDFLAGS = -fuse-ld=mold
-
 define LIBRETRO_MAME_SRC_BUILD_CMDS
 	# create some dirs while with parallelism, sometimes it fails because this directory is missing
 	mkdir -p $(@D)/build/libretro/obj/x64/libretro/src/osd/libretro/libretro-internal
@@ -59,7 +56,7 @@ define LIBRETRO_MAME_SRC_BUILD_CMDS
 		DISTRO="debian-stable" OVERRIDE_CC="$(TARGET_CC)" OVERRIDE_CXX="$(TARGET_CXX)" \
 		OVERRIDE_LD="$(TARGET_LD)" RANLIB="$(TARGET_RANLIB)" AR="$(TARGET_AR)" \
 		$(LIBRETRO_MAME_SRC_EXTRA_ARGS) CROSS_BUILD=1 TARGET="mame" SUBTARGET="mame" RETRO=1 \
-		OSD="retro" DEBUG=0 PRECOMPILE=0 OPTIMIZE=s
+		OSD="retro" DEBUG=0 PRECOMPILE=0 OPTIMIZE=s OPT_FLAGS=$(BR2_TARGET_OPTIMIZATION) ARCHOPTS=-fuse-ld=mold VERBOSE=1
 endef
 
 define LIBRETRO_MAME_SRC_INSTALL_TARGET_CMDS
