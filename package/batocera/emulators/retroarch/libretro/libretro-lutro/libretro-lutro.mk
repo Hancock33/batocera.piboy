@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jan 20, 2025
-LIBRETRO_LUTRO_VERSION = 72c8754c38f4b748d7b938cd966869b68437c4c5
+LIBRETRO_LUTRO_VERSION = cf3f5caebd5f1af6bf66924e494d499fe960b026
 LIBRETRO_LUTRO_SITE = $(call github,libretro,libretro-lutro,$(LIBRETRO_LUTRO_VERSION))
 LIBRETRO_LUTRO_LICENSE = MIT
 
