@@ -1,5 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|da8c42ebf4c055d2095f7a3d9dfae1a3b66c0821|Jan 22, 2025
 Emulators|[citra](https://github.com/Borked3DS/Borked3DS.git)|985548fd62157940ef88d5716ae05c2c5f9bf4fe|Jan 21, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|4e588bb6c1f59a0599e138a176ca06e8b454165a|Jan 21, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|13c1b47589447ad872c7bc2bfd8e2728106a2e9e|Jan 21, 2025
@@ -20,6 +21,9 @@ Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|f7873288b1a1627849c
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|66e23fca7982158c648d1a40c93ff23c4bf9b07f|Jan 21, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250121|Jan 21, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|4eaa32fc10eb78c510602256dd56f5f99a893608|Jan 21, 2025
+Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
+Wine|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0|Jan 21, 2025
+Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|0a362b314debbc536980a7fe3fec780f68ff38ef|Jan 21, 2025
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|f7873288b1a1627849c28d3065e57f492f2d2342|Jan 21, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|48d8b87c9ad6f889f2e1ea38e7dc5a121cd6a30a|Jan 21, 2025
@@ -68,12 +72,10 @@ Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|ad2c20962b9106a2613c
 Ports|[hlsdk-xash3d-dmc](http://github.com/FWGS/hlsdk-portable)|d3399b14d51b85375b3d9d6b3e0d6400c69f75e9|Jan 18, 2025
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|fdb7547897396cdb99c1c45e71155c50fcb9b470|Jan 18, 2025
 Ports|[hlsdk-xash3d-zombiex](http://github.com/FWGS/hlsdk-portable)|7906cd4bb0645a0870e8ebed831bf247a16a009e|Jan 18, 2025
-Wine|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0rc6|Jan 18, 2025
 Emulators|[libretro-vircon32](http://github.com/vircon32/vircon32-libretro)|d8a92430e887286b4e5351916ef0bd35d8cb40e8|Jan 18, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|a93f3697d6d810f6d3e96c73914f33c7a80b2102|Jan 17, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|15c3faa26e879bdcff615558ded6dd886681ccae|Jan 17, 2025
-Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0-rc6|Jan 17, 2025
-Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.0-rc6|Jan 17, 2025
+Wine|[wine-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos-9.0-20250117-wine|Jan 17, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|2896029197c245c022ecc581a4830e54df5c16a0|Jan 17, 2025
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|05e820a436d2e2cbbb1b871400f84a96e76e2359|Jan 17, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|a93f3697d6d810f6d3e96c73914f33c7a80b2102|Jan 17, 2025
@@ -139,7 +141,6 @@ Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|d348ab1d028e4da
 Ports|[yquake2-zaero](https://github.com/yquake2/zaero.git)|093aaefdfd2b7396fd518e3be6ff197552a3d072|Jan 04, 2025
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.10.0|Jan 03, 2025
 Libraries|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/79/96/1f72b50ed5402e79085433036ef0ac692072df86860c6d200bd28d562b27)|3.76.1|Jan 03, 2025
-Wine|[wine-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos-9.0-20250106-wine|Jan 02, 2025
 Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)|2cb3cab20385118fe5867d43a971e26e2edd6346|Jan 02, 2025
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|01765b0929a108e7362e4b34fa8aae64180f7c42|Jan 02, 2025
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.01|Jan 01, 2025
@@ -202,7 +203,6 @@ Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.4|
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.4|Dec 06, 2024
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2024.09.2|Dec 05, 2024
 Gpu|[nvidia-open-driver](http://download.nvidia.com/XFree86/Linux-x86)|565.77|Dec 05, 2024
-Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|139e4fc2eeea7a140239d34c73b6bf4f69c1f74d|Dec 05, 2024
 Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-console)|a3a53cc73a2377104e3ee4ef3963a12e55521502|Dec 05, 2024
 Kodi|[kodi_resource_language_es_es](http://mirrors.kodi.tv/addons/omega/resource.language.es_es)|11.0.80|Dec 04, 2024
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|572c91856a5288b7433c619af651e31f00f3ce7e|Dec 04, 2024
