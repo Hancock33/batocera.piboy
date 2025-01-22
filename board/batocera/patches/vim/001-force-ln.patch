@@ -1,5 +1,5 @@
 diff --git a/src/Makefile b/src/Makefile
-index c8a84065f..fa514f006 100644
+index 19d1dca9b..d82cf0475 100644
 --- a/src/Makefile
 +++ b/src/Makefile
 @@ -430,7 +430,7 @@ CClink = $(CC)
@@ -11,8 +11,8 @@ index c8a84065f..fa514f006 100644
  # If both python2.x and python3.x are enabled then the linking will be via
  # dlopen(), dlsym(), dlclose(), i.e. pythonX.Y.so must be available
  # However, this may still cause problems, such as "import termios" failing.
-@@ -2189,7 +2189,7 @@ scripttests:
- 		cd $(PODIR); $(MAKE) -f Makefile check VIM=../$(VIMTARGET); \
+@@ -2198,7 +2198,7 @@ scripttests:
+ 		cd $(PODIR); $(MAKE) -f Makefile check VIMPROG=../$(VIMTARGET); \
  	fi
  	-if test $(VIMTARGET) != vim -a ! -r vim; then \
 -		ln -s $(VIMTARGET) vim; \
@@ -20,7 +20,7 @@ index c8a84065f..fa514f006 100644
  	fi
  	cd testdir; $(MAKE) -f Makefile $(GUI_TESTTARGET) VIMPROG=../$(VIMTARGET) $(GUI_TESTARG) SCRIPTSOURCE=../$(SCRIPTSOURCE)
  
-@@ -2690,40 +2690,40 @@ installvimdiff: $(DEST_BIN)/$(VIMDIFFTARGET)
+@@ -2739,40 +2739,40 @@ installvimdiff: $(DEST_BIN)/$(VIMDIFFTARGET)
  installgvimdiff: $(DEST_BIN)/$(GVIMDIFFTARGET)
  
  $(DEST_BIN)/$(EXTARGET): $(DEST_BIN)
@@ -73,7 +73,7 @@ index c8a84065f..fa514f006 100644
  
  # Create links for the manual pages with various names to vim.	This is only
  # done when the links (or manpages with the same name) don't exist yet.
-@@ -2889,7 +2889,7 @@ clean celan: testclean
+@@ -2948,7 +2948,7 @@ clean celan: testclean
  # another way.  When new source files are added use "shadowupdate":
  #  % cd shadow
  #  % rm Makefile
@@ -82,7 +82,7 @@ index c8a84065f..fa514f006 100644
  #  % ./configure {options}
  #  % make
  # And later:
-@@ -2903,22 +2903,22 @@ LINKEDFILES = ../*.[chm] ../*.cc ../*.in ../*.sh ../*.xs ../*.xbm ../gui_gtk_res
+@@ -2962,22 +2962,22 @@ LINKEDFILES = ../*.[chm] ../*.cc ../*.in ../*.sh ../*.xs ../*.xbm ../gui_gtk_res
  
  shadow:	runtime pixmaps
  	$(MKDIR_P) $(SHADOWDIR)
@@ -111,12 +111,16 @@ index c8a84065f..fa514f006 100644
  				 ../../testdir/Make_all.mak \
  				 ../../testdir/README.txt \
  				 ../../testdir/*.in \
-@@ -2941,11 +2941,11 @@ shadowupdate:
+@@ -3001,13 +3001,13 @@ shadowupdate:
  
  # Link needed for doing "make install" in a shadow directory.
  runtime:
 -	-ln -s ../runtime .
+-	-ln -s ../README.txt .
+-	-ln -s ../LICENSE .
 +	-ln -sf ../runtime .
++	-ln -sf ../README.txt .
++	-ln -sf ../LICENSE .
  
  # Link needed for doing "make" using GTK in a shadow directory.
  pixmaps:
