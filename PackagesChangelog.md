@@ -1,8 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|f7f19a934d190c61d59ca95c1adcb8943e72c80c|Jan 23, 2025
-Emulators|[cemu](https://github.com/cemu-project/Cemu)|5bd253a1f84b5c410023744edf46896547f770d8|Jan 23, 2025
-Emulators|[citra](https://github.com/Borked3DS/Borked3DS.git)|1ebf659b7489bb8d714590a2ced4da0044754972|Jan 23, 2025
+Emulators|[cemu](https://github.com/cemu-project/Cemu)|e834515f430c8d8eaee6be6e1a5a4f16fcbca8d9|Jan 23, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|807094d627f6b0e4141282d14113b4f759cf56a0|Jan 23, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|9a1cab2ab85297195aa5301275ba3d7014edbd7c|Jan 23, 2025
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|9e3075b2bfe91ce205d4342fb44c9f18d3aa1b41|Jan 23, 2025
@@ -11,13 +10,15 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|d6b15c7b624bd04b61a2d
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|448666c896d9ff12bd832ac7c4818a5f35b6c814|Jan 23, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-01-23|Jan 23, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.288|Jan 23, 2025
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|fb738bc24739704abcc87d87f25dd6a241c9719d|Jan 23, 2025
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|2e6c9b8f9866f48bd39dc35b25310e77e3fa89f6|Jan 23, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|164597e543bc107b11b3c763ef0af22cbf8cb6b6|Jan 23, 2025
+Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45464|Jan 23, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|7099774a3c82642ad64bc3a4f1b798e951904f7d|Jan 23, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|9739d13f4833189158311d37ed1ce4a5227b539e|Jan 23, 2025
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|4779f27730fbc46fd65697f92410dff386d016db|Jan 23, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|72df261ed0ef8a177618edec8b9fe0dba2e3b3ce|Jan 23, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|27b6cb2f723fd8137f40e1b29306e3005666b473|Jan 23, 2025
-Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|f0b29bac1b0d6b7d6d98f8b050930f8f0985a3e5|Jan 23, 2025
+Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|7da97721433ed8ed2474e277898b244d70d91f3f|Jan 23, 2025
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|658c0bfb9d772094a90a175e36753f3b584877e1|Jan 23, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|e70655ce447e1bd4450750bf9d2c34f0174e0f20|Jan 23, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|d6b15c7b624bd04b61a2d27e28b5fe6162b19e15|Jan 23, 2025
@@ -102,9 +103,7 @@ Ports|[rott](http://github.com/fabiangreffrath/taradino)|513b4e9a45aae4f635c0a94
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|833aad283b1f66441af66f512a99cfb883f232e9|Jan 14, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|55e111eaf2270deadad82c2e22622e7128bc5c6d|Jan 14, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|3e1293ee827b741e2a6d33704a79f85e70a9d931|Jan 13, 2025
-Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45462|Jan 13, 2025
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|1874d2bbe0ab07f75e6a484e48e86be101cc86ca|Jan 13, 2025
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|254181f7b8d67a4b5bfd747fce3bc0f05b927396|Jan 13, 2025
 Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.5.3|Jan 13, 2025
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|80aa2e384d040e8625212c31943712d37771fa29|Jan 13, 2025
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|v3.6.0-1209-7915412|Jan 13, 2025
@@ -194,6 +193,7 @@ Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|75ac6c6e39cf
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ac86299e75e3fffae4bf60a20b92b510b1de2684|Dec 14, 2024
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|58352d6dc969fa90c5fa1220f38ffe577157547f|Dec 14, 2024
 Wine|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.8.0|Dec 13, 2024
+Emulators|[citra](https://github.com/Borked3DS/Borked3DS.git)|v2024.12.12|Dec 12, 2024
 Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.4.304.0|Dec 12, 2024
 Utils|[re2c](http://github.com/skvadrik/re2c)|4.0.2|Dec 11, 2024
 Firmwares|[alllinuxfirmwares](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot)|20241210|Dec 10, 2024
