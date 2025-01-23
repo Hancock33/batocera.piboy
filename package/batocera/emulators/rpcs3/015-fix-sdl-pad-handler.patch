@@ -1,5 +1,5 @@
 diff --git a/rpcs3/Input/sdl_pad_handler.h b/rpcs3/Input/sdl_pad_handler.h
-index f4fa256d2..8610501b5 100644
+index a375f8a07..1f435f228 100644
 --- a/rpcs3/Input/sdl_pad_handler.h
 +++ b/rpcs3/Input/sdl_pad_handler.h
 @@ -3,7 +3,7 @@
