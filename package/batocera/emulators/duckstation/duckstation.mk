@@ -47,4 +47,11 @@ define DUCKSTATION_INSTALL_TARGET_CMDS
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
+define DUCKSTATION_VERSION_DETAILS
+	echo '#pragma once' > $(@D)/src/scmversion/tag.h
+	echo '#define SCM_RELEASE_TAG "latest"' >> $(@D)/src/scmversion/tag.h
+
+endef
+
+DUCKSTATION_PRE_CONFIGURE_HOOKS = DUCKSTATION_VERSION_DETAILS
 $(eval $(cmake-package))
