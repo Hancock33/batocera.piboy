@@ -6,35 +6,18 @@
 # Version: Commits on Jan 21, 2025
 LIBRETRO_MAME_SRC_VERSION = f8b2d06b0cbbcb8287ca4e63bf250164df05ec12
 LIBRETRO_MAME_SRC_SITE = $(call github,Hancock33,lr-mame,$(LIBRETRO_MAME_SRC_VERSION))
+LIBRETRO_MAME_SRC_DEPENDENCIES = sdl2 sdl2_ttf zlib libpng fontconfig sqlite jpeg flac rapidjson expat glm pulseaudio
 LIBRETRO_MAME_SRC_LICENSE = MAME
-
-LIBRETRO_MAME_SRC_DEPENDENCIES = alsa-lib
 
 # Limit number of jobs not to eat too much RAM....
 LIBRETRO_MAME_SRC_JOBS = $(shell expr $(shell nproc))
 
 ifeq ($(BR2_x86_64),y)
     LIBRETRO_MAME_SRC_EXTRA_ARGS += PTR64=1 LIBRETRO_CPU=x86_64 PLATFORM=x86_64
-else ifeq ($(BR2_i386),y)
-    LIBRETRO_MAME_SRC_EXTRA_ARGS += PTR64=0 LIBRETRO_CPU=x86 PLATFORM=x86
-else ifeq ($(BR2_RISCV_64),y)
-    LIBRETRO_MAME_SRC_EXTRA_ARGS += PTR64=1 LIBRETRO_CPU=riscv64 PLATFORM=riscv64
-else ifeq ($(BR2_riscv),y)
-    LIBRETRO_MAME_SRC_EXTRA_ARGS += PTR64=0 LIBRETRO_CPU=riscv PLATFORM=riscv
-else ifeq ($(BR2_arm),y)
-    LIBRETRO_MAME_SRC_EXTRA_ARGS += PTR64=0 LIBRETRO_CPU=arm PLATFORM=arm
-    # workaround for linkage failure using ld on arm 32-bit targets
-    LIBRETRO_MAME_SRC_ARCHOPTS += -fuse-ld=gold -Wl,--long-plt
-    # workaround for asmjit broken build system (arm backend is not public)
-    LIBRETRO_MAME_SRC_ARCHOPTS += -D__arm__ -DASMJIT_BUILD_X86
 else ifeq ($(BR2_aarch64),y)
     LIBRETRO_MAME_SRC_EXTRA_ARGS += PTR64=1 LIBRETRO_CPU= PLATFORM=arm64
     # workaround for asmjit broken build system (arm backend is not public)
     LIBRETRO_MAME_SRC_ARCHOPTS += -D__aarch64__ -DASMJIT_BUILD_X86
-endif
-
-ifeq ($(BR2_ENABLE_DEBUG),y)
-    LIBRETRO_MAME_SRC_EXTRA_ARGS += SYMBOLS=1 SYMLEVEL=2 OPTIMIZE=0
 endif
 
 define LIBRETRO_MAME_SRC_BUILD_CMDS
