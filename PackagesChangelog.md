@@ -14,8 +14,10 @@ Libraries|[projectm](http://github.com/projectM-visualizer/projectm)|v4.1.4|Jan 
 Ports|[box64](http://github.com/ptitseb/box64)|3ec950726b61eb427cb4250a28125a2a791e3a6a|Jan 24, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|be665de2a6346569299e3ad2b4deddd6107cf60e|Jan 24, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|6d0454383ca7c151ed42e3bede1a518a13d0546b|Jan 24, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250124|Jan 24, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|04cdf0aa4d2b3cab759951ace579aff5cabb6e92|Jan 24, 2025
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|v3.6.0-1224-0754df5|Jan 24, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250124|Jan 24, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|a89bae7c9c36fc4a52f02f66402c7975d4051b09|Jan 24, 2025
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|44807aa8e796d5b81d974517ce49eb3982091c3e|Jan 24, 2025
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|158ba2f568ecd3f69ccb5a39f7d752d3dc582fc7|Jan 24, 2025
@@ -47,9 +49,7 @@ Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|403c9
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|b67b21ddda8b6468090fcdc5034bb075344a8903|Jan 22, 2025
 Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|da8c42ebf4c055d2095f7a3d9dfae1a3b66c0821|Jan 22, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|756b9990031e6599a1e37a1fc647fb621a5c240a|Jan 22, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250122|Jan 22, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|e07493fe8c03c0598716f4710ca722bba8a24a69|Jan 22, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250122|Jan 22, 2025
 Ports|[srb2](http://github.com/STJr/SRB2)|4258e898ff48365dd202841442a02a156153242c|Jan 22, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|e7c880a2d20181f933ae3261c108ca53f0018dc7|Jan 22, 2025
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|e07493fe8c03c0598716f4710ca722bba8a24a69|Jan 22, 2025
