@@ -1,5 +1,5 @@
 diff --git a/sources/src/caps/caps.c b/sources/src/caps/caps.c
-index e45ff84..c931041 100644
+index 655cf48..309be93 100644
 --- a/sources/src/caps/caps.c
 +++ b/sources/src/caps/caps.c
 @@ -37,7 +37,7 @@ char CAPSLIB_PATH[RETRO_PATH_MAX];
@@ -11,12 +11,14 @@ index e45ff84..c931041 100644
  #endif
  
  /*
-@@ -73,7 +73,7 @@ static int load_capslib (void)
-     /* This could be done more elegantly ;-) */
- 
+@@ -75,8 +75,8 @@ static int load_capslib (void)
  #ifdef __LIBRETRO__
+ #ifdef __ANDROID__
+     snprintf(CAPSLIB_PATH, RETRO_PATH_MAX, "%s%c%s", "/data/user/0/com.retroarch/cores", DIR_SEP_CHR, CAPSLIB_NAME);
+-#else
 -    snprintf(CAPSLIB_PATH, RETRO_PATH_MAX, "%s%c%s", retro_system_directory, DIR_SEP_CHR, CAPSLIB_NAME);
++#else;
 +    snprintf(CAPSLIB_PATH, RETRO_PATH_MAX, "%s%c%s", "/usr/lib", DIR_SEP_CHR, CAPSLIB_NAME);
+ #endif
      if (!path_is_valid(CAPSLIB_PATH))
          snprintf(CAPSLIB_PATH, RETRO_PATH_MAX, "%s", CAPSLIB_NAME);
-     if (!path_is_valid(CAPSLIB_PATH))
