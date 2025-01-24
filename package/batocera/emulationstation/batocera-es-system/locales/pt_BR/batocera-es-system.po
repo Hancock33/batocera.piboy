@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: batocera-emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-15 21:09+0100\n"
-"PO-Revision-Date: 2025-01-19 17:30-0300\n"
+"PO-Revision-Date: 2025-01-24 16:52-0300\n"
 "Last-Translator: Leonardo Colman <dev@leonardo.colman.com.br>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: pt_BR\n"
@@ -4154,7 +4154,7 @@ msgstr "CABO"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CARD READER"
-msgstr ""
+msgstr "LEITOR DE CARTÕES"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -7124,7 +7124,7 @@ msgstr "Ativa para exibir se o seu BIOS tem problemas conhecidos."
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Enable to emulate the card reader in Virtua Tenis 3."
-msgstr ""
+msgstr "Habilite a emulação do leitor de cartões no Virtua Tenis 3."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"

@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: Batocera_options\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-09-24 10:59+0200\n"
+"PO-Revision-Date: 2025-01-24 19:19+0100\n"
 "Last-Translator: Svein Jakobsen <svein.jakobsen@gmail.com>\n"
 "Language-Team: nb_NO\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -280,7 +280,7 @@ msgstr "10 sekunder"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "100 fps"
-msgstr ""
+msgstr "100 bps"
 
 #. TRANSLATION: doom3, libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
@@ -315,7 +315,7 @@ msgstr "100 ms (standard)"
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "1024 x 768"
-msgstr ""
+msgstr "1024 x 768"
 
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
@@ -345,7 +345,7 @@ msgstr "1040 STE AUTO"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "1040 STE ETOS 256k"
-msgstr ""
+msgstr "1040 STE ETOS 256k"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -380,7 +380,7 @@ msgstr "10."
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "10x Native (6400x5280)"
-msgstr ""
+msgstr "10x Opprinnelig (6400x5280)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -405,7 +405,7 @@ msgstr "11."
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "11x Native (7040x5808)"
-msgstr ""
+msgstr "11x Opprinnelig (7040x5808)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -440,17 +440,17 @@ msgstr "120 ms"
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "1280 x 1024"
-msgstr ""
+msgstr "1280 x 1024"
 
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "1280 x 720"
-msgstr ""
+msgstr "1280 x 720"
 
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "1280 x 800"
-msgstr ""
+msgstr "1280 x 800"
 
 #. TRANSLATION: rpcs3, xenia-canary
 msgctxt "game_options"
@@ -460,7 +460,7 @@ msgstr "1280x720 (standard)"
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "1280x960 (Default)"
-msgstr ""
+msgstr "1280x960 (standard)"
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
@@ -495,7 +495,7 @@ msgstr "12."
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "12x Native (7680x6336) for 8K"
-msgstr ""
+msgstr "12x Opprinnelig (7680x6336) for 8K"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -505,7 +505,7 @@ msgstr "13 MHz"
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "1366 x 768"
-msgstr ""
+msgstr "1366 x 768"
 
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
@@ -545,7 +545,7 @@ msgstr "144 fps"
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "1440 x 900"
-msgstr ""
+msgstr "1440 x 900"
 
 #. TRANSLATION: libretro/openlara, libretro/tyrquake, xenia-canary
 msgctxt "game_options"
@@ -625,7 +625,7 @@ msgstr "16 bit"
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "1600 x 900"
-msgstr ""
+msgstr "1600 x 900"
 
 #. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
@@ -650,7 +650,7 @@ msgstr "165 bilder per sekund"
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "1680 x 1050"
-msgstr ""
+msgstr "1680 x 1050"
 
 #. TRANSLATION: ryujinx, suyu
 msgctxt "game_options"
@@ -690,7 +690,7 @@ msgstr "16x (~7680p / 16k)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "16x Anistropic"
-msgstr ""
+msgstr "16x Anistropic"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -730,12 +730,12 @@ msgstr "192+KB"
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "1920 x 1080"
-msgstr ""
+msgstr "1920 x 1080"
 
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "1920 x 1200"
-msgstr ""
+msgstr "1920 x 1200"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -765,7 +765,7 @@ msgstr "1."
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "1st Joystick (2 Axes, 2 Btns)"
-msgstr "1. styrespak (2 akser, 2 Btns)"
+msgstr "1. styrespak (2 akser, 2 Knapper)"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -785,17 +785,17 @@ msgstr "1x (~480)"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "1x native (256 x 192)"
-msgstr "1x innfødt (256 x 192)"
+msgstr "1x opprinnelig (256 x 192)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "1x native (320x240)"
-msgstr "1x innfødt (320x240)"
+msgstr "1x opprinnelig (320x240)"
 
 #. TRANSLATION: dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "1x native (640x528)"
-msgstr "1x innfødt (640x528)"
+msgstr "1x opprinnelig (640x528)"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -840,7 +840,7 @@ msgstr "2.25x (1440x1080)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "2.25x Native"
-msgstr "2.25x Native"
+msgstr "2.25x Opprinnelig"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -875,7 +875,7 @@ msgstr "20 sekunder"
 #. TRANSLATION: doom3
 msgctxt "game_options"
 msgid "200% (Maximum)"
-msgstr ""
+msgstr "200 % (Maks)"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -1010,12 +1010,12 @@ msgstr "24."
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "2560 x 1440"
-msgstr ""
+msgstr "2560 x 1440"
 
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "2560 x 1600"
-msgstr ""
+msgstr "2560 x 1600"
 
 #. TRANSLATION: quake3
 msgctxt "game_options"
@@ -1140,7 +1140,7 @@ msgstr "2x (~960)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "2x Anistropic"
-msgstr ""
+msgstr "2x Anistropic"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -1150,12 +1150,12 @@ msgstr "2x MSAA"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "2x Native (1280x1056) for 720p"
-msgstr ""
+msgstr "2x Opprinnelig (1280x1056) for 720p"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "2x Native (~720p)"
-msgstr "2x Native (~720p)"
+msgstr "2x Opprinnelig (~720p)"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -1165,7 +1165,7 @@ msgstr "2x SSAA"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "2x native (512 x 384)"
-msgstr "2x native (512 x 384)"
+msgstr "2x Opprinnelig (512 x 384)"
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -1275,7 +1275,7 @@ msgstr "32 MHz (overklokking)"
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "320 x 200"
-msgstr ""
+msgstr "320 x 200"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -1315,7 +1315,7 @@ msgstr "35.46 MHz"
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "3840 x 2160"
-msgstr ""
+msgstr "3840 x 2160"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -1370,17 +1370,17 @@ msgstr "3x (2160p/3240p)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "3x Native (1920x1584) for 1080p"
-msgstr ""
+msgstr "3x Opprinnelig (1920x1584) for 1080p"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "3x Native (~1080p)"
-msgstr "3x Native (~1080p)"
+msgstr "3x Opprinnelig (~1080p)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "3x native (768 x 576)"
-msgstr "3x native (768 x 576)"
+msgstr "3x Opprinnelig (768 x 576)"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -1550,7 +1550,7 @@ msgstr "4x (~1920p)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "4x Anistropic"
-msgstr ""
+msgstr "4x Anistropic"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -1565,7 +1565,7 @@ msgstr "4x MULTISAMPLING"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "4x Native (2560x2112) for 1440p"
-msgstr ""
+msgstr "4x Opprinnelig (2560x2112) for 1440p"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -1685,7 +1685,7 @@ msgstr "520 ST AUTO"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "520 ST EMUTOS 256k"
-msgstr ""
+msgstr "520 ST EMUTOS 256k"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
@@ -1740,17 +1740,17 @@ msgstr "5x (3600p/5400p)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "5x Native (3200x2640)"
-msgstr ""
+msgstr "5x Opprinnelig (3200x2640)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "5x Native (~1620p)"
-msgstr "5x Native (~1620p)"
+msgstr "5x Opprinnelig (~1620p)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "5x native (1280 x 960)"
-msgstr "5x innfødt (1280 x 960)"
+msgstr "5x Opprinnelig (1280 x 960)"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -1815,7 +1815,7 @@ msgstr "64 MHz (overklokking)"
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "640 x 480"
-msgstr ""
+msgstr "640 x 480"
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
@@ -1865,17 +1865,17 @@ msgstr "6x 4K (3840x3168)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "6x Native (3840x3168) for 4K"
-msgstr ""
+msgstr "6x Opprinnelig (3840x3168) for 4K"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "6x Native (~2160p/4K)"
-msgstr "6x Native(~2160p/4K)"
+msgstr "6x Opprinnelig (~2160p/4K)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "6x native (1536 x 1152)"
-msgstr "6x innfødt (1536 x 1152)"
+msgstr "6x Opprinnelig (1536 x 1152)"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -1950,17 +1950,17 @@ msgstr "7x (5040p/7560p)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "7x Native (4480x3696)"
-msgstr ""
+msgstr "7x Opprinnelig (4480x3696)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "7x Native (~2520p)"
-msgstr "7x Native(~2520p)"
+msgstr "7x Opprinnelig (~2520p)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "7x native (1792 x 1344)"
-msgstr "7x innfødt (1792 x 1344)"
+msgstr "7x Opprinnelig (1792 x 1344)"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -2000,7 +2000,7 @@ msgstr "8-bits interpolert"
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "800 x 600"
-msgstr ""
+msgstr "800 x 600"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -2065,7 +2065,7 @@ msgstr "8x 5K (5120x4224)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "8x Anistropic"
-msgstr ""
+msgstr "8x Anistropic"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -2075,12 +2075,12 @@ msgstr "8x MSAA"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "8x Native (5120x4224) for 5K"
-msgstr ""
+msgstr "8x Opprinnelig (5120x4224) for 5K"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "8x Native (~2880p/5K)"
-msgstr "8x Native (~2880p/5K)"
+msgstr "8x Opprinnelig (~2880p/5K)"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -2090,7 +2090,7 @@ msgstr "8x SSAA"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "8x native (2048 x 1536)"
-msgstr "8x innfødt (2048 x 1536)"
+msgstr "8x Opprinnelig (2048 x 1536)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -2135,7 +2135,7 @@ msgstr "9x 4K (2880x2160)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "9x Native (5760x4752)"
-msgstr ""
+msgstr "9x Opprinnelig (5760x4752)"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
@@ -2190,7 +2190,7 @@ msgstr "PRESTASJONER"
 #. TRANSLATION: hatari, libretro/hatarib
 msgctxt "game_options"
 msgid "ACSI"
-msgstr ""
+msgstr "ACSI"
 
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
@@ -2235,12 +2235,12 @@ msgstr "AI OVERSETTELSESTJENESTE URL"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "ALIEN VS PREDATOR"
-msgstr ""
+msgstr "ALIEN VS PREDATOR"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "ALIEN VS PREDATOR MULTIPLAYER"
-msgstr ""
+msgstr "ALIEN VS PREDATOR FLERSPILLER"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -2370,7 +2370,7 @@ msgstr "ARKIMEDES-MODELLEN"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "ARI/D93 (recommended for all JP developed games)"
-msgstr ""
+msgstr "ARI/D93 (anbefales for alle JP-utviklede spill)"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -2670,7 +2670,7 @@ msgstr ""
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Activate Doom DOS original music and throttle the Doom frame rate."
-msgstr ""
+msgstr "Aktiver Doom DOS-originalmusikken og senk Doom-bildefrekvensen."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -2695,7 +2695,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Add debug logging to help troubleshoot issues."
-msgstr ""
+msgstr "Legg til feilsøkingslogging for å hjelpe deg med å feilsøke problemer."
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
 msgctxt "game_options"
@@ -2787,7 +2787,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Affects how the game output is scaled to the resolution."
-msgstr ""
+msgstr "Påvirker hvordan spillutdataene skaleres til oppløsningen."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -2817,17 +2817,17 @@ msgstr ""
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Aim down"
-msgstr ""
+msgstr "Sikt ned"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Aim up"
-msgstr ""
+msgstr "Sikt opp"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Albania"
-msgstr ""
+msgstr "Albania"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
@@ -2837,7 +2837,7 @@ msgstr "Albansk"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Algeria"
-msgstr ""
+msgstr "Algerie"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -2977,22 +2977,22 @@ msgstr "Analog"
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Down"
-msgstr ""
+msgstr "Analog ned"
 
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Left"
-msgstr ""
+msgstr "Analog venstre"
 
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Right"
-msgstr ""
+msgstr "Analog høyre"
 
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Up"
-msgstr ""
+msgstr "Analog opp"
 
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
@@ -3037,7 +3037,7 @@ msgstr "Angrylion (mest kompatibel)"
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Anisotropic filtering"
-msgstr ""
+msgstr "Anisotropisk filtrering"
 
 #. TRANSLATION: vita3k
 msgctxt "game_options"
@@ -3160,7 +3160,7 @@ msgstr "April"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Arabic (ar)"
-msgstr ""
+msgstr "Arabisk (ar)"
 
 #. TRANSLATION: libretro/fbneo, libretro/mame078plus
 msgctxt "game_options"
@@ -3200,12 +3200,12 @@ msgstr "Arkimedes 540"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Area Sampling"
-msgstr ""
+msgstr "Område Sampling"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Argentina"
-msgstr ""
+msgstr "Argentina"
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -3215,12 +3215,12 @@ msgstr "Arkanoid padle"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Armenia"
-msgstr ""
+msgstr "Armenia"
 
 #. TRANSLATION: drastic, libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "Arrange the dual screen layout."
-msgstr "Ordne det doble skjermoppsettet."
+msgstr "Ordne oppsettet med to skjermer."
 
 #. TRANSLATION: citra
 msgctxt "game_options"
@@ -3308,7 +3308,7 @@ msgstr "Australia"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Austria"
-msgstr ""
+msgstr "Østerrike"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -3363,7 +3363,7 @@ msgstr "Automatisk gjenkjenning (etter spillets navnelapp)"
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Automap"
-msgstr ""
+msgstr "Automap"
 
 #. TRANSLATION: amiberry, drastic, libretro/parallel_n64, libretro/tyrquake, melonds, ...
 msgctxt "game_options"
@@ -3421,7 +3421,7 @@ msgstr "Du slipper å laste side A manuelt hver gang."
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Azerbaijan"
-msgstr ""
+msgstr "Aserbajdsjan"
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
@@ -3646,12 +3646,12 @@ msgstr "NEDERST TIL HØYRE (SØ)"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "BRETT HULL HOCKEY"
-msgstr ""
+msgstr "BRETT HULL HOCKEY"
 
 #. TRANSLATION: doom3
 msgctxt "game_options"
 msgid "BRIGHTNESS"
-msgstr ""
+msgstr "LYSSTYRKE"
 
 #. TRANSLATION: flycast, redream
 msgctxt "game_options"
@@ -3661,22 +3661,22 @@ msgstr "KRINGKASTING"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "BT601_525/D65 (recommended for all US developed games)"
-msgstr ""
+msgstr "BT601_525/D65 (anbefalt for alle spill utviklet i USA)"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "BT601_525/D93"
-msgstr ""
+msgstr "BT601_525/D93"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "BT601_625/D65 (recommended for all EUR/AUS developed games)"
-msgstr ""
+msgstr "BT601_625/D65 (anbefalt for alle EUR/AUS-utviklede spill)"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Bahrain"
-msgstr ""
+msgstr "Bahrain"
 
 #. TRANSLATION: shared, shared
 msgctxt "game_options"
@@ -3709,6 +3709,8 @@ msgid ""
 "Basic Filtering type for the jaguar display when rendering to the native "
 "display."
 msgstr ""
+"Grunnleggende filtreringstype for jaguar-skjermen ved gjengivelse til den "
+"opprinnelige skjermen."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -3728,17 +3730,17 @@ msgstr "Før NMI"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Belarus"
-msgstr ""
+msgstr "Hviterussland"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Belgium"
-msgstr ""
+msgstr "Belgia"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Belize"
-msgstr ""
+msgstr "Belize"
 
 #. TRANSLATION: thextech
 msgctxt "game_options"
@@ -3753,17 +3755,17 @@ msgstr "Bikubisk"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Bicubic: B-Spine"
-msgstr ""
+msgstr "Bikubisk: B-Spine"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Bicubic: Catmull-Rom"
-msgstr ""
+msgstr "Bikubisk: Catmull-Rom"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Bicubic: Mitchell-Netravali"
-msgstr ""
+msgstr "Bikubisk: Mitchell-Netravali"
 
 #. TRANSLATION: bigpemu, cemu, dolphin_triforce, drastic, duckstation, ...
 msgctxt "game_options"
@@ -3808,7 +3810,7 @@ msgstr "Bilineær (glatt)"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "Biquintic"
-msgstr ""
+msgstr "Biquintic"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -3899,7 +3901,7 @@ msgstr "Bobba Fett Face Player Fix"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Bolivia"
-msgstr ""
+msgstr "Bolivia"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -3985,7 +3987,7 @@ msgstr "Brunaktig - Travel Wood"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Brunei"
-msgstr ""
+msgstr "Brunei"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -4001,7 +4003,7 @@ msgstr "Buffert gjengivelse"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Bulgaria"
-msgstr ""
+msgstr "Bulgaria"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
@@ -4021,7 +4023,7 @@ msgstr "B-Knappen"
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Button C"
-msgstr ""
+msgstr "C-Knappen"
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
@@ -4046,7 +4048,7 @@ msgstr "Y-Knappen"
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Button Z"
-msgstr ""
+msgstr "Z-Knappen"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -4131,7 +4133,7 @@ msgstr "KABEL"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CARD READER"
-msgstr ""
+msgstr "KORTLESER"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -4216,7 +4218,7 @@ msgstr "FUSK"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "CHECKERED FLAG"
-msgstr ""
+msgstr "RUTETE FLAGG"
 
 #. TRANSLATION: ryujinx, suyu
 msgctxt "game_options"
@@ -4306,7 +4308,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "CONSOLE COUNTRY"
-msgstr ""
+msgstr "KONSOLL-LAND"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -4416,17 +4418,17 @@ msgstr "KONTROLLER 4 TYPE"
 #. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 5"
-msgstr ""
+msgstr "KONTROLLER 5"
 
 #. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 6"
-msgstr ""
+msgstr "KONTROLLER 6"
 
 #. TRANSLATION: rpcs3, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 7"
-msgstr ""
+msgstr "KONTROLLER 7"
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
@@ -4586,7 +4588,7 @@ msgstr "TRÅDKORS"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "CRT COLOUR"
-msgstr ""
+msgstr "CRT FARGE"
 
 #. TRANSLATION: hurrican
 msgctxt "game_options"
@@ -4616,7 +4618,7 @@ msgstr "CRT-BRYTERE"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "CRT-like colour adaption. Requires New 3D engine."
-msgstr ""
+msgstr "CRT-lignende fargetilpasning. Krever ny 3D-motor."
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -4691,7 +4693,7 @@ msgstr "CXD4 (LLE Fallback)"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "CYBERMORPH"
-msgstr ""
+msgstr "CYBERMORPH"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -4805,7 +4807,7 @@ msgstr "Kan jevne ut bildet."
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Canada"
-msgstr ""
+msgstr "Kanada"
 
 #. TRANSLATION: ryujinx, suyu
 msgctxt "game_options"
@@ -4890,7 +4892,7 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Change Camera Angle"
-msgstr ""
+msgstr "Endre kameravinkel"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -4924,7 +4926,7 @@ msgstr ""
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Change image scaling algorithm quality."
-msgstr ""
+msgstr "Endre kvaliteten på bildeskaleringsalgoritmen."
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -4939,12 +4941,12 @@ msgstr "Endre systemspråket for Gamecube."
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Change the consoles country from the default of the United States."
-msgstr ""
+msgstr "Endre konsollens land fra standardinnstillingen USA."
 
 #. TRANSLATION: doom3
 msgctxt "game_options"
 msgid "Change the game's brightness."
-msgstr ""
+msgstr "Endre spillets lysstyrke."
 
 #. TRANSLATION: etlegacy, fallout1-ce, fallout2-ce, libretro/cap32, play, ...
 msgctxt "game_options"
@@ -4957,6 +4959,8 @@ msgid ""
 "Change the game's language. Game files require the supported language "
 "strings in the .pk4 files."
 msgstr ""
+"Endre spillets språk. Spillfiler krever språkstrengene som støttes i .pk4-"
+"filene."
 
 #. TRANSLATION: bigpemu, cemu, duckstation, libretro/vice_x128, libretro/vice_x64, ...
 msgctxt "game_options"
@@ -4987,7 +4991,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Chile"
-msgstr ""
+msgstr "Chile"
 
 #. TRANSLATION: ryujinx, suyu, xenia, xenia-canary
 msgctxt "game_options"
@@ -5084,6 +5088,7 @@ msgctxt "game_options"
 msgid ""
 "Choose the arcade machine console region. May be required to start the game."
 msgstr ""
+"Velg arkademaskinens konsollregion. Kan være nødvendig for å starte spillet."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -5134,7 +5139,7 @@ msgstr ""
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "Choose to display achievement messages in the UI."
-msgstr ""
+msgstr "Velg om du vil vise prestasjonsmeldinger i brukergrensesnittet."
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -5398,7 +5403,7 @@ msgstr "Coleco ColecoVision-kassetter"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Colombia"
-msgstr ""
+msgstr "Colombia"
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -5550,7 +5555,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Costa Rica"
-msgstr ""
+msgstr "Costa Rica"
 
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
@@ -5671,7 +5676,7 @@ msgstr "Tsjekkisk"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Czech (cz)"
-msgstr ""
+msgstr "Tsjekkisk (cz)"
 
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
@@ -5706,7 +5711,7 @@ msgstr "DEADZONE"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "DEBUG MODE"
-msgstr ""
+msgstr "DEBUG-MODUS"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -5851,7 +5856,7 @@ msgstr "DOLBY PRO LOGIC II"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "DOOM"
-msgstr ""
+msgstr "DOOM"
 
 #. TRANSLATION: libretro/virtualjaguar
 msgctxt "game_options"
@@ -5961,7 +5966,7 @@ msgstr "Dansk"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Danish (dk)"
-msgstr ""
+msgstr "Dansk (dk)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -6277,7 +6282,7 @@ msgstr "Påvirker ikke skjermtastaturet."
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Dominican Republic"
-msgstr ""
+msgstr "Den dominikanske republikk"
 
 #. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds
 msgctxt "game_options"
@@ -6319,7 +6324,7 @@ msgstr "Doble gjengivelsesoppløsningen."
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Down"
-msgstr ""
+msgstr "Nedover"
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -6343,7 +6348,7 @@ msgstr "Driving Force Pro"
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Drop weapon"
-msgstr ""
+msgstr "Slipp våpenet"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -6654,7 +6659,7 @@ msgstr "Lett"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Ecuador"
-msgstr ""
+msgstr "Ecuador"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -6679,7 +6684,7 @@ msgstr "Irland"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "El Salvador"
-msgstr ""
+msgstr "El Salvador"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -6774,7 +6779,7 @@ msgstr ""
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Emutos language && region setting."
-msgstr ""
+msgstr "Emutos språk- og regioninnstilling."
 
 #. TRANSLATION: mupen64plus, ppsspp
 msgctxt "game_options"
@@ -6849,7 +6854,7 @@ msgstr ""
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Enable X-Input mode for Xbox type controllers."
-msgstr ""
+msgstr "Aktiver X-Input-modus for kontrollere av Xbox-typen."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -6904,7 +6909,7 @@ msgstr "Aktiver for mer flyt, deaktiver hvis skjermen rives."
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Enable free play for supported games."
-msgstr ""
+msgstr "Aktiver gratis spill for spill som støttes."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -7035,7 +7040,7 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Enable the cheat list (if available)."
-msgstr ""
+msgstr "Aktiver jukselisten (hvis tilgjengelig)."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -7085,7 +7090,7 @@ msgstr "Aktiver for å vise om BIOS har kjente problemer."
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Enable to emulate the card reader in Virtua Tenis 3."
-msgstr ""
+msgstr "Aktiver for å emulere kortleseren i Virtua Tenis 3."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -7153,7 +7158,7 @@ msgstr "Aktiverte maskede polygoner for gjennomskinnelighet."
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "Enabled or disable the mouse cursor. Useful for CG's menus."
-msgstr ""
+msgstr "Aktiverer eller deaktiverer musepekeren. Nyttig for CGs menyer."
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -7299,7 +7304,7 @@ msgstr ""
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Enhancement. Increase the rendering resolution."
-msgstr ""
+msgstr "Forbedring. Øk gjengivelsesoppløsningen."
 
 #. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, flycast, ...
 msgctxt "game_options"
@@ -7455,7 +7460,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Estonia"
-msgstr ""
+msgstr "Estland"
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, redream, ...
 msgctxt "game_options"
@@ -7505,7 +7510,7 @@ msgstr "Gå ut av Duckstation"
 #. TRANSLATION: catacomb.keys, lindbergh.keys
 msgctxt "keys_files"
 msgid "Exit Game"
-msgstr ""
+msgstr "Exit Game"
 
 #. TRANSLATION: steam.keys
 msgctxt "keys_files"
@@ -7540,7 +7545,7 @@ msgstr "Avslutt emulatoren"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Export"
-msgstr ""
+msgstr "Eksporter"
 
 #. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
@@ -7737,7 +7742,7 @@ msgstr "FPS-BEGRENSER"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "FPS TARGET"
-msgstr ""
+msgstr "FPS MÅL"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -7807,7 +7812,7 @@ msgstr "FRAMESKIP-VERDI"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "FREE PLAY"
-msgstr ""
+msgstr "GRATIS SPILL"
 
 #. TRANSLATION: mugen, wine
 msgctxt "game_options"
@@ -7865,27 +7870,27 @@ msgstr "Falk"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Falcon 4.0"
-msgstr ""
+msgstr "Falcon 4.0"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Falcon 4.02"
-msgstr ""
+msgstr "Falcon 4.02"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Falcon 4.04"
-msgstr ""
+msgstr "Falcon 4.04"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Falcon AUTO"
-msgstr ""
+msgstr "Falcon AUTO"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Falcon ETOS 512k"
-msgstr ""
+msgstr "Falcon ETOS 512k"
 
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
@@ -7895,7 +7900,7 @@ msgstr "Famicom (FDS)"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Faroe Islands"
-msgstr ""
+msgstr "Færøyene"
 
 #. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, naomi.flycast.keys, naomi2.flycast.keys, psp.ppsspp.keys, ...
 msgctxt "keys_files"
@@ -7921,6 +7926,10 @@ msgid ""
 "option, custom sky/background functionality, and various other tweaks and "
 "options."
 msgstr ""
+"Inneholder rendering i opprinnelig oppløsning, støtte for analog kontroller "
+"og mus, opplåsing av bildefrekvens opp til 60 Hz, et forbedret kamera med "
+"mulighet for å deaktivere tilt, tilpasset himmel/bakgrunn-funksjonalitet og "
+"en rekke andre justeringer og alternativer."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -7954,7 +7963,7 @@ msgstr ""
 #. TRANSLATION: devilutionx
 msgctxt "game_options"
 msgid "Fills the screen."
-msgstr ""
+msgstr "Fyller skjermen."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -7974,12 +7983,12 @@ msgstr "Finsk"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Finnish (fi)"
-msgstr ""
+msgstr "Finsk (fi)"
 
 #. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys, rott.keys
 msgctxt "keys_files"
 msgid "Fire"
-msgstr ""
+msgstr "Brann"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -8063,7 +8072,7 @@ msgstr "Løser en mulig feil med deteksjon av flere kontrollere."
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Fixes flickering."
-msgstr ""
+msgstr "Fikser flimring."
 
 #. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
 msgctxt "game_options"
@@ -8184,32 +8193,32 @@ msgstr "Fremtvinge standard DNS"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear"
-msgstr ""
+msgstr "Tving Lineær"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear and 16x Anistropic"
-msgstr ""
+msgstr "Tving lineær og 16x anistropisk"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear and 2x Anistropic"
-msgstr ""
+msgstr "Tving Lineær og 2x anistropisk"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear and 4x Anistropic"
-msgstr ""
+msgstr "Tving Lineær og 4x anistropisk"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Linear and 8x Anistropic"
-msgstr ""
+msgstr "Tving Lineær og 8x anistropisk"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Force Nearest"
-msgstr ""
+msgstr "Tving Nærmeste"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -8275,12 +8284,12 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Forward Nudge"
-msgstr ""
+msgstr "Dytt fremover"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Framerate limiter to reduce CPU utilisation."
-msgstr "Framerate-begrenser for å redusere CPU-bruken."
+msgstr "Bildefrekvens-begrenser for å redusere CPU-bruken."
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
@@ -8445,7 +8454,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader, lindbergh-loader, lindbergh-loader
 msgctxt "game_options"
 msgid "GAME OPTIONS"
-msgstr ""
+msgstr "SPILLALTERNATIVER"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -8600,7 +8609,7 @@ msgstr "GBC - Mørkegrønn"
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GBC - Game Specific"
-msgstr ""
+msgstr "GBC - Spillspesifikk"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
@@ -8866,7 +8875,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Georgia"
-msgstr ""
+msgstr "Georgia"
 
 #. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
 msgctxt "game_options"
@@ -8981,7 +8990,7 @@ msgstr "Gresk"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Greek (gk)"
-msgstr ""
+msgstr "Gresk (gk)"
 
 #. TRANSLATION: flycast, flycast, flycast, flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -9046,7 +9055,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Guatemala"
-msgstr ""
+msgstr "Guatemala"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -9161,7 +9170,7 @@ msgstr "HST"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "HUMMER FLICKER FIX"
-msgstr ""
+msgstr "FIX FOR HUMMERFLIMMER"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -9325,7 +9334,7 @@ msgstr "Ansette medarbeidere"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Honduras"
-msgstr ""
+msgstr "Honduras"
 
 #. TRANSLATION: suyu, xenia, xenia-canary
 msgctxt "game_options"
@@ -9362,7 +9371,7 @@ msgstr "Ungarsk"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Hungarian (hg)"
-msgstr ""
+msgstr "Ungarsk (hg)"
 
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
@@ -9412,7 +9421,7 @@ msgstr ""
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "IMAGE QUALITY"
-msgstr ""
+msgstr "BILDEKVALITET"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -9422,7 +9431,7 @@ msgstr "BILDELESER"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid "IMAGE SCALING"
-msgstr ""
+msgstr "SKALERING AV BILDER"
 
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
@@ -9507,7 +9516,7 @@ msgstr "MODUS FOR USÅRBARHET"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "IRON SOLDIER"
-msgstr ""
+msgstr "IRON SOLDIER"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -9614,6 +9623,10 @@ msgid ""
 "input device type with options to convert analog inputs to tracker angles "
 "for enhanced analog controller support."
 msgstr ""
+"Inkluderer VR-hodesporing og stereoskopisk gjengivelse for både VR- og 3D-TV-"
+"er, sammen med musestøtte (Mouse Look), og introduserer en ny Head Tracker-"
+"inngangsenhetstype med alternativer for å konvertere analoge innganger til "
+"sporingsvinkler for forbedret støtte for analoge kontrollere."
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -9628,12 +9641,12 @@ msgstr "Øk til 128 MiB for feilsøkings- eller hjemmebryggingsapplikasjoner."
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "India"
-msgstr ""
+msgstr "India"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Indonesia"
-msgstr ""
+msgstr "Indonesia"
 
 #. TRANSLATION: libretro/mednafen_wswan
 msgctxt "game_options"
@@ -9745,12 +9758,12 @@ msgstr "Iran"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Iraq"
-msgstr ""
+msgstr "Irak"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Ireland"
-msgstr ""
+msgstr "Irland"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
@@ -9870,7 +9883,7 @@ msgstr "Japan"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Japan (Default)"
-msgstr ""
+msgstr "Japan (standard)"
 
 #. TRANSLATION: cemu, doom3, etlegacy, flycast/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
@@ -9885,7 +9898,7 @@ msgstr "Japansk [Shift-JIS]"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Jordan"
-msgstr ""
+msgstr "Jordan"
 
 #. TRANSLATION: solarus
 msgctxt "game_options"
@@ -9995,7 +10008,7 @@ msgstr "Kaeru WFC (178.62.43.212)"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Kazakhstan"
-msgstr ""
+msgstr "Kasakhstan"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -10010,7 +10023,7 @@ msgstr "Kempston Joystick"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Kenya"
-msgstr ""
+msgstr "Kenya"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin, libretro/flycast, ...
 msgctxt "game_options"
@@ -10099,7 +10112,7 @@ msgstr "Koreansk"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Kuwait"
-msgstr ""
+msgstr "Kuwait"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -10109,7 +10122,7 @@ msgstr "Kwajalein"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Kyrgyzstan"
-msgstr ""
+msgstr "Kirgisistan"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -10280,17 +10293,17 @@ msgstr "Latinamerikansk spansk"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Latvia"
-msgstr ""
+msgstr "Latvia"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Lebanon"
-msgstr ""
+msgstr "Libanon"
 
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Left"
-msgstr ""
+msgstr "Venstre"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -10305,17 +10318,17 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Flipper"
-msgstr ""
+msgstr "Venstre flipper"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Manga Save"
-msgstr ""
+msgstr "Venstre Manga Lagre"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Nudge"
-msgstr ""
+msgstr "Venstre dytt"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -10360,7 +10373,7 @@ msgstr "Libya"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Liechtenstein"
-msgstr ""
+msgstr "Liechtenstein"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -10454,12 +10467,12 @@ msgstr ""
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Linear filtering"
-msgstr ""
+msgstr "Lineær filtrering"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Lithuania"
-msgstr ""
+msgstr "Litauen"
 
 #. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
 msgctxt "keys_files"
@@ -10534,7 +10547,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Luxembourg"
-msgstr ""
+msgstr "Luxembourg"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -10644,7 +10657,7 @@ msgstr "MIPMAPPING"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "MISSILE COMMAND 3D VR"
-msgstr ""
+msgstr "MISSILE COMMAND 3D VR"
 
 #. TRANSLATION: hatari, libretro/fuse, libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -10769,7 +10782,7 @@ msgstr "Mac SE (4 MB RAM, 2 LD disketter/HDD)"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Macau"
-msgstr ""
+msgstr "Macau"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -10811,12 +10824,12 @@ msgstr "Gjør dither-mønsteret mye mindre tydelig ved høyere oppløsninger."
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Malaysia"
-msgstr ""
+msgstr "Malaysia"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Maldives"
-msgstr ""
+msgstr "Maldivene"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -10992,7 +11005,7 @@ msgstr "Kan gi et skarpere bilde i enkelte 2D-spill."
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Mech Tilt"
-msgstr ""
+msgstr "Mech Tilt"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -11037,7 +11050,7 @@ msgstr "Mega STE AUTO"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Mega STE ETOS 256k"
-msgstr ""
+msgstr "Mega STE ETOS 256k"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -11091,7 +11104,7 @@ msgstr ""
 #. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
-msgstr ""
+msgstr "Meny tilbake"
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
@@ -11101,7 +11114,7 @@ msgstr "Slå sammen"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Mexico"
-msgstr ""
+msgstr "Mexico"
 
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
@@ -11151,12 +11164,12 @@ msgstr "Moderne Fightstick-stil"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Monaco"
-msgstr ""
+msgstr "Monaco"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Mongolia"
-msgstr ""
+msgstr "Mongolia"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -11191,7 +11204,7 @@ msgstr "Mer kompatibel"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Morocco"
-msgstr ""
+msgstr "Marokko"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -11227,17 +11240,17 @@ msgstr "Museklikk"
 #. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Move Backward"
-msgstr ""
+msgstr "Gå Bakover"
 
 #. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Move Forward"
-msgstr ""
+msgstr "Gå Frem"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
-msgstr ""
+msgstr "Flytt fremover, kan brukes til å trykke på W"
 
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
@@ -11247,7 +11260,7 @@ msgstr "Flytt stylet peker"
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move backward"
-msgstr ""
+msgstr "Gå bakover"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -11272,17 +11285,17 @@ msgstr "Flytt kameraet opp"
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move forward"
-msgstr ""
+msgstr "Gå fremover"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move left"
-msgstr ""
+msgstr "Gå venstre"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Move right"
-msgstr ""
+msgstr "Gå høyre"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -11503,17 +11516,17 @@ msgstr "7x Native(~2520p)"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Native (640x528)"
-msgstr ""
+msgstr "Opprinnelig (640x528)"
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
 msgid "Native (720p/1080p)"
-msgstr "Native (720p/1080p)"
+msgstr "Opprinnelig (720p/1080p)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Native (PS2)(Default)"
-msgstr "Innfødt (PS2) (standard)"
+msgstr "Opprinnelig (PS2) (standard)"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -11553,7 +11566,7 @@ msgstr "Nærmeste nabo"
 #. TRANSLATION: x16emu
 msgctxt "game_options"
 msgid "Nearest pixel sampling"
-msgstr ""
+msgstr "Sampling av nærmeste piksel"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -11563,7 +11576,7 @@ msgstr "Nærmeste nabo"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid "Nearest-neighbor"
-msgstr ""
+msgstr "Nærmeste nabo"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11607,7 +11620,7 @@ msgstr "Nederland"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Netherlands (nl)"
-msgstr ""
+msgstr "Nederland (nl)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -11617,7 +11630,7 @@ msgstr "Aldri"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "New Zealand"
-msgstr ""
+msgstr "Newzealand"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -11637,7 +11650,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Nicaragua"
-msgstr ""
+msgstr "Nicaragua"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -11687,7 +11700,7 @@ msgstr "Ingen (standard)"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "None/Sharp Pixels"
-msgstr ""
+msgstr "Ingen/skarpe piksler"
 
 #. TRANSLATION: awgl, duckstation, flycast, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
@@ -11707,7 +11720,7 @@ msgstr "Normal (tolk)"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "North Macedonia"
-msgstr ""
+msgstr "Nord-Makedonia"
 
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
@@ -11722,12 +11735,12 @@ msgstr "Norsk"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Norwegian (no)"
-msgstr ""
+msgstr "Norsk (no)"
 
 #. TRANSLATION: duckstation, duckstation
 msgctxt "game_options"
 msgid "Not Connected"
-msgstr "Hold deg tilkoblet"
+msgstr "Ikke tilkoblet"
 
 #. TRANSLATION: libretro/beetle-saturn, libretro/beetle-saturn, libretro/yabasanshiro, libretro/yabasanshiro
 msgctxt "game_options"
@@ -11832,7 +11845,7 @@ msgstr "OSD-MELDINGER"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "OUTPUT RESAMPLING"
-msgstr ""
+msgstr "RESAMPLING AV UTDATA"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -11842,7 +11855,7 @@ msgstr "UTGANGSKALERING"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "OUTRUN LENS GLARE"
-msgstr ""
+msgstr "OVERKJØRER LINSE-GJENSKINN"
 
 #. TRANSLATION: libretro/fceumm, libretro/mame, libretro/mamevirtual, libretro/mednafen_psx, libretro/mesen, ...
 msgctxt "game_options"
@@ -11910,6 +11923,8 @@ msgid ""
 "Offers analog controller and mouse support (Mouse Look), along with options "
 "for always-strafe and always-run functionalities."
 msgstr ""
+"Tilbyr støtte for analog kontroller og mus (Mouse-Look), samt alternativer "
+"for always-strafe og always-run-funksjoner."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -11917,6 +11932,8 @@ msgid ""
 "Offers support for analog controllers and mouse look functionality for "
 "improved control."
 msgstr ""
+"Gir støtte for analoge kontrollere og Mouse-Look-funksjonalitet for bedre "
+"kontroll."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -11945,7 +11962,7 @@ msgstr "Olivetti Prodest PC 128S disketter (BBC Master Compact)"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Oman"
-msgstr ""
+msgstr "Oman"
 
 #. TRANSLATION: awgl, cannonball, citra, citra, citra, ...
 msgctxt "game_options"
@@ -12054,6 +12071,8 @@ msgid ""
 "Only some games support rumble. Requires X-Input mode and may not be "
 "compatible with all controllers."
 msgstr ""
+"Bare noen spill støtter rumble. Krever X-Input-modus og er kanskje ikke "
+"kompatibel med alle kontrollere."
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -12078,17 +12097,17 @@ msgstr "Åpne LUA-konsollen"
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Open Load Menu"
-msgstr ""
+msgstr "Åpne Laste-menyen"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Open Menu"
-msgstr ""
+msgstr "Åpne Meny"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Open Save Menu"
-msgstr ""
+msgstr "Åpne Lagre-menyen"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -12098,7 +12117,7 @@ msgstr "Åpne menyen for byggerom"
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Open door"
-msgstr ""
+msgstr "Åpne dør"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -12113,12 +12132,12 @@ msgstr "OpenGL"
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "OpenGL (Classic)"
-msgstr ""
+msgstr "OpenGL (klassisk)"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
-msgstr ""
+msgstr "OpenGL (Compute shader)"
 
 #. TRANSLATION: citra, dolphin_triforce, play, scummvm
 msgctxt "game_options"
@@ -12463,7 +12482,7 @@ msgstr "PS1 digital styreenhet"
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "PS3 CONTROLLER"
-msgstr ""
+msgstr "PS3-KONTROLLER"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -12483,7 +12502,7 @@ msgstr "PVM Style (FirebrandX)"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "PVM_20M2U/D93"
-msgstr ""
+msgstr "PVM_20M2U/D93"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
@@ -12513,12 +12532,12 @@ msgstr "Padler"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Pakistan"
-msgstr ""
+msgstr "Pakistan"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Panama"
-msgstr ""
+msgstr "Panama"
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -12538,7 +12557,7 @@ msgstr "ParaLLEl-RDP"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Paraguay"
-msgstr ""
+msgstr "Paraguay"
 
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
@@ -12686,12 +12705,12 @@ msgstr "Ytelse"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Peru"
-msgstr ""
+msgstr "Peru"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Philippines"
-msgstr ""
+msgstr "Filipinene"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -12767,12 +12786,12 @@ msgstr "Konfigurasjon av spillefeltet"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Plunger"
-msgstr ""
+msgstr "Plunger"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Point (Default)"
-msgstr ""
+msgstr "Punkt (standard)"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -12802,7 +12821,7 @@ msgstr "Polen"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Poland (pl)"
-msgstr ""
+msgstr "Polen (pl)"
 
 #. TRANSLATION: doom3, etlegacy, xenia, xenia-canary
 msgctxt "game_options"
@@ -12944,12 +12963,12 @@ msgstr ""
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Press the N key for 'Novice' or 'No'"
-msgstr ""
+msgstr "Trykk på N-tasten for \"Novice\" eller \"No\""
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Press the Y key for 'Yes'"
-msgstr ""
+msgstr "Trykk på Y-tasten for \"Ja\""
 
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
@@ -12977,11 +12996,13 @@ msgid ""
 "Provides analog controller and mouse support while patching existing rotary "
 "controller bugs found in hardware."
 msgstr ""
+"Gir støtte for analog kontroller og mus, samtidig som eksisterende feil i "
+"maskinvaren med roterende kontroller blir rettet."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Puerto Rico"
-msgstr ""
+msgstr "Puerto Rico"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -13026,7 +13047,7 @@ msgstr "SLUTT PÅ VERTEN"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Qatar"
-msgstr ""
+msgstr "Qatar"
 
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
@@ -13291,7 +13312,7 @@ msgstr "RUMBLE-NIVÅ"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "RUN TEST MODE"
-msgstr ""
+msgstr "KJØR TEST-MODUS"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -13426,7 +13447,7 @@ msgstr ""
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Renders polygons and textures at the native resolution."
-msgstr ""
+msgstr "Gjengir polygoner og teksturer med den opprinnelige oppløsningen."
 
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
@@ -13566,7 +13587,7 @@ msgstr "Ris"
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Right"
-msgstr ""
+msgstr "Høyre"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -13581,22 +13602,22 @@ msgstr ""
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Flipper"
-msgstr ""
+msgstr "Høyre Flipper"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Manga Save"
-msgstr ""
+msgstr "Høyre Magna Save"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Nudge"
-msgstr ""
+msgstr "Høyre Dytt"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "Right Stick"
-msgstr "Høyre pinne"
+msgstr "Høyre Spake"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -13611,12 +13632,12 @@ msgstr "Høyre magnasave"
 #. TRANSLATION: solarus
 msgctxt "game_options"
 msgid "Right stick"
-msgstr "Høyre spak"
+msgstr "Høyre spake"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Right/Left"
-msgstr "Høyre/venstre"
+msgstr "Høyre/Venstre"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -13631,7 +13652,7 @@ msgstr "Roland MT-32/CM-32L"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Romania"
-msgstr ""
+msgstr "Romania"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
@@ -13697,12 +13718,12 @@ msgstr "Rumble Pak (automatisk)"
 #. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
-msgstr ""
+msgstr "Kjør"
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Run the game in test mode to configure certain game options."
-msgstr ""
+msgstr "Kjør spillet i testmodus for å konfigurere visse spillalternativer."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13781,7 +13802,7 @@ msgstr "SKJERMGRENSER"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "SCREEN FILTER"
-msgstr ""
+msgstr "SKJERMFILTER"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -13856,7 +13877,7 @@ msgstr "SKJERMBREDDE"
 #. TRANSLATION: bigpemu, bigpemu, bigpemu, bigpemu, bigpemu, ...
 msgctxt "game_options"
 msgid "SCRIPT MODULES"
-msgstr ""
+msgstr "SCRIPT-MODULER"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13916,7 +13937,7 @@ msgstr "DELE MAME-KUNSTVERK"
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "SHOW ACHIEVEMENT MESSAGES"
-msgstr ""
+msgstr "VISE PRESTASJONSMELDINGER"
 
 #. TRANSLATION: duckstation, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, ...
 msgctxt "game_options"
@@ -14291,7 +14312,7 @@ msgstr "Saturn Pad"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Saudi Arabia"
-msgstr ""
+msgstr "Saudi-Arabia"
 
 #. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
 msgctxt "keys_files"
@@ -14600,6 +14621,8 @@ msgctxt "game_options"
 msgid ""
 "Set if you want to limit the FPS in games that are not limited like OutRun2."
 msgstr ""
+"Still inn hvis du vil begrense FPS i spill som ikke er begrenset, som OutRun "
+"2."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -14649,12 +14672,12 @@ msgstr "Angi skjermens oppløsning. Påvirker ikke gjengivelsesoppløsningen."
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set the target FPS (will only work if FPS LIMITER is enabled)."
-msgstr ""
+msgstr "Angi FPS-målet (fungerer bare hvis FPS BEGRENSER er aktivert)."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set to enable lens glare in Outrun 2."
-msgstr ""
+msgstr "Still inn for å aktivere linsegjenskinn i Outrun 2."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14662,11 +14685,13 @@ msgid ""
 "Set to keep the aspect ratio (4:3) in games like Sega Race TV and Primeval "
 "Hunt."
 msgstr ""
+"Innstilt for å beholde størrelsesforholdet (4:3) i spill som Sega Race TV og "
+"Primeval Hunt."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set to on if you experience flickering in Hummer."
-msgstr ""
+msgstr "Sett til på hvis du opplever flimring i Hummer."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -14735,17 +14760,17 @@ msgstr "Slipe mer"
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Shoot"
-msgstr ""
+msgstr "Skyt"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Shoot Xterm"
-msgstr ""
+msgstr "Skyt Xterm"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Shoot Zappper"
-msgstr ""
+msgstr "Skyt Zappper"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -14935,7 +14960,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Sine"
-msgstr ""
+msgstr "Sinus"
 
 #. TRANSLATION: suyu, xenia, xenia-canary
 msgctxt "game_options"
@@ -15123,7 +15148,7 @@ msgstr "Mindre"
 #. TRANSLATION: dxx-rebirth
 msgctxt "game_options"
 msgid "Smooth"
-msgstr "Jevn"
+msgstr "Glatt"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -15285,12 +15310,12 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "South Africa"
-msgstr ""
+msgstr "Sør-Afrika"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "South Korea"
-msgstr ""
+msgstr "Sør-Korea"
 
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
@@ -15441,7 +15466,7 @@ msgstr "Start"
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Start / Enter"
-msgstr ""
+msgstr "Start / Enter"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -15501,22 +15526,22 @@ msgstr ""
 #. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
-msgstr ""
+msgstr "Strafe Venstre"
 
 #. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
-msgstr ""
+msgstr "Strafe Høyre"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Strafe left"
-msgstr ""
+msgstr "Strafe venstre"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Strafe right"
-msgstr ""
+msgstr "Strafe høyre"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -15546,7 +15571,7 @@ msgstr "Strekk ut spill til fullskjerm, men kan forvrenge størrelsesforholdet"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Stretch to Window"
-msgstr ""
+msgstr "Strekk til vindu"
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
@@ -15588,7 +15613,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Strong"
-msgstr ""
+msgstr "Sterkt"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -15651,6 +15676,8 @@ msgid ""
 "Supports uncapped frame rates, analog controllers, and mouse look "
 "functionality."
 msgstr ""
+"Støtter ubegrensede bildefrekvenser, analoge kontrollere og Mouse-Look-"
+"funksjonalitet."
 
 #. TRANSLATION: cemu, suyu
 msgctxt "game_options"
@@ -15700,29 +15727,29 @@ msgstr "Svensk (se)"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Swiss French (ch)"
-msgstr ""
+msgstr "Sveitsisk fransk (ch)"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Swiss German (ch)"
-msgstr ""
+msgstr "Sveitsertysk (ch)"
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid ""
 "Switches between smooth (Bilinear) and sharp (Nearest Neighbor) image "
 "scaling."
-msgstr ""
+msgstr "Bytter mellom jevn (bilineær) og skarp (nærmeste nabo) bildeskalering."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Switches the game to multiplayer mode."
-msgstr ""
+msgstr "Bytter spillet til flerspillermodus."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Switzerland"
-msgstr ""
+msgstr "Sveits"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -15745,7 +15772,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Syria"
-msgstr ""
+msgstr "Syria"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -15805,7 +15832,7 @@ msgstr ""
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "TEMPEST 2000"
-msgstr ""
+msgstr "TEMPEST 2000"
 
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
@@ -15980,17 +16007,17 @@ msgstr "TT"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "TT 3.06"
-msgstr ""
+msgstr "TT 3.06"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "TT AUTO"
-msgstr ""
+msgstr "TT AUTO"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "TT ETOS 512k"
-msgstr ""
+msgstr "TT ETOS 512k"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -16090,7 +16117,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Thailand"
-msgstr ""
+msgstr "Thailand"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
@@ -16259,12 +16286,12 @@ msgstr "Slå på hastighetsbegrensning"
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
-msgstr ""
+msgstr "Veksle mellom kjøring"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle weapon"
-msgstr ""
+msgstr "Veksle mellom våpen"
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -16349,7 +16376,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Triangle"
-msgstr ""
+msgstr "Triangel"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -16373,7 +16400,7 @@ msgstr "Trilinear (PS2)"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Trinidad and Tobago"
-msgstr ""
+msgstr "Trinidad og Tobago"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -16388,7 +16415,7 @@ msgstr "True Colour"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Tunisia"
-msgstr ""
+msgstr "Tunisia"
 
 #. TRANSLATION: libretro/dosbox_pure, suyu, xenia, xenia-canary
 msgctxt "game_options"
@@ -16403,17 +16430,17 @@ msgstr "Tyrkisk"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Turkish (tr)"
-msgstr ""
+msgstr "Tyrkisk (tr)"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Turn Left"
-msgstr ""
+msgstr "Sving Venstre"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Turn Right"
-msgstr ""
+msgstr "Sving Høyre"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -16509,12 +16536,12 @@ msgstr "UK"
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "UPSCALE FILTER"
-msgstr "UPSCALE FILTER"
+msgstr "OPPSKALER FILTER"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "UPSCALE MODE"
-msgstr ""
+msgstr "OPPSKALER MODUS"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -16614,7 +16641,7 @@ msgstr "BRUK RATT"
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid "USER DISK"
-msgstr "LEGG TIL BRUKERDISK"
+msgstr "BRUKERDISK"
 
 #. TRANSLATION: ryujinx, suyu
 msgctxt "game_options"
@@ -16744,7 +16771,7 @@ msgstr "UTC-9"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Ukraine"
-msgstr ""
+msgstr "Ukraina"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
@@ -16764,17 +16791,17 @@ msgstr "Ikke dokket"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "United Arab Emirates"
-msgstr ""
+msgstr "Forente Arabiske Emirater"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "United Kingdom"
-msgstr ""
+msgstr "Storbritannia (UK)"
 
 #. TRANSLATION: lindbergh-loader, xenia, xenia-canary
 msgctxt "game_options"
 msgid "United States"
-msgstr ""
+msgstr "USA"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -16814,7 +16841,7 @@ msgstr "Inntil tidsavbrudd"
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Up"
-msgstr ""
+msgstr "Opp"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -16837,7 +16864,7 @@ msgstr ""
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "Upscale filter used for the 2D layers. Requires New 3D engine."
-msgstr ""
+msgstr "Oppskaleringsfilter som brukes for 2D-lagene. Krever ny 3D-motor."
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -16847,7 +16874,7 @@ msgstr "Oppskalere teksturer på 3D-objekter."
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Uruguay"
-msgstr ""
+msgstr "Uruguay"
 
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
@@ -16884,6 +16911,8 @@ msgctxt "game_options"
 msgid ""
 "Use L2/R2 for Brake/Accel and L1/R1 or R-stick Up/Down for Shift Up/Down."
 msgstr ""
+"Bruk L2/R2 for brems/accelerator og L1/R1 eller R-spaken opp/ned for gir opp/"
+"ned."
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -16902,7 +16931,7 @@ msgstr ""
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Use Potion"
-msgstr ""
+msgstr "Bruk Potion"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17076,7 +17105,7 @@ msgstr "Vanligvis ikke mye raskere enn enkeltkjernemodus."
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Uzbekistan"
-msgstr ""
+msgstr "Usbekistan"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -17276,7 +17305,7 @@ msgstr "Forbedrer hastigheten på bufferkart betraktelig."
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Venezuela"
-msgstr ""
+msgstr "Venezuela"
 
 #. TRANSLATION: drastic, libretro/fceumm, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
@@ -17321,7 +17350,7 @@ msgstr "Videopac+ G7400 (Frankrike)"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Vietnam"
-msgstr ""
+msgstr "Vietnam"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -17446,7 +17475,7 @@ msgstr "WINE RUNNER"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "WOLFENSTEIN 3D"
-msgstr ""
+msgstr "WOLFENSTEIN 3D"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -17471,7 +17500,7 @@ msgstr ""
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Weak"
-msgstr ""
+msgstr "Svakt"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -17627,7 +17656,7 @@ msgstr ""
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "X-INPUT"
-msgstr ""
+msgstr "X-INPUT"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -17672,7 +17701,7 @@ msgstr "Gul"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Yemen"
-msgstr ""
+msgstr "Jemen"
 
 #. TRANSLATION: vita3k
 msgctxt "game_options"
@@ -17824,7 +17853,7 @@ msgstr ""
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "concussion missile"
-msgstr ""
+msgstr "hjernerystelsesrakett"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -17839,27 +17868,27 @@ msgstr "diagonalt filter"
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "drop proximity bomb"
-msgstr ""
+msgstr "slipp nærhetsbombe"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "exit game"
-msgstr ""
+msgstr "avslutt spillet"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "fire primary"
-msgstr ""
+msgstr "fyr primær"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "fire secondary"
-msgstr ""
+msgstr "fyr sekundær"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "flare"
-msgstr ""
+msgstr "bluss"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -17907,7 +17936,7 @@ msgstr "skjult"
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "homing missile"
-msgstr ""
+msgstr "målsøkende missil"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -17957,7 +17986,7 @@ msgstr "større"
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "laser"
-msgstr ""
+msgstr "laser"
 
 #. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
@@ -17977,7 +18006,7 @@ msgstr "Lottes crt-filter"
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "map"
-msgstr ""
+msgstr "kart"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
@@ -18042,22 +18071,22 @@ msgstr "rosa drømmer"
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "plasma cannon"
-msgstr ""
+msgstr "plasmakanon"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "proximity bomb"
-msgstr ""
+msgstr "nærhetsbombe"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "quick load"
-msgstr ""
+msgstr "hurtiglasting"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "quick save"
-msgstr ""
+msgstr "rask lagring"
 
 #. TRANSLATION: libretro/desmume
 msgctxt "game_options"
@@ -18077,7 +18106,7 @@ msgstr "hurtiglagring"
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "rear view"
-msgstr ""
+msgstr "bakfra"
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
@@ -18122,12 +18151,12 @@ msgstr "mindre"
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "smart missile"
-msgstr ""
+msgstr "smart missil"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "spreadfire cannon"
-msgstr ""
+msgstr "kanon med spredt ild"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -18157,12 +18186,12 @@ msgstr "trilineær"
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "use with R3 for cheat automap"
-msgstr ""
+msgstr "bruk med R3 for jukse-automatkart"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "vulcan cannon"
-msgstr ""
+msgstr "vulkansk kanon"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18263,7 +18292,7 @@ msgstr "gul/blå"
 
 #~ msgctxt "game_options"
 #~ msgid "5 Sideway Wiimote"
-#~ msgstr "5 Wiimote på siden"
+#~ msgstr "5 Sideveis Wiimote"
 
 #~ msgctxt "game_options"
 #~ msgid "512 KB"
@@ -18804,7 +18833,7 @@ msgstr "gul/blå"
 
 #~ msgctxt "game_options"
 #~ msgid "Native Vulkan"
-#~ msgstr "Native Vulkan"
+#~ msgstr "Opprinnelig Vulkan"
 
 #~ msgctxt "game_options"
 #~ msgid "Needed by some games that use special unicode characters."
