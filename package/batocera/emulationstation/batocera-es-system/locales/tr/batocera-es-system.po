@@ -4140,6 +4140,11 @@ msgctxt "game_options"
 msgid "CABLE"
 msgstr "KABLO"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "CARD READER"
+msgstr ""
+
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "CD"
@@ -7099,6 +7104,11 @@ msgstr ""
 "BIOS'unuzun bilinen sorunları olup olmadığını görüntülemek için "
 "etkinleştirin."
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Enable to emulate the card reader in Virtua Tenis 3."
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Enable to improve blurriness."
@@ -8458,7 +8468,7 @@ msgctxt "game_options"
 msgid "GAME LANGUAGE"
 msgstr ""
 
-#. TRANSLATION: lindbergh-loader, lindbergh-loader
+#. TRANSLATION: lindbergh-loader, lindbergh-loader, lindbergh-loader
 msgctxt "game_options"
 msgid "GAME OPTIONS"
 msgstr ""
