@@ -14,6 +14,7 @@ liblc3.mk
 libpinmame.mk
 libzedmd.mk
 python-pyxel.mk
+sdl3.mk
 shaderc.mk
 spirv-cross.mk
 spirv-headers.mk
