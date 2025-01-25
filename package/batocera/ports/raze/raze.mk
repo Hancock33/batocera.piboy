@@ -7,7 +7,7 @@
 RAZE_VERSION = 3590de2f2ac17c625415af35ed252b05c36acf43
 RAZE_SITE = $(call github,ZDoom,Raze,$(RAZE_VERSION))
 RAZE_LICENSE = GPLv2
-RAZE_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew libvpx zmusic webp host-raze
+RAZE_DEPENDENCIES = bzip2 fluidsynth host-raze libvpx openal sdl2 webp zmusic
 RAZE_SUPPORTS_IN_SOURCE_BUILD = NO
 
 # We need the tools from the host package to build the target package
