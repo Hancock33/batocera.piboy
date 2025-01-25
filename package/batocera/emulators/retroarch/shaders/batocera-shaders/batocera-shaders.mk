@@ -61,8 +61,7 @@ define BATOCERA_SHADERS_INSTALL_TARGET_CMDS
 	cp $(BATOCERA_SHADERS_DIRIN)/rendering-defaults.yml           $(TARGET_DIR)/usr/share/batocera/shaders/configs/
 
 	if test -e $(BATOCERA_SHADERS_DIRIN)/rendering-defaults-$(BATOCERA_GPU_SYSTEM).yml; then \
-		cp $(BATOCERA_SHADERS_DIRIN)/rendering-defaults-$(BATOCERA_GPU_SYSTEM).yml \
-		    $(TARGET_DIR)/usr/share/batocera/shaders/configs/rendering-defaults-arch.yml; \
+		cp $(BATOCERA_SHADERS_DIRIN)/rendering-defaults-$(BATOCERA_GPU_SYSTEM).yml $(TARGET_DIR)/usr/share/batocera/shaders/configs/rendering-defaults-arch.yml; \
 	fi
 
 	# sets
