@@ -1,0 +1,22 @@
+diff --git a/sources/src/caps/caps.c b/sources/src/caps/caps.c
+index f337891..361f2d0 100644
+--- a/sources/src/caps/caps.c
++++ b/sources/src/caps/caps.c
+@@ -37,7 +37,7 @@ char CAPSLIB_PATH[RETRO_PATH_MAX];
+ #ifdef _WIN32
+ #define CAPSLIB_NAME    "capsimg.dll"
+ #else
+-#define CAPSLIB_NAME    "capsimg.so"
++#define CAPSLIB_NAME    "libcapsimage.so.5"
+ #endif
+ 
+ /*
+@@ -80,7 +80,7 @@ static int load_capslib (void)
+     if (!path_is_valid(CAPSLIB_PATH))
+         snprintf(CAPSLIB_PATH, RETRO_PATH_MAX, "%s%c%s", "/data/user/0/com.retroarch.ra32/cores", DIR_SEP_CHR, CAPSLIB_NAME);
+ #else
+-    snprintf(CAPSLIB_PATH, RETRO_PATH_MAX, "%s%c%s", retro_system_directory, DIR_SEP_CHR, CAPSLIB_NAME);
++    snprintf(CAPSLIB_PATH, RETRO_PATH_MAX, "%s%c%s", "/usr/lib", DIR_SEP_CHR, CAPSLIB_NAME);
+ #endif
+     if (!path_is_valid(CAPSLIB_PATH))
+         snprintf(CAPSLIB_PATH, RETRO_PATH_MAX, "%s", CAPSLIB_NAME);
