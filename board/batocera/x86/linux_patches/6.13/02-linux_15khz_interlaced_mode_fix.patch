@@ -13,7 +13,7 @@ index 7fee013ae4b2..3693e93a1588 100644
  		mode->type |= DRM_MODE_TYPE_USERDEF;
  		return 0;
 diff --git a/drivers/gpu/drm/drm_vblank.c b/drivers/gpu/drm/drm_vblank.c
-index 94e45ed6869d..d2bdac250136 100644
+index 94e45ed6869d..6b9e2de5e51d 100644
 --- a/drivers/gpu/drm/drm_vblank.c
 +++ b/drivers/gpu/drm/drm_vblank.c
 @@ -293,6 +293,7 @@ static void drm_update_vblank_count(struct drm_device *dev, unsigned int pipe,
@@ -43,15 +43,3 @@ index 94e45ed6869d..d2bdac250136 100644
  		/*
  		 * Figure out how many vblanks we've missed based
  		 * on the difference in the timestamps and the
-@@ -635,11 +641,6 @@ void drm_calc_timestamping_constants(struct drm_crtc *crtc,
- 		linedur_ns  = div_u64((u64) mode->crtc_htotal * 1000000, dotclock);
- 		framedur_ns = div_u64((u64) frame_size * 1000000, dotclock);
- 
--		/*
--		 * Fields of interlaced scanout modes are only half a frame duration.
--		 */
--		if (mode->flags & DRM_MODE_FLAG_INTERLACE)
--			framedur_ns /= 2;
- 	} else {
- 		drm_err(dev, "crtc %u: Can't calculate constants, dotclock = 0!\n",
- 			crtc->base.id);
