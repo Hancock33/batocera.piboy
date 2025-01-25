@@ -1209,6 +1209,8 @@ def writeBezelConfig(generator: Generator, bezel: str | None, shaderBezel: bool,
     retroarchConfig['input_overlay_enable'] = "false"
     retroarchConfig['video_message_pos_x']  = 0.05
     retroarchConfig['video_message_pos_y']  = 0.05
+    retroarchConfig['video_viewport_bias_x'] = '"0.500000"'
+    retroarchConfig['video_viewport_bias_y'] = '"0.500000"'
 
     # special text...
     if bezel == "none" or bezel == "":
@@ -1265,9 +1267,13 @@ def writeBezelConfig(generator: Generator, bezel: str | None, shaderBezel: bool,
 
     # if image is not at the correct size, find the correct size
     bezelNeedAdaptation = False
-    viewPortUsed = True
+
     if "width" not in infos or "height" not in infos or "top" not in infos or "left" not in infos or "bottom" not in infos or "right" not in infos or shaderBezel:
         viewPortUsed = False
+    else:
+        viewPortUsed = True
+        retroarchConfig['video_viewport_bias_x'] = '"0.000000"'
+        retroarchConfig['video_viewport_bias_y'] = '"1.000000"'
 
     gameRatio = float(gameResolution["width"]) / float(gameResolution["height"])
 
