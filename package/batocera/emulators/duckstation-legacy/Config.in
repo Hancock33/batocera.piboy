@@ -11,6 +11,7 @@ config BR2_PACKAGE_DUCKSTATION_LEGACY
 	select BR2_PACKAGE_ECM
 	select BR2_PACKAGE_LIBXKBCOMMON
 	select BR2_PACKAGE_DBUS
+
 	help
-		DuckStation - PlayStation 1, aka. PSX Emulator
-		https://github.com/stenzek/duckstation
+	  DuckStation - PlayStation 1, aka. PSX Emulator
+	  https://github.com/stenzek/duckstation

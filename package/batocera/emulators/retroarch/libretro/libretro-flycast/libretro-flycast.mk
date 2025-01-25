@@ -24,10 +24,8 @@ LIBRETRO_FLYCAST_CONF_OPTS += -DUSE_OPENMP=ON
 LIBRETRO_FLYCAST_CONF_OPTS += -DWITH_SYSTEM_ZLIB=ON
 
 # Get version details
-LIBRETRO_FLYCAST_GIT_TAG = \
-    $(shell $(GIT) -C $(LIBRETRO_FLYCAST_DL_DIR)/git describe --tags --always | tr -d '\n')
-LIBRETRO_FLYCAST_GIT_HASH = \
-    $(shell $(GIT) -C $(LIBRETRO_FLYCAST_DL_DIR)/git rev-parse --short HEAD | tr -d '\n')
+LIBRETRO_FLYCAST_GIT_TAG =  $(shell $(GIT) -C $(LIBRETRO_FLYCAST_DL_DIR)/git describe --tags --always | tr -d '\n')
+LIBRETRO_FLYCAST_GIT_HASH = $(shell $(GIT) -C $(LIBRETRO_FLYCAST_DL_DIR)/git rev-parse --short HEAD | tr -d '\n')
 LIBRETRO_FLYCAST_CONF_OPTS += -DGIT_VERSION=$(LIBRETRO_FLYCAST_GIT_TAG)
 LIBRETRO_FLYCAST_CONF_OPTS += -DGIT_HASH=$(LIBRETRO_FLYCAST_GIT_HASH)
 

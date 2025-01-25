@@ -12,4 +12,3 @@ config BR2_PACKAGE_FSUAE
 
 	help
 	  A crossplatform amiga emulator
-

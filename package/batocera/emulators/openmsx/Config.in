@@ -16,7 +16,6 @@ config BR2_PACKAGE_OPENMSX
 	select BR2_PACKAGE_TCL
 	select BR2_PACKAGE_ZLIB
 
-
 	help
 	  A MSX emulator that aims for perfection.
 

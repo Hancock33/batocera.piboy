@@ -34,4 +34,3 @@ source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/perfected/
 source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/realgibs/Config.in"
 source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/rivensin/Config.in"
 source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/sikkmod/Config.in"
-

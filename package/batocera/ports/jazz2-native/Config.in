@@ -6,6 +6,7 @@ config BR2_PACKAGE_JAZZ2_NATIVE
 	select BR2_PACKAGE_LIBOPENMPT
 	select BR2_PACKAGE_ZLIB
 	help
-	  Jazz² Resurrection: Native C++ reimplementation of Jazz Jackrabbit 2.
+	  Jazz² Resurrection: Native C++ reimplementation of
+	  Jazz Jackrabbit 2.
 
 	  https://github.com/deathkiller/jazz2-native
