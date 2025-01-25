@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-01-18 10:12+0000\n"
+"PO-Revision-Date: 2025-01-25 14:24+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -4147,7 +4147,7 @@ msgstr "KABEL"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CARD READER"
-msgstr ""
+msgstr "KARTENLESER"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -7086,6 +7086,8 @@ msgid ""
 "Enable the IP address for OutRun 2 network play against another PC on the "
 "same network."
 msgstr ""
+"Aktiviere die IP-Adresse für das OutRun 2-Netzwerkspiel gegen einen anderen "
+"PC im selben Netzwerk."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7142,6 +7144,7 @@ msgstr "Aktivieren, um anzuzeigen, ob Ihr BIOS bekannte Probleme hat."
 msgctxt "game_options"
 msgid "Enable to emulate the card reader in Virtua Tenis 3."
 msgstr ""
+"Aktiviere diese Option, um den Kartenleser in Virtua Tennis 3 zu emulieren."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9429,6 +9432,8 @@ msgid ""
 "House of the Dead 4 speed fix. Sets the game to the CPU base frequency of "
 "your processor."
 msgstr ""
+"House of the Dead 4 'Speed Fix'. Stellt das Spiel auf die CPU-Basisfrequenz "
+"deines Prozessors ein."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -9600,7 +9605,7 @@ msgstr "UNVERWUNDBARKEITSMODUS"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "IP ADDRESS"
-msgstr ""
+msgstr "IP-ADRESSE"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
