@@ -241,14 +241,14 @@ class LindberghGenerator(Generator):
             self.setConf(conf, "CARDFILE_02", f"{self.LINDBERGH_SAVES}/VT3_Card_02.crd")
         else:
             self.setConf(conf, "EMULATE_CARDREADER", 0)
-        
+
         # House of the Dead 4 - CPU speed
         cpu_speed = self.get_cpu_speed()
         if cpu_speed is not None:
             eslog.debug(f"Current CPU Speed: {cpu_speed:.2f} GHz")
             if "hotd" in romName.lower() and system.isOptSet("lindbergh_speed") and system.getOptBoolean("lindbergh_speed"):
                 self.setConf(conf, "CPU_FREQ_GHZ", cpu_speed)
-        
+
         # OutRun 2 - Network
         ip = self.get_ip_address()
         if not ip:
@@ -260,7 +260,7 @@ class LindberghGenerator(Generator):
                 self.setConf(conf, "OR2_IP", ip)
         else:
             eslog.debug("Unable to retrieve IP address.")
-        
+
         ## Guns
         if system.isOptSet('use_guns') and system.getOptBoolean('use_guns') and len(guns) > 0:
             need_guns_border = False
@@ -275,7 +275,7 @@ class LindberghGenerator(Generator):
             self.setConf(conf, "BORDER_ENABLED", 1 if need_guns_border else 0)
         else:
             self.setConf(conf, "BORDER_ENABLED", 0)
-        
+
         # Setup evdev controller(s)
         self.setup_controllers(conf, playersControllers, romName)
 
