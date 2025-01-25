@@ -8,8 +8,7 @@ LIBRETRO_MAME_VERSION = mame0273
 LIBRETRO_MAME_SITE = https://github.com/Hancock33/batocera-mame-builds/releases/download/$(LIBRETRO_MAME_VERSION)
 LIBRETRO_MAME_LICENSE = MAME
 LIBRETRO_MAME_SOURCE = libretro-mame-$(MAME_CROSS_ARCH)-$(subst mame,,$(LIBRETRO_MAME_VERSION)).tar.xz
-LIBRETRO_MAME_DEPENDENCIES = alsa-lib
-
+LIBRETRO_MAME_DEPENDENCIES = alsa-lib retroarch
 
 define LIBRETRO_MAME_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/lib/libretro/mame_libretro.so

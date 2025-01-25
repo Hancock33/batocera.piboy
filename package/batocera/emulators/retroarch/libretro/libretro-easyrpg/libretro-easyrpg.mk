@@ -11,8 +11,8 @@ LIBRETRO_EASYRPG_SITE_METHOD=git
 LIBRETRO_EASYRPG_LICENSE = GPLv3
 LIBRETRO_EASYRPG_SUPPORTS_IN_SOURCE_BUILD = NO
 
-LIBRETRO_EASYRPG_DEPENDENCIES = sdl2 zlib fmt libpng freetype mpg123 libvorbis \
-	opusfile pixman speexdsp libxmp wildmidi liblcf fluidsynth
+LIBRETRO_EASYRPG_DEPENDENCIES = fluidsynth fmt freetype liblcf libpng libvorbis libxmp mpg123
+LIBRETRO_EASYRPG_DEPENDENCIES += opusfile pixman retroarch sdl2 speexdsp wildmidi zlib
 
 LIBRETRO_EASYRPG_CONF_OPTS += -DPLAYER_TARGET_PLATFORM=libretro
 LIBRETRO_EASYRPG_CONF_OPTS += -DBUILD_SHARED_LIBS=ON
