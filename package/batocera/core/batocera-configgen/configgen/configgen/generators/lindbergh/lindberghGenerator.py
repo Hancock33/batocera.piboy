@@ -230,7 +230,7 @@ class LindberghGenerator(Generator):
     def commentConf(self, conf, key):
         if key not in self.CONF_KEYS:
             raise Exception(f"unknown conf key {key}")
-        
+
         if key in conf["keys"]:
             conf["keys"][key]["modified"]  = True
             conf["keys"][key]["commented"] = True
@@ -362,7 +362,7 @@ class LindberghGenerator(Generator):
             "ANALOGUE_7":  True,
             "ANALOGUE_8":  True,
         }
-        
+
         lindberghCtrl_pad = {
             "a":              "BUTTON_2",
             "b":              "BUTTON_1",
@@ -449,7 +449,7 @@ class LindberghGenerator(Generator):
                     # coin is only for player 1
                     if lindberghCtrl[input_name] == "COIN" and nplayer > 1:
                         continue
-                    
+
                     input_base_name = input_name
                     if input_name == "joystick1right":
                         input_base_name = "joystick1left"
