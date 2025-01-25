@@ -1,6 +1,7 @@
 config BR2_PACKAGE_PYTHON_BINHO_HOST_ADAPTER
 	bool "python-binho-host-adapter"
 	select BR2_PACKAGE_PYTHON_SERIAL
+
 	help
 	  Python Libraries for Binho Multi-Protocol USB Host Adapters.
 

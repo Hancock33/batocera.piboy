@@ -1,5 +1,6 @@
 config BR2_PACKAGE_LIBLGPIO
 	bool "liblgpio"
+
 	help
 	  Control GPIO pins via the kernel's gpiochip
 	  device interface.

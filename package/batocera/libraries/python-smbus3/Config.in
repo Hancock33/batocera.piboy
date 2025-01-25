@@ -1,5 +1,6 @@
 config BR2_PACKAGE_PYTHON_SMBUS3
 	bool "python-smbus3"
+
 	help
 	  smbus3 is a drop-in replacement for smbus2, smbus-cffi,
 	  smbus-python written in pure Python, intended for use with

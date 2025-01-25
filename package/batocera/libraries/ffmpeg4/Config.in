@@ -19,6 +19,7 @@ menuconfig BR2_PACKAGE_FFMPEG4
 	bool "ffmpeg4"
 	depends on BR2_PACKAGE_FFMPEG4_ARCH_SUPPORTS
 	select BR2_PACKAGE_NV_CODEC_HEADERS    if BR2_PACKAGE_NVIDIA_OPEN_DRIVER_CUDA # batocera
+
 	help
 	  FFmpeg is a complete, cross-platform solution to record,
 	  convert and stream audio and video.
@@ -29,12 +30,14 @@ if BR2_PACKAGE_FFMPEG4
 
 config BR2_PACKAGE_FFMPEG_GPL
 	bool "Enable GPL code"
+
 	help
 	  allow use of GPL code, the resulting libs and binaries will
 	  be under GPL
 
 config BR2_PACKAGE_FFMPEG_NONFREE
 	bool "Enable nonfree code"
+
 	help
 	  allow use of nonfree code, the resulting libs and binaries
 	  will be unredistributable
@@ -42,6 +45,7 @@ config BR2_PACKAGE_FFMPEG_NONFREE
 config BR2_PACKAGE_FFMPEG4_FFMPEG
 	bool "Build ffmpeg (the command line application)"
 	default n
+
 	help
 	  FFmpeg is a very fast video and audio converter.
 	  It can also grab from a live audio/video source.
@@ -54,6 +58,7 @@ config BR2_PACKAGE_FFMPEG_FFPLAY
 	depends on !BR2_STATIC_LIBS # sdl2
 	select BR2_PACKAGE_FFMPEG_SWSCALE
 	select BR2_PACKAGE_SDL2
+
 	help
 	  FFplay is a very simple and portable media player using the
 	  FFmpeg libraries and the SDL library.
@@ -64,6 +69,7 @@ comment "ffplay needs a toolchain w/ dynamic library"
 
 config BR2_PACKAGE_FFMPEG4_FFPROBE
 	bool "Build ffprobe"
+
 	help
 	  FFprobe is a utility to determine the audio and video
 	  characteristics of a container file.
@@ -72,28 +78,33 @@ config BR2_PACKAGE_FFMPEG_XCBGRAB
 	bool "Build X11 screen grabbing"
 	depends on BR2_PACKAGE_XORG7
 	select BR2_PACKAGE_LIBXCB
+
 	help
 	  X11 screen grabbing using libxcb.
 
 config BR2_PACKAGE_FFMPEG_AVRESAMPLE
 	bool "Build libavresample"
+
 	help
 	  Avresample is a audio conversion library for compatibility.
 
 config BR2_PACKAGE_FFMPEG_POSTPROC
 	bool "Build libpostproc"
 	depends on BR2_PACKAGE_FFMPEG_GPL
+
 	help
 	  Postproc is a library of video postprocessing routines.
 
 config BR2_PACKAGE_FFMPEG_SWSCALE
 	bool "Build libswscale"
+
 	help
 	  Swscale is a library of video scaling routines.
 
 config BR2_PACKAGE_FFMPEG_ENCODERS
 	string "Enabled encoders"
 	default "all"
+
 	help
 	  Space-separated list of encoders to build in FFmpeg,
 	  or "all" to build all of them.
@@ -104,6 +115,7 @@ config BR2_PACKAGE_FFMPEG_ENCODERS
 config BR2_PACKAGE_FFMPEG_DECODERS
 	string "Enabled decoders"
 	default "all"
+
 	help
 	  Space-separated list of decoders to build in FFmpeg,
 	  or "all" to build all of them.
@@ -114,6 +126,7 @@ config BR2_PACKAGE_FFMPEG_DECODERS
 config BR2_PACKAGE_FFMPEG_MUXERS
 	string "Enabled muxers"
 	default "all"
+
 	help
 	  Space-separated list of muxers to build in FFmpeg,
 	  or "all" to build all of them.
@@ -124,6 +137,7 @@ config BR2_PACKAGE_FFMPEG_MUXERS
 config BR2_PACKAGE_FFMPEG_DEMUXERS
 	string "Enabled demuxers"
 	default "all"
+
 	help
 	  Space-separated list of demuxers to build in FFmpeg,
 	  or "all" to build all of them.
@@ -134,6 +148,7 @@ config BR2_PACKAGE_FFMPEG_DEMUXERS
 config BR2_PACKAGE_FFMPEG_PARSERS
 	string "Enabled parsers"
 	default "all"
+
 	help
 	  Space-separated list of parsers to build in FFmpeg,
 	  or "all" to build all of them.
@@ -144,6 +159,7 @@ config BR2_PACKAGE_FFMPEG_PARSERS
 config BR2_PACKAGE_FFMPEG_BSFS
 	string "Enabled bitstreams"
 	default "all"
+
 	help
 	  Space-separated list of bitstream filters to build in FFmpeg,
 	  or "all" to build all of them.
@@ -154,6 +170,7 @@ config BR2_PACKAGE_FFMPEG_BSFS
 config BR2_PACKAGE_FFMPEG_PROTOCOLS
 	string "Enabled protocols"
 	default "all"
+
 	help
 	  Space-separated list of protocols to build in FFmpeg,
 	  or "all" to build all of them.
@@ -164,6 +181,7 @@ config BR2_PACKAGE_FFMPEG_PROTOCOLS
 config BR2_PACKAGE_FFMPEG_FILTERS
 	string "Enabled filters"
 	default "all"
+
 	help
 	  Space-separated list of filters to build in FFmpeg,
 	  or "all" to build all of them.
@@ -182,6 +200,7 @@ config BR2_PACKAGE_FFMPEG_OUTDEVS
 config BR2_PACKAGE_FFMPEG_EXTRACONF
 	string "Additional parameters for ./configure"
 	default ""
+
 	help
 	  Extra parameters that will be appended to FFmpeg's
 	  ./configure commandline.

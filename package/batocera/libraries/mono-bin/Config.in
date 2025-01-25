@@ -5,6 +5,7 @@ config BR2_PACKAGE_MONO_BIN
 	depends on BR2_TOOLCHAIN_HAS_THREADS_NPTL # pthread_getattr_np()
 	depends on !BR2_STATIC_LIBS
 	select BR2_PACKAGE_LIBATOMIC_OPS
+
 	help
 	  An open source, cross-platform, implementation of C#
 	  and the CLR that is binary compatible with Microsoft.NET.
