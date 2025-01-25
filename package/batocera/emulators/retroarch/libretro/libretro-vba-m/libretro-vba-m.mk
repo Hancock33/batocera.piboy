@@ -6,7 +6,7 @@
 # Version: Commits on Jan 15, 2025
 LIBRETRO_VBA_M_VERSION = 3cf12f2594e2dd51110efec7eec66864cbaf4693
 LIBRETRO_VBA_M_SITE = $(call github,visualboyadvance-m,visualboyadvance-m,$(LIBRETRO_VBA_M_VERSION))
-LIBRETRO_VBA_M_DEPENDENCIES += retroarch
+LIBRETRO_VBA_M_DEPENDENCIES = retroarch
 
 define LIBRETRO_VBA_M_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/src/libretro/Makefile
