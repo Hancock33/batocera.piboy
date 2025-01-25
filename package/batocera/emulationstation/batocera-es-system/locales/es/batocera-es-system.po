@@ -4566,7 +4566,7 @@ msgctxt "game_options"
 msgid "CPU FEATURE"
 msgstr "CARACTERÍSTICA DE LA CPU"
 
-#. TRANSLATION: libretro/puae, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021, lindbergh-loader
 msgctxt "game_options"
 msgid "CPU SPEED"
 msgstr "VELOCIDAD DE CPU"
@@ -7082,6 +7082,13 @@ msgstr ""
 "Habilita Dreamcast DSP para obtener un audio más preciso. Solo recomendado "
 "para sistemas rápidos."
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Enable the IP address for OutRun 2 network play against another PC on the "
+"same network."
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Enable the cheat list (if available)."
@@ -8504,7 +8511,7 @@ msgctxt "game_options"
 msgid "GAME LANGUAGE"
 msgstr ""
 
-#. TRANSLATION: lindbergh-loader, lindbergh-loader, lindbergh-loader
+#. TRANSLATION: lindbergh-loader, lindbergh-loader, lindbergh-loader, lindbergh-loader, lindbergh-loader
 msgctxt "game_options"
 msgid "GAME OPTIONS"
 msgstr ""
@@ -9404,6 +9411,13 @@ msgctxt "game_options"
 msgid "Horizontal"
 msgstr "Horizontal"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"House of the Dead 4 speed fix. Sets the game to the CPU base frequency of "
+"your processor."
+msgstr ""
+
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "How much RAM the emulated FM Towns will have installed"
@@ -9569,6 +9583,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "INVULNERABILITY MODE"
 msgstr "MODO INVULNERABILIDAD"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "IP ADDRESS"
+msgstr ""
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
