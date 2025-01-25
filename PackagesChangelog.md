@@ -3,7 +3,9 @@
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-01-25|Jan 25, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.294|Jan 25, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|e433f3116dd9a36a353d054e1a371e7ff257f87a|Jan 25, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250125|Jan 25, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|c11d9bee2e4e3abbae5a23b82add2553ddd8e8cd|Jan 25, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250125|Jan 25, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|58819f02c66c33ac436a7c827c96fc791ffb4f14|Jan 25, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|3c8c48432758b7a631bac7fe452c208f5140b426|Jan 25, 2025
 Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|c1ed4f59faf925fd77873002d8272e1a1ab2adf8|Jan 25, 2025
@@ -25,9 +27,7 @@ Ports|[box64](http://github.com/ptitseb/box64)|6f8f37e8ffc61a496c9e533fdca83d14a
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|ee160717615c853e890ccb2ef73979a7afd8b6b9|Jan 24, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|cf251b4d98e7b140492ecc9646fddef6a7266c28|Jan 24, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|6d0454383ca7c151ed42e3bede1a518a13d0546b|Jan 24, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250124|Jan 24, 2025
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|v3.6.0-1224-0754df5|Jan 24, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250124|Jan 24, 2025
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|44807aa8e796d5b81d974517ce49eb3982091c3e|Jan 24, 2025
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|158ba2f568ecd3f69ccb5a39f7d752d3dc582fc7|Jan 24, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|90a0f74087edcd9b9e274d4430038a79b5666a11|Jan 24, 2025
