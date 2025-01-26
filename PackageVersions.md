@@ -162,7 +162,7 @@ Emulators|[libretro-jaxe](https://github.com/kurtjd/jaxe.git)|22115d58de5f80cfaf
 Emulators|[libretro-jumpnbump](http://github.com/libretro/jumpnbump-libretro)|4e68831f5576075c45c147f86865812afb816139|Nov 02, 2023
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|58352d6dc969fa90c5fa1220f38ffe577157547f|Dec 14, 2024
 Emulators|[libretro-lowresnx](http://github.com/timoinutilis/lowres-nx)|85c80181d26bb5c2147ebc76bfc48bce9f8d73a8|Oct 21, 2024
-Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|c1ed4f59faf925fd77873002d8272e1a1ab2adf8|Jan 25, 2025
+Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|fa3855cc465b4285e012d130adc049255c7ff389|Jan 26, 2025
 Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0273|Dec 23, 2024
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|dfc557cbad2796ee3759f2f73bf3ce56d6065eb6|Jan 25, 2025
 Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|08862a8aa4cf185606fbf54aafc0b5b8f8ee0220|Oct 19, 2024
@@ -244,7 +244,7 @@ Emulators|[libretro-zc250x](https://github.com/netux79/zc250x-libretro.git)|cfe8
 Emulators|[libserum](http://github.com/zesinger/libserum)|v2.0.2|Sept 15, 2024
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.8.1|Jan 18, 2025
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|9b2c0e1b635d70887fd9cc5afe322f993ec08ce2|Jan 25, 2025
-Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|dde7cc7b56092da779729252c71b3b53364511b8|Jan 24, 2025
+Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|f67f30cbcde63097a0cc9088bc4aefdbc5eee422|Jan 26, 2025
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0273|Dec 23, 2024
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|15c3faa26e879bdcff615558ded6dd886681ccae|Jan 17, 2025
 Emulators|[model2emu](https://github.com/batocera-linux/model2emu/raw/main)|1.1a|Jan 02, 2014
@@ -270,7 +270,7 @@ Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.3.1|Jan 24, 2025
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|c4f1ec8bddba15e1b1a00a7e56c50cf0eca8b5c9|Dec 31, 2024
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|c11d9bee2e4e3abbae5a23b82add2553ddd8e8cd|Jan 25, 2025
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|b982ff64c2725f872b532ebbbac158db00885bf5|Jan 26, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20241221|Dec 21, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|67703b49d8605b867299b87beafdd671c2d4c947|Jan 24, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-01-26|Jan 26, 2025
@@ -488,10 +488,10 @@ Ports|[sorr](http://github.com/Cpasjuste/bennugd-monolithic)|0290c3719fd74121ff9
 Ports|[spacecadetpinball](http://github.com/k4zmu2a/SpaceCadetPinball)|cb9b7b886244a27773f66b0b19fdc2998392565e|Aug 21, 2024
 Ports|[srb2](http://github.com/STJr/SRB2)|4258e898ff48365dd202841442a02a156153242c|Jan 22, 2025
 Ports|[srb2kart](http://github.com/STJr/Kart-Public)|44b4a6852858eebba5f9f50da2ac9f4b2889ad1a|Mar 31, 2024
-Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|756b9990031e6599a1e37a1fc647fb621a5c240a|Jan 22, 2025
+Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|d1a74a9ed9f0f99198fc646171f6156705908f65|Jan 26, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|ec284f7446ca7c182c65310fe65f84626c43c7e9|Jan 25, 2025
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|f72bac75d0d2840fece788dfa8c7791bff3b8992|Sept 30, 2024
-Ports|[supertux2](https://github.com/SuperTux/supertux.git)|5f9b1c567f8cc396e78bd358115625795297a3d1|Jan 25, 2025
+Ports|[supertux2](https://github.com/SuperTux/supertux.git)|349130e4e9b0ee234b49b99a1971275da5a8f6d8|Jan 26, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|a27a428f31fc582a9e298ddc7fa3ebcf1635cdfc|Dec 07, 2024
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|bfaa251cda9549392f69b1b9ba74f5f191845110|Dec 17, 2024
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024

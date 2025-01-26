@@ -1,8 +1,13 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|f67f30cbcde63097a0cc9088bc4aefdbc5eee422|Jan 26, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-01-26|Jan 26, 2025
+Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|d1a74a9ed9f0f99198fc646171f6156705908f65|Jan 26, 2025
+Ports|[supertux2](https://github.com/SuperTux/supertux.git)|349130e4e9b0ee234b49b99a1971275da5a8f6d8|Jan 26, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250126|Jan 26, 2025
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|b982ff64c2725f872b532ebbbac158db00885bf5|Jan 26, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250126|Jan 26, 2025
+Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|fa3855cc465b4285e012d130adc049255c7ff389|Jan 26, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|256c0729467c0216130bd5a0b1af1861dca28825|Jan 25, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|256c0729467c0216130bd5a0b1af1861dca28825|Jan 25, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|e128d19b17d800a7d4e96cca99b3835f7dc83e95|Jan 25, 2025
@@ -17,13 +22,10 @@ Ports|[box64](http://github.com/ptitseb/box64)|c5737428456b07d3f9d57bbc458096c43
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|de28cc316765aad8073e69dc96d1ca1b80e8eecb|Jan 25, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|cc22d4b2b1ae93e8c75eb8353a29751b079dc046|Jan 25, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|ec284f7446ca7c182c65310fe65f84626c43c7e9|Jan 25, 2025
-Ports|[supertux2](https://github.com/SuperTux/supertux.git)|5f9b1c567f8cc396e78bd358115625795297a3d1|Jan 25, 2025
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|c11d9bee2e4e3abbae5a23b82add2553ddd8e8cd|Jan 25, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|d51f62332e5264cc9cd1e61b0e4a54a1aa955945|Jan 25, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|3c8c48432758b7a631bac7fe452c208f5140b426|Jan 25, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|a27f61391ff5814cc8177cd9099e504fcc3105cd|Jan 25, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|92dc04ff3c8b5d5183901a615dd482dbfbe7edcb|Jan 25, 2025
-Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|c1ed4f59faf925fd77873002d8272e1a1ab2adf8|Jan 25, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|dfc557cbad2796ee3759f2f73bf3ce56d6065eb6|Jan 25, 2025
 Emulators|[libretro-p2000t](http://github.com/p2000t/M2000)|a409791895e88ed2557985fc771c43b2062e4859|Jan 25, 2025
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|494dead77220b3246fd3800740116a130d73851a|Jan 25, 2025
@@ -33,7 +35,6 @@ Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|da8e5b9915ce496
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|3d6550d1613d8739dbf655f409942beebd089484|Jan 25, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|4e97420b3bde618ed58197cefa274e31741e4f1a|Jan 24, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|5c27648699bf2647a55f6b631d683c0c3a403812|Jan 24, 2025
-Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|dde7cc7b56092da779729252c71b3b53364511b8|Jan 24, 2025
 Emulators|[play](https://github.com/jpd002/Play-.git)|77380322b6977e94091398a37144f7105544f9f4|Jan 24, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|b0182ed0e6bcc811b671561a84ccbe331f322453|Jan 24, 2025
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.3.1|Jan 24, 2025
@@ -62,7 +63,6 @@ Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerD
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|403c9500bbced75cba5c6b3a1660ef655704513a|Jan 22, 2025
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|b67b21ddda8b6468090fcdc5034bb075344a8903|Jan 22, 2025
 Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|da8c42ebf4c055d2095f7a3d9dfae1a3b66c0821|Jan 22, 2025
-Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|756b9990031e6599a1e37a1fc647fb621a5c240a|Jan 22, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|e07493fe8c03c0598716f4710ca722bba8a24a69|Jan 22, 2025
 Ports|[srb2](http://github.com/STJr/SRB2)|4258e898ff48365dd202841442a02a156153242c|Jan 22, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|e7c880a2d20181f933ae3261c108ca53f0018dc7|Jan 22, 2025
