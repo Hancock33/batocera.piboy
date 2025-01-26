@@ -1,8 +1,8 @@
 diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
-index 8005a804..09fb328c 100644
+index 9181d4bd..f6486aac 100644
 --- a/src/osdep/amiberry.cpp
 +++ b/src/osdep/amiberry.cpp
-@@ -4091,7 +4091,7 @@ void create_missing_amiberry_folders()
+@@ -4094,7 +4094,7 @@ void create_missing_amiberry_folders()
  #ifdef __MACH__
  		const std::string default_roms_path = app_directory + "/Resources/roms/";
  #else
@@ -11,13 +11,12 @@ index 8005a804..09fb328c 100644
  #endif
  		// copy default kickstart files, if they exist in AMIBERRY_DATADIR/roms
  		if (my_existsdir(default_roms_path.c_str()))
-@@ -4138,10 +4138,9 @@ static void init_amiberry_dirs(const bool portable_mode)
+@@ -4173,9 +4173,9 @@ static void init_amiberry_dirs(const bool portable_mode)
  #else
  	const std::string amiberry_dir = "amiberry";
  #endif
 -	current_dir = home_dir = get_home_directory(portable_mode);
 -    data_dir = get_data_directory(portable_mode);
--    config_path = get_config_directory(portable_mode);
 -    plugins_dir = get_plugins_directory(portable_mode);
 +    data_dir = "/usr/share/amiberry/data/";
 +    config_path = "/userdata/system/configs/amiberry/conf";
@@ -25,7 +24,7 @@ index 8005a804..09fb328c 100644
  
  #ifdef __MACH__
  	if constexpr (true)
-@@ -4223,26 +4222,26 @@ static void init_amiberry_dirs(const bool portable_mode)
+@@ -4251,26 +4251,26 @@ static void init_amiberry_dirs(const bool portable_mode)
      video_dir.append("/Videos/");
  	themes_path.append("/Themes/");
  #else
