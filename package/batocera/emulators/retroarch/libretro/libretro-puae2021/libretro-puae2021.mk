@@ -3,11 +3,12 @@
 # libretro-puae2021
 #
 ################################################################################
-# Version: Commits on Jan 11, 2025
-LIBRETRO_PUAE2021_VERSION = 7d10191801c8d99223f8a9dbb9e421b78ae63949
+# Version: Commits on Jan 25, 2025
+LIBRETRO_PUAE2021_VERSION = 9ab18352c556ace2d90d3a2ad84246df9f24115b
 LIBRETRO_PUAE2021_BRANCH = 2.6.1
 LIBRETRO_PUAE2021_SITE = $(call github,sonninnos,libretro-uae,$(LIBRETRO_PUAE2021_VERSION))
 LIBRETRO_PUAE2021_LICENSE = GPLv2
+LIBRETRO_PUAE2021_DEPENDENCIES = retroarch
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2835),y)
     LIBRETRO_PUAE2021_PLATFORM = rpi1

@@ -3,13 +3,16 @@
 # libretro-scummvm
 #
 ################################################################################
-# Version: Commits on Jan 12, 2025
-LIBRETRO_SCUMMVM_VERSION = 84f609e69562c61afc9f1905fc22e523e556ccc3
+# Version: Commits on Jan 26, 2025
+LIBRETRO_SCUMMVM_VERSION = 4c5760b0b0599a687c8fe6cf80e4bbdb26ad6873
 LIBRETRO_SCUMMVM_BRANCH = branch-2-9
 LIBRETRO_SCUMMVM_SOURCE = scummvm-$(LIBRETRO_SCUMMVM_VERSION).tar.gz
 LIBRETRO_SCUMMVM_SITE = $(call github,scummvm,scummvm,$(LIBRETRO_SCUMMVM_VERSION))
 LIBRETRO_SCUMMVM_LICENSE = GPLv2
-LIBRETRO_SCUMMVM_DEPENDENCIES = sdl2 zlib jpeg libmpeg2 libogg libvorbis flac libmad libpng libtheora faad2 freetype
+LIBRETRO_SCUMMVM_DEPENDENCIES = faad2 flac freetype jpeg libmad libmpeg2 libogg libpng libtheora libvorbis
+LIBRETRO_SCUMMVM_DEPENDENCIES += retroarch sdl2 zlib
+
+LIBRETRO_SCUMMVM_PLATFORM = $(LIBRETRO_PLATFORM)
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2835),y)
     LIBRETRO_SCUMMVM_PLATFORM = rpi1

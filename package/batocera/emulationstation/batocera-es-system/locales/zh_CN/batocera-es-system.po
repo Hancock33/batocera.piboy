@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-01-05 12:12+0800\n"
+"PO-Revision-Date: 2025-01-25 23:05+0800\n"
 "Last-Translator: R.Chan\n"
 "Language-Team: Ray Chan\n"
 "Language: zh_CN\n"
@@ -2675,7 +2675,7 @@ msgstr ""
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Activate Doom DOS original music and throttle the Doom frame rate."
-msgstr ""
+msgstr "激活Doom DOS原创音乐并限制Doom帧率."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -4112,6 +4112,11 @@ msgctxt "game_options"
 msgid "CABLE"
 msgstr "电缆"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "CARD READER"
+msgstr "读卡器"
+
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "CD"
@@ -4527,7 +4532,7 @@ msgctxt "game_options"
 msgid "CPU FEATURE"
 msgstr "CPU 特性"
 
-#. TRANSLATION: libretro/puae, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021, lindbergh-loader
 msgctxt "game_options"
 msgid "CPU SPEED"
 msgstr "CPU速度"
@@ -5800,7 +5805,7 @@ msgstr "杜比Pro Logic II"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "DOOM"
-msgstr ""
+msgstr "DOOM"
 
 #. TRANSLATION: libretro/virtualjaguar
 msgctxt "game_options"
@@ -6954,6 +6959,13 @@ msgid ""
 "systems."
 msgstr "启用Dreamcast DSP以获得更精确的音频。仅推荐用于较快的系统。"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Enable the IP address for OutRun 2 network play against another PC on the "
+"same network."
+msgstr "启用 OutRun 2 在同一网络中与另一台 PC 对战的 IP地址."
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Enable the cheat list (if available)."
@@ -6998,6 +7010,11 @@ msgstr "启用不支持功能时显示屏幕的消息。"
 msgctxt "game_options"
 msgid "Enable to display if your BIOS haas known problems."
 msgstr "启用以显示BIOS是否存在已知问题。"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Enable to emulate the card reader in Virtua Tenis 3."
+msgstr "启用以模拟Virtua Tenis 3中的读卡器."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -8311,10 +8328,10 @@ msgctxt "game_options"
 msgid "GAME LANGUAGE"
 msgstr ""
 
-#. TRANSLATION: lindbergh-loader, lindbergh-loader
+#. TRANSLATION: lindbergh-loader, lindbergh-loader, lindbergh-loader, lindbergh-loader, lindbergh-loader
 msgctxt "game_options"
 msgid "GAME OPTIONS"
-msgstr ""
+msgstr "游戏设置"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -9027,7 +9044,7 @@ msgstr "HST"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "HUMMER FLICKER FIX"
-msgstr ""
+msgstr "HUMMER闪烁修复"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -9201,6 +9218,13 @@ msgctxt "game_options"
 msgid "Horizontal"
 msgstr "水平"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"House of the Dead 4 speed fix. Sets the game to the CPU base frequency of "
+"your processor."
+msgstr "《死亡之屋 4》速度修正。将游戏设置为您的处理器的 CPU 基准频率."
+
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "How much RAM the emulated FM Towns will have installed"
@@ -9366,6 +9390,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "INVULNERABILITY MODE"
 msgstr "无敌模式"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "IP ADDRESS"
+msgstr "IP地址"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -11674,7 +11703,7 @@ msgstr "输出比例"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "OUTRUN LENS GLARE"
-msgstr ""
+msgstr "Outrun镜头眩光"
 
 #. TRANSLATION: libretro/fceumm, libretro/mame, libretro/mamevirtual, libretro/mednafen_psx, libretro/mesen, ...
 msgctxt "game_options"
@@ -14460,7 +14489,7 @@ msgstr "设置目标帧率（仅当启用帧率限制器时有效）。"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set to enable lens glare in Outrun 2."
-msgstr ""
+msgstr "在Outrun 2中启用镜头眩光."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14472,7 +14501,7 @@ msgstr "设置游戏纵横比为 4:3（如 Sega Race TV 和 Primeval Hunt）。"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set to on if you experience flickering in Hummer."
-msgstr ""
+msgstr "如果您在Hummer中遇到闪烁，请设置为启用."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"

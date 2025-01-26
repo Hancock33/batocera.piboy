@@ -5,8 +5,7 @@
 ################################################################################
 # Version: Commits on Aug 31, 2023
 UBOOT_VISIONFIVE2_VERSION = 3.6.1
-UBOOT_VISIONFIVE2_SITE = \
-    https://github.com/starfive-tech/VisionFive2/releases/download/VF2_v$(UBOOT_VISIONFIVE2_VERSION)
+UBOOT_VISIONFIVE2_SITE = https://github.com/starfive-tech/VisionFive2/releases/download/VF2_v$(UBOOT_VISIONFIVE2_VERSION)
 UBOOT_VISIONFIVE2_SOURCE = u-boot-spl.bin.normal.out
 UBOOT_VISIONFIVE2_EXTRA_DOWNLOADS = visionfive2_fw_payload.img
 

@@ -3,8 +3,8 @@
 # python-pyxel
 #
 ################################################################################
-# Version: Commits on Oct 11, 2024
-PYTHON_PYXEL_VERSION = v2.2.4
+# Version: Commits on Jan 26, 2025
+PYTHON_PYXEL_VERSION = v2.3.2
 PYTHON_PYXEL_SITE =  $(call github,kitao,pyxel,$(PYTHON_PYXEL_VERSION))
 PYTHON_PYXEL_SETUP_TYPE = maturin
 PYTHON_PYXEL_LICENSE = MIT
@@ -31,6 +31,7 @@ define PYTHON_PYXEL_SAMPLE_AND_KEYS
 	cp -rf $(@D)/python/pyxel $(TARGET_DIR)/usr/lib/python*/site-packages/
 	rm -rf $(TARGET_DIR)/usr/lib/python*/site-packages/pyxel/examples
 	cd $(TARGET_DIR)/usr/lib/python*/site-packages/pyxel && ln -sf ../pyxel_extension .
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy/
 	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/python-pyxel/pyxel.keys $(TARGET_DIR)/usr/share/evmapy/
 endef
 

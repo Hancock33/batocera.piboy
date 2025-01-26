@@ -3,8 +3,8 @@
 # thextech
 #
 ################################################################################
-# Version: Commits on Jan 19, 2025
-THEXTECH_VERSION = 9aeda3597bd1b9329c507717f6b89af8b52befbf
+# Version: Commits on Jan 26, 2025
+THEXTECH_VERSION = 6ee087c9602dd46e3d12bdb67fd9249b4698c6be
 THEXTECH_SITE = https://github.com/TheXTech/TheXTech
 THEXTECH_SITE_METHOD = git
 THEXTECH_GIT_SUBMODULES = YES
@@ -31,8 +31,8 @@ endif
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBMALI),y)
-	THEXTECH_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=-lmali
-	THEXTECH_CONF_OPTS += -DCMAKE_SHARED_LINKER_FLAGS=-lmali
+    THEXTECH_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=-lmali
+    THEXTECH_CONF_OPTS += -DCMAKE_SHARED_LINKER_FLAGS=-lmali
 endif
 
 define THEXTECH_INSTALL_TARGET_CMDS

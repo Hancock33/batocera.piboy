@@ -3,8 +3,8 @@
 # vice
 #
 ################################################################################
-# Version: Commits on Jan 13, 2025
-VICE_VERSION = r45462
+# Version: Commits on Jan 26, 2025
+VICE_VERSION = r45466
 VICE_SITE = $(call github,VICE-Team,svn-mirror,$(VICE_VERSION))
 VICE_LICENSE = GPLv2
 VICE_DEPENDENCIES = alsa-lib ffmpeg4 giflib host-dos2unix host-xa jpeg lame libcurl libpng sdl2 sdl2_image zlib
@@ -48,6 +48,5 @@ endef
 
 VICE_POST_EXTRACT_HOOKS += VICE_SRC_AUTOCONFIGURE
 VICE_POST_INSTALL_TARGET_HOOKS += VICE_POST_PROCESS
-
 
 $(eval $(autotools-package))

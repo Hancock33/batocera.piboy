@@ -3,8 +3,8 @@
 # play
 #
 ################################################################################
-# Version: Commits on Jan 11, 2025
-PLAY_VERSION = b35ef5663b809a449a4c89f6e9808fd0a63e7e49
+# Version: Commits on Jan 24, 2025
+PLAY_VERSION = 77380322b6977e94091398a37144f7105544f9f4
 PLAY_SITE = https://github.com/jpd002/Play-.git
 PLAY_SITE_METHOD = git
 PLAY_GIT_SUBMODULES = YES
@@ -17,7 +17,7 @@ PLAY_CONF_OPTS += -DBUILD_TESTS=OFF
 PLAY_CONF_OPTS += -DENABLE_AMAZON_S3=OFF
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
-    PLAY_DEPENDENCIES += xserver_xorg-server libglew
+    PLAY_DEPENDENCIES += xserver_xorg-server libglew libglu
     PLAY_CONF_OPTS += -DOpenGL_GL_PREFERENCE=GLVND
 else
     PLAY_DEPENDENCIES += qt6wayland

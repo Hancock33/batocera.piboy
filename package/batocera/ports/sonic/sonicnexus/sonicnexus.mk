@@ -22,4 +22,3 @@ endef
 SONICNEXUS_POST_INSTALL_TARGET_HOOKS += SONICNEXUS_EVMAPY
 
 $(eval $(cmake-package))
-

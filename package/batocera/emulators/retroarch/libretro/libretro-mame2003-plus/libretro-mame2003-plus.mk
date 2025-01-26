@@ -3,10 +3,11 @@
 # libretro-mame2003-plus
 #
 ################################################################################
-# Version: Commits on Jan 19, 2025
-LIBRETRO_MAME2003_PLUS_VERSION = 98b21c864e237b6c327400587d2b8a0b4c92a14a
+# Version: Commits on Jan 26, 2025
+LIBRETRO_MAME2003_PLUS_VERSION = 90ae4b521b7029cd8e9354d7dc14bef8fc0309a6
 LIBRETRO_MAME2003_PLUS_SITE = $(call github,libretro,mame2003-plus-libretro,$(LIBRETRO_MAME2003_PLUS_VERSION))
 LIBRETRO_MAME2003_PLUS_LICENSE = MAME
+LIBRETRO_MAME2003_PLUS_DEPENDENCIES = retroarch
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2835),y)
     LIBRETRO_MAME2003_PLUS_PLATFORM = rpi1

@@ -138,217 +138,6 @@ index 28144371a0f1..765d50b0d9df 100644
  		Set if the MCU can go in to low-power mode on system sleep
  			* 0 - False,
  			* 1 - True
-diff --git a/drivers/extcon/Kconfig b/drivers/extcon/Kconfig
-index a6f6d467aacf..4adec844c4b4 100644
---- a/drivers/extcon/Kconfig
-+++ b/drivers/extcon/Kconfig
-@@ -214,4 +214,11 @@ config EXTCON_RTK_TYPE_C
- 	  The DHC (Digital Home Hub) RTD series SoC contains a type c module.
- 	  This driver will detect the status of the type-c port.
- 
-+config EXTCON_STEAMDECK
-+	tristate "Steam Deck extcon support"
-+	depends on MFD_STEAMDECK
-+	help
-+	  Say Y here to enable support of USB Type C cable detection extcon
-+	  support on Steam Deck devices
-+
- endif
-diff --git a/drivers/extcon/Makefile b/drivers/extcon/Makefile
-index 0d6d23faf748..6eb613e0bcba 100644
---- a/drivers/extcon/Makefile
-+++ b/drivers/extcon/Makefile
-@@ -27,3 +27,4 @@ obj-$(CONFIG_EXTCON_USB_GPIO)	+= extcon-usb-gpio.o
- obj-$(CONFIG_EXTCON_USBC_CROS_EC) += extcon-usbc-cros-ec.o
- obj-$(CONFIG_EXTCON_USBC_TUSB320) += extcon-usbc-tusb320.o
- obj-$(CONFIG_EXTCON_RTK_TYPE_C) += extcon-rtk-type-c.o
-+obj-$(CONFIG_EXTCON_STEAMDECK)  += extcon-steamdeck.o
-diff --git a/drivers/extcon/extcon-steamdeck.c b/drivers/extcon/extcon-steamdeck.c
-new file mode 100644
-index 000000000000..49cb5d30bf6b
---- /dev/null
-+++ b/drivers/extcon/extcon-steamdeck.c
-@@ -0,0 +1,180 @@
-+
-+#include <linux/acpi.h>
-+#include <linux/platform_device.h>
-+#include <linux/extcon-provider.h>
-+
-+#define ACPI_STEAMDECK_NOTIFY_STATUS	0x80
-+
-+/* 0 - port connected, 1 -port disconnected */
-+#define ACPI_STEAMDECK_PORT_CONNECT	BIT(0)
-+/* 0 - Upstream Facing Port, 1 - Downdstream Facing Port */
-+#define ACPI_STEAMDECK_CUR_DATA_ROLE	BIT(3)
-+/*
-+ * Debouncing delay to allow negotiation process to settle. 2s value
-+ * was arrived at via trial and error.
-+ */
-+#define STEAMDECK_ROLE_SWITCH_DELAY	(msecs_to_jiffies(2000))
-+
-+struct steamdeck_extcon {
-+	struct acpi_device *adev;
-+	struct delayed_work role_work;
-+	struct extcon_dev *edev;
-+	struct device *dev;
-+};
-+
-+static int steamdeck_read_pdcs(struct steamdeck_extcon *sd, unsigned long long *pdcs)
-+{
-+	acpi_status status;
-+
-+	status = acpi_evaluate_integer(sd->adev->handle, "PDCS", NULL, pdcs);
-+	if (ACPI_FAILURE(status)) {
-+		dev_err(sd->dev, "PDCS evaluation failed: %s\n",
-+			acpi_format_exception(status));
-+		return -EIO;
-+	}
-+
-+	return 0;
-+}
-+
-+static void steamdeck_usb_role_work(struct work_struct *work)
-+{
-+	struct steamdeck_extcon *sd =
-+		container_of(work, struct steamdeck_extcon, role_work.work);
-+	unsigned long long pdcs;
-+	bool usb_host;
-+
-+	if (steamdeck_read_pdcs(sd, &pdcs))
-+		return;
-+
-+	/*
-+	 * We only care about these two
-+	 */
-+	pdcs &= ACPI_STEAMDECK_PORT_CONNECT | ACPI_STEAMDECK_CUR_DATA_ROLE;
-+
-+	/*
-+	 * For "connect" events our role is determined by a bit in
-+	 * PDCS, for "disconnect" we switch to being a gadget
-+	 * unconditionally. The thinking for the latter is we don't
-+	 * want to start acting as a USB host until we get
-+	 * confirmation from the firmware that we are a USB host
-+	 */
-+	usb_host = (pdcs & ACPI_STEAMDECK_PORT_CONNECT) ?
-+		pdcs & ACPI_STEAMDECK_CUR_DATA_ROLE : false;
-+
-+	dev_dbg(sd->dev, "USB role is %s\n", usb_host ? "host" : "device");
-+	WARN_ON(extcon_set_state_sync(sd->edev, EXTCON_USB_HOST,
-+				      usb_host));
-+
-+}
-+
-+static void steamdeck_notify(acpi_handle handle, u32 event, void *context)
-+{
-+	struct device *dev = context;
-+	struct steamdeck_extcon *sd = dev_get_drvdata(dev);
-+	unsigned long long pdcs;
-+	unsigned long delay;
-+
-+	switch (event) {
-+	case ACPI_STEAMDECK_NOTIFY_STATUS:
-+		if (steamdeck_read_pdcs(sd, &pdcs))
-+			return;
-+		/*
-+		 * We process "disconnect" events immediately and
-+		 * "connect" events with a delay to give the HW time
-+		 * to settle. For example attaching USB hub (at least
-+		 * for HW used for testing) will generate intermediary
-+		 * event with "host" bit not set, followed by the one
-+		 * that does have it set.
-+		 */
-+		delay = (pdcs & ACPI_STEAMDECK_PORT_CONNECT) ?
-+			STEAMDECK_ROLE_SWITCH_DELAY : 0;
-+
-+		queue_delayed_work(system_long_wq, &sd->role_work, delay);
-+		break;
-+	default:
-+		dev_warn(dev, "Unsupported event [0x%x]\n", event);
-+	}
-+}
-+
-+static void steamdeck_remove_notify_handler(void *data)
-+{
-+	struct steamdeck_extcon *sd = data;
-+
-+	acpi_remove_notify_handler(sd->adev->handle, ACPI_DEVICE_NOTIFY,
-+				   steamdeck_notify);
-+	cancel_delayed_work_sync(&sd->role_work);
-+}
-+
-+static const unsigned int steamdeck_extcon_cable[] = {
-+	EXTCON_USB,
-+	EXTCON_USB_HOST,
-+	EXTCON_CHG_USB_SDP,
-+	EXTCON_CHG_USB_CDP,
-+	EXTCON_CHG_USB_DCP,
-+	EXTCON_CHG_USB_ACA,
-+	EXTCON_NONE,
-+};
-+
-+static int steamdeck_extcon_probe(struct platform_device *pdev)
-+{
-+	struct device *dev = &pdev->dev;
-+	struct steamdeck_extcon *sd;
-+	acpi_status status;
-+	int ret;
-+
-+	sd = devm_kzalloc(dev, sizeof(*sd), GFP_KERNEL);
-+	if (!sd)
-+		return -ENOMEM;
-+
-+	INIT_DELAYED_WORK(&sd->role_work, steamdeck_usb_role_work);
-+	platform_set_drvdata(pdev, sd);
-+	sd->adev = ACPI_COMPANION(dev->parent);
-+	sd->dev  = dev;
-+	sd->edev = devm_extcon_dev_allocate(dev, steamdeck_extcon_cable);
-+	if (IS_ERR(sd->edev))
-+		return PTR_ERR(sd->edev);
-+
-+	ret = devm_extcon_dev_register(dev, sd->edev);
-+	if (ret < 0) {
-+		dev_err(dev, "Failed to register extcon device: %d\n", ret);
-+		return ret;
-+	}
-+
-+	/*
-+	 * Set initial role value
-+	 */
-+	queue_delayed_work(system_long_wq, &sd->role_work, 0);
-+	flush_delayed_work(&sd->role_work);
-+
-+	status = acpi_install_notify_handler(sd->adev->handle,
-+					     ACPI_DEVICE_NOTIFY,
-+					     steamdeck_notify,
-+					     dev);
-+	if (ACPI_FAILURE(status)) {
-+		dev_err(dev, "Error installing ACPI notify handler\n");
-+		return -EIO;
-+	}
-+
-+	ret = devm_add_action_or_reset(dev, steamdeck_remove_notify_handler,
-+				       sd);
-+	return ret;
-+}
-+
-+static const struct platform_device_id steamdeck_extcon_id_table[] = {
-+	{ .name = "steamdeck-extcon" },
-+	{}
-+};
-+MODULE_DEVICE_TABLE(platform, steamdeck_extcon_id_table);
-+
-+static struct platform_driver steamdeck_extcon_driver = {
-+	.probe = steamdeck_extcon_probe,
-+	.driver = {
-+		.name = "steamdeck-extcon",
-+	},
-+	.id_table = steamdeck_extcon_id_table,
-+};
-+module_platform_driver(steamdeck_extcon_driver);
-+
-+MODULE_AUTHOR("Andrey Smirnov <andrew.smirnov@gmail.com>");
-+MODULE_DESCRIPTION("Steam Deck extcon driver");
-+MODULE_LICENSE("GPL");
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_mode.h b/drivers/gpu/drm/amd/amdgpu/amdgpu_mode.h
 index 6da4f946cac0..5b639276939d 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_mode.h
@@ -596,7 +385,7 @@ index 1989288e0438..a6a50ebf9b17 100644
  obj-$(CONFIG_HID_BETOP_FF)	+= hid-betopff.o
 diff --git a/drivers/hid/hid-asus-ally.c b/drivers/hid/hid-asus-ally.c
 new file mode 100644
-index 000000000000..d2fbb08babdb
+index 000000000000..d59316001f50
 --- /dev/null
 +++ b/drivers/hid/hid-asus-ally.c
 @@ -0,0 +1,2251 @@
@@ -1744,24 +1533,24 @@ index 000000000000..d2fbb08babdb
 +ALLY_DEVICE_ATTR_WO(gamepad_apply_all, apply_all);
 +
 +/* button map attributes, regular and macro*/
-+ALLY_BTN_MAPPING_NO_TURBO(m1, btn_m1);
-+ALLY_BTN_MAPPING_NO_TURBO(m2, btn_m2);
-+ALLY_BTN_MAPPING_NO_TURBO(view, btn_view);
-+ALLY_BTN_MAPPING_NO_TURBO(menu, btn_menu);
-+ALLY_BTN_MAPPING_WITH_TURBO(a, btn_a);
-+ALLY_BTN_MAPPING_WITH_TURBO(b, btn_b);
-+ALLY_BTN_MAPPING_WITH_TURBO(x, btn_x);
-+ALLY_BTN_MAPPING_WITH_TURBO(y, btn_y);
-+ALLY_BTN_MAPPING_WITH_TURBO(lb, btn_lb);
-+ALLY_BTN_MAPPING_WITH_TURBO(rb, btn_rb);
-+ALLY_BTN_MAPPING_WITH_TURBO(ls, btn_ls);
-+ALLY_BTN_MAPPING_WITH_TURBO(rs, btn_rs);
-+ALLY_BTN_MAPPING_WITH_TURBO(lt, btn_lt);
-+ALLY_BTN_MAPPING_WITH_TURBO(rt, btn_rt);
-+ALLY_BTN_MAPPING_WITH_TURBO(dpad_u, dpad_up);
-+ALLY_BTN_MAPPING_WITH_TURBO(dpad_d, dpad_down);
-+ALLY_BTN_MAPPING_WITH_TURBO(dpad_l, dpad_left);
-+ALLY_BTN_MAPPING_WITH_TURBO(dpad_r, dpad_right);
++ALLY_BTN_MAPPING(m1, btn_m1);
++ALLY_BTN_MAPPING(m2, btn_m2);
++ALLY_BTN_MAPPING(view, btn_view);
++ALLY_BTN_MAPPING(menu, btn_menu);
++ALLY_TURBO_BTN_MAPPING(a, btn_a);
++ALLY_TURBO_BTN_MAPPING(b, btn_b);
++ALLY_TURBO_BTN_MAPPING(x, btn_x);
++ALLY_TURBO_BTN_MAPPING(y, btn_y);
++ALLY_TURBO_BTN_MAPPING(lb, btn_lb);
++ALLY_TURBO_BTN_MAPPING(rb, btn_rb);
++ALLY_TURBO_BTN_MAPPING(ls, btn_ls);
++ALLY_TURBO_BTN_MAPPING(rs, btn_rs);
++ALLY_TURBO_BTN_MAPPING(lt, btn_lt);
++ALLY_TURBO_BTN_MAPPING(rt, btn_rt);
++ALLY_TURBO_BTN_MAPPING(dpad_u, dpad_up);
++ALLY_TURBO_BTN_MAPPING(dpad_d, dpad_down);
++ALLY_TURBO_BTN_MAPPING(dpad_l, dpad_left);
++ALLY_TURBO_BTN_MAPPING(dpad_r, dpad_right);
 +
 +static void _gamepad_set_xpad_default(struct ally_gamepad_cfg *ally_cfg)
 +{
@@ -2853,10 +2642,10 @@ index 000000000000..d2fbb08babdb
 +MODULE_LICENSE("GPL");
 diff --git a/drivers/hid/hid-asus-ally.h b/drivers/hid/hid-asus-ally.h
 new file mode 100644
-index 000000000000..518d8db3af5e
+index 000000000000..c83817589082
 --- /dev/null
 +++ b/drivers/hid/hid-asus-ally.h
-@@ -0,0 +1,388 @@
+@@ -0,0 +1,398 @@
 +/* SPDX-License-Identifier: GPL-2.0-or-later
 + *
 + *  HID driver for Asus ROG laptops and Ally
@@ -3216,35 +3005,45 @@ index 000000000000..518d8db3af5e
 +		.attrs = _fname##_attrs,                                  \
 +	}
 +
-+#define ALLY_BTN_ATTRS_GROUP_WITH_TURBO(_name, _fname)                    \
-+	static struct attribute *_fname##_attrs[] = {                     \
-+		&dev_attr_##_fname.attr,                                  \
-+		&dev_attr_##_fname##_macro.attr,                          \
-+		&dev_attr_##_fname##_turbo.attr,                          \
-+	};                                                                \
-+	static const struct attribute_group _fname##_attr_group = {       \
-+		.name = __stringify(_name),                               \
-+		.attrs = _fname##_attrs,                                  \
-+	}
++#define _ALLY_BTN_REMAP(_fname, _btn_name)                              \
++	ALLY_BTN_SHOW(btn_mapping_##_fname##_remap, _btn_name, false);  \
++	ALLY_BTN_STORE(btn_mapping_##_fname##_remap, _btn_name, false); \
++	ALLY_DEVICE_ATTR_RW(btn_mapping_##_fname##_remap, remap);
 +
-+#define _ALLY_BTN_MAPPING(_fname, _mname)                               \
-+	ALLY_BTN_SHOW(btn_mapping_##_fname, _mname, false);             \
-+	ALLY_BTN_STORE(btn_mapping_##_fname, _mname, false);            \
-+	ALLY_BTN_SHOW(btn_mapping_##_fname##_macro, _mname, true);      \
-+	ALLY_BTN_STORE(btn_mapping_##_fname##_macro, _mname, true);     \
-+	ALLY_DEVICE_ATTR_RW(btn_mapping_##_fname, remap);               \
++#define _ALLY_BTN_MACRO(_fname, _btn_name)                             \
++	ALLY_BTN_SHOW(btn_mapping_##_fname##_macro, _btn_name, true);  \
++	ALLY_BTN_STORE(btn_mapping_##_fname##_macro, _btn_name, true); \
 +	ALLY_DEVICE_ATTR_RW(btn_mapping_##_fname##_macro, macro_remap);
 +
-+#define ALLY_BTN_MAPPING_NO_TURBO(_fname, _mname)                          \
-+	_ALLY_BTN_MAPPING(_fname, _mname)                                  \
-+	ALLY_BTN_ATTRS_GROUP(btn_##_fname, btn_mapping_##_fname)
++#define ALLY_BTN_MAPPING(_fname, _btn_name)                                       \
++	_ALLY_BTN_REMAP(_fname, _btn_name)                                        \
++	_ALLY_BTN_MACRO(_fname, _btn_name)                                        \
++	static struct attribute *_fname##_attrs[] = {                             \
++		&dev_attr_btn_mapping_##_fname##_remap.attr,                      \
++		&dev_attr_btn_mapping_##_fname##_macro.attr,                      \
++		NULL,                                                             \
++	};                                                                        \
++	static const struct attribute_group btn_mapping_##_fname##_attr_group = { \
++		.name = __stringify(btn_##_fname),                                \
++		.attrs = _fname##_attrs,                                          \
++	}
 +
-+#define ALLY_BTN_MAPPING_WITH_TURBO(_fname, _mname)                        \
-+	_ALLY_BTN_MAPPING(_fname, _mname)                                  \
-+	ALLY_TURBO_SHOW(btn_mapping_##_fname##_turbo, _mname);             \
-+	ALLY_TURBO_STORE(btn_mapping_##_fname##_turbo, _mname);            \
-+	ALLY_DEVICE_ATTR_RW(btn_mapping_##_fname##_turbo, turbo);          \
-+	ALLY_BTN_ATTRS_GROUP_WITH_TURBO(btn_##_fname, btn_mapping_##_fname)
++#define ALLY_TURBO_BTN_MAPPING(_fname, _btn_name)                                 \
++	_ALLY_BTN_REMAP(_fname, _btn_name)                                        \
++	_ALLY_BTN_MACRO(_fname, _btn_name)                                        \
++	ALLY_TURBO_SHOW(btn_mapping_##_fname##_turbo, _btn_name);                 \
++	ALLY_TURBO_STORE(btn_mapping_##_fname##_turbo, _btn_name);                \
++	ALLY_DEVICE_ATTR_RW(btn_mapping_##_fname##_turbo, turbo);                 \
++	static struct attribute *_fname##_turbo_attrs[] = {                       \
++		&dev_attr_btn_mapping_##_fname##_remap.attr,                      \
++		&dev_attr_btn_mapping_##_fname##_macro.attr,                      \
++		&dev_attr_btn_mapping_##_fname##_turbo.attr,                      \
++		NULL,                                                             \
++	};                                                                        \
++	static const struct attribute_group btn_mapping_##_fname##_attr_group = { \
++		.name = __stringify(btn_##_fname),                                \
++		.attrs = _fname##_turbo_attrs,                                    \
++	}
 diff --git a/drivers/hid/hid-asus.c b/drivers/hid/hid-asus.c
 index 46e3e42f9eb5..b89329f78257 100644
 --- a/drivers/hid/hid-asus.c
@@ -3986,10 +3785,10 @@ index e1b142947067..fe3e7e7dede8 100644
  obj-$(CONFIG_ASUS_TF103C_DOCK)	+= asus-tf103c-dock.o
 diff --git a/drivers/platform/x86/asus-armoury.c b/drivers/platform/x86/asus-armoury.c
 new file mode 100644
-index 000000000000..e41de5690327
+index 000000000000..4dac91d02278
 --- /dev/null
 +++ b/drivers/platform/x86/asus-armoury.c
-@@ -0,0 +1,1075 @@
+@@ -0,0 +1,1074 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * Asus Armoury (WMI) attributes driver. This driver uses the fw_attributes
@@ -4079,9 +3878,9 @@ index 000000000000..e41de5690327
 +
 +	u32 ppt_pl1_spl; // cpu
 +	u32 ppt_pl2_sppt; // cpu
++	u32 ppt_pl3_fppt; // cpu
 +	u32 ppt_apu_sppt; // plat
 +	u32 ppt_platform_sppt; // plat
-+	u32 ppt_fppt; // cpu
 +
 +	u32 nv_boost_default;
 +	u32 nv_boost_min;
@@ -4774,14 +4573,14 @@ index 000000000000..e41de5690327
 +		       cpu_min, cpu_max, 1, "Set the CPU slow package limit");
 +ATTR_GROUP_ROG_TUNABLE(ppt_pl2_sppt, "ppt_pl2_sppt", ASUS_WMI_DEVID_PPT_PL2_SPPT, cpu_default,
 +		       cpu_min, cpu_max, 1, "Set the CPU fast package limit");
++ATTR_GROUP_ROG_TUNABLE(ppt_pl3_fppt, "ppt_pl3_fppt", ASUS_WMI_DEVID_PPT_FPPT, cpu_default, cpu_min,
++		       cpu_max, 1, "Set the CPU slow package limit");
 +ATTR_GROUP_ROG_TUNABLE(ppt_apu_sppt, "ppt_apu_sppt", ASUS_WMI_DEVID_PPT_APU_SPPT,
 +		       platform_default, platform_min, platform_max, 1,
 +		       "Set the CPU slow package limit");
 +ATTR_GROUP_ROG_TUNABLE(ppt_platform_sppt, "ppt_platform_sppt", ASUS_WMI_DEVID_PPT_PLAT_SPPT,
 +		       platform_default, platform_min, platform_max, 1,
 +		       "Set the CPU slow package limit");
-+ATTR_GROUP_ROG_TUNABLE(ppt_fppt, "ppt_fppt", ASUS_WMI_DEVID_PPT_FPPT, cpu_default, cpu_min,
-+		       cpu_max, 1, "Set the CPU slow package limit");
 +ATTR_GROUP_ROG_TUNABLE(nv_dynamic_boost, "nv_dynamic_boost", ASUS_WMI_DEVID_NV_DYN_BOOST,
 +		       nv_boost_default, nv_boost_min, nv_boost_max, 1,
 +		       "Set the Nvidia dynamic boost limit");
@@ -4817,9 +4616,9 @@ index 000000000000..e41de5690327
 +
 +	{ &ppt_pl1_spl_attr_group, ASUS_WMI_DEVID_PPT_PL1_SPL },
 +	{ &ppt_pl2_sppt_attr_group, ASUS_WMI_DEVID_PPT_PL2_SPPT },
++	{ &ppt_pl3_fppt_attr_group, ASUS_WMI_DEVID_PPT_FPPT },
 +	{ &ppt_apu_sppt_attr_group, ASUS_WMI_DEVID_PPT_APU_SPPT },
 +	{ &ppt_platform_sppt_attr_group, ASUS_WMI_DEVID_PPT_PLAT_SPPT },
-+	{ &ppt_fppt_attr_group, ASUS_WMI_DEVID_PPT_FPPT },
 +	{ &nv_dynamic_boost_attr_group, ASUS_WMI_DEVID_NV_DYN_BOOST },
 +	{ &nv_temp_target_attr_group, ASUS_WMI_DEVID_NV_THERM_TARGET },
 +	{ &dgpu_base_tgp_attr_group, ASUS_WMI_DEVID_DGPU_BASE_TGP },
@@ -4987,10 +4786,9 @@ index 000000000000..e41de5690327
 +
 +	rog->ppt_pl1_spl = cpu_default;
 +	rog->ppt_pl2_sppt = cpu_default;
++	rog->ppt_pl3_fppt = cpu_default;
 +	rog->ppt_apu_sppt = cpu_default;
-+
 +	rog->ppt_platform_sppt = platform_default;
-+	rog->ppt_fppt = cpu_default;
 +
 +	rog->nv_boost_default = NVIDIA_BOOST_MAX;
 +	rog->nv_boost_min = NVIDIA_BOOST_MIN;
@@ -5330,7 +5128,7 @@ index 000000000000..2620708d3994
 +
 +#endif /* _ASUS_BIOSCFG_H_ */
 diff --git a/drivers/platform/x86/asus-wmi.c b/drivers/platform/x86/asus-wmi.c
-index 8bd187e8b47f..0849fe939651 100644
+index 8bd187e8b47f..6bd89cd0acdf 100644
 --- a/drivers/platform/x86/asus-wmi.c
 +++ b/drivers/platform/x86/asus-wmi.c
 @@ -55,8 +55,6 @@ module_param(fnlock_default, bool, 0444);
@@ -5444,7 +5242,7 @@ index 8bd187e8b47f..0849fe939651 100644
  	return asus_wmi_evaluate_method3(method_id, arg0, arg1, 0, retval);
  }
 -EXPORT_SYMBOL_GPL(asus_wmi_evaluate_method);
-+EXPORT_SYMBOL_NS_GPL(asus_wmi_evaluate_method, ASUS_WMI);
++EXPORT_SYMBOL_NS_GPL(asus_wmi_evaluate_method, "ASUS_WMI");
  
  static int asus_wmi_evaluate_method5(u32 method_id,
  		u32 arg0, u32 arg1, u32 arg2, u32 arg3, u32 arg4, u32 *retval)
@@ -5476,7 +5274,7 @@ index 8bd187e8b47f..0849fe939651 100644
 +
 +	return 0;
 +}
-+EXPORT_SYMBOL_NS_GPL(asus_wmi_get_devstate_dsts, ASUS_WMI);
++EXPORT_SYMBOL_NS_GPL(asus_wmi_get_devstate_dsts, "ASUS_WMI");
 +
 +/**
 + * asus_wmi_set_devstate() - Set the WMI function state.
@@ -5497,7 +5295,7 @@ index 8bd187e8b47f..0849fe939651 100644
  	return asus_wmi_evaluate_method(ASUS_WMI_METHODID_DEVS, dev_id,
  					ctrl_param, retval);
  }
-+EXPORT_SYMBOL_NS_GPL(asus_wmi_set_devstate, ASUS_WMI);
++EXPORT_SYMBOL_NS_GPL(asus_wmi_set_devstate, "ASUS_WMI");
  
  /* Helper for special devices with magic return codes */
  static int asus_wmi_get_devstate_bits(struct asus_wmi *asus,

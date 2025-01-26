@@ -1,6 +1,7 @@
 config BR2_PACKAGE_BROADCOM_BT_FIRMWARE
-    bool "broadcom-bt-firmware"
-    help
-      Repository for various Broadcom Bluetooth firmware.
+	bool "broadcom-bt-firmware"
 
-      https://github.com/winterheart/broadcom-bt-firmware
+	help
+	  Repository for various Broadcom Bluetooth firmware.
+
+	  https://github.com/winterheart/broadcom-bt-firmware

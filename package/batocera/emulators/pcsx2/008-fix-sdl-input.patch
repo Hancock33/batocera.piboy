@@ -1,5 +1,5 @@
 diff --git a/pcsx2/Input/SDLInputSource.cpp b/pcsx2/Input/SDLInputSource.cpp
-index ae30b106f..f17cbfcae 100644
+index 24f700574..622a27a0d 100644
 --- a/pcsx2/Input/SDLInputSource.cpp
 +++ b/pcsx2/Input/SDLInputSource.cpp
 @@ -789,9 +789,12 @@ bool SDLInputSource::CloseDevice(int joystick_index)

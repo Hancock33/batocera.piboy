@@ -14706,7 +14706,7 @@ catacombgl:
 
 lindbergh-loader:
   features: [padtokeyboard]
-  shared: [powermode, tdp, videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns]
+  shared: [powermode, tdp, videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns, use_wheels, wheel_rotation, wheel_deadzone, wheel_midzone]
   cfeatures:
     lindbergh_freeplay:
       prompt: FREE PLAY
@@ -14757,6 +14757,27 @@ lindbergh-loader:
       choices:
         "Off (Default)": 0
         "On":            1
+    lindbergh_card:
+      group: GAME OPTIONS
+      prompt: CARD READER
+      description: Enable to emulate the card reader in Virtua Tenis 3.
+      choices:
+        "Off (Default)": 0
+        "On":            1
+    lindbergh_speed:
+      group: GAME OPTIONS
+      prompt: CPU SPEED
+      description: House of the Dead 4 speed fix. Sets the game to the CPU base frequency of your processor.
+      choices:
+        "Off (Default)": 0
+        "On":            1
+    lindbergh_ip:
+      group: GAME OPTIONS
+      prompt: IP ADDRESS
+      description: Enable the IP address for OutRun 2 network play against another PC on the same network.
+      choices:
+        "Off (Default)": 0
+        "On":            1 
     lindbergh_test:
       group: ADVANCED OPTIONS
       prompt: RUN TEST MODE

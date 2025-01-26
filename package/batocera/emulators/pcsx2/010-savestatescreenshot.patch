@@ -1,8 +1,8 @@
 diff --git a/pcsx2/VMManager.cpp b/pcsx2/VMManager.cpp
-index e33d0533c..a0e88d005 100644
+index c1344122e..b247d662d 100644
 --- a/pcsx2/VMManager.cpp
 +++ b/pcsx2/VMManager.cpp
-@@ -1858,6 +1858,9 @@ bool VMManager::DoSaveState(const char* filename, s32 slot_for_message, bool zip
+@@ -1863,6 +1863,9 @@ bool VMManager::DoSaveState(const char* filename, s32 slot_for_message, bool zip
  		ZipSaveState(std::move(elist), std::move(screenshot), std::move(osd_key), filename, slot_for_message);
  	}
  
@@ -10,5 +10,5 @@ index e33d0533c..a0e88d005 100644
 +	GSQueueSnapshot(fmt::format("{}.png", filename));
 +
  	Host::OnSaveStateSaved(filename);
+ 	MemcardBusy::CheckSaveStateDependency();
  	return true;
- }

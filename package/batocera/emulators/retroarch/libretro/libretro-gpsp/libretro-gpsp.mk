@@ -3,10 +3,11 @@
 # libretro-gpsp
 #
 ################################################################################
-# Version: Commits on Dec 26, 2024
-LIBRETRO_GPSP_VERSION = 66ced08c693094f2eaefed5e11bd596c41028959
+# Version: Commits on Jan 20, 2025
+LIBRETRO_GPSP_VERSION = b0d5d27ae51c23f514974ddffa5760f1e1d05d9b
 LIBRETRO_GPSP_SITE = $(call github,libretro,gpsp,$(LIBRETRO_GPSP_VERSION))
 LIBRETRO_GPSP_LICENSE = GPLv2
+LIBRETRO_GPSP_DEPENDENCIES = retroarch
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2835),y)
     LIBRETRO_GPSP_PLATFORM = rpi1

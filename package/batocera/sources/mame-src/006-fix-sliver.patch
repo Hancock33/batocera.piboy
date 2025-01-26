@@ -1,8 +1,8 @@
 diff --git a/src/mame/misc/sliver.cpp b/src/mame/misc/sliver.cpp
-index e3b1b2afab2..db63e517b8a 100644
+index 9da1302e082..d9bb4ee4d84 100644
 --- a/src/mame/misc/sliver.cpp
 +++ b/src/mame/misc/sliver.cpp
-@@ -281,7 +281,7 @@ void sliver_state::render_jpeg()
+@@ -279,7 +279,7 @@ void sliver_state::render_jpeg()
  
  		jpeg_mem_src(&cinfo, memregion("user2")->base()+addr, memregion("user2")->bytes()-addr);
  

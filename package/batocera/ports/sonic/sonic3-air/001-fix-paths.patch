@@ -1,8 +1,8 @@
 diff --git a/Oxygen/oxygenengine/source/oxygen/application/EngineMain.cpp b/Oxygen/oxygenengine/source/oxygen/application/EngineMain.cpp
-index c665e512..29434634 100644
+index 5db03a01..363657b9 100644
 --- a/Oxygen/oxygenengine/source/oxygen/application/EngineMain.cpp
 +++ b/Oxygen/oxygenengine/source/oxygen/application/EngineMain.cpp
-@@ -448,7 +448,7 @@ bool EngineMain::initConfigAndSettings(const std::wstring& argumentProjectPath)
+@@ -417,7 +417,7 @@ bool EngineMain::initConfigAndSettings()
  #if (defined(PLATFORM_MAC) || defined(PLATFORM_IOS)) && defined(ENDUSER)
  		config.loadConfiguration(config.mGameDataPath + L"/config.json");
  #else
@@ -12,7 +12,7 @@ index c665e512..29434634 100644
  	}
  
 diff --git a/Oxygen/oxygenengine/source/oxygen/resources/ResourcesCache.cpp b/Oxygen/oxygenengine/source/oxygen/resources/ResourcesCache.cpp
-index ad0383c1..ff645326 100644
+index d5a35b16..c800645e 100644
 --- a/Oxygen/oxygenengine/source/oxygen/resources/ResourcesCache.cpp
 +++ b/Oxygen/oxygenengine/source/oxygen/resources/ResourcesCache.cpp
 @@ -63,7 +63,7 @@ bool ResourcesCache::loadRom()
@@ -25,10 +25,10 @@ index ad0383c1..ff645326 100644
  			if (loaded)
  				break;
 diff --git a/Oxygen/oxygenserver/source/oxygenserver/main_server.cpp b/Oxygen/oxygenserver/source/oxygenserver/main_server.cpp
-index bc11d22c..936f14b9 100644
+index 3fbe40bd..fe7bcd99 100644
 --- a/Oxygen/oxygenserver/source/oxygenserver/main_server.cpp
 +++ b/Oxygen/oxygenserver/source/oxygenserver/main_server.cpp
-@@ -97,7 +97,7 @@ int main(int argc, char** argv)
+@@ -138,7 +138,7 @@ int main(int argc, char** argv)
  #endif
  
  	Configuration config;

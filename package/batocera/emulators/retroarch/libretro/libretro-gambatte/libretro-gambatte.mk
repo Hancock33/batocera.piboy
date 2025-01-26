@@ -3,10 +3,11 @@
 # libretro-gambatte
 #
 ################################################################################
-# Version: Commits on Jan 17, 2025
-LIBRETRO_GAMBATTE_VERSION = 57460138b0485041d6732061aa52b8c567b2deec
+# Version: Commits on Jan 24, 2025
+LIBRETRO_GAMBATTE_VERSION = cd1e180b1edf6e6853cf4d501adac0538076de34
 LIBRETRO_GAMBATTE_SITE = $(call github,libretro,gambatte-libretro,$(LIBRETRO_GAMBATTE_VERSION))
 LIBRETRO_GAMBATTE_LICENSE = GPLv2
+LIBRETRO_GAMBATTE_DEPENDENCIES = retroarch
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2835),y)
     LIBRETRO_GAMBATTE_PLATFORM = rpi1

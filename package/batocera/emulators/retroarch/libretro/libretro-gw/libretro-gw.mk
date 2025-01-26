@@ -7,6 +7,7 @@
 LIBRETRO_GW_VERSION = 435e5cfd4bf6aea03a84259e9b8dba3daf3ff5bd
 LIBRETRO_GW_SITE = $(call github,libretro,gw-libretro,$(LIBRETRO_GW_VERSION))
 LIBRETRO_GW_LICENSE = GPLv3
+LIBRETRO_GW_DEPENDENCIES = retroarch
 
 define LIBRETRO_GW_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile.libretro

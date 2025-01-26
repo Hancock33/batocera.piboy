@@ -3,13 +3,15 @@
 # xemu
 #
 ################################################################################
-# Version: Commits on Jan 15, 2025
-XEMU_VERSION = 5896b9dc91d2b8b94b2b30570e1e329b161c1453
+# Version: Commits on Jan 26, 2025
+XEMU_VERSION = 61e29a06782c93789793f6e7288b1d0473b03488
 XEMU_SITE = https://github.com/xemu-project/xemu
 XEMU_SITE_METHOD=git
 XEMU_GIT_SUBMODULES=YES
 XEMU_LICENSE = GPLv2
-XEMU_DEPENDENCIES = libepoxy libgtk3 libpcap libsamplerate pixman sdl2 slirp
+XEMU_DEPENDENCIES = bzip2 gmp keyutils libgbm libgtk3 libopenssl libpcap libsamplerate
+XEMU_DEPENDENCIES += pixman python3 sdl2 slirp xlib_libX11 zlib
+XEMU_DEPENDENCIES += host-libcurl
 
 XEMU_EXTRA_DOWNLOADS = https://github.com/mborgerson/xemu-hdd-image/releases/download/1.0/xbox_hdd.qcow2.zip
 
@@ -70,7 +72,10 @@ XEMU_CONF_OPTS += --disable-hvf
 XEMU_CONF_OPTS += --disable-whpx
 XEMU_CONF_OPTS += --with-default-devices
 XEMU_CONF_OPTS += --disable-renderdoc
+
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86),y)
 XEMU_CONF_OPTS += --enable-avx2
+endif
 
 define XEMU_CONFIGURE_CMDS
 	cd $(@D) && $(TARGET_CONFIGURE_OPTS) SSL_CERT_DIR=/etc/ssl/certs ./configure $(XEMU_CONF_OPTS)

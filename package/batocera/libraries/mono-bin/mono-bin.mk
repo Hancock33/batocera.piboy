@@ -6,7 +6,7 @@
 # Version: Commits on Dec 01, 2024
 MONO_BIN_VERSION = 6.12.0.206
 MONO_BIN_SITE = https://github.com/Hancock33/batocera-mono/releases/download/$(MONO_BIN_VERSION)
-MONO_LICENSE = GPL-2.0 or MIT (compiler, tools), MIT (libs) or commercial
+MONO_BIN_LICENSE = GPL-2.0 or MIT (compiler, tools), MIT (libs) or commercial
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
     MONO_BIN_CROSS_ARCH = x86_64

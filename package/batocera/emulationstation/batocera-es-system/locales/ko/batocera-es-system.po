@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-01-17 23:53+0900\n"
+"PO-Revision-Date: 2025-01-24 18:53+0900\n"
 "Last-Translator: DDinghoya <ddinghoya@gmail.com>\n"
 "Language-Team: \n"
 "Language: ko_KO\n"
@@ -4130,6 +4130,11 @@ msgctxt "game_options"
 msgid "CABLE"
 msgstr "케이블"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "CARD READER"
+msgstr "카드 리더"
+
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "CD"
@@ -4545,7 +4550,7 @@ msgctxt "game_options"
 msgid "CPU FEATURE"
 msgstr "CPU 기능"
 
-#. TRANSLATION: libretro/puae, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021, lindbergh-loader
 msgctxt "game_options"
 msgid "CPU SPEED"
 msgstr "CPU 속도"
@@ -7026,6 +7031,13 @@ msgstr ""
 "더 정확한 오디오를 위해 드림캐스트 DSP를 활성화합니다. 빠른 시스템에만 권장됩"
 "니다."
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Enable the IP address for OutRun 2 network play against another PC on the "
+"same network."
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Enable the cheat list (if available)."
@@ -7073,6 +7085,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable to display if your BIOS haas known problems."
 msgstr "바이오스에 알려진 문제가 있는지 여부를 표시하도록 설정합니다."
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Enable to emulate the card reader in Virtua Tenis 3."
+msgstr "버추어 테니스 3에서 카드 리더기를 에뮬레이션할 수 있습니다."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -8418,10 +8435,10 @@ msgctxt "game_options"
 msgid "GAME LANGUAGE"
 msgstr ""
 
-#. TRANSLATION: lindbergh-loader, lindbergh-loader
+#. TRANSLATION: lindbergh-loader, lindbergh-loader, lindbergh-loader, lindbergh-loader, lindbergh-loader
 msgctxt "game_options"
 msgid "GAME OPTIONS"
-msgstr ""
+msgstr "게임 옵션"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -9137,7 +9154,7 @@ msgstr "HST"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "HUMMER FLICKER FIX"
-msgstr "허머 깜빡임 수정"
+msgstr "험머 깜빡임 수정"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -9313,6 +9330,13 @@ msgctxt "game_options"
 msgid "Horizontal"
 msgstr "수평 (가로)"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"House of the Dead 4 speed fix. Sets the game to the CPU base frequency of "
+"your processor."
+msgstr ""
+
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "How much RAM the emulated FM Towns will have installed"
@@ -9478,6 +9502,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "INVULNERABILITY MODE"
 msgstr "무적 모드"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "IP ADDRESS"
+msgstr ""
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -11815,7 +11844,7 @@ msgstr "출력 스케일링"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "OUTRUN LENS GLARE"
-msgstr ""
+msgstr "아웃런 렌즈 눈부심"
 
 #. TRANSLATION: libretro/fceumm, libretro/mame, libretro/mamevirtual, libretro/mednafen_psx, libretro/mesen, ...
 msgctxt "game_options"
@@ -14633,7 +14662,7 @@ msgstr "목표 FPS를 설정합니다. (FPS 제한기가 활성화된 경우에�
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set to enable lens glare in Outrun 2."
-msgstr ""
+msgstr "아웃런 2에서 렌즈 눈부심을 활성화하도록 설정합니다."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14647,7 +14676,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set to on if you experience flickering in Hummer."
-msgstr ""
+msgstr "험머에서 깜빡임 현상이 발생하는 경우 켜짐으로 설정합니다."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"

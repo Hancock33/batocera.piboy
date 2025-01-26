@@ -3,8 +3,8 @@
 # citra
 #
 ################################################################################
-# Version: Commits on Jan 20, 2025
-CITRA_VERSION = 025a695a37eaf26cd231e3b77824bc41f49641b6
+# Version: Commits on Jan 23, 2025
+CITRA_VERSION = v2025.01.23
 CITRA_SITE = https://github.com/Borked3DS/Borked3DS.git
 CITRA_SITE_METHOD=git
 CITRA_GIT_SUBMODULES=YES
@@ -12,6 +12,8 @@ CITRA_LICENSE = GPLv2
 CITRA_DEPENDENCIES += boost catch2 cubeb fdk-aac ffmpeg fmt libbacktrace qt6base qt6multimedia qt6tools sdl2
 CITRA_SUPPORTS_IN_SOURCE_BUILD = NO
 
+CITRA_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=lld -lstdc++"
+CITRA_CONF_OPTS += -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=lld -lstdc++"
 CITRA_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 CITRA_CONF_OPTS += -DENABLE_LTO=OFF
 CITRA_CONF_OPTS += -DENABLE_SDL2=ON

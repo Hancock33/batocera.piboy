@@ -3,13 +3,14 @@
 # libretro-ppsspp
 #
 ################################################################################
-# Version: Commits on Jan 20, 2025
-LIBRETRO_PPSSPP_VERSION = c5a52caf9ae689a05fef1d0dbe4ca798444f3e81
-LIBRETRO_PPSSPP_SOURCE = ppsspp-$(LIBRETRO_PPSSPP_VERSION)-git4.tar.gz
+# Version: Commits on Jan 24, 2025
+LIBRETRO_PPSSPP_VERSION = b0182ed0e6bcc811b671561a84ccbe331f322453
 LIBRETRO_PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
+LIBRETRO_PPSSPP_SOURCE = ppsspp-$(LIBRETRO_PPSSPP_VERSION)-git4.tar.gz
 LIBRETRO_PPSSPP_SITE_METHOD=git
 LIBRETRO_PPSSPP_GIT_SUBMODULES=YES
 LIBRETRO_PPSSPP_LICENSE = GPLv2
+LIBRETRO_PPSSPP_DEPENDENCIES = ppsspp retroarch
 
 LIBRETRO_PPSSPP_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 LIBRETRO_PPSSPP_CONF_OPTS += -DCMAKE_SYSTEM_NAME=Linux

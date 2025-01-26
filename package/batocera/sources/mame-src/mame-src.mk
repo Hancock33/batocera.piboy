@@ -5,24 +5,27 @@
 ################################################################################
 # Version: Commits on Dec 31, 2024
 MAME_SRC_VERSION = mame0273
+MAME_SRC_SOURCE = mame-src-587598e61871f198155fe21463435716e5fb35a9.tar.gz
 MAME_SRC_SITE = $(call github,mamedev,mame,$(MAME_SRC_VERSION))
 MAME_SRC_DEPENDENCIES = sdl2 sdl2_ttf zlib libpng fontconfig sqlite jpeg flac rapidjson expat glm pulseaudio
 MAME_SRC_LICENSE = MAME
 
 MAME_SRC_CROSS_ARCH = unknown
 MAME_SRC_CROSS_OPTS = PRECOMPILE=0
-MAME_SRC_LDFLAGS = -fuse-ld=mold
 
 # Limit number of jobs not to eat too much RAM....
 MAME_SRC_JOBS = $(shell expr $(shell nproc))
 # x86_64 is desktop linux based on X11 and OpenGL
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
-MAME_SRC_CROSS_ARCH = x86_64
-MAME_SRC_CROSS_OPTS += PTR64=1
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
-# other archs are embedded, no X11, no OpenGL (only ES)
-else
-MAME_SRC_CROSS_OPTS += NO_X11=1 NO_OPENGL=1 NO_USE_XINPUT=1 NO_USE_BGFX_KHRONOS=1 FORCE_DRC_C_BACKEND=1
+    MAME_SRC_CROSS_ARCH = x86_64
+    MAME_SRC_CROSS_OPTS += PTR64=1
+endif
+
+# allow cross-architecture compilation with MAME build system
+ifeq ($(BR2_aarch64),y)
+    MAME_SRC_CROSS_ARCH = arm64
+    MAME_SRC_CROSS_OPTS += PTR64=1
+    MAME_SRC_CFLAGS += -DEGL_NO_X11=1
 endif
 
 # Wayland
@@ -30,43 +33,6 @@ ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND),y)
 MAME_SRC_CROSS_OPTS += USE_WAYLAND=1
 else
 MAME_SRC_CROSS_OPTS += USE_WAYLAND=0
-endif
-
-# allow cross-architecture compilation with MAME build system
-ifeq ($(BR2_aarch64),y)
-MAME_SRC_CROSS_ARCH = arm64
-MAME_SRC_CROSS_OPTS += PTR64=1
-MAME_SRC_CFLAGS += -DEGL_NO_X11=1
-endif
-ifeq ($(BR2_arm),y)
-MAME_SRC_CROSS_ARCH = arm
-MAME_SRC_CROSS_OPTS += PTR64=0
-# Always enable NEON on 32-bit arm
-MAME_SRC_CFLAGS += -D__ARM_NEON__ -D__ARM_NEON -DEGL_NO_X11=1
-endif
-
-ifeq ($(BR2_cortex_a9),y)
-MAME_SRC_CFLAGS += -mcpu=cortex-a9 -mtune=cortex-a9 -mfloat-abi=hard
-endif
-
-ifeq ($(BR2_cortex_a35),y)
-MAME_SRC_CFLAGS += -mcpu=cortex-a35 -mtune=cortex-a35
-endif
-
-ifeq ($(BR2_cortex_a17),y)
-MAME_SRC_CFLAGS += -mcpu=cortex-a17 -mtune=cortex-a17 -mfloat-abi=hard
-endif
-
-ifeq ($(BR2_cortex_a55),y)
-MAME_SRC_CFLAGS += -mcpu=cortex-a55 -mtune=cortex-a55
-endif
-
-ifeq ($(BR2_cortex_a73_a53),y)
-MAME_SRC_CFLAGS += -mcpu=cortex-a73.cortex-a53 -mtune=cortex-a73.cortex-a53
-endif
-
-ifeq ($(BR2_cortex_a76_a55),y)
-MAME_SRC_CFLAGS += -mcpu=cortex-a76.cortex-a55 -mtune=cortex-a76.cortex-a55
 endif
 
 define MAME_SRC_BUILD_CMDS
@@ -82,7 +48,7 @@ define MAME_SRC_BUILD_CMDS
 	cd $(@D); \
 	PATH="$(HOST_DIR)/bin:$$PATH" \
 	SYSROOT="$(STAGING_DIR)" \
-	LDFLAGS="--sysroot=$(STAGING_DIR) $(MAME_SRC_LDFLAGS)" \
+	LDFLAGS="--sysroot=$(STAGING_DIR)" \
 	PKG_CONFIG="$(HOST_DIR)/bin/pkg-config --define-prefix" \
 	PKG_CONFIG_PATH="$(STAGING_DIR)/usr/lib/pkgconfig" \
 	CCACHE_SLOPPINESS="pch_defines,time_macros" \
@@ -112,7 +78,7 @@ define MAME_SRC_BUILD_CMDS
 	LDOPTS="-lasound -lfontconfig" \
 	SYMBOLS=0 \
 	STRIP_SYMBOLS=1 \
-	TOOLS=1 NOWERROR=1 OPTIMIZE=s OPT_FLAGS="$(TARGET_OPTIMIZATION)"
+	TOOLS=1 NOWERROR=1 OPTIMIZE=s OPT_FLAGS=$(BR2_TARGET_OPTIMIZATION) ARCHOPTS=-fuse-ld=mold
 endef
 
 define MAME_SRC_INSTALL_TARGET_CMDS

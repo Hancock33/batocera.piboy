@@ -1,5 +1,5 @@
 diff --git a/scripts/toolchain.lua b/scripts/toolchain.lua
-index e6a7e93dfff..b8ff5c21b8c 100644
+index ab6630698b9..9f01cc930b6 100644
 --- a/scripts/toolchain.lua
 +++ b/scripts/toolchain.lua
 @@ -619,6 +619,11 @@ function toolchain(_buildDir, _subDir)

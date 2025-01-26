@@ -1,5 +1,5 @@
 config BR2_PACKAGE_DOLPHIN_TRIFORCE
-	bool "dolphin-emu"
+	bool "dolphin-triforce"
 	select BR2_PACKAGE_BATOCERA_QT6
 	select BR2_PACKAGE_BLUEZ5_UTILS
 	select BR2_PACKAGE_FFMPEG

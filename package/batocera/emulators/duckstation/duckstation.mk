@@ -3,11 +3,11 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Jan 20, 2025
-DUCKSTATION_VERSION = 9d4789e082598fafeae3a3abbac291c30508d854
+# Version: Commits on Jan 25, 2025
+DUCKSTATION_VERSION = 0e3668a7bb69c8fb249fa973717f909c746b6b82
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
-DUCKSTATION_DEPENDENCIES = boost cpuinfo ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev libsoundtouch lunasvg sdl2 stenzek-shaderc webp zstd
+DUCKSTATION_DEPENDENCIES = boost cpuinfo ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev libsoundtouch lunasvg sdl3 stenzek-shaderc webp zstd
 DUCKSTATION_DEPENDENCIES += qt6base qt6tools qt6svg host-clang host-spirv-cross spirv-cross
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
 
@@ -47,4 +47,11 @@ define DUCKSTATION_INSTALL_TARGET_CMDS
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
+define DUCKSTATION_VERSION_DETAILS
+	echo '#pragma once' > $(@D)/src/scmversion/tag.h
+	echo '#define SCM_RELEASE_TAG "latest"' >> $(@D)/src/scmversion/tag.h
+
+endef
+
+DUCKSTATION_PRE_CONFIGURE_HOOKS = DUCKSTATION_VERSION_DETAILS
 $(eval $(cmake-package))
