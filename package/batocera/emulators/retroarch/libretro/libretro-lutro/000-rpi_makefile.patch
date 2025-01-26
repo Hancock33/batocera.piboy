@@ -1,11 +1,11 @@
 diff --git a/Makefile b/Makefile
-index 1884247..08bf2ce 100644
+index 79ebe5e..4f1ec5f 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -82,6 +82,35 @@ ifeq ($(platform), unix)
- 	SHARED := -shared -Wl,--no-as-needed,--no-undefined
- 	LUA_SYSCFLAGS := -DLUA_USE_POSIX
- 	LDFLAGS += -Wl,-E
+@@ -84,6 +84,35 @@ ifeq ($(platform), unix)
+     SHARED := -shared -Wl,--no-as-needed,--no-undefined
+     LUA_SYSCFLAGS := -DLUA_USE_POSIX
+     LDFLAGS += -Wl,-E
 +
 +# Raspberry Pi
 +else ifneq (,$(findstring rpi,$(platform)))
@@ -36,5 +36,5 @@ index 1884247..08bf2ce 100644
 +		 HAVE_NEON = 1
 +	endif
  else ifeq ($(platform), linux-portable)
- 	TARGET := $(TARGET_NAME)_libretro.so
- 	fpic := -fPIC -nostdlib
+     TARGET := $(TARGET_NAME)_libretro.so
+     fpic := -fPIC -nostdlib
