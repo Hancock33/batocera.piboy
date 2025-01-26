@@ -9,7 +9,9 @@ XEMU_SITE = https://github.com/xemu-project/xemu
 XEMU_SITE_METHOD=git
 XEMU_GIT_SUBMODULES=YES
 XEMU_LICENSE = GPLv2
-XEMU_DEPENDENCIES = libepoxy libgtk3 libpcap libsamplerate pixman sdl2 slirp
+XEMU_DEPENDENCIES = bzip2 gmp keyutils libgbm libgtk3 libopenssl libpcap libsamplerate
+XEMU_DEPENDENCIES += pixman python3 sdl2 slirp xlib_libX11 zlib
+XEMU_DEPENDENCIES += host-libcurl
 
 XEMU_EXTRA_DOWNLOADS = https://github.com/mborgerson/xemu-hdd-image/releases/download/1.0/xbox_hdd.qcow2.zip
 

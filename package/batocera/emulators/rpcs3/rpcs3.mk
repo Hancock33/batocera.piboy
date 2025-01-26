@@ -12,6 +12,7 @@ RPCS3_LICENSE = GPLv2
 RPCS3_DEPENDENCIES += alsa-lib faudio ffmpeg libcurl libevdev libglew libglu libpng libusb libxml2
 RPCS3_DEPENDENCIES += llvm mesa3d ncurses openal opencv4 rtmpdump wolfssl
 RPCS3_DEPENDENCIES += qt6base qt6multimedia qt6svg
+
 RPCS3_SUPPORTS_IN_SOURCE_BUILD = NO
 
 RPCS3_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
