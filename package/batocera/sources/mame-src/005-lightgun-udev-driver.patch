@@ -1,34 +1,20 @@
-From 99a68290a7491aa45990a91e0ad315d695f18e60 Mon Sep 17 00:00:00 2001
-From: Nicolas Adenis-Lamarre <nicolas.adenis.lamarre@gmail.com>
-Date: Thu, 27 Apr 2023 17:38:55 +0000
-Subject: [PATCH] udev for lightguns
-
-Signed-off-by: Nicolas Adenis-Lamarre <nicolas.adenis.lamarre@gmail.com>
----
- scripts/src/main.lua                  |   1 +
- scripts/src/osd/modules.lua           |   1 +
- src/osd/modules/input/input_udev.cpp  | 391 ++++++++++++++++++++++++++
- src/osd/modules/lib/osdobj_common.cpp |   1 +
- 4 files changed, 394 insertions(+)
- create mode 100644 src/osd/modules/input/input_udev.cpp
-
 diff --git a/scripts/src/main.lua b/scripts/src/main.lua
-index 53b496cdfad..90e2dd163b3 100644
+index d5f94bb60bd..f34c6954f4f 100644
 --- a/scripts/src/main.lua
 +++ b/scripts/src/main.lua
-@@ -166,6 +166,7 @@ end
- 	links {
+@@ -167,6 +167,7 @@ end
  		ext_lib("zlib"),
+ 		ext_lib("zstd"),
  		ext_lib("flac"),
 +		ext_lib("udev"),
  		ext_lib("utf8proc"),
  	}
  if (STANDALONE~=true) then
 diff --git a/scripts/src/osd/modules.lua b/scripts/src/osd/modules.lua
-index cc4a6653386..e2fd0d39cd5 100644
+index 9236cc3124d..777a463648e 100644
 --- a/scripts/src/osd/modules.lua
 +++ b/scripts/src/osd/modules.lua
-@@ -87,6 +87,7 @@ function osdmodulesbuild()
+@@ -91,6 +91,7 @@ function osdmodulesbuild()
  		MAME_DIR .. "src/osd/modules/input/input_none.cpp",
  		MAME_DIR .. "src/osd/modules/input/input_rawinput.cpp",
  		MAME_DIR .. "src/osd/modules/input/input_sdl.cpp",
@@ -434,12 +420,12 @@ index 00000000000..ba49546dbe5
 +
 +MODULE_DEFINITION(LIGHTGUN_UDEV, udev_lightgun_module)
 diff --git a/src/osd/modules/lib/osdobj_common.cpp b/src/osd/modules/lib/osdobj_common.cpp
-index 90bb63bf7f5..dbff9bf9bb4 100644
+index e3c8d63b0d6..1520e010bff 100644
 --- a/src/osd/modules/lib/osdobj_common.cpp
 +++ b/src/osd/modules/lib/osdobj_common.cpp
-@@ -309,6 +309,7 @@ void osd_common_t::register_options()
- 	REGISTER_MODULE(m_mod_man, MOUSE_NONE);
+@@ -311,6 +311,7 @@ void osd_common_t::register_options()
  
+ 	REGISTER_MODULE(m_mod_man, LIGHTGUNINPUT_SDL);
  	REGISTER_MODULE(m_mod_man, LIGHTGUN_X11);
 +	REGISTER_MODULE(m_mod_man, LIGHTGUN_UDEV);
  	REGISTER_MODULE(m_mod_man, LIGHTGUNINPUT_RAWINPUT);
