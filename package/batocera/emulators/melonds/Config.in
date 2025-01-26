@@ -3,10 +3,12 @@ config BR2_PACKAGE_MELONDS
 	select BR2_PACKAGE_BATOCERA_QT6
 	select BR2_PACKAGE_ECM
 	select BR2_PACKAGE_LIBARCHIVE
+	select BR2_PACKAGE_LIBENET
 	select BR2_PACKAGE_LIBEPOXY
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SLIRP
 
 	help
-	  Ninteno DS emulator, sorta
+	  A Ninteno DS emulator
+
 	  http://melonds.kuribo64.net/

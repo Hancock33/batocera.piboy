@@ -9,7 +9,11 @@ MANGOHUD_SITE =  $(call github,flightlessmango,MangoHud,$(MANGOHUD_VERSION))
 MANGOHUD_BRANCH = simple-image-loader
 
 MANGOHUD_DEPENDENCIES += host-libcurl host-python-mako host-glslang dbus
-MANGOHUD_DEPENDENCIES += json-for-modern-cpp libxkbcommon
+MANGOHUD_DEPENDENCIES += json-for-modern-cpp
+
+ifeq ($(BR2_PACKAGE_LIBXKBCOMMON),y)
+    MANGOHUD_DEPENDENCIES += libxkbcommon
+endif
 
 ifeq ($(BR2_PACKAGE_LIBDRM),y)
 MANGOHUD_DEPENDENCIES += libdrm
