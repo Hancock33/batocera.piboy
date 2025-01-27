@@ -50,7 +50,6 @@ endef
 define DUCKSTATION_VERSION_DETAILS
 	echo '#pragma once' > $(@D)/src/scmversion/tag.h
 	echo '#define SCM_RELEASE_TAG "latest"' >> $(@D)/src/scmversion/tag.h
-
 endef
 
 DUCKSTATION_PRE_CONFIGURE_HOOKS = DUCKSTATION_VERSION_DETAILS
