@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2025-01-06 15:20+0000\n"
+"PO-Revision-Date: 2025-01-27 15:05+0000\n"
 "Last-Translator: THa_MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl-NL\n"
@@ -283,7 +283,7 @@ msgstr "10 seconden"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "100 fps"
-msgstr ""
+msgstr "100 fps"
 
 #. TRANSLATION: doom3, libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
@@ -2674,6 +2674,7 @@ msgstr ""
 msgctxt "game_options"
 msgid "Activate Doom DOS original music and throttle the Doom frame rate."
 msgstr ""
+"Activeer de originele Doom DOS-muziek en verlaag de Doom-framesnelheid."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -2698,7 +2699,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Add debug logging to help troubleshoot issues."
-msgstr ""
+msgstr "Voeg foutopsporingsregistratie toe om problemen op te lossen."
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
 msgctxt "game_options"
@@ -4148,7 +4149,7 @@ msgstr "KABEL"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CARD READER"
-msgstr ""
+msgstr "KAARTLEZER"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -5108,6 +5109,8 @@ msgctxt "game_options"
 msgid ""
 "Choose the arcade machine console region. May be required to start the game."
 msgstr ""
+"Kies de consoleregio van de arcademachine. Mogelijk vereist om het spel te "
+"starten."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -5731,7 +5734,7 @@ msgstr "DEADZONE"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "DEBUG MODE"
-msgstr ""
+msgstr "DEBUG MODUS"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -5876,7 +5879,7 @@ msgstr "DOLBY PRO LOGIC II"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "DOOM"
-msgstr ""
+msgstr "DOOM"
 
 #. TRANSLATION: libretro/virtualjaguar
 msgctxt "game_options"
@@ -6936,7 +6939,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Enable free play for supported games."
-msgstr ""
+msgstr "Schakel gratis spelen in voor ondersteunde games."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -7072,6 +7075,8 @@ msgid ""
 "Enable the IP address for OutRun 2 network play against another PC on the "
 "same network."
 msgstr ""
+"Schakel het IP-adres in voor OutRun 2-netwerkspel tegen een andere pc op "
+"hetzelfde netwerk."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7125,7 +7130,7 @@ msgstr "Schakel dit in om weer te geven of uw BIOS bekende problemen heeft."
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Enable to emulate the card reader in Virtua Tenis 3."
-msgstr ""
+msgstr "Schakel in om de kaartlezer in Virtua Tennis 3 te emuleren."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -7589,7 +7594,7 @@ msgstr "Verlaat de emulator"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Export"
-msgstr ""
+msgstr "Export"
 
 #. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
@@ -7786,7 +7791,7 @@ msgstr "FPS LIMITER"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "FPS TARGET"
-msgstr ""
+msgstr "FPS DOEL"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -7856,7 +7861,7 @@ msgstr "FRAMESKIP WAARDE"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "FREE PLAY"
-msgstr ""
+msgstr "GRATIS SPELEN"
 
 #. TRANSLATION: mugen, wine
 msgctxt "game_options"
@@ -8501,7 +8506,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader, lindbergh-loader, lindbergh-loader, lindbergh-loader, lindbergh-loader
 msgctxt "game_options"
 msgid "GAME OPTIONS"
-msgstr ""
+msgstr "SPEL OPTIES"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -9219,7 +9224,7 @@ msgstr "HST"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "HUMMER FLICKER FIX"
-msgstr ""
+msgstr "HUMMER FLICKER FIX"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -9407,6 +9412,8 @@ msgid ""
 "House of the Dead 4 speed fix. Sets the game to the CPU base frequency of "
 "your processor."
 msgstr ""
+"House of the Dead 4 snelheidsfix. Stelt het spel in op de CPU-"
+"basisfrequentie van uw processor."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -9579,7 +9586,7 @@ msgstr "ONKWETSBAARHEIDSMODUS"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "IP ADDRESS"
-msgstr ""
+msgstr "IP ADRES"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -9951,7 +9958,7 @@ msgstr "Japan"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Japan (Default)"
-msgstr ""
+msgstr "Japan (Standaard)"
 
 #. TRANSLATION: cemu, doom3, etlegacy, flycast/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
@@ -10392,7 +10399,7 @@ msgstr "Linker Flipper"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Magna Save"
-msgstr "Linker Magna Save"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -11931,7 +11938,7 @@ msgstr "OUTPUT SCHALING"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "OUTRUN LENS GLARE"
-msgstr ""
+msgstr "OUTRUN LENS GLARE"
 
 #. TRANSLATION: libretro/fceumm, libretro/mame, libretro/mamevirtual, libretro/mednafen_psx, libretro/mesen, ...
 msgctxt "game_options"
@@ -13399,7 +13406,7 @@ msgstr "RUMBLE NIVEAU"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "RUN TEST MODE"
-msgstr ""
+msgstr "VOER TESTMODUS UIT"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -13695,7 +13702,7 @@ msgstr "Rechter Flipper"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Magna Save"
-msgstr "Rechter Magna save"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -13812,6 +13819,7 @@ msgstr "Rennen"
 msgctxt "game_options"
 msgid "Run the game in test mode to configure certain game options."
 msgstr ""
+"Voer het spel uit in de testmodus om bepaalde spelopties te configureren."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -14710,6 +14718,8 @@ msgctxt "game_options"
 msgid ""
 "Set if you want to limit the FPS in games that are not limited like OutRun2."
 msgstr ""
+"Stel in of je de FPS wilt beperken in spellen die niet beperkt zijn, zoals "
+"OutRun2."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -14761,12 +14771,12 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set the target FPS (will only work if FPS LIMITER is enabled)."
-msgstr ""
+msgstr "Stel de doel-FPS in (werkt alleen als FPS LIMITER is ingeschakeld)."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set to enable lens glare in Outrun 2."
-msgstr ""
+msgstr "Instellen om lens glare in Outrun 2 in te schakelen."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14774,11 +14784,13 @@ msgid ""
 "Set to keep the aspect ratio (4:3) in games like Sega Race TV and Primeval "
 "Hunt."
 msgstr ""
+"Ingesteld om de beeldverhouding (4:3) te behouden in spellen als Sega Race "
+"TV en Primeval Hunt."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set to on if you experience flickering in Hummer."
-msgstr ""
+msgstr "Schakel dit in als u flikkeringen ervaart in Hummer."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -18680,6 +18692,10 @@ msgstr "geel/blauw"
 #~ msgstr "Keypad naar joyport indelingen voor 2 spelers."
 
 #~ msgctxt "keys_files"
+#~ msgid "Left Manga Save"
+#~ msgstr "Linker Manga Save"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "Laad staat Slot 1"
 
@@ -18794,6 +18810,10 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Automatisch scherm hoogte aanpassen."
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Manga Save"
+#~ msgstr "Rechter Manga save"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

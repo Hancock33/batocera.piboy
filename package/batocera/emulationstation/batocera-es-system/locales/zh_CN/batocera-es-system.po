@@ -10190,7 +10190,7 @@ msgstr "左翻转器"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Magna Save"
-msgstr "左侧保存"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -13428,7 +13428,7 @@ msgstr "右翻转器"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Magna Save"
-msgstr "右侧保存"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -18527,6 +18527,10 @@ msgstr "黄色/蓝色"
 #~ msgstr "2名玩家的键盘到游戏端口映射。"
 
 #~ msgctxt "keys_files"
+#~ msgid "Left Manga Save"
+#~ msgstr "左侧保存"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "载入状态插槽1"
 
@@ -18734,6 +18738,10 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "自动调整屏幕高度。"
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Manga Save"
+#~ msgstr "右侧保存"
 
 #~ msgctxt "game_options"
 #~ msgid ""

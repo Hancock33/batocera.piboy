@@ -10394,7 +10394,7 @@ msgstr "Flipper da Esquerda"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Magna Save"
-msgstr "Salvar Magna Esquerda"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -13703,7 +13703,7 @@ msgstr "Flipper da Direita"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Magna Save"
-msgstr "Salvar Magna da Direita"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -19753,6 +19753,10 @@ msgstr "amarelo/azul"
 #~ msgid "LIMIT FRAMERATE"
 #~ msgstr "LIMITE DE TAXA DE QUADRO"
 
+#~ msgctxt "keys_files"
+#~ msgid "Left Manga Save"
+#~ msgstr "Salvar Manga Esquerda"
+
 #~ msgctxt "game_options"
 #~ msgid "Legacy (laggy)"
 #~ msgstr "Legado (lento)"
@@ -20191,6 +20195,10 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Redimensiona automaticamente a altura da tela."
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Manga Save"
+#~ msgstr "Salvar Manga da Direita"
 
 #~ msgctxt "game_options"
 #~ msgid "Rotate"
