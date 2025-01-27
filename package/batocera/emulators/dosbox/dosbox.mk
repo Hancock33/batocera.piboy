@@ -10,6 +10,10 @@ DOSBOX_DEPENDENCIES = fluidsynth libglew libogg libpng libvorbis sdl2 sdl2_net z
 DOSBOX_LICENSE = GPLv2
 DOSBOX_AUTORECONF = YES
 
+ifeq ($(BR2_PACKAGE_LIBGLU),y)
+    DOSBOX_DEPENDENCIES += libglu
+endif
+
 DOSBOX_CONF_OPTS =	--enable-core-inline \
 					--enable-dynrec \
 					--enable-unaligned_memory \
