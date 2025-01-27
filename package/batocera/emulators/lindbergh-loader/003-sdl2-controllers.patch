@@ -1,8 +1,8 @@
 diff --git a/src/lindbergh/config.c b/src/lindbergh/config.c
-index 97026e5..8fd8ae3 100644
+index b98d63d..e9443e1 100644
 --- a/src/lindbergh/config.c
 +++ b/src/lindbergh/config.c
-@@ -1434,34 +1434,43 @@ int readConfig(FILE *configFile, EmulatorConfig *config)
+@@ -1452,34 +1452,43 @@ int readConfig(FILE *configFile, EmulatorConfig *config)
  KeyMapping getDefaultKeymap()
  {
      KeyMapping defaultKeyMapping;
@@ -86,7 +86,7 @@ index aaeff97..be4397a 100644
          drawGameBorder(config->width, config->height, config->whiteBorderPercentage, config->blackBorderPercentage);
  
 diff --git a/src/lindbergh/input.c b/src/lindbergh/input.c
-index 4a57717..a78bb45 100644
+index 9aa8530..cab18db 100644
 --- a/src/lindbergh/input.c
 +++ b/src/lindbergh/input.c
 @@ -16,16 +16,41 @@
@@ -131,7 +131,7 @@ index 4a57717..a78bb45 100644
      /* Center Steering wheel in racing games (need to add a check for when using real analog devices)*/
      if (gameType == DRIVING)
      {
-@@ -447,10 +472,138 @@ void sdlEventDriving(SDL_Event *event)
+@@ -447,6 +472,133 @@ void sdlEventDriving(SDL_Event *event)
              setSwitch(PLAYER_2, BUTTON_UP, event->type == SDL_KEYDOWN);
      }
      break;
@@ -155,9 +155,9 @@ index 4a57717..a78bb45 100644
 +                    getConfig()->crc32 == INITIALD_4_EXP_REVD || 
 +                    getConfig()->crc32 == INITIALD_5_JAP_REVA || 
 +                    getConfig()->crc32 == INITIALD_5_JAP_REVF || 
-+                    getConfig()->crc32 == INITIALD_5_EXP_30 || 
-+                    getConfig()->crc32 == INITIALD_5_EXP_40) {
-+                        setSwitch(PLAYER_1, BUTTON_1, isPress); // View Change Initial D
++                    getConfig()->crc32 == INITIALD_5_EXP || 
++                    getConfig()->crc32 == INITIALD_5_EXP_20A) {
++                    setSwitch(PLAYER_1, BUTTON_1, isPress); // View Change Initial D
 +                }
 +                else
 +                {
@@ -265,12 +265,7 @@ index 4a57717..a78bb45 100644
      default:
          break;
      }
- }
-+
- void sdlEventShooting(SDL_Event *event)
- {
-     KeyMapping keymap = getConfig()->keymap;
-@@ -581,6 +734,7 @@ void sdlEventShooting(SDL_Event *event)
+@@ -582,6 +734,7 @@ void sdlEventShooting(SDL_Event *event)
          }
      }
      break;
@@ -278,8 +273,8 @@ index 4a57717..a78bb45 100644
      case SDL_MOUSEBUTTONDOWN:
      case SDL_MOUSEBUTTONUP:
      {
-@@ -594,6 +748,85 @@ void sdlEventShooting(SDL_Event *event)
-             setSwitch(PLAYER_1, BUTTON_3, event->type == SDL_MOUSEBUTTONDOWN);
+@@ -604,6 +757,85 @@ void sdlEventShooting(SDL_Event *event)
+         }
      }
      break;
 +
@@ -364,7 +359,7 @@ index 4a57717..a78bb45 100644
      default:
          break;
      }
-@@ -649,6 +882,85 @@ void sdlEventABC(SDL_Event *event)
+@@ -659,6 +891,85 @@ void sdlEventABC(SDL_Event *event)
              setSwitch(PLAYER_1, BUTTON_RIGHT, event->type == SDL_KEYDOWN);
      }
      break;
@@ -450,7 +445,7 @@ index 4a57717..a78bb45 100644
      default:
          break;
      }
-@@ -670,13 +982,15 @@ void sdlEventHarley(SDL_Event *event)
+@@ -680,13 +991,15 @@ void sdlEventHarley(SDL_Event *event)
          else if (event->key.keysym.sym == SDLK_1)
              setSwitch(PLAYER_1, BUTTON_START, event->type == SDL_KEYDOWN);
          else if (event->key.keysym.sym == SDLK_UP)
@@ -470,7 +465,7 @@ index 4a57717..a78bb45 100644
          else if (event->key.keysym.sym == SDLK_q)
              setSwitch(PLAYER_1, BUTTON_1, event->type == SDL_KEYDOWN);
          else if (event->key.keysym.sym == SDLK_w)
-@@ -707,6 +1021,88 @@ void sdlEventHarley(SDL_Event *event)
+@@ -717,6 +1030,88 @@ void sdlEventHarley(SDL_Event *event)
              setSwitch(PLAYER_2, BUTTON_UP, event->type == SDL_KEYDOWN);
      }
      break;
@@ -559,7 +554,7 @@ index 4a57717..a78bb45 100644
      default:
          break;
      }
-@@ -798,6 +1194,61 @@ void sdlEventMahjong(SDL_Event *event)
+@@ -808,6 +1203,61 @@ void sdlEventMahjong(SDL_Event *event)
              setSwitch(PLAYER_2, BUTTON_7, event->type == SDL_KEYDOWN);
      }
      break;
@@ -621,6 +616,13 @@ index 4a57717..a78bb45 100644
      default:
          break;
      }
+@@ -844,4 +1294,4 @@ void handleSdlEvents(SDL_Event *event)
+         // return XNextEventShooting(display, event_return, returnValue);
+         break;
+     }
+-}
+\ No newline at end of file
++}
 diff --git a/src/lindbergh/lindbergh.c b/src/lindbergh/lindbergh.c
 index 29b1989..a333c16 100644
 --- a/src/lindbergh/lindbergh.c
