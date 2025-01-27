@@ -10312,7 +10312,7 @@ msgstr "왼쪽 플리퍼"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Magna Save"
-msgstr "왼쪽 망가 저장"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -13593,7 +13593,7 @@ msgstr "오른쪽 플리퍼"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Magna Save"
-msgstr "오른쪽 망가 저장"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -18856,6 +18856,10 @@ msgstr "노란색/파란색"
 #~ msgid "Keypad to joyport mappings for 2 players."
 #~ msgstr "2명의 플레이어를 위한 키패드에서 조이포트로의 매핑."
 
+#~ msgctxt "keys_files"
+#~ msgid "Left Manga Save"
+#~ msgstr "왼쪽 망가 저장"
+
 #, fuzzy
 #~ msgctxt "game_options"
 #~ msgid "Legacy (laggy)"
@@ -19085,6 +19089,10 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "화면 높이의 크기를 자동으로 조정합니다."
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Manga Save"
+#~ msgstr "오른쪽 망가 저장"
 
 #~ msgctxt "game_options"
 #~ msgid "SDL"

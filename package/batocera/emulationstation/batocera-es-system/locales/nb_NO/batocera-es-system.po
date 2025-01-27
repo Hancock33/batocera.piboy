@@ -10341,8 +10341,8 @@ msgstr "Venstre flipper"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
-msgid "Left Manga Save"
-msgstr "Venstre Manga Lagre"
+msgid "Left Magna Save"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -13625,8 +13625,8 @@ msgstr "Høyre Flipper"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
-msgid "Right Manga Save"
-msgstr "Høyre Magna Save"
+msgid "Right Magna Save"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -18809,6 +18809,10 @@ msgstr "gul/blå"
 #~ msgstr "Tilordning av tastatur til joyport for 2 spillere."
 
 #~ msgctxt "keys_files"
+#~ msgid "Left Manga Save"
+#~ msgstr "Venstre Manga Lagre"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "Laste tilstand Spor 1"
 
@@ -19022,6 +19026,10 @@ msgstr "gul/blå"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Endre størrelsen på skjermen automatisk."
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Manga Save"
+#~ msgstr "Høyre Magna Save"
 
 #~ msgctxt "game_options"
 #~ msgid "SSAA"

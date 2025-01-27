@@ -10372,7 +10372,7 @@ msgstr "Flipper Esquerdo"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Magna Save"
-msgstr "Botão Magna Save à Esquerda"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -13679,7 +13679,7 @@ msgstr "Flipper Direito"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Magna Save"
-msgstr "Botão Magna Save à Direita"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -18665,6 +18665,10 @@ msgstr "amarelo/azul"
 #~ msgstr "Mapeamento de teclado e comando para 2 jogadores."
 
 #~ msgctxt "keys_files"
+#~ msgid "Left Manga Save"
+#~ msgstr "Botão Manga Save à Esquerda"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "Carregar Estado no Slot 1"
 
@@ -18778,6 +18782,10 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Redimensiona automáticamente a altura do ecrã."
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Manga Save"
+#~ msgstr "Botão Manga Save à Direita"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

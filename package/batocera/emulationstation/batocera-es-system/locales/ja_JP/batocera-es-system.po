@@ -10298,7 +10298,7 @@ msgstr "左 フリッパー"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Magna Save"
-msgstr "magnasave ボタン 左"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -13569,7 +13569,7 @@ msgstr "右 フリッパー"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Magna Save"
-msgstr "magnasave ボタン 右"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -18497,6 +18497,10 @@ msgstr "黄/青"
 #~ msgstr "2人用キーパッドからジョイポートへ割当てます"
 
 #~ msgctxt "keys_files"
+#~ msgid "Left Manga Save"
+#~ msgstr "magnasave ボタン 左"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "ステートロード - スロット 1"
 
@@ -18602,6 +18606,10 @@ msgstr "黄/青"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "画面の高さを自動的に変更します"
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Manga Save"
+#~ msgstr "magnasave ボタン 右"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

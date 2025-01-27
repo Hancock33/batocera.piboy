@@ -10422,7 +10422,7 @@ msgstr "Linker Flipper"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Magna Save"
-msgstr "Linker Magnasave"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -13742,7 +13742,7 @@ msgstr "Rechter Flipper"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Magna Save"
-msgstr "Rechter Magnasave"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -18760,6 +18760,10 @@ msgstr "gelb/blau"
 #~ msgstr "Tastatur-zu-Joyport Tastbelegung für 2 Spieler."
 
 #~ msgctxt "keys_files"
+#~ msgid "Left Manga Save"
+#~ msgstr "Linker Magnasave"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "Spielstand laden Slot 1"
 
@@ -18878,6 +18882,10 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Bildschirmhöhe automatisch skalieren."
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Manga Save"
+#~ msgstr "Rechter Magnasave"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

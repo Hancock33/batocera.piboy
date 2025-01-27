@@ -10359,7 +10359,7 @@ msgstr "Left Flipper"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Magna Save"
-msgstr "Left Magna Save"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -13657,7 +13657,7 @@ msgstr "Right Flipper"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Magna Save"
-msgstr "Right Magna Save"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -19478,6 +19478,10 @@ msgstr "жёлтая/синяя"
 #~ msgid "LIMIT FRAMERATE"
 #~ msgstr "ОГРАНИЧИТЬ ЧАСТОТУ КАДРОВ"
 
+#~ msgctxt "keys_files"
+#~ msgid "Left Manga Save"
+#~ msgstr "Left Manga Save"
+
 #~ msgctxt "game_options"
 #~ msgid "Legacy (laggy)"
 #~ msgstr "Legacy (лаги)"
@@ -19885,6 +19889,10 @@ msgstr "жёлтая/синяя"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Автоматически изменяет размер экрана по высоте."
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Manga Save"
+#~ msgstr "Right Manga Save"
 
 #~ msgctxt "game_options"
 #~ msgid "Rotate"
