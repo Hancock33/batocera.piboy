@@ -1,8 +1,8 @@
-diff --git a/Makefile b/Makefile.new
-index 5e598e0410..b422cd4894 100644
+diff --git a/Makefile b/Makefile
+index 93383b0..cde0b82 100644
 --- a/Makefile
-+++ b/Makefile.new
-@@ -21,7 +21,7 @@ lindbergh: src/lindbergh/lindbergh.c src/lindbergh/jvs.c src/lindbergh/jvs.h src
++++ b/Makefile
+@@ -21,7 +21,7 @@ lindbergh: src/lindbergh/lindbergh.c src/lindbergh/log.c src/lindbergh/log.h src
  
  libxdiff.a: $(XDIFF_OBJS)
  	mkdir -p $(BUILD)

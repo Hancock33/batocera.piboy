@@ -1,8 +1,8 @@
 diff --git a/src/lindbergh/config.c b/src/lindbergh/config.c
-index b98d63d..e9443e1 100644
+index f399ebc..569dd8c 100644
 --- a/src/lindbergh/config.c
 +++ b/src/lindbergh/config.c
-@@ -1452,34 +1452,43 @@ int readConfig(FILE *configFile, EmulatorConfig *config)
+@@ -1454,34 +1454,43 @@ int readConfig(FILE *configFile, EmulatorConfig *config)
  KeyMapping getDefaultKeymap()
  {
      KeyMapping defaultKeyMapping;
@@ -86,7 +86,7 @@ index aaeff97..be4397a 100644
          drawGameBorder(config->width, config->height, config->whiteBorderPercentage, config->blackBorderPercentage);
  
 diff --git a/src/lindbergh/input.c b/src/lindbergh/input.c
-index 9aa8530..cab18db 100644
+index 9aa8530..1f0ee60 100644
 --- a/src/lindbergh/input.c
 +++ b/src/lindbergh/input.c
 @@ -16,16 +16,41 @@

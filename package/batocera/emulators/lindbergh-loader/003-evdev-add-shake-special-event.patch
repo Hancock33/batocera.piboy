@@ -1,14 +1,3 @@
-From 8347b6146856e702ebbeeaeeb1d84d9f7849e9be Mon Sep 17 00:00:00 2001
-From: Nicolas Adenis-Lamarre <nicolas.adenis.lamarre@gmail.com>
-Date: Mon, 27 Jan 2025 21:25:17 +0100
-Subject: [PATCH] evdev: add shake special event
-
-Signed-off-by: Nicolas Adenis-Lamarre <nicolas.adenis.lamarre@gmail.com>
----
- src/lindbergh/evdevinput.c | 35 +++++++++++++++++++++++++++++++++++
- src/lindbergh/evdevinput.h |  9 ++++++++-
- 2 files changed, 43 insertions(+), 1 deletion(-)
-
 diff --git a/src/lindbergh/evdevinput.c b/src/lindbergh/evdevinput.c
 index 3af59d4..0c39248 100644
 --- a/src/lindbergh/evdevinput.c
@@ -103,6 +92,3 @@ index 3eac25c..373b131 100644
  } SpecialFunction;
  
  typedef struct
--- 
-2.34.1
-
