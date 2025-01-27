@@ -3,8 +3,8 @@
 # libretro-bennugd
 #
 ################################################################################
-# Version: Commits on Jan 19, 2025
-LIBRETRO_BENNUGD_VERSION = abaa3c96e971ea338f672e6486ddbefe02cdbfc7
+# Version: Commits on Jan 27, 2025
+LIBRETRO_BENNUGD_VERSION = ed9ce1763ee8a32b4aceaa8301009c938ba19c33
 LIBRETRO_BENNUGD_SITE = $(call github,diekleinekuh,BennuGD_libretro,$(LIBRETRO_BENNUGD_VERSION))
 LIBRETRO_BENNUGD_SUPPORTS_IN_SOURCE_BUILD = NO
 LIBRETRO_BENNUGD_LICENSE = GPLv2
