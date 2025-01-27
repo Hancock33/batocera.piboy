@@ -10387,7 +10387,7 @@ msgstr "Aripa stângă"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
-msgid "Left Manga Save"
+msgid "Left Magna Save"
 msgstr "Salvare manga din stânga"
 
 #. TRANSLATION: fpinball.keys
@@ -13691,7 +13691,7 @@ msgstr "Aripa dreaptă"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
-msgid "Right Manga Save"
+msgid "Right Magna Save"
 msgstr "Salvare manga din dreapta"
 
 #. TRANSLATION: fpinball.keys

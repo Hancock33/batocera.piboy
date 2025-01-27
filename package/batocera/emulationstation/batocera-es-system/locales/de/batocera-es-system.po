@@ -10421,7 +10421,7 @@ msgstr "Linker Flipper"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
-msgid "Left Manga Save"
+msgid "Left Magna Save"
 msgstr "Linker Magnasave"
 
 #. TRANSLATION: fpinball.keys
@@ -13741,7 +13741,7 @@ msgstr "Rechter Flipper"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
-msgid "Right Manga Save"
+msgid "Right Magna Save"
 msgstr "Rechter Magnasave"
 
 #. TRANSLATION: fpinball.keys
