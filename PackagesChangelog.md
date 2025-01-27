@@ -20,8 +20,10 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|db361602f51ae2b30ac1e41112f9634
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|20c0a8dae8b27ac2d5c3e768af2073efa5b18381|Jan 27, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|9a1207f209511409e72585efb53a88d843612a17|Jan 27, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|4376b04b979f15787d0aa1f20973091776aa853e|Jan 27, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250127|Jan 27, 2025
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|64831a3258dba303db6baf9c6358fdbafe4de75c|Jan 27, 2025
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|40e3b440ef0f1c5e5abcf7c85f9de332e1f13503|Jan 27, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250127|Jan 27, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|ff82e8573f68bb6577c0a08d02c1166d89c12558|Jan 27, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|b86bf56e0c6acd9db95a11797e9108b647075ffd|Jan 27, 2025
 Emulators|[libretro-bennugd](http://github.com/diekleinekuh/BennuGD_libretro)|ed9ce1763ee8a32b4aceaa8301009c938ba19c33|Jan 27, 2025
@@ -46,10 +48,8 @@ Ports|[rott](http://github.com/fabiangreffrath/taradino)|bb083a9b58e2eb183af45a1
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|349130e4e9b0ee234b49b99a1971275da5a8f6d8|Jan 26, 2025
 Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|868a8e0f558e52c25b3d7e72e32930425cc5a1fe|Jan 26, 2025
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|24207fdc3afe260fa86e814e4f06b7618f71ad17|Jan 26, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250126|Jan 26, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|ab29d95bdb1b8f586e30ccb23d2571fecd7fb04c|Jan 26, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|b982ff64c2725f872b532ebbbac158db00885bf5|Jan 26, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250126|Jan 26, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|6ea1b68a1c757189a6e68ad5d9b92f2040cd1457|Jan 26, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|8154feea2754de2fc32276577b41c66aa1b5cec6|Jan 26, 2025
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|8a7cd756b41fe2790e70be6ae70de4007caca3a3|Jan 26, 2025
