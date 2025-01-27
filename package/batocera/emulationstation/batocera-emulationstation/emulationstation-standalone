@@ -150,7 +150,7 @@ while [ -e "${REBOOT_FLAG}" ]; do
         fi
     fi
     ###################
-    
+
     ### RESOLUTION ###
     ## The resolution for the first screen is on the boot file so that it is easier to change it
     ## It is not needed for other screens
