@@ -12,10 +12,10 @@ index ff962d4d44..5176604a09 100644
        return 0;
     if (string_is_empty(path_basename(path_get(RARCH_PATH_BASENAME))))
 diff --git a/retroarch.c b/retroarch.c
-index a426443552..3c355b6da9 100644
+index 7ff381ceed..ba793878ab 100644
 --- a/retroarch.c
 +++ b/retroarch.c
-@@ -6926,6 +6926,9 @@ static bool retroarch_parse_input_and_config(
+@@ -6954,6 +6954,9 @@ static bool retroarch_parse_input_and_config(
              exit(EXIT_FAILURE);
           }
  
@@ -25,7 +25,7 @@ index a426443552..3c355b6da9 100644
           switch (c)
           {
              case 'h':
-@@ -7383,9 +7386,9 @@ static bool retroarch_parse_input_and_config(
+@@ -7411,9 +7414,9 @@ static bool retroarch_parse_input_and_config(
                 break;
              case 'e':
                 {
@@ -37,7 +37,7 @@ index a426443552..3c355b6da9 100644
                       runloop_st->entry_state_slot = entry_state_slot;
                    else
                       RARCH_WARN("--entryslot argument \"%s\" is not a valid "
-@@ -7479,18 +7482,18 @@ static bool retroarch_parse_input_and_config(
+@@ -7507,18 +7510,18 @@ static bool retroarch_parse_input_and_config(
         * command line interface */
        cli_content_set = true;
     }
@@ -61,10 +61,10 @@ index a426443552..3c355b6da9 100644
       }
     }
 diff --git a/runloop.c b/runloop.c
-index 5564176709..42665043c1 100644
+index eb7964c04d..f5da298cb0 100644
 --- a/runloop.c
 +++ b/runloop.c
-@@ -4277,11 +4277,11 @@ static bool event_init_content(
+@@ -4281,11 +4281,11 @@ static bool event_init_content(
       if (!(input_st->bsv_movie_state.flags & BSV_FLAG_MOVIE_START_PLAYBACK))
  #endif
        {
@@ -78,7 +78,7 @@ index 5564176709..42665043c1 100644
           }
        }
  #ifdef HAVE_BSV_MOVIE
-@@ -4289,7 +4289,7 @@ static bool event_init_content(
+@@ -4293,7 +4293,7 @@ static bool event_init_content(
       if (!(input_st->bsv_movie_state.flags & (BSV_FLAG_MOVIE_START_RECORDING | BSV_FLAG_MOVIE_START_PLAYBACK)))
  #endif
        {
@@ -87,7 +87,7 @@ index 5564176709..42665043c1 100644
            command_event_load_auto_state();
        }
     }
-@@ -7412,13 +7412,13 @@ bool runloop_get_replay_path(char *s, size_t len, unsigned slot)
+@@ -7323,13 +7323,13 @@ bool runloop_get_replay_path(char *s, size_t len, unsigned slot)
  }
  
  
