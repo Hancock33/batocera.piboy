@@ -1,8 +1,8 @@
 diff --git a/libretro/libretro-core.c b/libretro/libretro-core.c
-index 4e7cffb..5e76750 100644
+index fd1ae42..694aa12 100644
 --- a/libretro/libretro-core.c
 +++ b/libretro/libretro-core.c
-@@ -112,7 +112,7 @@ extern uae_u32 natmem_size;
+@@ -108,7 +108,7 @@ extern uae_u32 natmem_size;
  char full_path[RETRO_PATH_MAX] = {0};
  static char *uae_argv[] = { "puae" };
  static int restart_pending = 0;
@@ -281,7 +281,7 @@ index 4e7cffb..5e76750 100644
 +         "puae2021_use_whdload_nowritecache",
           "Media > WHDLoad NoWriteCache",
           "WHDLoad NoWriteCache",
-          "Write save data immediately or on WHDLoad quit. Write cache enabled runs the core a few frames after frontend quit in order to trigger WHDLoad quit and flush the cache.\nCore restart required.",
+          "Write cache requires running the core a few frames after closing content to trigger WHDLoad quit and flush cache to disk.\nQuitKey = '$2b' = '#' = 'LCtrl + Backslash'.\nCore restart required.",
 @@ -1231,7 +1231,7 @@ static void retro_set_core_options()
           "disabled"
        },
@@ -2395,20 +2395,20 @@ index 4e7cffb..5e76750 100644
  
     updating_variables = false;
     if (request_update_variables)
-@@ -5246,7 +5246,7 @@ void retro_deinit(void)
+@@ -5243,7 +5243,7 @@ void retro_deinit(void)
        dc_free(dc);
  
     /* Clean dynamic cartridge info */
 -   free_puae_carts();
 +   free_puae2021_carts();
  
-    /* Clean ZIP temp */
-    if (!string_is_empty(retro_temp_directory) && path_is_directory(retro_temp_directory))
+    /* Free buffers used by libretro-graph */
+    libretro_graph_free();
 diff --git a/libretro/libretro-core.h b/libretro/libretro-core.h
-index 952ee30..e8f1f8a 100644
+index 27bb5ac..bae1f4c 100644
 --- a/libretro/libretro-core.h
 +++ b/libretro/libretro-core.h
-@@ -226,14 +226,14 @@ static retro_kickstarts uae_kickstarts[15] =
+@@ -231,14 +231,14 @@ static retro_kickstarts uae_kickstarts[15] =
  };
  
  /* Dynamic cartridge core option info */
