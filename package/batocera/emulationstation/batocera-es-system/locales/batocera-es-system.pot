@@ -8664,7 +8664,7 @@ msgctxt "game_options"
 msgid "TinyALSA"
 msgstr ""
 
-#. TRANSLATION: libretro, lindbergh-loader
+#. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "openAL"
 msgstr ""

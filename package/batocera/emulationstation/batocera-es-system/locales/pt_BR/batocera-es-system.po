@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: batocera-emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-15 21:09+0100\n"
-"PO-Revision-Date: 2025-01-24 16:52-0300\n"
+"PO-Revision-Date: 2025-01-30 09:43-0300\n"
 "Last-Translator: Leonardo Colman <dev@leonardo.colman.com.br>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: pt_BR\n"
@@ -4469,7 +4469,7 @@ msgstr "CONFIGURACAO DO CONTROLE"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CONTROLLER MODE"
-msgstr ""
+msgstr "MODO DE CONTROLE"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -5144,6 +5144,8 @@ msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
 "lightguns & steering wheels. SDL2 for gamepads only."
 msgstr ""
+"Escolha a configuração do controlador. EVDEV para uma ampla variedade de "
+"controles, pistolas de luz e volantes. SDL2 somente para gamepads."
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
@@ -6679,7 +6681,7 @@ msgstr "DESCRITORES DE ARQUIVO DE EVENTO"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "EVDEV (Default)"
-msgstr ""
+msgstr "EVDEV (Padrão)"
 
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
@@ -7093,6 +7095,8 @@ msgid ""
 "Enable the IP address for OutRun 2 network play against another PC on the "
 "same network."
 msgstr ""
+"Habilite o endereço IP para jogar em rede no OutRun 2 contra outro PC na "
+"mesma rede."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -9423,6 +9427,8 @@ msgid ""
 "House of the Dead 4 speed fix. Sets the game to the CPU base frequency of "
 "your processor."
 msgstr ""
+"Correção de velocidade do House of the Dead 4. Define o jogo para a "
+"frequência básica da CPU de seu processador."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -9595,7 +9601,7 @@ msgstr "MODO DE INVULNERABILIDADE"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "IP ADDRESS"
-msgstr ""
+msgstr "ENDEREÇO DE IP"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -10411,7 +10417,7 @@ msgstr "Flipper da Esquerda"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Magna Save"
-msgstr ""
+msgstr "Magna Save Esquerdo"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -13720,7 +13726,7 @@ msgstr "Flipper da Direita"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Magna Save"
-msgstr ""
+msgstr "Magna Save Direito"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"

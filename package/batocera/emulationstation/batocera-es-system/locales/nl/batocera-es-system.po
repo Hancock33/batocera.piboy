@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2025-01-27 15:05+0000\n"
+"PO-Revision-Date: 2025-01-30 10:56+0000\n"
 "Last-Translator: THa_MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl-NL\n"
@@ -4464,7 +4464,7 @@ msgstr "CONFIGURATIE VAN DE CONTROLLER"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CONTROLLER MODE"
-msgstr ""
+msgstr "CONTROLLERMODUS"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -4901,7 +4901,7 @@ msgstr "Catalaans"
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Center"
-msgstr ""
+msgstr "Midden"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -5143,6 +5143,8 @@ msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
 "lightguns & steering wheels. SDL2 for gamepads only."
 msgstr ""
+"Kies de controllerconfiguratie. EVDEV voor een breed scala aan controllers, "
+"lightguns en stuurwielen. SDL2 alleen voor gamepads."
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
@@ -6675,7 +6677,7 @@ msgstr "ESYNC"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "EVDEV (Default)"
-msgstr ""
+msgstr "EVDEV (Standaard)"
 
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
@@ -10416,7 +10418,7 @@ msgstr "Linker Flipper"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Magna Save"
-msgstr ""
+msgstr "Links Magna Save"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -13719,7 +13721,7 @@ msgstr "Rechter Flipper"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Magna Save"
-msgstr ""
+msgstr "Rechts Magna Save"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -18470,10 +18472,6 @@ msgstr "geel/blauw"
 #~ "Kan gebruikt worden om kleuren van specifieke beeldschermen te simuleren."
 
 #~ msgctxt "game_options"
-#~ msgid "Center (Default)"
-#~ msgstr "Midden (Standaard)"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Changing driver can improve audio performance and reduce distortion. "
 #~ "Alsathread is recommended for low-end systems."
@@ -18705,10 +18703,6 @@ msgstr "geel/blauw"
 #~ msgstr "Keypad naar joyport indelingen voor 2 spelers."
 
 #~ msgctxt "keys_files"
-#~ msgid "Left Manga Save"
-#~ msgstr "Linker Manga Save"
-
-#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "Laad staat Slot 1"
 
@@ -18823,10 +18817,6 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Automatisch scherm hoogte aanpassen."
-
-#~ msgctxt "keys_files"
-#~ msgid "Right Manga Save"
-#~ msgstr "Rechter Manga save"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"
