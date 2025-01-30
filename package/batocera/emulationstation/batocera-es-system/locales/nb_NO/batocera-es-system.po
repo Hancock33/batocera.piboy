@@ -4445,6 +4445,11 @@ msgctxt "game_options"
 msgid "CONTROLLER CONFIGURATION"
 msgstr "KONFIGURASJON AV KONTROLLEREN"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "CONTROLLER MODE"
+msgstr ""
+
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "CONTROLLER PAK"
@@ -5108,6 +5113,13 @@ msgstr ""
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Choose the controller configuration. EVDEV for a wide range of controllers, "
+"lightguns & steering wheels. SDL2 for gamepads only."
 msgstr ""
 
 #. TRANSLATION: libretro/cap32
@@ -6636,6 +6648,11 @@ msgctxt "game_options"
 msgid "ESYNC"
 msgstr "ESYNC"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "EVDEV (Default)"
+msgstr ""
+
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
 msgid "EXPERT SETTINGS"
@@ -8009,8 +8026,8 @@ msgstr "Fit-skjerm"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale (Default)"
-msgstr ""
+msgid "Fit resolution scale"
+msgstr "Tilpass oppløsningsskala"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -13908,7 +13925,7 @@ msgctxt "game_options"
 msgid "SDL TEXTURE ACCESS STREAMING"
 msgstr "SDL-TEKSTUR TILGANGSSTRØMMING"
 
-#. TRANSLATION: libretro, libretro, libretro, libretro
+#. TRANSLATION: libretro, libretro, libretro, libretro, lindbergh-loader
 msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
@@ -18727,10 +18744,6 @@ msgstr "gul/blå"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "FastForward"
-
-#~ msgctxt "game_options"
-#~ msgid "Fit resolution scale"
-#~ msgstr "Tilpass oppløsningsskala"
 
 #~ msgctxt "game_options"
 #~ msgid "FlexDMD disabled"
