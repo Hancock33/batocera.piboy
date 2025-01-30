@@ -65,6 +65,8 @@ Emulators|[hatari](http://github.com/hatari/hatari)|aa20640a23abdc5e7be51ae4eafe
 Emulators|[play](https://github.com/jpd002/Play-.git)|ae20e1eef679709193675404581234b864aac41f|Jan 27, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|343640827d7b349de603f4aa61510a03754a2b1e|Jan 27, 2025
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|0190dbc122fe0adeed591375fb4e80fbfe6aae15|Jan 27, 2025
+Gpu|[nvidia-open-driver](http://download.nvidia.com/XFree86/Linux-x86)|570.86.16|Jan 27, 2025
+Gpu|[nvidia-proprietary-driver](http://download.nvidia.com/XFree86/Linux-x86)|$(NVIDIA_OPEN_DRIVER_VERSION)|Jan 27, 2025
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|5.4|Jan 27, 2025
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|8c55b4ef558436c84b1bd72e6edfee815e2c8322|Jan 27, 2025
 Ports|[bstone](http://github.com/bibendovsky/bstone)|922145f053fcf64d8a7de181b5c18bd6d32e9b25|Jan 27, 2025
@@ -206,7 +208,6 @@ Ports|[tekwar](https://github.com/jonof/jftekwar.git)|a27a428f31fc582a9e298ddc7f
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.4|Dec 06, 2024
 Gpu|[shaderc](http://github.com/google/shaderc)|v2024.4|Dec 06, 2024
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2024.09.2|Dec 05, 2024
-Gpu|[nvidia-open-driver](http://download.nvidia.com/XFree86/Linux-x86)|565.77|Dec 05, 2024
 Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-console)|a3a53cc73a2377104e3ee4ef3963a12e55521502|Dec 05, 2024
 Kodi|[kodi_resource_language_es_es](http://mirrors.kodi.tv/addons/omega/resource.language.es_es)|11.0.80|Dec 04, 2024
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|572c91856a5288b7433c619af651e31f00f3ce7e|Dec 04, 2024
@@ -316,7 +317,6 @@ Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|51100408d
 Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|08862a8aa4cf185606fbf54aafc0b5b8f8ee0220|Oct 19, 2024
 Emulators|[libretro-px68k](http://github.com/libretro/px68k-libretro)|9dfa6abc25ddd6e597790f7a535cd0a1d7f9c385|Oct 18, 2024
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|67a29e60a4d194b675c9272b21b61eaa022f3ba3|Oct 17, 2024
-Gpu|[nvidia-proprietary-driver](http://download.nvidia.com/XFree86/Linux-x86)|$(NVIDIA_OPEN_DRIVER_VERSION)|Oct 15, 2024
 Ports|[yquake2-refvk](http://github.com/yquake2/ref_vk)|0ae3c8174559dd50091304dc0792c941b80f3b2d|Oct 15, 2024
 Emulators|[libretro-arduous](https://github.com/libretro/arduous.git)|2273b485628790a2ce954941341b5b071c3fb30e|Oct 10, 2024
 Firmwares|[firmware-orangepi](http://github.com/orangepi-xunlong/firmware)|75ea6fc5f3c454861b39b33823cb6876f3eca598|Oct 09, 2024

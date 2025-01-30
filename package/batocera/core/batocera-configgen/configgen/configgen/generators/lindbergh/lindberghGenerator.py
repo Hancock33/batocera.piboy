@@ -321,9 +321,9 @@ class LindberghGenerator(Generator):
             input_mode = 0
         else:
             input_mode = 1
-        
+
         shortRomName = Path(romName.lower()).stem
-        
+
         self.setConf(conf, "INPUT_MODE", input_mode)
 
         # comment all player values
