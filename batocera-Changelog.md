@@ -48,6 +48,7 @@
 - Libretro-Kronos to 2.7.0
 - Libretro-MAME to 0.272
 - Libretro-Play! to Jan 12 2025 build
+- RetroArch to v1.20.0
 - Ruffle to Nightly-2024-12-28
 - RPCS3 to 0.0.34-17265
 - ScummVM to v2.9.0
@@ -56,6 +57,7 @@
 - Xemu to v0.8.10
 - Triforce to use a Crediar build (Nov 29, 2024)
 ### System
+- Bluez to 5.79
 - Buildroot to 2024.11.x with supporting package updates
 - Mesa3D to 24.3.3
 - Linux Kernel to 6.13
