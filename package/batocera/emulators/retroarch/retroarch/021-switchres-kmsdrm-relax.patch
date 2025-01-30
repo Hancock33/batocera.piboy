@@ -1,0 +1,20 @@
+diff --git a/deps/switchres/custom_video_drmkms.cpp b/deps/switchres/custom_video_drmkms.cpp
+index 142ee0183e..0b822d1c90 100755
+--- a/deps/switchres/custom_video_drmkms.cpp
++++ b/deps/switchres/custom_video_drmkms.cpp
+@@ -605,13 +605,13 @@ bool drmkms_timing::init()
+ 		log_verbose("DRM/KMS: <%d> (init) version %d.%d.%d type %s\n", m_id, version->version_major, version->version_minor, version->version_patchlevel, version->name);
+ 		drmFreeVersion(version);
+ 
+-		uint64_t check_dumb = 0;
++		/*uint64_t check_dumb = 0;
+ 		if (drmGetCap(m_drm_fd, DRM_CAP_DUMB_BUFFER, &check_dumb) < 0)
+ 			log_error("DRM/KMS: <%d> (init) [ERROR] ioctl DRM_CAP_DUMB_BUFFER\n", m_id);
+ 
+ 		if (!check_dumb)
+ 		{
+-			log_error("DRM/KMS: <%d> (init) [ERROR] dumb buffer not supported\n", m_id);
++			log_error("DRM/KMS: <%d> (init) [ERROR] dumb buffer not supported\n", m_id);*/
+ 			continue;
+ 		}
+ 
