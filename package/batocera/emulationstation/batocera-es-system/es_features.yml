@@ -10464,11 +10464,11 @@ scummvm:
           prompt: STRETCH MODE
           description: Stretches the output to fill the display area.
           choices:
-              "Fit resolution scale (Default)": "fit"
-              "Center":     "center"
+              "Center":               "center"
               "Pixel Perfect":        "pixel-perfect"
               "Even Pixels":          "even-pixels"
               "Stretch to screen":    "stretch"
+              "Fit resolution scale": "fit"
               "Fit 4:3 Aspect Ratio": "fit_force_aspect"
       scumm_renderer:
           prompt: RENDERER
@@ -14743,6 +14743,12 @@ lindbergh-loader:
         "75 fps":           "75"
         "100 fps":          "100"
         "120 fps":          "120"
+    lindbergh_controller:
+      prompt: CONTROLLER MODE
+      description: Choose the controller configuration. EVDEV for a wide range of controllers, lightguns & steering wheels. SDL2 for gamepads only.
+      choices:
+        "SDL2":            0
+        "EVDEV (Default)": 1
     lindbergh_hummer:
       group: GAME OPTIONS
       prompt: HUMMER FLICKER FIX
