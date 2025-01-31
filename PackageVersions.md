@@ -8,7 +8,7 @@ Audio|[cubeb](http://github.com/mozilla/cubeb)|2816b5a7b10899b8500352d6bd410a0f1
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.01|Jan 01, 2025
 Audio|[freepats](https://freepats.zenvoid.org)|20060219|Feb 19, 2006
 Audio|[libfreeaptx](http://github.com/iamthehorker/libfreeaptx)|c176b7de9c2017d0fc1877659cea3bb6c330aafa|Aug 10, 2021
-Audio|[liblc3](https://github.com/google/liblc3/archive/refs/tags)|v1.1.1|Apr 19, 2024
+Audio|[liblc3](https://github.com/google/liblc3/archive/refs/tags)|v1.1.2|Jan 30, 2025
 Audio|[libldac](https://github.com/EHfive/ldacBT.git)|af2dd23979453bcd1cad7c4086af5fb421a955c5|Mar 05, 2021
 Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.6.1|Jan 01, 2025
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|a941ae520e3b2a94da3c0cb517e1a2c40a3139ac|Dec 03, 2024

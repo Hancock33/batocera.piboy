@@ -26,6 +26,7 @@ Emulators|[libretro-bennugd](http://github.com/diekleinekuh/BennuGD_libretro)|f4
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|d0a15133735f88084076990b3d2c7499ebb8cc7b|Jan 31, 2025
 Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0274|Jan 31, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|a174fdb19e4bcb988d3b7fe80467ada3b2973682|Jan 31, 2025
+Audio|[liblc3](https://github.com/google/liblc3/archive/refs/tags)|v1.1.2|Jan 30, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|8e04dca0f0f62bd9837522cd116e75bec1baa283|Jan 30, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|8e04dca0f0f62bd9837522cd116e75bec1baa283|Jan 30, 2025
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|ec2d7c086a3b2cc4f40897ae9978d4699e273b02|Jan 30, 2025
@@ -404,7 +405,6 @@ Controllers|[xone](http://github.com/medusalix/xone)|29ec3577e52a50f876440c81267
 Emulators|[libretro-jaxe](https://github.com/kurtjd/jaxe.git)|22115d58de5f80cfafbbeece19d723f4892ed75c|Apr 25, 2024
 Controllers|[xpad-noone](http://github.com/medusalix/xpad-noone)|6970c40930bedd8b58d0764894e0d5f04813b7c5|Apr 24, 2024
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.5|Apr 23, 2024
-Audio|[liblc3](https://github.com/google/liblc3/archive/refs/tags)|v1.1.1|Apr 19, 2024
 Emulators|[libretro-dolphin](http://github.com/libretro/dolphin)|89a4df725d4eb24537728f7d655cddb1add25c18|Apr 19, 2024
 Ports|[cdoom](http://github.com/dhewm/dhewm3-sdk)|c6d2afac06b3b0b16e2efc7e23e27c60822eefa9|Apr 19, 2024
 Ports|[d3le](http://github.com/dhewm/dhewm3-sdk)|0e6e3519b21eae4690810180210cc90b0174dc3d|Apr 19, 2024
