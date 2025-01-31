@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-01-25 23:05+0800\n"
+"PO-Revision-Date: 2025-01-31 18:56+0800\n"
 "Last-Translator: R.Chan\n"
 "Language-Team: Ray Chan\n"
 "Language: zh_CN\n"
@@ -4430,7 +4430,7 @@ msgstr "控制器配置"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CONTROLLER MODE"
-msgstr ""
+msgstr "控制器模式"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -4858,7 +4858,7 @@ msgstr "加泰罗尼亚"
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Center"
-msgstr ""
+msgstr "居中"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -5091,6 +5091,7 @@ msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
 "lightguns & steering wheels. SDL2 for gamepads only."
 msgstr ""
+"选择控制器配置. EVDEV适用于广泛的控制器, 光枪和方向盘. SDL2仅适用于游戏手柄."
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
@@ -6480,6 +6481,11 @@ msgctxt "game_options"
 msgid "ENABLE GRAVIS ULTRASOUND"
 msgstr "启用GRAVIS ULTRASOUND"
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "ENABLE HIDRAW"
+msgstr ""
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "ENABLE MESH TRANSPARENCY"
@@ -6588,7 +6594,7 @@ msgstr "eSync"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "EVDEV (Default)"
-msgstr ""
+msgstr "EVDEV (默认)"
 
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
@@ -6863,6 +6869,14 @@ msgstr "为支持的游戏启用免费游戏。"
 msgctxt "game_options"
 msgid "Enable full-screen antialiasing in Direct3D."
 msgstr "在Direct3D中启用全屏抗锯齿。"
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
+"Enable gamepad HID raw access. This allow modern game to use special gamepad "
+"features (like gyroscope for example), but can break older games with x-"
+"input support only."
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -10207,7 +10221,7 @@ msgstr "左翻转器"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Magna Save"
-msgstr ""
+msgstr "左侧磁力保存"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -13445,7 +13459,7 @@ msgstr "右翻转器"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Magna Save"
-msgstr ""
+msgstr "右侧磁力保存"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"

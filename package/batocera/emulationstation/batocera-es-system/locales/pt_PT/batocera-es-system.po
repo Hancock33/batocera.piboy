@@ -6563,6 +6563,11 @@ msgctxt "game_options"
 msgid "ENABLE GRAVIS ULTRASOUND"
 msgstr "ATIVAR O ULTRA-SOM GRAVIS"
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "ENABLE HIDRAW"
+msgstr ""
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "ENABLE MESH TRANSPARENCY"
@@ -6954,6 +6959,14 @@ msgstr "Ativar o free play para jogos suportados."
 msgctxt "game_options"
 msgid "Enable full-screen antialiasing in Direct3D."
 msgstr "Ativar anti-aliasing em ecrã completo no Direct3D."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
+"Enable gamepad HID raw access. This allow modern game to use special gamepad "
+"features (like gyroscope for example), but can break older games with x-"
+"input support only."
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
