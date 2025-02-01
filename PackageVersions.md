@@ -59,8 +59,8 @@ Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-control
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|e6241340d292dee20406a0567262a78ff34d45f7|Jun 02, 2021
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.11|Nov 11, 2024
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|8e04dca0f0f62bd9837522cd116e75bec1baa283|Jan 30, 2025
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|8e04dca0f0f62bd9837522cd116e75bec1baa283|Jan 30, 2025
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|38224a38703f2351c52b9b0f1b8101602f6d7600|Feb 01, 2025
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|38224a38703f2351c52b9b0f1b8101602f6d7600|Feb 01, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|3e1293ee827b741e2a6d33704a79f85e70a9d931|Jan 13, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|4b60eae8e66cc61f1d610c1aec9187cde7594439|Jan 26, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|a84cd44e5fb53520aacd0faed23a149a66fa0d36|Jan 31, 2025
@@ -261,7 +261,7 @@ Emulators|[openbor4432](http://github.com/Darknior/OpenBORv3b4432)|49505541b858d
 Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678291bbedc0b9fe4c8f898|Aug 29, 2018
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|1b455d256eb9c891f1c81934d25a8351bad3c74f|Jan 31, 2025
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|cd4e925343ba2a3ea925e3de1a32bf7e243d0d52|Feb 01, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.132|Jan 29, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|ae20e1eef679709193675404581234b864aac41f|Jan 27, 2025
@@ -274,9 +274,9 @@ Emulators|[retroarch](http://github.com/libretro/RetroArch)|212ae55cfea761baf638
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20241221|Dec 21, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|394fc8eb79845caaf9528d7c1ac6fd78d653863c|Jan 31, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-02-01|Feb 01, 2025
-Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.320|Jan 31, 2025
+Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.321|Feb 01, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|343640827d7b349de603f4aa61510a03754a2b1e|Jan 27, 2025
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|9aa6c5b9514c9c9c3ce3469790613af987725ec5|Jan 31, 2025
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|83671ebf763c9e94731b1a0b94626d02a4f1fb27|Feb 01, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|e2236e6a637a9396394ff238ea151bc0dbe4968e|Jan 29, 2025
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|663738341a43e15f5e00fd8fd36672da6089a694|Jan 24, 2025
@@ -422,7 +422,7 @@ Ports|[box86](http://github.com/ptitseb/box86)|eaf2e84e199689d79af09cf4cb1562c0e
 Ports|[bstone](http://github.com/bibendovsky/bstone)|922145f053fcf64d8a7de181b5c18bd6d32e9b25|Jan 27, 2025
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|778b0d86229af6723b6ca79e0333ac5012fac352|Jan 27, 2025
-Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|c0f195b606a83b88f17dd98eddb1e6759c499b14|Jan 30, 2025
+Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|63cb2b4ca9b4eac82b7e49960acfe7e0d0a066c8|Feb 01, 2025
 Ports|[cdoom](http://github.com/dhewm/dhewm3-sdk)|c6d2afac06b3b0b16e2efc7e23e27c60822eefa9|Apr 19, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|14c9da0038875154991109ceec836faabb8994d5|Jan 26, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|a45512ba654066520da123999fbdc382e0e248cc|Jan 28, 2025
@@ -455,7 +455,7 @@ Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|8a7cd756b41fe2790e70
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|72d808cc4d6db5d38e5d87ab95ab0b1bcfd89ede|Nov 24, 2024
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|ade16d8aa34bc246eb89a793879db91627264f29|Jan 31, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250131|Jan 31, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250201|Feb 01, 2025
 Ports|[nblood](http://github.com/nukeykt/NBlood)|r14186|Dec 31, 2024
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|c9da3876e23af4d6c0c4ca39599193b51d15cec0|Jan 31, 2025
@@ -479,7 +479,7 @@ Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|6facc3b09b6
 Ports|[sikkmod](http://github.com/dhewm/dhewm3-sdk)|03aae2f5b74a18ed5fdbfe9c345a4d50203c7518|Jul 28, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|d7ca2c04364a6dd0dac58b47151e04e26887e6f0|Dec 17, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|cf532d7c7675d3ffa5d69009d63869daf73955cb|Oct 26, 2024
-Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|346d060976b2dccb322503c06fedbfff98b9405e|Jan 30, 2025
+Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|b1bb03c55853409cf7db26a63af08d28317386d8|Feb 01, 2025
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|4650327a4959321c8d28b89693abbda41fa69e6e|Dec 10, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|c9c54a32266be8ba8247b509ecd5a6cbbaede7a3|Dec 17, 2024
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|d83967b2ea38eda8b43437167d93c86021bb4de1|Dec 02, 2024
@@ -560,5 +560,5 @@ Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
 Wine|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0|Jan 21, 2025
 Wine|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-4c|Dec 23, 2024
 Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250131|Jan 31, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250201|Feb 01, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|cede5047101299802a9756f0885e24a5b6f2fbb5|Dec 19, 2024
