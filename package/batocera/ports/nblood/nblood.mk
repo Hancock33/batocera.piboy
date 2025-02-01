@@ -3,9 +3,9 @@
 # nblood
 #
 ################################################################################
-# Version: Commits on Dec 31, 2024
-NBLOOD_VERSION = r14186
-NBLOOD_SITE = $(call github,nukeykt,NBlood,$(NBLOOD_VERSION))
+# Version: Commits on Jan 29, 2025
+NBLOOD_VERSION = r14189
+NBLOOD_SITE = $(call github,NBlood,NBlood,$(NBLOOD_VERSION))
 NBLOOD_DEPENDENCIES = sdl2 flac libvpx
 NBLOOD_LICENSE = GPLv3
 NBLOOD_VC_REV="$(shell echo $(NBLOOD_VERSION) | cut -c 1-7)"
