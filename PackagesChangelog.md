@@ -224,7 +224,6 @@ Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|9b927f280322b6bb
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|72d808cc4d6db5d38e5d87ab95ab0b1bcfd89ede|Nov 24, 2024
 Emulators|[libretro-fuse](http://github.com/libretro/fuse-libretro)|cad85b7b1b864c65734f71aa4a510b6f6536881c|Nov 24, 2024
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|449db5de6b56e9d44fc685e1b38399f0b233bd28|Nov 23, 2024
-Wine|[wine-mono](https://github.com/madewokherd/wine-mono/releases)|wine-mono-9.4.0|Nov 22, 2024
 Emulators|[libretro-noods](http://github.com/jonian/libretro-noods)|b0f658cca2f3a6a6a6166a8c893020432f79f971|Nov 22, 2024
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|533779cb8a1843581d5422a7f0aae1a35e6ab956|Nov 21, 2024
 Libraries|[python-hidapi](https://files.pythonhosted.org/packages/47/72/21ccaaca6ffb06f544afd16191425025d831c2a6d318635e9c8854070f2d)|0.14.0.post4|Nov 19, 2024
@@ -242,6 +241,7 @@ Network|[rtl8812au](http://github.com/morrownr/8812au-20210820)|ad90dfb072ed4aed
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|af28fb0385d00e0292c4703b3aa7e72762b564d2|Nov 15, 2024
 Emulators|[libretro-beetle-supergrafx](http://github.com/libretro/beetle-supergrafx-libretro)|a776133c34ae8da5daf7d9ccb43e3e292e2b07b0|Nov 15, 2024
 Audio|[wm8960-audio-hat](http://github.com/waveshareteam/WM8960-Audio-HAT)|b1e4cf2f7def5ff841c593355c9fc31c31062860|Nov 13, 2024
+Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-9.4.0|Nov 13, 2024
 Ports|[grimm](http://github.com/dhewm/dhewm3-sdk)|009b958e4adaadc081b4953fe2ac4d8eb1db6917|Nov 13, 2024
 Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.13|Nov 12, 2024
 Ports|[openjk](http://github.com/JACoders/OpenJK)|199ddc7642d0ed0e2bf007fe63d0dce3a4bb4908|Nov 12, 2024
