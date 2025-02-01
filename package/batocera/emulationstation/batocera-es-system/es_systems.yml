@@ -5063,6 +5063,7 @@ quake:
   hardware:             port
   extensions:           [pak, quake]
   platform:             pc
+  theme:                tyrquake
   group:                quake
   path:                 /userdata/roms/ports/quake1
   emulators:
@@ -5116,6 +5117,7 @@ quake2:
   hardware:             port
   extensions:           [7zip, game, quake2, zip]
   platform:             pc
+  theme:                yquake2
   group:                quake
   path:                 /userdata/roms/ports/quake2
   emulators:
