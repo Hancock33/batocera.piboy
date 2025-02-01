@@ -45,7 +45,7 @@ endef
 
 define VKQUAKE3_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/vkquake3/quake3.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/vkquake3/quake3.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 VKQUAKE3_POST_INSTALL_TARGET_HOOKS += VKQUAKE3_EVMAPY
