@@ -13,7 +13,7 @@ from ..Generator import Generator
 if TYPE_CHECKING:
     from ...types import HotkeysContext
 
-vkquake2RomPath = ROMS / "quake2"
+vkquake2RomPath = ROMS / "ports" / "quake2"
 vkquake2Binary = vkquake2RomPath / "quake2"
 vkquake2SourcePath = Path("/usr/bin/vkquake2")
 

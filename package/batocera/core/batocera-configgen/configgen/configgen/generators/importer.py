@@ -93,8 +93,7 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'prototype': ('prototype.prototypeGenerator', 'PrototypeGenerator'),
     'pygame': ('pygame.pygameGenerator', 'PygameGenerator'),
     'pyxel': ('pyxel.pyxelGenerator', 'PyxelGenerator'),
-    'quake3': ('quake3.quake3Generator', 'Quake3Generator'),
-    'quakespasm': ('quakespasm.quakespasmGenerator', 'QuakespasmGenerator'),
+    'quake3': ('ioquake3.ioquake3Generator', 'IOQuake3Generator'),
     'raptor': ('raptor.raptorGenerator', 'RaptorGenerator'),
     'raze': ('raze.razeGenerator', 'RazeGenerator'),
     'rednukem': ('rednukem.rednukemGenerator', 'RednukemGenerator'),
@@ -142,7 +141,7 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'vita3k': ('vita3k.vita3kGenerator', 'Vita3kGenerator'),
     'vkquake': ('vkquake.vkquakeGenerator', 'VKQuakeGenerator'),
     'vkquake2': ('vkquake2.vkquake2Generator', 'VKQuake2Generator'),
-    'vkquake3': ('ioquake3.ioquake3Generator', 'IOQuake3Generator')
+    'vkquake3': ('ioquake3.ioquake3Generator', 'IOQuake3Generator'),
     'voidsw': ('voidsw.voidswGenerator', 'VoidswGenerator'),
     'vpinball': ('vpinball.vpinballGenerator', 'VPinballGenerator'),
     'wine': ('wine.wineGenerator', 'WineGenerator'),
@@ -154,7 +153,6 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'xenia': ('xenia.xeniaGenerator', 'XeniaGenerator'),
     'xenia-canary': ('xenia.xeniaGenerator', 'XeniaGenerator'),
     'yabasanshiro': ('yabasanshiro.yabasanshiroGenerator', 'YabasanshiroGenerator'),
-    'yquake2': ('yquake2.yquake2Generator', 'Yquake2Generator'),
 }
 
 def get_generator(emulator: str) -> Generator:

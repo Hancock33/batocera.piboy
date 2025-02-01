@@ -19,6 +19,7 @@ VKQUAKE3_BUILD_ARGS += BUILD_GAME_SO=0
 VKQUAKE3_BUILD_ARGS += BUILD_GAME_QVM=0
 VKQUAKE3_BUILD_ARGS += CROSS_COMPILING=1
 VKQUAKE3_BUILD_ARGS += USE_RENDERER_DLOPEN=1
+VKQUAKE3_BUILD_ARGS += DEFAULT_BASEDIR=/userdata/roms/ports/quake3
 
 ifeq ($(BR2_aarch64),y)
     VKQUAKE3_BUILD_ARGS += COMPILE_ARCH=arm64
@@ -36,11 +37,11 @@ define VKQUAKE3_BUILD_CMDS
 endef
 
 define VKQUAKE3_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin/ioquake3
-	$(INSTALL) -D $(@D)/build/release-linux-$(VKQUAKE3_ARCH)/ioquake3.$(VKQUAKE3_ARCH)             $(TARGET_DIR)/usr/bin/ioquake3/ioquake3
-	$(INSTALL) -D $(@D)/build/release-linux-$(VKQUAKE3_ARCH)/renderer_opengl1_$(VKQUAKE3_ARCH).so  $(TARGET_DIR)/usr/bin/ioquake3/
-	$(INSTALL) -D $(@D)/build/release-linux-$(VKQUAKE3_ARCH)/renderer_opengl2_$(VKQUAKE3_ARCH).so  $(TARGET_DIR)/usr/bin/ioquake3/
-	$(INSTALL) -D $(@D)/build/release-linux-$(VKQUAKE3_ARCH)/renderer_vulkan_$(VKQUAKE3_ARCH).so   $(TARGET_DIR)/usr/bin/ioquake3/
+	mkdir -p $(TARGET_DIR)/usr/bin/quake3
+	$(INSTALL) -D $(@D)/build/release-linux-$(VKQUAKE3_ARCH)/ioquake3.$(VKQUAKE3_ARCH)             $(TARGET_DIR)/usr/bin/quake3/ioquake3
+	$(INSTALL) -D $(@D)/build/release-linux-$(VKQUAKE3_ARCH)/renderer_opengl1_$(VKQUAKE3_ARCH).so  $(TARGET_DIR)/usr/bin/quake3/
+	$(INSTALL) -D $(@D)/build/release-linux-$(VKQUAKE3_ARCH)/renderer_opengl2_$(VKQUAKE3_ARCH).so  $(TARGET_DIR)/usr/bin/quake3/
+	$(INSTALL) -D $(@D)/build/release-linux-$(VKQUAKE3_ARCH)/renderer_vulkan_$(VKQUAKE3_ARCH).so   $(TARGET_DIR)/usr/bin/quake3/
 endef
 
 define VKQUAKE3_EVMAPY

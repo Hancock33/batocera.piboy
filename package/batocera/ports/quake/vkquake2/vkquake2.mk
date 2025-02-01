@@ -34,12 +34,10 @@ VKQUAKE2_MAKE_OPTS = $(TARGET_CONFIGURE_OPTS) \
 	XLDFLAGS="-L$(STAGING_DIR)/usr/lib -lX11 -lXext -lXxf86dga"
 
 define VKQUAKE2_BUILD_CMDS
-	$(MAKE) -C $(@D)/linux release \
-	    $(VKQUAKE2_MAKE_OPTS)
+	$(MAKE) -C $(@D)/linux release $(VKQUAKE2_MAKE_OPTS)
 endef
 
 define VKQUAKE2_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2
 	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2/baseq2
 	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2/ctf
 	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2/rogue
@@ -47,14 +45,14 @@ define VKQUAKE2_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2/xatrix
 	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2/zaero
 
-	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/baseq2/*.so $(TARGET_DIR)/usr/bin/vkquake2/baseq2/
-	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/ctf/*.so    $(TARGET_DIR)/usr/bin/vkquake2/ctf/
-	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/quake2      $(TARGET_DIR)/usr/bin/vkquake2/
-	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/ref*.so     $(TARGET_DIR)/usr/bin/vkquake2/
-	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/rogue/*.so  $(TARGET_DIR)/usr/bin/vkquake2/rogue/
-	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/smd/*.so    $(TARGET_DIR)/usr/bin/vkquake2/smd/
-	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/xatrix/*.so $(TARGET_DIR)/usr/bin/vkquake2/xatrix/
-	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/zaero/*.so  $(TARGET_DIR)/usr/bin/vkquake2/zaero/
+	cp -f $(@D)/linux/release*/quake2      $(TARGET_DIR)/usr/bin/vkquake2/
+	cp -f $(@D)/linux/release*/ref*.so     $(TARGET_DIR)/usr/bin/vkquake2/
+	cp -f $(@D)/linux/release*/baseq2/*.so $(TARGET_DIR)/usr/bin/vkquake2/baseq2/
+	cp -f $(@D)/linux/release*/ctf/*.so    $(TARGET_DIR)/usr/bin/vkquake2/ctf/
+	cp -f $(@D)/linux/release*/rogue/*.so  $(TARGET_DIR)/usr/bin/vkquake2/rogue/
+	cp -f $(@D)/linux/release*/smd/*.so    $(TARGET_DIR)/usr/bin/vkquake2/smd/
+	cp -f $(@D)/linux/release*/xatrix/*.so $(TARGET_DIR)/usr/bin/vkquake2/xatrix/
+	cp -f $(@D)/linux/release*/zaero/*.so  $(TARGET_DIR)/usr/bin/vkquake2/zaero/
 endef
 
 define VKQUAKE2_EVMAPY

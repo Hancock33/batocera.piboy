@@ -970,6 +970,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 
     select BR2_PACKAGE_ABUSE                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
+    # Quake 2
     select BR2_PACKAGE_LIBRETRO_VITAQUAKE2                  if  BR2_PACKAGE_BATOCERA_GLES3
     select BR2_PACKAGE_VKQUAKE2                             if  BR2_PACKAGE_BATOCERA_VULKAN && BR2_PACKAGE_XORG7
 
@@ -993,14 +994,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_OPENLARA                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_aarch64
 
     # Quake 3
-    select BR2_PACKAGE_IOQUAKE3                             if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_H6          && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3128      && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3326      && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_JH7110      && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_ODIN        && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_SM8250
-
+    select BR2_PACKAGE_LIBRETRO_VITAQUAKE3                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_VKQUAKE3                             if  BR2_PACKAGE_BATOCERA_VULKAN
 
     # Hydra Castle Labyrinth
@@ -1402,7 +1396,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_LIBRETRO_TAMALIBRETRO                # Tamagotchi
     select BR2_PACKAGE_LIBRETRO_VAPORSPEC
     select BR2_PACKAGE_LIBRETRO_VEMULATOR                   # Dreamcast VMU
-    select BR2_PACKAGE_LIBRETRO_VITAQUAKE3                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_WASM4
     select BR2_PACKAGE_LIBRETRO_YABAUSE                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
@@ -1420,10 +1413,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     #Doom
     select BR2_PACKAGE_DOOM3                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
     select BR2_PACKAGE_DOOMRETRO                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
-
-    #Quake
-    select BR2_PACKAGE_QUAKE2                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
-    select BR2_PACKAGE_QUAKESPASM                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
     select BR2_PACKAGE_ALEPHONE                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Alephone
     select BR2_PACKAGE_AVP                                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Alien vs Predator

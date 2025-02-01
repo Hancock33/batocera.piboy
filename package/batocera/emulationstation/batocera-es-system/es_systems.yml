@@ -5067,12 +5067,10 @@ quake:
   group:                quake
   path:                 /userdata/roms/ports/quake1
   emulators:
-    quakespasm:
-      quakespasm:       { requireAnyOf: [BR2_PACKAGE_QUAKESPASM] }
-    vkquake:
-      vkquake:          { requireAnyOf: [BR2_PACKAGE_VKQUAKE] }
     libretro:
       tyrquake:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TYRQUAKE] }
+    vkquake:
+      vkquake:          { requireAnyOf: [BR2_PACKAGE_VKQUAKE] }
   comment_en:           |
                         Put your Quake id1 folder & associated files in this directory.
                         Make sure all data files are lowercase, e.g. "id1", not "ID1" and "pak0.pak", not "PAK0.PAK".
@@ -5121,8 +5119,6 @@ quake2:
   group:                quake
   path:                 /userdata/roms/ports/quake2
   emulators:
-    yquake2:
-      yquake2:          { requireAnyOf: [BR2_PACKAGE_YQUAKE2] }
     libretro:
       vitaquake2:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VITAQUAKE2] }
     vkquake2:
@@ -5157,8 +5153,6 @@ quake3:
   group:                quake
   path:                 /userdata/roms/ports/quake3
   emulators:
-    quake3:
-      quake3:           { requireAnyOf: [BR2_PACKAGE_QUAKE3] }
     libretro:
       vitaquake3:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VITAQUAKE3] }
     vkquake3:

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-01-25 14:24+0000\n"
+"PO-Revision-Date: 2025-02-01 16:24+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -4462,7 +4462,7 @@ msgstr "CONTROLLER KONFIGURATION"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CONTROLLER MODE"
-msgstr ""
+msgstr "CONTROLLER MODUS"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -4904,7 +4904,7 @@ msgstr "Katalanisch"
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Center"
-msgstr ""
+msgstr "Zentriert"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -5147,6 +5147,8 @@ msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
 "lightguns & steering wheels. SDL2 for gamepads only."
 msgstr ""
+"Wahl der Controller-Konfiguration. EVDEV für eine breite Palette von "
+"Controllern, Lightguns und Lenkrädern. SDL2 nur für Gamepads."
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
@@ -6573,7 +6575,7 @@ msgstr "AKTIVIERE GRAVIS ULTRASOUND"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "ENABLE HIDRAW"
-msgstr ""
+msgstr "HIDRAW AKTIVIEREN"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -6683,7 +6685,7 @@ msgstr "ESYNC"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "EVDEV (Default)"
-msgstr ""
+msgstr "EVDEV (Standard)"
 
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
@@ -6981,6 +6983,9 @@ msgid ""
 "features (like gyroscope for example), but can break older games with x-"
 "input support only."
 msgstr ""
+"Aktiviere den 'Gamepad-HID-Raw-Access'. Dies ermöglicht modernen Spielen die "
+"Nutzung spezieller Gamepad-Funktionen (wie z.B. Gyroskop), kann aber ältere "
+"Spiele, die nur X-Eingabe unterstützen, beeinträchtigen."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -10452,7 +10457,7 @@ msgstr "Linker Flipper"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Magna Save"
-msgstr ""
+msgstr "Magna-Save links"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -10467,7 +10472,7 @@ msgstr "Linker Flipper"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left magnasave"
-msgstr "Linker Magnasave"
+msgstr "Magna-Save (links)"
 
 #. TRANSLATION: solarus
 msgctxt "game_options"
@@ -13772,7 +13777,7 @@ msgstr "Rechter Flipper"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Magna Save"
-msgstr ""
+msgstr "Magna-Save (rechts)"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -13792,7 +13797,7 @@ msgstr "Rechter Flipper"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Right magnasave"
-msgstr "Rechter Magnasave"
+msgstr "Magna-Save (rechts)"
 
 #. TRANSLATION: solarus
 msgctxt "game_options"
@@ -18548,10 +18553,6 @@ msgstr "gelb/blau"
 #~ msgstr "Kann verwendet werden, um Farben bestimmter Displays zu simulieren."
 
 #~ msgctxt "game_options"
-#~ msgid "Center (Default)"
-#~ msgstr "Zentriert (Standard)"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Changing driver can improve audio performance and reduce distortion. "
 #~ "Alsathread is recommended for low-end systems."
@@ -18786,10 +18787,6 @@ msgstr "gelb/blau"
 #~ msgstr "Tastatur-zu-Joyport Tastbelegung für 2 Spieler."
 
 #~ msgctxt "keys_files"
-#~ msgid "Left Manga Save"
-#~ msgstr "Linker Magnasave"
-
-#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "Spielstand laden Slot 1"
 
@@ -18908,10 +18905,6 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Bildschirmhöhe automatisch skalieren."
-
-#~ msgctxt "keys_files"
-#~ msgid "Right Manga Save"
-#~ msgstr "Rechter Magnasave"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"
