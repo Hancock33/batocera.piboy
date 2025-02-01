@@ -594,6 +594,8 @@ menu "Ports"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/quake/quake3/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/quake/quakespasm/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/quake/vkquake/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/quake/vkquake2/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/quake/vkquake3/Config.in"
   endmenu
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/raptorcots/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/raze/Config.in"

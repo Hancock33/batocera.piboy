@@ -33,11 +33,18 @@ def writeCfgFile(system, filename, init_line, defaults_to_add, controls_to_add, 
                     line = 'seta cl_allowDownload "1"\n'
 
                 ## User options
+                # Memory
                 elif line.startswith('seta com_hunkMegs'):
                     if system.isOptSet('ioquake3_mem'):
                         line = f"seta com_hunkMegs \"{system.config['ioquake3_mem']}\"\n"
                     else:
                         line = 'seta com_hunkMegs "256"\n'
+                # API
+                elif line.startswith('seta cl_renderer'):
+                    if system.isOptSet('vkquake3_api'):
+                        line = f"seta cl_renderer \"{system.config['vkquake3_api']}\"\n"
+                    else:
+                        line = 'seta cl_renderer "opengl2"\n'
 
                 file.write(line)
 

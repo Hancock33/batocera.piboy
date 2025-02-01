@@ -805,6 +805,17 @@ pygame:
 pyxel:
   emulator: pyxel
   core:     pyxel
+quake:
+  emulator: libretro
+  core:     tyrquake
+quake2:
+  emulator: libretro
+  core:     vitaquake2
+  options:
+    gfxbackend: glcore
+quake3:
+  emulator: ioquake3
+  core:     ioquake3
 quake3:
   emulator: quake3
   core:     quake3
@@ -1045,9 +1056,6 @@ tutor:
 tyrian:
   emulator: tyrian
   core:     tyrian
-tyrquake:
-  emulator: libretro
-  core:     tyrquake
 unico:
   emulator: libretro
   core:     mame078plus
@@ -1184,11 +1192,6 @@ xegs:
 xrick:
   emulator: libretro
   core:     xrick
-yquake2:
-  emulator: yquake2
-  core:     yquake2
-  options:
-    powersave: '1'
 zc210:
   emulator: libretro
   core:     zc210

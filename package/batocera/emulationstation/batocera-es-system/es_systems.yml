@@ -5056,6 +5056,95 @@ witchaven:
     witchaven:
       witchaven:        { requireAnyOf: [BR2_PACKAGE_WITCHAVEN] }
 
+quake:
+  name:                 Quake I
+  manufacturer:         Ports (Quake)
+  release:
+  hardware:             port
+  extensions:           [pak, quake]
+  platform:             pc
+  group:                quake
+  path:                 /userdata/roms/ports/quake1
+  emulators:
+    quakespasm:
+      quakespasm:       { requireAnyOf: [BR2_PACKAGE_QUAKESPASM] }
+    vkquake:
+      vkquake:          { requireAnyOf: [BR2_PACKAGE_VKQUAKE] }
+    libretro:
+      tyrquake:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TYRQUAKE] }
+  comment_en:           |
+                        Put your Quake id1 folder & associated files in this directory.
+                        Make sure all data files are lowercase, e.g. "id1", not "ID1" and "pak0.pak", not "PAK0.PAK".
+                        Some distributions of the game have upper case file names, e.g. from GOG.com.
+                        If your system supports Vulkan you can use vkQuake for more features.
+                        Create a blank launch file with a .quake extension to be able to start the game from ES.
+                        i.e. `Quake.quake` or `Quake Mission Pack 1 - Scourge of Armagon.quake`.
+                        Launch files should be in `/userdata/roms/ports/quake`.
+                        
+                        Mission Packs
+                        -------------
+                        Quake Mission Pack 1: Scourge of Armagon & Quake Mission Pack 2: Dissolution of Eternity are supported automatically.
+                        Ensure the game files are in these folders:
+                        `/userdata/roms/ports/quake/hipnotic` for Mission Pack 1
+                        `/userdata/roms/ports/quake/rogue` for Mission Pack 2
+                        Then create the associated ES launch file.
+                        i.e. /userdata/roms/ports/quake/Quake Mission Pack 2 - Dissolution of Eternity.quake
+                        If the mission packs are names accordingly then vkQuake or libretro-tyrquake will use the correct .pak automatically.
+                        Music
+                        -----
+                        The original Quake had a great soundtrack by Nine Inch Nails.
+                        Unfortunately, the Steam version does not come with the soundtrack files (the 2021 re-release music should work out of the box).
+                        The GOG-provided files may need to be converted before they are ready for use.
+                        In general, you'll just need to move a "music" folder to the correct location within your installation (.e.g `/userdata/roms/ports/quake/id1/music`).
+                        Mission Pack 1 soundtrack files go inside "hipnotic/music", and Mission Pack 2 soundtrack files go inside "rogue/music".
+                        Because the music files are separate to the .pak files you can use your own soundtrack provided they follow the correct naming conventions.
+                        The files are named in the pattern "tracknn". i.e. track02.ogg or track02.mp3 etc
+                        vkQuake supports OGG, MP3, FLAC, and WAV audio formats.
+
+                        For more info: https://wiki.batocera.org/systems:quake
+  comment_fr:           |
+                        Placez ici vos fichiers .PAK pour Quake 1.
+                        Trouvez la documentation ici: https://wiki.batocera.org/systems:quake
+  comment_br:           |
+                        Coloque seus jogos Quake 1 .PAK neste diretório.
+                        Para mais informações: https://wiki.batocera.org/systems:quake
+
+quake2:
+  name:                 Quake II
+  manufacturer:         Ports (Quake)
+  release:              1997
+  hardware:             port
+  extensions:           [7zip, game, quake2, zip]
+  platform:             pc
+  group:                quake
+  path:                 /userdata/roms/ports/quake2
+  emulators:
+    yquake2:
+      yquake2:          { requireAnyOf: [BR2_PACKAGE_YQUAKE2] }
+    libretro:
+      vitaquake2:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VITAQUAKE2] }
+    vkquake2:
+      vkquake2:         { requireAnyOf: [BR2_PACKAGE_VKQUAKE2], incompatible_extensions: [zip, 7zip] }
+  comment_en:           |
+                        For the standard Quake II copy your 'baseq2' directory and contents here.
+                        Make sure all data files are lowercase, e.g. "baseq2", not "BASEQ2" and "pak0.pak", not "PAK0.PAK".
+                        Create a blank launch file with a .quake2 extension to be able to start the game from ES.
+                        i.e. `Quake II.quake2` or `Quake II - Zaero.quake2`.
+                        Launch files should be in `/userdata/roms/ports/quake2`.
+                        Mission Packs
+                        -------------
+                        Copy necessary data file to `rogue` ("Ground Zero"), `xatrix` ("The Reckoning"), `zaero` ("Quake II: Zaero") and `smd` ("Slight Mechanical Destruction") directories respectively.
+
+                        The libretro vitaquake2 supported mission pack ROMs are: xatrix, rogue, and zaero.
+                        If you have vkQuake2 the additional `smd` ("Slight Mechanical Destruction") pack is supported.
+                        vkQuake2 also supports the Capture the Flag mod using the `ctf` directory.
+                        Note: vkQuake2 does not support the zip or 7zip extensions.
+                        For more info: https://wiki.batocera.org/systems:quake2
+  comment_fr: |
+                        Trouvez la documentation ici : https://wiki.batocera.org/systems:quake2
+  comment_br: |
+                        Para mais informações: https://wiki.batocera.org/systems:quake2
+
 quake3:
   name:                 Quake III
   manufacturer:         Ports (Quake)
@@ -5070,6 +5159,8 @@ quake3:
       quake3:           { requireAnyOf: [BR2_PACKAGE_QUAKE3] }
     libretro:
       vitaquake3:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VITAQUAKE3] }
+    vkquake3:
+      vkquake3:         { requireAnyOf: [ BR2_PACKAGE_VKQUAKE3 ] }
   comment_en: |
                         Quake III is optimized to be played with a mouse and keyboard, but here it is also pre-configured to be played with a gamepad.
 
@@ -5112,56 +5203,6 @@ quake3:
                         Observe que as opções de menu no Team Arena e outros mods só podem ser selecionadas usando um mouse, uma vez que o jogo é iniciado, o controlador funcionará normalmente.
 
                         Para mais informações: https://wiki.batocera.org/systems:ioquake3
-
-tyrquake:
-  name:                 Quake I
-  manufacturer:         Ports (Quake)
-  release:
-  hardware:             port
-  extensions:           [pak]
-  platform:             pc
-  group:                quake
-  path:                 /userdata/roms/ports/quake1
-  emulators:
-    quakespasm:
-      quakespasm:       { requireAnyOf: [BR2_PACKAGE_QUAKESPASM] }
-    vkquake:
-      vkquake:          { requireAnyOf: [BR2_PACKAGE_VKQUAKE] }
-    libretro:
-      tyrquake:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TYRQUAKE] }
-  comment_en:           |
-                        Put your Quake 1 .PAK games in this directory.
-
-                        For more info: https://wiki.batocera.org/systems:tyrquake
-  comment_fr:           |
-                        Placez ici vos fichiers .PAK pour Quake 1.
-
-                        Trouvez la documentation ici: https://wiki.batocera.org/systems:tyrquake
-
-yquake2:
-  name:                 Quake II
-  manufacturer:         Ports (Quake)
-  release:              1997
-  hardware:             port
-  extensions:           [game]
-  platform:             pc
-  group:                quake
-  path:                 /userdata/roms/ports/quake2
-  emulators:
-    yquake2:
-      yquake2:          { requireAnyOf: [BR2_PACKAGE_YQUAKE2] }
-    libretro:
-      vitaquake2:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VITAQUAKE2] }
-  comment_en:           |
-                        The libretro vitaquake2 core offers several mission packs.
-                        To ensure the correct vitaquake2 core loads for a mission pack, make sure it is placed in a subdirectory within this ROM directory.
-                        The supported subdirectories for mission pack ROMs are: xatrix, rogue, and zaero.
-                        For the standard Quake II directory, use 'baseq2' to utilize the standard vitaquake2 core.
-  comment_fr:           |
-                        Le cœur libretro de vitaquake2 propose différents packs de missions.
-                        Pour vous assurer que le bon cœur vitaquake2 se charge pour un pack de missions, veillez à le placer dans un sous-répertoire de ce répertoire ROM.
-                        Les sous-répertoires pris en charge pour les ROM de packs de missions sont : xatrix, rogue et zaero.
-                        Pour le répertoire standard de Quake II, utilisez 'baseq2' pour utiliser le cœur vitaquake2 standard.
 
 bigfish:
   name:                 Big Fish Games

@@ -50,8 +50,8 @@ psx:
   options:
     gfxbackend: vulkan
 quake3:
-  emulator: quake3
-  core:     quake3
+  emulator: vkquake3
+  core:     vkquake3
   options:
     videomode: max-1280x720
     decorations: none

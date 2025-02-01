@@ -140,7 +140,9 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'vice': ('vice.viceGenerator', 'ViceGenerator'),
     'virtualjaguar': ('virtualjaguar.virtualjaguarGenerator', 'VirtualjaguarGenerator'),
     'vita3k': ('vita3k.vita3kGenerator', 'Vita3kGenerator'),
-    'vkquake': ('vkquake.vkquakeGenerator', 'VkquakeGenerator'),
+    'vkquake': ('vkquake.vkquakeGenerator', 'VKQuakeGenerator'),
+    'vkquake2': ('vkquake2.vkquake2Generator', 'VKQuake2Generator'),
+    'vkquake3': ('ioquake3.ioquake3Generator', 'IOQuake3Generator')
     'voidsw': ('voidsw.voidswGenerator', 'VoidswGenerator'),
     'vpinball': ('vpinball.vpinballGenerator', 'VPinballGenerator'),
     'wine': ('wine.wineGenerator', 'WineGenerator'),
