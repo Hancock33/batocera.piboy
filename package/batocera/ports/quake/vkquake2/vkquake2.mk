@@ -39,35 +39,27 @@ define VKQUAKE2_BUILD_CMDS
 endef
 
 define VKQUAKE2_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/usr/bin/vkquake2
-	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/quake2 \
-	    $(TARGET_DIR)/usr/bin/vkquake2/
-	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/ref*.so \
-	    $(TARGET_DIR)/usr/bin/vkquake2/
+	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2
 	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2/baseq2
-	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/baseq2/*.so \
-	    $(TARGET_DIR)/usr/bin/vkquake2/baseq2/
 	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2/ctf
-	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/ctf/*.so \
-	    $(TARGET_DIR)/usr/bin/vkquake2/ctf/
 	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2/rogue
-	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/rogue/*.so \
-	    $(TARGET_DIR)/usr/bin/vkquake2/rogue/
 	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2/smd
-	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/smd/*.so \
-	    $(TARGET_DIR)/usr/bin/vkquake2/smd/
 	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2/xatrix
-	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/xatrix/*.so \
-	    $(TARGET_DIR)/usr/bin/vkquake2/xatrix/
 	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2/zaero
-	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/zaero/*.so \
-	    $(TARGET_DIR)/usr/bin/vkquake2/zaero/
+
+	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/baseq2/*.so $(TARGET_DIR)/usr/bin/vkquake2/baseq2/
+	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/ctf/*.so    $(TARGET_DIR)/usr/bin/vkquake2/ctf/
+	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/quake2      $(TARGET_DIR)/usr/bin/vkquake2/
+	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/ref*.so     $(TARGET_DIR)/usr/bin/vkquake2/
+	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/rogue/*.so  $(TARGET_DIR)/usr/bin/vkquake2/rogue/
+	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/smd/*.so    $(TARGET_DIR)/usr/bin/vkquake2/smd/
+	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/xatrix/*.so $(TARGET_DIR)/usr/bin/vkquake2/xatrix/
+	cp -f $(@D)/linux/release$(VKQUAKE2_ARCH)/zaero/*.so  $(TARGET_DIR)/usr/bin/vkquake2/zaero/
 endef
 
 define VKQUAKE2_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/vkquake2/quake2.keys \
-	    $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/vkquake2/quake2.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 VKQUAKE2_POST_INSTALL_TARGET_HOOKS += VKQUAKE2_EVMAPY

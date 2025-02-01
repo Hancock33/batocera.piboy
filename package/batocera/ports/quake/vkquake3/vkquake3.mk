@@ -32,26 +32,20 @@ else ifeq ($(BR2_x86_64),y)
 endif
 
 define VKQUAKE3_BUILD_CMDS
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
-	    $(VKQUAKE3_BUILD_ARGS) SYSROOT=$(STAGING_DIR) -C $(@D) -f Makefile
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" $(VKQUAKE3_BUILD_ARGS) SYSROOT=$(STAGING_DIR) -C $(@D) -f Makefile
 endef
 
 define VKQUAKE3_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/ioquake3
-	$(INSTALL) -D $(@D)/build/release-linux-$(VKQUAKE3_ARCH)/ioquake3.$(VKQUAKE3_ARCH) \
-		$(TARGET_DIR)/usr/bin/ioquake3/ioquake3
-	$(INSTALL) -D $(@D)/build/release-linux-$(VKQUAKE3_ARCH)/renderer_opengl1_$(VKQUAKE3_ARCH).so \
-		$(TARGET_DIR)/usr/bin/ioquake3/
-	$(INSTALL) -D $(@D)/build/release-linux-$(VKQUAKE3_ARCH)/renderer_opengl2_$(VKQUAKE3_ARCH).so \
-		$(TARGET_DIR)/usr/bin/ioquake3/
-	$(INSTALL) -D $(@D)/build/release-linux-$(VKQUAKE3_ARCH)/renderer_vulkan_$(VKQUAKE3_ARCH).so \
-	    $(TARGET_DIR)/usr/bin/ioquake3/
+	$(INSTALL) -D $(@D)/build/release-linux-$(VKQUAKE3_ARCH)/ioquake3.$(VKQUAKE3_ARCH)             $(TARGET_DIR)/usr/bin/ioquake3/ioquake3
+	$(INSTALL) -D $(@D)/build/release-linux-$(VKQUAKE3_ARCH)/renderer_opengl1_$(VKQUAKE3_ARCH).so  $(TARGET_DIR)/usr/bin/ioquake3/
+	$(INSTALL) -D $(@D)/build/release-linux-$(VKQUAKE3_ARCH)/renderer_opengl2_$(VKQUAKE3_ARCH).so  $(TARGET_DIR)/usr/bin/ioquake3/
+	$(INSTALL) -D $(@D)/build/release-linux-$(VKQUAKE3_ARCH)/renderer_vulkan_$(VKQUAKE3_ARCH).so   $(TARGET_DIR)/usr/bin/ioquake3/
 endef
 
 define VKQUAKE3_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/vkquake3/quake3.keys \
-	    $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/vkquake3/quake3.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 VKQUAKE3_POST_INSTALL_TARGET_HOOKS += VKQUAKE3_EVMAPY

@@ -3,31 +3,26 @@
 # vkquake
 #
 ################################################################################
-# Version: Commits on Jan 27, 2025
-VKQUAKE_VERSION = b86bf56e0c6acd9db95a11797e9108b647075ffd
+
+VKQUAKE_VERSION = 1.32.0
 VKQUAKE_SITE = $(call github,Novum,vkQuake,$(VKQUAKE_VERSION))
-
-VKQUAKE_DEPENDENCIES = sdl2 sdl2_image
+VKQUAKE_DEPENDENCIES = alsa-lib flac glslang mpg123 libvorbis opus opusfile sdl2
+VKQUAKE_DEPENDENCIES += spirv-tools vulkan-headers vulkan-loader
 VKQUAKE_LICENSE = GPLv2
+VKQUAKE_LICENSE_FILE = LICENSE.txt
 
-define VKQUAKE_WERROR
-	sed -i 's/-Werror/-w/g' $(@D)/meson.build
-endef
-
-VKQUAKE_POST_EXTRACT_HOOKS += VKQUAKE_WERROR
+VKQUAKE_CONF_OPTS += -Ddo_userdirs=disabled
 
 define VKQUAKE_INSTALL_TARGET_CMDS
-	cp -pvr $(@D)/build/vkquake $(TARGET_DIR)/usr/bin
-	mkdir -p $(TARGET_DIR)/usr/share/game_assets/quake1/id1
-	cp -pvr $(@D)/Quake/vkquake.pak $(TARGET_DIR)/usr/share/game_assets/quake1/id1
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/vkquake/{id1,dopa,hipnotic,rogue}
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/vkquake/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/vkquake/id1
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/vkquake/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/vkquake/dop
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/vkquake/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/vkquake/hipnotic
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/vkquake/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/vkquake/rogue
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/vkquake/vkquake.keys $(TARGET_DIR)/usr/share/evmapy/tyrquake.vkquake.keys
+$(INSTALL) -D -m 0755 $(@D)/build/vkquake $(TARGET_DIR)/usr/bin/
 endef
+
+define VKQUAKE_EVMAPY
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/vkquake/quake.keys \
+	    $(TARGET_DIR)/usr/share/evmapy
+endef
+
+VKQUAKE_POST_INSTALL_TARGET_HOOKS += VKQUAKE_EVMAPY
 
 $(eval $(meson-package))
