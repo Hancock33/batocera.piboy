@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Feb 01, 2025
-BOX64_VERSION = 1173c1d23f9b183f22de12de6dcccfd5b748fa91
+BOX64_VERSION = 998f164aa30b46bc67d52eedd5b2269e14a50b4b
 BOX64_SITE = $(call github,ptitseb,box64,$(BOX64_VERSION))
 BOX64_SUPPORTS_IN_SOURCE_BUILD = NO
 
