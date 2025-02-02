@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2025-01-30 10:56+0000\n"
+"PO-Revision-Date: 2025-02-02 15:56+0000\n"
 "Last-Translator: THa_MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl-NL\n"
@@ -6572,7 +6572,7 @@ msgstr "GRAVIS ULTRASOUND INSCHAKELEN"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "ENABLE HIDRAW"
-msgstr ""
+msgstr "HIDRAW INSCHAKELEN"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -6977,6 +6977,9 @@ msgid ""
 "features (like gyroscope for example), but can break older games with x-"
 "input support only."
 msgstr ""
+"Schakel gamepad HID onbewerkte toegang in. Hierdoor kunnen moderne spellen "
+"speciale gamepad-functies gebruiken (zoals bijvoorbeeld een gyroscoop), maar "
+"kunnen oudere spellen met alleen x-invoerondersteuning kapot gaan."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
