@@ -224,7 +224,7 @@ Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|9dcc3ff4ccf96
 Emulators|[libretro-uae4arm](http://github.com/chips-fr/uae4arm-rpi)|177c2f0e892adf2603ada9b150e31beffe0f76c3|Apr 05, 2022
 Emulators|[libretro-uzem](http://github.com/libretro/libretro-uzem)|cd6004ea143435cfdb6b12e7c6779dab499f7829|Oct 21, 2024
 Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|17c2a74c59c3fe08e0c5dbce4466161b136cc74d|Jan 31, 2025
-Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|4dba92876524dcec8e60a5d076474e5c1765216e|Jan 29, 2025
+Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|2ab707c0ca68a558a57436dc901867b797d79b2e|Feb 02, 2025
 Emulators|[libretro-vecx](http://github.com/libretro/libretro-vecx)|a103a212ca8644fcb5d76eac7cdec77223c4fb02|Oct 21, 2024
 Emulators|[libretro-vemulator](http://github.com/libretro/vemulator-libretro)|45d7556667549bb1c1b84d27fbffb7d2a633f5d3|Oct 21, 2024
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|cdef1f9f8d5cbe4ba3e9b9106e117bdd35f599b9|Jan 28, 2025
@@ -272,7 +272,7 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|9afd2b8a9d16fc25c5a046122bc0d2b3c965980e|Jan 30, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|05f75b83c190530096935240ffb635d2c729860b|Feb 02, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20241221|Dec 21, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|911f0928cf4b1cb318c59204e4394c3c646b1b18|Feb 01, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|89eb473dce55833d6ceca938c06cc643513fb215|Feb 01, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-02-02|Feb 02, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.325|Feb 02, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|343640827d7b349de603f4aa61510a03754a2b1e|Jan 27, 2025
@@ -291,11 +291,11 @@ Emulators|[thextech](https://github.com/TheXTech/TheXTech)|02fd4a715c1ca89f13c89
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|3a24d0d65251a00e5b48df721eb49a9d40890db4|Jan 28, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45469|Jan 31, 2025
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
-Emulators|[vita3k](https://github.com/vita3k/vita3k)|f0c22ea2e9e33e8734a5f82aa7bd948b1c70490e|Dec 16, 2024
+Emulators|[vita3k](https://github.com/vita3k/vita3k)|a185f8c629bf246727fb95d8ab05c683d8074ec1|Feb 02, 2025
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|5a81d4e3292ff4adba7327017dd1ab840765b60a|Jul 23, 2024
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r48|Sept 06, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|86344a8543194f4e21d3777a382c608fc4fff4f2|Jan 26, 2025
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|b7b707ddd2b447bfb7c2f30050bf86aa107c9a55|Feb 01, 2025
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|a4412ad40d985acd11f28b50277b07aff51c44ca|Jan 28, 2025
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|b7b707ddd2b447bfb7c2f30050bf86aa107c9a55|Feb 01, 2025
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
@@ -477,7 +477,7 @@ Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|6facc3b09b6
 Ports|[sikkmod](http://github.com/dhewm/dhewm3-sdk)|03aae2f5b74a18ed5fdbfe9c345a4d50203c7518|Jul 28, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|d7ca2c04364a6dd0dac58b47151e04e26887e6f0|Dec 17, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|cf532d7c7675d3ffa5d69009d63869daf73955cb|Oct 26, 2024
-Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|7a2fe5784159a95226bbc02e8198bf060a1514c4|Feb 01, 2025
+Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|fe9861ecccda44d44f73f8ba6fc1c8271116b76a|Feb 02, 2025
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|4650327a4959321c8d28b89693abbda41fa69e6e|Dec 10, 2024
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|c9c54a32266be8ba8247b509ecd5a6cbbaede7a3|Dec 17, 2024
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|d83967b2ea38eda8b43437167d93c86021bb4de1|Dec 02, 2024
