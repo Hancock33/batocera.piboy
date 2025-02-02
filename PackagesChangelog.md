@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250202|Feb 02, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250202|Feb 02, 2025
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.02|Feb 01, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|38224a38703f2351c52b9b0f1b8101602f6d7600|Feb 01, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|38224a38703f2351c52b9b0f1b8101602f6d7600|Feb 01, 2025
@@ -19,10 +21,8 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|63cb2b4ca9b4eac82b7e49960acfe7e
 Ports|[raze](http://github.com/ZDoom/Raze)|1f0f5a413abdbb06d439e42382fc9268c3b9cc49|Feb 01, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|19b1fe7a82a870c45782d7967f8231d3f63f85c8|Feb 01, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|74e462cd698b2da2d7efa7c940ec3498a18dd830|Feb 01, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250201|Feb 01, 2025
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|525625907e9c11ef1326d9775276d0bfed7beba3|Feb 01, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|212ae55cfea761baf63843573aa0f21c91ebd54f|Feb 01, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250201|Feb 01, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|ec42c77289f8097c15568aa799e02ed6219f758b|Feb 01, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|7a2fe5784159a95226bbc02e8198bf060a1514c4|Feb 01, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|5378494199209712df836fd3c71be7587ca946cd|Feb 01, 2025
