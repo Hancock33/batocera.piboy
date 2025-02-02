@@ -14,8 +14,6 @@ default:
     bezel:              consoles
     forceNoBezel:       false
     gamemode_enable:    false
-    gfxbackend: vulkan
-    audio_driver: pulse
     batterymode: highperformance
     powermode: highperformance
 
