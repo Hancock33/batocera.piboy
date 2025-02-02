@@ -1,5 +1,5 @@
 diff --git a/SamTFE/Sources/SeriousSam/SeriousSam.cpp b/SamTFE/Sources/SeriousSam/SeriousSam.cpp
-index bd3c2ba..578f2ee 100644
+index 9437bc4..80414e6 100644
 --- a/SamTFE/Sources/SeriousSam/SeriousSam.cpp
 +++ b/SamTFE/Sources/SeriousSam/SeriousSam.cpp
 @@ -102,7 +102,7 @@ __extern INDEX sam_bWideScreen = FALSE;
@@ -8,11 +8,11 @@ index bd3c2ba..578f2ee 100644
  // display mode settings
 -__extern INDEX sam_bFullScreenActive = FALSE;
 +__extern INDEX sam_bFullScreenActive = TRUE;
+ __extern INDEX sam_bBorderLessActive = FALSE;
  __extern INDEX sam_iScreenSizeI = 1024;  // current size of the window
  __extern INDEX sam_iScreenSizeJ = 768;  // current size of the window
- __extern INDEX sam_iAspectSizeI = 16;  //
 diff --git a/SamTSE/Sources/SeriousSam/SeriousSam.cpp b/SamTSE/Sources/SeriousSam/SeriousSam.cpp
-index bd3c2ba..578f2ee 100644
+index 9437bc4..80414e6 100644
 --- a/SamTSE/Sources/SeriousSam/SeriousSam.cpp
 +++ b/SamTSE/Sources/SeriousSam/SeriousSam.cpp
 @@ -102,7 +102,7 @@ __extern INDEX sam_bWideScreen = FALSE;
@@ -21,6 +21,6 @@ index bd3c2ba..578f2ee 100644
  // display mode settings
 -__extern INDEX sam_bFullScreenActive = FALSE;
 +__extern INDEX sam_bFullScreenActive = TRUE;
+ __extern INDEX sam_bBorderLessActive = FALSE;
  __extern INDEX sam_iScreenSizeI = 1024;  // current size of the window
  __extern INDEX sam_iScreenSizeJ = 768;  // current size of the window
- __extern INDEX sam_iAspectSizeI = 16;  //
