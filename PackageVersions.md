@@ -59,8 +59,8 @@ Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-control
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|e6241340d292dee20406a0567262a78ff34d45f7|Jun 02, 2021
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.11|Nov 11, 2024
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|4d946781c7807f9f98be45e3a6dd6649e7ac3a00|Feb 02, 2025
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|4d946781c7807f9f98be45e3a6dd6649e7ac3a00|Feb 02, 2025
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|837c4f33df4940fb702304280305a86355e55b46|Feb 02, 2025
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|837c4f33df4940fb702304280305a86355e55b46|Feb 02, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|3e1293ee827b741e2a6d33704a79f85e70a9d931|Jan 13, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|4b60eae8e66cc61f1d610c1aec9187cde7594439|Jan 26, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|db817537a095b2b47bc2dacd28c74394cfa56a1c|Feb 02, 2025
@@ -272,9 +272,9 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|9afd2b8a9d16fc25c5a046122bc0d2b3c965980e|Jan 30, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|05f75b83c190530096935240ffb635d2c729860b|Feb 02, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20241221|Dec 21, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|7ffbada7258bb22d7b338f2050d84c28309f1cac|Feb 02, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|6123838a4837a8e78e0d68c4ca07829d13826c23|Feb 02, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-02-02|Feb 02, 2025
-Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.325|Feb 02, 2025
+Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.326|Feb 02, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|343640827d7b349de603f4aa61510a03754a2b1e|Jan 27, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|1d8c607c1554e308a4f5e9fc5dc0ca7bf821ebff|Feb 01, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
@@ -473,7 +473,7 @@ Ports|[rivensin](http://github.com/dhewm/dhewm3-sdk)|4416ef0f7ebb4f9dd0e68442404
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|2491828266d99ddd091da7c85405ba6dddd0fccd|Jan 28, 2025
 Ports|[rtcw](http://github.com/iortcw/iortcw)|438e7d413b5f7277187c35b032eb0ef9093ae778|May 26, 2024
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|0c3655cdb544d02d0df222896d959f96d5421bfc|Jan 04, 2025
-Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|e91909daa4f1d6614947820cecabf9e058bda6ee|Feb 02, 2025
+Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|b1830b0cbf1c44689e44a1e6badda8998b0c4f37|Feb 02, 2025
 Ports|[sikkmod](http://github.com/dhewm/dhewm3-sdk)|03aae2f5b74a18ed5fdbfe9c345a4d50203c7518|Jul 28, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|d7ca2c04364a6dd0dac58b47151e04e26887e6f0|Dec 17, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|cf532d7c7675d3ffa5d69009d63869daf73955cb|Oct 26, 2024

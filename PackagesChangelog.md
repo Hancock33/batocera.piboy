@@ -1,15 +1,15 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|4d946781c7807f9f98be45e3a6dd6649e7ac3a00|Feb 02, 2025
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|4d946781c7807f9f98be45e3a6dd6649e7ac3a00|Feb 02, 2025
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|837c4f33df4940fb702304280305a86355e55b46|Feb 02, 2025
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|837c4f33df4940fb702304280305a86355e55b46|Feb 02, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|db817537a095b2b47bc2dacd28c74394cfa56a1c|Feb 02, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|84d28a4272f53df30550b43aaafafde1a520aeb0|Feb 02, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|51bef1b3daae02c7e85685dfbae5ad4fa6cd598a|Feb 02, 2025
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|fe2c749bb0ce52a83b6c3175b2a25e84a3ff10ea|Feb 02, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|5fa1212699a4655d8f12f1d87a95c9e112ba57f0|Feb 02, 2025
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|7ffbada7258bb22d7b338f2050d84c28309f1cac|Feb 02, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|6123838a4837a8e78e0d68c4ca07829d13826c23|Feb 02, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-02-02|Feb 02, 2025
-Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.325|Feb 02, 2025
+Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.326|Feb 02, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|02fd4a715c1ca89f13c89a2330384bfd92f6ba6d|Feb 02, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45470|Feb 02, 2025
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|a185f8c629bf246727fb95d8ab05c683d8074ec1|Feb 02, 2025
@@ -18,7 +18,7 @@ Ports|[box64](http://github.com/ptitseb/box64)|242832fa3c8ef37c9c623165f72b5d1bc
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|47fccc6b428b408e4b008b1b2676f76eedf43869|Feb 02, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|8df046b4bf84e0d00356ca40a2041698fb967dbc|Feb 02, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|5ed7ca98089ca95589e3f379e7755d0cdc241791|Feb 02, 2025
-Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|e91909daa4f1d6614947820cecabf9e058bda6ee|Feb 02, 2025
+Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|b1830b0cbf1c44689e44a1e6badda8998b0c4f37|Feb 02, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|53af7b28e3c689826044dd5ba0fcaf6980b24a5a|Feb 02, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250202|Feb 02, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|05f75b83c190530096935240ffb635d2c729860b|Feb 02, 2025
