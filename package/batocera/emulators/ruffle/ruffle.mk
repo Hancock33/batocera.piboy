@@ -3,8 +3,8 @@
 # ruffle
 #
 ################################################################################
-# Version: Commits on Feb 01, 2025
-RUFFLE_VERSION = nightly-2025-02-01
+# Version: Commits on Feb 02, 2025
+RUFFLE_VERSION = nightly-2025-02-02
 RUFFLE_SITE = $(call github,ruffle-rs,ruffle,$(RUFFLE_VERSION))
 RUFFLE_LICENSE = GPLv2
 RUFFLE_DEPENDENCIES = host-rustc host-rust-bin openssl udev nghttp2 alsa-lib
