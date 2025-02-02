@@ -27,8 +27,8 @@
         },
         {
             "trigger": ["hotkey", "start"],
-            "type": "key",
-            "target": [ "KEY_LEFTALT", "KEY_F10" ]
+            "type": "exec",
+            "target": "killall -9 quake2 && reset"
         }
     ]
 }

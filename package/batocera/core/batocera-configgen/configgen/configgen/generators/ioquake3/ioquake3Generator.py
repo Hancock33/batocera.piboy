@@ -29,7 +29,7 @@ class IOQuake3Generator(Generator):
         if not destination_file.is_file() or source_file.stat().st_mtime > destination_file.stat().st_mtime:
             shutil.copytree(source_dir, IOQUAKE3_ROMS, dirs_exist_ok=True)
 
-        commandArray = ["/userdata/roms/ports/quake3/ioquake3"]
+        commandArray = ["/userdata/roms/ports/quake3/ioquake3", "+set", "cl_renderer", "vulkan"]
 
         # get the game / mod to launch
         with rom_path.open("r") as file:
