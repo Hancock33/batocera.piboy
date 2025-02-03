@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/Makefile b/drivers/gpu/drm/Makefile
-index 463afad1b5ca..931dc504be10 100644
+index 19fb370fbc56..3149319dc2d4 100644
 --- a/drivers/gpu/drm/Makefile
 +++ b/drivers/gpu/drm/Makefile
 @@ -56,6 +56,7 @@ drm-y := \
@@ -11,7 +11,7 @@ index 463afad1b5ca..931dc504be10 100644
  	drm_mode_config.o \
  	drm_mode_object.o \
 diff --git a/drivers/gpu/drm/drm_modes.c b/drivers/gpu/drm/drm_modes.c
-index 71573b85d924..88457c12f3b8 100644
+index e72f855fc495..35e07d1b9f94 100644
 --- a/drivers/gpu/drm/drm_modes.c
 +++ b/drivers/gpu/drm/drm_modes.c
 @@ -48,6 +48,7 @@
@@ -22,7 +22,7 @@ index 71573b85d924..88457c12f3b8 100644
  
  /**
   * drm_mode_debug_printmodeline - print a mode to dmesg
-@@ -2031,7 +2032,7 @@ static int drm_mode_parse_cmdline_res_mode(const char *str, unsigned int length,
+@@ -2030,7 +2031,7 @@ static int drm_mode_parse_cmdline_res_mode(const char *str, unsigned int length,
  					   struct drm_cmdline_mode *mode)
  {
  	const char *str_start = str;
@@ -31,7 +31,7 @@ index 71573b85d924..88457c12f3b8 100644
  	int xres = 0, yres = 0;
  	int remaining, i;
  	char *end_ptr;
-@@ -2061,6 +2062,12 @@ static int drm_mode_parse_cmdline_res_mode(const char *str, unsigned int length,
+@@ -2060,6 +2061,12 @@ static int drm_mode_parse_cmdline_res_mode(const char *str, unsigned int length,
  		case 'R':
  			rb = true;
  			break;
@@ -44,7 +44,7 @@ index 71573b85d924..88457c12f3b8 100644
  		default:
  			/*
  			 * Try to pass that to our extras parsing
-@@ -2085,6 +2092,7 @@ static int drm_mode_parse_cmdline_res_mode(const char *str, unsigned int length,
+@@ -2084,6 +2091,7 @@ static int drm_mode_parse_cmdline_res_mode(const char *str, unsigned int length,
  	mode->yres = yres;
  	mode->cvt = cvt;
  	mode->rb = rb;
@@ -52,7 +52,7 @@ index 71573b85d924..88457c12f3b8 100644
  
  	return 0;
  }
-@@ -2548,7 +2556,11 @@ drm_mode_create_from_cmdline_mode(struct drm_device *dev,
+@@ -2547,7 +2555,11 @@ drm_mode_create_from_cmdline_mode(struct drm_device *dev,
  
  	if (strlen(cmd->name))
  		mode = drm_named_mode(dev, cmd);
@@ -324,10 +324,10 @@ index 96b266b37ba4..7fee013ae4b2 100644
  
  		/*
 diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
-index e3fa43291f44..4fc44b1c943c 100644
+index f13d597370a3..1fe19af1ca39 100644
 --- a/include/drm/drm_connector.h
 +++ b/include/drm/drm_connector.h
-@@ -1600,6 +1600,13 @@ struct drm_cmdline_mode {
+@@ -1665,6 +1665,13 @@ struct drm_cmdline_mode {
  	 */
  	bool interlace;
  

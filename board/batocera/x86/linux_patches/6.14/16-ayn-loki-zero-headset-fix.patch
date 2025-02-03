@@ -1,8 +1,8 @@
 diff --git a/sound/pci/hda/patch_realtek.c b/sound/pci/hda/patch_realtek.c
-index ad66378d7321..c51ae8bdbc21 100644
+index 8192be394d0d..92e2289fdfcb 100644
 --- a/sound/pci/hda/patch_realtek.c
 +++ b/sound/pci/hda/patch_realtek.c
-@@ -6727,6 +6727,20 @@ static void alc294_gx502_toggle_output(struct hda_codec *codec,
+@@ -6725,6 +6725,20 @@ static void alc294_gx502_toggle_output(struct hda_codec *codec,
  		alc_write_coef_idx(codec, 0x10, 0x0a20);
  }
  
@@ -23,7 +23,7 @@ index ad66378d7321..c51ae8bdbc21 100644
  static void alc294_fixup_gx502_hp(struct hda_codec *codec,
  					const struct hda_fixup *fix, int action)
  {
-@@ -7532,6 +7546,7 @@ enum {
+@@ -7554,6 +7568,7 @@ enum {
  	ALC269_FIXUP_DELL4_MIC_NO_PRESENCE,
  	ALC269_FIXUP_DELL4_MIC_NO_PRESENCE_QUIET,
  	ALC269_FIXUP_HEADSET_MODE,
@@ -31,7 +31,7 @@ index ad66378d7321..c51ae8bdbc21 100644
  	ALC269_FIXUP_HEADSET_MODE_NO_HP_MIC,
  	ALC269_FIXUP_ASPIRE_HEADSET_MIC,
  	ALC269_FIXUP_ASUS_X101_FUNC,
-@@ -9040,6 +9055,10 @@ static const struct hda_fixup alc269_fixups[] = {
+@@ -9071,6 +9086,10 @@ static const struct hda_fixup alc269_fixups[] = {
  			{ 0x1b, 0x90170152 } /* use as internal speaker (back) */
  		}
  	},
@@ -42,7 +42,7 @@ index ad66378d7321..c51ae8bdbc21 100644
  	[ALC299_FIXUP_PREDATOR_SPK] = {
  		.type = HDA_FIXUP_PINS,
  		.v.pins = (const struct hda_pintbl[]) {
-@@ -10998,6 +11017,7 @@ static const struct hda_quirk alc269_fixup_tbl[] = {
+@@ -11045,6 +11064,7 @@ static const struct hda_quirk alc269_fixup_tbl[] = {
  	SND_PCI_QUIRK(0x1d72, 0x1945, "Redmi G", ALC256_FIXUP_ASUS_HEADSET_MIC),
  	SND_PCI_QUIRK(0x1d72, 0x1947, "RedmiBook Air", ALC255_FIXUP_XIAOMI_HEADSET_MIC),
  	SND_PCI_QUIRK(0x1f66, 0x0105, "Ayaneo Portable Game Player", ALC287_FIXUP_CS35L41_I2C_2),

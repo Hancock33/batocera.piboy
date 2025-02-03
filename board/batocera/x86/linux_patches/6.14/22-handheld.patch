@@ -187,7 +187,7 @@ index a51f3414b65d..bc0f9759c5c5 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/amdgpu/sdma_v5_2.c b/drivers/gpu/drm/amd/amdgpu/sdma_v5_2.c
-index ba5160399ab2..ee80e748597e 100644
+index b1818e87889a..f13e5eecd32a 100644
 --- a/drivers/gpu/drm/amd/amdgpu/sdma_v5_2.c
 +++ b/drivers/gpu/drm/amd/amdgpu/sdma_v5_2.c
 @@ -1339,7 +1339,7 @@ static int sdma_v5_2_sw_init(struct amdgpu_ip_block *ip_block)
@@ -200,10 +200,10 @@ index ba5160399ab2..ee80e748597e 100644
  
  		DRM_INFO("use_doorbell being set to: [%s]\n",
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index aea78d5c0a0f..e2536ad56d9f 100644
+index 40b298f8452d..273d81207a28 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -162,6 +162,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
+@@ -164,6 +164,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
  /* Number of bytes in PSP footer for firmware. */
  #define PSP_FOOTER_BYTES 0x100
  
@@ -213,7 +213,7 @@ index aea78d5c0a0f..e2536ad56d9f 100644
  /**
   * DOC: overview
   *
-@@ -4569,7 +4572,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4635,7 +4638,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  	return 0;
  }
  
@@ -222,7 +222,7 @@ index aea78d5c0a0f..e2536ad56d9f 100644
  #define AMDGPU_DM_DEFAULT_MAX_BACKLIGHT 255
  #define AMDGPU_DM_MIN_SPREAD ((AMDGPU_DM_DEFAULT_MAX_BACKLIGHT - AMDGPU_DM_DEFAULT_MIN_BACKLIGHT) / 2)
  #define AUX_BL_DEFAULT_TRANSITION_TIME_MS 50
-@@ -4603,11 +4606,27 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
+@@ -4669,11 +4672,27 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
  
  	if (caps.caps_valid) {
  		dm->backlight_caps[bl_idx].caps_valid = true;
@@ -250,7 +250,7 @@ index aea78d5c0a0f..e2536ad56d9f 100644
  		dm->backlight_caps[bl_idx].min_input_signal =
  				AMDGPU_DM_DEFAULT_MIN_BACKLIGHT;
  		dm->backlight_caps[bl_idx].max_input_signal =
-@@ -4617,6 +4636,9 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
+@@ -4683,6 +4702,9 @@ static void amdgpu_dm_update_backlight_caps(struct amdgpu_display_manager *dm,
  	if (dm->backlight_caps[bl_idx].aux_support)
  		return;
  
@@ -260,7 +260,7 @@ index aea78d5c0a0f..e2536ad56d9f 100644
  	dm->backlight_caps[bl_idx].min_input_signal = AMDGPU_DM_DEFAULT_MIN_BACKLIGHT;
  	dm->backlight_caps[bl_idx].max_input_signal = AMDGPU_DM_DEFAULT_MAX_BACKLIGHT;
  #endif
-@@ -4648,9 +4670,9 @@ static u32 convert_brightness_from_user(const struct amdgpu_dm_backlight_caps *c
+@@ -4714,9 +4736,9 @@ static u32 convert_brightness_from_user(const struct amdgpu_dm_backlight_caps *c
  	if (!get_brightness_range(caps, &min, &max))
  		return brightness;
  
@@ -273,7 +273,7 @@ index aea78d5c0a0f..e2536ad56d9f 100644
  }
  
  static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *caps,
-@@ -4663,9 +4685,9 @@ static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *cap
+@@ -4729,9 +4751,9 @@ static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *cap
  
  	if (brightness < min)
  		return 0;
@@ -286,7 +286,7 @@ index aea78d5c0a0f..e2536ad56d9f 100644
  }
  
  static void amdgpu_dm_backlight_set_level(struct amdgpu_display_manager *dm,
-@@ -9007,7 +9029,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -9096,7 +9118,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -323,7 +323,7 @@ index a2252a53c110..b17c809a207c 100644
  	/*
  	 * Add the logic to extract BOTH power up and power down sequences
 diff --git a/drivers/gpu/drm/amd/display/dc/link/link_validation.c b/drivers/gpu/drm/amd/display/dc/link/link_validation.c
-index 60f15a9ba7a5..c3da48c213d4 100644
+index 29606fda029d..ff127f8a405b 100644
 --- a/drivers/gpu/drm/amd/display/dc/link/link_validation.c
 +++ b/drivers/gpu/drm/amd/display/dc/link/link_validation.c
 @@ -35,6 +35,8 @@
@@ -352,10 +352,10 @@ index 60f15a9ba7a5..c3da48c213d4 100644
  
  	/* TODO: DYNAMIC_VALIDATION needs to be implemented */
 diff --git a/drivers/hid/Kconfig b/drivers/hid/Kconfig
-index 311f0ab5d42f..79426232a460 100644
+index b53eb569bd49..ced5e52d27a5 100644
 --- a/drivers/hid/Kconfig
 +++ b/drivers/hid/Kconfig
-@@ -189,6 +189,15 @@ config HID_ASUS
+@@ -164,6 +164,15 @@ config HID_ASUS
  	- GL553V series
  	- GL753V series
  
@@ -372,11 +372,11 @@ index 311f0ab5d42f..79426232a460 100644
  	tristate "Aureal"
  	help
 diff --git a/drivers/hid/Makefile b/drivers/hid/Makefile
-index 1989288e0438..a6a50ebf9b17 100644
+index 482b096eea28..7aba738d9355 100644
 --- a/drivers/hid/Makefile
 +++ b/drivers/hid/Makefile
-@@ -33,6 +33,7 @@ obj-$(CONFIG_HID_APPLETB_BL)	+= hid-appletb-bl.o
- obj-$(CONFIG_HID_APPLETB_KBD)	+= hid-appletb-kbd.o
+@@ -31,6 +31,7 @@ obj-$(CONFIG_HID_APPLE)		+= hid-apple.o
+ obj-$(CONFIG_HID_APPLEIR)	+= hid-appleir.o
  obj-$(CONFIG_HID_CREATIVE_SB0540)	+= hid-creative-sb0540.o
  obj-$(CONFIG_HID_ASUS)		+= hid-asus.o
 +obj-$(CONFIG_HID_ASUS_ALLY)	+= hid-asus-ally.o
@@ -3105,10 +3105,10 @@ index 46e3e42f9eb5..b89329f78257 100644
 +MODULE_IMPORT_NS("ASUS_WMI");
  MODULE_LICENSE("GPL");
 diff --git a/drivers/hwmon/Kconfig b/drivers/hwmon/Kconfig
-index dd376602f3f1..825966b9d109 100644
+index 4cbaba15d86e..12bfba7491c1 100644
 --- a/drivers/hwmon/Kconfig
 +++ b/drivers/hwmon/Kconfig
-@@ -2075,6 +2075,17 @@ config SENSORS_SCH5636
+@@ -2089,6 +2089,17 @@ config SENSORS_SCH5636
  	  This driver can also be built as a module. If so, the module
  	  will be called sch5636.
  
@@ -3127,10 +3127,10 @@ index dd376602f3f1..825966b9d109 100644
  	tristate "ST Microelectronics STTS751"
  	depends on I2C
 diff --git a/drivers/hwmon/Makefile b/drivers/hwmon/Makefile
-index b827b92f2a78..b13f2b293838 100644
+index b7ef0f0562d3..664e79b0995f 100644
 --- a/drivers/hwmon/Makefile
 +++ b/drivers/hwmon/Makefile
-@@ -209,6 +209,7 @@ obj-$(CONFIG_SENSORS_SMSC47B397)+= smsc47b397.o
+@@ -210,6 +210,7 @@ obj-$(CONFIG_SENSORS_SMSC47B397)+= smsc47b397.o
  obj-$(CONFIG_SENSORS_SMSC47M1)	+= smsc47m1.o
  obj-$(CONFIG_SENSORS_SMSC47M192)+= smsc47m192.o
  obj-$(CONFIG_SENSORS_SPARX5)	+= sparx5-temp.o
@@ -3439,10 +3439,10 @@ index 000000000000..9d0a5471b181
 +MODULE_DESCRIPTION("Steam Deck EC sensors driver");
 +MODULE_LICENSE("GPL");
 diff --git a/drivers/leds/Kconfig b/drivers/leds/Kconfig
-index b784bb74a837..fb3d45acfd9d 100644
+index 2b27d043921c..e39a279d5290 100644
 --- a/drivers/leds/Kconfig
 +++ b/drivers/leds/Kconfig
-@@ -959,6 +959,13 @@ config LEDS_ACER_A500
+@@ -1003,6 +1003,13 @@ config LEDS_ACER_A500
  	  This option enables support for the Power Button LED of
  	  Acer Iconia Tab A500.
  
@@ -3457,13 +3457,13 @@ index b784bb74a837..fb3d45acfd9d 100644
  
  comment "Flash and Torch LED drivers"
 diff --git a/drivers/leds/Makefile b/drivers/leds/Makefile
-index 18afbb5a23ee..b0ff19d14419 100644
+index 6ad52e219ec6..2ec1c891388e 100644
 --- a/drivers/leds/Makefile
 +++ b/drivers/leds/Makefile
-@@ -81,6 +81,7 @@ obj-$(CONFIG_LEDS_POWERNV)		+= leds-powernv.o
- obj-$(CONFIG_LEDS_PWM)			+= leds-pwm.o
+@@ -84,6 +84,7 @@ obj-$(CONFIG_LEDS_QNAP_MCU)		+= leds-qnap-mcu.o
  obj-$(CONFIG_LEDS_REGULATOR)		+= leds-regulator.o
  obj-$(CONFIG_LEDS_SC27XX_BLTC)		+= leds-sc27xx-bltc.o
+ obj-$(CONFIG_LEDS_ST1202)		+= leds-st1202.o
 +obj-$(CONFIG_LEDS_STEAMDECK)		+= leds-steamdeck.o
  obj-$(CONFIG_LEDS_SUN50I_A100)		+= leds-sun50i-a100.o
  obj-$(CONFIG_LEDS_SUNFIRE)		+= leds-sunfire.o
@@ -3549,12 +3549,12 @@ index 000000000000..56d31d2dd099
 +MODULE_DESCRIPTION("Steam Deck LEDs driver");
 +MODULE_LICENSE("GPL");
 diff --git a/drivers/mfd/Kconfig b/drivers/mfd/Kconfig
-index ae23b317a64e..7417c480275a 100644
+index 6b0682af6e32..d4ce0aaa652b 100644
 --- a/drivers/mfd/Kconfig
 +++ b/drivers/mfd/Kconfig
-@@ -2414,5 +2414,16 @@ config MFD_RSMU_SPI
- 	  Additional drivers must be enabled in order to use the functionality
- 	  of the device.
+@@ -2439,5 +2439,16 @@ config MFD_UPBOARD_FPGA
+ 	  To compile this driver as a module, choose M here: the module will be
+ 	  called upboard-fpga.
  
 +config MFD_STEAMDECK
 +	tristate "Valve Steam Deck"
@@ -3570,15 +3570,15 @@ index ae23b317a64e..7417c480275a 100644
  endmenu
  endif
 diff --git a/drivers/mfd/Makefile b/drivers/mfd/Makefile
-index e057d6d6faef..2f9f8a0daf5e 100644
+index 9220eaf7cf12..95cdfd0ec35b 100644
 --- a/drivers/mfd/Makefile
 +++ b/drivers/mfd/Makefile
-@@ -290,3 +290,5 @@ obj-$(CONFIG_MFD_ATC260X_I2C)	+= atc260x-i2c.o
- 
+@@ -293,4 +293,5 @@ obj-$(CONFIG_MFD_QNAP_MCU)	+= qnap-mcu.o
  obj-$(CONFIG_MFD_RSMU_I2C)	+= rsmu_i2c.o rsmu_core.o
  obj-$(CONFIG_MFD_RSMU_SPI)	+= rsmu_spi.o rsmu_core.o
-+
+ 
 +obj-$(CONFIG_MFD_STEAMDECK)	+= steamdeck.o
+ obj-$(CONFIG_MFD_UPBOARD_FPGA)	+= upboard-fpga.o
 diff --git a/drivers/mfd/steamdeck.c b/drivers/mfd/steamdeck.c
 new file mode 100644
 index 000000000000..a60fa7db9141
@@ -5128,7 +5128,7 @@ index 000000000000..2620708d3994
 +
 +#endif /* _ASUS_BIOSCFG_H_ */
 diff --git a/drivers/platform/x86/asus-wmi.c b/drivers/platform/x86/asus-wmi.c
-index 8bd187e8b47f..6bd89cd0acdf 100644
+index 38ef778e8c19..79e198497da6 100644
 --- a/drivers/platform/x86/asus-wmi.c
 +++ b/drivers/platform/x86/asus-wmi.c
 @@ -55,8 +55,6 @@ module_param(fnlock_default, bool, 0444);
@@ -5580,8 +5580,8 @@ index 8bd187e8b47f..6bd89cd0acdf 100644
 +#endif /* IS_ENABLED(CONFIG_ASUS_WMI_DEPRECATED_ATTRS) */
  
  /* Platform profile ***********************************************************/
- static int asus_wmi_platform_profile_get(struct platform_profile_handler *pprof,
-@@ -4388,27 +4490,29 @@ static struct attribute *platform_attributes[] = {
+ static int asus_wmi_platform_profile_get(struct device *dev,
+@@ -4392,27 +4494,29 @@ static struct attribute *platform_attributes[] = {
  	&dev_attr_camera.attr,
  	&dev_attr_cardr.attr,
  	&dev_attr_touchpad.attr,
@@ -5629,7 +5629,7 @@ index 8bd187e8b47f..6bd89cd0acdf 100644
  	NULL
  };
  
-@@ -4430,7 +4534,11 @@ static umode_t asus_sysfs_is_visible(struct kobject *kobj,
+@@ -4434,7 +4538,11 @@ static umode_t asus_sysfs_is_visible(struct kobject *kobj,
  		devid = ASUS_WMI_DEVID_LID_RESUME;
  	else if (attr == &dev_attr_als_enable.attr)
  		devid = ASUS_WMI_DEVID_ALS_ENABLE;
@@ -5642,7 +5642,7 @@ index 8bd187e8b47f..6bd89cd0acdf 100644
  		devid = ASUS_WMI_DEVID_CHARGE_MODE;
  	else if (attr == &dev_attr_egpu_enable.attr)
  		ok = asus->egpu_enable_available;
-@@ -4468,6 +4576,7 @@ static umode_t asus_sysfs_is_visible(struct kobject *kobj,
+@@ -4472,6 +4580,7 @@ static umode_t asus_sysfs_is_visible(struct kobject *kobj,
  		ok = asus->mini_led_dev_id != 0;
  	else if (attr == &dev_attr_available_mini_led_mode.attr)
  		ok = asus->mini_led_dev_id != 0;
@@ -5650,7 +5650,7 @@ index 8bd187e8b47f..6bd89cd0acdf 100644
  
  	if (devid != -1) {
  		ok = !(asus_wmi_get_devstate_simple(asus, devid) < 0);
-@@ -4707,7 +4816,19 @@ static int asus_wmi_add(struct platform_device *pdev)
+@@ -4711,7 +4820,19 @@ static int asus_wmi_add(struct platform_device *pdev)
  	if (err)
  		goto fail_platform;
  
@@ -5670,7 +5670,7 @@ index 8bd187e8b47f..6bd89cd0acdf 100644
  	asus->ppt_pl2_sppt = 5;
  	asus->ppt_pl1_spl = 5;
  	asus->ppt_apu_sppt = 5;
-@@ -4719,8 +4840,6 @@ static int asus_wmi_add(struct platform_device *pdev)
+@@ -4723,8 +4844,6 @@ static int asus_wmi_add(struct platform_device *pdev)
  	asus->egpu_enable_available = asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_EGPU);
  	asus->dgpu_disable_available = asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_DGPU);
  	asus->kbd_rgb_state_available = asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_TUF_RGB_STATE);
@@ -5679,7 +5679,7 @@ index 8bd187e8b47f..6bd89cd0acdf 100644
  
  	if (asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_MINI_LED_MODE))
  		asus->mini_led_dev_id = ASUS_WMI_DEVID_MINI_LED_MODE;
-@@ -4731,23 +4850,24 @@ static int asus_wmi_add(struct platform_device *pdev)
+@@ -4735,23 +4854,24 @@ static int asus_wmi_add(struct platform_device *pdev)
  		asus->gpu_mux_dev = ASUS_WMI_DEVID_GPU_MUX;
  	else if (asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_GPU_MUX_VIVO))
  		asus->gpu_mux_dev = ASUS_WMI_DEVID_GPU_MUX_VIVO;
@@ -5710,7 +5710,7 @@ index 8bd187e8b47f..6bd89cd0acdf 100644
  		goto fail_platform_profile_setup;
  
  	err = asus_wmi_sysfs_init(asus->platform_device);
-@@ -4911,34 +5031,6 @@ static int asus_hotk_resume(struct device *device)
+@@ -4910,34 +5030,6 @@ static int asus_hotk_resume(struct device *device)
  	return 0;
  }
  
@@ -5745,7 +5745,7 @@ index 8bd187e8b47f..6bd89cd0acdf 100644
  static int asus_hotk_restore(struct device *device)
  {
  	struct asus_wmi *asus = dev_get_drvdata(device);
-@@ -4979,11 +5071,32 @@ static int asus_hotk_restore(struct device *device)
+@@ -4978,11 +5070,32 @@ static int asus_hotk_restore(struct device *device)
  	return 0;
  }
  
@@ -5779,7 +5779,7 @@ index 8bd187e8b47f..6bd89cd0acdf 100644
  	.prepare = asus_hotk_prepare,
  };
  
-@@ -5011,6 +5124,10 @@ static int asus_wmi_probe(struct platform_device *pdev)
+@@ -5010,6 +5123,10 @@ static int asus_wmi_probe(struct platform_device *pdev)
  			return ret;
  	}
  
@@ -5790,7 +5790,7 @@ index 8bd187e8b47f..6bd89cd0acdf 100644
  	return asus_wmi_add(pdev);
  }
  
-@@ -5043,6 +5160,7 @@ EXPORT_SYMBOL_GPL(asus_wmi_register_driver);
+@@ -5042,6 +5159,7 @@ EXPORT_SYMBOL_GPL(asus_wmi_register_driver);
  
  void asus_wmi_unregister_driver(struct asus_wmi_driver *driver)
  {

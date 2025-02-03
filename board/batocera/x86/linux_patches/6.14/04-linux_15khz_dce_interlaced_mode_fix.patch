@@ -23,7 +23,7 @@ index 681799468487..bbb53fce875b 100644
  		num_displays++;
  	}
 diff --git a/drivers/gpu/drm/amd/display/dc/dce110/dce110_timing_generator.c b/drivers/gpu/drm/amd/display/dc/dce110/dce110_timing_generator.c
-index fa422a8cbced..c302f239e67f 100644
+index 61b0807693fb..c8b8dd49b77d 100644
 --- a/drivers/gpu/drm/amd/display/dc/dce110/dce110_timing_generator.c
 +++ b/drivers/gpu/drm/amd/display/dc/dce110/dce110_timing_generator.c
 @@ -1132,10 +1132,6 @@ bool dce110_timing_generator_validate_timing(
@@ -83,7 +83,7 @@ index fa422a8cbced..c302f239e67f 100644
  {
  	struct dce110_timing_generator *tg110 = DCE110TG_FROM_TG(tg);
 diff --git a/drivers/gpu/drm/amd/display/dc/dce110/dce110_timing_generator.h b/drivers/gpu/drm/amd/display/dc/dce110/dce110_timing_generator.h
-index ee4de740aceb..eafade1cea23 100644
+index e4f5cad64f32..e45663661dec 100644
 --- a/drivers/gpu/drm/amd/display/dc/dce110/dce110_timing_generator.h
 +++ b/drivers/gpu/drm/amd/display/dc/dce110/dce110_timing_generator.h
 @@ -265,6 +265,15 @@ void dce110_tg_program_timing(struct timing_generator *tg,
@@ -103,7 +103,7 @@ index ee4de740aceb..eafade1cea23 100644
  
  void dce110_tg_set_blank(struct timing_generator *tg,
 diff --git a/drivers/gpu/drm/amd/display/dc/dce120/dce120_timing_generator.c b/drivers/gpu/drm/amd/display/dc/dce120/dce120_timing_generator.c
-index fcf59348eb62..9dcedb8f7647 100644
+index 31c4f44ceaac..be55de3077f1 100644
 --- a/drivers/gpu/drm/amd/display/dc/dce120/dce120_timing_generator.c
 +++ b/drivers/gpu/drm/amd/display/dc/dce120/dce120_timing_generator.c
 @@ -705,6 +705,15 @@ static void dce120_tg_program_timing(struct timing_generator *tg,
