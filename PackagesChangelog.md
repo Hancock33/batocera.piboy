@@ -13,7 +13,9 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|5610b6c888fb68a7ec27a859849d887
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|528192a9d9a7c04b0b41f292b739cebe1bb7f58d|Feb 03, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|5ecf3a0647efb2f6a8cb3e1d9d1e824aafd785ba|Feb 03, 2025
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.5|Feb 03, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250203|Feb 03, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|f73df57a1aabae050c55fd66ae03eb0f2e74bf0a|Feb 03, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250203|Feb 03, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|a042ae03d62b9e6610242ba008f532cf350c2df9|Feb 03, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|f9ccc7a29651754f3956b266fc68dab8253e862a|Feb 03, 2025
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|423100234457c785c5c5fc77c19eecec7af12953|Feb 03, 2025
@@ -35,9 +37,7 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|8df046b4bf84e0d00356ca40a2
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|8572535bd7f25e6584d59a3fbf26ab1853008750|Feb 02, 2025
 Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|2e607f0515371ad1bb1bc5ae38856e7f1d6efe4d|Feb 02, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|af3b9d49055c3e4c8dfeaff546654b5d3de1d855|Feb 02, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250202|Feb 02, 2025
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|fc65b19d2098cf81e55b4edc10adad2ad8268361|Feb 02, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250202|Feb 02, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|0b850dd08b20f2fe539c81118295f6a1cd68f602|Feb 02, 2025
 Emulators|[libretro-bennugd](http://github.com/diekleinekuh/BennuGD_libretro)|b65b00adaa2bc7e3790ba185b96907661e06e191|Feb 02, 2025
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|86d1bde8458a239cd10571c235400b74f3920904|Feb 02, 2025
