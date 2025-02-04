@@ -8,6 +8,7 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|e80941403a1150f773fe4
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-02-03|Feb 03, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.333|Feb 03, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|8ad650582a947fecd4308d29d83955de9be9f11a|Feb 03, 2025
+Looks|[nanum_font](http://github.com/bulzipke/nanum-font)|2385eb085e4bf326590a2db6d4514e8477d9922f|Feb 03, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|8bb53e10018e7ebee785afc8ad571f1cee5f9bef|Feb 03, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|5610b6c888fb68a7ec27a859849d887f765cbe3e|Feb 03, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|528192a9d9a7c04b0b41f292b739cebe1bb7f58d|Feb 03, 2025
@@ -547,7 +548,6 @@ Controllers|[qtsixa](http://github.com/batocera-linux/qtsixa)|eec727030f341cf543
 Controllers|[qtsixa-shanwan](http://github.com/batocera-linux/qtsixa)|f01193703070a0d0f5db582bb0a6fe8c21ebf517|May 01, 2016
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Utils|[evmapy](http://github.com/kempniu/evmapy)|bd65338c236cd30b4f2d7835733ea5d6b108b75d|Jul 09, 2015
-Looks|[nanum_font](http://github.com/ujuc/nanum-font)|33a5dec3cd6467979fed8ebfa64430d7cebdff9d|Oct 04, 2014
 Libraries|[python-proxy-tools](https://files.pythonhosted.org/packages/f2/cf/77d3e19b7fabd03895caca7857ef51e4c409e0ca6b37ee6e9f7daa50b642)|0.1.0|May 06, 2014
 Emulators|[model2emu](https://github.com/batocera-linux/model2emu/raw/main)|1.1a|Jan 02, 2014
 Utils|[xxd](http://github.com/ConorOG/xxd)|084dc9dec6b6a6d048934916aa9a539d49ba898d|Jul 25, 2013
