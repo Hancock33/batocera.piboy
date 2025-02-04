@@ -12,6 +12,9 @@ model2emu.mk
 noto-cjk-fonts.mk
 openbor6412.mk
 openbor7142.mk
+vulkan-utility-libraries.mk
+vulkan-validationlayers.mk
+vulkan-volk.mk
 wine-cachyos.mk
 wine-native.mk
 wine-ntsync.mk
