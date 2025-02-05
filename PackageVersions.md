@@ -59,8 +59,8 @@ Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-control
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|e6241340d292dee20406a0567262a78ff34d45f7|Jun 02, 2021
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.11|Nov 11, 2024
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|837c4f33df4940fb702304280305a86355e55b46|Feb 02, 2025
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|837c4f33df4940fb702304280305a86355e55b46|Feb 02, 2025
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|e2df24d1a96f1a23898a71ca01d792c44ccdcb1a|Feb 05, 2025
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|e2df24d1a96f1a23898a71ca01d792c44ccdcb1a|Feb 05, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|3e1293ee827b741e2a6d33704a79f85e70a9d931|Jan 13, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|4b60eae8e66cc61f1d610c1aec9187cde7594439|Jan 26, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|1889fe2ae8ae48fc530a2477ea22cfc95db02f76|Feb 04, 2025
@@ -295,7 +295,7 @@ Emulators|[vita3k](https://github.com/vita3k/vita3k)|009adf6c7cfbed6b2a86be2e2c6
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|5a81d4e3292ff4adba7327017dd1ab840765b60a|Jul 23, 2024
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r48|Sept 06, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|86344a8543194f4e21d3777a382c608fc4fff4f2|Jan 26, 2025
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|b7b707ddd2b447bfb7c2f30050bf86aa107c9a55|Feb 01, 2025
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|a4412ad40d985acd11f28b50277b07aff51c44ca|Jan 28, 2025
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|b7b707ddd2b447bfb7c2f30050bf86aa107c9a55|Feb 01, 2025
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024

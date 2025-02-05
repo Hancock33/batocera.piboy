@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|e2df24d1a96f1a23898a71ca01d792c44ccdcb1a|Feb 05, 2025
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|e2df24d1a96f1a23898a71ca01d792c44ccdcb1a|Feb 05, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|1889fe2ae8ae48fc530a2477ea22cfc95db02f76|Feb 04, 2025
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|a6fb0a48eb437a8a41c13b782ac8ae0433bf8f98|Feb 04, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|99e3c6e2656df635896a3faf6c3f92caf32988e9|Feb 04, 2025
@@ -44,8 +46,6 @@ Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.5|Feb 03, 2025
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.9.1|Feb 03, 2025
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|a68cb40bf6268e1821375ce1e9eed8f096d01ac9|Feb 03, 2025
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|5ae41b82e7eff1a850c47d94bfe0cc73aa56d585|Feb 03, 2025
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|837c4f33df4940fb702304280305a86355e55b46|Feb 02, 2025
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|837c4f33df4940fb702304280305a86355e55b46|Feb 02, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45471|Feb 02, 2025
 Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.2.2|Feb 02, 2025
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|55235f9eec91f71e2415060d215a91a303e0e046|Feb 02, 2025
@@ -60,7 +60,6 @@ Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|86d
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|2ab707c0ca68a558a57436dc901867b797d79b2e|Feb 02, 2025
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.02|Feb 01, 2025
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.02.01|Feb 01, 2025
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|b7b707ddd2b447bfb7c2f30050bf86aa107c9a55|Feb 01, 2025
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|b7b707ddd2b447bfb7c2f30050bf86aa107c9a55|Feb 01, 2025
 Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|37e8585e9155514ea8beff8c51517e56c60a7510|Feb 01, 2025
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|8544d48aed9718746f6194f7011c1b64a62fb4b5|Feb 01, 2025
@@ -96,6 +95,7 @@ Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|10938285da0765a77df
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|v3.6.0-1227-ecd032e|Jan 29, 2025
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|10938285da0765a77df29e55a656729482e1d9b6|Jan 29, 2025
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.3.4|Jan 28, 2025
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|a4412ad40d985acd11f28b50277b07aff51c44ca|Jan 28, 2025
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|2491828266d99ddd091da7c85405ba6dddd0fccd|Jan 28, 2025
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|bd27866d620d2218eb54d8094e7cc0771df05ac2|Jan 28, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|dbfaff23f96e7837ce7931dd5d0f5b06528bed29|Jan 28, 2025
