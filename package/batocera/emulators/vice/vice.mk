@@ -3,8 +3,8 @@
 # vice
 #
 ################################################################################
-# Version: Commits on Feb 02, 2025
-VICE_VERSION = r45471
+# Version: Commits on Feb 05, 2025
+VICE_VERSION = r45472
 VICE_SITE = $(call github,VICE-Team,svn-mirror,$(VICE_VERSION))
 VICE_LICENSE = GPLv2
 VICE_DEPENDENCIES = alsa-lib ffmpeg4 giflib host-dos2unix host-xa jpeg lame libcurl libpng sdl2 sdl2_image zlib

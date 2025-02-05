@@ -3,8 +3,8 @@
 # d3le
 #
 ################################################################################
-# Version: Commits on Apr 19, 2024
-D3LE_VERSION = 0e6e3519b21eae4690810180210cc90b0174dc3d
+# Version: Commits on Feb 05, 2025
+D3LE_VERSION = f1cf9267b0f3b7100ae6ecdbdc5a44b98547f246
 D3LE_SITE = $(call github,dhewm,dhewm3-sdk,$(D3LE_VERSION))
 D3LE_BRANCH = d3le
 D3LE_LICENSE = GPLv3

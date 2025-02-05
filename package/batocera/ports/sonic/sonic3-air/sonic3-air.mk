@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Feb 04, 2025
-SONIC3_AIR_VERSION = a69a75284eebbe94f50e0e5a0369592d6555f7d1
+SONIC3_AIR_VERSION = dbc524b29b167c9f7141a28dbec57f728a837710
 SONIC3_AIR_SITE = $(call github,Eukaryot,sonic3air,$(SONIC3_AIR_VERSION))
 SONIC3_AIR_LICENSE = GPL-3.0
 SONIC3_AIR_LICENSE_FILE = COPYING.txt
