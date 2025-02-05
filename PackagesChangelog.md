@@ -17,7 +17,9 @@ Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|e55f2c3b8ad
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|0257a163b2eab2d0d359b3f051629064b13ef97c|Feb 05, 2025
 Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|09a93673270e4777ef74e0403c9219b3c8c2ce56|Feb 05, 2025
 Utils|[raspi2png](http://github.com/AndrewFromMelbourne/raspi2png)|07f5e76e72516f24329def599ac2d8841946a5f6|Feb 05, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250205|Feb 05, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|998200793d0a89c6561bc799ea4a65c0952d12d8|Feb 05, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250205|Feb 05, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|1d99f65e863b8bfbd0efe9e8700173c83850bd5f|Feb 05, 2025
 Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)|12a596d9bc894dfb6def9b9094c30d16cef7834a|Feb 05, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|fd574c231fbea455d2859af002db9d2c6f8f6113|Feb 05, 2025
@@ -37,8 +39,6 @@ Network|[rtl8812au](http://github.com/morrownr/8812au-20210820)|e8be0fcfef8ffc51
 Network|[rtl8821au-morrownr](http://github.com/morrownr/8821au-20210708)|eb5cee534d9fa58198c687bd721ea03fdd8cca30|Feb 04, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|a33d935ec9be3df95bb422cdffe43b28da465380|Feb 04, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14192|Feb 04, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250204|Feb 04, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250204|Feb 04, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|a872097da11c860d27445def4ead9950a7c177dc|Feb 04, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|6b61602134f5a07a724ea590b872cf441c36d8bf|Feb 04, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|dbc524b29b167c9f7141a28dbec57f728a837710|Feb 04, 2025
