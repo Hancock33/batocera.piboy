@@ -15,9 +15,11 @@ Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|c36ad5d94bdd
 Ports|[box64](http://github.com/ptitseb/box64)|5cfd379e9703266cf4b3778993bc94d0b691fcfc|Feb 06, 2025
 Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|d40a12ea57df2e6f7c27ac40c8f549b905aa4e19|Feb 06, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|0f09f03d32ffdb326c83ea743cdb83d25ca54a0f|Feb 06, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250206|Feb 06, 2025
 Controllers|[new-lg4ff](http://github.com/berarma/new-lg4ff)|3f7739c251fa63ef7006a6cf584c394118298b34|Feb 06, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|bb9f07569c69ead707db921e7cdad8b08fde5f1e|Feb 06, 2025
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|5afd52cae1a7ac2f5e86722045da47ec3e876708|Feb 06, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250206|Feb 06, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|7db49b7b020e4961e7b79b18d729607b2f45c8cc|Feb 06, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|151e7fe37bbe9c115ba4115a598b40e4fb3f4a95|Feb 06, 2025
 Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)|9742097236de4a6139b00b942f64aea021ef0453|Feb 06, 2025
@@ -35,9 +37,7 @@ Emulators|[xemu](https://github.com/xemu-project/xemu)|ac781ea8d1dcd7e67de62ea7e
 Ports|[omf2097](http://github.com/omf2097/openomf)|5dede75bcd7470ef2612d9d04370eb9ca9d1f428|Feb 05, 2025
 Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|09a93673270e4777ef74e0403c9219b3c8c2ce56|Feb 05, 2025
 Utils|[raspi2png](http://github.com/AndrewFromMelbourne/raspi2png)|07f5e76e72516f24329def599ac2d8841946a5f6|Feb 05, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250205|Feb 05, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|26f70da7756497b819282d4a4b16cf4779b5ffcf|Feb 05, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250205|Feb 05, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|60957d171bfe546cbe0026c2097a251cc2ec092a|Feb 05, 2025
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|ac39419854862f51222976e7aad50dd6d820edf0|Feb 05, 2025
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|79aee1a6cbbf5c744ff6a80aad113b6e6dbe0464|Feb 05, 2025
