@@ -198,6 +198,8 @@ Wine|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-4c|Dec 
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|da219658c24c610ba82d5a07ea9897e8e0eef670|Dec 21, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20241221|Dec 21, 2024
 Libraries|[python-gpiod](https://files.pythonhosted.org/packages/17/3f/774043a7328048e506a80425d8c114f8faf445cfc958f7a59dedc0fcaf36)|2.2.3|Dec 20, 2024
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.4.304.0|Dec 20, 2024
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.4.304.0|Dec 20, 2024
 Boot|[rk3128-blobs](https://github.com/rockchip-linux/rkbin.git)|0f8ac860f0479da56a1decae207ddc99e289f2e2|Dec 19, 2024
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|cede5047101299802a9756f0885e24a5b6f2fbb5|Dec 19, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|d7ca2c04364a6dd0dac58b47151e04e26887e6f0|Dec 17, 2024
@@ -430,8 +432,6 @@ Hardware|[dockerpi-powerboard](http://github.com/geeekpi/dockerpi)|1e268b076bfb2
 Ports|[hcl](http://github.com/ptitSeb/hydracastlelabyrinth)|229369c222f8604530f5e06f795b4505ef21d439|Feb 28, 2024
 Utils|[xwiimote](http://github.com/xwiimote/xwiimote)|4df713d9037d814cc0c64197f69e5c78d55caaf1|Feb 28, 2024
 Emulators|[libretro-freej2me](http://github.com/hex007/freej2me)|8b9bc8a19baf26e3d92f88934a64a32f1cbc2795|Feb 16, 2024
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|07dde6534504812b892f940eaa71cc0255f6a8b3|Feb 03, 2024
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|v1.4.307|Jan 31, 2024
 Emulators|[libretro-citra](https://github.com/zorn-v/citra-libretro.git)|947ea2c7e426632392cf4bf44eab70de034267be|Jan 30, 2024
 Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-controller-overlays)|a77301e60ae6fef28d4ffd149b9618cbc697a4a2|Jan 20, 2024
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024

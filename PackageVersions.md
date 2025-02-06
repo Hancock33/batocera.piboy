@@ -333,9 +333,9 @@ Gpu|[shaderc](http://github.com/google/shaderc)|v2024.4|Dec 06, 2024
 Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.4.304.0|Dec 12, 2024
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|fc65b19d2098cf81e55b4edc10adad2ad8268361|Feb 02, 2025
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|40e3b440ef0f1c5e5abcf7c85f9de332e1f13503|Jan 27, 2025
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|v1.4.307|Jan 31, 2024
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.4.304.0|Dec 20, 2024
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.4.304.0|Jan 10, 2025
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|07dde6534504812b892f940eaa71cc0255f6a8b3|Feb 03, 2024
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.4.304.0|Dec 20, 2024
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.4|Dec 06, 2024
 Hardware|[ayn-platform](http://github.com/ShadowBlip/ayn-platform)|v0.5.2|Jul 29, 2024
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|923de3203a000f8d8ffefb5ca15d296eb5d3c425|Oct 25, 2024
