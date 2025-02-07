@@ -19,6 +19,12 @@ CGENIUS_CONF_OPTS += -DBUILD_COSMOS=1
 CGENIUS_CONF_OPTS += -DGAMES_SHAREDIR=/userdata/roms/ports/cgenius
 CGENIUS_CONF_OPTS += -DFULL_GAMES_SHAREDIR=/userdata/roms/ports/cgenius
 
+ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
+CGENIUS_CONF_OPTS += -DUSE_OPENGL=ON
+else
+CGENIUS_CONF_OPTS += -DUSE_OPENGL=OFF
+endif
+
 define CGENIUS_INSTALL_TARGET_EVMAP
 	rm -rf $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/cgenius
 	mv $(TARGET_DIR)/userdata/roms/ports/cgenius/commandergenius $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/cgenius
