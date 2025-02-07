@@ -17,7 +17,9 @@ Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|41f709eb6bed312d41120ab
 Ports|[stk](http://github.com/supertuxkart/stk-code)|502fcf5e267463cedfac1ec437d7e8e1c1f311b1|Feb 07, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|cf82b34cf184f149d99d6d75ac9d623a09edc5a7|Feb 07, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.29.3-rc.1|Feb 07, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250207|Feb 07, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|4232700de5f1901b761a12b93185ab27edfa8780|Feb 07, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250207|Feb 07, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|2d4ebe0ad558931bd427324bca9f0cef7ce6bd94|Feb 07, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|2b2c967e85329f19e7ad857b63ff27895c7eb442|Feb 07, 2025
 Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)|e33564666af20aeb2886153ceef5100d2bca6f30|Feb 07, 2025
@@ -35,10 +37,8 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|d5bd7d24aab9fec4d348c
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|a1a0333e56e2836ce713d8e9719325643467adc0|Feb 06, 2025
 Libraries|[ffmpeg-rockchip](https://github.com/nyanmisaka/ffmpeg-rockchip.git)|ea9247abf49356626bd7e8408c43839e048d6d9d|Feb 06, 2025
 Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|d40a12ea57df2e6f7c27ac40c8f549b905aa4e19|Feb 06, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250206|Feb 06, 2025
 Controllers|[new-lg4ff](http://github.com/berarma/new-lg4ff)|3f7739c251fa63ef7006a6cf584c394118298b34|Feb 06, 2025
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|5afd52cae1a7ac2f5e86722045da47ec3e876708|Feb 06, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250206|Feb 06, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|6ec8fe7ba76b6572da8a2c73777d93b4c8ab64e4|Feb 06, 2025
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|a1e6d69f819cd25a30c701d244315f648818a163|Feb 06, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|d5bd7d24aab9fec4d348ca6507ad426a15407138|Feb 06, 2025
