@@ -46,10 +46,10 @@
 - Batocera-wine: add saves directory and save files options
 - Libretro-virtualjaguar core can now load .zip ROMs
 ### Updated
-- BigPEmu to v117
+- BigPEmu to v118
 - Cemu to 2.5
-- Dolphin-Emu to 2412-145
-- ETLegacy to v2.83.1
+- Dolphin-Emu to 2412-268
+- ETLegacy to v2.83.2
 - Jazz2 to 3.1.0
 - GroovyMAME to 0.272
 - Gzdoom to g4.14.0
@@ -58,7 +58,7 @@
 - Libretro-Play! to Jan 12 2025 build
 - RetroArch to v1.20.0
 - Ruffle to Nightly-2024-12-28
-- RPCS3 to 0.0.34-17265
+- RPCS3 to 0.0.34-17438
 - ScummVM to v2.9.0
 - PCSX2 to v2.3.110
 - Play! to Jan 12 2025 build
@@ -67,14 +67,15 @@
 ### System
 - Bluez to 5.79
 - Buildroot to 2024.11.x with supporting package updates
-- Mesa3D to 24.3.3
-- Linux Kernel to 6.13
+- Mesa3D to 24.3.4
+- Linux Kernel to 6.13.1
 - GStreamer codecs to 1.24.10
-- SDL2 to 2.30.9
+- SDL2 to 2.30.11
 - Vulkan stack to v1.4.304
 - MPV to 0.39.0
 - Kodi to 21.2
 - Nvidia production driver to 570.86.16
+- LLVM to 19.1.7
 
 # 2024/12/xx - batocera.linux 41 - Golden-rayed Blue
 ### Special Notes
