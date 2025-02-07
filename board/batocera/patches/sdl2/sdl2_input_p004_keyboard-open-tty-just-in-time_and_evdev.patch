@@ -1,5 +1,5 @@
 diff --git a/src/core/linux/SDL_evdev.c b/src/core/linux/SDL_evdev.c
-index e3b836cf7..43f13f2f8 100644
+index de1b758db..910b7a063 100644
 --- a/src/core/linux/SDL_evdev.c
 +++ b/src/core/linux/SDL_evdev.c
 @@ -373,6 +373,11 @@ void SDL_EVDEV_Poll(void)

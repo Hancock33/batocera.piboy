@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-24 00:00+0100\n"
-"PO-Revision-Date: 2025-01-16 00:00+0100\n"
+"PO-Revision-Date: 2025-01-25 00:00+0100\n"
 "Last-Translator: roliverosc\n"
 "Language-Team: spanish\n"
 "Language: es\n"
@@ -2671,6 +2671,8 @@ msgstr ""
 msgctxt "game_options"
 msgid "Activate Doom DOS original music and throttle the Doom frame rate."
 msgstr ""
+"Activa la música original de Doom DOS y limita la velocidad de cuadros de "
+"Doom."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -4149,7 +4151,7 @@ msgstr "CABLE"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CARD READER"
-msgstr ""
+msgstr "LECTOR DE TARJETAS"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -5897,7 +5899,7 @@ msgstr "DOLBY PRO LOGIC II"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "DOOM"
-msgstr ""
+msgstr "DOOM"
 
 #. TRANSLATION: libretro/virtualjaguar
 msgctxt "game_options"
@@ -7173,7 +7175,7 @@ msgstr "Habilitar para mostrar si su BIOS tiene problemas conocidos."
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Enable to emulate the card reader in Virtua Tenis 3."
-msgstr ""
+msgstr "Habilitar para emular el lector de tarjetas en Virtua Tenis 3."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -8544,7 +8546,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader, lindbergh-loader, lindbergh-loader, lindbergh-loader, lindbergh-loader
 msgctxt "game_options"
 msgid "GAME OPTIONS"
-msgstr ""
+msgstr "OPCIONES DE JUEGO"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -9262,7 +9264,7 @@ msgstr "HST"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "HUMMER FLICKER FIX"
-msgstr ""
+msgstr "CORRECIÓN DE PARPADEO DEL HUMMER"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -10433,7 +10435,7 @@ msgstr "Flipper izquierdo"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Left Magna Save"
-msgstr "Magnasave izquierdo"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -11974,7 +11976,7 @@ msgstr "ESCALADO DE SALIDA"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "OUTRUN LENS GLARE"
-msgstr ""
+msgstr "DESTELLOS DE LUNETA EN OUTRUN"
 
 #. TRANSLATION: libretro/fceumm, libretro/mame, libretro/mamevirtual, libretro/mednafen_psx, libretro/mesen, ...
 msgctxt "game_options"
@@ -13745,7 +13747,7 @@ msgstr "Flipper derecho"
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
 msgid "Right Magna Save"
-msgstr "Magnasave derecho"
+msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -14823,7 +14825,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set to enable lens glare in Outrun 2."
-msgstr ""
+msgstr "Establezca para activar destellos en luneta en OutRun2."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14837,7 +14839,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set to on if you experience flickering in Hummer."
-msgstr ""
+msgstr "Activa esta función si experimentas parpadeos en Hummer."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -18856,6 +18858,10 @@ msgstr "amarillo/azul"
 #~ msgstr "Mapeo de teclado a joyport para 2 jugadores."
 
 #~ msgctxt "keys_files"
+#~ msgid "Left Manga Save"
+#~ msgstr "Magnasave izquierdo"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "Cagar estado slot 1"
 
@@ -19009,6 +19015,10 @@ msgstr "amarillo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Cambia automáticamente la altura de la pantalla."
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Manga Save"
+#~ msgstr "Magnasave derecho"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

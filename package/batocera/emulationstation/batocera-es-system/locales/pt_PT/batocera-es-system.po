@@ -6967,9 +6967,9 @@ msgid ""
 "features (like gyroscope for example), but can break older games with x-"
 "input support only."
 msgstr ""
-"Activar o acesso bruto HID do comando. Isto permite que um jogo moderno utilize um comando especial "
-"recursos (como o giroscópio, por exemplo), mas pode falhar em jogos mais antigos com x-"
-"apenas suporte de entrada."
+"Activar o acesso bruto HID do comando. Isto permite que um jogo moderno "
+"utilize um comando especial recursos (como o giroscópio, por exemplo), mas "
+"pode falhar em jogos mais antigos com x-apenas suporte de entrada."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
