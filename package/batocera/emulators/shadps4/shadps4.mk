@@ -12,8 +12,7 @@ SHADPS4_LICENSE = GPLv2
 SHADPS4_LICENSE_FILE = LICENSE
 SHADPS4_DEPENDENCIES += alsa-lib pulseaudio openal openssl libedit udev
 SHADPS4_DEPENDENCIES += libevdev jack2 qt6base qt6svg qt6tools qt6multimedia
-SHADPS4_DEPENDENCIES += glslang vulkan-headers vulkan-loader 
-#vulkan-validationlayers
+SHADPS4_DEPENDENCIES += glslang vulkan-headers vulkan-loader vulkan-validationlayers
 
 SHADPS4_SUPPORTS_IN_SOURCE_BUILD = NO
 

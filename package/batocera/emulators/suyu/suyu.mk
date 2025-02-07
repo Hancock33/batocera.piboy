@@ -11,8 +11,7 @@ SUYU_SITE_METHOD=git
 SUYU_GIT_SUBMODULES=YES
 SUYU_LICENSE = GPLv2
 SUYU_DEPENDENCIES += fmt boost ffmpeg zstd zlib libzip lz4 catch2 sdl2 opus
-SUYU_DEPENDENCIES += qt6base qt6svg qt6tools vulkan-headers vulkan-loader 
-#vulkan-validationlayers
+SUYU_DEPENDENCIES += qt6base qt6svg qt6tools vulkan-headers vulkan-loader vulkan-validationlayers
 SUYU_SUPPORTS_IN_SOURCE_BUILD = NO
 
 SUYU_CONF_ENV += LDFLAGS=-lpthread ARCHITECTURE_x86_64=1
