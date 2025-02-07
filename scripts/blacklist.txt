@@ -10,6 +10,7 @@ kodi-pvr-freebox.mk
 lib32bit.mk
 model2emu.mk
 noto-cjk-fonts.mk
+omf2097.mk
 openbor6412.mk
 openbor7142.mk
 wine-cachyos.mk
