@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: batocera-emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-15 21:09+0100\n"
-"PO-Revision-Date: 2025-01-30 09:43-0300\n"
+"PO-Revision-Date: 2025-02-04 13:49-0300\n"
 "Last-Translator: Leonardo Colman <dev@leonardo.colman.com.br>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: pt_BR\n"
@@ -6576,7 +6576,7 @@ msgstr "ATIVAR ULTRA-SOM GRAVIS"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "ENABLE HIDRAW"
-msgstr ""
+msgstr "ATIVAR HIDRAW"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -6977,6 +6977,10 @@ msgid ""
 "features (like gyroscope for example), but can break older games with x-"
 "input support only."
 msgstr ""
+"Habilite o acesso bruto ao HID do gamepad. Isso permite que os jogos "
+"modernos usem os recursos especiais do gamepad (como o giroscópio, por "
+"exemplo), mas pode prejudicar os jogos mais antigos que suportam apenas o x-"
+"input."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
