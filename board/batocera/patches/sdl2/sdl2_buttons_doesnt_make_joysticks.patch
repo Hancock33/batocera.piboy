@@ -1,5 +1,5 @@
 diff --git a/src/core/linux/SDL_evdev_capabilities.c b/src/core/linux/SDL_evdev_capabilities.c
-index e1b5d74d1..26594e3ee 100644
+index 472cc2fb0..10c981439 100644
 --- a/src/core/linux/SDL_evdev_capabilities.c
 +++ b/src/core/linux/SDL_evdev_capabilities.c
 @@ -89,19 +89,19 @@ SDL_EVDEV_GuessDeviceClass(const unsigned long bitmask_ev[NBITS(EV_MAX)],

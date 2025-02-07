@@ -1,5 +1,5 @@
 diff --git a/configure b/configure
-index 9b67b3f0c..edf692c10 100755
+index 91c945a29..d318679dd 100755
 --- a/configure
 +++ b/configure
 @@ -928,6 +928,7 @@ enable_render_metal
@@ -22,7 +22,7 @@ index 9b67b3f0c..edf692c10 100755
  pkg_failed=no
  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for libdrm >= 1.4.82" >&5
 diff --git a/configure.ac b/configure.ac
-index 0727bbeba..5f2d23224 100644
+index f9c950c7d..c1b8d50f1 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -2413,6 +2413,15 @@ CheckKMSDRM()
@@ -53,7 +53,7 @@ index 0727bbeba..5f2d23224 100644
      fi
  }
 diff --git a/include/SDL_config.h.in b/include/SDL_config.h.in
-index f5dd166ff..16b25d521 100644
+index 0d9fa1427..4f9f63f60 100644
 --- a/include/SDL_config.h.in
 +++ b/include/SDL_config.h.in
 @@ -385,6 +385,7 @@
@@ -65,7 +65,7 @@ index f5dd166ff..16b25d521 100644
  #undef SDL_VIDEO_DRIVER_KMSDRM_DYNAMIC
  #undef SDL_VIDEO_DRIVER_KMSDRM_DYNAMIC_GBM
 diff --git a/src/video/SDL_egl.c b/src/video/SDL_egl.c
-index a89c0e812..4e7a9cd18 100644
+index 50f7082f4..b353c5594 100644
 --- a/src/video/SDL_egl.c
 +++ b/src/video/SDL_egl.c
 @@ -516,6 +516,22 @@ int SDL_EGL_LoadLibrary(_THIS, const char *egl_path, NativeDisplayType native_di
@@ -101,7 +101,7 @@ index a89c0e812..4e7a9cd18 100644
  #endif
      /* Try the implementation-specific eglGetDisplay even if eglGetPlatformDisplay fails */
 diff --git a/src/video/kmsdrm/SDL_kmsdrmopengles.c b/src/video/kmsdrm/SDL_kmsdrmopengles.c
-index cbf86c949..3f6548b7c 100644
+index 311586278..730ab2465 100644
 --- a/src/video/kmsdrm/SDL_kmsdrmopengles.c
 +++ b/src/video/kmsdrm/SDL_kmsdrmopengles.c
 @@ -41,7 +41,7 @@ void KMSDRM_GLES_DefaultProfileConfig(_THIS, int *mask, int *major, int *minor)

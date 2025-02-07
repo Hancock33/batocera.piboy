@@ -1,5 +1,5 @@
 diff --git a/src/joystick/SDL_joystick.c b/src/joystick/SDL_joystick.c
-index aed6ecf4b..6d85571f7 100644
+index f20aa8a09..31dda8664 100644
 --- a/src/joystick/SDL_joystick.c
 +++ b/src/joystick/SDL_joystick.c
 @@ -27,6 +27,8 @@
@@ -93,27 +93,27 @@ index aed6ecf4b..6d85571f7 100644
      if (driver->Open(joystick, device_index) < 0) {
          SDL_free(joystick);
          SDL_UnlockJoysticks();
-@@ -875,6 +945,8 @@ SDL_Joystick *SDL_JoystickOpen(int device_index)
+@@ -874,6 +944,8 @@ SDL_Joystick *SDL_JoystickOpen(int device_index)
+             joystick->axes[i].has_initial_value = SDL_TRUE;
          }
      }
- 
++    
 +    custom_restore_initial_state(joystick);
-+
+ 
      joystick->is_game_controller = SDL_IsGameController(device_index);
  
-     /* Get the Steam Input API handle */
-@@ -1934,6 +2006,11 @@ int SDL_PrivateJoystickAxis(SDL_Joystick *joystick, Uint8 axis, Sint16 value)
- 
-     SDL_AssertJoysticksLocked();
+@@ -1932,6 +2004,11 @@ int SDL_PrivateJoystickAxis(SDL_Joystick *joystick, Uint8 axis, Sint16 value)
+     int posted;
+     SDL_JoystickAxisInfo *info;
  
 +    // ignore axis events until a button is released
 +    if (joystick->initial_state_is_valid == SDL_FALSE) {
 +      return 0;
 +    }
 +
+     SDL_AssertJoysticksLocked();
+ 
      /* Make sure we're not getting garbage or duplicate events */
-     if (axis >= joystick->naxes) {
-         return 0;
 @@ -2028,6 +2105,14 @@ int SDL_PrivateJoystickHat(SDL_Joystick *joystick, Uint8 hat, Uint8 value)
          event.jhat.which = joystick->instance_id;
          event.jhat.hat = hat;
@@ -143,7 +143,7 @@ index aed6ecf4b..6d85571f7 100644
          break;
      default:
 diff --git a/src/joystick/SDL_sysjoystick.h b/src/joystick/SDL_sysjoystick.h
-index 173650e31..97efa888a 100644
+index cabb69af5..2b85d8743 100644
 --- a/src/joystick/SDL_sysjoystick.h
 +++ b/src/joystick/SDL_sysjoystick.h
 @@ -129,6 +129,9 @@ struct _SDL_Joystick
@@ -157,7 +157,7 @@ index 173650e31..97efa888a 100644
  };
  
 diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
-index cf8ecfb07..f396731cb 100644
+index dfab6851b..7565822bf 100644
 --- a/src/joystick/linux/SDL_sysjoystick.c
 +++ b/src/joystick/linux/SDL_sysjoystick.c
 @@ -1971,7 +1971,7 @@ static void HandleInputEvents(SDL_Joystick *joystick)

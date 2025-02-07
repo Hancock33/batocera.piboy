@@ -1,5 +1,5 @@
 diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
-index e34d08411..d4e33f192 100644
+index 671eb4f1d..d8d5bfd35 100644
 --- a/src/joystick/linux/SDL_sysjoystick.c
 +++ b/src/joystick/linux/SDL_sysjoystick.c
 @@ -1055,7 +1055,7 @@ static int LINUX_JoystickInit(void)
