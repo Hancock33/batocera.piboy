@@ -6,6 +6,7 @@ Emulators|[duckstation](http://github.com/stenzek/duckstation)|160c34ef2885efca7
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-02-08|Feb 08, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.357|Feb 08, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|7639481bd99989d5840039b6796b106e0c72fb7d|Feb 08, 2025
+Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|1eb319e7de2ccad8caa2b93daaf27bd378ce351b|Feb 08, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|17bc1eba3fca54bbdfda5f63c60149b1384ecacb|Feb 08, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|59cff7702dc672aa5d07706022773aff46aabbef|Feb 08, 2025
 Emulators|[libretro-hatarib](https://github.com/bbbradsmith/hatariB)|96050f89b6c127a6ce3b5142fd41db5e149af9b5|Feb 08, 2025
@@ -51,7 +52,6 @@ Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-
 Emulators|[hatari](http://github.com/hatari/hatari)|07feb02ec56dd253654bc0ffa5939963644ef735|Feb 05, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu)|ac781ea8d1dcd7e67de62ea7ecaca60566e5e138|Feb 05, 2025
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.11.0-rc1|Feb 05, 2025
-Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|09a93673270e4777ef74e0403c9219b3c8c2ce56|Feb 05, 2025
 Utils|[raspi2png](http://github.com/AndrewFromMelbourne/raspi2png)|07f5e76e72516f24329def599ac2d8841946a5f6|Feb 05, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|26f70da7756497b819282d4a4b16cf4779b5ffcf|Feb 05, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|60957d171bfe546cbe0026c2097a251cc2ec092a|Feb 05, 2025

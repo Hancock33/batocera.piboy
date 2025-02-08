@@ -498,7 +498,7 @@ Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|5bf9c012024884234df0f63c615
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|5300b32803c1c61bc3b6bdf86a084c1db1a217ad|Jan 25, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|b5cb0b9f10e7c5f3bcbade3a57fae1dd3831ae9e|Feb 07, 2025
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.1|Apr 12, 2024
-Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|09a93673270e4777ef74e0403c9219b3c8c2ce56|Feb 05, 2025
+Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|1eb319e7de2ccad8caa2b93daaf27bd378ce351b|Feb 08, 2025
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0274|Jan 31, 2025
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
