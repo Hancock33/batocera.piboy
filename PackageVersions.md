@@ -2,7 +2,7 @@
 -----|:-----:|:-----:|:-----:
 Audio|[alsa-topology-conf](http://github.com/alsa-project/alsa-topology-conf)|v1.2.5.1|Mar 11, 2021
 Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.13|Nov 12, 2024
-Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|4617151f8ade809b3ef92621d75bbc2a08589741|Dec 30, 2024
+Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|ae2f8cf30a26806376cc8591af4a66d33a763ef4|Feb 08, 2025
 Audio|[chromebook-ucm-conf](http://github.com/WeirdTreeThing/alsa-ucm-conf-cros)|0.7|Nov 25, 2024
 Audio|[cubeb](http://github.com/mozilla/cubeb)|224b7cb288b138a33c78641518eb4eea71160240|Feb 03, 2025
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.02|Feb 01, 2025
@@ -183,7 +183,7 @@ Emulators|[libretro-o2em](http://github.com/libretro/libretro-o2em)|3ba4231c1dc8
 Emulators|[libretro-openlara](http://github.com/libretro/openlara)|96989ac41ae55a42b19916dc8191f74be40e1b07|Nov 16, 2022
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|67a29e60a4d194b675c9272b21b61eaa022f3ba3|Oct 17, 2024
 Emulators|[libretro-p2000t](http://github.com/p2000t/M2000)|681ca42e712f7003691884be93367fd8223f2c90|Jan 28, 2025
-Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|86d1bde8458a239cd10571c235400b74f3920904|Feb 02, 2025
+Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|4cb66217c21325c9f5ead231d4ea52d78ffd7fed|Feb 08, 2025
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|a1e6d69f819cd25a30c701d244315f648818a163|Feb 06, 2025
 Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|28b37bafd3fb1e3a812c50a5ddca94c5fd68e5fd|Oct 21, 2024
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|da219658c24c610ba82d5a07ea9897e8e0eef670|Dec 21, 2024
@@ -363,7 +363,6 @@ Libraries|[discord_rpc](http://github.com/stenzek/discord-rpc)|144f3a3f1209994d8
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.11.0-rc1|Feb 05, 2025
 Libraries|[ffmpeg-python](http://github.com/kkroening/ffmpeg-python)|df129c7ba30aaa9ffffb81a48f53aa7253b0b4e6|Jul 11, 2022
 Libraries|[ffmpeg-rockchip](https://github.com/nyanmisaka/ffmpeg-rockchip.git)|ea9247abf49356626bd7e8408c43839e048d6d9d|Feb 06, 2025
-Libraries|[ffmpeg4](https://ffmpeg.org/releases)|4.4.5|Jul 29, 2024
 Libraries|[iir](http://github.com/berndporr/iir1)|1.9.5|Aug 12, 2024
 Libraries|[libcapsimage](http://github.com/simonowen/capsimage)|502015b6e117e7c52fd143025856f9b5b242b6d6|Sept 01, 2022
 Libraries|[libgme](http://github.com/libgme/game-music-emu)|0.6.3|Oct 03, 2023
@@ -417,7 +416,7 @@ Ports|[awgl](http://github.com/M-HT/rawgl)|df249583a87d5c2f73cb362f7163799e01cd0
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[bloodmod](http://github.com/dhewm/dhewm3-sdk)|f35e2718939b68c75f2f3a07749554129e049c30|Sept 27, 2024
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|a12e0a8cc4b3a8ce9d9f411592037b1ee27fc751|Dec 28, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|28ebc1a0b779d6fca2f0b7e45291df6795be6c0a|Feb 08, 2025
+Ports|[box64](http://github.com/ptitseb/box64)|58b24c85a2407a6c2ab6dfc2f18555dd929ad7e1|Feb 08, 2025
 Ports|[box86](http://github.com/ptitseb/box86)|eaf2e84e199689d79af09cf4cb1562c0e2ae2e7e|Jan 08, 2025
 Ports|[bstone](http://github.com/bibendovsky/bstone)|67884efcfd6613fbd24b91aad584df6d3b5cff18|Jan 27, 2025
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
@@ -493,10 +492,10 @@ Ports|[tekwar](https://github.com/jonof/jftekwar.git)|a27a428f31fc582a9e298ddc7f
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|bfaa251cda9549392f69b1b9ba74f5f191845110|Dec 17, 2024
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.5|Feb 03, 2025
-Ports|[vkquake](http://github.com/Novum/vkQuake)|60957d171bfe546cbe0026c2097a251cc2ec092a|Feb 05, 2025
+Ports|[vkquake](http://github.com/Novum/vkQuake)|35434bde7ab23ec63b42d2e39753d68935a5db17|Jan 18, 2025
 Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|5bf9c012024884234df0f63c615daec0c740def7|Jan 04, 2025
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|5300b32803c1c61bc3b6bdf86a084c1db1a217ad|Jan 25, 2025
-Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|b5cb0b9f10e7c5f3bcbade3a57fae1dd3831ae9e|Feb 07, 2025
+Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|241fab02b10177672c9d57d96403acccbacd1594|Feb 08, 2025
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.1|Apr 12, 2024
 Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|1eb319e7de2ccad8caa2b93daaf27bd378ce351b|Feb 08, 2025
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0274|Jan 31, 2025
