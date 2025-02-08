@@ -62,7 +62,7 @@
 - ScummVM to v2.9.0
 - PCSX2 to v2.3.110
 - Play! to Jan 12 2025 build
-- Xemu to v0.8.10
+- Xemu to v0.8.16
 - Triforce to use a Crediar build (Nov 29, 2024)
 ### System
 - Bluez to 5.79
@@ -76,6 +76,11 @@
 - Kodi to 21.2
 - Nvidia production driver to 570.86.16
 - LLVM to 19.1.7
+- Wine-TKG to 10.0
+- Faudio to 25.02
+- DXVK to 2.5.3
+- DXVK-NVAPI to 0.8.0
+- VKD3D-Proton to 2.14.1
 
 # 2024/12/xx - batocera.linux 41 - Golden-rayed Blue
 ### Special Notes
