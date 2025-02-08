@@ -6,18 +6,15 @@
 # Version: Commits on Feb 02, 2025
 ALEPHONE_VERSION = 55235f9eec91f71e2415060d215a91a303e0e046
 ALEPHONE_SITE = $(call github,Aleph-One-Marathon,alephone,$(ALEPHONE_VERSION))
-ALEPHONE_DEPENDENCIES = boost ffmpeg sdl2 sdl2_image sdl2_ttf sdl2_net
+ALEPHONE_DEPENDENCIES = boost sdl2 sdl2_image sdl2_ttf sdl2_net
 ALEPHONE_LICENSE = GPLv3
 ALEPHONE_CONF_OPTS = \
 					--disable-sdltest \
 					--with-sdl-prefix="$(STAGING_DIR)/usr" \
 					--with-boost="$(STAGING_DIR)/usr" \
 					--with-boost-libdir="$(STAGING_DIR)/usr/lib" \
-					--prefix=/usr
-
-ALEPHONE_CONF_ENV += PKG_CONFIG_PATH="$(STAGING_DIR)/usr/lib/ffmpeg4.4/pkgconfig"
-ALEPHONE_CONF_ENV += CFLAGS="-I$(STAGING_DIR)/usr/include/ffmpeg4.4:$(TARGET_CFLAGS)"
-ALEPHONE_CONF_ENV += LDFLAGS="-lSDL2 -L$(STAGING_DIR)/usr/lib/ffmpeg4.4"
+					--prefix=/usr \
+					--without-ffmpeg
 
 define ALEPHONE_AUTOCONFIG
 	cd $(@D) && autoreconf -f -i
