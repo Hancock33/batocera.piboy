@@ -1,5 +1,5 @@
 diff --git a/CMakeModules/DuckStationDependencies.cmake b/CMakeModules/DuckStationDependencies.cmake
-index 7562ea09a..350209a03 100644
+index 1d748578f..87c631173 100644
 --- a/CMakeModules/DuckStationDependencies.cmake
 +++ b/CMakeModules/DuckStationDependencies.cmake
 @@ -18,7 +18,7 @@ find_package(JPEG REQUIRED)
@@ -12,10 +12,10 @@ index 7562ea09a..350209a03 100644
  find_package(libzip 1.11.1 REQUIRED)
  
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index a6e9e1184..db3a33db6 100644
+index 5a643bb48..5ed011da2 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
-@@ -91,7 +91,7 @@ LOG_CHANNEL(System);
+@@ -95,7 +95,7 @@ LOG_CHANNEL(System);
  #endif
  
  #ifndef __ANDROID__
