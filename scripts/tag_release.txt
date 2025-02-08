@@ -22,6 +22,7 @@ vulkan-headers.mk
 vulkan-utility-libraries.mk
 vulkan-validationlayers.mk
 vulkan-volk.mk
+warehouse.mk
 wine-custom.mk
 wine-mono.mk
 wine-native.mk

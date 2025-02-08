@@ -3,8 +3,8 @@
 # tsugaru
 #
 ################################################################################
-# Version: Commits on Feb 04, 2025
-TSUGARU_VERSION = 9f849e1cf9d03bbf002a030884c9232535da0cf8
+# Version: Commits on Feb 08, 2025
+TSUGARU_VERSION = b1cc87cb7c75ad3a83141d8d681299ffb11f8096
 TSUGARU_SITE = $(call github,captainys,TOWNSEMU,$(TSUGARU_VERSION))
 TSUGARU_DEPENDENCIES = libglu
 TSUGARU_LICENSE = GPLv2

@@ -1,10 +1,10 @@
 config BR2_PACKAGE_SRB2
 	bool "srb2"
 	depends on BR2_INSTALL_LIBSTDCPP
-	select BR2_PACKAGE_SDL2
-	select BR2_PACKAGE_SDL2_MIXER
 	select BR2_PACKAGE_LIBGME
 	select BR2_PACKAGE_LIBOPENMPT
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
 
 	help
 	  Sonic Robo Blast 2 is a 3D open-source Sonic the Hedgehog
