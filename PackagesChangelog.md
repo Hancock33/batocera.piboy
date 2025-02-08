@@ -7,7 +7,9 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-02-08|Feb 08
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.357|Feb 08, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|7639481bd99989d5840039b6796b106e0c72fb7d|Feb 08, 2025
 Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|1eb319e7de2ccad8caa2b93daaf27bd378ce351b|Feb 08, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250208|Feb 08, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|17bc1eba3fca54bbdfda5f63c60149b1384ecacb|Feb 08, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250208|Feb 08, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|59cff7702dc672aa5d07706022773aff46aabbef|Feb 08, 2025
 Emulators|[libretro-hatarib](https://github.com/bbbradsmith/hatariB)|96050f89b6c127a6ce3b5142fd41db5e149af9b5|Feb 08, 2025
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|d3653127571b8fe1421e5d5acaa8f4c6d5dbfca1|Feb 08, 2025
@@ -26,8 +28,6 @@ Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|41f709eb6bed312d41120ab
 Ports|[stk](http://github.com/supertuxkart/stk-code)|502fcf5e267463cedfac1ec437d7e8e1c1f311b1|Feb 07, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|cf82b34cf184f149d99d6d75ac9d623a09edc5a7|Feb 07, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.29.3-rc.1|Feb 07, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250207|Feb 07, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250207|Feb 07, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|ba46e1fd73b31ba19937104de4aff430028ade8e|Feb 07, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|b5cb0b9f10e7c5f3bcbade3a57fae1dd3831ae9e|Feb 07, 2025
 Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)|e33564666af20aeb2886153ceef5100d2bca6f30|Feb 07, 2025
