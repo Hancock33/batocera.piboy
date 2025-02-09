@@ -6,8 +6,6 @@ default:
     retroarch.menu_widget_scale_auto: "true"
     hud_support:  true
     bezel:        none
-    gfxbackend: vulkan
-    audio_driver: pulse
     batterymode: highperformance
     powermode: highperformance
 
