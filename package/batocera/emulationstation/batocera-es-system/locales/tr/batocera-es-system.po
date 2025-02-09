@@ -1353,6 +1353,16 @@ msgctxt "game_options"
 msgid "386DX, 33MHz (7800 cps)"
 msgstr "386DX, 33MHz (7800 cps)"
 
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "386_prefetch"
+msgstr ""
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "386_slow"
+msgstr ""
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "3D ENGINE"
@@ -1492,6 +1502,11 @@ msgstr "486DX, 33MHz (13400 cps)"
 msgctxt "game_options"
 msgid "486DX2, 66MHz (26800 cps)"
 msgstr "486DX2, 66MHz (26800 cps)"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "486_slow"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, xenia, xenia-canary
 msgctxt "game_options"
@@ -2498,6 +2513,11 @@ msgctxt "game_options"
 msgid "AUDIO VOLUME GAIN"
 msgstr "SES SEVİYESİ KAZANIMI"
 
+#. TRANSLATION: dosbox, dosbox, dosbox
+msgctxt "game_options"
+msgid "AUTO"
+msgstr ""
+
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
 msgid "AUTO (DEFAULT)"
@@ -2976,6 +2996,11 @@ msgstr "Her zaman 6 mermi, 6 dinamit ve 6 can."
 msgctxt "game_options"
 msgid "American English"
 msgstr "Amerika İngilizcesi"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "Amount of instructions DOSBox tries to emulate"
+msgstr ""
 
 #. TRANSLATION: yabasanshiro, yabasanshiro
 msgctxt "game_options"
@@ -4540,7 +4565,7 @@ msgctxt "game_options"
 msgid "CPU COMPATIBILITY"
 msgstr "CPU UYUMLULUĞU"
 
-#. TRANSLATION: libretro/mupen64plus-next
+#. TRANSLATION: dosbox, libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "CPU CORE"
 msgstr "CPU ÇEKİRDEĞİ"
@@ -4549,6 +4574,16 @@ msgstr "CPU ÇEKİRDEĞİ"
 msgctxt "game_options"
 msgid "CPU CORE METHOD"
 msgstr "İŞLEMCİ ÇEKİRDEK METODU"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "CPU CYCLES"
+msgstr ""
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "CPU Core used in emulation"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -4575,10 +4610,15 @@ msgctxt "game_options"
 msgid "CPU TIMING MODE (FPS)"
 msgstr "CPU ZAMANLAMA MODU (FPS)"
 
-#. TRANSLATION: libretro/dosbox_pure
+#. TRANSLATION: dosbox, libretro/dosbox_pure
 msgctxt "game_options"
 msgid "CPU TYPE"
 msgstr "CPU TİPİ"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "CPU Type used in emulation"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -6415,6 +6455,11 @@ msgstr "Flemenkçe"
 msgctxt "game_options"
 msgid "Dutch (nl)"
 msgstr "Felemenkçe (nl)"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "Dynamic"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -10969,6 +11014,11 @@ msgctxt "game_options"
 msgid "Match Window"
 msgstr "Eşleme Penceresi"
 
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "Max"
+msgstr ""
+
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Max (demanding games)"
@@ -11771,7 +11821,7 @@ msgctxt "game_options"
 msgid "None/Sharp Pixels"
 msgstr "Hiç/Keskin Pikseller"
 
-#. TRANSLATION: awgl, duckstation, flycast, libretro/flycast, libretro/flycast2021, ...
+#. TRANSLATION: awgl, dosbox, duckstation, flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Normal"
 msgstr "Normal"
@@ -14953,7 +15003,7 @@ msgctxt "game_options"
 msgid "Shunt 9"
 msgstr ""
 
-#. TRANSLATION: libretro/gambatte, libretro/o2em
+#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em
 msgctxt "game_options"
 msgid "Simple"
 msgstr "Basit"
@@ -18122,6 +18172,11 @@ msgstr "orijinal"
 msgctxt "game_options"
 msgid "original gameboy"
 msgstr "orijinal gameboy"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "pentium_slow"
+msgstr ""
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
