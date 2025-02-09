@@ -1,8 +1,8 @@
 diff --git a/include/SDL_joystick.h b/include/SDL_joystick.h
-index 3907d6e94..f8d325a5f 100644
+index 668db5e30..80df5597e 100644
 --- a/include/SDL_joystick.h
 +++ b/include/SDL_joystick.h
-@@ -424,6 +424,11 @@ extern DECLSPEC int SDLCALL SDL_JoystickDetachVirtual(int device_index);
+@@ -436,6 +436,11 @@ extern DECLSPEC int SDLCALL SDL_JoystickDetachVirtual(int device_index);
   */
  extern DECLSPEC SDL_bool SDLCALL SDL_JoystickIsVirtual(int device_index);
  
@@ -32,7 +32,7 @@ index f26569b13..ec75b1021 100644
  #define SDL_JoystickGetBall SDL_JoystickGetBall_REAL
  #define SDL_JoystickGetButton SDL_JoystickGetButton_REAL
 diff --git a/src/dynapi/SDL_dynapi_procs.h b/src/dynapi/SDL_dynapi_procs.h
-index 695ee83d6..41fc2de76 100644
+index db61f475f..555788e8d 100644
 --- a/src/dynapi/SDL_dynapi_procs.h
 +++ b/src/dynapi/SDL_dynapi_procs.h
 @@ -243,6 +243,12 @@ SDL_DYNAPI_PROC(int,SDL_JoystickNumButtons,(SDL_Joystick *a),(a),return)

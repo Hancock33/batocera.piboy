@@ -1,8 +1,8 @@
 diff --git a/configure b/configure
-index 91c945a29..d318679dd 100755
+index 6b7f690de..2f72a69d1 100755
 --- a/configure
 +++ b/configure
-@@ -928,6 +928,7 @@ enable_render_metal
+@@ -930,6 +930,7 @@ enable_render_metal
  enable_video_directfb
  enable_directfb_shared
  enable_video_kmsdrm
@@ -10,7 +10,7 @@ index 91c945a29..d318679dd 100755
  enable_kmsdrm_shared
  enable_video_dummy
  enable_video_offscreen
-@@ -25585,6 +25586,10 @@ fi
+@@ -25712,6 +25713,10 @@ fi
  
          video_kmsdrm=no
  
@@ -22,10 +22,10 @@ index 91c945a29..d318679dd 100755
  pkg_failed=no
  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for libdrm >= 1.4.82" >&5
 diff --git a/configure.ac b/configure.ac
-index f9c950c7d..c1b8d50f1 100644
+index 1f7e8dc2d..2278616a1 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -2413,6 +2413,15 @@ CheckKMSDRM()
+@@ -2420,6 +2420,15 @@ CheckKMSDRM()
              video_kmsdrm=yes
          fi
  
@@ -41,7 +41,7 @@ index f9c950c7d..c1b8d50f1 100644
          if test x$video_kmsdrm = xyes; then
              AC_ARG_ENABLE(kmsdrm-shared,
  [AS_HELP_STRING([--enable-kmsdrm-shared], [dynamically load kmsdrm support [default=yes]])],
-@@ -2519,7 +2528,9 @@ CheckGLX()
+@@ -2526,7 +2535,9 @@ CheckGLX()
          AC_MSG_RESULT($video_opengl_glx)
          if test x$video_opengl_glx = xyes; then
              AC_DEFINE(SDL_VIDEO_OPENGL, 1, [ ])
