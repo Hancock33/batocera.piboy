@@ -138,6 +138,7 @@ Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|cd1e
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|6ebb6a963ce09125e1556096766eba0a211f0fd7|Jan 24, 2025
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|6d5c3fe803d2ebe2b44ef42d2b421f5b6df3e045|Jan 24, 2025
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|1b29b4b8fcf27fb70cb55c497fed9b45e3c94db5|Jan 22, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0|Jan 21, 2025
 Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
 Wine|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0|Jan 21, 2025
 Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
@@ -170,7 +171,6 @@ Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|fc34a26cd0
 Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v2.14.1|Jan 10, 2025
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|3d11244956a4bfeb6e29176d1406bc06d7aef781|Jan 09, 2025
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.16.0|Jan 09, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|10.1-staging|Jan 09, 2025
 Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|34db5415e5a1c40bb89253cf473d4e98cc6e348a|Jan 09, 2025
 Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|ac55c8141bc6610709654a6ecb7382f41f4cd391|Jan 08, 2025
 Ports|[box86](http://github.com/ptitseb/box86)|eaf2e84e199689d79af09cf4cb1562c0e2ae2e7e|Jan 08, 2025
