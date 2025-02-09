@@ -8605,6 +8605,35 @@ dolphin_triforce:
 dosbox:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+        dosbox_cpu_core:
+            submenu: EMULATION
+            prompt: CPU CORE
+            description: CPU Core used in emulation
+            choices:
+                "AUTO":    "auto"
+                "Dynamic": "dynamic"
+                "Normal":  "normal"
+                "Simple":  "simple"
+        dosbox_cpu_cputype:
+            submenu: EMULATION
+            prompt: CPU TYPE
+            description: CPU Type used in emulation
+            choices:
+                "AUTO":         "auto"
+                "386":          "386"
+                "386_slow":     "386_slow"
+                "486_slow":     "486_slow"
+                "pentium_slow": "pentium_slow"
+                "386_prefetch": "386_prefetch"
+        dosbox_cpu_cycles:
+            submenu: EMULATION
+            prompt: CPU CYCLES
+            description: Amount of instructions DOSBox tries to emulate
+            choices:
+                "AUTO": "auto"
+                "Max":  "max"
+
 dosbox_staging:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -10464,11 +10493,11 @@ scummvm:
           prompt: STRETCH MODE
           description: Stretches the output to fill the display area.
           choices:
-              "Fit resolution scale (Default)": "fit"
-              "Center":     "center"
+              "Center":               "center"
               "Pixel Perfect":        "pixel-perfect"
               "Even Pixels":          "even-pixels"
               "Stretch to screen":    "stretch"
+              "Fit resolution scale": "fit"
               "Fit 4:3 Aspect Ratio": "fit_force_aspect"
       scumm_renderer:
           prompt: RENDERER
@@ -11901,6 +11930,12 @@ wine:
             choices:
                 "Off":          0
                 "On (Default)": 1
+        enable_hidraw:
+            prompt: ENABLE HIDRAW
+            description: Enable gamepad HID raw access. This allow modern game to use special gamepad features (like gyroscope for example), but can break older games with x-input support only.
+            choices:
+                "Off (Default)": 0
+                "On":            1
         dxvk_hud:
             group: ADVANCED OPTIONS
             prompt: DXVK HUD
@@ -14743,6 +14778,12 @@ lindbergh-loader:
         "75 fps":           "75"
         "100 fps":          "100"
         "120 fps":          "120"
+    lindbergh_controller:
+      prompt: CONTROLLER MODE
+      description: Choose the controller configuration. EVDEV for a wide range of controllers, lightguns & steering wheels. SDL2 for gamepads only.
+      choices:
+        "SDL2":            1
+        "EVDEV (Default)": 2
     lindbergh_hummer:
       group: GAME OPTIONS
       prompt: HUMMER FLICKER FIX
@@ -14792,3 +14833,31 @@ lindbergh-loader:
       choices:
         "Off (Default)": 0
         "On":            1
+
+vkquake:
+  features: [padtokeyboard]
+  shared: [powermode, tdp, videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+
+vkquake2:
+  features: [padtokeyboard]
+  shared: [powermode, tdp, videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+
+vkquake3:
+  shared: [powermode, tdp, videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  features: [padtokeyboard]
+  cfeatures:
+    vkquake3_api:
+      prompt: GRAPHICS API
+      description: Choose which graphics API library to use.
+      choices:
+        "OpenGL": "opengl2"
+        "Vulkan": "vulkan"
+    ioquake3_mem:
+      group: ADVANCED OPTIONS
+      prompt: GRAPHICS MEMORY
+      description: Select how much graphics memory is allocated for the GPU, may need modifying for some games / systems.
+      choices:
+        "64MB":            "64"
+        "128MB":           "128"
+        "256MB (Default)": "256"
+        "512MB":           "512"

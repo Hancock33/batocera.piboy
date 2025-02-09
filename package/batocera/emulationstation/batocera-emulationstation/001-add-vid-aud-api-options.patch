@@ -41,10 +41,10 @@ index 0c89062ef..15e74981c 100644
  	};
  
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index a0bee4f69..e24fe4cbb 100644
+index 37550eb60..077412dcd 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
-@@ -2636,7 +2636,7 @@ void GuiMenu::openGamesSettings()
+@@ -2642,7 +2642,7 @@ void GuiMenu::openGamesSettings()
  	s->addWithDescription(_("SHOW SAVESTATE MANAGER"), _("Display savestate manager before launching a game."), showSaveStates);
  	s->addSaveFunc([showSaveStates] { SystemConf::getInstance()->set("global.savestates", showSaveStates->getSelected()); });
  
@@ -53,7 +53,7 @@ index a0bee4f69..e24fe4cbb 100644
  
  	// Screen ratio choice
  	if (!hasGlobalFeature("ratio"))
-@@ -2654,6 +2654,61 @@ void GuiMenu::openGamesSettings()
+@@ -2660,6 +2660,61 @@ void GuiMenu::openGamesSettings()
  		s->addSaveFunc([this, videoModeOptionList] { SystemConf::getInstance()->set("global.videomode", videoModeOptionList->getSelected()); });
  	}
  

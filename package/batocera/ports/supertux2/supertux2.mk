@@ -3,8 +3,8 @@
 # supertux2
 #
 ################################################################################
-# Version: Commits on Jan 26, 2025
-SUPERTUX2_VERSION = 349130e4e9b0ee234b49b99a1971275da5a8f6d8
+# Version: Commits on Feb 09, 2025
+SUPERTUX2_VERSION = 40f45f6dd51661e41d92573e670ccb85877a64c3
 SUPERTUX2_SITE = https://github.com/SuperTux/supertux.git
 SUPERTUX2_SITE_METHOD=git
 SUPERTUX2_GIT_SUBMODULES=YES
@@ -15,7 +15,7 @@ SUPERTUX2_SUPPORTS_IN_SOURCE_BUILD = NO
 SUPERTUX2_LICENSE = GPL-3.0+ (code), CC-BY-SA-2.0, CC-BY-SA-3.0, CC-BY-SA-4.0, GPL-2.0+ (images music sounds)
 SUPERTUX2_LICENSE_FILES = LICENSE.txt data/AUTHORS
 
-SUPERTUX2_DEPENDENCIES = host-pkgconf boost freetype libcurl libogg libpng libvorbis openal physfs sdl2 sdl2_image zlib
+SUPERTUX2_DEPENDENCIES = boost freetype host-pkgconf libcurl libogg libpng libvorbis openal physfs sdl2 sdl2_image zlib
 
 SUPERTUX2_CONF_OPTS +=-DBUILD_DOCUMENTATION=OFF
 SUPERTUX2_CONF_OPTS +=-DINSTALL_SUBDIR_BIN="bin"

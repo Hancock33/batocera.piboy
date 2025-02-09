@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Dec 20, 2024
-VULKAN_UTILITY_LIBRARIES_VERSION = vulkan-sdk-1.4.304.0
+VULKAN_UTILITY_LIBRARIES_VERSION = vulkan-sdk-1.4.304.1
 VULKAN_UTILITY_LIBRARIES_SITE = https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git
 VULKAN_UTILITY_LIBRARIES_SITE_METHOD = git
 VULKAN_UTILITY_LIBRARIES_INSTALL_STAGING = YES

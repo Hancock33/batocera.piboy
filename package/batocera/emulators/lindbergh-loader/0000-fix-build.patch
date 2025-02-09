@@ -1,0 +1,22 @@
+diff --git a/Makefile b/Makefile
+index 93383b0..cde0b82 100644
+--- a/Makefile
++++ b/Makefile
+@@ -21,7 +21,7 @@ lindbergh: src/lindbergh/lindbergh.c src/lindbergh/log.c src/lindbergh/log.h src
+ 
+ libxdiff.a: $(XDIFF_OBJS)
+ 	mkdir -p $(BUILD)
+-	ar rcs src/libxdiff/libxdiff.a $(XDIFF_OBJS)
++	$(AR) rcs src/libxdiff/libxdiff.a $(XDIFF_OBJS)
+ 
+ src/libxdiff/xdiff/%.o: src/libxdiff/xdiff/%.c
+ 	$(CC) -DHAVE_CONFIG_H -fPIC -c $< -o $@
+@@ -34,7 +34,7 @@ lindbergh.so: $(OBJS)
+ 	$(CC) $(CFLAGS) -c $< -o $@
+ 
+ libsegaapi.so: src/libsegaapi/libsegaapi.o
+-	gcc -m32 -O0 -g src/libsegaapi/libsegaapi.c -lFAudio -fPIC -shared -o $(BUILD)/libsegaapi.so
++	$(CC) $(CFLAGS) -O0 -g src/libsegaapi/libsegaapi.c -fPIC -shared -o $(BUILD)/libsegaapi.so
+ 
+ libkswapapi.so: src/libkswapapi/libkswapapi.o
+ 	$(CC) src/libkswapapi/libkswapapi.o -fPIC -shared -o $(BUILD)/libkswapapi.so

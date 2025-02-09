@@ -215,8 +215,8 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_UTIL_LINUX_SETTERM                   # Set terminal attributes
     select BR2_PACKAGE_WINBTRFS                             # btrfs
     select BR2_PACKAGE_WIREGUARD_LINUX_COMPAT               if !BR2_TOOLCHAIN_HEADERS_AT_LEAST_5_6 && !BR2_PACKAGE_BATOCERA_TARGET_A3GEN2 && !BR2_PACKAGE_BATOCERA_TARGET_S9GEN4 # Kernel < 5.6 backwards compatibility
-    select BR2_PACKAGE_WIREGUARD_TOOLS                      if !BR2_TOOLCHAIN_HEADERS_AT_LEAST_5_6 && !BR2_PACKAGE_BATOCERA_TARGET_A3GEN2 && !BR2_PACKAGE_BATOCERA_TARGET_S9GEN4 && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3128                                                                               # WireGuard VPN support (match kernel compatibility)
+    select BR2_PACKAGE_WIREGUARD_TOOLS                      if !BR2_TOOLCHAIN_HEADERS_AT_LEAST_5_6 ||(!BR2_PACKAGE_BATOCERA_TARGET_A3GEN2 && !BR2_PACKAGE_BATOCERA_TARGET_S9GEN4 && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3128)                                                                              # WireGuard VPN support (match kernel compatibility)
     select BR2_PACKAGE_WIRELESS_REGDB                       # wireless regulatory DB
     select BR2_PACKAGE_WIRELESS_TOOLS                       # wireless tools
     select BR2_PACKAGE_WIRELESS_TOOLS_LIB                   # wireless tools
@@ -277,7 +277,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_E2FSPROGS_RESIZE2FS                  # fs resize
     select BR2_PACKAGE_PACMAN                               # pacman package manager
     select BR2_PACKAGE_FLATPAK                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY      # flatpak app packaging system
-    #select BR2_PACKAGE_BAUH                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY      # flatpak gui (Uses QT5)
+   #select BR2_PACKAGE_WAREHOUSE                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY      # flatpak gui (Uses gtk4)
     select BR2_PACKAGE_RYZENADJ                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY      # ryzen apu configuration
     select BR2_PACKAGE_SYNCTHING                            # sync files across multiple batocera systems
     select BR2_PACKAGE_RCLONE                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY      # sync files in the cloud (require x86_64)
@@ -927,6 +927,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 
     # TyrQuake (Quake 1)
     select BR2_PACKAGE_LIBRETRO_TYRQUAKE                    if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
+    select BR2_PACKAGE_VKQUAKE                              if  BR2_PACKAGE_BATOCERA_VULKAN
 
     # NxEngine (Cave Story)
     select BR2_PACKAGE_LIBRETRO_NXENGINE                    # ALL
@@ -969,7 +970,9 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 
     select BR2_PACKAGE_ABUSE                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
-    select BR2_PACKAGE_LIBRETRO_VITAQUAKE2                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
+    # Quake 2
+    select BR2_PACKAGE_LIBRETRO_VITAQUAKE2                  if  BR2_PACKAGE_BATOCERA_GLES3
+    select BR2_PACKAGE_VKQUAKE2                             if  BR2_PACKAGE_BATOCERA_VULKAN && BR2_PACKAGE_XORG7
 
     # Super Mario War
     select BR2_PACKAGE_LIBRETRO_SUPERBROSWAR                if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
@@ -985,18 +988,14 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_ZMUSIC                               if  BR2_PACKAGE_GZDOOM || BR2_PACKAGE_RAZE
 
     # Boom3 (Doom 3)
-    select BR2_PACKAGE_LIBRETRO_BOOM3                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
+    select BR2_PACKAGE_LIBRETRO_BOOM3                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
 
     # OpenLara (Tomb Raider)
     select BR2_PACKAGE_LIBRETRO_OPENLARA                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_aarch64
 
     # Quake 3
-    select BR2_PACKAGE_QUAKE3                               if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_H6          && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3128      && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3326      && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_JH7110      && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_ODIN
+    select BR2_PACKAGE_LIBRETRO_VITAQUAKE3                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_VKQUAKE3                             if  BR2_PACKAGE_BATOCERA_VULKAN             && !BR2_PACKAGE_BATOCERA_TARGET_JH7110
 
     # Hydra Castle Labyrinth
     select BR2_PACKAGE_HCL                                  # ALL
@@ -1397,7 +1396,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_LIBRETRO_TAMALIBRETRO                # Tamagotchi
     select BR2_PACKAGE_LIBRETRO_VAPORSPEC
     select BR2_PACKAGE_LIBRETRO_VEMULATOR                   # Dreamcast VMU
-    select BR2_PACKAGE_LIBRETRO_VITAQUAKE3                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_WASM4
     select BR2_PACKAGE_LIBRETRO_YABAUSE                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
@@ -1415,10 +1413,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     #Doom
     select BR2_PACKAGE_DOOM3                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
     select BR2_PACKAGE_DOOMRETRO                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
-
-    #Quake
-    select BR2_PACKAGE_QUAKE2                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
-    select BR2_PACKAGE_QUAKESPASM                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
     select BR2_PACKAGE_ALEPHONE                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Alephone
     select BR2_PACKAGE_AVP                                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Alien vs Predator
@@ -1475,20 +1469,22 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
 config BR2_PACKAGE_BATOCERA_GUNS
     bool "batocera guns support"
-    select BR2_PACKAGE_AELIGHTGUN                           # ae light gun
-    select BR2_PACKAGE_AIMTRAK_GUNS                         # aimtrak guns
-    select BR2_PACKAGE_BLAMCON
-    select BR2_PACKAGE_DOLPHINBAR_GUNS                      # dolphinbar guns
+    select BR2_PACKAGE_AELIGHTGUN                           # AE Light gun
+    select BR2_PACKAGE_AIMTRAK_GUNS                         # AimTrack light gun
+    select BR2_PACKAGE_BLAMCON                              # BlamCon light gun
+    select BR2_PACKAGE_DOLPHINBAR_GUNS                      # Dolphinbar light gun
     select BR2_PACKAGE_DOLPHINCROSSHAIRSPACK                if  BR2_PACKAGE_DOLPHIN_EMU
-    select BR2_PACKAGE_FUSION_LIGHTGUNS                     # fusion lightguns
-    select BR2_PACKAGE_GUN4IR_GUNS                          # gun4ir guns
-    select BR2_PACKAGE_GUNCON                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_BCM27XX || BR2_PACKAGE_BATOCERA_TARGET_BCM2837 # guncon
-    select BR2_PACKAGE_GUNCON3                              if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4                                                                     # guncon3
-    select BR2_PACKAGE_LIGHTGUNS_GAMES_PRECALIBRATIONS
-    select BR2_PACKAGE_RETROSHOOTER_GUNS                    # retroshooter guns
-    select BR2_PACKAGE_SAMCO_GUNS                           # samco guns
-    select BR2_PACKAGE_SINDEN_GUNS                          # sinden guns
+    select BR2_PACKAGE_FUSION_LIGHTGUNS                     # Fusion Lightgun
+    select BR2_PACKAGE_GUN4IR_GUNS                          # GUN4IR light gun
+    select BR2_PACKAGE_GUNCON                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_BCM27XX || BR2_PACKAGE_BATOCERA_TARGET_BCM2837 # GunCon2 light gun
+    select BR2_PACKAGE_GUNCON3                              if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4                                                                     # GunCon3 Light gun
+    select BR2_PACKAGE_LIGHTGUNS_GAMES_PRECALIBRATIONS      # Light gun accuracy precalibration
+    select BR2_PACKAGE_OPENFIRE_GUNS                        # OpenFIRE light gun
+    select BR2_PACKAGE_RETROSHOOTER_GUNS                    # RetroShooter light gun
+    select BR2_PACKAGE_SAMCO_GUNS                           # SAMCO light gun
+    select BR2_PACKAGE_SINDEN_GUNS                          # Sinden Light gun
     select BR2_PACKAGE_STEAMDECKGUN                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_XGUNNER_LIGHTGUNS                    # XGunner light gun
 
 config BR2_PACKAGE_BATOCERA_KODI
     bool "batocera.linux Kodi packages selection"

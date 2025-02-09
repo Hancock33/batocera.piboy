@@ -1,24 +1,23 @@
 from __future__ import annotations
 
-from pathlib import Path
 import shutil
 from os import environ
 from pathlib import Path
 from typing import TYPE_CHECKING
 
-from ... import Command, controllersConfig
+from ... import Command
+from ...batoceraPaths import mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
-from ...batoceraPaths import CONFIGS, SAVES, mkdir_if_not_exists
 from ...utils.configparser import CaseSensitiveConfigParser
 from ..Generator import Generator
 from . import dolphinTriforceControllers
 from .dolphinTriforcePaths import (
+    DOLPHIN_TRIFORCE_CONFIG,
     DOLPHIN_TRIFORCE_GAME_SETTINGS,
     DOLPHIN_TRIFORCE_GFX_INI,
     DOLPHIN_TRIFORCE_INI,
     DOLPHIN_TRIFORCE_LOGGER_INI,
     DOLPHIN_TRIFORCE_SAVES,
-    DOLPHIN_TRIFORCE_CONFIG
 )
 
 if TYPE_CHECKING:

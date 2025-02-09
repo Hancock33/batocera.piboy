@@ -3,16 +3,16 @@
 # sonic3-air
 #
 ################################################################################
-# Version: Commits on Jan 26, 2025
-SONIC3_AIR_VERSION = 8154feea2754de2fc32276577b41c66aa1b5cec6
+# Version: Commits on Feb 08, 2025
+SONIC3_AIR_VERSION = eb7d04e87c62dc9223b80ef401cf4bdd9bc36562
 SONIC3_AIR_SITE = $(call github,Eukaryot,sonic3air,$(SONIC3_AIR_VERSION))
 SONIC3_AIR_LICENSE = GPL-3.0
 SONIC3_AIR_LICENSE_FILE = COPYING.txt
 # CMakeLists.txt in subfolder
 SONIC3_AIR_SUBDIR = Oxygen/sonic3air/build/_cmake
 
-SONIC3_AIR_DEPENDENCIES += alsa-lib pulseaudio libcurl libglu
-SONIC3_AIR_DEPENDENCIES += mesa3d xlib_libXxf86vm xlib_libXcomposite
+SONIC3_AIR_DEPENDENCIES += alsa-lib libcurl libglu mesa3d pulseaudio
+SONIC3_AIR_DEPENDENCIES += xlib_libXcomposite xlib_libXxf86vm
 
 SONIC3_AIR_SUPPORTS_IN_SOURCE_BUILD = NO
 

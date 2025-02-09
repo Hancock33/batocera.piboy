@@ -3,12 +3,10 @@ alsa-ucm-conf.mk
 appstream.mk
 batocera-settings.mk
 cabextract.mk
-citra.mk
 drastic.mk
 ecm.mk
 flatpak.mk
 fpinball.mk
-glslang.mk
 glslang.mk
 liblc3.mk
 libpinmame.mk
@@ -24,6 +22,7 @@ vulkan-headers.mk
 vulkan-utility-libraries.mk
 vulkan-validationlayers.mk
 vulkan-volk.mk
+warehouse.mk
 wine-custom.mk
 wine-mono.mk
 wine-native.mk

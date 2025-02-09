@@ -3,7 +3,7 @@ archimedes:
   manufacturer:         Acorn Computers
   release:              1987
   hardware:             computer
-  extensions:           [mfi, dfi, hfe, mfm, td0, imd, d77, d88, 1dd, cqm, cqi, dsk, ima, img, ufi, 360, ipf, adf, apd, jfd, ads, adm, adl, ssd, bbc, dsd, st, msa, chd, zip, 7z]
+  extensions:           [1dd, 360, 7z, adf, adl, adm, ads, apd, bbc, chd, cqi, cqm, d77, d88, dfi, dsd, dsk, hfe, ima, imd, img, ipf, jfd, mfi, mfm, msa, ssd, st, td0, ufi, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -23,7 +23,7 @@ atom:
   manufacturer:         Acorn Computers
   release:              1979
   hardware:             computer
-  extensions:           [wav, tap, csw, uef, mfi, dfi, hfe, mfm, td0, imd, d77, d88, 1dd, cqm, cqi, dsk, 40t, atm, bin, rom, zip, 7z]
+  extensions:           [1dd, 40t, 7z, atm, bin, cqi, cqm, csw, d77, d88, dfi, dsk, hfe, imd, mfi, mfm, rom, tap, td0, uef, wav, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -44,7 +44,7 @@ bbc:
   release:              1981
   hardware:             computer
   theme:                bbcmicro
-  extensions:           [mfi, dfi, hfe, mfm, td0, imd, d77, d88, 1dd, cqm, cqi, dsk, ima, img, ufi, 360, ipf, ssd, bbc, dsd, adf, ads, adm, adl, fsd, wav, tap, bin, zip, 7z]
+  extensions:           [1dd, 360, 7z, adf, adl, adm, ads, bbc, bin, cqi, cqm, d77, d88, dfi, dsd, dsk, fsd, hfe, ima, imd, img, ipf, mfi, mfm, ssd, tap, td0, ufi, wav, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -62,7 +62,7 @@ electron:
   manufacturer:         Acorn Computers
   release:              1983
   hardware:             computer
-  extensions:           [wav, csw, uef, mfi, dfi, hfe, mfm, td0, imd, d77, d88, 1dd, cqm, cqi, dsk, ssd, bbc, img, dsd, adf, ads, adm, adl, rom, bin, zip, 7z]
+  extensions:           [1dd, 7z, adf, adl, adm, ads, bbc, bin, cqi, cqm, csw, d77, d88, dfi, dsd, dsk, hfe, imd, img, mfi, mfm, rom, ssd, td0, uef, wav, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -94,7 +94,7 @@ amstradcpc:
   manufacturer:         Amstrad
   release:              1984
   hardware:             computer
-  extensions:           [dsk, sna, tap, cdt, voc, m3u, zip, 7z]
+  extensions:           [7z, cdt, dsk, m3u, sna, tap, voc, zip]
   emulators:
     libretro:
       cap32:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_CAP32] }
@@ -113,7 +113,7 @@ gx4000:
   manufacturer:         Amstrad
   release:              1991
   hardware:             console
-  extensions:           [dsk, m3u, cpr, zip, 7z]
+  extensions:           [7z, cpr, dsk, m3u, zip]
   emulators:
     libretro:
       cap32:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_CAP32] }
@@ -123,7 +123,7 @@ apfm1000:
   manufacturer:         APF Electronics
   release:              1978
   hardware:             console
-  extensions:           [bin, zip, 7z]
+  extensions:           [7z, bin, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -139,7 +139,7 @@ apple2:
   manufacturer:         Apple
   release:              1977
   hardware:             computer
-  extensions:           [nib, do, po, dsk, mfi, dfi, rti, edd, woz, wav, zip, 7z, chd, hdv, 2mg]
+  extensions:           [2mg, 7z, chd, dfi, do, dsk, edd, hdv, mfi, nib, po, rti, wav, woz, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -159,7 +159,7 @@ apple2gs:
   manufacturer:         Apple
   release:              1986
   hardware:             computer
-  extensions:           [2mg, do, nib, po, dsk, mfi, dfi, rti, edd, woz, hfe, mfm, td0, imd, d77, d88, 1dd, cqm, cqui, ima, img, ufi, 360, ipf, dc42, zip, 7z]
+  extensions:           [1dd, 2mg, 360, 7z, cqm, cqui, d77, d88, dc42, dfi, do, dsk, edd, hfe, ima, imd, img, ipf, mfi, mfm, nib, po, rti, td0, ufi, woz, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -175,7 +175,7 @@ macintosh:
   manufacturer:         Apple
   release:              1984
   hardware:             computer
-  extensions:           [dsk, zip, 7z, mfi, dfi, hfe, mfm, td0, imd, d77, d88, 1dd, cqm, cqi, dsk, ima, img, ufi, ipf, dc42, woz, 2mg, 360, chd, cue, toc, nrg, gdi, iso, cdr, hd, hdv, 2mg, hdi]
+  extensions:           [1dd, 2mg, 360, 7z, cdr, chd, cqi, cqm, cue, d77, d88, dc42, dfi, dsk, gdi, hd, hdi, hdv, hfe, ima, imd, img, ipf, iso, mfi, mfm, nrg, td0, toc, ufi, woz, zip]
   emulators:
     libretro:
       minivmac:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MINIVMAC], incompatible_extensions: [7z, mfi, dfi, hfe, mfm, td0, imd, d77, d88, 1dd, cqm, cqi, dsk, ima, img, ufi, ipf, dc42, woz, 2mg, 360, chd, cue, toc, nrg, gdi, iso, cdr, hd, hdv, 2mg, hdi] }
@@ -219,7 +219,7 @@ acclaim:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/acclaim
   emulators:
@@ -246,7 +246,7 @@ alphadenshi:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/alphadenshi
   emulators:
@@ -262,7 +262,7 @@ amcoe:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/amcoe
   emulators:
@@ -278,7 +278,7 @@ atari:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/atari
   emulators:
@@ -294,7 +294,7 @@ atlus:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/atlus
   emulators:
@@ -310,7 +310,7 @@ banpresto:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/banpresto
   emulators:
@@ -326,7 +326,7 @@ cave:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/cave
   emulators:
@@ -342,7 +342,7 @@ centurye:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/centurye
   emulators:
@@ -389,7 +389,7 @@ cinematronics:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/cinematronics
   emulators:
@@ -405,7 +405,7 @@ comad:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/comad
   emulators:
@@ -421,7 +421,7 @@ cps1:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/cps1
   emulators:
@@ -437,7 +437,7 @@ cps2:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/cps2
   emulators:
@@ -453,7 +453,7 @@ cps3:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/cps3
   emulators:
@@ -525,7 +525,7 @@ dataeast:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/dataeast
   emulators:
@@ -541,7 +541,7 @@ dynax:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/dynax
   emulators:
@@ -557,7 +557,7 @@ eighting:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/eighting
   emulators:
@@ -573,7 +573,7 @@ exidy:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/exidy
   emulators:
@@ -589,7 +589,7 @@ fbneo:
   manufacturer:         Arcade
   release:              2019
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   emulators:
     libretro:
@@ -621,7 +621,7 @@ gaelco:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/gaelco
   emulators:
@@ -637,7 +637,7 @@ gottlieb:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/gottlieb
   emulators:
@@ -653,7 +653,7 @@ igs:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/igs
   emulators:
@@ -669,7 +669,7 @@ incredibletech:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/incredibletech
   emulators:
@@ -685,7 +685,7 @@ irem:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/irem
   emulators:
@@ -701,7 +701,7 @@ jaleco:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/jaleco
   emulators:
@@ -717,7 +717,7 @@ kaneko:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/kaneko
   emulators:
@@ -733,7 +733,7 @@ konami:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/konami
   emulators:
@@ -749,7 +749,7 @@ mame:
   manufacturer:         Arcade
   release:              1997
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   emulators:
     libretro:
@@ -798,7 +798,7 @@ midway:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/midway
   emulators:
@@ -814,7 +814,7 @@ mitchell:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/mitchell
   emulators:
@@ -830,7 +830,7 @@ namco:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/namco
   emulators:
@@ -870,7 +870,7 @@ nichibutsu:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/nichibutsu
   emulators:
@@ -886,7 +886,7 @@ nintendo:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/nintendo
   emulators:
@@ -902,7 +902,7 @@ nmk:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/nmk
   emulators:
@@ -918,7 +918,7 @@ psikyo:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/psikyo
   emulators:
@@ -934,7 +934,7 @@ sammy:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/sammy
   emulators:
@@ -950,7 +950,7 @@ sega:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/sega
   emulators:
@@ -966,7 +966,7 @@ semicom:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/semicom
   emulators:
@@ -982,7 +982,7 @@ seta:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/seta
   emulators:
@@ -1024,7 +1024,7 @@ snk:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/snk
   emulators:
@@ -1040,7 +1040,7 @@ taito:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/taito
   emulators:
@@ -1056,7 +1056,7 @@ technos:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/technos
   emulators:
@@ -1072,7 +1072,7 @@ tecmo:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/tecmo
   emulators:
@@ -1088,7 +1088,7 @@ toaplan:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/toaplan
   emulators:
@@ -1104,7 +1104,7 @@ triforce:
   manufacturer:         Arcade
   release:              2003
   hardware:             arcade
-  extensions:           [gcm, iso, gcz, ciso, wbfs, elf, dol, m3u]
+  extensions:           [ciso, dol, elf, gcm, gcz, iso, m3u, wbfs]
   platform:             arcade
   emulators:
     dolphin_triforce:
@@ -1123,7 +1123,7 @@ universal:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/universal
   emulators:
@@ -1139,7 +1139,7 @@ visco:
   manufacturer:         Arcade
   release:              19XX
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             arcade
   path:                 /userdata/roms/arcade/visco
   emulators:
@@ -1155,7 +1155,7 @@ atari2600:
   manufacturer:         Atari
   release:              1977
   hardware:             console
-  extensions:           [a26, bin, zip, 7z]
+  extensions:           [7z, a26, bin, zip]
   emulators:
     libretro:
       stella:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_STELLA]     }
@@ -1179,7 +1179,7 @@ atari7800:
   manufacturer:         Atari
   release:              1986
   hardware:             console
-  extensions:           [a78, bin, zip, 7z]
+  extensions:           [7z, a78, bin, zip]
   emulators:
     libretro:
       prosystem:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PROSYSTEM] }
@@ -1200,7 +1200,7 @@ atarist:
   manufacturer:         Atari
   release:              1985
   hardware:             computer
-  extensions:           [7z, dim, gem, gemdos, hd, ide, ipf, m3u, msa, stx, vhd, zip, st]
+  extensions:           [7z, dim, gem, gemdos, hd, ide, ipf, m3u, msa, st, stx, vhd, zip]
 
   emulators:
     libretro:
@@ -1223,7 +1223,7 @@ jaguar:
   manufacturer:         Atari
   release:              1993
   hardware:             console
-  extensions:           [j64, jag, cof, abs, rom, zip, 7z]
+  extensions:           [7z, abs, cof, j64, jag, rom, zip]
   theme:                atarijaguar
   platform:             atarijaguar
   emulators:
@@ -1239,7 +1239,7 @@ jaguarcd:
   manufacturer:         Atari
   release:              1995
   hardware:             console
-  extensions:           [cue, cdi, zip, 7z]
+  extensions:           [7z, cdi, cue, zip]
   theme:                atarijaguarcd
   platform:             atarijaguarcd
   emulators:
@@ -1251,7 +1251,7 @@ lynx:
   manufacturer:         Atari
   release:              1989
   hardware:             portable
-  extensions:           [bll, lnx, lyx, o, zip, 7z]
+  extensions:           [7z, bll, lnx, lyx, o, zip]
   theme:                atarilynx
   platform:             atarilynx
   emulators:
@@ -1265,7 +1265,7 @@ xegs:
   manufacturer:         Atari
   release:              1987
   hardware:             computer
-  extensions:           [atr, dsk, xfd, bin, rom, car, zip, 7z]
+  extensions:           [7z, atr, bin, car, dsk, rom, xfd, zip]
   group:                atari8bit
   emulators:
     libretro:
@@ -1285,7 +1285,7 @@ astrocde:
   release:              1978
   hardware:             console
   theme:                astrocade
-  extensions:           [bin, zip, 7z]
+  extensions:           [7z, bin, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -1301,7 +1301,7 @@ sufami:
   manufacturer:         Bandai
   release:              1996
   hardware:             console
-  extensions:           [st, fig, bs, smc, sfc, zip, 7z]
+  extensions:           [7z, bs, fig, sfc, smc, st, zip]
   group:                snes
   emulators:
     libretro:
@@ -1324,7 +1324,7 @@ wswan:
   manufacturer:         Bandai
   release:              1999
   hardware:             portable
-  extensions:           [ws, zip, 7z]
+  extensions:           [7z, ws, zip]
   theme:                wonderswan
   platform:             wonderswan
   emulators:
@@ -1336,7 +1336,7 @@ wswanc:
   manufacturer:         Bandai
   release:              2000
   hardware:             portable
-  extensions:           [wsc, zip, 7z]
+  extensions:           [7z, wsc, zip]
   theme:                wonderswancolor
   platform:             wonderswancolor
   emulators:
@@ -1348,7 +1348,7 @@ gamate:
   manufacturer:         Bitcorp
   release:              1990
   hardware:             portable
-  extensions:           [bin, zip, 7z]
+  extensions:           [7z, bin, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -1364,7 +1364,7 @@ camplynx:
   manufacturer:         Camputers
   release:              1983
   hardware:             computer
-  extensions:           [wav, tap, ldf, zip, 7z]
+  extensions:           [7z, ldf, tap, wav, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -1382,7 +1382,7 @@ pv1000:
   manufacturer:         Casio
   release:              1983
   hardware:             console
-  extensions:           [bin, zip, 7z]
+  extensions:           [7z, bin, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -1394,7 +1394,7 @@ adam:
   manufacturer:         Coleco
   release:              1983
   hardware:             computer
-  extensions:           [wav, ddp, mfi, dfi, hfe, mfm, td0, imd, d77, d88, 1dd, cqm, cqi, dsk, rom, col, bin, zip, 7z]
+  extensions:           [1dd, 7z, bin, col, cqi, cqm, d77, d88, ddp, dfi, dsk, hfe, imd, mfi, mfm, rom, td0, wav, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -1412,7 +1412,7 @@ colecovision:
   manufacturer:         Coleco
   release:              1982
   hardware:             console
-  extensions:           [bin, col, rom, zip, 7z]
+  extensions:           [7z, bin, col, rom, zip]
   emulators:
     libretro:
       bluemsx:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BLUEMSX] }
@@ -1546,7 +1546,7 @@ amigacd32:
   manufacturer:         Commodore
   release:              1994
   hardware:             console
-  extensions:           [bin, chd, cue, iso, lha,  m3u]
+  extensions:           [bin, chd, cue, iso, lha, m3u]
   platform:             amiga
   group:                amiga
   emulators:
@@ -1582,7 +1582,7 @@ amigademo:
   manufacturer:         Commodore
   release:              1987
   hardware:             computer
-  extensions:           [adf, uae, ipf, dms, dmz, adz, lha, hdf, exe, m3u, zip]
+  extensions:           [adf, adz, dms, dmz, exe, hdf, ipf, lha, m3u, uae, zip]
   platform:             amiga
   group:                amiga
   emulators:
@@ -1609,7 +1609,7 @@ c128:
   manufacturer:         Commodore
   release:              1985
   hardware:             computer
-  extensions:           [d64, d81, prg, lnx, m3u, zip, 7z]
+  extensions:           [7z, d64, d81, lnx, m3u, prg, zip]
   platform:             c64
   emulators:
     vice:
@@ -1622,7 +1622,7 @@ c20:
   manufacturer:         Commodore
   release:              1980
   hardware:             computer
-  extensions:           [20, 40, 60, rom, a0, b0, crt, d64, d81, prg, tap, t64, m3u, zip, 7z]
+  extensions:           [20, 40, 60, 7z, a0, b0, crt, d64, d81, m3u, prg, rom, t64, tap, zip]
   platform:             c20
   emulators:
     vice:
@@ -1653,7 +1653,7 @@ cplus4:
   manufacturer:         Commodore
   release:              1984
   hardware:             computer
-  extensions:           [d64, prg, tap, m3u, zip, 7z]
+  extensions:           [7z, d64, m3u, prg, tap, zip]
   platform:             cplus4
   group:                c64
   emulators:
@@ -1667,7 +1667,7 @@ pet:
   manufacturer:         Commodore
   release:              1977
   hardware:             computer
-  extensions:           [a0, b0, crt, d64, d81, prg, tap, t64, m3u, zip, 7z]
+  extensions:           [7z, a0, b0, crt, d64, d81, m3u, prg, t64, tap, zip]
   platform:             pet
   emulators:
     vice:
@@ -1711,7 +1711,7 @@ pdp1:
   manufacturer:         Digital Equipment Corporation
   release:              1961
   hardware:             computer
-  extensions:           [zip, 7z, tap, rim, drm]
+  extensions:           [7z, drm, rim, tap, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -1757,7 +1757,7 @@ bk:
   manufacturer:         Electronica
   release:              1984
   hardware:             computer
-  extensions:           [bin, zip, 7z]
+  extensions:           [7z, bin, zip]
   emulators:
     libretro:
       bk:               { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BK_EMULATOR] }
@@ -1767,7 +1767,7 @@ arcadia:
   manufacturer:         Emerson
   release:              1982
   hardware:             console
-  extensions:           [bin, zip, 7z]
+  extensions:           [7z, bin, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -1779,7 +1779,7 @@ ep128emu:
   manufacturer:         Enterprise
   release:              1985
   hardware:             computer
-  extensions:           [128, bas, cas, cdt, com, dsk, dtf, img, tap, trn, tvcwav, tzx, wav, zip, 7z]
+  extensions:           [128, 7z, bas, cas, cdt, com, dsk, dtf, img, tap, trn, tvcwav, tzx, wav, zip]
   emulators:
     libretro:
       ep128emu:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_EP128EMU] }
@@ -1789,7 +1789,7 @@ advision:
   manufacturer:         Entex
   release:              1982
   hardware:             console
-  extensions:           [bin, zip, 7z]
+  extensions:           [7z, bin, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -1805,7 +1805,7 @@ gamepock:
   manufacturer:         Epoch
   release:              1984
   hardware:             portable
-  extensions:           [bin, zip, 7z]
+  extensions:           [7z, bin, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -1821,7 +1821,7 @@ scv:
   manufacturer:         Epoch
   release:              1984
   hardware:             console
-  extensions:           [bin, zip, 7zip, cart, "0"]
+  extensions:           ["0", 7zip, bin, cart, zip]
   emulators:
     libretro:
       emuscv:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_EMUSCV] }
@@ -1842,7 +1842,7 @@ channelf:
   manufacturer:         Fairchild
   release:              1976
   hardware:             console
-  extensions:           [zip, rom, bin, chf]
+  extensions:           [bin, chf, rom, zip]
   emulators:
     libretro:
       freechaf:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FREECHAF] }
@@ -1852,7 +1852,7 @@ fm7:
   manufacturer:         Fujitsu
   release:              1982
   hardware:             computer
-  extensions:           [wav, t77, mfi, dfi, hfe, mfm, td0, imd, d77, d88, 1dd, cqm, cqi, dsk, zip, 7z]
+  extensions:           [1dd, 7z, cqi, cqm, d77, d88, dfi, dsk, hfe, imd, mfi, mfm, t77, td0, wav, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -1868,7 +1868,7 @@ fmtowns:
   manufacturer:         Fujitsu
   release:              1987
   hardware:             computer
-  extensions:           [bin, m3u, cue, d88, d77, xdf, iso, chd, toc, nrg, gdi, cdr, mfi, dfi, hfe, mfm, td0, imd, 1dd, cqm, cqi, dsk, zip, 7z]
+  extensions:           [1dd, 7z, bin, cdr, chd, cqi, cqm, cue, d77, d88, dfi, dsk, gdi, hfe, imd, iso, m3u, mfi, mfm, nrg, td0, toc, xdf, zip]
   platform:             fmtowns
   emulators:
     libretro:
@@ -1883,7 +1883,7 @@ supracan:
   manufacturer:         Funtech Entertainment
   release:              1995
   hardware:             console
-  extensions:           [bin, zip, 7z]
+  extensions:           [7z, bin, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -1899,7 +1899,7 @@ gp32:
   manufacturer:         GamePark
   release:              2001
   hardware:             portable
-  extensions:           [smc, zip, 7z]
+  extensions:           [7z, smc, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -1915,7 +1915,7 @@ gmaster:
   manufacturer:         Hartung
   release:              1990
   hardware:             portable
-  extensions:           [bin, zip, 7z]
+  extensions:           [7z, bin, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -1931,7 +1931,7 @@ arduous:
   manufacturer:         Homebrew Systems
   release:              2015
   hardware:             portable
-  extensions:           [hex, zip, 7z]
+  extensions:           [7z, hex, zip]
   emulators:
     libretro:
       arduous:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ARDUOUS] }
@@ -1990,7 +1990,7 @@ lutro:
   manufacturer:         Homebrew Systems
   release:
   hardware:             port
-  extensions:           [lutro, zip, 7z]
+  extensions:           [7z, lutro, zip]
   platform:             pc
   group:                ports
   path:                 /userdata/roms/ports/lutro
@@ -2014,7 +2014,7 @@ pico8:
   manufacturer:         Homebrew Systems
   release:              2015
   hardware:             console
-  extensions:           [p8, png, m3u]
+  extensions:           [m3u, p8, png]
   emulators:
     libretro:
       retro8:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_RETRO8] }
@@ -2140,7 +2140,7 @@ vc4000:
   manufacturer:         Interton
   release:              1978
   hardware:             console
-  extensions:           [bin, rom, pgm, tvc, zip, 7z]
+  extensions:           [7z, bin, pgm, rom, tvc, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -2198,7 +2198,7 @@ hyprscan:
   manufacturer:         Mattel
   release:              2006
   hardware:             console
-  extensions:           [chd, cue, toc, nrg, gdi, iso, cdr, zip, 7z]
+  extensions:           [7z, cdr, chd, cue, gdi, iso, nrg, toc, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -2210,7 +2210,7 @@ intellivision:
   manufacturer:         Mattel
   release:              1979
   hardware:             console
-  extensions:           [int, bin, rom, zip, 7z]
+  extensions:           [7z, bin, int, rom, zip]
   emulators:
     libretro:
       freeintv:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FREEINTV] }
@@ -2220,7 +2220,7 @@ vectrex:
   manufacturer:         MB
   release:              1982
   hardware:             console
-  extensions:           [bin, gam, vec, zip, 7z]
+  extensions:           [7z, bin, gam, vec, zip]
   emulators:
     libretro:
       vecx:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VECX] }
@@ -2232,7 +2232,7 @@ dos:
   manufacturer:         Microsoft
   release:              1981
   hardware:             computer
-  extensions:           [pc, dos, zip, squashfs, dosz, m3u, iso, cue]
+  extensions:           [cue, dos, dosz, iso, m3u, pc, squashfs, zip]
   theme:                pc
   platform:             pc
   emulators:
@@ -2313,7 +2313,7 @@ msx1:
   manufacturer:         Microsoft
   release:              1983
   hardware:             computer
-  extensions:           [dsk, mx1, rom, zip, 7z, cas, m3u, ogv, openmsx]
+  extensions:           [7z, cas, dsk, m3u, mx1, ogv, openmsx, rom, zip]
   platform:             msx
   emulators:
     libretro:
@@ -2411,7 +2411,7 @@ msx2:
   manufacturer:         Microsoft
   release:              1985
   hardware:             computer
-  extensions:           [dsk, mx2, rom, zip, 7z, cas, m3u, openmsx]
+  extensions:           [7z, cas, dsk, m3u, mx2, openmsx, rom, zip]
   platform:             msx2
   emulators:
     libretro:
@@ -2509,7 +2509,7 @@ msx2+:
   manufacturer:         Microsoft
   release:              1988
   hardware:             computer
-  extensions:           [dsk, mx2, rom, zip, 7z, cas, m3u, openmsx]
+  extensions:           [7z, cas, dsk, m3u, mx2, openmsx, rom, zip]
   platform:             msx2+
   emulators:
     libretro:
@@ -2607,7 +2607,7 @@ msxturbor:
   manufacturer:         Microsoft
   release:              1990
   hardware:             computer
-  extensions:           [dsk, m3u, mx2, rom, zip, 7z, openmsx]
+  extensions:           [7z, dsk, m3u, mx2, openmsx, rom, zip]
   platform:             msxturbor
   emulators:
     libretro:
@@ -2620,7 +2620,7 @@ windows:
   manufacturer:         Microsoft
   release:              1992
   hardware:             computer
-  extensions:           [pc, exe, squashfs, wine, wsquashfs, wtgz]
+  extensions:           [exe, pc, squashfs, wine, wsquashfs, wtgz]
   platform:             pc
   theme:                windows
   emulators:
@@ -2672,7 +2672,7 @@ xbox360:
   manufacturer:         Microsoft
   release:              2005
   hardware:             console
-  extensions:           [iso, xex, xbox360, squashfs, zar]
+  extensions:           [iso, squashfs, xbox360, xex, zar]
   emulators:
     xenia:
       xenia:            { requireAnyOf: [BR2_PACKAGE_XENIA], incompatible_extensions: [zar] }
@@ -2710,7 +2710,7 @@ samcoupe:
   manufacturer:         Miles Gordon Technology
   release:              1989
   hardware:             computer
-  extensions:           [cpm, dsk, sad, mgt, sdf, td0, sbt, zip]
+  extensions:           [cpm, dsk, mgt, sad, sbt, sdf, td0, zip]
   emulators:
     samcoupe:
       samcoupe:         { requireAnyOf: [BR2_PACKAGE_SIMCOUPE] }
@@ -2720,7 +2720,7 @@ imageviewer:
   manufacturer:         Misc. System
   release:
   hardware:             system
-  extensions:           [jpg, jpeg, png, bmp, psd, tga, gif, hdr, pic, ppm, pgm, mkv, pdf, mp4, avi, webm]
+  extensions:           [avi, bmp, gif, hdr, jpeg, jpg, mkv, mp4, pdf, pgm, pic, png, ppm, psd, tga, webm]
   path:                 /userdata/screenshots
   platform:             imageviewer
   force:                True
@@ -2730,7 +2730,7 @@ kodi:
   manufacturer:         Misc. System
   release:              2001
   hardware:             computer
-  extensions:           [mkv, avi, f4v, f4f, 3gp, ogm, flv, mp4, mp3, flac, ogg, m4a, webm, 3g2, mov, wmv, mpg, mpeg, vob, asf, divx, m2p, m2ts, ps, ts, mxf, wma, wav]
+  extensions:           [3g2, 3gp, asf, avi, divx, f4f, f4v, flac, flv, m2p, m2ts, m4a, mkv, mov, mp3, mp4, mpeg, mpg, mxf, ogg, ogm, ps, ts, vob, wav, webm, wma, wmv]
   path:                 /userdata/library
   emulators:
     kodi:
@@ -2743,7 +2743,7 @@ recordings:
   manufacturer:         Misc. System
   release:
   hardware:             system
-  extensions:           [mkv, mp4, avi, webm, mp3, wav, ogg, flac]
+  extensions:           [avi, flac, mkv, mp3, mp4, ogg, wav, webm]
   path:                 /userdata/recordings
   platform:             imageviewer
   force:                True
@@ -2753,7 +2753,7 @@ library:
   manufacturer:         Misc. System
   release:
   hardware:             system
-  extensions:           [jpg, jpeg, png, bmp, psd, tga, gif, hdr, pic, ppm, pgm, mkv, pdf, mp4, avi, webm, cbz, mp3, wav, ogg, flac, mod, xm, stm, s3m, far, it, 669, mtm]
+  extensions:           [669, avi, bmp, cbz, far, flac, gif, hdr, it, jpeg, jpg, mkv, mod, mp3, mp4, mtm, ogg, pdf, pgm, pic, png, ppm, psd, s3m, stm, tga, wav, webm, xm]
   path:                 /userdata/library
   platform:             imageviewer
   force:                True
@@ -2779,7 +2779,7 @@ pc88:
   manufacturer:         NEC
   release:              1981
   hardware:             computer
-  extensions:           [cmt, d88, u88, m3u]
+  extensions:           [cmt, d88, m3u, u88]
   platform:             pc88
   emulators:
     libretro:
@@ -2790,7 +2790,7 @@ pc98:
   manufacturer:         NEC
   release:              1982
   hardware:             computer
-  extensions:           [d98, zip, 98d, fdi, fdd, 2hd, tfd, d88, 88d, hdm, xdf, dup, cmd, hdi, thd, nhd, hdd, hdn, m3u]
+  extensions:           [2hd, 88d, 98d, cmd, d88, d98, dup, fdd, fdi, hdd, hdi, hdm, hdn, m3u, nhd, tfd, thd, xdf, zip]
   platform:             pc98
   emulators:
     libretro:
@@ -2801,7 +2801,7 @@ pcengine:
   manufacturer:         NEC
   release:              1987
   hardware:             console
-  extensions:           [pce, bin, zip, 7z]
+  extensions:           [7z, bin, pce, zip]
   emulators:
     libretro:
       pce:              { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE] }
@@ -2812,7 +2812,7 @@ pcenginecd:
   manufacturer:         NEC
   release:              1988
   hardware:             console
-  extensions:           [pce, cue, ccd, iso, img, chd]
+  extensions:           [ccd, chd, cue, img, iso, pce]
   theme:                pce-cd
   emulators:
     libretro:
@@ -2834,7 +2834,7 @@ supergrafx:
   manufacturer:         NEC
   release:              1989
   hardware:             console
-  extensions:           [pce, sgx, cue, ccd, chd, zip, 7z]
+  extensions:           [7z, ccd, chd, cue, pce, sgx, zip]
   emulators:
     libretro:
       mednafen_supergrafx: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_SUPERGRAFX] }
@@ -2844,7 +2844,7 @@ tg16:
   manufacturer:         NEC
   release:              1987
   hardware:             console
-  extensions:           [pce, bin, zip, 7z]
+  extensions:           [7z, bin, pce, zip]
   theme:                tg16
   emulators:
     libretro:
@@ -2856,7 +2856,7 @@ tg-cd:
   manufacturer:         NEC
   release:              1988
   hardware:             console
-  extensions:           [pce, cue, ccd, iso, img, chd]
+  extensions:           [ccd, chd, cue, img, iso, pce]
   theme:                tg-cd
   emulators:
     libretro:
@@ -2881,7 +2881,7 @@ fds:
   manufacturer:         Nintendo
   release:              1986
   hardware:             console
-  extensions:           [fds, zip, 7z]
+  extensions:           [7z, fds, zip]
   group:                nes
   emulators:
     libretro:
@@ -2895,7 +2895,7 @@ gameandwatch:
   manufacturer:         Nintendo
   release:              1980
   hardware:             portable
-  extensions:           [mgw, zip, 7z]
+  extensions:           [7z, mgw, zip]
   group:                lcdgames
   emulators:
     libretro:
@@ -2909,7 +2909,7 @@ gamecube:
   manufacturer:         Nintendo
   release:              2001
   hardware:             console
-  extensions:           [gcm, iso, gcz, ciso, wbfs, rvz, elf, dol, m3u, json]
+  extensions:           [ciso, dol, elf, gcm, gcz, iso, json, m3u, rvz, wbfs]
   platform:             gc
   theme:                gc
   emulators:
@@ -2936,7 +2936,7 @@ gb:
   manufacturer:         Nintendo
   release:              1989
   hardware:             portable
-  extensions:           [gb, zip, 7z]
+  extensions:           [7z, gb, zip]
   emulators:
     libretro:
       doublecherrygb:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOUBLECHERRYGB] }
@@ -2958,7 +2958,7 @@ gb2players:
   manufacturer:         Nintendo
   release:              1989
   hardware:             portable
-  extensions:           [gb, gb2, gbc2, zip, 7z]
+  extensions:           [7z, gb, gb2, gbc2, zip]
   platform:             gb
   emulators:
     libretro:
@@ -2976,7 +2976,7 @@ gba:
   manufacturer:         Nintendo
   release:              2001
   hardware:             portable
-  extensions:           [gba, zip, 7z]
+  extensions:           [7z, gba, zip]
   emulators:
     libretro:
       mgba:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MGBA]  }
@@ -2994,7 +2994,7 @@ gbc:
   manufacturer:         Nintendo
   release:              1998
   hardware:             portable
-  extensions:           [gbc, zip, 7z]
+  extensions:           [7z, gbc, zip]
   emulators:
     libretro:
       doublecherrygb:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOUBLECHERRYGB] }
@@ -3016,7 +3016,7 @@ gbc2players:
   manufacturer:         Nintendo
   release:              1998
   hardware:             portable
-  extensions:           [gbc, gb2, gbc2, zip, 7z]
+  extensions:           [7z, gb2, gbc, gbc2, zip]
   platform:             gbc
   emulators:
     libretro:
@@ -3035,7 +3035,7 @@ sgb-msu1:
   manufacturer:         Nintendo
   release:              1994
   hardware:             console
-  extensions:           [gb, gbc, zip, 7z, squashfs]
+  extensions:           [7z, gb, gbc, squashfs, zip]
   emulators:
     libretro:
       bsnes:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BSNES]     }
@@ -3046,7 +3046,7 @@ n64:
   manufacturer:         Nintendo
   release:              1996
   hardware:             console
-  extensions:           [z64, n64, squashfs, v64, zip, 7z]
+  extensions:           [7z, n64, squashfs, v64, z64, zip]
   emulators:
     mupen64plus:
       gliden64:         { requireAnyOf: [BR2_PACKAGE_MUPEN64PLUS_GLIDEN64], incompatible_extensions: [zip, 7z] }
@@ -3069,7 +3069,7 @@ n64dd:
   manufacturer:         Nintendo
   release:              1999
   hardware:             console
-  extensions:           [z64, n64, ndd, squashfs, zip, 7z] # d64 : Not supported yet
+  extensions:           [7z, n64, ndd, squashfs, z64, zip] # d64 : Not supported yet
   emulators:
     mupen64plus:
       gliden64:         { requireAnyOf: [BR2_PACKAGE_MUPEN64PLUS_GLIDEN64]         }
@@ -3084,7 +3084,7 @@ nds:
   manufacturer:         Nintendo
   release:              2004
   hardware:             portable
-  extensions:           [nds, bin, ids, zip, 7z]
+  extensions:           [7z, bin, ids, nds, zip]
   emulators:
     libretro:
       desmume:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DESMUME]    }
@@ -3101,7 +3101,7 @@ nes:
   manufacturer:         Nintendo
   release:              1983
   hardware:             console
-  extensions:           [nes, unif, unf, zip, 7z]
+  extensions:           [7z, nes, unf, unif, zip]
   group:                nes
   emulators:
     libretro:
@@ -3121,7 +3121,7 @@ pokemini:
   manufacturer:         Nintendo
   release:              2001
   hardware:             portable
-  extensions:           [min, zip, 7z]
+  extensions:           [7z, min, zip]
   emulators:
     libretro:
       pokemini:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_POKEMINI] }
@@ -3131,7 +3131,7 @@ satellaview:
   manufacturer:         Nintendo
   release:              1995
   hardware:             console
-  extensions:           [bs, smc, sfc, zip, 7z, squashfs]
+  extensions:           [7z, bs, sfc, smc, squashfs, zip]
   group:                snes
   emulators:
     libretro:
@@ -3145,7 +3145,7 @@ sgb:
   manufacturer:         Nintendo
   release:              1994
   hardware:             console
-  extensions:           [gb, gbc, zip, 7z]
+  extensions:           [7z, gb, gbc, zip]
   group:                snes
   emulators:
     libretro:
@@ -3183,7 +3183,7 @@ snes:
   manufacturer:         Nintendo
   release:              1990
   hardware:             console
-  extensions:           [smc, fig, sfc, gd3, gd7, dx2, bsx, swc, zip, 7z]
+  extensions:           [7z, bsx, dx2, fig, gd3, gd7, sfc, smc, swc, zip]
   group:                snes
   emulators:
     libretro:
@@ -3207,7 +3207,7 @@ snes-msu1:
   manufacturer:         Nintendo
   release:              1991
   hardware:             console
-  extensions:           [smc, sfc, squashfs]
+  extensions:           [sfc, smc, squashfs]
   group:                snes
   emulators:
     libretro:
@@ -3236,7 +3236,7 @@ switch:
   hardware:             console
   platform:             switch
   theme:                switch
-  extensions:           [xci, nsp]
+  extensions:           [nsp, xci]
   emulators:
     suyu:
       suyu:             { requireAnyOf: [BR2_PACKAGE_SUYU]    }
@@ -3248,7 +3248,7 @@ virtualboy:
   manufacturer:         Nintendo
   release:              1995
   hardware:             console
-  extensions:           [vb, zip, 7z]
+  extensions:           [7z, vb, zip]
   emulators:
     libretro:
       vb:               { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_VB] }
@@ -3258,7 +3258,7 @@ wii:
   manufacturer:         Nintendo
   release:              2006
   hardware:             console
-  extensions:           [gcm, iso, gcz, ciso, wbfs, wad, rvz, elf, dol, m3u, json]
+  extensions:           [ciso, dol, elf, gcm, gcz, iso, json, m3u, rvz, wad, wbfs]
   emulators:
     dolphin:
       dolphin:          { requireAnyOf: [BR2_PACKAGE_DOLPHIN_EMU]      }
@@ -3337,7 +3337,7 @@ mu:
   manufacturer:         Palm
   release:              2001
   hardware:             portable
-  extensions:           [prc, pqa, img]
+  extensions:           [img, pqa, prc]
   emulators:
     libretro:
       mu:               { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MU] }
@@ -3347,7 +3347,7 @@ mu:
   manufacturer:         Panasonic - Sanyo - Goldstar
   release:              1993
   hardware:             console
-  extensions:           [iso, chd, cue]
+  extensions:           [chd, cue, iso]
   emulators:
     libretro:
       opera:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_OPERA] }
@@ -3357,7 +3357,7 @@ cdi:
   manufacturer:         Philips
   release:              1990
   hardware:             console
-  extensions:           [chd, cue, toc, nrg, gdi, iso, cdr]
+  extensions:           [cdr, chd, cue, gdi, iso, nrg, toc]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -3373,7 +3373,7 @@ odyssey2:
   manufacturer:         Philips - Magnavox
   release:              1978
   hardware:             console
-  extensions:           [bin, zip, 7z]
+  extensions:           [7z, bin, zip]
   path:                 o2em
   emulators:
     libretro:
@@ -3384,7 +3384,7 @@ p2000t:
   manufacturer:         Philips
   release:              1980
   hardware:             console
-  extensions:           [cas, p2000t, zip, 7z]
+  extensions:           [7z, cas, p2000t, zip]
   platform:             p2000t
   emulators:
     libretro:
@@ -3395,7 +3395,7 @@ videopacplus:
   manufacturer:         Philips
   release:              1983
   hardware:             console
-  extensions:           [bin, zip, 7z]
+  extensions:           [7z, bin, zip]
   platform:             videopac
   path:                 videopacplus
   emulators:
@@ -4521,7 +4521,7 @@ stalker:
   manufacturer:         Ports
   release:              2009
   hardware:             port
-  extensions:           [cop,cs]
+  extensions:           [cop, cs]
   platform:             pc
   group:                ports
   path:                 /userdata/roms/ports/stalker
@@ -4876,7 +4876,7 @@ doom3:
   manufacturer:         Ports (Doom)
   release:              2004
   hardware:             port
-  extensions:           [base, d3xp, demo, boom3]
+  extensions:           [base, boom3, d3xp, demo]
   platform:             pc
   theme:                doom3
   group:                doom
@@ -4933,7 +4933,7 @@ prboom:
   manufacturer:         Ports (Doom)
   release:
   hardware:             port
-  extensions:           [wad, iwad, pwad, uwad, gzdoom]
+  extensions:           [gzdoom, iwad, pwad, uwad, wad]
   platform:             pc
   group:                doom
   path:                 /userdata/roms/ports/doom
@@ -5056,6 +5056,93 @@ witchaven:
     witchaven:
       witchaven:        { requireAnyOf: [BR2_PACKAGE_WITCHAVEN] }
 
+quake:
+  name:                 Quake I
+  manufacturer:         Ports (Quake)
+  release:
+  hardware:             port
+  extensions:           [pak, quake]
+  platform:             pc
+  theme:                tyrquake
+  group:                quake
+  path:                 /userdata/roms/ports/quake1
+  emulators:
+    libretro:
+      tyrquake:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TYRQUAKE] }
+    vkquake:
+      vkquake:          { requireAnyOf: [BR2_PACKAGE_VKQUAKE] }
+  comment_en:           |
+                        Put your Quake id1 folder & associated files in this directory.
+                        Make sure all data files are lowercase, e.g. "id1", not "ID1" and "pak0.pak", not "PAK0.PAK".
+                        Some distributions of the game have upper case file names, e.g. from GOG.com.
+                        If your system supports Vulkan you can use vkQuake for more features.
+                        Create a blank launch file with a .quake extension to be able to start the game from ES.
+                        i.e. `Quake.quake` or `Quake Mission Pack 1 - Scourge of Armagon.quake`.
+                        Launch files should be in `/userdata/roms/ports/quake`.
+                        
+                        Mission Packs
+                        -------------
+                        Quake Mission Pack 1: Scourge of Armagon & Quake Mission Pack 2: Dissolution of Eternity are supported automatically.
+                        Ensure the game files are in these folders:
+                        `/userdata/roms/ports/quake/hipnotic` for Mission Pack 1
+                        `/userdata/roms/ports/quake/rogue` for Mission Pack 2
+                        Then create the associated ES launch file.
+                        i.e. /userdata/roms/ports/quake/Quake Mission Pack 2 - Dissolution of Eternity.quake
+                        If the mission packs are names accordingly then vkQuake or libretro-tyrquake will use the correct .pak automatically.
+                        Music
+                        -----
+                        The original Quake had a great soundtrack by Nine Inch Nails.
+                        Unfortunately, the Steam version does not come with the soundtrack files (the 2021 re-release music should work out of the box).
+                        The GOG-provided files may need to be converted before they are ready for use.
+                        In general, you'll just need to move a "music" folder to the correct location within your installation (.e.g `/userdata/roms/ports/quake/id1/music`).
+                        Mission Pack 1 soundtrack files go inside "hipnotic/music", and Mission Pack 2 soundtrack files go inside "rogue/music".
+                        Because the music files are separate to the .pak files you can use your own soundtrack provided they follow the correct naming conventions.
+                        The files are named in the pattern "tracknn". i.e. track02.ogg or track02.mp3 etc
+                        vkQuake supports OGG, MP3, FLAC, and WAV audio formats.
+
+                        For more info: https://wiki.batocera.org/systems:quake
+  comment_fr:           |
+                        Placez ici vos fichiers .PAK pour Quake 1.
+                        Trouvez la documentation ici: https://wiki.batocera.org/systems:quake
+  comment_br:           |
+                        Coloque seus jogos Quake 1 .PAK neste diretório.
+                        Para mais informações: https://wiki.batocera.org/systems:quake
+
+quake2:
+  name:                 Quake II
+  manufacturer:         Ports (Quake)
+  release:              1997
+  hardware:             port
+  extensions:           [7zip, game, quake2, zip]
+  platform:             pc
+  theme:                yquake2
+  group:                quake
+  path:                 /userdata/roms/ports/quake2
+  emulators:
+    libretro:
+      vitaquake2:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VITAQUAKE2] }
+    vkquake2:
+      vkquake2:         { requireAnyOf: [BR2_PACKAGE_VKQUAKE2], incompatible_extensions: [zip, 7zip] }
+  comment_en:           |
+                        For the standard Quake II copy your 'baseq2' directory and contents here.
+                        Make sure all data files are lowercase, e.g. "baseq2", not "BASEQ2" and "pak0.pak", not "PAK0.PAK".
+                        Create a blank launch file with a .quake2 extension to be able to start the game from ES.
+                        i.e. `Quake II.quake2` or `Quake II - Zaero.quake2`.
+                        Launch files should be in `/userdata/roms/ports/quake2`.
+                        Mission Packs
+                        -------------
+                        Copy necessary data file to `rogue` ("Ground Zero"), `xatrix` ("The Reckoning"), `zaero` ("Quake II: Zaero") and `smd` ("Slight Mechanical Destruction") directories respectively.
+
+                        The libretro vitaquake2 supported mission pack ROMs are: xatrix, rogue, and zaero.
+                        If you have vkQuake2 the additional `smd` ("Slight Mechanical Destruction") pack is supported.
+                        vkQuake2 also supports the Capture the Flag mod using the `ctf` directory.
+                        Note: vkQuake2 does not support the zip or 7zip extensions.
+                        For more info: https://wiki.batocera.org/systems:quake2
+  comment_fr: |
+                        Trouvez la documentation ici : https://wiki.batocera.org/systems:quake2
+  comment_br: |
+                        Para mais informações: https://wiki.batocera.org/systems:quake2
+
 quake3:
   name:                 Quake III
   manufacturer:         Ports (Quake)
@@ -5066,10 +5153,10 @@ quake3:
   group:                quake
   path:                 /userdata/roms/ports/quake3
   emulators:
-    quake3:
-      quake3:           { requireAnyOf: [BR2_PACKAGE_QUAKE3] }
     libretro:
       vitaquake3:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VITAQUAKE3] }
+    vkquake3:
+      vkquake3:         { requireAnyOf: [ BR2_PACKAGE_VKQUAKE3 ] }
   comment_en: |
                         Quake III is optimized to be played with a mouse and keyboard, but here it is also pre-configured to be played with a gamepad.
 
@@ -5113,62 +5200,12 @@ quake3:
 
                         Para mais informações: https://wiki.batocera.org/systems:ioquake3
 
-tyrquake:
-  name:                 Quake I
-  manufacturer:         Ports (Quake)
-  release:
-  hardware:             port
-  extensions:           [pak]
-  platform:             pc
-  group:                quake
-  path:                 /userdata/roms/ports/quake1
-  emulators:
-    quakespasm:
-      quakespasm:       { requireAnyOf: [BR2_PACKAGE_QUAKESPASM] }
-    vkquake:
-      vkquake:          { requireAnyOf: [BR2_PACKAGE_VKQUAKE] }
-    libretro:
-      tyrquake:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TYRQUAKE] }
-  comment_en:           |
-                        Put your Quake 1 .PAK games in this directory.
-
-                        For more info: https://wiki.batocera.org/systems:tyrquake
-  comment_fr:           |
-                        Placez ici vos fichiers .PAK pour Quake 1.
-
-                        Trouvez la documentation ici: https://wiki.batocera.org/systems:tyrquake
-
-yquake2:
-  name:                 Quake II
-  manufacturer:         Ports (Quake)
-  release:              1997
-  hardware:             port
-  extensions:           [game]
-  platform:             pc
-  group:                quake
-  path:                 /userdata/roms/ports/quake2
-  emulators:
-    yquake2:
-      yquake2:          { requireAnyOf: [BR2_PACKAGE_YQUAKE2] }
-    libretro:
-      vitaquake2:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VITAQUAKE2] }
-  comment_en:           |
-                        The libretro vitaquake2 core offers several mission packs.
-                        To ensure the correct vitaquake2 core loads for a mission pack, make sure it is placed in a subdirectory within this ROM directory.
-                        The supported subdirectories for mission pack ROMs are: xatrix, rogue, and zaero.
-                        For the standard Quake II directory, use 'baseq2' to utilize the standard vitaquake2 core.
-  comment_fr:           |
-                        Le cœur libretro de vitaquake2 propose différents packs de missions.
-                        Pour vous assurer que le bon cœur vitaquake2 se charge pour un pack de missions, veillez à le placer dans un sous-répertoire de ce répertoire ROM.
-                        Les sous-répertoires pris en charge pour les ROM de packs de missions sont : xatrix, rogue et zaero.
-                        Pour le répertoire standard de Quake II, utilisez 'baseq2' pour utiliser le cœur vitaquake2 standard.
-
 bigfish:
   name:                 Big Fish Games
   manufacturer:         Big Fish Games
   release:              2002
   hardware:             computer
-  extensions:           [pc, exe, squashfs, wine, wsquashfs, wtgz]
+  extensions:           [exe, pc, squashfs, wine, wsquashfs, wtgz]
   platform:             pc
   emulators:
     wine:
@@ -5179,7 +5216,7 @@ popcap:
   manufacturer:         Popcap
   release:              2000
   hardware:             computer
-  extensions:           [pc, exe, squashfs, wine, wsquashfs, wtgz]
+  extensions:           [exe, pc, squashfs, wine, wsquashfs, wtgz]
   platform:             pc
   emulators:
     wine:
@@ -5190,7 +5227,7 @@ atomiswave:
   manufacturer:         Sammy
   release:              2003
   hardware:             arcade
-  extensions:           [lst, bin, dat, zip, 7z]
+  extensions:           [7z, bin, dat, lst, zip]
   platform:             atomiswave, arcade
   emulators:
     libretro:
@@ -5204,7 +5241,7 @@ cave3rd:
   manufacturer:         Sega
   release:              2004
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             cave3rd, arcade
   emulators:
     demul:
@@ -5293,7 +5330,7 @@ dreamcast:
   manufacturer:         Sega
   release:              1998
   hardware:             console
-  extensions:           [cdi, cue, gdi, chd, m3u]
+  extensions:           [cdi, chd, cue, gdi, m3u]
   emulators:
     libretro:
       flycast:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]     }
@@ -5314,7 +5351,7 @@ gaelco:
   manufacturer:         Sega
   release:              1999
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             gaelco, arcade
   emulators:
     demul:
@@ -5403,7 +5440,7 @@ gamegear:
   manufacturer:         Sega
   release:              1990
   hardware:             portable
-  extensions:           [bin, gg, zip, 7z]
+  extensions:           [7z, bin, gg, zip]
   emulators:
     libretro:
       genesisplusgx:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX] }
@@ -5416,7 +5453,7 @@ hikaru:
   manufacturer:         Sega
   release:              1999
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             hikaru, arcade
   emulators:
     demul:
@@ -5573,7 +5610,7 @@ mastersystem:
   manufacturer:         Sega
   release:              1985
   hardware:             console
-  extensions:           [bin, sms, zip, 7z]
+  extensions:           [7z, bin, sms, zip]
   emulators:
     libretro:
       genesisplusgx:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX] }
@@ -5586,7 +5623,7 @@ megadrive:
   manufacturer:         Sega
   release:              1988
   hardware:             console
-  extensions:           [bin, gen, md, sg, smd, zip, 7z]
+  extensions:           [7z, bin, gen, md, sg, smd, zip]
   platform:             genesis, megadrive
   group:                megadrive
   emulators:
@@ -5846,7 +5883,7 @@ msu-md:
   manufacturer:         Sega
   release:              2020
   hardware:             console
-  extensions:           [md, squashfs, zip, 7z]
+  extensions:           [7z, md, squashfs, zip]
   platform:             genesis, megadrive
   group:                megadrive
   emulators:
@@ -5859,7 +5896,7 @@ naomi:
   manufacturer:         Sega
   release:              1998
   hardware:             arcade
-  extensions:           [lst, bin, dat, zip, 7z]
+  extensions:           [7z, bin, dat, lst, zip]
   platform:             naomi, arcade
   emulators:
     libretro:
@@ -5873,7 +5910,7 @@ naomi2:
   manufacturer:         Sega
   release:              2000
   hardware:             arcade
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   platform:             naomi2, arcade
   emulators:
     libretro:
@@ -5989,7 +6026,7 @@ naomi2gd:
   manufacturer:         Sega
   release:              2000
   hardware:             arcade
-  extensions:           [lst, bin, dat, zip, 7z]
+  extensions:           [7z, bin, dat, lst, zip]
   platform:             naomi2gd, arcade
   emulators:
     libretro:
@@ -6002,7 +6039,7 @@ naomigd:
   manufacturer:         Sega
   release:              1998
   hardware:             arcade
-  extensions:           [lst, bin, dat, zip, 7z]
+  extensions:           [7z, bin, dat, lst, zip]
   platform:             naomigd, arcade
   emulators:
     libretro:
@@ -6016,7 +6053,7 @@ pico:
   manufacturer:         Sega
   release:              1993
   hardware:             console
-  extensions:           [bin, md, zip, 7z]
+  extensions:           [7z, bin, md, zip]
   group:                megadrive
   emulators:
     libretro:
@@ -6029,7 +6066,7 @@ saturn:
   manufacturer:         Sega
   release:              1994
   hardware:             console
-  extensions:           [cue, ccd, m3u, chd, iso, zip]
+  extensions:           [ccd, chd, cue, iso, m3u, zip]
   emulators:
     libretro:
       beetle-saturn:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_SATURN], incompatible_extensions: [zip] }
@@ -6059,7 +6096,7 @@ sega32x:
   manufacturer:         Sega
   release:              1994
   hardware:             console
-  extensions:           [32x, chd, smd, bin, md, zip, 7z]
+  extensions:           [32x, 7z, bin, chd, md, smd, zip]
   group:                megadrive
   emulators:
     libretro:
@@ -6070,7 +6107,7 @@ segacd:
   manufacturer:         Sega
   release:              1991
   hardware:             console
-  extensions:           [cue, iso, chd, m3u]
+  extensions:           [chd, cue, iso, m3u]
   platform:             segacd
   emulators:
     libretro:
@@ -6082,7 +6119,7 @@ sg1000:
   manufacturer:         Sega
   release:              1983
   hardware:             console
-  extensions:           [bin, sg, zip, 7z]
+  extensions:           [7z, bin, sg, zip]
   platform:             sg-1000
   theme:                sg-1000
   emulators:
@@ -6095,7 +6132,7 @@ sonicretro:
   manufacturer:         Sega
   release:              2021
   hardware:             port
-  extensions:           [son, scd]
+  extensions:           [scd, son]
   platform:             pc
   group:                sonic
   path:                 /userdata/roms/ports/sonicretro
@@ -6197,7 +6234,7 @@ systemsp:
   manufacturer:         Sega
   release:              2004
   hardware:             arcade
-  extensions:           [lst, bin, dat, zip, 7z]
+  extensions:           [7z, bin, dat, lst, zip]
   platform:             systemsp, arcade
   emulators:
     libretro:
@@ -6210,7 +6247,7 @@ vemulator:
   manufacturer:         Sega
   release:              1998
   hardware:             console
-  extensions:           [vms, dci, bin]
+  extensions:           [bin, dci, vms]
   emulators:
     libretro:
       vemulator:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VEMULATOR] }
@@ -6220,7 +6257,7 @@ x1:
   manufacturer:         Sharp
   release:              1982
   hardware:             computer
-  extensions:           [dx1, zip, 2d, 2hd, tfd, d88, 88d, hdm, xdf, dup, cmd, 7z]
+  extensions:           [2d, 2hd, 7z, 88d, cmd, d88, dup, dx1, hdm, tfd, xdf, zip]
   emulators:
     libretro:
       x1:               { requireAnyOf: [BR2_PACKAGE_LIBRETRO_XMIL] }
@@ -6240,7 +6277,7 @@ zx81:
   manufacturer:         Sinclair
   release:              1981
   hardware:             computer
-  extensions:           [tzx, p, zip, 7z]
+  extensions:           [7z, p, tzx, zip]
   emulators:
     libretro:
       '81':             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_81] }
@@ -6256,7 +6293,7 @@ zxspectrum:
   manufacturer:         Sinclair
   release:              1982
   hardware:             computer
-  extensions:           [dsk, rzx, scl, tap, trd, tzx, z80, zip, 7z]
+  extensions:           [7z, dsk, rzx, scl, tap, trd, tzx, z80, zip]
   emulators:
     libretro:
       fuse:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FUSE] }
@@ -6335,7 +6372,7 @@ neogeocd:
   manufacturer:         SNK
   release:              1994
   hardware:             console
-  extensions:           [cue, iso, chd]
+  extensions:           [chd, cue, iso]
   emulators:
     libretro:
       neocd:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_NEOCD] }
@@ -6356,7 +6393,7 @@ ngp:
   manufacturer:         SNK
   release:              1998
   hardware:             portable
-  extensions:           [ngp, zip, 7z]
+  extensions:           [7z, ngp, zip]
   emulators:
     libretro:
       mednafen_ngp:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_NGP] }
@@ -6367,7 +6404,7 @@ ngpc:
   manufacturer:         SNK
   release:              1999
   hardware:             portable
-  extensions:           [ngc, zip, 7z]
+  extensions:           [7z, ngc, zip]
   emulators:
     libretro:
       mednafen_ngp:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_NGP] }
@@ -6378,7 +6415,7 @@ ngage:
   manufacturer:         Nokia
   release:              2003
   hardware:             portable
-  extensions:           [n-gage, sisx, sis, zip]
+  extensions:           [n-gage, sis, sisx, zip]
   platform:             ngage
   theme:                ngage
   emulators:
@@ -6390,7 +6427,7 @@ solarus:
   manufacturer:         Solarus Team
   release:              2011
   hardware:             port
-  extensions:           [zip, solarus]
+  extensions:           [solarus, zip]
   emulators:
     solarus:
       solarus:          { requireAnyOf: [BR2_PACKAGE_SOLARUS_ENGINE] }
@@ -6400,7 +6437,7 @@ ps2:
   manufacturer:         Sony
   release:              2000
   hardware:             console
-  extensions:           [bin, chd, cso, elf, dump, gz, img, iso, m3u, mdf, nrg]
+  extensions:           [bin, chd, cso, dump, elf, gz, img, iso, m3u, mdf, nrg]
   emulators:
     pcsx2:
       pcsx2:            { requireAnyOf: [BR2_PACKAGE_PCSX2], incompatible_extensions: [m3u] }
@@ -6477,7 +6514,7 @@ psp:
   manufacturer:         Sony
   release:              2004
   hardware:             portable
-  extensions:           [chd, cso, iso pbp]
+  extensions:           [chd, cso, iso, pbp]
   emulators:
     ppsspp:
       ppsspp:           { requireAnyOf: [BR2_PACKAGE_PPSSPP] }
@@ -6495,7 +6532,7 @@ pspmini:
   manufacturer:         Sony
   release:              2004
   hardware:             portable
-  extensions:           [chd, cso, iso pbp]
+  extensions:           [chd, cso, iso, pbp]
   group:                psp
   emulators:
     ppsspp:
@@ -6514,7 +6551,7 @@ psvita:
   manufacturer:         Sony
   release:              2012
   hardware:             portable
-  extensions:           [zip, psvita]
+  extensions:           [psvita, zip]
   emulators:
     vita3k:
       vita3k:           { requireAnyOf: [BR2_PACKAGE_VITA3K] }
@@ -6563,7 +6600,7 @@ psx:
   manufacturer:         Sony
   release:              1994
   hardware:             console
-  extensions:           [cue, img, mdf, pbp, toc, cbn, m3u, ccd, chd, iso]
+  extensions:           [cbn, ccd, chd, cue, img, iso, m3u, mdf, pbp, toc]
   emulators:
     libretro:
       pcsx_rearmed:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PCSX] }
@@ -6585,7 +6622,7 @@ spectravideo:
   manufacturer:         Spectravideo
   release:              1983
   hardware:             computer
-  extensions:           [zip, 7z, cas]
+  extensions:           [7z, cas, zip]
   platform:             spectravideo
   theme:                spectravideo
   emulators:
@@ -6610,7 +6647,7 @@ vis:
   manufacturer:         Tandy / Memorex
   release:              1992
   hardware:             computer
-  extensions:           [chd, cue, toc, nrg, gdi, iso, cdr]
+  extensions:           [cdr, chd, cue, gdi, iso, nrg, toc]
   emulators:
     libretro:
       mame: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -6645,7 +6682,7 @@ ti99:
   manufacturer:         Texas Instruments
   release:              1981
   hardware:             computer
-  extensions:           [rpk, wav, zip, 7z]
+  extensions:           [7z, rpk, wav, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -6663,7 +6700,7 @@ thomson:
   manufacturer:         Thomson
   release:              1984
   hardware:             computer
-  extensions:           [fd, sap, k7, m7, m5, rom, zip]
+  extensions:           [fd, k7, m5, m7, rom, sap, zip]
   emulators:
     libretro:
       theodore:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_THEODORE] }
@@ -6673,7 +6710,7 @@ gamecom:
   manufacturer:         Tiger Electronics
   release:              1997
   hardware:             portable
-  extensions:           [bin, tgc, zip, 7z]
+  extensions:           [7z, bin, tgc, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -6689,7 +6726,7 @@ multivision:
   manufacturer:         Tsukuda Original
   release:              1983
   hardware:             console
-  extensions:           [bin, sg, zip, 7z]
+  extensions:           [7z, bin, sg, zip]
   platform:             sg-1000
   theme:                multivision
   emulators:
@@ -6701,7 +6738,7 @@ tutor:
   manufacturer:         Tomy
   release:              1983
   hardware:             computer
-  extensions:           [bin, wav, zip, 7z]
+  extensions:           [7z, bin, wav, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -6736,7 +6773,7 @@ lcdgames:
   manufacturer:         Various
   release:              1979
   hardware:             portable
-  extensions:           [mgw, zip, 7z]
+  extensions:           [7z, mgw, zip]
   group:                lcdgames
   emulators:
     libretro:
@@ -6750,7 +6787,7 @@ plugnplay:
   manufacturer:         Various
   release:              2002
   hardware:             console
-  extensions:           [zip, 7z]
+  extensions:           [7z, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -6762,7 +6799,7 @@ vgmplay:
   manufacturer:         Various
   release:              1980
   hardware:             computer
-  extensions:           [vgm, vgz, zip, 7z]
+  extensions:           [7z, vgm, vgz, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -6781,7 +6818,7 @@ crvision:
   release:              1982
   hardware:             console
   theme:                creativision
-  extensions:           [bin, rom, zip, 7z]
+  extensions:           [7z, bin, rom, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -6797,7 +6834,7 @@ laser310:
   manufacturer:         VTech
   release:              1984
   hardware:             computer
-  extensions:           [vz, wav, cas, zip, 7z]
+  extensions:           [7z, cas, vz, wav, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -6815,7 +6852,7 @@ socrates:
   manufacturer:         VTech
   release:              1988
   hardware:             console
-  extensions:           [bin, zip, 7z]
+  extensions:           [7z, bin, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -6833,7 +6870,7 @@ vsmile:
   manufacturer:         VTech
   release:              2005
   hardware:             console
-  extensions:           [u1, u3, bin, zip, 7z]
+  extensions:           [7z, bin, u1, u3, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -6849,7 +6886,7 @@ supervision:
   manufacturer:         Watara
   release:              1992
   hardware:             portable
-  extensions:           [sv, zip, 7z]
+  extensions:           [7z, sv, zip]
   emulators:
     libretro:
       potator:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_WATARA] }
@@ -6859,7 +6896,7 @@ sameduck:
   manufacturer:         Welback Holdings
   release:              1993
   hardware:             portable
-  extensions:           [bin, zip, 7z]
+  extensions:           [7z, bin, zip]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }

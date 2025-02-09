@@ -3,8 +3,8 @@
 # batocera-luajit
 #
 ################################################################################
-# Version: Commits on Mar 14, 2024
-BATOCERA_LUAJIT_VERSION = v2.1-20240314
+# Version: Commits on Jan 17, 2025
+BATOCERA_LUAJIT_VERSION = v2.1-20250117
 BATOCERA_LUAJIT_SITE = $(call github,openresty,luajit2,$(BATOCERA_LUAJIT_VERSION))
 BATOCERA_LUAJIT_LICENSE = MIT
 BATOCERA_LUAJIT_LICENSE_FILES = COPYRIGHT

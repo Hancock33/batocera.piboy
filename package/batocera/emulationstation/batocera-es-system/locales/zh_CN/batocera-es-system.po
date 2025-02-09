@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-01-25 23:05+0800\n"
+"PO-Revision-Date: 2025-01-31 18:56+0800\n"
 "Last-Translator: R.Chan\n"
 "Language-Team: Ray Chan\n"
 "Language: zh_CN\n"
@@ -472,7 +472,7 @@ msgctxt "game_options"
 msgid "128KB"
 msgstr "128KB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, quake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, quake3, vkquake3
 msgctxt "game_options"
 msgid "128MB"
 msgstr "128MB"
@@ -1022,7 +1022,7 @@ msgctxt "game_options"
 msgid "2560 x 1600"
 msgstr "2560 x 1600"
 
-#. TRANSLATION: quake3
+#. TRANSLATION: quake3, vkquake3
 msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr "256MB（Default）"
@@ -1352,6 +1352,16 @@ msgctxt "game_options"
 msgid "386DX, 33MHz (7800 cps)"
 msgstr "386DX，33MHz（7800 cps）"
 
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "386_prefetch"
+msgstr ""
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "386_slow"
+msgstr ""
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "3D ENGINE"
@@ -1491,6 +1501,11 @@ msgstr "486DX，33MHz（13400 cps）"
 msgctxt "game_options"
 msgid "486DX2, 66MHz (26800 cps)"
 msgstr "486DX2，66MHz（26800 cps）"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "486_slow"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, xenia, xenia-canary
 msgctxt "game_options"
@@ -1672,7 +1687,7 @@ msgctxt "game_options"
 msgid "512KB"
 msgstr "512KB"
 
-#. TRANSLATION: libretro/np2kai, quake3
+#. TRANSLATION: libretro/np2kai, quake3, vkquake3
 msgctxt "game_options"
 msgid "512MB"
 msgstr "512MB"
@@ -1827,7 +1842,7 @@ msgctxt "game_options"
 msgid "64KB"
 msgstr "64KB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/openbor7530, quake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/openbor7530, quake3, ...
 msgctxt "game_options"
 msgid "64MB"
 msgstr "64MB"
@@ -2497,6 +2512,11 @@ msgctxt "game_options"
 msgid "AUDIO VOLUME GAIN"
 msgstr "音频音量增益"
 
+#. TRANSLATION: dosbox, dosbox, dosbox
+msgctxt "game_options"
+msgid "AUTO"
+msgstr ""
+
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
 msgid "AUTO (DEFAULT)"
@@ -2964,6 +2984,11 @@ msgstr "永远有6颗子弹，6颗炸药和6条生命。"
 msgctxt "game_options"
 msgid "American English"
 msgstr "美式英语"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "Amount of instructions DOSBox tries to emulate"
+msgstr ""
 
 #. TRANSLATION: yabasanshiro, yabasanshiro
 msgctxt "game_options"
@@ -4427,6 +4452,11 @@ msgctxt "game_options"
 msgid "CONTROLLER CONFIGURATION"
 msgstr "控制器配置"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "CONTROLLER MODE"
+msgstr "控制器模式"
+
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "CONTROLLER PAK"
@@ -4507,7 +4537,7 @@ msgctxt "game_options"
 msgid "CPU COMPATIBILITY"
 msgstr "CPU兼容性"
 
-#. TRANSLATION: libretro/mupen64plus-next
+#. TRANSLATION: dosbox, libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "CPU CORE"
 msgstr "CPU核心"
@@ -4516,6 +4546,16 @@ msgstr "CPU核心"
 msgctxt "game_options"
 msgid "CPU CORE METHOD"
 msgstr "CPU核心方式"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "CPU CYCLES"
+msgstr ""
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "CPU Core used in emulation"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -4542,10 +4582,15 @@ msgctxt "game_options"
 msgid "CPU TIMING MODE (FPS)"
 msgstr "CPU正时模式（帧）"
 
-#. TRANSLATION: libretro/dosbox_pure
+#. TRANSLATION: dosbox, libretro/dosbox_pure
 msgctxt "game_options"
 msgid "CPU TYPE"
 msgstr "CPU类型"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "CPU Type used in emulation"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -4853,7 +4898,7 @@ msgstr "加泰罗尼亚"
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Center"
-msgstr ""
+msgstr "居中"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -5079,6 +5124,14 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Choose the controller configuration. EVDEV for a wide range of controllers, "
+"lightguns & steering wheels. SDL2 for gamepads only."
+msgstr ""
+"选择控制器配置. EVDEV适用于广泛的控制器, 光枪和方向盘. SDL2仅适用于游戏手柄."
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
@@ -6333,6 +6386,11 @@ msgctxt "game_options"
 msgid "Dutch (nl)"
 msgstr "荷兰语"
 
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "Dynamic"
+msgstr ""
+
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Dynamic (fast)"
@@ -6468,6 +6526,11 @@ msgctxt "game_options"
 msgid "ENABLE GRAVIS ULTRASOUND"
 msgstr "启用GRAVIS ULTRASOUND"
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "ENABLE HIDRAW"
+msgstr ""
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "ENABLE MESH TRANSPARENCY"
@@ -6572,6 +6635,11 @@ msgstr "EST5EDT"
 msgctxt "game_options"
 msgid "ESYNC"
 msgstr "eSync"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "EVDEV (Default)"
+msgstr "EVDEV (默认)"
 
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
@@ -6846,6 +6914,14 @@ msgstr "为支持的游戏启用免费游戏。"
 msgctxt "game_options"
 msgid "Enable full-screen antialiasing in Direct3D."
 msgstr "在Direct3D中启用全屏抗锯齿。"
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
+"Enable gamepad HID raw access. This allow modern game to use special gamepad "
+"features (like gyroscope for example), but can break older games with x-"
+"input support only."
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7892,8 +7968,8 @@ msgstr "适应屏幕"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale (Default)"
-msgstr ""
+msgid "Fit resolution scale"
+msgstr "适合分辨率比例"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -8610,7 +8686,7 @@ msgctxt "game_options"
 msgid "GRAPHICS CHIP TYPE"
 msgstr "图形芯片类型"
 
-#. TRANSLATION: quake3
+#. TRANSLATION: quake3, vkquake3
 msgctxt "game_options"
 msgid "GRAPHICS MEMORY"
 msgstr "图形内存"
@@ -10189,8 +10265,8 @@ msgstr "左翻转器"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
-msgid "Left Manga Save"
-msgstr "左侧保存"
+msgid "Left Magna Save"
+msgstr "左侧磁力保存"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -10759,6 +10835,11 @@ msgstr "三月"
 msgctxt "game_options"
 msgid "Match Window"
 msgstr "匹配窗口"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "Max"
+msgstr ""
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -11550,7 +11631,7 @@ msgctxt "game_options"
 msgid "None/Sharp Pixels"
 msgstr "无/锐利像素"
 
-#. TRANSLATION: awgl, duckstation, flycast, libretro/flycast, libretro/flycast2021, ...
+#. TRANSLATION: awgl, dosbox, duckstation, flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Normal"
 msgstr "正常"
@@ -13427,8 +13508,8 @@ msgstr "右翻转器"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
-msgid "Right Manga Save"
-msgstr "右侧保存"
+msgid "Right Magna Save"
+msgstr "右侧磁力保存"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -13709,7 +13790,7 @@ msgctxt "game_options"
 msgid "SDL TEXTURE ACCESS STREAMING"
 msgstr "SDL纹理访问流"
 
-#. TRANSLATION: libretro, libretro, libretro, libretro
+#. TRANSLATION: libretro, libretro, libretro, libretro, lindbergh-loader
 msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
@@ -14288,7 +14369,7 @@ msgctxt "game_options"
 msgid "Select game language."
 msgstr ""
 
-#. TRANSLATION: quake3
+#. TRANSLATION: quake3, vkquake3
 msgctxt "game_options"
 msgid ""
 "Select how much graphics memory is allocated for the GPU, may need modifying "
@@ -14697,7 +14778,7 @@ msgctxt "game_options"
 msgid "Shunt 9"
 msgstr "分流9"
 
-#. TRANSLATION: libretro/gambatte, libretro/o2em
+#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em
 msgctxt "game_options"
 msgid "Simple"
 msgstr "简单"
@@ -17809,6 +17890,11 @@ msgctxt "game_options"
 msgid "original gameboy"
 msgstr "原始gameboy"
 
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "pentium_slow"
+msgstr ""
+
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
 msgid "pink dreams"
@@ -18435,10 +18521,6 @@ msgstr "黄色/蓝色"
 #~ msgstr "快进"
 
 #~ msgctxt "game_options"
-#~ msgid "Fit resolution scale"
-#~ msgstr "适合分辨率比例"
-
-#~ msgctxt "game_options"
 #~ msgid "FlexDMD disabled"
 #~ msgstr "禁用FlexDMD"
 
@@ -18525,6 +18607,10 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Keypad to joyport mappings for 2 players."
 #~ msgstr "2名玩家的键盘到游戏端口映射。"
+
+#~ msgctxt "keys_files"
+#~ msgid "Left Manga Save"
+#~ msgstr "左侧保存"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
@@ -18734,6 +18820,10 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "自动调整屏幕高度。"
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Manga Save"
+#~ msgstr "右侧保存"
 
 #~ msgctxt "game_options"
 #~ msgid ""

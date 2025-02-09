@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2025-01-06 15:20+0000\n"
+"PO-Revision-Date: 2025-02-02 15:56+0000\n"
 "Last-Translator: THa_MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl-NL\n"
@@ -283,7 +283,7 @@ msgstr "10 seconden"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "100 fps"
-msgstr ""
+msgstr "100 fps"
 
 #. TRANSLATION: doom3, libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
@@ -470,7 +470,7 @@ msgctxt "game_options"
 msgid "128KB"
 msgstr "128KB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, quake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, quake3, vkquake3
 msgctxt "game_options"
 msgid "128MB"
 msgstr "128MB"
@@ -1020,7 +1020,7 @@ msgctxt "game_options"
 msgid "2560 x 1600"
 msgstr "2560 x 1600"
 
-#. TRANSLATION: quake3
+#. TRANSLATION: quake3, vkquake3
 msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr "256MB (Standaard)"
@@ -1350,6 +1350,16 @@ msgctxt "game_options"
 msgid "386DX, 33MHz (7800 cps)"
 msgstr "386DX, 33MHz (7800 cps)"
 
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "386_prefetch"
+msgstr ""
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "386_slow"
+msgstr ""
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "3D ENGINE"
@@ -1489,6 +1499,11 @@ msgstr "486DX, 33MHz (13400 cps)"
 msgctxt "game_options"
 msgid "486DX2, 66MHz (26800 cps)"
 msgstr "486DX2, 66MHz (26800 cps)"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "486_slow"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, xenia, xenia-canary
 msgctxt "game_options"
@@ -1670,7 +1685,7 @@ msgctxt "game_options"
 msgid "512KB"
 msgstr "512KB"
 
-#. TRANSLATION: libretro/np2kai, quake3
+#. TRANSLATION: libretro/np2kai, quake3, vkquake3
 msgctxt "game_options"
 msgid "512MB"
 msgstr "512MB"
@@ -1825,7 +1840,7 @@ msgctxt "game_options"
 msgid "64KB"
 msgstr "64KB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/openbor7530, quake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/openbor7530, quake3, ...
 msgctxt "game_options"
 msgid "64MB"
 msgstr "64MB"
@@ -2495,6 +2510,11 @@ msgctxt "game_options"
 msgid "AUDIO VOLUME GAIN"
 msgstr "AUDIOVOLUME VERSTERKING"
 
+#. TRANSLATION: dosbox, dosbox, dosbox
+msgctxt "game_options"
+msgid "AUTO"
+msgstr ""
+
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
 msgid "AUTO (DEFAULT)"
@@ -2674,6 +2694,7 @@ msgstr ""
 msgctxt "game_options"
 msgid "Activate Doom DOS original music and throttle the Doom frame rate."
 msgstr ""
+"Activeer de originele Doom DOS-muziek en verlaag de Doom-framesnelheid."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -2698,7 +2719,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Add debug logging to help troubleshoot issues."
-msgstr ""
+msgstr "Voeg foutopsporingsregistratie toe om problemen op te lossen."
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
 msgctxt "game_options"
@@ -2978,6 +2999,11 @@ msgstr "Zorg dat je altijd 6 kogels, 6 dynamiet en 6 levens hebt."
 msgctxt "game_options"
 msgid "American English"
 msgstr "Amerikaans-Engels"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "Amount of instructions DOSBox tries to emulate"
+msgstr ""
 
 #. TRANSLATION: yabasanshiro, yabasanshiro
 msgctxt "game_options"
@@ -4148,7 +4174,7 @@ msgstr "KABEL"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CARD READER"
-msgstr ""
+msgstr "KAARTLEZER"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -4460,6 +4486,11 @@ msgctxt "game_options"
 msgid "CONTROLLER CONFIGURATION"
 msgstr "CONFIGURATIE VAN DE CONTROLLER"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "CONTROLLER MODE"
+msgstr "CONTROLLERMODUS"
+
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "CONTROLLER PAK"
@@ -4540,7 +4571,7 @@ msgctxt "game_options"
 msgid "CPU COMPATIBILITY"
 msgstr "CPU COMPATIBILITEIT"
 
-#. TRANSLATION: libretro/mupen64plus-next
+#. TRANSLATION: dosbox, libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "CPU CORE"
 msgstr "CPU CORE"
@@ -4549,6 +4580,16 @@ msgstr "CPU CORE"
 msgctxt "game_options"
 msgid "CPU CORE METHOD"
 msgstr "CPU CORE METHODE"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "CPU CYCLES"
+msgstr ""
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "CPU Core used in emulation"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -4575,10 +4616,15 @@ msgctxt "game_options"
 msgid "CPU TIMING MODE (FPS)"
 msgstr "CPU TIMING MODUS (FPS)"
 
-#. TRANSLATION: libretro/dosbox_pure
+#. TRANSLATION: dosbox, libretro/dosbox_pure
 msgctxt "game_options"
 msgid "CPU TYPE"
 msgstr "CPU TYPE"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "CPU Type used in emulation"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -4895,7 +4941,7 @@ msgstr "Catalaans"
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Center"
-msgstr ""
+msgstr "Midden"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -5108,6 +5154,8 @@ msgctxt "game_options"
 msgid ""
 "Choose the arcade machine console region. May be required to start the game."
 msgstr ""
+"Kies de consoleregio van de arcademachine. Mogelijk vereist om het spel te "
+"starten."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -5128,6 +5176,15 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Choose the controller configuration. EVDEV for a wide range of controllers, "
+"lightguns & steering wheels. SDL2 for gamepads only."
+msgstr ""
+"Kies de controllerconfiguratie. EVDEV voor een breed scala aan controllers, "
+"lightguns en stuurwielen. SDL2 alleen voor gamepads."
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
@@ -5731,7 +5788,7 @@ msgstr "DEADZONE"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "DEBUG MODE"
-msgstr ""
+msgstr "DEBUG MODUS"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -5876,7 +5933,7 @@ msgstr "DOLBY PRO LOGIC II"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "DOOM"
-msgstr ""
+msgstr "DOOM"
 
 #. TRANSLATION: libretro/virtualjaguar
 msgctxt "game_options"
@@ -6417,6 +6474,11 @@ msgctxt "game_options"
 msgid "Dutch (nl)"
 msgstr "Nederlands (nl)"
 
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "Dynamic"
+msgstr ""
+
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Dynamic (fast)"
@@ -6552,6 +6614,11 @@ msgctxt "game_options"
 msgid "ENABLE GRAVIS ULTRASOUND"
 msgstr "GRAVIS ULTRASOUND INSCHAKELEN"
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "ENABLE HIDRAW"
+msgstr "HIDRAW INSCHAKELEN"
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "ENABLE MESH TRANSPARENCY"
@@ -6656,6 +6723,11 @@ msgstr "EST5EDT"
 msgctxt "game_options"
 msgid "ESYNC"
 msgstr "ESYNC"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "EVDEV (Default)"
+msgstr "EVDEV (Standaard)"
 
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
@@ -6936,12 +7008,23 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Enable free play for supported games."
-msgstr ""
+msgstr "Schakel gratis spelen in voor ondersteunde games."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Enable full-screen antialiasing in Direct3D."
 msgstr "Schakel volledig-scherm antialiasing in Direct3D in."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
+"Enable gamepad HID raw access. This allow modern game to use special gamepad "
+"features (like gyroscope for example), but can break older games with x-"
+"input support only."
+msgstr ""
+"Schakel gamepad HID onbewerkte toegang in. Hierdoor kunnen moderne spellen "
+"speciale gamepad-functies gebruiken (zoals bijvoorbeeld een gyroscoop), maar "
+"kunnen oudere spellen met alleen x-invoerondersteuning kapot gaan."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7072,6 +7155,8 @@ msgid ""
 "Enable the IP address for OutRun 2 network play against another PC on the "
 "same network."
 msgstr ""
+"Schakel het IP-adres in voor OutRun 2-netwerkspel tegen een andere pc op "
+"hetzelfde netwerk."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7125,7 +7210,7 @@ msgstr "Schakel dit in om weer te geven of uw BIOS bekende problemen heeft."
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Enable to emulate the card reader in Virtua Tenis 3."
-msgstr ""
+msgstr "Schakel in om de kaartlezer in Virtua Tennis 3 te emuleren."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -7589,7 +7674,7 @@ msgstr "Verlaat de emulator"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Export"
-msgstr ""
+msgstr "Export"
 
 #. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
@@ -7786,7 +7871,7 @@ msgstr "FPS LIMITER"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "FPS TARGET"
-msgstr ""
+msgstr "FPS DOEL"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -7856,7 +7941,7 @@ msgstr "FRAMESKIP WAARDE"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "FREE PLAY"
-msgstr ""
+msgstr "GRATIS SPELEN"
 
 #. TRANSLATION: mugen, wine
 msgctxt "game_options"
@@ -8047,8 +8132,8 @@ msgstr "Aanpassen aan scherm"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale (Default)"
-msgstr ""
+msgid "Fit resolution scale"
+msgstr "Pas de resolutieschaal aan"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -8501,7 +8586,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader, lindbergh-loader, lindbergh-loader, lindbergh-loader, lindbergh-loader
 msgctxt "game_options"
 msgid "GAME OPTIONS"
-msgstr ""
+msgstr "SPEL OPTIES"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -8783,7 +8868,7 @@ msgctxt "game_options"
 msgid "GRAPHICS CHIP TYPE"
 msgstr "GRAPHISCHE CHIP TYPE"
 
-#. TRANSLATION: quake3
+#. TRANSLATION: quake3, vkquake3
 msgctxt "game_options"
 msgid "GRAPHICS MEMORY"
 msgstr "GRAFISCHE GEHEUGEN"
@@ -9219,7 +9304,7 @@ msgstr "HST"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "HUMMER FLICKER FIX"
-msgstr ""
+msgstr "HUMMER FLICKER FIX"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -9407,6 +9492,8 @@ msgid ""
 "House of the Dead 4 speed fix. Sets the game to the CPU base frequency of "
 "your processor."
 msgstr ""
+"House of the Dead 4 snelheidsfix. Stelt het spel in op de CPU-"
+"basisfrequentie van uw processor."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -9579,7 +9666,7 @@ msgstr "ONKWETSBAARHEIDSMODUS"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "IP ADDRESS"
-msgstr ""
+msgstr "IP ADRES"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -9951,7 +10038,7 @@ msgstr "Japan"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Japan (Default)"
-msgstr ""
+msgstr "Japan (Standaard)"
 
 #. TRANSLATION: cemu, doom3, etlegacy, flycast/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
@@ -10391,8 +10478,8 @@ msgstr "Linker Flipper"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
-msgid "Left Manga Save"
-msgstr "Linker Manga Save"
+msgid "Left Magna Save"
+msgstr "Links Magna Save"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -10970,6 +11057,11 @@ msgstr "Maart"
 msgctxt "game_options"
 msgid "Match Window"
 msgstr "Match Venster"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "Max"
+msgstr ""
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -11776,7 +11868,7 @@ msgctxt "game_options"
 msgid "None/Sharp Pixels"
 msgstr "Geen/scherpe pixels"
 
-#. TRANSLATION: awgl, duckstation, flycast, libretro/flycast, libretro/flycast2021, ...
+#. TRANSLATION: awgl, dosbox, duckstation, flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Normal"
 msgstr "Normaal"
@@ -11931,7 +12023,7 @@ msgstr "OUTPUT SCHALING"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "OUTRUN LENS GLARE"
-msgstr ""
+msgstr "OUTRUN LENS GLARE"
 
 #. TRANSLATION: libretro/fceumm, libretro/mame, libretro/mamevirtual, libretro/mednafen_psx, libretro/mesen, ...
 msgctxt "game_options"
@@ -13399,7 +13491,7 @@ msgstr "RUMBLE NIVEAU"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "RUN TEST MODE"
-msgstr ""
+msgstr "VOER TESTMODUS UIT"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -13694,8 +13786,8 @@ msgstr "Rechter Flipper"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
-msgid "Right Manga Save"
-msgstr "Rechter Manga save"
+msgid "Right Magna Save"
+msgstr "Rechts Magna Save"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
@@ -13812,6 +13904,7 @@ msgstr "Rennen"
 msgctxt "game_options"
 msgid "Run the game in test mode to configure certain game options."
 msgstr ""
+"Voer het spel uit in de testmodus om bepaalde spelopties te configureren."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13977,7 +14070,7 @@ msgctxt "game_options"
 msgid "SDL TEXTURE ACCESS STREAMING"
 msgstr "SDL TEXTURE ACCESS STREAMING"
 
-#. TRANSLATION: libretro, libretro, libretro, libretro
+#. TRANSLATION: libretro, libretro, libretro, libretro, lindbergh-loader
 msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
@@ -14557,7 +14650,7 @@ msgctxt "game_options"
 msgid "Select game language."
 msgstr ""
 
-#. TRANSLATION: quake3
+#. TRANSLATION: quake3, vkquake3
 msgctxt "game_options"
 msgid ""
 "Select how much graphics memory is allocated for the GPU, may need modifying "
@@ -14710,6 +14803,8 @@ msgctxt "game_options"
 msgid ""
 "Set if you want to limit the FPS in games that are not limited like OutRun2."
 msgstr ""
+"Stel in of je de FPS wilt beperken in spellen die niet beperkt zijn, zoals "
+"OutRun2."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -14761,12 +14856,12 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set the target FPS (will only work if FPS LIMITER is enabled)."
-msgstr ""
+msgstr "Stel de doel-FPS in (werkt alleen als FPS LIMITER is ingeschakeld)."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set to enable lens glare in Outrun 2."
-msgstr ""
+msgstr "Instellen om lens glare in Outrun 2 in te schakelen."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14774,11 +14869,13 @@ msgid ""
 "Set to keep the aspect ratio (4:3) in games like Sega Race TV and Primeval "
 "Hunt."
 msgstr ""
+"Ingesteld om de beeldverhouding (4:3) te behouden in spellen als Sega Race "
+"TV en Primeval Hunt."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set to on if you experience flickering in Hummer."
-msgstr ""
+msgstr "Schakel dit in als u flikkeringen ervaart in Hummer."
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -14975,7 +15072,7 @@ msgctxt "game_options"
 msgid "Shunt 9"
 msgstr "Shunt 9"
 
-#. TRANSLATION: libretro/gambatte, libretro/o2em
+#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em
 msgctxt "game_options"
 msgid "Simple"
 msgstr "Simpel"
@@ -18163,6 +18260,11 @@ msgctxt "game_options"
 msgid "original gameboy"
 msgstr "originele gameboy"
 
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "pentium_slow"
+msgstr ""
+
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
 msgid "pink dreams"
@@ -18441,10 +18543,6 @@ msgstr "geel/blauw"
 #~ "Kan gebruikt worden om kleuren van specifieke beeldschermen te simuleren."
 
 #~ msgctxt "game_options"
-#~ msgid "Center (Default)"
-#~ msgstr "Midden (Standaard)"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Changing driver can improve audio performance and reduce distortion. "
 #~ "Alsathread is recommended for low-end systems."
@@ -18606,10 +18704,6 @@ msgstr "geel/blauw"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Vooruitspoelen"
-
-#~ msgctxt "game_options"
-#~ msgid "Fit resolution scale"
-#~ msgstr "Pas de resolutieschaal aan"
 
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"

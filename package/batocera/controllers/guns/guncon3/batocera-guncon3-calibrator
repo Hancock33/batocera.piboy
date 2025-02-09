@@ -185,20 +185,20 @@ class Gun:
                 self.calibrate = 1
                 self.btn_cal_pressed = 0
         except BlockingIOError:
-            pass  # Ignorar la excepción y continuar
+            pass  # Ignore the exception and continue.
 
         except (OSError, evdev.InputEventError) as e:
             print(f"Error reading joystick: {e}")
             print("Reconnecting...")
             print(f"Error reading joystick: {e}")
             print("Reconnecting...")
-            # Intentar reconectar el dispositivo
+            # Try reconnecting to the device.
             try:
                 self.device = evdev.InputDevice(self.device.path)
                 with open("/tmp/reconnect_error.log", "a") as log_file:
                     log_file.write(f"Reconectando\n")
             except Exception as reconnect_error:
-                # Capturar el error de reconexión y guardarlo en un archivo
+                # Capture the reconnection error and save it to a file.
                 print(f"Error reconnecting: {reconnect_error}")
                 with open("/tmp/reconnect_error.log", "a") as log_file:
                     log_file.write(f"Error reconnecting: {reconnect_error}\n")
@@ -226,7 +226,7 @@ class Gun:
     def set_calibrate(self, value):
         self.calibrate = value
 
-    # Propiedad para acceder a self.calibrate
+    # Property to access self.calibrate
     def iscalibrate(self):
         return self.calibrate
 

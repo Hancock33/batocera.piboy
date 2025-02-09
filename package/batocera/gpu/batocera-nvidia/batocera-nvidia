@@ -14,7 +14,7 @@ MODE=$1
 if [ "${MODE}" = "auto" ]; then
     echo "Detecting if we have an NVIDIA GPU" >> $log
     NVIDIA_DEV=$(lspci -mn | awk '{ gsub("\"",""); if (($2 ~ "030[0-2]") && ($3 == "10de" || $3 == "12d2")) { print $1 } }')
-    
+
     if [ "$NVIDIA_DEV" ]; then
         echo "Detected an NVIDIA GPU at $NVIDIA_DEV" >> "$log"
         for d in $NVIDIA_DEV; do
@@ -26,7 +26,7 @@ if [ "${MODE}" = "auto" ]; then
                 select(.devid == $pcidevid) |
                 "\(.name)|\(.legacybranch // "null")|\(.features | contains(["kernelopen"]) | tostring)"' \
                 /usr/share/nvidia/supported-gpus.json | head -n 1)
-            
+
             echo "Matched json query: $jq_output" >> $log
             # Extract the card name and determine the driver mode
             CARDNAME=$(echo "$jq_output" | cut -d'|' -f1)
@@ -114,10 +114,10 @@ if [ "$MODE" = "proprietary" ] || [ "$MODE" = "open" ]; then
     ln -sf /usr/lib/libnvidia-cfg.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib/libnvidia-cfg.so
 	ln -sf /var/run/nvidia/lib/libnvidia-cfg.so /usr/lib/libnvidia-cfg.so
     ln -sf /usr/lib/libnvidia-cfg.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib/libnvidia-cfg.so.1
-    ln -sf /var/run/nvidia/lib/libnvidia-cfg.so.1 /usr/lib/libnvidia-cfg.so.1    
+    ln -sf /var/run/nvidia/lib/libnvidia-cfg.so.1 /usr/lib/libnvidia-cfg.so.1
     # libnvidia-eglcore.so
     ln -sf /usr/lib/libnvidia-eglcore.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib/libnvidia-eglcore.so
-	ln -sf /var/run/nvidia/lib/libnvidia-eglcore.so /usr/lib/libnvidia-eglcore.so   
+	ln -sf /var/run/nvidia/lib/libnvidia-eglcore.so /usr/lib/libnvidia-eglcore.so
     # libnvidia-glcore.so
     ln -sf /usr/lib/libnvidia-glcore.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib/libnvidia-glcore.so
 	ln -sf /var/run/nvidia/lib/libnvidia-glcore.so /usr/lib/libnvidia-glcore.so
@@ -126,10 +126,10 @@ if [ "$MODE" = "proprietary" ] || [ "$MODE" = "open" ]; then
 	ln -sf /var/run/nvidia/lib/libnvidia-glsi.so /usr/lib/libnvidia-glsi.so
     # libnvidia-gpucomp.so
     ln -sf /usr/lib/libnvidia-gpucomp.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib/libnvidia-gpucomp.so
-	ln -sf /var/run/nvidia/lib/libnvidia-gpucomp.so /usr/lib/libnvidia-gpucomp.so  
+	ln -sf /var/run/nvidia/lib/libnvidia-gpucomp.so /usr/lib/libnvidia-gpucomp.so
     # libnvidia-rtcore.so
     ln -sf /usr/lib/libnvidia-rtcore.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib/libnvidia-rtcore.so
-	ln -sf /var/run/nvidia/lib/libnvidia-rtcore.so /usr/lib/libnvidia-rtcore.so    
+	ln -sf /var/run/nvidia/lib/libnvidia-rtcore.so /usr/lib/libnvidia-rtcore.so
     # libnvidia-tls.so
     ln -sf /usr/lib/libnvidia-tls.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib/libnvidia-tls.so
     ln -sf /var/run/nvidia/lib/libnvidia-tls.so /usr/lib/libnvidia-tls.so
@@ -151,7 +151,7 @@ if [ "$MODE" = "proprietary" ] || [ "$MODE" = "open" ]; then
     # libnvidia-wayland-client.so
     ln -sf /usr/lib/libnvidia-wayland-client.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib/libnvidia-wayland-client.so
     ln -sf /var/run/nvidia/lib/libnvidia-wayland-client.so /usr/lib/libnvidia-wayland-client.so
-    
+
     # [symbolic link 32-bit library files]
     mkdir -p /var/run/nvidia/lib32
     # libGLX_nvidia.so
@@ -209,17 +209,17 @@ if [ "$MODE" = "proprietary" ] || [ "$MODE" = "open" ]; then
     # libnvidia-glvkspirv.so
     ln -sf /lib32/libnvidia-glvkspirv.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib32/libnvidia-glvkspirv.so
     ln -sf /var/run/nvidia/lib32/libnvidia-glvkspirv.so /lib32/libnvidia-glvkspirv.so
-    
+
     # sym link Xorg libraries too
     ln -sf /usr/lib/xorg/modules/extensions/libglxserver_nvidia.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib/libglxserver_nvidia.so
     ln -sf /var/run/nvidia/lib/libglxserver_nvidia.so /usr/lib/xorg/modules/extensions/libglxserver_nvidia.so
     ln -sf /usr/lib/xorg/modules/extensions/libglxserver_nvidia.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib/libglxserver_nvidia.so.1
     ln -sf /var/run/nvidia/lib/libglxserver_nvidia.so.1 /usr/lib/xorg/modules/extensions/libglxserver_nvidia.so.1
-    
+
     # link Xorg driver
     ln -sf /usr/lib/xorg/modules/drivers/nvidia_production_drv.so /var/run/nvidia/lib/nvidia_drv.so
     ln -sf /var/run/nvidia/lib/nvidia_drv.so /usr/lib/xorg/modules/drivers/nvidia_drv.so
-    
+
     # link GL config files
     mkdir -p /var/run/nvidia/configs
     ln -sf /usr/share/vulkan/implicit_layer.d/nvidia_production_layers.json /var/run/nvidia/configs/nvidia_layers.json
@@ -228,13 +228,13 @@ if [ "$MODE" = "proprietary" ] || [ "$MODE" = "open" ]; then
     ln -sf /var/run/nvidia/configs/10_nvidia.json /usr/share/glvnd/egl_vendor.d/10_nvidia.json
     ln -sf /usr/share/nvidia/X11/10-nvidia-production-drm-outputclass.conf /var/run/nvidia/configs/10-nvidia-drm-outputclass.conf
     ln -sf /var/run/nvidia/configs/10-nvidia-drm-outputclass.conf /usr/share/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
-    
+
     # link Vulkan icd files
     ln -sf /usr/share/vulkan/nvidia/nvidia_production_icd.x86_64.json /var/run/nvidia/configs/nvidia_icd.x86_64.json
     ln -sf /var/run/nvidia/configs/nvidia_icd.x86_64.json /usr/share/vulkan/icd.d/nvidia_icd.x86_64.json
     ln -sf /usr/share/vulkan/nvidia/nvidia_production_icd.i686.json /var/run/nvidia/configs/nvidia_icd.i686.json
 	ln -sf /var/run/nvidia/configs/nvidia_icd.i686.json /usr/share/vulkan/icd.d/nvidia_icd.i686.json
-    
+
     # finally link appropriate production kernel modules
     mkdir -p /var/run/nvidia/modules
     if [ "$MODE" = "open" ]; then
@@ -256,7 +256,7 @@ if [ "$MODE" = "proprietary" ] || [ "$MODE" = "open" ]; then
         ln -sf /usr/share/nvidia/modules/nvidia-drm-proprietary.ko /var/run/nvidia/modules/nvidia-drm.ko
         ln -sf /var/run/nvidia/modules/nvidia-drm.ko /lib/modules/$LINUX_VER/updates/nvidia-drm.ko
         ln -sf /usr/share/nvidia/modules/nvidia-uvm-proprietary.ko /var/run/nvidia/modules/nvidia-uvm.ko
-        ln -sf /var/run/nvidia/modules/nvidia-uvm.ko /lib/modules/$LINUX_VER/updates/nvidia-uvm.ko    
+        ln -sf /var/run/nvidia/modules/nvidia-uvm.ko /lib/modules/$LINUX_VER/updates/nvidia-uvm.ko
     fi
     # enable kernel modules
     for m in ipmi_devintf nvidia nvidia_modeset nvidia_uvm nvidia_drm; do
@@ -364,7 +364,7 @@ elif echo "$MODE" | grep -q -E '^(legacy470|legacy340|legacy390)$'; then
         ln -sf /usr/lib/libGLESv2_nvidia.so.$NVIDIA_LEGACY_DRIVER_VERSION /var/run/nvidia/lib/libGLESv2_nvidia.so.2
         ln -sf /var/run/nvidia/lib/libGLESv2_nvidia.so.2 /usr/lib/libGLESv2_nvidia.so.2
     fi
-    
+
     # libnvidia-eglcore.so
     ln -sf /usr/lib/libnvidia-eglcore.so.$NVIDIA_LEGACY_DRIVER_VERSION /var/run/nvidia/lib/libnvidia-eglcore.so
 	ln -sf /var/run/nvidia/lib/libnvidia-eglcore.so /usr/lib/libnvidia-eglcore.so
@@ -395,7 +395,7 @@ elif echo "$MODE" | grep -q -E '^(legacy470|legacy340|legacy390)$'; then
         ln -sf /usr/lib/libnvidia-glvkspirv.so.$NVIDIA_LEGACY_DRIVER_VERSION /var/run/nvidia/lib/libnvidia-glvkspirv.so
         ln -sf /var/run/nvidia/lib/libnvidia-glvkspirv.so /usr/lib/libnvidia-glvkspirv.so
     fi
-    
+
     # [symbolic link 32-bit library files]
     mkdir -p /var/run/nvidia/lib32
 
@@ -458,7 +458,7 @@ elif echo "$MODE" | grep -q -E '^(legacy470|legacy340|legacy390)$'; then
         ln -sf /lib32/libGLESv2_nvidia.so.$NVIDIA_LEGACY_DRIVER_VERSION /var/run/nvidia/lib32/libGLESv2_nvidia.so.2
         ln -sf /var/run/nvidia/lib32/libGLESv2_nvidia.so.2 /lib32/libGLESv2_nvidia.so.2
     fi
-    
+
     # libnvidia-eglcore.so
     ln -sf /lib32/libnvidia-eglcore.so.$NVIDIA_LEGACY_DRIVER_VERSION /var/run/nvidia/lib32/libnvidia-eglcore.so
     ln -sf /var/run/nvidia/lib32/libnvidia-eglcore.so /lib32/libnvidia-eglcore.so
@@ -483,7 +483,7 @@ elif echo "$MODE" | grep -q -E '^(legacy470|legacy340|legacy390)$'; then
     ln -sf /var/run/nvidia/lib32/libvdpau_nvidia.so.1 /lib32/vdpau/libvdpau_nvidia.so.1
     ln -sf /lib32/vdpau/libvdpau_nvidia.so.$NVIDIA_LEGACY_DRIVER_VERSION /var/run/nvidia/lib32/libvdpau_nvidia.so.1.0
     ln -sf /var/run/nvidia/lib32/libvdpau_nvidia.so.1.0 /lib32/vdpau/libvdpau_nvidia.so.1.0
-    
+
     if [ "$MODE" = "legacy470" ]; then
         # libnvidia-glvkspirv.so
         ln -sf /lib32/libnvidia-glvkspirv.so.$NVIDIA_LEGACY_DRIVER_VERSION /var/run/nvidia/lib32/libnvidia-glvkspirv.so
@@ -497,9 +497,9 @@ elif echo "$MODE" | grep -q -E '^(legacy470|legacy340|legacy390)$'; then
             /var/run/nvidia/lib/libglxserver_nvidia.so.1
         ln -sf /var/run/nvidia/lib/libglxserver_nvidia.so.1 /usr/lib/xorg/modules/extensions/libglxserver_nvidia.so.1
     fi
-    
+
     # [ Kernel modules ]
-    
+
     # 340 version
     if [ "$MODE" = "legacy340" ]; then
 	    # link Xorg driver
@@ -512,9 +512,9 @@ elif echo "$MODE" | grep -q -E '^(legacy470|legacy340|legacy390)$'; then
         ln -sf /var/run/nvidia/modules/nvidia.ko /lib/modules/$LINUX_VER/updates/nvidia.ko
 	    ln -sf /usr/share/nvidia/modules/nvidia340-uvm-legacy.ko /var/run/nvidia/modules/nvidia-uvm.ko
         ln -sf /var/run/nvidia/modules/nvidia-uvm.ko /lib/modules/$LINUX_VER/updates/nvidia-uvm.ko
-	    
+
         for m in ipmi_devintf nvidia nvidia_uvm ; do modprobe $m ; done
-    
+
     # 390 version
     elif [ "$MODE" = "legacy390" ]; then
         # link Xorg driver
@@ -530,7 +530,7 @@ elif echo "$MODE" | grep -q -E '^(legacy470|legacy340|legacy390)$'; then
         ln -sf /usr/share/nvidia/xorg/libglx.so.$NVIDIA390_LEGACY_DRIVER_VERSION \
             /var/run/nvidia/xorg/libglx.so
         ln -sf /var/run/nvidia/xorg/libglx.so /usr/lib/xorg/modules/extensions/libglx.so
-	    
+
         # link GL config files
 	    mkdir -p /var/run/nvidia/configs
 	    ln -sf /usr/share/glvnd/egl_vendor.d/10_nvidia390_legacy.json /var/run/nvidia/configs/10_nvidia.json
@@ -549,13 +549,13 @@ elif echo "$MODE" | grep -q -E '^(legacy470|legacy340|legacy390)$'; then
 	    ln -sf /usr/share/nvidia/modules/nvidia390-uvm-legacy.ko /var/run/nvidia/modules/nvidia-uvm.ko
         ln -sf /var/run/nvidia/modules/nvidia-uvm.ko /lib/modules/$LINUX_VER/updates/nvidia-uvm.ko
 	    for m in ipmi_devintf nvidia nvidia_modeset nvidia_uvm nvidia_drm ; do modprobe $m ; done
-    
+
     else
         # 470 version
         # link Xorg driver
         ln -sf /usr/lib/xorg/modules/drivers/nvidia_legacy_drv.so /var/run/nvidia/lib/nvidia_drv.so
         ln -sf /var/run/nvidia/lib/nvidia_drv.so /usr/lib/xorg/modules/drivers/nvidia_drv.so
-        
+
         # link GL config files
         mkdir -p /var/run/nvidia/configs
         ln -sf /usr/share/vulkan/implicit_layer.d/nvidia_legacy_layers.json /var/run/nvidia/configs/nvidia_layers.json
@@ -564,13 +564,13 @@ elif echo "$MODE" | grep -q -E '^(legacy470|legacy340|legacy390)$'; then
         ln -sf /var/run/nvidia/configs/10_nvidia.json /usr/share/glvnd/egl_vendor.d/10_nvidia.json
         ln -sf /usr/share/nvidia/X11/10-nvidia-legacy-drm-outputclass.conf /var/run/nvidia/configs/10-nvidia-drm-outputclass.conf
         ln -sf /var/run/nvidia/configs/10-nvidia-drm-outputclass.conf /usr/share/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
-        
+
         # link Vulkan icd files
         ln -sf /usr/share/vulkan/nvidia/nvidia_legacy_icd.x86_64.json /var/run/nvidia/configs/nvidia_icd.x86_64.json
         ln -sf /var/run/nvidia/configs/nvidia_icd.x86_64.json /usr/share/vulkan/icd.d/nvidia_icd.x86_64.json
         ln -sf /usr/share/vulkan/nvidia/nvidia_legacy_icd.i686.json /var/run/nvidia/configs/nvidia_icd.i686.json
         ln -sf /var/run/nvidia/configs/nvidia_icd.i686.json /usr/share/vulkan/icd.d/nvidia_icd.i686.json
-        
+
         # finally link the kernel modules & run them
         mkdir -p /var/run/nvidia/modules
         ln -sf /usr/share/nvidia/modules/nvidia470-legacy.ko /var/run/nvidia/modules/nvidia.ko
@@ -582,7 +582,7 @@ elif echo "$MODE" | grep -q -E '^(legacy470|legacy340|legacy390)$'; then
         ln -sf /usr/share/nvidia/modules/nvidia470-uvm-legacy.ko /var/run/nvidia/modules/nvidia-uvm.ko
         ln -sf /var/run/nvidia/modules/nvidia-uvm.ko /lib/modules/$LINUX_VER/updates/nvidia-uvm.ko
         for m in ipmi_devintf nvidia nvidia_modeset nvidia_uvm nvidia_drm ; do modprobe $m ; done
-    
+
     fi
 
 elif test "${MODE}" = "nouveau"; then

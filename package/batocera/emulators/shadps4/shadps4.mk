@@ -3,16 +3,16 @@
 # shadps4
 #
 ################################################################################
-# Version: Commits on Jan 26, 2025
-SHADPS4_VERSION = 46b5437fdfea7e7b3add555d62540766daa4534d
+# Version: Commits on Feb 09, 2025
+SHADPS4_VERSION = 15b520f4a2572cdb96923a72dacffaaa562473b7
 SHADPS4_SITE = https://github.com/shadps4-emu/shadPS4.git
 SHADPS4_SITE_METHOD=git
 SHADPS4_GIT_SUBMODULES=YES
 SHADPS4_LICENSE = GPLv2
 SHADPS4_LICENSE_FILE = LICENSE
-SHADPS4_DEPENDENCIES += alsa-lib pulseaudio openal openssl libedit udev
-SHADPS4_DEPENDENCIES += libevdev jack2 qt6base qt6svg qt6tools qt6multimedia
+SHADPS4_DEPENDENCIES += alsa-lib jack2 libedit libevdev openal openssl pulseaudio udev
 SHADPS4_DEPENDENCIES += glslang vulkan-headers vulkan-loader vulkan-validationlayers
+SHADPS4_DEPENDENCIES += qt6base qt6multimedia qt6svg qt6tools
 
 SHADPS4_SUPPORTS_IN_SOURCE_BUILD = NO
 

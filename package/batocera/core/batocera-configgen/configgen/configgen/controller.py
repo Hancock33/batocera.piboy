@@ -106,7 +106,7 @@ class Controller:
 
     def generate_sdl_game_db_line(self, sdl_mapping: Mapping[str, str] = _DEFAULT_SDL_MAPPING, /) -> str:
         """Returns an SDL_GAMECONTROLLERCONFIG-formatted string for the given configuration."""
-        config = [self.guid, self.real_name, "platform:Linux"]
+        config = [self.guid, self.real_name.replace(",", "."), "platform:Linux"]
 
         def add_mapping(input: Input) -> None:
             key_name = sdl_mapping.get(input.name, None)
@@ -268,7 +268,10 @@ def getMappingAxisRelaxValues(pad):
     res = {}
     for x in pad.inputs:
         if pad.inputs[x].type == "axis":
-            res[x] = codeValues[int(pad.inputs[x].code)]
+            # sdl values : from -32000 to 32000 / do not put < 0 cause a wheel/pad could be not correctly centered
+            # 3 possible initial positions <1----------------|-------2-------|----------------3>
+            val = codeValues[int(pad.inputs[x].code)]
+            res[x] = { "centered":  val > -4000 and val < 4000, "reversed": val > 4000 }
     return res
 
 type ControllerMapping = Mapping[int, Controller]

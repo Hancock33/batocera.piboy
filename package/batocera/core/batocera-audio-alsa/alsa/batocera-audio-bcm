@@ -32,4 +32,3 @@ case "${ACTION}" in
 	"test")
 		aplay "/usr/share/sounds/Mallet.wav"
 	;;
-esac

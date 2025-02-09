@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index 8acf4f5..30c990b 100644
+index 7e5ff62..80fd2b1 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -46,12 +46,28 @@ else ifneq (,$(findstring rpi4,$(platform)))

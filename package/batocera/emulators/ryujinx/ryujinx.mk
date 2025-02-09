@@ -3,12 +3,12 @@
 # ryujinx
 #
 ################################################################################
-# Version: Commits on Jan 26, 2025
-RYUJINX_VERSION = 1.2.301
+# Version: Commits on Feb 09, 2025
+RYUJINX_VERSION = 1.2.361
 RYUJINX_SOURCE = ryujinx-canary-$(RYUJINX_VERSION)-linux_x64.tar.gz
 RYUJINX_SITE = https://github.com/Ryubing/Canary-Releases/releases/download/$(RYUJINX_VERSION)
 RYUJINX_LICENSE = MIT
-RYUJINX_DEPENDENCIES = sdl2 openal hicolor-icon-theme adwaita-icon-theme librsvg
+RYUJINX_DEPENDENCIES = adwaita-icon-theme hicolor-icon-theme librsvg openal sdl2
 
 define RYUJINX_EXTRACT_CMDS
 	mkdir -p $(@D)/target && cd $(@D)/target && tar xf $(DL_DIR)/$(RYUJINX_DL_SUBDIR)/$(RYUJINX_SOURCE)

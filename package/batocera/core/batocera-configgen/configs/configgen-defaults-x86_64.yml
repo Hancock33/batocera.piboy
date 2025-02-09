@@ -14,8 +14,6 @@ default:
     bezel:              consoles
     forceNoBezel:       false
     gamemode_enable:    false
-    gfxbackend: vulkan
-    audio_driver: pulse
     batterymode: highperformance
     powermode: highperformance
 
@@ -792,8 +790,8 @@ pyxel:
   emulator: pyxel
   core:     pyxel
 quake3:
-  emulator: quake3
-  core:     quake3
+  emulator: vkquake3
+  core:     vkquake3
   options:
     powersave: '1'
 raptor:

@@ -639,7 +639,7 @@ index 0fa7c5728f1e..16af42c68cca 100644
  M:	Finn Thain <fthain@linux-m68k.org>
  L:	linux-m68k@lists.linux-m68k.org
 diff --git a/Makefile b/Makefile
-index 11a4021414d9..970f05524341 100644
+index eab1eef3f78d..6a608b59cbe8 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -860,11 +860,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -8266,7 +8266,7 @@ index 506c6f377e7d..46e3e42f9eb5 100644
  		/* Initialize keyboard */
  		ret = asus_kbd_init(hdev, FEATURE_KBD_REPORT_ID);
 diff --git a/drivers/hid/hid-ids.h b/drivers/hid/hid-ids.h
-index 1f47fda809b9..6c2df0d37b3b 100644
+index d1d479ca50a2..d1ab021e4a6a 100644
 --- a/drivers/hid/hid-ids.h
 +++ b/drivers/hid/hid-ids.h
 @@ -210,6 +210,7 @@
@@ -8278,7 +8278,7 @@ index 1f47fda809b9..6c2df0d37b3b 100644
  #define USB_DEVICE_ID_ASUSTEK_ROG_NKEY_ALLY_X		0x1b4c
  #define USB_DEVICE_ID_ASUSTEK_ROG_CLAYMORE_II_KEYBOARD	0x196b
 diff --git a/drivers/hid/hid-multitouch.c b/drivers/hid/hid-multitouch.c
-index 785743036647..2c3845cbb451 100644
+index 65023bfe30ed..42815300081a 100644
 --- a/drivers/hid/hid-multitouch.c
 +++ b/drivers/hid/hid-multitouch.c
 @@ -73,6 +73,7 @@ MODULE_LICENSE("GPL");
@@ -8412,7 +8412,7 @@ index 785743036647..2c3845cbb451 100644
  	if (cls->is_indirect)
  		app->mt_flags |= INPUT_MT_POINTER;
  
-@@ -1770,6 +1792,15 @@ static int mt_probe(struct hid_device *hdev, const struct hid_device_id *id)
+@@ -1769,6 +1791,15 @@ static int mt_probe(struct hid_device *hdev, const struct hid_device_id *id)
  		}
  	}
  
@@ -8428,7 +8428,7 @@ index 785743036647..2c3845cbb451 100644
  	td = devm_kzalloc(&hdev->dev, sizeof(struct mt_device), GFP_KERNEL);
  	if (!td) {
  		dev_err(&hdev->dev, "cannot allocate multitouch data\n");
-@@ -1817,10 +1848,6 @@ static int mt_probe(struct hid_device *hdev, const struct hid_device_id *id)
+@@ -1816,10 +1847,6 @@ static int mt_probe(struct hid_device *hdev, const struct hid_device_id *id)
  
  	timer_setup(&td->release_timer, mt_expired_timeout, 0);
  
@@ -8439,7 +8439,7 @@ index 785743036647..2c3845cbb451 100644
  	if (mtclass->quirks & MT_QUIRK_FIX_CONST_CONTACT_ID)
  		mt_fix_const_fields(hdev, HID_DG_CONTACTID);
  
-@@ -2305,6 +2332,11 @@ static const struct hid_device_id mt_devices[] = {
+@@ -2301,6 +2328,11 @@ static const struct hid_device_id mt_devices[] = {
  		MT_USB_DEVICE(USB_VENDOR_ID_XIROKU,
  			USB_DEVICE_ID_XIROKU_CSR2) },
  

@@ -1,10 +1,17 @@
 # 2025/xx/xx - batocera.linux 42 - xxx
 ### Special Notes
+- Quake 1 & 2 roms need moving from tyrquake to quake & vitaquake2 to quake2 folders respectively.
+  See the _info.txt file for directory layouts & ES file launcher naming conventions.
+  vkQuake3 replaces ioQuake3 for systems that support Vulkan. Saved games should continue to work.
+  The libretro cores will continue to run as before.
 ### Hardware
 - Add OrangePi 4a board support
 - Add OrangePi 3b board support
 - Initial support for RS3 Reaper light gun
 - Add Anbernic RG351V support
+- Initial support for XGunner light gun
+- Initial support for OpenFIRE light gun
+- Initial support for Fusion P.I.G.S. light gun
 ### Added
 - Wireguard VPN for RK3326 boards
 - Image scaling option for Drastic
@@ -22,6 +29,7 @@
 - Support of Shanwan Twin USB Joystick (new revision)
 - Libretro-PS2 core
 - Force Feedback on RP5 & RPmini
+- vkQuake 1, 2 & 3 for systems that support Vulkan.
 ### Fixed
 - Fix some problems in ES and Batocera with IPv6 networks
 - Fix ES behavior with usb network tethering
@@ -38,31 +46,61 @@
 - Batocera-wine: add saves directory and save files options
 - Libretro-virtualjaguar core can now load .zip ROMs
 ### Updated
-- BigPEmu to v117
-- Cemu to 2.5
-- Dolphin-Emu to 2412-145
-- ETLegacy to v2.83.1
+- BigPEmu to v118
+- Cemu to 2.6
+- Dolphin-Emu to 2412-268
+- ETLegacy to v2.83.2
 - Jazz2 to 3.1.0
 - GroovyMAME to 0.272
 - Gzdoom to g4.14.0
 - Libretro-Kronos to 2.7.0
 - Libretro-MAME to 0.272
-- Libretro-Play! to Jan 12 2025 build
+- Libretro-Play! 4th Feb build
+- RetroArch to v1.20.0
 - Ruffle to Nightly-2024-12-28
-- RPCS3 to 0.0.34-17265
+- RPCS3 to 0.0.34-17438
 - ScummVM to v2.9.0
-- PCSX2 to v2.3.110
-- Play! to Jan 12 2025 build
-- Xemu to v0.8.10
+- PCSX2 to v2.3.146
+- Play! to 4th Feb build
+- Xemu to v0.8.16
 - Triforce to use a Crediar build (Nov 29, 2024)
+- Vice to 3.9
+- TheXTech to v1.3.7-hotfix2
+- DXX-Rebirth to 12th of Jan build
+- EDuke to 26th of Dec build
+- Hurrican to 24th of Nov build
+- Sonic3 Air to v25.01.12.0-test
+- Taradino to 28th of Jan build
+- TheForceEngine to 17th Dec build
+- Xash3d-fwgs to 8th of Feb build
+- AppleWin to 8th of Feb build
+- MelonDS to 17th Jan build
+- Snes9x to 24th Jan build
+- Solarus Engine to 18th Jan build
 ### System
+- Bluez to 5.79
 - Buildroot to 2024.11.x with supporting package updates
-- Mesa3D to 24.3.3
-- Linux Kernel to 6.13
+- Mesa3D to 24.3.4
+- Linux Kernel to 6.13.1
 - GStreamer codecs to 1.24.10
-- SDL2 to 2.30.9
+- SDL2 to 2.30.11
 - Vulkan stack to v1.4.304
 - MPV to 0.39.0
+- Kodi to 21.2
+- Nvidia production driver to 570.86.16
+- LLVM to 19.1.7
+- Wine-TKG to 10.0
+- Faudio to 25.02
+- DXVK to 2.5.3
+- DXVK-NVAPI to 0.8.0
+- VKD3D-Proton to 2.14.1
+- Linux Firmware to 20250109
+- Sound Open Firmware to 2025.01
+- Intel Media Driver to 25.1.1
+- LibDRM to 2.4.124
+- Pipewire to 1.2.7
+- Wireplumber to 0.5.8
+- Ryzenadj to v0.16.0
 
 # 2024/12/xx - batocera.linux 41 - Golden-rayed Blue
 ### Special Notes

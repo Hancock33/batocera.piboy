@@ -3,8 +3,8 @@
 # bigpemu
 #
 ################################################################################
-# Version: Commits on Nov 29, 2024
-BIGPEMU_VERSION = v117
+# Version: Commits on Jan 27, 2024
+BIGPEMU_VERSION = v118
 BIGPEMU_SOURCE = BigPEmu_Linux64_$(BIGPEMU_VERSION).tar.gz
 BIGPEMU_SITE = https://www.richwhitehouse.com/jaguar/builds
 

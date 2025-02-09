@@ -469,7 +469,7 @@ msgctxt "game_options"
 msgid "128KB"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, quake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, quake3, vkquake3
 msgctxt "game_options"
 msgid "128MB"
 msgstr ""
@@ -1019,7 +1019,7 @@ msgctxt "game_options"
 msgid "2560 x 1600"
 msgstr ""
 
-#. TRANSLATION: quake3
+#. TRANSLATION: quake3, vkquake3
 msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr ""
@@ -1349,6 +1349,16 @@ msgctxt "game_options"
 msgid "386DX, 33MHz (7800 cps)"
 msgstr ""
 
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "386_prefetch"
+msgstr ""
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "386_slow"
+msgstr ""
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "3D ENGINE"
@@ -1487,6 +1497,11 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "486DX2, 66MHz (26800 cps)"
+msgstr ""
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "486_slow"
 msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, xenia, xenia-canary
@@ -1669,7 +1684,7 @@ msgctxt "game_options"
 msgid "512KB"
 msgstr ""
 
-#. TRANSLATION: libretro/np2kai, quake3
+#. TRANSLATION: libretro/np2kai, quake3, vkquake3
 msgctxt "game_options"
 msgid "512MB"
 msgstr ""
@@ -1824,7 +1839,7 @@ msgctxt "game_options"
 msgid "64KB"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/openbor7530, quake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/openbor7530, quake3, ...
 msgctxt "game_options"
 msgid "64MB"
 msgstr ""
@@ -2494,6 +2509,11 @@ msgctxt "game_options"
 msgid "AUDIO VOLUME GAIN"
 msgstr ""
 
+#. TRANSLATION: dosbox, dosbox, dosbox
+msgctxt "game_options"
+msgid "AUTO"
+msgstr ""
+
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
 msgid "AUTO (DEFAULT)"
@@ -2958,6 +2978,11 @@ msgstr ""
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
 msgid "American English"
+msgstr ""
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "Amount of instructions DOSBox tries to emulate"
 msgstr ""
 
 #. TRANSLATION: yabasanshiro, yabasanshiro
@@ -4420,6 +4445,11 @@ msgctxt "game_options"
 msgid "CONTROLLER CONFIGURATION"
 msgstr ""
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "CONTROLLER MODE"
+msgstr ""
+
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "CONTROLLER PAK"
@@ -4500,7 +4530,7 @@ msgctxt "game_options"
 msgid "CPU COMPATIBILITY"
 msgstr ""
 
-#. TRANSLATION: libretro/mupen64plus-next
+#. TRANSLATION: dosbox, libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "CPU CORE"
 msgstr ""
@@ -4508,6 +4538,16 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "CPU CORE METHOD"
+msgstr ""
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "CPU CYCLES"
+msgstr ""
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "CPU Core used in emulation"
 msgstr ""
 
 #. TRANSLATION: libretro/mednafen_psx
@@ -4535,9 +4575,14 @@ msgctxt "game_options"
 msgid "CPU TIMING MODE (FPS)"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure
+#. TRANSLATION: dosbox, libretro/dosbox_pure
 msgctxt "game_options"
 msgid "CPU TYPE"
+msgstr ""
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "CPU Type used in emulation"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
@@ -5071,6 +5116,13 @@ msgstr ""
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Choose the controller configuration. EVDEV for a wide range of controllers, "
+"lightguns & steering wheels. SDL2 for gamepads only."
 msgstr ""
 
 #. TRANSLATION: libretro/cap32
@@ -6319,6 +6371,11 @@ msgctxt "game_options"
 msgid "Dutch (nl)"
 msgstr ""
 
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "Dynamic"
+msgstr ""
+
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Dynamic (fast)"
@@ -6454,6 +6511,11 @@ msgctxt "game_options"
 msgid "ENABLE GRAVIS ULTRASOUND"
 msgstr ""
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "ENABLE HIDRAW"
+msgstr ""
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "ENABLE MESH TRANSPARENCY"
@@ -6557,6 +6619,11 @@ msgstr ""
 #. TRANSLATION: mugen, wine
 msgctxt "game_options"
 msgid "ESYNC"
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "EVDEV (Default)"
 msgstr ""
 
 #. TRANSLATION: vpinball, vpinball
@@ -6829,6 +6896,14 @@ msgstr ""
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Enable full-screen antialiasing in Direct3D."
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
+"Enable gamepad HID raw access. This allow modern game to use special gamepad "
+"features (like gyroscope for example), but can break older games with x-"
+"input support only."
 msgstr ""
 
 #. TRANSLATION: cemu
@@ -7870,7 +7945,7 @@ msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale (Default)"
+msgid "Fit resolution scale"
 msgstr ""
 
 #. TRANSLATION: pcsx2
@@ -8580,7 +8655,7 @@ msgctxt "game_options"
 msgid "GRAPHICS CHIP TYPE"
 msgstr ""
 
-#. TRANSLATION: quake3
+#. TRANSLATION: quake3, vkquake3
 msgctxt "game_options"
 msgid "GRAPHICS MEMORY"
 msgstr ""
@@ -10156,7 +10231,7 @@ msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
-msgid "Left Manga Save"
+msgid "Left Magna Save"
 msgstr ""
 
 #. TRANSLATION: fpinball.keys
@@ -10721,6 +10796,11 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Match Window"
+msgstr ""
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "Max"
 msgstr ""
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
@@ -11509,7 +11589,7 @@ msgctxt "game_options"
 msgid "None/Sharp Pixels"
 msgstr ""
 
-#. TRANSLATION: awgl, duckstation, flycast, libretro/flycast, libretro/flycast2021, ...
+#. TRANSLATION: awgl, dosbox, duckstation, flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Normal"
 msgstr ""
@@ -13381,7 +13461,7 @@ msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
-msgid "Right Manga Save"
+msgid "Right Magna Save"
 msgstr ""
 
 #. TRANSLATION: fpinball.keys
@@ -13661,7 +13741,7 @@ msgctxt "game_options"
 msgid "SDL TEXTURE ACCESS STREAMING"
 msgstr ""
 
-#. TRANSLATION: libretro, libretro, libretro, libretro
+#. TRANSLATION: libretro, libretro, libretro, libretro, lindbergh-loader
 msgctxt "game_options"
 msgid "SDL2"
 msgstr ""
@@ -14238,7 +14318,7 @@ msgctxt "game_options"
 msgid "Select game language."
 msgstr ""
 
-#. TRANSLATION: quake3
+#. TRANSLATION: quake3, vkquake3
 msgctxt "game_options"
 msgid ""
 "Select how much graphics memory is allocated for the GPU, may need modifying "
@@ -14645,7 +14725,7 @@ msgctxt "game_options"
 msgid "Shunt 9"
 msgstr ""
 
-#. TRANSLATION: libretro/gambatte, libretro/o2em
+#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em
 msgctxt "game_options"
 msgid "Simple"
 msgstr ""
@@ -17740,6 +17820,11 @@ msgstr ""
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
 msgid "original gameboy"
+msgstr ""
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "pentium_slow"
 msgstr ""
 
 #. TRANSLATION: libretro/vba-m

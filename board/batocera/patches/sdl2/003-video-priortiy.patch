@@ -1,0 +1,20 @@
+diff --git a/src/video/SDL_video.c b/src/video/SDL_video.c
+index 01023753c..df34c2a67 100644
+--- a/src/video/SDL_video.c
++++ b/src/video/SDL_video.c
+@@ -75,12 +75,12 @@ static VideoBootStrap *bootstrap[] = {
+ #ifdef SDL_VIDEO_DRIVER_COCOA
+     &COCOA_bootstrap,
+ #endif
+-#ifdef SDL_VIDEO_DRIVER_X11
+-    &X11_bootstrap,
+-#endif
+ #ifdef SDL_VIDEO_DRIVER_WAYLAND
+     &Wayland_bootstrap,
+ #endif
++#ifdef SDL_VIDEO_DRIVER_X11
++    &X11_bootstrap,
++#endif
+ #ifdef SDL_VIDEO_DRIVER_VIVANTE
+     &VIVANTE_bootstrap,
+ #endif

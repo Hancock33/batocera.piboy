@@ -3,8 +3,8 @@
 # nv-codec-headers
 #
 ################################################################################
-# Version: Commits on Mar 31, 2024
-NV_CODEC_HEADERS_VERSION = n12.2.72.0
+# Version: Commits on Jan 30, 2025
+NV_CODEC_HEADERS_VERSION = n13.0.19.0
 NV_CODEC_HEADERS_SITE = https://github.com/FFmpeg/nv-codec-headers
 NV_CODEC_HEADERS_SITE_METHOD = git
 NV_CODEC_HEADERS_INSTALL_STAGING = YES

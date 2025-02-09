@@ -55,7 +55,7 @@ class ECWolfGenerator(Generator):
             #We ignore some options in default config with py-dictonary...
             IgnoreConfigKeys = {"FullScreenWidth", "FullScreenHeight", "JoystickEnabled"}
             with codecs.open(str(ecwolfConfigFile), "r") as f:
-                lines = {line for line in f}
+                lines = list(f)
 
             # ... write all the non ignored keys back to config file ...
             with codecs.open(str(ecwolfConfigFile), "w") as f:

@@ -1,8 +1,8 @@
 diff --git a/configure b/configure
-index edf692c10..64bcc0729 100755
+index 2f72a69d1..b6e10b704 100755
 --- a/configure
 +++ b/configure
-@@ -25663,19 +25663,19 @@ printf "%s\n" "yes" >&6; }
+@@ -25790,19 +25790,19 @@ printf "%s\n" "yes" >&6; }
  fi
  
  pkg_failed=no
@@ -27,7 +27,7 @@ index edf692c10..64bcc0729 100755
  		      test "x$?" != "x0" && pkg_failed=yes
  else
    pkg_failed=yes
-@@ -25687,12 +25687,12 @@ if test -n "$LIBGBM_LIBS"; then
+@@ -25814,12 +25814,12 @@ if test -n "$LIBGBM_LIBS"; then
      pkg_cv_LIBGBM_LIBS="$LIBGBM_LIBS"
   elif test -n "$PKG_CONFIG"; then
      if test -n "$PKG_CONFIG" && \
@@ -43,7 +43,7 @@ index edf692c10..64bcc0729 100755
  		      test "x$?" != "x0" && pkg_failed=yes
  else
    pkg_failed=yes
-@@ -25713,9 +25713,9 @@ else
+@@ -25840,9 +25840,9 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -56,10 +56,10 @@ index edf692c10..64bcc0729 100755
  	# Put the nasty error message in config.log where it belongs
  	echo "$LIBGBM_PKG_ERRORS" >&5
 diff --git a/configure.ac b/configure.ac
-index 5f2d23224..368d944a5 100644
+index 2278616a1..d33288cf9 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -2407,7 +2407,7 @@ CheckKMSDRM()
+@@ -2414,7 +2414,7 @@ CheckKMSDRM()
          video_kmsdrm=no
  
          PKG_CHECK_MODULES([LIBDRM], [libdrm >= 1.4.82], libdrm_avail=yes, libdrm_avail=no)

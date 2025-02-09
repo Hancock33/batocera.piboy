@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-01-18 17:27+0100\n"
+"PO-Revision-Date: 2025-02-07 09:33+0100\n"
 "Last-Translator: pigator\n"
 "Language-Team: \n"
 "Language: hu\n"
@@ -468,7 +468,7 @@ msgctxt "game_options"
 msgid "128KB"
 msgstr "128KB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, quake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, quake3, vkquake3
 msgctxt "game_options"
 msgid "128MB"
 msgstr "128MB"
@@ -1018,7 +1018,7 @@ msgctxt "game_options"
 msgid "2560 x 1600"
 msgstr "2560 x 1600"
 
-#. TRANSLATION: quake3
+#. TRANSLATION: quake3, vkquake3
 msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr "256MB (Alap)"
@@ -1348,6 +1348,16 @@ msgctxt "game_options"
 msgid "386DX, 33MHz (7800 cps)"
 msgstr "386DX, 33MHz (7800 cps)"
 
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "386_prefetch"
+msgstr ""
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "386_slow"
+msgstr ""
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "3D ENGINE"
@@ -1487,6 +1497,11 @@ msgstr "486DX, 33MHz (13400 cps)"
 msgctxt "game_options"
 msgid "486DX2, 66MHz (26800 cps)"
 msgstr "486DX2, 66MHz (26800 cps)"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "486_slow"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, xenia, xenia-canary
 msgctxt "game_options"
@@ -1668,7 +1683,7 @@ msgctxt "game_options"
 msgid "512KB"
 msgstr "512KB"
 
-#. TRANSLATION: libretro/np2kai, quake3
+#. TRANSLATION: libretro/np2kai, quake3, vkquake3
 msgctxt "game_options"
 msgid "512MB"
 msgstr "512MB"
@@ -1823,7 +1838,7 @@ msgctxt "game_options"
 msgid "64KB"
 msgstr "64KB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/openbor7530, quake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/openbor7530, quake3, ...
 msgctxt "game_options"
 msgid "64MB"
 msgstr "64MB"
@@ -2493,6 +2508,11 @@ msgctxt "game_options"
 msgid "AUDIO VOLUME GAIN"
 msgstr "HANGERŐ NÖVELÉS"
 
+#. TRANSLATION: dosbox, dosbox, dosbox
+msgctxt "game_options"
+msgid "AUTO"
+msgstr ""
+
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
 msgid "AUTO (DEFAULT)"
@@ -2980,6 +3000,11 @@ msgstr "Mindig legyen 6 golyó, 6 dinamit és 6 élet."
 msgctxt "game_options"
 msgid "American English"
 msgstr "Amerikai angol"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "Amount of instructions DOSBox tries to emulate"
+msgstr ""
 
 #. TRANSLATION: yabasanshiro, yabasanshiro
 msgctxt "game_options"
@@ -4148,7 +4173,7 @@ msgstr "KÁBEL"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CARD READER"
-msgstr ""
+msgstr "KÁRTYAOLVASÓ"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -4460,6 +4485,11 @@ msgctxt "game_options"
 msgid "CONTROLLER CONFIGURATION"
 msgstr "VEZÉRLŐ KONFIGURÁCIÓJA"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "CONTROLLER MODE"
+msgstr "VEZÉRLŐ MÓD"
+
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "CONTROLLER PAK"
@@ -4540,7 +4570,7 @@ msgctxt "game_options"
 msgid "CPU COMPATIBILITY"
 msgstr "CPU KOMPATIBILITÁS"
 
-#. TRANSLATION: libretro/mupen64plus-next
+#. TRANSLATION: dosbox, libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "CPU CORE"
 msgstr "CPU MAG"
@@ -4549,6 +4579,16 @@ msgstr "CPU MAG"
 msgctxt "game_options"
 msgid "CPU CORE METHOD"
 msgstr "CPU MAG MÓDSZER"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "CPU CYCLES"
+msgstr ""
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "CPU Core used in emulation"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -4575,10 +4615,15 @@ msgctxt "game_options"
 msgid "CPU TIMING MODE (FPS)"
 msgstr "CPU IDŐZÍTÉSI MÓD (FPS)"
 
-#. TRANSLATION: libretro/dosbox_pure
+#. TRANSLATION: dosbox, libretro/dosbox_pure
 msgctxt "game_options"
 msgid "CPU TYPE"
 msgstr "CPU TÍPUS"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "CPU Type used in emulation"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -4895,7 +4940,7 @@ msgstr "Katalán"
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Center"
-msgstr ""
+msgstr "Közép"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -5127,6 +5172,15 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the controller 2 user mode."
 msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Choose the controller configuration. EVDEV for a wide range of controllers, "
+"lightguns & steering wheels. SDL2 for gamepads only."
+msgstr ""
+"Válassza ki a vezérlő konfigurációját. EVDEV a vezérlők, fénypisztolyok és "
+"kormánykerekek széles választékához. SDL2 csak gamepadekhez."
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
@@ -6419,6 +6473,11 @@ msgctxt "game_options"
 msgid "Dutch (nl)"
 msgstr "Holland (nl)"
 
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "Dynamic"
+msgstr ""
+
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Dynamic (fast)"
@@ -6554,6 +6613,11 @@ msgctxt "game_options"
 msgid "ENABLE GRAVIS ULTRASOUND"
 msgstr "A GRAVIS ULTRASOUND ENGEDÉLYEZÉSE"
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "ENABLE HIDRAW"
+msgstr "HIDRAW ENGEDÉLYEZÉSE"
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "ENABLE MESH TRANSPARENCY"
@@ -6658,6 +6722,11 @@ msgstr "EST5EDT"
 msgctxt "game_options"
 msgid "ESYNC"
 msgstr "ESYNC"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "EVDEV (Default)"
+msgstr "EVDEV (alapértelmezett)"
 
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
@@ -6946,6 +7015,17 @@ msgctxt "game_options"
 msgid "Enable full-screen antialiasing in Direct3D."
 msgstr "Teljes képernyős élsimítás engedélyezése a Direct3D-ben."
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
+"Enable gamepad HID raw access. This allow modern game to use special gamepad "
+"features (like gyroscope for example), but can break older games with x-"
+"input support only."
+msgstr ""
+"Gamepad HID nyers hozzáférés engedélyezése. Ez lehetővé teszi, hogy a modern "
+"játékok használhassák a gamepad speciális funkcióit (például a giroszkópot), "
+"de a régebbi, csak x-bemenetet támogató játékokat tönkreteheti."
+
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid ""
@@ -7080,6 +7160,8 @@ msgid ""
 "Enable the IP address for OutRun 2 network play against another PC on the "
 "same network."
 msgstr ""
+"Engedélyezze az IP-címet az OutRun 2 hálózati játékhoz egy másik, ugyanazon "
+"a hálózaton lévő PC ellen."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7135,7 +7217,7 @@ msgstr "Engedélyezze a megjelenítéshez, ha a BIOS ismert problémákat észle
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Enable to emulate the card reader in Virtua Tenis 3."
-msgstr ""
+msgstr "Engedélyezi a kártyaolvasó emulálását a Virtua Tenis 3-ban."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -8053,8 +8135,8 @@ msgstr "Képernyőhöz igazítás"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale (Default)"
-msgstr ""
+msgid "Fit resolution scale"
+msgstr "Fit felbontás skála"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -8787,7 +8869,7 @@ msgctxt "game_options"
 msgid "GRAPHICS CHIP TYPE"
 msgstr "GRAFIKUS CHIP TÍPUSA"
 
-#. TRANSLATION: quake3
+#. TRANSLATION: quake3, vkquake3
 msgctxt "game_options"
 msgid "GRAPHICS MEMORY"
 msgstr "GRAFIKAI MEMÓRIA"
@@ -9407,6 +9489,8 @@ msgid ""
 "House of the Dead 4 speed fix. Sets the game to the CPU base frequency of "
 "your processor."
 msgstr ""
+"House of the Dead 4 sebesség javítás. A játékot a processzorod CPU "
+"alapfrekvenciájára állítja."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -9578,7 +9662,7 @@ msgstr "SÉRTETHETŐSÉGI MÓD"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "IP ADDRESS"
-msgstr ""
+msgstr "IP-CÍM"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -10397,7 +10481,7 @@ msgstr "Bal kar"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
-msgid "Left Manga Save"
+msgid "Left Magna Save"
 msgstr "Bal manga mentés"
 
 #. TRANSLATION: fpinball.keys
@@ -10981,6 +11065,11 @@ msgstr "Március"
 msgctxt "game_options"
 msgid "Match Window"
 msgstr "Egyeztetési ablak"
+
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "Max"
+msgstr ""
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -11789,7 +11878,7 @@ msgctxt "game_options"
 msgid "None/Sharp Pixels"
 msgstr "Nincs/Éles pixelek"
 
-#. TRANSLATION: awgl, duckstation, flycast, libretro/flycast, libretro/flycast2021, ...
+#. TRANSLATION: awgl, dosbox, duckstation, flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Normal"
 msgstr "Normál"
@@ -13705,7 +13794,7 @@ msgstr "Jobb kar"
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
-msgid "Right Manga Save"
+msgid "Right Magna Save"
 msgstr "Jobb manga mentés"
 
 #. TRANSLATION: fpinball.keys
@@ -13991,7 +14080,7 @@ msgctxt "game_options"
 msgid "SDL TEXTURE ACCESS STREAMING"
 msgstr "SDL TEXTÚRA HOZZÁFÉRÉS STREAMING"
 
-#. TRANSLATION: libretro, libretro, libretro, libretro
+#. TRANSLATION: libretro, libretro, libretro, libretro, lindbergh-loader
 msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
@@ -14571,7 +14660,7 @@ msgctxt "game_options"
 msgid "Select game language."
 msgstr ""
 
-#. TRANSLATION: quake3
+#. TRANSLATION: quake3, vkquake3
 msgctxt "game_options"
 msgid ""
 "Select how much graphics memory is allocated for the GPU, may need modifying "
@@ -14997,7 +15086,7 @@ msgctxt "game_options"
 msgid "Shunt 9"
 msgstr "Manőver 9"
 
-#. TRANSLATION: libretro/gambatte, libretro/o2em
+#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em
 msgctxt "game_options"
 msgid "Simple"
 msgstr "Egyszerű"
@@ -18182,6 +18271,11 @@ msgctxt "game_options"
 msgid "original gameboy"
 msgstr "eredeti gameboy"
 
+#. TRANSLATION: dosbox
+msgctxt "game_options"
+msgid "pentium_slow"
+msgstr ""
+
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
 msgid "pink dreams"
@@ -18831,10 +18925,6 @@ msgstr "sárga/kék"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Gyors előre"
-
-#~ msgctxt "game_options"
-#~ msgid "Fit resolution scale"
-#~ msgstr "Fit felbontás skála"
 
 #~ msgctxt "game_options"
 #~ msgid "FlexDMD disabled"

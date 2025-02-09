@@ -1,5 +1,5 @@
 diff --git a/sources/src/caps/caps.c b/sources/src/caps/caps.c
-index f337891..361f2d0 100644
+index 5813adf..cf7e849 100644
 --- a/sources/src/caps/caps.c
 +++ b/sources/src/caps/caps.c
 @@ -37,7 +37,7 @@ char CAPSLIB_PATH[RETRO_PATH_MAX];

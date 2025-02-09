@@ -1,0 +1,445 @@
+From aa4fa67896e0ef546511ab1bd2a2958606c389a0 Mon Sep 17 00:00:00 2001
+From: Crudux Cruo <cruduxcru0@proton.me>
+Date: Tue, 20 Aug 2024 16:44:09 +1000
+Subject: [PATCH 1/5] Do not strip debug DLL.
+
+---
+ Makefile | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 17256bd..f0bbef0 100644
+--- a/Makefile
++++ b/Makefile
+@@ -140,7 +140,11 @@ else ifeq ($(platform), libnx)
+ else
+    CC ?= gcc
+    TARGET := $(TARGET_NAME)_libretro.dll
+-   SHARED := -shared -static-libgcc -static-libstdc++ -s -Wl,--version-script=$(CORE_DIR)/link.T -Wl,--no-undefined
++   SHARED := -shared -static-libgcc -static-libstdc++
++   ifneq ($(DEBUG), 1)
++   SHARED += -s
++   endif
++   SHARED := -Wl,--version-script=$(CORE_DIR)/link.T -Wl,--no-undefined
+    LDFLAGS += -lwsock32 -lws2_32 -lopengl32
+ endif
+ 
+
+From cff6dce75062e2514dd9b9e1a043641a306eaa1d Mon Sep 17 00:00:00 2001
+From: Crudux Cruo <cruduxcru0@proton.me>
+Date: Tue, 20 Aug 2024 16:46:05 +1000
+Subject: [PATCH 2/5] wee.
+
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index f0bbef0..0d61449 100644
+--- a/Makefile
++++ b/Makefile
+@@ -144,7 +144,7 @@ else
+    ifneq ($(DEBUG), 1)
+    SHARED += -s
+    endif
+-   SHARED := -Wl,--version-script=$(CORE_DIR)/link.T -Wl,--no-undefined
++   SHARED += -Wl,--version-script=$(CORE_DIR)/link.T -Wl,--no-undefined
+    LDFLAGS += -lwsock32 -lws2_32 -lopengl32
+ endif
+ 
+
+From 6a80bde0e6fd9a19236eb796eb81720f0e88e190 Mon Sep 17 00:00:00 2001
+From: Crudux Cruo <cruduxcru0@proton.me>
+Date: Tue, 20 Aug 2024 19:04:15 +1000
+Subject: [PATCH 3/5] Fix rendering.
+
+---
+ code/libretro/libretro.c      | 104 +++++++++++++++++-----------------
+ code/renderergl1/tr_backend.c |   8 +++
+ code/renderergl1/tr_local.h   |   8 +++
+ 3 files changed, 68 insertions(+), 52 deletions(-)
+
+diff --git a/code/libretro/libretro.c b/code/libretro/libretro.c
+index 940c90a..8cbdaa3 100644
+--- a/code/libretro/libretro.c
++++ b/code/libretro/libretro.c
+@@ -282,57 +282,57 @@ static bool context_needs_reinit = true;
+ 
+ static bool initialize_gl()
+ {
+-	funcs[0].ptr  = qglTexImage2D         = hw_render.get_proc_address ("glTexImage2D");
+-	funcs[2].ptr  = qglTexParameteri      = hw_render.get_proc_address ("glTexParameteri");
+-	funcs[3].ptr  = qglBindFramebuffer    = hw_render.get_proc_address ("glBindFramebuffer");
+-	funcs[4].ptr  = qglGenerateMipmap     = hw_render.get_proc_address ("glGenerateMipmap");
+-	funcs[5].ptr  = qglBlendFunc          = hw_render.get_proc_address ("glBlendFunc");
+-	funcs[6].ptr  = qglTexSubImage2D      = hw_render.get_proc_address ("glTexSubImage2D");
+-	funcs[7].ptr  = qglDepthMask          = hw_render.get_proc_address ("glDepthMask");
+-	funcs[8].ptr  = qglPushMatrix         = hw_render.get_proc_address ("glPushMatrix");
+-	funcs[9].ptr  = qglRotatef            = hw_render.get_proc_address ("glRotatef");
+-	funcs[10].ptr = qglTranslatef         = hw_render.get_proc_address ("glTranslatef");
+-	funcs[11].ptr = qglDepthRange         = hw_render.get_proc_address ("glDepthRange");
+-	funcs[12].ptr = qglClear              = hw_render.get_proc_address ("glClear");
+-	funcs[13].ptr = qglCullFace           = hw_render.get_proc_address ("glCullFace");
+-	funcs[14].ptr = qglClearColor         = hw_render.get_proc_address ("glClearColor");
+-	funcs[15].ptr = qglEnable             = hw_render.get_proc_address ("glEnable");
+-	funcs[16].ptr = qglDisable            = hw_render.get_proc_address ("glDisable");
+-	funcs[17].ptr = qglEnableClientState  = hw_render.get_proc_address ("glEnableClientState");
+-	funcs[18].ptr = qglDisableClientState = hw_render.get_proc_address ("glDisableClientState");
+-	funcs[19].ptr = qglPopMatrix          = hw_render.get_proc_address ("glPopMatrix");
+-	funcs[20].ptr = qglGetFloatv          = hw_render.get_proc_address ("glGetFloatv");
+-	funcs[21].ptr = qglOrtho              = hw_render.get_proc_address ("glOrtho");
+-	funcs[22].ptr = qglFrustum            = hw_render.get_proc_address ("glFrustum");
+-	funcs[23].ptr = qglLoadMatrixf        = hw_render.get_proc_address ("glLoadMatrixf");
+-	funcs[24].ptr = qglLoadIdentity       = hw_render.get_proc_address ("glLoadIdentity");
+-	funcs[25].ptr = qglMatrixMode         = hw_render.get_proc_address ("glMatrixMode");
+-	funcs[26].ptr = qglBindTexture        = hw_render.get_proc_address ("glBindTexture");
+-	funcs[27].ptr = qglReadPixels         = hw_render.get_proc_address ("glReadPixels");
+-	funcs[28].ptr = qglPolygonMode        = hw_render.get_proc_address ("glPolygonMode");
+-	funcs[29].ptr = qglVertexPointer      = hw_render.get_proc_address ("glVertexPointer");
+-	funcs[30].ptr = qglTexCoordPointer    = hw_render.get_proc_address ("glTexCoordPointer");
+-	funcs[31].ptr = qglColorPointer       = hw_render.get_proc_address ("glColorPointer");
+-	funcs[32].ptr = qglDrawElements       = hw_render.get_proc_address ("glDrawElements");
+-	funcs[33].ptr = qglViewport           = hw_render.get_proc_address ("glViewport");
+-	funcs[34].ptr = qglDeleteTextures     = hw_render.get_proc_address ("glDeleteTextures");
+-	funcs[35].ptr = qglClearStencil       = hw_render.get_proc_address ("glClearStencil");
+-	funcs[36].ptr = qglColor4f            = hw_render.get_proc_address ("glColor4f");
+-	funcs[37].ptr = qglScissor            = hw_render.get_proc_address ("glScissor");
+-	funcs[38].ptr = qglStencilFunc        = hw_render.get_proc_address ("glStencilFunc");
+-	funcs[39].ptr = qglStencilOp          = hw_render.get_proc_address ("glStencilOp");
+-	funcs[40].ptr = qglScalef             = hw_render.get_proc_address ("glScalef");
+-	funcs[41].ptr = qglDepthFunc          = hw_render.get_proc_address ("glDepthFunc");
+-	funcs[42].ptr = qglTexEnvi            = hw_render.get_proc_address ("glTexEnvi");
+-	funcs[43].ptr = qglAlphaFunc          = hw_render.get_proc_address ("glAlphaFunc");
+-	funcs[44].ptr = qglClearDepth         = hw_render.get_proc_address ("glClearDepth");
+-	funcs[45].ptr = qglFinish             = hw_render.get_proc_address ("glFinish");
+-	funcs[46].ptr = qglGenTextures        = hw_render.get_proc_address ("glGenTextures");
+-	funcs[47].ptr = qglPolygonOffset      = hw_render.get_proc_address ("glPolygonOffset");
+-	funcs[48].ptr = qglClipPlane          = hw_render.get_proc_address ("glClipPlane");
+-	funcs[49].ptr = qglColorMask          = hw_render.get_proc_address ("glColorMask");
+-	funcs[50].ptr = qglLineWidth          = hw_render.get_proc_address ("glLineWidth");
+-	funcs[51].ptr = qglStencilMask        = hw_render.get_proc_address ("glStencilMask");
++	funcs[0].ptr  = qglTexImage2D         = (void (*)(GLenum, GLint, GLint, GLsizei, GLsizei, GLint, GLenum, GLenum, const GLvoid *))hw_render.get_proc_address ("glTexImage2D");
++	funcs[2].ptr  = qglTexParameteri      = (void (*)(GLenum, GLenum, GLint))hw_render.get_proc_address ("glTexParameteri");
++	funcs[3].ptr  = qglBindFramebuffer    = (void (*)(GLenum, GLuint))hw_render.get_proc_address ("glBindFramebuffer");
++	funcs[4].ptr  = qglGenerateMipmap     = (void (*)(GLenum))hw_render.get_proc_address ("glGenerateMipmap");
++	funcs[5].ptr  = qglBlendFunc          = (void (*)(GLenum, GLenum))hw_render.get_proc_address ("glBlendFunc");
++	funcs[6].ptr  = qglTexSubImage2D      = (void (*)(GLenum, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, const GLvoid *))hw_render.get_proc_address ("glTexSubImage2D");
++	funcs[7].ptr  = qglDepthMask          = (void (*)(GLboolean))hw_render.get_proc_address ("glDepthMask");
++	funcs[8].ptr  = qglPushMatrix         = (void (*)(void))hw_render.get_proc_address ("glPushMatrix");
++	funcs[9].ptr  = qglRotatef            = (void (*)(GLfloat, GLfloat, GLfloat,GLfloat))hw_render.get_proc_address ("glRotatef");
++	funcs[10].ptr = qglTranslatef         = (void (*)(GLfloat, GLfloat, GLfloat))hw_render.get_proc_address ("glTranslatef");
++	funcs[11].ptr = qglDepthRange         = (void (*)(GLclampd,  GLclampd))hw_render.get_proc_address ("glDepthRange");
++	funcs[12].ptr = qglClear              = (void (*)(GLbitfield))hw_render.get_proc_address ("glClear");
++	funcs[13].ptr = qglCullFace           = (void (*)(GLenum))hw_render.get_proc_address ("glCullFace");
++	funcs[14].ptr = qglClearColor         = (void (*)(GLclampf, GLclampf, GLclampf,GLclampf))hw_render.get_proc_address ("glClearColor");
++	funcs[15].ptr = qglEnable             = (void (*)(GLenum))hw_render.get_proc_address ("glEnable");
++	funcs[16].ptr = qglDisable            = (void (*)(GLenum))hw_render.get_proc_address ("glDisable");
++	funcs[17].ptr = qglEnableClientState  = (void (*)(GLenum))hw_render.get_proc_address ("glEnableClientState");
++	funcs[18].ptr = qglDisableClientState = (void (*)(GLenum))hw_render.get_proc_address ("glDisableClientState");
++	funcs[19].ptr = qglPopMatrix          = (void (*)(void))hw_render.get_proc_address ("glPopMatrix");
++	funcs[20].ptr = qglGetFloatv          = (void (*)(GLenum, GLfloat *))hw_render.get_proc_address ("glGetFloatv");
++	funcs[21].ptr = qglOrtho              = (void (*)(GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, GLdouble))hw_render.get_proc_address ("glOrtho");
++	funcs[22].ptr = qglFrustum            = (void (*)(GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, GLdouble))hw_render.get_proc_address ("glFrustum");
++	funcs[23].ptr = qglLoadMatrixf        = (void (*)(const GLfloat *))hw_render.get_proc_address ("glLoadMatrixf");
++	funcs[24].ptr = qglLoadIdentity       = (void (*)(void))hw_render.get_proc_address ("glLoadIdentity");
++	funcs[25].ptr = qglMatrixMode         = (void (*)(GLenum))hw_render.get_proc_address ("glMatrixMode");
++	funcs[26].ptr = qglBindTexture        = (void (*)(GLenum,GLuint))hw_render.get_proc_address ("glBindTexture");
++	funcs[27].ptr = qglReadPixels         = (void (*)(GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, GLvoid *))hw_render.get_proc_address ("glReadPixels");
++	funcs[28].ptr = qglPolygonMode        = (void (*)(GLenum,GLenum))hw_render.get_proc_address ("glPolygonMode");
++	funcs[29].ptr = qglVertexPointer      = (void (*)(GLint, GLenum, GLsizei, const GLvoid *))hw_render.get_proc_address ("glVertexPointer");
++	funcs[30].ptr = qglTexCoordPointer    = (void (*)(GLint, GLenum, GLsizei, const GLvoid *))hw_render.get_proc_address ("glTexCoordPointer");
++	funcs[31].ptr = qglColorPointer       = (void (*)(GLint, GLenum, GLsizei, const GLvoid *))hw_render.get_proc_address ("glColorPointer");
++	funcs[32].ptr = qglDrawElements       = (void (*)(GLenum, GLsizei, GLenum, const GLvoid *))hw_render.get_proc_address ("glDrawElements");
++	funcs[33].ptr = qglViewport           = (void (*)(GLint, GLint, GLsizei, GLsizei))hw_render.get_proc_address ("glViewport");
++	funcs[34].ptr = qglDeleteTextures     = (void (*)(GLint,const GLuint*))hw_render.get_proc_address ("glDeleteTextures");
++	funcs[35].ptr = qglClearStencil       = (void (*)(GLint))hw_render.get_proc_address ("glClearStencil");
++	funcs[36].ptr = qglColor4f            = (void (*)(GLfloat, GLfloat, GLfloat,GLfloat))hw_render.get_proc_address ("glColor4f");
++	funcs[37].ptr = qglScissor            = (void (*)(GLint, GLint, GLsizei, GLsizei))hw_render.get_proc_address ("glScissor");
++	funcs[38].ptr = qglStencilFunc        = (void (*)(GLenum, GLint, GLuint))hw_render.get_proc_address ("glStencilFunc");
++	funcs[39].ptr = qglStencilOp          = (void (*)(GLenum, GLenum, GLenum))hw_render.get_proc_address ("glStencilOp");
++	funcs[40].ptr = qglScalef             = (void (*)(GLfloat, GLfloat, GLfloat))hw_render.get_proc_address ("glScalef");
++	funcs[41].ptr = qglDepthFunc          = (void (*)(GLenum))hw_render.get_proc_address ("glDepthFunc");
++	funcs[42].ptr = qglTexEnvi            = (void (*)(GLenum, GLenum, GLint))hw_render.get_proc_address ("glTexEnvi");
++	funcs[43].ptr = qglAlphaFunc          = (void (*)(GLenum,  GLclampf))hw_render.get_proc_address ("glAlphaFunc");
++	funcs[44].ptr = qglClearDepth         = (void (*)(GLdouble))hw_render.get_proc_address ("glClearDepth");
++	funcs[45].ptr = qglFinish             = (void (*)(void))hw_render.get_proc_address ("glFinish");
++	funcs[46].ptr = qglGenTextures        =  (void (*)(GLsizei,GLuint *))hw_render.get_proc_address ("glGenTextures");
++	funcs[47].ptr = qglPolygonOffset      = (void (*)(GLfloat, GLfloat))hw_render.get_proc_address ("glPolygonOffset");
++	funcs[48].ptr = qglClipPlane          = (void (*)(GLenum, const GLdouble *))hw_render.get_proc_address ("glClipPlane");
++	funcs[49].ptr = qglColorMask          =  (void (*)(GLboolean, GLboolean, GLboolean, GLboolean))hw_render.get_proc_address ("glColorMask");
++	funcs[50].ptr = qglLineWidth          =  (void (*)(GLfloat))hw_render.get_proc_address ("glLineWidth");
++	funcs[51].ptr = qglStencilMask        =  (void (*)(GLuint))hw_render.get_proc_address ("glStencilMask");
+ 	
+ 	if (log_cb) {
+ 		int i;
+@@ -1894,7 +1894,7 @@ qboolean SNDDMA_Init(void)
+ 	dma.samples = BUFFER_SIZE;
+ 	dma.fullsamples = dma.samples / dma.channels;
+ 	dma.submission_chunk = 1;
+-	dma.buffer = audio_buffer;
++	dma.buffer = (byte*)audio_buffer;
+ 	dma.isfloat = 0;
+ 	
+ 	snd_inited = qtrue;
+diff --git a/code/renderergl1/tr_backend.c b/code/renderergl1/tr_backend.c
+index 3aadef7..6f1b264 100644
+--- a/code/renderergl1/tr_backend.c
++++ b/code/renderergl1/tr_backend.c
+@@ -24,6 +24,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ backEndData_t	*backEndData;
+ backEndState_t	backEnd;
+ 
++void vglVertexPointerMapped(const GLvoid *pointer);
++void vglTexCoordPointerMapped(const GLvoid *pointer);
++void vglColorPointerMapped(GLenum type, const GLvoid *pointer);
++void vglDrawObjects(GLenum mode, GLsizei count, GLboolean implicit_wvp);
++void vglTexCoordPointer(GLint size, GLenum type, GLsizei stride, GLuint count, const GLvoid *pointer);
++void vglVertexPointer(GLint size, GLenum type, GLsizei stride, GLuint count, const GLvoid *pointer);
++void vglColorPointer(GLint size, GLenum type, GLsizei stride, GLuint count, const GLvoid *pointer);
++
+ 
+ static float	s_flipMatrix[16] = {
+ 	// convert from our coordinate system (looking down X)
+diff --git a/code/renderergl1/tr_local.h b/code/renderergl1/tr_local.h
+index 176cdc6..66855dd 100644
+--- a/code/renderergl1/tr_local.h
++++ b/code/renderergl1/tr_local.h
+@@ -1593,5 +1593,13 @@ size_t RE_SaveJPGToBuffer(byte *buffer, size_t bufSize, int quality,
+ void RE_TakeVideoFrame( int width, int height,
+ 		byte *captureBuffer, byte *encodeBuffer, qboolean motionJpeg );
+ 
++void vglVertexPointerMapped(const GLvoid *pointer);
++void vglTexCoordPointerMapped(const GLvoid *pointer);
++void vglColorPointerMapped(GLenum type, const GLvoid *pointer);
++void vglDrawObjects(GLenum mode, GLsizei count, GLboolean implicit_wvp);
++void vglTexCoordPointer(GLint size, GLenum type, GLsizei stride, GLuint count, const GLvoid *pointer);
++void vglVertexPointer(GLint size, GLenum type, GLsizei stride, GLuint count, const GLvoid *pointer);
++void vglColorPointer(GLint size, GLenum type, GLsizei stride, GLuint count, const GLvoid *pointer);
++
+ 
+ #endif //TR_LOCAL_H
+
+From 7bbb97b7ad2232abba45ca23573ddd4a95c31fdc Mon Sep 17 00:00:00 2001
+From: mudl0rd <allegedlywrong@proton.me>
+Date: Wed, 21 Aug 2024 06:16:45 +1000
+Subject: [PATCH 4/5] Fix build.
+
+---
+ code/libretro/libretro.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+diff --git a/code/libretro/libretro.c b/code/libretro/libretro.c
+index 8cbdaa3..6969493 100644
+--- a/code/libretro/libretro.c
++++ b/code/libretro/libretro.c
+@@ -349,6 +349,7 @@ static void context_destroy()
+ 	context_needs_reinit = true;
+ }
+ 
++/*
+ static void keyboard_cb(bool down, unsigned keycode, uint32_t character, uint16_t mod)
+ {
+ 	// character-only events are discarded
+@@ -358,9 +359,9 @@ static void keyboard_cb(bool down, unsigned keycode, uint32_t character, uint16_
+ 		else
+ 			Sys_SetKeys((uint32_t) keycode, 0);
+ 	}
+-}
++}*/
+ 
+-first_reset = true;
++bool first_reset = true;
+ 
+ extern void CL_Vid_Restart_f( void );
+ 
+@@ -1173,7 +1174,7 @@ bool retro_load_game(const struct retro_game_info *info)
+ #endif
+ 	bool use_external_savedir = false;
+ 	const char *base_save_dir = NULL;
+-	struct retro_keyboard_callback cb = { keyboard_cb };
++	//struct retro_keyboard_callback cb = { keyboard_cb };
+ 
+ 	if (!info)
+ 		return false;
+
+From 4f6b0711fa9e703346f4a5ff0b9cda79dd1d327d Mon Sep 17 00:00:00 2001
+From: mudl0rd <allegedlywrong@proton.me>
+Date: Sat, 24 Aug 2024 15:20:11 +1000
+Subject: [PATCH 5/5] Fixed mouse input and keyboard.
+
+---
+ code/libretro/libretro.c | 84 +++++++++++++++++++++++++---------------
+ 1 file changed, 53 insertions(+), 31 deletions(-)
+
+diff --git a/code/libretro/libretro.c b/code/libretro/libretro.c
+index 6969493..3a15b31 100644
+--- a/code/libretro/libretro.c
++++ b/code/libretro/libretro.c
+@@ -349,17 +349,19 @@ static void context_destroy()
+ 	context_needs_reinit = true;
+ }
+ 
+-/*
++void Key_Event(int key, int value, int time);
++int frametime = 0;
+ static void keyboard_cb(bool down, unsigned keycode, uint32_t character, uint16_t mod)
+ {
+ 	// character-only events are discarded
++	int time = frametime;
+ 	if (keycode != RETROK_UNKNOWN) {
+ 		if (down)
+-			Sys_SetKeys((uint32_t) keycode, 1);
++			Key_Event((uint32_t) keycode,1, time);
+ 		else
+-			Sys_SetKeys((uint32_t) keycode, 0);
++			Key_Event((uint32_t) keycode,0, time);
+ 	}
+-}*/
++}
+ 
+ bool first_reset = true;
+ 
+@@ -990,7 +992,7 @@ void retro_set_environment(retro_environment_t cb)
+    };
+ 
+    static const struct retro_controller_info ports[] = {
+-      { port_1, 3 },
++      { port_1, 4 },
+       { 0 },
+    };
+ 
+@@ -1174,7 +1176,7 @@ bool retro_load_game(const struct retro_game_info *info)
+ #endif
+ 	bool use_external_savedir = false;
+ 	const char *base_save_dir = NULL;
+-	//struct retro_keyboard_callback cb = { keyboard_cb };
++	struct retro_keyboard_callback cb = { keyboard_cb };
+ 
+ 	if (!info)
+ 		return false;
+@@ -1184,7 +1186,7 @@ bool retro_load_game(const struct retro_game_info *info)
+ 	for (i=0; path_lower[i]; ++i)
+ 		path_lower[i] = tolower(path_lower[i]);
+ 	
+-//	environ_cb(RETRO_ENVIRONMENT_SET_KEYBOARD_CALLBACK, &cb);
++    environ_cb(RETRO_ENVIRONMENT_SET_KEYBOARD_CALLBACK, &cb);
+ 	
+ 	update_variables(true);
+ 
+@@ -2163,56 +2165,56 @@ void Sys_SetKeys(int time){
+ 			old_ret = ret;
+ 		}
+ 		break;
+-		/*
++
+ 		case RETRO_DEVICE_KEYBOARD:
+ 			if (input_cb(port, RETRO_DEVICE_MOUSE, 0, RETRO_DEVICE_ID_MOUSE_LEFT))
+-				Sys_SetKeys(K_MOUSE1, 1);
++				Key_Event(K_MOUSE1, 1, time);
+ 			else
+-				Sys_SetKeys(K_MOUSE1, 0);
++				Key_Event(K_MOUSE1, 0, time);
+ 			if (input_cb(port, RETRO_DEVICE_MOUSE, 0, RETRO_DEVICE_ID_MOUSE_RIGHT))
+-				Sys_SetKeys(K_MOUSE2, 1);
++				Key_Event(K_MOUSE2, 1, time);
+ 			else
+-				Sys_SetKeys(K_MOUSE2, 0);
++				Key_Event(K_MOUSE2, 0, time);
+ 			if (input_cb(port, RETRO_DEVICE_MOUSE, 0, RETRO_DEVICE_ID_MOUSE_MIDDLE))
+-				Sys_SetKeys(K_MOUSE3, 1);
++				Key_Event(K_MOUSE3, 1, time);
+ 			else
+-				Sys_SetKeys(K_MOUSE3, 0);
++				Key_Event(K_MOUSE3, 0, time);
+ 			if (input_cb(port, RETRO_DEVICE_MOUSE, 0, RETRO_DEVICE_ID_MOUSE_WHEELUP))
+-				Sys_SetKeys(K_MOUSE4, 1);
++				Key_Event(K_MOUSE4, 1, time);
+ 			else
+-				Sys_SetKeys(K_MOUSE4, 0);
++				Key_Event(K_MOUSE4, 0, time);
+ 			if (input_cb(port, RETRO_DEVICE_MOUSE, 0, RETRO_DEVICE_ID_MOUSE_WHEELDOWN))
+-				Sys_SetKeys(K_MOUSE5, 1);
++				Key_Event(K_MOUSE5, 1,time);
+ 			else
+-				Sys_SetKeys(K_MOUSE5, 0);
++				Key_Event(K_MOUSE5, 0,time);
+ 			if (input_cb(port, RETRO_DEVICE_MOUSE, 0, RETRO_DEVICE_ID_MOUSE_HORIZ_WHEELUP))
+-				Sys_SetKeys(K_MOUSE6, 1);
++				Key_Event(K_MWHEELUP, 1, time);
+ 			else
+-				Sys_SetKeys(K_MOUSE6, 0);
++				Key_Event(K_MWHEELUP, 0, time);
+ 			if (input_cb(port, RETRO_DEVICE_MOUSE, 0, RETRO_DEVICE_ID_MOUSE_HORIZ_WHEELDOWN))
+-				Sys_SetKeys(K_MOUSE7, 1);
++				Key_Event(K_MWHEELDOWN, 1, time);
+ 			else
+-				Sys_SetKeys(K_MOUSE7, 0);
++				Key_Event(K_MWHEELDOWN, 0, time);
+ 			if (quake_devices[0] == RETRO_DEVICE_KEYBOARD) {
+ 				if (input_cb(port, RETRO_DEVICE_KEYBOARD, 0, RETROK_UP))
+-					Sys_SetKeys(K_UPARROW, 1);
++					Key_Event(K_UPARROW, 1,time);
+ 				else
+-					Sys_SetKeys(K_UPARROW, 0);
++					Key_Event(K_UPARROW, 0,time);
+ 				if (input_cb(port, RETRO_DEVICE_KEYBOARD, 0, RETROK_DOWN))
+-					Sys_SetKeys(K_DOWNARROW, 1);
++					Key_Event(K_DOWNARROW, 1,time);
+ 				else
+-					Sys_SetKeys(K_DOWNARROW, 0);
++					Key_Event(K_DOWNARROW, 0,time);
+ 				if (input_cb(port, RETRO_DEVICE_KEYBOARD, 0, RETROK_LEFT))
+-					Sys_SetKeys(K_LEFTARROW, 1);
++					Key_Event(K_LEFTARROW, 1,time);
+ 				else
+-					Sys_SetKeys(K_LEFTARROW, 0);
++					Key_Event(K_LEFTARROW, 0,time);
+ 				if (input_cb(port, RETRO_DEVICE_KEYBOARD, 0, RETROK_RIGHT))
+-					Sys_SetKeys(K_RIGHTARROW, 1);
++					Key_Event(K_RIGHTARROW, 1,time);
+ 				else
+-					Sys_SetKeys(K_RIGHTARROW, 0);
++					Key_Event(K_RIGHTARROW, 0,time);
+ 			}
+ 			break;
+-		*/
++		
+ 		case RETRO_DEVICE_NONE:
+ 			break;
+ 		}
+@@ -2230,8 +2232,11 @@ int old_x = - 1, old_y;
+ void IN_Frame( void )
+ {
+ 	int time = Sys_Milliseconds();
++	frametime = time;
+ 	Sys_SetKeys(time);
+ 	int lsx, lsy, rsx, rsy;
++	static int cur_mx;
++    static int cur_my;
+ 	
+ 	uint32_t virt_buttons = 0x00;
+ 	
+@@ -2291,6 +2296,23 @@ void IN_Frame( void )
+       } else rsy = 0;
+ 	  Com_QueueEvent(time, SE_MOUSE, rsx / slowdown, rsy / slowdown, 0, NULL);
+ 	}
++
++	if(quake_devices[0] == RETRO_DEVICE_KEYBOARD)
++	{
++	  rsx = input_cb(0, RETRO_DEVICE_MOUSE, 0, RETRO_DEVICE_ID_MOUSE_X);
++      rsy = input_cb(0, RETRO_DEVICE_MOUSE, 0, RETRO_DEVICE_ID_MOUSE_Y);
++	  float sens = 1.0;
++
++      if (rsx != cur_mx || rsy != cur_my)
++      {
++
++         rsx *= sens;
++         rsy *= sens;
++         cur_mx = rsx;
++         cur_my = rsy;
++      }
++		  Com_QueueEvent(time, SE_MOUSE, rsx, rsy, 0, NULL);
++	}
+ 	
+ }
+ 

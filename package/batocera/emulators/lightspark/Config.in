@@ -15,3 +15,5 @@ config BR2_PACKAGE_LIGHTSPARK
 	help
 	  LightSpark
 	  Flash emulator for windows / mac / linux.
+
+	  https://github.com/lightspark/lightspark

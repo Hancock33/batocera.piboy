@@ -3,11 +3,11 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Jan 26, 2025
-DEVILUTIONX_VERSION = 5b66f1217343070e8d102ab9706b50f53725ba0f
+# Version: Commits on Feb 09, 2025
+DEVILUTIONX_VERSION = d92bdd248f9fb5d866b027313ebc88c1dfb2aa97
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
-DEVILUTIONX_DEPENDENCIES = sdl2 sdl2_image fmt libsodium libpng bzip2 lua luafilesystem lua-lpeg-patterns lpeg luasocket luasec
+DEVILUTIONX_DEPENDENCIES = bzip2 fmt libpng libsodium lpeg lua lua-lpeg-patterns luafilesystem luasec luasocket sdl2 sdl2_image
 DEVILUTIONX_SUPPORTS_IN_SOURCE_BUILD = NO
 
 # Prefill the player name when creating a new character, in case the device does

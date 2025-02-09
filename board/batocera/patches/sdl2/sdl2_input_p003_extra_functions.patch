@@ -1,8 +1,8 @@
 diff --git a/include/SDL_joystick.h b/include/SDL_joystick.h
-index 7a3faf841..fbe0a9cf3 100644
+index 668db5e30..80df5597e 100644
 --- a/include/SDL_joystick.h
 +++ b/include/SDL_joystick.h
-@@ -424,6 +424,11 @@ extern DECLSPEC int SDLCALL SDL_JoystickDetachVirtual(int device_index);
+@@ -436,6 +436,11 @@ extern DECLSPEC int SDLCALL SDL_JoystickDetachVirtual(int device_index);
   */
  extern DECLSPEC SDL_bool SDLCALL SDL_JoystickIsVirtual(int device_index);
  
@@ -15,7 +15,7 @@ index 7a3faf841..fbe0a9cf3 100644
   * Set values on an opened, virtual-joystick's axis.
   *
 diff --git a/src/dynapi/SDL_dynapi_overrides.h b/src/dynapi/SDL_dynapi_overrides.h
-index f57c5222e..5131707d7 100644
+index f26569b13..ec75b1021 100644
 --- a/src/dynapi/SDL_dynapi_overrides.h
 +++ b/src/dynapi/SDL_dynapi_overrides.h
 @@ -209,6 +209,12 @@
@@ -32,7 +32,7 @@ index f57c5222e..5131707d7 100644
  #define SDL_JoystickGetBall SDL_JoystickGetBall_REAL
  #define SDL_JoystickGetButton SDL_JoystickGetButton_REAL
 diff --git a/src/dynapi/SDL_dynapi_procs.h b/src/dynapi/SDL_dynapi_procs.h
-index 7f5d32525..d3d939906 100644
+index db61f475f..555788e8d 100644
 --- a/src/dynapi/SDL_dynapi_procs.h
 +++ b/src/dynapi/SDL_dynapi_procs.h
 @@ -243,6 +243,12 @@ SDL_DYNAPI_PROC(int,SDL_JoystickNumButtons,(SDL_Joystick *a),(a),return)
@@ -49,10 +49,10 @@ index 7f5d32525..d3d939906 100644
  SDL_DYNAPI_PROC(int,SDL_JoystickGetBall,(SDL_Joystick *a, int b, int *c, int *d),(a,b,c,d),return)
  SDL_DYNAPI_PROC(Uint8,SDL_JoystickGetButton,(SDL_Joystick *a, int b),(a,b),return)
 diff --git a/src/joystick/SDL_joystick.c b/src/joystick/SDL_joystick.c
-index 7b2546a53..386399b72 100644
+index 31dda8664..bde331611 100644
 --- a/src/joystick/SDL_joystick.c
 +++ b/src/joystick/SDL_joystick.c
-@@ -3347,6 +3347,27 @@ SDL_JoystickGUID SDL_JoystickGetGUIDFromString(const char *pchGUID)
+@@ -3345,6 +3345,27 @@ SDL_JoystickGUID SDL_JoystickGetGUIDFromString(const char *pchGUID)
      return SDL_GUIDFromString(pchGUID);
  }
  
@@ -81,23 +81,23 @@ index 7b2546a53..386399b72 100644
  void SDL_PrivateJoystickBatteryLevel(SDL_Joystick *joystick, SDL_JoystickPowerLevel ePowerLevel)
  {
 diff --git a/src/joystick/SDL_sysjoystick.h b/src/joystick/SDL_sysjoystick.h
-index 97efa888a..cd66bbfbc 100644
+index 2b85d8743..b4ad7195d 100644
 --- a/src/joystick/SDL_sysjoystick.h
 +++ b/src/joystick/SDL_sysjoystick.h
-@@ -262,6 +262,11 @@ extern SDL_JoystickDriver SDL_N3DS_JoystickDriver;
- }
- #endif
+@@ -257,6 +257,11 @@ extern SDL_JoystickDriver SDL_PSP_JoystickDriver;
+ extern SDL_JoystickDriver SDL_VITA_JoystickDriver;
+ extern SDL_JoystickDriver SDL_N3DS_JoystickDriver;
  
 +extern const char *SDL_SYS_JoystickDevicePathById(int device_instance_id);
 +extern int SDL_SYS_JoystickButtonEventCodeById(int device_instance_id, int button);
 +extern int SDL_SYS_JoystickAxisEventCodeById(int device_instance_id, int axis);
 +extern int SDL_SYS_JoystickHatEventCodeById(int device_instance_id, int hat);
 +
- #endif /* SDL_sysjoystick_h_ */
- 
- /* vi: set ts=4 sw=4 expandtab: */
+ /* Ends C function definitions when using C++ */
+ #ifdef __cplusplus
+ }
 diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
-index f396731cb..93d4af418 100644
+index 7565822bf..d9ed8d585 100644
 --- a/src/joystick/linux/SDL_sysjoystick.c
 +++ b/src/joystick/linux/SDL_sysjoystick.c
 @@ -1267,6 +1267,16 @@ static void ConfigJoystick(SDL_Joystick *joystick, int fd, int fd_sensor)
@@ -175,7 +175,7 @@ index f396731cb..93d4af418 100644
  
  /* vi: set ts=4 sw=4 expandtab: */
 diff --git a/src/joystick/linux/SDL_sysjoystick_c.h b/src/joystick/linux/SDL_sysjoystick_c.h
-index 6d6ee69ab..43f5e0754 100644
+index 8b5c92709..8f194f339 100644
 --- a/src/joystick/linux/SDL_sysjoystick_c.h
 +++ b/src/joystick/linux/SDL_sysjoystick_c.h
 @@ -57,6 +57,7 @@ struct joystick_hwdata

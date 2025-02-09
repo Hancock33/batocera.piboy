@@ -1,7 +1,0 @@
-config BR2_PACKAGE_YQUAKE2_REFVK
-	bool "yquake2-refvk"
-
-	help
-	  Optional Vulkan renderer lib for Yamagi Quake II
-
-	  https://github.com/yquake2

@@ -3,14 +3,14 @@
 # xash3d-fwgs
 #
 ################################################################################
-# Version: Commits on Jan 26, 2025
-XASH3D_FWGS_VERSION = c0f1d8c6475f45dcb2544ef2bf9a9527d9eb7432
+# Version: Commits on Feb 09, 2025
+XASH3D_FWGS_VERSION = d7dc3192de88ea97748e2c389645100b4d353e1a
 XASH3D_FWGS_SITE = https://github.com/FWGS/xash3d-fwgs.git
 XASH3D_FWGS_SITE_METHOD = git
 XASH3D_FWGS_GIT_SUBMODULES = yes
 XASH3D_FWGS_LICENSE = GPL-3.0+
-XASH3D_FWGS_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf
-XASH3D_FWGS_DEPENDENCIES += freetype fontconfig hlsdk-xash3d
+XASH3D_FWGS_DEPENDENCIES += fontconfig freetype hlsdk-xash3d
+XASH3D_FWGS_DEPENDENCIES += sdl2 sdl2_image sdl2_mixer sdl2_ttf
 
 XASH3D_FWGS_CONF_OPTS += --build-type=release
 XASH3D_FWGS_CONF_OPTS += --enable-packaging

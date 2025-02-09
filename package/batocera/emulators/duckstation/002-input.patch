@@ -1,8 +1,8 @@
 diff --git a/src/util/input_manager.cpp b/src/util/input_manager.cpp
-index b8e8e22ae..8b2fcb052 100644
+index 29fbd87d1..497061a19 100644
 --- a/src/util/input_manager.cpp
 +++ b/src/util/input_manager.cpp
-@@ -2012,30 +2012,30 @@ std::vector<InputBindingKey> InputManager::EnumerateMotors()
+@@ -2099,30 +2099,30 @@ InputManager::VibrationMotorList InputManager::EnumerateVibrationMotors(std::opt
  
  static void GetKeyboardGenericBindingMapping(std::vector<std::pair<GenericInputBinding, std::string>>* mapping)
  {

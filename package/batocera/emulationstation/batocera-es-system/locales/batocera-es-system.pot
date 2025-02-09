@@ -2610,7 +2610,7 @@ msgctxt "game_options"
 msgid "48MB"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/openbor7530, quake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/openbor7530, quake3, ...
 msgctxt "game_options"
 msgid "64MB"
 msgstr ""
@@ -2620,7 +2620,7 @@ msgctxt "game_options"
 msgid "96MB"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, quake3
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, quake3, vkquake3
 msgctxt "game_options"
 msgid "128MB"
 msgstr ""
@@ -6391,7 +6391,7 @@ msgctxt "game_options"
 msgid "230MB"
 msgstr ""
 
-#. TRANSLATION: libretro/np2kai, quake3
+#. TRANSLATION: libretro/np2kai, quake3, vkquake3
 msgctxt "game_options"
 msgid "512MB"
 msgstr ""
@@ -8629,7 +8629,7 @@ msgctxt "game_options"
 msgid "GLCore"
 msgstr ""
 
-#. TRANSLATION: libretro, libretro, libretro, libretro
+#. TRANSLATION: libretro, libretro, libretro, libretro, lindbergh-loader
 msgctxt "game_options"
 msgid "SDL2"
 msgstr ""
@@ -12494,11 +12494,6 @@ msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Fit resolution scale (Default)"
-msgstr ""
-
-#. TRANSLATION: scummvm
-msgctxt "game_options"
 msgid "Center"
 msgstr ""
 
@@ -12515,6 +12510,11 @@ msgstr ""
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Stretch to screen"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Fit resolution scale"
 msgstr ""
 
 #. TRANSLATION: scummvm
@@ -13208,6 +13208,19 @@ msgstr ""
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "SDL CONFIG"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
+"Enable gamepad HID raw access. This allow modern game to use special gamepad "
+"features (like gyroscope for example), but can break older games with x-"
+"input support only."
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "ENABLE HIDRAW"
 msgstr ""
 
 #. TRANSLATION: wine
@@ -15172,19 +15185,19 @@ msgctxt "game_options"
 msgid "Maximum Blood"
 msgstr ""
 
-#. TRANSLATION: quake3
+#. TRANSLATION: quake3, vkquake3
 msgctxt "game_options"
 msgid ""
 "Select how much graphics memory is allocated for the GPU, may need modifying "
 "for some games / systems."
 msgstr ""
 
-#. TRANSLATION: quake3
+#. TRANSLATION: quake3, vkquake3
 msgctxt "game_options"
 msgid "GRAPHICS MEMORY"
 msgstr ""
 
-#. TRANSLATION: quake3
+#. TRANSLATION: quake3, vkquake3
 msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr ""
@@ -16807,6 +16820,23 @@ msgstr ""
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
+msgid ""
+"Choose the controller configuration. EVDEV for a wide range of controllers, "
+"lightguns & steering wheels. SDL2 for gamepads only."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "CONTROLLER MODE"
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "EVDEV (Default)"
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
 msgid "Set to on if you experience flickering in Hummer."
 msgstr ""
 
@@ -17196,12 +17226,12 @@ msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
-msgid "Left Manga Save"
+msgid "Left Magna Save"
 msgstr ""
 
 #. TRANSLATION: fpinball.keys
 msgctxt "keys_files"
-msgid "Right Manga Save"
+msgid "Right Magna Save"
 msgstr ""
 
 #. TRANSLATION: psx.duckstation.keys

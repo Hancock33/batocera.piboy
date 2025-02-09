@@ -1,8 +1,8 @@
 diff --git a/rpcs3/Emu/savestate_utils.cpp b/rpcs3/Emu/savestate_utils.cpp
-index bb3e44056..3e98c6174 100644
+index c1b5c953f..f52540a6a 100644
 --- a/rpcs3/Emu/savestate_utils.cpp
 +++ b/rpcs3/Emu/savestate_utils.cpp
-@@ -278,7 +278,7 @@ bool boot_last_savestate(bool testing)
+@@ -341,7 +341,7 @@ bool boot_last_savestate(bool testing)
  {
  	if (!g_cfg.savestate.suspend_emu && !Emu.GetTitleID().empty() && (Emu.IsRunning() || Emu.GetStatus() == system_state::paused))
  	{
