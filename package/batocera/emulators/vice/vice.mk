@@ -3,8 +3,8 @@
 # vice
 #
 ################################################################################
-# Version: Commits on Feb 07, 2025
-VICE_VERSION = r45475
+# Version: Commits on Feb 09, 2025
+VICE_VERSION = r45476
 VICE_SITE = $(call github,VICE-Team,svn-mirror,$(VICE_VERSION))
 VICE_LICENSE = GPLv2
 VICE_SUBDIR  = vice
@@ -23,7 +23,7 @@ VICE_CONF_OPTS += --enable-midi
 
 ifeq ($(BR2_PACKAGE_SDL2),y)
 VICE_CONF_OPTS += --enable-sdl2ui
-VICE_CONF_OPTS += --with-sdlsound 
+VICE_CONF_OPTS += --with-sdlsound
 VICE_CONF_ENV += LDFLAGS=-lSDL2
 VICE_DEPENDENCIES += sdl2 sdl2_image
 endif
