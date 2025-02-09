@@ -3,11 +3,11 @@
 # ruffle
 #
 ################################################################################
-# Version: Commits on Feb 08, 2025
-RUFFLE_VERSION = nightly-2025-02-08
+# Version: Commits on Feb 09, 2025
+RUFFLE_VERSION = nightly-2025-02-09
 RUFFLE_SITE = $(call github,ruffle-rs,ruffle,$(RUFFLE_VERSION))
 RUFFLE_LICENSE = GPLv2
-RUFFLE_DEPENDENCIES = host-rustc host-rust-bin openssl udev nghttp2 alsa-lib
+RUFFLE_DEPENDENCIES = alsa-lib host-rust-bin host-rustc nghttp2 openssl udev
 
 RUFFLE_CARGO_ENV = CARGO_HOME=$(DL_DIR)/br-cargo-home \
 	CARGO_BUILD_TARGET="$(RUSTC_TARGET_NAME)" \

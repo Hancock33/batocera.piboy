@@ -1,7 +1,7 @@
 config BR2_PACKAGE_LIBRETRO_PANDA3DS
 	bool "libretro-panda3ds"
-	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
+	depends on BR2_PACKAGE_RETROARCH
 	select BR2_PACKAGE_FDK_AAC
 	select BR2_PACKAGE_FFMPEG
 	select BR2_PACKAGE_FMT
