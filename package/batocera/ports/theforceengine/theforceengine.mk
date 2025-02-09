@@ -19,7 +19,8 @@ THEFORCEENGINE_DEPENDENCIES = libglew sdl2 sdl2_image
 THEFORCEENGINE_SUPPORTS_IN_SOURCE_BUILD = NO
 THEFORCEENGINE_CONF_OPTS += -DBUILD_SHARED_LIBS=FALSE
 THEFORCEENGINE_CONF_OPTS += -DDISABLE_SYSMIDI=ON
-THEFORCEENGINE_CONF_OPTS += -DENABLE_FORCE_SCRIPT=ON -DENABLE_EDITOR=ON
+THEFORCEENGINE_CONF_OPTS += -DENABLE_EDITOR=ON
+THEFORCEENGINE_CONF_OPTS += -DENABLE_FORCE_SCRIPT=ON
 
 ifeq ($(BR2_PACKAGE_RTMIDI),y)
 THEFORCEENGINE_DEPENDENCIES += rtmidi
@@ -31,14 +32,14 @@ THEFORCEENGINE_CONF_INIT = $(TARGET_DIR)/usr/share/batocera/datainit/system/conf
 define THEFORCEENGINE_INSTALL_TARGET_CMDS
 	mkdir -p $(THEFORCEENGINE_CONF_INIT)
 	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/theforceengine $(TARGET_DIR)/usr/bin/theforceengine
-	rsync -arv $(@D)/TheForceEngine/Captions $(THEFORCEENGINE_CONF_INIT)
-	rsync -arv $(@D)/TheForceEngine/Documentation $(THEFORCEENGINE_CONF_INIT)
-	rsync -arv $(@D)/TheForceEngine/UI_Text $(THEFORCEENGINE_CONF_INIT)
-	rsync -arv $(@D)/TheForceEngine/UI_Images $(THEFORCEENGINE_CONF_INIT)
-	rsync -arv $(@D)/TheForceEngine/Shaders $(THEFORCEENGINE_CONF_INIT)
-	rsync -arv $(@D)/TheForceEngine/SoundFonts $(THEFORCEENGINE_CONF_INIT)
-	rsync -arv $(@D)/TheForceEngine/Fonts $(THEFORCEENGINE_CONF_INIT)
 	rsync -arv --exclude 'CMakeLists.txt' $(@D)/TheForceEngine/Mods $(THEFORCEENGINE_CONF_INIT)
+	rsync -arv $(@D)/TheForceEngine/Captions      $(THEFORCEENGINE_CONF_INIT)
+	rsync -arv $(@D)/TheForceEngine/Documentation $(THEFORCEENGINE_CONF_INIT)
+	rsync -arv $(@D)/TheForceEngine/Fonts         $(THEFORCEENGINE_CONF_INIT)
+	rsync -arv $(@D)/TheForceEngine/Shaders       $(THEFORCEENGINE_CONF_INIT)
+	rsync -arv $(@D)/TheForceEngine/SoundFonts    $(THEFORCEENGINE_CONF_INIT)
+	rsync -arv $(@D)/TheForceEngine/UI_Images     $(THEFORCEENGINE_CONF_INIT)
+	rsync -arv $(@D)/TheForceEngine/UI_Text       $(THEFORCEENGINE_CONF_INIT)
 endef
 
 define THEFORCEENGINE_PATCH_ZIP
