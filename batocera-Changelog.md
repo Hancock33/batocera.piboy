@@ -55,13 +55,13 @@
 - Gzdoom to g4.14.0
 - Libretro-Kronos to 2.7.0
 - Libretro-MAME to 0.272
-- Libretro-Play! to Jan 12 2025 build
+- Libretro-Play! 4th Feb build
 - RetroArch to v1.20.0
 - Ruffle to Nightly-2024-12-28
 - RPCS3 to 0.0.34-17438
 - ScummVM to v2.9.0
-- PCSX2 to v2.3.110
-- Play! to Jan 12 2025 build
+- PCSX2 to v2.3.146
+- Play! to 4th Feb build
 - Xemu to v0.8.16
 - Triforce to use a Crediar build (Nov 29, 2024)
 - Vice to 3.9
@@ -74,6 +74,9 @@
 - TheForceEngine to 17th Dec build
 - Xash3d-fwgs to 8th of Feb build
 - AppleWin to 8th of Feb build
+- MelonDS to 17th Jan build
+- Snes9x to 24th Jan build
+- Solarus Engine to 18th Jan build
 ### System
 - Bluez to 5.79
 - Buildroot to 2024.11.x with supporting package updates
@@ -91,6 +94,9 @@
 - DXVK to 2.5.3
 - DXVK-NVAPI to 0.8.0
 - VKD3D-Proton to 2.14.1
+- Linux Firmware to 20250109
+- Sound Open Firmware to 2025.01
+- Intel Media Driver to 25.1.1
 
 # 2024/12/xx - batocera.linux 41 - Golden-rayed Blue
 ### Special Notes
