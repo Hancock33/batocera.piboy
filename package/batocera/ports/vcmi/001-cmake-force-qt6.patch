@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 00a101324..18b1fcb3b 100644
+index 651d52765..f549025c7 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -510,11 +510,11 @@ endif()
+@@ -516,11 +516,11 @@ endif()
  
  if(ENABLE_LAUNCHER OR ENABLE_EDITOR)
  	# Widgets finds its own dependencies (QtGui and QtCore).
@@ -17,7 +17,7 @@ index 00a101324..18b1fcb3b 100644
  		add_definitions(-DENABLE_QT_TRANSLATIONS)
  	endif()
  endif()
-@@ -742,7 +742,7 @@ if(WIN32)
+@@ -759,7 +759,7 @@ if(WIN32)
  	endif()
  
  	if(ENABLE_LAUNCHER OR ENABLE_EDITOR)
