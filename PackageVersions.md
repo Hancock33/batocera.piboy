@@ -242,7 +242,7 @@ Emulators|[libretro-yabause](http://github.com/libretro/yabause)|c35712c5ed33e18
 Emulators|[libretro-zc210](https://github.com/netux79/zc210-libretro.git)|b6426da40b074245fda097fd345fa7c9cdbf152a|Apr 26, 2022
 Emulators|[libretro-zc250x](https://github.com/netux79/zc250x-libretro.git)|cfe8da6aa8714f2a77dba81026a5a5560bc70ad6|Jan 25, 2023
 Emulators|[libserum](http://github.com/zesinger/libserum)|v2.0.2|Sept 15, 2024
-Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.9.1|Feb 03, 2025
+Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.9.2|Feb 08, 2025
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|7f3709beb19133813d00f4c40dfee4a23543adc4|Feb 06, 2025
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|3c3f0f5eb5a616d7adc583865a52208351df193f|Feb 03, 2025
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0274|Jan 31, 2025
@@ -262,7 +262,7 @@ Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|d29d81815ac870584a5a5733b86bc95864fcfe7a|Feb 08, 2025
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.146|Feb 08, 2025
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.148|Feb 09, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|fbe1d81dfad0ca61a196001569fbba16d0d1ab56|Feb 4, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|d5bd7d24aab9fec4d348ca6507ad426a15407138|Feb 06, 2025
@@ -270,13 +270,13 @@ Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.3.4|Jan 28, 2025
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|9afd2b8a9d16fc25c5a046122bc0d2b3c965980e|Jan 30, 2025
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|f9fa557a9508d8f6749a06a6218eef2de1724a94|Feb 09, 2025
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|4faed7a84fcb684bdc67e32267896fcc917d05a5|Feb 09, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20241221|Dec 21, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|9a7b8e41eb741dd074c1a81d1cb80406c1f86a0a|Feb 08, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-02-09|Feb 09, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.361|Feb 09, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|6ebb6a963ce09125e1556096766eba0a211f0fd7|Jan 24, 2025
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|5d4812d1a6a02b1644d2b98a0b85f0619623e949|Feb 09, 2025
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|15b520f4a2572cdb96923a72dacffaaa562473b7|Feb 09, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|23046258f7fd02242cc6dd4c08c997a8ddb84935|Feb 04, 2025
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|663738341a43e15f5e00fd8fd36672da6089a694|Jan 24, 2025
@@ -428,7 +428,7 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|7fa317ceca670498c67dd6b83f
 Ports|[d3le](http://github.com/dhewm/dhewm3-sdk)|f1cf9267b0f3b7100ae6ecdbdc5a44b98547f246|Feb 05, 2025
 Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|72d2c417645d47a382b061d2a6db4a46e060145d|Apr 19, 2024
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|ee6addacfe721e587c3b2c9a2594953cd9c774bc|Oct 20, 2024
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|8d44de25fa74d825bcac11fa841ec1ddad633971|Feb 09, 2025
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|d92bdd248f9fb5d866b027313ebc88c1dfb2aa97|Feb 09, 2025
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|a18b9e6bad31a1e9ffcf1bb815ec734d4290e4b0|Feb 03, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|f29cd887f9267edc606548c0de694f2844b0e3c9|Feb 08, 2025
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
