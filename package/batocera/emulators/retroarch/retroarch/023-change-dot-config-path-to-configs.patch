@@ -80,7 +80,7 @@ index e23e47b869..6effba67b2 100644
     s|^# video_fullscreen =.*|video_fullscreen = "true"|;
     s|^# menu_driver =.*|menu_driver = "glui"|;
 diff --git a/retroarch.c b/retroarch.c
-index 35ab5016df..7ff381ceed 100644
+index 565b9fe541..6c5d0abb3e 100644
 --- a/retroarch.c
 +++ b/retroarch.c
 @@ -6321,7 +6321,7 @@ static void retroarch_print_help(const char *arg0)
