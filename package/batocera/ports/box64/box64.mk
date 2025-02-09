@@ -3,12 +3,12 @@
 # box64
 #
 ################################################################################
-# Version: Commits on Feb 08, 2025
-BOX64_VERSION = 056bb38607d4a3e191cef0458c73dad962d2977d
+# Version: Commits on Feb 09, 2025
+BOX64_VERSION = 5212de0d6677a50a53333fdb54bb9de460d11f10
 BOX64_SITE = $(call github,ptitseb,box64,$(BOX64_VERSION))
 BOX64_SUPPORTS_IN_SOURCE_BUILD = NO
 
-BOX64_DEPENDENCIES = sdl2 sdl2_image zlib libzip freetype bzip2 libpng openal
+BOX64_DEPENDENCIES = bzip2 freetype libpng libzip openal sdl2 sdl2_image zlib
 BOX64_LICENSE = GPL-3.0
 
 BOX64_CONF_OPTS += -DRPI4ARM64=1

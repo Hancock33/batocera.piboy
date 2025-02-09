@@ -5,6 +5,7 @@ Emulators|[duckstation](http://github.com/stenzek/duckstation)|5fb5dcdd701b26dfc
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-02-09|Feb 09, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.361|Feb 09, 2025
 Network|[rtl8821au-morrownr](http://github.com/morrownr/8821au-20210708)|54204dda4f3e88b791370db41d7da3ace8a693a0|Feb 09, 2025
+Ports|[box64](http://github.com/ptitseb/box64)|5212de0d6677a50a53333fdb54bb9de460d11f10|Feb 09, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|95b9bbcd43e76d850cf9a4105320d5836eb39fe9|Feb 09, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|0c8281b66e63f6513e1107ca01b4d1dfbadd8b6f|Feb 09, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250209|Feb 09, 2025
@@ -20,7 +21,6 @@ Emulators|[openmsx](http://github.com/openMSX/openMSX)|d29d81815ac870584a5a5733b
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.146|Feb 08, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|9dc3e39fc2c0c02b3b592dddca46035ed918d478|Feb 08, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|b1cc87cb7c75ad3a83141d8d681299ffb11f8096|Feb 08, 2025
-Ports|[box64](http://github.com/ptitseb/box64)|056bb38607d4a3e191cef0458c73dad962d2977d|Feb 08, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|7639481bd99989d5840039b6796b106e0c72fb7d|Feb 08, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|348c8230a63b2558fe5a2798bd55a498b10a946c|Feb 08, 2025
 Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|1eb319e7de2ccad8caa2b93daaf27bd378ce351b|Feb 08, 2025
@@ -138,7 +138,6 @@ Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|cd1e
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|6ebb6a963ce09125e1556096766eba0a211f0fd7|Jan 24, 2025
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|6d5c3fe803d2ebe2b44ef42d2b421f5b6df3e045|Jan 24, 2025
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|1b29b4b8fcf27fb70cb55c497fed9b45e3c94db5|Jan 22, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0|Jan 21, 2025
 Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
 Wine|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0|Jan 21, 2025
 Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
@@ -171,6 +170,7 @@ Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|fc34a26cd0
 Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v2.14.1|Jan 10, 2025
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|3d11244956a4bfeb6e29176d1406bc06d7aef781|Jan 09, 2025
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.16.0|Jan 09, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|10.1-staging|Jan 09, 2025
 Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|34db5415e5a1c40bb89253cf473d4e98cc6e348a|Jan 09, 2025
 Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|ac55c8141bc6610709654a6ecb7382f41f4cd391|Jan 08, 2025
 Ports|[box86](http://github.com/ptitseb/box86)|eaf2e84e199689d79af09cf4cb1562c0e2ae2e7e|Jan 08, 2025
