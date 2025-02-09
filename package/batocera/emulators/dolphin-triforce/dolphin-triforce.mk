@@ -12,8 +12,7 @@ DOLPHIN_TRIFORCE_LICENSE = GPLv2+
 DOLPHIN_TRIFORCE_GIT_SUBMODULES = YES
 DOLPHIN_TRIFORCE_SUPPORTS_IN_SOURCE_BUILD = NO
 
-DOLPHIN_TRIFORCE_DEPENDENCIES = libevdev ffmpeg zlib libpng lzo libusb libcurl
-DOLPHIN_TRIFORCE_DEPENDENCIES += bluez5_utils hidapi xz host-xz sdl2 speex xz zlib
+DOLPHIN_TRIFORCE_DEPENDENCIES += bluez5_utils ffmpeg hidapi host-xz libcurl libevdev libpng libusb lzo sdl2 speex xz zlib
 
 ifeq ($(BR2_PACKAGE_QT6),y)
 DOLPHIN_TRIFORCE_DEPENDENCIES += qt6base qt6svg

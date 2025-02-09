@@ -13,8 +13,7 @@ DOLPHIN_EMU_LICENSE = GPLv2+
 DOLPHIN_EMU_GIT_SUBMODULES = YES
 DOLPHIN_EMU_SUPPORTS_IN_SOURCE_BUILD = NO
 
-DOLPHIN_EMU_DEPENDENCIES = libevdev ffmpeg zlib libpng lzo libusb libcurl
-DOLPHIN_EMU_DEPENDENCIES += bluez5_utils hidapi xz host-xz sdl2
+DOLPHIN_EMU_DEPENDENCIES += bluez5_utils ffmpeg hidapi host-xz libcurl libevdev libpng libusb lzo sdl2 xz zlib
 # add dolphin-triforce as a dependency so it builds first
 ifeq ($(BR2_PACKAGE_DOLPHIN_TRIFORCE),y)
 DOLPHIN_EMU_DEPENDENCIES += dolphin-triforce
