@@ -16,8 +16,10 @@ Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|900140f8f7dbc0368
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|3d081a26e39b8456820951f44b8a93b90d7e970a|Feb 11, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|7ced6dac673f357c7a5268652a72f7499cedabc1|Feb 11, 2025
 Utils|[clevis](http://github.com/latchset/clevis)|519367442367f5682e31ac2a8cf88002d44e80d9|Feb 11, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250211|Feb 11, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|6260f417ca84933a04129d966e177426eb47b8b1|Feb 11, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|b0999db885a0f1530f0e968c7450a4f0aa624b65|Feb 11, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250211|Feb 11, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|ca9a3f049163e850b4fcde14165d3b59ef9c7dcd|Feb 11, 2025
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|6260f417ca84933a04129d966e177426eb47b8b1|Feb 11, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|be665c8157065ae53a6ffc27710b061c26d2f916|Feb 11, 2025
@@ -54,8 +56,6 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45476|Feb 09, 2025
 Network|[rtl8821au-morrownr](http://github.com/morrownr/8821au-20210708)|54204dda4f3e88b791370db41d7da3ace8a693a0|Feb 09, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|d92bdd248f9fb5d866b027313ebc88c1dfb2aa97|Feb 09, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|699aa397e571f849ea39bc238817243ab313b975|Feb 09, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250209|Feb 09, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250209|Feb 09, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|047e1e8b74923b11da12643730e3644d8c707ca9|Feb 09, 2025
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|37389e4497ed33a009c23a498699d499b7e856ad|Feb 09, 2025
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|fd90bb5fa4373c8a3465e565b455d3c3128b6eae|Feb 09, 2025
