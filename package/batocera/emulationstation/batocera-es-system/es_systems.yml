@@ -2621,7 +2621,7 @@ windows:
   release:              1992
   hardware:             computer
   extensions:           [exe, pc, squashfs, wine, wsquashfs, wtgz]
-  platform:             pc
+  platform:             windows
   theme:                windows
   emulators:
     wine:
@@ -2639,7 +2639,7 @@ windows_installers:
   release:              1992
   hardware:             computer
   extensions:           [exe, iso]
-  platform:             pc
+  platform:             windows
   group:                windows
   emulators:
     wine:
