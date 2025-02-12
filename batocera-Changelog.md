@@ -80,6 +80,10 @@
 - Snes9x to 24th Jan build
 - Solarus Engine to 18th Jan build
 - IOQuake3 to 25th December build
+- Amiberry to v7.0.4
+- Libretro-Wasm4 to v2.7.1
+- Dosbox Staging to v0.82.0
+- Dosbox-X to v2025.02.01
 ### System
 - Bluez to 5.79
 - Buildroot to 2024.11.x with supporting package updates
@@ -92,7 +96,7 @@
 - Kodi to 21.2
 - Nvidia production driver to 570.86.16
 - LLVM to 19.1.7
-- Wine-TKG to 10.0
+- Wine-TKG to 10.1
 - Faudio to 25.02
 - DXVK to 2.5.3
 - DXVK-NVAPI to 0.8.0

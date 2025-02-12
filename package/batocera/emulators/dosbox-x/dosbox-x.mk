@@ -10,7 +10,8 @@ DOSBOX_X_DEPENDENCIES = sdl2 sdl2_net fluidsynth zlib libpng libogg libvorbis li
 DOSBOX_X_LICENSE = GPLv2
 DOSBOX_X_AUTORECONF = YES
 
-DOSBOX_X_CONF_OPTS =	--enable-core-inline \
+DOSBOX_X_CONF_OPTS = --host="$(GNU_TARGET_NAME)" \
+					--enable-core-inline \
 					--enable-dynrec \
 					--enable-unaligned_memory \
 					--prefix=/usr \
