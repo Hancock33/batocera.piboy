@@ -84,6 +84,9 @@
 - Libretro-Wasm4 to v2.7.1
 - Dosbox Staging to v0.82.0
 - Dosbox-X to v2025.02.01
+- DevilutionX to 1.5.4
+- OpenMSX to release 20.0
+- Ruffle to nightly-2025-02-12
 ### System
 - Bluez to 5.79
 - Buildroot to 2024.11.x with supporting package updates
