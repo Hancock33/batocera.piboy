@@ -3,8 +3,8 @@
 # rmtfs
 #
 ################################################################################
-# Version: Commits on Mar 18, 2024
-RMTFS_VERSION = 33e1e40615efc59b17a515afe857c51b8b8c1ad1
+# Version: Commits on Feb 13, 2025
+RMTFS_VERSION = f24570816b3234f0885c2897fb9c094848df2835
 RMTFS_SITE = $(call github,linux-msm,rmtfs,$(RMTFS_VERSION))
 RMTFS_LICENSE = BSD-3-Clause license
 RMTFS_LICENSE_FILE = LICENSE
