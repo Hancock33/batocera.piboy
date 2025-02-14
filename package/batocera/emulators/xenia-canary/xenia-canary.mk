@@ -24,11 +24,11 @@ define XENIA_CANARY_POST_PROCESS
 	# get the latest patches
 	mkdir -p $(TARGET_DIR)/usr/bin/xenia-canary/patches
 	mkdir -p $(@D)/temp
-	( cd $(@D)/temp && $(GIT) init && \
-	  $(GIT) remote add origin https://github.com/xenia-canary/game-patches.git && \
-	  $(GIT) config core.sparsecheckout true && \
+	( cd $(@D)/temp && git init && \
+	  git remote add origin https://github.com/xenia-canary/game-patches.git && \
+	  git config core.sparsecheckout true && \
 	  echo "patches/*.toml" >> .git/info/sparse-checkout && \
-	  $(GIT) pull --depth=1 origin main && \
+	  git pull --depth=1 origin main && \
 	  mv -f patches/*.toml $(TARGET_DIR)/usr/bin/xenia-canary/patches \
 	)
 
