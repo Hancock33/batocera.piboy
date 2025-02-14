@@ -3,10 +3,10 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Jan 21, 2025
-WINE_CUSTOM_VERSION = ntsync7-10.0
-WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
-WINE_CUSTOM_SITE = $(call github,Hancock33,wine-tkg-batocera,$(WINE_CUSTOM_VERSION))
+# Version: Commits on Feb 12, 2025
+WINE_CUSTOM_VERSION = 17915f730267b2b50550636fb6928a6ace247ccd
+#WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
+WINE_CUSTOM_SITE = $(call github,wine-mirror,wine,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
 WINE_CUSTOM_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_CUSTOM_SELINUX_MODULES = wine
@@ -23,7 +23,7 @@ define WINE_CUSTOM_AUTOGEN
 	# Autotools generation
 	cd $(@D); ./tools/make_requests
 	cd $(@D); ./tools/make_specfiles
-	cd $(@D); ./dlls/winevulkan/make_vulkan && rm dlls/winevulkan/vk-*.xml
+	cd $(@D); ./dlls/winevulkan/make_vulkan && rm -rf dlls/winevulkan/vk-*.xml
 	cd $(@D); autoreconf -fiv
 endef
 
