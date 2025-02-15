@@ -3,8 +3,8 @@
 # openlara
 #
 ################################################################################
-# Version: Commits on May 13, 2024
-OPENLARA_VERSION = 28ee7ac92367e6c97aea2391c25e1c6fe29785aa
+# Version: Commits on Feb 15, 2025
+OPENLARA_VERSION = 46a753bbee487bfdda2e31b989fe9b979ce473fa
 OPENLARA_SITE = $(call github,XProger,OpenLara,$(OPENLARA_VERSION))
 
 OPENLARA_DEPENDENCIES = openal sdl2 zlib
