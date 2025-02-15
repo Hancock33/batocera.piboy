@@ -117,7 +117,7 @@ echo "*** Directory checks complete, WINE runner is ${WINE_VERSION} ***"
 
 USER_DIR="/userdata/system/wine"
 WINE="${DIR}/${WINE_VERSION}/bin/wine"
-WINE64="${DIR}/${WINE_VERSION}/bin/wine64"
+WINE64="${DIR}/${WINE_VERSION}/bin/wine"
 WINESERVER="${DIR}/${WINE_VERSION}/bin/wineserver"
 MSIEXEC="${DIR}/${WINE_VERSION}/bin/msiexec"
 WINETRICKS="${DIR}/winetricks"
