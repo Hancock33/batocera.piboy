@@ -618,7 +618,7 @@ index 000000000000..23aeb5649479
 +#endif // CONFIG_SYSCTL
 +#endif // CONFIG_SCHED_BORE
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 165c90ba64ea..4b786324705c 100644
+index 5404a303199d..3087d4c31494 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -97,6 +97,8 @@
@@ -750,7 +750,7 @@ index ef047add7f9e..ef1a4b610bae 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index d70d8c0056ff..c1464e1840b2 100644
+index a5cade549b8b..e6e19d9162f3 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -58,6 +58,8 @@
@@ -953,7 +953,7 @@ index d70d8c0056ff..c1464e1840b2 100644
  	/*
  	 * Tell update_rq_clock() that we've just updated,
  	 * so we don't do microscopic update in schedule()
-@@ -13136,6 +13181,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
+@@ -13119,6 +13164,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
  static void task_fork_fair(struct task_struct *p)
  {
  	set_task_max_allowed_capacity(p);
@@ -963,7 +963,7 @@ index d70d8c0056ff..c1464e1840b2 100644
  }
  
  /*
-@@ -13246,6 +13294,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
+@@ -13229,6 +13277,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
  
  static void switched_from_fair(struct rq *rq, struct task_struct *p)
  {
@@ -975,10 +975,10 @@ index d70d8c0056ff..c1464e1840b2 100644
  }
  
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index ed5a75725411..5e64d621547c 100644
+index d6f14b4e7b06..62a7feadb0df 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
-@@ -2121,7 +2121,11 @@ static inline void update_sched_domain_debugfs(void) { }
+@@ -2122,7 +2122,11 @@ static inline void update_sched_domain_debugfs(void) { }
  static inline void dirty_sched_domain_sysctl(int cpu) { }
  #endif
  
@@ -990,7 +990,7 @@ index ed5a75725411..5e64d621547c 100644
  
  static inline const struct cpumask *task_user_cpus(struct task_struct *p)
  {
-@@ -2845,7 +2849,12 @@ extern void wakeup_preempt(struct rq *rq, struct task_struct *p, int flags);
+@@ -2846,7 +2850,12 @@ extern void wakeup_preempt(struct rq *rq, struct task_struct *p, int flags);
  extern const_debug unsigned int sysctl_sched_nr_migrate;
  extern const_debug unsigned int sysctl_sched_migration_cost;
  
