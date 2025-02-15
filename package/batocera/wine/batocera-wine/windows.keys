@@ -5,8 +5,8 @@
                 "hotkey",
                 "start"
             ],
-            "type": "exec",
-            "target": [ "/usr/bin/batocera-wine windows stop" ]
+            "type": "key",
+            "target": [ "KEY_LEFTALT", "KEY_F4" ]
         }
     ]
 }
