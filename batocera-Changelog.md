@@ -7,8 +7,8 @@
 ### Hardware
 - Add OrangePi 4a board support
 - Add OrangePi 3b board support
-- Initial support for RS3 Reaper light gun
 - Add Anbernic RG351V support
+- Initial support for RS3 Reaper light gun
 - Initial support for XGunner light gun
 - Initial support for OpenFIRE light gun
 - Initial support for Fusion P.I.G.S. light gun
@@ -23,7 +23,8 @@
 - Game Specific color palette for gambette core
 - Non-Micro GUN4IR light gun hardware support
 - Steering wheel support added for :
-  - G923 (Xbox), Logitech PRO Racing Wheel
+  - Logitech: G923 (Xbox), PRO Racing Wheel
+  - Speedlink: 4in1 Leather Power Feedback Wheel
 - Sega Lindbergh loader
 - Variable Refresh Rate (VRR) support for modern AMD gpus
 - Support of Shanwan Twin USB Joystick (new revision)
@@ -45,16 +46,17 @@
 - ROG Ally gamepad support
 - Batocera-wine: add saves directory and save files options
 - Libretro-virtualjaguar core can now load .zip ROMs
+- Updated BlamCon code to new firmware (now compatible with 4 light guns)
 ### Updated
 - BigPEmu to v118
 - Cemu to 2.6
 - Dolphin-Emu to 2412-268
 - ETLegacy to v2.83.2
 - Jazz2 to 3.1.0
-- GroovyMAME to 0.272
+- GroovyMAME to 0.274
 - Gzdoom to g4.14.0
 - Libretro-Kronos to 2.7.0
-- Libretro-MAME to 0.272
+- Libretro-MAME to 0.274
 - Libretro-Play! 4th Feb build
 - RetroArch to v1.20.0
 - Ruffle to Nightly-2024-12-28
@@ -77,6 +79,14 @@
 - MelonDS to 17th Jan build
 - Snes9x to 24th Jan build
 - Solarus Engine to 18th Jan build
+- IOQuake3 to 25th December build
+- Amiberry to v7.0.4
+- Libretro-Wasm4 to v2.7.1
+- Dosbox Staging to v0.82.0
+- Dosbox-X to v2025.02.01
+- DevilutionX to 1.5.4
+- OpenMSX to release 20.0
+- Ruffle to nightly-2025-02-12
 ### System
 - Bluez to 5.79
 - Buildroot to 2024.11.x with supporting package updates
@@ -89,7 +99,7 @@
 - Kodi to 21.2
 - Nvidia production driver to 570.86.16
 - LLVM to 19.1.7
-- Wine-TKG to 10.0
+- Wine-TKG to 10.1
 - Faudio to 25.02
 - DXVK to 2.5.3
 - DXVK-NVAPI to 0.8.0
@@ -101,8 +111,9 @@
 - Pipewire to 1.2.7
 - Wireplumber to 0.5.8
 - Ryzenadj to v0.16.0
+- QT6 to 6.8.1
 
-# 2024/12/xx - batocera.linux 41 - Golden-rayed Blue
+# 2025/01/06 - batocera.linux 41 - Golden-rayed Blue
 ### Special Notes
 - The Xenia Canary introduces GamerTags (user profiles).
   On first run or game launch you may be prompted to create a profile.

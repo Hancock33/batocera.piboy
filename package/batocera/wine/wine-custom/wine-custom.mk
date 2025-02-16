@@ -3,10 +3,10 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Jan 21, 2025
-WINE_CUSTOM_VERSION = ntsync7-10.0
-WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
-WINE_CUSTOM_SITE = $(call github,Hancock33,wine-tkg-batocera,$(WINE_CUSTOM_VERSION))
+# Version: Commits on Feb 14, 2025
+WINE_CUSTOM_VERSION = 4de563994426e258d1f2848b663f6ed85dd1298d
+#WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
+WINE_CUSTOM_SITE = $(call github,wine-mirror,wine,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
 WINE_CUSTOM_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_CUSTOM_SELINUX_MODULES = wine
@@ -23,7 +23,7 @@ define WINE_CUSTOM_AUTOGEN
 	# Autotools generation
 	cd $(@D); ./tools/make_requests
 	cd $(@D); ./tools/make_specfiles
-	cd $(@D); ./dlls/winevulkan/make_vulkan && rm dlls/winevulkan/vk-*.xml
+	cd $(@D); ./dlls/winevulkan/make_vulkan && rm -rf dlls/winevulkan/vk-*.xml
 	cd $(@D); autoreconf -fiv
 endef
 
@@ -32,9 +32,9 @@ HOST_WINE_CUSTOM_PRE_CONFIGURE_HOOKS += WINE_CUSTOM_AUTOGEN
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_CUSTOM_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
-	CFLAGS="$(TARGET_CFLAGS) -Wno-incompatible-pointer-types" \
 	--with-wine-tools=$(BUILD_DIR)/host-wine-custom-$(WINE_CUSTOM_VERSION) \
 	--disable-tests \
+	--enable-tools \
 	--without-capi \
 	--without-coreaudio \
 	--without-gettext \

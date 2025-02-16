@@ -1,8 +1,8 @@
 diff --git a/drivers/hid/hid-steam.c b/drivers/hid/hid-steam.c
-index af38fc8eb34f..08587c9c4c09 100644
+index c9e65e9088b3..e19b39ed30c6 100644
 --- a/drivers/hid/hid-steam.c
 +++ b/drivers/hid/hid-steam.c
-@@ -777,8 +777,8 @@ static int steam_input_register(struct steam_device *steam)
+@@ -778,8 +778,8 @@ static int steam_input_register(struct steam_device *steam)
  			STEAM_PAD_FUZZ, 0);
  
  	if (steam->quirks & STEAM_QUIRK_DECK) {
@@ -13,7 +13,7 @@ index af38fc8eb34f..08587c9c4c09 100644
  
  		input_set_abs_params(input, ABS_RX, -32767, 32767, 0, 0);
  		input_set_abs_params(input, ABS_RY, -32767, 32767, 0, 0);
-@@ -794,11 +794,11 @@ static int steam_input_register(struct steam_device *steam)
+@@ -795,11 +795,11 @@ static int steam_input_register(struct steam_device *steam)
  		input_abs_set_res(input, ABS_RY, STEAM_DECK_JOYSTICK_RESOLUTION);
  		input_abs_set_res(input, ABS_HAT1X, STEAM_PAD_RESOLUTION);
  		input_abs_set_res(input, ABS_HAT1Y, STEAM_PAD_RESOLUTION);
@@ -29,7 +29,7 @@ index af38fc8eb34f..08587c9c4c09 100644
  
  		input_set_abs_params(input, ABS_RX, -32767, 32767,
  				STEAM_PAD_FUZZ, 0);
-@@ -809,8 +809,8 @@ static int steam_input_register(struct steam_device *steam)
+@@ -810,8 +810,8 @@ static int steam_input_register(struct steam_device *steam)
  		input_abs_set_res(input, ABS_Y, STEAM_JOYSTICK_RESOLUTION);
  		input_abs_set_res(input, ABS_RX, STEAM_PAD_RESOLUTION);
  		input_abs_set_res(input, ABS_RY, STEAM_PAD_RESOLUTION);
@@ -40,7 +40,7 @@ index af38fc8eb34f..08587c9c4c09 100644
  	}
  	input_abs_set_res(input, ABS_HAT0X, STEAM_PAD_RESOLUTION);
  	input_abs_set_res(input, ABS_HAT0Y, STEAM_PAD_RESOLUTION);
-@@ -1354,8 +1354,8 @@ static inline s16 steam_le16(u8 *data)
+@@ -1378,8 +1378,8 @@ static inline s16 steam_le16(u8 *data)
   * -------+-------+-----------+--------------------------
   *  4-7   | u32   | --        | sequence number
   *  8-10  | 24bit | see below | buttons
@@ -51,7 +51,7 @@ index af38fc8eb34f..08587c9c4c09 100644
   *  13-15 | --    | --        | always 0
   *  16-17 | s16   | ABS_X/ABS_HAT0X     | X value
   *  18-19 | s16   | ABS_Y/ABS_HAT0Y     | Y value
-@@ -1423,8 +1423,8 @@ static void steam_do_input_event(struct steam_device *steam,
+@@ -1447,8 +1447,8 @@ static void steam_do_input_event(struct steam_device *steam,
  	b9 = data[9];
  	b10 = data[10];
  
@@ -62,7 +62,7 @@ index af38fc8eb34f..08587c9c4c09 100644
  
  	/*
  	 * These two bits tells how to interpret the values X and Y.
-@@ -1501,8 +1501,8 @@ static void steam_do_input_event(struct steam_device *steam,
+@@ -1525,8 +1525,8 @@ static void steam_do_input_event(struct steam_device *steam,
   *  38-39 | s16   | --        | quaternion X value
   *  40-41 | s16   | --        | quaternion Y value
   *  42-43 | s16   | --        | quaternion Z value
@@ -73,7 +73,7 @@ index af38fc8eb34f..08587c9c4c09 100644
   *  48-49 | s16   | ABS_X     | left joystick X
   *  50-51 | s16   | ABS_Y     | left joystick Y
   *  52-53 | s16   | ABS_RX    | right joystick X
-@@ -1626,8 +1626,8 @@ static void steam_do_deck_input_event(struct steam_device *steam,
+@@ -1650,8 +1650,8 @@ static void steam_do_deck_input_event(struct steam_device *steam,
  	input_report_abs(input, ABS_RX, steam_le16(data + 52));
  	input_report_abs(input, ABS_RY, -steam_le16(data + 54));
  

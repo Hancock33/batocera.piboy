@@ -68,7 +68,7 @@ if test "$1" = "--short"; then
         echo "${DT}"
     fi
     if test -n "${TEMPE}"; then
-        echo "CPU Temp: ${TEMPE}??C"
+        echo "Temperature: ${TEMPE}°C"
     fi
         echo "CPU Cores: ${V_CPUNB}/${V_CPUMAXNB}"
     echo "CPU Usage: "$[100-$(vmstat 1 2|tail -1|awk '{print $15}')]"%"

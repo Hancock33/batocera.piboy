@@ -214,7 +214,7 @@ function gen_index {
 function generate() {
 		local systems_count=0
 		local system_found=0
-		
+
 		local system_name
 		local url
 		local path

@@ -17,7 +17,7 @@ WINE_PATH: Final = WINE_BASE / 'wine-custom'
 WINE_LIB: Final = WINE_PATH / 'lib' / 'wine'
 WINE_BIN: Final = WINE_PATH / 'bin'
 WINE: Final = WINE_BIN / 'wine'
-WINE64: Final = WINE_BIN / 'wine64'
+WINE64: Final = WINE_BIN / 'wine'
 WINETRICKS: Final = WINE_BASE / 'winetricks'
 
 

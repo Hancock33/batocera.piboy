@@ -3,8 +3,8 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Feb 08, 2025
-RPCS3_VERSION = 9a7b8e41eb741dd074c1a81d1cb80406c1f86a0a
+# Version: Commits on Feb 16, 2025
+RPCS3_VERSION = 7b9aaacc4b03a0002de0681669de91138bb2b079
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
@@ -15,6 +15,8 @@ RPCS3_DEPENDENCIES += qt6base qt6multimedia qt6svg
 
 RPCS3_SUPPORTS_IN_SOURCE_BUILD = NO
 
+RPCS3_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=lld -lstdc++"
+RPCS3_CONF_OPTS += -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=lld -lstdc++"
 RPCS3_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 RPCS3_CONF_OPTS += -DCMAKE_CROSSCOMPILING=ON
 RPCS3_CONF_OPTS += -DCMAKE_CXX_FLAGS="-fno-function-sections"

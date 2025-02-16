@@ -3,11 +3,11 @@
 # xemu
 #
 ################################################################################
-# Version: Commits on Feb 05, 2025
-XEMU_VERSION = ac781ea8d1dcd7e67de62ea7ecaca60566e5e138
+# Version: Commits on Feb 15, 2025
+XEMU_VERSION = 3bdb9e7fd4d6c9f5adec0543f1679d2943a0d092
 XEMU_SITE = https://github.com/xemu-project/xemu
-XEMU_SITE_METHOD=git
-XEMU_GIT_SUBMODULES=YES
+XEMU_SITE_METHOD = git
+XEMU_GIT_SUBMODULES = YES
 XEMU_LICENSE = GPLv2
 XEMU_DEPENDENCIES = bzip2 gmp keyutils libgbm libgtk3 libopenssl libpcap libsamplerate
 XEMU_DEPENDENCIES += pixman python3 sdl2 slirp xlib_libX11 zlib
@@ -15,7 +15,7 @@ XEMU_DEPENDENCIES += host-libcurl
 
 XEMU_EXTRA_DOWNLOADS = https://github.com/mborgerson/xemu-hdd-image/releases/download/1.0/xbox_hdd.qcow2.zip
 
-XEMU_CONF_ENV += PATH="/x86_64/host/x86_64-buildroot-linux-gnu/sysroot/usr/bin:$$PATH"
+XEMU_CONF_ENV += PATH="/$(BR2_ARCH)/host/$(BR2_ARCH)-buildroot-linux-gnu/sysroot/usr/bin:$$PATH"
 
 XEMU_CONF_OPTS += --target-list=i386-softmmu
 XEMU_CONF_OPTS += --cross-prefix="$(STAGING_DIR)"
@@ -75,6 +75,8 @@ XEMU_CONF_OPTS += --disable-renderdoc
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86),y)
 XEMU_CONF_OPTS += --enable-avx2
+else
+XEMU_CONF_OPTS += --disable-avx2
 endif
 
 define XEMU_CONFIGURE_CMDS
@@ -85,9 +87,9 @@ define XEMU_BUILD_CMDS
 	$(TARGET_CONFIGURE_OPTS) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
 		CC_FOR_BUILD="$(TARGET_CC)" GCC_FOR_BUILD="$(TARGET_CC)" \
 		CXX_FOR_BUILD="$(TARGET_CXX)" LD_FOR_BUILD="$(TARGET_LD)" \
-				CROSS_COMPILE="$(STAGING_DIR)/usr/bin/" \
-				PREFIX="/x86_64/host/x86_64-buildroot-linux-gnu/sysroot/" \
-				PKG_CONFIG="/x86_64/host/x86_64-buildroot-linux-gnu/sysroot/usr/bin/pkg-config" \
+		CROSS_COMPILE="$(STAGING_DIR)/usr/bin/" \
+			PREFIX="/$(BR2_ARCH)/host/$(BR2_ARCH)-buildroot-linux-gnu/sysroot/" \
+		PKG_CONFIG="/$(BR2_ARCH)/host/$(BR2_ARCH)-buildroot-linux-gnu/sysroot/usr/bin/pkg-config" \
 		$(MAKE) -C $(@D)
 endef
 
@@ -95,38 +97,106 @@ define XEMU_INSTALL_TARGET_CMDS
 	# Binaries
 	cp $(@D)/build/qemu-system-i386 $(TARGET_DIR)/usr/bin/xemu
 
-	# Xemu app data
+	# XEmu app data
 	mkdir -p $(TARGET_DIR)/usr/share/xemu/data
 	cp $(@D)/data/* $(TARGET_DIR)/usr/share/xemu/data/
 	$(UNZIP) -ob $(XEMU_DL_DIR)/xbox_hdd.qcow2.zip xbox_hdd.qcow2 -d $(TARGET_DIR)/usr/share/xemu/data
 endef
 
-XEMU_SUBMODULES=berkeley-softfloat-3 berkeley-testfloat-3 cpp-httplib genconfig imgui implot keycodemapdb nv2a_vsh_cpu tomlplusplus
-define XEMU_SUBMODULES_DL
-	for set in $(XEMU_SUBMODULES); do \
-		rm -rf $(@D)/subprojects/$$set; \
-	done
-
-	# Download submodules
-	cd $(@D)/subprojects && git clone https://gitlab.com/qemu-project/berkeley-softfloat-3
-	cd $(@D)/subprojects && git clone https://gitlab.com/qemu-project/berkeley-testfloat-3.git
-	cd $(@D)/subprojects && git clone https://github.com/yhirose/cpp-httplib
-	cd $(@D)/subprojects && git clone https://github.com/mborgerson/genconfig
-	cd $(@D)/subprojects && git clone https://github.com/xemu-project/imgui
-	cd $(@D)/subprojects && git clone https://github.com/xemu-project/implot
-	cd $(@D)/subprojects && git clone https://gitlab.com/qemu-project/keycodemapdb
-	cd $(@D)/subprojects && git clone https://github.com/xemu-project/nv2a_vsh_cpu
-	cd $(@D)/subprojects && git clone https://github.com/marzer/tomlplusplus
-	# Patch submodules
-	cd $(@D)/subprojects/implot && git checkout 006a1c23e5706bbe816968163b4d589162257a57
-	cp -a $(@D)/subprojects/packagefiles/berkeley-softfloat-3/* $(@D)/subprojects/berkeley-softfloat-3
-	cp -a $(@D)/subprojects/packagefiles/berkeley-testfloat-3/* $(@D)/subprojects/berkeley-testfloat-3
+define XEMU_VERSION_DETAILS
+	git -C $(XEMU_DL_DIR)/git rev-parse HEAD 2>/dev/null | tr -d '\n' > $(@D)/XEMU_COMMIT
+	git -C $(XEMU_DL_DIR)/git symbolic-ref --short HEAD | cut -d'/' -f2- > $(@D)/XEMU_BRANCH
+	git -C $(XEMU_DL_DIR)/git describe --tags --match 'v*' | cut -c 2- | tr -d '\n' > $(@D)/XEMU_VERSION
 endef
 
-define XEMU_VERSION_DETAILS
-	$(GIT) -C $(XEMU_DL_DIR)/git rev-parse HEAD 2>/dev/null | tr -d '\n' > $(@D)/XEMU_COMMIT
-	$(GIT) -C $(XEMU_DL_DIR)/git symbolic-ref --short HEAD | cut -d'/' -f2- > $(@D)/XEMU_BRANCH
-	$(GIT) -C $(XEMU_DL_DIR)/git describe --tags --match 'v*' | cut -c 2- | tr -d '\n' > $(@D)/XEMU_VERSION
+# details in the .wrap files
+define XEMU_GET_SUBMODULES
+	# imgui
+	mkdir -p $(@D)/subprojects/imgui
+	$(eval REVISION = $(shell grep -Po '(?<=^revision=).+' $(@D)/subprojects/imgui.wrap))
+	$(HOST_DIR)/bin/curl -L -o imgui.tar.gz \
+		https://github.com/xemu-project/imgui/archive/$(REVISION).tar.gz
+	$(TAR) -xzf imgui.tar.gz --strip-components=1 -C $(@D)/subprojects/imgui
+	rm imgui.tar.gz
+
+	# implot
+	mkdir -p $(@D)/subprojects/implot
+	$(eval REVISION = $(shell grep -Po '(?<=^revision=).+' $(@D)/subprojects/implot.wrap))
+	$(HOST_DIR)/bin/curl -L -o implot.tar.gz \
+		https://github.com/xemu-project/implot/archive/$(REVISION).tar.gz
+	$(TAR) -xzf implot.tar.gz --strip-components=1 -C $(@D)/subprojects/implot
+	rm implot.tar.gz
+
+	# genconfig
+	mkdir -p $(@D)/subprojects/genconfig
+	$(eval REVISION = $(shell grep -Po '(?<=^revision=).+' $(@D)/subprojects/genconfig.wrap))
+	$(HOST_DIR)/bin/curl -L -o genconfig.tar.gz \
+		https://github.com/mborgerson/genconfig/archive/$(REVISION).tar.gz
+	$(TAR) -xzf genconfig.tar.gz --strip-components=1 -C $(@D)/subprojects/genconfig
+	rm genconfig.tar.gz
+	
+	# tomlplusplus
+	mkdir -p $(@D)/subprojects/tomlplusplus
+	$(eval REVISION = $(shell grep -Po '(?<=^revision=).+' $(@D)/subprojects/tomlplusplus.wrap))
+	$(HOST_DIR)/bin/curl -L -o tomlplusplus.tar.gz \
+		https://github.com/marzer/tomlplusplus/archive/$(REVISION).tar.gz
+	$(TAR) -xzf tomlplusplus.tar.gz --strip-components=1 -C $(@D)/subprojects/tomlplusplus
+	rm tomlplusplus.tar.gz
+	
+	# xxhash
+	mkdir -p $(@D)/subprojects/xxHash-0.8.2
+	$(HOST_DIR)/bin/curl -L -o xxhash.tar.gz \
+		http://github.com/mesonbuild/wrapdb/releases/download/xxhash_0.8.2-1/xxHash-0.8.2.tar.gz
+	$(TAR) -xzf xxhash.tar.gz --strip-components=1 -C $(@D)/subprojects/xxHash-0.8.2
+	rm xxhash.tar.gz
+	
+	# xxhash patch
+	$(HOST_DIR)/bin/curl -L -o xxhash_0.8.2-1_patch.zip \
+		https://wrapdb.mesonbuild.com/v2/xxhash_0.8.2-1/get_patch
+	$(UNZIP) -o xxhash_0.8.2-1_patch.zip -d $(@D)/subprojects
+	rm xxhash_0.8.2-1_patch.zip
+	
+	# cpp-httplib
+	mkdir -p $(@D)/subprojects/cpp-httplib
+	$(eval REVISION = $(shell grep -Po '(?<=^revision=).+' $(@D)/subprojects/cpp-httplib.wrap))
+	$(HOST_DIR)/bin/curl -L -o cpp-httplib.tar.gz \
+		https://github.com/yhirose/cpp-httplib/archive/$(REVISION).tar.gz
+	$(TAR) -xzf cpp-httplib.tar.gz --strip-components=1 -C $(@D)/subprojects/cpp-httplib
+	rm cpp-httplib.tar.gz
+	
+	# keycodemapdb - revision variation
+	mkdir -p $(@D)/subprojects/keycodemapdb
+	$(eval REVISION = $(shell grep -Po '(?<=^revision = ).+' $(@D)/subprojects/keycodemapdb.wrap))
+	$(HOST_DIR)/bin/curl -L -o keycodemapdb.tar.gz \
+		https://gitlab.com/qemu-project/keycodemapdb/-/archive/$(REVISION)/$(REVISION).tar.gz
+	$(TAR) -xzf keycodemapdb.tar.gz --strip-components=1 -C $(@D)/subprojects/keycodemapdb
+	rm keycodemapdb.tar.gz
+	
+	# nv2a_vsh_cpu
+	mkdir -p $(@D)/subprojects/nv2a_vsh_cpu
+	$(eval REVISION = $(shell grep -Po '(?<=^revision=).+' $(@D)/subprojects/nv2a_vsh_cpu.wrap))
+	$(HOST_DIR)/bin/curl -L -o nv2a_vsh_cpu.tar.gz \
+		https://github.com/xemu-project/nv2a_vsh_cpu/archive/$(REVISION).tar.gz
+	$(TAR) -xzf nv2a_vsh_cpu.tar.gz --strip-components=1 -C $(@D)/subprojects/nv2a_vsh_cpu
+	rm nv2a_vsh_cpu.tar.gz
+	
+	# berkeley-softfloat-3 - revision variation
+	mkdir -p $(@D)/subprojects/berkeley-softfloat-3
+	$(eval REVISION = $(shell grep -Po '(?<=^revision = ).+' $(@D)/subprojects/berkeley-softfloat-3.wrap))
+	$(HOST_DIR)/bin/curl -L -o berkeley-softfloat-3.tar.gz \
+		https://gitlab.com/qemu-project/berkeley-softfloat-3/-/archive/$(REVISION)/$(REVISION).tar.gz
+	$(TAR) -xzf berkeley-softfloat-3.tar.gz --strip-components=1 -C $(@D)/subprojects/berkeley-softfloat-3
+	cp $(@D)/subprojects/packagefiles/berkeley-softfloat-3/* $(@D)/subprojects/berkeley-softfloat-3
+	rm berkeley-softfloat-3.tar.gz
+	
+	# berkeley-testfloat-3 - revision variation
+	mkdir -p $(@D)/subprojects/berkeley-testfloat-3
+	$(eval REVISION = $(shell grep -Po '(?<=^revision = ).+' $(@D)/subprojects/berkeley-testfloat-3.wrap))
+	$(HOST_DIR)/bin/curl -L -o berkeley-testfloat-3.tar.gz \
+		https://gitlab.com/qemu-project/berkeley-testfloat-3/-/archive/$(REVISION)/$(REVISION).tar.gz
+	$(TAR) -xzf berkeley-testfloat-3.tar.gz --strip-components=1 -C $(@D)/subprojects/berkeley-testfloat-3
+	cp $(@D)/subprojects/packagefiles/berkeley-testfloat-3/* $(@D)/subprojects/berkeley-testfloat-3
+	rm berkeley-testfloat-3.tar.gz
 endef
 
 define XEMU_EVMAPY
@@ -135,8 +205,8 @@ define XEMU_EVMAPY
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/xemu/xbox.xemu.keys $(TARGET_DIR)/usr/share/evmapy/chihiro.keys
 endef
 
-XEMU_POST_EXTRACT_HOOKS = XEMU_SUBMODULES_DL
 XEMU_PRE_CONFIGURE_HOOKS = XEMU_VERSION_DETAILS
 XEMU_POST_INSTALL_TARGET_HOOKS += XEMU_EVMAPY
+XEMU_PRE_CONFIGURE_HOOKS += XEMU_GET_SUBMODULES
 
 $(eval $(autotools-package))

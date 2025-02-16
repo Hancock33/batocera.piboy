@@ -3,8 +3,8 @@
 # fallout2-ce
 #
 ################################################################################
-# Version: Commits on Feb 09, 2025
-FALLOUT2_CE_VERSION = 080f99962681dae5388e11421615d8f371bf9800
+# Version: Commits on Feb 15, 2025
+FALLOUT2_CE_VERSION = 135c62758f018bfe202a0877d18ceeac704e9e04
 FALLOUT2_CE_SITE = $(call github,alexbatalov,fallout2-ce,$(FALLOUT2_CE_VERSION))
 FALLOUT2_CE_DEPENDENCIES = sdl2
 

@@ -3,8 +3,8 @@
 # openmsx
 #
 ################################################################################
-# Version: Commits on Feb 08, 2025
-OPENMSX_VERSION = d29d81815ac870584a5a5733b86bc95864fcfe7a
+# Version: Commits on Feb 15, 2025
+OPENMSX_VERSION = cadb7472e1cbe805d00e9fece78270a802c6ffae
 OPENMSX_SITE = $(call github,openMSX,openMSX,$(OPENMSX_VERSION))
 OPENMSX_LICENSE = GPLv2
 OPENMSX_DEPENDENCIES = freetype libogg libpng libtheora libvorbis sdl2 sdl2_ttf tcl zlib
@@ -32,9 +32,9 @@ else
 OPENMSX_CONF_OPTS += -Dalsamidi=disabled
 endif
 #glrenderer
-ifeq ($(BR2_PACKAGE_LIBGLEW),y)
+ifeq ($(BR2_PACKAGE_LIBGLEW)$(BR2_PACKAGE_LIBGLU),yy)
 OPENMSX_CONF_OPTS += -Dglrenderer=enabled
-OPENMSX_DEPENDENCIES += libglew
+OPENMSX_DEPENDENCIES += libglew libglu
 else
 OPENMSX_CONF_OPTS += -Dglrenderer=disabled
 endif

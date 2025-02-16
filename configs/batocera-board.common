@@ -93,7 +93,7 @@ BR2_PACKAGE_MONO_SPECIFY_FOLDERS_TO_INSTALL=y
 BR2_PACKAGE_MONO_FOLDERS_TO_INSTALL="4.0  4.5  gac"
 
 # Experimental, build cmake packages with clang
-#BR_CMAKE_USE_CLANG=y
+BR_CMAKE_USE_CLANG=y
 
 # images
 BR2_ROOTFS_POST_BUILD_SCRIPT="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/scripts/post-build-script.sh"
