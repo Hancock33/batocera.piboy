@@ -1210,11 +1210,11 @@ def writeBezelConfig(generator: Generator, bezel: str | None, shaderBezel: bool,
     retroarchConfig['input_overlay_enable'] = "false"
     retroarchConfig['video_message_pos_x']  = 0.05
     retroarchConfig['video_message_pos_y']  = 0.05
-    
+
     bias = True
     if retroarchConfig["aspect_ratio_index"] == str(ratioIndexes.index("custom")):
         bias = False
-    
+
     if bias:
         retroarchConfig["video_viewport_bias_x"] = "0.500000"
         retroarchConfig["video_viewport_bias_y"] = "0.500000"
