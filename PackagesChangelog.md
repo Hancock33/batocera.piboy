@@ -1,7 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|cba9d0001995bc236fddba6c6a34ed6fff41a5b4|Feb 16, 2025
-Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.394|Feb 16, 2025
+Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.395|Feb 16, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|26bb3d40d9172790249a922a7e24990fe554ce34|Feb 16, 2025
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|c0a7e4ba6691ab80b0c99d5bb4a8433b32036d3c|Feb 16, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|c8aa2ba21060879fee7b8445c9d02320fc5165b8|Feb 16, 2025
