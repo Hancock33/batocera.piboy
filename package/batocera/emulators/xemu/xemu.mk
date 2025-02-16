@@ -80,7 +80,7 @@ XEMU_CONF_OPTS += --disable-avx2
 endif
 
 define XEMU_CONFIGURE_CMDS
-	cd $(@D) && $(TARGET_CONFIGURE_OPTS) ./configure $(XEMU_CONF_OPTS)
+	cd $(@D) && $(TARGET_CONFIGURE_OPTS) SSL_CERT_DIR=/etc/ssl/certs ./configure $(XEMU_CONF_OPTS)
 endef
 
 define XEMU_BUILD_CMDS
