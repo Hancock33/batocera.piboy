@@ -305,7 +305,7 @@ msgctxt "game_options"
 msgid "100Mhz (Overclock)"
 msgstr "100Mhz (Overclock)"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "100fps"
 msgstr "100fps"
@@ -390,11 +390,6 @@ msgctxt "game_options"
 msgid "11 MHz"
 msgstr "11 MHz"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "119fps"
-msgstr "119fps"
-
 #. TRANSLATION: libretro/np2kai, libretro/px68k
 msgctxt "game_options"
 msgid "11MB"
@@ -430,7 +425,7 @@ msgctxt "game_options"
 msgid "120MB"
 msgstr "120MB"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake, xenia-canary
+#. TRANSLATION: libretro/tyrquake, xenia-canary
 msgctxt "game_options"
 msgid "120fps"
 msgstr "120fps"
@@ -550,7 +545,7 @@ msgctxt "game_options"
 msgid "1440 x 900"
 msgstr "1440 x 900"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake, xenia-canary
+#. TRANSLATION: libretro/tyrquake, xenia-canary
 msgctxt "game_options"
 msgid "144fps"
 msgstr "144fps"
@@ -980,20 +975,10 @@ msgctxt "game_options"
 msgid "240 fps"
 msgstr "240 fps"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "240fps"
-msgstr "240fps"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "240ms"
 msgstr "240ms"
-
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "244fps"
-msgstr "244fps"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -1245,7 +1230,7 @@ msgctxt "game_options"
 msgid "30FPS"
 msgstr "30FPS"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "30fps"
 msgstr "30fps"
@@ -1805,11 +1790,6 @@ msgctxt "game_options"
 msgid "60fps"
 msgstr "60fps"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "60fps (Default)"
-msgstr "60 fps (Predefinição)"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "60ms"
@@ -1900,11 +1880,6 @@ msgctxt "game_options"
 msgid "7 Frames"
 msgstr "7 Frames"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "70fps"
-msgstr "70fps"
-
 #. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, yabasanshiro
 msgctxt "game_options"
 msgid "720p"
@@ -1914,11 +1889,6 @@ msgstr "720p"
 msgctxt "game_options"
 msgid "72MB"
 msgstr "72MB"
-
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "72fps"
-msgstr "72fps"
 
 #. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
@@ -1930,7 +1900,7 @@ msgctxt "game_options"
 msgid "75% (Default)"
 msgstr "75% (Predefinição)"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "75fps"
 msgstr "75fps"
@@ -2120,7 +2090,7 @@ msgctxt "game_options"
 msgid "90 degrees"
 msgstr "90 GRAUS"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "90fps"
 msgstr "90fps"
@@ -2950,11 +2920,6 @@ msgctxt "game_options"
 msgid "Alone in the Dark"
 msgstr "Alone in the Dark"
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Alt Fire"
-msgstr ""
-
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "AltWFC (172.104.88.237)"
@@ -3352,11 +3317,6 @@ msgstr "Salto de frame automático"
 msgctxt "game_options"
 msgid "Auto Max Quality"
 msgstr "Qualidade máxima automática"
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Auto Run"
-msgstr ""
 
 #. TRANSLATION: pcsx2, pcsx2
 msgctxt "game_options"
@@ -3938,11 +3898,6 @@ msgctxt "game_options"
 msgid "Bolivia"
 msgstr "Bolívia"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Boost"
-msgstr ""
-
 #. TRANSLATION: libretro/fceumm, libretro/nestopia
 msgctxt "game_options"
 msgid "Both"
@@ -3980,11 +3935,6 @@ msgctxt "game_options"
 msgid "Bouncing Box"
 msgstr "Caixa saltitante"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Brake / Shoot"
-msgstr ""
-
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Brazil"
@@ -3994,11 +3944,6 @@ msgstr "Brasil"
 msgctxt "game_options"
 msgid "Brazilian Portuguese"
 msgstr "Português Brasileiro"
-
-#. TRANSLATION: fallout1-ce.keys, fallout2-ce.keys
-msgctxt "keys_files"
-msgid "Bring up menu"
-msgstr "Abra o menu"
 
 #. TRANSLATION: ryujinx, suyu
 msgctxt "game_options"
@@ -4048,12 +3993,12 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr "Búlgaro"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button A"
 msgstr "Botão A"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button B"
 msgstr "Botão B"
@@ -4063,22 +4008,37 @@ msgctxt "keys_files"
 msgid "Button C"
 msgstr "Botão C"
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button L"
+msgstr "Botão L"
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
 msgstr "OPCÕES DO BOTÃO"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button R"
+msgstr "Botão R"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button Select"
+msgstr "Botão Select"
+
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button Start"
 msgstr "Botão Start"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button X"
 msgstr "Botão X"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button Y"
 msgstr "Botão Y"
@@ -4955,26 +4915,6 @@ msgctxt "keys_files"
 msgid "Change Camera Angle"
 msgstr "Alterar ângulo da câmara"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 1 / Right"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 2 / Left"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 3 / Up"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 4 / Down"
-msgstr ""
-
 #. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid ""
@@ -5553,11 +5493,6 @@ msgctxt "game_options"
 msgid "Config"
 msgstr "Configuração"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Configuration menu"
-msgstr "Menu de configuração"
-
 #. TRANSLATION: libretro/fbneo
 msgctxt "game_options"
 msgid "Console AES Japan"
@@ -5567,11 +5502,6 @@ msgstr "Consola AES Japan"
 msgctxt "game_options"
 msgid "Console AES World"
 msgstr "Consola AES World"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Continue/Pause emulation"
-msgstr "Continuar/Pausar a emulação"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -5672,11 +5602,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Cross"
 msgstr "Cruz"
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Crouch"
-msgstr ""
 
 #. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
@@ -6334,6 +6259,16 @@ msgctxt "game_options"
 msgid "Display the current frames per second."
 msgstr ""
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Disposition A"
+msgstr "Disposição A"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Disposition B"
+msgstr "Disposição B"
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Distorts the output to fill the display fully Overrides aspect ratio."
@@ -6853,11 +6788,6 @@ msgstr "Emula o ponteiro do Wiimote com o rato."
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Emulates the floppy drive sound."
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys
-msgctxt "keys_files"
-msgid "Emulator Config"
 msgstr ""
 
 #. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
@@ -7601,52 +7531,17 @@ msgctxt "game_options"
 msgid "Exclusive Ubershaders"
 msgstr "Ubershaders Exclusivos"
 
-#. TRANSLATION: wii.dolphin.keys
-msgctxt "keys_files"
-msgid "Exit Dolphin"
-msgstr "Sair do Dolphin"
-
-#. TRANSLATION: dos.dosbox-x.keys
-msgctxt "keys_files"
-msgid "Exit Dosbox-X"
-msgstr "Sair do Dosbox-X"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Exit Duckstation"
-msgstr "Sair do Duckstation"
-
-#. TRANSLATION: catacomb.keys, lindbergh.keys
-msgctxt "keys_files"
-msgid "Exit Game"
-msgstr "Sair do jogo"
-
-#. TRANSLATION: steam.keys
-msgctxt "keys_files"
-msgid "Exit Steam"
-msgstr "Sair do Steam"
-
-#. TRANSLATION: 3ds.citra.keys, actionmax.keys, amiga1200.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, ...
+#. TRANSLATION: actionmax.keys, hotkeys.keys, naomigd.flycast.keys, wiiware.dolphin-emu.keys, xboxcloud.keys
 msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "Sair do emulador"
 
-#. TRANSLATION: moonlight.moonlight.keys
-msgctxt "keys_files"
-msgid "Exit emulator using SDL"
-msgstr "Sair do emulador usando o SDL"
-
-#. TRANSLATION: etlegacy.keys, fallout1-ce.keys, fallout2-ce.keys, jazz2.keys, sonic3-air.keys, ...
+#. TRANSLATION: sonicmania.keys, sonicnexus.keys
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr "Sair do jogo"
 
-#. TRANSLATION: flatpak.keys
-msgctxt "keys_files"
-msgid "Exit running Flatpak"
-msgstr "Saia da execução do Flatpak"
-
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, fpinball.keys, jaguar.bigpemu.keys, ...
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, opentyrian.keys, prboom.gzdoom.keys, ...
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Sair do emulador"
@@ -7892,7 +7787,7 @@ msgctxt "game_options"
 msgid "FRAMECOUNT"
 msgstr ""
 
-#. TRANSLATION: libretro, libretro/openlara
+#. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "FRAMERATE"
 msgstr "FPS"
@@ -8020,6 +7915,11 @@ msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "Interprete rápido"
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "FastForward"
+msgstr "Avanço Rápido"
+
 #. TRANSLATION: flycast
 #, c-format
 msgctxt "game_options"
@@ -8093,7 +7993,7 @@ msgctxt "game_options"
 msgid "Finnish (fi)"
 msgstr "Finlandês (fi)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys, rott.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "Disparar"
@@ -8950,11 +8850,6 @@ msgstr ""
 "Jogos podem correr mais rápido/mais lento que o normal se for selecionada a "
 "região incorreta."
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Gas / Accelerate / Short Pass"
-msgstr ""
-
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Gaussian"
@@ -9324,6 +9219,26 @@ msgstr ""
 msgctxt "game_options"
 msgid "Hartung Game Master cartridges"
 msgstr "Cartuchos Hartung Game Master"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Down"
+msgstr "Direcional para Baixo"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Left"
+msgstr "Direcional para a esquerda"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Right"
+msgstr "Direcional para a Direita"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Up"
+msgstr "Direcional para Cima"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -9850,16 +9765,6 @@ msgctxt "game_options"
 msgid "InuYasha Sengoku Battle Fix"
 msgstr "InuYasha Sengoku - Correção da Batalha"
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Inventory Next"
-msgstr ""
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Inventory Previous"
-msgstr ""
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
@@ -10029,6 +9934,26 @@ msgctxt "game_options"
 msgid "Jordan"
 msgstr "Jordânia"
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Down"
+msgstr "Joy2Pad Baixo"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Left"
+msgstr "Joy2Pad Esquerda"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Right"
+msgstr "Joy2Pad Direita"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Up"
+msgstr "Joy2Pad Cima"
+
 #. TRANSLATION: solarus
 msgctxt "game_options"
 msgid "Joypad"
@@ -10094,7 +10019,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "Julho"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr ""
@@ -10603,11 +10528,6 @@ msgctxt "game_options"
 msgid "Lithuania"
 msgstr "Lituânia"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Load State"
-msgstr "Carregar Estado"
-
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Load latest save state on game launch and save state when exiting game."
@@ -10629,17 +10549,12 @@ msgctxt "keys_files"
 msgid "Lockbar Fire Button"
 msgstr "Botão de disparo da Lockbar"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Long Pass"
-msgstr ""
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
 msgstr "Borda longa do ecrã visível (cm)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr ""
@@ -11008,7 +10923,7 @@ msgctxt "game_options"
 msgid "Manually set cycles per second. Use with caution."
 msgstr "Ajustar manualmente os ciclos por segundo. Usar com cuidado."
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr ""
@@ -11224,7 +11139,7 @@ msgctxt "game_options"
 msgid "Menacer Light Gun"
 msgstr "Pistola Menacer"
 
-#. TRANSLATION: scummvm.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Menu"
 msgstr "Menu"
@@ -11258,6 +11173,11 @@ msgstr "México"
 msgctxt "game_options"
 msgid "Microcosm"
 msgstr "Microcosm"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Microphone"
+msgstr "Microfone"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -11375,12 +11295,12 @@ msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Clique do Rato"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Move Backward"
 msgstr "Mover para trás"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Move Forward"
 msgstr "Mover para frente"
@@ -11782,9 +11702,14 @@ msgctxt "keys_files"
 msgid "Next Disc (m3u)"
 msgstr "Próximo Disco (m3u)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Next slot"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -12228,16 +12153,6 @@ msgstr ""
 "Somente jogos suportados. Ajustes mais altos aumentam os requisitos do "
 "sistema."
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Open"
-msgstr ""
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Open DuckStation Quick Menu"
-msgstr "Abrir o menu rápido do DuckStation"
-
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open LUA console"
@@ -12245,18 +12160,8 @@ msgstr "Abrir a consola da LUA"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
-msgid "Open Load Menu"
-msgstr "Abra o menu Carregar"
-
-#. TRANSLATION: catacomb.keys
-msgctxt "keys_files"
 msgid "Open Menu"
 msgstr "Abrir Menu"
-
-#. TRANSLATION: catacomb.keys
-msgctxt "keys_files"
-msgid "Open Save Menu"
-msgstr "Abra o menu Save"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -12660,16 +12565,6 @@ msgctxt "game_options"
 msgid "Paddle Control"
 msgstr "Comando de Botão Giratório (Paddle)"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Paddle Left / Long Pass"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Paddle Right"
-msgstr ""
-
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
 msgid "Paddle can only be used in port 2."
@@ -12738,11 +12633,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Partial"
 msgstr "Parcial"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Pause / Menu"
-msgstr "Pausa / Menu"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -13123,9 +13013,9 @@ msgctxt "keys_files"
 msgid "Press the Y key for 'Yes'"
 msgstr "Pressione a tecla Y para 'Sim'"
 
-#. TRANSLATION: raze.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Previous Weapon"
+msgid "Previous slot"
 msgstr ""
 
 #. TRANSLATION: cemu
@@ -13203,45 +13093,10 @@ msgctxt "game_options"
 msgid "Qatar"
 msgstr "Catar"
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Quick Kick"
-msgstr ""
-
-#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Load"
-msgstr "Carregamento Rápido"
-
-#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Save"
-msgstr "Guardar Rápido"
-
-#. TRANSLATION: corsixth.keys, fallout1-ce.keys, fallout2-ce.keys, mame.mame.keys, rtcw.keys
-msgctxt "keys_files"
-msgid "Quick load"
-msgstr "Carregamento rápido"
-
-#. TRANSLATION: corsixth.keys, fallout1-ce.keys, fallout2-ce.keys, mame.mame.keys, rtcw.keys
-msgctxt "keys_files"
-msgid "Quick save"
-msgstr "Guardar rápido"
-
 #. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Quickload"
 msgstr "Carregamento rápido"
-
-#. TRANSLATION: corsixth.keys, xash3d_fwgs.keys
-msgctxt "keys_files"
-msgid "Quit the application"
-msgstr "Sair da aplicação"
-
-#. TRANSLATION: corsixth.keys
-msgctxt "keys_files"
-msgid "Quits the current level"
-msgstr "Saír do nível atual"
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc
 msgctxt "game_options"
@@ -13705,6 +13560,11 @@ msgstr "Reiniciar o Jogo"
 msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "Restaura o esquema BLENDMODE em imagens Singe."
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Restore state"
+msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -14473,14 +14333,14 @@ msgctxt "game_options"
 msgid "Saudi Arabia"
 msgstr "Arábia Saudita"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Save State"
-msgstr "Guardar Estado"
-
-#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Save State/Save to Selected Slot"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Save state"
 msgstr ""
 
 #. TRANSLATION: xemu
@@ -14538,7 +14398,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Inclinação do ecrã (grau)"
 
-#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, ...
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Captura de ecrã"
@@ -14588,12 +14448,12 @@ msgctxt "game_options"
 msgid "Select Keyboard, Joystick or Gamepad mode"
 msgstr "Selecionar modo Teclado, Analógico ou Direcional"
 
-#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Select State/Select State Slot 1"
 msgstr ""
 
-#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Select State/Select State Slot 2"
 msgstr ""
@@ -14746,25 +14606,10 @@ msgctxt "game_options"
 msgid "Serbian"
 msgstr "Sérvio"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Service / Insert Coins Button"
-msgstr ""
-
-#. TRANSLATION: daphne.hypseus-singe.keys, singe.hypseus-singe.keys
-msgctxt "keys_files"
-msgid "Service menu"
-msgstr "Menu de serviço"
-
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Set controller 1 and 2 to None to use it standalone."
 msgstr "Defina o comando 1 e 2 para Nenhum para usa-lo de forma independente."
-
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "Set desired framerate."
-msgstr "Defina os fps desejados."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -14870,11 +14715,6 @@ msgstr "Defina o modo de filtro da escala durante a renderização."
 msgctxt "game_options"
 msgid "Sets the window size to an integer size."
 msgstr "Define o tamanho da janela para um tamanho inteiro."
-
-#. TRANSLATION: amiga1200.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amigacdtv.fsuae.keys
-msgctxt "keys_files"
-msgid "Settings GUI"
-msgstr "GUI de configurações"
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -15234,16 +15074,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Skynet"
 msgstr "Skynet"
-
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Slot +"
-msgstr "Slot +"
-
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Slot -"
-msgstr "Slot -"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -15634,11 +15464,6 @@ msgctxt "keys_files"
 msgid "Start / Valid"
 msgstr "Iniciar / Válido"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Start Button"
-msgstr ""
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Start at level number"
@@ -15649,14 +15474,9 @@ msgctxt "keys_files"
 msgid "Start game"
 msgstr "Iniciar o jogo"
 
-#. TRANSLATION: gamecube.dolphin.keys, triforce.dolphin_triforce.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "State/Load from Selected Slot"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "State/Save to Selected Slot"
 msgstr ""
 
 #. TRANSLATION: rpcs3
@@ -15684,12 +15504,12 @@ msgctxt "game_options"
 msgid "Store past states to rewind to in real-time, if the core supports it."
 msgstr ""
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
 msgstr "Strafe à esquerda"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr "Strafe à direita"
@@ -15860,6 +15680,11 @@ msgstr "Surround 7.1"
 msgctxt "keys_files"
 msgid "Swap Screen"
 msgstr "Trocar ecrã"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Swap Screens"
+msgstr "Trocar ecrãs"
 
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
@@ -16213,16 +16038,6 @@ msgctxt "game_options"
 msgid "Taiwanese"
 msgstr "Taiwanês"
 
-#. TRANSLATION: switch.ryujinx.keys
-msgctxt "keys_files"
-msgid "Take Screenshot"
-msgstr ""
-
-#. TRANSLATION: corsixth.keys
-msgctxt "keys_files"
-msgid "Take a screenshot"
-msgstr "Fazer captura de ecrã"
-
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Tandy"
@@ -16271,11 +16086,6 @@ msgstr ""
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
 msgid "Teal (Game Boy Light)"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Test Button"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -16435,11 +16245,6 @@ msgstr ""
 "Para usar códigos do jogo ou códigos de correção de proporção de aspecto "
 "16/9."
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Toggle Crouch"
-msgstr ""
-
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Screen Layout"
@@ -16520,6 +16325,11 @@ msgstr "Posição superior direita, Pequena"
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "Touch Screen"
+msgstr "Ecrã Tátil"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "TouchScreen"
 msgstr "Ecrã Tátil"
 
 #. TRANSLATION: corsixth.keys
@@ -17045,11 +16855,6 @@ msgstr "Aumenta a escala de texturas em objetos 3D."
 msgctxt "game_options"
 msgid "Uruguay"
 msgstr "Uruguai"
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Use"
-msgstr ""
 
 #. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
@@ -18037,11 +17842,6 @@ msgstr "lançar bomba de proximidade"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
-msgid "exit game"
-msgstr "sair do jogo"
-
-#. TRANSLATION: dxx-rebirth.keys
-msgctxt "keys_files"
 msgid "fire primary"
 msgstr "fogo primário"
 
@@ -18249,27 +18049,17 @@ msgctxt "keys_files"
 msgid "proximity bomb"
 msgstr "bomba de proximidade"
 
-#. TRANSLATION: dxx-rebirth.keys
-msgctxt "keys_files"
-msgid "quick load"
-msgstr "carregamento rápido"
-
-#. TRANSLATION: dxx-rebirth.keys
-msgctxt "keys_files"
-msgid "quick save"
-msgstr "save rápido"
-
 #. TRANSLATION: libretro/desmume
 msgctxt "game_options"
 msgid "quick switch"
 msgstr "troca rápida"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "quickload"
 msgstr "carregamento rápido"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "quicksave"
 msgstr "guardar rápido"
@@ -18304,7 +18094,7 @@ msgctxt "game_options"
 msgid "scanlines"
 msgstr "scanlines"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "screenshot"
 msgstr "captura de ecrã"
@@ -18410,12 +18200,36 @@ msgid "yellow/blue"
 msgstr "amarelo/azul"
 
 #~ msgctxt "game_options"
+#~ msgid "119fps"
+#~ msgstr "119fps"
+
+#~ msgctxt "game_options"
+#~ msgid "240fps"
+#~ msgstr "240fps"
+
+#~ msgctxt "game_options"
+#~ msgid "244fps"
+#~ msgstr "244fps"
+
+#~ msgctxt "game_options"
 #~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
 #~ msgstr "MAPEAMENTO DO COMANDO DO J2 (KEYRAH)"
 
 #~ msgctxt "game_options"
 #~ msgid "5 Sideway Wiimote"
 #~ msgstr "5 Wiimotes de lado"
+
+#~ msgctxt "game_options"
+#~ msgid "60fps (Default)"
+#~ msgstr "60 fps (Predefinição)"
+
+#~ msgctxt "game_options"
+#~ msgid "70fps"
+#~ msgstr "70fps"
+
+#~ msgctxt "game_options"
+#~ msgid "72fps"
+#~ msgstr "72fps"
 
 #~ msgctxt "game_options"
 #~ msgid "ANALOG DEADZONE"
@@ -18476,16 +18290,8 @@ msgstr "amarelo/azul"
 #~ msgstr "BGFX para pós-processamento, acelerar/opengl para imagem bruta."
 
 #~ msgctxt "keys_files"
-#~ msgid "Button L"
-#~ msgstr "Botão L"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button R"
-#~ msgstr "Botão R"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Select"
-#~ msgstr "Botão Select"
+#~ msgid "Bring up menu"
+#~ msgstr "Abra o menu"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"
@@ -18563,9 +18369,17 @@ msgstr "amarelo/azul"
 #~ msgid "Composite (color bleeding + artifacts)"
 #~ msgstr "Composto (vazamento de cores + artefatos)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Configuration menu"
+#~ msgstr "Menu de configuração"
+
 #~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "Configurar os comandos no GZDoom pode causar problemas."
+
+#~ msgctxt "keys_files"
+#~ msgid "Continue/Pause emulation"
+#~ msgstr "Continuar/Pausar a emulação"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18590,14 +18404,6 @@ msgstr "amarelo/azul"
 #~ msgid "Display on screen information like savestate, config warning etc..."
 #~ msgstr ""
 #~ "Mostrar informção no ecrã como savestates, avisos de configuração, etc..."
-
-#~ msgctxt "keys_files"
-#~ msgid "Disposition A"
-#~ msgstr "Disposição A"
-
-#~ msgctxt "keys_files"
-#~ msgid "Disposition B"
-#~ msgstr "Disposição B"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18673,12 +18479,36 @@ msgstr "amarelo/azul"
 #~ "está ativo."
 
 #~ msgctxt "keys_files"
+#~ msgid "Exit Dolphin"
+#~ msgstr "Sair do Dolphin"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Dosbox-X"
+#~ msgstr "Sair do Dosbox-X"
+
+#~ msgctxt "keys_files"
 #~ msgid "Exit Drastic"
 #~ msgstr "Sair do Drastic"
 
 #~ msgctxt "keys_files"
-#~ msgid "FastForward"
-#~ msgstr "Avanço Rápido"
+#~ msgid "Exit Duckstation"
+#~ msgstr "Sair do Duckstation"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Game"
+#~ msgstr "Sair do jogo"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Steam"
+#~ msgstr "Sair do Steam"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit emulator using SDL"
+#~ msgstr "Sair do emulador usando o SDL"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit running Flatpak"
+#~ msgstr "Saia da execução do Flatpak"
 
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
@@ -18702,22 +18532,6 @@ msgstr "amarelo/azul"
 #~ msgid "GamePad + 4 Sideway Wiimote"
 #~ msgstr "Comando + 4 Wiimote de lado"
 
-#~ msgctxt "keys_files"
-#~ msgid "Hat Down"
-#~ msgstr "Direcional para Baixo"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Left"
-#~ msgstr "Direcional para a esquerda"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Right"
-#~ msgstr "Direcional para a Direita"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Up"
-#~ msgstr "Direcional para Cima"
-
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Install the image reader card to read disk image files (Mac IIx only). "
@@ -18730,22 +18544,6 @@ msgstr "amarelo/azul"
 #~ msgid "JUMP ON B"
 #~ msgstr "SALTAR COM BOTÃO B"
 
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Down"
-#~ msgstr "Joy2Pad Baixo"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Left"
-#~ msgstr "Joy2Pad Esquerda"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Right"
-#~ msgstr "Joy2Pad Direita"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Up"
-#~ msgstr "Joy2Pad Cima"
-
 #~ msgctxt "game_options"
 #~ msgid "Keypad to joyport mappings for 2 players."
 #~ msgstr "Mapeamento de teclado e comando para 2 jogadores."
@@ -18753,6 +18551,10 @@ msgstr "amarelo/azul"
 #~ msgctxt "keys_files"
 #~ msgid "Left Manga Save"
 #~ msgstr "Botão Manga Save à Esquerda"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State"
+#~ msgstr "Carregar Estado"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
@@ -18769,10 +18571,6 @@ msgstr "amarelo/azul"
 #~ msgstr ""
 #~ "Defina manualmente qual resolução usar. Predefinição é Alto e muda para "
 #~ "muito alto quando necessário."
-
-#~ msgctxt "keys_files"
-#~ msgid "Microphone"
-#~ msgstr "Microfone"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18793,6 +18591,18 @@ msgstr "amarelo/azul"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Abrir o menu do Dolphin-triforce"
 
+#~ msgctxt "keys_files"
+#~ msgid "Open DuckStation Quick Menu"
+#~ msgstr "Abrir o menu rápido do DuckStation"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Load Menu"
+#~ msgstr "Abra o menu Carregar"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Save Menu"
+#~ msgstr "Abra o menu Save"
+
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (x86 only)"
 #~ msgstr "OpenGL (somente x86)"
@@ -18812,6 +18622,10 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Passes all physical keyboard events for Pad2Key."
 #~ msgstr "Passa todos os eventos de teclado físico para Pad2Key."
+
+#~ msgctxt "keys_files"
+#~ msgid "Pause / Menu"
+#~ msgstr "Pausa / Menu"
 
 #~ msgctxt "game_options"
 #~ msgid "Per Pixel"
@@ -18838,8 +18652,32 @@ msgstr "amarelo/azul"
 #~ msgstr "Pulsar (Predefinição)"
 
 #~ msgctxt "keys_files"
+#~ msgid "Quick Load"
+#~ msgstr "Carregamento Rápido"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quick Save"
+#~ msgstr "Guardar Rápido"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quick load"
+#~ msgstr "Carregamento rápido"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quick save"
+#~ msgstr "Guardar rápido"
+
+#~ msgctxt "keys_files"
 #~ msgid "QuickMenu"
 #~ msgstr "Menu Rápido"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quit the application"
+#~ msgstr "Sair da aplicação"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quits the current level"
+#~ msgstr "Saír do nível atual"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18878,6 +18716,10 @@ msgstr "amarelo/azul"
 #~ msgstr "SVideo (somente vazamento de cor)"
 
 #~ msgctxt "keys_files"
+#~ msgid "Save State"
+#~ msgstr "Guardar Estado"
+
+#~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Guardar Estado no Slot 1"
 
@@ -18893,6 +18735,14 @@ msgstr "amarelo/azul"
 #~ msgid "Select the model of Color Computer to emulate"
 #~ msgstr "Selecione o modelo da Color Computer para emular"
 
+#~ msgctxt "keys_files"
+#~ msgid "Service menu"
+#~ msgstr "Menu de serviço"
+
+#~ msgctxt "game_options"
+#~ msgid "Set desired framerate."
+#~ msgstr "Defina os fps desejados."
+
 #~ msgctxt "game_options"
 #~ msgid "Set the color palette to use."
 #~ msgstr "Defina a palete de cores a ser usada."
@@ -18907,6 +18757,10 @@ msgstr "amarelo/azul"
 #~ "Define a taxa de atualização máxima pretendida quando Vsync está "
 #~ "desligado."
 
+#~ msgctxt "keys_files"
+#~ msgid "Settings GUI"
+#~ msgstr "GUI de configurações"
+
 #~ msgctxt "game_options"
 #~ msgid "Simulate LCD color inaccuracy."
 #~ msgstr "Simula a imprecisão de cor do LCD."
@@ -18918,6 +18772,14 @@ msgstr "amarelo/azul"
 #~ msgstr ""
 #~ "Saltar memória temporária desativa o salto de frames automático e "
 #~ "renderiza na resolução de saída de ecrã."
+
+#~ msgctxt "keys_files"
+#~ msgid "Slot +"
+#~ msgstr "Slot +"
+
+#~ msgctxt "keys_files"
+#~ msgid "Slot -"
+#~ msgstr "Slot -"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
@@ -18940,13 +18802,13 @@ msgstr "amarelo/azul"
 #~ "Transmitir textura para GPU em paralelo. Pode melhorar o desempenho em "
 #~ "dispositivos mais potentes GPUs que possuem espaço livre."
 
-#~ msgctxt "keys_files"
-#~ msgid "Swap Screens"
-#~ msgstr "Trocar ecrãs"
-
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "MODO DE COR DE EQUIPA"
+
+#~ msgctxt "keys_files"
+#~ msgid "Take a screenshot"
+#~ msgstr "Fazer captura de ecrã"
 
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
@@ -18959,10 +18821,6 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer disk images"
 #~ msgstr "Imagens de disco do PC Tandy Radio Shack Color"
-
-#~ msgctxt "keys_files"
-#~ msgid "TouchScreen"
-#~ msgstr "Ecrã Tátil"
 
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
@@ -19016,6 +18874,10 @@ msgstr "amarelo/azul"
 #~ msgid "WiiMote Sideways"
 #~ msgstr "WiiMote de lado"
 
+#~ msgctxt "keys_files"
+#~ msgid "exit game"
+#~ msgstr "sair do jogo"
+
 #~ msgctxt "game_options"
 #~ msgid "external (variable fps)"
 #~ msgstr "externo (fps variável)"
@@ -19027,6 +18889,14 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "internal (variable fps)"
 #~ msgstr "interno (fps variável)"
+
+#~ msgctxt "keys_files"
+#~ msgid "quick load"
+#~ msgstr "carregamento rápido"
+
+#~ msgctxt "keys_files"
+#~ msgid "quick save"
+#~ msgstr "save rápido"
 
 #~ msgctxt "game_options"
 #~ msgid "weird colors"

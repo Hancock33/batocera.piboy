@@ -307,7 +307,7 @@ msgctxt "game_options"
 msgid "100Mhz (Overclock)"
 msgstr "100Mhz（超频）"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "100fps"
 msgstr "100帧"
@@ -392,11 +392,6 @@ msgctxt "game_options"
 msgid "11 MHz"
 msgstr "11 MHz"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "119fps"
-msgstr "119帧"
-
 #. TRANSLATION: libretro/np2kai, libretro/px68k
 msgctxt "game_options"
 msgid "11MB"
@@ -432,7 +427,7 @@ msgctxt "game_options"
 msgid "120MB"
 msgstr "120MB"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake, xenia-canary
+#. TRANSLATION: libretro/tyrquake, xenia-canary
 msgctxt "game_options"
 msgid "120fps"
 msgstr "120帧"
@@ -552,7 +547,7 @@ msgctxt "game_options"
 msgid "1440 x 900"
 msgstr "1440 x 900"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake, xenia-canary
+#. TRANSLATION: libretro/tyrquake, xenia-canary
 msgctxt "game_options"
 msgid "144fps"
 msgstr "144帧"
@@ -982,20 +977,10 @@ msgctxt "game_options"
 msgid "240 fps"
 msgstr "240帧"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "240fps"
-msgstr "240帧"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "240ms"
 msgstr "240毫秒"
-
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "244fps"
-msgstr "244帧"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -1247,7 +1232,7 @@ msgctxt "game_options"
 msgid "30FPS"
 msgstr "30帧"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "30fps"
 msgstr "30帧"
@@ -1807,11 +1792,6 @@ msgctxt "game_options"
 msgid "60fps"
 msgstr "60帧"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "60fps (Default)"
-msgstr "60帧（默认）"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "60ms"
@@ -1902,11 +1882,6 @@ msgctxt "game_options"
 msgid "7 Frames"
 msgstr "7 帧延迟"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "70fps"
-msgstr "70帧"
-
 #. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, yabasanshiro
 msgctxt "game_options"
 msgid "720p"
@@ -1916,11 +1891,6 @@ msgstr "720p"
 msgctxt "game_options"
 msgid "72MB"
 msgstr "72MB"
-
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "72fps"
-msgstr "72帧"
 
 #. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
@@ -1932,7 +1902,7 @@ msgctxt "game_options"
 msgid "75% (Default)"
 msgstr "75%（默认）"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "75fps"
 msgstr "75帧"
@@ -2122,7 +2092,7 @@ msgctxt "game_options"
 msgid "90 degrees"
 msgstr "90度"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "90fps"
 msgstr "90帧"
@@ -2940,11 +2910,6 @@ msgctxt "game_options"
 msgid "Alone in the Dark"
 msgstr "鬼屋魔影"
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Alt Fire"
-msgstr ""
-
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "AltWFC (172.104.88.237)"
@@ -3334,11 +3299,6 @@ msgstr "自动跳帧"
 msgctxt "game_options"
 msgid "Auto Max Quality"
 msgstr "自动最大质量"
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Auto Run"
-msgstr ""
 
 #. TRANSLATION: pcsx2, pcsx2
 msgctxt "game_options"
@@ -3911,11 +3871,6 @@ msgctxt "game_options"
 msgid "Bolivia"
 msgstr "玻利维亚"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Boost"
-msgstr ""
-
 #. TRANSLATION: libretro/fceumm, libretro/nestopia
 msgctxt "game_options"
 msgid "Both"
@@ -3951,11 +3906,6 @@ msgctxt "game_options"
 msgid "Bouncing Box"
 msgstr "弹跳盒子"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Brake / Shoot"
-msgstr ""
-
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Brazil"
@@ -3965,11 +3915,6 @@ msgstr "巴西"
 msgctxt "game_options"
 msgid "Brazilian Portuguese"
 msgstr "巴西葡萄牙语"
-
-#. TRANSLATION: fallout1-ce.keys, fallout2-ce.keys
-msgctxt "keys_files"
-msgid "Bring up menu"
-msgstr "调出菜单"
 
 #. TRANSLATION: ryujinx, suyu
 msgctxt "game_options"
@@ -4017,12 +3962,12 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr "保加利亚"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button A"
 msgstr "A键"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button B"
 msgstr "B键"
@@ -4032,22 +3977,37 @@ msgctxt "keys_files"
 msgid "Button C"
 msgstr "按键 C"
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button L"
+msgstr "L键"
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
 msgstr "按钮选项"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button R"
+msgstr "R键"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button Select"
+msgstr "选择键"
+
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button Start"
 msgstr "开始键"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button X"
 msgstr "X键"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button Y"
 msgstr "Y键"
@@ -4915,26 +4875,6 @@ msgctxt "keys_files"
 msgid "Change Camera Angle"
 msgstr "更改相机角度"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 1 / Right"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 2 / Left"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 3 / Up"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 4 / Down"
-msgstr ""
-
 #. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid ""
@@ -5492,11 +5432,6 @@ msgctxt "game_options"
 msgid "Config"
 msgstr "配置"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Configuration menu"
-msgstr "配置菜单"
-
 #. TRANSLATION: libretro/fbneo
 msgctxt "game_options"
 msgid "Console AES Japan"
@@ -5506,11 +5441,6 @@ msgstr "Console AES 日本街机版"
 msgctxt "game_options"
 msgid "Console AES World"
 msgstr "Console AES 世界街机板"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Continue/Pause emulation"
-msgstr "继续/暂停模拟器"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -5605,11 +5535,6 @@ msgstr "将艺术品裁剪到未使用的空间。使游戏尽可能大。"
 msgctxt "game_options"
 msgid "Cross"
 msgstr "十字"
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Crouch"
-msgstr ""
 
 #. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
@@ -6259,6 +6184,16 @@ msgctxt "game_options"
 msgid "Display the current frames per second."
 msgstr ""
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Disposition A"
+msgstr "布置A"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Disposition B"
+msgstr "布置B"
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Distorts the output to fill the display fully Overrides aspect ratio."
@@ -6769,11 +6704,6 @@ msgstr "用鼠标模拟Wiimote指针。"
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Emulates the floppy drive sound."
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys
-msgctxt "keys_files"
-msgid "Emulator Config"
 msgstr ""
 
 #. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
@@ -7470,52 +7400,17 @@ msgctxt "game_options"
 msgid "Exclusive Ubershaders"
 msgstr "专有uber着色器"
 
-#. TRANSLATION: wii.dolphin.keys
-msgctxt "keys_files"
-msgid "Exit Dolphin"
-msgstr "退出Dolphin"
-
-#. TRANSLATION: dos.dosbox-x.keys
-msgctxt "keys_files"
-msgid "Exit Dosbox-X"
-msgstr "退出Dosbox-X"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Exit Duckstation"
-msgstr "退出Duckstation"
-
-#. TRANSLATION: catacomb.keys, lindbergh.keys
-msgctxt "keys_files"
-msgid "Exit Game"
-msgstr "退出游戏"
-
-#. TRANSLATION: steam.keys
-msgctxt "keys_files"
-msgid "Exit Steam"
-msgstr "退出Steam"
-
-#. TRANSLATION: 3ds.citra.keys, actionmax.keys, amiga1200.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, ...
+#. TRANSLATION: actionmax.keys, hotkeys.keys, naomigd.flycast.keys, wiiware.dolphin-emu.keys, xboxcloud.keys
 msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "退出模拟器"
 
-#. TRANSLATION: moonlight.moonlight.keys
-msgctxt "keys_files"
-msgid "Exit emulator using SDL"
-msgstr "使用SDL退出模拟器"
-
-#. TRANSLATION: etlegacy.keys, fallout1-ce.keys, fallout2-ce.keys, jazz2.keys, sonic3-air.keys, ...
+#. TRANSLATION: sonicmania.keys, sonicnexus.keys
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr "退出游戏"
 
-#. TRANSLATION: flatpak.keys
-msgctxt "keys_files"
-msgid "Exit running Flatpak"
-msgstr "退出运行Flatpak"
-
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, fpinball.keys, jaguar.bigpemu.keys, ...
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, opentyrian.keys, prboom.gzdoom.keys, ...
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "退出模拟器"
@@ -7760,7 +7655,7 @@ msgctxt "game_options"
 msgid "FRAMECOUNT"
 msgstr ""
 
-#. TRANSLATION: libretro, libretro/openlara
+#. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "FRAMERATE"
 msgstr "帧速率"
@@ -7884,6 +7779,11 @@ msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "快速编译器"
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "FastForward"
+msgstr "快进"
+
 #. TRANSLATION: flycast
 #, c-format
 msgctxt "game_options"
@@ -7953,7 +7853,7 @@ msgctxt "game_options"
 msgid "Finnish (fi)"
 msgstr "芬兰语 (fi)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys, rott.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "射击"
@@ -8794,11 +8694,6 @@ msgid ""
 "Games may run faster/slower than normal if the incorrect region is selected."
 msgstr "如果选择了不正确的区域，游戏可能会比正常运行得更快或者更慢。"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Gas / Accelerate / Short Pass"
-msgstr ""
-
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Gaussian"
@@ -9168,6 +9063,26 @@ msgstr ""
 msgctxt "game_options"
 msgid "Hartung Game Master cartridges"
 msgstr "Hartung Game Master 卡带"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Down"
+msgstr "下"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Left"
+msgstr "左"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Right"
+msgstr "右"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Up"
+msgstr "上"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -9671,16 +9586,6 @@ msgctxt "game_options"
 msgid "InuYasha Sengoku Battle Fix"
 msgstr "犬夜叉:战国伽合战战斗修复"
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Inventory Next"
-msgstr ""
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Inventory Previous"
-msgstr ""
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
@@ -9848,6 +9753,26 @@ msgctxt "game_options"
 msgid "Jordan"
 msgstr "约旦"
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Down"
+msgstr "Joy2Pad下"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Left"
+msgstr "Joy2Pad左"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Right"
+msgstr "Joy2Pad右"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Up"
+msgstr "Joy2Pad上"
+
 #. TRANSLATION: solarus
 msgctxt "game_options"
 msgid "Joypad"
@@ -9913,7 +9838,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "七月"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr ""
@@ -10419,11 +10344,6 @@ msgctxt "game_options"
 msgid "Lithuania"
 msgstr "立陶宛"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Load State"
-msgstr "载入状态"
-
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Load latest save state on game launch and save state when exiting game."
@@ -10443,17 +10363,12 @@ msgctxt "keys_files"
 msgid "Lockbar Fire Button"
 msgstr "锁定开火按钮"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Long Pass"
-msgstr ""
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
 msgstr "长可见屏幕边缘(厘米)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr ""
@@ -10813,7 +10728,7 @@ msgctxt "game_options"
 msgid "Manually set cycles per second. Use with caution."
 msgstr "手动设置每秒周期。小心使用。"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr ""
@@ -11020,7 +10935,7 @@ msgctxt "game_options"
 msgid "Menacer Light Gun"
 msgstr "Menacer光枪"
 
-#. TRANSLATION: scummvm.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Menu"
 msgstr "菜单"
@@ -11054,6 +10969,11 @@ msgstr "墨西哥"
 msgctxt "game_options"
 msgid "Microcosm"
 msgstr "微观世界"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Microphone"
+msgstr "麦克风"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -11171,12 +11091,12 @@ msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "鼠标点击"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Move Backward"
 msgstr "向后移动"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Move Forward"
 msgstr "向前移动"
@@ -11573,9 +11493,14 @@ msgctxt "keys_files"
 msgid "Next Disc (m3u)"
 msgstr "下一个光盘（m3u）"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Next slot"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -12002,16 +11927,6 @@ msgctxt "game_options"
 msgid "Only supported games. Higher settings increase system requirements."
 msgstr "仅适用于受支持的游戏。较高的设置会增加系统要求。"
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Open"
-msgstr ""
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Open DuckStation Quick Menu"
-msgstr "打开DuckStation快速菜单"
-
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open LUA console"
@@ -12019,18 +11934,8 @@ msgstr "打开LUA控制台"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
-msgid "Open Load Menu"
-msgstr "打开加载菜单"
-
-#. TRANSLATION: catacomb.keys
-msgctxt "keys_files"
 msgid "Open Menu"
 msgstr "打开菜单"
-
-#. TRANSLATION: catacomb.keys
-msgctxt "keys_files"
-msgid "Open Save Menu"
-msgstr "打开保存菜单"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -12432,16 +12337,6 @@ msgctxt "game_options"
 msgid "Paddle Control"
 msgstr "旋钮手柄"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Paddle Left / Long Pass"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Paddle Right"
-msgstr ""
-
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
 msgid "Paddle can only be used in port 2."
@@ -12508,11 +12403,6 @@ msgstr "按当前图形分辨率比例缩放主机纹理内存预算的一部分
 msgctxt "game_options"
 msgid "Partial"
 msgstr "部分"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Pause / Menu"
-msgstr "暂停/菜单"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -12885,9 +12775,9 @@ msgctxt "keys_files"
 msgid "Press the Y key for 'Yes'"
 msgstr "按Y键表示“确定”"
 
-#. TRANSLATION: raze.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Previous Weapon"
+msgid "Previous slot"
 msgstr ""
 
 #. TRANSLATION: cemu
@@ -12962,45 +12852,10 @@ msgctxt "game_options"
 msgid "Qatar"
 msgstr "卡塔尔"
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Quick Kick"
-msgstr ""
-
-#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Load"
-msgstr "快速载入"
-
-#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Save"
-msgstr "快速保存"
-
-#. TRANSLATION: corsixth.keys, fallout1-ce.keys, fallout2-ce.keys, mame.mame.keys, rtcw.keys
-msgctxt "keys_files"
-msgid "Quick load"
-msgstr "快速载入"
-
-#. TRANSLATION: corsixth.keys, fallout1-ce.keys, fallout2-ce.keys, mame.mame.keys, rtcw.keys
-msgctxt "keys_files"
-msgid "Quick save"
-msgstr "快速保存"
-
 #. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Quickload"
 msgstr "快速加载"
-
-#. TRANSLATION: corsixth.keys, xash3d_fwgs.keys
-msgctxt "keys_files"
-msgid "Quit the application"
-msgstr "退出应用程序"
-
-#. TRANSLATION: corsixth.keys
-msgctxt "keys_files"
-msgid "Quits the current level"
-msgstr "退出当前关卡"
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc
 msgctxt "game_options"
@@ -13452,6 +13307,11 @@ msgstr "重置游戏"
 msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "恢复单个精灵的BLENDMODE描边效果。"
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Restore state"
+msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -14217,14 +14077,14 @@ msgctxt "game_options"
 msgid "Saudi Arabia"
 msgstr "沙特阿拉伯"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Save State"
-msgstr "保存状态"
-
-#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Save State/Save to Selected Slot"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Save state"
 msgstr ""
 
 #. TRANSLATION: xemu
@@ -14282,7 +14142,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "屏幕倾斜度(度)"
 
-#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, ...
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "截图"
@@ -14331,12 +14191,12 @@ msgctxt "game_options"
 msgid "Select Keyboard, Joystick or Gamepad mode"
 msgstr "选择键盘、操纵杆或手柄模式"
 
-#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Select State/Select State Slot 1"
 msgstr ""
 
-#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Select State/Select State Slot 2"
 msgstr ""
@@ -14483,25 +14343,10 @@ msgctxt "game_options"
 msgid "Serbian"
 msgstr "塞尔维亚"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Service / Insert Coins Button"
-msgstr ""
-
-#. TRANSLATION: daphne.hypseus-singe.keys, singe.hypseus-singe.keys
-msgctxt "keys_files"
-msgid "Service menu"
-msgstr "服务菜单"
-
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Set controller 1 and 2 to None to use it standalone."
 msgstr "将控制器1和2设置为“无”以独立使用。"
-
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "Set desired framerate."
-msgstr "设置期望的帧速率。"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -14604,11 +14449,6 @@ msgstr "设置渲染时的缩放器过滤模式。"
 msgctxt "game_options"
 msgid "Sets the window size to an integer size."
 msgstr "仅以整数倍增加图像大小。"
-
-#. TRANSLATION: amiga1200.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amigacdtv.fsuae.keys
-msgctxt "keys_files"
-msgid "Settings GUI"
-msgstr "设置界面"
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -14962,16 +14802,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Skynet"
 msgstr "Skynet"
-
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Slot +"
-msgstr "插槽+"
-
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Slot -"
-msgstr "插槽-"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -15355,11 +15185,6 @@ msgctxt "keys_files"
 msgid "Start / Valid"
 msgstr "开始/确定"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Start Button"
-msgstr ""
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Start at level number"
@@ -15370,14 +15195,9 @@ msgctxt "keys_files"
 msgid "Start game"
 msgstr "开始游戏"
 
-#. TRANSLATION: gamecube.dolphin.keys, triforce.dolphin_triforce.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "State/Load from Selected Slot"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "State/Save to Selected Slot"
 msgstr ""
 
 #. TRANSLATION: rpcs3
@@ -15405,12 +15225,12 @@ msgctxt "game_options"
 msgid "Store past states to rewind to in real-time, if the core supports it."
 msgstr ""
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
 msgstr "向左闪避"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr "向右闪避"
@@ -15575,6 +15395,11 @@ msgstr "环绕7.1声道"
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Swap Screen"
+msgstr "交换屏幕"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Swap Screens"
 msgstr "交换屏幕"
 
 #. TRANSLATION: 3ds.citra.keys
@@ -15925,16 +15750,6 @@ msgctxt "game_options"
 msgid "Taiwanese"
 msgstr "中文（台湾）"
 
-#. TRANSLATION: switch.ryujinx.keys
-msgctxt "keys_files"
-msgid "Take Screenshot"
-msgstr ""
-
-#. TRANSLATION: corsixth.keys
-msgctxt "keys_files"
-msgid "Take a screenshot"
-msgstr "截屏"
-
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Tandy"
@@ -15983,11 +15798,6 @@ msgstr ""
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
 msgid "Teal (Game Boy Light)"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Test Button"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -16134,11 +15944,6 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "使用游戏金手指或16/9纵横比修正码。"
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Toggle Crouch"
-msgstr ""
-
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Screen Layout"
@@ -16217,6 +16022,11 @@ msgstr "右上角位置，小"
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "Touch Screen"
+msgstr "触摸屏"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "TouchScreen"
 msgstr "触摸屏"
 
 #. TRANSLATION: corsixth.keys
@@ -16736,11 +16546,6 @@ msgstr "放大3D物体上的纹理。"
 msgctxt "game_options"
 msgid "Uruguay"
 msgstr "乌拉圭"
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Use"
-msgstr ""
 
 #. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
@@ -17702,11 +17507,6 @@ msgstr "投掷近程炸弹"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
-msgid "exit game"
-msgstr "退出游戏"
-
-#. TRANSLATION: dxx-rebirth.keys
-msgctxt "keys_files"
 msgid "fire primary"
 msgstr "主武器攻击"
 
@@ -17912,27 +17712,17 @@ msgctxt "keys_files"
 msgid "proximity bomb"
 msgstr "近程炸弹"
 
-#. TRANSLATION: dxx-rebirth.keys
-msgctxt "keys_files"
-msgid "quick load"
-msgstr "快速载入"
-
-#. TRANSLATION: dxx-rebirth.keys
-msgctxt "keys_files"
-msgid "quick save"
-msgstr "快速保存"
-
 #. TRANSLATION: libretro/desmume
 msgctxt "game_options"
 msgid "quick switch"
 msgstr "快速开关"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "quickload"
 msgstr "快速读档"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "quicksave"
 msgstr "快速存档"
@@ -17967,7 +17757,7 @@ msgctxt "game_options"
 msgid "scanlines"
 msgstr "扫描行"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "screenshot"
 msgstr "截图"
@@ -18089,6 +17879,10 @@ msgstr "黄色/蓝色"
 #~ msgstr "115%（小心）"
 
 #~ msgctxt "game_options"
+#~ msgid "119fps"
+#~ msgstr "119帧"
+
+#~ msgctxt "game_options"
 #~ msgid "120% (Are you crazy?)"
 #~ msgstr "120%（你疯了吗？）"
 
@@ -18113,6 +17907,14 @@ msgstr "黄色/蓝色"
 #~ msgstr "2.5x 1080p（1600x1320）"
 
 #~ msgctxt "game_options"
+#~ msgid "240fps"
+#~ msgstr "240帧"
+
+#~ msgctxt "game_options"
+#~ msgid "244fps"
+#~ msgstr "244帧"
+
+#~ msgctxt "game_options"
 #~ msgid "256 KB"
 #~ msgstr "256 KB"
 
@@ -18131,6 +17933,18 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "512 KB"
 #~ msgstr "512 KB"
+
+#~ msgctxt "game_options"
+#~ msgid "60fps (Default)"
+#~ msgstr "60帧（默认）"
+
+#~ msgctxt "game_options"
+#~ msgid "70fps"
+#~ msgstr "70帧"
+
+#~ msgctxt "game_options"
+#~ msgid "72fps"
+#~ msgstr "72帧"
 
 #~ msgctxt "game_options"
 #~ msgid "8x (CSAA)"
@@ -18253,16 +18067,8 @@ msgstr "黄色/蓝色"
 #~ msgstr "禁用背景玻璃"
 
 #~ msgctxt "keys_files"
-#~ msgid "Button L"
-#~ msgstr "L键"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button R"
-#~ msgstr "R键"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Select"
-#~ msgstr "选择键"
+#~ msgid "Bring up menu"
+#~ msgstr "调出菜单"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"
@@ -18349,9 +18155,17 @@ msgstr "黄色/蓝色"
 #~ msgid "Composite (color bleeding + artifacts)"
 #~ msgstr "复合（彩色溢出+残影）"
 
+#~ msgctxt "keys_files"
+#~ msgid "Configuration menu"
+#~ msgstr "配置菜单"
+
 #~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "在GZDoom中配置控制器可能会导致问题。"
+
+#~ msgctxt "keys_files"
+#~ msgid "Continue/Pause emulation"
+#~ msgstr "继续/暂停模拟器"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18397,14 +18211,6 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."
 #~ msgstr "在屏幕上显示保存状态、配置警告等信息..."
-
-#~ msgctxt "keys_files"
-#~ msgid "Disposition A"
-#~ msgstr "布置A"
-
-#~ msgctxt "keys_files"
-#~ msgid "Disposition B"
-#~ msgstr "布置B"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18503,12 +18309,40 @@ msgstr "黄色/蓝色"
 #~ msgstr "增强。当启用MIP贴图时，能提高远处纹理的清晰度。"
 
 #~ msgctxt "keys_files"
+#~ msgid "Exit Dolphin"
+#~ msgstr "退出Dolphin"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Dosbox-X"
+#~ msgstr "退出Dosbox-X"
+
+#~ msgctxt "keys_files"
 #~ msgid "Exit Drastic"
 #~ msgstr "退出Drastic"
 
 #~ msgctxt "keys_files"
+#~ msgid "Exit Duckstation"
+#~ msgstr "退出Duckstation"
+
+#~ msgctxt "keys_files"
 #~ msgid "Exit Emulator"
 #~ msgstr "退出模拟器"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Game"
+#~ msgstr "退出游戏"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Steam"
+#~ msgstr "退出Steam"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit emulator using SDL"
+#~ msgstr "使用SDL退出模拟器"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit running Flatpak"
+#~ msgstr "退出运行Flatpak"
 
 #~ msgctxt "game_options"
 #~ msgid "Face Buttons (CCW)"
@@ -18517,10 +18351,6 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Face Buttons (CW)"
 #~ msgstr "手柄前置按钮（可顺时针旋转）"
-
-#~ msgctxt "keys_files"
-#~ msgid "FastForward"
-#~ msgstr "快进"
 
 #~ msgctxt "game_options"
 #~ msgid "FlexDMD disabled"
@@ -18560,22 +18390,6 @@ msgstr "黄色/蓝色"
 #~ msgid "Glorius Eggroll Proton (Default)"
 #~ msgstr "Glorius Eggroll Proton（默认）"
 
-#~ msgctxt "keys_files"
-#~ msgid "Hat Down"
-#~ msgstr "下"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Left"
-#~ msgstr "左"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Right"
-#~ msgstr "右"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Up"
-#~ msgstr "上"
-
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax."
 #~ msgstr "在支持的游戏中隐藏十字光标，例如ActionMax。"
@@ -18590,22 +18404,6 @@ msgstr "黄色/蓝色"
 #~ msgid "JUMP ON B"
 #~ msgstr "跳转到B"
 
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Down"
-#~ msgstr "Joy2Pad下"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Left"
-#~ msgstr "Joy2Pad左"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Right"
-#~ msgstr "Joy2Pad右"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Up"
-#~ msgstr "Joy2Pad上"
-
 #~ msgctxt "game_options"
 #~ msgid "Keypad to joyport mappings for 2 players."
 #~ msgstr "2名玩家的键盘到游戏端口映射。"
@@ -18613,6 +18411,10 @@ msgstr "黄色/蓝色"
 #~ msgctxt "keys_files"
 #~ msgid "Left Manga Save"
 #~ msgstr "左侧保存"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State"
+#~ msgstr "载入状态"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
@@ -18642,10 +18444,6 @@ msgstr "黄色/蓝色"
 #~ "手动定义要使用的分辨率。&#x0a;Auto（自动）默认为High（高），并在需要时切换"
 #~ "到Super High（超高）。"
 
-#~ msgctxt "keys_files"
-#~ msgid "Microphone"
-#~ msgstr "麦克风"
-
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Most games already have an internal framelimit. Minor performance cost."
@@ -18666,6 +18464,18 @@ msgstr "黄色/蓝色"
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "打开Dolphin triforce的菜单"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open DuckStation Quick Menu"
+#~ msgstr "打开DuckStation快速菜单"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Load Menu"
+#~ msgstr "打开加载菜单"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Save Menu"
+#~ msgstr "打开保存菜单"
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (x86 only)"
@@ -18718,6 +18528,10 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Passes all physical keyboard events for Pad2Key."
 #~ msgstr "通过Pad2Key的所有物理键盘事件。"
+
+#~ msgctxt "keys_files"
+#~ msgid "Pause / Menu"
+#~ msgstr "暂停/菜单"
 
 #~ msgctxt "game_options"
 #~ msgid "Per Pixel"
@@ -18796,8 +18610,32 @@ msgstr "黄色/蓝色"
 #~ msgstr "按下 8"
 
 #~ msgctxt "keys_files"
+#~ msgid "Quick Load"
+#~ msgstr "快速载入"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quick Save"
+#~ msgstr "快速保存"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quick load"
+#~ msgstr "快速载入"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quick save"
+#~ msgstr "快速保存"
+
+#~ msgctxt "keys_files"
 #~ msgid "QuickMenu"
 #~ msgstr "快速菜单"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quit the application"
+#~ msgstr "退出应用程序"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quits the current level"
+#~ msgstr "退出当前关卡"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18844,6 +18682,10 @@ msgstr "黄色/蓝色"
 #~ msgstr "S端子（仅限彩色溢出）"
 
 #~ msgctxt "keys_files"
+#~ msgid "Save State"
+#~ msgstr "保存状态"
+
+#~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "保存状态插槽1"
 
@@ -18856,6 +18698,14 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Select the model of Color Computer to emulate"
 #~ msgstr "选择要模拟的彩色计算机的型号"
+
+#~ msgctxt "keys_files"
+#~ msgid "Service menu"
+#~ msgstr "服务菜单"
+
+#~ msgctxt "game_options"
+#~ msgid "Set desired framerate."
+#~ msgstr "设置期望的帧速率。"
 
 #~ msgctxt "game_options"
 #~ msgid "Set the color palette to use."
@@ -18873,6 +18723,10 @@ msgstr "黄色/蓝色"
 #~ msgid "Set to full screen"
 #~ msgstr "设置为全屏"
 
+#~ msgctxt "keys_files"
+#~ msgid "Settings GUI"
+#~ msgstr "设置界面"
+
 #~ msgctxt "game_options"
 #~ msgid "Simulate LCD color inaccuracy."
 #~ msgstr "模拟LCD颜色不准确。"
@@ -18882,6 +18736,14 @@ msgstr "黄色/蓝色"
 #~ "Skip buffer disables auto frameskip and renders at display output "
 #~ "resolution."
 #~ msgstr "跳过缓冲区禁用自动跳帧并以显示输出分辨率渲染。"
+
+#~ msgctxt "keys_files"
+#~ msgid "Slot +"
+#~ msgstr "插槽+"
+
+#~ msgctxt "keys_files"
+#~ msgid "Slot -"
+#~ msgstr "插槽-"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
@@ -18900,13 +18762,13 @@ msgstr "黄色/蓝色"
 #~ msgstr ""
 #~ "并行将纹理流传输到GPU。 这可以提高在具有剩余空间的更强大的GPU上的性能。"
 
-#~ msgctxt "keys_files"
-#~ msgid "Swap Screens"
-#~ msgstr "交换屏幕"
-
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "团队颜色模式"
+
+#~ msgctxt "keys_files"
+#~ msgid "Take a screenshot"
+#~ msgstr "截屏"
 
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
@@ -18930,10 +18792,6 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Toggle MSAA/SSAA. Depends on anti-aliasing being enabled."
 #~ msgstr "切换MSAA/SSA。取决于启用的抗锯齿。"
-
-#~ msgctxt "keys_files"
-#~ msgid "TouchScreen"
-#~ msgstr "触摸屏"
 
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
@@ -19014,6 +18872,10 @@ msgstr "黄色/蓝色"
 #~ msgid "WiiMote Sideways"
 #~ msgstr "WiiMote横持"
 
+#~ msgctxt "keys_files"
+#~ msgid "exit game"
+#~ msgstr "退出游戏"
+
 #~ msgctxt "game_options"
 #~ msgid "external (variable fps)"
 #~ msgstr "外部（可变帧率）"
@@ -19025,6 +18887,14 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "internal (variable fps)"
 #~ msgstr "内部（可变帧率）"
+
+#~ msgctxt "keys_files"
+#~ msgid "quick load"
+#~ msgstr "快速载入"
+
+#~ msgctxt "keys_files"
+#~ msgid "quick save"
+#~ msgstr "快速保存"
 
 #~ msgctxt "game_options"
 #~ msgid "weird colors"

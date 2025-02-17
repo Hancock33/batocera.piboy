@@ -308,7 +308,7 @@ msgctxt "game_options"
 msgid "100Mhz (Overclock)"
 msgstr "100Mhz (pretaktovať)"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "100fps"
 msgstr "100fps"
@@ -393,11 +393,6 @@ msgctxt "game_options"
 msgid "11 MHz"
 msgstr "11 MHz"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "119fps"
-msgstr "119fps"
-
 #. TRANSLATION: libretro/np2kai, libretro/px68k
 msgctxt "game_options"
 msgid "11MB"
@@ -433,7 +428,7 @@ msgctxt "game_options"
 msgid "120MB"
 msgstr "120MB"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake, xenia-canary
+#. TRANSLATION: libretro/tyrquake, xenia-canary
 msgctxt "game_options"
 msgid "120fps"
 msgstr "120fps"
@@ -553,7 +548,7 @@ msgctxt "game_options"
 msgid "1440 x 900"
 msgstr "1440 x 900"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake, xenia-canary
+#. TRANSLATION: libretro/tyrquake, xenia-canary
 msgctxt "game_options"
 msgid "144fps"
 msgstr "144fps"
@@ -983,20 +978,10 @@ msgctxt "game_options"
 msgid "240 fps"
 msgstr "240 fps"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "240fps"
-msgstr "240fps"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "240ms"
 msgstr "240ms"
-
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "244fps"
-msgstr "244fps"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -1248,7 +1233,7 @@ msgctxt "game_options"
 msgid "30FPS"
 msgstr "30FPS"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "30fps"
 msgstr "30fps"
@@ -1808,11 +1793,6 @@ msgctxt "game_options"
 msgid "60fps"
 msgstr "60fps"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "60fps (Default)"
-msgstr "60fps (predvolené)"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "60ms"
@@ -1903,11 +1883,6 @@ msgctxt "game_options"
 msgid "7 Frames"
 msgstr "7 snímok"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "70fps"
-msgstr "70fps"
-
 #. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, yabasanshiro
 msgctxt "game_options"
 msgid "720p"
@@ -1917,11 +1892,6 @@ msgstr "720p"
 msgctxt "game_options"
 msgid "72MB"
 msgstr "72MB"
-
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "72fps"
-msgstr "72fps"
 
 #. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
@@ -1933,7 +1903,7 @@ msgctxt "game_options"
 msgid "75% (Default)"
 msgstr "75% (predvolené)"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "75fps"
 msgstr "75fps"
@@ -2123,7 +2093,7 @@ msgctxt "game_options"
 msgid "90 degrees"
 msgstr "90 stupňov"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "90fps"
 msgstr "90fps"
@@ -2943,11 +2913,6 @@ msgctxt "game_options"
 msgid "Alone in the Dark"
 msgstr "Sám v tme"
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Alt Fire"
-msgstr ""
-
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "AltWFC (172.104.88.237)"
@@ -3340,11 +3305,6 @@ msgstr "Automaticky preskočiť snímky"
 msgctxt "game_options"
 msgid "Auto Max Quality"
 msgstr "Auto max kvalita"
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Auto Run"
-msgstr ""
 
 #. TRANSLATION: pcsx2, pcsx2
 msgctxt "game_options"
@@ -3921,11 +3881,6 @@ msgctxt "game_options"
 msgid "Bolivia"
 msgstr "Bolívia"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Boost"
-msgstr ""
-
 #. TRANSLATION: libretro/fceumm, libretro/nestopia
 msgctxt "game_options"
 msgid "Both"
@@ -3961,11 +3916,6 @@ msgctxt "game_options"
 msgid "Bouncing Box"
 msgstr "Skákací box"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Brake / Shoot"
-msgstr ""
-
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Brazil"
@@ -3975,11 +3925,6 @@ msgstr "Brazília"
 msgctxt "game_options"
 msgid "Brazilian Portuguese"
 msgstr "Brazílska portugalčina"
-
-#. TRANSLATION: fallout1-ce.keys, fallout2-ce.keys
-msgctxt "keys_files"
-msgid "Bring up menu"
-msgstr "Zobraziť ponuku"
 
 #. TRANSLATION: ryujinx, suyu
 msgctxt "game_options"
@@ -4029,12 +3974,12 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr "Bulharčina"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button A"
 msgstr "Tlačidlo A"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button B"
 msgstr "Tlačidlo B"
@@ -4044,22 +3989,37 @@ msgctxt "keys_files"
 msgid "Button C"
 msgstr "Tlačidlo C"
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button L"
+msgstr "Tlačidlo L"
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
 msgstr "Voľby tlačidiel"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button R"
+msgstr "Tlačidlo R"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button Select"
+msgstr "Tlačidlo Select"
+
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button Start"
 msgstr "Tlačidlo Start"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button X"
 msgstr "Tlačidlo X"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button Y"
 msgstr "Tlačidlo Y"
@@ -4934,26 +4894,6 @@ msgctxt "keys_files"
 msgid "Change Camera Angle"
 msgstr "Zmeniť uhol kamery"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 1 / Right"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 2 / Left"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 3 / Up"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 4 / Down"
-msgstr ""
-
 #. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid ""
@@ -5518,11 +5458,6 @@ msgctxt "game_options"
 msgid "Config"
 msgstr "Nastavenie"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Configuration menu"
-msgstr "Ponuka konfigurácie"
-
 #. TRANSLATION: libretro/fbneo
 msgctxt "game_options"
 msgid "Console AES Japan"
@@ -5532,11 +5467,6 @@ msgstr "Konzola AES Japonsko"
 msgctxt "game_options"
 msgid "Console AES World"
 msgstr "Konzola AES svet"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Continue/Pause emulation"
-msgstr "Pokračovať/pozastaviť emuláciu"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -5633,11 +5563,6 @@ msgstr "Orezávať grafiku len na nevyužitý priestor, aby bola hra čo najvä�
 msgctxt "game_options"
 msgid "Cross"
 msgstr "Krížik"
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Crouch"
-msgstr ""
 
 #. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
@@ -6287,6 +6212,16 @@ msgctxt "game_options"
 msgid "Display the current frames per second."
 msgstr ""
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Disposition A"
+msgstr "Dispozícia A"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Disposition B"
+msgstr "Dispozícia B"
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Distorts the output to fill the display fully Overrides aspect ratio."
@@ -6803,11 +6738,6 @@ msgstr "Emulujte ukazovateľ Wiimote pomocou myši."
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Emulates the floppy drive sound."
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys
-msgctxt "keys_files"
-msgid "Emulator Config"
 msgstr ""
 
 #. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
@@ -7534,52 +7464,17 @@ msgctxt "game_options"
 msgid "Exclusive Ubershaders"
 msgstr "Exkluzívne Ubershaders"
 
-#. TRANSLATION: wii.dolphin.keys
-msgctxt "keys_files"
-msgid "Exit Dolphin"
-msgstr "Ukončiť Dolphin"
-
-#. TRANSLATION: dos.dosbox-x.keys
-msgctxt "keys_files"
-msgid "Exit Dosbox-X"
-msgstr "Ukončiť Dosbox-X"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Exit Duckstation"
-msgstr "Ukončiť Duckstation"
-
-#. TRANSLATION: catacomb.keys, lindbergh.keys
-msgctxt "keys_files"
-msgid "Exit Game"
-msgstr ""
-
-#. TRANSLATION: steam.keys
-msgctxt "keys_files"
-msgid "Exit Steam"
-msgstr "Ukončiť Steam"
-
-#. TRANSLATION: 3ds.citra.keys, actionmax.keys, amiga1200.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, ...
+#. TRANSLATION: actionmax.keys, hotkeys.keys, naomigd.flycast.keys, wiiware.dolphin-emu.keys, xboxcloud.keys
 msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "Ukončiť emulátor"
 
-#. TRANSLATION: moonlight.moonlight.keys
-msgctxt "keys_files"
-msgid "Exit emulator using SDL"
-msgstr "Ukončiť emulátor pomocou SDL"
-
-#. TRANSLATION: etlegacy.keys, fallout1-ce.keys, fallout2-ce.keys, jazz2.keys, sonic3-air.keys, ...
+#. TRANSLATION: sonicmania.keys, sonicnexus.keys
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr "Ukončiť hru"
 
-#. TRANSLATION: flatpak.keys
-msgctxt "keys_files"
-msgid "Exit running Flatpak"
-msgstr "Ukončiť bežiaci Flatpak"
-
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, fpinball.keys, jaguar.bigpemu.keys, ...
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, opentyrian.keys, prboom.gzdoom.keys, ...
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Ukončiť emulátor"
@@ -7820,7 +7715,7 @@ msgctxt "game_options"
 msgid "FRAMECOUNT"
 msgstr ""
 
-#. TRANSLATION: libretro, libretro/openlara
+#. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "FRAMERATE"
 msgstr "FPS"
@@ -7944,6 +7839,11 @@ msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "Rýchly interpreter"
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "FastForward"
+msgstr "Rýchlo dopredu"
+
 #. TRANSLATION: flycast
 #, c-format
 msgctxt "game_options"
@@ -8013,7 +7913,7 @@ msgctxt "game_options"
 msgid "Finnish (fi)"
 msgstr "Fínčina (fi)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys, rott.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "Spúšť"
@@ -8853,11 +8753,6 @@ msgid ""
 "Games may run faster/slower than normal if the incorrect region is selected."
 msgstr "Hry bežia rýchlejšie/pomalšie, ak je vybraný nesprávny región."
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Gas / Accelerate / Short Pass"
-msgstr ""
-
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Gaussian"
@@ -9227,6 +9122,26 @@ msgstr ""
 msgctxt "game_options"
 msgid "Hartung Game Master cartridges"
 msgstr "Hartung Game Master kartridže"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Down"
+msgstr "Klobúk dolu"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Left"
+msgstr "Klobúk vľavo"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Right"
+msgstr "Klobúk vpravo"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Up"
+msgstr "Klobúk hore"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -9738,16 +9653,6 @@ msgctxt "game_options"
 msgid "InuYasha Sengoku Battle Fix"
 msgstr "Oprava InuYasha Sengoku Battle"
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Inventory Next"
-msgstr ""
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Inventory Previous"
-msgstr ""
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
@@ -9915,6 +9820,26 @@ msgctxt "game_options"
 msgid "Jordan"
 msgstr "Jordánsko"
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Down"
+msgstr "Joy2Pad dolu"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Left"
+msgstr "Joy2Pad  vľavo"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Right"
+msgstr "Joy2Pad  vpravo"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Up"
+msgstr "Joy2Pad hore"
+
 #. TRANSLATION: solarus
 msgctxt "game_options"
 msgid "Joypad"
@@ -9980,7 +9905,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "Júl"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr ""
@@ -10489,11 +10414,6 @@ msgctxt "game_options"
 msgid "Lithuania"
 msgstr "Litva"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Load State"
-msgstr "Načítať stav"
-
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Load latest save state on game launch and save state when exiting game."
@@ -10512,17 +10432,12 @@ msgctxt "keys_files"
 msgid "Lockbar Fire Button"
 msgstr "Tlačidlo spúšte Lockbar"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Long Pass"
-msgstr ""
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr ""
@@ -10887,7 +10802,7 @@ msgctxt "game_options"
 msgid "Manually set cycles per second. Use with caution."
 msgstr "Ručne nastaviť cykly za sekundu. Používajte opatrne."
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr ""
@@ -11098,7 +11013,7 @@ msgctxt "game_options"
 msgid "Menacer Light Gun"
 msgstr "Svetelná zbraň Menacer"
 
-#. TRANSLATION: scummvm.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Menu"
 msgstr "Ponuka"
@@ -11132,6 +11047,11 @@ msgstr "Mexiko"
 msgctxt "game_options"
 msgid "Microcosm"
 msgstr "Mikrokozmos"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Microphone"
+msgstr "Mikrofón"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -11249,12 +11169,12 @@ msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Kliknutie myši"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Move Backward"
 msgstr ""
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Move Forward"
 msgstr ""
@@ -11652,9 +11572,14 @@ msgctxt "keys_files"
 msgid "Next Disc (m3u)"
 msgstr "Ďalší disk (m3u)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Next slot"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -12087,16 +12012,6 @@ msgctxt "game_options"
 msgid "Only supported games. Higher settings increase system requirements."
 msgstr "Iba podporované hry. Vyššie nastavenia zvyšujú systémové požiadavky."
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Open"
-msgstr ""
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Open DuckStation Quick Menu"
-msgstr "Otvoriť rýchlu ponuku DuckStation"
-
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open LUA console"
@@ -12104,17 +12019,7 @@ msgstr "Otvoriť konzolu LUA"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
-msgid "Open Load Menu"
-msgstr ""
-
-#. TRANSLATION: catacomb.keys
-msgctxt "keys_files"
 msgid "Open Menu"
-msgstr ""
-
-#. TRANSLATION: catacomb.keys
-msgctxt "keys_files"
-msgid "Open Save Menu"
 msgstr ""
 
 #. TRANSLATION: corsixth.keys
@@ -12517,16 +12422,6 @@ msgctxt "game_options"
 msgid "Paddle Control"
 msgstr "Ovládač paddle"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Paddle Left / Long Pass"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Paddle Right"
-msgstr ""
-
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
 msgid "Paddle can only be used in port 2."
@@ -12593,11 +12488,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Partial"
 msgstr "Čiastočné"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Pause / Menu"
-msgstr "Pozastaviť / Ponuka"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -12970,9 +12860,9 @@ msgctxt "keys_files"
 msgid "Press the Y key for 'Yes'"
 msgstr ""
 
-#. TRANSLATION: raze.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Previous Weapon"
+msgid "Previous slot"
 msgstr ""
 
 #. TRANSLATION: cemu
@@ -13047,45 +12937,10 @@ msgctxt "game_options"
 msgid "Qatar"
 msgstr "Katar"
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Quick Kick"
-msgstr ""
-
-#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Load"
-msgstr "Rýchle načítanie"
-
-#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Save"
-msgstr "Rýchle uloženie"
-
-#. TRANSLATION: corsixth.keys, fallout1-ce.keys, fallout2-ce.keys, mame.mame.keys, rtcw.keys
-msgctxt "keys_files"
-msgid "Quick load"
-msgstr "Rýchle načítanie"
-
-#. TRANSLATION: corsixth.keys, fallout1-ce.keys, fallout2-ce.keys, mame.mame.keys, rtcw.keys
-msgctxt "keys_files"
-msgid "Quick save"
-msgstr "Rýchle uloženie"
-
 #. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Quickload"
 msgstr "Rýchle načítanie"
-
-#. TRANSLATION: corsixth.keys, xash3d_fwgs.keys
-msgctxt "keys_files"
-msgid "Quit the application"
-msgstr "Ukončiť aplikáciu"
-
-#. TRANSLATION: corsixth.keys
-msgctxt "keys_files"
-msgid "Quits the current level"
-msgstr "Ukončí aktuálnu úroveň"
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc
 msgctxt "game_options"
@@ -13541,6 +13396,11 @@ msgstr "Reštartovať hru"
 msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "Obnoviť obrys BLENDMODE na spritoch Singe."
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Restore state"
+msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -14305,14 +14165,14 @@ msgctxt "game_options"
 msgid "Saudi Arabia"
 msgstr "Saudská Arábia"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Save State"
-msgstr "Uložiť stav"
-
-#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Save State/Save to Selected Slot"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Save state"
 msgstr ""
 
 #. TRANSLATION: xemu
@@ -14370,7 +14230,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Naklonenie obrazovky (stupne)"
 
-#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, ...
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Snímka obrazovky"
@@ -14417,12 +14277,12 @@ msgctxt "game_options"
 msgid "Select Keyboard, Joystick or Gamepad mode"
 msgstr "Vyberte režim klávesnice, joysticku alebo gamepadu"
 
-#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Select State/Select State Slot 1"
 msgstr ""
 
-#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Select State/Select State Slot 2"
 msgstr ""
@@ -14574,25 +14434,10 @@ msgctxt "game_options"
 msgid "Serbian"
 msgstr "Srbčina"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Service / Insert Coins Button"
-msgstr ""
-
-#. TRANSLATION: daphne.hypseus-singe.keys, singe.hypseus-singe.keys
-msgctxt "keys_files"
-msgid "Service menu"
-msgstr "Servisná ponuka"
-
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Set controller 1 and 2 to None to use it standalone."
 msgstr "Nastavte ovládač 1 a 2 na Žiadny na samostatné použitie."
-
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "Set desired framerate."
-msgstr "Nastaviť požadované FPS."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -14695,11 +14540,6 @@ msgstr "Nastaví režim filtra mierky pri vykreslení."
 msgctxt "game_options"
 msgid "Sets the window size to an integer size."
 msgstr "Nastaví veľkosť okna na celé číslo."
-
-#. TRANSLATION: amiga1200.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amigacdtv.fsuae.keys
-msgctxt "keys_files"
-msgid "Settings GUI"
-msgstr "GUI nastavenia"
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -15055,16 +14895,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Skynet"
 msgstr "Skynet"
-
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Slot +"
-msgstr "Slot +"
-
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Slot -"
-msgstr "Slot -"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -15448,11 +15278,6 @@ msgctxt "keys_files"
 msgid "Start / Valid"
 msgstr "Spustiť / platné"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Start Button"
-msgstr ""
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Start at level number"
@@ -15463,14 +15288,9 @@ msgctxt "keys_files"
 msgid "Start game"
 msgstr "Spustiť hru"
 
-#. TRANSLATION: gamecube.dolphin.keys, triforce.dolphin_triforce.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "State/Load from Selected Slot"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "State/Save to Selected Slot"
 msgstr ""
 
 #. TRANSLATION: rpcs3
@@ -15498,12 +15318,12 @@ msgctxt "game_options"
 msgid "Store past states to rewind to in real-time, if the core supports it."
 msgstr ""
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
 msgstr ""
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr ""
@@ -15671,6 +15491,11 @@ msgstr "Surround 7.1"
 msgctxt "keys_files"
 msgid "Swap Screen"
 msgstr "Vymeniť obrazovku"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Swap Screens"
+msgstr "Vymeniť obrazovky"
 
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
@@ -16022,16 +15847,6 @@ msgctxt "game_options"
 msgid "Taiwanese"
 msgstr "Taiwančina"
 
-#. TRANSLATION: switch.ryujinx.keys
-msgctxt "keys_files"
-msgid "Take Screenshot"
-msgstr ""
-
-#. TRANSLATION: corsixth.keys
-msgctxt "keys_files"
-msgid "Take a screenshot"
-msgstr "Urobiť snímku obrazovky"
-
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Tandy"
@@ -16080,11 +15895,6 @@ msgstr ""
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
 msgid "Teal (Game Boy Light)"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Test Button"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -16232,11 +16042,6 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "Ak chcete použiť cheaty na hry alebo kódy 16/9 Aspect Ratio Fix."
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Toggle Crouch"
-msgstr ""
-
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Screen Layout"
@@ -16315,6 +16120,11 @@ msgstr "Poloha vpravo hore, malé"
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "Touch Screen"
+msgstr "Dotyková obrazovka"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "TouchScreen"
 msgstr "Dotyková obrazovka"
 
 #. TRANSLATION: corsixth.keys
@@ -16837,11 +16647,6 @@ msgstr "Zväčší textúry na 3D objektoch."
 msgctxt "game_options"
 msgid "Uruguay"
 msgstr "Uruguaj"
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Use"
-msgstr ""
 
 #. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
@@ -17807,11 +17612,6 @@ msgstr ""
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
-msgid "exit game"
-msgstr "ukončiť hru"
-
-#. TRANSLATION: dxx-rebirth.keys
-msgctxt "keys_files"
 msgid "fire primary"
 msgstr "primárna spúšť"
 
@@ -18019,27 +17819,17 @@ msgctxt "keys_files"
 msgid "proximity bomb"
 msgstr ""
 
-#. TRANSLATION: dxx-rebirth.keys
-msgctxt "keys_files"
-msgid "quick load"
-msgstr "rýchle načítanie"
-
-#. TRANSLATION: dxx-rebirth.keys
-msgctxt "keys_files"
-msgid "quick save"
-msgstr "rýchle uloženie"
-
 #. TRANSLATION: libretro/desmume
 msgctxt "game_options"
 msgid "quick switch"
 msgstr "rýchly prepínač"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "quickload"
 msgstr "rýchle načítanie"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "quicksave"
 msgstr "rýchle uloženie"
@@ -18074,7 +17864,7 @@ msgctxt "game_options"
 msgid "scanlines"
 msgstr "scan riadky"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "screenshot"
 msgstr "snímka obrazovky"
@@ -18200,6 +17990,10 @@ msgstr "žltá/modrá"
 #~ msgstr "115% (dávajte pozor)"
 
 #~ msgctxt "game_options"
+#~ msgid "119fps"
+#~ msgstr "119fps"
+
+#~ msgctxt "game_options"
 #~ msgid "120% (Are you crazy?)"
 #~ msgstr "120% (Šibe vám?)"
 
@@ -18224,6 +18018,14 @@ msgstr "žltá/modrá"
 #~ msgstr "2.5x 1080p (1600x1320)"
 
 #~ msgctxt "game_options"
+#~ msgid "240fps"
+#~ msgstr "240fps"
+
+#~ msgctxt "game_options"
+#~ msgid "244fps"
+#~ msgstr "244fps"
+
+#~ msgctxt "game_options"
 #~ msgid "256 KB"
 #~ msgstr "256 KB"
 
@@ -18242,6 +18044,18 @@ msgstr "žltá/modrá"
 #~ msgctxt "game_options"
 #~ msgid "512 KB"
 #~ msgstr "512 KB"
+
+#~ msgctxt "game_options"
+#~ msgid "60fps (Default)"
+#~ msgstr "60fps (predvolené)"
+
+#~ msgctxt "game_options"
+#~ msgid "70fps"
+#~ msgstr "70fps"
+
+#~ msgctxt "game_options"
+#~ msgid "72fps"
+#~ msgstr "72fps"
 
 #~ msgctxt "game_options"
 #~ msgid "8x (CSAA)"
@@ -18370,16 +18184,8 @@ msgstr "žltá/modrá"
 #~ "BGFX pre následné spracovanie, accel/opengl pre nespracovaný obrázok."
 
 #~ msgctxt "keys_files"
-#~ msgid "Button L"
-#~ msgstr "Tlačidlo L"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button R"
-#~ msgstr "Tlačidlo R"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Select"
-#~ msgstr "Tlačidlo Select"
+#~ msgid "Bring up menu"
+#~ msgstr "Zobraziť ponuku"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"
@@ -18507,9 +18313,17 @@ msgstr "žltá/modrá"
 #~ msgid "Composite (color bleeding + artifacts)"
 #~ msgstr "Kompozit (krvácanie farieb + artefakty)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Configuration menu"
+#~ msgstr "Ponuka konfigurácie"
+
 #~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "Konfigurácia ovládačov v GZDoom môže spôsobiť problémy."
+
+#~ msgctxt "keys_files"
+#~ msgid "Continue/Pause emulation"
+#~ msgstr "Pokračovať/pozastaviť emuláciu"
 
 #~ msgctxt "game_options"
 #~ msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
@@ -18574,14 +18388,6 @@ msgstr "žltá/modrá"
 #~ msgstr ""
 #~ "Zobrazenie informácií na obrazovke, ako je stav uloženia, varovanie "
 #~ "konfigurácie atď."
-
-#~ msgctxt "keys_files"
-#~ msgid "Disposition A"
-#~ msgstr "Dispozícia A"
-
-#~ msgctxt "keys_files"
-#~ msgid "Disposition B"
-#~ msgstr "Dispozícia B"
 
 #~ msgctxt "game_options"
 #~ msgid "Duration of audio buffer in milliseconds."
@@ -18700,12 +18506,36 @@ msgstr "žltá/modrá"
 #~ "mapping."
 
 #~ msgctxt "keys_files"
+#~ msgid "Exit Dolphin"
+#~ msgstr "Ukončiť Dolphin"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Dosbox-X"
+#~ msgstr "Ukončiť Dosbox-X"
+
+#~ msgctxt "keys_files"
 #~ msgid "Exit Drastic"
 #~ msgstr "Ukončiť Drastic"
 
 #~ msgctxt "keys_files"
+#~ msgid "Exit Duckstation"
+#~ msgstr "Ukončiť Duckstation"
+
+#~ msgctxt "keys_files"
 #~ msgid "Exit Emulator"
 #~ msgstr "Ukončiť emulátor"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Steam"
+#~ msgstr "Ukončiť Steam"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit emulator using SDL"
+#~ msgstr "Ukončiť emulátor pomocou SDL"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit running Flatpak"
+#~ msgstr "Ukončiť bežiaci Flatpak"
 
 #~ msgctxt "game_options"
 #~ msgid "Face Buttons (CCW)"
@@ -18714,10 +18544,6 @@ msgstr "žltá/modrá"
 #~ msgctxt "game_options"
 #~ msgid "Face Buttons (CW)"
 #~ msgstr "Face Buttons (CW)"
-
-#~ msgctxt "keys_files"
-#~ msgid "FastForward"
-#~ msgstr "Rýchlo dopredu"
 
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
@@ -18751,22 +18577,6 @@ msgstr "žltá/modrá"
 #~ msgid "HD Gun Games"
 #~ msgstr "HD hry s pištoľou"
 
-#~ msgctxt "keys_files"
-#~ msgid "Hat Down"
-#~ msgstr "Klobúk dolu"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Left"
-#~ msgstr "Klobúk vľavo"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Right"
-#~ msgstr "Klobúk vpravo"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Up"
-#~ msgstr "Klobúk hore"
-
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax."
 #~ msgstr "Skryť zameriavací kríž v podporovaných hrách, napr. ActionMax."
@@ -18787,25 +18597,13 @@ msgstr "žltá/modrá"
 #~ msgid "JUMP ON B"
 #~ msgstr "Skočiť na B"
 
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Down"
-#~ msgstr "Joy2Pad dolu"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Left"
-#~ msgstr "Joy2Pad  vľavo"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Right"
-#~ msgstr "Joy2Pad  vpravo"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Up"
-#~ msgstr "Joy2Pad hore"
-
 #~ msgctxt "game_options"
 #~ msgid "Keypad to joyport mappings for 2 players."
 #~ msgstr "Mapovania keypadu na joyport pre 2 hráčov."
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State"
+#~ msgstr "Načítať stav"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
@@ -18839,10 +18637,6 @@ msgstr "žltá/modrá"
 #~ "Manuálne definujte, ktoré rozlíšenie sa má použiť.&#x0a;Automaticky sa "
 #~ "predvolene nastaví na Vysoké a v prípade potreby sa prepne na Supervysoké."
 
-#~ msgctxt "keys_files"
-#~ msgid "Microphone"
-#~ msgstr "Mikrofón"
-
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Most games already have an internal framelimit. Minor performance cost."
@@ -18871,6 +18665,10 @@ msgstr "žltá/modrá"
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Otvoriť ponuku Dolphin triforce"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open DuckStation Quick Menu"
+#~ msgstr "Otvoriť rýchlu ponuku DuckStation"
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (x86 only)"
@@ -18923,6 +18721,10 @@ msgstr "žltá/modrá"
 #~ msgctxt "game_options"
 #~ msgid "Passes all physical keyboard events for Pad2Key."
 #~ msgstr "Prejde všetky udalosti fyzickej klávesnice pre Pad2Key."
+
+#~ msgctxt "keys_files"
+#~ msgid "Pause / Menu"
+#~ msgstr "Pozastaviť / Ponuka"
 
 #~ msgctxt "game_options"
 #~ msgid "Per Pixel"
@@ -18993,8 +18795,32 @@ msgstr "žltá/modrá"
 #~ msgstr "Stlačiť 8"
 
 #~ msgctxt "keys_files"
+#~ msgid "Quick Load"
+#~ msgstr "Rýchle načítanie"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quick Save"
+#~ msgstr "Rýchle uloženie"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quick load"
+#~ msgstr "Rýchle načítanie"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quick save"
+#~ msgstr "Rýchle uloženie"
+
+#~ msgctxt "keys_files"
 #~ msgid "QuickMenu"
 #~ msgstr "Rýchla ponuka"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quit the application"
+#~ msgstr "Ukončiť aplikáciu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quits the current level"
+#~ msgstr "Ukončí aktuálnu úroveň"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19035,6 +18861,10 @@ msgstr "žltá/modrá"
 #~ msgstr "SVideo (iba krvácanie farieb)"
 
 #~ msgctxt "keys_files"
+#~ msgid "Save State"
+#~ msgstr "Uložiť stav"
+
+#~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Uložiť slot stavu 1"
 
@@ -19048,6 +18878,14 @@ msgstr "žltá/modrá"
 #~ msgctxt "game_options"
 #~ msgid "Select the model of Color Computer to emulate"
 #~ msgstr "Vyberte model Color Computer na emuláciu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Service menu"
+#~ msgstr "Servisná ponuka"
+
+#~ msgctxt "game_options"
+#~ msgid "Set desired framerate."
+#~ msgstr "Nastaviť požadované FPS."
 
 #~ msgctxt "game_options"
 #~ msgid "Set the color palette to use."
@@ -19071,6 +18909,10 @@ msgstr "žltá/modrá"
 #~ msgid "Set to full screen"
 #~ msgstr "Nastaviť na celú obrazovku"
 
+#~ msgctxt "keys_files"
+#~ msgid "Settings GUI"
+#~ msgstr "GUI nastavenia"
+
 #~ msgctxt "game_options"
 #~ msgid "Simulate LCD color inaccuracy."
 #~ msgstr "Simulovať nepresnosť farieb LCD."
@@ -19090,6 +18932,14 @@ msgstr "žltá/modrá"
 #~ msgstr ""
 #~ "Preskočiť vyrovnávaciu pamäť deaktivuje automatické preskakovanie snímok "
 #~ "a vykresľuje vo výstupnom rozlíšení displeja."
+
+#~ msgctxt "keys_files"
+#~ msgid "Slot +"
+#~ msgstr "Slot +"
+
+#~ msgctxt "keys_files"
+#~ msgid "Slot -"
+#~ msgstr "Slot -"
 
 #~ msgctxt "game_options"
 #~ msgid "Standard"
@@ -19132,13 +18982,13 @@ msgstr "žltá/modrá"
 #~ msgid "Stretch to 4:3"
 #~ msgstr "Roztiahnuť na 4:3"
 
-#~ msgctxt "keys_files"
-#~ msgid "Swap Screens"
-#~ msgstr "Vymeniť obrazovky"
-
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "Tímový farebný režim"
+
+#~ msgctxt "keys_files"
+#~ msgid "Take a screenshot"
+#~ msgstr "Urobiť snímku obrazovky"
 
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
@@ -19163,10 +19013,6 @@ msgstr "žltá/modrá"
 #~ msgctxt "game_options"
 #~ msgid "Toggle MSAA/SSAA. Depends on anti-aliasing being enabled."
 #~ msgstr "Prepnúť MSAA/SSAA. Závisí od aktivácie vyhladzovania."
-
-#~ msgctxt "keys_files"
-#~ msgid "TouchScreen"
-#~ msgstr "Dotyková obrazovka"
 
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
@@ -19245,6 +19091,10 @@ msgstr "žltá/modrá"
 #~ msgid "WiiMote Sideways"
 #~ msgstr "WiiMote Sideways"
 
+#~ msgctxt "keys_files"
+#~ msgid "exit game"
+#~ msgstr "ukončiť hru"
+
 #~ msgctxt "game_options"
 #~ msgid "external (variable fps)"
 #~ msgstr "externé (premenlivé fps)"
@@ -19264,6 +19114,14 @@ msgstr "žltá/modrá"
 #~ msgctxt "game_options"
 #~ msgid "internal (variable fps)"
 #~ msgstr "vnútorné (premenlivé fps)"
+
+#~ msgctxt "keys_files"
+#~ msgid "quick load"
+#~ msgstr "rýchle načítanie"
+
+#~ msgctxt "keys_files"
+#~ msgid "quick save"
+#~ msgstr "rýchle uloženie"
 
 #~ msgctxt "game_options"
 #~ msgid "weird colors"

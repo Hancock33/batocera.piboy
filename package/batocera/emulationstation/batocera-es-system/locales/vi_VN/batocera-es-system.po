@@ -303,7 +303,7 @@ msgctxt "game_options"
 msgid "100Mhz (Overclock)"
 msgstr "100 MHz (ép xung)"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "100fps"
 msgstr "100fps"
@@ -388,11 +388,6 @@ msgctxt "game_options"
 msgid "11 MHz"
 msgstr "11 MHz"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "119fps"
-msgstr "119fps"
-
 #. TRANSLATION: libretro/np2kai, libretro/px68k
 msgctxt "game_options"
 msgid "11MB"
@@ -428,7 +423,7 @@ msgctxt "game_options"
 msgid "120MB"
 msgstr "120MB"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake, xenia-canary
+#. TRANSLATION: libretro/tyrquake, xenia-canary
 msgctxt "game_options"
 msgid "120fps"
 msgstr "120fps"
@@ -548,7 +543,7 @@ msgctxt "game_options"
 msgid "1440 x 900"
 msgstr "1440 x 900"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake, xenia-canary
+#. TRANSLATION: libretro/tyrquake, xenia-canary
 msgctxt "game_options"
 msgid "144fps"
 msgstr "144fps"
@@ -978,20 +973,10 @@ msgctxt "game_options"
 msgid "240 fps"
 msgstr "240fps"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "240fps"
-msgstr "240fps"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "240ms"
 msgstr "240ms"
-
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "244fps"
-msgstr "244fps"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -1243,7 +1228,7 @@ msgctxt "game_options"
 msgid "30FPS"
 msgstr "30FPS"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "30fps"
 msgstr "30fps"
@@ -1803,11 +1788,6 @@ msgctxt "game_options"
 msgid "60fps"
 msgstr "60fps"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "60fps (Default)"
-msgstr "60fps (Mặc định)"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "60ms"
@@ -1898,11 +1878,6 @@ msgctxt "game_options"
 msgid "7 Frames"
 msgstr "7 khung hình"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "70fps"
-msgstr "70fps"
-
 #. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, yabasanshiro
 msgctxt "game_options"
 msgid "720p"
@@ -1912,11 +1887,6 @@ msgstr "720p"
 msgctxt "game_options"
 msgid "72MB"
 msgstr "72MB"
-
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "72fps"
-msgstr "72fps"
 
 #. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
@@ -1928,7 +1898,7 @@ msgctxt "game_options"
 msgid "75% (Default)"
 msgstr "75% (Mặc định)"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "75fps"
 msgstr "75fps"
@@ -2118,7 +2088,7 @@ msgctxt "game_options"
 msgid "90 degrees"
 msgstr "90 độ"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "90fps"
 msgstr "90fps"
@@ -2950,11 +2920,6 @@ msgctxt "game_options"
 msgid "Alone in the Dark"
 msgstr "Alone in the Dark"
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Alt Fire"
-msgstr ""
-
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "AltWFC (172.104.88.237)"
@@ -3350,11 +3315,6 @@ msgstr "Tự động bỏ qua khung hình"
 msgctxt "game_options"
 msgid "Auto Max Quality"
 msgstr "Chất lượng tự động tối đa"
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Auto Run"
-msgstr ""
 
 #. TRANSLATION: pcsx2, pcsx2
 msgctxt "game_options"
@@ -3936,11 +3896,6 @@ msgctxt "game_options"
 msgid "Bolivia"
 msgstr "Bolivia"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Boost"
-msgstr ""
-
 #. TRANSLATION: libretro/fceumm, libretro/nestopia
 msgctxt "game_options"
 msgid "Both"
@@ -3976,11 +3931,6 @@ msgctxt "game_options"
 msgid "Bouncing Box"
 msgstr "Bouncing Box"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Brake / Shoot"
-msgstr ""
-
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Brazil"
@@ -3990,11 +3940,6 @@ msgstr "Brazil"
 msgctxt "game_options"
 msgid "Brazilian Portuguese"
 msgstr "Tiếng Bồ Đào Nha Brazil"
-
-#. TRANSLATION: fallout1-ce.keys, fallout2-ce.keys
-msgctxt "keys_files"
-msgid "Bring up menu"
-msgstr "Ra Menu"
 
 #. TRANSLATION: ryujinx, suyu
 msgctxt "game_options"
@@ -4044,12 +3989,12 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr "Bulgaria"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button A"
 msgstr "Nút A"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button B"
 msgstr "Nút B"
@@ -4059,22 +4004,37 @@ msgctxt "keys_files"
 msgid "Button C"
 msgstr "Nút C"
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button L"
+msgstr "Nút L"
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
 msgstr "Tùy chọn nút"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button R"
+msgstr "Nút R"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button Select"
+msgstr "Chọn Nút"
+
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button Start"
 msgstr "Nút bắt đầu"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button X"
 msgstr "Nút X"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button Y"
 msgstr "Nút Y"
@@ -4952,26 +4912,6 @@ msgctxt "keys_files"
 msgid "Change Camera Angle"
 msgstr "Thay đổi góc camera"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 1 / Right"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 2 / Left"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 3 / Up"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 4 / Down"
-msgstr ""
-
 #. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid ""
@@ -5549,11 +5489,6 @@ msgctxt "game_options"
 msgid "Config"
 msgstr "Tùy chỉnh"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Configuration menu"
-msgstr "Menu Cấu hình"
-
 #. TRANSLATION: libretro/fbneo
 msgctxt "game_options"
 msgid "Console AES Japan"
@@ -5563,11 +5498,6 @@ msgstr "Console AES Japan"
 msgctxt "game_options"
 msgid "Console AES World"
 msgstr "Console AES World"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Continue/Pause emulation"
-msgstr "Tiếp tục/Tạm dừng mô phỏng"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -5666,11 +5596,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Cross"
 msgstr "Chéo"
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Crouch"
-msgstr ""
 
 #. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
@@ -6326,6 +6251,16 @@ msgctxt "game_options"
 msgid "Display the current frames per second."
 msgstr ""
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Disposition A"
+msgstr "Bố trí A"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Disposition B"
+msgstr "Bố trí B"
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Distorts the output to fill the display fully Overrides aspect ratio."
@@ -6844,11 +6779,6 @@ msgstr "Mô phỏng con trỏ Wiimote bằng chuột."
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Emulates the floppy drive sound."
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys
-msgctxt "keys_files"
-msgid "Emulator Config"
 msgstr ""
 
 #. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
@@ -7601,52 +7531,17 @@ msgctxt "game_options"
 msgid "Exclusive Ubershaders"
 msgstr "Ubershaders chọn lọc"
 
-#. TRANSLATION: wii.dolphin.keys
-msgctxt "keys_files"
-msgid "Exit Dolphin"
-msgstr "Thoát Dolphin"
-
-#. TRANSLATION: dos.dosbox-x.keys
-msgctxt "keys_files"
-msgid "Exit Dosbox-X"
-msgstr "Thoát khỏi DOSBOX-X"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Exit Duckstation"
-msgstr "Thoát Duckstation"
-
-#. TRANSLATION: catacomb.keys, lindbergh.keys
-msgctxt "keys_files"
-msgid "Exit Game"
-msgstr "Thoát trò chơi"
-
-#. TRANSLATION: steam.keys
-msgctxt "keys_files"
-msgid "Exit Steam"
-msgstr "Thoát Steam"
-
-#. TRANSLATION: 3ds.citra.keys, actionmax.keys, amiga1200.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, ...
+#. TRANSLATION: actionmax.keys, hotkeys.keys, naomigd.flycast.keys, wiiware.dolphin-emu.keys, xboxcloud.keys
 msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "Thoát trình giả lập"
 
-#. TRANSLATION: moonlight.moonlight.keys
-msgctxt "keys_files"
-msgid "Exit emulator using SDL"
-msgstr "Thoát trình giả lập bằng SDL"
-
-#. TRANSLATION: etlegacy.keys, fallout1-ce.keys, fallout2-ce.keys, jazz2.keys, sonic3-air.keys, ...
+#. TRANSLATION: sonicmania.keys, sonicnexus.keys
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr "Thoát trò chơi"
 
-#. TRANSLATION: flatpak.keys
-msgctxt "keys_files"
-msgid "Exit running Flatpak"
-msgstr "Thoát chạy Flatpak"
-
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, fpinball.keys, jaguar.bigpemu.keys, ...
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, opentyrian.keys, prboom.gzdoom.keys, ...
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Thoát khỏi trình giả lập"
@@ -7891,7 +7786,7 @@ msgctxt "game_options"
 msgid "FRAMECOUNT"
 msgstr ""
 
-#. TRANSLATION: libretro, libretro/openlara
+#. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "FRAMERATE"
 msgstr "SỐ KHUNG HÌNH"
@@ -8019,6 +7914,11 @@ msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "Fast Interpreter"
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "FastForward"
+msgstr "FastForward"
+
 #. TRANSLATION: flycast
 #, c-format
 msgctxt "game_options"
@@ -8092,7 +7992,7 @@ msgctxt "game_options"
 msgid "Finnish (fi)"
 msgstr "Phần Lan (fi)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys, rott.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "Bắn"
@@ -8946,11 +8846,6 @@ msgid ""
 "Games may run faster/slower than normal if the incorrect region is selected."
 msgstr "Trò chơi có thể chạy nhanh hơn/chậm hơn bình thường nếu chọn sai vùng."
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Gas / Accelerate / Short Pass"
-msgstr ""
-
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Gaussian"
@@ -9320,6 +9215,26 @@ msgstr ""
 msgctxt "game_options"
 msgid "Hartung Game Master cartridges"
 msgstr "Hartung Game Master cartridges"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Down"
+msgstr "Hat Xuống"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Left"
+msgstr "Hat Trái"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Right"
+msgstr "Hat Phải"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Up"
+msgstr "Hat Lên"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -9838,16 +9753,6 @@ msgctxt "game_options"
 msgid "InuYasha Sengoku Battle Fix"
 msgstr "InuYasha Sengoku Battle Fix"
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Inventory Next"
-msgstr ""
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Inventory Previous"
-msgstr ""
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
@@ -10017,6 +9922,26 @@ msgctxt "game_options"
 msgid "Jordan"
 msgstr "Jordan"
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Down"
+msgstr "Joy2Pad Xuống"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Left"
+msgstr "Joy2Pad Trái"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Right"
+msgstr "Joy2Pad Phải"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Up"
+msgstr "Joy2Pad Lên"
+
 #. TRANSLATION: solarus
 msgctxt "game_options"
 msgid "Joypad"
@@ -10082,7 +10007,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "Tháng 7"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr ""
@@ -10590,11 +10515,6 @@ msgctxt "game_options"
 msgid "Lithuania"
 msgstr "Litva"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Load State"
-msgstr "Tải"
-
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Load latest save state on game launch and save state when exiting game."
@@ -10617,17 +10537,12 @@ msgctxt "keys_files"
 msgid "Lockbar Fire Button"
 msgstr "Nút bắn Lockbar"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Long Pass"
-msgstr ""
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
 msgstr "Cạnh màn hình dài có thể nhìn thấy (cm)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr ""
@@ -10993,7 +10908,7 @@ msgctxt "game_options"
 msgid "Manually set cycles per second. Use with caution."
 msgstr "Đặt thủ công chu kỳ mỗi giây. Sử dụng một cách thận trọng."
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr ""
@@ -11210,7 +11125,7 @@ msgctxt "game_options"
 msgid "Menacer Light Gun"
 msgstr "Menacer Light Gun"
 
-#. TRANSLATION: scummvm.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Menu"
 msgstr "Menu"
@@ -11244,6 +11159,11 @@ msgstr "Mexico"
 msgctxt "game_options"
 msgid "Microcosm"
 msgstr "Microcosm"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Microphone"
+msgstr "Microphone"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -11361,12 +11281,12 @@ msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Nhấp chuột"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Move Backward"
 msgstr "Di chuyển về phía sau"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Move Forward"
 msgstr "Tiến về phía trước"
@@ -11768,9 +11688,14 @@ msgctxt "keys_files"
 msgid "Next Disc (m3u)"
 msgstr "Đĩa tiếp theo (m3u)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Next slot"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -12210,16 +12135,6 @@ msgctxt "game_options"
 msgid "Only supported games. Higher settings increase system requirements."
 msgstr "Chỉ các trò chơi được hỗ trợ. Cài đặt cao hơn tăng yêu cầu hệ thống."
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Open"
-msgstr ""
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Open DuckStation Quick Menu"
-msgstr "Mở menu nhanh DuckStation"
-
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open LUA console"
@@ -12227,18 +12142,8 @@ msgstr "Mở bảng điều khiển Lua"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
-msgid "Open Load Menu"
-msgstr "Mở Menu Tải"
-
-#. TRANSLATION: catacomb.keys
-msgctxt "keys_files"
 msgid "Open Menu"
 msgstr "Mở menu"
-
-#. TRANSLATION: catacomb.keys
-msgctxt "keys_files"
-msgid "Open Save Menu"
-msgstr "Mở Menu Lưu"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -12640,16 +12545,6 @@ msgctxt "game_options"
 msgid "Paddle Control"
 msgstr "Paddle Control"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Paddle Left / Long Pass"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Paddle Right"
-msgstr ""
-
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
 msgid "Paddle can only be used in port 2."
@@ -12718,11 +12613,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Partial"
 msgstr "Một phần"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Pause / Menu"
-msgstr "Tạm dừng / Menu"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -13097,9 +12987,9 @@ msgctxt "keys_files"
 msgid "Press the Y key for 'Yes'"
 msgstr "Nhấn phím Y cho 'Có'"
 
-#. TRANSLATION: raze.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Previous Weapon"
+msgid "Previous slot"
 msgstr ""
 
 #. TRANSLATION: cemu
@@ -13178,45 +13068,10 @@ msgctxt "game_options"
 msgid "Qatar"
 msgstr "Qatar"
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Quick Kick"
-msgstr ""
-
-#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Load"
-msgstr "Tải Nhanh"
-
-#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Save"
-msgstr "Lưu Nhanh"
-
-#. TRANSLATION: corsixth.keys, fallout1-ce.keys, fallout2-ce.keys, mame.mame.keys, rtcw.keys
-msgctxt "keys_files"
-msgid "Quick load"
-msgstr "Tải nhanh"
-
-#. TRANSLATION: corsixth.keys, fallout1-ce.keys, fallout2-ce.keys, mame.mame.keys, rtcw.keys
-msgctxt "keys_files"
-msgid "Quick save"
-msgstr "Lưu nhanh"
-
 #. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Quickload"
 msgstr "Tải nhanh"
-
-#. TRANSLATION: corsixth.keys, xash3d_fwgs.keys
-msgctxt "keys_files"
-msgid "Quit the application"
-msgstr "Thoát khỏi ứng dụng"
-
-#. TRANSLATION: corsixth.keys
-msgctxt "keys_files"
-msgid "Quits the current level"
-msgstr "Thoát level hiện tại"
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc
 msgctxt "game_options"
@@ -13676,6 +13531,11 @@ msgstr "Khởi động lại trò chơi"
 msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "Khôi phục phác thảo BLENDMODE trên các họa tiết Singe."
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Restore state"
+msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -14446,14 +14306,14 @@ msgctxt "game_options"
 msgid "Saudi Arabia"
 msgstr "Ả Rập Saudi"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Save State"
-msgstr "Lưu"
-
-#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Save State/Save to Selected Slot"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Save state"
 msgstr ""
 
 #. TRANSLATION: xemu
@@ -14511,7 +14371,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Độ nghiêng của màn hình (độ)"
 
-#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, ...
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Chụp màn hình"
@@ -14560,12 +14420,12 @@ msgctxt "game_options"
 msgid "Select Keyboard, Joystick or Gamepad mode"
 msgstr "Chọn chế độ Bàn phím, Cần điều khiển hoặc Tay cầm chơi game"
 
-#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Select State/Select State Slot 1"
 msgstr ""
 
-#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Select State/Select State Slot 2"
 msgstr ""
@@ -14718,25 +14578,10 @@ msgctxt "game_options"
 msgid "Serbian"
 msgstr "Người Serbia"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Service / Insert Coins Button"
-msgstr ""
-
-#. TRANSLATION: daphne.hypseus-singe.keys, singe.hypseus-singe.keys
-msgctxt "keys_files"
-msgid "Service menu"
-msgstr "Menu dịch vụ"
-
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Set controller 1 and 2 to None to use it standalone."
 msgstr "Đặt bộ điều khiển 1 và 2 thành không có để sử dụng độc lập."
-
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "Set desired framerate."
-msgstr "Đặt khung hình mong muốn."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -14845,11 +14690,6 @@ msgstr "Đặt chế độ lọc tỷ lệ khi kết xuất."
 msgctxt "game_options"
 msgid "Sets the window size to an integer size."
 msgstr "Đặt kích thước cửa sổ thành kích thước số nguyên."
-
-#. TRANSLATION: amiga1200.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amigacdtv.fsuae.keys
-msgctxt "keys_files"
-msgid "Settings GUI"
-msgstr "Cài đặt GUI"
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -15209,16 +15049,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Skynet"
 msgstr "Skynet"
-
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Slot +"
-msgstr "Slot +"
-
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Slot -"
-msgstr "Slot -"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -15608,11 +15438,6 @@ msgctxt "keys_files"
 msgid "Start / Valid"
 msgstr "Bắt đầu / hợp lệ"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Start Button"
-msgstr ""
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Start at level number"
@@ -15623,14 +15448,9 @@ msgctxt "keys_files"
 msgid "Start game"
 msgstr "Bắt đầu trò chơi"
 
-#. TRANSLATION: gamecube.dolphin.keys, triforce.dolphin_triforce.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "State/Load from Selected Slot"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "State/Save to Selected Slot"
 msgstr ""
 
 #. TRANSLATION: rpcs3
@@ -15658,12 +15478,12 @@ msgctxt "game_options"
 msgid "Store past states to rewind to in real-time, if the core supports it."
 msgstr ""
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
 msgstr "Strafe Trái"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr "Strafe Phải"
@@ -15832,6 +15652,11 @@ msgstr "Surround 7.1"
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Swap Screen"
+msgstr "Đổi màn hình"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Swap Screens"
 msgstr "Đổi màn hình"
 
 #. TRANSLATION: 3ds.citra.keys
@@ -16186,16 +16011,6 @@ msgctxt "game_options"
 msgid "Taiwanese"
 msgstr "Đài Loan"
 
-#. TRANSLATION: switch.ryujinx.keys
-msgctxt "keys_files"
-msgid "Take Screenshot"
-msgstr ""
-
-#. TRANSLATION: corsixth.keys
-msgctxt "keys_files"
-msgid "Take a screenshot"
-msgstr "Chụp ảnh màn hình"
-
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Tandy"
@@ -16244,11 +16059,6 @@ msgstr ""
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
 msgid "Teal (Game Boy Light)"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Test Button"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -16403,11 +16213,6 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "Để gian lận trong trò chơi hoặc Sửa tỷ lệ khung hình 16/9."
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Toggle Crouch"
-msgstr ""
-
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Screen Layout"
@@ -16486,6 +16291,11 @@ msgstr "Vị trí Trên-Phải, Nhỏ"
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "Touch Screen"
+msgstr "Màn hình cảm ứng"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "TouchScreen"
 msgstr "Màn hình cảm ứng"
 
 #. TRANSLATION: corsixth.keys
@@ -17008,11 +16818,6 @@ msgstr "Nâng cấp họa tiết trên các vật thể 3D."
 msgctxt "game_options"
 msgid "Uruguay"
 msgstr "Uruguay"
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Use"
-msgstr ""
 
 #. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
@@ -17999,11 +17804,6 @@ msgstr "thả bom ở gần"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
-msgid "exit game"
-msgstr "thoát trò chơi"
-
-#. TRANSLATION: dxx-rebirth.keys
-msgctxt "keys_files"
 msgid "fire primary"
 msgstr "nút bắn chính"
 
@@ -18210,27 +18010,17 @@ msgctxt "keys_files"
 msgid "proximity bomb"
 msgstr "bom gần"
 
-#. TRANSLATION: dxx-rebirth.keys
-msgctxt "keys_files"
-msgid "quick load"
-msgstr "tải nhanh"
-
-#. TRANSLATION: dxx-rebirth.keys
-msgctxt "keys_files"
-msgid "quick save"
-msgstr "lưu nhanh"
-
 #. TRANSLATION: libretro/desmume
 msgctxt "game_options"
 msgid "quick switch"
 msgstr "chuyển đổi nhanh"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "quickload"
 msgstr "tải nhanh"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "quicksave"
 msgstr "lưu nhanh"
@@ -18265,7 +18055,7 @@ msgctxt "game_options"
 msgid "scanlines"
 msgstr "scanlines"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "screenshot"
 msgstr "chụp màn hình"
@@ -18371,12 +18161,36 @@ msgid "yellow/blue"
 msgstr "vàng/xanh da trời"
 
 #~ msgctxt "game_options"
+#~ msgid "119fps"
+#~ msgstr "119fps"
+
+#~ msgctxt "game_options"
+#~ msgid "240fps"
+#~ msgstr "240fps"
+
+#~ msgctxt "game_options"
+#~ msgid "244fps"
+#~ msgstr "244fps"
+
+#~ msgctxt "game_options"
 #~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
 #~ msgstr "2P GAMEPAD MAPPING (KEYRAH)"
 
 #~ msgctxt "game_options"
 #~ msgid "5 Sideway Wiimote"
 #~ msgstr "5 Sideway Wiimote"
+
+#~ msgctxt "game_options"
+#~ msgid "60fps (Default)"
+#~ msgstr "60fps (Mặc định)"
+
+#~ msgctxt "game_options"
+#~ msgid "70fps"
+#~ msgstr "70fps"
+
+#~ msgctxt "game_options"
+#~ msgid "72fps"
+#~ msgstr "72fps"
 
 #~ msgctxt "game_options"
 #~ msgid "ANALOG DEADZONE"
@@ -18435,16 +18249,8 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "BGFX để xử lý hậu kỳ, accel/opengl cho ảnh thô."
 
 #~ msgctxt "keys_files"
-#~ msgid "Button L"
-#~ msgstr "Nút L"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button R"
-#~ msgstr "Nút R"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Select"
-#~ msgstr "Chọn Nút"
+#~ msgid "Bring up menu"
+#~ msgstr "Ra Menu"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"
@@ -18519,9 +18325,17 @@ msgstr "vàng/xanh da trời"
 #~ msgid "Composite (color bleeding + artifacts)"
 #~ msgstr "Composite (color bleeding + artifacts)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Configuration menu"
+#~ msgstr "Menu Cấu hình"
+
 #~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "Việc định cấu hình bộ điều khiển trong GZDoom có ​​thể gây ra sự cố."
+
+#~ msgctxt "keys_files"
+#~ msgid "Continue/Pause emulation"
+#~ msgstr "Tiếp tục/Tạm dừng mô phỏng"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18546,14 +18360,6 @@ msgstr "vàng/xanh da trời"
 #~ msgid "Display on screen information like savestate, config warning etc..."
 #~ msgstr ""
 #~ "Hiển thị thông tin lên màn hình như savestate, cảnh báo, cấu hình, v.v..."
-
-#~ msgctxt "keys_files"
-#~ msgid "Disposition A"
-#~ msgstr "Bố trí A"
-
-#~ msgctxt "keys_files"
-#~ msgid "Disposition B"
-#~ msgstr "Bố trí B"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18628,12 +18434,36 @@ msgstr "vàng/xanh da trời"
 #~ "Tăng cường. Cải thiện độ rõ nét của họa tiết ở xa khi bật mip-mapping."
 
 #~ msgctxt "keys_files"
+#~ msgid "Exit Dolphin"
+#~ msgstr "Thoát Dolphin"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Dosbox-X"
+#~ msgstr "Thoát khỏi DOSBOX-X"
+
+#~ msgctxt "keys_files"
 #~ msgid "Exit Drastic"
 #~ msgstr "Thoát Drastic"
 
 #~ msgctxt "keys_files"
-#~ msgid "FastForward"
-#~ msgstr "FastForward"
+#~ msgid "Exit Duckstation"
+#~ msgstr "Thoát Duckstation"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Game"
+#~ msgstr "Thoát trò chơi"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Steam"
+#~ msgstr "Thoát Steam"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit emulator using SDL"
+#~ msgstr "Thoát trình giả lập bằng SDL"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit running Flatpak"
+#~ msgstr "Thoát chạy Flatpak"
 
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
@@ -18657,22 +18487,6 @@ msgstr "vàng/xanh da trời"
 #~ msgid "GamePad + 4 Sideway Wiimote"
 #~ msgstr "GamePad + 4 Sideway Wiimote"
 
-#~ msgctxt "keys_files"
-#~ msgid "Hat Down"
-#~ msgstr "Hat Xuống"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Left"
-#~ msgstr "Hat Trái"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Right"
-#~ msgstr "Hat Phải"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Up"
-#~ msgstr "Hat Lên"
-
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Install the image reader card to read disk image files (Mac IIx only). "
@@ -18685,25 +18499,13 @@ msgstr "vàng/xanh da trời"
 #~ msgid "JUMP ON B"
 #~ msgstr "NHẢY LÊN B"
 
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Down"
-#~ msgstr "Joy2Pad Xuống"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Left"
-#~ msgstr "Joy2Pad Trái"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Right"
-#~ msgstr "Joy2Pad Phải"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Up"
-#~ msgstr "Joy2Pad Lên"
-
 #~ msgctxt "game_options"
 #~ msgid "Keypad to joyport mappings for 2 players."
 #~ msgstr "Ánh xạ Keypad to Joyport cho 2 người chơi."
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State"
+#~ msgstr "Tải"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
@@ -18720,10 +18522,6 @@ msgstr "vàng/xanh da trời"
 #~ msgstr ""
 #~ "Xác định độ phân giải cần sử dụng theo cách thủ công.&#x0a;Tự động mặc "
 #~ "định là Cao và chuyển sang Siêu cao khi cần."
-
-#~ msgctxt "keys_files"
-#~ msgid "Microphone"
-#~ msgstr "Microphone"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18744,6 +18542,18 @@ msgstr "vàng/xanh da trời"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Mở menu Dolphin-triforce"
 
+#~ msgctxt "keys_files"
+#~ msgid "Open DuckStation Quick Menu"
+#~ msgstr "Mở menu nhanh DuckStation"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Load Menu"
+#~ msgstr "Mở Menu Tải"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Save Menu"
+#~ msgstr "Mở Menu Lưu"
+
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (x86 only)"
 #~ msgstr "OpenGL (chỉ x86)"
@@ -18763,6 +18573,10 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "Passes all physical keyboard events for Pad2Key."
 #~ msgstr "Chuyển tất cả sự kiện từ bàn phím sang Pad2Key."
+
+#~ msgctxt "keys_files"
+#~ msgid "Pause / Menu"
+#~ msgstr "Tạm dừng / Menu"
 
 #~ msgctxt "game_options"
 #~ msgid "Per Pixel"
@@ -18789,8 +18603,32 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "Xung (Mặc định)"
 
 #~ msgctxt "keys_files"
+#~ msgid "Quick Load"
+#~ msgstr "Tải Nhanh"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quick Save"
+#~ msgstr "Lưu Nhanh"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quick load"
+#~ msgstr "Tải nhanh"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quick save"
+#~ msgstr "Lưu nhanh"
+
+#~ msgctxt "keys_files"
 #~ msgid "QuickMenu"
 #~ msgstr "QuickMenu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quit the application"
+#~ msgstr "Thoát khỏi ứng dụng"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quits the current level"
+#~ msgstr "Thoát level hiện tại"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18824,6 +18662,10 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "SVideo (chỉ chảy màu)"
 
 #~ msgctxt "keys_files"
+#~ msgid "Save State"
+#~ msgstr "Lưu"
+
+#~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Lưu trạng thái 1"
 
@@ -18839,6 +18681,14 @@ msgstr "vàng/xanh da trời"
 #~ msgid "Select the model of Color Computer to emulate"
 #~ msgstr "Chọn thiết kế màu máy tính để mô phỏng"
 
+#~ msgctxt "keys_files"
+#~ msgid "Service menu"
+#~ msgstr "Menu dịch vụ"
+
+#~ msgctxt "game_options"
+#~ msgid "Set desired framerate."
+#~ msgstr "Đặt khung hình mong muốn."
+
 #~ msgctxt "game_options"
 #~ msgid "Set the color palette to use."
 #~ msgstr "Đặt bảng màu để sử dụng."
@@ -18851,6 +18701,10 @@ msgstr "vàng/xanh da trời"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
 #~ msgstr "Đặt tốc độ làm mới tối đa mong muốn khi tắt Vsync."
 
+#~ msgctxt "keys_files"
+#~ msgid "Settings GUI"
+#~ msgstr "Cài đặt GUI"
+
 #~ msgctxt "game_options"
 #~ msgid "Simulate LCD color inaccuracy."
 #~ msgstr "Mô phỏng độ không chính xác màu LCD."
@@ -18862,6 +18716,14 @@ msgstr "vàng/xanh da trời"
 #~ msgstr ""
 #~ "Bỏ qua bộ đệm sẽ tắt chế độ tự động bỏ qua khung hình và hiển thị ở độ "
 #~ "phân giải đầu ra của màn hình."
+
+#~ msgctxt "keys_files"
+#~ msgid "Slot +"
+#~ msgstr "Slot +"
+
+#~ msgctxt "keys_files"
+#~ msgid "Slot -"
+#~ msgstr "Slot -"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
@@ -18886,13 +18748,13 @@ msgstr "vàng/xanh da trời"
 #~ "Truyền song song họa tiết tới GPU. Có thể cải thiện hiệu suất trên các "
 #~ "GPU mạnh."
 
-#~ msgctxt "keys_files"
-#~ msgid "Swap Screens"
-#~ msgstr "Đổi màn hình"
-
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "CHẾ ĐỘ NHÓM MÀU"
+
+#~ msgctxt "keys_files"
+#~ msgid "Take a screenshot"
+#~ msgstr "Chụp ảnh màn hình"
 
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
@@ -18905,10 +18767,6 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer disk images"
 #~ msgstr "Tandy Radio Shack Color Computer disk images"
-
-#~ msgctxt "keys_files"
-#~ msgid "TouchScreen"
-#~ msgstr "Màn hình cảm ứng"
 
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
@@ -18962,6 +18820,10 @@ msgstr "vàng/xanh da trời"
 #~ msgid "WiiMote Sideways"
 #~ msgstr "WiiMote Sideways"
 
+#~ msgctxt "keys_files"
+#~ msgid "exit game"
+#~ msgstr "thoát trò chơi"
+
 #~ msgctxt "game_options"
 #~ msgid "external (variable fps)"
 #~ msgstr "bên ngoài (khung hình / giây thay đổi)"
@@ -18973,6 +18835,14 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "internal (variable fps)"
 #~ msgstr "nội bộ (khung hình / giây thay đổi)"
+
+#~ msgctxt "keys_files"
+#~ msgid "quick load"
+#~ msgstr "tải nhanh"
+
+#~ msgctxt "keys_files"
+#~ msgid "quick save"
+#~ msgstr "lưu nhanh"
 
 #~ msgctxt "game_options"
 #~ msgid "weird colors"

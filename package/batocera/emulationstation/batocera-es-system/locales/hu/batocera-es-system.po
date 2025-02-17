@@ -303,7 +303,7 @@ msgctxt "game_options"
 msgid "100Mhz (Overclock)"
 msgstr "100Mhz (Túlhajtás)"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "100fps"
 msgstr "100fps"
@@ -388,11 +388,6 @@ msgctxt "game_options"
 msgid "11 MHz"
 msgstr "11 MHz"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "119fps"
-msgstr "119fps"
-
 #. TRANSLATION: libretro/np2kai, libretro/px68k
 msgctxt "game_options"
 msgid "11MB"
@@ -428,7 +423,7 @@ msgctxt "game_options"
 msgid "120MB"
 msgstr "120MB"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake, xenia-canary
+#. TRANSLATION: libretro/tyrquake, xenia-canary
 msgctxt "game_options"
 msgid "120fps"
 msgstr "120fps"
@@ -548,7 +543,7 @@ msgctxt "game_options"
 msgid "1440 x 900"
 msgstr "1440 x 900"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake, xenia-canary
+#. TRANSLATION: libretro/tyrquake, xenia-canary
 msgctxt "game_options"
 msgid "144fps"
 msgstr "144fps"
@@ -978,20 +973,10 @@ msgctxt "game_options"
 msgid "240 fps"
 msgstr "240 fps"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "240fps"
-msgstr "240fps"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "240ms"
 msgstr "240ms"
-
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "244fps"
-msgstr "244fps"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -1243,7 +1228,7 @@ msgctxt "game_options"
 msgid "30FPS"
 msgstr "30FPS"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "30fps"
 msgstr "30fps"
@@ -1803,11 +1788,6 @@ msgctxt "game_options"
 msgid "60fps"
 msgstr "60fps"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "60fps (Default)"
-msgstr "60fps (Alap)"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "60ms"
@@ -1898,11 +1878,6 @@ msgctxt "game_options"
 msgid "7 Frames"
 msgstr "7 Képkocka"
 
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "70fps"
-msgstr "70fps"
-
 #. TRANSLATION: libretro/kronos, libretro/yabasanshiro, theforceengine, yabasanshiro
 msgctxt "game_options"
 msgid "720p"
@@ -1912,11 +1887,6 @@ msgstr "720p"
 msgctxt "game_options"
 msgid "72MB"
 msgstr "72MB"
-
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "72fps"
-msgstr "72fps"
 
 #. TRANSLATION: lindbergh-loader, rtcw, theforceengine
 msgctxt "game_options"
@@ -1928,7 +1898,7 @@ msgctxt "game_options"
 msgid "75% (Default)"
 msgstr "75% (Alap)"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "75fps"
 msgstr "75fps"
@@ -2118,7 +2088,7 @@ msgctxt "game_options"
 msgid "90 degrees"
 msgstr "90 fok"
 
-#. TRANSLATION: libretro/openlara, libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "90fps"
 msgstr "90fps"
@@ -2956,11 +2926,6 @@ msgctxt "game_options"
 msgid "Alone in the Dark"
 msgstr "Alone in the Dark"
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Alt Fire"
-msgstr ""
-
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "AltWFC (172.104.88.237)"
@@ -3356,11 +3321,6 @@ msgstr "Automatikus keret kihagyása"
 msgctxt "game_options"
 msgid "Auto Max Quality"
 msgstr "Automatikus Max minőség"
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Auto Run"
-msgstr ""
 
 #. TRANSLATION: pcsx2, pcsx2
 msgctxt "game_options"
@@ -3942,11 +3902,6 @@ msgctxt "game_options"
 msgid "Bolivia"
 msgstr "Bolívia"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Boost"
-msgstr ""
-
 #. TRANSLATION: libretro/fceumm, libretro/nestopia
 msgctxt "game_options"
 msgid "Both"
@@ -3982,11 +3937,6 @@ msgctxt "game_options"
 msgid "Bouncing Box"
 msgstr "Pattogó doboz"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Brake / Shoot"
-msgstr ""
-
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Brazil"
@@ -3998,11 +3948,6 @@ msgid "Brazilian Portuguese"
 msgstr ""
 "B\n"
 "razil portugál"
-
-#. TRANSLATION: fallout1-ce.keys, fallout2-ce.keys
-msgctxt "keys_files"
-msgid "Bring up menu"
-msgstr "A menü előhívása"
 
 #. TRANSLATION: ryujinx, suyu
 msgctxt "game_options"
@@ -4050,12 +3995,12 @@ msgctxt "game_options"
 msgid "Bulgarian"
 msgstr "Bulgár"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button A"
 msgstr "A gomb"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button B"
 msgstr "B gomb"
@@ -4065,22 +4010,37 @@ msgctxt "keys_files"
 msgid "Button C"
 msgstr "C gomb"
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button L"
+msgstr "L gomb"
+
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Button Options"
 msgstr "Gomb beállítások"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button R"
+msgstr "R gomb"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button Select"
+msgstr "Kiválasztás gomb"
+
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button Start"
 msgstr "Start gomb"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button X"
 msgstr "X gomb"
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: mugen.keys, nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button Y"
 msgstr "Y gomb"
@@ -4957,26 +4917,6 @@ msgctxt "keys_files"
 msgid "Change Camera Angle"
 msgstr "Kamera szögének módosítása"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 1 / Right"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 2 / Left"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 3 / Up"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 4 / Down"
-msgstr ""
-
 #. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid ""
@@ -5559,11 +5499,6 @@ msgctxt "game_options"
 msgid "Config"
 msgstr "Beállítás"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Configuration menu"
-msgstr "Konfiguráció menü"
-
 #. TRANSLATION: libretro/fbneo
 msgctxt "game_options"
 msgid "Console AES Japan"
@@ -5573,11 +5508,6 @@ msgstr "Console AES Japan"
 msgctxt "game_options"
 msgid "Console AES World"
 msgstr "Console AES Világ"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Continue/Pause emulation"
-msgstr "Emuláció folytatása/szüneteltetése"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -5676,11 +5606,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Cross"
 msgstr "Kereszt"
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Crouch"
-msgstr ""
 
 #. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
@@ -6337,6 +6262,16 @@ msgctxt "game_options"
 msgid "Display the current frames per second."
 msgstr ""
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Disposition A"
+msgstr "Disposition A"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Disposition B"
+msgstr "Disposition B"
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Distorts the output to fill the display fully Overrides aspect ratio."
@@ -6859,11 +6794,6 @@ msgstr "Egérrel emulálja a Wiimote mutatót."
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Emulates the floppy drive sound."
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys
-msgctxt "keys_files"
-msgid "Emulator Config"
 msgstr ""
 
 #. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
@@ -7625,52 +7555,17 @@ msgctxt "game_options"
 msgid "Exclusive Ubershaders"
 msgstr "Exkluzív Ubershaderek"
 
-#. TRANSLATION: wii.dolphin.keys
-msgctxt "keys_files"
-msgid "Exit Dolphin"
-msgstr "Lépjen ki a Dolphinból"
-
-#. TRANSLATION: dos.dosbox-x.keys
-msgctxt "keys_files"
-msgid "Exit Dosbox-X"
-msgstr "Kilépés a  Dosbox-X-ből"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Exit Duckstation"
-msgstr "Kilépés Duckstation"
-
-#. TRANSLATION: catacomb.keys, lindbergh.keys
-msgctxt "keys_files"
-msgid "Exit Game"
-msgstr "Kilépés a játékból"
-
-#. TRANSLATION: steam.keys
-msgctxt "keys_files"
-msgid "Exit Steam"
-msgstr "Kilépés a Steamből"
-
-#. TRANSLATION: 3ds.citra.keys, actionmax.keys, amiga1200.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, ...
+#. TRANSLATION: actionmax.keys, hotkeys.keys, naomigd.flycast.keys, wiiware.dolphin-emu.keys, xboxcloud.keys
 msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "Kilépés az emulátorból"
 
-#. TRANSLATION: moonlight.moonlight.keys
-msgctxt "keys_files"
-msgid "Exit emulator using SDL"
-msgstr "Kilépés az emulátorból SDL használatával"
-
-#. TRANSLATION: etlegacy.keys, fallout1-ce.keys, fallout2-ce.keys, jazz2.keys, sonic3-air.keys, ...
+#. TRANSLATION: sonicmania.keys, sonicnexus.keys
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr "Kilépés a játékból"
 
-#. TRANSLATION: flatpak.keys
-msgctxt "keys_files"
-msgid "Exit running Flatpak"
-msgstr "Lépjen ki a Flatpak futásából"
-
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, fpinball.keys, jaguar.bigpemu.keys, ...
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, opentyrian.keys, prboom.gzdoom.keys, ...
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Kilépés az emulátorból"
@@ -7917,7 +7812,7 @@ msgctxt "game_options"
 msgid "FRAMECOUNT"
 msgstr ""
 
-#. TRANSLATION: libretro, libretro/openlara
+#. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "FRAMERATE"
 msgstr "FILMKOCKA SZÁM"
@@ -8045,6 +7940,11 @@ msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "Gyors tolmács"
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "FastForward"
+msgstr "Gyors előre"
+
 #. TRANSLATION: flycast
 #, c-format
 msgctxt "game_options"
@@ -8118,7 +8018,7 @@ msgctxt "game_options"
 msgid "Finnish (fi)"
 msgstr "Finn (fi)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys, rott.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "Tűz"
@@ -8977,11 +8877,6 @@ msgstr ""
 "A játékok a normálnál gyorsabban/lassabban futhatnak, ha nem megfelelő "
 "régiót választ ki."
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Gas / Accelerate / Short Pass"
-msgstr ""
-
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "Gaussian"
@@ -9351,6 +9246,26 @@ msgstr ""
 msgctxt "game_options"
 msgid "Hartung Game Master cartridges"
 msgstr "Hartung Game Master kazetták"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Down"
+msgstr "Hat Le"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Left"
+msgstr "Hat Bal"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Right"
+msgstr "Hat Jobb"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Hat Up"
+msgstr "Hat Fel"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -9880,16 +9795,6 @@ msgctxt "game_options"
 msgid "InuYasha Sengoku Battle Fix"
 msgstr "InuYasha Sengoku Battle Fix"
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Inventory Next"
-msgstr ""
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Inventory Previous"
-msgstr ""
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
@@ -10059,6 +9964,26 @@ msgctxt "game_options"
 msgid "Jordan"
 msgstr "Jordánia"
 
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Down"
+msgstr "Joy2Pad le"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Left"
+msgstr "Joy2Pad bal"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Right"
+msgstr "Joy2Pad jobb"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Joy2Pad Up"
+msgstr "Joy2Pad fel"
+
 #. TRANSLATION: solarus
 msgctxt "game_options"
 msgid "Joypad"
@@ -10124,7 +10049,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "Július"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr ""
@@ -10634,11 +10559,6 @@ msgctxt "game_options"
 msgid "Lithuania"
 msgstr "Litvánia"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Load State"
-msgstr "Játékállás betöltése"
-
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Load latest save state on game launch and save state when exiting game."
@@ -10660,17 +10580,12 @@ msgctxt "keys_files"
 msgid "Lockbar Fire Button"
 msgstr "Lockbar tűz gomb"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Long Pass"
-msgstr ""
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
 msgstr "Hosszú látható képernyőszegély (cm)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr ""
@@ -11041,7 +10956,7 @@ msgid "Manually set cycles per second. Use with caution."
 msgstr ""
 "Manuálisan állítsa be a ciklusokat másodpercenként. Óvatosan használja."
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr ""
@@ -11258,7 +11173,7 @@ msgctxt "game_options"
 msgid "Menacer Light Gun"
 msgstr "Menacer Light Gun"
 
-#. TRANSLATION: scummvm.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Menu"
 msgstr "Menü"
@@ -11292,6 +11207,11 @@ msgstr "Mexikó"
 msgctxt "game_options"
 msgid "Microcosm"
 msgstr "Microcosm"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Microphone"
+msgstr "Mikrofon"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -11411,12 +11331,12 @@ msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Egérkattintás"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Move Backward"
 msgstr "Mozgás hátrafelé"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Move Forward"
 msgstr "Mozgás előre"
@@ -11818,9 +11738,14 @@ msgctxt "keys_files"
 msgid "Next Disc (m3u)"
 msgstr "Következő lemez (m3u)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Next slot"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -12262,16 +12187,6 @@ msgstr ""
 "Csak támogatott játékok. A magasabb beállítások növelik a "
 "rendszerkövetelményeket."
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Open"
-msgstr ""
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Open DuckStation Quick Menu"
-msgstr "DuckStation gyorsmenü megnyitása"
-
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open LUA console"
@@ -12279,18 +12194,8 @@ msgstr "Nyissa meg a LUA konzolt"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
-msgid "Open Load Menu"
-msgstr "Betöltés menü megnyitása"
-
-#. TRANSLATION: catacomb.keys
-msgctxt "keys_files"
 msgid "Open Menu"
 msgstr "Menü megnyitása"
-
-#. TRANSLATION: catacomb.keys
-msgctxt "keys_files"
-msgid "Open Save Menu"
-msgstr "Mentés menü megnyitása"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -12693,16 +12598,6 @@ msgctxt "game_options"
 msgid "Paddle Control"
 msgstr "Tekerővezérlés"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Paddle Left / Long Pass"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Paddle Right"
-msgstr ""
-
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
 msgid "Paddle can only be used in port 2."
@@ -12771,11 +12666,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Partial"
 msgstr "Részleges"
-
-#. TRANSLATION: psp.ppsspp.keys
-msgctxt "keys_files"
-msgid "Pause / Menu"
-msgstr "Szünet / Menü"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -13156,9 +13046,9 @@ msgctxt "keys_files"
 msgid "Press the Y key for 'Yes'"
 msgstr "Nyomja meg az Y billentyűt az „Igen” kiválasztásához"
 
-#. TRANSLATION: raze.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Previous Weapon"
+msgid "Previous slot"
 msgstr ""
 
 #. TRANSLATION: cemu
@@ -13235,45 +13125,10 @@ msgctxt "game_options"
 msgid "Qatar"
 msgstr "Katar"
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Quick Kick"
-msgstr ""
-
-#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Load"
-msgstr "Mentés betöltése"
-
-#. TRANSLATION: cgenius.cgenius.keys, doom3.keys, theforceengine.keys
-msgctxt "keys_files"
-msgid "Quick Save"
-msgstr "Gyors mentés"
-
-#. TRANSLATION: corsixth.keys, fallout1-ce.keys, fallout2-ce.keys, mame.mame.keys, rtcw.keys
-msgctxt "keys_files"
-msgid "Quick load"
-msgstr "Gyors betöltés"
-
-#. TRANSLATION: corsixth.keys, fallout1-ce.keys, fallout2-ce.keys, mame.mame.keys, rtcw.keys
-msgctxt "keys_files"
-msgid "Quick save"
-msgstr "Gyors mentés"
-
 #. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
 msgctxt "game_options"
 msgid "Quickload"
 msgstr "Gyorstöltés"
-
-#. TRANSLATION: corsixth.keys, xash3d_fwgs.keys
-msgctxt "keys_files"
-msgid "Quit the application"
-msgstr "Lépjen ki az alkalmazásból"
-
-#. TRANSLATION: corsixth.keys
-msgctxt "keys_files"
-msgid "Quits the current level"
-msgstr "Kilép a jelenlegi szintről"
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc
 msgctxt "game_options"
@@ -13736,6 +13591,11 @@ msgstr "Játék újrakezdése"
 msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "BLENDMODE körvonal visszaállítása a Singe sprite-okon."
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Restore state"
+msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -14505,14 +14365,14 @@ msgctxt "game_options"
 msgid "Saudi Arabia"
 msgstr "Szaúd-Arábia"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, naomi.flycast.keys, ...
-msgctxt "keys_files"
-msgid "Save State"
-msgstr "Állam mentése"
-
-#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Save State/Save to Selected Slot"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Save state"
 msgstr ""
 
 #. TRANSLATION: xemu
@@ -14570,7 +14430,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Képernyő dőlésszöge (fok)"
 
-#. TRANSLATION: 3ds.citra.keys, atomiswave.flycast.keys, doom3.keys, dreamcast.flycast.keys, jaguar.bigpemu.keys, ...
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Pillanatkép"
@@ -14620,12 +14480,12 @@ msgctxt "game_options"
 msgid "Select Keyboard, Joystick or Gamepad mode"
 msgstr "Válassza a Billentyűzet, Joystick vagy Gamepad módot"
 
-#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Select State/Select State Slot 1"
 msgstr ""
 
-#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Select State/Select State Slot 2"
 msgstr ""
@@ -14778,26 +14638,11 @@ msgctxt "game_options"
 msgid "Serbian"
 msgstr "Szerb"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Service / Insert Coins Button"
-msgstr ""
-
-#. TRANSLATION: daphne.hypseus-singe.keys, singe.hypseus-singe.keys
-msgctxt "keys_files"
-msgid "Service menu"
-msgstr "Szerviz menü"
-
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Set controller 1 and 2 to None to use it standalone."
 msgstr ""
 "Állítsa az 1. és 2. vezérlőt Nincs értékre, ha önállóan szeretné használni."
-
-#. TRANSLATION: libretro/openlara
-msgctxt "game_options"
-msgid "Set desired framerate."
-msgstr "Állítsa be a kívánt képkockasebességet."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -14907,11 +14752,6 @@ msgstr "Beállítja a méretező szűrő módot rendereléskor."
 msgctxt "game_options"
 msgid "Sets the window size to an integer size."
 msgstr "Az ablak méretét egész számra állítja be."
-
-#. TRANSLATION: amiga1200.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amigacdtv.fsuae.keys
-msgctxt "keys_files"
-msgid "Settings GUI"
-msgstr "Grafikus felület beállítása"
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -15274,16 +15114,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Skynet"
 msgstr "Skynet"
-
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Slot +"
-msgstr "Slot +"
-
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Slot -"
-msgstr "Slot -"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -15673,11 +15503,6 @@ msgctxt "keys_files"
 msgid "Start / Valid"
 msgstr "Kezdés / Érvényes"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Start Button"
-msgstr ""
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Start at level number"
@@ -15688,14 +15513,9 @@ msgctxt "keys_files"
 msgid "Start game"
 msgstr "Játék kezdése"
 
-#. TRANSLATION: gamecube.dolphin.keys, triforce.dolphin_triforce.keys, wii.dolphin.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "State/Load from Selected Slot"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "State/Save to Selected Slot"
 msgstr ""
 
 #. TRANSLATION: rpcs3
@@ -15723,12 +15543,12 @@ msgctxt "game_options"
 msgid "Store past states to rewind to in real-time, if the core supports it."
 msgstr ""
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
 msgstr "Oldalazás balra"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr "Oldalazás jobbra"
@@ -15898,6 +15718,11 @@ msgstr "Surround 7.1"
 msgctxt "keys_files"
 msgid "Swap Screen"
 msgstr "Képernyő cseréje"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "Swap Screens"
+msgstr "Képernyők cseréje"
 
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
@@ -16251,16 +16076,6 @@ msgctxt "game_options"
 msgid "Taiwanese"
 msgstr "Tajván"
 
-#. TRANSLATION: switch.ryujinx.keys
-msgctxt "keys_files"
-msgid "Take Screenshot"
-msgstr ""
-
-#. TRANSLATION: corsixth.keys
-msgctxt "keys_files"
-msgid "Take a screenshot"
-msgstr "Készítsen képernyőképet"
-
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Tandy"
@@ -16309,11 +16124,6 @@ msgstr ""
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
 msgid "Teal (Game Boy Light)"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Test Button"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -16470,11 +16280,6 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "Játékcsalás vagy 16/9 képarány-javító kódok használata."
 
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Toggle Crouch"
-msgstr ""
-
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Screen Layout"
@@ -16555,6 +16360,11 @@ msgstr "Jobb felső pozíció, kicsi"
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "Touch Screen"
+msgstr "Érintőképernyő"
+
+#. TRANSLATION: nds.drastic.keys
+msgctxt "keys_files"
+msgid "TouchScreen"
 msgstr "Érintőképernyő"
 
 #. TRANSLATION: corsixth.keys
@@ -17081,11 +16891,6 @@ msgstr "Felbővített textúrák a 3D objektumokon."
 msgctxt "game_options"
 msgid "Uruguay"
 msgstr "Uruguay"
-
-#. TRANSLATION: raze.keys
-msgctxt "keys_files"
-msgid "Use"
-msgstr ""
 
 #. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
@@ -18079,11 +17884,6 @@ msgstr "közelségi bomba ledobása"
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
-msgid "exit game"
-msgstr "kilépés a játékból"
-
-#. TRANSLATION: dxx-rebirth.keys
-msgctxt "keys_files"
 msgid "fire primary"
 msgstr "elsődleges tűz"
 
@@ -18291,27 +18091,17 @@ msgctxt "keys_files"
 msgid "proximity bomb"
 msgstr "közelségi bomba"
 
-#. TRANSLATION: dxx-rebirth.keys
-msgctxt "keys_files"
-msgid "quick load"
-msgstr "gyors betöltés"
-
-#. TRANSLATION: dxx-rebirth.keys
-msgctxt "keys_files"
-msgid "quick save"
-msgstr "gyors mentés"
-
 #. TRANSLATION: libretro/desmume
 msgctxt "game_options"
 msgid "quick switch"
 msgstr "gyorsváltás"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "quickload"
 msgstr "quickload"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "quicksave"
 msgstr "quicksave"
@@ -18346,7 +18136,7 @@ msgctxt "game_options"
 msgid "scanlines"
 msgstr "scanlines"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, raze.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "screenshot"
 msgstr "képernyőkép"
@@ -18468,6 +18258,10 @@ msgstr "sárga/kék"
 #~ msgstr "115% (Óvatosan)"
 
 #~ msgctxt "game_options"
+#~ msgid "119fps"
+#~ msgstr "119fps"
+
+#~ msgctxt "game_options"
 #~ msgid "120% (Are you crazy?)"
 #~ msgstr "120% (Megőrültél?)"
 
@@ -18492,6 +18286,14 @@ msgstr "sárga/kék"
 #~ msgstr "2.5x 1080p (1600x1320)"
 
 #~ msgctxt "game_options"
+#~ msgid "240fps"
+#~ msgstr "240fps"
+
+#~ msgctxt "game_options"
+#~ msgid "244fps"
+#~ msgstr "244fps"
+
+#~ msgctxt "game_options"
 #~ msgid "256 KB"
 #~ msgstr "256 KB"
 
@@ -18510,6 +18312,18 @@ msgstr "sárga/kék"
 #~ msgctxt "game_options"
 #~ msgid "512 KB"
 #~ msgstr "512 KB"
+
+#~ msgctxt "game_options"
+#~ msgid "60fps (Default)"
+#~ msgstr "60fps (Alap)"
+
+#~ msgctxt "game_options"
+#~ msgid "70fps"
+#~ msgstr "70fps"
+
+#~ msgctxt "game_options"
+#~ msgid "72fps"
+#~ msgstr "72fps"
 
 #~ msgctxt "game_options"
 #~ msgid "8x (CSAA)"
@@ -18626,16 +18440,8 @@ msgstr "sárga/kék"
 #~ msgstr "BGFX az utólagos feldolgozáshoz, accel/opengl a nyers képhez."
 
 #~ msgctxt "keys_files"
-#~ msgid "Button L"
-#~ msgstr "L gomb"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button R"
-#~ msgstr "R gomb"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Select"
-#~ msgstr "Kiválasztás gomb"
+#~ msgid "Bring up menu"
+#~ msgstr "A menü előhívása"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"
@@ -18737,9 +18543,17 @@ msgstr "sárga/kék"
 #~ msgid "Composite (color bleeding + artifacts)"
 #~ msgstr "Kompozit (színes vérzés + műtermékek)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Configuration menu"
+#~ msgstr "Konfiguráció menü"
+
 #~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "A vezérlők konfigurálása a GZDoomban problémákat okozhat."
+
+#~ msgctxt "keys_files"
+#~ msgid "Continue/Pause emulation"
+#~ msgstr "Emuláció folytatása/szüneteltetése"
 
 #~ msgctxt "game_options"
 #~ msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
@@ -18797,14 +18611,6 @@ msgstr "sárga/kék"
 #~ msgstr ""
 #~ "Információk megjelenítése a képernyőn, például mentési állapot, "
 #~ "konfigurációs figyelmeztetés stb."
-
-#~ msgctxt "keys_files"
-#~ msgid "Disposition A"
-#~ msgstr "Disposition A"
-
-#~ msgctxt "keys_files"
-#~ msgid "Disposition B"
-#~ msgstr "Disposition B"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18915,16 +18721,40 @@ msgstr "sárga/kék"
 #~ "engedélyezve van."
 
 #~ msgctxt "keys_files"
+#~ msgid "Exit Dolphin"
+#~ msgstr "Lépjen ki a Dolphinból"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Dosbox-X"
+#~ msgstr "Kilépés a  Dosbox-X-ből"
+
+#~ msgctxt "keys_files"
 #~ msgid "Exit Drastic"
 #~ msgstr "Kilépés Drastic"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Duckstation"
+#~ msgstr "Kilépés Duckstation"
 
 #~ msgctxt "keys_files"
 #~ msgid "Exit Emulator"
 #~ msgstr "Lépjen ki az emulátorból"
 
 #~ msgctxt "keys_files"
-#~ msgid "FastForward"
-#~ msgstr "Gyors előre"
+#~ msgid "Exit Game"
+#~ msgstr "Kilépés a játékból"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Steam"
+#~ msgstr "Kilépés a Steamből"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit emulator using SDL"
+#~ msgstr "Kilépés az emulátorból SDL használatával"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit running Flatpak"
+#~ msgstr "Lépjen ki a Flatpak futásából"
 
 #~ msgctxt "game_options"
 #~ msgid "FlexDMD disabled"
@@ -18955,22 +18785,6 @@ msgstr "sárga/kék"
 #~ msgid "GamePad + 4 Sideway Wiimote"
 #~ msgstr "GamePad + 4 Sideway Wiimote"
 
-#~ msgctxt "keys_files"
-#~ msgid "Hat Down"
-#~ msgstr "Hat Le"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Left"
-#~ msgstr "Hat Bal"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Right"
-#~ msgstr "Hat Jobb"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Up"
-#~ msgstr "Hat Fel"
-
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax."
 #~ msgstr "Célkereszt elrejtése a támogatott játékokban, pl. ActionMax."
@@ -18991,25 +18805,13 @@ msgstr "sárga/kék"
 #~ msgid "JUMP ON B"
 #~ msgstr "B TŰHÖZ UGRÁS"
 
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Down"
-#~ msgstr "Joy2Pad le"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Left"
-#~ msgstr "Joy2Pad bal"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Right"
-#~ msgstr "Joy2Pad jobb"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Up"
-#~ msgstr "Joy2Pad fel"
-
 #~ msgctxt "game_options"
 #~ msgid "Keypad to joyport mappings for 2 players."
 #~ msgstr "Billentyűzet-joyport leképezések 2 játékos számára."
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State"
+#~ msgstr "Játékállás betöltése"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
@@ -19035,10 +18837,6 @@ msgstr "sárga/kék"
 #~ "Manuálisan határozza meg, hogy melyik felbontást használja.&#x0a;Az Auto "
 #~ "alapértelmezés szerint Magasra állítja, és szükség esetén Szupermagasra "
 #~ "vált."
-
-#~ msgctxt "keys_files"
-#~ msgid "Microphone"
-#~ msgstr "Mikrofon"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19069,6 +18867,18 @@ msgstr "sárga/kék"
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Dolphin-triforce menü megnyitása"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open DuckStation Quick Menu"
+#~ msgstr "DuckStation gyorsmenü megnyitása"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Load Menu"
+#~ msgstr "Betöltés menü megnyitása"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Save Menu"
+#~ msgstr "Mentés menü megnyitása"
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (x86 only)"
@@ -19117,6 +18927,10 @@ msgstr "sárga/kék"
 #~ msgctxt "game_options"
 #~ msgid "Passes all physical keyboard events for Pad2Key."
 #~ msgstr "Átad minden fizikai billentyűzet eseményt a Pad2Key számára."
+
+#~ msgctxt "keys_files"
+#~ msgid "Pause / Menu"
+#~ msgstr "Szünet / Menü"
 
 #~ msgctxt "game_options"
 #~ msgid "Per Pixel"
@@ -19191,8 +19005,32 @@ msgstr "sárga/kék"
 #~ msgstr "Nyomd meg a 8. gombot"
 
 #~ msgctxt "keys_files"
+#~ msgid "Quick Load"
+#~ msgstr "Mentés betöltése"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quick Save"
+#~ msgstr "Gyors mentés"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quick load"
+#~ msgstr "Gyors betöltés"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quick save"
+#~ msgstr "Gyors mentés"
+
+#~ msgctxt "keys_files"
 #~ msgid "QuickMenu"
 #~ msgstr "Gyorsmenü"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quit the application"
+#~ msgstr "Lépjen ki az alkalmazásból"
+
+#~ msgctxt "keys_files"
+#~ msgid "Quits the current level"
+#~ msgstr "Kilép a jelenlegi szintről"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19231,6 +19069,10 @@ msgstr "sárga/kék"
 #~ msgstr "SVideo (csak színes vérzés)"
 
 #~ msgctxt "keys_files"
+#~ msgid "Save State"
+#~ msgstr "Állam mentése"
+
+#~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Állapot mentése Slot 1"
 
@@ -19245,6 +19087,14 @@ msgstr "sárga/kék"
 #~ msgctxt "game_options"
 #~ msgid "Select the model of Color Computer to emulate"
 #~ msgstr "Válassza ki az emulálni kívánt színes számítógép modelljét"
+
+#~ msgctxt "keys_files"
+#~ msgid "Service menu"
+#~ msgstr "Szerviz menü"
+
+#~ msgctxt "game_options"
+#~ msgid "Set desired framerate."
+#~ msgstr "Állítsa be a kívánt képkockasebességet."
 
 #~ msgctxt "game_options"
 #~ msgid "Set the color palette to use."
@@ -19268,6 +19118,10 @@ msgstr "sárga/kék"
 #~ msgid "Set to full screen"
 #~ msgstr "Teljes képernyőre állítás"
 
+#~ msgctxt "keys_files"
+#~ msgid "Settings GUI"
+#~ msgstr "Grafikus felület beállítása"
+
 #~ msgctxt "game_options"
 #~ msgid "Simulate LCD color inaccuracy."
 #~ msgstr "Szimulálja az LCD színpontatlanságát."
@@ -19279,6 +19133,14 @@ msgstr "sárga/kék"
 #~ msgstr ""
 #~ "Kihagyási puffer letiltja az automatikus képkockakihagyást és a "
 #~ "megjelenítési kimeneti felbontáson történő renderelést."
+
+#~ msgctxt "keys_files"
+#~ msgid "Slot +"
+#~ msgstr "Slot +"
+
+#~ msgctxt "keys_files"
+#~ msgid "Slot -"
+#~ msgstr "Slot -"
 
 #~ msgctxt "game_options"
 #~ msgid "Standard"
@@ -19322,13 +19184,13 @@ msgstr "sárga/kék"
 #~ msgid "Stretch to 4:3"
 #~ msgstr "Nyújtás 4:3-ra"
 
-#~ msgctxt "keys_files"
-#~ msgid "Swap Screens"
-#~ msgstr "Képernyők cseréje"
-
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "CSAPAT SZÍN MÓD"
+
+#~ msgctxt "keys_files"
+#~ msgid "Take a screenshot"
+#~ msgstr "Készítsen képernyőképet"
 
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
@@ -19349,10 +19211,6 @@ msgstr "sárga/kék"
 #~ msgstr ""
 #~ "Ez az opció lehetővé teszi az Xbox Live Arcacde játékok lejátszását. "
 #~ "Kompatibilitási problémákat okozhat nem XBLA játékokkal."
-
-#~ msgctxt "keys_files"
-#~ msgid "TouchScreen"
-#~ msgstr "Érintőképernyő"
 
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
@@ -19425,6 +19283,10 @@ msgstr "sárga/kék"
 #~ msgid "WiiMote Sideways"
 #~ msgstr "WiiMote oldalirányban"
 
+#~ msgctxt "keys_files"
+#~ msgid "exit game"
+#~ msgstr "kilépés a játékból"
+
 #~ msgctxt "game_options"
 #~ msgid "external (variable fps)"
 #~ msgstr "külső (változó fps)"
@@ -19436,6 +19298,14 @@ msgstr "sárga/kék"
 #~ msgctxt "game_options"
 #~ msgid "internal (variable fps)"
 #~ msgstr "belső (változó fps)"
+
+#~ msgctxt "keys_files"
+#~ msgid "quick load"
+#~ msgstr "gyors betöltés"
+
+#~ msgctxt "keys_files"
+#~ msgid "quick save"
+#~ msgstr "gyors mentés"
 
 #~ msgctxt "game_options"
 #~ msgid "weird colors"
