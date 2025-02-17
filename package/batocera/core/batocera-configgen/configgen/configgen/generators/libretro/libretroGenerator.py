@@ -357,12 +357,6 @@ class LibretroGenerator(Generator):
             directory_path = '/'.join(rom.split('/')[:-1])
             rom_path = rom_path.parent / first_line
 
-        if system.name == 'openlara':
-            with open(rom_path, 'r') as file:
-                first_line = file.readline().strip()
-            directory_path = '/'.join(rom.split('/')[:-1])
-            rom_path = rom_path.parent / first_line
-
         if system.name == '3ds':
             if "squashfs" in rom:
                 romsInDir = glob.glob(glob.escape(rom) + '/*.3ds')
@@ -445,7 +439,7 @@ def getGFXBackend(system: Emulator) -> str:
             core = system.config['core']
             if backend == "gl" and core in [ 'kronos', 'citra', 'mupen64plus-next', 'melonds', 'beetle-psx-hw' ]:
                 backend = "glcore"
-            if backend == "glcore" and core in [ 'parallel_n64', 'yabasanshiro', 'openlara', 'boom3' ]:
+            if backend == "glcore" and core in [ 'parallel_n64', 'yabasanshiro', 'boom3' ]:
                 backend = "gl"
 
         return backend

@@ -3263,20 +3263,6 @@ def generateCoreSettings(coreSettings: UnixSettings, system: Emulator, rom: Path
         else:
             coreSettings.save('vitaquakeiii_invert_y_axis', '"disabled"')
 
-    # OpenLara
-    if (system.config['core'] == 'openlara'):
-        # Internal resolution
-        if system.isOptSet('lara-resolution'):
-            coreSettings.save('openlara_resolution', '"' + system.config['lara-resolution'] + '"')
-        else:
-            coreSettings.save('openlara_resolution', '"1280x720"')
-
-        # Framerate
-        if system.isOptSet('lara-framerate'):
-            coreSettings.save('openlara_framerate', '"' + system.config['lara-framerate'] + '"')
-        else:
-            coreSettings.save('openlara_framerate', '"60fps"')
-
     # HatariB
     if (system.config['core'] == 'hatarib'):
         # Defaults
