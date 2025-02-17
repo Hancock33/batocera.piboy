@@ -1,6 +1,7 @@
 config BR2_PACKAGE_UTHASH
-    bool "uthash"
-    help
-      C macros for hash tables and more.
+	bool "uthash"
 
-      https://troydhanson.github.io/uthash/
+	help
+	  C macros for hash tables and more.
+
+	  https://troydhanson.github.io/uthash/

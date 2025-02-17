@@ -530,6 +530,7 @@ menu "Libraries"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/sdl12-compat/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/sdl3/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/sf_rpi_status/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/uthash/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/wxwidgets/Config.in"
 endmenu
 
