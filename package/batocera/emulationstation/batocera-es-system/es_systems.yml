@@ -4653,7 +4653,7 @@ traider1:
   extensions:           [game, croft]
   platform:             pc
   group:                ports
-  path:                 /userdata/roms/ports/openlara
+  path:                 /userdata/roms/ports/traider1
   emulators:
     openlara:
       openlara:         { requireAnyOf: [BR2_PACKAGE_OPENLARA] }
@@ -4676,6 +4676,7 @@ traider2:
   extensions:           [croft]
   platform:             pc
   group:                ports
+  path:                 /userdata/roms/ports/traider2
   emulators:
     tr2x:
       tr2x:             { requireAnyOf: [BR2_PACKAGE_TR2X] }

@@ -6,7 +6,7 @@ index ce56353..c64d5a7 100644
  
      SDL_ShowCursor(SDL_DISABLE);
  
-+    strcpy(contentDir,  "/userdata/roms/ports/openlara/");
++    strcpy(contentDir,  "/userdata/roms/ports/traider1/");
 +
      const char *home;
      if (!(home = getenv("HOME")))
