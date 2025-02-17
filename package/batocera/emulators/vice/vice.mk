@@ -47,12 +47,6 @@ define VICE_SRC_AUTOCONFIGURE
 	cd $(@D)/vice && ./autogen.sh
 endef
 
-define VICE_POST_PROCESS
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/vice/c64.vice.keys $(TARGET_DIR)/usr/share/evmapy
-endef
-
 VICE_POST_EXTRACT_HOOKS += VICE_SRC_AUTOCONFIGURE
-VICE_POST_INSTALL_TARGET_HOOKS += VICE_POST_PROCESS
 
 $(eval $(autotools-package))

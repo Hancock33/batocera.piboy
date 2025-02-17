@@ -26,14 +26,12 @@ endef
 
 DEVILUTIONX_PRE_CONFIGURE_HOOKS += DEVILUTIONX_FIX_SDL2MAIN
 
-define DEVILUTIONX_INSTALL_TARGET_EVMAPY
+define DEVILUTIONX_INSTALL_TARGET_ASSETS
 	mkdir -p $(TARGET_DIR)/usr/bin/diablo
 	mv $(TARGET_DIR)/usr/bin/devilutionx	$(TARGET_DIR)/usr/bin/diablo
 	cp -a $(@D)/buildroot-build/assets		$(TARGET_DIR)/usr/bin/diablo
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/devilutionx/devilutionx.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-DEVILUTIONX_POST_INSTALL_TARGET_HOOKS = DEVILUTIONX_INSTALL_TARGET_EVMAPY
+DEVILUTIONX_POST_INSTALL_TARGET_HOOKS = DEVILUTIONX_INSTALL_TARGET_ASSETS
 
 $(eval $(cmake-package))

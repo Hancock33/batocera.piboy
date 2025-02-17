@@ -645,7 +645,6 @@ menu "Utils"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/cabextract/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/clevis/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/evmapy/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/evmapy-system-config/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/evsieve/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/fake-hwclock/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/fdupes/Config.in"
@@ -703,4 +702,3 @@ menu "WINE"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/wine/wine-x86/Config.in"
 endmenu
 endmenu
-

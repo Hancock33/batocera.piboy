@@ -33,12 +33,8 @@ define LIGHTSPARK_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 
-	cp -pr $(@D)/buildroot-build/$(LIGHTSPARK_ARCH)/Release/bin/lightspark	$(TARGET_DIR)/usr/bin/lightspark
-	cp -pr $(@D)/buildroot-build/$(LIGHTSPARK_ARCH)/Release/lib/*			$(TARGET_DIR)/usr/lib/
-
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lightspark/flash.lightspark.keys $(TARGET_DIR)/usr/share/evmapy
+	cp -pr $(@D)/buildroot-build/$(LIGHTSPARK_ARCH)/Release/bin/lightspark $(TARGET_DIR)/usr/bin/lightspark
+	cp -pr $(@D)/buildroot-build/$(LIGHTSPARK_ARCH)/Release/lib/*          $(TARGET_DIR)/usr/lib/
 endef
 
 $(eval $(cmake-package))

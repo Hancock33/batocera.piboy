@@ -48,9 +48,6 @@ define DOLPHIN_TRIFORCE_EXTRAS
 	mkdir -p $(TARGET_DIR)/usr/share/triforce
 	# copy extra ini files
 	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-triforce/*.ini $(TARGET_DIR)/usr/share/triforce
-	# copy evmapy files
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-triforce/*.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 DOLPHIN_TRIFORCE_POST_INSTALL_TARGET_HOOKS += DOLPHIN_TRIFORCE_EXTRAS

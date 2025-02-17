@@ -58,8 +58,6 @@ define OD_COMMANDER_INSTALL_TARGET_CMDS
 	# install media
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/od-commander
 	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/od-commander/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/od-commander/
-	# evmap config
-	 cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/od-commander/odcommander.keys $(TARGET_DIR)/usr/share/evmapy/
 endef
 
 $(eval $(cmake-package))

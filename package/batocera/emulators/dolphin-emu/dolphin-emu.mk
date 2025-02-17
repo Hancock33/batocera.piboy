@@ -53,17 +53,11 @@ else
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_VULKAN=OFF
 endif
 
-define DOLPHIN_EMU_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-emu/*.keys $(TARGET_DIR)/usr/share/evmapy
-endef
-
 define DOLPHIN_EMU_PRE_CONFIGURE_HOOK
 	sed -i 's/set(DOLPHIN_VERSION_MAJOR .*)/set(DOLPHIN_VERSION_MAJOR "$(DOLPHIN_EMU_VERSION_MAJOR)")/' $(@D)/CMake/ScmRevGen.cmake
 	sed -i 's/set(DOLPHIN_VERSION_MINOR .*)/set(DOLPHIN_VERSION_MINOR "$(DOLPHIN_EMU_VERSION_MINOR)")/' $(@D)/CMake/ScmRevGen.cmake
 endef
 
 DOLPHIN_EMU_PRE_CONFIGURE_HOOKS = DOLPHIN_EMU_PRE_CONFIGURE_HOOK
-DOLPHIN_EMU_POST_INSTALL_TARGET_HOOKS = DOLPHIN_EMU_EVMAPY
 
 $(eval $(cmake-package))

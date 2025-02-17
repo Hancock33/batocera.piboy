@@ -199,14 +199,7 @@ define XEMU_GET_SUBMODULES
 	rm berkeley-testfloat-3.tar.gz
 endef
 
-define XEMU_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/xemu/*.keys $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/xemu/xbox.xemu.keys $(TARGET_DIR)/usr/share/evmapy/chihiro.keys
-endef
-
 XEMU_PRE_CONFIGURE_HOOKS = XEMU_VERSION_DETAILS
-XEMU_POST_INSTALL_TARGET_HOOKS += XEMU_EVMAPY
 XEMU_PRE_CONFIGURE_HOOKS += XEMU_GET_SUBMODULES
 
 $(eval $(autotools-package))

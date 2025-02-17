@@ -113,6 +113,10 @@ define BATOCERA_CONFIGGEN_CONFIGS
 	cp $(BATOCERA_CONFIGGEN_CP_DIR)/configs/configgen-defaults-$(BATOCERA_CONFIGGEN_SYSTEM).yml	$(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml
 	cp $(BATOCERA_CONFIGGEN_CP_DIR)/scripts/call_achievements_hooks.sh								$(TARGET_DIR)/usr/share/batocera/configgen/
 
+	# evmapy default hotkeys file
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(CONFIGGEN_DIR)/hotkeys.keys $(TARGET_DIR)/usr/share/evmapy/hotkeys.keys
+
 	@if [ "$(BATOCERA_CONFIGGEN_SYSTEM)" = "piboy4" ]; then \
 	cp $(BATOCERA_CONFIGGEN_CP_DIR)/configs/configgen-defaults-bcm2711.yml							$(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
 	cp $(BATOCERA_CONFIGGEN_CP_DIR)/configs/configgen-defaults-piboy4.yml							$(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-piboy4.yml ; fi

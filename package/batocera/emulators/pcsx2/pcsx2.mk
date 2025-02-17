@@ -56,13 +56,6 @@ define PCSX2_INSTALL_TARGET_CMDS
 	rm $(TARGET_DIR)/usr/bin/pcsx2/resources/game_controller_db.txt
 endef
 
-define PCSX2_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/ps2.pcsx2.keys $(TARGET_DIR)/usr/share/evmapy
-endef
-
-PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_EVMAPY
-
 define PCSX2_TEXTURES
 	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/textures/    $(TARGET_DIR)/usr/bin/pcsx2/resources/
 endef
@@ -70,7 +63,6 @@ endef
 define PCSX2_PATCHES
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/ps2
 	curl -L https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip -o $(TARGET_DIR)/usr/bin/pcsx2/resources/patches.zip
-
 endef
 
 define PCSX2_CROSSHAIRS
