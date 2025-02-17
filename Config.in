@@ -1,3 +1,4 @@
+
 menu "batocera.linux"
 
 menu "System"
@@ -584,7 +585,6 @@ menu "Ports"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/openclaw/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/openjazz/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/openjk/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/openlara/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/opentyrian2000/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/prototype/Config.in"
   menu "Quake"
@@ -614,6 +614,11 @@ menu "Ports"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/stuntcar/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/supertux2/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/tekwar/Config.in"
+  menu "Tomb Raider"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/openlara/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/tr1x/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/tr2x/Config.in"
+  endmenu
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/theforceengine/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/uqm/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/vcmi/Config.in"
@@ -697,3 +702,4 @@ menu "WINE"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/wine/wine-x86/Config.in"
 endmenu
 endmenu
+
