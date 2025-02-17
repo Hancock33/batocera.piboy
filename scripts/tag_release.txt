@@ -17,8 +17,6 @@ shaderc.mk
 spirv-cross.mk
 spirv-headers.mk
 spirv-llvm-translator.mk
-trx1.mk
-trx2.mk
 uthash.mk
 vice.mk
 vulkan-headers.mk
