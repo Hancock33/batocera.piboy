@@ -115,7 +115,7 @@ define BATOCERA_CONFIGGEN_CONFIGS
 
 	# evmapy default hotkeys file
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(CONFIGGEN_DIR)/hotkeys.keys $(TARGET_DIR)/usr/share/evmapy/hotkeys.keys
+	cp $(BATOCERA_CONFIGGEN_CP_DIR)/hotkeys.keys $(TARGET_DIR)/usr/share/evmapy/hotkeys.keys
 
 	@if [ "$(BATOCERA_CONFIGGEN_SYSTEM)" = "piboy4" ]; then \
 	cp $(BATOCERA_CONFIGGEN_CP_DIR)/configs/configgen-defaults-bcm2711.yml							$(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
