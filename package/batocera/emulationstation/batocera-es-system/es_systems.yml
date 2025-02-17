@@ -4650,7 +4650,7 @@ traider1:
   manufacturer:         Ports
   release:              1996
   hardware:             port
-  extensions:           [game, croft]
+  extensions:           [croft]
   platform:             pc
   group:                ports
   path:                 /userdata/roms/ports/traider1
