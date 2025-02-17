@@ -1,23 +1,29 @@
 ################################################################################
 #
-# uthash
+# tr2x
 #
 ################################################################################
-# Version: Commits on Feb 23, 2021
-UTHASH_VERSION = v2.3.0
-UTHASH_SITE = $(call github,troydhanson,uthash,$(UTHASH_VERSION))
-UTHASH_LICENSE = Custom
-UTHASH_LICENSE_FILE = LICENSE
-UTHASH_INSTALL_STAGING = YES
-UTHASH_INSTALL_TARGET = NO
+# Version: Commits on Feb 15, 2025
+TR2X_VERSION = tr2-0.9.1
+TR2X_SITE = $(call github,LostArtefacts,TRX,$(TR2X_VERSION))
+TR2X_LICENSE = GPL-3.0 license
+TR2X_LICENSE_FILES = COPYING.md
+TR2X_SUPPORTS_IN_SOURCE_BUILD = NO
+# meson.build in src/tr2 subfolder
+TR2X_SUBDIR = src/tr2
 
-define UTHASH_INSTALL_STAGING_CMDS
-	mkdir -p $(STAGING_DIR)/usr/include
-	cp -pr $(@D)/src/ut*.h $(STAGING_DIR)/usr/include/
+TR2X_DEPENDENCIES = ffmpeg libglew pcre2 sdl2 uthash
+
+TR2X_CONF_OPTS = -Dstaticdeps=false
+
+# Use install target commands to get all files & dirs
+define TR2X_INSTALL_TARGET_CMDS
+	mkdir -p $(TARGET_DIR)/usr/bin/tr2x
+	cp -f $(@D)/src/tr2/build/TR2X $(TARGET_DIR)/usr/bin/tr2x/
+	cp -rf $(@D)/data/tr2/ship/* $(TARGET_DIR)/usr/bin/tr2x/
 endef
 
-$(eval $(generic-package))
-
+$(eval $(meson-package))
 ################################################################################
 # This file is part of the batocera distribution (https://batocera.org).
 # Copyright (c) 2025+.

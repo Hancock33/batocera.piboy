@@ -1,27 +1,32 @@
 ################################################################################
 #
-# uthash
+# tr1x
 #
 ################################################################################
-# Version: Commits on Feb 23, 2021
-UTHASH_VERSION = v2.3.0
-UTHASH_SITE = $(call github,troydhanson,uthash,$(UTHASH_VERSION))
-UTHASH_LICENSE = Custom
-UTHASH_LICENSE_FILE = LICENSE
-UTHASH_INSTALL_STAGING = YES
-UTHASH_INSTALL_TARGET = NO
+# Version: Commits on Feb 15, 2025
+TR1X_VERSION = tr2-0.9.1
+TR1X_SITE = $(call github,LostArtefacts,TRX,$(TR1X_VERSION))
+TR1X_LICENSE = GPL-3.0 license
+TR1X_LICENSE_FILES = COPYING.md
+TR1X_SUPPORTS_IN_SOURCE_BUILD = NO
+# meson.build in src/tr1 subfolder
+TR1X_SUBDIR = src/tr1
 
-define UTHASH_INSTALL_STAGING_CMDS
-	mkdir -p $(STAGING_DIR)/usr/include
-	cp -pr $(@D)/src/ut*.h $(STAGING_DIR)/usr/include/
+TR1X_DEPENDENCIES = ffmpeg libglew pcre2 sdl2 uthash
+
+TR1X_CONF_OPTS = -Dstaticdeps=false
+
+# Use install target commands to get all files & dirs
+define TR1X_INSTALL_TARGET_CMDS
+	mkdir -p $(TARGET_DIR)/usr/bin/tr1x
+	cp -f $(@D)/src/tr1/build/TR1X $(TARGET_DIR)/usr/bin/tr1x/
+	cp -rf $(@D)/data/tr1/ship/* $(TARGET_DIR)/usr/bin/tr1x/
 endef
 
-$(eval $(generic-package))
-
+$(eval $(meson-package))
 ################################################################################
 # This file is part of the batocera distribution (https://batocera.org).
 # Copyright (c) 2025+.
-#
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, version 3.
