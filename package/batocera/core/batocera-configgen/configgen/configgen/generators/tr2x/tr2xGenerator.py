@@ -2,11 +2,11 @@
 # This file is part of the batocera distribution (https://batocera.org).
 # Copyright (c) 2025+.
 #
-# This program is free software: you can redistribute it and/or modify  
-# it under the terms of the GNU General Public License as published by  
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, version 3.
 #
-# You should have received a copy of the GNU General Public License 
+# You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 # YOU MUST KEEP THIS HEADER AS IT IS
@@ -41,7 +41,7 @@ class TR2XGenerator(Generator):
         tr2xRomPath = Path(rom).parent
         tr2xSoucePath = Path("/usr/bin/tr2x")
 
-        # Copy files & folders if they don’t exist
+        # Copy files & folders if they don't exist
         for item in tr2xSoucePath.iterdir():
             dest = tr2xRomPath / item.name
             try:
