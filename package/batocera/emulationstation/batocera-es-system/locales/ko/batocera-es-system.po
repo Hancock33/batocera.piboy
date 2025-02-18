@@ -2353,6 +2353,16 @@ msgctxt "game_options"
 msgid "APF M-1000 cartridges"
 msgstr "APF M-1000 카트리지"
 
+#. TRANSLATION: gsplus
+msgctxt "game_options"
+msgid "APPLE2GS-BIOS.ROM"
+msgstr ""
+
+#. TRANSLATION: gsplus
+msgctxt "game_options"
+msgid "APPLE2GS.ROM"
+msgstr ""
+
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "ARCHIMEDES MODEL"
@@ -5173,6 +5183,11 @@ msgstr ""
 "SDL 게임 컨트롤러 구성을 윈도우 게임에 전달할지 여부를 선택하세요. 비활성화하"
 "면 일부 게임에서 도움이 될 수 있습니다."
 
+#. TRANSLATION: gsplus
+msgctxt "game_options"
+msgid "Choose which BIOS file for GSplus to boot with."
+msgstr ""
+
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "Choose which audio API library to use."
@@ -6074,11 +6089,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Deutsch"
 msgstr "독일어"
-
-#. TRANSLATION: sonicnexus.keys
-msgctxt "keys_files"
-msgid "Dev Menu"
-msgstr ""
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -7495,15 +7505,10 @@ msgctxt "game_options"
 msgid "Exclusive Ubershaders"
 msgstr "우버셰이더 전용"
 
-#. TRANSLATION: actionmax.keys, hotkeys.keys, naomigd.flycast.keys, wiiware.dolphin-emu.keys, xboxcloud.keys
+#. TRANSLATION: hotkeys.keys, naomigd.flycast.keys, wiiware.dolphin-emu.keys, xboxcloud.keys
 msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "에뮬레이터 나가기"
-
-#. TRANSLATION: sonicmania.keys, sonicnexus.keys
-msgctxt "keys_files"
-msgid "Exit game"
-msgstr "게임 나가기"
 
 #. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, opentyrian.keys, prboom.gzdoom.keys, ...
 msgctxt "keys_files"
@@ -8715,6 +8720,11 @@ msgstr "그래픽 플러그인"
 msgctxt "game_options"
 msgid "GRAPHICS RENDERER"
 msgstr "그래픽 렌더러"
+
+#. TRANSLATION: gsplus
+msgctxt "game_options"
+msgid "GSPLUS BIOS FILENAME"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -13203,6 +13213,21 @@ msgstr "롬 (슬롯 3)"
 msgctxt "game_options"
 msgid "ROM (Slot 4)"
 msgstr "롬 (슬롯 4)"
+
+#. TRANSLATION: gsplus
+msgctxt "game_options"
+msgid "ROM.00"
+msgstr ""
+
+#. TRANSLATION: gsplus
+msgctxt "game_options"
+msgid "ROM.03 (default)"
+msgstr ""
+
+#. TRANSLATION: gsplus
+msgctxt "game_options"
+msgid "ROM1"
+msgstr ""
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -18622,6 +18647,10 @@ msgstr "노란색/파란색"
 #~ msgctxt "keys_files"
 #~ msgid "Exit emulator using SDL"
 #~ msgstr "SDL 사용 중인 에뮬레이터 나가기"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit game"
+#~ msgstr "게임 나가기"
 
 #~ msgctxt "keys_files"
 #~ msgid "Exit running Flatpak"

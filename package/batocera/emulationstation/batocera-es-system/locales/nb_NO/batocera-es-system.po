@@ -2347,6 +2347,16 @@ msgctxt "game_options"
 msgid "APF M-1000 cartridges"
 msgstr "APF M-1000 patroner"
 
+#. TRANSLATION: gsplus
+msgctxt "game_options"
+msgid "APPLE2GS-BIOS.ROM"
+msgstr ""
+
+#. TRANSLATION: gsplus
+msgctxt "game_options"
+msgid "APPLE2GS.ROM"
+msgstr ""
+
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "ARCHIMEDES MODEL"
@@ -5171,6 +5181,11 @@ msgstr ""
 "Velg om SDL Game Controller-konfigurasjonen skal overføres til Windows-"
 "spillet. Deaktivering kan hjelpe i enkelte spill."
 
+#. TRANSLATION: gsplus
+msgctxt "game_options"
+msgid "Choose which BIOS file for GSplus to boot with."
+msgstr ""
+
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "Choose which audio API library to use."
@@ -6077,11 +6092,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Deutsch"
 msgstr "Tysk"
-
-#. TRANSLATION: sonicnexus.keys
-msgctxt "keys_files"
-msgid "Dev Menu"
-msgstr ""
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -7504,15 +7514,10 @@ msgctxt "game_options"
 msgid "Exclusive Ubershaders"
 msgstr "Eksklusive Ubershaders"
 
-#. TRANSLATION: actionmax.keys, hotkeys.keys, naomigd.flycast.keys, wiiware.dolphin-emu.keys, xboxcloud.keys
+#. TRANSLATION: hotkeys.keys, naomigd.flycast.keys, wiiware.dolphin-emu.keys, xboxcloud.keys
 msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "Avslutt emulatoren"
-
-#. TRANSLATION: sonicmania.keys, sonicnexus.keys
-msgctxt "keys_files"
-msgid "Exit game"
-msgstr "Avslutt spillet"
 
 #. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, opentyrian.keys, prboom.gzdoom.keys, ...
 msgctxt "keys_files"
@@ -8731,6 +8736,11 @@ msgstr "GRAFIKK-PLUGIN"
 msgctxt "game_options"
 msgid "GRAPHICS RENDERER"
 msgstr "GRAFIKKGJENGIVER"
+
+#. TRANSLATION: gsplus
+msgctxt "game_options"
+msgid "GSPLUS BIOS FILENAME"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -13227,6 +13237,21 @@ msgstr "ROM (spor 3)"
 msgctxt "game_options"
 msgid "ROM (Slot 4)"
 msgstr "ROM (spor 4)"
+
+#. TRANSLATION: gsplus
+msgctxt "game_options"
+msgid "ROM.00"
+msgstr ""
+
+#. TRANSLATION: gsplus
+msgctxt "game_options"
+msgid "ROM.03 (default)"
+msgstr ""
+
+#. TRANSLATION: gsplus
+msgctxt "game_options"
+msgid "ROM1"
+msgstr ""
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -18630,6 +18655,10 @@ msgstr "gul/blå"
 #~ msgctxt "keys_files"
 #~ msgid "Exit emulator using SDL"
 #~ msgstr "Avslutt emulatoren ved hjelp av SDL"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit game"
+#~ msgstr "Avslutt spillet"
 
 #~ msgctxt "keys_files"
 #~ msgid "Exit running Flatpak"

@@ -1,5 +1,5 @@
 diff --git a/core/CMakeLists.txt b/core/CMakeLists.txt
-index e96cf81..fa82f6f 100644
+index 8dbab87..2af008b 100644
 --- a/core/CMakeLists.txt
 +++ b/core/CMakeLists.txt
 @@ -29,13 +29,7 @@ FetchContent_Declare(
@@ -20,11 +20,11 @@ index e96cf81..fa82f6f 100644
 @@ -71,6 +65,5 @@ target_include_directories(core PRIVATE ${LIBRETRO_INCLUDE_DIR} ${SDL_INCLUDE_DI
  target_link_libraries(core
      ${OPENSSL_CRYPTO_LIBRARY}
-     zlib
+     ZLIB::ZLIB
 -    ${SDL_LIBRARIES}
 -    cmake_git_version_tracking)
 +    ${SDL_LIBRARIES})
- 
+
 diff --git a/core/common/bgd_version.c b/core/common/bgd_version.c
 index 24bdd6e..591377a 100644
 --- a/core/common/bgd_version.c
@@ -38,6 +38,7 @@ index 24bdd6e..591377a 100644
      }
  
      return buffer;
+
 diff --git a/core/include/git.h b/core/include/git.h
 new file mode 100644
 index 0000000..895a432
