@@ -3895,6 +3895,11 @@ msgctxt "game_options"
 msgid "Bolivia"
 msgstr "ボリビア"
 
+#. TRANSLATION: triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "Boost"
+msgstr ""
+
 #. TRANSLATION: libretro/fceumm, libretro/nestopia
 msgctxt "game_options"
 msgid "Both"
@@ -3930,6 +3935,11 @@ msgstr "下画面のみ（切替不可）"
 msgctxt "game_options"
 msgid "Bouncing Box"
 msgstr "境界ボックス"
+
+#. TRANSLATION: triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "Brake / Shoot"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
@@ -4901,6 +4911,26 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Change Camera Angle"
 msgstr "カメラアングル変更"
+
+#. TRANSLATION: triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "Change View 1 / Right"
+msgstr ""
+
+#. TRANSLATION: triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "Change View 2 / Left"
+msgstr ""
+
+#. TRANSLATION: triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "Change View 3 / Up"
+msgstr ""
+
+#. TRANSLATION: triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "Change View 4 / Down"
+msgstr ""
 
 #. TRANSLATION: libretro/mesens
 msgctxt "game_options"
@@ -7486,12 +7516,12 @@ msgctxt "game_options"
 msgid "Exclusive Ubershaders"
 msgstr "排他的(専用)US"
 
-#. TRANSLATION: hotkeys.keys, naomigd.flycast.keys, wiiware.dolphin-emu.keys, xboxcloud.keys
+#. TRANSLATION: hotkeys.keys, naomigd.flycast.keys, wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "エミュレータを終了"
 
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, opentyrian.keys, prboom.gzdoom.keys, ...
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "エミュレータを終了"
@@ -8801,6 +8831,11 @@ msgid ""
 "Games may run faster/slower than normal if the incorrect region is selected."
 msgstr ""
 "間違ったリージョンが選択された場合、ゲーム速度が速く/遅くなる可能性があります"
+
+#. TRANSLATION: triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "Gas / Accelerate / Short Pass"
+msgstr ""
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -10486,6 +10521,11 @@ msgctxt "keys_files"
 msgid "Lockbar Fire Button"
 msgstr "ロックバー発射ボタン"
 
+#. TRANSLATION: triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "Long Pass"
+msgstr ""
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
@@ -11298,11 +11338,6 @@ msgstr "インタプリタよりもはるかに高速です（問題がでる可
 msgctxt "game_options"
 msgid "N64"
 msgstr "N64"
-
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
-msgctxt "game_options"
-msgid "N64 (Limited Hotkeys)"
-msgstr "N64 (ホットキー限定)"
 
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
@@ -12479,6 +12514,16 @@ msgstr "PVM_20M2U/D93"
 msgctxt "game_options"
 msgid "Paddle Control"
 msgstr "パドル コントロール"
+
+#. TRANSLATION: triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "Paddle Left / Long Pass"
+msgstr ""
+
+#. TRANSLATION: triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "Paddle Right"
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -14311,7 +14356,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "画面の傾き（度）"
 
-#. TRANSLATION: hotkeys.keys
+#. TRANSLATION: hotkeys.keys, triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "スクリーンショット"
@@ -14517,6 +14562,11 @@ msgstr "9月"
 msgctxt "game_options"
 msgid "Serbian"
 msgstr "セルビア語"
+
+#. TRANSLATION: triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "Service / Insert Coins Button"
+msgstr ""
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -15366,6 +15416,11 @@ msgctxt "keys_files"
 msgid "Start / Valid"
 msgstr "開始 / 有効"
 
+#. TRANSLATION: triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "Start Button"
+msgstr ""
+
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Start at level number"
@@ -15376,9 +15431,14 @@ msgctxt "keys_files"
 msgid "Start game"
 msgstr "ゲームを開始"
 
-#. TRANSLATION: wiiware.dolphin-emu.keys
+#. TRANSLATION: triforce.dolphin_triforce.keys, wiiware.dolphin-emu.keys
 msgctxt "keys_files"
 msgid "State/Load from Selected Slot"
+msgstr ""
+
+#. TRANSLATION: triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "State/Save to Selected Slot"
 msgstr ""
 
 #. TRANSLATION: rpcs3
@@ -15985,6 +16045,11 @@ msgstr ""
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
 msgid "Teal (Game Boy Light)"
+msgstr ""
+
+#. TRANSLATION: triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "Test Button"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -18436,6 +18501,10 @@ msgstr "黄/青"
 #~ msgid ""
 #~ "Most games already have an internal framelimit. Minor performance cost."
 #~ msgstr "多くのゲームには内部フレーム制限があります。動作を少し軽くします"
+
+#~ msgctxt "game_options"
+#~ msgid "N64 (Limited Hotkeys)"
+#~ msgstr "N64 (ホットキー限定)"
 
 #~ msgctxt "game_options"
 #~ msgid "Native Vulkan"
