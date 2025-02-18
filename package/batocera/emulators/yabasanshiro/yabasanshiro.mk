@@ -48,9 +48,6 @@ endef
 
 define YABASANSHIRO_POST_PROCESS
 	$(INSTALL) -m 0755 $(@D)/yabause/src/libyabause.so -D $(TARGET_DIR)/usr/lib/libyabause.so
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/yabasanshiro/saturn.yabasanshiro.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 YABASANSHIRO_PRE_CONFIGURE_HOOKS = YABASANSHIRO_GIT_HASH

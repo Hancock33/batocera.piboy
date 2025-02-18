@@ -26,13 +26,4 @@ define SHADPS4_INSTALL_TARGET_CMDS
 	 cp -pr $(@D)/buildroot-build/translations $(TARGET_DIR)/usr/bin/shadps4/
 endef
 
-define SHADPS4_INSTALL_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	$(INSTALL) -D -m 0644 \
-	    $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/shadps4/ps4.keys \
-	    $(TARGET_DIR)/usr/share/evmapy/ps4.keys
-endef
-
-SHADPS4_POST_INSTALL_TARGET_HOOKS = SHADPS4_INSTALL_EVMAPY
-
 $(eval $(cmake-package))

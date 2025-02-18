@@ -18,9 +18,6 @@ define RYUJINX_INSTALL_TARGET_CMDS
 	rm -rf   $(TARGET_DIR)/usr/bin/ryujinx
 	mkdir -p $(TARGET_DIR)/usr/bin/ryujinx
 	cp -pr $(@D)/target/publish/* $(TARGET_DIR)/usr/bin/ryujinx
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ryujinx/switch.ryujinx.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(generic-package))
