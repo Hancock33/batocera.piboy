@@ -1,14 +1,6 @@
 {
     "actions_player1": [
         {
-            "trigger": [
-                "hotkey",
-                "start"
-            ],
-            "type": "exec",
-            "target": "kill -9 $(pidof vcmiclient)"
-        },
-        {
             "trigger": "joystick1",
             "type": "mouse"
         },

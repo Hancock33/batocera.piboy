@@ -18,9 +18,6 @@ endef
 
 define OPENLARA_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/OpenLara $(TARGET_DIR)/usr/bin
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/tomb/openlara/openlara.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(generic-package))

@@ -1,11 +1,6 @@
 {
     "actions_player1": [
         {
-            "trigger": ["hotkey", "start"],
-            "type": "exec",
-            "target": "killall -15 freedroid && reset"
-        },
-        {
             "trigger": "up",
             "type": "key",
             "target": "KEY_UP"

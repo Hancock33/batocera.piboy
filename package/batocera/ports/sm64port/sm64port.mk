@@ -20,10 +20,6 @@ define SM64PORT_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/build/eu_pc/sm64.eu* $(TARGET_DIR)/usr/bin/sm64.eu
 	$(INSTALL) -D $(@D)/build/jp_pc/sm64.jp* $(TARGET_DIR)/usr/bin/sm64.jp
 	$(INSTALL) -D $(@D)/build/us_pc/sm64.us* $(TARGET_DIR)/usr/bin/sm64.us
-
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sm64port/sm64.keys $(TARGET_DIR)/usr/share/evmapy/sm64.keys
 endef
 
 $(eval $(generic-package))

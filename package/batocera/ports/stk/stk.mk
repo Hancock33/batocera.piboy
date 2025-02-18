@@ -22,9 +22,6 @@ define STK_INSTALL_TARGET_CMDS
 	# config
 	mkdir -p $(TARGET_DIR)/usr/share/game_assets/supertuxkart
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stk/players.xml $(TARGET_DIR)/usr/share/game_assets/supertuxkart
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stk/stk.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(cmake-package))

@@ -30,9 +30,6 @@ define SUPERTUX2_INSTALL_TARGET_CMDS
 	ln -sf /userdata/roms/ports/supertux2 $(TARGET_DIR)/usr/share/supertux2
 	# copy binaries
 	cp -a $(@D)/buildroot-build/supertux2 $(TARGET_DIR)/usr/bin
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/supertux2/supertux2.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(cmake-package))

@@ -23,9 +23,6 @@ ALEPHONE_PRE_CONFIGURE_HOOKS += ALEPHONE_AUTOCONFIG
 
 define ALEPHONE_INSTALL_TARGET_CMDS
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D) DESTDIR=$(TARGET_DIR) install
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/alephone/alephone.keys $(TARGET_DIR)/usr/share/evmapy/alephone.keys
 endef
 
 $(eval $(autotools-package))
