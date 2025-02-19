@@ -57,7 +57,7 @@ def squashfs_rom(rom: str | Path, /) -> Iterator[str]:
             _logger.debug("squashfs: single rom %s", rom_single)
             yield str(rom_single)
         elif len(list(mount_point.iterdir())) == 1 and rom_ps.exists():
-            eslog.debug(f"squashfs: ps3 rom {rom_ps}")
+            _logger.debug("squashfs: ps3 rom %s", rom_ps)
             yield str(mount_point)
         else:
             try:

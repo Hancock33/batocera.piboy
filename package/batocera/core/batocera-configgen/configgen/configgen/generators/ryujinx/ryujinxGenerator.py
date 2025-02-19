@@ -20,7 +20,7 @@ if TYPE_CHECKING:
 
     from ...types import HotkeysContext
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 ryujinxConf: Final = CONFIGS / "Ryujinx"
 ryujinxConfFile: Final = ryujinxConf / "Config.json"
 ryujinxKeys: Final = BIOS / "switch" / "prod.keys"
@@ -187,7 +187,7 @@ class RyujinxGenerator(Generator):
                 devices = [InputDevice(fn) for fn in evdev.list_devices()]
                 for dev in devices:
                     if dev.path == pad.device_path:
-                        eslog.debug(f"Ryujinx Controller: {dev.info}")
+                        _logger.debug(f"Ryujinx Controller: {dev.info}")
                         bustype = "%x" % dev.info.bustype
                         bustype = "17f6" + bustype.zfill(4)
                         vendor = "%x" % dev.info.vendor

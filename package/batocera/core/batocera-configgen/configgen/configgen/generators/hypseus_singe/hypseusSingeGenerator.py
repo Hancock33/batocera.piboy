@@ -145,7 +145,7 @@ class HypseusSingeGenerator(Generator):
             try:
                 copy_resources(directory["source"], directory["destination"])
             except:
-                eslog.info("Source directory not found: " + str(directory["source"]))
+                _logger.debug("First .m2v file found: %s", str(directory["source"]))
 
         # extension used .daphne and the file to start the game is in the folder .daphne with the extension .txt
         romName = os.path.splitext(os.path.basename(rom))[0]

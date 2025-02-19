@@ -14,7 +14,7 @@ from ..Generator import Generator
 if TYPE_CHECKING:
     from ...types import HotkeysContext
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 class WineGenerator(Generator):
 
@@ -31,12 +31,12 @@ class WineGenerator(Generator):
         elif system.name == "windows" or system.name == "popcap" or system.name == "bigfish":
             romExt = os.path.splitext(rom)[1]
             if romExt == ".wsquashfs":
-                eslog.debug(f"rom file extension: {romExt}")
+                _logger.debug(f"rom file extension: {romExt}")
                 commandArray = ["batocera-wine", "windows", "play", rom]
             elif "squashfs" in rom:
                 romsInDir = glob.glob(glob.escape(rom) + '/*.wineexe')
                 rom = romsInDir[0].replace('.wineexe','.exe')
-                eslog.debug(f"wine playlist: {rom}")
+                _logger.debug(f"wine playlist: {rom}")
                 commandArray = ["batocera-wine", "windows", "play", rom]
             else:
                 commandArray = ["batocera-wine", "windows", "play", rom]
