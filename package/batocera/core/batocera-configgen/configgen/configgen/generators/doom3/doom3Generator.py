@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Final
 
 from ... import Command
-from ...batoceraPaths import CONFIGS, SAVES, mkdir_if_not_exists
+from ...batoceraPaths import CONFIGS, ROMS, SAVES, mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
@@ -31,9 +31,9 @@ class Doom3Generator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
         # Set the paths using Path objects
-        romDir = Path("/userdata/roms/ports/doom3")
+        romDir = "/userdata/roms/ports/doom3"
         # Read the path within the .d3 rom file
-        with open(rom, "r") as file:
+        with Path(rom).open() as file:
             directory = file.readline().strip().split("/")[0]
             eslog.debug(f"Using directory: {directory}")
 
@@ -111,7 +111,7 @@ class Doom3Generator(Generator):
 
         # Run command
         commandArray: list[str | Path] = [
-            "/usr/bin/dhewm3", "+set", "fs_basepath", str(romDir)
+            "/usr/bin/dhewm3", "+set", "fs_basepath", romDir
         ]
 
         if directory == "perfected_roe" or directory == "sikkmodd3xp":
