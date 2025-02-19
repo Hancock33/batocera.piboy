@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v42b(2025/01/31)\n"
+"Project-Id-Version: batocera-es v42b(2025/02/19)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-01-31 21:27+0900\n"
+"PO-Revision-Date: 2025-02-19 21:37+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -1336,12 +1336,12 @@ msgstr "386DX, 33MHz (7800 cps)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "386_prefetch"
-msgstr ""
+msgstr "386（プリフェッチ）"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "386_slow"
-msgstr ""
+msgstr "386 (遅い)"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -1486,7 +1486,7 @@ msgstr "486DX2, 66MHz (26800 cps)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "486_slow"
-msgstr ""
+msgstr "486 (遅い)"
 
 #. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, xenia, xenia-canary
 msgctxt "game_options"
@@ -2351,12 +2351,12 @@ msgstr "APF M-1000 カートリッジ"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS-BIOS.ROM"
-msgstr ""
+msgstr "APPLE2GS-BIOS.ROM"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS.ROM"
-msgstr ""
+msgstr "APPLE2GS.ROM"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -2491,7 +2491,7 @@ msgstr "音量ゲイン"
 #. TRANSLATION: dosbox, dosbox, dosbox
 msgctxt "game_options"
 msgid "AUTO"
-msgstr ""
+msgstr "自動"
 
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
@@ -2924,7 +2924,7 @@ msgstr "FPSを常に60fpsに制限します"
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
 msgid "Alone in the Dark"
-msgstr "Alone in the Dark"
+msgstr "Alone in the Dark(アローン・イン・ザ・ダーク)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -2969,7 +2969,7 @@ msgstr "アメリカ英語"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Amount of instructions DOSBox tries to emulate"
-msgstr ""
+msgstr "DOSBox がエミュレートしようとする命令量"
 
 #. TRANSLATION: yabasanshiro, yabasanshiro
 msgctxt "game_options"
@@ -4545,12 +4545,12 @@ msgstr "CPU コア方法"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU CYCLES"
-msgstr ""
+msgstr "CPUサイクル"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Core used in emulation"
-msgstr ""
+msgstr "エミュレーションに使用されるCPUコア"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -4585,7 +4585,7 @@ msgstr "CPU タイプ"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Type used in emulation"
-msgstr ""
+msgstr "エミュレーションで使用する CPU の種類"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -5206,7 +5206,7 @@ msgstr ""
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "Choose which BIOS file for GSplus to boot with."
-msgstr ""
+msgstr "GSplusが起動するBIOSファイルを選択します"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -5576,7 +5576,7 @@ msgstr "コスタリカ"
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
 msgid "Crash-n Burn"
-msgstr "Crash-n Burn"
+msgstr "Crash-n Burn(クラッシュ・アン・バーン)"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -5608,7 +5608,8 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Crop artwork to only unused space, keeping the game as large as possible."
-msgstr "ゲーム表示を最大化し、未使用の画面部にアートワークを表示します"
+msgstr ""
+"アートワークを未使用の画面部のみに表示し、ゲームをできるだけ大きく保ちます"
 
 #. TRANSLATION: libretro/beetle-saturn
 msgctxt "game_options"
@@ -6407,7 +6408,7 @@ msgstr "オランダ語 (nl)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Dynamic"
-msgstr ""
+msgstr "ダイナミック"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -6547,7 +6548,7 @@ msgstr "GRAVIS ULTRASOUNDを有効"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "ENABLE HIDRAW"
-msgstr ""
+msgstr "HIDRAWを有効"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -6941,6 +6942,9 @@ msgid ""
 "features (like gyroscope for example), but can break older games with x-"
 "input support only."
 msgstr ""
+"ゲームパッドの HID RAW アクセスを有効にします。これは、ゲームで特殊操作 (ジャ"
+"イロスコープなど)ができるようになりますが、X-inputのみで動作する古いゲームは"
+"機能しない可能性があります"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -8738,7 +8742,7 @@ msgstr "グラフィック レンダラー"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "GSPLUS BIOS FILENAME"
-msgstr ""
+msgstr "GSPLUS bios ファイル名"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -10921,7 +10925,7 @@ msgstr "ウィンドウに合わせる"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Max"
-msgstr ""
+msgstr "最大"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -11141,7 +11145,7 @@ msgstr "メキシコ"
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
 msgid "Microcosm"
-msgstr "ミクロコスモ"
+msgstr "Microcosm(マイクロコズム)"
 
 #. TRANSLATION: nds.drastic.keys
 msgctxt "keys_files"
@@ -11672,7 +11676,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Next slot"
-msgstr ""
+msgstr "次のスロット"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -12970,7 +12974,7 @@ msgstr "Y キー:「はい」を選択"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Previous slot"
-msgstr ""
+msgstr "前のスロット"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -13239,17 +13243,17 @@ msgstr "ROM（スロット4）"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.00"
-msgstr ""
+msgstr "ROM.00"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.03 (default)"
-msgstr ""
+msgstr "ROM.03 (標準)"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM1"
-msgstr ""
+msgstr "ROM1"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -13525,7 +13529,7 @@ msgstr "ブレンドモードのアウトラインを復元します"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Restore state"
-msgstr ""
+msgstr "ステートを復元"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -14299,7 +14303,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Save state"
-msgstr ""
+msgstr "ステートセーブ"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -16838,7 +16842,7 @@ msgstr ""
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
 msgid "Use MAME software lists to identify ROM"
-msgstr "MAMEソフトウェアリストを使用してROMを識別します"
+msgstr "MAMEソフトウェアリストを使用してROMを選択します"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, ...
 msgctxt "game_options"
@@ -17968,7 +17972,7 @@ msgstr "オリジナルゲームボーイ"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "pentium_slow"
-msgstr ""
+msgstr "Pentium (遅い)"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -18318,7 +18322,8 @@ msgstr "黄/青"
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Crop MAME artwork to maximize the game screen and only fill unused space."
-#~ msgstr "ゲーム表示を最大化し、未使用の画面部にアートワークを表示します"
+#~ msgstr ""
+#~ "ゲーム画面を最大化し、MAME アートワークを未使用の画面部のみ表示します"
 
 #~ msgctxt "game_options"
 #~ msgid "D3D12 (Default)"
