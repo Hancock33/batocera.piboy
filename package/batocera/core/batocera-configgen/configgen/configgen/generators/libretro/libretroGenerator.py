@@ -36,7 +36,7 @@ if TYPE_CHECKING:
     from ...Emulator import Emulator
     from ...types import HotkeysContext
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 class LibretroGenerator(Generator):
 
@@ -82,10 +82,10 @@ class LibretroGenerator(Generator):
                 shaderFilename = f"{gameShader}.slangp"
             else:
                 shaderFilename = f"{gameShader}.glslp"
-            eslog.debug(f"searching shader {shaderFilename}")
+            _logger.debug("searching shader %s", shaderFilename)
             if (USER_SHADERS / shaderFilename).exists():
                 video_shader_dir = USER_SHADERS
-                eslog.debug(f"shader {shaderFilename} found in {USER_SHADERS}")
+                _logger.debug("shader %s found in %s", shaderFilename, USER_SHADERS)
             else:
                 video_shader_dir = BATOCERA_SHADERS
             video_shader = video_shader_dir / shaderFilename
@@ -283,7 +283,7 @@ class LibretroGenerator(Generator):
                     os.chdir(romdir / assetdir)
                 os.chdir(romdir)
             except FileNotFoundError:
-                eslog.error("ERROR: Game assets not installed. You can get them from the Batocera Content Downloader.")
+                _logger.error("ERROR: Game assets not installed. You can get them from the Batocera Content Downloader.")
                 raise
 
             commandArray = [RETROARCH_BIN, "-L", retroarchCore, "--config", system.config['configfile']]

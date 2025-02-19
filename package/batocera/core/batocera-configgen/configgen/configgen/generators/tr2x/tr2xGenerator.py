@@ -14,18 +14,17 @@
 
 from __future__ import annotations
 
+import json
 import logging
 import shutil
-import json
 from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ... import Command
-from ...batoceraPaths import ROMS
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 if TYPE_CHECKING:
     from ...types import HotkeysContext
@@ -53,21 +52,21 @@ class TR2XGenerator(Generator):
                 else:
                     shutil.copy2(item, dest)
             except PermissionError as e:
-                eslog.debug(f"Permission error while copying {item} -> {dest}: {e}")
+                _logger.debug("Permission error while copying %s -> %s: %s", item, dest, e)
             except Exception as e:
-                eslog.debug(f"Error copying {item} -> {dest}: {e}")
-        
+                _logger.debug("Error copying %s -> %s: %s", item, dest, e)
+
         # Configuration
         tr2xConfigPath.parent.mkdir(parents=True, exist_ok=True)
         config_data = {}
-        
+
         if tr2xConfigPath.exists():
             try:
                 with open(tr2xConfigPath, "r", encoding="utf-8") as f:
                     config_data = json.load(f)
             except json.JSONDecodeError:
-                eslog.debug(f"Invalid JSON format in {tr2xConfigPath}, overwriting with default settings.")
-        
+                _logger.debug("Invalid JSON format in %s, overwriting with default settings.", tr2xConfigPath)
+
         # Update settings
         config_data.update(
             {
@@ -76,10 +75,10 @@ class TR2XGenerator(Generator):
                 "height": gameResolution["height"]
             }
         )
-        
+
         with open(tr2xConfigPath, "w", encoding="utf-8") as f:
             json.dump(config_data, f, indent=2)
-        
+
         commandArray = [tr2xRomPath / "TR2X"]
 
         return Command.Command(

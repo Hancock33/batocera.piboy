@@ -11,10 +11,11 @@ from .dolphinTriforcePaths import DOLPHIN_TRIFORCE_CONFIG
 if TYPE_CHECKING:
     from collections.abc import Mapping
     from pathlib import Path
+
     from ...controller import Controller, ControllerMapping
     from ...Emulator import Emulator
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 # Create the controller configuration file
 def generateControllerConfig(system: Emulator, playersControllers: ControllerMapping, rom: Path) -> None:
@@ -230,21 +231,21 @@ def generateControllerConfig_any_auto(f: codecs.StreamReaderWriter, pad: Control
 def generateControllerConfig_any_from_profiles(f: codecs.StreamReaderWriter, pad: Controller) -> bool:
     for profileFile in (DOLPHIN_TRIFORCE_CONFIG / "Config" / "Profiles" / "GCPad").glob("*.ini"):
         try:
-            eslog.debug(f"Looking profile : {profileFile}")
+            _logger.debug("Looking profile : %s", profileFile)
             profileConfig = CaseSensitiveConfigParser(interpolation=None)
             profileConfig.read(profileFile)
             profileDevice = profileConfig.get("Profile","Device")
-            eslog.debug(f"Profile device : {profileDevice}")
+            _logger.debug("Profile device : %s", profileDevice)
             deviceVals = re.match("^([^/]*)/[0-9]*/(.*)$", profileDevice)
             if deviceVals is not None:
                 if deviceVals.group(1) == "SDL" and deviceVals.group(2).strip() == pad.real_name.strip():
-                    eslog.debug("Eligible profile device found")
+                    _logger.debug("Eligible profile device found")
                     for key, val in profileConfig.items("Profile"):
                         if key != "Device":
                             f.write(f"{key} = {val}\n")
                     return True
         except:
-            eslog.error(f"profile {profileFile} : FAILED")
+            _logger.error("profile %s : FAILED", profileFile)
 
     return False
 

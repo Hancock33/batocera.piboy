@@ -18,7 +18,7 @@ from ..Generator import Generator
 if TYPE_CHECKING:
     from ...types import HotkeysContext
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 class HypseusSingeGenerator(Generator):
 
@@ -46,8 +46,9 @@ class HypseusSingeGenerator(Generator):
 
         for root, dirs, files in os.walk(start_path):
             if filename in files:
-                eslog.debug("Found m2v file in path - {}".format(os.path.join(root, filename)))
-                return os.path.join(root, filename)
+                full_path = Path(root) / filename
+                _logger.debug("Found m2v file in path - %s", full_path)
+                return full_path
 
         return None
 
@@ -170,9 +171,9 @@ class HypseusSingeGenerator(Generator):
         m2v_filename = self.find_m2v_from_txt(frameFile)
 
         if m2v_filename:
-            eslog.debug("First .m2v file found: {}".format(m2v_filename))
+            _logger.debug("First .m2v file found: %s", m2v_filename)
         else:
-            eslog.debug("No .m2v files found in the text file.")
+            _logger.debug("No .m2v files found in the text file.")
 
         # now get the resolution from the m2v file
         if (system.name == 'actionmax'):
@@ -181,16 +182,16 @@ class HypseusSingeGenerator(Generator):
             video_path = rom + "/" + m2v_filename
 
         # check the path exists
-        if not os.path.exists(video_path):
-            eslog.debug("Could not find m2v file in path - {}".format(video_path))
-            video_path = self.find_file(rom, m2v_filename)
+        if not video_path.exists():
+            _logger.debug("Could not find m2v file in path - %s", video_path)
+            video_path = self.find_file(rom_path, cast(str, m2v_filename))
 
-        eslog.debug("Full m2v path is: {}".format(video_path))
+        _logger.debug("Full m2v path is: %s", video_path)
 
         video_resolution: tuple[int, int] | None = None
         if video_path != None:
             video_resolution = self.get_resolution(video_path)
-            eslog.debug("Resolution: {}".format(video_resolution))
+            _logger.debug("Resolution: %s", video_resolution)
 
         if system.name == "singe":
             commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
@@ -241,7 +242,7 @@ class HypseusSingeGenerator(Generator):
                 else:
                     bezelRequired = False
             else:
-                eslog.debug("Video resolution not found - using stretch")
+                _logger.debug("Video resolution not found - using stretch")
                 commandArray.extend(["-x", str(gameResolution["width"]), "-y", str(gameResolution["height"])])
                 if abs(gameResolution["width"] / gameResolution["height"] - 4/3) < 0.01:
                     xratio = 4/3
