@@ -68,7 +68,7 @@ Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|51100408d
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v118|Jan 27, 2024
 Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|ebb5ab53e23b94961d2340d359fb04d8416b1d1d|Feb 14, 2025
-Emulators|[citra](https://github.com/Borked3DS/Borked3DS.git)|b3d8b15a6452c8bcecf6045d821210aa55e02f8f|Feb 18, 2025
+Emulators|[citra](https://github.com/Borked3DS/Borked3DS.git)|cbecec128538ad4f50ed462137d55ee6274ce263|Feb 20, 2025
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|af064c57dee4e116bfdb2e82f7bcc8376ae813a8|Feb 17, 2025
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|cc15858c4aacaca7ca7b346afd0752b909b63064|Dec 30, 2024
@@ -77,7 +77,7 @@ Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.0
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Emulators|[duckstation-legacy](http://github.com/stenzek/duckstation)|56ac3d6c324ec4520dac433b071ecab6227fb459|Aug 4, 2023 - DON'T BUMP
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|78bd0fdf3e4c2484c6180763e05d4590ec1039de|Feb 17, 2025
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|373c83c357924c24f59ebba3e114c42d7d35106f|Feb 20, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|6260f417ca84933a04129d966e177426eb47b8b1|Feb 11, 2025
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|0bf9c64b1b29805ba564c1b91d1aa3a0c066f32b|Feb 18, 2025
@@ -187,11 +187,11 @@ Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|a1e6d
 Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|28b37bafd3fb1e3a812c50a5ddca94c5fd68e5fd|Oct 21, 2024
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|da219658c24c610ba82d5a07ea9897e8e0eef670|Dec 21, 2024
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|32363d42e9d8521ba507bc445118758acd1aa255|Feb 13, 2025
-Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|bb4b7bcddb9f2f218e88971cccc66edf6c7669f0|Dec 31, 2024
+Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|6123398dfe16ada8048f5ee5255e1a9e726edbf5|Feb 19, 2025
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|329396faedfa08a2ebc98af3e1e0a081c92a24f5|Feb 17, 2025
 Emulators|[libretro-pocketsnes](http://github.com/libretro/snes9x2002)|a0709ec7dcd6de2fbebb43106bd757b649e3b7cf|Oct 21, 2024
 Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|78656d4615691c393e65e48672ce5fff5b1f97d3|Oct 21, 2024
-Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|bebbdc39000d0a08081dbddfb81cb42734d83e9a|Feb 19, 2025
+Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|e365bfb5f0e4995003084d3502c5600ac0447e62|Feb 19, 2025
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|b3e5f8b2e8855f9c6fc7ff7a0036e4e61379177d|Dec 27, 2024
 Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|acae250da8d98b8b9707cd499e2a0bf6d8500652|Oct 21, 2024
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|a980d2312ce4ba0907bf12339408aa2de31fa800|Feb 09, 2025
@@ -242,7 +242,7 @@ Emulators|[libretro-zc210](https://github.com/netux79/zc210-libretro.git)|b6426d
 Emulators|[libretro-zc250x](https://github.com/netux79/zc250x-libretro.git)|cfe8da6aa8714f2a77dba81026a5a5560bc70ad6|Jan 25, 2023
 Emulators|[libserum](http://github.com/zesinger/libserum)|v2.0.2|Sept 15, 2024
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.9.5|Feb 18, 2025
-Emulators|[lightspark](http://github.com/lightspark/lightspark)|f473c23e89548f7551ff605ed448bf026e46e0b8|Feb 19, 2025
+Emulators|[lightspark](http://github.com/lightspark/lightspark)|2817bffc6da37b28b966793f518534f8d6588d5a|Feb 19, 2025
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|728c30883595d2ecd590327abdac5b6998d139ca|Feb 18, 2025
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0274|Jan 31, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|e8265df4bd385d76aba0e2c5c5938252d8c342b5|Feb 10, 2025
@@ -263,16 +263,16 @@ Emulators|[openmsx](http://github.com/openMSX/openMSX)|39f266b83bcfa7cfb2f0b0106
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.166|Feb 19, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|329396faedfa08a2ebc98af3e1e0a081c92a24f5|Feb 17, 2025
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|bebbdc39000d0a08081dbddfb81cb42734d83e9a|Feb 19, 2025
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|e365bfb5f0e4995003084d3502c5600ac0447e62|Feb 19, 2025
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a177763e14c924e3b15e2|Sept 29, 2024
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.3.6|Feb 11, 2025
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|9afd2b8a9d16fc25c5a046122bc0d2b3c965980e|Jan 30, 2025
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|6c08bf003b018a82311e10c4c24602968624fdec|Feb 19, 2025
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|09a59edd6b415b7bd124b03bda68ccc4d60b0ea8|Feb 20, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20241221|Dec 21, 2024
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|6074480ffbfc21ae9fc6551e71e681d8ef2022e3|Feb 18, 2025
-Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-02-19|Feb 19, 2025
-Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.404|Feb 19, 2025
+Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-02-20|Feb 20, 2025
+Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.406|Feb 20, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|011847894981b6e710b0c6d05734a53c98894fa7|Feb 15, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|cc583b6189dd10aa25faa4a7522cd1891e193213|Feb 19, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
@@ -404,7 +404,7 @@ Network|[aic8800](http://github.com/batocera-linux/aic8800)|ccba7fffed8554fe861b
 Network|[pd-mapper](http://github.com/linux-msm/pd-mapper)|e7c42e1522249593302a5b8920b9e7b42dc3f25e|Jun 19, 2024
 Network|[qrtr](http://github.com/linux-msm/qrtr)|ef44ad10f284410e2db4c4ce22c8645f988f8402|Aug 18, 2024
 Network|[rmtfs](http://github.com/linux-msm/rmtfs)|f24570816b3234f0885c2897fb9c094848df2835|Feb 13, 2025
-Network|[rtl8812au](http://github.com/morrownr/8812au-20210820)|e8be0fcfef8ffc519981a001ef2fce3010d8fa1e|Feb 04, 2025
+Network|[rtl8812au](http://github.com/morrownr/8812au-20210820)|2317f49f3c4e7482638a0e9b461eed495c05219b|Feb 20, 2025
 Network|[rtl8821au-morrownr](http://github.com/morrownr/8821au-20210708)|0edd9b9ed445bf634cd4e5aed30c823a1566fa16|Feb 15, 2025
 Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|309f5b00caf25d5832bb382181dc8912388d57f2|Feb 10, 2025
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|533779cb8a1843581d5422a7f0aae1a35e6ab956|Nov 21, 2024
@@ -423,11 +423,11 @@ Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|8544d48aed9718746f61
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|6f4a180383b1aaac273b01ebe7d9cc975e5893f3|Feb 18, 2025
 Ports|[cdoom](http://github.com/dhewm/dhewm3-sdk)|c6d2afac06b3b0b16e2efc7e23e27c60822eefa9|Apr 19, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|14c9da0038875154991109ceec836faabb8994d5|Jan 26, 2025
-Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|9c27eac232c07facbac89d542102368ddba73aa8|Feb 12, 2025
+Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|c991ad7cd9e17df49819e8811f364ac7dd6075d3|Feb 19, 2025
 Ports|[d3le](http://github.com/dhewm/dhewm3-sdk)|f1cf9267b0f3b7100ae6ecdbdc5a44b98547f246|Feb 05, 2025
 Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|72d2c417645d47a382b061d2a6db4a46e060145d|Apr 19, 2024
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|ee6addacfe721e587c3b2c9a2594953cd9c774bc|Oct 20, 2024
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|949f5bce60f89acbcf6b20a9542d49bda9402130|Feb 18, 2025
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|fc0d8b0f3d7d80e45e507a1087b83ba67a8dd36c|Feb 20, 2025
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|a18b9e6bad31a1e9ffcf1bb815ec734d4290e4b0|Feb 03, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|854ea02a5e05224f928139b31f83080d7eb293f7|Feb 19, 2025
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
@@ -435,7 +435,7 @@ Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|f3a2afc43880899d5
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|82fa9e2f5c6cbedb757829bc6688ff413e0b06f7|Oct 06, 2024
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|8d79c372acdb00155c75f3b6ca914b852d689b0d|Dec 26, 2024
 Ports|[eldoom](http://github.com/dhewm/dhewm3-sdk)|50dc874961cf14d3c7ca2182d655ba46ecc7f5a1|Oct 21, 2024
-Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|d257eee61328bef97e86b574c377e1aab48a8c00|Feb 19, 2025
+Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|aea185d3c389dd578da0b878e2b25d7eadf5142c|Feb 19, 2025
 Ports|[f2bgl](http://github.com/cyxx/f2bgl)|0b84f41c7cc13a41f5a1832549485b814a52070d|Oct 18, 2020
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|0609bcfd0ec40ff0571d0f57fab2821eb461dc8b|Jan 15, 2025
 Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|e97087b9582f37075db347a89898887320753f8b|Feb 16, 2025
@@ -488,9 +488,9 @@ Ports|[stk](http://github.com/supertuxkart/stk-code)|83e029cc123176a77a239edf90e
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|f72bac75d0d2840fece788dfa8c7791bff3b8992|Sept 30, 2024
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|5b6898d64f1718d29d0f1bea48a8a7e2afd06b51|Feb 16, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|a27a428f31fc582a9e298ddc7fa3ebcf1635cdfc|Dec 07, 2024
-Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|af738f69aa6355e7ddfd8318cdc5c9f6d0e9bd58|Feb 15, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|f7920074dbd5aafbfef4168751ca39a9f316f677|Feb 19, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|f7920074dbd5aafbfef4168751ca39a9f316f677|Feb 19, 2025
+Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|6ea7dfce59e83540ba640e8d58f847630f0402b7|Feb 20, 2025
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|9b92bf72560535a91c7d47e4f41ae0030f47eb0e|Feb 18, 2025
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|9b92bf72560535a91c7d47e4f41ae0030f47eb0e|Feb 18, 2025
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.5|Feb 03, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|b8f2fc9748cdd5c774ba0ac41fd205fd9e38968a|Feb 19, 2025
