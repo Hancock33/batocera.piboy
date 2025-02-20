@@ -209,16 +209,16 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: str, romConfigur
             if system.isOptSet("powersave"):
                 if system.config['powersave'] == '0':
                     subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
-                    eslog.debug("CPU power config set to maximum power saving")
+                    _logger.debug("CPU power config set to maximum power saving")
                 elif system.config['powersave'] == '1':
                     subprocess.call(['/usr/bin/batocera-cpucores', 'mid'])
-                    eslog.debug("CPU power config set to medium power saving")
+                    _logger.debug("CPU power config set to medium power saving")
                 elif system.config['powersave'] == '2':
                     subprocess.call(['/usr/bin/batocera-cpucores', 'max'])
-                    eslog.debug("CPU power config set to no power saving")
+                    _logger.debug("CPU power config set to no power saving")
             else:
                 subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
-                eslog.debug("CPU power config set to maximum power saving")
+                _logger.debug("CPU power config set to maximum power saving")
 
         # run the emulator
         from .utils.evmapy import evmapy

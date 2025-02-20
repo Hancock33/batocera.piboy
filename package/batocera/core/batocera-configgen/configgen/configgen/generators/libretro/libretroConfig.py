@@ -906,7 +906,7 @@ def createLibretroConfig(generator: Generator, system: Emulator, controllers: Co
         retroarchConfig['framecount_show'] = 'false'
 
     # Display FPS
-    if system.isOptSet('fps_show') and system.getOptBoolean('fps_show') == True:
+    if system.isOptSet('showFPS') and system.getOptBoolean('showFPS') == True:
         retroarchConfig['fps_show'] = 'true'
     else:
         retroarchConfig['fps_show'] = 'false'
@@ -1268,13 +1268,9 @@ def writeBezelConfig(generator: Generator, bezel: str | None, shaderBezel: bool,
 
     # if image is not at the correct size, find the correct size
     bezelNeedAdaptation = False
-
+    viewPortUsed = True
     if "width" not in infos or "height" not in infos or "top" not in infos or "left" not in infos or "bottom" not in infos or "right" not in infos or shaderBezel:
         viewPortUsed = False
-    else:
-        viewPortUsed = True
-        retroarchConfig['video_viewport_bias_x'] = '"0.000000"'
-        retroarchConfig['video_viewport_bias_y'] = '"1.000000"'
 
     gameRatio = float(gameResolution["width"]) / float(gameResolution["height"])
 
