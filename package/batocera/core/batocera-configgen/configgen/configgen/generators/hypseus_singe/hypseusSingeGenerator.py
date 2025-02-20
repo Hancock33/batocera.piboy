@@ -46,9 +46,8 @@ class HypseusSingeGenerator(Generator):
 
         for root, dirs, files in os.walk(start_path):
             if filename in files:
-                full_path = Path(root) / filename
                 _logger.debug("Found m2v file in path - %s", full_path)
-                return full_path
+                return os.path.join(root, filename)
 
         return None
 
@@ -145,7 +144,7 @@ class HypseusSingeGenerator(Generator):
             try:
                 copy_resources(directory["source"], directory["destination"])
             except:
-                _logger.debug("First .m2v file found: %s", str(directory["source"]))
+                _logger.info("Source directory not found: %s", directory["source"])
 
         # extension used .daphne and the file to start the game is in the folder .daphne with the extension .txt
         romName = os.path.splitext(os.path.basename(rom))[0]
@@ -182,9 +181,9 @@ class HypseusSingeGenerator(Generator):
             video_path = rom + "/" + m2v_filename
 
         # check the path exists
-        if not video_path.exists():
+        if not os.path.exists(video_path):
             _logger.debug("Could not find m2v file in path - %s", video_path)
-            video_path = self.find_file(rom_path, cast(str, m2v_filename))
+            video_path = self.find_file(rom, m2v_filename)
 
         _logger.debug("Full m2v path is: %s", video_path)
 
