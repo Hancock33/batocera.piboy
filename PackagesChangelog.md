@@ -1,6 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|01099d67cbc921176a760b2246d8591aec0983be|Feb 21, 2025
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|dd07f6a59a0d01840b19184a882d48b78034c219|Feb 21, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|3ea26cc9108256270ae1d1953919b12c6809866e|Feb 21, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|63b468927e1c744e21057ccb4c5677f52502b442|Feb 21, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.168|Feb 21, 2025

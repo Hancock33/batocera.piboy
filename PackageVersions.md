@@ -70,7 +70,7 @@ Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|ebb5ab53e23b94961d2340d359fb04d8416b1d1d|Feb 14, 2025
 Emulators|[citra](https://github.com/Borked3DS/Borked3DS.git)|cbecec128538ad4f50ed462137d55ee6274ce263|Feb 20, 2025
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|01099d67cbc921176a760b2246d8591aec0983be|Feb 21, 2025
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|dd07f6a59a0d01840b19184a882d48b78034c219|Feb 21, 2025
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|cc15858c4aacaca7ca7b346afd0752b909b63064|Dec 30, 2024
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|78a448d070ee813106dd2ac090aed529b4b5c2e6|Dec 28, 2024
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.02.01|Feb 01, 2025
