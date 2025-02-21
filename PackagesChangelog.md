@@ -20,7 +20,7 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|0c381798087d
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|f5ed97c682c70f7bdda5cc3d89fa0373b319797a|Feb 21, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|6f1078d109ffde81c8b652b820f075cdbfd51cbf|Feb 21, 2025
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.6|Feb 21, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|d08fa54dd7eab998efdafd6efa1032253e02e30f|Feb 21, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.2|Feb 21, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250221|Feb 21, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|6c9d4e279d96f47566d44989d308d60aa39b8415|Feb 21, 2025
 Controllers|[hid-t150](http://github.com/scarburato/t150_driver)|8266ddd9742cb11289c2b23054ea0338911f6dcb|Feb 21, 2025
