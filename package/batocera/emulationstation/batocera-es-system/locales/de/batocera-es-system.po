@@ -3680,6 +3680,11 @@ msgctxt "game_options"
 msgid "BT601_625/D65 (recommended for all EUR/AUS developed games)"
 msgstr "BT601_625/D65 (empfohlen für alle in EUR/AUS entwickelten Spiele)"
 
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Back / Menu"
+msgstr ""
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Bahrain"
@@ -5657,6 +5662,11 @@ msgctxt "game_options"
 msgid "Cross"
 msgstr "Kreuz"
 
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Crouch"
+msgstr ""
+
 #. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Crouch Toggle"
@@ -6399,6 +6409,11 @@ msgstr "Lenk Kraft"
 msgctxt "game_options"
 msgid "Driving Force Pro"
 msgstr "Lenk Kraft Pro"
+
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Drop item"
+msgstr ""
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -8061,7 +8076,7 @@ msgctxt "game_options"
 msgid "Finnish (fi)"
 msgstr "Finnisch (FI)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
+#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "Feuer"
@@ -9344,6 +9359,11 @@ msgctxt "game_options"
 msgid "Help and Information"
 msgstr "Hilfe und Informationen"
 
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Help computer"
+msgstr ""
+
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Help games which are too quick or that have bugs."
@@ -9858,6 +9878,11 @@ msgctxt "game_options"
 msgid "InuYasha Sengoku Battle Fix"
 msgstr "InuYasha Sengoku (Schlacht Fix)"
 
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Inventory"
+msgstr ""
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
@@ -10112,7 +10137,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "Juli"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr ""
@@ -10659,6 +10684,16 @@ msgstr "Lange sichtbare Bildschirmkante (cm)"
 #. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Look"
+msgstr ""
+
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Look down"
+msgstr ""
+
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Look up"
 msgstr ""
 
 #. TRANSLATION: amiberry, libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus, ...
@@ -11423,7 +11458,12 @@ msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "Stylet-Zeiger bewegen"
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Move back / down"
+msgstr ""
+
+#. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move backward"
 msgstr "Rückwärts"
@@ -11448,17 +11488,22 @@ msgctxt "keys_files"
 msgid "Move camera up"
 msgstr "Kamere nach oben bewegen"
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move forward"
 msgstr "Vorwärts"
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Move forward / up"
+msgstr ""
+
+#. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move left"
 msgstr "Nach links bewegen"
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move right"
 msgstr "Nach rechts bewegen"
@@ -11811,9 +11856,19 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Next item"
+msgstr ""
+
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Next slot"
+msgstr ""
+
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Next weapon"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -13132,6 +13187,11 @@ msgctxt "keys_files"
 msgid "Press the Y key for 'Yes'"
 msgstr "Drücken Sie die Y-Taste für 'Ja'."
 
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Previous item"
+msgstr ""
+
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Previous slot"
@@ -13867,7 +13927,7 @@ msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
 msgstr "Rumble Pak (automatisch)"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
+#. TRANSLATION: catacomb.keys, omf2097.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr "Rennen"
@@ -15678,12 +15738,12 @@ msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr "Ausweichen (rechts)"
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Strafe left"
 msgstr "Ausweichen (links)"
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Strafe right"
 msgstr "Ausweichen (rechts)"
@@ -17116,6 +17176,11 @@ msgid ""
 msgstr ""
 "Software Rendering verwenden, falls Probleme mit der Grafikdarstellung oder "
 "der Grafikkarte auftreten."
+
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Use item"
+msgstr ""
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
