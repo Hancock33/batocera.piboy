@@ -16,10 +16,13 @@ Ports|[box64](http://github.com/ptitseb/box64)|91b282235b44ae32ec46738fba2d151ac
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|82273234a003e8c2ebebd57f037136257a9a36fe|Feb 21, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|0c381798087dee4ce1d989e1569bc8d66068f2f6|Feb 21, 2025
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.6|Feb 21, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|d08fa54dd7eab998efdafd6efa1032253e02e30f|Feb 21, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250221|Feb 21, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|6c9d4e279d96f47566d44989d308d60aa39b8415|Feb 21, 2025
 Controllers|[hid-t150](http://github.com/scarburato/t150_driver)|8266ddd9742cb11289c2b23054ea0338911f6dcb|Feb 21, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|9005e1b9fedf4794cada6c739f1e4058256e03ea|Feb 21, 2025
 Ports|[box86](http://github.com/ptitseb/box86)|ba5b9e9954deedde62a1378d036405a51792bb37|Feb 21, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250221|Feb 21, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|d9c224439dc00ea288426ffbb4664b499d95dd6c|Feb 21, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|ed2281d1d7b20b7ace77947838aac7a13d978ebd|Feb 21, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|ed2281d1d7b20b7ace77947838aac7a13d978ebd|Feb 21, 2025
@@ -35,9 +38,7 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|f25f7d7b8fd029c87ec083aa7af90a9
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|14571b72bfb81d8fedb998460a7266fab9c1b77f|Feb 20, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|5f23383998df6f887beb2e69bf9f0b3cb5308183|Feb 20, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|6ea7dfce59e83540ba640e8d58f847630f0402b7|Feb 20, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250220|Feb 20, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|4493b1a11afe2ed12d2e1c2282b7d0c878825feb|Feb 20, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250220|Feb 20, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|4c15cceb324cae6d9314b4a7f1ee83c2182ce99b|Feb 20, 2025
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|4493b1a11afe2ed12d2e1c2282b7d0c878825feb|Feb 20, 2025
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|39e1927ed90aad5863240cf3b25ceb3d8a8bdc15|Feb 20, 2025
@@ -51,7 +52,6 @@ Emulators|[supermodel](http://github.com/trzy/Supermodel)|6a8de59aa9fef216ff27b3
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|1ad974c5f5eddefaadcec5702738f09f9ee8a1f8|Feb 19, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|83e029cc123176a77a239edf90ee461e46f9f8a2|Feb 19, 2025
 Utils|[clevis](http://github.com/latchset/clevis)|5aba7d6c55969bc08c28bfa13111091830305da3|Feb 19, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.1.r188|Feb 19, 2025
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|33c3c9487247cdced75bdf19a0653b8d7dd14e4a|Feb 19, 2025
 Emulators|[libdof](http://github.com/jsm174/libdof)|81a5574ffebd41494d5f80c2ca9df25b7af2d5d5|Feb 19, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|854ea02a5e05224f928139b31f83080d7eb293f7|Feb 19, 2025
