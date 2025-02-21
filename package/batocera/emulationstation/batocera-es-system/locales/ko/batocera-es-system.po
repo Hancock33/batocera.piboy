@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-02-04 22:11+0900\n"
+"PO-Revision-Date: 2025-02-20 21:32+0900\n"
 "Last-Translator: DDinghoya <ddinghoya@gmail.com>\n"
 "Language-Team: \n"
 "Language: ko_KO\n"
@@ -1341,12 +1341,12 @@ msgstr "386DX, 33MHz (7800 cps)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "386_prefetch"
-msgstr ""
+msgstr "386_prefetch"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "386_slow"
-msgstr ""
+msgstr "386_slow"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -1491,7 +1491,7 @@ msgstr "486DX2, 66MHz (26800 cps)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "486_slow"
-msgstr ""
+msgstr "486_slow"
 
 #. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, xenia, xenia-canary
 msgctxt "game_options"
@@ -2356,12 +2356,12 @@ msgstr "APF M-1000 카트리지"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS-BIOS.ROM"
-msgstr ""
+msgstr "APPLE2GS-BIOS.ROM"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS.ROM"
-msgstr ""
+msgstr "APPLE2GS.ROM"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -2496,7 +2496,7 @@ msgstr "오디오 볼륨 게인"
 #. TRANSLATION: dosbox, dosbox, dosbox
 msgctxt "game_options"
 msgid "AUTO"
-msgstr ""
+msgstr "AUTO"
 
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
@@ -2973,7 +2973,7 @@ msgstr "미국 영어"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Amount of instructions DOSBox tries to emulate"
-msgstr ""
+msgstr "도스박스가 에뮬레이션하려는 명령어 수"
 
 #. TRANSLATION: yabasanshiro, yabasanshiro
 msgctxt "game_options"
@@ -4553,12 +4553,12 @@ msgstr "CPU 코어 방식"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU CYCLES"
-msgstr ""
+msgstr "CPU CYCLES"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Core used in emulation"
-msgstr ""
+msgstr "에뮬레이션에 사용되는 CPU 코어"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -4593,7 +4593,7 @@ msgstr "CPU 유형"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Type used in emulation"
-msgstr ""
+msgstr "에뮬레이션에 사용되는 CPU 유형"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -5221,7 +5221,7 @@ msgstr ""
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "Choose which BIOS file for GSplus to boot with."
-msgstr ""
+msgstr "GSplus를 부팅할 바이오스 파일을 선택하세요."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -6436,7 +6436,7 @@ msgstr "네덜란드어 (nl)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Dynamic"
-msgstr ""
+msgstr "동적"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -8769,7 +8769,7 @@ msgstr "그래픽 렌더러"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "GSPLUS BIOS FILENAME"
-msgstr ""
+msgstr "GSPLUS 바이오스 파일이르"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -10974,7 +10974,7 @@ msgstr "일치하는 창"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Max"
-msgstr ""
+msgstr "최대"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -11743,7 +11743,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Next slot"
-msgstr ""
+msgstr "다음 슬ㄹ"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -13053,7 +13053,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Previous slot"
-msgstr ""
+msgstr "이전 슬ㄹ"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -13322,17 +13322,17 @@ msgstr "롬 (슬롯 4)"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.00"
-msgstr ""
+msgstr "ROM.00"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.03 (default)"
-msgstr ""
+msgstr "ROM.03 (기본)"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM1"
-msgstr ""
+msgstr "ROM1"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -13612,7 +13612,7 @@ msgstr "싱글 스프라이트에서 블렌드모드 윤곽선을 복원합니�
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Restore state"
-msgstr ""
+msgstr "상태 복원"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -14386,7 +14386,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Save state"
-msgstr ""
+msgstr "상태 저장"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -18074,7 +18074,7 @@ msgstr "오리지널 게임보이"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "pentium_slow"
-msgstr ""
+msgstr "pentium_slow"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-02-01 16:24+0000\n"
+"PO-Revision-Date: 2025-02-20 18:14+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -1338,12 +1338,12 @@ msgstr "386DX, 33MHz (7800 cps)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "386_prefetch"
-msgstr ""
+msgstr "386_prefetch"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "386_slow"
-msgstr ""
+msgstr "386_slow"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -1488,7 +1488,7 @@ msgstr "486DX2, 66MHz (26800 cps)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "486_slow"
-msgstr ""
+msgstr "486_slow"
 
 #. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, xenia, xenia-canary
 msgctxt "game_options"
@@ -2353,12 +2353,12 @@ msgstr "APF M-1000 Steckmodule"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS-BIOS.ROM"
-msgstr ""
+msgstr "APPLE2GS-BIOS.ROM"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS.ROM"
-msgstr ""
+msgstr "APPLE2GS.ROM"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -2493,7 +2493,7 @@ msgstr "AUDIOLAUTSTÄRKE ERHÖHEN"
 #. TRANSLATION: dosbox, dosbox, dosbox
 msgctxt "game_options"
 msgid "AUTO"
-msgstr ""
+msgstr "AUTO"
 
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
@@ -2978,7 +2978,7 @@ msgstr "Englisch (USA)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Amount of instructions DOSBox tries to emulate"
-msgstr ""
+msgstr "Anzahl der Anweisungen, die DOSBox versucht zu emulieren"
 
 #. TRANSLATION: yabasanshiro, yabasanshiro
 msgctxt "game_options"
@@ -4567,12 +4567,12 @@ msgstr "CPU-CORE METHODE"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU CYCLES"
-msgstr ""
+msgstr "CPU CYCLES"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Core used in emulation"
-msgstr ""
+msgstr "CPU-Kern in der Emulation verwendet"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -4607,7 +4607,7 @@ msgstr "CPU TYP"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Type used in emulation"
-msgstr ""
+msgstr "CPU-Typ in der Emulation verwendet"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -5247,7 +5247,7 @@ msgstr ""
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "Choose which BIOS file for GSplus to boot with."
-msgstr ""
+msgstr "Wähle die BIOS-Datei, mit der das GSplus booten soll."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -6470,7 +6470,7 @@ msgstr "Niederländisch (NL)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Dynamic"
-msgstr ""
+msgstr "Dynamic"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -7626,7 +7626,7 @@ msgstr "Emulator beenden"
 #. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "Exit the emulator"
-msgstr "Emulator beenden"
+msgstr ""
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -7873,7 +7873,7 @@ msgstr ""
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "FRAMERATE"
-msgstr "BILDWIEDERHOLRATE"
+msgstr ""
 
 #. TRANSLATION: flycast, libretro/desmume, libretro/fbneo, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
@@ -8854,7 +8854,7 @@ msgstr "GRAFIK-RENDERER"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "GSPLUS BIOS FILENAME"
-msgstr ""
+msgstr "GSPLUS BIOS-DATEINAME"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -11089,7 +11089,7 @@ msgstr "An Fenster angleichen"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Max"
-msgstr ""
+msgstr "Max"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -11864,7 +11864,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Next slot"
-msgstr ""
+msgstr "Nächster Slot"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -13195,7 +13195,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Previous slot"
-msgstr ""
+msgstr "Vorheriger Slot"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -13465,17 +13465,17 @@ msgstr "ROM (Slot 4)"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.00"
-msgstr ""
+msgstr "ROM.00"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.03 (default)"
-msgstr ""
+msgstr "ROM.03 (Standard)"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM1"
-msgstr ""
+msgstr "ROM1"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -13757,7 +13757,7 @@ msgstr "Die BLENDMODE-Umrisslinie auf Singe-Sprites wiederherstellen."
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Restore state"
-msgstr ""
+msgstr "Savestate laden"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -14536,7 +14536,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Save state"
-msgstr ""
+msgstr "Savestate speichern"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -18282,7 +18282,7 @@ msgstr "Original Gameboy"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "pentium_slow"
-msgstr ""
+msgstr "pentium_slow"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -18307,12 +18307,12 @@ msgstr "Schnelles Umschalten"
 #. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "quickload"
-msgstr "Quick Load"
+msgstr ""
 
 #. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "quicksave"
-msgstr "Quick Save"
+msgstr ""
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
@@ -18347,7 +18347,7 @@ msgstr "Scanlines"
 #. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
 msgctxt "keys_files"
 msgid "screenshot"
-msgstr "Bildschirmfoto"
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
@@ -18450,36 +18450,12 @@ msgid "yellow/blue"
 msgstr "gelb/blau"
 
 #~ msgctxt "game_options"
-#~ msgid "119fps"
-#~ msgstr "119fps"
-
-#~ msgctxt "game_options"
-#~ msgid "240fps"
-#~ msgstr "240fps"
-
-#~ msgctxt "game_options"
-#~ msgid "244fps"
-#~ msgstr "244fps"
-
-#~ msgctxt "game_options"
 #~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
 #~ msgstr "2P GAMEPAD ZUORDNUNG (KEYRAH)"
 
 #~ msgctxt "game_options"
 #~ msgid "5 Sideway Wiimote"
 #~ msgstr "5 Sideway Wiimote"
-
-#~ msgctxt "game_options"
-#~ msgid "60fps (Default)"
-#~ msgstr "60fps (Standard)"
-
-#~ msgctxt "game_options"
-#~ msgid "70fps"
-#~ msgstr "70fps"
-
-#~ msgctxt "game_options"
-#~ msgid "72fps"
-#~ msgstr "72fps"
 
 #~ msgctxt "game_options"
 #~ msgid "ANALOG DEADZONE"
@@ -18539,10 +18515,6 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "BGFX for post-processing, accel/opengl for raw image."
 #~ msgstr "BGFX für Post-Prozessierung, Accel/OpenGL für Rohbilddaten."
-
-#~ msgctxt "keys_files"
-#~ msgid "Bring up menu"
-#~ msgstr "Menü öffnen"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"
@@ -18616,18 +18588,10 @@ msgstr "gelb/blau"
 #~ msgid "Composite (color bleeding + artifacts)"
 #~ msgstr "Composite (Color-Bleeding + Artefakte)"
 
-#~ msgctxt "keys_files"
-#~ msgid "Configuration menu"
-#~ msgstr "Konfigurationsmenü"
-
 #~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr ""
 #~ "Die Konfiguration von Controllern in GZDoom kann zu Problemen führen."
-
-#~ msgctxt "keys_files"
-#~ msgid "Continue/Pause emulation"
-#~ msgstr "Emulation fortfahren/pausieren"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18726,42 +18690,6 @@ msgstr "gelb/blau"
 #~ "Schärfe von entfernten Texturen wird verbessert, wenn Mip-Mapping "
 #~ "aktiviert ist."
 
-#~ msgctxt "keys_files"
-#~ msgid "Exit Dolphin"
-#~ msgstr "Dolphin beenden"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit Dosbox-X"
-#~ msgstr "Dosbox-X verlassen"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit Drastic"
-#~ msgstr "Drastic beenden"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit Duckstation"
-#~ msgstr "DuckStation beenden"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit Game"
-#~ msgstr "Spiel beenden"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit Steam"
-#~ msgstr "Steam beenden"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit emulator using SDL"
-#~ msgstr "Emulator beenden mit SDL"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit game"
-#~ msgstr "Spiel beenden"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit running Flatpak"
-#~ msgstr "Beende laufendes Flatpak"
-
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
 #~ msgstr "Für Gyro-aktivierte Spiele (an den linken Analogstick gebunden)"
@@ -18798,14 +18726,6 @@ msgstr "gelb/blau"
 #~ msgid "Keypad to joyport mappings for 2 players."
 #~ msgstr "Tastatur-zu-Joyport Tastbelegung für 2 Spieler."
 
-#~ msgctxt "keys_files"
-#~ msgid "Load State"
-#~ msgstr "Spielstand laden"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Spielstand laden Slot 1"
-
 #~ msgctxt "game_options"
 #~ msgid "Lunar Ignore Brightness Color Fix"
 #~ msgstr "Lunar Ignorieren Helligkeit Farbe Fix"
@@ -18826,10 +18746,6 @@ msgstr "gelb/blau"
 #~ "Bildrate. Geringer Leistungsverlust."
 
 #~ msgctxt "game_options"
-#~ msgid "N64 (Limited Hotkeys)"
-#~ msgstr "N64 (eingeschränkte Hotkeys)"
-
-#~ msgctxt "game_options"
 #~ msgid "Native Vulkan"
 #~ msgstr "Nativ Vulkan"
 
@@ -18837,22 +18753,6 @@ msgstr "gelb/blau"
 #~ msgid "Needed by some games that use special unicode characters."
 #~ msgstr ""
 #~ "Voraussetzung für manche Spiele, die spezielle Unicode-Zeichen enthalten."
-
-#~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Dolphin-triforce Menü öffnen"
-
-#~ msgctxt "keys_files"
-#~ msgid "Open DuckStation Quick Menu"
-#~ msgstr "DuckStation-Schnellmenü öffnen"
-
-#~ msgctxt "keys_files"
-#~ msgid "Open Load Menu"
-#~ msgstr "Lade-Menü öffnen"
-
-#~ msgctxt "keys_files"
-#~ msgid "Open Save Menu"
-#~ msgstr "Speicher-Menü öffnen"
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (x86 only)"
@@ -18873,10 +18773,6 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "Passes all physical keyboard events for Pad2Key."
 #~ msgstr "Übergibt alle physischen Tastaturereignisse für Pad2Key."
-
-#~ msgctxt "keys_files"
-#~ msgid "Pause / Menu"
-#~ msgstr "Pause / Menü"
 
 #~ msgctxt "game_options"
 #~ msgid "Per Pixel"
@@ -18903,34 +18799,6 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "Pulse (Default)"
 #~ msgstr "Pulse (Standard)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Quick Load"
-#~ msgstr "Schnellladen"
-
-#~ msgctxt "keys_files"
-#~ msgid "Quick Save"
-#~ msgstr "Schnellspeichern"
-
-#~ msgctxt "keys_files"
-#~ msgid "Quick load"
-#~ msgstr "Schnellladen"
-
-#~ msgctxt "keys_files"
-#~ msgid "Quick save"
-#~ msgstr "Schnellspeichern"
-
-#~ msgctxt "keys_files"
-#~ msgid "QuickMenu"
-#~ msgstr "Schnellmenü"
-
-#~ msgctxt "keys_files"
-#~ msgid "Quit the application"
-#~ msgstr "Anwendung schließen"
-
-#~ msgctxt "keys_files"
-#~ msgid "Quits the current level"
-#~ msgstr "Aktuelles Level beenden"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18966,14 +18834,6 @@ msgstr "gelb/blau"
 #~ msgid "SVideo (color bleeding only)"
 #~ msgstr "S-Video (nur Color-Bleeding)"
 
-#~ msgctxt "keys_files"
-#~ msgid "Save State"
-#~ msgstr "Spielstand speichern"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Spielstand speichern Slot 1"
-
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
@@ -18985,14 +18845,6 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "Select the model of Color Computer to emulate"
 #~ msgstr "Color Computer Modell für die Emulation auswählen"
-
-#~ msgctxt "keys_files"
-#~ msgid "Service menu"
-#~ msgstr "Service-Menü"
-
-#~ msgctxt "game_options"
-#~ msgid "Set desired framerate."
-#~ msgstr "Stellen Sie die gewünschte Bildwiederholrate ein."
 
 #~ msgctxt "game_options"
 #~ msgid "Set the color palette to use."
@@ -19008,10 +18860,6 @@ msgstr "gelb/blau"
 #~ "Einstellen der gewünschten maximalen Bildwiederholfrequenz, wenn Vsync "
 #~ "ausgeschaltet ist."
 
-#~ msgctxt "keys_files"
-#~ msgid "Settings GUI"
-#~ msgstr "GUI Einstellungen"
-
 #~ msgctxt "game_options"
 #~ msgid "Simulate LCD color inaccuracy."
 #~ msgstr "Simulation von LCD-Farbungenauigkeiten."
@@ -19023,14 +18871,6 @@ msgstr "gelb/blau"
 #~ msgstr ""
 #~ "Das Überspringen von Zwischenspeicher-Effekten deaktiviert AUTO "
 #~ "FRAMESKIP, das Rendern erfolgt in Größe der Anzeigeauflösung."
-
-#~ msgctxt "keys_files"
-#~ msgid "Slot +"
-#~ msgstr "Slot +"
-
-#~ msgctxt "keys_files"
-#~ msgid "Slot -"
-#~ msgstr "Slot -"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
@@ -19057,10 +18897,6 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "TEAMFARBE MODUS"
-
-#~ msgctxt "keys_files"
-#~ msgid "Take a screenshot"
-#~ msgstr "Screenshot erstellen"
 
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
@@ -19126,10 +18962,6 @@ msgstr "gelb/blau"
 #~ msgid "WiiMote Sideways"
 #~ msgstr "WiiMote seitwärts"
 
-#~ msgctxt "keys_files"
-#~ msgid "exit game"
-#~ msgstr "Spiel beenden"
-
 #~ msgctxt "game_options"
 #~ msgid "external (variable fps)"
 #~ msgstr "extern (variable FPS)"
@@ -19141,14 +18973,6 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "internal (variable fps)"
 #~ msgstr "intern (variable FPS)"
-
-#~ msgctxt "keys_files"
-#~ msgid "quick load"
-#~ msgstr "Quick Load"
-
-#~ msgctxt "keys_files"
-#~ msgid "quick save"
-#~ msgstr "Quick Save"
 
 #~ msgctxt "game_options"
 #~ msgid "weird colors"

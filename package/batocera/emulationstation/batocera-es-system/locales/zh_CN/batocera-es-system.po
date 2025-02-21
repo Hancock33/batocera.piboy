@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-02-10 09:17+0800\n"
+"PO-Revision-Date: 2025-02-20 10:58+0800\n"
 "Last-Translator: R.Chan\n"
 "Language-Team: Ray Chan\n"
 "Language: zh_CN\n"
@@ -1340,12 +1340,12 @@ msgstr "386DX，33MHz（7800 cps）"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "386_prefetch"
-msgstr ""
+msgstr "386_指令预取模拟"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "386_slow"
-msgstr ""
+msgstr "386_慢速"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -1490,7 +1490,7 @@ msgstr "486DX2，66MHz（26800 cps）"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "486_slow"
-msgstr ""
+msgstr "486_慢速"
 
 #. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, xenia, xenia-canary
 msgctxt "game_options"
@@ -2355,12 +2355,12 @@ msgstr "APF M-1000 卡带"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS-BIOS.ROM"
-msgstr ""
+msgstr "APPLE2GS-BIOS.ROM"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS.ROM"
-msgstr ""
+msgstr "APPLE2GS.ROM"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -2495,7 +2495,7 @@ msgstr "音频音量增益"
 #. TRANSLATION: dosbox, dosbox, dosbox
 msgctxt "game_options"
 msgid "AUTO"
-msgstr ""
+msgstr "自动"
 
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
@@ -2963,7 +2963,7 @@ msgstr "美式英语"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Amount of instructions DOSBox tries to emulate"
-msgstr ""
+msgstr "DOSBox试图模拟的指令量"
 
 #. TRANSLATION: yabasanshiro, yabasanshiro
 msgctxt "game_options"
@@ -4535,12 +4535,12 @@ msgstr "CPU核心方式"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU CYCLES"
-msgstr ""
+msgstr "cpu周期"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Core used in emulation"
-msgstr ""
+msgstr "模拟器中使用的CPU核心"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -4575,7 +4575,7 @@ msgstr "CPU类型"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Type used in emulation"
-msgstr ""
+msgstr "模拟中使用的CPU类型"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -5186,7 +5186,7 @@ msgstr ""
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "Choose which BIOS file for GSplus to boot with."
-msgstr ""
+msgstr "选择GSplus启动时使用的BIOS文件."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -6379,7 +6379,7 @@ msgstr "荷兰语"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Dynamic"
-msgstr ""
+msgstr "动态"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -8656,7 +8656,7 @@ msgstr "图形渲染器"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "GSPLUS BIOS FILENAME"
-msgstr ""
+msgstr "GSPLUS模拟器的BIOS文件名"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -10841,7 +10841,7 @@ msgstr "匹配窗口"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Max"
-msgstr ""
+msgstr "最大"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -11596,7 +11596,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Next slot"
-msgstr ""
+msgstr "下一个插槽"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -12893,7 +12893,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Previous slot"
-msgstr ""
+msgstr "上一个插槽"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -13160,17 +13160,17 @@ msgstr "ROM（插槽 4）"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.00"
-msgstr ""
+msgstr "ROM.00"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.03 (default)"
-msgstr ""
+msgstr "ROM.03 (默认)"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM1"
-msgstr ""
+msgstr "ROM1"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -13441,7 +13441,7 @@ msgstr "恢复单个精灵的BLENDMODE描边效果。"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Restore state"
-msgstr ""
+msgstr "恢复状态"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -14215,7 +14215,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Save state"
-msgstr ""
+msgstr "保存状态"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -17850,7 +17850,7 @@ msgstr "原始gameboy"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "pentium_slow"
-msgstr ""
+msgstr "奔腾处理器_慢速"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
