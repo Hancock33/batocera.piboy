@@ -1,19 +1,24 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|77e499ad0cb244375770cfd663c4c1d6eeeaa419|Feb 22, 2025
+Emulators|[applewin](https://github.com/audetto/AppleWin)|a972c724f7128026f8802b8de5d8aff31881d9a7|Feb 22, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|43a6ec5bbd605c4f7450eae2c05cc48bbf0bf6d1|Feb 22, 2025
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|368125c937fac7814a2b33aac671909a296a5c5e|Feb 22, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|9cdd0aab9fc54c3ad40d0d9bb3ab1d5b9ed4f9dc|Feb 22, 2025
+Emulators|[lightspark](http://github.com/lightspark/lightspark)|5bad3db87b802196b10075300ca32eb1750c5a96|Feb 22, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|da7a6c56990ed468f211f711d0580f8780d5b728|Feb 22, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|796a2371281b760c4611e6c0ad9ebd75b8837420|Feb 22, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-02-22|Feb 22, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.412|Feb 22, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|0aaeea4837565fe96c080b6b779902446ee80501|Feb 22, 2025
+Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|1db3d4d84bcb24872b50582aeec38d5111f52d63|Feb 22, 2025
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|e578ea82aa803aaa23e42cc5c14af80bdcef4b9c|Feb 22, 2025
 Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|bd8baa17dc0c07510a7a56c52410a81c363b85ae|Feb 22, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|2da35d5de8bdb0e3ca132792d1920c5f2f821439|Feb 22, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14193|Feb 22, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|9a707469c6d8ed84fe160596286f626c30e39b1f|Feb 22, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|b5fd91972c87caa4c1fbba58bfa12112412316af|Feb 22, 2025
+Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|a3d8a24f9bb3947e2c631321fe91c768e53049b2|Feb 22, 2025
 Ports|[srb2](http://github.com/STJr/SRB2)|53fabd11a2c7b6f76d65f94394b505e512e2f8ba|Feb 22, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|9cdd0aab9fc54c3ad40d0d9bb3ab1d5b9ed4f9dc|Feb 22, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|3d2bb6e58af5d138bcbfccf134dedb8e37071f3f|Feb 21, 2025
@@ -50,7 +55,6 @@ Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|16d866a48286
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|788029eafd992131a56e56d6a37740de80c319ed|Feb 21, 2025
 Emulators|[citra](https://github.com/Borked3DS/Borked3DS.git)|cbecec128538ad4f50ed462137d55ee6274ce263|Feb 20, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|d8b409c07d978b4e59279f3319fa95cefa9d24b0|Feb 20, 2025
-Emulators|[lightspark](http://github.com/lightspark/lightspark)|5c4273553580ba23198a5ac97b29d907014c4250|Feb 20, 2025
 Hardware|[pironman5](http://github.com/sunfounder/pironman5)|2b7769adb64e17fc76af5c1aaeebc37e4079e851|Feb 20, 2025
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|bb39c835a82b76a7217399dd548cad878ff5c024|Feb 20, 2025
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|80c4233c712c1fcd8f631f17aaa40e89df9337ba|Feb 20, 2025
@@ -68,7 +72,6 @@ Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|33c3c9487247cdced7
 Emulators|[libdof](http://github.com/jsm174/libdof)|81a5574ffebd41494d5f80c2ca9df25b7af2d5d5|Feb 19, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|854ea02a5e05224f928139b31f83080d7eb293f7|Feb 19, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|b8f2fc9748cdd5c774ba0ac41fd205fd9e38968a|Feb 19, 2025
-Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|c0c7a52032a5f5e0944612cef07098d4d99192bd|Feb 19, 2025
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|59cdbcc8e4b6311592f501e8cdeae7929268c80b|Feb 19, 2025
 Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|5d2ece5b6d7041aa9d0a7921eee42969f8bdf8a7|Feb 19, 2025
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|6123398dfe16ada8048f5ee5255e1a9e726edbf5|Feb 19, 2025
@@ -90,14 +93,12 @@ Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|96ae794b56de38eafe4
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|f108dd801de31c04472cab2056fc9cef74ce8b76|Feb 17, 2025
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|329396faedfa08a2ebc98af3e1e0a081c92a24f5|Feb 17, 2025
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|806aa16c7d3c85f6084e6b10299ce4a0da66edac|Feb 16, 2025
-Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|1c3d82c4055bb5e40ebb32b6d53f7d95e60f7e22|Feb 16, 2025
 Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|e97087b9582f37075db347a89898887320753f8b|Feb 16, 2025
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.6|Feb 16, 2025
 Ports|[raze](http://github.com/ZDoom/Raze)|41c1a62b821f32bcef863cbd4238606248eae050|Feb 16, 2025
 Utils|[re2c](http://github.com/skvadrik/re2c)|4.1|Feb 16, 2025
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|0a104c839bba8240e4c6b19e08013c150c31ddcd|Feb 16, 2025
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|dccefede9b9e0c1f08cb645ac4c1b922579b93fa|Feb 16, 2025
-Emulators|[applewin](https://github.com/audetto/AppleWin)|397fa08903e1c9c6a3223b7f032cc1ac8c424c9b|Feb 15, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu)|3bdb9e7fd4d6c9f5adec0543f1679d2943a0d092|Feb 15, 2025
 Libraries|[libgme](http://github.com/libgme/game-music-emu)|0.6.4|Feb 15, 2025
 Network|[rtl8821au-morrownr](http://github.com/morrownr/8821au-20210708)|0edd9b9ed445bf634cd4e5aed30c823a1566fa16|Feb 15, 2025
@@ -225,7 +226,6 @@ Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.4.304.1|Dec 20, 2024
 Boot|[rk3128-blobs](https://github.com/rockchip-linux/rkbin.git)|0f8ac860f0479da56a1decae207ddc99e289f2e2|Dec 19, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|d7ca2c04364a6dd0dac58b47151e04e26887e6f0|Dec 17, 2024
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.4.304.1|Dec 16, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|bd49c6bedb8400aff9ead241a9da4ce28b84e0b7|Dec 15, 2024
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|58352d6dc969fa90c5fa1220f38ffe577157547f|Dec 14, 2024
 Wine|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.8.0|Dec 13, 2024
 Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.4.304.1|Dec 12, 2024
