@@ -284,7 +284,7 @@ Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|e5
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|454ed3f1741e2e3a11627a2865d6a19faf132234|Feb 12, 2025
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|e9f50fe13ae4b455158fda94988a668c23d0840f|Feb 21, 2025
 Emulators|[suyu](https://git.suyu.dev/marius851000/suyu.git)|f805e4213ebeafe1b9baf3782389717a9da5b603|Jan 01, 2025
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|7c1b0b0382ff293f298d9199265c2b4f2e62f932|Feb 22, 2025
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|21fa93878df680a5c59762a18a065e0e639c11c3|Feb 22, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|ecb72bd39195d9ab101ec7d0143d6ea22a1c977c|Feb 17, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45502|Feb 21, 2025
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
@@ -474,7 +474,7 @@ Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|d40a12ea57d
 Ports|[sikkmod](http://github.com/dhewm/dhewm3-sdk)|03aae2f5b74a18ed5fdbfe9c345a4d50203c7518|Jul 28, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|d7ca2c04364a6dd0dac58b47151e04e26887e6f0|Dec 17, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|9a7220eff25a49182531ae025cd29f5b49046144|Feb 13, 2025
-Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|c648bfe615c3f7e33333f46be43ca41c1bfaad43|Feb 22, 2025
+Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|2a7bbb71fe515a64c20eae5031b9969a434fbbee|Feb 22, 2025
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|bcfcd0bfdeea6c5b19d9cc5fb50700d11b62419a|Feb 13, 2025
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|aa113871727d569077cbd7deff831a46a72cf147|Feb 17, 2025
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|d83967b2ea38eda8b43437167d93c86021bb4de1|Dec 02, 2024
@@ -498,7 +498,7 @@ Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|5300b32803c1c61bc3b6bdf
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|f7aa8a0c908330b3567407e52d8420046efb21e2|Feb 22, 2025
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.1|Apr 12, 2024
 Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|bca7fa0264e77356a9decbf780ee0b1b4e759a4c|Feb 22, 2025
-Sources|[mame-src](http://github.com/mamedev/mame)|f55e7d697c7cd7f988b3220f476fb735476252be|Feb 22, 2025
+Sources|[mame-src](http://github.com/mamedev/mame)|mame0274|Jan 31, 2025
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
 Utils-host|[xa](https://www.floodgap.com/retrotech/xa/dists)|2.4.1|Mar 05, 2024

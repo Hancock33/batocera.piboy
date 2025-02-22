@@ -17,7 +17,7 @@ Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.412
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|0aaeea4837565fe96c080b6b779902446ee80501|Feb 22, 2025
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|1db3d4d84bcb24872b50582aeec38d5111f52d63|Feb 22, 2025
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|e578ea82aa803aaa23e42cc5c14af80bdcef4b9c|Feb 22, 2025
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|7c1b0b0382ff293f298d9199265c2b4f2e62f932|Feb 22, 2025
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|21fa93878df680a5c59762a18a065e0e639c11c3|Feb 22, 2025
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|78f97f8ff30c5ce99bc51dfa5d1a1e8c12c23b84|Feb 22, 2025
 Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|bd8baa17dc0c07510a7a56c52410a81c363b85ae|Feb 22, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|3567c6da2b1378500fc46549b4f6ca464fd4d69c|Feb 22, 2025
@@ -27,7 +27,6 @@ Ports|[nblood](http://github.com/NBlood/NBlood)|r14193|Feb 22, 2025
 Ports|[raze](http://github.com/ZDoom/Raze)|2aa1e22002c66fea94bb4d0cebf40f80f29a3d09|Feb 22, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|ef9b09535eea3bdd12d1e1d165068751186b8c3c|Feb 22, 2025
 Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|bca7fa0264e77356a9decbf780ee0b1b4e759a4c|Feb 22, 2025
-Sources|[mame-src](http://github.com/mamedev/mame)|f55e7d697c7cd7f988b3220f476fb735476252be|Feb 22, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250222|Feb 22, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|da179de4b46291dfa7277b7193b9812b65897219|Feb 22, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|4de34208ed515f39207285c19dc97e9a092a0281|Feb 22, 2025
@@ -35,7 +34,7 @@ Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|1e865ef08ac517ef76
 Ports|[box86](http://github.com/ptitseb/box86)|c13b3cc9cd405aff1aa7cc11ba1990f8722b9c0b|Feb 22, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250222|Feb 22, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|538f62a556cd7b2e6815e4c67f2d366671accec8|Feb 22, 2025
-Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|c648bfe615c3f7e33333f46be43ca41c1bfaad43|Feb 22, 2025
+Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|2a7bbb71fe515a64c20eae5031b9969a434fbbee|Feb 22, 2025
 Ports|[srb2](http://github.com/STJr/SRB2)|854fc95672a1b1ab54f11ebc6bb0205f9afaff80|Feb 22, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|f7aa8a0c908330b3567407e52d8420046efb21e2|Feb 22, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|c992ab146af774d461e8eb0cc8949564745a4e11|Feb 22, 2025
@@ -154,6 +153,7 @@ Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|fc65b19d2098cf81e55b4ed
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.02|Feb 01, 2025
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.02.01|Feb 01, 2025
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2025.01|Jan 31, 2025
+Sources|[mame-src](http://github.com/mamedev/mame)|mame0274|Jan 31, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|51ffd50564d54abfb62eccf358166bd9ccc708ac|Jan 31, 2025
 Gpu|[nv-codec-headers](https://github.com/FFmpeg/nv-codec-headers)|n13.0.19.0|Jan 30, 2025
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|9afd2b8a9d16fc25c5a046122bc0d2b3c965980e|Jan 30, 2025
