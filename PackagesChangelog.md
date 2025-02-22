@@ -8,6 +8,7 @@ Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|3681
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|9cdd0aab9fc54c3ad40d0d9bb3ab1d5b9ed4f9dc|Feb 22, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|84c58849f7a1245ba07b34212f8db4a28bcccbde|Feb 22, 2025
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|1a31c710ea5ab86ddf6942f5efe156e60a5c200b|Feb 22, 2025
+Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0275pre|Feb 22, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|32e0cae3341eb169cbc36a1c3c32f049c61511a4|Feb 22, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|2a372caef9acbc7ff20bcca3c25b2ab92294f283|Feb 22, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|796a2371281b760c4611e6c0ad9ebd75b8837420|Feb 22, 2025
@@ -39,6 +40,7 @@ Ports|[srb2](http://github.com/STJr/SRB2)|854fc95672a1b1ab54f11ebc6bb0205f9afaff
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|f7aa8a0c908330b3567407e52d8420046efb21e2|Feb 22, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|c992ab146af774d461e8eb0cc8949564745a4e11|Feb 22, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|9cdd0aab9fc54c3ad40d0d9bb3ab1d5b9ed4f9dc|Feb 22, 2025
+Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0275pre|Feb 22, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|2a372caef9acbc7ff20bcca3c25b2ab92294f283|Feb 22, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|3d2bb6e58af5d138bcbfccf134dedb8e37071f3f|Feb 21, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|3d2bb6e58af5d138bcbfccf134dedb8e37071f3f|Feb 21, 2025
@@ -151,10 +153,8 @@ Ports|[dhewm3](http://github.com/dhewm/dhewm3)|a18b9e6bad31a1e9ffcf1bb815ec734d4
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|fc65b19d2098cf81e55b4edc10adad2ad8268361|Feb 02, 2025
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.02|Feb 01, 2025
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.02.01|Feb 01, 2025
-Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0274|Jan 31, 2025
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2025.01|Jan 31, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|51ffd50564d54abfb62eccf358166bd9ccc708ac|Jan 31, 2025
-Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0274|Jan 31, 2025
 Gpu|[nv-codec-headers](https://github.com/FFmpeg/nv-codec-headers)|n13.0.19.0|Jan 30, 2025
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|9afd2b8a9d16fc25c5a046122bc0d2b3c965980e|Jan 30, 2025
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|v3.6.0-1227-ecd032e|Jan 29, 2025
