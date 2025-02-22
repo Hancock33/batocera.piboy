@@ -3901,22 +3901,6 @@ flatpak:
                         Remova um aplicativo instalado: flatpak remove xmoto
                         em seguida, execute batocera-flatpak-update para atualizar o diretório roms de acordo com seus aplicativos instalados.
 
-fpinball:
-  name:                 Future Pinball
-  manufacturer:         Pinball Systems
-  release:              2005
-  hardware:             port
-  extensions:           [fpt]
-  emulators:
-    fpinball:
-      fpinball:         { requireAnyOf: [BR2_PACKAGE_FPINBALL] }
-  comment_en:           |
-                        For more info: https://wiki.batocera.org/systems:windows
-  comment_fr:           |
-                        Trouvez la documentation ici: https://wiki.batocera.org/systems:windows
-  comment_br:           |
-                        Para mais informações: https://wiki.batocera.org/systems:windows
-
 freedroid:
   name:                 Paradroid
   manufacturer:         Ports

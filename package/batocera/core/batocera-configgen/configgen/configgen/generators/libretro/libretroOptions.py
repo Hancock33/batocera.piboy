@@ -4,6 +4,7 @@ from typing import TYPE_CHECKING
 
 from ... import controllersConfig
 from ...batoceraPaths import BIOS, ROMS, ensure_parents_and_open
+from ...gun import GunMapping, guns_need_crosses
 from ...utils.configparser import CaseSensitiveConfigParser
 from .libretroPaths import RETROARCH_CONFIG
 
@@ -13,7 +14,7 @@ if TYPE_CHECKING:
 
     from ...Emulator import Emulator
     from ...settings.unixSettings import UnixSettings
-    from ...types import DeviceInfoMapping, GunMapping
+    from ...types import DeviceInfoMapping
 
 
 # Amstrad CPC / GX4000
@@ -846,7 +847,7 @@ def _mame078plus_options(
     if system.isOptSet('mame2003-plus_crosshair_enabled'):
         coreSettings.save('mame2003-plus_crosshair_enabled', '"' + system.config['mame2003-plus_crosshair_enabled'] + '"')
     else:
-        if controllersConfig.gunsNeedCrosses(guns):
+        if guns_need_crosses(guns):
             status = '"enabled"'
         else:
             status = '"disabled"'
@@ -1741,7 +1742,7 @@ def _nestopia_options(
     if system.isOptSet('nestopia_show_crosshair'):
         coreSettings.save('nestopia_show_crosshair', '"' + system.config['nestopia_show_crosshair'] + '"')
     else:
-        if controllersConfig.gunsNeedCrosses(guns):
+        if guns_need_crosses(guns):
             status = '"enabled"'
         else:
             status = '"disabled"'
@@ -1809,7 +1810,7 @@ def _fceumm_options(
     if system.isOptSet('fceumm_show_crosshair'):
         coreSettings.save('fceumm_show_crosshair', '"' + system.config['fceumm_show_crosshair'] + '"')
     else:
-        if controllersConfig.gunsNeedCrosses(guns):
+        if guns_need_crosses(guns):
             status = '"enabled"'
         else:
             status = '"disabled"'
@@ -1974,7 +1975,7 @@ def _snes9x_options(
         coreSettings.save('snes9x_justifier2_crosshair', '"' + system.config['superscope_crosshair'] + '"')
         coreSettings.save('snes9x_rifle_crosshair', '"' + system.config['superscope_crosshair'] + '"')
     else:
-        if controllersConfig.gunsNeedCrosses(guns):
+        if guns_need_crosses(guns):
             status = '"2"'
         else:
             status = '"0"'
@@ -2013,7 +2014,7 @@ def _snes9x_next_options(
     if system.isOptSet('superscope_crosshair'):
         coreSettings.save('snes9x_2010_superscope_crosshair', '"' + system.config['superscope_crosshair'] + '"')
     else:
-        if controllersConfig.gunsNeedCrosses(guns):
+        if guns_need_crosses(guns):
             status = '"2"'
         else:
             status = '"disabled"'
@@ -2217,7 +2218,7 @@ def _flycast_options(
     if system.isOptSet('reicast_lightgun1_crosshair'):
         coreSettings.save('reicast_lightgun1_crosshair', '"' + system.config['reicast_lightgun1_crosshair'] + '"')
     else:
-        if controllersConfig.gunsNeedCrosses(guns):
+        if guns_need_crosses(guns):
             status = '"Red"'
         else:
             status = '"disabled"'
@@ -2225,7 +2226,7 @@ def _flycast_options(
     if system.isOptSet('reicast_lightgun2_crosshair'):
         coreSettings.save('reicast_lightgun2_crosshair', '"' + system.config['reicast_lightgun2_crosshair'] + '"')
     else:
-        if controllersConfig.gunsNeedCrosses(guns):
+        if guns_need_crosses(guns):
             status = '"Blue"'
         else:
             status = '"disabled"'
@@ -2233,7 +2234,7 @@ def _flycast_options(
     if system.isOptSet('reicast_lightgun3_crosshair'):
         coreSettings.save('reicast_lightgun3_crosshair', '"' + system.config['reicast_lightgun3_crosshair'] + '"')
     else:
-        if controllersConfig.gunsNeedCrosses(guns):
+        if guns_need_crosses(guns):
             status = '"Green"'
         else:
             status = '"disabled"'
@@ -2241,7 +2242,7 @@ def _flycast_options(
     if system.isOptSet('reicast_lightgun4_crosshair'):
         coreSettings.save('reicast_lightgun4_crosshair', '"' + system.config['reicast_lightgun4_crosshair'] + '"')
     else:
-        if controllersConfig.gunsNeedCrosses(guns):
+        if guns_need_crosses(guns):
             status = '"White"'
         else:
             status = '"disabled"'
@@ -2364,7 +2365,7 @@ def _genesisplusgx_options(
     elif system.isOptSet('gun_cursor_ms') and system.name == 'mastersystem':
         coreSettings.save('genesis_plus_gx_gun_cursor', '"' + system.config['gun_cursor_ms'] + '"')
     else:
-        if controllersConfig.gunsNeedCrosses(guns):
+        if guns_need_crosses(guns):
             status = '"enabled"'
         else:
             status = '"disabled"'
@@ -2536,7 +2537,7 @@ def _beetle_saturn_options(
     if system.isOptSet('beetle-saturn_crosshair'):
         coreSettings.save('beetle_saturn_virtuagun_crosshair', '"' + system.config['beetle-saturn_crosshair'] + '"')
     else:
-        if controllersConfig.gunsNeedCrosses(guns):
+        if guns_need_crosses(guns):
             status = '"Cross"'
         else:
             status = '"Off"'
@@ -2652,7 +2653,7 @@ def _fbneo_options(
     if system.isOptSet('fbneo-lightgun-crosshair-emulation'):
         coreSettings.save('fbneo-lightgun-crosshair-emulation', '"' + system.config['fbneo-lightgun-crosshair-emulation'] + '"')
     else:
-        if controllersConfig.gunsNeedCrosses(guns):
+        if guns_need_crosses(guns):
             status = '"always show"'
         else:
             status = '"always hide"'
@@ -2834,7 +2835,7 @@ def _duckstation_options(
     if system.isOptSet('swanstation_Controller_ShowCrosshair'):
         coreSettings.save('swanstation_Controller_ShowCrosshair', '"' + system.config['swanstation_Controller_ShowCrosshair'] + '"')
     else:
-        if controllersConfig.gunsNeedCrosses(guns):
+        if guns_need_crosses(guns):
             status = '"true"'
         else:
             status = '"false"'
@@ -2918,7 +2919,7 @@ def _pcsx_rearmed_options(
         if system.isOptSet('pcsx_rearmed_crosshair'+str(player["id"])):
             coreSettings.save('pcsx_rearmed_crosshair'+str(player["id"]), '"' + system.config['pcsx_rearmed_crosshair'+str(player["id"])] + '"')
         else:
-            if controllersConfig.gunsNeedCrosses(guns):
+            if guns_need_crosses(guns):
                 status = '"'+player["color"]+'"'
             else:
                 status = '"disabled"'

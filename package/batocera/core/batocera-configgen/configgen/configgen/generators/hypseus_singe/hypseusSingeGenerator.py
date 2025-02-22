@@ -11,6 +11,7 @@ import ffmpeg
 
 from ... import Command, controllersConfig
 from ... import batoceraFiles
+from ... import Command
 from ...batoceraPaths import CONFIGS, ROMS, mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
@@ -267,7 +268,7 @@ class HypseusSingeGenerator(Generator):
             if system.isOptSet('singe_sprites') and system.getOptBoolean("singe_sprites"):
                 commandArray.append("-blend_sprites")
 
-            bordersSize = controllersConfig.gunsBordersSizeName(guns, system.config)
+            bordersSize = system.guns_borders_size_name(guns)
             if bordersSize is not None:
 
                 borderColor = "w"

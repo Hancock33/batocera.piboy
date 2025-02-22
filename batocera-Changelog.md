@@ -6,7 +6,8 @@
   The libretro cores will continue to run as before.
 - Removed the buggy Libretro-Openlara in favor of the standalone TRX1 Tomb Raider port.
   If you have saved games, it is recommended to stick with v41 or earlier as the same data is not compatible.
-- zedmd upgraded. You need firmware zedmd 5.1.5. See https://wiki.batocera.org/hardware:diy_zedmd?s[]=dmd#zedmd_configuration.
+- Zedmd upgraded. You need firmware zedmd 5.1.5. See https://wiki.batocera.org/hardware:diy_zedmd?s[]=dmd#zedmd_configuration.
+- Removed Future Pinball in favor of Visual Pinball which has been available for some time and runs native on Linux.
 ### Hardware
 - Add OrangePi 4a board support
 - Add OrangePi 3b board support
@@ -57,7 +58,7 @@
 - Cemu to 2.6
 - Dolphin-Emu to 2412-268
 - ETLegacy to v2.83.2
-- Jazz2 to 3.1.0
+- Jazz2 to 3.2.0
 - GroovyMAME to 0.274
 - Gzdoom to g4.14.0
 - Libretro-Kronos to 2.7.0
@@ -67,19 +68,19 @@
 - Ruffle to Nightly-2024-12-28
 - RPCS3 to 0.0.34-17438
 - ScummVM to v2.9.0
-- PCSX2 to v2.3.146
+- PCSX2 to v2.3.168
 - Play! to 4th Feb build
-- Xemu to v0.8.16
+- Xemu to v0.8.20
 - Triforce to use a Crediar build (Nov 29, 2024)
 - Vice to 3.9
 - TheXTech to v1.3.7-hotfix2
 - DXX-Rebirth to 12th of Jan build
 - EDuke to 26th of Dec build
 - Hurrican to 24th of Nov build
-- Sonic3 Air to v25.01.12.0-test
-- Taradino to 28th of Jan build
-- TheForceEngine to 17th Dec build
-- Xash3d-fwgs to 8th of Feb build
+- Sonic3 Air to v25.02.15.0-test
+- Taradino to 18th of Feb build
+- TheForceEngine to 20th Feb build
+- Xash3d-fwgs to 20th of Feb build
 - AppleWin to 8th of Feb build
 - MelonDS to 17th Jan build
 - Snes9x to 24th Jan build
@@ -97,7 +98,7 @@
 - Buildroot to 2024.11.x with supporting package updates
 - Mesa3D to 25.0.0
 - Linux Kernel to 6.13.3
-- GStreamer codecs to 1.24.10
+- GStreamer codecs to 1.24.12
 - SDL2 to 2.30.11
 - Vulkan stack to v1.4.304
 - MPV to 0.39.0
