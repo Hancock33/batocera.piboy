@@ -2808,7 +2808,7 @@ msgctxt "game_options"
 msgid "After NMI"
 msgstr "NMI后"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Aim"
 msgstr ""
@@ -5571,7 +5571,7 @@ msgctxt "keys_files"
 msgid "Crouch"
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Crouch Toggle"
 msgstr ""
@@ -7445,7 +7445,7 @@ msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "退出模拟器"
 
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "退出模拟器"
@@ -7888,7 +7888,7 @@ msgctxt "game_options"
 msgid "Finnish (fi)"
 msgstr "芬兰语 (fi)"
 
-#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
+#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "射击"
@@ -9888,7 +9888,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "七月"
 
-#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr ""
@@ -9988,7 +9988,7 @@ msgctxt "game_options"
 msgid "Keypad 3button"
 msgstr "键盘3键"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Kick"
 msgstr ""
@@ -10408,7 +10408,7 @@ msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
 msgstr "长可见屏幕边缘(厘米)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr ""
@@ -10778,7 +10778,7 @@ msgctxt "game_options"
 msgid "Manually set cycles per second. Use with caution."
 msgstr "手动设置每秒周期。小心使用。"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr ""
@@ -10985,12 +10985,12 @@ msgctxt "keys_files"
 msgid "Menu"
 msgstr "菜单"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Menu Down"
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
@@ -11136,12 +11136,12 @@ msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "鼠标点击"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Move Backward"
 msgstr "向后移动"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Move Forward"
 msgstr "向前移动"
@@ -11543,7 +11543,7 @@ msgctxt "keys_files"
 msgid "Next Disc (m3u)"
 msgstr "下一个光盘（m3u）"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
@@ -13548,7 +13548,7 @@ msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
 msgstr "震动包（自动）"
 
-#. TRANSLATION: catacomb.keys, omf2097.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
+#. TRANSLATION: catacomb.keys, omf2097.keys, prboom.gzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr "奔跑"
@@ -15310,12 +15310,12 @@ msgctxt "game_options"
 msgid "Store past states to rewind to in real-time, if the core supports it."
 msgstr ""
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
 msgstr "向左闪避"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr "向右闪避"
@@ -15875,7 +15875,7 @@ msgctxt "game_options"
 msgid "Target colour for player 4."
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Taunt"
 msgstr ""
@@ -16637,7 +16637,7 @@ msgctxt "game_options"
 msgid "Uruguay"
 msgstr "乌拉圭"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Use / Open"
 msgstr ""
@@ -17812,12 +17812,12 @@ msgctxt "game_options"
 msgid "quick switch"
 msgstr "快速开关"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "quickload"
 msgstr "快速读档"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "quicksave"
 msgstr "快速存档"
@@ -17852,7 +17852,7 @@ msgctxt "game_options"
 msgid "scanlines"
 msgstr "扫描行"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "screenshot"
 msgstr "截图"
