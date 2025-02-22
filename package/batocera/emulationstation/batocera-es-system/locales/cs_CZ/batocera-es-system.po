@@ -2808,7 +2808,7 @@ msgctxt "game_options"
 msgid "After NMI"
 msgstr "Po NMI"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Aim"
 msgstr ""
@@ -5606,7 +5606,7 @@ msgctxt "keys_files"
 msgid "Crouch"
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Crouch Toggle"
 msgstr ""
@@ -7527,7 +7527,7 @@ msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "Ukončit emulátor"
 
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Ukončení emulátoru"
@@ -7972,7 +7972,7 @@ msgctxt "game_options"
 msgid "Finnish (fi)"
 msgstr ""
 
-#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
+#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr ""
@@ -9987,7 +9987,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "Červenec"
 
-#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr ""
@@ -10087,7 +10087,7 @@ msgctxt "game_options"
 msgid "Keypad 3button"
 msgstr "Keypad 3tlačítko"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Kick"
 msgstr ""
@@ -10512,7 +10512,7 @@ msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr ""
@@ -10888,7 +10888,7 @@ msgctxt "game_options"
 msgid "Manually set cycles per second. Use with caution."
 msgstr "Ručně nastavené cykly za sekundu. Používejte s opatrností."
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr ""
@@ -11103,12 +11103,12 @@ msgctxt "keys_files"
 msgid "Menu"
 msgstr "Menu"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Menu Down"
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
@@ -11254,12 +11254,12 @@ msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Kliknutí myší"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Move Backward"
 msgstr ""
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Move Forward"
 msgstr ""
@@ -11665,7 +11665,7 @@ msgctxt "keys_files"
 msgid "Next Disc (m3u)"
 msgstr "Další disk (m3u)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
@@ -13693,7 +13693,7 @@ msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
 msgstr "Vibrační Pak (automaticky)"
 
-#. TRANSLATION: catacomb.keys, omf2097.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
+#. TRANSLATION: catacomb.keys, omf2097.keys, prboom.gzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr ""
@@ -15465,12 +15465,12 @@ msgctxt "game_options"
 msgid "Store past states to rewind to in real-time, if the core supports it."
 msgstr ""
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
 msgstr ""
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr ""
@@ -16034,7 +16034,7 @@ msgctxt "game_options"
 msgid "Target colour for player 4."
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Taunt"
 msgstr ""
@@ -16806,7 +16806,7 @@ msgctxt "game_options"
 msgid "Uruguay"
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Use / Open"
 msgstr ""
@@ -18001,12 +18001,12 @@ msgctxt "game_options"
 msgid "quick switch"
 msgstr "rychlý přepínač"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "quickload"
 msgstr "rychlé načtení"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "quicksave"
 msgstr "rychlé uložení"
@@ -18041,7 +18041,7 @@ msgctxt "game_options"
 msgid "scanlines"
 msgstr ""
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "screenshot"
 msgstr "snímek obrazovky"

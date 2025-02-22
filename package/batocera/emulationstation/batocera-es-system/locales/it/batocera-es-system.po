@@ -2814,7 +2814,7 @@ msgctxt "game_options"
 msgid "After NMI"
 msgstr "Dpop NMI"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Aim"
 msgstr ""
@@ -5629,7 +5629,7 @@ msgctxt "keys_files"
 msgid "Crouch"
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Crouch Toggle"
 msgstr ""
@@ -7561,7 +7561,7 @@ msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "Esci dall'emulatore"
 
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Esci dall'emulatore"
@@ -8014,7 +8014,7 @@ msgctxt "game_options"
 msgid "Finnish (fi)"
 msgstr "Finlandese (fi)"
 
-#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
+#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "Spara"
@@ -10050,7 +10050,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "Luglio"
 
-#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr ""
@@ -10150,7 +10150,7 @@ msgctxt "game_options"
 msgid "Keypad 3button"
 msgstr "Keypad 3bottoni"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Kick"
 msgstr ""
@@ -10574,7 +10574,7 @@ msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
 msgstr "Lato lungo visibile a schermo (cm)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr ""
@@ -10950,7 +10950,7 @@ msgctxt "game_options"
 msgid "Manually set cycles per second. Use with caution."
 msgstr "Imposta manualmente i cicli per secondo. Usare con cautela."
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr ""
@@ -11167,12 +11167,12 @@ msgctxt "keys_files"
 msgid "Menu"
 msgstr "Menu"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Menu Down"
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
@@ -11318,12 +11318,12 @@ msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Click del Mouse"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Move Backward"
 msgstr "Muovi Indietro"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Move Forward"
 msgstr "Muovi Avanti"
@@ -11730,7 +11730,7 @@ msgctxt "keys_files"
 msgid "Next Disc (m3u)"
 msgstr "Disco Successivo (m3u)"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
@@ -13775,7 +13775,7 @@ msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
 msgstr "Rumble Pak (Automatico)"
 
-#. TRANSLATION: catacomb.keys, omf2097.keys, prboom.gzdoom.keys, prboom.lzdoom.keys, rott.keys
+#. TRANSLATION: catacomb.keys, omf2097.keys, prboom.gzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr "Corri"
@@ -15555,12 +15555,12 @@ msgctxt "game_options"
 msgid "Store past states to rewind to in real-time, if the core supports it."
 msgstr ""
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
 msgstr "Scivola a Sinistra"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr "Scivola a destra"
@@ -16128,7 +16128,7 @@ msgctxt "game_options"
 msgid "Target colour for player 4."
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Taunt"
 msgstr ""
@@ -16908,7 +16908,7 @@ msgctxt "game_options"
 msgid "Uruguay"
 msgstr "Uruguay"
 
-#. TRANSLATION: prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Use / Open"
 msgstr ""
@@ -18111,12 +18111,12 @@ msgctxt "game_options"
 msgid "quick switch"
 msgstr "cambio veloce"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "quickload"
 msgstr "caricamento rapido"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "quicksave"
 msgstr "salvataggio rapido"
@@ -18151,7 +18151,7 @@ msgctxt "game_options"
 msgid "scanlines"
 msgstr "scanlines"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys, prboom.lzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "screenshot"
 msgstr "screenshot"
