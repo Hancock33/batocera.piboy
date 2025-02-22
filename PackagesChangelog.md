@@ -25,6 +25,8 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|c512e758fcb5f40d15c16
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14193|Feb 22, 2025
 Ports|[raze](http://github.com/ZDoom/Raze)|2aa1e22002c66fea94bb4d0cebf40f80f29a3d09|Feb 22, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|ef9b09535eea3bdd12d1e1d165068751186b8c3c|Feb 22, 2025
+Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|bca7fa0264e77356a9decbf780ee0b1b4e759a4c|Feb 22, 2025
+Sources|[mame-src](http://github.com/mamedev/mame)|f55e7d697c7cd7f988b3220f476fb735476252be|Feb 22, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250222|Feb 22, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|da179de4b46291dfa7277b7193b9812b65897219|Feb 22, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|4de34208ed515f39207285c19dc97e9a092a0281|Feb 22, 2025
@@ -53,7 +55,6 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|0c381798087d
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|f5ed97c682c70f7bdda5cc3d89fa0373b319797a|Feb 21, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|6f1078d109ffde81c8b652b820f075cdbfd51cbf|Feb 21, 2025
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.6|Feb 21, 2025
-Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|862e1b8ea82edc0f681a087d0ca10664cf1a7829|Feb 21, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.2|Feb 21, 2025
 Controllers|[hid-t150](http://github.com/scarburato/t150_driver)|8266ddd9742cb11289c2b23054ea0338911f6dcb|Feb 21, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|e806297ad77b09a9619fd9092eda48da2d84765f|Feb 21, 2025
@@ -152,7 +153,6 @@ Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.02|Feb 01, 2025
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.02.01|Feb 01, 2025
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0274|Jan 31, 2025
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2025.01|Jan 31, 2025
-Sources|[mame-src](http://github.com/mamedev/mame)|mame0274|Jan 31, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|51ffd50564d54abfb62eccf358166bd9ccc708ac|Jan 31, 2025
 Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0274|Jan 31, 2025
 Gpu|[nv-codec-headers](https://github.com/FFmpeg/nv-codec-headers)|n13.0.19.0|Jan 30, 2025
