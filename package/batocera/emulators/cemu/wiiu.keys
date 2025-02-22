@@ -2,7 +2,7 @@
    "actions_player1": [
         {
            "trigger": ["hotkey", "r2"],
-            "type": "key", 
+            "type": "key",
             "target": ["KEY_LEFTCTRL", "KEY_TAB"],
             "description": "Display the controller screen"
         }

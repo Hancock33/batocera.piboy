@@ -14,7 +14,7 @@
             "trigger": "joystick2",
             "type": "mouse"
         },
-	{
+    {
             "trigger": [
                 "hotkey",
                 "start"

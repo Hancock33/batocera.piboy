@@ -10,7 +10,7 @@
             "type": "key",
             "target": "KEY_TAB"
         },
-    	{
+        {
             "trigger": "joystick1up",
             "type": "key",
             "target": "KEY_E"
@@ -30,7 +30,7 @@
             "type": "key",
             "target": "KEY_F"
         },
-    	{
+        {
             "trigger": "joystick2",
             "type": "mouse"
         },

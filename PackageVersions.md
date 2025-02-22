@@ -81,7 +81,6 @@ Emulators|[duckstation](http://github.com/stenzek/duckstation)|3ea26cc9108256270
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|4493b1a11afe2ed12d2e1c2282b7d0c878825feb|Feb 20, 2025
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|0bf9c64b1b29805ba564c1b91d1aa3a0c066f32b|Feb 18, 2025
-Emulators|[fpinball](https://github.com/batocera-linux/fpinball/releases)|v1.9.1.20101231|Apr 04, 2021
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|bfa0c7522c6c5f73cceb340d677491d056febd01|Jul 29, 2022
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|6d5c3fe803d2ebe2b44ef42d2b421f5b6df3e045|Jan 24, 2025
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
