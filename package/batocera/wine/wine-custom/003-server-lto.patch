@@ -1,8 +1,8 @@
 diff --git a/server/Makefile.in b/server/Makefile.in
-index 70917b5116d..e462f6e2bbb 100644
+index 7e571ac2ba6..0a6a7272eca 100644
 --- a/server/Makefile.in
 +++ b/server/Makefile.in
-@@ -49,6 +49,7 @@ SOURCES = \
+@@ -47,6 +47,7 @@ SOURCES = \
  	wineserver.man.in \
  	winstation.c
  

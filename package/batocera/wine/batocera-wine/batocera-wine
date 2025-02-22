@@ -1,4 +1,3 @@
-
 #!/bin/bash
 SYSTEM=${1,,}                                                                        # windows, mugen
 ACTION=${2,,}                                                                        # play, stop... see usage
