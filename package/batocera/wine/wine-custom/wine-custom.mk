@@ -36,7 +36,6 @@ WINE_CUSTOM_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 	CFLAGS="$(TARGET_CFLAGS) -Wno-incompatible-pointer-types" \
 	--with-wine-tools=$(BUILD_DIR)/host-wine-custom-$(WINE_CUSTOM_VERSION) \
 	--disable-tests \
-	--enable-tools \
 	--without-capi \
 	--without-coreaudio \
 	--without-gettext \
@@ -50,6 +49,7 @@ WINE_CUSTOM_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 
 ifeq ($(BR2_x86_64),y)
     WINE_CUSTOM_CONF_OPTS += --enable-win64
+    WINE_CUSTOM_CONF_OPTS += --enable-tools \
 else
     WINE_CUSTOM_CONF_OPTS += --disable-win64
 endif
