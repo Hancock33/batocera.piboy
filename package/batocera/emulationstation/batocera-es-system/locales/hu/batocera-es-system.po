@@ -2880,13 +2880,6 @@ msgstr ""
 "Lehetővé teszi, hogy a különböző felbontásokat támogató játékok egy adott "
 "felbontásban jelenjenek meg."
 
-#. TRANSLATION: fpinball
-msgctxt "game_options"
-msgid "Allow mapping Future Pinball with Pad to Keyboard."
-msgstr ""
-"Engedélyezze a Future Pinball billentyűzettel való leképezését a "
-"billentyűzethez."
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -4465,11 +4458,6 @@ msgctxt "game_options"
 msgid "CONTROLLER COMBINATION"
 msgstr "VEZÉRLŐ KOMBINÁCIÓ"
 
-#. TRANSLATION: fpinball
-msgctxt "game_options"
-msgid "CONTROLLER CONFIGURATION"
-msgstr "VEZÉRLŐ KONFIGURÁCIÓJA"
-
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CONTROLLER MODE"
@@ -4936,11 +4924,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "ChJees"
 msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Change Camera Angle"
-msgstr "Kamera szögének módosítása"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -5440,11 +5423,6 @@ msgstr "Klasszikus szoftver"
 msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
 msgstr "Alkalmazás bezárása a távoli állomáson, amikor kilép a Moonlightból."
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Coin"
-msgstr "Érme"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -8366,11 +8344,6 @@ msgstr ""
 "Kényszeríti a DX-illesztőprogramot, hogy felügyelt textúrákat használjon a "
 "dinamikus helyett."
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Forward Nudge"
-msgstr "Előre lökés"
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Framerate limiter to reduce CPU utilisation."
@@ -10469,21 +10442,6 @@ msgctxt "game_options"
 msgid "Left Analogue (Forced)"
 msgstr ""
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Flipper"
-msgstr "Bal kar"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Magna Save"
-msgstr "Bal manga mentés"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Nudge"
-msgstr "Balra lökés"
-
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left flipper"
@@ -11173,11 +11131,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
 msgstr "Egyes 2D-s játékokban élesebb képet eredményezhet."
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Mech Tilt"
-msgstr "Döntési mechanizmus"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12969,11 +12922,6 @@ msgctxt "game_options"
 msgid "Playfield configuration"
 msgstr "Játéktér konfigurációja"
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Plunger"
-msgstr "Kilövőrúd"
-
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Point (Default)"
@@ -13776,21 +13724,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Right Analogue (Forced)"
 msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Flipper"
-msgstr "Jobb kar"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Magna Save"
-msgstr "Jobb manga mentés"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Nudge"
-msgstr "Jobbra lökés"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -15622,11 +15555,6 @@ msgstr "Szabványos vezérlő"
 msgctxt "game_options"
 msgid "Standard OpenGL (Default)"
 msgstr "Standard OpenGL (Default)"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Start"
-msgstr "Start"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
@@ -18525,6 +18453,12 @@ msgstr "sárga/kék"
 #~ msgstr "Állítsa be a processzor teljesítményprofilját játék közben."
 
 #~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinball with Pad to Keyboard."
+#~ msgstr ""
+#~ "Engedélyezze a Future Pinball billentyűzettel való leképezését a "
+#~ "billentyűzethez."
+
+#~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr "Allows the use of switchres profiles if present."
 
@@ -18619,6 +18553,10 @@ msgstr "sárga/kék"
 #~ msgstr "SZÍNEZET"
 
 #~ msgctxt "game_options"
+#~ msgid "CONTROLLER CONFIGURATION"
+#~ msgstr "VEZÉRLŐ KONFIGURÁCIÓJA"
+
+#~ msgctxt "game_options"
 #~ msgid "CONTROLLER PAK 1"
 #~ msgstr "VEZÉRLŐ CSOMAG 1"
 
@@ -18641,6 +18579,10 @@ msgstr "sárga/kék"
 #~ msgctxt "game_options"
 #~ msgid "Center (Default)"
 #~ msgstr "Közép (Alap)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Change Camera Angle"
+#~ msgstr "Kamera szögének módosítása"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18669,6 +18611,10 @@ msgstr "sárga/kék"
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "Válassza ki a kívánt képarányt.."
+
+#~ msgctxt "keys_files"
+#~ msgid "Coin"
+#~ msgstr "Érme"
 
 #~ msgctxt "game_options"
 #~ msgid "Color"
@@ -18932,6 +18878,10 @@ msgstr "sárga/kék"
 #~ msgstr ""
 #~ "Kényszerítse az Nvidia GPU-kat, hogy mindig AMD GPU-ként jelenjenek meg."
 
+#~ msgctxt "keys_files"
+#~ msgid "Forward Nudge"
+#~ msgstr "Előre lökés"
+
 #~ msgctxt "game_options"
 #~ msgid "GB COLORIZATION"
 #~ msgstr "GB SZÍNEZÉS"
@@ -18969,6 +18919,18 @@ msgstr "sárga/kék"
 #~ msgstr "Billentyűzet-joyport leképezések 2 játékos számára."
 
 #~ msgctxt "keys_files"
+#~ msgid "Left Flipper"
+#~ msgstr "Bal kar"
+
+#~ msgctxt "keys_files"
+#~ msgid "Left Magna Save"
+#~ msgstr "Bal manga mentés"
+
+#~ msgctxt "keys_files"
+#~ msgid "Left Nudge"
+#~ msgstr "Balra lökés"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State"
 #~ msgstr "Játékállás betöltése"
 
@@ -18996,6 +18958,10 @@ msgstr "sárga/kék"
 #~ "Manuálisan határozza meg, hogy melyik felbontást használja.&#x0a;Az Auto "
 #~ "alapértelmezés szerint Magasra állítja, és szükség esetén Szupermagasra "
 #~ "vált."
+
+#~ msgctxt "keys_files"
+#~ msgid "Mech Tilt"
+#~ msgstr "Döntési mechanizmus"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19131,6 +19097,10 @@ msgstr "sárga/kék"
 #~ msgid "Playstation 2 wheel type"
 #~ msgstr "Playstation 2 kormány típusa"
 
+#~ msgctxt "keys_files"
+#~ msgid "Plunger"
+#~ msgstr "Kilövőrúd"
+
 #~ msgctxt "game_options"
 #~ msgid "Pulse (Default)"
 #~ msgstr "Pulse (Alap)"
@@ -19223,6 +19193,18 @@ msgstr "sárga/kék"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "A képernyő magasságának automatikus átméretezése."
 
+#~ msgctxt "keys_files"
+#~ msgid "Right Flipper"
+#~ msgstr "Jobb kar"
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Magna Save"
+#~ msgstr "Jobb manga mentés"
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Nudge"
+#~ msgstr "Jobbra lökés"
+
 #~ msgctxt "game_options"
 #~ msgid "SSAA"
 #~ msgstr "SSAA"
@@ -19308,6 +19290,10 @@ msgstr "sárga/kék"
 #~ msgctxt "game_options"
 #~ msgid "Standard"
 #~ msgstr "Szabványos"
+
+#~ msgctxt "keys_files"
+#~ msgid "Start"
+#~ msgstr "Start"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."

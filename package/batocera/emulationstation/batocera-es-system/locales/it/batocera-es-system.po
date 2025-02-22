@@ -2878,11 +2878,6 @@ msgstr ""
 "Permetti al gioco che supporta più risoluzioni di essere renderizzato in una "
 "specifica risoluzione."
 
-#. TRANSLATION: fpinball
-msgctxt "game_options"
-msgid "Allow mapping Future Pinball with Pad to Keyboard."
-msgstr "Permetti di mappare Future Pinball con Pad to Keyboard"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -4456,11 +4451,6 @@ msgctxt "game_options"
 msgid "CONTROLLER COMBINATION"
 msgstr "COMBINAZIONE CONTROLLER"
 
-#. TRANSLATION: fpinball
-msgctxt "game_options"
-msgid "CONTROLLER CONFIGURATION"
-msgstr "CONFIGURAZIONE CONTROLLER"
-
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CONTROLLER MODE"
@@ -4928,11 +4918,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "ChJees"
 msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Change Camera Angle"
-msgstr "Cambia Angolo Telecamera"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -5427,11 +5412,6 @@ msgstr "Software classico"
 msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
 msgstr "Chiudi l'app sull'host remoto in uscita da Moonlight."
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Coin"
-msgstr "Moneta"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -8329,11 +8309,6 @@ msgctxt "game_options"
 msgid "Forces the DX driver to use Managed textures instead of Dynamic."
 msgstr "Forza il driver DX a usare textures Gestite invece che Dinamiche"
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Forward Nudge"
-msgstr "Spingi in Avanti"
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Framerate limiter to reduce CPU utilisation."
@@ -10425,21 +10400,6 @@ msgctxt "game_options"
 msgid "Left Analogue (Forced)"
 msgstr ""
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Flipper"
-msgstr "Flipper Sinistra"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Magna Save"
-msgstr "Salvataggio Magna Sinistra"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Nudge"
-msgstr "Spingi a Sinistra"
-
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left flipper"
@@ -11122,11 +11082,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
 msgstr "Può risultare in immagine più a fuoco in alcuni giochi 2D."
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Mech Tilt"
-msgstr "Tilt Mech"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12916,11 +12871,6 @@ msgctxt "game_options"
 msgid "Playfield configuration"
 msgstr "Configurazione del campo di gioco"
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Plunger"
-msgstr "Molla"
-
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Point (Default)"
@@ -13724,21 +13674,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Right Analogue (Forced)"
 msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Flipper"
-msgstr "Flipper di Destra"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Magna Save"
-msgstr "Salvataggio Magna Destra"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Nudge"
-msgstr "Spingi a Destra"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -15559,11 +15494,6 @@ msgstr "Controller Standard"
 msgctxt "game_options"
 msgid "Standard OpenGL (Default)"
 msgstr "Standard OpenGL (Default)"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Start"
-msgstr "Start"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
@@ -18463,6 +18393,10 @@ msgstr "giallo/blu"
 #~ msgstr "Permetti di mappare Future Pinball con Pad to Keyboard."
 
 #~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinball with Pad to Keyboard."
+#~ msgstr "Permetti di mappare Future Pinball con Pad to Keyboard"
+
+#~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr "Permette di usare profili switchres se presenti."
 
@@ -18591,12 +18525,20 @@ msgstr "giallo/blu"
 #~ msgstr "COLORIZZAZIONE"
 
 #~ msgctxt "game_options"
+#~ msgid "CONTROLLER CONFIGURATION"
+#~ msgstr "CONFIGURAZIONE CONTROLLER"
+
+#~ msgctxt "game_options"
 #~ msgid "Can be used to simulate colors of particular displays."
 #~ msgstr "Può essere utilizzato per simulare colori o schermi particolari."
 
 #~ msgctxt "game_options"
 #~ msgid "Center (Default)"
 #~ msgstr "Centrato (Default)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Change Camera Angle"
+#~ msgstr "Cambia Angolo Telecamera"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18624,6 +18566,10 @@ msgstr "giallo/blu"
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "Seleziona il tuo aspect ratio preferito.."
+
+#~ msgctxt "keys_files"
+#~ msgid "Coin"
+#~ msgstr "Moneta"
 
 #~ msgctxt "game_options"
 #~ msgid "Color"
@@ -18944,6 +18890,10 @@ msgstr "giallo/blu"
 #~ msgid "Force Nvidia GPUs to always be reported as AMD GPUs."
 #~ msgstr "Forza le GPUs Nvidia ad essere viste come GPUs AMD."
 
+#~ msgctxt "keys_files"
+#~ msgid "Forward Nudge"
+#~ msgstr "Spingi in Avanti"
+
 #~ msgctxt "game_options"
 #~ msgid "GB COLORIZATION"
 #~ msgstr "COLORIZZAZIONE GB"
@@ -18996,6 +18946,18 @@ msgstr "giallo/blu"
 #~ msgstr "Keypad o joyport mappato per 2 giocatori."
 
 #~ msgctxt "keys_files"
+#~ msgid "Left Flipper"
+#~ msgstr "Flipper Sinistra"
+
+#~ msgctxt "keys_files"
+#~ msgid "Left Magna Save"
+#~ msgstr "Salvataggio Magna Sinistra"
+
+#~ msgctxt "keys_files"
+#~ msgid "Left Nudge"
+#~ msgstr "Spingi a Sinistra"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State"
 #~ msgstr "Carica Stato"
 
@@ -19026,6 +18988,10 @@ msgstr "giallo/blu"
 #~ msgstr ""
 #~ "Definisci manualmente quale risoluzione usare.&#x0a; Automatico va in "
 #~ "Alta e cambia in Super-Alta quando necessario."
+
+#~ msgctxt "keys_files"
+#~ msgid "Mech Tilt"
+#~ msgstr "Tilt Mech"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19177,6 +19143,10 @@ msgstr "giallo/blu"
 #~ msgid "Playstation 2 wheel type"
 #~ msgstr "Manubrio tipo Playstation 2"
 
+#~ msgctxt "keys_files"
+#~ msgid "Plunger"
+#~ msgstr "Molla"
+
 #~ msgctxt "game_options"
 #~ msgid "Pulse (Default)"
 #~ msgstr "Pulse (Default)"
@@ -19270,6 +19240,18 @@ msgstr "giallo/blu"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Ridimensiona automaticamente l'altezza video"
 
+#~ msgctxt "keys_files"
+#~ msgid "Right Flipper"
+#~ msgstr "Flipper di Destra"
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Magna Save"
+#~ msgstr "Salvataggio Magna Destra"
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Nudge"
+#~ msgstr "Spingi a Destra"
+
 #~ msgctxt "game_options"
 #~ msgid "SSAA"
 #~ msgstr "SSAA"
@@ -19350,6 +19332,10 @@ msgstr "giallo/blu"
 #~ msgctxt "keys_files"
 #~ msgid "Slot -"
 #~ msgstr "Slot -"
+
+#~ msgctxt "keys_files"
+#~ msgid "Start"
+#~ msgstr "Start"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."

@@ -2876,11 +2876,6 @@ msgstr ""
 "異なる解像度をサポートするゲームを特定の解像度でレンダリングできるようにしま"
 "す"
 
-#. TRANSLATION: fpinball
-msgctxt "game_options"
-msgid "Allow mapping Future Pinball with Pad to Keyboard."
-msgstr "パッドからキーボードへの Future Pinabll の割り当てを許可します"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -4447,11 +4442,6 @@ msgctxt "game_options"
 msgid "CONTROLLER COMBINATION"
 msgstr "コントローラーの組み合わせ"
 
-#. TRANSLATION: fpinball
-msgctxt "game_options"
-msgid "CONTROLLER CONFIGURATION"
-msgstr "コントローラー 構成"
-
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CONTROLLER MODE"
@@ -4911,11 +4901,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "ChJees"
 msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Change Camera Angle"
-msgstr "カメラアングル変更"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -5404,11 +5389,6 @@ msgstr "クラシック ソフトウェア"
 msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
 msgstr "Moonlightの終了は、リモートホストのアプリを閉じます"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Coin"
-msgstr "コイン"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -8285,11 +8265,6 @@ msgid "Forces the DX driver to use Managed textures instead of Dynamic."
 msgstr ""
 "DXドライバーにダイナミックではなく強制的に管理対象テクスチャを使用します"
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Forward Nudge"
-msgstr "前方を叩く"
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Framerate limiter to reduce CPU utilisation."
@@ -10370,21 +10345,6 @@ msgctxt "game_options"
 msgid "Left Analogue (Forced)"
 msgstr ""
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Flipper"
-msgstr "左 フリッパー"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Magna Save"
-msgstr "マグナセーブボタン 左"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Nudge"
-msgstr "左側を叩く"
-
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left flipper"
@@ -11062,11 +11022,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
 msgstr "一部の 2D ゲームで、より鮮明な画像になる場合があります"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Mech Tilt"
-msgstr "メカ Tilt(機械的傾斜)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12842,11 +12797,6 @@ msgctxt "game_options"
 msgid "Playfield configuration"
 msgstr "プレーフィールドの構成"
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Plunger"
-msgstr "レバーを引く"
-
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Point (Default)"
@@ -13640,21 +13590,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Right Analogue (Forced)"
 msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Flipper"
-msgstr "右 フリッパー"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Magna Save"
-msgstr "マグナセーブボタン 右"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Nudge"
-msgstr "右側を叩く"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -15464,11 +15399,6 @@ msgstr "標準コントローラー"
 msgctxt "game_options"
 msgid "Standard OpenGL (Default)"
 msgstr "標準 OpenGL (標準)"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Start"
-msgstr "スタート"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
@@ -18261,6 +18191,10 @@ msgstr "黄/青"
 #~ msgstr "ゲームボーイのゲームに色を追加します"
 
 #~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinball with Pad to Keyboard."
+#~ msgstr "パッドからキーボードへの Future Pinabll の割り当てを許可します"
+
+#~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr "switchres プロファイルがあれば使用可能にします"
 
@@ -18317,12 +18251,20 @@ msgstr "黄/青"
 #~ msgstr "表示色"
 
 #~ msgctxt "game_options"
+#~ msgid "CONTROLLER CONFIGURATION"
+#~ msgstr "コントローラー 構成"
+
+#~ msgctxt "game_options"
 #~ msgid "Can be used to simulate colors of particular displays."
 #~ msgstr "特定のディスプレイの色をシミュレートするために使用します"
 
 #~ msgctxt "game_options"
 #~ msgid "Center (Default)"
 #~ msgstr "中央 (標準)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Change Camera Angle"
+#~ msgstr "カメラアングル変更"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18343,6 +18285,10 @@ msgstr "黄/青"
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "アスペクト比を選択してください.."
+
+#~ msgctxt "keys_files"
+#~ msgid "Coin"
+#~ msgstr "コイン"
 
 #~ msgctxt "game_options"
 #~ msgid "Color"
@@ -18517,6 +18463,10 @@ msgstr "黄/青"
 #~ msgid "For Gyro-enabled games (bound to right analog stick)"
 #~ msgstr "ジャイロ対応ゲーム時（右アナログスティックに割り当てる）"
 
+#~ msgctxt "keys_files"
+#~ msgid "Forward Nudge"
+#~ msgstr "前方を叩く"
+
 #~ msgctxt "game_options"
 #~ msgid "GB COLORIZATION"
 #~ msgstr "GB カラー化"
@@ -18546,8 +18496,20 @@ msgstr "黄/青"
 #~ msgstr "2人用キーパッドからジョイポートへ割当てます"
 
 #~ msgctxt "keys_files"
+#~ msgid "Left Flipper"
+#~ msgstr "左 フリッパー"
+
+#~ msgctxt "keys_files"
+#~ msgid "Left Magna Save"
+#~ msgstr "マグナセーブボタン 左"
+
+#~ msgctxt "keys_files"
 #~ msgid "Left Manga Save"
 #~ msgstr "magnasave ボタン 左"
+
+#~ msgctxt "keys_files"
+#~ msgid "Left Nudge"
+#~ msgstr "左側を叩く"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State"
@@ -18566,6 +18528,10 @@ msgstr "黄/青"
 #~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
 #~ "switches to Super-High when needed."
 #~ msgstr "使用する解像度を設定します(自動は[720p]、必要に応じて[1440p]に切替)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Mech Tilt"
+#~ msgstr "メカ Tilt(機械的傾斜)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18644,6 +18610,10 @@ msgstr "黄/青"
 #~ msgid "Playstation 2 wheel type"
 #~ msgstr "PS2 ホイール(ハンドル)タイプ"
 
+#~ msgctxt "keys_files"
+#~ msgid "Plunger"
+#~ msgstr "レバーを引く"
+
 #~ msgctxt "game_options"
 #~ msgid "Pulse (Default)"
 #~ msgstr "Pulse（標準）"
@@ -18701,8 +18671,20 @@ msgstr "黄/青"
 #~ msgstr "画面の高さを自動的に変更します"
 
 #~ msgctxt "keys_files"
+#~ msgid "Right Flipper"
+#~ msgstr "右 フリッパー"
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Magna Save"
+#~ msgstr "マグナセーブボタン 右"
+
+#~ msgctxt "keys_files"
 #~ msgid "Right Manga Save"
 #~ msgstr "magnasave ボタン 右"
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Nudge"
+#~ msgstr "右側を叩く"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"
@@ -18769,6 +18751,10 @@ msgstr "黄/青"
 #~ msgctxt "keys_files"
 #~ msgid "Slot -"
 #~ msgstr "スロット -"
+
+#~ msgctxt "keys_files"
+#~ msgid "Start"
+#~ msgstr "スタート"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."

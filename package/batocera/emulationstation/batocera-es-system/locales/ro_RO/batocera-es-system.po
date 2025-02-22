@@ -2878,11 +2878,6 @@ msgstr ""
 "Permite jocurilor care suportă diferite rezoluții să fie redate într-o "
 "anumită rezoluție."
 
-#. TRANSLATION: fpinball
-msgctxt "game_options"
-msgid "Allow mapping Future Pinball with Pad to Keyboard."
-msgstr "Permite asocierea Future Pinball cu Pad to Keyboard."
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -4459,11 +4454,6 @@ msgctxt "game_options"
 msgid "CONTROLLER COMBINATION"
 msgstr "COMBINAȚIE CONTROLER"
 
-#. TRANSLATION: fpinball
-msgctxt "game_options"
-msgid "CONTROLLER CONFIGURATION"
-msgstr "CONFIGURAȚIE CONTROLER"
-
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CONTROLLER MODE"
@@ -4931,11 +4921,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "ChJees"
 msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Change Camera Angle"
-msgstr "Schimbă unghiul camerei"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -5430,11 +5415,6 @@ msgstr "Clasic software"
 msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
 msgstr "Închide aplicația pe gazda de la distanță când se iese din Moonlight."
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Coin"
-msgstr "Monedă"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -8354,11 +8334,6 @@ msgid "Forces the DX driver to use Managed textures instead of Dynamic."
 msgstr ""
 "Forțează driver-ul DX să folosească texturi manageriate în loc de dinamice."
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Forward Nudge"
-msgstr "Înghiontire în față"
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Framerate limiter to reduce CPU utilisation."
@@ -10460,21 +10435,6 @@ msgctxt "game_options"
 msgid "Left Analogue (Forced)"
 msgstr ""
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Flipper"
-msgstr "Aripa stângă"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Magna Save"
-msgstr "Salvare manga din stânga"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Nudge"
-msgstr "Înghiontire în stânga"
-
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left flipper"
@@ -11158,11 +11118,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
 msgstr "Poate rezulta într-o imagine mai clară în unele jocuri 2D."
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Mech Tilt"
-msgstr "Înclinare mecanică"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12953,11 +12908,6 @@ msgctxt "game_options"
 msgid "Playfield configuration"
 msgstr "Configurația câmpului de joc"
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Plunger"
-msgstr "Piston"
-
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Point (Default)"
@@ -13763,21 +13713,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Right Analogue (Forced)"
 msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Flipper"
-msgstr "Aripa dreaptă"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Magna Save"
-msgstr "Salvare manga din dreapta"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Nudge"
-msgstr "Înghiontire în dreapta"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -15603,11 +15538,6 @@ msgstr "Controler standard"
 msgctxt "game_options"
 msgid "Standard OpenGL (Default)"
 msgstr "OpenGL Standard (Implicit)"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Start"
-msgstr "Start"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
@@ -18479,6 +18409,10 @@ msgstr "galben/albastru"
 #~ msgstr "Adaugă culoare jocurilor Game Boy."
 
 #~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinball with Pad to Keyboard."
+#~ msgstr "Permite asocierea Future Pinball cu Pad to Keyboard."
+
+#~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr "Permite folosirea profilelor switchres dacă sunt prezente."
 
@@ -18567,12 +18501,20 @@ msgstr "galben/albastru"
 #~ msgstr "COLORARE"
 
 #~ msgctxt "game_options"
+#~ msgid "CONTROLLER CONFIGURATION"
+#~ msgstr "CONFIGURAȚIE CONTROLER"
+
+#~ msgctxt "game_options"
 #~ msgid "Can be used to simulate colors of particular displays."
 #~ msgstr "Poate fi utilizat pentru a simula culorile unui anumit ecran."
 
 #~ msgctxt "game_options"
 #~ msgid "Center (Default)"
 #~ msgstr "Centru (Implicit)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Change Camera Angle"
+#~ msgstr "Schimbă unghiul camerei"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18593,6 +18535,10 @@ msgstr "galben/albastru"
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "Alege-ți raportul de aspect preferat."
+
+#~ msgctxt "keys_files"
+#~ msgid "Coin"
+#~ msgstr "Monedă"
 
 #~ msgctxt "game_options"
 #~ msgid "Color"
@@ -18826,6 +18772,10 @@ msgstr "galben/albastru"
 #~ msgstr ""
 #~ "Pentru jocurile ce folosesc giroscop (asociat cu maneta analogică dreaptă)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Forward Nudge"
+#~ msgstr "Înghiontire în față"
+
 #~ msgctxt "game_options"
 #~ msgid "GB COLORIZATION"
 #~ msgstr "COLORARE GB"
@@ -18855,6 +18805,18 @@ msgstr "galben/albastru"
 #~ msgstr "Asocieri Keypad la Joyport pentru 2 jucători."
 
 #~ msgctxt "keys_files"
+#~ msgid "Left Flipper"
+#~ msgstr "Aripa stângă"
+
+#~ msgctxt "keys_files"
+#~ msgid "Left Magna Save"
+#~ msgstr "Salvare manga din stânga"
+
+#~ msgctxt "keys_files"
+#~ msgid "Left Nudge"
+#~ msgstr "Înghiontire în stânga"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State"
 #~ msgstr "Încarcă stare"
 
@@ -18877,6 +18839,10 @@ msgstr "galben/albastru"
 #~ msgstr ""
 #~ "Definește manual ce rezoluție să folosești.&#x0a;Automat implicit este la "
 #~ "Înalt și comută pe Super-înalt la nevoie."
+
+#~ msgctxt "keys_files"
+#~ msgid "Mech Tilt"
+#~ msgstr "Înclinare mecanică"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18986,6 +18952,10 @@ msgstr "galben/albastru"
 #~ msgid "Playstation 2 wheel type"
 #~ msgstr "Tip volan Playstation 2"
 
+#~ msgctxt "keys_files"
+#~ msgid "Plunger"
+#~ msgstr "Piston"
+
 #~ msgctxt "game_options"
 #~ msgid "Pulse (Default)"
 #~ msgstr "Pulse (Implicit)"
@@ -19080,6 +19050,18 @@ msgstr "galben/albastru"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Redimensionează automat înălțimea ecranului."
 
+#~ msgctxt "keys_files"
+#~ msgid "Right Flipper"
+#~ msgstr "Aripa dreaptă"
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Magna Save"
+#~ msgstr "Salvare manga din dreapta"
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Nudge"
+#~ msgstr "Înghiontire în dreapta"
+
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"
 #~ msgstr "S-Video (doar pete de culoare)"
@@ -19156,6 +19138,10 @@ msgstr "galben/albastru"
 #~ msgctxt "keys_files"
 #~ msgid "Slot -"
 #~ msgstr "Slot -"
+
+#~ msgctxt "keys_files"
+#~ msgid "Start"
+#~ msgstr "Start"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."

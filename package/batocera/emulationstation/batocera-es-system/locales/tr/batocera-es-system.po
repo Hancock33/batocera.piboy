@@ -2880,11 +2880,6 @@ msgstr ""
 "Farklı çözünürlükleri destekleyen oyunların belirli çözünürlükte işlenmesine "
 "izin verin."
 
-#. TRANSLATION: fpinball
-msgctxt "game_options"
-msgid "Allow mapping Future Pinball with Pad to Keyboard."
-msgstr "Future Pinball "
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -4460,11 +4455,6 @@ msgctxt "game_options"
 msgid "CONTROLLER COMBINATION"
 msgstr "KONTROL AYGITI KOMBİNASYONU"
 
-#. TRANSLATION: fpinball
-msgctxt "game_options"
-msgid "CONTROLLER CONFIGURATION"
-msgstr "KONTROL AYGITI KONFİGÜRASYONU"
-
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CONTROLLER MODE"
@@ -4929,11 +4919,6 @@ msgstr ""
 #. TRANSLATION: hurrican
 msgctxt "game_options"
 msgid "ChJees"
-msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Change Camera Angle"
 msgstr ""
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
@@ -5426,11 +5411,6 @@ msgstr "Klasik Yazılım"
 msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
 msgstr "Moonlight'tan çıkarken uzak ana bilgisayardaki uygulamayı kapat."
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Coin"
-msgstr "Kredi"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -8330,11 +8310,6 @@ msgctxt "game_options"
 msgid "Forces the DX driver to use Managed textures instead of Dynamic."
 msgstr "DX sürücüsünü Dinamik yerine Yönetilen dokuları kullanmaya zorlar."
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Forward Nudge"
-msgstr ""
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Framerate limiter to reduce CPU utilisation."
@@ -10419,21 +10394,6 @@ msgctxt "game_options"
 msgid "Left Analogue (Forced)"
 msgstr ""
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Flipper"
-msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Magna Save"
-msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Nudge"
-msgstr ""
-
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left flipper"
@@ -11120,11 +11080,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
 msgstr "Bazı 2D oyunlarda daha keskin bir görüntüye neden olabilir."
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Mech Tilt"
-msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12902,11 +12857,6 @@ msgctxt "game_options"
 msgid "Playfield configuration"
 msgstr "Oyunalanı yapılandırması"
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Plunger"
-msgstr ""
-
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Point (Default)"
@@ -13706,21 +13656,6 @@ msgstr ""
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Right Analogue (Forced)"
-msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Flipper"
-msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Magna Save"
-msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Nudge"
 msgstr ""
 
 #. TRANSLATION: libretro/melonds
@@ -15539,11 +15474,6 @@ msgstr "Standart Kontrol Aygıtı"
 msgctxt "game_options"
 msgid "Standard OpenGL (Default)"
 msgstr "Standart OpenGL (Varsayılan)"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Start"
-msgstr "Başlat"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
@@ -18479,6 +18409,10 @@ msgstr "sarı/mavi"
 #~ msgstr "Pad'den Klavyeye Future Pinball ile eşlemesine izin ver."
 
 #~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinball with Pad to Keyboard."
+#~ msgstr "Future Pinball "
+
+#~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr "Varsa, switchres profillerinin kullanımına izin verir."
 
@@ -18598,6 +18532,10 @@ msgstr "sarı/mavi"
 #~ msgstr "RENKLENDİRME"
 
 #~ msgctxt "game_options"
+#~ msgid "CONTROLLER CONFIGURATION"
+#~ msgstr "KONTROL AYGITI KONFİGÜRASYONU"
+
+#~ msgctxt "game_options"
 #~ msgid "CONTROLLER PAK 1"
 #~ msgstr "KONTROL AYGITI PAK 1"
 
@@ -18655,6 +18593,10 @@ msgstr "sarı/mavi"
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "Tercih ettiğiniz en boy oranını seçin."
+
+#~ msgctxt "keys_files"
+#~ msgid "Coin"
+#~ msgstr "Kredi"
 
 #~ msgctxt "game_options"
 #~ msgid "Color"
@@ -19460,6 +19402,10 @@ msgstr "sarı/mavi"
 #~ msgctxt "game_options"
 #~ msgid "Standard"
 #~ msgstr "Standart"
+
+#~ msgctxt "keys_files"
+#~ msgid "Start"
+#~ msgstr "Başlat"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."

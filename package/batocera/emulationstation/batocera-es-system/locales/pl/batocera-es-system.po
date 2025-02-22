@@ -2883,11 +2883,6 @@ msgstr ""
 "Umożliwia renderowanie gier obsługujących różne rozdzielczości w określonej "
 "rozdzielczości."
 
-#. TRANSLATION: fpinball
-msgctxt "game_options"
-msgid "Allow mapping Future Pinball with Pad to Keyboard."
-msgstr "Zezwól na mapowanie Future Pinball za pomocą Pada na klawiaturę."
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -4463,11 +4458,6 @@ msgctxt "game_options"
 msgid "CONTROLLER COMBINATION"
 msgstr "KOMBINACJA KONTROLERÓW"
 
-#. TRANSLATION: fpinball
-msgctxt "game_options"
-msgid "CONTROLLER CONFIGURATION"
-msgstr "KONFIGURACJA KONTROLERA"
-
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CONTROLLER MODE"
@@ -4933,11 +4923,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "ChJees"
 msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Change Camera Angle"
-msgstr "Zmień kąt kamery"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -5438,11 +5423,6 @@ msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
 msgstr ""
 "Zamknij aplikację na zdalnym hoście podczas kończenia pracy z Moonlightem."
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Coin"
-msgstr "Moneta"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -8355,11 +8335,6 @@ msgid "Forces the DX driver to use Managed textures instead of Dynamic."
 msgstr ""
 "Zmusza sterownik DX do używania tekstur zarządzanych zamiast dynamicznych."
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Forward Nudge"
-msgstr "Szturchnięcie do przodu"
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Framerate limiter to reduce CPU utilisation."
@@ -10459,21 +10434,6 @@ msgctxt "game_options"
 msgid "Left Analogue (Forced)"
 msgstr ""
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Flipper"
-msgstr "Lewy fliper"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Magna Save"
-msgstr "Lewe magna save"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Nudge"
-msgstr "Lewe szturchnięcie"
-
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left flipper"
@@ -11160,11 +11120,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
 msgstr "Może skutkować ostrzejszym obrazem w niektórych grach 2D."
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Mech Tilt"
-msgstr "Pochylenie mechanizmu"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12957,11 +12912,6 @@ msgctxt "game_options"
 msgid "Playfield configuration"
 msgstr "Konfiguracja pola gry"
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Plunger"
-msgstr "Tłok"
-
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Point (Default)"
@@ -13763,21 +13713,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Right Analogue (Forced)"
 msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Flipper"
-msgstr "Prawy fliper"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Magna Save"
-msgstr "Prawe magna save"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Nudge"
-msgstr "Prawe szturchnięcie"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -15597,11 +15532,6 @@ msgstr "Kontroler standardowy"
 msgctxt "game_options"
 msgid "Standard OpenGL (Default)"
 msgstr "Standardowy OpenGL (domyślnie)"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Start"
-msgstr "Start"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
@@ -18698,6 +18628,10 @@ msgstr "żółty/niebieski"
 #~ msgstr "Zezwól na mapowanie Future Pinball za pomocą Pada na klawiaturę."
 
 #~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinball with Pad to Keyboard."
+#~ msgstr "Zezwól na mapowanie Future Pinball za pomocą Pada na klawiaturę."
+
+#~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr "Zezwala na użycie profili switchres, jeśli są obecne."
 
@@ -18920,6 +18854,10 @@ msgstr "żółty/niebieski"
 #~ msgstr "KONTROLER 2"
 
 #~ msgctxt "game_options"
+#~ msgid "CONTROLLER CONFIGURATION"
+#~ msgstr "KONFIGURACJA KONTROLERA"
+
+#~ msgctxt "game_options"
 #~ msgid "CONTROLLER PAK 1"
 #~ msgstr "PAK KONTROLERA 1"
 
@@ -18959,6 +18897,10 @@ msgstr "żółty/niebieski"
 #~ msgctxt "game_options"
 #~ msgid "Center (Default)"
 #~ msgstr "Wyśrodkuj (domyślnie)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Change Camera Angle"
+#~ msgstr "Zmień kąt kamery"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19043,6 +18985,10 @@ msgstr "żółty/niebieski"
 #~ "Choose your rendered resolution (Requires personal redream.key file)."
 #~ msgstr ""
 #~ "Wybierz rozdzielczość renderowania (wymaga osobistego pliku redream.key)."
+
+#~ msgctxt "keys_files"
+#~ msgid "Coin"
+#~ msgstr "Moneta"
 
 #~ msgctxt "game_options"
 #~ msgid "Color"
@@ -19577,6 +19523,10 @@ msgstr "żółty/niebieski"
 #~ msgid "Forces Dreamcast Windows CE mode on."
 #~ msgstr "Wymusza włączenie trybu Dreamcast Windows CE."
 
+#~ msgctxt "keys_files"
+#~ msgid "Forward Nudge"
+#~ msgstr "Szturchnięcie do przodu"
+
 #~ msgctxt "game_options"
 #~ msgid "Fullspeed can break some games."
 #~ msgstr "Pełna prędkość może zepsuć niektóre gry."
@@ -19733,8 +19683,20 @@ msgstr "żółty/niebieski"
 #~ msgstr "OGRANICZ SZYBKOŚĆ KLATEK"
 
 #~ msgctxt "keys_files"
+#~ msgid "Left Flipper"
+#~ msgstr "Lewy fliper"
+
+#~ msgctxt "keys_files"
+#~ msgid "Left Magna Save"
+#~ msgstr "Lewe magna save"
+
+#~ msgctxt "keys_files"
 #~ msgid "Left Manga Save"
 #~ msgstr "Zapis lewej mangi"
+
+#~ msgctxt "keys_files"
+#~ msgid "Left Nudge"
+#~ msgstr "Lewe szturchnięcie"
 
 #~ msgctxt "game_options"
 #~ msgid "Legacy (laggy)"
@@ -19843,6 +19805,10 @@ msgstr "żółty/niebieski"
 #~ msgctxt "game_options"
 #~ msgid "May help to fix choppy audio on weaker CPUs."
 #~ msgstr "Może pomóc naprawić zacinający się dźwięk na słabszych procesorach."
+
+#~ msgctxt "keys_files"
+#~ msgid "Mech Tilt"
+#~ msgstr "Pochylenie mechanizmu"
 
 #~ msgctxt "game_options"
 #~ msgid "Mortal Kombat (SNES)"
@@ -20069,6 +20035,10 @@ msgstr "żółty/niebieski"
 #~ msgid "Playstation 2 wheel type"
 #~ msgstr "Rodzaj kierownicy Playstation 2"
 
+#~ msgctxt "keys_files"
+#~ msgid "Plunger"
+#~ msgstr "Tłok"
+
 #~ msgctxt "game_options"
 #~ msgid "Preload TLB hack to avoid tlb miss on Goemon"
 #~ msgstr "Preload TLB hack, aby uniknąć tlb miss na Goemon"
@@ -20220,8 +20190,20 @@ msgstr "żółty/niebieski"
 #~ msgstr "Automatycznie zmieniaj wysokość ekranu."
 
 #~ msgctxt "keys_files"
+#~ msgid "Right Flipper"
+#~ msgstr "Prawy fliper"
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Magna Save"
+#~ msgstr "Prawe magna save"
+
+#~ msgctxt "keys_files"
 #~ msgid "Right Manga Save"
 #~ msgstr "Zapis prawej mangi"
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Nudge"
+#~ msgstr "Prawe szturchnięcie"
 
 #~ msgctxt "game_options"
 #~ msgid "Rotate"
@@ -20408,6 +20390,10 @@ msgstr "żółty/niebieski"
 #~ msgctxt "game_options"
 #~ msgid "Standard (Default)"
 #~ msgstr "Standard (domyślnie)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Start"
+#~ msgstr "Start"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."

@@ -2873,11 +2873,6 @@ msgstr ""
 "Tillat at spill som støtter ulike oppløsninger, gjengis i en bestemt "
 "oppløsning."
 
-#. TRANSLATION: fpinball
-msgctxt "game_options"
-msgid "Allow mapping Future Pinball with Pad to Keyboard."
-msgstr "Tillat kartlegging av Future Pinball med Pad til tastatur."
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -4450,11 +4445,6 @@ msgctxt "game_options"
 msgid "CONTROLLER COMBINATION"
 msgstr "KOMBINASJON AV REGULATORER"
 
-#. TRANSLATION: fpinball
-msgctxt "game_options"
-msgid "CONTROLLER CONFIGURATION"
-msgstr "KONFIGURASJON AV KONTROLLEREN"
-
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CONTROLLER MODE"
@@ -4918,11 +4908,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "ChJees"
 msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Change Camera Angle"
-msgstr "Endre kameravinkel"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -5416,11 +5401,6 @@ msgstr "Klassisk programvare"
 msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
 msgstr "Lukk appen på den eksterne verten når du avslutter Moonlight."
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Coin"
-msgstr "Mynt"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -8313,11 +8293,6 @@ msgstr ""
 "Tvinger DX-driveren til å bruke administrerte teksturer i stedet for "
 "dynamiske."
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Forward Nudge"
-msgstr "Dytt fremover"
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Framerate limiter to reduce CPU utilisation."
@@ -10404,21 +10379,6 @@ msgctxt "game_options"
 msgid "Left Analogue (Forced)"
 msgstr ""
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Flipper"
-msgstr "Venstre flipper"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Magna Save"
-msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Nudge"
-msgstr "Venstre dytt"
-
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left flipper"
@@ -11100,11 +11060,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
 msgstr "Kan gi et skarpere bilde i enkelte 2D-spill."
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Mech Tilt"
-msgstr "Mech Tilt"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12882,11 +12837,6 @@ msgctxt "game_options"
 msgid "Playfield configuration"
 msgstr "Konfigurasjon av spillefeltet"
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Plunger"
-msgstr "Plunger"
-
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Point (Default)"
@@ -13687,21 +13637,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Right Analogue (Forced)"
 msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Flipper"
-msgstr "Høyre Flipper"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Magna Save"
-msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Nudge"
-msgstr "Høyre Dytt"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -15521,11 +15456,6 @@ msgstr "Standard kontroller"
 msgctxt "game_options"
 msgid "Standard OpenGL (Default)"
 msgstr "Standard OpenGL (standard)"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Start"
-msgstr "Start"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
@@ -18424,6 +18354,10 @@ msgstr "gul/blå"
 #~ msgstr "Tillat tilordning av Future Pinabll med Pad til tastatur."
 
 #~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinball with Pad to Keyboard."
+#~ msgstr "Tillat kartlegging av Future Pinball med Pad til tastatur."
+
+#~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr "Tillater bruk av switchres-profiler hvis de finnes."
 
@@ -18516,12 +18450,20 @@ msgstr "gul/blå"
 #~ msgstr "FARGEGIVNING"
 
 #~ msgctxt "game_options"
+#~ msgid "CONTROLLER CONFIGURATION"
+#~ msgstr "KONFIGURASJON AV KONTROLLEREN"
+
+#~ msgctxt "game_options"
 #~ msgid "Can be used to simulate colors of particular displays."
 #~ msgstr "Kan brukes til å simulere farger på bestemte skjermer."
 
 #~ msgctxt "game_options"
 #~ msgid "Center (Default)"
 #~ msgstr "Senter (standard)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Change Camera Angle"
+#~ msgstr "Endre kameravinkel"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18549,6 +18491,10 @@ msgstr "gul/blå"
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "Velg ønsket størrelsesforhold."
+
+#~ msgctxt "keys_files"
+#~ msgid "Coin"
+#~ msgstr "Mynt"
 
 #~ msgctxt "game_options"
 #~ msgid "Color"
@@ -18814,6 +18760,10 @@ msgstr "gul/blå"
 #~ msgid "For Gyro-enabled games (bound to right analog stick)"
 #~ msgstr "For Gyro-aktiverte spill (bundet til høyre analoge spak)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Forward Nudge"
+#~ msgstr "Dytt fremover"
+
 #~ msgctxt "game_options"
 #~ msgid "GB COLORIZATION"
 #~ msgstr "GB-FARGELEGGING"
@@ -18847,8 +18797,16 @@ msgstr "gul/blå"
 #~ msgstr "Tilordning av tastatur til joyport for 2 spillere."
 
 #~ msgctxt "keys_files"
+#~ msgid "Left Flipper"
+#~ msgstr "Venstre flipper"
+
+#~ msgctxt "keys_files"
 #~ msgid "Left Manga Save"
 #~ msgstr "Venstre Manga Lagre"
+
+#~ msgctxt "keys_files"
+#~ msgid "Left Nudge"
+#~ msgstr "Venstre dytt"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State"
@@ -18881,6 +18839,10 @@ msgstr "gul/blå"
 #~ msgstr ""
 #~ "Definer manuelt hvilken oppløsning som skal brukes.\n"
 #~ "Automatisk standardinnstilling er Høy og bytter til Superhøy ved behov."
+
+#~ msgctxt "keys_files"
+#~ msgid "Mech Tilt"
+#~ msgstr "Mech Tilt"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19016,6 +18978,10 @@ msgstr "gul/blå"
 #~ msgid "Playstation 2 wheel type"
 #~ msgstr "Type Playstation 2-ratt"
 
+#~ msgctxt "keys_files"
+#~ msgid "Plunger"
+#~ msgstr "Plunger"
+
 #~ msgctxt "game_options"
 #~ msgid "Pulse (Default)"
 #~ msgstr "Puls (standard)"
@@ -19110,8 +19076,16 @@ msgstr "gul/blå"
 #~ msgstr "Endre størrelsen på skjermen automatisk."
 
 #~ msgctxt "keys_files"
+#~ msgid "Right Flipper"
+#~ msgstr "Høyre Flipper"
+
+#~ msgctxt "keys_files"
 #~ msgid "Right Manga Save"
 #~ msgstr "Høyre Magna Save"
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Nudge"
+#~ msgstr "Høyre Dytt"
 
 #~ msgctxt "game_options"
 #~ msgid "SSAA"
@@ -19188,6 +19162,10 @@ msgstr "gul/blå"
 #~ msgctxt "keys_files"
 #~ msgid "Slot -"
 #~ msgstr "Spor -"
+
+#~ msgctxt "keys_files"
+#~ msgid "Start"
+#~ msgstr "Start"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."

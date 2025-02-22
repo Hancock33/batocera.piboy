@@ -2883,11 +2883,6 @@ msgstr ""
 "Toestaan ​​dat spellen die verschillende resoluties ondersteunen, in een "
 "specifieke resolutie worden weergegeven."
 
-#. TRANSLATION: fpinball
-msgctxt "game_options"
-msgid "Allow mapping Future Pinball with Pad to Keyboard."
-msgstr "Sta het mappen van Future Pinball met Padtokey toe."
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -4466,11 +4461,6 @@ msgctxt "game_options"
 msgid "CONTROLLER COMBINATION"
 msgstr "CONTROLLER COMBINATIE"
 
-#. TRANSLATION: fpinball
-msgctxt "game_options"
-msgid "CONTROLLER CONFIGURATION"
-msgstr "CONFIGURATIE VAN DE CONTROLLER"
-
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CONTROLLER MODE"
@@ -4937,11 +4927,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "ChJees"
 msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Change Camera Angle"
-msgstr "Verander de camerahoek"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -5442,11 +5427,6 @@ msgstr "Klassieke Software"
 msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
 msgstr "Sluit de app op de externe host wanneer u Moonlight afsluit."
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Coin"
-msgstr "Coin"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -8363,11 +8343,6 @@ msgstr ""
 "Forceert de DX driver om Managed textures te gebruiken in plaats van "
 "Dynamisch."
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Forward Nudge"
-msgstr "Duw voorwaarts"
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Framerate limiter to reduce CPU utilisation."
@@ -10466,21 +10441,6 @@ msgctxt "game_options"
 msgid "Left Analogue (Forced)"
 msgstr ""
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Flipper"
-msgstr "Linker Flipper"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Magna Save"
-msgstr "Links Magna Save"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Left Nudge"
-msgstr "Duw Links"
-
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left flipper"
@@ -11164,11 +11124,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
 msgstr "Kan in sommige 2D-games resulteren in een scherper beeld."
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Mech Tilt"
-msgstr "Mechanische Tilt"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12960,11 +12915,6 @@ msgctxt "game_options"
 msgid "Playfield configuration"
 msgstr "Speelveldconfiguratie"
 
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Plunger"
-msgstr "Trekker"
-
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Point (Default)"
@@ -13768,21 +13718,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Right Analogue (Forced)"
 msgstr ""
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Flipper"
-msgstr "Rechter Flipper"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Magna Save"
-msgstr "Rechts Magna Save"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Right Nudge"
-msgstr "Duw Rechts"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -15610,11 +15545,6 @@ msgstr "Standaard Controller"
 msgctxt "game_options"
 msgid "Standard OpenGL (Default)"
 msgstr "Standaard OpenGL (Standaard)"
-
-#. TRANSLATION: fpinball.keys
-msgctxt "keys_files"
-msgid "Start"
-msgstr "Start"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
@@ -18442,6 +18372,10 @@ msgstr "geel/blauw"
 #~ msgstr "Voeg kleuren toe aan Game Boy spellen."
 
 #~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinball with Pad to Keyboard."
+#~ msgstr "Sta het mappen van Future Pinball met Padtokey toe."
+
+#~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr "Staat het gebruik toe van switchres profielen indien aanwezig."
 
@@ -18499,9 +18433,17 @@ msgstr "geel/blauw"
 #~ msgstr "COLORISATIE"
 
 #~ msgctxt "game_options"
+#~ msgid "CONTROLLER CONFIGURATION"
+#~ msgstr "CONFIGURATIE VAN DE CONTROLLER"
+
+#~ msgctxt "game_options"
 #~ msgid "Can be used to simulate colors of particular displays."
 #~ msgstr ""
 #~ "Kan gebruikt worden om kleuren van specifieke beeldschermen te simuleren."
+
+#~ msgctxt "keys_files"
+#~ msgid "Change Camera Angle"
+#~ msgstr "Verander de camerahoek"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18522,6 +18464,10 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "Kies de gewenste beeldverhouding.."
+
+#~ msgctxt "keys_files"
+#~ msgid "Coin"
+#~ msgstr "Coin"
 
 #~ msgctxt "game_options"
 #~ msgid "Color"
@@ -18702,6 +18648,10 @@ msgstr "geel/blauw"
 #~ msgid "For Gyro-enabled games (bound to right analog stick)"
 #~ msgstr "Voor Gyro-enabled spellen (gebonden aan de rechter analoge stick)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Forward Nudge"
+#~ msgstr "Duw voorwaarts"
+
 #~ msgctxt "game_options"
 #~ msgid "GB COLORIZATION"
 #~ msgstr "GB COLORISATIE"
@@ -18731,6 +18681,18 @@ msgstr "geel/blauw"
 #~ msgstr "Keypad naar joyport indelingen voor 2 spelers."
 
 #~ msgctxt "keys_files"
+#~ msgid "Left Flipper"
+#~ msgstr "Linker Flipper"
+
+#~ msgctxt "keys_files"
+#~ msgid "Left Magna Save"
+#~ msgstr "Links Magna Save"
+
+#~ msgctxt "keys_files"
+#~ msgid "Left Nudge"
+#~ msgstr "Duw Links"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State"
 #~ msgstr "Laad Staat"
 
@@ -18749,6 +18711,10 @@ msgstr "geel/blauw"
 #~ msgstr ""
 #~ "Definieer handmatig welke resolutie te gebruiken.&#x0a;Auto standaarden "
 #~ "naar Hoog en wisselt naar Super-Hoog wanneer nodig."
+
+#~ msgctxt "keys_files"
+#~ msgid "Mech Tilt"
+#~ msgstr "Mechanische Tilt"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18830,6 +18796,10 @@ msgstr "geel/blauw"
 #~ msgid "Playstation 2 wheel type"
 #~ msgstr "Playstation 2 stuurwiel type"
 
+#~ msgctxt "keys_files"
+#~ msgid "Plunger"
+#~ msgstr "Trekker"
+
 #~ msgctxt "game_options"
 #~ msgid "Pulse (Default)"
 #~ msgstr "Puls (Standaard)"
@@ -18889,6 +18859,18 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Automatisch scherm hoogte aanpassen."
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Flipper"
+#~ msgstr "Rechter Flipper"
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Magna Save"
+#~ msgstr "Rechts Magna Save"
+
+#~ msgctxt "keys_files"
+#~ msgid "Right Nudge"
+#~ msgstr "Duw Rechts"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"
@@ -18959,6 +18941,10 @@ msgstr "geel/blauw"
 #~ msgctxt "keys_files"
 #~ msgid "Slot -"
 #~ msgstr "Slot -"
+
+#~ msgctxt "keys_files"
+#~ msgid "Start"
+#~ msgstr "Start"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
