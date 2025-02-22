@@ -59,6 +59,15 @@ def squashfs_rom(rom: str | Path, /) -> Iterator[str]:
         elif len(list(mount_point.iterdir())) == 1 and rom_ps.exists():
             _logger.debug("squashfs: ps3 rom %s", rom_ps)
             yield str(mount_point)
+        elif "/windows/" in str(rom):
+            _logger.debug("squashfs: windows rom %s", mount_point)
+            yield str(mount_point)
+        elif "/popcap/" in str(rom):
+            _logger.debug("squashfs: popcap rom %s", mount_point)
+            yield str(mount_point)
+        elif "/bigfish/" in str(rom):
+            _logger.debug("squashfs: bigfish rom %s", mount_point)
+            yield str(mount_point)
         else:
             try:
                 rom_linked = (mount_point / ".ROM").resolve(strict=True)
