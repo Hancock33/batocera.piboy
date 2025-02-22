@@ -2731,7 +2731,7 @@ kodi:
   release:              2001
   hardware:             computer
   extensions:           [3g2, 3gp, asf, avi, divx, f4f, f4v, flac, flv, m2p, m2ts, m4a, mkv, mov, mp3, mp4, mpeg, mpg, mxf, ogg, ogm, ps, ts, vob, wav, webm, wma, wmv]
-  path:                 /userdata/library
+  path:                 /userdata/media
   emulators:
     kodi:
       kodi:             { requireAnyOf: [BR2_PACKAGE_KODI] }
