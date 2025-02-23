@@ -364,7 +364,7 @@ gamecom:
   emulator: libretro
   core:     mame
 gamecube:
-  emulator: libretro
+  emulator: dolphin
   core:     dolphin
 gamegear:
   emulator: libretro
@@ -1098,7 +1098,7 @@ wasm4:
   emulator: libretro
   core:     wasm4
 wii:
-  emulator: libretro
+  emulator: dolphin
   core:     dolphin
   options:
     powersave: '1'
@@ -1108,7 +1108,7 @@ wiiu:
   options:
     powersave: '2'
 wiiware:
-  emulator: libretro
+  emulator: dolphin
   core:     dolphin
   options:
     powersave: '1'
