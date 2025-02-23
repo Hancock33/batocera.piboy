@@ -1,7 +1,7 @@
 config BR2_PACKAGE_SF_RPI_STATUS
 	bool "sf_rpi_status"
-	select BR2_PACKAGE_PYTHON_REQUESTS
 	select BR2_PACKAGE_PYTHON_PSUTIL
+	select BR2_PACKAGE_PYTHON_REQUESTS
 
 	help
 	  SunFounder Raspberry Pi Status python package.

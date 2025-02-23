@@ -1,9 +1,9 @@
 config BR2_PACKAGE_GLSLANG
 	bool "glslang"
 	depends on BR2_PACKAGE_WAYLAND || BR2_PACKAGE_XORG7
+	select BR2_PACKAGE_SPIRV_TOOLS
 	select BR2_PACKAGE_VULKAN_HEADERS
 	select BR2_PACKAGE_VULKAN_LOADER
-	select BR2_PACKAGE_SPIRV_TOOLS
 
 	help
 	  glslang from Khronos
