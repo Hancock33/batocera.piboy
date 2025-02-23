@@ -14,14 +14,14 @@ from .fsuaePaths import FSUAE_BIOS_DIR, FSUAE_CONFIG_DIR, FSUAE_SAVES
 if TYPE_CHECKING:
     from ...types import HotkeysContext
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 class FsuaeGenerator(Generator):
 
     def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "fsuae",
-            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_F12" }
         }
 
     # from one file (x1.zip), get the list of all existing files with the same extension + last char (as number) suffix
@@ -61,7 +61,7 @@ class FsuaeGenerator(Generator):
         fsuaeControllers.generateControllerConfig(system, playersControllers)
 
         commandArray = ['/usr/bin/fs-uae', "--fullscreen",
-                                           "--amiga-model="     + system.config['core'],
+                                           f"--amiga-model={system.config['core']}",
                                            f"--base_dir={FSUAE_CONFIG_DIR!s}",
                                            f"--kickstarts_dir={FSUAE_BIOS_DIR!s}",
                                            f"--save_states_dir={FSUAE_SAVES / system.config['core'] / self.filePrefix(rom_path)}",
@@ -84,11 +84,11 @@ class FsuaeGenerator(Generator):
                 if (d.endswith("ipf") or d.endswith("adf") or d.endswith("dms") or d.endswith("adz")):
                     diskNames.append(name)
 
-            eslog.debug("Amount of disks in zip " + str(len(diskNames)))
+            _logger.debug("Amount of disks in zip %s", len(diskNames))
 
         # if 2+ files, we have a multidisk ZIP (0=no zip)
         if (len(diskNames) > 1):
-            eslog.debug("extracting...")
+            _logger.debug("extracting...")
             shutil.rmtree(TEMP_DIR, ignore_errors=True) # cleanup
             zf.extractall(TEMP_DIR)
 
@@ -111,7 +111,7 @@ class FsuaeGenerator(Generator):
         n = 0
         for playercontroller, pad in sorted(playersControllers.items()):
             if n <= 3:
-                commandArray.append("--joystick_port_" + str(n) + "=" + pad.real_name + "")
+                commandArray.append(f"--joystick_port_{n}={pad.real_name}")
                 n += 1
 
         return Command.Command(array=commandArray)

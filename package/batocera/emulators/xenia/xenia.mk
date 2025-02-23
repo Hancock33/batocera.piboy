@@ -22,13 +22,6 @@ define XENIA_INSTALL_TARGET_CMDS
 	cp -avr $(@D)/xenia.exe $(TARGET_DIR)/usr/bin/xenia
 endef
 
-define XENIA_POST_PROCESS
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/xenia/xbox360.xenia.keys $(TARGET_DIR)/usr/share/evmapy
-endef
-
-XENIA_POST_INSTALL_TARGET_HOOKS += XENIA_POST_PROCESS
-
 # When rebuilding, if an existing version is cached a new version will not be downloaded as the filenames is the same.
 # Delete existing version before building
 define XENIA_REMOVE_SOURCE

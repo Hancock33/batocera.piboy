@@ -1,8 +1,7 @@
 from __future__ import annotations
 
 import json
-import logging
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 
 from ... import Command
 from ...batoceraPaths import CONFIGS, mkdir_if_not_exists
@@ -13,8 +12,6 @@ from ..Generator import Generator
 if TYPE_CHECKING:
     from ...types import HotkeysContext
 
-
-eslog = logging.getLogger(__name__)
 
 bigPemuConfig = CONFIGS / "bigpemu" / "BigPEmuConfig.bigpcfg"
 
@@ -224,7 +221,7 @@ class BigPEmuGenerator(Generator):
     def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "bigpemu",
-            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ESC", "save_state": "KEY_F9", "restore_state": "KEY_F5" }
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
@@ -236,23 +233,11 @@ class BigPEmuGenerator(Generator):
         if bigPemuConfig.exists():
             bigPemuConfig.unlink()
 
-        # Create the config file as it doesn't exist
-        if not bigPemuConfig.exists():
-            with bigPemuConfig.open('w') as file:
-                json.dump({}, file)
-
-        # Load or initialize the configuration
-        with bigPemuConfig.open() as file:
-            try:
-                config = json.load(file)
-            except json.decoder.JSONDecodeError:
-                config = {}
+        config: dict[str, Any] = {}
 
         # Ensure the necessary structure in the config
-        if "BigPEmuConfig" not in config:
-            config["BigPEmuConfig"] = {}
-        if "Video" not in config["BigPEmuConfig"]:
-            config["BigPEmuConfig"]["Video"] = {}
+        config["BigPEmuConfig"] = {}
+        config["BigPEmuConfig"]["Video"] = {}
 
         # Adjust basic settings
         config["BigPEmuConfig"]["Video"]["DisplayMode"] = 2
@@ -273,8 +258,7 @@ class BigPEmuGenerator(Generator):
         config["BigPEmuConfig"]["Video"]["LockAspect"] = 1
 
         # Controller config
-        if "Input" not in config["BigPEmuConfig"]:
-            config["BigPEmuConfig"]["Input"] = {}
+        config["BigPEmuConfig"]["Input"] = {}
 
         # initial settings
         config["BigPEmuConfig"]["Input"]["DeviceCount"] = len(playersControllers)
@@ -293,15 +277,15 @@ class BigPEmuGenerator(Generator):
         nplayer = 0
         for controller, pad in sorted(playersControllers.items()):
             if nplayer <= 7:
-                if "Device{}".format(nplayer) not in config["BigPEmuConfig"]["Input"]:
-                    config["BigPEmuConfig"]["Input"]["Device{}".format(nplayer)] = {}
-                    config["BigPEmuConfig"]["Input"]["Device{}".format(nplayer)]["DeviceType"] = 0 # standard controller
-                    config["BigPEmuConfig"]["Input"]["Device{}".format(nplayer)]["InvertAnally"] = 0
-                    config["BigPEmuConfig"]["Input"]["Device{}".format(nplayer)]["RotaryScale"] = 0.5
-                    config["BigPEmuConfig"]["Input"]["Device{}".format(nplayer)]["HeadTrackerScale"] = 8.0
-                    config["BigPEmuConfig"]["Input"]["Device{}".format(nplayer)]["HeadTrackerSpring"] = 0
-                    if "Bindings" not in config["BigPEmuConfig"]["Input"]["Device{}".format(nplayer)]:
-                        config["BigPEmuConfig"]["Input"]["Device{}".format(nplayer)]["Bindings"] = []
+                if f"Device{nplayer}" not in config["BigPEmuConfig"]["Input"]:
+                    config["BigPEmuConfig"]["Input"][f"Device{nplayer}"] = {}
+                    config["BigPEmuConfig"]["Input"][f"Device{nplayer}"]["DeviceType"] = 0 # standard controller
+                    config["BigPEmuConfig"]["Input"][f"Device{nplayer}"]["InvertAnally"] = 0
+                    config["BigPEmuConfig"]["Input"][f"Device{nplayer}"]["RotaryScale"] = 0.5
+                    config["BigPEmuConfig"]["Input"][f"Device{nplayer}"]["HeadTrackerScale"] = 8.0
+                    config["BigPEmuConfig"]["Input"][f"Device{nplayer}"]["HeadTrackerSpring"] = 0
+                    if "Bindings" not in config["BigPEmuConfig"]["Input"][f"Device{nplayer}"]:
+                        config["BigPEmuConfig"]["Input"][f"Device{nplayer}"]["Bindings"] = []
 
                     # Loop through BINDINGS_SEQUENCE to maintain the specific order of bindings
                     if nplayer == 0:
@@ -310,7 +294,7 @@ class BigPEmuGenerator(Generator):
                         BINDINGS_SEQUENCE = P2_BINDINGS_SEQUENCE
 
                     for binding_key, binding_info in BINDINGS_SEQUENCE.items():
-                        #eslog.debug(f"Binding sequence input: {binding_key}")
+                        # _logger.debug(f"Binding sequence input: %s", binding_key)
                         if "button" in binding_info:
                             if "keyboard" in binding_info:
                                 generate_func = generate_keyb_button_bindings
@@ -382,22 +366,21 @@ class BigPEmuGenerator(Generator):
                                                 bindings = generate_func(pad.guid, binding_info["keyboard"], input.id, input.value)
                                             else:
                                                 bindings = generate_func(pad.guid, input.id, input.value)
-                                    config["BigPEmuConfig"]["Input"]["Device{}".format(nplayer)]["Bindings"].extend(bindings)
+                                    config["BigPEmuConfig"]["Input"][f"Device{nplayer}"]["Bindings"].extend(bindings)
                                     break
                         else:
                             if generate_func == generate_keyb_bindings:
                                 bindings = generate_func(binding_info["keyboard"])
-                                config["BigPEmuConfig"]["Input"]["Device{}".format(nplayer)]["Bindings"].extend(bindings)
+                                config["BigPEmuConfig"]["Input"][f"Device{nplayer}"]["Bindings"].extend(bindings)
                             else:
                                 bindings = generate_func()
-                                config["BigPEmuConfig"]["Input"]["Device{}".format(nplayer)]["Bindings"].extend(bindings)
+                                config["BigPEmuConfig"]["Input"][f"Device{nplayer}"]["Bindings"].extend(bindings)
 
             # Onto the next controller as necessary
             nplayer += 1
 
         # Scripts config
-        if "ScriptsEnabled" not in config["BigPEmuConfig"]:
-            config["BigPEmuConfig"]["ScriptsEnabled"] = []
+        config["BigPEmuConfig"]["ScriptsEnabled"] = []
 
         # User selections for ScriptsEnabled options (individual scripts)
         scripts = [
@@ -422,8 +405,7 @@ class BigPEmuGenerator(Generator):
         config["BigPEmuConfig"]["ScriptsEnabled"] = list(set(config["BigPEmuConfig"]["ScriptsEnabled"]))
 
         # ScriptSettings
-        if "ScriptSettings" not in config["BigPEmuConfig"]:
-            config["BigPEmuConfig"]["ScriptSettings"] = {}
+        config["BigPEmuConfig"]["ScriptSettings"] = {}
 
         if system.isOptSet("bigpemu_doom"):
             config["BigPEmuConfig"]["ScriptSettings"]["DOOM-Music"] = system.config["bigpemu_doom"]

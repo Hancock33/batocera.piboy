@@ -16,7 +16,7 @@ from ..Generator import Generator
 if TYPE_CHECKING:
     from ...types import HotkeysContext
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 openMSX_Homedir: Final = CONFIGS / 'openmsx'
 openMSX_Config: Final = Path('/usr/share/openmsx')
@@ -29,7 +29,7 @@ class OpenmsxGenerator(Generator):
     def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "openmsx",
-            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "restore_state": "KEY_F6" }
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
@@ -100,7 +100,7 @@ class OpenmsxGenerator(Generator):
             save_name = re.sub(r"\[[^]]*\]", "", save_name)
             file.write("\n")
             file.write("# -= Save state =-\n")
-            file.write('savestate "{}"\n'.format(save_name))
+            file.write(f'savestate "{save_name}"\n')
             # set the screenshot
             file.write("\n")
             file.write("# -= Screenshots =-\n")
@@ -126,20 +126,20 @@ class OpenmsxGenerator(Generator):
                     for x in pad.inputs:
                         input = pad.inputs[x]
                         if input.name == "y":
-                            file.write('bind "joy{} button{} down" "keymatrixdown 6 0x40"\n'.format(nplayer, input.id))
+                            file.write(f'bind "joy{nplayer} button{input.id} down" "keymatrixdown 6 0x40"\n')
                         if input.name == "x":
-                            file.write('bind "joy{} button{} down" "keymatrixdown 6 0x80"\n'.format(nplayer, input.id))
+                            file.write(f'bind "joy{nplayer} button{input.id} down" "keymatrixdown 6 0x80"\n')
                         if input.name == "pagedown":
-                            file.write('bind "joy{} button{} up" "set fastforward off"\n'.format(nplayer, input.id))
-                            file.write('bind "joy{} button{} down" "set fastforward on"\n'.format(nplayer, input.id))
+                            file.write(f'bind "joy{nplayer} button{input.id} up" "set fastforward off"\n')
+                            file.write(f'bind "joy{nplayer} button{input.id} down" "set fastforward on"\n')
                         if input.name == "select":
-                            file.write('bind "joy{} button{} down" "toggle pause"\n'.format(nplayer, input.id))
+                            file.write(f'bind "joy{nplayer} button{input.id} down" "toggle pause"\n')
                         if input.name == "start":
-                            file.write('bind "joy{} button{} down" "main_menu_toggle"\n'.format(nplayer, input.id))
+                            file.write(f'bind "joy{nplayer} button{input.id} down" "main_menu_toggle"\n')
                         if input.name == "l3":
-                            file.write('bind "joy{} button{} down" "toggle_osd_keyboard"\n'.format(nplayer, input.id))
+                            file.write(f'bind "joy{nplayer} button{input.id} down" "toggle_osd_keyboard"\n')
                         if input.name == "r3":
-                            file.write('bind "joy{} button{} down" "toggle console"\n'.format(nplayer, input.id))
+                            file.write(f'bind "joy{nplayer} button{input.id} down" "toggle console"\n')
                 nplayer += 1
 
         # now run the rom with the appropriate flags
@@ -172,11 +172,11 @@ class OpenmsxGenerator(Generator):
                     file_extension = Path(zip_info.filename).suffix
                     # usually zip files only contain 1 file however break loop if file extension found
                     if file_extension in [".cas", ".dsk", ".ogv"]:
-                        eslog.debug(f"Zip file contains: {file_extension}")
+                        _logger.debug("Zip file contains: %s", file_extension)
                         break
 
         if file_extension == ".ogv":
-            eslog.debug("File is a laserdisc")
+            _logger.debug("File is a laserdisc")
             for i in range(len(commandArray)):
                 if commandArray[i] == "-machine":
                     commandArray[i+1] = "Pioneer_PX-7"
@@ -184,13 +184,13 @@ class OpenmsxGenerator(Generator):
                     commandArray[i] = "-laserdisc"
 
         if file_extension == ".cas":
-            eslog.debug("File is a cassette")
+            _logger.debug("File is a cassette")
             for i in range(len(commandArray)):
                 if commandArray[i] == "-cart":
                     commandArray[i] = "-cassetteplayer"
 
         if file_extension == ".dsk":
-            eslog.debug("File is a disk")
+            _logger.debug("File is a disk")
             disk_type = "-diska"
             if system.isOptSet("openmsx_disk") and system.config["openmsx_disk"] == "hda":
                 disk_type = "-hda"

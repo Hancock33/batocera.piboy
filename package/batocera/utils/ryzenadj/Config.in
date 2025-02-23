@@ -1,8 +1,8 @@
 config BR2_PACKAGE_RYZENADJ
 	bool "ryzenadj"
 	depends on BR2_x86_64
-	select BR2_PACKAGE_PCIUTILS
 	select BR2_PACKAGE_LIBPCIACCESS
+	select BR2_PACKAGE_PCIUTILS
 
 	help
 	  Adjust power management settings for

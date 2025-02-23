@@ -22,9 +22,6 @@ SRB2KART_POST_EXTRACT_HOOKS += SRB2KART_ASSETS
 define SRB2KART_INSTALL_TARGET_CMDS
 	cp -L $(@D)/buildroot-build/bin/srb2kart $(TARGET_DIR)/usr/bin/srb2kart
 	chmod 754 $(TARGET_DIR)/usr/bin/srb2kart
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sonic/srb2kart/srb2kart.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(cmake-package))

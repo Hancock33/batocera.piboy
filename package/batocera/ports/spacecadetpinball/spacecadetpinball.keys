@@ -1,14 +1,6 @@
 {
     "actions_player1": [
         {
-            "trigger": [
-                "hotkey",
-                "start"
-            ],
-            "type": "exec",
-            "target": "killall -9 SpaceCadetPinball && reset"
-        },
-        {
             "trigger": "l2",
             "type": "key",
             "target": "BTN_LEFT"

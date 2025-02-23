@@ -12,10 +12,6 @@ BERMUDA_LICENSE = GPLv2
 
 define BERMUDA_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/bs -D $(TARGET_DIR)/usr/bin/bermuda
-
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/bermuda/bermuda.keys $(TARGET_DIR)/usr/share/evmapy/bermuda.keys
 endef
 
 $(eval $(cmake-package))

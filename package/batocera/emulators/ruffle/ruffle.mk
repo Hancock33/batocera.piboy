@@ -3,8 +3,8 @@
 # ruffle
 #
 ################################################################################
-# Version: Commits on Feb 14, 2025
-RUFFLE_VERSION = nightly-2025-02-14
+# Version: Commits on Feb 23, 2025
+RUFFLE_VERSION = nightly-2025-02-23
 RUFFLE_SITE = $(call github,ruffle-rs,ruffle,$(RUFFLE_VERSION))
 RUFFLE_LICENSE = GPLv2
 RUFFLE_DEPENDENCIES = alsa-lib host-rust-bin host-rustc nghttp2 openssl udev
@@ -28,9 +28,6 @@ endef
 
 define RUFFLE_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/$(RUFFLE_BIN_DIR)/ruffle_desktop $(TARGET_DIR)/usr/bin/ruffle
-
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ruffle/flash.ruffle.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(generic-package))

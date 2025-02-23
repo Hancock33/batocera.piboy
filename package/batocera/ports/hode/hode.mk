@@ -12,10 +12,6 @@ HODE_LICENSE = GPLv2
 
 define HODE_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/hode -D $(TARGET_DIR)/usr/bin/hode
-
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/hode/hode.keys $(TARGET_DIR)/usr/share/evmapy/hode.keys
 endef
 
 $(eval $(cmake-package))

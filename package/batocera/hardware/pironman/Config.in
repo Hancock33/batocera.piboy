@@ -13,9 +13,9 @@ config BR2_PACKAGE_PIRONMAN
 	select BR2_PACKAGE_PYTHON_RPI_WS281X
 	select BR2_PACKAGE_PYTHON_SMBUS_CFFI
 	select BR2_PACKAGE_PYTHON_SPIDEV
+	select BR2_PACKAGE_RPI_EEPROM
 	select BR2_PACKAGE_TIFF
 	select BR2_PACKAGE_ZLIB
-	select BR2_PACKAGE_RPI_EEPROM
 
 	help
 	  Enable OLED, fan, RGB & infrared for the Pironman case.

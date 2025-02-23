@@ -345,11 +345,6 @@ fm7:
 fmtowns:
   emulator: tsugaru
   core:     tsugaru
-fpinball:
-  emulator: fpinball
-  core:     fpinball
-  options:
-    powersave: '2'
 freedroid:
   emulator: freedroid
   core:     freedroid
@@ -689,9 +684,6 @@ openjkja:
 openjkjo:
   emulator: openjkjo
   core:     openjkjo
-openlara:
-  emulator: openlara
-  core:     openlara
 opentyrian:
   emulator: opentyrian
   core:     opentyrian
@@ -1045,6 +1037,12 @@ tic80:
 toaplan:
   emulator: libretro
   core:     mame078plus
+traider1:
+  emulator: tr1x
+  core:     tr1x
+traider2:
+  emulator: tr2x
+  core:     tr2x
 triforce:
   emulator: dolphin_triforce
   core:     dolphin_triforce

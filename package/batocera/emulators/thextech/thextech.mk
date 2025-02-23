@@ -3,8 +3,8 @@
 # thextech
 #
 ################################################################################
-# Version: Commits on Feb 16, 2025
-THEXTECH_VERSION = c8aa2ba21060879fee7b8445c9d02320fc5165b8
+# Version: Commits on Feb 23, 2025
+THEXTECH_VERSION = 5e0a4675c3c010d0727d7dc300ad425fbe64e3e8
 THEXTECH_SITE = https://github.com/TheXTech/TheXTech
 THEXTECH_SITE_METHOD = git
 THEXTECH_GIT_SUBMODULES = YES
@@ -39,8 +39,6 @@ endif
 define THEXTECH_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/output/bin/thextech $(TARGET_DIR)/usr/bin/
 	cp -avf $(@D)/output/lib/libSDL2_mixer_ext.so* $(TARGET_DIR)/usr/lib/
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -avf $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/thextech/thextech.keys $(TARGET_DIR)/usr/share/evmapy/
 endef
 
 define THEXTECH_NO_ASM

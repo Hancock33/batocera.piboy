@@ -3,8 +3,8 @@
 # sonic3-air
 #
 ################################################################################
-# Version: Commits on Feb 16, 2025
-SONIC3_AIR_VERSION = 5c1a6c94b7a3ed68c95c8a70cd02c86815b09eb3
+# Version: Commits on Feb 23, 2025
+SONIC3_AIR_VERSION = fc0f394cd460784cceab76b7a3bd2c7b930a6561
 SONIC3_AIR_SITE = $(call github,Eukaryot,sonic3air,$(SONIC3_AIR_VERSION))
 SONIC3_AIR_LICENSE = GPL-3.0
 SONIC3_AIR_LICENSE_FILE = COPYING.txt
@@ -30,13 +30,5 @@ define SONIC3_AIR_INSTALL_TARGET_CMDS
 	cp -r $(@D)/Oxygen/sonic3air/scripts $(TARGET_DIR)/usr/bin/sonic3-air
 	cp -r $(@D)/Oxygen/sonic3air/saves $(TARGET_DIR)/usr/bin/sonic3-air
 endef
-
-define SONIC3_AIR_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sonic/sonic3-air/sonic3-air.keys \
-	    $(TARGET_DIR)/usr/share/evmapy
-endef
-
-SONIC3_AIR_POST_INSTALL_TARGET_HOOKS += SONIC3_AIR_EVMAPY
 
 $(eval $(cmake-package))

@@ -21,14 +21,6 @@
             "target": "KEY_RIGHT"
         },
         {
-            "trigger": [
-                "hotkey",
-                "start"
-            ],
-            "type": "exec",
-            "target": "killall -9 stuntcar && reset"
-        },
-        {
             "trigger": "start",
             "type": "key",
             "target": "KEY_S"

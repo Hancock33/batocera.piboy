@@ -1,14 +1,17 @@
-import os
-from pathlib import Path
-import xml.etree.ElementTree as ET
-import yaml
 import collections
 import logging
+import os
+import xml.etree.ElementTree as ET
+from pathlib import Path
+from typing import cast
+
+import yaml
 
 from .batoceraPaths import BATOCERA_CONF, BATOCERA_SHADERS, DEFAULTS_DIR, ES_SETTINGS, USER_SHADERS
+from .gun import GunMapping
 from .settings.unixSettings import UnixSettings
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 class Emulator():
     def __init__(self, name, rom):
@@ -21,7 +24,7 @@ class Emulator():
             DEFAULTS_DIR / "configgen-defaults-arch.yml"
         )
         if "emulator" not in self.config or not self.config["emulator"]:
-            eslog.error("no emulator defined. exiting.")
+            _logger.error("no emulator defined. exiting.")
             raise Exception("No emulator found")
 
         system_emulator = self.config["emulator"]
@@ -34,13 +37,13 @@ class Emulator():
         globalSettings = batoceraSettings.load_all('global')
         controllersSettings = batoceraSettings.load_all('controllers', True)
         systemSettings = batoceraSettings.load_all(self.name)
-        folderSettings = batoceraSettings.load_all(self.name + ".folder[\"" + os.path.dirname(rom) + "\"]")
-        gameSettings = batoceraSettings.load_all(self.name + "[\"" + gsname + "\"]")
+        folderSettings = batoceraSettings.load_all(f'{self.name}.folder["{os.path.dirname(rom)}"]')
+        gameSettings = batoceraSettings.load_all(f'{self.name}["{gsname}"]')
 
         # add some other options
         displaySettings = batoceraSettings.load_all('display')
         for opt in displaySettings:
-            self.config["display." + opt] = displaySettings[opt]
+            self.config[f"display.{opt}"] = displaySettings[opt]
 
         # update config
         Emulator.updateConfiguration(self.config, controllersSettings)
@@ -49,7 +52,7 @@ class Emulator():
         Emulator.updateConfiguration(self.config, folderSettings)
         Emulator.updateConfiguration(self.config, gameSettings)
         self.updateFromESSettings()
-        eslog.debug("uimode: {}".format(self.config['uimode']))
+        _logger.debug("uimode: %s", self.config['uimode'])
 
         # forced emulators ?
         self.config["emulator-forced"] = False
@@ -88,8 +91,8 @@ class Emulator():
         # for compatibility with earlier Batocera versions, let's keep -renderer
         # but it should be reviewed when we refactor configgen (to Python3?)
         # so that we can fetch them from system.shader without -renderer
-        systemSettings = batoceraSettings.load_all(self.name + "-renderer")
-        gameSettings = batoceraSettings.load_all(self.name + "[\"" + gsname + "\"]" + "-renderer")
+        systemSettings = batoceraSettings.load_all(f'{self.name}-renderer')
+        gameSettings = batoceraSettings.load_all(f'{self.name}["{gsname}"]-renderer')
 
         # es only allow to update systemSettings and gameSettings in fact for the moment
         Emulator.updateConfiguration(self.renderconfig, systemSettings)
@@ -103,7 +106,7 @@ class Emulator():
         # see FileData::getConfigurationName() on batocera-emulationstation
         rom = rom.replace('=','')
         rom = rom.replace('#','')
-        eslog.info("game settings name: "+rom)
+        _logger.info("game settings name: %s", rom)
         return rom
 
     # to be updated for python3: https://gist.github.com/angstwad/bf22d1822c38a92ec0a9
@@ -219,3 +222,30 @@ class Emulator():
             self.config['showFPS'] = False
             self.config['uimode'] = "Full"
 
+    # returns None if no border is wanted
+    def guns_borders_size_name(self, guns: GunMapping) -> str | None:
+        borders_size: str = cast(str, self.config.get('controllers.guns.borderssize', 'medium'))
+
+        # overridden by specific options
+        borders_mode = 'normal'
+        if (config_borders_mode := cast(str, self.config.get('controllers.guns.bordersmode') or 'auto')) != 'auto':
+            borders_mode = config_borders_mode
+        if (config_borders_mode := cast(str, self.config.get('bordersmode') or 'auto')) != 'auto':
+            borders_mode = config_borders_mode
+
+        # others are gameonly and normal
+        if borders_mode == 'hidden':
+            return None
+
+        if borders_mode == 'force':
+            return borders_size
+
+        for gun in guns.values():
+            if gun.needs_borders:
+                return borders_size
+
+        return None
+
+    # returns None to follow the bezel overlay size by default
+    def guns_border_ratio_type(self, guns: GunMapping) -> str | None:
+        return self.config.get('controllers.guns.bordersratio')

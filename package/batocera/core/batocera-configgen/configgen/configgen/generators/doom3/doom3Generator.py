@@ -5,14 +5,14 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Final
 
 from ... import Command
-from ...batoceraPaths import CONFIGS, SAVES, mkdir_if_not_exists
+from ...batoceraPaths import CONFIGS, ROMS, SAVES, mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 if TYPE_CHECKING:
     from ...types import HotkeysContext
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 _DHEWM3_CONFIG: Final = CONFIGS / "dhewm3"
 
@@ -22,21 +22,20 @@ class Doom3Generator(Generator):
         return {
             "name": "dhewm3",
             "keys": {
-                "Exit emulator": ["KEY_LEFTALT", "KEY_F4"],
-                "Screenshot": ["KEY_F12"],
-                "Quick Save": ["KEY_F5"],
-                "Quick Load": ["KEY_F9"]
+                "exit": ["KEY_LEFTALT", "KEY_F4"],
+                "save_state": "KEY_F5",
+                "restore_state": "KEY_F9"
             }
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
         # Set the paths using Path objects
-        romDir = Path("/userdata/roms/ports/doom3")
+        romDir = "/userdata/roms/ports/doom3"
         # Read the path within the .d3 rom file
-        with open(rom, "r") as file:
+        with Path(rom).open() as file:
             directory = file.readline().strip().split("/")[0]
-            eslog.debug(f"Using directory: {directory}")
+            _logger.debug("Using directory: %s", directory)
 
         _DHEWM3_CONFIG_BASE_DIR = _DHEWM3_CONFIG / "base"
         _DHEWM3_CONFIG_DIR = _DHEWM3_CONFIG / directory
@@ -112,7 +111,7 @@ class Doom3Generator(Generator):
 
         # Run command
         commandArray: list[str | Path] = [
-            "/usr/bin/dhewm3", "+set", "fs_basepath", str(romDir)
+            "/usr/bin/dhewm3", "+set", "fs_basepath", romDir
         ]
 
         if directory == "perfected_roe" or directory == "sikkmodd3xp":

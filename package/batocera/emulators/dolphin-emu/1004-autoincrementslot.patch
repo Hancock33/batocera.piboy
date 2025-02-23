@@ -1,20 +1,20 @@
 diff --git a/Source/Core/Core/Config/MainSettings.cpp b/Source/Core/Core/Config/MainSettings.cpp
-index 7c747d3a35..f0750e5a22 100644
+index 7ce8663f26..c3542d87b2 100644
 --- a/Source/Core/Core/Config/MainSettings.cpp
 +++ b/Source/Core/Core/Config/MainSettings.cpp
-@@ -310,6 +310,7 @@ const Info<int> MAIN_GDB_PORT{{System::Main, "General", "GDBPort"}, -1};
- const Info<int> MAIN_ISO_PATH_COUNT{{System::Main, "General", "ISOPaths"}, 0};
+@@ -311,6 +311,7 @@ const Info<int> MAIN_ISO_PATH_COUNT{{System::Main, "General", "ISOPaths"}, 0};
  const Info<std::string> MAIN_SKYLANDERS_PATH{{System::Main, "General", "SkylandersCollectionPath"},
                                               ""};
+ const Info<bool> MAIN_TIME_TRACKING{{System::Main, "General", "EnablePlayTimeTracking"}, true};
 +const Info<bool> MAIN_AUTO_INCREMENT_SLOT_COUNT{{System::Main, "General", "AutoIncrementSlot"}, false};
  
  static Info<std::string> MakeISOPathConfigInfo(size_t idx)
  {
 diff --git a/Source/Core/Core/Config/MainSettings.h b/Source/Core/Core/Config/MainSettings.h
-index 99deb98af7..a4b138351c 100644
+index 31b2181541..46cfb045d4 100644
 --- a/Source/Core/Core/Config/MainSettings.h
 +++ b/Source/Core/Core/Config/MainSettings.h
-@@ -204,6 +204,8 @@ extern const Info<std::string> MAIN_GDB_SOCKET;
+@@ -205,6 +205,8 @@ extern const Info<std::string> MAIN_GDB_SOCKET;
  extern const Info<int> MAIN_GDB_PORT;
  extern const Info<int> MAIN_ISO_PATH_COUNT;
  extern const Info<std::string> MAIN_SKYLANDERS_PATH;

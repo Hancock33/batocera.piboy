@@ -36,7 +36,7 @@ if TYPE_CHECKING:
     from ...Emulator import Emulator
     from ...types import HotkeysContext
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 class LibretroGenerator(Generator):
 
@@ -48,7 +48,7 @@ class LibretroGenerator(Generator):
         return {
             "name": "retroarch",
             "keys": { "exit": ["KEY_LEFTSHIFT", "KEY_ESC"], "menu": ["KEY_LEFTSHIFT", "KEY_F1"], "pause": ["KEY_LEFTSHIFT", "KEY_F1"], "coin": "KEY_F12",
-                      "save_state": ["KEY_LEFTSHIFT", "KEY_F3"], "restore_state": ["KEY_LEFTSHIFT", "KEY_F4"], "next_slot": ["KEY_LEFTSHIFT", "KEY_F6"], "previous_slot": ["KEY_LEFTSHIFT", "KEY_F5"]
+                      "save_state": ["KEY_LEFTSHIFT", "KEY_F3"], "restore_state": ["KEY_LEFTSHIFT", "KEY_F4"], "previous_slot": ["KEY_LEFTSHIFT", "KEY_F6"], "next_slot": ["KEY_LEFTSHIFT", "KEY_F5"]
                      }
         }
 
@@ -82,10 +82,10 @@ class LibretroGenerator(Generator):
                 shaderFilename = f"{gameShader}.slangp"
             else:
                 shaderFilename = f"{gameShader}.glslp"
-            eslog.debug(f"searching shader {shaderFilename}")
+            _logger.debug("searching shader %s", shaderFilename)
             if (USER_SHADERS / shaderFilename).exists():
                 video_shader_dir = USER_SHADERS
-                eslog.debug(f"shader {shaderFilename} found in {USER_SHADERS}")
+                _logger.debug("shader %s found in %s", shaderFilename, USER_SHADERS)
             else:
                 video_shader_dir = BATOCERA_SHADERS
             video_shader = video_shader_dir / shaderFilename
@@ -283,7 +283,7 @@ class LibretroGenerator(Generator):
                     os.chdir(romdir / assetdir)
                 os.chdir(romdir)
             except FileNotFoundError:
-                eslog.error("ERROR: Game assets not installed. You can get them from the Batocera Content Downloader.")
+                _logger.error("ERROR: Game assets not installed. You can get them from the Batocera Content Downloader.")
                 raise
 
             commandArray = [RETROARCH_BIN, "-L", retroarchCore, "--config", system.config['configfile']]
@@ -352,12 +352,6 @@ class LibretroGenerator(Generator):
                     rom_path = rom_path.with_suffix('')
 
         if system.name == 'reminiscence':
-            with open(rom_path, 'r') as file:
-                first_line = file.readline().strip()
-            directory_path = '/'.join(rom.split('/')[:-1])
-            rom_path = rom_path.parent / first_line
-
-        if system.name == 'openlara':
             with open(rom_path, 'r') as file:
                 first_line = file.readline().strip()
             directory_path = '/'.join(rom.split('/')[:-1])
@@ -445,7 +439,7 @@ def getGFXBackend(system: Emulator) -> str:
             core = system.config['core']
             if backend == "gl" and core in [ 'kronos', 'citra', 'mupen64plus-next', 'melonds', 'beetle-psx-hw' ]:
                 backend = "glcore"
-            if backend == "glcore" and core in [ 'parallel_n64', 'yabasanshiro', 'openlara', 'boom3' ]:
+            if backend == "glcore" and core in [ 'parallel_n64', 'yabasanshiro', 'boom3' ]:
                 backend = "gl"
 
         return backend

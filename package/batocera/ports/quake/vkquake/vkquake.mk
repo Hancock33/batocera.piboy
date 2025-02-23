@@ -3,8 +3,8 @@
 # vkquake
 #
 ################################################################################
-# Version: Commits on Feb 10, 2025
-VKQUAKE_VERSION = 89ad5dff512c58434f233a31c91ea4f3070a0ab3
+# Version: Commits on Feb 19, 2025
+VKQUAKE_VERSION = b8f2fc9748cdd5c774ba0ac41fd205fd9e38968a
 VKQUAKE_SITE = $(call github,Novum,vkQuake,$(VKQUAKE_VERSION))
 VKQUAKE_DEPENDENCIES = alsa-lib flac glslang mpg123 libvorbis opus opusfile sdl2
 VKQUAKE_DEPENDENCIES += spirv-tools vulkan-headers vulkan-loader
@@ -17,12 +17,5 @@ VKQUAKE_CONF_OPTS += -Ddo_userdirs=disabled
 define VKQUAKE_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/build/vkquake $(TARGET_DIR)/usr/bin/
 endef
-
-define VKQUAKE_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/vkquake/quake.keys $(TARGET_DIR)/usr/share/evmapy
-endef
-
-VKQUAKE_POST_INSTALL_TARGET_HOOKS += VKQUAKE_EVMAPY
 
 $(eval $(meson-package))

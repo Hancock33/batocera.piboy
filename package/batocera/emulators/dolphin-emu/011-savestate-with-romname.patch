@@ -15,10 +15,10 @@ index 52a3ec910f..fb18a04835 100644
    auto& movie = system.GetMovie();
    if (movie.IsPlayingInput() && movie.IsConfigSaved())
 diff --git a/Source/Core/Core/ConfigManager.cpp b/Source/Core/Core/ConfigManager.cpp
-index 21d722290e..3ad9225025 100644
+index 5a123c87cd..06890be2dd 100644
 --- a/Source/Core/Core/ConfigManager.cpp
 +++ b/Source/Core/Core/ConfigManager.cpp
-@@ -142,6 +142,10 @@ void SConfig::SetRunningGameMetadata(const std::string& game_id)
+@@ -183,6 +183,10 @@ void SConfig::SetRunningGameMetadata(const std::string& game_id)
    SetRunningGameMetadata(game_id, "", 0, 0, DiscIO::Region::Unknown);
  }
  
@@ -30,31 +30,31 @@ index 21d722290e..3ad9225025 100644
                                       u64 title_id, u16 revision, DiscIO::Region region)
  {
 diff --git a/Source/Core/Core/ConfigManager.h b/Source/Core/Core/ConfigManager.h
-index 999cc9f86c..dd649a037a 100644
+index d21b087a51..f0ce0b7e71 100644
 --- a/Source/Core/Core/ConfigManager.h
 +++ b/Source/Core/Core/ConfigManager.h
-@@ -61,6 +61,8 @@ struct SConfig
+@@ -63,6 +63,8 @@ struct SConfig
    // TODO: remove this as soon as the ticket view hack in IOS/ES/Views is dropped.
    bool m_disc_booted_from_game_list = false;
  
 +  const std::string& GetBaseSaveState() const { return m_base_save_state; }
 +  void SetBaseSaveState(const std::string& base_save_state);
-   const std::string& GetGameID() const { return m_game_id; }
-   const std::string& GetGameTDBID() const { return m_gametdb_id; }
-   const std::string& GetTitleName() const { return m_title_name; }
-@@ -115,6 +117,7 @@ private:
- 
+   const std::string GetGameID() const;
+   const std::string GetGameTDBID() const;
+   const std::string GetTitleName() const;
+@@ -118,6 +120,7 @@ private:
    static SConfig* m_Instance;
+   mutable std::recursive_mutex m_metadata_lock;
  
 +  std::string m_base_save_state;
    std::string m_game_id;
    std::string m_gametdb_id;
    std::string m_title_name;
 diff --git a/Source/Core/Core/Core.cpp b/Source/Core/Core/Core.cpp
-index bc6289af97..cf90d9b89f 100644
+index e59c20a0d3..e76f1a5109 100644
 --- a/Source/Core/Core/Core.cpp
 +++ b/Source/Core/Core/Core.cpp
-@@ -786,10 +786,14 @@ void SaveScreenShot()
+@@ -787,10 +787,14 @@ void SaveScreenShot()
    g_frame_dumper->SaveScreenshot(GenerateScreenshotName());
  }
  
@@ -84,10 +84,10 @@ index 0b414534a5..699d95a3a6 100644
  
  // This displays messages in a user-visible way.
 diff --git a/Source/Core/Core/State.cpp b/Source/Core/Core/State.cpp
-index f9964c0fa8..2e36d28164 100644
+index aac9d05221..acbed0f42c 100644
 --- a/Source/Core/Core/State.cpp
 +++ b/Source/Core/Core/State.cpp
-@@ -293,7 +293,10 @@ static std::string SystemTimeAsDoubleToString(double time)
+@@ -292,7 +292,10 @@ static std::string SystemTimeAsDoubleToString(double time)
    return fmt::format(std::locale{""}, "{:%x %X}", *local_time);
  }
  
@@ -99,7 +99,7 @@ index f9964c0fa8..2e36d28164 100644
  
  static std::vector<SlotWithTimestamp> GetUsedSlotsWithTimestamp()
  {
-@@ -301,7 +304,7 @@ static std::vector<SlotWithTimestamp> GetUsedSlotsWithTimestamp()
+@@ -300,7 +303,7 @@ static std::vector<SlotWithTimestamp> GetUsedSlotsWithTimestamp()
    StateHeader header;
    for (int i = 1; i <= (int)NUM_STATES; i++)
    {
@@ -108,7 +108,7 @@ index f9964c0fa8..2e36d28164 100644
      if (File::Exists(filename))
      {
        if (ReadHeader(filename, header))
-@@ -645,7 +648,7 @@ bool ReadHeader(const std::string& filename, StateHeader& header)
+@@ -644,7 +647,7 @@ bool ReadHeader(const std::string& filename, StateHeader& header)
  
  std::string GetInfoStringOfSlot(int slot, bool translate)
  {
@@ -117,7 +117,7 @@ index f9964c0fa8..2e36d28164 100644
    if (!File::Exists(filename))
      return translate ? Common::GetStringT("Empty") : "Empty";
  
-@@ -659,7 +662,7 @@ std::string GetInfoStringOfSlot(int slot, bool translate)
+@@ -658,7 +661,7 @@ std::string GetInfoStringOfSlot(int slot, bool translate)
  u64 GetUnixTimeOfSlot(int slot)
  {
    State::StateHeader header;
@@ -126,7 +126,7 @@ index f9964c0fa8..2e36d28164 100644
      return 0;
  
    constexpr u64 MS_PER_SEC = 1000;
-@@ -969,20 +972,49 @@ void Shutdown()
+@@ -968,20 +971,49 @@ void Shutdown()
    }
  }
  

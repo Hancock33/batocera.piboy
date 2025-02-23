@@ -16,7 +16,7 @@ if TYPE_CHECKING:
     from ...controller import ControllerMapping
     from ...Emulator import Emulator
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 class LemonadeGenerator(Generator):
 
@@ -155,17 +155,17 @@ class LemonadeGenerator(Generator):
         # Set Vulkan as necessary
         if system.isOptSet("lemonade_graphics_api") and system.config["lemonade_graphics_api"] == "2":
             if vulkan.is_available():
-                eslog.debug("Vulkan driver is available on the system.")
+                _logger.debug("Vulkan driver is available on the system.")
                 if vulkan.has_discrete_gpu():
-                    eslog.debug("A discrete GPU is available on the system. We will use that for performance")
+                    _logger.debug("A discrete GPU is available on the system. We will use that for performance")
                     discrete_index = vulkan.get_discrete_gpu_index()
                     if discrete_index:
-                        eslog.debug("Using Discrete GPU Index: {} for Lemonade".format(discrete_index))
+                        _logger.debug("Using Discrete GPU Index: %s for Lemonade", discrete_index)
                         lemonadeConfig.set("Renderer", "physical_device", discrete_index)
                     else:
-                        eslog.debug("Couldn't get discrete GPU index")
+                        _logger.debug("Couldn't get discrete GPU index")
                 else:
-                    eslog.debug("Discrete GPU is not available on the system. Using default.")
+                    _logger.debug("Discrete GPU is not available on the system. Using default.")
         # Use VSYNC
         if system.isOptSet('lemonade_use_vsync_new') and system.config["lemonade_use_vsync_new"] == '0':
             lemonadeConfig.set("Renderer", "use_vsync_new", "false")
@@ -239,9 +239,9 @@ class LemonadeGenerator(Generator):
             if controller.player_number != 1:
                 continue
             for x in lemonadeButtons:
-                lemonadeConfig.set("Controls", "profiles\\1\\" + x, f'"{LemonadeGenerator.setButton(lemonadeButtons[x], controller.guid, controller.inputs)}"')
+                lemonadeConfig.set("Controls", rf"profiles\1\{x}", f'"{LemonadeGenerator.setButton(lemonadeButtons[x], controller.guid, controller.inputs)}"')
             for x in lemonadeAxis:
-                lemonadeConfig.set("Controls", "profiles\\1\\" + x, f'"{LemonadeGenerator.setAxis(lemonadeAxis[x], controller.guid, controller.inputs)}"')
+                lemonadeConfig.set("Controls", rf"profiles\1\{x}", f'"{LemonadeGenerator.setAxis(lemonadeAxis[x], controller.guid, controller.inputs)}"')
             break
 
         ## Update the configuration file
@@ -255,12 +255,12 @@ class LemonadeGenerator(Generator):
             input = padInputs[key]
 
             if input.type == "button":
-                return ("button:{},guid:{},engine:sdl").format(input.id, padGuid)
+                return f"button:{input.id},guid:{padGuid},engine:sdl"
             elif input.type == "hat":
-                return ("engine:sdl,guid:{},hat:{},direction:{}").format(padGuid, input.id, LemonadeGenerator.hatdirectionvalue(input.value))
+                return f"engine:sdl,guid:{padGuid},hat:{input.id},direction:{LemonadeGenerator.hatdirectionvalue(input.value)}"
             elif input.type == "axis":
                 # Untested, need to configure an axis as button / triggers buttons to be tested too
-                return ("engine:sdl,guid:{},axis:{},direction:{},threshold:{}").format(padGuid, input.id, "+", 0.5)
+                return f"engine:sdl,guid:{padGuid},axis:{input.id},direction:+,threshold:{0.5}"
 
     @staticmethod
     def setAxis(key, padGuid, padInputs):
@@ -280,7 +280,7 @@ class LemonadeGenerator(Generator):
         if inputx is None or inputy is None:
             return "";
 
-        return ("axis_x:{},guid:{},axis_y:{},engine:sdl").format(inputx.id, padGuid, inputy.id)
+        return f"axis_x:{inputx.id},guid:{padGuid},axis_y:{inputy.id},engine:sdl"
 
     @staticmethod
     def hatdirectionvalue(value):

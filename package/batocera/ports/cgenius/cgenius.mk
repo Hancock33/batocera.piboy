@@ -25,15 +25,11 @@ else
 CGENIUS_CONF_OPTS += -DUSE_OPENGL=OFF
 endif
 
-define CGENIUS_INSTALL_TARGET_EVMAP
+define CGENIUS_INSTALL_TARGET_ASSETS
 	rm -rf $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/cgenius
 	mv $(TARGET_DIR)/userdata/roms/ports/cgenius/commandergenius $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/cgenius
-
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/cgenius/*.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-CGENIUS_POST_INSTALL_TARGET_HOOKS += CGENIUS_INSTALL_TARGET_EVMAP
+CGENIUS_POST_INSTALL_TARGET_HOOKS += CGENIUS_INSTALL_TARGET_ASSETS
 
 $(eval $(cmake-package))

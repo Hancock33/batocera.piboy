@@ -1,14 +1,6 @@
 {
     "actions_player1": [
         {
-            "trigger": [
-                "hotkey",
-                "start"
-            ],
-            "type": "exec",
-            "target": "killall -9 etekwar && reset"
-        },
-        {
             "trigger": "joystick1",
             "type": "mouse"
         },

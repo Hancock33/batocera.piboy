@@ -3,8 +3,8 @@
 # cdogs
 #
 ################################################################################
-# Version: Commits on Feb 16, 2025
-CDOGS_VERSION = 46b293ebe9984c9f74b0bb0018207131ab9635f6
+# Version: Commits on Feb 22, 2025
+CDOGS_VERSION = 2da35d5de8bdb0e3ca132792d1920c5f2f821439
 CDOGS_SITE = $(call github,cxong,cdogs-sdl,$(CDOGS_VERSION))
 CDOGS_DEPENDENCIES = sdl2 sdl2_image sdl2_mixer python-protobuf enet
 CDOGS_LICENSE = GPL-2.0
@@ -34,10 +34,6 @@ define CDOGS_INSTALL_TARGET_CMDS
 	cp -pa $(@D)/music	 $(TARGET_DIR)/usr/share/cdogs
 	cp -pa $(@D)/sounds	$(TARGET_DIR)/usr/share/cdogs
 	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/cdogs/media/*	$(TARGET_DIR)/usr/share/emulationstation/ports/cdogs/
-
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/cdogs/cdogs.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(cmake-package))

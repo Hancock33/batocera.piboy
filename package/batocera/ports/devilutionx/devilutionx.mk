@@ -3,8 +3,8 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Feb 16, 2025
-DEVILUTIONX_VERSION = fff1594fd55ade62df155d51ac3e4e719ff2e6da
+# Version: Commits on Feb 21, 2025
+DEVILUTIONX_VERSION = 0c381798087dee4ce1d989e1569bc8d66068f2f6
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
 DEVILUTIONX_DEPENDENCIES = bzip2 fmt libpng libsodium lpeg lua lua-lpeg-patterns luafilesystem luasec luasocket sdl2 sdl2_image
@@ -26,14 +26,12 @@ endef
 
 DEVILUTIONX_PRE_CONFIGURE_HOOKS += DEVILUTIONX_FIX_SDL2MAIN
 
-define DEVILUTIONX_INSTALL_TARGET_EVMAPY
+define DEVILUTIONX_INSTALL_TARGET_ASSETS
 	mkdir -p $(TARGET_DIR)/usr/bin/diablo
 	mv $(TARGET_DIR)/usr/bin/devilutionx	$(TARGET_DIR)/usr/bin/diablo
 	cp -a $(@D)/buildroot-build/assets		$(TARGET_DIR)/usr/bin/diablo
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/devilutionx/devilutionx.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-DEVILUTIONX_POST_INSTALL_TARGET_HOOKS = DEVILUTIONX_INSTALL_TARGET_EVMAPY
+DEVILUTIONX_POST_INSTALL_TARGET_HOOKS = DEVILUTIONX_INSTALL_TARGET_ASSETS
 
 $(eval $(cmake-package))

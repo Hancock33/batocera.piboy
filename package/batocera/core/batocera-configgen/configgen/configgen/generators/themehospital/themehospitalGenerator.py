@@ -20,14 +20,14 @@ corsixthSavesPath = SAVES / "corsixth"
 corsixthDataPath = "/userdata/roms/ports/themehospital"
 corsixthFontPath = Path("/usr/share/fonts/dejavu/DejaVuSans.ttf")
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 class ThemehospitalGenerator(Generator):
 
     def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "themehospital",
-            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ESC", "pause": "KEY_ESC", "save_state": ["KEY_LEFTALT", "KEY_LEFTSHIFT", "KEY_S"], "restore_state": ["KEY_LEFTALT", "KEY_LEFTSHIFT", "KEY_L"] }
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": ["KEY_RIGHTSHIFT", "KEY_Q"], "save_state": ["KEY_LEFTALT", "KEY_LEFTSHIFT", "KEY_S"], "restore_state": ["KEY_LEFTALT", "KEY_LEFTSHIFT", "KEY_L"] }
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
@@ -45,7 +45,7 @@ class ThemehospitalGenerator(Generator):
             os.chdir(corsixthDataPath / "LEVELS")
             os.chdir(corsixthDataPath / "QDATA")
         except:
-            eslog.error("ERROR: Game assets not installed. You can get them from the game Theme Hospital.")
+            _logger.error("ERROR: Game assets not installed. You can get them from the game Theme Hospital.")
 
         # If config file already exists, delete it
         if corsixthConfigFile.exists():
@@ -61,24 +61,24 @@ class ThemehospitalGenerator(Generator):
 
         # Values coming from ES configuration : Resolution
         source_config_file.write("fullscreen = true\n")
-        source_config_file.write("width = " + str(gameResolution["width"]) +"\n")
-        source_config_file.write("height = " + str(gameResolution["height"]) + "\n")
+        source_config_file.write(f"width = {gameResolution['width']}\n")
+        source_config_file.write(f"height = {gameResolution['height']}\n")
 
         # Values coming from ES configuration : New Graphics
         if system.isOptSet('cth_new_graphics'):
-          source_config_file.write("use_new_graphics = "+ system.config['cth_new_graphics'] +"\n")
+          source_config_file.write(f"use_new_graphics = {system.config['cth_new_graphics']}\n")
         else:
           source_config_file.write("use_new_graphics = true\n")
 
         # Values coming from ES configuration : Sandbox Mode
         if system.isOptSet('cth_free_build_mode'):
-          source_config_file.write("free_build_mode = "+ system.config['cth_free_build_mode'] +"\n")
+          source_config_file.write(f"free_build_mode = {system.config['cth_free_build_mode']}\n")
         else:
           source_config_file.write("free_build_mode = false\n")
 
         # Values coming from ES configuration : Intro Movie
         if system.isOptSet('cth_play_intro'):
-          source_config_file.write("play_intro = "+ system.config['cth_play_intro'] +"\n")
+          source_config_file.write(f"play_intro = {system.config['cth_play_intro']}\n")
         else:
           source_config_file.write("play_intro = true\n")
 
@@ -115,14 +115,14 @@ class ThemehospitalGenerator(Generator):
         # 2. Map it
         corsixthLanguage = language_mapping.get(language, 'en')
         # 3. Write it
-        source_config_file.write("language = [[" + corsixthLanguage +"]]\n")
+        source_config_file.write(f"language = [[{corsixthLanguage}]]\n")
 
         # Check custom music is installed
         try:
             os.chdir(corsixthDataPath / "MP3")
             source_config_file.write(f"audio_music = [[{corsixthDataPath / 'MP3'}]]\n")
         except:
-            eslog.warning("NOTICE: Audio & Music system loaded, but found no external background tracks. Missing MP3 folder")
+            _logger.warning("NOTICE: Audio & Music system loaded, but found no external background tracks. Missing MP3 folder")
             source_config_file.write("audio_music = nil\n")
 
         # Close config file as we are done

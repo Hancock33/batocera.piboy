@@ -3,12 +3,12 @@ config BR2_PACKAGE_SUPERMODEL
 	depends on BR2_INSTALL_LIBSTDCPP
 	depends on BR2_PACKAGE_XORG7 # libglew
 	depends on BR2_PACKAGE_HAS_LIBGL # libglew
-	select BR2_PACKAGE_SDL2
-	select BR2_PACKAGE_SDL2_NET
-	select BR2_PACKAGE_ZLIB
 	select BR2_PACKAGE_LIBGLEW
 	select BR2_PACKAGE_LIBGLU
 	select BR2_PACKAGE_LIBZIP
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_NET
+	select BR2_PACKAGE_ZLIB
 
 	help
 	  Supermodel is a SEGA Model 3 emulator that uses

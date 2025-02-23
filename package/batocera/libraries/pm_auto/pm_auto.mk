@@ -3,8 +3,8 @@
 # pm_auto
 #
 ################################################################################
-# Version: Commits on Jan 09, 2025
-PM_AUTO_VERSION = 3d11244956a4bfeb6e29176d1406bc06d7aef781
+# Version: Commits on Feb 20, 2025
+PM_AUTO_VERSION = bb39c835a82b76a7217399dd548cad878ff5c024
 PM_AUTO_SITE = $(call github,sunfounder,pm_auto,$(PM_AUTO_VERSION))
 PM_AUTO_SETUP_TYPE = setuptools
 PM_AUTO_LICENSE = GPL-2.0

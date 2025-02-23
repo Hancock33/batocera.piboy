@@ -18,9 +18,9 @@ if TYPE_CHECKING:
 
     from ...controller import Controller, ControllerMapping
     from ...Emulator import Emulator
-    from ...types import GunMapping
+    from ...gun import GunMapping
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 # Define RetroPad inputs for mapping
 retroPad = {
@@ -164,7 +164,7 @@ def generateMAMEConfigs(playersControllers: ControllerMapping, system: Emulator,
                     commandLine += ["-sl7", "cffa202"]
                 if system.isOptSet('gameio') and system.config['gameio'] != 'none':
                     if system.config['gameio'] == 'joyport' and messModel != 'apple2p':
-                        eslog.debug("Joyport is only compatible with Apple II +")
+                        _logger.debug("Joyport is only compatible with Apple II +")
                     else:
                         commandLine += ["-gameio", system.config['gameio']]
                         specialController = system.config['gameio']
@@ -368,9 +368,9 @@ def generateMAMEConfigs(playersControllers: ControllerMapping, system: Emulator,
                     if (system.isOptSet('altromtype') and system.config["altromtype"] == "flop1") or (softList != "" and softList.endswith("flop")) or rom.suffix.casefold() == ".dsk":
                         romType = 'flop'
                         if romDrivername.casefold().endswith(".bas"):
-                            autoRunCmd = 'RUN \"{}\"\\n'.format(romDrivername)
+                            autoRunCmd = f'RUN \"{romDrivername}\"\\n'
                         else:
-                            autoRunCmd = 'LOADM \"{}\":EXEC\\n'.format(romDrivername)
+                            autoRunCmd = f'LOADM \"{romDrivername}\":EXEC\\n'
 
                 # check for a user override
                 autoRunFile = CONFIGS / 'mame' / 'autoload' / f'{system.name}_{romType}_autoload.csv'
@@ -814,7 +814,7 @@ def generateSpecialPortElement(pad: Controller, config: minidom.Document, tag: s
     xml_port.appendChild(xml_newseq)
     txt = input2definition(pad, key, input, padindex + 1, reversed, 0)
     if mapping == "COIN" + str(nplayer) and nplayer == 1:
-        txt = txt + " OR KEYCODE_{}_F{}".format(nplayer, str(nplayer + 11)) # f12 for player 1
+        txt = txt + f" OR KEYCODE_{nplayer}_F{nplayer + 11}" # f12 for player 1
     value = config.createTextNode(txt)
     xml_newseq.appendChild(value)
     return xml_port
@@ -857,7 +857,7 @@ def generateAnalogPortElement(pad: Controller, config: minidom.Document, tag: st
     if axis == '':
         stdvalue = config.createTextNode("NONE")
     else:
-        stdvalue = config.createTextNode("JOYCODE_{}_{}".format(padindex + 1, axis))
+        stdvalue = config.createTextNode(f"JOYCODE_{padindex + 1}_{axis}")
     xml_newseq_std.appendChild(stdvalue)
     return xml_port
 
@@ -911,7 +911,7 @@ def input2definition(pad: Controller, key: str, input: str, joycode: int, revers
                 return f"JOYCODE_{joycode}_{input}"
     return "unknown"
 
-def getRoot(config, name):
+def getRoot(config: minidom.Document, name: str, /) -> minidom.Element:
     xml_section = config.getElementsByTagName(name)
 
     if len(xml_section) == 0:
@@ -922,7 +922,7 @@ def getRoot(config, name):
 
     return xml_section
 
-def getSection(config, xml_root, name):
+def getSection(config: minidom.Document, xml_root: minidom.Element, name: str, /) -> minidom.Element:
     xml_section = xml_root.getElementsByTagName(name)
 
     if len(xml_section) == 0:
@@ -933,7 +933,7 @@ def getSection(config, xml_root, name):
 
     return xml_section
 
-def removeSection(config, xml_root, name):
+def removeSection(config: minidom.Document, xml_root: minidom.Element, name: str, /) -> None:
     xml_section = xml_root.getElementsByTagName(name)
 
     for i in range(0, len(xml_section)):

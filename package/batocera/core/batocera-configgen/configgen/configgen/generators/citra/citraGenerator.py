@@ -19,14 +19,14 @@ if TYPE_CHECKING:
     from ...types import HotkeysContext
 
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 class CitraGenerator(Generator):
 
     def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "citra",
-            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_F4" }
         }
 
     # Main entry of the module
@@ -153,17 +153,17 @@ class CitraGenerator(Generator):
         # Set Vulkan as necessary
         if system.isOptSet("citra_graphics_api") and system.config["citra_graphics_api"] == "2":
             if vulkan.is_available():
-                eslog.debug("Vulkan driver is available on the system.")
+                _logger.debug("Vulkan driver is available on the system.")
                 if vulkan.has_discrete_gpu():
-                    eslog.debug("A discrete GPU is available on the system. We will use that for performance")
+                    _logger.debug("A discrete GPU is available on the system. We will use that for performance")
                     discrete_index = vulkan.get_discrete_gpu_index()
                     if discrete_index:
-                        eslog.debug("Using Discrete GPU Index: {} for Citra".format(discrete_index))
+                        _logger.debug("Using Discrete GPU Index: %s for Citra", discrete_index)
                         citraConfig.set("Renderer", "physical_device", discrete_index)
                     else:
-                        eslog.debug("Couldn't get discrete GPU index")
+                        _logger.debug("Couldn't get discrete GPU index")
                 else:
-                    eslog.debug("Discrete GPU is not available on the system. Using default.")
+                    _logger.debug("Discrete GPU is not available on the system. Using default.")
         # Use VSYNC
         if system.isOptSet('citra_use_vsync_new') and system.config["citra_use_vsync_new"] == '0':
             citraConfig.set("Renderer", "use_vsync_new", "false")
@@ -244,12 +244,12 @@ class CitraGenerator(Generator):
             input = padInputs[key]
 
             if input.type == "button":
-                return ("button:{},guid:{},engine:sdl").format(input.id, padGuid)
+                return f"button:{input.id},guid:{padGuid},engine:sdl"
             elif input.type == "hat":
-                return ("engine:sdl,guid:{},hat:{},direction:{}").format(padGuid, input.id, CitraGenerator.hatdirectionvalue(input.value))
+                return f"engine:sdl,guid:{padGuid},hat:{input.id},direction:{CitraGenerator.hatdirectionvalue(input.value)}"
             elif input.type == "axis":
                 # Untested, need to configure an axis as button / triggers buttons to be tested too
-                return ("engine:sdl,guid:{},axis:{},direction:{},threshold:{}").format(padGuid, input.id, "+", 0.5)
+                return f"engine:sdl,guid:{padGuid},axis:{input.id},direction:+,threshold:0.5"
 
     @staticmethod
     def setAxis(key: str, padGuid: str, padInputs: InputMapping) -> str:
@@ -269,7 +269,7 @@ class CitraGenerator(Generator):
         if inputx is None or inputy is None:
             return "";
 
-        return ("axis_x:{},guid:{},axis_y:{},engine:sdl").format(inputx.id, padGuid, inputy.id)
+        return f"axis_x:{inputx.id},guid:{padGuid},axis_y:{inputy.id},engine:sdl"
 
     @staticmethod
     def hatdirectionvalue(value: str) -> str:

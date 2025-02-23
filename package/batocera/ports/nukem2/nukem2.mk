@@ -18,9 +18,6 @@ NUKEM2_CONF_OPTS += -DWARNINGS_AS_ERRORS=OFF
 
 define NUKEM2_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/buildroot-build/src/RigelEngine $(TARGET_DIR)/usr/bin
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/nukem2/nukem2.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(cmake-package))

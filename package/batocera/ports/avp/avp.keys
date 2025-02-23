@@ -1,20 +1,5 @@
 {
     "actions_player1": [
-		{
-            "trigger": ["hotkey", "start"],
-            "type": "exec",
-            "target": "killall -9 avp && reset"
-		},
-        {
-            "trigger": "start",
-            "type": "key",
-            "target": "KEY_ESC"
-        },
-        {
-            "trigger": "select",
-            "type": "key",
-            "target": "KEY_BACKSPACE"
-        },
         {
             "trigger": "up",
             "type": "key",
@@ -28,32 +13,22 @@
         {
             "trigger": "left",
             "type": "key",
-            "target": "KEY_LEFTBRACE"
+            "target": "KEY_LEFT"
         },
         {
             "trigger": "right",
             "type": "key",
-            "target": "KEY_RIGHTBRACE"
+            "target": "KEY_RIGHT"
         },
         {
-            "trigger": "l2",
+            "trigger": "start",
             "type": "key",
-            "target": "BTN_LEFT"
+            "target": "KEY_ESC"
         },
         {
-            "trigger": "r2",
+            "trigger": "select",
             "type": "key",
-            "target": "BTN_RIGHT"
-        },
-        {
-            "trigger": "pageup",
-            "type": "key",
-            "target": "KEY_DOT"
-        },
-        {
-            "trigger": "pagedown",
-            "type": "key",
-            "target": "KEY_SLASH"
+            "target": "KEY_TAB"
         },
         {
             "trigger": "joystick2",
@@ -82,32 +57,52 @@
         {
             "trigger": "b",
             "type": "key",
-            "target": "KEY_ENTER"
-        },
-        {
-            "trigger": "a",
-            "type": "key",
             "target": "KEY_SPACE"
         },
         {
             "trigger": "x",
             "type": "key",
-            "target": "KEY_COMMA"
+            "target": "KEY_R"
         },
         {
             "trigger": "y",
             "type": "key",
-            "target": "KEY_RIGHTSHIFT"
+            "target": "BTN_LEFT"
         },
         {
-            "trigger": "l3",
+            "trigger": "a",
             "type": "key",
-            "target": "KEY_RIGHTCTRL"
+            "target": "KEY_E"
+        },
+        {
+            "trigger": "l2",
+            "type": "key",
+            "target": "KEY_LEFTSHIFT"
+        },
+        {
+            "trigger": "r2",
+            "type": "key",
+            "target": "BTN_LEFT"
         },
         {
             "trigger": "r3",
             "type": "key",
-            "target": "KEY_RIGHTSHIFT"
+            "target": "KEY_END"
+        },
+        {
+            "trigger": "l3",
+            "type": "key",
+            "target": "KEY_LEFTCTRL"
+        },
+        {
+            "trigger": "pagedown",
+            "type": "key",
+            "target": "KEY_PAGEDOWN"
+        },
+        {
+            "trigger": "pageup",
+            "type": "key",
+            "target": "KEY_PAGEUP"
         }
     ]
 }

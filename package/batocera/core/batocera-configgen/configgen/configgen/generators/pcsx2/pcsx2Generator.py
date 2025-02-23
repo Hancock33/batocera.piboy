@@ -18,10 +18,11 @@ if TYPE_CHECKING:
     from collections.abc import Mapping
 
     from ...Emulator import Emulator
+    from ...gun import GunMapping
     from ...input import Input
-    from ...types import DeviceInfoMapping, GunMapping, HotkeysContext
+    from ...types import DeviceInfoMapping, HotkeysContext
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 _PCSX2_BIN_DIR: Final = Path("/usr/pcsx2/bin")
 _PCSX2_RESOURCES_DIR: Final = _PCSX2_BIN_DIR / "resources"
@@ -39,7 +40,13 @@ class Pcsx2Generator(Generator):
     def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "pcsx2",
-            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+            "keys": { "exit":          ["KEY_LEFTALT", "KEY_F4"],
+                      "menu":          "KEY_ESC",
+                      "save_state":    "KEY_F1",
+                      "restore_state": "KEY_F3",
+                      "previous_slot": [ "KEY_LEFTSHIFT", "KEY_F2" ],
+                      "next_slot":     "KEY_F2"
+                     }
         }
 
     def getInGameRatio(self, config, gameResolution, rom):
@@ -98,7 +105,7 @@ class Pcsx2Generator(Generator):
 
         with Path("/proc/cpuinfo").open() as cpuinfo:
             if not re.search(r'^flags\s*:.*\ssse4_1\W', cpuinfo.read(), re.MULTILINE):
-                eslog.warning("CPU does not support SSE4.1 which is required by pcsx2.  The emulator will likely crash with SIGILL (illegal instruction).")
+                _logger.warning("CPU does not support SSE4.1 which is required by pcsx2.  The emulator will likely crash with SIGILL (illegal instruction).")
 
         # use their modified shaderc library
         envcmd = {
@@ -298,34 +305,34 @@ def configureINI(config_directory: Path, bios_directory: Path, system: Emulator,
     # Renderer
     # Check Vulkan first to be sure
     if vulkan.is_available():
-        eslog.debug("Vulkan driver is available on the system.")
+        _logger.debug("Vulkan driver is available on the system.")
         renderer = "12"  # Default to OpenGL
 
         if system.isOptSet("pcsx2_gfxbackend"):
             if system.config["pcsx2_gfxbackend"] == "13":
-                eslog.debug("User selected Software! Man you must have a fast CPU!")
+                _logger.debug("User selected Software! Man you must have a fast CPU!")
                 renderer = "13"
             elif system.config["pcsx2_gfxbackend"] == "14":
-                eslog.debug("User selected Vulkan")
+                _logger.debug("User selected Vulkan")
                 renderer = "14"
                 if vulkan.has_discrete_gpu():
-                    eslog.debug("A discrete GPU is available on the system. We will use that for performance")
+                    _logger.debug("A discrete GPU is available on the system. We will use that for performance")
                     discrete_name = vulkan.get_discrete_gpu_name()
                     if discrete_name:
-                        eslog.debug("Using Discrete GPU Name: {} for PCSX2".format(discrete_name))
+                        _logger.debug("Using Discrete GPU Name: %s for PCSX2", discrete_name)
                         pcsx2INIConfig.set("EmuCore/GS", "Adapter", discrete_name)
                     else:
-                        eslog.debug("Couldn't get discrete GPU Name")
+                        _logger.debug("Couldn't get discrete GPU Name")
                         pcsx2INIConfig.set("EmuCore/GS", "Adapter", "(Default)")
                 else:
-                    eslog.debug("Discrete GPU is not available on the system. Using default.")
+                    _logger.debug("Discrete GPU is not available on the system. Using default.")
                     pcsx2INIConfig.set("EmuCore/GS", "Adapter", "(Default)")
         else:
-            eslog.debug("User selected or defaulting to OpenGL")
+            _logger.debug("User selected or defaulting to OpenGL")
 
         pcsx2INIConfig.set("EmuCore/GS", "Renderer", renderer)
     else:
-        eslog.debug("Vulkan driver is not available on the system. Falling back to OpenGL")
+        _logger.debug("Vulkan driver is not available on the system. Falling back to OpenGL")
         pcsx2INIConfig.set("EmuCore/GS", "Renderer", "12")
 
     # Ratio
@@ -507,7 +514,7 @@ def configureINI(config_directory: Path, bios_directory: Path, system: Emulator,
             for controller, pad in sorted(controllers.items()):
                 if nc == 1 and not gun1onport2:
                     if "start" in pad.inputs:
-                        pcsx2INIConfig.set("USB1", "guncon2_Start", "SDL-{}/{}".format(pad.index, "Start"))
+                        pcsx2INIConfig.set("USB1", "guncon2_Start", f"SDL-{pad.index}/Start")
                 nc = nc + 1
 
             ### find a keyboard key to simulate the action of the player (always like button 2) ; search in batocera.conf, else default config
@@ -515,7 +522,7 @@ def configureINI(config_directory: Path, bios_directory: Path, system: Emulator,
                 pedalkey = system.config["controllers.pedals1"]
             else:
                 pedalkey = pedalsKeys[1]
-            pcsx2INIConfig.set("USB1", "guncon2_C", "Keyboard/"+pedalkey.upper())
+            pcsx2INIConfig.set("USB1", "guncon2_C", f"Keyboard/{pedalkey.upper()}")
             ###
         if len(guns) >= 2 or gun1onport2:
             if not pcsx2INIConfig.has_section("USB2"):
@@ -525,14 +532,14 @@ def configureINI(config_directory: Path, bios_directory: Path, system: Emulator,
             for controller, pad in sorted(controllers.items()):
                 if nc == 2 or gun1onport2:
                     if "start" in pad.inputs:
-                        pcsx2INIConfig.set("USB2", "guncon2_Start", "SDL-{}/{}".format(pad.index, "Start"))
+                        pcsx2INIConfig.set("USB2", "guncon2_Start", f"SDL-{pad.index}/Start")
                 nc = nc + 1
             ### find a keyboard key to simulate the action of the player (always like button 2) ; search in batocera.conf, else default config
             if "controllers.pedals2" in system.config:
                 pedalkey = system.config["controllers.pedals2"]
             else:
                 pedalkey = pedalsKeys[2]
-            pcsx2INIConfig.set("USB2", "guncon2_C", "Keyboard/"+pedalkey.upper())
+            pcsx2INIConfig.set("USB2", "guncon2_C", f"Keyboard/{pedalkey.upper()}")
             ###
             if gun1onport2:
                 pcsx2INIConfig.set("USB2", "guncon2_numdevice", "0")
@@ -578,7 +585,7 @@ def configureINI(config_directory: Path, bios_directory: Path, system: Emulator,
 
     # wheels
     wtype = Pcsx2Generator.getWheelType(metadata, playingWithWheel, system.config)
-    eslog.info("PS2 wheel type is {}".format(wtype));
+    _logger.info("PS2 wheel type is %s", wtype)
     if Pcsx2Generator.useEmulatorWheels(playingWithWheel, wtype):
         if len(wheels) >= 1:
             wheelMapping = {
@@ -623,30 +630,30 @@ def configureINI(config_directory: Path, bios_directory: Path, system: Emulator,
             usbx = 1
             for controller, pad in sorted(controllers.items()):
                 if pad.device_path in wheels:
-                    if not pcsx2INIConfig.has_section("USB{}".format(usbx)):
-                        pcsx2INIConfig.add_section("USB{}".format(usbx))
-                    pcsx2INIConfig.set("USB{}".format(usbx), "Type", "Pad")
+                    if not pcsx2INIConfig.has_section(f"USB{usbx}"):
+                        pcsx2INIConfig.add_section(f"USB{usbx}")
+                    pcsx2INIConfig.set(f"USB{usbx}", "Type", "Pad")
 
                     wheel_type = Pcsx2Generator.getWheelType(metadata, playingWithWheel, system.config)
-                    pcsx2INIConfig.set("USB{}".format(usbx), "Pad_subtype", Pcsx2Generator.wheelTypeMapping[wheel_type])
+                    pcsx2INIConfig.set(f"USB{usbx}", "Pad_subtype", Pcsx2Generator.wheelTypeMapping[wheel_type])
 
                     if pad.physical_device_path is not None: # ffb on the real wheel
-                        pcsx2INIConfig.set("USB{}".format(usbx), "Pad_FFDevice", "SDL-{}".format(pad.physical_index))
+                        pcsx2INIConfig.set(f"USB{usbx}", "Pad_FFDevice", f"SDL-{pad.physical_index}")
                     else:
-                        pcsx2INIConfig.set("USB{}".format(usbx), "Pad_FFDevice", "SDL-{}".format(pad.index))
+                        pcsx2INIConfig.set(f"USB{usbx}", "Pad_FFDevice", f"SDL-{pad.index}")
 
                     for i in pad.inputs:
                         if i in wheelMapping[wheel_type]:
-                            pcsx2INIConfig.set("USB{}".format(usbx), wheelMapping[wheel_type][i], "SDL-{}/{}".format(pad.index, input2wheel(pad.inputs[i])))
+                            pcsx2INIConfig.set(f"USB{usbx}", wheelMapping[wheel_type][i], f"SDL-{pad.index}/{input2wheel(pad.inputs[i])}")
                     # wheel
                     if "joystick1left" in pad.inputs:
-                        pcsx2INIConfig.set("USB{}".format(usbx), "Pad_SteeringLeft",  "SDL-{}/{}".format(pad.index, input2wheel(pad.inputs["joystick1left"])))
-                        pcsx2INIConfig.set("USB{}".format(usbx), "Pad_SteeringRight", "SDL-{}/{}".format(pad.index, input2wheel(pad.inputs["joystick1left"], True)))
+                        pcsx2INIConfig.set(f"USB{usbx}", "Pad_SteeringLeft",  f"SDL-{pad.index}/{input2wheel(pad.inputs['joystick1left'])}")
+                        pcsx2INIConfig.set(f"USB{usbx}", "Pad_SteeringRight", f"SDL-{pad.index}/{input2wheel(pad.inputs['joystick1left'], True)}")  # noqa: E501
                     # pedals
                     if "l2" in pad.inputs:
-                        pcsx2INIConfig.set("USB{}".format(usbx), "Pad_Brake",    "SDL-{}/{}".format(pad.index, input2wheel(pad.inputs["l2"], None)))
+                        pcsx2INIConfig.set(f"USB{usbx}", "Pad_Brake",    f"SDL-{pad.index}/{input2wheel(pad.inputs['l2'], None)}")
                     if "r2" in pad.inputs:
-                        pcsx2INIConfig.set("USB{}".format(usbx), "Pad_Throttle", "SDL-{}/{}".format(pad.index, input2wheel(pad.inputs["r2"], None)))
+                        pcsx2INIConfig.set(f"USB{usbx}", "Pad_Throttle", f"SDL-{pad.index}/{input2wheel(pad.inputs['r2'], None)}")
                     usbx = usbx + 1
 
     ## [Pad]
@@ -659,7 +666,7 @@ def configureINI(config_directory: Path, bios_directory: Path, system: Emulator,
     # add multitap as needed
     multiTap = 2
     joystick_count = len(controllers)
-    eslog.debug("Number of Controllers = {}".format(joystick_count))
+    _logger.debug("Number of Controllers = %s", joystick_count)
     if system.isOptSet("pcsx2_multitap") and system.config["pcsx2_multitap"] == "4":
         if joystick_count > 2 and joystick_count < 5:
             pcsx2INIConfig.set("Pad", "MultitapPort1", "true")
@@ -667,10 +674,10 @@ def configureINI(config_directory: Path, bios_directory: Path, system: Emulator,
         elif joystick_count > 4:
             pcsx2INIConfig.set("Pad", "MultitapPort1", "true")
             multiTap = 4
-            eslog.debug("*** You have too many connected controllers for this option, restricting to 4 ***")
+            _logger.debug("*** You have too many connected controllers for this option, restricting to 4 ***")
         else:
             multiTap = 2
-            eslog.debug("*** You have the wrong number of connected controllers for this option ***")
+            _logger.debug("*** You have the wrong number of connected controllers for this option ***")
     elif system.isOptSet("pcsx2_multitap") and system.config["pcsx2_multitap"] == "8":
         if joystick_count > 4:
             pcsx2INIConfig.set("Pad", "MultitapPort1", "true")
@@ -679,10 +686,10 @@ def configureINI(config_directory: Path, bios_directory: Path, system: Emulator,
         elif joystick_count > 2 and joystick_count < 5:
             pcsx2INIConfig.set("Pad", "MultitapPort1", "true")
             multiTap = 4
-            eslog.debug("*** You don't have enough connected controllers for this option, restricting to 4 ***")
+            _logger.debug("*** You don't have enough connected controllers for this option, restricting to 4 ***")
         else:
             multiTap = 2
-            eslog.debug("*** You don't have enough connected controllers for this option ***")
+            _logger.debug("*** You don't have enough connected controllers for this option ***")
     else:
         multiTap = 2
 
@@ -701,8 +708,8 @@ def configureINI(config_directory: Path, bios_directory: Path, system: Emulator,
             if multiTap == 4 and pad.index != 0:
                 # Skip Pad2 in the ini file when MultitapPort1 only
                 pad_index = nplayer + 1
-            pad_num = "Pad{}".format(pad_index)
-            sdl_num = "SDL-" + "{}".format(pad.index)
+            pad_num = f"Pad{pad_index}"
+            sdl_num = f"SDL-{pad.index}"
 
             if not pcsx2INIConfig.has_section(pad_num):
                 pcsx2INIConfig.add_section(pad_num)
@@ -760,7 +767,7 @@ def configureINI(config_directory: Path, bios_directory: Path, system: Emulator,
 def input2wheel(input: Input, reversedAxis: bool | None = False) -> str | None:
     if input.type == "button":
         pcsx2_magic_button_offset = 21 # PCSX2/SDLInputSource.cpp : const u32 button = ev->button + std::size(s_sdl_button_names)
-        return "Button{}".format(int(input.id) + pcsx2_magic_button_offset)
+        return f"Button{int(input.id) + pcsx2_magic_button_offset}"
     if input.type == "hat":
         dir = "unknown"
         if input.value == '1':
@@ -771,12 +778,12 @@ def input2wheel(input: Input, reversedAxis: bool | None = False) -> str | None:
             dir = "South"
         elif input.value == '8':
             dir = "West"
-        return "Hat{}{}".format(input.id, dir)
+        return f"Hat{input.id}{dir}"
     if input.type == "axis":
         pcsx2_magic_axis_offset = 6 # PCSX2/SDLInputSource.cpp : const u32 axis = ev->axis + std::size(s_sdl_axis_names);
         if reversedAxis is None:
-            return "{}Axis{}~".format("Full", int(input.id)+pcsx2_magic_axis_offset)
+            return f"FullAxis{int(input.id)+pcsx2_magic_axis_offset}~"
         dir = "-"
         if reversedAxis:
             dir = "+"
-        return "{}Axis{}".format(dir, int(input.id)+pcsx2_magic_axis_offset)
+        return f"{dir}Axis{int(input.id)+pcsx2_magic_axis_offset}"

@@ -3,8 +3,8 @@
 # stk
 #
 ################################################################################
-# Version: Commits on Feb 14, 2025
-STK_VERSION = dc467cf233d851b36e2d3874a2450091828797c5
+# Version: Commits on Feb 19, 2025
+STK_VERSION = 83e029cc123176a77a239edf90ee461e46f9f8a2
 STK_SITE = $(call github,supertuxkart,stk-code,$(STK_VERSION))
 STK_DEPENDENCIES = sdl2 sdl2_mixer shaderc
 STK_LICENSE = GPL-2.0
@@ -22,9 +22,6 @@ define STK_INSTALL_TARGET_CMDS
 	# config
 	mkdir -p $(TARGET_DIR)/usr/share/game_assets/supertuxkart
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stk/players.xml $(TARGET_DIR)/usr/share/game_assets/supertuxkart
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stk/stk.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(cmake-package))

@@ -1,14 +1,6 @@
 {
     "actions_player1": [
         {
-            "trigger": [
-                "hotkey",
-                "start"
-            ],
-            "type": "exec",
-            "target": "killall -9 srb2 && reset"
-        },
-        {
             "trigger": "up",
             "type": "key",
             "target": "KEY_W"

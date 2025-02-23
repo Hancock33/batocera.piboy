@@ -3,8 +3,8 @@
 # lindbergh-loader
 #
 ################################################################################
-# Version: Commits on Feb 03, 2025
-LINDBERGH_LOADER_VERSION = 3c3f0f5eb5a616d7adc583865a52208351df193f
+# Version: Commits on Feb 18, 2025
+LINDBERGH_LOADER_VERSION = 728c30883595d2ecd590327abdac5b6998d139ca
 LINDBERGH_LOADER_SITE = $(call github,lindbergh-loader,lindbergh-loader,$(LINDBERGH_LOADER_VERSION))
 LINDBERGH_LOADER_LICENSE = ShareAlike 4.0 International
 LINDBERGH_LOADER_LICENSE_FILES = LICENSE.md
@@ -46,15 +46,6 @@ define LINDBERGH_LOADER_INSTALL_TARGET_CMDS
 	mv $(TARGET_DIR)/usr/bin/lindbergh/lib* $(TARGET_DIR)/usr/lib32/extralibs
 	chmod 754 $(TARGET_DIR)/usr/lib32/extralibs/*
 endef
-endif
-
-define LINDBERGH_LOADER_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lindbergh.keys $(TARGET_DIR)/usr/share/evmapy
-endef
-
-ifeq ($(BR2_x86_64),y)
-LINDBERGH_LOADER_POST_INSTALL_TARGET_HOOKS = LINDBERGH_LOADER_EVMAPY
 endif
 
 $(eval $(generic-package))

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import logging
 from pathlib import Path
 from typing import TYPE_CHECKING
 
@@ -13,7 +12,6 @@ from ..Generator import Generator
 if TYPE_CHECKING:
     from ...types import HotkeysContext
 
-eslog = logging.getLogger(__name__)
 _CONFIGDIR  = CONFIGS / 'GSplus'
 _CONFIGFILE = _CONFIGDIR / 'config.txt'
 
@@ -105,7 +103,9 @@ class GSplusGenerator(Generator):
             config.save("bram3[e0]", '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00')
             config.save("bram3[f0]", '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00')
             config.save("g_limit_speed", "2")
-        config.save("g_cfg_rom_path", f"""{BIOS}/ROM.03""")
+
+        gsplus_bios_filename = system.config["gsplus_bios_filename"] if system.isOptSet("gsplus_bios_filename") else "ROM.03"
+        config.save("g_cfg_rom_path", f"""{BIOS}/{gsplus_bios_filename}""")
 
         config.write()
         commandArray = ["GSplus", "-fullscreen"]

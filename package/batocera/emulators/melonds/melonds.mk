@@ -3,8 +3,8 @@
 # melonds
 #
 ################################################################################
-# Version: Commits on Feb 10, 2025
-MELONDS_VERSION = e8265df4bd385d76aba0e2c5c5938252d8c342b5
+# Version: Commits on Feb 21, 2025
+MELONDS_VERSION = 63b468927e1c744e21057ccb4c5677f52502b442
 MELONDS_SITE = $(call github,melonDS-emu,melonDS,$(MELONDS_VERSION))
 MELONDS_LICENSE = GPLv2
 MELONDS_SUPPORTS_IN_SOURCE_BUILD = NO
@@ -22,16 +22,7 @@ MELONDS_CONF_OPTS += -DENABLE_WAYLAND=OFF
 endif
 
 define MELONDS_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/buildroot-build/melonDS \
-		$(TARGET_DIR)/usr/bin/
+	$(INSTALL) -D $(@D)/buildroot-build/melonDS $(TARGET_DIR)/usr/bin/
 endef
-
-define MELONDS_POST_PROCESS
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/melonds/nds.melonds.keys \
-		$(TARGET_DIR)/usr/share/evmapy
-endef
-
-MELONDS_POST_INSTALL_TARGET_HOOKS += MELONDS_POST_PROCESS
 
 $(eval $(cmake-package))

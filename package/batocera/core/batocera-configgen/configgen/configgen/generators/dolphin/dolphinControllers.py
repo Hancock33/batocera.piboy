@@ -14,9 +14,10 @@ if TYPE_CHECKING:
 
     from ...controller import Controller, ControllerMapping
     from ...Emulator import Emulator
-    from ...types import DeviceInfoMapping, GunMapping
+    from ...gun import GunMapping
+    from ...types import DeviceInfoMapping
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 # Create the controller configuration file
 def generateControllerConfig(system: Emulator, playersControllers: ControllerMapping, metadata: Mapping[str, str], wheels: DeviceInfoMapping, rom: Path, guns: GunMapping) -> None:
@@ -51,7 +52,7 @@ def generateControllerConfig(system: Emulator, playersControllers: ControllerMap
                     used_wheels = wheels
         generateControllerConfig_gamecube(system, playersControllers, used_wheels, rom)               # Pass ROM name to allow for per ROM configuration
     else:
-        raise ValueError("Invalid system name : '" + system.name + "'")
+        raise ValueError(f"Invalid system name : '{system.name}'")
 
 # https://docs.libretro.com/library/dolphin/
 
@@ -175,19 +176,19 @@ def generateControllerConfig_emulatedwiimotes(system: Emulator, playersControlle
             wiiMapping['r2'] = 'Classic/Buttons/ZR'
 
     # This section allows a per ROM override of the default key options.
-    configname = rom.with_name(rom.name + ".cfg")       # Define ROM configuration name
+    configname = rom.with_name(f"{rom.name}.cfg")       # Define ROM configuration name
     if configname.is_file():  # File exists
         import ast
         with configname.open() as cconfig:
             line = cconfig.readline()
             while line:
-                entry = "{" + line + "}"
+                entry = f"{{{line}}}"
                 res = ast.literal_eval(entry)
                 wiiMapping.update(res)
                 line = cconfig.readline()
 
-    eslog.debug(f"Extra Options: {extraOptions}")
-    eslog.debug(f"Wii Mappings: {wiiMapping}")
+    _logger.debug("Extra Options: %s", extraOptions)
+    _logger.debug("Wii Mappings: %s", wiiMapping)
 
     generateControllerConfig_any(system, playersControllers, wheels, "WiimoteNew.ini", "Wiimote", wiiMapping, wiiReverseAxes, None, extraOptions)
 
@@ -229,13 +230,13 @@ def generateControllerConfig_gamecube(system: Emulator, playersControllers: Cont
     }
 
     # This section allows a per ROM override of the default key options.
-    configname = rom.with_name(rom.name + '.cfg')       # Define ROM configuration name
+    configname = rom.with_name(f'{rom.name}.cfg')       # Define ROM configuration name
     if configname.is_file():  # File exists
         import ast
         with configname.open() as cconfig:
             line = cconfig.readline()
             while line:
-                entry = "{" + line + "}"
+                entry = f"{{{line}}}"
                 res = ast.literal_eval(entry)
                 gamecubeMapping.update(res)
                 line = cconfig.readline()
@@ -252,7 +253,7 @@ def generateControllerConfig_realwiimotes(filename: str, anyDefKey: str) -> None
     f = codecs.open(str(configFileName), "w", encoding="utf_8_sig")
     nplayer = 1
     while nplayer <= 4:
-        f.write("[" + anyDefKey + str(nplayer) + "]" + "\n")
+        f.write(f"[{anyDefKey}{nplayer}]\n")
         f.write("Source = 2\n")
         nplayer += 1
     f.write("[BalanceBoard]\nSource = 2\n")
@@ -269,7 +270,7 @@ def generateControllerConfig_guns(filename: str, anyDefKey: str, metadata: Mappi
     nplayer = 1
     while nplayer <= 4:
         if len(guns) >= nplayer:
-            f.write("[" + anyDefKey + str(nplayer) + "]" + "\n")
+            f.write(f"[{anyDefKey}{nplayer}]\n")
             f.write("Source = 1\n")
             f.write("Extension = Nunchuk\n")
 
@@ -329,7 +330,7 @@ def generateControllerConfig_guns(filename: str, anyDefKey: str, metadata: Mappi
                 "right":   { "code": "BTN_8",      "button": "8"      }
             }
 
-            gundevname = guns[nplayer-1]["name"]
+            gundevname = guns[nplayer-1].name
 
             # Handle x pads having the same name
             nsamepad = 0
@@ -339,31 +340,31 @@ def generateControllerConfig_guns(filename: str, anyDefKey: str, metadata: Mappi
                 nsamepad = 0
                 double_pads[gundevname.strip()] = nsamepad+1
 
-            f.write("[" + anyDefKey + str(nplayer) + "]" + "\n")
-            f.write("Device = evdev/" + str(nsamepad).strip() + "/" + gundevname.strip() + "\n")
+            f.write(f"[{anyDefKey}{nplayer}]\n")
+            f.write(f"Device = evdev/{str(nsamepad).strip()}/{gundevname.strip()}\n")
 
-            buttons = guns[nplayer-1]["buttons"]
-            eslog.debug(f"Gun : {buttons}")
+            buttons = guns[nplayer-1].buttons
+            _logger.debug("Gun : %s", buttons)
 
             # custom remapping
             # erase values
             for btn in gunButtons:
-                if "gun_"+btn in metadata:
-                    for mval in metadata["gun_"+btn].split(","):
+                if f"gun_{btn}" in metadata:
+                    for mval in metadata[f"gun_{btn}"].split(","):
                         if mval in gunMapping:
                             for x in gunMapping:
                                 if gunMapping[x] == btn:
-                                    eslog.info("erasing {}".format(x))
+                                    _logger.info("erasing %s", x)
                                     gunMapping[x] = ""
                         else:
-                            eslog.info("custom gun mapping ignored for {} => {} (invalid value)".format(btn, mval))
+                            _logger.info("custom gun mapping ignored for %s => %s (invalid value)", btn, mval)
             # setting values
             for btn in gunButtons:
-                if "gun_"+btn in metadata:
-                    for mval in metadata["gun_"+btn].split(","):
+                if f"gun_{btn}" in metadata:
+                    for mval in metadata[f"gun_{btn}"].split(","):
                         if mval in gunMapping:
                             gunMapping[mval] = btn
-                            eslog.info("setting {} to {}".format(mval, btn))
+                            _logger.info("setting %s to %s", mval, btn)
 
             # write buttons
             for btn in dolphinMappingNames:
@@ -373,19 +374,19 @@ def generateControllerConfig_guns(filename: str, anyDefKey: str, metadata: Mappi
                         if gunButtons[gunMapping[btn]]["button"] in buttons:
                             val = gunButtons[gunMapping[btn]]["code"]
                         else:
-                            eslog.debug("gun has not the button {}".format(gunButtons[gunMapping[btn]]["button"]))
+                            _logger.debug("gun has not the button %s", gunButtons[gunMapping[btn]]["button"])
                     else:
-                        eslog.debug("cannot map the button {}".format(gunMapping[btn]))
-                f.write(dolphinMappingNames[btn]+" = `"+val+"`\n")
+                        _logger.debug("cannot map the button %s", gunMapping[btn])
+                f.write(f"{dolphinMappingNames[btn]} = `{val}`\n")
 
             # map ir
-            if "gun_"+"ir_up" not in metadata:
+            if "gun_ir_up" not in metadata:
                 f.write("IR/Up = `Axis 1-`\n")
-            if "gun_"+"ir_down" not in metadata:
+            if "gun_ir_down" not in metadata:
                 f.write("IR/Down = `Axis 1+`\n")
-            if "gun_"+"ir_left" not in metadata:
+            if "gun_ir_left" not in metadata:
                 f.write("IR/Left = `Axis 0-`\n")
-            if "gun_"+"ir_right" not in metadata:
+            if "gun_ir_right" not in metadata:
                 f.write("IR/Right = `Axis 0+`\n")
 
             # specific games configurations
@@ -399,8 +400,8 @@ def generateControllerConfig_guns(filename: str, anyDefKey: str, metadata: Mappi
                 "ir_right":        "IR/Right",
             }
             for spe in specifics:
-                if "gun_"+spe in metadata:
-                    f.write("{} = {}\n".format(specifics[spe], metadata["gun_"+spe]))
+                if f"gun_{spe}" in metadata:
+                    f.write(f"{specifics[spe]} = {metadata[f'gun_{spe}']}\n")
         nplayer += 1
     f.write
     f.close()
@@ -441,8 +442,8 @@ def generateControllerConfig_any(system: Emulator, playersControllers: Controlle
             nsamepad = 0
         double_pads[pad.real_name.strip()] = nsamepad+1
 
-        f.write("[" + anyDefKey + str(nplayer) + "]" + "\n")
-        f.write("Device = evdev/" + str(nsamepad).strip() + "/" + pad.real_name.strip() + "\n")
+        f.write(f"[{anyDefKey}{nplayer}]\n")
+        f.write(f"Device = evdev/{str(nsamepad).strip()}/{pad.real_name.strip()}\n")
 
         if system.isOptSet("use_pad_profiles") and system.getOptBoolean("use_pad_profiles") == True:
             if not generateControllerConfig_any_from_profiles(f, pad, system):
@@ -477,7 +478,7 @@ def generateControllerConfig_wheel(f: codecs.StreamReaderWriter, pad: Controller
         "joystick1right": "Main Stick/Right",
     }
 
-    eslog.debug("configuring wheel for pad {}".format(pad.real_name))
+    _logger.debug("configuring wheel for pad %s", pad.real_name)
 
     f.write(f"Rumble/Motor = Constant\n") # only Constant works on my wheel. maybe some other values could be good
     f.write(f"Rumble/Motor/Range = -100.\n") # value must be negative, otherwise the center is located in extremes (left/right)
@@ -493,7 +494,7 @@ def generateControllerConfig_wheel(f: codecs.StreamReaderWriter, pad: Controller
 
 def generateControllerConfig_any_auto(f: codecs.StreamReaderWriter, pad: Controller, anyMapping: Mapping[str, str], anyReverseAxes: Mapping[str, str], anyReplacements: Mapping[str, str] | None, extraOptions: Mapping[str, str], system: Emulator, nplayer: int, nsamepad: int) -> None:
     for opt in extraOptions:
-        f.write(opt + " = " + extraOptions[opt] + "\n")
+        f.write(f"{opt} = {extraOptions[opt]}\n")
 
     # Check for alt input mappings
     currentMapping = get_AltMapping(system, nplayer, anyMapping)
@@ -522,7 +523,7 @@ def generateControllerConfig_any_auto(f: codecs.StreamReaderWriter, pad: Control
         if keyname is not None:
             write_key(f, keyname, input.type, input.id, input.value, pad.axis_count, False, None, None)
             if 'Triggers' in keyname and input.type == 'axis':
-                write_key(f, keyname + '-Analog', input.type, input.id, input.value, pad.axis_count, False, None, None)
+                write_key(f, f'{keyname}-Analog', input.type, input.id, input.value, pad.axis_count, False, None, None)
             if 'Buttons/Z' in keyname and "pageup" in pad.inputs:
                 # Create dictionary for both L1/R1 to pass to write_key
                 gcz_ids = {
@@ -535,19 +536,19 @@ def generateControllerConfig_any_auto(f: codecs.StreamReaderWriter, pad: Control
             write_key(f, anyReverseAxes[keyname], input.type, input.id, input.value, pad.axis_count, True, None, None)
         # DualShock Motion control
         if system.isOptSet("dsmotion") and system.getOptBoolean("dsmotion") == True:
-            f.write("IMUGyroscope/Pitch Up = `evdev/" + str(nsamepad).strip() + "/" + pad.real_name.strip() + " Motion Sensors:Gyro X-`\n")
-            f.write("IMUGyroscope/Pitch Down = `evdev/" + str(nsamepad).strip() + "/" + pad.real_name.strip() + " Motion Sensors:Gyro X+`\n")
-            f.write("IMUGyroscope/Roll Left = `evdev/" + str(nsamepad).strip() + "/" + pad.real_name.strip() + " Motion Sensors:Gyro Z-`\n")
-            f.write("IMUGyroscope/Roll Right = `evdev/" + str(nsamepad).strip() + "/" + pad.real_name.strip() + " Motion Sensors:Gyro Z+`\n")
-            f.write("IMUGyroscope/Yaw Left = `evdev/" + str(nsamepad).strip() + "/" + pad.real_name.strip() + " Motion Sensors:Gyro Y-`\n")
-            f.write("IMUGyroscope/Yaw Right = `evdev/" + str(nsamepad).strip() + "/" + pad.real_name.strip() + " Motion Sensors:Gyro Y+`\n")
+            f.write(f"IMUGyroscope/Pitch Up = `evdev/{str(nsamepad).strip()}/{pad.real_name.strip()} Motion Sensors:Gyro X-`\n")
+            f.write(f"IMUGyroscope/Pitch Down = `evdev/{str(nsamepad).strip()}/{pad.real_name.strip()} Motion Sensors:Gyro X+`\n")
+            f.write(f"IMUGyroscope/Roll Left = `evdev/{str(nsamepad).strip()}/{pad.real_name.strip()} Motion Sensors:Gyro Z-`\n")
+            f.write(f"IMUGyroscope/Roll Right = `evdev/{str(nsamepad).strip()}/{pad.real_name.strip()} Motion Sensors:Gyro Z+`\n")
+            f.write(f"IMUGyroscope/Yaw Left = `evdev/{str(nsamepad).strip()}/{pad.real_name.strip()} Motion Sensors:Gyro Y-`\n")
+            f.write(f"IMUGyroscope/Yaw Right = `evdev/{str(nsamepad).strip()}/{pad.real_name.strip()} Motion Sensors:Gyro Y+`\n")
             f.write("IMUIR/Recenter = `Button 10`\n")
-            f.write("IMUAccelerometer/Left = `evdev/" + str(nsamepad).strip() + "/" + pad.real_name.strip() + " Motion Sensors:Accel X-`\n")
-            f.write("IMUAccelerometer/Right = `evdev/" + str(nsamepad).strip() + "/" + pad.real_name.strip() + " Motion Sensors:Accel X+`\n")
-            f.write("IMUAccelerometer/Forward = `evdev/" + str(nsamepad).strip() + "/" + pad.real_name.strip() + " Motion Sensors:Accel Z-`\n")
-            f.write("IMUAccelerometer/Backward = `evdev/" + str(nsamepad).strip() + "/" + pad.real_name.strip() + " Motion Sensors:Accel Z+`\n")
-            f.write("IMUAccelerometer/Up = `evdev/" + str(nsamepad).strip() + "/" + pad.real_name.strip() + " Motion Sensors:Accel Y-`\n")
-            f.write("IMUAccelerometer/Down = `evdev/" + str(nsamepad).strip() + "/" + pad.real_name.strip() + " Motion Sensors:Accel Y+`\n")
+            f.write(f"IMUAccelerometer/Left = `evdev/{str(nsamepad).strip()}/{pad.real_name.strip()} Motion Sensors:Accel X-`\n")
+            f.write(f"IMUAccelerometer/Right = `evdev/{str(nsamepad).strip()}/{pad.real_name.strip()} Motion Sensors:Accel X+`\n")
+            f.write(f"IMUAccelerometer/Forward = `evdev/{str(nsamepad).strip()}/{pad.real_name.strip()} Motion Sensors:Accel Z-`\n")
+            f.write(f"IMUAccelerometer/Backward = `evdev/{str(nsamepad).strip()}/{pad.real_name.strip()} Motion Sensors:Accel Z+`\n")
+            f.write(f"IMUAccelerometer/Up = `evdev/{str(nsamepad).strip()}/{pad.real_name.strip()} Motion Sensors:Accel Y-`\n")
+            f.write(f"IMUAccelerometer/Down = `evdev/{str(nsamepad).strip()}/{pad.real_name.strip()} Motion Sensors:Accel Y+`\n")
         # Mouse to emulate Wiimote
         if system.isOptSet("mouseir") and system.getOptBoolean("mouseir") == True:
             f.write("IR/Up = `Cursor Y-`\n")
@@ -559,8 +560,8 @@ def generateControllerConfig_any_auto(f: codecs.StreamReaderWriter, pad: Control
             f.write("Rumble/Motor = Weak\n")
         # Deadzone setting
         if system.isOptSet(f"deadzone_{nplayer}"):
-            f.write(f"Main Stick/Dead Zone = {system.config['deadzone_' + str(nplayer)]}\n")
-            f.write(f"C-Stick/Dead Zone = {system.config['deadzone_' + str(nplayer)]}\n")
+            f.write(f"Main Stick/Dead Zone = {system.config[f'deadzone_{nplayer}']}\n")
+            f.write(f"C-Stick/Dead Zone = {system.config[f'deadzone_{nplayer}']}\n")
         else:
             f.write(f"Main Stick/Dead Zone = 5.0\n")
             f.write(f"C-Stick/Dead Zone = 5.0\n")
@@ -585,41 +586,41 @@ def generateControllerConfig_any_from_profiles(f: codecs.StreamReaderWriter, pad
 
     for profileFile in glob_path.glob("*.ini"):
         try:
-            eslog.debug(f"Looking profile : {profileFile}")
+            _logger.debug("Looking profile : %s", profileFile)
             profileConfig = CaseSensitiveConfigParser(interpolation=None)
             profileConfig.read(profileFile)
             profileDevice = profileConfig.get("Profile","Device")
-            eslog.debug(f"Profile device : {profileDevice}")
+            _logger.debug("Profile device : %s", profileDevice)
 
             deviceVals = re.match("^([^/]*)/[0-9]*/(.*)$", profileDevice)
             if deviceVals is not None:
                 if deviceVals.group(1) == "evdev" and deviceVals.group(2).strip() == pad.real_name.strip():
-                    eslog.debug("Eligible profile device found")
+                    _logger.debug("Eligible profile device found")
                     for key, val in profileConfig.items("Profile"):
                         if key != "Device":
                             f.write(f"{key} = {val}\n")
                     return True
         except:
-            eslog.error(f"profile {profileFile} : FAILED")
+            _logger.error("profile %s : FAILED", profileFile)
 
     return False
 
 def write_key(f: codecs.StreamReaderWriter, keyname: str, input_type: str, input_id: str, input_value: str, input_global_id: int | None, reverse: bool, hotkey_id: str | None, gcz_ids: Mapping[str, str] | None) -> None:
-    f.write(keyname + " = ")
+    f.write(f"{keyname} = ")
     if hotkey_id is not None:
-        f.write("`Button " + str(hotkey_id) + "` & ")
+        f.write(f"`Button {hotkey_id}` & ")
     f.write("`")
     if input_type == "button":
         # Map L1 & R1 both to Z with OR operator
         if keyname == "Buttons/Z" and gcz_ids is not None:
             f.write(f"Button {gcz_ids['pageup']}`|`Button {gcz_ids['pagedown']}")
         else:
-            f.write("Button " + str(input_id))
+            f.write(f"Button {input_id}")
     elif input_type == "hat":
         if input_value == "1" or input_value == "4":        # up or down
-            f.write("Axis " + str(int(input_global_id)+1+int(input_id)*2))
+            f.write(f"Axis {int(input_global_id)+1+int(input_id)*2}")
         else:
-            f.write("Axis " + str(int(input_global_id)+int(input_id)*2))
+            f.write(f"Axis {int(input_global_id)+int(input_id)*2}")
         if input_value == "1" or input_value == "8":        # up or left
             f.write("-")
         else:
@@ -628,7 +629,7 @@ def write_key(f: codecs.StreamReaderWriter, keyname: str, input_type: str, input
         # Ensure full values are used for analog triggers
         prefix = "Full " if keyname in {"Triggers/L-Analog", "Triggers/R-Analog"} else ""
         if (reverse and input_value == "-1") or (not reverse and input_value == "1"):
-            f.write(f"{prefix}Axis " + str(input_id) + "+")
+            f.write(f"{prefix}Axis {input_id}+")
         else:
-            f.write(f"{prefix}Axis " + str(input_id) + "-")
+            f.write(f"{prefix}Axis {input_id}-")
     f.write("`\n")

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import logging
 import os
 from pathlib import Path
 from typing import TYPE_CHECKING, Final
@@ -12,8 +11,6 @@ from ..Generator import Generator
 
 if TYPE_CHECKING:
     from ...types import HotkeysContext
-
-eslog = logging.getLogger(__name__)
 
 PICO8_BIN_PATH: Final = BIOS / "pico-8" / "pico8"
 PICO8_ROOT_PATH: Final = ROMS / "pico8"
@@ -29,7 +26,7 @@ class LexaloffleGenerator(Generator):
     def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "lexaloffle",
-            "keys": { "exit": ["KEY_LEFTCTRL", "KEY_Q"] }
+            "keys": { "exit": ["KEY_LEFTCTRL", "KEY_Q"], "menu": "KEY_ENTER" }
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):

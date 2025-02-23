@@ -14,11 +14,4 @@ DHEWM3_DEPENDENCIES = host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
 
 DHEWM3_CONF_OPTS += -DSDL2=ON
 
-define DHEWM3_KEYS
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/doom/doom3/dhewm3/doom3.keys $(TARGET_DIR)/usr/share/evmapy
-endef
-
-DHEWM3_PRE_INSTALL_TARGET_HOOKS += DHEWM3_KEYS
-
 $(eval $(cmake-package))

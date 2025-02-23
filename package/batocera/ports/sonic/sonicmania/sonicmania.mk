@@ -3,8 +3,8 @@
 # sonicmania
 #
 ################################################################################
-# Version: Commits on Dec 17, 2024
-SONICMANIA_VERSION = c9c54a32266be8ba8247b509ecd5a6cbbaede7a3
+# Version: Commits on Feb 17, 2025
+SONICMANIA_VERSION = aa113871727d569077cbd7deff831a46a72cf147
 SONICMANIA_SITE = https://github.com/RSDKModding/Sonic-Mania-Decompilation
 SONICMANIA_SITE_METHOD = git
 SONICMANIA_GIT_SUBMODULES = YES
@@ -22,12 +22,5 @@ SONICMANIA_CONF_OPTS += -DRETRO_SUBSYSTEM=SDL2
 define SONICMANIA_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/dependencies/RSDKv5/sonicmania $(TARGET_DIR)/usr/bin/sonicmania
 endef
-
-define SONICMANIA_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sonic/sonicmania/sonicmania.keys $(TARGET_DIR)/usr/share/evmapy
-endef
-
-SONICMANIA_POST_INSTALL_TARGET_HOOKS += SONICMANIA_EVMAPY
 
 $(eval $(cmake-package))

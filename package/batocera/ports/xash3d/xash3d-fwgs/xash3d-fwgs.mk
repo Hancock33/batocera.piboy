@@ -3,8 +3,8 @@
 # xash3d-fwgs
 #
 ################################################################################
-# Version: Commits on Feb 15, 2025
-XASH3D_FWGS_VERSION = 2465782a3e52fd800379169c55a2e14c3583815f
+# Version: Commits on Feb 23, 2025
+XASH3D_FWGS_VERSION = a060d7aefda24f3f1a9a5ca0821b4dc08d00d972
 XASH3D_FWGS_SITE = https://github.com/FWGS/xash3d-fwgs.git
 XASH3D_FWGS_SITE_METHOD = git
 XASH3D_FWGS_GIT_SUBMODULES = yes
@@ -36,13 +36,5 @@ else
         XASH3D_FWGS_CONF_OPTS += --disable-gl
     endif
 endif
-
-define XASH3D_FWGS_EVMAPY
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/xash3d/xash3d-fwgs/xash3d_fwgs.keys $(TARGET_DIR)/usr/share/evmapy
-endef
-
-XASH3D_FWGS_POST_INSTALL_TARGET_HOOKS += XASH3D_FWGS_EVMAPY
 
 $(eval $(waf-package))

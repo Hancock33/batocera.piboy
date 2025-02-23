@@ -1,14 +1,6 @@
 {
     "actions_player1": [
         {
-            "trigger": [
-                "hotkey",
-                "start"
-            ],
-            "type": "exec",
-            "target": "killall -9 openjo_sp && clear"
-        },
-        {
             "trigger": "joystick1",
             "type": "mouse"
         },

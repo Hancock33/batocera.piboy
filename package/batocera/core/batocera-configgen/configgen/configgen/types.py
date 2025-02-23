@@ -16,21 +16,9 @@ class ScreenInfo(TypedDict):
     y: int
 
 
-class Gun(TypedDict):
-    node: str | None
-    id_mouse: int
-    need_cross: bool
-    need_borders: bool
-    name: str
-    buttons: list[str]
-
-
-type GunMapping = Mapping[int, Gun]
-type GunDict = dict[int, Gun]
-
-
 class DeviceInfo(TypedDict):
     eventId: int
+    sysfs_path: str
     isJoystick: bool
     isWheel: bool
     isMouse: bool

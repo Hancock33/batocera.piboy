@@ -1,15 +1,10 @@
 {
     "actions_player1": [
-	{
-            "trigger": ["hotkey", "start"],
-            "type": "exec",
-            "target": "killall -9 redream && reset"
-	},
-	{
-            "trigger": ["hotkey", "b"],
+    {
+            "trigger": ["hotkey", "a"],
             "type": "key",
             "target": [ "KEY_RIGHTSHIFT", "KEY_F12" ],
             "description": "Hide the bezel"
-	}
+    }
     ]
 }

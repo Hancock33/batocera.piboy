@@ -10,7 +10,7 @@ from .flycastPaths import FLYCAST_MAPPING
 if TYPE_CHECKING:
     from ...controller import Controller
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 
 flycastMapping = { # Directions
@@ -69,10 +69,10 @@ sections = ( 'analog', 'digital', 'emulator' )
 def generateControllerConfig(controller: Controller, type: Literal['dreamcast', 'arcade']):
     # Set config file name
     if type == 'dreamcast':
-        eslog.debug("-=[ Dreamcast Controller Settings ]=-")
+        _logger.debug("-=[ Dreamcast Controller Settings ]=-")
         configFileName = FLYCAST_MAPPING / f"SDL_{controller.real_name}.cfg"
     else: # 'arcade'
-        eslog.debug("-=[ Arcade Controller Settings ]=-")
+        _logger.debug("-=[ Arcade Controller Settings ]=-")
         configFileName = FLYCAST_MAPPING / f"SDL_{controller.real_name}_arcade.cfg"
 
     Config = configparser.ConfigParser(interpolation=None)
@@ -84,7 +84,7 @@ def generateControllerConfig(controller: Controller, type: Literal['dreamcast', 
         Config.add_section(section)
 
     # Parse controller inputs
-    eslog.debug("*** Controller Name = {} ***".format(controller.real_name))
+    _logger.debug("*** Controller Name = %s ***", controller.real_name)
     analogbind = 0
     digitalbind = 0
     for index in controller.inputs:
@@ -93,17 +93,17 @@ def generateControllerConfig(controller: Controller, type: Literal['dreamcast', 
             if input.name not in flycastMapping:
                 continue
             if input.type not in flycastMapping[input.name]:
-                eslog.debug("Input type: {} / {} - not in mapping".format(input.type, input.name))
+                _logger.debug("Input type: %s / %s - not in mapping", input.type, input.name)
                 continue
             var = flycastMapping[input.name][input.type]
         if type == 'arcade':
             if input.name not in flycastArcadeMapping:
                 continue
             if input.type not in flycastArcadeMapping[input.name]:
-                eslog.debug("Input type: {} - not in mapping".format(input.type))
+                _logger.debug("Input type: %s - not in mapping", input.type)
                 continue
             var = flycastArcadeMapping[input.name][input.type]
-        eslog.debug("Input Name = {}, Var = {}, Type = {}".format(input.name, var, input.type))
+        _logger.debug("Input Name = %s, Var = %s, Type = %s", input.name, var, input.type)
         # batocera doesn't retrieve the code for hats, however
         # SDL is 256 for up, 257 for down, 258 for left & 259 for right
         if input.type == 'hat':
@@ -116,65 +116,65 @@ def generateControllerConfig(controller: Controller, type: Literal['dreamcast', 
                 code = 258
             if input.name == 'right':
                 code = 259
-            option = "bind{}".format(digitalbind)
+            option = f"bind{digitalbind}"
             digitalbind = digitalbind +1
-            val = "{}:{}".format(code, var)
+            val = f"{code}:{var}"
             Config.set(section, option, val)
 
         if input.type == 'button':
             section = 'digital'
-            option = "bind{}".format(digitalbind)
+            option = f"bind{digitalbind}"
             digitalbind = digitalbind +1
             code = input.id
-            val = "{}:{}".format(code, var)
+            val = f"{code}:{var}"
             Config.set(section, option, val)
 
         if input.type == 'axis':
             section = 'analog'
             if input.name == 'l2' or input.name == 'r2':
                 # Use positive axis for full trigger control
-                code = input.id + "+"
+                code = f"{input.id}+"
             else:
-                code = input.id + "-"
-            option = "bind{}".format(analogbind)
+                code = f"{input.id}-"
+            option = f"bind{analogbind}"
             analogbind = analogbind +1
-            val = "{}:{}".format(code, var)
+            val = f"{code}:{var}"
             if 'left' in input.name or 'up' in input.name:
                 Config.set(section, option, val)
                 # becase we only take one axis input
                 # now have to write the joy-right & joy-down manually
                 # we use the same code number but positive axis
-                option = "bind{}".format(analogbind)
+                option = f"bind{analogbind}"
                 analogbind = analogbind +1
                 if input.name == 'joystick1left':
-                    code = input.id + "+"
+                    code = f"{input.id}+"
                     var = 'btn_analog_right'
-                    val = "{}:{}".format(code, var)
+                    val = f"{code}:{var}"
                     Config.set(section, option, val)
                 if input.name == 'joystick1up':
-                    code = input.id + "+"
+                    code = f"{input.id}+"
                     var = 'btn_analog_down'
-                    val = "{}:{}".format(code, var)
+                    val = f"{code}:{var}"
                     Config.set(section, option, val)
                 if input.name == 'joystick2left':
-                    code = input.id + "+"
+                    code = f"{input.id}+"
                     var = 'axis2_right'
-                    val = "{}:{}".format(code, var)
+                    val = f"{code}:{var}"
                     Config.set(section, option, val)
                 if input.name == 'joystick2up':
-                    code = input.id + "+"
+                    code = f"{input.id}+"
                     var = 'axis2_down'
-                    val = "{}:{}".format(code, var)
+                    val = f"{code}:{var}"
                     Config.set(section, option, val)
                 if input.name == 'up':
-                    code = input.id + "+"
+                    code = f"{input.id}+"
                     var = 'btn_dpad1_down'
-                    val = "{}:{}".format(code, var)
+                    val = f"{code}:{var}"
                     Config.set(section, option, val)
                 if input.name == 'left':
-                    code = input.id + "+"
+                    code = f"{input.id}+"
                     var = 'btn_dpad1_right'
-                    val = "{}:{}".format(code, var)
+                    val = f"{code}:{var}"
                     Config.set(section, option, val)
             else:
                 Config.set(section, option, val)

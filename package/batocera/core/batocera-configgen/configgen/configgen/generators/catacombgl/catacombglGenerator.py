@@ -1,22 +1,22 @@
 from __future__ import annotations
 
 import logging
-import os
 from pathlib import Path
 from typing import TYPE_CHECKING, Final
 
 from ... import Command
-from ...batoceraPaths import CONFIGS, SAVES, mkdir_if_not_exists
+from ...batoceraPaths import CONFIGS, ROMS, SAVES, mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 if TYPE_CHECKING:
     from ...types import HotkeysContext
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 _CATACOMBGL_CONFIG: Final = CONFIGS / "CatacombGL"
 _CATACOMBGL_SAVES: Final = SAVES / "CatacombGL"
+_CATACOMBGL_ROMS: Final = "/userdata/roms/ports/catacomb"
 
 class CatacombGLGenerator(Generator):
 
@@ -24,9 +24,10 @@ class CatacombGLGenerator(Generator):
         return {
             "name": "catacombgl",
             "keys": {
-                "Exit emulator": ["KEY_LEFTALT", "KEY_F4"],
-                "Save": ["KEY_F3"],
-                "Load": ["KEY_F4"],
+                "exit": ["KEY_LEFTALT", "KEY_F4"],
+                "save_state": ["KEY_F3"],
+                "restore_state": ["KEY_F4"],
+                "menu": "KEY_ESC"
             },
         }
 
@@ -39,16 +40,16 @@ class CatacombGLGenerator(Generator):
 
         # Check if the ini file exists, and if not, create and adjust it
         if not _CATACOMBGL_CONFIG_FILE.exists():
-            eslog.debug("CatacombGL.ini not found, creating the file.")
+            _logger.debug("CatacombGL.ini not found, creating the file.")
             _CATACOMBGL_CONFIG_FILE.touch()  # Create the file if it doesn't exist
 
         # Define the paths to be added or adjusted in the ini file
         required_paths = {
-            "pathabyssv113": "/userdata/roms/ports/catacomb/Abyss_sw13",
-            "pathabyssv124": "/userdata/roms/ports/catacomb/Abyss",
-            "patharmageddonv102": "/userdata/roms/ports/catacomb/Armageddon",
-            "pathapocalypsev101": "/userdata/roms/ports/catacomb/Apocalypse",
-            "pathcatacomb3dv122": "/userdata/roms/ports/catacomb/Cat3D",
+            "pathabyssv113": _CATACOMBGL_ROMS / "Abyss_sw13",
+            "pathabyssv124": _CATACOMBGL_ROMS / "Abyss",
+            "patharmageddonv102": _CATACOMBGL_ROMS / "Armageddon",
+            "pathapocalypsev101": _CATACOMBGL_ROMS / "Apocalypse",
+            "pathcatacomb3dv122": _CATACOMBGL_ROMS / "Cat3D",
             "screenmode": "fullscreen",
             "WindowedScreenWidth": str(gameResolution["width"]),
             "WindowedScreenHeight": str(gameResolution["height"])
@@ -69,7 +70,7 @@ class CatacombGLGenerator(Generator):
         commandArray = ["/usr/bin/CatacombGL", "--savedir", _CATACOMBGL_SAVES]
 
         # Version
-        rom_file_name = os.path.basename(rom).lower()
+        rom_file_name = Path(rom).name.lower()
 
         # Check and extend the command array with specific arguments
         for keyword, argument in {
@@ -80,7 +81,7 @@ class CatacombGLGenerator(Generator):
             "apocalypse": "--apocalypse",
         }.items():
             if keyword in rom_file_name:
-                eslog.debug(f"Version requested: {keyword}")
+                _logger.debug("Version requested: %s", keyword)
                 commandArray.append(argument)
 
         # Return the configured command

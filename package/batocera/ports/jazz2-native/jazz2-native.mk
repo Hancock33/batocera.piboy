@@ -3,8 +3,8 @@
 # jazz2-native
 #
 ################################################################################
-# Version: Commits on Feb 16, 2025
-JAZZ2_NATIVE_VERSION = a1f423dbdf1b388f4a3b58da28abffdd8e0dae39
+# Version: Commits on Feb 21, 2025
+JAZZ2_NATIVE_VERSION = f5ed97c682c70f7bdda5cc3d89fa0373b319797a
 JAZZ2_NATIVE_SITE =  $(call github,deathkiller,jazz2-native,$(JAZZ2_NATIVE_VERSION))
 JAZZ2_NATIVE_LICENSE = GPL-3.0
 JAZZ2_NATIVE_LICENSE_FILE = LICENSE
@@ -24,12 +24,5 @@ else
     JAZZ2_NATIVE_CONF_OPTS += -DNCINE_PREFERRED_BACKEND=SDL2
     JAZZ2_NATIVE_CONF_OPTS += -DNCINE_WITH_OPENGLES=ON
 endif
-
-define JAZZ2_NATIVE_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/jazz2-native/jazz2.keys $(TARGET_DIR)/usr/share/evmapy
-endef
-
-JAZZ2_NATIVE_POST_INSTALL_TARGET_HOOKS += JAZZ2_NATIVE_EVMAPY
 
 $(eval $(cmake-package))

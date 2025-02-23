@@ -6,156 +6,15 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import TYPE_CHECKING, NotRequired, TypedDict
 
-import evdev
 import pyudev
 
 from .batoceraPaths import ES_GAMES_METADATA
 
 if TYPE_CHECKING:
-    from collections.abc import Mapping
+    from .types import DeviceInfoDict, DeviceInfoMapping
 
-    from .types import DeviceInfoDict, DeviceInfoMapping, GunDict, GunMapping
+_logger = logging.getLogger(__name__)
 
-eslog = logging.getLogger(__name__)
-
-def gunsNeedCrosses(guns: GunMapping) -> bool:
-    # no gun, enable the cross for joysticks, mouses...
-    if len(guns) == 0:
-        return True
-
-    for gun in guns:
-        if guns[gun]["need_cross"]:
-            return True
-    return False
-
-# returns None is no border is wanted
-def gunsBordersSizeName(guns: GunMapping, config: Mapping[str, object]) -> str | None:
-    bordersSize = "medium"
-    if "controllers.guns.borderssize" in config and config["controllers.guns.borderssize"]:
-        bordersSize = config["controllers.guns.borderssize"]
-
-    # overriden by specific options
-    bordersmode = "normal"
-    if "controllers.guns.bordersmode" in config and config["controllers.guns.bordersmode"] and config["controllers.guns.bordersmode"] != "auto":
-        bordersmode = config["controllers.guns.bordersmode"]
-    if "bordersmode" in config and config["bordersmode"] and config["bordersmode"] != "auto":
-        bordersmode = config["bordersmode"]
-
-    # others are gameonly and normal
-    if bordersmode == "hidden":
-        return None
-    if bordersmode == "force":
-        return bordersSize
-
-    for gun in guns:
-        if guns[gun]["need_borders"]:
-            return bordersSize
-    return None
-
-# returns None to follow the bezel overlay size by default
-def gunsBorderRatioType(guns: GunMapping, config: dict[str, str]) -> str | None:
-    if "controllers.guns.bordersratio" in config:
-        return config["controllers.guns.bordersratio"] # "4:3"
-    return None
-
-def getMouseButtons(device: evdev.InputDevice) -> list[str]:
-    caps = device.capabilities()
-    caps_keys = caps[evdev.ecodes.EV_KEY]
-    caps_filter = [evdev.ecodes.BTN_LEFT, evdev.ecodes.BTN_RIGHT, evdev.ecodes.BTN_MIDDLE, evdev.ecodes.BTN_1, evdev.ecodes.BTN_2, evdev.ecodes.BTN_3, evdev.ecodes.BTN_4, evdev.ecodes.BTN_5, evdev.ecodes.BTN_6, evdev.ecodes.BTN_7, evdev.ecodes.BTN_8]
-    caps_intersection = list(set(caps_keys) & set(caps_filter))
-    buttons: list[str] = []
-    if evdev.ecodes.BTN_LEFT in caps_intersection:
-        buttons.append("left")
-    if evdev.ecodes.BTN_RIGHT in caps_intersection:
-        buttons.append("right")
-    if evdev.ecodes.BTN_MIDDLE in caps_intersection:
-        buttons.append("middle")
-    if evdev.ecodes.BTN_1 in caps_intersection:
-        buttons.append("1")
-    if evdev.ecodes.BTN_2 in caps_intersection:
-        buttons.append("2")
-    if evdev.ecodes.BTN_3 in caps_intersection:
-        buttons.append("3")
-    if evdev.ecodes.BTN_4 in caps_intersection:
-        buttons.append("4")
-    if evdev.ecodes.BTN_5 in caps_intersection:
-        buttons.append("5")
-    if evdev.ecodes.BTN_6 in caps_intersection:
-        buttons.append("6")
-    if evdev.ecodes.BTN_7 in caps_intersection:
-        buttons.append("7")
-    if evdev.ecodes.BTN_8 in caps_intersection:
-        buttons.append("8")
-    return buttons
-
-def mouseButtonToCode(button: str) -> int | None:
-    if button == "left":
-        return evdev.ecodes.BTN_LEFT
-    if button == "right":
-        return evdev.ecodes.BTN_RIGHT
-    if button == "middle":
-        return evdev.ecodes.BTN_MIDDLE
-    if button == "1":
-        return evdev.ecodes.BTN_1
-    if button == "2":
-        return evdev.ecodes.BTN_2
-    if button == "3":
-        return evdev.ecodes.BTN_3
-    if button == "4":
-        return evdev.ecodes.BTN_4
-    if button == "5":
-        return evdev.ecodes.BTN_5
-    if button == "6":
-        return evdev.ecodes.BTN_6
-    if button == "7":
-        return evdev.ecodes.BTN_7
-    if button == "8":
-        return evdev.ecodes.BTN_8
-    return None
-
-def getGuns() -> GunDict:
-    import re
-
-    import pyudev
-
-    guns: GunDict = {}
-    context = pyudev.Context()
-
-    # guns are mouses, just filter on them
-    mouses = context.list_devices(subsystem='input')
-
-    # keep only mouses with /dev/iput/eventxx
-    mouses_clean = {}
-    for mouse in mouses:
-        matches = re.match(r"^/dev/input/event([0-9]*)$", str(mouse.device_node))
-        if matches != None:
-            if ("ID_INPUT_MOUSE" in mouse.properties and mouse.properties["ID_INPUT_MOUSE"]) == '1':
-                mouses_clean[int(matches.group(1))] = mouse
-    mouses = mouses_clean
-
-    nmouse = 0
-    ngun   = 0
-    for eventid in sorted(mouses):
-        eslog.info("found mouse {} at {} with id_mouse={}".format(nmouse, mouses[eventid].device_node, nmouse))
-        if "ID_INPUT_GUN" not in mouses[eventid].properties or mouses[eventid].properties["ID_INPUT_GUN"] != "1":
-            nmouse = nmouse + 1
-            continue
-
-        device = evdev.InputDevice(mouses[eventid].device_node)
-        buttons = getMouseButtons(device)
-
-        # retroarch uses mouse indexes into configuration files using ID_INPUT_MOUSE (TOUCHPAD are listed after mouses)
-        need_cross   = "ID_INPUT_GUN_NEED_CROSS"   in mouses[eventid].properties and mouses[eventid].properties["ID_INPUT_GUN_NEED_CROSS"]   == '1'
-        need_borders = "ID_INPUT_GUN_NEED_BORDERS" in mouses[eventid].properties and mouses[eventid].properties["ID_INPUT_GUN_NEED_BORDERS"] == '1'
-        guns[ngun] = {"node": mouses[eventid].device_node, "id_mouse": nmouse, "need_cross": need_cross, "need_borders": need_borders, "name": device.name, "buttons": buttons}
-        eslog.info("found gun {} at {} with id_mouse={} ({})".format(ngun, mouses[eventid].device_node, nmouse, guns[ngun]["name"]))
-        nmouse = nmouse + 1
-        ngun = ngun + 1
-
-    if len(guns) == 0:
-        eslog.info("no gun found")
-
-    return guns
 
 def shortNameFromPath(path: str | Path) -> str:
     redname = Path(path).stem.lower()
@@ -181,7 +40,7 @@ def getGamesMetaData(system: str, rom: str | Path) -> dict[str, str]:
     root = tree.getroot()
     game = shortNameFromPath(rom)
     res: dict[str, str] = {}
-    eslog.info("looking for game metadata ({}, {})".format(system, game))
+    _logger.info("looking for game metadata (%s, %s)", system, game)
 
     targetSystem = system
     # hardcoded list of system for arcade
@@ -198,17 +57,17 @@ def getGamesMetaData(system: str, rom: str | Path) -> dict[str, str]:
                     if nodegame.get("name") == "default":
                         for child in nodegame:
                             for attribute in child.attrib:
-                                key = "{}_{}".format(child.tag, attribute)
+                                key = f"{child.tag}_{attribute}"
                                 res[key] = child.get(attribute)
-                                eslog.info("found game metadata {}={} (system level)".format(key, res[key]))
+                                _logger.info("found game metadata %s=%s (system level)", key, res[key])
                         break
                 for nodegame in nodesystem.findall(".//game"):
                     if nodegame.get("name") != "default" and nodegame.get("name") in game:
                         for child in nodegame:
                             for attribute in child.attrib:
-                                key = "{}_{}".format(child.tag, attribute)
+                                key = f"{child.tag}_{attribute}"
                                 res[key] = child.get(attribute)
-                                eslog.info("found game metadata {}={}".format(key, res[key]))
+                                _logger.info("found game metadata %s=%s", key, res[key])
                         return res
     return res
 
@@ -221,6 +80,7 @@ def dev2int(dev: str) -> int | None:
 
 class _Device(TypedDict):
     node: str
+    sysfs_path: str
     group: str | None
     isJoystick: bool
     isWheel: bool
@@ -248,7 +108,14 @@ def getDevicesInformation() -> DeviceInfoDict:
                     joysticks.append(eventId)
                 if isMouse:
                     mouses.append(eventId)
-                devices[eventId] = { "node": ev.device_node, "group": group, "isJoystick": isJoystick, "isWheel": isWheel, "isMouse": isMouse }
+                devices[eventId] = {
+                    "node": ev.device_node,
+                    "sysfs_path": str((Path(ev.sys_path) / "device" / "device").resolve()),
+                    "group": group,
+                    "isJoystick": isJoystick,
+                    "isWheel": isWheel,
+                    "isMouse": isMouse
+                }
                 if "ID_PATH" in ev.properties:
                     if isWheel and "WHEEL_ROTATION_ANGLE" in ev.properties:
                         devices[eventId]["wheel_rotation"] = int(ev.properties["WHEEL_ROTATION_ANGLE"])
@@ -271,7 +138,7 @@ def getDevicesInformation() -> DeviceInfoDict:
         nmouse = None
         if d["isMouse"]:
             nmouse = mouses.index(device)
-        res[d["node"]] = { "eventId": device, "isJoystick": d["isJoystick"], "isWheel": d["isWheel"], "isMouse": d["isMouse"], "associatedDevices": dgroup, "joystick_index": njoystick, "mouse_index": nmouse }
+        res[d["node"]] = { "eventId": device, "sysfs_path": d["sysfs_path"], "isJoystick": d["isJoystick"], "isWheel": d["isWheel"], "isMouse": d["isMouse"], "associatedDevices": dgroup, "joystick_index": njoystick, "mouse_index": nmouse }
         if "wheel_rotation" in d:
             res[d["node"]]["wheel_rotation"] = d["wheel_rotation"]
     return res

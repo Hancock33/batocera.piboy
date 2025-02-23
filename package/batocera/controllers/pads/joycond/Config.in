@@ -1,8 +1,8 @@
 config BR2_PACKAGE_JOYCOND
 	bool "joycond"
 	select BR2_PACKAGE_ACL
-	select BR2_PACKAGE_LIBEVDEV
 	select BR2_PACKAGE_HAS_UDEV
+	select BR2_PACKAGE_LIBEVDEV
 
 	help
 	  Joycond is a linux daemon which uses the evdev devices

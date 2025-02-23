@@ -46,12 +46,6 @@
             "target": "KEY_ESC"
         },
         {
-            "trigger": ["hotkey", "start"],
-            "type": "key",
-            "target": [ "KEY_LEFTALT", "KEY_F4" ],
-            "description": "Exit the emulator"
-        },
-        {
             "trigger": "joystick1up",
             "type": "key",
             "target": "KEY_UP"

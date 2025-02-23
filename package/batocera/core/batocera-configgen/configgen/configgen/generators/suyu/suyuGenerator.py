@@ -17,7 +17,7 @@ if TYPE_CHECKING:
     from ...Emulator import Emulator
     from ...types import HotkeysContext
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 SUYU_CONFIG: Final = CONFIGS / 'suyu'
 
@@ -168,20 +168,20 @@ class SuyuGenerator(Generator):
             # Add vulkan logic
             if system.config["suyu_backend"] == "1":
                 if vulkan.is_available():
-                    eslog.debug("Vulkan driver is available on the system.")
+                    _logger.debug("Vulkan driver is available on the system.")
                     if vulkan.has_discrete_gpu():
-                        eslog.debug("A discrete GPU is available on the system. We will use that for performance")
+                        _logger.debug("A discrete GPU is available on the system. We will use that for performance")
                         discrete_index = vulkan.get_discrete_gpu_index()
                         if discrete_index:
-                            eslog.debug("Using Discrete GPU Index: {} for Suyu".format(discrete_index))
+                            _logger.debug("Using Discrete GPU Index: %s for Suyu", discrete_index)
                             suyuConfig.set("Renderer", "vulkan_device", discrete_index)
                             suyuConfig.set("Renderer", "vulkan_device\\default", "true")
                         else:
-                            eslog.debug("Couldn't get discrete GPU index, using default")
+                            _logger.debug("Couldn't get discrete GPU index, using default")
                             suyuConfig.set("Renderer", "vulkan_device", "0")
                             suyuConfig.set("Renderer", "vulkan_device\\default", "true")
                     else:
-                        eslog.debug("Discrete GPU is not available on the system. Using default.")
+                        _logger.debug("Discrete GPU is not available on the system. Using default.")
                         suyuConfig.set("Renderer", "vulkan_device", "0")
                         suyuConfig.set("Renderer", "vulkan_device\\default", "true")
         else:
@@ -315,30 +315,30 @@ class SuyuGenerator(Generator):
         # controllers
         nplayer = 1
         for playercontroller, pad in sorted(playersControllers.items()):
-            if system.isOptSet('p{}_pad'.format(nplayer-1)):
-                suyuConfig.set("Controls", "player_{}_type".format(nplayer-1), system.config["p{}_pad".format(nplayer)])
+            if system.isOptSet(f'p{nplayer-1}_pad'):
+                suyuConfig.set("Controls", f"player_{nplayer-1}_type", system.config[f"p{nplayer}_pad"])
             else:
-                suyuConfig.set("Controls", "player_{}_type".format(nplayer-1), 0)
-            suyuConfig.set("Controls", "player_{}_type\\default".format(nplayer-1), "false")
+                suyuConfig.set("Controls", f"player_{nplayer-1}_type", "0")
+            suyuConfig.set("Controls", rf"player_{nplayer-1}_type\default", "false")
 
             for x in suyuButtonsMapping:
-                suyuConfig.set("Controls", "player_" + str(nplayer-1) + "_" + x, '"{}"'.format(SuyuGenerator.setButton(suyuButtonsMapping[x], pad.guid, pad.inputs, nplayer-1)))
+                suyuConfig.set("Controls", f"player_{nplayer-1}_{x}", f'"{SuyuGenerator.setButton(suyuButtonsMapping[x], pad.guid, pad.inputs, nplayer-1)}"')
             for x in suyuAxisMapping:
-                suyuConfig.set("Controls", "player_" + str(nplayer-1) + "_" + x, '"{}"'.format(SuyuGenerator.setAxis(suyuAxisMapping[x], pad.guid, pad.inputs, nplayer-1)))
-            suyuConfig.set("Controls", "player_" + str(nplayer-1) + "_motionleft", '"[empty]"')
-            suyuConfig.set("Controls", "player_" + str(nplayer-1) + "_motionright", '"[empty]"')
-            suyuConfig.set("Controls", "player_" + str(nplayer-1) + "_connected", "true")
-            suyuConfig.set("Controls", "player_" + str(nplayer-1) + "_connected\\default", "false")
-            suyuConfig.set("Controls", "player_" + str(nplayer-1) + "_vibration_enabled", "true")
-            suyuConfig.set("Controls", "player_" + str(nplayer-1) + "_vibration_enabled\\default", "false")
+                suyuConfig.set("Controls", f"player_{nplayer-1}_{x}", f'"{SuyuGenerator.setAxis(suyuAxisMapping[x], pad.guid, pad.inputs, nplayer-1)}"')
+            suyuConfig.set("Controls", f"player_{nplayer-1}_motionleft", '"[empty]"')
+            suyuConfig.set("Controls", f"player_{nplayer-1}_motionright", '"[empty]"')
+            suyuConfig.set("Controls", f"player_{nplayer-1}_connected", "true")
+            suyuConfig.set("Controls", f"player_{nplayer-1}_connected\\default", "false")
+            suyuConfig.set("Controls", f"player_{nplayer-1}_vibration_enabled", "true")
+            suyuConfig.set("Controls", f"player_{nplayer-1}_vibration_enabled\\default", "false")
             nplayer += 1
 
         suyuConfig.set("Controls", "vibration_enabled", "true")
         suyuConfig.set("Controls", "vibration_enabled\\default", "false")
 
         for y in range(nplayer, 9):
-            suyuConfig.set("Controls", "player_" + str(y-1) + "_connected", "false")
-            suyuConfig.set("Controls", "player_" + str(y-1) + "_connected\\default", "false")
+            suyuConfig.set("Controls", f"player_{y-1}_connected", "false")
+            suyuConfig.set("Controls", rf"player_{y-1}_connected\default", "false")
 
         # telemetry section
         if not suyuConfig.has_section("WebService"):
@@ -363,11 +363,11 @@ class SuyuGenerator(Generator):
             input = padInputs[key]
 
             if input.type == "button":
-                return ("engine:sdl,button:{},guid:{},port:{}").format(input.id, padGuid, port)
+                return f"engine:sdl,button:{input.id},guid:{padGuid},port:{port}"
             elif input.type == "hat":
-                return ("engine:sdl,hat:{},direction:{},guid:{},port:{}").format(input.id, SuyuGenerator.hatdirectionvalue(input.value), padGuid, port)
+                return f"engine:sdl,hat:{input.id},direction:{SuyuGenerator.hatdirectionvalue(input.value)},guid:{padGuid},port:{port}"
             elif input.type == "axis":
-                return ("engine:sdl,threshold:{},axis:{},guid:{},port:{},invert:{}").format(0.5, input.id, padGuid, port, "+")
+                return f"engine:sdl,threshold:0.5,axis:{input.id},guid:{padGuid},port:{port},invert:+"
         return ""
 
     @staticmethod
@@ -384,7 +384,7 @@ class SuyuGenerator(Generator):
                 inputy = padInputs["joystick1up"]
         elif key == "joystick2" and "joystick2up" in padInputs:
             inputy = padInputs["joystick2up"]
-        return ("engine:sdl,range:1.000000,deadzone:0.100000,invert_y:+,invert_x:+,offset_y:-0.000000,axis_y:{},offset_x:-0.000000,axis_x:{},guid:{},port:{}").format(inputy, inputx, padGuid, port)
+        return f"engine:sdl,range:1.000000,deadzone:0.100000,invert_y:+,invert_x:+,offset_y:-0.000000,axis_y:{inputy},offset_x:-0.000000,axis_x:{inputx},guid:{padGuid},port:{port}"
 
     @staticmethod
     def hatdirectionvalue(value):

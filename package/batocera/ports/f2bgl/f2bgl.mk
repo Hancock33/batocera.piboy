@@ -12,10 +12,6 @@ F2BGL_LICENSE = GPLv2
 
 define F2BGL_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/f2bgl -D $(TARGET_DIR)/usr/bin/f2bgl
-
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/f2bgl/f2bgl.keys $(TARGET_DIR)/usr/share/evmapy/f2bgl.keys
 endef
 
 $(eval $(cmake-package))

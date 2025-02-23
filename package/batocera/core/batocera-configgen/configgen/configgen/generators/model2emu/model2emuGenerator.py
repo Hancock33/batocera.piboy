@@ -8,7 +8,7 @@ import stat
 from pathlib import Path, PureWindowsPath
 from typing import TYPE_CHECKING, Final
 
-from ... import Command, controllersConfig
+from ... import Command
 from ...batoceraPaths import HOME, ROMS, mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
 from ...utils import wine
@@ -19,7 +19,7 @@ if TYPE_CHECKING:
     from ...types import HotkeysContext
 
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 MODEL2_ROMS: Final = ROMS / "model2"
 
@@ -112,9 +112,9 @@ class Model2EmuGenerator(Generator):
         if rom in known_gun_roms:
             if system.isOptSet('use_guns') and system.getOptBoolean('use_guns') and len(guns) > 0:
                 for gun in guns:
-                    if guns[gun]["need_borders"]:
+                    if guns[gun].needs_borders:
                         if lua_file_path.exists():
-                            bordersSize = controllersConfig.gunsBordersSizeName(guns, system.config)
+                            bordersSize = system.guns_borders_size_name(guns)
                             # add more intelligence for lower resolution screens to avoid massive borders
                             if bordersSize == "thin":
                                 thickness = "1"
@@ -176,7 +176,7 @@ class Model2EmuGenerator(Generator):
             Config.set("Renderer","DrawCross", format(system.config["model2_crossHairs"]))
         else:
             for gun in guns:
-                if guns[gun]["need_cross"]:
+                if guns[gun].needs_cross:
                     Config.set("Renderer","DrawCross", "1")
                 else:
                     Config.set("Renderer","DrawCross", "0")
@@ -310,7 +310,7 @@ def copy_updated_files(source_path: Path, destination_path: Path) -> None:
 
         if src.is_dir():
             shutil.copytree(src, dst)
-            eslog.debug(f"Copying directory {src} to {dst}")
+            _logger.debug("Copying directory %s to %s", src, dst)
         else:
             shutil.copy2(src, dst)
-            eslog.debug(f"Copying file {src} to {dst}")
+            _logger.debug("Copying file %s to %s", src, dst)

@@ -52,7 +52,7 @@ class PPSSPPGenerator(Generator):
 
         # state_slot option
         if system.isOptSet('state_filename'):
-            commandArray.append("--state={}".format(system.config['state_filename']))
+            commandArray.append(f"--state={system.config['state_filename']}")
 
         # The next line is a reminder on how to quit PPSSPP with just the HK
         #commandArray = ['/usr/bin/PPSSPP'], rom, "--escape-exit"]
@@ -69,7 +69,7 @@ class PPSSPPGenerator(Generator):
             env={
                 "XDG_CONFIG_HOME":CONFIGS,
                 "XDG_DATA_HOME":SAVES,
-                "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers)
+                "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers, ignore_buttons = ["hotkey"]) # the hotkey button is used to open the menu
             }
         )
 
