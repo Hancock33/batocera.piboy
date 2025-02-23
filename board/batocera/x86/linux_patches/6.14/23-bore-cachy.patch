@@ -750,7 +750,7 @@ index ef047add7f9e..ef1a4b610bae 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index d70d8c0056ff..c1464e1840b2 100644
+index 160833a1da47..e3c24b620df0 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -58,6 +58,8 @@
@@ -953,7 +953,7 @@ index d70d8c0056ff..c1464e1840b2 100644
  	/*
  	 * Tell update_rq_clock() that we've just updated,
  	 * so we don't do microscopic update in schedule()
-@@ -13136,6 +13181,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
+@@ -13135,6 +13180,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
  static void task_fork_fair(struct task_struct *p)
  {
  	set_task_max_allowed_capacity(p);
@@ -963,7 +963,7 @@ index d70d8c0056ff..c1464e1840b2 100644
  }
  
  /*
-@@ -13246,6 +13294,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
+@@ -13245,6 +13293,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
  
  static void switched_from_fair(struct rq *rq, struct task_struct *p)
  {
@@ -975,7 +975,7 @@ index d70d8c0056ff..c1464e1840b2 100644
  }
  
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 594cef7c1468..a49097351548 100644
+index c824b24d069a..8432a7d2ba8b 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -2121,7 +2121,11 @@ static inline void update_sched_domain_debugfs(void) { }
