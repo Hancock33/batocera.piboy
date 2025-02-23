@@ -3,9 +3,10 @@
 # libretro-dolphin
 #
 ################################################################################
-# Version: Commits on Dec 06, 2023 (branch@up)
-LIBRETRO_DOLPHIN_VERSION = e78a6f7bf90c961697fd374d131a4d828e372c12
-LIBRETRO_DOLPHIN_SITE = https://github.com/zorn-v/dolphin-libretro.git
+# Version: Commits on Dec 03, 2024
+LIBRETRO_DOLPHIN_VERSION = 7c3f45a4e121acfc3a2aad6680cf3e4c8274b975
+LIBRETRO_DOLPHIN_BRANCH = testing
+LIBRETRO_DOLPHIN_SITE = https://github.com/jonian/libretro-dolphin.git
 LIBRETRO_DOLPHIN_SITE_METHOD=git
 LIBRETRO_DOLPHIN_GIT_SUBMODULES=YES
 LIBRETRO_DOLPHIN_LICENSE = GPLv2
