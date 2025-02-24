@@ -7973,20 +7973,15 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "Färöer Inseln"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, naomi.flycast.keys, naomi2.flycast.keys, psp.ppsspp.keys, ...
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Vorspulen"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "Fast Interpreter (Schnell)"
 
-#. TRANSLATION: nds.drastic.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "FastForward"
-msgstr "Schnelles Vorspulen"
+msgid "Fast forward"
+msgstr ""
 
 #. TRANSLATION: flycast
 #, c-format
@@ -13665,10 +13660,10 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Reset the application"
-msgstr "Zurücksetzen der Anwendung"
+msgid "Reset"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13693,16 +13688,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "Auflösungsmultiplikatoren zur Glättung von Vektoren"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "Emulation neustarten"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Restart Game"
-msgstr "Spiel neu starten"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
@@ -13734,7 +13719,7 @@ msgctxt "game_options"
 msgid "Retropad (Default)"
 msgstr "Retropad (Standard)"
 
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "Zurückspulen"
@@ -18646,6 +18631,14 @@ msgstr "gelb/blau"
 #~ "Schärfe von entfernten Texturen wird verbessert, wenn Mip-Mapping "
 #~ "aktiviert ist."
 
+#~ msgctxt "keys_files"
+#~ msgid "Fast Forward"
+#~ msgstr "Vorspulen"
+
+#~ msgctxt "keys_files"
+#~ msgid "FastForward"
+#~ msgstr "Schnelles Vorspulen"
+
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
 #~ msgstr "Für Gyro-aktivierte Spiele (an den linken Analogstick gebunden)"
@@ -18806,9 +18799,21 @@ msgstr "gelb/blau"
 #~ "Reservierter Bereich innerhalb vom Todbereich um gerade aus zu fahren(in "
 #~ "Grad)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Reset the application"
+#~ msgstr "Zurücksetzen der Anwendung"
+
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Bildschirmhöhe automatisch skalieren."
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Emulation"
+#~ msgstr "Emulation neustarten"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Spiel neu starten"
 
 #~ msgctxt "keys_files"
 #~ msgid "Right Flipper"

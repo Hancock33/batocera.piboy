@@ -7888,20 +7888,15 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "フェロー諸島"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, naomi.flycast.keys, naomi2.flycast.keys, psp.ppsspp.keys, ...
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "早送り"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "インタープリタ（速い）"
 
-#. TRANSLATION: nds.drastic.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "FastForward"
-msgstr "早送り"
+msgid "Fast forward"
+msgstr ""
 
 #. TRANSLATION: flycast
 #, c-format
@@ -13499,10 +13494,10 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Reset the application"
-msgstr "アプリケーションをリセット"
+msgid "Reset"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13525,16 +13520,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "ベクトルを滑らかにするための解像度乗数"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "エミュレーション再開"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Restart Game"
-msgstr "ゲームを再開"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
@@ -13566,7 +13551,7 @@ msgctxt "game_options"
 msgid "Retropad (Default)"
 msgstr "レトロパッド（標準）"
 
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "巻き戻し"
@@ -18465,6 +18450,14 @@ msgstr "黄/青"
 #~ msgid "Exit running Flatpak"
 #~ msgstr "Flatpakを終了する"
 
+#~ msgctxt "keys_files"
+#~ msgid "Fast Forward"
+#~ msgstr "早送り"
+
+#~ msgctxt "keys_files"
+#~ msgid "FastForward"
+#~ msgstr "早送り"
+
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
 #~ msgstr "ジャイロ対応ゲーム時（左アナログスティックに割り当てる）"
@@ -18676,9 +18669,21 @@ msgstr "黄/青"
 #~ "(in degrees)"
 #~ msgstr "直進のためにステアリングの中間幅を設定 (度単位)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Reset the application"
+#~ msgstr "アプリケーションをリセット"
+
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "画面の高さを自動的に変更します"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Emulation"
+#~ msgstr "エミュレーション再開"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "ゲームを再開"
 
 #~ msgctxt "keys_files"
 #~ msgid "Right Flipper"

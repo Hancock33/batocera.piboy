@@ -7925,20 +7925,15 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "Faroe Islands"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, naomi.flycast.keys, naomi2.flycast.keys, psp.ppsspp.keys, ...
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Быстрая перемотка"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "Интерпретатор (быстро)"
 
-#. TRANSLATION: nds.drastic.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "FastForward"
-msgstr "Перемотка"
+msgid "Fast forward"
+msgstr ""
 
 #. TRANSLATION: flycast
 #, c-format
@@ -13575,10 +13570,10 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Reset the application"
-msgstr "Сброс приложения"
+msgid "Reset"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13603,16 +13598,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "Множитель разрешения для сглаживания векторов"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "Перезапустить эмуляцию"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Restart Game"
-msgstr "Перезапустить игру"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
@@ -13644,7 +13629,7 @@ msgctxt "game_options"
 msgid "Retropad (Default)"
 msgstr "Retropad (по умолчанию)"
 
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "Перемотка"
@@ -19281,6 +19266,14 @@ msgstr "жёлтая/синяя"
 #~ msgid "Face Buttons (CW)"
 #~ msgstr "Лицевые кнопки (по часовой стрелке)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Fast Forward"
+#~ msgstr "Быстрая перемотка"
+
+#~ msgctxt "keys_files"
+#~ msgid "FastForward"
+#~ msgstr "Перемотка"
+
 #~ msgctxt "game_options"
 #~ msgid "Fix main 2D screen to follow action."
 #~ msgstr "Исправляет основной 2D-экран."
@@ -19944,9 +19937,21 @@ msgstr "жёлтая/синяя"
 #~ "Зарезервируйте немертвую зону в центре руля для движения прямо (в "
 #~ "градусах)."
 
+#~ msgctxt "keys_files"
+#~ msgid "Reset the application"
+#~ msgstr "Сброс приложения"
+
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Автоматически изменяет размер экрана по высоте."
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Emulation"
+#~ msgstr "Перезапустить эмуляцию"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Перезапустить игру"
 
 #~ msgctxt "keys_files"
 #~ msgid "Right Flipper"

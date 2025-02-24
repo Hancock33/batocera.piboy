@@ -7955,20 +7955,15 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "Insulele Faeroe"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, naomi.flycast.keys, naomi2.flycast.keys, psp.ppsspp.keys, ...
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Derulează înainte"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "Interpretor rapid"
 
-#. TRANSLATION: nds.drastic.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "FastForward"
-msgstr "Derulare rapidă"
+msgid "Fast forward"
+msgstr ""
 
 #. TRANSLATION: flycast
 #, c-format
@@ -13620,10 +13615,10 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Reset the application"
-msgstr "Resetează aplicația"
+msgid "Reset"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13648,16 +13643,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "Multiplicatori de rezoluție pentru a netezi vectorii"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "Repornește emularea"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Restart Game"
-msgstr "Repornește jocul"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
@@ -13689,7 +13674,7 @@ msgctxt "game_options"
 msgid "Retropad (Default)"
 msgstr "Retropad (Implicit)"
 
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "Revenire"
@@ -18772,6 +18757,14 @@ msgstr "galben/albastru"
 #~ msgid "Face Buttons (CW)"
 #~ msgstr "Butoane frontale (orar)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Fast Forward"
+#~ msgstr "Derulează înainte"
+
+#~ msgctxt "keys_files"
+#~ msgid "FastForward"
+#~ msgstr "Derulare rapidă"
+
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
 #~ msgstr ""
@@ -19056,9 +19049,21 @@ msgstr "galben/albastru"
 #~ "Rezervă o zonă activă la centrul volanului pentru mersul drept înainte "
 #~ "(în grade)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Reset the application"
+#~ msgstr "Resetează aplicația"
+
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Redimensionează automat înălțimea ecranului."
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Emulation"
+#~ msgstr "Repornește emularea"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Repornește jocul"
 
 #~ msgctxt "keys_files"
 #~ msgid "Right Flipper"

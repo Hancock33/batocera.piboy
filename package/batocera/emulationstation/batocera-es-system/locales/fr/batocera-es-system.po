@@ -7970,20 +7970,15 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "Faroe Islands"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, naomi.flycast.keys, naomi2.flycast.keys, psp.ppsspp.keys, ...
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Avance rapide"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "Interpréteur rapide"
 
-#. TRANSLATION: nds.drastic.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "FastForward"
-msgstr "Avance rapide"
+msgid "Fast forward"
+msgstr ""
 
 #. TRANSLATION: flycast
 #, c-format
@@ -13643,10 +13638,10 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Reset the application"
-msgstr "Remettre à zéro l'application"
+msgid "Reset"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13671,16 +13666,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "Multiplicateurs de résolution pour lisser les vecteurs"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "Redémarrer l'émulation"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Restart Game"
-msgstr "Redémarrer le jeu"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
@@ -13712,7 +13697,7 @@ msgctxt "game_options"
 msgid "Retropad (Default)"
 msgstr "Retropad (Par Défaut)"
 
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "Retour rapide"
@@ -19396,6 +19381,14 @@ msgstr "jaune/bleu"
 #~ msgid "Face Buttons (CW)"
 #~ msgstr "Boutons de face (CW)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Fast Forward"
+#~ msgstr "Avance rapide"
+
+#~ msgctxt "keys_files"
+#~ msgid "FastForward"
+#~ msgstr "Avance rapide"
+
 #~ msgctxt "game_options"
 #~ msgid "Fills the screen regardless of the aspect ratio."
 #~ msgstr "Remplir l'écran peu importe le ratio d'écran."
@@ -19963,9 +19956,21 @@ msgstr "jaune/bleu"
 #~ "Réserve une zone active au milieu du volant pour aller tout droit (en "
 #~ "degrés)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Reset the application"
+#~ msgstr "Remettre à zéro l'application"
+
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Redimensionner automatiquement la hauteur de l'écran."
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Emulation"
+#~ msgstr "Redémarrer l'émulation"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Redémarrer le jeu"
 
 #~ msgctxt "keys_files"
 #~ msgid "Right Flipper"

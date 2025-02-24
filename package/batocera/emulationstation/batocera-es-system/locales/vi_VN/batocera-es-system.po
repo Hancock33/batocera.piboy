@@ -7939,20 +7939,15 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "Quần đảo Faroe"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, naomi.flycast.keys, naomi2.flycast.keys, psp.ppsspp.keys, ...
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Fast Forward"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "Fast Interpreter"
 
-#. TRANSLATION: nds.drastic.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "FastForward"
-msgstr "FastForward"
+msgid "Fast forward"
+msgstr ""
 
 #. TRANSLATION: flycast
 #, c-format
@@ -13573,10 +13568,10 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Reset the application"
-msgstr "Đặt lại ứng dụng"
+msgid "Reset"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13601,16 +13596,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "Hệ số nhân độ phân giải để làm mịn vectơ"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "Khởi động lại trình mô phỏng"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Restart Game"
-msgstr "Khởi động lại trò chơi"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
@@ -13642,7 +13627,7 @@ msgctxt "game_options"
 msgid "Retropad (Default)"
 msgstr "Retropad (Mặc định)"
 
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "Tua lại"
@@ -18580,6 +18565,14 @@ msgstr "vàng/xanh da trời"
 #~ msgid "Exit running Flatpak"
 #~ msgstr "Thoát chạy Flatpak"
 
+#~ msgctxt "keys_files"
+#~ msgid "Fast Forward"
+#~ msgstr "Fast Forward"
+
+#~ msgctxt "keys_files"
+#~ msgid "FastForward"
+#~ msgstr "FastForward"
+
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
 #~ msgstr ""
@@ -18796,9 +18789,21 @@ msgstr "vàng/xanh da trời"
 #~ "Dành một vùng không chết ở giữa bánh xe để đi thẳng về phía trước (tính "
 #~ "theo độ)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Reset the application"
+#~ msgstr "Đặt lại ứng dụng"
+
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Tự động thay đổi kích thước chiều cao màn hình."
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Emulation"
+#~ msgstr "Khởi động lại trình mô phỏng"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Khởi động lại trò chơi"
 
 #~ msgctxt "keys_files"
 #~ msgid "Right Flipper"

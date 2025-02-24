@@ -7931,20 +7931,15 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "Isole Faroe"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, naomi.flycast.keys, naomi2.flycast.keys, psp.ppsspp.keys, ...
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Avanzamento Veloce"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "Interprete Veloce"
 
-#. TRANSLATION: nds.drastic.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "FastForward"
-msgstr "Avanzamento Rapido"
+msgid "Fast forward"
+msgstr ""
 
 #. TRANSLATION: flycast
 #, c-format
@@ -13581,10 +13576,10 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Reset the application"
-msgstr "Resetta l'applicazione"
+msgid "Reset"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13609,16 +13604,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "Moltiplicatori di risoluzione per sfumare i vettori"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "Riavvia Emulazione"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Restart Game"
-msgstr "Riavvia Gioco"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
@@ -13650,7 +13635,7 @@ msgctxt "game_options"
 msgid "Retropad (Default)"
 msgstr "Retropad (Default)"
 
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "Riavvolgi"
@@ -18871,6 +18856,14 @@ msgstr "giallo/blu"
 #~ msgid "Face Buttons (CW)"
 #~ msgstr "Bottoni di fronte (senso orario)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Fast Forward"
+#~ msgstr "Avanzamento Veloce"
+
+#~ msgctxt "keys_files"
+#~ msgid "FastForward"
+#~ msgstr "Avanzamento Rapido"
+
 #~ msgctxt "game_options"
 #~ msgid "FlexDMD disabled"
 #~ msgstr "FlexDMD disabilitato"
@@ -19246,9 +19239,21 @@ msgstr "giallo/blu"
 #~ msgstr ""
 #~ "Riserza una zona morta al centro dello sterzo per andare dritto (in gradi)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Reset the application"
+#~ msgstr "Resetta l'applicazione"
+
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Ridimensiona automaticamente l'altezza video"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Emulation"
+#~ msgstr "Riavvia Emulazione"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Riavvia Gioco"
 
 #~ msgctxt "keys_files"
 #~ msgid "Right Flipper"

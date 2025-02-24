@@ -7914,20 +7914,15 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "Færøyene"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, naomi.flycast.keys, naomi2.flycast.keys, psp.ppsspp.keys, ...
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Hurtigspoling"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "Rask tolk"
 
-#. TRANSLATION: nds.drastic.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "FastForward"
-msgstr "FastForward"
+msgid "Fast forward"
+msgstr ""
 
 #. TRANSLATION: flycast
 #, c-format
@@ -13544,10 +13539,10 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Reset the application"
-msgstr "Tilbakestille programmet"
+msgid "Reset"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13572,16 +13567,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "Oppløsningsmultiplikatorer for å jevne ut vektorer"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "Start emulering på nytt"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Restart Game"
-msgstr "Start spillet på nytt"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
@@ -13613,7 +13598,7 @@ msgctxt "game_options"
 msgid "Retropad (Default)"
 msgstr "Retropad (standard)"
 
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "Tilbakespoling"
@@ -18758,6 +18743,14 @@ msgstr "gul/blå"
 #~ msgid "Face Buttons (CW)"
 #~ msgstr "Ansiktsknapper (CW)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Fast Forward"
+#~ msgstr "Hurtigspoling"
+
+#~ msgctxt "keys_files"
+#~ msgid "FastForward"
+#~ msgstr "FastForward"
+
 #~ msgctxt "game_options"
 #~ msgid "FlexDMD disabled"
 #~ msgstr "FlexDMD deaktivert"
@@ -19081,9 +19074,21 @@ msgstr "gul/blå"
 #~ "Reserver en ikke-død sone i midten av rattet for å kjøre rett frem (i "
 #~ "grader)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Reset the application"
+#~ msgstr "Tilbakestille programmet"
+
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Endre størrelsen på skjermen automatisk."
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Emulation"
+#~ msgstr "Start emulering på nytt"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Start spillet på nytt"
 
 #~ msgctxt "keys_files"
 #~ msgid "Right Flipper"
