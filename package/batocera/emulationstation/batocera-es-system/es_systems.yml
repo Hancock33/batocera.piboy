@@ -3411,7 +3411,7 @@ abuse:
   extensions:           [game]
   platform:             pc
   group:                ports
-  path:                 /usr/share/emulationstation/ports/abuse
+  path:                 /userdata/roms/ports/abuse
   emulators:
     abuse:
       abuse:            { requireAnyOf: [BR2_PACKAGE_ABUSE] }

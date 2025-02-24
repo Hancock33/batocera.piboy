@@ -1,0 +1,42 @@
+diff --git a/src/sdlport/setup.cpp b/src/sdlport/setup.cpp
+index a507a31..e6b04b8 100644
+--- a/src/sdlport/setup.cpp
++++ b/src/sdlport/setup.cpp
+@@ -94,9 +94,9 @@ bool AR_GetAttr(std::string line, std::string &attr, std::string &value)
+ Settings::Settings()
+ {
+ 	// screen
+-	this->fullscreen = 0; // start in window
+-	this->borderless = false;
+-	this->vsync = false;
++	this->fullscreen = 2; // start in window
++	this->borderless = true;
++	this->vsync = true;
+ 	this->virtual_width = 320;
+ 	// this->virtual_height  = 200;
+ 	this->screen_width = 640;
+@@ -114,7 +114,7 @@ Settings::Settings()
+ 
+ 	// random
+ 	this->local_save = true;
+-	this->grab_input = false;	 // don't grab the input
++	this->grab_input = true;	 // don't grab the input
+ 	this->editor = false;			 // disable editor mode
+ 	this->physics_update = 1000 / 15; // original 65ms/15 FPS
+ 	this->mouse_scale = 0;		 // match desktop
+@@ -144,7 +144,7 @@ Settings::Settings()
+ 	this->bt = key_value("CTRL_L"); // special2, bulettime
+ 
+ 	// controller settings
+-	this->ctr_aim = false; // controller overide disabled
++	this->ctr_aim = true; // controller overide disabled
+ 	this->ctr_aim_correctx = 0;
+ 	this->ctr_cd = 100;
+ 	this->ctr_rst_s = 10;
+@@ -727,4 +727,4 @@ std::string get_ctr_binding(std::string c)
+ 		return settings.ctr_rtg;
+ 
+ 	return "";
+-}
+\ No newline at end of file
++}
