@@ -26,8 +26,9 @@ class ThemehospitalGenerator(Generator):
 
     def getHotkeysContext(self) -> HotkeysContext:
         return {
-            "name": "themehospital",
-            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": ["KEY_RIGHTSHIFT", "KEY_Q"], "save_state": ["KEY_LEFTALT", "KEY_LEFTSHIFT", "KEY_S"], "restore_state": ["KEY_LEFTALT", "KEY_LEFTSHIFT", "KEY_L"] }
+            "name": "corsixth",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": ["KEY_RIGHTSHIFT", "KEY_Q"], "reset": ["KEY_RIGHTSHIFT", "KEY_F10"],
+                      "save_state": ["KEY_LEFTALT", "KEY_LEFTSHIFT", "KEY_S"], "restore_state": ["KEY_LEFTALT", "KEY_LEFTSHIFT", "KEY_L"] }
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
