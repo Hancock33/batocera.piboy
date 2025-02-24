@@ -3,9 +3,9 @@
 # abuse
 #
 ################################################################################
-# Version: Commits on Oct 27, 2022
-ABUSE_VERSION = v0.9.1
-ABUSE_SITE = $(call github,Xenoveritas,abuse,$(ABUSE_VERSION))
+# Version: Commits on Jan 17, 2025
+ABUSE_VERSION = 2025.1.0
+ABUSE_SITE = $(call github,apancik,Abuse_2025,$(ABUSE_VERSION))
 ABUSE_EXTRA_DOWNLOADS = http://abuse.zoy.org/raw-attachment/wiki/download/abuse-data-2.00.tar.gz
 
 ABUSE_DEPENDENCIES = sdl2 sdl2_mixer
