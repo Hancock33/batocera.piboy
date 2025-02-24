@@ -5,52 +5,54 @@ from __future__ import annotations
 import logging
 from os import environ
 from struct import pack, unpack
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, BinaryIO
 
 from ...utils.logger import setup_logging
 from .dolphinPaths import DOLPHIN_SAVES
 
 if TYPE_CHECKING:
+    from collections.abc import Mapping
     from pathlib import Path
 
+    from ...config import SystemConfig
     from ...types import Resolution
 
 
 _logger = logging.getLogger(__name__)
 
-def readBEInt16(f):
+def readBEInt16(f: BinaryIO):
     bytes = f.read(2)
     unpacked = unpack(">H", bytes)
     return unpacked[0]
 
-def readBEInt32(f):
+def readBEInt32(f: BinaryIO):
     bytes = f.read(4)
     unpacked = unpack(">L", bytes)
     return unpacked[0]
 
-def readBEInt64(f):
+def readBEInt64(f: BinaryIO):
     bytes = f.read(8)
     unpacked = unpack(">Q", bytes)
     return unpacked[0]
 
-def readBytes(f, x):
+def readBytes(f: BinaryIO, x: int):
     return f.read(x)
 
-def readString(f, x):
+def readString(f: BinaryIO, x: int):
     bytes = f.read(x)
     decodedbytes = bytes.decode('utf-8')
     return str(decodedbytes)
 
-def readInt8(f):
+def readInt8(f: BinaryIO):
     bytes = f.read(1)
     unpacked = unpack("B", bytes)
     return unpacked[0]
 
-def writeInt8(f, x):
+def writeInt8(f: BinaryIO, x: int):
     bytes = pack("B", x)
     f.write(bytes)
 
-def readWriteEntry(f, setval):
+def readWriteEntry(f: BinaryIO, setval: Mapping[str, int]):
     itemHeader     = readInt8(f)
     itemType       = (itemHeader & 0xe0) >> 5
     itemNameLength = (itemHeader & 0x1f) + 1
@@ -87,7 +89,7 @@ def readWriteEntry(f, setval):
     if not setval or itemName in setval:
         _logger.debug('%12s = %s', itemName, itemValue)
 
-def readWriteFile(filepath: Path, setval):
+def readWriteFile(filepath: Path, setval: Mapping[str, int]):
     # open in read read/write depending of the action
     if not setval:
         f = filepath.open("rb")
@@ -115,29 +117,23 @@ def getWiiLangFromEnvironment():
     else:
         return availableLanguages["en_US"]
 
-def getRatioFromConfig(config, gameResolution):
+def getRatioFromConfig(config: SystemConfig, gameResolution: Resolution) -> int:
     # Sets the setting available to the Wii's internal NAND. Only has two values:
     # 0: 4:3 ; 1: 16:9
-    if "tv_mode" in config:
-        if config["tv_mode"] == "1":
-            return 1
-        else:
-            return 0
-    else:
-        return 0
+    if config.get('tv_mode') == '1':
+        return 1
 
-def getSensorBarPosition(config):
+    return 0
+
+def getSensorBarPosition(config: SystemConfig) -> int:
     # Sets the setting available to the Wii's internal NAND. Only has two values:
     # 0: BOTTOM ; 1: TOP
-    if "sensorbar_position" in config:
-        if config["sensorbar_position"] == "1":
-            return 1
-        else:
-            return 0
-    else:
-        return 0
+    if config.get('sensorbar_position') == '1':
+        return 1
 
-def update(config: dict[str, Any], filepath: Path, gameResolution: Resolution) -> None:
+    return 0
+
+def update(config: SystemConfig, filepath: Path, gameResolution: Resolution) -> None:
     arg_setval = {
         "IPL.LNG": getWiiLangFromEnvironment(),
         "IPL.AR": getRatioFromConfig(config, gameResolution),

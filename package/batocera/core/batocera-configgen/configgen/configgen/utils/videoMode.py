@@ -12,8 +12,7 @@ from typing import TYPE_CHECKING, Final
 from ..batoceraPaths import DEFAULTS_DIR
 
 if TYPE_CHECKING:
-    from collections.abc import Mapping
-
+    from ..config import SystemConfig
     from ..types import Resolution, ScreenInfo
 
 _logger = logging.getLogger(__name__)
@@ -38,19 +37,25 @@ def changeMode(videomode: str) -> None:
                     raise
                 time.sleep(1)
 
-def getCurrentMode() -> str | None:
+def getCurrentMode() -> str:
     proc = subprocess.Popen(["batocera-resolution currentMode"], stdout=subprocess.PIPE, shell=True)
     (out, err) = proc.communicate()
     for val in out.decode().splitlines():
         return val # return the first line
 
-def getRefreshRate() -> str | None:
+    if TYPE_CHECKING:
+        raise AssertionError("unreachable")
+
+def getRefreshRate() -> str:
     proc = subprocess.Popen(["batocera-resolution refreshRate"], stdout=subprocess.PIPE, shell=True)
     (out, err) = proc.communicate()
     for val in out.decode().splitlines():
         return val # return the first line
 
-def getScreensInfos(config: Mapping[str, object]) -> list[ScreenInfo]:
+    if TYPE_CHECKING:
+        raise AssertionError("unreachable")
+
+def getScreensInfos(config: SystemConfig) -> list[ScreenInfo]:
     outputs = getScreens()
     res: list[ScreenInfo] = []
 
