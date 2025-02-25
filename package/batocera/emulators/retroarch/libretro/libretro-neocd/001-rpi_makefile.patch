@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index afcd316..ba895ff 100644
+index b19178b..dab5958 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -62,6 +62,31 @@ ifneq (,$(findstring unix,$(platform)))
@@ -14,7 +14,7 @@ index afcd316..ba895ff 100644
 +   fpic := -fPIC
 +   SHARED := -shared -Wl,--version-script=$(CORE_DIR)/link.T -Wl,--no-undefined
 +   LIBS += -lpthread
-+   
++
 +	ifneq (,$(findstring rpi1,$(platform)))
 +    	CFLAGS += -marm -mcpu=arm1176jzf-s -mfloat-abi=hard
 +	else ifneq (,$(findstring rpi2,$(platform)))
@@ -29,8 +29,19 @@ index afcd316..ba895ff 100644
 +         CFLAGS += -mcpu=cortex-a72 -mtune=cortex-a72
 +	else ifneq (,$(findstring rpi5,$(platform)))
 +         CFLAGS += -mcpu=cortex-a76 -mtune=cortex-a76
-+	endif   
++	endif
 +
  else ifeq ($(platform), linux-portable)
     TARGET := $(TARGET_NAME)_libretro.$(EXT)
     fpic := -fPIC -nostdlib
+@@ -245,8 +270,8 @@ ifeq ($(HAVE_CDROM), 1)
+ endif
+ 
+ ifeq ($(USE_LTO), 1)
+-   CFLAGS += -flto -fuse-linker-plugin
+-   CXXFLAGS += -flto -fuse-linker-plugin
++   CFLAGS += -flto=auto -fuse-linker-plugin
++   CXXFLAGS += -flto=auto -fuse-linker-plugin
+ endif
+ 
+ GIT_VERSION := " $(shell git rev-parse --short HEAD || echo unknown)"
