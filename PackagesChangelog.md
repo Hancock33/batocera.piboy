@@ -13,8 +13,10 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45507|Feb 25, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|48f51bd5fef5b9b6ea5ad086cfd44a07c5441d8a|Feb 25, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|8dd1ddc65bbe6ce55a88d0f6a5a87eb9be9beb53|Feb 25, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14198|Feb 25, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250225|Feb 25, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|6217ceb83ff1c3708a6a34dcb62fecc53eb6ac14|Feb 25, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|e16953b9afbec278c43874132f24f0ff39b6852c|Feb 25, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250225|Feb 25, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|4e7a48d8e15c3f71d25cc8fee13c69ae7cd610ca|Feb 25, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|52a54521ed43d2495cab3e194e7f8d55bca799b1|Feb 25, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|f98d5a35743e0da9915dea8073403579561160e2|Feb 25, 2025
@@ -45,9 +47,7 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|dc468ca65237fa9de1d49
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|e8221443ab88a975877e60538489c6e69f08e1ec|Feb 23, 2025
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|1f77a160fb1f41769d51f24dbf16a0b78527f5d3|Feb 23, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|671cdc85021b5fc53e819406d9ec378c79087ef6|Feb 23, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250223|Feb 23, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|dfb332addb981e1ae434e431978a9cc2b47637b0|Feb 23, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250223|Feb 23, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|7510078ef3c32f841496bd0f0b0e5f075a2848f1|Feb 23, 2025
 Ports|[srb2](http://github.com/STJr/SRB2)|748fa366eb0634abbea64931856a89a44109fcbe|Feb 23, 2025
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|a203bbf2ab6c7164051ff90ad30cc8f6352a56ac|Feb 23, 2025
