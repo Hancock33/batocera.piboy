@@ -11574,7 +11574,7 @@ msgctxt "game_options"
 msgid "NeGcon"
 msgstr "ネジコン(ナムコ)"
 
-#. TRANSLATION: duckstation, duckstation
+#. TRANSLATION: duckstation, duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "ネジコン(ナムコ)(振動有)"
