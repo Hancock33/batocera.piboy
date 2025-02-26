@@ -292,7 +292,7 @@ Emulators|[vita3k](https://github.com/vita3k/vita3k)|3d53d7cb93ada60076925d73aa2
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|a0489431defa6ecae291082c6463cac6aff61157|Jul 23, 2024
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r48|Sept 06, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|3bdb9e7fd4d6c9f5adec0543f1679d2943a0d092|Feb 15, 2025
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|fbacd3c|Feb 07, 2025
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|60318a5|Feb 26, 2025
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|60318a5db66516614295146e5d455e4b6fda1be7|Feb 12, 2025
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024

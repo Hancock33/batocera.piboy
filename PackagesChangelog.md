@@ -14,6 +14,7 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-02-26|Feb 26
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.422|Feb 26, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|63b50ff92c5afc5499a74d28dc802ef99f3e3ec7|Feb 26, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|244622c56e735503b74a642c6e9940fa095ac474|Feb 26, 2025
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|60318a5|Feb 26, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|5dadc513dbd9ffa84a28ab8c17f9a1cfd44877fc|Feb 26, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|b4b45167a48b0b0812bf74e85369ca20e3dddd66|Feb 26, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|cee38198eb08229b9961c290a3d730325f0c7551|Feb 26, 2025
@@ -147,7 +148,6 @@ Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|a980d2312ce4ba0907
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|ae2f8cf30a26806376cc8591af4a66d33a763ef4|Feb 08, 2025
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|70b9b6cee1eb457c759ee82654c4d6ae5b30c4df|Feb 08, 2025
 Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|57fea8ba89372a330eaac485d135d656da9f54e6|Feb 08, 2025
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|fbacd3c|Feb 07, 2025
 Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.2.4|Feb 07, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.29.3-rc.1|Feb 07, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|e73c4d8f71801fe842c0276b603d9c8024d6d957|Feb 07, 2025
