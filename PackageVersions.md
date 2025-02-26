@@ -59,8 +59,8 @@ Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-control
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|e6241340d292dee20406a0567262a78ff34d45f7|Jun 02, 2021
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.11|Nov 11, 2024
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|e394a4567392761346976cd490d2a2494b32b4e8|Feb 26, 2025
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|e394a4567392761346976cd490d2a2494b32b4e8|Feb 26, 2025
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|996ce829839559cc43c3b3f74607a3a4f67d1d07|Feb 26, 2025
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|996ce829839559cc43c3b3f74607a3a4f67d1d07|Feb 26, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|fec2e3e3822c4772f9273a69af2d8d6286d36905|Feb 23, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|4b12977b4eeeeac1282205bf3cf2398705c31700|Feb 22, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|9d59fcc4cd00443f8bc077a824856ac224ab0188|Feb 23, 2025
@@ -259,7 +259,7 @@ Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|d1b8b66da4aeabc10720157877f67c00f08b6a5f|Feb 26, 2025
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.183|Feb 26, 2025
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.184|Feb 26, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|e16703ac5872da861f3433e48484f40e7df45a1d|Feb 26, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|ab608ae159d44689ded0e6b6015a97b95e2e2a4d|Feb 26, 2025
@@ -269,7 +269,7 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|9afd2b8a9d16fc25c5a046122bc0d2b3c965980e|Jan 30, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|62f32e5f63b240e09b5bb6373038bd273d3e8034|Feb 26, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20241221|Dec 21, 2024
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|4f3f155bbf541956555ba2992da052c17078f64d|Feb 26, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|fe1fd8621668b31fa02bd0965faeccf00b95d2d7|Feb 24, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-02-26|Feb 26, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.422|Feb 26, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|788029eafd992131a56e56d6a37740de80c319ed|Feb 21, 2025
@@ -492,7 +492,7 @@ Ports|[tr1x](http://github.com/LostArtefacts/TRX)|f98d5a35743e0da9915dea80734035
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|f98d5a35743e0da9915dea8073403579561160e2|Feb 25, 2025
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.6|Feb 21, 2025
-Ports|[vkquake](http://github.com/Novum/vkQuake)|b8f2fc9748cdd5c774ba0ac41fd205fd9e38968a|Feb 19, 2025
+Ports|[vkquake](http://github.com/Novum/vkQuake)|9ecd26c9eeaf6d33fbae07afca5920d7d69d8fd9|Feb 26, 2025
 Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|5bf9c012024884234df0f63c615daec0c740def7|Jan 04, 2025
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|5300b32803c1c61bc3b6bdf86a084c1db1a217ad|Jan 25, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|9f77b7dc46d88580df2ce3b207d6b4ad92b4239f|Feb 26, 2025
