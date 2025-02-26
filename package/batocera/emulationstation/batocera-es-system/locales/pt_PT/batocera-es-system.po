@@ -7940,20 +7940,15 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "Ilhas Faroé"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, naomi.flycast.keys, naomi2.flycast.keys, psp.ppsspp.keys, ...
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Avanço Rápido"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "Interprete rápido"
 
-#. TRANSLATION: nds.drastic.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "FastForward"
-msgstr "Avanço Rápido"
+msgid "Fast forward"
+msgstr ""
 
 #. TRANSLATION: flycast
 #, c-format
@@ -11658,7 +11653,7 @@ msgctxt "game_options"
 msgid "NeGcon"
 msgstr "NeGcon"
 
-#. TRANSLATION: duckstation, duckstation
+#. TRANSLATION: duckstation, duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "NeGcon (Vibração)"
@@ -13602,10 +13597,10 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Reset the application"
-msgstr "Reiniciar aplicação"
+msgid "Reset"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13630,16 +13625,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "Multiplicadores de resolução para suavizar vetores"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "Reiniciar a Emulação"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Restart Game"
-msgstr "Reiniciar o Jogo"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
@@ -13671,7 +13656,7 @@ msgctxt "game_options"
 msgid "Retropad (Default)"
 msgstr "Retropad (padrão)"
 
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "Rebobinar"
@@ -18549,6 +18534,14 @@ msgstr "amarelo/azul"
 #~ "Melhoria. Melhora a clareza de texturas distantes quando o mipmapping "
 #~ "está ativo."
 
+#~ msgctxt "keys_files"
+#~ msgid "Fast Forward"
+#~ msgstr "Avanço Rápido"
+
+#~ msgctxt "keys_files"
+#~ msgid "FastForward"
+#~ msgstr "Avanço Rápido"
+
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
 #~ msgstr ""
@@ -18706,9 +18699,21 @@ msgstr "amarelo/azul"
 #~ "Reserve uma zona não morta no centro do volante para seguir em frente (em "
 #~ "graus)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Reset the application"
+#~ msgstr "Reiniciar aplicação"
+
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Redimensiona automáticamente a altura do ecrã."
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Emulation"
+#~ msgstr "Reiniciar a Emulação"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Reiniciar o Jogo"
 
 #~ msgctxt "keys_files"
 #~ msgid "Right Flipper"

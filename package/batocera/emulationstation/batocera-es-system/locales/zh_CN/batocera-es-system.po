@@ -7804,20 +7804,15 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "法罗群岛"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, naomi.flycast.keys, naomi2.flycast.keys, psp.ppsspp.keys, ...
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "快进"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "快速编译器"
 
-#. TRANSLATION: nds.drastic.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "FastForward"
-msgstr "快进"
+msgid "Fast forward"
+msgstr ""
 
 #. TRANSLATION: flycast
 #, c-format
@@ -11451,7 +11446,7 @@ msgctxt "game_options"
 msgid "NeGcon"
 msgstr "NeGcon手柄"
 
-#. TRANSLATION: duckstation, duckstation
+#. TRANSLATION: duckstation, duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "NeGcon（震动）"
@@ -13351,10 +13346,10 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Reset the application"
-msgstr "重置应用程序"
+msgid "Reset"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13377,16 +13372,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "平滑矢量的分辨率乘法器"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "重置模拟器"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Restart Game"
-msgstr "重置游戏"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
@@ -13418,7 +13403,7 @@ msgctxt "game_options"
 msgid "Retropad (Default)"
 msgstr "经典手柄（默认）"
 
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "倒带"
@@ -18467,6 +18452,14 @@ msgstr "黄色/蓝色"
 #~ msgid "Face Buttons (CW)"
 #~ msgstr "手柄前置按钮（可顺时针旋转）"
 
+#~ msgctxt "keys_files"
+#~ msgid "Fast Forward"
+#~ msgstr "快进"
+
+#~ msgctxt "keys_files"
+#~ msgid "FastForward"
+#~ msgstr "快进"
+
 #~ msgctxt "game_options"
 #~ msgid "FlexDMD disabled"
 #~ msgstr "禁用FlexDMD"
@@ -18800,9 +18793,21 @@ msgstr "黄色/蓝色"
 #~ "(in degrees)"
 #~ msgstr "在方向盘中心保留一个非死区以便直行（以度数表示）"
 
+#~ msgctxt "keys_files"
+#~ msgid "Reset the application"
+#~ msgstr "重置应用程序"
+
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "自动调整屏幕高度。"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Emulation"
+#~ msgstr "重置模拟器"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "重置游戏"
 
 #~ msgctxt "keys_files"
 #~ msgid "Right Flipper"

@@ -7962,20 +7962,15 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "Ilhas Faroe"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, naomi.flycast.keys, naomi2.flycast.keys, psp.ppsspp.keys, ...
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Avanco Rapido"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "IntÃ©rprete rapido"
 
-#. TRANSLATION: nds.drastic.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "FastForward"
-msgstr "Avanco Rapido"
+msgid "Fast forward"
+msgstr ""
 
 #. TRANSLATION: flycast
 #, c-format
@@ -11687,7 +11682,7 @@ msgctxt "game_options"
 msgid "NeGcon"
 msgstr "NeGcon"
 
-#. TRANSLATION: duckstation, duckstation
+#. TRANSLATION: duckstation, duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "NeGcon (Vibracao)"
@@ -13631,10 +13626,10 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Reset the application"
-msgstr "Redefinir a aplicacao"
+msgid "Reset"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13659,16 +13654,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "Multiplicadores de resolucao para suavizar vetores"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "Reiniciar a Emulacao"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Restart Game"
-msgstr "Reiniciar o Jogo"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
@@ -13700,7 +13685,7 @@ msgctxt "game_options"
 msgid "Retropad (Default)"
 msgstr "Retropad (Padrao"
 
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "Rebobinar"
@@ -19526,6 +19511,14 @@ msgstr "amarelo/azul"
 #~ msgid "Face Buttons (CW)"
 #~ msgstr "Botoes de Face (CW)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Fast Forward"
+#~ msgstr "Avanco Rapido"
+
+#~ msgctxt "keys_files"
+#~ msgid "FastForward"
+#~ msgstr "Avanco Rapido"
+
 #~ msgctxt "game_options"
 #~ msgid "Fills the screen regardless of the aspect ratio."
 #~ msgstr "Preenche a tela independentemente da proporcao de aspecto."
@@ -20264,9 +20257,21 @@ msgstr "amarelo/azul"
 #~ "Reserva uma zona nao morta no centro do volante para seguir em frente (em "
 #~ "graus)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Reset the application"
+#~ msgstr "Redefinir a aplicacao"
+
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Redimensiona automaticamente a altura da tela."
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Emulation"
+#~ msgstr "Reiniciar a Emulacao"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Reiniciar o Jogo"
 
 #~ msgctxt "keys_files"
 #~ msgid "Right Flipper"

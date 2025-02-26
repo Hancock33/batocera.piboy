@@ -7961,20 +7961,15 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "Faroër Eilanden"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, naomi.flycast.keys, naomi2.flycast.keys, psp.ppsspp.keys, ...
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Vooruitspoelen"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "Snelle Interpreter"
 
-#. TRANSLATION: nds.drastic.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "FastForward"
-msgstr "Vooruitspoelen"
+msgid "Fast forward"
+msgstr ""
 
 #. TRANSLATION: flycast
 #, c-format
@@ -11684,7 +11679,7 @@ msgctxt "game_options"
 msgid "NeGcon"
 msgstr "NeGcon"
 
-#. TRANSLATION: duckstation, duckstation
+#. TRANSLATION: duckstation, duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "NeGcon (Rumble)"
@@ -13625,10 +13620,10 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Reset the application"
-msgstr "Reset de applicatie"
+msgid "Reset"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13653,16 +13648,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "Resolutie multipliers om vectors glad te maken"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "Herstart Emulatie"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Restart Game"
-msgstr "Herstart Spel"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
@@ -13694,7 +13679,7 @@ msgctxt "game_options"
 msgid "Retropad (Default)"
 msgstr "Retropad (Standaard)"
 
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "Terugspoelen"
@@ -18650,6 +18635,14 @@ msgstr "geel/blauw"
 #~ msgid "Exit running Flatpak"
 #~ msgstr "Stop het draaien van Flatpak"
 
+#~ msgctxt "keys_files"
+#~ msgid "Fast Forward"
+#~ msgstr "Vooruitspoelen"
+
+#~ msgctxt "keys_files"
+#~ msgid "FastForward"
+#~ msgstr "Vooruitspoelen"
+
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
 #~ msgstr "Voor Gyro-enabled spellen (gebonden aan de linker analoge stick)"
@@ -18866,9 +18859,21 @@ msgstr "geel/blauw"
 #~ "Reserveer een niet-deadzone in het midden van het wiel om rechtdoor te "
 #~ "gaan (in graden)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Reset the application"
+#~ msgstr "Reset de applicatie"
+
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Automatisch scherm hoogte aanpassen."
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Emulation"
+#~ msgstr "Herstart Emulatie"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Herstart Spel"
 
 #~ msgctxt "keys_files"
 #~ msgid "Right Flipper"

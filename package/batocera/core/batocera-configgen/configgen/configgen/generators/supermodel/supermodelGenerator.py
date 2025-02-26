@@ -29,7 +29,9 @@ class SupermodelGenerator(Generator):
     def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "supermodel",
-            "keys": { "exit": "KEY_ESC", "menu": [ "KEY_LEFTALT", "KEY_P" ], "pause": [ "KEY_LEFTALT", "KEY_P" ], "save_state": "KEY_F5", "restore_state": "KEY_F7", "next_state": "KEY_F6" }
+            "keys": { "exit": "KEY_ESC", "menu": ["KEY_LEFTALT", "KEY_P"], "pause": ["KEY_LEFTALT", "KEY_P"], "reset": ["KEY_LEFTALT", "KEY_R"],
+                      "save_state": "KEY_F5", "restore_state": "KEY_F7", "next_state": "KEY_F6"
+                     }
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
@@ -172,7 +174,7 @@ def copy_xml():
 def configPadsIni(system: Emulator, rom: Path, playersControllers: ControllerMapping, guns: GunMapping, altControl: bool, sensitivity: str) -> None:
     if altControl:
         templateFile = SUPERMODEL_SHARE / "Supermodel-Driving.ini.template"
-        mapping = {
+        mapping: dict[str, str | None] = {
             "button1": "y",
             "button2": "b",
             "button3": "a",
@@ -332,7 +334,7 @@ def configPadsIni(system: Emulator, rom: Path, playersControllers: ControllerMap
     with ensure_parents_and_open(targetFile, 'w') as configfile:
         targetConfig.write(configfile)
 
-def transformValue(value, playersControllers: ControllerMapping, mapping, mapping_fallback):
+def transformValue(value: str, playersControllers: ControllerMapping, mapping: dict[str, str | None], mapping_fallback: dict[str, str]):
     # remove comments
     cleanValue = value
     matches = re.search("^([^;]*[^ ])[ ]*;.*$", value)
@@ -352,7 +354,7 @@ def transformValue(value, playersControllers: ControllerMapping, mapping, mappin
         # integers
         return cleanValue
 
-def transformElement(elt, playersControllers: ControllerMapping, mapping, mapping_fallback):
+def transformElement(elt: str, playersControllers: ControllerMapping, mapping: dict[str, str | None], mapping_fallback: dict[str, str]):
     # Docs/README.txt
     # JOY1_LEFT  is the same as JOY1_XAXIS_NEG
     # JOY1_RIGHT is the same as JOY1_XAXIS_POS
@@ -414,7 +416,7 @@ def transformElement(elt, playersControllers: ControllerMapping, mapping, mappin
         return None
     return elt
 
-def getMappingKeyIncludingFallback(playersControllers: ControllerMapping, padnum: str, key, mapping, mapping_fallback):
+def getMappingKeyIncludingFallback(playersControllers: ControllerMapping, padnum: str, key: str, mapping: dict[str, str | None], mapping_fallback: dict[str, str]):
     pad_number = int(padnum)
     if pad_number in playersControllers:
         if key not in mapping or (key in mapping and mapping[key] not in playersControllers[pad_number].inputs):
@@ -442,7 +444,7 @@ def hatOrAxis(playersControllers: ControllerMapping, player: str):
                 type = "axis"
     return type
 
-def input2input(playersControllers: ControllerMapping, player: str, joynum, button, axisside = None):
+def input2input(playersControllers: ControllerMapping, player: str, joynum: int | None, button: str | None, axisside: int | None = None):
     player_number = int(player)
     if player_number in playersControllers:
         pad = playersControllers[player_number]

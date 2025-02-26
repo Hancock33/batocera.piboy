@@ -3,8 +3,8 @@
 # ppsspp
 #
 ################################################################################
-# Version: Commits on Feb 22, 2025
-PPSSPP_VERSION = 2a372caef9acbc7ff20bcca3c25b2ab92294f283
+# Version: Commits on Feb 25, 2025
+PPSSPP_VERSION = 805816da1de0b6dd56f290c0d0467aadc3170617
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
@@ -117,13 +117,6 @@ define PPSSPP_INSTALL_TARGET_CMDS
 	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/NotoSansCJKjp-DemiLight.ttf $(TARGET_DIR)/usr/share/ppsspp/PPSSPP/Roboto-Condensed.ttf
 endef
 
-define PPSSPP_POST_PROCESS
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/psp.ppsspp.keys    $(TARGET_DIR)/usr/share/evmapy
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/psp.ppsspp.keys    $(TARGET_DIR)/usr/share/evmapy/pspmini.ppsspp.keys
-endef
-
 PPSSPP_PRE_CONFIGURE_HOOKS += PPSSPP_UPDATE_INCLUDES
-PPSSPP_POST_INSTALL_TARGET_HOOKS += PPSSPP_POST_PROCESS
 
 $(eval $(cmake-package))

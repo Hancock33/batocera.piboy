@@ -5,7 +5,7 @@ import json
 import logging
 import shutil
 from os import environ
-from typing import TYPE_CHECKING, Final
+from typing import TYPE_CHECKING, Any, Final
 
 import evdev
 from evdev import InputDevice
@@ -29,7 +29,7 @@ btn_b = "B"
 btn_x = "X"
 btn_y = "Y"
 
-ryujinxCtrl = {
+ryujinxCtrl: dict[str, Any] = {
         "left_joycon_stick": {
         "joystick": "Left",
         "invert_stick_x": False,
@@ -227,7 +227,7 @@ class RyujinxGenerator(Generator):
             "SDL_JOYSTICK_HIDAPI": "0", \
             "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers)})
 
-def writeControllerIntoJson(new_controller, filename: Path = ryujinxConfFile):
+def writeControllerIntoJson(new_controller: dict[str, Any], filename: Path = ryujinxConfFile):
     with filename.open('r+') as file:
         file_data = json.load(file)
         file_data["input_config"].append(new_controller)

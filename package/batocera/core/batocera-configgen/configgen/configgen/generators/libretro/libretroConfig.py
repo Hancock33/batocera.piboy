@@ -5,7 +5,7 @@ import logging
 import subprocess
 import xml.etree.ElementTree as ET
 from pathlib import Path
-from typing import TYPE_CHECKING, Any, cast
+from typing import TYPE_CHECKING, Any, NotRequired, TypedDict, cast
 
 from ... import controllersConfig
 from ...batoceraPaths import DEFAULTS_DIR, ES_SETTINGS, SAVES, mkdir_if_not_exists
@@ -22,13 +22,23 @@ from .libretroPaths import (
 if TYPE_CHECKING:
     from collections.abc import Mapping
 
+    from ...config import SystemConfig
     from ...controller import ControllerMapping
     from ...Emulator import Emulator
     from ...generators.Generator import Generator
     from ...gun import Gun, GunMapping
-    from ...types import DeviceInfoMapping, Resolution
+    from ...types import BezelInfo, DeviceInfoMapping, Resolution
 
 _logger = logging.getLogger(__name__)
+
+
+class _GunMappingItem(TypedDict):
+    device: NotRequired[int]
+    p1: NotRequired[int]
+    p2: NotRequired[int]
+    p3: NotRequired[int]
+    p4: NotRequired[int]
+    gameDependant: NotRequired[list[dict[str, Any]]]
 
 
 # Return value for es invertedbuttons
@@ -45,7 +55,7 @@ def getInvertButtonsValue() -> bool:
         return False # when file is not yet here or malformed
 
 # return true if the option is considered defined
-def defined(key: str, dict: Mapping[str, Any], /) -> bool:
+def defined(key: str, dict: Mapping[str, Any] | SystemConfig, /) -> bool:
     return key in dict and isinstance(dict[key], str) and len(dict[key]) > 0
 
 
@@ -983,7 +993,7 @@ def createLibretroConfig(
         for g in range(0, len(guns)):
             clearGunInputsForPlayer(g+1, retroarchConfig)
 
-    gun_mapping = {
+    gun_mapping: dict[str, dict[str, _GunMappingItem]] = {
         "bsnes"         : { "default" : { "device": 260,          "p2": 0,
                                           "gameDependant": [ { "key": "type", "value": "justifier", "mapkey": "device", "mapvalue": "516" },
                                                              { "key": "reversedbuttons", "value": "true", "mapcorekey": "bsnes_touchscreen_lightgun_superscope_reverse", "mapcorevalue": "ON" } ] } },
@@ -1026,7 +1036,7 @@ def createLibretroConfig(
                 ragunconf = gun_mapping[system.config['core']][system.name]
             else:
                 ragunconf = gun_mapping[system.config['core']]["default"]
-            raguncoreconf = {}
+            raguncoreconf: dict[str, str] = {}
 
             # overwrite configuration by gungames.xml
             if "gameDependant" in ragunconf:
@@ -1068,9 +1078,8 @@ def createLibretroConfig(
         _logger.error("Error with bezel %s: %s", bezel, e, exc_info=e, stack_info=True)
 
     # custom : allow the user to configure directly retroarch.cfg via batocera.conf via lines like : snes.retroarch.menu_driver=rgui
-    for user_config in systemConfig:
-        if user_config[:10] == "retroarch.":
-            retroarchConfig[user_config[10:]] = systemConfig[user_config]
+    for key, value in systemConfig.items(starts_with='retroarch.'):
+        retroarchConfig[key] = value
 
     return retroarchConfig
 
@@ -1301,13 +1310,13 @@ def writeBezelConfig(
 
     overlay_info_file: Path = cast(Path, bz_infos["info"])
     overlay_png_file: Path  = cast(Path, bz_infos["png"])
-    bezel_game: bool  = bz_infos["specific_to_game"]
+    bezel_game: bool  = cast(bool, bz_infos["specific_to_game"])
 
     # only the png file is mandatory
     if overlay_info_file.exists():
         try:
             with overlay_info_file.open() as f:
-                infos = json.load(f)
+                infos = cast('BezelInfo', json.load(f))
         except:
             infos = {}
     else:

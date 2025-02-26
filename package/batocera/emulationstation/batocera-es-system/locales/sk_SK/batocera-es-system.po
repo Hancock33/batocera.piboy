@@ -7864,20 +7864,15 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "Faerské ostrovy"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, naomi.flycast.keys, naomi2.flycast.keys, psp.ppsspp.keys, ...
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "Rýchlo dopredu"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "Rýchly interpreter"
 
-#. TRANSLATION: nds.drastic.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "FastForward"
-msgstr "Rýchlo dopredu"
+msgid "Fast forward"
+msgstr ""
 
 #. TRANSLATION: flycast
 #, c-format
@@ -11528,7 +11523,7 @@ msgctxt "game_options"
 msgid "NeGcon"
 msgstr "NeGcon"
 
-#. TRANSLATION: duckstation, duckstation
+#. TRANSLATION: duckstation, duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "NeGcon (rachot)"
@@ -13438,10 +13433,10 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Reset the application"
-msgstr "Obnoviť aplikáciu"
+msgid "Reset"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13466,16 +13461,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "Multiplikátory rozlíšenia na hladké vektory"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "Reštartovať emuláciu"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Restart Game"
-msgstr "Reštartovať hru"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
@@ -13507,7 +13492,7 @@ msgctxt "game_options"
 msgid "Retropad (Default)"
 msgstr "Retropad (predvolené)"
 
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "Pretočiť"
@@ -18656,6 +18641,14 @@ msgstr "žltá/modrá"
 #~ msgid "Face Buttons (CW)"
 #~ msgstr "Face Buttons (CW)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Fast Forward"
+#~ msgstr "Rýchlo dopredu"
+
+#~ msgctxt "keys_files"
+#~ msgid "FastForward"
+#~ msgstr "Rýchlo dopredu"
+
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
 #~ msgstr "Pre hry s podporou gyroskopu (viazané na ľavú analógovú páčku)"
@@ -18963,9 +18956,21 @@ msgstr "žltá/modrá"
 #~ msgstr ""
 #~ "Rezervovať nie mŕtvu zónu v strede kolieska na priamy prechod (v stupňoch)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Reset the application"
+#~ msgstr "Obnoviť aplikáciu"
+
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Automaticky zmeniť výšku obrazovky."
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Emulation"
+#~ msgstr "Reštartovať emuláciu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Reštartovať hru"
 
 #~ msgctxt "game_options"
 #~ msgid "SSAA"

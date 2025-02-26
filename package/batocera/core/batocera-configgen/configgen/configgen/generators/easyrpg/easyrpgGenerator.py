@@ -18,7 +18,7 @@ class EasyRPGGenerator(Generator):
     def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "easyrpg",
-            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_F9", "pause": "KEY_ESC", "restore_state": "KEY_F12", "save_state": "KEY_F11" }
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_F9", "pause": "KEY_ESC", "restore_state": "KEY_F12", "save_state": "KEY_F11", "rewind": "KEY_F" }
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
@@ -57,7 +57,7 @@ class EasyRPGGenerator(Generator):
 
     @staticmethod
     def padConfig(configdir: Path, playersControllers: ControllerMapping) -> None:
-        keymapping = {
+        keymapping: dict[str, str | None] = {
             "button_up": None,
             "button_down": None,
             "button_left": None,
@@ -90,10 +90,10 @@ class EasyRPGGenerator(Generator):
             for playercontroller, pad in sorted(playersControllers.items()):
                 if nplayer == 1:
                     f.write(f"number={pad.index}\n" )
-                    for key in keymapping:
+                    for key, value in keymapping.items():
                         button = -1
-                        if keymapping[key] is not None:
-                            if pad.inputs[keymapping[key]].type == "button":
-                                button = pad.inputs[keymapping[key]].id
+                        if value is not None:
+                            if pad.inputs[value].type == "button":
+                                button = pad.inputs[value].id
                         f.write(f"{key}={button}\n")
                 nplayer += 1

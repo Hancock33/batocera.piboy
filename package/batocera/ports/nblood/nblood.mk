@@ -3,8 +3,8 @@
 # nblood
 #
 ################################################################################
-# Version: Commits on Feb 22, 2025
-NBLOOD_VERSION = r14193
+# Version: Commits on Feb 25, 2025
+NBLOOD_VERSION = r14198
 NBLOOD_SITE = $(call github,NBlood,NBlood,$(NBLOOD_VERSION))
 NBLOOD_DEPENDENCIES = sdl2 flac libvpx
 NBLOOD_LICENSE = GPLv3

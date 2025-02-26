@@ -7903,20 +7903,15 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "페로 제도"
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, naomi.flycast.keys, naomi2.flycast.keys, psp.ppsspp.keys, ...
-msgctxt "keys_files"
-msgid "Fast Forward"
-msgstr "빨리 감기"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
 msgstr "빠른 해석기"
 
-#. TRANSLATION: nds.drastic.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "FastForward"
-msgstr "빨리감기"
+msgid "Fast forward"
+msgstr ""
 
 #. TRANSLATION: flycast
 #, c-format
@@ -11596,7 +11591,7 @@ msgctxt "game_options"
 msgid "NeGcon"
 msgstr "네지콘"
 
-#. TRANSLATION: duckstation, duckstation
+#. TRANSLATION: duckstation, duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "네지콘 (진동)"
@@ -13520,10 +13515,10 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Reset the application"
-msgstr "응용 프로그램 재설정"
+msgid "Reset"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13548,16 +13543,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "벡터를 매끄럽게 하기 위한 해상도 배수"
-
-#. TRANSLATION: 3ds.citra.keys
-msgctxt "keys_files"
-msgid "Restart Emulation"
-msgstr "에뮬레이션 재시작"
-
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Restart Game"
-msgstr "게임 재시작"
 
 #. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
 msgctxt "game_options"
@@ -13589,7 +13574,7 @@ msgctxt "game_options"
 msgid "Retropad (Default)"
 msgstr "레트로패드 (기본)"
 
-#. TRANSLATION: psp.ppsspp.keys, psx.duckstation.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "되감기"
@@ -18762,6 +18747,14 @@ msgstr "노란색/파란색"
 #~ msgid "FPU Negative Div hack (For Gundam Games)"
 #~ msgstr "FPU 네거티브 Div 해킹 (건담 게임용)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Fast Forward"
+#~ msgstr "빨리 감기"
+
+#~ msgctxt "keys_files"
+#~ msgid "FastForward"
+#~ msgstr "빨리감기"
+
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
 #~ msgstr "자이로 지원 게임용 (왼쪽 아날로그 스틱에 바인딩됨)"
@@ -19157,9 +19150,21 @@ msgstr "노란색/파란색"
 #~ "(in degrees)"
 #~ msgstr "핸들 중앙에 사각지대가 없는 공간을 확보하여 직진 주행 (°)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Reset the application"
+#~ msgstr "응용 프로그램 재설정"
+
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "화면 높이의 크기를 자동으로 조정합니다."
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Emulation"
+#~ msgstr "에뮬레이션 재시작"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "게임 재시작"
 
 #~ msgctxt "keys_files"
 #~ msgid "Right Flipper"

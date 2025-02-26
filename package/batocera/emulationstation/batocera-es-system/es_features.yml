@@ -1697,6 +1697,7 @@ libretro:
                     "Analogue Controller (DualShock)": 261
                     "Analogue Joystick":               517
                     "NeGcon":                        773
+                    "NeGcon (Rumble)":               1029
                     "Namco GunCon":                  260
                     "PlayStation Mouse":             258
             swanstation_Controller2:
@@ -1709,6 +1710,7 @@ libretro:
                     "Analogue Controller (DualShock)": 261
                     "Analogue Joystick":               517
                     "NeGcon":                        773
+                    "NeGcon (Rumble)":               1029
                     "Namco GunCon":                  260
                     "PlayStation Mouse":             258
             swanstation_Controller_ShowCrosshair:
@@ -4468,6 +4470,7 @@ libretro:
                     "Analogue Joystick (Flystick)":  773
                     "Namco GunCon":                  260
                     "NeGcon":                        1029
+                    "NeGcon (Rumble)":               1285
                     "Justifier":                     516
                     "PlayStation Mouse":             258
             beetle_psx_hw_Controller2:
@@ -4482,6 +4485,7 @@ libretro:
                     "Analogue Joystick (Flystick)":  773
                     "Namco GunCon":                  260
                     "NeGcon":                        1029
+                    "NeGcon (Rumble)":               1285
                     "Justifier":                     516
                     "PlayStation Mouse":             258
     mednafen_supergrafx:

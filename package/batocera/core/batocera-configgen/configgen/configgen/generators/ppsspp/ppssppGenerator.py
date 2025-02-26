@@ -10,7 +10,7 @@ from . import ppssppConfig, ppssppControllers
 from .ppssppPaths import PPSSPP_CONFIG_DIR
 
 if TYPE_CHECKING:
-    from ...types import HotkeysContext
+    from ...types import HotkeysContext, Resolution
 
 
 class PPSSPPGenerator(Generator):
@@ -18,7 +18,8 @@ class PPSSPPGenerator(Generator):
     def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "ppsspp",
-            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "save_state": "KEY_F3", "restore_state": "KEY_F4", "menu": "KEY_F9", "pause": "KEY_F9", "next_slot": "KEY_F6", "previous_slot": "KEY_F5" }
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_F9", "pause": "KEY_F9", "rewind": "KEY_F1", "fastforward": "KEY_F2",
+                      "next_slot": "KEY_F6", "previous_slot": "KEY_F5", "save_state": "KEY_F3", "restore_state": "KEY_F4" }
         }
 
     # Main entry of the module
@@ -74,7 +75,7 @@ class PPSSPPGenerator(Generator):
         )
 
     @staticmethod
-    def isLowResolution(gameResolution):
+    def isLowResolution(gameResolution: Resolution):
         return gameResolution["width"] <= 480 or gameResolution["height"] <= 480
 
     # Show mouse on screen for the Config Screen

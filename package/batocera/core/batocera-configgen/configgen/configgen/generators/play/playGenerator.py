@@ -1,10 +1,11 @@
 from __future__ import annotations
 
 import re
-from evdev import InputDevice
 import xml.etree.ElementTree as ET
 from pathlib import Path
-from typing import TYPE_CHECKING, Final
+from typing import TYPE_CHECKING, Final, cast
+
+from evdev import InputDevice
 
 from ... import Command
 from ...batoceraPaths import CACHE, CONFIGS, SAVES, mkdir_if_not_exists
@@ -131,7 +132,7 @@ class PlayGenerator(Generator):
 
             return ':'.join(f"{byte:x}" for byte in device)
 
-        def create_input_preferences(input_config, pad_guid, key_id, key_type, provider_id, nplayer, joystick_name, binding_type, hat_value):
+        def create_input_preferences(input_config: ET.Element, pad_guid: str, key_id: str | int, key_type: int, provider_id: int, nplayer: int, joystick_name: str, binding_type: int | str, hat_value: int):
             """Helper function to create XML preferences for joystick inputs."""
             ET.SubElement(input_config,
                           "Preference",
@@ -215,7 +216,7 @@ class PlayGenerator(Generator):
                         binding_type = input.value
                         key_id = input.code
                         hat_value = -1
-                        create_input_preferences(input_config, pad_guid, key_id, key_type, provider_id, nplayer, input.name, binding_type, hat_value)
+                        create_input_preferences(input_config, pad_guid, cast(str, key_id), key_type, provider_id, nplayer, input.name, binding_type, hat_value)
 
                 nplayer += 1
 
