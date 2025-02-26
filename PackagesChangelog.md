@@ -91,6 +91,7 @@ Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|39e1927ed
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|12972a7da5aeb849ba7234dff342625d23617eaf|Feb 20, 2025
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|62898c89143a630a493a3a48e843e15acd044584|Feb 20, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|8dd647914a6ee66d29a6a514cc54091839b16bd1|Feb 20, 2025
+Libraries|[python-gpiod](https://files.pythonhosted.org/packages/8f/74/cb43c6e2fe74cf1567160ccbf54db176f72481e5ac58567684a262672c7c)|2.3.0|Feb 19, 2025
 Utils|[clevis](http://github.com/latchset/clevis)|5aba7d6c55969bc08c28bfa13111091830305da3|Feb 19, 2025
 Emulators|[libdof](http://github.com/jsm174/libdof)|81a5574ffebd41494d5f80c2ca9df25b7af2d5d5|Feb 19, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|b8f2fc9748cdd5c774ba0ac41fd205fd9e38968a|Feb 19, 2025
@@ -98,6 +99,7 @@ Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|5d2ece5b6d
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|6123398dfe16ada8048f5ee5255e1a9e726edbf5|Feb 19, 2025
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|728c30883595d2ecd590327abdac5b6998d139ca|Feb 18, 2025
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|8eef29aed99de9af74e79542309d6106d16abd12|Feb 18, 2025
+Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/69/33/4f5f0074cacbd779fd35936356a40bc515e7b68d934564886f7ab5d21c80)|8.54.0|Feb 18, 2025
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|3ca0a42d62d535a8009e883a1733597f8058c757|Feb 18, 2025
 Emulators|[play](https://github.com/jpd002/Play-.git)|329396faedfa08a2ebc98af3e1e0a081c92a24f5|Feb 17, 2025
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|33c743a53dc4c3178027777ba4f6b995277e6bc2|Feb 17, 2025
@@ -194,6 +196,13 @@ Ports|[abuse](http://github.com/apancik/Abuse_2025)|2025.1.0|Jan 17, 2025
 Wine|[wine-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos-9.0-20250117-wine|Jan 17, 2025
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|05e820a436d2e2cbbb1b871400f84a96e76e2359|Jan 17, 2025
 Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|10af0c78ba0e3516e70f4ed7c6020827bdb2647e|Jan 17, 2025
+Libraries|[python-adafruit-circuitpython-busdevice](https://files.pythonhosted.org/packages/a2/c0/f6347ab32f077413c20f55bc4b0f1592f35affd4d26753394c5ed6c36c4c)|5.2.11|Jan 16, 2025
+Libraries|[python-adafruit-circuitpython-connectionmanager](https://files.pythonhosted.org/packages/69/8b/8316002905f97a7f7e9c3a53dd9bb5a17889033ec55c403a6e55077f6298)|3.1.3|Jan 16, 2025
+Libraries|[python-adafruit-circuitpython-neopixel-spi](https://files.pythonhosted.org/packages/bb/d6/2eaa0b99fbc74f1041ad68d1913fe3b32a7d2c17d1cca6dc1b968082937e)|1.0.11|Jan 16, 2025
+Libraries|[python-adafruit-circuitpython-pixelbuf](https://files.pythonhosted.org/packages/b8/82/24536026f4f0883f9d46a037e2a0934445e1a76f6d5ace30579f270f56d7)|2.0.7|Jan 16, 2025
+Libraries|[python-adafruit-circuitpython-requests](https://files.pythonhosted.org/packages/6a/45/070129e6b77f801514cd974524c6b9fd502aa04dd5c2e45ab03e85c96cac)|4.1.9|Jan 16, 2025
+Libraries|[python-adafruit-circuitpython-ws2801](https://files.pythonhosted.org/packages/6b/d3/8e7404de0ac9ead8f36c903338c7b7e3ae5be6945b1229fc34743b10ca50)|1.0.1|Jan 16, 2025
+Libraries|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/6b/4e/2b2ca031227de47e2aab6cf092b78934c9c0033a685075ddab3e0c0b55fe)|3.77.0|Jan 16, 2025
 Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|7f7fa9d42f2d62a6b5faf9efc6a01577fc2c38c1|Jan 16, 2025
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|0609bcfd0ec40ff0571d0f57fab2821eb461dc8b|Jan 15, 2025
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.4.304.1|Jan 15, 2025
@@ -209,7 +218,6 @@ Utils|[warehouse](http://github.com/flattool/warehouse)|2.0.2|Jan 06, 2025
 Emulators|[libretro-xrick](http://github.com/libretro/xrick-libretro)|476a9a637a6d2afa3f9f6b202bb98b522a4e95d1|Jan 05, 2025
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|0c3655cdb544d02d0df222896d959f96d5421bfc|Jan 04, 2025
 Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|5bf9c012024884234df0f63c615daec0c740def7|Jan 04, 2025
-Libraries|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/79/96/1f72b50ed5402e79085433036ef0ac692072df86860c6d200bd28d562b27)|3.76.1|Jan 03, 2025
 Emulators|[suyu](https://git.suyu.dev/marius851000/suyu.git)|f805e4213ebeafe1b9baf3782389717a9da5b603|Jan 01, 2025
 Emulators|[libretro-holani](http://github.com/LLeny/holani-retro)|61114880081cc518b54c898708ad1d162d9077ec|Dec 31, 2024
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|cc15858c4aacaca7ca7b346afd0752b909b63064|Dec 30, 2024
@@ -223,7 +231,6 @@ Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|8d20a23e38883f45c78f4
 Wine|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-4c|Dec 23, 2024
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|da219658c24c610ba82d5a07ea9897e8e0eef670|Dec 21, 2024
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20241221|Dec 21, 2024
-Libraries|[python-gpiod](https://files.pythonhosted.org/packages/17/3f/774043a7328048e506a80425d8c114f8faf445cfc958f7a59dedc0fcaf36)|2.2.3|Dec 20, 2024
 Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.4.304.1|Dec 20, 2024
 Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.4.304.1|Dec 20, 2024
 Boot|[rk3128-blobs](https://github.com/rockchip-linux/rkbin.git)|0f8ac860f0479da56a1decae207ddc99e289f2e2|Dec 19, 2024
@@ -278,7 +285,6 @@ Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|573ccd6e5a174d12ff
 Emulators|[libretro-atari800](http://github.com/libretro/libretro-atari800)|6a18cb23cc4a7cecabd9b16143d2d7332ae8d44b|Oct 31, 2024
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|f0bf9aafeacf12edff38400d7c21e3825650a57d|Oct 26, 2024
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|923de3203a000f8d8ffefb5ca15d296eb5d3c425|Oct 25, 2024
-Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/a3/61/e849ab2fd7a0a154d30535aa7b4cf11cb9fbcc6a5817cbc1307e509e0b34)|8.50.0|Oct 24, 2024
 Emulators|[libretro-81](http://github.com/libretro/81-libretro)|ffc99f27f092addc9ddd34dd0e3a3d4d1c053cbf|Oct 21, 2024
 Emulators|[libretro-a5200](http://github.com/libretro/a5200)|526404072821bb2021fab16f8c5dbbca300512c8|Oct 21, 2024
 Emulators|[libretro-beetle-lynx](http://github.com/libretro/beetle-lynx-libretro)|7fead71b49e0f08be5c4d4224fea73c6174763bf|Oct 21, 2024
@@ -339,12 +345,6 @@ Emulators|[libretro-arduous](https://github.com/libretro/arduous.git)|2273b48562
 Firmwares|[firmware-orangepi](http://github.com/orangepi-xunlong/firmware)|75ea6fc5f3c454861b39b33823cb6876f3eca598|Oct 09, 2024
 Controllers|[db9_gpio_rpi](http://github.com/marqs85/db9_gpio_rpi)|v1.3|Oct 09, 2024
 Controllers|[gamecon_gpio_rpi](http://github.com/marqs85/gamecon_gpio_rpi)|v1.5|Oct 09, 2024
-Libraries|[python-adafruit-circuitpython-busdevice](https://files.pythonhosted.org/packages/af/8d/c1178adc99d2dc686874e4369482f5678af95b82a9ad22276d8c446d146c)|5.2.10|Oct 07, 2024
-Libraries|[python-adafruit-circuitpython-connectionmanager](https://files.pythonhosted.org/packages/51/fb/83a1160eb2112abe84bf0ad41427439b253199565cc1a710d57ca30bf44c)|3.1.2|Oct 07, 2024
-Libraries|[python-adafruit-circuitpython-neopixel-spi](https://files.pythonhosted.org/packages/1c/9d/70e1352338269bfbd634fa76267c8831467373c14325860a4bd11aca6bf1)|1.0.10|Oct 07, 2024
-Libraries|[python-adafruit-circuitpython-pixelbuf](https://files.pythonhosted.org/packages/0d/24/c1bd0bbd8f40041a7a505b2a09a4a8cacc32d749544bc4a6b45ec4bbf0d1)|2.0.6|Oct 07, 2024
-Libraries|[python-adafruit-circuitpython-requests](https://files.pythonhosted.org/packages/90/62/26f092fbd003e800e41e7edf0a4f7b3b828a23370d8e68e9a9a482eb50db)|4.1.8|Oct 07, 2024
-Libraries|[python-adafruit-circuitpython-ws2801](https://files.pythonhosted.org/packages/71/17/6fbb13bad6598661451e73455e0c74c847c9cc80650501bd55f3d8c8f272)|0.10.19|Oct 07, 2024
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|82fa9e2f5c6cbedb757829bc6688ff413e0b06f7|Oct 06, 2024
 Emulators|[libretro-craft](http://github.com/libretro/Craft)|675c5b2fc690d2e80f6099f46407bf23827c59d4|Oct 06, 2024
 Libraries|[lunasvg](http://github.com/stenzek/lunasvg)|70b2fc188ae9628f4313335a0d628eef10c842dd|Oct 01, 2024
@@ -431,7 +431,6 @@ Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|0747110b
 Controllers|[sinden-guns](https://www.sindenlightgun.com/software)|1.09|Mar 20, 2024
 Controllers|[input-wrapper](http://github.com/macromorgan/input-wrapper)|e48e2081ac396441b685c0d162c6249f3b72572c|Mar 19, 2024
 Utils|[winbtrfs](https://github.com/maharmstone/btrfs/releases)|v1.9|Mar 16, 2024
-Utils|[wlr-randr](https://git.sr.ht/~emersion/wlr-randr/refs/download/v)|0.4.1|Mar 06, 2024
 Utils-host|[xa](https://www.floodgap.com/retrotech/xa/dists)|2.4.1|Mar 05, 2024
 Hardware|[dockerpi-powerboard](http://github.com/geeekpi/dockerpi)|1e268b076bfb2bba0de053c780474239f4f88245|Feb 28, 2024
 Ports|[hcl](http://github.com/ptitSeb/hydracastlelabyrinth)|229369c222f8604530f5e06f795b4505ef21d439|Feb 28, 2024
