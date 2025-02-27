@@ -3,8 +3,8 @@
 # model2emu
 #
 ################################################################################
-# Version: Commits on Jan 02, 2014
-MODEL2EMU_VERSION = 1.1a
+# Version: Commits on May 15, 2022
+MODEL2EMU_VERSION = 57b5cff598e63ca688a9a58f3b341104e43c4b01
 MODEL2EMU_SOURCE = m2emulator.zip
 # Closed source not developed since 2014, source location updated since previous website is now unavailable
 MODEL2EMU_SITE = https://github.com/batocera-linux/model2emu/raw/main

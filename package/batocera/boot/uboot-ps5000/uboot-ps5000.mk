@@ -3,8 +3,8 @@
 # uboot-ps5000
 #
 ################################################################################
-# Version: Commits on Nov 02, 2021
-UBOOT_PS5000_VERSION = e20e9d85d326345fb2e80105a79263c95757414f
+# Version: Commits on Sept 13, 2021
+UBOOT_PS5000_VERSION = e2c76fb6b0f89c5385273b3a83fbd2ce16903396
 UBOOT_PS5000_SITE = $(call github,rk3128-cfw,caesar-u-boot,$(UBOOT_PS5000_VERSION))
 UBOOT_PS5000_LICENSE = GPLv2
 

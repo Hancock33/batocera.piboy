@@ -3,8 +3,8 @@
 # libfreeaptx
 #
 ################################################################################
-# Version: Commits on Feb 25, 2025
-LIBFREEAPTX_VERSION = dae97a4df4181fae364bf7ae2a1ea6ecd76968a0
+# Version: Commits on Feb 26, 2025
+LIBFREEAPTX_VERSION = ad6748ac8b2ebbfae7d0c5608434f60592d61edc
 LIBFREEAPTX_SITE =  $(call github,regularhunter,libfreeaptx,$(LIBFREEAPTX_VERSION))
 LIBFREEAPTX_LICENSE = GPLv2.1
 LIBFREEAPTX_INSTALL_STAGING = YES
