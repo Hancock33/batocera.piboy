@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v42b(2025/02/19)\n"
+"Project-Id-Version: batocera-es v42b(2025/02/27)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-02-19 21:37+0900\n"
+"PO-Revision-Date: 2025-02-27 11:52+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -3664,7 +3664,7 @@ msgstr "BT601_625/D65 (EUR/AUS で開発されたすべてのゲームに推奨)
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Back / Menu"
-msgstr ""
+msgstr "戻る/メニュー"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -5604,7 +5604,7 @@ msgstr "Ｘ(下のボタン)"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Crouch"
-msgstr ""
+msgstr "しゃがむ"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -6347,7 +6347,7 @@ msgstr "Driving Force Pro"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Drop item"
-msgstr ""
+msgstr "アイテム 捨てる"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -6658,7 +6658,7 @@ msgstr "EVDEV (標準)"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "EXPANSION PACK"
-msgstr ""
+msgstr "拡張パック"
 
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
@@ -9239,7 +9239,7 @@ msgstr "ヘルプと情報"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Help computer"
-msgstr ""
+msgstr "コンピュータヘルプ"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -9740,7 +9740,7 @@ msgstr "犬夜叉~戦国お伽合戦~修正"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Inventory"
-msgstr ""
+msgstr "インベントリ"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -9999,7 +9999,7 @@ msgstr "7月"
 #. TRANSLATION: omf2097.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
-msgstr ""
+msgstr "ジャンプ"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10528,12 +10528,12 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look down"
-msgstr ""
+msgstr "見下ろす"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look up"
-msgstr ""
+msgstr "見上げる"
 
 #. TRANSLATION: amiberry, libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus, ...
 msgctxt "game_options"
@@ -11281,7 +11281,7 @@ msgstr "スタイレットポインタの移動"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move back / down"
-msgstr ""
+msgstr "後退/下に移動"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11316,7 +11316,7 @@ msgstr "前進"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move forward / up"
-msgstr ""
+msgstr "前進/上に移動"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11676,7 +11676,7 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next item"
-msgstr ""
+msgstr "次のアイテム"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
@@ -11686,7 +11686,7 @@ msgstr "次のスロット"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next weapon"
-msgstr ""
+msgstr "次の武器"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -12979,7 +12979,7 @@ msgstr "Y キー:「はい」を選択"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Previous item"
-msgstr ""
+msgstr "前のアイテム"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
@@ -13689,7 +13689,7 @@ msgstr "走る"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "Run the Unfinished expansion pack."
-msgstr ""
+msgstr "未完成の拡張パックを実行します"
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -16880,7 +16880,7 @@ msgstr "グラフィックの問題または GPU の問題が発生している�
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Use item"
-msgstr ""
+msgstr "アイテムを使用"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
