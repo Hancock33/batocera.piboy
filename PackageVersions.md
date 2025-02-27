@@ -319,8 +319,8 @@ Gpu|[mali-mp400-gbm](http://github.com/caesar-github/libmali)|b35e1b288bdac91a7d
 Gpu|[mali-mp400-wayland](http://github.com/caesar-github/libmali)|b35e1b288bdac91a7d401edd04c71ec9fa573040|Feb 24, 2022
 Gpu|[mesa-panfork](https://gitlab.com/Peter756729890/panfork-mesa.git)|120202c675749c5ef81ae4c8cdc30019b4de08f4|Dec 10, 2022
 Gpu|[nv-codec-headers](https://github.com/FFmpeg/nv-codec-headers)|n13.0.19.0|Jan 30, 2025
-Gpu|[nvidia-open-driver](http://download.nvidia.com/XFree86/Linux-x86)|570.86.16|Jan 27, 2025
-Gpu|[nvidia-proprietary-driver](http://download.nvidia.com/XFree86/Linux-x86)|$(NVIDIA_OPEN_DRIVER_VERSION)|Jan 27, 2025
+Gpu|[nvidia-open-driver](http://download.nvidia.com/XFree86/Linux-x86)|570.124.04|Feb 25, 2025
+Gpu|[nvidia-proprietary-driver](http://download.nvidia.com/XFree86/Linux-x86)|$(NVIDIA_OPEN_DRIVER_VERSION)|Feb 25, 2025
 Gpu|[nvidia340-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|340.108|Dec 23, 2019
 Gpu|[nvidia390-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|390.157|Nov 22, 2022
 Gpu|[nvidia470-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|470.256.02|Jun 04, 2024
@@ -452,7 +452,7 @@ Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|37389e4497ed33a009c2
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|72d808cc4d6db5d38e5d87ab95ab0b1bcfd89ede|Nov 24, 2024
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|2c5fa3af66ec43246fe14b88d740218f7810797e|Feb 26, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250225|Feb 25, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250227|Feb 27, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14198|Feb 25, 2025
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|0.7.0|Jan 18, 2025
@@ -497,7 +497,7 @@ Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|5bf9c012024884234df0f63c615
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|5300b32803c1c61bc3b6bdf86a084c1db1a217ad|Jan 25, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|9f77b7dc46d88580df2ce3b207d6b4ad92b4239f|Feb 26, 2025
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.1|Apr 12, 2024
-Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|bca7fa0264e77356a9decbf780ee0b1b4e759a4c|Feb 22, 2025
+Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|014aabd74eeefac7f7d4ce54dbcf3259b02fe4cb|Feb 27, 2025
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0275|Feb 26, 2025
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
@@ -547,11 +547,11 @@ Wine|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b462519
 Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v2.14.1|Jan 10, 2025
 Wine|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.13|Aug 29, 2024
 Wine|[wine-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos-9.0-20250117-wine|Jan 17, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.2|Feb 21, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|b0ec629fcab4ac26c5d4d0e0f2754a8f0072334e|Feb 27, 2025
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-9.4.0|Nov 13, 2024
 Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
 Wine|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0|Jan 21, 2025
 Wine|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-4c|Dec 23, 2024
 Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250225|Feb 25, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250227|Feb 27, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|e73c4d8f71801fe842c0276b603d9c8024d6d957|Feb 07, 2025
