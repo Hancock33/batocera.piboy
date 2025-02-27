@@ -16455,6 +16455,11 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Hagyományos kínai"
 
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Translate"
+msgstr ""
+
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
 msgid "Treats the right analogue stick as the second joystick."
