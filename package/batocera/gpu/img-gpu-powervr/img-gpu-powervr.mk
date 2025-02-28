@@ -3,8 +3,8 @@
 # img-gpu-powervr
 #
 ################################################################################
-# Version: Commits on Aug 27, 2024
-IMG_GPU_POWERVR_VERSION = 4918bd0772edbfd9ccf26e97b55091f72053ec81
+# Version: Commits on Dec 26, 2024
+IMG_GPU_POWERVR_VERSION = bc96eed2b3cabee24a6a14692da4c80914da3f18
 IMG_GPU_POWERVR_SOURCE=img-gpu-powervr-bin-1.19.6345021.tar.gz
 IMG_GPU_POWERVR_SITE = https://github.com/starfive-tech/soft_3rdpart/raw/JH7110_VisionFive2_devel/IMG_GPU/out
 IMG_GPU_POWERVR_INSTALL_STAGING = YES
