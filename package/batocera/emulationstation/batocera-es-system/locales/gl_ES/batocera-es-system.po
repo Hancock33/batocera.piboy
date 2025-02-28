@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-02-14 11:20+0100\n"
+"PO-Revision-Date: 2025-02-28 19:50+0100\n"
 "Last-Translator: \n"
 "Language-Team: Galician\n"
 "Language: gl_ES\n"
@@ -2356,12 +2356,12 @@ msgstr "Cartuchos APF M-1000"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS-BIOS.ROM"
-msgstr ""
+msgstr "APPLE2GS-BIOS.ROM"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS.ROM"
-msgstr ""
+msgstr "APPLE2GS-BIOS.ROM"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -3683,7 +3683,7 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Back / Menu"
-msgstr ""
+msgstr "Volver / Menú"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -5232,7 +5232,7 @@ msgstr ""
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "Choose which BIOS file for GSplus to boot with."
-msgstr ""
+msgstr "Escolle o ficheiro BIOS co que iniciar GSplus."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -5648,7 +5648,7 @@ msgstr "Cruz"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Crouch"
-msgstr ""
+msgstr "Agacharse"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -6399,7 +6399,7 @@ msgstr "Driving Force Pro"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Drop item"
-msgstr ""
+msgstr "Soltar obxecto"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -6711,7 +6711,7 @@ msgstr "EVDEV (predeterminado)"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "EXPANSION PACK"
-msgstr ""
+msgstr "PAQUETE DE EXPANSIÓN"
 
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
@@ -7966,7 +7966,7 @@ msgstr "Intérprete rápido"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Fast forward"
-msgstr ""
+msgstr "Avance rápido"
 
 #. TRANSLATION: flycast
 #, c-format
@@ -8805,7 +8805,7 @@ msgstr "RENDERIZADOR GRÁFICO"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "GSPLUS BIOS FILENAME"
-msgstr ""
+msgstr "NOME DO FICHEIRO BIOS DE GSPLUS"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9313,7 +9313,7 @@ msgstr "Axuda e Información"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Help computer"
-msgstr ""
+msgstr "Axuda do ordenador"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -9822,7 +9822,7 @@ msgstr "InuYasha Sengoku Battle Fix"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Inventory"
-msgstr ""
+msgstr "Inventario"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10081,7 +10081,7 @@ msgstr "Xullo"
 #. TRANSLATION: omf2097.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
-msgstr ""
+msgstr "Saltar"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10611,12 +10611,12 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look down"
-msgstr ""
+msgstr "Mira abaixo"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look up"
-msgstr ""
+msgstr "Mira arriba"
 
 #. TRANSLATION: amiberry, libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus, ...
 msgctxt "game_options"
@@ -11371,7 +11371,7 @@ msgstr "Mover o punteiro do estilo"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move back / down"
-msgstr ""
+msgstr "Móvete atrás / abaixo"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11406,7 +11406,7 @@ msgstr "Mover cara adiante"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move forward / up"
-msgstr ""
+msgstr "Móvete adiante / arriba"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11769,17 +11769,17 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next item"
-msgstr ""
+msgstr "Seguinte obxecto"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Next slot"
-msgstr ""
+msgstr "Seguinte espazo"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next weapon"
-msgstr ""
+msgstr "Seguinte arma"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -13089,12 +13089,12 @@ msgstr "Preme a tecla Y para \"Si\""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Previous item"
-msgstr ""
+msgstr "Obxecto anterior"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Previous slot"
-msgstr ""
+msgstr "Espazo anterior"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -13364,17 +13364,17 @@ msgstr "ROM (rañura 4)"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.00"
-msgstr ""
+msgstr "ROM.00"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.03 (default)"
-msgstr ""
+msgstr "ROM.03 (por defecto)"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM1"
-msgstr ""
+msgstr "ROM1"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -13612,7 +13612,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Reset"
-msgstr ""
+msgstr "Restablecer"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13646,7 +13646,7 @@ msgstr "Restaura o esquema BLENDMODE en sprites Singe."
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Restore state"
-msgstr ""
+msgstr "Restaurar estado"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -13806,7 +13806,7 @@ msgstr "Correr"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "Run the Unfinished expansion pack."
-msgstr ""
+msgstr "Executar o paquete de expansión inacabado."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14413,7 +14413,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Save state"
-msgstr ""
+msgstr "Gardar estado"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -16441,7 +16441,7 @@ msgstr "Chinés Tradicional"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Translate"
-msgstr ""
+msgstr "Traducir"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -17039,7 +17039,7 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Use item"
-msgstr ""
+msgstr "Usar obxecto"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
