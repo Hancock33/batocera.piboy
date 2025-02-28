@@ -93,6 +93,7 @@
 - DevilutionX to 1.5.4
 - OpenMSX to release 20.0
 - Ruffle to nightly-2025-02-12
+- Raze to 1.11.0
 ### System
 - Bluez to 5.79
 - Buildroot to 2024.11.x with supporting package updates
@@ -103,9 +104,9 @@
 - Vulkan stack to v1.4.304
 - MPV to 0.39.0
 - Kodi to 21.2
-- Nvidia production driver to 570.86.16
+- Nvidia production driver to 570.124.04
 - LLVM to 19.1.7
-- Wine-TKG to 10.1
+- Wine-TKG to 10.2
 - Faudio to 25.02
 - DXVK to 2.5.3
 - DXVK-NVAPI to 0.8.0
