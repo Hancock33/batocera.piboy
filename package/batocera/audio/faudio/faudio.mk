@@ -17,5 +17,6 @@ FAUDIO_DEPENDENCIES += host-wine-custom
 endif
 
 FAUDIO_CONF_OPTS += -DGSTREAMER=ON
+FAUDIO_CONF_OPTS += -DBUILD_SDL3=OFF
 
 $(eval $(cmake-package))
