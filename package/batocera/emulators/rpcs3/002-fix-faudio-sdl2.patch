@@ -1,0 +1,19 @@
+diff --git a/3rdparty/FAudio/src/FAudio_internal.h b/3rdparty/FAudio/src/FAudio_internal.h
+index 039ab92164..a4e91ce889 100644
+--- a/3rdparty/FAudio/src/FAudio_internal.h
++++ b/3rdparty/FAudio/src/FAudio_internal.h
+@@ -133,10 +133,10 @@ extern void FAudio_Log(char const *msg);
+ #define STB_MEMSET_OVERRIDE
+ #endif
+ #else
+-#include <SDL_stdinc.h>
+-#include <SDL_assert.h>
+-#include <SDL_endian.h>
+-#include <SDL_log.h>
++#include <SDL2/SDL_stdinc.h>
++#include <SDL2/SDL_assert.h>
++#include <SDL2/SDL_endian.h>
++#include <SDL2/SDL_log.h>
+ 
+ #define FAudio_swap16LE(x) SDL_SwapLE16(x)
+ #define FAudio_swap16BE(x) SDL_SwapBE16(x)
