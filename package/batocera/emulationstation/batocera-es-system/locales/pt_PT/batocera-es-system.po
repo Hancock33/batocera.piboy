@@ -3675,7 +3675,7 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Back / Menu"
-msgstr ""
+msgstr "Voltar / Menu"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -5636,7 +5636,7 @@ msgstr "Cruz"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Crouch"
-msgstr ""
+msgstr "Agachar"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -6384,12 +6384,12 @@ msgstr "Driving Force Pro"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Drop item"
-msgstr ""
+msgstr "Largar item"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Drop weapon"
-msgstr "Soltar arma"
+msgstr "Largar arma"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -6696,7 +6696,7 @@ msgstr "EVDEV (Padrão)"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "EXPANSION PACK"
-msgstr ""
+msgstr "PACOTE DE EXPANSÃO"
 
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
@@ -7948,7 +7948,7 @@ msgstr "Interprete rápido"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Fast forward"
-msgstr ""
+msgstr "Avanço rápido"
 
 #. TRANSLATION: flycast
 #, c-format
@@ -9294,7 +9294,7 @@ msgstr "Ajuda e informações"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Help computer"
-msgstr ""
+msgstr "Ajuda computador"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -9808,7 +9808,7 @@ msgstr "InuYasha Sengoku - Correção da Batalha"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Inventory"
-msgstr ""
+msgstr "Inventário"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10067,7 +10067,7 @@ msgstr "Julho"
 #. TRANSLATION: omf2097.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
-msgstr ""
+msgstr "Saltar"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10597,12 +10597,12 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look down"
-msgstr ""
+msgstr "Olhar para baixo"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look up"
-msgstr ""
+msgstr "Olhar para cima"
 
 #. TRANSLATION: amiberry, libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus, ...
 msgctxt "game_options"
@@ -11358,7 +11358,7 @@ msgstr "Mover o Ponteiro da Caneta"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move back / down"
-msgstr ""
+msgstr "Mover para trás / baixo"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11393,7 +11393,7 @@ msgstr "Seguir em frente"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move forward / up"
-msgstr ""
+msgstr "Avançar / cima"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11755,7 +11755,7 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next item"
-msgstr ""
+msgstr "Próximo item"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
@@ -11765,7 +11765,7 @@ msgstr "Próximo slot"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next weapon"
-msgstr ""
+msgstr "Próxima arma"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -13076,7 +13076,7 @@ msgstr "Pressione a tecla Y para 'Sim'"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Previous item"
-msgstr ""
+msgstr "Item anterior"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
@@ -13600,7 +13600,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Reset"
-msgstr ""
+msgstr "Reiniciar"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13795,7 +13795,7 @@ msgstr "Correr"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "Run the Unfinished expansion pack."
-msgstr ""
+msgstr "Executar o pacote de expansão inacabado."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -16425,7 +16425,7 @@ msgstr "Chinês Tradicional"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Translate"
-msgstr ""
+msgstr "Traduzir"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -17024,7 +17024,7 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Use item"
-msgstr ""
+msgstr "Usar item"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -18317,10 +18317,6 @@ msgstr "amarelo/azul"
 #~ msgstr "Adicionar cor aos jogos do Game Boy."
 
 #~ msgctxt "game_options"
-#~ msgid "Allow mapping Future Pinball with Pad to Keyboard."
-#~ msgstr "Permitir o mapeamento de Future Pinball com Pad2Key."
-
-#~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr "Permite o uso de perfis de interruptores se presentes."
 
@@ -18375,16 +18371,8 @@ msgstr "amarelo/azul"
 #~ msgstr "COLORIZAÇÃO"
 
 #~ msgctxt "game_options"
-#~ msgid "CONTROLLER CONFIGURATION"
-#~ msgstr "CONFIGURAÇÃO DO COMANDO"
-
-#~ msgctxt "game_options"
 #~ msgid "Can be used to simulate colors of particular displays."
 #~ msgstr "Pode ser usado para simular cores de ecrãs específicas."
-
-#~ msgctxt "keys_files"
-#~ msgid "Change Camera Angle"
-#~ msgstr "Alterar ângulo da câmara"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18405,10 +18393,6 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "Escolha a sua proporção de ecrã preferida.."
-
-#~ msgctxt "keys_files"
-#~ msgid "Coin"
-#~ msgstr "Moeda"
 
 #~ msgctxt "game_options"
 #~ msgid "Color"
@@ -18539,14 +18523,6 @@ msgstr "amarelo/azul"
 #~ "Melhoria. Melhora a clareza de texturas distantes quando o mipmapping "
 #~ "está ativo."
 
-#~ msgctxt "keys_files"
-#~ msgid "Fast Forward"
-#~ msgstr "Avanço Rápido"
-
-#~ msgctxt "keys_files"
-#~ msgid "FastForward"
-#~ msgstr "Avanço Rápido"
-
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
 #~ msgstr ""
@@ -18556,10 +18532,6 @@ msgstr "amarelo/azul"
 #~ msgid "For Gyro-enabled games (bound to right analog stick)"
 #~ msgstr ""
 #~ "Para jogos programados para giroscópio (ligado ao analógico direito)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Forward Nudge"
-#~ msgstr "Empurrão para a frente"
 
 #~ msgctxt "game_options"
 #~ msgid "GB COLORIZATION"
@@ -18589,18 +18561,6 @@ msgstr "amarelo/azul"
 #~ msgid "Keypad to joyport mappings for 2 players."
 #~ msgstr "Mapeamento de teclado e comando para 2 jogadores."
 
-#~ msgctxt "keys_files"
-#~ msgid "Left Flipper"
-#~ msgstr "Flipper Esquerdo"
-
-#~ msgctxt "keys_files"
-#~ msgid "Left Magna Save"
-#~ msgstr "Esquerda Magna Save"
-
-#~ msgctxt "keys_files"
-#~ msgid "Left Nudge"
-#~ msgstr "Empurrão para a esquerda"
-
 #~ msgctxt "game_options"
 #~ msgid "Lunar Ignore Brightness Color Fix"
 #~ msgstr "Lunar - Ignorar correção da cor de brilho"
@@ -18612,10 +18572,6 @@ msgstr "amarelo/azul"
 #~ msgstr ""
 #~ "Defina manualmente qual resolução usar. Predefinição é Alto e muda para "
 #~ "muito alto quando necessário."
-
-#~ msgctxt "keys_files"
-#~ msgid "Mech Tilt"
-#~ msgstr "Inclinação mecânica"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18672,10 +18628,6 @@ msgstr "amarelo/azul"
 #~ msgid "Playstation 2 wheel type"
 #~ msgstr "Tipo de volante do Playstation 2"
 
-#~ msgctxt "keys_files"
-#~ msgid "Plunger"
-#~ msgstr "Êmbolo"
-
 #~ msgctxt "game_options"
 #~ msgid "Pulse (Default)"
 #~ msgstr "Pulsar (Predefinição)"
@@ -18704,33 +18656,9 @@ msgstr "amarelo/azul"
 #~ "Reserve uma zona não morta no centro do volante para seguir em frente (em "
 #~ "graus)"
 
-#~ msgctxt "keys_files"
-#~ msgid "Reset the application"
-#~ msgstr "Reiniciar aplicação"
-
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Redimensiona automáticamente a altura do ecrã."
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Emulation"
-#~ msgstr "Reiniciar a Emulação"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Reiniciar o Jogo"
-
-#~ msgctxt "keys_files"
-#~ msgid "Right Flipper"
-#~ msgstr "Flipper Direito"
-
-#~ msgctxt "keys_files"
-#~ msgid "Right Magna Save"
-#~ msgstr "Direita Magna Save"
-
-#~ msgctxt "keys_files"
-#~ msgid "Right Nudge"
-#~ msgstr "Empurrão para a direita"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"
@@ -18773,10 +18701,6 @@ msgstr "amarelo/azul"
 #~ msgstr ""
 #~ "Saltar memória temporária desativa o salto de frames automático e "
 #~ "renderiza na resolução de saída de ecrã."
-
-#~ msgctxt "keys_files"
-#~ msgid "Start"
-#~ msgstr "Iniciar"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
