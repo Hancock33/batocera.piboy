@@ -5,6 +5,7 @@ import os
 from pathlib import Path
 
 from ... import Command
+from ...batoceraPaths import mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
