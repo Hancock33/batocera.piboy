@@ -2870,6 +2870,8 @@ tg-cd:
   hardware:             portable
   extensions:           [3ds, 3dsx, app, axf, cxi, elf, squashfs]
   emulators:
+    azahar:
+      azahar:           { requireAnyOf: [BR2_PACKAGE_AZAHAR]            }
     citra:
       citra:            { requireAnyOf: [BR2_PACKAGE_CITRA]             }
     libretro:
