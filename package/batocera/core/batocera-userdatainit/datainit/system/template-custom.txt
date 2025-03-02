@@ -7,7 +7,7 @@
 
 # Set logfile location and filename
 logfile=/tmp/scriptlog.txt
- 
+
 # Test for the condition to avoid running the script after booting has succeeded.
 if test "$1" != "start"
 then

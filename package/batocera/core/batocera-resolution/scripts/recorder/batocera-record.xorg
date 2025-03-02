@@ -16,7 +16,7 @@ mkdir -p /userdata/recordings || exit 1
 # Check for a NVIDIA GPU in the system
 has_nvidia_gpu() {
     NVIDIA_DEV=$(lspci -mn | awk '{ gsub("\"",""); if (($2 ~ "030[0-2]") && ($3 == "10de" || $3 == "12d2")) { print $1 } }')
-    
+
     if [ -n "$NVIDIA_DEV" ]; then
         return 0
     else
@@ -73,7 +73,7 @@ check_hardware_encoding() {
     if [ "$ENCODER" = "libx264" ]; then
         echo "A resolution of: ${RESOLUTION}"
     else
-        echo "A resolution of: ${RESOLUTION} and a framerate of: ${REFRESH_RATE}"       
+        echo "A resolution of: ${RESOLUTION} and a framerate of: ${REFRESH_RATE}"
     fi
     echo
     echo "Recording to file: ${OUTPUT}"
@@ -96,7 +96,7 @@ auto_detect_encoder() {
     elif has_nvidia_gpu; then
         ENCODER="h264_nvenc"
         echo
-        echo "Using: H.264 hardware encoding via NVENC."    
+        echo "Using: H.264 hardware encoding via NVENC."
     elif vainfo 2>/dev/null | grep -q "VAProfileMPEG2Main.*VAEntrypointEncSlice"; then
         ENCODER="mpeg2_vaapi"
         echo
@@ -250,7 +250,7 @@ epic_mode_record(){
                -thread_queue_size 1024 -f x11grab -i :0.0 \
                -f pulse -ac 2 -channel_layout stereo -i "${PULSEAUDIO_MONITOR}" \
                -vf 'format=nv12' -c:v ${ENCODER} -qp 18 -preset medium -c:a aac -async 1 "${OUTPUT}" \
-               -loglevel warning    
+               -loglevel warning
     else
         ffmpeg -probesize 20M -video_size "${RESOLUTION}" -framerate 60 \
                -thread_queue_size 1024 -f x11grab -i :0.0 \

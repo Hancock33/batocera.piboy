@@ -9,7 +9,7 @@
 
 # Set logfile location and filename
 logfile=/tmp/scriptlog.txt
- 
+
 # Case selection for first parameter parsed, writing to a log file on game
 # watch events (starting and stopping a game):
 case $1 in
@@ -17,7 +17,7 @@ case $1 in
         echo "START" > $logfile
         echo "$@" >> $logfile
     ;;
- 
+
     gameStop)
         echo "END" >> $logfile
     ;;
