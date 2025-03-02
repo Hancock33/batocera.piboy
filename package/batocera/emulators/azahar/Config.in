@@ -15,4 +15,4 @@ config BR2_PACKAGE_AZAHAR
 	help
 	  Azahar is a Citra fork and emulator for the Nintendo 3DS.
 
-      https://github.com/azahar-emu/azahar
+	  https://github.com/azahar-emu/azahar
