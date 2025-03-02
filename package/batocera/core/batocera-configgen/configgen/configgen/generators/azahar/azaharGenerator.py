@@ -34,7 +34,7 @@ class AzaharGenerator(Generator):
         AzaharGenerator.writeAZAHARConfig(CONFIGS / "azahar" / "qt-config.ini", system, playersControllers)
 
         commandArray = ['/usr/bin/azahar', rom]
-        
+
         return Command.Command(array=commandArray, env={
             "XDG_CONFIG_HOME":CONFIGS,
             "XDG_DATA_HOME":SAVES / "3ds",
