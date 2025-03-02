@@ -66,9 +66,9 @@
 - Libretro-Play! 4th Feb build
 - RetroArch to v1.20.0
 - Ruffle to Nightly-2024-12-28
-- RPCS3 to 0.0.34-17506
+- RPCS3 to v0.0.35
 - ScummVM to v2.9.0
-- PCSX2 to v2.3.168
+- PCSX2 to v2.3.185
 - Play! to 4th Feb build
 - Xemu to v0.8.20
 - Triforce to use a Crediar build (Nov 29, 2024)
@@ -93,6 +93,9 @@
 - DevilutionX to 1.5.4
 - OpenMSX to release 20.0
 - Ruffle to nightly-2025-02-12
+- Raze to 1.11.0
+- PPSSPP to 28th February build
+- Libretro-PPSSPP to 28th February build
 ### System
 - Bluez to 5.79
 - Buildroot to 2024.11.x with supporting package updates
@@ -103,9 +106,9 @@
 - Vulkan stack to v1.4.304
 - MPV to 0.39.0
 - Kodi to 21.2
-- Nvidia production driver to 570.86.16
+- Nvidia production driver to 570.124.04
 - LLVM to 19.1.7
-- Wine-TKG to 10.1
+- Wine-TKG to 10.2
 - Faudio to 25.02
 - DXVK to 2.5.3
 - DXVK-NVAPI to 0.8.0

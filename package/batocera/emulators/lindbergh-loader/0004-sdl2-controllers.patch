@@ -67,10 +67,10 @@ index 9a4a712..08553bf 100644
  
  # Set to 1 if you want to disable SDL (Fixes SRTV boost bar)
 diff --git a/src/lindbergh/config.c b/src/lindbergh/config.c
-index 92aa9a3..154a853 100644
+index 2bae715..fe8a86e 100644
 --- a/src/lindbergh/config.c
 +++ b/src/lindbergh/config.c
-@@ -1455,34 +1455,43 @@ int readConfig(FILE *configFile, EmulatorConfig *config)
+@@ -1459,34 +1459,43 @@ int readConfig(FILE *configFile, EmulatorConfig *config)
  KeyMapping getDefaultKeymap()
  {
      KeyMapping defaultKeyMapping;
@@ -140,7 +140,7 @@ index 92aa9a3..154a853 100644
  }
  
 diff --git a/src/lindbergh/config.h b/src/lindbergh/config.h
-index ec72d14..73389d8 100644
+index ff0385e..ac40aa7 100644
 --- a/src/lindbergh/config.h
 +++ b/src/lindbergh/config.h
 @@ -273,7 +273,7 @@ typedef struct
@@ -153,10 +153,10 @@ index ec72d14..73389d8 100644
      float whiteBorderPercentage;
      float blackBorderPercentage;
 diff --git a/src/lindbergh/evdevinput.c b/src/lindbergh/evdevinput.c
-index 0c39248..b88b87e 100644
+index 84e1d38..4706ae5 100644
 --- a/src/lindbergh/evdevinput.c
 +++ b/src/lindbergh/evdevinput.c
-@@ -1277,7 +1277,7 @@ ControllerStatus getArcadeInputByName(char *name, ArcadeInput *input)
+@@ -1295,7 +1295,7 @@ ControllerStatus getArcadeInputByName(char *name, ArcadeInput *input)
  ControllerStatus startControllerThreads(Controllers *controllers)
  {
      // Don't start EVDEV threads if SDL/X11-only mode is enabled
@@ -712,19 +712,18 @@ index 9aa8530..a7e85d2 100644
          break;
      }
 diff --git a/src/lindbergh/lindbergh.c b/src/lindbergh/lindbergh.c
-index 8af8852..1b3b341 100644
+index 5de591f..a294970 100644
 --- a/src/lindbergh/lindbergh.c
 +++ b/src/lindbergh/lindbergh.c
-@@ -12,8 +12,8 @@
- #define LD_LIBRARY_PATH "LD_LIBRARY_PATH"
+@@ -12,7 +12,7 @@
  #define LD_PRELOAD "LD_PRELOAD"
  #define PRELOAD_FILE_NAME "lindbergh.so"
+ #define PRELOAD_FILE_FLATPAK "/app/lib32/lindbergh.so"
 -#define TEAM "bobbydilley, retrofan, dkeruza-neo, doozer, francesco, rolel, caviar-x"
- #define LINDBERGH_CONFIG_PATH "LINDBERGH_CONFIG_PATH"
 +#define TEAM "bobbydilley, retrofan, dkeruza-neo, doozer, francesco, rolel, caviar-x, dmanlfc"
+ #define LINDBERGH_CONFIG_PATH "LINDBERGH_CONFIG_PATH"
  
  uint32_t elf_crc = 0;
- 
 diff --git a/src/lindbergh/sdlcalls.c b/src/lindbergh/sdlcalls.c
 index 1e26432..6defeb1 100644
 --- a/src/lindbergh/sdlcalls.c

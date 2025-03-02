@@ -1,0 +1,13 @@
+diff --git a/rpcs3/rpcs3qt/screenshot_manager_dialog.cpp b/rpcs3/rpcs3qt/screenshot_manager_dialog.cpp
+index 3825dfd74..bf0fed9d7 100644
+--- a/rpcs3/rpcs3qt/screenshot_manager_dialog.cpp
++++ b/rpcs3/rpcs3qt/screenshot_manager_dialog.cpp
+@@ -81,7 +81,7 @@ void screenshot_manager_dialog::reload()
+ 	m_abort_parsing = true;
+ 	gui::utils::stop_future_watcher(m_parsing_watcher, true);
+ 
+-	const std::string screenshot_path_qt   = fs::get_config_dir() + "screenshots/";
++	const std::string screenshot_path_qt   = "/userdata/screenshots/";
+ 	const std::string screenshot_path_cell = rpcs3::utils::get_hdd0_dir() + "/photo/";
+ 
+ 	m_flow_widget->clear();

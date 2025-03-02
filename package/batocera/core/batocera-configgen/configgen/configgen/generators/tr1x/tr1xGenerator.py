@@ -20,10 +20,10 @@ import zipfile
 from pathlib import Path
 from typing import TYPE_CHECKING
 
-import requests
-
 from ... import Command
+from ...batoceraPaths import mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
+from ...utils.download import DownloadException, download
 from ..Generator import Generator
 
 _logger = logging.getLogger(__name__)
@@ -45,14 +45,12 @@ class TR1XGenerator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         tr1xRomPath = Path(rom).parent
         tr1xSourcePath = Path("/usr/bin/tr1x")
-        musicZipPath = tr1xRomPath / "music.zip"
         musicDir = tr1xRomPath / "music"
         dataDir = tr1xRomPath / "data"
-        expansionZipPath = tr1xRomPath / "trub-music.zip"
 
         # Ensure the destination directories exist
-        tr1xRomPath.mkdir(parents=True, exist_ok=True)
-        dataDir.mkdir(parents=True, exist_ok=True)
+        mkdir_if_not_exists(tr1xRomPath)
+        mkdir_if_not_exists(dataDir)
 
         # Copy files & folders if they don't exist
         for item in tr1xSourcePath.iterdir():
@@ -78,47 +76,34 @@ class TR1XGenerator(Generator):
         # Download and extract music.zip if the music directory does not exist
         if not musicDir.exists():
             try:
-                _logger.debug("Downloading music.zip from %s...", self.MUSIC_ZIP_URL)
-                response = requests.get(self.MUSIC_ZIP_URL, stream=True)
-                response.raise_for_status()
-
-                # Write to music.zip
-                with musicZipPath.open("wb") as f:
-                    for chunk in response.iter_content(chunk_size=8192):
-                        f.write(chunk)
-
-                # Extract the zip file
-                with zipfile.ZipFile(musicZipPath, "r") as zip_ref:
+                with (
+                    download(self.MUSIC_ZIP_URL, tr1xRomPath) as downloaded,
+                    zipfile.ZipFile(downloaded, "r") as zip_ref
+                ):
+                    # Extract the zip file
                     zip_ref.extractall(tr1xRomPath)
 
-                # Remove the zip file after extraction
-                musicZipPath.unlink()
                 _logger.debug("Music files downloaded and extracted successfully.")
-            except requests.RequestException as e:
-                _logger.debug("Failed to download music.zip: %s", e)
+            except DownloadException:
+                _logger.exception("Failed to download music.zip")
             except zipfile.BadZipFile as e:
                 _logger.debug("Error extracting music.zip: %s", e)
             except Exception as e:
                 _logger.debug("Unexpected error: %s", e)
 
         # Handle the expansion pack download and extraction if enabled
-        if system.isOptSet("tr1x-expansion") and system.getOptBoolean("tr1x-expansion"):
+        if system.config.get_bool("tr1x-expansion"):
             # Only extract if there is no file named "CAT.PHD" (case-insensitive) in the data directory
             cat_phd_exists = any(
                 p for p in dataDir.rglob("*") if p.is_file() and p.name.upper() == "CAT.PHD"
             )
             if not cat_phd_exists:
                 try:
-                    _logger.debug("Downloading expansion zip from %s...", self.EXPANSION_ZIP_URL)
-                    response = requests.get(self.EXPANSION_ZIP_URL, stream=True)
-                    response.raise_for_status()
-
-                    with expansionZipPath.open("wb") as f:
-                        for chunk in response.iter_content(chunk_size=8192):
-                            f.write(chunk)
-
-                    # Extract files from the expansion zip, ignoring the top-level "DATA" directory
-                    with zipfile.ZipFile(expansionZipPath, "r") as zip_ref:
+                    with (
+                        download(self.EXPANSION_ZIP_URL, tr1xRomPath) as downloaded,
+                        zipfile.ZipFile(downloaded) as zip_ref
+                    ):
+                        # Extract files from the expansion zip, ignoring the top-level "DATA" directory
                         for file in zip_ref.namelist():
                             # Remove the top-level DATA/ prefix if present
                             stripped_file = file
@@ -130,13 +115,12 @@ class TR1XGenerator(Generator):
                             destination = dataDir / stripped_file
                             if not destination.exists():
                                 destination.parent.mkdir(parents=True, exist_ok=True)
-                                with zip_ref.open(file) as source, open(destination, "wb") as target:
+                                with zip_ref.open(file) as source, destination.open("wb") as target:
                                     shutil.copyfileobj(source, target)
 
-                    expansionZipPath.unlink()
                     _logger.debug("Expansion files downloaded and extracted successfully.")
-                except requests.RequestException as e:
-                    _logger.debug("Failed to download expansion zip: %s", e)
+                except DownloadException:
+                    _logger.exception("Failed to download expansion zip")
                 except zipfile.BadZipFile as e:
                     _logger.debug("Error extracting expansion zip: %s", e)
                 except Exception as e:

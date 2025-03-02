@@ -1,5 +1,5 @@
 diff --git a/sound/pci/hda/patch_realtek.c b/sound/pci/hda/patch_realtek.c
-index 224616fbec4f..67bc2da9a338 100644
+index c735f630ecb5..80127f779193 100644
 --- a/sound/pci/hda/patch_realtek.c
 +++ b/sound/pci/hda/patch_realtek.c
 @@ -6726,6 +6726,20 @@ static void alc294_gx502_toggle_output(struct hda_codec *codec,

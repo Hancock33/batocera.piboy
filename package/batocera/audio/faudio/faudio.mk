@@ -3,8 +3,8 @@
 # faudio
 #
 ################################################################################
-# Version: Commits on Feb 01, 2025
-FAUDIO_VERSION = 25.02
+# Version: Commits on Mar 01, 2025
+FAUDIO_VERSION = 25.03
 FAUDIO_SITE = $(call github,FNA-XNA,FAudio,$(FAUDIO_VERSION))
 FAUDIO_LICENSE = ZLIB
 FAUDIO_LICENSE_FILES = LICENSE
@@ -17,5 +17,6 @@ FAUDIO_DEPENDENCIES += host-wine-custom
 endif
 
 FAUDIO_CONF_OPTS += -DGSTREAMER=ON
+FAUDIO_CONF_OPTS += -DBUILD_SDL3=OFF
 
 $(eval $(cmake-package))

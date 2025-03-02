@@ -25,11 +25,6 @@ typetoname = {'button': 'btn', 'hat': 'btn', 'axis': 'axis', 'key': 'key'}
 # Map an emulationstation input hat to the corresponding retroarch hat value
 hatstoname = {'1': 'up', '2': 'right', '4': 'down', '8': 'left'}
 
-# Systems to swap Disc/CD : Atari ST / Amstrad CPC / AMIGA 500 1200 / DOS / MSX / PC98 / X68000 / Commodore 64 128 Plus4 | Dreamcast / PSX / Saturn / SegaCD / 3DO / PS2 / PC-FX
-# Systems with internal mapping : PC88 / FDS | No multi-disc support : opera / yabasanshiro | No m3u support : PicoDrive
-coreWithSwapSupport = {'hatari', 'cap32', 'bluemsx', 'dosbox_pure', 'flycast', 'flycast2021', 'np2kai', 'puae', 'puae2021', 'px68k', 'vice_x64', 'vice_x64sc', 'vice_xscpu64', 'vice_xplus4', 'vice_x128', 'pcsx_rearmed', 'duckstation', 'mednafen_psx', 'beetle-saturn', 'kronos', 'genesisplusgx', 'pcsx2', 'pcfx'};
-systemToSwapDisable = {'amigacd32', 'amigacdtv', 'naomi', 'atomiswave', 'megadrive', 'mastersystem', 'gamegear'}
-
 # Write a configuration for a specified controller
 # Warning, function used by amiberry because it reads the same retroarch formatting
 def writeControllersConfig(
@@ -39,17 +34,6 @@ def writeControllersConfig(
     lightgun: bool,
     /,
 ) -> None:
-    # Map buttons to the corresponding retroarch specials keys
-    retroarchspecials = {'l3': 'ai_service', 'l2': 'shader_prev', 'r2': 'shader_next'}
-
-    # Some input adaptations for some systems with swap Disc/CD
-    if (system.config['core'] in coreWithSwapSupport) and (system.name not in systemToSwapDisable):
-        retroarchspecials["l2"] = "disk_prev"
-        retroarchspecials["r2"] = "disk_next"
-        retroarchspecials["r3"] = "disk_eject_toggle"
-
-    if system.isOptSet("exithotkeyonly") and system.getOptBoolean("exithotkeyonly"):
-        retroarchspecials = {}
 
     cleanControllerConfig(retroconfig, controllers)
 
@@ -62,10 +46,13 @@ def writeControllersConfig(
     retroconfig.save('input_load_state',          '"f4"')
     retroconfig.save('input_state_slot_decrease', '"f5"')
     retroconfig.save('input_state_slot_increase', '"f6"')
+    retroconfig.save('input_ai_service',          '"f9"')
     retroconfig.save('input_reset',               '"f10"')
     retroconfig.save('input_rewind',              '"f11"')
     retroconfig.save('input_hold_fast_forward',   '"f12"')
     retroconfig.save('input_screenshot',          '"nul"')
+    retroconfig.save('input_audio_mute',          '"nul"')
+    retroconfig.save('input_grab_mouse_toggle',   '"nul"')
 
     for controller in controllers:
         mouseIndex = None
@@ -74,7 +61,7 @@ def writeControllersConfig(
             mouseIndex = getAssociatedMouse(deviceList, controllers[controller].device_path)
         if mouseIndex == None:
             mouseIndex = 0
-        writeControllerConfig(retroconfig, controllers[controller], controller, system, retroarchspecials, lightgun, mouseIndex)
+        writeControllerConfig(retroconfig, controllers[controller], controller, system, lightgun, mouseIndex)
     writeHotKeyConfig(retroconfig, controllers)
 
 # Remove all controller configurations
@@ -103,12 +90,11 @@ def writeControllerConfig(
     controller: Controller,
     playerIndex: int,
     system: Emulator,
-    retroarchspecials: Mapping[str, str],
     lightgun: bool,
     mouseIndex: int | None = 0,
     /,
 ):
-    generatedConfig = generateControllerConfig(controller, retroarchspecials, system, lightgun, mouseIndex)
+    generatedConfig = generateControllerConfig(controller, system, lightgun, mouseIndex)
     for key in generatedConfig:
         retroconfig.save(key, generatedConfig[key])
 
@@ -118,7 +104,6 @@ def writeControllerConfig(
 # Create a configuration for a given controller
 def generateControllerConfig(
     controller: Controller,
-    retroarchspecials: Mapping[str, str],
     system: Emulator,
     lightgun: bool,
     mouseIndex: int | None = 0,
@@ -180,14 +165,6 @@ def generateControllerConfig(
             else:
                 config[f'input_player{controller.player_number}_{jsvalue}_minus_axis'] = f'+{input.id}'
                 config[f'input_player{controller.player_number}_{jsvalue}_plus_axis'] = f'-{input.id}'
-
-    if controller.player_number == 1:
-        specialMap = retroarchspecials
-        for specialkey in specialMap:
-            specialvalue = specialMap[specialkey]
-            if specialkey in controller.inputs:
-                input = controller.inputs[specialkey]
-                config[f'input_{specialvalue}_{typetoname[input.type]}'] = getConfigValue(input)
 
     if not lightgun:
         # dont touch to it when there are connected lightguns

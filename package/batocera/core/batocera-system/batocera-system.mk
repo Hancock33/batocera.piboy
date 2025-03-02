@@ -5,9 +5,9 @@
 ################################################################################
 
 BATOCERA_SYSTEM_SOURCE=
-BATOCERA_SYSTEM_VERSION = 25.02
-BATOCERA_SYSTEM_DATE_TIME = $(shell date "+%Y/%m/%d %H:%M")
-BATOCERA_SYSTEM_DATE = $(shell date "+%Y/%m/%d")
+BATOCERA_SYSTEM_VERSION = $(shell date "+%y.%m")
+BATOCERA_SYSTEM_DATE_TIME = $(shell date "+%d/%m/%Y %H:%M")
+BATOCERA_SYSTEM_DATE = $(shell date "+%d/%m/%y")
 BATOCERA_SYSTEM_DEPENDENCIES = tzdata
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2837),y)

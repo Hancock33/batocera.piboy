@@ -2848,6 +2848,11 @@ msgctxt "game_options"
 msgid "All Borders"
 msgstr ""
 
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "All Timers"
+msgstr ""
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
@@ -3219,6 +3224,11 @@ msgstr ""
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
 msgid "Arrows 3button"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "As Host (Default)"
 msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next
@@ -4960,6 +4970,13 @@ msgstr ""
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "Change what's plugged into the virtual GameCube ports."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid ""
+"Changes the sleep period accuracy. Some games need this set to improve "
+"performance."
 msgstr ""
 
 #. TRANSLATION: libretro/panda3ds
@@ -11084,7 +11101,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr ""
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr ""
@@ -11104,7 +11121,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr ""
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr ""
@@ -13806,6 +13823,11 @@ msgctxt "game_options"
 msgid "SKIP START MENU"
 msgstr ""
 
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "SLEEP TIMERS ACCURACY"
+msgstr ""
+
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "SMAA"
@@ -15401,7 +15423,7 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr ""
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Swap Screen"
 msgstr ""
@@ -15411,7 +15433,7 @@ msgctxt "keys_files"
 msgid "Swap Screens"
 msgstr ""
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Swap screens"
 msgstr ""
@@ -15954,12 +15976,12 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr ""
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Screen Layout"
 msgstr ""
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
 msgstr ""
@@ -16052,6 +16074,11 @@ msgstr ""
 #. TRANSLATION: libretro/dolphin, play, ryujinx, sonicmania, suyu
 msgctxt "game_options"
 msgid "Traditional Chinese"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Translate"
 msgstr ""
 
 #. TRANSLATION: libretro/atari800
@@ -16749,6 +16776,11 @@ msgctxt "game_options"
 msgid "User XBOX button layout"
 msgstr ""
 
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Usleep Only"
+msgstr ""
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Usually not much faster than single core mode."
@@ -17134,6 +17166,11 @@ msgctxt "game_options"
 msgid "WRITE COLOUR BUFFERS"
 msgstr ""
 
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "WRITE DEPTH BUFFERS"
+msgstr ""
+
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "WRITE PROTECT VIRTUAL SD"
@@ -17293,6 +17330,13 @@ msgstr ""
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Write protect virtual SD card"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid ""
+"Writes depth buffer values to VM memory. Some games need this to fix broken "
+"graphics."
 msgstr ""
 
 #. TRANSLATION: libretro

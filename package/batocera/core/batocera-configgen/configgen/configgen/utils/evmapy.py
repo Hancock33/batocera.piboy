@@ -15,7 +15,7 @@ if TYPE_CHECKING:
     from types import TracebackType
 
     from ..controller import ControllerMapping
-    from ..gun import Gun, GunMapping
+    from ..gun import Gun, Guns
 
 
 _logger = logging.getLogger(__name__)
@@ -30,7 +30,7 @@ class evmapy(AbstractContextManager[None, None]):
     core: str
     rom: str
     controllers: ControllerMapping
-    guns: GunMapping
+    guns: Guns
 
     def __enter__(self) -> None:
         if self.__prepare():
@@ -121,7 +121,7 @@ class evmapy(AbstractContextManager[None, None]):
             padActionConfig = json.load(open(keysfile))
 
             # configure guns
-            for ngun, gun in enumerate(self.guns.values(), start=1):
+            for ngun, gun in enumerate(self.guns, start=1):
                 if f"actions_gun{ngun}" in padActionConfig:
                     configfile = f"/var/run/evmapy/{os.path.basename(gun.node)}.json"
                     _logger.debug("config file for keysfile is %s (from %s) - gun", configfile, keysfile)
@@ -217,14 +217,14 @@ class evmapy(AbstractContextManager[None, None]):
                                     if input.name == "up":
                                         absbasey_positive =  int(input.value) >= 0
                                     else:
-                                        axisId = None # don't duplicate, configuration should be done for up
+                                        absbasey_positive =  int(input.value) < 0
                                 elif input.name == "left" or input.name == "right":
                                     axisId   = "BASE"
                                     axisName = "X"
                                     if input.name == "left":
                                         absbasex_positive = int(input.value) < 0
                                     else:
-                                        axisId = None # don't duplicate, configuration should be done for left
+                                        absbasex_positive = int(input.value) >= 0
                                 else:
                                     axisId   = "_OTHERS_"
                                     axisName = input.name

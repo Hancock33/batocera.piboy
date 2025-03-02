@@ -6,7 +6,7 @@
 # Version: Commits on Feb 07, 2025
 XENIA_CANARY_VERSION = fbacd3c
 XENIA_CANARY_SOURCE = xenia_canary_windows.zip
-XENIA_CANARY_SITE = https://github.com/xenia-canary/xenia-canary-releases/releases/download/canary_experimental
+XENIA_CANARY_SITE = https://github.com/xenia-canary/xenia-canary-releases/releases/download/$(XENIA_CANARY_VERSION)
 XENIA_CANARY_LICENSE = BSD
 XENIA_CANARY_LICENSE_FILE = LICENSE
 XENIA_CANARY_DEPENDENCIES = python-toml

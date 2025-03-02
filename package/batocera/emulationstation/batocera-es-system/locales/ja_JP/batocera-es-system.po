@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v42b(2025/02/19)\n"
+"Project-Id-Version: batocera-es v42b(2025/02/27)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-02-19 21:37+0900\n"
+"PO-Revision-Date: 2025-02-27 11:52+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -2857,6 +2857,11 @@ msgctxt "game_options"
 msgid "All Borders"
 msgstr "すべての境界線"
 
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "All Timers"
+msgstr ""
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
@@ -3233,6 +3238,11 @@ msgstr "矢印"
 msgctxt "game_options"
 msgid "Arrows 3button"
 msgstr "矢印3ボタン"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "As Host (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -3664,7 +3674,7 @@ msgstr "BT601_625/D65 (EUR/AUS で開発されたすべてのゲームに推奨)
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Back / Menu"
-msgstr ""
+msgstr "戻る/メニュー"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -4988,6 +4998,13 @@ msgctxt "game_options"
 msgid "Change what's plugged into the virtual GameCube ports."
 msgstr "ゲームキューブ ポートに差し込まれるものを変更します"
 
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid ""
+"Changes the sleep period accuracy. Some games need this set to improve "
+"performance."
+msgstr ""
+
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Charger plugged"
@@ -5604,7 +5621,7 @@ msgstr "Ｘ(下のボタン)"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Crouch"
-msgstr ""
+msgstr "しゃがむ"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -6347,7 +6364,7 @@ msgstr "Driving Force Pro"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Drop item"
-msgstr ""
+msgstr "アイテム 捨てる"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -6658,7 +6675,7 @@ msgstr "EVDEV (標準)"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "EXPANSION PACK"
-msgstr ""
+msgstr "拡張パック"
 
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
@@ -9239,7 +9256,7 @@ msgstr "ヘルプと情報"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Help computer"
-msgstr ""
+msgstr "コンピュータヘルプ"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -9740,7 +9757,7 @@ msgstr "犬夜叉~戦国お伽合戦~修正"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Inventory"
-msgstr ""
+msgstr "インベントリ"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -9999,7 +10016,7 @@ msgstr "7月"
 #. TRANSLATION: omf2097.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
-msgstr ""
+msgstr "ジャンプ"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10528,12 +10545,12 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look down"
-msgstr ""
+msgstr "見下ろす"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look up"
-msgstr ""
+msgstr "見上げる"
 
 #. TRANSLATION: amiberry, libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus, ...
 msgctxt "game_options"
@@ -11253,7 +11270,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "マウス (1351)"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "マウス クリック"
@@ -11273,7 +11290,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr "前進、W を押すと可能"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "スタイレットポインタの移動"
@@ -11281,7 +11298,7 @@ msgstr "スタイレットポインタの移動"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move back / down"
-msgstr ""
+msgstr "後退/下に移動"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11316,7 +11333,7 @@ msgstr "前進"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move forward / up"
-msgstr ""
+msgstr "前進/上に移動"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11676,7 +11693,7 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next item"
-msgstr ""
+msgstr "次のアイテム"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
@@ -11686,7 +11703,7 @@ msgstr "次のスロット"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next weapon"
-msgstr ""
+msgstr "次の武器"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -12979,7 +12996,7 @@ msgstr "Y キー:「はい」を選択"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Previous item"
-msgstr ""
+msgstr "前のアイテム"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
@@ -13689,7 +13706,7 @@ msgstr "走る"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "Run the Unfinished expansion pack."
-msgstr ""
+msgstr "未完成の拡張パックを実行します"
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14004,6 +14021,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "SKIP START MENU"
 msgstr "スタートメニューをスキップ"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "SLEEP TIMERS ACCURACY"
+msgstr ""
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -15625,7 +15647,7 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "7.1ch サラウンド"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Swap Screen"
 msgstr "画面の入替"
@@ -15635,7 +15657,7 @@ msgctxt "keys_files"
 msgid "Swap Screens"
 msgstr "画面の入替"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Swap screens"
 msgstr "画面を入れ替える"
@@ -16187,12 +16209,12 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "チートまたは16/9アスペクト比修正コードを使用します"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Screen Layout"
 msgstr "画面レイアウトの切り替え"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
 msgstr "速度制限の切り替え"
@@ -16286,6 +16308,11 @@ msgstr "トラックボール (Atari CX-22)"
 msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "繁体字中国語"
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Translate"
+msgstr ""
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -16875,7 +16902,7 @@ msgstr "グラフィックの問題または GPU の問題が発生している�
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Use item"
-msgstr ""
+msgstr "アイテムを使用"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -17002,6 +17029,11 @@ msgstr "ゲームが起動しない場合や壊れる場合の問題解決に役
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
 msgid "User XBOX button layout"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Usleep Only"
 msgstr ""
 
 #. TRANSLATION: dolphin
@@ -17389,6 +17421,11 @@ msgctxt "game_options"
 msgid "WRITE COLOUR BUFFERS"
 msgstr ""
 
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "WRITE DEPTH BUFFERS"
+msgstr ""
+
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "WRITE PROTECT VIRTUAL SD"
@@ -17549,6 +17586,13 @@ msgstr "CPU互換性'正確な動作'モード及びいくつかのゲームで�
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Write protect virtual SD card"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid ""
+"Writes depth buffer values to VM memory. Some games need this to fix broken "
+"graphics."
 msgstr ""
 
 #. TRANSLATION: libretro

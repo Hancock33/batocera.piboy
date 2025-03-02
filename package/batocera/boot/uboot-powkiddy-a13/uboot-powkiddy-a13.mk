@@ -3,8 +3,8 @@
 # uboot-powkiddy-a13
 #
 ################################################################################
-# Version: Commits on Nov 27, 2021
-UBOOT_POWKIDDY_A13_VERSION = powkiddy-a13
+# Version: Commits on Sept 13, 2021
+UBOOT_POWKIDDY_A13_VERSION = e2c76fb6b0f89c5385273b3a83fbd2ce16903396
 UBOOT_POWKIDDY_A13_SITE = $(call github,alpgarcia,caesar-u-boot,$(UBOOT_POWKIDDY_A13_VERSION))
 UBOOT_POWKIDDY_A13_LICENSE = GPLv2
 

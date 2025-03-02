@@ -9,9 +9,8 @@ import stat
 import subprocess
 import tarfile
 from pathlib import Path
-from typing import TYPE_CHECKING, Any, Final, Literal
+from typing import IO, TYPE_CHECKING, Any, Final, Literal
 
-import requests
 from evdev import ecodes
 
 from ... import Command
@@ -23,11 +22,12 @@ from ...controller import (
     get_mapping_axis_relaxed_values,
 )
 from ...utils import bezels as bezelsUtil, hotkeygen
+from ...utils.download import download
 from ..Generator import Generator
 
 if TYPE_CHECKING:
     from ...Emulator import Emulator
-    from ...gun import GunMapping
+    from ...gun import Guns
     from ...types import DeviceInfoMapping, HotkeysContext, Resolution
 
 _logger = logging.getLogger(__name__)
@@ -142,22 +142,9 @@ class LindberghGenerator(Generator):
         )
 
     @staticmethod
-    def download_file(url: str, destination: Path) -> None:
-        _logger.debug("Downloading the file...")
-        response = requests.get(url, stream=True)
-        if response.status_code == 200:
-            with destination.open("wb") as file:
-                for chunk in response.iter_content(chunk_size=8192):
-                    file.write(chunk)
-            _logger.debug("File downloaded to %s", destination)
-        else:
-            raise Exception(f"Failed to download file. Status code: {response.status_code}")
-            _logger.debug("Do you have internet!?")
-
-    @staticmethod
-    def extract_tar_xz(file_path: Path, extract_to: Path) -> None:
+    def extract_tar_xz(file_path: IO[bytes], extract_to: Path) -> None:
         _logger.debug("Extracting the file...")
-        with tarfile.open(file_path, "r:xz") as tar:
+        with tarfile.open(fileobj=file_path, mode="r:xz") as tar:
             for member in tar.getmembers():
                 file_path_to_extract = extract_to / member.name
                 if not file_path_to_extract.exists():
@@ -265,7 +252,7 @@ class LindberghGenerator(Generator):
         conf: dict[str, Any],
         system: Emulator,
         gameResolution: Resolution,
-        guns: GunMapping,
+        guns: Guns,
         wheels: DeviceInfoMapping,
         playersControllers: ControllerMapping,
         romName: str,
@@ -317,10 +304,7 @@ class LindberghGenerator(Generator):
 
         ## Guns
         if system.config.use_guns and guns:
-            need_guns_border = False
-            for gun in guns:
-                if guns[gun].needs_borders:
-                    need_guns_border = True
+            need_guns_border = any(gun.needs_borders for gun in guns)
             if need_guns_border:
                 bordersSize = system.guns_borders_size_name(guns)
                 bordersInnerSize, bordersOuterSize = bezelsUtil.gunBordersSize(bordersSize)
@@ -338,7 +322,7 @@ class LindberghGenerator(Generator):
         system: Emulator,
         romName: str,
         playersControllers: ControllerMapping,
-        guns: GunMapping,
+        guns: Guns,
         wheels: DeviceInfoMapping,
         /,
     ) -> None:
@@ -385,7 +369,7 @@ class LindberghGenerator(Generator):
         conf: dict[str, Any],
         system: Emulator,
         shortRomName: str,
-        guns: GunMapping,
+        guns: Guns,
         wheels: DeviceInfoMapping,
         playersControllers: ControllerMapping,
         /,
@@ -492,7 +476,7 @@ class LindberghGenerator(Generator):
                                 if nplayer == 1:
                                     self.setConf(conf, f"{button_name}", f"{controller_name}:{input_value}")
                             else:
-                                if input_name == "joystick1left" or input_name == "joystick1up" or input_name == "joystick2left" or input_name == "joystick2up":
+                                if input_name == "joystick1left" or input_name == "joystick1up" or input_name == "joystick2left" or input_name == "joystick2up" or input_name == "left" or input_name == "up":
                                     self.setConf(conf, f"PLAYER_{player_input}_{button_name}", f"{controller_name}:{input_value}:MIN")
                                 else:
                                     self.setConf(conf, f"PLAYER_{player_input}_{button_name}", f"{controller_name}:{input_value}:MAX")
@@ -665,7 +649,7 @@ class LindberghGenerator(Generator):
         # some pads have not analog axis, on some games, prefer the dpad
         if not shortRomName.startswith("vf5") and not shortRomName.startswith("vt3"): # all but vf5 and vt3
             # pads without joystick1left, but with a hat
-            if "joystick1left" not in pad.inputs and "left" in pad.inputs and pad.inputs["left"].type == "hat":
+            if "joystick1left" not in pad.inputs and "left" in pad.inputs and (pad.inputs["left"].type == "hat" or pad.inputs["left"].type == "axis"):
                 lindberghCtrl_wheel["left"] = lindberghCtrl_wheel["joystick1left"]
                 if "right" in lindberghCtrl_wheel:
                     del lindberghCtrl_wheel["right"]
@@ -676,7 +660,7 @@ class LindberghGenerator(Generator):
                 del lindberghCtrl_pad["joystick1left"]
 
             # pads without joystick1up, but with a hat
-            if "joystick1up" not in pad.inputs and "up" in pad.inputs and pad.inputs["up"].type == "hat":
+            if "joystick1up" not in pad.inputs and "up" in pad.inputs and (pad.inputs["up"].type == "hat" or pad.inputs["up"].type == "axis"):
                 lindberghCtrl_pad["up"] = lindberghCtrl_pad["joystick1up"]
                 del lindberghCtrl_pad["down"]
                 del lindberghCtrl_pad["joystick1up"]
@@ -698,7 +682,7 @@ class LindberghGenerator(Generator):
         if deviceType == "pad":
             return lindberghCtrl_pad
 
-    def setup_guns_evdev(self, conf: dict[str, Any], guns: GunMapping, shortRomName: str, /) -> None:
+    def setup_guns_evdev(self, conf: dict[str, Any], guns: Guns, shortRomName: str, /) -> None:
         nplayer = 1
 
         # common batocera mapping
@@ -755,7 +739,7 @@ class LindberghGenerator(Generator):
                 _logger.debug("lindbergh gun for player %s", nplayer)
                 xplayer = 1+(nplayer-1)*2
                 yplayer = 1+(nplayer-1)*2+1
-                evplayer = guns[gun].node
+                evplayer = gun.node
                 self.setConf(conf, f"ANALOGUE_{xplayer}", f"{evplayer}:ABS:0")
                 self.setConf(conf, f"ANALOGUE_{yplayer}", f"{evplayer}:ABS:1")
 
@@ -772,7 +756,7 @@ class LindberghGenerator(Generator):
                     self.setConf(conf, f"ANALOGUE_{yplayerp4}", f"{evplayer}:ABS:1:SHAKE")
 
                 for mapping in mappings_actions:
-                    if mapping in guns[gun].buttons and mapping in mappings_codes:
+                    if mapping in gun.buttons and mapping in mappings_codes:
                         code = mappings_codes[mapping]
                         action = mappings_actions[mapping]
 
@@ -785,7 +769,6 @@ class LindberghGenerator(Generator):
             nplayer += 1
 
     def setup_eeprom(self):
-        DOWNLOAD_PATH: Final = self.LINDBERGH_SAVES / "lindbergh-eeprom.tar.xz"
         DOWNLOADED_FLAG: Final = self.LINDBERGH_SAVES / "downloaded.txt"
         RAW_URL: Final = "https://raw.githubusercontent.com/batocera-linux/lindbergh-eeprom/main/lindbergh-eeprom.tar.xz"
 
@@ -793,20 +776,15 @@ class LindberghGenerator(Generator):
         if not DOWNLOADED_FLAG.exists():
             try:
                 # Download the file
-                self.download_file(RAW_URL, DOWNLOAD_PATH)
-                # Extract the file
-                self.extract_tar_xz(DOWNLOAD_PATH, self.LINDBERGH_SAVES)
-                # Create the downloaded.txt flag file so we don't download again
-                DOWNLOADED_FLAG.write_text("Download and extraction successful.\n")
-                _logger.debug("Created flag file: %s", DOWNLOADED_FLAG)
+                with download(RAW_URL, self.LINDBERGH_SAVES) as downloaded:
+                    # Extract the file
+                    self.extract_tar_xz(downloaded, self.LINDBERGH_SAVES)
+                    # Create the downloaded.txt flag file so we don't download again
+                    DOWNLOADED_FLAG.write_text("Download and extraction successful.\n")
+                    _logger.debug("Created flag file: %s", DOWNLOADED_FLAG)
 
-            except Exception as e:
-                _logger.debug("An error occurred: %s", e)
-            finally:
-                # Cleanup the downloaded .tar.xz file
-                if DOWNLOAD_PATH.exists():
-                    DOWNLOAD_PATH.unlink()
-                    _logger.debug("Temporary file %s deleted.", DOWNLOAD_PATH)
+            except Exception:
+                _logger.exception("An error occurred")
 
     def setup_libraries(self, romDir: Path, romName: str) -> None:
         # Setup some library quirks for GPU support (NVIDIA?)
@@ -854,7 +832,7 @@ class LindberghGenerator(Generator):
         source_dir: Path,
         system: Emulator,
         gameResolution: Resolution,
-        guns: GunMapping,
+        guns: Guns,
         wheels: DeviceInfoMapping,
         playersControllers: ControllerMapping,
         romDir: Path,

@@ -5,9 +5,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: batocera-emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-15 21:09+0100\n"
-"PO-Revision-Date: 2025-02-19 08:39-0300\n"
-"Last-Translator: Leonardo Colman <dev@leonardo.colman.com.br>\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2025-03-01 10:00-0300\n"
+"Last-Translator: Leonardo Colman Lopes <dev@leonardo.colman.com.br>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -2864,6 +2864,11 @@ msgctxt "game_options"
 msgid "All Borders"
 msgstr "Todas as bordas"
 
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "All Timers"
+msgstr ""
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
@@ -3247,6 +3252,11 @@ msgstr "Setas"
 msgctxt "game_options"
 msgid "Arrows 3button"
 msgstr "Setas 3botoes"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "As Host (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -3681,7 +3691,7 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Back / Menu"
-msgstr ""
+msgstr "Voltar / Menu"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -5020,6 +5030,13 @@ msgctxt "game_options"
 msgid "Change what's plugged into the virtual GameCube ports."
 msgstr "Altera o que esta conectado Ã s portas virtuais do GameCube."
 
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid ""
+"Changes the sleep period accuracy. Some games need this set to improve "
+"performance."
+msgstr ""
+
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Charger plugged"
@@ -5645,7 +5662,7 @@ msgstr "Cruz"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Crouch"
-msgstr ""
+msgstr "Agaixar"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -6394,7 +6411,7 @@ msgstr "Driving Force Pro"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Drop item"
-msgstr ""
+msgstr "Derrubar Item"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -6706,7 +6723,7 @@ msgstr "EVDEV (Padrão)"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "EXPANSION PACK"
-msgstr ""
+msgstr "PACOTE DE EXPANSÃO"
 
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
@@ -7965,12 +7982,12 @@ msgstr "Ilhas Faroe"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
-msgstr "IntÃ©rprete rapido"
+msgstr "Intérprete Rápido"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Fast forward"
-msgstr ""
+msgstr "Acelerado"
 
 #. TRANSLATION: flycast
 #, c-format
@@ -9320,7 +9337,7 @@ msgstr "Ajuda e Informacoes"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Help computer"
-msgstr ""
+msgstr "Ajuda Computador"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -9835,7 +9852,7 @@ msgstr "InuYasha Sengoku - Correcao da Batalha"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Inventory"
-msgstr ""
+msgstr "Intentário"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10094,7 +10111,7 @@ msgstr "Julho"
 #. TRANSLATION: omf2097.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
-msgstr ""
+msgstr "Pular"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10625,12 +10642,12 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look down"
-msgstr ""
+msgstr "Olhar para baixo"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look up"
-msgstr ""
+msgstr "Olhar para cima"
 
 #. TRANSLATION: amiberry, libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus, ...
 msgctxt "game_options"
@@ -11359,7 +11376,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "Mouse (1351)"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Clique do Mouse"
@@ -11379,7 +11396,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr "Avançar, pode ser usado para pressionar W"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "Mover o Ponteiro do Estilete"
@@ -11387,7 +11404,7 @@ msgstr "Mover o Ponteiro do Estilete"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move back / down"
-msgstr ""
+msgstr "Andar para trás / baixo"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11422,7 +11439,7 @@ msgstr "Mover adiante"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move forward / up"
-msgstr ""
+msgstr "Ir para frente / cima"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11784,7 +11801,7 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next item"
-msgstr ""
+msgstr "Próximo item"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
@@ -11794,7 +11811,7 @@ msgstr "Próximo slot"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next weapon"
-msgstr ""
+msgstr "Próxima arma"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -13105,7 +13122,7 @@ msgstr "Pressione Y para 'Sim'"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Previous item"
-msgstr ""
+msgstr "Item anterior"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
@@ -13629,7 +13646,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Reset"
-msgstr ""
+msgstr "Reset"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13823,7 +13840,7 @@ msgstr "Correr"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "Run the Unfinished expansion pack."
-msgstr ""
+msgstr "Rodar o pacote de expansão Unfinished."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14140,6 +14157,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "SKIP START MENU"
 msgstr "SALTAR MENU INICIAL"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "SLEEP TIMERS ACCURACY"
+msgstr ""
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -15781,7 +15803,7 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Som Ambiente 7.1 (Surround)"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Swap Screen"
 msgstr "Trocar Tela"
@@ -15791,7 +15813,7 @@ msgctxt "keys_files"
 msgid "Swap Screens"
 msgstr "Trocar Telas"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Swap screens"
 msgstr "Trocar telas"
@@ -16354,12 +16376,12 @@ msgstr ""
 "Para usar trapacas do jogo ou codigos de correcao de proporcao de aspecto "
 "16/9."
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Screen Layout"
 msgstr "Alternar Disposicao da Tela"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
 msgstr "Alternar Limite de Velocidade"
@@ -16455,6 +16477,11 @@ msgstr "Trackball (Atari CX-22)"
 msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Chines Tradicional"
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Translate"
+msgstr "Traduzir"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -17053,7 +17080,7 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Use item"
-msgstr ""
+msgstr "Usar item"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -17182,6 +17209,11 @@ msgstr ""
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
 msgid "User XBOX button layout"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Usleep Only"
 msgstr ""
 
 #. TRANSLATION: dolphin
@@ -17571,6 +17603,11 @@ msgctxt "game_options"
 msgid "WRITE COLOUR BUFFERS"
 msgstr "ESCREVA ARMAZENAMENTO TEMPORARIO DE CORES"
 
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "WRITE DEPTH BUFFERS"
+msgstr ""
+
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "WRITE PROTECT VIRTUAL SD"
@@ -17734,6 +17771,13 @@ msgstr "Funciona com o modo 'Ciclo exato' e para alguns jogos."
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Write protect virtual SD card"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid ""
+"Writes depth buffer values to VM memory. Some games need this to fix broken "
+"graphics."
 msgstr ""
 
 #. TRANSLATION: libretro

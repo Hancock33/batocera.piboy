@@ -2848,6 +2848,11 @@ msgctxt "game_options"
 msgid "All Borders"
 msgstr "Ertz guztiak"
 
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "All Timers"
+msgstr ""
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
@@ -3229,6 +3234,11 @@ msgstr "Geziak"
 msgctxt "game_options"
 msgid "Arrows 3button"
 msgstr "Geziak 3botoi"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "As Host (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -4989,6 +4999,13 @@ msgstr "Aldatu sistemako hizkuntza"
 msgctxt "game_options"
 msgid "Change what's plugged into the virtual GameCube ports."
 msgstr "Aldatu GameCube portu birtualetan konektatuta dagoena."
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid ""
+"Changes the sleep period accuracy. Some games need this set to improve "
+"performance."
+msgstr ""
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -11237,7 +11254,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "Xagua (1351)"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Xagu Klik-a"
@@ -11257,7 +11274,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr ""
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "Mugitu estilete erakuslea"
@@ -13994,6 +14011,11 @@ msgctxt "game_options"
 msgid "SKIP START MENU"
 msgstr "SALTAU HASERA MENUA"
 
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "SLEEP TIMERS ACCURACY"
+msgstr ""
+
 #. TRANSLATION: suyu
 msgctxt "game_options"
 msgid "SMAA"
@@ -15614,7 +15636,7 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "7.1 Inguratzailea"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Swap Screen"
 msgstr "Aldatu Pantaila"
@@ -15624,7 +15646,7 @@ msgctxt "keys_files"
 msgid "Swap Screens"
 msgstr "Aldatu pantailak"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Swap screens"
 msgstr "Aldatu pantailak"
@@ -16173,12 +16195,12 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "Joku tranpak erabiltzeko edo 16/9 Proportzio konpontze kodeak."
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Screen Layout"
 msgstr "Aldatu Pantaila antolaketa"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
 msgstr "Aldatu Abiadura Muga"
@@ -16272,6 +16294,11 @@ msgstr "Trackball-a (Atari CX-22)"
 msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Txinatar tradizionala"
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Translate"
+msgstr ""
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -16986,6 +17013,11 @@ msgctxt "game_options"
 msgid "User XBOX button layout"
 msgstr ""
 
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Usleep Only"
+msgstr ""
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Usually not much faster than single core mode."
@@ -17371,6 +17403,11 @@ msgctxt "game_options"
 msgid "WRITE COLOUR BUFFERS"
 msgstr ""
 
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "WRITE DEPTH BUFFERS"
+msgstr ""
+
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "WRITE PROTECT VIRTUAL SD"
@@ -17533,6 +17570,13 @@ msgstr "'Ziklo-zehatz' modua eta joku batzuekin funtzionatzen du."
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Write protect virtual SD card"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid ""
+"Writes depth buffer values to VM memory. Some games need this to fix broken "
+"graphics."
 msgstr ""
 
 #. TRANSLATION: libretro
