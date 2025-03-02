@@ -1,5 +1,5 @@
 #AP6256_NVRAM_V1.4_06112021
-# Cloned from bcm94345wlpagb_p2xx.txt 
+# Cloned from bcm94345wlpagb_p2xx.txt
 NVRAMRev=$Rev: 498373 $
 sromrev=11
 vendid=0x14e4
@@ -119,7 +119,7 @@ dot11b_opts=0x3aa85
 cbfilttype=0
 #fdsslevel_ch1=6
 #fdsslevel_ch11=4
-#btc_mode=1  
+#btc_mode=1
 
 muxenab=0x10
 
