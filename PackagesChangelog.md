@@ -8,7 +8,9 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|1dc3ebf891d29a7cd31c940e4b
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-03-02|Mar 02, 2025
 Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.2.6|Mar 02, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|ef95eed34955d94b0cf78d14524e17375f248ae1|Mar 02, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250302|Mar 02, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|f2a86f34d136952be35cdbde42335d27cb15e774|Mar 02, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250302|Mar 02, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|c2e3514c66d2f8ea81ad55b2cd3c9f3084546421|Mar 02, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|223285940c62e53c307f49bf133af468b46eb00a|Mar 02, 2025
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.03|Mar 01, 2025
@@ -27,10 +29,8 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|8dc0f039f94b
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|d96665375a8bd273dcc0d0b21c87249861b0e00f|Mar 01, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|c616a1d0263ee1932fddb090f9a02e292ab99220|Mar 01, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|d3d1c8b0ece821dd50fbfa81f1538b3a6259c318|Mar 01, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250301|Mar 01, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|773a1862d999e2bb53d70cc8826d59e8a21686f4|Mar 01, 2025
 Network|[qrtr](http://github.com/linux-msm/qrtr)|5923eea97377f4a3ed9121b358fd919e3659db7b|Mar 01, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250301|Mar 01, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|18fa738260f92f59329de8ba348c87a893b34335|Mar 01, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|18fa738260f92f59329de8ba348c87a893b34335|Mar 01, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|c76752cc5f92bacdc19b09353f74f659f147d19e|Mar 01, 2025
