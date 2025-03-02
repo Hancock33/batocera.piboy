@@ -28,8 +28,8 @@ set(CompilerFlags
         CMAKE_C_FLAGS_DEBUG
         CMAKE_C_FLAGS_RELEASE
         CMAKE_CXX_FLAGS_RELWITHDEBINFO
-		  _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING 
-        
+		  _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING
+
         )
 
 find_package(Qt6 COMPONENTS Widgets WebSockets OpenGLWidgets REQUIRED)
@@ -67,7 +67,7 @@ function(windeployqt target)
     # - we run windeployqt on target and deploy Qt libs
 
     add_custom_command(TARGET ${target} POST_BUILD
-        COMMAND "${_qt_bin_dir}/windeployqt.exe"         
+        COMMAND "${_qt_bin_dir}/windeployqt.exe"
                 \"$<TARGET_FILE:${target}>\"
         COMMENT "Deploying Qt libraries using windeployqt for compilation target '${target}' ..."
     )
@@ -85,11 +85,11 @@ file(GLOB SRCS
 file(GLOB RES
    ${CMAKE_CURRENT_SOURCE_DIR}/Resources/*.*
 )
-          
-set (HEADERS 
+
+set (HEADERS
    ${HEADERS}
 )
-set (SRCS 
+set (SRCS
       ${SRCS}
    )
 
@@ -153,11 +153,11 @@ endif()
 
 # Ready-to-use configuration
 install ( TARGETS Sugarbox RUNTIME DESTINATION .)
-install ( FILES "${PROJECT_SOURCE_DIR}/Sugarbox.ini" DESTINATION .) 
-install ( DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/ROM" DESTINATION .) 
-install ( DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/CART" DESTINATION .) 
-install ( DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/CONF" DESTINATION .) 
-install ( DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/Resources" DESTINATION .) 
+install ( FILES "${PROJECT_SOURCE_DIR}/Sugarbox.ini" DESTINATION .)
+install ( DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/ROM" DESTINATION .)
+install ( DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/CART" DESTINATION .)
+install ( DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/CONF" DESTINATION .)
+install ( DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/Resources" DESTINATION .)
 
 
 # MSVC CPACK Qt dlls
