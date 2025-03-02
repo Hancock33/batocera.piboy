@@ -11196,7 +11196,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "Mouse (1351)"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr ""
@@ -11216,7 +11216,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr ""
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr ""
@@ -15539,7 +15539,7 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr ""
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Swap Screen"
 msgstr ""
@@ -15549,7 +15549,7 @@ msgctxt "keys_files"
 msgid "Swap Screens"
 msgstr ""
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Swap screens"
 msgstr ""
@@ -16097,12 +16097,12 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "Untuk menggunakan cheats game atau aspek rasio 16/9 codes tetap"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Screen Layout"
 msgstr ""
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
 msgstr ""

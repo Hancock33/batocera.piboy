@@ -11270,7 +11270,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "マウス (1351)"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "マウス クリック"
@@ -11290,7 +11290,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr "前進、W を押すと可能"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "スタイレットポインタの移動"
@@ -15647,7 +15647,7 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "7.1ch サラウンド"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Swap Screen"
 msgstr "画面の入替"
@@ -15657,7 +15657,7 @@ msgctxt "keys_files"
 msgid "Swap Screens"
 msgstr "画面の入替"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Swap screens"
 msgstr "画面を入れ替える"
@@ -16209,12 +16209,12 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "チートまたは16/9アスペクト比修正コードを使用します"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Screen Layout"
 msgstr "画面レイアウトの切り替え"
 
-#. TRANSLATION: 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
 msgstr "速度制限の切り替え"
