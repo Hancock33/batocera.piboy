@@ -2,5 +2,5 @@ This port requires a copy of Shadow Warrior Classic Redux. Extract to the conten
 
 SW.GRP
 SW.RTS
-WD.GRP 
+WD.GRP
 TD.GRP

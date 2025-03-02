@@ -1,4 +1,4 @@
-This port requires a copy of Fallout 1, you can purchase it from GOG or Steam. 
+This port requires a copy of Fallout 1, you can purchase it from GOG or Steam.
 
 *** Please note all files and directories must be in lowercase
 

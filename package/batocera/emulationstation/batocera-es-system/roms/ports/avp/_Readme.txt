@@ -2,7 +2,7 @@ This port requires a copy of Aiens vs Predator (2000).
 
 All of the AvP game data, files and directories, need to be lowercase.
 
-A proper install of the Gold edition should look similar to this: 
+A proper install of the Gold edition should look similar to this:
 MD5 (avp_huds/alien.rif) = 4267d305ad3f18e6683f86b4eb755665
 MD5 (avp_huds/alien_hud.rif) = ff6b892af4665c81082e24a43903e987
 MD5 (avp_huds/disk.rif) = fe9a1f4e5caab35e38aabdbbb445aabc
