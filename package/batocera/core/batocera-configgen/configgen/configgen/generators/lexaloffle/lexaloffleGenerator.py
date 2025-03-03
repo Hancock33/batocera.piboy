@@ -54,7 +54,7 @@ class LexaloffleGenerator(Generator):
         commandArray.extend(["-desktop", SCREENSHOTS])  # screenshots
         commandArray.extend(["-windowed", "0"])                     # full screen
         # Display FPS
-        if system.config['showFPS'] == 'true':
+        if system.config.show_fps:
                 commandArray.extend(["-show_fps", "1"])
         else:
                 commandArray.extend(["-show_fps", "0"])
@@ -74,7 +74,7 @@ class LexaloffleGenerator(Generator):
         if (rombase.lower() == "splore" or rombase.lower() == "console"):
             commandArray.extend(["-splore"])
         else:
-            commandArray.extend(["-run", rom])
+            commandArray.extend(["-run", rom_path])
 
         controllersconfig = generate_sdl_game_controller_config(playersControllers)
         with ensure_parents_and_open(CONTROLLERS, "w") as file:
