@@ -1,14 +1,14 @@
 diff --git a/pcsx2/Input/SDLInputSource.cpp b/pcsx2/Input/SDLInputSource.cpp
-index 24f700574..622a27a0d 100644
+index 8eaa99e38..82f19ffe2 100644
 --- a/pcsx2/Input/SDLInputSource.cpp
 +++ b/pcsx2/Input/SDLInputSource.cpp
-@@ -789,9 +789,12 @@ bool SDLInputSource::CloseDevice(int joystick_index)
- 	if (it == m_controllers.end())
- 		return false;
+@@ -1335,9 +1335,12 @@ bool SDLInputSource::CloseDevice(int joystick_index)
  
--	InputManager::OnInputDeviceDisconnected(
--		{InputBindingKey{.source_type = InputSourceType::SDL, .source_index = static_cast<u32>(it->player_id)}},
--		fmt::format("SDL-{}", it->player_id));
+ 	{
+ 		std::lock_guard lock(m_controllers_key_mutex);
+-		InputManager::OnInputDeviceDisconnected(
+-			{InputBindingKey{.source_type = InputSourceType::SDL, .source_index = static_cast<u32>(it->player_id)}},
+-			fmt::format("SDL-{}", it->player_id));
 +	// Properly initialize InputBindingKey
 +	InputBindingKey key = {InputSourceType::SDL, static_cast<u32>(it->player_id)};
 +	
@@ -16,5 +16,5 @@ index 24f700574..622a27a0d 100644
 +        key,
 +        fmt::format("SDL-{}", it->player_id));
  
- 	if (it->haptic)
- 		SDL_HapticClose(it->haptic);
+ 		if (it->haptic)
+ 			SDL_CloseHaptic(it->haptic);

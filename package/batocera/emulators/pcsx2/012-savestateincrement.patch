@@ -1,8 +1,8 @@
 diff --git a/pcsx2/Config.h b/pcsx2/Config.h
-index 37e4a7dff..0b7a93c9a 100644
+index 00da38c6a..82f7ab474 100644
 --- a/pcsx2/Config.h
 +++ b/pcsx2/Config.h
-@@ -1282,6 +1282,7 @@ struct Pcsx2Config
+@@ -1292,6 +1292,7 @@ struct Pcsx2Config
  		InhibitScreensaver : 1,
  		BackupSavestate : 1,
  		McdFolderAutoManage : 1,
@@ -11,10 +11,10 @@ index 37e4a7dff..0b7a93c9a 100644
  
  		HostFs : 1,
 diff --git a/pcsx2/Pcsx2Config.cpp b/pcsx2/Pcsx2Config.cpp
-index 0f446bff7..a8cc65248 100644
+index 6ecd0ad59..41b8ecd73 100644
 --- a/pcsx2/Pcsx2Config.cpp
 +++ b/pcsx2/Pcsx2Config.cpp
-@@ -1899,6 +1899,7 @@ Pcsx2Config::Pcsx2Config()
+@@ -1918,6 +1918,7 @@ Pcsx2Config::Pcsx2Config()
  	BackupSavestate = true;
  	WarnAboutUnsafeSettings = true;
  	ManuallySetRealTimeClock = false;
@@ -22,7 +22,7 @@ index 0f446bff7..a8cc65248 100644
  
  	// To be moved to FileMemoryCard pluign (someday)
  	for (uint slot = 0; slot < 8; ++slot)
-@@ -1941,6 +1942,7 @@ void Pcsx2Config::LoadSaveCore(SettingsWrapper& wrap)
+@@ -1960,6 +1961,7 @@ void Pcsx2Config::LoadSaveCore(SettingsWrapper& wrap)
  	SettingsWrapBitBool(EnableDiscordPresence);
  	SettingsWrapBitBool(InhibitScreensaver);
  	SettingsWrapBitBool(HostFs);
@@ -31,7 +31,7 @@ index 0f446bff7..a8cc65248 100644
  	SettingsWrapBitBool(BackupSavestate);
  	SettingsWrapBitBool(McdFolderAutoManage);
 diff --git a/pcsx2/VMManager.cpp b/pcsx2/VMManager.cpp
-index 0457f9b74..7042f0dae 100644
+index 972f8e88f..3d3f2811a 100644
 --- a/pcsx2/VMManager.cpp
 +++ b/pcsx2/VMManager.cpp
 @@ -2036,6 +2036,12 @@ bool VMManager::SaveState(const char* filename, bool zip_on_thread, bool backup_
