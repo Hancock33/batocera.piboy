@@ -99,6 +99,6 @@ This port requires a copy of the Tomb Raider 1 game:
         EGYPTLOA.jpg
         GREEKLOA.jpg
         GYMLOAD.jpg
-        
+
 Sound files can be downloaded from here ...
 https://opentomb.earvillage.net/tr1.zip
