@@ -20,8 +20,10 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|3eba2e8ec806605dd78c1126d3591f4
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|3b38e89c7b0b0f61e94dc7101172a0a2d0afbbd1|Mar 05, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|acf896f48c8dc0aa57dbeffc2f8a08ca75611058|Mar 05, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|f3d369df2667ab075dfb6eb9e7c268e9c74d0b36|Mar 05, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250305|Mar 05, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|dc9ea05a2a6b9b9132037098e24fb704a7089b4b|Mar 05, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|96a72e834ae83bbd7c6b7b54322b33dfba899d83|Mar 05, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250305|Mar 05, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|4c967ebabd04b6e6d695dedc37d26bec3379f9da|Mar 05, 2025
 Ports|[srb2](http://github.com/STJr/SRB2)|7b010557abb20ec1e5d00c2b0529bbf9c801bfbd|Mar 05, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|3e6b434733e7df1abebb14aaccea3da946cd7a6a|Mar 05, 2025
@@ -53,8 +55,6 @@ Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|dc5dcb32b15dc
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|4cd7e217d4e3c29366cb97151fc37b78fd0c49fe|Mar 03, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|987357a495f97d1496c41e80090c9a1452f475b2|Mar 02, 2025
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|937ac0d8fd68edb25547e599f181296e0882e3d9|Mar 02, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250302|Mar 02, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250302|Mar 02, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|c47417b68a4aaa6285587048ba72a3aede21b22b|Mar 02, 2025
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|f8605345e13c018a30c8f4ed03c05d8fc8f70be8|Mar 02, 2025
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.03|Mar 01, 2025
