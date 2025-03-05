@@ -1,5 +1,5 @@
 diff --git a/src/gensignkey.c b/src/gensignkey.c
-index 295211d..f295408 100644
+index 295211d..4c18089 100644
 --- a/src/gensignkey.c
 +++ b/src/gensignkey.c
 @@ -99,7 +99,7 @@ int signkey_generate(enum signkey_type keytype, int bits, const char* filename,
@@ -20,7 +20,7 @@ index 295211d..f295408 100644
 -	ret = buf_writefile(buf, fn_temp, 0);
 +	//fn_temp = m_malloc(strlen(filename) + 30);
 +	//snprintf(fn_temp, strlen(filename)+30, "%s.tmp%d", filename, getpid());
-+	//ret = buf_writefile(buf, fn_temp, 0);
++	ret = buf_writefile(buf, filename, 0);
  
 -	if (ret == DROPBEAR_FAILURE) {
 -		goto out;
