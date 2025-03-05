@@ -29,8 +29,6 @@ define SDLPOP_INSTALL_TARGET_CMDS
 	# install media
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/sdlpop
 	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sdlpop/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/sdlpop/
-	# evmap config
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sdlpop/sdlpop.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(generic-package))
