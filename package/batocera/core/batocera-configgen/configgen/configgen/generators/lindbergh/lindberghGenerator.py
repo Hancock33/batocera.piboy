@@ -15,12 +15,7 @@ from evdev import ecodes
 
 from ... import Command
 from ...batoceraPaths import SAVES, mkdir_if_not_exists
-from ...controller import (
-    Controller,
-    ControllerMapping,
-    generate_sdl_game_controller_config,
-    get_mapping_axis_relaxed_values,
-)
+from ...controller import Controller, Controllers, generate_sdl_game_controller_config
 from ...utils import bezels as bezelsUtil, hotkeygen
 from ...utils.download import download
 from ..Generator import Generator
@@ -254,7 +249,7 @@ class LindberghGenerator(Generator):
         gameResolution: Resolution,
         guns: Guns,
         wheels: DeviceInfoMapping,
-        playersControllers: ControllerMapping,
+        playersControllers: Controllers,
         romName: str,
         /,
     ) -> None:
@@ -321,7 +316,7 @@ class LindberghGenerator(Generator):
         conf: dict[str, Any],
         system: Emulator,
         romName: str,
-        playersControllers: ControllerMapping,
+        playersControllers: Controllers,
         guns: Guns,
         wheels: DeviceInfoMapping,
         /,
@@ -371,7 +366,7 @@ class LindberghGenerator(Generator):
         shortRomName: str,
         guns: Guns,
         wheels: DeviceInfoMapping,
-        playersControllers: ControllerMapping,
+        playersControllers: Controllers,
         /,
     ) -> None:
         # button that are common to all players
@@ -390,12 +385,12 @@ class LindberghGenerator(Generator):
         # configure joysticks if no gun configured for the user
         nplayer = 1
         continuePlayers = True
-        for playercontroller, pad in sorted(playersControllers.items()):
+        for pad in playersControllers:
             # Handle two players / controllers only, don't do if already configured for guns
             maxplayers = 2
 
             if nplayer <= 2 and continuePlayers and not (system.config.use_guns and len(guns) >= nplayer):
-                relaxValues = get_mapping_axis_relaxed_values(pad)
+                relaxValues = pad.get_mapping_axis_relaxed_values()
 
                 ### choose the adapted mapping
                 if system.config.use_wheels:
@@ -734,39 +729,37 @@ class LindberghGenerator(Generator):
             mappings_actions["2"] = "BUTTON_4"
             del mappings_actions["3"]
 
-        for gun in guns:
-            if nplayer <= 2:
-                _logger.debug("lindbergh gun for player %s", nplayer)
-                xplayer = 1+(nplayer-1)*2
-                yplayer = 1+(nplayer-1)*2+1
-                evplayer = gun.node
-                self.setConf(conf, f"ANALOGUE_{xplayer}", f"{evplayer}:ABS:0")
-                self.setConf(conf, f"ANALOGUE_{yplayer}", f"{evplayer}:ABS:1")
+        for nplayer, gun in enumerate(guns[:2], start=1):
+            _logger.debug("lindbergh gun for player %s", nplayer)
+            xplayer = 1+(nplayer-1)*2
+            yplayer = 1+(nplayer-1)*2+1
+            evplayer = gun.node
+            self.setConf(conf, f"ANALOGUE_{xplayer}", f"{evplayer}:ABS:0")
+            self.setConf(conf, f"ANALOGUE_{yplayer}", f"{evplayer}:ABS:1")
 
-                # reverse axis for let's go jungle
-                if shortRomName == ("letsgoju"): # not for the p version
-                    self.setConf(conf, f"ANALOGUE_{xplayer}", f"{evplayer}:ABS_NEG:1")
-                    self.setConf(conf, f"ANALOGUE_{yplayer}", f"{evplayer}:ABS_NEG:0")
+            # reverse axis for let's go jungle
+            if shortRomName == ("letsgoju"): # not for the p version
+                self.setConf(conf, f"ANALOGUE_{xplayer}", f"{evplayer}:ABS_NEG:1")
+                self.setConf(conf, f"ANALOGUE_{yplayer}", f"{evplayer}:ABS_NEG:0")
 
-                # add shake for hotd4
-                if shortRomName == "hotd4":
-                    xplayerp4 = xplayer + 4
-                    yplayerp4 = yplayer + 4
-                    self.setConf(conf, f"ANALOGUE_{xplayerp4}", f"{evplayer}:ABS:0:SHAKE")
-                    self.setConf(conf, f"ANALOGUE_{yplayerp4}", f"{evplayer}:ABS:1:SHAKE")
+            # add shake for hotd4
+            if shortRomName == "hotd4":
+                xplayerp4 = xplayer + 4
+                yplayerp4 = yplayer + 4
+                self.setConf(conf, f"ANALOGUE_{xplayerp4}", f"{evplayer}:ABS:0:SHAKE")
+                self.setConf(conf, f"ANALOGUE_{yplayerp4}", f"{evplayer}:ABS:1:SHAKE")
 
-                for mapping in mappings_actions:
-                    if mapping in gun.buttons and mapping in mappings_codes:
-                        code = mappings_codes[mapping]
-                        action = mappings_actions[mapping]
+            for mapping in mappings_actions:
+                if mapping in gun.buttons and mapping in mappings_codes:
+                    code = mappings_codes[mapping]
+                    action = mappings_actions[mapping]
 
-                        # in hotdex, player2 reload is on button right (et butto left for player 1...)
-                        if shortRomName == "hotdex" and nplayer == 2 and action == "BUTTON_LEFT":
-                            action = "BUTTON_RIGHT"
+                    # in hotdex, player2 reload is on button right (et butto left for player 1...)
+                    if shortRomName == "hotdex" and nplayer == 2 and action == "BUTTON_LEFT":
+                        action = "BUTTON_RIGHT"
 
-                        if not (action == "COIN" and nplayer != 1): # COIN is only for player 1
-                            self.setConf(conf, f"PLAYER_{nplayer}_{action}", f"{evplayer}:KEY:{code}")
-            nplayer += 1
+                    if not (action == "COIN" and nplayer != 1): # COIN is only for player 1
+                        self.setConf(conf, f"PLAYER_{nplayer}_{action}", f"{evplayer}:KEY:{code}")
 
     def setup_eeprom(self):
         DOWNLOADED_FLAG: Final = self.LINDBERGH_SAVES / "downloaded.txt"
@@ -834,7 +827,7 @@ class LindberghGenerator(Generator):
         gameResolution: Resolution,
         guns: Guns,
         wheels: DeviceInfoMapping,
-        playersControllers: ControllerMapping,
+        playersControllers: Controllers,
         romDir: Path,
         romName: str,
         /,

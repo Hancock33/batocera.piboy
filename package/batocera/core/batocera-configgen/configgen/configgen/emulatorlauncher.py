@@ -48,7 +48,7 @@ if TYPE_CHECKING:
 
     from .Command import Command
     from .generators.Generator import Generator
-    from .types import DeviceInfoDict, Resolution
+    from .types import Resolution
 
 _logger = logging.getLogger(__name__)
 
@@ -65,9 +65,6 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: str, romConfigur
 
     # find the system to run
     systemName = args.system
-    global endSystem
-    endSystem = args.system
-
     _logger.debug("Running system: %s", systemName)
     system = Emulator(args, romConfiguration)
 
@@ -86,164 +83,145 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: str, romConfigur
 
     guns = Gun.get_and_precalibrate_all(system, rom)
 
-    # search wheels in case use_wheels is enabled for this game
-    # force use_wheels in case es tells it has a wheel
-    wheelProcesses = None
-    if system.config.use_wheels:
-        deviceInfos = controllers.getDevicesInformation()
-        (wheelProcesses, player_controllers, deviceInfos) = wheelsUtils.reconfigureControllers(player_controllers, system, rom, metadata, deviceInfos)
-        wheels = wheelsUtils.getWheelsFromDevicesInfos(deviceInfos)
-    else:
-        _logger.info("wheels disabled.")
-        wheels: DeviceInfoDict = {}
+    with wheelsUtils.configure_wheels(player_controllers, system, metadata) as (player_controllers, wheels):
+        # find the generator
+        generator = get_generator(system.config.emulator)
 
-    # find the generator
-    generator = get_generator(system.config.emulator)
+        # the resolution must be changed before configuration while the configuration may depend on it (ie bezels)
+        wantedGameMode = generator.getResolutionMode(system.config)
+        systemMode = videoMode.getCurrentMode()
 
-    # the resolution must be changed before configuration while the configuration may depend on it (ie bezels)
-    wantedGameMode = generator.getResolutionMode(system.config)
-    systemMode = videoMode.getCurrentMode()
+        resolutionChanged = False
+        mouseChanged = False
+        exitCode = -1
+        try:
+            # lower the resolution if mode is auto
+            newsystemMode = systemMode  # newsystemMode is the mode after minmax (ie in 1K if tv was in 4K), systemmode is the mode before (ie in es)
+            if system.config.video_mode == "" or system.config.video_mode == "default":
+                _logger.debug("minTomaxResolution")
+                _logger.debug("video mode before minmax: %s", systemMode)
+                videoMode.minTomaxResolution()
+                newsystemMode = videoMode.getCurrentMode()
+                if newsystemMode != systemMode:
+                    resolutionChanged = True
 
-    resolutionChanged = False
-    mouseChanged = False
-    exitCode = -1
-    try:
-        # lower the resolution if mode is auto
-        newsystemMode = systemMode # newsystemmode is the mode after minmax (ie in 1K if tv was in 4K), systemmode is the mode before (ie in es)
-        if system.config.video_mode == "" or system.config.video_mode == "default":
-            _logger.debug("minTomaxResolution")
-            _logger.debug("video mode before minmax: %s", systemMode)
-            videoMode.minTomaxResolution()
-            newsystemMode = videoMode.getCurrentMode()
-            if newsystemMode != systemMode:
+            _logger.debug("current video mode: %s", newsystemMode)
+            _logger.debug("wanted video mode: %s", wantedGameMode)
+
+            if wantedGameMode != 'default' and wantedGameMode != newsystemMode:
+                videoMode.changeMode(wantedGameMode)
                 resolutionChanged = True
+            gameResolution = videoMode.getCurrentResolution()
 
-        _logger.debug("current video mode: %s", newsystemMode)
-        _logger.debug("wanted video mode: %s", wantedGameMode)
+            # if resolution is reversed (ie ogoa boards), reverse it in the gameResolution to have it correct
+            if videoMode.isResolutionReversed():
+                x = gameResolution["width"]
+                gameResolution["width"]  = gameResolution["height"]
+                gameResolution["height"] = x
+            _logger.debug('resolution: %sx%s', gameResolution["width"], gameResolution["height"])
 
-        if wantedGameMode != 'default' and wantedGameMode != newsystemMode:
-            videoMode.changeMode(wantedGameMode)
-            resolutionChanged = True
-        gameResolution = videoMode.getCurrentResolution()
+            # savedir: create the save directory if not already done
+            dirname = SAVES / system.name
+            if not dirname.exists():
+                dirname.mkdir(parents=True)
 
-        # if resolution is reversed (ie ogoa boards), reverse it in the gameResolution to have it correct
-        if videoMode.isResolutionReversed():
-            x = gameResolution["width"]
-            gameResolution["width"]  = gameResolution["height"]
-            gameResolution["height"] = x
-        _logger.debug('resolution: %sx%s', gameResolution["width"], gameResolution["height"])
+            # core
+            effectiveCore = ""
+            if "core" in system.config and system.config.core is not None:
+                effectiveCore = system.config.core
+            effectiveRom = ""
+            effectiveRomConfiguration = ""
+            if rom is not None:
+                effectiveRom = rom
+                effectiveRomConfiguration = romConfiguration
 
-        # savedir: create the save directory if not already done
-        dirname = SAVES / system.name
-        if not dirname.exists():
-            dirname.mkdir(parents=True)
+            if generator.getMouseMode(system.config, rom):
+                mouseChanged = True
+                videoMode.changeMouse(True)
 
-        # core
-        effectiveCore = ""
-        if "core" in system.config and system.config.core is not None:
-            effectiveCore = system.config.core
-        effectiveRom = ""
-        effectiveRomConfiguration = ""
-        if rom is not None:
-            effectiveRom = rom
-            effectiveRomConfiguration = romConfiguration
+            # SDL VSync is a big deal on OGA and RPi4
+            if not system.config.get_bool('sdlvsync', True):
+                system.config["sdlvsync"] = '0'
+            else:
+                system.config["sdlvsync"] = '1'
+            os.environ.update({'SDL_RENDER_VSYNC': system.config["sdlvsync"]})
 
-        if generator.getMouseMode(system.config, rom):
-            mouseChanged = True
-            videoMode.changeMouse(True)
+            #os.environ.update({'PIPEWIRE_LATENCY': '1024/48000'})
+            os.environ.update({'QT_QPA_PLATFORM': 'xcb'})
+            os.environ.update({'QT_XCB_NO_XI2': '1'})
+            os.environ.update({'QT_PLUGIN_PATH': '/usr/lib/qt6/plugins'})
 
-        # SDL VSync is a big deal on OGA and RPi4
-        if not system.config.get_bool('sdlvsync', True):
-            system.config["sdlvsync"] = '0'
-        else:
-            system.config["sdlvsync"] = '1'
-        os.environ.update({'SDL_RENDER_VSYNC': system.config["sdlvsync"]})
+            # run a script before emulator starts
+            callExternalScripts(SYSTEM_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, effectiveRom])
+            callExternalScripts(USER_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, effectiveRom])
 
-        #os.environ.update({'PIPEWIRE_LATENCY': '1024/48000'})
-        os.environ.update({'QT_QPA_PLATFORM': 'xcb'})
-        os.environ.update({'QT_XCB_NO_XI2': '1'})
-        os.environ.update({'QT_PLUGIN_PATH': '/usr/lib/qt6/plugins'})
-
-        # run a script before emulator starts
-        callExternalScripts(SYSTEM_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, effectiveRom])
-        callExternalScripts(USER_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, effectiveRom])
-
-        f=open('/usr/share/batocera/batocera.arch')
-        arch=f.readline().strip('\n')
-        if 'x86_64' in arch:
-            if system.isOptSet("powersave"):
-                if system.config['powersave'] == '0':
+            f=open('/usr/share/batocera/batocera.arch')
+            arch=f.readline().strip('\n')
+            if 'x86_64' in arch:
+                if system.isOptSet("powersave"):
+                    if system.config['powersave'] == '0':
+                        subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
+                        _logger.debug("CPU power config set to maximum power saving")
+                    elif system.config['powersave'] == '1':
+                        subprocess.call(['/usr/bin/batocera-cpucores', 'mid'])
+                        _logger.debug("CPU power config set to medium power saving")
+                    elif system.config['powersave'] == '2':
+                        subprocess.call(['/usr/bin/batocera-cpucores', 'max'])
+                        _logger.debug("CPU power config set to no power saving")
+                else:
                     subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
                     _logger.debug("CPU power config set to maximum power saving")
-                elif system.config['powersave'] == '1':
-                    subprocess.call(['/usr/bin/batocera-cpucores', 'mid'])
-                    _logger.debug("CPU power config set to medium power saving")
-                elif system.config['powersave'] == '2':
-                    subprocess.call(['/usr/bin/batocera-cpucores', 'max'])
-                    _logger.debug("CPU power config set to no power saving")
-            else:
-                subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
-                _logger.debug("CPU power config set to maximum power saving")
 
-        # run the emulator
-        from .utils.evmapy import evmapy
-        with (
-            evmapy(systemName, system.config.emulator, effectiveCore, effectiveRomConfiguration, player_controllers, guns),
-            set_hotkeygen_context(generator, system)
-        ):
-            # change directory if wanted
-            executionDirectory = generator.executionDirectory(system.config, effectiveRom)
-            if executionDirectory is not None:
-                os.chdir(executionDirectory)
+            # run the emulator
+            from .utils.evmapy import evmapy
+            with (
+                evmapy(systemName, system.config.emulator, effectiveCore, effectiveRomConfiguration, player_controllers, guns),
+                set_hotkeygen_context(generator, system)
+            ):
+                # change directory if wanted
+                executionDirectory = generator.executionDirectory(system.config, effectiveRom)
+                if executionDirectory is not None:
+                    os.chdir(executionDirectory)
 
-            cmd = generator.generate(system, rom, player_controllers, metadata, guns, wheels, gameResolution)
+                cmd = generator.generate(system, rom, player_controllers, metadata, guns, wheels, gameResolution)
 
-            if system.config.get_bool('hud_support'):
-                hud_bezel = getHudBezel(system, generator, rom, gameResolution, system.guns_borders_size_name(guns), system.guns_border_ratio_type(guns))
-                if ((hud := system.config.get('hud')) and hud != "none") or hud_bezel is not None:
-                    gameinfos = extractGameInfosFromXml(args.gameinfoxml)
-                    cmd.env["MANGOHUD_DLSYM"] = "1"
-                    hudconfig = getHudConfig(system, args.systemname, system.config.emulator, effectiveCore, rom, gameinfos, hud_bezel)
-                    hud_config_file = Path('/var/run/hud.config')
-                    with hud_config_file.open('w') as f:
-                        f.write(hudconfig)
-                    cmd.env["MANGOHUD_CONFIGFILE"] = hud_config_file
-                    if not generator.hasInternalMangoHUDCall():
-                        cmd.array.insert(0, "mangohud")
+                if system.config.get_bool('hud_support'):
+                    hud_bezel = getHudBezel(system, generator, rom, gameResolution, system.guns_borders_size_name(guns), system.guns_border_ratio_type(guns))
+                    if ((hud := system.config.get('hud')) and hud != "none") or hud_bezel is not None:
+                        gameinfos = extractGameInfosFromXml(args.gameinfoxml)
+                        cmd.env["MANGOHUD_DLSYM"] = "1"
+                        hudconfig = getHudConfig(system, args.systemname, system.config.emulator, effectiveCore, rom, gameinfos, hud_bezel)
+                        hud_config_file = Path('/var/run/hud.config')
+                        with hud_config_file.open('w') as f:
+                            f.write(hudconfig)
+                        cmd.env["MANGOHUD_CONFIGFILE"] = hud_config_file
+                        if not generator.hasInternalMangoHUDCall():
+                            cmd.array.insert(0, "mangohud")
 
-            if _profiler:
-                _profiler.disable()
-            exitCode = runCommand(cmd)
-            if _profiler:
-                _profiler.enable()
+                if _profiler:
+                    _profiler.disable()
+                exitCode = runCommand(cmd)
+                if _profiler:
+                    _profiler.enable()
 
-        # run a script after emulator shuts down
-        callExternalScripts(USER_SCRIPTS, "gameStop", [systemName, system.config.emulator, effectiveCore, effectiveRom])
-        callExternalScripts(SYSTEM_SCRIPTS, "gameStop", [systemName, system.config.emulator, effectiveCore, effectiveRom])
+            # run a script after emulator shuts down
+            callExternalScripts(USER_SCRIPTS, "gameStop", [systemName, system.config.emulator, effectiveCore, effectiveRom])
+            callExternalScripts(SYSTEM_SCRIPTS, "gameStop", [systemName, system.config.emulator, effectiveCore, effectiveRom])
 
-        if 'x86_64' in arch:
-            subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
+        finally:
+            # always restore the resolution
+            if resolutionChanged:
+                try:
+                    videoMode.changeMode(systemMode)
+                except Exception:
+                    pass  # don't fail
 
-    finally:
-        # always restore the resolution
-        if resolutionChanged:
-            try:
-                videoMode.changeMode(systemMode)
-            except Exception:
-                pass # don't fail
+            if mouseChanged:
+                try:
+                    videoMode.changeMouse(False)
+                except Exception:
+                    pass  # don't fail
 
-        if mouseChanged:
-            try:
-                videoMode.changeMouse(False)
-            except Exception:
-                pass # don't fail
-
-        if wheelProcesses is not None and len(wheelProcesses) > 0:
-            try:
-                wheelsUtils.resetControllers(wheelProcesses)
-            except Exception:
-                _logger.error("hum, unable to reset wheel controllers !")
-                pass # don't fail
     # exit
     return exitCode
 
