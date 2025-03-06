@@ -16,7 +16,9 @@ Ports|[box64](http://github.com/ptitseb/box64)|eb039c0449641264122374a5cb0ea6cc6
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|3c7e80b13091d23b9c13405538ece8ccaf2e5ad6|Mar 06, 2025
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|2b5aebb3bb5896f379f5fd29072411400197e5f4|Mar 06, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|11a6d66e3ae5c781a32e63bcd94f10f94f5d4415|Mar 06, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250306|Mar 06, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|a6316465a39325157488d862bb914fe549eaad35|Mar 06, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250306|Mar 06, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|b0889b98147612f1a4363561b763025ba76540df|Mar 06, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|c5757957b9fd23658121acf4837f68ad5a165fe5|Mar 06, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|c5757957b9fd23658121acf4837f68ad5a165fe5|Mar 06, 2025
@@ -36,9 +38,7 @@ Emulators|[thextech](https://github.com/TheXTech/TheXTech)|5e086d140b281cb8b8eb5
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45515|Mar 05, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|3b38e89c7b0b0f61e94dc7101172a0a2d0afbbd1|Mar 05, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|f3d369df2667ab075dfb6eb9e7c268e9c74d0b36|Mar 05, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250305|Mar 05, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|dc9ea05a2a6b9b9132037098e24fb704a7089b4b|Mar 05, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250305|Mar 05, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|4c967ebabd04b6e6d695dedc37d26bec3379f9da|Mar 05, 2025
 Ports|[srb2](http://github.com/STJr/SRB2)|7b010557abb20ec1e5d00c2b0529bbf9c801bfbd|Mar 05, 2025
 Emulators|[libretro-bennugd](http://github.com/diekleinekuh/BennuGD_libretro)|3b1cce4bc787b1c6bec2b270bf3a7a595479c5bb|Mar 05, 2025
