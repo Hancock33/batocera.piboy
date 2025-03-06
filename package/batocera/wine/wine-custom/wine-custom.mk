@@ -113,11 +113,9 @@ else
 WINE_CUSTOM_CONF_OPTS += --without-gnutls
 endif
 
-ifeq ($(BR2_PACKAGE_GST1_PLUGINS_BASE),y)
-WINE_CUSTOM_CONF_OPTS += --with-gstreamer
-WINE_CUSTOM_DEPENDENCIES += gst1-plugins-base
-else
-WINE_CUSTOM_CONF_OPTS += --without-gstreamer
+ifeq ($(BR2_PACKAGE_FFMPEG),y)
+WINE_CUSTOM_CONF_OPTS += --without-gstreamer --with-ffmpeg
+WINE_CUSTOM_DEPENDENCIES += ffmpeg
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
