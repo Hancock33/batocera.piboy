@@ -13590,11 +13590,6 @@ msgstr ""
 "Oyununuz Batocera 29 altında çalışıyorsa, önbelleği sıfırlamak bazı "
 "çökmeleri düzeltebilir."
 
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Reset the table, sometimes required for PinMame"
-msgstr "Bazen PinMame için gerekli olan tabloyu sıfırlayın"
-
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Resize automatically the screen. AUTO = Off."
@@ -19342,6 +19337,10 @@ msgstr "sarı/mavi"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Ekran yüksekliğini otomatik olarak yeniden boyutlandırın."
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset the table, sometimes required for PinMame"
+#~ msgstr "Bazen PinMame için gerekli olan tabloyu sıfırlayın"
 
 #~ msgctxt "keys_files"
 #~ msgid "Restart Emulation"

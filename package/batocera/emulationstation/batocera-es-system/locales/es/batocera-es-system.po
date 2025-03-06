@@ -13671,11 +13671,6 @@ msgstr ""
 "Restablecer la caché puede solucionar algunos fallos si tu juego se estaba "
 "ejecutando en Batocera 29."
 
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Reset the table, sometimes required for PinMame"
-msgstr "Restablecer la mesa, a veces necesario para PinMame"
-
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Resize automatically the screen. AUTO = Off."
@@ -19094,6 +19089,10 @@ msgstr "amarillo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Cambia automáticamente la altura de la pantalla."
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset the table, sometimes required for PinMame"
+#~ msgstr "Restablecer la mesa, a veces necesario para PinMame"
 
 #~ msgctxt "keys_files"
 #~ msgid "Restart Emulation"

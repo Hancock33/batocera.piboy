@@ -13570,11 +13570,6 @@ msgstr ""
 "Tilbakestilling av hurtigbufferen kan fikse noen krasj hvis spillet kjørte "
 "under Batocera 29."
 
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Reset the table, sometimes required for PinMame"
-msgstr "Tilbakestill spillet, noen ganger nødvendig for PinMame"
-
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Resize automatically the screen. AUTO = Off."
@@ -19125,6 +19120,10 @@ msgstr "gul/blå"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Endre størrelsen på skjermen automatisk."
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset the table, sometimes required for PinMame"
+#~ msgstr "Tilbakestill spillet, noen ganger nødvendig for PinMame"
 
 #~ msgctxt "keys_files"
 #~ msgid "Restart Emulation"

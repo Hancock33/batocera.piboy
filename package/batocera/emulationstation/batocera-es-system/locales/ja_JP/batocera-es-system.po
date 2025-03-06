@@ -13523,11 +13523,6 @@ msgid ""
 "29."
 msgstr "古いBatocera(29より前)で実行していた場合、修正されることがあります"
 
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Reset the table, sometimes required for PinMame"
-msgstr "リセット (PinMame)"
-
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Resize automatically the screen. AUTO = Off."
@@ -18720,6 +18715,10 @@ msgstr "黄/青"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "画面の高さを自動的に変更します"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset the table, sometimes required for PinMame"
+#~ msgstr "リセット (PinMame)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Restart Emulation"

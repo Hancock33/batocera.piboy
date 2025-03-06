@@ -1339,12 +1339,12 @@ msgstr "386DX, 33MHz (7800 cps)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "386_prefetch"
-msgstr ""
+msgstr "386_prefetch"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "386_slow"
-msgstr ""
+msgstr "386_lento"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -1489,7 +1489,7 @@ msgstr "486DX2, 66MHz (26800 cps)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "486_slow"
-msgstr ""
+msgstr "486_lento"
 
 #. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, xenia, xenia-canary
 msgctxt "game_options"
@@ -2354,12 +2354,12 @@ msgstr "Cartuccie APF M-1000"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS-BIOS.ROM"
-msgstr ""
+msgstr "APPLE2GS-BIOS.ROM"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS.ROM"
-msgstr ""
+msgstr "APPLE2GS.ROM"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -2494,7 +2494,7 @@ msgstr "GUADAGNO VOLUME AUDIO"
 #. TRANSLATION: dosbox, dosbox, dosbox
 msgctxt "game_options"
 msgid "AUTO"
-msgstr ""
+msgstr "AUTO"
 
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
@@ -2862,7 +2862,7 @@ msgstr "Tutti i Bordi"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "All Timers"
-msgstr ""
+msgstr "Tutti i Timers"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -2972,7 +2972,7 @@ msgstr "Inglese Americano"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Amount of instructions DOSBox tries to emulate"
-msgstr ""
+msgstr "Numero di istruzioni che DOSBox prova a emulare"
 
 #. TRANSLATION: yabasanshiro, yabasanshiro
 msgctxt "game_options"
@@ -3249,12 +3249,12 @@ msgstr "Freccie 3bottoni"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "As Host (Default)"
-msgstr ""
+msgstr "Come Host (Default)"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "As Is"
-msgstr "Come Is"
+msgstr "Come E'"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -3682,7 +3682,7 @@ msgstr "BT601_625/D65 (raccomandato per tutto i giochi sviluppati EUR/AUS)"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Back / Menu"
-msgstr ""
+msgstr "Indietro / Menu"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -4559,12 +4559,12 @@ msgstr "METODO CORE CPU"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU CYCLES"
-msgstr ""
+msgstr "CICLI CPU"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Core used in emulation"
-msgstr ""
+msgstr "Core CPU usato in emulazione"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -4599,7 +4599,7 @@ msgstr "TIPOLOGIA CPU"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Type used in emulation"
-msgstr ""
+msgstr "Tipo CPU usata in emulazione"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -5022,6 +5022,8 @@ msgid ""
 "Changes the sleep period accuracy. Some games need this set to improve "
 "performance."
 msgstr ""
+"Cambia l'accuratezza dei periodi di riposo. Alcuni giochi lo necessinato "
+"permigliorare la performance."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -5230,7 +5232,7 @@ msgstr ""
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "Choose which BIOS file for GSplus to boot with."
-msgstr ""
+msgstr "Scegli quale file BIOS usare per avviare GSplus."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -5644,7 +5646,7 @@ msgstr "Croce"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Crouch"
-msgstr ""
+msgstr "Accucciati"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -6392,7 +6394,7 @@ msgstr "Driving Force Pro"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Drop item"
-msgstr ""
+msgstr "Abbandona oggetto"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -6448,7 +6450,7 @@ msgstr "Olandese (nl)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Dynamic"
-msgstr ""
+msgstr "Dinamico"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -6703,7 +6705,7 @@ msgstr "EVDEV (Default)"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "EXPANSION PACK"
-msgstr ""
+msgstr "PACCO D'ESTENSIONE"
 
 #. TRANSLATION: vpinball, vpinball
 msgctxt "game_options"
@@ -7956,7 +7958,7 @@ msgstr "Interprete Veloce"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Fast forward"
-msgstr ""
+msgstr "Avanzamento rapido"
 
 #. TRANSLATION: flycast
 #, c-format
@@ -8793,7 +8795,7 @@ msgstr "RENDERER GRAFICO"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "GSPLUS BIOS FILENAME"
-msgstr ""
+msgstr "NOME FILE BIOS GSPLUS"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9301,7 +9303,7 @@ msgstr "Aiuto e Informazioni"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Help computer"
-msgstr ""
+msgstr "Help computer"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -9811,7 +9813,7 @@ msgstr "Fix Battaglia Sengoku InuYasha"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Inventory"
-msgstr ""
+msgstr "Inventario"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10070,7 +10072,7 @@ msgstr "Luglio"
 #. TRANSLATION: omf2097.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
-msgstr ""
+msgstr "Salta"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10599,12 +10601,12 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look down"
-msgstr ""
+msgstr "Guarda giu"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look up"
-msgstr ""
+msgstr "Guarda su"
 
 #. TRANSLATION: amiberry, libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus, ...
 msgctxt "game_options"
@@ -10995,7 +10997,7 @@ msgstr "Adatta alla finestra"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Max"
-msgstr ""
+msgstr "Massimo"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -11358,7 +11360,7 @@ msgstr "Muovi il puntatore Stylet"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move back / down"
-msgstr ""
+msgstr "Indietreggia / giu"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11393,7 +11395,7 @@ msgstr "Avanza"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move forward / up"
-msgstr ""
+msgstr "Avanza / su"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11755,17 +11757,17 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next item"
-msgstr ""
+msgstr "Prossimo oggetto"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Next slot"
-msgstr ""
+msgstr "Prosslimo slot"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next weapon"
-msgstr ""
+msgstr "Prossima arma"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -13073,12 +13075,12 @@ msgstr "Premi il tasto Y per 'Accetta'"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Previous item"
-msgstr ""
+msgstr "Oggetto precedente"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Previous slot"
-msgstr ""
+msgstr "Slot precedente"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -13347,17 +13349,17 @@ msgstr "ROM (Slot 4)"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.00"
-msgstr ""
+msgstr "ROM.00"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.03 (default)"
-msgstr ""
+msgstr "ROM.03 (default)"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM1"
-msgstr ""
+msgstr "ROM1"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -13596,7 +13598,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Reset"
-msgstr ""
+msgstr "Reset"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13606,11 +13608,6 @@ msgid ""
 msgstr ""
 "Resettare la cache può risolvere alcuni blocchi se il gioco stava girando in "
 "Batocera 29."
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Reset the table, sometimes required for PinMame"
-msgstr "Resetta il tavolo, a volte necessario per PinMame"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -13630,7 +13627,7 @@ msgstr "Ripristina controno BLENDMODE sui singoli sprite."
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Restore state"
-msgstr ""
+msgstr "Ripristina stato"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -13790,7 +13787,7 @@ msgstr "Corri"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "Run the Unfinished expansion pack."
-msgstr ""
+msgstr "Avvia il pacco d'estensione unificato."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14109,7 +14106,7 @@ msgstr "SALTA IL MENU START"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "SLEEP TIMERS ACCURACY"
-msgstr ""
+msgstr "ACCURATEZZA TIMERS DI RIPOSO"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -14399,7 +14396,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Save state"
-msgstr ""
+msgstr "Salva stato"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -16418,7 +16415,7 @@ msgstr "Cinese tradizionale"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Translate"
-msgstr ""
+msgstr "Traduci"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -17015,7 +17012,7 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Use item"
-msgstr ""
+msgstr "Usa oggetto"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -17148,7 +17145,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Usleep Only"
-msgstr ""
+msgstr "Solo Usleep"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17538,7 +17535,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "WRITE DEPTH BUFFERS"
-msgstr ""
+msgstr "SCRIVI PROFONDITA' BUFFERS"
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -17713,6 +17710,8 @@ msgid ""
 "Writes depth buffer values to VM memory. Some games need this to fix broken "
 "graphics."
 msgstr ""
+"Scrive valori di profondita' buffer nella memoria VM. Alcuni giochi lo "
+"richiedono per aggiustare problemi grafici."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -18128,7 +18127,7 @@ msgstr "Gameboy originale"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "pentium_slow"
-msgstr ""
+msgstr "pentium_lento"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -19290,6 +19289,10 @@ msgstr "giallo/blu"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Ridimensiona automaticamente l'altezza video"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset the table, sometimes required for PinMame"
+#~ msgstr "Resetta il tavolo, a volte necessario per PinMame"
 
 #~ msgctxt "keys_files"
 #~ msgid "Restart Emulation"

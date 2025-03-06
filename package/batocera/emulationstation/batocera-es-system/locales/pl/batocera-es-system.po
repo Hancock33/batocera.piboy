@@ -13646,11 +13646,6 @@ msgstr ""
 "Zresetowanie pamięci podręcznej może naprawić niektóre awarie, jeśli gra "
 "działała pod kontrolą Batocera 29."
 
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Reset the table, sometimes required for PinMame"
-msgstr "Zresetuj tabelę, czasami wymagane dla PinMame"
-
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Resize automatically the screen. AUTO = Off."
@@ -20239,6 +20234,10 @@ msgstr "żółty/niebieski"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Automatycznie zmieniaj wysokość ekranu."
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset the table, sometimes required for PinMame"
+#~ msgstr "Zresetuj tabelę, czasami wymagane dla PinMame"
 
 #~ msgctxt "keys_files"
 #~ msgid "Restart Emulation"

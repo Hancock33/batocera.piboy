@@ -60,7 +60,7 @@
 - ETLegacy to v2.83.2
 - Jazz2 to 3.2.0
 - GroovyMAME to 0.274
-- Gzdoom to g4.14.0
+- Gzdoom to g4.14.1
 - Libretro-Kronos to 2.7.0
 - Libretro-MAME to 0.274
 - Libretro-Play! 4th Feb build
@@ -70,7 +70,7 @@
 - ScummVM to v2.9.0
 - PCSX2 to v2.3.185
 - Play! to 4th Feb build
-- Xemu to v0.8.20
+- Xemu to v0.8.23
 - Triforce to use a Crediar build (Nov 29, 2024)
 - Vice to 3.9
 - TheXTech to v1.3.7-hotfix2

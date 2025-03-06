@@ -13601,11 +13601,6 @@ msgstr ""
 "Сброс кэша может исправить некоторые сбои, если ваша игра работала под "
 "управлением Batocera 29."
 
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Reset the table, sometimes required for PinMame"
-msgstr "Сброс таблицы, иногда требуется для PinMame"
-
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Resize automatically the screen. AUTO = Off."
@@ -19988,6 +19983,10 @@ msgstr "жёлтая/синяя"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Автоматически изменяет размер экрана по высоте."
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset the table, sometimes required for PinMame"
+#~ msgstr "Сброс таблицы, иногда требуется для PinMame"
 
 #~ msgctxt "keys_files"
 #~ msgid "Restart Emulation"

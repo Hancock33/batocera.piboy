@@ -13464,11 +13464,6 @@ msgstr ""
 "Obnovením vyrovnávacej pamäte môžete opraviť niektoré zlyhania, ak vaša hra "
 "bežala pod Batocera 29."
 
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Reset the table, sometimes required for PinMame"
-msgstr "Vynulovať tabuľku, niekedy potrebné pre PinMame"
-
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Resize automatically the screen. AUTO = Off."
@@ -19007,6 +19002,10 @@ msgstr "žltá/modrá"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Automaticky zmeniť výšku obrazovky."
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset the table, sometimes required for PinMame"
+#~ msgstr "Vynulovať tabuľku, niekedy potrebné pre PinMame"
 
 #~ msgctxt "keys_files"
 #~ msgid "Restart Emulation"

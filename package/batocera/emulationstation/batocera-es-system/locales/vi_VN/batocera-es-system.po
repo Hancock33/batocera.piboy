@@ -13599,11 +13599,6 @@ msgstr ""
 "Đặt lại bộ đệm có thể khắc phục một số sự cố nếu trò chơi của bạn chạy trên "
 "Batocera 29."
 
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Reset the table, sometimes required for PinMame"
-msgstr "Đặt lại bảng, đôi khi cần thiết cho PinMame"
-
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Resize automatically the screen. AUTO = Off."
@@ -18840,6 +18835,10 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Tự động thay đổi kích thước chiều cao màn hình."
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset the table, sometimes required for PinMame"
+#~ msgstr "Đặt lại bảng, đôi khi cần thiết cho PinMame"
 
 #~ msgctxt "keys_files"
 #~ msgid "Restart Emulation"
