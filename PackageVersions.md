@@ -309,7 +309,7 @@ Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|3a16bd016f53387
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|660bba39805585fb39d37d49b8268073932696bb|Mar 04, 2025
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2025.01|Jan 31, 2025
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|a744af14d4afbda77bf472bc53f43b9ceba39cc0|Dec 28, 2024
-Gpu|[glslang](http://github.com/KhronosGroup/glslang)|99ee11b0106b48f06fb9e2a324ba928b8316cc33|Feb 28, 2024
+Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.4.304.1|Dec 16, 2024
 Gpu|[img-gpu-powervr](https://github.com/starfive-tech/soft_3rdpart/raw/JH7110_VisionFive2_devel/IMG_GPU/out)|bc96eed2b3cabee24a6a14692da4c80914da3f18|Dec 26, 2024
 Gpu|[img-mesa3d](https://archive.mesa3d.org)|22.1.3|Jun 29, 2022
 Gpu|[mali-g31-gbm](https://github.com/batocera-linux/rockchip-packages/releases)|ad4c28932c3d07c75fc41dd4a3333f9013a25e7f|Jun 11, 2021
@@ -328,12 +328,12 @@ Gpu|[nvidia470-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|470.
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.5|Apr 23, 2024
 Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|8e2a51b1c3e5b569aabc0b476f36550c1f332c41|Aug 29, 2024
 Gpu|[shaderc](http://github.com/google/shaderc)|v2025.1|Feb 27, 2025
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|2c32b6bf86f3c4a5539aa1f0bacbd59fe61759cf|Feb 18, 2025
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.4.304.1|Dec 12, 2024
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|fc65b19d2098cf81e55b4edc10adad2ad8268361|Feb 02, 2025
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|43c23e56dab295e2e83903c69053927afbddac45|Feb 25, 2025
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|$(VULKAN_HEADERS_VERSION)|Feb 21, 2025
-Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|$(VULKAN_HEADERS_VERSION)|Feb 21, 2025
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|58689c063427f5bad4f133625049b1a3c5dd8287|Feb 21, 2025
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.4.304.1|Dec 20, 2024
+Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.4.304.1|Jan 15, 2025
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.4.304.1|Dec 20, 2024
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.4|Dec 06, 2024
 Hardware|[ayn-platform](http://github.com/ShadowBlip/ayn-platform)|v0.5.2|Jul 29, 2024
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|923de3203a000f8d8ffefb5ca15d296eb5d3c425|Oct 25, 2024
@@ -453,7 +453,7 @@ Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|e65a3860752aa5f6d2f0
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|72d808cc4d6db5d38e5d87ab95ab0b1bcfd89ede|Nov 24, 2024
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|1338b8bb7940e0e05facf8beadb4d9e67b294ea0|Mar 07, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250306|Mar 06, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250307|Mar 07, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14198|Feb 25, 2025
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|0.7.0|Jan 18, 2025
@@ -554,5 +554,5 @@ Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
 Wine|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0|Jan 21, 2025
 Wine|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-9.0-4c|Dec 23, 2024
 Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250306|Mar 06, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250307|Mar 07, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|e73c4d8f71801fe842c0276b603d9c8024d6d957|Feb 07, 2025
