@@ -12,7 +12,7 @@ LIBRETRO_MESEN_DEPENDENCIES = retroarch
 define LIBRETRO_MESEN_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Libretro/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
-	LTO="" GIT_VERSION="-$(shell echo $(LIBRETRO_MESEN_VERSION) | cut -c 1-7)" -C $(@D)/Libretro -f Makefile
+	    GIT_VERSION="" -C $(@D)/Libretro -f Makefile
 endef
 
 define LIBRETRO_MESEN_INSTALL_TARGET_CMDS
