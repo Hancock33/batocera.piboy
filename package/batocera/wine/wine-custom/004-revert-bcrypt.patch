@@ -1,0 +1,948 @@
+diff --git a/dlls/bcrypt/Makefile.in b/dlls/bcrypt/Makefile.in
+index a672ac8a3c9..542837b2a7a 100644
+--- a/dlls/bcrypt/Makefile.in
++++ b/dlls/bcrypt/Makefile.in
+@@ -1,11 +1,13 @@
+ MODULE    = bcrypt.dll
++IMPORTS   = advapi32
+ IMPORTLIB = bcrypt
+-IMPORTS   = $(TOMCRYPT_PE_LIBS) advapi32
+-EXTRAINCL = $(TOMCRYPT_PE_CFLAGS)
+ UNIXLIB   = bcrypt.so
+ UNIX_CFLAGS = $(GNUTLS_CFLAGS)
+ 
+ SOURCES = \
+ 	bcrypt_main.c \
+ 	gnutls.c \
++	md2.c \
++	sha256.c \
++	sha512.c \
+ 	version.rc
+diff --git a/dlls/bcrypt/bcrypt_internal.h b/dlls/bcrypt/bcrypt_internal.h
+index 20c9a2912a5..81cab56e2f5 100644
+--- a/dlls/bcrypt/bcrypt_internal.h
++++ b/dlls/bcrypt/bcrypt_internal.h
+@@ -32,6 +32,77 @@
+ #define MAGIC_DSS1 ('D' | ('S' << 8) | ('S' << 16) | ('1' << 24))
+ #define MAGIC_DSS2 ('D' | ('S' << 8) | ('S' << 16) | ('2' << 24))
+ 
++typedef struct
++{
++    ULONG64 len;
++    DWORD h[8];
++    UCHAR buf[64];
++} SHA256_CTX;
++
++void sha256_init(SHA256_CTX *ctx);
++void sha256_update(SHA256_CTX *ctx, const UCHAR *buffer, ULONG len);
++void sha256_finalize(SHA256_CTX *ctx, UCHAR *buffer);
++
++typedef struct
++{
++  ULONG64 len;
++  ULONG64 h[8];
++  UCHAR buf[128];
++} SHA512_CTX;
++
++void sha512_init(SHA512_CTX *ctx);
++void sha512_update(SHA512_CTX *ctx, const UCHAR *buffer, ULONG len);
++void sha512_finalize(SHA512_CTX *ctx, UCHAR *buffer);
++
++void sha384_init(SHA512_CTX *ctx);
++#define sha384_update sha512_update
++void sha384_finalize(SHA512_CTX *ctx, UCHAR *buffer);
++
++typedef struct {
++    unsigned char chksum[16], X[48], buf[16];
++    unsigned long curlen;
++} MD2_CTX;
++
++void md2_init(MD2_CTX *ctx);
++void md2_update(MD2_CTX *ctx, const unsigned char *buf, ULONG len);
++void md2_finalize(MD2_CTX *ctx, unsigned char *hash);
++
++/* Definitions from advapi32 */
++typedef struct tagMD4_CTX {
++    unsigned int buf[4];
++    unsigned int i[2];
++    unsigned char in[64];
++    unsigned char digest[16];
++} MD4_CTX;
++
++VOID WINAPI MD4Init(MD4_CTX *ctx);
++VOID WINAPI MD4Update(MD4_CTX *ctx, const unsigned char *buf, unsigned int len);
++VOID WINAPI MD4Final(MD4_CTX *ctx);
++
++typedef struct
++{
++    unsigned int i[2];
++    unsigned int buf[4];
++    unsigned char in[64];
++    unsigned char digest[16];
++} MD5_CTX;
++
++VOID WINAPI MD5Init(MD5_CTX *ctx);
++VOID WINAPI MD5Update(MD5_CTX *ctx, const unsigned char *buf, unsigned int len);
++VOID WINAPI MD5Final(MD5_CTX *ctx);
++
++typedef struct
++{
++   ULONG Unknown[6];
++   ULONG State[5];
++   ULONG Count[2];
++   UCHAR Buffer[64];
++} SHA_CTX;
++
++VOID WINAPI A_SHAInit(SHA_CTX *ctx);
++VOID WINAPI A_SHAUpdate(SHA_CTX *ctx, const UCHAR *buffer, UINT size);
++VOID WINAPI A_SHAFinal(SHA_CTX *ctx, PULONG result);
++
+ #define MAGIC_ALG  (('A' << 24) | ('L' << 16) | ('G' << 8) | '0')
+ #define MAGIC_HASH (('H' << 24) | ('A' << 16) | ('S' << 8) | 'H')
+ #define MAGIC_KEY  (('K' << 24) | ('E' << 16) | ('Y' << 8) | '0')
+diff --git a/dlls/bcrypt/bcrypt_main.c b/dlls/bcrypt/bcrypt_main.c
+index ec1004760f0..3d88430a07e 100644
+--- a/dlls/bcrypt/bcrypt_main.c
++++ b/dlls/bcrypt/bcrypt_main.c
+@@ -29,7 +29,6 @@
+ #include "wincrypt.h"
+ #include "winternl.h"
+ #include "bcrypt.h"
+-#include "tomcrypt.h"
+ 
+ #include "wine/debug.h"
+ #include "bcrypt_internal.h"
+@@ -428,21 +427,136 @@ NTSTATUS WINAPI BCryptGetFipsAlgorithmMode(BOOLEAN *enabled)
+     return STATUS_SUCCESS;
+ }
+ 
+-static const struct ltc_hash_descriptor *get_hash_descriptor( enum alg_id alg_id )
++struct hash_impl
++{
++    union
++    {
++        MD2_CTX md2;
++        MD4_CTX md4;
++        MD5_CTX md5;
++        SHA_CTX sha1;
++        SHA256_CTX sha256;
++        SHA512_CTX sha512;
++    } u;
++};
++
++static NTSTATUS hash_init( struct hash_impl *hash, enum alg_id alg_id )
+ {
+     switch (alg_id)
+     {
+-    case ALG_ID_MD2: return &md2_desc;
+-    case ALG_ID_MD4: return &md4_desc;
+-    case ALG_ID_MD5: return &md5_desc;
+-    case ALG_ID_SHA1: return &sha1_desc;
+-    case ALG_ID_SHA256: return &sha256_desc;
+-    case ALG_ID_SHA384: return &sha384_desc;
+-    case ALG_ID_SHA512: return &sha512_desc;
++    case ALG_ID_MD2:
++        md2_init( &hash->u.md2 );
++        break;
++
++    case ALG_ID_MD4:
++        MD4Init( &hash->u.md4 );
++        break;
++
++    case ALG_ID_MD5:
++        MD5Init( &hash->u.md5 );
++        break;
++
++    case ALG_ID_SHA1:
++        A_SHAInit( &hash->u.sha1 );
++        break;
++
++    case ALG_ID_SHA256:
++        sha256_init( &hash->u.sha256 );
++        break;
++
++    case ALG_ID_SHA384:
++        sha384_init( &hash->u.sha512 );
++        break;
++
++    case ALG_ID_SHA512:
++        sha512_init( &hash->u.sha512 );
++        break;
++
+     default:
+         ERR( "unhandled id %u\n", alg_id );
+-        return NULL;
++        return STATUS_NOT_IMPLEMENTED;
++    }
++    return STATUS_SUCCESS;
++}
++
++static NTSTATUS hash_update( struct hash_impl *hash, enum alg_id alg_id, UCHAR *input, ULONG size )
++{
++    switch (alg_id)
++    {
++    case ALG_ID_MD2:
++        md2_update( &hash->u.md2, input, size );
++        break;
++
++    case ALG_ID_MD4:
++        MD4Update( &hash->u.md4, input, size );
++        break;
++
++    case ALG_ID_MD5:
++        MD5Update( &hash->u.md5, input, size );
++        break;
++
++    case ALG_ID_SHA1:
++        A_SHAUpdate( &hash->u.sha1, input, size );
++        break;
++
++    case ALG_ID_SHA256:
++        sha256_update( &hash->u.sha256, input, size );
++        break;
++
++    case ALG_ID_SHA384:
++        sha384_update( &hash->u.sha512, input, size );
++        break;
++
++    case ALG_ID_SHA512:
++        sha512_update( &hash->u.sha512, input, size );
++        break;
++
++    default:
++        ERR( "unhandled id %u\n", alg_id );
++        return STATUS_NOT_IMPLEMENTED;
++    }
++    return STATUS_SUCCESS;
++}
++
++static NTSTATUS hash_finish( struct hash_impl *hash, enum alg_id alg_id, UCHAR *output )
++{
++    switch (alg_id)
++    {
++    case ALG_ID_MD2:
++        md2_finalize( &hash->u.md2, output );
++        break;
++
++    case ALG_ID_MD4:
++        MD4Final( &hash->u.md4 );
++        memcpy( output, hash->u.md4.digest, 16 );
++        break;
++
++    case ALG_ID_MD5:
++        MD5Final( &hash->u.md5 );
++        memcpy( output, hash->u.md5.digest, 16 );
++        break;
++
++    case ALG_ID_SHA1:
++        A_SHAFinal( &hash->u.sha1, (ULONG *)output );
++        break;
++
++    case ALG_ID_SHA256:
++        sha256_finalize( &hash->u.sha256, output );
++        break;
++
++    case ALG_ID_SHA384:
++        sha384_finalize( &hash->u.sha512, output );
++        break;
++
++    case ALG_ID_SHA512:
++        sha512_finalize( &hash->u.sha512, output );
++        break;
++
++    default:
++        ERR( "unhandled id %u\n", alg_id );
++        return STATUS_NOT_IMPLEMENTED;
+     }
++    return STATUS_SUCCESS;
+ }
+ 
+ #define HASH_FLAG_HMAC      0x01
+@@ -451,12 +565,11 @@ struct hash
+ {
+     struct object     hdr;
+     enum alg_id       alg_id;
+-    const struct ltc_hash_descriptor *desc;
+     ULONG             flags;
+     UCHAR            *secret;
+     ULONG             secret_len;
+-    hash_state        outer;
+-    hash_state        inner;
++    struct hash_impl  outer;
++    struct hash_impl  inner;
+ };
+ 
+ #define BLOCK_LENGTH_RC4        1
+@@ -886,44 +999,43 @@ NTSTATUS WINAPI BCryptGetProperty( BCRYPT_HANDLE handle, const WCHAR *prop, UCHA
+     }
+ }
+ 
+-static void hash_prepare( struct hash *hash )
++static NTSTATUS hash_prepare( struct hash *hash )
+ {
+     UCHAR buffer[MAX_HASH_BLOCK_BITS / 8] = {0};
+     int block_bytes, i;
++    NTSTATUS status;
+ 
+     /* initialize hash */
+-    hash->desc->init( &hash->inner );
+-    if (!(hash->flags & HASH_FLAG_HMAC)) return;
++    if ((status = hash_init( &hash->inner, hash->alg_id ))) return status;
++    if (!(hash->flags & HASH_FLAG_HMAC)) return STATUS_SUCCESS;
+ 
+     /* initialize hmac */
+-    hash->desc->init( &hash->outer );
+-    block_bytes = hash->desc->blocksize;
++    if ((status = hash_init( &hash->outer, hash->alg_id ))) return status;
++    block_bytes = builtin_algorithms[hash->alg_id].block_bits / 8;
+     if (hash->secret_len > block_bytes)
+     {
+-        hash_state temp;
+-        hash->desc->init( &temp );
+-        hash->desc->process( &temp, hash->secret, hash->secret_len );
+-        hash->desc->done( &temp, buffer );
++        struct hash_impl temp;
++        if ((status = hash_init( &temp, hash->alg_id ))) return status;
++        if ((status = hash_update( &temp, hash->alg_id, hash->secret, hash->secret_len ))) return status;
++        if ((status = hash_finish( &temp, hash->alg_id, buffer ))) return status;
+     }
+     else memcpy( buffer, hash->secret, hash->secret_len );
+ 
+     for (i = 0; i < block_bytes; i++) buffer[i] ^= 0x5c;
+-    hash->desc->process( &hash->outer, buffer, block_bytes );
++    if ((status = hash_update( &hash->outer, hash->alg_id, buffer, block_bytes ))) return status;
+     for (i = 0; i < block_bytes; i++) buffer[i] ^= (0x5c ^ 0x36);
+-    hash->desc->process( &hash->inner, buffer, block_bytes );
++    return hash_update( &hash->inner, hash->alg_id, buffer, block_bytes );
+ }
+ 
+ static NTSTATUS hash_create( const struct algorithm *alg, UCHAR *secret, ULONG secret_len, ULONG flags,
+                              struct hash **ret_hash )
+ {
+     struct hash *hash;
+-    const struct ltc_hash_descriptor *desc = get_hash_descriptor( alg->id );
++    NTSTATUS status;
+ 
+-    if (!desc) return STATUS_NOT_IMPLEMENTED;
+     if (!(hash = calloc( 1, sizeof(*hash) ))) return STATUS_NO_MEMORY;
+     hash->hdr.magic = MAGIC_HASH;
+     hash->alg_id    = alg->id;
+-    hash->desc      = desc;
+     if (alg->flags & BCRYPT_ALG_HANDLE_HMAC_FLAG) hash->flags = HASH_FLAG_HMAC;
+     if ((alg->flags & BCRYPT_HASH_REUSABLE_FLAG) || (flags & BCRYPT_HASH_REUSABLE_FLAG))
+         hash->flags |= HASH_FLAG_REUSABLE;
+@@ -936,7 +1048,13 @@ static NTSTATUS hash_create( const struct algorithm *alg, UCHAR *secret, ULONG s
+     memcpy( hash->secret, secret, secret_len );
+     hash->secret_len = secret_len;
+ 
+-    hash_prepare( hash );
++    if ((status = hash_prepare( hash )))
++    {
++        free( hash->secret );
++        free( hash );
++        return status;
++    }
++
+     *ret_hash = hash;
+     return STATUS_SUCCESS;
+ }
+@@ -1019,26 +1137,28 @@ NTSTATUS WINAPI BCryptHashData( BCRYPT_HASH_HANDLE handle, UCHAR *input, ULONG s
+     if (!hash) return STATUS_INVALID_HANDLE;
+     if (!input) return STATUS_SUCCESS;
+ 
+-    if (hash->desc->process( &hash->inner, input, size )) return STATUS_INVALID_PARAMETER;
+-    return STATUS_SUCCESS;
++    return hash_update( &hash->inner, hash->alg_id, input, size );
+ }
+ 
+-static void hash_finalize( struct hash *hash, UCHAR *output )
++static NTSTATUS hash_finalize( struct hash *hash, UCHAR *output )
+ {
+     UCHAR buffer[MAX_HASH_OUTPUT_BYTES];
++    ULONG hash_length = builtin_algorithms[hash->alg_id].hash_length;
++    NTSTATUS status;
+ 
+     if (!(hash->flags & HASH_FLAG_HMAC))
+     {
+-        hash->desc->done( &hash->inner, output );
+-        if (hash->flags & HASH_FLAG_REUSABLE) hash_prepare( hash );
+-        return;
++        if ((status = hash_finish( &hash->inner, hash->alg_id, output ))) return status;
++        if (hash->flags & HASH_FLAG_REUSABLE) return hash_prepare( hash );
++        return STATUS_SUCCESS;
+     }
+ 
+-    hash->desc->done( &hash->inner, buffer );
+-    hash->desc->process( &hash->outer, buffer, hash->desc->hashsize );
+-    hash->desc->done( &hash->outer, output );
++    if ((status = hash_finish( &hash->inner, hash->alg_id, buffer ))) return status;
++    if ((status = hash_update( &hash->outer, hash->alg_id, buffer, hash_length ))) return status;
++    if ((status = hash_finish( &hash->outer, hash->alg_id, output ))) return status;
+ 
+-    if (hash->flags & HASH_FLAG_REUSABLE) hash_prepare( hash );
++    if (hash->flags & HASH_FLAG_REUSABLE) return hash_prepare( hash );
++    return STATUS_SUCCESS;
+ }
+ 
+ NTSTATUS WINAPI BCryptFinishHash( BCRYPT_HASH_HANDLE handle, UCHAR *output, ULONG size, ULONG flags )
+@@ -1048,10 +1168,9 @@ NTSTATUS WINAPI BCryptFinishHash( BCRYPT_HASH_HANDLE handle, UCHAR *output, ULON
+     TRACE( "%p, %p, %lu, %#lx\n", handle, output, size, flags );
+ 
+     if (!hash) return STATUS_INVALID_HANDLE;
+-    if (!output || size != hash->desc->hashsize) return STATUS_INVALID_PARAMETER;
++    if (!output || size != builtin_algorithms[hash->alg_id].hash_length) return STATUS_INVALID_PARAMETER;
+ 
+-    hash_finalize( hash, output );
+-    return STATUS_SUCCESS;
++    return hash_finalize( hash, output );
+ }
+ 
+ static NTSTATUS hash_single( struct algorithm *alg, UCHAR *secret, ULONG secret_len, UCHAR *input, ULONG input_len,
+@@ -1061,14 +1180,14 @@ static NTSTATUS hash_single( struct algorithm *alg, UCHAR *secret, ULONG secret_
+     NTSTATUS status;
+ 
+     if ((status = hash_create( alg, secret, secret_len, 0, &hash ))) return status;
+-    if (input_len && hash->desc->process( &hash->inner, input, input_len ))
++    if ((status = hash_update( &hash->inner, hash->alg_id, input, input_len )))
+     {
+         hash_destroy( hash );
+-        return STATUS_INVALID_PARAMETER;
++        return status;
+     }
+-    hash_finalize( hash, output );
++    status = hash_finalize( hash, output );
+     hash_destroy( hash );
+-    return STATUS_SUCCESS;
++    return status;
+ }
+ 
+ NTSTATUS WINAPI BCryptHash( BCRYPT_ALG_HANDLE handle, UCHAR *secret, ULONG secret_len, UCHAR *input, ULONG input_len,
+@@ -2249,22 +2368,23 @@ NTSTATUS WINAPI BCryptDeriveKeyCapi( BCRYPT_HASH_HANDLE handle, BCRYPT_ALG_HANDL
+ {
+     struct hash *hash = get_hash_object( handle );
+     UCHAR buf[MAX_HASH_OUTPUT_BYTES * 2];
++    NTSTATUS status;
+     ULONG len;
+ 
+     TRACE( "%p, %p, %p, %lu, %#lx\n", handle, halg, key, keylen, flags );
+ 
+     if (!hash) return STATUS_INVALID_HANDLE;
+     if (!key || !keylen) return STATUS_INVALID_PARAMETER;
+-    if (keylen > hash->desc->hashsize * 2) return STATUS_INVALID_PARAMETER;
++    if (keylen > builtin_algorithms[hash->alg_id].hash_length * 2) return STATUS_INVALID_PARAMETER;
+     if (halg)
+     {
+         FIXME( "algorithm handle not supported\n" );
+         return STATUS_NOT_IMPLEMENTED;
+     }
+ 
+-    hash_finalize( hash, buf );
++    if ((status = hash_finalize( hash, buf ))) return status;
+ 
+-    len = hash->desc->hashsize;
++    len = builtin_algorithms[hash->alg_id].hash_length;
+     if (len < keylen)
+     {
+         UCHAR pad1[HMAC_PAD_LEN], pad2[HMAC_PAD_LEN];
+@@ -2276,14 +2396,15 @@ NTSTATUS WINAPI BCryptDeriveKeyCapi( BCRYPT_HASH_HANDLE handle, BCRYPT_ALG_HANDL
+             pad2[i] = 0x5c ^ (i < len ? buf[i] : 0);
+         }
+ 
+-        hash_prepare( hash );
+-        hash->desc->process( &hash->inner, pad1, sizeof(pad1) );
+-        hash_finalize( hash, buf );
++        if ((status = hash_prepare( hash )) ||
++            (status = hash_update( &hash->inner, hash->alg_id, pad1, sizeof(pad1) )) ||
++            (status = hash_finalize( hash, buf ))) return status;
+ 
+-        hash_prepare( hash );
+-        hash->desc->process( &hash->inner, pad2, sizeof(pad2) );
+-        hash_finalize( hash, buf + len );
++        if ((status = hash_prepare( hash )) ||
++            (status = hash_update( &hash->inner, hash->alg_id, pad2, sizeof(pad2) )) ||
++            (status = hash_finalize( hash, buf + len ))) return status;
+     }
++
+     memcpy( key, buf, keylen );
+     return STATUS_SUCCESS;
+ }
+@@ -2291,10 +2412,10 @@ NTSTATUS WINAPI BCryptDeriveKeyCapi( BCRYPT_HASH_HANDLE handle, BCRYPT_ALG_HANDL
+ static NTSTATUS pbkdf2( struct hash *hash, UCHAR *pwd, ULONG pwd_len, UCHAR *salt, ULONG salt_len,
+                         ULONGLONG iterations, ULONG i, UCHAR *dst, ULONG hash_len )
+ {
++    NTSTATUS status = STATUS_INVALID_PARAMETER;
+     UCHAR bytes[4], *buf;
+     ULONG j, k;
+ 
+-    if (!iterations) return STATUS_INVALID_PARAMETER;
+     if (!(buf = malloc( hash_len ))) return STATUS_NO_MEMORY;
+ 
+     for (j = 0; j < iterations; j++)
+@@ -2302,26 +2423,37 @@ static NTSTATUS pbkdf2( struct hash *hash, UCHAR *pwd, ULONG pwd_len, UCHAR *sal
+         if (j == 0)
+         {
+             /* use salt || INT(i) */
+-            if (hash->desc->process( &hash->inner, salt, salt_len ))
++            if ((status = hash_update( &hash->inner, hash->alg_id, salt, salt_len )))
+             {
+                 free( buf );
+-                return STATUS_INVALID_PARAMETER;
++                return status;
+             }
+             bytes[0] = (i >> 24) & 0xff;
+             bytes[1] = (i >> 16) & 0xff;
+             bytes[2] = (i >> 8) & 0xff;
+             bytes[3] = i & 0xff;
+-            hash->desc->process( &hash->inner, bytes, 4 );
++            status = hash_update( &hash->inner, hash->alg_id, bytes, 4 );
++        }
++        else status = hash_update( &hash->inner, hash->alg_id, buf, hash_len ); /* use U_j */
++
++        if (status)
++        {
++            free( buf );
++            return status;
++        }
++
++        if ((status = hash_finalize( hash, buf )))
++        {
++            free( buf );
++            return status;
+         }
+-        else hash->desc->process( &hash->inner, buf, hash_len ); /* use U_j */
+ 
+-        hash_finalize( hash, buf );
+         if (j == 0) memcpy( dst, buf, hash_len );
+         else for (k = 0; k < hash_len; k++) dst[k] ^= buf[k];
+     }
+ 
+     free( buf );
+-    return STATUS_SUCCESS;
++    return status;
+ }
+ 
+ static NTSTATUS derive_key_pbkdf2( struct algorithm *alg, UCHAR *pwd, ULONG pwd_len, UCHAR *salt, ULONG salt_len,
+diff --git a/dlls/rsaenh/Makefile.in b/dlls/rsaenh/Makefile.in
+index 18fbb0fba20..b7a2e3d7f29 100644
+--- a/dlls/rsaenh/Makefile.in
++++ b/dlls/rsaenh/Makefile.in
+@@ -1,10 +1,15 @@
+ MODULE    = rsaenh.dll
+ IMPORTLIB = rsaenh
+-IMPORTS   = $(TOMCRYPT_PE_LIBS) bcrypt crypt32 advapi32
+-EXTRAINCL = $(TOMCRYPT_PE_CFLAGS)
++IMPORTS   = bcrypt crypt32 advapi32
+ 
+ SOURCES = \
++	aes.c \
++	des.c \
+ 	handle.c \
+ 	implglue.c \
++	mpi.c \
++	rc2.c \
++	rc4.c \
++	rsa.c \
+ 	rsaenh.c \
+ 	rsrc.rc
+diff --git a/dlls/rsaenh/implglue.c b/dlls/rsaenh/implglue.c
+index ffb6b3d49dc..539e7562374 100644
+--- a/dlls/rsaenh/implglue.c
++++ b/dlls/rsaenh/implglue.c
+@@ -31,9 +31,6 @@
+ 
+ #include "implglue.h"
+ 
+-prng_state prng = { 0 };
+-int wprng = 0;
+-
+ BOOL init_hash_impl(ALG_ID aiAlgid, BCRYPT_HASH_HANDLE *hash_handle)
+ {
+     switch (aiAlgid)
+@@ -88,7 +85,7 @@ BOOL new_key_impl(ALG_ID aiAlgid, KEY_CONTEXT *pKeyContext, DWORD dwKeyLen)
+     {
+         case CALG_RSA_KEYX:
+         case CALG_RSA_SIGN:
+-            if (rsa_make_key( &prng, wprng, dwKeyLen, 65537, &pKeyContext->rsa ) != CRYPT_OK) {
++            if (rsa_make_key((int)dwKeyLen, 65537, &pKeyContext->rsa) != CRYPT_OK) {
+                 SetLastError(NTE_FAIL);
+                 return FALSE;
+             }
+@@ -116,50 +113,40 @@ BOOL setup_key_impl(ALG_ID aiAlgid, KEY_CONTEXT *pKeyContext, DWORD dwKeyLen,
+     switch (aiAlgid) 
+     {
+         case CALG_RC4:
+-            rc4_start(&pKeyContext->prng);
+-            rc4_add_entropy(abKeyValue, dwKeyLen + dwSaltLen, &pKeyContext->prng);
+-            /* bypass rc4_ready() to avoid the workaround for the Fluhrer, Mantin and Shamir attack,
+-             * since Windows doesn't do that */
+-            /* rc4_ready(&pKeyContext->prng); */
+-            {
+-                unsigned char buf[256];
+-                ULONG len = MIN(pKeyContext->prng.rc4.s.x, sizeof(buf));
+-
+-                memcpy(buf, pKeyContext->prng.rc4.s.buf, sizeof(buf));
+-                rc4_stream_setup(&pKeyContext->prng.rc4.s, buf, len);
+-                pKeyContext->prng.ready = 1;
+-            }
++            rc4_start(&pKeyContext->rc4);
++            rc4_add_entropy(abKeyValue, dwKeyLen + dwSaltLen, &pKeyContext->rc4);
++            rc4_ready(&pKeyContext->rc4);
+             break;
+-
++        
+         case CALG_RC2:
+-            rc2_setup_ex(abKeyValue, dwKeyLen + dwSaltLen, dwEffectiveKeyLen ?
+-                         dwEffectiveKeyLen : dwKeyLen << 3, 0, &pKeyContext->key);
++            rc2_setup(abKeyValue, dwKeyLen + dwSaltLen, dwEffectiveKeyLen ?
++                      dwEffectiveKeyLen : dwKeyLen << 3, 0, &pKeyContext->rc2);
+             break;
+-
++        
+         case CALG_3DES:
+-            des3_setup(abKeyValue, 24, 0, &pKeyContext->key);
++            des3_setup(abKeyValue, 24, 0, &pKeyContext->des3);
+             break;
+ 
+         case CALG_3DES_112:
+             memcpy(abKeyValue+16, abKeyValue, 8);
+-            des3_setup(abKeyValue, 24, 0, &pKeyContext->key);
++            des3_setup(abKeyValue, 24, 0, &pKeyContext->des3);
+             break;
+-
++        
+         case CALG_DES:
+-            des_setup(abKeyValue, 8, 0, &pKeyContext->key);
++            des_setup(abKeyValue, 8, 0, &pKeyContext->des);
+             break;
+ 
+         case CALG_AES:
+         case CALG_AES_128:
+-            aes_setup(abKeyValue, 16, 0, &pKeyContext->key);
++            aes_setup(abKeyValue, 16, 0, &pKeyContext->aes);
+             break;
+ 
+         case CALG_AES_192:
+-            aes_setup(abKeyValue, 24, 0, &pKeyContext->key);
++            aes_setup(abKeyValue, 24, 0, &pKeyContext->aes);
+             break;
+ 
+         case CALG_AES_256:
+-            aes_setup(abKeyValue, 32, 0, &pKeyContext->key);
++            aes_setup(abKeyValue, 32, 0, &pKeyContext->aes);
+             break;
+     }
+ 
+@@ -185,14 +172,14 @@ BOOL duplicate_key_impl(ALG_ID aiAlgid, const KEY_CONTEXT *pSrcKeyContext,
+         case CALG_RSA_KEYX:
+         case CALG_RSA_SIGN:
+             pDestKeyContext->rsa.type = pSrcKeyContext->rsa.type;
+-            mp_init_copy(&pDestKeyContext->rsa.e, pSrcKeyContext->rsa.e);
+-            mp_init_copy(&pDestKeyContext->rsa.d, pSrcKeyContext->rsa.d);
+-            mp_init_copy(&pDestKeyContext->rsa.N, pSrcKeyContext->rsa.N);
+-            mp_init_copy(&pDestKeyContext->rsa.p, pSrcKeyContext->rsa.p);
+-            mp_init_copy(&pDestKeyContext->rsa.q, pSrcKeyContext->rsa.q);
+-            mp_init_copy(&pDestKeyContext->rsa.qP, pSrcKeyContext->rsa.qP);
+-            mp_init_copy(&pDestKeyContext->rsa.dP, pSrcKeyContext->rsa.dP);
+-            mp_init_copy(&pDestKeyContext->rsa.dQ, pSrcKeyContext->rsa.dQ);
++            mp_init_copy(&pDestKeyContext->rsa.e, &pSrcKeyContext->rsa.e);
++            mp_init_copy(&pDestKeyContext->rsa.d, &pSrcKeyContext->rsa.d);
++            mp_init_copy(&pDestKeyContext->rsa.N, &pSrcKeyContext->rsa.N);
++            mp_init_copy(&pDestKeyContext->rsa.p, &pSrcKeyContext->rsa.p);
++            mp_init_copy(&pDestKeyContext->rsa.q, &pSrcKeyContext->rsa.q);
++            mp_init_copy(&pDestKeyContext->rsa.qP, &pSrcKeyContext->rsa.qP);
++            mp_init_copy(&pDestKeyContext->rsa.dP, &pSrcKeyContext->rsa.dP);
++            mp_init_copy(&pDestKeyContext->rsa.dQ, &pSrcKeyContext->rsa.dQ);
+             break;
+         
+         default:
+@@ -221,29 +208,29 @@ BOOL encrypt_block_impl(ALG_ID aiAlgid, DWORD dwKeySpec, KEY_CONTEXT *pKeyContex
+ 
+     switch (aiAlgid) {
+         case CALG_RC2:
+-            rc2_ecb_encrypt(in, out, &pKeyContext->key);
++            rc2_ecb_encrypt(in, out, &pKeyContext->rc2);
+             break;
+ 
+         case CALG_3DES:
+         case CALG_3DES_112:
+-            des3_ecb_encrypt(in, out, &pKeyContext->key);
++            des3_ecb_encrypt(in, out, &pKeyContext->des3);
+             break;
+ 
+         case CALG_DES:
+-            des_ecb_encrypt(in, out, &pKeyContext->key);
++            des_ecb_encrypt(in, out, &pKeyContext->des);
+             break;
+ 
+         case CALG_AES:
+         case CALG_AES_128:
+         case CALG_AES_192:
+         case CALG_AES_256:
+-            aes_ecb_encrypt(in, out, &pKeyContext->key);
++            aes_ecb_encrypt(in, out, &pKeyContext->aes);
+             break;
+ 
+         case CALG_RSA_KEYX:
+         case CALG_RSA_SIGN:
+         case CALG_SSL3_SHAMD5:
+-            outlen = inlen = (mp_count_bits(pKeyContext->rsa.N)+7)/8;
++            outlen = inlen = (mp_count_bits(&pKeyContext->rsa.N)+7)/8;
+             if (rsa_exptmod(in, inlen, out, &outlen, dwKeySpec, &pKeyContext->rsa) != CRYPT_OK) {
+                 SetLastError(NTE_FAIL);
+                 return FALSE;
+@@ -267,29 +254,29 @@ BOOL decrypt_block_impl(ALG_ID aiAlgid, DWORD dwKeySpec, KEY_CONTEXT *pKeyContex
+ 
+     switch (aiAlgid) {
+         case CALG_RC2:
+-            rc2_ecb_decrypt(in, out, &pKeyContext->key);
++            rc2_ecb_decrypt(in, out, &pKeyContext->rc2);
+             break;
+ 
+         case CALG_3DES:
+         case CALG_3DES_112:
+-            des3_ecb_decrypt(in, out, &pKeyContext->key);
++            des3_ecb_decrypt(in, out, &pKeyContext->des3);
+             break;
+ 
+         case CALG_DES:
+-            des_ecb_decrypt(in, out, &pKeyContext->key);
++            des_ecb_decrypt(in, out, &pKeyContext->des);
+             break;
+ 
+         case CALG_AES:
+         case CALG_AES_128:
+         case CALG_AES_192:
+         case CALG_AES_256:
+-            aes_ecb_decrypt(in, out, &pKeyContext->key);
++            aes_ecb_decrypt(in, out, &pKeyContext->aes);
+             break;
+ 
+         case CALG_RSA_KEYX:
+         case CALG_RSA_SIGN:
+         case CALG_SSL3_SHAMD5:
+-            outlen = inlen = (mp_count_bits(pKeyContext->rsa.N)+7)/8;
++            outlen = inlen = (mp_count_bits(&pKeyContext->rsa.N)+7)/8;
+             in_reversed = malloc(inlen);
+             if (!in_reversed) {
+                 SetLastError(NTE_NO_MEMORY);
+@@ -317,7 +304,7 @@ BOOL encrypt_stream_impl(ALG_ID aiAlgid, KEY_CONTEXT *pKeyContext, BYTE *stream,
+ {
+     switch (aiAlgid) {
+         case CALG_RC4:
+-            rc4_stream_crypt(&pKeyContext->prng.rc4.s, stream, dwLen, stream);
++            rc4_read(stream, dwLen, &pKeyContext->rc4);
+             break;
+ 
+         default:
+@@ -330,12 +317,12 @@ BOOL encrypt_stream_impl(ALG_ID aiAlgid, KEY_CONTEXT *pKeyContext, BYTE *stream,
+ 
+ BOOL export_public_key_impl(BYTE *pbDest, const KEY_CONTEXT *pKeyContext, DWORD dwKeyLen,DWORD *pdwPubExp)
+ {
+-    mp_to_unsigned_bin(pKeyContext->rsa.N, pbDest);
+-    reverse_bytes(pbDest, mp_unsigned_bin_size(pKeyContext->rsa.N));
+-    if (mp_unsigned_bin_size(pKeyContext->rsa.N) < dwKeyLen)
+-        memset(pbDest + mp_unsigned_bin_size(pKeyContext->rsa.N), 0,
+-               dwKeyLen - mp_unsigned_bin_size(pKeyContext->rsa.N));
+-    *pdwPubExp = (DWORD)mp_get_int(pKeyContext->rsa.e);
++    mp_to_unsigned_bin(&pKeyContext->rsa.N, pbDest);
++    reverse_bytes(pbDest, mp_unsigned_bin_size(&pKeyContext->rsa.N));
++    if (mp_unsigned_bin_size(&pKeyContext->rsa.N) < dwKeyLen)
++        memset(pbDest + mp_unsigned_bin_size(&pKeyContext->rsa.N), 0,
++               dwKeyLen - mp_unsigned_bin_size(&pKeyContext->rsa.N));
++    *pdwPubExp = (DWORD)mp_get_int(&pKeyContext->rsa.e);
+     return TRUE;
+ }
+ 
+@@ -346,7 +333,7 @@ BOOL import_public_key_impl(const BYTE *pbSrc, KEY_CONTEXT *pKeyContext, DWORD d
+ 
+     if (mp_init_multi(&pKeyContext->rsa.e, &pKeyContext->rsa.d, &pKeyContext->rsa.N, 
+                       &pKeyContext->rsa.dQ,&pKeyContext->rsa.dP,&pKeyContext->rsa.qP, 
+-                      &pKeyContext->rsa.p, &pKeyContext->rsa.q, NULL))
++                      &pKeyContext->rsa.p, &pKeyContext->rsa.q, NULL) != MP_OKAY)
+     {
+         SetLastError(NTE_FAIL);
+         return FALSE;
+@@ -358,9 +345,9 @@ BOOL import_public_key_impl(const BYTE *pbSrc, KEY_CONTEXT *pKeyContext, DWORD d
+     
+     pKeyContext->rsa.type = PK_PUBLIC;
+     reverse_bytes(pbTemp, dwKeyLen);
+-    mp_read_unsigned_bin(pKeyContext->rsa.N, pbTemp, dwKeyLen);
++    mp_read_unsigned_bin(&pKeyContext->rsa.N, pbTemp, dwKeyLen);
+     free(pbTemp);
+-    mp_set_int(pKeyContext->rsa.e, dwPubExp);
++    mp_set_int(&pKeyContext->rsa.e, dwPubExp);
+ 
+     return TRUE;    
+ }
+@@ -368,48 +355,48 @@ BOOL import_public_key_impl(const BYTE *pbSrc, KEY_CONTEXT *pKeyContext, DWORD d
+ BOOL export_private_key_impl(BYTE *pbDest, const KEY_CONTEXT *pKeyContext, DWORD dwKeyLen,
+                              DWORD *pdwPubExp)
+ {
+-    mp_to_unsigned_bin(pKeyContext->rsa.N, pbDest);
+-    reverse_bytes(pbDest, mp_unsigned_bin_size(pKeyContext->rsa.N));
+-    if (mp_unsigned_bin_size(pKeyContext->rsa.N) < dwKeyLen)
+-        memset(pbDest + mp_unsigned_bin_size(pKeyContext->rsa.N), 0,
+-               dwKeyLen - mp_unsigned_bin_size(pKeyContext->rsa.N));
++    mp_to_unsigned_bin(&pKeyContext->rsa.N, pbDest);
++    reverse_bytes(pbDest, mp_unsigned_bin_size(&pKeyContext->rsa.N));
++    if (mp_unsigned_bin_size(&pKeyContext->rsa.N) < dwKeyLen)
++        memset(pbDest + mp_unsigned_bin_size(&pKeyContext->rsa.N), 0,
++               dwKeyLen - mp_unsigned_bin_size(&pKeyContext->rsa.N));
+     pbDest += dwKeyLen;
+-    mp_to_unsigned_bin(pKeyContext->rsa.p, pbDest);
+-    reverse_bytes(pbDest, mp_unsigned_bin_size(pKeyContext->rsa.p));
+-    if (mp_unsigned_bin_size(pKeyContext->rsa.p) < (dwKeyLen+1)>>1)
+-        memset(pbDest + mp_unsigned_bin_size(pKeyContext->rsa.p), 0,
+-               ((dwKeyLen+1)>>1) - mp_unsigned_bin_size(pKeyContext->rsa.p));
++    mp_to_unsigned_bin(&pKeyContext->rsa.p, pbDest);
++    reverse_bytes(pbDest, mp_unsigned_bin_size(&pKeyContext->rsa.p));
++    if (mp_unsigned_bin_size(&pKeyContext->rsa.p) < (dwKeyLen+1)>>1)
++        memset(pbDest + mp_unsigned_bin_size(&pKeyContext->rsa.p), 0,
++               ((dwKeyLen+1)>>1) - mp_unsigned_bin_size(&pKeyContext->rsa.p));
+     pbDest += (dwKeyLen+1)>>1;
+-    mp_to_unsigned_bin(pKeyContext->rsa.q, pbDest);
+-    reverse_bytes(pbDest, mp_unsigned_bin_size(pKeyContext->rsa.q));
+-    if (mp_unsigned_bin_size(pKeyContext->rsa.q) < (dwKeyLen+1)>>1)
+-        memset(pbDest + mp_unsigned_bin_size(pKeyContext->rsa.q), 0,
+-               ((dwKeyLen+1)>>1) - mp_unsigned_bin_size(pKeyContext->rsa.q));
++    mp_to_unsigned_bin(&pKeyContext->rsa.q, pbDest);
++    reverse_bytes(pbDest, mp_unsigned_bin_size(&pKeyContext->rsa.q));
++    if (mp_unsigned_bin_size(&pKeyContext->rsa.q) < (dwKeyLen+1)>>1)
++        memset(pbDest + mp_unsigned_bin_size(&pKeyContext->rsa.q), 0,
++               ((dwKeyLen+1)>>1) - mp_unsigned_bin_size(&pKeyContext->rsa.q));
+     pbDest += (dwKeyLen+1)>>1;
+-    mp_to_unsigned_bin(pKeyContext->rsa.dP, pbDest);
+-    reverse_bytes(pbDest, mp_unsigned_bin_size(pKeyContext->rsa.dP));
+-    if (mp_unsigned_bin_size(pKeyContext->rsa.dP) < (dwKeyLen+1)>>1)
+-        memset(pbDest + mp_unsigned_bin_size(pKeyContext->rsa.dP), 0,
+-               ((dwKeyLen+1)>>1) - mp_unsigned_bin_size(pKeyContext->rsa.dP));
++    mp_to_unsigned_bin(&pKeyContext->rsa.dP, pbDest);
++    reverse_bytes(pbDest, mp_unsigned_bin_size(&pKeyContext->rsa.dP));
++    if (mp_unsigned_bin_size(&pKeyContext->rsa.dP) < (dwKeyLen+1)>>1)
++        memset(pbDest + mp_unsigned_bin_size(&pKeyContext->rsa.dP), 0,
++               ((dwKeyLen+1)>>1) - mp_unsigned_bin_size(&pKeyContext->rsa.dP));
+     pbDest += (dwKeyLen+1)>>1;
+-    mp_to_unsigned_bin(pKeyContext->rsa.dQ, pbDest);
+-    reverse_bytes(pbDest, mp_unsigned_bin_size(pKeyContext->rsa.dQ));
+-    if (mp_unsigned_bin_size(pKeyContext->rsa.dQ) < (dwKeyLen+1)>>1)
+-        memset(pbDest + mp_unsigned_bin_size(pKeyContext->rsa.dQ), 0,
+-               ((dwKeyLen+1)>>1) - mp_unsigned_bin_size(pKeyContext->rsa.dQ));
++    mp_to_unsigned_bin(&pKeyContext->rsa.dQ, pbDest);
++    reverse_bytes(pbDest, mp_unsigned_bin_size(&pKeyContext->rsa.dQ));
++    if (mp_unsigned_bin_size(&pKeyContext->rsa.dQ) < (dwKeyLen+1)>>1)
++        memset(pbDest + mp_unsigned_bin_size(&pKeyContext->rsa.dQ), 0,
++               ((dwKeyLen+1)>>1) - mp_unsigned_bin_size(&pKeyContext->rsa.dQ));
+     pbDest += (dwKeyLen+1)>>1;
+-    mp_to_unsigned_bin(pKeyContext->rsa.qP, pbDest);
+-    reverse_bytes(pbDest, mp_unsigned_bin_size(pKeyContext->rsa.qP));
+-    if (mp_unsigned_bin_size(pKeyContext->rsa.qP) < (dwKeyLen+1)>>1)
+-        memset(pbDest + mp_unsigned_bin_size(pKeyContext->rsa.qP), 0,
+-               ((dwKeyLen+1)>>1) - mp_unsigned_bin_size(pKeyContext->rsa.qP));
++    mp_to_unsigned_bin(&pKeyContext->rsa.qP, pbDest);
++    reverse_bytes(pbDest, mp_unsigned_bin_size(&pKeyContext->rsa.qP));
++    if (mp_unsigned_bin_size(&pKeyContext->rsa.qP) < (dwKeyLen+1)>>1)
++        memset(pbDest + mp_unsigned_bin_size(&pKeyContext->rsa.qP), 0,
++               ((dwKeyLen+1)>>1) - mp_unsigned_bin_size(&pKeyContext->rsa.qP));
+     pbDest += (dwKeyLen+1)>>1;
+-    mp_to_unsigned_bin(pKeyContext->rsa.d, pbDest);
+-    reverse_bytes(pbDest, mp_unsigned_bin_size(pKeyContext->rsa.d));
+-    if (mp_unsigned_bin_size(pKeyContext->rsa.d) < dwKeyLen)
+-        memset(pbDest + mp_unsigned_bin_size(pKeyContext->rsa.d), 0,
+-               dwKeyLen - mp_unsigned_bin_size(pKeyContext->rsa.d));
+-    *pdwPubExp = (DWORD)mp_get_int(pKeyContext->rsa.e);
++    mp_to_unsigned_bin(&pKeyContext->rsa.d, pbDest);
++    reverse_bytes(pbDest, mp_unsigned_bin_size(&pKeyContext->rsa.d));
++    if (mp_unsigned_bin_size(&pKeyContext->rsa.d) < dwKeyLen)
++        memset(pbDest + mp_unsigned_bin_size(&pKeyContext->rsa.d), 0,
++               dwKeyLen - mp_unsigned_bin_size(&pKeyContext->rsa.d));
++    *pdwPubExp = (DWORD)mp_get_int(&pKeyContext->rsa.e);
+ 
+     return TRUE;
+ }
+@@ -421,7 +408,7 @@ BOOL import_private_key_impl(const BYTE *pbSrc, KEY_CONTEXT *pKeyContext, DWORD
+ 
+     if (mp_init_multi(&pKeyContext->rsa.e, &pKeyContext->rsa.d, &pKeyContext->rsa.N, 
+                       &pKeyContext->rsa.dQ,&pKeyContext->rsa.dP,&pKeyContext->rsa.qP, 
+-                      &pKeyContext->rsa.p, &pKeyContext->rsa.q, NULL))
++                      &pKeyContext->rsa.p, &pKeyContext->rsa.q, NULL) != MP_OKAY)
+     {
+         SetLastError(NTE_FAIL);
+         return FALSE;
+@@ -434,30 +421,30 @@ BOOL import_private_key_impl(const BYTE *pbSrc, KEY_CONTEXT *pKeyContext, DWORD
+ 
+     pKeyContext->rsa.type = PK_PRIVATE;
+     reverse_bytes(pbBigNum, dwKeyLen);
+-    mp_read_unsigned_bin(pKeyContext->rsa.N, pbBigNum, dwKeyLen);
++    mp_read_unsigned_bin(&pKeyContext->rsa.N, pbBigNum, dwKeyLen);
+     pbBigNum += dwKeyLen;
+     reverse_bytes(pbBigNum, (dwKeyLen+1)>>1);
+-    mp_read_unsigned_bin(pKeyContext->rsa.p, pbBigNum, (dwKeyLen+1)>>1);
++    mp_read_unsigned_bin(&pKeyContext->rsa.p, pbBigNum, (dwKeyLen+1)>>1);
+     pbBigNum += (dwKeyLen+1)>>1;
+     reverse_bytes(pbBigNum, (dwKeyLen+1)>>1);
+-    mp_read_unsigned_bin(pKeyContext->rsa.q, pbBigNum, (dwKeyLen+1)>>1);
++    mp_read_unsigned_bin(&pKeyContext->rsa.q, pbBigNum, (dwKeyLen+1)>>1);
+     pbBigNum += (dwKeyLen+1)>>1;
+     reverse_bytes(pbBigNum, (dwKeyLen+1)>>1);
+-    mp_read_unsigned_bin(pKeyContext->rsa.dP, pbBigNum, (dwKeyLen+1)>>1);
++    mp_read_unsigned_bin(&pKeyContext->rsa.dP, pbBigNum, (dwKeyLen+1)>>1);
+     pbBigNum += (dwKeyLen+1)>>1;
+     reverse_bytes(pbBigNum, (dwKeyLen+1)>>1);
+-    mp_read_unsigned_bin(pKeyContext->rsa.dQ, pbBigNum, (dwKeyLen+1)>>1);
++    mp_read_unsigned_bin(&pKeyContext->rsa.dQ, pbBigNum, (dwKeyLen+1)>>1);
+     pbBigNum += (dwKeyLen+1)>>1;
+     reverse_bytes(pbBigNum, (dwKeyLen+1)>>1);
+-    mp_read_unsigned_bin(pKeyContext->rsa.qP, pbBigNum, (dwKeyLen+1)>>1);
++    mp_read_unsigned_bin(&pKeyContext->rsa.qP, pbBigNum, (dwKeyLen+1)>>1);
+     pbBigNum += (dwKeyLen+1)>>1;
+     /* The size of the private exponent d is inferred from the remaining
+      * data length.
+      */
+     dwKeyLen = min(dwKeyLen, dwDataLen - (pbBigNum - pbTemp));
+     reverse_bytes(pbBigNum, dwKeyLen);
+-    mp_read_unsigned_bin(pKeyContext->rsa.d, pbBigNum, dwKeyLen);
+-    mp_set_int(pKeyContext->rsa.e, dwPubExp);
++    mp_read_unsigned_bin(&pKeyContext->rsa.d, pbBigNum, dwKeyLen);
++    mp_set_int(&pKeyContext->rsa.e, dwPubExp);
+     
+     free(pbTemp);
+     return TRUE;
+diff --git a/dlls/rsaenh/implglue.h b/dlls/rsaenh/implglue.h
+index ad497a81c1f..2c51a9cd042 100644
+--- a/dlls/rsaenh/implglue.h
++++ b/dlls/rsaenh/implglue.h
+@@ -30,14 +30,14 @@
+ #define RSAENH_MAX_HASH_SIZE        104
+ 
+ typedef union tagKEY_CONTEXT {
+-    symmetric_key key;
+-    prng_state prng;
++    rc2_key rc2;
++    des_key des;
++    des3_key des3;
++    aes_key aes;
++    prng_state rc4;
+     rsa_key rsa;
+ } KEY_CONTEXT;
+ 
+-extern prng_state prng;
+-extern int wprng;
+-
+ BOOL init_hash_impl(ALG_ID aiAlgid, BCRYPT_HASH_HANDLE *hash_handle);
+ BOOL update_hash_impl(BCRYPT_HASH_HANDLE hash_handle, const BYTE *pbData, DWORD dwDataLen);
+ BOOL finalize_hash_impl(BCRYPT_HASH_HANDLE hash_handle, BYTE *hash_value, DWORD hash_size);
+diff --git a/dlls/rsaenh/rsaenh.c b/dlls/rsaenh/rsaenh.c
+index 5f37141e65b..baec237f36e 100644
+--- a/dlls/rsaenh/rsaenh.c
++++ b/dlls/rsaenh/rsaenh.c
+@@ -354,10 +354,6 @@ BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD fdwReason, PVOID reserved)
+         case DLL_PROCESS_ATTACH:
+             DisableThreadLibraryCalls(hInstance);
+             init_handle_table(&handle_table);
+-            /* tomcrypt initialization */
+-            init_LTM();
+-            wprng = register_prng( &rc4_desc );
+-            rng_make_prng( 1024, wprng, &prng, NULL );
+             break;
+ 
+         case DLL_PROCESS_DETACH:
