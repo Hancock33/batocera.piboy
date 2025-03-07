@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING
 
 from ... import Command
 from ...batoceraPaths import mkdir_if_not_exists
-from ...controller import generate_sdl_game_controller_config
+from ...exceptions import BatoceraException
 from ..Generator import Generator
 
 if TYPE_CHECKING:
@@ -56,7 +56,7 @@ class MugenGenerator(Generator):
         mkdir_if_not_exists(settings_path.parent)
 
         if not settings_path.exists():
-            raise FileNotFoundError(f"Configuration file not found: {settings_path}")
+            raise BatoceraException(f"Configuration file not found: {settings_path}")
 
         # Define the settings we want to update
         sections_to_update = {
