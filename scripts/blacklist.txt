@@ -6,6 +6,7 @@ firmware-armbian.mk
 firmware-orangepi.mk
 firmware-radxa-rkwifibt.mk
 firmware-rk3588.mk
+glslang.mk
 kodi-pvr-freebox.mk
 lib32bit.mk
 model2emu.mk
@@ -13,6 +14,10 @@ noto-cjk-fonts.mk
 omf2097.mk
 openbor6412.mk
 openbor7142.mk
+spirv-cross.mk
+vulkan-utility-libraries.mk
+vulkan-validationlayers.mk
+vulkan-volk.mk
 wine-cachyos.mk
 wine-custom.mk
 wine-native.mk
