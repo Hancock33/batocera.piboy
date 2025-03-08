@@ -3,6 +3,8 @@
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|e68285cfac95c9c572136b1390d0126ec4cdeede|Mar 08, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|e68285cfac95c9c572136b1390d0126ec4cdeede|Mar 08, 2025
 Emulators|[citra](https://github.com/Borked3DS/Borked3DS.git)|2de21965f4662b50a0269cbb0dcc20f4cb79f019|Mar 08, 2025
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|d2b4e12f9ed3a69ded01659e095cef8893859ea5|Mar 08, 2025
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|9ec48c939a3527d5214d5245cef3775e44550868|Mar 08, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|caa75e5379ca8453d37d5b90fd86feec82df4123|Mar 08, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-03-08|Mar 08, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.2.441|Mar 08, 2025
@@ -10,10 +12,12 @@ Emulators|[xemu](https://github.com/xemu-project/xemu)|45078ef51f6e357a05e0efda8
 Ports|[box64](http://github.com/ptitseb/box64)|445d885090c82dc339a8a223c1108bad1b0e1e81|Mar 08, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|6ba349afa4f615f5bf1811ff52bba696aa83c608|Mar 08, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|47a1f98f36fd853cb6db5a6d4ef1383143db6e2e|Mar 08, 2025
+Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|cbe77db9d989b0976f0d853ef51a0b50c29348d9|Mar 08, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|146f0d0f5a88b5b8af0f13491ca8f37709a6c276|Mar 08, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|9cad6dd993c192030857733d8bd5f27616ece544|Mar 08, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|46b9d9b8789781cf3438206a87fb59bebaabfe10|Mar 08, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|3c470019de199decb7f4d3dafeb187657a3bf5ef|Mar 08, 2025
+Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|bcbccb234f8ae26b73836cf48f4ad2b9c48be008|Mar 08, 2025
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|b698d4e317d61a4aa00bdd4c291b864bc4f13208|Mar 08, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|caa75e5379ca8453d37d5b90fd86feec82df4123|Mar 08, 2025
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|fcfd7c9862e9157512bcab53affecd592b320131|Mar 08, 2025
@@ -46,13 +50,10 @@ Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|3ea
 Emulators|[libretro-squirreljme](http://github.com/SquirrelJME/SquirrelJME)|5bebeb388b10d8390927c1e3d7ff95d0dee27b28|Mar 07, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|5b4559f4ee241a6fc64af21d69e75445675243a7|Mar 07, 2025
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|cc81fdec3d3187beb6a3ae41c5cb6bf3fb2d7af7|Mar 06, 2025
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|79ea631572ce1c001b87fbe97cfbfce4791df140|Mar 06, 2025
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|ccf7adf|Mar 06, 2025
-Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|875686699f77a865974d3befe7633e4f900a0ea6|Mar 06, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|c5757957b9fd23658121acf4837f68ad5a165fe5|Mar 06, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|c5757957b9fd23658121acf4837f68ad5a165fe5|Mar 06, 2025
 Audio|[libfreeaptx](http://github.com/regularhunter/libfreeaptx)|6dee419f934ec781e531f885f7e8e740752e67d1|Mar 05, 2025
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|99e686de34c2c862a01ee3859abb4b3256f04a63|Mar 05, 2025
 Emulators|[play](https://github.com/jpd002/Play-.git)|361bfece5dbe25e96d485a0d56c32554bc68ab40|Mar 05, 2025
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|943e59576e938687e5b4eceda3c084c9b5deafd4|Mar 05, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45515|Mar 05, 2025
@@ -79,7 +80,6 @@ Emulators|[applewin](https://github.com/audetto/AppleWin)|987357a495f97d1496c41e
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.12.0-rc1|Mar 02, 2025
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|937ac0d8fd68edb25547e599f181296e0882e3d9|Mar 02, 2025
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|575f3814e47851b7f86bdb61829b6abac11a38be|Mar 02, 2025
-Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|c47417b68a4aaa6285587048ba72a3aede21b22b|Mar 02, 2025
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|f8605345e13c018a30c8f4ed03c05d8fc8f70be8|Mar 02, 2025
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.03|Mar 01, 2025
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|d96665375a8bd273dcc0d0b21c87249861b0e00f|Mar 01, 2025

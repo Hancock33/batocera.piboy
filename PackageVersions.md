@@ -71,7 +71,7 @@ Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|186e92221a387ccad76cdfda661cd1bd94d82429|Mar 07, 2025
 Emulators|[citra](https://github.com/Borked3DS/Borked3DS.git)|2de21965f4662b50a0269cbb0dcc20f4cb79f019|Mar 08, 2025
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|99e686de34c2c862a01ee3859abb4b3256f04a63|Mar 05, 2025
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|d2b4e12f9ed3a69ded01659e095cef8893859ea5|Mar 08, 2025
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|cc15858c4aacaca7ca7b346afd0752b909b63064|Dec 30, 2024
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|59b4a5bca45da738bd0cad4288a0b530191c4443|Feb 22, 2025
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.02.01|Feb 01, 2025
@@ -259,7 +259,7 @@ Emulators|[openbor4432](http://github.com/Darknior/OpenBORv3b4432)|49505541b858d
 Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678291bbedc0b9fe4c8f898|Aug 29, 2018
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|79ea631572ce1c001b87fbe97cfbfce4791df140|Mar 06, 2025
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|9ec48c939a3527d5214d5245cef3775e44550868|Mar 08, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.210|Mar 07, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|361bfece5dbe25e96d485a0d56c32554bc68ab40|Mar 05, 2025
@@ -435,7 +435,7 @@ Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|d96665375a8bd273d
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|82fa9e2f5c6cbedb757829bc6688ff413e0b06f7|Oct 06, 2024
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|1357a62291ad506a33b6efb3d67fa856bec81cae|Feb 11, 2025
 Ports|[eldoom](http://github.com/dhewm/dhewm3-sdk)|50dc874961cf14d3c7ca2182d655ba46ecc7f5a1|Oct 21, 2024
-Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|875686699f77a865974d3befe7633e4f900a0ea6|Mar 06, 2025
+Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|cbe77db9d989b0976f0d853ef51a0b50c29348d9|Mar 08, 2025
 Ports|[f2bgl](http://github.com/cyxx/f2bgl)|0b84f41c7cc13a41f5a1832549485b814a52070d|Oct 18, 2020
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|0609bcfd0ec40ff0571d0f57fab2821eb461dc8b|Jan 15, 2025
 Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|e97087b9582f37075db347a89898887320753f8b|Feb 16, 2025
@@ -475,7 +475,7 @@ Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|d40a12ea57d
 Ports|[sikkmod](http://github.com/dhewm/dhewm3-sdk)|03aae2f5b74a18ed5fdbfe9c345a4d50203c7518|Jul 28, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|d7ca2c04364a6dd0dac58b47151e04e26887e6f0|Dec 17, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|9a7220eff25a49182531ae025cd29f5b49046144|Feb 13, 2025
-Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|c47417b68a4aaa6285587048ba72a3aede21b22b|Mar 02, 2025
+Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|bcbccb234f8ae26b73836cf48f4ad2b9c48be008|Mar 08, 2025
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|bcfcd0bfdeea6c5b19d9cc5fb50700d11b62419a|Feb 13, 2025
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|aa113871727d569077cbd7deff831a46a72cf147|Feb 17, 2025
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|d83967b2ea38eda8b43437167d93c86021bb4de1|Dec 02, 2024
