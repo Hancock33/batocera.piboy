@@ -16,6 +16,7 @@ Emulators|[thextech](https://github.com/TheXTech/TheXTech)|b5892ed58ab3dc4757ede
 Emulators|[xemu](https://github.com/xemu-project/xemu)|45078ef51f6e357a05e0efda8692bac01937115b|Mar 08, 2025
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|5979274|Mar 08, 2025
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|34b7085ed3460cd56d75ac654126bd4c53956c87|Mar 08, 2025
+Libraries|[mono-bin](https://github.com/Hancock33/batocera-mono/releases)|6.14.0|Mar 08, 2025
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|9a96eabba36f2b94d252d9cb537a4302b9db8f35|Mar 08, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|b1106231033e8d421d8f053c838a30602cf98c23|Mar 08, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|6ba349afa4f615f5bf1811ff52bba696aa83c608|Mar 08, 2025
@@ -253,7 +254,6 @@ Kodi|[kodi_resource_language_es_es](http://mirrors.kodi.tv/addons/omega/resource
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|572c91856a5288b7433c619af651e31f00f3ce7e|Dec 04, 2024
 Libraries|[python-adafruit-circuitpython-typing](https://files.pythonhosted.org/packages/24/80/8c280fa7d42a23dce40b2fe64f708d18fa32b384adbf6934955d2c2ebecf)|1.11.2|Dec 02, 2024
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|d83967b2ea38eda8b43437167d93c86021bb4de1|Dec 02, 2024
-Libraries|[mono-bin](https://github.com/Hancock33/batocera-mono/releases)|6.12.0.206|Dec 01, 2024
 Utils|[7zip](https://www.7-zip.org/a)|2409|Nov 29, 2024
 Emulators|[libretro-tamalibretro](https://github.com/celerizer/tamalibretro.git)|ec83dc1a5ea8bdbcd02cee81779c6dbe0e996ed2|Nov 27, 2024
 Firmwares|[firmware-armbian](http://github.com/armbian/firmware)|9179a9f05c31505e1bbc90ffb2bfa563e499bfef|Nov 26, 2024

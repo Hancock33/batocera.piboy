@@ -368,7 +368,7 @@ Libraries|[libgraphene](https://github.com/ebassi/graphene/archive/refs/tags)|1.
 Libraries|[liblgpio](http://github.com/joan2937/lg)|746f0df43774175090b93abcc860b6733eefc09b|Mar 28, 2024
 Libraries|[libliftoff](https://gitlab.freedesktop.org/emersion/libliftoff/-/releases/v)|0.5.0|May 27, 2024
 Libraries|[lunasvg](http://github.com/stenzek/lunasvg)|70b2fc188ae9628f4313335a0d628eef10c842dd|Oct 01, 2024
-Libraries|[mono-bin](https://github.com/Hancock33/batocera-mono/releases)|6.12.0.206|Dec 01, 2024
+Libraries|[mono-bin](https://github.com/Hancock33/batocera-mono/releases)|6.14.0|Mar 08, 2025
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|49177931faa8b803146eb555cf6391a879432940|Feb 28, 2025
 Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|8bf8541c451546c59ca9a271833d5aa923ae20e1|Feb 28, 2025
 Libraries|[projectm](http://github.com/projectM-visualizer/projectm)|v4.1.4|Jan 24, 2025

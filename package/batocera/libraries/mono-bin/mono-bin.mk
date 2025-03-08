@@ -3,8 +3,8 @@
 # mono-bin
 #
 ################################################################################
-# Version: Commits on Dec 01, 2024
-MONO_BIN_VERSION = 6.12.0.206
+# Version: Commits on Mar 08, 2025
+MONO_BIN_VERSION = 6.14.0
 MONO_BIN_SITE = https://github.com/Hancock33/batocera-mono/releases/download/$(MONO_BIN_VERSION)
 MONO_BIN_LICENSE = GPL-2.0 or MIT (compiler, tools), MIT (libs) or commercial
 
