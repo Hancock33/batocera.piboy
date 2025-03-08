@@ -91,8 +91,7 @@ def createXemuConfig(iniConfig: CaseSensitiveConfigParser, system: Emulator, rom
     if system.isOptSet("xemu_api"):
         iniConfig.set("display", "renderer", f'"{system.config["xemu_api"]}"')
     else:
-        # use Vulkan as the default for a Mesa bug with some AMD GPU's
-        iniConfig.set("display", "renderer", '"VULKAN"')
+        iniConfig.set("display", "renderer", '"OPENGL"')
 
     # Rendering resolution
     if system.isOptSet("xemu_render"):
