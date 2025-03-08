@@ -80,7 +80,4 @@ class WineGenerator(Generator):
         raise BatoceraException("Invalid system: " + system.name)
 
     def getMouseMode(self, config, rom):
-        if "force_mouse" in config and config["force_mouse"] == "0":
-            return False
-        else:
-            return True
+        return config.get('force_mouse') != '0'
