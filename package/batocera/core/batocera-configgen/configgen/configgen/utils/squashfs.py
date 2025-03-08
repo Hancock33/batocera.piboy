@@ -18,9 +18,7 @@ _SQUASHFS_DIR: Final = Path("/var/run/squashfs/")
 
 
 @contextmanager
-def squashfs_rom(rom: str | Path, /) -> Iterator[str]:
-    rom = Path(rom)
-
+def squashfs_rom(rom: Path, /) -> Iterator[Path]:
     _logger.debug("squashfs_rom(%s)", rom)
     mount_point = _SQUASHFS_DIR / rom.stem
 
@@ -34,7 +32,7 @@ def squashfs_rom(rom: str | Path, /) -> Iterator[str]:
             mount_point.rmdir()
         except (FileNotFoundError, OSError):
             _logger.debug("squashfs_rom: failed to rmdir %s", mount_point)
-            yield str(mount_point)
+            yield mount_point
             # No cleanup is necessary
             return
 
@@ -73,10 +71,10 @@ def squashfs_rom(rom: str | Path, /) -> Iterator[str]:
             try:
                 rom_linked = (mount_point / ".ROM").resolve(strict=True)
             except OSError:
-                yield str(mount_point)
+                yield mount_point
             else:
                 _logger.debug("squashfs: linked rom %s", rom_linked)
-                yield str(rom_linked)
+                yield rom_linked
     finally:
         _logger.debug("squashfs_rom: cleaning up %s", mount_point)
 

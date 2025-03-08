@@ -57,8 +57,6 @@ class LibretroGenerator(Generator):
     # Main entry of the module
     # Configure retroarch and return a command
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        rom_path = Path(rom)
-
         # Fix for the removed MESS/MAMEVirtual cores
         if system.config['core'] in [ 'mess', 'mamevirtual' ]:
             system.config['core'] = 'mame'
@@ -68,7 +66,7 @@ class LibretroGenerator(Generator):
 
         # Get the shader before writing the config, we may need to disable bezels based on the shader.
         renderConfig = system.renderconfig
-        altDecoration = videoMode.getAltDecoration(system.name, rom_path, 'retroarch')
+        altDecoration = videoMode.getAltDecoration(system.name, rom, 'retroarch')
         gameShader = None
         shaderBezel = False
         if altDecoration == "0":
@@ -125,7 +123,7 @@ class LibretroGenerator(Generator):
             if system.isOptSet('forceNoBezel') and system.getOptBoolean('forceNoBezel'):
                 bezel = None
 
-            libretroConfig.writeLibretroConfig(self, retroconfig, system, playersControllers, metadata, guns, wheels, rom_path, bezel, shaderBezel, gameResolution, gfxBackend)
+            libretroConfig.writeLibretroConfig(self, retroconfig, system, playersControllers, metadata, guns, wheels, rom, bezel, shaderBezel, gameResolution, gfxBackend)
             retroconfig.write()
 
             # duplicate config to mapping files while ra now split in 2 parts
@@ -152,8 +150,8 @@ class LibretroGenerator(Generator):
             GBMultiROM: list[Path] = []
             GBMultiSys: list[str] = []
             # If ROM file is a .gb2 text, retrieve the filenames
-            if rom_path.suffix.lower() in ['.gb2', '.gbc2']:
-                with rom_path.open() as fp:
+            if rom.suffix.lower() in ['.gb2', '.gbc2']:
+                with rom.open() as fp:
                     for line in fp:
                         GBMultiText = line.strip()
                         if GBMultiText.lower().startswith("gb:"):
@@ -170,7 +168,7 @@ class LibretroGenerator(Generator):
                                 GBMultiSys.append("gbc")
             else:
                 # Otherwise fill in the list with the single game
-                GBMultiROM.append(rom_path)
+                GBMultiROM.append(rom)
                 if system.name == "gb2players":
                     GBMultiSys.append("gb")
                 else:
@@ -229,30 +227,30 @@ class LibretroGenerator(Generator):
                 scriptFile.chmod(scriptFile.stat().st_mode | 0o111)
         # PURE zip games uses the same commandarray of all cores. .pc and .rom  uses owns
         elif system.name == 'dos':
-            if (rom_path.suffix == '.dos' or rom_path.suffix == '.pc'):
-                if (rom_path / f"{rom_path.stem}.bat").exists() and " " not in rom_path.stem:
-                    exe = rom_path / f"{rom_path.stem}.bat"
-                elif (rom_path / "dosbox.bat").exists() and not (rom_path / f"{rom_path.stem}.bat").exists():
-                    exe = rom_path / "dosbox.bat"
+            if (rom.suffix == '.dos' or rom.suffix == '.pc'):
+                if (rom / f"{rom.stem}.bat").exists() and " " not in rom.stem:
+                    exe = rom / f"{rom.stem}.bat"
+                elif (rom / "dosbox.bat").exists() and not (rom / f"{rom.stem}.bat").exists():
+                    exe = rom / "dosbox.bat"
                 else:
-                    exe = rom_path
+                    exe = rom
                 commandArray = [RETROARCH_BIN, "-L", retroarchCore, "--config", system.config['configfile'], exe]
                 dontAppendROM = True
             else:
                 commandArray = [RETROARCH_BIN, "-L", retroarchCore, "--config", system.config['configfile']]
         # Pico-8 multi-carts (might work only with official Lexaloffe engine right now)
         elif system.name == 'pico8':
-            if (rom_path.suffix.lower() == ".m3u"):
-                with rom_path.open("r") as fpin:
+            if (rom.suffix.lower() == ".m3u"):
+                with rom.open("r") as fpin:
                     lines = fpin.readlines()
-                rom_path = rom_path.absolute().parent / lines[0].strip()
+                rom = rom.absolute().parent / lines[0].strip()
             commandArray = [RETROARCH_BIN, "-L", retroarchCore, "--config", system.config['configfile']]
         # tyrquake - set directory
         elif system.name == 'quake':
             commandArray = [RETROARCH_BIN, "-L", retroarchCore, "--config", system.config['configfile']]
         # vitaquake2 - choose core based on directory
         elif system.name == 'quake2':
-            if "reckoning" in rom_path.name.lower():
+            if "reckoning" in rom.name.lower():
                 system.config['core'] = "vitaquake2-xatrix"
             elif "rogue" in rom_path.name.lower():
                 system.config['core'] = "vitaquake2-rogue"
@@ -265,7 +263,7 @@ class LibretroGenerator(Generator):
             commandArray = [RETROARCH_BIN, "-L", retroarchCore, "--config", system.config['configfile']]
         # super mario wars - verify assets from Content Downloader
         elif system.name == 'superbroswar':
-            romdir = rom_path.absolute().parent
+            romdir = rom.absolute().parent
             assetdirs = [
                 "music/world/Standard", "music/game/Standard/Special", "music/game/Standard/Menu", "filters", "worlds/KingdomHigh",
                 "worlds/MrIsland", "worlds/Sky World", "worlds/Smb3", "worlds/Simple", "worlds/screenshots", "worlds/Flurry World",
@@ -300,12 +298,12 @@ class LibretroGenerator(Generator):
             configToAppend.append(customCfg)
 
         # Custom configs - per game
-        customGameCfg = RETROARCH_CONFIG / system.name / f"{rom_path.name}.cfg"
+        customGameCfg = RETROARCH_CONFIG / system.name / f"{rom.name}.cfg"
         if customGameCfg.is_file():
             configToAppend.append(customGameCfg)
 
         # Overlay management
-        overlayFile = OVERLAYS / system.name / f"{rom_path.name}.cfg"
+        overlayFile = OVERLAYS / system.name / f"{rom.name}.cfg"
         if overlayFile.is_file():
             configToAppend.append(overlayFile)
 
@@ -334,14 +332,14 @@ class LibretroGenerator(Generator):
         commandArray.extend(['--verbose'])
 
         if system.name == 'snes-msu1' or system.name == 'satellaview':
-            if "squashfs" in str(rom_path) and rom_path.is_dir():
-                rom_path = next(itertools.chain(rom_path.glob('*.sfc'), rom_path.glob('*.smc')))
+            if "squashfs" in str(rom) and rom.is_dir():
+                rom = next(itertools.chain(rom.glob('*.sfc'), rom.glob('*.smc')))
         elif system.name == 'sgb-msu1':
-            if "squashfs" in str(rom_path) and rom_path.is_dir():
-                rom_path = next(itertools.chain(rom_path.glob('*.gb'), rom_path.glob('*.gbc')))
+            if "squashfs" in str(rom) and rom.is_dir():
+                rom = next(itertools.chain(rom.glob('*.gb'), rom.glob('*.gbc')))
         elif system.name == 'msu-md':  # noqa: SIM102
-            if "squashfs" in str(rom_path) and rom_path.is_dir():
-                rom_path = next(rom_path.glob('*.md'))
+            if "squashfs" in str(rom) and rom.is_dir():
+                rom = next(rom.glob('*.md'))
 
         if system.name == 'scummvm':
             if "squashfs" in rom:
@@ -387,7 +385,7 @@ class LibretroGenerator(Generator):
         # Use command line instead of ROM file for MAME variants
         if system.config['core'] in [ 'mame', 'mess', 'mamevirtual', 'same_cdi' ]:
             dontAppendROM = True
-            commandArray.append(f'/var/run/cmdfiles/{rom_path.stem}.cmd')
+            commandArray.append(f'/var/run/cmdfiles/{rom.stem}.cmd')
 
         if system.config['core'] == 'hatarib':
             biosdir = BIOS / "hatarib"
@@ -397,13 +395,13 @@ class LibretroGenerator(Generator):
             #retroarch can't use hdd files outside his system directory (/userdata/bios)
             if targetlink.exists():
                 targetlink.unlink()
-            if rom_path.suffix.lower() in ['.hd', '.gemdos']:
+            if rom.suffix.lower() in ['.hd', '.gemdos']:
                 #don't pass hd drive as parameter, it need to be added in configuration
                 dontAppendROM = True
-                targetlink.symlink_to(rom_path)
+                targetlink.symlink_to(rom)
 
         if not dontAppendROM:
-            commandArray.append(rom_path)
+            commandArray.append(rom)
 
         if system.isOptSet('state_slot') and system.isOptSet('state_filename') and system.config['state_filename'][-5:] != ".auto":
             # if the file ends by .auto, this is the auto loading, else it is the states
