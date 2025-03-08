@@ -59,6 +59,12 @@ ryujinxCtrl: dict[str, Any] = {
         "weak_rumble": 2,
         "enable_rumble": True
       },
+      "led": {
+        "enable_led": False,
+        "turn_off_led": False,
+        "use_rainbow": False,
+        "led_color": 0
+      },
       "left_joycon": {
         "button_minus": "Minus",
         "button_l": "LeftShoulder",
@@ -115,7 +121,7 @@ class RyujinxGenerator(Generator):
         conf["game_dirs"] = [str(ROMS / "switch")]
         conf["start_fullscreen"] = True
         conf["docked_mode"] = True
-        conf["audio_backend"] = "OpenAl"
+        conf["audio_backend"] = "SDL2"
         conf["audio_volume"] = 1
         # set ryujinx app language
         conf["language_code"] = str(getLangFromEnvironment())
@@ -174,7 +180,7 @@ class RyujinxGenerator(Generator):
             for dev in devices:
                 if dev.path == pad.device_path:
                     bustype = f"{dev.info.bustype:x}"
-                    bustype = bustype.zfill(8)
+                    bustype = "17f6" + bustype.zfill(4)
                     vendor = f"{dev.info.vendor:x}"
                     vendor = vendor.zfill(4)
                     product = f"{dev.info.product:x}"
