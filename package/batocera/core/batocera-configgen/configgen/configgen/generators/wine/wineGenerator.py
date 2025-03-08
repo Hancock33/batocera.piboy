@@ -55,7 +55,7 @@ class WineGenerator(Generator):
                     }
                 )
             # sdl controller option - default is on
-            if not system.isOptSet("sdl_config") or system.getOptBoolean("sdl_config"):
+            if system.config.get_bool("sdl_config", True):
                 environment.update(
                     {
                         "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
