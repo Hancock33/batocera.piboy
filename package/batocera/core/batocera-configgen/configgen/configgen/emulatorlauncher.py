@@ -52,7 +52,8 @@ def main(args: argparse.Namespace, maxnbplayers: int) -> int:
 
 def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: str, romConfiguration: str) -> int:
     player_controllers = Controller.load_for_players(maxnbplayers, args)
-
+    global endSystem
+    endSystem = args.system
     # find the system to run
     systemName = args.system
     _logger.debug("Running system: %s", systemName)
@@ -194,6 +195,9 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: str, romConfigur
             # run a script after emulator shuts down
             callExternalScripts(USER_SCRIPTS, "gameStop", [systemName, system.config.emulator, effectiveCore, effectiveRom])
             callExternalScripts(SYSTEM_SCRIPTS, "gameStop", [systemName, system.config.emulator, effectiveCore, effectiveRom])
+
+            if 'x86_64' in arch:
+                subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
 
         finally:
             # always restore the resolution
