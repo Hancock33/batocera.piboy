@@ -149,9 +149,9 @@ class HypseusSingeGenerator(Generator):
 
         # extension used .daphne and the file to start the game is in the folder .daphne with the extension .txt
         romName = os.path.splitext(os.path.basename(rom))[0]
-        frameFile = rom + "/" + romName + ".txt"
-        commandsFile = rom + "/" + romName + ".commands"
-        singeFile = rom + "/" + romName + ".singe"
+        frameFile = rom.name + "/" + romName + ".txt"
+        commandsFile = rom.name + "/" + romName + ".commands"
+        singeFile = rom.name + "/" + romName + ".singe"
 
         bezelFile = find_bezel(romName.lower())
         if bezelFile is not None:
@@ -211,7 +211,7 @@ class HypseusSingeGenerator(Generator):
         # controller config file
         commandArray.extend([
             '-keymapfile',
-            system.config.get_bool('hypseus_joy', return_values=('custom.ini', _CONFIG.name))
+            system.config.get_bool('hypseus_joy', return_values=('custom.ini', batoceraFiles.hypseusConfigfile))
         ])
 
         # Default -fullscreen behaviour respects game aspect ratio

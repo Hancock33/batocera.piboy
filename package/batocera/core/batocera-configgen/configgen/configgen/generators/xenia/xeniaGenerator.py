@@ -130,11 +130,11 @@ class XeniaGenerator(Generator):
             _logger.debug("Error creating 32-bit link for %s: %s", dll, e)
 
         # squashfs
-        if "/squashfs" in rom:
-            squashrom = rom + rom.replace('/var/run/squashfs','') + '.xbox360'
+        if "squashfs" in str(rom):
+            squashrom = str(rom) + str(rom).replace('/var/run/squashfs','') + '.xbox360'
             if os.path.exists(squashrom):
-                rom_path = Path(squashrom)
-                _logger.debug('Found squashfs playlist %s:', rom_path)
+                rom = Path(squashrom)
+                _logger.debug('Found squashfs playlist %s:', rom)
 
         # are we loading a digital title?
         if rom.suffix == '.xbox360':
@@ -307,9 +307,8 @@ class XeniaGenerator(Generator):
             else:
                 commandArray = [wine.WINE64, emupath / 'xenia.exe', f'z:{rom}']
 
-        environment = wine.get_wine_environment(wineprefix)
-        environment.update({
-            'LD_LIBRARY_PATH': f'/usr/lib:{environment["LD_LIBRARY_PATH"]}',
+        environment = ({
+            'LD_LIBRARY_PATH': f'/usr/lib:/lib',
             'LIBGL_DRIVERS_PATH': '/usr/lib/dri',
             'WINEFSYNC': '1',
             'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers),

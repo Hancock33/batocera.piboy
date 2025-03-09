@@ -49,7 +49,7 @@ class MupenGenerator(Generator):
         if state_filename := system.config.get('state_filename'):
             commandArray.extend(["--savestate", state_filename])
 
-        if "squashfs" in rom:
+        if "squashfs" in str(rom):
             romsInDir = glob.glob(glob.escape(rom) + '/*')
             rom = romsInDir[0]
 

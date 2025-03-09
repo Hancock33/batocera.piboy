@@ -342,7 +342,7 @@ class LibretroGenerator(Generator):
                 rom = next(rom.glob('*.md'))
 
         if system.name == 'scummvm':
-            if "squashfs" in rom:
+            if "squashfs" in str(rom):
                 romsInDir = glob.glob(glob.escape(rom) + '/*.scummvm')
                 rom_path = romsInDir[0].replace('.scummvm','')
             else:
@@ -352,20 +352,16 @@ class LibretroGenerator(Generator):
                     rom_path = rom_path.with_suffix('')
 
         if system.name == '3ds':
-            if "squashfs" in rom:
-                romsInDir = glob.glob(glob.escape(rom) + '/*.3ds')
-                if len(romsInDir) >= 1:
-                    rom_path = romsInDir[0]
+            if "squashfs" in str(rom) and rom.is_dir():
+                rom = next(rom.glob('*.3ds'))
 
         if system.name == 'n64':
-            if "squashfs" in rom:
-                romsInDir = glob.glob(glob.escape(rom) + '/*')
-                rom_path = romsInDir[0]
+            if "squashfs" in str(rom) and rom.is_dir():
+                rom = next(rom.glob('*.*'))
 
         if system.name == 'n64dd':
-            if "squashfs" in rom:
-                romsInDir = glob.glob(glob.escape(rom) + '/*')
-                rom_path = romsInDir[0]
+            if "squashfs" in str(rom) and rom.is_dir():
+                rom = next(rom.glob('*.*'))
 
         if system.name == 'doom3' and system.config['core'] == "boom3":
             rom_path = '/userdata/roms/ports/doom3/base/pak000.pk4'
