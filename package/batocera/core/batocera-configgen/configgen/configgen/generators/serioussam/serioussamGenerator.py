@@ -11,7 +11,7 @@ class SerioussamGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         # Determine the emulator
-        sam_rom = rom.lower()
+        sam_rom = rom.name.lower()
         data_dir = '/usr/share/game_assets/samtse/Bin'
 
         if (sam_rom.__contains__("/samtfe/")):
