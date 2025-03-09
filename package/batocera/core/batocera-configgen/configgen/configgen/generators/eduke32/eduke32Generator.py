@@ -5,6 +5,7 @@ from typing import TYPE_CHECKING
 from ... import Command
 from ...batoceraPaths import CONFIGS, SAVES, SCREENSHOTS, mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
+from ...exceptions import InvalidConfiguration
 from ...utils.buildargs import parse_args
 from ...utils.configparser import CaseSensitiveConfigParser
 from ..Generator import Generator
@@ -26,10 +27,10 @@ class Eduke32Generator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         os.chdir("/userdata/roms/ports/eduke32")
 
-        rtsfile = rom.replace('.GRP', '.RTS').replace('.grp', '.rts').replace('.EDUKE', '.RTS').replace('.eduke', '.rts')
-        if (rom.lower()).endswith('eduke'):
+        rtsfile = rom.name.replace('.GRP', '.RTS').replace('.grp', '.rts').replace('.EDUKE', '.RTS').replace('.eduke', '.rts')
+        if (rom.name.lower()).endswith('eduke'):
             edukegroup=open(rom).readline().rstrip()
-            edukerom=rom.replace('.eduke', '.GRP').replace('.EDUKE', '.GRP')
+            edukerom=rom.name.replace('.eduke', '.GRP').replace('.EDUKE', '.GRP')
 
             commandArray = ["eduke32", edukerom, "-game_dir", os.path.dirname(os.path.abspath(rom)), "-g", edukegroup, "-rts", rtsfile]
         else:
@@ -50,5 +51,6 @@ class Eduke32Generator(Generator):
             return Command.Command(
                 array=commandArray,
                 env={
+                'SDL_JOYSTICK_HIDAPI': '0', \
                 'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })

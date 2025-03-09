@@ -1,3 +1,4 @@
+
 from __future__ import annotations
 
 import configparser
@@ -38,7 +39,10 @@ class DevilutionXGenerator(Generator):
         if 'Graphics' not in config:
             config['Graphics'] = {}
 
-        config['Graphics']['Fit to Screen'] = system.config.get_bool("devilutionx_stretch", return_values=("1", "0"))
+        if system.isOptSet("devilutionx_stretch") and system.config["devilutionx_stretch"] == "true":
+            config['Graphics']['Fit to Screen'] = '1'
+        else:
+            config['Graphics']['Fit to Screen'] = '0'
 
         with configFile.open('w') as file:
             config.write(file)
@@ -54,7 +58,7 @@ class DevilutionXGenerator(Generator):
         else:
             commandArray.append('--diablo')
 
-        if system.config.show_fps:
+        if system.isOptSet('showFPS') and system.getOptBoolean('showFPS'):
             commandArray.append('-f')
 
         return Command.Command(
@@ -77,6 +81,6 @@ class DevilutionXGenerator(Generator):
         }
 
     def getInGameRatio(self, config, gameResolution, rom):
-        if config.get_bool("devilutionx_stretch"):
+        if "devilutionx_stretch" in config and config['devilutionx_stretch'] == "true":
             return 16 / 9
         return 4 / 3

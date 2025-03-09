@@ -14,7 +14,7 @@ if TYPE_CHECKING:
 
 CONFIG_DIR: Final = CONFIGS / 'sdlpop'
 SCREENSHOTS_DIR: Final = SCREENSHOTS / 'sdlpop'
-SYSTEM_DIR: Final = Path('/usr/share/sdlpop')
+SYSTEM_DIR: Final = Path('/usr/share/SDLPoP')
 
 USER_CONFIG: Final = CONFIG_DIR / 'SDLPoP.cfg'
 USER_INI: Final = CONFIG_DIR / 'SDLPoP.ini'

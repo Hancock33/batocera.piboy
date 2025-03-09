@@ -340,7 +340,7 @@ class OpenJazzGenerator(Generator):
         cfg.save()
 
         # Attempt to change directory to the game's assets
-        gamedir = rom.replace('openjazz.game', '')
+        gamedir = str(rom).replace('openjazz.game', '')
         try:
             os.chdir(gamedir)
         except Exception as e:

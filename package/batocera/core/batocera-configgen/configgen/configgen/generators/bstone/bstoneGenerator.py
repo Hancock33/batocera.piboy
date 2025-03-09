@@ -17,15 +17,15 @@ class BstoneGenerator(Generator):
         gver = "--aog_sw"
         gameResolution = videoMode.getCurrentResolution()
 
-        if (rom.__contains__("AOG")):
+        if  "AOG" in rom.name:
             addon = "/userdata/roms/ports/bstone/AOG"
             gver = "--aog"
 
-        if (rom.__contains__("PS")):
+        if  "PS" in rom.name:
             addon = "/userdata/roms/ports/bstone/PS"
             gver = "--ps"
 
-        if (rom.__contains__("SW")):
+        if  "SW" in rom.name:
             addon = "/userdata/roms/ports/bstone/SW"
             gver = "--aog_sw"
 

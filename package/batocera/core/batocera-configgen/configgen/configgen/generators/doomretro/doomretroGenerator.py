@@ -13,7 +13,7 @@ class DoomretroGenerator(Generator):
         iwad = ''
         pwad = ''
 
-        if rom.endswith(".uwad"):
+        if ".uwad" in rom.name:
             f=open(rom)
             content=f.readlines()
             for line in content:
@@ -21,10 +21,10 @@ class DoomretroGenerator(Generator):
                     iwad += line.replace('IWAD=', '').replace('\n', ' ')
                 elif 'PWAD=/' in line:
                     pwad += line.replace('PWAD=', '').replace('\n', ' ')
-            iwad_command = '-iwad ' + iwad + '-file ' + pwad
+            iwad_command = '-iwad ' + iwad + ' #-file ' + pwad
             args = shlex.split(iwad_command)
         else:
-            iwad_command = '-iwad ' + rom
+            iwad_command = '-iwad ' + rom.name
             args = shlex.split(iwad_command)
 
         commandArray = ['doomretro', *args]

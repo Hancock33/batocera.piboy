@@ -351,12 +351,6 @@ class LibretroGenerator(Generator):
                     # File is empty, run game directly
                     rom_path = rom_path.with_suffix('')
 
-        if system.name == 'reminiscence':
-            with open(rom_path, 'r') as file:
-                first_line = file.readline().strip()
-            directory_path = '/'.join(rom.split('/')[:-1])
-            rom_path = rom_path.parent / first_line
-
         if system.name == '3ds':
             if "squashfs" in rom:
                 romsInDir = glob.glob(glob.escape(rom) + '/*.3ds')
