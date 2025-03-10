@@ -114,7 +114,7 @@ class BatoceraTest():
             x = requests.get("http://localhost:1234/runningGame")
             if not x.ok:
                 raise Exception("fail call es")
-            
+
             xj = x.json()
             if "systemName" in xj:
                 stillRunning = (xj["systemName"] == system)
@@ -146,7 +146,7 @@ class BatoceraTest():
                 stillRunning = (xj["systemName"] == system)
             else:
                 stillRunning = False
-        
+
         print(f"end of test")
 
         return isSuccess

@@ -1627,7 +1627,7 @@ def _flycast_options(
 
     # Alpha Sorting
     _set_from_system(coreSettings, 'reicast_alpha_sorting', system, 'reicast_alpha_sorting', default='per-strip (fast, least accurate)')
-    
+
     # Auto Frame Skipping
     if system.isOptSet('reicast_auto_skip_frame'):
 
