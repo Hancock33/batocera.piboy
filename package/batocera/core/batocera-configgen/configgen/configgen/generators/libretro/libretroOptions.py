@@ -1629,7 +1629,7 @@ def _flycast_options(
     _set_from_system(coreSettings, 'reicast_alpha_sorting', system, 'reicast_alpha_sorting', default='per-strip (fast, least accurate)')
 
     # Auto Frame Skipping
-    if system.isOptSet('reicast_auto_skip_frame'):
+    _set_from_system(coreSettings, 'reicast_auto_skip_frame', system, 'reicast_auto_skip_frame', default='disabled')
 
     ## Atomiswave / Naomi
 
