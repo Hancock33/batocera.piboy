@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-02-07 09:33+0100\n"
+"PO-Revision-Date: 2025-03-10 17:59+0100\n"
 "Last-Translator: pigator\n"
 "Language-Team: \n"
 "Language: hu\n"
@@ -1336,12 +1336,12 @@ msgstr "386DX, 33MHz (7800 cps)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "386_prefetch"
-msgstr ""
+msgstr "386_előretöltés"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "386_slow"
-msgstr ""
+msgstr "386_lassú"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -1486,7 +1486,7 @@ msgstr "486DX2, 66MHz (26800 cps)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "486_slow"
-msgstr ""
+msgstr "486_lassú"
 
 #. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, xenia, xenia-canary
 msgctxt "game_options"
@@ -2351,12 +2351,12 @@ msgstr "APF M-1000 kazetták"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS-BIOS.ROM"
-msgstr ""
+msgstr "APPLE2GS-BIOS.ROM"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS.ROM"
-msgstr ""
+msgstr "APPLE2GS.ROM"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -2491,7 +2491,7 @@ msgstr "HANGERŐ NÖVELÉS"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "AUTO"
-msgstr ""
+msgstr "AUTO"
 
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
@@ -2864,7 +2864,7 @@ msgstr "Minden határ"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "All Timers"
-msgstr ""
+msgstr "Minden időzítő"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -2977,7 +2977,7 @@ msgstr "Amerikai angol"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Amount of instructions DOSBox tries to emulate"
-msgstr ""
+msgstr "A DOSBox által emulálni próbált utasítások mennyisége"
 
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
@@ -3254,7 +3254,7 @@ msgstr "Nyilak 3gomb"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "As Host (Default)"
-msgstr ""
+msgstr "Gazdaként (alapértelmezett)"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -3687,7 +3687,7 @@ msgstr "BT601_625/D65 (ajánlott minden európa/ausztrál fejlesztésű játékh
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Back / Menu"
-msgstr ""
+msgstr "Vissza / Menü"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -4566,12 +4566,12 @@ msgstr "CPU MAG MÓDSZER"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU CYCLES"
-msgstr ""
+msgstr "CPU CIKLUSOK"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Core used in emulation"
-msgstr ""
+msgstr "Az emulációban használt CPU mag"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -4606,7 +4606,7 @@ msgstr "CPU TÍPUS"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Type used in emulation"
-msgstr ""
+msgstr "Az emulációban használt CPU típus"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -5030,6 +5030,8 @@ msgid ""
 "Changes the sleep period accuracy. Some games need this set to improve "
 "performance."
 msgstr ""
+"Megváltoztatja az alvási időszak pontosságát. Néhány játéknak szüksége van "
+"erre a beállításra a teljesítmény javítása érdekében."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -5241,7 +5243,7 @@ msgstr ""
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "Choose which BIOS file for GSplus to boot with."
-msgstr ""
+msgstr "Válassza ki, hogy a GSplus melyik BIOS-fájllal bootoljon."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -5655,7 +5657,7 @@ msgstr "Kereszt"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Crouch"
-msgstr ""
+msgstr "Guggol"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -6403,7 +6405,7 @@ msgstr "Driving Force Pro"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Drop item"
-msgstr ""
+msgstr "Elem eldobása"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -6461,7 +6463,7 @@ msgstr "Holland (nl)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Dynamic"
-msgstr ""
+msgstr "Dinamikus"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -6716,7 +6718,7 @@ msgstr "EVDEV (alapértelmezett)"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "EXPANSION PACK"
-msgstr ""
+msgstr "BŐVÍTŐ CSOMAG"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -7988,7 +7990,7 @@ msgstr "Gyors tolmács"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Fast forward"
-msgstr ""
+msgstr "Gyors előretekerés"
 
 #. TRANSLATION: flycast
 #, c-format
@@ -8827,7 +8829,7 @@ msgstr "GRAFIKA RENDERER"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "GSPLUS BIOS FILENAME"
-msgstr ""
+msgstr "GSPLUS BIOS FÁJLNÉV"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9335,7 +9337,7 @@ msgstr "Segítség és információ"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Help computer"
-msgstr ""
+msgstr "Számítógépes segítség"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -9853,7 +9855,7 @@ msgstr "InuYasha Sengoku Battle Fix"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Inventory"
-msgstr ""
+msgstr "Leltár"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10112,7 +10114,7 @@ msgstr "Július"
 #. TRANSLATION: omf2097.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
-msgstr ""
+msgstr "Ugrás"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10643,12 +10645,12 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look down"
-msgstr ""
+msgstr "Nézz lefelé"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look up"
-msgstr ""
+msgstr "Nézz fel"
 
 #. TRANSLATION: amiberry, libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus, ...
 msgctxt "game_options"
@@ -11044,7 +11046,7 @@ msgstr "Egyeztetési ablak"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Max"
-msgstr ""
+msgstr "Max"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -11409,7 +11411,7 @@ msgstr "Stílusmutató mozgatása"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move back / down"
-msgstr ""
+msgstr "Mozgás hátra / le"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11444,7 +11446,7 @@ msgstr "Mozgás előre"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move forward / up"
-msgstr ""
+msgstr "Mozgás előre / felfelé"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11806,17 +11808,17 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next item"
-msgstr ""
+msgstr "Következő elem"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Next slot"
-msgstr ""
+msgstr "Következő hely"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next weapon"
-msgstr ""
+msgstr "Következő fegyver"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -13124,12 +13126,12 @@ msgstr "Nyomja meg az Y billentyűt az „Igen” kiválasztásához"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Previous item"
-msgstr ""
+msgstr "Előző elem"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Previous slot"
-msgstr ""
+msgstr "Előző hely"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -13398,17 +13400,17 @@ msgstr "ROM (Slot 4)"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.00"
-msgstr ""
+msgstr "ROM.00"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.03 (default)"
-msgstr ""
+msgstr "ROM.03 (alap)"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM1"
-msgstr ""
+msgstr "ROM1"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -13646,7 +13648,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Reset"
-msgstr ""
+msgstr "Visszaállítás"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13675,7 +13677,7 @@ msgstr "BLENDMODE körvonal visszaállítása a Singe sprite-okon."
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Restore state"
-msgstr ""
+msgstr "Állapot helyreállítása"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
@@ -13837,7 +13839,7 @@ msgstr "Futás"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "Run the Unfinished expansion pack."
-msgstr ""
+msgstr "Futtasd az befejezetlen kiegészítő csomagot."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14158,7 +14160,7 @@ msgstr "START MENÜ KIHAGYÁSA"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "SLEEP TIMERS ACCURACY"
-msgstr ""
+msgstr "ALVÓ IDŐZÍTŐK PONTOSSÁGA"
 
 #. TRANSLATION: suyu
 msgctxt "game_options"
@@ -14448,7 +14450,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Save state"
-msgstr ""
+msgstr "Állapot mentése"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -16475,7 +16477,7 @@ msgstr "Hagyományos kínai"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Translate"
-msgstr ""
+msgstr "Fordítás"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -17074,7 +17076,7 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Use item"
-msgstr ""
+msgstr "Elem használata"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -17212,7 +17214,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Usleep Only"
-msgstr ""
+msgstr "Csak alvás"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17602,7 +17604,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "WRITE DEPTH BUFFERS"
-msgstr ""
+msgstr "MÉLYSÉGI PUFFEREK ÍRÁSA"
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -17777,6 +17779,8 @@ msgid ""
 "Writes depth buffer values to VM memory. Some games need this to fix broken "
 "graphics."
 msgstr ""
+"A mélységi puffer értékeit írja a VM memóriájába. Néhány játéknak szüksége "
+"van erre a hibás grafika javításához."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -18191,7 +18195,7 @@ msgstr "eredeti gameboy"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "pentium_slow"
-msgstr ""
+msgstr "pentium_lassú"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
