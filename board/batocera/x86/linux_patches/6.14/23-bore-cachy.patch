@@ -1,5 +1,5 @@
 diff --git a/include/linux/sched.h b/include/linux/sched.h
-index 9632e3318e0d..84bea3fe36f4 100644
+index 9c15365a30c0..caad287df159 100644
 --- a/include/linux/sched.h
 +++ b/include/linux/sched.h
 @@ -544,6 +544,15 @@ struct sched_statistics {
@@ -750,7 +750,7 @@ index ef047add7f9e..ef1a4b610bae 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index 160833a1da47..e3c24b620df0 100644
+index 46f2a4236ce8..4a7cce41a20f 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -58,6 +58,8 @@
@@ -898,7 +898,7 @@ index 160833a1da47..e3c24b620df0 100644
  			    unsigned long weight)
  {
  	bool curr = cfs_rq->curr == se;
-@@ -5287,7 +5310,11 @@ place_entity(struct cfs_rq *cfs_rq, struct sched_entity *se, int flags)
+@@ -5289,7 +5312,11 @@ place_entity(struct cfs_rq *cfs_rq, struct sched_entity *se, int flags)
  		se->rel_deadline = 0;
  		return;
  	}
@@ -911,7 +911,7 @@ index 160833a1da47..e3c24b620df0 100644
  	/*
  	 * When joining the competition; the existing tasks will be,
  	 * on average, halfway through their slice, as such start tasks
-@@ -7183,6 +7210,15 @@ static bool dequeue_task_fair(struct rq *rq, struct task_struct *p, int flags)
+@@ -7185,6 +7212,15 @@ static bool dequeue_task_fair(struct rq *rq, struct task_struct *p, int flags)
  		util_est_dequeue(&rq->cfs, p);
  
  	util_est_update(&rq->cfs, p, flags & DEQUEUE_SLEEP);
@@ -927,7 +927,7 @@ index 160833a1da47..e3c24b620df0 100644
  	if (dequeue_entities(rq, &p->se, flags) < 0)
  		return false;
  
-@@ -8996,16 +9032,25 @@ static void yield_task_fair(struct rq *rq)
+@@ -8998,16 +9034,25 @@ static void yield_task_fair(struct rq *rq)
  	/*
  	 * Are we the only task in the tree?
  	 */
@@ -953,7 +953,7 @@ index 160833a1da47..e3c24b620df0 100644
  	/*
  	 * Tell update_rq_clock() that we've just updated,
  	 * so we don't do microscopic update in schedule()
-@@ -13135,6 +13180,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
+@@ -13137,6 +13182,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
  static void task_fork_fair(struct task_struct *p)
  {
  	set_task_max_allowed_capacity(p);
@@ -963,7 +963,7 @@ index 160833a1da47..e3c24b620df0 100644
  }
  
  /*
-@@ -13245,6 +13293,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
+@@ -13247,6 +13295,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
  
  static void switched_from_fair(struct rq *rq, struct task_struct *p)
  {
