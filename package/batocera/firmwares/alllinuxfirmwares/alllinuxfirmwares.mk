@@ -3,8 +3,9 @@
 # alllinuxfirmwares
 #
 ################################################################################
-# Version: Commits on Feb 11, 2025
+# Version: Commits on Mar 11, 2025
 ALLLINUXFIRMWARES_VERSION = 20250211
+ALLLINUXFIRMWARES_VERSION = 20250311
 ALLLINUXFIRMWARES_SOURCE = linux-firmware-$(ALLLINUXFIRMWARES_VERSION).tar.gz
 ALLLINUXFIRMWARES_SITE = https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot
 
