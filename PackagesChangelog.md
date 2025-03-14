@@ -19,8 +19,11 @@ Ports|[nblood](http://github.com/NBlood/NBlood)|r14204|Mar 14, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|edfdb1fd993bae0ce396a77d37f3f783fa7fe65f|Mar 14, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|8756a9ed06df4e9f12a79657bd5122359063291f|Mar 14, 2025
 Utils|[clevis](http://github.com/latchset/clevis)|e010e18a1b456d4c60864951aa9839df7a0b65e2|Mar 14, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|54ee2f6cc4214e0443351e3736df13a06fa8f851|Mar 14, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250314|Mar 14, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|47a2d0644b3e51b8c810549d0b868d295c7d5527|Mar 14, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|ea592051c73eda11b98d81192a365a4e85cacee4|Mar 14, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250314|Mar 14, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|100d480b80691bbfabd15072721f75164ca4e8ec|Mar 14, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|70bf6a089dd0a673d6d6224ac80e9057bef9dd8e|Mar 14, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|70bf6a089dd0a673d6d6224ac80e9057bef9dd8e|Mar 14, 2025
@@ -75,10 +78,8 @@ Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|0fcf1f6e3a443cb249f85
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|ecbbadd6040876c1f3c5eee46df1cae44f5f03d2|Mar 09, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|2c0c1ca4a6d1a30cdbb8d738d76d34ea7a918e19|Mar 09, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|d2d6a35a5b63aa866e7336b33c8fcebc8a0e7eff|Mar 09, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250309|Mar 09, 2025
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|7d18381b0e0fade81050315ce260a72307e55280|Mar 09, 2025
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|fb39cdde6dfaea2c98218d28c71b14afc632fa03|Mar 09, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250309|Mar 09, 2025
 Emulators|[libretro-nestopia](http://github.com/libretro/nestopia)|5859109fc71b16dea31d1e3c2db43aa214e1c3eb|Mar 09, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|ecbbadd6040876c1f3c5eee46df1cae44f5f03d2|Mar 09, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|2c0c1ca4a6d1a30cdbb8d738d76d34ea7a918e19|Mar 09, 2025
@@ -94,7 +95,6 @@ Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|23bd7d7eae621f
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|2860aa96f4e77ebe99ef5b032848e2781bf51327|Mar 08, 2025
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|fcfd7c9862e9157512bcab53affecd592b320131|Mar 08, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20250308|Mar 08, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.3|Mar 07, 2025
 Ports|[box86](http://github.com/ptitseb/box86)|d0aad67ba0626959313f36b9e29055d121d7a65e|Mar 07, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|8af0e2c8b42e02d5a4c589c42d868580011de950|Mar 07, 2025
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|9f2b7943db1fb784daf0948b0b493bc7f76919f8|Mar 07, 2025
