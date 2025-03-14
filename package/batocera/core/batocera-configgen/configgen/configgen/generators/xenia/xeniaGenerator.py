@@ -263,9 +263,9 @@ class XeniaGenerator(Generator):
         if 'XConfig' not in config:
             config['XConfig'] = {}
         # console country
-        config['XConfig'] = {'user_country': system.config.get_int('xenia_country', 103)}  # 103 = US
+        config['XConfig']['user_country'] = system.config.get_int('xenia_country', 103)  # 103 = US
         # language
-        config['XConfig'] = {'user_language': system.config.get_int('xenia_language', 1)}
+        config['XConfig']['user_language'] = system.config.get_int('xenia_language', 1)
 
         # now write the updated toml
         with toml_file.open('w') as f:
@@ -307,15 +307,17 @@ class XeniaGenerator(Generator):
             else:
                 commandArray = [wine.WINE64, emupath / 'xenia.exe', f'z:{rom}']
 
-        environment = ({
-            'LD_LIBRARY_PATH': f'/usr/lib:/lib',
-            'LIBGL_DRIVERS_PATH': '/usr/lib/dri',
-            'WINEFSYNC': '1',
-            'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers),
-            'SDL_JOYSTICK_HIDAPI': '0',
-            'VKD3D_SHADER_CACHE_PATH': xeniaCache,
-            'WINEDLLOVERRIDES': "winemenubuilder.exe=;dxgi,d3d8,d3d9,d3d10core,d3d11,d3d12,d3d12core=n",
-        })
+        environment = wine.get_wine_environment(wineprefix)
+        environment.update(
+            {
+                'LD_LIBRARY_PATH': f'/usr/lib:{environment["LD_LIBRARY_PATH"]}',
+                'LIBGL_DRIVERS_PATH': '/usr/lib/dri',
+                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers),
+                'SDL_JOYSTICK_HIDAPI': '0',
+                'VKD3D_SHADER_CACHE_PATH': xeniaCache,
+                'WINEDLLOVERRIDES': "winemenubuilder.exe=;dxgi,d3d8,d3d9,d3d10core,d3d11,d3d12,d3d12core=n",
+            }
+        )
 
         # ensure nvidia driver used for vulkan
         if Path('/var/tmp/nvidia.prime').exists():

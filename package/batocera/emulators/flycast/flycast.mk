@@ -53,10 +53,6 @@ endif
 
 define FLYCAST_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/buildroot-build/flycast $(TARGET_DIR)/usr/bin/flycast
-	# evmapy files
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/flycast/*.keys $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/flycast/naomi.flycast.keys $(TARGET_DIR)/usr/share/evmapy/systemsp.flycast.keys
 endef
 
 $(eval $(cmake-package))

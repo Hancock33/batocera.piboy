@@ -16,6 +16,7 @@
 - Initial support for XGunner light gun
 - Initial support for OpenFIRE light gun
 - Initial support for Fusion P.I.G.S. light gun
+- Initial support for OneHit light gun (AimTrak clone)
 ### Added
 - Wireguard VPN for RK3326 boards
 - Image scaling option for Drastic
@@ -70,7 +71,7 @@
 - ScummVM to v2.9.0
 - PCSX2 to v2.3.185
 - Play! to 4th Feb build
-- Xemu to v0.8.23
+- Xemu to v0.8.34
 - Triforce to use a Crediar build (Nov 29, 2024)
 - Vice to 3.9
 - TheXTech to v1.3.7-hotfix2
@@ -99,16 +100,16 @@
 ### System
 - Bluez to 5.79
 - Buildroot to 2024.11.x with supporting package updates
-- Mesa3D to 25.0.0
-- Linux Kernel to 6.13.3
-- GStreamer codecs to 1.24.12
+- Mesa3D to 25.0.1
+- Linux Kernel to 6.13.6
+- GStreamer codecs to 1.26.0
 - SDL2 to 2.30.11
 - Vulkan stack to v1.4.304
 - MPV to 0.39.0
 - Kodi to 21.2
 - Nvidia production driver to 570.124.04
 - LLVM to 19.1.7
-- Wine-TKG to 10.1
+- Wine-TKG to 10.3
 - Faudio to 25.02
 - DXVK to 2.5.3
 - DXVK-NVAPI to 0.8.0
@@ -121,6 +122,7 @@
 - Wireplumber to 0.5.8
 - Ryzenadj to v0.16.0
 - QT6 to 6.8.1
+- BTop to 1.4.0
 
 # 2025/01/06 - batocera.linux 41 - Golden-rayed Blue
 ### Special Notes
