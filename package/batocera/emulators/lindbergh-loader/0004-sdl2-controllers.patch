@@ -153,10 +153,10 @@ index 0f22635..7577dc6 100644
      float whiteBorderPercentage;
      float blackBorderPercentage;
 diff --git a/src/lindbergh/evdevinput.c b/src/lindbergh/evdevinput.c
-index ba60743..150c97a 100644
+index 988f06f..e25fd25 100644
 --- a/src/lindbergh/evdevinput.c
 +++ b/src/lindbergh/evdevinput.c
-@@ -1308,7 +1308,7 @@ ControllerStatus getArcadeInputByName(char *name, ArcadeInput *input)
+@@ -1298,7 +1298,7 @@ ControllerStatus getArcadeInputByName(char *name, ArcadeInput *input)
  ControllerStatus startControllerThreads(Controllers *controllers)
  {
      // Don't start EVDEV threads if SDL/X11-only mode is enabled
@@ -721,7 +721,7 @@ index f1ae296..f1ca827 100644
 \ No newline at end of file
 +}
 diff --git a/src/lindbergh/lindbergh.c b/src/lindbergh/lindbergh.c
-index e143b1b..ba0efc0 100644
+index cc900ed..0bd76f0 100644
 --- a/src/lindbergh/lindbergh.c
 +++ b/src/lindbergh/lindbergh.c
 @@ -12,7 +12,7 @@
