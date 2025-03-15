@@ -17293,11 +17293,6 @@ msgctxt "keys_files"
 msgid "Display the controller screen"
 msgstr ""
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, dreamcast.redream.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, ...
-msgctxt "keys_files"
-msgid "Hide the bezel"
-msgstr ""
-
 #. TRANSLATION: psx.duckstation.keys
 msgctxt "keys_files"
 msgid "Next Disc (m3u)"
@@ -17381,6 +17376,11 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys, triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "Screenshot"
+msgstr ""
+
+#. TRANSLATION: naomigd.flycast.keys
+msgctxt "keys_files"
+msgid "Hide the bezel"
 msgstr ""
 
 #. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
@@ -17526,6 +17526,11 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Translate"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Hide bezels"
 msgstr ""
 
 #. TRANSLATION: rott.keys
