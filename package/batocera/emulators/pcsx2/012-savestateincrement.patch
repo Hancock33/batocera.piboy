@@ -1,8 +1,8 @@
 diff --git a/pcsx2/Config.h b/pcsx2/Config.h
-index 00da38c6a..82f7ab474 100644
+index fc1253d22..e80ed671f 100644
 --- a/pcsx2/Config.h
 +++ b/pcsx2/Config.h
-@@ -1292,6 +1292,7 @@ struct Pcsx2Config
+@@ -1269,6 +1269,7 @@ struct Pcsx2Config
  		InhibitScreensaver : 1,
  		BackupSavestate : 1,
  		McdFolderAutoManage : 1,
@@ -11,10 +11,10 @@ index 00da38c6a..82f7ab474 100644
  
  		HostFs : 1,
 diff --git a/pcsx2/Pcsx2Config.cpp b/pcsx2/Pcsx2Config.cpp
-index 6ecd0ad59..41b8ecd73 100644
+index 5b83b1f4c..9b921f05e 100644
 --- a/pcsx2/Pcsx2Config.cpp
 +++ b/pcsx2/Pcsx2Config.cpp
-@@ -1918,6 +1918,7 @@ Pcsx2Config::Pcsx2Config()
+@@ -1880,6 +1880,7 @@ Pcsx2Config::Pcsx2Config()
  	BackupSavestate = true;
  	WarnAboutUnsafeSettings = true;
  	ManuallySetRealTimeClock = false;
@@ -22,7 +22,7 @@ index 6ecd0ad59..41b8ecd73 100644
  
  	// To be moved to FileMemoryCard pluign (someday)
  	for (uint slot = 0; slot < 8; ++slot)
-@@ -1960,6 +1961,7 @@ void Pcsx2Config::LoadSaveCore(SettingsWrapper& wrap)
+@@ -1922,6 +1923,7 @@ void Pcsx2Config::LoadSaveCore(SettingsWrapper& wrap)
  	SettingsWrapBitBool(EnableDiscordPresence);
  	SettingsWrapBitBool(InhibitScreensaver);
  	SettingsWrapBitBool(HostFs);

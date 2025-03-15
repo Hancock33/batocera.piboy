@@ -1,8 +1,8 @@
 diff --git a/pcsx2/ImGui/ImGuiFullscreen.cpp b/pcsx2/ImGui/ImGuiFullscreen.cpp
-index fb7c8b10c..fb451fef9 100644
+index 877ad435e..31b96da52 100644
 --- a/pcsx2/ImGui/ImGuiFullscreen.cpp
 +++ b/pcsx2/ImGui/ImGuiFullscreen.cpp
-@@ -2672,6 +2672,10 @@ void ImGuiFullscreen::DrawNotifications(ImVec2& position, float spacing)
+@@ -2690,6 +2690,10 @@ void ImGuiFullscreen::DrawNotifications(ImVec2& position, float spacing)
  	const u32 toast_title_color = IM_COL32(0xff, 0xff, 0xff, 255);
  	const u32 toast_text_color = IM_COL32(0xff, 0xff, 0xff, 255);
  
@@ -13,7 +13,7 @@ index fb7c8b10c..fb451fef9 100644
  	for (u32 index = 0; index < static_cast<u32>(s_notifications.size());)
  	{
  		Notification& notif = s_notifications[index];
-@@ -2693,7 +2697,10 @@ void ImGuiFullscreen::DrawNotifications(ImVec2& position, float spacing)
+@@ -2711,7 +2715,10 @@ void ImGuiFullscreen::DrawNotifications(ImVec2& position, float spacing)
  			min_width);
  		const float box_height =
  			std::max((vertical_padding * 2.0f) + ImCeil(title_size.y) + vertical_spacing + ImCeil(text_size.y), min_height);
