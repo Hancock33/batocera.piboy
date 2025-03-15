@@ -783,8 +783,8 @@ createAutorunCmd() {
         ) > "${WINEPOINT}/autorun.cmd"
     fi
 
-						
-					
+
+
     return 0
 }
 
