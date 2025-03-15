@@ -1,8 +1,10 @@
---- a/startx.cpp
-+++ b/startx.cpp
-@@ -333,5 +333,20 @@
- kbd_mode -a
- #endif
+diff --git a/startx.in b/startx.in
+index 9b224af..659050f 100644
+--- a/startx.in
++++ b/startx.in
+@@ -349,4 +349,19 @@ if [ "$(uname -s)" = "SunOS" ]; then
+     kbd_mode -a
+ fi
  
 +if [ $retval -ne 0 ]; then
 +    XCOMM X has crashed or otherwise failed
@@ -20,4 +22,3 @@
 +fi
 +
  exit $retval
- 

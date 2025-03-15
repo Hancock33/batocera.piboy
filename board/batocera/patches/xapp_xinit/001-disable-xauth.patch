@@ -1,8 +1,17 @@
-diff --git a/startx.cpp b/startx.cpp
-index dbc4cae..8a0282e 100644
---- a/startx.cpp
-+++ b/startx.cpp
-@@ -137,7 +137,7 @@
+diff --git a/startx.in b/startx.in
+index 9b224af..c8cd327 100644
+--- a/startx.in
++++ b/startx.in
+@@ -115,7 +115,7 @@ if [ "$(uname -s)" = "Darwin" ] ; then
+     fi
+ 
+     if [ "$(defaults read $X11_PREFS_DOMAIN no_auth)" = 0 ] ; then
+-        enable_xauth=1
++        enable_xauth=0
+     else
+         enable_xauth=0
+     fi
+@@ -139,7 +139,7 @@ if [ "$(uname -s)" = "Darwin" ] ; then
      fi
  
  else
@@ -10,5 +19,4 @@ index dbc4cae..8a0282e 100644
 +    enable_xauth=0
  fi
  
- XCOMM Automatically determine an unused $DISPLAY
-
+ # Automatically determine an unused $DISPLAY
