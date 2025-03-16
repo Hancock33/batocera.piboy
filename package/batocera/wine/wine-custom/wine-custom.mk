@@ -3,8 +3,8 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Mar 14, 2025
-WINE_CUSTOM_VERSION = 54ee2f6cc4214e0443351e3736df13a06fa8f851
+# Version: Commits on Mar 16, 2025
+WINE_CUSTOM_VERSION = cc7d7e061510f0b079fffe423f70f53fc36c455c
 WINE_CUSTOM_BRANCH = ntsync
 WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
 WINE_CUSTOM_SITE = $(call github,Hancock33,wine-tkg-batocera,$(WINE_CUSTOM_VERSION))
@@ -41,6 +41,7 @@ WINE_CUSTOM_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 	--without-gettext \
 	--without-gettextpo \
 	--without-gphoto \
+	--without-ldap \
 	--without-mingw \
 	--without-opencl \
 	--without-oss \
@@ -297,17 +298,19 @@ endef
 HOST_WINE_CUSTOM_CONF_OPTS += \
 	--disable-tests \
 	--disable-win16 \
+	--disable-winemenubuilder \
 	--without-alsa \
 	--without-capi \
 	--without-coreaudio \
 	--without-cups \
 	--without-dbus \
 	--without-fontconfig \
-	--without-gphoto \
 	--without-gnutls \
+	--without-gphoto \
 	--without-gssapi \
 	--without-gstreamer \
 	--without-krb5 \
+	--without-ldap \
 	--without-mingw \
 	--without-netapi \
 	--without-opencl \
