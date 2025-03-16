@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Mar 16, 2025
-WINE_CUSTOM_VERSION = cc7d7e061510f0b079fffe423f70f53fc36c455c
+WINE_CUSTOM_VERSION = 042e550aa419ad147422f659d383283a879e57ad
 WINE_CUSTOM_BRANCH = ntsync
 WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
 WINE_CUSTOM_SITE = $(call github,Hancock33,wine-tkg-batocera,$(WINE_CUSTOM_VERSION))
