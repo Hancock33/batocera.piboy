@@ -10,7 +10,9 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45532|Mar 16, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|31781811124d58718711f6fd6dc184488b9c1293|Mar 16, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14217|Mar 16, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|9c7e342fb699f4d8c36dc3e43b122e7cbcb4b4d8|Mar 16, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250316|Mar 16, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|bf3752ed61ed2eca329c2763f884f99727a14e13|Mar 16, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250316|Mar 16, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|68a1fbdc2b01c29ca182f8fd0a0ca98769be0960|Mar 16, 2025
 Emulators|[libretro-nestopia](http://github.com/libretro/nestopia)|83d4f6227d14c817c8c75d2b6ad69514acb8fc4b|Mar 16, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|3f7126067110bb7987566d12a8cd98f667f3c765|Mar 16, 2025
@@ -51,9 +53,7 @@ Firmwares|[firmware-armbian](http://github.com/armbian/firmware)|509fadf8bd4eabc
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|cfc99c0e44c2bd451015c8174ca70284041fd39e|Mar 14, 2025
 Utils|[clevis](http://github.com/latchset/clevis)|e010e18a1b456d4c60864951aa9839df7a0b65e2|Mar 14, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|54ee2f6cc4214e0443351e3736df13a06fa8f851|Mar 14, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250314|Mar 14, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|47a2d0644b3e51b8c810549d0b868d295c7d5527|Mar 14, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250314|Mar 14, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|345926f05751c770e92ccf7f77e2117e58ca4ebf|Mar 14, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|f43eeef180984aa729c699ae3e2afeda8486b4d5|Mar 14, 2025
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|47a2d0644b3e51b8c810549d0b868d295c7d5527|Mar 14, 2025
