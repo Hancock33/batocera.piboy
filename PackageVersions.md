@@ -183,7 +183,7 @@ Emulators|[libretro-nxengine](http://github.com/libretro/nxengine-libretro)|9adc
 Emulators|[libretro-o2em](http://github.com/libretro/libretro-o2em)|3ba4231c1dc8dcdf487428712856b790d2e4b8f3|Nov 3, 2021
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|67a29e60a4d194b675c9272b21b61eaa022f3ba3|Oct 17, 2024
 Emulators|[libretro-p2000t](http://github.com/p2000t/M2000)|681ca42e712f7003691884be93367fd8223f2c90|Jan 28, 2025
-Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|761f9264ba1ae2dde7b406e91a7b026e79fb5eba|Mar 16, 2025
+Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|e71cbc9bc337f43bbb5c1021ab541ac802d498ec|Mar 16, 2025
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|f8605345e13c018a30c8f4ed03c05d8fc8f70be8|Mar 02, 2025
 Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|28b37bafd3fb1e3a812c50a5ddca94c5fd68e5fd|Oct 21, 2024
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|da219658c24c610ba82d5a07ea9897e8e0eef670|Dec 21, 2024
@@ -261,7 +261,7 @@ Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|46e2044f2c0892081eee7450312db05d0d8be4cd|Mar 14, 2025
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.226|Mar 16, 2025
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.227|Mar 16, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|b15a49e31172f05dfdb1b1a15ea71e8a870c27ae|Mar 10, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|8caec3c34d32da9268c501e43e24846fb84a1569|Mar 16, 2025
@@ -285,7 +285,7 @@ Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|9b927f280322b6bb
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|26b4b7bf1dae3a1499c9776bdf9d3aea9c87d713|Mar 12, 2025
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|39f26d3bc8e04133c31192c757eaebd5f0924f2d|Mar 12, 2025
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|5b2c5897e8a972cba6db92abe7e60c9ca98c99e8|Mar 12, 2025
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|4e4840aaffa1a3bc1802f88179ca9c279063a93a|Mar 16, 2025
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|63d7aeed53382431edf0e8c61469769684d6d495|Mar 16, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|e88b7b70f06c373e18bf47dba98665079d3cdbc7|Mar 16, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45532|Mar 16, 2025
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019

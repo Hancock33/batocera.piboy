@@ -6,13 +6,13 @@ Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|d2f1e692f32cab4dd
 Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|51800e249bc44bd13b528220a8e064c3744c05d1|Mar 16, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|0afbeae70c94b72318035c300ef085d4753f7462|Mar 16, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|811b240aae08532436a0290e9d1b0ae6ab23b7cb|Mar 16, 2025
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.226|Mar 16, 2025
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.227|Mar 16, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|8caec3c34d32da9268c501e43e24846fb84a1569|Mar 16, 2025
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.3.15|Mar 16, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|a1fa8dd70120856bd8c027293be99dbac3b1ad00|Mar 16, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-03-16|Mar 16, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.3.8|Mar 16, 2025
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|4e4840aaffa1a3bc1802f88179ca9c279063a93a|Mar 16, 2025
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|63d7aeed53382431edf0e8c61469769684d6d495|Mar 16, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|e88b7b70f06c373e18bf47dba98665079d3cdbc7|Mar 16, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45532|Mar 16, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|b826da4aa75b8217b2a71b345aaea7894f4e4fa0|Mar 16, 2025
@@ -24,7 +24,7 @@ Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|fbcd3a77fb214c5101d735feee5817efb6f8138a|Mar 16, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250316|Mar 16, 2025
 Emulators|[libretro-nestopia](http://github.com/libretro/nestopia)|83d4f6227d14c817c8c75d2b6ad69514acb8fc4b|Mar 16, 2025
-Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|761f9264ba1ae2dde7b406e91a7b026e79fb5eba|Mar 16, 2025
+Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|e71cbc9bc337f43bbb5c1021ab541ac802d498ec|Mar 16, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|8caec3c34d32da9268c501e43e24846fb84a1569|Mar 16, 2025
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|c817ddb967e7df9747d31aff26a2ecf66cdabbfb|Mar 15, 2025
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|d72948ca220210a522be19315cc11335d626f246|Mar 15, 2025
