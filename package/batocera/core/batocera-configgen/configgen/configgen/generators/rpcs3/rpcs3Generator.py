@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+import os
 import re
 import shutil
 from typing import TYPE_CHECKING, Any, cast
@@ -242,13 +243,14 @@ class Rpcs3Generator(Generator):
         shutil.copytree('/usr/share/rpcs3/Icons/', icon_target, dirs_exist_ok=True, copy_function=shutil.copy2)
 
         # determine the rom name
-        if rom.suffix == ".psn":
+        romExt = os.path.splitext(rom)[1]
+        if romExt == ".psn":
             with rom.open() as fp:
                 for line in fp:
                     if len(line) >= 9:
                         romName = RPCS3_CONFIG_DIR / "dev_hdd0" / "game" / line.strip().upper() / "USRDIR" / "EBOOT.BIN"
         else:
-            romName = rom / "PS3_GAME" / "USRDIR" / "EBOOT.BIN"
+            romName = rom  + "/PS3_GAME/USRDIR/EBOOT.BIN"
 
         # write our own gamecontrollerdb.txt file before launching the game
         dbfile = RPCS3_CONFIG_DIR / "input_configs" / "gamecontrollerdb.txt"
