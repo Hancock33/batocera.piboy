@@ -3238,8 +3238,8 @@ switch:
   theme:                switch
   extensions:           [nsp, xci]
   emulators:
-    suyu:
-      suyu:             { requireAnyOf: [BR2_PACKAGE_SUYU]    }
+    citron:
+      citron:           { requireAnyOf: [BR2_PACKAGE_CITRON]  }
     ryujinx:
       ryujinx:          { requireAnyOf: [BR2_PACKAGE_RYUJINX] }
 
