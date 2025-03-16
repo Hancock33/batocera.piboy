@@ -11,6 +11,7 @@ config BR2_PACKAGE_ETLEGACY
 	select BR2_PACKAGE_OPENAL
 	select BR2_PACKAGE_OPENSSL
 	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SQLITE
 
 	help
 	  ET: Legacy is an open source project based on the code
