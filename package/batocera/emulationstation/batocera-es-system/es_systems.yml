@@ -2872,8 +2872,6 @@ tg-cd:
   emulators:
     azahar:
       azahar:           { requireAnyOf: [BR2_PACKAGE_AZAHAR]            }
-    citra:
-      citra:            { requireAnyOf: [BR2_PACKAGE_CITRA]             }
     libretro:
       citra:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_CITRA]    }
       panda3ds:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PANDA3DS] }

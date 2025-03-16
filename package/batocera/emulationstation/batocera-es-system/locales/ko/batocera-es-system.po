@@ -2203,7 +2203,7 @@ msgctxt "game_options"
 msgid "ADJUST POWERPC FREQUENCY"
 msgstr "파워피씨 주파수 조정"
 
-#. TRANSLATION: bigpemu, cemu, citra, dolphin_triforce, drastic, ...
+#. TRANSLATION: azahar, bigpemu, cemu, dolphin_triforce, drastic, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "고급 옵션"
@@ -3225,7 +3225,7 @@ msgctxt "game_options"
 msgid "Arrange the dual screen layout."
 msgstr "듀얼 스크린 레이아웃을 처리합니다."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
@@ -3934,7 +3934,7 @@ msgctxt "game_options"
 msgid "Bottom (Default)"
 msgstr "하단 (기본)"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Bottom Only"
 msgstr "하단만"
@@ -5232,7 +5232,7 @@ msgctxt "game_options"
 msgid "Choose which audio API library to use."
 msgstr ""
 
-#. TRANSLATION: cemu, citra, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: azahar, cemu, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr "사용할 그래픽 API 라이브러리를 선택하세요."
@@ -5492,7 +5492,7 @@ msgstr ""
 "다음 게임 실행 시 셰이더를 컴파일합니다(한 번). 마이크로 프리즈를 줄입니다. "
 "Vulkan만 해당."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid ""
 "Compile shaders using background threads to avoid shader compilation "
@@ -5806,7 +5806,7 @@ msgctxt "game_options"
 msgid "DISABLE VERTEX CACHE"
 msgstr "VERTEX 캐시 비활성화"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
 msgstr "디스크 셰이더 캐시"
@@ -6527,7 +6527,7 @@ msgctxt "game_options"
 msgid "ENABLE AI TRANSLATION SERVICE"
 msgstr "AI 번역 서비스 활성화"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "ENABLE ASYNC SHADER COMPILATION"
 msgstr "비동기 셰이더 컴파일 활성화"
@@ -7374,7 +7374,7 @@ msgctxt "game_options"
 msgid "Enhancement. Increase the rendering resolution."
 msgstr "향상. 렌더링 해상도를 높입니다."
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, flycast, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, flycast, ...
 msgctxt "game_options"
 msgid ""
 "Enhancement. Increase the rendering resolution. Makes 3D objects clearer."
@@ -7774,7 +7774,7 @@ msgctxt "game_options"
 msgid "FRAME DUPING (SPEED UP)"
 msgstr "프레임 복제 (속도 향상)"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "FRAME LIMIT"
 msgstr "프레임 제한"
@@ -8053,7 +8053,7 @@ msgstr ""
 "화면 찢어짐 문제를 수정합니다. 적응형 동기화(기본)는 즉시 표시되는 늦은 프레"
 "임(대상 FPS 미만)을 제외하고 비디오 동기화 시 동기화합니다."
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, melonds, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, melonds, ...
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr "화면 찢어짐을 수정합니다. CPU가 성능을 많이 소모합니다."
@@ -8730,12 +8730,12 @@ msgctxt "game_options"
 msgid "GRAPHICAL USER INTERFACE"
 msgstr "그래픽 사용자 인터페이스"
 
-#. TRANSLATION: citra, rtcw, theforceengine
+#. TRANSLATION: azahar, rtcw, theforceengine
 msgctxt "game_options"
 msgid "GRAPHICS"
 msgstr "그래픽"
 
-#. TRANSLATION: cemu, citra, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: azahar, cemu, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "그래픽 API"
@@ -9441,12 +9441,12 @@ msgctxt "game_options"
 msgid "Hybrid + Bicubic"
 msgstr "하이브리드 + 고등차수"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
 msgstr "하이브리드 화면 하단"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
 msgstr "하이브리드 화면 상단"
@@ -10307,7 +10307,7 @@ msgctxt "game_options"
 msgid "LLVM is fastest, use the Interpreter settings if there are issues."
 msgstr "LLVM이 가장 빠르며 문제가있는 경우 해석기 설정을 사용하십시오."
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, libretro/mesen, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, libretro/mesen, ...
 msgctxt "game_options"
 msgid "LOAD CUSTOM TEXTURES"
 msgstr "커스텀 텍스처 로드"
@@ -10327,12 +10327,12 @@ msgctxt "game_options"
 msgid "Landscape"
 msgstr "가로 화면"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Large Bottom"
 msgstr "큰 하단"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Large Top"
 msgstr "큰 상단"
@@ -10397,7 +10397,7 @@ msgctxt "game_options"
 msgid "Left stick"
 msgstr "왼쪽 스틱"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Left/Right"
 msgstr "왼쪽/오른쪽"
@@ -11291,7 +11291,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "마우스 (1351)"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "마우스 킬릭"
@@ -11311,7 +11311,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr "앞으로 이동, W를 누를 때 사용할 수 있ㅇ"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "스타일릿 포인터 이동"
@@ -11428,7 +11428,7 @@ msgctxt "game_options"
 msgid "NETWORK TYPE"
 msgstr "네트워크 유형"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "NEW 3DS MODE"
 msgstr "새 3DS 모드"
@@ -11959,7 +11959,7 @@ msgctxt "game_options"
 msgid "October"
 msgstr "10월"
 
-#. TRANSLATION: awgl, cannonball, cemu, citra, dolphin, ...
+#. TRANSLATION: awgl, azahar, cannonball, cemu, dolphin, ...
 msgctxt "game_options"
 msgid "Off"
 msgstr "끄기"
@@ -11994,7 +11994,7 @@ msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "끄기가 더 안전하고, 특정 게임의 경우 켜기가 더 안전합니다."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Off will help some games, others will run too fast."
 msgstr "끄기가 일부 게임에 도움이되고 다른 게임은 너무 빨리 실행됩니다."
@@ -12046,7 +12046,7 @@ msgctxt "game_options"
 msgid "Oman"
 msgstr "오만"
 
-#. TRANSLATION: awgl, cannonball, citra, dolphin_triforce, drastic, ...
+#. TRANSLATION: awgl, azahar, cannonball, dolphin_triforce, drastic, ...
 msgctxt "game_options"
 msgid "On"
 msgstr "켜기"
@@ -12202,7 +12202,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL (컴퓨트 셰이더)"
 
-#. TRANSLATION: citra, dolphin_triforce, play, scummvm
+#. TRANSLATION: azahar, dolphin_triforce, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (기본)"
@@ -12980,7 +12980,7 @@ msgctxt "game_options"
 msgid "Prefer \"Before NMI\", change to After NMI only if needed by the game."
 msgstr "\"NMI 이전\"을 선호하고, 게임에 필요한 경우에만 NMI 이후로 변경하세요."
 
-#. TRANSLATION: citra, duckstation
+#. TRANSLATION: azahar, duckstation
 msgctxt "game_options"
 msgid "Preload"
 msgstr "사전 로드"
@@ -12990,7 +12990,7 @@ msgctxt "game_options"
 msgid "Preload requires more RAM."
 msgstr "사전 로드에는 더 많은 램이 필요합니다."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Preloading is impossible from ES."
 msgstr "ES에서는 사전 로드가 불가능합니다."
@@ -13218,7 +13218,7 @@ msgctxt "game_options"
 msgid "RENDERING MODE"
 msgstr "렌더링 모드"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, libretro/desmume, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, libretro/desmume, ...
 msgctxt "game_options"
 msgid "RENDERING RESOLUTION"
 msgstr "렌더링 해상도"
@@ -13399,7 +13399,7 @@ msgctxt "game_options"
 msgid "Reduce load time at the cost of accuracy."
 msgstr "정확도는 떨어지지만 로드 시간을 줄입니다."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Reduce stutter that happens when compiling shaders."
 msgstr "셰이더를 컴파일할 때 발생하는 끊김을 줄입니다."
@@ -13643,7 +13643,7 @@ msgctxt "game_options"
 msgid "Right stick"
 msgstr "오른쪽 스틱"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Right/Left"
 msgstr "오른쪽/왼쪽"
@@ -13832,7 +13832,7 @@ msgctxt "game_options"
 msgid "SCREEN INCLINATION"
 msgstr "화면 기울기"
 
-#. TRANSLATION: citra, drastic, libretro/desmume, libretro/melonds, melonds
+#. TRANSLATION: azahar, drastic, libretro/desmume, libretro/melonds, melonds
 msgctxt "game_options"
 msgid "SCREEN LAYOUT"
 msgstr "화면 레이아웃"
@@ -14590,7 +14590,7 @@ msgctxt "game_options"
 msgid "Selfie"
 msgstr "셀카"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Separate Windows"
 msgstr "별도의 창"
@@ -15208,7 +15208,7 @@ msgctxt "game_options"
 msgid "Soften the hash sound effect from some games."
 msgstr "일부 게임의 해시 사운드 효과를 부드럽게합니다."
 
-#. TRANSLATION: awgl, citra, duckstation, libretro/melondsds, melonds, ...
+#. TRANSLATION: awgl, azahar, duckstation, libretro/melondsds, melonds, ...
 msgctxt "game_options"
 msgid "Software"
 msgstr "소프트웨어"
@@ -15677,7 +15677,7 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "서라운드 7.1"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Swap Screen"
 msgstr "화면 교체"
@@ -15687,7 +15687,7 @@ msgctxt "keys_files"
 msgid "Swap Screens"
 msgstr "화면 교체"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Swap screens"
 msgstr "화면 교체"
@@ -16097,7 +16097,7 @@ msgctxt "game_options"
 msgid "Thailand"
 msgstr "태국"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
 msgstr "새로운 3DS에는 더 빠른 프로세서, ZL / ZR 버튼, C 스틱이 있습니다."
@@ -16241,12 +16241,12 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "게임 치트나 16/9 화면비 수정 코드를 사용하세요."
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Toggle Screen Layout"
 msgstr "화면 레이아웃 전환"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
 msgstr "속도 제한 전환"
@@ -16276,7 +16276,7 @@ msgctxt "game_options"
 msgid "Top"
 msgstr "상단"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Top Only"
 msgstr "상단만"
@@ -17229,7 +17229,7 @@ msgctxt "game_options"
 msgid "VISUAL NUDGE STRENGTH"
 msgstr "시각적 찌르기 강도"
 
-#. TRANSLATION: bigpemu, cemu, citra, dolphin, dolphin_triforce, ...
+#. TRANSLATION: azahar, bigpemu, cemu, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "VSYNC"
 msgstr "수직동기화"
@@ -17349,7 +17349,7 @@ msgctxt "game_options"
 msgid "Voltmace Delta 3b Twin Joysticks"
 msgstr "볼트메이스 델타 3b 트윈 조이스틱"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, hypseus-singe, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, hypseus-singe, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"

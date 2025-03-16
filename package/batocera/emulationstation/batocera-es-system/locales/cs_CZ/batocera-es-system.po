@@ -2198,7 +2198,7 @@ msgctxt "game_options"
 msgid "ADJUST POWERPC FREQUENCY"
 msgstr "NASTAVENÍ FREKVENCE POWERPC"
 
-#. TRANSLATION: bigpemu, cemu, citra, dolphin_triforce, drastic, ...
+#. TRANSLATION: azahar, bigpemu, cemu, dolphin_triforce, drastic, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "POKROČILÉ MOŽNOSTI"
@@ -3218,7 +3218,7 @@ msgctxt "game_options"
 msgid "Arrange the dual screen layout."
 msgstr "Uspořádejte rozložení dvou obrazovek."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
@@ -3926,7 +3926,7 @@ msgctxt "game_options"
 msgid "Bottom (Default)"
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Bottom Only"
 msgstr "Pouze dole"
@@ -5219,7 +5219,7 @@ msgctxt "game_options"
 msgid "Choose which audio API library to use."
 msgstr ""
 
-#. TRANSLATION: cemu, citra, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: azahar, cemu, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr "Zvolte, kterou knihovnu grafického rozhraní API chcete použít."
@@ -5478,7 +5478,7 @@ msgid ""
 "Vulkan only."
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid ""
 "Compile shaders using background threads to avoid shader compilation "
@@ -5795,7 +5795,7 @@ msgctxt "game_options"
 msgid "DISABLE VERTEX CACHE"
 msgstr "ZAKÁZAT VRCHOLY CACHE"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
 msgstr "DISKOVÁ MEZIPAMĚŤ SHADERU"
@@ -6516,7 +6516,7 @@ msgctxt "game_options"
 msgid "ENABLE AI TRANSLATION SERVICE"
 msgstr "POVOLIT PŘEKLADATELSKOU SLUŽBU AI"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "ENABLE ASYNC SHADER COMPILATION"
 msgstr "POVOLIT ASYNCHRONNÍ KOMPILACI SHADERŮ"
@@ -7357,7 +7357,7 @@ msgctxt "game_options"
 msgid "Enhancement. Increase the rendering resolution."
 msgstr "Vylepšení. Zvyšte rozlišení vykreslování."
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, flycast, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, flycast, ...
 msgctxt "game_options"
 msgid ""
 "Enhancement. Increase the rendering resolution. Makes 3D objects clearer."
@@ -7766,7 +7766,7 @@ msgctxt "game_options"
 msgid "FRAME DUPING (SPEED UP)"
 msgstr "DUPLIKOVÁNÍ SNÍMKŮ (ZRYCHLENÍ)"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "FRAME LIMIT"
 msgstr "OMEZENÍ SNÍMKU"
@@ -8039,7 +8039,7 @@ msgstr ""
 "synchronizaci videa, s výjimkou pozdních snímků (pod cílovou hodnotou FPS), "
 "které se zobrazí okamžitě."
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, melonds, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, melonds, ...
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr "Oprava trhání obrazovky. Zatížení CPU."
@@ -8710,12 +8710,12 @@ msgctxt "game_options"
 msgid "GRAPHICAL USER INTERFACE"
 msgstr "GRAFICKÉ UŽIVATELSKÉ ROZHRANÍ"
 
-#. TRANSLATION: citra, rtcw, theforceengine
+#. TRANSLATION: azahar, rtcw, theforceengine
 msgctxt "game_options"
 msgid "GRAPHICS"
 msgstr "GRAFIKA"
 
-#. TRANSLATION: cemu, citra, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: azahar, cemu, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "API GRAFIKA"
@@ -9423,12 +9423,12 @@ msgctxt "game_options"
 msgid "Hybrid + Bicubic"
 msgstr "Hybridní + Bikubický"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
 msgstr "Hybridní dolní obrazovka"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
 msgstr "Hybridní horní obrazovka"
@@ -10284,7 +10284,7 @@ msgid "LLVM is fastest, use the Interpreter settings if there are issues."
 msgstr ""
 "LLVM je nejrychlejší, v případě problémů použijte nastavení Překladače."
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, libretro/mesen, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, libretro/mesen, ...
 msgctxt "game_options"
 msgid "LOAD CUSTOM TEXTURES"
 msgstr "NAČÍST VLASTNÍ TEXTURY"
@@ -10304,12 +10304,12 @@ msgctxt "game_options"
 msgid "Landscape"
 msgstr "Krajina"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Large Bottom"
 msgstr "Velký dole"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Large Top"
 msgstr "Velký nahoře"
@@ -10374,7 +10374,7 @@ msgctxt "game_options"
 msgid "Left stick"
 msgstr "Levá páčka"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Left/Right"
 msgstr "Vlevo/Vpravo"
@@ -11271,7 +11271,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "Myš (1351)"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Kliknutí myší"
@@ -11291,7 +11291,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr ""
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "Přesunutí ukazatele stylu"
@@ -11406,7 +11406,7 @@ msgctxt "game_options"
 msgid "NETWORK TYPE"
 msgstr "Typ sítě"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "NEW 3DS MODE"
 msgstr "NOVÝ REŽIM 3DS"
@@ -11938,7 +11938,7 @@ msgctxt "game_options"
 msgid "October"
 msgstr "Říjen"
 
-#. TRANSLATION: awgl, cannonball, cemu, citra, dolphin, ...
+#. TRANSLATION: awgl, azahar, cannonball, cemu, dolphin, ...
 msgctxt "game_options"
 msgid "Off"
 msgstr "Vypnout"
@@ -11973,7 +11973,7 @@ msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "Vypnout je bezpečnější, Zapnout pro konkrétní hry."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Off will help some games, others will run too fast."
 msgstr "Vypnutí některým hrám pomůže, jiné poběží příliš rychle."
@@ -12022,7 +12022,7 @@ msgctxt "game_options"
 msgid "Oman"
 msgstr ""
 
-#. TRANSLATION: awgl, cannonball, citra, dolphin_triforce, drastic, ...
+#. TRANSLATION: awgl, azahar, cannonball, dolphin_triforce, drastic, ...
 msgctxt "game_options"
 msgid "On"
 msgstr "Zapnout"
@@ -12176,7 +12176,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr ""
 
-#. TRANSLATION: citra, dolphin_triforce, play, scummvm
+#. TRANSLATION: azahar, dolphin_triforce, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (Výchozí)"
@@ -12958,7 +12958,7 @@ msgstr ""
 "Přednostně \"Před NMI\", změňte na Po NMI pouze v případě, že to hra "
 "potřebuje."
 
-#. TRANSLATION: citra, duckstation
+#. TRANSLATION: azahar, duckstation
 msgctxt "game_options"
 msgid "Preload"
 msgstr "Předzatížení"
@@ -12968,7 +12968,7 @@ msgctxt "game_options"
 msgid "Preload requires more RAM."
 msgstr "Předzatížení vyžaduje více paměti RAM."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Preloading is impossible from ES."
 msgstr "Přednačítání z ES není možné."
@@ -13194,7 +13194,7 @@ msgctxt "game_options"
 msgid "RENDERING MODE"
 msgstr "REŽIM VYKRESLOVÁNÍ"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, libretro/desmume, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, libretro/desmume, ...
 msgctxt "game_options"
 msgid "RENDERING RESOLUTION"
 msgstr "ROZLIŠENÍ VYKRESLOVÁNÍ"
@@ -13375,7 +13375,7 @@ msgctxt "game_options"
 msgid "Reduce load time at the cost of accuracy."
 msgstr "Zkrácení doby načítání na úkor přesnosti."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Reduce stutter that happens when compiling shaders."
 msgstr "Snížení zadrhávání, ke kterému dochází při kompilaci shaderů."
@@ -13618,7 +13618,7 @@ msgctxt "game_options"
 msgid "Right stick"
 msgstr "Pravá páčka"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Right/Left"
 msgstr "Pravá/Levá"
@@ -13807,7 +13807,7 @@ msgctxt "game_options"
 msgid "SCREEN INCLINATION"
 msgstr ""
 
-#. TRANSLATION: citra, drastic, libretro/desmume, libretro/melonds, melonds
+#. TRANSLATION: azahar, drastic, libretro/desmume, libretro/melonds, melonds
 msgctxt "game_options"
 msgid "SCREEN LAYOUT"
 msgstr "ROZLOŽENÍ OBRAZOVKY"
@@ -14565,7 +14565,7 @@ msgctxt "game_options"
 msgid "Selfie"
 msgstr "Selfie"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Separate Windows"
 msgstr "Oddělená okna"
@@ -15185,7 +15185,7 @@ msgctxt "game_options"
 msgid "Soften the hash sound effect from some games."
 msgstr "Ztlumení zvukového efektu hash v některých hrách."
 
-#. TRANSLATION: awgl, citra, duckstation, libretro/melondsds, melonds, ...
+#. TRANSLATION: awgl, azahar, duckstation, libretro/melondsds, melonds, ...
 msgctxt "game_options"
 msgid "Software"
 msgstr "Software"
@@ -15651,7 +15651,7 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Swap Screen"
 msgstr "Výměna obrazovky"
@@ -15661,7 +15661,7 @@ msgctxt "keys_files"
 msgid "Swap Screens"
 msgstr "Výměna obrazovek"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Swap screens"
 msgstr "Výměna obrazovek"
@@ -16071,7 +16071,7 @@ msgctxt "game_options"
 msgid "Thailand"
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
 msgstr "Nové 3DS má rychlejší procesor, tlačítka ZL/ZR a C-stick."
@@ -16213,12 +16213,12 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "Použití herních cheatů nebo Fix kódů 16/9 Poměru Strany."
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Toggle Screen Layout"
 msgstr "Přepínání rozložení obrazovky"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
 msgstr "Přepínání omezení rychlosti"
@@ -16249,7 +16249,7 @@ msgctxt "game_options"
 msgid "Top"
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Top Only"
 msgstr "Pouze nahoře"
@@ -17201,7 +17201,7 @@ msgctxt "game_options"
 msgid "VISUAL NUDGE STRENGTH"
 msgstr "Síla vizuálního šťouchnutí"
 
-#. TRANSLATION: bigpemu, cemu, citra, dolphin, dolphin_triforce, ...
+#. TRANSLATION: azahar, bigpemu, cemu, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "VSYNC"
 msgstr "VSYNC"
@@ -17321,7 +17321,7 @@ msgctxt "game_options"
 msgid "Voltmace Delta 3b Twin Joysticks"
 msgstr "Voltmace Delta 3b Dvojité Joysticky"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, hypseus-singe, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, hypseus-singe, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"

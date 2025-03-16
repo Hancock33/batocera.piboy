@@ -2198,7 +2198,7 @@ msgctxt "game_options"
 msgid "ADJUST POWERPC FREQUENCY"
 msgstr "ADJUST POWERPC FREQUENCY"
 
-#. TRANSLATION: bigpemu, cemu, citra, dolphin_triforce, drastic, ...
+#. TRANSLATION: azahar, bigpemu, cemu, dolphin_triforce, drastic, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "TÙY CHỌN NÂNG CAO"
@@ -3228,7 +3228,7 @@ msgctxt "game_options"
 msgid "Arrange the dual screen layout."
 msgstr "Sắp xếp bố cục màn hình kép."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
@@ -3941,7 +3941,7 @@ msgctxt "game_options"
 msgid "Bottom (Default)"
 msgstr "Dưới (Mặc định)"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Bottom Only"
 msgstr "Chỉ bên dưới"
@@ -5242,7 +5242,7 @@ msgctxt "game_options"
 msgid "Choose which audio API library to use."
 msgstr ""
 
-#. TRANSLATION: cemu, citra, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: azahar, cemu, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr "Chọn thư viện API đồ họa nào sẽ sử dụng."
@@ -5502,7 +5502,7 @@ msgstr ""
 "Biên dịch các shader vào lần chạy trò chơi tiếp theo (một lần). Giảm đóng "
 "băng vi mô. Chỉ Vulkan."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid ""
 "Compile shaders using background threads to avoid shader compilation "
@@ -5822,7 +5822,7 @@ msgctxt "game_options"
 msgid "DISABLE VERTEX CACHE"
 msgstr "DISABLE VERTEX CACHE"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
 msgstr "DISK SHADER CACHE"
@@ -6543,7 +6543,7 @@ msgctxt "game_options"
 msgid "ENABLE AI TRANSLATION SERVICE"
 msgstr "BẬT DỊCH VỤ DỊCH BẰNG TRÍ TUỆ NHÂN TẠO"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "ENABLE ASYNC SHADER COMPILATION"
 msgstr "BẬT BIÊN DỊCH SHADER BẤT ĐỒNG BỘ"
@@ -7400,7 +7400,7 @@ msgctxt "game_options"
 msgid "Enhancement. Increase the rendering resolution."
 msgstr "Tăng cường. Tăng độ phân giải kết xuất."
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, flycast, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, flycast, ...
 msgctxt "game_options"
 msgid ""
 "Enhancement. Increase the rendering resolution. Makes 3D objects clearer."
@@ -7808,7 +7808,7 @@ msgctxt "game_options"
 msgid "FRAME DUPING (SPEED UP)"
 msgstr "KHUNG DUPING (TĂNG TỐC)"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "FRAME LIMIT"
 msgstr "GIỚI HẠN KHUNG HÌNH"
@@ -8089,7 +8089,7 @@ msgstr ""
 "hóa video, ngoại trừ các khung hình muộn (dưới FPS mục tiêu) được hiển thị "
 "ngay lập tức."
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, melonds, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, melonds, ...
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr "Sửa lỗi xé màn hình. CPU hoạt động nặng."
@@ -8767,12 +8767,12 @@ msgctxt "game_options"
 msgid "GRAPHICAL USER INTERFACE"
 msgstr "GIAO DIỆN ĐỒ HỌA NGƯỜI DÙNG"
 
-#. TRANSLATION: citra, rtcw, theforceengine
+#. TRANSLATION: azahar, rtcw, theforceengine
 msgctxt "game_options"
 msgid "GRAPHICS"
 msgstr "ĐỒ HỌA"
 
-#. TRANSLATION: cemu, citra, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: azahar, cemu, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "API ĐỒ HỌA"
@@ -9481,12 +9481,12 @@ msgctxt "game_options"
 msgid "Hybrid + Bicubic"
 msgstr "Hybrid + Bicubic"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
 msgstr "Hybrid màn hình bên dưới"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
 msgstr "Hybrid màn hình bên trên"
@@ -10348,7 +10348,7 @@ msgctxt "game_options"
 msgid "LLVM is fastest, use the Interpreter settings if there are issues."
 msgstr "LLVM là nhanh nhất, sử dụng cài đặt Interpreter nếu có vấn đề."
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, libretro/mesen, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, libretro/mesen, ...
 msgctxt "game_options"
 msgid "LOAD CUSTOM TEXTURES"
 msgstr "TẢI TEXTURES CÁ NHÂN"
@@ -10368,12 +10368,12 @@ msgctxt "game_options"
 msgid "Landscape"
 msgstr "Landscape"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Large Bottom"
 msgstr "To bên dưới"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Large Top"
 msgstr "To bên trên"
@@ -10438,7 +10438,7 @@ msgctxt "game_options"
 msgid "Left stick"
 msgstr "Left stick"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Left/Right"
 msgstr "Trái/Phải"
@@ -11338,7 +11338,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "Chuột (1351)"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Nhấp chuột"
@@ -11358,7 +11358,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr "Tiến về phía trước, có thể được sử dụng để nhấn W"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "Di chuyển con trỏ Stylet"
@@ -11474,7 +11474,7 @@ msgctxt "game_options"
 msgid "NETWORK TYPE"
 msgstr "LOẠI MẠNG"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "NEW 3DS MODE"
 msgstr "CHẾ ĐỘ 3DS MỚI"
@@ -12007,7 +12007,7 @@ msgctxt "game_options"
 msgid "October"
 msgstr "Tháng 10"
 
-#. TRANSLATION: awgl, cannonball, cemu, citra, dolphin, ...
+#. TRANSLATION: awgl, azahar, cannonball, cemu, dolphin, ...
 msgctxt "game_options"
 msgid "Off"
 msgstr "Tắt"
@@ -12042,7 +12042,7 @@ msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "Tắt an toàn hơn, bật cho một vài trò chơi cụ thể."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Off will help some games, others will run too fast."
 msgstr "Tắt sẽ giúp một số trò chơi, số khác sẽ chạy rất nhanh."
@@ -12094,7 +12094,7 @@ msgctxt "game_options"
 msgid "Oman"
 msgstr "Ô-man"
 
-#. TRANSLATION: awgl, cannonball, citra, dolphin_triforce, drastic, ...
+#. TRANSLATION: awgl, azahar, cannonball, dolphin_triforce, drastic, ...
 msgctxt "game_options"
 msgid "On"
 msgstr "Bật"
@@ -12252,7 +12252,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL (Tính toán Shader)"
 
-#. TRANSLATION: citra, dolphin_triforce, play, scummvm
+#. TRANSLATION: azahar, dolphin_triforce, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (Mặc định)"
@@ -13030,7 +13030,7 @@ msgctxt "game_options"
 msgid "Prefer \"Before NMI\", change to After NMI only if needed by the game."
 msgstr "Ưu tiên \"NMI Trước\", chỉ đổi thành NMI Sau nếu trò chơi cần."
 
-#. TRANSLATION: citra, duckstation
+#. TRANSLATION: azahar, duckstation
 msgctxt "game_options"
 msgid "Preload"
 msgstr "Tải trước"
@@ -13040,7 +13040,7 @@ msgctxt "game_options"
 msgid "Preload requires more RAM."
 msgstr "Tải trước yêu cầu nhiều RAM hơn."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Preloading is impossible from ES."
 msgstr "Không thể tải trước từ ES."
@@ -13270,7 +13270,7 @@ msgctxt "game_options"
 msgid "RENDERING MODE"
 msgstr "CHẾ ĐỘ KẾT XUẤT"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, libretro/desmume, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, libretro/desmume, ...
 msgctxt "game_options"
 msgid "RENDERING RESOLUTION"
 msgstr "RENDERING RESOLUTION"
@@ -13451,7 +13451,7 @@ msgctxt "game_options"
 msgid "Reduce load time at the cost of accuracy."
 msgstr "Giảm thời gian tải nhưng giảm độ chính xác."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Reduce stutter that happens when compiling shaders."
 msgstr "Giảm tình trạng giật hình xảy ra khi biên dịch trình đổ bóng."
@@ -13694,7 +13694,7 @@ msgctxt "game_options"
 msgid "Right stick"
 msgstr "Right stick"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Right/Left"
 msgstr "Phải/Trái"
@@ -13888,7 +13888,7 @@ msgctxt "game_options"
 msgid "SCREEN INCLINATION"
 msgstr "ĐỘ NGHIÊNG MÀN HÌNH"
 
-#. TRANSLATION: citra, drastic, libretro/desmume, libretro/melonds, melonds
+#. TRANSLATION: azahar, drastic, libretro/desmume, libretro/melonds, melonds
 msgctxt "game_options"
 msgid "SCREEN LAYOUT"
 msgstr "BỐ CỤC MÀN HÌNH"
@@ -14645,7 +14645,7 @@ msgctxt "game_options"
 msgid "Selfie"
 msgstr "Selfie"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Separate Windows"
 msgstr "Cửa sổ riêng biệt"
@@ -15271,7 +15271,7 @@ msgctxt "game_options"
 msgid "Soften the hash sound effect from some games."
 msgstr "Làm mềm hiệu ứng âm thanh băm từ một số trò chơi."
 
-#. TRANSLATION: awgl, citra, duckstation, libretro/melondsds, melonds, ...
+#. TRANSLATION: awgl, azahar, duckstation, libretro/melondsds, melonds, ...
 msgctxt "game_options"
 msgid "Software"
 msgstr "Phần mềm"
@@ -15741,7 +15741,7 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Swap Screen"
 msgstr "Đổi màn hình"
@@ -15751,7 +15751,7 @@ msgctxt "keys_files"
 msgid "Swap Screens"
 msgstr "Đổi màn hình"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Swap screens"
 msgstr "Đổi màn hình"
@@ -16163,7 +16163,7 @@ msgctxt "game_options"
 msgid "Thailand"
 msgstr "Thái Lan"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
 msgstr "3DS Mới có bộ xử lý nhanh hơn, các nút ZL/ZR và thanh C."
@@ -16310,12 +16310,12 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "Để gian lận trong trò chơi hoặc Sửa tỷ lệ khung hình 16/9."
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Toggle Screen Layout"
 msgstr "Đổi bố cục màn hình"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
 msgstr "Đổi giới hạn tốc độ"
@@ -16345,7 +16345,7 @@ msgctxt "game_options"
 msgid "Top"
 msgstr "Trên"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Top Only"
 msgstr "Chỉ bên trên"
@@ -17300,7 +17300,7 @@ msgctxt "game_options"
 msgid "VISUAL NUDGE STRENGTH"
 msgstr "VISUAL NUDGE STRENGTH"
 
-#. TRANSLATION: bigpemu, cemu, citra, dolphin, dolphin_triforce, ...
+#. TRANSLATION: azahar, bigpemu, cemu, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "VSYNC"
 msgstr "VSYNC"
@@ -17420,7 +17420,7 @@ msgctxt "game_options"
 msgid "Voltmace Delta 3b Twin Joysticks"
 msgstr "Voltmace Delta 3b Twin Joysticks"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, hypseus-singe, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, hypseus-singe, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
