@@ -24,7 +24,7 @@ i.e. aons_modern.zip
 Update the games list and Batocera can now launch the mod directly.
 
 A good source of missions to try are available here: https://df-21.net/downloads/levels/
-    
+
 Notes:
 
 It is important to use the exact directory name above.

@@ -3,8 +3,8 @@
 # sdl3
 #
 ################################################################################
-# Version: Commits on Mar 02, 2025
-SDL3_VERSION = release-3.2.6
+# Version: Commits on Mar 04, 2025
+SDL3_VERSION = release-3.2.8
 SDL3_SITE = $(call github,libsdl-org,SDL,$(SDL3_VERSION))
 SDL3_LICENSE = GPL-3.0
 SDL3_SUPPORTS_IN_SOURCE_BUILD = NO

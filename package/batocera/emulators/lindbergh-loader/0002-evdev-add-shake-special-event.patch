@@ -1,8 +1,8 @@
 diff --git a/src/lindbergh/evdevinput.c b/src/lindbergh/evdevinput.c
-index 3af59d4..0c39248 100644
+index 637475a..b106b8c 100644
 --- a/src/lindbergh/evdevinput.c
 +++ b/src/lindbergh/evdevinput.c
-@@ -981,6 +981,17 @@ static ControllerStatus listControllers(Controllers *controllers)
+@@ -982,6 +982,17 @@ static ControllerStatus listControllers(Controllers *controllers)
                        // hum ok, truncated value
                      }
  
@@ -20,7 +20,7 @@ index 3af59d4..0c39248 100644
                      struct input_absinfo absoluteFeatures;
                      ioctl(controller, EVIOCGABS(code), &absoluteFeatures);
                      controllers->controller[i].absMin[code] = absoluteFeatures.minimum;
-@@ -1119,6 +1130,17 @@ void *controllerThread(void *_args)
+@@ -1120,6 +1131,17 @@ void *controllerThread(void *_args)
                         setAnalogue(channel, scaled > 0.8 ? pow(2, jvsBits) * 0.8 : pow(2, jvsBits) * 0.5);
                      }
                  }
@@ -38,7 +38,7 @@ index 3af59d4..0c39248 100644
              }
              break;
  
-@@ -1269,6 +1291,7 @@ ControllerStatus startControllerThreads(Controllers *controllers)
+@@ -1272,6 +1294,7 @@ ControllerStatus startControllerThreads(Controllers *controllers)
              controllers->controller[i].absTriggers[j].enabled = 0;
              controllers->controller[i].absTriggers[j].minEnabled = 0;
              controllers->controller[i].absTriggers[j].maxEnabled = 0;
@@ -46,7 +46,7 @@ index 3af59d4..0c39248 100644
              controllers->controller[i].absTriggers[j].isNeg = 0;
          }
  
-@@ -1350,6 +1373,18 @@ ControllerStatus startControllerThreads(Controllers *controllers)
+@@ -1355,6 +1378,18 @@ ControllerStatus startControllerThreads(Controllers *controllers)
                  }
                  break;
  
@@ -66,19 +66,19 @@ index 3af59d4..0c39248 100644
                      break;
                  }
 diff --git a/src/lindbergh/evdevinput.h b/src/lindbergh/evdevinput.h
-index 3eac25c..373b131 100644
+index 4e0d032..2c721a3 100644
 --- a/src/lindbergh/evdevinput.h
 +++ b/src/lindbergh/evdevinput.h
 @@ -33,6 +33,12 @@ typedef struct
      int isAnalogue;
      int isNeg; // reversed axis
- 
+     
 +    char shakeName[SIZE];
 +    int shakeChannel;
 +    int shakeEnabled;
 +    int shakePlayer;
 +    double shakePreviousScaled;
-+
++    
      int isCoin;
  } ArcadeInput;
  

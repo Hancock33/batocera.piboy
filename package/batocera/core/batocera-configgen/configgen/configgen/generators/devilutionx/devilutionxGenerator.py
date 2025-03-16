@@ -1,3 +1,4 @@
+
 from __future__ import annotations
 
 import configparser
@@ -50,9 +51,9 @@ class DevilutionXGenerator(Generator):
             '/usr/bin/diablo/devilutionx', '--data-dir', '/userdata/roms/ports/devilutionx',
             '--config-dir', configDir, '--save-dir', saveDir
         ]
-        if rom.endswith('hellfire.mpq'):
+        if rom.name.endswith('hellfire.mpq'):
             commandArray.append('--hellfire')
-        elif rom.endswith('spawn.mpq'):
+        elif rom.name.endswith('spawn.mpq'):
             commandArray.append('--spawn')
         else:
             commandArray.append('--diablo')
@@ -80,10 +81,6 @@ class DevilutionXGenerator(Generator):
         }
 
     def getInGameRatio(self, config, gameResolution, rom):
-        if "devilutionx_stretch" in config:
-            if config['devilutionx_stretch'] == "true":
-                return 16 / 9
-            else:
-                return 4 / 3
-        else:
-            return 4 / 3
+        if "devilutionx_stretch" in config and config['devilutionx_stretch'] == "true":
+            return 16 / 9
+        return 4 / 3

@@ -3,8 +3,8 @@
 # libretro-squirreljme
 #
 ################################################################################
-# Version: Commits on Mar 01, 2025
-LIBRETRO_SQUIRRELJME_VERSION = 359625848abd36c763ff746ff3914c37d144c4de
+# Version: Commits on Mar 09, 2025
+LIBRETRO_SQUIRRELJME_VERSION = 167fd4a2105eb03c100ea942318b904e1e12fde2
 LIBRETRO_SQUIRRELJME_SITE = $(call github,SquirrelJME,SquirrelJME,$(LIBRETRO_SQUIRRELJME_VERSION))
 LIBRETRO_SQUIRRELJME_SUPPORTS_IN_SOURCE_BUILD = NO
 LIBRETRO_SQUIRRELJME_SUBDIR = nanocoat

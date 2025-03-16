@@ -6,6 +6,7 @@ from typing import TYPE_CHECKING, Final
 
 from ... import Command
 from ...batoceraPaths import BATOCERA_SHARE_DIR, CONFIGS, LOGS, mkdir_if_not_exists
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 if TYPE_CHECKING:
@@ -86,11 +87,12 @@ class GzdoomGenerator(Generator):
         iwad = ''
         pwad = ''
 
-        if rom.endswith(".gzdoom"):
+        rom_extension = rom.suffix.lower()
+        if rom_extension == ".gzdoom":
             with open(rom, "r") as f:
                 iwad_command = f.read().strip()
             args = shlex.split(iwad_command)
-        elif rom.endswith(".uwad"):
+        elif  rom_extension == ".uwad":
             f=open(rom)
             content=f.readlines()
             for line in content:
@@ -101,7 +103,7 @@ class GzdoomGenerator(Generator):
             iwad_command = '-iwad ' + iwad + '-file ' + pwad
             args = shlex.split(iwad_command)
         else:
-            iwad_command = '-iwad ' + rom
+            iwad_command = '-iwad ' + rom.name
             args = shlex.split(iwad_command)
 
         # A script file with console commands that are always ran when a game starts
@@ -121,14 +123,12 @@ class GzdoomGenerator(Generator):
                 '/usr/share/gzdoom/gzdoom',
                 *args,
                 '-exec', script_file,
-                # Disable controllers because support is poor; use evmapy instead
-                '-nojoy',
                 '-fullscreen',
                 '-width', str(gameResolution['width']),
                 '-height', str(gameResolution['height']),
             ],
             env={
                 'DOOMWADDIR': '/userdata/roms/ports/doom',
-                'SDL_AUTO_UPDATE_JOYSTICKS': '0'
+                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             }
         )

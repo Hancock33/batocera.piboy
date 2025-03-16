@@ -1,0 +1,8 @@
+config BR2_PACKAGE_KDDOCWIDGETS
+	bool "kddocwidgets"
+	select BR2_PACKAGE_BATOCERA_QT6
+
+	help
+	  KDABs Dock Widget Framework for Qt
+
+	  https://www.kdab.com/software-technologies/developer-tools/kddockwidgets/

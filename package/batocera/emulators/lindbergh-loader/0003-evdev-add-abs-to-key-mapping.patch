@@ -1,8 +1,8 @@
 diff --git a/src/lindbergh/evdevinput.c b/src/lindbergh/evdevinput.c
-index 0c39248..84e1d38 100644
+index b106b8c..988f06f 100644
 --- a/src/lindbergh/evdevinput.c
 +++ b/src/lindbergh/evdevinput.c
-@@ -1105,21 +1105,33 @@ void *controllerThread(void *_args)
+@@ -1106,21 +1106,33 @@ void *controllerThread(void *_args)
                  if (args->controller->absTriggers[event.code].enabled)
                  {
                      int channel = args->controller->absTriggers[event.code].channel;
@@ -42,7 +42,7 @@ index 0c39248..84e1d38 100644
                      }
                  }
  
-@@ -1127,7 +1139,13 @@ void *controllerThread(void *_args)
+@@ -1128,7 +1140,13 @@ void *controllerThread(void *_args)
                    if (args->controller->absTriggers[event.code].maxEnabled)
                      {
                         int channel = args->controller->absTriggers[event.code].maxChannel;
@@ -57,7 +57,7 @@ index 0c39248..84e1d38 100644
                      }
                  }
  		if (args->controller->absTriggers[event.code].shakeEnabled)
-@@ -1293,6 +1311,7 @@ ControllerStatus startControllerThreads(Controllers *controllers)
+@@ -1296,6 +1314,7 @@ ControllerStatus startControllerThreads(Controllers *controllers)
              controllers->controller[i].absTriggers[j].maxEnabled = 0;
              controllers->controller[i].absTriggers[j].shakeEnabled = 0;
              controllers->controller[i].absTriggers[j].isNeg = 0;
@@ -65,7 +65,7 @@ index 0c39248..84e1d38 100644
          }
  
          for (int j = 0; j < KEY_MAX; j++)
-@@ -1344,6 +1363,8 @@ ControllerStatus startControllerThreads(Controllers *controllers)
+@@ -1349,6 +1368,8 @@ ControllerStatus startControllerThreads(Controllers *controllers)
                      controllers->controller[i].absTriggers[controllers->controller[i].inputs[j].evCode].player =
                          input.player;
                      controllers->controller[i].absTriggers[controllers->controller[i].inputs[j].evCode].isNeg = negabs;
@@ -74,7 +74,7 @@ index 0c39248..84e1d38 100644
                  }
                  break;
  
-@@ -1357,6 +1378,8 @@ ControllerStatus startControllerThreads(Controllers *controllers)
+@@ -1362,6 +1383,8 @@ ControllerStatus startControllerThreads(Controllers *controllers)
                      controllers->controller[i].absTriggers[controllers->controller[i].inputs[j].evCode].maxPlayer =
                          input.player;
                      controllers->controller[i].absTriggers[controllers->controller[i].inputs[j].evCode].isNeg = negabs;
@@ -83,7 +83,7 @@ index 0c39248..84e1d38 100644
                  }
                  break;
  
-@@ -1370,6 +1393,8 @@ ControllerStatus startControllerThreads(Controllers *controllers)
+@@ -1375,6 +1398,8 @@ ControllerStatus startControllerThreads(Controllers *controllers)
                      controllers->controller[i].absTriggers[controllers->controller[i].inputs[j].evCode].minPlayer =
                          input.player;
                      controllers->controller[i].absTriggers[controllers->controller[i].inputs[j].evCode].isNeg = negabs;

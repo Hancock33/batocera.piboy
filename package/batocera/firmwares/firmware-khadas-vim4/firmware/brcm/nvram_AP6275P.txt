@@ -1,4 +1,4 @@
-# AP6275P_NVRAM_V1.1_20200702 
+# AP6275P_NVRAM_V1.1_20200702
 # AP6271P_V00 board, iPA version.
 # nvram copied and edited from AP6271P_EVB_V01 EVB board //
 # SSID generated using Alberto's boardssid.py script:

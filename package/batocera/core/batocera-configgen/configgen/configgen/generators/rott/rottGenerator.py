@@ -26,7 +26,7 @@ class RottGenerator(Generator):
             array=commandArray,
             env={
                 "XDG_DATA_HOME": CONFIGS,
-                "XDG_DATA_DIRS": "/userdata/roms/port/rott",
+                "XDG_DATA_DIRS": "/userdata/roms/ports/rott",
                 "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
                 "SDL_JOYSTICK_HIDAPI": "0"
             }

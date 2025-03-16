@@ -1,4 +1,4 @@
-This port requires a copy of Fallout 2, you can purchase it from GOG or Steam. 
+This port requires a copy of Fallout 2, you can purchase it from GOG or Steam.
 
 *** Please note all files and directories must be in lowercase
 
@@ -6,14 +6,14 @@ This directory should look like ...
 ¦   critter.dat
 ¦   fallout2.cfg
 ¦   master.dat
-¦   
+¦
 +---data
 ¦   ¦   worldmap.dat
-¦   ¦   
+¦   ¦
 ¦   +---art
 ¦   ¦   +---tiles
 ¦   ¦           grid000.FRM
-¦   ¦           
+¦   ¦
 ¦   +---critter.dat
 ¦   +---maps
 ¦   +---proto

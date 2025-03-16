@@ -1,5 +1,5 @@
 diff --git a/src/gensignkey.c b/src/gensignkey.c
-index cfe0a80..4bc2568 100644
+index 295211d..4c18089 100644
 --- a/src/gensignkey.c
 +++ b/src/gensignkey.c
 @@ -99,7 +99,7 @@ int signkey_generate(enum signkey_type keytype, int bits, const char* filename,
@@ -18,16 +18,23 @@ index cfe0a80..4bc2568 100644
 -	fn_temp = m_malloc(strlen(filename) + 30);
 -	snprintf(fn_temp, strlen(filename)+30, "%s.tmp%d", filename, getpid());
 -	ret = buf_writefile(buf, fn_temp, 0);
--
++	//fn_temp = m_malloc(strlen(filename) + 30);
++	//snprintf(fn_temp, strlen(filename)+30, "%s.tmp%d", filename, getpid());
++	ret = buf_writefile(buf, filename, 0);
+ 
 -	if (ret == DROPBEAR_FAILURE) {
 -		goto out;
 -	}
--
++	//if (ret == DROPBEAR_FAILURE) {
++	//	goto out;
++	//}
+ 
 -	if (link(fn_temp, filename) < 0) {
--		/* If generating keys on connection (skipexist) it's OK to get EEXIST 
--		- we probably just lost a race with another connection to generate the key */
++	//if (link(fn_temp, filename) < 0) {
+ 		/* If generating keys on connection (skipexist) it's OK to get EEXIST 
+ 		- we probably just lost a race with another connection to generate the key */
 -		if (!(skip_exist && errno == EEXIST)) {
--			if (errno == EPERM || errno == EACCES) {
+-			if (errno == EPERM || errno == EACCES || errno == ENOSYS) {
 -				/* Non-atomic fallback when hard-links not allowed or unsupported */
 -				buf_setpos(buf, 0);
 -				ret = buf_writefile(buf, filename, skip_exist);
@@ -40,19 +47,8 @@ index cfe0a80..4bc2568 100644
 -			goto out;
 -		}
 -	}
-+	//fn_temp = m_malloc(strlen(filename) + 30);
-+	//snprintf(fn_temp, strlen(filename)+30, "%s.tmp%d", filename, getpid());
-+	ret = buf_writefile(buf, filename, 0);
-+
-+	//if (ret == DROPBEAR_FAILURE) {
-+	//	goto out;
-+	//}
-+
-+	//if (link(fn_temp, filename) < 0) {
-+	//	/* If generating keys on connection (skipexist) it's OK to get EEXIST 
-+	//	- we probably just lost a race with another connection to generate the key */
 +	//	if (!(skip_exist && errno == EEXIST)) {
-+	//		if (errno == EPERM || errno == EACCES) {
++	//		if (errno == EPERM || errno == EACCES || errno == ENOSYS) {
 +	//			/* Non-atomic fallback when hard-links not allowed or unsupported */
 +	//			buf_setpos(buf, 0);
 +	//			ret = buf_writefile(buf, filename, skip_exist);
@@ -61,7 +57,7 @@ index cfe0a80..4bc2568 100644
 +	//				strerror(errno));
 +	//			ret = DROPBEAR_FAILURE;
 +	//		}
-+	//
++
 +	//		goto out;
 +	//	}
 +	//}

@@ -9,11 +9,8 @@ BIGPEMU_SOURCE = BigPEmu_Linux64_$(BIGPEMU_VERSION).tar.gz
 BIGPEMU_SITE = https://www.richwhitehouse.com/jaguar/builds
 
 define BIGPEMU_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin/bigpemu
-	cp -pr $(@D)/* $(TARGET_DIR)/usr/bin/bigpemu/
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/bigpemu/*.keys $(TARGET_DIR)/usr/share/evmapy
+	mkdir -p $(TARGET_DIR)/usr/bigpemu
+	cp -pr $(@D)/* $(TARGET_DIR)/usr/bigpemu/
 endef
 
 $(eval $(generic-package))

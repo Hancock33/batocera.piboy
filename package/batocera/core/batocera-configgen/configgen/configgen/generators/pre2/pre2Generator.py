@@ -14,6 +14,7 @@ class Pre2Generator(Generator):
         return Command.Command(
             array=commandArray,
             env={
+                'SDL_JOYSTICK_HIDAPI': '0', \
                 'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
 

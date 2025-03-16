@@ -20,19 +20,19 @@ This folder should contain the following files...
 |   WINTER.MIX
 |   WINTICNH.MIX
 |   ZOUNDS.MIX
-|   
+|
 +---covertops
 |       GENERAL.MIX
 |       MOVIES.MIX
 |       SCORES.MIX
-|       
+|
 +---gdi
 |       GENERAL.MIX
 |       MOVIES.MIX
 |       SCORES.MIX
-|       
+|
 \---nod
         GENERAL.MIX
         MOVIES.MIX
         SCORES.MIX
-        
+

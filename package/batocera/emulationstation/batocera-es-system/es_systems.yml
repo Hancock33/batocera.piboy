@@ -2872,8 +2872,6 @@ tg-cd:
   emulators:
     azahar:
       azahar:           { requireAnyOf: [BR2_PACKAGE_AZAHAR]            }
-    citra:
-      citra:            { requireAnyOf: [BR2_PACKAGE_CITRA]             }
     libretro:
       citra:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_CITRA]    }
       panda3ds:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PANDA3DS] }
@@ -3240,8 +3238,8 @@ switch:
   theme:                switch
   extensions:           [nsp, xci]
   emulators:
-    suyu:
-      suyu:             { requireAnyOf: [BR2_PACKAGE_SUYU]    }
+    citron:
+      citron:           { requireAnyOf: [BR2_PACKAGE_CITRON]  }
     ryujinx:
       ryujinx:          { requireAnyOf: [BR2_PACKAGE_RYUJINX] }
 

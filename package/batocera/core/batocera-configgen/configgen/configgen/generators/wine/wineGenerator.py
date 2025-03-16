@@ -9,6 +9,7 @@ from typing import TYPE_CHECKING
 
 from ... import Command
 from ...controller import generate_sdl_game_controller_config
+from ...exceptions import BatoceraException
 from ..Generator import Generator
 
 if TYPE_CHECKING:
@@ -54,7 +55,7 @@ class WineGenerator(Generator):
                     }
                 )
             # sdl controller option - default is on
-            if not system.isOptSet("sdl_config") or system.getOptBoolean("sdl_config"):
+            if system.config.get_bool("sdl_config", True):
                 environment.update(
                     {
                         "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
@@ -76,10 +77,7 @@ class WineGenerator(Generator):
 
             return Command.Command(array=commandArray, env=environment)
 
-        raise Exception("invalid system " + system.name)
+        raise BatoceraException("Invalid system: " + system.name)
 
     def getMouseMode(self, config, rom):
-        if "force_mouse" in config and config["force_mouse"] == "0":
-            return False
-        else:
-            return True
+        return config.get('force_mouse') != '0'

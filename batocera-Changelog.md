@@ -16,6 +16,7 @@
 - Initial support for XGunner light gun
 - Initial support for OpenFIRE light gun
 - Initial support for Fusion P.I.G.S. light gun
+- Initial support for OneHit light gun (AimTrak clone)
 ### Added
 - Wireguard VPN for RK3326 boards
 - Image scaling option for Drastic
@@ -29,6 +30,7 @@
 - Steering wheel support added for :
   - Logitech: G923 (Xbox), PRO Racing Wheel
   - Speedlink: 4in1 Leather Power Feedback Wheel
+  - HORI: Mario Kart Racing Wheel Pro Deluxe for Nintendo Switch (DP mode)
 - Sega Lindbergh loader
 - Variable Refresh Rate (VRR) support for modern AMD gpus
 - Support of Shanwan Twin USB Joystick (new revision)
@@ -60,7 +62,7 @@
 - ETLegacy to v2.83.2
 - Jazz2 to 3.2.0
 - GroovyMAME to 0.274
-- Gzdoom to g4.14.0
+- Gzdoom to g4.14.1
 - Libretro-Kronos to 2.7.0
 - Libretro-MAME to 0.274
 - Libretro-Play! 4th Feb build
@@ -70,7 +72,7 @@
 - ScummVM to v2.9.0
 - PCSX2 to v2.3.185
 - Play! to 4th Feb build
-- Xemu to v0.8.20
+- Xemu to v0.8.34
 - Triforce to use a Crediar build (Nov 29, 2024)
 - Vice to 3.9
 - TheXTech to v1.3.7-hotfix2
@@ -96,19 +98,20 @@
 - Raze to 1.11.0
 - PPSSPP to 28th February build
 - Libretro-PPSSPP to 28th February build
+- Xenia to build 5979274 (Jan 24, 2025)
 ### System
 - Bluez to 5.79
 - Buildroot to 2024.11.x with supporting package updates
-- Mesa3D to 25.0.0
-- Linux Kernel to 6.13.3
-- GStreamer codecs to 1.24.12
+- Mesa3D to 25.0.1
+- Linux Kernel to 6.13.6
+- GStreamer codecs to 1.26.0
 - SDL2 to 2.30.11
 - Vulkan stack to v1.4.304
 - MPV to 0.39.0
 - Kodi to 21.2
 - Nvidia production driver to 570.124.04
 - LLVM to 19.1.7
-- Wine-TKG to 10.2
+- Wine-TKG to 10.3
 - Faudio to 25.02
 - DXVK to 2.5.3
 - DXVK-NVAPI to 0.8.0
@@ -121,6 +124,7 @@
 - Wireplumber to 0.5.8
 - Ryzenadj to v0.16.0
 - QT6 to 6.8.1
+- BTop to 1.4.0
 
 # 2025/01/06 - batocera.linux 41 - Golden-rayed Blue
 ### Special Notes

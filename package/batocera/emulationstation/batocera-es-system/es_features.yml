@@ -375,7 +375,7 @@ libretro:
   cfeatures:
     gfxbackend:
       group: DRIVERS
-      archs_include: [x86, x86_64, bcm2711, bcm2712, a3gen2, sm8250]
+      archs_include: [x86, x86_64, bcm2711, bcm2712, a3gen2, sm8250, sm8550]
       prompt:      GRAPHICS API
       description: Choose which graphics API library to use. Vulkan may not work for every core.
       choices:
@@ -7728,10 +7728,10 @@ cemu:
                "Disabled (Default)": false
                "Enabled":            true
 
-citra:
+azahar:
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
-        citra_screen_layout:
+        azahar_screen_layout:
             prompt: SCREEN LAYOUT
             description: Arrange the dual screen layout. Separate windows can be changed with Hotkey+R2.
             choices:
@@ -7744,7 +7744,7 @@ citra:
                 "Separate Windows":      4-false
                 "Hybrid Screen Top":     5-false
                 "Hybrid Screen Bottom":  5-true
-        citra_resolution_factor:
+        azahar_resolution_factor:
             submenu: GRAPHICS
             prompt: RENDERING RESOLUTION
             description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
@@ -7759,8 +7759,8 @@ citra:
                 "8x (3200x1920)":  8
                 "9x (3600x2160)":  9
                 "10x (4000x2400)": 10
-        citra_graphics_api:
-            archs_include: [x86, x86_64]
+        azahar_graphics_api:
+            archs_include: [x86, x86_64, sm8550]
             submenu: GRAPHICS
             prompt: GRAPHICS API
             description: Choose which graphics API library to use.
@@ -7768,35 +7768,35 @@ citra:
                 "Software":         0
                 "OpenGL (Default)": 1
                 "Vulkan":           2
-        citra_use_vsync_new:
+        azahar_use_vsync_new:
             submenu: GRAPHICS
             prompt: VSYNC
             description: Fix screen tearing. CPU heavy.
             choices:
                 "Off": 0
                 "On":  1
-        citra_use_frame_limit:
+        azahar_use_frame_limit:
             submenu: GRAPHICS
             prompt: FRAME LIMIT
             description: Off will help some games, others will run too fast.
             choices:
                 "Off": 0
                 "On":  1
-        citra_use_disk_shader_cache:
+        azahar_use_disk_shader_cache:
             submenu: GRAPHICS
             prompt: DISK SHADER CACHE
             description: Reduce stutter that happens when compiling shaders.
             choices:
                 "Off": 0
                 "On":  1
-        citra_async_shader_compilation:
+        azahar_async_shader_compilation:
             submenu: GRAPHICS
             prompt: ENABLE ASYNC SHADER COMPILATION
             description: Compile shaders using background threads to avoid shader compilation stutter. May cause graphical glitches.
             choices:
                 "Off": 0
                 "On":  1
-        citra_custom_textures:
+        azahar_custom_textures:
             submenu: GRAPHICS
             prompt: LOAD CUSTOM TEXTURES
             description: Preloading is impossible from ES.
@@ -7804,7 +7804,7 @@ citra:
                 "Off":     0
                 "On":      1-normal
                 "Preload": 1-preload
-        citra_is_new_3ds:
+        azahar_is_new_3ds:
             group: ADVANCED OPTIONS
             prompt: NEW 3DS MODE
             description: The New 3DS has a faster processor, ZL/ZR buttons and a C-stick.
@@ -7816,7 +7816,7 @@ hypseus-singe:
   shared: [powermode, tdp, videomode, powersave, use_guns]
   cfeatures:
         hypseus_api:
-            archs_include: [x86, x86_64, bcm2711, bcm2712, a3gen2, sm8250]
+            archs_include: [x86, x86_64, bcm2711, bcm2712, a3gen2, sm8250, sm8550]
             prompt: GRAPHICS API
             description: Choose which graphics API library to use. Vulkan may not work on all hardware.
             choices:
@@ -7997,7 +7997,7 @@ dolphin:
                     description: Fix screen tearing. CPU heavy.
                     preset: switchauto
                 gfxbackend:
-                    archs_include: [x86, x86_64, bcm2711, bcm2712, a3gen2, sm8250]
+                    archs_include: [x86, x86_64, bcm2711, bcm2712, a3gen2, sm8250, sm8550]
                     submenu: RENDERING
                     prompt:  GRAPHICS API
                     description: Choose which graphics API library to use.
@@ -8651,7 +8651,7 @@ duckstation:
         duckstation_gfxbackend:
             submenu: DISPLAY
             group: ADVANCED OPTIONS
-            archs_include: [x86, x86_64, bcm2711, bcm2712, a3gen2, sm8250]
+            archs_include: [x86, x86_64, bcm2711, bcm2712, a3gen2, sm8250, sm8550]
             prompt: GRAPHICS API
             description: Choose which graphics API library to use.
             choices:
@@ -9894,7 +9894,7 @@ ppsspp:
   cfeatures:
         gfxbackend:
             group: DRIVERS
-            archs_include: [x86, x86_64, bcm2711, bcm2712, a3gen2, sm8250]
+            archs_include: [x86, x86_64, bcm2711, bcm2712, a3gen2, sm8250, sm8550]
             prompt: GRAPHICS API
             description: Choose which graphics API library to use.
             choices:
@@ -10771,7 +10771,7 @@ mame:
                 "Off (Default)": 0
                 "On":            1
         bgfxbackend:
-            archs_include: [x86, x86_64, bcm2711, bcm2712, a3gen2, sm8250]
+            archs_include: [x86, x86_64, bcm2711, bcm2712, a3gen2, sm8250, sm8550]
             prompt:      BGFX GRAPHICS API
             description: Depends on video mode being set to BGFX.
             choices:
@@ -12539,11 +12539,11 @@ flatpak:
 steam:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave]
-suyu:
+citron:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
-        suyu_scale:
+        citron_scale:
           submenu: VIDEO
           prompt: RENDERING RESOLUTION
           description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
@@ -12559,7 +12559,7 @@ suyu:
             "6x (4320p/6480p)":                  8
             "7x (5040p/7560p)":                  9
             "8x (5760p/8640p)":                  10
-        suyu_ratio:
+        citron_ratio:
           submenu: VIDEO
           prompt: ASPECT RATIO
           description: Change the output resolution ratio.
@@ -12570,14 +12570,14 @@ suyu:
             "Force 16:10":       3
             "Force 32:9":        4
             "Stretch to window": 5
-        suyu_backend:
+        citron_backend:
           submenu: RENDERING
           prompt: GRAPHICS API
           description: Choose which graphics API library to use.
           choices:
             "OpenGL": 0
             "Vulkan": 1
-        suyu_anisotropy:
+        citron_anisotropy:
           submenu: RENDERING
           prompt: ANISOTROPIC FILTERING
           description: Improves clarity of distant textures.
@@ -12587,7 +12587,7 @@ suyu:
             "4x":      3
             "8x":      4
             "16x":     5
-        suyu_vsync:
+        citron_vsync:
           submenu: RENDERING
           prompt: VSYNC
           description: Fix screen tearing. FIFO (Vsync) does not drop frames. FIFO Relaxed allows tearing as it recovers from a slow down. Mailbox can have lower latency but may drop frames.
@@ -12596,14 +12596,14 @@ suyu:
             "Mailbox (Recommended)": 1
             "FIFO (VSync On)":       2
             "FIFO Relaxed":          3
-        suyu_async_shaders:
+        citron_async_shaders:
           submenu: RENDERING
           prompt: ASYNC SHADER COMPILE
           description: Speed up shader compilation.
           choices:
             "Disabled": "false"
             "Enabled":  "true"
-        suyu_aliasing_method:
+        citron_aliasing_method:
           submenu: RENDERING
           prompt: ANTI-ALIASING METHOD
           description: FXAA has a lower performance impact, goof for low resolutions. SMAA offers best quality.
@@ -12611,7 +12611,7 @@ suyu:
             "None": 0
             "FXAA": 1
             "SMAA": 2
-        suyu_scale_filter:
+        citron_scale_filter:
           submenu: RENDERING
           prompt: TEXTURE FILTERING
           description: Smooth textures on 3D objects.
@@ -12622,7 +12622,7 @@ suyu:
             "Gaussian":                        3
             "ScaleForce":                      4
             "AMD FidelityFX Super Resolution": 5
-        suyu_accuracy:
+        citron_accuracy:
           submenu: RENDERING
           prompt: ACCURACY LEVEL
           description: GPU emulation accuracy. Most games render fine with Normal. High is required to ensure particles render correctly.
@@ -12630,19 +12630,19 @@ suyu:
             "Normal":  0
             "High":    1
             "Extreme": 2
-        suyu_sound_mode:
+        citron_sound_mode:
           prompt: CHOOSE SOUND OUTPUT MODE
           choices:
             "Mono":     0
             "Stereo":   1
             "Surround": 2
-        suyu_dock_mode:
+        citron_dock_mode:
           prompt: DOCK MODE
           description: Choose whether the virtual switch is docked or not.
           choices:
             "Undocked":         "false"
             "Docked (Default)": "true"
-        suyu_language:
+        citron_language:
           prompt: LANGUAGE
           description: Change the game's language.
           choices:
@@ -12664,7 +12664,7 @@ suyu:
             "Simplified Chinese":     15
             "Traditional Chinese":    16
             "Brazilian Portuguese":   17
-        suyu_region:
+        citron_region:
           prompt: CHOOSE CONSOLE REGION
           description: Choose your console region.
           choices:
@@ -12675,7 +12675,7 @@ suyu:
             "China":     4
             "Korea":     5
             "Taiwan":    6
-        suyu_timezone:
+        citron_timezone:
           prompt: CHOOSE CONSOLE TIMEZONE
           description: Choose your console time zone.
           choices:

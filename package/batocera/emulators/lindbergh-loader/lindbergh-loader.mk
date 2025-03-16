@@ -3,8 +3,8 @@
 # lindbergh-loader
 #
 ################################################################################
-# Version: Commits on Feb 27, 2025
-LINDBERGH_LOADER_VERSION = cafd6276c3a84da547436dd9653cc133c5e79ea8
+# Version: Commits on Mar 14, 2025
+LINDBERGH_LOADER_VERSION = a96b1fcf30b1110981468aee7bab9eec174a3153
 LINDBERGH_LOADER_SITE = $(call github,lindbergh-loader,lindbergh-loader,$(LINDBERGH_LOADER_VERSION))
 LINDBERGH_LOADER_LICENSE = ShareAlike 4.0 International
 LINDBERGH_LOADER_LICENSE_FILES = LICENSE.md
@@ -23,7 +23,7 @@ LINDBERGH_LOADER_CFLAGS = -g -pipe -fPIC -I$(STAGING_DIR)/usr/include -flto
 # match the makefile ldflags
 LINDBERGH_LOADER_LDFLAGS += -L$(STAGING_DIR)/usr/lib
 LINDBERGH_LOADER_LDFLAGS += -flto -Wl,-z,defs -rdynamic -static-libgcc -lc -ldl -lGL
-LINDBERGH_LOADER_LDFLAGS += -lglut -lX11 -lSDL2 -lFAudio -lm -lpthread -shared -lgcc_s -lgcc
+LINDBERGH_LOADER_LDFLAGS += -lglut -lX11 -lXcursor -lSDL2 -lFAudio -lm -lpthread -shared -lgcc_s -lgcc
 LINDBERGH_LOADER_LDFLAGS += -nostdlib -lasound -L./src/libxdiff -lxdiff
 
 define LINDBERGH_LOADER_BUILD_CMDS
@@ -31,9 +31,10 @@ define LINDBERGH_LOADER_BUILD_CMDS
 	CC="$(TARGET_CC)" \
 	CFLAGS_FOR_BUILD="-I$(STAGING_DIR)/usr/include" \
 	CFLAGS="$(LINDBERGH_LOADER_CFLAGS)" \
+	CXX="$(TARGET_CXX)" \
 	CPPFLAGS="-I$(STAGING_DIR)/usr/include" \
-	LD="$(TARGET_CC)" \
 	LDFLAGS="$(LINDBERGH_LOADER_LDFLAGS)" \
+	AR="$(TARGET_AR)" \
 	-C $(@D) all
 endef
 

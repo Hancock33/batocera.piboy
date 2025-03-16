@@ -14,27 +14,25 @@ class AwglGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         os.chdir("/userdata/roms/ports/awgl")
-        rendr = "--render=software"
-        if (rom.__contains__("15th")):
+        if  "15th" in rom.name:
             game = "--datapath=/userdata/roms/ports/awgl/15th"
 
-        if (rom.__contains__("20th")):
+        if  "20th" in rom.name:
             game = "--datapath=/userdata/roms/ports/awgl/20th"
-            rendr = "--render=original"
 
-        if (rom.__contains__("3DO")):
+        if  "3DO" in rom.name:
             game = "--datapath=/userdata/roms/ports/awgl/3DO"
 
-        if (rom.__contains__("Amiga")):
+        if  "Amiga" in rom.name:
             game = "--datapath=/userdata/roms/ports/awgl/Amiga"
 
-        if (rom.__contains__("Atari")):
+        if  "Atari" in rom.name:
             game = "--datapath=/userdata/roms/ports/awgl/Atari"
 
-        if (rom.__contains__("DOS")):
+        if  "DOS" in rom.name:
             game = "--datapath=/userdata/roms/ports/awgl/DOS"
 
-        if (rom.__contains__("Win31")):
+        if  "Win31" in rom.name:
             game = "--datapath=/userdata/roms/ports/awgl/Win31"
 
         commandArray = ["awgl", game]

@@ -987,8 +987,8 @@ supracan:
   emulator: libretro
   core:     mame
 switch:
-  emulator: suyu
-  core:     suyu
+  emulator: ryujinx
+  core:     ryujinx
   options:
     powersave: '2'
     forceNoBezel: true

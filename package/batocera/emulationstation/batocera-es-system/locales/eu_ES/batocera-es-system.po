@@ -57,7 +57,7 @@ msgctxt "game_options"
 msgid "0% (Default)"
 msgstr ""
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "0.5x"
 msgstr ""
@@ -67,32 +67,32 @@ msgctxt "game_options"
 msgid "0.5x (320x240)"
 msgstr "0.5x (320x240)"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "0.5x (360p/540p) [EXPERIMENTAL]"
 msgstr ""
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "0.6x"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "0.75x (540p/810p) [EXPERIMENTAL]"
 msgstr ""
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "0.7x"
 msgstr ""
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "0.8x"
 msgstr ""
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "0.9x"
 msgstr ""
@@ -122,7 +122,7 @@ msgctxt "game_options"
 msgid "1 thread"
 msgstr "Hari 1"
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "1% (Default)"
 msgstr ""
@@ -137,7 +137,7 @@ msgctxt "game_options"
 msgid "1.0x (12.50Mhz)"
 msgstr "1.0x (12.50Mhz)"
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "1.1x"
 msgstr ""
@@ -157,7 +157,7 @@ msgctxt "game_options"
 msgid "1.25x Native"
 msgstr "1.25x Natiboa"
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "1.2x"
 msgstr ""
@@ -167,22 +167,22 @@ msgctxt "game_options"
 msgid "1.2x (15.00Mhz)"
 msgstr "1.2x (15.00Mhz)"
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "1.3x"
 msgstr ""
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "1.4x"
 msgstr ""
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "1.5x"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "1.5x (1080p/1620p) [EXPERIMENTAL]"
 msgstr ""
@@ -572,7 +572,7 @@ msgctxt "game_options"
 msgid "150Mhz (Overclock)"
 msgstr "150Mhz (Overclock)"
 
-#. TRANSLATION: xenia, xenia, xenia-canary, xenia-canary
+#. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "1536MB"
 msgstr ""
@@ -647,7 +647,7 @@ msgctxt "game_options"
 msgid "1680 x 1050"
 msgstr ""
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "16:9 (Default)"
 msgstr "16:9 (Defektuz)"
@@ -762,12 +762,12 @@ msgctxt "game_options"
 msgid "1st Joystick (2 Axes, 2 Btns)"
 msgstr "1. Joystick-a (2 Ardatz, 2 Botoi)"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "1x (720p/1080p)"
 msgstr ""
 
-#. TRANSLATION: libretro/mupen64plus-next, mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: libretro/mupen64plus-next, mupen64plus
 msgctxt "game_options"
 msgid "1x (Default)"
 msgstr "1x (Defektuz)"
@@ -1077,7 +1077,7 @@ msgctxt "game_options"
 msgid "2M"
 msgstr "2M"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/px68k, libretro/uae4arm, mame/openbor7530, ...
+#. TRANSLATION: libretro/mame, libretro/px68k, libretro/uae4arm, mame/openbor7530
 msgctxt "game_options"
 msgid "2MB"
 msgstr "2MB"
@@ -1097,7 +1097,7 @@ msgctxt "game_options"
 msgid "2nd Joystick (2 Axes, 2 Btns)"
 msgstr "1. Joystick-a (2 Ardatz, 2 Botoi)"
 
-#. TRANSLATION: flycast/dolphin, flycast/dolphin, flycast/dolphin, flycast/dolphin
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "2nd VMU (Default)"
 msgstr "2nd VMU (Defektuz)"
@@ -1107,7 +1107,7 @@ msgctxt "game_options"
 msgid "2x (1280x960) (Default)"
 msgstr "2x (1280x960) (Defektuzkoa)"
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "2x (1440p/2160p)"
 msgstr "2x (1440p/2160p)"
@@ -1217,7 +1217,7 @@ msgctxt "game_options"
 msgid "3032B"
 msgstr "3032B"
 
-#. TRANSLATION: xenia, xenia, xenia-canary, xenia-canary
+#. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "3072MB"
 msgstr ""
@@ -1357,7 +1357,7 @@ msgctxt "game_options"
 msgid "3rd"
 msgstr ""
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "3x (2160p/3240p)"
 msgstr "3x (2160p/3240p)"
@@ -1427,7 +1427,7 @@ msgctxt "game_options"
 msgid "4032B"
 msgstr "4032B"
 
-#. TRANSLATION: xenia, xenia, xenia-canary, xenia-canary
+#. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "4096MB"
 msgstr ""
@@ -1517,7 +1517,7 @@ msgctxt "game_options"
 msgid "4M"
 msgstr "4M"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/mame, libretro/px68k, libretro/uae4arm, ...
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/px68k, libretro/uae4arm, mame/openbor7530
 msgctxt "game_options"
 msgid "4MB"
 msgstr "4MB"
@@ -1537,7 +1537,7 @@ msgctxt "game_options"
 msgid "4th"
 msgstr ""
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "4x (2880p/4320p)"
 msgstr "4x (2880p/4320p)"
@@ -1632,7 +1632,7 @@ msgctxt "game_options"
 msgid "5 threads"
 msgstr "5 hari"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "5% (Default)"
 msgstr "%5 (Defektuz)"
@@ -1732,7 +1732,7 @@ msgctxt "game_options"
 msgid "5th"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "5x (3600p/5400p)"
 msgstr "5x (3600p/5400p)"
@@ -1842,7 +1842,7 @@ msgctxt "game_options"
 msgid "6th"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "6x (4320p/6480p)"
 msgstr "6x (4320p/6480p)"
@@ -1927,7 +1927,7 @@ msgctxt "game_options"
 msgid "7th"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "7x (5040p/7560p)"
 msgstr ""
@@ -2027,7 +2027,7 @@ msgctxt "game_options"
 msgid "8th"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "8x (5760p/8640p)"
 msgstr ""
@@ -2152,12 +2152,12 @@ msgctxt "game_options"
 msgid "A600 (2MB Chip + 8MB Fast)"
 msgstr "A600 (2MB Chip + 8MB Azkarra)"
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "XAGU SARRERA ABSOLUTUA"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ACCURACY LEVEL"
 msgstr ""
@@ -2197,7 +2197,7 @@ msgctxt "game_options"
 msgid "ADJUST POWERPC FREQUENCY"
 msgstr "DOITU POWERPC FREKUENTZIA"
 
-#. TRANSLATION: bigpemu, bigpemu, bigpemu, bigpemu, bigpemu, ...
+#. TRANSLATION: azahar, bigpemu, cemu, dolphin_triforce, drastic, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "AUKERA AURRERATUAK"
@@ -2207,7 +2207,7 @@ msgctxt "game_options"
 msgid "AES (Home Console)"
 msgstr ""
 
-#. TRANSLATION: shared, shared, shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "AI GAME TRANSLATION"
 msgstr "AA BIDEZKO JOKO ITZULPENA"
@@ -2267,7 +2267,7 @@ msgctxt "game_options"
 msgid "AMD Athlon, 1.2GHz (1000000 cps)"
 msgstr "AMD Athlon, 1.2GHz (1000000 cps)"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "AMD FidelityFX Super Resolution"
 msgstr ""
@@ -2292,12 +2292,12 @@ msgctxt "game_options"
 msgid "ANALOGUE JOYSTICK DEADZONE"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "ANALOGUE TO D-PAD TYPE P1"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "ANALOGUE TO D-PAD TYPE P2"
 msgstr ""
@@ -2307,7 +2307,7 @@ msgctxt "game_options"
 msgid "ANISOTROPIC FILTER"
 msgstr "FILTRO ANISOTROPIKOA"
 
-#. TRANSLATION: dolphin, dolphin_triforce, dxx-rebirth, flycast, libretro/dolphin, ...
+#. TRANSLATION: citron, dolphin, dolphin_triforce, dxx-rebirth, flycast, ...
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "FILTRO ANISOTROPIKOA"
@@ -2327,7 +2327,7 @@ msgctxt "game_options"
 msgid "ANTI-ALIASING (MSAA/SSAA)"
 msgstr "ANTI-ALIASING (MSAA/SSAA)"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ANTI-ALIASING METHOD"
 msgstr "ANTI-ALIASING METODOA"
@@ -2377,12 +2377,12 @@ msgctxt "game_options"
 msgid "ASMJIT Recompiler"
 msgstr "ASMJIT Birkonpilatzailea"
 
-#. TRANSLATION: bermuda, bigpemu, cemu, cgenius, dolphin_triforce, ...
+#. TRANSLATION: bermuda, bigpemu, cemu, cgenius, citron, ...
 msgctxt "game_options"
 msgid "ASPECT RATIO"
 msgstr "PROPORTZIOA"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ASYNC SHADER COMPILE"
 msgstr "SHADER KONPILAZIO ASINKRONOA"
@@ -2432,7 +2432,7 @@ msgctxt "game_options"
 msgid "ATARI SYSTEM"
 msgstr "ATARI SISTEMA"
 
-#. TRANSLATION: dolphin, rpcs3, rpcs3, rpcs3, rpcs3, ...
+#. TRANSLATION: dolphin, rpcs3, vpinball
 msgctxt "game_options"
 msgid "AUDIO"
 msgstr "AUDIOA"
@@ -2487,7 +2487,7 @@ msgctxt "game_options"
 msgid "AUDIO VOLUME GAIN"
 msgstr "AUDIO IRABAZTE BOLUMENA"
 
-#. TRANSLATION: dosbox, dosbox, dosbox
+#. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "AUTO"
 msgstr ""
@@ -2697,17 +2697,17 @@ msgctxt "game_options"
 msgid "Add debug logging to help troubleshoot issues."
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Adds d-pad mapping to the analogue stick (Controller 1)."
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Adds d-pad mapping to the analogue stick (Controller 2)."
 msgstr ""
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid ""
 "Adjust mixing of CD audio. In MSU-MD, cartridge-sourced sound effects are "
@@ -2966,7 +2966,7 @@ msgctxt "game_options"
 msgid "Amount of instructions DOSBox tries to emulate"
 msgstr ""
 
-#. TRANSLATION: yabasanshiro, yabasanshiro
+#. TRANSLATION: yabasanshiro
 msgctxt "game_options"
 msgid "Analog"
 msgstr "Analogoa"
@@ -2996,27 +2996,27 @@ msgctxt "game_options"
 msgid "Analogue"
 msgstr ""
 
-#. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/pcsx_rearmed
+#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Analogue Controller"
 msgstr ""
 
-#. TRANSLATION: libretro/duckstation, libretro/duckstation, libretro/swanstation, libretro/swanstation
+#. TRANSLATION: libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "Analogue Controller (DualShock)"
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, ...
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/swanstation
 msgctxt "game_options"
 msgid "Analogue Joystick"
 msgstr ""
 
-#. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx
+#. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Analogue Joystick (Flystick)"
 msgstr ""
 
-#. TRANSLATION: libretro/duckstation, libretro/duckstation
+#. TRANSLATION: libretro/duckstation
 msgctxt "game_options"
 msgid "Analogue Stick"
 msgstr ""
@@ -3061,17 +3061,17 @@ msgctxt "game_options"
 msgid "Apple //e Enhanced (Default)"
 msgstr "Apple //e Hobetua (Defektuz)"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Apple II cleanly cracked disks"
 msgstr "Apple II garbi kraketautako diskoak"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Apple II miscellaneous disks"
 msgstr "Apple II askotariko diskoak"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Apple II original disks"
 msgstr "Apple II disko originalak"
@@ -3114,7 +3114,7 @@ msgctxt "game_options"
 msgid "Apply a joy2key profile for the current game."
 msgstr "Aplikatu joy2key profila uneko jokoan"
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid ""
 "Apply a multiplier to the joystick's input to lower or increase "
@@ -3216,7 +3216,7 @@ msgctxt "game_options"
 msgid "Arrange the dual screen layout."
 msgstr "Ordenatu pantaila dual antolaketa"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
@@ -3299,7 +3299,7 @@ msgctxt "game_options"
 msgid "August"
 msgstr ""
 
-#. TRANSLATION: ryujinx, suyu, xenia, xenia-canary
+#. TRANSLATION: citron, ryujinx, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Australia"
 msgstr "Australia"
@@ -3319,7 +3319,7 @@ msgctxt "game_options"
 msgid "Auto Max Quality"
 msgstr "Kalitate Onena aukeratu automatikoki"
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Auto Standard (4:3 interlaced / 3:2 progressive)"
 msgstr "Auto Standard-a (4:3 tartekatua /3:2 progresiboa)"
@@ -3334,12 +3334,12 @@ msgctxt "game_options"
 msgid "Auto-disable zoom"
 msgstr "Auto desgaitu zoom-a"
 
-#. TRANSLATION: libretro/81, libretro/81, libretro/fceumm, libretro/fceumm, libretro/genesisplusgx, ...
+#. TRANSLATION: libretro/81, libretro/fceumm, libretro/genesisplusgx, libretro/nestopia, libretro/o2em, ...
 msgctxt "game_options"
 msgid "Autodetect"
 msgstr "Autodetektatzea"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Autodetect (Compatible)"
 msgstr "Autodetektatu (Konpatiblea)"
@@ -3580,7 +3580,7 @@ msgctxt "game_options"
 msgid "BIRTH MONTH"
 msgstr ""
 
-#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/mesens, libretro/nestopia, ...
+#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/mesens, libretro/nestopia, libretro/snes9x, ...
 msgctxt "game_options"
 msgid "BLARGG NTSC FILTER"
 msgstr "BLARGG NTSC FILTROA"
@@ -3590,7 +3590,7 @@ msgctxt "game_options"
 msgid "BLEND HIGH-RES MODE"
 msgstr "NAHASTU BEREIZMEN-HANDIKO MODUA"
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "BLEND SPRITES (SINGE)"
 msgstr "NAHASTU SPRITE-AK (SINGE)"
@@ -3610,7 +3610,7 @@ msgctxt "game_options"
 msgid "BOBBA FETT FIX"
 msgstr "BOBBA FETT KONPONKETA"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "BOOT ANIMATION FIRST"
 msgstr "ABIO ANIMAZIOA LEHENENGO"
@@ -3625,12 +3625,12 @@ msgctxt "game_options"
 msgid "BORDER MODE"
 msgstr "ERTZ MODUA"
 
-#. TRANSLATION: shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "BOTTOM LEFT (SW)"
 msgstr "BEHERAN EZKERREAN (HE)"
 
-#. TRANSLATION: shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "BOTTOM RIGHT (SE)"
 msgstr "BEHERAN ESKUINEAN (HM)"
@@ -3675,7 +3675,7 @@ msgctxt "game_options"
 msgid "Bahrain"
 msgstr ""
 
-#. TRANSLATION: shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Balanced"
 msgstr ""
@@ -3742,7 +3742,7 @@ msgctxt "game_options"
 msgid "Better performance with hardware rendering."
 msgstr "Eraginkortasun hobea hardware renderizatzearekin."
 
-#. TRANSLATION: cemu, cemu, ppsspp, supermodel, suyu
+#. TRANSLATION: cemu, citron, ppsspp, supermodel
 msgctxt "game_options"
 msgid "Bicubic"
 msgstr "Bikubikoa"
@@ -3762,7 +3762,7 @@ msgctxt "game_options"
 msgid "Bicubic: Mitchell-Netravali"
 msgstr ""
 
-#. TRANSLATION: bigpemu, cemu, dolphin_triforce, drastic, duckstation, ...
+#. TRANSLATION: bigpemu, cemu, citron, dolphin_triforce, drastic, ...
 msgctxt "game_options"
 msgid "Bilinear"
 msgstr "Bilinearra"
@@ -3842,7 +3842,7 @@ msgctxt "game_options"
 msgid "Blocky Filtered"
 msgstr ""
 
-#. TRANSLATION: flycast, flycast, flycast, flycast, libretro/flycast, ...
+#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, libretro/melondsds, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Blue"
 msgstr "Urdina"
@@ -3909,7 +3909,7 @@ msgctxt "game_options"
 msgid "Both"
 msgstr "Biak"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Both Joysticks (4 Axes, 4 Btns)"
 msgstr "Bi Joystick-ak (4 Ardatz, 4 Botoi)"
@@ -3919,12 +3919,12 @@ msgctxt "game_options"
 msgid "Both types require holding D-pad down during initial charge."
 msgstr "Bi motek D-pad-a behera mantentzea eskatzen dute haserako kargarako."
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Bottom (Default)"
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Bottom Only"
 msgstr "Behekoa soilik"
@@ -3949,12 +3949,12 @@ msgctxt "game_options"
 msgid "Brazil"
 msgstr "Brasil"
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "Brazilian Portuguese"
 msgstr "Brasildar Portugalera"
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "British English"
 msgstr "Britaniar Ingelera"
@@ -4147,17 +4147,17 @@ msgctxt "game_options"
 msgid "CD"
 msgstr "CD"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "CD ADD-ON"
 msgstr "CD ADD-ON-A"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "CD TURBO SPEED"
 msgstr "CD TURGO ABIADURA"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "CD-DA VOLUME"
 msgstr "CD-DA BOLUMENA"
@@ -4182,7 +4182,7 @@ msgctxt "game_options"
 msgid "CD32 Default (2MB Chip)"
 msgstr "CD32 Defektuz (2MB Chip)"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, ...
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "CD32 Pad"
 msgstr "CD32 Pad-a"
@@ -4207,7 +4207,7 @@ msgctxt "game_options"
 msgid "CDZ Universe 3.3"
 msgstr "CDZ Universe 3.3"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "CET"
 msgstr "CET"
@@ -4227,17 +4227,17 @@ msgctxt "game_options"
 msgid "CHECKERED FLAG"
 msgstr ""
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "CHOOSE CONSOLE REGION"
 msgstr "AUKERATU KONTSOLAREN HERRIALDEA"
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "CHOOSE CONSOLE TIMEZONE"
 msgstr "AUKERATU KONTSOLAREN ORDU EREMUA"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "CHOOSE SOUND OUTPUT MODE"
 msgstr "AUKERATU SOINU IRTEERA  MODUA"
@@ -4247,7 +4247,7 @@ msgctxt "game_options"
 msgid "CLEAR MEMORY PAGE STATE"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "TXANPON SOINU PLUGIN-A"
@@ -4267,7 +4267,7 @@ msgctxt "game_options"
 msgid "COLOUR COMPUTER MODEL"
 msgstr ""
 
-#. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/mgba, libretro/sameboy, libretro/vba-m, ...
+#. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/sameboy, libretro/vba-m
 msgctxt "game_options"
 msgid "COLOUR CORRECTION"
 msgstr ""
@@ -4342,7 +4342,7 @@ msgctxt "game_options"
 msgid "CONTROL MAPPING"
 msgstr "KONTROLATZAILE MAPEOA"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 1"
 msgstr "1 KONTROLATZAILEA"
@@ -4357,12 +4357,12 @@ msgctxt "game_options"
 msgid "CONTROLLER 1 INPUT MAPPING"
 msgstr ""
 
-#. TRANSLATION: duckstation, libretro/beetle-saturn, libretro/dolphin, libretro/dolphin, libretro/dosbox, ...
+#. TRANSLATION: duckstation, libretro/beetle-saturn, libretro/dolphin, libretro/dosbox, libretro/dosbox_pure, ...
 msgctxt "game_options"
 msgid "CONTROLLER 1 TYPE"
 msgstr "1 MODUKO KONTROLATZAILEA"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 2"
 msgstr "1 KONTROLATZAILEA"
@@ -4377,12 +4377,12 @@ msgctxt "game_options"
 msgid "CONTROLLER 2 INPUT MAPPING"
 msgstr ""
 
-#. TRANSLATION: duckstation, libretro/beetle-saturn, libretro/dolphin, libretro/dolphin, libretro/dosbox, ...
+#. TRANSLATION: duckstation, libretro/beetle-saturn, libretro/dolphin, libretro/dosbox, libretro/dosbox_pure, ...
 msgctxt "game_options"
 msgid "CONTROLLER 2 TYPE"
 msgstr "1 MODU KONTROLATZAILEA"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 3"
 msgstr "3 KONTROLATZAILEA"
@@ -4397,12 +4397,12 @@ msgctxt "game_options"
 msgid "CONTROLLER 3 INPUT MAPPING"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/flycast2021, libretro/snes9x
+#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/flycast2021, libretro/snes9x
 msgctxt "game_options"
 msgid "CONTROLLER 3 TYPE"
 msgstr "3 MOTA KONTROLATZAILEA"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 4"
 msgstr "4 KONTROLATZAILEA"
@@ -4417,22 +4417,22 @@ msgctxt "game_options"
 msgid "CONTROLLER 4 INPUT MAPPING"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "CONTROLLER 4 TYPE"
 msgstr "4 MOTA KONTROLATZAILEA"
 
-#. TRANSLATION: rpcs3, rpcs3
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 5"
 msgstr ""
 
-#. TRANSLATION: rpcs3, rpcs3
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 6"
 msgstr ""
 
-#. TRANSLATION: rpcs3, rpcs3
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 7"
 msgstr ""
@@ -4452,7 +4452,7 @@ msgctxt "game_options"
 msgid "CONTROLLER MODE"
 msgstr ""
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "CONTROLLER PAK"
 msgstr "KONTROLATZAILE PAK-A"
@@ -4467,7 +4467,7 @@ msgctxt "game_options"
 msgid "CONTROLLER PROFILE"
 msgstr "KONTROLATZAILE PROFILA"
 
-#. TRANSLATION: libretro, libretro, libretro/atari800, libretro/beetle-saturn, libretro/beetle-saturn, ...
+#. TRANSLATION: libretro, libretro/atari800, libretro/beetle-saturn, libretro/dolphin, libretro/dosbox, ...
 msgctxt "game_options"
 msgid "CONTROLLER SETTINGS"
 msgstr ""
@@ -4477,7 +4477,7 @@ msgctxt "game_options"
 msgid "CONTROLLER TO LIGHT GUN"
 msgstr "KONTROLATZAILEA ARGIZKO PISTOLARA"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
 msgid "CONTROLLER TYPE"
 msgstr "KONTROLATZAILE MOTA"
@@ -4492,12 +4492,12 @@ msgctxt "game_options"
 msgid "CONTROLLER TYPE 2"
 msgstr "2 KONTROLATZAILE MOTA"
 
-#. TRANSLATION: duckstation, duckstation, duckstation, libretro/genesisplusgx, libretro/genesisplusgx, ...
+#. TRANSLATION: duckstation, libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
 msgid "CONTROLLERS"
 msgstr "KONTROLATZAILEA"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
+#. TRANSLATION: dolphin, rpcs3, shared
 msgctxt "game_options"
 msgid "CONTROLS"
 msgstr ""
@@ -4517,7 +4517,7 @@ msgctxt "game_options"
 msgid "CPC MODEL"
 msgstr "CPC MODELOA"
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "CPU"
 msgstr "CPU"
@@ -4642,7 +4642,7 @@ msgctxt "game_options"
 msgid "CRT-like colour adaption. Requires New 3D engine."
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "CST6CDT"
 msgstr "CST6CDT"
@@ -4672,7 +4672,7 @@ msgctxt "game_options"
 msgid "CUSTOM .PNG IMAGE PATH"
 msgstr "NEURRIRA EGINIKO .PNG IRUDIRAKO BIDEA"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mamevirtual, ...
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi, mame/openbor7530
 msgctxt "game_options"
 msgid "CUSTOM CONFIG"
 msgstr "NEURRIRAKO KONFIGURAZIOA"
@@ -4682,7 +4682,7 @@ msgctxt "game_options"
 msgid "CUSTOM CONTROLLER"
 msgstr "NEURRIRAKO KONTROLATZAILEA"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame/openbor7530
 msgctxt "game_options"
 msgid "CUSTOM GAME CONFIG"
 msgstr "NEURRIRAKO JOKO KONFIGURAZIOA"
@@ -4702,7 +4702,7 @@ msgctxt "game_options"
 msgid "CUSTOM MAME CONFIG"
 msgstr "NEURRIRAKO MAME KONFIGURAZIOA"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
 msgstr "NEURRIRATU EMULATUTAKO WIIMOTE & GAMEPAD-A"
@@ -4833,7 +4833,7 @@ msgctxt "game_options"
 msgid "Canada"
 msgstr ""
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "Canadian French"
 msgstr "Kanadiar Frantsesa"
@@ -4843,17 +4843,17 @@ msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
 msgstr "Capcom-en VS jokoen Pantailaren zabalera zabaltzen dute."
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Cartridge"
 msgstr "Kartutxoa"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Cartridge (Slot 1)"
 msgstr "Kartutxo (1 Zirrikitua)"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Cartridge (Slot 2)"
 msgstr "Kartutxo (2 Zirrikitua)"
@@ -4878,17 +4878,17 @@ msgctxt "game_options"
 msgid "Casio PV-1000 cartridges"
 msgstr "Casio PV-1000 kartutxoak"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Cassette"
 msgstr "Kasetea"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Cassette 1"
 msgstr "1 Kasetea"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Cassette 2"
 msgstr "2 Kasetea"
@@ -4967,7 +4967,7 @@ msgctxt "game_options"
 msgid "Change the game's brightness."
 msgstr ""
 
-#. TRANSLATION: etlegacy, fallout1-ce, fallout2-ce, libretro/cap32, play, ...
+#. TRANSLATION: citron, etlegacy, fallout1-ce, fallout2-ce, libretro/cap32, ...
 msgctxt "game_options"
 msgid "Change the game's language."
 msgstr "Aldatu jokoaren hizkuntza"
@@ -4979,7 +4979,7 @@ msgid ""
 "strings in the .pk4 files."
 msgstr ""
 
-#. TRANSLATION: bigpemu, cemu, duckstation, libretro/vice_x128, libretro/vice_x64, ...
+#. TRANSLATION: bigpemu, cemu, citron, duckstation, libretro/vice_x128, ...
 msgctxt "game_options"
 msgid "Change the output resolution ratio."
 msgstr "Aldatu irteera bereizmen proportzioa"
@@ -4995,7 +4995,7 @@ msgctxt "game_options"
 msgid "Change the system's language."
 msgstr "Aldatu sistemako hizkuntza"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Change what's plugged into the virtual GameCube ports."
 msgstr "Aldatu GameCube portu birtualetan konektatuta dagoena."
@@ -5017,12 +5017,12 @@ msgctxt "game_options"
 msgid "Chile"
 msgstr ""
 
-#. TRANSLATION: ryujinx, suyu, xenia, xenia-canary
+#. TRANSLATION: citron, ryujinx, xenia, xenia-canary
 msgctxt "game_options"
 msgid "China"
 msgstr "Txina"
 
-#. TRANSLATION: cemu, doom3, ryujinx, sonic2013, suyu, ...
+#. TRANSLATION: cemu, citron, doom3, ryujinx, sonic2013, ...
 msgctxt "game_options"
 msgid "Chinese"
 msgstr "Txinatarra"
@@ -5072,7 +5072,7 @@ msgctxt "game_options"
 msgid "Choose number of audio channels."
 msgstr "Aukeratu audio kanal kopurua."
 
-#. TRANSLATION: flycast/dolphin, flycast/dolphin, flycast/dolphin, flycast/dolphin
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "Choose second feature pack for the controller."
 msgstr "Aukeratu bigarren ezaugarri pack-a kontrolatzailearentzat."
@@ -5192,7 +5192,7 @@ msgctxt "game_options"
 msgid "Choose upscaling method."
 msgstr "Aukeratu eskalatze metodoa"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Choose whether the virtual switch is docked or not."
 msgstr ""
@@ -5216,7 +5216,7 @@ msgctxt "game_options"
 msgid "Choose which audio API library to use."
 msgstr ""
 
-#. TRANSLATION: cemu, citra, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: azahar, cemu, citron, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr "Aukeratu zein API grafiko liburutegi erabili nahi duzun."
@@ -5275,12 +5275,12 @@ msgctxt "game_options"
 msgid "Choose your console UTC time zone."
 msgstr ""
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "Choose your console region."
 msgstr "Aukertau zure kontsolaren herrialdea."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Choose your console time zone."
 msgstr ""
@@ -5377,7 +5377,7 @@ msgctxt "game_options"
 msgid "Chrono Chross Odd/Even Bit Hack"
 msgstr "Chrono Chross inpar/par Bit Hack-a"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Classic"
 msgstr ""
@@ -5387,12 +5387,12 @@ msgctxt "game_options"
 msgid "Classic (Default)"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Classic Controller"
 msgstr "Kontrolatzaile klasikoa"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Classic Controller Pro"
 msgstr "Pro Kontrolatzaile Klasikoa"
@@ -5474,7 +5474,7 @@ msgid ""
 "Vulkan only."
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid ""
 "Compile shaders using background threads to avoid shader compilation "
@@ -5493,7 +5493,7 @@ msgctxt "game_options"
 msgid "Composite (Blargg)"
 msgstr "Composite (Blargg)"
 
-#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
+#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
 msgid "Composite (colour bleeding + artifacts)"
 msgstr ""
@@ -5528,7 +5528,7 @@ msgctxt "game_options"
 msgid "Control the texture's trilinear filtering of the emulation."
 msgstr "Kontrolatu emulazioaren testuraren filtratze trilinearra."
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Controls for 5/6 button games and other unique controls"
 msgstr "5/6 botoidun joku eta beste kontrol berezientzat kontrolak"
@@ -5552,7 +5552,7 @@ msgctxt "game_options"
 msgid "Core provided"
 msgstr "Hornitutako nukleoa"
 
-#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/mesens, libretro/nestopia
+#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/mesens, libretro/nestopia
 msgctxt "game_options"
 msgid "Core-powered video filter."
 msgstr "Nukleoak emandako bideo filtroa"
@@ -5626,7 +5626,7 @@ msgctxt "keys_files"
 msgid "Crouch Toggle"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Cuba"
 msgstr "Kuba"
@@ -5636,7 +5636,7 @@ msgctxt "game_options"
 msgid "Current language"
 msgstr "Unekio hizkuntza"
 
-#. TRANSLATION: libretro/fuse, libretro/fuse
+#. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Cursor Joystick"
 msgstr "Cursor Joystick-a"
@@ -5646,12 +5646,12 @@ msgctxt "game_options"
 msgid "Cursor timeout in seconds when using Cursor Mode - Until Timeout."
 msgstr ""
 
-#. TRANSLATION: libretro/gambatte, libretro/mesen, shared, shared
+#. TRANSLATION: libretro/gambatte, libretro/mesen, shared
 msgctxt "game_options"
 msgid "Custom"
 msgstr "Neurrira eginikoak"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Custom Keyboard Binds (best for Pad2Key)"
 msgstr "Neurrirako Teklatu ezarpenak (Onena Pad2Key-rentzat)"
@@ -5713,7 +5713,7 @@ msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "DATU PLUGINA"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, mupen64plus, ...
+#. TRANSLATION: dolphin, mupen64plus
 msgctxt "game_options"
 msgid "DEADZONE"
 msgstr "HILZONA"
@@ -5728,7 +5728,7 @@ msgctxt "game_options"
 msgid "DECORATION SET"
 msgstr "DEKORAZIO MULTZOA"
 
-#. TRANSLATION: shared, shared, shared, shared, shared, ...
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "DECORATIONS"
 msgstr "DEKORAZIOAK"
@@ -5788,7 +5788,7 @@ msgctxt "game_options"
 msgid "DISABLE VERTEX CACHE"
 msgstr "DESGAITU ERPIN KATXEA"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
 msgstr "DISKOKO SHADER KATXEA"
@@ -5798,7 +5798,7 @@ msgctxt "game_options"
 msgid "DISK TYPE"
 msgstr "DISKO MOTA"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
+#. TRANSLATION: dolphin, duckstation, pcsx2, vpinball
 msgctxt "game_options"
 msgid "DISPLAY"
 msgstr "PANTAILA"
@@ -5813,7 +5813,7 @@ msgctxt "game_options"
 msgid "DISPLAY BACKGLASS GRILL"
 msgstr ""
 
-#. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "DISPLAY PHYSICAL SETUP"
 msgstr ""
@@ -5828,7 +5828,7 @@ msgctxt "game_options"
 msgid "DITHERING"
 msgstr "DITHERING-a"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "DK Bongos"
 msgstr "DK Bongoak"
@@ -5853,7 +5853,7 @@ msgctxt "game_options"
 msgid "DNS OVERRIDE"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "DOCK MODE"
 msgstr ""
@@ -5883,7 +5883,7 @@ msgctxt "game_options"
 msgid "DOWNSCALE FILTER"
 msgstr "TXIKIRA ESKATATZE FILTROA"
 
-#. TRANSLATION: flycast, libretro, libretro, libretro, libretro, ...
+#. TRANSLATION: flycast, libretro, ppsspp
 msgctxt "game_options"
 msgid "DRIVERS"
 msgstr ""
@@ -5933,7 +5933,7 @@ msgctxt "game_options"
 msgid "DUAL CORE MODE"
 msgstr "NUKLEO BIKOITZ MODUA"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "DUALSHOCK MOTION CONTROL"
 msgstr "DUALSHOCK MUGIMENDU KONTROLA"
@@ -5963,7 +5963,7 @@ msgctxt "game_options"
 msgid "DYNAREC CODE INVALIDATION"
 msgstr "DYNAREC KODE EZ BALIDATZEA"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Dance Mat"
 msgstr "Dantzarako Alfonbra"
@@ -6013,7 +6013,7 @@ msgctxt "game_options"
 msgid "December"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/mesen, libretro/puae, libretro/puae2021, ...
+#. TRANSLATION: citron, libretro/flycast, libretro/mesen, libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Default"
 msgstr "Defektuzkoa"
@@ -6023,7 +6023,7 @@ msgctxt "game_options"
 msgid "Default (2 Buttons)"
 msgstr "Defektuz (2 Botoi)"
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Default Only"
 msgstr "Defektuz bakarrik"
@@ -6038,7 +6038,7 @@ msgctxt "game_options"
 msgid "Default by model"
 msgstr "Defektuz modeloko"
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
 "Default uses SDL2, otherwise enable controller specific capabilities. Sony "
@@ -6124,17 +6124,17 @@ msgctxt "game_options"
 msgid "Dick Smith Electronics VZ-200/300 snapshots"
 msgstr "Dick Smith Electronics VZ-200/300 snapshot-ak"
 
-#. TRANSLATION: libretro/mame078plus, yabasanshiro, yabasanshiro
+#. TRANSLATION: libretro/mame078plus, yabasanshiro
 msgctxt "game_options"
 msgid "Digital"
 msgstr "Digitala"
 
-#. TRANSLATION: libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, ...
+#. TRANSLATION: libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Digital Controller"
 msgstr "Kontrolatzaile digitala"
 
-#. TRANSLATION: libretro/swanstation, libretro/swanstation
+#. TRANSLATION: libretro/swanstation
 msgctxt "game_options"
 msgid "Digital Controller (Gamepad)"
 msgstr "Kontrolatzaile digitala (Pad-a)"
@@ -6174,7 +6174,7 @@ msgctxt "game_options"
 msgid "Disable to access the system's settings, like time and language."
 msgstr "Desgaitu ordua eta hizkuntza bezalako sistema ezarpetenarako sarrera."
 
-#. TRANSLATION: bigpemu, duckstation, duckstation, duckstation, f2bgl, ...
+#. TRANSLATION: bigpemu, citron, duckstation, f2bgl, flycast, ...
 msgctxt "game_options"
 msgid "Disabled"
 msgstr "Desgaitua"
@@ -6184,7 +6184,7 @@ msgctxt "game_options"
 msgid "Disabled (Beatle Interpreter)"
 msgstr "Desgauty (Beatle Interpretatzailea)"
 
-#. TRANSLATION: cemu, cemu, cemu, cemu, cgenius, ...
+#. TRANSLATION: cemu, cgenius, devilutionx, duckstation, dxx-rebirth, ...
 msgctxt "game_options"
 msgid "Disabled (Default)"
 msgstr "Desgaituta (Defektuz)"
@@ -6214,12 +6214,12 @@ msgstr ""
 "Erpinen katxea desgaitzen du. Falta diren edo dardarra duten grafikoak "
 "konpondu ditzake, baina eraginkortasuna degradatu dezake."
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Disk (Drive 1)"
 msgstr "Disko (1 irakurlea)"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Disk (Drive 2)"
 msgstr "Disko (2 irakurlea"
@@ -6281,7 +6281,7 @@ msgstr ""
 "Irteera distortsionatzen du, pantaila guztiz bete eta proportzioa "
 "gainidatziz."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Docked (Default)"
 msgstr ""
@@ -6296,12 +6296,12 @@ msgctxt "game_options"
 msgid "Dominican Republic"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds
+#. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Don't Override"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame/openbor7530
 msgctxt "game_options"
 msgid "Don't Use (Default)"
 msgstr "Ez erabili (Defektuz)"
@@ -6371,17 +6371,17 @@ msgctxt "game_options"
 msgid "Dual Konami Justifiers"
 msgstr "Konami Justifier Dualak"
 
-#. TRANSLATION: duckstation, duckstation
+#. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "DualShock / Xbox Type"
 msgstr "DualShock / Xbox Mota"
 
-#. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/pcsx_rearmed
+#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "DualShock Controller"
 msgstr "DualShock Kontrolatzailea"
 
-#. TRANSLATION: duckstation, duckstation, libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, ...
+#. TRANSLATION: duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
 msgctxt "game_options"
 msgid "DualShock has rumble support. Not all games support DualShock."
 msgstr ""
@@ -6404,7 +6404,7 @@ msgid ""
 "Libretro cores."
 msgstr ""
 
-#. TRANSLATION: cemu, dolphin, etlegacy, libretro/dolphin, play, ...
+#. TRANSLATION: cemu, citron, dolphin, etlegacy, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "Dutch"
 msgstr "Nederlandera"
@@ -6434,7 +6434,7 @@ msgctxt "game_options"
 msgid "Dynarec (Fastest)"
 msgstr "Dynarec (Azkarrena)"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "EET"
 msgstr "EET"
@@ -6459,7 +6459,7 @@ msgctxt "game_options"
 msgid "EMULATE PCG-8100"
 msgstr "EMULATU PCG-8100"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "EMULATE WIIMOTE"
 msgstr "EMULATU WIIMOTE.A"
@@ -6479,7 +6479,7 @@ msgctxt "game_options"
 msgid "EMULATED SYSTEM"
 msgstr "EMULATUTAKO SISTEMA"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
+#. TRANSLATION: dolphin, dosbox, duckstation
 msgctxt "game_options"
 msgid "EMULATION"
 msgstr "EMULAZIOA"
@@ -6489,12 +6489,12 @@ msgctxt "game_options"
 msgid "EMULATION SPEED"
 msgstr "EMULAZIO ABIADURA"
 
-#. TRANSLATION: supermodel, supermodel
+#. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "EMULATOR"
 msgstr ""
 
-#. TRANSLATION: libretro/panda3ds, libretro/panda3ds, libretro/panda3ds, libretro/panda3ds, libretro/panda3ds, ...
+#. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "EMULATOR SETTINGS"
 msgstr ""
@@ -6509,7 +6509,7 @@ msgctxt "game_options"
 msgid "ENABLE AI TRANSLATION SERVICE"
 msgstr "GAITU AA BIDEZKO ITZULPEN ZERBITZUA"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "ENABLE ASYNC SHADER COMPILATION"
 msgstr "GAITU SHADER KONPILAZIO ASYNKRONOA"
@@ -6649,12 +6649,12 @@ msgctxt "game_options"
 msgid "ENHANCED RENDERING RESOLUTION"
 msgstr "HOBETUTAKO RENDERIZAZIO BEREIZMENA"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "EST"
 msgstr "EST"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "EST5EDT"
 msgstr "EST5EDT"
@@ -6674,7 +6674,7 @@ msgctxt "game_options"
 msgid "EXPANSION PACK"
 msgstr ""
 
-#. TRANSLATION: vpinball, vpinball
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "EXPERT SETTINGS"
 msgstr ""
@@ -6709,12 +6709,12 @@ msgctxt "keys_files"
 msgid "Edit room"
 msgstr "Edizio gela"
 
-#. TRANSLATION: suyu, xenia, xenia-canary
+#. TRANSLATION: citron, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Egypt"
 msgstr "Egipto"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Eire"
 msgstr "Eire"
@@ -6764,17 +6764,17 @@ msgctxt "game_options"
 msgid "Emulate NTSC quirks to show more colours in hi-res mode."
 msgstr ""
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "Emulate a Pak in the controller expansion port."
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+#. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
 msgid "Emulate a Wii Remote Sideway with L2 for Shake and Nunchuk on R-stick."
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
 msgstr "Emulatu Wiimote Sideway L2 Mugitu eta Nunchuck Eskuin stick-arekin "
@@ -6791,12 +6791,12 @@ msgstr ""
 "Emulatu Super Game Boy 2 SGB-rentzat. Jokoak abiadura egokian exekutatzen "
 "ditu."
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
 msgstr "Emulatu Wiimote erakuslea DS4-ren giroskopioarekin."
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Emulate the Wiimote pointer with a mouse."
 msgstr "Emulatu Wiimote erakuslea xaguarekin"
@@ -6917,7 +6917,7 @@ msgid ""
 "Enable cache mount. Can improve performance and compatibility in some games."
 msgstr ""
 
-#. TRANSLATION: dolphin, rpcs3, rpcs3, rpcs3, rpcs3, ...
+#. TRANSLATION: dolphin, rpcs3
 msgctxt "game_options"
 msgid "Enable controller rumble capabilities if supported by the controller."
 msgstr ""
@@ -6969,7 +6969,7 @@ msgctxt "game_options"
 msgid "Enable high quality effects for special stages."
 msgstr "Gaitu kalitate altuko efektuak pantaila berezietak."
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Enable launching pre-installed WHDLoad installs."
 msgstr "Gaitu aurre instalatutako WHDLoad instalazioen jaurtitzea."
@@ -7012,12 +7012,12 @@ msgid ""
 "widescreen display."
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Enable or disable high score saving"
 msgstr "Gaitu edo desgaitul puntuazio altuenen gordetzea"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame/openbor7530
 msgctxt "game_options"
 msgid "Enable per-game custom configuration via MAME menu."
 msgstr ""
@@ -7180,12 +7180,12 @@ msgctxt "game_options"
 msgid "Enable widescreen support."
 msgstr "Gaitu pantaila zabal euskarria."
 
-#. TRANSLATION: bigpemu, cemu, cemu, cemu, cemu, ...
+#. TRANSLATION: bigpemu, cemu, cgenius, citron, devilutionx, ...
 msgctxt "game_options"
 msgid "Enabled"
 msgstr "Gaituta"
 
-#. TRANSLATION: duckstation, duckstation, f2bgl, f2bgl, flycast, ...
+#. TRANSLATION: duckstation, f2bgl, flycast, libretro/mame, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "Gaituta (Defektuz)"
@@ -7269,7 +7269,7 @@ msgctxt "game_options"
 msgid "Enabling will smooth out the image."
 msgstr "Gaitzeak irudia leunduko du."
 
-#. TRANSLATION: awgl, cemu, doom3, etlegacy, flycast/dolphin, ...
+#. TRANSLATION: awgl, cemu, citron, doom3, etlegacy, ...
 msgctxt "game_options"
 msgid "English"
 msgstr "Ingelera"
@@ -7347,7 +7347,7 @@ msgctxt "game_options"
 msgid "Enhancement. Increase the rendering resolution."
 msgstr ""
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, flycast, ...
+#. TRANSLATION: azahar, citron, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid ""
 "Enhancement. Increase the rendering resolution. Makes 3D objects clearer."
@@ -7506,7 +7506,7 @@ msgctxt "game_options"
 msgid "Estonia"
 msgstr ""
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, redream, ...
+#. TRANSLATION: citron, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
 msgctxt "game_options"
 msgid "Europe"
 msgstr "Europa"
@@ -7582,7 +7582,7 @@ msgid ""
 "configuration file."
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Extreme"
 msgstr ""
@@ -7617,12 +7617,12 @@ msgctxt "game_options"
 msgid "FIDELITY FX SUPER RESOLUTION"
 msgstr "FIDELTASUN FX SUPER BEREIZMENA"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "FIFO (VSync On)"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "FIFO Relaxed"
 msgstr ""
@@ -7637,7 +7637,7 @@ msgctxt "game_options"
 msgid "FILTER TILEMAPS"
 msgstr "FILTRATU MOSAIKO MAPAL"
 
-#. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds
+#. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "FIRMWARE SETTINGS"
 msgstr ""
@@ -7657,12 +7657,12 @@ msgctxt "game_options"
 msgid "FLOPPY SPEED"
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "FLOPPY TURBO SPEED"
 msgstr "FLOPPY-EN TURBO ABIADURA"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "FM SYNTHESIZER"
 msgstr ""
@@ -7752,7 +7752,7 @@ msgctxt "game_options"
 msgid "FRAME DUPING (SPEED UP)"
 msgstr "FRAME DUPLIKAZIOA (ABIADURA HANDITU)"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "FRAME LIMIT"
 msgstr "FOTOGRAMA MUGA"
@@ -7762,7 +7762,7 @@ msgctxt "game_options"
 msgid "FRAME LIMITER"
 msgstr ""
 
-#. TRANSLATION: libretro, libretro
+#. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "FRAME MONITORING SETTINGS"
 msgstr ""
@@ -7844,12 +7844,12 @@ msgid ""
 "multi-window on desktop."
 msgstr ""
 
-#. TRANSLATION: pcsx2, suyu, vita3k
+#. TRANSLATION: citron, pcsx2, vita3k
 msgctxt "game_options"
 msgid "FXAA"
 msgstr "FXAA"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid ""
 "FXAA has a lower performance impact, goof for low resolutions. SMAA offers "
@@ -8022,12 +8022,12 @@ msgid ""
 "except for late frames (below target FPS) which are displayed immediately."
 msgstr ""
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, melonds, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, melonds, ...
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr "Konpondu pantaila urratzea. CPU erabilera handia."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid ""
 "Fix screen tearing. FIFO (Vsync) does not drop frames. FIFO Relaxed allows "
@@ -8057,12 +8057,12 @@ msgctxt "game_options"
 msgid "Fixes flickering."
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Flight Stick (3 Axes, 4 Btns, 1 Hat)"
 msgstr "Figlt Stick-a (3 Ardatz, 4 Botoi, 1 Hat)"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Floppy Disk"
 msgstr "Floppy Diskoa"
@@ -8126,7 +8126,7 @@ msgctxt "game_options"
 msgid "For weak machines. Some games will not work with this."
 msgstr "Makina ahulentzat. Joku batzuk ez dute funtzionatuko honekin."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Force 16:10"
 msgstr "Behartu 16:10"
@@ -8136,12 +8136,12 @@ msgctxt "game_options"
 msgid "Force 16:9"
 msgstr "Behartu 16:9"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Force 21:9"
 msgstr "Behartu 21:9"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Force 32:9"
 msgstr ""
@@ -8160,7 +8160,7 @@ msgstr ""
 "Behartu 3D geometria beti pantailaren gainean renderizatu dadin. "
 "Erabilgarriapantiala bakarreko dispositibo/jokuetan."
 
-#. TRANSLATION: dolphin, dolphin_triforce, hypseus-singe, suyu
+#. TRANSLATION: citron, dolphin, dolphin_triforce, hypseus-singe
 msgctxt "game_options"
 msgid "Force 4:3"
 msgstr "Behartu 4:3"
@@ -8284,7 +8284,7 @@ msgstr ""
 "galdu edo irabazi hau egia bezela ezarrita badago. Ez duzu zertan zure "
 "diruarengatik arduratu beharrik."
 
-#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
+#. TRANSLATION: cemu, citron, dolphin, doom3, etlegacy, ...
 msgctxt "game_options"
 msgid "French"
 msgstr "Frantsesa"
@@ -8389,7 +8389,7 @@ msgctxt "game_options"
 msgid "Full speed can break some games."
 msgstr "Abiadura osoak joku batzuk apurtu ditzake"
 
-#. TRANSLATION: libretro/fuse, libretro/fuse
+#. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Fuller Joystick"
 msgstr "Fuller Joystick-a"
@@ -8424,7 +8424,7 @@ msgctxt "game_options"
 msgid "GAME LANGUAGE"
 msgstr ""
 
-#. TRANSLATION: lindbergh-loader, lindbergh-loader, lindbergh-loader, lindbergh-loader, lindbergh-loader
+#. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "GAME OPTIONS"
 msgstr ""
@@ -8449,32 +8449,32 @@ msgctxt "game_options"
 msgid "GAME RENDERING"
 msgstr ""
 
-#. TRANSLATION: shared, shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "GAME RENDERING & SHADERS"
 msgstr "JOKOAREN RENDERIZAZIOA & SHADER-AK"
 
-#. TRANSLATION: awgl, f2bgl, f2bgl, shared, shared, ...
+#. TRANSLATION: awgl, f2bgl, shared, sonic2013, soniccd
 msgctxt "game_options"
 msgid "GAME TRANSLATION"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 1"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 2"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 3"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 4"
 msgstr ""
@@ -8514,7 +8514,7 @@ msgctxt "game_options"
 msgid "GAMEPAD CURSOR SPEED"
 msgstr "GAMEPAD-AREN KURTSORE ABIADURA"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "GB"
 msgstr "GB"
@@ -8549,7 +8549,7 @@ msgctxt "game_options"
 msgid "GB COLOURISATION"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "GB-Eire"
 msgstr "GB-Eire"
@@ -8639,22 +8639,22 @@ msgctxt "game_options"
 msgid "GLideN64 (Fastest)"
 msgstr "GLideN64 (Azkarrena)"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "GMT"
 msgstr "GMT"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "GMT+0"
 msgstr "GMT"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "GMT-0"
 msgstr "GMT-0"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "GMT0"
 msgstr "GMT0"
@@ -8674,7 +8674,7 @@ msgctxt "game_options"
 msgid "GPU SYNC"
 msgstr "GPU SINKRONIZAZIOA"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid ""
 "GPU emulation accuracy. Most games render fine with Normal. High is required "
@@ -8691,12 +8691,12 @@ msgctxt "game_options"
 msgid "GRAPHICAL USER INTERFACE"
 msgstr "ERABILTZAILE INTERFAZE GRAFIKOA"
 
-#. TRANSLATION: citra, citra, citra, citra, citra, ...
+#. TRANSLATION: azahar, rtcw, theforceengine
 msgctxt "game_options"
 msgid "GRAPHICS"
 msgstr "GRAFIKOAK"
 
-#. TRANSLATION: cemu, citra, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: azahar, cemu, citron, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "API GRAFIKOA"
@@ -8751,7 +8751,7 @@ msgctxt "game_options"
 msgid "Game info/art"
 msgstr "Joko informazio/artea"
 
-#. TRANSLATION: flycast/dolphin, flycast/dolphin
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "Game's default"
 msgstr "Jokoaren defektuzkoa"
@@ -8761,12 +8761,12 @@ msgctxt "game_options"
 msgid "GameBlaster"
 msgstr "GameBlaster"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "GameCube Adapter for Wii U"
 msgstr "GameCube Egokitzailea Wii U-rentzat"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, libretro/dolphin, ...
+#. TRANSLATION: dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "GameCube Controller"
 msgstr "GameCube Kontrolatzailea"
@@ -8786,12 +8786,12 @@ msgctxt "game_options"
 msgid "GamePark GP32 SmartMedia cards"
 msgstr "GamePark GP32 SmartMedia txartelak"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Gamepad"
 msgstr "Pad-a"
 
-#. TRANSLATION: libretro/dosbox, libretro/dosbox
+#. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
 msgid "Gamepad (D-pad, 2 Buttons)"
 msgstr "Paf-a (D-pad, 2 Botoi)"
@@ -8823,7 +8823,7 @@ msgctxt "keys_files"
 msgid "Gas / Accelerate / Short Pass"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Gaussian"
 msgstr "Gaussiarra"
@@ -8833,12 +8833,12 @@ msgctxt "game_options"
 msgid "General MIDI SoundFont (Default)"
 msgstr "General MIDI SoundFont (Defektuz)"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Generic Keyboard Binds"
 msgstr "Teklatu ezarpen generikoak"
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Genesis/Megadrive Style"
 msgstr "Genesis/Megadrive Estiloan"
@@ -8853,7 +8853,7 @@ msgctxt "game_options"
 msgid "Georgia"
 msgstr ""
 
-#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
+#. TRANSLATION: cemu, citron, dolphin, doom3, etlegacy, ...
 msgctxt "game_options"
 msgid "German"
 msgstr "Alemaniera"
@@ -8943,7 +8943,7 @@ msgctxt "keys_files"
 msgid "Graphics filtering on/off"
 msgstr "Filtro grafikoa gaitu/desgaitu"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Gravis GamePad (D-pad + 4 Btns)"
 msgstr "Gravis Pad-a (D-pad + 4 Botoi)"
@@ -8968,7 +8968,7 @@ msgctxt "game_options"
 msgid "Greek (gk)"
 msgstr ""
 
-#. TRANSLATION: flycast, flycast, flycast, flycast, libretro/flycast, ...
+#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Green"
 msgstr "Berdea"
@@ -9003,7 +9003,7 @@ msgctxt "game_options"
 msgid "Green - TI-83"
 msgstr "Berdea - TI-83"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Greenwich"
 msgstr "Greenwich"
@@ -9073,7 +9073,7 @@ msgctxt "game_options"
 msgid "HID"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
 msgstr "EZKUTATU ARGIZKO PISTOLAREN JOPUNTUAK"
@@ -9088,7 +9088,7 @@ msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
 msgstr "BEREIZMEN ALTUKO MODUA"
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "HIGH SCORE PLUGIN"
 msgstr "PUNTUAZIO ALTUENEN PLUGIN-A"
@@ -9138,7 +9138,7 @@ msgctxt "game_options"
 msgid "HQ MODE"
 msgstr "HQ MODUA"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
@@ -9163,7 +9163,7 @@ msgctxt "game_options"
 msgid "Hard Disk Image"
 msgstr "Disko Gogor Irudia"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Hard Drive"
 msgstr "Disko Gogorra"
@@ -9173,7 +9173,7 @@ msgctxt "game_options"
 msgid "Hard Drive (II UX)"
 msgstr "Disko gogorra (II UX)"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Hardcoded keymap to joy port mapping for Keyrah hardware."
 msgstr ""
@@ -9262,7 +9262,7 @@ msgctxt "game_options"
 msgid "Hermite (Default)"
 msgstr "Hermite (Defektuzkoa)"
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "Hidden"
 msgstr ""
@@ -9272,12 +9272,17 @@ msgctxt "game_options"
 msgid "Hide"
 msgstr "Ezkutatu"
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Hide bezels"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 msgstr ""
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, dreamcast.redream.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, ...
+#. TRANSLATION: naomigd.flycast.keys
 msgctxt "keys_files"
 msgid "Hide the bezel"
 msgstr "Ezkutatu bezel-a"
@@ -9294,7 +9299,7 @@ msgid "Hides borders on many games. Some games used the borders."
 msgstr ""
 "Joko askotan ertzak ezkutatzen ditu. Joko batzuk ertzak erabiltzen dituzte"
 
-#. TRANSLATION: amiberry, libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus, ...
+#. TRANSLATION: amiberry, citron, libretro/fceumm, libretro/mesen, libretro/mesens, ...
 msgctxt "game_options"
 msgid "High"
 msgstr "Altua"
@@ -9309,7 +9314,7 @@ msgctxt "game_options"
 msgid "High 720p"
 msgstr "Altua 720p"
 
-#. TRANSLATION: shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "High Performance"
 msgstr ""
@@ -9341,12 +9346,12 @@ msgctxt "game_options"
 msgid "Honduras"
 msgstr ""
 
-#. TRANSLATION: suyu, xenia, xenia-canary
+#. TRANSLATION: citron, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Hong Kong"
 msgstr "Hong Kong"
 
-#. TRANSLATION: drastic, libretro/fceumm, libretro/flycast, libretro/flycast, libretro/flycast, ...
+#. TRANSLATION: drastic, libretro/fceumm, libretro/flycast, libretro/flycast2021, libretro/nestopia
 msgctxt "game_options"
 msgid "Horizontal"
 msgstr "Horizontala"
@@ -9401,12 +9406,12 @@ msgctxt "game_options"
 msgid "Hybrid + Bicubic"
 msgstr "Hibridoa + Bikubikoa"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
 msgstr "Pantaila Behekalde hibridoa"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
 msgstr "Pantaila Goikalde hibridoa"
@@ -9416,7 +9421,7 @@ msgctxt "game_options"
 msgid "Hybrid Ubershaders"
 msgstr "Ubershader hibridoak"
 
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/pcsx_rearmed
+#. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Hyper Blaster/Justifier"
 msgstr ""
@@ -9541,12 +9546,12 @@ msgctxt "game_options"
 msgid "IT"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, suyu, xenia, xenia-canary
+#. TRANSLATION: citron, libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Iceland"
 msgstr "Islandia"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "If enabled, passes all physical keyboard events to the core."
 msgstr ""
@@ -9568,7 +9573,7 @@ msgctxt "game_options"
 msgid "Ignored with 'Cycle-exact'."
 msgstr "Ez da kontuan hartuko 'Ziklo-zehatz' erablita"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Immediate"
 msgstr ""
@@ -9614,7 +9619,7 @@ msgctxt "game_options"
 msgid "Improves clarity of distant textures when mipmapping is enabled."
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin_triforce, dxx-rebirth, libretro/dolphin, pcsx2, ...
+#. TRANSLATION: citron, dolphin, dolphin_triforce, dxx-rebirth, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "Improves clarity of distant textures."
 msgstr "Hobetu argitasuna urruneko testuretan"
@@ -9761,7 +9766,7 @@ msgctxt "game_options"
 msgid "Invert the vertical joystick axis on flight games."
 msgstr "Inbertitu joystick-aren ardatz bertikala hegan egiteko jokoetan."
 
-#. TRANSLATION: suyu, xenia, xenia-canary
+#. TRANSLATION: citron, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Iran"
 msgstr "Iran"
@@ -9781,12 +9786,12 @@ msgctxt "game_options"
 msgid "Irish"
 msgstr ""
 
-#. TRANSLATION: suyu, xenia, xenia-canary
+#. TRANSLATION: citron, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Israel"
 msgstr "Israel"
 
-#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
+#. TRANSLATION: cemu, citron, dolphin, doom3, etlegacy, ...
 msgctxt "game_options"
 msgid "Italian"
 msgstr "Italiera"
@@ -9841,7 +9846,7 @@ msgctxt "game_options"
 msgid "JOYSTICK DEADZONE"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "JOYSTICK GATE SIZE"
 msgstr "JOYSTICK ATE TAMAINA"
@@ -9856,7 +9861,7 @@ msgctxt "game_options"
 msgid "JOYSTICK SENSITIVITY"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "JOYSTICK TO CURSOR SENSITIVITY"
 msgstr "JOYSTICK-ETIK KURTSORERAKO SENTIKORTASUNA"
@@ -9866,17 +9871,17 @@ msgctxt "game_options"
 msgid "JOYSTICK TO DPAD"
 msgstr "JOYSTICK-A DPAD-ERA"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "JOYSTICK TYPE"
 msgstr "JOYSTICK MOTA"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, ...
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64
 msgctxt "game_options"
 msgid "JUMP ON A"
 msgstr "SALTO EGIN A BOTOIAREKIN"
 
-#. TRANSLATION: suyu, xenia, xenia-canary
+#. TRANSLATION: citron, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Jamaica"
 msgstr "Jamaika"
@@ -9886,7 +9891,7 @@ msgctxt "game_options"
 msgid "January"
 msgstr ""
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, redream, ...
+#. TRANSLATION: citron, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
 msgctxt "game_options"
 msgid "Japan"
 msgstr "Japonia"
@@ -9896,7 +9901,7 @@ msgctxt "game_options"
 msgid "Japan (Default)"
 msgstr ""
 
-#. TRANSLATION: cemu, doom3, etlegacy, flycast/dolphin, libretro/dolphin, ...
+#. TRANSLATION: cemu, citron, doom3, etlegacy, flycast/dolphin, ...
 msgctxt "game_options"
 msgid "Japanese"
 msgstr "Japoniera"
@@ -9936,57 +9941,57 @@ msgctxt "game_options"
 msgid "Joypad"
 msgstr "Joypad-a"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad 2 Button"
 msgstr "Joypad 2 Botoi"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad 2 Button + Master Tap"
 msgstr "Joypad 2 Button + Tap nagusia"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, libretro/picodrive
+#. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
 msgid "Joypad 3 Button"
 msgstr "Joypad 3 Botoi"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad 3 Button + 4-WayPlay"
 msgstr "Joypad 3 Botoi + 4-JokalariJokua"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad 3 Button + Teamplayer"
 msgstr "Joypad 3 Botoi + Taldejokalaria"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, libretro/picodrive
+#. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
 msgid "Joypad 6 Button"
 msgstr "Joypad 6 Botoi"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad 6 Button + 4-WayPlay"
 msgstr "Joypad 6 Botoi + 4-JokalariJokua"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad 6 Button + Teamplayer"
 msgstr "Joypad 6 Botoi + Taldejokalaria"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad Auto"
 msgstr "Joypad Auto"
 
-#. TRANSLATION: libretro/melondsds, libretro/puae, libretro/puae, libretro/puae, libretro/puae, ...
+#. TRANSLATION: libretro/melondsds, libretro/puae, libretro/puae2021, libretro/uae4arm, libretro/vice_x128, ...
 msgctxt "game_options"
 msgid "Joystick"
 msgstr "Joystick"
 
-#. TRANSLATION: libretro/dosbox, libretro/dosbox
+#. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
 msgid "Joystick (Analog, 2 Buttons)"
 msgstr "Joystick (Analogikoa, 2 Botoi)"
@@ -10006,7 +10011,7 @@ msgctxt "game_options"
 msgid "June"
 msgstr ""
 
-#. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx
+#. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Justifier"
 msgstr ""
@@ -10016,7 +10021,7 @@ msgctxt "game_options"
 msgid "KEEP MAIN SCREEN ON TOP"
 msgstr "MANTENDU PANTAILA NAGUSIA GAINEAN."
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/vice_x128, ...
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
 msgid "KEYBOARD PASSTHROUGH"
 msgstr "TEKLATU ZEHARKATEA"
@@ -10026,7 +10031,7 @@ msgctxt "game_options"
 msgid "KEYBOARD SUPPORT"
 msgstr "TEKLATU EUSKARRIA"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "KEYRAH KEYPAD MAPPING"
 msgstr ""
@@ -10046,7 +10051,7 @@ msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
 msgstr "Mantendu proportzioa (Defektuz)"
 
-#. TRANSLATION: libretro/fuse, libretro/fuse
+#. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Kempston Joystick"
 msgstr "Kempston Joystick-a"
@@ -10056,22 +10061,22 @@ msgctxt "game_options"
 msgid "Kenya"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, libretro/flycast, ...
+#. TRANSLATION: dolphin, libretro/flycast, libretro/flycast2021, libretro/puae, libretro/puae2021, ...
 msgctxt "game_options"
 msgid "Keyboard"
 msgstr "Teklatua"
 
-#. TRANSLATION: libretro/dosbox, libretro/dosbox, libretro/prboom, libretro/tyrquake
+#. TRANSLATION: libretro/dosbox, libretro/prboom, libretro/tyrquake
 msgctxt "game_options"
 msgid "Keyboard + Mouse"
 msgstr "Teklatu + Xagua"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Keyboard + Mouse (Left An.)"
 msgstr "Teklatua + Xagua (Ezker An.)"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Keyboard + Mouse (Right An.)"
 msgstr "Teklatua + Xagua (Eskuin An.)"
@@ -10131,12 +10136,12 @@ msgctxt "game_options"
 msgid "Konami Justifiers"
 msgstr "Konami Justifier-ak"
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "Korea"
 msgstr "Korea"
 
-#. TRANSLATION: cemu, doom3, easyrpg, etlegacy, libretro/dolphin, ...
+#. TRANSLATION: cemu, citron, doom3, easyrpg, etlegacy, ...
 msgctxt "game_options"
 msgid "Korean"
 msgstr "Korearra"
@@ -10146,7 +10151,7 @@ msgctxt "game_options"
 msgid "Kuwait"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Kwajalein"
 msgstr "Kwajalein"
@@ -10166,12 +10171,12 @@ msgctxt "game_options"
 msgid "LAN / WAN STREAMING"
 msgstr "LAN / WAN JARIOA"
 
-#. TRANSLATION: doom3, etlegacy, f2bgl, fallout1-ce, fallout2-ce, ...
+#. TRANSLATION: citron, doom3, etlegacy, f2bgl, fallout1-ce, ...
 msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr "HIZKUNTZA"
 
-#. TRANSLATION: libretro, libretro, shared, shared, shared, ...
+#. TRANSLATION: libretro, shared
 msgctxt "game_options"
 msgid "LATENCY REDUCTION"
 msgstr "LATENTZIA JAITSIERA"
@@ -10206,7 +10211,7 @@ msgctxt "game_options"
 msgid "LCD Ghosting (Fast)"
 msgstr "LCD Ghosting (Azkarra)"
 
-#. TRANSLATION: duckstation, flycast, flycast, flycast, flycast, ...
+#. TRANSLATION: duckstation, flycast, hypseus-singe/vitaquake3, libretro/beetle-saturn, libretro/fbneo, ...
 msgctxt "game_options"
 msgid "LIGHT GUN"
 msgstr "ARGIZKO PISTOLA"
@@ -10216,7 +10221,7 @@ msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIR"
 msgstr "ARGIZKO PISTOLA JOPUNTUA"
 
-#. TRANSLATION: dolphin, dolphin, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, rpcs3, ...
+#. TRANSLATION: dolphin, hypseus-singe/vitaquake3, rpcs3, shared
 msgctxt "game_options"
 msgid "LIGHT GUNS"
 msgstr ""
@@ -10251,7 +10256,7 @@ msgctxt "game_options"
 msgid "LINEAR UPSCALING"
 msgstr "ESKALATZE LINEALA"
 
-#. TRANSLATION: libretro, libretro
+#. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "LINUXRAW"
 msgstr ""
@@ -10261,7 +10266,7 @@ msgctxt "game_options"
 msgid "LLE"
 msgstr ""
 
-#. TRANSLATION: rpcs3, rpcs3
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "LLVM Recompiler"
 msgstr "LLVM Birkonpilatzailea"
@@ -10271,7 +10276,7 @@ msgctxt "game_options"
 msgid "LLVM is fastest, use the Interpreter settings if there are issues."
 msgstr "LLVM da azkarrena, erabili Interpretatzaile aukerak arazoak badaude."
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, libretro/mesen, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, libretro/mesen, ...
 msgctxt "game_options"
 msgid "LOAD CUSTOM TEXTURES"
 msgstr "KARGATU NEURRIRA EGINIKO TESTURAK"
@@ -10291,17 +10296,17 @@ msgctxt "game_options"
 msgid "Landscape"
 msgstr "Etzana"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Large Bottom"
 msgstr "Behekalde handia"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Large Top"
 msgstr "Goikalde handia"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Larger"
 msgstr "Handiagoa"
@@ -10316,7 +10321,7 @@ msgctxt "game_options"
 msgid "Laser/VZ 64k Memory (Default)"
 msgstr "Laser/VZ 64k Memoria (Defektuz)"
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "Latin American Spanish"
 msgstr "Latino Amerikar Gaztelania"
@@ -10336,12 +10341,12 @@ msgctxt "keys_files"
 msgid "Left"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Left Analogue (Auto)"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Left Analogue (Forced)"
 msgstr ""
@@ -10361,7 +10366,7 @@ msgctxt "game_options"
 msgid "Left stick"
 msgstr "Ezkerreko stick-a"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Left/Right"
 msgstr "Ezker/Eskuin"
@@ -10371,7 +10376,7 @@ msgctxt "game_options"
 msgid "Legacy (single threaded)"
 msgstr "Legatua (hari bakarra)"
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Legacy Evdev"
 msgstr "Evdev Legatua"
@@ -10381,7 +10386,7 @@ msgctxt "game_options"
 msgid "Legacy3D"
 msgstr "3DLegatua"
 
-#. TRANSLATION: suyu, xenia, xenia-canary
+#. TRANSLATION: citron, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Libya"
 msgstr "Libia"
@@ -10406,12 +10411,12 @@ msgctxt "game_options"
 msgid "Light Green"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Light Gun"
 msgstr "Argi pistola"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Light Phaser"
 msgstr "Argizko Phaser-a"
@@ -10593,17 +10598,17 @@ msgctxt "game_options"
 msgid "MAC MODEL"
 msgstr "MAC MODELOA"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "MAME (ASIC YM3438)"
 msgstr ""
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "MAME (Enhanced YM3438)"
 msgstr ""
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "MAME (YM2612)"
 msgstr ""
@@ -10633,7 +10638,7 @@ msgctxt "game_options"
 msgid "MAXIMUM FRAMERATE"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "MEDIA TYPE"
 msgstr "MEDIA MOTA"
@@ -10658,7 +10663,7 @@ msgctxt "game_options"
 msgid "MENU SOUNDS"
 msgstr "MENU SOINUAK"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "MET"
 msgstr "MET"
@@ -10698,7 +10703,7 @@ msgctxt "game_options"
 msgid "MOUNT CACHE"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "MOUSE AS WIIMOTE POINTER"
 msgstr "XAGUA WIIMOTE ERAKUSLE BEZALA"
@@ -10708,12 +10713,12 @@ msgctxt "game_options"
 msgid "MOUSE SPEED"
 msgstr "XAGU ABIADURA"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "MST"
 msgstr "MST"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "MST7MDT"
 msgstr "MST7MDT"
@@ -10813,7 +10818,7 @@ msgctxt "game_options"
 msgid "Macintosh High Density Disk images"
 msgstr "Macintosh High Density Disko irudiak"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Mailbox (Recommended)"
 msgstr ""
@@ -10826,7 +10831,7 @@ msgstr ""
 "Erakutsi menuan joko historia, konfigurazio jarraibideak, eta mugimendu "
 "bereziak."
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/vice_x64, ...
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64
 msgctxt "game_options"
 msgid "Makes second fire button press up instead."
 msgstr "Bigarren tiro botoia sakatzea eragiten du horren ordez."
@@ -10856,7 +10861,7 @@ msgctxt "keys_files"
 msgid "Manage Staff"
 msgstr "Kudeatu langileria"
 
-#. TRANSLATION: drastic, libretro/mednafen_wswan, vpinball, vpinball, vpinball, ...
+#. TRANSLATION: drastic, libretro/mednafen_wswan, vpinball
 msgctxt "game_options"
 msgid "Manual"
 msgstr "Manuala"
@@ -10903,7 +10908,7 @@ msgctxt "game_options"
 msgid "Map controller inputs to light gun inputs."
 msgstr "Mapeatu kontrolatzaile sarrera argizko pistolaren sarreretara."
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Map your controller to an emulated Wiimote."
 msgstr "Mapetau zure kontrolatzailea emulatutako Wiimote-ra."
@@ -11076,12 +11081,12 @@ msgstr ""
 "Mega eta Giga moduek eragintkortasuna hobetu dezakete. Erabili Modu segurua "
 "konpatibilitate altuena lortzeko."
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "MegaSD"
 msgstr "MegaSD"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, ...
+#. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
 msgid "Megadrive"
 msgstr ""
@@ -11091,7 +11096,7 @@ msgctxt "game_options"
 msgid "Megadrive (8 Buttons)"
 msgstr "Megadrive (8 Botoi)"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "Memory Pak"
 msgstr "Memoria Pak-a"
@@ -11166,17 +11171,17 @@ msgctxt "game_options"
 msgid "Moderate"
 msgstr "Moderatua"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Modern"
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Modern Alternative"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Modern Fightstick Style"
 msgstr "Fighstick garaikideen Estiloan"
@@ -11191,7 +11196,7 @@ msgctxt "game_options"
 msgid "Mongolia"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Mono"
 msgstr "Mono"
@@ -11244,7 +11249,7 @@ msgstr ""
 "Montatu floppy disko bat erabiltzailearen datuentzat, behar izanez gero "
 "sortu egingo da."
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/genesisplusgx, libretro/melonds, libretro/np2kai
 msgctxt "game_options"
 msgid "Mouse"
 msgstr "Xagua"
@@ -11254,7 +11259,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "Xagua (1351)"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Xagu Klik-a"
@@ -11274,7 +11279,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr ""
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "Mugitu estilete erakuslea"
@@ -11329,7 +11334,7 @@ msgctxt "keys_files"
 msgid "Move right"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Moves South to West, West to North, etc. Standard controller type only."
 msgstr ""
@@ -11339,7 +11344,7 @@ msgctxt "game_options"
 msgid "Much faster than interpreter (but may have issues)."
 msgstr "Interpretea baino dexente azkarragoa (arazoak izan ditzake)."
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
 msgid "N64"
 msgstr "N64"
@@ -11369,17 +11374,17 @@ msgctxt "game_options"
 msgid "NEO GEO CD BIOS"
 msgstr "NEO GEO CD BIOS-a"
 
-#. TRANSLATION: libretro/fceumm, libretro/fceumm
+#. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
 msgid "NES Gamepad"
 msgstr "NES pad-a"
 
-#. TRANSLATION: libretro/fceumm, libretro/fceumm
+#. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
 msgid "NES Zapper"
 msgstr "NES Zapper"
 
-#. TRANSLATION: xemu, xemu, xemu, xemu, xemu, ...
+#. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "NETWORK"
 msgstr ""
@@ -11389,7 +11394,7 @@ msgctxt "game_options"
 msgid "NETWORK TYPE"
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "NEW 3DS MODE"
 msgstr "NEW 3DS MODUA"
@@ -11512,17 +11517,17 @@ msgctxt "game_options"
 msgid "NVRAM STORAGE"
 msgstr "NVRAM BILTEGIRATZEA"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "NZ"
 msgstr "NZ"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "NZ-CHAT"
 msgstr "NZ-CHAT"
 
-#. TRANSLATION: duckstation, duckstation, libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, ...
+#. TRANSLATION: duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
 msgctxt "game_options"
 msgid "Namco GunCon"
 msgstr "Namco GunCon"
@@ -11559,7 +11564,7 @@ msgctxt "game_options"
 msgid "Native Vulkan (Default)"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Navajo"
 msgstr "Nabajoa"
@@ -11569,12 +11574,12 @@ msgctxt "game_options"
 msgid "Navite"
 msgstr ""
 
-#. TRANSLATION: libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, ...
+#. TRANSLATION: libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
 msgctxt "game_options"
 msgid "NeGcon"
 msgstr "NeGcon"
 
-#. TRANSLATION: duckstation, duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/swanstation, ...
+#. TRANSLATION: duckstation, libretro/mednafen_psx, libretro/swanstation
 msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "NeGcon (Rumble)"
@@ -11584,7 +11589,7 @@ msgctxt "game_options"
 msgid "Nearest"
 msgstr "Gertuena"
 
-#. TRANSLATION: cemu, cemu, sonic2013, soniccd, suyu
+#. TRANSLATION: cemu, citron, sonic2013, soniccd
 msgctxt "game_options"
 msgid "Nearest Neighbour"
 msgstr "Bizilagun Gertuena"
@@ -11618,12 +11623,12 @@ msgctxt "game_options"
 msgid "Needed by some games that use special Unicode characters."
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Neo Geo CD Pad"
 msgstr "Neo Geo CD Pad-a"
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Neo Geo Mini Pad"
 msgstr "Neo Geo Mini Pad-a"
@@ -11728,7 +11733,7 @@ msgctxt "game_options"
 msgid "No skipping"
 msgstr "Ez saltatu"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin_triforce, ...
+#. TRANSLATION: citron, dolphin, dolphin_triforce, drastic, fallout1-ce, ...
 msgctxt "game_options"
 msgid "None"
 msgstr "Batere ez"
@@ -11743,12 +11748,12 @@ msgctxt "game_options"
 msgid "None/Sharp Pixels"
 msgstr ""
 
-#. TRANSLATION: awgl, dosbox, duckstation, flycast, libretro/flycast, ...
+#. TRANSLATION: awgl, citron, dosbox, duckstation, flycast, ...
 msgctxt "game_options"
 msgid "Normal"
 msgstr "Arrunta"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, fallout1-ce, ...
+#. TRANSLATION: dolphin, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Normal (Default)"
 msgstr "Arrunta (Defektuz)"
@@ -11778,12 +11783,12 @@ msgctxt "game_options"
 msgid "Norwegian (no)"
 msgstr ""
 
-#. TRANSLATION: duckstation, duckstation
+#. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Not Connected"
 msgstr "Konektatu gabea"
 
-#. TRANSLATION: libretro/beetle-saturn, libretro/beetle-saturn, libretro/yabasanshiro, libretro/yabasanshiro
+#. TRANSLATION: libretro/beetle-saturn, libretro/yabasanshiro
 msgctxt "game_options"
 msgid "Not all games support 3D pad."
 msgstr "Joku guztiek ez dute 3D pad-a onartzen"
@@ -11825,12 +11830,12 @@ msgctxt "keys_files"
 msgid "Nudge up"
 msgstr "Goraka bultzatu"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Nuked (YM2612)"
 msgstr ""
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Nuked (YM3438)"
 msgstr ""
@@ -11840,7 +11845,7 @@ msgctxt "game_options"
 msgid "Null"
 msgstr ""
 
-#. TRANSLATION: amiberry, amiberry, amiberry, flycast, libretro/flycast, ...
+#. TRANSLATION: amiberry, flycast, libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "OFF"
 msgstr "EZGAITUTA"
@@ -11855,12 +11860,12 @@ msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "PANTAILA KANPOKO BIRKARGA BOTOIA"
 
-#. TRANSLATION: amiberry, amiberry, libretro/melonds
+#. TRANSLATION: amiberry, libretro/melonds
 msgctxt "game_options"
 msgid "ON"
 msgstr "GAITUTA"
 
-#. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, ...
+#. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "ON-SCREEN DISPLAY & NOTIFCATIONS"
 msgstr ""
@@ -11920,12 +11925,12 @@ msgctxt "game_options"
 msgid "October"
 msgstr ""
 
-#. TRANSLATION: awgl, cannonball, cemu, citra, citra, ...
+#. TRANSLATION: awgl, azahar, cannonball, cemu, dolphin, ...
 msgctxt "game_options"
 msgid "Off"
 msgstr "Desgaitua"
 
-#. TRANSLATION: cemu, cemu, flycast, flycast/dolphin, flycast/dolphin, ...
+#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/mame, ...
 msgctxt "game_options"
 msgid "Off (Default)"
 msgstr "Desgaituta (Defektuz)"
@@ -11945,7 +11950,7 @@ msgctxt "game_options"
 msgid "Off (faster, unstable)"
 msgstr "Desgaituta (azkarragoa, ezegonkorra)"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Off at Start"
 msgstr "Desgaituta Haseran"
@@ -11955,7 +11960,7 @@ msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "Desgaituta seguruagoa da, Gaituta joku zehatzetarako"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Off will help some games, others will run too fast."
 msgstr ""
@@ -12006,12 +12011,12 @@ msgctxt "game_options"
 msgid "Oman"
 msgstr ""
 
-#. TRANSLATION: awgl, cannonball, citra, citra, citra, ...
+#. TRANSLATION: awgl, azahar, cannonball, dolphin_triforce, drastic, ...
 msgctxt "game_options"
 msgid "On"
 msgstr "Gaitua"
 
-#. TRANSLATION: cemu, libretro/mame, libretro/mame, libretro/mamevirtual, libretro/xrick, ...
+#. TRANSLATION: cemu, libretro/mame, libretro/mamevirtual, libretro/xrick, rpcs3, ...
 msgctxt "game_options"
 msgid "On (Default)"
 msgstr "Gaituta (Defektuz)"
@@ -12031,22 +12036,22 @@ msgctxt "game_options"
 msgid "On (default)"
 msgstr "Gaituta (defektuz)"
 
-#. TRANSLATION: libretro/81, libretro/81, libretro/genesisplusgx
+#. TRANSLATION: libretro/81, libretro/genesisplusgx
 msgctxt "game_options"
 msgid "On (forced)"
 msgstr "Gaituta (behartuta)"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "On at Start"
 msgstr "Gaituta Haseran"
 
-#. TRANSLATION: vpinball, vpinball, vpinball
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "On screen 2 if available"
 msgstr ""
 
-#. TRANSLATION: vpinball, vpinball
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "On screen 3 if available"
 msgstr ""
@@ -12088,7 +12093,7 @@ msgctxt "game_options"
 msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
 msgstr "Parallel-RDP aukeratzen denean RDP Plugin bezela hartuko da kontuan."
 
-#. TRANSLATION: libretro/mgba, libretro/mgba, libretro/vba-m, libretro/vba-m
+#. TRANSLATION: libretro/mgba, libretro/vba-m
 msgctxt "game_options"
 msgid "Only for Super Game Boy enhanced games."
 msgstr "Super Game Boy hobekuntza duten jokuetarako bakarrik"
@@ -12149,7 +12154,7 @@ msgctxt "keys_files"
 msgid "Open furnish corridor menu"
 msgstr "Ireki pasilloa altzariztatzeko menua"
 
-#. TRANSLATION: awgl, cemu, dolphin, duckstation, flycast, ...
+#. TRANSLATION: awgl, cemu, citron, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "OpenGL"
 msgstr "OpenGL"
@@ -12164,7 +12169,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr ""
 
-#. TRANSLATION: citra, dolphin_triforce, play, scummvm
+#. TRANSLATION: azahar, dolphin_triforce, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (Defektuz)"
@@ -12199,7 +12204,7 @@ msgctxt "game_options"
 msgid "Orange - Hokage Orange"
 msgstr "Laranja - HOkage Laranja"
 
-#. TRANSLATION: awgl, awgl, hurrican, hypseus-singe, libretro/mupen64plus-next, ...
+#. TRANSLATION: awgl, hurrican, hypseus-singe, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "Original"
 msgstr "Jatorrizkoa"
@@ -12379,7 +12384,7 @@ msgctxt "game_options"
 msgid "PHYSICAL KEYBOARD LAYOUT"
 msgstr "TEKLATU FISIKOAREN ANTOLAKETA"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "PINBALL MAPPING MODE"
 msgstr ""
@@ -12459,7 +12464,7 @@ msgctxt "game_options"
 msgid "POWER MODE"
 msgstr ""
 
-#. TRANSLATION: shared, shared, shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "POWER OPTIONS"
 msgstr ""
@@ -12474,7 +12479,7 @@ msgctxt "game_options"
 msgid "PPU DECODER"
 msgstr "PPU DEKODETZAILEA"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "PRC"
 msgstr "PRC"
@@ -12494,17 +12499,17 @@ msgctxt "game_options"
 msgid "PRESENTATION MODE"
 msgstr "PRESENTZAZIO MODUA"
 
-#. TRANSLATION: duckstation, duckstation
+#. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "PS1 Analogue Joystick"
 msgstr ""
 
-#. TRANSLATION: duckstation, duckstation
+#. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "PS1 Digital Controller"
 msgstr "PS1 Kontrolatzaile digitala"
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "PS3 CONTROLLER"
 msgstr ""
@@ -12515,7 +12520,7 @@ msgid "PS3's internal ratio setting. Some games only support 16/9."
 msgstr ""
 "PS3-aren barte proportzio ezarpena. Joko batzuk 16/9 bakarrik onartzen dute."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "PST8PDT"
 msgstr "PST8PDT"
@@ -12530,7 +12535,7 @@ msgctxt "game_options"
 msgid "PVM_20M2U/D93"
 msgstr ""
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Paddle Control"
 msgstr "Pala kontrola"
@@ -12759,7 +12764,7 @@ msgctxt "game_options"
 msgid "Play (Default)"
 msgstr "Erreproduzitu (Defektuz)"
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Play a coin drop sound effect when an insert coin button is pressed"
 msgstr ""
@@ -12781,7 +12786,7 @@ msgctxt "game_options"
 msgid "PlayStation 2 wheel type"
 msgstr ""
 
-#. TRANSLATION: duckstation, duckstation, libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, ...
+#. TRANSLATION: duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
 msgctxt "game_options"
 msgid "PlayStation Mouse"
 msgstr "PlayStation Xagua"
@@ -12826,7 +12831,7 @@ msgctxt "game_options"
 msgid "Pointer"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, suyu, xenia, xenia-canary
+#. TRANSLATION: citron, libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Poland"
 msgstr "Polonia"
@@ -12876,7 +12881,7 @@ msgctxt "game_options"
 msgid "Portrait"
 msgstr "Bertikala"
 
-#. TRANSLATION: libretro/dosbox_pure, suyu, xenia, xenia-canary
+#. TRANSLATION: citron, libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Portugal"
 msgstr "Portugal"
@@ -12886,12 +12891,12 @@ msgctxt "game_options"
 msgid "Portugese"
 msgstr "Portugalera"
 
-#. TRANSLATION: cemu, etlegacy, play, ryujinx, scummvm, ...
+#. TRANSLATION: cemu, citron, etlegacy, play, ryujinx, ...
 msgctxt "game_options"
 msgid "Portuguese"
 msgstr "Portugalera"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Position of wii sensor bar relative to the disaply for real wiimotes."
 msgstr ""
@@ -12921,7 +12926,7 @@ msgctxt "game_options"
 msgid "Potator - Orangish - Amber"
 msgstr "Potator - Laranja - Anbar"
 
-#. TRANSLATION: shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Power Saver"
 msgstr ""
@@ -12943,7 +12948,7 @@ msgstr ""
 "\"NMI-aren aurretik\" nahiago izan, aldatu NMI ondoren-era jokoan behar bada "
 "bakarrik"
 
-#. TRANSLATION: citra, duckstation
+#. TRANSLATION: azahar, duckstation
 msgctxt "game_options"
 msgid "Preload"
 msgstr "Aurrekarga"
@@ -12953,7 +12958,7 @@ msgctxt "game_options"
 msgid "Preload requires more RAM."
 msgstr "Aurrekargak RAM gehiago eskatzen du."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Preloading is impossible from ES."
 msgstr "Aurrekarga ezinezkoa da ES-tik."
@@ -13039,7 +13044,7 @@ msgctxt "game_options"
 msgid "Pure Interpreter (Most Accurate)"
 msgstr "Interpretatzaile hutsa (Zehatzena)"
 
-#. TRANSLATION: flycast/dolphin, flycast/dolphin, flycast/dolphin, flycast/dolphin
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "Purupuru Pack/Vibration Pack"
 msgstr "Purupuru Pack-a/Bibrazio Pack-a"
@@ -13064,7 +13069,7 @@ msgctxt "game_options"
 msgid "Qatar"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Quickload"
 msgstr "Karga azkarra"
@@ -13074,7 +13079,7 @@ msgctxt "game_options"
 msgid "RAM EXPANSION UNIT"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "RAM SIZE"
 msgstr "RAM TAMAINA"
@@ -13129,7 +13134,7 @@ msgctxt "game_options"
 msgid "REMOVE SCANLINES"
 msgstr "KENDU ESKANLERROAK"
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "RENDER"
 msgstr "RENDERIZAZIOA"
@@ -13169,7 +13174,7 @@ msgctxt "game_options"
 msgid "RENDERER MODE"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
+#. TRANSLATION: citron, dolphin, duckstation, pcsx2
 msgctxt "game_options"
 msgid "RENDERING"
 msgstr "RENDERIZATZEA"
@@ -13179,7 +13184,7 @@ msgctxt "game_options"
 msgid "RENDERING MODE"
 msgstr "RENDERIZATZE MODUA"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, libretro/desmume, ...
+#. TRANSLATION: azahar, citron, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "RENDERING RESOLUTION"
 msgstr "RENDERIZAZIO BEREIZMENA"
@@ -13214,7 +13219,7 @@ msgctxt "game_options"
 msgid "RGB (Blargg)"
 msgstr "RGB (Blargg)"
 
-#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
+#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
 msgid "RGB (crisp image)"
 msgstr "RGB (irudi markatua)"
@@ -13224,12 +13229,12 @@ msgctxt "game_options"
 msgid "RGB Colour Low/Medium-Resolution"
 msgstr "RGB Kolorea Baxu/Ertain Bereizmena"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ROC"
 msgstr "ROC"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ROK"
 msgstr "ROK"
@@ -13274,7 +13279,7 @@ msgctxt "game_options"
 msgid "ROTATE"
 msgstr "BIRATU"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "ROTATE FACE BUTTONS"
 msgstr ""
@@ -13330,7 +13335,7 @@ msgid ""
 "Read mouse through Raw input, allowing 2 mice for 2 player shooting games."
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+#. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
 msgid "Real Wii Remote"
 msgstr ""
@@ -13345,7 +13350,7 @@ msgctxt "game_options"
 msgid "Recompiler (Fastest)(Default)"
 msgstr "Birkonpilatzailea (Azkarrena) (Defektuz)"
 
-#. TRANSLATION: flycast, flycast, flycast, flycast, libretro/flycast, ...
+#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, libretro/melondsds, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Red"
 msgstr "Gorria"
@@ -13360,7 +13365,7 @@ msgctxt "game_options"
 msgid "Reduce load time at the cost of accuracy."
 msgstr "Gutxitu karga denbora zehaztasunren lepotik"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Reduce stutter that happens when compiling shaders."
 msgstr "Gutxitu shader-ak konpilatzean ematen den toteltzea."
@@ -13417,7 +13422,7 @@ msgctxt "game_options"
 msgid "Remove the padding on the sides of the screen."
 msgstr "Kendu pantaila alboetako kuxin-ak"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, ...
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Removes loading but can add possible glitches/crashes."
 msgstr "Karga kentzen du, baino arazo/zintzilkatuta gera daiteke."
@@ -13511,11 +13516,6 @@ msgstr ""
 "Katxea berrezartzea joko zintzilikatzeak konpondu ditzake, jokoa Batocera 29 "
 "erabiltzen ari bazen."
 
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Reset the table, sometimes required for PinMame"
-msgstr "Berrezarri taula, PinMame-k eskatzen du batzuetan"
-
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Resize automatically the screen. AUTO = Off."
@@ -13526,7 +13526,7 @@ msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "Bereizmen biderkatzaileak bektore leunentzat"
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "Berrezarri BLENDMODE inguramendua Singe sprite-etan"
@@ -13536,7 +13536,7 @@ msgctxt "keys_files"
 msgid "Restore state"
 msgstr ""
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
 msgid "RetroPad (Default)"
 msgstr "RetroPad (Defektuzkoa)"
@@ -13546,12 +13546,12 @@ msgctxt "game_options"
 msgid "RetroPad Face Button Options."
 msgstr "RetroPad Face Botoi Aukerak."
 
-#. TRANSLATION: libretro/fuse, libretro/fuse, libretro/mame078plus, libretro/puae, libretro/puae, ...
+#. TRANSLATION: libretro/fuse, libretro/mame078plus, libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "Retropad"
 msgstr "Retropad"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, ...
+#. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
 msgid "Retropad (Default)"
 msgstr ""
@@ -13576,12 +13576,12 @@ msgctxt "keys_files"
 msgid "Right"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Right Analogue (Auto)"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Right Analogue (Forced)"
 msgstr ""
@@ -13606,7 +13606,7 @@ msgctxt "game_options"
 msgid "Right stick"
 msgstr "Eskuineko stick-a"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Right/Left"
 msgstr "Eskuin/Ezker"
@@ -13653,7 +13653,7 @@ msgstr ""
 "Biratu pantaila, erabilgarria da jokatzeko pantaila bertikala erabiltzen "
 "duten etxean eginiko programa batzuetan."
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Rotated 4-Way Stick (Q*Bert)"
 msgstr "Biratutako 4-Norabidedun Stick-a Q*Bert)"
@@ -13679,12 +13679,12 @@ msgctxt "game_options"
 msgid "Rough"
 msgstr ""
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "Rumble Pak"
 msgstr "Rumble Pak-a"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
 msgstr ""
@@ -13716,7 +13716,7 @@ msgctxt "game_options"
 msgid "Russia"
 msgstr "Errusia"
 
-#. TRANSLATION: cemu, doom3, etlegacy, play, ryujinx, ...
+#. TRANSLATION: cemu, citron, doom3, etlegacy, play, ...
 msgctxt "game_options"
 msgid "Russian"
 msgstr "Errusiera"
@@ -13796,12 +13796,12 @@ msgctxt "game_options"
 msgid "SCREEN INCLINATION"
 msgstr ""
 
-#. TRANSLATION: citra, drastic, libretro/desmume, libretro/melonds, melonds
+#. TRANSLATION: azahar, drastic, libretro/desmume, libretro/melonds, melonds
 msgctxt "game_options"
 msgid "SCREEN LAYOUT"
 msgstr "PANTAILA ANTOLAKETA"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "SCREEN ORIENTATION"
 msgstr "PANTAILA ORIENTAZIOA"
@@ -13826,7 +13826,7 @@ msgctxt "game_options"
 msgid "SCREEN ROTATION"
 msgstr "PANTAILA BIRAKETA"
 
-#. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds
+#. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "SCREEN SETTINGS"
 msgstr ""
@@ -13851,7 +13851,7 @@ msgctxt "game_options"
 msgid "SCREEN WIDTH"
 msgstr ""
 
-#. TRANSLATION: bigpemu, bigpemu, bigpemu, bigpemu, bigpemu, ...
+#. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "SCRIPT MODULES"
 msgstr ""
@@ -13866,17 +13866,17 @@ msgctxt "game_options"
 msgid "SDL TEXTURE ACCESS STREAMING"
 msgstr "SDL TESTURS ATZITZE JARIOA"
 
-#. TRANSLATION: libretro, libretro, libretro, libretro, lindbergh-loader
+#. TRANSLATION: libretro, lindbergh-loader
 msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "SENSITIVITY"
 msgstr "SENTIKORTASUNA"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "SENSOR BAR POSITION"
 msgstr ""
@@ -13941,7 +13941,7 @@ msgctxt "game_options"
 msgid "SHOW LID STATE"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin, libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, ...
+#. TRANSLATION: dolphin, libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/mame078plus, ...
 msgctxt "game_options"
 msgid "SHOW LIGHT GUN CROSSHAIRS"
 msgstr "ERAKUTSI ARGIZKO PISTOLAREN JOPUNTUA"
@@ -14016,7 +14016,7 @@ msgctxt "game_options"
 msgid "SLEEP TIMERS ACCURACY"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "SMAA"
 msgstr ""
@@ -14031,12 +14031,12 @@ msgctxt "game_options"
 msgid "SMOOTH VUES"
 msgstr "ESZENA LEUNDUAK"
 
-#. TRANSLATION: libretro/snes9x, libretro/snes9x, libretro/snes9x, libretro/snes9x_next, libretro/snes9x_next
+#. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "SNES Gamepad"
 msgstr "SNES Gamepad-a"
 
-#. TRANSLATION: libretro/snes9x, libretro/snes9x, libretro/snes9x_next, libretro/snes9x_next
+#. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "SNES Mouse"
 msgstr "SNES Xagua"
@@ -14046,7 +14046,7 @@ msgctxt "game_options"
 msgid "SNES Multitap"
 msgstr "SNES Multitap-a"
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "SNES Style"
 msgstr "SNES Estiloan"
@@ -14061,7 +14061,7 @@ msgctxt "game_options"
 msgid "SOFT TEXTURE CACHE MEMORY TIMEOUT"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame/openbor7530
 msgctxt "game_options"
 msgid "SOFTWARE LIST"
 msgstr "SOFTWARE LISTA"
@@ -14106,7 +14106,7 @@ msgctxt "game_options"
 msgid "SP"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "SPECIAL CONTROL LAYOUTS"
 msgstr "KONTROLEN ANTOLAKETA BEREZIA"
@@ -14216,7 +14216,7 @@ msgctxt "game_options"
 msgid "SUPER GAME BOY MODEL"
 msgstr ""
 
-#. TRANSLATION: libretro/mgba, libretro/mgba, libretro/vba-m, libretro/vba-m
+#. TRANSLATION: libretro/mgba, libretro/vba-m
 msgctxt "game_options"
 msgid "SUPER GB BORDERS"
 msgstr "SUPER GB ERTZAK"
@@ -14236,7 +14236,7 @@ msgctxt "game_options"
 msgid "SVGA"
 msgstr "SVGA"
 
-#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
+#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
 msgid "SVideo (colour bleeding only)"
 msgstr ""
@@ -14281,12 +14281,12 @@ msgctxt "game_options"
 msgid "Safe (Default)"
 msgstr "Modu segurua (Defektuz)"
 
-#. TRANSLATION: libretro/beetle-saturn, libretro/beetle-saturn, libretro/yabasanshiro, libretro/yabasanshiro
+#. TRANSLATION: libretro/beetle-saturn, libretro/yabasanshiro
 msgctxt "game_options"
 msgid "Saturn 3D Pad"
 msgstr "Saturn 3D Pad-a"
 
-#. TRANSLATION: libretro/beetle-saturn, libretro/beetle-saturn, libretro/yabasanshiro, libretro/yabasanshiro
+#. TRANSLATION: libretro/beetle-saturn, libretro/yabasanshiro
 msgctxt "game_options"
 msgid "Saturn Pad"
 msgstr "Saturn Pad-a"
@@ -14331,7 +14331,7 @@ msgctxt "game_options"
 msgid "Scale4x"
 msgstr "Scale4x"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ScaleForce"
 msgstr "BehartuEskalatzea"
@@ -14393,7 +14393,7 @@ msgctxt "game_options"
 msgid "See your FPS and version of Vulkan API/driver."
 msgstr "Ikusi zure FPS eta Vulkan API/driver bertsioa."
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Sega/Mega CD"
 msgstr "Sega/Mega CD"
@@ -14423,12 +14423,12 @@ msgctxt "game_options"
 msgid "Select a boot disk or hard drive if needed"
 msgstr "Aukeratu abiarazte disko bat edo disko gogor bat behar izanez gero."
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "Select controller type for Amiga P1."
 msgstr "Aukeratu kontrolatzaile mota Amiga P1-erako."
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "Select controller type for Amiga P2."
 msgstr "Aukeratu kontrolatzaile mota Amiga P2-rako."
@@ -14473,7 +14473,7 @@ msgid ""
 "Colour)"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, mame/openbor7530, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Select model to emulate"
 msgstr "Aukeratu emulatuko den modeloa"
@@ -14551,7 +14551,7 @@ msgctxt "game_options"
 msgid "Selfie"
 msgstr "Selfie"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Separate Windows"
 msgstr "Banatutako leihoak"
@@ -14597,7 +14597,7 @@ msgctxt "game_options"
 msgid "Set in Config - choose if no audio output"
 msgstr "Ezarri Konfigurazioan - aukeratu audio irteerarik ez badago."
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Set joystick deadzone."
 msgstr "Ezarri joystick-aren hilzona"
@@ -14660,7 +14660,7 @@ msgctxt "game_options"
 msgid "Set to on if you experience flickering in Hummer."
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid ""
 "Set virtual joysticks gate size. Smaller increases sensitivity. Larger "
@@ -14789,7 +14789,7 @@ msgctxt "game_options"
 msgid "Show/Hide guns borders for specific systems"
 msgstr "Erakutsi/Ezkutatu pistola ertzak sistema konkretuetan"
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "Shown"
 msgstr ""
@@ -14864,7 +14864,7 @@ msgctxt "game_options"
 msgid "Simple 2x"
 msgstr "Arrunta 2x"
 
-#. TRANSLATION: libretro/dolphin, play, ryujinx, sonicmania, suyu
+#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, sonicmania
 msgctxt "game_options"
 msgid "Simplified Chinese"
 msgstr "Txinatar sinplifikatua"
@@ -14879,7 +14879,7 @@ msgctxt "game_options"
 msgid "Simulate LCD colour inaccuracy"
 msgstr ""
 
-#. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/mgba, libretro/vba-m, libretro/vba-m
+#. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/vba-m
 msgctxt "game_options"
 msgid "Simulate LCD colour inaccuracy."
 msgstr ""
@@ -14894,7 +14894,7 @@ msgctxt "game_options"
 msgid "Simultaneous"
 msgstr "Simultaneoa"
 
-#. TRANSLATION: libretro/fuse, libretro/fuse
+#. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Sinclair 1 Joystick"
 msgstr "Sinclair 1 Joystick-a"
@@ -14904,7 +14904,7 @@ msgctxt "game_options"
 msgid "Sinclair 1 controller set to AUTO."
 msgstr "Sinclair 1 kontrolatzailea AUTO moduan ezarrita."
 
-#. TRANSLATION: libretro/fuse, libretro/fuse
+#. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Sinclair 2 Joystick"
 msgstr "Sinclair 2 Joystick-a"
@@ -14924,7 +14924,7 @@ msgctxt "game_options"
 msgid "Sine"
 msgstr ""
 
-#. TRANSLATION: suyu, xenia, xenia-canary
+#. TRANSLATION: citron, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Singapore"
 msgstr "Singapur"
@@ -15090,7 +15090,7 @@ msgctxt "game_options"
 msgid "Small performance increase (may drop frames)."
 msgstr "Eraginkortasun hobekuntza xumea (frame batzuk galdu daitezke)"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Smaller"
 msgstr "Txikiagoa"
@@ -15125,7 +15125,7 @@ msgctxt "game_options"
 msgid "Smooth 4"
 msgstr "4 Leuntzea"
 
-#. TRANSLATION: dxx-rebirth, libretro/mupen64plus-next, libretro/parallel_n64, ppsspp, suyu
+#. TRANSLATION: citron, dxx-rebirth, libretro/mupen64plus-next, libretro/parallel_n64, ppsspp
 msgctxt "game_options"
 msgid "Smooth textures on 3D objects."
 msgstr "Leundu testura 3D objektuetan."
@@ -15170,7 +15170,7 @@ msgctxt "game_options"
 msgid "Soften the hash sound effect from some games."
 msgstr "Leundi joku batzuetako soinu efektu zakarrak."
 
-#. TRANSLATION: awgl, citra, duckstation, libretro/melondsds, melonds, ...
+#. TRANSLATION: awgl, azahar, duckstation, libretro/melondsds, melonds, ...
 msgctxt "game_options"
 msgid "Software"
 msgstr "Software-a"
@@ -15219,7 +15219,7 @@ msgctxt "game_options"
 msgid "Sony CXA2025AS"
 msgstr "Sony CXA2025AS"
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Sony DS"
 msgstr "Sony DS"
@@ -15249,7 +15249,7 @@ msgctxt "game_options"
 msgid "SounBlaster Pro 2"
 msgstr "SounBlaster Pro "
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid ""
 "Sound generator. MAME is faster and Nuked is cycle accurate. Original model "
@@ -15271,7 +15271,7 @@ msgctxt "game_options"
 msgid "Spain"
 msgstr "Espainia"
 
-#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
+#. TRANSLATION: cemu, citron, dolphin, doom3, etlegacy, ...
 msgctxt "game_options"
 msgid "Spanish"
 msgstr "Gaztelania"
@@ -15366,7 +15366,7 @@ msgstr ""
 "desgaitzeko. Azal sinkronizatzea beharrezkoa da joku gutxi batzuek behar "
 "dute."
 
-#. TRANSLATION: cemu, suyu
+#. TRANSLATION: cemu, citron
 msgctxt "game_options"
 msgid "Speed up shader compilation."
 msgstr "Azkartu Shader konpilazioa."
@@ -15392,12 +15392,12 @@ msgctxt "game_options"
 msgid "Square pixel"
 msgstr "Pixel karratua"
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Standard (4:3)"
 msgstr "Estandarra (4:3)"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Standard Controller"
 msgstr "Kontrolatzaile estandarra"
@@ -15447,12 +15447,12 @@ msgctxt "game_options"
 msgid "Static Interpreter"
 msgstr "Interpretatzaile estatikoa"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Steering Wheel"
 msgstr "Bolantea"
 
-#. TRANSLATION: rpcs3, suyu
+#. TRANSLATION: citron, rpcs3
 msgctxt "game_options"
 msgid "Stereo"
 msgstr "Estereoa"
@@ -15532,7 +15532,7 @@ msgctxt "game_options"
 msgid "Stretch to screen"
 msgstr "Zabaldu pantailara"
 
-#. TRANSLATION: dolphin, suyu
+#. TRANSLATION: citron, dolphin
 msgctxt "game_options"
 msgid "Stretch to window"
 msgstr "Zabaldu leihora"
@@ -15621,7 +15621,7 @@ msgid ""
 "functionality."
 msgstr ""
 
-#. TRANSLATION: cemu, suyu
+#. TRANSLATION: cemu, citron
 msgctxt "game_options"
 msgid "Surround"
 msgstr "Inguratzailea"
@@ -15636,7 +15636,7 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "7.1 Inguratzailea"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Swap Screen"
 msgstr "Aldatu Pantaila"
@@ -15646,7 +15646,7 @@ msgctxt "keys_files"
 msgid "Swap Screens"
 msgstr "Aldatu pantailak"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Swap screens"
 msgstr "Aldatu pantailak"
@@ -15796,7 +15796,7 @@ msgctxt "game_options"
 msgid "TEXTURE FILTER"
 msgstr ""
 
-#. TRANSLATION: duckstation, dxx-rebirth, libretro/duckstation, libretro/mupen64plus-next, libretro/parallel_n64, ...
+#. TRANSLATION: citron, duckstation, dxx-rebirth, libretro/duckstation, libretro/mupen64plus-next, ...
 msgctxt "game_options"
 msgid "TEXTURE FILTERING"
 msgstr "TESTUREN FILTRATZEA"
@@ -15896,12 +15896,12 @@ msgctxt "game_options"
 msgid "TIMED AXIS INTERVALS"
 msgstr "DENBORA JAKINEKO ARDATZ INTERBALOAK"
 
-#. TRANSLATION: shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "TOP LEFT (NW)"
 msgstr "GORAN EZKERREAN (IM)"
 
-#. TRANSLATION: shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "TOP RIGHT (NE)"
 msgstr "GORAN ESKUINEAN (IE)"
@@ -15986,12 +15986,12 @@ msgctxt "game_options"
 msgid "TWB64 - Pack 2"
 msgstr "TWB64 - Pack 2"
 
-#. TRANSLATION: ryujinx, suyu, xenia, xenia-canary
+#. TRANSLATION: citron, ryujinx, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Taiwan"
 msgstr "Taiwan"
 
-#. TRANSLATION: cemu, ryujinx, suyu
+#. TRANSLATION: cemu, citron, ryujinx
 msgctxt "game_options"
 msgid "Taiwanese"
 msgstr "Taiwanera"
@@ -16056,12 +16056,12 @@ msgctxt "game_options"
 msgid "Thailand"
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
 msgstr "New 3DS-k prozesadore ezkarragoa du, ZL/ZR botoiak eta C-stick bat."
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid ""
 "The area around the joystick's neutral position where input is ignored. Can "
@@ -16138,7 +16138,7 @@ msgid ""
 "compatibility issues with non-XBLA games."
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr "Aukera hau beharrezkoa da pistola joku batzuetan xaguarekin jolastean"
@@ -16160,12 +16160,12 @@ msgctxt "game_options"
 msgid "Time Stretch (Tempo Change, Best Sound)"
 msgstr "Denbora zabaltzea (Tenpo aldaketa, Soinu onena)"
 
-#. TRANSLATION: libretro/fuse, libretro/fuse
+#. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Timex 1 Joystick"
 msgstr "Timex 1 Joystick-a"
 
-#. TRANSLATION: libretro/fuse, libretro/fuse
+#. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Timex 2 Joystick"
 msgstr "Timex 2 Joystick-a"
@@ -16195,12 +16195,12 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "Joku tranpak erabiltzeko edo 16/9 Proportzio konpontze kodeak."
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Toggle Screen Layout"
 msgstr "Aldatu Pantaila antolaketa"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
 msgstr "Aldatu Abiadura Muga"
@@ -16215,7 +16215,7 @@ msgctxt "keys_files"
 msgid "Toggle weapon"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Toggle with hotkey + D-pad up or Scroll Lock in-game."
 msgstr "Aldatu Hotkey + D-pad gora edo Scroll Lock jokoan"
@@ -16225,12 +16225,12 @@ msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Tomy Tutor & Pyuuta kartutxoa"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Top"
 msgstr ""
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Top Only"
 msgstr "Boikoa soilik"
@@ -16240,32 +16240,32 @@ msgctxt "game_options"
 msgid "Top only"
 msgstr "Goikoa bakarrik"
 
-#. TRANSLATION: vpinball, vpinball, vpinball
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Top-Left Position, Large"
 msgstr ""
 
-#. TRANSLATION: vpinball, vpinball, vpinball
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Top-Left Position, Medium"
 msgstr ""
 
-#. TRANSLATION: vpinball, vpinball, vpinball
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Top-Left Position, Small"
 msgstr ""
 
-#. TRANSLATION: vpinball, vpinball, vpinball
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Top-Right Position, Large"
 msgstr ""
 
-#. TRANSLATION: vpinball, vpinball, vpinball
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Top-Right Position, Medium"
 msgstr ""
 
-#. TRANSLATION: vpinball, vpinball, vpinball
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Top-Right Position, Small"
 msgstr ""
@@ -16290,7 +16290,7 @@ msgctxt "game_options"
 msgid "Trackball (Atari CX-22)"
 msgstr "Trackball-a (Atari CX-22)"
 
-#. TRANSLATION: libretro/dolphin, play, ryujinx, sonicmania, suyu
+#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, sonicmania
 msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Txinatar tradizionala"
@@ -16349,7 +16349,7 @@ msgctxt "game_options"
 msgid "Tunisia"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, suyu, xenia, xenia-canary
+#. TRANSLATION: citron, libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Turkey"
 msgstr "Turkia"
@@ -16379,7 +16379,7 @@ msgctxt "game_options"
 msgid "Turquoise"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Twin Stick with Triggers"
 msgstr "Twin Stick kolpekariarekin"
@@ -16389,7 +16389,7 @@ msgctxt "game_options"
 msgid "Type of ROM file to load"
 msgstr "Kargatu beharreko ROM fitxategiaren mota"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Type of ROM file to load."
 msgstr "Kargatu beharreko ROM fitxategi mota"
@@ -16426,12 +16426,12 @@ msgctxt "game_options"
 msgid "UBERSHADERS"
 msgstr "UBERSHADER-AK"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "UCT"
 msgstr "UCT"
 
-#. TRANSLATION: libretro, libretro
+#. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "UDEV"
 msgstr ""
@@ -16451,7 +16451,7 @@ msgctxt "game_options"
 msgid "UDP Tunnel"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "UI KEYS"
 msgstr "UI TEKLAK"
@@ -16481,7 +16481,7 @@ msgctxt "game_options"
 msgid "US"
 msgstr "US"
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ryujinx, ...
+#. TRANSLATION: citron, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
 msgctxt "game_options"
 msgid "USA"
 msgstr "AEB"
@@ -16576,7 +16576,7 @@ msgctxt "game_options"
 msgid "USER DISK"
 msgstr "ERABILTZAILE DISKOA"
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "UTC"
 msgstr "UTC"
@@ -16716,7 +16716,7 @@ msgctxt "game_options"
 msgid "Ultra"
 msgstr "Ultra"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Undocked"
 msgstr ""
@@ -16736,7 +16736,7 @@ msgctxt "game_options"
 msgid "United States"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Univarsal"
 msgstr "Unibertsala"
@@ -16837,12 +16837,12 @@ msgid ""
 "Use L2/R2 for Brake/Accel and L1/R1 or R-stick Up/Down for Shift Up/Down."
 msgstr ""
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame/openbor7530
 msgctxt "game_options"
 msgid "Use MAME software lists to identify ROM"
 msgstr "Erabili MAME software listak ROM-a identifikatzeko"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, ...
+#. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
 msgid ""
 "Use Megadrive to automap inputs for a Megadrive style controller with a 6 "
@@ -16959,7 +16959,7 @@ msgid ""
 "controllers."
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Use to play pinball games with correct mapping."
 msgstr ""
@@ -16979,7 +16979,7 @@ msgctxt "game_options"
 msgid "Use your physical anaglyph 3D glasses!"
 msgstr ""
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
 msgid "Useful for N64 style controllers."
 msgstr "Erabilgarria N64 estiloko kontrolatzaileentzat."
@@ -16993,7 +16993,7 @@ msgstr ""
 "Erabilgarri N64 moduko kontrolatzaileentzat. Hotkey mugatuak horretarako "
 "botoi berezirik  ez duten kontrolatzaileetan."
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Useful for certain arcade games."
 msgstr "Erabilgarria arkade joko batzuetan."
@@ -17093,7 +17093,7 @@ msgctxt "game_options"
 msgid "VIC20 PAL Automatic"
 msgstr "VIC20 PAL Automatikoa"
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
+#. TRANSLATION: citron, rpcs3
 msgctxt "game_options"
 msgid "VIDEO"
 msgstr "BIDEOA"
@@ -17128,7 +17128,7 @@ msgctxt "game_options"
 msgid "VIDEO RESOLUTION"
 msgstr "BIDEO BEREIZMENA"
 
-#. TRANSLATION: amiberry, amiberry, awgl, awgl, bermuda, ...
+#. TRANSLATION: amiberry, awgl, bermuda, drastic, f2bgl, ...
 msgctxt "game_options"
 msgid "VIDEO SETTINGS"
 msgstr ""
@@ -17173,7 +17173,7 @@ msgctxt "game_options"
 msgid "VISUAL NUDGE STRENGTH"
 msgstr ""
 
-#. TRANSLATION: bigpemu, cemu, citra, dolphin, dolphin_triforce, ...
+#. TRANSLATION: azahar, bigpemu, cemu, citron, dolphin, ...
 msgctxt "game_options"
 msgid "VSYNC"
 msgstr "VSYNC"
@@ -17228,7 +17228,7 @@ msgctxt "game_options"
 msgid "Venezuela"
 msgstr ""
 
-#. TRANSLATION: drastic, libretro/fceumm, libretro/flycast, libretro/flycast, libretro/flycast, ...
+#. TRANSLATION: drastic, libretro/fceumm, libretro/flycast, libretro/flycast2021, libretro/nestopia
 msgctxt "game_options"
 msgid "Vertical"
 msgstr "Bertikala"
@@ -17293,7 +17293,7 @@ msgctxt "game_options"
 msgid "Voltmace Delta 3b Twin Joysticks"
 msgstr "Voltmace Delta 3b TwinJoystick-ak"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, hypseus-singe, ...
+#. TRANSLATION: azahar, citron, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
@@ -17303,7 +17303,7 @@ msgctxt "game_options"
 msgid "Vulkan (Default)"
 msgstr "Vulkan (Defektuzkoa)"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "W-SU"
 msgstr "W-SU"
@@ -17323,12 +17323,12 @@ msgctxt "game_options"
 msgid "WARN ABOUT UNSUPPORTED FEATURES"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "WET"
 msgstr "WET"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "WHDLOAD LAUNCHER"
 msgstr "WHDLOAD JAURTITZAILEA"
@@ -17353,7 +17353,7 @@ msgctxt "game_options"
 msgid "WHEEL ROTATION"
 msgstr ""
 
-#. TRANSLATION: pcsx2, shared, shared, shared, shared
+#. TRANSLATION: pcsx2, shared
 msgctxt "game_options"
 msgid "WHEELS"
 msgstr "BOLANTEAK"
@@ -17373,17 +17373,17 @@ msgctxt "game_options"
 msgid "WIDESCREEN HACK (GLITCHY)"
 msgstr "PANTAILA ZABALEKO HACK-A (ARAZOAK DITU)"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "WII CONTROLLERS"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin, libretro/dolphin, libretro/dolphin
+#. TRANSLATION: dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "WII TV MODE"
 msgstr "WII TB MODUA"
 
-#. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "WINDOWS POSITIONS"
 msgstr ""
@@ -17474,7 +17474,7 @@ msgctxt "game_options"
 msgid "While Touching"
 msgstr ""
 
-#. TRANSLATION: flycast, flycast, flycast, flycast, libretro/flycast, ...
+#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "White"
 msgstr "Zuria"
@@ -17484,12 +17484,12 @@ msgctxt "game_options"
 msgid "Widescreen (16:10)"
 msgstr ""
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Widescreen (16:9)"
 msgstr "Pantaila zabala (16:9)"
 
-#. TRANSLATION: dolphin, dolphin, libretro/dolphin, libretro/dolphin
+#. TRANSLATION: dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid ""
 "Wii NAND's aspect ratio setting. Most games support both ratios natively."
@@ -17502,27 +17502,27 @@ msgctxt "game_options"
 msgid "Wii NAND's language setting."
 msgstr "Wii-arene NAND hizkuntza ezarpena."
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+#. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
 msgid "Wii Remote"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+#. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
 msgid "Wii Remote + Classic Controller"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+#. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
 msgid "Wii Remote + Classic Controller Pro"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+#. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
 msgid "Wii Remote + Nunchuk"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+#. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
 msgid "Wii Remote Sideways"
 msgstr ""
@@ -17537,22 +17537,22 @@ msgctxt "game_options"
 msgid "Wiimmfi (95.217.77.181)"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Wiimote Sideway"
 msgstr "Wiimote Alboratua"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Wiimote Sideway + Nunchuk"
 msgstr "Wiimote Alboratua + Nunchuk"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Wiimote Sideway + Swing"
 msgstr "Wiimote Alboratua + Swing-a"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Wiimote Sideway + Tilt"
 msgstr "Wiimote Alboratua + inklinatzea"
@@ -17691,7 +17691,7 @@ msgstr ""
 "Zoom-a egin ertz beltzak ezkutatzeko. Ertzak desberdinak dira joku "
 "bakoitzeko."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Zulu"
 msgstr "Zulu"
@@ -18925,6 +18925,10 @@ msgstr "horia/urdina"
 #~ msgctxt "keys_files"
 #~ msgid "Reset the application"
 #~ msgstr "Berrezarri aplikazioa"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset the table, sometimes required for PinMame"
+#~ msgstr "Berrezarri taula, PinMame-k eskatzen du batzuetan"
 
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."

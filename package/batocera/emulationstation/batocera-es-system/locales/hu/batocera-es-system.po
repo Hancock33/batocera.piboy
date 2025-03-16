@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-02-07 09:33+0100\n"
+"PO-Revision-Date: 2025-03-10 17:59+0100\n"
 "Last-Translator: pigator\n"
 "Language-Team: \n"
 "Language: hu\n"
@@ -58,7 +58,7 @@ msgctxt "game_options"
 msgid "0% (Default)"
 msgstr "0% (alapértelmezett)"
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "0.5x"
 msgstr "0.5x"
@@ -68,32 +68,32 @@ msgctxt "game_options"
 msgid "0.5x (320x240)"
 msgstr "0.5x (320x240)"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "0.5x (360p/540p) [EXPERIMENTAL]"
 msgstr "0.5x (360p/540p) [KÍSÉRLETI]"
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "0.6x"
 msgstr "0.6x"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "0.75x (540p/810p) [EXPERIMENTAL]"
 msgstr "0.75x (540p/810p) [KÍSÉRLETI]"
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "0.7x"
 msgstr "0.7x"
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "0.8x"
 msgstr "0.8x"
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "0.9x"
 msgstr "0.9x"
@@ -123,7 +123,7 @@ msgctxt "game_options"
 msgid "1 thread"
 msgstr "1 szál"
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "1% (Default)"
 msgstr "1% (alapértelmezett)"
@@ -138,7 +138,7 @@ msgctxt "game_options"
 msgid "1.0x (12.50Mhz)"
 msgstr "1.0x (12.50Mhz)"
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "1.1x"
 msgstr "1.1x"
@@ -158,7 +158,7 @@ msgctxt "game_options"
 msgid "1.25x Native"
 msgstr "1,25x Natív"
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "1.2x"
 msgstr "1.2x"
@@ -168,22 +168,22 @@ msgctxt "game_options"
 msgid "1.2x (15.00Mhz)"
 msgstr "1.2x (15.00Mhz)"
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "1.3x"
 msgstr "1.3x"
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "1.4x"
 msgstr "1.4x"
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "1.5x"
 msgstr "1.5x"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "1.5x (1080p/1620p) [EXPERIMENTAL]"
 msgstr "1.5x (1080p/1620p) [KÍSÉRLETI]"
@@ -573,7 +573,7 @@ msgctxt "game_options"
 msgid "150Mhz (Overclock)"
 msgstr "150Mhz (Túlhajtás)"
 
-#. TRANSLATION: xenia, xenia, xenia-canary, xenia-canary
+#. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "1536MB"
 msgstr "1536MB"
@@ -648,7 +648,7 @@ msgctxt "game_options"
 msgid "1680 x 1050"
 msgstr "1680 x 1050"
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "16:9 (Default)"
 msgstr "16:9 (alapértelmezett)"
@@ -763,12 +763,12 @@ msgctxt "game_options"
 msgid "1st Joystick (2 Axes, 2 Btns)"
 msgstr "1. Joystick (2 tengely, 2 gomb)"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "1x (720p/1080p)"
 msgstr "1x (720p/1080p)"
 
-#. TRANSLATION: libretro/mupen64plus-next, mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: libretro/mupen64plus-next, mupen64plus
 msgctxt "game_options"
 msgid "1x (Default)"
 msgstr "1x (Alap)"
@@ -1078,7 +1078,7 @@ msgctxt "game_options"
 msgid "2M"
 msgstr "2M"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/px68k, libretro/uae4arm, mame/openbor7530, ...
+#. TRANSLATION: libretro/mame, libretro/px68k, libretro/uae4arm, mame/openbor7530
 msgctxt "game_options"
 msgid "2MB"
 msgstr "2MB"
@@ -1098,7 +1098,7 @@ msgctxt "game_options"
 msgid "2nd Joystick (2 Axes, 2 Btns)"
 msgstr "2. Joystick (2 tengely, 2 gomb)"
 
-#. TRANSLATION: flycast/dolphin, flycast/dolphin, flycast/dolphin, flycast/dolphin
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "2nd VMU (Default)"
 msgstr "2. VMU (alapértelmezett)"
@@ -1108,7 +1108,7 @@ msgctxt "game_options"
 msgid "2x (1280x960) (Default)"
 msgstr "2x (1280x960) (alapértelmezett)"
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "2x (1440p/2160p)"
 msgstr "2x (1440p/2160p)"
@@ -1218,7 +1218,7 @@ msgctxt "game_options"
 msgid "3032B"
 msgstr "3032B"
 
-#. TRANSLATION: xenia, xenia, xenia-canary, xenia-canary
+#. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "3072MB"
 msgstr "3072MB"
@@ -1336,12 +1336,12 @@ msgstr "386DX, 33MHz (7800 cps)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "386_prefetch"
-msgstr ""
+msgstr "386_előretöltés"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "386_slow"
-msgstr ""
+msgstr "386_lassú"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -1358,7 +1358,7 @@ msgctxt "game_options"
 msgid "3rd"
 msgstr "3."
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "3x (2160p/3240p)"
 msgstr "3x (2160p/3240p)"
@@ -1428,7 +1428,7 @@ msgctxt "game_options"
 msgid "4032B"
 msgstr "4032B"
 
-#. TRANSLATION: xenia, xenia, xenia-canary, xenia-canary
+#. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "4096MB"
 msgstr "4096MB"
@@ -1486,7 +1486,7 @@ msgstr "486DX2, 66MHz (26800 cps)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "486_slow"
-msgstr ""
+msgstr "486_lassú"
 
 #. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, xenia, xenia-canary
 msgctxt "game_options"
@@ -1518,7 +1518,7 @@ msgctxt "game_options"
 msgid "4M"
 msgstr "4M"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/mame, libretro/px68k, libretro/uae4arm, ...
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/px68k, libretro/uae4arm, mame/openbor7530
 msgctxt "game_options"
 msgid "4MB"
 msgstr "4MB"
@@ -1538,7 +1538,7 @@ msgctxt "game_options"
 msgid "4th"
 msgstr "4."
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "4x (2880p/4320p)"
 msgstr "4x (2880p/4320p)"
@@ -1633,7 +1633,7 @@ msgctxt "game_options"
 msgid "5 threads"
 msgstr "5 szál"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "5% (Default)"
 msgstr "5% (Alap)"
@@ -1733,7 +1733,7 @@ msgctxt "game_options"
 msgid "5th"
 msgstr "5."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "5x (3600p/5400p)"
 msgstr "5x (3600p/5400p)"
@@ -1843,7 +1843,7 @@ msgctxt "game_options"
 msgid "6th"
 msgstr "6."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "6x (4320p/6480p)"
 msgstr "6x (4320p/6480p)"
@@ -1928,7 +1928,7 @@ msgctxt "game_options"
 msgid "7th"
 msgstr "7."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "7x (5040p/7560p)"
 msgstr "7x (5040p/7560p)"
@@ -2028,7 +2028,7 @@ msgctxt "game_options"
 msgid "8th"
 msgstr "8."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "8x (5760p/8640p)"
 msgstr "8x (5760p/8640p)"
@@ -2153,12 +2153,12 @@ msgctxt "game_options"
 msgid "A600 (2MB Chip + 8MB Fast)"
 msgstr "A600 (2MB Chip + 8MB gyors)"
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "ABSZOLÚT EGÉR BEMENET"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ACCURACY LEVEL"
 msgstr "PONTOSSÁGI SZINT"
@@ -2198,7 +2198,7 @@ msgctxt "game_options"
 msgid "ADJUST POWERPC FREQUENCY"
 msgstr "POWERPC FREKVENCIA BEÁLLÍTÁSA"
 
-#. TRANSLATION: bigpemu, bigpemu, bigpemu, bigpemu, bigpemu, ...
+#. TRANSLATION: azahar, bigpemu, cemu, dolphin_triforce, drastic, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "BŐVÍTETT OPCIÓK"
@@ -2208,7 +2208,7 @@ msgctxt "game_options"
 msgid "AES (Home Console)"
 msgstr ""
 
-#. TRANSLATION: shared, shared, shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "AI GAME TRANSLATION"
 msgstr "MI JÁTÉK FORDÍTÁS"
@@ -2268,7 +2268,7 @@ msgctxt "game_options"
 msgid "AMD Athlon, 1.2GHz (1000000 cps)"
 msgstr "AMD Athlon, 1.2GHz (1000000 cps)"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "AMD FidelityFX Super Resolution"
 msgstr "AMD FidelityFX szuperfelbontás"
@@ -2293,12 +2293,12 @@ msgctxt "game_options"
 msgid "ANALOGUE JOYSTICK DEADZONE"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "ANALOGUE TO D-PAD TYPE P1"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "ANALOGUE TO D-PAD TYPE P2"
 msgstr ""
@@ -2308,7 +2308,7 @@ msgctxt "game_options"
 msgid "ANISOTROPIC FILTER"
 msgstr "ANIZOTRÓP SZŰRŐ"
 
-#. TRANSLATION: dolphin, dolphin_triforce, dxx-rebirth, flycast, libretro/dolphin, ...
+#. TRANSLATION: citron, dolphin, dolphin_triforce, dxx-rebirth, flycast, ...
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "ANIZOTRÓP SZŰRÉS"
@@ -2328,7 +2328,7 @@ msgctxt "game_options"
 msgid "ANTI-ALIASING (MSAA/SSAA)"
 msgstr "ÉLSIMITÁS (MSAA/SSAA)"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ANTI-ALIASING METHOD"
 msgstr "ÉLSIMITÁS MÓDSZER"
@@ -2351,12 +2351,12 @@ msgstr "APF M-1000 kazetták"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS-BIOS.ROM"
-msgstr ""
+msgstr "APPLE2GS-BIOS.ROM"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS.ROM"
-msgstr ""
+msgstr "APPLE2GS.ROM"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -2378,12 +2378,12 @@ msgctxt "game_options"
 msgid "ASMJIT Recompiler"
 msgstr "ASMJIT Újrafordító"
 
-#. TRANSLATION: bermuda, bigpemu, cemu, cgenius, dolphin_triforce, ...
+#. TRANSLATION: bermuda, bigpemu, cemu, cgenius, citron, ...
 msgctxt "game_options"
 msgid "ASPECT RATIO"
 msgstr "OLDALARÁNY"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ASYNC SHADER COMPILE"
 msgstr "ASZINKRON SHADER FORDÍTÁS"
@@ -2433,7 +2433,7 @@ msgctxt "game_options"
 msgid "ATARI SYSTEM"
 msgstr "ATARI SYSTEM"
 
-#. TRANSLATION: dolphin, rpcs3, rpcs3, rpcs3, rpcs3, ...
+#. TRANSLATION: dolphin, rpcs3, vpinball
 msgctxt "game_options"
 msgid "AUDIO"
 msgstr "AUDIÓ"
@@ -2488,10 +2488,10 @@ msgctxt "game_options"
 msgid "AUDIO VOLUME GAIN"
 msgstr "HANGERŐ NÖVELÉS"
 
-#. TRANSLATION: dosbox, dosbox, dosbox
+#. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "AUTO"
-msgstr ""
+msgstr "AUTO"
 
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
@@ -2700,17 +2700,17 @@ msgctxt "game_options"
 msgid "Add debug logging to help troubleshoot issues."
 msgstr "Hibakeresési naplózás hozzáadása a hibaelhárításhoz."
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Adds d-pad mapping to the analogue stick (Controller 1)."
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Adds d-pad mapping to the analogue stick (Controller 2)."
 msgstr ""
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid ""
 "Adjust mixing of CD audio. In MSU-MD, cartridge-sourced sound effects are "
@@ -2864,7 +2864,7 @@ msgstr "Minden határ"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "All Timers"
-msgstr ""
+msgstr "Minden időzítő"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -2977,9 +2977,9 @@ msgstr "Amerikai angol"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Amount of instructions DOSBox tries to emulate"
-msgstr ""
+msgstr "A DOSBox által emulálni próbált utasítások mennyisége"
 
-#. TRANSLATION: yabasanshiro, yabasanshiro
+#. TRANSLATION: yabasanshiro
 msgctxt "game_options"
 msgid "Analog"
 msgstr "Analóg"
@@ -3009,27 +3009,27 @@ msgctxt "game_options"
 msgid "Analogue"
 msgstr ""
 
-#. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/pcsx_rearmed
+#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Analogue Controller"
 msgstr ""
 
-#. TRANSLATION: libretro/duckstation, libretro/duckstation, libretro/swanstation, libretro/swanstation
+#. TRANSLATION: libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "Analogue Controller (DualShock)"
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, ...
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/swanstation
 msgctxt "game_options"
 msgid "Analogue Joystick"
 msgstr ""
 
-#. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx
+#. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Analogue Joystick (Flystick)"
 msgstr ""
 
-#. TRANSLATION: libretro/duckstation, libretro/duckstation
+#. TRANSLATION: libretro/duckstation
 msgctxt "game_options"
 msgid "Analogue Stick"
 msgstr ""
@@ -3074,17 +3074,17 @@ msgctxt "game_options"
 msgid "Apple //e Enhanced (Default)"
 msgstr "Apple //e Enhanced (alapértelmezett)"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Apple II cleanly cracked disks"
 msgstr "Apple II feltört lemezek"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Apple II miscellaneous disks"
 msgstr "Apple II vegyes lemezek"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Apple II original disks"
 msgstr "Eredeti Apple II lemezek"
@@ -3128,7 +3128,7 @@ msgctxt "game_options"
 msgid "Apply a joy2key profile for the current game."
 msgstr "Alkalmazzon joy2key profilt az aktuális játékhoz."
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid ""
 "Apply a multiplier to the joystick's input to lower or increase "
@@ -3232,7 +3232,7 @@ msgctxt "game_options"
 msgid "Arrange the dual screen layout."
 msgstr "Rendezze el a kétképernyős elrendezést."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
@@ -3254,7 +3254,7 @@ msgstr "Nyilak 3gomb"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "As Host (Default)"
-msgstr ""
+msgstr "Gazdaként (alapértelmezett)"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -3315,7 +3315,7 @@ msgctxt "game_options"
 msgid "August"
 msgstr "Agusztus"
 
-#. TRANSLATION: ryujinx, suyu, xenia, xenia-canary
+#. TRANSLATION: citron, ryujinx, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Australia"
 msgstr "Ausztrália"
@@ -3335,7 +3335,7 @@ msgctxt "game_options"
 msgid "Auto Max Quality"
 msgstr "Automatikus Max minőség"
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Auto Standard (4:3 interlaced / 3:2 progressive)"
 msgstr "Auto Standard (4:3 váltottsoros / 3:2 progresszív)"
@@ -3350,12 +3350,12 @@ msgctxt "game_options"
 msgid "Auto-disable zoom"
 msgstr "A zoom automatikus letiltása"
 
-#. TRANSLATION: libretro/81, libretro/81, libretro/fceumm, libretro/fceumm, libretro/genesisplusgx, ...
+#. TRANSLATION: libretro/81, libretro/fceumm, libretro/genesisplusgx, libretro/nestopia, libretro/o2em, ...
 msgctxt "game_options"
 msgid "Autodetect"
 msgstr "Automatikus észlelés"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Autodetect (Compatible)"
 msgstr "Automatikus felismerés (kompatibilis)"
@@ -3599,7 +3599,7 @@ msgctxt "game_options"
 msgid "BIRTH MONTH"
 msgstr "SZÜLETÉSI HÓNAP"
 
-#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/mesens, libretro/nestopia, ...
+#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/mesens, libretro/nestopia, libretro/snes9x, ...
 msgctxt "game_options"
 msgid "BLARGG NTSC FILTER"
 msgstr "BLARGG NTSC SZŰRŐ"
@@ -3609,7 +3609,7 @@ msgctxt "game_options"
 msgid "BLEND HIGH-RES MODE"
 msgstr "NAGYFELBONTÁSÚ MÓD KEVERÉSE"
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "BLEND SPRITES (SINGE)"
 msgstr "SPRITE-OK KEVERÉSE (SINGE)"
@@ -3629,7 +3629,7 @@ msgctxt "game_options"
 msgid "BOBBA FETT FIX"
 msgstr "BOBBA FETT FIX"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "BOOT ANIMATION FIRST"
 msgstr "INDÍTÁSI ANIMÁCIÓ ELŐSZÖR"
@@ -3644,12 +3644,12 @@ msgctxt "game_options"
 msgid "BORDER MODE"
 msgstr "SZEGÉLY MÓD"
 
-#. TRANSLATION: shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "BOTTOM LEFT (SW)"
 msgstr "BALRA LENT (DNY)"
 
-#. TRANSLATION: shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "BOTTOM RIGHT (SE)"
 msgstr "JOBBRA LENT (DK)"
@@ -3687,14 +3687,14 @@ msgstr "BT601_625/D65 (ajánlott minden európa/ausztrál fejlesztésű játékh
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Back / Menu"
-msgstr ""
+msgstr "Vissza / Menü"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Bahrain"
 msgstr "Bahrein"
 
-#. TRANSLATION: shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Balanced"
 msgstr "Kiegyensúlyozott"
@@ -3763,7 +3763,7 @@ msgctxt "game_options"
 msgid "Better performance with hardware rendering."
 msgstr "Better performance with hardware rendering."
 
-#. TRANSLATION: cemu, cemu, ppsspp, supermodel, suyu
+#. TRANSLATION: cemu, citron, ppsspp, supermodel
 msgctxt "game_options"
 msgid "Bicubic"
 msgstr "Bikubikus"
@@ -3783,7 +3783,7 @@ msgctxt "game_options"
 msgid "Bicubic: Mitchell-Netravali"
 msgstr "Bikubikus: Mitchell-Netravali"
 
-#. TRANSLATION: bigpemu, cemu, dolphin_triforce, drastic, duckstation, ...
+#. TRANSLATION: bigpemu, cemu, citron, dolphin_triforce, drastic, ...
 msgctxt "game_options"
 msgid "Bilinear"
 msgstr "Bilineáris"
@@ -3863,7 +3863,7 @@ msgctxt "game_options"
 msgid "Blocky Filtered"
 msgstr "Blocky Filtered"
 
-#. TRANSLATION: flycast, flycast, flycast, flycast, libretro/flycast, ...
+#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, libretro/melondsds, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Blue"
 msgstr "Kék"
@@ -3930,7 +3930,7 @@ msgctxt "game_options"
 msgid "Both"
 msgstr "Mindkettő"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Both Joysticks (4 Axes, 4 Btns)"
 msgstr "Két Joystick (4 Tengely, 4 Gomb)"
@@ -3940,12 +3940,12 @@ msgctxt "game_options"
 msgid "Both types require holding D-pad down during initial charge."
 msgstr "Mindkét típusnál le kell tartani a D-padot az első töltés során."
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Bottom (Default)"
 msgstr "Alsó (alapértelmezett)"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Bottom Only"
 msgstr "Csak alul"
@@ -3970,14 +3970,14 @@ msgctxt "game_options"
 msgid "Brazil"
 msgstr "Brazília"
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "Brazilian Portuguese"
 msgstr ""
 "B\n"
 "razil portugál"
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "British English"
 msgstr "Brit angol"
@@ -4168,17 +4168,17 @@ msgctxt "game_options"
 msgid "CD"
 msgstr "CD"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "CD ADD-ON"
 msgstr "CD HOZZÁADÁS"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "CD TURBO SPEED"
 msgstr "CD TURBÓ SEBESSÉG"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "CD-DA VOLUME"
 msgstr "CD-DA HANGERŐ"
@@ -4203,7 +4203,7 @@ msgctxt "game_options"
 msgid "CD32 Default (2MB Chip)"
 msgstr "CD32 Default (2MB Chip)"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, ...
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "CD32 Pad"
 msgstr "CD32 Pad"
@@ -4228,7 +4228,7 @@ msgctxt "game_options"
 msgid "CDZ Universe 3.3"
 msgstr "CDZ Universe 3.3"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "CET"
 msgstr "CET"
@@ -4248,17 +4248,17 @@ msgctxt "game_options"
 msgid "CHECKERED FLAG"
 msgstr "CHECKERED FLAG"
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "CHOOSE CONSOLE REGION"
 msgstr "KONZOL RÉGIÓ KIVÁLASZTÁSA"
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "CHOOSE CONSOLE TIMEZONE"
 msgstr "VÁLASSZA KI A KONZOL IDŐZÓNÁJÁT"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "CHOOSE SOUND OUTPUT MODE"
 msgstr "HANGKIMENETI MÓD KIVÁLASZTÁSA"
@@ -4268,7 +4268,7 @@ msgctxt "game_options"
 msgid "CLEAR MEMORY PAGE STATE"
 msgstr "MEMÓRIA LAP ÁLLAPOTÁNAK TÖRLÉSE"
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "ÉRME HANG PLUGIN"
@@ -4288,7 +4288,7 @@ msgctxt "game_options"
 msgid "COLOUR COMPUTER MODEL"
 msgstr ""
 
-#. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/mgba, libretro/sameboy, libretro/vba-m, ...
+#. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/sameboy, libretro/vba-m
 msgctxt "game_options"
 msgid "COLOUR CORRECTION"
 msgstr ""
@@ -4363,7 +4363,7 @@ msgctxt "game_options"
 msgid "CONTROL MAPPING"
 msgstr "VEZÉRLŐ TÉRKÉPEK"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 1"
 msgstr "KONTROLLER 1"
@@ -4378,12 +4378,12 @@ msgctxt "game_options"
 msgid "CONTROLLER 1 INPUT MAPPING"
 msgstr "VEZÉRLŐ 1 BEMENETI HOZZÁRENDELÉS"
 
-#. TRANSLATION: duckstation, libretro/beetle-saturn, libretro/dolphin, libretro/dolphin, libretro/dosbox, ...
+#. TRANSLATION: duckstation, libretro/beetle-saturn, libretro/dolphin, libretro/dosbox, libretro/dosbox_pure, ...
 msgctxt "game_options"
 msgid "CONTROLLER 1 TYPE"
 msgstr "VEZÉRLŐ 1 TÍPUS"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 2"
 msgstr "KONTROLLER 2"
@@ -4398,12 +4398,12 @@ msgctxt "game_options"
 msgid "CONTROLLER 2 INPUT MAPPING"
 msgstr "VEZÉRLŐ 2 BEMENETI HOZZÁRENDELÉS"
 
-#. TRANSLATION: duckstation, libretro/beetle-saturn, libretro/dolphin, libretro/dolphin, libretro/dosbox, ...
+#. TRANSLATION: duckstation, libretro/beetle-saturn, libretro/dolphin, libretro/dosbox, libretro/dosbox_pure, ...
 msgctxt "game_options"
 msgid "CONTROLLER 2 TYPE"
 msgstr "VEZÉRLŐ 2 TÍPUS"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 3"
 msgstr "KONTROLLER 3"
@@ -4418,12 +4418,12 @@ msgctxt "game_options"
 msgid "CONTROLLER 3 INPUT MAPPING"
 msgstr "VEZÉRLŐ 3 BEMENETI HOZZÁRENDELÉS"
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/flycast2021, libretro/snes9x
+#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/flycast2021, libretro/snes9x
 msgctxt "game_options"
 msgid "CONTROLLER 3 TYPE"
 msgstr "VEZÉRLŐ 3 TÍPUS"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus, rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 4"
 msgstr "KONTROLLER 4"
@@ -4438,22 +4438,22 @@ msgctxt "game_options"
 msgid "CONTROLLER 4 INPUT MAPPING"
 msgstr "VEZÉRLŐ 4 BEMENETI HOZZÁRENDELÉS"
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "CONTROLLER 4 TYPE"
 msgstr "VEZÉRLŐ 4 TÍPUS"
 
-#. TRANSLATION: rpcs3, rpcs3
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 5"
 msgstr "KONTROLLER 5"
 
-#. TRANSLATION: rpcs3, rpcs3
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 6"
 msgstr "KONTROLLER 6"
 
-#. TRANSLATION: rpcs3, rpcs3
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "CONTROLLER 7"
 msgstr "KONTROLLER 7"
@@ -4473,7 +4473,7 @@ msgctxt "game_options"
 msgid "CONTROLLER MODE"
 msgstr "VEZÉRLŐ MÓD"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "CONTROLLER PAK"
 msgstr "KONTROLLER PAK"
@@ -4488,7 +4488,7 @@ msgctxt "game_options"
 msgid "CONTROLLER PROFILE"
 msgstr "VEZÉRLŐ PROFIL"
 
-#. TRANSLATION: libretro, libretro, libretro/atari800, libretro/beetle-saturn, libretro/beetle-saturn, ...
+#. TRANSLATION: libretro, libretro/atari800, libretro/beetle-saturn, libretro/dolphin, libretro/dosbox, ...
 msgctxt "game_options"
 msgid "CONTROLLER SETTINGS"
 msgstr ""
@@ -4498,7 +4498,7 @@ msgctxt "game_options"
 msgid "CONTROLLER TO LIGHT GUN"
 msgstr "VEZÉRLŐ A FÉNYPUSKÁHOZ"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
 msgid "CONTROLLER TYPE"
 msgstr "KONTROLLER TÍPUS"
@@ -4513,12 +4513,12 @@ msgctxt "game_options"
 msgid "CONTROLLER TYPE 2"
 msgstr "2. TÍPUSÚ VEZÉRLŐ"
 
-#. TRANSLATION: duckstation, duckstation, duckstation, libretro/genesisplusgx, libretro/genesisplusgx, ...
+#. TRANSLATION: duckstation, libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
 msgid "CONTROLLERS"
 msgstr "VEZÉRLŐK"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
+#. TRANSLATION: dolphin, rpcs3, shared
 msgctxt "game_options"
 msgid "CONTROLS"
 msgstr "VEZÉRLŐK"
@@ -4538,7 +4538,7 @@ msgctxt "game_options"
 msgid "CPC MODEL"
 msgstr "CPC MODELL"
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "CPU"
 msgstr "CPU"
@@ -4566,12 +4566,12 @@ msgstr "CPU MAG MÓDSZER"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU CYCLES"
-msgstr ""
+msgstr "CPU CIKLUSOK"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Core used in emulation"
-msgstr ""
+msgstr "Az emulációban használt CPU mag"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -4606,7 +4606,7 @@ msgstr "CPU TÍPUS"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Type used in emulation"
-msgstr ""
+msgstr "Az emulációban használt CPU típus"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -4663,7 +4663,7 @@ msgctxt "game_options"
 msgid "CRT-like colour adaption. Requires New 3D engine."
 msgstr "CRT-szerű színadaptáció. Új 3D motorra van szükség."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "CST6CDT"
 msgstr "CST6CDT"
@@ -4693,7 +4693,7 @@ msgctxt "game_options"
 msgid "CUSTOM .PNG IMAGE PATH"
 msgstr "EGYÉNI .PNG KÉPÚTVONAL"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mamevirtual, ...
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi, mame/openbor7530
 msgctxt "game_options"
 msgid "CUSTOM CONFIG"
 msgstr "EGYÉNI BEÁLLÍTÁS"
@@ -4703,7 +4703,7 @@ msgctxt "game_options"
 msgid "CUSTOM CONTROLLER"
 msgstr "EGYEDI VEZÉRLŐ"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame/openbor7530
 msgctxt "game_options"
 msgid "CUSTOM GAME CONFIG"
 msgstr "EGYEDI JÁTÉKKONFIG"
@@ -4723,7 +4723,7 @@ msgctxt "game_options"
 msgid "CUSTOM MAME CONFIG"
 msgstr "EGYEDI MAME KONFIG"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
 msgstr "EMULÁLT WIIMOTE ÉS GAMEPAD TESTRESZABÁSA"
@@ -4855,7 +4855,7 @@ msgctxt "game_options"
 msgid "Canada"
 msgstr "Kanada"
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "Canadian French"
 msgstr "Kanadai francia"
@@ -4865,17 +4865,17 @@ msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
 msgstr "Capcom VS játékok Képernyőszélesség bővítése"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Cartridge"
 msgstr "Kazetta"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Cartridge (Slot 1)"
 msgstr "Cartridge (Slot 1)"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Cartridge (Slot 2)"
 msgstr "Cartridge (Slot 2)"
@@ -4900,17 +4900,17 @@ msgctxt "game_options"
 msgid "Casio PV-1000 cartridges"
 msgstr "Casio PV-1000 kazetta"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Cassette"
 msgstr "Kazetta"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Cassette 1"
 msgstr "Kazetta 1"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Cassette 2"
 msgstr "Kazetta 2"
@@ -4990,7 +4990,7 @@ msgctxt "game_options"
 msgid "Change the game's brightness."
 msgstr "A játék fényerejének módosítása."
 
-#. TRANSLATION: etlegacy, fallout1-ce, fallout2-ce, libretro/cap32, play, ...
+#. TRANSLATION: citron, etlegacy, fallout1-ce, fallout2-ce, libretro/cap32, ...
 msgctxt "game_options"
 msgid "Change the game's language."
 msgstr "Változtassa meg a játék nyelvét."
@@ -5004,7 +5004,7 @@ msgstr ""
 "Változtassa meg a játék nyelvét. A játékfájlok megkövetelik a támogatott "
 "nyelvi karakterláncokat a .pk4 fájlokban."
 
-#. TRANSLATION: bigpemu, cemu, duckstation, libretro/vice_x128, libretro/vice_x64, ...
+#. TRANSLATION: bigpemu, cemu, citron, duckstation, libretro/vice_x128, ...
 msgctxt "game_options"
 msgid "Change the output resolution ratio."
 msgstr "Módosítsa a kimeneti felbontás arányát."
@@ -5019,7 +5019,7 @@ msgctxt "game_options"
 msgid "Change the system's language."
 msgstr "Változtassa meg a rendszer nyelvét."
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Change what's plugged into the virtual GameCube ports."
 msgstr "Módosítsa azt, ami a virtuális GameCube portokhoz van csatlakoztatva."
@@ -5030,6 +5030,8 @@ msgid ""
 "Changes the sleep period accuracy. Some games need this set to improve "
 "performance."
 msgstr ""
+"Megváltoztatja az alvási időszak pontosságát. Néhány játéknak szüksége van "
+"erre a beállításra a teljesítmény javítása érdekében."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -5041,12 +5043,12 @@ msgctxt "game_options"
 msgid "Chile"
 msgstr "Chile"
 
-#. TRANSLATION: ryujinx, suyu, xenia, xenia-canary
+#. TRANSLATION: citron, ryujinx, xenia, xenia-canary
 msgctxt "game_options"
 msgid "China"
 msgstr "Kína"
 
-#. TRANSLATION: cemu, doom3, ryujinx, sonic2013, suyu, ...
+#. TRANSLATION: cemu, citron, doom3, ryujinx, sonic2013, ...
 msgctxt "game_options"
 msgid "Chinese"
 msgstr "Kínai"
@@ -5096,7 +5098,7 @@ msgctxt "game_options"
 msgid "Choose number of audio channels."
 msgstr "Válassza ki az audio csatornák számát."
 
-#. TRANSLATION: flycast/dolphin, flycast/dolphin, flycast/dolphin, flycast/dolphin
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "Choose second feature pack for the controller."
 msgstr "Válassza ki a második funkciócsomagot a vezérlőhöz."
@@ -5224,7 +5226,7 @@ msgctxt "game_options"
 msgid "Choose upscaling method."
 msgstr "Válassza ki a felskálázási módot."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Choose whether the virtual switch is docked or not."
 msgstr "Válassza ki, hogy a virtuális kapcsoló dokkolva van-e vagy sem."
@@ -5241,14 +5243,14 @@ msgstr ""
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "Choose which BIOS file for GSplus to boot with."
-msgstr ""
+msgstr "Válassza ki, hogy a GSplus melyik BIOS-fájllal bootoljon."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "Choose which audio API library to use."
 msgstr ""
 
-#. TRANSLATION: cemu, citra, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: azahar, cemu, citron, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr "Válassza ki a használni kívánt grafikus API-könyvtárat."
@@ -5309,12 +5311,12 @@ msgctxt "game_options"
 msgid "Choose your console UTC time zone."
 msgstr ""
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "Choose your console region."
 msgstr "Válassza ki a konzol régióját."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Choose your console time zone."
 msgstr ""
@@ -5411,7 +5413,7 @@ msgctxt "game_options"
 msgid "Chrono Chross Odd/Even Bit Hack"
 msgstr "Chrono Chross Odd/Even Bit Hack"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Classic"
 msgstr ""
@@ -5421,12 +5423,12 @@ msgctxt "game_options"
 msgid "Classic (Default)"
 msgstr "Klasszikus (alapértelmezett)"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Classic Controller"
 msgstr "Classic Controller"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Classic Controller Pro"
 msgstr "Classic Controller Pro"
@@ -5510,7 +5512,7 @@ msgstr ""
 "Fordíts árnyékolókat a játék következő indításakor (egyszer). Csökkenti a "
 "mikrofagyást. Csak Vulkan."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid ""
 "Compile shaders using background threads to avoid shader compilation "
@@ -5529,7 +5531,7 @@ msgctxt "game_options"
 msgid "Composite (Blargg)"
 msgstr "Composite (Blargg)"
 
-#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
+#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
 msgid "Composite (colour bleeding + artifacts)"
 msgstr ""
@@ -5564,7 +5566,7 @@ msgctxt "game_options"
 msgid "Control the texture's trilinear filtering of the emulation."
 msgstr "A textúra trilineáris szűrésének szabályozása az emulációban."
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Controls for 5/6 button games and other unique controls"
 msgstr "Vezérlők 5/6 gombos játékokhoz és egyéb egyedi vezérlőkhöz"
@@ -5588,7 +5590,7 @@ msgctxt "game_options"
 msgid "Core provided"
 msgstr "Biztosított mag"
 
-#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/mesens, libretro/nestopia
+#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/mesens, libretro/nestopia
 msgctxt "game_options"
 msgid "Core-powered video filter."
 msgstr "Magról táplált videoszűrő."
@@ -5655,14 +5657,14 @@ msgstr "Kereszt"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Crouch"
-msgstr ""
+msgstr "Guggol"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Crouch Toggle"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Cuba"
 msgstr "Kuba"
@@ -5672,7 +5674,7 @@ msgctxt "game_options"
 msgid "Current language"
 msgstr "Jelenlegi nyelv"
 
-#. TRANSLATION: libretro/fuse, libretro/fuse
+#. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Cursor Joystick"
 msgstr "Kurzor Joystick"
@@ -5684,12 +5686,12 @@ msgstr ""
 "A kurzor időtúllépése másodpercben a kurzor mód használatakor - "
 "időtúllépésig."
 
-#. TRANSLATION: libretro/gambatte, libretro/mesen, shared, shared
+#. TRANSLATION: libretro/gambatte, libretro/mesen, shared
 msgctxt "game_options"
 msgid "Custom"
 msgstr "Egyéni"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Custom Keyboard Binds (best for Pad2Key)"
 msgstr "Egyéni billentyűzetkötések (legjobb a Pad2Key számára)"
@@ -5754,7 +5756,7 @@ msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "DATA PLUGIN"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, mupen64plus, ...
+#. TRANSLATION: dolphin, mupen64plus
 msgctxt "game_options"
 msgid "DEADZONE"
 msgstr "HOLTZÓNA"
@@ -5769,7 +5771,7 @@ msgctxt "game_options"
 msgid "DECORATION SET"
 msgstr "DEKORÁCIÓS SZETT"
 
-#. TRANSLATION: shared, shared, shared, shared, shared, ...
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "DECORATIONS"
 msgstr "DEKORÁCIÓ"
@@ -5829,7 +5831,7 @@ msgctxt "game_options"
 msgid "DISABLE VERTEX CACHE"
 msgstr "A VERTEX CACHE TILTÁSA"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
 msgstr "DISK SHADER GYORSÍTÓTÁR"
@@ -5839,7 +5841,7 @@ msgctxt "game_options"
 msgid "DISK TYPE"
 msgstr "LEMEZ TÍPUSA"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
+#. TRANSLATION: dolphin, duckstation, pcsx2, vpinball
 msgctxt "game_options"
 msgid "DISPLAY"
 msgstr "KIJELZŐ"
@@ -5854,7 +5856,7 @@ msgctxt "game_options"
 msgid "DISPLAY BACKGLASS GRILL"
 msgstr "KIJELZŐ HÁTTÉRÜVEGRÁCS"
 
-#. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "DISPLAY PHYSICAL SETUP"
 msgstr "FIZIKAI BEÁLLÍTÁS MEGJELENÍTÉSE"
@@ -5869,7 +5871,7 @@ msgctxt "game_options"
 msgid "DITHERING"
 msgstr "DITHERING"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "DK Bongos"
 msgstr "DK Bongók"
@@ -5894,7 +5896,7 @@ msgctxt "game_options"
 msgid "DNS OVERRIDE"
 msgstr "DNS FELÜLBÍRÁLÁSA"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "DOCK MODE"
 msgstr "DOKKOLÓ MÓD"
@@ -5924,7 +5926,7 @@ msgctxt "game_options"
 msgid "DOWNSCALE FILTER"
 msgstr "DOWNSCALE SZŰRŐ"
 
-#. TRANSLATION: flycast, libretro, libretro, libretro, libretro, ...
+#. TRANSLATION: flycast, libretro, ppsspp
 msgctxt "game_options"
 msgid "DRIVERS"
 msgstr ""
@@ -5974,7 +5976,7 @@ msgctxt "game_options"
 msgid "DUAL CORE MODE"
 msgstr "KETTŐS MAG ÜZEMMÓD"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "DUALSHOCK MOTION CONTROL"
 msgstr "DUALSHOCK MOZGÁSVEZÉRLÉS"
@@ -6004,7 +6006,7 @@ msgctxt "game_options"
 msgid "DYNAREC CODE INVALIDATION"
 msgstr "DYNAREC KÓD ÉRVÉNYTELENÍTÉSE"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Dance Mat"
 msgstr "Táncszőnyeg"
@@ -6054,7 +6056,7 @@ msgctxt "game_options"
 msgid "December"
 msgstr "December"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/mesen, libretro/puae, libretro/puae2021, ...
+#. TRANSLATION: citron, libretro/flycast, libretro/mesen, libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Default"
 msgstr "Alap"
@@ -6064,7 +6066,7 @@ msgctxt "game_options"
 msgid "Default (2 Buttons)"
 msgstr "Alapértelmezett (2 gomb)"
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Default Only"
 msgstr "Csak alapértelmezett"
@@ -6079,7 +6081,7 @@ msgctxt "game_options"
 msgid "Default by model"
 msgstr "Alapértelmezett modell szerint"
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
 "Default uses SDL2, otherwise enable controller specific capabilities. Sony "
@@ -6167,17 +6169,17 @@ msgctxt "game_options"
 msgid "Dick Smith Electronics VZ-200/300 snapshots"
 msgstr "Dick Smith Electronics VZ-200/300 snapshots"
 
-#. TRANSLATION: libretro/mame078plus, yabasanshiro, yabasanshiro
+#. TRANSLATION: libretro/mame078plus, yabasanshiro
 msgctxt "game_options"
 msgid "Digital"
 msgstr "Digitális"
 
-#. TRANSLATION: libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, ...
+#. TRANSLATION: libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Digital Controller"
 msgstr "Digitális vezérlő"
 
-#. TRANSLATION: libretro/swanstation, libretro/swanstation
+#. TRANSLATION: libretro/swanstation
 msgctxt "game_options"
 msgid "Digital Controller (Gamepad)"
 msgstr "Digitális vezérlő (Gamepad)"
@@ -6217,7 +6219,7 @@ msgctxt "game_options"
 msgid "Disable to access the system's settings, like time and language."
 msgstr "Tiltsa le a rendszerbeállítások, például az idő és a nyelv eléréséhez."
 
-#. TRANSLATION: bigpemu, duckstation, duckstation, duckstation, f2bgl, ...
+#. TRANSLATION: bigpemu, citron, duckstation, f2bgl, flycast, ...
 msgctxt "game_options"
 msgid "Disabled"
 msgstr "Letiltva"
@@ -6227,7 +6229,7 @@ msgctxt "game_options"
 msgid "Disabled (Beatle Interpreter)"
 msgstr "Letiltva (Beatle Interpreter)"
 
-#. TRANSLATION: cemu, cemu, cemu, cemu, cgenius, ...
+#. TRANSLATION: cemu, cgenius, devilutionx, duckstation, dxx-rebirth, ...
 msgctxt "game_options"
 msgid "Disabled (Default)"
 msgstr "Kikapcsolva (alapértelmezett)"
@@ -6257,12 +6259,12 @@ msgstr ""
 "Letiltja a csúcsgyorsítótárat. Megoldhatja a hiányzó vagy villogó grafikus "
 "kimenetet, de rontja a teljesítményt."
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Disk (Drive 1)"
 msgstr "Disk (Drive 1)"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Disk (Drive 2)"
 msgstr "Disk (Drive 2)"
@@ -6324,7 +6326,7 @@ msgstr ""
 "Torzítja a kimenetet, hogy teljesen kitöltse a képernyőt. Felülbírálja a "
 "képarányt."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Docked (Default)"
 msgstr "Dokkolt (alapértelmezett)"
@@ -6339,12 +6341,12 @@ msgctxt "game_options"
 msgid "Dominican Republic"
 msgstr "Dominikai Köztársaság"
 
-#. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds
+#. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Don't Override"
 msgstr "Ne bírálja felül"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame/openbor7530
 msgctxt "game_options"
 msgid "Don't Use (Default)"
 msgstr "Ne használja (alapértelmezett)"
@@ -6403,7 +6405,7 @@ msgstr "Driving Force Pro"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Drop item"
-msgstr ""
+msgstr "Elem eldobása"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -6415,17 +6417,17 @@ msgctxt "game_options"
 msgid "Dual Konami Justifiers"
 msgstr "Dual Konami Justifiers"
 
-#. TRANSLATION: duckstation, duckstation
+#. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "DualShock / Xbox Type"
 msgstr "DualShock / Xbox Type"
 
-#. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/pcsx_rearmed
+#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "DualShock Controller"
 msgstr "DualShock vezérlő"
 
-#. TRANSLATION: duckstation, duckstation, libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, ...
+#. TRANSLATION: duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
 msgctxt "game_options"
 msgid "DualShock has rumble support. Not all games support DualShock."
 msgstr ""
@@ -6448,7 +6450,7 @@ msgid ""
 "Libretro cores."
 msgstr ""
 
-#. TRANSLATION: cemu, dolphin, etlegacy, libretro/dolphin, play, ...
+#. TRANSLATION: cemu, citron, dolphin, etlegacy, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "Dutch"
 msgstr "Holland"
@@ -6461,7 +6463,7 @@ msgstr "Holland (nl)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Dynamic"
-msgstr ""
+msgstr "Dinamikus"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -6478,7 +6480,7 @@ msgctxt "game_options"
 msgid "Dynarec (Fastest)"
 msgstr "Dynarec (leggyorsabb)"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "EET"
 msgstr "EET"
@@ -6503,7 +6505,7 @@ msgctxt "game_options"
 msgid "EMULATE PCG-8100"
 msgstr "EMULATE PCG-8100"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "EMULATE WIIMOTE"
 msgstr "A WIIMOTE EMULÁLÁSA"
@@ -6523,7 +6525,7 @@ msgctxt "game_options"
 msgid "EMULATED SYSTEM"
 msgstr "EMULÁLT RENDSZER"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
+#. TRANSLATION: dolphin, dosbox, duckstation
 msgctxt "game_options"
 msgid "EMULATION"
 msgstr "EMULÁCIÓ"
@@ -6533,12 +6535,12 @@ msgctxt "game_options"
 msgid "EMULATION SPEED"
 msgstr "EMULÁCIÓS SEBESSÉG"
 
-#. TRANSLATION: supermodel, supermodel
+#. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "EMULATOR"
 msgstr ""
 
-#. TRANSLATION: libretro/panda3ds, libretro/panda3ds, libretro/panda3ds, libretro/panda3ds, libretro/panda3ds, ...
+#. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "EMULATOR SETTINGS"
 msgstr ""
@@ -6553,7 +6555,7 @@ msgctxt "game_options"
 msgid "ENABLE AI TRANSLATION SERVICE"
 msgstr "MI FORDÍTÁSI SZOLGÁLTATÁS ENGEDÉLYEZÉSE"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "ENABLE ASYNC SHADER COMPILATION"
 msgstr "ASYNC SHADER ÖSSZEÁLLÍTÁS ENGEDÉLYEZÉSE"
@@ -6693,12 +6695,12 @@ msgctxt "game_options"
 msgid "ENHANCED RENDERING RESOLUTION"
 msgstr "FEJLESZTETT MEGJELENÍTÉSI FELBONTÁS"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "EST"
 msgstr "EST"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "EST5EDT"
 msgstr "EST5EDT"
@@ -6716,9 +6718,9 @@ msgstr "EVDEV (alapértelmezett)"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "EXPANSION PACK"
-msgstr ""
+msgstr "BŐVÍTŐ CSOMAG"
 
-#. TRANSLATION: vpinball, vpinball
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "EXPERT SETTINGS"
 msgstr "SZAKÉRTŐI BEÁLLÍTÁSOK"
@@ -6753,12 +6755,12 @@ msgctxt "keys_files"
 msgid "Edit room"
 msgstr "Szoba szerkesztése"
 
-#. TRANSLATION: suyu, xenia, xenia-canary
+#. TRANSLATION: citron, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Egypt"
 msgstr "Egyiptom"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Eire"
 msgstr "Eire"
@@ -6808,17 +6810,17 @@ msgctxt "game_options"
 msgid "Emulate NTSC quirks to show more colours in hi-res mode."
 msgstr ""
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "Emulate a Pak in the controller expansion port."
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+#. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
 msgid "Emulate a Wii Remote Sideway with L2 for Shake and Nunchuk on R-stick."
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
 msgstr ""
@@ -6836,12 +6838,12 @@ msgstr ""
 "Emulálja a Super Game Boy 2-t az SGB számára. A játékokat a megfelelő "
 "sebességgel futtatja."
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
 msgstr "Emulálja a Wiimote mutatót a DS4 giroszkópjával."
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Emulate the Wiimote pointer with a mouse."
 msgstr "Egérrel emulálja a Wiimote mutatót."
@@ -6966,7 +6968,7 @@ msgstr ""
 "Engedélyezze a gyorsítótár csatlakoztatását. Egyes játékokban javíthatja a "
 "teljesítményt és a kompatibilitást."
 
-#. TRANSLATION: dolphin, rpcs3, rpcs3, rpcs3, rpcs3, ...
+#. TRANSLATION: dolphin, rpcs3
 msgctxt "game_options"
 msgid "Enable controller rumble capabilities if supported by the controller."
 msgstr "Engedélyezze a vezérlő rezgő képességeit, ha a vezérlő támogatja."
@@ -7026,7 +7028,7 @@ msgctxt "game_options"
 msgid "Enable high quality effects for special stages."
 msgstr "Kiváló minőségű effektusok engedélyezése speciális szakaszokhoz."
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Enable launching pre-installed WHDLoad installs."
 msgstr "Az előre telepített WHDLoad telepítések elindításának engedélyezése."
@@ -7074,12 +7076,12 @@ msgstr ""
 "A keretek hozzáadásának engedélyezése vagy letiltása, ha a tartalom 4:3 "
 "képarányú szélesvásznú kijelzőn jelenik meg."
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Enable or disable high score saving"
 msgstr "A magas pontszámok mentésének engedélyezése vagy letiltása"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame/openbor7530
 msgctxt "game_options"
 msgid "Enable per-game custom configuration via MAME menu."
 msgstr "Játékonkénti egyéni konfiguráció engedélyezése a MAME menün keresztül."
@@ -7255,12 +7257,12 @@ msgctxt "game_options"
 msgid "Enable widescreen support."
 msgstr "A szélesvásznú támogatás engedélyezése."
 
-#. TRANSLATION: bigpemu, cemu, cemu, cemu, cemu, ...
+#. TRANSLATION: bigpemu, cemu, cgenius, citron, devilutionx, ...
 msgctxt "game_options"
 msgid "Enabled"
 msgstr "Engedélyezve"
 
-#. TRANSLATION: duckstation, duckstation, f2bgl, f2bgl, flycast, ...
+#. TRANSLATION: duckstation, f2bgl, flycast, libretro/mame, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "Engedélyezve (alapértelmezett)"
@@ -7344,7 +7346,7 @@ msgctxt "game_options"
 msgid "Enabling will smooth out the image."
 msgstr "Ha engedélyezi, a képet elsimítja."
 
-#. TRANSLATION: awgl, cemu, doom3, etlegacy, flycast/dolphin, ...
+#. TRANSLATION: awgl, cemu, citron, doom3, etlegacy, ...
 msgctxt "game_options"
 msgid "English"
 msgstr "Angol"
@@ -7421,7 +7423,7 @@ msgctxt "game_options"
 msgid "Enhancement. Increase the rendering resolution."
 msgstr "Fejlesztés. Növelje a renderelési felbontást."
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, flycast, ...
+#. TRANSLATION: azahar, citron, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid ""
 "Enhancement. Increase the rendering resolution. Makes 3D objects clearer."
@@ -7580,7 +7582,7 @@ msgctxt "game_options"
 msgid "Estonia"
 msgstr "Észtország"
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, redream, ...
+#. TRANSLATION: citron, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
 msgctxt "game_options"
 msgid "Europe"
 msgstr "Európa"
@@ -7662,7 +7664,7 @@ msgstr ""
 "nélküli asztaloknál. Alapértelmezés szerint a beállítások a VPinballX.ini "
 "konfigurációs fájlból származnak."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Extreme"
 msgstr "Extrém"
@@ -7697,12 +7699,12 @@ msgctxt "game_options"
 msgid "FIDELITY FX SUPER RESOLUTION"
 msgstr "FDELITY FX SZUPER FELBONTÁS"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "FIFO (VSync On)"
 msgstr "FIFO (VSync bekapcsolva)"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "FIFO Relaxed"
 msgstr "FIFO Laza"
@@ -7717,7 +7719,7 @@ msgctxt "game_options"
 msgid "FILTER TILEMAPS"
 msgstr "CSEMPETÉRKÉPEK SZŰRÉSE"
 
-#. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds
+#. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "FIRMWARE SETTINGS"
 msgstr "FIRMWARE BEÁLLÍTÁSOK"
@@ -7737,12 +7739,12 @@ msgctxt "game_options"
 msgid "FLOPPY SPEED"
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "FLOPPY TURBO SPEED"
 msgstr "FLOPPY TURBO SEBESSÉG"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "FM SYNTHESIZER"
 msgstr "FM SZINTETIZÁTOR"
@@ -7832,7 +7834,7 @@ msgctxt "game_options"
 msgid "FRAME DUPING (SPEED UP)"
 msgstr "KERET DUGULÁS (GYORSÍTÁS)"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "FRAME LIMIT"
 msgstr "KÉPKOCKA LIMIT"
@@ -7842,7 +7844,7 @@ msgctxt "game_options"
 msgid "FRAME LIMITER"
 msgstr ""
 
-#. TRANSLATION: libretro, libretro
+#. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "FRAME MONITORING SETTINGS"
 msgstr ""
@@ -7926,12 +7928,12 @@ msgstr ""
 "A TELJES KÉPERNYŐ felülről lefelé nézheti a játékteret. Szekrényes "
 "használatra vagy több ablakos asztali használatra."
 
-#. TRANSLATION: pcsx2, suyu, vita3k
+#. TRANSLATION: citron, pcsx2, vita3k
 msgctxt "game_options"
 msgid "FXAA"
 msgstr "FXAA"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid ""
 "FXAA has a lower performance impact, goof for low resolutions. SMAA offers "
@@ -7988,7 +7990,7 @@ msgstr "Gyors tolmács"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Fast forward"
-msgstr ""
+msgstr "Gyors előretekerés"
 
 #. TRANSLATION: flycast
 #, c-format
@@ -8113,12 +8115,12 @@ msgstr ""
 "szinkronizálásakor szinkronizál, kivéve a késői képkockákat (a cél FPS "
 "alatt), amelyek azonnal megjelennek."
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, melonds, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, melonds, ...
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr "Javítsa ki a képernyő szakadását. CPU terhelő."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid ""
 "Fix screen tearing. FIFO (Vsync) does not drop frames. FIFO Relaxed allows "
@@ -8153,12 +8155,12 @@ msgctxt "game_options"
 msgid "Fixes flickering."
 msgstr "Kijavítja a villódzást."
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Flight Stick (3 Axes, 4 Btns, 1 Hat)"
 msgstr "Flight Stick (3 tengely, 4 Gomb, 1 Hat)"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Floppy Disk"
 msgstr "Floppy lemez"
@@ -8225,7 +8227,7 @@ msgctxt "game_options"
 msgid "For weak machines. Some games will not work with this."
 msgstr "Gyenge gépekhez. Egyes játékok nem működnek ezzel."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Force 16:10"
 msgstr "Kényszerített 16:10"
@@ -8235,12 +8237,12 @@ msgctxt "game_options"
 msgid "Force 16:9"
 msgstr "Kényszerített 16:9"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Force 21:9"
 msgstr "Kényszerített 21:9"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Force 32:9"
 msgstr "Kényszerít 32:9"
@@ -8259,7 +8261,7 @@ msgstr ""
 "Kényszerítse a 3D geometriát, hogy mindig a felső képernyőn jelenjen meg. "
 "Hasznos egyképernyős eszközökhöz/játékokhoz."
 
-#. TRANSLATION: dolphin, dolphin_triforce, hypseus-singe, suyu
+#. TRANSLATION: citron, dolphin, dolphin_triforce, hypseus-singe
 msgctxt "game_options"
 msgid "Force 4:3"
 msgstr "Erőltetett 4:3"
@@ -8385,7 +8387,7 @@ msgstr ""
 "Ingyenes Build vagy Sandbox mód. Nem nyerhet vagy veszíthet egyedi készítésű "
 "térképeket, ha ez igaz értékre van állítva. A pénz miatt sem kell aggódnia."
 
-#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
+#. TRANSLATION: cemu, citron, dolphin, doom3, etlegacy, ...
 msgctxt "game_options"
 msgid "French"
 msgstr "Francia"
@@ -8490,7 +8492,7 @@ msgctxt "game_options"
 msgid "Full speed can break some games."
 msgstr "A teljes sebesség megtörhet néhány játékot."
 
-#. TRANSLATION: libretro/fuse, libretro/fuse
+#. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Fuller Joystick"
 msgstr "Fuller Joystick"
@@ -8525,7 +8527,7 @@ msgctxt "game_options"
 msgid "GAME LANGUAGE"
 msgstr ""
 
-#. TRANSLATION: lindbergh-loader, lindbergh-loader, lindbergh-loader, lindbergh-loader, lindbergh-loader
+#. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "GAME OPTIONS"
 msgstr "JÁTÉK OPCIÓK"
@@ -8550,32 +8552,32 @@ msgctxt "game_options"
 msgid "GAME RENDERING"
 msgstr ""
 
-#. TRANSLATION: shared, shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "GAME RENDERING & SHADERS"
 msgstr "JÁTÉK RENDERELÉS ÉS ÁRNYÉKOLÓK"
 
-#. TRANSLATION: awgl, f2bgl, f2bgl, shared, shared, ...
+#. TRANSLATION: awgl, f2bgl, shared, sonic2013, soniccd
 msgctxt "game_options"
 msgid "GAME TRANSLATION"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 1"
 msgstr "GAMECUBE VEZÉRLŐ 1"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 2"
 msgstr "GAMECUBE VEZÉRLŐ 2"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 3"
 msgstr "GAMECUBE VEZÉRLŐ 3"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "GAMECUBE CONTROLLER 4"
 msgstr "GAMECUBE VEZÉRLŐ 4"
@@ -8615,7 +8617,7 @@ msgctxt "game_options"
 msgid "GAMEPAD CURSOR SPEED"
 msgstr "GAMEPAD KURSZOR SEBESSÉGE"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "GB"
 msgstr "GB"
@@ -8650,7 +8652,7 @@ msgctxt "game_options"
 msgid "GB COLOURISATION"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "GB-Eire"
 msgstr "GB-Eire"
@@ -8740,22 +8742,22 @@ msgctxt "game_options"
 msgid "GLideN64 (Fastest)"
 msgstr "GLideN64 (Gyorsabb)"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "GMT"
 msgstr "GMT"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "GMT+0"
 msgstr "GMT+0"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "GMT-0"
 msgstr "GMT-0"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "GMT0"
 msgstr "GMT0"
@@ -8775,7 +8777,7 @@ msgctxt "game_options"
 msgid "GPU SYNC"
 msgstr "GPU SYNC"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid ""
 "GPU emulation accuracy. Most games render fine with Normal. High is required "
@@ -8794,12 +8796,12 @@ msgctxt "game_options"
 msgid "GRAPHICAL USER INTERFACE"
 msgstr "GRAFIKUS FELHASZNÁLÓI FELÜLET"
 
-#. TRANSLATION: citra, citra, citra, citra, citra, ...
+#. TRANSLATION: azahar, rtcw, theforceengine
 msgctxt "game_options"
 msgid "GRAPHICS"
 msgstr "GRAFIKA"
 
-#. TRANSLATION: cemu, citra, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: azahar, cemu, citron, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "GRAFIKUS API"
@@ -8827,7 +8829,7 @@ msgstr "GRAFIKA RENDERER"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "GSPLUS BIOS FILENAME"
-msgstr ""
+msgstr "GSPLUS BIOS FÁJLNÉV"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -8854,7 +8856,7 @@ msgctxt "game_options"
 msgid "Game info/art"
 msgstr "Játék információk/művészet"
 
-#. TRANSLATION: flycast/dolphin, flycast/dolphin
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "Game's default"
 msgstr "A játék alapértelmezett beállítása"
@@ -8864,12 +8866,12 @@ msgctxt "game_options"
 msgid "GameBlaster"
 msgstr "GameBlaster"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "GameCube Adapter for Wii U"
 msgstr "GameCube adapter Wii U-hoz"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, libretro/dolphin, ...
+#. TRANSLATION: dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "GameCube Controller"
 msgstr "GameCube vezérlő"
@@ -8889,12 +8891,12 @@ msgctxt "game_options"
 msgid "GamePark GP32 SmartMedia cards"
 msgstr "GamePark GP32 SmartMedia kártya"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Gamepad"
 msgstr "Gamepad (játékvezérlő)"
 
-#. TRANSLATION: libretro/dosbox, libretro/dosbox
+#. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
 msgid "Gamepad (D-pad, 2 Buttons)"
 msgstr "Gamepad (D-pad, 2 gombos)"
@@ -8927,7 +8929,7 @@ msgctxt "keys_files"
 msgid "Gas / Accelerate / Short Pass"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Gaussian"
 msgstr "Gaussian"
@@ -8937,12 +8939,12 @@ msgctxt "game_options"
 msgid "General MIDI SoundFont (Default)"
 msgstr "General MIDI SoundFont (alapértelmezés)"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Generic Keyboard Binds"
 msgstr "Általános billentyűzet beállítás"
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Genesis/Megadrive Style"
 msgstr "Genesis/Megadrive Stílus"
@@ -8957,7 +8959,7 @@ msgctxt "game_options"
 msgid "Georgia"
 msgstr "Georgia"
 
-#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
+#. TRANSLATION: cemu, citron, dolphin, doom3, etlegacy, ...
 msgctxt "game_options"
 msgid "German"
 msgstr "Német"
@@ -9047,7 +9049,7 @@ msgctxt "keys_files"
 msgid "Graphics filtering on/off"
 msgstr "Grafikai szűrés be/ki"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Gravis GamePad (D-pad + 4 Btns)"
 msgstr "Gravis GamePad (D-pad + 4 Btns)"
@@ -9072,7 +9074,7 @@ msgctxt "game_options"
 msgid "Greek (gk)"
 msgstr "Görög (gk)"
 
-#. TRANSLATION: flycast, flycast, flycast, flycast, libretro/flycast, ...
+#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Green"
 msgstr "Zöld"
@@ -9107,7 +9109,7 @@ msgctxt "game_options"
 msgid "Green - TI-83"
 msgstr "Green - TI-83"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Greenwich"
 msgstr "Greenwich"
@@ -9177,7 +9179,7 @@ msgctxt "game_options"
 msgid "HID"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
 msgstr "ELREJTI A FÉNYPISZTOLY CÉLKERESZTJÉT"
@@ -9192,7 +9194,7 @@ msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
 msgstr "NAGY FELBONTÁSÚ MÓD"
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "HIGH SCORE PLUGIN"
 msgstr "MAGAS PONTSZÁM PLUGIN"
@@ -9242,7 +9244,7 @@ msgctxt "game_options"
 msgid "HQ MODE"
 msgstr "HQ MÓD"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
@@ -9267,7 +9269,7 @@ msgctxt "game_options"
 msgid "Hard Disk Image"
 msgstr "Merevlemez kép"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Hard Drive"
 msgstr "Merevlemez"
@@ -9277,7 +9279,7 @@ msgctxt "game_options"
 msgid "Hard Drive (II UX)"
 msgstr "Merevlemez (II UX)"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Hardcoded keymap to joy port mapping for Keyrah hardware."
 msgstr ""
@@ -9335,7 +9337,7 @@ msgstr "Segítség és információ"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Help computer"
-msgstr ""
+msgstr "Számítógépes segítség"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -9366,7 +9368,7 @@ msgctxt "game_options"
 msgid "Hermite (Default)"
 msgstr "Hermite (alapértelmezett)"
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "Hidden"
 msgstr "Rejtett"
@@ -9376,13 +9378,18 @@ msgctxt "game_options"
 msgid "Hide"
 msgstr "Elrejt"
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Hide bezels"
+msgstr ""
+
+#. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 msgstr ""
 "A célkereszt elrejtése a támogatott játékokban, pl. ActionMax, Maddog II."
 
-#. TRANSLATION: atomiswave.flycast.keys, dreamcast.flycast.keys, dreamcast.redream.keys, jaguar.bigpemu.keys, jaguarcd.bigpemu.keys, ...
+#. TRANSLATION: naomigd.flycast.keys
 msgctxt "keys_files"
 msgid "Hide the bezel"
 msgstr "Rejtse el a keretet"
@@ -9397,7 +9404,7 @@ msgctxt "game_options"
 msgid "Hides borders on many games. Some games used the borders."
 msgstr "Sok játékban elrejti a határokat. Néhány játék használta a határokat."
 
-#. TRANSLATION: amiberry, libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus, ...
+#. TRANSLATION: amiberry, citron, libretro/fceumm, libretro/mesen, libretro/mesens, ...
 msgctxt "game_options"
 msgid "High"
 msgstr "Magas"
@@ -9412,7 +9419,7 @@ msgctxt "game_options"
 msgid "High 720p"
 msgstr "Magas 720p"
 
-#. TRANSLATION: shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "High Performance"
 msgstr "Nagy teljesítményű"
@@ -9443,12 +9450,12 @@ msgctxt "game_options"
 msgid "Honduras"
 msgstr "Honduras"
 
-#. TRANSLATION: suyu, xenia, xenia-canary
+#. TRANSLATION: citron, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Hong Kong"
 msgstr "Hong Kong"
 
-#. TRANSLATION: drastic, libretro/fceumm, libretro/flycast, libretro/flycast, libretro/flycast, ...
+#. TRANSLATION: drastic, libretro/fceumm, libretro/flycast, libretro/flycast2021, libretro/nestopia
 msgctxt "game_options"
 msgid "Horizontal"
 msgstr "Vízszintes"
@@ -9504,12 +9511,12 @@ msgctxt "game_options"
 msgid "Hybrid + Bicubic"
 msgstr "Hybrid + Bicubic"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
 msgstr "Hybrid Screen Bottom"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
 msgstr "Hybrid Screen Top"
@@ -9519,7 +9526,7 @@ msgctxt "game_options"
 msgid "Hybrid Ubershaders"
 msgstr "Hybrid Ubershaders"
 
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/pcsx_rearmed
+#. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Hyper Blaster/Justifier"
 msgstr "Hyper Blaster/Justifier"
@@ -9644,12 +9651,12 @@ msgctxt "game_options"
 msgid "IT"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, suyu, xenia, xenia-canary
+#. TRANSLATION: citron, libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Iceland"
 msgstr "Izland"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "If enabled, passes all physical keyboard events to the core."
 msgstr ""
@@ -9673,7 +9680,7 @@ msgctxt "game_options"
 msgid "Ignored with 'Cycle-exact'."
 msgstr "Figyelmen kívül hagyva a „Cycle-exact” beállítással."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Immediate"
 msgstr "Azonnali"
@@ -9720,7 +9727,7 @@ msgctxt "game_options"
 msgid "Improves clarity of distant textures when mipmapping is enabled."
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin_triforce, dxx-rebirth, libretro/dolphin, pcsx2, ...
+#. TRANSLATION: citron, dolphin, dolphin_triforce, dxx-rebirth, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "Improves clarity of distant textures."
 msgstr "Javítja a távoli textúrák tisztaságát."
@@ -9853,7 +9860,7 @@ msgstr "InuYasha Sengoku Battle Fix"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Inventory"
-msgstr ""
+msgstr "Leltár"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -9874,7 +9881,7 @@ msgctxt "game_options"
 msgid "Invert the vertical joystick axis on flight games."
 msgstr "Fordítsa meg a függőleges joystick tengelyt a repülős játékokban."
 
-#. TRANSLATION: suyu, xenia, xenia-canary
+#. TRANSLATION: citron, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Iran"
 msgstr "Irán"
@@ -9894,12 +9901,12 @@ msgctxt "game_options"
 msgid "Irish"
 msgstr "Ír"
 
-#. TRANSLATION: suyu, xenia, xenia-canary
+#. TRANSLATION: citron, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Israel"
 msgstr "Izrael"
 
-#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
+#. TRANSLATION: cemu, citron, dolphin, doom3, etlegacy, ...
 msgctxt "game_options"
 msgid "Italian"
 msgstr "Olasz"
@@ -9954,7 +9961,7 @@ msgctxt "game_options"
 msgid "JOYSTICK DEADZONE"
 msgstr "JOYSTICK HOLTZÓNA"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "JOYSTICK GATE SIZE"
 msgstr "JOYSTICK KAPU MÉRETE"
@@ -9969,7 +9976,7 @@ msgctxt "game_options"
 msgid "JOYSTICK SENSITIVITY"
 msgstr "JOYSTICK ÉRZÉKENYSÉG"
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "JOYSTICK TO CURSOR SENSITIVITY"
 msgstr "JOYSTICK A KURSZOR ÉRZÉKENYSÉGÉRE"
@@ -9979,17 +9986,17 @@ msgctxt "game_options"
 msgid "JOYSTICK TO DPAD"
 msgstr "JOYSTICK A DPAD-HOZ"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "JOYSTICK TYPE"
 msgstr "JOYSTICK TÍPUS"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, ...
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64
 msgctxt "game_options"
 msgid "JUMP ON A"
 msgstr "A BETŰHÖZ UGRÁS"
 
-#. TRANSLATION: suyu, xenia, xenia-canary
+#. TRANSLATION: citron, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Jamaica"
 msgstr "Jamaica"
@@ -9999,7 +10006,7 @@ msgctxt "game_options"
 msgid "January"
 msgstr "Január"
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, redream, ...
+#. TRANSLATION: citron, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
 msgctxt "game_options"
 msgid "Japan"
 msgstr "Japán"
@@ -10009,7 +10016,7 @@ msgctxt "game_options"
 msgid "Japan (Default)"
 msgstr "Japán (alapértelmezett)"
 
-#. TRANSLATION: cemu, doom3, etlegacy, flycast/dolphin, libretro/dolphin, ...
+#. TRANSLATION: cemu, citron, doom3, etlegacy, flycast/dolphin, ...
 msgctxt "game_options"
 msgid "Japanese"
 msgstr "Japán"
@@ -10049,57 +10056,57 @@ msgctxt "game_options"
 msgid "Joypad"
 msgstr "Joypad"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad 2 Button"
 msgstr "Joypad 2 Gomb"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad 2 Button + Master Tap"
 msgstr "Joypad 2 gomb + Fő érintés"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, libretro/picodrive
+#. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
 msgid "Joypad 3 Button"
 msgstr "Joypad 3 Gomb"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad 3 Button + 4-WayPlay"
 msgstr "Joypad 3 gomb + 4 irányú játék"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad 3 Button + Teamplayer"
 msgstr "Joypad 3 gomb + Teamplayer"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, libretro/picodrive
+#. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
 msgid "Joypad 6 Button"
 msgstr "Joypad 6 Gomb"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad 6 Button + 4-WayPlay"
 msgstr "Joypad 6 gomb + 4 irányú játék"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad 6 Button + Teamplayer"
 msgstr "Joypad 6 gomb + Teamplayer"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Joypad Auto"
 msgstr "Joypad Auto"
 
-#. TRANSLATION: libretro/melondsds, libretro/puae, libretro/puae, libretro/puae, libretro/puae, ...
+#. TRANSLATION: libretro/melondsds, libretro/puae, libretro/puae2021, libretro/uae4arm, libretro/vice_x128, ...
 msgctxt "game_options"
 msgid "Joystick"
 msgstr "Joystick"
 
-#. TRANSLATION: libretro/dosbox, libretro/dosbox
+#. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
 msgid "Joystick (Analog, 2 Buttons)"
 msgstr "Joystick (Analog, 2 gombos)"
@@ -10112,14 +10119,14 @@ msgstr "Július"
 #. TRANSLATION: omf2097.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
-msgstr ""
+msgstr "Ugrás"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "June"
 msgstr "Június"
 
-#. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx
+#. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Justifier"
 msgstr "Igazoló"
@@ -10129,7 +10136,7 @@ msgctxt "game_options"
 msgid "KEEP MAIN SCREEN ON TOP"
 msgstr "TARTSA A FŐKÉPERNYŐT FENT"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/vice_x128, ...
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
 msgid "KEYBOARD PASSTHROUGH"
 msgstr "BILLENTYŰZET ÁTENGEDÉS"
@@ -10139,7 +10146,7 @@ msgctxt "game_options"
 msgid "KEYBOARD SUPPORT"
 msgstr "BILLENTYŰZET TÁMOGATÁS"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "KEYRAH KEYPAD MAPPING"
 msgstr ""
@@ -10159,7 +10166,7 @@ msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
 msgstr "Tartsa meg az arányt (alapértelmezett)"
 
-#. TRANSLATION: libretro/fuse, libretro/fuse
+#. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Kempston Joystick"
 msgstr "Kempston Joystick"
@@ -10169,22 +10176,22 @@ msgctxt "game_options"
 msgid "Kenya"
 msgstr "Kenya"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, libretro/flycast, ...
+#. TRANSLATION: dolphin, libretro/flycast, libretro/flycast2021, libretro/puae, libretro/puae2021, ...
 msgctxt "game_options"
 msgid "Keyboard"
 msgstr "Billentyűzet"
 
-#. TRANSLATION: libretro/dosbox, libretro/dosbox, libretro/prboom, libretro/tyrquake
+#. TRANSLATION: libretro/dosbox, libretro/prboom, libretro/tyrquake
 msgctxt "game_options"
 msgid "Keyboard + Mouse"
 msgstr "Billentyűzet + egér"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Keyboard + Mouse (Left An.)"
 msgstr "Billentyűzet + egér (bal an.)"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Keyboard + Mouse (Right An.)"
 msgstr "Billentyűzet + egér (jobbra)"
@@ -10243,12 +10250,12 @@ msgctxt "game_options"
 msgid "Konami Justifiers"
 msgstr "Konami Justifiers"
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "Korea"
 msgstr "Korea"
 
-#. TRANSLATION: cemu, doom3, easyrpg, etlegacy, libretro/dolphin, ...
+#. TRANSLATION: cemu, citron, doom3, easyrpg, etlegacy, ...
 msgctxt "game_options"
 msgid "Korean"
 msgstr "Koreai"
@@ -10258,7 +10265,7 @@ msgctxt "game_options"
 msgid "Kuwait"
 msgstr "Kuvait"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Kwajalein"
 msgstr "Kwajalein"
@@ -10278,12 +10285,12 @@ msgctxt "game_options"
 msgid "LAN / WAN STREAMING"
 msgstr "LAN / WAN STREAMING"
 
-#. TRANSLATION: doom3, etlegacy, f2bgl, fallout1-ce, fallout2-ce, ...
+#. TRANSLATION: citron, doom3, etlegacy, f2bgl, fallout1-ce, ...
 msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr "NYELV"
 
-#. TRANSLATION: libretro, libretro, shared, shared, shared, ...
+#. TRANSLATION: libretro, shared
 msgctxt "game_options"
 msgid "LATENCY REDUCTION"
 msgstr "KÉSLELTETÉS CSÖKKENTÉSE"
@@ -10318,7 +10325,7 @@ msgctxt "game_options"
 msgid "LCD Ghosting (Fast)"
 msgstr "LCD szellemkép (gyors)"
 
-#. TRANSLATION: duckstation, flycast, flycast, flycast, flycast, ...
+#. TRANSLATION: duckstation, flycast, hypseus-singe/vitaquake3, libretro/beetle-saturn, libretro/fbneo, ...
 msgctxt "game_options"
 msgid "LIGHT GUN"
 msgstr "FÉNYPUSKA"
@@ -10328,7 +10335,7 @@ msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIR"
 msgstr "FÉNYPUSKA CÉLKERESZT"
 
-#. TRANSLATION: dolphin, dolphin, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, rpcs3, ...
+#. TRANSLATION: dolphin, hypseus-singe/vitaquake3, rpcs3, shared
 msgctxt "game_options"
 msgid "LIGHT GUNS"
 msgstr "FÉNYPISZTOLYOK"
@@ -10363,7 +10370,7 @@ msgctxt "game_options"
 msgid "LINEAR UPSCALING"
 msgstr "LINEÁRIS FELSKÁLÁZÁS"
 
-#. TRANSLATION: libretro, libretro
+#. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "LINUXRAW"
 msgstr ""
@@ -10373,7 +10380,7 @@ msgctxt "game_options"
 msgid "LLE"
 msgstr "LLE"
 
-#. TRANSLATION: rpcs3, rpcs3
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "LLVM Recompiler"
 msgstr "LLVM újrafordító"
@@ -10384,7 +10391,7 @@ msgid "LLVM is fastest, use the Interpreter settings if there are issues."
 msgstr ""
 "Az LLVM a leggyorsabb, probléma esetén használja a fordító beállításait."
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, libretro/mesen, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, libretro/mesen, ...
 msgctxt "game_options"
 msgid "LOAD CUSTOM TEXTURES"
 msgstr "EGYÉNI TEXTÚRÁK BETÖLTÉSE"
@@ -10404,17 +10411,17 @@ msgctxt "game_options"
 msgid "Landscape"
 msgstr "Fekvő"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Large Bottom"
 msgstr "Nagy alsó"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Large Top"
 msgstr "Nagy felső"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Larger"
 msgstr "Nagyobb"
@@ -10429,7 +10436,7 @@ msgctxt "game_options"
 msgid "Laser/VZ 64k Memory (Default)"
 msgstr "Laser/VZ 64k Memory (Alap)"
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "Latin American Spanish"
 msgstr "Latin-amerikai spanyol"
@@ -10449,12 +10456,12 @@ msgctxt "keys_files"
 msgid "Left"
 msgstr "Bal"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Left Analogue (Auto)"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Left Analogue (Forced)"
 msgstr ""
@@ -10474,7 +10481,7 @@ msgctxt "game_options"
 msgid "Left stick"
 msgstr "Bal kar"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Left/Right"
 msgstr "Bal/Jobb"
@@ -10484,7 +10491,7 @@ msgctxt "game_options"
 msgid "Legacy (single threaded)"
 msgstr "Legacy (egyszálas)"
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Legacy Evdev"
 msgstr "Legacy Evdev"
@@ -10494,7 +10501,7 @@ msgctxt "game_options"
 msgid "Legacy3D"
 msgstr "Legacy3D"
 
-#. TRANSLATION: suyu, xenia, xenia-canary
+#. TRANSLATION: citron, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Libya"
 msgstr "Líbia"
@@ -10519,12 +10526,12 @@ msgctxt "game_options"
 msgid "Light Green"
 msgstr "Világoszöld"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Light Gun"
 msgstr "Fénypuska"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Light Phaser"
 msgstr "Light Phaser"
@@ -10643,12 +10650,12 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look down"
-msgstr ""
+msgstr "Nézz lefelé"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look up"
-msgstr ""
+msgstr "Nézz fel"
 
 #. TRANSLATION: amiberry, libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus, ...
 msgctxt "game_options"
@@ -10709,17 +10716,17 @@ msgctxt "game_options"
 msgid "MAC MODEL"
 msgstr "MAC MODELL"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "MAME (ASIC YM3438)"
 msgstr "MAME (ASIC YM3438)"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "MAME (Enhanced YM3438)"
 msgstr "MAME (Enhanced YM3438)"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "MAME (YM2612)"
 msgstr "MAME (YM2612)"
@@ -10749,7 +10756,7 @@ msgctxt "game_options"
 msgid "MAXIMUM FRAMERATE"
 msgstr "MAXIMÁLIS KÉPKOCKASEBESSÉG"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "MEDIA TYPE"
 msgstr "MÉDIA TÍPUS"
@@ -10774,7 +10781,7 @@ msgctxt "game_options"
 msgid "MENU SOUNDS"
 msgstr "MENÜ HANGOK"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "MET"
 msgstr "MET"
@@ -10814,7 +10821,7 @@ msgctxt "game_options"
 msgid "MOUNT CACHE"
 msgstr "GYORSÍTÓTÁR CSATLAKOZTATÁSA"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "MOUSE AS WIIMOTE POINTER"
 msgstr "EGÉR, MINT WIIMOTE MUTATÓ"
@@ -10824,12 +10831,12 @@ msgctxt "game_options"
 msgid "MOUSE SPEED"
 msgstr "EGÉR SEBESSÉG"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "MST"
 msgstr "MST"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "MST7MDT"
 msgstr "MST7MDT"
@@ -10929,7 +10936,7 @@ msgctxt "game_options"
 msgid "Macintosh High Density Disk images"
 msgstr "Macintosh High Density Disk images"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Mailbox (Recommended)"
 msgstr "Postaláda (ajánlott)"
@@ -10942,7 +10949,7 @@ msgstr ""
 "Tedd megtekinthetővé a menüben a játéktörténetet, a beállítási utasításokat "
 "és a speciális mozdulatokat"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/vice_x64, ...
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64
 msgctxt "game_options"
 msgid "Makes second fire button press up instead."
 msgstr "Ehelyett megnyomja a második tűzgombot."
@@ -10974,7 +10981,7 @@ msgctxt "keys_files"
 msgid "Manage Staff"
 msgstr "Személyzet kezelése"
 
-#. TRANSLATION: drastic, libretro/mednafen_wswan, vpinball, vpinball, vpinball, ...
+#. TRANSLATION: drastic, libretro/mednafen_wswan, vpinball
 msgctxt "game_options"
 msgid "Manual"
 msgstr "Kézikönyv"
@@ -11026,7 +11033,7 @@ msgctxt "game_options"
 msgid "Map controller inputs to light gun inputs."
 msgstr "A vezérlő bemeneteit leképezi a fénypuska bemeneteire."
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Map your controller to an emulated Wiimote."
 msgstr "Rendelje hozzá a kontrollert egy emulált Wiimote-hoz."
@@ -11044,7 +11051,7 @@ msgstr "Egyeztetési ablak"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Max"
-msgstr ""
+msgstr "Max"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -11203,12 +11210,12 @@ msgstr ""
 "A Mega és Giga mód javíthatja a teljesítményt. Használja a Csökkentett módot "
 "a maximális kompatibilitás érdekében."
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "MegaSD"
 msgstr "MegaSD"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, ...
+#. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
 msgid "Megadrive"
 msgstr "Megadrive"
@@ -11218,7 +11225,7 @@ msgctxt "game_options"
 msgid "Megadrive (8 Buttons)"
 msgstr "Megadrive (8 gomb)"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "Memory Pak"
 msgstr "Memória csomag"
@@ -11293,17 +11300,17 @@ msgctxt "game_options"
 msgid "Moderate"
 msgstr "Mérsékelt"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Modern"
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Modern Alternative"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Modern Fightstick Style"
 msgstr "Modern Fightstick Stílus"
@@ -11318,7 +11325,7 @@ msgctxt "game_options"
 msgid "Mongolia"
 msgstr "Mongólia"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Mono"
 msgstr "Mono"
@@ -11371,7 +11378,7 @@ msgstr ""
 "Csatlakoztasson egy floppyt a felhasználói adatokhoz, szükség esetén "
 "létrehozza"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/genesisplusgx, libretro/melonds, libretro/np2kai
 msgctxt "game_options"
 msgid "Mouse"
 msgstr "Egér"
@@ -11381,7 +11388,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "Mouse (1351)"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Egérkattintás"
@@ -11401,7 +11408,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr "Mozgás előre, a W megnyomásával használható"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "Stílusmutató mozgatása"
@@ -11409,7 +11416,7 @@ msgstr "Stílusmutató mozgatása"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move back / down"
-msgstr ""
+msgstr "Mozgás hátra / le"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11444,7 +11451,7 @@ msgstr "Mozgás előre"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move forward / up"
-msgstr ""
+msgstr "Mozgás előre / felfelé"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11456,7 +11463,7 @@ msgctxt "keys_files"
 msgid "Move right"
 msgstr "Mozgás jobbra"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Moves South to West, West to North, etc. Standard controller type only."
 msgstr ""
@@ -11467,7 +11474,7 @@ msgctxt "game_options"
 msgid "Much faster than interpreter (but may have issues)."
 msgstr "Sokkal gyorsabb, mint a fordító (de lehetnek problémák)."
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
 msgid "N64"
 msgstr "N64"
@@ -11497,17 +11504,17 @@ msgctxt "game_options"
 msgid "NEO GEO CD BIOS"
 msgstr "NEO GEO CD BIOS"
 
-#. TRANSLATION: libretro/fceumm, libretro/fceumm
+#. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
 msgid "NES Gamepad"
 msgstr "NES Gamepad"
 
-#. TRANSLATION: libretro/fceumm, libretro/fceumm
+#. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
 msgid "NES Zapper"
 msgstr "NES Zapper"
 
-#. TRANSLATION: xemu, xemu, xemu, xemu, xemu, ...
+#. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "NETWORK"
 msgstr "HÁLÓZAT"
@@ -11517,7 +11524,7 @@ msgctxt "game_options"
 msgid "NETWORK TYPE"
 msgstr "HÁLÓZAT TÍPUSA"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "NEW 3DS MODE"
 msgstr "ÚJ 3DS MÓD"
@@ -11640,17 +11647,17 @@ msgctxt "game_options"
 msgid "NVRAM STORAGE"
 msgstr "NVRAM TÁROLÁS"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "NZ"
 msgstr "NZ"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "NZ-CHAT"
 msgstr "NZ-CHAT"
 
-#. TRANSLATION: duckstation, duckstation, libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, ...
+#. TRANSLATION: duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
 msgctxt "game_options"
 msgid "Namco GunCon"
 msgstr "Namco GunCon"
@@ -11689,7 +11696,7 @@ msgctxt "game_options"
 msgid "Native Vulkan (Default)"
 msgstr ""
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Navajo"
 msgstr "Navahó"
@@ -11699,12 +11706,12 @@ msgctxt "game_options"
 msgid "Navite"
 msgstr ""
 
-#. TRANSLATION: libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, ...
+#. TRANSLATION: libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
 msgctxt "game_options"
 msgid "NeGcon"
 msgstr "NeGcon"
 
-#. TRANSLATION: duckstation, duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/swanstation, ...
+#. TRANSLATION: duckstation, libretro/mednafen_psx, libretro/swanstation
 msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "NeGcon (Rezgő)"
@@ -11714,7 +11721,7 @@ msgctxt "game_options"
 msgid "Nearest"
 msgstr "Legközelebbi"
 
-#. TRANSLATION: cemu, cemu, sonic2013, soniccd, suyu
+#. TRANSLATION: cemu, citron, sonic2013, soniccd
 msgctxt "game_options"
 msgid "Nearest Neighbour"
 msgstr "Legközelebbi szomszéd"
@@ -11748,12 +11755,12 @@ msgctxt "game_options"
 msgid "Needed by some games that use special Unicode characters."
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Neo Geo CD Pad"
 msgstr "Neo Geo CD Pad"
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Neo Geo Mini Pad"
 msgstr "Neo Geo Mini Pad"
@@ -11806,17 +11813,17 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next item"
-msgstr ""
+msgstr "Következő elem"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Next slot"
-msgstr ""
+msgstr "Következő hely"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next weapon"
-msgstr ""
+msgstr "Következő fegyver"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -11858,7 +11865,7 @@ msgctxt "game_options"
 msgid "No skipping"
 msgstr "Nincs kihagyás"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin_triforce, ...
+#. TRANSLATION: citron, dolphin, dolphin_triforce, drastic, fallout1-ce, ...
 msgctxt "game_options"
 msgid "None"
 msgstr "Egyik sem"
@@ -11873,12 +11880,12 @@ msgctxt "game_options"
 msgid "None/Sharp Pixels"
 msgstr "Nincs/Éles pixelek"
 
-#. TRANSLATION: awgl, dosbox, duckstation, flycast, libretro/flycast, ...
+#. TRANSLATION: awgl, citron, dosbox, duckstation, flycast, ...
 msgctxt "game_options"
 msgid "Normal"
 msgstr "Normál"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, fallout1-ce, ...
+#. TRANSLATION: dolphin, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Normal (Default)"
 msgstr "Normál (alapértelmezett)"
@@ -11908,12 +11915,12 @@ msgctxt "game_options"
 msgid "Norwegian (no)"
 msgstr "Norvég (no)"
 
-#. TRANSLATION: duckstation, duckstation
+#. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Not Connected"
 msgstr "Nincs csatlakoztatva"
 
-#. TRANSLATION: libretro/beetle-saturn, libretro/beetle-saturn, libretro/yabasanshiro, libretro/yabasanshiro
+#. TRANSLATION: libretro/beetle-saturn, libretro/yabasanshiro
 msgctxt "game_options"
 msgid "Not all games support 3D pad."
 msgstr "Nem minden játék támogatja a 3D pad-ot."
@@ -11953,12 +11960,12 @@ msgctxt "keys_files"
 msgid "Nudge up"
 msgstr "Lökés fel"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Nuked (YM2612)"
 msgstr "Nuked (YM2612)"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Nuked (YM3438)"
 msgstr "Nuked (YM3438)"
@@ -11968,7 +11975,7 @@ msgctxt "game_options"
 msgid "Null"
 msgstr ""
 
-#. TRANSLATION: amiberry, amiberry, amiberry, flycast, libretro/flycast, ...
+#. TRANSLATION: amiberry, flycast, libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "OFF"
 msgstr "KI"
@@ -11983,12 +11990,12 @@ msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "KÉPERNYŐN KÍVÜLI ÚJRATÖLTÉS GOMB"
 
-#. TRANSLATION: amiberry, amiberry, libretro/melonds
+#. TRANSLATION: amiberry, libretro/melonds
 msgctxt "game_options"
 msgid "ON"
 msgstr "BE"
 
-#. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, libretro/melondsds, ...
+#. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "ON-SCREEN DISPLAY & NOTIFCATIONS"
 msgstr "KÉPERNYŐN MEGJELENŐ ÉRTESÍTÉSEK & ÉRTESÍTÉSEK"
@@ -12048,12 +12055,12 @@ msgctxt "game_options"
 msgid "October"
 msgstr "Október"
 
-#. TRANSLATION: awgl, cannonball, cemu, citra, citra, ...
+#. TRANSLATION: awgl, azahar, cannonball, cemu, dolphin, ...
 msgctxt "game_options"
 msgid "Off"
 msgstr "Ki"
 
-#. TRANSLATION: cemu, cemu, flycast, flycast/dolphin, flycast/dolphin, ...
+#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/mame, ...
 msgctxt "game_options"
 msgid "Off (Default)"
 msgstr "Ki (alapértelmezett)"
@@ -12073,7 +12080,7 @@ msgctxt "game_options"
 msgid "Off (faster, unstable)"
 msgstr "Ki (gyorsabb, instabil)"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Off at Start"
 msgstr "Ki az induláskor"
@@ -12085,7 +12092,7 @@ msgstr ""
 "A kikapcsolt állapot biztonságosabb, a bekapcsolt állapot bizonyos "
 "játékokhoz."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Off will help some games, others will run too fast."
 msgstr "A kikapcsolás segít néhány játékon, mások túl gyorsan fognak futni."
@@ -12138,12 +12145,12 @@ msgctxt "game_options"
 msgid "Oman"
 msgstr "Omán"
 
-#. TRANSLATION: awgl, cannonball, citra, citra, citra, ...
+#. TRANSLATION: awgl, azahar, cannonball, dolphin_triforce, drastic, ...
 msgctxt "game_options"
 msgid "On"
 msgstr "Be"
 
-#. TRANSLATION: cemu, libretro/mame, libretro/mame, libretro/mamevirtual, libretro/xrick, ...
+#. TRANSLATION: cemu, libretro/mame, libretro/mamevirtual, libretro/xrick, rpcs3, ...
 msgctxt "game_options"
 msgid "On (Default)"
 msgstr "Be (alapértelmezett)"
@@ -12163,22 +12170,22 @@ msgctxt "game_options"
 msgid "On (default)"
 msgstr "Be (Alap)"
 
-#. TRANSLATION: libretro/81, libretro/81, libretro/genesisplusgx
+#. TRANSLATION: libretro/81, libretro/genesisplusgx
 msgctxt "game_options"
 msgid "On (forced)"
 msgstr "Be (kényszerítve)"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "On at Start"
 msgstr "Bekapcsolva induláskor"
 
-#. TRANSLATION: vpinball, vpinball, vpinball
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "On screen 2 if available"
 msgstr "A 2. képernyőn, ha elérhető"
 
-#. TRANSLATION: vpinball, vpinball
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "On screen 3 if available"
 msgstr "A 3. képernyőn, ha elérhető"
@@ -12221,7 +12228,7 @@ msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
 msgstr ""
 "Csak akkor érvényes, ha a Parallel-RDP-t választotta RDP beépülő modulként."
 
-#. TRANSLATION: libretro/mgba, libretro/mgba, libretro/vba-m, libretro/vba-m
+#. TRANSLATION: libretro/mgba, libretro/vba-m
 msgctxt "game_options"
 msgid "Only for Super Game Boy enhanced games."
 msgstr "Csak Super Game Boy továbbfejlesztett játékokhoz."
@@ -12282,7 +12289,7 @@ msgctxt "keys_files"
 msgid "Open furnish corridor menu"
 msgstr "Open furnish corridor menu"
 
-#. TRANSLATION: awgl, cemu, dolphin, duckstation, flycast, ...
+#. TRANSLATION: awgl, cemu, citron, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "OpenGL"
 msgstr "OpenGL"
@@ -12297,7 +12304,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL (Számítási shader)"
 
-#. TRANSLATION: citra, dolphin_triforce, play, scummvm
+#. TRANSLATION: azahar, dolphin_triforce, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (alapértelmezett)"
@@ -12332,7 +12339,7 @@ msgctxt "game_options"
 msgid "Orange - Hokage Orange"
 msgstr "Narancssárga - Hokage Orange"
 
-#. TRANSLATION: awgl, awgl, hurrican, hypseus-singe, libretro/mupen64plus-next, ...
+#. TRANSLATION: awgl, hurrican, hypseus-singe, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "Original"
 msgstr "Eredeti"
@@ -12513,7 +12520,7 @@ msgctxt "game_options"
 msgid "PHYSICAL KEYBOARD LAYOUT"
 msgstr "FIZIKAI BILLENTYŰZET ELHELYEZÉS"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "PINBALL MAPPING MODE"
 msgstr ""
@@ -12593,7 +12600,7 @@ msgctxt "game_options"
 msgid "POWER MODE"
 msgstr "POWER MÓD"
 
-#. TRANSLATION: shared, shared, shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "POWER OPTIONS"
 msgstr "TELJESÍTMÉNY OPCIÓK"
@@ -12608,7 +12615,7 @@ msgctxt "game_options"
 msgid "PPU DECODER"
 msgstr "PPU DEKÓDOLÓ"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "PRC"
 msgstr "PRC"
@@ -12628,17 +12635,17 @@ msgctxt "game_options"
 msgid "PRESENTATION MODE"
 msgstr "BEMUTATÁSI MÓD"
 
-#. TRANSLATION: duckstation, duckstation
+#. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "PS1 Analogue Joystick"
 msgstr ""
 
-#. TRANSLATION: duckstation, duckstation
+#. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "PS1 Digital Controller"
 msgstr "PS1 digitális vezérlő"
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "PS3 CONTROLLER"
 msgstr "PS3 KONTROLLER"
@@ -12648,7 +12655,7 @@ msgctxt "game_options"
 msgid "PS3's internal ratio setting. Some games only support 16/9."
 msgstr "A PS3 belső arány beállítása. Egyes játékok csak a 16/9-et támogatják."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "PST8PDT"
 msgstr "PST8PDT"
@@ -12663,7 +12670,7 @@ msgctxt "game_options"
 msgid "PVM_20M2U/D93"
 msgstr "PVM_20M2U/D93"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Paddle Control"
 msgstr "Tekerővezérlés"
@@ -12897,7 +12904,7 @@ msgctxt "game_options"
 msgid "Play (Default)"
 msgstr "Lejátszás (alapértelmezett)"
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Play a coin drop sound effect when an insert coin button is pressed"
 msgstr ""
@@ -12919,7 +12926,7 @@ msgctxt "game_options"
 msgid "PlayStation 2 wheel type"
 msgstr ""
 
-#. TRANSLATION: duckstation, duckstation, libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, ...
+#. TRANSLATION: duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
 msgctxt "game_options"
 msgid "PlayStation Mouse"
 msgstr "PlayStation egér"
@@ -12964,7 +12971,7 @@ msgctxt "game_options"
 msgid "Pointer"
 msgstr "Mutató"
 
-#. TRANSLATION: libretro/dosbox_pure, suyu, xenia, xenia-canary
+#. TRANSLATION: citron, libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Poland"
 msgstr "Lengyelország"
@@ -13014,7 +13021,7 @@ msgctxt "game_options"
 msgid "Portrait"
 msgstr "Álló"
 
-#. TRANSLATION: libretro/dosbox_pure, suyu, xenia, xenia-canary
+#. TRANSLATION: citron, libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Portugal"
 msgstr "Portugália"
@@ -13024,12 +13031,12 @@ msgctxt "game_options"
 msgid "Portugese"
 msgstr "Portugál"
 
-#. TRANSLATION: cemu, etlegacy, play, ryujinx, scummvm, ...
+#. TRANSLATION: cemu, citron, etlegacy, play, ryujinx, ...
 msgctxt "game_options"
 msgid "Portuguese"
 msgstr "Portugál"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Position of wii sensor bar relative to the disaply for real wiimotes."
 msgstr ""
@@ -13060,7 +13067,7 @@ msgctxt "game_options"
 msgid "Potator - Orangish - Amber"
 msgstr "Potator - Narancssárga - Borostyán"
 
-#. TRANSLATION: shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Power Saver"
 msgstr "Energiatakarékos"
@@ -13082,7 +13089,7 @@ msgstr ""
 "Az \"NMI előtt\" opciót részesítsd előnyben, az \"NMI után\"-ra csak akkor "
 "váltsd át, ha a játéknak szüksége van rá."
 
-#. TRANSLATION: citra, duckstation
+#. TRANSLATION: azahar, duckstation
 msgctxt "game_options"
 msgid "Preload"
 msgstr "Előtöltés"
@@ -13092,7 +13099,7 @@ msgctxt "game_options"
 msgid "Preload requires more RAM."
 msgstr "Az előtöltés több RAM-ot igényel."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Preloading is impossible from ES."
 msgstr "Az ES előtöltése lehetetlen."
@@ -13124,12 +13131,12 @@ msgstr "Nyomja meg az Y billentyűt az „Igen” kiválasztásához"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Previous item"
-msgstr ""
+msgstr "Előző elem"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Previous slot"
-msgstr ""
+msgstr "Előző hely"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -13180,7 +13187,7 @@ msgctxt "game_options"
 msgid "Pure Interpreter (Most Accurate)"
 msgstr "Egyszerű fordító (legpontosabb)"
 
-#. TRANSLATION: flycast/dolphin, flycast/dolphin, flycast/dolphin, flycast/dolphin
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "Purupuru Pack/Vibration Pack"
 msgstr "Purupuru Pack/Vibration Pack"
@@ -13205,7 +13212,7 @@ msgctxt "game_options"
 msgid "Qatar"
 msgstr "Katar"
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Quickload"
 msgstr "Gyorstöltés"
@@ -13215,7 +13222,7 @@ msgctxt "game_options"
 msgid "RAM EXPANSION UNIT"
 msgstr "RAM BŐVÍTŐ EGYSÉG"
 
-#. TRANSLATION: libretro/mame, libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "RAM SIZE"
 msgstr "MEMÓRIA MÉRETE"
@@ -13270,7 +13277,7 @@ msgctxt "game_options"
 msgid "REMOVE SCANLINES"
 msgstr "ELTÁVOLÍTJA A SZKENSOROKAT"
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "RENDER"
 msgstr "RENDER"
@@ -13310,7 +13317,7 @@ msgctxt "game_options"
 msgid "RENDERER MODE"
 msgstr "RENDERELŐ MÓD"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
+#. TRANSLATION: citron, dolphin, duckstation, pcsx2
 msgctxt "game_options"
 msgid "RENDERING"
 msgstr "RENDERELÉS"
@@ -13320,7 +13327,7 @@ msgctxt "game_options"
 msgid "RENDERING MODE"
 msgstr "RENDERING MÓD"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, libretro/desmume, ...
+#. TRANSLATION: azahar, citron, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "RENDERING RESOLUTION"
 msgstr "RENDERELÉSI FELBONTÁS"
@@ -13355,7 +13362,7 @@ msgctxt "game_options"
 msgid "RGB (Blargg)"
 msgstr "RGB (Blargg)"
 
-#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
+#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
 msgid "RGB (crisp image)"
 msgstr "RGB (crisp image)"
@@ -13365,12 +13372,12 @@ msgctxt "game_options"
 msgid "RGB Colour Low/Medium-Resolution"
 msgstr "RGB szín alacsony/közepes felbontású"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ROC"
 msgstr "ROC"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ROK"
 msgstr "ROK"
@@ -13398,24 +13405,24 @@ msgstr "ROM (Slot 4)"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.00"
-msgstr ""
+msgstr "ROM.00"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.03 (default)"
-msgstr ""
+msgstr "ROM.03 (alap)"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM1"
-msgstr ""
+msgstr "ROM1"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "ROTATE"
 msgstr "FORGATÁS"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "ROTATE FACE BUTTONS"
 msgstr "AZ ELŐLAPI GOMBOK FORGATÁSA"
@@ -13471,7 +13478,7 @@ msgid ""
 "Read mouse through Raw input, allowing 2 mice for 2 player shooting games."
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+#. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
 msgid "Real Wii Remote"
 msgstr ""
@@ -13486,7 +13493,7 @@ msgctxt "game_options"
 msgid "Recompiler (Fastest)(Default)"
 msgstr "Újrafordító (Leggyorsabb)(Alapértelmezett)"
 
-#. TRANSLATION: flycast, flycast, flycast, flycast, libretro/flycast, ...
+#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, libretro/melondsds, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Red"
 msgstr "Piros"
@@ -13501,7 +13508,7 @@ msgctxt "game_options"
 msgid "Reduce load time at the cost of accuracy."
 msgstr "Csökkentse a betöltési időt a pontosság árán."
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Reduce stutter that happens when compiling shaders."
 msgstr "Csökkentse az árnyékolók összeállítása során előforduló dadogást."
@@ -13560,7 +13567,7 @@ msgctxt "game_options"
 msgid "Remove the padding on the sides of the screen."
 msgstr "Távolítsa el a párnázást a képernyő oldalain."
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, ...
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Removes loading but can add possible glitches/crashes."
 msgstr ""
@@ -13646,7 +13653,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Reset"
-msgstr ""
+msgstr "Visszaállítás"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13656,11 +13663,6 @@ msgid ""
 msgstr ""
 "A gyorsítótár visszaállítása javíthat néhány összeomlást, ha a játék "
 "Batocera 29 alatt futott."
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Reset the table, sometimes required for PinMame"
-msgstr "Állítsa vissza az asztalt, ami néha szükséges a PinMame számára"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -13672,7 +13674,7 @@ msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "Felbontási szorzók a vektorok simítására"
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "BLENDMODE körvonal visszaállítása a Singe sprite-okon."
@@ -13680,9 +13682,9 @@ msgstr "BLENDMODE körvonal visszaállítása a Singe sprite-okon."
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Restore state"
-msgstr ""
+msgstr "Állapot helyreállítása"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
 msgid "RetroPad (Default)"
 msgstr "RetroPad (Alap)"
@@ -13692,12 +13694,12 @@ msgctxt "game_options"
 msgid "RetroPad Face Button Options."
 msgstr "RetroPad Face gomb Opciók."
 
-#. TRANSLATION: libretro/fuse, libretro/fuse, libretro/mame078plus, libretro/puae, libretro/puae, ...
+#. TRANSLATION: libretro/fuse, libretro/mame078plus, libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "Retropad"
 msgstr "Retropad"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, ...
+#. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
 msgid "Retropad (Default)"
 msgstr "Retropad (alapértelmezett)"
@@ -13722,12 +13724,12 @@ msgctxt "keys_files"
 msgid "Right"
 msgstr "Jobb"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Right Analogue (Auto)"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Right Analogue (Forced)"
 msgstr ""
@@ -13752,7 +13754,7 @@ msgctxt "game_options"
 msgid "Right stick"
 msgstr "Jobb kar"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Right/Left"
 msgstr "Jobb/Bal"
@@ -13799,7 +13801,7 @@ msgstr ""
 "A képernyő elforgatása, hasznos bizonyos függőleges játékmenetű homebrews "
 "játékoknál."
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Rotated 4-Way Stick (Q*Bert)"
 msgstr "Forgatható 4 irányú bot (Q*Bert)"
@@ -13824,12 +13826,12 @@ msgctxt "game_options"
 msgid "Rough"
 msgstr "Brutál"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "Rumble Pak"
 msgstr "Rezgő csomag"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
 msgstr "Rumble Pak (automatikus)"
@@ -13842,7 +13844,7 @@ msgstr "Futás"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "Run the Unfinished expansion pack."
-msgstr ""
+msgstr "Futtasd az befejezetlen kiegészítő csomagot."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -13865,7 +13867,7 @@ msgctxt "game_options"
 msgid "Russia"
 msgstr "Oroszország"
 
-#. TRANSLATION: cemu, doom3, etlegacy, play, ryujinx, ...
+#. TRANSLATION: cemu, citron, doom3, etlegacy, play, ...
 msgctxt "game_options"
 msgid "Russian"
 msgstr "Orosz"
@@ -13945,12 +13947,12 @@ msgctxt "game_options"
 msgid "SCREEN INCLINATION"
 msgstr "KÉPERNYŐ DŐLÉSSZÖGE"
 
-#. TRANSLATION: citra, drastic, libretro/desmume, libretro/melonds, melonds
+#. TRANSLATION: azahar, drastic, libretro/desmume, libretro/melonds, melonds
 msgctxt "game_options"
 msgid "SCREEN LAYOUT"
 msgstr "KÉPERNYŐ ELRENDEZÉS"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "SCREEN ORIENTATION"
 msgstr "KÉPERNYŐ TÁJOLÁSA"
@@ -13975,7 +13977,7 @@ msgctxt "game_options"
 msgid "SCREEN ROTATION"
 msgstr "KÉPERNYŐ FORGATÁSA"
 
-#. TRANSLATION: libretro/melondsds, libretro/melondsds, libretro/melondsds
+#. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "SCREEN SETTINGS"
 msgstr "KÉPERNYŐBEÁLLÍTÁSOK"
@@ -14000,7 +14002,7 @@ msgctxt "game_options"
 msgid "SCREEN WIDTH"
 msgstr "KÉPERNYŐ SZÉLESSÉGE"
 
-#. TRANSLATION: bigpemu, bigpemu, bigpemu, bigpemu, bigpemu, ...
+#. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "SCRIPT MODULES"
 msgstr "SZKRIPT MODULOK"
@@ -14015,17 +14017,17 @@ msgctxt "game_options"
 msgid "SDL TEXTURE ACCESS STREAMING"
 msgstr "SDL TEXTÚRA HOZZÁFÉRÉS STREAMING"
 
-#. TRANSLATION: libretro, libretro, libretro, libretro, lindbergh-loader
+#. TRANSLATION: libretro, lindbergh-loader
 msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "SENSITIVITY"
 msgstr "ÉRZÉKENYSÉG"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "SENSOR BAR POSITION"
 msgstr "ÉRZÉKELŐRÁR POZÍCIÓJA"
@@ -14090,7 +14092,7 @@ msgctxt "game_options"
 msgid "SHOW LID STATE"
 msgstr "FEDÉLÁLLAPOT MEGJELENÍTÉSE"
 
-#. TRANSLATION: dolphin, dolphin, libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, ...
+#. TRANSLATION: dolphin, libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/mame078plus, ...
 msgctxt "game_options"
 msgid "SHOW LIGHT GUN CROSSHAIRS"
 msgstr "MUTASSA A FÉNYPUSKA KERESZTJÉT"
@@ -14163,9 +14165,9 @@ msgstr "START MENÜ KIHAGYÁSA"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "SLEEP TIMERS ACCURACY"
-msgstr ""
+msgstr "ALVÓ IDŐZÍTŐK PONTOSSÁGA"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "SMAA"
 msgstr "SMAA"
@@ -14180,12 +14182,12 @@ msgctxt "game_options"
 msgid "SMOOTH VUES"
 msgstr "SMOOTH VUES"
 
-#. TRANSLATION: libretro/snes9x, libretro/snes9x, libretro/snes9x, libretro/snes9x_next, libretro/snes9x_next
+#. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "SNES Gamepad"
 msgstr "SNES Gamepad"
 
-#. TRANSLATION: libretro/snes9x, libretro/snes9x, libretro/snes9x_next, libretro/snes9x_next
+#. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "SNES Mouse"
 msgstr "SNES egér"
@@ -14195,7 +14197,7 @@ msgctxt "game_options"
 msgid "SNES Multitap"
 msgstr "SNES Multitap"
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "SNES Style"
 msgstr "SNES Stílus"
@@ -14210,7 +14212,7 @@ msgctxt "game_options"
 msgid "SOFT TEXTURE CACHE MEMORY TIMEOUT"
 msgstr "LÁGY TEXTÚRA CACHE MEMÓRIA IDŐKORLÁT"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame/openbor7530
 msgctxt "game_options"
 msgid "SOFTWARE LIST"
 msgstr "SOFTWARE LISTA"
@@ -14255,7 +14257,7 @@ msgctxt "game_options"
 msgid "SP"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "SPECIAL CONTROL LAYOUTS"
 msgstr "KÜLÖNLEGES VEZÉRLÉSI Elrendezések"
@@ -14365,7 +14367,7 @@ msgctxt "game_options"
 msgid "SUPER GAME BOY MODEL"
 msgstr ""
 
-#. TRANSLATION: libretro/mgba, libretro/mgba, libretro/vba-m, libretro/vba-m
+#. TRANSLATION: libretro/mgba, libretro/vba-m
 msgctxt "game_options"
 msgid "SUPER GB BORDERS"
 msgstr "SUPER GB SZEGÉLYEK"
@@ -14385,7 +14387,7 @@ msgctxt "game_options"
 msgid "SVGA"
 msgstr "SVGA"
 
-#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
+#. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
 msgid "SVideo (colour bleeding only)"
 msgstr ""
@@ -14430,12 +14432,12 @@ msgctxt "game_options"
 msgid "Safe (Default)"
 msgstr "Biztonságos (alapértelmezett)"
 
-#. TRANSLATION: libretro/beetle-saturn, libretro/beetle-saturn, libretro/yabasanshiro, libretro/yabasanshiro
+#. TRANSLATION: libretro/beetle-saturn, libretro/yabasanshiro
 msgctxt "game_options"
 msgid "Saturn 3D Pad"
 msgstr "Saturn 3D Pad"
 
-#. TRANSLATION: libretro/beetle-saturn, libretro/beetle-saturn, libretro/yabasanshiro, libretro/yabasanshiro
+#. TRANSLATION: libretro/beetle-saturn, libretro/yabasanshiro
 msgctxt "game_options"
 msgid "Saturn Pad"
 msgstr "Saturn Pad"
@@ -14453,7 +14455,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Save state"
-msgstr ""
+msgstr "Állapot mentése"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -14480,7 +14482,7 @@ msgctxt "game_options"
 msgid "Scale4x"
 msgstr "Scale4x"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ScaleForce"
 msgstr "ScaleForce"
@@ -14545,7 +14547,7 @@ msgctxt "game_options"
 msgid "See your FPS and version of Vulkan API/driver."
 msgstr "Tekintse meg az FPS-t és a Vulkan API/illesztőprogram verzióját."
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid "Sega/Mega CD"
 msgstr "Sega/Mega CD"
@@ -14575,12 +14577,12 @@ msgctxt "game_options"
 msgid "Select a boot disk or hard drive if needed"
 msgstr "Ha szükséges, válasszon indítólemezt vagy merevlemezt"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "Select controller type for Amiga P1."
 msgstr "Válassza ki az Amiga P1 vezérlő típusát."
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "Select controller type for Amiga P2."
 msgstr "Válassza ki az Amiga P2 vezérlő típusát."
@@ -14625,7 +14627,7 @@ msgid ""
 "Colour)"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, mame/openbor7530, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Select model to emulate"
 msgstr "Válassza ki az emulálni kívánt modellt"
@@ -14703,7 +14705,7 @@ msgctxt "game_options"
 msgid "Selfie"
 msgstr "Szelfi"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Separate Windows"
 msgstr "Osztott Ablak"
@@ -14752,7 +14754,7 @@ msgctxt "game_options"
 msgid "Set in Config - choose if no audio output"
 msgstr "Beállítás a Config-ban – válassza, ha nincs hangkimenet"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Set joystick deadzone."
 msgstr "Joystick holtzóna beállítása."
@@ -14819,7 +14821,7 @@ msgctxt "game_options"
 msgid "Set to on if you experience flickering in Hummer."
 msgstr "Állítsa be, ha a Hummerben villódzást tapasztal."
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid ""
 "Set virtual joysticks gate size. Smaller increases sensitivity. Larger "
@@ -14950,7 +14952,7 @@ msgid "Show/Hide guns borders for specific systems"
 msgstr ""
 "A fegyverek határainak megjelenítése/elrejtése bizonyos rendszerek esetében"
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "Shown"
 msgstr "Látható"
@@ -15026,7 +15028,7 @@ msgctxt "game_options"
 msgid "Simple 2x"
 msgstr "Egyszerű 2x"
 
-#. TRANSLATION: libretro/dolphin, play, ryujinx, sonicmania, suyu
+#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, sonicmania
 msgctxt "game_options"
 msgid "Simplified Chinese"
 msgstr "Egyszerűsített kínai"
@@ -15041,7 +15043,7 @@ msgctxt "game_options"
 msgid "Simulate LCD colour inaccuracy"
 msgstr ""
 
-#. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/mgba, libretro/vba-m, libretro/vba-m
+#. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/vba-m
 msgctxt "game_options"
 msgid "Simulate LCD colour inaccuracy."
 msgstr ""
@@ -15056,7 +15058,7 @@ msgctxt "game_options"
 msgid "Simultaneous"
 msgstr "Egyidejű"
 
-#. TRANSLATION: libretro/fuse, libretro/fuse
+#. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Sinclair 1 Joystick"
 msgstr "Sinclair 1 Joystick"
@@ -15066,7 +15068,7 @@ msgctxt "game_options"
 msgid "Sinclair 1 controller set to AUTO."
 msgstr "A Sinclair 1 vezérlő AUTO állásba van állítva."
 
-#. TRANSLATION: libretro/fuse, libretro/fuse
+#. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Sinclair 2 Joystick"
 msgstr "Sinclair 2 Joystick"
@@ -15086,7 +15088,7 @@ msgctxt "game_options"
 msgid "Sine"
 msgstr "Szinusz"
 
-#. TRANSLATION: suyu, xenia, xenia-canary
+#. TRANSLATION: citron, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Singapore"
 msgstr "Szingapúr"
@@ -15255,7 +15257,7 @@ msgctxt "game_options"
 msgid "Small performance increase (may drop frames)."
 msgstr "Kismértékű teljesítménynövekedés (a képkockák kieshetnek)."
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Smaller"
 msgstr "Kisebb"
@@ -15290,7 +15292,7 @@ msgctxt "game_options"
 msgid "Smooth 4"
 msgstr "Sima 4"
 
-#. TRANSLATION: dxx-rebirth, libretro/mupen64plus-next, libretro/parallel_n64, ppsspp, suyu
+#. TRANSLATION: citron, dxx-rebirth, libretro/mupen64plus-next, libretro/parallel_n64, ppsspp
 msgctxt "game_options"
 msgid "Smooth textures on 3D objects."
 msgstr "Sima textúrák 3D objektumokon."
@@ -15334,7 +15336,7 @@ msgctxt "game_options"
 msgid "Soften the hash sound effect from some games."
 msgstr "Egyes játékok hash hangeffektusának lágyítása."
 
-#. TRANSLATION: awgl, citra, duckstation, libretro/melondsds, melonds, ...
+#. TRANSLATION: awgl, azahar, duckstation, libretro/melondsds, melonds, ...
 msgctxt "game_options"
 msgid "Software"
 msgstr "Szoftver"
@@ -15385,7 +15387,7 @@ msgctxt "game_options"
 msgid "Sony CXA2025AS"
 msgstr "Sony CXA2025AS"
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Sony DS"
 msgstr "Sony DS"
@@ -15415,7 +15417,7 @@ msgctxt "game_options"
 msgid "SounBlaster Pro 2"
 msgstr "SounBlaster Pro 2"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
 msgid ""
 "Sound generator. MAME is faster and Nuked is cycle accurate. Original model "
@@ -15439,7 +15441,7 @@ msgctxt "game_options"
 msgid "Spain"
 msgstr "Spanyolország"
 
-#. TRANSLATION: cemu, dolphin, doom3, etlegacy, fallout1-ce, ...
+#. TRANSLATION: cemu, citron, dolphin, doom3, etlegacy, ...
 msgctxt "game_options"
 msgid "Spanish"
 msgstr "Spanyol"
@@ -15533,7 +15535,7 @@ msgstr ""
 "Speed hack, engedélyezze a CPU és a GPU közötti felületi szinkronizálás "
 "letiltását. A felületi szinkronizálásra néhány játéknak szüksége van."
 
-#. TRANSLATION: cemu, suyu
+#. TRANSLATION: cemu, citron
 msgctxt "game_options"
 msgid "Speed up shader compilation."
 msgstr "A shader összeállításának felgyorsítása."
@@ -15558,12 +15560,12 @@ msgctxt "game_options"
 msgid "Square pixel"
 msgstr "Négyzet alakú képpont"
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Standard (4:3)"
 msgstr "Standard (4:3)"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Standard Controller"
 msgstr "Szabványos vezérlő"
@@ -15613,12 +15615,12 @@ msgctxt "game_options"
 msgid "Static Interpreter"
 msgstr "Statikus fordító"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Steering Wheel"
 msgstr "Kormánykerék"
 
-#. TRANSLATION: rpcs3, suyu
+#. TRANSLATION: citron, rpcs3
 msgctxt "game_options"
 msgid "Stereo"
 msgstr "Sztereó"
@@ -15698,7 +15700,7 @@ msgctxt "game_options"
 msgid "Stretch to screen"
 msgstr "Nyújtsa ki a képernyőre"
 
-#. TRANSLATION: dolphin, suyu
+#. TRANSLATION: citron, dolphin
 msgctxt "game_options"
 msgid "Stretch to window"
 msgstr "Nyújtás az ablakhoz"
@@ -15789,7 +15791,7 @@ msgstr ""
 "Támogatja a korlátlan képkockasebességet, az analóg kontrolleket és a Mouse "
 "Look funkciót."
 
-#. TRANSLATION: cemu, suyu
+#. TRANSLATION: cemu, citron
 msgctxt "game_options"
 msgid "Surround"
 msgstr "Térhatású"
@@ -15804,7 +15806,7 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Swap Screen"
 msgstr "Képernyő cseréje"
@@ -15814,7 +15816,7 @@ msgctxt "keys_files"
 msgid "Swap Screens"
 msgstr "Képernyők cseréje"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Swap screens"
 msgstr "Képernyők cseréje"
@@ -15966,7 +15968,7 @@ msgctxt "game_options"
 msgid "TEXTURE FILTER"
 msgstr ""
 
-#. TRANSLATION: duckstation, dxx-rebirth, libretro/duckstation, libretro/mupen64plus-next, libretro/parallel_n64, ...
+#. TRANSLATION: citron, duckstation, dxx-rebirth, libretro/duckstation, libretro/mupen64plus-next, ...
 msgctxt "game_options"
 msgid "TEXTURE FILTERING"
 msgstr "TEXTURASZŰRÉS"
@@ -16066,12 +16068,12 @@ msgctxt "game_options"
 msgid "TIMED AXIS INTERVALS"
 msgstr "IDŐZÍTETT TENGELYINTERVALLUMOK"
 
-#. TRANSLATION: shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "TOP LEFT (NW)"
 msgstr "BALRA FENT (ÉNY)"
 
-#. TRANSLATION: shared, shared
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "TOP RIGHT (NE)"
 msgstr "JOBBRA FENT (ÉK)"
@@ -16156,12 +16158,12 @@ msgctxt "game_options"
 msgid "TWB64 - Pack 2"
 msgstr "TWB64 - Pack 2"
 
-#. TRANSLATION: ryujinx, suyu, xenia, xenia-canary
+#. TRANSLATION: citron, ryujinx, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Taiwan"
 msgstr "Tajvan"
 
-#. TRANSLATION: cemu, ryujinx, suyu
+#. TRANSLATION: cemu, citron, ryujinx
 msgctxt "game_options"
 msgid "Taiwanese"
 msgstr "Tajván"
@@ -16226,13 +16228,13 @@ msgctxt "game_options"
 msgid "Thailand"
 msgstr "Thaiföld"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
 msgstr ""
 "A New 3DS gyorsabb processzorral, ZL/ZR gombokkal és C-stickkel rendelkezik."
 
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid ""
 "The area around the joystick's neutral position where input is ignored. Can "
@@ -16315,7 +16317,7 @@ msgstr ""
 "Ez az opció lehetővé teszi az Xbox Live Arcade játékok lejátszását. "
 "Kompatibilitási problémákat okozhat a nem XBLA-játékokkal."
 
-#. TRANSLATION: hypseus-singe/vitaquake3, hypseus-singe/vitaquake3, hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr ""
@@ -16340,12 +16342,12 @@ msgctxt "game_options"
 msgid "Time Stretch (Tempo Change, Best Sound)"
 msgstr "Időnyújtás (Tempóváltás, legjobb hang)"
 
-#. TRANSLATION: libretro/fuse, libretro/fuse
+#. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Timex 1 Joystick"
 msgstr "Timex 1 Joystick"
 
-#. TRANSLATION: libretro/fuse, libretro/fuse
+#. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Timex 2 Joystick"
 msgstr "Timex 2 Joystick"
@@ -16375,12 +16377,12 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "Játékcsalás vagy 16/9 képarány-javító kódok használata."
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Toggle Screen Layout"
 msgstr "Képernyőelrendezés váltása"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
 msgstr "Sebességkorlátozás kapcsolása"
@@ -16395,7 +16397,7 @@ msgctxt "keys_files"
 msgid "Toggle weapon"
 msgstr "Fegyver váltás"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Toggle with hotkey + D-pad up or Scroll Lock in-game."
 msgstr ""
@@ -16407,12 +16409,12 @@ msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Tomy Tutor & Pyuuta kazetta"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Top"
 msgstr "Felső"
 
-#. TRANSLATION: citra
+#. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Top Only"
 msgstr "Csak felül"
@@ -16422,32 +16424,32 @@ msgctxt "game_options"
 msgid "Top only"
 msgstr "Csak felül"
 
-#. TRANSLATION: vpinball, vpinball, vpinball
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Top-Left Position, Large"
 msgstr "Bal felső pozíció, nagy"
 
-#. TRANSLATION: vpinball, vpinball, vpinball
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Top-Left Position, Medium"
 msgstr "Bal felső pozíció, közepes"
 
-#. TRANSLATION: vpinball, vpinball, vpinball
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Top-Left Position, Small"
 msgstr "Bal felső pozíció, kicsi"
 
-#. TRANSLATION: vpinball, vpinball, vpinball
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Top-Right Position, Large"
 msgstr "Jobb felső pozíció, nagy"
 
-#. TRANSLATION: vpinball, vpinball, vpinball
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Top-Right Position, Medium"
 msgstr "Jobb felső pozíció, közepes"
 
-#. TRANSLATION: vpinball, vpinball, vpinball
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Top-Right Position, Small"
 msgstr "Jobb felső pozíció, kicsi"
@@ -16472,7 +16474,7 @@ msgctxt "game_options"
 msgid "Trackball (Atari CX-22)"
 msgstr "Trackball (Atari CX-22)"
 
-#. TRANSLATION: libretro/dolphin, play, ryujinx, sonicmania, suyu
+#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, sonicmania
 msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Hagyományos kínai"
@@ -16480,7 +16482,7 @@ msgstr "Hagyományos kínai"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Translate"
-msgstr ""
+msgstr "Fordítás"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -16531,7 +16533,7 @@ msgctxt "game_options"
 msgid "Tunisia"
 msgstr "Tunézia"
 
-#. TRANSLATION: libretro/dosbox_pure, suyu, xenia, xenia-canary
+#. TRANSLATION: citron, libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Turkey"
 msgstr "Törökország"
@@ -16561,7 +16563,7 @@ msgctxt "game_options"
 msgid "Turquoise"
 msgstr "Türkiz"
 
-#. TRANSLATION: libretro/mame, mame/openbor7530, mame/openbor7530
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Twin Stick with Triggers"
 msgstr "Twin Stick triggerekkel"
@@ -16571,7 +16573,7 @@ msgctxt "game_options"
 msgid "Type of ROM file to load"
 msgstr "A betöltendő ROM-fájl típusa"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Type of ROM file to load."
 msgstr "A betöltendő ROM-fájl típusa."
@@ -16607,12 +16609,12 @@ msgctxt "game_options"
 msgid "UBERSHADERS"
 msgstr "UBERSHADERS"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "UCT"
 msgstr "UCT"
 
-#. TRANSLATION: libretro, libretro
+#. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "UDEV"
 msgstr ""
@@ -16632,7 +16634,7 @@ msgctxt "game_options"
 msgid "UDP Tunnel"
 msgstr "UDP-alagút"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "UI KEYS"
 msgstr "UI KEYS"
@@ -16662,7 +16664,7 @@ msgctxt "game_options"
 msgid "US"
 msgstr "EGYESÜLT ÁLLAMOK"
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ryujinx, ...
+#. TRANSLATION: citron, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
 msgctxt "game_options"
 msgid "USA"
 msgstr "USA"
@@ -16757,7 +16759,7 @@ msgctxt "game_options"
 msgid "USER DISK"
 msgstr "HASZNÁLÓI LEMEZ"
 
-#. TRANSLATION: ryujinx, suyu
+#. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
 msgid "UTC"
 msgstr "UTC"
@@ -16897,7 +16899,7 @@ msgctxt "game_options"
 msgid "Ultra"
 msgstr "Ultra"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Undocked"
 msgstr "Dokkolatlan"
@@ -16917,7 +16919,7 @@ msgctxt "game_options"
 msgid "United States"
 msgstr "Egyesült Államok"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Univarsal"
 msgstr "Univarsal"
@@ -17024,12 +17026,12 @@ msgstr ""
 "Használja az L2/R2-t a fékezéshez/gyorsításhoz és az L1/R1-et vagy a jobb "
 "gomba fel/le gombot a fel/le váltáshoz."
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame/openbor7530
 msgctxt "game_options"
 msgid "Use MAME software lists to identify ROM"
 msgstr "A ROM azonosításához használja a MAME szoftverlistákat"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/genesisplusgx, libretro/picodrive, ...
+#. TRANSLATION: libretro/genesisplusgx, libretro/picodrive
 msgctxt "game_options"
 msgid ""
 "Use Megadrive to automap inputs for a Megadrive style controller with a 6 "
@@ -17079,7 +17081,7 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Use item"
-msgstr ""
+msgstr "Elem használata"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -17158,7 +17160,7 @@ msgstr ""
 "Használja a joystick mozgásának többé-kevésbé érzékenyebbé tételéhez. Az "
 "összes vezérlőt érinti."
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Use to play pinball games with correct mapping."
 msgstr ""
@@ -17179,7 +17181,7 @@ msgctxt "game_options"
 msgid "Use your physical anaglyph 3D glasses!"
 msgstr ""
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
 msgid "Useful for N64 style controllers."
 msgstr "Hasznos az N64 típusú vezérlőkhöz."
@@ -17193,7 +17195,7 @@ msgstr ""
 "Hasznos az N64 típusú vezérlőkhöz. Korlátozott gyorsbillentyűk a dedikált "
 "gyorsbillentyű nélküli vezérlőkhöz."
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Useful for certain arcade games."
 msgstr "Hasznos bizonyos arcade játékokhoz."
@@ -17217,7 +17219,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Usleep Only"
-msgstr ""
+msgstr "Csak alvás"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17294,7 +17296,7 @@ msgctxt "game_options"
 msgid "VIC20 PAL Automatic"
 msgstr "VIC20 PAL Automatic"
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
+#. TRANSLATION: citron, rpcs3
 msgctxt "game_options"
 msgid "VIDEO"
 msgstr "VIDEÓ"
@@ -17329,7 +17331,7 @@ msgctxt "game_options"
 msgid "VIDEO RESOLUTION"
 msgstr "VIDEOFELBONTÁS"
 
-#. TRANSLATION: amiberry, amiberry, awgl, awgl, bermuda, ...
+#. TRANSLATION: amiberry, awgl, bermuda, drastic, f2bgl, ...
 msgctxt "game_options"
 msgid "VIDEO SETTINGS"
 msgstr "KÉP BEÁLLÍTÁSOK"
@@ -17374,7 +17376,7 @@ msgctxt "game_options"
 msgid "VISUAL NUDGE STRENGTH"
 msgstr "VIZUÁLIS LÖKÉSERŐSSÉG"
 
-#. TRANSLATION: bigpemu, cemu, citra, dolphin, dolphin_triforce, ...
+#. TRANSLATION: azahar, bigpemu, cemu, citron, dolphin, ...
 msgctxt "game_options"
 msgid "VSYNC"
 msgstr "VSYNC"
@@ -17429,7 +17431,7 @@ msgctxt "game_options"
 msgid "Venezuela"
 msgstr "Venezuela"
 
-#. TRANSLATION: drastic, libretro/fceumm, libretro/flycast, libretro/flycast, libretro/flycast, ...
+#. TRANSLATION: drastic, libretro/fceumm, libretro/flycast, libretro/flycast2021, libretro/nestopia
 msgctxt "game_options"
 msgid "Vertical"
 msgstr "Függőleges"
@@ -17494,7 +17496,7 @@ msgctxt "game_options"
 msgid "Voltmace Delta 3b Twin Joysticks"
 msgstr "Voltmace Delta 3b Twin Joysticks"
 
-#. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, hypseus-singe, ...
+#. TRANSLATION: azahar, citron, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
@@ -17504,7 +17506,7 @@ msgctxt "game_options"
 msgid "Vulkan (Default)"
 msgstr "Vulkan (Alap)"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "W-SU"
 msgstr "W-SU"
@@ -17524,12 +17526,12 @@ msgctxt "game_options"
 msgid "WARN ABOUT UNSUPPORTED FEATURES"
 msgstr "FIGYELMEZTETÉS A NEM TÁMOGATOTT FUNKCIÓKRÓL"
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "WET"
 msgstr "NEDVES"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "WHDLOAD LAUNCHER"
 msgstr "WHDLOAD INDÍTÓ"
@@ -17554,7 +17556,7 @@ msgctxt "game_options"
 msgid "WHEEL ROTATION"
 msgstr "KERÉKFORGÁS"
 
-#. TRANSLATION: pcsx2, shared, shared, shared, shared
+#. TRANSLATION: pcsx2, shared
 msgctxt "game_options"
 msgid "WHEELS"
 msgstr "KORMÁNY"
@@ -17574,17 +17576,17 @@ msgctxt "game_options"
 msgid "WIDESCREEN HACK (GLITCHY)"
 msgstr "SZÉLESVÁSZNÚ HACK (HIBÁS)"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "WII CONTROLLERS"
 msgstr "WII KONTROLLEREK"
 
-#. TRANSLATION: dolphin, dolphin, libretro/dolphin, libretro/dolphin
+#. TRANSLATION: dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "WII TV MODE"
 msgstr "WII TV MÓD"
 
-#. TRANSLATION: vpinball, vpinball, vpinball, vpinball, vpinball, ...
+#. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "WINDOWS POSITIONS"
 msgstr "ABLAKOK POZÍCIÓI"
@@ -17607,7 +17609,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "WRITE DEPTH BUFFERS"
-msgstr ""
+msgstr "MÉLYSÉGI PUFFEREK ÍRÁSA"
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -17678,7 +17680,7 @@ msgctxt "game_options"
 msgid "While Touching"
 msgstr "Érintés közben"
 
-#. TRANSLATION: flycast, flycast, flycast, flycast, libretro/flycast, ...
+#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "White"
 msgstr "Fehér"
@@ -17688,12 +17690,12 @@ msgctxt "game_options"
 msgid "Widescreen (16:10)"
 msgstr ""
 
-#. TRANSLATION: pcsx2, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Widescreen (16:9)"
 msgstr "Widescreen (16:9)"
 
-#. TRANSLATION: dolphin, dolphin, libretro/dolphin, libretro/dolphin
+#. TRANSLATION: dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid ""
 "Wii NAND's aspect ratio setting. Most games support both ratios natively."
@@ -17706,27 +17708,27 @@ msgctxt "game_options"
 msgid "Wii NAND's language setting."
 msgstr "A Wii NAND nyelvi beállítása."
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+#. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
 msgid "Wii Remote"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+#. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
 msgid "Wii Remote + Classic Controller"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+#. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
 msgid "Wii Remote + Classic Controller Pro"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+#. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
 msgid "Wii Remote + Nunchuk"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+#. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
 msgid "Wii Remote Sideways"
 msgstr ""
@@ -17741,22 +17743,22 @@ msgctxt "game_options"
 msgid "Wiimmfi (95.217.77.181)"
 msgstr "Wiimmfi (95.217.77.181)"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Wiimote Sideway"
 msgstr "Wiimote Sideway"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Wiimote Sideway + Nunchuk"
 msgstr "Wiimote Sideway + Nunchuk"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Wiimote Sideway + Swing"
 msgstr "Wiimote Sideway + Swing"
 
-#. TRANSLATION: dolphin, dolphin
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Wiimote Sideway + Tilt"
 msgstr "Wiimote Sideway + Tilt"
@@ -17782,6 +17784,8 @@ msgid ""
 "Writes depth buffer values to VM memory. Some games need this to fix broken "
 "graphics."
 msgstr ""
+"A mélységi puffer értékeit írja a VM memóriájába. Néhány játéknak szüksége "
+"van erre a hibás grafika javításához."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -17894,7 +17898,7 @@ msgid "Zooms in to hide black borders. Borders are different per game."
 msgstr ""
 "Nagyítás a fekete keretek elrejtéséhez. A határok játékonként eltérőek."
 
-#. TRANSLATION: suyu
+#. TRANSLATION: citron
 msgctxt "game_options"
 msgid "Zulu"
 msgstr "Zulu"
@@ -18196,7 +18200,7 @@ msgstr "eredeti gameboy"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "pentium_slow"
-msgstr ""
+msgstr "pentium_lassú"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -19239,6 +19243,10 @@ msgstr "sárga/kék"
 #~ msgctxt "keys_files"
 #~ msgid "Reset the application"
 #~ msgstr "Állítsa vissza az alkalmazást"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset the table, sometimes required for PinMame"
+#~ msgstr "Állítsa vissza az asztalt, ami néha szükséges a PinMame számára"
 
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."

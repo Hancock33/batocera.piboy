@@ -3,8 +3,8 @@
 # xenia-native
 #
 ################################################################################
-# Version: Commits on Feb 12, 2025
-XENIA_NATIVE_VERSION = 60318a5db66516614295146e5d455e4b6fda1be7
+# Version: Commits on Mar 15, 2025
+XENIA_NATIVE_VERSION = 1e2f903a4a9498a21be3ac1c556acfce41821ccb
 XENIA_NATIVE_SITE = https://github.com/xenia-canary/xenia-canary.git
 XENIA_NATIVE_LICENSE = BSD
 XENIA_NATIVE_LICENSE_FILE = LICENSE
@@ -15,15 +15,19 @@ XENIA_NATIVE_SUBDIR = build
 
 XENIA_NATIVE_DEPENDENCIES = xserver_xorg-server alsa-lib fmt freetype libgtk3 libpng lz4 sdl2 zlib
 
-define XENIA_NATIVE_BUILD_CMDS
-	sed -i "s|pkg-config --|PKG_CONFIG_PATH=$(STAGING_DIR)/usr/lib/pkgconfig pkg-config --|g" $(@D)/tools/build/scripts/pkg_config.lua
-	cd $(@D) && ./xb premake --devenv=cmake
-	sed -i "s|/usr/|$(STAGING_DIR)/usr/|g" $(@D)/build/*.cmake
-	cd $(@D) && $(TARGET_CONFIGURE_OPTS) CXX="$(HOST_DIR)/bin/clang++" CC="$(HOST_DIR)/bin/clang" ./xb build --config=Release
+define XENIA_NATIVE_CROSS_BUILD
+	mkdir -p $(@D) && cd $(@D) && \
+	PKGCONFIG="$(HOST_DIR)/bin/pkg-config" \
+	PKGCONFIG_CONFIG=$(STAGING_DIR)/usr/lib/pkgconfig \
+	SYSROOT="$(STAGING_DIR)" \
+	SDL2CONFIG="$(STAGING_DIR)/usr/bin/sdl2-config" \
+	./xb premake --devenv=cmake
 endef
+
+XENIA_NATIVE_POST_PATCH_HOOKS = XENIA_NATIVE_CROSS_BUILD
 
 define XENIA_NATIVE_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 -D $(@D)/build/bin/Linux/Release/xenia_canary $(TARGET_DIR)/usr/bin/xenia-native
 endef
 
-$(eval $(generic-package))
+$(eval $(cmake-package))

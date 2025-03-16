@@ -3,8 +3,8 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Feb 21, 2025
-WINE_CUSTOM_VERSION = ntsync7-10.2
+# Version: Commits on Mar 16, 2025
+WINE_CUSTOM_VERSION = 042e550aa419ad147422f659d383283a879e57ad
 WINE_CUSTOM_BRANCH = ntsync
 WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
 WINE_CUSTOM_SITE = $(call github,Hancock33,wine-tkg-batocera,$(WINE_CUSTOM_VERSION))
@@ -41,6 +41,7 @@ WINE_CUSTOM_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 	--without-gettext \
 	--without-gettextpo \
 	--without-gphoto \
+	--without-ldap \
 	--without-mingw \
 	--without-opencl \
 	--without-oss \
@@ -113,11 +114,9 @@ else
 WINE_CUSTOM_CONF_OPTS += --without-gnutls
 endif
 
-ifeq ($(BR2_PACKAGE_GST1_PLUGINS_BASE),y)
-WINE_CUSTOM_CONF_OPTS += --with-gstreamer
-WINE_CUSTOM_DEPENDENCIES += gst1-plugins-base
-else
-WINE_CUSTOM_CONF_OPTS += --without-gstreamer
+ifeq ($(BR2_PACKAGE_FFMPEG),y)
+WINE_CUSTOM_CONF_OPTS += --without-gstreamer --with-ffmpeg
+WINE_CUSTOM_DEPENDENCIES += ffmpeg
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
@@ -299,17 +298,19 @@ endef
 HOST_WINE_CUSTOM_CONF_OPTS += \
 	--disable-tests \
 	--disable-win16 \
+	--disable-winemenubuilder \
 	--without-alsa \
 	--without-capi \
 	--without-coreaudio \
 	--without-cups \
 	--without-dbus \
 	--without-fontconfig \
-	--without-gphoto \
 	--without-gnutls \
+	--without-gphoto \
 	--without-gssapi \
 	--without-gstreamer \
 	--without-krb5 \
+	--without-ldap \
 	--without-mingw \
 	--without-netapi \
 	--without-opencl \

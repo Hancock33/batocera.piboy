@@ -3,6 +3,8 @@ from __future__ import annotations
 from importlib import import_module
 from typing import TYPE_CHECKING, Final
 
+from ..exceptions import BatoceraException
+
 if TYPE_CHECKING:
     from .Generator import Generator
 
@@ -25,6 +27,7 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'cemu': ('cemu.cemuGenerator', 'CemuGenerator'),
     'cgenius': ('cgenius.cgeniusGenerator', 'CGeniusGenerator'),
     'citra': ('citra.citraGenerator', 'CitraGenerator'),
+    'citron': ('citron.citronGenerator', 'CitronGenerator'),
     'devilutionx': ('devilutionx.devilutionxGenerator', 'DevilutionXGenerator'),
     'dolphin': ('dolphin.dolphinGenerator', 'DolphinGenerator'),
     'dolphin_triforce': ('dolphin_triforce.dolphinTriforceGenerator', 'DolphinTriforceGenerator'),
@@ -127,7 +130,6 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'stuntcar': ('stuntcar.stuntcarGenerator', 'StuntcarGenerator'),
     'supermodel': ('supermodel.supermodelGenerator', 'SupermodelGenerator'),
     'supertux2': ('supertux2.supertux2Generator', 'Supertux2Generator'),
-    'suyu': ('suyu.suyuGenerator', 'SuyuGenerator'),
     'theforceengine': ('theforceengine.theforceengineGenerator', 'TheForceEngineGenerator'),
     'themehospital': ('themehospital.themehospitalGenerator', 'ThemehospitalGenerator'),
     'thextech': ('thextech.thextechGenerator', 'TheXTechGenerator'),
@@ -169,10 +171,10 @@ def get_generator(emulator: str) -> Generator:
         generator_cls: type[Generator] = getattr(module, cls_name)
     except ImportError as e:
         if e.name is not None and e.name.startswith(__name__.split('.')[0]):
-            raise Exception(f'no generator found for emulator {emulator}') from e
-        else:
-            raise
+            raise BatoceraException(f'No generator found for emulator {emulator}') from e
+
+        raise BatoceraException(f'Error importing generator for emulator {emulator}') from e
     except AttributeError as e:
-        raise Exception(f'no generator found for emulator {emulator}') from e
+        raise BatoceraException(f'No generator found for emulator {emulator}') from e
 
     return generator_cls()

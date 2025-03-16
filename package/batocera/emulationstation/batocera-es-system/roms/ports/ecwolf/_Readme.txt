@@ -18,7 +18,7 @@ For example ...
                                         ├── vswap.sod
                                         ├── vswap.sd2
                                         └── vswap.sd3
-                                           
+
 /userdata/roms/ecwolf/Super 3D Noah's Ark/
                                         ├── Super 3D Noah's Ark.ecwolf
                                         ├── audiohed.wl6
@@ -31,4 +31,4 @@ For example ...
                                         ├── vgahead.wl6
                                         └──  vswap.wl6
 
-PK3 files can be put in the directory for game enhancements 
+PK3 files can be put in the directory for game enhancements

@@ -11,10 +11,10 @@ class VoidswGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         addon = "-addon0"
-        if (rom.__contains__("WD")):
+        if  "WD" in rom.name:
             addon = "-addon1"
 
-        if (rom.__contains__("TD")):
+        if  "TD" in rom.name:
             addon = "-addon2"
 
         commandArray = ["voidsw", addon, "-j", os.path.dirname(os.path.abspath(rom))]

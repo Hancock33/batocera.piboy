@@ -14,10 +14,10 @@ class AlephoneGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         game = "/userdata/roms/ports/alephone/marathon"
-        if (rom.__contains__("marathon2")):
+        if "marathon2" in rom.name:
             game = "/userdata/roms/ports/alephone/marathon2"
 
-        if (rom.__contains__("infinity")):
+        if "infinity" in rom.name:
             game = "/userdata/roms/ports/alephone/infinity"
 
         commandArray = ["alephone", game]

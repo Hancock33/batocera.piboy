@@ -1,5 +1,5 @@
 diff --git a/pcsx2/VMManager.cpp b/pcsx2/VMManager.cpp
-index c1344122e..b247d662d 100644
+index e7f1d3bed..40d82b2f0 100644
 --- a/pcsx2/VMManager.cpp
 +++ b/pcsx2/VMManager.cpp
 @@ -1863,6 +1863,9 @@ bool VMManager::DoSaveState(const char* filename, s32 slot_for_message, bool zip

@@ -8,10 +8,9 @@ from os import environ
 from typing import TYPE_CHECKING, Any, Final
 
 import evdev
-from evdev import InputDevice
 
 from ... import Command
-from ...batoceraPaths import BIOS, CACHE, CONFIGS, ROMS, SAVES, mkdir_if_not_exists
+from ...batoceraPaths import BIOS, CACHE, CONFIGS, ROMS, SAVES, configure_emulator, mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
@@ -60,6 +59,12 @@ ryujinxCtrl: dict[str, Any] = {
         "weak_rumble": 2,
         "enable_rumble": True
       },
+      "led": {
+        "enable_led": False,
+        "turn_off_led": False,
+        "use_rainbow": False,
+        "led_color": 0
+      },
       "left_joycon": {
         "button_minus": "Minus",
         "button_l": "LeftShoulder",
@@ -105,7 +110,7 @@ class RyujinxGenerator(Generator):
         mkdir_if_not_exists(ryujinxConfFile.parent)
         try:
             conf = json.load(ryujinxConfFile.open("r"))
-        except:
+        except Exception:
             conf = {}
 
         # Set defaults
@@ -116,48 +121,23 @@ class RyujinxGenerator(Generator):
         conf["game_dirs"] = [str(ROMS / "switch")]
         conf["start_fullscreen"] = True
         conf["docked_mode"] = True
-        conf["audio_backend"] = "OpenAl"
+        conf["audio_backend"] = "SDL2"
         conf["audio_volume"] = 1
         # set ryujinx app language
         conf["language_code"] = str(getLangFromEnvironment())
 
         # Console language, time & date
-        if system.isOptSet("ryujinx_language"):
-            conf["system_language"] = system.config["ryujinx_language"]
-        else:
-            conf["system_language"] = "AmericanEnglish"
-
-        if system.isOptSet("ryujinx_region"):
-            conf["system_region"] = system.config["ryujinx_region"]
-        else:
-            conf["system_region"] = "USA"
+        conf["system_language"] = system.config.get("ryujinx_language", "AmericanEnglish")
+        conf["system_region"] = system.config.get("ryujinx_region", "USA")
 
         conf["system_time_zone"] = "UTC"
-        if system.isOptSet("ryujinx_timeoffset"):
-            conf["system_time_offset"] = int(system.config["ryujinx_timeoffset"])
-        else:
-            conf["system_time_offset"]= 0
+        conf["system_time_offset"] = system.config.get_int("ryujinx_timeoffset", 0)
 
         # Graphics
-        if system.isOptSet("ryujinx_api"):
-            conf["graphics_backend"] = system.config["ryujinx_api"]
-        else:
-            conf["graphics_backend"] = "Vulkan"
-
-        if system.isOptSet("ryujinx_scale"):
-            conf["res_scale"] = int(system.config["ryujinx_scale"])
-        else:
-            conf["res_scale"] = 1
-
-        if system.isOptSet("ryujinx_ratio"):
-            conf["aspect_ratio"] = system.config["ryujinx_ratio"]
-        else:
-            conf["aspect_ratio"] = "Fixed16x9"
-
-        if system.isOptSet("ryujinx_filtering"):
-            conf["max_anisotropy"] = int(system.config["ryujinx_filtering"])
-        else:
-            conf["max_anisotropy"] = -1
+        conf["graphics_backend"] = system.config.get("ryujinx_api", "Vulkan")
+        conf["res_scale"] = system.config.get_int("ryujinx_scale", 1)
+        conf["aspect_ratio"] = system.config.get("ryujinx_ratio", "Fixed16x9")
+        conf["max_anisotropy"] = system.config.get_int("ryujinx_filtering", -1)
 
         conf["input_config"] = []
 
@@ -167,54 +147,40 @@ class RyujinxGenerator(Generator):
             jout.write(js_out)
 
         # Now add Controllers
-        nplayer = 1
-        for controller, pad in sorted(playersControllers.items()):
-            if system.isOptSet('ryujinx_btnlabels'):
-                btn_a = "A"
-                btn_b = "B"
-                btn_x = "X"
-                btn_y = "Y"
-            else:
-                btn_a = "B"
-                btn_b = "A"
-                btn_x = "Y"
-                btn_y = "X"
+        for nplayer, pad in enumerate(playersControllers[:8], start=1):
+            ctrlConf = ryujinxCtrl
+            # we need to get the uuid for ryujinx controllers
+            # example xbox 360 - "id": "0-00000003-045e-0000-8e02-000014010000"
+            devices = [evdev.InputDevice(fn) for fn in evdev.list_devices()]
+            for dev in devices:
+                if dev.path == pad.device_path:
+                    bustype = f"{dev.info.bustype:x}"
+                    bustype = "17f6" + bustype.zfill(4)
+                    vendor = f"{dev.info.vendor:x}"
+                    vendor = vendor.zfill(4)
+                    product = f"{dev.info.product:x}"
+                    product = product.zfill(4)
+                    # reverse the poduct id, so 028e becomes 8e02
+                    product1 = (product)[-2::]
+                    product2 = (product)[:-2]
+                    product = product1 + product2
+                    # reverse the version id also
+                    version = f"{dev.info.version:x}"
+                    version = version.zfill(4)
+                    version1 = (version)[-2::]
+                    version2 = (version)[:-2]
+                    version = version1 + version2
+                    ctrlUUID = (f"{pad.index}-{bustype}-{vendor}-0000-{product}-0000{version}0000")
+                    ctrlConf["id"] = ctrlUUID
+                    # always configure a pro controller for now
+                    ctrlConf["controller_type"] = "ProController"
+                    playerNum = (f"Player{nplayer}")
+                    ctrlConf["player_index"] = playerNum
+                    # write the controller to the file
+                    writeControllerIntoJson(ctrlConf)
+                    break
 
-            if nplayer <= 8:
-                ctrlConf = ryujinxCtrl
-                # we need to get the uuid for ryujinx controllers
-                # example xbox 360 - "id": "0-00000003-045e-0000-8e02-000014010000"
-                devices = [InputDevice(fn) for fn in evdev.list_devices()]
-                for dev in devices:
-                    if dev.path == pad.device_path:
-                        bustype = f"{dev.info.bustype:x}"
-                        bustype = bustype.zfill(8)
-                        vendor = f"{dev.info.vendor:x}"
-                        vendor = vendor.zfill(4)
-                        product = f"{dev.info.product:x}"
-                        product = product.zfill(4)
-                        # reverse the poduct id, so 028e becomes 8e02
-                        product1 = (product)[-2::]
-                        product2 = (product)[:-2]
-                        product = product1 + product2
-                        # reverse the version id also
-                        version = f"{dev.info.version:x}"
-                        version = version.zfill(4)
-                        version1 = (version)[-2::]
-                        version2 = (version)[:-2]
-                        version = version1 + version2
-                        ctrlUUID = (f"{pad.index}-{bustype}-{vendor}-0000-{product}-0000{version}0000")
-                        ctrlConf["id"] = ctrlUUID
-                        # always configure a pro controller for now
-                        ctrlConf["controller_type"] = "ProController"
-                        playerNum = (f"Player{nplayer}")
-                        ctrlConf["player_index"] = playerNum
-                        # write the controller to the file
-                        writeControllerIntoJson(ctrlConf)
-                        break
-            nplayer += 1
-
-        if rom == "config":
+        if configure_emulator(rom):
             commandArray = ["/usr/bin/ryujinx/Ryujinx"]
         else:
             commandArray = ["/usr/bin/ryujinx/Ryujinx", rom]
@@ -241,5 +207,4 @@ def getLangFromEnvironment():
                            "nl_NL": 6, "zh_CN": 7, "zh_TW": 8, "ko_KR": 9 }
     if lang in availableLanguages:
         return availableLanguages[lang]
-    else:
-        return availableLanguages["en_US"]
+    return availableLanguages["en_US"]

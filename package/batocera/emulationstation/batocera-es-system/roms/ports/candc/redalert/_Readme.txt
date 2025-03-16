@@ -6,16 +6,16 @@ This folder should contain the following files...
 |   LORES1.MIX
 |   REDALERT.INI
 |   REDALERT.MIX
-|   
+|
 +---aftermath
 |       MAIN.MIX
-|       
+|
 +---allied
 |       MAIN.MIX
-|       
+|
 +---counterstrike
 |       MAIN.MIX
-|       
+|
 \---soviet
         MAIN.MIX
-        
+

@@ -2,7 +2,7 @@ config BR2_PACKAGE_LIBRETRO_CITRA
 	bool "libretro-citra"
 	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
-	select BR2_PACKAGE_CITRA
+	select BR2_PACKAGE_AZAHAR
 
 	help
 	  A libretro Citra core for Nintendo 3DS.

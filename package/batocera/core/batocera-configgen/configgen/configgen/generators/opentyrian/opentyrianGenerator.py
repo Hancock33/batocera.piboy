@@ -17,7 +17,7 @@ eslog = logging.getLogger(__name__)
 class OpentyrianGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        if (rom.__contains__("2000")):
+        if  "2000" in rom.name:
             commandArray = ["opentyrian2000", "-t" "/usr/share/tyrian2000/", "-j"]
         else:
             commandArray = ["opentyrian", "-t" "/usr/share/opentyrian/data/", "-j"]

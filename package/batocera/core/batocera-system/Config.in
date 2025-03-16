@@ -79,6 +79,7 @@ if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711  
     BR2_PACKAGE_BATOCERA_TARGET_BCM2712 || BR2_PACKAGE_BATOCERA_TARGET_JH7110           || \
     BR2_PACKAGE_BATOCERA_TARGET_H616    || BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_GLES3    || \
     BR2_PACKAGE_BATOCERA_TARGET_ODIN    || BR2_PACKAGE_BATOCERA_TARGET_ROCKCHIP_GLES3   || \
+    BR2_PACKAGE_BATOCERA_TARGET_SM8250  ||   BR2_PACKAGE_BATOCERA_TARGET_SM8550         || \
     BR2_PACKAGE_BATOCERA_TARGET_T527
 config BR2_PACKAGE_BATOCERA_GLES3
     bool "target gles3 support"
@@ -300,7 +301,9 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_JOYCOND                              if  BR2_PACKAGE_HID_NX                         # nintendo switch joycon daemon (requires hid-nx)
     select BR2_PACKAGE_NEW_LG4FF                            if !BR2_PACKAGE_BATOCERA_TARGET_RK3326         && !BR2_PACKAGE_BATOCERA_TARGET_XU4    && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_BCM2835        && !BR2_PACKAGE_BATOCERA_TARGET_RK3326 && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3128         && !BR2_PACKAGE_BATOCERA_TARGET_ODIN   # Improved Linux module driver for Logitech driving wheels (the lg4ff is disabled in kernels)
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3128         && !BR2_PACKAGE_BATOCERA_TARGET_SM8250 && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_SM8550         && !BR2_PACKAGE_BATOCERA_TARGET_T527   && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_ODIN           # Improved Linux module driver for Logitech driving wheels (the lg4ff is disabled in kernels)
     select BR2_PACKAGE_HID_T150                             if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # Thrustmaster T150 and TMX Force Feedback Wheel Linux drivers
     select BR2_PACKAGE_KEYBOARDTOPADS
     select BR2_PACKAGE_NSO_N64
@@ -359,6 +362,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3128      && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_ODIN        && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_SM8250      && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_SM8550      && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
     # (6.13 kernel includes 8821au drivers)
@@ -503,6 +507,8 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     default "x86_64"                                                                                                                                                                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64
     default "x86-64-v3"                                                                                                                                                                        if  BR2_PACKAGE_BATOCERA_TARGET_ZEN3
     default "qualcomm/sd845/odin"                                                                                                                                                              if  BR2_PACKAGE_BATOCERA_TARGET_ODIN
+    default "qualcomm/sm8250/rp5 qualcomm/sm8250/rpmini"                                                                                                                                       if  BR2_PACKAGE_BATOCERA_TARGET_SM8250
+    default "qualcomm/sm8550/odin2 qualcomm/sm8550/odin2portal"                                                                                                                                if  BR2_PACKAGE_BATOCERA_TARGET_SM8550
     default "starfive/jh7110"                                                                                                                                                                  if  BR2_PACKAGE_BATOCERA_TARGET_JH7110
     default "amlogic/s922x/ogu amlogic/s922x/gtkingpro amlogic/s922x/gtking amlogic/s922x/odroidn2l amlogic/s922x/vim3 amlogic/s922x/odroidn2 amlogic/s922x/odroidn2plus amlogic/s922x/zero2"  if  BR2_PACKAGE_BATOCERA_TARGET_S922X
     default "amlogic/s905/odroidc2 amlogic/s905/tvbox amlogic/s905/lepotato amlogic/s905/vim amlogic/s905/p201 amlogic/s905/lepotatov2 amlogic/s905/minix-neo-u1"                              if  BR2_PACKAGE_BATOCERA_TARGET_S905
@@ -612,6 +618,12 @@ config BR2_PACKAGE_BATOCERA_TARGET_ZEN3
 # -------------------------------------
 config BR2_PACKAGE_BATOCERA_TARGET_ODIN
     bool "odin"
+
+config BR2_PACKAGE_BATOCERA_TARGET_SM8250
+	bool "sm8250"
+
+config BR2_PACKAGE_BATOCERA_TARGET_SM8550
+	bool "sm8550"
 
 config BR2_PACKAGE_BATOCERA_TARGET_XU4
     bool "xu4"
@@ -849,7 +861,6 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
 
     # 3DS
     select BR2_PACKAGE_AZAHAR                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
-    select BR2_PACKAGE_CITRA                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_CITRA                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_PANDA3DS                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
@@ -1194,7 +1205,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_A3GEN2      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
-    select BR2_PACKAGE_SUYU                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_CITRON                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_RYUJINX                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Triforce
