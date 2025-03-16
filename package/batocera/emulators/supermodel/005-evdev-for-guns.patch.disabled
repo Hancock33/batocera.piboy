@@ -12,10 +12,10 @@ index 2c4c341..e4ef4fd 100644
  
  ###############################################################################
 diff --git a/Makefiles/Rules.inc b/Makefiles/Rules.inc
-index 7235c55..2813dbd 100644
+index 0f233b9..fbb3deb 100644
 --- a/Makefiles/Rules.inc
 +++ b/Makefiles/Rules.inc
-@@ -153,6 +153,7 @@ SRC_FILES = \
+@@ -152,6 +152,7 @@ SRC_FILES = \
  	Src/Inputs/InputTypes.cpp \
  	Src/Inputs/MultiInputSource.cpp \
  	Src/OSD/SDL/SDLInputSystem.cpp \
@@ -24,24 +24,16 @@ index 7235c55..2813dbd 100644
  	Src/OSD/Outputs.cpp \
  	Src/Sound/MPEG/MpegAudio.cpp \
 diff --git a/Src/OSD/SDL/Main.cpp b/Src/OSD/SDL/Main.cpp
-index 7108536..5f44ade 100644
+index 661d9f2..3611bd5 100644
 --- a/Src/OSD/SDL/Main.cpp
 +++ b/Src/OSD/SDL/Main.cpp
-@@ -86,6 +86,7 @@
- #include "OSD/FileSystemPath.h"
- #include "GameLoader.h"
- #include "SDLInputSystem.h"
-+#include "EvdevInputSystem.h"
- #include "SDLIncludes.h"
- #include "Debugger/SupermodelDebugger.h"
- #include "Graphics/Legacy3D/Legacy3D.h"
-@@ -2035,6 +2036,10 @@ int main(int argc, char **argv)
-   // Create input system
-   if (selectedInputSystem == "sdl")
-     InputSystem = new CSDLInputSystem(s_runtime_config);
+@@ -2138,6 +2138,10 @@ int main(int argc, char **argv)
+     InputSystem = new CSDLInputSystem(s_runtime_config, false);
+   else if (selectedInputSystem == "sdlgamepad")
+     InputSystem = new CSDLInputSystem(s_runtime_config, true);
 +// ifdef udev
 +  else if (selectedInputSystem == "evdev")
-+    InputSystem = new CEvdevInputSystem(s_runtime_config);
++    InputSystem = new CEvdevInputSystem(s_runtime_config, false);
 +//
  #ifdef SUPERMODEL_WIN32
    else if (selectedInputSystem == "dinput")
@@ -119,7 +111,7 @@ index 0000000..ee695ba
 +  return event_strcmp_events(aa->devnode, bb->devnode);
 +}
 +
-+CEvdevInputSystem::CEvdevInputSystem(const Util::Config::Node& config) : CSDLInputSystem(config) {
++CEvdevInputSystem::CEvdevInputSystem(const Util::Config::Node& config, bool useGameController) : CSDLInputSystem(config, false) {
 +  m_ndevices = 0;
 +  m_udev = NULL;
 +

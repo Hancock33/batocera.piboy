@@ -1,168 +1,167 @@
-diff --git a/Config/Supermodel.ini b/Config/Supermodel.ini
-index 5c27642..36837eb 100644
---- a/Config/Supermodel.ini
-+++ b/Config/Supermodel.ini
-@@ -29,6 +29,163 @@
- ;
- 
- 
-+[ daytona2 ]
-+MusicVolume = 120
-+SoundVolume = 100
-+Balance = -10
-+InputJoy1XSaturation = 155
-+
-+[ dayto2pe ]
-+MusicVolume = 120
-+SoundVolume = 100
-+Balance = -10
-+InputJoy1XSaturation = 155
-+
-+[ dirtdvls ]
-+MusicVolume = 100
-+SoundVolume = 130
-+Balance = -20
-+
-+[ getbassur ]
-+WideScreen =0
-+WideBackground =0
-+MusicVolume = 100
-+SoundVolume = 110
-+Balance = 10
-+
-+[ eca ]
-+MusicVolume = 100
-+SoundVolume = 100
-+Balance = -35
-+
-+[ fvipers2 ]
-+LegacySoundDSP = 1
-+MusicVolume = 100
-+SoundVolume = 170
-+Balance = 10
-+
-+[ harley ]
-+MusicVolume = 100
-+SoundVolume = 100
-+Balance = 10
-+
-+[ lamachin ]
-+MusicVolume = 100
-+SoundVolume = 115
-+Balance = 0
-+InputSystem=rawinput
-+
-+[ lemans24 ]
-+MusicVolume = 100
-+SoundVolume = 110
-+Balance = 0
-+InputJoy1XSaturation = 110
-+
-+[ lostwsga ]
-+MusicVolume = 100
-+SoundVolume = 105
-+Balance = 20
-+InputSystem=rawinput
-+CrosshairStyle = bmp
-+
-+[ magtruck ]
-+MusicVolume = 100
-+SoundVolume = 100
-+Balance = 15
-+
-+[ mgtrkbad ]
-+MusicVolume = 100
-+SoundVolume = 100
-+Balance = 15
-+
-+[ oceanhun ]
-+MusicVolume = 100
-+SoundVolume = 100
-+Balance = 0
-+InputSystem=rawinput
-+
-+[ oceanhuna ]
-+MusicVolume = 100
-+SoundVolume = 100
-+Balance = 0
-+InputSystem=rawinput
-+
-+[ scud ]
-+MusicVolume = 200
-+SoundVolume = 60
-+Balance = 0
-+InputJoy1XSaturation = 155
-+
-+[ scudplus ]
-+MusicVolume = 200
-+SoundVolume = 60
-+Balance = 0
-+InputJoy1XSaturation = 155
-+
-+[ skichamp ]
-+MusicVolume = 100
-+SoundVolume = 200
-+Balance = 10
-+ForceFeedback=1
-+
-+[ spikeofe ]
-+MusicVolume = 120
-+SoundVolume = 120
-+Balance = 0
-+
-+[ spikeout ]
-+MusicVolume = 90
-+SoundVolume = 90
-+Balance = 0
-+
-+[ srally2 ]
-+SoundVolume = 155
-+MusicVolume = 140
-+Balance = 15
-+PowerPCFrequency=75
-+InputJoy1XSaturation = 150
-+
-+[ swtrilgy ]
-+MusicVolume = 100
-+SoundVolume = 100
-+Balance = 0
-+
-+[ vf3 ]
-+MusicVolume = 100
-+SoundVolume = 110
-+Balance = -5
-+
-+[ vf3tb ]
-+MusicVolume = 100
-+SoundVolume = 110
-+Balance = -5
-+
-+[ von2 ]
-+MusicVolume = 100
-+SoundVolume = 100
-+Balance = 0
-+
-+[ vs2 ]
-+MusicVolume = 100
-+SoundVolume = 110
-+Balance = -10
-+WideScreen =0
-+WideBackground =0
-+
-+[ vs298 ]
-+MusicVolume = 100
-+SoundVolume = 110
-+Balance = -10
-+WideScreen =0
-+WideBackground =0
-+
-+[ vs2v991 ]
-+MusicVolume = 100
-+SoundVolume = 110
-+Balance = -10
-+WideScreen =0
-+WideBackground =0
-+
- [ Global ]
- 
- ; Graphics
+diff --git a/Src/OSD/DefaultConfigFile.h b/Src/OSD/DefaultConfigFile.h
+index af3196a..635ec04 100644
+--- a/Src/OSD/DefaultConfigFile.h
++++ b/Src/OSD/DefaultConfigFile.h
+@@ -60,6 +60,162 @@
+     "; inputs are assigned here.\n"
+     ";\n"
+     "\n"
++    "[ daytona2 ]\n"
++    "MusicVolume = 120\n"
++    "SoundVolume = 100\n"
++    "Balance = -10\n"
++    "InputJoy1XSaturation = 155\n"
++    "\n"
++    "[ dayto2pe ]\n"
++    "MusicVolume = 120\n"
++    "SoundVolume = 100\n"
++    "Balance = -10\n"
++    "InputJoy1XSaturation = 155\n"
++    "\n"
++    "[ dirtdvls ]\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 130\n"
++    "Balance = -20\n"
++    "\n"
++    "[ getbassur ]\n"
++    "WideScreen =0\n"
++    "WideBackground =0\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 110\n"
++    "Balance = 10\n"
++    "\n"
++    "[ eca ]\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 100\n"
++    "Balance = -35\n"
++    "\n"
++    "[ fvipers2 ]\n"
++    "LegacySoundDSP = 1\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 170\n"
++    "Balance = 10\n"
++    "\n"
++    "[ harley ]\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 100\n"
++    "Balance = 10\n"
++    "\n"
++    "[ lamachin ]\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 115\n"
++    "Balance = 0\n"
++    "InputSystem=rawinput\n"
++    "\n"
++    "[ lemans24 ]\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 110\n"
++    "Balance = 0\n"
++    "InputJoy1XSaturation = 110\n"
++    "\n"
++    "[ lostwsga ]\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 105\n"
++    "Balance = 20\n"
++    "InputSystem=rawinput\n"
++    "CrosshairStyle = bmp\n"
++    "\n"
++    "[ magtruck ]\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 100\n"
++    "Balance = 15\n"
++    "\n"
++    "[ mgtrkbad ]\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 100\n"
++    "Balance = 15\n"
++    "\n"
++    "[ oceanhun ]\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 100\n"
++    "Balance = 0\n"
++    "InputSystem=rawinput\n"
++    "\n"
++    "[ oceanhuna ]\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 100\n"
++    "Balance = 0\n"
++    "InputSystem=rawinput\n"
++    "\n"
++    "[ scud ]\n"
++    "MusicVolume = 200\n"
++    "SoundVolume = 60\n"
++    "Balance = 0\n"
++    "InputJoy1XSaturation = 155\n"
++    "\n"
++    "[ scudplus ]\n"
++    "MusicVolume = 200\n"
++    "SoundVolume = 60\n"
++    "Balance = 0\n"
++    "InputJoy1XSaturation = 155\n"
++    "\n"
++    "[ skichamp ]\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 200\n"
++    "Balance = 10\n"
++    "ForceFeedback=1\n"
++    "\n"
++    "[ spikeofe ]\n"
++    "MusicVolume = 120\n"
++    "SoundVolume = 120\n"
++    "Balance = 0\n"
++    "\n"
++    "[ spikeout ]\n"
++    "MusicVolume = 90\n"
++    "SoundVolume = 90\n"
++    "Balance = 0\n"
++    "\n"
++    "[ srally2 ]\n"
++    "SoundVolume = 155\n"
++    "MusicVolume = 140\n"
++    "Balance = 15\n"
++    "PowerPCFrequency=75\n"
++    "InputJoy1XSaturation = 150\n"
++    "\n"
++    "[ swtrilgy ]\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 100\n"
++    "Balance = 0\n"
++    "\n"
++    "[ vf3 ]\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 110\n"
++    "Balance = -5\n"
++    "\n"
++    "[ vf3tb ]\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 110\n"
++    "Balance = -5\n"
++    "\n"
++    "[ von2 ]\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 100\n"
++    "Balance = 0\n"
++    "\n"
++    "[ vs2 ]\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 110\n"
++    "Balance = -10\n"
++    "WideScreen =0\n"
++    "WideBackground =0\n"
++    "\n"
++    "[ vs298 ]\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 110\n"
++    "Balance = -10\n"
++    "WideScreen =0\n"
++    "WideBackground =0\n"
++    "\n"
++    "[ vs2v991 ]\n"
++    "MusicVolume = 100\n"
++    "SoundVolume = 110\n"
++    "Balance = -10\n"
++    "WideScreen =0\n"
++    "WideBackground =0\n"
+     "\n"
+     "[ Global ]\n"
+     "\n"
