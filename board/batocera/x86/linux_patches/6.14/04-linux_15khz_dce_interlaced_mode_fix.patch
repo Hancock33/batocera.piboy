@@ -137,7 +137,7 @@ index 1fdeef47e4dc..d34c6c812e71 100644
  
  	mi->funcs->mem_input_program_surface_config(
 diff --git a/drivers/gpu/drm/amd/display/dc/dce60/dce60_timing_generator.c b/drivers/gpu/drm/amd/display/dc/dce60/dce60_timing_generator.c
-index e5fb0e8333e4..6b86e7e7b069 100644
+index e691a1cf3356..c07ab413a6cc 100644
 --- a/drivers/gpu/drm/amd/display/dc/dce60/dce60_timing_generator.c
 +++ b/drivers/gpu/drm/amd/display/dc/dce60/dce60_timing_generator.c
 @@ -118,7 +118,17 @@ static void program_timing(struct timing_generator *tg,

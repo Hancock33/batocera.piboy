@@ -81,7 +81,7 @@ index 000000000000..a8faabc2885e
 +#endif // CONFIG_SCHED_BORE
 +#endif // _LINUX_SCHED_BORE_H
 diff --git a/init/Kconfig b/init/Kconfig
-index 4b0adb48a40d..33b2b6e8f387 100644
+index 2c860e5b0694..218062030118 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -1375,6 +1375,23 @@ config CHECKPOINT_RESTORE
@@ -975,7 +975,7 @@ index 46f2a4236ce8..4a7cce41a20f 100644
  }
  
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index c824b24d069a..8432a7d2ba8b 100644
+index 9f70a494ac66..45125e1bc358 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -2121,7 +2121,11 @@ static inline void update_sched_domain_debugfs(void) { }
