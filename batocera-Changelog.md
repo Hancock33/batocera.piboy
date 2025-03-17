@@ -1,4 +1,4 @@
-# 2025/xx/xx - batocera.linux 42 - xxx
+# 2025/xx/xx - batocera.linux 42 - Papilio Ulysses
 ### Special Notes
 - Quake 1 & 2 roms need moving from tyrquake to quake & vitaquake2 to quake2 folders respectively.
   See the _info.txt file for directory layouts & ES file launcher naming conventions.
@@ -17,6 +17,7 @@
 - Initial support for OpenFIRE light gun
 - Initial support for Fusion P.I.G.S. light gun
 - Initial support for OneHit light gun (AimTrak clone)
+- Ayn Odin2 and Odin2 Portal support
 ### Added
 - Wireguard VPN for RK3326 boards
 - Image scaling option for Drastic

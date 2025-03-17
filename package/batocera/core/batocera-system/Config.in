@@ -1,4 +1,5 @@
 ##### define variables to use in this file
+##### define variables to use in this file
 if  BR2_PACKAGE_BATOCERA_RPI_VCORE || BR2_PACKAGE_BATOCERA_RPI_MESA3D
 config BR2_PACKAGE_BATOCERA_RPI_ANY
     bool "any rpi"
@@ -426,9 +427,10 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                 BR2_PACKAGE_BATOCERA_TARGET_BCM2835     ||  BR2_PACKAGE_BATOCERA_TARGET_BCM2836 || \
                                                                (BR2_PACKAGE_BATOCERA_TARGET_BCM2837     &&  BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_8)
 
-    select BR2_PACKAGE_BATOCERA_LED_HANDHELD                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_SM8250
+    select BR2_PACKAGE_BATOCERA_LED_HANDHELD                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_SM8250   || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_SM8550
 
-    select BR2_PACKAGE_LIBGPIOD_TOOLS                       if BR2_PACKAGE_LIBGPIOD
+    select BR2_PACKAGE_LIBGPIOD_TOOLS                       if  BR2_PACKAGE_LIBGPIOD
 
     # joy 2 pad
     select BR2_PACKAGE_EVMAPY
@@ -1492,6 +1494,7 @@ config BR2_PACKAGE_BATOCERA_GUNS
     select BR2_PACKAGE_GUNCON                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_BCM27XX || BR2_PACKAGE_BATOCERA_TARGET_BCM2837 # GunCon2 light gun
     select BR2_PACKAGE_GUNCON3                              if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4                                                                     # GunCon3 Light gun
     select BR2_PACKAGE_LIGHTGUNS_GAMES_PRECALIBRATIONS      # Light gun accuracy precalibration
+    select BR2_PACKAGE_ONEHIT_GUNS                          # OneHit light gun
     select BR2_PACKAGE_OPENFIRE_GUNS                        # OpenFIRE light gun
     select BR2_PACKAGE_RETROSHOOTER_GUNS                    # RetroShooter light gun
     select BR2_PACKAGE_SAMCO_GUNS                           # SAMCO light gun
