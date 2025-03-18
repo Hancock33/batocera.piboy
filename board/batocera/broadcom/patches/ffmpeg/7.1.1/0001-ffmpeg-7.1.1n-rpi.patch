@@ -1,5 +1,5 @@
 diff --git a/configure b/configure
-index d77a55b653..5c0854f627 100755
+index ffa407d53d..ecbf267ba6 100755
 --- a/configure
 +++ b/configure
 @@ -202,6 +202,7 @@ External library support:
@@ -233,10 +233,10 @@ index 2723a0312e..aee41267fb 100644
                      continue;
                  if (config->pix_fmt == *p)
 diff --git a/fftools/ffmpeg_filter.c b/fftools/ffmpeg_filter.c
-index 7ec328e04e..de87373295 100644
+index 38c7676a7e..727dfceccc 100644
 --- a/fftools/ffmpeg_filter.c
 +++ b/fftools/ffmpeg_filter.c
-@@ -2782,8 +2782,8 @@ static int send_frame(FilterGraph *fg, FilterGraphThread *fgt,
+@@ -2787,8 +2787,8 @@ static int send_frame(FilterGraph *fg, FilterGraphThread *fgt,
          break;
      case AVMEDIA_TYPE_VIDEO:
          if (ifp->format != frame->format ||
@@ -247,7 +247,7 @@ index 7ec328e04e..de87373295 100644
              ifp->color_space != frame->colorspace ||
              ifp->color_range != frame->color_range)
              need_reinit |= VIDEO_CHANGED;
-@@ -2804,6 +2804,9 @@ static int send_frame(FilterGraph *fg, FilterGraphThread *fgt,
+@@ -2809,6 +2809,9 @@ static int send_frame(FilterGraph *fg, FilterGraphThread *fgt,
          (ifp->hw_frames_ctx && ifp->hw_frames_ctx->data != frame->hw_frames_ctx->data))
          need_reinit |= HWACCEL_CHANGED;
  
@@ -1611,10 +1611,10 @@ index 0000000000..c02fdbe5a8
 +
 +#endif
 diff --git a/libavcodec/hevc/hevcdec.c b/libavcodec/hevc/hevcdec.c
-index 0dc24f82f8..e27f480a8e 100644
+index 6f0ae12558..6dd5ecbd59 100644
 --- a/libavcodec/hevc/hevcdec.c
 +++ b/libavcodec/hevc/hevcdec.c
-@@ -366,6 +366,19 @@ static void export_stream_params(HEVCContext *s, const HEVCSPS *sps)
+@@ -367,6 +367,19 @@ static void export_stream_params(HEVCContext *s, const HEVCSPS *sps)
      else
          avctx->color_range = AVCOL_RANGE_MPEG;
  
@@ -1634,7 +1634,7 @@ index 0dc24f82f8..e27f480a8e 100644
      if (sps->vui.common.colour_description_present_flag) {
          avctx->color_primaries = sps->vui.common.colour_primaries;
          avctx->color_trc       = sps->vui.common.transfer_characteristics;
-@@ -527,6 +540,7 @@ static enum AVPixelFormat get_format(HEVCContext *s, const HEVCSPS *sps)
+@@ -528,6 +541,7 @@ static enum AVPixelFormat get_format(HEVCContext *s, const HEVCSPS *sps)
                       CONFIG_HEVC_D3D11VA_HWACCEL * 2 + \
                       CONFIG_HEVC_D3D12VA_HWACCEL + \
                       CONFIG_HEVC_NVDEC_HWACCEL + \
@@ -1642,7 +1642,7 @@ index 0dc24f82f8..e27f480a8e 100644
                       CONFIG_HEVC_VAAPI_HWACCEL + \
                       CONFIG_HEVC_VIDEOTOOLBOX_HWACCEL + \
                       CONFIG_HEVC_VDPAU_HWACCEL + \
-@@ -561,6 +575,9 @@ static enum AVPixelFormat get_format(HEVCContext *s, const HEVCSPS *sps)
+@@ -562,6 +576,9 @@ static enum AVPixelFormat get_format(HEVCContext *s, const HEVCSPS *sps)
  #endif
  #if CONFIG_HEVC_VULKAN_HWACCEL
          *fmt++ = AV_PIX_FMT_VULKAN;
@@ -1652,7 +1652,7 @@ index 0dc24f82f8..e27f480a8e 100644
  #endif
          break;
      case AV_PIX_FMT_YUV420P10:
-@@ -588,6 +605,9 @@ static enum AVPixelFormat get_format(HEVCContext *s, const HEVCSPS *sps)
+@@ -589,6 +606,9 @@ static enum AVPixelFormat get_format(HEVCContext *s, const HEVCSPS *sps)
  #endif
  #if CONFIG_HEVC_NVDEC_HWACCEL
          *fmt++ = AV_PIX_FMT_CUDA;
@@ -1662,7 +1662,7 @@ index 0dc24f82f8..e27f480a8e 100644
  #endif
          break;
      case AV_PIX_FMT_YUV444P:
-@@ -682,13 +702,16 @@ static int set_sps(HEVCContext *s, HEVCLayerContext *l, const HEVCSPS *sps)
+@@ -683,13 +703,16 @@ static int set_sps(HEVCContext *s, HEVCLayerContext *l, const HEVCSPS *sps)
      if (!sps)
          return 0;
  
@@ -1685,7 +1685,7 @@ index 0dc24f82f8..e27f480a8e 100644
  
      l->sps    = ff_refstruct_ref_c(sps);
      s->vps    = ff_refstruct_ref_c(sps->vps);
-@@ -3179,11 +3202,13 @@ static int hevc_frame_start(HEVCContext *s, HEVCLayerContext *l,
+@@ -3210,11 +3233,13 @@ static int hevc_frame_start(HEVCContext *s, HEVCLayerContext *l,
          }
      }
  
@@ -1704,7 +1704,7 @@ index 0dc24f82f8..e27f480a8e 100644
  
      if (IS_IDR(s))
          ff_hevc_clear_refs(l);
-@@ -3750,8 +3775,13 @@ static int hevc_receive_frame(AVCodecContext *avctx, AVFrame *frame)
+@@ -3782,8 +3807,13 @@ static int hevc_receive_frame(AVCodecContext *avctx, AVFrame *frame)
      }
  
      ret    = decode_nal_units(s, avpkt->data, avpkt->size);
@@ -1719,7 +1719,7 @@ index 0dc24f82f8..e27f480a8e 100644
  
  do_output:
      if (ff_container_fifo_read(s->output_fifo, frame) >= 0) {
-@@ -3780,8 +3810,10 @@ static int hevc_ref_frame(HEVCFrame *dst, const HEVCFrame *src)
+@@ -3812,8 +3842,10 @@ static int hevc_ref_frame(HEVCFrame *dst, const HEVCFrame *src)
      }
  
      dst->pps     = ff_refstruct_ref_c(src->pps);
@@ -1732,7 +1732,7 @@ index 0dc24f82f8..e27f480a8e 100644
      dst->rpl = ff_refstruct_ref(src->rpl);
      dst->nb_rpl_elems = src->nb_rpl_elems;
  
-@@ -4096,6 +4128,9 @@ const FFCodec ff_hevc_decoder = {
+@@ -4125,6 +4157,9 @@ const FFCodec ff_hevc_decoder = {
  #if CONFIG_HEVC_NVDEC_HWACCEL
                                 HWACCEL_NVDEC(hevc),
  #endif
@@ -8548,10 +8548,10 @@ index 0000000000..472df7cb0e
 +
 diff --git a/libavcodec/v4l2_req_hevc_vx.c b/libavcodec/v4l2_req_hevc_vx.c
 new file mode 100644
-index 0000000000..04b95dbbee
+index 0000000000..d06ec854e5
 --- /dev/null
 +++ b/libavcodec/v4l2_req_hevc_vx.c
-@@ -0,0 +1,1452 @@
+@@ -0,0 +1,1442 @@
 +/*
 +    Copyright (C) 2024  John Cox john.cox@raspberrypi.com
 +
@@ -8648,9 +8648,6 @@ index 0000000000..04b95dbbee
 +
 +    // Decode only - should be NULL by the time we emit the frame
 +    struct req_decode_ent decode_ent;
-+
-+    struct media_request *req;
-+    struct qent_src *qe_src;
 +
 +#if HEVC_CTRLS_VERSION >= 2
 +    struct v4l2_ctrl_hevc_decode_params dec;
@@ -9579,9 +9576,6 @@ index 0000000000..04b95dbbee
 +    if (h->cur_frame != NULL) {
 +        V4L2MediaReqDescriptor *const rd = (V4L2MediaReqDescriptor *)h->cur_frame->f->data[0];
 +
-+        media_request_abort(&rd->req);
-+        mediabufs_src_qent_abort(ctx->mbufs, &rd->qe_src);
-+
 +        decode_q_remove(&ctx->decode_q, &rd->decode_ent);
 +    }
 +}
@@ -9879,10 +9873,6 @@ index 0000000000..04b95dbbee
 +
 +    qent_dst_unref(&rd->qe_dst);
 +
-+    // We don't expect req or qe_src to be set
-+    if (rd->req || rd->qe_src)
-+        av_log(NULL, AV_LOG_ERROR, "%s: qe_src %p or req %p not NULL\n", __func__, rd->req, rd->qe_src);
-+
 +    av_freep(&rd->slices);
 +    av_freep(&rd->slice_params);
 +    av_freep(&rd->offsets);
@@ -10006,10 +9996,10 @@ index 0000000000..04b95dbbee
 +
 diff --git a/libavcodec/v4l2_req_media.c b/libavcodec/v4l2_req_media.c
 new file mode 100644
-index 0000000000..79dffa2ff9
+index 0000000000..ba9ccb31ce
 --- /dev/null
 +++ b/libavcodec/v4l2_req_media.c
-@@ -0,0 +1,1806 @@
+@@ -0,0 +1,1835 @@
 +/*
 + * Copyright (C) 2018 Paul Kocialkowski <paul.kocialkowski@bootlin.com>
 + *
@@ -10395,7 +10385,7 @@ index 0000000000..79dffa2ff9
 +struct buf_pool {
 +    enum mediabufs_memory memtype;
 +    pthread_mutex_t lock;
-+    sem_t free_sem;
++    pthread_cond_t cond;
 +    struct qe_list_head free;
 +    struct qe_list_head inuse;
 +};
@@ -10556,8 +10546,8 @@ index 0000000000..79dffa2ff9
 +    for (i = 0; i < VIDEO_MAX_PLANES && be->dh[i]; ++i)
 +        dmabuf_len_set(be->dh[i], 0);
 +    bq_put_free(bp, be);
++    pthread_cond_broadcast(&bp->cond);
 +    pthread_mutex_unlock(&bp->lock);
-+    sem_post(&bp->free_sem);
 +}
 +
 +static bool queue_is_inuse(const struct buf_pool *const bp)
@@ -10579,10 +10569,9 @@ index 0000000000..79dffa2ff9
 +{
 +    struct qent_base *buf;
 +
-+    if (do_wait(&bp->free_sem))
-+        return NULL;
 +    pthread_mutex_lock(&bp->lock);
-+    buf = bq_get_free(bp);
++    while ((buf = bq_get_free(bp)) == NULL && pthread_cond_wait(&bp->cond, &bp->lock) == 0)
++        /* Loop */;
 +    pthread_mutex_unlock(&bp->lock);
 +    return buf;
 +}
@@ -10591,8 +10580,6 @@ index 0000000000..79dffa2ff9
 +{
 +    struct qent_base *buf;
 +
-+    if (do_trywait(&bp->free_sem))
-+        return NULL;
 +    pthread_mutex_lock(&bp->lock);
 +    buf = bq_get_free(bp);
 +    pthread_mutex_unlock(&bp->lock);
@@ -10618,7 +10605,7 @@ index 0000000000..79dffa2ff9
 +
 +static void queue_delete(struct buf_pool *const bp)
 +{
-+    sem_destroy(&bp->free_sem);
++    pthread_cond_destroy(&bp->cond);
 +    pthread_mutex_destroy(&bp->lock);
 +    free(bp);
 +}
@@ -10629,7 +10616,7 @@ index 0000000000..79dffa2ff9
 +    if (!bp)
 +        return NULL;
 +    pthread_mutex_init(&bp->lock, NULL);
-+    sem_init(&bp->free_sem, 0, 0);
++    pthread_cond_init(&bp->cond, NULL);
 +    return bp;
 +}
 +
@@ -11185,6 +11172,32 @@ index 0000000000..79dffa2ff9
 +    return cbuf.count;
 +}
 +
++static void queue_dst_wait_no_waiting(struct buf_pool *const bp)
++{
++    // This is O(n^2), but n is not very big & shoudl only happen on shutdown
++    // so it isn't worth adding any processing to anything else to make this
++    // more efficient
++    for (;;) {
++        struct qent_base *be;
++        struct qent_dst *be_dst = NULL;
++
++        pthread_mutex_lock(&bp->lock);
++        for (be = bp->inuse.head; be != NULL; be = be->next) {
++            be_dst = base_to_dst(be);
++            if (be_dst->waiting) {
++                qent_dst_ref(be_dst);
++                break;
++            }
++        }
++        pthread_mutex_unlock(&bp->lock);
++
++        if (be == NULL)
++            break;
++
++        qent_dst_wait(be_dst);
++    }
++}
++
 +static MediaBufsStatus
 +qe_import_from_buf(struct mediabufs_ctl *const mbc, struct qent_base * const be, const struct v4l2_format *const fmt,
 +                   const unsigned int n, const bool x_dmabuf)
@@ -11581,6 +11594,12 @@ index 0000000000..79dffa2ff9
 +    return status;
 +}
 +
++MediaBufsStatus mediabufs_stream_wait_dst_done(struct mediabufs_ctl *const mbc)
++{
++    queue_dst_wait_no_waiting(mbc->dst);
++    return MEDIABUFS_STATUS_SUCCESS;
++}
++
 +int mediabufs_ctl_set_ext_ctrls(struct mediabufs_ctl * mbc, struct media_request * const mreq, struct v4l2_ext_control * const control_array, unsigned int n)
 +{
 +    struct v4l2_ext_controls controls = {
@@ -11818,10 +11837,10 @@ index 0000000000..79dffa2ff9
 +
 diff --git a/libavcodec/v4l2_req_media.h b/libavcodec/v4l2_req_media.h
 new file mode 100644
-index 0000000000..ccb291cbf9
+index 0000000000..f3023df9e8
 --- /dev/null
 +++ b/libavcodec/v4l2_req_media.h
-@@ -0,0 +1,176 @@
+@@ -0,0 +1,179 @@
 +/*
 +e.h
 +*
@@ -11951,6 +11970,9 @@ index 0000000000..ccb291cbf9
 +
 +MediaBufsStatus mediabufs_stream_on(struct mediabufs_ctl *const mbc);
 +MediaBufsStatus mediabufs_stream_off(struct mediabufs_ctl *const mbc);
++
++MediaBufsStatus mediabufs_stream_wait_dst_done(struct mediabufs_ctl *const mbc);
++
 +const struct v4l2_format *mediabufs_dst_fmt(struct mediabufs_ctl *const mbc);
 +
 +typedef int mediabufs_dst_fmt_accept_fn(void * v, const struct v4l2_fmtdesc *fmtdesc);
@@ -12496,10 +12518,10 @@ index 0000000000..a6160c5e1c
 +#endif
 diff --git a/libavcodec/v4l2_request_hevc.c b/libavcodec/v4l2_request_hevc.c
 new file mode 100644
-index 0000000000..e1a52f321d
+index 0000000000..161a894c7b
 --- /dev/null
 +++ b/libavcodec/v4l2_request_hevc.c
-@@ -0,0 +1,430 @@
+@@ -0,0 +1,433 @@
 +/*
 + * This file is part of FFmpeg.
 + *
@@ -12631,7 +12653,10 @@ index 0000000000..e1a52f321d
 +    av_log(avctx, AV_LOG_DEBUG, "<<< %s\n", __func__);
 +
 +    if (priv->cctx != NULL) {
-+        decode_q_wait(&priv->cctx->decode_q, NULL);  // Wait for all other threads to be out of decode
++        V4L2RequestContextHEVC *const ctx = priv->cctx;
++
++        decode_q_wait(&ctx->decode_q, NULL);  // Wait for all other threads to be out of decode
++        mediabufs_stream_wait_dst_done(ctx->mbufs);  // Now wait for processing to finish
 +
 +        priv->cctx = NULL;
 +        av_buffer_unref(&priv->cctx_buf);
@@ -14913,7 +14938,7 @@ index 361d603679..47a296cf5e 100644
   * @}
   */
 diff --git a/libavfilter/buffersrc.c b/libavfilter/buffersrc.c
-index b5682006f0..e42ff26d51 100644
+index ec5898fcf9..1545dbb06e 100644
 --- a/libavfilter/buffersrc.c
 +++ b/libavfilter/buffersrc.c
 @@ -210,7 +210,7 @@ int attribute_align_arg av_buffersrc_add_frame_flags(AVFilterContext *ctx, AVFra
@@ -17354,10 +17379,10 @@ index 305fa46532..34e993280d 100644
  extern const FFOutputFormat ff_dash_muxer;
 diff --git a/libavformat/conformenc.c b/libavformat/conformenc.c
 new file mode 100644
-index 0000000000..1ea7925eaa
+index 0000000000..abe74d1cf5
 --- /dev/null
 +++ b/libavformat/conformenc.c
-@@ -0,0 +1,273 @@
+@@ -0,0 +1,276 @@
 +/*
 + * Copyright (c) 2020 John Cox for Raspberry Pi Trading
 + *
@@ -17480,6 +17505,9 @@ index 0000000000..1ea7925eaa
 +
 +    if ((sf->flags & AV_FRAME_FLAG_CORRUPT) != 0) {
 +        av_log(s, AV_LOG_WARNING, "Discard corrupt frame: fmt=%d, ts=%" PRId64 "\n", sf->format, sf->pts);
++        if (de->frame_md5)
++            avio_printf(s->pb, "MD5-Frame-%d=*BAD*\n", de->fno);
++        ++de->fno;
 +        return 0;
 +    }
 +
@@ -17708,10 +17736,10 @@ index 60c896e964..3967be997e 100644
                  track->reformat = mkv_reformat_h2645;
              break;
 diff --git a/libavformat/movenc.c b/libavformat/movenc.c
-index d20e45cf81..079015da9a 100644
+index d6effda6fa..57bd069dfd 100644
 --- a/libavformat/movenc.c
 +++ b/libavformat/movenc.c
-@@ -6902,6 +6902,7 @@ static int mov_write_single_packet(AVFormatContext *s, AVPacket *pkt)
+@@ -6906,6 +6906,7 @@ static int mov_write_single_packet(AVFormatContext *s, AVPacket *pkt)
      if (trk->par->codec_id == AV_CODEC_ID_MP4ALS ||
              trk->par->codec_id == AV_CODEC_ID_AAC ||
              trk->par->codec_id == AV_CODEC_ID_AV1 ||
@@ -19929,13 +19957,13 @@ index 1c0bcf2232..c1d7dde041 100644
  
  static const char * const color_range_names[] = {
 diff --git a/libavutil/pixfmt.h b/libavutil/pixfmt.h
-index a7f50e1690..f3f5a38584 100644
+index a7f50e1690..201d92db1e 100644
 --- a/libavutil/pixfmt.h
 +++ b/libavutil/pixfmt.h
-@@ -380,6 +380,14 @@ enum AVPixelFormat {
+@@ -439,6 +439,15 @@ enum AVPixelFormat {
+      */
+     AV_PIX_FMT_D3D12,
  
-     AV_PIX_FMT_Y210BE,    ///< packed YUV 4:2:2 like YUYV422, 20bpp, data in the high bits, big-endian
-     AV_PIX_FMT_Y210LE,    ///< packed YUV 4:2:2 like YUYV422, 20bpp, data in the high bits, little-endian
 +// RPI - not on ifdef so can be got at by calling progs
 +// #define so code that uses this can know it is there
 +#define AVUTIL_HAVE_PIX_FMT_SAND 1
@@ -19944,9 +19972,10 @@ index a7f50e1690..f3f5a38584 100644
 +    AV_PIX_FMT_SAND64_16,  ///< 4:2:0 16-bit  64x*Y stripe, 32x*UV stripe, then next x stripe, mysterious padding
 +    AV_PIX_FMT_RPI4_8,
 +    AV_PIX_FMT_RPI4_10,
++
+     AV_PIX_FMT_NB         ///< number of pixel formats, DO NOT USE THIS if you want to link with shared libav* because the number of formats might differ between versions
+ };
  
-     AV_PIX_FMT_X2RGB10LE, ///< packed RGB 10:10:10, 30bpp, (msb)2X 10R 10G 10B(lsb), little-endian, X=unused/undefined
-     AV_PIX_FMT_X2RGB10BE, ///< packed RGB 10:10:10, 30bpp, (msb)2X 10R 10G 10B(lsb), big-endian, X=unused/undefined
 diff --git a/libavutil/rpi_sand_fn_pw.c b/libavutil/rpi_sand_fn_pw.c
 new file mode 100644
 index 0000000000..0d5d203dc3
@@ -21265,17 +21294,32 @@ index e3b0883901..b8b1d64903 100644
                          int srcStride, int dstStride);
  
 diff --git a/libswscale/rgb2rgb_template.c b/libswscale/rgb2rgb_template.c
-index 32d90d44fe..e711589e1e 100644
+index d4204153db..b25aa8506e 100644
 --- a/libswscale/rgb2rgb_template.c
 +++ b/libswscale/rgb2rgb_template.c
-@@ -642,65 +642,235 @@ static inline void uyvytoyv12_c(const uint8_t *src, uint8_t *ydst,
+@@ -639,6 +639,12 @@ static inline void uyvytoyv12_c(const uint8_t *src, uint8_t *ydst,
+     }
+ }
+ 
++#if 0
++// This is the upstream version of this function. It has centre positioned
++// chroma rather than our simpler top-left and only covers one arrangement
++// of RGB. Left here for reference and to fix some ugly diffing by git.
++// If this version is wanted - lose the entire patchset
++
  /**
-  * Height should be a multiple of 2 and width should be a multiple of 2.
+  * width should be a multiple of 2.
   * (If this is a problem for anyone then tell me, and I will fix it.)
+@@ -705,6 +711,237 @@ void ff_rgb24toyv12_c(const uint8_t *src, uint8_t *ydst, uint8_t *udst,
+         vdst  += chromStride;
+     }
+ }
++#endif
++
++/**
 + * Chrominance data is only taken from every second line,
-+ * others are ignored in the C version.
-+ * FIXME: Write HQ version.
-  */
++ * others are ignored. This matches the ARM64 asm.
++ */
 +static void rgb24toyv12_x(const uint8_t *src, uint8_t *ydst, uint8_t *udst,
 +                   uint8_t *vdst, int width, int height, int lumStride,
 +                   int chromStride, int srcStride, int32_t *rgb2yuv,
@@ -21289,6 +21333,7 @@ index 32d90d44fe..e711589e1e 100644
 +
 +    for (y = 0; y < height; y += 2) {
 +        int i;
++
 +        for (i = 0; i < chromWidth; i++) {
 +            unsigned int b = src[6 * i + 0];
 +            unsigned int g = src[6 * i + 1];
@@ -21372,13 +21417,10 @@ index 32d90d44fe..e711589e1e 100644
 +     BV_IDX, GV_IDX, RV_IDX,
 +};
 +
- void ff_rgb24toyv12_c(const uint8_t *src, uint8_t *ydst, uint8_t *udst,
-                    uint8_t *vdst, int width, int height, int lumStride,
-                    int chromStride, int srcStride, int32_t *rgb2yuv)
- {
--    int32_t ry = rgb2yuv[RY_IDX], gy = rgb2yuv[GY_IDX], by = rgb2yuv[BY_IDX];
--    int32_t ru = rgb2yuv[RU_IDX], gu = rgb2yuv[GU_IDX], bu = rgb2yuv[BU_IDX];
--    int32_t rv = rgb2yuv[RV_IDX], gv = rgb2yuv[GV_IDX], bv = rgb2yuv[BV_IDX];
++void ff_rgb24toyv12_c(const uint8_t *src, uint8_t *ydst, uint8_t *udst,
++                   uint8_t *vdst, int width, int height, int lumStride,
++                   int chromStride, int srcStride, int32_t *rgb2yuv)
++{
 +    rgb24toyv12_x(src, ydst, udst, vdst, width, height, lumStride, chromStride, srcStride, rgb2yuv, x_rgb);
 +}
 +
@@ -21397,47 +21439,12 @@ index 32d90d44fe..e711589e1e 100644
 +    int32_t ry = rgb2yuv[x[0]], gy = rgb2yuv[x[1]], by = rgb2yuv[x[2]];
 +    int32_t ru = rgb2yuv[x[3]], gu = rgb2yuv[x[4]], bu = rgb2yuv[x[5]];
 +    int32_t rv = rgb2yuv[x[6]], gv = rgb2yuv[x[7]], bv = rgb2yuv[x[8]];
-     int y;
-     const int chromWidth = width >> 1;
--    const uint8_t *src1 = src;
--    const uint8_t *src2 = src1 + srcStride;
--    uint8_t *ydst1 = ydst;
--    uint8_t *ydst2 = ydst + lumStride;
- 
-     for (y = 0; y < height; y += 2) {
-         int i;
-         for (i = 0; i < chromWidth; i++) {
--            unsigned int b11 = src1[6 * i + 0];
--            unsigned int g11 = src1[6 * i + 1];
--            unsigned int r11 = src1[6 * i + 2];
--            unsigned int b12 = src1[6 * i + 3];
--            unsigned int g12 = src1[6 * i + 4];
--            unsigned int r12 = src1[6 * i + 5];
--            unsigned int b21 = src2[6 * i + 0];
--            unsigned int g21 = src2[6 * i + 1];
--            unsigned int r21 = src2[6 * i + 2];
--            unsigned int b22 = src2[6 * i + 3];
--            unsigned int g22 = src2[6 * i + 4];
--            unsigned int r22 = src2[6 * i + 5];
--
--            unsigned int Y11 = ((ry * r11 + gy * g11 + by * b11) >> RGB2YUV_SHIFT) + 16;
--            unsigned int Y12 = ((ry * r12 + gy * g12 + by * b12) >> RGB2YUV_SHIFT) + 16;
--            unsigned int Y21 = ((ry * r21 + gy * g21 + by * b21) >> RGB2YUV_SHIFT) + 16;
--            unsigned int Y22 = ((ry * r22 + gy * g22 + by * b22) >> RGB2YUV_SHIFT) + 16;
--
--            unsigned int bx = (b11 + b12 + b21 + b22) >> 2;
--            unsigned int gx = (g11 + g12 + g21 + g22) >> 2;
--            unsigned int rx = (r11 + r12 + r21 + r22) >> 2;
--
--            unsigned int U  = ((ru * rx + gu * gx + bu * bx) >> RGB2YUV_SHIFT) + 128;
--            unsigned int V  = ((rv * rx + gv * gx + bv * bx) >> RGB2YUV_SHIFT) + 128;
--
--            ydst1[2 * i + 0] = Y11;
--            ydst1[2 * i + 1] = Y12;
--            ydst2[2 * i + 0] = Y21;
--            ydst2[2 * i + 1] = Y22;
--            udst[i]          = U;
--            vdst[i]          = V;
++    int y;
++    const int chromWidth = width >> 1;
++
++    for (y = 0; y < height; y += 2) {
++        int i;
++        for (i = 0; i < chromWidth; i++) {
 +            unsigned int b = src[8 * i + 2];
 +            unsigned int g = src[8 * i + 1];
 +            unsigned int r = src[8 * i + 0];
@@ -21491,13 +21498,7 @@ index 32d90d44fe..e711589e1e 100644
 +
 +            Y = ((ry * r + gy * g + by * b) >> RGB2YUV_SHIFT) + 16;
 +            ydst[2 * i + 1] = Y;
-         }
--        src1  += srcStride * 2;
--        src2  += srcStride * 2;
--        ydst1 += lumStride * 2;
--        ydst2 += lumStride * 2;
--        udst  += chromStride;
--        vdst  += chromStride;
++        }
 +        if ((width & 1) != 0) {
 +            unsigned int b = src[8 * i + 2];
 +            unsigned int g = src[8 * i + 1];
@@ -21511,9 +21512,9 @@ index 32d90d44fe..e711589e1e 100644
 +        vdst += chromStride;
 +        ydst += lumStride;
 +        src  += srcStride;
-     }
- }
- 
++    }
++}
++
 +static void ff_rgbxtoyv12_c(const uint8_t *src, uint8_t *ydst, uint8_t *udst,
 +                   uint8_t *vdst, int width, int height, int lumStride,
 +                   int chromStride, int srcStride, int32_t *rgb2yuv)
@@ -21544,11 +21545,10 @@ index 32d90d44fe..e711589e1e 100644
 +    rgbxtoyv12_x(src + 1, ydst, udst, vdst, width, height, lumStride, chromStride, srcStride, rgb2yuv, x_bgr);
 +}
 +
-+
+ 
  static void interleaveBytes_c(const uint8_t *src1, const uint8_t *src2,
                                uint8_t *dest, int width, int height,
-                               int src1Stride, int src2Stride, int dstStride)
-@@ -974,6 +1144,11 @@ static av_cold void rgb2rgb_init_c(void)
+@@ -979,6 +1216,11 @@ static av_cold void rgb2rgb_init_c(void)
      yuy2toyv12         = yuy2toyv12_c;
      planar2x           = planar2x_c;
      ff_rgb24toyv12     = ff_rgb24toyv12_c;
@@ -21561,10 +21561,10 @@ index 32d90d44fe..e711589e1e 100644
      deinterleaveBytes  = deinterleaveBytes_c;
      vu9_to_vu12        = vu9_to_vu12_c;
 diff --git a/libswscale/swscale_unscaled.c b/libswscale/swscale_unscaled.c
-index dc1d5f3593..519a69eaa3 100644
+index d403c953cc..766d8e21d7 100644
 --- a/libswscale/swscale_unscaled.c
 +++ b/libswscale/swscale_unscaled.c
-@@ -1696,6 +1696,91 @@ static int bgr24ToYv12Wrapper(SwsContext *c, const uint8_t *src[],
+@@ -1698,6 +1698,91 @@ static int bgr24ToYv12Wrapper(SwsContext *c, const uint8_t *src[],
      return srcSliceH;
  }
  
@@ -21656,7 +21656,7 @@ index dc1d5f3593..519a69eaa3 100644
  static int yvu9ToYv12Wrapper(SwsContext *c, const uint8_t *src[],
                               int srcStride[], int srcSliceY, int srcSliceH,
                               uint8_t *dst[], int dstStride[])
-@@ -2019,7 +2104,6 @@ void ff_get_unscaled_swscale(SwsContext *c)
+@@ -2021,7 +2106,6 @@ void ff_get_unscaled_swscale(SwsContext *c)
      const enum AVPixelFormat dstFormat = c->dstFormat;
      const int flags = c->flags;
      const int dstH = c->dstH;
@@ -21664,7 +21664,7 @@ index dc1d5f3593..519a69eaa3 100644
      int needsDither;
  
      needsDither = isAnyRGB(dstFormat) &&
-@@ -2077,8 +2161,34 @@ void ff_get_unscaled_swscale(SwsContext *c)
+@@ -2079,8 +2163,34 @@ void ff_get_unscaled_swscale(SwsContext *c)
      /* bgr24toYV12 */
      if (srcFormat == AV_PIX_FMT_BGR24 &&
          (dstFormat == AV_PIX_FMT_YUV420P || dstFormat == AV_PIX_FMT_YUVA420P) &&
@@ -23766,7 +23766,7 @@ index ae324ced3f..3d1004f934 100644
  CHECKASMOBJS-$(ARCH_AARCH64)            += aarch64/checkasm.o
  CHECKASMOBJS-$(HAVE_ARMV5TE_EXTERNAL)   += arm/checkasm.o
 diff --git a/tests/checkasm/checkasm.c b/tests/checkasm/checkasm.c
-index 73a998ae3a..ed703c1956 100644
+index 5b59cdf589..9f6021bbdb 100644
 --- a/tests/checkasm/checkasm.c
 +++ b/tests/checkasm/checkasm.c
 @@ -290,6 +290,9 @@ static const struct {
