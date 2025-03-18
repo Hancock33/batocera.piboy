@@ -28,6 +28,7 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'cgenius': ('cgenius.cgeniusGenerator', 'CGeniusGenerator'),
     'citra': ('citra.citraGenerator', 'CitraGenerator'),
     'citron': ('citron.citronGenerator', 'CitronGenerator'),
+    'clk': ('clk.clkGenerator', 'ClkGenerator'),
     'devilutionx': ('devilutionx.devilutionxGenerator', 'DevilutionXGenerator'),
     'dolphin': ('dolphin.dolphinGenerator', 'DolphinGenerator'),
     'dolphin_triforce': ('dolphin_triforce.dolphinTriforceGenerator', 'DolphinTriforceGenerator'),

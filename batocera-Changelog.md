@@ -39,7 +39,10 @@
 - Force Feedback on RP5 & RPmini
 - vkQuake 1, 2 & 3 for systems that support Vulkan.
 - TR1X & TR2X for Tomb Raider I & II support
-- gun : option to hide the crossair in es
+- Oric Atmos (and Oric 1) with CLK Clock Signal emulator
+- CLK can also be chosen as an emulator for C+4, VIC20, MSX1 and 2, Sega Master System, Colecovision,
+  AmstradCPC, AtariST, ZX81, ZXSpectrum, AppleII, AppleIIGS, Macintosh, Archimedes, Electron
+- gun : option to hide the crosshair in ES
 ### Fixed
 - Fix some problems in ES and Batocera with IPv6 networks
 - Fix ES behavior with usb network tethering
@@ -100,6 +103,7 @@
 - PPSSPP to 28th February build
 - Libretro-PPSSPP to 28th February build
 - Xenia to build 5979274 (Jan 24, 2025)
+- Vita3k to 3rd of March 2025 build
 ### System
 - Bluez to 5.79
 - Buildroot to 2024.11.x with supporting package updates
@@ -114,8 +118,8 @@
 - LLVM to 19.1.7
 - Wine-TKG to 10.3
 - Faudio to 25.02
-- DXVK to 2.5.3
-- DXVK-NVAPI to 0.8.0
+- DXVK to 2.6
+- DXVK-NVApi to 0.9.0
 - VKD3D-Proton to 2.14.1
 - Linux Firmware to 20250109
 - Sound Open Firmware to 2025.01
@@ -126,6 +130,7 @@
 - Ryzenadj to v0.16.0
 - QT6 to 6.8.1
 - BTop to 1.4.0
+- Wine Mono to 9.4.0
 
 # 2025/01/06 - batocera.linux 41 - Golden-rayed Blue
 ### Special Notes
