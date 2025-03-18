@@ -1,7 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|c4f1ad571f68913a7807d050af2e93fd15402796|Mar 18, 2025
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|c4f1ad571f68913a7807d050af2e93fd15402796|Mar 18, 2025
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|b071bedafacdf2cec2c4967d3b24f960f4f25e93|Mar 18, 2025
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|b071bedafacdf2cec2c4967d3b24f960f4f25e93|Mar 18, 2025
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|d59ea25cbe75161fd90f7f5cd56279176d456d2d|Mar 18, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|a9fe1025837daa88a16768b854bb14fd5fe9f847|Mar 18, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.230|Mar 18, 2025
