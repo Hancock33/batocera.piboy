@@ -3,7 +3,7 @@
 #  CLK - latency-hating multi-system emulator
 #
 ################################################################################
-# Version: Released on March 3, 2025
+# Version: Commits on Mar 05, 2025
 CLK_VERSION = 2025-03-05
 CLK_SITE = https://github.com/TomHarte/CLK
 CLK_LICENSE = MIT
