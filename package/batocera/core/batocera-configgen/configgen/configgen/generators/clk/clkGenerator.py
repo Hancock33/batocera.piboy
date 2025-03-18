@@ -23,12 +23,12 @@ def openzip_file(file_path):
 
     if os.path.exists(TMP_DIR):
         shutil.rmtree(TMP_DIR) # Remove extracted zip files (can't be done upon return from configgen)
-    
+
     if str(file_path).lower().endswith('.zip'):
         with zipfile.ZipFile(file_path, 'r') as zip_ref:
             zip_ref.extractall(TMP_DIR)
             extracted_files = zip_ref.namelist()
-            
+
             if extracted_files:
                 extracted_file_path = os.path.join(TMP_DIR, extracted_files[0])  # Assume single file in zip
                 return extracted_file_path
