@@ -1,5 +1,5 @@
 diff --git a/vita3k/app/src/app_init.cpp b/vita3k/app/src/app_init.cpp
-index 34999d5..555a864 100644
+index 34999d53..555a8643 100644
 --- a/vita3k/app/src/app_init.cpp
 +++ b/vita3k/app/src/app_init.cpp
 @@ -178,12 +178,7 @@ void init_paths(Root &root_paths) {

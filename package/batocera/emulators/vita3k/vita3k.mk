@@ -26,6 +26,12 @@ else
     VITA3K_CONF_OPTS += -DXXH_X86DISPATCH_ALLOW_AVX=OFF
 endif
 
+define VITA3K_GET_SUBMODULE
+	mkdir -p $(@D)/external
+	cd $(@D)/external && git clone https://github.com/Vita3K/nativefiledialog-cmake
+endef
+VITA3K_POST_EXTRACT_HOOKS = VITA3K_GET_SUBMODULE
+
 define VITA3K_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/vita3k/
 	$(TARGET_STRIP) $(@D)/buildroot-build/bin/Vita3K
