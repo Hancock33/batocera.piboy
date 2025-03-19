@@ -8,9 +8,10 @@ Emulators|[flycast](https://github.com/flyinghead/flycast.git)|416085980fd4c5eae
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.232|Mar 19, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|c71a72cbe751763f48350a6d2629e20553c083b0|Mar 19, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.3.14|Mar 19, 2025
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|9298b074fc0b1641d263eecbeeb429ec21566acc|Mar 19, 2025
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|2a05af22e17d3ece3cf04746799c710a60f31334|Mar 19, 2025
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|d7aef06f68c7d0cfafb75814581234b90a04d5ff|Mar 19, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu)|1893b56c3862cfc68a7a6a3f06dd878d855f6745|Mar 19, 2025
+Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|a45a9d8704bed8f2cf223f28c274c11605fb2c07|Mar 19, 2025
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|6c2e2d6833df14134463ea8968151f031950a21e|Mar 19, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|ba630300b609cce283f2658205db4d9789fe104c|Mar 19, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|09f24ae0e86e88ab8a5cf4de3cebadf7f09572fd|Mar 19, 2025
@@ -20,6 +21,8 @@ Emulators|[retroarch](http://github.com/libretro/RetroArch)|5c093a72110263a4bbff
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250319|Mar 19, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|579834ccded74b2c7062f7cc805c385c201c3850|Mar 19, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|43031375f4b7b8a383547f85aaa9456bf15d6f2e|Mar 19, 2025
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|77d4df36fcc2d1c9e3111aaa7e34d5779ffacd50|Mar 19, 2025
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|77d4df36fcc2d1c9e3111aaa7e34d5779ffacd50|Mar 19, 2025
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|cf3909e39d5919a21136c62e37d6d74308634369|Mar 19, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|57a6ae61d434f31f179837bd10ef4a699d044f30|Mar 19, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|416085980fd4c5eae83312a57ae9b0caa6184a79|Mar 19, 2025
@@ -29,13 +32,10 @@ Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|18979129f35f56de
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|a9fe1025837daa88a16768b854bb14fd5fe9f847|Mar 18, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-03-18|Mar 18, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|0ac116ae8f27c3a625d31d263a1f134542efddf6|Mar 18, 2025
-Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|40bd0080f19ea4f893137915fbd26489943a27bf|Mar 18, 2025
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|92900c5c733c8b91a67b1772d4f0a25104f2b05d|Mar 18, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|57b98ceb9ef157e43ed5e9854b1aae5da3875cce|Mar 18, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.29.4-rc.1|Mar 18, 2025
 Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|2296b0ba480a3107e1085866edd64f3b5f41eca9|Mar 18, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|2baeeabd23b52e8f7cbb2b2e2072001ab3f20f90|Mar 18, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|2baeeabd23b52e8f7cbb2b2e2072001ab3f20f90|Mar 18, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|619c575db6f81d1911e36f1ecd618c9dead86859|Mar 18, 2025
 Emulators|[libretro-nestopia](http://github.com/libretro/nestopia)|855ba403e36c43ef648839731e4b8992cecfbf43|Mar 18, 2025
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|0e79fb52a2e2420d64c77d5e32c884950f11ab7a|Mar 18, 2025

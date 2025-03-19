@@ -276,7 +276,7 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|1a51ce1e6665218cac64816cb3
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-03-18|Mar 18, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.3.14|Mar 19, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|2c0c1ca4a6d1a30cdbb8d738d76d34ea7a918e19|Mar 09, 2025
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|9298b074fc0b1641d263eecbeeb429ec21566acc|Mar 19, 2025
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|2a05af22e17d3ece3cf04746799c710a60f31334|Mar 19, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|25311dc03332d9ef2dff8d9d06c611d828028fac|Mar 13, 2025
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|0525ea043ea173ec6af1c6c8dade820036376430|Feb 25, 2025
@@ -295,7 +295,7 @@ Emulators|[vpinball](http://github.com/vpinball/vpinball)|ececff7d0105d52c18872c
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r48|Sept 06, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|1893b56c3862cfc68a7a6a3f06dd878d855f6745|Mar 19, 2025
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|9132035|Mar 15, 2025
-Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|40bd0080f19ea4f893137915fbd26489943a27bf|Mar 18, 2025
+Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|a45a9d8704bed8f2cf223f28c274c11605fb2c07|Mar 19, 2025
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Firmwares|[alllinuxfirmwares](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot)|20250211|Mar 11, 2025
@@ -491,8 +491,8 @@ Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|f72bac75d0d2840fece78
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|fc7965bceceb7b2163b7edfc0f500538d5b14c32|Mar 15, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|b5f9899b64511170683cc9b517323f714baab3cc|Feb 12, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|d2d6a35a5b63aa866e7336b33c8fcebc8a0e7eff|Mar 09, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|2baeeabd23b52e8f7cbb2b2e2072001ab3f20f90|Mar 18, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|2baeeabd23b52e8f7cbb2b2e2072001ab3f20f90|Mar 18, 2025
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|77d4df36fcc2d1c9e3111aaa7e34d5779ffacd50|Mar 19, 2025
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|77d4df36fcc2d1c9e3111aaa7e34d5779ffacd50|Mar 19, 2025
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.7|Feb 28, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|3231ba07da34000cf09d2d8ec0a7cc22a36828a3|Mar 17, 2025
