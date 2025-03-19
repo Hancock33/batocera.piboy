@@ -866,7 +866,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_PANDA3DS                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # PSP
-    select BR2_PACKAGE_PPSSPP                               if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
+    select BR2_PACKAGE_PPSSPP                               if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     && !BR2_PACKAGE_BATOCERA_TARGET_SM8250 # causes audio corruption
     select BR2_PACKAGE_LIBRETRO_PPSSPP                      if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
 
     # Neo Geo Pocket
