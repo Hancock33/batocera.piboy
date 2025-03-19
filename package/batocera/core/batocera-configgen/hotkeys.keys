@@ -1,12 +1,12 @@
 {
     "actions_player1": [
-            {
+        {
             "trigger": ["hotkey", "start"],
             "type": "key",
             "target": [ "KEY_EXIT" ],
         "description": "Exit emulator"
         },
-            {
+        {
             "trigger": ["hotkey", "a"],
             "type": "key",
             "target": [ "KEY_RESTART" ],
@@ -54,11 +54,29 @@
             "target": [ "KEY_FASTFORWARD" ],
         "description": "Fast forward"
         },
-            {
+        {
             "trigger": ["hotkey", "pageup"],
             "type": "key",
             "target": [ "KEY_SYSRQ" ],
         "description": "Screenshot"
+        },
+        {
+            "trigger": ["hotkey", "pagedown"],
+            "type": "key",
+            "target": [ "KEY_VIDEO_NEXT" ],
+        "description": "Next disk"
+        },
+        {
+            "trigger": ["hotkey", "l2"],
+            "type": "key",
+            "target": [ "KEY_SCREEN" ],
+        "description": "Swap screen"
+        },
+        {
+            "trigger": ["hotkey", "r2"],
+            "type": "key",
+            "target": [ "KEY_PRESENTATION" ],
+        "description": "Toogle screen layout"
         },
         {
             "trigger": ["hotkey", "l3"],

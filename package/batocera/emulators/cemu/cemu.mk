@@ -46,10 +46,6 @@ define CEMU_INSTALL_TARGET_CMDS
 	# keys.txt
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/cemu
 	touch $(TARGET_DIR)/usr/share/batocera/datainit/bios/cemu/keys.txt
-	#evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/cemu/wiiu.keys \
-		$(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(cmake-package))

@@ -42,9 +42,6 @@ endif
 define DUCKSTATION_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/bin/duckstation
 	cp -R $(@D)/buildroot-build/bin $(TARGET_DIR)/usr/bin/duckstation
-
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 define DUCKSTATION_VERSION_DETAILS
