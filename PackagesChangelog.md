@@ -14,8 +14,10 @@ Emulators|[xemu](https://github.com/xemu-project/xemu)|1893b56c3862cfc68a7a6a3f0
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|6c2e2d6833df14134463ea8968151f031950a21e|Mar 19, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|ba630300b609cce283f2658205db4d9789fe104c|Mar 19, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|09f24ae0e86e88ab8a5cf4de3cebadf7f09572fd|Mar 19, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250319|Mar 19, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|cf3909e39d5919a21136c62e37d6d74308634369|Mar 19, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|5c093a72110263a4bbff4599eb202201c17131bf|Mar 19, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250319|Mar 19, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|579834ccded74b2c7062f7cc805c385c201c3850|Mar 19, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|43031375f4b7b8a383547f85aaa9456bf15d6f2e|Mar 19, 2025
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|cf3909e39d5919a21136c62e37d6d74308634369|Mar 19, 2025
@@ -63,8 +65,6 @@ Ports|[nblood](http://github.com/NBlood/NBlood)|r14217|Mar 16, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|9c7e342fb699f4d8c36dc3e43b122e7cbcb4b4d8|Mar 16, 2025
 Wine|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.9.0|Mar 16, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|042e550aa419ad147422f659d383283a879e57ad|Mar 16, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250316|Mar 16, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250316|Mar 16, 2025
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|338e98c94c772abdb74ebe9119bd5c4910af8091|Mar 15, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|a1d69982f3dbd9c04ddbda21f2546937607a1246|Mar 15, 2025
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|9132035|Mar 15, 2025
