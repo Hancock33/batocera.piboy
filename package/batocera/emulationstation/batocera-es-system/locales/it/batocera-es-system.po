@@ -6285,11 +6285,6 @@ msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
-#. TRANSLATION: wiiu.keys
-msgctxt "keys_files"
-msgid "Display the controller screen"
-msgstr "Mostra lo schermo controller"
-
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "Display the current frame counter."
@@ -9010,11 +9005,6 @@ msgctxt "game_options"
 msgid "Graphic Display Controller model."
 msgstr "Modello di Controller Grafico."
 
-#. TRANSLATION: scummvm.keys
-msgctxt "keys_files"
-msgid "Graphics filtering on/off"
-msgstr "Filtri grafici on/off"
-
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Gravis GamePad (D-pad + 4 Btns)"
@@ -11337,7 +11327,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "Mouse (1351)"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Click del Mouse"
@@ -11357,7 +11347,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr "Muovi Avanti, Puoi anche premere W"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "Muovi il puntatore Stylet"
@@ -11749,14 +11739,14 @@ msgctxt "game_options"
 msgid "New3D"
 msgstr "New3D"
 
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Next Disc (m3u)"
-msgstr "Disco Successivo (m3u)"
-
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Next disk"
 msgstr ""
 
 #. TRANSLATION: omf2097.keys
@@ -15745,20 +15735,10 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Swap Screen"
-msgstr "Inverti schermi"
-
-#. TRANSLATION: nds.drastic.keys
-msgctxt "keys_files"
-msgid "Swap Screens"
-msgstr "Inverti Schermi"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Swap screens"
-msgstr "Scambia schermi"
+msgid "Swap screen"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -16317,16 +16297,6 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "Per usare cheats e codici per aspect ratio fisso a 16/9."
 
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Screen Layout"
-msgstr "Abilita Layout Schermo"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Speed Limit"
-msgstr "Abilita Limite di Velocità"
-
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
@@ -16346,6 +16316,11 @@ msgstr "Imposta hotkey + D-pad su o Scroll Lock in gioco."
 msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Cartuccia Tomy Tutor & Pyuuta"
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Toogle screen layout"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -18712,6 +18687,10 @@ msgstr "giallo/blu"
 #~ msgid "Display on screen information like savestate, config warning etc..."
 #~ msgstr "Mostra informazioni a schermo tipo savestate, avvertenze etc..."
 
+#~ msgctxt "keys_files"
+#~ msgid "Display the controller screen"
+#~ msgstr "Mostra lo schermo controller"
+
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
@@ -18957,6 +18936,10 @@ msgstr "giallo/blu"
 #~ msgid "GamePad + 4 Sideway Wiimote"
 #~ msgstr "GamePad + 4 Wiimote orizzontali"
 
+#~ msgctxt "keys_files"
+#~ msgid "Graphics filtering on/off"
+#~ msgstr "Filtri grafici on/off"
+
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax."
 #~ msgstr "Nascondi mirino nei giochi che lo supportano es. ActionMax."
@@ -19065,6 +19048,10 @@ msgstr "giallo/blu"
 #~ msgctxt "game_options"
 #~ msgid "Needed by some games that use special unicode characters."
 #~ msgstr "Necessario per alcuni giochi che usano caratteri speciali unicode."
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Disco Successivo (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "Off (default)"
@@ -19433,6 +19420,18 @@ msgstr "giallo/blu"
 #~ "Consegna le texture alla GPU in parallelo. Puo' migliorare la performanze "
 #~ "sulleGPU piu' potenti."
 
+#~ msgctxt "keys_files"
+#~ msgid "Swap Screen"
+#~ msgstr "Inverti schermi"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap Screens"
+#~ msgstr "Inverti Schermi"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap screens"
+#~ msgstr "Scambia schermi"
+
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "MODALITÀ TEAM COLOR"
@@ -19464,6 +19463,14 @@ msgstr "giallo/blu"
 #~ msgctxt "game_options"
 #~ msgid "Toggle MSAA/SSAA. Depends on anti-aliasing being enabled."
 #~ msgstr "Cambia MSAA/SSAA. Necessita che anti-aliasing sia abilitato."
+
+#~ msgctxt "keys_files"
+#~ msgid "Toggle Screen Layout"
+#~ msgstr "Abilita Layout Schermo"
+
+#~ msgctxt "keys_files"
+#~ msgid "Toggle Speed Limit"
+#~ msgstr "Abilita Limite di Velocità"
 
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."

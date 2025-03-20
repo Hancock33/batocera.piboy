@@ -6307,11 +6307,6 @@ msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
-#. TRANSLATION: wiiu.keys
-msgctxt "keys_files"
-msgid "Display the controller screen"
-msgstr "Mostrar la pantalla del mando"
-
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "Display the current frame counter."
@@ -9056,11 +9051,6 @@ msgctxt "game_options"
 msgid "Graphic Display Controller model."
 msgstr "Modelo de controlador de pantalla gráfica."
 
-#. TRANSLATION: scummvm.keys
-msgctxt "keys_files"
-msgid "Graphics filtering on/off"
-msgstr "Filtros gráficos on/off"
-
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Gravis GamePad (D-pad + 4 Btns)"
@@ -11391,7 +11381,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "Mouse (1351)"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Clic de ratón"
@@ -11411,7 +11401,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr "Avanzar, puede utilizar pulsar W"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "Mover el puntero Stylet"
@@ -11803,14 +11793,14 @@ msgctxt "game_options"
 msgid "New3D"
 msgstr "3D Nuevo"
 
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Next Disc (m3u)"
-msgstr "Siguiente disco (m3u)"
-
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Next disk"
 msgstr ""
 
 #. TRANSLATION: omf2097.keys
@@ -15823,20 +15813,10 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Swap Screen"
-msgstr "Intercambiar pantalla"
-
-#. TRANSLATION: nds.drastic.keys
-msgctxt "keys_files"
-msgid "Swap Screens"
-msgstr "Intercambiar pantallas"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Swap screens"
-msgstr "Intercambiar pantallas"
+msgid "Swap screen"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -16396,16 +16376,6 @@ msgstr ""
 "Para usar trucos de juegos o códigos de corrección de relación de aspecto "
 "16:9."
 
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Screen Layout"
-msgstr "Alternar diseño de pantalla"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Speed Limit"
-msgstr "Cambiar límite de velocidad"
-
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
@@ -16425,6 +16395,11 @@ msgstr "Alterna con HOTKEY + D-pad arriba o Scroll Lock en el juego."
 msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Cartucho Tomy Tutor & Pyuuta"
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Toogle screen layout"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -18699,6 +18674,10 @@ msgstr "amarillo/azul"
 #~ "Muestra información en pantalla como estados de guardado, advertencia de "
 #~ "configuración, etc."
 
+#~ msgctxt "keys_files"
+#~ msgid "Display the controller screen"
+#~ msgstr "Mostrar la pantalla del mando"
+
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
@@ -18856,6 +18835,10 @@ msgstr "amarillo/azul"
 #~ msgid "GamePad + 4 Sideway Wiimote"
 #~ msgstr "GamePad + 4 Sideway Wiimote"
 
+#~ msgctxt "keys_files"
+#~ msgid "Graphics filtering on/off"
+#~ msgstr "Filtros gráficos on/off"
+
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Install the image reader card to read disk image files (Mac IIx only). "
@@ -18927,6 +18910,10 @@ msgstr "amarillo/azul"
 #~ msgid "Needed by some games that use special unicode characters."
 #~ msgstr ""
 #~ "Necesario para algunos juegos que usan caracteres especiales Unicode."
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Siguiente disco (m3u)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
@@ -19219,6 +19206,18 @@ msgstr "amarillo/azul"
 #~ "Transmite textura a la GPU en paralelo. Puede mejorar el rendimiento en "
 #~ "versiones de GPUs más potentes que tienen disponible capacidad adicional."
 
+#~ msgctxt "keys_files"
+#~ msgid "Swap Screen"
+#~ msgstr "Intercambiar pantalla"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap Screens"
+#~ msgstr "Intercambiar pantallas"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap screens"
+#~ msgstr "Intercambiar pantallas"
+
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "MODO DE COLOR DEL EQUIPO"
@@ -19238,6 +19237,14 @@ msgstr "amarillo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer disk images"
 #~ msgstr "Discos de imagen Tandy Radio Shack Color Computer"
+
+#~ msgctxt "keys_files"
+#~ msgid "Toggle Screen Layout"
+#~ msgstr "Alternar diseño de pantalla"
+
+#~ msgctxt "keys_files"
+#~ msgid "Toggle Speed Limit"
+#~ msgstr "Cambiar límite de velocidad"
 
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."

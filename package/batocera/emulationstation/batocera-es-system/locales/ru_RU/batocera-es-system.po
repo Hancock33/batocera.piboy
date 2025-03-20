@@ -6280,11 +6280,6 @@ msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
-#. TRANSLATION: wiiu.keys
-msgctxt "keys_files"
-msgid "Display the controller screen"
-msgstr "Показать экран контроллера"
-
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "Display the current frame counter."
@@ -9003,11 +8998,6 @@ msgctxt "game_options"
 msgid "Graphic Display Controller model."
 msgstr "Модель графического контроллера дисплея."
 
-#. TRANSLATION: scummvm.keys
-msgctxt "keys_files"
-msgid "Graphics filtering on/off"
-msgstr "Фильтрация графики вкл/выкл"
-
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Gravis GamePad (D-pad + 4 Btns)"
@@ -11333,7 +11323,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "Мышь (1351)"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Клик мышью"
@@ -11353,7 +11343,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr "Двигаться вперед. Можно нажать W."
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "Переместить указатель стилета"
@@ -11745,14 +11735,14 @@ msgctxt "game_options"
 msgid "New3D"
 msgstr "New3D"
 
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Next Disc (m3u)"
-msgstr "Следующий диск (m3u)"
-
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Next disk"
 msgstr ""
 
 #. TRANSLATION: omf2097.keys
@@ -15742,20 +15732,10 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Swap Screen"
-msgstr "Поменять экран"
-
-#. TRANSLATION: nds.drastic.keys
-msgctxt "keys_files"
-msgid "Swap Screens"
-msgstr "Поменять экраны"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Swap screens"
-msgstr "Смена экранов"
+msgid "Swap screen"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -16312,16 +16292,6 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "Для использования читов или кодов соотношения сторон 16/9."
 
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Screen Layout"
-msgstr "Переключить расположение экранов"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Speed Limit"
-msgstr "Переключить ограничение скорости"
-
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
@@ -16342,6 +16312,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Tomy Tutor & Pyuuta cartridge"
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Toogle screen layout"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -19053,6 +19028,10 @@ msgstr "жёлтая/синяя"
 #~ "Отображать на экране такой информации, как состояние сохранения, "
 #~ "предупреждение о конфигурации и т.д.."
 
+#~ msgctxt "keys_files"
+#~ msgid "Display the controller screen"
+#~ msgstr "Показать экран контроллера"
+
 #~ msgctxt "game_options"
 #~ msgid "Distorts the output to fill the display fully."
 #~ msgstr "Искажает вывод для полного заполнения экрана."
@@ -19404,6 +19383,10 @@ msgstr "жёлтая/синяя"
 #~ "Хорошее ускорение и высокая совместимость; рекомендуется, но может "
 #~ "вызвать проблемы."
 
+#~ msgctxt "keys_files"
+#~ msgid "Graphics filtering on/off"
+#~ msgstr "Фильтрация графики вкл/выкл"
+
 #~ msgctxt "game_options"
 #~ msgid "HD Gun Games"
 #~ msgstr "HD Gun Games"
@@ -19686,6 +19669,10 @@ msgstr "жёлтая/синяя"
 #~ msgctxt "game_options"
 #~ msgid "Neo Geo (Offset Fightstick)"
 #~ msgstr "Neo Geo (Offset Fightstick)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Следующий диск (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "No Limitation"
@@ -20254,6 +20241,18 @@ msgstr "жёлтая/синяя"
 #~ msgid "Stretch to 4:3"
 #~ msgstr "Растянуть до 4:3"
 
+#~ msgctxt "keys_files"
+#~ msgid "Swap Screen"
+#~ msgstr "Поменять экран"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap Screens"
+#~ msgstr "Поменять экраны"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap screens"
+#~ msgstr "Смена экранов"
+
 #~ msgctxt "game_options"
 #~ msgid "Swap the Nintendo DS Displays."
 #~ msgstr "Меняет местами экраны Nintendo DS."
@@ -20319,6 +20318,14 @@ msgstr "жёлтая/синяя"
 #~ msgctxt "game_options"
 #~ msgid "Toggle MSAA/SSAA. Depends on anti-aliasing being enabled."
 #~ msgstr "Переключить MSAA/SSAA. Зависит от включения сглаживания."
+
+#~ msgctxt "keys_files"
+#~ msgid "Toggle Screen Layout"
+#~ msgstr "Переключить расположение экранов"
+
+#~ msgctxt "keys_files"
+#~ msgid "Toggle Speed Limit"
+#~ msgstr "Переключить ограничение скорости"
 
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."

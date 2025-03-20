@@ -2864,7 +2864,7 @@ msgstr "Todas as Bordas"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "All Timers"
-msgstr ""
+msgstr "Todos os temporizadores"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -3252,7 +3252,7 @@ msgstr "Setas 3botões"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "As Host (Default)"
-msgstr ""
+msgstr "Como Host (Padrão)"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -3539,7 +3539,7 @@ msgstr "BBC Micro/Master ROM (Slot 1)"
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "BEZELS"
-msgstr "MOLDURASMOLDURAS"
+msgstr "MOLDURAS"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -5029,6 +5029,8 @@ msgid ""
 "Changes the sleep period accuracy. Some games need this set to improve "
 "performance."
 msgstr ""
+"Alterar a precisão do período de sono. Alguns jogos necessitam deste "
+"conjunto para melhorar desempenho."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -6290,11 +6292,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
-
-#. TRANSLATION: wiiu.keys
-msgctxt "keys_files"
-msgid "Display the controller screen"
-msgstr "Mostrar o ecrã do comando"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -9017,11 +9014,6 @@ msgctxt "game_options"
 msgid "Graphic Display Controller model."
 msgstr "Modelo de Controlador de Exibição Gráfica."
 
-#. TRANSLATION: scummvm.keys
-msgctxt "keys_files"
-msgid "Graphics filtering on/off"
-msgstr "Ligar/Desligar o filtro de gráficos"
-
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Gravis GamePad (D-pad + 4 Btns)"
@@ -9355,7 +9347,7 @@ msgstr "Esconder"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Hide bezels"
-msgstr ""
+msgstr "Ocultar molduras"
 
 #. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
@@ -9365,7 +9357,7 @@ msgstr "Ocultar a mira em jogos suportados, por ex. ActionMax, Maddog II."
 #. TRANSLATION: naomigd.flycast.keys
 msgctxt "keys_files"
 msgid "Hide the bezel"
-msgstr "Ocultar a moldura"
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -11352,7 +11344,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "Rato (1351)"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Clique do Rato"
@@ -11372,7 +11364,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr "Avançar, pode ser usado para pressionar W"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "Mover o Ponteiro da Caneta"
@@ -11764,15 +11756,15 @@ msgctxt "game_options"
 msgid "New3D"
 msgstr "Novo 3D"
 
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Next Disc (m3u)"
-msgstr "Próximo Disco (m3u)"
-
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Next disk"
+msgstr "Próximo disco"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -14133,7 +14125,7 @@ msgstr "SALTAR MENU INICIAL"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "SLEEP TIMERS ACCURACY"
-msgstr ""
+msgstr "PRECISÃO DOS TEMPORIZADORES DE SONO"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -15768,20 +15760,10 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Swap Screen"
+msgid "Swap screen"
 msgstr "Trocar ecrã"
-
-#. TRANSLATION: nds.drastic.keys
-msgctxt "keys_files"
-msgid "Swap Screens"
-msgstr "Trocar ecrãs"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Swap screens"
-msgstr "Trocar ecrãs"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -16342,16 +16324,6 @@ msgstr ""
 "Para usar códigos do jogo ou códigos de correção de proporção de aspecto "
 "16/9."
 
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Screen Layout"
-msgstr "Alterar Disposição do ecrã"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Speed Limit"
-msgstr "Alterar Limite de Velocidade"
-
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
@@ -16373,6 +16345,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Cartucho Tomy Tutor e Pyuuta"
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Toogle screen layout"
+msgstr "Alterar layout do ecrã"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17179,7 +17156,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Usleep Only"
-msgstr ""
+msgstr "Apenas Usleep"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17569,7 +17546,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "WRITE DEPTH BUFFERS"
-msgstr ""
+msgstr "ESCREVER BUFFERS DE PROFUNDIDADE"
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -17742,6 +17719,8 @@ msgid ""
 "Writes depth buffer values to VM memory. Some games need this to fix broken "
 "graphics."
 msgstr ""
+"Escrever os valores de buffer de profundidade na memória da VM. Alguns jogos "
+"precisam disso para corrigir problemas gráficos."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -18695,10 +18674,6 @@ msgstr "amarelo/azul"
 #~ "Reserve uma zona não morta no centro do volante para seguir em frente (em "
 #~ "graus)"
 
-#~ msgctxt "keys_files"
-#~ msgid "Reset the table, sometimes required for PinMame"
-#~ msgstr "Reiniciar tabela, às vezes necessário para o PinMame"
-
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Redimensiona automáticamente a altura do ecrã."
@@ -18804,7 +18779,7 @@ msgstr "amarelo/azul"
 
 #~ msgctxt "game_options"
 #~ msgid "WRITE COLOR BUFFERS"
-#~ msgstr "GRAVAR BUFFERS DE COR"
+#~ msgstr "ESCREVER BUFFERS DE COR"
 
 #~ msgctxt "game_options"
 #~ msgid ""

@@ -6296,11 +6296,6 @@ msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
-#. TRANSLATION: wiiu.keys
-msgctxt "keys_files"
-msgid "Display the controller screen"
-msgstr "Laat het controller scherm zien"
-
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "Display the current frame counter."
@@ -9043,11 +9038,6 @@ msgctxt "game_options"
 msgid "Graphic Display Controller model."
 msgstr "Grafisch Beeldscherm Controller model."
 
-#. TRANSLATION: scummvm.keys
-msgctxt "keys_files"
-msgid "Graphics filtering on/off"
-msgstr "Grafische filtering aan/uit"
-
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Gravis GamePad (D-pad + 4 Btns)"
@@ -11377,7 +11367,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "Muis (1351)"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Muisklik"
@@ -11397,7 +11387,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr "Ga vooruit, kan worden gebruikt door op W te drukken"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "Verplaats Stylet Pointer"
@@ -11790,14 +11780,14 @@ msgctxt "game_options"
 msgid "New3D"
 msgstr "Nieuw3D"
 
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Next Disc (m3u)"
-msgstr "Volgende Disk (m3u)"
-
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Next disk"
 msgstr ""
 
 #. TRANSLATION: omf2097.keys
@@ -15796,20 +15786,10 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Swap Screen"
-msgstr "Verwissel scherm"
-
-#. TRANSLATION: nds.drastic.keys
-msgctxt "keys_files"
-msgid "Swap Screens"
-msgstr "Verwissel Schermen"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Swap screens"
-msgstr "Verwissel schermen"
+msgid "Swap screen"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -16368,16 +16348,6 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "Om spelcheats of 16:9 Aspect Ratio Fix-codes te gebruiken."
 
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Screen Layout"
-msgstr "Schakel Scherm Lay-out in"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Speed Limit"
-msgstr "Schakel Snelheidslimiet in"
-
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
@@ -16397,6 +16367,11 @@ msgstr "Schakel met hotkey + D-pad omhoog of Scroll Lock in het spel."
 msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Tomy Tutor & Pyuuta cartridge"
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Toogle screen layout"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -18574,6 +18549,10 @@ msgstr "geel/blauw"
 #~ "Informatieweergave op het scherm zoals savestate, "
 #~ "configuratiewaarschuwing enz..."
 
+#~ msgctxt "keys_files"
+#~ msgid "Display the controller screen"
+#~ msgstr "Laat het controller scherm zien"
+
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
@@ -18711,6 +18690,10 @@ msgstr "geel/blauw"
 #~ msgid "GamePad + 4 Sideway Wiimote"
 #~ msgstr "Controller + 4 Sideway Wiimote"
 
+#~ msgctxt "keys_files"
+#~ msgid "Graphics filtering on/off"
+#~ msgstr "Grafische filtering aan/uit"
+
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Install the image reader card to read disk image files (Mac IIx only). "
@@ -18782,6 +18765,10 @@ msgstr "geel/blauw"
 #~ msgid "Needed by some games that use special unicode characters."
 #~ msgstr ""
 #~ "Benodigd bij sommige spellen die speciale unicode characters gebruiken."
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Volgende Disk (m3u)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
@@ -19031,6 +19018,18 @@ msgstr "geel/blauw"
 #~ "Stream texture parallel naar de GPU. Kan de prestaties verbeteren op "
 #~ "krachtigere GPU's die extra speelruimte hebben."
 
+#~ msgctxt "keys_files"
+#~ msgid "Swap Screen"
+#~ msgstr "Verwissel scherm"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap Screens"
+#~ msgstr "Verwissel Schermen"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap screens"
+#~ msgstr "Verwissel schermen"
+
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "TEAM KLEUR MODUS"
@@ -19050,6 +19049,14 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer disk images"
 #~ msgstr "Tandy Radio Shack Color Computer disk images"
+
+#~ msgctxt "keys_files"
+#~ msgid "Toggle Screen Layout"
+#~ msgstr "Schakel Scherm Lay-out in"
+
+#~ msgctxt "keys_files"
+#~ msgid "Toggle Speed Limit"
+#~ msgstr "Schakel Snelheidslimiet in"
 
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."

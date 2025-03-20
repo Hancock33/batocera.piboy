@@ -6204,11 +6204,6 @@ msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
-#. TRANSLATION: wiiu.keys
-msgctxt "keys_files"
-msgid "Display the controller screen"
-msgstr "顯示控制器屏幕"
-
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "Display the current frame counter."
@@ -8831,11 +8826,6 @@ msgctxt "game_options"
 msgid "Graphic Display Controller model."
 msgstr ""
 
-#. TRANSLATION: scummvm.keys
-msgctxt "keys_files"
-msgid "Graphics filtering on/off"
-msgstr "打開/關閉圖像過濾"
-
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Gravis GamePad (D-pad + 4 Btns)"
@@ -11109,7 +11099,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr ""
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "鼠標點擊"
@@ -11129,7 +11119,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr ""
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr ""
@@ -11514,14 +11504,14 @@ msgctxt "game_options"
 msgid "New3D"
 msgstr ""
 
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Next Disc (m3u)"
-msgstr "下一個光盤(m3u)"
-
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Next disk"
 msgstr ""
 
 #. TRANSLATION: omf2097.keys
@@ -15426,19 +15416,9 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr ""
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Swap Screen"
-msgstr "對換屏幕"
-
-#. TRANSLATION: nds.drastic.keys
-msgctxt "keys_files"
-msgid "Swap Screens"
-msgstr "對換屏幕"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Swap screens"
+msgid "Swap screen"
 msgstr ""
 
 #. TRANSLATION: melonds
@@ -15979,16 +15959,6 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr ""
 
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Screen Layout"
-msgstr "切換屏幕佈局"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Speed Limit"
-msgstr "切換速度限制"
-
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
@@ -16007,6 +15977,11 @@ msgstr ""
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Toogle screen layout"
 msgstr ""
 
 #. TRANSLATION: dolphin
@@ -17999,6 +17974,10 @@ msgstr ""
 #~ msgid "Disbaled (Default)"
 #~ msgstr "禁用 (預設)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Display the controller screen"
+#~ msgstr "顯示控制器屏幕"
+
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
@@ -18038,12 +18017,20 @@ msgstr ""
 #~ msgstr "Game Boy Color"
 
 #~ msgctxt "keys_files"
+#~ msgid "Graphics filtering on/off"
+#~ msgstr "打開/關閉圖像過濾"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State"
 #~ msgstr "讀檔"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "載入存檔1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "下一個光盤(m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "Off (default)"
@@ -18128,6 +18115,22 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "Start"
 #~ msgstr "開始"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap Screen"
+#~ msgstr "對換屏幕"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap Screens"
+#~ msgstr "對換屏幕"
+
+#~ msgctxt "keys_files"
+#~ msgid "Toggle Screen Layout"
+#~ msgstr "切換屏幕佈局"
+
+#~ msgctxt "keys_files"
+#~ msgid "Toggle Speed Limit"
+#~ msgstr "切換速度限制"
 
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."

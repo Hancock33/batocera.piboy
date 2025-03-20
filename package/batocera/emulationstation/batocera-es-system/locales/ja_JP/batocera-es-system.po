@@ -6256,11 +6256,6 @@ msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
-#. TRANSLATION: wiiu.keys
-msgctxt "keys_files"
-msgid "Display the controller screen"
-msgstr "コントローラー画面を表示"
-
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "Display the current frame counter."
@@ -8963,11 +8958,6 @@ msgctxt "game_options"
 msgid "Graphic Display Controller model."
 msgstr "グラフィックディスプレイコントローラーモデル"
 
-#. TRANSLATION: scummvm.keys
-msgctxt "keys_files"
-msgid "Graphics filtering on/off"
-msgstr "グラフィックフィルタリングのオン/オフ"
-
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Gravis GamePad (D-pad + 4 Btns)"
@@ -11275,7 +11265,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "マウス (1351)"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "マウス クリック"
@@ -11295,7 +11285,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr "前進、W を押すと可能"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "スタイレットポインタの移動"
@@ -11685,14 +11675,14 @@ msgctxt "game_options"
 msgid "New3D"
 msgstr "New3Dエンジン"
 
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Next Disc (m3u)"
-msgstr "次のディスク (m3u)"
-
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Next disk"
 msgstr ""
 
 #. TRANSLATION: omf2097.keys
@@ -15647,20 +15637,10 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "7.1ch サラウンド"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Swap Screen"
-msgstr "画面の入替"
-
-#. TRANSLATION: nds.drastic.keys
-msgctxt "keys_files"
-msgid "Swap Screens"
-msgstr "画面の入替"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Swap screens"
-msgstr "画面を入れ替える"
+msgid "Swap screen"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -16209,16 +16189,6 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "チートまたは16/9アスペクト比修正コードを使用します"
 
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Screen Layout"
-msgstr "画面レイアウトの切り替え"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Speed Limit"
-msgstr "速度制限の切り替え"
-
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
@@ -16238,6 +16208,11 @@ msgstr "ホットキー+Dパッド上またはスクロールロックでゲー�
 msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "トミー ぴゅう太(Tutor) カートリッジ"
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Toogle screen layout"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -18391,6 +18366,10 @@ msgstr "黄/青"
 #~ msgid "Display on screen information like savestate, config warning etc..."
 #~ msgstr "ステートセーブ、設定警告などの情報を画面に表示します"
 
+#~ msgctxt "keys_files"
+#~ msgid "Display the controller screen"
+#~ msgstr "コントローラー画面を表示"
+
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
@@ -18526,6 +18505,10 @@ msgstr "黄/青"
 #~ msgid "GamePad + 4 Sideway Wiimote"
 #~ msgstr "ゲームパッド + 4 横向きWiiリモコン"
 
+#~ msgctxt "keys_files"
+#~ msgid "Graphics filtering on/off"
+#~ msgstr "グラフィックフィルタリングのオン/オフ"
+
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Install the image reader card to read disk image files (Mac IIx only). "
@@ -18596,6 +18579,10 @@ msgstr "黄/青"
 #~ msgctxt "game_options"
 #~ msgid "Needed by some games that use special unicode characters."
 #~ msgstr "日本語や特別なUnicode文字を使用する一部のゲームで必要です"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "次のディスク (m3u)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
@@ -18839,6 +18826,18 @@ msgstr "黄/青"
 #~ "テクスチャを GPU に並行してストリーミングします。より強力な GPU ではパ"
 #~ "フォーマンスを向上させることができます"
 
+#~ msgctxt "keys_files"
+#~ msgid "Swap Screen"
+#~ msgstr "画面の入替"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap Screens"
+#~ msgstr "画面の入替"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap screens"
+#~ msgstr "画面を入れ替える"
+
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "チームカラーモード"
@@ -18858,6 +18857,14 @@ msgstr "黄/青"
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer disk images"
 #~ msgstr "Tandy Radio Shack Color Computer ディスクイメージ"
+
+#~ msgctxt "keys_files"
+#~ msgid "Toggle Screen Layout"
+#~ msgstr "画面レイアウトの切り替え"
+
+#~ msgctxt "keys_files"
+#~ msgid "Toggle Speed Limit"
+#~ msgstr "速度制限の切り替え"
 
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."

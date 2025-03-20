@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: batocera-emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-03-01 10:00-0300\n"
+"PO-Revision-Date: 2025-03-20 09:38-0300\n"
 "Last-Translator: Leonardo Colman Lopes <dev@leonardo.colman.com.br>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: pt_BR\n"
@@ -2867,7 +2867,7 @@ msgstr "Todas as bordas"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "All Timers"
-msgstr ""
+msgstr "Todos os Timers"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -3256,7 +3256,7 @@ msgstr "Setas 3botoes"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "As Host (Default)"
-msgstr ""
+msgstr "Como Host (Padrão)"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -5036,6 +5036,8 @@ msgid ""
 "Changes the sleep period accuracy. Some games need this set to improve "
 "performance."
 msgstr ""
+"Troca a acurácia do período de dormir. Alguns jogos precisam disso para "
+"melhorar a performance."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -6299,11 +6301,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
-
-#. TRANSLATION: wiiu.keys
-msgctxt "keys_files"
-msgid "Display the controller screen"
-msgstr "Exibir a tela do controlador"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -9043,11 +9040,6 @@ msgctxt "game_options"
 msgid "Graphic Display Controller model."
 msgstr "Modelo do controlador de exibicao grafica."
 
-#. TRANSLATION: scummvm.keys
-msgctxt "keys_files"
-msgid "Graphics filtering on/off"
-msgstr "Liga/Desliga o filtro de graficos"
-
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Gravis GamePad (D-pad + 4 Btns)"
@@ -9381,7 +9373,7 @@ msgstr "Ocultar"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Hide bezels"
-msgstr ""
+msgstr "Ocultar bezels"
 
 #. TRANSLATION: hypseus-singe/vitaquake3
 msgctxt "game_options"
@@ -11381,7 +11373,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "Mouse (1351)"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Clique do Mouse"
@@ -11401,7 +11393,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr "Avançar, pode ser usado para pressionar W"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "Mover o Ponteiro do Estilete"
@@ -11793,15 +11785,15 @@ msgctxt "game_options"
 msgid "New3D"
 msgstr "Novo 3D"
 
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Next Disc (m3u)"
-msgstr "Proximo Disco (m3u)"
-
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Next disk"
+msgstr "Próximo disco"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -14161,7 +14153,7 @@ msgstr "SALTAR MENU INICIAL"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "SLEEP TIMERS ACCURACY"
-msgstr ""
+msgstr "ACURÁCIA DOS TIMERS DE DORMIR"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -15803,20 +15795,10 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Som Ambiente 7.1 (Surround)"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Swap Screen"
+msgid "Swap screen"
 msgstr "Trocar Tela"
-
-#. TRANSLATION: nds.drastic.keys
-msgctxt "keys_files"
-msgid "Swap Screens"
-msgstr "Trocar Telas"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Swap screens"
-msgstr "Trocar telas"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -16376,16 +16358,6 @@ msgstr ""
 "Para usar trapacas do jogo ou codigos de correcao de proporcao de aspecto "
 "16/9."
 
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Screen Layout"
-msgstr "Alternar Disposicao da Tela"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Speed Limit"
-msgstr "Alternar Limite de Velocidade"
-
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
@@ -16407,6 +16379,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Cartucho Tomy Tutor e Pyuuta"
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Toogle screen layout"
+msgstr "Trocar layout da tela"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17214,7 +17191,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Usleep Only"
-msgstr ""
+msgstr "Apenas Usleep"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17606,7 +17583,7 @@ msgstr "ESCREVA ARMAZENAMENTO TEMPORARIO DE CORES"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "WRITE DEPTH BUFFERS"
-msgstr ""
+msgstr "ESCREVE PROFUNDIDADE NA MEMÓRIA TEMPORÁRIA"
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -17779,6 +17756,8 @@ msgid ""
 "Writes depth buffer values to VM memory. Some games need this to fix broken "
 "graphics."
 msgstr ""
+"Escreve os valores do buffer de profundidade para a memória da máquina "
+"virtual. Alguns jogos precisam disso para consertar gráficos quebrados."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -19223,6 +19202,10 @@ msgstr "amarelo/azul"
 #~ "Exibe informacoes na tela como estado de salvamento, aviso de "
 #~ "configuracao etc."
 
+#~ msgctxt "keys_files"
+#~ msgid "Display the controller screen"
+#~ msgstr "Exibir a tela do controlador"
+
 #~ msgctxt "game_options"
 #~ msgid "Distorts the output to fill the display fully."
 #~ msgstr "Distorce a saÃ­da para preencher totalmente a tela."
@@ -19670,6 +19653,10 @@ msgstr "amarelo/azul"
 #~ "Boa aceleracao e alta compatibilidade; recomendado, mas pode causar "
 #~ "problemas."
 
+#~ msgctxt "keys_files"
+#~ msgid "Graphics filtering on/off"
+#~ msgstr "Liga/Desliga o filtro de graficos"
+
 #~ msgctxt "game_options"
 #~ msgid "HD Gun Games"
 #~ msgstr "Jogos de Pistola em Alta Definicao HD"
@@ -19976,6 +19963,10 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Needed by some games that use special unicode characters."
 #~ msgstr "Necessario para alguns jogos que usam caracteres unicode especiais."
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Proximo Disco (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "No Limitation"
@@ -20604,6 +20595,18 @@ msgstr "amarelo/azul"
 #~ msgid "Stretch to 4:3"
 #~ msgstr "Esticar para 4:3"
 
+#~ msgctxt "keys_files"
+#~ msgid "Swap Screen"
+#~ msgstr "Trocar Tela"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap Screens"
+#~ msgstr "Trocar Telas"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap screens"
+#~ msgstr "Trocar telas"
+
 #~ msgctxt "game_options"
 #~ msgid "Swap the Nintendo DS Displays."
 #~ msgstr "Troca as telas do Nintendo DS."
@@ -20676,6 +20679,14 @@ msgstr "amarelo/azul"
 #~ "Alterna entre os mÃ©todos de reducao de serrilhado: MSAA (Multipla "
 #~ "Amostragem) e SSAA (Super Amostragem). Depende da ativacao da reducao do "
 #~ "serrilhado."
+
+#~ msgctxt "keys_files"
+#~ msgid "Toggle Screen Layout"
+#~ msgstr "Alternar Disposicao da Tela"
+
+#~ msgctxt "keys_files"
+#~ msgid "Toggle Speed Limit"
+#~ msgstr "Alternar Limite de Velocidade"
 
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
