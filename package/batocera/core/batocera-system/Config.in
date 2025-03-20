@@ -229,8 +229,9 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_HOST_PYTHON3
     select BR2_PACKAGE_HOST_PYTHON3_SSL
     select BR2_PACKAGE_PYTHON3
-    select BR2_PACKAGE_PYTHON3_SSL
     select BR2_PACKAGE_PYTHON3_PYOPENSSL
+    select BR2_PACKAGE_PYTHON3_READLINE
+    select BR2_PACKAGE_PYTHON3_SSL
 
     select BR2_PACKAGE_PARTED                               # partition management (for the first boot)
     select BR2_PACKAGE_USBMOUNT                             # usb key/sd card mounter
@@ -1113,7 +1114,9 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_XMIL                        # ALL
 
     # Fujistu FM-Towns computers range
-    select BR2_PACKAGE_TSUGARU                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
+    select BR2_PACKAGE_TSUGARU                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712 || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588      || BR2_PACKAGE_BATOCERA_TARGET_SM8250  || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_SM8550
 
     # Macintosh
     select BR2_PACKAGE_LIBRETRO_MINIVMAC                    # ALL
@@ -1122,7 +1125,7 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     select BR2_PACKAGE_X16EMU                               # ALL
 
     # CLK - Oric Atmos and other old computers
-    select BR2_PACKAGE_CLK                                  if  BR2_PACKAGE_BATOCERA_GLES3
+    select BR2_PACKAGE_CLK                                  if  BR2_PACKAGE_HAS_LIBGL
 
     help
         Old computers
@@ -1236,7 +1239,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 
     # Pinball
     select BR2_PACKAGE_VPINBALL                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588      || BR2_PACKAGE_BATOCERA_TARGET_SM8550
 
     # Panasonic 3DO
     select BR2_PACKAGE_LIBRETRO_OPERA                       if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     && \
