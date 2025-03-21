@@ -99,7 +99,7 @@ do
     mkdir -p ${GENFINALIMAGE_TMP} || exit 1
     fi
     ###
-    "${HOST_DIR}/bin/genimage" --rootpath="${TARGET_DIR}" --inputpath="${BATOCERA_BINARIES_DIR}/boot" --outputpath="${BATOCERA_BINARIES_DIR}" --config="${BATOCERA_BINARIES_DIR}/genimage.cfg" --tmppath="${GENIMAGE_TMP}" || exit 1
+    "${HOST_DIR}/bin/genimage" --rootpath="${TARGET_DIR}" --inputpath="${BATOCERA_BINARIES_DIR}/boot" --outputpath="${GENFINALIMAGE_TMP}" --config="${BATOCERA_BINARIES_DIR}/genimage.cfg" --tmppath="${GENIMAGE_TMP}" || exit 1
 
     rm -f "${BATOCERA_BINARIES_DIR}/boot.vfat" || exit 1
     rm -f "${BATOCERA_BINARIES_DIR}/userdata.ext4" || exit 1
