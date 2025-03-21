@@ -59,7 +59,7 @@ if [ "$EVENT" == "gameStop" ]; then
     TDP_SETTING=$(printf "%.0f" "$(/usr/bin/batocera-settings-get global.tdp)")
     if [ -z "${TDP_SETTING}" ]; then
         TDP_SETTING="$(/usr/bin/batocera-settings-get system.cpu.tdp)"
-        
+
         if [ -n "$TDP_SETTING" ]; then
             set_tdp "${TDP_SETTING}" "STOP"
         else
@@ -95,7 +95,7 @@ if [ -z "${TDP_SETTING}" ]; then
     else
         echo "No TDP setting defined, cannot set TDP." >> $log
         exit 1
-    fi    
+    fi
     exit 0
 fi
 

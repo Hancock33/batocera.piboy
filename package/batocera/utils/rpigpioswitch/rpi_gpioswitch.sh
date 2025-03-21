@@ -792,10 +792,10 @@ function pironman5_config()
 #https://wiki.52pi.com/index.php?title=EP-0104
 function powerboard_start() {
     echo "*** Starting Powerboard hat services ***"
-    
+
     #------ CONFIG SECTION ------
     CONFIG_FILE="/boot/config.txt"
-    
+
     # Check if /boot is writable, if not make it writable
     if ! touch "$CONFIG_FILE" >/dev/null 2>&1; then
         echo "*** Mounting /boot as writable ***"
@@ -804,7 +804,7 @@ function powerboard_start() {
             return 1
         }
     fi
-    
+
     # Configure I2C
     PARAM="dtparam=i2c_arm"
     # Check for existing parameter (including commented out)
@@ -832,21 +832,21 @@ function powerboard_start() {
         echo "*** Adding i2c configuration ***"
         echo "${PARAM}=on" >> "$CONFIG_FILE"
     fi
-    
+
     # Remount /boot as read-only
     echo "*** Remounting /boot as read-only ***"
     mount -o remount,ro /boot || {
         echo "Error: Failed to remount /boot as read-only"
         return 1
     }
-    
+
     # Ensure i2c is loaded
     echo "*** Loading i2c-dev module ***"
     if ! modprobe i2c_dev; then
         echo "Error: Failed to load i2c_dev module"
         return 1
     fi
-    
+
     # Start appropriate powerboard service based on architecture
     echo "*** Starting Powerboard service ***"
     arch=$(uname -m)
@@ -867,7 +867,7 @@ function powerboard_start() {
             return 1
         fi
     fi
-    
+
     echo "*** Powerboard hat initialization completed ***"
 }
 
@@ -884,10 +884,10 @@ function powerboard_config()
 
 function wm8960audiohat_start() {
     echo "*** Starting WM8960 audio hat ***"
-    
+
     #------ CONFIG SECTION ------
     CONFIG_FILE="/boot/config.txt"
-    
+
     # Check if /boot is writable, if not make it writable
     if ! touch "$CONFIG_FILE" >/dev/null 2>&1; then
         echo "*** Mounting /boot as writable ***"
@@ -896,12 +896,12 @@ function wm8960audiohat_start() {
             return 1
         }
     fi
-    
+
     # Helper function to handle dtparam configuration
     configure_dtparam() {
         local PARAM=$1
         local PARAM_NAME=$2
-        
+
         # Check for existing parameter (including commented out)
         if grep -q "^#*${PARAM}" "$CONFIG_FILE"; then
             if grep -q "^#.*${PARAM}=on" "$CONFIG_FILE"; then
@@ -928,13 +928,13 @@ function wm8960audiohat_start() {
             echo "*** ${PARAM_NAME} parameter added ***"
         fi
     }
-    
+
     # Configure I2C
     configure_dtparam "dtparam=i2c_arm" "WM8960 audio hat i2c"
-    
+
     # Configure I2S
     configure_dtparam "dtparam=i2s" "WM8960 audio hat i2s"
-    
+
     # Configure WM8960 overlay
     OVERLAY="dtoverlay=wm8960-soundcard"
     if grep -q "^#*${OVERLAY}" "$CONFIG_FILE"; then
@@ -957,7 +957,7 @@ function wm8960audiohat_start() {
         echo "Error: Failed to remount /boot as read-only"
         return 1
     }
-    
+
     echo "*** WM8960 audio hat initialization completed ***"
     echo "*** If you're seeing this message you should reboot your device ***"
 }
