@@ -192,31 +192,31 @@ cp -prv "${G_TARGETDIR}/usr/lib/alsa-lib/libasound_module_"*".so" "${TMPOUT}/lib
 
 # pipewire
 # if you modify 0.2 and 0.3, these values are hardcoded for SPA_PLUGIN_DIR and PIPEWIRE_MODULE_DIR
-echo 
+echo
 echo "pipewire..."
-echo 
+echo
 cp -prv "${G_TARGETDIR}/usr/lib/spa-0.2"      "${TMPOUT}/lib32/" || exit 1
 cp -prv "${G_TARGETDIR}/usr/lib/pipewire-0.3" "${TMPOUT}/lib32/" || exit 1
 
 # installation
-echo 
+echo
 echo "wine installation..."
-echo 
+echo
 mkdir -p "${TMPOUT}/usr/wine/wine-tkg" || exit 1
 cp -pr "${G_TARGETDIR}/usr/wine/wine-tkg" "${TMPOUT}/usr/wine/" || exit 1
 # remove 32-bit wineserver
 rm "${TMPOUT}/usr/wine/wine-tkg/bin/wineserver" || exit 1
 
 # helper bins
-echo 
+echo
 echo " wine helper binaries"
-echo 
+echo
 mkdir -p "${TMPOUT}/usr/bin32" || exit 1
 #cp -p "${G_TARGETDIR}/usr/bin/cabextract"          "${TMPOUT}/usr/bin32/" || exit 1
 cp -p "${G_TARGETDIR}/usr/bin/gst"* "${TMPOUT}/usr/bin32/" || exit 1
 
 # lindbergh loader
-echo 
+echo
 echo "lindbergh loader & additional libraries..."
 echo
 mkdir -p "${TMPOUT}/usr/bin/lindbergh" || exit 1
@@ -239,30 +239,30 @@ mkdir -p "${TMPOUT}/lib32/gbm" || exit 1
 cp -prv "${G_TARGETDIR}/usr/lib/gbm/dri_gbm.so"         "${TMPOUT}/lib32/gbm/" || exit 1
 
 # pulseaudio
-echo 
+echo
 echo "pulseaudio..."
 echo
 mkdir -p "${TMPOUT}/lib32/pulseaudio" || exit 1
 cp -prv "${G_TARGETDIR}/usr/lib/pulseaudio/"* "${TMPOUT}/lib32/pulseaudio" || exit 1
 
 # wireplumber
-echo 
+echo
 echo "wireplumber..."
 echo
 mkdir -p "${TMPOUT}/lib32/wireplumber-0.5" || exit 1
 cp -prv "${G_TARGETDIR}/usr/lib/wireplumber-0.5/"* "${TMPOUT}/lib32/wireplumber-0.5" || exit 1
 
 # xorg
-echo 
+echo
 echo "xorg..."
 echo
 mkdir -p "${TMPOUT}/lib32/xorg" || exit 1
 cp -prv "${G_TARGETDIR}/usr/lib/xorg/"* "${TMPOUT}/lib32/xorg" || exit 1
 
 # dri
-echo 
+echo
 echo "dri..."
-echo 
+echo
 for i in "${G_TARGETDIR}/usr/lib/dri/"*.so
 do
     echo "   "$(basename "${i}")
