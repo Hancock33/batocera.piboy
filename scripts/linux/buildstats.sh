@@ -74,7 +74,7 @@ do
     let PER_TRANSLATED_W=200-$PER_FUZZY_W-PER_UNTRANSLATED_W
     let PER_TRANSLATED=$NBTRANSLATED'*'100/$TOTAL
     LINK="https://raw.githubusercontent.com/batocera-linux/batocera-emulationstation/master/locale/lang/${POLANG}/LC_MESSAGES/emulationstation2.po"
-    
+
     echo "<tr>"
     echo "<td><a href=\"${LINK}\">${POLANG}</a></td>"
     echo "<td>"

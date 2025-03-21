@@ -7,7 +7,7 @@ ENDLINE="\n--------------------------------------------------"${ENDCOLOR}
 clear
 echo  ${STARTLINE}"Cleaning Batocera Image(s)                        "${ENDLINE}
 
-cd $HOME/batocera.se && 
+cd $HOME/batocera.se &&
 git pull
 git submodule init
 git submodule update
@@ -21,16 +21,16 @@ make_bato=""
 
 # Build RPI image
 read -p "Clean Build RPI? (y/n)" yn
-case $yn in 
+case $yn in
 	y )
-        BUILD_RPI=1;; 
+        BUILD_RPI=1;;
 	n )
         BUILD_RPI=0;;
 esac
 
 # Build X86 image
 read -p "Clean Build X86? (y/n)" yn
-case $yn in 
+case $yn in
 	y )
         BUILD_X86=1;;
 	n )

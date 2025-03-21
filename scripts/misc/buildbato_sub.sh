@@ -7,7 +7,7 @@ ENDLINE="\n--------------------------------------------------"${ENDCOLOR}
 clear
 echo  ${STARTLINE}"Building Batocera Image(s)                        "${ENDLINE}
 
-cd $HOME/batocera.se && 
+cd $HOME/batocera.se &&
 git pull
 git submodule init
 git submodule update
@@ -19,7 +19,7 @@ rm -rf $HOME/build-dir/batocera.*/build/batocera-es-system-* > /dev/null 2>&1
 rm -rf $HOME/build-dir/batocera.*/build/batocera-configgen-* > /dev/null 2>&1
 
 read -p "Clean Batocera packages? (y/n)" yn
-case $yn in 
+case $yn in
 	y )
         rm -rf $HOME/build-dir/batocera.*/build/batocera-a* > /dev/null 2>&1
         rm -rf $HOME/build-dir/batocera.*/build/batocera-b* > /dev/null 2>&1
@@ -45,7 +45,7 @@ make_sub_sys=""
 
 # Build subsystems
 read -p "Build subsystems? (y/n)" yn
-case $yn in 
+case $yn in
 	y )
         BUILD_SUB=1;;
 	n )
@@ -54,16 +54,16 @@ esac
 
 # Build RPI subsystems + distro
 read -p "Build RPI? (y/n)" yn
-case $yn in 
+case $yn in
 	y )
-        BUILD_RPI=1;; 
+        BUILD_RPI=1;;
 	n )
         BUILD_RPI=0;;
 esac
 
 # Build X86 subsystems + distro
 read -p "Build X86? (y/n)" yn
-case $yn in 
+case $yn in
 	y )
         BUILD_X86=1;;
 	n )

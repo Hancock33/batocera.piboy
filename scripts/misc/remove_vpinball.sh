@@ -15,7 +15,7 @@ BUILD_X86=0
 
 # Build X86 image
 read -p "Clean Wine Build X86? (y/n)" yn
-case $yn in 
+case $yn in
 	y )
         BUILD_X86=1;;
 	n )

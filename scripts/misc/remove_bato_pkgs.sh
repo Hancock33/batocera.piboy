@@ -16,16 +16,16 @@ BUILD_X86=0
 
 # Build RPI image
 read -p "Clean Build RPI? (y/n)" yn
-case $yn in 
+case $yn in
 	y )
-        BUILD_RPI=1;; 
+        BUILD_RPI=1;;
 	n )
         BUILD_RPI=0;;
 esac
 
 # Build X86 image
 read -p "Clean Build X86? (y/n)" yn
-case $yn in 
+case $yn in
 	y )
         BUILD_X86=1;;
 	n )

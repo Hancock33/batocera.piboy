@@ -53,7 +53,7 @@ zfs*
 nvidia-*"
 
 read -p "Delete RPI Kerenl? (y/n)" yn
-case $yn in 
+case $yn in
 	y )
         DEL_RPI4=1;;
 	n )
@@ -71,7 +71,7 @@ if [ $DEL_RPI4 = '1' ]; then
 fi
 
 read -p "Delete X86 Kerenl? (y/n)" yn
-case $yn in 
+case $yn in
 	y )
         DEL_X86=1;;
 	n )
