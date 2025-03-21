@@ -11265,7 +11265,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "マウス (1351)"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "マウス クリック"
@@ -11285,7 +11285,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr "前進、W を押すと可能"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "スタイレットポインタの移動"

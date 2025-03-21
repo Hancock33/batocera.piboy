@@ -11367,7 +11367,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "Muis (1351)"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Muisklik"
@@ -11387,7 +11387,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr "Ga vooruit, kan worden gebruikt door op W te drukken"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "Verplaats Stylet Pointer"

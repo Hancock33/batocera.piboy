@@ -11378,7 +11378,7 @@ msgctxt "game_options"
 msgid "Mouse (1351)"
 msgstr "Mouse (1351)"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Egérkattintás"
@@ -11398,7 +11398,7 @@ msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
 msgstr "Mozgás előre, a W megnyomásával használható"
 
-#. TRANSLATION: 3ds.azahar.keys, 3ds.citra.keys
+#. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "Stílusmutató mozgatása"
