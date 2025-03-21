@@ -147,7 +147,7 @@ mountDevicesOrNetwork() {
         do
             XWAIT=4 # N seconds between each try
             XTRY=$((MAXTRY / XWAIT)) # X tries and give up
-            
+
             while [ "${XTRY}" -gt 0 ]
             do
                 XTRY=$((XTRY-1))

@@ -12,36 +12,36 @@ check_pipewire_status() {
     local timeout=10
     local interval=0.1
     local elapsed=0
-    
+
     while [ "$(echo "$elapsed < $timeout" | bc)" -eq 1 ]; do
         if ! pgrep -x pipewire >/dev/null; then
             return 1
         fi
-        
+
         if [ ! -S "${XDG_RUNTIME_DIR}/pipewire-0" ]; then
             sleep "$interval"
             elapsed=$(echo "$elapsed + $interval" | bc)
             continue
         fi
-        
+
         if pactl info >/dev/null 2>&1 && pactl list sinks-raw 2>/dev/null | grep -qo sink=; then
             return 0
         fi
-        
+
         sleep "$interval"
         elapsed=$(echo "$elapsed + $interval" | bc)
     done
-    
+
     return 1
 }
 
 start_pipewire() {
     LANG=C
     printf "Starting PipeWire: "
-    
+
     # Start PipeWire in the background
     start-stop-daemon -S -b -q -m -p /var/run/pipewire.pid --exec /usr/bin/pipewire
-    
+
     # Check if PipeWire started successfully
     if check_pipewire_status; then
         echo "OK"

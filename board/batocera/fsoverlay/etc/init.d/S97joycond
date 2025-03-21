@@ -14,7 +14,7 @@
 # Alternatively, hold both S triggers at once (when held horizontally).
 
 # To combine two joy-cons into a virtual input device:
-# Ensure both joycons are on & all four indicator lights are flashing on both joycons. 
+# Ensure both joycons are on & all four indicator lights are flashing on both joycons.
 # Press a *single* trigger (L2 & R2 or ZL & ZR) on both of them at the same time.
 # A new input device will be created called "Nintendo Switch Combined Joy-Cons".
 
