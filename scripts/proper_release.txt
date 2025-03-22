@@ -25,7 +25,6 @@ ledspicer.mk
 libgme.mk
 libgraphene.mk
 libretro-mame.mk
-libretro-mgba.mk
 libserum.mk
 libxmp.mk
 mame-src.mk
