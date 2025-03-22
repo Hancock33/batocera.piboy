@@ -82,8 +82,7 @@ class YabasanshiroGenerator(Generator):
 
         # Configure the first two controllers
         data = {}
-        nplayer = 1
-        for playercontroller, pad in sorted(playersControllers.items()):
+        for nplayer, pad in enumerate(playersControllers[:2], start=1):
             if nplayer <= 2:
                 ctrl_id = str(pad.index) + "_" + pad.real_name + "_" + pad.guid
                 if ctrl_id not in data:
