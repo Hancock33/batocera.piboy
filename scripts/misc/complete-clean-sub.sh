@@ -23,18 +23,18 @@ make_sub_sys=""
 read -p "Clean Build RPI? (y/n)" yn
 case $yn in
 	y )
-        BUILD_RPI=1;;
+		BUILD_RPI=1;;
 	n )
-        BUILD_RPI=0;;
+		BUILD_RPI=0;;
 esac
 
 # Build X86 subsystems
 read -p "Clean Build X86? (y/n)" yn
 case $yn in
 	y )
-        BUILD_X86=1;;
+		BUILD_X86=1;;
 	n )
-        BUILD_X86=0;;
+		BUILD_X86=0;;
 esac
 
 if [ $BUILD_X86 = '1' ]; then
@@ -54,12 +54,12 @@ do
 	sudo rm -rf $HOME/build-dir/batocera.$i/staging
 	sudo rm -rf $HOME/build-dir/batocera.$i/target
 
-	echo "Removing Installed Packages: "${RED}$i${ENDCOLOR}
-	sudo rm -rf $HOME/build-dir/batocera.$i/build/*/.stamp*_installed
-
 	echo "Removing Package Sources: "${RED}$i${ENDCOLOR}
 	cd  $HOME/build-dir/batocera.$i/build && find -maxdepth 1 -type d ! -name 'host*' -exec rm -rf {} \;
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-skeleton*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-gcc-final-*/.stamp_built
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-libopenssl*
+
+	echo "Removing Installed Packages: "${RED}$i${ENDCOLOR}
+	sudo rm -rf $HOME/build-dir/batocera.$i/build/*/.stamp*_installed
 done

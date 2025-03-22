@@ -43,7 +43,7 @@ visualization.waveform"
 
 for i in $make_sub_sys
 do
-    echo $i@ >> /tmp/kodi.txt
+	echo $i@ >> /tmp/kodi.txt
 	#git ls-remote https://github.com/xbmc/$i | grep Omega >> /tmp/kodi.txt
 	git -c 'versionsort.suffix=-' ls-remote --exit-code --refs --sort='version:refname' --tags https://github.com/xbmc/$i '*.*.*'| grep Omega | tail --lines=1 | cut --delimiter='/' --fields=3 >> /tmp/kodi.txt
 done
@@ -54,7 +54,7 @@ kodi_per="peripheral.xarcade"
 
 for i in $kodi_per
 do
-    echo $i@ >> /tmp/kodi.txt
+	echo $i@ >> /tmp/kodi.txt
 	#git ls-remote https://github.com/kodi-game/$i | grep Omega >> /tmp/kodi.txt
 	git -c 'versionsort.suffix=-' ls-remote --exit-code --refs --sort='version:refname' --tags https://github.com/kodi-game/$i '*.*.*'| grep Omega | tail --lines=1 | cut --delimiter='/' --fields=3 >> /tmp/kodi.txt
 done
@@ -83,7 +83,7 @@ pvr.zattoo"
 
 for i in $kodi_pvr
 do
-    echo $i@ >> /tmp/kodi.txt
+	echo $i@ >> /tmp/kodi.txt
 	#git ls-remote https://github.com/kodi-pvr/$i | grep Omega >> /tmp/kodi.txt
 	git -c 'versionsort.suffix=-' ls-remote --exit-code --refs --sort='version:refname' --tags https://github.com/kodi-pvr/$i '*.*.*'| grep Omega | tail --lines=1 | cut --delimiter='/' --fields=3 >> /tmp/kodi.txt
 done

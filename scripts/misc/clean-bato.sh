@@ -23,18 +23,18 @@ make_bato=""
 read -p "Clean Build RPI? (y/n)" yn
 case $yn in
 	y )
-        BUILD_RPI=1;;
+		BUILD_RPI=1;;
 	n )
-        BUILD_RPI=0;;
+		BUILD_RPI=0;;
 esac
 
 # Build X86 image
 read -p "Clean Build X86? (y/n)" yn
 case $yn in
 	y )
-        BUILD_X86=1;;
+		BUILD_X86=1;;
 	n )
-        BUILD_X86=0;;
+		BUILD_X86=0;;
 esac
 
 if [ $BUILD_X86 = '1' ]; then

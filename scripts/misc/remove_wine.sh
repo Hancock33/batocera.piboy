@@ -13,14 +13,13 @@ batowineextras=( $(find $HOME/batocera.se/package/batocera/wine/extras -type f -
 # Variables
 BUILD_X86=0
 
-
 # Build X86 image
 read -p "Clean Wine Build X86? (y/n)" yn
 case $yn in
 	y )
-        BUILD_X86=1;;
+		BUILD_X86=1;;
 	n )
-        BUILD_X86=0;;
+		BUILD_X86=0;;
 esac
 
 if [ $BUILD_X86 = '1' ]; then
@@ -45,10 +44,10 @@ x86_64"
 
 for i in $cleanup
 do
-    echo -e "Cleaning: "${RED}$i${ENDCOLOR}
+	echo -e "Cleaning: "${RED}$i${ENDCOLOR}
 	find $HOME/build-dir/batocera.$i/build -maxdepth 1 -type d -printf '%T@ %p %f\n' | sed -r 's:\-[0-9a-f\.]+$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2
 	find $HOME/build-dir/batocera.$i/build -maxdepth 1 -type d -printf '%T@ %p %f\n' | sed -r 's:\-[0-9a-f\.]+$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | xargs rm -rf
 done
 
-find $HOME/dl -maxdepth 2 -type f -name "*.zip" -o -name "*.tar.*" -printf '%T@ %p %f\n' | sed -r 's:\-[0-9a-f\.]+(\.zip|\.tar\.[2a-z]+)$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | xargs rm -rf
+find $HOME/dl -maxdepth 2 -type f -name "*.zip" -o -name "*.tar.*" -printf '%T@ %p %f\n' | sed -r 's:\-[-_0-9a-fvrgit\.]+(\.zip|\.tar\.[2a-z]+)$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | xargs rm -rf
 
