@@ -256,10 +256,6 @@ class LibretroGenerator(Generator):
             retroarchCore = RETROARCH_CORES / f"{system.config.core}_libretro.so"
             commandArray = [RETROARCH_BIN, "-L", retroarchCore, "--config", system.config['configfile']]
 
-        # quake 3
-        if system.name == 'quake3' and system.config['core'] == "vitaquake3":
-            rom = '/userdata/roms/ports/quake3/baseq3/pak0.pk3'
-
         # super mario wars - verify assets from Content Downloader
         elif system.name == 'superbroswar':
             romdir = rom.absolute().parent

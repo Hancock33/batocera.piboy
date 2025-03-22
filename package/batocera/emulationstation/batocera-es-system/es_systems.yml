@@ -5195,8 +5195,6 @@ quake3:
   group:                quake
   path:                 /userdata/roms/ports/quake3
   emulators:
-    libretro:
-      vitaquake3:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VITAQUAKE3] }
     vkquake3:
       vkquake3:         { requireAnyOf: [ BR2_PACKAGE_VKQUAKE3 ] }
   comment_en: |

@@ -7502,16 +7502,7 @@ libretro:
       shared: [autosave, rewind]
     zmachine:
       shared: [autosave]
-    vitaquake3:
-      shared: [autosave]
-      features: [padtokeyboard]
-      cfeatures:
-            vitaquake3_invertctl:
-                prompt:      INVERT CONTROLS
-                description: Invert the gamepad right analogue stick's Y axis.
-                choices:
-                    "Off":  disabled
-                    "On" :  enabled
+
 # Standalones
 amiberry:
   features: [padtokeyboard]
