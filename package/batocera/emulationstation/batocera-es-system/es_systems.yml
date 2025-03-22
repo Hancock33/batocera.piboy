@@ -4929,9 +4929,6 @@ doom3:
   emulators:
     doom3:
       doom3:            { requireAnyOf: [BR2_PACKAGE_DOOM3] }
-    libretro:
-      boom3:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BOOM3] }
-      boom3_xp:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BOOM3] }
   comment_en:           |
                         Add your Doom 3 (and if you have the Resurrection of Evil mod) pk4 files here like so:
 

@@ -1000,9 +1000,6 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     # ZMusic: standalone library used by gzdoom and raze source ports
     select BR2_PACKAGE_ZMUSIC                               if  BR2_PACKAGE_GZDOOM || BR2_PACKAGE_RAZE
 
-    # Boom3 (Doom 3)
-    select BR2_PACKAGE_LIBRETRO_BOOM3                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
-
     # Tomb Raider 1
     select BR2_PACKAGE_TR1X                                 if  BR2_PACKAGE_XORG7
 

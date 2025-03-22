@@ -256,20 +256,6 @@ class LibretroGenerator(Generator):
             retroarchCore = RETROARCH_CORES / f"{system.config.core}_libretro.so"
             commandArray = [RETROARCH_BIN, "-L", retroarchCore, "--config", system.config['configfile']]
 
-        # doom3
-        elif system.name == 'doom3':
-            with rom.open('r') as file:
-                first_line = file.readline().strip()
-            # creating the new 'rom_path' variable by combining the directory path and the first line
-            rom = rom.parent / first_line
-            _logger.debug("New rom path: %s", rom)
-            # choose core based on new rom directory
-            directory_parts = rom.parent.parts
-            if "d3xp" in directory_parts:
-                system.config['core'] = "boom3_xp"
-            retroarchCore = RETROARCH_CORES / f"{system.config.core}_libretro.so"
-            commandArray = [RETROARCH_BIN, "-L", retroarchCore, "--config", system.config['configfile']]
-
         # quake 3
         if system.name == 'quake3' and system.config['core'] == "vitaquake3":
             rom = '/userdata/roms/ports/quake3/baseq3/pak0.pk3'
@@ -429,7 +415,7 @@ def getGFXBackend(system: Emulator) -> str:
             core = system.config.core
             if backend == "gl" and core in [ 'kronos', 'citra', 'mupen64plus-next', 'melonds', 'beetle-psx-hw' ]:
                 backend = "glcore"
-            if backend == "glcore" and core in [ 'parallel_n64', 'yabasanshiro', 'boom3' ]:
+            if backend == "glcore" and core in [ 'parallel_n64', 'yabasanshiro' ]:
                 backend = "gl"
 
         return backend

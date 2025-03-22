@@ -2274,16 +2274,6 @@ def _neogeomvs_options(
 
         coreSettings.save('geolith_freeplay', '"on"')
 
-# Doom3
-def _boom3_options(
-    coreSettings: UnixSettings, system: Emulator, rom: Path, guns: GunMapping, wheels: DeviceInfoMapping, /,
-) -> None:
-    # Invert Controls
-    if system.isOptSet('boom3_invertctl'):
-        coreSettings.save('doom_invert_y_axis', system.config['boom3_invertctl'])
-    else:
-        coreSettings.save('doom_invert_y_axis', '"disabled"')
-
 def _vitaquake3_options(
     coreSettings: UnixSettings, system: Emulator, rom: Path, guns: GunMapping, wheels: DeviceInfoMapping, /,
 ) -> None:
@@ -2440,8 +2430,6 @@ _option_functions: dict[str, Callable[[UnixSettings, Emulator, Path, Guns, Devic
     'hatarib': _hatarib_options,
     'sameboy': _sameboy_options,
     'neogeomvs': _neogeomvs_options,
-    'boom3': _boom3_options,
-    'boom3_xp': _boom3_options,
     'vitaquake3': _vitaquake3_options,
     'panda3ds': _panda3ds_options,
     'bennugd': _bennugd_options,
