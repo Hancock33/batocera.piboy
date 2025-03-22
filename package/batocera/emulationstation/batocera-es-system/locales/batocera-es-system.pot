@@ -421,7 +421,7 @@ msgctxt "game_options"
 msgid "Use light guns instead of pads if light guns are connected."
 msgstr ""
 
-#. TRANSLATION: dolphin, hypseus-singe/vitaquake3, rpcs3, shared
+#. TRANSLATION: dolphin, hypseus-singe/zmachine, rpcs3, shared
 msgctxt "game_options"
 msgid "LIGHT GUNS"
 msgstr ""
@@ -518,7 +518,7 @@ msgctxt "game_options"
 msgid "Show/Hide guns borders for specific systems"
 msgstr ""
 
-#. TRANSLATION: duckstation, flycast, hypseus-singe/vitaquake3, libretro/beetle-saturn, libretro/fbneo, ...
+#. TRANSLATION: duckstation, flycast, hypseus-singe/zmachine, libretro/beetle-saturn, libretro/fbneo, ...
 msgctxt "game_options"
 msgid "LIGHT GUN"
 msgstr ""
@@ -2998,7 +2998,7 @@ msgctxt "game_options"
 msgid "SHOW BIOS BOOTLOGO"
 msgstr ""
 
-#. TRANSLATION: duckstation, hypseus-singe/vitaquake3, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, ...
+#. TRANSLATION: duckstation, hypseus-singe/zmachine, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, ...
 msgctxt "game_options"
 msgid "Show"
 msgstr ""
@@ -4376,7 +4376,7 @@ msgctxt "game_options"
 msgid "SCREEN BORDERS"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3, libretro/hatarib
+#. TRANSLATION: hypseus-singe/zmachine, libretro/hatarib
 msgctxt "game_options"
 msgid "Hide"
 msgstr ""
@@ -8553,16 +8553,6 @@ msgctxt "game_options"
 msgid "Deutsch"
 msgstr ""
 
-#. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
-msgctxt "game_options"
-msgid "Invert the gamepad right analogue stick's Y axis."
-msgstr ""
-
-#. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
-msgctxt "game_options"
-msgid "INVERT CONTROLS"
-msgstr ""
-
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid ""
@@ -9252,47 +9242,47 @@ msgctxt "game_options"
 msgid "NEW 3DS MODE"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "BLEND SPRITES (SINGE)"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "JOYSTICK TO CURSOR SENSITIVITY"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Hidden"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Shown"
 msgstr ""

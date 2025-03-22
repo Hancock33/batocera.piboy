@@ -2158,7 +2158,7 @@ msgctxt "game_options"
 msgid "A600 (2MB Chip + 8MB Fast)"
 msgstr "A600 (2MB 칩 + 8MB 빠름)"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "절대 마우스 입력"
@@ -3600,7 +3600,7 @@ msgctxt "game_options"
 msgid "BLEND HIGH-RES MODE"
 msgstr "혼합 고해상도 모드"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "BLEND SPRITES (SINGE)"
 msgstr "혼합 스프라이트 (싱글)"
@@ -9102,7 +9102,7 @@ msgctxt "game_options"
 msgid "HID"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
 msgstr "라이트 건 십자선 숨기기"
@@ -9291,12 +9291,12 @@ msgctxt "game_options"
 msgid "Hermite (Default)"
 msgstr "에르미트 (기본)"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Hidden"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3, libretro/hatarib
+#. TRANSLATION: hypseus-singe/zmachine, libretro/hatarib
 msgctxt "game_options"
 msgid "Hide"
 msgstr "숨기기"
@@ -9306,7 +9306,7 @@ msgctxt "keys_files"
 msgid "Hide bezels"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 msgstr "지원되는 게임(예: 액션맥스, 매드독 II)에서 조준선을 숨깁니다."
@@ -9546,11 +9546,6 @@ msgctxt "game_options"
 msgid "INVERT AXIS"
 msgstr "축 반전"
 
-#. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
-msgctxt "game_options"
-msgid "INVERT CONTROLS"
-msgstr ""
-
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
 msgid "INVULNERABILITY MODE"
@@ -9778,11 +9773,6 @@ msgstr ""
 "백글라스와 플레이필드를 반전합니다. 다른 에뮬레이터의 메인 화면으로 백글라스"
 "를 사용하는 데 유용합니다."
 
-#. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
-msgctxt "game_options"
-msgid "Invert the gamepad right analogue stick's Y axis."
-msgstr ""
-
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Invert the vertical joystick axis on flight games."
@@ -9883,7 +9873,7 @@ msgctxt "game_options"
 msgid "JOYSTICK SENSITIVITY"
 msgstr "조이스틱 감도"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "JOYSTICK TO CURSOR SENSITIVITY"
 msgstr "조이스틱 커서 감도"
@@ -10232,7 +10222,7 @@ msgctxt "game_options"
 msgid "LCD Ghosting (Fast)"
 msgstr "LCD 고스팅 (빠름)"
 
-#. TRANSLATION: duckstation, flycast, hypseus-singe/vitaquake3, libretro/beetle-saturn, libretro/fbneo, ...
+#. TRANSLATION: duckstation, flycast, hypseus-singe/zmachine, libretro/beetle-saturn, libretro/fbneo, ...
 msgctxt "game_options"
 msgid "LIGHT GUN"
 msgstr "라이트 건"
@@ -10242,7 +10232,7 @@ msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIR"
 msgstr "라이트 건 십자선"
 
-#. TRANSLATION: dolphin, hypseus-singe/vitaquake3, rpcs3, shared
+#. TRANSLATION: dolphin, hypseus-singe/zmachine, rpcs3, shared
 msgctxt "game_options"
 msgid "LIGHT GUNS"
 msgstr "라이트 건"
@@ -13553,7 +13543,7 @@ msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "벡터를 매끄럽게 하기 위한 해상도 배수"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "싱글 스프라이트에서 블렌드모드 윤곽선을 복원합니다."
@@ -14770,7 +14760,7 @@ msgctxt "game_options"
 msgid "Short visible screen edge (cm)"
 msgstr "짧은 가시 화면 가장자리 (cm)"
 
-#. TRANSLATION: duckstation, hypseus-singe/vitaquake3, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, ...
+#. TRANSLATION: duckstation, hypseus-singe/zmachine, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, ...
 msgctxt "game_options"
 msgid "Show"
 msgstr "표시"
@@ -14820,7 +14810,7 @@ msgctxt "game_options"
 msgid "Show/Hide guns borders for specific systems"
 msgstr "특정 시스템에 대한 총 테두리 표시/숨기기"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Shown"
 msgstr ""
@@ -16163,7 +16153,7 @@ msgstr ""
 "이 옵션은 엑스박스 라이브 아케이드 게임을 플레이할 수 있는 기능을 제공합니"
 "다. XBLA가 아닌 게임과 호환성 문제가 발생할 수 있습니다."
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr "이 옵션은 마우스로 플레이할 때 일부 총기 게임에 필요합니다."

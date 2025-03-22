@@ -2152,7 +2152,7 @@ msgctxt "game_options"
 msgid "A600 (2MB Chip + 8MB Fast)"
 msgstr "A600 (2 MB Chip + 8 MB Fast)"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "ABSOLUTT MUSEINNGANG"
@@ -3598,7 +3598,7 @@ msgctxt "game_options"
 msgid "BLEND HIGH-RES MODE"
 msgstr "BLAND HØYOPPLØSELIG MODUS"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "BLEND SPRITES (SINGE)"
 msgstr "BLANDE SPRITES (SINGE)"
@@ -9116,7 +9116,7 @@ msgctxt "game_options"
 msgid "HID"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
 msgstr "SKJUL TRÅDKORSET TIL LYSPISTOLER"
@@ -9305,12 +9305,12 @@ msgctxt "game_options"
 msgid "Hermite (Default)"
 msgstr "Hermite (standard)"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Hidden"
 msgstr "Skjult"
 
-#. TRANSLATION: hypseus-singe/vitaquake3, libretro/hatarib
+#. TRANSLATION: hypseus-singe/zmachine, libretro/hatarib
 msgctxt "game_options"
 msgid "Hide"
 msgstr "Skjul"
@@ -9320,7 +9320,7 @@ msgctxt "keys_files"
 msgid "Hide bezels"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 msgstr "Sjul trådkorset i støttede spill som f.eks. ActionMax, Maddog II."
@@ -9559,11 +9559,6 @@ msgctxt "game_options"
 msgid "INVERT AXIS"
 msgstr "INVERTERT AXIS"
 
-#. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
-msgctxt "game_options"
-msgid "INVERT CONTROLS"
-msgstr ""
-
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
 msgid "INVULNERABILITY MODE"
@@ -9796,11 +9791,6 @@ msgstr ""
 "Bytt om Bakglass og Spillefelt. Nyttig for å bruke Bakglass som hovedskjerm "
 "for andre emulatorer."
 
-#. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
-msgctxt "game_options"
-msgid "Invert the gamepad right analogue stick's Y axis."
-msgstr ""
-
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Invert the vertical joystick axis on flight games."
@@ -9901,7 +9891,7 @@ msgctxt "game_options"
 msgid "JOYSTICK SENSITIVITY"
 msgstr "JOYSTICKENS FØLSOMHET"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "JOYSTICK TO CURSOR SENSITIVITY"
 msgstr "JOYSTICK TIL MARKØRENS FØLSOMHET"
@@ -10250,7 +10240,7 @@ msgctxt "game_options"
 msgid "LCD Ghosting (Fast)"
 msgstr "LCD Ghosting (rask)"
 
-#. TRANSLATION: duckstation, flycast, hypseus-singe/vitaquake3, libretro/beetle-saturn, libretro/fbneo, ...
+#. TRANSLATION: duckstation, flycast, hypseus-singe/zmachine, libretro/beetle-saturn, libretro/fbneo, ...
 msgctxt "game_options"
 msgid "LIGHT GUN"
 msgstr "LYSPISTOL"
@@ -10260,7 +10250,7 @@ msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIR"
 msgstr "TRÅDKORS FOR LYSPISTOL"
 
-#. TRANSLATION: dolphin, hypseus-singe/vitaquake3, rpcs3, shared
+#. TRANSLATION: dolphin, hypseus-singe/zmachine, rpcs3, shared
 msgctxt "game_options"
 msgid "LIGHT GUNS"
 msgstr "LYSPISTOL"
@@ -13575,7 +13565,7 @@ msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "Oppløsningsmultiplikatorer for å jevne ut vektorer"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "Gjenopprett BLENDMODE-kontur på enkelte sprites."
@@ -14793,7 +14783,7 @@ msgctxt "game_options"
 msgid "Short visible screen edge (cm)"
 msgstr "Kort synlig skjermkant (cm)"
 
-#. TRANSLATION: duckstation, hypseus-singe/vitaquake3, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, ...
+#. TRANSLATION: duckstation, hypseus-singe/zmachine, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, ...
 msgctxt "game_options"
 msgid "Show"
 msgstr "Vis"
@@ -14843,7 +14833,7 @@ msgctxt "game_options"
 msgid "Show/Hide guns borders for specific systems"
 msgstr "Vis/skjul våpenrammer for bestemte systemer"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Shown"
 msgstr "Vist"
@@ -16194,7 +16184,7 @@ msgstr ""
 "Dette alternativet gjør det mulig å spille Xbox Live Arcade-spill. Kan "
 "forårsake kompatibilitetsproblemer med ikke-XBLA-spill."
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr ""

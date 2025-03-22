@@ -2153,7 +2153,7 @@ msgctxt "game_options"
 msgid "A600 (2MB Chip + 8MB Fast)"
 msgstr "A600 (2MB Chip + 8MB gyors)"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "ABSZOLÚT EGÉR BEMENET"
@@ -3609,7 +3609,7 @@ msgctxt "game_options"
 msgid "BLEND HIGH-RES MODE"
 msgstr "NAGYFELBONTÁSÚ MÓD KEVERÉSE"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "BLEND SPRITES (SINGE)"
 msgstr "SPRITE-OK KEVERÉSE (SINGE)"
@@ -9169,7 +9169,7 @@ msgctxt "game_options"
 msgid "HID"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
 msgstr "ELREJTI A FÉNYPISZTOLY CÉLKERESZTJÉT"
@@ -9358,12 +9358,12 @@ msgctxt "game_options"
 msgid "Hermite (Default)"
 msgstr "Hermite (alapértelmezett)"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Hidden"
 msgstr "Rejtett"
 
-#. TRANSLATION: hypseus-singe/vitaquake3, libretro/hatarib
+#. TRANSLATION: hypseus-singe/zmachine, libretro/hatarib
 msgctxt "game_options"
 msgid "Hide"
 msgstr "Elrejt"
@@ -9373,7 +9373,7 @@ msgctxt "keys_files"
 msgid "Hide bezels"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 msgstr ""
@@ -9616,11 +9616,6 @@ msgctxt "game_options"
 msgid "INVERT AXIS"
 msgstr "INVERZ TENGELY"
 
-#. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
-msgctxt "game_options"
-msgid "INVERT CONTROLS"
-msgstr ""
-
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
 msgid "INVULNERABILITY MODE"
@@ -9861,11 +9856,6 @@ msgstr ""
 "Fordítsa meg a hátsó üveget és a játékteret. Hasznos a Backglass fő "
 "képernyőként való használatához más emulátoroknál."
 
-#. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
-msgctxt "game_options"
-msgid "Invert the gamepad right analogue stick's Y axis."
-msgstr ""
-
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Invert the vertical joystick axis on flight games."
@@ -9966,7 +9956,7 @@ msgctxt "game_options"
 msgid "JOYSTICK SENSITIVITY"
 msgstr "JOYSTICK ÉRZÉKENYSÉG"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "JOYSTICK TO CURSOR SENSITIVITY"
 msgstr "JOYSTICK A KURSZOR ÉRZÉKENYSÉGÉRE"
@@ -10315,7 +10305,7 @@ msgctxt "game_options"
 msgid "LCD Ghosting (Fast)"
 msgstr "LCD szellemkép (gyors)"
 
-#. TRANSLATION: duckstation, flycast, hypseus-singe/vitaquake3, libretro/beetle-saturn, libretro/fbneo, ...
+#. TRANSLATION: duckstation, flycast, hypseus-singe/zmachine, libretro/beetle-saturn, libretro/fbneo, ...
 msgctxt "game_options"
 msgid "LIGHT GUN"
 msgstr "FÉNYPUSKA"
@@ -10325,7 +10315,7 @@ msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIR"
 msgstr "FÉNYPUSKA CÉLKERESZT"
 
-#. TRANSLATION: dolphin, hypseus-singe/vitaquake3, rpcs3, shared
+#. TRANSLATION: dolphin, hypseus-singe/zmachine, rpcs3, shared
 msgctxt "game_options"
 msgid "LIGHT GUNS"
 msgstr "FÉNYPISZTOLYOK"
@@ -13664,7 +13654,7 @@ msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "Felbontási szorzók a vektorok simítására"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "BLENDMODE körvonal visszaállítása a Singe sprite-okon."
@@ -14890,7 +14880,7 @@ msgctxt "game_options"
 msgid "Short visible screen edge (cm)"
 msgstr "Rövid látható képernyőszegély (cm)"
 
-#. TRANSLATION: duckstation, hypseus-singe/vitaquake3, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, ...
+#. TRANSLATION: duckstation, hypseus-singe/zmachine, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, ...
 msgctxt "game_options"
 msgid "Show"
 msgstr "Mutasd meg"
@@ -14942,7 +14932,7 @@ msgid "Show/Hide guns borders for specific systems"
 msgstr ""
 "A fegyverek határainak megjelenítése/elrejtése bizonyos rendszerek esetében"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Shown"
 msgstr "Látható"
@@ -16297,7 +16287,7 @@ msgstr ""
 "Ez az opció lehetővé teszi az Xbox Live Arcade játékok lejátszását. "
 "Kompatibilitási problémákat okozhat a nem XBLA-játékokkal."
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr ""
