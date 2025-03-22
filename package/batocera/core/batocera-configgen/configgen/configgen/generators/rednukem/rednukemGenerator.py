@@ -31,5 +31,5 @@ class RednukemGenerator(Generator):
     def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "rednukem",
-            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_Q"] }
         }

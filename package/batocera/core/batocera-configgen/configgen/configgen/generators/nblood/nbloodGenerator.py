@@ -31,5 +31,5 @@ class NbloodGenerator(Generator):
     def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "nblood",
-            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_Q"] }
         }
