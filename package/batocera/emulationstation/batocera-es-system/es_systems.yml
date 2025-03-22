@@ -2911,7 +2911,6 @@ fds:
       fceumm:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FCEUMM]   }
       nestopia:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_NESTOPIA] }
       mesen:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESEN]    }
-      quicknes:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_QUICKNES] }
 
 gameandwatch:
   name:                 Game and Watch
@@ -3161,7 +3160,6 @@ satellaview:
       pocketsnes:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_POCKETSNES] }
       snes9x:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SNES9X]     }
       mesens:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]     }
-      supafaust:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SUPAFAUST]  }
 
 sgb:
   name:                 Super Game Boy
