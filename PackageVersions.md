@@ -80,7 +80,7 @@ Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.0
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Emulators|[duckstation-legacy](http://github.com/stenzek/duckstation)|56ac3d6c324ec4520dac433b071ecab6227fb459|Aug 4, 2023 - DON'T BUMP
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|f4e93df1b1cdaeb65dc35e1f9dda0be5e605bbd3|Mar 22, 2025
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|98d1c7198105c4cba856bf634d9077f77d92cabf|Mar 22, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|857af8e1c904eba8142edda1aad6437b1c2fafca|Mar 20, 2025
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|416085980fd4c5eae83312a57ae9b0caa6184a79|Mar 19, 2025
@@ -281,7 +281,7 @@ Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|25311dc03332d9ef2dff8d9d06c611d828028fac|Mar 13, 2025
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|0525ea043ea173ec6af1c6c8dade820036376430|Feb 25, 2025
 Emulators|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
-Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|a4590aaf4814a7510ebc324fbe7b725301427e8a|Mar 20, 2025
+Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|d49c5ef5cd1d614e59ef075e7815c3f6f9a8da31|Mar 22, 2025
 Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|9b927f280322b6bb13998e06b83710201960181b|Nov 24, 2024
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|26b4b7bf1dae3a1499c9776bdf9d3aea9c87d713|Mar 12, 2025
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|39f26d3bc8e04133c31192c757eaebd5f0924f2d|Mar 12, 2025
@@ -500,7 +500,7 @@ Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|5bf9c012024884234df0f63c615
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|5300b32803c1c61bc3b6bdf86a084c1db1a217ad|Jan 25, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|9c492533880b7c2d3da7e5f19c923384aad1e7b8|Mar 20, 2025
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.1|Apr 12, 2024
-Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|014aabd74eeefac7f7d4ce54dbcf3259b02fe4cb|Feb 27, 2025
+Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|ff4d1360c9c7e12a7bb445682bff23b51e002121|Mar 22, 2025
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0275|Feb 26, 2025
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A

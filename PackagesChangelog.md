@@ -1,10 +1,12 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|f4e93df1b1cdaeb65dc35e1f9dda0be5e605bbd3|Mar 22, 2025
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|98d1c7198105c4cba856bf634d9077f77d92cabf|Mar 22, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-03-22|Mar 22, 2025
+Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|d49c5ef5cd1d614e59ef075e7815c3f6f9a8da31|Mar 22, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|34f253b63141bf5a2c1500150f91e6c510b67fa0|Mar 22, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|37748402a31fd2cbc759df7a7f6b5aedefab604f|Mar 22, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|65b7412344bf523580c69a23166a04e6a5207321|Mar 22, 2025
+Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|ff4d1360c9c7e12a7bb445682bff23b51e002121|Mar 22, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.4|Mar 22, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250322|Mar 22, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250322|Mar 22, 2025
@@ -30,7 +32,6 @@ Emulators|[clk](https://github.com/TomHarte/CLK)|2025-03-20|Mar 20, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|c570f0ed71ed4f79d96ff6bc8061b77f681be5eb|Mar 20, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.234|Mar 20, 2025
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.3.17|Mar 20, 2025
-Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|a4590aaf4814a7510ebc324fbe7b725301427e8a|Mar 20, 2025
 Hardware|[pironman5](http://github.com/sunfounder/pironman5)|a2f0d8ae722bbd2c4554a54b51834a8cd116bc77|Mar 20, 2025
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|1b8b4d05b50358eb09831066304d51ddec268d19|Mar 20, 2025
 Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|b2aa0dd19d7df1ef1a6ec465621cc5355035a656|Mar 20, 2025
@@ -139,7 +140,6 @@ Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|2c16add9d433b0f
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|2b20aadda55c8e0cd552684130d5e8181a8efff7|Feb 28, 2025
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0275|Feb 27, 2025
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|8de2d49c12b45da670906b0d13f3c5f90ed280fb|Feb 27, 2025
-Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|014aabd74eeefac7f7d4ce54dbcf3259b02fe4cb|Feb 27, 2025
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|f54f084e995782948d30554391ea57a02010d3db|Feb 27, 2025
 Gpu|[shaderc](http://github.com/google/shaderc)|v2025.1|Feb 27, 2025
 Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0275|Feb 27, 2025
