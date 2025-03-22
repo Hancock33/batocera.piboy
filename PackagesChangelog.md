@@ -5,7 +5,7 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-03-22|Mar 22
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|34f253b63141bf5a2c1500150f91e6c510b67fa0|Mar 22, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|37748402a31fd2cbc759df7a7f6b5aedefab604f|Mar 22, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|65b7412344bf523580c69a23166a04e6a5207321|Mar 22, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|68faf92b9da29c0f6e40fc1a0b4f8d7bab4fc955|Mar 22, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.4|Mar 22, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250322|Mar 22, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250322|Mar 22, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|8bcf030c7fe083fee4385d7d4af88951c39d2d57|Mar 21, 2025
