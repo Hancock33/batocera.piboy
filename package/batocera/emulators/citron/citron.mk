@@ -3,8 +3,8 @@
 # suyu
 #
 ################################################################################
-# Version: Commits on Mar 17, 2025
-CITRON_VERSION = 278ac75a378d544192cc6930a8e19a0ad1f3bd46
+# Version: Commits on Mar 21, 2025
+CITRON_VERSION = e06526cbbca4e0aff09f4f9f646f9da13b577885
 CITRON_SITE = https://git.citron-emu.org/Citron/Citron.git
 CITRON_SITE_METHOD=git
 CITRON_GIT_SUBMODULES=YES

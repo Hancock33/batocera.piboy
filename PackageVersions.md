@@ -70,10 +70,10 @@ Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|51100408d
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v118|Jan 27, 2024
 Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|57ff99ce536149d177cb9958c5919e6aa4914180|Mar 19, 2025
-Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|278ac75a378d544192cc6930a8e19a0ad1f3bd46|Mar 17, 2025
+Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|e06526cbbca4e0aff09f4f9f646f9da13b577885|Mar 21, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|2025-03-20|Mar 20, 2025
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|18979129f35f56de9f87e2a7919788679337abfa|Mar 18, 2025
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|2da255d8cdb2da67123296f5f091f808c696d021|Mar 23, 2025
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|cc15858c4aacaca7ca7b346afd0752b909b63064|Dec 30, 2024
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|338e98c94c772abdb74ebe9119bd5c4910af8091|Mar 15, 2025
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.02.01|Feb 01, 2025
@@ -170,7 +170,7 @@ Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|5d2ece5b6d
 Emulators|[libretro-melonds](http://github.com/libretro/melonds)|7a3c11ff970cd36ca806961fae6db94b30dd5401|Oct 21, 2024
 Emulators|[libretro-mesen](http://github.com/libretro/Mesen)|791c5e8153ee6e29691d45b5df2cf1151ff416f9|Oct 21, 2024
 Emulators|[libretro-mesens](http://github.com/libretro/Mesen-S)|d4fca31a6004041d99b02199688f84c009c55967|Oct 21, 2024
-Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|10eb794cfd602eac6f70f01838a420eebd9b8267|Mar 15, 2025
+Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|0.10.5|Mar 09, 2025
 Emulators|[libretro-minivmac](https://github.com/libretro/libretro-minivmac)|6b468a9610aa422fe1b01bf56d73b636976d2b97|Oct 21, 2024
 Emulators|[libretro-mojozork](http://github.com/icculus/mojozork)|5c8d81f8db53c206ace6952472e7a7e68bd8e752|Dec 31, 2023
 Emulators|[libretro-mrboom](https://github.com/Javanaise/mrboom-libretro.git)|d011acfbdb2d93ed38bd684ccfa0db79bda1c932|Oct 21, 2024
@@ -271,7 +271,7 @@ Emulators|[retroarch](http://github.com/libretro/RetroArch)|99af19b6fe3428e4c668
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20250308|Mar 08, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|40ff182c31084364450df6b54f5a901a31ae7021|Mar 22, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-03-23|Mar 23, 2025
-Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.3.20|Mar 23, 2025
+Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.3.21|Mar 23, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|3d4e4649d0af0b328a32377d30a7302b9fa3937a|Feb 23, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|6f944ab1173eb478f7d83db3c637badef2289aaf|Mar 23, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
@@ -445,9 +445,9 @@ Ports|[grimm](http://github.com/dhewm/dhewm3-sdk)|009b958e4adaadc081b4953fe2ac4d
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|2d42438ebdfe19f3f7e1c2f9225b32d64115ed47|Mar 13, 2025
 Ports|[hardcorps](http://github.com/dhewm/dhewm3-sdk)|d8d797c2481169743a8907c67f161b059f072a26|Apr 19, 2024
 Ports|[hcl](http://github.com/ptitSeb/hydracastlelabyrinth)|229369c222f8604530f5e06f795b4505ef21d439|Feb 28, 2024
-Ports|[hlsdk-xash3d-dmc](http://github.com/FWGS/hlsdk-portable)|ec01a74f3331e4487bec1bb85e039f2df0b3f7fa|Jan 26, 2025
+Ports|[hlsdk-xash3d-dmc](http://github.com/FWGS/hlsdk-portable)|004a615306a6c7fd87f678d68f65ee5d4ecfde3a|Mar 23, 2025
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|5fe3a1be82ef9348e751646c7c97eed93ea28cf4|Mar 15, 2025
-Ports|[hlsdk-xash3d-zombiex](http://github.com/FWGS/hlsdk-portable)|89e7e01d43ea2cf98ee66092d35aea2a721b90a6|Jan 26, 2025
+Ports|[hlsdk-xash3d-zombiex](http://github.com/FWGS/hlsdk-portable)|70fd2a934109d39b51be996ffd76a2cc78211fad|Mar 23, 2025
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|f56cee695cce96f5565be1c9f5799b6556792319|Mar 15, 2025
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|72d808cc4d6db5d38e5d87ab95ab0b1bcfd89ede|Nov 24, 2024
