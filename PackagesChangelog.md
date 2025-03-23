@@ -93,7 +93,6 @@ Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/r
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|2561cf18cdd27f6e1248d4a0962eb60959e31577|Mar 15, 2025
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|f56cee695cce96f5565be1c9f5799b6556792319|Mar 15, 2025
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|5fe3a1be82ef9348e751646c7c97eed93ea28cf4|Mar 15, 2025
-Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|10eb794cfd602eac6f70f01838a420eebd9b8267|Mar 15, 2025
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|6cc162de2162a0ffe92a4e0470141b9c7c095bf3|Mar 15, 2025
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|a96b1fcf30b1110981468aee7bab9eec174a3153|Mar 14, 2025
 Firmwares|[firmware-armbian](http://github.com/armbian/firmware)|509fadf8bd4eabc122670ffc37f8e92dae68656e|Mar 14, 2025
@@ -115,6 +114,7 @@ Ports|[openjk](http://github.com/JACoders/OpenJK)|5878f620f6dabb6573595470627ab2
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.4.309.0|Mar 10, 2025
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|883f29ef19a939d513550008c22f811a95846382|Mar 10, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|0fcf1f6e3a443cb249f85d948ff6e58dc58501d6|Mar 09, 2025
+Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|0.10.5|Mar 09, 2025
 Audio|[zmusic](http://github.com/ZDoom/ZMusic)|6928b8609db9b1c104c4cd4f9b163486121fb0f0|Mar 08, 2025
 Libraries|[mono-bin](https://github.com/Hancock33/batocera-mono/releases)|6.14.0|Mar 08, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|6ba349afa4f615f5bf1811ff52bba696aa83c608|Mar 08, 2025

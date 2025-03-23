@@ -170,7 +170,7 @@ Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|5d2ece5b6d
 Emulators|[libretro-melonds](http://github.com/libretro/melonds)|7a3c11ff970cd36ca806961fae6db94b30dd5401|Oct 21, 2024
 Emulators|[libretro-mesen](http://github.com/libretro/Mesen)|791c5e8153ee6e29691d45b5df2cf1151ff416f9|Oct 21, 2024
 Emulators|[libretro-mesens](http://github.com/libretro/Mesen-S)|d4fca31a6004041d99b02199688f84c009c55967|Oct 21, 2024
-Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|10eb794cfd602eac6f70f01838a420eebd9b8267|Mar 15, 2025
+Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|0.10.5|Mar 09, 2025
 Emulators|[libretro-minivmac](https://github.com/libretro/libretro-minivmac)|6b468a9610aa422fe1b01bf56d73b636976d2b97|Oct 21, 2024
 Emulators|[libretro-mojozork](http://github.com/icculus/mojozork)|5c8d81f8db53c206ace6952472e7a7e68bd8e752|Dec 31, 2023
 Emulators|[libretro-mrboom](https://github.com/Javanaise/mrboom-libretro.git)|d011acfbdb2d93ed38bd684ccfa0db79bda1c932|Oct 21, 2024
