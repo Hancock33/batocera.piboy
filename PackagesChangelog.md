@@ -1,19 +1,23 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulators|[applewin](https://github.com/audetto/AppleWin)|3d838302b6208efd026e07d09240ecfcc4e23d9e|Mar 23, 2025
+Emulators|[applewin](https://github.com/audetto/AppleWin)|8e775ad6486e4f03a0e9bad700af35b31b5291c5|Mar 23, 2025
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|8cdafaa828c86ed60cbbe466b28780fd8451d148|Mar 23, 2025
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|4ce001aef3e3ce3f116cf08d307edaa9569a20f7|Mar 23, 2025
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|ae9023ddf3bc4aa073b11d87a872f562b08fed24|Mar 23, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|ca1819fe850eba142efbbf970061ac40444f2ea2|Mar 23, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-03-23|Mar 23, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.3.20|Mar 23, 2025
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|6f944ab1173eb478f7d83db3c637badef2289aaf|Mar 23, 2025
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|d9eae0e442b9022d351f69c77d7b40a9475bc2be|Mar 23, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|caf96eaccb545de47f2b5b703b95bb6ef32551cc|Mar 23, 2025
+Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45570|Mar 23, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|c25e3e3ea1831c3d6ce413c67f271879d45cc7bf|Mar 23, 2025
+Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.7|Mar 23, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|109fe7038217cf5bcf431fc0b68b135f72b1b5dc|Mar 23, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|3842efc459544f28afdf8934913d5e12e6494bfd|Mar 23, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|ca1e112e586f36b517ece4e3988778ef57b8ec9d|Mar 23, 2025
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|a817a99c9a6c94cd8b0905707f8c056acf775bdf|Mar 23, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|99af19b6fe3428e4c6684656ab9f32c616d8c553|Mar 23, 2025
+Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|a3198975b54f94f23e47502020ce274ffd942bf8|Mar 23, 2025
 Emulators|[libretro-nestopia](http://github.com/libretro/nestopia)|b3eb368603cd519d54bb4886d2934ee4fd188081|Mar 23, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|ca1819fe850eba142efbbf970061ac40444f2ea2|Mar 23, 2025
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|5aa6c536607a5512ce1913acf3be7be8784fd8db|Mar 23, 2025
@@ -23,11 +27,9 @@ Emulators|[flycast](https://github.com/flyinghead/flycast.git)|305cae496fe009a52
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|36a93ee83f5c10c9eca29c2f38bf39c75cda9f8f|Mar 22, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.238|Mar 22, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|40ff182c31084364450df6b54f5a901a31ae7021|Mar 22, 2025
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|1f9ac53c28a12f2ebd33f0b080c342e34a4ed110|Mar 22, 2025
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|90b5bfcc1781d0922e91f246f865ccc18e94f4d8|Mar 22, 2025
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|03cdee457fe2500233d7b7faa6519e65c30e3e42|Mar 22, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|34f253b63141bf5a2c1500150f91e6c510b67fa0|Mar 22, 2025
-Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45566|Mar 22, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu)|9e58abc95184320d830c3c11628b0d9605614abb|Mar 22, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|d3d3fa25f5878df6ef458afd8d59162a549e9d0c|Mar 22, 2025
 Ports|[bstone](http://github.com/bibendovsky/bstone)|11ff54148b62e223d84cd7095cfdee4811e5eeca|Mar 22, 2025
@@ -38,7 +40,6 @@ Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|eafa1a59eda55912cd3a8fbd8cc5fa388e1c400f|Mar 22, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250322|Mar 22, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|e07ccd4e4e6f8614972e2a2d6adb9e7aa6152f61|Mar 22, 2025
-Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|bf7e4e59f0ce63a8750247d6091936ac9dae6f2a|Mar 22, 2025
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|cb3be12eba8721524f65ca470184d56decfb9c5e|Mar 22, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|faa681983280f798ab186c8478058dcb69b9398f|Mar 22, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|faa681983280f798ab186c8478058dcb69b9398f|Mar 22, 2025
@@ -170,7 +171,6 @@ Ports|[rott](http://github.com/fabiangreffrath/taradino)|3ca0a42d62d535a8009e883
 Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.4.309.0|Feb 18, 2025
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|806aa16c7d3c85f6084e6b10299ce4a0da66edac|Feb 16, 2025
 Ports|[fallout2-ce](http://github.com/alexbatalov/fallout2-ce)|e97087b9582f37075db347a89898887320753f8b|Feb 16, 2025
-Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.6|Feb 16, 2025
 Utils|[re2c](http://github.com/skvadrik/re2c)|4.1|Feb 16, 2025
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|0a104c839bba8240e4c6b19e08013c150c31ddcd|Feb 16, 2025
 Libraries|[libgme](http://github.com/libgme/game-music-emu)|0.6.4|Feb 15, 2025
