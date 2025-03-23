@@ -60,7 +60,7 @@ index b1818e87889a..f13e5eecd32a 100644
  
  		DRM_INFO("use_doorbell being set to: [%s]\n",
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 16035ea0932d..a7d91e23bf1b 100644
+index 0badb1937742..11746c5ff28b 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -164,6 +164,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);

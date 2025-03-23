@@ -1,5 +1,5 @@
 diff --git a/drivers/hid/hid-lg.c b/drivers/hid/hid-lg.c
-index 9a2cfa0..b700720 100644
+index 9a2cfa018bd3..b7007200b1f1 100644
 --- a/drivers/hid/hid-lg.c
 +++ b/drivers/hid/hid-lg.c
 @@ -875,8 +875,6 @@ static const struct hid_device_id lg_devices[] = {
