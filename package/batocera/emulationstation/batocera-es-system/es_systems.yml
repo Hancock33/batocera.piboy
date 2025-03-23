@@ -6683,7 +6683,6 @@ j2me:
   extensions:           [jar]
   emulators:
     libretro:
-      squirreljme:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SQUIRRELJME] }
       freej2me:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FREEJ2ME] }
 
 oricatmos:
