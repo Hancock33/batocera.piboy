@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/drm_connector.c b/drivers/gpu/drm/drm_connector.c
-index 5f24d6b41cc6..ca2d07a7c9b9 100644
+index 48b08c9611a7..1aa17db34b80 100644
 --- a/drivers/gpu/drm/drm_connector.c
 +++ b/drivers/gpu/drm/drm_connector.c
 @@ -277,6 +277,7 @@ static int drm_connector_init_only(struct drm_device *dev,

@@ -23,13 +23,13 @@ class Sm64Generator(Generator):
         os.mkdir(us_dir)
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        if (rom.lower()).endswith('e64'):
+        if str(rom).lower().endswith('.e64'):
             os.chdir(rom)
             commandArray = ["sm64.eu", "--gamedir", "./", '--savepath', eu_dir]
-        elif (rom.lower()).endswith('j64'):
+        if str(rom).lower().endswith('.j64'):
             os.chdir(rom)
             commandArray = ["sm64.jp", "--gamedir", "./", '--savepath', jp_dir]
-        elif (rom.lower()).endswith('u64'):
+        if str(rom).lower().endswith('.u64'):
             os.chdir(rom)
             commandArray = ["sm64.us", "--gamedir", "./", '--savepath', us_dir]
 

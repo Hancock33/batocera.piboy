@@ -41,6 +41,7 @@ def writeControllersConfig(
     retroconfig.save('input_menu_toggle',         '"f1"')
     retroconfig.save('input_fps_toggle',          '"f2"')
     retroconfig.save('input_exit_emulator',       '"escape"')
+    retroconfig.save('input_pause_toggle',        '"p"')
     retroconfig.save('input_save_state',          '"f3"')
     retroconfig.save('input_load_state',          '"f4"')
     retroconfig.save('input_state_slot_decrease', '"f5"')
@@ -121,6 +122,12 @@ def generateControllerConfig(
     if system.name == "n64" and 'r2' not in controller.inputs:
         retroarchbtns["pageup"] = "l2"
         retroarchbtns["l2"] = "l"
+
+    if system.name == "dreamcast" and system.config.core == "flycast" and 'r2' not in controller.inputs:
+        retroarchbtns["pageup"] = "l2"
+        retroarchbtns["l2"] = "l"
+        retroarchbtns["pagedown"] = "r2"
+        retroarchbtns["r2"] = "r"
 
     # Fix for reversed inputs in Yabasanshiro core which is unmaintained by retroarch
     if system.config.core == 'yabasanshiro':

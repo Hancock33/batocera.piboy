@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Mar 15, 2025
-DUCKSTATION_VERSION = a1d69982f3dbd9c04ddbda21f2546937607a1246
+# Version: Commits on Mar 23, 2025
+DUCKSTATION_VERSION = ae9023ddf3bc4aa073b11d87a872f562b08fed24
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_DEPENDENCIES = boost cpuinfo ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev libsoundtouch lunasvg sdl3 stenzek-shaderc webp zstd
@@ -42,9 +42,6 @@ endif
 define DUCKSTATION_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/bin/duckstation
 	cp -R $(@D)/buildroot-build/bin $(TARGET_DIR)/usr/bin/duckstation
-
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 define DUCKSTATION_VERSION_DETAILS

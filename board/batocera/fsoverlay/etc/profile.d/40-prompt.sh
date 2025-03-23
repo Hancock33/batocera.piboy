@@ -1,5 +1,5 @@
 #More info contained
-#Usually [root@BATOCERA /current/dir]# 
+#Usually [root@BATOCERA /current/dir]#
 NM="\[\033[0;1;37m\]"
 HI="\[\033[0;37m\]"
 SI="\[\033[0;31m\]"

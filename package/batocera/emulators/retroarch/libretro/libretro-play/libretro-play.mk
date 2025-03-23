@@ -4,11 +4,12 @@
 #
 ################################################################################
 # Version: Commits on Mar 10, 2025
-LIBRETRO_PLAY_VERSION = b15a49e31172f05dfdb1b1a15ea71e8a870c27ae
+LIBRETRO_PLAY_VERSION = 883f29ef19a939d513550008c22f811a95846382
 LIBRETRO_PLAY_SOURCE = play-$(LIBRETRO_PLAY_VERSION)-git4.tar.gz
 LIBRETRO_PLAY_SITE = https://github.com/jpd002/Play-.git
 LIBRETRO_PLAY_SITE_METHOD = git
 LIBRETRO_PLAY_GIT_SUBMODULES = YES
+LIBRETRO_PLAY_SUPPORTS_IN_SOURCE_BUILD = NO
 LIBRETRO_PLAY_LICENSE = BSD
 LIBRETRO_PLAY_DEPENDENCIES = retroarch
 
@@ -34,5 +35,10 @@ ifeq ($(BR2_aarch64),y)
 else ifeq ($(BR2_arm),y)
     LIBRETRO_PLAY_CONF_OPTS += -DTARGET_PLATFORM_UNIX_ARM=YES
 endif
+
+define LIBRETRO_PLAY_INSTALL_TARGET_CMDS
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/buildroot-build/Source/ui_libretro/play_libretro.so $(TARGET_DIR)/usr/lib/libretro/play_libretro.so
+endef
 
 $(eval $(cmake-package))

@@ -53,37 +53,37 @@ zfs*
 nvidia-*"
 
 read -p "Delete RPI Kerenl? (y/n)" yn
-case $yn in 
+case $yn in
 	y )
-        DEL_RPI4=1;;
+		DEL_RPI4=1;;
 	n )
-        DEL_RPI4=0;;
+		DEL_RPI4=0;;
 esac
 
 if [ $DEL_RPI4 = '1' ]; then
-    sudo rm -rf $HOME/build-dir/batocera.rpi4/target/lib/modules/6.*
-    for i in $delkern
-    do
-        echo "Deleting: "${RED}$i${ENDCOLOR}
-        sudo rm -rf $HOME/build-dir/batocera.rpi4/build/$i
-        sudo rm -rf $HOME/build-dir/batocera.aarch32/build/$i
-    done
+	sudo rm -rf $HOME/build-dir/batocera.rpi4/target/lib/modules/6.*
+	for i in $delkern
+	do
+		echo "Deleting: "${RED}$i${ENDCOLOR}
+		sudo rm -rf $HOME/build-dir/batocera.rpi4/build/$i
+		sudo rm -rf $HOME/build-dir/batocera.aarch32/build/$i
+	done
 fi
 
 read -p "Delete X86 Kerenl? (y/n)" yn
-case $yn in 
+case $yn in
 	y )
-        DEL_X86=1;;
+		DEL_X86=1;;
 	n )
-        DEL_X86=0;;
+		DEL_X86=0;;
 esac
 
 if [ $DEL_X86 = '1' ]; then
-    sudo rm -rf $HOME/build-dir/batocera.x86_64/target/lib/modules/6.*
-    for i in $delkern
-    do
-        echo "Deleting: "${RED}$i${ENDCOLOR}
-        sudo rm -rf $HOME/build-dir/batocera.x86_64/build/$i
-        sudo rm -rf $HOME/build-dir/batocera.x86_wow64/build/$i
-    done
+	sudo rm -rf $HOME/build-dir/batocera.x86_64/target/lib/modules/6.*
+	for i in $delkern
+	do
+		echo "Deleting: "${RED}$i${ENDCOLOR}
+		sudo rm -rf $HOME/build-dir/batocera.x86_64/build/$i
+		sudo rm -rf $HOME/build-dir/batocera.x86_wow64/build/$i
+	done
 fi

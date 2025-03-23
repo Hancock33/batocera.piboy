@@ -69,7 +69,7 @@ then
             do
 		RELATIVE_PATH="${FILE#$IN/}"
 		DEST_FILE="$OUT/$RELATIVE_PATH"
-            
+
 		# Check if the source file is newer than the destination file
 		if [ "$FILE" -nt "$DEST_FILE" ]; then
                     echo "Updating $DEST_FILE"

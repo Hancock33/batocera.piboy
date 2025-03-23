@@ -1,5 +1,5 @@
 diff --git a/Oxygen/oxygenengine/source/oxygen/application/EngineMain.cpp b/Oxygen/oxygenengine/source/oxygen/application/EngineMain.cpp
-index 84d43c41..975d0475 100644
+index 029af103..dd7df9f9 100644
 --- a/Oxygen/oxygenengine/source/oxygen/application/EngineMain.cpp
 +++ b/Oxygen/oxygenengine/source/oxygen/application/EngineMain.cpp
 @@ -417,7 +417,7 @@ bool EngineMain::initConfigAndSettings()
@@ -12,7 +12,7 @@ index 84d43c41..975d0475 100644
  	}
  
 diff --git a/Oxygen/oxygenengine/source/oxygen/resources/ResourcesCache.cpp b/Oxygen/oxygenengine/source/oxygen/resources/ResourcesCache.cpp
-index d5a35b16..c800645e 100644
+index d5a35b16..8e69803c 100644
 --- a/Oxygen/oxygenengine/source/oxygen/resources/ResourcesCache.cpp
 +++ b/Oxygen/oxygenengine/source/oxygen/resources/ResourcesCache.cpp
 @@ -63,7 +63,7 @@ bool ResourcesCache::loadRom()

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-02-20 18:14+0000\n"
+"PO-Revision-Date: 2025-03-21 15:30+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -2155,7 +2155,7 @@ msgctxt "game_options"
 msgid "A600 (2MB Chip + 8MB Fast)"
 msgstr "A600 (2MB Chip + 8MB Fast)"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "ABSOLUTE MAUSEINGABE"
@@ -2867,7 +2867,7 @@ msgstr "Alle Randbereiche"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "All Timers"
-msgstr ""
+msgstr "All-Timers"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -3256,7 +3256,7 @@ msgstr "Pfeile 3 Tasten"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "As Host (Default)"
-msgstr ""
+msgstr "Als Host (Standard)"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -3610,7 +3610,7 @@ msgctxt "game_options"
 msgid "BLEND HIGH-RES MODE"
 msgstr "HOCHAUFLÖSENDER MODUS ÜBERBLENDEN"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "BLEND SPRITES (SINGE)"
 msgstr "SPRITES ÜBERBLENDEN (SINGE)"
@@ -3688,7 +3688,7 @@ msgstr "BT601_625/D65 (empfohlen für alle in EUR/AUS entwickelten Spiele)"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Back / Menu"
-msgstr ""
+msgstr "Zurück / Menü"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -5038,7 +5038,7 @@ msgctxt "game_options"
 msgid ""
 "Changes the sleep period accuracy. Some games need this set to improve "
 "performance."
-msgstr ""
+msgstr "Änderung der Genauigkeit des Ruhezustands. Einige Spiele "
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -5662,7 +5662,7 @@ msgstr "Kreuz"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Crouch"
-msgstr ""
+msgstr "Kriechen"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -6300,11 +6300,6 @@ msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
-#. TRANSLATION: wiiu.keys
-msgctxt "keys_files"
-msgid "Display the controller screen"
-msgstr "Controller-Bildschirm anzeigen"
-
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "Display the current frame counter."
@@ -6410,7 +6405,7 @@ msgstr "Lenk Kraft Pro"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Drop item"
-msgstr ""
+msgstr "Gegenstand fallen lassen"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -6722,7 +6717,7 @@ msgstr "EVDEV (Standard)"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "EXPANSION PACK"
-msgstr ""
+msgstr "EXPANSION-PACK"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -7998,7 +7993,7 @@ msgstr "Fast Interpreter (Schnell)"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Fast forward"
-msgstr ""
+msgstr "Vorspulen"
 
 #. TRANSLATION: flycast
 #, c-format
@@ -9061,11 +9056,6 @@ msgctxt "game_options"
 msgid "Graphic Display Controller model."
 msgstr "Grafikdisplay-Controller Modell."
 
-#. TRANSLATION: scummvm.keys
-msgctxt "keys_files"
-msgid "Graphics filtering on/off"
-msgstr "Grafikfilter Ein/Aus"
-
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Gravis GamePad (D-pad + 4 Btns)"
@@ -9196,7 +9186,7 @@ msgctxt "game_options"
 msgid "HID"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
 msgstr "FADENKREUZE DER LIGHTGUNS AUSBLENDEN"
@@ -9354,7 +9344,7 @@ msgstr "Hilfe und Informationen"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Help computer"
-msgstr ""
+msgstr "Hilfs-Computer"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -9386,22 +9376,22 @@ msgctxt "game_options"
 msgid "Hermite (Default)"
 msgstr "Hermite (Standard)"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Hidden"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3, libretro/hatarib
+#. TRANSLATION: hypseus-singe/zmachine, libretro/hatarib
 msgctxt "game_options"
 msgid "Hide"
-msgstr "Verstecken"
+msgstr "Ausblenden"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Hide bezels"
-msgstr ""
+msgstr "Bezels ausblenden"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 msgstr ""
@@ -9410,7 +9400,7 @@ msgstr ""
 #. TRANSLATION: naomigd.flycast.keys
 msgctxt "keys_files"
 msgid "Hide the bezel"
-msgstr "Bezel ausblenden"
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -9649,11 +9639,6 @@ msgctxt "game_options"
 msgid "INVERT AXIS"
 msgstr "ACHSEN INVERTIEREN"
 
-#. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
-msgctxt "game_options"
-msgid "INVERT CONTROLS"
-msgstr ""
-
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
 msgid "INVULNERABILITY MODE"
@@ -9878,7 +9863,7 @@ msgstr "InuYasha Sengoku (Schlacht Fix)"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Inventory"
-msgstr ""
+msgstr "Inventar"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -9888,11 +9873,6 @@ msgid ""
 msgstr ""
 "Umkehrung des Hintergrundglases und des Spielfelds. Nützlich, um das "
 "Hintergrundglas als Hauptbildschirm für andere Emulatoren zu verwenden."
-
-#. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
-msgctxt "game_options"
-msgid "Invert the gamepad right analogue stick's Y axis."
-msgstr ""
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -9994,7 +9974,7 @@ msgctxt "game_options"
 msgid "JOYSTICK SENSITIVITY"
 msgstr "JOYSTICK EMPFINDLICHKEIT"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "JOYSTICK TO CURSOR SENSITIVITY"
 msgstr "JOYSTICK ZU CURSOR EMPFINDLICHKEIT"
@@ -10137,7 +10117,7 @@ msgstr "Juli"
 #. TRANSLATION: omf2097.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
-msgstr ""
+msgstr "Springen"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10345,7 +10325,7 @@ msgctxt "game_options"
 msgid "LCD Ghosting (Fast)"
 msgstr "LCD-Ghosting (Schnell)"
 
-#. TRANSLATION: duckstation, flycast, hypseus-singe/vitaquake3, libretro/beetle-saturn, libretro/fbneo, ...
+#. TRANSLATION: duckstation, flycast, hypseus-singe/zmachine, libretro/beetle-saturn, libretro/fbneo, ...
 msgctxt "game_options"
 msgid "LIGHT GUN"
 msgstr "LIGHTGUN"
@@ -10355,7 +10335,7 @@ msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIR"
 msgstr "LIGHTGUN FADENKREUZ"
 
-#. TRANSLATION: dolphin, hypseus-singe/vitaquake3, rpcs3, shared
+#. TRANSLATION: dolphin, hypseus-singe/zmachine, rpcs3, shared
 msgctxt "game_options"
 msgid "LIGHT GUNS"
 msgstr "LIGHTGUNS"
@@ -10671,12 +10651,12 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look down"
-msgstr ""
+msgstr "Nach unten schauen"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look up"
-msgstr ""
+msgstr "Nach oben schauen"
 
 #. TRANSLATION: amiberry, libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus, ...
 msgctxt "game_options"
@@ -11438,7 +11418,7 @@ msgstr "Stylet-Zeiger bewegen"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move back / down"
-msgstr ""
+msgstr "Zurück / Nach unten bewegen"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11473,7 +11453,7 @@ msgstr "Vorwärts"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move forward / up"
-msgstr ""
+msgstr "Vorwärts / Aufwärts bewegen"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11823,20 +11803,20 @@ msgctxt "game_options"
 msgid "New3D"
 msgstr "New3D"
 
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Next Disc (m3u)"
-msgstr "Nächste Disc (m3u)"
-
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Next disk"
+msgstr "Nächste Disk"
+
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next item"
-msgstr ""
+msgstr "Nächster Gegenstand"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
@@ -11846,7 +11826,7 @@ msgstr "Nächster Slot"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next weapon"
-msgstr ""
+msgstr "Nächste Waffe"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -13162,7 +13142,7 @@ msgstr "Drücken Sie die Y-Taste für 'Ja'."
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Previous item"
-msgstr ""
+msgstr "Vorheriger Gegenstand"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
@@ -13685,7 +13665,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Reset"
-msgstr ""
+msgstr "Reset"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13706,7 +13686,7 @@ msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "Auflösungsmultiplikatoren zur Glättung von Vektoren"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "Die BLENDMODE-Umrisslinie auf Singe-Sprites wiederherstellen."
@@ -13877,7 +13857,7 @@ msgstr "Rennen"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "Run the Unfinished expansion pack."
-msgstr ""
+msgstr "Starte das 'Unfinished-Expansion-Pack'."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14198,7 +14178,7 @@ msgstr "STARTMENÜ ÜBERSPRINGEN"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "SLEEP TIMERS ACCURACY"
-msgstr ""
+msgstr "GENAUIGKEIT DES 'SLEEP-TIMERS'"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -14936,7 +14916,7 @@ msgctxt "game_options"
 msgid "Short visible screen edge (cm)"
 msgstr "Kurzer sichtbarer Bildschirmrand (cm)"
 
-#. TRANSLATION: duckstation, hypseus-singe/vitaquake3, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, ...
+#. TRANSLATION: duckstation, hypseus-singe/zmachine, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, ...
 msgctxt "game_options"
 msgid "Show"
 msgstr "Anzeigen"
@@ -14987,7 +14967,7 @@ msgctxt "game_options"
 msgid "Show/Hide guns borders for specific systems"
 msgstr "Ein-/Ausblenden eines Lightgun-Außenrahmens für bestimmte Systeme"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Shown"
 msgstr ""
@@ -15848,25 +15828,15 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Swap Screen"
+msgid "Swap screen"
 msgstr "Bildschirm tauschen"
-
-#. TRANSLATION: nds.drastic.keys
-msgctxt "keys_files"
-msgid "Swap Screens"
-msgstr "Bildschirme tauschen"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Swap screens"
-msgstr "Bildschirme tauschen"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "Swap the position of the dual displays."
-msgstr "Position der Dual-Displays tauschen."
+msgstr "Die Position der beiden Dual-Displays tauschen."
 
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
@@ -16361,7 +16331,7 @@ msgstr ""
 "Diese Option ermöglicht das Spielen von Xbox Live Arcade-Spielen. Kann zu "
 "Kompatibilitätsproblemen mit Nicht-XBLA-Spielen führen."
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr ""
@@ -16424,16 +16394,6 @@ msgstr ""
 "Zur Verwendung von Cheats oder zur Fehlerbehebung bei Problemen mit dem 16:9 "
 "Seitenverhältnis."
 
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Screen Layout"
-msgstr "Bildschirmlayout umschalten"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Speed Limit"
-msgstr "Geschwindigkeitslimit umschalten"
-
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
@@ -16452,7 +16412,12 @@ msgstr "Umschalten mit Hotkey + D-Pad NACH OBEN oder Scroll Lock im Spiel."
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
-msgstr "Tomy Tutor & Pyuuta Steckmodule"
+msgstr "Tomy Tutor & Pyuuta Cartridges"
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Toogle screen layout"
+msgstr "Bildschirm-Layout umschalten"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -16527,7 +16492,7 @@ msgstr "Chinesisch (Traditionell)"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Translate"
-msgstr ""
+msgstr "Übersetzen"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -17132,7 +17097,7 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Use item"
-msgstr ""
+msgstr "Gegenstand benutzen"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -17270,7 +17235,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Usleep Only"
-msgstr ""
+msgstr "Nur 'Usleep'"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17660,7 +17625,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "WRITE DEPTH BUFFERS"
-msgstr ""
+msgstr "'DEPTH-BUFFERS' SCHREIBEN"
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -17834,7 +17799,7 @@ msgctxt "game_options"
 msgid ""
 "Writes depth buffer values to VM memory. Some games need this to fix broken "
 "graphics."
-msgstr ""
+msgstr "Schreibt die 'Depth-Buffer-Werte' in den VM-Speicher. Einige Spiele "
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -18451,10 +18416,6 @@ msgstr "gelb/blau"
 #~ msgstr "Bei Gameboy-Spielen Farbe hinzufügen."
 
 #~ msgctxt "game_options"
-#~ msgid "Allow mapping Future Pinball with Pad to Keyboard."
-#~ msgstr "Erlaube Zuordnung von Future Pinball mit Pad zur Tastatur."
-
-#~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr ""
 #~ "Erlaubt die Verwendung von Switchres-Profilen, wenn diese vorhanden sind."
@@ -18510,16 +18471,8 @@ msgstr "gelb/blau"
 #~ msgstr "FARBGEBUNG"
 
 #~ msgctxt "game_options"
-#~ msgid "CONTROLLER CONFIGURATION"
-#~ msgstr "CONTROLLER KONFIGURATION"
-
-#~ msgctxt "game_options"
 #~ msgid "Can be used to simulate colors of particular displays."
 #~ msgstr "Kann verwendet werden, um Farben bestimmter Displays zu simulieren."
-
-#~ msgctxt "keys_files"
-#~ msgid "Change Camera Angle"
-#~ msgstr "Kamerawinkel ändern"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18540,10 +18493,6 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "Bevorzugtes Bildseitenverhältnis auswählen."
-
-#~ msgctxt "keys_files"
-#~ msgid "Coin"
-#~ msgstr "Coin"
 
 #~ msgctxt "game_options"
 #~ msgid "Color"
@@ -18675,14 +18624,6 @@ msgstr "gelb/blau"
 #~ "Schärfe von entfernten Texturen wird verbessert, wenn Mip-Mapping "
 #~ "aktiviert ist."
 
-#~ msgctxt "keys_files"
-#~ msgid "Fast Forward"
-#~ msgstr "Vorspulen"
-
-#~ msgctxt "keys_files"
-#~ msgid "FastForward"
-#~ msgstr "Schnelles Vorspulen"
-
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
 #~ msgstr "Für Gyro-aktivierte Spiele (an den linken Analogstick gebunden)"
@@ -18690,10 +18631,6 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to right analog stick)"
 #~ msgstr "Für Gyro-aktivierte Spiele (an den rechten Analogstick gebunden)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Forward Nudge"
-#~ msgstr "Nach vorne schubsen"
 
 #~ msgctxt "game_options"
 #~ msgid "GB COLORIZATION"
@@ -18723,18 +18660,6 @@ msgstr "gelb/blau"
 #~ msgid "Keypad to joyport mappings for 2 players."
 #~ msgstr "Tastatur-zu-Joyport Tastbelegung für 2 Spieler."
 
-#~ msgctxt "keys_files"
-#~ msgid "Left Flipper"
-#~ msgstr "Linker Flipper"
-
-#~ msgctxt "keys_files"
-#~ msgid "Left Magna Save"
-#~ msgstr "Magna-Save links"
-
-#~ msgctxt "keys_files"
-#~ msgid "Left Nudge"
-#~ msgstr "Nach links schubsen"
-
 #~ msgctxt "game_options"
 #~ msgid "Lunar Ignore Brightness Color Fix"
 #~ msgstr "Lunar Ignorieren Helligkeit Farbe Fix"
@@ -18746,10 +18671,6 @@ msgstr "gelb/blau"
 #~ msgstr ""
 #~ "Manuelles Festlegen der Auflösung; Auto ist standardmäßig auf Hoch "
 #~ "eingestellt und schaltet bei Bedarf auf Super-Hoch um."
-
-#~ msgctxt "keys_files"
-#~ msgid "Mech Tilt"
-#~ msgstr "Mech Tilt"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18809,10 +18730,6 @@ msgstr "gelb/blau"
 #~ msgid "Playstation 2 wheel type"
 #~ msgstr "Playstation 2 Lenkradtyp"
 
-#~ msgctxt "keys_files"
-#~ msgid "Plunger"
-#~ msgstr "Plunger"
-
 #~ msgctxt "game_options"
 #~ msgid "Pulse (Default)"
 #~ msgstr "Pulse (Standard)"
@@ -18843,37 +18760,9 @@ msgstr "gelb/blau"
 #~ "Reservierter Bereich innerhalb vom Todbereich um gerade aus zu fahren(in "
 #~ "Grad)"
 
-#~ msgctxt "keys_files"
-#~ msgid "Reset the application"
-#~ msgstr "Zurücksetzen der Anwendung"
-
-#~ msgctxt "keys_files"
-#~ msgid "Reset the table, sometimes required for PinMame"
-#~ msgstr "Setzt den Tisch zurück, manchmal für PinMame erforderlich"
-
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Bildschirmhöhe automatisch skalieren."
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Emulation"
-#~ msgstr "Emulation neustarten"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Spiel neu starten"
-
-#~ msgctxt "keys_files"
-#~ msgid "Right Flipper"
-#~ msgstr "Rechter Flipper"
-
-#~ msgctxt "keys_files"
-#~ msgid "Right Magna Save"
-#~ msgstr "Magna-Save (rechts)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Right Nudge"
-#~ msgstr "Nach rechts schubsen"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"
@@ -18916,10 +18805,6 @@ msgstr "gelb/blau"
 #~ msgstr ""
 #~ "Das Überspringen von Zwischenspeicher-Effekten deaktiviert AUTO "
 #~ "FRAMESKIP, das Rendern erfolgt in Größe der Anzeigeauflösung."
-
-#~ msgctxt "keys_files"
-#~ msgid "Start"
-#~ msgstr "Start"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."

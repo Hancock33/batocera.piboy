@@ -48,7 +48,7 @@ class LibretroGenerator(Generator):
         # f12 for coin : set in libretroMameConfig.py, others in libretroControllers.py
         return {
             "name": "retroarch",
-            "keys": { "exit": ["KEY_LEFTSHIFT", "KEY_ESC"], "menu": ["KEY_LEFTSHIFT", "KEY_F1"], "pause": ["KEY_LEFTSHIFT", "KEY_F1"], "coin": "KEY_F12",
+            "keys": { "exit": ["KEY_LEFTSHIFT", "KEY_ESC"], "menu": ["KEY_LEFTSHIFT", "KEY_F1"], "pause": ["KEY_LEFTSHIFT", "KEY_P"], "coin": "KEY_F12",
                       "save_state": ["KEY_LEFTSHIFT", "KEY_F3"], "restore_state": ["KEY_LEFTSHIFT", "KEY_F4"], "previous_slot": ["KEY_LEFTSHIFT", "KEY_F6"], "next_slot": ["KEY_LEFTSHIFT", "KEY_F5"],
                       "rewind": ["KEY_LEFTSHIFT", "KEY_F11"], "fastforward": ["KEY_LEFTSHIFT", "KEY_F12"], "reset": ["KEY_LEFTSHIFT", "KEY_F10"], "translation": ["KEY_LEFTSHIFT", "KEY_F9"]
                      }
@@ -256,24 +256,6 @@ class LibretroGenerator(Generator):
             retroarchCore = RETROARCH_CORES / f"{system.config.core}_libretro.so"
             commandArray = [RETROARCH_BIN, "-L", retroarchCore, "--config", system.config['configfile']]
 
-        # doom3
-        elif system.name == 'doom3':
-            with rom.open('r') as file:
-                first_line = file.readline().strip()
-            # creating the new 'rom_path' variable by combining the directory path and the first line
-            rom = rom.parent / first_line
-            _logger.debug("New rom path: %s", rom)
-            # choose core based on new rom directory
-            directory_parts = rom.parent.parts
-            if "d3xp" in directory_parts:
-                system.config['core'] = "boom3_xp"
-            retroarchCore = RETROARCH_CORES / f"{system.config.core}_libretro.so"
-            commandArray = [RETROARCH_BIN, "-L", retroarchCore, "--config", system.config['configfile']]
-
-        # quake 3
-        if system.name == 'quake3' and system.config['core'] == "vitaquake3":
-            rom = '/userdata/roms/ports/quake3/baseq3/pak0.pk3'
-
         # super mario wars - verify assets from Content Downloader
         elif system.name == 'superbroswar':
             romdir = rom.absolute().parent
@@ -429,7 +411,7 @@ def getGFXBackend(system: Emulator) -> str:
             core = system.config.core
             if backend == "gl" and core in [ 'kronos', 'citra', 'mupen64plus-next', 'melonds', 'beetle-psx-hw' ]:
                 backend = "glcore"
-            if backend == "glcore" and core in [ 'parallel_n64', 'yabasanshiro', 'boom3' ]:
+            if backend == "glcore" and core in [ 'parallel_n64', 'yabasanshiro' ]:
                 backend = "gl"
 
         return backend

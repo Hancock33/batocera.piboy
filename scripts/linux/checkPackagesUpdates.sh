@@ -26,7 +26,6 @@ PACKAGES_LIBRETRO="libretro-81
                    libretro-beetle-wswan
                    libretro-blastem
                    libretro-bluemsx
-                   libretro-boom3
                    libretro-bsnes
                    libretro-bsnes-hd
                    libretro-cap32

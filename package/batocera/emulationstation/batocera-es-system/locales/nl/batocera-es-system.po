@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2025-02-02 15:56+0000\n"
+"PO-Revision-Date: 2025-03-21 21:23+0000\n"
 "Last-Translator: THa_MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl-NL\n"
@@ -1338,12 +1338,12 @@ msgstr "386DX, 33MHz (7800 cps)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "386_prefetch"
-msgstr ""
+msgstr "386_prefetch"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "386_slow"
-msgstr ""
+msgstr "396_traag"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -1488,7 +1488,7 @@ msgstr "486DX2, 66MHz (26800 cps)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "486_slow"
-msgstr ""
+msgstr "486_traag"
 
 #. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, xenia, xenia-canary
 msgctxt "game_options"
@@ -2155,7 +2155,7 @@ msgctxt "game_options"
 msgid "A600 (2MB Chip + 8MB Fast)"
 msgstr "A600 (2MB Chip + 8MB Snel)"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "ABSOLUTE MOUSE INVOER"
@@ -2353,12 +2353,12 @@ msgstr "APF M-1000 cartridges"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS-BIOS.ROM"
-msgstr ""
+msgstr "APPLE2GS-BIOS.ROM"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS.ROM"
-msgstr ""
+msgstr "APPLE2GS.ROM"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -2493,7 +2493,7 @@ msgstr "AUDIOVOLUME VERSTERKING"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "AUTO"
-msgstr ""
+msgstr "AUTO"
 
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
@@ -2867,7 +2867,7 @@ msgstr "Alle Randen"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "All Timers"
-msgstr ""
+msgstr "Alle timers"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -2978,7 +2978,7 @@ msgstr "Amerikaans-Engels"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Amount of instructions DOSBox tries to emulate"
-msgstr ""
+msgstr "Aantal instructies dat DOSBox probeert te emuleren"
 
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
@@ -3256,7 +3256,7 @@ msgstr "Arrows 3knops"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "As Host (Default)"
-msgstr ""
+msgstr "Als host (standaard)"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -3611,7 +3611,7 @@ msgctxt "game_options"
 msgid "BLEND HIGH-RES MODE"
 msgstr "BLEND HOGE-RESOLUTIE MODUS"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "BLEND SPRITES (SINGE)"
 msgstr "BLEND SPRITES (SINGE)"
@@ -3690,7 +3690,7 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Back / Menu"
-msgstr ""
+msgstr "Terug / Menu"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -4569,12 +4569,12 @@ msgstr "CPU CORE METHODE"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU CYCLES"
-msgstr ""
+msgstr "CPU CYCLES"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Core used in emulation"
-msgstr ""
+msgstr "CPU-kern die in emulatie wordt gebruikt"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -4609,7 +4609,7 @@ msgstr "CPU TYPE"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Type used in emulation"
-msgstr ""
+msgstr "CPU-type dat in emulatie wordt gebruikt"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -5035,6 +5035,8 @@ msgid ""
 "Changes the sleep period accuracy. Some games need this set to improve "
 "performance."
 msgstr ""
+"Wijzigt de nauwkeurigheid van de slaapperiode. Sommige spellen hebben deze "
+"set nodig om de prestaties te verbeteren."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -5247,7 +5249,7 @@ msgstr ""
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "Choose which BIOS file for GSplus to boot with."
-msgstr ""
+msgstr "Kies met welk BIOS-bestand GSplus moet opstarten."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -5659,7 +5661,7 @@ msgstr "Kruis"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Crouch"
-msgstr ""
+msgstr "Kruip"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -6296,11 +6298,6 @@ msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
-#. TRANSLATION: wiiu.keys
-msgctxt "keys_files"
-msgid "Display the controller screen"
-msgstr "Laat het controller scherm zien"
-
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "Display the current frame counter."
@@ -6407,7 +6404,7 @@ msgstr "Driving Force Pro"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Drop item"
-msgstr ""
+msgstr "Laat het item vallen"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -6464,7 +6461,7 @@ msgstr "Nederlands (nl)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Dynamic"
-msgstr ""
+msgstr "Dynamisch"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -6719,7 +6716,7 @@ msgstr "EVDEV (Standaard)"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "EXPANSION PACK"
-msgstr ""
+msgstr "UITBREIDINGSPAKKET"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -7616,7 +7613,7 @@ msgstr "Verlaat emulator"
 #. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Exit the emulator"
-msgstr "Verlaat de emulator"
+msgstr ""
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -7863,7 +7860,7 @@ msgstr ""
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "FRAMERATE"
-msgstr "FRAMERATE"
+msgstr ""
 
 #. TRANSLATION: flycast, libretro/desmume, libretro/fbneo, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
@@ -7986,7 +7983,7 @@ msgstr "Snelle Interpreter"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Fast forward"
-msgstr ""
+msgstr "Snel vooruit"
 
 #. TRANSLATION: flycast
 #, c-format
@@ -8828,7 +8825,7 @@ msgstr "GRAFISCHE RENDERER"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "GSPLUS BIOS FILENAME"
-msgstr ""
+msgstr "GSPLUS BIOS-BESTANDSNAAM"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9043,11 +9040,6 @@ msgctxt "game_options"
 msgid "Graphic Display Controller model."
 msgstr "Grafisch Beeldscherm Controller model."
 
-#. TRANSLATION: scummvm.keys
-msgctxt "keys_files"
-msgid "Graphics filtering on/off"
-msgstr "Grafische filtering aan/uit"
-
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Gravis GamePad (D-pad + 4 Btns)"
@@ -9178,7 +9170,7 @@ msgctxt "game_options"
 msgid "HID"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
 msgstr "VERBERG LIGHT GUN DRAADKRUIS"
@@ -9336,7 +9328,7 @@ msgstr "Hulp en informatie"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Help computer"
-msgstr ""
+msgstr "Help computer"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -9367,12 +9359,12 @@ msgctxt "game_options"
 msgid "Hermite (Default)"
 msgstr "Hermite (Standaard)"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Hidden"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3, libretro/hatarib
+#. TRANSLATION: hypseus-singe/zmachine, libretro/hatarib
 msgctxt "game_options"
 msgid "Hide"
 msgstr "Verbergen"
@@ -9380,9 +9372,9 @@ msgstr "Verbergen"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Hide bezels"
-msgstr ""
+msgstr "Verberg randen"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 msgstr ""
@@ -9391,7 +9383,7 @@ msgstr ""
 #. TRANSLATION: naomigd.flycast.keys
 msgctxt "keys_files"
 msgid "Hide the bezel"
-msgstr "Verberg de omlijsting"
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -9630,11 +9622,6 @@ msgctxt "game_options"
 msgid "INVERT AXIS"
 msgstr "AS OMKEREN"
 
-#. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
-msgctxt "game_options"
-msgid "INVERT CONTROLS"
-msgstr ""
-
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
 msgid "INVULNERABILITY MODE"
@@ -9856,7 +9843,7 @@ msgstr "InuYasha Sengoku Battle Fix"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Inventory"
-msgstr ""
+msgstr "Inventaris"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -9866,11 +9853,6 @@ msgid ""
 msgstr ""
 "Draai de kopruit en het speelveld om. Handig om de Backglass als hoofdscherm "
 "voor andere emulators te gebruiken."
-
-#. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
-msgctxt "game_options"
-msgid "Invert the gamepad right analogue stick's Y axis."
-msgstr ""
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -9972,7 +9954,7 @@ msgctxt "game_options"
 msgid "JOYSTICK SENSITIVITY"
 msgstr "JOYSTICK GEVOELIGHEID"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "JOYSTICK TO CURSOR SENSITIVITY"
 msgstr "JOYSTICK NAAR CURSOR GEVOELIGHEID"
@@ -10115,7 +10097,7 @@ msgstr "Juli"
 #. TRANSLATION: omf2097.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
-msgstr ""
+msgstr "Spring"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10321,7 +10303,7 @@ msgctxt "game_options"
 msgid "LCD Ghosting (Fast)"
 msgstr "LCD Ghosting (Snel)"
 
-#. TRANSLATION: duckstation, flycast, hypseus-singe/vitaquake3, libretro/beetle-saturn, libretro/fbneo, ...
+#. TRANSLATION: duckstation, flycast, hypseus-singe/zmachine, libretro/beetle-saturn, libretro/fbneo, ...
 msgctxt "game_options"
 msgid "LIGHT GUN"
 msgstr "LIGHT GUN"
@@ -10331,7 +10313,7 @@ msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIR"
 msgstr "LIGHT GUN DRAADKRUIS"
 
-#. TRANSLATION: dolphin, hypseus-singe/vitaquake3, rpcs3, shared
+#. TRANSLATION: dolphin, hypseus-singe/zmachine, rpcs3, shared
 msgctxt "game_options"
 msgid "LIGHT GUNS"
 msgstr "LIGHTGUNS"
@@ -10647,12 +10629,12 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look down"
-msgstr ""
+msgstr "Kijk omlaag"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look up"
-msgstr ""
+msgstr "Kijk omhoog"
 
 #. TRANSLATION: amiberry, libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus, ...
 msgctxt "game_options"
@@ -11043,7 +11025,7 @@ msgstr "Match Venster"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Max"
-msgstr ""
+msgstr "Max"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -11405,7 +11387,7 @@ msgstr "Verplaats Stylet Pointer"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move back / down"
-msgstr ""
+msgstr "Ga terug / omlaag"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11440,7 +11422,7 @@ msgstr "Ga naar voren"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move forward / up"
-msgstr ""
+msgstr "Ga vooruit / omhoog"
 
 #. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
@@ -11790,30 +11772,30 @@ msgctxt "game_options"
 msgid "New3D"
 msgstr "Nieuw3D"
 
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Next Disc (m3u)"
-msgstr "Volgende Disk (m3u)"
-
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Next disk"
+msgstr "Volgende schijf"
+
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next item"
-msgstr ""
+msgstr "Volgend item"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Next slot"
-msgstr ""
+msgstr "Volgend slot"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next weapon"
-msgstr ""
+msgstr "Volgend wapen"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -13123,12 +13105,12 @@ msgstr "Druk op de Y-toets voor 'Ja'"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Previous item"
-msgstr ""
+msgstr "Vorig item"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Previous slot"
-msgstr ""
+msgstr "Vorig slot"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -13398,17 +13380,17 @@ msgstr "ROM (Slot 4)"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.00"
-msgstr ""
+msgstr "ROM.00"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.03 (default)"
-msgstr ""
+msgstr "ROM.03 (standaard)"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM1"
-msgstr ""
+msgstr "ROM1"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -13645,7 +13627,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Reset"
-msgstr ""
+msgstr "Reset"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13666,7 +13648,7 @@ msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "Resolutie multipliers om vectors glad te maken"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "Herstel BLENDMODUS uitlijning op Singe sprites."
@@ -13674,7 +13656,7 @@ msgstr "Herstel BLENDMODUS uitlijning op Singe sprites."
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Restore state"
-msgstr ""
+msgstr "Staat herstellen"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
@@ -13835,7 +13817,7 @@ msgstr "Rennen"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "Run the Unfinished expansion pack."
-msgstr ""
+msgstr "Voer het uitbreidingspakket Unfinished uit."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14155,7 +14137,7 @@ msgstr "START MENU OVERSLAAN"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "SLEEP TIMERS ACCURACY"
-msgstr ""
+msgstr "NAUWKEURIGHEID VAN SLAAPTIMERS"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -14445,7 +14427,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Save state"
-msgstr ""
+msgstr "Staat opslaan"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -14888,7 +14870,7 @@ msgctxt "game_options"
 msgid "Short visible screen edge (cm)"
 msgstr "Korte zichtbare schermrand (cm)"
 
-#. TRANSLATION: duckstation, hypseus-singe/vitaquake3, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, ...
+#. TRANSLATION: duckstation, hypseus-singe/zmachine, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, ...
 msgctxt "game_options"
 msgid "Show"
 msgstr "Weergeven"
@@ -14938,7 +14920,7 @@ msgctxt "game_options"
 msgid "Show/Hide guns borders for specific systems"
 msgstr "Toon/verberg wapenranden voor specifieke systemen"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Shown"
 msgstr ""
@@ -15796,20 +15778,10 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Swap Screen"
-msgstr "Verwissel scherm"
-
-#. TRANSLATION: nds.drastic.keys
-msgctxt "keys_files"
-msgid "Swap Screens"
-msgstr "Verwissel Schermen"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Swap screens"
-msgstr "Verwissel schermen"
+msgid "Swap screen"
+msgstr "Wissel scherm"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -16307,7 +16279,7 @@ msgstr ""
 "Deze optie maakt het mogelijk om Xbox Live Arcade-games te spelen. Kan "
 "compatibiliteitsproblemen veroorzaken met niet-XBLA-games."
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr ""
@@ -16368,16 +16340,6 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "Om spelcheats of 16:9 Aspect Ratio Fix-codes te gebruiken."
 
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Screen Layout"
-msgstr "Schakel Scherm Lay-out in"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Speed Limit"
-msgstr "Schakel Snelheidslimiet in"
-
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
@@ -16397,6 +16359,11 @@ msgstr "Schakel met hotkey + D-pad omhoog of Scroll Lock in het spel."
 msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Tomy Tutor & Pyuuta cartridge"
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Toogle screen layout"
+msgstr "Schermindeling wisselen"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -16471,7 +16438,7 @@ msgstr "Traditioneel Chinees"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Translate"
-msgstr ""
+msgstr "Vertaal"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -17071,7 +17038,7 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Use item"
-msgstr ""
+msgstr "Gebruik item"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -17208,7 +17175,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Usleep Only"
-msgstr ""
+msgstr "Alleen Usleep"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17598,7 +17565,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "WRITE DEPTH BUFFERS"
-msgstr ""
+msgstr "SCHRIJF DIEPTEBUFFERS"
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -17773,6 +17740,8 @@ msgid ""
 "Writes depth buffer values to VM memory. Some games need this to fix broken "
 "graphics."
 msgstr ""
+"Schrijft dieptebufferwaarden naar VM-geheugen. Sommige spellen hebben dit "
+"nodig om kapotte graphics te repareren."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -18187,7 +18156,7 @@ msgstr "originele gameboy"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "pentium_slow"
-msgstr ""
+msgstr "pentium_traag"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -18212,12 +18181,12 @@ msgstr "snel wisselen"
 #. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "quickload"
-msgstr "snellaad"
+msgstr ""
 
 #. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "quicksave"
-msgstr "snel opslaan"
+msgstr ""
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
@@ -18252,7 +18221,7 @@ msgstr "scanlines"
 #. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "screenshot"
-msgstr "screenshot"
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
@@ -18355,36 +18324,12 @@ msgid "yellow/blue"
 msgstr "geel/blauw"
 
 #~ msgctxt "game_options"
-#~ msgid "119fps"
-#~ msgstr "119fps"
-
-#~ msgctxt "game_options"
-#~ msgid "240fps"
-#~ msgstr "240fps"
-
-#~ msgctxt "game_options"
-#~ msgid "244fps"
-#~ msgstr "244fps"
-
-#~ msgctxt "game_options"
 #~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
 #~ msgstr "2P CONTROLLER INDELING (KEYRAH)"
 
 #~ msgctxt "game_options"
 #~ msgid "5 Sideway Wiimote"
 #~ msgstr "5 Sideway Wiimote"
-
-#~ msgctxt "game_options"
-#~ msgid "60fps (Default)"
-#~ msgstr "60fps (Standaard)"
-
-#~ msgctxt "game_options"
-#~ msgid "70fps"
-#~ msgstr "70fps"
-
-#~ msgctxt "game_options"
-#~ msgid "72fps"
-#~ msgstr "72fps"
 
 #~ msgctxt "game_options"
 #~ msgid "ANALOG DEADZONE"
@@ -18409,10 +18354,6 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "Add color to Game Boy games."
 #~ msgstr "Voeg kleuren toe aan Game Boy spellen."
-
-#~ msgctxt "game_options"
-#~ msgid "Allow mapping Future Pinball with Pad to Keyboard."
-#~ msgstr "Sta het mappen van Future Pinball met Padtokey toe."
 
 #~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
@@ -18447,10 +18388,6 @@ msgstr "geel/blauw"
 #~ msgid "BGFX for post-processing, accel/opengl for raw image."
 #~ msgstr "BGFX voor post-processing, accel/opengl voor raw image."
 
-#~ msgctxt "keys_files"
-#~ msgid "Bring up menu"
-#~ msgstr "Toon menu"
-
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"
 #~ msgstr "COLOR COMPUTER MODEL"
@@ -18472,17 +18409,9 @@ msgstr "geel/blauw"
 #~ msgstr "COLORISATIE"
 
 #~ msgctxt "game_options"
-#~ msgid "CONTROLLER CONFIGURATION"
-#~ msgstr "CONFIGURATIE VAN DE CONTROLLER"
-
-#~ msgctxt "game_options"
 #~ msgid "Can be used to simulate colors of particular displays."
 #~ msgstr ""
 #~ "Kan gebruikt worden om kleuren van specifieke beeldschermen te simuleren."
-
-#~ msgctxt "keys_files"
-#~ msgid "Change Camera Angle"
-#~ msgstr "Verander de camerahoek"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18503,10 +18432,6 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "Kies de gewenste beeldverhouding.."
-
-#~ msgctxt "keys_files"
-#~ msgid "Coin"
-#~ msgstr "Coin"
 
 #~ msgctxt "game_options"
 #~ msgid "Color"
@@ -18536,18 +18461,10 @@ msgstr "geel/blauw"
 #~ msgid "Composite (color bleeding + artifacts)"
 #~ msgstr "Composiet (kleur bleeding + artifacten)"
 
-#~ msgctxt "keys_files"
-#~ msgid "Configuration menu"
-#~ msgstr "Configuratiemenu"
-
 #~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr ""
 #~ "Het configureren van controllers in GZDoom kan problemen veroorzaken."
-
-#~ msgctxt "keys_files"
-#~ msgid "Continue/Pause emulation"
-#~ msgstr "Doorgaan/pauzeren emulatie"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18643,50 +18560,6 @@ msgstr "geel/blauw"
 #~ "Verbetering. Verbetert de duidelijkheid van texturen op afstand wanneer "
 #~ "mip-mapping is ingeschakeld."
 
-#~ msgctxt "keys_files"
-#~ msgid "Exit Dolphin"
-#~ msgstr "Verlaat Dolphin"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit Dosbox-X"
-#~ msgstr "Sluit Dosbox-X"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit Drastic"
-#~ msgstr "Verlaat Drastic"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit Duckstation"
-#~ msgstr "Verlaat Duckstation"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit Game"
-#~ msgstr "Sluit het spel af"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit Steam"
-#~ msgstr "Sluit Steam af"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit emulator using SDL"
-#~ msgstr "Sluit de emulator af met SDL"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit game"
-#~ msgstr "Stop spel"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit running Flatpak"
-#~ msgstr "Stop het draaien van Flatpak"
-
-#~ msgctxt "keys_files"
-#~ msgid "Fast Forward"
-#~ msgstr "Vooruitspoelen"
-
-#~ msgctxt "keys_files"
-#~ msgid "FastForward"
-#~ msgstr "Vooruitspoelen"
-
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
 #~ msgstr "Voor Gyro-enabled spellen (gebonden aan de linker analoge stick)"
@@ -18694,10 +18567,6 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to right analog stick)"
 #~ msgstr "Voor Gyro-enabled spellen (gebonden aan de rechter analoge stick)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Forward Nudge"
-#~ msgstr "Duw voorwaarts"
 
 #~ msgctxt "game_options"
 #~ msgid "GB COLORIZATION"
@@ -18727,26 +18596,6 @@ msgstr "geel/blauw"
 #~ msgid "Keypad to joyport mappings for 2 players."
 #~ msgstr "Keypad naar joyport indelingen voor 2 spelers."
 
-#~ msgctxt "keys_files"
-#~ msgid "Left Flipper"
-#~ msgstr "Linker Flipper"
-
-#~ msgctxt "keys_files"
-#~ msgid "Left Magna Save"
-#~ msgstr "Links Magna Save"
-
-#~ msgctxt "keys_files"
-#~ msgid "Left Nudge"
-#~ msgstr "Duw Links"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State"
-#~ msgstr "Laad Staat"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "Laad staat Slot 1"
-
 #~ msgctxt "game_options"
 #~ msgid "Lunar Ignore Brightness Color Fix"
 #~ msgstr "Lunar Negeer Helderheid Kleuren Fix"
@@ -18759,20 +18608,12 @@ msgstr "geel/blauw"
 #~ "Definieer handmatig welke resolutie te gebruiken.&#x0a;Auto standaarden "
 #~ "naar Hoog en wisselt naar Super-Hoog wanneer nodig."
 
-#~ msgctxt "keys_files"
-#~ msgid "Mech Tilt"
-#~ msgstr "Mechanische Tilt"
-
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Most games already have an internal framelimit. Minor performance cost."
 #~ msgstr ""
 #~ "De meeste games hebben al een interne framelimiet. Kleine belasting op de "
 #~ "prestatie."
-
-#~ msgctxt "game_options"
-#~ msgid "N64 (Limited Hotkeys)"
-#~ msgstr "N64 (Limited Hotkeys)"
 
 #~ msgctxt "game_options"
 #~ msgid "Native Vulkan"
@@ -18782,22 +18623,6 @@ msgstr "geel/blauw"
 #~ msgid "Needed by some games that use special unicode characters."
 #~ msgstr ""
 #~ "Benodigd bij sommige spellen die speciale unicode characters gebruiken."
-
-#~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Open het menu van Dolphin-triforce"
-
-#~ msgctxt "keys_files"
-#~ msgid "Open DuckStation Quick Menu"
-#~ msgstr "Open het DuckStation snelmenu"
-
-#~ msgctxt "keys_files"
-#~ msgid "Open Load Menu"
-#~ msgstr "Open Laad Menu"
-
-#~ msgctxt "keys_files"
-#~ msgid "Open Save Menu"
-#~ msgstr "Open Opslaan Menu"
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (x86 only)"
@@ -18819,10 +18644,6 @@ msgstr "geel/blauw"
 #~ msgid "Passes all physical keyboard events for Pad2Key."
 #~ msgstr "Laat alle fysieke keyboard gebeurtenissen door naar Pad2Key."
 
-#~ msgctxt "keys_files"
-#~ msgid "Pause / Menu"
-#~ msgstr "Pauze / Menu"
-
 #~ msgctxt "game_options"
 #~ msgid "Per Pixel"
 #~ msgstr "Per Pixel"
@@ -18843,41 +18664,9 @@ msgstr "geel/blauw"
 #~ msgid "Playstation 2 wheel type"
 #~ msgstr "Playstation 2 stuurwiel type"
 
-#~ msgctxt "keys_files"
-#~ msgid "Plunger"
-#~ msgstr "Trekker"
-
 #~ msgctxt "game_options"
 #~ msgid "Pulse (Default)"
 #~ msgstr "Puls (Standaard)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Quick Load"
-#~ msgstr "Snel Laden"
-
-#~ msgctxt "keys_files"
-#~ msgid "Quick Save"
-#~ msgstr "Snel Opslaan"
-
-#~ msgctxt "keys_files"
-#~ msgid "Quick load"
-#~ msgstr "Snel laden"
-
-#~ msgctxt "keys_files"
-#~ msgid "Quick save"
-#~ msgstr "Snel opslaan"
-
-#~ msgctxt "keys_files"
-#~ msgid "QuickMenu"
-#~ msgstr "SnelMenu"
-
-#~ msgctxt "keys_files"
-#~ msgid "Quit the application"
-#~ msgstr "Stop de applicatie"
-
-#~ msgctxt "keys_files"
-#~ msgid "Quits the current level"
-#~ msgstr "Sluit het huidige niveau af"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18903,49 +18692,13 @@ msgstr "geel/blauw"
 #~ "Reserveer een niet-deadzone in het midden van het wiel om rechtdoor te "
 #~ "gaan (in graden)"
 
-#~ msgctxt "keys_files"
-#~ msgid "Reset the application"
-#~ msgstr "Reset de applicatie"
-
-#~ msgctxt "keys_files"
-#~ msgid "Reset the table, sometimes required for PinMame"
-#~ msgstr "Reset de tabel, soms vereist voor PinMame"
-
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Automatisch scherm hoogte aanpassen."
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Emulation"
-#~ msgstr "Herstart Emulatie"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Herstart Spel"
-
-#~ msgctxt "keys_files"
-#~ msgid "Right Flipper"
-#~ msgstr "Rechter Flipper"
-
-#~ msgctxt "keys_files"
-#~ msgid "Right Magna Save"
-#~ msgstr "Rechts Magna Save"
-
-#~ msgctxt "keys_files"
-#~ msgid "Right Nudge"
-#~ msgstr "Duw Rechts"
-
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"
 #~ msgstr "SVideo (alleen kleur bleeding)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State"
-#~ msgstr "Sla Staat Op"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "Save State Slot 1"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18958,14 +18711,6 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "Select the model of Color Computer to emulate"
 #~ msgstr "Selecteer het model kleurencomputer dat u wilt emuleren"
-
-#~ msgctxt "keys_files"
-#~ msgid "Service menu"
-#~ msgstr "Servicemenu"
-
-#~ msgctxt "game_options"
-#~ msgid "Set desired framerate."
-#~ msgstr "Stel de gewenste framerate in."
 
 #~ msgctxt "game_options"
 #~ msgid "Set the color palette to use."
@@ -18981,10 +18726,6 @@ msgstr "geel/blauw"
 #~ "Stel de gewenste maximale verversingssnelheid in wanneer V-SYNC is "
 #~ "uitgeschakeld."
 
-#~ msgctxt "keys_files"
-#~ msgid "Settings GUI"
-#~ msgstr "Settings van de Grafische User Interface"
-
 #~ msgctxt "game_options"
 #~ msgid "Simulate LCD color inaccuracy."
 #~ msgstr "Simuleer LCD kleur onnauwkeurigheid."
@@ -18996,18 +18737,6 @@ msgstr "geel/blauw"
 #~ msgstr ""
 #~ "Skip buffer schakelt auto frameskip uit en rendert op beeldscherm output "
 #~ "resolutie."
-
-#~ msgctxt "keys_files"
-#~ msgid "Slot +"
-#~ msgstr "Slot +"
-
-#~ msgctxt "keys_files"
-#~ msgid "Slot -"
-#~ msgstr "Slot -"
-
-#~ msgctxt "keys_files"
-#~ msgid "Start"
-#~ msgstr "Start"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
@@ -19034,10 +18763,6 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "TEAM KLEUR MODUS"
-
-#~ msgctxt "keys_files"
-#~ msgid "Take a screenshot"
-#~ msgstr "Maak een screenshot"
 
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
@@ -19103,10 +18828,6 @@ msgstr "geel/blauw"
 #~ msgid "WiiMote Sideways"
 #~ msgstr "WiiMote Zijwaarts"
 
-#~ msgctxt "keys_files"
-#~ msgid "exit game"
-#~ msgstr "Verlaat het spel"
-
 #~ msgctxt "game_options"
 #~ msgid "external (variable fps)"
 #~ msgstr "extern (variabel fps)"
@@ -19118,14 +18839,6 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "internal (variable fps)"
 #~ msgstr "intern (variabel fps)"
-
-#~ msgctxt "keys_files"
-#~ msgid "quick load"
-#~ msgstr "snel laden"
-
-#~ msgctxt "keys_files"
-#~ msgid "quick save"
-#~ msgstr "snel opslaan"
 
 #~ msgctxt "game_options"
 #~ msgid "weird colors"

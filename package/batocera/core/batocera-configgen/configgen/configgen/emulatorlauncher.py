@@ -21,10 +21,10 @@ from sys import exit
 from typing import TYPE_CHECKING
 
 from . import controllersConfig as controllers
-from .batoceraPaths import SAVES, SYSTEM_SCRIPTS, USER_SCRIPTS
+from .batoceraPaths import BATOCERA_SHARE_DIR, SAVES, SYSTEM_SCRIPTS, USER_SCRIPTS
 from .controller import Controller
 from .Emulator import Emulator
-from .exceptions import BaseBatoceraException, BatoceraException, UnexpectedEmulatorExit
+from .exceptions import BadCommandLineArguments, BaseBatoceraException, BatoceraException, UnexpectedEmulatorExit
 from .generators import get_generator
 from .gun import Gun
 from .utils import bezels as bezelsUtil, videoMode, wheelsUtils
@@ -84,7 +84,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
 
         resolutionChanged = False
         mouseChanged = False
-        exitCode = -1
+        exitCode = 0
         try:
             # lower the resolution if mode is auto
             newsystemMode = systemMode  # newsystemMode is the mode after minmax (ie in 1K if tv was in 4K), systemmode is the mode before (ie in es)
@@ -448,10 +448,10 @@ def runCommand(command: Command) -> int:
     _logger.debug("env: %s", command.env)
 
     if not command.array:
-        return -1
+        raise BadCommandLineArguments
 
     proc = subprocess.Popen(command.array, env=command.env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    exitcode = -1
+    exitcode = 0
 
     try:
         out, err = proc.communicate()
@@ -481,6 +481,12 @@ def launch() -> None:
         global proc
         proc = None
         signal.signal(signal.SIGINT, signal_handler)
+
+        batocera_version = 'UNKNOWN'
+        if (version_file := BATOCERA_SHARE_DIR / 'batocera.version').exists():
+            batocera_version = version_file.read_text().strip()
+        _logger.info('Batocera version: %s', batocera_version)
+
         parser = argparse.ArgumentParser(description='emulator-launcher script')
 
         maxnbplayers = 8
@@ -513,7 +519,7 @@ def launch() -> None:
         parser.add_argument("-spinner",        help="configure spinner",           action="store_true")
 
         args = parser.parse_args()
-        exitcode = -1
+        exitcode = 0
         try:
             exitcode = main(args, maxnbplayers)
         except BaseBatoceraException as e:
@@ -528,6 +534,19 @@ def launch() -> None:
         profiler.stop()
 
         time.sleep(1) # this seems to be required so that the gpu memory is restituated and available for es
+
+        if exitcode < 0:
+            signal_number = exitcode * -1
+
+            if signal_number < signal.NSIG:
+                signal_description = signal.strsignal(signal_number)
+
+                if signal_description and ':' not in signal_description:
+                    signal_description = f'{signal_description}: {signal_number}'
+
+                _logger.debug("Emulator terminated by signal (%s)", signal_description)
+                exitcode = 0
+
         _logger.debug("Exiting configgen with status %s", exitcode)
 
         if not endSystem == "settings":

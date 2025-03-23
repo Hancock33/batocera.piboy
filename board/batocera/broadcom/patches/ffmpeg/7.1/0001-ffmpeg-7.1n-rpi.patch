@@ -19597,7 +19597,7 @@ index 0000000000..d8126676ee
 +#endif // AVUTIL_ARM_SAND_NEON_H
 +
 diff --git a/libavutil/frame.c b/libavutil/frame.c
-index f0a0dba018..cc14af82d6 100644
+index f0a0dba018..38458696c6 100644
 --- a/libavutil/frame.c
 +++ b/libavutil/frame.c
 @@ -16,6 +16,8 @@
@@ -19619,14 +19619,13 @@ index f0a0dba018..cc14af82d6 100644
  
  static const AVSideDataDescriptor sd_props[] = {
      [AV_FRAME_DATA_PANSCAN]                     = { "AVPanScan" },
-@@ -1077,6 +1082,13 @@ int av_frame_apply_cropping(AVFrame *frame, int flags)
+@@ -1077,6 +1082,12 @@ int av_frame_apply_cropping(AVFrame *frame, int flags)
          (frame->crop_top + frame->crop_bottom) >= frame->height)
          return AVERROR(ERANGE);
  
 +#if CONFIG_SAND
 +    // Sand cannot be cropped - do not try
-+    // If it might be encapsulated in DRM_PRIME don't crop that either
-+    if (av_rpi_is_sand_format(frame->format) || frame->format == AV_PIX_FMT_DRM_PRIME)
++    if (av_rpi_is_sand_format(frame->format))
 +        return 0;
 +#endif
 +

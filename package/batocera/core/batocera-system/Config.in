@@ -229,8 +229,9 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_HOST_PYTHON3
     select BR2_PACKAGE_HOST_PYTHON3_SSL
     select BR2_PACKAGE_PYTHON3
-    select BR2_PACKAGE_PYTHON3_SSL
     select BR2_PACKAGE_PYTHON3_PYOPENSSL
+    select BR2_PACKAGE_PYTHON3_READLINE
+    select BR2_PACKAGE_PYTHON3_SSL
 
     select BR2_PACKAGE_PARTED                               # partition management (for the first boot)
     select BR2_PACKAGE_USBMOUNT                             # usb key/sd card mounter
@@ -426,9 +427,10 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                 BR2_PACKAGE_BATOCERA_TARGET_BCM2835     ||  BR2_PACKAGE_BATOCERA_TARGET_BCM2836 || \
                                                                (BR2_PACKAGE_BATOCERA_TARGET_BCM2837     &&  BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_8)
 
-    select BR2_PACKAGE_BATOCERA_LED_HANDHELD                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_SM8250
+    select BR2_PACKAGE_BATOCERA_LED_HANDHELD                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_SM8250   || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_SM8550
 
-    select BR2_PACKAGE_LIBGPIOD_TOOLS                       if BR2_PACKAGE_LIBGPIOD
+    select BR2_PACKAGE_LIBGPIOD_TOOLS                       if  BR2_PACKAGE_LIBGPIOD
 
     # joy 2 pad
     select BR2_PACKAGE_EVMAPY
@@ -842,7 +844,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
     # NDS
     select BR2_PACKAGE_LIBRETRO_DESMUME                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
-    select BR2_PACKAGE_LIBRETRO_MELONDS                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_aarch64 && BR2_PACKAGE_BATOCERA_GLES3)
+   #select BR2_PACKAGE_LIBRETRO_MELONDS                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_aarch64 && BR2_PACKAGE_BATOCERA_GLES3)
     select BR2_PACKAGE_LIBRETRO_MELONDS_DS                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711 || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
 
     select BR2_PACKAGE_DRASTIC                              if  BR2_PACKAGE_BATOCERA_RPI_MESA3D         || \
@@ -865,7 +867,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_PANDA3DS                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # PSP
-    select BR2_PACKAGE_PPSSPP                               if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
+    select BR2_PACKAGE_PPSSPP                               if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     && !BR2_PACKAGE_BATOCERA_TARGET_SM8250 # causes audio corruption
     select BR2_PACKAGE_LIBRETRO_PPSSPP                      if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
 
     # Neo Geo Pocket
@@ -998,9 +1000,6 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     # ZMusic: standalone library used by gzdoom and raze source ports
     select BR2_PACKAGE_ZMUSIC                               if  BR2_PACKAGE_GZDOOM || BR2_PACKAGE_RAZE
 
-    # Boom3 (Doom 3)
-    select BR2_PACKAGE_LIBRETRO_BOOM3                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
-
     # Tomb Raider 1
     select BR2_PACKAGE_TR1X                                 if  BR2_PACKAGE_XORG7
 
@@ -1008,7 +1007,6 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_TR2X                                 if  BR2_PACKAGE_XORG7
 
     # Quake 3
-    select BR2_PACKAGE_LIBRETRO_VITAQUAKE3                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_VKQUAKE3                             if  BR2_PACKAGE_BATOCERA_VULKAN             && !BR2_PACKAGE_BATOCERA_TARGET_JH7110
 
     # Hydra Castle Labyrinth
@@ -1112,13 +1110,18 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_XMIL                        # ALL
 
     # Fujistu FM-Towns computers range
-    select BR2_PACKAGE_TSUGARU                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
+    select BR2_PACKAGE_TSUGARU                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712 || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588      || BR2_PACKAGE_BATOCERA_TARGET_SM8250  || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_SM8550
 
     # Macintosh
     select BR2_PACKAGE_LIBRETRO_MINIVMAC                    # ALL
 
     # Commander X16
     select BR2_PACKAGE_X16EMU                               # ALL
+
+    # CLK - Oric Atmos and other old computers
+    select BR2_PACKAGE_CLK                                  if  BR2_PACKAGE_HAS_LIBGL
 
     help
         Old computers
@@ -1232,7 +1235,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 
     # Pinball
     select BR2_PACKAGE_VPINBALL                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588      || BR2_PACKAGE_BATOCERA_TARGET_SM8550
 
     # Panasonic 3DO
     select BR2_PACKAGE_LIBRETRO_OPERA                       if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     && \
@@ -1393,7 +1396,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_LIBRETRO_CANNONBALL
     select BR2_PACKAGE_LIBRETRO_EP128EMU                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
     select BR2_PACKAGE_LIBRETRO_FREEJ2ME                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
-    select BR2_PACKAGE_LIBRETRO_SQUIRRELJME                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
     select BR2_PACKAGE_OPENJDK                              if  BR2_PACKAGE_LIBRETRO_FREEJ2ME
     select BR2_PACKAGE_LIBRETRO_GONG
     select BR2_PACKAGE_LIBRETRO_JAXE
@@ -1464,7 +1466,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     # select BR2_PACKAGE_SUGARBOX                           if  BR2_x86_64
 
     # Symbian OS / Nokia N-Gage emulator
-    select BR2_PACKAGE_EKA2L1                               if  BR2_x86_64
+   #select BR2_PACKAGE_EKA2L1                               if  BR2_x86_64
 
     # Apple 2
     select BR2_PACKAGE_APPLEWIN                             # ALL
@@ -1492,6 +1494,7 @@ config BR2_PACKAGE_BATOCERA_GUNS
     select BR2_PACKAGE_GUNCON                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_BCM27XX || BR2_PACKAGE_BATOCERA_TARGET_BCM2837 # GunCon2 light gun
     select BR2_PACKAGE_GUNCON3                              if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4                                                                     # GunCon3 Light gun
     select BR2_PACKAGE_LIGHTGUNS_GAMES_PRECALIBRATIONS      # Light gun accuracy precalibration
+    select BR2_PACKAGE_ONEHIT_GUNS                          # OneHit light gun
     select BR2_PACKAGE_OPENFIRE_GUNS                        # OpenFIRE light gun
     select BR2_PACKAGE_RETROSHOOTER_GUNS                    # RetroShooter light gun
     select BR2_PACKAGE_SAMCO_GUNS                           # SAMCO light gun

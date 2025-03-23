@@ -20,7 +20,7 @@ class DosBoxStagingGenerator(Generator):
         gameConfFile = rom / "dosbox.cfg"
 
         commandArray = [
-            '/usr/bin/dosbox-staging',
+            '/usr/bin/dosbox-staging/dosbox-staging',
             "-fullscreen",
             "-userconf",
             "-exit",

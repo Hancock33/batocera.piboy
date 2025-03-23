@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-03-03 16:33+0800\n"
+"PO-Revision-Date: 2025-03-22 12:26+0800\n"
 "Last-Translator: R.Chan\n"
 "Language-Team: Ray Chan\n"
 "Language: zh_CN\n"
@@ -2157,7 +2157,7 @@ msgctxt "game_options"
 msgid "A600 (2MB Chip + 8MB Fast)"
 msgstr "A600（2MB 芯片 + 8MB 快速存储）"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "绝对鼠标输入"
@@ -3584,7 +3584,7 @@ msgctxt "game_options"
 msgid "BLEND HIGH-RES MODE"
 msgstr "混合高分辨率模式"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "BLEND SPRITES (SINGE)"
 msgstr "混合精灵（单）"
@@ -6215,11 +6215,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
-
-#. TRANSLATION: wiiu.keys
-msgctxt "keys_files"
-msgid "Display the controller screen"
-msgstr "显示控制器屏幕"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -8861,11 +8856,6 @@ msgctxt "game_options"
 msgid "Graphic Display Controller model."
 msgstr "图形显示控制器型号。"
 
-#. TRANSLATION: scummvm.keys
-msgctxt "keys_files"
-msgid "Graphics filtering on/off"
-msgstr "打开/关闭图形过滤"
-
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Gravis GamePad (D-pad + 4 Btns)"
@@ -8996,7 +8986,7 @@ msgctxt "game_options"
 msgid "HID"
 msgstr ""
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
 msgstr "隐藏光枪十字准线"
@@ -9183,12 +9173,12 @@ msgctxt "game_options"
 msgid "Hermite (Default)"
 msgstr "Hermite（默认）"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Hidden"
 msgstr "隐藏"
 
-#. TRANSLATION: hypseus-singe/vitaquake3, libretro/hatarib
+#. TRANSLATION: hypseus-singe/zmachine, libretro/hatarib
 msgctxt "game_options"
 msgid "Hide"
 msgstr "隐藏"
@@ -9196,9 +9186,9 @@ msgstr "隐藏"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Hide bezels"
-msgstr ""
+msgstr "隐藏边框"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 msgstr "在支持的游戏中隐藏十字光标, 例如ActionMax、Maddog II."
@@ -9436,11 +9426,6 @@ msgctxt "game_options"
 msgid "INVERT AXIS"
 msgstr "倒转轴线"
 
-#. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
-msgctxt "game_options"
-msgid "INVERT CONTROLS"
-msgstr ""
-
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
 msgid "INVULNERABILITY MODE"
@@ -9660,11 +9645,6 @@ msgid ""
 "main screen for other emulators."
 msgstr "倒置背景板和游戏区域. 对于其他模拟器将背景板用作主屏幕时很有用."
 
-#. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
-msgctxt "game_options"
-msgid "Invert the gamepad right analogue stick's Y axis."
-msgstr ""
-
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Invert the vertical joystick axis on flight games."
@@ -9765,7 +9745,7 @@ msgctxt "game_options"
 msgid "JOYSTICK SENSITIVITY"
 msgstr "摇杆灵敏度"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "JOYSTICK TO CURSOR SENSITIVITY"
 msgstr "摇杆控制的光标灵敏度"
@@ -10112,7 +10092,7 @@ msgctxt "game_options"
 msgid "LCD Ghosting (Fast)"
 msgstr "LCD重影（快速）"
 
-#. TRANSLATION: duckstation, flycast, hypseus-singe/vitaquake3, libretro/beetle-saturn, libretro/fbneo, ...
+#. TRANSLATION: duckstation, flycast, hypseus-singe/zmachine, libretro/beetle-saturn, libretro/fbneo, ...
 msgctxt "game_options"
 msgid "LIGHT GUN"
 msgstr "光枪"
@@ -10122,7 +10102,7 @@ msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIR"
 msgstr "光枪十字准线"
 
-#. TRANSLATION: dolphin, hypseus-singe/vitaquake3, rpcs3, shared
+#. TRANSLATION: dolphin, hypseus-singe/zmachine, rpcs3, shared
 msgctxt "game_options"
 msgid "LIGHT GUNS"
 msgstr "光枪"
@@ -11555,15 +11535,15 @@ msgctxt "game_options"
 msgid "New3D"
 msgstr "新3D"
 
-#. TRANSLATION: psx.duckstation.keys
-msgctxt "keys_files"
-msgid "Next Disc (m3u)"
-msgstr "下一个光盘（m3u）"
-
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Next disk"
+msgstr "下一张磁盘"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -13390,7 +13370,7 @@ msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
 msgstr "平滑矢量的分辨率乘法器"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "恢复单个精灵的BLENDMODE描边效果。"
@@ -14597,7 +14577,7 @@ msgctxt "game_options"
 msgid "Short visible screen edge (cm)"
 msgstr "短可见屏幕边缘(厘米)"
 
-#. TRANSLATION: duckstation, hypseus-singe/vitaquake3, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, ...
+#. TRANSLATION: duckstation, hypseus-singe/zmachine, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, ...
 msgctxt "game_options"
 msgid "Show"
 msgstr "显示"
@@ -14647,7 +14627,7 @@ msgctxt "game_options"
 msgid "Show/Hide guns borders for specific systems"
 msgstr "显示/隐藏特定系统的枪支边界"
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Shown"
 msgstr "显示"
@@ -15484,19 +15464,9 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "环绕7.1声道"
 
-#. TRANSLATION: 3ds.azahar.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Swap Screen"
-msgstr "交换屏幕"
-
-#. TRANSLATION: nds.drastic.keys
-msgctxt "keys_files"
-msgid "Swap Screens"
-msgstr "交换屏幕"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Swap screens"
+msgid "Swap screen"
 msgstr "交换屏幕"
 
 #. TRANSLATION: melonds
@@ -15984,7 +15954,7 @@ msgid ""
 msgstr ""
 "此选项使您能够玩Xbox Live Arcade游戏. 可能会导致与非XBLA游戏的兼容性问题."
 
-#. TRANSLATION: hypseus-singe/vitaquake3
+#. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr "在玩鼠标时，某些枪支游戏需要此选项。"
@@ -16041,16 +16011,6 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "使用游戏金手指或16/9纵横比修正码。"
 
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Screen Layout"
-msgstr "切换屏幕布局"
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Toggle Speed Limit"
-msgstr "切换速度限制"
-
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
@@ -16070,6 +16030,11 @@ msgstr "在游戏中可以使用热键+向上方向键或Scroll Lock键锁定。
 msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Tomy Tutor & Pyuuta 卡带"
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Toogle screen layout"
+msgstr "截图屏幕布局"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -18352,6 +18317,10 @@ msgstr "黄色/蓝色"
 #~ msgid "Display on screen information like savestate, config warning etc..."
 #~ msgstr "在屏幕上显示保存状态、配置警告等信息..."
 
+#~ msgctxt "keys_files"
+#~ msgid "Display the controller screen"
+#~ msgstr "显示控制器屏幕"
+
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
@@ -18546,6 +18515,10 @@ msgstr "黄色/蓝色"
 #~ msgid "Glorius Eggroll Proton (Default)"
 #~ msgstr "Glorius Eggroll Proton（默认）"
 
+#~ msgctxt "keys_files"
+#~ msgid "Graphics filtering on/off"
+#~ msgstr "打开/关闭图形过滤"
+
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax."
 #~ msgstr "在支持的游戏中隐藏十字光标，例如ActionMax。"
@@ -18632,6 +18605,10 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Needed by some games that use special unicode characters."
 #~ msgstr "一些使用特殊unicode字符的游戏需要。"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "下一个光盘（m3u）"
 
 #~ msgctxt "game_options"
 #~ msgid "Off (default)"
@@ -18974,6 +18951,18 @@ msgstr "黄色/蓝色"
 #~ msgstr ""
 #~ "并行将纹理流传输到GPU。 这可以提高在具有剩余空间的更强大的GPU上的性能。"
 
+#~ msgctxt "keys_files"
+#~ msgid "Swap Screen"
+#~ msgstr "交换屏幕"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap Screens"
+#~ msgstr "交换屏幕"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap screens"
+#~ msgstr "交换屏幕"
+
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "团队颜色模式"
@@ -19004,6 +18993,14 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Toggle MSAA/SSAA. Depends on anti-aliasing being enabled."
 #~ msgstr "切换MSAA/SSA。取决于启用的抗锯齿。"
+
+#~ msgctxt "keys_files"
+#~ msgid "Toggle Screen Layout"
+#~ msgstr "切换屏幕布局"
+
+#~ msgctxt "keys_files"
+#~ msgid "Toggle Speed Limit"
+#~ msgstr "切换速度限制"
 
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."

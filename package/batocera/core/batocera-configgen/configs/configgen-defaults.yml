@@ -687,6 +687,9 @@ openjkjo:
 opentyrian:
   emulator: opentyrian
   core:     opentyrian
+oricatmos:
+  emulator: clk
+  core:     clk
 
 # P-S
 

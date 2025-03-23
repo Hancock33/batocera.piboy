@@ -184,7 +184,7 @@ class HypseusSingeGenerator(Generator):
         # check the path exists
         if not os.path.exists(video_path):
             _logger.debug("Could not find m2v file in path - %s", video_path)
-            video_path = self.find_file(rom, cast(str, m2v_filename))
+            video_path = self.find_file(rom, cast('str', m2v_filename))
 
         _logger.debug("Full m2v path is: %s", video_path)
 

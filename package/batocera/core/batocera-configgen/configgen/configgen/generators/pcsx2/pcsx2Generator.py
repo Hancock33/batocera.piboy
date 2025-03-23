@@ -34,7 +34,7 @@ if TYPE_CHECKING:
 
 _logger = logging.getLogger(__name__)
 
-_PCSX2_BIN_DIR: Final = Path("/usr/pcsx2/bin")
+_PCSX2_BIN_DIR: Final = Path("/usr/bin/pcsx2")
 _PCSX2_RESOURCES_DIR: Final = _PCSX2_BIN_DIR / "resources"
 _PCSX2_CONFIG: Final = CONFIGS / "PCSX2"
 _PCSX2_BIOS: Final = BIOS / "ps2"
@@ -111,8 +111,8 @@ class Pcsx2Generator(Generator):
         dbfile = _PCSX2_CONFIG / "game_controller_db.txt"
         write_sdl_controller_db(playersControllers, dbfile)
 
-        commandArray = ["/usr/pcsx2/bin/pcsx2-qt"] if configure_emulator(rom) else \
-              ["/usr/pcsx2/bin/pcsx2-qt", "-nogui", rom]
+        commandArray = ["/usr/bin/pcsx2/pcsx2"] if configure_emulator(rom) else \
+              ["/usr/bin/pcsx2/pcsx2", "-nogui", rom]
 
         with Path("/proc/cpuinfo").open() as cpuinfo:
             if not re.search(r'^flags\s*:.*\ssse4_1\W', cpuinfo.read(), re.MULTILINE):
