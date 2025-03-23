@@ -25,12 +25,12 @@ index e5a614ca..36decde9 100644
  
  
 diff --git a/Oxygen/sonic3air/build/_cmake/CMakeLists.txt b/Oxygen/sonic3air/build/_cmake/CMakeLists.txt
-index 429d98ca..eb4ecce7 100644
+index ed859405..1b30e99f 100644
 --- a/Oxygen/sonic3air/build/_cmake/CMakeLists.txt
 +++ b/Oxygen/sonic3air/build/_cmake/CMakeLists.txt
-@@ -73,9 +73,9 @@ set(SDL_STATIC ON)
- set(SDL_SHARED OFF)
+@@ -102,9 +102,9 @@ endif()
  add_subdirectory(${WORKSPACE_DIR}/framework/external/sdl/SDL2 SDL)
+ 
  
 -# zlib sources as virtual subdirectory "zlib"
 -include_directories(${WORKSPACE_DIR}/framework/external/zlib/zlib)		# Included before add_subdirectory so that the examples will build
@@ -41,7 +41,7 @@ index 429d98ca..eb4ecce7 100644
  
  
  
-@@ -116,7 +116,7 @@ file(GLOB MINIZIP_SOURCES ${WORKSPACE_DIR}/framework/external/zlib/zlib/contrib/
+@@ -146,7 +146,7 @@ file(GLOB MINIZIP_SOURCES ${WORKSPACE_DIR}/framework/external/zlib/zlib/contrib/
  
  add_library(minizip ${MINIZIP_SOURCES})
  
@@ -50,7 +50,7 @@ index 429d98ca..eb4ecce7 100644
  
  if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
  	target_compile_options(minizip PRIVATE -Wno-implicit-function-declaration -Wno-int-conversion)	# Silence these warnings in minizip build
-@@ -146,7 +146,7 @@ if (NOT CMAKE_VERSION VERSION_LESS "3.16.0")
+@@ -189,7 +189,7 @@ if (NOT CMAKE_VERSION VERSION_LESS "3.16.0")
  endif()
  
  target_link_libraries(rmxbase stdc++fs)
