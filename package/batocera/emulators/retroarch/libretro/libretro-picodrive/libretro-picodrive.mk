@@ -38,7 +38,7 @@ define LIBRETRO_PICODRIVE_BUILD_CMDS
 
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION) -Wno-error=incompatible-pointer-types|g" $(@D)/Makefile.libretro
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile.libretro \
-		platform="$(LIBRETRO_PICODRIVE_PLATFORM)" \
+		platform="$(LIBRETRO_PICODRIVE_PLATFORM)" STATIC_LINKING=0 \
 		GIT_REVISION="$(shell echo $(LIBRETRO_PICODRIVE_VERSION) | cut -c 1-7)"
 endef
 
