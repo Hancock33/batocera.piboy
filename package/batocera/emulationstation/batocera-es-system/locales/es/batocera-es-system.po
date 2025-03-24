@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-24 00:00+0100\n"
-"PO-Revision-Date: 2025-02-28 00:00+0100\n"
+"PO-Revision-Date: 2025-03-23 00:00+0100\n"
 "Last-Translator: roliverosc\n"
 "Language-Team: spanish\n"
 "Language: es\n"
@@ -2350,12 +2350,12 @@ msgstr "Cartuchos APF M-1000"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS-BIOS.ROM"
-msgstr ""
+msgstr "APPLE2GS-BIOS.ROM"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS.ROM"
-msgstr ""
+msgstr "APPLE2GS.ROM"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -2490,7 +2490,7 @@ msgstr "GANANCIA DE VOLUMEN DE AUDIO"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "AUTO"
-msgstr ""
+msgstr "AUTO"
 
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
@@ -2865,7 +2865,7 @@ msgstr "Todos los bordes"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "All Timers"
-msgstr ""
+msgstr "Todos los temporizadores"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -2993,12 +2993,12 @@ msgstr "Analógico abajo"
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Left"
-msgstr "Analógico izquierda"
+msgstr "Analógico izquierdo"
 
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Right"
-msgstr "Analógico derecha"
+msgstr "Analógico derecho"
 
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
@@ -3255,7 +3255,7 @@ msgstr "Flechas 3 botones"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "As Host (Default)"
-msgstr ""
+msgstr "Como el host (Defecto)"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -3948,7 +3948,7 @@ msgstr ""
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Bottom (Default)"
-msgstr "Abajo (defecto)"
+msgstr "Abajo (Defecto)"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -5040,6 +5040,8 @@ msgid ""
 "Changes the sleep period accuracy. Some games need this set to improve "
 "performance."
 msgstr ""
+"Cambia la precisión del período de suspensión. Algunos juegos necesitan esta "
+"configuración para mejorar el rendimiento."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -9383,7 +9385,7 @@ msgstr "Ocultar"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Hide bezels"
-msgstr ""
+msgstr "Ocultar biseles"
 
 #. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
@@ -11791,7 +11793,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Next disk"
-msgstr ""
+msgstr "Siguiente disco"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -14156,7 +14158,7 @@ msgstr "SALTAR MENÚ DE INICIO"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "SLEEP TIMERS ACCURACY"
-msgstr ""
+msgstr "PRECISIÓN DE TEMPORIZADORES DE SUSPENSIÓN"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -15806,7 +15808,7 @@ msgstr "Surround 7.1"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Swap screen"
-msgstr ""
+msgstr "Intercambiar pantalla"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -16389,7 +16391,7 @@ msgstr "Cartucho Tomy Tutor & Pyuuta"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Toogle screen layout"
-msgstr ""
+msgstr "Alternar diseño de pantalla"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17201,7 +17203,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Usleep Only"
-msgstr ""
+msgstr "Solo usleep"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17591,7 +17593,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "WRITE DEPTH BUFFERS"
-msgstr ""
+msgstr "PROFUNDIDAD BÚFERS ESCRITURA"
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -17766,6 +17768,8 @@ msgid ""
 "Writes depth buffer values to VM memory. Some games need this to fix broken "
 "graphics."
 msgstr ""
+"Escribe valores de profundidad de búfer en la memoria de la máquina virtual. "
+"Algunos juegos necesitan esto para reparar gráficos dañados."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -18624,7 +18628,7 @@ msgstr "amarillo/azul"
 
 #~ msgctxt "game_options"
 #~ msgid "D3D12 (Default)"
-#~ msgstr "D3D12 (Por defecto)"
+#~ msgstr "D3D12 (Defecto)"
 
 #~ msgctxt "game_options"
 #~ msgid "DISABLE EMULATOR JOYSTICK"

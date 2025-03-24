@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v42b(2025/02/27)\n"
+"Project-Id-Version: batocera-es v42b(2025/03/23)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-02-27 11:52+0900\n"
+"PO-Revision-Date: 2025-03-23 15:07+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -2860,7 +2860,7 @@ msgstr "すべての境界線"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "All Timers"
-msgstr ""
+msgstr "すべてのタイマー"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -3242,7 +3242,7 @@ msgstr "矢印3ボタン"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "As Host (Default)"
-msgstr ""
+msgstr "ホストとして (標準)"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -3674,7 +3674,7 @@ msgstr "BT601_625/D65 (EUR/AUS で開発されたすべてのゲームに推奨)
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Back / Menu"
-msgstr "戻る/メニュー"
+msgstr "戻る / メニュー"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -4555,7 +4555,7 @@ msgstr "CPUサイクル"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Core used in emulation"
-msgstr "エミュレーションに使用されるCPUコア"
+msgstr "エミュレーションで使用する CPU コア"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -5004,6 +5004,8 @@ msgid ""
 "Changes the sleep period accuracy. Some games need this set to improve "
 "performance."
 msgstr ""
+"スリープタイマー精度を変更します。一部のゲームでは動作向上のためにこれが必要"
+"です"
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -7908,7 +7910,7 @@ msgstr "インタープリタ（速い）"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Fast forward"
-msgstr ""
+msgstr "早送り"
 
 #. TRANSLATION: flycast
 #, c-format
@@ -9290,7 +9292,7 @@ msgstr "非表示"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Hide bezels"
-msgstr ""
+msgstr "ベゼルを隠す"
 
 #. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
@@ -9300,7 +9302,7 @@ msgstr "対応しているゲームで照準を隠します(例:ActionMax, Maddo
 #. TRANSLATION: naomigd.flycast.keys
 msgctxt "keys_files"
 msgid "Hide the bezel"
-msgstr "ベゼルを隠す"
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -11673,7 +11675,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Next disk"
-msgstr ""
+msgstr "次のディスク"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -13499,7 +13501,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Reset"
-msgstr ""
+msgstr "リセット"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -14005,7 +14007,7 @@ msgstr "スタートメニューをスキップ"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "SLEEP TIMERS ACCURACY"
-msgstr ""
+msgstr "スリープタイマー精度"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -15630,7 +15632,7 @@ msgstr "7.1ch サラウンド"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Swap screen"
-msgstr ""
+msgstr "画面を入れ替える"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -16055,7 +16057,7 @@ msgstr ""
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "The day within the month of your birthday."
-msgstr "あなたの誕生の日"
+msgstr "あなたの誕生日"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -16087,7 +16089,7 @@ msgstr "翻訳して表示する言語を選択します"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "The month of your birthay."
-msgstr "あなたの誕生の月"
+msgstr "あなたの誕生月"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -16202,7 +16204,7 @@ msgstr "トミー ぴゅう太(Tutor) カートリッジ"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Toogle screen layout"
-msgstr ""
+msgstr "画面レイアウトの切り替え"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -16277,7 +16279,7 @@ msgstr "繁体字中国語"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Translate"
-msgstr ""
+msgstr "翻訳"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -16974,7 +16976,7 @@ msgid ""
 "dedicated hotkey."
 msgstr ""
 "N64 スタイルのコントローラーを使うときに便利です\n"
-"ホットキー専用ボタンがない場合のホットキーは限定されます"
+"ホットキー専用ボタンがない場合のホットキーを限定します"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
@@ -16999,7 +17001,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Usleep Only"
-msgstr ""
+msgstr "スリープのみ"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17389,7 +17391,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "WRITE DEPTH BUFFERS"
-msgstr ""
+msgstr "深度バッファ書き込み"
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -17559,6 +17561,8 @@ msgid ""
 "Writes depth buffer values to VM memory. Some games need this to fix broken "
 "graphics."
 msgstr ""
+"深度バッファの値をVMメモリに書き込みます。一部のゲームでは、グラフィック修正"
+"のために必要です"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -18196,7 +18200,7 @@ msgstr "黄/青"
 
 #~ msgctxt "game_options"
 #~ msgid "Allow mapping Future Pinball with Pad to Keyboard."
-#~ msgstr "パッドからキーボードへの Future Pinabll の割り当てを許可します"
+#~ msgstr "Future Pinball をキーボードを介してパッド割当できるようにします"
 
 #~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
@@ -18256,15 +18260,11 @@ msgstr "黄/青"
 
 #~ msgctxt "game_options"
 #~ msgid "CONTROLLER CONFIGURATION"
-#~ msgstr "コントローラー 構成"
+#~ msgstr "コントローラーの設定"
 
 #~ msgctxt "game_options"
 #~ msgid "Can be used to simulate colors of particular displays."
 #~ msgstr "特定のディスプレイの色をシミュレートするために使用します"
-
-#~ msgctxt "game_options"
-#~ msgid "Center (Default)"
-#~ msgstr "中央 (標準)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Change Camera Angle"
@@ -18292,7 +18292,7 @@ msgstr "黄/青"
 
 #~ msgctxt "keys_files"
 #~ msgid "Coin"
-#~ msgstr "コイン"
+#~ msgstr "コイン投入"
 
 #~ msgctxt "game_options"
 #~ msgid "Color"
@@ -18332,7 +18332,7 @@ msgstr "黄/青"
 
 #~ msgctxt "keys_files"
 #~ msgid "Continue/Pause emulation"
-#~ msgstr "エミュレーションの続行/一時停止"
+#~ msgstr "エミュレーションの継続/一時停止"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18429,19 +18429,19 @@ msgstr "黄/青"
 
 #~ msgctxt "keys_files"
 #~ msgid "Exit Dolphin"
-#~ msgstr "Dolphin を終了"
+#~ msgstr "Dolphinを終了"
 
 #~ msgctxt "keys_files"
 #~ msgid "Exit Dosbox-X"
-#~ msgstr "Dosbox-X を終了"
+#~ msgstr "Dosbox-Xを終了"
 
 #~ msgctxt "keys_files"
 #~ msgid "Exit Drastic"
-#~ msgstr "Drastic を終了"
+#~ msgstr "Drasticを終了"
 
 #~ msgctxt "keys_files"
 #~ msgid "Exit Duckstation"
-#~ msgstr "Duckstation を終了"
+#~ msgstr "DuckStation を終了"
 
 #~ msgctxt "keys_files"
 #~ msgid "Exit Game"
@@ -18461,11 +18461,7 @@ msgstr "黄/青"
 
 #~ msgctxt "keys_files"
 #~ msgid "Exit running Flatpak"
-#~ msgstr "Flatpakを終了する"
-
-#~ msgctxt "keys_files"
-#~ msgid "Fast Forward"
-#~ msgstr "早送り"
+#~ msgstr "Flatpak実行を終了"
 
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
@@ -18481,7 +18477,7 @@ msgstr "黄/青"
 
 #~ msgctxt "keys_files"
 #~ msgid "Forward Nudge"
-#~ msgstr "前方を叩く"
+#~ msgstr "前ナッジ(前側を叩く)"
 
 #~ msgctxt "game_options"
 #~ msgid "GB COLORIZATION"
@@ -18521,15 +18517,11 @@ msgstr "黄/青"
 
 #~ msgctxt "keys_files"
 #~ msgid "Left Magna Save"
-#~ msgstr "マグナセーブボタン 左"
-
-#~ msgctxt "keys_files"
-#~ msgid "Left Manga Save"
 #~ msgstr "magnasave ボタン 左"
 
 #~ msgctxt "keys_files"
 #~ msgid "Left Nudge"
-#~ msgstr "左側を叩く"
+#~ msgstr "左ナッジ(左側を叩く)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State"
@@ -18551,7 +18543,7 @@ msgstr "黄/青"
 
 #~ msgctxt "keys_files"
 #~ msgid "Mech Tilt"
-#~ msgstr "メカ Tilt(機械的傾斜)"
+#~ msgstr "メカティルト(機械的傾斜)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18560,7 +18552,7 @@ msgstr "黄/青"
 
 #~ msgctxt "game_options"
 #~ msgid "N64 (Limited Hotkeys)"
-#~ msgstr "N64 (ホットキー限定)"
+#~ msgstr "N64 (限定ホットキー)"
 
 #~ msgctxt "game_options"
 #~ msgid "Native Vulkan"
@@ -18576,11 +18568,11 @@ msgstr "黄/青"
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Dolphin-triforce　メニューを開く"
+#~ msgstr "Dolphin-triforce メニューを開く"
 
 #~ msgctxt "keys_files"
 #~ msgid "Open DuckStation Quick Menu"
-#~ msgstr "DuckStation クイック メニューを開く"
+#~ msgstr "DuckStation  クイック メニューを開く"
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Load Menu"
@@ -18609,10 +18601,6 @@ msgstr "黄/青"
 #~ msgctxt "game_options"
 #~ msgid "Passes all physical keyboard events for Pad2Key."
 #~ msgstr "すべての物理キーボード操作をPad2Keyで実行します"
-
-#~ msgctxt "keys_files"
-#~ msgid "Pause / Menu"
-#~ msgstr "一時停止/メニュー"
 
 #~ msgctxt "game_options"
 #~ msgid "Per Pixel"
@@ -18644,11 +18632,11 @@ msgstr "黄/青"
 
 #~ msgctxt "keys_files"
 #~ msgid "Quick Load"
-#~ msgstr "クイック ロード"
+#~ msgstr "クイックロード"
 
 #~ msgctxt "keys_files"
 #~ msgid "Quick Save"
-#~ msgstr "クイック セーブ"
+#~ msgstr "クイックセーブ"
 
 #~ msgctxt "keys_files"
 #~ msgid "Quick load"
@@ -18704,7 +18692,7 @@ msgstr "黄/青"
 
 #~ msgctxt "keys_files"
 #~ msgid "Restart Emulation"
-#~ msgstr "エミュレーション再開"
+#~ msgstr "エミュレーションを再開"
 
 #~ msgctxt "keys_files"
 #~ msgid "Restart Game"
@@ -18716,23 +18704,15 @@ msgstr "黄/青"
 
 #~ msgctxt "keys_files"
 #~ msgid "Right Magna Save"
-#~ msgstr "マグナセーブボタン 右"
-
-#~ msgctxt "keys_files"
-#~ msgid "Right Manga Save"
 #~ msgstr "magnasave ボタン 右"
 
 #~ msgctxt "keys_files"
 #~ msgid "Right Nudge"
-#~ msgstr "右側を叩く"
+#~ msgstr "右ナッジ(右側を叩く)"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"
 #~ msgstr "Sビデオ（カラーブリーディングのみ）"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State"
-#~ msgstr "ステートセーブ"
 
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
@@ -18755,7 +18735,7 @@ msgstr "黄/青"
 
 #~ msgctxt "game_options"
 #~ msgid "Set desired framerate."
-#~ msgstr "フレームレートを設定します"
+#~ msgstr "希望のフレームレートを設定"
 
 #~ msgctxt "game_options"
 #~ msgid "Set the color palette to use."
@@ -18771,7 +18751,7 @@ msgstr "黄/青"
 
 #~ msgctxt "keys_files"
 #~ msgid "Settings GUI"
-#~ msgstr "GUI設定"
+#~ msgstr "設定GUI"
 
 #~ msgctxt "game_options"
 #~ msgid "Simulate LCD color inaccuracy."
@@ -18799,7 +18779,8 @@ msgstr "黄/青"
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
-#~ "コアが対応している場合は、過去の状態を保存してリアルタイムで巻き戻します"
+#~ "コアが対応している場合は、過去の状態を保存して\n"
+#~ "リアルタイムで巻き戻します"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18834,7 +18815,7 @@ msgstr "黄/青"
 
 #~ msgctxt "keys_files"
 #~ msgid "Take a screenshot"
-#~ msgstr "スクリーンショットを撮る"
+#~ msgstr "スクリーンショット取得"
 
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
@@ -18855,6 +18836,10 @@ msgstr "黄/青"
 #~ msgctxt "keys_files"
 #~ msgid "Toggle Speed Limit"
 #~ msgstr "速度制限の切り替え"
+
+#~ msgctxt "keys_files"
+#~ msgid "Toggle screen layout"
+#~ msgstr "画面レイアウトの切り替え"
 
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
