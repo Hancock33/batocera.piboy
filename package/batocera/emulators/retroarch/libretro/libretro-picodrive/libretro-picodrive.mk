@@ -3,8 +3,8 @@
 # libretro-picodrive
 #
 ################################################################################
-# Version: Commits on Mar 24, 2025
-LIBRETRO_PICODRIVE_VERSION = 7f6277489e6907c0f16b915f0c29c66a0236951c
+# Version: Commits on Mar 25, 2025
+LIBRETRO_PICODRIVE_VERSION = 752c266491ae8775dab9a98dbd94472f42b9b16f
 LIBRETRO_PICODRIVE_SITE = https://github.com/libretro/picodrive.git
 LIBRETRO_PICODRIVE_SITE_METHOD=git
 LIBRETRO_PICODRIVE_GIT_SUBMODULES=YES
@@ -38,7 +38,7 @@ define LIBRETRO_PICODRIVE_BUILD_CMDS
 
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION) -Wno-error=incompatible-pointer-types|g" $(@D)/Makefile.libretro
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile.libretro \
-		platform="$(LIBRETRO_PICODRIVE_PLATFORM)" STATIC_LINKING=0 STATIC_LINKING_LINK=0 \
+		platform="$(LIBRETRO_PICODRIVE_PLATFORM)" \
 		GIT_REVISION="$(shell echo $(LIBRETRO_PICODRIVE_VERSION) | cut -c 1-7)"
 endef
 
