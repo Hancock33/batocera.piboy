@@ -13,7 +13,9 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|c17ca71650118b82723d1949ae3163f
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|3f4bfd340730c0dc4443dd35e4d9a310ecf612ad|Mar 26, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|ac2ca194ada6b41afb70fbee7fbed52b95b0d3da|Mar 26, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|cf5f4c5ae4ecca61f986391716474325e3fc541b|Mar 26, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250326|Mar 26, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|999de04ace34fdb0a7a7c05e1fce55d966fc47fc|Mar 26, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250326|Mar 26, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|2adaf2ac0f2c17705efc753ab7258fd35782cc8e|Mar 26, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|2adaf2ac0f2c17705efc753ab7258fd35782cc8e|Mar 26, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|06e5895d7aa47bb2f5fefdce3102e91771ad67aa|Mar 26, 2025
@@ -30,10 +32,8 @@ Emulators|[openmsx](http://github.com/openMSX/openMSX)|e5bfa2027915abc08908a86a5
 Emulators|[play](https://github.com/jpd002/Play-.git)|01d094c0c3ed723b0747079afddfd319001f01d4|Mar 25, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.3.22|Mar 25, 2025
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|4db3f1f6c857d317d00dff1d35a789163bf37271|Mar 25, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250325|Mar 25, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|c9f1f25cb5657a6416f64b5eeaeb93bb21aa42fc|Mar 25, 2025
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|59202da150e7433c87b44f430e3fd4ccade49fe3|Mar 25, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250325|Mar 25, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|8f2cd975a27ba4c629b6298a6ec296b0f7965216|Mar 25, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|3d0663d29905cff6c94d83980b9bc4698899efd4|Mar 25, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|1d1e80c8231d1b71e12bd2137fb719a5657675e4|Mar 25, 2025
