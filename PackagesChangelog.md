@@ -26,6 +26,7 @@ Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|43112d92fb1f
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|c966591332924c39744c1c4e94506efcbcbd32ae|Mar 26, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|6e6374369c8555eab93217a9aa67e917f87e817a|Mar 25, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|6e6374369c8555eab93217a9aa67e917f87e817a|Mar 25, 2025
+Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|55dc3f8ec152f2441be8cce113ce47ebb3251bab|Mar 25, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|1981f222284448cc8a69d970e1f8569dacec684e|Mar 25, 2025
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|527bdc418f8b58b32407a25a15ad4a20782d1c80|Mar 25, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|e5bfa2027915abc08908a86a586ed87c042d630e|Mar 25, 2025
@@ -71,7 +72,6 @@ Emulators|[xemu](https://github.com/xemu-project/xemu)|9e58abc95184320d830c3c116
 Ports|[bstone](http://github.com/bibendovsky/bstone)|11ff54148b62e223d84cd7095cfdee4811e5eeca|Mar 22, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.4|Mar 22, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|305cae496fe009a523e1a43cc6a11141531626ef|Mar 22, 2025
-Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|e06526cbbca4e0aff09f4f9f646f9da13b577885|Mar 21, 2025
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|1bd0a1052b2e74d7af04de18d30b5edb12d8a423|Mar 21, 2025
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|818aca56efd784624a241a12936b5c0864e3ddd8|Mar 21, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|232bdf101095122cfc4b904b219d5e64a9d36528|Mar 21, 2025
