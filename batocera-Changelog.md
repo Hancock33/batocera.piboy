@@ -43,6 +43,7 @@
 - CLK can also be chosen as an emulator for C+4, VIC20, MSX1 and 2, Sega Master System, Colecovision,
   AmstradCPC, AtariST, ZX81, ZXSpectrum, AppleII, AppleIIGS, Macintosh, Archimedes, Electron
 - gun : option to hide the crosshair in ES
+- Azahar 3DS emulator: Version 2120.1
 ### Fixed
 - Fix some problems in ES and Batocera with IPv6 networks
 - Fix ES behavior with usb network tethering
@@ -76,7 +77,7 @@
 - ScummVM to v2.9.0
 - PCSX2 to v2.3.185
 - Play! to 4th Feb build
-- Xemu to v0.8.34
+- Xemu to v0.8.41
 - Triforce to use a Crediar build (Nov 29, 2024)
 - Vice to 3.9
 - TheXTech to v1.3.7-hotfix2
@@ -116,7 +117,7 @@
 - Kodi to 21.2
 - Nvidia production driver to 570.133.07
 - LLVM to 19.1.7
-- Wine-TKG to 10.3
+- Wine-TKG to 10.4
 - Faudio to 25.02
 - DXVK to 2.6
 - DXVK-NVApi to 0.9.0
