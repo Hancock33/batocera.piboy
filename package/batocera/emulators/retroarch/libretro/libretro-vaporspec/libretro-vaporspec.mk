@@ -3,8 +3,8 @@
 # libretro-vaporspec
 #
 ################################################################################
-# Version: Commits on Feb 28, 2025
-LIBRETRO_VAPORSPEC_VERSION = 2c16add9d433b0fa904fc08baf78c791b218753c
+# Version: Commits on Mar 28, 2025
+LIBRETRO_VAPORSPEC_VERSION = 52818314f97736b22e8ac0e1e9e3685cfa10f710
 LIBRETRO_VAPORSPEC_SITE = https://github.com/minkcv/vm.git
 LIBRETRO_VAPORSPEC_SITE_METHOD=git
 LIBRETRO_VAPORSPEC_GIT_SUBMODULES=YES
