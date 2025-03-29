@@ -27,7 +27,7 @@ def get_wine_paths(runner: str) -> dict[str, Path]:
         wine64 = wine64_bin / 'wine64'
     else:
         wine_bin = wine_lib / 'i386-unix'
-        wine64_bin = wine_lib / 'x86_64-unix'      
+        wine64_bin = wine_lib / 'x86_64-unix'
         wine = wine_bin / 'wine'
         wine64 = wine64_bin / 'wine64'
 
@@ -56,8 +56,8 @@ WINE_PATH, WINE_LIB, WINE_BIN, WINE64_BIN, WINE_SERVER_BIN, WINE, WINE64, WINETR
 
 
 def _run_wine_process(
-    prefix: Path, 
-    cmd: Sequence[str | Path], 
+    prefix: Path,
+    cmd: Sequence[str | Path],
     runner: str,
     /, *,
     environment: Mapping[str, str | Path] | None = None
@@ -86,9 +86,9 @@ def _run_wine_process(
 
 
 def install_wine_trick(
-    prefix: Path, 
-    name: str, 
-    /, *, 
+    prefix: Path,
+    name: str,
+    /, *,
     environment: Mapping[str, str | Path] | None = None
 ) -> None:
     done_file = prefix / f'{name}.done'
@@ -129,7 +129,7 @@ def set_wine_runner(runner: str) -> None:
         wine_paths['WINE64'],
         wine_paths['WINETRICKS'],
     )
-    
+
     _logger.debug(f'Updated wine paths for runner "{runner}":')
     _logger.debug(f'WINE_PATH={WINE_PATH}')
     _logger.debug(f'WINE_LIB={WINE_LIB}')

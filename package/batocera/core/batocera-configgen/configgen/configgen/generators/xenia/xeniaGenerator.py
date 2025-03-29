@@ -67,7 +67,7 @@ class XeniaGenerator(Generator):
         else:
             _logger.debug("*** Vulkan driver required is not available on the system!!! ***")
             sys.exit()
-        
+
         # Use wine proton
         wine.set_wine_runner("wine-proton")
 

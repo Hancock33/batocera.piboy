@@ -4,14 +4,15 @@ config BR2_PACKAGE_WINE_PROTON
 	depends on !BR2_STATIC_LIBS
 
 	help
-	  Wine is a compatibility layer capable of running Windows
-	  applications on Linux. Instead of simulating internal
-	  Windows logic like a virtual machine or emulator, Wine
-	  translates Windows API calls into POSIX calls on-the-fly,
-	  eliminating the performance and memory penalties of other
-	  methods.
+	  Proton is a Wine build modified by Valve and other 
+	  contributors.	  It contains many useful patches 
+	  (primarily for a better gaming experience),some of
+	  them are unique and not present in other builds.
+	  The differences from the official Steam's Proton are
+	  the lack of the Proton's python script and the lack of
+	  some builtin dlls (like DXVK and vkd3d-proton).
 
-	  http://www.winehq.org
+	  https://github.com/ValveSoftware/wine.git
 
 comment "wine needs a toolchain w/ dynamic library"
 	depends on BR2_PACKAGE_WINE_ARCH_SUPPORTS
