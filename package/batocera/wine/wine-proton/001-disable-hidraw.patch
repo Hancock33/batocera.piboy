@@ -1,8 +1,8 @@
 diff --git a/dlls/winebus.sys/main.c b/dlls/winebus.sys/main.c
-index 6dd8e98ed61..8ed2bfd8984 100644
+index f7627fb3bb8..12870005e1e 100644
 --- a/dlls/winebus.sys/main.c
 +++ b/dlls/winebus.sys/main.c
-@@ -776,7 +776,7 @@ static NTSTATUS udev_driver_init(void)
+@@ -792,7 +792,7 @@ static NTSTATUS udev_driver_init(void)
          .wait_code = udev_wait,
      };
  
