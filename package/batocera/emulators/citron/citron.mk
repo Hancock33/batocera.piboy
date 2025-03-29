@@ -3,8 +3,8 @@
 # citron
 #
 ################################################################################
-# Version: Commits on Mar 25, 2025
-CITRON_VERSION = 55dc3f8ec152f2441be8cce113ce47ebb3251bab
+# Version: Commits on Mar 28, 2025
+CITRON_VERSION = b25c7653e64780775893bcd621ee241c30f51451
 CITRON_SITE = https://git.citron-emu.org/Citron/Citron.git
 CITRON_SITE_METHOD=git
 CITRON_GIT_SUBMODULES=YES
@@ -15,6 +15,7 @@ CITRON_SUPPORTS_IN_SOURCE_BUILD = NO
 
 CITRON_CONF_ENV += LDFLAGS=-lpthread ARCHITECTURE_x86_64=1
 
+CITRON_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 CITRON_CONF_OPTS += -DARCHITECTURE_x86_64=ON
 CITRON_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 CITRON_CONF_OPTS += -DCITRON_TESTS=OFF
