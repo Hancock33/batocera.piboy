@@ -17,7 +17,7 @@ cs_romdir = "/userdata/roms/ports/stalker/cop"
 assests = ['levels', 'localization', 'mp', 'patches', 'resources']
 
 class StalkerGenerator(Generator):
-    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
         mkdir_if_not_exists(Path(base_dir))
         mkdir_if_not_exists(Path(cop_dir))
         mkdir_if_not_exists(Path(cs_dir))

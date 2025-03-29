@@ -8,7 +8,7 @@ from ..Generator import Generator
 
 class StkGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
         # ini file
         config_src = '/usr/share/game_assets/supertuxkart'
         config_root = '/userdata/system/.config/supertuxkart'

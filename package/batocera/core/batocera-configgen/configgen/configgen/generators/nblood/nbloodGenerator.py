@@ -9,7 +9,7 @@ from ..Generator import Generator
 
 class NbloodGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
         commandArray = ["nblood", "-j=" + os.path.dirname(os.path.abspath(rom))]
         os.chdir(os.path.dirname(os.path.abspath(rom)))
 

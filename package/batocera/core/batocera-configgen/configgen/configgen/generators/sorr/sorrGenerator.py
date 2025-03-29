@@ -6,7 +6,7 @@ from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 class SorrGenerator(Generator):
-    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
         os.chdir("/userdata/roms/ports/sorr")
         commandArray = ["/usr/bin32/sorr", "-i", "/userdata/roms/ports/sorr", rom]
 

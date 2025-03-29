@@ -7,7 +7,7 @@ from ..Generator import Generator
 
 class DroidportsGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
         commandArray = ["/usr/bin32/gmloader", rom]
 
         if os.path.isfile('/tmp/piboy'):

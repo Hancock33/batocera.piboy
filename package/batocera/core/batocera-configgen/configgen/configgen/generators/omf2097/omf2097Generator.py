@@ -11,7 +11,7 @@ omf_dst = "/userdata/roms/ports/omf2097"
 
 class Omf2097Generator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
         commandArray = ["openomf"]
 
         shutil.copytree(omf_src, omf_dst, dirs_exist_ok=True)

@@ -9,7 +9,7 @@ from ..Generator import Generator
 
 class VoidswGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
         addon = "-addon0"
         if  "WD" in rom.name:
             addon = "-addon1"

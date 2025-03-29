@@ -48,7 +48,7 @@ class GzdoomGenerator(Generator):
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "save_store": "KEY_F6", "restore_store": "KEY_F9" }
         }
 
-    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
         rom_path = Path(rom)
 
         # check the path is added to the ini file
