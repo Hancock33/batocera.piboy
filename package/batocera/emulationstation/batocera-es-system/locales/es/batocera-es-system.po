@@ -1347,6 +1347,16 @@ msgctxt "game_options"
 msgid "3D ENGINE"
 msgstr "MOTOR 3D"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "3DS mode (bottom side)"
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "3DS mode (right side)"
+msgstr ""
+
 #. TRANSLATION: libretro/np2kai, libretro/px68k
 msgctxt "game_options"
 msgid "3MB"
@@ -3628,6 +3638,11 @@ msgstr "BLOOM"
 msgctxt "game_options"
 msgid "BOBBA FETT FIX"
 msgstr "BOBBA FETT FIX"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "BOOST RENDER RES"
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -8164,6 +8179,13 @@ msgctxt "game_options"
 msgid "Fixes flickering."
 msgstr "Correciones de parpadeo."
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Fixes some shadows and textures in Virtua Tennis 3 and Virtua Fighter 5 "
+"franchise for non Nvidia GPUs."
+msgstr ""
+
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Flight Stick (3 Axes, 4 Btns, 1 Hat)"
@@ -9468,11 +9490,9 @@ msgstr "Horizontal"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid ""
-"House of the Dead 4 speed fix. Sets the game to the CPU base frequency of "
+"House of the Dead 4 speed fix. Sets the game to the CPU minimum frequency of "
 "your processor."
 msgstr ""
-"Corrección de velocidad de House of the Dead 4. Configura el juego según la "
-"frecuencia base de la CPU de tu procesador."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -11850,6 +11870,11 @@ msgctxt "game_options"
 msgid "No skipping"
 msgstr "Sin saltar"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "No touch screen (Default)"
+msgstr ""
+
 #. TRANSLATION: citron, dolphin, dolphin_triforce, drastic, fallout1-ce, ...
 msgctxt "game_options"
 msgid "None"
@@ -12625,6 +12650,11 @@ msgstr "SUBPROCESOS SPU"
 msgctxt "game_options"
 msgid "PRESENTATION MODE"
 msgstr "MODO PRESENTACIÓN"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "PRIMEVAL HUNT MODE"
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -14762,6 +14792,11 @@ msgctxt "game_options"
 msgid "Set system-wide controls via MAME menu"
 msgstr "Establece controles para todo el sistema a través del menú MAME"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Set the Primeval Hunt mode (touch screen)."
+msgstr ""
+
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "Set the colour palette to use."
@@ -15003,6 +15038,11 @@ msgstr "Shunt 8"
 msgctxt "game_options"
 msgid "Shunt 9"
 msgstr "Shunt 9"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Side by side"
+msgstr ""
 
 #. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em
 msgctxt "game_options"
@@ -16739,6 +16779,11 @@ msgctxt "game_options"
 msgid "USE WHEELS"
 msgstr "USAR VOLANTES"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "USE ZINK FOR RENDERING"
+msgstr ""
+
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid "USER DISK"
@@ -16969,6 +17014,11 @@ msgid "Upscale filter used for the 2D layers. Requires New 3D engine."
 msgstr ""
 "Filtro de aumento de escala utilizado para las capas 2D. Requiere un nuevo "
 "motor 3D."
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Upscale rendering resolution to display size."
+msgstr ""
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -18832,6 +18882,14 @@ msgstr "amarillo/azul"
 #~ msgctxt "keys_files"
 #~ msgid "Graphics filtering on/off"
 #~ msgstr "Filtros gráficos on/off"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "House of the Dead 4 speed fix. Sets the game to the CPU base frequency of "
+#~ "your processor."
+#~ msgstr ""
+#~ "Corrección de velocidad de House of the Dead 4. Configura el juego según "
+#~ "la frecuencia base de la CPU de tu procesador."
 
 #~ msgctxt "game_options"
 #~ msgid ""
