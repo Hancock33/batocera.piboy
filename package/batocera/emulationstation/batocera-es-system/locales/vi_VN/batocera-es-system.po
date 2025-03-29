@@ -3316,6 +3316,11 @@ msgctxt "game_options"
 msgid "Atari XE Game System cartridges"
 msgstr "Atari XE Game System cartridges"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Attack"
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "August"
@@ -5707,6 +5712,16 @@ msgctxt "game_options"
 msgid "Cycle Timing Check"
 msgstr "Chu kỳ kiểm tra"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Cycle next"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Cycle previous"
+msgstr ""
+
 #. TRANSLATION: libretro/puae2021
 msgctxt "game_options"
 msgid "Cycle-exact"
@@ -6225,7 +6240,7 @@ msgctxt "game_options"
 msgid "Disable to access the system's settings, like time and language."
 msgstr "Tắt quyền truy cập vào cài đặt hệ thống, như thời gian và ngôn ngữ."
 
-#. TRANSLATION: bigpemu, citron, duckstation, f2bgl, flycast, ...
+#. TRANSLATION: bigpemu, bstone, citron, duckstation, f2bgl, ...
 msgctxt "game_options"
 msgid "Disabled"
 msgstr "Tắt"
@@ -6235,7 +6250,7 @@ msgctxt "game_options"
 msgid "Disabled (Beatle Interpreter)"
 msgstr "Vô hiệu hóa (trình biên dịch Beatle)"
 
-#. TRANSLATION: cemu, cgenius, devilutionx, duckstation, dxx-rebirth, ...
+#. TRANSLATION: bstone, cemu, cgenius, devilutionx, duckstation, ...
 msgctxt "game_options"
 msgid "Disabled (Default)"
 msgstr "Vô hiệu hóa (Mặc định)"
@@ -6673,7 +6688,7 @@ msgctxt "game_options"
 msgid "ENABLE TIME STRETCHING"
 msgstr "CHO PHÉP KÉO DÀI THỜI GIAN"
 
-#. TRANSLATION: model2emu, play
+#. TRANSLATION: bstone, model2emu, play
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN"
 msgstr "BẬT MÀN HÌNH RỘNG"
@@ -7237,17 +7252,22 @@ msgctxt "game_options"
 msgid "Enable virtual SD card"
 msgstr ""
 
+#. TRANSLATION: bstone
+msgctxt "game_options"
+msgid "Enable widescreen support for game rendering."
+msgstr ""
+
 #. TRANSLATION: model2emu, play, theforceengine
 msgctxt "game_options"
 msgid "Enable widescreen support."
 msgstr "Bật hỗ trợ màn hình rộng."
 
-#. TRANSLATION: bigpemu, cemu, cgenius, citron, devilutionx, ...
+#. TRANSLATION: bigpemu, bstone, cemu, cgenius, citron, ...
 msgctxt "game_options"
 msgid "Enabled"
 msgstr "Bật"
 
-#. TRANSLATION: duckstation, f2bgl, flycast, libretro/mame, libretro/swanstation, ...
+#. TRANSLATION: bstone, duckstation, f2bgl, flycast, libretro/mame, ...
 msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "Bật (Mặc định)"
@@ -8084,7 +8104,7 @@ msgctxt "game_options"
 msgid "Fix screen tearing, but may drop frames."
 msgstr "Sửa lỗi xé màn hình nhưng có thể làm rớt khung hình."
 
-#. TRANSLATION: bigpemu, cemu, dxx-rebirth, openbor/openbor7530, play, ...
+#. TRANSLATION: bigpemu, bstone, cemu, dxx-rebirth, openbor/openbor7530, ...
 msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr "Sửa lỗi xé màn hình."
@@ -11197,15 +11217,45 @@ msgctxt "keys_files"
 msgid "Menu Down"
 msgstr ""
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu N"
+msgstr ""
+
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Menu Up"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu Y"
 msgstr ""
 
 #. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Menu trở lại"
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu down"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu enter"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu escape"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu up"
+msgstr ""
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
@@ -11368,7 +11418,7 @@ msgctxt "keys_files"
 msgid "Move back / down"
 msgstr ""
 
-#. TRANSLATION: omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move backward"
 msgstr "Lùi về phía sau"
@@ -11393,7 +11443,7 @@ msgctxt "keys_files"
 msgid "Move camera up"
 msgstr "Di chuyển camera lên"
 
-#. TRANSLATION: omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move forward"
 msgstr "Tiến về phía trước"
@@ -11403,12 +11453,12 @@ msgctxt "keys_files"
 msgid "Move forward / up"
 msgstr ""
 
-#. TRANSLATION: omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move left"
 msgstr "Di chuyển sang trái"
 
-#. TRANSLATION: omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move right"
 msgstr "Di chuyển sang phải"
@@ -13786,7 +13836,7 @@ msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
 msgstr "Rumble Pak (Tự động)"
 
-#. TRANSLATION: catacomb.keys, omf2097.keys, prboom.gzdoom.keys, rott.keys
+#. TRANSLATION: bstone.keys, catacomb.keys, omf2097.keys, prboom.gzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr "Chạy"
@@ -14292,6 +14342,11 @@ msgstr "STRETCH TO DISPLAY AREA"
 msgctxt "game_options"
 msgid "STRETCH TO FILL"
 msgstr "KÉO DÀI ĐẾN KHI ĐẦY"
+
+#. TRANSLATION: bstone
+msgctxt "game_options"
+msgid "STRETCH UI MENU"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -15570,6 +15625,11 @@ msgctxt "game_options"
 msgid "Static Interpreter"
 msgstr "Static Interpreter"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Stats"
+msgstr ""
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Steering Wheel"
@@ -15600,12 +15660,12 @@ msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr "Strafe Phải"
 
-#. TRANSLATION: omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Strafe left"
 msgstr "Strafe trái"
 
-#. TRANSLATION: omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Strafe right"
 msgstr "Strafe phải"
@@ -16936,6 +16996,11 @@ msgctxt "game_options"
 msgid "Uruguay"
 msgstr "Uruguay"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Use"
+msgstr ""
+
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Use / Open"
@@ -17315,7 +17380,7 @@ msgctxt "game_options"
 msgid "VISUAL NUDGE STRENGTH"
 msgstr "VISUAL NUDGE STRENGTH"
 
-#. TRANSLATION: azahar, bigpemu, cemu, citron, dolphin, ...
+#. TRANSLATION: azahar, bigpemu, bstone, cemu, citron, ...
 msgctxt "game_options"
 msgid "VSYNC"
 msgstr "VSYNC"
@@ -17830,6 +17895,16 @@ msgstr "Phóng to để ẩn đường viền đen."
 msgctxt "game_options"
 msgid "Zooms in to hide black borders. Borders are different per game."
 msgstr "Phóng to để ẩn đường viền đen. Đường viền khác nhau với mỗi trò chơi."
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Zoon in"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Zoon out"
+msgstr ""
 
 #. TRANSLATION: citron
 msgctxt "game_options"

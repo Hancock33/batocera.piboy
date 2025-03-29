@@ -3316,6 +3316,11 @@ msgctxt "game_options"
 msgid "Atari XE Game System cartridges"
 msgstr "Cartele Atari XE Game System"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Attack"
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "August"
@@ -5708,6 +5713,16 @@ msgctxt "game_options"
 msgid "Cycle Timing Check"
 msgstr "Verificare temporizare ciclu"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Cycle next"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Cycle previous"
+msgstr ""
+
 #. TRANSLATION: libretro/puae2021
 msgctxt "game_options"
 msgid "Cycle-exact"
@@ -6228,7 +6243,7 @@ msgid "Disable to access the system's settings, like time and language."
 msgstr ""
 "Dezactivează pentru a accesa setările sistemului, cum ar fi ora și limba."
 
-#. TRANSLATION: bigpemu, citron, duckstation, f2bgl, flycast, ...
+#. TRANSLATION: bigpemu, bstone, citron, duckstation, f2bgl, ...
 msgctxt "game_options"
 msgid "Disabled"
 msgstr "Dezactivat"
@@ -6238,7 +6253,7 @@ msgctxt "game_options"
 msgid "Disabled (Beatle Interpreter)"
 msgstr "Dezactivat (Interpretor Beatle)"
 
-#. TRANSLATION: cemu, cgenius, devilutionx, duckstation, dxx-rebirth, ...
+#. TRANSLATION: bstone, cemu, cgenius, devilutionx, duckstation, ...
 msgctxt "game_options"
 msgid "Disabled (Default)"
 msgstr "Dezactivat (Implicit)"
@@ -6678,7 +6693,7 @@ msgctxt "game_options"
 msgid "ENABLE TIME STRETCHING"
 msgstr "ACTIVEAZĂ ÎNTINDEREA TIMPULUI"
 
-#. TRANSLATION: model2emu, play
+#. TRANSLATION: bstone, model2emu, play
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN"
 msgstr "ACTIVEAZĂ ECRAN LAT"
@@ -7252,17 +7267,22 @@ msgctxt "game_options"
 msgid "Enable virtual SD card"
 msgstr ""
 
+#. TRANSLATION: bstone
+msgctxt "game_options"
+msgid "Enable widescreen support for game rendering."
+msgstr ""
+
 #. TRANSLATION: model2emu, play, theforceengine
 msgctxt "game_options"
 msgid "Enable widescreen support."
 msgstr "Activează suportul pentru ecran lat."
 
-#. TRANSLATION: bigpemu, cemu, cgenius, citron, devilutionx, ...
+#. TRANSLATION: bigpemu, bstone, cemu, cgenius, citron, ...
 msgctxt "game_options"
 msgid "Enabled"
 msgstr "Activat"
 
-#. TRANSLATION: duckstation, f2bgl, flycast, libretro/mame, libretro/swanstation, ...
+#. TRANSLATION: bstone, duckstation, f2bgl, flycast, libretro/mame, ...
 msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "Activează (Implicit)"
@@ -8102,7 +8122,7 @@ msgctxt "game_options"
 msgid "Fix screen tearing, but may drop frames."
 msgstr "Repară ruperea ecranului, dar poate omite cadre."
 
-#. TRANSLATION: bigpemu, cemu, dxx-rebirth, openbor/openbor7530, play, ...
+#. TRANSLATION: bigpemu, bstone, cemu, dxx-rebirth, openbor/openbor7530, ...
 msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr "Rezolvă ruperea ecranului."
@@ -11232,15 +11252,45 @@ msgctxt "keys_files"
 msgid "Menu Down"
 msgstr ""
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu N"
+msgstr ""
+
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Menu Up"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu Y"
 msgstr ""
 
 #. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Înapoi în meniu"
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu down"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu enter"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu escape"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu up"
+msgstr ""
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
@@ -11405,7 +11455,7 @@ msgctxt "keys_files"
 msgid "Move back / down"
 msgstr "Mișcă înapoi / în jos"
 
-#. TRANSLATION: omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move backward"
 msgstr "Mișcă înapoi"
@@ -11430,7 +11480,7 @@ msgctxt "keys_files"
 msgid "Move camera up"
 msgstr "Mișcă camera în sus"
 
-#. TRANSLATION: omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move forward"
 msgstr "Mișcă înainte"
@@ -11440,12 +11490,12 @@ msgctxt "keys_files"
 msgid "Move forward / up"
 msgstr "Mișcă înainte / în sus"
 
-#. TRANSLATION: omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move left"
 msgstr "Mișcă la stânga"
 
-#. TRANSLATION: omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move right"
 msgstr "Mișcă la deapta"
@@ -13834,7 +13884,7 @@ msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
 msgstr "Pak vibrații (Automat)"
 
-#. TRANSLATION: catacomb.keys, omf2097.keys, prboom.gzdoom.keys, rott.keys
+#. TRANSLATION: bstone.keys, catacomb.keys, omf2097.keys, prboom.gzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr "Aleargă"
@@ -14339,6 +14389,11 @@ msgstr "ÎNTINDE LA ARIA ECRANULUI"
 msgctxt "game_options"
 msgid "STRETCH TO FILL"
 msgstr "ÎNTINDE PENTRU A UMPLE"
+
+#. TRANSLATION: bstone
+msgctxt "game_options"
+msgid "STRETCH UI MENU"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -15619,6 +15674,11 @@ msgctxt "game_options"
 msgid "Static Interpreter"
 msgstr "Interpretor static"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Stats"
+msgstr ""
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Steering Wheel"
@@ -15649,12 +15709,12 @@ msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr "Bombardează la dreapta"
 
-#. TRANSLATION: omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Strafe left"
 msgstr "Bombardează în stânga"
 
-#. TRANSLATION: omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Strafe right"
 msgstr "Bombardează în dreapta"
@@ -16993,6 +17053,11 @@ msgctxt "game_options"
 msgid "Uruguay"
 msgstr "Uruguay"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Use"
+msgstr ""
+
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Use / Open"
@@ -17376,7 +17441,7 @@ msgctxt "game_options"
 msgid "VISUAL NUDGE STRENGTH"
 msgstr "INTENSITATE VIZUALĂ ÎNGHIONTIRE"
 
-#. TRANSLATION: azahar, bigpemu, cemu, citron, dolphin, ...
+#. TRANSLATION: azahar, bigpemu, bstone, cemu, citron, ...
 msgctxt "game_options"
 msgid "VSYNC"
 msgstr "VSYNC"
@@ -17897,6 +17962,16 @@ msgctxt "game_options"
 msgid "Zooms in to hide black borders. Borders are different per game."
 msgstr ""
 "Mărește pentru a ascunde marginile negre. Marginile sunt diferite per joc."
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Zoon in"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Zoon out"
+msgstr ""
 
 #. TRANSLATION: citron
 msgctxt "game_options"
