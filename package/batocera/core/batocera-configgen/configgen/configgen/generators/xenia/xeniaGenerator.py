@@ -67,6 +67,9 @@ class XeniaGenerator(Generator):
         else:
             _logger.debug("*** Vulkan driver required is not available on the system!!! ***")
             sys.exit()
+        
+        # Use wine proton
+        wine.set_wine_runner("wine-proton")
 
         # set to 64bit environment by default
         os.environ['WINEARCH'] = 'win64'

@@ -7,6 +7,7 @@
 - Removed the buggy Libretro-Openlara in favor of the standalone TRX1 Tomb Raider port.
   If you have saved games, it is recommended to stick with v41 or earlier as the same data is not compatible.
 - Zedmd upgraded. You need firmware zedmd 5.1.5. See https://wiki.batocera.org/hardware:diy_zedmd?s[]=dmd#zedmd_configuration.
+- The folder for SegaCD/MegaCD roms is now called `megacd` to keep consistency (like `megadrive` is used, not `genesis`)
 - Removed Future Pinball in favor of Visual Pinball which has been available for some time and runs native on Linux.
 ### Hardware
 - Add OrangePi 4a board support
@@ -44,6 +45,7 @@
   AmstradCPC, AtariST, ZX81, ZXSpectrum, AppleII, AppleIIGS, Macintosh, Archimedes, Electron
 - gun : option to hide the crosshair in ES
 - Azahar 3DS emulator: Version 2120.1
+- Wine Proton 9.0.4 as a Wine runner from Kron4ek's Wine-Builds
 ### Fixed
 - Fix some problems in ES and Batocera with IPv6 networks
 - Fix ES behavior with usb network tethering
@@ -60,6 +62,7 @@
 - Batocera-wine: add saves directory and save files options
 - Libretro-virtualjaguar core can now load .zip ROMs
 - Updated BlamCon code to new firmware (now compatible with 4 light guns)
+- Xenia now uses Wine-Proton for more compatibility (i.e. Halo 4)
 ### Updated
 - BigPEmu to v118
 - Cemu to 2.6
@@ -77,7 +80,7 @@
 - ScummVM to v2.9.0
 - PCSX2 to v2.3.185
 - Play! to 4th Feb build
-- Xemu to v0.8.41
+- Xemu to v0.8.45
 - Triforce to use a Crediar build (Nov 29, 2024)
 - Vice to 3.9
 - TheXTech to v1.3.7-hotfix2

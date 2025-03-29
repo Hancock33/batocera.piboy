@@ -697,6 +697,7 @@ menu "WINE"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/wine/vkd3d-proton/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/wine/wine-custom/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/wine/wine-mono/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/wine/wine-proton/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/wine/winetricks/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/wine/wine-x86/Config.in"
 endmenu
