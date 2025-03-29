@@ -1,11 +1,12 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|3c5ddb59329113417e4744c814c36ea0276be3e4|Mar 29, 2025
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|3c5ddb59329113417e4744c814c36ea0276be3e4|Mar 29, 2025
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|8dade821742f8394f58f0c1c04fb9abd412ff842|Mar 29, 2025
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|8dade821742f8394f58f0c1c04fb9abd412ff842|Mar 29, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|c25fd44265f60237d9308891dccb5378c9467572|Mar 29, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|9819d66a478be3d57af9278e6c2cb433556a78d1|Mar 29, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|54c42f9c27932af84f2de774543b54c372a9ef90|Mar 29, 2025
-Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|dc54fbd5026e2db889d1365fcd32ba422a572534|Mar 29, 2025
+Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|fc31d3d239e4cce77807fd3aeef41b58c3f52a55|Mar 29, 2025
+Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|8d1f2764f34837b08f23a684f79737c0f1776fa3|Mar 29, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.246|Mar 29, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|845587abb9de7ab11b648631156325700bcf683a|Mar 29, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|01cdc83aeb439b3b9c15e1b681c30a97a56af85a|Mar 29, 2025
@@ -17,7 +18,7 @@ Ports|[box64](http://github.com/ptitseb/box64)|e7b71cba5fe8ef92cc50266ed380203b7
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|6c8ec977c5b27f225d1a11b6533064259e08bc46|Mar 29, 2025
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|821c90525cf475e4413a57cbeca5ddc68f6071e9|Mar 29, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|74669033b7b179cd0be81c3cfb723ede313dfe1e|Mar 29, 2025
-Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|1e301de05863ca39acdf3a796baf5a2f3e339e90|Mar 29, 2025
+Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|69d3377ac6999f6174852700c3d371a6e529d299|Mar 29, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250329|Mar 29, 2025
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|81cbbda37f57a5aec3e06337ce9f78018c363878|Mar 29, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|76598f1016cbba22db7ef03cc4f70aa5e9b0926e|Mar 29, 2025
@@ -26,7 +27,8 @@ Ports|[doomretro](http://github.com/bradharding/doomretro)|ee58b9335e4e9648a3296
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|da6730d0a7b8ab6ac330529d1d9a54c0a8ef25d4|Mar 29, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|b1685c2d76dbdb59f607fc5b77651ed539eacd52|Mar 29, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|845587abb9de7ab11b648631156325700bcf683a|Mar 29, 2025
-Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|20b82d8ab7d117c4f511e714fbdd580eec0bc133|Mar 29, 2025
+Emulators|[libretro-stella](http://github.com/stella-emu/stella)|b753f6eefa4bf02af20eacae98caab7d5aabc4a8|Mar 29, 2025
+Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|d5ac2a853bb95810b5c0ab5ce5f3c5761775bb4f|Mar 29, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|c072ec36096e355631724590dba5b284ab248b8b|Mar 28, 2025
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|eda2d6f9fa9efadc6196258628e3a33107675a11|Mar 28, 2025
 Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|b25c7653e64780775893bcd621ee241c30f51451|Mar 28, 2025
@@ -62,7 +64,6 @@ Ports|[tr1x](http://github.com/LostArtefacts/TRX)|2adaf2ac0f2c17705efc753ab7258f
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|2adaf2ac0f2c17705efc753ab7258fd35782cc8e|Mar 26, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|06e5895d7aa47bb2f5fefdce3102e91771ad67aa|Mar 26, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|ad3b6536f57ec189defabc8aa0fe9d854d167d67|Mar 26, 2025
-Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|527bdc418f8b58b32407a25a15ad4a20782d1c80|Mar 25, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|e5bfa2027915abc08908a86a586ed87c042d630e|Mar 25, 2025
 Emulators|[play](https://github.com/jpd002/Play-.git)|01d094c0c3ed723b0747079afddfd319001f01d4|Mar 25, 2025
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|4db3f1f6c857d317d00dff1d35a789163bf37271|Mar 25, 2025
@@ -105,7 +106,6 @@ Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-10.0
 Wine|[wine-proton](http://github.com/ValveSoftware/wine)|experimental-wine-9.0-20250317|Mar 17, 2025
 Emulators|[libretro-beetle-saturn](http://github.com/libretro/beetle-saturn-libretro)|06c9daa7ff6de42955437d29a80d8fc4ececc8d3|Mar 17, 2025
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|fec4428ebf3bdb0b7d32bbd762917a4241f0c3e9|Mar 17, 2025
-Emulators|[libretro-stella](http://github.com/stella-emu/stella)|aaa6c154750119905190da49569fa9e2de7bb97b|Mar 17, 2025
 Emulators|[hatari](http://github.com/hatari/hatari)|d635e360dcc783ec971408d703c978103245f867|Mar 16, 2025
 Gpu|[nvidia-open-driver](http://download.nvidia.com/XFree86/Linux-x86)|570.133.07|Mar 16, 2025
 Gpu|[nvidia-proprietary-driver](http://download.nvidia.com/XFree86/Linux-x86)|$(NVIDIA_OPEN_DRIVER_VERSION)|Mar 16, 2025
