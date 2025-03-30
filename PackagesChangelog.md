@@ -7,6 +7,7 @@ Emulators|[thextech](https://github.com/TheXTech/TheXTech)|4e6f3cfd908074bb07eab
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|9ec1281f0d74855e6793cb7bc8edb0e1c92d0054|Mar 30, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|00ecd0140bc9cb9ac0ee70f13ff173063921afc4|Mar 30, 2025
 Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|81734aedcc1e7f97ff7f8faae5ff0054c65ba367|Mar 30, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|18272a9279e681f768cc3ee5a4b47a395d667ff5|Mar 30, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250330|Mar 30, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|57b1d5880f705fc1a039b09a3af2885677e93308|Mar 30, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250330|Mar 30, 2025
@@ -88,7 +89,6 @@ Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|5aa6c536607a551
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|90b5bfcc1781d0922e91f246f865ccc18e94f4d8|Mar 22, 2025
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|03cdee457fe2500233d7b7faa6519e65c30e3e42|Mar 22, 2025
 Ports|[bstone](http://github.com/bibendovsky/bstone)|11ff54148b62e223d84cd7095cfdee4811e5eeca|Mar 22, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.4|Mar 22, 2025
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|818aca56efd784624a241a12936b5c0864e3ddd8|Mar 21, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|2025-03-20|Mar 20, 2025
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.3.17|Mar 20, 2025
