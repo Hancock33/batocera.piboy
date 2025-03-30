@@ -17866,6 +17866,11 @@ msgctxt "game_options"
 msgid "Zone for which the game doesn't react to the wheel (in degrees)"
 msgstr "Vùng mà game không phản ứng với wheel (tính bằng độ)"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Zoom in"
+msgstr ""
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom in the camera"
@@ -17875,6 +17880,11 @@ msgstr "Phóng to máy ảnh"
 msgctxt "keys_files"
 msgid "Zoom in x5"
 msgstr "Phóng to x5"
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Zoom out"
+msgstr ""
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -17895,16 +17905,6 @@ msgstr "Phóng to để ẩn đường viền đen."
 msgctxt "game_options"
 msgid "Zooms in to hide black borders. Borders are different per game."
 msgstr "Phóng to để ẩn đường viền đen. Đường viền khác nhau với mỗi trò chơi."
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Zoon in"
-msgstr ""
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Zoon out"
-msgstr ""
 
 #. TRANSLATION: citron
 msgctxt "game_options"

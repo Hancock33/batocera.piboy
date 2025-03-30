@@ -17792,6 +17792,11 @@ msgctxt "game_options"
 msgid "Zone for which the game doesn't react to the wheel (in degrees)"
 msgstr "게임이 핸들에 반응하지 않는 영역 (°)"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Zoom in"
+msgstr ""
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom in the camera"
@@ -17801,6 +17806,11 @@ msgstr "카메라 확대"
 msgctxt "keys_files"
 msgid "Zoom in x5"
 msgstr "5배 확대"
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Zoom out"
+msgstr ""
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -17821,16 +17831,6 @@ msgstr "확대하여 검은색 테두리를 숨깁니다."
 msgctxt "game_options"
 msgid "Zooms in to hide black borders. Borders are different per game."
 msgstr "확대/축소하여 검은색 테두리를 숨깁니다. 테두리는 게임마다 다릅니다."
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Zoon in"
-msgstr ""
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Zoon out"
-msgstr ""
 
 #. TRANSLATION: citron
 msgctxt "game_options"

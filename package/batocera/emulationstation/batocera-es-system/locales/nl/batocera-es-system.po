@@ -17938,6 +17938,11 @@ msgctxt "game_options"
 msgid "Zone for which the game doesn't react to the wheel (in degrees)"
 msgstr "Zone waarbinnen het spel niet reageert op het wiel (in graden)"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Zoom in"
+msgstr ""
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom in the camera"
@@ -17947,6 +17952,11 @@ msgstr "Zoom de camera in"
 msgctxt "keys_files"
 msgid "Zoom in x5"
 msgstr "Zoom in x5"
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Zoom out"
+msgstr ""
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -17968,16 +17978,6 @@ msgctxt "game_options"
 msgid "Zooms in to hide black borders. Borders are different per game."
 msgstr ""
 "Zoomt in om zwarte randen te verbergen. Randen zijn verschillend per spel."
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Zoon in"
-msgstr ""
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Zoon out"
-msgstr ""
 
 #. TRANSLATION: citron
 msgctxt "game_options"

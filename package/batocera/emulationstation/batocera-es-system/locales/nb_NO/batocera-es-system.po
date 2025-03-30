@@ -17838,6 +17838,11 @@ msgctxt "game_options"
 msgid "Zone for which the game doesn't react to the wheel (in degrees)"
 msgstr "Sone der spillet ikke reagerer på rattet (i grader)"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Zoom in"
+msgstr ""
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom in the camera"
@@ -17847,6 +17852,11 @@ msgstr "Zoom inn i kameraet"
 msgctxt "keys_files"
 msgid "Zoom in x5"
 msgstr "Zoom inn x5"
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Zoom out"
+msgstr ""
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -17869,16 +17879,6 @@ msgid "Zooms in to hide black borders. Borders are different per game."
 msgstr ""
 "Zoomer inn for å skjule svarte kanter. Kantene er forskjellige fra spill til "
 "spill."
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Zoon in"
-msgstr ""
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Zoon out"
-msgstr ""
 
 #. TRANSLATION: citron
 msgctxt "game_options"

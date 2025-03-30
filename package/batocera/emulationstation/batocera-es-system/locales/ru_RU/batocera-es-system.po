@@ -17873,6 +17873,11 @@ msgctxt "game_options"
 msgid "Zone for which the game doesn't react to the wheel (in degrees)"
 msgstr "Зона, в которой игра не реагирует на руль (в градусах)"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Zoom in"
+msgstr ""
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom in the camera"
@@ -17882,6 +17887,11 @@ msgstr "Приблизить камеру"
 msgctxt "keys_files"
 msgid "Zoom in x5"
 msgstr "Увеличить x5"
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Zoom out"
+msgstr ""
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -17904,16 +17914,6 @@ msgid "Zooms in to hide black borders. Borders are different per game."
 msgstr ""
 "Увеличивает масштаб, чтобы скрыть черные границы. Границы различаются в "
 "зависимости от игры."
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Zoon in"
-msgstr ""
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Zoon out"
-msgstr ""
 
 #. TRANSLATION: citron
 msgctxt "game_options"

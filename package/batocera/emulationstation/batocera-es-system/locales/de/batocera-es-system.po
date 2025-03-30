@@ -17997,6 +17997,11 @@ msgid "Zone for which the game doesn't react to the wheel (in degrees)"
 msgstr ""
 "Bereich, in der das Spiel nicht auf Lenkradbewegungen reagiert (in Grad)"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Zoom in"
+msgstr ""
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom in the camera"
@@ -18006,6 +18011,11 @@ msgstr "Kamera hineinzoomen"
 msgctxt "keys_files"
 msgid "Zoom in x5"
 msgstr "Vergrößern x5"
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Zoom out"
+msgstr ""
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -18028,16 +18038,6 @@ msgid "Zooms in to hide black borders. Borders are different per game."
 msgstr ""
 "Ausblenden schwarzer Randbereiche mittels Zoom-Funktion. Die Bereiche "
 "unterscheiden sich von Spiel zu Spiel."
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Zoon in"
-msgstr ""
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Zoon out"
-msgstr ""
 
 #. TRANSLATION: citron
 msgctxt "game_options"
