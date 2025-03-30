@@ -17775,7 +17775,7 @@ msgctxt "keys_files"
 msgid "Use item"
 msgstr ""
 
-#. TRANSLATION: omf2097.keys
+#. TRANSLATION: bstone.keys, omf2097.keys
 msgctxt "keys_files"
 msgid "Next weapon"
 msgstr ""
@@ -17837,22 +17837,12 @@ msgstr ""
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
-msgid "Cycle previous"
+msgid "Menu left"
 msgstr ""
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
-msgid "Cycle next"
-msgstr ""
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Menu Y"
-msgstr ""
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Menu N"
+msgid "Menu right"
 msgstr ""
 
 #. TRANSLATION: bstone.keys
@@ -17872,7 +17862,17 @@ msgstr ""
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
-msgid "Menu escape"
+msgid "Menu back / exit"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Pause"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Previous weapon"
 msgstr ""
 
 #. TRANSLATION: catacomb.keys

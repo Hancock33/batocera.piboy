@@ -5713,16 +5713,6 @@ msgctxt "game_options"
 msgid "Cycle Timing Check"
 msgstr "Verificare temporizare ciclu"
 
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Cycle next"
-msgstr "Ciclează următorul"
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Cycle previous"
-msgstr "Ciclează anteriorul"
-
 #. TRANSLATION: libretro/puae2021
 msgctxt "game_options"
 msgid "Cycle-exact"
@@ -11254,25 +11244,20 @@ msgctxt "keys_files"
 msgid "Menu Down"
 msgstr ""
 
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Menu N"
-msgstr "Meniu N"
-
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Menu Up"
 msgstr ""
 
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Menu Y"
-msgstr "Meniu Y"
-
 #. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Înapoi în meniu"
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu back / exit"
+msgstr ""
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
@@ -11286,8 +11271,13 @@ msgstr "Meniu intră"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
-msgid "Menu escape"
-msgstr "Meniu ieși"
+msgid "Menu left"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu right"
+msgstr ""
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
@@ -11859,7 +11849,7 @@ msgctxt "keys_files"
 msgid "Next slot"
 msgstr "Următorul slot"
 
-#. TRANSLATION: omf2097.keys
+#. TRANSLATION: bstone.keys, omf2097.keys
 msgctxt "keys_files"
 msgid "Next weapon"
 msgstr "Următoarea armă"
@@ -12803,6 +12793,11 @@ msgctxt "game_options"
 msgid "Partial"
 msgstr "Parțială"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Pause"
+msgstr ""
+
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Pentagon 1024"
@@ -13186,6 +13181,11 @@ msgstr "Elementul anterior"
 msgctxt "keys_files"
 msgid "Previous slot"
 msgstr "Slotul anterior"
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Previous weapon"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -18723,6 +18723,14 @@ msgstr "galben/albastru"
 #~ "Decupează arta MAME pentru a maximiza ecranul de joc și umple doar "
 #~ "spațiul nefolosit."
 
+#~ msgctxt "keys_files"
+#~ msgid "Cycle next"
+#~ msgstr "Ciclează următorul"
+
+#~ msgctxt "keys_files"
+#~ msgid "Cycle previous"
+#~ msgstr "Ciclează anteriorul"
+
 #~ msgctxt "game_options"
 #~ msgid "D3D12 (Default)"
 #~ msgstr "D3D12 (Implicit)"
@@ -19011,6 +19019,18 @@ msgstr "galben/albastru"
 #~ msgctxt "keys_files"
 #~ msgid "Mech Tilt"
 #~ msgstr "Înclinare mecanică"
+
+#~ msgctxt "keys_files"
+#~ msgid "Menu N"
+#~ msgstr "Meniu N"
+
+#~ msgctxt "keys_files"
+#~ msgid "Menu Y"
+#~ msgstr "Meniu Y"
+
+#~ msgctxt "keys_files"
+#~ msgid "Menu escape"
+#~ msgstr "Meniu ieși"
 
 #~ msgctxt "game_options"
 #~ msgid ""

@@ -5729,16 +5729,6 @@ msgctxt "game_options"
 msgid "Cycle Timing Check"
 msgstr "Comprobación do tempo de ciclo"
 
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Cycle next"
-msgstr ""
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Cycle previous"
-msgstr ""
-
 #. TRANSLATION: libretro/puae2021
 msgctxt "game_options"
 msgid "Cycle-exact"
@@ -11244,25 +11234,20 @@ msgctxt "keys_files"
 msgid "Menu Down"
 msgstr ""
 
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Menu N"
-msgstr ""
-
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Menu Up"
-msgstr ""
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Menu Y"
 msgstr ""
 
 #. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Voltar ao menú"
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu back / exit"
+msgstr ""
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
@@ -11276,7 +11261,12 @@ msgstr ""
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
-msgid "Menu escape"
+msgid "Menu left"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu right"
 msgstr ""
 
 #. TRANSLATION: bstone.keys
@@ -11848,7 +11838,7 @@ msgctxt "keys_files"
 msgid "Next slot"
 msgstr "Seguinte espazo"
 
-#. TRANSLATION: omf2097.keys
+#. TRANSLATION: bstone.keys, omf2097.keys
 msgctxt "keys_files"
 msgid "Next weapon"
 msgstr "Seguinte arma"
@@ -12794,6 +12784,11 @@ msgctxt "game_options"
 msgid "Partial"
 msgstr "Parcial"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Pause"
+msgstr ""
+
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Pentagon 1024"
@@ -13177,6 +13172,11 @@ msgstr "Obxecto anterior"
 msgctxt "keys_files"
 msgid "Previous slot"
 msgstr "Espazo anterior"
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Previous weapon"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
