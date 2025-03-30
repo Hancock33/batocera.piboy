@@ -7,7 +7,9 @@ Emulators|[thextech](https://github.com/TheXTech/TheXTech)|4e6f3cfd908074bb07eab
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|9ec1281f0d74855e6793cb7bc8edb0e1c92d0054|Mar 30, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|00ecd0140bc9cb9ac0ee70f13ff173063921afc4|Mar 30, 2025
 Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|81734aedcc1e7f97ff7f8faae5ff0054c65ba367|Mar 30, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250330|Mar 30, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|57b1d5880f705fc1a039b09a3af2885677e93308|Mar 30, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250330|Mar 30, 2025
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|6091efb4d64ed745495455ba82352ec82f55cb4f|Mar 30, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|8dade821742f8394f58f0c1c04fb9abd412ff842|Mar 29, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|8dade821742f8394f58f0c1c04fb9abd412ff842|Mar 29, 2025
@@ -25,10 +27,8 @@ Ports|[box64](http://github.com/ptitseb/box64)|e7b71cba5fe8ef92cc50266ed380203b7
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|821c90525cf475e4413a57cbeca5ddc68f6071e9|Mar 29, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|74669033b7b179cd0be81c3cfb723ede313dfe1e|Mar 29, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|69d3377ac6999f6174852700c3d371a6e529d299|Mar 29, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250329|Mar 29, 2025
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|9f8fc1e4c59c4cdb37112ef0c100158b25c2c1cb|Mar 29, 2025
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|81cbbda37f57a5aec3e06337ce9f78018c363878|Mar 29, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250329|Mar 29, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|ee58b9335e4e9648a3296e16f6074285fb53ef58|Mar 29, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|da6730d0a7b8ab6ac330529d1d9a54c0a8ef25d4|Mar 29, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|b1685c2d76dbdb59f607fc5b77651ed539eacd52|Mar 29, 2025
