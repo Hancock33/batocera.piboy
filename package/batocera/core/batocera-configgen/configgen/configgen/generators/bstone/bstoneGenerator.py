@@ -89,7 +89,7 @@ class BstoneGenerator(Generator):
             if file.is_file() and file.name.lower() in filename_to_flag:
                 version_flags.add(filename_to_flag[file.name.lower()])
 
-        commandArray = ["/usr/bin/bstone", "--profile_dir", _BSTONE_CONFIG, "--data_dir", romdir]
+        commandArray = ["/usr/bin/bstone", "--profile_dir", _BSTONE_CONFIG, "--data_dir", romdir, "--vid_width", str(gameResolution["width"]), "--vid_height", str(gameResolution["height"])]
         commandArray.extend(version_flags)
 
         return Command.Command(
