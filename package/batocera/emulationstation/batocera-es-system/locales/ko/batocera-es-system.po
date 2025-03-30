@@ -1,22 +1,19 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-03-08 21:11+0900\n"
+"PO-Revision-Date: 2025-03-30 13:39+0900\n"
 "Last-Translator: DDinghoya <ddinghoya@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team: Korean (KO)\n"
 "Language: ko_KO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Loco-Source-Locale: ko_KR\n"
 "X-Generator: Poedit 3.5\n"
+"X-Loco-Parser: loco_parse_po\n"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -1352,6 +1349,16 @@ msgstr "386_slow"
 msgctxt "game_options"
 msgid "3D ENGINE"
 msgstr "3D 엔진"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "3DS mode (bottom side)"
+msgstr "3DS 모드 (아래쪽)"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "3DS mode (right side)"
+msgstr "3DS 모드 (오른쪽)"
 
 #. TRANSLATION: libretro/np2kai, libretro/px68k
 msgctxt "game_options"
@@ -3302,6 +3309,11 @@ msgctxt "game_options"
 msgid "Atari XE Game System cartridges"
 msgstr "아타리 XE 게임 시스템 카트리지"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Attack"
+msgstr "공격"
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "August"
@@ -3619,6 +3631,11 @@ msgstr "BLOOM"
 msgctxt "game_options"
 msgid "BOBBA FETT FIX"
 msgstr "BOBBA FETT FIX"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "BOOST RENDER RES"
+msgstr "렌더링 해상도 향상"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -6194,7 +6211,7 @@ msgctxt "game_options"
 msgid "Disable to access the system's settings, like time and language."
 msgstr "시간, 언어 등 시스템 설정에 대한 접속을 비활성화합니다."
 
-#. TRANSLATION: bigpemu, citron, duckstation, f2bgl, flycast, ...
+#. TRANSLATION: bigpemu, bstone, citron, duckstation, f2bgl, ...
 msgctxt "game_options"
 msgid "Disabled"
 msgstr "비활성화"
@@ -6204,7 +6221,7 @@ msgctxt "game_options"
 msgid "Disabled (Beatle Interpreter)"
 msgstr "비활성화 (비틀 해석기)"
 
-#. TRANSLATION: cemu, cgenius, devilutionx, duckstation, dxx-rebirth, ...
+#. TRANSLATION: bstone, cemu, cgenius, devilutionx, duckstation, ...
 msgctxt "game_options"
 msgid "Disabled (Default)"
 msgstr "비활성화 (기본)"
@@ -6642,7 +6659,7 @@ msgctxt "game_options"
 msgid "ENABLE TIME STRETCHING"
 msgstr "타임 스트레칭 활성화"
 
-#. TRANSLATION: model2emu, play
+#. TRANSLATION: bstone, model2emu, play
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN"
 msgstr "와이드스크린 활성화"
@@ -7198,17 +7215,22 @@ msgctxt "game_options"
 msgid "Enable virtual SD card"
 msgstr ""
 
+#. TRANSLATION: bstone
+msgctxt "game_options"
+msgid "Enable widescreen support for game rendering."
+msgstr "게임 렌더링에 와이드스크린 지원을 활성화합니다."
+
 #. TRANSLATION: model2emu, play, theforceengine
 msgctxt "game_options"
 msgid "Enable widescreen support."
 msgstr "와이드스크린 지원을 활성화합니다."
 
-#. TRANSLATION: bigpemu, cemu, cgenius, citron, devilutionx, ...
+#. TRANSLATION: bigpemu, bstone, cemu, cgenius, citron, ...
 msgctxt "game_options"
 msgid "Enabled"
 msgstr "활성화"
 
-#. TRANSLATION: duckstation, f2bgl, flycast, libretro/mame, libretro/swanstation, ...
+#. TRANSLATION: bstone, duckstation, f2bgl, flycast, libretro/mame, ...
 msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "활성화 (기본)"
@@ -7557,7 +7579,7 @@ msgstr "에뮬레이터 나가기"
 #. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Exit the emulator"
-msgstr "에뮬레이터 나가기"
+msgstr ""
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -7802,7 +7824,7 @@ msgstr ""
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "FRAMERATE"
-msgstr "프레임속도"
+msgstr ""
 
 #. TRANSLATION: flycast, libretro/desmume, libretro/fbneo, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
@@ -8034,7 +8056,7 @@ msgctxt "game_options"
 msgid "Fix screen tearing, but may drop frames."
 msgstr "화면 찢어짐 현상을 수정하지만 프레임이 떨어질 수 있습니다."
 
-#. TRANSLATION: bigpemu, cemu, dxx-rebirth, openbor/openbor7530, play, ...
+#. TRANSLATION: bigpemu, bstone, cemu, dxx-rebirth, openbor/openbor7530, ...
 msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr "화면 찢어짐 현상을 수정합니다."
@@ -8087,6 +8109,15 @@ msgstr "여러 컨트롤러 검색에서 발생할 수 있는 버그를 수정�
 msgctxt "game_options"
 msgid "Fixes flickering."
 msgstr "깜빡이는 현상이 수정되었습니다."
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid ""
+"Fixes some shadows and textures in Virtua Tennis 3 and Virtua Fighter 5 "
+"franchise for non Nvidia GPUs. May need the FPS limiter option enabled."
+msgstr ""
+"Nvidia GPU가 아닌 버추어 테니스 3 및 버추어 파이터 5 프랜차이즈의 일부 그림자"
+"와 텍스처를 수정합니다. FPS 리미터 옵션을 활성화해야 할 수 있습니다."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -9304,7 +9335,7 @@ msgstr "숨기기"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Hide bezels"
-msgstr ""
+msgstr "베젤 숨기기"
 
 #. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
@@ -9314,7 +9345,7 @@ msgstr "지원되는 게임(예: 액션맥스, 매드독 II)에서 조준선을 
 #. TRANSLATION: naomigd.flycast.keys
 msgctxt "keys_files"
 msgid "Hide the bezel"
-msgstr "베젤 숨기기"
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -9384,11 +9415,11 @@ msgstr "수평 (가로)"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid ""
-"House of the Dead 4 speed fix. Sets the game to the CPU base frequency of "
+"House of the Dead 4 speed fix. Sets the game to the CPU minimum frequency of "
 "your processor."
 msgstr ""
-"하우스 오브 데드 4 속도 수정입니다. 게임을 프로세서의 CPU 기본 주파수로 설정"
-"합니다."
+"하우스 오브 더 데드 4 속도 수정합니다. 게임을 프로세서의 CPU 최소 주파수로 설"
+"정합니다."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -11140,6 +11171,36 @@ msgctxt "keys_files"
 msgid "Menu back"
 msgstr "메뉴 뒤로가기"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu back / exit"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu down"
+msgstr "메뉴 아래"
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu enter"
+msgstr "메뉴 엔터"
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu left"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu right"
+msgstr ""
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Menu up"
+msgstr "메뉴 위"
+
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
 msgid "Merge"
@@ -11301,7 +11362,7 @@ msgctxt "keys_files"
 msgid "Move back / down"
 msgstr "뒤로 / 아래로 이동"
 
-#. TRANSLATION: omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move backward"
 msgstr "뒤로 이동"
@@ -11326,7 +11387,7 @@ msgctxt "keys_files"
 msgid "Move camera up"
 msgstr "카메라를 위쪽으로 이동"
 
-#. TRANSLATION: omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move forward"
 msgstr "앞으로 이동"
@@ -11336,12 +11397,12 @@ msgctxt "keys_files"
 msgid "Move forward / up"
 msgstr "앞으로 / 위로 이동"
 
-#. TRANSLATION: omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move left"
 msgstr "왼쪽으로 이동"
 
-#. TRANSLATION: omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move right"
 msgstr "오른쪽으로 이동"
@@ -11692,7 +11753,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Next disk"
-msgstr ""
+msgstr "다음 디스크"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -11704,7 +11765,7 @@ msgctxt "keys_files"
 msgid "Next slot"
 msgstr "다음 슬ㄹ"
 
-#. TRANSLATION: omf2097.keys
+#. TRANSLATION: bstone.keys, omf2097.keys
 msgctxt "keys_files"
 msgid "Next weapon"
 msgstr "다음 무기"
@@ -11748,6 +11809,11 @@ msgstr "라이선스가 활성화되지 않았음"
 msgctxt "game_options"
 msgid "No skipping"
 msgstr "건너뛰기 없음"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "No touch screen (Default)"
+msgstr "터치 스크린 없음 (기본)"
 
 #. TRANSLATION: citron, dolphin, dolphin_triforce, drastic, fallout1-ce, ...
 msgctxt "game_options"
@@ -12512,6 +12578,11 @@ msgctxt "game_options"
 msgid "PRESENTATION MODE"
 msgstr "프레젠테이션 패션"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "PRIMEVAL HUNT MODE"
+msgstr "원시 사냥 모드"
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "PS1 Analogue Joystick"
@@ -12630,6 +12701,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Partial"
 msgstr "부분적"
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Pause"
+msgstr ""
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -13008,6 +13084,11 @@ msgstr "이전 아이템"
 msgctxt "keys_files"
 msgid "Previous slot"
 msgstr "이전 슬ㄹ"
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Previous weapon"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -13703,7 +13784,7 @@ msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
 msgstr "진동팩 (자동)"
 
-#. TRANSLATION: catacomb.keys, omf2097.keys, prboom.gzdoom.keys, rott.keys
+#. TRANSLATION: bstone.keys, catacomb.keys, omf2097.keys, prboom.gzdoom.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr "실행"
@@ -14207,6 +14288,11 @@ msgctxt "game_options"
 msgid "STRETCH TO FILL"
 msgstr "채우기 위해 늘리기"
 
+#. TRANSLATION: bstone
+msgctxt "game_options"
+msgid "STRETCH UI MENU"
+msgstr "늘이기 UI 메뉴"
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "STRICT RENDERING MODE"
@@ -14631,6 +14717,11 @@ msgctxt "game_options"
 msgid "Set system-wide controls via MAME menu"
 msgstr "마메 메뉴를 통해 시스템 전체 컨트롤 설정"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Set the Primeval Hunt mode (touch screen)."
+msgstr "원시 사냥 모드 (터치 스크린) 설정합니다."
+
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "Set the colour palette to use."
@@ -14869,6 +14960,11 @@ msgstr "션트 8"
 msgctxt "game_options"
 msgid "Shunt 9"
 msgstr "션트 9"
+
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Side by side"
+msgstr "나란히"
 
 #. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em
 msgctxt "game_options"
@@ -15468,6 +15564,11 @@ msgctxt "game_options"
 msgid "Static Interpreter"
 msgstr "정적 해석기"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Stats"
+msgstr "상태"
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Steering Wheel"
@@ -15498,12 +15599,12 @@ msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr "오른쪽 스트레이프"
 
-#. TRANSLATION: omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Strafe left"
 msgstr "왼쪽으로 폭격"
 
-#. TRANSLATION: omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Strafe right"
 msgstr "오른쪽으로 폭격"
@@ -15660,7 +15761,7 @@ msgstr "서라운드 7.1"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Swap screen"
-msgstr ""
+msgstr "화면 스왑"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -16234,7 +16335,7 @@ msgstr "토미 튜터 & 퓨타 카트리지"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Toogle screen layout"
-msgstr ""
+msgstr "화면 레이아웃 전환"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -16580,6 +16681,11 @@ msgctxt "game_options"
 msgid "USE WHEELS"
 msgstr "핸들 사용"
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "USE ZINK FOR RENDERING"
+msgstr "렌더링에 ZINK 사용"
+
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
 msgid "USER DISK"
@@ -16808,6 +16914,11 @@ msgctxt "game_options"
 msgid "Upscale filter used for the 2D layers. Requires New 3D engine."
 msgstr "2D 레이어에 사용되는 업스케일 필터입니다. 새로운 3D 엔진이 필요합니다."
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "Upscale rendering resolution to display size."
+msgstr "디스플레이 크기에 맞춰 렌더링 해상도를 높입니다."
+
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "Upscale textures on 3D objects."
@@ -16817,6 +16928,11 @@ msgstr "3D 개체에 고급스러운 텍스처를 적용합니다."
 msgctxt "game_options"
 msgid "Uruguay"
 msgstr "우루과이"
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Use"
+msgstr "사용"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -17194,7 +17310,7 @@ msgctxt "game_options"
 msgid "VISUAL NUDGE STRENGTH"
 msgstr "시각적 찌르기 강도"
 
-#. TRANSLATION: azahar, bigpemu, cemu, citron, dolphin, ...
+#. TRANSLATION: azahar, bigpemu, bstone, cemu, citron, ...
 msgctxt "game_options"
 msgid "VSYNC"
 msgstr "수직동기화"
@@ -17680,6 +17796,11 @@ msgctxt "game_options"
 msgid "Zone for which the game doesn't react to the wheel (in degrees)"
 msgstr "게임이 핸들에 반응하지 않는 영역 (°)"
 
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Zoom in"
+msgstr ""
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom in the camera"
@@ -17689,6 +17810,11 @@ msgstr "카메라 확대"
 msgctxt "keys_files"
 msgid "Zoom in x5"
 msgstr "5배 확대"
+
+#. TRANSLATION: bstone.keys
+msgctxt "keys_files"
+msgid "Zoom out"
+msgstr ""
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -18037,12 +18163,12 @@ msgstr "빠른 전환"
 #. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "quickload"
-msgstr "빠른 로드"
+msgstr ""
 
 #. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "quicksave"
-msgstr "빠른 저장"
+msgstr ""
 
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
@@ -18077,7 +18203,7 @@ msgstr "스캔라인"
 #. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "screenshot"
-msgstr "스크린샷"
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
@@ -18179,103 +18305,13 @@ msgctxt "game_options"
 msgid "yellow/blue"
 msgstr "노란색/파란색"
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "1 (post FX)"
-#~ msgstr "1 (포스트 FX)"
-
-#~ msgctxt "game_options"
-#~ msgid "1.5x 720p (960x792)"
-#~ msgstr "1.5배 720p (960x792)"
-
-#~ msgctxt "game_options"
-#~ msgid "119fps"
-#~ msgstr "119fps"
-
-#~ msgctxt "game_options"
-#~ msgid "16x (CSAA)"
-#~ msgstr "16배 (CSAA)"
-
-#~ msgctxt "game_options"
-#~ msgid "16xQ (CSAA)"
-#~ msgstr "16배Q (CSAA)"
-
-#~ msgctxt "game_options"
-#~ msgid "2 (shadows)"
-#~ msgstr "2 (그림자)"
-
-#~ msgctxt "game_options"
-#~ msgid "2.5x 1080p (1600x1320)"
-#~ msgstr "2.5배 1080p (1600x1320)"
-
-#~ msgctxt "game_options"
-#~ msgid "240fps"
-#~ msgstr "240fps"
-
-#~ msgctxt "game_options"
-#~ msgid "244fps"
-#~ msgstr "244fps"
-
-#~ msgctxt "game_options"
-#~ msgid "256 KB"
-#~ msgstr "256 KB"
-
 #~ msgctxt "game_options"
 #~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
 #~ msgstr "2P 게임패드 매핑 (키라)"
 
 #~ msgctxt "game_options"
-#~ msgid "3 (shadows)"
-#~ msgstr "3 (그림자)"
-
-#~ msgctxt "game_options"
-#~ msgid "4 (special FX)"
-#~ msgstr "4 (특수 FX)"
-
-#~ msgctxt "game_options"
-#~ msgid "4x (SSAA)"
-#~ msgstr "4배 (SSAA)"
-
-#~ msgctxt "game_options"
-#~ msgid "5 (other)"
-#~ msgstr "5 (기타)"
-
-#~ msgctxt "game_options"
 #~ msgid "5 Sideway Wiimote"
 #~ msgstr "5 사이드웨이 위모트"
-
-#~ msgctxt "game_options"
-#~ msgid "512 KB"
-#~ msgstr "512 KB"
-
-#~ msgctxt "game_options"
-#~ msgid "60fps (Default)"
-#~ msgstr "60fps (기본)"
-
-#~ msgctxt "game_options"
-#~ msgid "70fps"
-#~ msgstr "70fps"
-
-#~ msgctxt "game_options"
-#~ msgid "72fps"
-#~ msgstr "72fps"
-
-#~ msgctxt "game_options"
-#~ msgid "8x (CSAA)"
-#~ msgstr "8x (CSAA)"
-
-#~ msgctxt "game_options"
-#~ msgid "8xQ (CSAA)"
-#~ msgstr "8배Q (CSAA)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "ALIGN SPRITE (HACK)"
-#~ msgstr "스프라이트 정렬 (해킹)"
-
-#~ msgctxt "game_options"
-#~ msgid "AMD FidelityFX (Vulkan Only)"
-#~ msgstr "AMD 피델리티FX (불칸 전용)"
 
 #~ msgctxt "game_options"
 #~ msgid "ANALOG DEADZONE"
@@ -18293,32 +18329,13 @@ msgstr "노란색/파란색"
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "자동 높이"
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "AUTOMATIC GAMEFIXES"
-#~ msgstr "자동 게임픽스"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "AUTOMATIC GRAPHICS HARDWARE HACKS"
-#~ msgstr "자동 그래픽 하드웨어 해킹"
-
 #~ msgctxt "game_options"
 #~ msgid "Acron Electron ROMs"
 #~ msgstr "아크론 일렉트론 롬"
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Activate rumble on supported controllers."
-#~ msgstr "지원되는 컨트롤러에서 럼블을 활성화합니다."
-
 #~ msgctxt "game_options"
 #~ msgid "Add color to Game Boy games."
 #~ msgstr "게임보이 게임에 색상을 추가합니다."
-
-#~ msgctxt "game_options"
-#~ msgid "Allow mapping Future Pinball with Pad to Keyboard."
-#~ msgstr "패드와 키보드를 이용한 퓨처 핀볼 매핑을 허용합니다."
 
 #~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
@@ -18344,49 +18361,15 @@ msgstr "노란색/파란색"
 #~ msgid "Analog Stick"
 #~ msgstr "아날로그 스틱"
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Async (skip draw, recommended)"
-#~ msgstr "비동기(그리기 건너뛰기, 권장)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Async with interp. (hybrid)"
-#~ msgstr "인터프와 비동기(하이브리드)"
-
 #~ msgctxt "game_options"
 #~ msgid "Automatically reduce frameskip if the system has spare overhead."
 #~ msgstr ""
 #~ "시스템에 예비 오버헤드가 있는 경우 프레임 건너뛰기를 자동으로 줄입니다."
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Automatically use gamefixes as appropriate. Stacks with manual gamefixes."
-#~ msgstr "게임에 맞게 자동으로 게임을 수정합니다. 수동 게임 수정이 있는 스택."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Automatically use hardware hacks as appropriate. Refer to pcsx2-config "
-#~ "for individual hacks."
-#~ msgstr ""
-#~ "하드웨어 해킹을 적절하게 자동으로 사용합니다. 개별 해킹에 대해서는 pcsx2-"
-#~ "config를 참조하십시오."
-
 #~ msgctxt "game_options"
 #~ msgid "BGFX for post-processing, accel/opengl for raw image."
 #~ msgstr ""
 #~ "후속 프로세스를 위한 BGFX, 원시 이미지의 경우 고속/오픈GL을 사용합니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Bilinear (no edge blending)"
-#~ msgstr "쌍선형(가장자리 혼합 없음)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Bring up menu"
-#~ msgstr "메뉴 불러오기"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"
@@ -18409,40 +18392,8 @@ msgstr "노란색/파란색"
 #~ msgstr "색상화"
 
 #~ msgctxt "game_options"
-#~ msgid "CONTROLLER CONFIGURATION"
-#~ msgstr "컨트롤러 구성"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "CONTROLLER PAK 1"
-#~ msgstr "컨트롤러 팩 1"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "CONTROLLER PAK 2"
-#~ msgstr "컨트롤러 팩 2"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "CONTROLLER PAK 3"
-#~ msgstr "컨트롤러 팩 3"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "CONTROLLER PAK 4"
-#~ msgstr "컨트롤러 팩 4"
-
-#~ msgctxt "game_options"
 #~ msgid "Can be used to simulate colors of particular displays."
 #~ msgstr "특정 디스플레이의 색상을 시뮬레이션하는 데 사용할 수 있습니다."
-
-#~ msgctxt "game_options"
-#~ msgid "Center (Default)"
-#~ msgstr "중앙 (기본)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Change Camera Angle"
-#~ msgstr "카메라 각도 변경"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18451,22 +18402,6 @@ msgstr "노란색/파란색"
 #~ msgstr ""
 #~ "드라이버를 변경하면 오디오 성능이 향상되고 왜곡이 줄어듭니다. Alsa스레드"
 #~ "는 로우엔드 시스템에 권장됩니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
-#~ msgstr ""
-#~ "다각형 정렬 정확도의 양을 선택합니다(높을수록 아티팩트가 발생할 수 있음)."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Choose which graphics API library to use. Vulkan is better, when "
-#~ "supported."
-#~ msgstr ""
-#~ "사용할 그래픽 API 라이브러리를 선택합니다. Vulkan은 지원되는 경우 더 좋습"
-#~ "니다."
 
 #~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."
@@ -18479,10 +18414,6 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "Choose your preferred aspect ratio.."
 #~ msgstr "원하는 화면비를 선택하세요."
-
-#~ msgctxt "keys_files"
-#~ msgid "Coin"
-#~ msgstr "동전"
 
 #~ msgctxt "game_options"
 #~ msgid "Color"
@@ -18508,39 +18439,27 @@ msgstr "노란색/파란색"
 #~ msgid "Color Computer 3 (PAL)"
 #~ msgstr "컬러 컴퓨터 3 (PAL)"
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Compile shaders on next launch of game (one time). Reduces micro-freezes."
-#~ msgstr ""
-#~ "다음 게임 실행(한 번)에 셰이더를 컴파일합니다. 미세 동결을 줄입니다."
-
 #~ msgctxt "game_options"
 #~ msgid "Composite (color bleeding + artifacts)"
 #~ msgstr "컴포지트 (색상 번짐 + 아티팩트)"
 
-#~ msgctxt "keys_files"
-#~ msgid "Configuration menu"
-#~ msgstr "구성 메뉴"
-
 #~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "GZDoom에서 컨트롤러를 구성하면 문제가 발생할 수 있습니다."
-
-#~ msgctxt "keys_files"
-#~ msgid "Continue/Pause emulation"
-#~ msgstr "에뮬레이션 계속/일시 중지"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
-#~ msgstr "DirectX 9/10/11/12 호출을 Vulkan으로 변환합니다."
 
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Crop MAME artwork to maximize the game screen and only fill unused space."
 #~ msgstr ""
 #~ "마메 아트워크를 잘라 게임 화면을 최대화하고 사용하지 않는 공간만 채웁니다."
+
+#~ msgctxt "keys_files"
+#~ msgid "Cycle next"
+#~ msgstr "다음 사이클"
+
+#~ msgctxt "keys_files"
+#~ msgid "Cycle previous"
+#~ msgstr "이전 사이클"
 
 #~ msgctxt "game_options"
 #~ msgid "D3D12 (Default)"
@@ -18550,52 +18469,13 @@ msgstr "노란색/파란색"
 #~ msgid "DISABLE EMULATOR JOYSTICK"
 #~ msgstr "에뮬레이터 조이스틱 비활성화"
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Delay VIF1 Stalls (For SOCOM2 & Spy Hunter)"
-#~ msgstr "지연 VIF1 스톨 (SOCOM2 & Spy Hunter 용)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Depends on video mode being set to BGFX. Vulkan is better, when supported."
-#~ msgstr ""
-#~ "BGFX로 설정되는 비디오 모드에 따라 다릅니다. Vulkan은 지원되는 경우 더 좋"
-#~ "습니다."
-
 #~ msgctxt "game_options"
 #~ msgid "Determines the speed and the runahead behaviour of the system."
 #~ msgstr "시스템의 속도와 급격한 진행 동작을 결정합니다."
 
 #~ msgctxt "game_options"
-#~ msgid "Disable UI prompts"
-#~ msgstr "UI 프롬프트 비활성화"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Disabling this may help compatibility with certain controllers and games."
-#~ msgstr ""
-#~ "이 기능을 비활성화하면 특정 컨트롤러 및 게임과의 호환성에 도움이 될 수 있"
-#~ "습니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Disbaled (Default)"
-#~ msgstr "디스발링됨(기본값)"
-
-#~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."
 #~ msgstr "저장 상태, 구성 경고 등의 정보를 화면에 표시합니다..."
-
-#~ msgctxt "keys_files"
-#~ msgid "Display the controller screen"
-#~ msgstr "컨트롤러 화면을 표시"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Distorts the output to fill the display fully."
-#~ msgstr "디스플레이를 완전히 채우기 위해 출력을 왜곡합니다."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18604,16 +18484,6 @@ msgstr "노란색/파란색"
 #~ msgstr ""
 #~ "게임 플레이 중에 단축키 + R1을 눌러 화면 텍스트를 번역합니다. libretro 코"
 #~ "어에서만 가능합니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "EE timing hack (Try if all else fails)"
-#~ msgstr "EE 타이밍 해킹 (다른 모든 방법이 실패하면 시도)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
-#~ msgstr "최고 점수 저장 사용 또는 사용 안 함"
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate Chroma 81 interface (colorization)."
@@ -18628,23 +18498,9 @@ msgstr "노란색/파란색"
 #~ msgid "Emulate a pak in the controller expansion port."
 #~ msgstr "컨트롤러 확장 포트에서 pak를 에뮬레이트합니다."
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Enable XIM support."
-#~ msgstr "XIM 지원을 사용하도록 설정합니다."
-
 #~ msgctxt "game_options"
 #~ msgid "Enable auto frameskipping for performance on lower-end systems."
 #~ msgstr "저사양 시스템에서 성능을 위해 자동 프레임 건너뛰기를 활성화합니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable gamepad view for games that have interaction across two screens. "
-#~ "Use L1+R1 to switch screens."
-#~ msgstr ""
-#~ "두 화면에서 상호 작용이 있는 게임에 대해 게임패드 보기를 사용하도록 설정합"
-#~ "니다. L1+R1을 사용하여 화면을 전환합니다."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18654,19 +18510,9 @@ msgstr "노란색/파란색"
 #~ "트랙볼, 스피너, (이 연결되지 않은 경우) 라이트건 및 이와 유사한 컨트롤에 "
 #~ "대한 마우스 입력 활성화"
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Enable or disable monsters in battle."
-#~ msgstr "전투에서 몬스터를 활성화 또는 비활성화합니다."
-
 #~ msgctxt "game_options"
 #~ msgid "Enable scanlines for roms that support it."
 #~ msgstr "이를 지원하는 롬에 대해 스캔라인을 활성화합니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Enable the GIF FIFO (Wallace and Gromit, DJ Hero)"
-#~ msgstr "GIF FIFO 활성화 (월레스와 그로밋, DJ 영웅)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18679,10 +18525,6 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "Enable to improve bluriness."
 #~ msgstr "흐릿함을 향상할 수 있습니다."
-
-#~ msgctxt "game_options"
-#~ msgid "Enabled UI prompts (Default)"
-#~ msgstr "UI 프롬프트 활성화 (기본)"
 
 #~ msgctxt "game_options"
 #~ msgid "Enables Direct3D Automip-map generation."
@@ -18704,74 +18546,6 @@ msgstr "노란색/파란색"
 #~ "향상. 밉매핑을 사용하도록 설정한 경우 멀리 있는 텍스처의 선명도를 향상합니"
 #~ "다."
 
-#~ msgctxt "keys_files"
-#~ msgid "Exit Dolphin"
-#~ msgstr "돌핀 나가기"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit Dosbox-X"
-#~ msgstr "도스박스-X 나가기"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit Drastic"
-#~ msgstr "드라스틱 나가기"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit Duckstation"
-#~ msgstr "덕스테이션 나가기"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit Emulator"
-#~ msgstr "에뮬레이터 나가기"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit Game"
-#~ msgstr "게임 나가기"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit Steam"
-#~ msgstr "스팀 나가기"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit emulator using SDL"
-#~ msgstr "SDL 사용 중인 에뮬레이터 나가기"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit game"
-#~ msgstr "게임 나가기"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit running Flatpak"
-#~ msgstr "실행 중인 플랫팩 나가기"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "FFX videos fix (Fixes bad graphic overlays)"
-#~ msgstr "FFX 비디오 수정 (잘못된 그래픽 오버레이 수정)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "FPU Compare hack (For Digimon Rumble Arena 2)"
-#~ msgstr "FPU 비교 해킹 (디지몬 럼블 아레나 2)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "FPU Multiply hack (For Tales of Destiny)"
-#~ msgstr "FPU 곱하기 해킹 (운명의 이야기를위한)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "FPU Negative Div hack (For Gundam Games)"
-#~ msgstr "FPU 네거티브 Div 해킹 (건담 게임용)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Fast Forward"
-#~ msgstr "빨리 감기"
-
-#~ msgctxt "keys_files"
-#~ msgid "FastForward"
-#~ msgstr "빨리감기"
-
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
 #~ msgstr "자이로 지원 게임용 (왼쪽 아날로그 스틱에 바인딩됨)"
@@ -18779,20 +18553,6 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to right analog stick)"
 #~ msgstr "자이로 지원 게임용 (오른쪽 아날로그 스틱에 바인딩됨)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "For digital controller mode."
-#~ msgstr "디지털 컨트롤러 모드용."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Force Nvidia GPUs to always be reported as AMD GPUs."
-#~ msgstr "엔비디아 GPU가 항상 AMD GPU로 보고되도록 강제합니다."
-
-#~ msgctxt "keys_files"
-#~ msgid "Forward Nudge"
-#~ msgstr "앞으로 살살 밀기"
 
 #~ msgctxt "game_options"
 #~ msgid "GB COLORIZATION"
@@ -18806,46 +18566,13 @@ msgstr "노란색/파란색"
 #~ msgid "GamePad + 4 Sideway Wiimote"
 #~ msgstr "게임패드 + 4 사이드웨이 위모트"
 
-#, fuzzy
 #~ msgctxt "game_options"
 #~ msgid ""
-#~ "Good speedup and high compatibility; recommended but may cause issues."
+#~ "House of the Dead 4 speed fix. Sets the game to the CPU base frequency of "
+#~ "your processor."
 #~ msgstr ""
-#~ "좋은 속도 향상 및 높은 호환성; 권장되지만 문제가 발생할 수 있습니다."
-
-#~ msgctxt "keys_files"
-#~ msgid "Graphics filtering on/off"
-#~ msgstr "그래픽 필터링 켜기/끄기"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "HD Gun Games"
-#~ msgstr "HD 총 게임"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Handle DMAC writes when it busy"
-#~ msgstr "DMAC 쓰기 처리"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Hide crosshairs in supported games e.g. ActionMax."
-#~ msgstr "지원되는 게임에서 십자선을 숨깁니다(예: ActionMax)."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "How the emulator should sort transparent objects."
-#~ msgstr "에뮬레이터가 투명 개체를 정렬하는 방법"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "INSTALL MEDIA FOUNDATION"
-#~ msgstr "미디어 파운데이션 설치"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "If screen is rotated by 90 degrees, select SDL."
-#~ msgstr "화면이 90도 회전된 경우 SDL을 선택합니다."
+#~ "하우스 오브 데드 4 속도 수정입니다. 게임을 프로세서의 CPU 기본 주파수로 설"
+#~ "정합니다."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18855,20 +18582,6 @@ msgstr "노란색/파란색"
 #~ "디스크 이미지 파일을 읽기 위해 이미지 리더 카드를 설치합니다(Mac IIx만 해"
 #~ "당). 최소 4MB 램 크기를 권장합니다."
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Instant VU1. May cause some graphical errors"
-#~ msgstr "인스턴트 VU1. 일부 그래픽 오류가 발생할 수 있습니다."
-
-#~ msgctxt "game_options"
-#~ msgid "Interpreter only (experimental)"
-#~ msgstr "인터프리터 전용(실험적)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "JINC2 (no edge blending)"
-#~ msgstr "JINC2(에지 블렌딩 없음)"
-
 #~ msgctxt "game_options"
 #~ msgid "JUMP ON B"
 #~ msgstr "B 버튼을 눌러 점프"
@@ -18877,67 +18590,9 @@ msgstr "노란색/파란색"
 #~ msgid "Keypad to joyport mappings for 2 players."
 #~ msgstr "2명의 플레이어를 위한 키패드에서 조이포트로의 매핑."
 
-#~ msgctxt "keys_files"
-#~ msgid "Left Flipper"
-#~ msgstr "왼쪽 플리퍼"
-
-#~ msgctxt "keys_files"
-#~ msgid "Left Magna Save"
-#~ msgstr "왼쪽 마그나 세이브"
-
-#~ msgctxt "keys_files"
-#~ msgid "Left Manga Save"
-#~ msgstr "왼쪽 망가 저장"
-
-#~ msgctxt "keys_files"
-#~ msgid "Left Nudge"
-#~ msgstr "왼쪽으로 살살 밀기"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Legacy (laggy)"
-#~ msgstr "레거시(지연)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State"
-#~ msgstr "상태 로드"
-
-#~ msgctxt "keys_files"
-#~ msgid "Load State Slot 1"
-#~ msgstr "상태 슬롯 1 로드"
-
 #~ msgctxt "game_options"
 #~ msgid "Lunar Ignore Brightness Color Fix"
 #~ msgstr "달의 밝기 무시 색상 수정"
-
-#~ msgctxt "game_options"
-#~ msgid "Lynx 128k (Default)"
-#~ msgstr "LYNX 128k (기본값)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "MANUAL GAMEFIXES"
-#~ msgstr "수동 게임수정"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "MICRO VU SPEED HACKS"
-#~ msgstr "마이크로 VU 속도 해킹"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "MONSTERS"
-#~ msgstr "괴물"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "MSAA (default)"
-#~ msgstr "MSAA(기본값)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "MTVU. May cause hanging (recommended on 3+ cores)"
-#~ msgstr "MTVU. 중단이 발생할 수 있음(3+ 코어에서 권장)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18947,14 +18602,17 @@ msgstr "노란색/파란색"
 #~ "사용할 해상도를 수동으로 정의합니다. 자동은 높음으로 기본 설정되어 있으며 "
 #~ "필요할 때 매우 높음으로 전환됩니다."
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "May fix broken graphics in some games."
-#~ msgstr "일부 게임에서 깨진 그래픽을 수정할 수 있습니다."
+#~ msgctxt "keys_files"
+#~ msgid "Menu N"
+#~ msgstr "메뉴 N"
 
 #~ msgctxt "keys_files"
-#~ msgid "Mech Tilt"
-#~ msgstr "기계적 기울기"
+#~ msgid "Menu Y"
+#~ msgstr "메뉴 Y"
+
+#~ msgctxt "keys_files"
+#~ msgid "Menu escape"
+#~ msgstr "메뉴 이스케이프"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18963,56 +18621,12 @@ msgstr "노란색/파란색"
 #~ "대부분의 게임에는 이미 내부 프레임 제한이 있습니다. 사소한 성능 비용."
 
 #~ msgctxt "game_options"
-#~ msgid "N64 (Limited Hotkeys)"
-#~ msgstr "N64 (제한된 단축키)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Namco GunCon (Rumble)"
-#~ msgstr "남코 건콘 (럼블)"
-
-#~ msgctxt "game_options"
 #~ msgid "Native Vulkan"
 #~ msgstr "원본 Vulkan"
 
 #~ msgctxt "game_options"
 #~ msgid "Needed by some games that use special unicode characters."
 #~ msgstr "특수 유니 코드 문자를 사용하는 일부 게임에 필요합니다."
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "다음 디스크 (m3u)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "OPH Flag hack (Try if game freezes)"
-#~ msgstr "OPH 플래그 해킹 (게임이 멈추면 시도)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "OVERLAY SIZE (SINGE)"
-#~ msgstr "오버레이 크기(단일)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Off (default)"
-#~ msgstr "끄기(기본값)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "돌핀 드라이포스의 메뉴 열기"
-
-#~ msgctxt "keys_files"
-#~ msgid "Open DuckStation Quick Menu"
-#~ msgstr "덕스테이션 빠른 메뉴 열기"
-
-#~ msgctxt "keys_files"
-#~ msgid "Open Load Menu"
-#~ msgstr "로드 메뉴 열기"
-
-#~ msgctxt "keys_files"
-#~ msgid "Open Save Menu"
-#~ msgstr "저장 메뉴 열기"
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (x86 only)"
@@ -19026,16 +18640,6 @@ msgstr "노란색/파란색"
 #~ msgid "Optimized (auto)"
 #~ msgstr "최적화 (자동)"
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "POLYGON SORT ACCURACY"
-#~ msgstr "다각형 정렬 정확도"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "PREFERRED AV DECODER"
-#~ msgstr "선호하는 AV 디코더"
-
 #~ msgctxt "game_options"
 #~ msgid "PS1 Analog Joystick"
 #~ msgstr "PS1 아날로그 조이스틱"
@@ -19043,10 +18647,6 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "Passes all physical keyboard events for Pad2Key."
 #~ msgstr "패드투키에 대한 모든 물리적 키보드 이벤트를 전달합니다."
-
-#~ msgctxt "keys_files"
-#~ msgid "Pause / Menu"
-#~ msgstr "일시 중지 / 메뉴"
 
 #~ msgctxt "game_options"
 #~ msgid "Per Pixel"
@@ -19064,70 +18664,13 @@ msgstr "노란색/파란색"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "픽셀당 방식이 가장 정확하지만 가장 까다롭습니다."
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (32 layers)"
-#~ msgstr "픽셀당(32개 레이어)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Per-pixel (64 layers)"
-#~ msgstr "픽셀당(64개 레이어)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Per-strip (Default)"
-#~ msgstr "스트립당(기본값)"
-
 #~ msgctxt "game_options"
 #~ msgid "Playstation 2 wheel type"
 #~ msgstr "플레이스테이션 2 핸들 유형"
 
-#~ msgctxt "keys_files"
-#~ msgid "Plunger"
-#~ msgstr "플런저"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Preload TLB hack to avoid tlb miss on Goemon"
-#~ msgstr "고에몬에서 tlb 누락을 방지하기 위해 TLB 해킹을 미리로드"
-
 #~ msgctxt "game_options"
 #~ msgid "Pulse (Default)"
 #~ msgstr "펄스 (기본)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Quick Load"
-#~ msgstr "빠른 로드"
-
-#~ msgctxt "keys_files"
-#~ msgid "Quick Save"
-#~ msgstr "빠른 저장"
-
-#~ msgctxt "keys_files"
-#~ msgid "Quick load"
-#~ msgstr "빠른 로드"
-
-#~ msgctxt "keys_files"
-#~ msgid "Quick save"
-#~ msgstr "빠른 저장"
-
-#~ msgctxt "keys_files"
-#~ msgid "QuickMenu"
-#~ msgstr "빠른 메뉴"
-
-#~ msgctxt "keys_files"
-#~ msgid "Quit the application"
-#~ msgstr "응용 프로그램 종료"
-
-#~ msgctxt "keys_files"
-#~ msgid "Quits the current level"
-#~ msgstr "현재 레벨 종료"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "RAW CONTROLLER INPUT"
-#~ msgstr "원시 컨트롤러 입력"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19140,34 +18683,10 @@ msgstr "노란색/파란색"
 #~ msgid "Real Wiimote"
 #~ msgstr "실기 위모트"
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Recompiler (Fastest)"
-#~ msgstr "리컴파일러(가장 빠름)"
-
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Reduces banding between colours and improves the preceived colour depth."
 #~ msgstr "색상 간 밴딩 현상을 줄이고, 인식되는 색상 깊이를 향상시킵니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Reduces wobbly polygongs & warping textures."
-#~ msgstr "흔들리는 다각형 & 뒤틀림 텍스처를 줄입니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Remove lines in internal resolution (fixes Soul Calibur)."
-#~ msgstr "내부 해상도에서 라인을 제거합니다 (소울 칼리버 수정)."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Render this many frames ahead to improve performance at the cost of input "
-#~ "lag."
-#~ msgstr ""
-#~ "이 많은 프레임을 미리 렌더링하여 입력 지연을 희생하면서 성능을 향상시킵니"
-#~ "다."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19175,66 +18694,13 @@ msgstr "노란색/파란색"
 #~ "(in degrees)"
 #~ msgstr "핸들 중앙에 사각지대가 없는 공간을 확보하여 직진 주행 (°)"
 
-#~ msgctxt "keys_files"
-#~ msgid "Reset the application"
-#~ msgstr "응용 프로그램 재설정"
-
-#~ msgctxt "keys_files"
-#~ msgid "Reset the table, sometimes required for PinMame"
-#~ msgstr "테이블 재설정, PinMame에 필요한 경우가 있음"
-
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "화면 높이의 크기를 자동으로 조정합니다."
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Emulation"
-#~ msgstr "에뮬레이션 재시작"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "게임 재시작"
-
-#~ msgctxt "keys_files"
-#~ msgid "Right Flipper"
-#~ msgstr "오른쪽 플리퍼"
-
-#~ msgctxt "keys_files"
-#~ msgid "Right Magna Save"
-#~ msgstr "오른쪽 마그나 세이브"
-
-#~ msgctxt "keys_files"
-#~ msgid "Right Manga Save"
-#~ msgstr "오른쪽 망가 저장"
-
-#~ msgctxt "keys_files"
-#~ msgid "Right Nudge"
-#~ msgstr "오른쪽으로 살살 밀기"
-
-#~ msgctxt "game_options"
-#~ msgid "SDL"
-#~ msgstr "SDL"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "SKIPDRAW HACK"
-#~ msgstr "스킵드로 해킹"
-
-#~ msgctxt "game_options"
-#~ msgid "SSAA"
-#~ msgstr "SSAA"
-
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"
 #~ msgstr "S비디오 (색 번짐 만)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State"
-#~ msgstr "저장 상태"
-
-#~ msgctxt "keys_files"
-#~ msgid "Save State Slot 1"
-#~ msgstr "저장 상태 슬롯 1"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19245,14 +18711,6 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "Select the model of Color Computer to emulate"
 #~ msgstr "에뮬레이트할 컬러 컴퓨터 모델 선택"
-
-#~ msgctxt "keys_files"
-#~ msgid "Service menu"
-#~ msgstr "서비스 메뉴"
-
-#~ msgctxt "game_options"
-#~ msgid "Set desired framerate."
-#~ msgstr "원하는 프레임 속도를 설정하세요."
 
 #~ msgctxt "game_options"
 #~ msgid "Set the color palette to use."
@@ -19267,36 +18725,8 @@ msgstr "노란색/파란색"
 #~ msgstr "수직동기화가 꺼져 있을 때 원하는 최대 재생 빈도를 설정합니다."
 
 #~ msgctxt "game_options"
-#~ msgid "Set to on if you experience flickering in hummer."
-#~ msgstr "허머에서 깜빡임이 발생하는 경우 켜짐으로 설정하세요."
-
-#~ msgctxt "keys_files"
-#~ msgid "Settings GUI"
-#~ msgstr "GUI 설정"
-
-#~ msgctxt "game_options"
 #~ msgid "Simulate LCD color inaccuracy."
 #~ msgstr "LCD 색상 부정확성을 시뮬레이션합니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Simulate VIF1 FIFO read (Fix slow loading)"
-#~ msgstr "VIF1 FIFO 읽기 시뮬레이션(느린 로딩 수정)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Singe 2 Full"
-#~ msgstr "싱글 2 풀"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Singe 2 Half"
-#~ msgstr "싱글 2 하프"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Skip MPEG hack (Skips videos/FMVs that freeze)"
-#~ msgstr "MPEG 해킹 건너 뛰기 (정지 비디오 / FMV 건너 뜁니다)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19305,32 +18735,6 @@ msgstr "노란색/파란색"
 #~ msgstr ""
 #~ "버퍼 건너뛰기는 자동 프레임 건너뛰기를 비활성화하고 디스플레이 출력 해상도"
 #~ "로 렌더링합니다."
-
-#~ msgctxt "game_options"
-#~ msgid "Skip drawing screen effects. Cumulative."
-#~ msgstr "그리기 화면 효과를 건너뜁니다. 누적됨."
-
-#~ msgctxt "keys_files"
-#~ msgid "Slot +"
-#~ msgstr "슬롯 +"
-
-#~ msgctxt "keys_files"
-#~ msgid "Slot -"
-#~ msgstr "슬롯 -"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Stacks with auto gamefixes."
-#~ msgstr "자동 게임 수정이 있는 스택."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Standard"
-#~ msgstr "표준"
-
-#~ msgctxt "keys_files"
-#~ msgid "Start"
-#~ msgstr "시자"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
@@ -19351,45 +18755,9 @@ msgstr "노란색/파란색"
 #~ "GPU에 텍스처를 병렬로 스트리밍합니다. 여유 헤드룸이 있는 더 강력한 GPU에"
 #~ "서 성능을 개선할 수 있습니다."
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Stretch to 16:9"
-#~ msgstr "16:9까지 늘이기"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Stretch to 4:3"
-#~ msgstr "4:3까지 늘이기"
-
-#~ msgctxt "keys_files"
-#~ msgid "Swap Screen"
-#~ msgstr "화면 교체"
-
-#~ msgctxt "keys_files"
-#~ msgid "Swap Screens"
-#~ msgstr "화면 교체"
-
-#~ msgctxt "keys_files"
-#~ msgid "Swap screens"
-#~ msgstr "화면 교체"
-
 #~ msgctxt "game_options"
 #~ msgid "TEAM COLOR MODE"
 #~ msgstr "팀 색상 모드"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "TRANSPARENT SORTING"
-#~ msgstr "투명한 정렬"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "TV MODE"
-#~ msgstr "텔레비젼 모드"
-
-#~ msgctxt "keys_files"
-#~ msgid "Take a screenshot"
-#~ msgstr "스크린샷 찍기"
 
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
@@ -19403,19 +18771,6 @@ msgstr "노란색/파란색"
 #~ msgid "Tandy Radio Shack Color Computer disk images"
 #~ msgstr "탠디 라디오 셱 컬러 컴퓨터 디스크 이미지"
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Toggle MSAA/SSAA. Depends on anti-aliasing being enabled."
-#~ msgstr "MSAA/SSAA를 전환합니다. 활성화되는 앤티앨리어싱에 따라 다릅니다."
-
-#~ msgctxt "keys_files"
-#~ msgid "Toggle Screen Layout"
-#~ msgstr "화면 레이아웃 전환"
-
-#~ msgctxt "keys_files"
-#~ msgid "Toggle Speed Limit"
-#~ msgstr "속도 제한 전환"
-
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
 #~ msgstr "오른쪽 아날로그 스틱을 두 번째 조이스틱으로 취급합니다."
@@ -19423,34 +18778,6 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GZDOOM 조이스틱 구성 사용"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "USE ZINK RENDERER"
-#~ msgstr "ZINK 렌더러 사용"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use L2/R2 for Accel/Brake and L1/R1 or R-stick Up/Down for Shift Up/Down."
-#~ msgstr ""
-#~ "가속/브레이크에는 L2/R2를 사용하고 변속 위/아래에는 L1/R1 또는 R 스틱 위/"
-#~ "아래를 사용합니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use the Zink (OpenGL to Vulkan) renderer to fix graphics issues. May "
-#~ "cause performance loss."
-#~ msgstr ""
-#~ "Zink(OpenGL에서 Vulkan으로) 렌더러를 사용하여 그래픽 문제를 해결합니다. 성"
-#~ "능이 저하될 수 있습니다."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Use with the stretch aspect ratio and adjust joystick sensitivity as "
-#~ "required."
-#~ msgstr ""
-#~ "늘리기 종횡비와 함께 사용하고 필요에 따라 조이스틱 감도를 조정합니다."
 
 #~ msgctxt "game_options"
 #~ msgid "Use your physical anaglypth 3D glasses!"
@@ -19460,53 +18787,13 @@ msgstr "노란색/파란색"
 #~ msgid "Useful for speedruns/glitches."
 #~ msgstr "스피드런/글리치에 유용합니다."
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "VSYNCS IN MTGS QUEUE"
-#~ msgstr "MTGS 대기열의 VSYNCS"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "VU Add hack (Fixes Tri-Ace games boot crash)"
-#~ msgstr "VU 해킹 추가 (트라이 에이스 게임 부팅 충돌 수정)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "VU I bit hack - Crash Tag Team Racing"
-#~ msgstr "VU I 비트 해킹 - 크래시 태그 팀 레이싱"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "VU I bit hack - Scarface The World is Yours"
-#~ msgstr "VU I 비트 해킹 - 스카페이스 세상은 당신의 것입니다"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "VU XGkick hack (For Eremental Gerad)"
-#~ msgstr "VU XGkick 해킹 (에레멘탈 제라드용)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "VU0 Kickstart to avoid sync problems with VU1"
-#~ msgstr "VU1과의 동기화 문제를 방지하기 위한 VU0 킥스타트"
-
 #~ msgctxt "game_options"
 #~ msgid "Vsync"
 #~ msgstr "수직동기화"
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "WIDESCREEN PATCHES"
-#~ msgstr "와이드스크린 패치"
-
 #~ msgctxt "game_options"
 #~ msgid "WRITE COLOR BUFFERS"
 #~ msgstr "색상 버퍼 쓰기"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "WRITE DEPTH BUFFER"
-#~ msgstr "쓰기 깊이 버퍼"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19537,20 +18824,16 @@ msgstr "노란색/파란색"
 #~ msgstr "위모트 사이드웨이"
 
 #~ msgctxt "keys_files"
-#~ msgid "exit game"
-#~ msgstr "게임 나가기"
+#~ msgid "Zoon in"
+#~ msgstr "확대"
+
+#~ msgctxt "keys_files"
+#~ msgid "Zoon out"
+#~ msgstr "축소"
 
 #~ msgctxt "game_options"
 #~ msgid "external (variable fps)"
 #~ msgstr "외부 (가변 FPS)"
-
-#~ msgctxt "game_options"
-#~ msgid "hybrid bottom ratio 4"
-#~ msgstr "하이브리드 하단 비율 4"
-
-#~ msgctxt "game_options"
-#~ msgid "hybrid top ratio 4"
-#~ msgstr "하이브리드 상단 비율 4"
 
 #~ msgctxt "game_options"
 #~ msgid "internal (fixed 60fps)"
@@ -19560,42 +18843,6 @@ msgstr "노란색/파란색"
 #~ msgid "internal (variable fps)"
 #~ msgstr "내부 (가변 FPS)"
 
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "mVU Flag Hack + Instant VU1"
-#~ msgstr "mVU 플래그 해킹 + 인스턴트 VU1"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "mVU Flag Hack + MTVU"
-#~ msgstr "mVU 플래그 해킹 + MTVU"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "mVU Flag Hack. May cause bad graphics (recommended)"
-#~ msgstr "mVU 플래그 해킹. 그래픽이 나빠질 수 있음(권장)"
-
-#~ msgctxt "game_options"
-#~ msgid "off"
-#~ msgstr "끄기"
-
-#~ msgctxt "game_options"
-#~ msgid "on"
-#~ msgstr "켜기"
-
-#~ msgctxt "keys_files"
-#~ msgid "quick load"
-#~ msgstr "빠른 로드"
-
-#~ msgctxt "keys_files"
-#~ msgid "quick save"
-#~ msgstr "빠른 저장"
-
 #~ msgctxt "game_options"
 #~ msgid "weird colors"
 #~ msgstr "이상한 색상"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "xBR (no edge blending)"
-#~ msgstr "xBR(에지 블렌딩 없음)"

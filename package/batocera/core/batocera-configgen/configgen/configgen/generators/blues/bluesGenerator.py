@@ -11,7 +11,7 @@ if TYPE_CHECKING:
 
 class BluesGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
         commandArray = ["blues", "--datapath=/userdata/roms/ports/blues", "--fullscreen"]
 
         return Command.Command(

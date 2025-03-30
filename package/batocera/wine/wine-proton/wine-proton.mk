@@ -3,8 +3,8 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Dec 23, 2024
-WINE_PROTON_VERSION = proton-wine-9.0-4c
+# Version: Commits on Mar 17, 2025
+WINE_PROTON_VERSION = experimental-wine-9.0-20250317
 WINE_PROTON_SOURCE = wine-$(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
@@ -15,7 +15,7 @@ HOST_WINE_PROTON_DEPENDENCIES = host-bison host-flex
 
 define WINE_PROTON_AUTOGEN
 	# Create folder for install
-	mkdir -p $(TARGET_DIR)/usr/wine/proton
+	mkdir -p $(TARGET_DIR)/usr/wine/wine-proton
 	# Autotools generation
 	cd $(@D); ./tools/make_requests
 	cd $(@D); ./tools/make_specfiles
@@ -39,8 +39,8 @@ WINE_PROTON_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 	--without-mingw \
 	--without-opencl \
 	--without-oss \
-	--prefix=/usr/wine/proton \
-	--exec-prefix=/usr/wine/proton
+	--prefix=/usr/wine/wine-proton \
+	--exec-prefix=/usr/wine/wine-proton
 
 ifeq ($(BR2_x86_64),y)
     WINE_PROTON_CONF_OPTS += --enable-win64
@@ -107,12 +107,12 @@ else
 WINE_PROTON_CONF_OPTS += --without-gnutls
 endif
 
-ifeq ($(BR2_PACKAGE_GST1_PLUGINS_BASE),y)
-WINE_PROTON_CONF_OPTS += --with-gstreamer
-WINE_PROTON_DEPENDENCIES += gst1-plugins-base
-else
-WINE_PROTON_CONF_OPTS += --without-gstreamer
-endif
+#ifeq ($(BR2_PACKAGE_GST1_PLUGINS_BASE),y)
+#WINE_PROTON_CONF_OPTS += --with-gstreamer
+#WINE_PROTON_DEPENDENCIES += gst1-plugins-base
+#else
+#WINE_PROTON_CONF_OPTS += --without-gstreamer
+#endif
 
 ifeq ($(BR2_PACKAGE_LIBGCRYPT),y)
 WINE_PROTON_CONF_OPTS += --with-gcrypt
@@ -338,7 +338,7 @@ HOST_WINE_PROTON_CONF_OPTS += \
 
 # Cleanup final directory
 define WINE_PROTON_REMOVE_INCLUDES_HOOK
-	rm -Rf $(TARGET_DIR)/usr/wine/proton/include
+	rm -Rf $(TARGET_DIR)/usr/wine/wine-proton/include
 endef
 
 WINE_PROTON_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_REMOVE_INCLUDES_HOOK

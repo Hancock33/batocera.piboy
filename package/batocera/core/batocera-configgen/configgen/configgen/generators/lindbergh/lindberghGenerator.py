@@ -1,3 +1,16 @@
+#
+# This file is part of the batocera distribution (https://batocera.org).
+# Copyright (c) 2025+.
+#
+# This program is free software: you can redistribute it and/or modify  
+# it under the terms of the GNU General Public License as published by  
+# the Free Software Foundation, version 3.
+#
+# You should have received a copy of the GNU General Public License 
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+# YOU MUST KEEP THIS HEADER AS IT IS
+#
 from __future__ import annotations
 
 import logging
@@ -57,7 +70,7 @@ class LindberghGenerator(Generator):
         "ANALOGUE_DEADZONE_1":       True, "ANALOGUE_DEADZONE_2":       True, "ANALOGUE_DEADZONE_3":       True, "ANALOGUE_DEADZONE_4":       True,
         "ANALOGUE_DEADZONE_5":       True, "ANALOGUE_DEADZONE_6":       True, "ANALOGUE_DEADZONE_7":       True, "ANALOGUE_DEADZONE_8":       True,
         "EMULATE_CARDREADER":        True, "CARDFILE_01":               True, "CARDFILE_02":               True, "CPU_FREQ_GHZ":              True,
-        "OR2_IP":                    True, "PLAYER_1_COIN":             True
+        "OR2_IP":                    True, "PLAYER_1_COIN":             True, "BOOST_RENDER_RES":          True,
     }
 
     def getHotkeysContext(self) -> HotkeysContext:
@@ -66,7 +79,7 @@ class LindberghGenerator(Generator):
             "keys": { "exit": "KEY_T", "coin": "KEY_5" }
         }
 
-    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
         romDir = rom.parent
         romName = rom.name
         _logger.debug("ROM path: %s", romDir)
@@ -111,16 +124,8 @@ class LindberghGenerator(Generator):
                 executable_permissions = current_permissions | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH
                 file_path.chmod(executable_permissions)
                 _logger.debug("Made %s executable", exe_file)
-
-        # Run command
-        if system.config.get_bool("lindbergh_test"):
-            commandArray: list[str | Path] = [str(romDir / "lindbergh"), "-t"]
-        else:
-            commandArray: list[str | Path] = [str(romDir / "lindbergh")]
-
-        return Command.Command(
-            array=commandArray,
-            env={
+        
+        environment={
                 # Libraries
                 "LD_LIBRARY_PATH": f"/lib32:/lib32/extralibs:/lib:/usr/lib:{romDir}",
                 # Graphics
@@ -134,7 +139,21 @@ class LindberghGenerator(Generator):
                 "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
                 "SDL_JOYSTICK_HIDAPI": "0",
             }
-        )
+        
+        if system.config.get_bool("lindbergh_zink"):
+            environment.update(
+                {
+                    "MESA_LOADER_DRIVER_OVERRIDE": "zink"
+                }
+            )
+
+        # Run command
+        if system.config.get_bool("lindbergh_test"):
+            commandArray: list[str | Path] = [str(romDir / "lindbergh"), "-t"]
+        else:
+            commandArray: list[str | Path] = [str(romDir / "lindbergh")]
+
+        return Command.Command(array=commandArray, env=environment)
 
     @staticmethod
     def extract_tar_xz(file_path: IO[bytes], extract_to: Path) -> None:
@@ -263,6 +282,7 @@ class LindberghGenerator(Generator):
         self.setConf(conf, "DEBUG_MSGS",                system.config.get_bool("lindbergh_debug", return_values=(1, 0)))
         self.setConf(conf, "HUMMER_FLICKER_FIX",        system.config.get_bool("lindbergh_hummer", return_values=(1, 0)))
         self.setConf(conf, "OUTRUN_LENS_GLARE_ENABLED", system.config.get_bool("lindbergh_lens", return_values=(1, 0)))
+        self.setConf(conf, "BOOST_RENDER_RES",          system.config.get_bool("lindbergh_boost", return_values=(1, 0)))
         self.setConf(conf, "SKIP_OUTRUN_CABINET_CHECK", 1 if "outrun" in romName.lower() or "outr2sdx" in romName.lower() else 0)
         self.setConf(conf, "SRAM_PATH",   f"{self.LINDBERGH_SAVES}/sram.bin.{Path(romName).stem}")
         self.setConf(conf, "EEPROM_PATH", f"{self.LINDBERGH_SAVES}/eeprom.bin.{Path(romName).stem}")
@@ -278,7 +298,7 @@ class LindberghGenerator(Generator):
             self.setConf(conf, "EMULATE_CARDREADER", 0)
 
         # House of the Dead 4 - CPU speed
-        cpu_speed = self.get_cpu_speed()
+        cpu_speed = self.get_cpu_min_speed()
         if cpu_speed is not None:
             _logger.debug("Current CPU Speed: %.2f GHz", cpu_speed)
             if "hotd" in romName.lower() and system.config.get_bool("lindbergh_speed"):
@@ -295,6 +315,10 @@ class LindberghGenerator(Generator):
                 self.setConf(conf, "OR2_IP", ip)
         else:
             _logger.debug("Unable to retrieve IP address.")
+
+        # Primeval Hunt mode (touch screen)
+        if "primeva" in romName.lower() or "primehunt" in romName.lower():
+            self.setConf(conf, "PRIMEVAL_HUNT_MODE", system.config.get("lindbergh_hunt", "1"))
 
         ## Guns
         if system.config.use_guns and guns:
@@ -356,6 +380,35 @@ class LindberghGenerator(Generator):
         # joysticks
         if input_mode == 2:
             self.setup_joysticks_evdev(conf, system, shortRomName, guns, wheels, playersControllers)
+
+        # map service and test buttons for tests mode
+        if system.config.get_bool("lindbergh_test"):
+            if input_mode == 2:
+                self.setup_test_mode_evdev(conf, playersControllers)
+
+    def setup_test_mode_evdev(
+        self,
+        conf: dict[str, Any],
+        playersControllers: Controllers,
+        /,
+    ) -> None:
+        for pad in playersControllers[:1]:
+            input_name = "b"
+            if input_name in pad.inputs and pad.inputs[input_name].type == "button":
+                self.setConf(conf, "TEST_BUTTON", f"{pad.device_path}:KEY:{pad.inputs[input_name].code}")
+            input_name = "down"
+            if input_name in pad.inputs and pad.inputs[input_name].type == "hat":
+                if pad.inputs[input_name].value == "4": # down
+                    # 16 is the HAT0 code, MAX for down/right
+                    input_value = f"ABS:{16+1+int(pad.inputs[input_name].id)*2}:MAX"
+                    self.setConf(conf, "PLAYER_1_BUTTON_SERVICE", f"{pad.device_path}:{input_value}")
+            if input_name in pad.inputs and pad.inputs[input_name].type == "axis":
+                relaxValues = pad.get_mapping_axis_relaxed_values()
+                if input_name in relaxValues and relaxValues[input_name]["reversed"]:
+                    input_value = f"ABS_NEG:{pad.inputs[input_name].code}"
+                else:
+                    input_value = f"ABS:{pad.inputs[input_name].code}"
+                self.setConf(conf, f"PLAYER_1_BUTTON_SERVICE", f"{pad.device_path}:{input_value}:MAX")
 
     def setup_joysticks_evdev(
         self,
@@ -792,23 +845,18 @@ class LindberghGenerator(Generator):
                 shutil.copy2("/lib32/extralibs/libCg.so.harley", destCg)
                 _logger.debug("Copied: %s", destCg)
             if not destCgGL.exists():
-                shutil.copy2("/lib32/extralibs/libCgGL.so.other", destCgGL)
+                shutil.copy2("/lib32/extralibs/libCgGL.so.harley", destCgGL)
                 _logger.debug("Copied: %s", destCgGL)
 
-        if "stage 4" in romName.lower() or "initiad4" in romName.lower():
-            destination = Path(romDir) / "libCgGL.so"
-            if not destination.exists():
-                shutil.copy2("/lib32/extralibs/libCgGL.so.other", destination)
-                _logger.debug("Copied: %s", destination)
-
-        if "tennis" in romName.lower():
+        # fixes shadows and textures
+        if any(keyword in romName.lower() for keyword in ("initiad", "letsgoju", "tennis")):
             destCg = Path(romDir) / "libCg.so"
             destCgGL = Path(romDir) / "libCgGL.so"
             if not destCg.exists():
-                shutil.copy2("/lib32/extralibs/libCg.so.tennis", destCg)
+                shutil.copy2("/lib32/extralibs/libCg.so.other", destCg)
                 _logger.debug("Copied: %s", destCg)
             if not destCgGL.exists():
-                shutil.copy2("/lib32/extralibs/libCgGL.so.tennis", destCgGL)
+                shutil.copy2("/lib32/extralibs/libCgGL.so.other", destCgGL)
                 _logger.debug("Copied: %s", destCgGL)
 
         # remove any legacy libsegaapi.so
@@ -845,29 +893,30 @@ class LindberghGenerator(Generator):
         # copy the config file in the rom dir, where it is used
         shutil.copy2(LINDBERGH_CONFIG_FILE, romDir / "lindbergh.conf")
 
-    def get_cpu_speed(self):
+    def get_cpu_min_speed(self):
         try:
-            # Run the dmidecode command to get processor information
+            # Run lscpu to get CPU frequency information
             result = subprocess.run(
-                ["dmidecode", "-t", "processor"],
+                ["lscpu"],
                 capture_output=True,
                 text=True,
                 check=True
             )
             output = result.stdout
 
-            # Find the "Current Speed" value as our base frequency
-            match = re.search(r"Current Speed:\s+(\d+)\s+MHz", output)
+            # Find the "CPU min MHz" value
+            match = re.search(r"CPU min MHz:\s+([\d.]+)", output)
             if match:
-                current_speed_mhz = int(match.group(1))
+                min_speed_mhz = float(match.group(1))
                 # Convert to GHz
-                return current_speed_mhz / 1000
+                _logger.debug(f"CPU min MHz is {min_speed_mhz}.")
+                return min_speed_mhz / 1000
 
-            _logger.debug("Current Speed information not found.")
+            _logger.debug("CPU min MHz information not found.")
             return None
 
         except subprocess.CalledProcessError as e:
-            _logger.debug("Error running dmidecode: %s", e)
+            _logger.debug("Error running lscpu: %s", e)
             return None
 
     def get_ip_address(self, destination: str = "1.1.1.1", port: int = 80) -> Any | None:

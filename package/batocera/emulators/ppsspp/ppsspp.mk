@@ -3,14 +3,16 @@
 # ppsspp
 #
 ################################################################################
-# Version: Commits on Mar 23, 2025
-PPSSPP_VERSION = ca1819fe850eba142efbbf970061ac40444f2ea2
+# Version: Commits on Mar 29, 2025
+PPSSPP_VERSION = 81a067ab156de63dee90a17f6b2dd8a48ab5766e
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
 PPSSPP_LICENSE = GPLv2
 PPSSPP_DEPENDENCIES = sdl2 sdl2_ttf libzip
 
+PPSSPP_CONF_OPTS += -DCMAKE_CC_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
+PPSSPP_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 PPSSPP_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 PPSSPP_CONF_OPTS += -DCMAKE_SYSTEM_NAME=Linux
 PPSSPP_CONF_OPTS += -DUSE_FFMPEG=ON

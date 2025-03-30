@@ -16,7 +16,7 @@ yabConfigPath = CONFIGS / "yabasanshiro"
 
 class YabasanshiroGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
 
         yabaCtrl = {
             "start":          "start",

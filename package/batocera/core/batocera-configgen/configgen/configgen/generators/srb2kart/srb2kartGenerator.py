@@ -8,7 +8,7 @@ from ..Generator import Generator
 
 class Srb2kartGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
         commandArray = ["srb2kart", rom]
 
         return Command.Command(

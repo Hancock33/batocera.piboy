@@ -3,8 +3,8 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Mar 22, 2025
-DEVILUTIONX_VERSION = 2df2c95839a1ef0baab0d04bcb03d355469810fd
+# Version: Commits on Mar 27, 2025
+DEVILUTIONX_VERSION = b47d97f14c0c1ac1cd5cd79c020acf96093805b9
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
 DEVILUTIONX_DEPENDENCIES = bzip2 fmt libpng libsodium lpeg lua lua-lpeg-patterns luafilesystem luasec luasocket sdl2 sdl2_image
@@ -16,8 +16,6 @@ DEVILUTIONX_CONF_OPTS += -DBUILD_TESTING=OFF
 DEVILUTIONX_CONF_OPTS += -DUSE_LD_MOLD=ON
 DEVILUTIONX_CONF_OPTS += -DPREFILL_PLAYER_NAME=ON
 DEVILUTIONX_CONF_OPTS += -DCPACK=ON
-DEVILUTIONX_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
-DEVILUTIONX_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
 define DEVILUTIONX_FIX_SDL2MAIN
 	sed -i -e s+"SDL2::SDL2main"+"-lSDL2main"+ $(@D)/CMakeLists.txt

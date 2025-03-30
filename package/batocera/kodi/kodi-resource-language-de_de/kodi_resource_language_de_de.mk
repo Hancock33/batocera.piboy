@@ -3,8 +3,8 @@
 # kodi_resource_language_de_de
 #
 ################################################################################
-# Version: Commits on Nov 17, 2024
-KODI_RESOURCE_LANGUAGE_DE_DE_VERSION = 11.0.82
+# Version: Commits on Mar 11, 2025
+KODI_RESOURCE_LANGUAGE_DE_DE_VERSION = 11.0.87
 KODI_RESOURCE_LANGUAGE_DE_DE_SOURCE = resource.language.de_de-$(KODI_RESOURCE_LANGUAGE_DE_DE_VERSION).zip
 KODI_RESOURCE_LANGUAGE_DE_DE_SITE = http://mirrors.kodi.tv/addons/omega/resource.language.de_de
 KODI_RESOURCE_LANGUAGE_DE_DE_PLUGINNAME=resource.language.de_de

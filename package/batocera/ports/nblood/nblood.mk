@@ -31,7 +31,7 @@ endef
 define NBLOOD_INSTALL_TARGET_CMDS
     mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	$(INSTALL) -D -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/nblood/pcexhumed.keys $(TARGET_DIR)/usr/share/evmapy/pcexhumed.keys
-	
+
 	$(INSTALL) -m 0755 $(@D)/nblood      $(TARGET_DIR)/usr/bin/nblood
 	$(INSTALL) -m 0755 $(@D)/pcexhumed   $(TARGET_DIR)/usr/bin/pcexhumed
 	$(INSTALL) -m 0755 $(@D)/rednukem    $(TARGET_DIR)/usr/bin/rednukem

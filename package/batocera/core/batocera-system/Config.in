@@ -393,6 +393,9 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     # SDL2
     select BR2_PACKAGE_BATOCERA_SDL2
 
+    # SDL3
+    select BR2_PACKAGE_BATOCERA_SDL3
+
     # xorg
     select BR2_PACKAGE_BATOCERA_XORG                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     || BR2_PACKAGE_BATOCERA_SBC_XORG
 
@@ -1815,6 +1818,19 @@ config BR2_PACKAGE_BATOCERA_SDL2
     select BR2_PACKAGE_LIBVORBIS                            # ogg
     select BR2_PACKAGE_SDL2_GAMECONTROLLERDB                if !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_TVTEXTVIEWER                         if !BR2_PACKAGE_BATOCERA_LIB32
+
+config BR2_PACKAGE_BATOCERA_SDL3
+    bool "BATOCERA SDL3"
+
+    select BR2_PACKAGE_SDL3
+    select BR2_PACKAGE_SDL3_IMAGE
+    select BR2_PACKAGE_SDL3_MIXER
+    select BR2_PACKAGE_SDL3_TTF
+    select BR2_PACKAGE_SDL3_OPENGLES                        if  BR2_PACKAGE_HAS_LIBGLES
+    select BR2_PACKAGE_SDL3_OPENGL                          if  BR2_PACKAGE_HAS_LIBGL
+    select BR2_PACKAGE_SDL3_X11                             if  BR2_PACKAGE_XORG7
+    select BR2_PACKAGE_SDL3_KMSDRM                          if !BR2_PACKAGE_BATOCERA_RPI_VCORE
+    select BR2_PACKAGE_SDL3_WAYLAND                         if  BR2_PACKAGE_BATOCERA_WAYLAND
 
 config BR2_PACKAGE_BATOCERA_WAYLAND
     bool "batocera.linux wayland packages selection"
