@@ -15,7 +15,7 @@ WINE_BASE: Final = Path('/usr/wine')
 DEFAULT_WINE_RUNNER: Final = 'wine-custom'
 
 
-def get_wine_paths(runner: str) -> dict[str, Path]:
+def get_wine_paths(runner: str, /) -> dict[str, Path]:
     wine_path = WINE_BASE / runner
     wine_lib = wine_path / 'lib' / 'wine'
     wine_server_bin = wine_path / 'bin'
@@ -102,7 +102,7 @@ def install_wine_trick(
 
 
 def regedit(prefix: Path, file: Path, /) -> None:
-    _run_wine_process(prefix, [WINE, 'regedit', file], DEFAULT_WINE_RUNNER, environment=environment)
+    _run_wine_process(prefix, [WINE, 'regedit', file], DEFAULT_WINE_RUNNER)
 
 
 def get_wine_environment(prefix: Path, /) -> dict[str, str | Path]:
@@ -116,7 +116,7 @@ def get_wine_environment(prefix: Path, /) -> dict[str, str | Path]:
     }
 
 
-def set_wine_runner(runner: str) -> None:
+def set_wine_runner(runner: str, /) -> None:
     global WINE_PATH, WINE_LIB, WINE_BIN, WINE64_BIN, WINE_SERVER_BIN, WINE, WINE64, WINETRICKS
     wine_paths = get_wine_paths(runner)
     WINE_PATH, WINE_LIB, WINE_BIN, WINE64_BIN, WINE_SERVER_BIN, WINE, WINE64, WINETRICKS = (
@@ -130,11 +130,11 @@ def set_wine_runner(runner: str) -> None:
         wine_paths['WINETRICKS'],
     )
 
-    _logger.debug(f'Updated wine paths for runner "{runner}":')
-    _logger.debug(f'WINE_PATH={WINE_PATH}')
-    _logger.debug(f'WINE_LIB={WINE_LIB}')
-    _logger.debug(f'WINE_BIN={WINE_BIN}')
-    _logger.debug(f'WINE64_BIN={WINE64_BIN}')
-    _logger.debug(f'WINE_SERVER_BIN={WINE_SERVER_BIN}')
-    _logger.debug(f'WINE={WINE}')
-    _logger.debug(f'WINE64={WINE64}')
+    _logger.debug('Updated wine paths for runner "%s":', runner)
+    _logger.debug('WINE_PATH=%s', WINE_PATH)
+    _logger.debug('WINE_LIB=%s', WINE_LIB)
+    _logger.debug('WINE_BIN=%s', WINE_BIN)
+    _logger.debug('WINE64_BIN=%s', WINE64_BIN)
+    _logger.debug('WINE_SERVER_BIN=%s', WINE_SERVER_BIN)
+    _logger.debug('WINE=%s', WINE)
+    _logger.debug('WINE64=%s', WINE64)
