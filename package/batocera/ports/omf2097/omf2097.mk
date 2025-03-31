@@ -3,8 +3,8 @@
 # omf2097
 #
 ################################################################################
-# Version: Commits on Jan 18, 2025
-OMF2097_VERSION = 0.7.0
+# Version: Commits on Mar 31, 2025
+OMF2097_VERSION = 848aca32b27d7bfde828ef170f99c439ab1b4be6
 OMF2097_SITE = $(call github,omf2097,openomf,$(OMF2097_VERSION))
 OMF2097_DEPENDENCIES = sdl2 sdl2_mixer libargtable2 enet libconfuse libminiupnpc
 OMF2097_LICENSE = MIT
@@ -13,8 +13,10 @@ OMF2097_SUPPORTS_IN_SOURCE_BUILD = NO
 ifeq ($(BR2_arm)$(BR2_aarch64),y)
     OMF2097_DEPENDENCIES += host-omf2097
     OMF2097_CONF_OPTS += -DOMF_COMMAND_WRAPPER=$(BUILD_DIR)/host-omf2097-$(OMF2097_VERSION)/buildroot-build/languagetool
-    HOST_OMF2097_CONF_OPTS += -DUSE_TOOLS=ON
+    HOST_OMF2097_CONF_OPTS += -DUSE_TOOLS=ON -DUSE_NATPMP=OFF -DUSE_MINIUPNPC=OFF
 endif
+
+OMF2097_CONF_OPTS += -DUSE_NATPMP=OFF -DUSE_MINIUPNPC=OFF
 
 define OMF2097_POST_PROCESS
 	rm -rf $(TARGET_DIR)/usr/share/game_assets/omf2097

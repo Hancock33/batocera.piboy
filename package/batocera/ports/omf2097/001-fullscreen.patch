@@ -1,11 +1,11 @@
 diff --git a/src/game/utils/settings.c b/src/game/utils/settings.c
-index 627905b3..433e7140 100644
+index f38d8cae..8ebd273f 100644
 --- a/src/game/utils/settings.c
 +++ b/src/game/utils/settings.c
-@@ -65,7 +65,7 @@ const field f_video[] = {
-     F_INT(settings_video, screen_w, 640),
-     F_INT(settings_video, screen_h, 400),
+@@ -73,7 +73,7 @@ const field f_video[] = {
+     F_INT(settings_video, framerate_limit, 0),
      F_BOOL(settings_video, vsync, 0),
+     F_INT(settings_video, aspect, 0),
 -    F_BOOL(settings_video, fullscreen, 0),
 +    F_BOOL(settings_video, fullscreen, 1),
      F_INT(settings_video, scaling, 0),
