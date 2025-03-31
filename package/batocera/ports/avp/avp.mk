@@ -3,17 +3,14 @@
 # avp
 #
 ################################################################################
-# Version: Commits on May 05, 2024
-AVP_VERSION = 3ecf77038be5c054463c53bbf2e93991e246ded9
+# Version: Commits on Mar 10, 2025
+AVP_VERSION = 3822fde586fb1ae9bdbe7e5fe3c5f5f4c4a2eb95
 AVP_SITE =  $(call github,atsb,NakedAVP,$(AVP_VERSION))
-
 AVP_DEPENDENCIES = sdl2 sdl2_mixer
 AVP_LICENSE = GPL-2.0
 AVP_SUPPORTS_IN_SOURCE_BUILD = NO
 
-AVP_TARGET_CFLAGS = $(TARGET_CFLAGS) -Wno-incompatible-pointer-types -Wno-implicit-function-declaration -Wno-int-conversion
-AVP_CONF_OPTS += -DCMAKE_C_FLAGS="$(AVP_TARGET_CFLAGS)"
-AVP_CONF_OPTS += -DSDL_TYPE=SDL2 -DOPENGL_TYPE=OPENGL
+AVP_CONF_OPTS += -DOPENGL_TYPE=AUTO
 
 define AVP_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/buildroot-build/avp $(TARGET_DIR)/usr/bin/avp

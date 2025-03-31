@@ -1,4 +1,3 @@
-﻿avp.mk
 batocera-luajit.mk
 citron.mk
 dolphinCrosshairsPack.mk
