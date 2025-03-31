@@ -1,6 +1,5 @@
 batocera-luajit.mk
 citron.mk
-dolphinCrosshairsPack.mk
 duckstation-legacy.mk
 firmware-armbian.mk
 firmware-orangepi.mk
