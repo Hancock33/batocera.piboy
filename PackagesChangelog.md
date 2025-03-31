@@ -14,6 +14,7 @@ Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/release
 Ports|[box64](http://github.com/ptitseb/box64)|495d3cc4c0ec521e932677ac3d2fcad2c3d80eca|Mar 31, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|21fc5030fc65ed62410733f5a7cfa8544a312c62|Mar 31, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|2731ee53c0ed07d9d5007ebd662a18d778828560|Mar 31, 2025
+Ports|[omf2097](http://github.com/omf2097/openomf)|848aca32b27d7bfde828ef170f99c439ab1b4be6|Mar 31, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|58b005fb8def35419f848ac708140d61a09b1b0d|Mar 31, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250331|Mar 31, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|860ac45cafe938d9766e0ec67328adeb4b7f7e7d|Mar 31, 2025
@@ -147,6 +148,7 @@ Kodi|[kodi_resource_language_sv_se](http://mirrors.kodi.tv/addons/omega/resource
 Kodi|[kodi_resource_language_tr_tr](http://mirrors.kodi.tv/addons/omega/resource.language.tr_tr)|11.0.78|Mar 11, 2025
 Kodi|[kodi_resource_language_zh_cn](http://mirrors.kodi.tv/addons/omega/resource.language.zh_cn)|11.0.78|Mar 11, 2025
 Audio|[cubeb](http://github.com/mozilla/cubeb)|f8633c0c9217ed5499fdda391946d416c52e6809|Mar 10, 2025
+Ports|[avp](http://github.com/atsb/NakedAVP)|3822fde586fb1ae9bdbe7e5fe3c5f5f4c4a2eb95|Mar 10, 2025
 Ports|[openjk](http://github.com/JACoders/OpenJK)|5878f620f6dabb6573595470627ab2e31cb46b67|Mar 10, 2025
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.4.309.0|Mar 10, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|0fcf1f6e3a443cb249f85d948ff6e58dc58501d6|Mar 09, 2025
@@ -240,7 +242,6 @@ Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
 Emulators|[libretro-mu](http://github.com/libretro/Mu)|841cff206bfee3d369b732e46061e1e3e5e5e4f3|Jan 21, 2025
 Emulators|[libretro-gpsp](http://github.com/libretro/gpsp)|b0d5d27ae51c23f514974ddffa5760f1e1d05d9b|Jan 20, 2025
 Kodi|[kodi-audiodecoder-openmpt](http://github.com/xbmc/audiodecoder.openmpt)|67df2ab898eef887d3471bb563d7b66eccefed9b|Jan 18, 2025
-Ports|[omf2097](http://github.com/omf2097/openomf)|0.7.0|Jan 18, 2025
 Emulators|[libretro-vircon32](http://github.com/vircon32/vircon32-libretro)|d8a92430e887286b4e5351916ef0bd35d8cb40e8|Jan 18, 2025
 Libraries|[batocera-luajit](http://github.com/openresty/luajit2)|v2.1-20250117|Jan 17, 2025
 Ports|[abuse](http://github.com/apancik/Abuse_2025)|2025.1.0|Jan 17, 2025
@@ -411,7 +412,6 @@ Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e917
 Utils|[switchres](http://github.com/antonioginer/switchres)|v2.2.1|May 15, 2024
 Boot|[batocera-shim-signed-efi-helpers-ia32](https://ftp.debian.org/debian/pool/main/s/shim-helpers-i386-signed)|1+15.8+1~deb12u1|May 10, 2024
 Firmwares|[extralinuxfirmwares](http://github.com/batocera-linux/extralinuxfirmwares)|e9c1d95f2d707ddd7bb0ef9e4711914de3cb60c2|May 10, 2024
-Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e246ded9|May 05, 2024
 Controllers|[xone](http://github.com/medusalix/xone)|29ec3577e52a50f876440c81267f609575c5161e|Apr 25, 2024
 Emulators|[libretro-jaxe](https://github.com/kurtjd/jaxe.git)|22115d58de5f80cfafbbeece19d723f4892ed75c|Apr 25, 2024
 Controllers|[xpad-noone](http://github.com/medusalix/xpad-noone)|6970c40930bedd8b58d0764894e0d5f04813b7c5|Apr 24, 2024

@@ -412,7 +412,7 @@ Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|bd8baa17dc0c0751
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|533779cb8a1843581d5422a7f0aae1a35e6ab956|Nov 21, 2024
 Ports|[abuse](http://github.com/apancik/Abuse_2025)|2025.1.0|Jan 17, 2025
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|551f78aa51ef2370dfebad7d0c602041e234ac7e|Mar 30, 2025
-Ports|[avp](http://github.com/atsb/NakedAVP)|3ecf77038be5c054463c53bbf2e93991e246ded9|May 05, 2024
+Ports|[avp](http://github.com/atsb/NakedAVP)|3822fde586fb1ae9bdbe7e5fe3c5f5f4c4a2eb95|Mar 10, 2025
 Ports|[awgl](http://github.com/M-HT/rawgl)|df249583a87d5c2f73cb362f7163799e01cd0c4c|Jun 13, 2024
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[bloodmod](http://github.com/dhewm/dhewm3-sdk)|f35e2718939b68c75f2f3a07749554129e049c30|Sept 27, 2024
@@ -458,7 +458,7 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|2731ee53c0ed07d
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250331|Mar 31, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14217|Mar 16, 2025
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
-Ports|[omf2097](http://github.com/omf2097/openomf)|0.7.0|Jan 18, 2025
+Ports|[omf2097](http://github.com/omf2097/openomf)|848aca32b27d7bfde828ef170f99c439ab1b4be6|Mar 31, 2025
 Ports|[openclaw](http://github.com/pjasicek/OpenClaw)|5ee5740ca98377c76b13b50c84f610b0066a4717|Jul 13, 2022
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|1f77a160fb1f41769d51f24dbf16a0b78527f5d3|Feb 23, 2025
 Ports|[openjk](http://github.com/JACoders/OpenJK)|5878f620f6dabb6573595470627ab2e31cb46b67|Mar 10, 2025
