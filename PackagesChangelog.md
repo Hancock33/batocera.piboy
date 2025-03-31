@@ -1,5 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|5d952717ff381808f9dccabd7bc65bb19e7686f2|Mar 31, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|c11fb83149a83b1d987983b7f388fc4e6c62e58a|Mar 31, 2025
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|d02c931cfdb11e7c58581e2276ae81af23451a31|Mar 31, 2025
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|efe34307e38cd9a9e84680d125fbf9371a72ab6c|Mar 31, 2025
@@ -63,7 +64,6 @@ Ports|[doomretro](http://github.com/bradharding/doomretro)|ee58b9335e4e9648a3296
 Ports|[vkquake](http://github.com/Novum/vkQuake)|e434a0f40358277ecbdaff171d531e492d53421b|Mar 29, 2025
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|b753f6eefa4bf02af20eacae98caab7d5aabc4a8|Mar 29, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|d5ac2a853bb95810b5c0ab5ce5f3c5761775bb4f|Mar 29, 2025
-Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|b25c7653e64780775893bcd621ee241c30f51451|Mar 28, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|130675aae30e0dc7682c4dc666a57e5de5bc7a78|Mar 28, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|c35d72a2d4c7ad234b49ef5f00ed2e9789af54df|Mar 28, 2025
 Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|698aaa2e2fd18900f0e28132a8de9b48538d4857|Mar 28, 2025
