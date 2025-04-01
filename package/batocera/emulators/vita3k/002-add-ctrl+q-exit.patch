@@ -1,5 +1,5 @@
 diff --git a/vita3k/interface.cpp b/vita3k/interface.cpp
-index c4ef196ba4..629c1ade67 100644
+index c4ef196b..96bd8e5f 100644
 --- a/vita3k/interface.cpp
 +++ b/vita3k/interface.cpp
 @@ -669,6 +669,20 @@ bool handle_events(EmuEnvState &emuenv, GuiState &gui) {
@@ -23,7 +23,7 @@ index c4ef196ba4..629c1ade67 100644
              const auto get_sce_ctrl_btn_from_scancode = [&emuenv](const SDL_Scancode scancode) {
                  if (scancode == emuenv.cfg.keyboard_button_up)
                      return SCE_CTRL_UP;
-@@ -702,8 +702,8 @@ bool handle_events(EmuEnvState &emuenv, GuiState &gui) {
+@@ -688,8 +702,8 @@ bool handle_events(EmuEnvState &emuenv, GuiState &gui) {
                      return SCE_CTRL_CIRCLE;
                  else if (scancode == emuenv.cfg.keyboard_button_cross)
                      return SCE_CTRL_CROSS;
