@@ -60,12 +60,12 @@ Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-control
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|e6241340d292dee20406a0567262a78ff34d45f7|Jun 02, 2021
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.11|Nov 11, 2024
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|83aedee853b6a8a70585536d86813a55c6531cc2|Mar 30, 2025
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|83aedee853b6a8a70585536d86813a55c6531cc2|Mar 30, 2025
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|3b7a122d8463825e07c9be0f4c88c965c64192c4|Apr 01, 2025
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|3b7a122d8463825e07c9be0f4c88c965c64192c4|Apr 01, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|fec2e3e3822c4772f9273a69af2d8d6286d36905|Feb 23, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|9c3528328d9629a5b4e821599bddd41816603db4|Apr 01, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|c25fd44265f60237d9308891dccb5378c9467572|Mar 29, 2025
-Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|5ade69f5f4561dc0e9de504f45f04b96e7151f02|Mar 30, 2025
+Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|f298d7551c2aff0b827a6c61134b44d52aa73aab|Apr 01, 2025
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|81cbbda37f57a5aec3e06337ce9f78018c363878|Mar 29, 2025
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v118|Jan 27, 2024
 Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
@@ -188,7 +188,7 @@ Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|f8605
 Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|28b37bafd3fb1e3a812c50a5ddca94c5fd68e5fd|Oct 21, 2024
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|da219658c24c610ba82d5a07ea9897e8e0eef670|Dec 21, 2024
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|6091efb4d64ed745495455ba82352ec82f55cb4f|Mar 30, 2025
-Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|752c266491ae8775dab9a98dbd94472f42b9b16f|Mar 25, 2025
+Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|a5ef8669cb998757a5ba75538c4b886ad0593469|Apr 01, 2025
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|d7498129071bae45ef73db5eb9be0c2e365987ae|Mar 31, 2025
 Emulators|[libretro-pocketsnes](http://github.com/libretro/snes9x2002)|a0709ec7dcd6de2fbebb43106bd757b649e3b7cf|Oct 21, 2024
 Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|78656d4615691c393e65e48672ce5fff5b1f97d3|Oct 21, 2024
@@ -419,7 +419,7 @@ Ports|[awgl](http://github.com/M-HT/rawgl)|df249583a87d5c2f73cb362f7163799e01cd0
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[bloodmod](http://github.com/dhewm/dhewm3-sdk)|f35e2718939b68c75f2f3a07749554129e049c30|Sept 27, 2024
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|a12e0a8cc4b3a8ce9d9f411592037b1ee27fc751|Dec 28, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|2c7a2082e624a78e42199d90f7d9fa90473c26c2|Apr 01, 2025
+Ports|[box64](http://github.com/ptitseb/box64)|b68d46311dba9c410ed5a9339d396486958d1e5b|Apr 01, 2025
 Ports|[box86](http://github.com/ptitseb/box86)|d0aad67ba0626959313f36b9e29055d121d7a65e|Mar 07, 2025
 Ports|[bstone](http://github.com/bibendovsky/bstone)|11ff54148b62e223d84cd7095cfdee4811e5eeca|Mar 22, 2025
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
