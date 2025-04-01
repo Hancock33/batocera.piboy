@@ -6,6 +6,6 @@ config BR2_PACKAGE_GAMENETWORKINGSOCKETS
 	help
 	  Reliable & unreliable messages over UDP.
 	  Robust message fragmentation & reassembly.
-	  P2P networking / NAT traversal. Encryption. 
+	  P2P networking / NAT traversal. Encryption.
 
 	  https://github.com/ValveSoftware/GameNetworkingSockets

@@ -51,9 +51,9 @@ class OpenJKDF2Generator(Generator):
         # Check if the binary exists in the destination and if it is outdated
         if not binary_dest.exists() or os.path.getmtime(binary_src) > os.path.getmtime(binary_dest):
             shutil.copy2(binary_src, binary_dest)
-        
+
         os.chdir(romdir)
-        
+
         commandArray = [str(binary_dest)]
 
         return Command.Command(

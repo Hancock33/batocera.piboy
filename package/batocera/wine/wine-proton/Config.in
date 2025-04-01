@@ -4,8 +4,8 @@ config BR2_PACKAGE_WINE_PROTON
 	depends on !BR2_STATIC_LIBS
 
 	help
-	  Proton is a Wine build modified by Valve and other 
-	  contributors.	  It contains many useful patches 
+	  Proton is a Wine build modified by Valve and other
+	  contributors.	  It contains many useful patches
 	  (primarily for a better gaming experience),some of
 	  them are unique and not present in other builds.
 	  The differences from the official Steam's Proton are

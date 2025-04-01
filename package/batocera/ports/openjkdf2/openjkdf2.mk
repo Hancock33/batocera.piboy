@@ -35,11 +35,11 @@ $(eval $(cmake-package))
 # This file is part of the batocera distribution (https://batocera.org).
 # Copyright (c) 2025+.
 #
-# This script is free software: you can redistribute it and/or modify  
-# it under the terms of the GNU General Public License as published by  
+# This script is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, version 3.
 #
-# You should have received a copy of the GNU General Public License 
+# You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 # YOU MUST KEEP THIS FOOTER AS IT IS
