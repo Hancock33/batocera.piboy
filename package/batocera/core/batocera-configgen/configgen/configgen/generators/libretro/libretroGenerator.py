@@ -117,7 +117,7 @@ class LibretroGenerator(Generator):
             if system.config.get_bool('forceNoBezel'):
                 bezel = None
 
-            libretroConfig.writeLibretroConfig(self, retroconfig, system, playersControllers, metadata, esmetadata, guns, wheels, rom, bezel, shaderBezel, gameResolution, gfxBackend)
+            libretroConfig.writeLibretroConfig(self, retroconfig, system, playersControllers, metadata, guns, wheels, rom, bezel, shaderBezel, gameResolution, gfxBackend)
             retroconfig.write()
 
             # duplicate config to mapping files while ra now split in 2 parts
