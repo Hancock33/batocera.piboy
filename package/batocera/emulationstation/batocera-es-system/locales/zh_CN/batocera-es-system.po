@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-03-22 12:26+0800\n"
+"PO-Revision-Date: 2025-03-31 20:59+0800\n"
 "Last-Translator: R.Chan\n"
 "Language-Team: Ray Chan\n"
 "Language: zh_CN\n"
@@ -1355,12 +1355,12 @@ msgstr "3D 引擎"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "3DS mode (bottom side)"
-msgstr ""
+msgstr "3DS模式（底部）"
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "3DS mode (right side)"
-msgstr ""
+msgstr "3DS模式（右侧）"
 
 #. TRANSLATION: libretro/np2kai, libretro/px68k
 msgctxt "game_options"
@@ -3303,7 +3303,7 @@ msgstr "Atari XE Game System 卡带"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Attack"
-msgstr ""
+msgstr "攻击"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -3622,7 +3622,7 @@ msgstr "波巴·费特修正"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "BOOST RENDER RES"
-msgstr ""
+msgstr "提高渲染分辨率"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -7140,7 +7140,7 @@ msgstr ""
 #. TRANSLATION: bstone
 msgctxt "game_options"
 msgid "Enable widescreen support for game rendering."
-msgstr ""
+msgstr "启用游戏渲染的宽屏支持."
 
 #. TRANSLATION: model2emu, play, theforceengine
 msgctxt "game_options"
@@ -8012,6 +8012,8 @@ msgid ""
 "Fixes some shadows and textures in Virtua Tennis 3 and Virtua Fighter 5 "
 "franchise for non Nvidia GPUs. May need the FPS limiter option enabled."
 msgstr ""
+"修复了非Nvidia GPU的Virtua Tennis 3和Virtua Fighter 5系列中的一些阴影和纹理。"
+"可能需要启用FPS限制器选项."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -9300,7 +9302,7 @@ msgctxt "game_options"
 msgid ""
 "House of the Dead 4 speed fix. Sets the game to the CPU minimum frequency of "
 "your processor."
-msgstr ""
+msgstr "《死亡之屋4》速度修正。将游戏设置为处理器的CPU最小频率."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -11037,12 +11039,12 @@ msgstr ""
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu down"
-msgstr ""
+msgstr "菜单下拉"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu enter"
-msgstr ""
+msgstr "菜单确认"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
@@ -11057,7 +11059,7 @@ msgstr ""
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu up"
-msgstr ""
+msgstr "菜单上移"
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
@@ -11665,7 +11667,7 @@ msgstr "不跳过"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "No touch screen (Default)"
-msgstr ""
+msgstr "无触摸屏（默认）"
 
 #. TRANSLATION: citron, dolphin, dolphin_triforce, drastic, fallout1-ce, ...
 msgctxt "game_options"
@@ -12424,7 +12426,7 @@ msgstr "演示模式"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "PRIMEVAL HUNT MODE"
-msgstr ""
+msgstr "原始狩猎模式"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -14119,7 +14121,7 @@ msgstr "拉伸填充"
 #. TRANSLATION: bstone
 msgctxt "game_options"
 msgid "STRETCH UI MENU"
-msgstr ""
+msgstr "扩展UI菜单"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -14541,7 +14543,7 @@ msgstr "通过MAME菜单设置系统范围的控制"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set the Primeval Hunt mode (touch screen)."
-msgstr ""
+msgstr "设置原始狩猎模式（触摸屏）."
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
@@ -14782,7 +14784,7 @@ msgstr "分流9"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Side by side"
-msgstr ""
+msgstr "并排"
 
 #. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em
 msgctxt "game_options"
@@ -15377,7 +15379,7 @@ msgstr "静态解释器"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Stats"
-msgstr ""
+msgstr "统计数据"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -16483,7 +16485,7 @@ msgstr "使用方向盘"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "USE ZINK FOR RENDERING"
-msgstr ""
+msgstr "使用ZINK渲染"
 
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
@@ -16714,7 +16716,7 @@ msgstr "用于2D层的高比例过滤器, 需要新的3D引擎."
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Upscale rendering resolution to display size."
-msgstr ""
+msgstr "根据显示大小提高渲染分辨率."
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -16729,7 +16731,7 @@ msgstr "乌拉圭"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Use"
-msgstr ""
+msgstr "使用"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -18404,6 +18406,14 @@ msgstr "黄色/蓝色"
 #~ "Crop MAME artwork to maximize the game screen and only fill unused space."
 #~ msgstr "裁剪MAME艺术品以最大化游戏屏幕，只填充未使用的空间。"
 
+#~ msgctxt "keys_files"
+#~ msgid "Cycle next"
+#~ msgstr "循环至下一项"
+
+#~ msgctxt "keys_files"
+#~ msgid "Cycle previous"
+#~ msgstr "循环至上一项"
+
 #~ msgctxt "game_options"
 #~ msgid "D3D12 (Default)"
 #~ msgstr "D3D12（默认）"
@@ -18721,6 +18731,18 @@ msgstr "黄色/蓝色"
 #~ msgctxt "keys_files"
 #~ msgid "Mech Tilt"
 #~ msgstr "机械倾斜"
+
+#~ msgctxt "keys_files"
+#~ msgid "Menu N"
+#~ msgstr "菜单N"
+
+#~ msgctxt "keys_files"
+#~ msgid "Menu Y"
+#~ msgstr "菜单Y"
+
+#~ msgctxt "keys_files"
+#~ msgid "Menu escape"
+#~ msgstr "菜单退出"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19213,6 +19235,14 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "WiiMote Sideways"
 #~ msgstr "WiiMote横持"
+
+#~ msgctxt "keys_files"
+#~ msgid "Zoon in"
+#~ msgstr "放大"
+
+#~ msgctxt "keys_files"
+#~ msgid "Zoon out"
+#~ msgstr "缩小"
 
 #~ msgctxt "keys_files"
 #~ msgid "exit game"

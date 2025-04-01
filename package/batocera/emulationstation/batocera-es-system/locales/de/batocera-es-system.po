@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-03-21 15:30+0000\n"
+"PO-Revision-Date: 2025-03-31 15:02+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -1353,12 +1353,12 @@ msgstr "3D-ENGINE"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "3DS mode (bottom side)"
-msgstr ""
+msgstr "3DS-Modus (untere Seite)"
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "3DS mode (right side)"
-msgstr ""
+msgstr "3DS-Modus (rechte Seite)"
 
 #. TRANSLATION: libretro/np2kai, libretro/px68k
 msgctxt "game_options"
@@ -3325,7 +3325,7 @@ msgstr "Atari XE Game System Steckmodule"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Attack"
-msgstr ""
+msgstr "Angriff"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -3648,7 +3648,7 @@ msgstr "BOBA FETT FIX"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "BOOST RENDER RES"
-msgstr ""
+msgstr "RENDER-AUFLÖSUNG BOOSTEN"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -7275,7 +7275,7 @@ msgstr ""
 #. TRANSLATION: bstone
 msgctxt "game_options"
 msgid "Enable widescreen support for game rendering."
-msgstr ""
+msgstr "Breitbildunterstützung für Spielgrafik aktivieren."
 
 #. TRANSLATION: model2emu, play, theforceengine
 msgctxt "game_options"
@@ -8193,6 +8193,8 @@ msgid ""
 "Fixes some shadows and textures in Virtua Tennis 3 and Virtua Fighter 5 "
 "franchise for non Nvidia GPUs. May need the FPS limiter option enabled."
 msgstr ""
+"Behebt Schatten- und Texturfehler in Virtua Tennis 3 und Virtua Fighter 5 "
+"auf Nicht-Nvidia-GPUs. FPS-Limiter ggf. aktivieren."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -9511,6 +9513,8 @@ msgid ""
 "House of the Dead 4 speed fix. Sets the game to the CPU minimum frequency of "
 "your processor."
 msgstr ""
+"Geschwindigkeitsfix für House of the Dead 4. Setzt die CPU auf die "
+"Mindestfrequenz."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -11295,12 +11299,12 @@ msgstr ""
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu down"
-msgstr ""
+msgstr "Menü runter"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu enter"
-msgstr ""
+msgstr "Menü bestätigen"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
@@ -11315,7 +11319,7 @@ msgstr ""
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu up"
-msgstr ""
+msgstr "Menü hoch"
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
@@ -11931,12 +11935,12 @@ msgstr "Nicht überspringen"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "No touch screen (Default)"
-msgstr ""
+msgstr "Kein Touchscreen (Standard)"
 
 #. TRANSLATION: citron, dolphin, dolphin_triforce, drastic, fallout1-ce, ...
 msgctxt "game_options"
 msgid "None"
-msgstr "N/A"
+msgstr "Keine"
 
 #. TRANSLATION: cgenius, libretro/mame, mame/openbor7530, rtcw, supermodel
 msgctxt "game_options"
@@ -12707,12 +12711,12 @@ msgstr "BEVORZUGTE SPU-THREADS"
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "PRESENTATION MODE"
-msgstr "PRÄSENTATIONSMODUS"
+msgstr "PRÄSENTATIONS-MODUS"
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "PRIMEVAL HUNT MODE"
-msgstr ""
+msgstr "PRIMEVAL HUNT-MODUS"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -14438,7 +14442,7 @@ msgstr "ANZEIGE AUF VOLLBILD STRECKEN"
 #. TRANSLATION: bstone
 msgctxt "game_options"
 msgid "STRETCH UI MENU"
-msgstr ""
+msgstr "UI-Menü strecken"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -14872,7 +14876,7 @@ msgstr "Systemweite Tastenbelegungen über das MAME-Menü einstellen"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set the Primeval Hunt mode (touch screen)."
-msgstr ""
+msgstr "Primeval Hunt-Modus (Touchscreen) einstellen."
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
@@ -15121,7 +15125,7 @@ msgstr "Shunt 9"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Side by side"
-msgstr ""
+msgstr "Nebeneinander"
 
 #. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em
 msgctxt "game_options"
@@ -15733,7 +15737,7 @@ msgstr "Static Interpreter (Statisch)"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Stats"
-msgstr ""
+msgstr "Statistiken"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -16868,7 +16872,7 @@ msgstr "BENUTZE LENKRÄDER"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "USE ZINK FOR RENDERING"
-msgstr ""
+msgstr "ZINK FÜR RENDERING VERWENDEN"
 
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
@@ -17103,7 +17107,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Upscale rendering resolution to display size."
-msgstr ""
+msgstr "Renderauflösung auf Bildschirmgröße hochskalieren."
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -17118,7 +17122,7 @@ msgstr "Uruguay"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Use"
-msgstr ""
+msgstr "Verwenden"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -18659,6 +18663,14 @@ msgstr "gelb/blau"
 #~ "Zuschneiden von MAME-Grafiken, um den Spielbildschirm zu maximieren und "
 #~ "nur ungenutzten Platz auszufüllen."
 
+#~ msgctxt "keys_files"
+#~ msgid "Cycle next"
+#~ msgstr "Nächstes durchschalten"
+
+#~ msgctxt "keys_files"
+#~ msgid "Cycle previous"
+#~ msgstr "Vorheriges durchschalten"
+
 #~ msgctxt "game_options"
 #~ msgid "D3D12 (Default)"
 #~ msgstr "D3D12 (Standard)"
@@ -18771,14 +18783,6 @@ msgstr "gelb/blau"
 
 #~ msgctxt "game_options"
 #~ msgid ""
-#~ "House of the Dead 4 speed fix. Sets the game to the CPU base frequency of "
-#~ "your processor."
-#~ msgstr ""
-#~ "House of the Dead 4 'Speed Fix'. Stellt das Spiel auf die CPU-"
-#~ "Basisfrequenz deines Prozessors ein."
-
-#~ msgctxt "game_options"
-#~ msgid ""
 #~ "Install the image reader card to read disk image files (Mac IIx only). "
 #~ "Minimum 4MB ram size recommended."
 #~ msgstr ""
@@ -18804,6 +18808,18 @@ msgstr "gelb/blau"
 #~ msgstr ""
 #~ "Manuelles Festlegen der Auflösung; Auto ist standardmäßig auf Hoch "
 #~ "eingestellt und schaltet bei Bedarf auf Super-Hoch um."
+
+#~ msgctxt "keys_files"
+#~ msgid "Menu N"
+#~ msgstr "Menü N"
+
+#~ msgctxt "keys_files"
+#~ msgid "Menu Y"
+#~ msgstr "Menü Y"
+
+#~ msgctxt "keys_files"
+#~ msgid "Menu escape"
+#~ msgstr "Menü verlassen"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19028,6 +19044,14 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "WiiMote Sideways"
 #~ msgstr "WiiMote seitwärts"
+
+#~ msgctxt "keys_files"
+#~ msgid "Zoon in"
+#~ msgstr "Hineinzoomen"
+
+#~ msgctxt "keys_files"
+#~ msgid "Zoon out"
+#~ msgstr "Herauszoomen"
 
 #~ msgctxt "game_options"
 #~ msgid "external (variable fps)"
