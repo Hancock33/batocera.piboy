@@ -1,23 +1,10 @@
-#
-# This file is part of the batocera distribution (https://batocera.org).
-# Copyright (c) 2025+.
-#
-# This program is free software: you can redistribute it and/or modify  
-# it under the terms of the GNU General Public License as published by  
-# the Free Software Foundation, version 3.
-#
-# You should have received a copy of the GNU General Public License 
-# along with this program. If not, see <http://www.gnu.org/licenses/>.
-#
-# YOU MUST KEEP THIS HEADER AS IT IS
-#
 ################################################################################
 #
 # openjkdf2
 #
 ################################################################################
-
-OPENJKDF2_VERSION = v0.9.6
+# Version: Commits on Feb 07, 2025
+OPENJKDF2_VERSION = cd88c33724641c5adb246babec0d4870e8df61b4
 OPENJKDF2_SITE = https://github.com/shinyquagsire23/OpenJKDF2
 OPENJKDF2_SITE_METHOD = git
 OPENJKDF2_GIT_SUBMODULES = YES
@@ -29,10 +16,7 @@ OPENJKDF2_DEPENDENCIES += gamenetworkingsockets host-python-cog libcurl libfreeg
 OPENJKDF2_DEPENDENCIES += libglew libgtk3 libpng openal physfs protobuf python3
 OPENJKDF2_DEPENDENCIES += sdl2 sdl2_mixer zlib
 
-OPENJKDF2_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 OPENJKDF2_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-OPENJKDF2_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/clang
-OPENJKDF2_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/clang++
 OPENJKDF2_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lm -lstdc++"
 OPENJKDF2_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CFLAGS) -I$(STAGING_DIR)/usr/include/SDL2 \
                                          -I$(STAGING_DIR)/usr/include/GameNetworkingSockets"
@@ -42,8 +26,21 @@ OPENJKDF2_CONF_OPTS += -DPLAT_LINUX_64=ON
 OPENJKDF2_CONF_OPTS += -DCMAKE_CROSSCOMPILING=NO
 
 define OPENJKDF2_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/usr/bin
-    cp $(@D)/buildroot-build/openjkdf2 $(TARGET_DIR)/usr/bin/
+	mkdir -p $(TARGET_DIR)/usr/bin
+	cp $(@D)/buildroot-build/openjkdf2 $(TARGET_DIR)/usr/bin/
 endef
 
 $(eval $(cmake-package))
+#
+# This file is part of the batocera distribution (https://batocera.org).
+# Copyright (c) 2025+.
+#
+# This script is free software: you can redistribute it and/or modify  
+# it under the terms of the GNU General Public License as published by  
+# the Free Software Foundation, version 3.
+#
+# You should have received a copy of the GNU General Public License 
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+# YOU MUST KEEP THIS FOOTER AS IT IS
+#

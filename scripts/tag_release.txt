@@ -12,6 +12,7 @@ kddocwidgets.mk
 liblc3.mk
 libpinmame.mk
 libzedmd.mk
+python-cog.mk
 python-pyxel.mk
 sdl3_image.mk
 sdl3_ttf.mk

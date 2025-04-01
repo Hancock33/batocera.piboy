@@ -3,7 +3,7 @@
 # python-cog
 #
 ################################################################################
-
+# Version: Commits on Mar 07, 2024
 PYTHON_COG_VERSION = v3.4.1
 PYTHON_COG_SITE = $(call github,nedbat,cog,$(PYTHON_COG_VERSION))
 PYTHON_COG_SETUP_TYPE = setuptools

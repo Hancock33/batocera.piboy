@@ -1061,7 +1061,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 
     help
         Ports
- ####
+#### Vintage computer systems ####
 config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     bool "batocera.linux vintage computers emulation packages"
 

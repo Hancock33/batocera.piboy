@@ -3,8 +3,8 @@
 # dolphinCrosshairsPack
 #
 ################################################################################
-# Version: Commits on Mar 03, 2023
-DOLPHINCROSSHAIRSPACK_VERSION = v2.0
+# Version: Commits on Jan 20, 2024
+DOLPHINCROSSHAIRSPACK_VERSION = b78ab6cb5a6d5e34f6e2ec16f551e00540a29ed5
 DOLPHINCROSSHAIRSPACK_SITE = $(call github,ProfgLX,Dolphin-Lightguns-Accuracy-Inis,$(DOLPHINCROSSHAIRSPACK_VERSION))
 
 define DOLPHINCROSSHAIRSPACK_INSTALL_TARGET_CMDS
