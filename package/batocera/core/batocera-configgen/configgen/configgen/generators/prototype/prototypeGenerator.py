@@ -8,7 +8,7 @@ from ..Generator import Generator
 
 class PrototypeGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["prototype"]
 
         return Command.Command(

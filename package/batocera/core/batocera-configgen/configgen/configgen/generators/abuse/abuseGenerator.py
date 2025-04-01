@@ -12,7 +12,7 @@ if TYPE_CHECKING:
 
 class AbuseGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["abuse"]
 
         return Command.Command(

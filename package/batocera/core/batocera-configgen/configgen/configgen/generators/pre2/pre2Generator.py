@@ -8,7 +8,7 @@ from ..Generator import Generator
 
 class Pre2Generator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["pre2", "--datapath=/userdata/roms/ports/pre2", "--fullscreen"]
 
         return Command.Command(

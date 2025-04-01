@@ -12,7 +12,7 @@ if TYPE_CHECKING:
 
 class AlephoneGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         game = "/userdata/roms/ports/alephone/marathon"
         if "marathon2" in rom.name:
             game = "/userdata/roms/ports/alephone/marathon2"

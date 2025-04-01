@@ -79,7 +79,7 @@ class LindberghGenerator(Generator):
             "keys": { "exit": "KEY_T", "coin": "KEY_5" }
         }
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         romDir = rom.parent
         romName = rom.name
         _logger.debug("ROM path: %s", romDir)

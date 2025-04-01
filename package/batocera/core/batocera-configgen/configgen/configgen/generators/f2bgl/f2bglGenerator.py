@@ -9,7 +9,7 @@ from ..Generator import Generator
 
 class F2bglGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         os.chdir("/userdata/roms/ports/f2bgl")
         commandArray = ["f2bgl", "--fullscreen", "--datapath=/userdata/roms/ports/f2bgl", "--savepath=/userdata/saves/f2bgl"]
 

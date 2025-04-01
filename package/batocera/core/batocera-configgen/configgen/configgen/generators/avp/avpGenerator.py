@@ -12,7 +12,7 @@ if TYPE_CHECKING:
 
 class AvpGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["avp", "-f", "-p", "/userdata/roms/ports/avp/", "-g", "/usr/lib/libGLESv2.so"]
 
         return Command.Command(

@@ -29,7 +29,7 @@ class Doom3Generator(Generator):
             }
         }
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
         # Set the paths using Path objects
         romDir = "/userdata/roms/ports/doom3"

@@ -12,7 +12,7 @@ if TYPE_CHECKING:
 
 class AwglGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         os.chdir("/userdata/roms/ports/awgl")
         if  "15th" in rom.name:
             game = "--datapath=/userdata/roms/ports/awgl/15th"

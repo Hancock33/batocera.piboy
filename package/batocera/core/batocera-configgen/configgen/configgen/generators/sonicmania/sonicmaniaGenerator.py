@@ -16,7 +16,7 @@ class SonicManiaGenerator(Generator):
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ENTER", "pause": "KEY_ENTER" }
         }
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
         source_file = '/usr/bin/sonicmania'
         rom_directory = '/userdata/roms/ports/sonicmania'

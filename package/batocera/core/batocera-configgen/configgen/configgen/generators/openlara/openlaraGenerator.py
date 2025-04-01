@@ -8,7 +8,7 @@ from ..Generator import Generator
 
 class OpenlaraGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["OpenLara"]
 
         return Command.Command(
