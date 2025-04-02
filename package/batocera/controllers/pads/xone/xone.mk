@@ -3,9 +3,9 @@
 # xone
 #
 ################################################################################
-# Version: Commits on Apr 25, 2024
-XONE_VERSION = 29ec3577e52a50f876440c81267f609575c5161e
-XONE_SITE = $(call github,medusalix,xone,$(XONE_VERSION))
+# Version: Commits on Mar 12, 2025
+XONE_VERSION = aeb27e6d98f7b22b3672701af6171612254a4d0c
+XONE_SITE = $(call github,dlundqvist,xone,$(XONE_VERSION))
 XONE_DEPENDENCIES = host-cabextract libusb
 
 define XONE_INSTALL_TARGET_CMDS
