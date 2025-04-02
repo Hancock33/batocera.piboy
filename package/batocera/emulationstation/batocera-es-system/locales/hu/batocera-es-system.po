@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-03-10 17:59+0100\n"
+"PO-Revision-Date: 2025-04-02 13:09+0200\n"
 "Last-Translator: pigator\n"
 "Language-Team: \n"
 "Language: hu\n"
@@ -1351,12 +1351,12 @@ msgstr "3D ENGINE"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "3DS mode (bottom side)"
-msgstr ""
+msgstr "3DS mód (alul)"
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "3DS mode (right side)"
-msgstr ""
+msgstr "3DS mód (jobb oldal)"
 
 #. TRANSLATION: libretro/np2kai, libretro/px68k
 msgctxt "game_options"
@@ -3323,7 +3323,7 @@ msgstr "Atari XE Game System kazetták"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Attack"
-msgstr ""
+msgstr "Támadás"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -3647,7 +3647,7 @@ msgstr "BOBBA FETT FIX"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "BOOST RENDER RES"
-msgstr ""
+msgstr "RENDERELÉSI FELBONTÁS NÖVELÉSE"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -7271,6 +7271,7 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable widescreen support for game rendering."
 msgstr ""
+"A szélesvásznú képernyő támogatásának engedélyezése a játék rendereléséhez."
 
 #. TRANSLATION: model2emu, play, theforceengine
 msgctxt "game_options"
@@ -8181,6 +8182,9 @@ msgid ""
 "Fixes some shadows and textures in Virtua Tennis 3 and Virtua Fighter 5 "
 "franchise for non Nvidia GPUs. May need the FPS limiter option enabled."
 msgstr ""
+"Kijavít néhány árnyékot és textúrát a Virtua Tennis 3 és Virtua Fighter 5 "
+"franchise-ban nem Nvidia GPU-khoz. Lehetséges, hogy engedélyezni kell az FPS "
+"limiter opciót."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -9403,7 +9407,7 @@ msgstr "Elrejt"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Hide bezels"
-msgstr ""
+msgstr "Keretek elrejtése"
 
 #. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
@@ -9488,6 +9492,8 @@ msgid ""
 "House of the Dead 4 speed fix. Sets the game to the CPU minimum frequency of "
 "your processor."
 msgstr ""
+"House of the Dead 4 sebességes javítás. Beállítja a játékot a processzor CPU "
+"minimális frekvenciájára."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -11268,32 +11274,32 @@ msgstr "Vissza menü"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu back / exit"
-msgstr ""
+msgstr "Menü vissza / kilépés"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu down"
-msgstr ""
+msgstr "Menü le"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu enter"
-msgstr ""
+msgstr "Menü belépés"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu left"
-msgstr ""
+msgstr "Menü balra"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu right"
-msgstr ""
+msgstr "Menü jobbra"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu up"
-msgstr ""
+msgstr "Menü fel"
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
@@ -11848,7 +11854,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Next disk"
-msgstr ""
+msgstr "Következő lemez"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -11908,7 +11914,7 @@ msgstr "Nincs kihagyás"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "No touch screen (Default)"
-msgstr ""
+msgstr "Nincs érintőképernyő (alapértelmezett)"
 
 #. TRANSLATION: citron, dolphin, dolphin_triforce, drastic, fallout1-ce, ...
 msgctxt "game_options"
@@ -12683,7 +12689,7 @@ msgstr "BEMUTATÁSI MÓD"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "PRIMEVAL HUNT MODE"
-msgstr ""
+msgstr "PRIMEVAL HUNT MÓD"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -12807,7 +12813,7 @@ msgstr "Részleges"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Pause"
-msgstr ""
+msgstr "Szünet"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -13196,7 +13202,7 @@ msgstr "Előző hely"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Previous weapon"
-msgstr ""
+msgstr "Előző fegyver"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -14405,7 +14411,7 @@ msgstr "NYÚJTÁS KITÖLTÉSRE"
 #. TRANSLATION: bstone
 msgctxt "game_options"
 msgid "STRETCH UI MENU"
-msgstr ""
+msgstr "UI MENÜ NYÚJTÁSA"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -14837,7 +14843,7 @@ msgstr "Állítsa be a rendszerszintű vezérlőket a MAME menüben"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set the Primeval Hunt mode (touch screen)."
-msgstr ""
+msgstr "Állítsa be a Primeval Hunt módot (érintőképernyő)."
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
@@ -15086,7 +15092,7 @@ msgstr "Manőver 9"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Side by side"
-msgstr ""
+msgstr "Egymás mellett"
 
 #. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em
 msgctxt "game_options"
@@ -15693,7 +15699,7 @@ msgstr "Statikus fordító"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Stats"
-msgstr ""
+msgstr "Statisztika"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -15889,7 +15895,7 @@ msgstr "Surround 7.1"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Swap screen"
-msgstr ""
+msgstr "Képernyőcsere"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -16472,7 +16478,7 @@ msgstr "Tomy Tutor & Pyuuta kazetta"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Toogle screen layout"
-msgstr ""
+msgstr "Képernyő elrendezésének váltása"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -16822,7 +16828,7 @@ msgstr "KORMÁNY HASZNÁLATA"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "USE ZINK FOR RENDERING"
-msgstr ""
+msgstr "HASZNÁLJON ZINK-ET A RENDERELÉSRE"
 
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
@@ -17057,7 +17063,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Upscale rendering resolution to display size."
-msgstr ""
+msgstr "A megjelenítési felbontás felskálázása a megjelenítési méretre."
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -17072,7 +17078,7 @@ msgstr "Uruguay"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Use"
-msgstr ""
+msgstr "Használ"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -17950,7 +17956,7 @@ msgstr "Zóna, ahol a játék nem reagál a kerékre (fokban)"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Zoom in"
-msgstr ""
+msgstr "Nagyítás"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -17965,7 +17971,7 @@ msgstr "5x NAGYÍTÁS"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Zoom out"
-msgstr ""
+msgstr "Kicsinyítés"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-03-30 13:39+0900\n"
+"PO-Revision-Date: 2025-04-02 22:42+0900\n"
 "Last-Translator: DDinghoya <ddinghoya@gmail.com>\n"
 "Language-Team: Korean (KO)\n"
 "Language: ko_KO\n"
@@ -11174,7 +11174,7 @@ msgstr "메뉴 뒤로가기"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu back / exit"
-msgstr ""
+msgstr "메뉴 뒤로 가기 / 종료"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
@@ -11189,12 +11189,12 @@ msgstr "메뉴 엔터"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu left"
-msgstr ""
+msgstr "메뉴 왼쪽"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu right"
-msgstr ""
+msgstr "메뉴 오른쪽"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
@@ -12705,7 +12705,7 @@ msgstr "부분적"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Pause"
-msgstr ""
+msgstr "일시중지"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -13088,7 +13088,7 @@ msgstr "이전 슬ㄹ"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Previous weapon"
-msgstr ""
+msgstr "이전 무기"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -17799,7 +17799,7 @@ msgstr "게임이 핸들에 반응하지 않는 영역 (°)"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Zoom in"
-msgstr ""
+msgstr "확대"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -17814,7 +17814,7 @@ msgstr "5배 확대"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Zoom out"
-msgstr ""
+msgstr "축소"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
