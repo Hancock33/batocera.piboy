@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: batocera-emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-03-29 16:10-0300\n"
+"PO-Revision-Date: 2025-04-02 22:58-0300\n"
 "Last-Translator: Leonardo Colman Lopes <dev@leonardo.colman.com.br>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: pt_BR\n"
@@ -8182,6 +8182,8 @@ msgid ""
 "Fixes some shadows and textures in Virtua Tennis 3 and Virtua Fighter 5 "
 "franchise for non Nvidia GPUs. May need the FPS limiter option enabled."
 msgstr ""
+"Conserta algumas sompras e texturas no Virtua Tennis 3 e Virtua Fighter 5 "
+"para GPUs não-nvidia. Pode ser necessário usar a opção de limite de fps."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -9491,7 +9493,7 @@ msgid ""
 "your processor."
 msgstr ""
 "Conserta velocidade de House of the Dead 4. Configura o jogo para a menor "
-"frequência possível do seu processador"
+"frequência possível do seu processador."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -11267,7 +11269,7 @@ msgstr "Menu voltar"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu back / exit"
-msgstr ""
+msgstr "Menu voltar / sair"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
@@ -11282,12 +11284,12 @@ msgstr "Menu enter"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu left"
-msgstr ""
+msgstr "Menu esquerdo"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu right"
-msgstr ""
+msgstr "Menu direito"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
@@ -12807,7 +12809,7 @@ msgstr "Parcial"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Pause"
-msgstr ""
+msgstr "Pausar"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -13196,7 +13198,7 @@ msgstr "Slot Anterior"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Previous weapon"
-msgstr ""
+msgstr "Arma anterior"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -17949,7 +17951,7 @@ msgstr "Zona na qual o jogo nao reage ao volante (em graus)"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Zoom in"
-msgstr ""
+msgstr "Zoom in"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -17964,7 +17966,7 @@ msgstr "Ampliar zoom em x5"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Zoom out"
-msgstr ""
+msgstr "Zoom out"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
