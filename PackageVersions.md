@@ -192,7 +192,7 @@ Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|1a08d7
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|d7498129071bae45ef73db5eb9be0c2e365987ae|Mar 31, 2025
 Emulators|[libretro-pocketsnes](http://github.com/libretro/snes9x2002)|a0709ec7dcd6de2fbebb43106bd757b649e3b7cf|Oct 21, 2024
 Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|78656d4615691c393e65e48672ce5fff5b1f97d3|Oct 21, 2024
-Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|5a6c9051f20d3b98289811c7492c8bc96aeb296e|Apr 03, 2025
+Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|97e6ef2dd672fd4586f0aefcecc56c3ad4d9af04|Apr 03, 2025
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|b3e5f8b2e8855f9c6fc7ff7a0036e4e61379177d|Dec 27, 2024
 Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|acae250da8d98b8b9707cd499e2a0bf6d8500652|Oct 21, 2024
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|6cc162de2162a0ffe92a4e0470141b9c7c095bf3|Mar 15, 2025
@@ -262,7 +262,7 @@ Emulators|[openmsx](http://github.com/openMSX/openMSX)|9a0bbeb4a60ac354bcc449a03
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.251|Apr 03, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|d7498129071bae45ef73db5eb9be0c2e365987ae|Mar 31, 2025
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|5a6c9051f20d3b98289811c7492c8bc96aeb296e|Apr 03, 2025
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|97e6ef2dd672fd4586f0aefcecc56c3ad4d9af04|Apr 03, 2025
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a177763e14c924e3b15e2|Sept 29, 2024
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.3.18|Apr 03, 2025
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
@@ -433,7 +433,7 @@ Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|72d2c417645d47a382b061d2a6
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|ee6addacfe721e587c3b2c9a2594953cd9c774bc|Oct 20, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|3d7a8e8f4831c3f464f72a23b785446cb9c32d90|Apr 03, 2025
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|b050991ed227a320ab0ad9801bf9fbd8f3b2d416|Mar 28, 2025
-Ports|[doomretro](http://github.com/bradharding/doomretro)|d7d2439162ed7196b587e69d0acdef43f8a1e61d|Apr 01, 2025
+Ports|[doomretro](http://github.com/bradharding/doomretro)|9756f79c51b023f707451b86a236e9c1af647d70|Apr 03, 2025
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|ddc84fa623ed508073cf99244db731bd73f36b6b|Mar 29, 2025
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|2c64179560f74ddb3b489938c8eea5276f32bb72|Mar 12, 2025
@@ -457,7 +457,7 @@ Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|f56cee695cce96f5565b
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|3f4bfd340730c0dc4443dd35e4d9a310ecf612ad|Mar 26, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|e5e972c4083734c5b3a6c5fc6de23e7d0a79506b|Apr 02, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250402|Apr 02, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250403|Apr 03, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14217|Mar 16, 2025
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|b2b4cecbf69aa7a3d07d7b2e25abe0649ac6c552|Apr 01, 2025
@@ -559,5 +559,5 @@ Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
 Wine|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0|Jan 21, 2025
 Wine|[wine-proton](http://github.com/ValveSoftware/wine)|experimental-wine-9.0-20250317|Mar 17, 2025
 Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250402|Apr 02, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250403|Apr 03, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|e73c4d8f71801fe842c0276b603d9c8024d6d957|Feb 07, 2025
