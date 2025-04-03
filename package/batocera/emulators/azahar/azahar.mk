@@ -3,8 +3,8 @@
 # azahar
 #
 ################################################################################
-# Version: Commits on Apr 02, 2025
-AZAHAR_VERSION = 93eeb501c0a991e1097178ba58a0432d40005514
+# Version: Commits on Apr 03, 2025
+AZAHAR_VERSION = 950085904397daa4ea1dc8152073aeb2c577bfbf
 AZAHAR_SITE = https://github.com/azahar-emu/azahar.git
 AZAHAR_SITE_METHOD=git
 AZAHAR_GIT_SUBMODULES = YES
