@@ -268,7 +268,7 @@ Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.3.18|Apr 03, 2025
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|818aca56efd784624a241a12936b5c0864e3ddd8|Mar 21, 2025
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|b8b11a618703cbde51646ae3308a3f3d68b13c6f|Apr 04, 2025
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|3888bfd4534a72dc62e0c3f8fdd83049cd245db9|Apr 04, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20250308|Mar 08, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|2ac2439c3355822bdea37e665998f6f2d8772f4f|Apr 03, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-04-03|Apr 03, 2025
@@ -284,7 +284,7 @@ Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|9b927f280322b6bb
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|ac19d512ee56cb5ee0917c6e596f9df75d97a5dc|Mar 31, 2025
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|39f26d3bc8e04133c31192c757eaebd5f0924f2d|Mar 12, 2025
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|dcd8acc5409411e8ac91c345e137215b5a2a131e|Apr 04, 2025
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|337325101869204daf4f73afb25abec08b11989b|Apr 04, 2025
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|2f40422a7023f9b9bf7693ed9b809bafad1c77ee|Mar 30, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|9a077bb22d73bd13a72c9ef56e8b83ce567a58d1|Mar 26, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45623|Apr 03, 2025
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
@@ -395,7 +395,7 @@ Libraries|[python-sysv-ipc](https://files.pythonhosted.org/packages/0c/d7/5d2f86
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|5.4|Jan 27, 2025
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|f10920239783dc09bd22f09bad69585cfce8a28d|Apr 01, 2025
 Libraries|[sdl3_image](https://github.com/libsdl-org/SDL_image)|release-3.2.4|Mar 03, 2025
-Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|204751967a93ac896131d1f5e187c248218962a4|Apr 04, 2025
+Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|68764f35899e133b402336843c046d75136eaf08|Apr 04, 2025
 Libraries|[sdl3_ttf](https://github.com/libsdl-org/SDL_ttf)|release-3.2.2|Mar 31, 2025
 Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.2.10|Mar 31, 2025
 Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|7f7fa9d42f2d62a6b5faf9efc6a01577fc2c38c1|Jan 16, 2025
@@ -495,11 +495,11 @@ Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|f72bac75d0d2840fece78
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|a178d8ca0f54a33e33d6d9e2984f57701af83532|Apr 03, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|b5f9899b64511170683cc9b517323f714baab3cc|Feb 12, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|a81f4146b72a82e9c6352d34771abc98eefa1de8|Mar 30, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|effabcfb9cd9fd6a3f1e1ce357713ce2efc15559|Apr 04, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|effabcfb9cd9fd6a3f1e1ce357713ce2efc15559|Apr 04, 2025
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|02c265683b5cd4c1d650c96b270c4ac5e1801e4a|Apr 04, 2025
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|02c265683b5cd4c1d650c96b270c4ac5e1801e4a|Apr 04, 2025
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.7|Feb 28, 2025
-Ports|[vkquake](http://github.com/Novum/vkQuake)|13b4b73a91b1ccfc72aef300fe76b25109114510|Mar 31, 2025
+Ports|[vkquake](http://github.com/Novum/vkQuake)|8f6bb550dcbb4192314b81c96cdcb47b7141b891|Apr 04, 2025
 Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|5bf9c012024884234df0f63c615daec0c740def7|Jan 04, 2025
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|5300b32803c1c61bc3b6bdf86a084c1db1a217ad|Jan 25, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|ccb8d611c6016e45ebf0469d03ed0cc680259369|Apr 01, 2025
@@ -535,7 +535,7 @@ Utils|[rclone](http://github.com/rclone/rclone)|v1.69.1|Feb 14, 2025
 Utils|[re2c](http://github.com/skvadrik/re2c)|4.1|Feb 16, 2025
 Utils|[ryzenadj](http://github.com/FlyGoat/RyzenAdj)|v0.16.0|Sept 18, 2024
 Utils|[switchres](http://github.com/antonioginer/switchres)|v2.2.1|May 15, 2024
-Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.0-beta.4|Apr 03, 2025
+Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.0-beta.5|Apr 04, 2025
 Utils|[touchegg](http://github.com/JoseExposito/touchegg)|2.0.17|Aug 13, 2023
 Utils|[tvtextviewer](https://github.com/lethal-guitar/TvTextViewer.git)|d3cc00a5009ece2d1df6cfc571709d0c5752bade|Nov 29, 2023
 Utils|[unclutter](https://github.com/batocera-linux/unclutter-xfixes/archive/refs/tags)|v1.5-batocera|Aug 13, 2019

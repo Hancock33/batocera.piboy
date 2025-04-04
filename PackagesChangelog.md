@@ -8,13 +8,14 @@ Emulators|[play](https://github.com/jpd002/Play-.git)|225e37d0dc7b8a7bb6dc3534b9
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|0f6886b272a262d5aa3996ad4415a471ed1f115c|Apr 04, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|54b4d7fc788d570c14924d21fbb1f58de0254aad|Apr 04, 2025
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|dcd8acc5409411e8ac91c345e137215b5a2a131e|Apr 04, 2025
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|337325101869204daf4f73afb25abec08b11989b|Apr 04, 2025
-Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|204751967a93ac896131d1f5e187c248218962a4|Apr 04, 2025
+Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|68764f35899e133b402336843c046d75136eaf08|Apr 04, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|1e89ccb17e0c10161e60cc1979c8a656f73bb50f|Apr 04, 2025
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|b8b11a618703cbde51646ae3308a3f3d68b13c6f|Apr 04, 2025
+Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.0-beta.5|Apr 04, 2025
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|3888bfd4534a72dc62e0c3f8fdd83049cd245db9|Apr 04, 2025
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|f98af0cf3a769ce9d15d50baf2caafe43b311ca3|Apr 04, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|effabcfb9cd9fd6a3f1e1ce357713ce2efc15559|Apr 04, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|effabcfb9cd9fd6a3f1e1ce357713ce2efc15559|Apr 04, 2025
+Ports|[vkquake](http://github.com/Novum/vkQuake)|8f6bb550dcbb4192314b81c96cdcb47b7141b891|Apr 04, 2025
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|02c265683b5cd4c1d650c96b270c4ac5e1801e4a|Apr 04, 2025
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|02c265683b5cd4c1d650c96b270c4ac5e1801e4a|Apr 04, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|90c09d4b8e6923a22538c35f68ace2d9fead134d|Apr 04, 2025
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|8d89089d35bedc257dc13bebd3790f70417311a5|Apr 04, 2025
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|2910240a4100ccad68f935082b8bbce194673cb5|Apr 04, 2025
@@ -41,7 +42,6 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|9998ffdd236bad5
 Ports|[omf2097](http://github.com/omf2097/openomf)|ad420adf97c5924f5c07fd95d3a661be8d43376d|Apr 03, 2025
 Ports|[raze](http://github.com/ZDoom/Raze)|940e53af6fed5ed9f50f5495eac9d1fda42a6065|Apr 03, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|a178d8ca0f54a33e33d6d9e2984f57701af83532|Apr 03, 2025
-Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.0-beta.4|Apr 03, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250403|Apr 03, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|a1ce710d3ad89325cd6a95372702ab0a3d383673|Apr 03, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250403|Apr 03, 2025
@@ -75,8 +75,8 @@ Emulators|[xemu](https://github.com/xemu-project/xemu)|f82c6865fc27a07f52470e0a1
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2025.01.1|Mar 31, 2025
 Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.2.10|Mar 31, 2025
 Libraries|[sdl3_ttf](https://github.com/libsdl-org/SDL_ttf)|release-3.2.2|Mar 31, 2025
-Ports|[vkquake](http://github.com/Novum/vkQuake)|13b4b73a91b1ccfc72aef300fe76b25109114510|Mar 31, 2025
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0276|Mar 30, 2025
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|2f40422a7023f9b9bf7693ed9b809bafad1c77ee|Mar 30, 2025
 Libraries|[discord_rpc](http://github.com/stenzek/discord-rpc)|cc59d26d1d628fbd6527aac0ac1d6301f4978b92|Mar 30, 2025
 Libraries|[lunasvg](http://github.com/stenzek/lunasvg)|4a1c98ccb1da8a5a92ddc4f97339869b1ae556f4|Mar 30, 2025
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|551f78aa51ef2370dfebad7d0c602041e234ac7e|Mar 30, 2025
