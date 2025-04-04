@@ -2233,7 +2233,7 @@ msgstr "URL DO SERVIÇO DE TRADUÇÃO POR IA"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "AIMING CROSSHAIR"
-msgstr ""
+msgstr "Mira em cruz"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -2398,7 +2398,7 @@ msgstr "Recompilador ASMJIT"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "ASPECT"
-msgstr ""
+msgstr "ASPETO"
 
 #. TRANSLATION: bermuda, bigpemu, cemu, cgenius, citron, ...
 msgctxt "game_options"
@@ -2528,7 +2528,7 @@ msgstr "MIRA AUTOMÁTICA"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "AUTO AIMING"
-msgstr ""
+msgstr "MIRA AUTOMÁTICA"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -2568,7 +2568,7 @@ msgstr "AUTO GUARDAR/CARREGAR AO INICIAR JOGO"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "AUTO SWITCH WEAPON"
-msgstr ""
+msgstr "TROCAR ARMA AUTOMATICAMENTE"
 
 #. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -2583,7 +2583,7 @@ msgstr "ATRASO DE FRAME AUTOMÁTICO"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "AUTOMATICALLY RELOAD WEAPON"
-msgstr ""
+msgstr "RECARREGAR ARMA AUTOMATICAMENTE"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -3421,7 +3421,7 @@ msgstr "AUTOMÁTICO"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Automatic pickup weapon."
-msgstr ""
+msgstr "Recolher arma automaticamentetica."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -4681,7 +4681,7 @@ msgstr "MIRA"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "CROSSHAIR SIZE"
-msgstr ""
+msgstr "TAMANHO DA MIRA"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -4786,12 +4786,12 @@ msgstr "PERSONALIZAR WIIMOTE E COMANDOS EMULADOS"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "CUTSCENE SUBTITLES"
-msgstr ""
+msgstr "LEGENDAS DE CUTSCENE"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "CUTSCENES"
-msgstr ""
+msgstr "CUTSCENES"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -5135,7 +5135,7 @@ msgstr "Chinês (tradicional) [Big5]"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose Screen Space Ambient Occlusion for better lighting."
-msgstr ""
+msgstr "Escolha Screen Space Ambient Occlusion para uma melhor iluminação."
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -5150,7 +5150,7 @@ msgstr "Escolha o tipo de cabo para a TV."
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose difficulty for the game."
-msgstr ""
+msgstr "Escolha a dificuldade do jogo."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -5872,7 +5872,7 @@ msgstr "MENU DE DEVELOPER"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "DIFFICULTY"
-msgstr ""
+msgstr "DIFICULDADE"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -6291,7 +6291,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Disable mission start confirmation."
-msgstr ""
+msgstr "Desativar a confirmação de início da missão."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -6306,7 +6306,7 @@ msgstr "Desativar para aceder aos ajustes do sistema, como hora e idioma."
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Disable weapon waggle."
-msgstr ""
+msgstr "Desativar o movimento da arma."
 
 #. TRANSLATION: bigpemu, bstone, citron, duckstation, f2bgl, ...
 msgctxt "game_options"
@@ -6519,7 +6519,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Duck"
-msgstr ""
+msgstr "Duck"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -7039,7 +7039,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Enable aiming crosshair."
-msgstr ""
+msgstr "Ativar apontar a mira."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -7049,7 +7049,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Enable auto aiming."
-msgstr ""
+msgstr "Ativar a mira automática."
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -7092,7 +7092,7 @@ msgstr "Ativar o free play para jogos suportados."
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Enable full subtitles on cutscenes."
-msgstr ""
+msgstr "Ativar legendas completas nas cenas."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -7122,7 +7122,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Enable high dots per inch."
-msgstr ""
+msgstr "Ativar os pontos altos por polegada."
 
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
@@ -7197,7 +7197,7 @@ msgstr "Ativar renderização quádrupla adequada (para sistemas mais avançados
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Enable rotation on overlay map."
-msgstr ""
+msgstr "Ativar a rotação no mapa de sobreposição."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -7804,7 +7804,7 @@ msgstr "FIDELITY FX SUPER RESOLUTION"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "FIELD OF VIEW"
-msgstr ""
+msgstr "CAMPO DE VISÃO"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -7834,7 +7834,7 @@ msgstr "DEFINIÇÕES DE FIRMWARE"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "FIST CROSSHAIR"
-msgstr ""
+msgstr "MIRA DO PUNHO"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -7929,12 +7929,12 @@ msgstr "FORÇAR MODO WINDOWS CE"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "FOV VERTICAL"
-msgstr ""
+msgstr "FOV VERTICAL"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "FPS LIMIT"
-msgstr ""
+msgstr "LIMITE DE FPS"
 
 #. TRANSLATION: lindbergh-loader, wine
 msgctxt "game_options"
@@ -8107,7 +8107,7 @@ msgstr "Ilhas Faroé"
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Fast"
-msgstr ""
+msgstr "Rápida"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -8151,12 +8151,12 @@ msgstr "FidelityFX Super Resolution"
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Field Light"
-msgstr ""
+msgstr "Luz de campo"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Field of view is vertical (Hor+)."
-msgstr ""
+msgstr "O campo de visão é vertical (Hor+)."
 
 #. TRANSLATION: libretro/uae4arm
 msgctxt "game_options"
@@ -8210,12 +8210,12 @@ msgstr "Disparar"
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Fire 1"
-msgstr ""
+msgstr "Fogo 1"
 
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Fire 2"
-msgstr ""
+msgstr "Fogo 2"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -8774,7 +8774,7 @@ msgstr "VELOCIDADE DO CURSOR DO COMANDO"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "GAMEPLAY"
-msgstr ""
+msgstr "JOGO"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -8894,7 +8894,7 @@ msgstr "GDC"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "GENERAL"
-msgstr ""
+msgstr "GENERAL"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -9352,7 +9352,7 @@ msgstr "OCULTAR GPU NVIDIA"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "HIDPI"
-msgstr ""
+msgstr "HIDPI"
 
 #. TRANSLATION: cannonball
 msgctxt "game_options"
@@ -10286,7 +10286,7 @@ msgstr "Justifier"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "KEEP LIGHTSABER"
-msgstr ""
+msgstr "MANTER A SABRE DE LUZ"
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
@@ -10500,12 +10500,12 @@ msgstr "ARMAS LEVES"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "LIGHTSABER CAMERA"
-msgstr ""
+msgstr "CÂMARA SABRE DE LUZ"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "LIGHTSABER CROSSHAIR"
-msgstr ""
+msgstr "MIRA SABRE DE LUZ"
 
 #. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
@@ -10910,7 +10910,7 @@ msgstr "AMOSTRA MANUAL DE TEXTURA"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "MAP ROTATION"
-msgstr ""
+msgstr "ROTAÇÃO DO MAPA"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -10975,7 +10975,7 @@ msgstr "COMANDO DE MÍSSEIS 3D VR"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "MISSION START"
-msgstr ""
+msgstr "INÍCIO DA MISSÃO"
 
 #. TRANSLATION: hatari, libretro/fuse, libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -11200,7 +11200,7 @@ msgstr "Ajustar manualmente os ciclos por segundo. Usar com cuidado."
 #. TRANSLATION: openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Map"
-msgstr ""
+msgstr "Mapa"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -11431,7 +11431,7 @@ msgstr "Menu voltar"
 #. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Menu back / exit"
-msgstr ""
+msgstr "Menu voltar / sair"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
@@ -11446,12 +11446,12 @@ msgstr "Menu entrar"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu left"
-msgstr ""
+msgstr "Menu à esquerda"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu right"
-msgstr ""
+msgstr "Menu à direita"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
@@ -11744,12 +11744,12 @@ msgstr "NÃO (Predefinição)"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "NO DANGEROUS WEAPONS"
-msgstr ""
+msgstr "SEM ARMAS PERIGOSAS"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "NO WEAKER WEAPONS"
-msgstr ""
+msgstr "SEM ARMAS FRACAS"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -12014,17 +12014,17 @@ msgstr "Novo 3D"
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Next Force Power"
-msgstr ""
+msgstr "Próximo poder de força"
 
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Next Inventory Item"
-msgstr ""
+msgstr "Próximo item de inventário"
 
 #. TRANSLATION: openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
-msgstr ""
+msgstr "Próxima arma"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
@@ -12752,7 +12752,7 @@ msgstr "LAYOUT DE TECLADO FÍSICO"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "PICKUP WEAPON"
-msgstr ""
+msgstr "RECOLHA DE ARMA"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -12996,7 +12996,7 @@ msgstr "Parcial"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Pause"
-msgstr ""
+msgstr "Pausa"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -13130,12 +13130,12 @@ msgstr "Rosa - Rosa Flor"
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Pitch Down"
-msgstr ""
+msgstr "Abaixar"
 
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Pitch Up"
-msgstr ""
+msgstr "Levantar"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -13385,17 +13385,17 @@ msgstr "Pressione a tecla Y para 'Sim'"
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous Force Power"
-msgstr ""
+msgstr "Poder de Força Anterior"
 
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous Inventory Item"
-msgstr ""
+msgstr "Artigo de inventário anterior"
 
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous Weapon"
-msgstr ""
+msgstr "Arma Anterior"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -13545,7 +13545,7 @@ msgstr "REGIÃO"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "RELOAD WEAPON"
-msgstr ""
+msgstr "RECARREGAR ARMA"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -14585,7 +14585,7 @@ msgstr "SPU XFloat Preciso"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "SSAO"
-msgstr ""
+msgstr "SSAO"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -14690,7 +14690,7 @@ msgstr "TROCAR COMANDOS"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "SWITCH WEAPON"
-msgstr ""
+msgstr "TROCAR ARMA"
 
 #. TRANSLATION: libretro/doublecherrygb, libretro/tgbdual
 msgctxt "game_options"
@@ -15080,7 +15080,7 @@ msgstr "Defina a intensidade da vibração do comando, se suportado."
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Set the crosshair size."
-msgstr ""
+msgstr "Defina o tamanho da mira."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -15100,12 +15100,12 @@ msgstr "Defina a resolução do monitor. Não afeta a renderização da resoluç
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Set the field of view."
-msgstr ""
+msgstr "Defina o campo de visão."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Set the fps limit."
-msgstr ""
+msgstr "Defina o limite de fps."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -15238,12 +15238,12 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Show Crosshair with fist."
-msgstr ""
+msgstr "Mostrar a mira com o punho."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Show Crosshair with lightsaber."
-msgstr ""
+msgstr "Mostrar mira com sabre de luz."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -17342,7 +17342,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Use 1:1 aspect."
-msgstr ""
+msgstr "Usar o aspeto 1:1."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -17352,7 +17352,7 @@ msgstr "Use joysticks analógicos além do D-Pad para comandos DualShock."
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Use Force Power"
-msgstr ""
+msgstr "Use o poder da força"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -17362,7 +17362,7 @@ msgstr "Usar host"
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Use Inventory Item"
-msgstr ""
+msgstr "Usar item de inventário"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -17871,12 +17871,12 @@ msgstr "AVISAR SOBRE RECURSOS NÃO SUPORTADOS"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "WEAPON PICKUP"
-msgstr ""
+msgstr "RECOLHA DE ARMA"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "WEAPON WAGGLE"
-msgstr ""
+msgstr "ARMA WAGGLE"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -18221,7 +18221,7 @@ msgstr "Zona para a qual o jogo não reage ao volante (em graus)"
 #. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Zoom in"
-msgstr ""
+msgstr "Ampliar zoom"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -18236,7 +18236,7 @@ msgstr "Aumentar zoom x5"
 #. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Zoom out"
-msgstr ""
+msgstr "Diminuir zoom"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -18876,14 +18876,6 @@ msgstr "amarelo/azul"
 #~ "Corta o arquivo de arte do MAME para maximizar o ecrã do jogo e preencher "
 #~ "apenas o espaço não utilizado."
 
-#~ msgctxt "keys_files"
-#~ msgid "Cycle next"
-#~ msgstr "Ciclo seguinte"
-
-#~ msgctxt "keys_files"
-#~ msgid "Cycle previous"
-#~ msgstr "Ciclo anterior"
-
 #~ msgctxt "game_options"
 #~ msgid "D3D12 (Default)"
 #~ msgstr "D3D12 (Padrão)"
@@ -18928,6 +18920,10 @@ msgstr "amarelo/azul"
 #~ msgstr ""
 #~ "Ativa o saltar automático de frames para melhor desempenho em sistemas "
 #~ "lentos."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable lightsaber auot-camera."
+#~ msgstr "Activar a câmara automática do sabre de luz."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19023,18 +19019,6 @@ msgstr "amarelo/azul"
 #~ msgstr ""
 #~ "Defina manualmente qual resolução usar. Predefinição é Alto e muda para "
 #~ "muito alto quando necessário."
-
-#~ msgctxt "keys_files"
-#~ msgid "Menu N"
-#~ msgstr "Menu N"
-
-#~ msgctxt "keys_files"
-#~ msgid "Menu Y"
-#~ msgstr "Menu Y"
-
-#~ msgctxt "keys_files"
-#~ msgid "Menu escape"
-#~ msgstr "Menu de escape"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19253,14 +19237,6 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "WiiMote Sideways"
 #~ msgstr "WiiMote de lado"
-
-#~ msgctxt "keys_files"
-#~ msgid "Zoon in"
-#~ msgstr "Ampliar o zoom"
-
-#~ msgctxt "keys_files"
-#~ msgid "Zoon out"
-#~ msgstr "Diminuir o zoom"
 
 #~ msgctxt "game_options"
 #~ msgid "external (variable fps)"

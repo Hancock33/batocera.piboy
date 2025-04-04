@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -1337,12 +1337,12 @@ msgstr "386DX, 33MHz (7800 cps)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "386_prefetch"
-msgstr ""
+msgstr "386_prefetch"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "386_slow"
-msgstr ""
+msgstr "386_prefetch"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -1352,12 +1352,12 @@ msgstr "3D ENGINE"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "3DS mode (bottom side)"
-msgstr ""
+msgstr "3DS mode (снизу)"
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "3DS mode (right side)"
-msgstr ""
+msgstr "3DS mode (справа)"
 
 #. TRANSLATION: libretro/np2kai, libretro/px68k
 msgctxt "game_options"
@@ -1497,7 +1497,7 @@ msgstr "486DX2, 66MHz (26800 cps)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "486_slow"
-msgstr ""
+msgstr "486_slow"
 
 #. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/openbor7530, xenia, xenia-canary
 msgctxt "game_options"
@@ -2367,12 +2367,12 @@ msgstr "APF M-1000 cartridges"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS-BIOS.ROM"
-msgstr ""
+msgstr "APPLE2GS-BIOS.ROM"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "APPLE2GS.ROM"
-msgstr ""
+msgstr "APPLE2GS.ROM"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -2512,7 +2512,7 @@ msgstr "УСИЛЕНИЕ ГРОМКОСТИ ЗВУКА"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "AUTO"
-msgstr ""
+msgstr "АВТО"
 
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
@@ -2900,7 +2900,7 @@ msgstr "Все границы"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "All Timers"
-msgstr ""
+msgstr "Все таймеры"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -3009,7 +3009,7 @@ msgstr "Американский английский"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Amount of instructions DOSBox tries to emulate"
-msgstr ""
+msgstr "Количество инструкций, которые DOSBox пытается эмулировать"
 
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
@@ -3285,7 +3285,7 @@ msgstr "Стрелки 3 кнопки"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "As Host (Default)"
-msgstr ""
+msgstr "Как Хост (по умолчанию)"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -3344,7 +3344,7 @@ msgstr "Atari XE Game System cartridges"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Attack"
-msgstr ""
+msgstr "Атака"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -3672,7 +3672,7 @@ msgstr "БОББА ФЕТТ ФИКС"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "BOOST RENDER RES"
-msgstr ""
+msgstr "УВЕЛИЧИТЬ РАЗРЕШЕНИЕ РЕНДЕРА"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -3732,7 +3732,7 @@ msgstr "BT601_625/D65 (рекомендуется для всех EUR/AUS игр
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Back / Menu"
-msgstr ""
+msgstr "Назад / Меню"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -4516,7 +4516,7 @@ msgstr "КОМБИНАЦИЯ КОТРОЛЛЕРОВ"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "CONTROLLER MODE"
-msgstr ""
+msgstr "РЕЖИМ КОНТРОЛЛЕРА"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
@@ -4611,12 +4611,12 @@ msgstr "МЕТОД ЯДРА CPU"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU CYCLES"
-msgstr ""
+msgstr "CPU ЦИКЛЫ"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Core used in emulation"
-msgstr ""
+msgstr "Ядро CPU, используемое в эмуляции"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -4651,7 +4651,7 @@ msgstr "ТИП CPU"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "CPU Type used in emulation"
-msgstr ""
+msgstr "Тип CPU, используемое в эмуляции"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -5087,6 +5087,8 @@ msgid ""
 "Changes the sleep period accuracy. Some games need this set to improve "
 "performance."
 msgstr ""
+"Изменяет точность периода сна. Некоторым играм этот набор нужен для "
+"повышения производительности."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -5232,6 +5234,8 @@ msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
 "lightguns & steering wheels. SDL2 for gamepads only."
 msgstr ""
+"Выберите конфигурацию контроллера. EVDEV для широкого спектра контроллеров, "
+"световых пистолетов и рулей. SDL2 только для геймпадов."
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
@@ -5304,7 +5308,7 @@ msgstr ""
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "Choose which BIOS file for GSplus to boot with."
-msgstr ""
+msgstr "Выберите файл BIOS, с которым будет загружаться GSplus."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -5719,7 +5723,7 @@ msgstr "Крест"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Crouch"
-msgstr ""
+msgstr "Пригнуться"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -6475,7 +6479,7 @@ msgstr "Driving Force Pro"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Drop item"
-msgstr ""
+msgstr "Выбросить предмет"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -6536,7 +6540,7 @@ msgstr "Голландский (nl)"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Dynamic"
-msgstr ""
+msgstr "Динамичный"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -6676,7 +6680,7 @@ msgstr "ВКЛЮЧИТЬ GRAVIS ULTRASOUND"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "ENABLE HIDRAW"
-msgstr ""
+msgstr "ВКЛЮЧИТЬ HIDRAW"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -6786,12 +6790,12 @@ msgstr "ESYNC"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "EVDEV (Default)"
-msgstr ""
+msgstr "EVDEV (По умолчанию)"
 
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "EXPANSION PACK"
-msgstr ""
+msgstr "EXPANSION PACK"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -7071,7 +7075,7 @@ msgstr "Включите для большей плавности, отключ�
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Enable free play for supported games."
-msgstr ""
+msgstr "Включить свободную игру для поддерживаемых игр."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -7090,6 +7094,9 @@ msgid ""
 "features (like gyroscope for example), but can break older games with x-"
 "input support only."
 msgstr ""
+"Включить доступ к геймпаду HID raw. Позволяет современным играм исп. спец. "
+"функции геймпада (например, гироскоп), но может сломать старые игры, "
+"поддерживающие только x-input."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7339,7 +7346,7 @@ msgstr ""
 #. TRANSLATION: bstone
 msgctxt "game_options"
 msgid "Enable widescreen support for game rendering."
-msgstr ""
+msgstr "Включить поддержку широкоэкранного режима для рендеринга игр."
 
 #. TRANSLATION: model2emu, play, theforceengine
 msgctxt "game_options"
@@ -7997,7 +8004,7 @@ msgstr "ЗНАЧЕНИЕ ПРОПУСКА КАДРОВ"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "FREE PLAY"
-msgstr ""
+msgstr "СВОБОДНАЯ ИГРА"
 
 #. TRANSLATION: mugen, wine
 msgctxt "game_options"
@@ -8100,7 +8107,7 @@ msgstr "Интерпретатор (быстро)"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Fast forward"
-msgstr ""
+msgstr "Быстрая перемотка вперёд"
 
 #. TRANSLATION: flycast
 #, c-format
@@ -8291,6 +8298,9 @@ msgid ""
 "Fixes some shadows and textures in Virtua Tennis 3 and Virtua Fighter 5 "
 "franchise for non Nvidia GPUs. May need the FPS limiter option enabled."
 msgstr ""
+"Исправляет некоторые тени и текстуры в играх Virtua Tennis 3 и Virtua "
+"Fighter 5 для видеокарт не Nvidia. Может потребоваться включение ограничения "
+"FPS."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -8975,7 +8985,7 @@ msgstr "ГРАФИЧЕСКИЙ РЕНДЕР"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "GSPLUS BIOS FILENAME"
-msgstr ""
+msgstr "GSPLUS BIOS FILENAME"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9483,7 +9493,7 @@ msgstr "Помощь и информация"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Help computer"
-msgstr ""
+msgstr "Помощь компьютеру"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -9527,7 +9537,7 @@ msgstr "Скрыть"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Hide bezels"
-msgstr ""
+msgstr "Скрыть рамки (bezels)"
 
 #. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
@@ -9612,6 +9622,8 @@ msgid ""
 "House of the Dead 4 speed fix. Sets the game to the CPU minimum frequency of "
 "your processor."
 msgstr ""
+"Исправление скорости House of the Dead 4. Устанавливает игру на минимальную "
+"частоту ЦП вашего процессора."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -9992,7 +10004,7 @@ msgstr "InuYasha Sengoku - фикс битв"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Inventory"
-msgstr ""
+msgstr "Инвентарь"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10246,7 +10258,7 @@ msgstr "Июль"
 #. TRANSLATION: omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
-msgstr ""
+msgstr "Прыжок"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10790,12 +10802,12 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look down"
-msgstr ""
+msgstr "Смотреть вниз"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Look up"
-msgstr ""
+msgstr "Смотреть вверх"
 
 #. TRANSLATION: amiberry, libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus, ...
 msgctxt "game_options"
@@ -11197,7 +11209,7 @@ msgstr "Match Window"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "Max"
-msgstr ""
+msgstr "Максимум"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -11405,32 +11417,32 @@ msgstr "Menu back"
 #. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Menu back / exit"
-msgstr ""
+msgstr "Меню назад / выход"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu down"
-msgstr ""
+msgstr "Меню вниз"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu enter"
-msgstr ""
+msgstr "Меню вход"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu left"
-msgstr ""
+msgstr "Меню влево"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu right"
-msgstr ""
+msgstr "Меню вправо"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu up"
-msgstr ""
+msgstr "Меню вверх"
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
@@ -11581,7 +11593,7 @@ msgstr "Двигайтесь вперед"
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Move Forward, Can be use to press W"
-msgstr "Двигаться вперед. Можно нажать W."
+msgstr "Двигаться вперед. Можно нажать W"
 
 #. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
@@ -11591,7 +11603,7 @@ msgstr "Переместить указатель стилета"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move back / down"
-msgstr ""
+msgstr "Переместить назад / вниз"
 
 #. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
@@ -11626,7 +11638,7 @@ msgstr "Двигаться вперёд"
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move forward / up"
-msgstr ""
+msgstr "Переместить вперёд / вверх"
 
 #. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
@@ -12003,22 +12015,22 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Next disk"
-msgstr ""
+msgstr "Следующий диск"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Next item"
-msgstr ""
+msgstr "Следующий предмет"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Next slot"
-msgstr ""
+msgstr "Следующий слот"
 
 #. TRANSLATION: bstone.keys, omf2097.keys
 msgctxt "keys_files"
 msgid "Next weapon"
-msgstr ""
+msgstr "Следующее оружие"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -12063,7 +12075,7 @@ msgstr "Без пропусков"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "No touch screen (Default)"
-msgstr ""
+msgstr "Нет сенсорного экрана (по умолчанию)"
 
 #. TRANSLATION: citron, dolphin, dolphin_triforce, drastic, fallout1-ce, ...
 msgctxt "game_options"
@@ -12841,7 +12853,7 @@ msgstr "РЕЖИМ ПРЕЗЕНТАЦИИ"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "PRIMEVAL HUNT MODE"
-msgstr ""
+msgstr "РЕЖИМ ПЕРВОБЫТНОЙ ОХОТЫ"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -12966,7 +12978,7 @@ msgstr "Частичная"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Pause"
-msgstr ""
+msgstr "Пауза"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -13367,17 +13379,17 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Previous item"
-msgstr ""
+msgstr "Предыдущий предмет"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Previous slot"
-msgstr ""
+msgstr "Предыдущий слот"
 
 #. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous weapon"
-msgstr ""
+msgstr "Предыдущее оружие"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -13652,17 +13664,17 @@ msgstr "ROM (Слот 4)"
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.00"
-msgstr ""
+msgstr "ROM.00"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM.03 (default)"
-msgstr ""
+msgstr "ROM.03 (по умолчанию)"
 
 #. TRANSLATION: gsplus
 msgctxt "game_options"
 msgid "ROM1"
-msgstr ""
+msgstr "ROM1"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -13900,7 +13912,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Reset"
-msgstr ""
+msgstr "Сброс"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13929,7 +13941,7 @@ msgstr "Восстанавливает контур РЕЖИМА СМЕШИВА�
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Restore state"
-msgstr ""
+msgstr "Восстановить состояние"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
@@ -14090,7 +14102,7 @@ msgstr "Бег"
 #. TRANSLATION: tr1x
 msgctxt "game_options"
 msgid "Run the Unfinished expansion pack."
-msgstr ""
+msgstr "Запустить Unfinished expansion pack."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14410,7 +14422,7 @@ msgstr "ПРОПУСТИТЬ НАЧАЛЬНОЕ МЕНЮ"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "SLEEP TIMERS ACCURACY"
-msgstr ""
+msgstr "ТОЧНОСТЬ ТАЙМЕРОВ СНА"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -14595,7 +14607,7 @@ msgstr "РАСТЯНУТЬ ДЛЯ ЗАПОЛНЕНИЯ"
 #. TRANSLATION: bstone
 msgctxt "game_options"
 msgid "STRETCH UI MENU"
-msgstr ""
+msgstr "РАСТЯНУТЬ UI МЕНЮ"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -14715,7 +14727,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Save state"
-msgstr ""
+msgstr "Сохранить состояние"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -15033,7 +15045,7 @@ msgstr "Настройте общесистемные элементы упра�
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set the Primeval Hunt mode (touch screen)."
-msgstr ""
+msgstr "Установить режим Первобытной охоты (сенсорный экран)."
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
@@ -15302,7 +15314,7 @@ msgstr "Shunt 9"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Side by side"
-msgstr ""
+msgstr "Бок о бок"
 
 #. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em
 msgctxt "game_options"
@@ -15909,7 +15921,7 @@ msgstr "Статический интерпретатор"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Stats"
-msgstr ""
+msgstr "Статистика"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -16105,7 +16117,7 @@ msgstr "Surround 7.1"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Swap screen"
-msgstr ""
+msgstr "Переключить экран"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -16686,7 +16698,7 @@ msgstr "Tomy Tutor & Pyuuta cartridge"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Toogle screen layout"
-msgstr ""
+msgstr "Переключить расположение экрана"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -16761,7 +16773,7 @@ msgstr "Традиционный китайский"
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Translate"
-msgstr ""
+msgstr "Перевод"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -17037,7 +17049,7 @@ msgstr "ИСПОЛЬЗОВАТЬ РУЛЬ"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "USE ZINK FOR RENDERING"
-msgstr ""
+msgstr "ИСП. ZINK ДЛЯ РЕНДЕРИНГА"
 
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
@@ -17271,7 +17283,7 @@ msgstr ""
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Upscale rendering resolution to display size."
-msgstr ""
+msgstr "Апскейл разрешения рендеринга до размера дисплея."
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -17286,7 +17298,7 @@ msgstr "Uruguay"
 #. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Use"
-msgstr ""
+msgstr "Использовать"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -17390,7 +17402,7 @@ msgstr "Используйте, если у вас проблемы с граф�
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Use item"
-msgstr ""
+msgstr "Использовать предмет"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -17524,7 +17536,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Usleep Only"
-msgstr ""
+msgstr "Только Usleep"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17924,7 +17936,7 @@ msgstr "WRITE COLOUR BUFFERS"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "WRITE DEPTH BUFFERS"
-msgstr ""
+msgstr "БУФЕРЫ ГЛУБИНЫ ЗАПИСИ"
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -18097,6 +18109,8 @@ msgid ""
 "Writes depth buffer values to VM memory. Some games need this to fix broken "
 "graphics."
 msgstr ""
+"Сохраняет значения буфера глубины в памяти виртуальной машины. Исправляет "
+"графику в некоторых играх."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -18181,7 +18195,7 @@ msgstr "Зона, в которой игра не реагирует на рул
 #. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Zoom in"
-msgstr ""
+msgstr "Приблизить"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -18196,7 +18210,7 @@ msgstr "Увеличить x5"
 #. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Zoom out"
-msgstr ""
+msgstr "Отдалить"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -18522,7 +18536,7 @@ msgstr "оригинальный gameboy"
 #. TRANSLATION: dosbox
 msgctxt "game_options"
 msgid "pentium_slow"
-msgstr ""
+msgstr "pentium_slow"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
