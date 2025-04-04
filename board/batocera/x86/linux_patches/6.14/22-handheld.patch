@@ -265,10 +265,10 @@ index 4a73821b81f6..bbbe707f541d 100644
  		.matches = {
  		  DMI_EXACT_MATCH(DMI_SYS_VENDOR, "OrangePi"),
 diff --git a/drivers/hid/hid-ids.h b/drivers/hid/hid-ids.h
-index 7605da1788bf..2691510b5a34 100644
+index c47c7837dcbf..05293e0da934 100644
 --- a/drivers/hid/hid-ids.h
 +++ b/drivers/hid/hid-ids.h
-@@ -1010,6 +1010,7 @@
+@@ -1011,6 +1011,7 @@
  #define USB_VENDOR_ID_NOVATEK		0x0603
  #define USB_DEVICE_ID_NOVATEK_PCT	0x0600
  #define USB_DEVICE_ID_NOVATEK_MOUSE	0x1602
