@@ -1429,6 +1429,7 @@ colecovision:
   emulators:
     libretro:
       bluemsx:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BLUEMSX] }
+      gearcoleco:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GEARCOLECO] }
     openmsx:
       openmsx:          { requireAnyOf: [BR2_PACKAGE_OPENMSX] }
     clk:
@@ -1438,6 +1439,10 @@ colecovision:
 
                         - OpenMSX:
                         coleco.rom must be in /userdata/system/configs/openmsx/share/systemroms to run Coleco SGM roms.
+
+                        - Gearcoleco:
+                        BIOS is needed to run (coleco.rom file).
+                        It is possible to load any BIOS but the original one with md5 2c66f5911e5b42b8ebe113403548eee7 is recommended.
 
                         - BlueMSX:
                         You must download the BlueMSX standalone version, available to this URL:
