@@ -2233,6 +2233,11 @@ msgctxt "game_options"
 msgid "AI TRANSLATION SERVICE URL"
 msgstr "URL služby AI prekladu"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AIMING CROSSHAIR"
+msgstr ""
+
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "ALIEN VS PREDATOR"
@@ -2393,6 +2398,11 @@ msgctxt "game_options"
 msgid "ASMJIT Recompiler"
 msgstr "ASMJIT recompiler"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "ASPECT"
+msgstr ""
+
 #. TRANSLATION: bermuda, bigpemu, cemu, cgenius, citron, ...
 msgctxt "game_options"
 msgid "ASPECT RATIO"
@@ -2518,6 +2528,11 @@ msgctxt "game_options"
 msgid "AUTO AIM"
 msgstr "Auto zameranie"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AUTO AIMING"
+msgstr ""
+
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "AUTO CROP"
@@ -2553,6 +2568,11 @@ msgctxt "game_options"
 msgid "AUTO SAVE/LOAD ON GAME LAUNCH"
 msgstr "Automaticky uložiť/načítať pri spustení hry"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AUTO SWITCH WEAPON"
+msgstr ""
+
 #. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "AUTO WIDESCREEN"
@@ -2562,6 +2582,11 @@ msgstr "Automaticky širokouhlé"
 msgctxt "game_options"
 msgid "AUTOMATIC FRAME DELAY"
 msgstr "Automatická dĺžka snímky"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AUTOMATICALLY RELOAD WEAPON"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -3381,6 +3406,11 @@ msgctxt "game_options"
 msgid "Automatic"
 msgstr "Automaticky"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Automatic pickup weapon."
+msgstr ""
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Automatic ratio"
@@ -3617,7 +3647,7 @@ msgctxt "game_options"
 msgid "BLENDING ACCURACY"
 msgstr "Presnosť miešania"
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
 msgid "BLOOM"
 msgstr ""
@@ -4629,6 +4659,11 @@ msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr "Nitkový kríž"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "CROSSHAIR SIZE"
+msgstr ""
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "CRT COLOUR"
@@ -4728,6 +4763,16 @@ msgstr "Vlastné nastavenie MAME"
 msgctxt "game_options"
 msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
 msgstr "Prispôsobiť emulovaný Wiimote a gamepad"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "CUTSCENE SUBTITLES"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "CUTSCENES"
+msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -5061,6 +5106,11 @@ msgctxt "game_options"
 msgid "Chinese (Traditional) [Big5]"
 msgstr "Čínština (tradičná) [Big5]"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Choose Screen Space Ambient Occlusion for better lighting."
+msgstr ""
+
 #. TRANSLATION: redream
 msgctxt "game_options"
 msgid "Choose broadcast standard (for older TV's)."
@@ -5070,6 +5120,11 @@ msgstr "Vyberte vysielací štandard (pre staršie TV)"
 msgctxt "game_options"
 msgid "Choose cable type for the TV."
 msgstr "Vyberte typ kábla pre TV."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Choose difficulty for the game."
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -5201,7 +5256,7 @@ msgid ""
 "Colour and the enhanced.gob file."
 msgstr ""
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
 msgid "Choose to use Bloom post processing."
 msgstr "Vyberte, či chcete použiť Bloom post processing."
@@ -5768,6 +5823,11 @@ msgctxt "game_options"
 msgid "DEV MENU"
 msgstr "Vývojárska ponuka"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "DIFFICULTY"
+msgstr ""
+
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "DIGITAL AUDIO"
@@ -5813,7 +5873,7 @@ msgctxt "game_options"
 msgid "DISK TYPE"
 msgstr "Typ disku"
 
-#. TRANSLATION: dolphin, duckstation, pcsx2, vpinball
+#. TRANSLATION: dolphin, duckstation, openjkdf2, pcsx2, vpinball
 msgctxt "game_options"
 msgid "DISPLAY"
 msgstr "Zobrazenie"
@@ -6179,6 +6239,11 @@ msgctxt "game_options"
 msgid "Disable gouraud shading"
 msgstr ""
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Disable mission start confirmation."
+msgstr ""
+
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Disable support for memory write watches in ntdll."
@@ -6188,6 +6253,11 @@ msgstr "Zakázať podporu pre sledovanie zápisu do pamäte v ntdll."
 msgctxt "game_options"
 msgid "Disable to access the system's settings, like time and language."
 msgstr "Zakázať prístup k systémovým nastaveniam ako čas a jazyk."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Disable weapon waggle."
+msgstr ""
 
 #. TRANSLATION: bigpemu, bstone, citron, duckstation, f2bgl, ...
 msgctxt "game_options"
@@ -6395,6 +6465,11 @@ msgstr "DualShock ovládač"
 msgctxt "game_options"
 msgid "DualShock has rumble support. Not all games support DualShock."
 msgstr "DualShock má podporu rachotu. Nie všetky hry podporujú DualShock."
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Duck"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -6697,7 +6772,7 @@ msgctxt "game_options"
 msgid "EXTENDED SCREEN"
 msgstr "Rozšírená obrazovka"
 
-#. TRANSLATION: awgl, fallout1-ce, fallout2-ce
+#. TRANSLATION: awgl, fallout1-ce, fallout2-ce, openjkdf2
 msgctxt "game_options"
 msgid "Easy"
 msgstr "Ľahké"
@@ -6907,9 +6982,19 @@ msgid ""
 "menu."
 msgstr ""
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable aiming crosshair."
+msgstr ""
+
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Enable audio"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable auto aiming."
 msgstr ""
 
 #. TRANSLATION: redream
@@ -6948,6 +7033,11 @@ msgctxt "game_options"
 msgid "Enable free play for supported games."
 msgstr ""
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable full subtitles on cutscenes."
+msgstr ""
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Enable full-screen antialiasing in Direct3D."
@@ -6970,6 +7060,11 @@ msgstr ""
 "Povoľte zobrazenie gamepadu pre hry, ktoré majú interakciu na dvoch "
 "obrazovkách. Na prepínanie obrazoviek použite Hotkey+R2."
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable high dots per inch."
+msgstr ""
+
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
 msgid "Enable high quality effects for special stages."
@@ -6979,6 +7074,11 @@ msgstr "Povoliť vysokokvalitné efekty pre špeciálne úrovne."
 msgctxt "game_options"
 msgid "Enable launching pre-installed WHDLoad installs."
 msgstr "Povoliť spustenie predinštalovaných inštalácií WHDLoad."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable lightsaber auto-camera."
+msgstr ""
 
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
@@ -7033,6 +7133,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable proper quad rendering (for higher end systems)."
 msgstr "Povoliť správne vykresľovanie štvorcov (pre systémy vyššej kategórie)."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable rotation on overlay map."
+msgstr ""
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -7622,6 +7727,11 @@ msgctxt "game_options"
 msgid "FIDELITY FX SUPER RESOLUTION"
 msgstr "Super rozlíšenie Fidelity FX"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FIELD OF VIEW"
+msgstr ""
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "FIFO (VSync On)"
@@ -7646,6 +7756,11 @@ msgstr "Filtrovať mapy dlaždíc"
 msgctxt "game_options"
 msgid "FIRMWARE SETTINGS"
 msgstr "Nastavenia firmvéru"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FIST CROSSHAIR"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -7736,6 +7851,16 @@ msgstr "Vynútiť NTSC časovanie na PAL"
 msgctxt "game_options"
 msgid "FORCE WINDOWS CE MODE"
 msgstr "Vynútiť režim Windows CE"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FOV VERTICAL"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FPS LIMIT"
+msgstr ""
 
 #. TRANSLATION: lindbergh-loader, wine
 msgctxt "game_options"
@@ -7901,6 +8026,11 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "Faerské ostrovy"
 
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Fast"
+msgstr ""
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
@@ -7935,6 +8065,16 @@ msgstr "Február"
 msgctxt "game_options"
 msgid "FidelityFX Super Resolution"
 msgstr "Super rozlíšenie FidelityFX"
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Field Light"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Field of view is vertical (Hor+)."
+msgstr ""
 
 #. TRANSLATION: libretro/uae4arm
 msgctxt "game_options"
@@ -7984,6 +8124,16 @@ msgstr "Fínčina (fi)"
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "Spúšť"
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Fire 1"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Fire 2"
+msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -8524,6 +8674,11 @@ msgctxt "game_options"
 msgid "GAMEPAD CURSOR SPEED"
 msgstr "Rýchlosť kurzoru gamepadu"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "GAMEPLAY"
+msgstr ""
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "GB"
@@ -8638,6 +8793,11 @@ msgstr "GCE Vectrex kartridže"
 msgctxt "game_options"
 msgid "GDC"
 msgstr "GDC"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "GENERAL"
+msgstr ""
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -9087,6 +9247,11 @@ msgctxt "game_options"
 msgid "HIDE NVIDIA GPU"
 msgstr "Skryť nVidia GPU"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "HIDPI"
+msgstr ""
+
 #. TRANSLATION: cannonball
 msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
@@ -9157,7 +9322,7 @@ msgctxt "game_options"
 msgid "Hack. Increases most PAL games' speed by 17%."
 msgstr "Hack. Zvýši rýchlosť väčšiny PAL hier o 17 percent."
 
-#. TRANSLATION: awgl, fallout1-ce, fallout2-ce
+#. TRANSLATION: awgl, fallout1-ce, fallout2-ce, openjkdf2
 msgctxt "game_options"
 msgid "Hard"
 msgstr "Ťažké"
@@ -9984,7 +10149,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "Júl"
 
-#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys
+#. TRANSLATION: omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr ""
@@ -9997,6 +10162,11 @@ msgstr "Jún"
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Justifier"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "KEEP LIGHTSABER"
 msgstr ""
 
 #. TRANSLATION: drastic
@@ -10207,6 +10377,16 @@ msgstr "Nitkový kríž svetelnej pištole"
 msgctxt "game_options"
 msgid "LIGHT GUNS"
 msgstr "Svetelné pištole"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "LIGHTSABER CAMERA"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "LIGHTSABER CROSSHAIR"
+msgstr ""
 
 #. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
@@ -10605,6 +10785,11 @@ msgctxt "game_options"
 msgid "MANUAL TEXTURE SAMPLING"
 msgstr "Manuálne vzorkovanie textúr"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "MAP ROTATION"
+msgstr ""
+
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "MAX (as many as possible)"
@@ -10663,6 +10848,11 @@ msgstr "Mipmapping"
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "MISSILE COMMAND 3D VR"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "MISSION START"
 msgstr ""
 
 #. TRANSLATION: hatari, libretro/fuse, libretro/mame, mame/openbor7530
@@ -10881,7 +11071,7 @@ msgctxt "game_options"
 msgid "Manually set cycles per second. Use with caution."
 msgstr "Ručne nastaviť cykly za sekundu. Používajte opatrne."
 
-#. TRANSLATION: prboom.gzdoom.keys
+#. TRANSLATION: openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr ""
@@ -11013,7 +11203,7 @@ msgctxt "game_options"
 msgid "Med Saving"
 msgstr ""
 
-#. TRANSLATION: libretro/mesen, libretro/mesens, mupen64plus, pcsx2
+#. TRANSLATION: libretro/mesen, libretro/mesens, mupen64plus, openjkdf2, pcsx2
 msgctxt "game_options"
 msgid "Medium"
 msgstr "Stredné"
@@ -11107,7 +11297,7 @@ msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Ponuka späť"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Menu back / exit"
 msgstr ""
@@ -11298,7 +11488,7 @@ msgctxt "keys_files"
 msgid "Move back / down"
 msgstr ""
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move backward"
 msgstr "Posun dozadu"
@@ -11323,7 +11513,7 @@ msgctxt "keys_files"
 msgid "Move camera up"
 msgstr "Posunúť kameru hore"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move forward"
 msgstr "Posun dopredu"
@@ -11333,12 +11523,12 @@ msgctxt "keys_files"
 msgid "Move forward / up"
 msgstr ""
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move left"
 msgstr "Posun vľavo"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move right"
 msgstr "Posun vpravo"
@@ -11417,6 +11607,16 @@ msgstr "Nie"
 msgctxt "game_options"
 msgid "NO (DEFAULT)"
 msgstr "Nie (predvolené)"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "NO DANGEROUS WEAPONS"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "NO WEAKER WEAPONS"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -11676,7 +11876,17 @@ msgctxt "game_options"
 msgid "New3D"
 msgstr "Nové 3D"
 
-#. TRANSLATION: prboom.gzdoom.keys
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Next Force Power"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Next Inventory Item"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
@@ -12391,6 +12601,11 @@ msgctxt "game_options"
 msgid "PHYSICAL KEYBOARD LAYOUT"
 msgstr "Rozloženie fyzickej klávesnice"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "PICKUP WEAPON"
+msgstr ""
+
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "PINBALL MAPPING MODE"
@@ -12760,6 +12975,16 @@ msgctxt "game_options"
 msgid "Pink - Blossom Pink"
 msgstr "Ružová - Rozkvitnutá ružová"
 
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Pitch Down"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Pitch Up"
+msgstr ""
+
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Pixel Perfect"
@@ -12999,6 +13224,21 @@ msgctxt "keys_files"
 msgid "Press the Y key for 'Yes'"
 msgstr ""
 
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous Force Power"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous Inventory Item"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous Weapon"
+msgstr ""
+
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Previous item"
@@ -13009,7 +13249,7 @@ msgctxt "keys_files"
 msgid "Previous slot"
 msgstr ""
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr ""
@@ -13140,6 +13380,11 @@ msgstr "Obnovovacia frekvencia"
 msgctxt "game_options"
 msgid "REGION"
 msgstr "Región"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "RELOAD WEAPON"
+msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -14164,6 +14409,11 @@ msgctxt "game_options"
 msgid "SPU XFloat Accuracy"
 msgstr "Presnosť SPU XFloat"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "SSAO"
+msgstr ""
+
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "ST"
@@ -14263,6 +14513,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "SWAP GAMEPADS"
 msgstr "Vymeniť gamepady"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "SWITCH WEAPON"
+msgstr ""
 
 #. TRANSLATION: libretro/doublecherrygb, libretro/tgbdual
 msgctxt "game_options"
@@ -14644,6 +14899,11 @@ msgctxt "game_options"
 msgid "Set the controller rumble strength if supported."
 msgstr "Nastaviť silu rachotu ovládača, ak je to podporované."
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the crosshair size."
+msgstr ""
+
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Set the dead zone of the joystick analogue sticks."
@@ -14658,6 +14918,16 @@ msgstr ""
 msgctxt "game_options"
 msgid "Set the display's resolution. Does not affect the rendering resolution."
 msgstr "Nastaviť rozlíšenie displeja. Nemá vplyv na renderovacie rozlíšenie."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the field of view."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the fps limit."
+msgstr ""
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14783,6 +15053,16 @@ msgstr "Zobraziť všetko"
 #. TRANSLATION: sm64
 msgctxt "game_options"
 msgid "Show Cheat Menu (Pause + R Shoulder button)"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Show Crosshair with fist."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Show Crosshair with lightsaber."
 msgstr ""
 
 #. TRANSLATION: shared
@@ -15502,12 +15782,12 @@ msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr ""
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Strafe left"
 msgstr ""
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Strafe right"
 msgstr ""
@@ -16827,7 +17107,7 @@ msgctxt "game_options"
 msgid "Uruguay"
 msgstr "Uruguaj"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Use"
 msgstr ""
@@ -16846,15 +17126,30 @@ msgstr ""
 "Použite 16-bitové zvukové vzorky pre zvukové ovládače, ktoré nepodporujú 32-"
 "bitové. Používajte iba vtedy, ak nemáte žiadny zvuk."
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Use 1:1 aspect."
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Use Analog joysticks in addition to D-Pad for DualShock controllers."
 msgstr "Pre ovládače DualShock použiť okrem D-Padu aj analógové joysticky."
 
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Use Force Power"
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Use Host"
 msgstr "Použiť hostiteľa"
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Use Inventory Item"
+msgstr ""
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -17342,6 +17637,16 @@ msgctxt "game_options"
 msgid "WARN ABOUT UNSUPPORTED FEATURES"
 msgstr "Upozorniť na nepodporované funkcie"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "WEAPON PICKUP"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "WEAPON WAGGLE"
+msgstr ""
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "WET"
@@ -17676,7 +17981,7 @@ msgctxt "game_options"
 msgid "Zone for which the game doesn't react to the wheel (in degrees)"
 msgstr "Zóna, pri ktorej hra nereaguje na koliesko (v stupňoch)"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Zoom in"
 msgstr ""
@@ -17691,7 +17996,7 @@ msgctxt "keys_files"
 msgid "Zoom in x5"
 msgstr "Priblížiť x5"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Zoom out"
 msgstr ""

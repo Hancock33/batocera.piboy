@@ -2228,6 +2228,11 @@ msgctxt "game_options"
 msgid "AI TRANSLATION SERVICE URL"
 msgstr "AIゲーム翻訳サービス URL"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AIMING CROSSHAIR"
+msgstr ""
+
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "ALIEN VS PREDATOR"
@@ -2388,6 +2393,11 @@ msgctxt "game_options"
 msgid "ASMJIT Recompiler"
 msgstr "ASMJIT リコンパイラ"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "ASPECT"
+msgstr ""
+
 #. TRANSLATION: bermuda, bigpemu, cemu, cgenius, citron, ...
 msgctxt "game_options"
 msgid "ASPECT RATIO"
@@ -2513,6 +2523,11 @@ msgctxt "game_options"
 msgid "AUTO AIM"
 msgstr "オートエイム"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AUTO AIMING"
+msgstr ""
+
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "AUTO CROP"
@@ -2548,6 +2563,11 @@ msgctxt "game_options"
 msgid "AUTO SAVE/LOAD ON GAME LAUNCH"
 msgstr "自動ステート読込でゲームを開始"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AUTO SWITCH WEAPON"
+msgstr ""
+
 #. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "AUTO WIDESCREEN"
@@ -2557,6 +2577,11 @@ msgstr "自動ワイドスクリーン "
 msgctxt "game_options"
 msgid "AUTOMATIC FRAME DELAY"
 msgstr "自動フレームディレイ"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AUTOMATICALLY RELOAD WEAPON"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -3383,6 +3408,11 @@ msgctxt "game_options"
 msgid "Automatic"
 msgstr "自動"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Automatic pickup weapon."
+msgstr ""
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Automatic ratio"
@@ -3621,7 +3651,7 @@ msgctxt "game_options"
 msgid "BLENDING ACCURACY"
 msgstr "ブレンディング精度"
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
 msgid "BLOOM"
 msgstr "BLOOM"
@@ -4632,6 +4662,11 @@ msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr "クロスヘア(照準)"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "CROSSHAIR SIZE"
+msgstr ""
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "CRT COLOUR"
@@ -4731,6 +4766,16 @@ msgstr "MAME カスタム設定"
 msgctxt "game_options"
 msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
 msgstr "Wii リモコン&ゲームパッド"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "CUTSCENE SUBTITLES"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "CUTSCENES"
+msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -5062,6 +5107,11 @@ msgctxt "game_options"
 msgid "Chinese (Traditional) [Big5]"
 msgstr "中国語（繁体字）[Big5]"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Choose Screen Space Ambient Occlusion for better lighting."
+msgstr ""
+
 #. TRANSLATION: redream
 msgctxt "game_options"
 msgid "Choose broadcast standard (for older TV's)."
@@ -5071,6 +5121,11 @@ msgstr "放送(映像表示)方式を選択します（古いテレビ用）"
 msgctxt "game_options"
 msgid "Choose cable type for the TV."
 msgstr "テレビのケーブル接続タイプを選択します"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Choose difficulty for the game."
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -5208,7 +5263,7 @@ msgstr ""
 "高解像度のグラフィック テクスチャをレンダリングすることを選択します\n"
 "OpenGL、トゥルーカラー、およびenhanced.gobファイルが必要です"
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
 msgid "Choose to use Bloom post processing."
 msgstr "ブルーム後処理の使用を選択します"
@@ -5780,6 +5835,11 @@ msgctxt "game_options"
 msgid "DEV MENU"
 msgstr "開発メニュー"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "DIFFICULTY"
+msgstr ""
+
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "DIGITAL AUDIO"
@@ -5825,7 +5885,7 @@ msgctxt "game_options"
 msgid "DISK TYPE"
 msgstr "ディスクタイプ"
 
-#. TRANSLATION: dolphin, duckstation, pcsx2, vpinball
+#. TRANSLATION: dolphin, duckstation, openjkdf2, pcsx2, vpinball
 msgctxt "game_options"
 msgid "DISPLAY"
 msgstr "表示系設定"
@@ -6193,6 +6253,11 @@ msgctxt "game_options"
 msgid "Disable gouraud shading"
 msgstr ""
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Disable mission start confirmation."
+msgstr ""
+
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Disable support for memory write watches in ntdll."
@@ -6202,6 +6267,11 @@ msgstr "メモリ書き込みウォッチのサポート(ntdll)を無効にし�
 msgctxt "game_options"
 msgid "Disable to access the system's settings, like time and language."
 msgstr "時間や言語などの設定をスキップします"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Disable weapon waggle."
+msgstr ""
 
 #. TRANSLATION: bigpemu, bstone, citron, duckstation, f2bgl, ...
 msgctxt "game_options"
@@ -6407,6 +6477,11 @@ msgstr "デュアルショック"
 msgctxt "game_options"
 msgid "DualShock has rumble support. Not all games support DualShock."
 msgstr "デュアルショックには振動機能がありますが、非対応のゲームもあります"
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Duck"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -6709,7 +6784,7 @@ msgctxt "game_options"
 msgid "EXTENDED SCREEN"
 msgstr "拡張画面"
 
-#. TRANSLATION: awgl, fallout1-ce, fallout2-ce
+#. TRANSLATION: awgl, fallout1-ce, fallout2-ce, openjkdf2
 msgctxt "game_options"
 msgid "Easy"
 msgstr "簡単"
@@ -6922,9 +6997,19 @@ msgid ""
 "menu."
 msgstr ""
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable aiming crosshair."
+msgstr ""
+
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Enable audio"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable auto aiming."
 msgstr ""
 
 #. TRANSLATION: redream
@@ -6964,6 +7049,11 @@ msgctxt "game_options"
 msgid "Enable free play for supported games."
 msgstr "対応しているゲームでフリープレイを有効にします"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable full subtitles on cutscenes."
+msgstr ""
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Enable full-screen antialiasing in Direct3D."
@@ -6989,6 +7079,11 @@ msgstr ""
 "２画面間で相互作用を行うゲームのゲームパッド 画面を有効にします(ホットキー+R2"
 "で画面切り替え)"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable high dots per inch."
+msgstr ""
+
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
 msgid "Enable high quality effects for special stages."
@@ -6998,6 +7093,11 @@ msgstr "特別ステージで高品質エフェクトを有効にします"
 msgctxt "game_options"
 msgid "Enable launching pre-installed WHDLoad installs."
 msgstr "プリインストールのWHDLoadインストール起動を有効にします"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable lightsaber auto-camera."
+msgstr ""
 
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
@@ -7051,6 +7151,11 @@ msgstr "MAMEメニューからゲームごとのカスタム設定を有効に�
 msgctxt "game_options"
 msgid "Enable proper quad rendering (for higher end systems)."
 msgstr "適切なクアッドレンダリングを有効にします（ハイエンドシステム用）"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable rotation on overlay map."
+msgstr ""
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -7644,6 +7749,11 @@ msgctxt "game_options"
 msgid "FIDELITY FX SUPER RESOLUTION"
 msgstr "AMD FSR"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FIELD OF VIEW"
+msgstr ""
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "FIFO (VSync On)"
@@ -7668,6 +7778,11 @@ msgstr "フィルタータイルマップ"
 msgctxt "game_options"
 msgid "FIRMWARE SETTINGS"
 msgstr "ファームウェア設定"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FIST CROSSHAIR"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -7758,6 +7873,16 @@ msgstr "強制的に PALをNTSCタイミング"
 msgctxt "game_options"
 msgid "FORCE WINDOWS CE MODE"
 msgstr "強制的にWINDOWS CE モード"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FOV VERTICAL"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FPS LIMIT"
+msgstr ""
 
 #. TRANSLATION: lindbergh-loader, wine
 msgctxt "game_options"
@@ -7927,6 +8052,11 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "フェロー諸島"
 
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Fast"
+msgstr ""
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
@@ -7964,6 +8094,16 @@ msgstr "2月"
 msgctxt "game_options"
 msgid "FidelityFX Super Resolution"
 msgstr "FidelityFX 超解像度"
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Field Light"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Field of view is vertical (Hor+)."
+msgstr ""
 
 #. TRANSLATION: libretro/uae4arm
 msgctxt "game_options"
@@ -8013,6 +8153,16 @@ msgstr "フィンランド語 (fi)"
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "発射"
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Fire 1"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Fire 2"
+msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -8565,6 +8715,11 @@ msgctxt "game_options"
 msgid "GAMEPAD CURSOR SPEED"
 msgstr "ゲームパッドのカーソル速度"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "GAMEPLAY"
+msgstr ""
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "GB"
@@ -8679,6 +8834,11 @@ msgstr "GCE Vectrex カートリッジ"
 msgctxt "game_options"
 msgid "GDC"
 msgstr "GDC"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "GENERAL"
+msgstr ""
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -9132,6 +9292,11 @@ msgctxt "game_options"
 msgid "HIDE NVIDIA GPU"
 msgstr "NVIDIA GPUを隠す"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "HIDPI"
+msgstr ""
+
 #. TRANSLATION: cannonball
 msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
@@ -9202,7 +9367,7 @@ msgctxt "game_options"
 msgid "Hack. Increases most PAL games' speed by 17%."
 msgstr "ハック：ほとんどのPALゲームの速度が17％向上します"
 
-#. TRANSLATION: awgl, fallout1-ce, fallout2-ce
+#. TRANSLATION: awgl, fallout1-ce, fallout2-ce, openjkdf2
 msgctxt "game_options"
 msgid "Hard"
 msgstr "難しい"
@@ -10030,7 +10195,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "7月"
 
-#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys
+#. TRANSLATION: omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr "ジャンプ"
@@ -10044,6 +10209,11 @@ msgstr "6月"
 msgctxt "game_options"
 msgid "Justifier"
 msgstr "コナミ ジャスティファイア"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "KEEP LIGHTSABER"
+msgstr ""
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
@@ -10252,6 +10422,16 @@ msgstr "ガンコンのクロスヘア(照準)"
 msgctxt "game_options"
 msgid "LIGHT GUNS"
 msgstr "ライトガン(ガンコン)"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "LIGHTSABER CAMERA"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "LIGHTSABER CROSSHAIR"
+msgstr ""
 
 #. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
@@ -10651,6 +10831,11 @@ msgctxt "game_options"
 msgid "MANUAL TEXTURE SAMPLING"
 msgstr "手動テクスチャサンプリング"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "MAP ROTATION"
+msgstr ""
+
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "MAX (as many as possible)"
@@ -10710,6 +10895,11 @@ msgstr "ミップマッピング"
 msgctxt "game_options"
 msgid "MISSILE COMMAND 3D VR"
 msgstr "MISSILE COMMAND 3D VR"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "MISSION START"
+msgstr ""
 
 #. TRANSLATION: hatari, libretro/fuse, libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -10926,7 +11116,7 @@ msgctxt "game_options"
 msgid "Manually set cycles per second. Use with caution."
 msgstr "モデルごとにCPUサイクルを選択します(注意して使用)"
 
-#. TRANSLATION: prboom.gzdoom.keys
+#. TRANSLATION: openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr ""
@@ -11062,7 +11252,7 @@ msgctxt "game_options"
 msgid "Med Saving"
 msgstr ""
 
-#. TRANSLATION: libretro/mesen, libretro/mesens, mupen64plus, pcsx2
+#. TRANSLATION: libretro/mesen, libretro/mesens, mupen64plus, openjkdf2, pcsx2
 msgctxt "game_options"
 msgid "Medium"
 msgstr "中"
@@ -11156,7 +11346,7 @@ msgctxt "keys_files"
 msgid "Menu back"
 msgstr "メニューに戻る"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Menu back / exit"
 msgstr ""
@@ -11347,7 +11537,7 @@ msgctxt "keys_files"
 msgid "Move back / down"
 msgstr "後退/下に移動"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move backward"
 msgstr "後退"
@@ -11372,7 +11562,7 @@ msgctxt "keys_files"
 msgid "Move camera up"
 msgstr "カメラを上に移動"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move forward"
 msgstr "前進"
@@ -11382,12 +11572,12 @@ msgctxt "keys_files"
 msgid "Move forward / up"
 msgstr "前進/上に移動"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move left"
 msgstr "左移動"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move right"
 msgstr "右移動"
@@ -11466,6 +11656,16 @@ msgstr "いいえ"
 msgctxt "game_options"
 msgid "NO (DEFAULT)"
 msgstr "無効 (標準)"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "NO DANGEROUS WEAPONS"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "NO WEAKER WEAPONS"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -11727,7 +11927,17 @@ msgctxt "game_options"
 msgid "New3D"
 msgstr "New3Dエンジン"
 
-#. TRANSLATION: prboom.gzdoom.keys
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Next Force Power"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Next Inventory Item"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
@@ -12443,6 +12653,11 @@ msgctxt "game_options"
 msgid "PHYSICAL KEYBOARD LAYOUT"
 msgstr "キーボードレイアウトの選択"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "PICKUP WEAPON"
+msgstr ""
+
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "PINBALL MAPPING MODE"
@@ -12816,6 +13031,16 @@ msgctxt "game_options"
 msgid "Pink - Blossom Pink"
 msgstr "ピンク - ブロッサムピンク"
 
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Pitch Down"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Pitch Up"
+msgstr ""
+
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Pixel Perfect"
@@ -13055,6 +13280,21 @@ msgctxt "keys_files"
 msgid "Press the Y key for 'Yes'"
 msgstr "Y キー:「はい」を選択"
 
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous Force Power"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous Inventory Item"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous Weapon"
+msgstr ""
+
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Previous item"
@@ -13065,7 +13305,7 @@ msgctxt "keys_files"
 msgid "Previous slot"
 msgstr "前のスロット"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr ""
@@ -13198,6 +13438,11 @@ msgstr "リフレッシュレート"
 msgctxt "game_options"
 msgid "REGION"
 msgstr "リージョン(地域)"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "RELOAD WEAPON"
+msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -14224,6 +14469,11 @@ msgctxt "game_options"
 msgid "SPU XFloat Accuracy"
 msgstr "SPU XFloat 精度"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "SSAO"
+msgstr ""
+
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "ST"
@@ -14323,6 +14573,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "SWAP GAMEPADS"
 msgstr "ゲームパッドを入れ替える"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "SWITCH WEAPON"
+msgstr ""
 
 #. TRANSLATION: libretro/doublecherrygb, libretro/tgbdual
 msgctxt "game_options"
@@ -14707,6 +14962,11 @@ msgctxt "game_options"
 msgid "Set the controller rumble strength if supported."
 msgstr "サポートされている場合、コントローラーの振動強度を設定します"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the crosshair size."
+msgstr ""
+
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Set the dead zone of the joystick analogue sticks."
@@ -14721,6 +14981,16 @@ msgstr ""
 msgctxt "game_options"
 msgid "Set the display's resolution. Does not affect the rendering resolution."
 msgstr "ディスプレイ解像度を設定(レンダリング解像度には影響しません)"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the field of view."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the fps limit."
+msgstr ""
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14848,6 +15118,16 @@ msgstr "すべて表示"
 #. TRANSLATION: sm64
 msgctxt "game_options"
 msgid "Show Cheat Menu (Pause + R Shoulder button)"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Show Crosshair with fist."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Show Crosshair with lightsaber."
 msgstr ""
 
 #. TRANSLATION: shared
@@ -15569,12 +15849,12 @@ msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr "機銃掃射 右"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Strafe left"
 msgstr "機銃掃射 左"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Strafe right"
 msgstr "機銃掃射 右"
@@ -16897,7 +17177,7 @@ msgctxt "game_options"
 msgid "Uruguay"
 msgstr "ウルグアイ"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Use"
 msgstr ""
@@ -16916,15 +17196,30 @@ msgstr ""
 "32 ビットをサポートしていないオーディオ ドライバーには 16 ビット オーディオ "
 "サンプルを使用してください。音声が聞こえない場合にのみ使用してください"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Use 1:1 aspect."
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Use Analog joysticks in addition to D-Pad for DualShock controllers."
 msgstr "デュアルショックの D-Pad の他に、アナログ スティックも有効にします"
 
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Use Force Power"
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Use Host"
 msgstr "使用するホスト"
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Use Inventory Item"
+msgstr ""
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -17423,6 +17718,16 @@ msgctxt "game_options"
 msgid "WARN ABOUT UNSUPPORTED FEATURES"
 msgstr "サポートしていない機能についての警告"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "WEAPON PICKUP"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "WEAPON WAGGLE"
+msgstr ""
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "WET"
@@ -17759,7 +18064,7 @@ msgctxt "game_options"
 msgid "Zone for which the game doesn't react to the wheel (in degrees)"
 msgstr "ゲームがステアリングに反応しない幅を設定 (度単位)"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Zoom in"
 msgstr ""
@@ -17774,7 +18079,7 @@ msgctxt "keys_files"
 msgid "Zoom in x5"
 msgstr "拡大 x5"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Zoom out"
 msgstr ""
