@@ -246,8 +246,8 @@ class Rpcs3Generator(Generator):
         shutil.copytree('/usr/share/rpcs3/Icons/', icon_target, dirs_exist_ok=True, copy_function=shutil.copy2)
 
         # determine the rom name
-
-        if rom.suffix == ".psn":
+        romExt = os.path.splitext(rom)[1]
+        if romExt == ".psn":
             romName: Path | None = None
 
             with rom.open() as fp:
