@@ -205,7 +205,7 @@ Emulators|[libretro-quicknes](http://github.com/libretro/QuickNES_Core)|dbf19f73
 Emulators|[libretro-race](http://github.com/libretro/RACE)|171950ea64c96ead503340ed60fa7ba18f56325c|Oct 21, 2024
 Emulators|[libretro-reminiscence](http://github.com/libretro/REminiscence)|e80d7b1aa287010e30c54f72252a9303173f1c7e|Oct 21, 2024
 Emulators|[libretro-retro8](http://github.com/libretro/retro8)|a235ff8e3ca1b44bcf88293748d5a492c76a2c7b|Oct 21, 2024
-Emulators|[libretro-sameboy](http://github.com/libretro/SameBoy)|51433012a871a44555492273fd22f29867d12655|Jun 28, 2024
+Emulators|[libretro-sameboy](http://github.com/LIJI32/SameBoy)|8b2795268044c03c34f68c8b94d29ad038c88e80|Apr 05, 2025
 Emulators|[libretro-sameduck](http://github.com/LIJI32/SameBoy)|5619abdb01cee6bedb47599cdb5532c318443b52|Dec 10, 2023
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|c35d72a2d4c7ad234b49ef5f00ed2e9789af54df|Mar 28, 2025
 Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|c642bbd0680b5959180a420036108893d0aec961|Oct 21, 2024
@@ -282,12 +282,12 @@ Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|0525ea043ea173ec6af1
 Emulators|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|c31bf9f66cec51c8c35c6675ea435c79d03996a1|Apr 03, 2025
 Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|9b927f280322b6bb13998e06b83710201960181b|Nov 24, 2024
-Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|ac19d512ee56cb5ee0917c6e596f9df75d97a5dc|Mar 31, 2025
+Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|8a88bb0e887f4e07d512a213d1082a8b56b4aa28|Apr 05, 2025
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|39f26d3bc8e04133c31192c757eaebd5f0924f2d|Mar 12, 2025
-Emulators|[supermodel](http://github.com/trzy/Supermodel)|5318f13354929b8191c90a531bbdc60da0e77971|Apr 05, 2025
+Emulators|[supermodel](http://github.com/trzy/Supermodel)|49e36719dc5f167c1a6ca5f1355f308d25b929f2|Apr 05, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|de049995a94b43431b9fc139997f9d1da8231f4a|Apr 05, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|9a077bb22d73bd13a72c9ef56e8b83ce567a58d1|Mar 26, 2025
-Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45623|Apr 03, 2025
+Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45624|Apr 05, 2025
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|46cf9d394fe7acf4105bbfb3729239dec66da3a6|Apr 03, 2025
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|c96c2c026f4a1ff397cb87bc6d15dc8e95bb2dc5|Jul 23, 2024
@@ -496,8 +496,8 @@ Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|f72bac75d0d2840fece78
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|3e8754b5b544ce2bf6ab9ee97a8446b3c9e89680|Apr 04, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|b5f9899b64511170683cc9b517323f714baab3cc|Feb 12, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|a81f4146b72a82e9c6352d34771abc98eefa1de8|Mar 30, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|d1986f82d70453f10cc5ab475fb7ac4b39d9e9c4|Apr 05, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|d1986f82d70453f10cc5ab475fb7ac4b39d9e9c4|Apr 05, 2025
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|1717158094e73957acafdfdbae5c7ffe532bb6e9|Apr 05, 2025
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|1717158094e73957acafdfdbae5c7ffe532bb6e9|Apr 05, 2025
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.7|Feb 28, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|9ceadd6e51f60cb0f5a71a225527d8f128a96048|Apr 05, 2025
@@ -509,6 +509,7 @@ Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|eb10fa704f910a1
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0276|Mar 30, 2025
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
+Utils-host|[rgbds](http://github.com/gbdev/rgbds)|v0.9.1|Feb 02, 2025
 Utils-host|[xa](https://www.floodgap.com/retrotech/xa/dists)|2.4.1|Mar 05, 2024
 Utils|[7zip](https://www.7-zip.org/a)|2409|Nov 29, 2024
 Utils|[batocera-pygame](http://github.com/lbrpdx/retrotrivia)|e3238c736dfbde20d7ee402828ec57d89586d4de|Dec 31, 2021
