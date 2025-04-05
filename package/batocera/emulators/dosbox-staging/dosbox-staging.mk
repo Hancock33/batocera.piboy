@@ -3,8 +3,8 @@
 # dosbox-staging
 #
 ################################################################################
-# Version: Commits on Apr 03, 2025
-DOSBOX_STAGING_VERSION = 32ac9e4a4c0a1b64b0a52cf7efd55ff5a0e2a4b6
+# Version: Commits on Apr 05, 2025
+DOSBOX_STAGING_VERSION = 8380ec01786978003d4880e949b774b991d93207
 DOSBOX_STAGING_BRANCH = release/0.82.x
 DOSBOX_STAGING_SITE = $(call github,dosbox-staging,dosbox-staging,$(DOSBOX_STAGING_VERSION))
 DOSBOX_STAGING_DEPENDENCIES = alsa-lib sdl2 sdl2_net sdl2_image fluidsynth speexdsp

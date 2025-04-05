@@ -1,11 +1,19 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|2fd3712fd8b10d1558e1675c1e4cb5607af6d2ee|Apr 05, 2025
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|2fd3712fd8b10d1558e1675c1e4cb5607af6d2ee|Apr 05, 2025
+Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|e7fd06f822d426b451f75359cf9f1e59c945f339|Apr 05, 2025
 Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|19febba866d227cc16f8b3c814d6d5ae06c4d7a7|Apr 05, 2025
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|2d1671a863efed9fee3042b77a79bcac4d52fcf4|Apr 05, 2025
+Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|8380ec01786978003d4880e949b774b991d93207|Apr 05, 2025
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|079dae37fd481473d2d78df34fac174443924dce|Apr 05, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-04-05|Apr 05, 2025
+Emulators|[supermodel](http://github.com/trzy/Supermodel)|5318f13354929b8191c90a531bbdc60da0e77971|Apr 05, 2025
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|de049995a94b43431b9fc139997f9d1da8231f4a|Apr 05, 2025
+Ports|[omf2097](http://github.com/omf2097/openomf)|ffffe7e3224e0bcaa283827b570666aab4c3e030|Apr 05, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|d50825e5c70072569acc9958d65863bd0a4b47af|Apr 05, 2025
+Ports|[doomretro](http://github.com/bradharding/doomretro)|6d2d8c0367837788a3f863a32dd781f9e610b96f|Apr 05, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|d041a4fccd92a975a64f0cf89daf43e3479cbe3c|Apr 04, 2025
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|edb1db7400421162a15c10c8936e81e7c29f4c80|Apr 04, 2025
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|f05c627e486063f42df32d46fded185139d3878d|Apr 04, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|e5f13b6858673dd74507dd3da4e69f6c31b0eadc|Apr 04, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|8b7e16c9033889b6d661aeef61a978daeda05b5f|Apr 04, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.256|Apr 04, 2025
@@ -13,15 +21,12 @@ Emulators|[play](https://github.com/jpd002/Play-.git)|225e37d0dc7b8a7bb6dc3534b9
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|f573b0c72c8cc3a90ddece336d54cfb0718ecc2e|Apr 04, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|613212f9e15f59825f7b81abc33add7624adedd7|Apr 04, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|54b4d7fc788d570c14924d21fbb1f58de0254aad|Apr 04, 2025
-Emulators|[supermodel](http://github.com/trzy/Supermodel)|dcd8acc5409411e8ac91c345e137215b5a2a131e|Apr 04, 2025
 Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|68764f35899e133b402336843c046d75136eaf08|Apr 04, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|1e89ccb17e0c10161e60cc1979c8a656f73bb50f|Apr 04, 2025
-Ports|[omf2097](http://github.com/omf2097/openomf)|ba67fdc2a6b47cb92880344a96b42cfccedec1dd|Apr 04, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|3e8754b5b544ce2bf6ab9ee97a8446b3c9e89680|Apr 04, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.0-beta.5|Apr 04, 2025
 Controllers|[new-lg4ff](http://github.com/berarma/new-lg4ff)|4ff7bb5bcfc7da98a934494b280620871d174316|Apr 04, 2025
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|f98af0cf3a769ce9d15d50baf2caafe43b311ca3|Apr 04, 2025
-Ports|[doomretro](http://github.com/bradharding/doomretro)|c25d9fdb51c4a7e6e36cf6f69ef98b679893f33d|Apr 04, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|8f6bb550dcbb4192314b81c96cdcb47b7141b891|Apr 04, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|d6475395817dd2d37f775ee23ed8dbe4bc624b38|Apr 04, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|d6475395817dd2d37f775ee23ed8dbe4bc624b38|Apr 04, 2025
@@ -32,11 +37,8 @@ Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|2910
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|2e3cc1d4349ae9551fed1c4ba1c2885c10843f99|Apr 04, 2025
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|225e37d0dc7b8a7bb6dc3534b992373477f9923d|Apr 04, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|f573b0c72c8cc3a90ddece336d54cfb0718ecc2e|Apr 04, 2025
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|237ec120c63de99341721a4b593060a5071caea7|Apr 03, 2025
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|237ec120c63de99341721a4b593060a5071caea7|Apr 03, 2025
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|950085904397daa4ea1dc8152073aeb2c577bfbf|Apr 03, 2025
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|c4eab08f308e33d6501550976943b701997a0036|Apr 03, 2025
-Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|32ac9e4a4c0a1b64b0a52cf7efd55ff5a0e2a4b6|Apr 03, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|9a0bbeb4a60ac354bcc449a03da745758f5bd9bc|Apr 03, 2025
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.3.18|Apr 03, 2025
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|c31bf9f66cec51c8c35c6675ea435c79d03996a1|Apr 03, 2025
@@ -53,6 +55,7 @@ Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|a1ce710d3ad89325cd6
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250403|Apr 03, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|6481f8cce909bc801f7544d67f2bf5f96cd01181|Apr 03, 2025
 Ports|[openlara](http://github.com/XProger/OpenLara)|3d4092c34ac2255c885b37fdb89aef961966fa9d|Apr 03, 2025
+Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|df8eda7224094f6c4b09ac38c293305101bcc9d0|Apr 03, 2025
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|a1ce710d3ad89325cd6a95372702ab0a3d383673|Apr 03, 2025
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|1a08d73159820bb31941d8c5ed6242a74bd4b332|Apr 03, 2025
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|f3dc75a3bb57ac83801b3873617feecfb34d6c78|Apr 03, 2025
@@ -80,7 +83,6 @@ Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/release
 Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.2.10|Mar 31, 2025
 Libraries|[sdl3_ttf](https://github.com/libsdl-org/SDL_ttf)|release-3.2.2|Mar 31, 2025
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0276|Mar 30, 2025
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|2f40422a7023f9b9bf7693ed9b809bafad1c77ee|Mar 30, 2025
 Libraries|[discord_rpc](http://github.com/stenzek/discord-rpc)|cc59d26d1d628fbd6527aac0ac1d6301f4978b92|Mar 30, 2025
 Libraries|[lunasvg](http://github.com/stenzek/lunasvg)|4a1c98ccb1da8a5a92ddc4f97339869b1ae556f4|Mar 30, 2025
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|551f78aa51ef2370dfebad7d0c602041e234ac7e|Mar 30, 2025
@@ -186,7 +188,6 @@ Emulators|[libdof](http://github.com/jsm174/libdof)|9213874e049c9b8903e1569b7d1b
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|0525ea043ea173ec6af1c6c8dade820036376430|Feb 25, 2025
 Controllers|[hid-t150](http://github.com/scarburato/t150_driver)|f7ecb30c65ee5f7870e921bc0a2354df8e1e8100|Feb 25, 2025
 Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.6.2|Feb 24, 2025
-Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|fec2e3e3822c4772f9273a69af2d8d6286d36905|Feb 23, 2025
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|1f77a160fb1f41769d51f24dbf16a0b78527f5d3|Feb 23, 2025
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|a203bbf2ab6c7164051ff90ad30cc8f6352a56ac|Feb 23, 2025
 Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|bd8baa17dc0c07510a7a56c52410a81c363b85ae|Feb 22, 2025
