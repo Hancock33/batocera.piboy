@@ -259,6 +259,9 @@ dataeast:
 devilutionx:
   emulator: devilutionx
   core:     devilutionx
+dice:
+  emulator: libretro
+  core:     dice
 dinothawr:
   emulator: libretro
   core:     dinothawr

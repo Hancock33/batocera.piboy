@@ -159,7 +159,7 @@ class OpenJKDF2Generator(Generator):
         return {
             "name": "openjkdf2",
             "keys": {
-                "exit": ["KEY_LEFTALT", "KEY_F4"],
+                "exit": "KEY_F10",
                 "save_state": "KEY_F9",
                 "screenshot": "KEY_F12"
             }
@@ -387,6 +387,13 @@ class OpenJKDF2Generator(Generator):
                 target_type = type(generator_default_value)
                 final_value = generator_default_value
                 was_key_found = found_value is not Config.MISSING
+
+                # Special case: jkdf2_ssao (bool in config, but int in JSON)
+                if config_key == "jkdf2_ssao":
+                    final_value = 1 if system.config.get_bool(config_key) else 0
+                    json_target_settings[json_key] = final_value
+                    continue
+
                 if was_key_found:
                     try:
                         parsed_value = None
@@ -409,6 +416,7 @@ class OpenJKDF2Generator(Generator):
                         final_value = generator_default_value
 
                 json_target_settings[json_key] = final_value
+                       
             self._update_json_config(openjkdf2_config_file, json_target_settings)
 
         except Exception as e:

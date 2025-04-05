@@ -548,6 +548,25 @@ dataeast:
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
 
+dice:
+  name:                 DICE
+  manufacturer:         Arcade
+  release:              1972
+  hardware:             arcade
+  extensions:           [zip, dmy]
+  platform:             dice, arcade
+  emulators:
+    libretro:
+      dice:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DICE]    }
+  comment_en:           |
+                        Games without any ROM component use .dmy files as dummy launchers.
+
+                        For more info: https://wiki.batocera.org/arcade
+  comment_fr:           |
+                        Trouvez la documentation ici: https://wiki.batocera.org/arcade
+  comment_br:           |
+                        Para mais informações: https://wiki.batocera.org/arcade
+
 dynax:
   name:                 Dynax
   manufacturer:         Arcade
@@ -4191,11 +4210,13 @@ jkdf2:
     openjkdf2:
       openjkdf2:        { requireAnyOf: [BR2_PACKAGE_OPENJKDF2] }
   comment_en:           |
-                        Add the Jedi Knight - Dark Forces 2 game files into this directory.
-                        Then create a blank launch file with a .jedi extension to be able to start the game from ES.
-                        i.e. `Jedi Knight - Dark Forces 2.jedi`.
+                        Create an appropriate directory here for Jedi Knight - Dark Forces 2 or Mysteries of the Sith.
+                        Add the files for each game into the appropriate directory.
 
-                        Jedi Knight - Dark Forces 2 is designed to be best played with a mouse and keyboard.
+                        Then create a blank launch file with a .jedi extension in the created directory to be able to start the game from ES.
+                        i.e. `Jedi Knight - Dark Forces 2.jedi` or `Mysteries of the Sith.jedi`.
+
+                        Jedi Knight - Dark Forces 2 is ideally designed to be best played with a mouse and keyboard.
                         We have however mapped a gamepad style controller to the default keyboard for controller use.
 
                         Do not enable the joystick option in OpenJKDF2 as the controls aren't ideal.
