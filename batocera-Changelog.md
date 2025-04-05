@@ -114,7 +114,7 @@
 ### System
 - Bluez to 5.79
 - Buildroot to 2024.11.x with supporting package updates
-- Mesa3D to 25.0.2
+- Mesa3D to 25.0.3
 - Linux Kernel to 6.14
 - GStreamer codecs to 1.26.0
 - SDL2 to 2.30.11
@@ -140,6 +140,9 @@
 - Wine Mono to 9.4.0
 - Syncthing to 1.29.3
 - Xone to Mar 13, 2025
+- FFMPEG to 7.1.1
+- Intel MediaDriver to 25.1.4
+- Intel GMMLib to 22.7.1
 
 # 2025/01/06 - batocera.linux 41 - Golden-rayed Blue
 ### Special Notes

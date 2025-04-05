@@ -433,8 +433,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_BATOCERA_LED_HANDHELD                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_SM8250   || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_SM8550
 
-    select BR2_PACKAGE_LIBGPIOD_TOOLS                       if  BR2_PACKAGE_LIBGPIOD
-
     # joy 2 pad
     select BR2_PACKAGE_EVMAPY
 
@@ -649,20 +647,22 @@ config BR2_PACKAGE_BATOCERA_EXTRAS
 config BR2_PACKAGE_BATOCERA_TOOLS
     bool "batocera.linux system tools packages selection"
 
-    select BR2_PACKAGE_JSTEST2                              # joysticks tester
-    select BR2_PACKAGE_EVTEST                               # joysticks tester
-    select BR2_PACKAGE_LINUXCONSOLETOOLS                    # tools for linux events calibration
-    select BR2_PACKAGE_LINUXCONSOLETOOLS_JOYSTICK           # tools for linux events calibration
-    select BR2_PACKAGE_LINUXCONSOLETOOLS_FORCEFEEDBACK      # tools for linux events calibration
-    select BR2_PACKAGE_VIM                                  # basic vi emulator
-    select BR2_PACKAGE_NANO                                 # basic nano emulator
-    select BR2_PACKAGE_ZIP                                  # zip tool
     select BR2_PACKAGE_7ZIP                                 # zip tool
-    select BR2_PACKAGE_SQUASHFS                             # mksquash tool
-    select BR2_PACKAGE_HTOP                                 # multi-cpus usage
-    select BR2_PACKAGE_NCDU                                 # Disk Usage
+    select BR2_PACKAGE_EVTEST                               # joysticks tester
     select BR2_PACKAGE_FFMPEG_XCBGRAB                       if  BR2_PACKAGE_XORG7
+    select BR2_PACKAGE_HTOP                                 # multi-cpus usage
+    select BR2_PACKAGE_INTEL_MEDIASDK                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64
+    select BR2_PACKAGE_JSTEST2                              # joysticks tester
+    select BR2_PACKAGE_LIBGPIOD_TOOLS                       if  BR2_PACKAGE_LIBGPIOD
+    select BR2_PACKAGE_LINUXCONSOLETOOLS                    # tools for linux events calibration
+    select BR2_PACKAGE_LINUXCONSOLETOOLS_FORCEFEEDBACK      # tools for linux events calibration
+    select BR2_PACKAGE_LINUXCONSOLETOOLS_JOYSTICK           # tools for linux events calibration
+    select BR2_PACKAGE_NANO                                 # basic nano emulator
+    select BR2_PACKAGE_NCDU                                 # Disk Usage
+    select BR2_PACKAGE_SQUASHFS                             # mksquash tool
     select BR2_PACKAGE_SWITCHRES                            if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835 && !BR2_PACKAGE_BATOCERA_WAYLAND # switchres 15kHz
+    select BR2_PACKAGE_VIM                                  # basic vi emulator
+    select BR2_PACKAGE_ZIP                                  # zip tool
 
     help
         System tools
