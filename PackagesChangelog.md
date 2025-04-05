@@ -58,6 +58,7 @@ Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|38d10a3421d6b5cd4f7579
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|3d7a8e8f4831c3f464f72a23b785446cb9c32d90|Apr 03, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|9998ffdd236bad5c86586e9aa96547a6a36a8564|Apr 03, 2025
 Ports|[raze](http://github.com/ZDoom/Raze)|940e53af6fed5ed9f50f5495eac9d1fda42a6065|Apr 03, 2025
+Wine|[wine-proton](http://github.com/ValveSoftware/wine)|69f517f4ab1fe5556382d200fb1985e9892f2c01|Apr 03, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|6481f8cce909bc801f7544d67f2bf5f96cd01181|Apr 03, 2025
 Ports|[openlara](http://github.com/XProger/OpenLara)|3d4092c34ac2255c885b37fdb89aef961966fa9d|Apr 03, 2025
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|df8eda7224094f6c4b09ac38c293305101bcc9d0|Apr 03, 2025
@@ -133,7 +134,6 @@ Ports|[srb2](http://github.com/STJr/SRB2)|35738054f3a18ae3d4d18d634e28b3a1d67f11
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|92900c5c733c8b91a67b1772d4f0a25104f2b05d|Mar 18, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|619c575db6f81d1911e36f1ecd618c9dead86859|Mar 18, 2025
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-10.0.0|Mar 17, 2025
-Wine|[wine-proton](http://github.com/ValveSoftware/wine)|experimental-wine-9.0-20250317|Mar 17, 2025
 Emulators|[libretro-beetle-saturn](http://github.com/libretro/beetle-saturn-libretro)|06c9daa7ff6de42955437d29a80d8fc4ececc8d3|Mar 17, 2025
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|fec4428ebf3bdb0b7d32bbd762917a4241f0c3e9|Mar 17, 2025
 Gpu|[nvidia-open-driver](http://download.nvidia.com/XFree86/Linux-x86)|570.133.07|Mar 16, 2025
