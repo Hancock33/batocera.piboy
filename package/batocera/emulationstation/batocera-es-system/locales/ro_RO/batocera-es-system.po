@@ -767,7 +767,7 @@ msgctxt "game_options"
 msgid "1x (720p/1080p)"
 msgstr "1x (720p/1080p)"
 
-#. TRANSLATION: libretro/mupen64plus-next, mupen64plus
+#. TRANSLATION: libretro/mupen64plus-next, mupen64plus, openjkdf2
 msgctxt "game_options"
 msgid "1x (Default)"
 msgstr "1x (Implicit)"
@@ -4676,6 +4676,11 @@ msgstr "MARCAJ ȚINTĂ"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
+msgid "CROSSHAIR LINE THICKNESS"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
 msgid "CROSSHAIR SIZE"
 msgstr ""
 
@@ -5199,6 +5204,13 @@ msgctxt "game_options"
 msgid "Choose the Parallel N64 graphics plugin."
 msgstr "Alege plugin-ul grafic Parallel N64."
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid ""
+"Choose the amount of Gamma which changes how light or dark mid-range tones "
+"appear."
+msgstr ""
+
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "Choose the appropriate media for disk image."
@@ -5261,6 +5273,11 @@ msgctxt "game_options"
 msgid "Choose the scaling mode for the game screen."
 msgstr "Alege modul de scalare pentru ecranul jocului."
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Choose the size of the heads-up display."
+msgstr ""
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Choose to display UI prompts or accept defaults."
@@ -5275,6 +5292,11 @@ msgstr "Alege să afișezi mesaje de realizări în UI."
 msgctxt "game_options"
 msgid "Choose to enable or disable cutscenes."
 msgstr "Alege să activezi sau să dezactivezi scenele intermediare."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Choose to keep corpses present."
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -8790,6 +8812,11 @@ msgctxt "game_options"
 msgid "GAMEPLAY"
 msgstr ""
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "GAMMA"
+msgstr ""
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "GB"
@@ -9426,6 +9453,11 @@ msgstr "MOD HQ"
 msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "HUD SCALE"
+msgstr ""
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -10298,6 +10330,11 @@ msgstr "Iunie"
 msgctxt "game_options"
 msgid "Justifier"
 msgstr "Justificator"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "KEEP CORPSES"
+msgstr ""
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -14599,6 +14636,11 @@ msgstr "Acuratețe XFloat SPU"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
+msgid "SSAA Multiplier"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
 msgid "SSAO"
 msgstr ""
 
@@ -15092,6 +15134,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Set the controller rumble strength if supported."
 msgstr "Setează intensitatea vibrațiilor controlerului dacă este suportat."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the crosshair line thickness."
+msgstr ""
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
