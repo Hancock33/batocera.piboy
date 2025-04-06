@@ -4185,30 +4185,17 @@ jazz2:
                         Para mais informações: https://wiki.batocera.org/systems:jazz2-native
 
 jknight:
-  name:                 Jedi Academy
+  name:                 Jedi Knight - Academy
   manufacturer:         Ports
   release:              2003
   hardware:             port
-  extensions:           [game]
+  extensions:           [game, jedi]
   platform:             pc
   group:                ports
-  path:                 /userdata/roms/ports/openjkja
+  path:                 /userdata/roms/ports/jknight
   emulators:
     openjk:
      openjk:           { requireAnyOf: [BR2_PACKAGE_OPENJK] }
-
-jknight:
-  name:                 Jedi Outcast
-  manufacturer:         Ports
-  release:              2002
-  hardware:             port
-  extensions:           [game]
-  platform:             pc
-  group:                ports
-  path:                 /userdata/roms/ports/openjkjo
-  emulators:
-    openjk:
-      openjk:           { requireAnyOf: [BR2_PACKAGE_OPENJK] }
 
 jkdf2:
   name:                 Jedi Knight - Dark Forces 2

@@ -62,7 +62,7 @@ Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|M
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.11|Nov 11, 2024
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|2fd3712fd8b10d1558e1675c1e4cb5607af6d2ee|Apr 05, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|2fd3712fd8b10d1558e1675c1e4cb5607af6d2ee|Apr 05, 2025
-Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|e7fd06f822d426b451f75359cf9f1e59c945f339|Apr 05, 2025
+Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|e3232c14950803b30b244383fa01f2f8af72972c|Apr 06, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|d041a4fccd92a975a64f0cf89daf43e3479cbe3c|Apr 04, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|c25fd44265f60237d9308891dccb5378c9467572|Mar 29, 2025
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|950085904397daa4ea1dc8152073aeb2c577bfbf|Apr 03, 2025

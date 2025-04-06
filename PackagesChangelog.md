@@ -1,5 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|e3232c14950803b30b244383fa01f2f8af72972c|Apr 06, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|f59507c8560bc016146c6bcbe4ead4463ffac9f0|Apr 06, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|2bd9e5fbb11744431dd7599b2788b8e343dab610|Apr 06, 2025
 Emulators|[hatari](http://github.com/hatari/hatari)|b50190b0eb72908c5f6cc5cd209ce55de2ac3069|Apr 06, 2025
@@ -29,7 +30,6 @@ Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libr
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|11a6068a035b00b55d9245427b66d905723d5f45|Apr 06, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|2fd3712fd8b10d1558e1675c1e4cb5607af6d2ee|Apr 05, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|2fd3712fd8b10d1558e1675c1e4cb5607af6d2ee|Apr 05, 2025
-Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|e7fd06f822d426b451f75359cf9f1e59c945f339|Apr 05, 2025
 Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|19febba866d227cc16f8b3c814d6d5ae06c4d7a7|Apr 05, 2025
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|8380ec01786978003d4880e949b774b991d93207|Apr 05, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|3114394019fc0f772c29d0a1f5493fbdce4745b0|Apr 05, 2025
