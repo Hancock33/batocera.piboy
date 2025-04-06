@@ -1,13 +1,10 @@
 config BR2_PACKAGE_AVP
 	bool "AVP"
 	depends on BR2_INSTALL_LIBSTDCPP
-	select BR2_PACKAGE_SDL2
-	select BR2_PACKAGE_SDL2_MIXER
+	select BR2_PACKAGE_SDL3
+	select BR2_PACKAGE_SDL3_MIXER
 
 	help
 	  Want to play Aliens versus Predator (1999) in Linux?
 
 	  http://icculus.org/avp/
-
-comment "BR2_PACKAGE_AVP needs a toolchain w/ C++"
-	depends on !BR2_INSTALL_LIBSTDCPP

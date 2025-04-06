@@ -9,7 +9,7 @@ from ..Generator import Generator
 
 class BermudaGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         os.chdir("/userdata/roms/ports/bermuda")
         commandArray = ["bermuda", "--datapath=/userdata/roms/ports/bermuda", "--musicpath=/userdata/roms/ports/bermuda/MUSIC", "--savepath=/userdata/saves/bermuda", "--fullscreen"]
 

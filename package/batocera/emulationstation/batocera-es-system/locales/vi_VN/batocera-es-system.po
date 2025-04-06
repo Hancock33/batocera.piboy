@@ -618,6 +618,11 @@ msgctxt "game_options"
 msgid "16 bit"
 msgstr "16 bit"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "16-bit"
+msgstr ""
+
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "1600 x 900"
@@ -748,6 +753,11 @@ msgctxt "game_options"
 msgid "1MB"
 msgstr "1MB"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "1ST PERSON GUNS"
+msgstr ""
+
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
 msgid "1X"
@@ -768,7 +778,7 @@ msgctxt "game_options"
 msgid "1x (720p/1080p)"
 msgstr "1x (720p/1080p)"
 
-#. TRANSLATION: libretro/mupen64plus-next, mupen64plus
+#. TRANSLATION: libretro/mupen64plus-next, mupen64plus, openjkdf2
 msgctxt "game_options"
 msgid "1x (Default)"
 msgstr "1x (Mặc định)"
@@ -1258,6 +1268,11 @@ msgctxt "game_options"
 msgid "32 MHz (Overclock)"
 msgstr "32 MHz (ép xung)"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "32-bit"
+msgstr ""
+
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "320 x 200"
@@ -1367,6 +1382,11 @@ msgstr "3MB"
 msgctxt "game_options"
 msgid "3rd"
 msgstr "3"
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "3rd Person"
+msgstr ""
 
 #. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
@@ -2228,6 +2248,11 @@ msgctxt "game_options"
 msgid "AI TRANSLATION SERVICE URL"
 msgstr "URL DỊCH VỤ DỊCH BẰNG TRÍ TUỆ NHÂN TẠO"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AIMING CROSSHAIR"
+msgstr ""
+
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "ALIEN VS PREDATOR"
@@ -2323,6 +2348,11 @@ msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "LỌC ANISOTROPIC"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "ANISTROPIC FILTER"
+msgstr ""
+
 #. TRANSLATION: dolphin, dolphin_triforce, rpcs3, rtcw
 msgctxt "game_options"
 msgid "ANTI-ALIASING"
@@ -2387,6 +2417,11 @@ msgstr "CẮT ARTWORK"
 msgctxt "game_options"
 msgid "ASMJIT Recompiler"
 msgstr "ASMJIT Recompiler"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "ASPECT"
+msgstr ""
 
 #. TRANSLATION: bermuda, bigpemu, cemu, cgenius, citron, ...
 msgctxt "game_options"
@@ -2513,6 +2548,11 @@ msgctxt "game_options"
 msgid "AUTO AIM"
 msgstr "TỰ ĐỘNG NHẮM MỤC TIÊU"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AUTO AIMING"
+msgstr ""
+
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "AUTO CROP"
@@ -2548,6 +2588,11 @@ msgctxt "game_options"
 msgid "AUTO SAVE/LOAD ON GAME LAUNCH"
 msgstr "TỰ ĐỘNG LƯU/TẢI KHI CHẠY TRÒ CHƠI"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AUTO SWITCH WEAPON"
+msgstr ""
+
 #. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "AUTO WIDESCREEN"
@@ -2557,6 +2602,11 @@ msgstr "MÀN HÌNH RỘNG TỰ ĐỘNG"
 msgctxt "game_options"
 msgid "AUTOMATIC FRAME DELAY"
 msgstr "TRỄ KHUNG HÌNH TỰ ĐỘNG"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AUTOMATICALLY RELOAD WEAPON"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -2854,6 +2904,11 @@ msgctxt "game_options"
 msgid "Algeria"
 msgstr "Algeria"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "All + Enemy Jedi Dodge"
+msgstr ""
+
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
 msgid "All 0s (Default)"
@@ -2878,6 +2933,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
 msgstr "Tất cả các giấy phép có thể (Không khuyến khích)"
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "All voiceovers"
+msgstr ""
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -2939,6 +2999,11 @@ msgstr "Cho phép bạn giới hạn FPS ở mức 60."
 msgctxt "game_options"
 msgid "Alone in the Dark"
 msgstr "Alone in the Dark"
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Alt. Attack"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -3316,7 +3381,7 @@ msgctxt "game_options"
 msgid "Atari XE Game System cartridges"
 msgstr "Atari XE Game System cartridges"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjk.keys
 msgctxt "keys_files"
 msgid "Attack"
 msgstr ""
@@ -3390,6 +3455,11 @@ msgstr "Bản đồ tự động"
 msgctxt "game_options"
 msgid "Automatic"
 msgstr "Tự động"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Automatic pickup weapon."
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -3629,7 +3699,7 @@ msgctxt "game_options"
 msgid "BLENDING ACCURACY"
 msgstr "ĐỘ CHÍNH XÁC PHA TRỘN"
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
 msgid "BLOOM"
 msgstr "BLOOM"
@@ -3674,7 +3744,7 @@ msgctxt "game_options"
 msgid "BRETT HULL HOCKEY"
 msgstr "BRETT HULL HOCKEY"
 
-#. TRANSLATION: doom3
+#. TRANSLATION: doom3, openjk
 msgctxt "game_options"
 msgid "BRIGHTNESS"
 msgstr "ĐỘ SÁNG"
@@ -3705,6 +3775,11 @@ msgstr ""
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Back / Menu"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Backpedal"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -4309,7 +4384,7 @@ msgctxt "game_options"
 msgid "COLOUR CORRECTION"
 msgstr ""
 
-#. TRANSLATION: libretro/cap32
+#. TRANSLATION: libretro/cap32, openjk
 msgctxt "game_options"
 msgid "COLOUR DEPTH"
 msgstr "ĐỘ SÂU MÀU"
@@ -4644,6 +4719,16 @@ msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr "TÂM NGẮM"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "CROSSHAIR LINE THICKNESS"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "CROSSHAIR SIZE"
+msgstr ""
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "CRT COLOUR"
@@ -4743,6 +4828,16 @@ msgstr "CUSTOM MAME CONFIG"
 msgctxt "game_options"
 msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
 msgstr "TÙY CHỈNH MÔ PHỎNG WIIMOTE & GAMEPAD"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "CUTSCENE SUBTITLES"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "CUTSCENES"
+msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -5001,7 +5096,7 @@ msgctxt "game_options"
 msgid "Change the consoles country from the default of the United States."
 msgstr "Thay đổi quốc gia của bảng điều khiển từ mặc định là Hoa Kỳ."
 
-#. TRANSLATION: doom3
+#. TRANSLATION: doom3, openjk
 msgctxt "game_options"
 msgid "Change the game's brightness."
 msgstr "Thay đổi độ sáng của trò chơi."
@@ -5082,6 +5177,11 @@ msgctxt "game_options"
 msgid "Chinese (Traditional) [Big5]"
 msgstr "Trung Quốc (Phồn thể) [Big5]"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Choose Screen Space Ambient Occlusion for better lighting."
+msgstr ""
+
 #. TRANSLATION: redream
 msgctxt "game_options"
 msgid "Choose broadcast standard (for older TV's)."
@@ -5091,6 +5191,11 @@ msgstr "Chọn tiêu chuẩn phát sóng (đối với TV cũ)."
 msgctxt "game_options"
 msgid "Choose cable type for the TV."
 msgstr "Chọn loại cáp cho TV."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Choose difficulty for the game."
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -5117,10 +5222,25 @@ msgctxt "game_options"
 msgid "Choose second feature pack for the controller."
 msgstr "Chọn gói tính năng thứ hai cho bộ điều khiển."
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose shadow details."
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose slow motion death option."
+msgstr ""
+
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
 msgid "Choose system BIOS language."
 msgstr "Chọn ngôn ngữ BIOS hệ thống."
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose text language."
+msgstr ""
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -5141,6 +5261,13 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the Parallel N64 graphics plugin."
 msgstr "Chọn plugin đồ họa N64 song song."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid ""
+"Choose the amount of Gamma which changes how light or dark mid-range tones "
+"appear."
+msgstr ""
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
@@ -5184,7 +5311,12 @@ msgstr ""
 "Chọn cấu hình bộ điều khiển. EVDEV dành cho nhiều loại bộ điều khiển, súng "
 "đèn và vô lăng. SDL2 chỉ dành cho gamepad."
 
-#. TRANSLATION: libretro/cap32
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose the depth of texture quality."
+msgstr ""
+
+#. TRANSLATION: libretro/cap32, openjk
 msgctxt "game_options"
 msgid "Choose the emulated colour depth."
 msgstr "Chọn độ sâu màu mô phỏng."
@@ -5193,6 +5325,16 @@ msgstr "Chọn độ sâu màu mô phỏng."
 msgctxt "game_options"
 msgid "Choose the games difficulty."
 msgstr "Chọn độ khó trong game."
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose the level of geometric detail."
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose the level of texture detail."
+msgstr ""
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -5203,6 +5345,16 @@ msgstr "Chọn mức độ bạo lực ưa thích."
 msgctxt "game_options"
 msgid "Choose the scaling mode for the game screen."
 msgstr "Chọn chế độ chia tỷ lệ cho màn hình trò chơi."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Choose the size of the heads-up display."
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose the texture filter type."
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -5219,6 +5371,11 @@ msgctxt "game_options"
 msgid "Choose to enable or disable cutscenes."
 msgstr "Chọn bật hoặc tắt các đoạn cắt cảnh."
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Choose to keep corpses present."
+msgstr ""
+
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid ""
@@ -5228,7 +5385,7 @@ msgstr ""
 "Chọn để hiển thị kết cấu đồ họa độ nét cao. Yêu cầu OpenGL, True Color và "
 "tệp nâng cao.gob."
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
 msgid "Choose to use Bloom post processing."
 msgstr "Chọn sử dụng xử lý Bloom."
@@ -5237,6 +5394,16 @@ msgstr "Chọn sử dụng xử lý Bloom."
 msgctxt "game_options"
 msgid "Choose upscaling method."
 msgstr "Chọn phương pháp nâng cấp."
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose voice language."
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose when to enable subtitles."
+msgstr ""
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -5802,10 +5969,20 @@ msgctxt "game_options"
 msgid "DESKTOP"
 msgstr "DESKTOP"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "DETAILED SHADERS"
+msgstr ""
+
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
 msgid "DEV MENU"
 msgstr "MENU DEV"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "DIFFICULTY"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -5852,7 +6029,7 @@ msgctxt "game_options"
 msgid "DISK TYPE"
 msgstr "LOẠI ĐĨA"
 
-#. TRANSLATION: dolphin, duckstation, pcsx2, vpinball
+#. TRANSLATION: dolphin, duckstation, openjkdf2, pcsx2, vpinball
 msgctxt "game_options"
 msgid "DISPLAY"
 msgstr "MÀN HÌNH"
@@ -5937,6 +6114,11 @@ msgctxt "game_options"
 msgid "DOWNSCALE FILTER"
 msgstr "BỘ LỌC GIẢM CẤP"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "DRAW CROSSHAIR"
+msgstr ""
+
 #. TRANSLATION: flycast, libretro, ppsspp
 msgctxt "game_options"
 msgid "DRIVERS"
@@ -6007,6 +6189,16 @@ msgctxt "game_options"
 msgid "DXVK RESET CACHE"
 msgstr "DXVK RESET CACHE"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "DYNAMIC GLOW"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "DYNAMIC LIGHTS"
+msgstr ""
+
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "DYNAMICALLY CALCULATE OPTIMAL SETTINGS"
@@ -6067,7 +6259,7 @@ msgctxt "game_options"
 msgid "December"
 msgstr "Tháng 12"
 
-#. TRANSLATION: citron, libretro/flycast, libretro/mesen, libretro/puae, libretro/puae2021
+#. TRANSLATION: citron, libretro/flycast, libretro/mesen, libretro/puae, libretro/puae2021, ...
 msgctxt "game_options"
 msgid "Default"
 msgstr "Mặc định"
@@ -6220,6 +6412,11 @@ msgctxt "game_options"
 msgid "Disable gouraud shading"
 msgstr ""
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Disable mission start confirmation."
+msgstr ""
+
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Disable support for memory write watches in ntdll."
@@ -6229,6 +6426,11 @@ msgstr "Tắt hỗ trợ đồng hồ ghi bộ nhớ trong ntdll."
 msgctxt "game_options"
 msgid "Disable to access the system's settings, like time and language."
 msgstr "Tắt quyền truy cập vào cài đặt hệ thống, như thời gian và ngôn ngữ."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Disable weapon waggle."
+msgstr ""
 
 #. TRANSLATION: bigpemu, bstone, citron, duckstation, f2bgl, ...
 msgctxt "game_options"
@@ -6386,6 +6588,11 @@ msgctxt "keys_files"
 msgid "Down"
 msgstr "Xuống"
 
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Down/Crouch"
+msgstr ""
+
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
 msgid ""
@@ -6436,6 +6643,11 @@ msgid "DualShock has rumble support. Not all games support DualShock."
 msgstr ""
 "Dualshock có sự hỗ trợ của Rumble. Không phải tất cả các trò chơi đều hỗ trợ "
 "DualShock."
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Duck"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -6738,7 +6950,7 @@ msgctxt "game_options"
 msgid "EXTENDED SCREEN"
 msgstr "MỞ RỘNG MÀN HÌNH"
 
-#. TRANSLATION: awgl, fallout1-ce, fallout2-ce
+#. TRANSLATION: awgl, fallout1-ce, fallout2-ce, openjkdf2
 msgctxt "game_options"
 msgid "Easy"
 msgstr "Dễ"
@@ -6948,9 +7160,19 @@ msgid ""
 "menu."
 msgstr ""
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable aiming crosshair."
+msgstr ""
+
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Enable audio"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable auto aiming."
 msgstr ""
 
 #. TRANSLATION: redream
@@ -6991,6 +7213,11 @@ msgctxt "game_options"
 msgid "Enable free play for supported games."
 msgstr "Cho phép chơi miễn phí đối với các trò chơi được hỗ trợ."
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable full subtitles on cutscenes."
+msgstr ""
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Enable full-screen antialiasing in Direct3D."
@@ -7016,6 +7243,11 @@ msgstr ""
 "Bật chế độ xem gamepad cho các trò chơi có tương tác trên hai màn hình. Sử "
 "dụng Hotkey+R2 để chuyển đổi màn hình."
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable high dots per inch."
+msgstr ""
+
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
 msgid "Enable high quality effects for special stages."
@@ -7025,6 +7257,11 @@ msgstr "Kích hoạt hiệu ứng chất lượng cao cho các màn đặc biệ
 msgctxt "game_options"
 msgid "Enable launching pre-installed WHDLoad installs."
 msgstr "Cho phép khởi chạy cài đặt WHDLoad được cài đặt sẵn."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable lightsaber auto-camera."
+msgstr ""
 
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
@@ -7081,6 +7318,11 @@ msgid "Enable proper quad rendering (for higher end systems)."
 msgstr ""
 "Kích hoạt tính năng hiển thị quad thích hợp (đối với các hệ thống cao cấp "
 "hơn)."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable rotation on overlay map."
+msgstr ""
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -7693,6 +7935,11 @@ msgctxt "game_options"
 msgid "FIDELITY FX SUPER RESOLUTION"
 msgstr "FIDELITY FX SIÊU PHÂN GIẢI"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FIELD OF VIEW"
+msgstr ""
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "FIFO (VSync On)"
@@ -7717,6 +7964,11 @@ msgstr "FILTER TILEMAPS"
 msgctxt "game_options"
 msgid "FIRMWARE SETTINGS"
 msgstr "CÀI ĐẶT FIRMWARE"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FIST CROSSHAIR"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -7807,6 +8059,16 @@ msgstr "BẮT BUỘC THỜI GIAN NTSC TRÊN PAL"
 msgctxt "game_options"
 msgid "FORCE WINDOWS CE MODE"
 msgstr "BẮT BUỘC CHẠY WINDOWN CE"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FOV VERTICAL"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FPS LIMIT"
+msgstr ""
 
 #. TRANSLATION: lindbergh-loader, wine
 msgctxt "game_options"
@@ -7976,6 +8238,11 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "Quần đảo Faroe"
 
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Fast"
+msgstr ""
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
@@ -8014,6 +8281,16 @@ msgstr "Tháng 2"
 msgctxt "game_options"
 msgid "FidelityFX Super Resolution"
 msgstr "Fidelityfx Siêu phân giải"
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Field Light"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Field of view is vertical (Hor+)."
+msgstr ""
 
 #. TRANSLATION: libretro/uae4arm
 msgctxt "game_options"
@@ -8063,6 +8340,16 @@ msgstr "Phần Lan (fi)"
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "Bắn"
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Fire 1"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Fire 2"
+msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -8615,6 +8902,16 @@ msgctxt "game_options"
 msgid "GAMEPAD CURSOR SPEED"
 msgstr "TỐC ĐỘ CON TRỎ GAMEPAD"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "GAMEPLAY"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "GAMMA"
+msgstr ""
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "GB"
@@ -8729,6 +9026,16 @@ msgstr "GCE Vectrex cartridges"
 msgctxt "game_options"
 msgid "GDC"
 msgstr "GDC"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "GENERAL"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "GEOMETRIC DETAIL"
+msgstr ""
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -9180,6 +9487,11 @@ msgctxt "game_options"
 msgid "HIDE NVIDIA GPU"
 msgstr "ẨN GPU NVIDIA"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "HIDPI"
+msgstr ""
+
 #. TRANSLATION: cannonball
 msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
@@ -9240,6 +9552,11 @@ msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "HUD SCALE"
+msgstr ""
+
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "HUMMER FLICKER FIX"
@@ -9250,7 +9567,7 @@ msgctxt "game_options"
 msgid "Hack. Increases most PAL games' speed by 17%."
 msgstr "Hack. Tăng tốc độ của hầu hết các trò chơi PAL lên 17%."
 
-#. TRANSLATION: awgl, fallout1-ce, fallout2-ce
+#. TRANSLATION: awgl, fallout1-ce, fallout2-ce, openjkdf2
 msgctxt "game_options"
 msgid "Hard"
 msgstr "Khó"
@@ -9526,6 +9843,11 @@ msgctxt "game_options"
 msgid "IDE (Default)"
 msgstr "IDE (Mặc định)"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "IDENTIFY TARGET"
+msgstr ""
+
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "IMAGE CENTRING"
@@ -9722,6 +10044,11 @@ msgstr "Cải thiện hiệu suất nhưng tăng độ trễ và video bị gi�
 msgctxt "game_options"
 msgid "Improves performance in 3D games. Can cause glitches."
 msgstr "Cải thiện hiệu suất trong trò chơi 3D. Có thể gây trục trặc."
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "In Cinematics"
+msgstr ""
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -10084,7 +10411,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "Tháng 7"
 
-#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys
+#. TRANSLATION: omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr ""
@@ -10098,6 +10425,16 @@ msgstr "Tháng 6"
 msgctxt "game_options"
 msgid "Justifier"
 msgstr "Justifier"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "KEEP CORPSES"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "KEEP LIGHTSABER"
+msgstr ""
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
@@ -10293,6 +10630,11 @@ msgctxt "game_options"
 msgid "LCD Ghosting (Fast)"
 msgstr "LCD Ghosting (Nhanh)"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "LIGHT FLARES"
+msgstr ""
+
 #. TRANSLATION: duckstation, flycast, hypseus-singe/zmachine, libretro/beetle-saturn, libretro/fbneo, ...
 msgctxt "game_options"
 msgid "LIGHT GUN"
@@ -10307,6 +10649,16 @@ msgstr "TÂM NGẮM LIGHT GUN"
 msgctxt "game_options"
 msgid "LIGHT GUNS"
 msgstr "LIGHT GUNS"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "LIGHTSABER CAMERA"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "LIGHTSABER CROSSHAIR"
+msgstr ""
 
 #. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
@@ -10708,6 +11060,11 @@ msgctxt "game_options"
 msgid "MANUAL TEXTURE SAMPLING"
 msgstr "LẤY MẪU HỌA TIẾT THỦ CÔNG"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "MAP ROTATION"
+msgstr ""
+
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "MAX (as many as possible)"
@@ -10768,10 +11125,20 @@ msgctxt "game_options"
 msgid "MISSILE COMMAND 3D VR"
 msgstr "MISSILE COMMAND 3D VR"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "MISSION START"
+msgstr ""
+
 #. TRANSLATION: hatari, libretro/fuse, libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "MODEL"
 msgstr "THIẾT KẾ"
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "MODEL DISMEMBERMENT"
+msgstr ""
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xpet, libretro/vice_xplus4, ...
 msgctxt "game_options"
@@ -10985,7 +11352,7 @@ msgctxt "game_options"
 msgid "Manually set cycles per second. Use with caution."
 msgstr "Đặt thủ công chu kỳ mỗi giây. Sử dụng một cách thận trọng."
 
-#. TRANSLATION: prboom.gzdoom.keys
+#. TRANSLATION: openjk.keys, openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr ""
@@ -11123,7 +11490,7 @@ msgctxt "game_options"
 msgid "Med Saving"
 msgstr ""
 
-#. TRANSLATION: libretro/mesen, libretro/mesens, mupen64plus, pcsx2
+#. TRANSLATION: libretro/mesen, libretro/mesens, mupen64plus, openjk, openjkdf2, ...
 msgctxt "game_options"
 msgid "Medium"
 msgstr "Trung bình"
@@ -11217,7 +11584,7 @@ msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Menu trở lại"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Menu back / exit"
 msgstr ""
@@ -11408,7 +11775,7 @@ msgctxt "keys_files"
 msgid "Move back / down"
 msgstr ""
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move backward"
 msgstr "Lùi về phía sau"
@@ -11433,7 +11800,7 @@ msgctxt "keys_files"
 msgid "Move camera up"
 msgstr "Di chuyển camera lên"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move forward"
 msgstr "Tiến về phía trước"
@@ -11443,12 +11810,12 @@ msgctxt "keys_files"
 msgid "Move forward / up"
 msgstr ""
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move left"
 msgstr "Di chuyển sang trái"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move right"
 msgstr "Di chuyển sang phải"
@@ -11528,6 +11895,16 @@ msgstr "KHÔNG"
 msgctxt "game_options"
 msgid "NO (DEFAULT)"
 msgstr "KHÔNG (MẶC ĐỊNH)"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "NO DANGEROUS WEAPONS"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "NO WEAKER WEAPONS"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -11775,7 +12152,7 @@ msgctxt "game_options"
 msgid "Netherlands (nl)"
 msgstr "Hà Lan (nl)"
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melondsds, openjk
 msgctxt "game_options"
 msgid "Never"
 msgstr "Không bao giờ"
@@ -11790,7 +12167,17 @@ msgctxt "game_options"
 msgid "New3D"
 msgstr "New3D"
 
-#. TRANSLATION: prboom.gzdoom.keys
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Next Force Power"
+msgstr ""
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Next Inventory Item"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
@@ -12512,6 +12899,11 @@ msgctxt "game_options"
 msgid "PHYSICAL KEYBOARD LAYOUT"
 msgstr "BỐ CỤC BÀN PHÍM VẬT LÝ"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "PICKUP WEAPON"
+msgstr ""
+
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "PINBALL MAPPING MODE"
@@ -12885,6 +13277,16 @@ msgctxt "game_options"
 msgid "Pink - Blossom Pink"
 msgstr "Pink - Blossom Pink"
 
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Pitch Down"
+msgstr ""
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Pitch Up"
+msgstr ""
+
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Pixel Perfect"
@@ -12930,6 +13332,11 @@ msgctxt "game_options"
 msgid "PlayStation Mouse"
 msgstr "Chuột PlayStation"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Player"
+msgstr ""
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Player distance from lower screen edge (cm)"
@@ -12939,6 +13346,26 @@ msgstr "Khoảng cách người chơi từ cạnh dưới màn hình (cm)"
 msgctxt "game_options"
 msgid "Player's eyes distance from lower screen edge (cm)"
 msgstr "Khoảng cách mắt người chơi tới mép dưới màn hình (cm)"
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Player, Any Enemy"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Player, Any Enemy Jedi"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Player, Last Enemy Jedi"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Player, Last Enemy in Group"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -13124,6 +13551,21 @@ msgctxt "keys_files"
 msgid "Press the Y key for 'Yes'"
 msgstr "Nhấn phím Y cho 'Có'"
 
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous Force Power"
+msgstr ""
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous Inventory Item"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous Weapon"
+msgstr ""
+
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Previous item"
@@ -13134,7 +13576,7 @@ msgctxt "keys_files"
 msgid "Previous slot"
 msgstr ""
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr ""
@@ -13270,6 +13712,11 @@ msgctxt "game_options"
 msgid "REGION"
 msgstr "KHU VỰC"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "RELOAD WEAPON"
+msgstr ""
+
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "REMOVE INTERLACE ARTIFACTS"
@@ -13325,7 +13772,7 @@ msgctxt "game_options"
 msgid "RENDERING"
 msgstr "KẾT XUẤT"
 
-#. TRANSLATION: ppsspp, thextech
+#. TRANSLATION: thextech
 msgctxt "game_options"
 msgid "RENDERING MODE"
 msgstr "CHẾ ĐỘ KẾT XUẤT"
@@ -13853,6 +14300,11 @@ msgstr ""
 "Chạy trò chơi ở chế độ thử nghiệm để định cấu hình các tùy chọn trò chơi "
 "nhất định."
 
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Run/Walk"
+msgstr ""
+
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -14058,6 +14510,11 @@ msgctxt "game_options"
 msgid "SHADER SET"
 msgstr "BỘ ĐỔ BÓNG"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "SHADOWS"
+msgstr ""
+
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "SHARE MAME ARTWORK"
@@ -14133,6 +14590,11 @@ msgctxt "game_options"
 msgid "SIO ACCELERATION"
 msgstr "TĂNG TỐC SIO"
 
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "SKIP BUFFER EFFECTS"
+msgstr ""
+
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "SKIP CUTSCENES"
@@ -14166,6 +14628,11 @@ msgstr "BỎ QUA MENU BẮT ĐẦU"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "SLEEP TIMERS ACCURACY"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "SLOW MOTION DEATH"
 msgstr ""
 
 #. TRANSLATION: citron
@@ -14303,6 +14770,16 @@ msgctxt "game_options"
 msgid "SPU XFloat Accuracy"
 msgstr "SPU XFloat Accuracy"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "SSAA Multiplier"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "SSAO"
+msgstr ""
+
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "ST"
@@ -14353,7 +14830,7 @@ msgctxt "game_options"
 msgid "STRICT RENDERING MODE"
 msgstr "STRICT RENDERING MODE"
 
-#. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce
+#. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce, openjk
 msgctxt "game_options"
 msgid "SUBTITLES"
 msgstr "PHỤ ĐỀ"
@@ -14402,6 +14879,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "SWAP GAMEPADS"
 msgstr "TRÁO ĐỔI GAMEPAD"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "SWITCH WEAPON"
+msgstr ""
 
 #. TRANSLATION: libretro/doublecherrygb, libretro/tgbdual
 msgctxt "game_options"
@@ -14788,6 +15270,16 @@ msgctxt "game_options"
 msgid "Set the controller rumble strength if supported."
 msgstr "Đặt cường độ rung của bộ điều khiển nếu được hỗ trợ."
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the crosshair line thickness."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the crosshair size."
+msgstr ""
+
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Set the dead zone of the joystick analogue sticks."
@@ -14804,6 +15296,16 @@ msgid "Set the display's resolution. Does not affect the rendering resolution."
 msgstr ""
 "Đặt độ phân giải của màn hình.Không ảnh hưởng đến độ phân giải kết xuất."
 "Thiết lập độ phân giải màn hình. Không ảnh hưởng đến độ phân giải kết xuất."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the field of view."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the fps limit."
+msgstr ""
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14933,6 +15435,16 @@ msgctxt "game_options"
 msgid "Show Cheat Menu (Pause + R Shoulder button)"
 msgstr ""
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Show Crosshair with fist."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Show Crosshair with lightsaber."
+msgstr ""
+
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Show an image overlaid on top of the bezel."
@@ -15023,7 +15535,7 @@ msgctxt "game_options"
 msgid "Side by side"
 msgstr ""
 
-#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em
+#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em, openjk
 msgctxt "game_options"
 msgid "Simple"
 msgstr "Đơn giản"
@@ -15140,15 +15652,15 @@ msgstr "Bỏ qua ban đầu"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid ""
-"Skip buffer disables auto frame skip and renders at display output "
-"resolution."
-msgstr ""
+msgid "Skip buffer effects"
+msgstr "Bỏ qua hiệu ứng bộ đệm"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid "Skip buffer effects"
-msgstr "Bỏ qua hiệu ứng bộ đệm"
+msgid ""
+"Skip buffer effects disables auto frameskip and renders at display output "
+"resolution."
+msgstr ""
 
 #. TRANSLATION: rtcw.keys, theforceengine.keys
 msgctxt "keys_files"
@@ -15635,6 +16147,16 @@ msgctxt "game_options"
 msgid "Steering Wheel"
 msgstr "Steering Wheel"
 
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Step left"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Step right"
+msgstr ""
+
 #. TRANSLATION: citron, rpcs3
 msgctxt "game_options"
 msgid "Stereo"
@@ -15660,12 +16182,12 @@ msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr "Strafe Phải"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Strafe left"
 msgstr "Strafe trái"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Strafe right"
 msgstr "Strafe phải"
@@ -15963,12 +16485,22 @@ msgctxt "game_options"
 msgid "TEST PLAY"
 msgstr "CHƠI THỬ"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "TEXT"
+msgstr ""
+
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "TEXTURE DEPOSTERIZE"
 msgstr "TEXTURE DEPOSTERIZE"
 
-#. TRANSLATION: f2bgl
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "TEXTURE DETAIL"
+msgstr ""
+
+#. TRANSLATION: f2bgl, openjk
 msgctxt "game_options"
 msgid "TEXTURE FILTER"
 msgstr ""
@@ -15997,6 +16529,11 @@ msgstr "TEXTURE MIP-MAPPING (BLUR)"
 msgctxt "game_options"
 msgid "TEXTURE PRELOADING"
 msgstr "TEXTURE PRELOADING"
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "TEXTURE QUALITY"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -16498,6 +17035,11 @@ msgid ""
 msgstr ""
 "Cố gắng đoán màu Per-vertex (gouraud) từ Model2 per-poly information (flat)."
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Trilinear"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Trilinear (Forced)"
@@ -16552,6 +17094,16 @@ msgstr "Rẽ trái"
 msgctxt "keys_files"
 msgid "Turn Right"
 msgstr "Rẽ phải"
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Turn left"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Turn right"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -16958,6 +17510,11 @@ msgctxt "keys_files"
 msgid "Up"
 msgstr "Lên"
 
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Up/Jump"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
@@ -16996,7 +17553,7 @@ msgctxt "game_options"
 msgid "Uruguay"
 msgstr "Uruguay"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Use"
 msgstr ""
@@ -17015,15 +17572,30 @@ msgstr ""
 "Sử dụng mẫu âm thanh 16 bit cho trình điều khiển âm thanh không hỗ trợ 32 "
 "bit. Chỉ sử dụng nếu bạn không nhận được âm thanh."
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Use 1:1 aspect."
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Use Analog joysticks in addition to D-Pad for DualShock controllers."
 msgstr "Sử dụng cần điều khiển Analog ngoài D-Pad cho bộ điều khiển DualShock."
 
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Use Force Power"
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Use Host"
 msgstr "Sử dụng Máy chủ"
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Use Inventory Item"
+msgstr ""
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -17300,7 +17872,7 @@ msgctxt "game_options"
 msgid "VIC20 PAL Automatic"
 msgstr "Vic20 Pal tự động"
 
-#. TRANSLATION: citron, rpcs3
+#. TRANSLATION: citron, openjk, rpcs3
 msgctxt "game_options"
 msgid "VIDEO"
 msgstr "VIDEO"
@@ -17365,6 +17937,11 @@ msgctxt "game_options"
 msgid "VIEW ONLY"
 msgstr "CHỈ XEM"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "VIEW SWAYING"
+msgstr ""
+
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "VIOLENCE LEVEL"
@@ -17379,6 +17956,11 @@ msgstr "VIRTUAL DESKTOP"
 msgctxt "game_options"
 msgid "VISUAL NUDGE STRENGTH"
 msgstr "VISUAL NUDGE STRENGTH"
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "VOICE"
+msgstr ""
 
 #. TRANSLATION: azahar, bigpemu, bstone, cemu, citron, ...
 msgctxt "game_options"
@@ -17445,7 +18027,7 @@ msgctxt "game_options"
 msgid "Vertical Sync"
 msgstr "Đồng bộ dọc"
 
-#. TRANSLATION: libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus
+#. TRANSLATION: libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus, openjk
 msgctxt "game_options"
 msgid "Very High"
 msgstr "Rất cao"
@@ -17500,6 +18082,11 @@ msgctxt "game_options"
 msgid "Voltmace Delta 3b Twin Joysticks"
 msgstr "Voltmace Delta 3b Twin Joysticks"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Volumetric"
+msgstr ""
+
 #. TRANSLATION: azahar, citron, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "Vulkan"
@@ -17515,6 +18102,11 @@ msgctxt "game_options"
 msgid "W-SU"
 msgstr "W-SU"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "WALL MARKS"
+msgstr ""
+
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "WAN"
@@ -17529,6 +18121,16 @@ msgstr "CẢNH BÁO VỀ CÁC VẤN ĐỀ CỦA BIOS"
 msgctxt "game_options"
 msgid "WARN ABOUT UNSUPPORTED FEATURES"
 msgstr "CẢNH BÁO VỀ TÍNH NĂNG KHÔNG ĐƯỢC HỖ TRỢ"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "WEAPON PICKUP"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "WEAPON WAGGLE"
+msgstr ""
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -17624,6 +18226,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "WRX HIGH RESOLUTION"
 msgstr "ĐỘ PHÂN GIẢI CAO WRX"
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Walk forward"
+msgstr ""
 
 #. TRANSLATION: hurrican
 msgctxt "game_options"
@@ -17866,7 +18473,7 @@ msgctxt "game_options"
 msgid "Zone for which the game doesn't react to the wheel (in degrees)"
 msgstr "Vùng mà game không phản ứng với wheel (tính bằng độ)"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Zoom in"
 msgstr ""
@@ -17881,7 +18488,7 @@ msgctxt "keys_files"
 msgid "Zoom in x5"
 msgstr "Phóng to x5"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Zoom out"
 msgstr ""

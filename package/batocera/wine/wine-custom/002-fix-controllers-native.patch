@@ -1,8 +1,8 @@
 diff --git a/loader/wine.inf.in b/loader/wine.inf.in
-index 2578d64aa0d..764ab1d39cd 100644
+index 7dcbdb73..287e8ae2 100644
 --- a/loader/wine.inf.in
 +++ b/loader/wine.inf.in
-@@ -97,7 +97,8 @@ AddReg=\
+@@ -99,7 +99,8 @@ AddReg=\
      ThemeManager,\
      VCRuntime.ntx86,\
      VersionInfo,\
@@ -12,7 +12,7 @@ index 2578d64aa0d..764ab1d39cd 100644
  
  [DefaultInstall.ntamd64]
  RegisterDlls=RegisterDllsSection
-@@ -123,7 +124,8 @@ AddReg=\
+@@ -126,7 +127,8 @@ AddReg=\
      ThemeManager,\
      VCRuntime.ntamd64,\
      VersionInfo,\
@@ -22,7 +22,7 @@ index 2578d64aa0d..764ab1d39cd 100644
  
  [DefaultInstall.ntarm64]
  RegisterDlls=RegisterDllsSection
-@@ -150,7 +152,8 @@ AddReg=\
+@@ -153,7 +155,8 @@ AddReg=\
      VCRuntime.ntamd64,\
      VCRuntime.ntarm64,\
      VersionInfo,\
@@ -32,7 +32,7 @@ index 2578d64aa0d..764ab1d39cd 100644
  
  [Wow64Install.ntx86]
  RegisterDlls=RegisterDllsSection
-@@ -183,6 +186,10 @@ AddReg=\
+@@ -187,6 +190,10 @@ AddReg=\
      Tapi,\
      VersionInfo,\
      LicenseInformation

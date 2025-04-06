@@ -823,12 +823,12 @@ msgctxt "game_options"
 msgid "576+KB"
 msgstr ""
 
-#. TRANSLATION: libretro/cap32
+#. TRANSLATION: libretro/cap32, openjk
 msgctxt "game_options"
 msgid "Choose the emulated colour depth."
 msgstr ""
 
-#. TRANSLATION: libretro/cap32
+#. TRANSLATION: libretro/cap32, openjk
 msgctxt "game_options"
 msgid "COLOUR DEPTH"
 msgstr ""
@@ -972,7 +972,7 @@ msgctxt "game_options"
 msgid "Low"
 msgstr ""
 
-#. TRANSLATION: libretro/mesen, libretro/mesens, mupen64plus, pcsx2
+#. TRANSLATION: libretro/mesen, libretro/mesens, mupen64plus, openjk, openjkdf2, ...
 msgctxt "game_options"
 msgid "Medium"
 msgstr ""
@@ -982,7 +982,7 @@ msgctxt "game_options"
 msgid "High"
 msgstr ""
 
-#. TRANSLATION: libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus
+#. TRANSLATION: libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus, openjk
 msgctxt "game_options"
 msgid "Very High"
 msgstr ""
@@ -1092,7 +1092,7 @@ msgctxt "game_options"
 msgid "COLOR PALETTE"
 msgstr ""
 
-#. TRANSLATION: citron, libretro/flycast, libretro/mesen, libretro/puae, libretro/puae2021
+#. TRANSLATION: citron, libretro/flycast, libretro/mesen, libretro/puae, libretro/puae2021, ...
 msgctxt "game_options"
 msgid "Default"
 msgstr ""
@@ -1684,7 +1684,7 @@ msgctxt "game_options"
 msgid "CURSOR MODE"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melondsds, openjk
 msgctxt "game_options"
 msgid "Never"
 msgstr ""
@@ -3787,7 +3787,7 @@ msgctxt "game_options"
 msgid "LCD GHOSTING EFFECT"
 msgstr ""
 
-#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em
+#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em, openjk
 msgctxt "game_options"
 msgid "Simple"
 msgstr ""
@@ -6266,7 +6266,7 @@ msgctxt "game_options"
 msgid "PARALLEL-RDP UPSCALER"
 msgstr ""
 
-#. TRANSLATION: libretro/mupen64plus-next, mupen64plus
+#. TRANSLATION: libretro/mupen64plus-next, mupen64plus, openjkdf2
 msgctxt "game_options"
 msgid "1x (Default)"
 msgstr ""
@@ -9417,7 +9417,7 @@ msgctxt "game_options"
 msgid "The final output image, unrelated to the Wii's emulated NAND setting."
 msgstr ""
 
-#. TRANSLATION: dolphin, duckstation, pcsx2, vpinball
+#. TRANSLATION: dolphin, duckstation, openjkdf2, pcsx2, vpinball
 msgctxt "game_options"
 msgid "DISPLAY"
 msgstr ""
@@ -11702,23 +11702,23 @@ msgstr ""
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid ""
-"Skip buffer disables auto frame skip and renders at display output "
+"Skip buffer effects disables auto frameskip and renders at display output "
 "resolution."
-msgstr ""
-
-#. TRANSLATION: ppsspp, thextech
-msgctxt "game_options"
-msgid "RENDERING MODE"
 msgstr ""
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid "Skip buffer effects"
+msgid "SKIP BUFFER EFFECTS"
 msgstr ""
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "Buffered rendering"
+msgstr ""
+
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "Skip buffer effects"
 msgstr ""
 
 #. TRANSLATION: ppsspp
@@ -12012,7 +12012,7 @@ msgctxt "game_options"
 msgid "PS3's internal ratio setting. Some games only support 16/9."
 msgstr ""
 
-#. TRANSLATION: citron, rpcs3
+#. TRANSLATION: citron, openjk, rpcs3
 msgctxt "game_options"
 msgid "VIDEO"
 msgstr ""
@@ -14729,12 +14729,12 @@ msgctxt "game_options"
 msgid "GAME DIFFICULTY"
 msgstr ""
 
-#. TRANSLATION: awgl, fallout1-ce, fallout2-ce
+#. TRANSLATION: awgl, fallout1-ce, fallout2-ce, openjkdf2
 msgctxt "game_options"
 msgid "Easy"
 msgstr ""
 
-#. TRANSLATION: awgl, fallout1-ce, fallout2-ce
+#. TRANSLATION: awgl, fallout1-ce, fallout2-ce, openjkdf2
 msgctxt "game_options"
 msgid "Hard"
 msgstr ""
@@ -14967,12 +14967,12 @@ msgctxt "game_options"
 msgid "STRETCH UI MENU"
 msgstr ""
 
-#. TRANSLATION: doom3
+#. TRANSLATION: doom3, openjk
 msgctxt "game_options"
 msgid "Change the game's brightness."
 msgstr ""
 
-#. TRANSLATION: doom3
+#. TRANSLATION: doom3, openjk
 msgctxt "game_options"
 msgid "BRIGHTNESS"
 msgstr ""
@@ -15049,7 +15049,7 @@ msgctxt "game_options"
 msgid "Select which filter is used to scale up the resolution."
 msgstr ""
 
-#. TRANSLATION: f2bgl
+#. TRANSLATION: f2bgl, openjk
 msgctxt "game_options"
 msgid "TEXTURE FILTER"
 msgstr ""
@@ -15094,7 +15094,7 @@ msgctxt "game_options"
 msgid "Display cutscene subtitles"
 msgstr ""
 
-#. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce
+#. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce, openjk
 msgctxt "game_options"
 msgid "SUBTITLES"
 msgstr ""
@@ -15505,12 +15505,12 @@ msgctxt "game_options"
 msgid "BILINEAR FILTER"
 msgstr ""
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
 msgid "Choose to use Bloom post processing."
 msgstr ""
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
 msgid "BLOOM"
 msgstr ""
@@ -15618,6 +15618,11 @@ msgstr ""
 #. TRANSLATION: thextech
 msgctxt "game_options"
 msgid "Better performance with hardware rendering."
+msgstr ""
+
+#. TRANSLATION: thextech
+msgctxt "game_options"
+msgid "RENDERING MODE"
 msgstr ""
 
 #. TRANSLATION: thextech
@@ -17050,6 +17055,483 @@ msgctxt "game_options"
 msgid "EXPANSION PACK"
 msgstr ""
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Choose difficulty for the game."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "DIFFICULTY"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "GENERAL"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "CUTSCENES"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable full subtitles on cutscenes."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "CUTSCENE SUBTITLES"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable rotation on overlay map."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "MAP ROTATION"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Disable mission start confirmation."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "MISSION START"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable auto aiming."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "GAMEPLAY"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AUTO AIMING"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable aiming crosshair."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AIMING CROSSHAIR"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable lightsaber auto-camera."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "LIGHTSABER CAMERA"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Show Crosshair with lightsaber."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "LIGHTSABER CROSSHAIR"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Show Crosshair with fist."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FIST CROSSHAIR"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Disable weapon waggle."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "WEAPON WAGGLE"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the crosshair size."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "CROSSHAIR SIZE"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the crosshair line thickness."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "CROSSHAIR LINE THICKNESS"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Automatic pickup weapon."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "WEAPON PICKUP"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "PICKUP WEAPON"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "NO DANGEROUS WEAPONS"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "NO WEAKER WEAPONS"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "KEEP LIGHTSABER"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "SWITCH WEAPON"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AUTO SWITCH WEAPON"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "RELOAD WEAPON"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AUTOMATICALLY RELOAD WEAPON"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the field of view."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FIELD OF VIEW"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Field of view is vertical (Hor+)."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FOV VERTICAL"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Use 1:1 aspect."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "ASPECT"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the fps limit."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FPS LIMIT"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable high dots per inch."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "HIDPI"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Choose Screen Space Ambient Occlusion for better lighting."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "SSAO"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid ""
+"Choose the amount of Gamma which changes how light or dark mid-range tones "
+"appear."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "GAMMA"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Choose the size of the heads-up display."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "HUD SCALE"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "SSAA Multiplier"
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Choose to keep corpses present."
+msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "KEEP CORPSES"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "16-bit"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "32-bit"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose the level of geometric detail."
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "GEOMETRIC DETAIL"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose the level of texture detail."
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "TEXTURE DETAIL"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose the depth of texture quality."
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "TEXTURE QUALITY"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose the texture filter type."
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Trilinear"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "DETAILED SHADERS"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose shadow details."
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "SHADOWS"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Volumetric"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "DYNAMIC LIGHTS"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "DYNAMIC GLOW"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "LIGHT FLARES"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "WALL MARKS"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "ANISTROPIC FILTER"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "DRAW CROSSHAIR"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "IDENTIFY TARGET"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose slow motion death option."
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "SLOW MOTION DEATH"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Player"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Player, Last Enemy Jedi"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Player, Any Enemy Jedi"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Player, Last Enemy in Group"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Player, Any Enemy"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "All + Enemy Jedi Dodge"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "1ST PERSON GUNS"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "MODEL DISMEMBERMENT"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "VIEW SWAYING"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose text language."
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "TEXT"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose voice language."
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "VOICE"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose when to enable subtitles."
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "In Cinematics"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "All voiceovers"
+msgstr ""
+
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Up"
@@ -17420,7 +17902,7 @@ msgctxt "keys_files"
 msgid "Menu Down"
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys
+#. TRANSLATION: openjk.keys, openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr ""
@@ -17485,12 +17967,12 @@ msgctxt "keys_files"
 msgid "Crouch Toggle"
 msgstr ""
 
-#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys
+#. TRANSLATION: omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys
+#. TRANSLATION: openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
@@ -17585,32 +18067,32 @@ msgctxt "keys_files"
 msgid "Aim down"
 msgstr ""
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Strafe left"
 msgstr ""
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Strafe right"
 msgstr ""
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move left"
 msgstr ""
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move right"
 msgstr ""
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move forward"
 msgstr ""
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move backward"
 msgstr ""
@@ -17618,6 +18100,101 @@ msgstr ""
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Fast"
+msgstr ""
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Pitch Up"
+msgstr ""
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Pitch Down"
+msgstr ""
+
+#. TRANSLATION: bstone.keys, openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Use"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Fire 1"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Fire 2"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Duck"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous Weapon"
+msgstr ""
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous Inventory Item"
+msgstr ""
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Next Inventory Item"
+msgstr ""
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Next Force Power"
+msgstr ""
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous Force Power"
+msgstr ""
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Use Force Power"
+msgstr ""
+
+#. TRANSLATION: bstone.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Zoom out"
+msgstr ""
+
+#. TRANSLATION: bstone.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Zoom in"
+msgstr ""
+
+#. TRANSLATION: bstone.keys, openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Menu back / exit"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Field Light"
+msgstr ""
+
+#. TRANSLATION: bstone.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous weapon"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Use Inventory Item"
 msgstr ""
 
 #. TRANSLATION: corsixth.keys
@@ -17810,6 +18387,66 @@ msgctxt "keys_files"
 msgid "Skip cutscene"
 msgstr ""
 
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Walk forward"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Backpedal"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Step left"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Step right"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Run/Walk"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Up/Jump"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Turn left"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Turn right"
+msgstr ""
+
+#. TRANSLATION: bstone.keys, openjk.keys
+msgctxt "keys_files"
+msgid "Attack"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Alt. Attack"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Down/Crouch"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "3rd Person"
+msgstr ""
+
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu enter"
@@ -17823,16 +18460,6 @@ msgstr ""
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu down"
-msgstr ""
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Use"
-msgstr ""
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Attack"
 msgstr ""
 
 #. TRANSLATION: bstone.keys
@@ -17852,27 +18479,7 @@ msgstr ""
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
-msgid "Zoom out"
-msgstr ""
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Zoom in"
-msgstr ""
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Menu back / exit"
-msgstr ""
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
 msgid "Pause"
-msgstr ""
-
-#. TRANSLATION: bstone.keys
-msgctxt "keys_files"
-msgid "Previous weapon"
 msgstr ""
 
 #. TRANSLATION: catacomb.keys

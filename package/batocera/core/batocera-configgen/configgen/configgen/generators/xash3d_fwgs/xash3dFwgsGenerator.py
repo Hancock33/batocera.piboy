@@ -55,7 +55,7 @@ def _get_server_lib_basename_from_liblist_gam(game: str) -> str | None:
     return None
 
 
-def _find_server_lib(server_lib: str, arch_suffix: str) -> Path:
+def _find_server_lib(server_lib: str | None, arch_suffix: str) -> Path:
     """Finds and returns the server library.
 
     Falls back to _DEFAULT_SERVER_LIB if none is found.
@@ -68,7 +68,7 @@ def _find_server_lib(server_lib: str, arch_suffix: str) -> Path:
     return _server_lib_path(_DEFAULT_SERVER_LIB, arch_suffix)
 
 
-def _find_client_lib(server_lib: str, arch_suffix: str) -> Path:
+def _find_client_lib(server_lib: str | None, arch_suffix: str) -> Path:
     """Finds and returns the client library.
 
     Falls back to the client library for _DEFAULT_SERVER_LIB if none is found.
@@ -95,7 +95,7 @@ class Xash3dFwgsGenerator(Generator):
             "keys": { "exit": "KEY_F10", "menu": "KEY_ESC", "pause": "KEY_ESC", "save_state": "KEY_F6", "restore_state": "KEY_F7" }
         }
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         game = rom.stem
 
         arch_suffix = _get_arch_suffix()

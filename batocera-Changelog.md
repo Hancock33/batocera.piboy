@@ -45,8 +45,12 @@
   AmstradCPC, AtariST, ZX81, ZXSpectrum, AppleII, AppleIIGS, Macintosh, Archimedes, Electron
 - gun : option to hide the crosshair in ES
 - Azahar 3DS emulator: Version 2120.1
+- DICE libretro core for arcade machines without a CPU
 - Wine Proton 9.0.4 as a Wine runner from Kron4ek's Wine-Builds
 - Blake Stone port Bstone to play Aliens Of Gold or Planet Strike
+- OpenJKDF2 to play Jedi Knight Dark Forces 2 and Mysteries of the Sith.
+- OpenJK to play Jedi Academy & Jedi Outcast
+- Intel Quick Sync Video acceleration to ffmpeg for supported Intel GPUs
 ### Fixed
 - Fix some problems in ES and Batocera with IPv6 networks
 - Fix ES behavior with usb network tethering
@@ -112,7 +116,7 @@
 ### System
 - Bluez to 5.79
 - Buildroot to 2024.11.x with supporting package updates
-- Mesa3D to 25.0.2
+- Mesa3D to 25.0.3
 - Linux Kernel to 6.14
 - GStreamer codecs to 1.26.0
 - SDL2 to 2.30.11
@@ -137,6 +141,10 @@
 - BTop to 1.4.0
 - Wine Mono to 9.4.0
 - Syncthing to 1.29.3
+- Xone to Mar 13, 2025
+- FFMPEG to 7.1.1
+- Intel MediaDriver to 25.1.4
+- Intel GMMLib to 22.7.1
 
 # 2025/01/06 - batocera.linux 41 - Golden-rayed Blue
 ### Special Notes

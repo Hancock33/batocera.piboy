@@ -41,7 +41,7 @@ class XeniaGenerator(Generator):
             # Copy and overwrite the files from source to destination
             shutil.copy2(src_path, dest_path)
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         wineprefix = HOME / 'wine-bottles' / 'xbox360'
         xeniaConfig = CONFIGS / 'xenia'
         xeniaCache = CACHE / 'xenia'
@@ -109,28 +109,28 @@ class XeniaGenerator(Generator):
 
         dll_files = ["d3d12.dll", "d3d12core.dll", "d3d11.dll", "d3d10core.dll", "d3d9.dll", "d3d8.dll", "dxgi.dll"]
         # Create symbolic links for 64-bit DLLs
-        try:
-            for dll in dll_files:
+        for dll in dll_files:
+            try:
                 src_path = wine.WINE_BASE / "dxvk" / "x64" / dll
                 dest_path = wineprefix / "drive_c" / "windows" / "system32" / dll
                 # Remove existing link if it already exists
                 if dest_path.exists() or dest_path.is_symlink():
                     dest_path.unlink()
                 dest_path.symlink_to(src_path)
-        except Exception as e:
-            _logger.debug("Error creating 64-bit link for %s: %s", dll, e)
+            except Exception as e:
+                _logger.debug("Error creating 64-bit link for %s: %s", dll, e)
 
         # Create symbolic links for 32-bit DLLs
-        try:
-            for dll in dll_files:
+        for dll in dll_files:
+            try:
                 src_path = wine.WINE_BASE / "dxvk" / "x32" / dll
                 dest_path = wineprefix / "drive_c" / "windows" / "syswow64" / dll
                 # Remove existing link if it already exists
                 if dest_path.exists() or dest_path.is_symlink():
                     dest_path.unlink()
                 dest_path.symlink_to(src_path)
-        except Exception as e:
-            _logger.debug("Error creating 32-bit link for %s: %s", dll, e)
+            except Exception as e:
+                _logger.debug("Error creating 32-bit link for %s: %s", dll, e)
 
         # squashfs
         if "squashfs" in str(rom):

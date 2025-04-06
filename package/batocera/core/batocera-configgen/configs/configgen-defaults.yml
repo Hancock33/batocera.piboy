@@ -259,6 +259,9 @@ dataeast:
 devilutionx:
   emulator: devilutionx
   core:     devilutionx
+dice:
+  emulator: libretro
+  core:     dice
 dinothawr:
   emulator: libretro
   core:     dinothawr
@@ -470,6 +473,12 @@ jaxe:
 jazz2:
   emulator: jazz2-native
   core:     jazz2-native
+jkdf2:
+  emulator: openjkdf2
+  core:     openjkdf2
+jknight:
+  emulator: openjk
+  core:     openjk
 jumpnbump:
   emulator: libretro
   core:     jumpnbump
@@ -678,12 +687,6 @@ openclaw:
 openjazz:
   emulator: openjazz
   core:     openjazz
-openjkja:
-  emulator: openjkja
-  core:     openjkja
-openjkjo:
-  emulator: openjkjo
-  core:     openjkjo
 opentyrian:
   emulator: opentyrian
   core:     opentyrian

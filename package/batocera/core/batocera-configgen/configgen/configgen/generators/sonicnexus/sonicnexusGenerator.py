@@ -8,7 +8,7 @@ from ..Generator import Generator
 
 class SonicNexusGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
         source_file = '/usr/bin/sonicnexus'
         rom_directory = '/userdata/roms/ports/sonicnexus'

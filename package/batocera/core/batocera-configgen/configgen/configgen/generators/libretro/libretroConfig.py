@@ -73,11 +73,11 @@ systemToBluemsx = {'msx': '"MSX2"', 'msx1': '"MSX2"', 'msx2': '"MSX2"', 'colecov
 coreToRetroachievements = {'arduous', 'arduboy', 'beetle-saturn', 'blastem', 'bluemsx', 'bsnes', 'bsnes_hd', 'cap32', 'desmume', 'duckstation', 'fbneo', 'fceumm', 'flycast', 'flycast2021', 'freechaf', 'freeintv', 'gambatte', 'genesisplusgx', 'genesisplusgx-wide', 'handy', 'kronos', 'mednafen_lynx', 'mednafen_ngp', 'mednafen_psx', 'mednafen_supergrafx', 'mednafen_wswan', 'melonds', 'mesen', 'mesens', 'mgba', 'mupen64plus-next', 'neocd', 'o2em', 'opera', 'parallel_n64', 'pce', 'pce_fast', 'pcfx', 'pcsx_rearmed', 'picodrive', 'pokemini', 'potator', 'ppsspp', 'prosystem', 'quasi88', 'snes9x', 'sameduck', 'snes9x_next', 'stella', 'stella2014', 'swanstation', 'uzem', 'vb', 'vba-m', 'vecx', 'virtualjaguar', 'wasm4'}
 
 # Define systems NOT compatible with rewind option
-systemNoRewind = {'sega32x', 'psx', 'zxspectrum', 'n64', 'dreamcast', 'atomiswave', 'naomi', 'saturn'}
+systemNoRewind = {'sega32x', 'psx', 'zxspectrum', 'n64', 'dreamcast', 'atomiswave', 'naomi', 'saturn', 'dice'}
 # 'o2em', 'mame', 'neogeocd', 'fbneo'
 
 # Define systems NOT compatible with run-ahead option (warning: this option is CPU intensive!)
-systemNoRunahead = {'sega32x', 'n64', 'dreamcast', 'atomiswave', 'naomi', 'neogeocd', 'saturn'}
+systemNoRunahead = {'sega32x', 'n64', 'dreamcast', 'atomiswave', 'naomi', 'neogeocd', 'saturn', 'dice'}
 
 # Define the libretro device type corresponding to the libretro CORE (when needed)
 coreToP1Device = {'atari800': '513', 'cap32': '513', '81': '259', 'fuse': '769'}
@@ -119,7 +119,6 @@ def writeLibretroConfig(
     system: Emulator,
     controllers: Controllers,
     metadata: Mapping[str, str],
-    esmetadata: Mapping[str, str],
     guns: Guns,
     wheels: DeviceInfoMapping,
     rom: Path,
@@ -129,7 +128,7 @@ def writeLibretroConfig(
     gfxBackend: str,
     /,
 ) -> None:
-    writeLibretroConfigToFile(retroconfig, createLibretroConfig(generator, system, controllers, metadata, esmetadata, guns, wheels, rom, bezel, shaderBezel, gameResolution, gfxBackend))
+    writeLibretroConfigToFile(retroconfig, createLibretroConfig(generator, system, controllers, metadata, guns, wheels, rom, bezel, shaderBezel, gameResolution, gfxBackend))
 
 # Take a system, and returns a dict of retroarch.cfg compatible parameters
 def createLibretroConfig(
@@ -137,7 +136,6 @@ def createLibretroConfig(
     system: Emulator,
     controllers: Controllers,
     metadata: Mapping[str, str],
-    esmetadata: Mapping[str, str],
     guns: Guns,
     wheels: DeviceInfoMapping,
     rom: Path,
@@ -823,10 +821,10 @@ def createLibretroConfig(
 
     # Bezel option
     try:
-        writeBezelConfig(generator, bezel, shaderBezel, retroarchConfig, rom, gameResolution, system, system.guns_borders_size_name(guns), system.guns_border_ratio_type(guns), esmetadata)
+        writeBezelConfig(generator, bezel, shaderBezel, retroarchConfig, rom, gameResolution, system, system.guns_borders_size_name(guns), system.guns_border_ratio_type(guns))
     except Exception as e:
         # error with bezels, disabling them
-        writeBezelConfig(generator, None, shaderBezel, retroarchConfig, rom, gameResolution, system, system.guns_borders_size_name(guns), system.guns_border_ratio_type(guns), esmetadata)
+        writeBezelConfig(generator, None, shaderBezel, retroarchConfig, rom, gameResolution, system, system.guns_borders_size_name(guns), system.guns_border_ratio_type(guns))
         _logger.error("Error with bezel %s: %s", bezel, e, exc_info=e, stack_info=True)
 
     # custom : allow the user to configure directly retroarch.cfg via batocera.conf via lines like : snes.retroarch.menu_driver=rgui
@@ -1005,7 +1003,6 @@ def writeBezelConfig(
     system: Emulator,
     gunsBordersSize: str | None,
     gunsBordersRatio: str | None,
-    esmetadata: Mapping[str, str],
     /,
 ) -> None:
     # disable the overlay
@@ -1225,8 +1222,8 @@ def writeBezelConfig(
             bezelsUtil.tatooImage(overlay_png_file, tattoo_output_png, system)
             overlay_png_file = tattoo_output_png
         if system.config.get('bezel.qrcode', '0') != "0":
-            if "cheevosId" in esmetadata and esmetadata["cheevosId"] != "0":
-                bezelsUtil.addQRCode(overlay_png_file, qrcode_output_png, esmetadata["cheevosId"], system)
+            if (cheevos_id := system.es_game_info.get("cheevosId", "0")) != "0":
+                bezelsUtil.addQRCode(overlay_png_file, qrcode_output_png, cheevos_id, system)
                 overlay_png_file = qrcode_output_png
     else:
         if viewPortUsed:
@@ -1240,8 +1237,8 @@ def writeBezelConfig(
             bezelsUtil.tatooImage(overlay_png_file, tattoo_output_png, system)
             overlay_png_file = tattoo_output_png
         if system.config.get('bezel.qrcode', '0') != "0":
-            if "cheevosId" in esmetadata and esmetadata["cheevosId"] != "0":
-                bezelsUtil.addQRCode(overlay_png_file, qrcode_output_png, esmetadata["cheevosId"], system)
+            if (cheevos_id := system.es_game_info.get("cheevosId", "0")) != "0":
+                bezelsUtil.addQRCode(overlay_png_file, qrcode_output_png, cheevos_id, system)
                 overlay_png_file = qrcode_output_png
 
     if gunsBordersSize is not None:

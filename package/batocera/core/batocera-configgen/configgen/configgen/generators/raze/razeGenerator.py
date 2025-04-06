@@ -88,7 +88,7 @@ class RazeGenerator(Generator):
             "Ins": "togglerotate",
         }
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
         architecture = get_cpu_architecture()
         _logger.debug("*** Detected architecture is: %s ***", architecture)
@@ -104,7 +104,7 @@ class RazeGenerator(Generator):
                         config.write(f"{key}={value}\n")
                     config.write("\n")
 
-        config_backup = None
+        config_backup = []
         if self.config_file.exists():
             with self.config_file.open("r") as original_file:
                 config_backup = original_file.readlines()

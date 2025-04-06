@@ -56,7 +56,7 @@ class LibretroGenerator(Generator):
 
     # Main entry of the module
     # Configure retroarch and return a command
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         # Fix for the removed MESS/MAMEVirtual cores
         if system.config.core in [ 'mess', 'mamevirtual' ]:
             system.config['core'] = 'mame'
@@ -69,6 +69,7 @@ class LibretroGenerator(Generator):
         altDecoration = videoMode.getAltDecoration(system.name, rom, 'retroarch')
         gameShader = None
         shaderBezel = False
+        video_shader: Path | None = None
         if altDecoration == "0":
             if 'shader' in renderConfig:
                 gameShader = renderConfig['shader']
@@ -117,7 +118,7 @@ class LibretroGenerator(Generator):
             if system.config.get_bool('forceNoBezel'):
                 bezel = None
 
-            libretroConfig.writeLibretroConfig(self, retroconfig, system, playersControllers, metadata, esmetadata, guns, wheels, rom, bezel, shaderBezel, gameResolution, gfxBackend)
+            libretroConfig.writeLibretroConfig(self, retroconfig, system, playersControllers, metadata, guns, wheels, rom, bezel, shaderBezel, gameResolution, gfxBackend)
             retroconfig.write()
 
             # duplicate config to mapping files while ra now split in 2 parts
@@ -303,7 +304,7 @@ class LibretroGenerator(Generator):
             configToAppend.append(overlayFile)
 
         # RetroArch 1.7.8 (Batocera 5.24) now requires the shaders to be passed as command line argument
-        if 'shader' in renderConfig and gameShader is not None:
+        if video_shader is not None:
             commandArray.extend(["--set-shader", video_shader])
 
         # Generate the append

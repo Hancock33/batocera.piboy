@@ -4,7 +4,7 @@ from ..Generator import Generator
 
 class XboxcloudGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["/usr/bin/greenlight", "--no-sandbox", "--fullscreen"]
 
         return Command.Command(

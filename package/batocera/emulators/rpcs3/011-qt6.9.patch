@@ -1,0 +1,124 @@
+diff --git a/rpcs3/rpcs3qt/game_list_base.cpp b/rpcs3/rpcs3qt/game_list_base.cpp
+index 72b45d33b..adc8666a4 100644
+--- a/rpcs3/rpcs3qt/game_list_base.cpp
++++ b/rpcs3/rpcs3qt/game_list_base.cpp
+@@ -1,5 +1,6 @@
+ #include "stdafx.h"
+ #include "game_list_base.h"
++#include "custom_table_widget_item.h"
+ 
+ #include <QDir>
+ #include <QPainter>
+@@ -22,18 +23,17 @@ void game_list_base::repaint_icons(std::vector<game_info>& game_data, const QCol
+ 	placeholder.setDevicePixelRatio(device_pixel_ratio);
+ 	placeholder.fill(Qt::transparent);
+ 
++	int row = 0;
+ 	for (game_info& game : game_data)
+ 	{
++		if (row++ % 2 == 0) placeholder.fill(Qt::red);
++		else                placeholder.fill(Qt::blue);
++
+ 		game->pxmap = placeholder;
+ 	
+-		if (movie_item_base* item = game->item)
++		if (custom_table_widget_item* item = static_cast<custom_table_widget_item*>(game->item))
+ 		{
+-			item->set_icon_load_func([this, game, device_pixel_ratio, cancel = item->icon_loading_aborted()](int)
+-			{
+-				IconLoadFunction(game, device_pixel_ratio, cancel);
+-			});
+-
+-			item->image_change_callback();
++			item->setData(Qt::DecorationRole, placeholder);
+ 		}
+ 	}
+ }
+diff --git a/rpcs3/rpcs3qt/game_list_frame.cpp b/rpcs3/rpcs3qt/game_list_frame.cpp
+index a294d69cc..439913760 100644
+--- a/rpcs3/rpcs3qt/game_list_frame.cpp
++++ b/rpcs3/rpcs3qt/game_list_frame.cpp
+@@ -2363,7 +2363,7 @@ void game_list_frame::BatchActionBySerials(progress_dialog* pdlg, const std::set
+ 
+ 		connect(future_watcher, &QFutureWatcher<void>::finished, this, [=, this]()
+ 		{
+-			pdlg->setLabelText(progressLabel.arg(+*index).arg(serials_size));
++			pdlg->setLabelText(progressLabel.arg(index->load()).arg(serials_size));
+ 			pdlg->setCancelButtonText(tr("OK"));
+ 			QApplication::beep();
+ 
+@@ -2396,7 +2396,7 @@ void game_list_frame::BatchActionBySerials(progress_dialog* pdlg, const std::set
+ 			return;
+ 		}
+ 
+-		pdlg->setLabelText(progressLabel.arg(+*index).arg(serials_size));
++		pdlg->setLabelText(progressLabel.arg(index->load()).arg(serials_size));
+ 		pdlg->setCancelButtonText(tr("OK"));
+ 		connect(pdlg, &progress_dialog::canceled, this, [pdlg](){ pdlg->deleteLater(); });
+ 		QApplication::beep();
+diff --git a/rpcs3/rpcs3qt/game_list_table.cpp b/rpcs3/rpcs3qt/game_list_table.cpp
+index f526bcea4..d83248806 100644
+--- a/rpcs3/rpcs3qt/game_list_table.cpp
++++ b/rpcs3/rpcs3qt/game_list_table.cpp
+@@ -296,6 +296,7 @@ void game_list_table::populate(
+ 		}
+ 
+ 		icon_item->setData(Qt::UserRole, index, true);
++		icon_item->setData(Qt::DecorationRole, QPixmap(m_icon_size));
+ 		icon_item->setData(gui::custom_roles::game_role, QVariant::fromValue(game));
+ 
+ 		// Title
+diff --git a/rpcs3/rpcs3qt/movie_item_base.cpp b/rpcs3/rpcs3qt/movie_item_base.cpp
+index fdf820ae5..8f2131c1f 100644
+--- a/rpcs3/rpcs3qt/movie_item_base.cpp
++++ b/rpcs3/rpcs3qt/movie_item_base.cpp
+@@ -30,15 +30,15 @@ void movie_item_base::call_icon_load_func(int index)
+ 	wait_for_icon_loading(true);
+ 
+ 	*m_icon_loading_aborted = false;
+-	m_icon_loading = true;
+-	m_icon_load_thread.reset(QThread::create([this, index]()
+-	{
+-		if (m_icon_load_callback)
+-		{
+-			m_icon_load_callback(index);
+-		}
+-	}));
+-	m_icon_load_thread->start();
++	//m_icon_loading = true;
++	//m_icon_load_thread.reset(QThread::create([this, index]()
++	//{
++	//	if (m_icon_load_callback)
++	//	{
++	//		m_icon_load_callback(index);
++	//	}
++	//}));
++	//m_icon_load_thread->start();
+ }
+ 
+ void movie_item_base::set_icon_load_func(const icon_load_callback_t& func)
+diff --git a/rpcs3/rpcs3qt/ps_move_tracker_dialog.cpp b/rpcs3/rpcs3qt/ps_move_tracker_dialog.cpp
+index 45fbe6f59..3ce46f924 100644
+--- a/rpcs3/rpcs3qt/ps_move_tracker_dialog.cpp
++++ b/rpcs3/rpcs3qt/ps_move_tracker_dialog.cpp
+@@ -360,9 +360,10 @@ void ps_move_tracker_dialog::update_saturation_threshold(bool update_slider)
+ 		ui->saturationThresholdSlider->setValue(saturation_threshold);
+ 	}
+ }
++
+ void ps_move_tracker_dialog::update_min_radius(bool update_slider)
+ {
+-	ui->minRadiusGb->setTitle(tr("Min Radius: %0 %").arg(g_cfg_move.min_radius));
++	ui->minRadiusGb->setTitle(tr("Min Radius: %0 %").arg(g_cfg_move.min_radius.get()));
+ 
+ 	if (update_slider)
+ 	{
+@@ -372,7 +373,7 @@ void ps_move_tracker_dialog::update_min_radius(bool update_slider)
+ 
+ void ps_move_tracker_dialog::update_max_radius(bool update_slider)
+ {
+-	ui->maxRadiusGb->setTitle(tr("Max Radius: %0 %").arg(g_cfg_move.max_radius));
++	ui->maxRadiusGb->setTitle(tr("Max Radius: %0 %").arg(g_cfg_move.max_radius.get()));
+ 
+ 	if (update_slider)
+ 	{

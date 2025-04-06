@@ -1,8 +1,8 @@
 diff --git a/.gitmodules b/.gitmodules
-index 83486ef..3f979d9 100644
+index bbade4f7..9c26428b 100644
 --- a/.gitmodules
 +++ b/.gitmodules
-@@ -87,9 +87,9 @@
+@@ -84,9 +84,9 @@
  [submodule "external/tracy"]
  	path = external/tracy
  	url = https://github.com/wolfpld/tracy.git
@@ -16,7 +16,7 @@ index 83486ef..3f979d9 100644
  	path = external/cubeb
  	url = https://github.com/mozilla/cubeb.git
 diff --git a/external/CMakeLists.txt b/external/CMakeLists.txt
-index 6c0b6e4..c827796 100644
+index 33624355..ca4f8ab3 100644
 --- a/external/CMakeLists.txt
 +++ b/external/CMakeLists.txt
 @@ -436,11 +436,17 @@ target_compile_definitions(tracy PUBLIC $<$<CONFIG:Debug,RelWithDebInfo>:TRACY_E
@@ -44,7 +44,7 @@ index 6c0b6e4..c827796 100644
 +
 +set_property(TARGET nativefiledialog PROPERTY FOLDER externals)
 diff --git a/vita3k/CMakeLists.txt b/vita3k/CMakeLists.txt
-index e254b48..2bc8e9b 100644
+index e254b482..2bc8e9bb 100644
 --- a/vita3k/CMakeLists.txt
 +++ b/vita3k/CMakeLists.txt
 @@ -103,7 +103,6 @@ add_subdirectory(features)
@@ -56,7 +56,7 @@ index e254b48..2bc8e9b 100644
  add_subdirectory(lang)
  add_subdirectory(net)
 diff --git a/vita3k/dir_doc.cpp b/vita3k/dir_doc.cpp
-index b66bbd9..28d5a6f 100644
+index b66bbd98..28d5a6f4 100644
 --- a/vita3k/dir_doc.cpp
 +++ b/vita3k/dir_doc.cpp
 @@ -115,12 +115,6 @@
@@ -73,7 +73,7 @@ index b66bbd9..28d5a6f 100644
   * @dir vita3k/io
   *
 diff --git a/vita3k/gui/CMakeLists.txt b/vita3k/gui/CMakeLists.txt
-index f9553f1..023ab76 100644
+index f9553f1b..023ab765 100644
 --- a/vita3k/gui/CMakeLists.txt
 +++ b/vita3k/gui/CMakeLists.txt
 @@ -51,5 +51,5 @@ add_library(
@@ -84,7 +84,7 @@ index f9553f1..023ab76 100644
 +target_link_libraries(gui PRIVATE audio cppcommon ctrl kernel miniz psvpfsparser pugixml::pugixml stb renderer packages sdl2 touch vkutil nativefiledialog concurrentqueue)
  target_link_libraries(gui PUBLIC tracy)
 diff --git a/vita3k/gui/src/archive_install_dialog.cpp b/vita3k/gui/src/archive_install_dialog.cpp
-index 1df4649..5b2f5b5 100644
+index 1df4649a..5b2f5b52 100644
 --- a/vita3k/gui/src/archive_install_dialog.cpp
 +++ b/vita3k/gui/src/archive_install_dialog.cpp
 @@ -20,7 +20,7 @@
@@ -154,7 +154,7 @@ index 1df4649..5b2f5b5 100644
                  delete_archive_file = false;
                  contents_archives.clear();
 diff --git a/vita3k/gui/src/firmware_install_dialog.cpp b/vita3k/gui/src/firmware_install_dialog.cpp
-index 19cf7a3..4fe34ee 100644
+index 19cf7a36..4fe34ee7 100644
 --- a/vita3k/gui/src/firmware_install_dialog.cpp
 +++ b/vita3k/gui/src/firmware_install_dialog.cpp
 @@ -20,9 +20,10 @@
@@ -227,7 +227,7 @@ index 19cf7a3..4fe34ee 100644
                  draw_file_dialog = true;
              }
 diff --git a/vita3k/gui/src/initial_setup.cpp b/vita3k/gui/src/initial_setup.cpp
-index 368397a..ab491d9 100644
+index 368397a7..ab491d99 100644
 --- a/vita3k/gui/src/initial_setup.cpp
 +++ b/vita3k/gui/src/initial_setup.cpp
 @@ -21,8 +21,9 @@
@@ -265,7 +265,7 @@ index 368397a..ab491d9 100644
          }
          if (!is_default_path) {
 diff --git a/vita3k/gui/src/license_install_dialog.cpp b/vita3k/gui/src/license_install_dialog.cpp
-index b275779..8e3e4d5 100644
+index c0119a9b..86ae2fd5 100644
 --- a/vita3k/gui/src/license_install_dialog.cpp
 +++ b/vita3k/gui/src/license_install_dialog.cpp
 @@ -18,9 +18,10 @@
@@ -313,18 +313,17 @@ index b275779..8e3e4d5 100644
              state = State::UNDEFINED;
          }
          break;
-@@ -124,15 +123,16 @@ void draw_license_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+@@ -124,15 +123,15 @@ void draw_license_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
          ImGui::Spacing();
          ImGui::Separator();
          ImGui::Spacing();
--        if (license_path != "")
+-        if (!license_path.empty())
 +        if (license_path)
              ImGui::Checkbox(license["delete_bin_rif"].c_str(), &delete_license_file);
          ImGui::SetCursorPos(ImVec2(POS_BUTTON, ImGui::GetWindowSize().y - BUTTON_SIZE.y - (20.f * SCALE.y)));
          if (ImGui::Button(common["ok"].c_str(), BUTTON_SIZE)) {
              if (delete_license_file) {
 -                fs::remove(fs::path(license_path.native()));
-+
 +                fs::remove(fs::path(string_utils::utf_to_wide(std::string(license_path))));
                  delete_license_file = false;
              }
@@ -333,7 +332,7 @@ index b275779..8e3e4d5 100644
              gui.file_menu.license_install_dialog = false;
              state = State::UNDEFINED;
          }
-@@ -145,7 +145,7 @@ void draw_license_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+@@ -145,7 +144,7 @@ void draw_license_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
          ImGui::SetCursorPos(ImVec2(POS_BUTTON, ImGui::GetWindowSize().y - BUTTON_SIZE.y - (20.f * SCALE.y)));
          if (ImGui::Button(common["ok"].c_str(), BUTTON_SIZE)) {
              gui.file_menu.license_install_dialog = false;
@@ -343,7 +342,7 @@ index b275779..8e3e4d5 100644
          }
      }
 diff --git a/vita3k/gui/src/pkg_install_dialog.cpp b/vita3k/gui/src/pkg_install_dialog.cpp
-index eb2fb5f..8cace46 100644
+index eb2fb5f3..8cace46c 100644
 --- a/vita3k/gui/src/pkg_install_dialog.cpp
 +++ b/vita3k/gui/src/pkg_install_dialog.cpp
 @@ -19,26 +19,26 @@
@@ -478,7 +477,7 @@ index eb2fb5f..8cace46 100644
              }
              break;
 diff --git a/vita3k/gui/src/settings.cpp b/vita3k/gui/src/settings.cpp
-index 0ea263c..789df9f 100644
+index 0ea263c6..789df9f5 100644
 --- a/vita3k/gui/src/settings.cpp
 +++ b/vita3k/gui/src/settings.cpp
 @@ -21,7 +21,7 @@
@@ -540,7 +539,7 @@ index 0ea263c..789df9f 100644
              }
              ImGui::PopStyleVar();
 diff --git a/vita3k/gui/src/settings_dialog.cpp b/vita3k/gui/src/settings_dialog.cpp
-index 638cc39..d71bad8 100644
+index 6d99b782..2f37b079 100644
 --- a/vita3k/gui/src/settings_dialog.cpp
 +++ b/vita3k/gui/src/settings_dialog.cpp
 @@ -24,7 +24,7 @@
@@ -588,7 +587,7 @@ index 638cc39..d71bad8 100644
  }
  
 diff --git a/vita3k/gui/src/user_management.cpp b/vita3k/gui/src/user_management.cpp
-index cd472f1..91fbf3d 100644
+index cd472f17..91fbf3dd 100644
 --- a/vita3k/gui/src/user_management.cpp
 +++ b/vita3k/gui/src/user_management.cpp
 @@ -23,7 +23,7 @@
@@ -622,7 +621,7 @@ index cd472f1..91fbf3d 100644
          ImGui::SetWindowFontScale(0.8f);
          const auto INPUT_NAME_SIZE = 330.f * SCALE.x;
 diff --git a/vita3k/host/dialog/CMakeLists.txt b/vita3k/host/dialog/CMakeLists.txt
-index d577a15..e69de29 100644
+index d577a152..e69de29b 100644
 --- a/vita3k/host/dialog/CMakeLists.txt
 +++ b/vita3k/host/dialog/CMakeLists.txt
 @@ -1,11 +0,0 @@
@@ -638,7 +637,7 @@ index d577a15..e69de29 100644
 -
 -target_link_libraries(host_dialog PRIVATE NFDe::NFDe)
 diff --git a/vita3k/host/dialog/src/filesystem.cpp b/vita3k/host/dialog/src/filesystem.cpp
-index 43bf670..f4030fc 100644
+index 43bf6703..f4030fce 100644
 --- a/vita3k/host/dialog/src/filesystem.cpp
 +++ b/vita3k/host/dialog/src/filesystem.cpp
 @@ -31,7 +31,7 @@

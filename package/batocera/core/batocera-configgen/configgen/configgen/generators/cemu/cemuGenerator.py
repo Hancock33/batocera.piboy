@@ -5,7 +5,7 @@ import logging
 import os
 import subprocess
 from os import environ
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, cast
 from xml.dom import minidom
 
 from ... import Command
@@ -36,7 +36,7 @@ class CemuGenerator(Generator):
     def hasInternalMangoHUDCall(self):
         return True
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         # in case of squashfs, the root directory is passed
         paths = list(rom.glob('**/code/*.rpx'))
         if len(paths) >= 1:
@@ -266,7 +266,7 @@ class CemuGenerator(Generator):
             xml_elt = xml_elt[0]
 
         if xml_elt.hasChildNodes():
-            xml_elt.firstChild.data = value
+            cast('minidom.Text', xml_elt.firstChild).data = value
         else:
             xml_elt.appendChild(config.createTextNode(value))
 

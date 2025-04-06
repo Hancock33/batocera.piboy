@@ -12,13 +12,14 @@ if TYPE_CHECKING:
 
 class AvpGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
-        commandArray = ["avp", "-f", "-p", "/userdata/roms/ports/avp/"]
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+        commandArray = ["avp", "-f", "-p", "/userdata/roms/ports/avp/", "-g", "/usr/lib/libGLESv2.so"]
 
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
+                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers),
+                'SDL_JOYSTICK_HIDAPI': "0"
             })
 
     def getHotkeysContext(self) -> HotkeysContext:

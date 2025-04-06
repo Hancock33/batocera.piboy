@@ -620,6 +620,11 @@ msgctxt "game_options"
 msgid "16 bit"
 msgstr "16 bit"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "16-bit"
+msgstr "16-bit"
+
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "1600 x 900"
@@ -750,6 +755,11 @@ msgctxt "game_options"
 msgid "1MB"
 msgstr "1MB"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "1ST PERSON GUNS"
+msgstr "ARMAS EM 1ª PESSOA"
+
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
 msgid "1X"
@@ -770,7 +780,7 @@ msgctxt "game_options"
 msgid "1x (720p/1080p)"
 msgstr "1x (720p/1080p)"
 
-#. TRANSLATION: libretro/mupen64plus-next, mupen64plus
+#. TRANSLATION: libretro/mupen64plus-next, mupen64plus, openjkdf2
 msgctxt "game_options"
 msgid "1x (Default)"
 msgstr "1x (Predefinição)"
@@ -1260,6 +1270,11 @@ msgctxt "game_options"
 msgid "32 MHz (Overclock)"
 msgstr "32 MHz (Overclock)"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "32-bit"
+msgstr "32-bit"
+
 #. TRANSLATION: openjazz
 msgctxt "game_options"
 msgid "320 x 200"
@@ -1353,12 +1368,12 @@ msgstr "MOTOR 3D"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "3DS mode (bottom side)"
-msgstr ""
+msgstr "Modo 3DS (parte inferior)"
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "3DS mode (right side)"
-msgstr ""
+msgstr "Modo 3DS (lado direito)"
 
 #. TRANSLATION: libretro/np2kai, libretro/px68k
 msgctxt "game_options"
@@ -1369,6 +1384,11 @@ msgstr "3MB"
 msgctxt "game_options"
 msgid "3rd"
 msgstr "3º"
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "3rd Person"
+msgstr "3ª pessoa"
 
 #. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
@@ -2230,6 +2250,11 @@ msgctxt "game_options"
 msgid "AI TRANSLATION SERVICE URL"
 msgstr "URL DO SERVIÇO DE TRADUÇÃO POR IA"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AIMING CROSSHAIR"
+msgstr "Mira em cruz"
+
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "ALIEN VS PREDATOR"
@@ -2325,6 +2350,11 @@ msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "FILTRO ANISOTROPICO"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "ANISTROPIC FILTER"
+msgstr "FILTRO ANISTRÓPICO"
+
 #. TRANSLATION: dolphin, dolphin_triforce, rpcs3, rtcw
 msgctxt "game_options"
 msgid "ANTI-ALIASING"
@@ -2389,6 +2419,11 @@ msgstr "CORTE DE ARTE"
 msgctxt "game_options"
 msgid "ASMJIT Recompiler"
 msgstr "Recompilador ASMJIT"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "ASPECT"
+msgstr "ASPETO"
 
 #. TRANSLATION: bermuda, bigpemu, cemu, cgenius, citron, ...
 msgctxt "game_options"
@@ -2515,6 +2550,11 @@ msgctxt "game_options"
 msgid "AUTO AIM"
 msgstr "MIRA AUTOMÁTICA"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AUTO AIMING"
+msgstr "MIRA AUTOMÁTICA"
+
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "AUTO CROP"
@@ -2550,6 +2590,11 @@ msgctxt "game_options"
 msgid "AUTO SAVE/LOAD ON GAME LAUNCH"
 msgstr "AUTO GUARDAR/CARREGAR AO INICIAR JOGO"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AUTO SWITCH WEAPON"
+msgstr "TROCAR ARMA AUTOMATICAMENTE"
+
 #. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "AUTO WIDESCREEN"
@@ -2559,6 +2604,11 @@ msgstr "WIDESCREEN AUTOMÁTICO"
 msgctxt "game_options"
 msgid "AUTOMATIC FRAME DELAY"
 msgstr "ATRASO DE FRAME AUTOMÁTICO"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "AUTOMATICALLY RELOAD WEAPON"
+msgstr "RECARREGAR ARMA AUTOMATICAMENTE"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -2856,6 +2906,11 @@ msgctxt "game_options"
 msgid "Algeria"
 msgstr "Argélia"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "All + Enemy Jedi Dodge"
+msgstr "Todos + Esquiva Jedi Inimiga"
+
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
 msgid "All 0s (Default)"
@@ -2880,6 +2935,11 @@ msgstr "Todos os temporizadores"
 msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
 msgstr "Todas as licenças possíveis (não recomendado)"
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "All voiceovers"
+msgstr "Todas as dobragens"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -2939,6 +2999,11 @@ msgstr "Permite limitar o FPS a 60."
 msgctxt "game_options"
 msgid "Alone in the Dark"
 msgstr "Alone in the Dark"
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Alt. Attack"
+msgstr "Alt. Ataque"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -3318,10 +3383,10 @@ msgctxt "game_options"
 msgid "Atari XE Game System cartridges"
 msgstr "Cartuchos Atari XE Game System"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjk.keys
 msgctxt "keys_files"
 msgid "Attack"
-msgstr ""
+msgstr "Ataque"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -3392,6 +3457,11 @@ msgstr "Automap"
 msgctxt "game_options"
 msgid "Automatic"
 msgstr "AUTOMÁTICO"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Automatic pickup weapon."
+msgstr "Recolher arma automaticamentetica."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -3631,7 +3701,7 @@ msgctxt "game_options"
 msgid "BLENDING ACCURACY"
 msgstr "PRECISÃO DE BLENDING"
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
 msgid "BLOOM"
 msgstr "BLOOM"
@@ -3644,7 +3714,7 @@ msgstr "CORREÇÃO DO BOBBA FETT"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "BOOST RENDER RES"
-msgstr ""
+msgstr "AUMENTAR A RES. DE RENDERIZAÇÃO"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -3676,7 +3746,7 @@ msgctxt "game_options"
 msgid "BRETT HULL HOCKEY"
 msgstr "BRETT HULL HOCKEY"
 
-#. TRANSLATION: doom3
+#. TRANSLATION: doom3, openjk
 msgctxt "game_options"
 msgid "BRIGHTNESS"
 msgstr "BRILHO"
@@ -3706,6 +3776,11 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Back / Menu"
 msgstr "Voltar / Menu"
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Backpedal"
+msgstr "Recuar"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -4313,7 +4388,7 @@ msgctxt "game_options"
 msgid "COLOUR CORRECTION"
 msgstr ""
 
-#. TRANSLATION: libretro/cap32
+#. TRANSLATION: libretro/cap32, openjk
 msgctxt "game_options"
 msgid "COLOUR DEPTH"
 msgstr "PROFUNDIDADE DE COR"
@@ -4648,6 +4723,16 @@ msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr "MIRA"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "CROSSHAIR LINE THICKNESS"
+msgstr "ESPESSURA DA LINHA DA CRUZ"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "CROSSHAIR SIZE"
+msgstr "TAMANHO DA MIRA"
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "CRT COLOUR"
@@ -4747,6 +4832,16 @@ msgstr "CONFIGURAÇÃO PERSONALIZADA DO MAME"
 msgctxt "game_options"
 msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
 msgstr "PERSONALIZAR WIIMOTE E COMANDOS EMULADOS"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "CUTSCENE SUBTITLES"
+msgstr "LEGENDAS DE CUTSCENE"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "CUTSCENES"
+msgstr "CUTSCENES"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -5003,7 +5098,7 @@ msgctxt "game_options"
 msgid "Change the consoles country from the default of the United States."
 msgstr "Alterar o país das consolas do padrão dos Estados Unidos."
 
-#. TRANSLATION: doom3
+#. TRANSLATION: doom3, openjk
 msgctxt "game_options"
 msgid "Change the game's brightness."
 msgstr "Alterar o brilho do jogo."
@@ -5087,6 +5182,11 @@ msgctxt "game_options"
 msgid "Chinese (Traditional) [Big5]"
 msgstr "Chinês (tradicional) [Big5]"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Choose Screen Space Ambient Occlusion for better lighting."
+msgstr "Escolha Screen Space Ambient Occlusion para uma melhor iluminação."
+
 #. TRANSLATION: redream
 msgctxt "game_options"
 msgid "Choose broadcast standard (for older TV's)."
@@ -5096,6 +5196,11 @@ msgstr "Escolha o standard de transmissão (para TVs antigas)."
 msgctxt "game_options"
 msgid "Choose cable type for the TV."
 msgstr "Escolha o tipo de cabo para a TV."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Choose difficulty for the game."
+msgstr "Escolha a dificuldade do jogo."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -5122,10 +5227,25 @@ msgctxt "game_options"
 msgid "Choose second feature pack for the controller."
 msgstr "Escolha um segundo pacote de recursos para o comando."
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose shadow details."
+msgstr "Escolha os detalhes da sombra."
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose slow motion death option."
+msgstr "Escolha a opção de morte em câmara lenta."
+
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
 msgid "Choose system BIOS language."
 msgstr "Escolha o idioma do BIOS do sistema."
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose text language."
+msgstr "Escolha o idioma do texto."
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -5146,6 +5266,15 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the Parallel N64 graphics plugin."
 msgstr "Escolha o plugin gráfico Parallel N64."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid ""
+"Choose the amount of Gamma which changes how light or dark mid-range tones "
+"appear."
+msgstr ""
+"Escolha a quantidade de Gama que altera a forma como os tons médios claros "
+"ou escuros aparecem"
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
@@ -5189,7 +5318,12 @@ msgstr ""
 "Escolha a configuração do comando. EVDEV para uma vasta gama de comandos, "
 "armas ligeiras e volantes. SDL2 apenas para gamepads."
 
-#. TRANSLATION: libretro/cap32
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose the depth of texture quality."
+msgstr "Escolha a profundidade da qualidade da textura."
+
+#. TRANSLATION: libretro/cap32, openjk
 msgctxt "game_options"
 msgid "Choose the emulated colour depth."
 msgstr "Escolha a profundidade de cor emulada."
@@ -5198,6 +5332,16 @@ msgstr "Escolha a profundidade de cor emulada."
 msgctxt "game_options"
 msgid "Choose the games difficulty."
 msgstr "Escolha a dificuldade do jogo."
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose the level of geometric detail."
+msgstr "Escolha o nível de detalhe geométrico."
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose the level of texture detail."
+msgstr "Escolha o nível de detalhe da textura."
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -5208,6 +5352,16 @@ msgstr "Escolha o nível de violência preferido."
 msgctxt "game_options"
 msgid "Choose the scaling mode for the game screen."
 msgstr "Escolha o modo de escala para o ecrã do jogo."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Choose the size of the heads-up display."
+msgstr "Escolha o tamanho do ecrã heads-up."
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose the texture filter type."
+msgstr "Escolha o tipo de filtro de textura."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -5224,6 +5378,11 @@ msgctxt "game_options"
 msgid "Choose to enable or disable cutscenes."
 msgstr "Escolha se quer ativar ou desativar as cutscenes."
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Choose to keep corpses present."
+msgstr "Escolha manter os cadáveres presentes."
+
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid ""
@@ -5233,7 +5392,7 @@ msgstr ""
 "Escolha renderizar texturas gráficas de alta definição. Requer OpenGL, "
 "verdadeiro Cor e o arquivo aprimorado.gob."
 
-#. TRANSLATION: theforceengine
+#. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
 msgid "Choose to use Bloom post processing."
 msgstr "Escolha utilizar o pós-processamento Bloom."
@@ -5242,6 +5401,16 @@ msgstr "Escolha utilizar o pós-processamento Bloom."
 msgctxt "game_options"
 msgid "Choose upscaling method."
 msgstr "Escolha o método de aumento de escala."
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose voice language."
+msgstr "Escolha o idioma da voz."
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Choose when to enable subtitles."
+msgstr "Escolha quando ativar as legendas."
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -5809,10 +5978,20 @@ msgctxt "game_options"
 msgid "DESKTOP"
 msgstr "DESKTOP"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "DETAILED SHADERS"
+msgstr "SHADERS DETALHADOS"
+
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
 msgid "DEV MENU"
 msgstr "MENU DE DEVELOPER"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "DIFFICULTY"
+msgstr "DIFICULDADE"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -5859,7 +6038,7 @@ msgctxt "game_options"
 msgid "DISK TYPE"
 msgstr "TIPO DE DISCO"
 
-#. TRANSLATION: dolphin, duckstation, pcsx2, vpinball
+#. TRANSLATION: dolphin, duckstation, openjkdf2, pcsx2, vpinball
 msgctxt "game_options"
 msgid "DISPLAY"
 msgstr "ECRÃ"
@@ -5944,6 +6123,11 @@ msgctxt "game_options"
 msgid "DOWNSCALE FILTER"
 msgstr "FILTRO DE REDUÇÃO DE ESCALA"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "DRAW CROSSHAIR"
+msgstr "DESENHAR CRUZ"
+
 #. TRANSLATION: flycast, libretro, ppsspp
 msgctxt "game_options"
 msgid "DRIVERS"
@@ -6014,6 +6198,16 @@ msgctxt "game_options"
 msgid "DXVK RESET CACHE"
 msgstr "RESET DXVK CACHE"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "DYNAMIC GLOW"
+msgstr "BRILHO DINÂMICO"
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "DYNAMIC LIGHTS"
+msgstr "LUZES DINÂMICAS"
+
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "DYNAMICALLY CALCULATE OPTIMAL SETTINGS"
@@ -6074,7 +6268,7 @@ msgctxt "game_options"
 msgid "December"
 msgstr "Dezembro"
 
-#. TRANSLATION: citron, libretro/flycast, libretro/mesen, libretro/puae, libretro/puae2021
+#. TRANSLATION: citron, libretro/flycast, libretro/mesen, libretro/puae, libretro/puae2021, ...
 msgctxt "game_options"
 msgid "Default"
 msgstr "Predefinição"
@@ -6228,6 +6422,11 @@ msgctxt "game_options"
 msgid "Disable gouraud shading"
 msgstr ""
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Disable mission start confirmation."
+msgstr "Desativar a confirmação de início da missão."
+
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Disable support for memory write watches in ntdll."
@@ -6237,6 +6436,11 @@ msgstr "Desativar o suporte para vigia de gravação de memória em ntdll."
 msgctxt "game_options"
 msgid "Disable to access the system's settings, like time and language."
 msgstr "Desativar para aceder aos ajustes do sistema, como hora e idioma."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Disable weapon waggle."
+msgstr "Desativar o movimento da arma."
 
 #. TRANSLATION: bigpemu, bstone, citron, duckstation, f2bgl, ...
 msgctxt "game_options"
@@ -6396,6 +6600,11 @@ msgctxt "keys_files"
 msgid "Down"
 msgstr "Baixo"
 
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Down/Crouch"
+msgstr "Baixar/Agachar"
+
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
 msgid ""
@@ -6445,6 +6654,11 @@ msgctxt "game_options"
 msgid "DualShock has rumble support. Not all games support DualShock."
 msgstr ""
 "DualShock tem suporte para vibração. Nem todos os jogos suportam DualShock."
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Duck"
+msgstr "Duck"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -6747,7 +6961,7 @@ msgctxt "game_options"
 msgid "EXTENDED SCREEN"
 msgstr "ECRÃ ESTENDIDA"
 
-#. TRANSLATION: awgl, fallout1-ce, fallout2-ce
+#. TRANSLATION: awgl, fallout1-ce, fallout2-ce, openjkdf2
 msgctxt "game_options"
 msgid "Easy"
 msgstr "Fácil"
@@ -6961,10 +7175,20 @@ msgid ""
 "menu."
 msgstr ""
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable aiming crosshair."
+msgstr "Ativar apontar a mira."
+
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Enable audio"
 msgstr ""
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable auto aiming."
+msgstr "Ativar a mira automática."
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -7004,6 +7228,11 @@ msgctxt "game_options"
 msgid "Enable free play for supported games."
 msgstr "Ativar o free play para jogos suportados."
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable full subtitles on cutscenes."
+msgstr "Ativar legendas completas nas cenas."
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Enable full-screen antialiasing in Direct3D."
@@ -7029,6 +7258,11 @@ msgstr ""
 "Ativar a vista do comando para jogos com interação em dois ecrãs. Utilizar a "
 "tecla de atalho+R2 para mudar de ecrã."
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable high dots per inch."
+msgstr "Ativar os pontos altos por polegada."
+
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
 msgid "Enable high quality effects for special stages."
@@ -7038,6 +7272,11 @@ msgstr "Ativar efeitos de alta qualidade para níveis especiais."
 msgctxt "game_options"
 msgid "Enable launching pre-installed WHDLoad installs."
 msgstr "Ativar a inicialização de instalação WHDLoad pré-instaladas."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable lightsaber auto-camera."
+msgstr "Ativar a câmara automática do sabre de luz."
 
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
@@ -7093,6 +7332,11 @@ msgstr "Ativar configuração personalizada por jogo através do menu MAME."
 msgctxt "game_options"
 msgid "Enable proper quad rendering (for higher end systems)."
 msgstr "Ativar renderização quádrupla adequada (para sistemas mais avançados)."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Enable rotation on overlay map."
+msgstr "Ativar a rotação no mapa de sobreposição."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -7251,7 +7495,7 @@ msgstr ""
 #. TRANSLATION: bstone
 msgctxt "game_options"
 msgid "Enable widescreen support for game rendering."
-msgstr ""
+msgstr "Ativar suporte de ecrã amplo para renderização de jogos."
 
 #. TRANSLATION: model2emu, play, theforceengine
 msgctxt "game_options"
@@ -7696,6 +7940,11 @@ msgctxt "game_options"
 msgid "FIDELITY FX SUPER RESOLUTION"
 msgstr "FIDELITY FX SUPER RESOLUTION"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FIELD OF VIEW"
+msgstr "CAMPO DE VISÃO"
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "FIFO (VSync On)"
@@ -7720,6 +7969,11 @@ msgstr "FILTRAR TILEMAPS"
 msgctxt "game_options"
 msgid "FIRMWARE SETTINGS"
 msgstr "DEFINIÇÕES DE FIRMWARE"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FIST CROSSHAIR"
+msgstr "MIRA DO PUNHO"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -7810,6 +8064,16 @@ msgstr "FORÇAR TEMPOS NTSC NO PAL"
 msgctxt "game_options"
 msgid "FORCE WINDOWS CE MODE"
 msgstr "FORÇAR MODO WINDOWS CE"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FOV VERTICAL"
+msgstr "FOV VERTICAL"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "FPS LIMIT"
+msgstr "LIMITE DE FPS"
 
 #. TRANSLATION: lindbergh-loader, wine
 msgctxt "game_options"
@@ -7979,6 +8243,11 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "Ilhas Faroé"
 
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Fast"
+msgstr "Rápida"
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Fast Interpreter"
@@ -8017,6 +8286,16 @@ msgstr "Fevereiro"
 msgctxt "game_options"
 msgid "FidelityFX Super Resolution"
 msgstr "FidelityFX Super Resolution"
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Field Light"
+msgstr "Luz de campo"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Field of view is vertical (Hor+)."
+msgstr "O campo de visão é vertical (Hor+)."
 
 #. TRANSLATION: libretro/uae4arm
 msgctxt "game_options"
@@ -8066,6 +8345,16 @@ msgstr "Finlandês (fi)"
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "Disparar"
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Fire 1"
+msgstr "Fogo 1"
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Fire 2"
+msgstr "Fogo 2"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -8158,6 +8447,9 @@ msgid ""
 "Fixes some shadows and textures in Virtua Tennis 3 and Virtua Fighter 5 "
 "franchise for non Nvidia GPUs. May need the FPS limiter option enabled."
 msgstr ""
+"Corrige algumas sombras e texturas no Virtua Tennis 3 e Virtua Fighter 5 "
+"franquia para GPUs não Nvidia. Pode ser necessário ativar a opção limitador "
+"de FPS."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -8618,6 +8910,16 @@ msgctxt "game_options"
 msgid "GAMEPAD CURSOR SPEED"
 msgstr "VELOCIDADE DO CURSOR DO COMANDO"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "GAMEPLAY"
+msgstr "JOGO"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "GAMMA"
+msgstr "GAMA"
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "GB"
@@ -8732,6 +9034,16 @@ msgstr "Cartuchos GCE Vectrex"
 msgctxt "game_options"
 msgid "GDC"
 msgstr "GDC"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "GENERAL"
+msgstr "GENERAL"
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "GEOMETRIC DETAIL"
+msgstr "DETALHE GEOMÉTRICO"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -9186,6 +9498,11 @@ msgctxt "game_options"
 msgid "HIDE NVIDIA GPU"
 msgstr "OCULTAR GPU NVIDIA"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "HIDPI"
+msgstr "HIDPI"
+
 #. TRANSLATION: cannonball
 msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
@@ -9246,6 +9563,11 @@ msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "HUD SCALE"
+msgstr "ESCALA HUD"
+
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "HUMMER FLICKER FIX"
@@ -9256,7 +9578,7 @@ msgctxt "game_options"
 msgid "Hack. Increases most PAL games' speed by 17%."
 msgstr "Hack. Aumentar a velocidade da maioria dos jogos PAL em 17%."
 
-#. TRANSLATION: awgl, fallout1-ce, fallout2-ce
+#. TRANSLATION: awgl, fallout1-ce, fallout2-ce, openjkdf2
 msgctxt "game_options"
 msgid "Hard"
 msgstr "Difícil"
@@ -9464,6 +9786,8 @@ msgid ""
 "House of the Dead 4 speed fix. Sets the game to the CPU minimum frequency of "
 "your processor."
 msgstr ""
+"Correção de velocidade 4 de House of the Dead. Define o jogo para a "
+"frequência mínima da CPU de o seu processador."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -9532,6 +9856,11 @@ msgstr "Hyper Blaster/Justifier"
 msgctxt "game_options"
 msgid "IDE (Default)"
 msgstr "IDE (Predefinição)"
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "IDENTIFY TARGET"
+msgstr "IDENTIFICAR O ALVO"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -9729,6 +10058,11 @@ msgstr "Melhora o desempenho a custo de latência e mais travar do vídeo."
 msgctxt "game_options"
 msgid "Improves performance in 3D games. Can cause glitches."
 msgstr "Melhorar o desempenho em jogos 3D. Pode causar falhas."
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "In Cinematics"
+msgstr "Em Cinematografia"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -10098,7 +10432,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "Julho"
 
-#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys
+#. TRANSLATION: omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr "Saltar"
@@ -10112,6 +10446,16 @@ msgstr "Junho"
 msgctxt "game_options"
 msgid "Justifier"
 msgstr "Justifier"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "KEEP CORPSES"
+msgstr "MANTER CADÁVERES"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "KEEP LIGHTSABER"
+msgstr "MANTER A SABRE DE LUZ"
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
@@ -10307,6 +10651,11 @@ msgctxt "game_options"
 msgid "LCD Ghosting (Fast)"
 msgstr "Ghosting LCD (Rápido)"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "LIGHT FLARES"
+msgstr "REFLEXOS DE LUZ"
+
 #. TRANSLATION: duckstation, flycast, hypseus-singe/zmachine, libretro/beetle-saturn, libretro/fbneo, ...
 msgctxt "game_options"
 msgid "LIGHT GUN"
@@ -10321,6 +10670,16 @@ msgstr "MIRA DA PISTOLA"
 msgctxt "game_options"
 msgid "LIGHT GUNS"
 msgstr "ARMAS LEVES"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "LIGHTSABER CAMERA"
+msgstr "CÂMARA SABRE DE LUZ"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "LIGHTSABER CROSSHAIR"
+msgstr "MIRA SABRE DE LUZ"
 
 #. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
@@ -10722,6 +11081,11 @@ msgctxt "game_options"
 msgid "MANUAL TEXTURE SAMPLING"
 msgstr "AMOSTRA MANUAL DE TEXTURA"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "MAP ROTATION"
+msgstr "ROTAÇÃO DO MAPA"
+
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "MAX (as many as possible)"
@@ -10782,10 +11146,20 @@ msgctxt "game_options"
 msgid "MISSILE COMMAND 3D VR"
 msgstr "COMANDO DE MÍSSEIS 3D VR"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "MISSION START"
+msgstr "INÍCIO DA MISSÃO"
+
 #. TRANSLATION: hatari, libretro/fuse, libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "MODEL"
 msgstr "MODELO"
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "MODEL DISMEMBERMENT"
+msgstr "DESMEMBRO DO MODELO"
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xpet, libretro/vice_xplus4, ...
 msgctxt "game_options"
@@ -11002,10 +11376,10 @@ msgctxt "game_options"
 msgid "Manually set cycles per second. Use with caution."
 msgstr "Ajustar manualmente os ciclos por segundo. Usar com cuidado."
 
-#. TRANSLATION: prboom.gzdoom.keys
+#. TRANSLATION: openjk.keys, openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Map"
-msgstr ""
+msgstr "Mapa"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -11139,7 +11513,7 @@ msgctxt "game_options"
 msgid "Med Saving"
 msgstr ""
 
-#. TRANSLATION: libretro/mesen, libretro/mesens, mupen64plus, pcsx2
+#. TRANSLATION: libretro/mesen, libretro/mesens, mupen64plus, openjk, openjkdf2, ...
 msgctxt "game_options"
 msgid "Medium"
 msgstr "Médio"
@@ -11233,35 +11607,35 @@ msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Menu voltar"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Menu back / exit"
-msgstr ""
+msgstr "Menu voltar / sair"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu down"
-msgstr ""
+msgstr "Menu abaixo"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu enter"
-msgstr ""
+msgstr "Menu entrar"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu left"
-msgstr ""
+msgstr "Menu à esquerda"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu right"
-msgstr ""
+msgstr "Menu à direita"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu up"
-msgstr ""
+msgstr "Menu acima"
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
@@ -11424,7 +11798,7 @@ msgctxt "keys_files"
 msgid "Move back / down"
 msgstr "Mover para trás / baixo"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move backward"
 msgstr "Mover para trás"
@@ -11449,7 +11823,7 @@ msgctxt "keys_files"
 msgid "Move camera up"
 msgstr "Mova a câmara para cima"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move forward"
 msgstr "Seguir em frente"
@@ -11459,12 +11833,12 @@ msgctxt "keys_files"
 msgid "Move forward / up"
 msgstr "Avançar / cima"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move left"
 msgstr "Deslocar para a esquerda"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move right"
 msgstr "Deslocar para a direita"
@@ -11545,6 +11919,16 @@ msgstr "NÃO"
 msgctxt "game_options"
 msgid "NO (DEFAULT)"
 msgstr "NÃO (Predefinição)"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "NO DANGEROUS WEAPONS"
+msgstr "SEM ARMAS PERIGOSAS"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "NO WEAKER WEAPONS"
+msgstr "SEM ARMAS FRACAS"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -11791,7 +12175,7 @@ msgctxt "game_options"
 msgid "Netherlands (nl)"
 msgstr "Holandês (nl)"
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melondsds, openjk
 msgctxt "game_options"
 msgid "Never"
 msgstr "Nunca"
@@ -11806,10 +12190,20 @@ msgctxt "game_options"
 msgid "New3D"
 msgstr "Novo 3D"
 
-#. TRANSLATION: prboom.gzdoom.keys
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Next Force Power"
+msgstr "Próximo poder de força"
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Next Inventory Item"
+msgstr "Próximo item de inventário"
+
+#. TRANSLATION: openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
-msgstr ""
+msgstr "Próxima arma"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
@@ -11874,7 +12268,7 @@ msgstr "Não saltar"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "No touch screen (Default)"
-msgstr ""
+msgstr "Sem ecrã sensível ao toque (Padrão)"
 
 #. TRANSLATION: citron, dolphin, dolphin_triforce, drastic, fallout1-ce, ...
 msgctxt "game_options"
@@ -12534,6 +12928,11 @@ msgctxt "game_options"
 msgid "PHYSICAL KEYBOARD LAYOUT"
 msgstr "LAYOUT DE TECLADO FÍSICO"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "PICKUP WEAPON"
+msgstr "RECOLHA DE ARMA"
+
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "PINBALL MAPPING MODE"
@@ -12652,7 +13051,7 @@ msgstr "MODO DE APRESENTAÇÃO"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "PRIMEVAL HUNT MODE"
-msgstr ""
+msgstr "MODO DE CAÇA PRIMEVAL"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -12776,7 +13175,7 @@ msgstr "Parcial"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Pause"
-msgstr ""
+msgstr "Pausa"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -12907,6 +13306,16 @@ msgctxt "game_options"
 msgid "Pink - Blossom Pink"
 msgstr "Rosa - Rosa Flor"
 
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Pitch Down"
+msgstr "Abaixar"
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Pitch Up"
+msgstr "Levantar"
+
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Pixel Perfect"
@@ -12954,6 +13363,11 @@ msgctxt "game_options"
 msgid "PlayStation Mouse"
 msgstr "Rato da PlayStation"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Player"
+msgstr "Jogador"
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Player distance from lower screen edge (cm)"
@@ -12963,6 +13377,26 @@ msgstr "Distância do jogador até a borda inferior do ecrã (cm)"
 msgctxt "game_options"
 msgid "Player's eyes distance from lower screen edge (cm)"
 msgstr "Distância dos olhos do jogador à borda inferior do ecrã (cm)"
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Player, Any Enemy"
+msgstr "Jogador, qualquer inimigo"
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Player, Any Enemy Jedi"
+msgstr "Jogador, Qualquer Inimigo Jedi"
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Player, Last Enemy Jedi"
+msgstr "Jogador, Último Inimigo Jedi"
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Player, Last Enemy in Group"
+msgstr "Jogador, último inimigo do grupo"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -13152,6 +13586,21 @@ msgctxt "keys_files"
 msgid "Press the Y key for 'Yes'"
 msgstr "Pressione a tecla Y para 'Sim'"
 
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous Force Power"
+msgstr "Poder de Força Anterior"
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous Inventory Item"
+msgstr "Artigo de inventário anterior"
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous Weapon"
+msgstr "Arma Anterior"
+
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Previous item"
@@ -13162,10 +13611,10 @@ msgctxt "keys_files"
 msgid "Previous slot"
 msgstr "Slot anterior"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous weapon"
-msgstr ""
+msgstr "Arma anterior"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -13297,6 +13746,11 @@ msgctxt "game_options"
 msgid "REGION"
 msgstr "REGIÃO"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "RELOAD WEAPON"
+msgstr "RECARREGAR ARMA"
+
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "REMOVE INTERLACE ARTIFACTS"
@@ -13352,7 +13806,7 @@ msgctxt "game_options"
 msgid "RENDERING"
 msgstr "RENDERIZAÇÃO"
 
-#. TRANSLATION: ppsspp, thextech
+#. TRANSLATION: thextech
 msgctxt "game_options"
 msgid "RENDERING MODE"
 msgstr "MODO DE RENDERIZAÇÃO"
@@ -13882,6 +14336,11 @@ msgid "Run the game in test mode to configure certain game options."
 msgstr ""
 "Executar o jogo no modo de teste para configurar determinadas opções do jogo."
 
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Run/Walk"
+msgstr "Correr/Caminhar"
+
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -14087,6 +14546,11 @@ msgctxt "game_options"
 msgid "SHADER SET"
 msgstr "CONJUNTO DE FILTROS"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "SHADOWS"
+msgstr "SOMBRAS"
+
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "SHARE MAME ARTWORK"
@@ -14162,6 +14626,11 @@ msgctxt "game_options"
 msgid "SIO ACCELERATION"
 msgstr "ACELERAÇÃO SIO"
 
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "SKIP BUFFER EFFECTS"
+msgstr ""
+
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "SKIP CUTSCENES"
@@ -14196,6 +14665,11 @@ msgstr "SALTAR MENU INICIAL"
 msgctxt "game_options"
 msgid "SLEEP TIMERS ACCURACY"
 msgstr "PRECISÃO DOS TEMPORIZADORES DE SONO"
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "SLOW MOTION DEATH"
+msgstr "MORTE EM CÂMARA LENTA"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -14332,6 +14806,16 @@ msgctxt "game_options"
 msgid "SPU XFloat Accuracy"
 msgstr "SPU XFloat Preciso"
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "SSAA Multiplier"
+msgstr "Multiplicador SSAA"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "SSAO"
+msgstr "SSAO"
+
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "ST"
@@ -14375,14 +14859,14 @@ msgstr "ESTICAR PARA PREENCHER"
 #. TRANSLATION: bstone
 msgctxt "game_options"
 msgid "STRETCH UI MENU"
-msgstr ""
+msgstr "MENU UI ESTICADO"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "STRICT RENDERING MODE"
 msgstr "MODO DE RENDERIZAÇÃO RIGOROSO"
 
-#. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce
+#. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce, openjk
 msgctxt "game_options"
 msgid "SUBTITLES"
 msgstr "LEGENDAS"
@@ -14431,6 +14915,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "SWAP GAMEPADS"
 msgstr "TROCAR COMANDOS"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "SWITCH WEAPON"
+msgstr "TROCAR ARMA"
 
 #. TRANSLATION: libretro/doublecherrygb, libretro/tgbdual
 msgctxt "game_options"
@@ -14805,7 +15294,7 @@ msgstr "Definir comandos de todo o sistema através do menu MAME"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Set the Primeval Hunt mode (touch screen)."
-msgstr ""
+msgstr "Definir o modo Primeval Hunt (ecrã táctil)."
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
@@ -14816,6 +15305,16 @@ msgstr ""
 msgctxt "game_options"
 msgid "Set the controller rumble strength if supported."
 msgstr "Defina a intensidade da vibração do comando, se suportado."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the crosshair line thickness."
+msgstr "Defina a espessura da linha da cruz."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the crosshair size."
+msgstr "Defina o tamanho da mira."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -14831,6 +15330,16 @@ msgstr ""
 msgctxt "game_options"
 msgid "Set the display's resolution. Does not affect the rendering resolution."
 msgstr "Defina a resolução do monitor. Não afeta a renderização da resolução"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the field of view."
+msgstr "Defina o campo de visão."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Set the fps limit."
+msgstr "Defina o limite de fps."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -14960,6 +15469,16 @@ msgctxt "game_options"
 msgid "Show Cheat Menu (Pause + R Shoulder button)"
 msgstr ""
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Show Crosshair with fist."
+msgstr "Mostrar a mira com o punho."
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Show Crosshair with lightsaber."
+msgstr "Mostrar mira com sabre de luz."
+
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Show an image overlaid on top of the bezel."
@@ -15048,9 +15567,9 @@ msgstr "Derivação 9"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Side by side"
-msgstr ""
+msgstr "Lado a lado"
 
-#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em
+#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em, openjk
 msgctxt "game_options"
 msgid "Simple"
 msgstr "Simples"
@@ -15167,15 +15686,15 @@ msgstr "Saltar Início"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid ""
-"Skip buffer disables auto frame skip and renders at display output "
-"resolution."
-msgstr ""
+msgid "Skip buffer effects"
+msgstr "Saltar efeitos de buffer"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid "Skip buffer effects"
-msgstr "Saltar efeitos de buffer"
+msgid ""
+"Skip buffer effects disables auto frameskip and renders at display output "
+"resolution."
+msgstr ""
 
 #. TRANSLATION: rtcw.keys, theforceengine.keys
 msgctxt "keys_files"
@@ -15656,12 +16175,22 @@ msgstr "Interpretador estático"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Stats"
-msgstr ""
+msgstr "Estatísticas"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Steering Wheel"
 msgstr "Volante"
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Step left"
+msgstr "Dê um passo à esquerda"
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Step right"
+msgstr "Dê um passo para a direita"
 
 #. TRANSLATION: citron, rpcs3
 msgctxt "game_options"
@@ -15688,12 +16217,12 @@ msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr "Strafe à direita"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Strafe left"
 msgstr "Metralhar para a esquerda"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Strafe right"
 msgstr "Metralhar para a direita"
@@ -15992,15 +16521,25 @@ msgctxt "game_options"
 msgid "TEST PLAY"
 msgstr "TESTAR JOGO"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "TEXT"
+msgstr "TEXTO"
+
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "TEXTURE DEPOSTERIZE"
 msgstr "DESPOSTERIZAR TEXTURA"
 
-#. TRANSLATION: f2bgl
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "TEXTURE DETAIL"
+msgstr "DETALHE DA TEXTURA"
+
+#. TRANSLATION: f2bgl, openjk
 msgctxt "game_options"
 msgid "TEXTURE FILTER"
-msgstr ""
+msgstr "FILTRO DA TEXTURA"
 
 #. TRANSLATION: citron, duckstation, dxx-rebirth, libretro/duckstation, libretro/mupen64plus-next, ...
 msgctxt "game_options"
@@ -16026,6 +16565,11 @@ msgstr "MIP-MAPPING DE TEXTURAS (DESFOQUE)"
 msgctxt "game_options"
 msgid "TEXTURE PRELOADING"
 msgstr "PRÉ-CARREGAMENTO DE TEXTURA"
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "TEXTURE QUALITY"
+msgstr "QUALIDADE DA TEXTURA"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -16535,6 +17079,11 @@ msgstr ""
 "Tenta adivinhar a cor por vértice (gouraud) das informações por polígono do "
 "Model2 (plano)."
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Trilinear"
+msgstr "Trilinear"
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Trilinear (Forced)"
@@ -16588,6 +17137,16 @@ msgstr "Virar à esquerda"
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Turn Right"
+msgstr "Virar à direita"
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Turn left"
+msgstr "Virar à esquerda"
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Turn right"
 msgstr "Virar à direita"
 
 #. TRANSLATION: libretro/melondsds
@@ -16790,7 +17349,7 @@ msgstr "USAR VOLANTE"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "USE ZINK FOR RENDERING"
-msgstr ""
+msgstr "USAR O ZINK PARA RENDERIZAÇÃO"
 
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
@@ -16997,6 +17556,11 @@ msgctxt "keys_files"
 msgid "Up"
 msgstr "Para cima"
 
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Up/Jump"
+msgstr "Subir/Saltar"
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
@@ -17023,7 +17587,7 @@ msgstr "Filtro upscale utilizado para as camadas 2D. Requer novo motor 3D."
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Upscale rendering resolution to display size."
-msgstr ""
+msgstr "Aumentar a resolução de renderização para o tamanho do ecrã."
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -17035,10 +17599,10 @@ msgctxt "game_options"
 msgid "Uruguay"
 msgstr "Uruguai"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Use"
-msgstr ""
+msgstr "usar"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -17054,15 +17618,30 @@ msgstr ""
 "Use amostras de áudio de 16 bits para drivers de áudio que não suportam 32 "
 "bits. Apenas use se você não obtiver áudio."
 
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "Use 1:1 aspect."
+msgstr "Usar o aspeto 1:1."
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Use Analog joysticks in addition to D-Pad for DualShock controllers."
 msgstr "Use joysticks analógicos além do D-Pad para comandos DualShock."
 
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Use Force Power"
+msgstr "Use o poder da força"
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Use Host"
 msgstr "Usar host"
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Use Inventory Item"
+msgstr "Usar item de inventário"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -17338,7 +17917,7 @@ msgctxt "game_options"
 msgid "VIC20 PAL Automatic"
 msgstr "VIC20 PAL Automátic"
 
-#. TRANSLATION: citron, rpcs3
+#. TRANSLATION: citron, openjk, rpcs3
 msgctxt "game_options"
 msgid "VIDEO"
 msgstr "VÍDEO"
@@ -17403,6 +17982,11 @@ msgctxt "game_options"
 msgid "VIEW ONLY"
 msgstr "SOMENTE VISUALIZAÇÃO"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "VIEW SWAYING"
+msgstr "VER BALANÇO"
+
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "VIOLENCE LEVEL"
@@ -17417,6 +18001,11 @@ msgstr "AMBIENTE DE TRABALHO VIRTUAL"
 msgctxt "game_options"
 msgid "VISUAL NUDGE STRENGTH"
 msgstr "FORÇA DO NUDGE VISUAL"
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "VOICE"
+msgstr "VOZ"
 
 #. TRANSLATION: azahar, bigpemu, bstone, cemu, citron, ...
 msgctxt "game_options"
@@ -17483,7 +18072,7 @@ msgctxt "game_options"
 msgid "Vertical Sync"
 msgstr "Sincronização vertical"
 
-#. TRANSLATION: libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus
+#. TRANSLATION: libretro/fceumm, libretro/mesen, libretro/mesens, mupen64plus, openjk
 msgctxt "game_options"
 msgid "Very High"
 msgstr "Muito Alto"
@@ -17538,6 +18127,11 @@ msgctxt "game_options"
 msgid "Voltmace Delta 3b Twin Joysticks"
 msgstr "Comandos Analógicos Duplos Voltmace Delta 3b"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Volumetric"
+msgstr "Volumétrica"
+
 #. TRANSLATION: azahar, citron, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "Vulkan"
@@ -17553,6 +18147,11 @@ msgctxt "game_options"
 msgid "W-SU"
 msgstr "W-SU"
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "WALL MARKS"
+msgstr "MARCAS NA PAREDE"
+
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "WAN"
@@ -17567,6 +18166,16 @@ msgstr "AVISAR SOBRE PROBLEMAS DE BIOS"
 msgctxt "game_options"
 msgid "WARN ABOUT UNSUPPORTED FEATURES"
 msgstr "AVISAR SOBRE RECURSOS NÃO SUPORTADOS"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "WEAPON PICKUP"
+msgstr "RECOLHA DE ARMA"
+
+#. TRANSLATION: openjkdf2
+msgctxt "game_options"
+msgid "WEAPON WAGGLE"
+msgstr "ARMA WAGGLE"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -17662,6 +18271,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "WRX HIGH RESOLUTION"
 msgstr "ALTA RESOLUÇÃO WRX"
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Walk forward"
+msgstr "Caminhar em frente"
 
 #. TRANSLATION: hurrican
 msgctxt "game_options"
@@ -17908,10 +18522,10 @@ msgctxt "game_options"
 msgid "Zone for which the game doesn't react to the wheel (in degrees)"
 msgstr "Zona para a qual o jogo não reage ao volante (em graus)"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Zoom in"
-msgstr ""
+msgstr "Ampliar zoom"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -17923,10 +18537,10 @@ msgctxt "keys_files"
 msgid "Zoom in x5"
 msgstr "Aumentar zoom x5"
 
-#. TRANSLATION: bstone.keys
+#. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Zoom out"
-msgstr ""
+msgstr "Diminuir zoom"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -18677,14 +19291,6 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "GamePad + 4 Sideway Wiimote"
 #~ msgstr "Comando + 4 Wiimote de lado"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "House of the Dead 4 speed fix. Sets the game to the CPU base frequency of "
-#~ "your processor."
-#~ msgstr ""
-#~ "Correção da velocidade de House of the Dead 4. Defina o jogo para a "
-#~ "frequência base da CPU do seu processador."
 
 #~ msgctxt "game_options"
 #~ msgid ""

@@ -18,7 +18,7 @@ mpq_dst = "/userdata/roms/ports/devilutionx"
 
 class DevilutionXGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         configDir = CONFIGS / 'devilutionx'
         configFile = configDir / 'diablo.ini'
         saveDir = SAVES / 'devilutionx'

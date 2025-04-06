@@ -28,7 +28,7 @@ index 4f29bb76e..e780af5d2 100644
  	I_StartupJoysticks();
  
 diff --git a/source/common/platform/posix/unix/i_specialpaths.cpp b/source/common/platform/posix/unix/i_specialpaths.cpp
-index 112e92ee7..583a7fa6d 100644
+index fb4d4c7b1..58664d2be 100644
 --- a/source/common/platform/posix/unix/i_specialpaths.cpp
 +++ b/source/common/platform/posix/unix/i_specialpaths.cpp
 @@ -45,59 +45,7 @@
@@ -92,16 +92,16 @@ index 112e92ee7..583a7fa6d 100644
  }
  
  //===========================================================================
-@@ -112,7 +60,7 @@ FString M_GetAppDataPath(bool create)
- {
- 	// Don't use GAME_DIR and such so that ZDoom and its child ports can
- 	// share the node cache.
--	FString path = NicePath("$HOME/.config/" GAMENAMELOWERCASE);
-+	FString path = NicePath("/userdata/system/configs/raze");
+@@ -115,7 +63,7 @@ FString M_GetAppDataPath(bool create)
+ 	#if defined(__HAIKU__)
+ 		FString path = NicePath("$HOME/config/settings/" GAMENAME);
+ 	#else
+-		FString path = NicePath("$HOME/.config/" GAMENAMELOWERCASE);
++		FString path = NicePath("/userdata/system/configs/raze");
+ 	#endif
  	if (create)
  	{
- 		CreatePath(path.GetChars());
-@@ -132,7 +80,7 @@ FString M_GetCachePath(bool create)
+@@ -136,7 +84,7 @@ FString M_GetCachePath(bool create)
  {
  	// Don't use GAME_DIR and such so that ZDoom and its child ports can
  	// share the node cache.
@@ -110,7 +110,7 @@ index 112e92ee7..583a7fa6d 100644
  	if (create)
  	{
  		CreatePath(path.GetChars());
-@@ -150,7 +98,7 @@ FString M_GetCachePath(bool create)
+@@ -154,7 +102,7 @@ FString M_GetCachePath(bool create)
  
  FString M_GetAutoexecPath()
  {
@@ -119,7 +119,7 @@ index 112e92ee7..583a7fa6d 100644
  }
  
  //===========================================================================
-@@ -165,7 +113,7 @@ FString M_GetAutoexecPath()
+@@ -169,7 +117,7 @@ FString M_GetAutoexecPath()
  
  FString M_GetConfigPath(bool for_reading)
  {
@@ -128,7 +128,7 @@ index 112e92ee7..583a7fa6d 100644
  }
  
  //===========================================================================
-@@ -178,7 +126,7 @@ FString M_GetConfigPath(bool for_reading)
+@@ -182,7 +130,7 @@ FString M_GetConfigPath(bool for_reading)
  
  FString M_GetScreenshotsPath()
  {
@@ -137,7 +137,7 @@ index 112e92ee7..583a7fa6d 100644
  }
  
  //===========================================================================
-@@ -191,7 +139,7 @@ FString M_GetScreenshotsPath()
+@@ -195,7 +143,7 @@ FString M_GetScreenshotsPath()
  
  FString M_GetSavegamesPath()
  {
@@ -146,7 +146,7 @@ index 112e92ee7..583a7fa6d 100644
  }
  
  //===========================================================================
-@@ -204,7 +152,7 @@ FString M_GetSavegamesPath()
+@@ -208,7 +156,7 @@ FString M_GetSavegamesPath()
  
  FString M_GetDocumentsPath()
  {
@@ -168,10 +168,10 @@ index c99c6bc01..17f9c9a50 100644
  	}
  
 diff --git a/source/core/gamecontrol.cpp b/source/core/gamecontrol.cpp
-index 6f9c1792d..72e5a42a2 100644
+index 485f5a3f4..b1f345e25 100644
 --- a/source/core/gamecontrol.cpp
 +++ b/source/core/gamecontrol.cpp
-@@ -1043,7 +1043,7 @@ int RunGame()
+@@ -1038,7 +1038,7 @@ int RunGame()
  	FString logfile = Args->TakeValue("+logfile");
  
  	// As long as this engine is still in prerelease mode let's always write a log file.

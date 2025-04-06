@@ -13,7 +13,7 @@ claw_dst = "/userdata/roms/ports/openclaw"
 
 class OpenclawGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         os.chdir("/userdata/roms/ports/openclaw")
         commandArray = ["/usr/bin/openclaw"]
         shutil.copytree(clawzip_src, claw_dst, dirs_exist_ok=True)

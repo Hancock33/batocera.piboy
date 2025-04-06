@@ -3,10 +3,11 @@
 # libretro-sameboy
 #
 ################################################################################
-# Version: Commits on Jun 28, 2024
-LIBRETRO_SAMEBOY_VERSION = 51433012a871a44555492273fd22f29867d12655
-LIBRETRO_SAMEBOY_SITE = $(call github,libretro,SameBoy,$(LIBRETRO_SAMEBOY_VERSION))
+# Version: Commits on Apr 05, 2025
+LIBRETRO_SAMEBOY_VERSION = 8b2795268044c03c34f68c8b94d29ad038c88e80
+LIBRETRO_SAMEBOY_SITE = $(call github,LIJI32,SameBoy,$(LIBRETRO_SAMEBOY_VERSION))
 LIBRETRO_SAMEBOY_LICENSE = GPL
+LIBRETRO_SAMEBOY_DEPENDENCIES = host-rgbds
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
     LIBRETRO_SAMEBOY_EXTRA_ARGS=ARCH=aarch64
@@ -20,13 +21,14 @@ endif
 
 define LIBRETRO_SAMEBOY_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/libretro/Makefile
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/libretro -f Makefile platform="$(LIBRETRO_SAMEBOY_PLATFORM)" \
-		$(LIBRETRO_SAMEBOY_EXTRA_ARGS) GIT_VERSION="-$(shell echo $(LIBRETRO_SAMEBOY_VERSION) | cut -c 1-7)"
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D) platform="$(LIBRETRO_SAMEBOY_PLATFORM)" \
+		$(LIBRETRO_SAMEBOY_EXTRA_ARGS) GIT_VERSION="-$(shell echo $(LIBRETRO_SAMEBOY_VERSION) | cut -c 1-7)" \
+		bootroms libretro
 endef
 
 define LIBRETRO_SAMEBOY_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	$(INSTALL) -D $(@D)/libretro/sameboy_libretro.so $(TARGET_DIR)/usr/lib/libretro/sameboy_libretro.so
+	$(INSTALL) -D $(@D)/build/bin/sameboy_libretro.so $(TARGET_DIR)/usr/lib/libretro/sameboy_libretro.so
 endef
 
 $(eval $(generic-package))

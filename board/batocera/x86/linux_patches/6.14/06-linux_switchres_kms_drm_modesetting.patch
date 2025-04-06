@@ -281,7 +281,7 @@ index 35e07d1b9f94..0f53c7c8b0ff 100644
  EXPORT_SYMBOL(drm_connector_list_update);
  
 diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
-index 3693e93a1588..c958cd1ef704 100644
+index 3693e93a1588..8a374a1f3953 100644
 --- a/drivers/gpu/drm/drm_probe_helper.c
 +++ b/drivers/gpu/drm/drm_probe_helper.c
 @@ -378,6 +378,23 @@ drm_helper_probe_detect_ctx(struct drm_connector *connector, bool force)
@@ -339,7 +339,7 @@ index 3693e93a1588..c958cd1ef704 100644
 +                drm_mode_set_crtcinfo(mode, CRTC_INTERLACE_HALVE_V);
 +                drm_mode_debug_printmodeline(mode);
 +        }
-+        drm_dbg_kms(dev, "[CONNECTOR:%d:%s] final modes :\n", 
++        drm_dbg_kms(dev, "[CONNECTOR:%d:%s] final modes :\n",
  		    connector->base.id, connector->name);
  
  	list_for_each_entry(mode, &connector->modes, head) {

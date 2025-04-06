@@ -1,7 +1,5 @@
-﻿avp.mk
-batocera-luajit.mk
+﻿batocera-luajit.mk
 citron.mk
-dolphinCrosshairsPack.mk
 duckstation-legacy.mk
 firmware-armbian.mk
 firmware-orangepi.mk
@@ -11,7 +9,6 @@ kodi-pvr-freebox.mk
 lib32bit.mk
 model2emu.mk
 noto-cjk-fonts.mk
-omf2097.mk
 openbor6412.mk
 openbor7142.mk
 wine-cachyos.mk

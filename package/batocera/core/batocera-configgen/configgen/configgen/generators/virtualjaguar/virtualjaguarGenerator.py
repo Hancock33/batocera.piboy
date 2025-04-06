@@ -6,7 +6,7 @@ from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 class VirtualjaguarGenerator(Generator):
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ['virtualjaguar', rom]
 
         # Rendering mode

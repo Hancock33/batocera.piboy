@@ -433,8 +433,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_BATOCERA_LED_HANDHELD                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_SM8250   || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_SM8550
 
-    select BR2_PACKAGE_LIBGPIOD_TOOLS                       if  BR2_PACKAGE_LIBGPIOD
-
     # joy 2 pad
     select BR2_PACKAGE_EVMAPY
 
@@ -649,20 +647,22 @@ config BR2_PACKAGE_BATOCERA_EXTRAS
 config BR2_PACKAGE_BATOCERA_TOOLS
     bool "batocera.linux system tools packages selection"
 
-    select BR2_PACKAGE_JSTEST2                              # joysticks tester
-    select BR2_PACKAGE_EVTEST                               # joysticks tester
-    select BR2_PACKAGE_LINUXCONSOLETOOLS                    # tools for linux events calibration
-    select BR2_PACKAGE_LINUXCONSOLETOOLS_JOYSTICK           # tools for linux events calibration
-    select BR2_PACKAGE_LINUXCONSOLETOOLS_FORCEFEEDBACK      # tools for linux events calibration
-    select BR2_PACKAGE_VIM                                  # basic vi emulator
-    select BR2_PACKAGE_NANO                                 # basic nano emulator
-    select BR2_PACKAGE_ZIP                                  # zip tool
     select BR2_PACKAGE_7ZIP                                 # zip tool
-    select BR2_PACKAGE_SQUASHFS                             # mksquash tool
-    select BR2_PACKAGE_HTOP                                 # multi-cpus usage
-    select BR2_PACKAGE_NCDU                                 # Disk Usage
+    select BR2_PACKAGE_EVTEST                               # joysticks tester
     select BR2_PACKAGE_FFMPEG_XCBGRAB                       if  BR2_PACKAGE_XORG7
+    select BR2_PACKAGE_HTOP                                 # multi-cpus usage
+    select BR2_PACKAGE_INTEL_MEDIASDK                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64
+    select BR2_PACKAGE_JSTEST2                              # joysticks tester
+    select BR2_PACKAGE_LIBGPIOD_TOOLS                       if  BR2_PACKAGE_LIBGPIOD
+    select BR2_PACKAGE_LINUXCONSOLETOOLS                    # tools for linux events calibration
+    select BR2_PACKAGE_LINUXCONSOLETOOLS_FORCEFEEDBACK      # tools for linux events calibration
+    select BR2_PACKAGE_LINUXCONSOLETOOLS_JOYSTICK           # tools for linux events calibration
+    select BR2_PACKAGE_NANO                                 # basic nano emulator
+    select BR2_PACKAGE_NCDU                                 # Disk Usage
+    select BR2_PACKAGE_SQUASHFS                             # mksquash tool
     select BR2_PACKAGE_SWITCHRES                            if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835 && !BR2_PACKAGE_BATOCERA_WAYLAND # switchres 15kHz
+    select BR2_PACKAGE_VIM                                  # basic vi emulator
+    select BR2_PACKAGE_ZIP                                  # zip tool
 
     help
         System tools
@@ -784,9 +784,9 @@ config BR2_PACKAGE_BATOCERA_SEGADC
                                                                !BR2_PACKAGE_BATOCERA_TARGET_X86         && \
                                                                !BR2_riscv
 
-    select BR2_PACKAGE_LIBRETRO_FLYCAST2021                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
+    #select BR2_PACKAGE_LIBRETRO_FLYCAST2021                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
-    select BR2_PACKAGE_REDREAM                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_PACKAGE_BATOCERA_BCM27XX && !BR2_PACKAGE_BATOCERA_WAYLAND)
+    #select BR2_PACKAGE_REDREAM                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_PACKAGE_BATOCERA_BCM27XX && !BR2_PACKAGE_BATOCERA_WAYLAND)
 
     help
         Sega Dreamcast and Naomi/Atomiswave emulation support
@@ -826,6 +826,9 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
 
     # Mainline MAME
     select BR2_PACKAGE_MAME                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
+
+    # DICE for machines without a CPU
+    select BR2_PACKAGE_LIBRETRO_DICE                        if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
 
     help
         Arcade cores/emulators
@@ -1056,9 +1059,14 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     # CatacombGL
     select BR2_PACKAGE_CATACOMBGL                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
+    # Jedi Knight - Dark Forces 2
+    # select BR2_PACKAGE_OPENJKDF2                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+
+    # OpenJK: JediAcademy / Jedi Outcast
+    select BR2_PACKAGE_OPENJK                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
+
     help
         Ports
-
 #### Vintage computer systems ####
 config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     bool "batocera.linux vintage computers emulation packages"
@@ -1097,6 +1105,7 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     # MSX range
     select BR2_PACKAGE_LIBRETRO_BLUEMSX                     # ALL
     select BR2_PACKAGE_LIBRETRO_FMSX                        # ALL
+    select BR2_PACKAGE_LIBRETRO_GEARCOLECO                  # ALL
     select BR2_PACKAGE_OPENMSX                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Thomson 8-bit
@@ -1446,7 +1455,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_NUKEM2                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Duke Nukem II
     select BR2_PACKAGE_OMF2097                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # One Must Fall 2097
     select BR2_PACKAGE_OPENCLAW                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Captain Claw
-    select BR2_PACKAGE_OPENJK                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # OpenJK: JediAcademy / Jedi Outcast
     select BR2_PACKAGE_OPENLARA                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Tomb Raider
     select BR2_PACKAGE_PROTOTYPE                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Prototype (R-Type Clone)
     select BR2_PACKAGE_UQM                                                                                                                 # Ur-Quan Masters

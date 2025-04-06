@@ -6,11 +6,12 @@
 # Version: Commits on Mar 10, 2025
 OPENJK_VERSION = 5878f620f6dabb6573595470627ab2e31cb46b67
 OPENJK_SITE = $(call github,JACoders,OpenJK,$(OPENJK_VERSION))
-
-OPENJK_DEPENDENCIES = sdl2 openal
+OPENJK_DEPENDENCIES =host-libjpeg libpng openal sdl2 zlib
 OPENJK_LICENSE = GPL-2.0
 OPENJK_SUPPORTS_IN_SOURCE_BUILD = NO
 
+OPENJK_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
+OPENJK_CONF_OPTS += -DCMAKE_INSTALL_PREFIX="/usr/bin"
 #Single player
 OPENJK_CONF_OPTS += -DBuildSPEngine=ON
 OPENJK_CONF_OPTS += -DBuildSPGame=ON
@@ -27,19 +28,11 @@ OPENJK_CONF_OPTS += -DBuildMPGame=OFF
 OPENJK_CONF_OPTS += -DBuildMPCGame=OFF
 OPENJK_CONF_OPTS += -DBuildMPUI=OFF
 
-define OPENJK_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/game_assets/openjkja
-	$(INSTALL) -D $(@D)/buildroot-build/openjk_sp.*							$(TARGET_DIR)/usr/bin/openjk_sp
-	$(INSTALL) -D $(@D)/buildroot-build/code/rd-vanilla/rdsp-vanilla_*.so	$(TARGET_DIR)/usr/share/game_assets/openjkja
-	$(INSTALL) -D $(@D)/buildroot-build/code/game/jagame*.so				$(TARGET_DIR)/usr/share/game_assets/openjkja
-	mkdir -p $(TARGET_DIR)/usr/share/game_assets/openjkjo
-	$(INSTALL) -D $(@D)/buildroot-build/openjo_sp.*							$(TARGET_DIR)/usr/bin/openjo_sp
-	$(INSTALL) -D $(@D)/buildroot-build/code/rd-vanilla/rdjosp-vanilla_*.so	$(TARGET_DIR)/usr/share/game_assets/openjkjo
-	$(INSTALL) -D $(@D)/buildroot-build/codeJK2/game/jospgame*.so			$(TARGET_DIR)/usr/share/game_assets/openjkjo
-	# evmap config
-	 mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/openjk/openjkja.keys $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/openjk/openjkjo.keys $(TARGET_DIR)/usr/share/evmapy
+define OPENJK_EVMAPY
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/openjk/openjk.keys $(TARGET_DIR)/usr/share/evmapy
 endef
+
+OPENJK_POST_INSTALL_TARGET_HOOKS += OPENJK_EVMAPY
 
 $(eval $(cmake-package))

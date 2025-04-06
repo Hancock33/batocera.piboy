@@ -10,7 +10,7 @@ from ..Generator import Generator
 
 class EtekwarGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, metadata, esmetadata, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         gameResolution = videoMode.getCurrentResolution()
         commandArray = ["etekwar"]
         os.chdir(os.path.dirname(os.path.abspath(rom)))

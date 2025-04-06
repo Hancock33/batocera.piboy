@@ -548,6 +548,25 @@ dataeast:
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
 
+dice:
+  name:                 DICE
+  manufacturer:         Arcade
+  release:              1972
+  hardware:             arcade
+  extensions:           [zip, dmy]
+  platform:             dice, arcade
+  emulators:
+    libretro:
+      dice:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DICE]    }
+  comment_en:           |
+                        Games without any ROM component use .dmy files as dummy launchers.
+
+                        For more info: https://wiki.batocera.org/arcade
+  comment_fr:           |
+                        Trouvez la documentation ici: https://wiki.batocera.org/arcade
+  comment_br:           |
+                        Para mais informações: https://wiki.batocera.org/arcade
+
 dynax:
   name:                 Dynax
   manufacturer:         Arcade
@@ -1429,6 +1448,7 @@ colecovision:
   emulators:
     libretro:
       bluemsx:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BLUEMSX] }
+      gearcoleco:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GEARCOLECO] }
     openmsx:
       openmsx:          { requireAnyOf: [BR2_PACKAGE_OPENMSX] }
     clk:
@@ -1438,6 +1458,10 @@ colecovision:
 
                         - OpenMSX:
                         coleco.rom must be in /userdata/system/configs/openmsx/share/systemroms to run Coleco SGM roms.
+
+                        - Gearcoleco:
+                        BIOS is needed to run (coleco.rom file).
+                        It is possible to load any BIOS but the original one with md5 2c66f5911e5b42b8ebe113403548eee7 is recommended.
 
                         - BlueMSX:
                         You must download the BlueMSX standalone version, available to this URL:
@@ -4160,7 +4184,7 @@ jazz2:
   comment_br:           |
                         Para mais informações: https://wiki.batocera.org/systems:jazz2-native
 
-openjkja:
+jknight:
   name:                 Jedi Academy
   manufacturer:         Ports
   release:              2003
@@ -4170,10 +4194,10 @@ openjkja:
   group:                ports
   path:                 /userdata/roms/ports/openjkja
   emulators:
-    openjkja:
-      openjkja:         { requireAnyOf: [BR2_PACKAGE_OPENJK] }
+    openjk:
+     openjk:           { requireAnyOf: [BR2_PACKAGE_OPENJK] }
 
-openjkjo:
+jknight:
   name:                 Jedi Outcast
   manufacturer:         Ports
   release:              2002
@@ -4183,8 +4207,39 @@ openjkjo:
   group:                ports
   path:                 /userdata/roms/ports/openjkjo
   emulators:
-    openjkjo:
-      openjkjo:         { requireAnyOf: [BR2_PACKAGE_OPENJK] }
+    openjk:
+      openjk:           { requireAnyOf: [BR2_PACKAGE_OPENJK] }
+
+jkdf2:
+  name:                 Jedi Knight - Dark Forces 2
+  manufacturer:         Ports
+  release:              1993
+  hardware:             port
+  extensions:           [jedi]
+  platform:             pc
+  group:                ports
+  path:                 /userdata/roms/ports/jkdf2
+  emulators:
+    openjkdf2:
+      openjkdf2:        { requireAnyOf: [BR2_PACKAGE_OPENJKDF2] }
+  comment_en:           |
+                        Create an appropriate directory here for Jedi Knight - Dark Forces 2 or Mysteries of the Sith.
+                        Add the files for each game into the appropriate directory.
+
+                        Then create a blank launch file with a .jedi extension in the created directory to be able to start the game from ES.
+                        i.e. `Jedi Knight - Dark Forces 2.jedi` or `Mysteries of the Sith.jedi`.
+
+                        Jedi Knight - Dark Forces 2 is ideally designed to be best played with a mouse and keyboard.
+                        We have however mapped a gamepad style controller to the default keyboard for controller use.
+
+                        Do not enable the joystick option in OpenJKDF2 as the controls aren't ideal.
+                        Do not adjust the keyboard keys if planning on using the controller mapping.
+
+                        For more info: https://wiki.batocera.org/systems:jkdf2
+  comment_fr:           |
+                        Trouvez la documentation ici : https://wiki.batocera.org/systems:jkdf2
+  comment_br:           |
+                        Para mais informações: https://wiki.batocera.org/systems:jkdf2
 
 opentyrian:
   name:                 Tyrian
@@ -6148,7 +6203,8 @@ megacd:
   release:              1991
   hardware:             console
   extensions:           [chd, cue, iso, m3u]
-  platform:             megacd
+  platform:             segacd
+  theme:                segacd
   emulators:
     libretro:
       genesisplusgx:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX] }

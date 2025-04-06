@@ -1,6 +1,7 @@
 config BR2_PACKAGE_LIBRETRO_SAMEBOY
 	bool "libretro-sameboy"
 	depends on BR2_PACKAGE_RETROARCH
+	select BR2_PACKAGE_RGBDS
 
 	help
 	  A libretro Sameboy is a Gameboy and Gameboy Color emulator.

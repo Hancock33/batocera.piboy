@@ -231,6 +231,8 @@ PACKAGES_PORTS="abuse
                 jazz2-native
                 lindbergh-loader
                 openjazz
+                openjk
+                openjkdf2
                 perfected
                 raze
                 realgibs

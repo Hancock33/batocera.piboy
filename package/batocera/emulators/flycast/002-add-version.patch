@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 16520467e..27db475e2 100644
+index ef4e6ee38..ba6388c7a 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -110,8 +110,12 @@ if(GIT_FOUND AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/.git")
+@@ -111,8 +111,12 @@ if(GIT_FOUND AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/.git")
  		OUTPUT_STRIP_TRAILING_WHITESPACE
  	)
  else()
@@ -17,3 +17,31 @@ index 16520467e..27db475e2 100644
  endif()
  
  if(WINDOWS_STORE)
+@@ -1991,6 +1995,27 @@ if(UNIX AND NOT APPLE AND NOT ANDROID AND NOT LIBRETRO)
+ 	endforeach()
+ endif()
+ 
++if(LIBRETRO)
++	MESSAGE("Libretro build ON")
++endif()
++
++if(USE_VULKAN)
++	MESSAGE("Vulkan build ON")
++endif()
++
++if(USE_OPENGL)
++	MESSAGE("OpenGL build ON")
++endif()
++
++if(USE_GLES)
++	MESSAGE("OpenGLES build ON")
++endif()
++
++if(USE_GLES2)
++	MESSAGE("OpenGLES2 build ON")
++endif()
++
++
+ if(${CMAKE_GENERATOR} MATCHES "^Xcode.*|^Visual Studio.*")
+ 	file(GLOB_RECURSE SRC_FILES *.h *.cpp *.c *.cc *.mm)
+ 	source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${SRC_FILES})
