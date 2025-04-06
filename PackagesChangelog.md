@@ -14,7 +14,7 @@ Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|378e69674c70dcbd
 Ports|[box64](http://github.com/ptitseb/box64)|6d7af8674ad8faf565e9c8614aba6633f24c7839|Apr 06, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|14d1a581a18c022c777ec70c8f060bd695fd2f0f|Apr 06, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|9e053bb1fafb10bf4773e02d2e94c6f47300107e|Apr 06, 2025
-Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|92ff7f5ca39085c10624fb3036bd4a726b026610|Apr 06, 2025
+Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|7cb00cb98f121e505a8ff1c4ffc26c4e9a5bdc1c|Apr 06, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|99d9576344b81731989a8981216fbfbd14e10ab6|Apr 06, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.5|Apr 06, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250406|Apr 06, 2025
@@ -25,6 +25,8 @@ Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|4daf9d466ad00897f755163
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250406|Apr 06, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|9541000c13775c4b26bd50feffa596a995348a6d|Apr 06, 2025
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|1204a582301e4c74082483381bdbb1a21990dcb6|Apr 06, 2025
+Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|5cd24817c99d56905432d93a93647e5c9423f6b9|Apr 06, 2025
+Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|11a6068a035b00b55d9245427b66d905723d5f45|Apr 06, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|2fd3712fd8b10d1558e1675c1e4cb5607af6d2ee|Apr 05, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|2fd3712fd8b10d1558e1675c1e4cb5607af6d2ee|Apr 05, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|e7fd06f822d426b451f75359cf9f1e59c945f339|Apr 05, 2025
@@ -46,7 +48,6 @@ Ports|[tr2x](http://github.com/LostArtefacts/TRX)|0c8a9ecb95d564119ea50a95373dd6
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|71d31330f993980ad0f3c0a687b48c5402ee130c|Apr 05, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|c21c0a0393a1cc68db7250022d18039a30de51f4|Apr 05, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|3114394019fc0f772c29d0a1f5493fbdce4745b0|Apr 05, 2025
-Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|1fa8c3ebcf5fc2fc14494a87812234b6c903b285|Apr 05, 2025
 Emulators|[libretro-sameboy](http://github.com/LIJI32/SameBoy)|8b2795268044c03c34f68c8b94d29ad038c88e80|Apr 05, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|d041a4fccd92a975a64f0cf89daf43e3479cbe3c|Apr 04, 2025
 Emulators|[play](https://github.com/jpd002/Play-.git)|225e37d0dc7b8a7bb6dc3534b992373477f9923d|Apr 04, 2025
@@ -78,7 +79,6 @@ Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|f3dc75a3bb57ac
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|62d3999407b6cd4b88b3db28aa9ac173be8aaea6|Apr 02, 2025
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|fad12b13042bc77ae7210154ef9095414d6ed9de|Apr 02, 2025
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|b6050abb21a625541f09a826dc1d60d00b123ca1|Apr 02, 2025
-Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|6139428207c993fa38aa19fb1967b36c9e364919|Apr 02, 2025
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|7e5c26c70a991aa5ff8cb18483cff08e89425b7b|Apr 01, 2025
 Audio|[cubeb](http://github.com/mozilla/cubeb)|975a727e5e308a04cfb9ecdf7ddaf1150ea3f733|Apr 01, 2025
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.04|Apr 01, 2025

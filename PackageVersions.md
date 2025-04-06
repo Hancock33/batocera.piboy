@@ -167,7 +167,7 @@ Emulators|[libretro-kronos](http://github.com/FCare/kronos)|d0384bc33aad06bfa9cf
 Emulators|[libretro-lowresnx](http://github.com/timoinutilis/lowres-nx)|85c80181d26bb5c2147ebc76bfc48bce9f8d73a8|Oct 21, 2024
 Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|e077129d7ade969e9a4f079389c66d4d278faa2e|Jan 28, 2025
 Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0276|Mar 30, 2025
-Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|1fa8c3ebcf5fc2fc14494a87812234b6c903b285|Apr 05, 2025
+Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|5cd24817c99d56905432d93a93647e5c9423f6b9|Apr 06, 2025
 Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|5d2ece5b6d7041aa9d0a7921eee42969f8bdf8a7|Feb 19, 2025
 Emulators|[libretro-melonds](http://github.com/libretro/melonds)|7a3c11ff970cd36ca806961fae6db94b30dd5401|Oct 21, 2024
 Emulators|[libretro-mesen](http://github.com/libretro/Mesen)|791c5e8153ee6e29691d45b5df2cf1151ff416f9|Oct 21, 2024
@@ -225,7 +225,7 @@ Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|9dcc3ff4ccf96
 Emulators|[libretro-uae4arm](http://github.com/chips-fr/uae4arm-rpi)|177c2f0e892adf2603ada9b150e31beffe0f76c3|Apr 05, 2022
 Emulators|[libretro-uzem](http://github.com/libretro/libretro-uzem)|cd6004ea143435cfdb6b12e7c6779dab499f7829|Oct 21, 2024
 Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|c6d13e669f19b26d7f2e0cef0f96f89f8c2fe01c|Apr 01, 2025
-Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|6139428207c993fa38aa19fb1967b36c9e364919|Apr 02, 2025
+Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|11a6068a035b00b55d9245427b66d905723d5f45|Apr 06, 2025
 Emulators|[libretro-vecx](http://github.com/libretro/libretro-vecx)|a103a212ca8644fcb5d76eac7cdec77223c4fb02|Oct 21, 2024
 Emulators|[libretro-vemulator](http://github.com/libretro/vemulator-libretro)|45d7556667549bb1c1b84d27fbffb7d2a633f5d3|Oct 21, 2024
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|9b201cdd612bfb12c8d86696656b79eaf25924ab|Mar 28, 2025
@@ -458,7 +458,7 @@ Ports|[hlsdk-xash3d-zombiex](http://github.com/FWGS/hlsdk-portable)|70fd2a934109
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|f56cee695cce96f5565be1c9f5799b6556792319|Mar 15, 2025
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|3f4bfd340730c0dc4443dd35e4d9a310ecf612ad|Mar 26, 2025
-Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|92ff7f5ca39085c10624fb3036bd4a726b026610|Apr 06, 2025
+Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|7cb00cb98f121e505a8ff1c4ffc26c4e9a5bdc1c|Apr 06, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250406|Apr 06, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14217|Mar 16, 2025
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
