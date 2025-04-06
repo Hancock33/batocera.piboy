@@ -4194,8 +4194,21 @@ openjkja:
   group:                ports
   path:                 /userdata/roms/ports/openjkja
   emulators:
-    openjkja:
-      openjkja:         { requireAnyOf: [BR2_PACKAGE_OPENJK] }
+    openjk:
+     openjk:           { requireAnyOf: [BR2_PACKAGE_OPENJK] }
+
+openjkjo:
+  name:                 Jedi Outcast
+  manufacturer:         Ports
+  release:              2002
+  hardware:             port
+  extensions:           [game]
+  platform:             pc
+  group:                ports
+  path:                 /userdata/roms/ports/openjkjo
+  emulators:
+    openjk:
+      openjk:           { requireAnyOf: [BR2_PACKAGE_OPENJK] }
 
 jkdf2:
   name:                 Jedi Knight - Dark Forces 2
@@ -4227,19 +4240,6 @@ jkdf2:
                         Trouvez la documentation ici : https://wiki.batocera.org/systems:jkdf2
   comment_br:           |
                         Para mais informações: https://wiki.batocera.org/systems:jkdf2
-
-openjkjo:
-  name:                 Jedi Outcast
-  manufacturer:         Ports
-  release:              2002
-  hardware:             port
-  extensions:           [game]
-  platform:             pc
-  group:                ports
-  path:                 /userdata/roms/ports/openjkjo
-  emulators:
-    openjkjo:
-      openjkjo:         { requireAnyOf: [BR2_PACKAGE_OPENJK] }
 
 opentyrian:
   name:                 Tyrian

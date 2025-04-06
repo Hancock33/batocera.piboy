@@ -49,6 +49,8 @@
 - Wine Proton 9.0.4 as a Wine runner from Kron4ek's Wine-Builds
 - Blake Stone port Bstone to play Aliens Of Gold or Planet Strike
 - OpenJKDF2 to play Jedi Knight Dark Forces 2 and Mysteries of the Sith.
+- OpenJK to play Jedi Academy & Jedi Outcast
+- Intel Quick Sync Video acceleration to ffmpeg for supported Intel GPUs
 ### Fixed
 - Fix some problems in ES and Batocera with IPv6 networks
 - Fix ES behavior with usb network tethering

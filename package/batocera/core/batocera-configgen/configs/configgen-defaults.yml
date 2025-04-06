@@ -684,12 +684,9 @@ openclaw:
 openjazz:
   emulator: openjazz
   core:     openjazz
-openjkja:
-  emulator: openjkja
-  core:     openjkja
-openjkjo:
-  emulator: openjkjo
-  core:     openjkjo
+jknight:
+  emulator: openjk
+  core:     openjk
 opentyrian:
   emulator: opentyrian
   core:     opentyrian
