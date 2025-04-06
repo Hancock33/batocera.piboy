@@ -65,8 +65,8 @@ class OpenJKGenerator(Generator):
             _logger.info("Could not determine which game you're using!")
             _logger.info("Rename your .jedi file as per the _infot.txt file")
             return
-        
-        ## Configuration 
+
+        ## Configuration
         mkdir_if_not_exists(config_path)
         # Set custom defaults
         options_to_set = {
@@ -96,7 +96,7 @@ class OpenJKGenerator(Generator):
             options_to_set["seta r_subdivisions"] = "20"
         elif geometric == "Medium":
             options_to_set["seta r_lodbias"] = "1"
-            options_to_set["seta r_subdivisions"] = "12"  
+            options_to_set["seta r_subdivisions"] = "12"
         else:
             remove_keys += ["seta r_lodbias", "seta r_subdivisions"]
         # Texture Detail
@@ -170,7 +170,7 @@ class OpenJKGenerator(Generator):
         if config_file_path.is_file():
             with config_file_path.open('r') as config_file:
                 lines = config_file.readlines()
-            
+
             # Remove keys if defined
             lines = [line for line in lines if not any(key in line for key in remove_keys)]
 
@@ -207,10 +207,10 @@ class OpenJKGenerator(Generator):
                 else:
                     shutil.copy2(src_item, dest_item)
                     _logger.debug(f"Copying {src_item} to {dest_item}")
-            
+
             if binary_dest.exists() and binary_dest.is_file():
                 os.chmod(binary_dest, 0o755)
-        
+
         # Change Directory & Prepare Command
         os.chdir(romdir)
 

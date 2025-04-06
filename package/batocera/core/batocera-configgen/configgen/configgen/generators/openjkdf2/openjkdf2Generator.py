@@ -231,7 +231,7 @@ class OpenJKDF2Generator(Generator):
                 if settings_processed:
                      _logger.warning(f"Settings {list(settings_processed.keys())} were not found in existing file {config_file}. Appending them.")
                      output_lines.extend(settings_processed.values())
-        
+
         # --- Write the final output ---
         try:
             with open(config_file, 'w') as f_write:
@@ -416,7 +416,7 @@ class OpenJKDF2Generator(Generator):
                         final_value = generator_default_value
 
                 json_target_settings[json_key] = final_value
-                       
+
             self._update_json_config(openjkdf2_config_file, json_target_settings)
 
         except Exception as e:

@@ -4,7 +4,7 @@ config BR2_PACKAGE_RGBDS
 	select BR2_PACKAGE_LIBPNG
 
 	help
-	  RGBDS (Rednex Game Boy Development System) is a free 
-	  assembler/linker package for the Game Boy / Game Boy Color. 
+	  RGBDS (Rednex Game Boy Development System) is a free
+	  assembler/linker package for the Game Boy / Game Boy Color.
 
 	  https://github.com/gbdev/rgbds
