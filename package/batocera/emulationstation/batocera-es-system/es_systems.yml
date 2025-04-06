@@ -4184,7 +4184,7 @@ jazz2:
   comment_br:           |
                         Para mais informações: https://wiki.batocera.org/systems:jazz2-native
 
-openjkja:
+jknight:
   name:                 Jedi Academy
   manufacturer:         Ports
   release:              2003
@@ -4197,7 +4197,7 @@ openjkja:
     openjk:
      openjk:           { requireAnyOf: [BR2_PACKAGE_OPENJK] }
 
-openjkjo:
+jknight:
   name:                 Jedi Outcast
   manufacturer:         Ports
   release:              2002

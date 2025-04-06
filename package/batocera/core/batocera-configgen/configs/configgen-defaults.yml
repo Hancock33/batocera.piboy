@@ -476,6 +476,9 @@ jazz2:
 jkdf2:
   emulator: openjkdf2
   core:     openjkdf2
+jknight:
+  emulator: openjk
+  core:     openjk
 jumpnbump:
   emulator: libretro
   core:     jumpnbump
@@ -684,9 +687,6 @@ openclaw:
 openjazz:
   emulator: openjazz
   core:     openjazz
-jknight:
-  emulator: openjk
-  core:     openjk
 opentyrian:
   emulator: opentyrian
   core:     opentyrian
