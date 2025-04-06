@@ -66,7 +66,7 @@ index 04ff8f8..770e425 100644
  To list the available inputs you should type:
  
 diff --git a/docs/lindbergh.conf b/docs/lindbergh.conf
-index d9e124b..5b75430 100644
+index 5e04619..a714649 100644
 --- a/docs/lindbergh.conf
 +++ b/docs/lindbergh.conf
 @@ -14,10 +14,11 @@ HEIGHT AUTO
@@ -86,10 +86,10 @@ index d9e124b..5b75430 100644
  # Set to 1 if you want to disable SDL (Fixes SRTV boost bar)
  # NO_SDL 0
 diff --git a/src/lindbergh/config.c b/src/lindbergh/config.c
-index 1ae5b8c..9fcd278 100644
+index f2dd92b..c746be2 100644
 --- a/src/lindbergh/config.c
 +++ b/src/lindbergh/config.c
-@@ -1484,34 +1484,43 @@ int readConfig(FILE *configFile, EmulatorConfig *config)
+@@ -1487,34 +1487,43 @@ int readConfig(FILE *configFile, EmulatorConfig *config)
  KeyMapping getDefaultKeymap()
  {
      KeyMapping defaultKeyMapping;
@@ -159,10 +159,10 @@ index 1ae5b8c..9fcd278 100644
  }
  
 diff --git a/src/lindbergh/config.h b/src/lindbergh/config.h
-index c0a3b48..e5369ac 100644
+index 9ce7933..574bf34 100644
 --- a/src/lindbergh/config.h
 +++ b/src/lindbergh/config.h
-@@ -278,7 +278,7 @@ typedef struct
+@@ -279,7 +279,7 @@ typedef struct
      char or2Netmask[16];
      float cpuFreqGhz;
      ArcadeInputs arcadeInputs;
@@ -992,7 +992,7 @@ index f1ae296..c0bc31d 100644
          break;
      }
 diff --git a/src/lindbergh/lindbergh.c b/src/lindbergh/lindbergh.c
-index 65673e8..2380b38 100644
+index 2a055aa..7946ac3 100644
 --- a/src/lindbergh/lindbergh.c
 +++ b/src/lindbergh/lindbergh.c
 @@ -17,7 +17,7 @@
@@ -1002,8 +1002,8 @@ index 65673e8..2380b38 100644
 -#define TEAM "bobbydilley, retrofan, dkeruza-neo, doozer, francesco, rolel, caviar-x"
 +#define TEAM "bobbydilley, retrofan, dkeruza-neo, doozer, francesco, rolel, caviar-x, dmanlfc"
  #define LINDBERGH_CONFIG_PATH "LINDBERGH_CONFIG_PATH"
+ #define LINDBERGH_LOADER_CURRENT_DIR "LINDBERGH_LOADER_CURRENT_DIR"
  #define MAX_PATH_LEN 1024
- 
 diff --git a/src/lindbergh/sdlcalls.c b/src/lindbergh/sdlcalls.c
 index 946e1c0..cd67569 100644
 --- a/src/lindbergh/sdlcalls.c

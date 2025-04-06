@@ -1,22 +1,26 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|f59507c8560bc016146c6bcbe4ead4463ffac9f0|Apr 06, 2025
+Emulators|[hatari](http://github.com/hatari/hatari)|b50190b0eb72908c5f6cc5cd209ce55de2ac3069|Apr 06, 2025
+Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|988a9ee6e308148b5eca3817900cc6122232888e|Apr 06, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|04d833d3e67b5a60007eaccf37681a6f9e54b0df|Apr 06, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|747cf57b6f90e072eb417fcb72f505a6b23c290c|Apr 06, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|d7bcb7102dc63921c1ae1e6c39069bfda5a951c4|Apr 06, 2025
+Ports|[omf2097](http://github.com/omf2097/openomf)|54da34575ee3615882b216035c9c46a51460257b|Apr 06, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.5|Apr 06, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250406|Apr 06, 2025
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|44666bae9acf9a07585937b9aaf7a18cfebb9dfe|Apr 06, 2025
+Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|1204a582301e4c74082483381bdbb1a21990dcb6|Apr 06, 2025
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|c9998dfb321e2841a301b67cbe787ddb4af0ec0a|Apr 06, 2025
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|4daf9d466ad00897f755163dd26f528d14e1db44|Apr 06, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250406|Apr 06, 2025
+Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|1204a582301e4c74082483381bdbb1a21990dcb6|Apr 06, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|2fd3712fd8b10d1558e1675c1e4cb5607af6d2ee|Apr 05, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|2fd3712fd8b10d1558e1675c1e4cb5607af6d2ee|Apr 05, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|e7fd06f822d426b451f75359cf9f1e59c945f339|Apr 05, 2025
 Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|19febba866d227cc16f8b3c814d6d5ae06c4d7a7|Apr 05, 2025
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|8380ec01786978003d4880e949b774b991d93207|Apr 05, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|3114394019fc0f772c29d0a1f5493fbdce4745b0|Apr 05, 2025
-Emulators|[hatari](http://github.com/hatari/hatari)|074eb120c0fab6b656ae09dafd47057ca003f902|Apr 05, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|bddf26b1f1e96cde8846da4d12c697e2b40169cd|Apr 05, 2025
-Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|c5fa5871d1e52452709fc08df0e17a7f385fa0c8|Apr 05, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.257|Apr 05, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-04-05|Apr 05, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|0c6f2b470fde23011ba3c840b6ed40f79cbee7b7|Apr 05, 2025
@@ -25,9 +29,7 @@ Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|8a
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45624|Apr 05, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|5fc3188bc8070bf15d13c3fd557a6ac9b374c42b|Apr 05, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|b0c25e3f006e8f1044e532d14de30a124f005a02|Apr 05, 2025
-Ports|[omf2097](http://github.com/omf2097/openomf)|ffffe7e3224e0bcaa283827b570666aab4c3e030|Apr 05, 2025
 Ports|[raze](http://github.com/ZDoom/Raze)|cb322b563d41e16bbbe4ab61a43a25c26e15b715|Apr 05, 2025
-Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|3b461923b94ff9d966b2ce2481cfdfe7b6d6a0e1|Apr 05, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|6d2d8c0367837788a3f863a32dd781f9e610b96f|Apr 05, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|a02892389d55211757b18bd269d093ad203403b7|Apr 05, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|9ceadd6e51f60cb0f5a71a225527d8f128a96048|Apr 05, 2025
@@ -35,7 +37,6 @@ Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|a8d4b
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|0c8a9ecb95d564119ea50a95373dd6d537bb2b1a|Apr 05, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|0c8a9ecb95d564119ea50a95373dd6d537bb2b1a|Apr 05, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|71d31330f993980ad0f3c0a687b48c5402ee130c|Apr 05, 2025
-Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|3b461923b94ff9d966b2ce2481cfdfe7b6d6a0e1|Apr 05, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|c21c0a0393a1cc68db7250022d18039a30de51f4|Apr 05, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|3114394019fc0f772c29d0a1f5493fbdce4745b0|Apr 05, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|1fa8c3ebcf5fc2fc14494a87812234b6c903b285|Apr 05, 2025
@@ -43,7 +44,6 @@ Emulators|[libretro-sameboy](http://github.com/LIJI32/SameBoy)|8b2795268044c03c3
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|d041a4fccd92a975a64f0cf89daf43e3479cbe3c|Apr 04, 2025
 Emulators|[play](https://github.com/jpd002/Play-.git)|225e37d0dc7b8a7bb6dc3534b992373477f9923d|Apr 04, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|f573b0c72c8cc3a90ddece336d54cfb0718ecc2e|Apr 04, 2025
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|613212f9e15f59825f7b81abc33add7624adedd7|Apr 04, 2025
 Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|68764f35899e133b402336843c046d75136eaf08|Apr 04, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|3e8754b5b544ce2bf6ab9ee97a8446b3c9e89680|Apr 04, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.0-beta.5|Apr 04, 2025
