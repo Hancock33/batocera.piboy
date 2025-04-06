@@ -3,8 +3,9 @@
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|f59507c8560bc016146c6bcbe4ead4463ffac9f0|Apr 06, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|2bd9e5fbb11744431dd7599b2788b8e343dab610|Apr 06, 2025
 Emulators|[hatari](http://github.com/hatari/hatari)|b50190b0eb72908c5f6cc5cd209ce55de2ac3069|Apr 06, 2025
-Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|a5633bbf1de29e83711721f8c25d1a7c291df596|Apr 06, 2025
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|04d833d3e67b5a60007eaccf37681a6f9e54b0df|Apr 06, 2025
+Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|a68dcbbdcfb4dc58480041e907c78648fc446089|Apr 06, 2025
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.259|Apr 06, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|b3bbd939e3604eb9a259fc829270c4f0c3856f9d|Apr 06, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|747cf57b6f90e072eb417fcb72f505a6b23c290c|Apr 06, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|d7bcb7102dc63921c1ae1e6c39069bfda5a951c4|Apr 06, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45625|Apr 06, 2025
@@ -13,7 +14,7 @@ Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|378e69674c70dcbd
 Ports|[box64](http://github.com/ptitseb/box64)|6d7af8674ad8faf565e9c8614aba6633f24c7839|Apr 06, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|14d1a581a18c022c777ec70c8f060bd695fd2f0f|Apr 06, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|9e053bb1fafb10bf4773e02d2e94c6f47300107e|Apr 06, 2025
-Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|4f3d081659fdbcb51c4da606e8cdacf17a9da7d2|Apr 06, 2025
+Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|92ff7f5ca39085c10624fb3036bd4a726b026610|Apr 06, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|99d9576344b81731989a8981216fbfbd14e10ab6|Apr 06, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.5|Apr 06, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250406|Apr 06, 2025
@@ -31,7 +32,6 @@ Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|19febba866d227c
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|8380ec01786978003d4880e949b774b991d93207|Apr 05, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|3114394019fc0f772c29d0a1f5493fbdce4745b0|Apr 05, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|bddf26b1f1e96cde8846da4d12c697e2b40169cd|Apr 05, 2025
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.257|Apr 05, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-04-05|Apr 05, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|0c6f2b470fde23011ba3c840b6ed40f79cbee7b7|Apr 05, 2025
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|49e36719dc5f167c1a6ca5f1355f308d25b929f2|Apr 05, 2025

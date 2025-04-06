@@ -244,7 +244,7 @@ Emulators|[libretro-zc250x](https://github.com/netux79/zc250x-libretro.git)|cfe8
 Emulators|[libserum](http://github.com/zesinger/libserum)|v2.0.2|Sept 15, 2024
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.9.6|Feb 22, 2025
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|d02c931cfdb11e7c58581e2276ae81af23451a31|Mar 31, 2025
-Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|a5633bbf1de29e83711721f8c25d1a7c291df596|Apr 06, 2025
+Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|a68dcbbdcfb4dc58480041e907c78648fc446089|Apr 06, 2025
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0276|Mar 30, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|0fcf1f6e3a443cb249f85d948ff6e58dc58501d6|Mar 09, 2025
 Emulators|[model2emu](https://github.com/batocera-linux/model2emu/raw/main)|57b5cff598e63ca688a9a58f3b341104e43c4b01|May 15, 2022
@@ -261,7 +261,7 @@ Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e9171db39118eac25f527eca|May 18, 2024
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|9a0bbeb4a60ac354bcc449a03da745758f5bd9bc|Apr 03, 2025
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.257|Apr 05, 2025
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.259|Apr 06, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|225e37d0dc7b8a7bb6dc3534b992373477f9923d|Apr 04, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|f573b0c72c8cc3a90ddece336d54cfb0718ecc2e|Apr 04, 2025
@@ -271,7 +271,7 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|818aca56efd784624a241a12936b5c0864e3ddd8|Mar 21, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|c9998dfb321e2841a301b67cbe787ddb4af0ec0a|Apr 06, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20250308|Mar 08, 2025
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|04d833d3e67b5a60007eaccf37681a6f9e54b0df|Apr 06, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|b3bbd939e3604eb9a259fc829270c4f0c3856f9d|Apr 06, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-04-05|Apr 05, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.3.29|Mar 31, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|c35d72a2d4c7ad234b49ef5f00ed2e9789af54df|Mar 28, 2025
@@ -458,7 +458,7 @@ Ports|[hlsdk-xash3d-zombiex](http://github.com/FWGS/hlsdk-portable)|70fd2a934109
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|f56cee695cce96f5565be1c9f5799b6556792319|Mar 15, 2025
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|3f4bfd340730c0dc4443dd35e4d9a310ecf612ad|Mar 26, 2025
-Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|4f3d081659fdbcb51c4da606e8cdacf17a9da7d2|Apr 06, 2025
+Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|92ff7f5ca39085c10624fb3036bd4a726b026610|Apr 06, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250406|Apr 06, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14217|Mar 16, 2025
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
