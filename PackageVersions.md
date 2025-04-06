@@ -94,7 +94,7 @@ Emulators|[libaltsound](http://github.com/vpinball/libaltsound)|b8f397858cbc7a87
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|f54f084e995782948d30554391ea57a02010d3db|Feb 27, 2025
 Emulators|[libdof](http://github.com/jsm174/libdof)|9213874e049c9b8903e1569b7d1b4d546e134ead|Feb 26, 2025
 Emulators|[libframeutil](http://github.com/ppuc/libframeutil)|30048ca23d41ca0a8f7d5ab75d3f646a19a90182|Apr 13, 2024
-Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|4cd80bf33b11d400865aedc3e681ac3a2d38b970|Mar 30, 2025
+Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|92c4450a1bc1acb58bd02bbb99b57e5036919cdf|Apr 06, 2025
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|v3.6.0-1227-ecd032e|Jan 29, 2025
 Emulators|[libpupdmd](http://github.com/PPUC/libpupdmd)|124f45e5ddd59ceb339591de88fcca72f8c54612|Jun 28, 2024
 Emulators|[libretro-2048](http://github.com/libretro/libretro-2048)|86e02d3c2dd76858db7370f5df1ccfc33b3abee1|Dec 27, 2024
@@ -421,7 +421,7 @@ Ports|[awgl](http://github.com/M-HT/rawgl)|df249583a87d5c2f73cb362f7163799e01cd0
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[bloodmod](http://github.com/dhewm/dhewm3-sdk)|f35e2718939b68c75f2f3a07749554129e049c30|Sept 27, 2024
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|a12e0a8cc4b3a8ce9d9f411592037b1ee27fc751|Dec 28, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|5fc3188bc8070bf15d13c3fd557a6ac9b374c42b|Apr 05, 2025
+Ports|[box64](http://github.com/ptitseb/box64)|6d7af8674ad8faf565e9c8614aba6633f24c7839|Apr 06, 2025
 Ports|[box86](http://github.com/ptitseb/box86)|d0aad67ba0626959313f36b9e29055d121d7a65e|Mar 07, 2025
 Ports|[bstone](http://github.com/bibendovsky/bstone)|11ff54148b62e223d84cd7095cfdee4811e5eeca|Mar 22, 2025
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
@@ -429,7 +429,7 @@ Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|80c4233c712c1fcd8f63
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|c17ca71650118b82723d1949ae3163fe8fe535ab|Mar 26, 2025
 Ports|[cdoom](http://github.com/dhewm/dhewm3-sdk)|c6d2afac06b3b0b16e2efc7e23e27c60822eefa9|Apr 19, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|14c9da0038875154991109ceec836faabb8994d5|Jan 26, 2025
-Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|b0c25e3f006e8f1044e532d14de30a124f005a02|Apr 05, 2025
+Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|f1cb271240683d36ab42cf71503a8a7ce7b8cd7e|Apr 06, 2025
 Ports|[d3le](http://github.com/dhewm/dhewm3-sdk)|f1cf9267b0f3b7100ae6ecdbdc5a44b98547f246|Feb 05, 2025
 Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|72d2c417645d47a382b061d2a6db4a46e060145d|Apr 19, 2024
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|ee6addacfe721e587c3b2c9a2594953cd9c774bc|Oct 20, 2024
@@ -458,7 +458,7 @@ Ports|[hlsdk-xash3d-zombiex](http://github.com/FWGS/hlsdk-portable)|70fd2a934109
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|f56cee695cce96f5565be1c9f5799b6556792319|Mar 15, 2025
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|3f4bfd340730c0dc4443dd35e4d9a310ecf612ad|Mar 26, 2025
-Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|9998ffdd236bad5c86586e9aa96547a6a36a8564|Apr 03, 2025
+Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|d9f0550e32d1def9ce3811405ae4f192fa00c406|Apr 06, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250406|Apr 06, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14217|Mar 16, 2025
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024

@@ -6,10 +6,14 @@ Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|04d833d3e67b5a60007eaccf37681a6f9e54b0df|Apr 06, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|747cf57b6f90e072eb417fcb72f505a6b23c290c|Apr 06, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|d7bcb7102dc63921c1ae1e6c39069bfda5a951c4|Apr 06, 2025
+Ports|[box64](http://github.com/ptitseb/box64)|6d7af8674ad8faf565e9c8614aba6633f24c7839|Apr 06, 2025
+Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|f1cb271240683d36ab42cf71503a8a7ce7b8cd7e|Apr 06, 2025
+Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|d9f0550e32d1def9ce3811405ae4f192fa00c406|Apr 06, 2025
 Ports|[omf2097](http://github.com/omf2097/openomf)|54da34575ee3615882b216035c9c46a51460257b|Apr 06, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.5|Apr 06, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250406|Apr 06, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|1204a582301e4c74082483381bdbb1a21990dcb6|Apr 06, 2025
+Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|92c4450a1bc1acb58bd02bbb99b57e5036919cdf|Apr 06, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|c9998dfb321e2841a301b67cbe787ddb4af0ec0a|Apr 06, 2025
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|4daf9d466ad00897f755163dd26f528d14e1db44|Apr 06, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250406|Apr 06, 2025
@@ -27,8 +31,6 @@ Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|0c6f2b470fde2301
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|49e36719dc5f167c1a6ca5f1355f308d25b929f2|Apr 05, 2025
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|8a88bb0e887f4e07d512a213d1082a8b56b4aa28|Apr 05, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45624|Apr 05, 2025
-Ports|[box64](http://github.com/ptitseb/box64)|5fc3188bc8070bf15d13c3fd557a6ac9b374c42b|Apr 05, 2025
-Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|b0c25e3f006e8f1044e532d14de30a124f005a02|Apr 05, 2025
 Ports|[raze](http://github.com/ZDoom/Raze)|cb322b563d41e16bbbe4ab61a43a25c26e15b715|Apr 05, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|6d2d8c0367837788a3f863a32dd781f9e610b96f|Apr 05, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|a02892389d55211757b18bd269d093ad203403b7|Apr 05, 2025
@@ -64,7 +66,6 @@ Emulators|[vita3k](https://github.com/vita3k/vita3k)|46cf9d394fe7acf4105bbfb3729
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.13.0-rc1|Apr 03, 2025
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|38d10a3421d6b5cd4f7579e554fbc58c02ea382d|Apr 03, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|3d7a8e8f4831c3f464f72a23b785446cb9c32d90|Apr 03, 2025
-Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|9998ffdd236bad5c86586e9aa96547a6a36a8564|Apr 03, 2025
 Wine|[wine-proton](http://github.com/ValveSoftware/wine)|69f517f4ab1fe5556382d200fb1985e9892f2c01|Apr 03, 2025
 Ports|[openlara](http://github.com/XProger/OpenLara)|3d4092c34ac2255c885b37fdb89aef961966fa9d|Apr 03, 2025
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|df8eda7224094f6c4b09ac38c293305101bcc9d0|Apr 03, 2025
@@ -97,7 +98,6 @@ Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|a81f4146b72a8
 Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|eb10fa704f910a1a8312e3f499adb8b1d5f7e054|Mar 30, 2025
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0276|Mar 30, 2025
 Utils|[fdupes](http://github.com/adrianlopezroche/fdupes)|v2.4.0|Mar 30, 2025
-Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|4cd80bf33b11d400865aedc3e681ac3a2d38b970|Mar 30, 2025
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|865b1214bf72530b147e0f14e1e205e6897082ac|Mar 30, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|56836ed4f0728d0e127c7d522326db183483c5ef|Mar 30, 2025
 Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0276|Mar 30, 2025
