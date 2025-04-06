@@ -13645,7 +13645,7 @@ msgctxt "game_options"
 msgid "RENDERING"
 msgstr "REDERIZADO"
 
-#. TRANSLATION: ppsspp, thextech
+#. TRANSLATION: thextech
 msgctxt "game_options"
 msgid "RENDERING MODE"
 msgstr "MODO DE RENDERIZADO"
@@ -14453,6 +14453,11 @@ msgstr "SIMPLE"
 msgctxt "game_options"
 msgid "SIO ACCELERATION"
 msgstr "ACELERACIÓN SIO"
+
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "SKIP BUFFER EFFECTS"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -15508,15 +15513,15 @@ msgstr "Saltar inicio"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid ""
-"Skip buffer disables auto frame skip and renders at display output "
-"resolution."
-msgstr ""
+msgid "Skip buffer effects"
+msgstr "Omita os efectos do buffer"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid "Skip buffer effects"
-msgstr "Omita os efectos do buffer"
+msgid ""
+"Skip buffer effects disables auto frameskip and renders at display output "
+"resolution."
+msgstr ""
 
 #. TRANSLATION: rtcw.keys, theforceengine.keys
 msgctxt "keys_files"

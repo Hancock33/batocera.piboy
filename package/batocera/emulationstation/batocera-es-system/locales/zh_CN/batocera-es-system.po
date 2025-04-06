@@ -13395,7 +13395,7 @@ msgctxt "game_options"
 msgid "RENDERING"
 msgstr "渲染"
 
-#. TRANSLATION: ppsspp, thextech
+#. TRANSLATION: thextech
 msgctxt "game_options"
 msgid "RENDERING MODE"
 msgstr "渲染模式"
@@ -14189,6 +14189,11 @@ msgstr "单"
 msgctxt "game_options"
 msgid "SIO ACCELERATION"
 msgstr "SIO加速度"
+
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "SKIP BUFFER EFFECTS"
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -15230,15 +15235,15 @@ msgstr "跳过首字母"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid ""
-"Skip buffer disables auto frame skip and renders at display output "
-"resolution."
-msgstr ""
+msgid "Skip buffer effects"
+msgstr "非缓冲效果"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid "Skip buffer effects"
-msgstr "非缓冲效果"
+msgid ""
+"Skip buffer effects disables auto frameskip and renders at display output "
+"resolution."
+msgstr ""
 
 #. TRANSLATION: rtcw.keys, theforceengine.keys
 msgctxt "keys_files"

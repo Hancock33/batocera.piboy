@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Batocera.linux Options\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-04-02 07:47+0200\n"
+"PO-Revision-Date: 2025-04-04 15:02+0200\n"
 "Last-Translator: Daniel Nylander <github@danielnylander.se>\n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
@@ -2235,7 +2235,7 @@ msgstr "URL TILL AI-ÖVERSÄTTNINGSTJÄNST"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "AIMING CROSSHAIR"
-msgstr ""
+msgstr "HÅRKORS FÖR SIKTE"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -2400,7 +2400,7 @@ msgstr "ASMJIT omkompilator"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "ASPECT"
-msgstr ""
+msgstr "BILDFÖRHÅLLANDE"
 
 #. TRANSLATION: bermuda, bigpemu, cemu, cgenius, citron, ...
 msgctxt "game_options"
@@ -2530,7 +2530,7 @@ msgstr "AUTO-SIKTE"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "AUTO AIMING"
-msgstr ""
+msgstr "AUTO-SIKTE"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -2570,7 +2570,7 @@ msgstr "SPARA/LÄS IN AUTOMATISKT VID SPELSTART"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "AUTO SWITCH WEAPON"
-msgstr ""
+msgstr "BYT AUTOMATISKT VAPEN"
 
 #. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -2585,7 +2585,7 @@ msgstr "AUTOMATISK BILDRUTEFÖRDRÖJNING"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "AUTOMATICALLY RELOAD WEAPON"
-msgstr ""
+msgstr "LADDA AUTOMATISKT OM VAPEN"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -3418,7 +3418,7 @@ msgstr "Automatiskt"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Automatic pickup weapon."
-msgstr ""
+msgstr "Ta automatiskt upp vapen."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -4677,7 +4677,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "CROSSHAIR SIZE"
-msgstr ""
+msgstr "STORLEK FÖR HÅRKORS"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -4782,12 +4782,12 @@ msgstr "ANPASSA EMULERAD WIIMOTE & GAMEPAD"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "CUTSCENE SUBTITLES"
-msgstr ""
+msgstr "UNDERTEXT MELLANSCENER"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "CUTSCENES"
-msgstr ""
+msgstr "MELLANSCENER"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -5131,7 +5131,7 @@ msgstr "Kinesiska (traditionell) [Big5]"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose Screen Space Ambient Occlusion for better lighting."
-msgstr ""
+msgstr "Välj Screen Space Ambient Occlusion för bättre belysning."
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -5146,7 +5146,7 @@ msgstr "Välj kabeltyp för TV:n."
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose difficulty for the game."
-msgstr ""
+msgstr "Välj svårighetsgrad för spelet."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -5883,7 +5883,7 @@ msgstr "UTVECKLARMENY"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "DIFFICULTY"
-msgstr ""
+msgstr "SVÅRIGHETSGRAD"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -6301,7 +6301,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Disable mission start confirmation."
-msgstr ""
+msgstr "Inaktivera bekräftelse av uppdragsstart."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -6317,7 +6317,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Disable weapon waggle."
-msgstr ""
+msgstr "Inaktivera vickning av vapen."
 
 #. TRANSLATION: bigpemu, bstone, citron, duckstation, f2bgl, ...
 msgctxt "game_options"
@@ -6529,7 +6529,7 @@ msgstr "DualShock har stöd för rumble. Alla spel har inte stöd för DualShock
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Duck"
-msgstr ""
+msgstr "Ducka"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -7047,7 +7047,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Enable aiming crosshair."
-msgstr ""
+msgstr "Aktivera hårkors för sikte."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -7057,7 +7057,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Enable auto aiming."
-msgstr ""
+msgstr "Aktivera automatisk siktning."
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -7100,7 +7100,7 @@ msgstr "Aktivera fritt spelande för spel som stöds."
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Enable full subtitles on cutscenes."
-msgstr ""
+msgstr "Aktivera fullständiga undertexter för mellanscener."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -7130,7 +7130,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Enable high dots per inch."
-msgstr ""
+msgstr "Aktivera höga punkter per tum."
 
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
@@ -7205,7 +7205,7 @@ msgstr "Aktivera korrekt quad-rendering (för avancerade system)."
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Enable rotation on overlay map."
-msgstr ""
+msgstr "Aktivera rotering av överläggskarta."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -7811,7 +7811,7 @@ msgstr "FIDELITY FX SUPER RESOLUTION"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "FIELD OF VIEW"
-msgstr ""
+msgstr "SYNFÄLT"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -7841,7 +7841,7 @@ msgstr "INSTÄLLNINGAR FÖR FIRMWARE"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "FIST CROSSHAIR"
-msgstr ""
+msgstr "HÅRKORS FÖR KNYTNÄVE"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -7936,12 +7936,12 @@ msgstr "TVINGA WINDOWS CE-LÄGE"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "FOV VERTICAL"
-msgstr ""
+msgstr "SYNFÄLT VERTIKALT"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "FPS LIMIT"
-msgstr ""
+msgstr "FPS-GRÄNS"
 
 #. TRANSLATION: lindbergh-loader, wine
 msgctxt "game_options"
@@ -8114,7 +8114,7 @@ msgstr "Faroeöarna"
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Fast"
-msgstr ""
+msgstr "Snabb"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -8158,12 +8158,12 @@ msgstr "FidelityFX Super Resolution"
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Field Light"
-msgstr ""
+msgstr "Fältljus"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Field of view is vertical (Hor+)."
-msgstr ""
+msgstr "Synfält är vertikalt (Hor+)."
 
 #. TRANSLATION: libretro/uae4arm
 msgctxt "game_options"
@@ -8217,12 +8217,12 @@ msgstr "Skjut"
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Fire 1"
-msgstr ""
+msgstr "Skjut 1"
 
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Fire 2"
-msgstr ""
+msgstr "Skjut 2"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -8783,7 +8783,7 @@ msgstr "GAMEPAD-MARKÖRENS HASTIGHET"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "GAMEPLAY"
-msgstr ""
+msgstr "SPELNING"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -8908,7 +8908,7 @@ msgstr "GDC"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "GENERAL"
-msgstr ""
+msgstr "ALLMÄNT"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -9363,7 +9363,7 @@ msgstr "DÖLJ NVIDIA GPU"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "HIDPI"
-msgstr ""
+msgstr "HIDPI"
 
 #. TRANSLATION: cannonball
 msgctxt "game_options"
@@ -10303,7 +10303,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "KEEP LIGHTSABER"
-msgstr ""
+msgstr "BEHÅLL LJUSSABEL"
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
@@ -10517,12 +10517,12 @@ msgstr "LJUSPISTOLER"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "LIGHTSABER CAMERA"
-msgstr ""
+msgstr "KAMERA FÖR LJUSSABEL"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "LIGHTSABER CROSSHAIR"
-msgstr ""
+msgstr "HÅRKORS FÖR LJUSSABEL"
 
 #. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
@@ -10927,7 +10927,7 @@ msgstr "MANUELL TEXTURSAMPLING"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "MAP ROTATION"
-msgstr ""
+msgstr "KARTROTATION"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -10992,7 +10992,7 @@ msgstr "MISSILE COMMAND 3D VR"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "MISSION START"
-msgstr ""
+msgstr "UPPDRAGSSTART"
 
 #. TRANSLATION: hatari, libretro/fuse, libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -11215,7 +11215,7 @@ msgstr "Ställ in cykler per sekund manuellt. Använd med försiktighet."
 #. TRANSLATION: openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Map"
-msgstr ""
+msgstr "Karta"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -11445,7 +11445,7 @@ msgstr "Meny tillbaka"
 #. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Menu back / exit"
-msgstr ""
+msgstr "Meny tillbaka / avsluta"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
@@ -11460,12 +11460,12 @@ msgstr "Meny Enter"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu left"
-msgstr ""
+msgstr "Meny vänster"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu right"
-msgstr ""
+msgstr "Meny höger"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
@@ -11758,12 +11758,12 @@ msgstr "NEJ (STANDARD)"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "NO DANGEROUS WEAPONS"
-msgstr ""
+msgstr "INGA FARLIGA VAPEN"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "NO WEAKER WEAPONS"
-msgstr ""
+msgstr "INGA SVAGA VAPEN"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -12028,17 +12028,17 @@ msgstr "New3D"
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Next Force Power"
-msgstr ""
+msgstr "Nästa kraft"
 
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Next Inventory Item"
-msgstr ""
+msgstr "Nästa föremål"
 
 #. TRANSLATION: openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
-msgstr ""
+msgstr "Nästa vapen"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
@@ -12755,7 +12755,7 @@ msgstr "FYSISK TANGENTBORDSLAYOUT"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "PICKUP WEAPON"
-msgstr ""
+msgstr "TA UPP VAPEN"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -12999,7 +12999,7 @@ msgstr "Delvis"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Pause"
-msgstr ""
+msgstr "Paus"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -13133,12 +13133,12 @@ msgstr "Rosa - Blossom Pink"
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Pitch Down"
-msgstr ""
+msgstr "Titta neråt"
 
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Pitch Up"
-msgstr ""
+msgstr "Titta uppåt"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -13387,17 +13387,17 @@ msgstr "Tryck på Y-knappen för \"Ja\""
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous Force Power"
-msgstr ""
+msgstr "Föregående kraft"
 
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous Inventory Item"
-msgstr ""
+msgstr "Föregående föremål"
 
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous Weapon"
-msgstr ""
+msgstr "Föregående vapen"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -13412,7 +13412,7 @@ msgstr "Föregående plats"
 #. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous weapon"
-msgstr ""
+msgstr "Föregående vapen"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -13546,7 +13546,7 @@ msgstr "REGION"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "RELOAD WEAPON"
-msgstr ""
+msgstr "LADDA OM VAPEN"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -13603,7 +13603,7 @@ msgctxt "game_options"
 msgid "RENDERING"
 msgstr "RENDERING"
 
-#. TRANSLATION: ppsspp, thextech
+#. TRANSLATION: thextech
 msgctxt "game_options"
 msgid "RENDERING MODE"
 msgstr "RENDERINGSLÄGE"
@@ -14408,6 +14408,11 @@ msgctxt "game_options"
 msgid "SIO ACCELERATION"
 msgstr "SIO-ACCELERERING"
 
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "SKIP BUFFER EFFECTS"
+msgstr ""
+
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "SKIP CUTSCENES"
@@ -14586,7 +14591,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "SSAO"
-msgstr ""
+msgstr "SSAO"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -14691,7 +14696,7 @@ msgstr "VÄXLA GAMEPADS"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "SWITCH WEAPON"
-msgstr ""
+msgstr "BYT VAPEN"
 
 #. TRANSLATION: libretro/doublecherrygb, libretro/tgbdual
 msgctxt "game_options"
@@ -15087,7 +15092,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Set the crosshair size."
-msgstr ""
+msgstr "Ställ in storlek för korshår."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -15107,12 +15112,12 @@ msgstr "Ställ in skärmens upplösning. Påverkar inte renderingsupplösningen.
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Set the field of view."
-msgstr ""
+msgstr "Ställ in synfältet."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Set the fps limit."
-msgstr ""
+msgstr "Ställ in bildfrekvensgräns."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -15246,12 +15251,12 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Show Crosshair with fist."
-msgstr ""
+msgstr "Visa hårkors med knytnäve."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Show Crosshair with lightsaber."
-msgstr ""
+msgstr "Visa hårkors med ljussabel."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -15460,15 +15465,15 @@ msgstr "Hoppa över inledning"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid ""
-"Skip buffer disables auto frame skip and renders at display output "
-"resolution."
-msgstr ""
+msgid "Skip buffer effects"
+msgstr "Hoppa över bufferteffekter"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid "Skip buffer effects"
-msgstr "Hoppa över bufferteffekter"
+msgid ""
+"Skip buffer effects disables auto frameskip and renders at display output "
+"resolution."
+msgstr ""
 
 #. TRANSLATION: rtcw.keys, theforceengine.keys
 msgctxt "keys_files"
@@ -17337,7 +17342,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Use 1:1 aspect."
-msgstr ""
+msgstr "Använd 1:1 bildförhållande."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -17348,7 +17353,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Use Force Power"
-msgstr ""
+msgstr "Använd kraften"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -17358,7 +17363,7 @@ msgstr "Använd värd"
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Use Inventory Item"
-msgstr ""
+msgstr "Använd föremål"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -17867,12 +17872,12 @@ msgstr "VARNA FÖR FUNKTIONER SOM INTE STÖDS"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "WEAPON PICKUP"
-msgstr ""
+msgstr "TA UPP VAPEN"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "WEAPON WAGGLE"
-msgstr ""
+msgstr "VAPENVICKNING"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -18216,7 +18221,7 @@ msgstr "Zon som spelet inte reagerar på ratten för (i grader)"
 #. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Zoom in"
-msgstr ""
+msgstr "Zooma in"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -18231,7 +18236,7 @@ msgstr "Zooma in x5"
 #. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Zoom out"
-msgstr ""
+msgstr "Zooma ut"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -18929,6 +18934,10 @@ msgstr "gul/blå"
 #~ "avancerade system."
 
 #~ msgctxt "game_options"
+#~ msgid "Enable lightsaber auot-camera."
+#~ msgstr "Aktivera automatisk kamera för ljussabel."
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enable mouse input for trackballs, spinners, lightguns (if no gun "
 #~ "connected), and similar controls"
@@ -19256,10 +19265,6 @@ msgstr "gul/blå"
 #~ msgctxt "keys_files"
 #~ msgid "Zoon in"
 #~ msgstr "Zooma in"
-
-#~ msgctxt "keys_files"
-#~ msgid "Zoon out"
-#~ msgstr "Zooma ut"
 
 #~ msgctxt "game_options"
 #~ msgid "external (variable fps)"
