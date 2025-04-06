@@ -1,218 +1,5 @@
-From 282dc82848d07891272318e21cde7e040edd2654 Mon Sep 17 00:00:00 2001
-From: Megamouse <studienricky89@googlemail.com>
-Date: Wed, 2 Apr 2025 19:39:30 +0200
-Subject: [PATCH 1/2] Update to Qt 6.9.0
-
----
- .ci/build-mac-arm64.sh                   |  4 ++--
- .ci/build-mac.sh                         |  4 ++--
- .cirrus.yml                              |  4 ++--
- .github/workflows/rpcs3.yml              |  4 ++--
- BUILDING.md                              | 10 +++++-----
- azure-pipelines.yml                      |  4 ++--
- rpcs3/rpcs3qt/game_list_frame.cpp        |  4 ++--
- rpcs3/rpcs3qt/ps_move_tracker_dialog.cpp |  5 +++--
- 8 files changed, 20 insertions(+), 19 deletions(-)
-
-diff --git a/.ci/build-mac-arm64.sh b/.ci/build-mac-arm64.sh
-index a9698a88807a..9c8ff39685a9 100644
---- a/.ci/build-mac-arm64.sh
-+++ b/.ci/build-mac-arm64.sh
-@@ -72,13 +72,13 @@ if [ ! -d "/tmp/Qt/$QT_VER" ]; then
-   git clone https://github.com/engnr/qt-downloader.git
-   cd qt-downloader
-   git checkout f52efee0f18668c6d6de2dec0234b8c4bc54c597
--  # nested Qt 6.8.3 URL workaround
-+  # nested Qt 6.9.0 URL workaround
-   # sed -i '' "s/'qt{0}_{0}{1}{2}'.format(major, minor, patch)]))/'qt{0}_{0}{1}{2}'.format(major, minor, patch), 'qt{0}_{0}{1}{2}'.format(major, minor, patch)]))/g" qt-downloader
-   # sed -i '' "s/'{}\/{}\/qt{}_{}\/'/'{0}\/{1}\/qt{2}_{3}\/qt{2}_{3}\/'/g" qt-downloader
-   cd "/tmp/Qt"
-   "$BREW_X64_PATH/bin/pipenv" run pip3 install py7zr requests semantic_version lxml
-   mkdir -p "$QT_VER/macos" ; ln -s "macos" "$QT_VER/clang_64"
--  # sed -i '' 's/args\.version \/ derive_toolchain_dir(args) \/ //g' "$WORKDIR/qt-downloader/qt-downloader" # Qt 6.8.3 workaround
-+  # sed -i '' 's/args\.version \/ derive_toolchain_dir(args) \/ //g' "$WORKDIR/qt-downloader/qt-downloader" # Qt 6.9.0 workaround
-   "$BREW_X64_PATH/bin/pipenv" run "$WORKDIR/qt-downloader/qt-downloader" macos desktop "$QT_VER" clang_64 --opensource --addons qtmultimedia qtimageformats # -o "$QT_VER/clang_64"
- fi
- 
-diff --git a/.ci/build-mac.sh b/.ci/build-mac.sh
-index 287bd3949e59..46186d10d0ec 100644
---- a/.ci/build-mac.sh
-+++ b/.ci/build-mac.sh
-@@ -39,13 +39,13 @@ if [ ! -d "/tmp/Qt/$QT_VER" ]; then
-   git clone https://github.com/engnr/qt-downloader.git
-   cd qt-downloader
-   git checkout f52efee0f18668c6d6de2dec0234b8c4bc54c597
--  # nested Qt 6.8.3 URL workaround
-+  # nested Qt 6.9.0 URL workaround
-   # sed -i '' "s/'qt{0}_{0}{1}{2}'.format(major, minor, patch)]))/'qt{0}_{0}{1}{2}'.format(major, minor, patch), 'qt{0}_{0}{1}{2}'.format(major, minor, patch)]))/g" qt-downloader
-   # sed -i '' "s/'{}\/{}\/qt{}_{}\/'/'{0}\/{1}\/qt{2}_{3}\/qt{2}_{3}\/'/g" qt-downloader
-   cd "/tmp/Qt"
-   "$BREW_X64_PATH/bin/pipenv" run pip3 install py7zr requests semantic_version lxml
-   mkdir -p "$QT_VER/macos" ; ln -s "macos" "$QT_VER/clang_64"
--  # sed -i '' 's/args\.version \/ derive_toolchain_dir(args) \/ //g' "$WORKDIR/qt-downloader/qt-downloader" # Qt 6.8.3 workaround
-+  # sed -i '' 's/args\.version \/ derive_toolchain_dir(args) \/ //g' "$WORKDIR/qt-downloader/qt-downloader" # Qt 6.9.0 workaround
-   "$BREW_X64_PATH/bin/pipenv" run "$WORKDIR/qt-downloader/qt-downloader" macos desktop "$QT_VER" clang_64 --opensource --addons qtmultimedia qtimageformats # -o "$QT_VER/clang_64"
- fi
- 
-diff --git a/.cirrus.yml b/.cirrus.yml
-index 3b714131021b..0c8844cee8d8 100644
---- a/.cirrus.yml
-+++ b/.cirrus.yml
-@@ -7,7 +7,7 @@ env:
-   BUILD_SOURCEBRANCHNAME: $CIRRUS_BRANCH
-   RPCS3_TOKEN: ENCRYPTED[100ebb8e3552bf2021d0ef55dccda3e58d27be5b6cab0b0b92843ef490195d3c4edaefa087e4a3b425caa6392300b9b1]
-   QT_VER_MAIN: '6'
--  QT_VER: '6.8.3'
-+  QT_VER: '6.9.0'
-   LLVM_COMPILER_VER: '19'
-   LLVM_VER: '19.1.7'
- 
-@@ -23,7 +23,7 @@ env:
- #     COMPILER: msvc
- #     BUILD_ARTIFACTSTAGINGDIRECTORY: ${CIRRUS_WORKING_DIR}\artifacts\
- #     QT_VER_MSVC: 'msvc2022'
--#     QT_DATE: '202503201308'
-+#     QT_DATE: '202503301022'
- #     QTDIR: C:\Qt\${QT_VER}\${QT_VER_MSVC}_64
- #     VULKAN_VER: '1.3.268.0'
- #     VULKAN_SDK_SHA: '8459ef49bd06b697115ddd3d97c9aec729e849cd775f5be70897718a9b3b9db5'
-diff --git a/.github/workflows/rpcs3.yml b/.github/workflows/rpcs3.yml
-index d28c13f6e2dd..4de0bda23d5d 100644
---- a/.github/workflows/rpcs3.yml
-+++ b/.github/workflows/rpcs3.yml
-@@ -105,9 +105,9 @@ jobs:
-     env:
-       COMPILER: msvc
-       QT_VER_MAIN: '6'
--      QT_VER: '6.8.3'
-+      QT_VER: '6.9.0'
-       QT_VER_MSVC: 'msvc2022'
--      QT_DATE: '202503201308'
-+      QT_DATE: '202503301022'
-       LLVM_VER: '19.1.7'
-       VULKAN_VER: '1.3.268.0'
-       VULKAN_SDK_SHA: '8459ef49bd06b697115ddd3d97c9aec729e849cd775f5be70897718a9b3b9db5'
-diff --git a/BUILDING.md b/BUILDING.md
-index 83693b0f4442..d9131e592983 100644
---- a/BUILDING.md
-+++ b/BUILDING.md
-@@ -19,26 +19,26 @@ The following tools are required to build RPCS3 on Windows 10 or later:
-     with standalone **CMake** tool.
- 
- - [Python 3.6+](https://www.python.org/downloads/) (add to PATH)
--- [Qt 6.8.3](https://www.qt.io/download-qt-installer) In case you can't download from the official installer, you can use [Another Qt installer](https://github.com/miurahr/aqtinstall) (In that case you will need to manually add the "qtmultimedia" module when installing Qt)
-+- [Qt 6.9.0](https://www.qt.io/download-qt-installer) In case you can't download from the official installer, you can use [Another Qt installer](https://github.com/miurahr/aqtinstall) (In that case you will need to manually add the "qtmultimedia" module when installing Qt)
- - [Vulkan SDK 1.3.268.0](https://vulkan.lunarg.com/sdk/home) (see "Install the SDK" [here](https://vulkan.lunarg.com/doc/sdk/latest/windows/getting_started.html)) for now future SDKs don't work. You need precisely 1.3.268.0.
- 
- The `sln` solution available only on **Visual Studio** is the preferred building solution. It easily allows to build the **RPCS3** application in `Release` and `Debug` mode.
- 
- In order to build **RPCS3** with the `sln` solution (with **Visual Studio**), **Qt** libs need to be detected. To detect the libs:
--- add and set the `QTDIR` environment variable, e.g. `<QtInstallFolder>\6.8.3\msvc2022_64\`
-+- add and set the `QTDIR` environment variable, e.g. `<QtInstallFolder>\6.9.0\msvc2022_64\`
- - or use the [Visual Studio Qt Plugin](https://marketplace.visualstudio.com/items?itemName=TheQtCompany.QtVisualStudioTools2022)
- 
-   **NOTE:** If you have issues with the **Visual Studio Qt Plugin**, you may want to uninstall it and install the [Legacy Qt Plugin](https://marketplace.visualstudio.com/items?itemName=TheQtCompany.LEGACYQtVisualStudioTools2022) instead.
- 
- In order to build **RPCS3** with the `CMake` solution (with both **Visual Studio** and standalone **CMake** tool):
--- add and set the `Qt6_ROOT` environment variable to the **Qt** libs path, e.g. `<QtInstallFolder>\6.8.3\msvc2022_64\`
-+- add and set the `Qt6_ROOT` environment variable to the **Qt** libs path, e.g. `<QtInstallFolder>\6.9.0\msvc2022_64\`
- 
- ### Linux
- 
- These are the essentials tools to build RPCS3 on Linux. Some of them can be installed through your favorite package manager:
- - Clang 17+ or GCC 13+
- - [CMake 3.28.0+](https://www.cmake.org/download/)
--- [Qt 6.8.3](https://www.qt.io/download-qt-installer)
-+- [Qt 6.9.0](https://www.qt.io/download-qt-installer)
- - [Vulkan SDK 1.3.268.0](https://vulkan.lunarg.com/sdk/home) (See "Install the SDK" [here](https://vulkan.lunarg.com/doc/sdk/latest/linux/getting_started.html)) for now future SDKs don't work. You need precisely 1.3.268.0.
- - [SDL3](https://github.com/libsdl-org/SDL/releases) (for the FAudio backend)
- 
-@@ -121,7 +121,7 @@ Start **Visual Studio**, click on `Open a project or solution` and select the `r
- ##### Configuring the Qt Plugin (if used)
- 
- 1) go to `Extensions->Qt VS Tools->Qt Versions`
--2) add the path to your Qt installation with compiler e.g. `<QtInstallFolder>\6.8.3\msvc2022_64`, version will fill in automatically
-+2) add the path to your Qt installation with compiler e.g. `<QtInstallFolder>\6.9.0\msvc2022_64`, version will fill in automatically
- 3) go to `Extensions->Qt VS Tools->Options->Legacy Project Format`. (Only available in the **Legacy Qt Plugin**)
- 4) set `Build: Run pre-build setup` to `true`. (Only available in the **Legacy Qt Plugin**)
- 
-diff --git a/azure-pipelines.yml b/azure-pipelines.yml
-index 8e2ef1d8fb89..9ea5bc2da94e 100644
---- a/azure-pipelines.yml
-+++ b/azure-pipelines.yml
-@@ -71,9 +71,9 @@ jobs:
- #   variables:
- #     COMPILER: msvc
- #     QT_VER_MAIN: '6'
--#     QT_VER: '6.8.3'
-+#     QT_VER: '6.9.0'
- #     QT_VER_MSVC: 'msvc2022'
--#     QT_DATE: '202503201308'
-+#     QT_DATE: '202503301022'
- #     QTDIR: C:\Qt\$(QT_VER)\$(QT_VER_MSVC)_64
- #     LLVM_VER: '19.1.7'
- #     VULKAN_VER: '1.3.268.0'
-diff --git a/rpcs3/rpcs3qt/game_list_frame.cpp b/rpcs3/rpcs3qt/game_list_frame.cpp
-index 5f9267abcefb..439913760053 100644
---- a/rpcs3/rpcs3qt/game_list_frame.cpp
-+++ b/rpcs3/rpcs3qt/game_list_frame.cpp
-@@ -2363,7 +2363,7 @@ void game_list_frame::BatchActionBySerials(progress_dialog* pdlg, const std::set
- 
- 		connect(future_watcher, &QFutureWatcher<void>::finished, this, [=, this]()
- 		{
--			pdlg->setLabelText(progressLabel.arg(*index).arg(serials_size));
-+			pdlg->setLabelText(progressLabel.arg(index->load()).arg(serials_size));
- 			pdlg->setCancelButtonText(tr("OK"));
- 			QApplication::beep();
- 
-@@ -2396,7 +2396,7 @@ void game_list_frame::BatchActionBySerials(progress_dialog* pdlg, const std::set
- 			return;
- 		}
- 
--		pdlg->setLabelText(progressLabel.arg(*index).arg(serials_size));
-+		pdlg->setLabelText(progressLabel.arg(index->load()).arg(serials_size));
- 		pdlg->setCancelButtonText(tr("OK"));
- 		connect(pdlg, &progress_dialog::canceled, this, [pdlg](){ pdlg->deleteLater(); });
- 		QApplication::beep();
-diff --git a/rpcs3/rpcs3qt/ps_move_tracker_dialog.cpp b/rpcs3/rpcs3qt/ps_move_tracker_dialog.cpp
-index 45fbe6f59e7d..3ce46f92499c 100644
---- a/rpcs3/rpcs3qt/ps_move_tracker_dialog.cpp
-+++ b/rpcs3/rpcs3qt/ps_move_tracker_dialog.cpp
-@@ -360,9 +360,10 @@ void ps_move_tracker_dialog::update_saturation_threshold(bool update_slider)
- 		ui->saturationThresholdSlider->setValue(saturation_threshold);
- 	}
- }
-+
- void ps_move_tracker_dialog::update_min_radius(bool update_slider)
- {
--	ui->minRadiusGb->setTitle(tr("Min Radius: %0 %").arg(g_cfg_move.min_radius));
-+	ui->minRadiusGb->setTitle(tr("Min Radius: %0 %").arg(g_cfg_move.min_radius.get()));
- 
- 	if (update_slider)
- 	{
-@@ -372,7 +373,7 @@ void ps_move_tracker_dialog::update_min_radius(bool update_slider)
- 
- void ps_move_tracker_dialog::update_max_radius(bool update_slider)
- {
--	ui->maxRadiusGb->setTitle(tr("Max Radius: %0 %").arg(g_cfg_move.max_radius));
-+	ui->maxRadiusGb->setTitle(tr("Max Radius: %0 %").arg(g_cfg_move.max_radius.get()));
- 
- 	if (update_slider)
- 	{
-
-From 8fdf73bcc0fcc1ab9758f1901bff5a1bfa07aa5d Mon Sep 17 00:00:00 2001
-From: Megamouse <studienricky89@googlemail.com>
-Date: Wed, 2 Apr 2025 21:52:30 +0200
-Subject: [PATCH 2/2] test
-
----
- rpcs3/rpcs3qt/game_list_base.cpp  | 14 +++++++-------
- rpcs3/rpcs3qt/game_list_table.cpp |  1 +
- rpcs3/rpcs3qt/movie_item_base.cpp | 18 +++++++++---------
- 3 files changed, 17 insertions(+), 16 deletions(-)
-
 diff --git a/rpcs3/rpcs3qt/game_list_base.cpp b/rpcs3/rpcs3qt/game_list_base.cpp
-index 72b45d33bfbb..adc8666a40a3 100644
+index 72b45d33b..adc8666a4 100644
 --- a/rpcs3/rpcs3qt/game_list_base.cpp
 +++ b/rpcs3/rpcs3qt/game_list_base.cpp
 @@ -1,5 +1,6 @@
@@ -247,8 +34,30 @@ index 72b45d33bfbb..adc8666a40a3 100644
  		}
  	}
  }
+diff --git a/rpcs3/rpcs3qt/game_list_frame.cpp b/rpcs3/rpcs3qt/game_list_frame.cpp
+index a294d69cc..439913760 100644
+--- a/rpcs3/rpcs3qt/game_list_frame.cpp
++++ b/rpcs3/rpcs3qt/game_list_frame.cpp
+@@ -2363,7 +2363,7 @@ void game_list_frame::BatchActionBySerials(progress_dialog* pdlg, const std::set
+ 
+ 		connect(future_watcher, &QFutureWatcher<void>::finished, this, [=, this]()
+ 		{
+-			pdlg->setLabelText(progressLabel.arg(+*index).arg(serials_size));
++			pdlg->setLabelText(progressLabel.arg(index->load()).arg(serials_size));
+ 			pdlg->setCancelButtonText(tr("OK"));
+ 			QApplication::beep();
+ 
+@@ -2396,7 +2396,7 @@ void game_list_frame::BatchActionBySerials(progress_dialog* pdlg, const std::set
+ 			return;
+ 		}
+ 
+-		pdlg->setLabelText(progressLabel.arg(+*index).arg(serials_size));
++		pdlg->setLabelText(progressLabel.arg(index->load()).arg(serials_size));
+ 		pdlg->setCancelButtonText(tr("OK"));
+ 		connect(pdlg, &progress_dialog::canceled, this, [pdlg](){ pdlg->deleteLater(); });
+ 		QApplication::beep();
 diff --git a/rpcs3/rpcs3qt/game_list_table.cpp b/rpcs3/rpcs3qt/game_list_table.cpp
-index f526bcea435d..d832488061d2 100644
+index f526bcea4..d83248806 100644
 --- a/rpcs3/rpcs3qt/game_list_table.cpp
 +++ b/rpcs3/rpcs3qt/game_list_table.cpp
 @@ -296,6 +296,7 @@ void game_list_table::populate(
@@ -260,7 +69,7 @@ index f526bcea435d..d832488061d2 100644
  
  		// Title
 diff --git a/rpcs3/rpcs3qt/movie_item_base.cpp b/rpcs3/rpcs3qt/movie_item_base.cpp
-index fdf820ae5f59..8f2131c1f106 100644
+index fdf820ae5..8f2131c1f 100644
 --- a/rpcs3/rpcs3qt/movie_item_base.cpp
 +++ b/rpcs3/rpcs3qt/movie_item_base.cpp
 @@ -30,15 +30,15 @@ void movie_item_base::call_icon_load_func(int index)
@@ -288,3 +97,28 @@ index fdf820ae5f59..8f2131c1f106 100644
  }
  
  void movie_item_base::set_icon_load_func(const icon_load_callback_t& func)
+diff --git a/rpcs3/rpcs3qt/ps_move_tracker_dialog.cpp b/rpcs3/rpcs3qt/ps_move_tracker_dialog.cpp
+index 45fbe6f59..3ce46f924 100644
+--- a/rpcs3/rpcs3qt/ps_move_tracker_dialog.cpp
++++ b/rpcs3/rpcs3qt/ps_move_tracker_dialog.cpp
+@@ -360,9 +360,10 @@ void ps_move_tracker_dialog::update_saturation_threshold(bool update_slider)
+ 		ui->saturationThresholdSlider->setValue(saturation_threshold);
+ 	}
+ }
++
+ void ps_move_tracker_dialog::update_min_radius(bool update_slider)
+ {
+-	ui->minRadiusGb->setTitle(tr("Min Radius: %0 %").arg(g_cfg_move.min_radius));
++	ui->minRadiusGb->setTitle(tr("Min Radius: %0 %").arg(g_cfg_move.min_radius.get()));
+ 
+ 	if (update_slider)
+ 	{
+@@ -372,7 +373,7 @@ void ps_move_tracker_dialog::update_min_radius(bool update_slider)
+ 
+ void ps_move_tracker_dialog::update_max_radius(bool update_slider)
+ {
+-	ui->maxRadiusGb->setTitle(tr("Max Radius: %0 %").arg(g_cfg_move.max_radius));
++	ui->maxRadiusGb->setTitle(tr("Max Radius: %0 %").arg(g_cfg_move.max_radius.get()));
+ 
+ 	if (update_slider)
+ 	{
