@@ -7,7 +7,8 @@
 HYPSEUS_SINGE_VERSION = fc34a26cd097b29aef8b1bebc1db786a28f0f6ae
 HYPSEUS_SINGE_SITE = $(call github,DirtBagXon,hypseus-singe,$(HYPSEUS_SINGE_VERSION))
 HYPSEUS_SINGE_LICENSE = GPLv3
-HYPSEUS_SINGE_DEPENDENCIES = libzip sdl2 sdl2_image sdl2_ttf zlib libogg libvorbis libmpeg2
+HYPSEUS_SINGE_DEPENDENCIES += libmpeg2 libogg libvorbis libzip  
+HYPSEUS_SINGE_DEPENDENCIES += sdl2 sdl2_image sdl2_mixer sdl2_ttf zlib
 HYPSEUS_SINGE_SUPPORTS_IN_SOURCE_BUILD = NO
 HYPSEUS_SINGE_SUBDIR = src
 
