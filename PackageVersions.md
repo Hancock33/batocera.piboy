@@ -65,7 +65,7 @@ Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|e3232c14950803b30b244383fa01f2f8af72972c|Apr 06, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|d041a4fccd92a975a64f0cf89daf43e3479cbe3c|Apr 04, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|c25fd44265f60237d9308891dccb5378c9467572|Mar 29, 2025
-Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|c0bb7abdbcb4a47666057ac5e606c6e79ba79719|Apr 07, 2025
+Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|71c9c0c9240fe411a50dcb0a67fb551c41f23f23|Apr 07, 2025
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|81cbbda37f57a5aec3e06337ce9f78018c363878|Mar 29, 2025
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v118|Jan 27, 2024
 Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
@@ -271,11 +271,11 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|818aca56efd784624a241a12936b5c0864e3ddd8|Mar 21, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|aca2d3a544ef4887e55b566c924fee8b7a35a666|Apr 07, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20250308|Mar 08, 2025
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|e095904e1b55581e1e6884cc0759e54c4578ef92|Mar 27, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|ddf684c4d2532f75c2e8ba98c973dda1b67ea8b8|Apr 07, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-04-07|Apr 07, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.3.29|Mar 31, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|c35d72a2d4c7ad234b49ef5f00ed2e9789af54df|Mar 28, 2025
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|7fee289b66bcc650e7fd7f116a36e0976ea9cdca|Apr 07, 2025
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|08731303d857ba0d8684f77e193f2958e7691ccb|Apr 07, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|25311dc03332d9ef2dff8d9d06c611d828028fac|Mar 13, 2025
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|2c78e77617c65025342e1c4da8187ef5ee2cbad4|Apr 06, 2025
@@ -287,7 +287,7 @@ Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|49e36719dc5f167c1a6ca5f1355f308d25b929f2|Apr 05, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|747cf57b6f90e072eb417fcb72f505a6b23c290c|Apr 06, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|d7bcb7102dc63921c1ae1e6c39069bfda5a951c4|Apr 06, 2025
-Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45625|Apr 06, 2025
+Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45627|Apr 07, 2025
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|61f204b6fd037810b71293ecd5c0e625774ec47a|Aug 21, 2023
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|c96c2c026f4a1ff397cb87bc6d15dc8e95bb2dc5|Jul 23, 2024

@@ -1,11 +1,13 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|c0bb7abdbcb4a47666057ac5e606c6e79ba79719|Apr 07, 2025
+Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|71c9c0c9240fe411a50dcb0a67fb551c41f23f23|Apr 07, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|6e02133452c7a03a6188db8b8696a1dae0ec36c7|Apr 07, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|ea10cbdfd271b618637fc51d80dadbb2d413b1b1|Apr 07, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|ec6ea05c9b8c4cd895100eb59c596e12aaf9a56b|Apr 07, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|ddf684c4d2532f75c2e8ba98c973dda1b67ea8b8|Apr 07, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-04-07|Apr 07, 2025
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|7fee289b66bcc650e7fd7f116a36e0976ea9cdca|Apr 07, 2025
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|08731303d857ba0d8684f77e193f2958e7691ccb|Apr 07, 2025
+Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45627|Apr 07, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|b060fca66c432f371aa7129a4f6ec2b61ac034b9|Apr 07, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|7fd701a7612d44f842d973a8d60537c4d3319992|Apr 07, 2025
 Ports|[omf2097](http://github.com/omf2097/openomf)|2aeba123ba3117770a33d6ce54a634d7a73cd78a|Apr 07, 2025
@@ -31,7 +33,6 @@ Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|2c78e77617c65025342e
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|ce992fccb22d9f3eae1622b088c48d812d982dd8|Apr 06, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|747cf57b6f90e072eb417fcb72f505a6b23c290c|Apr 06, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|d7bcb7102dc63921c1ae1e6c39069bfda5a951c4|Apr 06, 2025
-Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45625|Apr 06, 2025
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|c4f1bf27ef5f071bab7f2d5542ae893ac684d005|Apr 06, 2025
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|378e69674c70dcbd755a7955fb4291a583580311|Apr 06, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|5ff228ac21caeae6aba876728b9b36da9f0a1f5a|Apr 06, 2025
@@ -118,7 +119,6 @@ Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|c35d72a2d4c7ad234b49ef5f00ed2e9789af54df|Mar 28, 2025
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|9b201cdd612bfb12c8d86696656b79eaf25924ab|Mar 28, 2025
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|b050991ed227a320ab0ad9801bf9fbd8f3b2d416|Mar 28, 2025
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|e095904e1b55581e1e6884cc0759e54c4578ef92|Mar 27, 2025
 Utils|[jstest2](https://github.com/Grumbel/sdl-jstest)|917d27b3b45a335137bd2c8597f8bcf2bac8a569|Mar 27, 2025
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|987ac9bf14b813bf14ee6ab0f9d1f95c9d19ea78|Mar 27, 2025
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|dde80f385c57e06b73810abf79f2d935312467dc|Mar 27, 2025
