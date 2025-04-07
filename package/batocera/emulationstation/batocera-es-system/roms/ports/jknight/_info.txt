@@ -1,5 +1,5 @@
-## SYSTEM JEDI OUTCAST ##
+## SYSTEM JEDI KNIGHT ##
 -------------------------------------------------------------------------------
-ROM files extensions accepted: ".game"
+ROM files extensions accepted: ".game .jedi"
 -------------------------------------------------------------------------------
-Extensions des fichiers ROMs permises: ".game"
+Extensions des fichiers ROMs permises: ".game .jedi"

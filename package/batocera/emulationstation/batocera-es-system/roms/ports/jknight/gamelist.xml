@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<gameList>
+	<game>
+		<path>./Jedi_Academy/Star Wars Jedi Knight - Jedi Academy.game</path>
+		<name>Star Wars: Jedi Knight - Jedi Academy</name>
+		<desc>Star Wars: Jedi Knight - Jedi Academy is the sequel to Star Wars: Jedi Knight II - Jedi Outcast.  
+The player is cast as Jaden Korr, a padawan at the Jedi Academy taught by Luke Skywalker and Kyle Katarn. Both the character and his lightsaber are to be created at the beginning of the game. Throughout the game, the player will acquire several force powers and weapons, such as lightning and the Tenlos Disruptor Rifle. As he progresses through the different missions, he may be seduced by the dark side of the Force...</desc>
+		<image>./images/JediAcademy.png</image>
+		<thumbnail>./images/Star Wars Jedi Knight - Jedi Academy-thumb.jpg</thumbnail>
+		<releasedate>20030916T000000</releasedate>
+		<developer>Raven Software</developer>
+		<publisher>Activision</publisher>
+		<genre>Action-Action / Adventure</genre>
+		<playcount>13</playcount>
+		<lastplayed>20250406T135115</lastplayed>
+		<gametime>332</gametime>
+		<lang>en</lang>
+		<genreid>256</genreid>
+	</game>
+	<game>
+		<path>./Jedi_Outcast/Jedi Knight II - Jedi Outcast.game</path>
+		<name>Star Wars : Jedi Knight II : Jedi Outcast</name>
+		<desc>In the tradition of Jedi Knight, rebel agent Kyle Katarn returns in thrilling first-person action. Several years have passed since Kyle avenged his father's death and saved the Valley of the Jedi from Jerec and his band of Dark Jedi. When a new and menacing threat to the galaxy emerges, Kyle knows he must reclaim his past in order to save his future. You assume the role of Kyle and employ a unique mix of weapons, Force powers, and your lightsaber in both solo and multiplayer modes.</desc>
+		<image>./images/JediOutcast.png</image>
+		<rating>0.8</rating>
+		<releasedate>20021119T000000</releasedate>
+		<developer>Raven Software</developer>
+		<publisher>Activision</publisher>
+		<genre>Action</genre>
+		<players>2</players>
+		<playcount>19</playcount>
+		<lastplayed>20250406T223454</lastplayed>
+		<gametime>161</gametime>
+		<lang>en</lang>
+		<genreid>256</genreid>
+	</game>
+</gameList>
