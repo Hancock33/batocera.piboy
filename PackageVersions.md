@@ -54,7 +54,7 @@ Controllers|[xarcade2jstick](http://github.com/petrockblog/xarcade2jstick)|7b579
 Controllers|[xone](http://github.com/dlundqvist/xone)|aeb27e6d98f7b22b3672701af6171612254a4d0c|Mar 12, 2025
 Controllers|[xow](http://github.com/medusalix/xow)|d335d6024f8380f52767a7de67727d9b2f867871|Apr 24, 2022
 Controllers|[xpad-noone](http://github.com/medusalix/xpad-noone)|6970c40930bedd8b58d0764894e0d5f04813b7c5|Apr 24, 2024
-Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|8d20a23e38883f45c78f48c8574ac93945b4cb03|Dec 24, 2024
+Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|4a3a623b5facca8184e9070317fea03adc3a9e8f|Apr 06, 2025
 Controllers|[xpi_gamecon_rpi](http://github.com/hancock33/piboycontrols)|f30cea1a30e4e9ad8fcf3b7da48f2770b4ea3368|Aug 07, 2022
 Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-controller-overlays)|a77301e60ae6fef28d4ffd149b9618cbc697a4a2|Jan 20, 2024
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|e6241340d292dee20406a0567262a78ff34d45f7|Jun 02, 2021
@@ -149,7 +149,7 @@ Emulators|[libretro-freej2me](http://github.com/hex007/freej2me)|8b9bc8a19baf26e
 Emulators|[libretro-fuse](http://github.com/libretro/fuse-libretro)|cad85b7b1b864c65734f71aa4a510b6f6536881c|Nov 24, 2024
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|2910240a4100ccad68f935082b8bbce194673cb5|Apr 04, 2025
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|fad12b13042bc77ae7210154ef9095414d6ed9de|Apr 02, 2025
-Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|24dd71904f01260a520c4027732511e2a511921a|Apr 07, 2025
+Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|616c97b51b9d8433da8bf8340f7aff226af897e8|Apr 07, 2025
 Emulators|[libretro-genesisplusgx-wide](http://github.com/libretro/Genesis-Plus-GX-Wide)|b7d314220d755537aebb7bc1750ac21f764365c4|Oct 21, 2024
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|a203bbf2ab6c7164051ff90ad30cc8f6352a56ac|Feb 23, 2025
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|0a104c839bba8240e4c6b19e08013c150c31ddcd|Feb 16, 2025
@@ -271,11 +271,11 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|818aca56efd784624a241a12936b5c0864e3ddd8|Mar 21, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|aca2d3a544ef4887e55b566c924fee8b7a35a666|Apr 07, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20250308|Mar 08, 2025
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|6f98b8c5aea54b3ad3bab303fb1559882a269661|Apr 07, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|e095904e1b55581e1e6884cc0759e54c4578ef92|Mar 27, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-04-07|Apr 07, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.3.29|Mar 31, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|c35d72a2d4c7ad234b49ef5f00ed2e9789af54df|Mar 28, 2025
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|040fd79ef7fa3b47683a98d6cbc301c368ca6807|Apr 07, 2025
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|7fee289b66bcc650e7fd7f116a36e0976ea9cdca|Apr 07, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|25311dc03332d9ef2dff8d9d06c611d828028fac|Mar 13, 2025
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|2c78e77617c65025342e1c4da8187ef5ee2cbad4|Apr 06, 2025
