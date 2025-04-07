@@ -1,5 +1,0 @@
-## SYSTEM JEDI ACADEMY ##
--------------------------------------------------------------------------------
-ROM files extensions accepted: ".game"
--------------------------------------------------------------------------------
-Extensions des fichiers ROMs permises: ".game"
