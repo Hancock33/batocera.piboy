@@ -320,7 +320,7 @@ index 00e94bec401e..11b706953286 100644
  B:	https://github.com/facebook/zstd/issues
  T:	git https://github.com/terrelln/linux.git
 diff --git a/Makefile b/Makefile
-index b83ed763a9c2..766668400a71 100644
+index 4cebaa0aa06d..2a85d4648df6 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -861,11 +861,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
