@@ -72,12 +72,12 @@ def createPPSSPPConfig(iniConfig: CaseSensitiveConfigParser, system: Emulator):
     iniConfig.set("Graphics", "FrameSkip", frameskip)
 
     # Buffered rendering
-    skip_buffer_effects = system.config.get_bool('skip_buffer_effects', True)
+    sbe_enabled = system.config.get_bool('skip_buffer_effects', True)
     auto_frameskip = "False"
 
-    iniConfig.set("Graphics", "SkipBufferEffects", str(skip_buffer_effects))
+    iniConfig.set("Graphics", "SkipBufferEffects", str(sbe_enabled))
 
-    if not skip_buffer_effects:
+    if not sbe_enabled:
         # Both internal resolution and auto frameskip are dependent on buffered rendering being on, only check these if the user is actually using buffered rendering.
         iniConfig.set("Graphics", "InternalResolution", system.config.get_str("internal_resolution", "1"))
         # Auto frameskip
