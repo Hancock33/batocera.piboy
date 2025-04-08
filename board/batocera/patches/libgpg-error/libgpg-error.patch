@@ -1,0 +1,16 @@
+diff --git a/src/gpg-error.h.in b/src/gpg-error.h.in
+index 1bfe6a7..0121c52 100644
+--- a/src/gpg-error.h.in
++++ b/src/gpg-error.h.in
+@@ -577,9 +577,9 @@ struct _gpgrt__stream
+ 
+ /* The opaque type for an estream.  */
+ typedef struct _gpgrt__stream *gpgrt_stream_t;
+-#ifdef GPGRT_ENABLE_ES_MACROS
++//#ifdef GPGRT_ENABLE_ES_MACROS
+ typedef struct _gpgrt__stream *estream_t;
+-#endif
++//#endif
+ 
+ typedef @api_ssize_t@ (*gpgrt_cookie_read_function_t) (void *cookie,
+                                                  void *buffer, size_t size);
