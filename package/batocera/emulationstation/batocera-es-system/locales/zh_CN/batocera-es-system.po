@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-03-31 20:59+0800\n"
+"PO-Revision-Date: 2025-04-07 15:57+0800\n"
 "Last-Translator: R.Chan\n"
 "Language-Team: Ray Chan\n"
 "Language: zh_CN\n"
@@ -625,7 +625,7 @@ msgstr "16 bit"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "16-bit"
-msgstr ""
+msgstr "16位"
 
 #. TRANSLATION: openjazz
 msgctxt "game_options"
@@ -760,7 +760,7 @@ msgstr "1MB"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "1ST PERSON GUNS"
-msgstr ""
+msgstr "第一人称武器"
 
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
@@ -1275,7 +1275,7 @@ msgstr "32 MHz（超频）"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "32-bit"
-msgstr ""
+msgstr "32位"
 
 #. TRANSLATION: openjazz
 msgctxt "game_options"
@@ -1390,7 +1390,7 @@ msgstr "3号"
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "3rd Person"
-msgstr ""
+msgstr "第三人称"
 
 #. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
@@ -2255,7 +2255,7 @@ msgstr "AI翻译服务URL"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "AIMING CROSSHAIR"
-msgstr ""
+msgstr "瞄准十字准线"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -2355,7 +2355,7 @@ msgstr "各向异性过滤"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "ANISTROPIC FILTER"
-msgstr ""
+msgstr "各向异性滤光片"
 
 #. TRANSLATION: dolphin, dolphin_triforce, rpcs3, rtcw
 msgctxt "game_options"
@@ -2425,7 +2425,7 @@ msgstr "ASMJIT重编译器"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "ASPECT"
-msgstr ""
+msgstr "视角"
 
 #. TRANSLATION: bermuda, bigpemu, cemu, cgenius, citron, ...
 msgctxt "game_options"
@@ -2555,7 +2555,7 @@ msgstr "自动瞄准"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "AUTO AIMING"
-msgstr ""
+msgstr "自动瞄准"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -2595,7 +2595,7 @@ msgstr "游戏启动时自动保存/加载"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "AUTO SWITCH WEAPON"
-msgstr ""
+msgstr "自动切换武器"
 
 #. TRANSLATION: libretro/beetle-saturn, libretro/flycast, libretro/kronos, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -2610,7 +2610,7 @@ msgstr "自动帧延迟"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "AUTOMATICALLY RELOAD WEAPON"
-msgstr ""
+msgstr "自动装弹武器"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -2901,7 +2901,7 @@ msgstr "阿尔及利亚"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "All + Enemy Jedi Dodge"
-msgstr ""
+msgstr "绝地集群闪避​"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -2931,7 +2931,7 @@ msgstr "所有可能的许可证（不推荐）"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "All voiceovers"
-msgstr ""
+msgstr "所有配音"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -2993,7 +2993,7 @@ msgstr "鬼屋魔影"
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Alt. Attack"
-msgstr ""
+msgstr "Alt.攻击"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -3443,7 +3443,7 @@ msgstr "自动"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Automatic pickup weapon."
-msgstr ""
+msgstr "自动拾取武器."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -3757,7 +3757,7 @@ msgstr "返回/菜单"
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Backpedal"
-msgstr ""
+msgstr "撤回"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -4695,12 +4695,12 @@ msgstr "十字瞄准线"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "CROSSHAIR LINE THICKNESS"
-msgstr ""
+msgstr "十字准线厚度"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "CROSSHAIR SIZE"
-msgstr ""
+msgstr "十字准线尺寸"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -4805,12 +4805,12 @@ msgstr "自定义模拟WIIMOTE和游戏板"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "CUTSCENE SUBTITLES"
-msgstr ""
+msgstr "过场字幕"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "CUTSCENES"
-msgstr ""
+msgstr "过场动画"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -5139,7 +5139,7 @@ msgstr "中文（繁体） [Big5]"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose Screen Space Ambient Occlusion for better lighting."
-msgstr ""
+msgstr "选择“屏幕空间环境光遮挡”以获得更好的照明."
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -5154,7 +5154,7 @@ msgstr "选择电视的电缆类型。"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose difficulty for the game."
-msgstr ""
+msgstr "选择游戏难度."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -5184,12 +5184,12 @@ msgstr "为控制器选择第二个功能包。"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose shadow details."
-msgstr ""
+msgstr "选择阴影细节."
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose slow motion death option."
-msgstr ""
+msgstr "Choose slow motion death option."
 
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
@@ -5199,7 +5199,7 @@ msgstr "选择系统BIOS语言。"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose text language."
-msgstr ""
+msgstr "选择文本语言."
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -5226,7 +5226,7 @@ msgctxt "game_options"
 msgid ""
 "Choose the amount of Gamma which changes how light or dark mid-range tones "
 "appear."
-msgstr ""
+msgstr "​调整Gamma值以改变中间调的明暗程度​."
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
@@ -5270,7 +5270,7 @@ msgstr ""
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose the depth of texture quality."
-msgstr ""
+msgstr "选择纹理质量的深度."
 
 #. TRANSLATION: libretro/cap32, openjk
 msgctxt "game_options"
@@ -5285,12 +5285,12 @@ msgstr "选择游戏难度。"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose the level of geometric detail."
-msgstr ""
+msgstr "选择几何细节的级别."
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose the level of texture detail."
-msgstr ""
+msgstr "选择纹理细节的级别."
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -5305,12 +5305,12 @@ msgstr "选择游戏屏幕的缩放模式."
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose the size of the heads-up display."
-msgstr ""
+msgstr "选择平视显示器的大小."
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose the texture filter type."
-msgstr ""
+msgstr "选择纹理过滤器类型."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -5330,7 +5330,7 @@ msgstr "选择启用或禁用过场。"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose to keep corpses present."
-msgstr ""
+msgstr "保留尸体在场状态."
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -5352,12 +5352,12 @@ msgstr "选择放大处理方法。"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose voice language."
-msgstr ""
+msgstr "选择语音语言."
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose when to enable subtitles."
-msgstr ""
+msgstr "选择何时启用字幕."
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -5907,7 +5907,7 @@ msgstr "桌面"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "DETAILED SHADERS"
-msgstr ""
+msgstr "详细着色器"
 
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
@@ -5917,7 +5917,7 @@ msgstr "开发菜单"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "DIFFICULTY"
-msgstr ""
+msgstr "困难"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -6052,7 +6052,7 @@ msgstr "缩小过滤器"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "DRAW CROSSHAIR"
-msgstr ""
+msgstr "显示交叉准线"
 
 #. TRANSLATION: flycast, libretro, ppsspp
 msgctxt "game_options"
@@ -6127,12 +6127,12 @@ msgstr "DXVK重置缓存"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "DYNAMIC GLOW"
-msgstr ""
+msgstr "动态辉光"
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "DYNAMIC LIGHTS"
-msgstr ""
+msgstr "动态光"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -6350,7 +6350,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Disable mission start confirmation."
-msgstr ""
+msgstr "禁用任务启动确认."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -6365,7 +6365,7 @@ msgstr "禁用以访问系统的设置，如时间和语言。"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Disable weapon waggle."
-msgstr ""
+msgstr "禁用武器摆动."
 
 #. TRANSLATION: bigpemu, bstone, citron, duckstation, f2bgl, ...
 msgctxt "game_options"
@@ -6522,7 +6522,7 @@ msgstr "下键"
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Down/Crouch"
-msgstr ""
+msgstr "蹲伏/蹲下"
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -6574,7 +6574,7 @@ msgstr "DualShock支持震动，并非所有游戏都支持DualShock。"
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Duck"
-msgstr ""
+msgstr "躲避"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -7086,7 +7086,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Enable aiming crosshair."
-msgstr ""
+msgstr "启用瞄准十字准线."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -7096,7 +7096,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Enable auto aiming."
-msgstr ""
+msgstr "启用自动瞄准."
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -7137,7 +7137,7 @@ msgstr "为支持的游戏启用免费游戏。"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Enable full subtitles on cutscenes."
-msgstr ""
+msgstr "在过场动画中启用完整字幕."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -7164,7 +7164,7 @@ msgstr "为具有跨两个屏幕交互的游戏启用游戏手柄视图。 使�
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Enable high dots per inch."
-msgstr ""
+msgstr "启用高DPI."
 
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
@@ -7179,7 +7179,7 @@ msgstr "启用启动预安装的WHDLoad安装。"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Enable lightsaber auto-camera."
-msgstr ""
+msgstr "​​启用光剑自动追焦​."
 
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
@@ -7235,7 +7235,7 @@ msgstr "启用正确的四元渲染（适用于高端系统）。"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Enable rotation on overlay map."
-msgstr ""
+msgstr "在叠加地图上启用旋转."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -7807,7 +7807,7 @@ msgstr "FidelityFX超分辨率"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "FIELD OF VIEW"
-msgstr ""
+msgstr "视野"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -7837,7 +7837,7 @@ msgstr "固件设置"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "FIST CROSSHAIR"
-msgstr ""
+msgstr "拳头十字准星"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -7932,12 +7932,12 @@ msgstr "强制Windows CE模式"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "FOV VERTICAL"
-msgstr ""
+msgstr "视场垂直"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "FPS LIMIT"
-msgstr ""
+msgstr "FPS限制"
 
 #. TRANSLATION: lindbergh-loader, wine
 msgctxt "game_options"
@@ -8106,7 +8106,7 @@ msgstr "法罗群岛"
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Fast"
-msgstr ""
+msgstr "快速"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -8148,12 +8148,12 @@ msgstr "FidelityFX超级分辨率"
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Field Light"
-msgstr ""
+msgstr "光场"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Field of view is vertical (Hor+)."
-msgstr ""
+msgstr "垂直视野(Hor+适配)"
 
 #. TRANSLATION: libretro/uae4arm
 msgctxt "game_options"
@@ -8205,12 +8205,12 @@ msgstr "射击"
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Fire 1"
-msgstr ""
+msgstr "射击1"
 
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Fire 2"
-msgstr ""
+msgstr "射击2"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -8757,12 +8757,12 @@ msgstr "游戏板光标速度"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "GAMEPLAY"
-msgstr ""
+msgstr "游戏性"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "GAMMA"
-msgstr ""
+msgstr "伽玛"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -8882,12 +8882,12 @@ msgstr "GDC"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "GENERAL"
-msgstr ""
+msgstr "常规"
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "GEOMETRIC DETAIL"
-msgstr ""
+msgstr "几何细节"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -9340,7 +9340,7 @@ msgstr "隐藏NVIDIA GPU"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "HIDPI"
-msgstr ""
+msgstr "HIDPI(每英寸高点数)"
 
 #. TRANSLATION: cannonball
 msgctxt "game_options"
@@ -9405,7 +9405,7 @@ msgstr "HST"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "HUD SCALE"
-msgstr ""
+msgstr "抬头显示比例尺"
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -9690,7 +9690,7 @@ msgstr "IDE（默认）"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "IDENTIFY TARGET"
-msgstr ""
+msgstr "识别目标"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -9888,7 +9888,7 @@ msgstr "提升3D游戏的性能。可能会导致卡顿。"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "In Cinematics"
-msgstr ""
+msgstr "过场动画中"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -10264,12 +10264,12 @@ msgstr "校准器"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "KEEP CORPSES"
-msgstr ""
+msgstr "保留尸体"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "KEEP LIGHTSABER"
-msgstr ""
+msgstr "保留光剑"
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
@@ -10466,7 +10466,7 @@ msgstr "LCD重影（快速）"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "LIGHT FLARES"
-msgstr ""
+msgstr "照明弹"
 
 #. TRANSLATION: duckstation, flycast, hypseus-singe/zmachine, libretro/beetle-saturn, libretro/fbneo, ...
 msgctxt "game_options"
@@ -10486,12 +10486,12 @@ msgstr "光枪"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "LIGHTSABER CAMERA"
-msgstr ""
+msgstr "光剑相机"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "LIGHTSABER CROSSHAIR"
-msgstr ""
+msgstr "光剑十字准星"
 
 #. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
@@ -10891,7 +10891,7 @@ msgstr "手动纹理采样"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "MAP ROTATION"
-msgstr ""
+msgstr "地图旋转"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -10956,7 +10956,7 @@ msgstr "导弹指令3D VR"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "MISSION START"
-msgstr ""
+msgstr "任务开始"
 
 #. TRANSLATION: hatari, libretro/fuse, libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -10966,7 +10966,7 @@ msgstr "型号（MODEL）"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "MODEL DISMEMBERMENT"
-msgstr ""
+msgstr "模型分解"
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xpet, libretro/vice_xplus4, ...
 msgctxt "game_options"
@@ -11179,7 +11179,7 @@ msgstr "手动设置每秒周期。小心使用。"
 #. TRANSLATION: openjk.keys, openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Map"
-msgstr ""
+msgstr "地图"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -11401,7 +11401,7 @@ msgstr "返回菜单"
 #. TRANSLATION: bstone.keys, openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Menu back / exit"
-msgstr ""
+msgstr "返回/退出菜单"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
@@ -11416,12 +11416,12 @@ msgstr "菜单确认"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu left"
-msgstr ""
+msgstr "左移菜单"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu right"
-msgstr ""
+msgstr "右移菜单"
 
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
@@ -11712,12 +11712,12 @@ msgstr "否（默认）"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "NO DANGEROUS WEAPONS"
-msgstr ""
+msgstr "无危险武器"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "NO WEAKER WEAPONS"
-msgstr ""
+msgstr "无普通武器"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -11979,17 +11979,17 @@ msgstr "新3D"
 #. TRANSLATION: openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Next Force Power"
-msgstr ""
+msgstr "下个原力"
 
 #. TRANSLATION: openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Next Inventory Item"
-msgstr ""
+msgstr "下个物品"
 
 #. TRANSLATION: openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
-msgstr ""
+msgstr "下个武器"
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
@@ -12698,7 +12698,7 @@ msgstr "物理键盘布局"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "PICKUP WEAPON"
-msgstr ""
+msgstr "拾取型武器"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -12940,7 +12940,7 @@ msgstr "部分"
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Pause"
-msgstr ""
+msgstr "暂停"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -13074,12 +13074,12 @@ msgstr "粉红色-Blossom粉红色"
 #. TRANSLATION: openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Pitch Down"
-msgstr ""
+msgstr "下俯"
 
 #. TRANSLATION: openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Pitch Up"
-msgstr ""
+msgstr "上仰"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -13129,7 +13129,7 @@ msgstr "PlayStation鼠标"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Player"
-msgstr ""
+msgstr "玩家"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -13144,22 +13144,22 @@ msgstr "玩家眼睛距离屏幕下边缘的距离(厘米)"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Player, Any Enemy"
-msgstr ""
+msgstr "玩家, 任何敌人"
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Player, Any Enemy Jedi"
-msgstr ""
+msgstr "玩家， 任何绝地敌人"
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Player, Last Enemy Jedi"
-msgstr ""
+msgstr "玩家, 最后的绝地武士敌人"
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Player, Last Enemy in Group"
-msgstr ""
+msgstr "玩家, 小组中最后一个敌人"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -13346,17 +13346,17 @@ msgstr "按Y键表示“确定”"
 #. TRANSLATION: openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous Force Power"
-msgstr ""
+msgstr "上个原力"
 
 #. TRANSLATION: openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous Inventory Item"
-msgstr ""
+msgstr "上个物品"
 
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous Weapon"
-msgstr ""
+msgstr "上个武器"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -13371,7 +13371,7 @@ msgstr "上一个插槽"
 #. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous weapon"
-msgstr ""
+msgstr "上个武器"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -13503,7 +13503,7 @@ msgstr "区域"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "RELOAD WEAPON"
-msgstr ""
+msgstr "换弹"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -14079,7 +14079,7 @@ msgstr "在测试模式下运行游戏以配置某些游戏选项。"
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Run/Walk"
-msgstr ""
+msgstr "跑步/步行"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -14288,7 +14288,7 @@ msgstr "着色器集"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "SHADOWS"
-msgstr ""
+msgstr "阴影"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -14408,7 +14408,7 @@ msgstr "睡眠定时器精度"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "SLOW MOTION DEATH"
-msgstr ""
+msgstr "慢动作死亡"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -14548,12 +14548,12 @@ msgstr "SPU XFloat 精度"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "SSAA Multiplier"
-msgstr ""
+msgstr "超采样乘数"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "SSAO"
-msgstr ""
+msgstr "屏幕空间环境光遮蔽"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -14658,7 +14658,7 @@ msgstr "交换游戏板"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "SWITCH WEAPON"
-msgstr ""
+msgstr "切换武器"
 
 #. TRANSLATION: libretro/doublecherrygb, libretro/tgbdual
 msgctxt "game_options"
@@ -15040,12 +15040,12 @@ msgstr "设置控制器隆隆声强度（如果支持）"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Set the crosshair line thickness."
-msgstr ""
+msgstr "设置十字准线厚度."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Set the crosshair size."
-msgstr ""
+msgstr "设置十字准线尺寸."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -15065,12 +15065,12 @@ msgstr "设置显示器分辨率。不影响渲染分辨率。"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Set the field of view."
-msgstr ""
+msgstr "设置视野."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Set the fps limit."
-msgstr ""
+msgstr "设置fps限制."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -15201,12 +15201,12 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Show Crosshair with fist."
-msgstr ""
+msgstr "启用拳头十字准星."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Show Crosshair with lightsaber."
-msgstr ""
+msgstr "启用光剑十字准星."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -15901,12 +15901,12 @@ msgstr "方向盘"
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Step left"
-msgstr ""
+msgstr "左转"
 
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Step right"
-msgstr ""
+msgstr "右转"
 
 #. TRANSLATION: citron, rpcs3
 msgctxt "game_options"
@@ -16231,7 +16231,7 @@ msgstr "试玩"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "TEXT"
-msgstr ""
+msgstr "文本"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -16241,12 +16241,12 @@ msgstr "纹理去层次化"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "TEXTURE DETAIL"
-msgstr ""
+msgstr "纹理细节"
 
 #. TRANSLATION: f2bgl, openjk
 msgctxt "game_options"
 msgid "TEXTURE FILTER"
-msgstr ""
+msgstr "纹理过滤器"
 
 #. TRANSLATION: citron, duckstation, dxx-rebirth, libretro/duckstation, libretro/mupen64plus-next, ...
 msgctxt "game_options"
@@ -16276,7 +16276,7 @@ msgstr "纹理预加载"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "TEXTURE QUALITY"
-msgstr ""
+msgstr "纹理质量"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -16772,7 +16772,7 @@ msgstr "尝试根据Model2逐多边形信息（平面）猜测逐顶点颜色（
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Trilinear"
-msgstr ""
+msgstr "Trilinear"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -16832,12 +16832,12 @@ msgstr "右转"
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Turn left"
-msgstr ""
+msgstr "左转"
 
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Turn right"
-msgstr ""
+msgstr "右转"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -17247,7 +17247,7 @@ msgstr "上键"
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Up/Jump"
-msgstr ""
+msgstr "向上/跳跃"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -17307,7 +17307,7 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Use 1:1 aspect."
-msgstr ""
+msgstr "使用1:1的比例."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -17317,7 +17317,7 @@ msgstr "对于DualShock控制器，使用模拟摇杆和D-Pad以增强控制体�
 #. TRANSLATION: openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Use Force Power"
-msgstr ""
+msgstr "使用原力"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -17327,7 +17327,7 @@ msgstr "跟随主机"
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Use Inventory Item"
-msgstr ""
+msgstr "使用物品"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -17650,7 +17650,7 @@ msgstr "仅查看"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "VIEW SWAYING"
-msgstr ""
+msgstr "视图摇摆"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -17670,7 +17670,7 @@ msgstr "可视化推动强度"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "VOICE"
-msgstr ""
+msgstr "语音"
 
 #. TRANSLATION: azahar, bigpemu, bstone, cemu, citron, ...
 msgctxt "game_options"
@@ -17795,7 +17795,7 @@ msgstr "Voltmace Delta 3b双摇杆"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Volumetric"
-msgstr ""
+msgstr "体积"
 
 #. TRANSLATION: azahar, citron, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
@@ -17815,7 +17815,7 @@ msgstr "W-SU"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "WALL MARKS"
-msgstr ""
+msgstr "墙壁标记"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -17835,12 +17835,12 @@ msgstr "警告不支持的功能"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "WEAPON PICKUP"
-msgstr ""
+msgstr "拾取型武器"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "WEAPON WAGGLE"
-msgstr ""
+msgstr "武器摇摆"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -17940,7 +17940,7 @@ msgstr "WRX高分辨率"
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Walk forward"
-msgstr ""
+msgstr "向前走"
 
 #. TRANSLATION: hurrican
 msgctxt "game_options"
@@ -18183,7 +18183,7 @@ msgstr "游戏中不响应方向的区域（以度数表示）"
 #. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Zoom in"
-msgstr ""
+msgstr "放大"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -18198,7 +18198,7 @@ msgstr "放大x5"
 #. TRANSLATION: bstone.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Zoom out"
-msgstr ""
+msgstr "缩小"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
