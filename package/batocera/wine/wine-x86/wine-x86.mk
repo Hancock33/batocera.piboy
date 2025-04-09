@@ -3,8 +3,8 @@
 # wine-x86
 #
 ################################################################################
-# Version: Commits on Apr 08, 2025
-WINE_X86_VERSION = 20250408
+# Version: Commits on Apr 09, 2025
+WINE_X86_VERSION = 20250409
 WINE_X86_SOURCE = batocera-x86-32bit-libs-$(WINE_X86_VERSION).tar.xz
 WINE_X86_SITE = https://github.com/Hancock33/batocera-32bit-libs/releases/download/$(WINE_X86_VERSION)
 
