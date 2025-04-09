@@ -652,7 +652,6 @@ config BR2_PACKAGE_BATOCERA_TOOLS
     select BR2_PACKAGE_EVTEST                               # joysticks tester
     select BR2_PACKAGE_FFMPEG_XCBGRAB                       if  BR2_PACKAGE_XORG7
     select BR2_PACKAGE_HTOP                                 # multi-cpus usage
-    select BR2_PACKAGE_INTEL_MEDIASDK                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64
     select BR2_PACKAGE_JSTEST2                              # joysticks tester
     select BR2_PACKAGE_LIBGPIOD_TOOLS                       if  BR2_PACKAGE_LIBGPIOD
     select BR2_PACKAGE_LINUXCONSOLETOOLS                    # tools for linux events calibration
@@ -1537,6 +1536,7 @@ config BR2_PACKAGE_BATOCERA_KODI
     select BR2_PACKAGE_FFMPEG_AVRESAMPLE                    # audio resampler
     select BR2_PACKAGE_LIBCDIO_PARANOIA                     # cd-audio
     select BR2_PACKAGE_LIBOPENH264                          # openh264
+    select BR2_PACKAGE_LIBVPL                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64
 
     # AV1 support for x86_64
     select BR2_PACKAGE_DAV1D                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  # AV1
