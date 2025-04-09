@@ -60,5 +60,5 @@ BR2_PACKAGE_BATOCERA_KODI=y
 # Batocera dev
 BR2_CCACHE_DIR="$(HOME)/build-dir/ccache/rpi4"
 
-# HW Accelation
+# FFMPEG HW Accelation
 BR2_PACKAGE_RPI_HEVC=y
