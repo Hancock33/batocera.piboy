@@ -366,7 +366,6 @@ Libraries|[iir](http://github.com/berndporr/iir1)|1.9.5|Aug 12, 2024
 Libraries|[kddocwidgets](http://github.com/KDAB/KDDockWidgets)|v2.2.3|Apr 01, 2025
 Libraries|[libcapsimage](http://github.com/simonowen/capsimage)|502015b6e117e7c52fd143025856f9b5b242b6d6|Sept 01, 2022
 Libraries|[libgme](http://github.com/libgme/game-music-emu)|0.6.4|Feb 15, 2025
-Libraries|[libgraphene](https://github.com/ebassi/graphene/archive/refs/tags)|1.10.8|Mar 18, 2022
 Libraries|[liblgpio](http://github.com/joan2937/lg)|746f0df43774175090b93abcc860b6733eefc09b|Mar 28, 2024
 Libraries|[libliftoff](https://gitlab.freedesktop.org/emersion/libliftoff/-/releases/v)|0.5.0|May 27, 2024
 Libraries|[lunasvg](http://github.com/stenzek/lunasvg)|4a1c98ccb1da8a5a92ddc4f97339869b1ae556f4|Mar 30, 2025
