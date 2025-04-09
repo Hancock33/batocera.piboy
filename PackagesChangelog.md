@@ -240,7 +240,6 @@ Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|14c9da00388751549
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|24207fdc3afe260fa86e814e4f06b7618f71ad17|Jan 26, 2025
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|5300b32803c1c61bc3b6bdf86a084c1db1a217ad|Jan 25, 2025
 Boot|[rk3128-blobs](https://github.com/rockchip-linux/rkbin.git)|f43a462e7a1429a9d407ae52b4745033034a6cf9|Jan 24, 2025
-Libraries|[projectm](http://github.com/projectM-visualizer/projectm)|v4.1.4|Jan 24, 2025
 Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|ca16a702c76eb784e870772c948012c4c27076da|Jan 22, 2025
 Emulators|[libretro-mupen64plus-next](http://github.com/libretro/mupen64plus-libretro-nx)|7c7f11061f29b2ccd5d0952e2373ae5b55cfea8f|Jan 22, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|94935c37e9be0a56948ccd1ec51b3d69b9b765a4|Jan 21, 2025

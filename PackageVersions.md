@@ -372,7 +372,6 @@ Libraries|[lunasvg](http://github.com/stenzek/lunasvg)|4a1c98ccb1da8a5a92ddc4f97
 Libraries|[mono-bin](https://github.com/Hancock33/batocera-mono/releases)|6.14.0|Mar 08, 2025
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|38d10a3421d6b5cd4f7579e554fbc58c02ea382d|Apr 03, 2025
 Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|b2aa0dd19d7df1ef1a6ec465621cc5355035a656|Mar 20, 2025
-Libraries|[projectm](http://github.com/projectM-visualizer/projectm)|v4.1.4|Jan 24, 2025
 Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/a2/01/b9a729272389db23e8397d4d5da0bbc2a87c73483098958022d00bd13c7f)|8.56.0|Mar 14, 2025
 Libraries|[python-adafruit-circuitpython-busdevice](https://files.pythonhosted.org/packages/a2/c0/f6347ab32f077413c20f55bc4b0f1592f35affd4d26753394c5ed6c36c4c)|5.2.11|Jan 16, 2025
 Libraries|[python-adafruit-circuitpython-connectionmanager](https://files.pythonhosted.org/packages/69/8b/8316002905f97a7f7e9c3a53dd9bb5a17889033ec55c403a6e55077f6298)|3.1.3|Jan 16, 2025
