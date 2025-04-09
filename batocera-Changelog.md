@@ -118,7 +118,7 @@
 - Bluez to 5.79
 - Buildroot to 2024.11.x with supporting package updates
 - Mesa3D to 25.0.3
-- Linux Kernel to 6.14
+- Linux Kernel to 6.14.1
 - RPi Kernel to 6.12.21
 - RPi firmware to match Kernel 6.12.21
 - GStreamer codecs to 1.26.0
@@ -130,7 +130,7 @@
 - LLVM to 19.1.7
 - Wine-TKG to 10.4
 - Faudio to 25.02
-- DXVK to 2.6
+- DXVK to 2.6.1
 - DXVK-NVApi to 0.9.0
 - VKD3D-Proton to 2.14.1
 - Linux Firmware to 20250109
