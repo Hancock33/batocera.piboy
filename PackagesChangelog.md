@@ -17,8 +17,10 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|ed8382690ca7616b043ed7c71c
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|1115ffc70cce3157816f6092363395d17baff4dd|Apr 10, 2025
 Ports|[omf2097](http://github.com/omf2097/openomf)|adb432dfe85ddd8fd223c141025ba29e0f37227c|Apr 10, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|5d01dfa2ebc61f9c3a5fbaa2d052109c379be5f8|Apr 10, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250410|Apr 10, 2025
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|cd256807c5f916735ae18749c43d5b0bd73240fa|Apr 10, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|7a17ed09eeed07df28315da10ccf905e33441413|Apr 10, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250410|Apr 10, 2025
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|1f1b934c3b277625a1037c510e23abd0c5b054ce|Apr 10, 2025
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|4d6686e35a2f05f23b999d273db54cc5ba26e732|Apr 10, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|cc04478e2d3cda12a736523747bd861d49a99475|Apr 10, 2025
@@ -33,9 +35,7 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|9b7d5cd1a9e56fe7ea9b89be88
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|f124ed8fbae19c8b02a94d2478bd0e59c46cfbba|Apr 09, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|db8585f55074005ebe512bd2ba00cc4c989d3b50|Apr 09, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.0-beta.8|Apr 09, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250409|Apr 09, 2025
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|5ee7b1e181c537ad63d8be654cfeaa7012bae662|Apr 09, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250409|Apr 09, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|c5799e0017ab546bcb6d4a573f55c4809ac0327e|Apr 09, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|8abd31f6cc30a464f3bed70b5ba74fbad5d67d8e|Apr 09, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|240be07bbb8cb5eaa1ad2f9d7de58b87c35b11cf|Apr 09, 2025
