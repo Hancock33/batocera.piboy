@@ -3238,6 +3238,11 @@ msgctxt "game_options"
 msgid "April"
 msgstr "Апрель"
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Arabic"
+msgstr ""
+
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Arabic (ar)"
@@ -4428,7 +4433,7 @@ msgctxt "game_options"
 msgid "CONSOLE COUNTRY"
 msgstr "СТРАНА КОНСОЛИ"
 
-#. TRANSLATION: cemu
+#. TRANSLATION: cemu, redream, shadps4
 msgctxt "game_options"
 msgid "CONSOLE LANGUAGE"
 msgstr "ЯЗЫК КОНСОЛИ"
@@ -5190,6 +5195,11 @@ msgctxt "game_options"
 msgid "Choose cable type for the TV."
 msgstr "Выберите тип кабеля для TV."
 
+#. TRANSLATION: cemu, redream, shadps4
+msgctxt "game_options"
+msgid "Choose console language. Not all games may support the language choice."
+msgstr ""
+
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose difficulty for the game."
@@ -5239,11 +5249,6 @@ msgstr "Выбрать язык BIOS системы."
 msgctxt "game_options"
 msgid "Choose text language."
 msgstr ""
-
-#. TRANSLATION: redream
-msgctxt "game_options"
-msgid "Choose the Dreamcast console language."
-msgstr "Выберите язык консоли Dreamcast."
 
 #. TRANSLATION: libretro/flycast, redream
 msgctxt "game_options"
@@ -5898,7 +5903,7 @@ msgctxt "game_options"
 msgid "Cyrillic [Windows-1251]"
 msgstr "Кириллица [Windows-1251]"
 
-#. TRANSLATION: etlegacy, scummvm
+#. TRANSLATION: etlegacy, scummvm, shadps4
 msgctxt "game_options"
 msgid "Czech"
 msgstr "Czech"
@@ -6213,7 +6218,7 @@ msgctxt "game_options"
 msgid "Dance Mat"
 msgstr "Танцевальный коврик"
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Danish"
 msgstr "Датский"
@@ -7129,6 +7134,11 @@ msgstr ""
 "Включить эмуляцию ультразвука Gravis Utrasound. Убедитесь, что папка "
 "ULTRASND находится в корне папки <game>.pc."
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Enable High Dynamic Range if your display supports it."
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Enable No-interlacing Patches."
@@ -7588,6 +7598,16 @@ msgstr "English"
 msgctxt "game_options"
 msgid "English (Default)"
 msgstr "English (по умолчанию)"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "English (United Kingdom)"
+msgstr ""
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "English (United States)"
+msgstr ""
 
 #. TRANSLATION: hatari, libretro/hatarib
 msgctxt "game_options"
@@ -8319,7 +8339,7 @@ msgctxt "game_options"
 msgid "Finland"
 msgstr "Finland"
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Finnish"
 msgstr "Финский"
@@ -8674,6 +8694,16 @@ msgstr ""
 msgctxt "game_options"
 msgid "French"
 msgstr "French"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "French (Canada)"
+msgstr ""
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "French (France)"
+msgstr ""
 
 #. TRANSLATION: hatari, libretro/hatarib
 msgctxt "game_options"
@@ -9362,7 +9392,7 @@ msgctxt "game_options"
 msgid "Greece"
 msgstr "Greece"
 
-#. TRANSLATION: easyrpg, etlegacy
+#. TRANSLATION: easyrpg, etlegacy, shadps4
 msgctxt "game_options"
 msgid "Greek"
 msgstr "Greek"
@@ -9450,6 +9480,11 @@ msgstr "HD ТЕКСТУРЫ"
 #. TRANSLATION: libretro/uae4arm
 msgctxt "game_options"
 msgid "HDFs"
+msgstr ""
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "HDR"
 msgstr ""
 
 #. TRANSLATION: shared
@@ -9794,7 +9829,7 @@ msgctxt "game_options"
 msgid "How the window space is distributed between the screens."
 msgstr "Как распределяется пространство между экранами."
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Hungarian"
 msgstr "Венгерский"
@@ -10092,6 +10127,11 @@ msgstr "India"
 msgctxt "game_options"
 msgid "Indonesia"
 msgstr "Indonesia"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Indonesian"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_wswan
 msgctxt "game_options"
@@ -12299,6 +12339,11 @@ msgctxt "game_options"
 msgid "Norwegian"
 msgstr "Norwegian"
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Norwegian (Bokmaal)"
+msgstr ""
+
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Norwegian (no)"
@@ -12313,11 +12358,6 @@ msgstr "Не подключен"
 msgctxt "game_options"
 msgid "Not all games support 3D pad."
 msgstr "Не все игры поддерживают 3D pad."
-
-#. TRANSLATION: cemu
-msgctxt "game_options"
-msgid "Not all games support all languages."
-msgstr "Не все игры поддерживают все языки."
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -13416,7 +13456,7 @@ msgctxt "game_options"
 msgid "Poland (pl)"
 msgstr "Poland (pl)"
 
-#. TRANSLATION: doom3, etlegacy, xenia, xenia-canary
+#. TRANSLATION: doom3, etlegacy, shadps4, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Polish"
 msgstr "Polish"
@@ -13470,6 +13510,16 @@ msgstr "Portugese"
 msgctxt "game_options"
 msgid "Portuguese"
 msgstr "Португальский"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Portuguese (Brazil)"
+msgstr ""
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Portuguese (Portugal)"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -14235,7 +14285,7 @@ msgctxt "game_options"
 msgid "Romania"
 msgstr "Romania"
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Romanian"
 msgstr "Румынский"
@@ -15563,7 +15613,7 @@ msgctxt "game_options"
 msgid "Simple 2x"
 msgstr "Простой 2x"
 
-#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, sonicmania
+#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, shadps4, ...
 msgctxt "game_options"
 msgid "Simplified Chinese"
 msgstr "Упрощенный китайский"
@@ -15981,6 +16031,16 @@ msgctxt "game_options"
 msgid "Spanish"
 msgstr "Spanish"
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Spanish (Latin America)"
+msgstr ""
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Spanish (Spain)"
+msgstr ""
+
 #. TRANSLATION: hatari, libretro/hatarib
 msgctxt "game_options"
 msgid "Spanish (es)"
@@ -16371,7 +16431,7 @@ msgctxt "game_options"
 msgid "Sweden"
 msgstr "Sweden"
 
-#. TRANSLATION: etlegacy, scummvm, xenia, xenia-canary
+#. TRANSLATION: etlegacy, scummvm, shadps4, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Swedish"
 msgstr "Swedish"
@@ -16778,6 +16838,11 @@ msgctxt "keys_files"
 msgid "Test Button"
 msgstr ""
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Thai"
+msgstr ""
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Thailand"
@@ -17022,7 +17087,7 @@ msgctxt "game_options"
 msgid "Trackball (Atari CX-22)"
 msgstr "Trackball (Atari CX-22)"
 
-#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, sonicmania
+#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, shadps4, ...
 msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Традиционный китайский"
@@ -17091,7 +17156,7 @@ msgctxt "game_options"
 msgid "Turkey"
 msgstr "Turkey"
 
-#. TRANSLATION: easyrpg, etlegacy, xenia, xenia-canary
+#. TRANSLATION: easyrpg, etlegacy, shadps4, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Turkish"
 msgstr "Turkish"
@@ -17458,7 +17523,7 @@ msgctxt "game_options"
 msgid "Ukraine"
 msgstr "Україна"
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Ukrainian"
 msgstr "Украинский"
@@ -18079,6 +18144,11 @@ msgstr "Videopac+ G7400 (France)"
 msgctxt "game_options"
 msgid "Vietnam"
 msgstr "Vietnam"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Vietnamese"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -19546,6 +19616,10 @@ msgstr "жёлтая/синяя"
 #~ msgstr "Выбрать тип консоли."
 
 #~ msgctxt "game_options"
+#~ msgid "Choose the Dreamcast console language."
+#~ msgstr "Выберите язык консоли Dreamcast."
+
+#~ msgctxt "game_options"
 #~ msgid "Choose the NDS screen sizings."
 #~ msgstr "Выберите размеры экрана NDS."
 
@@ -20425,6 +20499,10 @@ msgstr "жёлтая/синяя"
 #~ msgctxt "game_options"
 #~ msgid "Not all games support Stretch, depending on the video files."
 #~ msgstr "Не все игры поддерживают Растягивание, зависит от видеофайлов."
+
+#~ msgctxt "game_options"
+#~ msgid "Not all games support all languages."
+#~ msgstr "Не все игры поддерживают все языки."
 
 #~ msgctxt "game_options"
 #~ msgid "OFF SCREEN RELOAD"
