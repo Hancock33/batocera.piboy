@@ -3224,6 +3224,11 @@ msgctxt "game_options"
 msgid "April"
 msgstr "四月"
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Arabic"
+msgstr ""
+
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Arabic (ar)"
@@ -4402,7 +4407,7 @@ msgctxt "game_options"
 msgid "CONSOLE COUNTRY"
 msgstr "国家"
 
-#. TRANSLATION: cemu
+#. TRANSLATION: cemu, redream, shadps4
 msgctxt "game_options"
 msgid "CONSOLE LANGUAGE"
 msgstr "主机语言"
@@ -5151,6 +5156,11 @@ msgctxt "game_options"
 msgid "Choose cable type for the TV."
 msgstr "选择电视的电缆类型。"
 
+#. TRANSLATION: cemu, redream, shadps4
+msgctxt "game_options"
+msgid "Choose console language. Not all games may support the language choice."
+msgstr ""
+
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose difficulty for the game."
@@ -5200,11 +5210,6 @@ msgstr "选择系统BIOS语言。"
 msgctxt "game_options"
 msgid "Choose text language."
 msgstr "选择文本语言."
-
-#. TRANSLATION: redream
-msgctxt "game_options"
-msgid "Choose the Dreamcast console language."
-msgstr "选择Dreamcast主机语言。"
 
 #. TRANSLATION: libretro/flycast, redream
 msgctxt "game_options"
@@ -5835,7 +5840,7 @@ msgctxt "game_options"
 msgid "Cyrillic [Windows-1251]"
 msgstr "西里尔文 [Windows-1251]"
 
-#. TRANSLATION: etlegacy, scummvm
+#. TRANSLATION: etlegacy, scummvm, shadps4
 msgctxt "game_options"
 msgid "Czech"
 msgstr "捷克语"
@@ -6149,7 +6154,7 @@ msgctxt "game_options"
 msgid "Dance Mat"
 msgstr "跳舞毯"
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Danish"
 msgstr "丹麦"
@@ -7051,6 +7056,11 @@ msgstr ""
 "启用Gravis Utrasound模拟。确保ULTRASND文件夹位于<game>.pc rom文件夹的根目录"
 "中。"
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Enable High Dynamic Range if your display supports it."
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Enable No-interlacing Patches."
@@ -7477,6 +7487,16 @@ msgstr "英语"
 msgctxt "game_options"
 msgid "English (Default)"
 msgstr "英语（默认）"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "English (United Kingdom)"
+msgstr ""
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "English (United States)"
+msgstr ""
 
 #. TRANSLATION: hatari, libretro/hatarib
 msgctxt "game_options"
@@ -8187,7 +8207,7 @@ msgctxt "game_options"
 msgid "Finland"
 msgstr "芬兰"
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Finnish"
 msgstr "芬兰"
@@ -8528,6 +8548,16 @@ msgstr ""
 msgctxt "game_options"
 msgid "French"
 msgstr "法语"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "French (Canada)"
+msgstr ""
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "French (France)"
+msgstr ""
 
 #. TRANSLATION: hatari, libretro/hatarib
 msgctxt "game_options"
@@ -9212,7 +9242,7 @@ msgctxt "game_options"
 msgid "Greece"
 msgstr "希腊"
 
-#. TRANSLATION: easyrpg, etlegacy
+#. TRANSLATION: easyrpg, etlegacy, shadps4
 msgctxt "game_options"
 msgid "Greek"
 msgstr "希腊语"
@@ -9300,6 +9330,11 @@ msgstr "高清纹理"
 #. TRANSLATION: libretro/uae4arm
 msgctxt "game_options"
 msgid "HDFs"
+msgstr ""
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "HDR"
 msgstr ""
 
 #. TRANSLATION: shared
@@ -9637,7 +9672,7 @@ msgctxt "game_options"
 msgid "How the window space is distributed between the screens."
 msgstr "如何在屏幕之间分配窗口空间。"
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Hungarian"
 msgstr "匈牙利"
@@ -9926,6 +9961,11 @@ msgstr "印度"
 msgctxt "game_options"
 msgid "Indonesia"
 msgstr "印度尼西亚"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Indonesian"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_wswan
 msgctxt "game_options"
@@ -12101,6 +12141,11 @@ msgctxt "game_options"
 msgid "Norwegian"
 msgstr "挪威"
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Norwegian (Bokmaal)"
+msgstr ""
+
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Norwegian (no)"
@@ -12115,11 +12160,6 @@ msgstr "未连接"
 msgctxt "game_options"
 msgid "Not all games support 3D pad."
 msgstr "并非所有游戏都支持3D手柄。"
-
-#. TRANSLATION: cemu
-msgctxt "game_options"
-msgid "Not all games support all languages."
-msgstr "并非所有游戏都支持所有语言。"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -13201,7 +13241,7 @@ msgctxt "game_options"
 msgid "Poland (pl)"
 msgstr "波兰语 (pl)"
 
-#. TRANSLATION: doom3, etlegacy, xenia, xenia-canary
+#. TRANSLATION: doom3, etlegacy, shadps4, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Polish"
 msgstr "波兰"
@@ -13255,6 +13295,16 @@ msgstr "葡萄牙語"
 msgctxt "game_options"
 msgid "Portuguese"
 msgstr "葡萄牙语"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Portuguese (Brazil)"
+msgstr ""
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Portuguese (Portugal)"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -14001,7 +14051,7 @@ msgctxt "game_options"
 msgid "Romania"
 msgstr "罗马尼亚"
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Romanian"
 msgstr "罗马尼亚"
@@ -15313,7 +15363,7 @@ msgctxt "game_options"
 msgid "Simple 2x"
 msgstr "简单 2x"
 
-#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, sonicmania
+#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, shadps4, ...
 msgctxt "game_options"
 msgid "Simplified Chinese"
 msgstr "简体中文"
@@ -15719,6 +15769,16 @@ msgctxt "game_options"
 msgid "Spanish"
 msgstr "西班牙语"
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Spanish (Latin America)"
+msgstr ""
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Spanish (Spain)"
+msgstr ""
+
 #. TRANSLATION: hatari, libretro/hatarib
 msgctxt "game_options"
 msgid "Spanish (es)"
@@ -16105,7 +16165,7 @@ msgctxt "game_options"
 msgid "Sweden"
 msgstr "瑞典"
 
-#. TRANSLATION: etlegacy, scummvm, xenia, xenia-canary
+#. TRANSLATION: etlegacy, scummvm, shadps4, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Swedish"
 msgstr "瑞典语"
@@ -16508,6 +16568,11 @@ msgctxt "keys_files"
 msgid "Test Button"
 msgstr ""
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Thai"
+msgstr ""
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Thailand"
@@ -16742,7 +16807,7 @@ msgctxt "game_options"
 msgid "Trackball (Atari CX-22)"
 msgstr "轨迹球（Atari CX-22）"
 
-#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, sonicmania
+#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, shadps4, ...
 msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "繁体中文"
@@ -16809,7 +16874,7 @@ msgctxt "game_options"
 msgid "Turkey"
 msgstr "土耳其"
 
-#. TRANSLATION: easyrpg, etlegacy, xenia, xenia-canary
+#. TRANSLATION: easyrpg, etlegacy, shadps4, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Turkish"
 msgstr "土耳其语"
@@ -17174,7 +17239,7 @@ msgctxt "game_options"
 msgid "Ukraine"
 msgstr "乌克兰"
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Ukrainian"
 msgstr "乌克兰"
@@ -17771,6 +17836,11 @@ msgstr "Videopac+ G7400（法国版）"
 msgctxt "game_options"
 msgid "Vietnam"
 msgstr "越南"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Vietnamese"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18943,6 +19013,10 @@ msgstr "黄色/蓝色"
 #~ "更换驱动程序可以提高音频性能并减少失真。 建议低端系统使用Alathread。"
 
 #~ msgctxt "game_options"
+#~ msgid "Choose the Dreamcast console language."
+#~ msgstr "选择Dreamcast主机语言。"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Choose the amount of polygon sort accuracy (Higher may cause artifacts)."
 #~ msgstr "选择多边形排序精度的数量（较高可能会导致瑕疵）。"
@@ -19371,6 +19445,10 @@ msgstr "黄色/蓝色"
 #~ msgctxt "keys_files"
 #~ msgid "Next Disc (m3u)"
 #~ msgstr "下一个光盘（m3u）"
+
+#~ msgctxt "game_options"
+#~ msgid "Not all games support all languages."
+#~ msgstr "并非所有游戏都支持所有语言。"
 
 #~ msgctxt "game_options"
 #~ msgid "Off (default)"
