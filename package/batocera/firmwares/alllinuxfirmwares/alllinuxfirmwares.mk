@@ -5,7 +5,7 @@
 ################################################################################
 # Version: Commits on Apr 10, 2025
 ALLLINUXFIRMWARES_VERSION = 20250410
-ALLLINUXFIRMWARES_SOURCE = linux-firmware-$(ALLLINUXFIRMWARES_VERSION).tar.gz
+ALLLINUXFIRMWARES_SOURCE = linux-firmware-$(ALLLINUXFIRMWARES_VERSION).tar.xz
 ALLLINUXFIRMWARES_SITE = https://www.kernel.org/pub/linux/kernel/firmware
 
 # exclude some dirs not required on batocera
