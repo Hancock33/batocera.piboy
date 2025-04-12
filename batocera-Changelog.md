@@ -82,14 +82,14 @@
 - DXX-Rebirth to 12th of Jan build
 - EDuke to 26th of Dec build
 - ETLegacy to v2.83.2
-- GroovyMAME to 0.274
+- GroovyMAME to 0.276
 - Gzdoom to g4.14.1
 - Hurrican to 24th of Nov build
 - Hypseus Singe to 2.11.4
 - IOQuake3 to 25th December build
 - Jazz2 to 3.2.0
 - Libretro-Kronos to 2.7.0
-- Libretro-MAME to 0.274
+- Libretro-MAME to 0.276
 - Libretro-Play! 4th Feb build
 - Libretro-PPSSPP to 28th February build
 - Libretro-Wasm4 to v2.7.1
@@ -113,7 +113,7 @@
 - Vice to 3.9
 - Vita3k to 3rd of March 2025 build
 - Xash3d-fwgs to 20th of Feb build
-- Xemu to v0.8.45
+- Xemu to v0.8.49
 - Xenia to build 5979274 (Jan 24, 2025)
 ### System
 - Bluez to 5.79
@@ -134,7 +134,7 @@
 - DXVK to 2.6.1
 - DXVK-NVApi to 0.9.0
 - VKD3D-Proton to 2.14.1
-- Linux Firmware to 20250109
+- Linux Firmware to 20250410
 - Sound Open Firmware to 2025.01
 - Intel Media Driver to 25.1.1
 - LibDRM to 2.4.124
