@@ -242,7 +242,6 @@ class DolphinTriforceGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                "QT_QPA_PLATFORM":"xcb",
                 "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
                 "SDL_JOYSTICK_HIDAPI": "0"
             }

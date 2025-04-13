@@ -40,8 +40,7 @@ class CitronGenerator(Generator):
         return Command.Command(array=commandArray, env={
             "XDG_CONFIG_HOME":CONFIGS, \
             "XDG_DATA_HOME":SAVES / "switch", \
-            "XDG_CACHE_HOME":CACHE, \
-            "QT_QPA_PLATFORM":"xcb"})
+            "XDG_CACHE_HOME":CACHE})
 
     @staticmethod
     def writeCitronConfig(citronConfigFile: Path, system: Emulator, playersControllers: Controllers):

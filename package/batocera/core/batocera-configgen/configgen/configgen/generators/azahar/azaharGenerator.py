@@ -41,7 +41,6 @@ class AzaharGenerator(Generator):
             "XDG_DATA_HOME":SAVES / "3ds",
             "XDG_CACHE_HOME":CACHE,
             "XDG_RUNTIME_DIR":SAVES / "3ds" / "azahar",
-            "QT_QPA_PLATFORM":"xcb",
             "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
             "SDL_JOYSTICK_HIDAPI": "0"
             }

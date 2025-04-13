@@ -431,19 +431,12 @@ class DuckstationGenerator(Generator):
         dbfile = "/usr/bin/duckstation/resources/gamecontrollerdb.txt"
         write_sdl_controller_db(playersControllers, dbfile)
 
-        # check if we're running wayland
-        if environ.get("WAYLAND_DISPLAY"):
-            qt_qpa_platform = "wayland"
-        else:
-            qt_qpa_platform = "xcb"
-
         # use their modified shaderc library
         return Command.Command(
             array=commandArray,
             env={
                 "LD_LIBRARY_PATH": "/usr/stenzek-shaderc/lib:/usr/lib",
                 "XDG_CONFIG_HOME": CONFIGS,
-                "QT_QPA_PLATFORM": qt_qpa_platform,
                 "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
                 "SDL_JOYSTICK_HIDAPI": "0"
             }
