@@ -134,7 +134,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
 
             #os.environ.update({'PIPEWIRE_LATENCY': '1024/48000'})
             # check if we're running wayland
-            if environ.get("WAYLAND_DISPLAY"):
+            if os.environ.get("WAYLAND_DISPLAY"):
                 os.environ.update({'QT_QPA_PLATFORM': 'wayland'})
             else:
                 os.environ.update({'QT_QPA_PLATFORM': 'xcb'})
