@@ -3,8 +3,8 @@
 # citron
 #
 ################################################################################
-# Version: Commits on Apr 12, 2025
-CITRON_VERSION = 18def48dfef9e11f85f54d8c5bcb575ab37bcc35
+# Version: Commits on Apr 14, 2025
+CITRON_VERSION = 175a427c27027512a3071d8b3488222f7880406c
 CITRON_SITE = https://git.citron-emu.org/Citron/Citron.git
 CITRON_SITE_METHOD=git
 CITRON_GIT_SUBMODULES=YES
