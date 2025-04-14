@@ -13,11 +13,10 @@ XBOX_XCLOUD_CLIENT_DEPENDENCIES = libnss
 
 define XBOX_XCLOUD_CLIENT_EXTRACT_CMDS
 	cp -av $(XBOX_XCLOUD_CLIENT_DL_DIR)/$(XBOX_XCLOUD_CLIENT_SOURCE) $(TARGET_DIR)/usr/bin/greenlight
-	chmod 754 $(TARGET_DIR)/usr/bin/greenlight
 endef
 
 define XBOX_XCLOUD_CLIENT_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	chmod 754 $(TARGET_DIR)/usr/bin/greenlight
 endef
 
 $(eval $(generic-package))
