@@ -9,6 +9,8 @@ Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|3bc876ca78a680d7
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|051af5b3146f004837398dab1c893cc95666b333|Apr 16, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|96080e48cffad038ea9092a82684cc1b5fb6be81|Apr 16, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|afb6fdaed3d43ee88307c759ccac68de720fd7a3|Apr 16, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250416|Apr 16, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250416|Apr 16, 2025
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|efaaa1052dc427d64534531cf59a6a9a659dc6a6|Apr 16, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|f795e05c7fa5489f2839a302a152a52ff1a86b3c|Apr 16, 2025
 Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|41afa1fd86d179ecf427707b7135e97df856c5fa|Apr 16, 2025
@@ -66,8 +68,6 @@ Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|45492c41b635302ed74a8b007ef2b3904
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|d3c76303a7720b5b35e4168f3bae5a3097f926ce|Apr 13, 2025
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.2|Apr 13, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.0-beta.10|Apr 13, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250413|Apr 13, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250413|Apr 13, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|0694240afa8d163cf5450ca7dfefc2da485b9ff1|Apr 13, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|25a882341d5ebbf8124ddd2a7421592678dfac2e|Apr 12, 2025
 Libraries|[plutosvg](http://github.com/stenzek/plutosvg)|bc845bb6b6511e392f9e1097b26f70cf0b3c33be|Apr 12, 2025
