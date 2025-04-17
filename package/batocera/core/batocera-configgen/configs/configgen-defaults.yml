@@ -23,8 +23,8 @@ twentyfourtyeight:
   emulator: libretro
   core:     opera
 3ds:
-  emulator: citra
-  core:     citra
+  emulator: azahar
+  core:     azahar
   options:
     powersave: '1'
 abuse:
