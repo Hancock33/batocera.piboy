@@ -15,8 +15,10 @@ Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|3084bb389b7847f9
 Ports|[box64](http://github.com/ptitseb/box64)|882d933d8494a44cb03c0db8705ca0c96117aeeb|Apr 17, 2025
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|2a7d042098b39686f93213d870862d4ce37ba745|Apr 17, 2025
 Ports|[omf2097](http://github.com/omf2097/openomf)|942dac12be131548b32bffa03ed58c12ba5370ae|Apr 17, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250417|Apr 17, 2025
 Controllers|[xone](http://github.com/dlundqvist/xone)|ecdd59e42560b157de1db69184b2a9002ac21b65|Apr 17, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|c14016d6a2f639bdf49cdad2f3549e8e99b6d3c1|Apr 17, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250417|Apr 17, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|fa03385980424e5059103ff27154847907413317|Apr 17, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|ec2a0452ffdb26ce0a8e8ecc3b5f74c95e24f878|Apr 17, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|ec2a0452ffdb26ce0a8e8ecc3b5f74c95e24f878|Apr 17, 2025
@@ -37,9 +39,7 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|e73fa7eda6ab698207dc45443609a4d
 Ports|[stk](http://github.com/supertuxkart/stk-code)|f1f322a654062ae3109e877e3415549c26aeb661|Apr 16, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|ba5f2b517b74654ee727d88cc3f0c27f244ac5bb|Apr 16, 2025
 Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|47eeeeff8fa393c53ac7758c0f52b40aee87bc75|Apr 16, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250416|Apr 16, 2025
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|944465123eb329a29d9c34c24c606f144d2bde1c|Apr 16, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250416|Apr 16, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|5d0e473cf1b33f9af997ca6a1fd544c8e3472be9|Apr 16, 2025
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|efaaa1052dc427d64534531cf59a6a9a659dc6a6|Apr 16, 2025
 Emulators|[libretro-ecwolf](https://github.com/libretro/ecwolf)|c57ad894d5942740b4896511e8554c9a776b04a6|Apr 16, 2025
