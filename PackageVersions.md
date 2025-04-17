@@ -194,7 +194,7 @@ Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|c4332d
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|f66e60ffda14cc615336d2997c09b3b1b998e8eb|Apr 07, 2025
 Emulators|[libretro-pocketsnes](http://github.com/libretro/snes9x2002)|a0709ec7dcd6de2fbebb43106bd757b649e3b7cf|Oct 21, 2024
 Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|78656d4615691c393e65e48672ce5fff5b1f97d3|Oct 21, 2024
-Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|0813cb3c0211011902d4b0881f8600aa72e552a0|Apr 17, 2025
+Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|c17da9ccaac777b45fd51cc42487a5ebafbbda4f|Apr 17, 2025
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|b3e5f8b2e8855f9c6fc7ff7a0036e4e61379177d|Dec 27, 2024
 Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|acae250da8d98b8b9707cd499e2a0bf6d8500652|Oct 21, 2024
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|6cc162de2162a0ffe92a4e0470141b9c7c095bf3|Mar 15, 2025
@@ -264,7 +264,7 @@ Emulators|[openmsx](http://github.com/openMSX/openMSX)|2fa95bac8a224fb66d4ab107a
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.274|Apr 16, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|f66e60ffda14cc615336d2997c09b3b1b998e8eb|Apr 07, 2025
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|0813cb3c0211011902d4b0881f8600aa72e552a0|Apr 17, 2025
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|c17da9ccaac777b45fd51cc42487a5ebafbbda4f|Apr 17, 2025
 Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a177763e14c924e3b15e2|Sept 29, 2024
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.3.18|Apr 03, 2025
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
@@ -275,7 +275,7 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|b8d1d7cdf18a0545b5745cea9b
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-04-17|Apr 17, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.3.31|Apr 14, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|f795e05c7fa5489f2839a302a152a52ff1a86b3c|Apr 16, 2025
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|703620c7cd17d336f78ff897c66b3d48e448b0b5|Apr 17, 2025
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|df89241eb81c9512f348ba066c5c52a8984b3bbf|Apr 17, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|e19f7cfbbfd1d56a53e1f3c9cef085a4752f3350|Jan 14, 2024
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|cacb61c9a3022c84057331063e31304933b61bdf|Apr 15, 2025
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|2c78e77617c65025342e1c4da8187ef5ee2cbad4|Apr 06, 2025

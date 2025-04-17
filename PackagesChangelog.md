@@ -4,10 +4,10 @@ Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/b
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|2c5177384a0e360fcc43816965bd302b4dbe69b3|Apr 17, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|0003cf7b11e3e49a73d86701797b76d69cf292b9|Apr 17, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|2fa95bac8a224fb66d4ab107a089c8512921c695|Apr 17, 2025
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|0813cb3c0211011902d4b0881f8600aa72e552a0|Apr 17, 2025
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|c17da9ccaac777b45fd51cc42487a5ebafbbda4f|Apr 17, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|b8d1d7cdf18a0545b5745cea9be902141a0270b1|Apr 17, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-04-17|Apr 17, 2025
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|703620c7cd17d336f78ff897c66b3d48e448b0b5|Apr 17, 2025
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|df89241eb81c9512f348ba066c5c52a8984b3bbf|Apr 17, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|462da4f50f9aa46f326fad857b7cdd51fed647e3|Apr 17, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu)|5685a6290cfbf7b022ec5e58a8ffb09f664c04e8|Apr 17, 2025
 Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|b8017938de8b31c1962c2c8044a127519c2c1cdf|Apr 17, 2025
@@ -24,7 +24,7 @@ Ports|[tr1x](http://github.com/LostArtefacts/TRX)|ec2a0452ffdb26ce0a8e8ecc3b5f74
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|ec2a0452ffdb26ce0a8e8ecc3b5f74c95e24f878|Apr 17, 2025
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|6576bdd489ae6aec56286d4742c768b8c54bbc7d|Apr 17, 2025
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|672b4031b09e8a6480043bb16f5ae038ad156df0|Apr 17, 2025
-Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|0813cb3c0211011902d4b0881f8600aa72e552a0|Apr 17, 2025
+Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|c17da9ccaac777b45fd51cc42487a5ebafbbda4f|Apr 17, 2025
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|02563d7b549eeeaaae66389f2607b24d313f288a|Apr 17, 2025
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|a6782e8a136cba9b99bd19627e0a669678733338|Apr 16, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|f8bf35e6f01e0165e2877031bf19cd17e71e61e2|Apr 16, 2025
