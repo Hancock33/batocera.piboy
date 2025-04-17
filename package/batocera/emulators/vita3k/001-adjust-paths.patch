@@ -1,8 +1,8 @@
 diff --git a/vita3k/app/src/app_init.cpp b/vita3k/app/src/app_init.cpp
-index 34999d53..555a8643 100644
+index eb545f5b..abb8e0c6 100644
 --- a/vita3k/app/src/app_init.cpp
 +++ b/vita3k/app/src/app_init.cpp
-@@ -178,12 +178,7 @@ void init_paths(Root &root_paths) {
+@@ -177,12 +177,7 @@ void init_paths(Root &root_paths) {
          root_paths.set_cache_path(portable_path / "cache" / "");
          root_paths.set_patch_path(portable_path / "patch" / "");
      } else {
@@ -16,7 +16,7 @@ index 34999d53..555a8643 100644
  #if defined(__APPLE__)
          // Store other data in the user-wide path. Otherwise we may end up dumping
          // files into the "/Applications/" install directory or the app bundle.
-@@ -220,12 +215,12 @@ void init_paths(Root &root_paths) {
+@@ -219,12 +214,12 @@ void init_paths(Root &root_paths) {
          auto APPDIR = getenv("APPDIR"); // Used in AppImage
  
          if (XDG_DATA_HOME != NULL)
@@ -31,7 +31,7 @@ index 34999d53..555a8643 100644
  
          if (XDG_CACHE_HOME != NULL) {
              root_paths.set_cache_path(fs::path(XDG_CACHE_HOME) / app_name / "");
-@@ -260,10 +255,10 @@ void init_paths(Root &root_paths) {
+@@ -259,10 +254,10 @@ void init_paths(Root &root_paths) {
  
          // shared path
          if (env_home != NULL)
