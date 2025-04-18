@@ -1,0 +1,9 @@
+config BR2_PACKAGE_QTXDG_TOOLS
+	bool "qtxdg-tools"
+	select BR2_PACKAGE_BATOCERA_QT6
+	select BR2_PACKAGE_LIBQTXDG
+
+	help
+	  Qt implementation of freedesktop.org xdg specs
+
+	  https://lxqt-project.org/

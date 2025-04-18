@@ -1,0 +1,10 @@
+config BR2_PACKAGE_LIBDBUSMENU
+	bool "libdbusmenu"
+	select BR2_PACKAGE_BATOCERA_QT6
+	select BR2_PACKAGE_LIBLXQT
+
+	help
+	  This library provides a Qt implementation of the
+	  DBusMenu protocol.
+
+	  https://lxqt-project.org/
