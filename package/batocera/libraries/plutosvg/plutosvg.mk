@@ -3,8 +3,8 @@
 # plutosvg
 #
 ################################################################################
-# Version: Commits on Apr 12, 2025
-PLUTOSVG_VERSION = bc845bb6b6511e392f9e1097b26f70cf0b3c33be
+# Version: Commits on Apr 19, 2025
+PLUTOSVG_VERSION = c816e127bcba7ea311114be2cec0d1d3260abe06
 PLUTOSVG_SITE = $(call github,stenzek,plutosvg,$(PLUTOSVG_VERSION))
 
 PLUTOSVG_LICENSE = BSD-2-Clause
