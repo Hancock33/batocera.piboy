@@ -14,6 +14,7 @@ define RPIGPIOSWITCH_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(RPIGPIOSWITCH_SRC)/rpi_gpioswitch.sh						$(TARGET_DIR)/usr/bin/rpi_gpioswitch
 	$(INSTALL) -D -m 0755 $(RPIGPIOSWITCH_SRC)/rpi-pin56-power.py						$(TARGET_DIR)/usr/bin/rpi-pin56-power
 	$(INSTALL) -D -m 0755 $(RPIGPIOSWITCH_SRC)/rpi-pin356-power.py						$(TARGET_DIR)/usr/bin/rpi-pin356-power
+	$(INSTALL) -D -m 0755 $(RPIGPIOSWITCH_SRC)/rpi-retroflag-64PiCase.py				$(TARGET_DIR)/usr/bin/rpi-retroflag-64PiCase
 	$(INSTALL) -D -m 0755 $(RPIGPIOSWITCH_SRC)/rpi-retroflag-GPiCase.py					$(TARGET_DIR)/usr/bin/rpi-retroflag-GPiCase
 	$(INSTALL) -D -m 0755 $(RPIGPIOSWITCH_SRC)/rpi-retroflag-AdvancedSafeShutdown.py	$(TARGET_DIR)/usr/bin/rpi-retroflag-AdvancedSafeShutdown
 	$(INSTALL) -D -m 0755 $(RPIGPIOSWITCH_SRC)/rpi-argonone.py							$(TARGET_DIR)/usr/bin/rpi-argonone
