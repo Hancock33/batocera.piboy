@@ -1,4 +1,4 @@
-From 05bae83faf7a6b42f1f8cc3ccd84a62f1fea3ab3 Mon Sep 17 00:00:00 2001
+From e1ee5bf1a2bbebbbea865f4f9f830a33e6f5d50e Mon Sep 17 00:00:00 2001
 From: Daniel Martin <dmanlfc@gmail.com>
 Date: Sat, 11 Jan 2025 21:33:16 +1000
 Subject: [PATCH] add sdl2 controller support - best for driving & fighting
@@ -86,10 +86,10 @@ index 5e04619..a714649 100644
  # Set to 1 if you want to disable SDL (Fixes SRTV boost bar)
  # NO_SDL 0
 diff --git a/src/lindbergh/config.c b/src/lindbergh/config.c
-index f2dd92b..c746be2 100644
+index b1d8d08..e2b49c3 100644
 --- a/src/lindbergh/config.c
 +++ b/src/lindbergh/config.c
-@@ -1487,34 +1487,43 @@ int readConfig(FILE *configFile, EmulatorConfig *config)
+@@ -1497,34 +1497,43 @@ int readConfig(FILE *configFile, EmulatorConfig *config)
  KeyMapping getDefaultKeymap()
  {
      KeyMapping defaultKeyMapping;
@@ -201,7 +201,7 @@ index c78ba3f..3c6cdbc 100644
          drawGameBorder(config->width, config->height, config->whiteBorderPercentage, config->blackBorderPercentage);
  
 diff --git a/src/lindbergh/input.c b/src/lindbergh/input.c
-index f1ae296..c0bc31d 100644
+index f1ae296..6d638d8 100644
 --- a/src/lindbergh/input.c
 +++ b/src/lindbergh/input.c
 @@ -20,6 +20,7 @@
@@ -992,10 +992,10 @@ index f1ae296..c0bc31d 100644
          break;
      }
 diff --git a/src/lindbergh/lindbergh.c b/src/lindbergh/lindbergh.c
-index 2a055aa..7946ac3 100644
+index 91732e6..d4c03e5 100644
 --- a/src/lindbergh/lindbergh.c
 +++ b/src/lindbergh/lindbergh.c
-@@ -17,7 +17,7 @@
+@@ -16,7 +16,7 @@
  #define LD_LIBRARY_PATH "LD_LIBRARY_PATH"
  #define LD_PRELOAD "LD_PRELOAD"
  #define PRELOAD_FILE_NAME "lindbergh.so"
@@ -1003,7 +1003,7 @@ index 2a055aa..7946ac3 100644
 +#define TEAM "bobbydilley, retrofan, dkeruza-neo, doozer, francesco, rolel, caviar-x, dmanlfc"
  #define LINDBERGH_CONFIG_PATH "LINDBERGH_CONFIG_PATH"
  #define LINDBERGH_LOADER_CURRENT_DIR "LINDBERGH_LOADER_CURRENT_DIR"
- #define MAX_PATH_LEN 1024
+ 
 diff --git a/src/lindbergh/sdlcalls.c b/src/lindbergh/sdlcalls.c
 index 946e1c0..cd67569 100644
 --- a/src/lindbergh/sdlcalls.c
