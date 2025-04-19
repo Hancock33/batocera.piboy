@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-04-07 18:26+0000\n"
+"PO-Revision-Date: 2025-04-18 22:10+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -3247,7 +3247,7 @@ msgstr "April"
 #. TRANSLATION: shadps4
 msgctxt "game_options"
 msgid "Arabic"
-msgstr ""
+msgstr "Arabisch"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -3320,8 +3320,6 @@ msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
 "Hotkey+R2."
 msgstr ""
-"Anordnen des Doppelbildschirm-Layouts. Der Bildschirm kann mit Hotkey+R2 "
-"gewechselt werden."
 
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
@@ -4049,7 +4047,7 @@ msgstr "Unten (Standard)"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Bottom Only"
-msgstr "Nur Unten"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -5214,6 +5212,7 @@ msgstr "Kabeltyp für das TV-Gerät auswählen."
 msgctxt "game_options"
 msgid "Choose console language. Not all games may support the language choice."
 msgstr ""
+"Konsolensprache wählen. Nicht alle Spiele unterstützen die gewählte Sprache."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -5714,8 +5713,6 @@ msgid ""
 "Compile shaders using background threads to avoid shader compilation "
 "stutter. May cause graphical glitches."
 msgstr ""
-"Kompilieren Sie Shader mithilfe von Hintergrundthreads, um Stottern bei der "
-"Shader-Kompilierung zu vermeiden. Kann zu Grafikfehlern führen."
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next, redream
 msgctxt "game_options"
@@ -6015,27 +6012,27 @@ msgstr "DIGITALER SOUNDPROZESSOR"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "DIP SWITCH 1"
-msgstr ""
+msgstr "DIP-SCHALTER 1"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "DIP SWITCH 2"
-msgstr ""
+msgstr "DIP-SCHALTER 2"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "DIP SWITCH 3"
-msgstr ""
+msgstr "DIP-SCHALTER 3"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "DIP SWITCH HEX 1"
-msgstr ""
+msgstr "DIP-SCHALTER HEX 1"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "DIP SWITCH HEX 2"
-msgstr ""
+msgstr "DIP-SCHALTER HEX 2"
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -6065,7 +6062,7 @@ msgstr "VERTEX-CACHE DEAKTIVIEREN"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
-msgstr "DISK SHADER CACHE"
+msgstr ""
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
@@ -6819,7 +6816,7 @@ msgstr "KI-ÜBERSETZUNGSSERVICE AKTIVIEREN"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "ENABLE ASYNC SHADER COMPILATION"
-msgstr "AKTIVIERE ASYNCHRONE SHADER KOMPILIERUNG"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -7181,7 +7178,7 @@ msgstr ""
 #. TRANSLATION: shadps4
 msgctxt "game_options"
 msgid "Enable High Dynamic Range if your display supports it."
-msgstr ""
+msgstr "High Dynamic Range aktivieren, falls vom Display unterstützt."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -7661,12 +7658,12 @@ msgstr "Englisch (Standard)"
 #. TRANSLATION: shadps4
 msgctxt "game_options"
 msgid "English (United Kingdom)"
-msgstr ""
+msgstr "Englisch (Vereinigtes Königreich)"
 
 #. TRANSLATION: shadps4
 msgctxt "game_options"
 msgid "English (United States)"
-msgstr ""
+msgstr "Englisch (Vereinigte Staaten)"
 
 #. TRANSLATION: hatari, libretro/hatarib
 msgctxt "game_options"
@@ -8172,7 +8169,7 @@ msgstr "FRAME DUPING (LEISTUNGSSTEIGERUNG)"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "FRAME LIMIT"
-msgstr "BILDRATE BEGRENZEN"
+msgstr ""
 
 #. TRANSLATION: libretro/bennugd
 msgctxt "game_options"
@@ -8771,12 +8768,12 @@ msgstr "Französisch"
 #. TRANSLATION: shadps4
 msgctxt "game_options"
 msgid "French (Canada)"
-msgstr ""
+msgstr "Französisch (Kanada)"
 
 #. TRANSLATION: shadps4
 msgctxt "game_options"
 msgid "French (France)"
-msgstr ""
+msgstr "Französisch (Frankreich)"
 
 #. TRANSLATION: hatari, libretro/hatarib
 msgctxt "game_options"
@@ -9560,7 +9557,7 @@ msgstr ""
 #. TRANSLATION: shadps4
 msgctxt "game_options"
 msgid "HDR"
-msgstr ""
+msgstr "HDR"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -9938,12 +9935,12 @@ msgstr "Hybrid + Bicubic"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
-msgstr "Gemeinsamer Bildschirm unten"
+msgstr ""
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
-msgstr "Gemeinsamer Bildschirm oben"
+msgstr ""
 
 #. TRANSLATION: dolphin, libretro/dolphin
 msgctxt "game_options"
@@ -10212,7 +10209,7 @@ msgstr "Indonesien"
 #. TRANSLATION: shadps4
 msgctxt "game_options"
 msgid "Indonesian"
-msgstr ""
+msgstr "Indonesisch"
 
 #. TRANSLATION: libretro/mednafen_wswan
 msgctxt "game_options"
@@ -10865,12 +10862,12 @@ msgstr "Querformat"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Large Bottom"
-msgstr "Unten groß"
+msgstr ""
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Large Top"
-msgstr "Oben groß"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -10935,7 +10932,7 @@ msgstr "Linker Stick"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Left/Right"
-msgstr "Links/Rechts"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -11296,42 +11293,42 @@ msgstr "MAUS ALS WIIMOTE-ZEIGER"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 1 HORIZONTAL"
-msgstr ""
+msgstr "MAUS-ACHSE FÜR SCHIEBEREGLER 1 HORIZONTAL"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 1 VERTICAL"
-msgstr ""
+msgstr "MAUS-ACHSE FÜR SCHIEBEREGLER 1 VERTIKAL"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 2 HORIZONTAL"
-msgstr ""
+msgstr "MAUS-ACHSE FÜR SCHIEBEREGLER 2 HORIZONTAL"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 2 VERTICAL"
-msgstr ""
+msgstr "MAUS-ACHSE FÜR SCHIEBEREGLER 2 VERTIKAL"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 3 HORIZONTAL"
-msgstr ""
+msgstr "MAUS-ACHSE FÜR SCHIEBEREGLER 3 HORIZONTAL"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 3 VERTICAL"
-msgstr ""
+msgstr "MAUS-ACHSE FÜR SCHIEBEREGLER 3 VERTIKAL"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 4 HORIZONTAL"
-msgstr ""
+msgstr "MAUS-ACHSE FÜR SCHIEBEREGLER 4 HORIZONTAL"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 4 VERTICAL"
-msgstr ""
+msgstr "MAUS-ACHSE FÜR SCHIEBEREGLER 4 VERTIKAL"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -11934,42 +11931,42 @@ msgstr "Mausklick"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Mouse axis for player 1, horizontal screen motion."
-msgstr ""
+msgstr "Mausachse für Spieler 1, horizontale Bildschirmbewegung."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Mouse axis for player 1, vertical screen motion."
-msgstr ""
+msgstr "Mausachse für Spieler 1, vertikale Bildschirmbewegung."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Mouse axis for player 2, horizontal screen motion."
-msgstr ""
+msgstr "Mausachse für Spieler 2, horizontale Bildschirmbewegung."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Mouse axis for player 2, vertical screen motion."
-msgstr ""
+msgstr "Mausachse für Spieler 2, vertikale Bildschirmbewegung."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Mouse axis for player 3, horizontal screen motion."
-msgstr ""
+msgstr "Mausachse für Spieler 3, horizontale Bildschirmbewegung."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Mouse axis for player 3, vertical screen motion."
-msgstr ""
+msgstr "Mausachse für Spieler 3, vertikale Bildschirmbewegung."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Mouse axis for player 4, horizontal screen motion."
-msgstr ""
+msgstr "Mausachse für Spieler 4, horizontale Bildschirmbewegung."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Mouse axis for player 4, vertical screen motion."
-msgstr ""
+msgstr "Mausachse für Spieler 4, vertikale Bildschirmbewegung."
 
 #. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -12106,7 +12103,7 @@ msgstr "NETZWERK TYP"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "NEW 3DS MODE"
-msgstr "NEUER 3DS MODUS"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12517,7 +12514,7 @@ msgstr "Norwegisch"
 #. TRANSLATION: shadps4
 msgctxt "game_options"
 msgid "Norwegian (Bokmaal)"
-msgstr ""
+msgstr "Norwegisch (Bokmål)"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -12700,7 +12697,6 @@ msgstr "Aus ist sicherer, Ein für spezielle Spiele."
 msgctxt "game_options"
 msgid "Off will help some games, others will run too fast."
 msgstr ""
-"Deaktivierung hilft bei einigen Spielen, andere laufen dennoch zu schnell."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -13008,17 +13004,17 @@ msgstr "Nur Spieler 2"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "PADDLE ANALOG STICK SENSITIVITY"
-msgstr ""
+msgstr "EMPFINDLICHKEIT DES ANALOGSTICKS FÜR SCHIEBEREGLER"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "PADDLE D-PAD SENSITIVITY"
-msgstr ""
+msgstr "EMPFINDLICHKEIT DES STEUERKREUZES FÜR SCHIEBEREGLER"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "PADDLE MOUSE SENSITIVITY"
-msgstr ""
+msgstr "MAUSEMPFINDLICHKEIT FÜR SCHIEBEREGLER"
 
 #. TRANSLATION: libretro/atari800, libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -13716,12 +13712,12 @@ msgstr "Portugiesisch"
 #. TRANSLATION: shadps4
 msgctxt "game_options"
 msgid "Portuguese (Brazil)"
-msgstr ""
+msgstr "Portugiesisch (Brasilien)"
 
 #. TRANSLATION: shadps4
 msgctxt "game_options"
 msgid "Portuguese (Portugal)"
-msgstr ""
+msgstr "Portugiesisch (Portugal)"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -13789,7 +13785,7 @@ msgstr "Preload benötigt mehr RAM."
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Preloading is impossible from ES."
-msgstr "Das Vorladen ist von ES aus nicht möglich."
+msgstr ""
 
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
@@ -14224,7 +14220,7 @@ msgstr "Reduktion der Ladezeit zu Lasten der Genauigkeit."
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Reduce stutter that happens when compiling shaders."
-msgstr "Reduziert Ruckeln, das beim Kompilieren von Shadern auftritt."
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -14470,7 +14466,7 @@ msgstr "Rechter Stick"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Right/Left"
-msgstr "Rechts/Links"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -14859,7 +14855,7 @@ msgstr "SIO-BESCHLEUNIGUNG"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "SKIP BUFFER EFFECTS"
-msgstr ""
+msgstr "PUFFEREFFEKTE ÜBERSPRINGEN"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -15463,7 +15459,7 @@ msgstr "Selbstporträt"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Sensitivity when using D-pad for a paddle."
-msgstr ""
+msgstr "Empfindlichkeit bei Steuerkreuznutzung für Schieberegler."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
@@ -15483,12 +15479,12 @@ msgstr ""
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Sensitivity when using mouse for a paddle."
-msgstr ""
+msgstr "Empfindlichkeit bei Mausenutzung für Schieberegler."
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Separate Windows"
-msgstr "Getrennte Fenster"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -15650,27 +15646,27 @@ msgstr "Einstellen der Fenstergröße auf ein ganzzahliges Maß."
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Setting for 16-position DIP switch number 1."
-msgstr ""
+msgstr "Einstellung für 16-Positionen-DIP-Schalter Nr. 1."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Setting for 16-position DIP switch number 2."
-msgstr ""
+msgstr "Einstellung für 16-Positionen-DIP-Schalter Nr. 2."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Setting for DIP switch 1."
-msgstr ""
+msgstr "Einstellung für DIP-Schalter 1."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Setting for DIP switch 2."
-msgstr ""
+msgstr "Einstellung für DIP-Schalter 2."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Setting for DIP switch 3."
-msgstr ""
+msgstr "Einstellung für DIP-Schalter 3."
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -15985,6 +15981,8 @@ msgid ""
 "Skip buffer effects disables auto frameskip and renders at display output "
 "resolution."
 msgstr ""
+"Puffereffekte überspringen deaktiviert automatisches Frameskipping und "
+"rendert in der Ausgabeauflösung."
 
 #. TRANSLATION: rtcw.keys, theforceengine.keys
 msgctxt "keys_files"
@@ -16298,12 +16296,12 @@ msgstr "Spanisch"
 #. TRANSLATION: shadps4
 msgctxt "game_options"
 msgid "Spanish (Latin America)"
-msgstr ""
+msgstr "Spanisch (Lateinamerika)"
 
 #. TRANSLATION: shadps4
 msgctxt "game_options"
 msgid "Spanish (Spain)"
-msgstr ""
+msgstr "Spanisch (Spanien)"
 
 #. TRANSLATION: hatari, libretro/hatarib
 msgctxt "game_options"
@@ -16934,7 +16932,7 @@ msgstr "THREADED VIDEO"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "THROTTLE SENSITIVITY"
-msgstr ""
+msgstr "EMPFINDLICHKEIT DER SCHUBREGELUNG"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -17114,7 +17112,7 @@ msgstr ""
 #. TRANSLATION: shadps4
 msgctxt "game_options"
 msgid "Thai"
-msgstr ""
+msgstr "Thailändisch"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -17125,7 +17123,6 @@ msgstr "Thailand"
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
 msgstr ""
-"Der New 3DS hat einen schnelleren Prozessor, ZL/ZR-Tasten und einen C-Stick."
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -17308,7 +17305,7 @@ msgstr "Oben"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Top Only"
-msgstr "Nur Oben"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -17614,27 +17611,27 @@ msgstr "LIGHTGUNS BENUTZEN"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "USE MOUSE FOR PADDLE 1"
-msgstr ""
+msgstr "MAUS FÜR SCHIEBEREGLER 1 VERWENDEN"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "USE MOUSE FOR PADDLE 2"
-msgstr ""
+msgstr "MAUS FÜR SCHIEBEREGLER 2 VERWENDEN"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "USE MOUSE FOR PADDLE 3"
-msgstr ""
+msgstr "MAUS FÜR SCHIEBEREGLER 3 VERWENDEN"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "USE MOUSE FOR PADDLE 4"
-msgstr ""
+msgstr "MAUS FÜR SCHIEBEREGLER 4 VERWENDEN"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "USE MOUSE POINTER FOR PADDLE 1"
-msgstr ""
+msgstr "MAUSZEIGER FÜR SCHIEBEREGLER 1 VERWENDEN"
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
@@ -18034,21 +18031,29 @@ msgstr ""
 msgctxt "game_options"
 msgid "Use a specific mouse for Paddle 1, chosen by Port 1's Mouse Index."
 msgstr ""
+"Spezifische Maus für Schieberegler 1 nutzen, gewählt über Mausindex von Port "
+"1."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Use a specific mouse for Paddle 2, chosen by Port 2's Mouse Index."
 msgstr ""
+"Spezifische Maus für Schieberegler 2 nutzen, gewählt über Mausindex von Port "
+"2."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Use a specific mouse for Paddle 3, chosen by Port 3's Mouse Index."
 msgstr ""
+"Spezifische Maus für Schieberegler 3 nutzen, gewählt über Mausindex von Port "
+"3."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Use a specific mouse for Paddle 4, chosen by Port 4's Mouse Index."
 msgstr ""
+"Spezifische Maus für Schieberegler 4 nutzen, gewählt über Mausindex von Port "
+"4."
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -18126,6 +18131,8 @@ msgid ""
 "Use the system mouse pointer as paddle controller 1.  Does not let you "
 "choose a specific mouse if you have several."
 msgstr ""
+"Systemmauszeiger als Schieberegler 1 nutzen. Auswahl einer spezifischen Maus "
+"nicht möglich."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -18488,7 +18495,7 @@ msgstr "Vietnam"
 #. TRANSLATION: shadps4
 msgctxt "game_options"
 msgid "Vietnamese"
-msgstr ""
+msgstr "Vietnamesisch"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18593,7 +18600,7 @@ msgstr "LENKRAD AUSLENKUNG"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "WHEEL SENSITIVITY"
-msgstr ""
+msgstr "LENKRAD-EMPFINDLICHKEIT"
 
 #. TRANSLATION: pcsx2, shared
 msgctxt "game_options"
@@ -18832,7 +18839,7 @@ msgstr "Schreibt die 'Depth-Buffer-Werte' in den VM-Speicher. Einige Spiele "
 #. TRANSLATION: libretro, libretro/dice
 msgctxt "game_options"
 msgid "X"
-msgstr ""
+msgstr "X"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -18857,7 +18864,7 @@ msgstr "XBOX LIVE ARCADE"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
@@ -19526,10 +19533,6 @@ msgstr "gelb/blau"
 #~ "reduzierenAlsathread wird für Low-end-Systeme empfohlen."
 
 #~ msgctxt "game_options"
-#~ msgid "Choose the Dreamcast console language."
-#~ msgstr "Sprache für Dreamcast Konsole auswählen."
-
-#~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."
 #~ msgstr "UTC-Zeitzone für die Konsole auswählen."
 
@@ -19736,10 +19739,6 @@ msgstr "gelb/blau"
 #~ "Voraussetzung für manche Spiele, die spezielle Unicode-Zeichen enthalten."
 
 #~ msgctxt "game_options"
-#~ msgid "Not all games support all languages."
-#~ msgstr "Nicht alle Spiele unterstützen jede Sprache."
-
-#~ msgctxt "game_options"
 #~ msgid "OpenGL (x86 only)"
 #~ msgstr "OpenGL (nur x86)"
 
@@ -19832,6 +19831,18 @@ msgstr "gelb/blau"
 #~ msgstr "Color Computer Modell für die Emulation auswählen"
 
 #~ msgctxt "game_options"
+#~ msgid "Sensitivity when using D-pad or analog stick for a throttle."
+#~ msgstr "Empfindlichkeit bei Steuerkreuz oder Stick für Schubregelung."
+
+#~ msgctxt "game_options"
+#~ msgid "Sensitivity when using D-pad or analog stick for a wheel."
+#~ msgstr "Empfindlichkeit bei Steuerkreuz oder Stick für Lenkrad."
+
+#~ msgctxt "game_options"
+#~ msgid "Sensitivity when using analog stick for a paddle."
+#~ msgstr "Empfindlichkeit bei Sticknutzung für Schieberegler."
+
+#~ msgctxt "game_options"
 #~ msgid "Set the color palette to use."
 #~ msgstr "Festlegen der zu verwendenden Farbpalette."
 
@@ -19848,14 +19859,6 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "Simulate LCD color inaccuracy."
 #~ msgstr "Simulation von LCD-Farbungenauigkeiten."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Skip buffer disables auto frameskip and renders at display output "
-#~ "resolution."
-#~ msgstr ""
-#~ "Das Überspringen von Zwischenspeicher-Effekten deaktiviert AUTO "
-#~ "FRAMESKIP, das Rendern erfolgt in Größe der Anzeigeauflösung."
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."

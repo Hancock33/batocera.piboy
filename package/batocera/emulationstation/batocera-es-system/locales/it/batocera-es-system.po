@@ -6001,27 +6001,27 @@ msgstr "PROCESSORE AUDIO DIGITALE"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "DIP SWITCH 1"
-msgstr ""
+msgstr "DIP SWITCH 1"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "DIP SWITCH 2"
-msgstr ""
+msgstr "DIP SWITCH 2"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "DIP SWITCH 3"
-msgstr ""
+msgstr "DIP SWITCH 3"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "DIP SWITCH HEX 1"
-msgstr ""
+msgstr "DIP SWITCH HEX 1"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "DIP SWITCH HEX 2"
-msgstr ""
+msgstr "DIP SWITCH HEX 2"
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -11234,42 +11234,42 @@ msgstr "MOUSE COME PUNTATORE WIIMOTE"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 1 HORIZONTAL"
-msgstr ""
+msgstr "ASSE MOUSE PER PADDLE 1 ORIZZONTALE"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 1 VERTICAL"
-msgstr ""
+msgstr "ASSE MOUSE PER PADDLE 1 VERTICALE"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 2 HORIZONTAL"
-msgstr ""
+msgstr "ASSE MOUSE PER PADDLE 2 ORIZZONTALE"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 2 VERTICAL"
-msgstr ""
+msgstr "ASSE MOUSE PER PADDLE 2 VERTICALE"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 3 HORIZONTAL"
-msgstr ""
+msgstr "ASSE MOUSE PER PADDLE 3 ORIZZONTALE"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 3 VERTICAL"
-msgstr ""
+msgstr "ASSE MOUSE PER PADDLE 3 VERTICALE"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 4 HORIZONTAL"
-msgstr ""
+msgstr "ASSE MOUSE PER PADDLE 4 ORIZZONTALE"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 4 VERTICAL"
-msgstr ""
+msgstr "ASSE MOUSE PER PADDLE 4 VERTICALE"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -11864,42 +11864,42 @@ msgstr "Click del Mouse"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Mouse axis for player 1, horizontal screen motion."
-msgstr ""
+msgstr "Asse mouse per giocatore 1, movimento a schermo orizzontale."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Mouse axis for player 1, vertical screen motion."
-msgstr ""
+msgstr "Asse mouse per giocatore 1, movimento a schermo verticale."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Mouse axis for player 2, horizontal screen motion."
-msgstr ""
+msgstr "Asse mouse per giocatore 2, movimento a schermo orizzontale."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Mouse axis for player 2, vertical screen motion."
-msgstr ""
+msgstr "Asse mouse per giocatore 2, movimento a schermo verticale."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Mouse axis for player 3, horizontal screen motion."
-msgstr ""
+msgstr "Asse mouse per giocatore 3, movimento a schermo orizzontale."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Mouse axis for player 3, vertical screen motion."
-msgstr ""
+msgstr "Asse mouse per giocatore 3, movimento a schermo verticale."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Mouse axis for player 4, horizontal screen motion."
-msgstr ""
+msgstr "Asse mouse per giocatore 4, movimento a schermo orizzontale."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Mouse axis for player 4, vertical screen motion."
-msgstr ""
+msgstr "Asse mouse per giocatore 4, movimento a schermo verticale."
 
 #. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -12930,17 +12930,17 @@ msgstr "Solo P2"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "PADDLE ANALOG STICK SENSITIVITY"
-msgstr ""
+msgstr "SENSIBILITA' PADDLE LEVA ANALOGICA"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "PADDLE D-PAD SENSITIVITY"
-msgstr ""
+msgstr "SENSIBILITA' PADDLE D-PAD"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "PADDLE MOUSE SENSITIVITY"
-msgstr ""
+msgstr "SENSIBILITA' PADDLE MOUSE"
 
 #. TRANSLATION: libretro/atari800, libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -13070,7 +13070,7 @@ msgstr "LAYOUT TASTIERA FISICA"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "PICKUP WEAPON"
-msgstr ""
+msgstr "RACCOGLI ARMA"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -15378,7 +15378,7 @@ msgstr "Selfie"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Sensitivity when using D-pad for a paddle."
-msgstr ""
+msgstr "Sensibilita' nell'usare D-pad come paddle."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
@@ -15398,7 +15398,7 @@ msgstr ""
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Sensitivity when using mouse for a paddle."
-msgstr ""
+msgstr "Sensibilita' nell'usare il mouse come paddle."
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -15561,27 +15561,27 @@ msgstr "Imposta la dimensione finestra a un numero intero."
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Setting for 16-position DIP switch number 1."
-msgstr ""
+msgstr "Impostazione per DIP switch numero 1 a 16-posizioni."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Setting for 16-position DIP switch number 2."
-msgstr ""
+msgstr "Impostazione per DIP switch numero 2 a 16-posizioni."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Setting for DIP switch 1."
-msgstr ""
+msgstr "Impostazione per DIP switch 1."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Setting for DIP switch 2."
-msgstr ""
+msgstr "Impostazione per DIP switch 2."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Setting for DIP switch 3."
-msgstr ""
+msgstr "Impostazione per DIP switch 3."
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -16836,7 +16836,7 @@ msgstr "VIDEO THREADED"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "THROTTLE SENSITIVITY"
-msgstr ""
+msgstr "SENSIBILITA' ACCELERATORE"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -17512,27 +17512,27 @@ msgstr "USA PISTOLE"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "USE MOUSE FOR PADDLE 1"
-msgstr ""
+msgstr "USA IL MOUSE COME PADDLE 1"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "USE MOUSE FOR PADDLE 2"
-msgstr ""
+msgstr "USA IL MOUSE COME PADDLE 2"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "USE MOUSE FOR PADDLE 3"
-msgstr ""
+msgstr "USA IL MOUSE COME PADDLE 3"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "USE MOUSE FOR PADDLE 4"
-msgstr ""
+msgstr "USA IL MOUSE COME PADDLE 4"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "USE MOUSE POINTER FOR PADDLE 1"
-msgstr ""
+msgstr "USA IL PUNTATORE MOUSE COME PADDLE "
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
@@ -17927,22 +17927,22 @@ msgstr ""
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Use a specific mouse for Paddle 1, chosen by Port 1's Mouse Index."
-msgstr ""
+msgstr "Usa un mouse specifico per Paddle 1, in base al numero porta Mouse 1."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Use a specific mouse for Paddle 2, chosen by Port 2's Mouse Index."
-msgstr ""
+msgstr "Usa un mouse specifico per Paddle 2, in base al numero porta Mouse 2."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Use a specific mouse for Paddle 3, chosen by Port 3's Mouse Index."
-msgstr ""
+msgstr "Usa un mouse specifico per Paddle 3, in base al numero porta Mouse 3."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Use a specific mouse for Paddle 4, chosen by Port 4's Mouse Index."
-msgstr ""
+msgstr "Usa un mouse specifico per Paddle 4, in base al numero porta Mouse 4."
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -18015,6 +18015,8 @@ msgid ""
 "Use the system mouse pointer as paddle controller 1.  Does not let you "
 "choose a specific mouse if you have several."
 msgstr ""
+"Usa il puntatore mouse di sistema come controller paddle 1. Non ti "
+"permetterdi scegliere quale mouse nel caso ce ne sono multipli."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -18479,7 +18481,7 @@ msgstr "ROTAZIONE STERZO"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "WHEEL SENSITIVITY"
-msgstr ""
+msgstr "SENSIBLITA' VOLANTE"
 
 #. TRANSLATION: pcsx2, shared
 msgctxt "game_options"
@@ -18720,7 +18722,7 @@ msgstr ""
 #. TRANSLATION: libretro, libretro/dice
 msgctxt "game_options"
 msgid "X"
-msgstr ""
+msgstr "X"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -18745,7 +18747,7 @@ msgstr "XBOX LIVE ARCADE"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
@@ -20388,6 +20390,18 @@ msgstr "giallo/blu"
 #~ msgctxt "game_options"
 #~ msgid "Select the model of Color Computer to emulate"
 #~ msgstr "Seleziona il modello di computer a colori da emulare"
+
+#~ msgctxt "game_options"
+#~ msgid "Sensitivity when using D-pad or analog stick for a throttle."
+#~ msgstr "Sensibilita' nell'usare D-pad o leva analogica per accelerare."
+
+#~ msgctxt "game_options"
+#~ msgid "Sensitivity when using D-pad or analog stick for a wheel."
+#~ msgstr "Sensibilita' nell'usare D-pad o leva analogica per rotare."
+
+#~ msgctxt "game_options"
+#~ msgid "Sensitivity when using analog stick for a paddle."
+#~ msgstr "Sensibilita' nell'usare leva analogica come paddle."
 
 #~ msgctxt "keys_files"
 #~ msgid "Service menu"
