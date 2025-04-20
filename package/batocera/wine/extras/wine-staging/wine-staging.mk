@@ -3,8 +3,8 @@
 # wine-staging
 #
 ################################################################################
-# Version: Commits on Jan 21, 2025
-WINE_STAGING_VERSION = wine-10.0
+# Version: Commits on Apr 04, 2025
+WINE_STAGING_VERSION = wine-10.5
 WINE_STAGING_SOURCE = wine-$(WINE_STAGING_VERSION).tar.gz
 WINE_STAGING_SITE = $(call github,wine-mirror,wine,$(WINE_STAGING_VERSION))
 WINE_STAGING_LICENSE = LGPL-2.1+
@@ -12,8 +12,12 @@ WINE_STAGING_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_STAGING_SELINUX_MODULES = wine
 WINE_STAGING_DEPENDENCIES = host-bison host-flex host-wine-custom
 HOST_WINE_STAGING_DEPENDENCIES = host-bison host-flex
-WINE_STAGING_STAGING_VERSION = v10.0
+WINE_STAGING_STAGING_VERSION = v$(subst -wine,,$(WINE_STAGING_VERSION))
 HOST_WINE_STAGING_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/$(WINE_STAGING_STAGING_VERSION).tar.gz
+
+ifeq ($(BR_CMAKE_USE_CLANG),y)
+    HOST_WINE_STAGING_DEPENDENCIES += host-clang host-lld
+endif
 
 define WINE_STAGING_AUTOGEN
 	# Use Staging Patches
@@ -35,13 +39,14 @@ HOST_WINE_STAGING_PRE_CONFIGURE_HOOKS += WINE_STAGING_AUTOGEN
 # Wine needs its own directory structure and tools for cross compiling
 WINE_STAGING_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
 	CFLAGS="$(TARGET_CFLAGS) -Wno-incompatible-pointer-types" \
-	--with-wine-tools=$(BUILD_DIR)/host-wine-custom-$(WINE_CUSTOM_VERSION) \
+	--with-wine-tools=$(BUILD_DIR)/host-wine-custom-$(WINE_STAGING_VERSION) \
 	--disable-tests \
 	--without-capi \
 	--without-coreaudio \
 	--without-gettext \
 	--without-gettextpo \
 	--without-gphoto \
+	--without-ldap \
 	--without-mingw \
 	--without-opencl \
 	--without-oss \
@@ -50,6 +55,7 @@ WINE_STAGING_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_
 
 ifeq ($(BR2_x86_64),y)
     WINE_STAGING_CONF_OPTS += --enable-win64
+    WINE_STAGING_CONF_OPTS += --enable-tools \
 else
     WINE_STAGING_CONF_OPTS += --disable-win64
 endif
@@ -113,11 +119,9 @@ else
 WINE_STAGING_CONF_OPTS += --without-gnutls
 endif
 
-ifeq ($(BR2_PACKAGE_GST1_PLUGINS_BASE),y)
-WINE_STAGING_CONF_OPTS += --with-gstreamer
-WINE_STAGING_DEPENDENCIES += gst1-plugins-base
-else
-WINE_STAGING_CONF_OPTS += --without-gstreamer
+ifeq ($(BR2_PACKAGE_FFMPEG),y)
+WINE_STAGING_CONF_OPTS += --without-gstreamer --with-ffmpeg
+WINE_STAGING_DEPENDENCIES += ffmpeg
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
@@ -299,17 +303,19 @@ endef
 HOST_WINE_STAGING_CONF_OPTS += \
 	--disable-tests \
 	--disable-win16 \
+	--disable-winemenubuilder \
 	--without-alsa \
 	--without-capi \
 	--without-coreaudio \
 	--without-cups \
 	--without-dbus \
 	--without-fontconfig \
-	--without-gphoto \
 	--without-gnutls \
+	--without-gphoto \
 	--without-gssapi \
 	--without-gstreamer \
 	--without-krb5 \
+	--without-ldap \
 	--without-mingw \
 	--without-netapi \
 	--without-opencl \

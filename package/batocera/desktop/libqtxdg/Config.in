@@ -1,0 +1,9 @@
+config BR2_PACKAGE_LIBQTXDG
+	bool "libqtxdg"
+	select BR2_PACKAGE_BATOCERA_QT6
+	select BR2_PACKAGE_LIBXKBCOMMON
+
+	help
+	  libqtxdg user tools
+
+	  https://lxqt-project.org/

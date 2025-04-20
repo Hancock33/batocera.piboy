@@ -1,10 +1,10 @@
 diff --git a/CMakeModules/DuckStationDependencies.cmake b/CMakeModules/DuckStationDependencies.cmake
-index 1d748578f..87c631173 100644
+index e506da007..805b38146 100644
 --- a/CMakeModules/DuckStationDependencies.cmake
 +++ b/CMakeModules/DuckStationDependencies.cmake
 @@ -18,7 +18,7 @@ find_package(JPEG REQUIRED)
  find_package(Freetype 2.13.2 REQUIRED) # 2.13.3, but flatpak is still on 2.13.2.
- find_package(lunasvg 2.4.1 REQUIRED)
+ find_package(plutosvg 0.0.6 REQUIRED)
  find_package(cpuinfo REQUIRED)
 -find_package(DiscordRPC 3.4.0 REQUIRED)
 +#find_package(DiscordRPC 3.4.0 REQUIRED)
@@ -12,7 +12,7 @@ index 1d748578f..87c631173 100644
  find_package(libzip 1.11.1 REQUIRED)
  
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index 5a643bb48..5ed011da2 100644
+index 98758f5c3..046990623 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
 @@ -95,7 +95,7 @@ LOG_CHANNEL(System);

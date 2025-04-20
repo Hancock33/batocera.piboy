@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Batocera.linux Options\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-04-04 15:02+0200\n"
+"PO-Revision-Date: 2025-04-13 18:01+0200\n"
 "Last-Translator: Daniel Nylander <github@danielnylander.se>\n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
@@ -625,7 +625,7 @@ msgstr "16 bit"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "16-bit"
-msgstr ""
+msgstr "16-bitars"
 
 #. TRANSLATION: openjazz
 msgctxt "game_options"
@@ -760,7 +760,7 @@ msgstr "1MB"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "1ST PERSON GUNS"
-msgstr ""
+msgstr "1:A PERSONENS VAPEN"
 
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
@@ -1275,7 +1275,7 @@ msgstr "32 MHz (överklockning)"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "32-bit"
-msgstr ""
+msgstr "32-bitars"
 
 #. TRANSLATION: openjazz
 msgctxt "game_options"
@@ -1390,7 +1390,7 @@ msgstr "3:e"
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "3rd Person"
-msgstr ""
+msgstr "3:e person"
 
 #. TRANSLATION: citron, ryujinx
 msgctxt "game_options"
@@ -2355,7 +2355,7 @@ msgstr "ANISOTROPISK FILTRERING"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "ANISTROPIC FILTER"
-msgstr ""
+msgstr "ANISOTROPISKT FILTER"
 
 #. TRANSLATION: dolphin, dolphin_triforce, rpcs3, rtcw
 msgctxt "game_options"
@@ -2908,7 +2908,7 @@ msgstr "Algeriet"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "All + Enemy Jedi Dodge"
-msgstr ""
+msgstr "Alla + Undvik fiende-Jedi"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -2938,7 +2938,7 @@ msgstr "Alla möjliga licenser (rekommenderas inte)"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "All voiceovers"
-msgstr ""
+msgstr "Alla berättarröster"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -3002,7 +3002,7 @@ msgstr "Alone in the Dark"
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Alt. Attack"
-msgstr ""
+msgstr "Alt. attack"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -3236,6 +3236,11 @@ msgstr "Ungefärlig XFloat"
 msgctxt "game_options"
 msgid "April"
 msgstr "April"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Arabic"
+msgstr "Arabiska"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -3776,7 +3781,7 @@ msgstr "Tillbaka / Meny"
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Backpedal"
-msgstr ""
+msgstr "Backpedal"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -4424,7 +4429,7 @@ msgctxt "game_options"
 msgid "CONSOLE COUNTRY"
 msgstr "KONSOLLENS LAND"
 
-#. TRANSLATION: cemu
+#. TRANSLATION: cemu, redream, shadps4
 msgctxt "game_options"
 msgid "CONSOLE LANGUAGE"
 msgstr "KONSOLLENS SPRÅK"
@@ -4604,7 +4609,7 @@ msgctxt "game_options"
 msgid "CONTROLLERS"
 msgstr "KONTROLLER"
 
-#. TRANSLATION: dolphin, rpcs3, shared
+#. TRANSLATION: dolphin, libretro/dice, rpcs3, shared
 msgctxt "game_options"
 msgid "CONTROLS"
 msgstr "KONTROLLER"
@@ -4717,7 +4722,7 @@ msgstr "HÅRKORS"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "CROSSHAIR LINE THICKNESS"
-msgstr ""
+msgstr "TJOCKLEK FÖR HÅRKORS"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -5188,6 +5193,12 @@ msgctxt "game_options"
 msgid "Choose cable type for the TV."
 msgstr "Välj kabeltyp för TV:n."
 
+#. TRANSLATION: cemu, redream, shadps4
+msgctxt "game_options"
+msgid "Choose console language. Not all games may support the language choice."
+msgstr ""
+"Välj konsolens språk. Det är inte säkert att alla spel stöder språkvalet."
+
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose difficulty for the game."
@@ -5221,12 +5232,12 @@ msgstr "Välj det andra funktionspaketet för kontrollern."
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose shadow details."
-msgstr ""
+msgstr "Välj skuggdetaljer."
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose slow motion death option."
-msgstr ""
+msgstr "Välj alternativ för slow motion-död."
 
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
@@ -5236,12 +5247,7 @@ msgstr "Välj språk för systemets BIOS."
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose text language."
-msgstr ""
-
-#. TRANSLATION: redream
-msgctxt "game_options"
-msgid "Choose the Dreamcast console language."
-msgstr "Välj språk för Dreamcast-konsolen."
+msgstr "Välj textspråk."
 
 #. TRANSLATION: libretro/flycast, redream
 msgctxt "game_options"
@@ -5264,6 +5270,8 @@ msgid ""
 "Choose the amount of Gamma which changes how light or dark mid-range tones "
 "appear."
 msgstr ""
+"Välj mängden Gamma som ändrar hur ljusa eller mörka toner i mellanregistret "
+"framträder."
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
@@ -5309,7 +5317,7 @@ msgstr ""
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose the depth of texture quality."
-msgstr ""
+msgstr "Välj djupet för texturkvaliteten."
 
 #. TRANSLATION: libretro/cap32, openjk
 msgctxt "game_options"
@@ -5324,12 +5332,12 @@ msgstr "Välj spelets svårighetsgrad."
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose the level of geometric detail."
-msgstr ""
+msgstr "Välj nivån för geometriska detaljer."
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose the level of texture detail."
-msgstr ""
+msgstr "Välj nivån för texturdetaljer."
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -5344,12 +5352,12 @@ msgstr "Välj skalningsläge för spelskärmen."
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose the size of the heads-up display."
-msgstr ""
+msgstr "Välj storleken för översiktsskärmen."
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose the texture filter type."
-msgstr ""
+msgstr "Välj typ för texturfiltrering."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -5371,7 +5379,7 @@ msgstr "Välj om du vill aktivera eller inaktivera mellanscener."
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose to keep corpses present."
-msgstr ""
+msgstr "Välj att behålla döda kroppar."
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -5395,12 +5403,12 @@ msgstr "Välj metod för uppskalning."
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose voice language."
-msgstr ""
+msgstr "Välj röstspråk."
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose when to enable subtitles."
-msgstr ""
+msgstr "Välj när undertexter aktiveras."
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -5895,7 +5903,7 @@ msgctxt "game_options"
 msgid "Cyrillic [Windows-1251]"
 msgstr "Kyrilliska [Windows-1251]"
 
-#. TRANSLATION: etlegacy, scummvm
+#. TRANSLATION: etlegacy, scummvm, shadps4
 msgctxt "game_options"
 msgid "Czech"
 msgstr "Tjeckiska"
@@ -5968,7 +5976,7 @@ msgstr "SKRIVBORD"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "DETAILED SHADERS"
-msgstr ""
+msgstr "DETALJERADE SHADERS"
 
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
@@ -5989,6 +5997,31 @@ msgstr "DIGITALT LJUD"
 msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr "DIGITAL LJUDPROCESSOR"
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "DIP SWITCH 1"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "DIP SWITCH 2"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "DIP SWITCH 3"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "DIP SWITCH HEX 1"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "DIP SWITCH HEX 2"
+msgstr ""
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -6113,7 +6146,7 @@ msgstr "NERSKALNINGSFILTER"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "DRAW CROSSHAIR"
-msgstr ""
+msgstr "RITA HÅRKORS"
 
 #. TRANSLATION: flycast, libretro, ppsspp
 msgctxt "game_options"
@@ -6188,12 +6221,12 @@ msgstr "DXVK ÅTERSTÄLL CACHE"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "DYNAMIC GLOW"
-msgstr ""
+msgstr "DYNAMISK GLÖD"
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "DYNAMIC LIGHTS"
-msgstr ""
+msgstr "DYNAMISK BELYSNING"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -6210,7 +6243,7 @@ msgctxt "game_options"
 msgid "Dance Mat"
 msgstr "Dansmatta"
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Danish"
 msgstr "Danska"
@@ -6255,7 +6288,7 @@ msgctxt "game_options"
 msgid "December"
 msgstr "December"
 
-#. TRANSLATION: citron, libretro/flycast, libretro/mesen, libretro/puae, libretro/puae2021, ...
+#. TRANSLATION: citron, libretro/dice, libretro/flycast, libretro/mesen, libretro/puae, ...
 msgctxt "game_options"
 msgid "Default"
 msgstr "Standard"
@@ -6590,7 +6623,7 @@ msgstr "Ner"
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Down/Crouch"
-msgstr ""
+msgstr "Ner/Kryp"
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -7125,6 +7158,11 @@ msgstr ""
 "Aktivera Gravis Ultrasound-emulering. Se till att mappen ULTRASND finns i "
 "roten av din <game>.pc rom-mapp."
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Enable High Dynamic Range if your display supports it."
+msgstr "Aktivera High Dynamic Range om din skärm har stöds för det."
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Enable No-interlacing Patches."
@@ -7260,7 +7298,7 @@ msgstr "Aktivera start av förinstallerade WHDLoad-installationer."
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Enable lightsaber auto-camera."
-msgstr ""
+msgstr "Aktivera automatisk kamera för ljussabel."
 
 #. TRANSLATION: mame/openbor7530
 msgctxt "game_options"
@@ -7583,6 +7621,16 @@ msgstr "Engelska"
 msgctxt "game_options"
 msgid "English (Default)"
 msgstr "Engelska (Standard)"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "English (United Kingdom)"
+msgstr "Engelska (United Kingdom)"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "English (United States)"
+msgstr "Engelska (USA)"
 
 #. TRANSLATION: hatari, libretro/hatarib
 msgctxt "game_options"
@@ -8314,7 +8362,7 @@ msgctxt "game_options"
 msgid "Finland"
 msgstr "Finland"
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Finnish"
 msgstr "Finska"
@@ -8670,6 +8718,16 @@ msgctxt "game_options"
 msgid "French"
 msgstr "Franska"
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "French (Canada)"
+msgstr "Franska (Kanada)"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "French (France)"
+msgstr "Franska (Frankrike)"
+
 #. TRANSLATION: hatari, libretro/hatarib
 msgctxt "game_options"
 msgid "French (fr)"
@@ -8903,7 +8961,7 @@ msgstr "SPELNING"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "GAMMA"
-msgstr ""
+msgstr "GAMMA"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -9028,7 +9086,7 @@ msgstr "ALLMÄNT"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "GEOMETRIC DETAIL"
-msgstr ""
+msgstr "GEOMETRISK DETALJ"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -9355,7 +9413,7 @@ msgctxt "game_options"
 msgid "Greece"
 msgstr "Grekland"
 
-#. TRANSLATION: easyrpg, etlegacy
+#. TRANSLATION: easyrpg, etlegacy, shadps4
 msgctxt "game_options"
 msgid "Greek"
 msgstr "Grekiska"
@@ -9444,6 +9502,11 @@ msgstr "HD-TEXTURER"
 msgctxt "game_options"
 msgid "HDFs"
 msgstr ""
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "HDR"
+msgstr "Justera skärmens HDR-läge"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -9548,7 +9611,7 @@ msgstr "HST"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "HUD SCALE"
-msgstr ""
+msgstr "HUD-SKALA"
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -9786,7 +9849,7 @@ msgctxt "game_options"
 msgid "How the window space is distributed between the screens."
 msgstr "Hur fönsterutrymmet fördelas mellan skärmarna."
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Hungarian"
 msgstr "Ungerska"
@@ -9839,7 +9902,7 @@ msgstr "IDE (standard)"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "IDENTIFY TARGET"
-msgstr ""
+msgstr "IDENTIFIERA MÅL"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -10042,7 +10105,7 @@ msgstr "Förbättrar prestandan i 3D-spel. Kan orsaka glitchar."
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "In Cinematics"
-msgstr ""
+msgstr "I filmsekvenser"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -10081,6 +10144,11 @@ msgstr "Indien"
 msgctxt "game_options"
 msgid "Indonesia"
 msgstr "Indonesien"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Indonesian"
+msgstr "Indonesiska"
 
 #. TRANSLATION: libretro/mednafen_wswan
 msgctxt "game_options"
@@ -10428,7 +10496,7 @@ msgstr "Justifier"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "KEEP CORPSES"
-msgstr ""
+msgstr "BEHÅLL DÖDA KROPPAR"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -10632,7 +10700,7 @@ msgstr "LCD-spökeffekt (snabb)"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "LIGHT FLARES"
-msgstr ""
+msgstr "LJUSFACKLOR"
 
 #. TRANSLATION: duckstation, flycast, hypseus-singe/zmachine, libretro/beetle-saturn, libretro/fbneo, ...
 msgctxt "game_options"
@@ -11137,7 +11205,7 @@ msgstr "MODELL"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "MODEL DISMEMBERMENT"
-msgstr ""
+msgstr "MODELLSTYCKNING"
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xpet, libretro/vice_xplus4, ...
 msgctxt "game_options"
@@ -11158,6 +11226,46 @@ msgstr "MONTERA CACHE"
 msgctxt "game_options"
 msgid "MOUSE AS WIIMOTE POINTER"
 msgstr "MUS SOM WIIMOTE-PEKARE"
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "MOUSE AXIS FOR PADDLE 1 HORIZONTAL"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "MOUSE AXIS FOR PADDLE 1 VERTICAL"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "MOUSE AXIS FOR PADDLE 2 HORIZONTAL"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "MOUSE AXIS FOR PADDLE 2 VERTICAL"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "MOUSE AXIS FOR PADDLE 3 HORIZONTAL"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "MOUSE AXIS FOR PADDLE 3 VERTICAL"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "MOUSE AXIS FOR PADDLE 4 HORIZONTAL"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "MOUSE AXIS FOR PADDLE 4 VERTICAL"
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -11748,6 +11856,46 @@ msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Musklick"
 
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Mouse axis for player 1, horizontal screen motion."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Mouse axis for player 1, vertical screen motion."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Mouse axis for player 2, horizontal screen motion."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Mouse axis for player 2, vertical screen motion."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Mouse axis for player 3, horizontal screen motion."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Mouse axis for player 3, vertical screen motion."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Mouse axis for player 4, horizontal screen motion."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Mouse axis for player 4, vertical screen motion."
+msgstr ""
+
 #. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Move Backward"
@@ -12290,6 +12438,11 @@ msgctxt "game_options"
 msgid "Norwegian"
 msgstr "Norska"
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Norwegian (Bokmaal)"
+msgstr "Norska (Bokmål)"
+
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Norwegian (no)"
@@ -12304,11 +12457,6 @@ msgstr "Inte ansluten"
 msgctxt "game_options"
 msgid "Not all games support 3D pad."
 msgstr "Inte alla spel har stöd för 3D-pad."
-
-#. TRANSLATION: cemu
-msgctxt "game_options"
-msgid "Not all games support all languages."
-msgstr "Inte alla spel har stöd för alla språk."
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -12766,6 +12914,21 @@ msgstr "Endast P1"
 msgctxt "game_options"
 msgid "P2 only"
 msgstr "Endast P2"
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "PADDLE ANALOG STICK SENSITIVITY"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "PADDLE D-PAD SENSITIVITY"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "PADDLE MOUSE SENSITIVITY"
+msgstr ""
 
 #. TRANSLATION: libretro/atari800, libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -13330,7 +13493,7 @@ msgstr "PlayStation-mus"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Player"
-msgstr ""
+msgstr "Spelare"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -13345,22 +13508,22 @@ msgstr "Spelarens ögonavstånd från skärmens nedre kant (cm)"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Player, Any Enemy"
-msgstr ""
+msgstr "Spelare, valfri fiende"
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Player, Any Enemy Jedi"
-msgstr ""
+msgstr "Spelare, valfri fiende-Jedi"
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Player, Last Enemy Jedi"
-msgstr ""
+msgstr "Spelare, Sista fiende-Jedi"
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Player, Last Enemy in Group"
-msgstr ""
+msgstr "Spelare, sista fienden i gruppen"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -13402,7 +13565,7 @@ msgctxt "game_options"
 msgid "Poland (pl)"
 msgstr "Polen (pl)"
 
-#. TRANSLATION: doom3, etlegacy, xenia, xenia-canary
+#. TRANSLATION: doom3, etlegacy, shadps4, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Polish"
 msgstr "Polska"
@@ -13456,6 +13619,16 @@ msgstr "Portugisiska"
 msgctxt "game_options"
 msgid "Portuguese"
 msgstr "Portugisiska"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Portuguese (Brazil)"
+msgstr "Portugisiska (Brasilien)"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Portuguese (Portugal)"
+msgstr "Portugisiska (Portugal)"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -14219,7 +14392,7 @@ msgctxt "game_options"
 msgid "Romania"
 msgstr "Rumänien"
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Romanian"
 msgstr "Rumänska"
@@ -14297,7 +14470,7 @@ msgstr "Kör spelet i testläge för att konfigurera vissa spelalternativ."
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Run/Walk"
-msgstr ""
+msgstr "Spring/gå"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -14506,7 +14679,7 @@ msgstr "SHADER-UPPSÄTTNING"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "SHADOWS"
-msgstr ""
+msgstr "SKUGGOR"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -14586,7 +14759,7 @@ msgstr "SIO-ACCELERERING"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "SKIP BUFFER EFFECTS"
-msgstr ""
+msgstr "HOPPA ÖVER BUFFERTEFFEKTER"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -14626,7 +14799,7 @@ msgstr "SÖMNTIMERS NOGGRANNHET"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "SLOW MOTION DEATH"
-msgstr ""
+msgstr "DÖD I SLOW MOTION"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -14766,7 +14939,7 @@ msgstr "SPU XFloat noggrannhet"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "SSAA Multiplier"
-msgstr ""
+msgstr "SSAA-multiplicerare"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -15186,6 +15359,31 @@ msgctxt "game_options"
 msgid "Selfie"
 msgstr "Selfie"
 
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Sensitivity when using D-pad for a paddle."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Sensitivity when using D-pad or analogue stick for a throttle."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Sensitivity when using D-pad or analogue stick for a wheel."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Sensitivity when using analogue stick for a paddle."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Sensitivity when using mouse for a paddle."
+msgstr ""
+
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Separate Windows"
@@ -15267,7 +15465,7 @@ msgstr "Ställ in kontrollerns ljudstyrka om sådan stöds."
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Set the crosshair line thickness."
-msgstr ""
+msgstr "Ställ in tjockleken för korshår."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -15342,6 +15540,31 @@ msgstr "Ställer in skalarens filterläge vid rendering."
 msgctxt "game_options"
 msgid "Sets the window size to an integer size."
 msgstr "Ställer in fönsterstorleken till en heltalsstorlek."
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Setting for 16-position DIP switch number 1."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Setting for 16-position DIP switch number 2."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Setting for DIP switch 1."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Setting for DIP switch 2."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Setting for DIP switch 3."
+msgstr ""
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -15543,7 +15766,7 @@ msgctxt "game_options"
 msgid "Simple 2x"
 msgstr "Enkel 2x"
 
-#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, sonicmania
+#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, shadps4, ...
 msgctxt "game_options"
 msgid "Simplified Chinese"
 msgstr "Förenklad kinesiska"
@@ -15654,6 +15877,8 @@ msgid ""
 "Skip buffer effects disables auto frameskip and renders at display output "
 "resolution."
 msgstr ""
+"Hoppa över bufferteffekter inaktiverar automatisk frameskip och renderar med "
+"skärmens utgångsupplösning."
 
 #. TRANSLATION: rtcw.keys, theforceengine.keys
 msgctxt "keys_files"
@@ -15958,6 +16183,16 @@ msgctxt "game_options"
 msgid "Spanish"
 msgstr "Spanska"
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Spanish (Latin America)"
+msgstr "Spanska (Latinamerika)"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Spanish (Spain)"
+msgstr "Spanska (Spanien)"
+
 #. TRANSLATION: hatari, libretro/hatarib
 msgctxt "game_options"
 msgid "Spanish (es)"
@@ -16140,12 +16375,12 @@ msgstr "Ratt"
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Step left"
-msgstr ""
+msgstr "Gå till vänster"
 
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Step right"
-msgstr ""
+msgstr "Gå till höger"
 
 #. TRANSLATION: citron, rpcs3
 msgctxt "game_options"
@@ -16348,7 +16583,7 @@ msgctxt "game_options"
 msgid "Sweden"
 msgstr "Sverige"
 
-#. TRANSLATION: etlegacy, scummvm, xenia, xenia-canary
+#. TRANSLATION: etlegacy, scummvm, shadps4, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Swedish"
 msgstr "Svenska"
@@ -16477,7 +16712,7 @@ msgstr "TESTSPEL"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "TEXT"
-msgstr ""
+msgstr "TEXT"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -16487,12 +16722,12 @@ msgstr "TEXTUR DEPOSTERIZE"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "TEXTURE DETAIL"
-msgstr ""
+msgstr "TEXTURDETALJ"
 
 #. TRANSLATION: f2bgl, openjk
 msgctxt "game_options"
 msgid "TEXTURE FILTER"
-msgstr ""
+msgstr "TEXTURFILTER"
 
 #. TRANSLATION: citron, duckstation, dxx-rebirth, libretro/duckstation, libretro/mupen64plus-next, ...
 msgctxt "game_options"
@@ -16522,7 +16757,7 @@ msgstr "FÖRINLÄSNING AV TEXTUR"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "TEXTURE QUALITY"
-msgstr ""
+msgstr "TEXTURKVALITET"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -16578,6 +16813,11 @@ msgstr "TRÅDAD PRESENTATION"
 msgctxt "game_options"
 msgid "THREADED VIDEO"
 msgstr "TRÅDAD VIDEO"
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "THROTTLE SENSITIVITY"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -16753,6 +16993,11 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Test Button"
 msgstr ""
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Thai"
+msgstr "Thai"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -16996,7 +17241,7 @@ msgctxt "game_options"
 msgid "Trackball (Atari CX-22)"
 msgstr "Styrkula (Atari CX-22)"
 
-#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, sonicmania
+#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, shadps4, ...
 msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Traditionell kinesiska"
@@ -17028,7 +17273,7 @@ msgstr ""
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Trilinear"
-msgstr ""
+msgstr "Trilinjär"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -17065,7 +17310,7 @@ msgctxt "game_options"
 msgid "Turkey"
 msgstr "Turkiet"
 
-#. TRANSLATION: easyrpg, etlegacy, xenia, xenia-canary
+#. TRANSLATION: easyrpg, etlegacy, shadps4, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Turkish"
 msgstr "Turkiska"
@@ -17088,12 +17333,12 @@ msgstr "Sväng höger"
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Turn left"
-msgstr ""
+msgstr "Sväng vänster"
 
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Turn right"
-msgstr ""
+msgstr "Sväng höger"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -17241,6 +17486,31 @@ msgstr "ANVÄND JOYPAD SÖDRA KNAPP FÖR ATT LÄGGA TILL MYNT"
 msgctxt "game_options"
 msgid "USE LIGHT GUNS"
 msgstr "ANVÄND LJUSPISTOLER"
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "USE MOUSE FOR PADDLE 1"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "USE MOUSE FOR PADDLE 2"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "USE MOUSE FOR PADDLE 3"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "USE MOUSE FOR PADDLE 4"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "USE MOUSE POINTER FOR PADDLE 1"
+msgstr ""
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
@@ -17432,7 +17702,7 @@ msgctxt "game_options"
 msgid "Ukraine"
 msgstr "Ukraina"
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Ukrainian"
 msgstr "Ukrainska"
@@ -17505,7 +17775,7 @@ msgstr "Upp"
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Up/Jump"
-msgstr ""
+msgstr "Upp/Hoppa"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -17632,6 +17902,26 @@ msgstr ""
 "Använd en anpassad MAME-konfiguration, skriv inte över konfigurationen vid "
 "start."
 
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Use a specific mouse for Paddle 1, chosen by Port 1's Mouse Index."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Use a specific mouse for Paddle 2, chosen by Port 2's Mouse Index."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Use a specific mouse for Paddle 3, chosen by Port 3's Mouse Index."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Use a specific mouse for Paddle 4, chosen by Port 4's Mouse Index."
+msgstr ""
+
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
 msgid "Use an alternate resolution. Some games need this."
@@ -17697,6 +17987,13 @@ msgid ""
 msgstr ""
 "Använd samma bildsökvägar som fristående MAME - rekommenderas inte om du "
 "använder dekorationer eller shaders."
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid ""
+"Use the system mouse pointer as paddle controller 1.  Does not let you "
+"choose a specific mouse if you have several."
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -17932,7 +18229,7 @@ msgstr "VISA ENDAST"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "VIEW SWAYING"
-msgstr ""
+msgstr "VISA SVAJNING"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -17952,7 +18249,7 @@ msgstr "VISUELL KNUFFSTYRKA"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "VOICE"
-msgstr ""
+msgstr "RÖST"
 
 #. TRANSLATION: azahar, bigpemu, bstone, cemu, citron, ...
 msgctxt "game_options"
@@ -18054,6 +18351,11 @@ msgctxt "game_options"
 msgid "Vietnam"
 msgstr "Vietnam"
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Vietnamese"
+msgstr "Vietnamesiska"
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Virtual"
@@ -18077,7 +18379,7 @@ msgstr "Voltmace Delta 3b dubbla styrspakar"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Volumetric"
-msgstr ""
+msgstr "Volymetrisk"
 
 #. TRANSLATION: azahar, citron, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
@@ -18097,7 +18399,7 @@ msgstr "W-SU"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "WALL MARKS"
-msgstr ""
+msgstr "VÄGGMARKERINGAR"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -18153,6 +18455,11 @@ msgstr "RATTMODELL"
 msgctxt "game_options"
 msgid "WHEEL ROTATION"
 msgstr "RATTROTATION"
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "WHEEL SENSITIVITY"
+msgstr ""
 
 #. TRANSLATION: pcsx2, shared
 msgctxt "game_options"
@@ -18222,7 +18529,7 @@ msgstr "WRX HÖG UPPLÖSNING"
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Walk forward"
-msgstr ""
+msgstr "Gå framåt"
 
 #. TRANSLATION: hurrican
 msgctxt "game_options"
@@ -18388,7 +18695,7 @@ msgstr ""
 "Skriver djupbuffertvärden till VM-minnet. Vissa spel behöver detta för att "
 "fixa trasig grafik."
 
-#. TRANSLATION: libretro
+#. TRANSLATION: libretro, libretro/dice
 msgctxt "game_options"
 msgid "X"
 msgstr ""
@@ -18412,6 +18719,11 @@ msgstr "XBLA-licens aktiverad (standard)"
 msgctxt "game_options"
 msgid "XBOX LIVE ARCADE"
 msgstr "XBOX LIVE ARCADE"
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Y"
+msgstr ""
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
@@ -19081,6 +19393,10 @@ msgstr "gul/blå"
 #~ "Alsathread rekommenderas för system i den lägre prisklassen."
 
 #~ msgctxt "game_options"
+#~ msgid "Choose the Dreamcast console language."
+#~ msgstr "Välj språk för Dreamcast-konsolen."
+
+#~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."
 #~ msgstr "Välj UTC-tidszon för din konsol."
 
@@ -19182,10 +19498,6 @@ msgstr "gul/blå"
 #~ msgstr ""
 #~ "Aktivera automatisk frameskipping för bättre prestanda på mindre "
 #~ "avancerade system."
-
-#~ msgctxt "game_options"
-#~ msgid "Enable lightsaber auot-camera."
-#~ msgstr "Aktivera automatisk kamera för ljussabel."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19306,6 +19618,10 @@ msgstr "gul/blå"
 #~ msgstr "Behövs i vissa spel som använder speciella unicode-tecken."
 
 #~ msgctxt "game_options"
+#~ msgid "Not all games support all languages."
+#~ msgstr "Inte alla spel har stöd för alla språk."
+
+#~ msgctxt "game_options"
 #~ msgid "OpenGL (x86 only)"
 #~ msgstr "OpenGL (endast x86)"
 
@@ -19413,14 +19729,6 @@ msgstr "gul/blå"
 #~ msgctxt "game_options"
 #~ msgid "Simulate LCD color inaccuracy."
 #~ msgstr "Simulerar felaktigheter i LCD-färg."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Skip buffer disables auto frameskip and renders at display output "
-#~ "resolution."
-#~ msgstr ""
-#~ "Hoppa över buffert inaktiverar automatisk frameskip och renderar med "
-#~ "displayens utgångsupplösning."
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."

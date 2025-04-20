@@ -84,7 +84,7 @@ index f9553f1b..023ab765 100644
 +target_link_libraries(gui PRIVATE audio cppcommon ctrl kernel miniz psvpfsparser pugixml::pugixml stb renderer packages sdl2 touch vkutil nativefiledialog concurrentqueue)
  target_link_libraries(gui PUBLIC tracy)
 diff --git a/vita3k/gui/src/archive_install_dialog.cpp b/vita3k/gui/src/archive_install_dialog.cpp
-index 1df4649a..5b2f5b52 100644
+index 03146b92..93e664b1 100644
 --- a/vita3k/gui/src/archive_install_dialog.cpp
 +++ b/vita3k/gui/src/archive_install_dialog.cpp
 @@ -20,7 +20,7 @@
@@ -154,7 +154,7 @@ index 1df4649a..5b2f5b52 100644
                  delete_archive_file = false;
                  contents_archives.clear();
 diff --git a/vita3k/gui/src/firmware_install_dialog.cpp b/vita3k/gui/src/firmware_install_dialog.cpp
-index 19cf7a36..4fe34ee7 100644
+index edbe4c33..1a87ac3a 100644
 --- a/vita3k/gui/src/firmware_install_dialog.cpp
 +++ b/vita3k/gui/src/firmware_install_dialog.cpp
 @@ -20,9 +20,10 @@
@@ -169,24 +169,22 @@ index 19cf7a36..4fe34ee7 100644
  
  #include <thread>
  
-@@ -31,9 +32,9 @@ namespace gui {
+@@ -31,7 +32,8 @@ namespace gui {
  void draw_firmware_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
      static std::string fw_version;
      static bool delete_pup_file;
 -    static std::filesystem::path pup_path = "";
 +    static nfdchar_t *pup_path;
- 
--    host::dialog::filesystem::Result result = host::dialog::filesystem::Result::CANCEL;
 +    nfdresult_t result = NFD_CANCEL;
  
      static std::mutex install_mutex;
      static bool draw_file_dialog = true;
-@@ -56,22 +57,22 @@ void draw_firmware_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+@@ -54,22 +56,22 @@ void draw_firmware_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
      ImGui::SetNextWindowPos(ImVec2(emuenv.logical_viewport_pos.x + (display_size.x / 2.f) - (WINDOW_SIZE.x / 2), emuenv.logical_viewport_pos.y + (display_size.y / 2.f) - (WINDOW_SIZE.y / 2.f)), ImGuiCond_Always);
      ImGui::SetNextWindowSize(WINDOW_SIZE);
      if (draw_file_dialog) {
--        result = host::dialog::filesystem::open_file(pup_path, { { "PlayStation Vita Firmware Package", { "PUP" } } });
-+	result = NFD_OpenDialog("PUP", nullptr, &pup_path);
+-        auto result = host::dialog::filesystem::open_file(pup_path, { { "PlayStation Vita Firmware Package", { "PUP" } } });
++        result = NFD_OpenDialog("PUP", nullptr, &pup_path);
          draw_file_dialog = false;
          finished_installing = false;
  
@@ -209,7 +207,7 @@ index 19cf7a36..4fe34ee7 100644
              gui.file_menu.firmware_install_dialog = false;
              draw_file_dialog = true;
          }
-@@ -125,14 +126,14 @@ void draw_firmware_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
+@@ -123,14 +125,14 @@ void draw_firmware_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
              ImGui::SetCursorPos(ImVec2(POS_BUTTON, ImGui::GetWindowSize().y - BUTTON_SIZE.y - (20.f * SCALE.y)));
              if (ImGui::Button(common["ok"].c_str(), BUTTON_SIZE)) {
                  if (delete_pup_file) {
@@ -227,7 +225,7 @@ index 19cf7a36..4fe34ee7 100644
                  draw_file_dialog = true;
              }
 diff --git a/vita3k/gui/src/initial_setup.cpp b/vita3k/gui/src/initial_setup.cpp
-index 368397a7..ab491d99 100644
+index 9da4a8f5..50e6a73a 100644
 --- a/vita3k/gui/src/initial_setup.cpp
 +++ b/vita3k/gui/src/initial_setup.cpp
 @@ -21,8 +21,9 @@
@@ -241,7 +239,7 @@ index 368397a7..ab491d99 100644
  
  namespace gui {
  
-@@ -153,14 +154,15 @@ void draw_initial_setup(GuiState &gui, EmuEnvState &emuenv) {
+@@ -154,14 +155,15 @@ void draw_initial_setup(GuiState &gui, EmuEnvState &emuenv) {
          TextCentered(emuenv.cfg.pref_path.c_str(), 0);
          ImGui::SetCursorPos(!is_default_path ? ImVec2((WINDOW_SIZE.x / 2.f) - BIG_BUTTON_SIZE.x - (20.f * SCALE.x), BIG_BUTTON_POS.y) : BIG_BUTTON_POS);
          if (ImGui::Button(lang["change_emu_path"].c_str(), BIG_BUTTON_SIZE)) {
@@ -342,7 +340,7 @@ index c0119a9b..86ae2fd5 100644
          }
      }
 diff --git a/vita3k/gui/src/pkg_install_dialog.cpp b/vita3k/gui/src/pkg_install_dialog.cpp
-index eb2fb5f3..8cace46c 100644
+index f8555692..fc0b19c2 100644
 --- a/vita3k/gui/src/pkg_install_dialog.cpp
 +++ b/vita3k/gui/src/pkg_install_dialog.cpp
 @@ -19,26 +19,26 @@
@@ -477,7 +475,7 @@ index eb2fb5f3..8cace46c 100644
              }
              break;
 diff --git a/vita3k/gui/src/settings.cpp b/vita3k/gui/src/settings.cpp
-index 0ea263c6..789df9f5 100644
+index c62f7fe2..425feb4a 100644
 --- a/vita3k/gui/src/settings.cpp
 +++ b/vita3k/gui/src/settings.cpp
 @@ -21,7 +21,7 @@
@@ -539,10 +537,10 @@ index 0ea263c6..789df9f5 100644
              }
              ImGui::PopStyleVar();
 diff --git a/vita3k/gui/src/settings_dialog.cpp b/vita3k/gui/src/settings_dialog.cpp
-index 6d99b782..2f37b079 100644
+index 80403aa7..398f889f 100644
 --- a/vita3k/gui/src/settings_dialog.cpp
 +++ b/vita3k/gui/src/settings_dialog.cpp
-@@ -24,7 +24,7 @@
+@@ -23,7 +23,7 @@
  #include <config/state.h>
  #include <dialog/state.h>
  #include <display/state.h>
@@ -551,7 +549,7 @@ index 6d99b782..2f37b079 100644
  #include <io/state.h>
  #include <kernel/state.h>
  #include <lang/functions.h>
-@@ -39,6 +39,7 @@
+@@ -38,6 +38,7 @@
  #include <string>
  #include <util/fs.h>
  #include <util/log.h>
@@ -559,7 +557,7 @@ index 6d99b782..2f37b079 100644
  
  #include <SDL.h>
  
-@@ -106,20 +107,18 @@ static void reset_emulator(GuiState &gui, EmuEnvState &emuenv) {
+@@ -105,20 +106,18 @@ static void reset_emulator(GuiState &gui, EmuEnvState &emuenv) {
  }
  
  static void change_emulator_path(GuiState &gui, EmuEnvState &emuenv) {
@@ -587,7 +585,7 @@ index 6d99b782..2f37b079 100644
  }
  
 diff --git a/vita3k/gui/src/user_management.cpp b/vita3k/gui/src/user_management.cpp
-index cd472f17..91fbf3dd 100644
+index 4f688b92..1f95589f 100644
 --- a/vita3k/gui/src/user_management.cpp
 +++ b/vita3k/gui/src/user_management.cpp
 @@ -23,7 +23,7 @@
@@ -637,7 +635,7 @@ index d577a152..e69de29b 100644
 -
 -target_link_libraries(host_dialog PRIVATE NFDe::NFDe)
 diff --git a/vita3k/host/dialog/src/filesystem.cpp b/vita3k/host/dialog/src/filesystem.cpp
-index 43bf6703..f4030fce 100644
+index 5e4db06e..4d190f08 100644
 --- a/vita3k/host/dialog/src/filesystem.cpp
 +++ b/vita3k/host/dialog/src/filesystem.cpp
 @@ -31,7 +31,7 @@

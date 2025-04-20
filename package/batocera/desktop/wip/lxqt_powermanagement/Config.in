@@ -1,0 +1,11 @@
+config BR2_PACKAGE_LXQT_POWERMANAGEMENT
+	bool "lxqt_powermanagement"
+	select BR2_PACKAGE_BATOCERA_QT6
+	select BR2_PACKAGE_QTXDG_TOOLS
+	select BR2_PACKAGE_KWINDOWSYSTEM
+	select BR2_PACKAGE_POLKITQT
+
+	help
+	  Power management module for LXQt
+
+	  https://lxqt-project.org/

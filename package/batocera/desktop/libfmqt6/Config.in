@@ -1,0 +1,11 @@
+config BR2_PACKAGE_LIBFMQT6
+	bool "libfmqt6"
+	select BR2_PACKAGE_BATOCERA_QT6
+	select BR2_PACKAGE_LIBEXIF
+	select BR2_PACKAGE_LIBLXQT
+	select BR2_PACKAGE_LXQTMENUDATA
+
+	help
+	  Core library of PCManFM-Qt (Qt binding for libfm)
+
+	  https://lxqt-project.org/

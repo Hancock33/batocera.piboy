@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index 849e1b93f..584bb7ba8 100644
+index 6acc05970..d7e84a0e9 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -9,197 +9,284 @@ namespace PlatformIds
+@@ -9,198 +9,285 @@ namespace PlatformIds
  	static std::map<std::string, PlatformId> Platforms =
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
@@ -249,6 +249,7 @@ index 849e1b93f..584bb7ba8 100644
 +		{ "typex",					TYPEX },
 +		{ "universal",				UNIVERSAL },
 +		{ "uzebox",					UZEBOX },
++		{ "vc4000",					VC4000 },
 +		{ "vectrex",				VECTREX },
 +		{ "vg5000",					VG5000 },
 +		{ "vircon32",				VIRCON32 },
@@ -361,6 +362,7 @@ index 849e1b93f..584bb7ba8 100644
  		{ "ti99_4a",				TI99 },
 -		{ "pico8",					PICO8 },
 -		{ "sgb",					SUPER_GAME_BOY },
+-		{ "vc4000",					VC4000 },
 -
 +		{ "tutor",					TOMY_TUTOR },
 +		{ "pcengine",				TURBOGRAFX_16 },
@@ -428,7 +430,7 @@ index 849e1b93f..584bb7ba8 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index 2a340edb7..91cc2cf9b 100644
+index 27200a50a..b08b95e96 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
 @@ -11,54 +11,171 @@ namespace PlatformIds
@@ -619,7 +621,7 @@ index 2a340edb7..91cc2cf9b 100644
  		SEGA_32X,
  		SEGA_CD,
  		SEGA_CHIHIRO,
-@@ -66,114 +183,81 @@ namespace PlatformIds
+@@ -66,115 +183,82 @@ namespace PlatformIds
  		SEGA_GAME_GEAR,
  		SEGA_GENESIS,
  		SEGA_MASTER_SYSTEM,
@@ -743,6 +745,7 @@ index 2a340edb7..91cc2cf9b 100644
 +		TYPEX,
 +		UNIVERSAL,
 +		UZEBOX,
++		VC4000,
 +		VECTREX,
 +		VG5000,
 +		VIC20,
@@ -769,6 +772,7 @@ index 2a340edb7..91cc2cf9b 100644
 +		// batocera systems
 +		APF_MP_1000,
  		ARDUBOY,
+-		VC4000,
 -
 +		ATARI_XE,
 +		CANNONBALL,
@@ -889,7 +893,7 @@ index a252ef607..252231404 100644
  
  const std::set<Scraper::ScraperMediaSource>& HfsDBScraper::getSupportedMedias()
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index cbedf7b6d..567e41bd9 100644
+index 4b1cb8c75..616a9d1ef 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
 @@ -30,162 +30,237 @@ using namespace PlatformIds;
@@ -1246,9 +1250,9 @@ index cbedf7b6d..567e41bd9 100644
 -	{ VIRCON32, 272 },
 -	{ GAMATE, 266 },
  	{ ARDUBOY, 263 },
--	{ LOWRESNX, 244 }
+-	{ LOWRESNX, 244 },
 +	{ GAMATE, 266 },
-+	{ VIRCON32, 272 }
++	{ VIRCON32, 272 },
+ 	{ VC4000, 281 }
  };
  
- const std::set<Scraper::ScraperMediaSource>& ScreenScraperScraper::getSupportedMedias()

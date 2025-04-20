@@ -3232,6 +3232,11 @@ msgctxt "game_options"
 msgid "April"
 msgstr "Duben"
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Arabic"
+msgstr ""
+
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Arabic (ar)"
@@ -4420,7 +4425,7 @@ msgctxt "game_options"
 msgid "CONSOLE COUNTRY"
 msgstr "ZEMĚ KONZOLE"
 
-#. TRANSLATION: cemu
+#. TRANSLATION: cemu, redream, shadps4
 msgctxt "game_options"
 msgid "CONSOLE LANGUAGE"
 msgstr "JAZYK KONZOLY"
@@ -4600,7 +4605,7 @@ msgctxt "game_options"
 msgid "CONTROLLERS"
 msgstr "OVLADAČE"
 
-#. TRANSLATION: dolphin, rpcs3, shared
+#. TRANSLATION: dolphin, libretro/dice, rpcs3, shared
 msgctxt "game_options"
 msgid "CONTROLS"
 msgstr "OVLÁDÁNÍ"
@@ -5183,6 +5188,11 @@ msgctxt "game_options"
 msgid "Choose cable type for the TV."
 msgstr "Vyberte typ kabelu pro televizor."
 
+#. TRANSLATION: cemu, redream, shadps4
+msgctxt "game_options"
+msgid "Choose console language. Not all games may support the language choice."
+msgstr ""
+
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose difficulty for the game."
@@ -5232,11 +5242,6 @@ msgstr "Zvolte jazyk systému BIOS."
 msgctxt "game_options"
 msgid "Choose text language."
 msgstr ""
-
-#. TRANSLATION: redream
-msgctxt "game_options"
-msgid "Choose the Dreamcast console language."
-msgstr "Vyberte jazyk konzole Dreamcast."
 
 #. TRANSLATION: libretro/flycast, redream
 msgctxt "game_options"
@@ -5891,7 +5896,7 @@ msgctxt "game_options"
 msgid "Cyrillic [Windows-1251]"
 msgstr "Cyrilice [Windows-1251]"
 
-#. TRANSLATION: etlegacy, scummvm
+#. TRANSLATION: etlegacy, scummvm, shadps4
 msgctxt "game_options"
 msgid "Czech"
 msgstr "Čeština"
@@ -5985,6 +5990,31 @@ msgstr "DIGITÁLNÍ ZVUK"
 msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr "DIGITÁLNÍ ZVUKOVÝ PROCESOR"
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "DIP SWITCH 1"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "DIP SWITCH 2"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "DIP SWITCH 3"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "DIP SWITCH HEX 1"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "DIP SWITCH HEX 2"
+msgstr ""
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -6206,7 +6236,7 @@ msgctxt "game_options"
 msgid "Dance Mat"
 msgstr "Taneční Podložka"
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Danish"
 msgstr "Dánština"
@@ -6251,7 +6281,7 @@ msgctxt "game_options"
 msgid "December"
 msgstr "Prosinec"
 
-#. TRANSLATION: citron, libretro/flycast, libretro/mesen, libretro/puae, libretro/puae2021, ...
+#. TRANSLATION: citron, libretro/dice, libretro/flycast, libretro/mesen, libretro/puae, ...
 msgctxt "game_options"
 msgid "Default"
 msgstr "Výchozí"
@@ -7120,6 +7150,11 @@ msgstr ""
 "Povolte emulaci Gravis Utrasound. Ujistěte se, že složka ULTRASND je v "
 "kořenovém adresáři složky <game>.pc rom."
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Enable High Dynamic Range if your display supports it."
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Enable No-interlacing Patches."
@@ -7577,6 +7612,16 @@ msgstr "Angličtina"
 msgctxt "game_options"
 msgid "English (Default)"
 msgstr "Angličtina (výchozí)"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "English (United Kingdom)"
+msgstr ""
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "English (United States)"
+msgstr ""
 
 #. TRANSLATION: hatari, libretro/hatarib
 msgctxt "game_options"
@@ -8310,7 +8355,7 @@ msgctxt "game_options"
 msgid "Finland"
 msgstr "Finsko"
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Finnish"
 msgstr "Finština"
@@ -8660,6 +8705,16 @@ msgstr ""
 msgctxt "game_options"
 msgid "French"
 msgstr "Francouzština"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "French (Canada)"
+msgstr ""
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "French (France)"
+msgstr ""
 
 #. TRANSLATION: hatari, libretro/hatarib
 msgctxt "game_options"
@@ -9348,7 +9403,7 @@ msgctxt "game_options"
 msgid "Greece"
 msgstr "Řecko"
 
-#. TRANSLATION: easyrpg, etlegacy
+#. TRANSLATION: easyrpg, etlegacy, shadps4
 msgctxt "game_options"
 msgid "Greek"
 msgstr "Řečtina"
@@ -9436,6 +9491,11 @@ msgstr "HD TEXTURY"
 #. TRANSLATION: libretro/uae4arm
 msgctxt "game_options"
 msgid "HDFs"
+msgstr ""
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "HDR"
 msgstr ""
 
 #. TRANSLATION: shared
@@ -9779,7 +9839,7 @@ msgctxt "game_options"
 msgid "How the window space is distributed between the screens."
 msgstr "Jak je prostor okna rozdělen mezi obrazovky."
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Hungarian"
 msgstr "Maďarština"
@@ -10071,6 +10131,11 @@ msgstr "Indie"
 msgctxt "game_options"
 msgid "Indonesia"
 msgstr "Indonesie"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Indonesian"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_wswan
 msgctxt "game_options"
@@ -11145,6 +11210,46 @@ msgctxt "game_options"
 msgid "MOUSE AS WIIMOTE POINTER"
 msgstr "MYŠ JAKO UKAZATEL WIIMOTE"
 
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "MOUSE AXIS FOR PADDLE 1 HORIZONTAL"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "MOUSE AXIS FOR PADDLE 1 VERTICAL"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "MOUSE AXIS FOR PADDLE 2 HORIZONTAL"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "MOUSE AXIS FOR PADDLE 2 VERTICAL"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "MOUSE AXIS FOR PADDLE 3 HORIZONTAL"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "MOUSE AXIS FOR PADDLE 3 VERTICAL"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "MOUSE AXIS FOR PADDLE 4 HORIZONTAL"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "MOUSE AXIS FOR PADDLE 4 VERTICAL"
+msgstr ""
+
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "MOUSE SPEED"
@@ -11733,6 +11838,46 @@ msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Kliknutí myší"
 
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Mouse axis for player 1, horizontal screen motion."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Mouse axis for player 1, vertical screen motion."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Mouse axis for player 2, horizontal screen motion."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Mouse axis for player 2, vertical screen motion."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Mouse axis for player 3, horizontal screen motion."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Mouse axis for player 3, vertical screen motion."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Mouse axis for player 4, horizontal screen motion."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Mouse axis for player 4, vertical screen motion."
+msgstr ""
+
 #. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Move Backward"
@@ -12276,6 +12421,11 @@ msgctxt "game_options"
 msgid "Norwegian"
 msgstr "Norský"
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Norwegian (Bokmaal)"
+msgstr ""
+
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Norwegian (no)"
@@ -12290,11 +12440,6 @@ msgstr "Nepřipojeno"
 msgctxt "game_options"
 msgid "Not all games support 3D pad."
 msgstr "Ne všechny hry podporují 3D ovladač."
-
-#. TRANSLATION: cemu
-msgctxt "game_options"
-msgid "Not all games support all languages."
-msgstr "Ne všechny hry podporují všechny jazyky."
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -12754,6 +12899,21 @@ msgstr "Pouze P1"
 msgctxt "game_options"
 msgid "P2 only"
 msgstr "Pouze P2"
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "PADDLE ANALOG STICK SENSITIVITY"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "PADDLE D-PAD SENSITIVITY"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "PADDLE MOUSE SENSITIVITY"
+msgstr ""
 
 #. TRANSLATION: libretro/atari800, libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -13390,7 +13550,7 @@ msgctxt "game_options"
 msgid "Poland (pl)"
 msgstr "Polsko (pl)"
 
-#. TRANSLATION: doom3, etlegacy, xenia, xenia-canary
+#. TRANSLATION: doom3, etlegacy, shadps4, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Polish"
 msgstr "Polský"
@@ -13444,6 +13604,16 @@ msgstr "Portugalsky"
 msgctxt "game_options"
 msgid "Portuguese"
 msgstr "Portugalsky"
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Portuguese (Brazil)"
+msgstr ""
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Portuguese (Portugal)"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -14204,7 +14374,7 @@ msgctxt "game_options"
 msgid "Romania"
 msgstr "Rumunsko"
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Romanian"
 msgstr "Rumunština"
@@ -15174,6 +15344,31 @@ msgctxt "game_options"
 msgid "Selfie"
 msgstr "Selfie"
 
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Sensitivity when using D-pad for a paddle."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Sensitivity when using D-pad or analogue stick for a throttle."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Sensitivity when using D-pad or analogue stick for a wheel."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Sensitivity when using analogue stick for a paddle."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Sensitivity when using mouse for a paddle."
+msgstr ""
+
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Separate Windows"
@@ -15335,6 +15530,31 @@ msgstr "Nastaví režim filtru měřítka při vykreslování."
 msgctxt "game_options"
 msgid "Sets the window size to an integer size."
 msgstr "Nastaví velikost okna na celočíselnou velikost."
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Setting for 16-position DIP switch number 1."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Setting for 16-position DIP switch number 2."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Setting for DIP switch 1."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Setting for DIP switch 2."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Setting for DIP switch 3."
+msgstr ""
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -15536,7 +15756,7 @@ msgctxt "game_options"
 msgid "Simple 2x"
 msgstr "Jednoduché 2x"
 
-#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, sonicmania
+#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, shadps4, ...
 msgctxt "game_options"
 msgid "Simplified Chinese"
 msgstr "Zjednodušená Ćínština"
@@ -15948,6 +16168,16 @@ msgctxt "game_options"
 msgid "Spanish"
 msgstr "Španělština"
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Spanish (Latin America)"
+msgstr ""
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Spanish (Spain)"
+msgstr ""
+
 #. TRANSLATION: hatari, libretro/hatarib
 msgctxt "game_options"
 msgid "Spanish (es)"
@@ -16338,7 +16568,7 @@ msgctxt "game_options"
 msgid "Sweden"
 msgstr "Švédsko"
 
-#. TRANSLATION: etlegacy, scummvm, xenia, xenia-canary
+#. TRANSLATION: etlegacy, scummvm, shadps4, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Swedish"
 msgstr "Švédský"
@@ -16570,6 +16800,11 @@ msgctxt "game_options"
 msgid "THREADED VIDEO"
 msgstr "THREADED VIDEO"
 
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "THROTTLE SENSITIVITY"
+msgstr ""
+
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "TI-99/4A Cartridges"
@@ -16743,6 +16978,11 @@ msgstr ""
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "Test Button"
+msgstr ""
+
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Thai"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -16985,7 +17225,7 @@ msgctxt "game_options"
 msgid "Trackball (Atari CX-22)"
 msgstr "Trackball (Atari CX-22)"
 
-#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, sonicmania
+#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, shadps4, ...
 msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Tradiční Čínština"
@@ -17054,7 +17294,7 @@ msgctxt "game_options"
 msgid "Turkey"
 msgstr "Turecko"
 
-#. TRANSLATION: easyrpg, etlegacy, xenia, xenia-canary
+#. TRANSLATION: easyrpg, etlegacy, shadps4, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Turkish"
 msgstr "Turečtina"
@@ -17230,6 +17470,31 @@ msgstr "PRO PŘIDÁNÍ KREDITU POUŽIJTE JIŽNÍ TLAČÍTKO JOYSTICKU"
 msgctxt "game_options"
 msgid "USE LIGHT GUNS"
 msgstr "POUŽÍT SVĚTELNÉ ZBRANĚ"
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "USE MOUSE FOR PADDLE 1"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "USE MOUSE FOR PADDLE 2"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "USE MOUSE FOR PADDLE 3"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "USE MOUSE FOR PADDLE 4"
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "USE MOUSE POINTER FOR PADDLE 1"
+msgstr ""
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
@@ -17421,7 +17686,7 @@ msgctxt "game_options"
 msgid "Ukraine"
 msgstr "Ukrajina"
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, shadps4
 msgctxt "game_options"
 msgid "Ukrainian"
 msgstr "Ukrajinština"
@@ -17621,6 +17886,26 @@ msgid "Use a custom MAME config, do not overwrite config on launch."
 msgstr ""
 "Použijte vlastní konfiguraci MAME, nepřepisujte konfiguraci při spuštění."
 
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Use a specific mouse for Paddle 1, chosen by Port 1's Mouse Index."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Use a specific mouse for Paddle 2, chosen by Port 2's Mouse Index."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Use a specific mouse for Paddle 3, chosen by Port 3's Mouse Index."
+msgstr ""
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Use a specific mouse for Paddle 4, chosen by Port 4's Mouse Index."
+msgstr ""
+
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
 msgid "Use an alternate resolution. Some games need this."
@@ -17686,6 +17971,13 @@ msgid ""
 msgstr ""
 "Použítí stejných cest k obrázkům jako samostatný MAME - nedoporučuje se, "
 "pokud používáte dekorace nebo shadery."
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid ""
+"Use the system mouse pointer as paddle controller 1.  Does not let you "
+"choose a specific mouse if you have several."
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -18043,6 +18335,11 @@ msgctxt "game_options"
 msgid "Vietnam"
 msgstr "Vietnam"
 
+#. TRANSLATION: shadps4
+msgctxt "game_options"
+msgid "Vietnamese"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Virtual"
@@ -18142,6 +18439,11 @@ msgstr "Model kolečka"
 msgctxt "game_options"
 msgid "WHEEL ROTATION"
 msgstr "Otáčení kola"
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "WHEEL SENSITIVITY"
+msgstr ""
 
 #. TRANSLATION: pcsx2, shared
 msgctxt "game_options"
@@ -18375,7 +18677,7 @@ msgstr ""
 "Zapíše hodnoty vyrovnávací paměti hloubky do paměti virtuálního počítače. "
 "Některé hry to potřebují k opravě nefunkční grafiky."
 
-#. TRANSLATION: libretro
+#. TRANSLATION: libretro, libretro/dice
 msgctxt "game_options"
 msgid "X"
 msgstr ""
@@ -18399,6 +18701,11 @@ msgstr "Licence XBLA povolena (Výchozí)"
 msgctxt "game_options"
 msgid "XBOX LIVE ARCADE"
 msgstr "XBOX LIVE ARCADE"
+
+#. TRANSLATION: libretro/dice
+msgctxt "game_options"
+msgid "Y"
+msgstr ""
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xpet, libretro/vice_xplus4, libretro/vice_xvic
 msgctxt "game_options"
@@ -19522,6 +19829,10 @@ msgstr "žlutá/modrá"
 #~ msgstr "Vyberte typ konzole."
 
 #~ msgctxt "game_options"
+#~ msgid "Choose the Dreamcast console language."
+#~ msgstr "Vyberte jazyk konzole Dreamcast."
+
+#~ msgctxt "game_options"
 #~ msgid "Choose the NDS screen sizings."
 #~ msgstr "Zvolte velikosti obrazovky NDS."
 
@@ -20366,6 +20677,10 @@ msgstr "žlutá/modrá"
 #~ msgstr ""
 #~ "Ne všechny hry podporují funkci Roztáhnout v závislosti na video "
 #~ "souborech."
+
+#~ msgctxt "game_options"
+#~ msgid "Not all games support all languages."
+#~ msgstr "Ne všechny hry podporují všechny jazyky."
 
 #~ msgctxt "game_options"
 #~ msgid "OPH Flag hack (Try if game freezes)"

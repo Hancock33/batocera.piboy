@@ -3,8 +3,8 @@
 # kodi_resource_language_it_it
 #
 ################################################################################
-# Version: Commits on Mar 11, 2025
-KODI_RESOURCE_LANGUAGE_IT_IT_VERSION = 11.0.87
+# Version: Commits on Apr 13, 2025
+KODI_RESOURCE_LANGUAGE_IT_IT_VERSION = 11.0.89
 KODI_RESOURCE_LANGUAGE_IT_IT_SOURCE = resource.language.it_it-$(KODI_RESOURCE_LANGUAGE_IT_IT_VERSION).zip
 KODI_RESOURCE_LANGUAGE_IT_IT_SITE = http://mirrors.kodi.tv/addons/omega/resource.language.it_it
 KODI_RESOURCE_LANGUAGE_IT_IT_PLUGINNAME=resource.language.it_it

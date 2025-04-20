@@ -1,5 +1,5 @@
 diff --git a/src/util/input_manager.cpp b/src/util/input_manager.cpp
-index 29fbd87d1..497061a19 100644
+index 33c88adac..937696ea0 100644
 --- a/src/util/input_manager.cpp
 +++ b/src/util/input_manager.cpp
 @@ -2099,30 +2099,30 @@ InputManager::VibrationMotorList InputManager::EnumerateVibrationMotors(std::opt

@@ -1,0 +1,9 @@
+config BR2_PACKAGE_LIBSYSSTAT
+	bool "libsysstat"
+	select BR2_PACKAGE_BATOCERA_QT6
+	select BR2_PACKAGE_LIBLXQT
+
+	help
+	  Library used to query system info and statistics
+
+	  https://lxqt-project.org/

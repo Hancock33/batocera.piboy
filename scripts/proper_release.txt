@@ -19,11 +19,9 @@ fdupes.mk
 fheroes2.mk
 gamecon_gpio_rpi.mk
 iir.mk
-innoextract.mk
 kodi-pvr-freebox
 ledspicer.mk
 libgme.mk
-libgraphene.mk
 libretro-mame.mk
 libretro-mgba.mk
 libserum.mk
@@ -34,10 +32,12 @@ mold.mk
 mono-bin.mk
 nblood.mk
 nv-codec-headers.mk
+pavucontrol_qt.mk
+pcmanfmqt6.mk
 pcsx2.mk
-projectm.mk
 python3-gpiod.mk
 pywebview.mk
+qps.mk
 rclone.mk
 re2c.mk
 retrocrisis.mk

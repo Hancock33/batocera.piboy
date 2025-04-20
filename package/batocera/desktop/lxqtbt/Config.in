@@ -1,0 +1,8 @@
+config BR2_PACKAGE_LXQTBT
+	bool "lxqtbt"
+	select BR2_PACKAGE_BATOCERA_QT6
+
+	help
+	  Various packaging tools and scripts for LXQt applications.
+
+	  https://lxqt-project.org/

@@ -353,7 +353,9 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_BATOCERA_VULKAN                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     || \
                                                                 BR2_PACKAGE_BATOCERA_BCM27XX            || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_SM8250      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_JH7110
+                                                                BR2_PACKAGE_BATOCERA_TARGET_SM8550      || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_JH7110      || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
     # wireless drivers
     # use the morrownr RTL8812au & RTL8821au drivers
@@ -517,7 +519,7 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     default "amlogic/s922x/ogu amlogic/s922x/gtkingpro amlogic/s922x/gtking amlogic/s922x/odroidn2l amlogic/s922x/vim3 amlogic/s922x/odroidn2 amlogic/s922x/odroidn2plus amlogic/s922x/zero2"  if  BR2_PACKAGE_BATOCERA_TARGET_S922X
     default "amlogic/s905/odroidc2 amlogic/s905/tvbox amlogic/s905/lepotato amlogic/s905/vim amlogic/s905/p201 amlogic/s905/lepotatov2 amlogic/s905/minix-neo-u1"                              if  BR2_PACKAGE_BATOCERA_TARGET_S905
     default "rockchip/rk3399/orangepi-800 rockchip/rk3399/rg552 rockchip/rk3399/rockpro64 rockchip/rk3399/rock960 rockchip/rk3399/orangepi4-lts rockchip/rk3399/rock-pi-4 rockchip/rk3399/nanopi-m4v2 rockchip/rk3399/hugsun-x99" if  BR2_PACKAGE_BATOCERA_TARGET_RK3399
-    default "rockchip/rk3588/orangepi-5-pro rockchip/rk3588/bananapi-m7 rockchip/rk3588/gameforce-ace rockchip/rk3588/rock-5c rockchip/rk3588/rock-5b rockchip/rk3588/rock-5a rockchip/rk3588/quartzpro64 rockchip/rk3588/orangepi-5 rockchip/rk3588/orangepi-5b rockchip/rk3588/orangepi-5-plus rockchip/rk3588/indiedroid-nova rockchip/rk3588/mekotronics-r58 rockchip/rk3588/khadas-edge-2 rockchip/rk3588/firefly-station-m3"  if BR2_PACKAGE_BATOCERA_TARGET_RK3588
+    default "rockchip/rk3588/gameforce-ace rockchip/rk3588/rock-5b-plus rockchip/rk3588/nanopi-m6 rockchip/rk3588/orangepi-5-pro rockchip/rk3588/bananapi-m7 rockchip/rk3588/rock-5c rockchip/rk3588/rock-5b rockchip/rk3588/rock-5a rockchip/rk3588/quartzpro64 rockchip/rk3588/orangepi-5 rockchip/rk3588/orangepi-5b rockchip/rk3588/orangepi-5-plus rockchip/rk3588/indiedroid-nova rockchip/rk3588/mekotronics-r58 rockchip/rk3588/khadas-edge-2 rockchip/rk3588/firefly-station-m3"  if BR2_PACKAGE_BATOCERA_TARGET_RK3588
     default "rockchip/rk3568/orangepi-3b rockchip/rk3568/anbernic-rgxx3 rockchip/rk3568/odroid-m1s rockchip/rk3568/odroid-m1 rockchip/rk3568/rock-3a rockchip/rk3568/rock-3c rockchip/rk3568/firefly-station-m2 rockchip/rk3568/firefly-station-p2" if  BR2_PACKAGE_BATOCERA_TARGET_RK3568
     default "allwinner/h3/orangepi-pc allwinner/h3/orangepi-one allwinner/h3/orangepi-plus2e allwinner/h3/bananapi-m2-zero allwinner/h3/cha"                                                   if  BR2_PACKAGE_BATOCERA_TARGET_H3
     default "allwinner/t527/orangepi-4a"                                                                                                                                                       if  BR2_PACKAGE_BATOCERA_TARGET_T527
@@ -652,7 +654,6 @@ config BR2_PACKAGE_BATOCERA_TOOLS
     select BR2_PACKAGE_EVTEST                               # joysticks tester
     select BR2_PACKAGE_FFMPEG_XCBGRAB                       if  BR2_PACKAGE_XORG7
     select BR2_PACKAGE_HTOP                                 # multi-cpus usage
-    select BR2_PACKAGE_INTEL_MEDIASDK                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64
     select BR2_PACKAGE_JSTEST2                              # joysticks tester
     select BR2_PACKAGE_LIBGPIOD_TOOLS                       if  BR2_PACKAGE_LIBGPIOD
     select BR2_PACKAGE_LINUXCONSOLETOOLS                    # tools for linux events calibration
@@ -785,9 +786,9 @@ config BR2_PACKAGE_BATOCERA_SEGADC
                                                                !BR2_PACKAGE_BATOCERA_TARGET_X86         && \
                                                                !BR2_riscv
 
-    #select BR2_PACKAGE_LIBRETRO_FLYCAST2021                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
+    select BR2_PACKAGE_LIBRETRO_FLYCAST2021                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
-    #select BR2_PACKAGE_REDREAM                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_PACKAGE_BATOCERA_BCM27XX && !BR2_PACKAGE_BATOCERA_WAYLAND)
+    select BR2_PACKAGE_REDREAM                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_PACKAGE_BATOCERA_BCM27XX && !BR2_PACKAGE_BATOCERA_WAYLAND)
 
     help
         Sega Dreamcast and Naomi/Atomiswave emulation support
@@ -1211,9 +1212,10 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 
     # Gamecube / Wii
     select BR2_PACKAGE_DOLPHIN_EMU                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2712
-                                                                # cannot use BR2_PACKAGE_BATOCERA_TARGET_RK3588 as Dolphin requires OpenGL
+                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_SM8250      || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_SM8550      || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
     select BR2_PACKAGE_LIBRETRO_DOLPHIN                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || \
@@ -1537,6 +1539,7 @@ config BR2_PACKAGE_BATOCERA_KODI
     select BR2_PACKAGE_FFMPEG_AVRESAMPLE                    # audio resampler
     select BR2_PACKAGE_LIBCDIO_PARANOIA                     # cd-audio
     select BR2_PACKAGE_LIBOPENH264                          # openh264
+    select BR2_PACKAGE_LIBVPL                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64
 
     # AV1 support for x86_64
     select BR2_PACKAGE_DAV1D                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  # AV1
@@ -1695,8 +1698,8 @@ config BR2_PACKAGE_BATOCERA_QT6
     select BR2_PACKAGE_QT6MULTIMEDIA                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_QT6SHADERTOOLS                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_QT6SVG
-    select BR2_PACKAGE_QT6TOOLS                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
-    select BR2_PACKAGE_QT6TOOLS_LINGUIST_TOOLS              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_QT6TOOLS
+    select BR2_PACKAGE_QT6TOOLS_LINGUIST_TOOLS
     select BR2_PACKAGE_HOST_QT6TOOLS_LINGUIST_TOOLS
     select BR2_PACKAGE_QT6WAYLAND                           if  BR2_PACKAGE_WAYLAND
     select BR2_PACKAGE_QT6WEBSOCKETS                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
@@ -1838,7 +1841,7 @@ config BR2_PACKAGE_BATOCERA_SDL3
     select BR2_PACKAGE_SDL3_OPENGLES                        if  BR2_PACKAGE_HAS_LIBGLES
     select BR2_PACKAGE_SDL3_OPENGL                          if  BR2_PACKAGE_HAS_LIBGL
     select BR2_PACKAGE_SDL3_X11                             if  BR2_PACKAGE_XORG7
-    select BR2_PACKAGE_SDL3_KMSDRM                          if !BR2_PACKAGE_BATOCERA_RPI_VCORE
+    select BR2_PACKAGE_SDL3_KMSDRM                          if  BR2_PACKAGE_HAS_LIBGBM                  && !BR2_PACKAGE_BATOCERA_RPI_VCORE
     select BR2_PACKAGE_SDL3_WAYLAND                         if  BR2_PACKAGE_BATOCERA_WAYLAND
 
 config BR2_PACKAGE_BATOCERA_WAYLAND
@@ -1946,6 +1949,7 @@ config BR2_PACKAGE_BATOCERA_GPU_X86
 
     # nvidia
     select BR2_PACKAGE_BATOCERA_NVIDIA                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    # AMD
     select BR2_PACKAGE_BATOCERA_AMD                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # mesa
@@ -1966,7 +1970,6 @@ config BR2_PACKAGE_BATOCERA_GPU_X86
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_R300           if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_R600           if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_RADEONSI       if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
-    select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_SOFTPIPE       if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     && !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_SVGA
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_VIRGL          if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_ZINK           if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     #batocera- possible other platforms

@@ -1,0 +1,147 @@
+diff --git a/mini18n/CMakeLists.txt b/mini18n/CMakeLists.txt
+index de932060..e3929e2c 100644
+--- a/mini18n/CMakeLists.txt
++++ b/mini18n/CMakeLists.txt
+@@ -1,6 +1,6 @@
+ project(mini18n)
+ 
+-cmake_minimum_required(VERSION 2.8)
++cmake_minimum_required(VERSION 3.5)
+ 
+ set(MINI18N_VERSION_MAJOR 0)
+ set(MINI18N_VERSION_MINOR 2)
+diff --git a/yabause/CMakeLists.txt b/yabause/CMakeLists.txt
+index 5b78adf4..100e3fbf 100644
+--- a/yabause/CMakeLists.txt
++++ b/yabause/CMakeLists.txt
+@@ -1,6 +1,6 @@
+ project(YabaSanshiro)
+ 
+-cmake_minimum_required(VERSION 2.8)
++cmake_minimum_required(VERSION 3.5)
+ 
+ #-------------------------------------------------------------------------------
+ #add local find scripts to CMAKE path
+diff --git a/yabause/src/CMakeLists.txt b/yabause/src/CMakeLists.txt
+index 239b6e8b..c2058ff7 100644
+--- a/yabause/src/CMakeLists.txt
++++ b/yabause/src/CMakeLists.txt
+@@ -6,7 +6,7 @@ include (CheckCSourceCompiles)
+ include(CheckFunctionExists)
+ include(CheckIncludeFile)
+ 
+-cmake_minimum_required(VERSION 2.8)
++cmake_minimum_required(VERSION 3.5)
+ 
+ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR}/CMakeTests)
+ 
+diff --git a/yabause/src/c68k/CMakeLists.txt b/yabause/src/c68k/CMakeLists.txt
+index 68b1e939..5d951507 100644
+--- a/yabause/src/c68k/CMakeLists.txt
++++ b/yabause/src/c68k/CMakeLists.txt
+@@ -6,7 +6,7 @@ endif()
+ 
+ project(gen68k)
+ 
+-cmake_minimum_required(VERSION 2.6)
++cmake_minimum_required(VERSION 3.5)
+ 
+ 
+ include(CheckCSourceCompiles)
+Submodule yabause/src/libchdr-prefix/src/libchdr contains modified content
+diff --git a/yabause/src/libchdr-prefix/src/libchdr/CMakeLists.txt b/yabause/src/libchdr-prefix/src/libchdr/CMakeLists.txt
+index b9de994..e2f9834 100644
+--- a/yabause/src/libchdr-prefix/src/libchdr/CMakeLists.txt
++++ b/yabause/src/libchdr-prefix/src/libchdr/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 3.1)
++cmake_minimum_required(VERSION 3.5)
+ 
+ project(chdr C)
+ 
+diff --git a/yabause/src/libchdr-prefix/src/libchdr/deps/zlib-1.2.11/CMakeLists.txt b/yabause/src/libchdr-prefix/src/libchdr/deps/zlib-1.2.11/CMakeLists.txt
+index e0c32dd..d57cd0b 100644
+--- a/yabause/src/libchdr-prefix/src/libchdr/deps/zlib-1.2.11/CMakeLists.txt
++++ b/yabause/src/libchdr-prefix/src/libchdr/deps/zlib-1.2.11/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.4.4)
++cmake_minimum_required(VERSION 3.5)
+ set(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS ON)
+ 
+ project(zlib C)
+diff --git a/yabause/src/musashi/CMakeLists.txt b/yabause/src/musashi/CMakeLists.txt
+index d1df1b2b..fc1f872b 100644
+--- a/yabause/src/musashi/CMakeLists.txt
++++ b/yabause/src/musashi/CMakeLists.txt
+@@ -1,6 +1,6 @@
+ project(m68kmake)
+ 
+-cmake_minimum_required(VERSION 2.6)
++cmake_minimum_required(VERSION 3.5)
+ 
+ add_executable(m68kmake m68kmake.c)
+ 
+diff --git a/yabause/src/retro_arena/CMakeLists.txt b/yabause/src/retro_arena/CMakeLists.txt
+index a4e05ad7..e3a80d78 100644
+--- a/yabause/src/retro_arena/CMakeLists.txt
++++ b/yabause/src/retro_arena/CMakeLists.txt
+@@ -74,7 +74,7 @@ add_executable(yabause-retro-arena ${yabause_ra_SOURCES})
+ target_link_libraries(yabause-retro-arena yabause  ${Boost_LIBRARIES} pugixml ${YABAUSE_LIBRARIES} ${PORT_LIBRARIES} nanogui stdc++fs  ${LIBCHDR_LIBRARIES} )
+ target_link_libraries( yabause-retro-arena ${LIBCHDR_LIBRARIES} )
+ target_link_libraries( yabause-retro-arena ${zlib_STATIC_LIBRARIES} )
+-add_dependencies(yabause-retro-arena Json png zlib libchd )
++#add_dependencies(yabause-retro-arena Json png zlib libchd )
+ yab_port_success(yabause-retro-arena)
+ set_target_properties(yabause-retro-arena PROPERTIES OUTPUT_NAME yabasanshiro)
+ 
+diff --git a/yabause/src/retro_arena/nanogui-sdl/CMakeLists.txt b/yabause/src/retro_arena/nanogui-sdl/CMakeLists.txt
+index 33b8e251..b2a995e3 100644
+--- a/yabause/src/retro_arena/nanogui-sdl/CMakeLists.txt
++++ b/yabause/src/retro_arena/nanogui-sdl/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.8.3)
++cmake_minimum_required(VERSION 3.5)
+ 
+ project("NanoGUI-SDL")
+ 
+diff --git a/yabause/src/runner/CMakeLists.txt b/yabause/src/runner/CMakeLists.txt
+index d534b819..316d1bc4 100644
+--- a/yabause/src/runner/CMakeLists.txt
++++ b/yabause/src/runner/CMakeLists.txt
+@@ -1,6 +1,6 @@
+ project(yabause-runner)
+ 
+-cmake_minimum_required(VERSION 2.8)
++cmake_minimum_required(VERSION 3.5)
+ 
+ yab_port_start()
+ 
+diff --git a/yabause/src/sh2_dynarec_devmiyax/CMakeLists.txt b/yabause/src/sh2_dynarec_devmiyax/CMakeLists.txt
+index 5c2bf812..96b3ffd7 100755
+--- a/yabause/src/sh2_dynarec_devmiyax/CMakeLists.txt
++++ b/yabause/src/sh2_dynarec_devmiyax/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.8.11)
++cmake_minimum_required(VERSION 3.5)
+ project (dynalib_test C CXX)
+ 
+ set (COMMON_INCLUDES
+@@ -40,7 +40,7 @@ target_link_libraries(dynalib_test ${LIBRARIES} pthread )
+ #--------------------------------------------------------------
+ # Google Unit Test Library
+ #--------------------------------------------------------------
+-cmake_minimum_required(VERSION 2.8.8)
++cmake_minimum_required(VERSION 3.5)
+ project(gtest_builder C CXX)
+ include(ExternalProject)
+ 
+diff --git a/yabauseut/CMakeLists.txt b/yabauseut/CMakeLists.txt
+index d1769382..36b1ac5e 100644
+--- a/yabauseut/CMakeLists.txt
++++ b/yabauseut/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
++cmake_minimum_required(VERSION 3.5)
+ 
+ include(CMakeForceCompiler)
+ include(ExternalProject)

@@ -133,7 +133,12 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
             os.environ.update({'SDL_RENDER_VSYNC': system.config["sdlvsync"]})
 
             #os.environ.update({'PIPEWIRE_LATENCY': '1024/48000'})
-            os.environ.update({'QT_QPA_PLATFORM': 'xcb'})
+            # check if we're running wayland
+            if os.environ.get("WAYLAND_DISPLAY"):
+                os.environ.update({'QT_QPA_PLATFORM': 'wayland'})
+            else:
+                os.environ.update({'QT_QPA_PLATFORM': 'xcb'})
+
             os.environ.update({'QT_XCB_NO_XI2': '1'})
             os.environ.update({'QT_PLUGIN_PATH': '/usr/lib/qt6/plugins'})
 

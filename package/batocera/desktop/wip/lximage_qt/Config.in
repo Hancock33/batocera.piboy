@@ -1,0 +1,11 @@
+config BR2_PACKAGE_LXIMAGE_QT
+	bool "lximage_qt"
+	select BR2_PACKAGE_BATOCERA_QT6
+	select BR2_PACKAGE_QTXDG_TOOLS
+	select BR2_PACKAGE_KWINDOWSYSTEM
+	select BR2_PACKAGE_POLKITQT
+
+	help
+	  The image viewer and screenshot tool for lxqt
+
+	  https://lxqt-project.org/

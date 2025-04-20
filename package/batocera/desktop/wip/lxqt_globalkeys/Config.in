@@ -1,0 +1,11 @@
+config BR2_PACKAGE_LXQT_GLOBALKEYS
+	bool "lxqt_globalkeys"
+	select BR2_PACKAGE_BATOCERA_QT6
+	select BR2_PACKAGE_QTXDG_TOOLS
+	select BR2_PACKAGE_KWINDOWSYSTEM
+	select BR2_PACKAGE_POLKITQT
+
+	help
+	  Daemon used to register global keyboard shortcuts
+
+	  https://lxqt-project.org/

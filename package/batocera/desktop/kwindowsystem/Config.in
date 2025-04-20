@@ -1,0 +1,10 @@
+config BR2_PACKAGE_KWINDOWSYSTEM
+	bool "kwindowsystem"
+	select BR2_PACKAGE_BATOCERA_QT6
+	select BR2_PACKAGE_ECM
+
+	help
+	  KWindowSystem provides information about the windowing system
+	  and allows interaction with the windowing system.
+
+	  https://community.kde.org/Frameworks

@@ -236,8 +236,7 @@ class PlayGenerator(Generator):
             env={
                 "XDG_CONFIG_HOME": playConfig,
                 "XDG_DATA_HOME": playConfig,
-                "XDG_CACHE_HOME": CACHE,
-                "QT_QPA_PLATFORM": "xcb"
+                "XDG_CACHE_HOME": CACHE
             }
         )
 

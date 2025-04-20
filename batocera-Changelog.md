@@ -52,6 +52,7 @@
 - OpenJKDF2 to play Jedi Knight Dark Forces 2 and Mysteries of the Sith.
 - OpenJK to play Jedi Academy & Jedi Outcast
 - Intel Quick Sync Video acceleration to ffmpeg for supported Intel GPUs
+- ShadPS4 emulator for PlayStation 4 gaming
 ### Fixed
 - Fix some problems in ES and Batocera with IPv6 networks
 - Fix ES behavior with usb network tethering
@@ -81,14 +82,14 @@
 - DXX-Rebirth to 12th of Jan build
 - EDuke to 26th of Dec build
 - ETLegacy to v2.83.2
-- GroovyMAME to 0.274
+- GroovyMAME to 0.276
 - Gzdoom to g4.14.1
 - Hurrican to 24th of Nov build
 - Hypseus Singe to 2.11.4
 - IOQuake3 to 25th December build
 - Jazz2 to 3.2.0
 - Libretro-Kronos to 2.7.0
-- Libretro-MAME to 0.274
+- Libretro-MAME to 0.276
 - Libretro-Play! 4th Feb build
 - Libretro-PPSSPP to 28th February build
 - Libretro-Wasm4 to v2.7.1
@@ -106,48 +107,48 @@
 - Solarus Engine to 18th Jan build
 - Sonic3 Air to v25.02.15.0-test
 - Taradino to 18th of Feb build
-- TheForceEngine to 20th Feb build
+- TheForceEngine to v1.22.300
 - TheXTech to v1.3.7-hotfix2
 - Triforce to use a Crediar build (Nov 29, 2024)
 - Vice to 3.9
 - Vita3k to 3rd of March 2025 build
 - Xash3d-fwgs to 20th of Feb build
-- Xemu to v0.8.45
+- Xemu to v0.8.49
 - Xenia to build 5979274 (Jan 24, 2025)
 ### System
 - Bluez to 5.79
-- Buildroot to 2024.11.x with supporting package updates
-- Mesa3D to 25.0.3
-- Linux Kernel to 6.14
-- RPi Kernel to 6.12.21
-- RPi firmware to match Kernel 6.12.21
-- GStreamer codecs to 1.26.0
-- SDL2 to 2.30.11
-- Vulkan stack to v1.4.304
-- MPV to 0.39.0
-- Kodi to 21.2
-- Nvidia production driver to 570.133.07
-- LLVM to 19.1.7
-- Wine-TKG to 10.4
-- Faudio to 25.02
-- DXVK to 2.6
-- DXVK-NVApi to 0.9.0
-- VKD3D-Proton to 2.14.1
-- Linux Firmware to 20250109
-- Sound Open Firmware to 2025.01
-- Intel Media Driver to 25.1.1
-- LibDRM to 2.4.124
-- Pipewire to 1.2.7
-- Wireplumber to 0.5.8
-- Ryzenadj to v0.16.0
-- QT6 to 6.8.1
 - BTop to 1.4.0
-- Wine Mono to 9.4.0
-- Syncthing to 1.29.3
-- Xone to Mar 13, 2025
+- Buildroot to 2024.11.x with supporting package updates
+- DXVK to 2.6.1
+- DXVK-NVApi to 0.9.0
+- Faudio to 25.02
 - FFMPEG to 7.1.1
-- Intel MediaDriver to 25.1.4
+- GStreamer codecs to 1.26.0
 - Intel GMMLib to 22.7.1
+- Intel Media Driver to 25.2.0
+- Kodi to 21.2
+- LibDRM to 2.4.124
+- Linux Firmware to 20250410
+- Linux Kernel to 6.14.2
+- LLVM to 19.1.7
+- Mesa3D to 25.0.4
+- MPV to 0.40.0
+- Nvidia production driver to 570.133.07
+- Pipewire to 1.2.7
+- QT6 to 6.8.1
+- RClone to v1.69.1
+- RPi firmware to match Kernel 6.12.21
+- RPi Kernel to 6.12.21
+- Ryzenadj to v0.16.0
+- SDL2 to 2.30.11
+- Sound Open Firmware to 2025.01
+- Syncthing to 1.29.3
+- VKD3D-Proton to 2.14.1
+- Vulkan stack to v1.4.304
+- Wine Mono to 9.4.0
+- Wine-TKG to 10.5
+- Wireplumber to 0.5.8
+- Xone to Mar 13, 2025
 
 # 2025/01/06 - batocera.linux 41 - Golden-rayed Blue
 ### Special Notes

@@ -3,8 +3,8 @@
 # shadps4
 #
 ################################################################################
-# Version: Commits on Apr 07, 2025
-SHADPS4_VERSION = 7fee289b66bcc650e7fd7f116a36e0976ea9cdca
+# Version: Commits on Apr 20, 2025
+SHADPS4_VERSION = 5be726ca3b311a3fd780efb8d9bd2e7b06349430
 SHADPS4_SITE = https://github.com/shadps4-emu/shadPS4.git
 SHADPS4_SITE_METHOD=git
 SHADPS4_GIT_SUBMODULES=YES
@@ -19,6 +19,8 @@ SHADPS4_SUPPORTS_IN_SOURCE_BUILD = NO
 SHADPS4_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
 SHADPS4_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 SHADPS4_CONF_OPTS += -DENABLE_QT_GUI=ON
+SHADPS4_CONF_OPTS += -DENABLE_DISCORD_RPC=OFF
+SHADPS4_CONF_OPTS += -DENABLE_UPDATER=OFF
 
 define SHADPS4_INSTALL_TARGET_CMDS
 	 mkdir -p $(TARGET_DIR)/usr/bin/shadps4
