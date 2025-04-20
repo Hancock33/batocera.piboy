@@ -1,0 +1,11 @@
+config BR2_PACKAGE_XDG_DESKTOP_PORTAL_LXQT
+	bool "xdg_desktop_portal_lxqt"
+	select BR2_PACKAGE_BATOCERA_QT6
+	select BR2_PACKAGE_QTXDG_TOOLS
+	select BR2_PACKAGE_KWINDOWSYSTEM
+	select BR2_PACKAGE_POLKITQT
+
+	help
+	  A backend implementation for xdg-desktop-portal
+
+	  https://lxqt-project.org/

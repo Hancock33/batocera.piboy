@@ -32,10 +32,12 @@ mold.mk
 mono-bin.mk
 nblood.mk
 nv-codec-headers.mk
+pavucontrol_qt.mk
 pcmanfmqt6.mk
 pcsx2.mk
 python3-gpiod.mk
 pywebview.mk
+qps.mk
 rclone.mk
 re2c.mk
 retrocrisis.mk

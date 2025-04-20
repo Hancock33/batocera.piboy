@@ -1,0 +1,11 @@
+config BR2_PACKAGE_QTERMINAL
+	bool "qterminal"
+	select BR2_PACKAGE_BATOCERA_QT6
+	select BR2_PACKAGE_QTXDG_TOOLS
+	select BR2_PACKAGE_KWINDOWSYSTEM
+	select BR2_PACKAGE_POLKITQT
+
+	help
+	  A lightweight Qt-based terminal emulator
+
+	  https://lxqt-project.org/

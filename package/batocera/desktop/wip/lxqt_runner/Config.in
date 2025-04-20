@@ -1,0 +1,11 @@
+config BR2_PACKAGE_LXQT_RUNNER
+	bool "lxqt_runner"
+	select BR2_PACKAGE_BATOCERA_QT6
+	select BR2_PACKAGE_QTXDG_TOOLS
+	select BR2_PACKAGE_KWINDOWSYSTEM
+	select BR2_PACKAGE_POLKITQT
+
+	help
+	  Tool used to launch programs quickly by typing their names
+
+	  https://lxqt-project.org/
