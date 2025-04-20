@@ -1,8 +1,8 @@
 diff --git a/drivers/bluetooth/btqca.c b/drivers/bluetooth/btqca.c
-index cdf09d9a9ad2..8e409daecc55 100644
+index 3d6778b95e00..a89069daa72f 100644
 --- a/drivers/bluetooth/btqca.c
 +++ b/drivers/bluetooth/btqca.c
-@@ -992,15 +992,11 @@ EXPORT_SYMBOL_GPL(qca_uart_setup);
+@@ -1005,15 +1005,11 @@ EXPORT_SYMBOL_GPL(qca_uart_setup);
  
  int qca_set_bdaddr(struct hci_dev *hdev, const bdaddr_t *bdaddr)
  {
@@ -51,7 +51,7 @@ index c0436881a533..71e748a9477e 100644
  
  static const struct h5_device_data h5_data_rtl8822cs = {
 diff --git a/drivers/bluetooth/hci_qca.c b/drivers/bluetooth/hci_qca.c
-index 0ac2168f1dc4..c801fc99d1bf 100644
+index f2558506a02c..e124cd6a0e4d 100644
 --- a/drivers/bluetooth/hci_qca.c
 +++ b/drivers/bluetooth/hci_qca.c
 @@ -228,7 +228,6 @@ struct qca_serdev {
@@ -62,7 +62,7 @@ index 0ac2168f1dc4..c801fc99d1bf 100644
  	const char *firmware_name[2];
  };
  
-@@ -1833,12 +1832,13 @@ static int qca_power_on(struct hci_dev *hdev)
+@@ -1841,12 +1840,13 @@ static int qca_power_on(struct hci_dev *hdev)
  
  static void hci_coredump_qca(struct hci_dev *hdev)
  {
@@ -80,7 +80,7 @@ index 0ac2168f1dc4..c801fc99d1bf 100644
  }
  
  static int qca_get_data_path_id(struct hci_dev *hdev, __u8 *data_path_id)
-@@ -1870,7 +1870,6 @@ static int qca_setup(struct hci_uart *hu)
+@@ -1878,7 +1878,6 @@ static int qca_setup(struct hci_uart *hu)
  	const char *rampatch_name = qca_get_rampatch_name(hu);
  	int ret;
  	struct qca_btsoc_version ver;
@@ -88,7 +88,7 @@ index 0ac2168f1dc4..c801fc99d1bf 100644
  	const char *soc_name;
  
  	ret = qca_check_speeds(hu);
-@@ -1932,10 +1931,6 @@ static int qca_setup(struct hci_uart *hu)
+@@ -1942,10 +1941,6 @@ static int qca_setup(struct hci_uart *hu)
  	case QCA_WCN6750:
  	case QCA_WCN6855:
  	case QCA_WCN7850:
@@ -99,7 +99,7 @@ index 0ac2168f1dc4..c801fc99d1bf 100644
  		hci_set_aosp_capable(hdev);
  
  		ret = qca_read_soc_version(hdev, &ver, soc_type);
-@@ -2329,9 +2324,6 @@ static int qca_serdev_probe(struct serdev_device *serdev)
+@@ -2351,9 +2346,6 @@ static int qca_serdev_probe(struct serdev_device *serdev)
  	if (!qcadev->oper_speed)
  		BT_DBG("UART will pick default operating speed");
  
@@ -109,7 +109,7 @@ index 0ac2168f1dc4..c801fc99d1bf 100644
  	if (data)
  		qcadev->btsoc_type = data->soc_type;
  	else
-@@ -2403,7 +2395,7 @@ static int qca_serdev_probe(struct serdev_device *serdev)
+@@ -2427,7 +2419,7 @@ static int qca_serdev_probe(struct serdev_device *serdev)
  
  		qcadev->sw_ctrl = devm_gpiod_get_optional(&serdev->dev, "swctrl",
  					       GPIOD_IN);
@@ -153,10 +153,10 @@ index 89a22e9b3253..2a6e01dc0cf8 100644
  void hci_uart_unregister_device(struct hci_uart *hu)
  {
 diff --git a/drivers/bluetooth/hci_uart.h b/drivers/bluetooth/hci_uart.h
-index fbf3079b92a5..770ee0afa670 100644
+index 5ea5dd80e297..daca1a3cec8c 100644
 --- a/drivers/bluetooth/hci_uart.h
 +++ b/drivers/bluetooth/hci_uart.h
-@@ -97,17 +97,7 @@ struct hci_uart {
+@@ -98,17 +98,7 @@ struct hci_uart {
  
  int hci_uart_register_proto(const struct hci_uart_proto *p);
  int hci_uart_unregister_proto(const struct hci_uart_proto *p);
