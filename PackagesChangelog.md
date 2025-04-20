@@ -8,7 +8,9 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|4a4a02151abeb4dc29b8c
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|a928e8a3db1c0587b9e204cfc4063d562202f5c0|Apr 20, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-04-20|Apr 20, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|5be726ca3b311a3fd780efb8d9bd2e7b06349430|Apr 20, 2025
+Emulators|[supermodel](http://github.com/trzy/Supermodel)|002540c598255ba4dfe2a189f6f05756a9360b64|Apr 20, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|0198345ed330c67674f16247cad77e4aadc3bccd|Apr 20, 2025
+Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|179591c8bcbecf9e597e23ee50c1d7f89d53b74d|Apr 20, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|c6ae7d36dd84ede899c4ba8220e4f89e5eaab03f|Apr 20, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|9e4b2b4603b74a6ac58376eab1a9e3a6ab6c503c|Apr 20, 2025
 Ports|[omf2097](http://github.com/omf2097/openomf)|a5f913a4ed06547b6835514e25413e6c93673a2d|Apr 20, 2025
@@ -20,8 +22,8 @@ Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerD
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|a2e512a094a404d45d61812c3a8dc1e2c60709ef|Apr 20, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250420|Apr 20, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|701d1f71d1c45b68a1be5bc3e5dcd9ea336c7f92|Apr 20, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|962a66a090daa144eaed2d3d3e3c30fec11169f1|Apr 20, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|962a66a090daa144eaed2d3d3e3c30fec11169f1|Apr 20, 2025
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|9667be9f0e5d081fb8ec4e6b0537d0fe499503ce|Apr 20, 2025
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|9667be9f0e5d081fb8ec4e6b0537d0fe499503ce|Apr 20, 2025
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|beb422a68dbb7f78d73b1fd6cd0807288a6613c6|Apr 20, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|ceef5c353308cf2d2c7837d27d6ddea9cfb27dd9|Apr 20, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|ac2e805b2230c03d467cdf2ed405c682647bb66d|Apr 20, 2025
@@ -30,10 +32,8 @@ Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|d3fbce55bdab
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|1ae0b232656ccb47b0843b44fae0e4f47a6a2778|Apr 19, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|f4df18b7cf01e88f2c5021a32d81c854063214cd|Apr 19, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.289|Apr 19, 2025
-Emulators|[supermodel](http://github.com/trzy/Supermodel)|bb35a8acf7d6174baa2962b23b7a950b0d0272cd|Apr 19, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45633|Apr 19, 2025
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|9226cb52af85b8012b31adeb8b9fc27a61775a0e|Apr 19, 2025
-Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|8197881803443714134eedbf2ff1f1425073b411|Apr 19, 2025
 Libraries|[plutosvg](http://github.com/stenzek/plutosvg)|c816e127bcba7ea311114be2cec0d1d3260abe06|Apr 19, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|205267d818b068ba3de818370e552acf346f1fa8|Apr 19, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|f3a27fff751211737ae66c93a59c41cc45b6cd0b|Apr 19, 2025

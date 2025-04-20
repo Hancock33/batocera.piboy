@@ -319,7 +319,7 @@ Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|ce992fccb22d
 Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|9b927f280322b6bb13998e06b83710201960181b|Nov 24, 2024
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|3fa8a6f7fcd49206f3b7fc4ab8ff5f9a3c8e3cc8|Apr 18, 2025
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|39f26d3bc8e04133c31192c757eaebd5f0924f2d|Mar 12, 2025
-Emulators|[supermodel](http://github.com/trzy/Supermodel)|bb35a8acf7d6174baa2962b23b7a950b0d0272cd|Apr 19, 2025
+Emulators|[supermodel](http://github.com/trzy/Supermodel)|002540c598255ba4dfe2a189f6f05756a9360b64|Apr 20, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|0198345ed330c67674f16247cad77e4aadc3bccd|Apr 20, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|a9e430ab7cc27d7c15302c87bb386811c3f4903c|Apr 15, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45633|Apr 19, 2025
@@ -329,7 +329,7 @@ Emulators|[vpinball](http://github.com/vpinball/vpinball)|c20248a5585acbd989398a
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r48|Sept 06, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|0c2a6178192043db8b30c4d61a96129b442102f5|Apr 18, 2025
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|9132035|Mar 15, 2025
-Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|8197881803443714134eedbf2ff1f1425073b411|Apr 19, 2025
+Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|179591c8bcbecf9e597e23ee50c1d7f89d53b74d|Apr 20, 2025
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20250410|Apr 10, 2025
@@ -529,8 +529,8 @@ Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|f72bac75d0d2840fece78
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|80a3a47eae3bb503a8e8d4f3ae2e093837ac1330|Apr 20, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|b5f9899b64511170683cc9b517323f714baab3cc|Feb 12, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|5a0465b85b03d69c94351ef21f9d2591bdcbde77|Apr 19, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|962a66a090daa144eaed2d3d3e3c30fec11169f1|Apr 20, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|962a66a090daa144eaed2d3d3e3c30fec11169f1|Apr 20, 2025
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|9667be9f0e5d081fb8ec4e6b0537d0fe499503ce|Apr 20, 2025
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|9667be9f0e5d081fb8ec4e6b0537d0fe499503ce|Apr 20, 2025
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.7|Feb 28, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|0694240afa8d163cf5450ca7dfefc2da485b9ff1|Apr 13, 2025
