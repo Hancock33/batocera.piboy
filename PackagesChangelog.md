@@ -2,6 +2,7 @@
 -----|:-----:|:-----:|:-----:
 Emulators|[applewin](https://github.com/audetto/AppleWin)|1fa1ae18439b84553fd96bf21d73843e52bf22b9|Apr 20, 2025
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|527610d599c041f2c89ad65a10ca0332f30ba711|Apr 20, 2025
+Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|ff9c61e7c7273e918c458016f4143a2174f8b0d0|Apr 20, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|6354050b7764137410e291ffb7969f72db4bd0cf|Apr 20, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|4a4a02151abeb4dc29b8ccdb43dd2d137088d2cd|Apr 20, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|a928e8a3db1c0587b9e204cfc4063d562202f5c0|Apr 20, 2025
@@ -114,7 +115,6 @@ Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|0faf39cfd84e
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|768223b9d1793b618a6fedd7b0ad72ef3fe6e3f3|Apr 15, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|9f6285842df65e522eb00a0adea3e28272b20342|Apr 15, 2025
 Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.14|Apr 14, 2025
-Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|175a427c27027512a3071d8b3488222f7880406c|Apr 14, 2025
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|193efed9595dc91bde9c5525b0c91dd70d449652|Apr 14, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.3.31|Apr 14, 2025
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|d1908183b52eecfaf4c6cda9eef3e961ce261d16|Apr 14, 2025

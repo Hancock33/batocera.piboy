@@ -105,7 +105,7 @@ Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|81cbbda37
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v118|Jan 27, 2024
 Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|06233e34629e53682aad55bb8be5a98caec91de3|Apr 16, 2025
-Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|175a427c27027512a3071d8b3488222f7880406c|Apr 14, 2025
+Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|ff9c61e7c7273e918c458016f4143a2174f8b0d0|Apr 20, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|2025-03-20|Mar 20, 2025
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|1ae0b232656ccb47b0843b44fae0e4f47a6a2778|Apr 19, 2025
