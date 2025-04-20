@@ -642,7 +642,7 @@ index c81cf642dba0..9792da6a38d6 100644
  
  #ifdef CONFIG_FAIR_GROUP_SCHED
 diff --git a/kernel/sched/debug.c b/kernel/sched/debug.c
-index 56ae54e0ce6a..4302a4d60ab7 100644
+index 557246880a7e..c1f6219f20eb 100644
 --- a/kernel/sched/debug.c
 +++ b/kernel/sched/debug.c
 @@ -167,7 +167,53 @@ static const struct file_operations sched_feat_fops = {
@@ -729,7 +729,7 @@ index 56ae54e0ce6a..4302a4d60ab7 100644
  	debugfs_create_u32("migration_cost_ns", 0644, debugfs_sched, &sysctl_sched_migration_cost);
  	debugfs_create_u32("nr_migrate", 0644, debugfs_sched, &sysctl_sched_nr_migrate);
  
-@@ -758,6 +811,9 @@ print_task(struct seq_file *m, struct rq *rq, struct task_struct *p)
+@@ -762,6 +815,9 @@ print_task(struct seq_file *m, struct rq *rq, struct task_struct *p)
  		SPLIT_NS(schedstat_val_or_zero(p->stats.sum_sleep_runtime)),
  		SPLIT_NS(schedstat_val_or_zero(p->stats.sum_block_runtime)));
  
@@ -739,7 +739,7 @@ index 56ae54e0ce6a..4302a4d60ab7 100644
  #ifdef CONFIG_NUMA_BALANCING
  	SEQ_printf(m, "   %d      %d", task_node(p), task_numa_group_id(p));
  #endif
-@@ -1244,6 +1300,9 @@ void proc_sched_show_task(struct task_struct *p, struct pid_namespace *ns,
+@@ -1248,6 +1304,9 @@ void proc_sched_show_task(struct task_struct *p, struct pid_namespace *ns,
  
  	P(se.load.weight);
  #ifdef CONFIG_SMP
@@ -750,7 +750,7 @@ index 56ae54e0ce6a..4302a4d60ab7 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index 2b82af0d6820..f918dc67591a 100644
+index c0b27af756f9..e6a0aa7a9ae8 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -58,6 +58,8 @@
@@ -799,11 +799,10 @@ index 2b82af0d6820..f918dc67591a 100644
 +#endif // CONFIG_SCHED_BORE
  
 -#ifdef CONFIG_CACHY
--const_debug unsigned int sysctl_sched_migration_cost	= 300000UL;
+-__read_mostly unsigned int sysctl_sched_migration_cost	= 300000UL;
 -#else
--const_debug unsigned int sysctl_sched_migration_cost	= 500000UL;
+ __read_mostly unsigned int sysctl_sched_migration_cost	= 500000UL;
 -#endif
-+__read_mostly unsigned int sysctl_sched_migration_cost	= 500000UL;
  
  static int __init setup_sched_thermal_decay_shift(char *str)
  {
@@ -954,7 +953,7 @@ index 2b82af0d6820..f918dc67591a 100644
  	/*
  	 * Tell update_rq_clock() that we've just updated,
  	 * so we don't do microscopic update in schedule()
-@@ -13142,6 +13187,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
+@@ -13143,6 +13188,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
  static void task_fork_fair(struct task_struct *p)
  {
  	set_task_max_allowed_capacity(p);
@@ -964,7 +963,7 @@ index 2b82af0d6820..f918dc67591a 100644
  }
  
  /*
-@@ -13252,6 +13300,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
+@@ -13253,6 +13301,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
  
  static void switched_from_fair(struct rq *rq, struct task_struct *p)
  {
