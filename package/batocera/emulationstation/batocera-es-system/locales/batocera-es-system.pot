@@ -9360,125 +9360,6 @@ msgctxt "game_options"
 msgid "ENABLE GAMEPAD VIEW"
 msgstr ""
 
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid ""
-"Arrange the dual screen layout. Separate windows can be changed with "
-"Hotkey+R2."
-msgstr ""
-
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid "Top Only"
-msgstr ""
-
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid "Bottom Only"
-msgstr ""
-
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid "Large Top"
-msgstr ""
-
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid "Large Bottom"
-msgstr ""
-
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid "Left/Right"
-msgstr ""
-
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid "Right/Left"
-msgstr ""
-
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid "Separate Windows"
-msgstr ""
-
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid "Hybrid Screen Top"
-msgstr ""
-
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid "Hybrid Screen Bottom"
-msgstr ""
-
-#. TRANSLATION: azahar, rtcw, theforceengine
-msgctxt "game_options"
-msgid "GRAPHICS"
-msgstr ""
-
-#. TRANSLATION: azahar, dolphin_triforce, play, scummvm
-msgctxt "game_options"
-msgid "OpenGL (Default)"
-msgstr ""
-
-#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, melonds, ...
-msgctxt "game_options"
-msgid "Fix screen tearing. CPU heavy."
-msgstr ""
-
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid "Off will help some games, others will run too fast."
-msgstr ""
-
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid "FRAME LIMIT"
-msgstr ""
-
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid "Reduce stutter that happens when compiling shaders."
-msgstr ""
-
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid "DISK SHADER CACHE"
-msgstr ""
-
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid ""
-"Compile shaders using background threads to avoid shader compilation "
-"stutter. May cause graphical glitches."
-msgstr ""
-
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid "ENABLE ASYNC SHADER COMPILATION"
-msgstr ""
-
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid "Preloading is impossible from ES."
-msgstr ""
-
-#. TRANSLATION: azahar, duckstation
-msgctxt "game_options"
-msgid "Preload"
-msgstr ""
-
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
-msgstr ""
-
-#. TRANSLATION: azahar
-msgctxt "game_options"
-msgid "NEW 3DS MODE"
-msgstr ""
-
 #. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
@@ -9672,6 +9553,11 @@ msgstr ""
 #. TRANSLATION: citron, dolphin
 msgctxt "game_options"
 msgid "Stretch to window"
+msgstr ""
+
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, melonds, ...
+msgctxt "game_options"
+msgid "Fix screen tearing. CPU heavy."
 msgstr ""
 
 #. TRANSLATION: citron, dolphin, duckstation, pcsx2
@@ -10084,6 +9970,11 @@ msgstr ""
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "MOUSE AS WIIMOTE POINTER"
+msgstr ""
+
+#. TRANSLATION: azahar, dolphin_triforce, play, scummvm
+msgctxt "game_options"
+msgid "OpenGL (Default)"
 msgstr ""
 
 #. TRANSLATION: dolphin_triforce
@@ -10527,6 +10418,11 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Preload requires more RAM."
+msgstr ""
+
+#. TRANSLATION: azahar, duckstation
+msgctxt "game_options"
+msgid "Preload"
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -15518,6 +15414,11 @@ msgctxt "game_options"
 msgid "Show (Default)"
 msgstr ""
 
+#. TRANSLATION: azahar, rtcw, theforceengine
+msgctxt "game_options"
+msgid "GRAPHICS"
+msgstr ""
+
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "Standard OpenGL (Default)"
@@ -17837,6 +17738,105 @@ msgstr ""
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "All voiceovers"
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid ""
+"Arrange the dual screen layout. Separate windows can be changed with "
+"Hotkey+R2."
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "Top Only"
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "Bottom Only"
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "Large Top"
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "Large Bottom"
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "Left/Right"
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "Right/Left"
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "Separate Windows"
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "Hybrid Screen Top"
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "Hybrid Screen Bottom"
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "Off will help some games, others will run too fast."
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "FRAME LIMIT"
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "Reduce stutter that happens when compiling shaders."
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "DISK SHADER CACHE"
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid ""
+"Compile shaders using background threads to avoid shader compilation "
+"stutter. May cause graphical glitches."
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "ENABLE ASYNC SHADER COMPILATION"
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "Preloading is impossible from ES."
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
+msgstr ""
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "NEW 3DS MODE"
 msgstr ""
 
 #. TRANSLATION: mugen.keys
