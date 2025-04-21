@@ -38,6 +38,7 @@ lxqt_themes.mk
 lxqtbt.mk
 lxqtmenudata.mk
 obconf_qt.mk
+ossp.mk
 polkitqt.mk
 python-cog.mk
 python-pyxel.mk
