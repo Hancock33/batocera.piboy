@@ -9,7 +9,6 @@ OSSP_SITE = $(call github,OpenMandrivaSoftware,ossp,$(OSSP_VERSION))
 OSSP_LICENSE = GPLv2
 OSSP_DEPENDENCIES = libfuse3
 
-OSSP_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 OSSP_CONF_OPTS += -Ddaemon=ON
 OSSP_CONF_OPTS += -Dtest=OFF
 
