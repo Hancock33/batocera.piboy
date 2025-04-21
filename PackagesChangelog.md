@@ -2,9 +2,12 @@
 -----|:-----:|:-----:|:-----:
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|bc3c3eb79ae4d8dc83091d20c686aac2d772590e|Apr 21, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|41ee9d9ff09d773d577419bbdc0e202d68a0edea|Apr 21, 2025
-Ports|[box64](http://github.com/ptitseb/box64)|d0da57547e711b8051ef27bca0e85fcd367d6010|Apr 21, 2025
+Ports|[box64](http://github.com/ptitseb/box64)|e7b4c79d12969566fb72a7499c693a1ded3db25e|Apr 21, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|782bbb4e052e83a3080f0fed541db16f27ceb3c3|Apr 21, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.6|Apr 21, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250421|Apr 21, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|547d739db43f61e81b500fc5b019c91f0b921f06|Apr 21, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250421|Apr 21, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|6a9eeeaece42f46faf2255929f6455c42f991f57|Apr 21, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|1fa1ae18439b84553fd96bf21d73843e52bf22b9|Apr 20, 2025
 Emulators|[azahar](https://github.com/AzaharPlus/AzaharPlus.git)|25cda90472cae2a014e5ca9eefabfa514ac00536|Apr 20, 2025
@@ -23,12 +26,10 @@ Ports|[omf2097](http://github.com/omf2097/openomf)|a5f913a4ed06547b6835514e25413
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|83c726d1d4ac43124b569b772d6d8dbd3b931fd2|Apr 20, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|7e6b312e820b0eccdc718b99b67ace5899e51862|Apr 20, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|80a3a47eae3bb503a8e8d4f3ae2e093837ac1330|Apr 20, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250420|Apr 20, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|e7aecb6af5d43011c2f514e917eee588964ffa66|Apr 20, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250420|Apr 20, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|701d1f71d1c45b68a1be5bc3e5dcd9ea336c7f92|Apr 20, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|9667be9f0e5d081fb8ec4e6b0537d0fe499503ce|Apr 20, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|9667be9f0e5d081fb8ec4e6b0537d0fe499503ce|Apr 20, 2025
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|0654940d6f8939398a25241bc38b9b366be22c0b|Apr 20, 2025
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|0654940d6f8939398a25241bc38b9b366be22c0b|Apr 20, 2025
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|beb422a68dbb7f78d73b1fd6cd0807288a6613c6|Apr 20, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|ceef5c353308cf2d2c7837d27d6ddea9cfb27dd9|Apr 20, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|ac2e805b2230c03d467cdf2ed405c682647bb66d|Apr 20, 2025
@@ -166,7 +167,6 @@ Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|
 Emulators|[hatari](http://github.com/hatari/hatari)|b50190b0eb72908c5f6cc5cd209ce55de2ac3069|Apr 06, 2025
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|2c78e77617c65025342e1c4da8187ef5ee2cbad4|Apr 06, 2025
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|ce992fccb22d9f3eae1622b088c48d812d982dd8|Apr 06, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.5|Apr 06, 2025
 Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|92c4450a1bc1acb58bd02bbb99b57e5036919cdf|Apr 06, 2025
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|4daf9d466ad00897f755163dd26f528d14e1db44|Apr 06, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|9541000c13775c4b26bd50feffa596a995348a6d|Apr 06, 2025
