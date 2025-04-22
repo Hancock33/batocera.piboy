@@ -2187,6 +2187,11 @@ msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "INTRARE MAUS ABSOLUTĂ"
 
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "ACCELEROMETER"
+msgstr ""
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ACCURACY LEVEL"
@@ -10237,6 +10242,13 @@ msgctxt "game_options"
 msgid "Internal (variable fps)"
 msgstr ""
 
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"Internal accelerometer. Disable if you experience random tilts or unexpected "
+"ball behaviour."
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Interpreter (Slowest)"
@@ -10265,11 +10277,9 @@ msgstr "Inventar"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
-"main screen for other emulators."
+"Inverse the Backglass and the Playfield. Useful to use the Backglass as main "
+"screen for other emulators."
 msgstr ""
-"Inversează panoul de sticlă și câmpul de joc. Util pentru a folosit panoul "
-"de sticlă ca ecran principal pentru alte emulatoare."
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -19889,6 +19899,14 @@ msgstr "galben/albastru"
 #~ msgstr ""
 #~ "Instalează cardul cititor de imagini pentru a putea citi fișierele "
 #~ "imagine de disc (doar Mac IIx). Minim 4MO de RAM sunt recomandați."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
+#~ "main screen for other emulators."
+#~ msgstr ""
+#~ "Inversează panoul de sticlă și câmpul de joc. Util pentru a folosit "
+#~ "panoul de sticlă ca ecran principal pentru alte emulatoare."
 
 #~ msgctxt "game_options"
 #~ msgid "JUMP ON B"

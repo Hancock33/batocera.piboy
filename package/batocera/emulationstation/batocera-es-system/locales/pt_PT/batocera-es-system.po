@@ -2190,6 +2190,11 @@ msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "ENTRADA ABSOLUTA DO RATO"
 
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "ACCELEROMETER"
+msgstr ""
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ACCURACY LEVEL"
@@ -10221,6 +10226,13 @@ msgctxt "game_options"
 msgid "Internal (variable fps)"
 msgstr ""
 
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"Internal accelerometer. Disable if you experience random tilts or unexpected "
+"ball behaviour."
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Interpreter (Slowest)"
@@ -10249,11 +10261,9 @@ msgstr "Inventário"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
-"main screen for other emulators."
+"Inverse the Backglass and the Playfield. Useful to use the Backglass as main "
+"screen for other emulators."
 msgstr ""
-"Inverta o Backglass e o Playfield. Útil para usar o Backglass como ecrã "
-"principal para outros emuladores."
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -19615,6 +19625,14 @@ msgstr "amarelo/azul"
 #~ msgstr ""
 #~ "Instalar o cartão de leitura para ler arquivos em disco (somente Mac "
 #~ "IIx). Recomenda-se o mínimo de 4MB de RAM."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
+#~ "main screen for other emulators."
+#~ msgstr ""
+#~ "Inverta o Backglass e o Playfield. Útil para usar o Backglass como ecrã "
+#~ "principal para outros emuladores."
 
 #~ msgctxt "game_options"
 #~ msgid "JUMP ON B"

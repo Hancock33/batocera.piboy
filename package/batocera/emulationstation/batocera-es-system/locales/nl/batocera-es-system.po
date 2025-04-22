@@ -2190,6 +2190,11 @@ msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "ABSOLUTE MOUSE INVOER"
 
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "ACCELEROMETER"
+msgstr ""
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ACCURACY LEVEL"
@@ -10249,6 +10254,13 @@ msgctxt "game_options"
 msgid "Internal (variable fps)"
 msgstr ""
 
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"Internal accelerometer. Disable if you experience random tilts or unexpected "
+"ball behaviour."
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Interpreter (Slowest)"
@@ -10277,11 +10289,9 @@ msgstr "Inventaris"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
-"main screen for other emulators."
+"Inverse the Backglass and the Playfield. Useful to use the Backglass as main "
+"screen for other emulators."
 msgstr ""
-"Draai de kopruit en het speelveld om. Handig om de Backglass als hoofdscherm "
-"voor andere emulators te gebruiken."
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -19635,6 +19645,14 @@ msgstr "geel/blauw"
 #~ msgstr ""
 #~ "Installeer de image lezer kaart om schijfkopiebestanden te lezen (alleen "
 #~ "Mac IIx). Minimale ramgrootte van 4 MB aanbevolen."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
+#~ "main screen for other emulators."
+#~ msgstr ""
+#~ "Draai de kopruit en het speelveld om. Handig om de Backglass als "
+#~ "hoofdscherm voor andere emulators te gebruiken."
 
 #~ msgctxt "game_options"
 #~ msgid "JUMP ON B"

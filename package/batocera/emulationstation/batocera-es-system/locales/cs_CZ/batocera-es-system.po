@@ -2188,6 +2188,11 @@ msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "ABSOLUTNÍ VSTUP MYŠI"
 
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "ACCELEROMETER"
+msgstr ""
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ACCURACY LEVEL"
@@ -10187,6 +10192,13 @@ msgctxt "game_options"
 msgid "Internal (variable fps)"
 msgstr ""
 
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"Internal accelerometer. Disable if you experience random tilts or unexpected "
+"ball behaviour."
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Interpreter (Slowest)"
@@ -10215,11 +10227,9 @@ msgstr "Inventura"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
-"main screen for other emulators."
+"Inverse the Backglass and the Playfield. Useful to use the Backglass as main "
+"screen for other emulators."
 msgstr ""
-"Inverze zadního skla a hracího pole. Užitečné pro použití Backglass jako "
-"hlavní obrazovky pro jiné emulátory."
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -20478,6 +20488,14 @@ msgstr "žlutá/modrá"
 #~ msgctxt "game_options"
 #~ msgid "Interpreter only (experimental)"
 #~ msgstr "Pouze tlumočník (experimentální)"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
+#~ "main screen for other emulators."
+#~ msgstr ""
+#~ "Inverze zadního skla a hracího pole. Užitečné pro použití Backglass jako "
+#~ "hlavní obrazovky pro jiné emulátory."
 
 #~ msgctxt "game_options"
 #~ msgid "Invert joystick on flight games."

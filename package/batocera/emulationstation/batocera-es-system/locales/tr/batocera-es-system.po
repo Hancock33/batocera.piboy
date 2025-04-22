@@ -2194,6 +2194,11 @@ msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "MUTLAK FARE GİRİŞİ"
 
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "ACCELEROMETER"
+msgstr ""
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ACCURACY LEVEL"
@@ -10220,6 +10225,13 @@ msgctxt "game_options"
 msgid "Internal (variable fps)"
 msgstr ""
 
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"Internal accelerometer. Disable if you experience random tilts or unexpected "
+"ball behaviour."
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Interpreter (Slowest)"
@@ -10248,11 +10260,9 @@ msgstr "Envanter"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
-"main screen for other emulators."
+"Inverse the Backglass and the Playfield. Useful to use the Backglass as main "
+"screen for other emulators."
 msgstr ""
-"Backglass ve Playfield'ı ters çevirin. Backglass'ı diğer emülatörler için "
-"ana ekran olarak kullanmak kullanışlıdır."
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -19572,6 +19582,14 @@ msgstr "sarı/mavi"
 #~ msgstr ""
 #~ "Disk görüntü dosyalarını okumak için görüntü okuyucu kartını takın "
 #~ "(yalnızca Mac IIx). Minimum 4MB ram boyutu önerilir."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
+#~ "main screen for other emulators."
+#~ msgstr ""
+#~ "Backglass ve Playfield'ı ters çevirin. Backglass'ı diğer emülatörler için "
+#~ "ana ekran olarak kullanmak kullanışlıdır."
 
 #~ msgctxt "game_options"
 #~ msgid "JUMP ON B"
