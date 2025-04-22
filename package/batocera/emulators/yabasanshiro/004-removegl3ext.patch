@@ -11,7 +11,7 @@ index 520c93e9..78e7d0c7 100644
  #include "ygl.h"
  #endif
 diff --git a/yabause/src/ygl.h b/yabause/src/ygl.h
-index 43a21247..46416107 100644
+index f674228d..bfa42b0f 100644
 --- a/yabause/src/ygl.h
 +++ b/yabause/src/ygl.h
 @@ -50,7 +50,6 @@ extern "C" {

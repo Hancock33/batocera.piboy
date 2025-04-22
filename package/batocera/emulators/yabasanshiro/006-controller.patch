@@ -46,3 +46,4 @@ index bd806736..3c0ba725 100644
 +  path = "/userdata/system/configs/yabasanshiro/input.cfg";
    return path;
  }
+ 
