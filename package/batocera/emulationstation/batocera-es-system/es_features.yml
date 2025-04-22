@@ -14088,7 +14088,7 @@ vpinball:
     vpinball_inverseplayfieldandb2s:
       group: WINDOWS POSITIONS
       prompt: INVERSE PLAYFIELD AND B2S
-      description: Inverse the Backglass and the Playfield. Usefull to use the Backglass as main screen for other emulators.
+      description: Inverse the Backglass and the Playfield. Useful to use the Backglass as main screen for other emulators.
       choices:
         "On": 1
         "Off": 0
@@ -14179,7 +14179,11 @@ vpinball:
       group: EXPERT SETTINGS
       description: This should not be necessary, unless you are not using the default pad2key mapping.
       preset: switchauto
-
+    vpinball_pbw:
+      group: EXPERT SETTINGS
+      prompt: ACCELEROMETER
+      description: Internal accelerometer. Disable if you experience random tilts or unexpected ball behaviour.
+      preset: switchauto
 witchaven:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
