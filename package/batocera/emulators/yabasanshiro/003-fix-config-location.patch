@@ -12,7 +12,7 @@ index 1108c843..8101a95c 100644
    this->filename = home_dir + input_trace_filename + ".config";
  
 diff --git a/yabause/src/retro_arena/main.cpp b/yabause/src/retro_arena/main.cpp
-index 39029508..59dcc2ff 100644
+index 759c6ed4..592c8cc6 100644
 --- a/yabause/src/retro_arena/main.cpp
 +++ b/yabause/src/retro_arena/main.cpp
 @@ -75,7 +75,7 @@ static char last_state_filename[256] = "\0";

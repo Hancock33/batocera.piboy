@@ -375,7 +375,7 @@ libretro:
   cfeatures:
     gfxbackend:
       group: DRIVERS
-      archs_include: [x86, x86_64, bcm2711, bcm2712, a3gen2, sm8250, sm8550, rk3588]
+      archs_include: [x86, x86_64, x86-64-v3, bcm2711, bcm2712, a3gen2, sm8250, sm8550, rk3588]
       prompt:      GRAPHICS API
       description: Choose which graphics API library to use. Vulkan may not work for every core.
       choices:
@@ -7909,95 +7909,12 @@ cemu:
                "Disabled (Default)": false
                "Enabled":            true
 
-azahar:
-  shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-  cfeatures:
-        azahar_screen_layout:
-            prompt: SCREEN LAYOUT
-            description: Arrange the dual screen layout. Separate windows can be changed with Hotkey+R2.
-            choices:
-                "Top Only":              1-false
-                "Bottom Only":           1-true
-                "Large Top":             2-false
-                "Large Bottom":          2-true
-                "Left/Right":            3-false
-                "Right/Left":            3-true
-                "Separate Windows":      4-false
-                "Hybrid Screen Top":     5-false
-                "Hybrid Screen Bottom":  5-true
-        azahar_resolution_factor:
-            submenu: GRAPHICS
-            prompt: RENDERING RESOLUTION
-            description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
-            choices:
-                "1x (400x240)":    1
-                "2x (800x480)":    2
-                "3x (1200x720)":   3
-                "4x (1600x960)":   4
-                "5x (2000x1200)":  5
-                "6x (2400x1440)":  6
-                "7x (2800x1680)":  7
-                "8x (3200x1920)":  8
-                "9x (3600x2160)":  9
-                "10x (4000x2400)": 10
-        azahar_graphics_api:
-            archs_include: [x86, x86_64, sm8550]
-            submenu: GRAPHICS
-            prompt: GRAPHICS API
-            description: Choose which graphics API library to use.
-            choices:
-                "Software":         0
-                "OpenGL (Default)": 1
-                "Vulkan":           2
-        azahar_use_vsync_new:
-            submenu: GRAPHICS
-            prompt: VSYNC
-            description: Fix screen tearing. CPU heavy.
-            choices:
-                "Off": 0
-                "On":  1
-        azahar_use_frame_limit:
-            submenu: GRAPHICS
-            prompt: FRAME LIMIT
-            description: Off will help some games, others will run too fast.
-            choices:
-                "Off": 0
-                "On":  1
-        azahar_use_disk_shader_cache:
-            submenu: GRAPHICS
-            prompt: DISK SHADER CACHE
-            description: Reduce stutter that happens when compiling shaders.
-            choices:
-                "Off": 0
-                "On":  1
-        azahar_async_shader_compilation:
-            submenu: GRAPHICS
-            prompt: ENABLE ASYNC SHADER COMPILATION
-            description: Compile shaders using background threads to avoid shader compilation stutter. May cause graphical glitches.
-            choices:
-                "Off": 0
-                "On":  1
-        azahar_custom_textures:
-            submenu: GRAPHICS
-            prompt: LOAD CUSTOM TEXTURES
-            description: Preloading is impossible from ES.
-            choices:
-                "Off":     0
-                "On":      1-normal
-                "Preload": 1-preload
-        azahar_is_new_3ds:
-            group: ADVANCED OPTIONS
-            prompt: NEW 3DS MODE
-            description: The New 3DS has a faster processor, ZL/ZR buttons and a C-stick.
-            choices:
-                "Off": 0
-                "On":  1
 hypseus-singe:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, use_guns]
   cfeatures:
         hypseus_api:
-            archs_include: [x86, x86_64, bcm2711, bcm2712, a3gen2, sm8250, sm8550, rk3588]
+            archs_include: [x86, x86_64, x86-64-v3, bcm2711, bcm2712, a3gen2, sm8250, sm8550, rk3588]
             prompt: GRAPHICS API
             description: Choose which graphics API library to use. Vulkan may not work on all hardware.
             choices:
@@ -8178,7 +8095,7 @@ dolphin:
                     description: Fix screen tearing. CPU heavy.
                     preset: switchauto
                 gfxbackend:
-                    archs_include: [x86, x86_64, bcm2711, bcm2712, a3gen2, sm8250, sm8550, rk3588]
+                    archs_include: [x86, x86_64, x86-64-v3, bcm2711, bcm2712, a3gen2, sm8250, sm8550, rk3588]
                     submenu: RENDERING
                     prompt:  GRAPHICS API
                     description: Choose which graphics API library to use.
@@ -8832,7 +8749,7 @@ duckstation:
         duckstation_gfxbackend:
             submenu: DISPLAY
             group: ADVANCED OPTIONS
-            archs_include: [x86, x86_64, bcm2711, bcm2712, a3gen2, sm8250, sm8550, rk3588]
+            archs_include: [x86, x86_64, x86-64-v3, bcm2711, bcm2712, a3gen2, sm8250, sm8550, rk3588]
             prompt: GRAPHICS API
             description: Choose which graphics API library to use.
             choices:
@@ -10075,7 +9992,7 @@ ppsspp:
   cfeatures:
         gfxbackend:
             group: DRIVERS
-            archs_include: [x86, x86_64, bcm2711, bcm2712, a3gen2, sm8250, sm8550, rk3588]
+            archs_include: [x86, x86_64, x86-64-v3, bcm2711, bcm2712, a3gen2, sm8250, sm8550, rk3588]
             prompt: GRAPHICS API
             description: Choose which graphics API library to use.
             choices:
@@ -10952,7 +10869,7 @@ mame:
                 "Off (Default)": 0
                 "On":            1
         bgfxbackend:
-            archs_include: [x86, x86_64, bcm2711, bcm2712, a3gen2, sm8250, sm8550, rk3588]
+            archs_include: [x86, x86_64, x86-64-v3, bcm2711, bcm2712, a3gen2, sm8250, sm8550, rk3588]
             prompt:      BGFX GRAPHICS API
             description: Depends on video mode being set to BGFX.
             choices:
@@ -14171,7 +14088,7 @@ vpinball:
     vpinball_inverseplayfieldandb2s:
       group: WINDOWS POSITIONS
       prompt: INVERSE PLAYFIELD AND B2S
-      description: Inverse the Backglass and the Playfield. Usefull to use the Backglass as main screen for other emulators.
+      description: Inverse the Backglass and the Playfield. Useful to use the Backglass as main screen for other emulators.
       choices:
         "On": 1
         "Off": 0
@@ -14262,7 +14179,11 @@ vpinball:
       group: EXPERT SETTINGS
       description: This should not be necessary, unless you are not using the default pad2key mapping.
       preset: switchauto
-
+    vpinball_pbw:
+      group: EXPERT SETTINGS
+      prompt: ACCELEROMETER
+      description: Internal accelerometer. Disable if you experience random tilts or unexpected ball behaviour.
+      preset: switchauto
 witchaven:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -15115,14 +15036,14 @@ openjkdf2:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
-    jkdf2_difficulty:    
+    jkdf2_difficulty:
       prompt: DIFFICULTY
       description: Choose difficulty for the game.
       choices:
         "Easy":   0
         "Medium": 1
         "Hard":   2
-    jkdf2_scenes:    
+    jkdf2_scenes:
       submenu: GENERAL
       prompt: CUTSCENES
       choices:
@@ -15195,14 +15116,14 @@ openjkdf2:
       submenu: GAMEPLAY
       prompt: CROSSHAIR SIZE
       description: Set the crosshair size.
-      preset: slider
-      preset_parameters: 0.0 2.00 .20 1.00
+      preset: sliderauto
+      preset_parameters: 0.0 2.00 .20
     jkdf2_cross_line:
       submenu: GAMEPLAY
       prompt: CROSSHAIR LINE THICKNESS
       description: Set the crosshair line thickness.
-      preset: slider
-      preset_parameters: 1.00 3.00 .20 1.00
+      preset: sliderauto
+      preset_parameters: 1.00 3.00 .20
     jkdf2_pickup:
       submenu: WEAPON PICKUP
       prompt: PICKUP WEAPON
@@ -15256,8 +15177,8 @@ openjkdf2:
       submenu: DISPLAY
       prompt: FIELD OF VIEW
       description: Set the field of view.
-      preset: slider
-      preset_parameters: 40 170 5 90
+      preset: sliderauto
+      preset_parameters: 40 170 5
     jkdf2_fov_vert:
       submenu: DISPLAY
       prompt: FOV VERTICAL
@@ -15276,8 +15197,8 @@ openjkdf2:
       submenu: DISPLAY
       prompt: FPS LIMIT
       description: Set the fps limit.
-      preset: slider
-      preset_parameters: 0 360 10 0
+      preset: sliderauto
+      preset_parameters: 0 360 10
     jkdf2_vsync:
       submenu: DISPLAY
       prompt: VSYNC
@@ -15316,14 +15237,14 @@ openjkdf2:
       submenu: DISPLAY
       prompt: GAMMA
       description: Choose the amount of Gamma which changes how light or dark mid-range tones appear.
-      preset: slider
-      preset_parameters: 0.40 3.00 .20 1.00
+      preset: sliderauto
+      preset_parameters: 0.40 3.00 .20
     jkdf2_hud_scale:
       submenu: DISPLAY
       prompt: HUD SCALE
       description: Choose the size of the heads-up display.
-      preset: slider
-      preset_parameters: 0.40 3.00 .20 2.00
+      preset: sliderauto
+      preset_parameters: 0.40 3.00 .20
     jkdf2_ssaa_multiple:
       submenu: DISPLAY
       prompt: SSAA Multiplier
@@ -15401,8 +15322,8 @@ openjk:
       submenu: VIDEO
       prompt: BRIGHTNESS
       description: Change the game's brightness.
-      preset: slider
-      preset_parameters: 0.50 3.00 .10 1.00
+      preset: sliderauto
+      preset_parameters: 0.50 3.00 .10
     openjk_shadows:
       submenu: VIDEO
       prompt: SHADOWS
@@ -15439,8 +15360,8 @@ openjk:
       submenu: VIDEO
       prompt: ANISTROPIC FILTER
       description: Improves clarity of distant textures.
-      preset: slider
-      preset_parameters: 0.00 16.00 .50 16.00
+      preset: sliderauto
+      preset_parameters: 0.00 16.00 .50
     openjk_crosshair:
       prompt: DRAW CROSSHAIR
       choices:
@@ -15500,3 +15421,87 @@ openjk:
         "None":           0
         "In Cinematics":  2
         "All voiceovers": 1
+
+azahar:
+  shared: [powermode, tdp, videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+        azahar_screen_layout:
+            prompt: SCREEN LAYOUT
+            description: Arrange the dual screen layout. Separate windows can be changed with Hotkey+R2.
+            choices:
+                "Top Only":              1-false
+                "Bottom Only":           1-true
+                "Large Top":             2-false
+                "Large Bottom":          2-true
+                "Left/Right":            3-false
+                "Right/Left":            3-true
+                "Separate Windows":      4-false
+                "Hybrid Screen Top":     5-false
+                "Hybrid Screen Bottom":  5-true
+        azahar_resolution_factor:
+            submenu: GRAPHICS
+            prompt: RENDERING RESOLUTION
+            description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
+            choices:
+                "1x (400x240)":    1
+                "2x (800x480)":    2
+                "3x (1200x720)":   3
+                "4x (1600x960)":   4
+                "5x (2000x1200)":  5
+                "6x (2400x1440)":  6
+                "7x (2800x1680)":  7
+                "8x (3200x1920)":  8
+                "9x (3600x2160)":  9
+                "10x (4000x2400)": 10
+        azahar_graphics_api:
+            archs_include: [x86, x86_64, x86-64-v3, bcm2711, bcm2712, a3gen2, sm8250, sm8550, rk3588]
+            submenu: GRAPHICS
+            prompt: GRAPHICS API
+            description: Choose which graphics API library to use.
+            choices:
+                "Software":         0
+                "OpenGL (Default)": 1
+                "Vulkan":           2
+        azahar_use_vsync_new:
+            submenu: GRAPHICS
+            prompt: VSYNC
+            description: Fix screen tearing. CPU heavy.
+            choices:
+                "Off": 0
+                "On":  1
+        azahar_use_frame_limit:
+            submenu: GRAPHICS
+            prompt: FRAME LIMIT
+            description: Off will help some games, others will run too fast.
+            choices:
+                "Off": 0
+                "On":  1
+        azahar_use_disk_shader_cache:
+            submenu: GRAPHICS
+            prompt: DISK SHADER CACHE
+            description: Reduce stutter that happens when compiling shaders.
+            choices:
+                "Off": 0
+                "On":  1
+        azahar_async_shader_compilation:
+            submenu: GRAPHICS
+            prompt: ENABLE ASYNC SHADER COMPILATION
+            description: Compile shaders using background threads to avoid shader compilation stutter. May cause graphical glitches.
+            choices:
+                "Off": 0
+                "On":  1
+        azahar_custom_textures:
+            submenu: GRAPHICS
+            prompt: LOAD CUSTOM TEXTURES
+            description: Preloading is impossible from ES.
+            choices:
+                "Off":     0
+                "On":      1-normal
+                "Preload": 1-preload
+        azahar_is_new_3ds:
+            group: ADVANCED OPTIONS
+            prompt: NEW 3DS MODE
+            description: The New 3DS has a faster processor, ZL/ZR buttons and a C-stick.
+            choices:
+                "Off": 0
+                "On":  1

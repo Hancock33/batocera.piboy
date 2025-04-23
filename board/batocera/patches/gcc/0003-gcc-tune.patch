@@ -1,0 +1,451 @@
+Simplify memcpy and memset inline strategies to avoid branches for
+-mtune=generic:
+
+1. With MOVE_RATIO and CLEAR_RATIO == 17, GCC will use integer/vector
+   load and store for up to 16 * 16 (256) bytes when the data size is
+   fixed and known.
+2. Inline only if data size is known to be <= 256.
+   a. Use "rep movsb/stosb" with simple code sequence if the data size
+      is a constant.
+   b. Use loop if data size is not a constant.
+3. Use memcpy/memset library function if data size is unknown or > 256.
+
+Here is the performance data from March 2021 when the original patch was
+submitted.  With -march=x86-64 -O2,
+
+1. On Ice Lake processor,
+
+Performance impacts on SPEC CPU 2017:
+
+500.perlbench_r  0.51%
+502.gcc_r        0.55%
+505.mcf_r        0.38%
+520.omnetpp_r   -0.74%
+523.xalancbmk_r -0.35%
+525.x264_r       2.99%
+531.deepsjeng_r -0.17%
+541.leela_r     -0.98%
+548.exchange2_r  0.89%
+557.xz_r         0.70%
+Geomean          0.37%
+
+503.bwaves_r     0.04%
+507.cactuBSSN_r -0.01%
+508.namd_r      -0.45%
+510.parest_r    -0.09%
+511.povray_r    -1.37%
+519.lbm_r        0.00%
+521.wrf_r       -2.56%
+526.blender_r   -0.01%
+527.cam4_r      -0.05%
+538.imagick_r    0.36%
+544.nab_r        0.08%
+549.fotonik3d_r -0.06%
+554.roms_r       0.05%
+Geomean         -0.34%
+
+Significant impacts on eembc benchmarks:
+
+eembc/nnet_test      14.85%
+eembc/mp2decoddata2  13.57%
+
+2. On Cascadelake processor,
+
+Performance impacts on SPEC CPU 2017:
+
+500.perlbench_r -0.02%
+502.gcc_r        0.10%
+505.mcf_r       -1.14%
+520.omnetpp_r   -0.22%
+523.xalancbmk_r  0.21%
+525.x264_r       0.94%
+531.deepsjeng_r -0.37%
+541.leela_r     -0.46%
+548.exchange2_r -0.40%
+557.xz_r         0.60%
+Geomean         -0.08%
+
+503.bwaves_r    -0.50%
+507.cactuBSSN_r  0.05%
+508.namd_r      -0.02%
+510.parest_r     0.09%
+511.povray_r    -1.35%
+519.lbm_r        0.00%
+521.wrf_r       -0.03%
+526.blender_r   -0.83%
+527.cam4_r       1.23%
+538.imagick_r    0.97%
+544.nab_r       -0.02%
+549.fotonik3d_r -0.12%
+554.roms_r       0.55%
+Geomean          0.00%
+
+Significant impacts on eembc benchmarks:
+
+eembc/nnet_test      9.90%
+eembc/mp2decoddata2  16.42%
+eembc/textv2data3   -4.86%
+eembc/qos            12.90%
+
+3. On Znver3 processor,
+
+Performance impacts on SPEC CPU 2017:
+
+500.perlbench_r -0.96%
+502.gcc_r       -1.06%
+505.mcf_r       -0.01%
+520.omnetpp_r   -1.45%
+523.xalancbmk_r  2.89%
+525.x264_r       4.98%
+531.deepsjeng_r  0.18%
+541.leela_r     -1.54%
+548.exchange2_r -1.25%
+557.xz_r        -0.01%
+Geomean          0.16%
+
+503.bwaves_r     0.04%
+507.cactuBSSN_r  0.85%
+508.namd_r      -0.13%
+510.parest_r     0.39%
+511.povray_r     0.00%
+519.lbm_r        0.00%
+521.wrf_r        0.28%
+526.blender_r   -0.10%
+527.cam4_r      -0.58%
+538.imagick_r    0.69%
+544.nab_r       -0.04%
+549.fotonik3d_r -0.04%
+554.roms_r       0.40%
+Geomean          0.15%
+
+Significant impacts on eembc benchmarks:
+
+eembc/aifftr01       13.95%
+eembc/idctrn01       8.41%
+eembc/nnet_test      30.25%
+eembc/mp2decoddata2  5.05%
+eembc/textv2data3    6.43%
+eembc/qos           -5.79%
+
+Code size differences are:
+
+SPEC CPU 2017 with -march=x86-64 -O2
+
+                    before         after           diff
+500.perlbench_r     2226178        2226866         0.031%
+502.gcc_r           9250727        9253711         0.032%
+505.mcf_r           21653          21730           0.356%
+520.omnetpp_r       2131839        2133259         0.067%
+523.xalancbmk_r     4695615        4696039         0.009%
+525.x264_r          490651         490659          0.002%
+531.deepsjeng_r     85832          86056           0.261%
+541.leela_r         169005         165021         -2.357%
+548.exchange2_r     70189          69901          -0.410%
+557.xz_r            196314         197506          0.607%
+503.bwaves_r        37430          37878           1.197%
+507.cactuBSSN_r     3550438        3550622         0.005%
+508.namd_r          880455         880519          0.007%
+510.parest_r        8561798        8586781         0.292%
+511.povray_r        1058268        1058068        -0.019%
+519.lbm_r           16415          16415           0.000%
+521.wrf_r           23197011       23202227        0.022%
+526.blender_r       10408951       10422175        0.127%
+527.cam4_r          18979378       18983410        0.021%
+538.imagick_r       1999052        1998780        -0.014%
+544.nab_r           191416         191688          0.142%
+549.fotonik3d_r     384499         384507          0.002%
+554.roms_r          853869         854277          0.048%
+
+SPEC CPU 2017 with -march=x86-64 -Ofast -funroll-loops
+
+                    before         after           diff
+500.perlbench_r     2940860        2946588         0.195%
+502.gcc_r           11577095       11581975        0.042%
+505.mcf_r           64469          64546           0.119%
+520.omnetpp_r       2549149        2550669         0.060%
+523.xalancbmk_r     6992956        6993236         0.004%
+525.x264_r          836325         837125          0.096%
+531.deepsjeng_r     137280         137464          0.134%
+541.leela_r         277370         268817         -3.084%
+548.exchange2_r     298361         297569         -0.265%
+557.xz_r            244154         244994          0.344%
+503.bwaves_r        55414          55414           0.000%
+507.cactuBSSN_r     7902089        7902417         0.004%
+508.namd_r          1703404        1703468         0.004%
+510.parest_r        13184149       13195957        0.090%
+511.povray_r        1403980        1403612        -0.026%
+519.lbm_r           18284          18284           0.000%
+521.wrf_r           35707507       35724635        0.048%
+526.blender_r       14098264       14113040        0.105%
+527.cam4_r          23818819       23887715        0.289%
+538.imagick_r       3131670        3131206        -0.015%
+544.nab_r           322493         323597          0.342%
+549.fotonik3d_r     778635         778643          0.001%
+554.roms_r          1977171        1981707         0.229%
+
+gcc/
+
+	PR target/102294
+	PR target/119596
+	* config/i386/x86-tune-costs.h (generic_memcpy): Updated.
+	(generic_memset): Likewise.
+	(generic_cost): Change CLEAR_RATIO to 17.
+	* config/i386/x86-tune.def (X86_TUNE_PREFER_KNOWN_REP_MOVSB_STOSB):
+	Add m_GENERIC.
+
+gcc/testsuite/
+
+	PR target/102294
+	PR target/119596
+	* gcc.target/i386/auto-init-padding-3.c: Expect XMM stores.
+	* gcc.target/i386/auto-init-padding-9.c: Likewise.
+	* gcc.target/i386/memcpy-strategy-12.c: New test.
+	* gcc.target/i386/memcpy-strategy-13.c: Likewise.
+	* gcc.target/i386/memset-strategy-10.c: Likewise.
+	* gcc.target/i386/memset-strategy-11.c: Likewise.
+	* gcc.target/i386/memset-strategy-12.c: Likewise.
+	* gcc.target/i386/mvc17.c: Fail with "rep mov"
+	* gcc.target/i386/shrink_wrap_1.c: Also pass
+	-mmemset-strategy=rep_8byte:-1:align.
+	* gcc.target/i386/sw-1.c: Also pass -mstringop-strategy=rep_byte.
+
+Signed-off-by: H.J. Lu <hjl.tools@gmail.com>
+---
+ gcc/config/i386/x86-tune-costs.h              | 31 ++++++++++++-------
+ gcc/config/i386/x86-tune.def                  |  2 +-
+ .../gcc.target/i386/auto-init-padding-3.c     |  7 ++---
+ .../gcc.target/i386/auto-init-padding-9.c     |  8 ++---
+ .../gcc.target/i386/memcpy-strategy-12.c      |  9 ++++++
+ .../gcc.target/i386/memcpy-strategy-13.c      | 11 +++++++
+ .../gcc.target/i386/memset-strategy-10.c      | 11 +++++++
+ .../gcc.target/i386/memset-strategy-11.c      |  9 ++++++
+ .../gcc.target/i386/memset-strategy-12.c      | 15 +++++++++
+ gcc/testsuite/gcc.target/i386/mvc17.c         |  2 +-
+ gcc/testsuite/gcc.target/i386/shrink_wrap_1.c |  2 +-
+ gcc/testsuite/gcc.target/i386/sw-1.c          |  2 +-
+ 12 files changed, 84 insertions(+), 25 deletions(-)
+ create mode 100644 gcc/testsuite/gcc.target/i386/memcpy-strategy-12.c
+ create mode 100644 gcc/testsuite/gcc.target/i386/memcpy-strategy-13.c
+ create mode 100644 gcc/testsuite/gcc.target/i386/memset-strategy-10.c
+ create mode 100644 gcc/testsuite/gcc.target/i386/memset-strategy-11.c
+ create mode 100644 gcc/testsuite/gcc.target/i386/memset-strategy-12.c
+
+diff --git a/gcc/config/i386/x86-tune-costs.h b/gcc/config/i386/x86-tune-costs.h
+index 7c8cb738d7c..7d749b5108e 100644
+--- a/gcc/config/i386/x86-tune-costs.h
++++ b/gcc/config/i386/x86-tune-costs.h
+@@ -3814,19 +3814,28 @@ struct processor_costs shijidadao_cost = {
+ 
+ 
+ 
+-/* Generic should produce code tuned for Core-i7 (and newer chips)
+-   and btver1 (and newer chips).  */
++/* Generic should produce code tuned for Haswell (and newer chips)
++   and znver1 (and newer chips).  NB: rep_prefix_1_byte is used only
++   for known size.  */
+ 
+ static stringop_algs generic_memcpy[2] = {
+-  {libcall, {{32, loop, false}, {8192, rep_prefix_4_byte, false},
+-             {-1, libcall, false}}},
+-  {libcall, {{32, loop, false}, {8192, rep_prefix_8_byte, false},
+-             {-1, libcall, false}}}};
++  {libcall,
++   {{256, rep_prefix_1_byte, true},
++    {256, loop, false},
++    {-1, libcall, false}}},
++  {libcall,
++   {{256, rep_prefix_1_byte, true},
++    {256, loop, false},
++    {-1, libcall, false}}}};
+ static stringop_algs generic_memset[2] = {
+-  {libcall, {{32, loop, false}, {8192, rep_prefix_4_byte, false},
+-             {-1, libcall, false}}},
+-  {libcall, {{32, loop, false}, {8192, rep_prefix_8_byte, false},
+-             {-1, libcall, false}}}};
++  {libcall,
++   {{256, rep_prefix_1_byte, true},
++    {256, loop, false},
++    {-1, libcall, false}}},
++  {libcall,
++   {{256, rep_prefix_1_byte, true},
++    {256, loop, false},
++    {-1, libcall, false}}}};
+ static const
+ struct processor_costs generic_cost = {
+   {
+@@ -3883,7 +3892,7 @@ struct processor_costs generic_cost = {
+   COSTS_N_INSNS (1),			/* cost of movzx */
+   8,					/* "large" insn */
+   17,					/* MOVE_RATIO */
+-  6,					/* CLEAR_RATIO */
++  17,					/* CLEAR_RATIO */
+   {6, 6, 6},				/* cost of loading integer registers
+ 					   in QImode, HImode and SImode.
+ 					   Relative to reg-reg move (2).  */
+diff --git a/gcc/config/i386/x86-tune.def b/gcc/config/i386/x86-tune.def
+index c857e769b60..c3635c71d06 100644
+--- a/gcc/config/i386/x86-tune.def
++++ b/gcc/config/i386/x86-tune.def
+@@ -329,7 +329,7 @@ DEF_TUNE (X86_TUNE_SINGLE_STRINGOP, "single_stringop", m_386 | m_P4_NOCONA)
+ DEF_TUNE (X86_TUNE_PREFER_KNOWN_REP_MOVSB_STOSB,
+ 	  "prefer_known_rep_movsb_stosb",
+ 	  m_SKYLAKE | m_CORE_HYBRID | m_CORE_ATOM | m_TREMONT | m_CORE_AVX512
+-	  | m_ZHAOXIN)
++	  | m_ZHAOXIN | m_GENERIC)
+ 
+ /* X86_TUNE_MISALIGNED_MOVE_STRING_PRO_EPILOGUES: Enable generation of
+    compact prologues and epilogues by issuing a misaligned moves.  This
+diff --git a/gcc/testsuite/gcc.target/i386/auto-init-padding-3.c b/gcc/testsuite/gcc.target/i386/auto-init-padding-3.c
+index 7c20a28508f..a12069a039d 100644
+--- a/gcc/testsuite/gcc.target/i386/auto-init-padding-3.c
++++ b/gcc/testsuite/gcc.target/i386/auto-init-padding-3.c
+@@ -23,8 +23,5 @@ int foo ()
+   return var.four.internal1;
+ }
+ 
+-/* { dg-final { scan-assembler "movl\t\\\$0," } } */
+-/* { dg-final { scan-assembler "movl\t\\\$16," { target { ! ia32 } } } } */
+-/* { dg-final { scan-assembler "rep stosq" { target { ! ia32 } } } } */
+-/* { dg-final { scan-assembler "movl\t\\\$32," { target ia32 } } } */
+-/* { dg-final { scan-assembler "rep stosl" { target ia32 } } } */
++/* { dg-final { scan-assembler-times "pxor\t%xmm0, %xmm0" 1 } } */
++/* { dg-final { scan-assembler-times "movaps\t%xmm0, " 8 } } */
+diff --git a/gcc/testsuite/gcc.target/i386/auto-init-padding-9.c b/gcc/testsuite/gcc.target/i386/auto-init-padding-9.c
+index a87b68b255b..404b53c5e7a 100644
+--- a/gcc/testsuite/gcc.target/i386/auto-init-padding-9.c
++++ b/gcc/testsuite/gcc.target/i386/auto-init-padding-9.c
+@@ -18,8 +18,6 @@ int foo ()
+   return var[2].four;
+ }
+ 
+-/* { dg-final { scan-assembler "movl\t\\\$0," } } */
+-/* { dg-final { scan-assembler "movl\t\\\$20," { target { ! ia32 } } } } */
+-/* { dg-final { scan-assembler "rep stosq" { target { ! ia32 } } } } */
+-/* { dg-final { scan-assembler "movl\t\\\$40," { target ia32} } } */
+-/* { dg-final { scan-assembler "rep stosl" { target ia32 } } } */
++/* { dg-final { scan-assembler-times "pxor\t%xmm0, %xmm0" 1 } } */
++/* { dg-final { scan-assembler-times "movaps\t%xmm0, " 10 { target { ! ia32 } } } } */
++/* { dg-final { scan-assembler-times "movups\t%xmm0, " 10 { target ia32 } } } */
+diff --git a/gcc/testsuite/gcc.target/i386/memcpy-strategy-12.c b/gcc/testsuite/gcc.target/i386/memcpy-strategy-12.c
+new file mode 100644
+index 00000000000..e9998b70ab2
+--- /dev/null
++++ b/gcc/testsuite/gcc.target/i386/memcpy-strategy-12.c
+@@ -0,0 +1,9 @@
++/* { dg-do compile } */
++/* { dg-options "-O2 -mtune=generic -mno-sse" } */
++/* { dg-final { scan-assembler "rep movsb" } } */
++
++void
++foo (char *dest, char *src)
++{
++  __builtin_memcpy (dest, src, 249);
++}
+diff --git a/gcc/testsuite/gcc.target/i386/memcpy-strategy-13.c b/gcc/testsuite/gcc.target/i386/memcpy-strategy-13.c
+new file mode 100644
+index 00000000000..109bd675a51
+--- /dev/null
++++ b/gcc/testsuite/gcc.target/i386/memcpy-strategy-13.c
+@@ -0,0 +1,11 @@
++/* { dg-do compile } */
++/* { dg-options "-O2 -mtune=generic -mno-avx" } */
++/* { dg-final { scan-assembler "jmp\tmemcpy" { target { ! ia32 } } } } */
++/* { dg-final { scan-assembler "call\tmemcpy" { target ia32 } } } */
++/* { dg-final { scan-assembler-not "rep movsb" } } */
++
++void
++foo (char *dest, char *src)
++{
++  __builtin_memcpy (dest, src, 257);
++}
+diff --git a/gcc/testsuite/gcc.target/i386/memset-strategy-10.c b/gcc/testsuite/gcc.target/i386/memset-strategy-10.c
+new file mode 100644
+index 00000000000..685d6e5a5c2
+--- /dev/null
++++ b/gcc/testsuite/gcc.target/i386/memset-strategy-10.c
+@@ -0,0 +1,11 @@
++/* { dg-do compile } */
++/* { dg-options "-O2 -mtune=generic -mno-avx" } */
++/* { dg-final { scan-assembler "jmp\tmemset" { target { ! ia32 } } } } */
++/* { dg-final { scan-assembler "call\tmemset" { target ia32 } } } */
++/* { dg-final { scan-assembler-not "rep stosb" } } */
++
++void
++foo (char *dest)
++{
++  __builtin_memset (dest, 0, 257);
++}
+diff --git a/gcc/testsuite/gcc.target/i386/memset-strategy-11.c b/gcc/testsuite/gcc.target/i386/memset-strategy-11.c
+new file mode 100644
+index 00000000000..61ee463a8cf
+--- /dev/null
++++ b/gcc/testsuite/gcc.target/i386/memset-strategy-11.c
+@@ -0,0 +1,9 @@
++/* { dg-do compile } */
++/* { dg-options "-O2 -mtune=generic -mno-sse" } */
++/* { dg-final { scan-assembler "rep stosb" } } */
++
++void
++foo (char *dest)
++{
++  __builtin_memset (dest, 0, 253);
++}
+diff --git a/gcc/testsuite/gcc.target/i386/memset-strategy-12.c b/gcc/testsuite/gcc.target/i386/memset-strategy-12.c
+new file mode 100644
+index 00000000000..c53bce52e17
+--- /dev/null
++++ b/gcc/testsuite/gcc.target/i386/memset-strategy-12.c
+@@ -0,0 +1,15 @@
++/* { dg-do compile } */
++/* { dg-options "-O2 -mtune=generic -mno-sse" } */
++/* { dg-final { scan-assembler-not "jmp\tmemset" } } */
++/* { dg-final { scan-assembler-not "rep stosb" } } */
++
++struct foo
++{
++  char buf[41];
++};
++
++void
++zero(struct foo *f)
++{
++  __builtin_memset(f->buf, 0, sizeof(f->buf));
++}
+diff --git a/gcc/testsuite/gcc.target/i386/mvc17.c b/gcc/testsuite/gcc.target/i386/mvc17.c
+index 8b83c1aecb3..dbf35ac36dc 100644
+--- a/gcc/testsuite/gcc.target/i386/mvc17.c
++++ b/gcc/testsuite/gcc.target/i386/mvc17.c
+@@ -1,7 +1,7 @@
+ /* { dg-do compile } */
+ /* { dg-require-ifunc "" } */
+ /* { dg-options "-O2 -march=x86-64" } */
+-/* { dg-final { scan-assembler-times "rep mov" 1 } } */
++/* { dg-final { scan-assembler-not "rep mov" } } */
+ 
+ __attribute__((target_clones("default","arch=icelake-server")))
+ void
+diff --git a/gcc/testsuite/gcc.target/i386/shrink_wrap_1.c b/gcc/testsuite/gcc.target/i386/shrink_wrap_1.c
+index 4b286671e90..30b82ab695a 100644
+--- a/gcc/testsuite/gcc.target/i386/shrink_wrap_1.c
++++ b/gcc/testsuite/gcc.target/i386/shrink_wrap_1.c
+@@ -1,5 +1,5 @@
+ /* { dg-do compile { target { ! ia32 } } } */
+-/* { dg-options "-O2 -fdump-rtl-pro_and_epilogue -fno-stack-protector" } */
++/* { dg-options "-O2 -mmemset-strategy=rep_8byte:-1:align -fdump-rtl-pro_and_epilogue -fno-stack-protector" } */
+ 
+ enum machine_mode
+ {
+diff --git a/gcc/testsuite/gcc.target/i386/sw-1.c b/gcc/testsuite/gcc.target/i386/sw-1.c
+index b0432279644..14db3cee206 100644
+--- a/gcc/testsuite/gcc.target/i386/sw-1.c
++++ b/gcc/testsuite/gcc.target/i386/sw-1.c
+@@ -1,5 +1,5 @@
+ /* { dg-do compile } */
+-/* { dg-options "-O2 -mtune=generic -fshrink-wrap -fdump-rtl-pro_and_epilogue -fno-stack-protector" } */
++/* { dg-options "-O2 -mtune=generic -mstringop-strategy=rep_byte -fshrink-wrap -fdump-rtl-pro_and_epilogue -fno-stack-protector" } */
+ /* { dg-additional-options "-mno-avx" { target ia32 } } */
+ /* { dg-skip-if "No shrink-wrapping preformed" { x86_64-*-mingw* } } */
+ 
+-- 
+2.49.0
+

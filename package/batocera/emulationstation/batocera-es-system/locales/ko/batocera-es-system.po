@@ -2190,6 +2190,11 @@ msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "절대 마우스 입력"
 
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "ACCELEROMETER"
+msgstr ""
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ACCURACY LEVEL"
@@ -10165,6 +10170,13 @@ msgctxt "game_options"
 msgid "Internal (variable fps)"
 msgstr ""
 
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"Internal accelerometer. Disable if you experience random tilts or unexpected "
+"ball behaviour."
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Interpreter (Slowest)"
@@ -10193,11 +10205,9 @@ msgstr "물품 목록"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
-"main screen for other emulators."
+"Inverse the Backglass and the Playfield. Useful to use the Backglass as main "
+"screen for other emulators."
 msgstr ""
-"백글라스와 플레이필드를 반전합니다. 다른 에뮬레이터의 메인 화면으로 백글라스"
-"를 사용하는 데 유용합니다."
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -19506,6 +19516,14 @@ msgstr "노란색/파란색"
 #~ msgstr ""
 #~ "디스크 이미지 파일을 읽기 위해 이미지 리더 카드를 설치합니다(Mac IIx만 해"
 #~ "당). 최소 4MB 램 크기를 권장합니다."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
+#~ "main screen for other emulators."
+#~ msgstr ""
+#~ "백글라스와 플레이필드를 반전합니다. 다른 에뮬레이터의 메인 화면으로 백글라"
+#~ "스를 사용하는 데 유용합니다."
 
 #~ msgctxt "game_options"
 #~ msgid "JUMP ON B"

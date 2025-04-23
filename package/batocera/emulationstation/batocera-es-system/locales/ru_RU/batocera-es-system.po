@@ -2189,6 +2189,11 @@ msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "АБСОЛЮТНЫЙ ВВОД МЫШИ"
 
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "ACCELEROMETER"
+msgstr ""
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ACCURACY LEVEL"
@@ -10208,6 +10213,13 @@ msgctxt "game_options"
 msgid "Internal (variable fps)"
 msgstr ""
 
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"Internal accelerometer. Disable if you experience random tilts or unexpected "
+"ball behaviour."
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Interpreter (Slowest)"
@@ -10236,11 +10248,9 @@ msgstr "Инвентарь"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
-"main screen for other emulators."
+"Inverse the Backglass and the Playfield. Useful to use the Backglass as main "
+"screen for other emulators."
 msgstr ""
-"Инверсия заднего стекла и игрового поля. Полезно использовать заднее стекло "
-"в качестве основного экрана для других эмуляторов."
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -20518,6 +20528,14 @@ msgstr "жёлтая/синяя"
 #~ msgctxt "game_options"
 #~ msgid "Interpreter only (experimental)"
 #~ msgstr "Только Интерпретатор (экспериментальный)"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
+#~ "main screen for other emulators."
+#~ msgstr ""
+#~ "Инверсия заднего стекла и игрового поля. Полезно использовать заднее "
+#~ "стекло в качестве основного экрана для других эмуляторов."
 
 #~ msgctxt "game_options"
 #~ msgid "Invert joystick on flight games."

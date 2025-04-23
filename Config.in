@@ -1,3 +1,4 @@
+
 menu "batocera.linux"
 
 menu "System"
@@ -131,6 +132,7 @@ menu "Audio"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/liblc3/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/libldac/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/libxmp/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/ossp/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/portmidi/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/rtmidi/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/wildmidi/Config.in"

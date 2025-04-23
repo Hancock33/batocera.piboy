@@ -2188,6 +2188,11 @@ msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
 msgstr "絶対座標マウス 入力"
 
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid "ACCELEROMETER"
+msgstr ""
+
 #. TRANSLATION: citron
 msgctxt "game_options"
 msgid "ACCURACY LEVEL"
@@ -10156,6 +10161,13 @@ msgctxt "game_options"
 msgid "Internal (variable fps)"
 msgstr ""
 
+#. TRANSLATION: vpinball
+msgctxt "game_options"
+msgid ""
+"Internal accelerometer. Disable if you experience random tilts or unexpected "
+"ball behaviour."
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Interpreter (Slowest)"
@@ -10184,11 +10196,9 @@ msgstr "インベントリ"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
-"main screen for other emulators."
+"Inverse the Backglass and the Playfield. Useful to use the Backglass as main "
+"screen for other emulators."
 msgstr ""
-"バックガラスとプレイフィールドを反転します。バックグラスを\n"
-"他のエミュレータのメイン画面として使用する場合に便利です"
 
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
@@ -19447,6 +19457,14 @@ msgstr "黄/青"
 #~ msgstr ""
 #~ "イメージ リーダー カードで、ディスクイメージに対応します (Mac IIx のみ) 最"
 #~ "小 4MBメモリを推奨"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
+#~ "main screen for other emulators."
+#~ msgstr ""
+#~ "バックガラスとプレイフィールドを反転します。バックグラスを\n"
+#~ "他のエミュレータのメイン画面として使用する場合に便利です"
 
 #~ msgctxt "game_options"
 #~ msgid "JUMP ON B"

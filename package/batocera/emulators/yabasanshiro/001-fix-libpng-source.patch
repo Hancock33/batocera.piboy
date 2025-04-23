@@ -1,5 +1,5 @@
 diff --git a/yabause/src/retro_arena/CMakeLists.txt b/yabause/src/retro_arena/CMakeLists.txt
-index d767aa81..f0a12d5b 100644
+index a4e05ad7..f74e8e8c 100644
 --- a/yabause/src/retro_arena/CMakeLists.txt
 +++ b/yabause/src/retro_arena/CMakeLists.txt
 @@ -22,7 +22,7 @@ add_subdirectory(pugixml)
