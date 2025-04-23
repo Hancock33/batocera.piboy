@@ -3,8 +3,8 @@
 # shaderc
 #
 ################################################################################
-# Version: Commits on Feb 27, 2025
-SHADERC_VERSION = v2025.1
+# Version: Commits on Apr 23, 2025
+SHADERC_VERSION = v2025.2
 SHADERC_SITE =  $(call github,google,shaderc,$(SHADERC_VERSION))
 SHADERC_DEPENDENCIES = vulkan-headers vulkan-loader glslang spirv-tools
 SHADERC_INSTALL_STAGING = YES

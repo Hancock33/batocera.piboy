@@ -1,6 +1,7 @@
 ﻿batocera-luajit.mk
 citron.mk
 duckstation-legacy.mk
+ecwolf.mk
 firmware-armbian.mk
 firmware-orangepi.mk
 firmware-radxa-rkwifibt.mk
@@ -19,4 +20,3 @@ wine-proton.mk
 wine-staging.mk
 wine-x86.mk
 xosd.mk
-ecwolf.mk
