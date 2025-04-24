@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-04-18 22:10+0000\n"
+"PO-Revision-Date: 2025-04-23 19:10+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -2193,7 +2193,7 @@ msgstr "ABSOLUTE MAUSEINGABE"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "ACCELEROMETER"
-msgstr ""
+msgstr "BESCHLEUNIGUNGSSENSOR"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -3325,6 +3325,8 @@ msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
 "Hotkey+R2."
 msgstr ""
+"Layout für Dual-Screen anpassen. Separate Fenster lassen sich mit Hotkey+R2 "
+"umschalten."
 
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
@@ -4052,7 +4054,7 @@ msgstr "Unten (Standard)"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Bottom Only"
-msgstr ""
+msgstr "Nur unten"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -5718,6 +5720,8 @@ msgid ""
 "Compile shaders using background threads to avoid shader compilation "
 "stutter. May cause graphical glitches."
 msgstr ""
+"Shader im Hintergrund kompilieren, um Ruckler zu vermeiden. Kann "
+"Grafikfehler verursachen."
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next, redream
 msgctxt "game_options"
@@ -6067,7 +6071,7 @@ msgstr "VERTEX-CACHE DEAKTIVIEREN"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
-msgstr ""
+msgstr "SHADER-ZWISCHENSPEICHER AUF FESTPLATTE"
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
@@ -6821,7 +6825,7 @@ msgstr "KI-ÜBERSETZUNGSSERVICE AKTIVIEREN"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "ENABLE ASYNC SHADER COMPILATION"
-msgstr ""
+msgstr "ASYNCHRONE SHADER-KOMPILIERUNG AKTIVIEREN"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -8174,7 +8178,7 @@ msgstr "FRAME DUPING (LEISTUNGSSTEIGERUNG)"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "FRAME LIMIT"
-msgstr ""
+msgstr "FPS-BEGRNZUNG"
 
 #. TRANSLATION: libretro/bennugd
 msgctxt "game_options"
@@ -9940,12 +9944,12 @@ msgstr "Hybrid + Bicubic"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
-msgstr ""
+msgstr "Hybrider Bildschirm unten"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
-msgstr ""
+msgstr "Hybrider Bildschirm oben"
 
 #. TRANSLATION: dolphin, libretro/dolphin
 msgctxt "game_options"
@@ -10872,12 +10876,12 @@ msgstr "Querformat"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Large Bottom"
-msgstr ""
+msgstr "Groß unten"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Large Top"
-msgstr ""
+msgstr "Groß oben"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -10942,7 +10946,7 @@ msgstr "Linker Stick"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Left/Right"
-msgstr ""
+msgstr "Links/Rechts"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -12113,7 +12117,7 @@ msgstr "NETZWERK TYP"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "NEW 3DS MODE"
-msgstr ""
+msgstr "NEW 3DS-MODUS"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12706,7 +12710,7 @@ msgstr "Aus ist sicherer, Ein für spezielle Spiele."
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Off will help some games, others will run too fast."
-msgstr ""
+msgstr "Aus hilft bei manchen Spielen, andere laufen dadurch zu schnell."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -13795,7 +13799,7 @@ msgstr "Preload benötigt mehr RAM."
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Preloading is impossible from ES."
-msgstr ""
+msgstr "Vorab-Laden über ES nicht möglich."
 
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
@@ -14230,7 +14234,7 @@ msgstr "Reduktion der Ladezeit zu Lasten der Genauigkeit."
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Reduce stutter that happens when compiling shaders."
-msgstr ""
+msgstr "Ruckler beim Shader-Kompilieren reduzieren."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -14476,7 +14480,7 @@ msgstr "Rechter Stick"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Right/Left"
-msgstr ""
+msgstr "Rechts/Links"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -15494,7 +15498,7 @@ msgstr "Empfindlichkeit bei Mausenutzung für Schieberegler."
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Separate Windows"
-msgstr ""
+msgstr "Separate Fenster"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -17133,6 +17137,7 @@ msgstr "Thailand"
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
 msgstr ""
+"Der New 3DS hat einen schnelleren Prozessor, ZL/ZR-Tasten und einen C-Stick."
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -17315,12 +17320,12 @@ msgstr "Oben"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Top Only"
-msgstr ""
+msgstr "Nur oben"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "Top only"
-msgstr "Nur Oberseite"
+msgstr "Nur oben"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -19711,6 +19716,14 @@ msgstr "gelb/blau"
 #~ msgstr ""
 #~ "Installieren Sie die Image-Reader-Karte, um Disk-Image-Dateien zu lesen "
 #~ "(nur Mac IIx). Mindestens 4 MB Speicherplatz empfohlen."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Internal accelerometer. Disable if you experience random tilts or "
+#~ "unexpected ball behavior."
+#~ msgstr ""
+#~ "Interner Beschleunigungssensor. Deaktivieren bei zufälligem Neigen oder "
+#~ "ungewöhnlichem Ballverhalten."
 
 #~ msgctxt "game_options"
 #~ msgid ""

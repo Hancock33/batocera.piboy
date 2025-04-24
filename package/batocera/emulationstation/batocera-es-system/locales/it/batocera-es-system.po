@@ -10220,8 +10220,6 @@ msgid ""
 "Internal accelerometer. Disable if you experience random tilts or unexpected "
 "ball behaviour."
 msgstr ""
-"Accelerometro interno. Disabilitalo se si verificano tilt improvvisi o "
-"comportamenti inaspettati della pallina."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
