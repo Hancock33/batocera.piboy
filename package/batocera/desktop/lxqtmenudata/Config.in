@@ -1,9 +1,0 @@
-config BR2_PACKAGE_LXQTMENUDATA
-	bool "lxqtmenudata"
-	select BR2_PACKAGE_BATOCERA_QT6
-	select BR2_PACKAGE_LXQTBT
-
-	help
-	  Library used to query system info and statistics
-
-	  https://lxqt-project.org/
