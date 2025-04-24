@@ -2193,7 +2193,7 @@ msgstr "ENTRADA ABSOLUTA DO RATO"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "ACCELEROMETER"
-msgstr ""
+msgstr "ACELERÓMETRO"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -3321,6 +3321,8 @@ msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
 "Hotkey+R2."
 msgstr ""
+"Organizar o layout de ecrã duplo. Janelas separadas podem ser alteradas com "
+"Hotkey+R2."
 
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
@@ -4051,7 +4053,7 @@ msgstr "Parte inferior (Padrão)"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Bottom Only"
-msgstr ""
+msgstr "Somente a parte inferior"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -5713,6 +5715,8 @@ msgid ""
 "Compile shaders using background threads to avoid shader compilation "
 "stutter. May cause graphical glitches."
 msgstr ""
+"Compilar shaders utilizando threads de segundo plano para evitar a compilação de shaders "
+"gaguejar. Pode causar falhas gráficas."
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next, redream
 msgctxt "game_options"
@@ -6064,7 +6068,7 @@ msgstr "DESATIVAR CACHE DE VÉRTICES"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
-msgstr ""
+msgstr "CACHE SHADER DE DISCO"
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
@@ -6817,7 +6821,7 @@ msgstr "ATIVAR O SERVIÇO DE TRADUÇÃO POR IA"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "ENABLE ASYNC SHADER COMPILATION"
-msgstr ""
+msgstr "ATIVAR COMPILAÇÃO DE SHADER ASSÍNCRONO"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -8146,7 +8150,7 @@ msgstr "DUPLICAÇÃO DE FRAMES (Acelerar)"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "FRAME LIMIT"
-msgstr ""
+msgstr "LIMITE DE FPS"
 
 #. TRANSLATION: libretro/bennugd
 msgctxt "game_options"
@@ -9898,12 +9902,12 @@ msgstr "Híbrido + Bicúbico"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
-msgstr ""
+msgstr "Ecrã Híbrido Inferior"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
-msgstr ""
+msgstr "Ecrã Híbrido Superior"
 
 #. TRANSLATION: dolphin, libretro/dolphin
 msgctxt "game_options"
@@ -10232,6 +10236,8 @@ msgid ""
 "Internal accelerometer. Disable if you experience random tilts or unexpected "
 "ball behaviour."
 msgstr ""
+"Acelerómetro interno. Desativar se experimentar inclinações aleatórias ou inesperadas "
+"comportamento da bola."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -10828,12 +10834,12 @@ msgstr "Paisagem"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Large Bottom"
-msgstr ""
+msgstr "Fundo Grande"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Large Top"
-msgstr ""
+msgstr "Topo grande"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -10898,7 +10904,7 @@ msgstr "Analógico esquerdo"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Left/Right"
-msgstr ""
+msgstr "Esquerda/Direita"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -12061,7 +12067,7 @@ msgstr "TIPO DE REDE"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "NEW 3DS MODE"
-msgstr ""
+msgstr "NOVO MODO 3DS"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12653,7 +12659,7 @@ msgstr "Desligado é mais seguro, Ativado para jogos específicos."
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Off will help some games, others will run too fast."
-msgstr ""
+msgstr "Desligado ajudará alguns jogos, outros correrão muito rápido."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -13738,7 +13744,7 @@ msgstr "Pré-carregar requer mais memória RAM."
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Preloading is impossible from ES."
-msgstr ""
+msgstr "O pré-carregamento é impossível no ES."
 
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
@@ -14173,7 +14179,7 @@ msgstr "Reduz o tempo de carregamento a custo de fidelidade."
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Reduce stutter that happens when compiling shaders."
-msgstr ""
+msgstr "Reduza o ruído que ocorre ao compilar shaders."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -14420,7 +14426,7 @@ msgstr "Analógico direito"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Right/Left"
-msgstr ""
+msgstr "Direita/Esquerda"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -15435,7 +15441,7 @@ msgstr "Sensibilidade ao utilizar o rato como paddle."
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Separate Windows"
-msgstr ""
+msgstr "Janelas Separadas"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -17059,7 +17065,7 @@ msgstr "Tailândia"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
-msgstr ""
+msgstr "A nova 3DS tem um processador mais rápido, botões ZL/ZR e um C-stick."
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -17242,7 +17248,7 @@ msgstr "Topo"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Top Only"
-msgstr ""
+msgstr "Somente o Topo"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
