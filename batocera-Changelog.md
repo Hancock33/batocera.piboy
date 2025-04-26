@@ -76,7 +76,7 @@
 - BigPEmu to v118
 - Cemu to 2.6
 - DevilutionX to 1.5.4
-- Dolphin-Emu to 2412-268
+- Dolphin-Emu to 2503a-328
 - Dosbox Staging to v0.82.0
 - Dosbox-X to v2025.02.01
 - DXX-Rebirth to 12th of Jan build
@@ -129,7 +129,7 @@
 - Kodi to 21.2
 - LibDRM to 2.4.124
 - Linux Firmware to 20250410
-- Linux Kernel to 6.14.2
+- Linux Kernel to 6.14.3
 - LLVM to 19.1.7
 - Mesa3D to 25.0.4
 - MPV to 0.40.0
