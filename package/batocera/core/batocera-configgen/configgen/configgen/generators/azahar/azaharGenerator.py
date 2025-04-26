@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import glob
 import logging
 from os import environ
 from typing import TYPE_CHECKING
@@ -33,6 +34,10 @@ class AzaharGenerator(Generator):
     # Main entry of the module
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         AzaharGenerator.writeAZAHARConfig(CONFIGS / "azaharplus-emu" / "qt-config.ini", system, playersControllers)
+
+        if "squashfs" in str(rom):
+            romsInDir = glob.glob(glob.escape(rom) + '/*')
+            rom = romsInDir[0]
 
         commandArray = ['/usr/bin/azahar', rom]
 
