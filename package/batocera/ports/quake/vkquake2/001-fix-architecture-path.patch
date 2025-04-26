@@ -1,6 +1,8 @@
+diff --git a/linux/Makefile b/linux/Makefile
+index cd328d3..71604e2 100644
 --- a/linux/Makefile
 +++ b/linux/Makefile
-@@ -18,9 +18,9 @@
+@@ -18,9 +18,9 @@ else
  GLIBC=
  endif
  
@@ -12,3 +14,28 @@
    ARCH=x64
    RPMARCH=i386
  else ifeq ($(KERNEL_ARCH),amd64)
+@@ -75,15 +75,15 @@ EGCS=/usr/local/egcs-1.1.2/bin/gcc
+ CC=gcc
+ BASE_CFLAGS=-I/usr/local/include -Dstricmp=strcasecmp -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-result -Wno-format-overflow
+ 
+-ifeq ($(ARCH),axp)
+-RELEASE_CFLAGS=$(BASE_CFLAGS) -DNDEBUG -O3 -funroll-loops \
+-	-fomit-frame-pointer -fexpensive-optimizations
+-else ifeq ($(ARCH),e2k)
+-RELEASE_CFLAGS=$(BASE_CFLAGS) -DNDEBUG -O3 -ffast
+-else
+-RELEASE_CFLAGS=$(BASE_CFLAGS) -DNDEBUG -O3 -funroll-loops \
+-	-fomit-frame-pointer -fexpensive-optimizations
+-endif
++#ifeq ($(ARCH),axp)
++#RELEASE_CFLAGS=$(BASE_CFLAGS) -DNDEBUG -O3 -funroll-loops \
++#	-fomit-frame-pointer -fexpensive-optimizations
++#else ifeq ($(ARCH),e2k)
++#RELEASE_CFLAGS=$(BASE_CFLAGS) -DNDEBUG -O3 -ffast
++#else
++RELEASE_CFLAGS=$(BASE_CFLAGS) #-DNDEBUG -O3 -funroll-loops \
++#	-fomit-frame-pointer -fexpensive-optimizations
++#endif
+ 
+ DEBUG_CFLAGS=$(BASE_CFLAGS) -g -D_DEBUG
+ LDFLAGS=-L/usr/local/lib -ldl -lm -lasound -lpthread

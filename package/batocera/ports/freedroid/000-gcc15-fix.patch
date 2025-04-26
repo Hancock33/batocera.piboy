@@ -1,0 +1,13 @@
+diff --git a/src/struct.h b/src/struct.h
+index e5b24f14..125bea7c 100644
+--- a/src/struct.h
++++ b/src/struct.h
+@@ -37,7 +37,7 @@ typedef unsigned word;
+ #define _WORD
+ #endif
+ #ifndef _BOOL
+-typedef char bool;
++#include <stdbool.h>
+ #define _BOOL
+ #endif
+ 
