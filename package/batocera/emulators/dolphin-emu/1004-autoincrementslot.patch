@@ -1,20 +1,21 @@
 diff --git a/Source/Core/Core/Config/MainSettings.cpp b/Source/Core/Core/Config/MainSettings.cpp
-index 7ce8663f26..c3542d87b2 100644
+index 441604b86f..b507e07fe6 100644
 --- a/Source/Core/Core/Config/MainSettings.cpp
 +++ b/Source/Core/Core/Config/MainSettings.cpp
-@@ -311,6 +311,7 @@ const Info<int> MAIN_ISO_PATH_COUNT{{System::Main, "General", "ISOPaths"}, 0};
- const Info<std::string> MAIN_SKYLANDERS_PATH{{System::Main, "General", "SkylandersCollectionPath"},
+@@ -326,6 +326,8 @@ const Info<std::string> MAIN_SKYLANDERS_PATH{{System::Main, "General", "Skylande
                                               ""};
  const Info<bool> MAIN_TIME_TRACKING{{System::Main, "General", "EnablePlayTimeTracking"}, true};
-+const Info<bool> MAIN_AUTO_INCREMENT_SLOT_COUNT{{System::Main, "General", "AutoIncrementSlot"}, false};
  
++const Info<bool> MAIN_AUTO_INCREMENT_SLOT_COUNT{{System::Main, "General", "AutoIncrementSlot"}, false};
++
  static Info<std::string> MakeISOPathConfigInfo(size_t idx)
  {
+   return Config::Info<std::string>{{Config::System::Main, "General", fmt::format("ISOPath{}", idx)},
 diff --git a/Source/Core/Core/Config/MainSettings.h b/Source/Core/Core/Config/MainSettings.h
-index 31b2181541..46cfb045d4 100644
+index 6ac9612b03..2b3ced27f6 100644
 --- a/Source/Core/Core/Config/MainSettings.h
 +++ b/Source/Core/Core/Config/MainSettings.h
-@@ -205,6 +205,8 @@ extern const Info<std::string> MAIN_GDB_SOCKET;
+@@ -208,6 +208,8 @@ extern const Info<std::string> MAIN_GDB_SOCKET;
  extern const Info<int> MAIN_GDB_PORT;
  extern const Info<int> MAIN_ISO_PATH_COUNT;
  extern const Info<std::string> MAIN_SKYLANDERS_PATH;
@@ -24,14 +25,15 @@ index 31b2181541..46cfb045d4 100644
  void SetIsoPaths(const std::vector<std::string>& paths);
  
 diff --git a/Source/Core/DolphinQt/MainWindow.cpp b/Source/Core/DolphinQt/MainWindow.cpp
-index 6eb1a1bd23..0b6850085f 100644
+index 06331a1450..833273e344 100644
 --- a/Source/Core/DolphinQt/MainWindow.cpp
 +++ b/Source/Core/DolphinQt/MainWindow.cpp
-@@ -1449,6 +1449,9 @@ void MainWindow::StateLoadSlot()
+@@ -1474,6 +1474,10 @@ void MainWindow::StateLoadSlot()
  
  void MainWindow::StateSaveSlot()
  {
-+  if (Config::Get(Config::MAIN_AUTO_INCREMENT_SLOT_COUNT)) {
++  if (Config::Get(Config::MAIN_AUTO_INCREMENT_SLOT_COUNT))
++  {
 +    m_state_slot++;
 +  }
    State::Save(m_system, m_state_slot);

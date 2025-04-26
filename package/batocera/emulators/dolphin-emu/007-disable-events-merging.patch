@@ -1,8 +1,8 @@
 diff --git a/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp b/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
-index 2a28302953..8ed9a589cc 100644
+index 9de144dffc..55ffa1d02d 100644
 --- a/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
 +++ b/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
-@@ -261,6 +261,7 @@ std::shared_ptr<evdevDevice>
+@@ -260,6 +260,7 @@ std::shared_ptr<evdevDevice>
  InputBackend::FindDeviceWithUniqueIDAndPhysicalLocation(const char* unique_id,
                                                          const char* physical_location)
  {

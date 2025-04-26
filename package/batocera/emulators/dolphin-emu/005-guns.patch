@@ -1,18 +1,17 @@
 diff --git a/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp b/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
-index 2aac382ab5..2a28302953 100644
+index 2aac382ab5..9de144dffc 100644
 --- a/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
 +++ b/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
-@@ -23,6 +23,9 @@
+@@ -23,6 +23,8 @@
  #include "Common/Thread.h"
  #include "Common/WorkQueueThread.h"
  #include "InputCommon/ControllerInterface/ControllerInterface.h"
-+#include "VideoCommon/EFBInterface.h"
 +#include "VideoCommon/Present.h"
 +#include "VideoCommon/FramebufferManager.h"
  
  namespace ciface::evdev
  {
-@@ -98,15 +101,7 @@ protected:
+@@ -98,15 +100,7 @@ protected:
    {
      if (const char* code_name = libevdev_event_code_get_name(EV_KEY, m_code))
      {
@@ -29,7 +28,7 @@ index 2aac382ab5..2a28302953 100644
      }
      else
      {
-@@ -157,9 +152,30 @@ public:
+@@ -157,9 +151,30 @@ public:
    ControlState GetState() const final override
    {
      int value = 0;
@@ -38,7 +37,7 @@ index 2aac382ab5..2a28302953 100644
  
 -    return (value - m_base) / m_range;
 +    // margins
-+    if(g_efb_interface != NULL) {
++    if(g_presenter != NULL) {
 +      if( ((float) g_framebuffer_manager->GetEFBWidth()) / ((float) g_framebuffer_manager->GetEFBHeight()) > ((float) g_presenter->GetTargetRectangle().GetWidth()) / ((float) g_presenter->GetTargetRectangle().GetHeight())) {
 +	if(m_code == ABS_Y) {
 +	  int sw = g_presenter->GetTargetRectangle().GetWidth();
@@ -61,7 +60,7 @@ index 2aac382ab5..2a28302953 100644
    }
  
  protected:
-@@ -560,7 +576,6 @@ bool evdevDevice::AddNode(std::string devnode, int fd, libevdev* dev)
+@@ -560,7 +575,6 @@ bool evdevDevice::AddNode(std::string devnode, int fd, libevdev* dev)
      m_name = potential_new_name;
  
    const bool is_motion_device = libevdev_has_property(dev, INPUT_PROP_ACCELEROMETER);
@@ -69,7 +68,7 @@ index 2aac382ab5..2a28302953 100644
  
    // If a device has BTN_JOYSTICK it probably uses event codes counting up from 0x120
    // which have very useless and wrong names.
-@@ -573,21 +588,7 @@ bool evdevDevice::AddNode(std::string devnode, int fd, libevdev* dev)
+@@ -573,21 +587,7 @@ bool evdevDevice::AddNode(std::string devnode, int fd, libevdev* dev)
    {
      if (libevdev_has_event_code(dev, EV_KEY, key))
      {
@@ -92,7 +91,7 @@ index 2aac382ab5..2a28302953 100644
        ++num_buttons;
      }
    }
-@@ -623,24 +624,6 @@ bool evdevDevice::AddNode(std::string devnode, int fd, libevdev* dev)
+@@ -623,24 +623,6 @@ bool evdevDevice::AddNode(std::string devnode, int fd, libevdev* dev)
      return true;
    }
  
