@@ -7833,7 +7833,7 @@ msgctxt "game_options"
 msgid "Exclusive Ubershaders"
 msgstr "Exkluzívne Ubershaders"
 
-#. TRANSLATION: hotkeys.keys, naomigd.flycast.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: hotkeys.keys, naomigd.flycast.keys
 msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "Ukončiť emulátor"
@@ -14978,11 +14978,6 @@ msgctxt "game_options"
 msgid "Saudi Arabia"
 msgstr "Saudská Arábia"
 
-#. TRANSLATION: wiiware.dolphin-emu.keys
-msgctxt "keys_files"
-msgid "Save State/Save to Selected Slot"
-msgstr ""
-
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Save state"
@@ -15089,16 +15084,6 @@ msgstr "Vybrať"
 msgctxt "game_options"
 msgid "Select Keyboard, Joystick or Gamepad mode"
 msgstr "Vyberte režim klávesnice, joysticku alebo gamepadu"
-
-#. TRANSLATION: wiiware.dolphin-emu.keys
-msgctxt "keys_files"
-msgid "Select State/Select State Slot 1"
-msgstr ""
-
-#. TRANSLATION: wiiware.dolphin-emu.keys
-msgctxt "keys_files"
-msgid "Select State/Select State Slot 2"
-msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -16206,7 +16191,7 @@ msgctxt "keys_files"
 msgid "Start game"
 msgstr "Spustiť hru"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "State/Load from Selected Slot"
 msgstr ""

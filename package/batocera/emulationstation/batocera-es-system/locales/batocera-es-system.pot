@@ -18081,31 +18081,6 @@ msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr ""
 
-#. TRANSLATION: hotkeys.keys, naomigd.flycast.keys, wiiware.dolphin-emu.keys
-msgctxt "keys_files"
-msgid "Exit emulator"
-msgstr ""
-
-#. TRANSLATION: wiiware.dolphin-emu.keys
-msgctxt "keys_files"
-msgid "Select State/Select State Slot 1"
-msgstr ""
-
-#. TRANSLATION: wiiware.dolphin-emu.keys
-msgctxt "keys_files"
-msgid "Select State/Select State Slot 2"
-msgstr ""
-
-#. TRANSLATION: wiiware.dolphin-emu.keys
-msgctxt "keys_files"
-msgid "Save State/Save to Selected Slot"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys, wiiware.dolphin-emu.keys
-msgctxt "keys_files"
-msgid "State/Load from Selected Slot"
-msgstr ""
-
 #. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
@@ -18186,9 +18161,19 @@ msgctxt "keys_files"
 msgid "State/Save to Selected Slot"
 msgstr ""
 
+#. TRANSLATION: triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "State/Load from Selected Slot"
+msgstr ""
+
 #. TRANSLATION: hotkeys.keys, triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "Screenshot"
+msgstr ""
+
+#. TRANSLATION: hotkeys.keys, naomigd.flycast.keys
+msgctxt "keys_files"
+msgid "Exit emulator"
 msgstr ""
 
 #. TRANSLATION: naomigd.flycast.keys
