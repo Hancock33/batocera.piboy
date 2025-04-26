@@ -1,0 +1,13 @@
+diff --git a/backends/platform/libretro/Makefile b/backends/platform/libretro/Makefile
+index a29a5666ab4..2d6cac74ae3 100644
+--- a/backends/platform/libretro/Makefile
++++ b/backends/platform/libretro/Makefile
+@@ -558,7 +558,7 @@ include $(ROOT_PATH)/Makefile.common
+ # Concat DEFINES and INCLUDES to form the CPPFLAGS
+ CPPFLAGS := $(DEFINES) $(INCLUDES)
+ CXXFLAGS += $(DEFINES) $(INCLUDES)
+-CFLAGS += $(DEFINES) $(INCLUDES)
++CFLAGS += -std=gnu17 $(DEFINES) $(INCLUDES)
+ 
+ # Include the build instructions for all modules
+ include $(addprefix $(SCUMMVM_PATH)/, $(addsuffix /module.mk,$(MODULES)))
