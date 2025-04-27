@@ -87,6 +87,7 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'openjk': ('openjk.openjkGenerator', 'OpenJKGenerator'),
     'openjkdf2': ('openjkdf2.openjkdf2Generator', 'OpenJKDF2Generator'),
     'openlara': ('openlara.openlaraGenerator', 'OpenlaraGenerator'),
+    'openmohaa': ('openmohaa.openmohaaGenerator', 'OpenMOHAAGenerator'),
     'openmsx': ('openmsx.openmsxGenerator', 'OpenmsxGenerator'),
     'opentyrian': ('opentyrian.opentyrianGenerator', 'OpentyrianGenerator'),
     'pcexhumed': ('pcexhumed.pcexhumedGenerator', 'PcexhumedGenerator'),

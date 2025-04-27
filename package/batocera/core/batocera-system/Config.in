@@ -1050,6 +1050,9 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     # OpenJK: JediAcademy / Jedi Outcast
     select BR2_PACKAGE_OPENJK                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
+    # Medal of Honor: Allied Assault
+    select BR2_PACKAGE_OPENMOHAA                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+
     help
         Ports
 #### Vintage computer systems ####
