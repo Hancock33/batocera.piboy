@@ -1,0 +1,27 @@
+diff --git a/scripts/genie.lua b/scripts/genie.lua
+index a0507c9de13..d1ef5c347c6 100644
+--- a/scripts/genie.lua
++++ b/scripts/genie.lua
+@@ -863,9 +863,9 @@ if _OPTIONS["OPTIMIZE"] then
+ 	if _OPTIONS["LTO"]=="1" then
+ 		buildoptions {
+ -- windows native mingw GCC 5.2 fails with -flto=x with x > 1. bug unfixed as of this commit
+-			"-flto=1",
++			"-flto=auto",
+ -- if ld fails, just buy more RAM or uncomment this!
+---          "-Wl,-no-keep-memory",
++                        "-Wl,-no-keep-memory",
+ 			"-Wl,-v",
+ -- silence redefine warnings from discrete.c.
+ 			"-Wl,-allow-multiple-definition",
+@@ -886,8 +886,8 @@ if _OPTIONS["OPTIMIZE"] then
+ 		}
+ -- same flags are needed by linker
+ 		linkoptions {
+-			"-flto=1",
+---          "-Wl,-no-keep-memory",
++			"-flto=auto",
++                        "-Wl,-no-keep-memory",
+ 			"-Wl,-v",
+ 			"-Wl,-allow-multiple-definition",
+ 			"-fuse-linker-plugin",

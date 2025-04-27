@@ -11,10 +11,10 @@ index d5f94bb60bd..f34c6954f4f 100644
  	}
  if (STANDALONE~=true) then
 diff --git a/scripts/src/osd/modules.lua b/scripts/src/osd/modules.lua
-index 9236cc3124d..777a463648e 100644
+index 7c45e291eb8..c7a8b194eab 100644
 --- a/scripts/src/osd/modules.lua
 +++ b/scripts/src/osd/modules.lua
-@@ -91,6 +91,7 @@ function osdmodulesbuild()
+@@ -89,6 +89,7 @@ function osdmodulesbuild()
  		MAME_DIR .. "src/osd/modules/input/input_none.cpp",
  		MAME_DIR .. "src/osd/modules/input/input_rawinput.cpp",
  		MAME_DIR .. "src/osd/modules/input/input_sdl.cpp",
@@ -420,10 +420,10 @@ index 00000000000..ba49546dbe5
 +
 +MODULE_DEFINITION(LIGHTGUN_UDEV, udev_lightgun_module)
 diff --git a/src/osd/modules/lib/osdobj_common.cpp b/src/osd/modules/lib/osdobj_common.cpp
-index e3c8d63b0d6..1520e010bff 100644
+index eed73f3097b..9042862668d 100644
 --- a/src/osd/modules/lib/osdobj_common.cpp
 +++ b/src/osd/modules/lib/osdobj_common.cpp
-@@ -311,6 +311,7 @@ void osd_common_t::register_options()
+@@ -312,6 +312,7 @@ void osd_common_t::register_options()
  
  	REGISTER_MODULE(m_mod_man, LIGHTGUNINPUT_SDL);
  	REGISTER_MODULE(m_mod_man, LIGHTGUN_X11);
