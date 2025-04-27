@@ -1,6 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|3d5d27c5cf915e04ea52ea92a6fb5cc86a939972|Apr 27, 2025
+Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|57cf5a0daf1e75bc09cd8c93a490353b3c97104b|Apr 27, 2025
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|050f68817a09379150b7bdf665a443b4869d7c08|Apr 27, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|1aca186b5bf1363a7b60ecaae02b20f0a66f050e|Apr 27, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-04-27|Apr 27, 2025
@@ -47,7 +48,6 @@ Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|80b887a7
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|04e72efe420b24c549bd01d75c15a9c3bd5ad419|Apr 26, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|6023b25f2e70334718170dcba29ebc2205da2e5b|Apr 26, 2025
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|1f70a4365030706cb74999cd9415848c650b5c68|Apr 26, 2025
-Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|48eed78d1a05fecdf752e63a70daecf59dab6d57|Apr 25, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|30e1a858da1cc7054f6d0b44393b5adfe2ffb44a|Apr 25, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|bd2ead96e95e2dab0f40312a1c1e4dd4412d8c07|Apr 25, 2025
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|587da80e51cbf5443e27a02d99d7287645983793|Apr 25, 2025
@@ -169,12 +169,12 @@ Libraries|[kddocwidgets](http://github.com/KDAB/KDDockWidgets)|v2.2.3|Apr 01, 20
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2025.01.1|Mar 31, 2025
 Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.2.10|Mar 31, 2025
 Libraries|[sdl3_ttf](https://github.com/libsdl-org/SDL_ttf)|release-3.2.2|Mar 31, 2025
-Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0276|Mar 30, 2025
+Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0277|Mar 30, 2025
 Libraries|[discord_rpc](http://github.com/stenzek/discord-rpc)|cc59d26d1d628fbd6527aac0ac1d6301f4978b92|Mar 30, 2025
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0276|Mar 30, 2025
 Utils|[fdupes](http://github.com/adrianlopezroche/fdupes)|v2.4.0|Mar 30, 2025
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|865b1214bf72530b147e0f14e1e205e6897082ac|Mar 30, 2025
-Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0276|Mar 30, 2025
+Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0277|Mar 30, 2025
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|ddc84fa623ed508073cf99244db731bd73f36b6b|Mar 29, 2025
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|81cbbda37f57a5aec3e06337ce9f78018c363878|Mar 29, 2025
 Utils|[jstest2](https://github.com/Grumbel/sdl-jstest)|917d27b3b45a335137bd2c8597f8bcf2bac8a569|Mar 27, 2025

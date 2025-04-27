@@ -71,7 +71,7 @@ Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|81cbbda37
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v118|Jan 27, 2024
 Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|b089ae5b32f5f2bc901b9ff2db2424cbf3c1186b|Apr 26, 2025
-Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|48eed78d1a05fecdf752e63a70daecf59dab6d57|Apr 25, 2025
+Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|57cf5a0daf1e75bc09cd8c93a490353b3c97104b|Apr 27, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|4089532f819e05957c721081c503beca57adeb15|Apr 26, 2025
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|8ee64a84c7365b042f50e206d245b8a8464d1656|Apr 26, 2025
@@ -167,7 +167,7 @@ Emulators|[libretro-jumpnbump](http://github.com/libretro/jumpnbump-libretro)|4e
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|d0384bc33aad06bfa9cf5cd308c4bd7ae6cfc814|Mar 12, 2025
 Emulators|[libretro-lowresnx](http://github.com/timoinutilis/lowres-nx)|85c80181d26bb5c2147ebc76bfc48bce9f8d73a8|Oct 21, 2024
 Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|e077129d7ade969e9a4f079389c66d4d278faa2e|Jan 28, 2025
-Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0276|Mar 30, 2025
+Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0277|Mar 30, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|c7cb4c4af9284d02ff083721fb5c1b890b177634|Apr 25, 2025
 Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|5d2ece5b6d7041aa9d0a7921eee42969f8bdf8a7|Feb 19, 2025
 Emulators|[libretro-melonds](http://github.com/libretro/melonds)|7a3c11ff970cd36ca806961fae6db94b30dd5401|Oct 21, 2024
@@ -246,7 +246,7 @@ Emulators|[libserum](http://github.com/zesinger/libserum)|v2.0.2|Sept 15, 2024
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.9.6|Feb 22, 2025
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|172e4a8dfe15a75fcb067288ae7485edfc52b314|Apr 24, 2025
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|e7d8c5a80a78b1290c20a470e0dc0f9d75eac5bc|Apr 16, 2025
-Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0276|Mar 30, 2025
+Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0277|Mar 30, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|9ed7e5803e55c5eeb29ec560c8659b38ed331749|Apr 09, 2025
 Emulators|[model2emu](https://github.com/batocera-linux/model2emu/raw/main)|57b5cff598e63ca688a9a58f3b341104e43c4b01|May 15, 2022
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|72559114c86910209b60910758645754cc5f91a3|Nov 03, 2024
