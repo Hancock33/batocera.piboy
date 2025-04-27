@@ -142,7 +142,6 @@ Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|9ed7e5803e55c5eeb29ec
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|f124ed8fbae19c8b02a94d2478bd0e59c46cfbba|Apr 09, 2025
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|c4332d608c1005a46ce51236ade9894e0d32e52b|Apr 09, 2025
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|816bf7c594a4c117ab2815f443ad3d535be475a6|Apr 08, 2025
-Network|[rtl8821au-morrownr](http://github.com/morrownr/8821au-20210708)|b90b76d30709fb82705cbc2e295a7dde9372a0a8|Apr 08, 2025
 Emulators|[libretro-sameboy](http://github.com/LIJI32/SameBoy)|1cf84a5436c49413ae756c9e9c18ce71e96d7990|Apr 08, 2025
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|f3cd3f31d0c46e3dcc0f7e04930a441bb99b5a3a|Apr 08, 2025
 Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.6.1|Apr 07, 2025
@@ -218,9 +217,7 @@ Controllers|[hid-t150](http://github.com/scarburato/t150_driver)|f7ecb30c65ee5f7
 Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.6.2|Feb 24, 2025
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|1f77a160fb1f41769d51f24dbf16a0b78527f5d3|Feb 23, 2025
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|a203bbf2ab6c7164051ff90ad30cc8f6352a56ac|Feb 23, 2025
-Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|bd8baa17dc0c07510a7a56c52410a81c363b85ae|Feb 22, 2025
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.9.6|Feb 22, 2025
-Network|[rtl8812au](http://github.com/morrownr/8812au-20210820)|dabcb74da670a12ca74125588bc89aa8ad086c13|Feb 21, 2025
 Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.4.309.0|Feb 21, 2025
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|80c4233c712c1fcd8f631f17aaa40e89df9337ba|Feb 20, 2025
 Libraries|[python-gpiod](https://files.pythonhosted.org/packages/8f/74/cb43c6e2fe74cf1567160ccbf54db176f72481e5ac58567684a262672c7c)|2.3.0|Feb 19, 2025
@@ -422,6 +419,7 @@ Emulators|[openbor7530](http://github.com/DCurrent/openbor)|2e2519b5f5fec4b8e917
 Utils|[switchres](http://github.com/antonioginer/switchres)|v2.2.1|May 15, 2024
 Boot|[batocera-shim-signed-efi-helpers-ia32](https://ftp.debian.org/debian/pool/main/s/shim-helpers-i386-signed)|1+15.8+1~deb12u1|May 10, 2024
 Firmwares|[extralinuxfirmwares](http://github.com/batocera-linux/extralinuxfirmwares)|e9c1d95f2d707ddd7bb0ef9e4711914de3cb60c2|May 10, 2024
+Network|[rtl8852au](http://github.com/lwfinger/rtl8852au)|865ab0fa91471d595c283d2f3db323f7f15455f5|May 7, 2024
 Controllers|[xpad-noone](http://github.com/medusalix/xpad-noone)|6970c40930bedd8b58d0764894e0d5f04813b7c5|Apr 24, 2024
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.5|Apr 23, 2024
 Emulators|[libretro-dolphin](http://github.com/libretro/dolphin)|89a4df725d4eb24537728f7d655cddb1add25c18|Apr 19, 2024

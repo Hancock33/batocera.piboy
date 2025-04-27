@@ -409,9 +409,7 @@ Network|[aic8800](http://github.com/batocera-linux/aic8800)|ccba7fffed8554fe861b
 Network|[pd-mapper](http://github.com/linux-msm/pd-mapper)|e7c42e1522249593302a5b8920b9e7b42dc3f25e|Jun 19, 2024
 Network|[qrtr](http://github.com/linux-msm/qrtr)|5923eea97377f4a3ed9121b358fd919e3659db7b|Mar 01, 2025
 Network|[rmtfs](http://github.com/linux-msm/rmtfs)|f24570816b3234f0885c2897fb9c094848df2835|Feb 13, 2025
-Network|[rtl8812au](http://github.com/morrownr/8812au-20210820)|dabcb74da670a12ca74125588bc89aa8ad086c13|Feb 21, 2025
-Network|[rtl8821au-morrownr](http://github.com/morrownr/8821au-20210708)|b90b76d30709fb82705cbc2e295a7dde9372a0a8|Apr 08, 2025
-Network|[rtl88x2bu](http://github.com/morrownr/88x2bu-20210702)|bd8baa17dc0c07510a7a56c52410a81c363b85ae|Feb 22, 2025
+Network|[rtl8852au](http://github.com/lwfinger/rtl8852au)|865ab0fa91471d595c283d2f3db323f7f15455f5|May 7, 2024
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|533779cb8a1843581d5422a7f0aae1a35e6ab956|Nov 21, 2024
 Ports|[abuse](http://github.com/apancik/Abuse_2025)|2025.1.0|Jan 17, 2025
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|3084bb389b7847f9a43824c3755578aa1491223d|Apr 17, 2025
