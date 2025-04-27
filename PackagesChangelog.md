@@ -19,7 +19,9 @@ Ports|[omf2097](http://github.com/omf2097/openomf)|9604f0ee425b3a7de379651516df1
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|aa61fba0fe72f0c76ac226850aee111fde35620c|Apr 27, 2025
 Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|b861916b5ba338960448fbefc49f372476629fd4|Apr 27, 2025
 Utils|[btop](http://github.com/aristocratos/btop)|v1.4.1|Apr 27, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250427|Apr 27, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|a7fab4a3945ca3294d5bd3688f77253affbffe02|Apr 27, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250427|Apr 27, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|990c2a023bbd6ae1f206d7ca202314ab7bbfb50e|Apr 27, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|e03c65ca0f7de377255489702e230e15253d6212|Apr 27, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|e03c65ca0f7de377255489702e230e15253d6212|Apr 27, 2025
@@ -42,9 +44,7 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|04b5fd415ded3dfd4414c7e1b2
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|9047723a4b7eff9feaef16afab6c58615f8203d6|Apr 26, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|08a985d183fbfe38dcae77424b28ea66ea45612f|Apr 26, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|b4c1fa10dddb035e9f0a4a3da4c1da94f42cbc76|Apr 26, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250426|Apr 26, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|7bdf291df9e8f0c24e642efb27c165d1945fc167|Apr 26, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250426|Apr 26, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|b7d6f0b1a45fc6fd93344f795d113f30efe81c35|Apr 26, 2025
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|3085de173fd7bddf7484383ade11dcb5dff47997|Apr 26, 2025
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|7bdf291df9e8f0c24e642efb27c165d1945fc167|Apr 26, 2025
