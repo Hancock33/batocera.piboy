@@ -137,7 +137,7 @@ define XEMU_GET_SUBMODULES
 
 	# tomlplusplus
 	mkdir -p $(@D)/subprojects/tomlplusplus
-	$(eval REVISION = $(shell grep -Po '(?<=^revision=).+' $(@D)/subprojects/tomlplusplus.wrap))
+	$(eval REVISION = $(shell grep -Po '(?<=^revision = ).+' $(@D)/subprojects/tomlplusplus.wrap))
 	curl -L -o tomlplusplus.tar.gz \
 		https://github.com/marzer/tomlplusplus/archive/$(REVISION).tar.gz
 	$(TAR) -xzf tomlplusplus.tar.gz --strip-components=1 -C $(@D)/subprojects/tomlplusplus
@@ -189,6 +189,38 @@ define XEMU_GET_SUBMODULES
 	$(TAR) -xzf berkeley-testfloat-3.tar.gz --strip-components=1 -C $(@D)/subprojects/berkeley-testfloat-3
 	cp $(@D)/subprojects/packagefiles/berkeley-testfloat-3/* $(@D)/subprojects/berkeley-testfloat-3
 	rm berkeley-testfloat-3.tar.gz
+
+	# glslang - revision variation
+	mkdir -p $(@D)/subprojects/glslang
+	$(eval REVISION = $(shell grep -Po '(?<=^revision = ).+' $(@D)/subprojects/glslang.wrap))
+	curl -L -o glslang.tar.gz \
+		https://github.com/KhronosGroup/glslang/archive/$(REVISION).tar.gz
+	$(TAR) -xzf glslang.tar.gz --strip-components=1 -C $(@D)/subprojects/glslang
+	rm glslang.tar.gz
+
+	# volk - revision variation
+	mkdir -p $(@D)/subprojects/volk
+	$(eval REVISION = $(shell grep -Po '(?<=^revision = ).+' $(@D)/subprojects/volk.wrap))
+	curl -L -o volk.tar.gz \
+		https://github.com/zeux/volk/archive/$(REVISION).tar.gz
+	$(TAR) -xzf volk.tar.gz --strip-components=1 -C $(@D)/subprojects/volk
+	rm volk.tar.gz
+
+	# SPIRV-Reflect - revision variation
+	mkdir -p $(@D)/subprojects/SPIRV-Reflect
+	$(eval REVISION = $(shell grep -Po '(?<=^revision = ).+' $(@D)/subprojects/SPIRV-Reflect.wrap))
+	curl -L -o SPIRV-Reflect.tar.gz \
+		https://github.com/KhronosGroup/SPIRV-Reflect/archive/$(REVISION).tar.gz
+	$(TAR) -xzf SPIRV-Reflect.tar.gz --strip-components=1 -C $(@D)/subprojects/SPIRV-Reflect
+	rm SPIRV-Reflect.tar.gz
+
+	# VulkanMemoryAllocator - revision variation
+	mkdir -p $(@D)/subprojects/VulkanMemoryAllocator
+	$(eval REVISION = $(shell grep -Po '(?<=^revision = ).+' $(@D)/subprojects/VulkanMemoryAllocator.wrap))
+	curl -L -o VulkanMemoryAllocator.tar.gz \
+		https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator/archive/$(REVISION).tar.gz
+	$(TAR) -xzf VulkanMemoryAllocator.tar.gz --strip-components=1 -C $(@D)/subprojects/VulkanMemoryAllocator
+	rm VulkanMemoryAllocator.tar.gz
 endef
 
 XEMU_PRE_CONFIGURE_HOOKS = XEMU_VERSION_DETAILS
