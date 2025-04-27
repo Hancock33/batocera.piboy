@@ -620,7 +620,7 @@ msgctxt "game_options"
 msgid "16 bit"
 msgstr "16 비트"
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "16-bit"
 msgstr "16비트"
@@ -1270,7 +1270,7 @@ msgctxt "game_options"
 msgid "32 MHz (Overclock)"
 msgstr "32 MHz (오버클럭)"
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "32-bit"
 msgstr "32비트"
@@ -3747,7 +3747,7 @@ msgctxt "game_options"
 msgid "BRETT HULL HOCKEY"
 msgstr "브렛 헐 하키"
 
-#. TRANSLATION: doom3, openjk
+#. TRANSLATION: doom3, openjk, openmohaa
 msgctxt "game_options"
 msgid "BRIGHTNESS"
 msgstr "밝기"
@@ -4382,7 +4382,7 @@ msgctxt "game_options"
 msgid "COLOUR CORRECTION"
 msgstr ""
 
-#. TRANSLATION: libretro/cap32, openjk
+#. TRANSLATION: libretro/cap32, openjk, openmohaa
 msgctxt "game_options"
 msgid "COLOUR DEPTH"
 msgstr "색심도"
@@ -4712,7 +4712,7 @@ msgctxt "game_options"
 msgid "CROP OVERSCAN"
 msgstr "오버스캔 자르기"
 
-#. TRANSLATION: duckstation, mame, theforceengine
+#. TRANSLATION: duckstation, mame, openmohaa, theforceengine
 msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr "십자선"
@@ -4786,6 +4786,11 @@ msgstr "커서 모드"
 msgctxt "game_options"
 msgid "CURSOR TIMEOUT"
 msgstr "커서 시간 초과"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "CURVE DETAIL"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -5092,7 +5097,7 @@ msgctxt "game_options"
 msgid "Change the consoles country from the default of the United States."
 msgstr "콘솔 국가를 기본값인 미국에서 변경합니다."
 
-#. TRANSLATION: doom3, openjk
+#. TRANSLATION: doom3, openjk, openmohaa
 msgctxt "game_options"
 msgid "Change the game's brightness."
 msgstr "게임의 밝기를 변경합니다."
@@ -5270,6 +5275,11 @@ msgid ""
 msgstr ""
 "밝거나 어두운 중간 톤이 어떻게 표현되는지 변경하는 감마의 양을 선택합니다."
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the amount of shadow detail."
+msgstr ""
+
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "Choose the appropriate media for disk image."
@@ -5286,6 +5296,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the audio output type."
 msgstr "오디오 출력 유형을 선택하세요."
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the character view type."
+msgstr ""
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -5316,7 +5331,7 @@ msgctxt "game_options"
 msgid "Choose the depth of texture quality."
 msgstr "텍스처 품질의 깊이를 선택하세요."
 
-#. TRANSLATION: libretro/cap32, openjk
+#. TRANSLATION: libretro/cap32, openjk, openmohaa
 msgctxt "game_options"
 msgid "Choose the emulated colour depth."
 msgstr "에뮬레이트된 색심도를 선택하세요."
@@ -5326,12 +5341,32 @@ msgctxt "game_options"
 msgid "Choose the games difficulty."
 msgstr "게임의 난이도를 선택하세요."
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the level of curve detail."
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the level of effects detail."
+msgstr ""
+
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose the level of geometric detail."
 msgstr "기하학적 세부 사항의 수준을 선택하세요."
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the level of model detail."
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the level of terrain detail."
+msgstr ""
+
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "Choose the level of texture detail."
 msgstr "텍스처 세부 수준을 선택하세요."
@@ -5351,7 +5386,12 @@ msgctxt "game_options"
 msgid "Choose the size of the heads-up display."
 msgstr "헤드업 디스플레이의 크기를 선택하세요."
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the texture colour depth."
+msgstr ""
+
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "Choose the texture filter type."
 msgstr "텍스처 필터 유형을 선택하세요."
@@ -5698,6 +5738,11 @@ msgstr ""
 "셰이더 컴파일 스터터를 피하기 위해 백그라운드 스레드를 사용하여 셰이더를 컴파"
 "일합니다. 그래픽 오류가 발생할 수 있습니다."
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Complex"
+msgstr ""
+
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next, redream
 msgctxt "game_options"
 msgid "Composite"
@@ -5829,7 +5874,7 @@ msgctxt "game_options"
 msgid "Cross"
 msgstr "십자가"
 
-#. TRANSLATION: omf2097.keys
+#. TRANSLATION: mohaa.keys, omf2097.keys
 msgctxt "keys_files"
 msgid "Crouch"
 msgstr "쭈그리고 앉기"
@@ -6718,6 +6763,11 @@ msgstr "동적 재컴파일 (가장 빠름)"
 msgctxt "game_options"
 msgid "EET"
 msgstr "EET"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "EFFECTS DETAIL"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -8176,6 +8226,11 @@ msgctxt "game_options"
 msgid "FULL"
 msgstr ""
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "FULL ENTITY LIGHTING"
+msgstr ""
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "FULL SINGLE SCREEN"
@@ -8747,7 +8802,7 @@ msgctxt "game_options"
 msgid "Fujitsu FM-77AV disk images"
 msgstr "후지쯔 FM-77AV 디스크 이미지"
 
-#. TRANSLATION: libretro/hatarib, shared
+#. TRANSLATION: libretro/hatarib, openmohaa, shared
 msgctxt "game_options"
 msgid "Full"
 msgstr "전체"
@@ -9463,6 +9518,11 @@ msgctxt "game_options"
 msgid "Guatemala"
 msgstr "과테말라"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Gun Only"
+msgstr ""
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "HARD TEXTURE CACHE MEMORY LIMIT"
@@ -9757,6 +9817,11 @@ msgctxt "game_options"
 msgid "High 720p"
 msgstr "높음 720p"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "High Detail"
+msgstr ""
+
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "High Performance"
@@ -9767,10 +9832,20 @@ msgctxt "game_options"
 msgid "High-end Computer"
 msgstr "고급 컴퓨터"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Higher"
+msgstr ""
+
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "Higher number for higher picture quality, but requires more bandwidth."
 msgstr "숫자가 높을수록 사진 품질이 좋아지지만, 더 많은 대역폭이 필요합니다."
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Highest"
+msgstr ""
 
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
@@ -10105,6 +10180,11 @@ msgstr "에뮬레이터 성능을 높이지만 정확성/안정성이 저하됩�
 msgctxt "game_options"
 msgid "Increase to 128 MiB for debug or homebrew applications."
 msgstr "디버그 또는 홈브류 애플리케이션의 경우 128MiB로 늘립니다."
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Increases texture quality."
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -10449,7 +10529,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "7월"
 
-#. TRANSLATION: omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys, omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr "점프"
@@ -10803,6 +10883,16 @@ msgctxt "game_options"
 msgid "Latvia"
 msgstr "라트비아"
 
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Lean left"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Lean right"
+msgstr ""
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Lebanon"
@@ -10997,7 +11087,7 @@ msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
 msgstr "긴 가시 화면 가장자리 (cm)"
 
-#. TRANSLATION: prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr ""
@@ -11027,6 +11117,11 @@ msgctxt "game_options"
 msgid "Low-end Computer"
 msgstr "하급 컴퓨터"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Lower"
+msgstr ""
+
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid ""
@@ -11035,6 +11130,11 @@ msgid ""
 msgstr ""
 "값이 낮을수록 오디오 대기 시간이 줄어들고 성능이 향상되지만, 오디오 문제가 발"
 "생할 수 있습니다."
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Lowest"
+msgstr ""
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -11170,6 +11270,11 @@ msgstr "미션 시작"
 msgctxt "game_options"
 msgid "MODEL"
 msgstr "모델"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "MODEL DETAIL"
+msgstr ""
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
@@ -11451,7 +11556,7 @@ msgctxt "game_options"
 msgid "Match Window"
 msgstr "일치하는 창"
 
-#. TRANSLATION: dosbox
+#. TRANSLATION: dosbox, openmohaa
 msgctxt "game_options"
 msgid "Max"
 msgstr "최대"
@@ -11460,6 +11565,11 @@ msgstr "최대"
 msgctxt "game_options"
 msgid "Max (demanding games)"
 msgstr "최대 (요구 사항이 높은 게임)"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Max Detail"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -11711,7 +11821,7 @@ msgctxt "game_options"
 msgid "Minimal"
 msgstr "최소"
 
-#. TRANSLATION: pcsx2, rpcs3
+#. TRANSLATION: openmohaa, pcsx2, rpcs3
 msgctxt "game_options"
 msgid "Minimum"
 msgstr "최소"
@@ -11882,6 +11992,11 @@ msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "스타일릿 포인터 이동"
 
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Move back"
+msgstr ""
+
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move back / down"
@@ -11912,7 +12027,7 @@ msgctxt "keys_files"
 msgid "Move camera up"
 msgstr "카메라를 위쪽으로 이동"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
+#. TRANSLATION: bstone.keys, mohaa.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move forward"
 msgstr "앞으로 이동"
@@ -12310,7 +12425,7 @@ msgctxt "keys_files"
 msgid "Next slot"
 msgstr "다음 슬ㄹ"
 
-#. TRANSLATION: bstone.keys, omf2097.keys
+#. TRANSLATION: bstone.keys, mohaa.keys, omf2097.keys
 msgctxt "keys_files"
 msgid "Next weapon"
 msgstr "다음 무기"
@@ -12544,6 +12659,11 @@ msgstr "오버클럭 승수"
 msgctxt "game_options"
 msgid "OVERCLOCK TYPE"
 msgstr "오버클럭 유형"
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Objective"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -13710,10 +13830,15 @@ msgctxt "keys_files"
 msgid "Previous slot"
 msgstr "이전 슬ㄹ"
 
-#. TRANSLATION: bstone.keys, openjkdf2.keys
+#. TRANSLATION: bstone.keys, mohaa.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr "이전 무기"
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Primary attack"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -13818,6 +13943,11 @@ msgstr "프레임마다 프레임 버퍼 읽기 (GLIDE64MK2)"
 msgctxt "game_options"
 msgid "READBACK RESOLVE"
 msgstr "다시 읽기 해결"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "REAL DYNAMIC LIGHTING"
+msgstr ""
 
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
@@ -14138,6 +14268,11 @@ msgstr "느긋함 (가장 빠름)"
 msgctxt "game_options"
 msgid "Relaxed XFloat"
 msgstr "느긋한 XFloat"
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Reload weapon"
+msgstr ""
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
@@ -14638,7 +14773,7 @@ msgctxt "game_options"
 msgid "SHADER SET"
 msgstr "셰이더 설정"
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "SHADOWS"
 msgstr "그림자"
@@ -14958,7 +15093,7 @@ msgctxt "game_options"
 msgid "STRICT RENDERING MODE"
 msgstr "엄격한 렌더링 모드"
 
-#. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce, openjk
+#. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce, openjk, openmohaa
 msgctxt "game_options"
 msgid "SUBTITLES"
 msgstr "자막"
@@ -15136,6 +15271,11 @@ msgstr "커스텀 구성된 조이스틱 프로파일을 검색합니다."
 #. TRANSLATION: hurrican
 msgctxt "game_options"
 msgid "Second Empire"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Secondary attack"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -15696,7 +15836,7 @@ msgctxt "game_options"
 msgid "Side by side"
 msgstr "나란히"
 
-#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em, openjk
+#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em, openjk, openmohaa
 msgctxt "game_options"
 msgid "Simple"
 msgstr "단순함"
@@ -16211,6 +16351,11 @@ msgctxt "game_options"
 msgid "Speech module installed"
 msgstr "음성 모듈 설치됨"
 
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Speed"
+msgstr ""
+
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
 msgid "Speed hack for dual core mode to fix some glitches."
@@ -16316,12 +16461,12 @@ msgctxt "game_options"
 msgid "Steering Wheel"
 msgstr "스티어링 핸들"
 
-#. TRANSLATION: openjk.keys
+#. TRANSLATION: mohaa.keys, openjk.keys
 msgctxt "keys_files"
 msgid "Step left"
 msgstr "왼쪽으로 한 걸음"
 
-#. TRANSLATION: openjk.keys
+#. TRANSLATION: mohaa.keys, openjk.keys
 msgctxt "keys_files"
 msgid "Step right"
 msgstr "오른쪽으로 한 걸음"
@@ -16645,6 +16790,11 @@ msgctxt "game_options"
 msgid "TEMPEST 2000"
 msgstr "템페스트 2000"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "TERRAIN DETAIL"
+msgstr ""
+
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
 msgid "TEST PLAY"
@@ -16655,17 +16805,27 @@ msgctxt "game_options"
 msgid "TEXT"
 msgstr "텍스트"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "TEXTURE COLOUR DEPTH"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "TEXTURE COMPRESSION"
+msgstr ""
+
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "TEXTURE DEPOSTERIZE"
 msgstr "텍스처 색조융합"
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "TEXTURE DETAIL"
 msgstr "텍스처 상세정보"
 
-#. TRANSLATION: f2bgl, openjk
+#. TRANSLATION: f2bgl, openjk, openmohaa
 msgctxt "game_options"
 msgid "TEXTURE FILTER"
 msgstr "텍스처 필터"
@@ -17089,6 +17249,16 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "게임 치트나 16/9 화면비 수정 코드를 사용하세요."
 
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Toggle item"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Toggle menu"
+msgstr ""
+
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
@@ -17207,7 +17377,7 @@ msgid ""
 msgstr ""
 "모델2 폴리당 정보 (평면)에서 꼭짓점별 색상(구로)을 추측하려고 시도합니다."
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "Trilinear"
 msgstr "삼선형"
@@ -17751,7 +17921,7 @@ msgctxt "game_options"
 msgid "Uruguay"
 msgstr "우루과이"
 
-#. TRANSLATION: bstone.keys, openjk.keys, openjkdf2.keys
+#. TRANSLATION: bstone.keys, mohaa.keys, openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Use"
 msgstr "사용"
@@ -18096,7 +18266,7 @@ msgctxt "game_options"
 msgid "VIC20 PAL Automatic"
 msgstr "VIC20 PAL 자동"
 
-#. TRANSLATION: citron, openjk, rpcs3
+#. TRANSLATION: citron, openjk, openmohaa, rpcs3
 msgctxt "game_options"
 msgid "VIDEO"
 msgstr "비디오"
@@ -18156,6 +18326,11 @@ msgctxt "game_options"
 msgid "VIDEO STREAM RESOLUTION"
 msgstr "비디오 스트림 해상도"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "VIEW MODEL"
+msgstr ""
+
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "VIEW ONLY"
@@ -18185,6 +18360,11 @@ msgstr "시각적 찌르기 강도"
 msgctxt "game_options"
 msgid "VOICE"
 msgstr "음성"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "VOLUMETRIC SMOKE"
+msgstr ""
 
 #. TRANSLATION: azahar, bigpemu, bstone, cemu, citron, ...
 msgctxt "game_options"
@@ -18331,6 +18511,11 @@ msgctxt "game_options"
 msgid "W-SU"
 msgstr "W-SU"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "WALL DECALS"
+msgstr ""
+
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "WALL MARKS"
@@ -18360,6 +18545,16 @@ msgstr "무기 획득"
 msgctxt "game_options"
 msgid "WEAPON WAGGLE"
 msgstr "무기 흔들기"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "WEAPONS BAR"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "WEATHER EFFECTS"
+msgstr ""
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -18475,6 +18670,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Weak"
 msgstr "약함"
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Weapon drop"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"

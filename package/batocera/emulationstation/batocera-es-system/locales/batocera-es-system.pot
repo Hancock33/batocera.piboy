@@ -100,7 +100,7 @@ msgctxt "game_options"
 msgid "GAME ASPECT RATIO"
 msgstr ""
 
-#. TRANSLATION: libretro/hatarib, shared
+#. TRANSLATION: libretro/hatarib, openmohaa, shared
 msgctxt "game_options"
 msgid "Full"
 msgstr ""
@@ -823,12 +823,12 @@ msgctxt "game_options"
 msgid "576+KB"
 msgstr ""
 
-#. TRANSLATION: libretro/cap32, openjk
+#. TRANSLATION: libretro/cap32, openjk, openmohaa
 msgctxt "game_options"
 msgid "Choose the emulated colour depth."
 msgstr ""
 
-#. TRANSLATION: libretro/cap32, openjk
+#. TRANSLATION: libretro/cap32, openjk, openmohaa
 msgctxt "game_options"
 msgid "COLOUR DEPTH"
 msgstr ""
@@ -4029,7 +4029,7 @@ msgctxt "game_options"
 msgid "LCD GHOSTING EFFECT"
 msgstr ""
 
-#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em, openjk
+#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em, openjk, openmohaa
 msgctxt "game_options"
 msgid "Simple"
 msgstr ""
@@ -10207,7 +10207,7 @@ msgctxt "game_options"
 msgid "CPU CYCLES"
 msgstr ""
 
-#. TRANSLATION: dosbox
+#. TRANSLATION: dosbox, openmohaa
 msgctxt "game_options"
 msgid "Max"
 msgstr ""
@@ -10547,7 +10547,7 @@ msgctxt "game_options"
 msgid "ACHIEVEMENTS"
 msgstr ""
 
-#. TRANSLATION: duckstation, mame, theforceengine
+#. TRANSLATION: duckstation, mame, openmohaa, theforceengine
 msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr ""
@@ -11681,7 +11681,7 @@ msgctxt "game_options"
 msgid "BLENDING ACCURACY"
 msgstr ""
 
-#. TRANSLATION: pcsx2, rpcs3
+#. TRANSLATION: openmohaa, pcsx2, rpcs3
 msgctxt "game_options"
 msgid "Minimum"
 msgstr ""
@@ -12145,7 +12145,7 @@ msgctxt "game_options"
 msgid "PS3's internal ratio setting. Some games only support 16/9."
 msgstr ""
 
-#. TRANSLATION: citron, openjk, rpcs3
+#. TRANSLATION: citron, openjk, openmohaa, rpcs3
 msgctxt "game_options"
 msgid "VIDEO"
 msgstr ""
@@ -15095,12 +15095,12 @@ msgctxt "game_options"
 msgid "STRETCH UI MENU"
 msgstr ""
 
-#. TRANSLATION: doom3, openjk
+#. TRANSLATION: doom3, openjk, openmohaa
 msgctxt "game_options"
 msgid "Change the game's brightness."
 msgstr ""
 
-#. TRANSLATION: doom3, openjk
+#. TRANSLATION: doom3, openjk, openmohaa
 msgctxt "game_options"
 msgid "BRIGHTNESS"
 msgstr ""
@@ -15177,7 +15177,7 @@ msgctxt "game_options"
 msgid "Select which filter is used to scale up the resolution."
 msgstr ""
 
-#. TRANSLATION: f2bgl, openjk
+#. TRANSLATION: f2bgl, openjk, openmohaa
 msgctxt "game_options"
 msgid "TEXTURE FILTER"
 msgstr ""
@@ -15222,7 +15222,7 @@ msgctxt "game_options"
 msgid "Display cutscene subtitles"
 msgstr ""
 
-#. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce, openjk
+#. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce, openjk, openmohaa
 msgctxt "game_options"
 msgid "SUBTITLES"
 msgstr ""
@@ -17557,12 +17557,12 @@ msgctxt "game_options"
 msgid "KEEP CORPSES"
 msgstr ""
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "16-bit"
 msgstr ""
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "32-bit"
 msgstr ""
@@ -17577,12 +17577,12 @@ msgctxt "game_options"
 msgid "GEOMETRIC DETAIL"
 msgstr ""
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "Choose the level of texture detail."
 msgstr ""
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "TEXTURE DETAIL"
 msgstr ""
@@ -17597,12 +17597,12 @@ msgctxt "game_options"
 msgid "TEXTURE QUALITY"
 msgstr ""
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "Choose the texture filter type."
 msgstr ""
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "Trilinear"
 msgstr ""
@@ -17617,7 +17617,7 @@ msgctxt "game_options"
 msgid "Choose shadow details."
 msgstr ""
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "SHADOWS"
 msgstr ""
@@ -17849,6 +17849,151 @@ msgstr ""
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "NEW 3DS MODE"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the texture colour depth."
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "TEXTURE COLOUR DEPTH"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "WALL DECALS"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "WEATHER EFFECTS"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Increases texture quality."
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "TEXTURE COMPRESSION"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the character view type."
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "VIEW MODEL"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Gun Only"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the amount of shadow detail."
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Complex"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the level of terrain detail."
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "TERRAIN DETAIL"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "High Detail"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Max Detail"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the level of model detail."
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "MODEL DETAIL"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Lowest"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Higher"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Highest"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the level of effects detail."
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "EFFECTS DETAIL"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Lower"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the level of curve detail."
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "CURVE DETAIL"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "REAL DYNAMIC LIGHTING"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "FULL ENTITY LIGHTING"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "VOLUMETRIC SMOKE"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "WEAPONS BAR"
 msgstr ""
 
 #. TRANSLATION: mugen.keys
@@ -18216,7 +18361,7 @@ msgctxt "keys_files"
 msgid "Taunt"
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr ""
@@ -18271,7 +18416,7 @@ msgctxt "keys_files"
 msgid "Crouch Toggle"
 msgstr ""
 
-#. TRANSLATION: omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys, omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr ""
@@ -18391,7 +18536,7 @@ msgctxt "keys_files"
 msgid "Move right"
 msgstr ""
 
-#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
+#. TRANSLATION: bstone.keys, mohaa.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move forward"
 msgstr ""
@@ -18404,6 +18549,91 @@ msgstr ""
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Move back"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Lean left"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Lean right"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Secondary attack"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Primary attack"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Objective"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Toggle menu"
+msgstr ""
+
+#. TRANSLATION: bstone.keys, mohaa.keys, openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Use"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys, openjk.keys
+msgctxt "keys_files"
+msgid "Step left"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys, openjk.keys
+msgctxt "keys_files"
+msgid "Step right"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Weapon drop"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Reload weapon"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Speed"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys, omf2097.keys
+msgctxt "keys_files"
+msgid "Crouch"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Toggle item"
+msgstr ""
+
+#. TRANSLATION: bstone.keys, mohaa.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous weapon"
+msgstr ""
+
+#. TRANSLATION: bstone.keys, mohaa.keys, omf2097.keys
+msgctxt "keys_files"
+msgid "Next weapon"
 msgstr ""
 
 #. TRANSLATION: openjkdf2.keys
@@ -18419,11 +18649,6 @@ msgstr ""
 #. TRANSLATION: openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Pitch Down"
-msgstr ""
-
-#. TRANSLATION: bstone.keys, openjk.keys, openjkdf2.keys
-msgctxt "keys_files"
-msgid "Use"
 msgstr ""
 
 #. TRANSLATION: openjkdf2.keys
@@ -18489,11 +18714,6 @@ msgstr ""
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Field Light"
-msgstr ""
-
-#. TRANSLATION: bstone.keys, openjkdf2.keys
-msgctxt "keys_files"
-msgid "Previous weapon"
 msgstr ""
 
 #. TRANSLATION: openjkdf2.keys
@@ -18656,16 +18876,6 @@ msgctxt "keys_files"
 msgid "Use item"
 msgstr ""
 
-#. TRANSLATION: bstone.keys, omf2097.keys
-msgctxt "keys_files"
-msgid "Next weapon"
-msgstr ""
-
-#. TRANSLATION: omf2097.keys
-msgctxt "keys_files"
-msgid "Crouch"
-msgstr ""
-
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Inventory"
@@ -18699,16 +18909,6 @@ msgstr ""
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
 msgid "Backpedal"
-msgstr ""
-
-#. TRANSLATION: openjk.keys
-msgctxt "keys_files"
-msgid "Step left"
-msgstr ""
-
-#. TRANSLATION: openjk.keys
-msgctxt "keys_files"
-msgid "Step right"
 msgstr ""
 
 #. TRANSLATION: openjk.keys

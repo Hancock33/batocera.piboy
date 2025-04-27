@@ -622,7 +622,7 @@ msgctxt "game_options"
 msgid "16 bit"
 msgstr "16 bit"
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "16-bit"
 msgstr "16-bitars"
@@ -1272,7 +1272,7 @@ msgctxt "game_options"
 msgid "32 MHz (Overclock)"
 msgstr "32 MHz (överklockning)"
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "32-bit"
 msgstr "32-bitars"
@@ -3753,7 +3753,7 @@ msgctxt "game_options"
 msgid "BRETT HULL HOCKEY"
 msgstr "BRETT HULL HOCKEY"
 
-#. TRANSLATION: doom3, openjk
+#. TRANSLATION: doom3, openjk, openmohaa
 msgctxt "game_options"
 msgid "BRIGHTNESS"
 msgstr "LJUSSTYRKA"
@@ -4389,7 +4389,7 @@ msgctxt "game_options"
 msgid "COLOUR CORRECTION"
 msgstr ""
 
-#. TRANSLATION: libretro/cap32, openjk
+#. TRANSLATION: libretro/cap32, openjk, openmohaa
 msgctxt "game_options"
 msgid "COLOUR DEPTH"
 msgstr "FÄRGDJUP"
@@ -4719,7 +4719,7 @@ msgctxt "game_options"
 msgid "CROP OVERSCAN"
 msgstr "BESKÄR OVERSCAN"
 
-#. TRANSLATION: duckstation, mame, theforceengine
+#. TRANSLATION: duckstation, mame, openmohaa, theforceengine
 msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr "HÅRKORS"
@@ -4793,6 +4793,11 @@ msgstr "MARKÖRLÄGE"
 msgctxt "game_options"
 msgid "CURSOR TIMEOUT"
 msgstr "CURSOR TIMEOUT"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "CURVE DETAIL"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -5099,7 +5104,7 @@ msgctxt "game_options"
 msgid "Change the consoles country from the default of the United States."
 msgstr "Ändra konsolens land från standardinställningen USA."
 
-#. TRANSLATION: doom3, openjk
+#. TRANSLATION: doom3, openjk, openmohaa
 msgctxt "game_options"
 msgid "Change the game's brightness."
 msgstr "Ändra spelets ljusstyrka."
@@ -5278,6 +5283,11 @@ msgstr ""
 "Välj mängden Gamma som ändrar hur ljusa eller mörka toner i mellanregistret "
 "framträder."
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the amount of shadow detail."
+msgstr ""
+
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "Choose the appropriate media for disk image."
@@ -5294,6 +5304,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the audio output type."
 msgstr "Välj typ av ljudutgång."
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the character view type."
+msgstr ""
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -5324,7 +5339,7 @@ msgctxt "game_options"
 msgid "Choose the depth of texture quality."
 msgstr "Välj djupet för texturkvaliteten."
 
-#. TRANSLATION: libretro/cap32, openjk
+#. TRANSLATION: libretro/cap32, openjk, openmohaa
 msgctxt "game_options"
 msgid "Choose the emulated colour depth."
 msgstr "Välj det emulerade färgdjupet."
@@ -5334,12 +5349,32 @@ msgctxt "game_options"
 msgid "Choose the games difficulty."
 msgstr "Välj spelets svårighetsgrad."
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the level of curve detail."
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the level of effects detail."
+msgstr ""
+
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose the level of geometric detail."
 msgstr "Välj nivån för geometriska detaljer."
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the level of model detail."
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the level of terrain detail."
+msgstr ""
+
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "Choose the level of texture detail."
 msgstr "Välj nivån för texturdetaljer."
@@ -5359,7 +5394,12 @@ msgctxt "game_options"
 msgid "Choose the size of the heads-up display."
 msgstr "Välj storleken för översiktsskärmen."
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the texture colour depth."
+msgstr ""
+
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "Choose the texture filter type."
 msgstr "Välj typ för texturfiltrering."
@@ -5708,6 +5748,11 @@ msgstr ""
 "Kompilera shaders med hjälp av bakgrundstrådar för att undvika att "
 "shaderkompileringen hackar. Kan orsaka grafiska störningar."
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Complex"
+msgstr ""
+
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next, redream
 msgctxt "game_options"
 msgid "Composite"
@@ -5841,7 +5886,7 @@ msgctxt "game_options"
 msgid "Cross"
 msgstr "Kors"
 
-#. TRANSLATION: omf2097.keys
+#. TRANSLATION: mohaa.keys, omf2097.keys
 msgctxt "keys_files"
 msgid "Crouch"
 msgstr "Kryp"
@@ -6734,6 +6779,11 @@ msgstr "Dynarec (snabbast)"
 msgctxt "game_options"
 msgid "EET"
 msgstr "EET"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "EFFECTS DETAIL"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -8201,6 +8251,11 @@ msgctxt "game_options"
 msgid "FULL"
 msgstr ""
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "FULL ENTITY LIGHTING"
+msgstr ""
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "FULL SINGLE SCREEN"
@@ -8778,7 +8833,7 @@ msgctxt "game_options"
 msgid "Fujitsu FM-77AV disk images"
 msgstr "Fujitsu FM-77AV diskbilder"
 
-#. TRANSLATION: libretro/hatarib, shared
+#. TRANSLATION: libretro/hatarib, openmohaa, shared
 msgctxt "game_options"
 msgid "Full"
 msgstr "Fullständig"
@@ -9493,6 +9548,11 @@ msgctxt "game_options"
 msgid "Guatemala"
 msgstr "Guatemala"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Gun Only"
+msgstr ""
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "HARD TEXTURE CACHE MEMORY LIMIT"
@@ -9787,6 +9847,11 @@ msgctxt "game_options"
 msgid "High 720p"
 msgstr "Hög 720p"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "High Detail"
+msgstr ""
+
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "High Performance"
@@ -9797,10 +9862,20 @@ msgctxt "game_options"
 msgid "High-end Computer"
 msgstr "Avancerad dator"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Higher"
+msgstr ""
+
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "Higher number for higher picture quality, but requires more bandwidth."
 msgstr "Högre siffra ger högre bildkvalitet, men kräver mer bandbredd."
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Highest"
+msgstr ""
 
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
@@ -10139,6 +10214,11 @@ msgstr "Öka emulatorns prestanda på bekostnad av noggrannhet/stabilitet."
 msgctxt "game_options"
 msgid "Increase to 128 MiB for debug or homebrew applications."
 msgstr "Öka till 128 MiB för felsökning- eller homebrew-applikationer."
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Increases texture quality."
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -10488,7 +10568,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "juli"
 
-#. TRANSLATION: omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys, omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr "Hoppa"
@@ -10843,6 +10923,16 @@ msgctxt "game_options"
 msgid "Latvia"
 msgstr "Lettland"
 
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Lean left"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Lean right"
+msgstr ""
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Lebanon"
@@ -11038,7 +11128,7 @@ msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
 msgstr "Lång synlig skärmkant (cm)"
 
-#. TRANSLATION: prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr ""
@@ -11068,6 +11158,11 @@ msgctxt "game_options"
 msgid "Low-end Computer"
 msgstr "Billig dator"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Lower"
+msgstr ""
+
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid ""
@@ -11076,6 +11171,11 @@ msgid ""
 msgstr ""
 "Lägre värden minskar ljudfördröjningen och förbättrar prestandan, men kan "
 "orsaka ljudproblem."
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Lowest"
+msgstr ""
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -11211,6 +11311,11 @@ msgstr "UPPDRAGSSTART"
 msgctxt "game_options"
 msgid "MODEL"
 msgstr "MODELL"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "MODEL DETAIL"
+msgstr ""
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
@@ -11495,7 +11600,7 @@ msgctxt "game_options"
 msgid "Match Window"
 msgstr "Matcha fönster"
 
-#. TRANSLATION: dosbox
+#. TRANSLATION: dosbox, openmohaa
 msgctxt "game_options"
 msgid "Max"
 msgstr "Max"
@@ -11504,6 +11609,11 @@ msgstr "Max"
 msgctxt "game_options"
 msgid "Max (demanding games)"
 msgstr "Max (krävande spel)"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Max Detail"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -11755,7 +11865,7 @@ msgctxt "game_options"
 msgid "Minimal"
 msgstr "Minimal"
 
-#. TRANSLATION: pcsx2, rpcs3
+#. TRANSLATION: openmohaa, pcsx2, rpcs3
 msgctxt "game_options"
 msgid "Minimum"
 msgstr "Minimal"
@@ -11926,6 +12036,11 @@ msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "Flytta Stylet Pointer"
 
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Move back"
+msgstr ""
+
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move back / down"
@@ -11956,7 +12071,7 @@ msgctxt "keys_files"
 msgid "Move camera up"
 msgstr "Flytta upp kameran"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
+#. TRANSLATION: bstone.keys, mohaa.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move forward"
 msgstr "Gå framåt"
@@ -12353,7 +12468,7 @@ msgctxt "keys_files"
 msgid "Next slot"
 msgstr "Nästa plats"
 
-#. TRANSLATION: bstone.keys, omf2097.keys
+#. TRANSLATION: bstone.keys, mohaa.keys, omf2097.keys
 msgctxt "keys_files"
 msgid "Next weapon"
 msgstr "Nästa vapen"
@@ -12588,6 +12703,11 @@ msgstr "ÖVERKLOCKNINGSMULTIPLIKATOR"
 msgctxt "game_options"
 msgid "OVERCLOCK TYPE"
 msgstr "ÖVERKLOCKNINGSTYP"
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Objective"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -13757,10 +13877,15 @@ msgctxt "keys_files"
 msgid "Previous slot"
 msgstr "Föregående plats"
 
-#. TRANSLATION: bstone.keys, openjkdf2.keys
+#. TRANSLATION: bstone.keys, mohaa.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr "Föregående vapen"
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Primary attack"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -13865,6 +13990,11 @@ msgstr "LÄS FRAMEBUFFERTEN VARJE BILDRUTA (GLIDE64MK2)"
 msgctxt "game_options"
 msgid "READBACK RESOLVE"
 msgstr "READBACK RESOLVE"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "REAL DYNAMIC LIGHTING"
+msgstr ""
 
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
@@ -14185,6 +14315,11 @@ msgstr "Avslappnad (snabbast)"
 msgctxt "game_options"
 msgid "Relaxed XFloat"
 msgstr "Avslappnad XFloat"
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Reload weapon"
+msgstr ""
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
@@ -14686,7 +14821,7 @@ msgctxt "game_options"
 msgid "SHADER SET"
 msgstr "SHADER-UPPSÄTTNING"
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "SHADOWS"
 msgstr "SKUGGOR"
@@ -15006,7 +15141,7 @@ msgctxt "game_options"
 msgid "STRICT RENDERING MODE"
 msgstr "STRIKT RENDERINGSLÄGE"
 
-#. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce, openjk
+#. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce, openjk, openmohaa
 msgctxt "game_options"
 msgid "SUBTITLES"
 msgstr "UNDERTEXTER"
@@ -15184,6 +15319,11 @@ msgstr "Sök efter anpassade konfigurerade styrspaksprofiler."
 #. TRANSLATION: hurrican
 msgctxt "game_options"
 msgid "Second Empire"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Secondary attack"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -15746,7 +15886,7 @@ msgctxt "game_options"
 msgid "Side by side"
 msgstr "Sida vid sida"
 
-#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em, openjk
+#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em, openjk, openmohaa
 msgctxt "game_options"
 msgid "Simple"
 msgstr "Enkel"
@@ -16263,6 +16403,11 @@ msgctxt "game_options"
 msgid "Speech module installed"
 msgstr "Talmodul installerad"
 
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Speed"
+msgstr ""
+
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
 msgid "Speed hack for dual core mode to fix some glitches."
@@ -16367,12 +16512,12 @@ msgctxt "game_options"
 msgid "Steering Wheel"
 msgstr "Ratt"
 
-#. TRANSLATION: openjk.keys
+#. TRANSLATION: mohaa.keys, openjk.keys
 msgctxt "keys_files"
 msgid "Step left"
 msgstr "Gå till vänster"
 
-#. TRANSLATION: openjk.keys
+#. TRANSLATION: mohaa.keys, openjk.keys
 msgctxt "keys_files"
 msgid "Step right"
 msgstr "Gå till höger"
@@ -16699,6 +16844,11 @@ msgctxt "game_options"
 msgid "TEMPEST 2000"
 msgstr "TEMPEST 2000"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "TERRAIN DETAIL"
+msgstr ""
+
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
 msgid "TEST PLAY"
@@ -16709,17 +16859,27 @@ msgctxt "game_options"
 msgid "TEXT"
 msgstr "TEXT"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "TEXTURE COLOUR DEPTH"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "TEXTURE COMPRESSION"
+msgstr ""
+
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "TEXTURE DEPOSTERIZE"
 msgstr "TEXTUR DEPOSTERIZE"
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "TEXTURE DETAIL"
 msgstr "TEXTURDETALJ"
 
-#. TRANSLATION: f2bgl, openjk
+#. TRANSLATION: f2bgl, openjk, openmohaa
 msgctxt "game_options"
 msgid "TEXTURE FILTER"
 msgstr "TEXTURFILTER"
@@ -17146,6 +17306,16 @@ msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "För att använda spelfusk eller fixkoder för 16/9 bildförhållande."
 
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Toggle item"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Toggle menu"
+msgstr ""
+
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
@@ -17265,7 +17435,7 @@ msgstr ""
 "Försöker gissa Per-vertexfärg (gouraud) från Model2 per-poly-information "
 "(platt)."
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "Trilinear"
 msgstr "Trilinjär"
@@ -17810,7 +17980,7 @@ msgctxt "game_options"
 msgid "Uruguay"
 msgstr "Uruguay"
 
-#. TRANSLATION: bstone.keys, openjk.keys, openjkdf2.keys
+#. TRANSLATION: bstone.keys, mohaa.keys, openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Use"
 msgstr "Använd"
@@ -18158,7 +18328,7 @@ msgctxt "game_options"
 msgid "VIC20 PAL Automatic"
 msgstr "VIC20 PAL Automatisk"
 
-#. TRANSLATION: citron, openjk, rpcs3
+#. TRANSLATION: citron, openjk, openmohaa, rpcs3
 msgctxt "game_options"
 msgid "VIDEO"
 msgstr "VIDEO"
@@ -18218,6 +18388,11 @@ msgctxt "game_options"
 msgid "VIDEO STREAM RESOLUTION"
 msgstr "VIDEOSTRÖMMENS UPPLÖSNING"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "VIEW MODEL"
+msgstr ""
+
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "VIEW ONLY"
@@ -18247,6 +18422,11 @@ msgstr "VISUELL KNUFFSTYRKA"
 msgctxt "game_options"
 msgid "VOICE"
 msgstr "RÖST"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "VOLUMETRIC SMOKE"
+msgstr ""
 
 #. TRANSLATION: azahar, bigpemu, bstone, cemu, citron, ...
 msgctxt "game_options"
@@ -18393,6 +18573,11 @@ msgctxt "game_options"
 msgid "W-SU"
 msgstr "W-SU"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "WALL DECALS"
+msgstr ""
+
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "WALL MARKS"
@@ -18422,6 +18607,16 @@ msgstr "TA UPP VAPEN"
 msgctxt "game_options"
 msgid "WEAPON WAGGLE"
 msgstr "VAPENVICKNING"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "WEAPONS BAR"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "WEATHER EFFECTS"
+msgstr ""
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -18537,6 +18732,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Weak"
 msgstr "Svag"
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Weapon drop"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
