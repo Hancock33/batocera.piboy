@@ -38,19 +38,6 @@ index b7607bb83..ab44baee3 100644
  
  	if (!aes_cmac_one(salt, secret, 32, device_key))
  		return false;
-diff --git a/src/shared/shell.c b/src/shared/shell.c
-index b77842177..cc044261a 100644
---- a/src/shared/shell.c
-+++ b/src/shared/shell.c
-@@ -1426,7 +1426,7 @@ static void rl_cleanup(void)
- 	if (data.history[0] != '\0')
- 		write_history(data.history);
- 
--	rl_message("");
-+	rl_message();
- 	rl_callback_handler_remove();
- }
- 
 diff --git a/tools/mesh-gatt/crypto.c b/tools/mesh-gatt/crypto.c
 index c65974bb0..0dc796f00 100644
 --- a/tools/mesh-gatt/crypto.c
