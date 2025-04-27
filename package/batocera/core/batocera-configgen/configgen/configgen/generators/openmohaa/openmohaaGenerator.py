@@ -45,7 +45,7 @@ class OpenMOHAAGenerator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         # Setup the paths variations
         romdir = rom.parent
-        
+
         config_path = CONFIGS / "openmohaa"
         mkdir_if_not_exists(config_path)
 
@@ -68,7 +68,7 @@ class OpenMOHAAGenerator(Generator):
             _logger.info("Found Breakthrough!")
             variant_subdir = "maintt"
             target_game = "2"
-        
+
         # Set the target game via command line argument
         commandArray.extend(["+set", "com_target_game", target_game])
 
@@ -108,9 +108,9 @@ class OpenMOHAAGenerator(Generator):
         options_to_set["seta r_gamma"] = system.config.get_str("mohaa_brightness", "1.000000")
         # Texture Compression
         options_to_set["seta r_ext_compressed_textures"] = system.config.get_str("mohaa_compression", "0")
-        
+
         # -= Advanced Options =-
-        
+
         # View Model
         options_to_set["seta cg_drawviewmodel"] = system.config.get_str("mohaa_view", "2")
         # Shadows
@@ -132,7 +132,7 @@ class OpenMOHAAGenerator(Generator):
         if system.config.get_str("mohaa_model") == "0":
             options_to_set["seta r_lodviewmodelcap"] = "0.25"
             options_to_set["seta r_lodcap"] = "0.25"
-            options_to_set["seta r_lodscale"] = "0.25"                    
+            options_to_set["seta r_lodscale"] = "0.25"
         elif system.config.get_str("mohaa_model") == "1":
             options_to_set["seta r_lodviewmodelcap"] = "0.25"
             options_to_set["seta r_lodcap"] = "0.35"
@@ -156,7 +156,7 @@ class OpenMOHAAGenerator(Generator):
         # Effects Detail
         if system.config.get_str("mohaa_effects") == "1":
             options_to_set["seta cg_effectdetail"] = "0.3"
-            options_to_set["seta vss_maxcount"] = "23"            
+            options_to_set["seta vss_maxcount"] = "23"
         elif system.config.get_str("mohaa_effects") == "2":
             options_to_set["seta cg_effectdetail"] = "0.5"
             options_to_set["seta vss_maxcount"] = "22"

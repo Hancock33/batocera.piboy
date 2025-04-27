@@ -1,4 +1,4 @@
-#
+################################################################################
 # This file is part of the batocera distribution (https://batocera.org).
 # Copyright (c) 2025+.
 #
@@ -16,34 +16,29 @@
 # openmohaa
 #
 ################################################################################
-# Version: Commits on Apr 24, 2025
-OPENMOHAA_VERSION = c1efc0e066803944df607c046000e1060abb9cfb
-OPENMOHAA_SITE = https://github.com/openmoh/openmohaa
-OPENMOHAA_SITE_METHOD = git
+# Version: Commits on Apr 26, 2025
+OPENMOHAA_VERSION = 08a985d183fbfe38dcae77424b28ea66ea45612f
+OPENMOHAA_SITE = $(call github,openmoh,openmohaa,$(OPENMOHAA_VERSION))
 OPENMOHAA_SUPPORTS_IN_SOURCE_BUILD = NO
 OPENMOHAA_LICENSE = GPL-2.0 license
 OPENMOHAA_LICENSE_FILE = COPYING.txt
 
-OPENMOHAA_DEPENDENCIES += libcurl openal sdl2 
+OPENMOHAA_DEPENDENCIES += libcurl openal sdl2
 
-OPENMOHAA_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 OPENMOHAA_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 OPENMOHAA_CONF_OPTS += -DTARGET_LOCAL_SYSTEM=ON
 
 # We just want the client
 define OPENMOHAA_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/usr/bin/openmohaa
-    cp $(@D)/buildroot-build/openmohaa $(TARGET_DIR)/usr/bin/openmohaa/
-	cp $(@D)/buildroot-build/code/client/cgame/cgame.so \
-	    $(TARGET_DIR)/usr/bin/openmohaa/
-	cp $(@D)/buildroot-build/code/server/fgame/game.so \
-	    $(TARGET_DIR)/usr/bin/openmohaa/
+	mkdir -p $(TARGET_DIR)/usr/bin/openmohaa
+	cp $(@D)/buildroot-build/openmohaa $(TARGET_DIR)/usr/bin/openmohaa/
+	cp $(@D)/buildroot-build/code/client/cgame/cgame.so $(TARGET_DIR)/usr/bin/openmohaa/
+	cp $(@D)/buildroot-build/code/server/fgame/game.so  $(TARGET_DIR)/usr/bin/openmohaa/
 endef
 
 define OPENMOHAA_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/openmohaa/mohaa.keys \
-	    $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/openmohaa/mohaa.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 OPENMOHAA_POST_INSTALL_TARGET_HOOKS += OPENMOHAA_EVMAPY

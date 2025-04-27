@@ -33,6 +33,7 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45643|Apr 26, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu)|8f89ef14d7c2ea5fd2d6ebf2139add792b612803|Apr 26, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|04b5fd415ded3dfd4414c7e1b24d3d2bb76ec06e|Apr 26, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|9047723a4b7eff9feaef16afab6c58615f8203d6|Apr 26, 2025
+Ports|[openmohaa](https://github.com/openmoh/openmohaa)|08a985d183fbfe38dcae77424b28ea66ea45612f|Apr 26, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|b4c1fa10dddb035e9f0a4a3da4c1da94f42cbc76|Apr 26, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250426|Apr 26, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|7bdf291df9e8f0c24e642efb27c165d1945fc167|Apr 26, 2025

@@ -15579,15 +15579,15 @@ openmohaa:
       description: Choose the amount of shadow detail.
       choices:
         "None":    0
-        "Simple":  1    
-        "Complex": 2       
+        "Simple":  1
+        "Complex": 2
     mohaa_terrain:
       submenu: ADVANCED OPTIONS
       prompt: TERRAIN DETAIL
       description: Choose the level of terrain detail.
       choices:
         "Low":         0
-        "Medium":      1    
+        "Medium":      1
         "High Detail": 2
         "Max Detail":  3
     mohaa_model:
@@ -15596,8 +15596,8 @@ openmohaa:
       description: Choose the level of model detail.
       choices:
         "Lowest":  0
-        "Low":     1  
-        "Medium":  2    
+        "Low":     1
+        "Medium":  2
         "High":    3
         "Higher":  4
         "Highest": 5
@@ -15608,8 +15608,8 @@ openmohaa:
       choices:
         "Minimum": 0
         "Lower":   1
-        "Low":     2  
-        "Medium":  3    
+        "Low":     2
+        "Medium":  3
         "High":    4
         "Higher":  5
         "Max":     6
@@ -15645,7 +15645,7 @@ openmohaa:
       prompt: VOLUMETRIC SMOKE
       choices:
         "Off": 0
-        "On":  1 
+        "On":  1
     mohaa_weapons:
       submenu: ADVANCED OPTIONS
       prompt: WEAPONS BAR

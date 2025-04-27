@@ -5195,7 +5195,7 @@ quake:
                         Create a blank launch file with a .quake extension to be able to start the game from ES.
                         i.e. `Quake.quake` or `Quake Mission Pack 1 - Scourge of Armagon.quake`.
                         Launch files should be in `/userdata/roms/ports/quake`.
-                        
+
                         Mission Packs
                         -------------
                         Quake Mission Pack 1: Scourge of Armagon & Quake Mission Pack 2: Dissolution of Eternity are supported automatically.
