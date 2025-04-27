@@ -1,4 +1,3 @@
-
 menu "batocera.linux"
 
 menu "System"
@@ -47,6 +46,7 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/boot/uboot-orangepi-4-lts/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/boot/uboot-orangepi-5-plus/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/boot/uboot-orangepi-5-pro/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/boot/uboot-orangepi-5-ultra/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/boot/uboot-orangepi-800/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/boot/uboot-powkiddy-a13/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/boot/uboot-ps5000/Config.in"
@@ -114,9 +114,7 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/qualcomm/qrtr/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/qualcomm/rmtfs/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/qualcomm/tqftpserv/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl8812au/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl8821au-morrownr/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl88x2bu/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl8852au/Config.in"
   endmenu
 endmenu
 
@@ -591,6 +589,7 @@ menu "Ports"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/openjazz/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/openjk/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/openjkdf2/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/openmohaa/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/opentyrian2000/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/prototype/Config.in"
   menu "Quake"

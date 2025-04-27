@@ -1,0 +1,13 @@
+Submodule 3rdparty/glslang contains modified content
+diff --git a/3rdparty/glslang/glslang/SPIRV/SpvBuilder.h b/3rdparty/glslang/glslang/SPIRV/SpvBuilder.h
+index 1f38e789..ca3c53c9 100644
+--- a/3rdparty/glslang/glslang/SPIRV/SpvBuilder.h
++++ b/3rdparty/glslang/glslang/SPIRV/SpvBuilder.h
+@@ -63,6 +63,7 @@ namespace spv {
+ #include <stack>
+ #include <unordered_map>
+ #include <map>
++#include <cstdint>
+ 
+ namespace spv {
+ 

@@ -1,8 +1,8 @@
 diff --git a/src/misc.c b/src/misc.c
-index 334b02a..37fab77 100644
+index 0a9d07e5..b5f7e2c2 100644
 --- a/src/misc.c
 +++ b/src/misc.c
-@@ -160,7 +160,7 @@ LoadGameConfig (void)
+@@ -161,7 +161,7 @@ LoadGameConfig (void)
    else
      DebugPrintf (0, "found environment HOME = '%s'\n", homedir );
  

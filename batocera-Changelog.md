@@ -19,6 +19,8 @@
 - Initial support for Fusion P.I.G.S. light gun
 - Initial support for OneHit light gun (AimTrak clone)
 - Ayn Odin2 and Odin2 Portal support
+- Add RTL8852AU wifi device support (x86_64)
+- Add OrangePi 5 Ultra board support
 ### Added
 - WireGuard VPN for RK3326 boards
 - WireGuard system service which runs [wg-quick](https://git.zx2c4.com/wireguard-tools/about/src/man/wg-quick.8) on `/userdata/system/wireguard/*.conf`
@@ -53,6 +55,7 @@
 - OpenJK to play Jedi Academy & Jedi Outcast
 - Intel Quick Sync Video acceleration to ffmpeg for supported Intel GPUs
 - ShadPS4 emulator for PlayStation 4 gaming
+- OpenMOHAA to play Medal of Honor: Allied Assault including Spearhead and Breakthrough expansions
 ### Fixed
 - Fix some problems in ES and Batocera with IPv6 networks
 - Fix ES behavior with usb network tethering
@@ -76,7 +79,7 @@
 - BigPEmu to v118
 - Cemu to 2.6
 - DevilutionX to 1.5.4
-- Dolphin-Emu to 2412-268
+- Dolphin-Emu to 2503a-328
 - Dosbox Staging to v0.82.0
 - Dosbox-X to v2025.02.01
 - DXX-Rebirth to 12th of Jan build
@@ -129,7 +132,7 @@
 - Kodi to 21.2
 - LibDRM to 2.4.124
 - Linux Firmware to 20250410
-- Linux Kernel to 6.14.2
+- Linux Kernel to 6.14.3
 - LLVM to 19.1.7
 - Mesa3D to 25.0.4
 - MPV to 0.40.0

@@ -1,17 +1,8 @@
 diff --git a/makefile b/makefile
-index 2037f5d5760..f587f82beff 100644
+index 834b88c6168..524ebeb9b4a 100644
 --- a/makefile
 +++ b/makefile
-@@ -388,7 +388,7 @@ ifndef FORCE_DRC_C_BACKEND
- endif
- endif
- 
--ifeq ($(findstring arm,$(UNAME)),arm)
-+ifeq ($(findstring arm,$(PLATFORM)),arm)
- ARCHITECTURE :=
- ifneq ($(PLATFORM),arm64)
- 	ifndef FORCE_DRC_C_BACKEND
-@@ -397,7 +397,7 @@ ifneq ($(PLATFORM),arm64)
+@@ -391,7 +391,7 @@ ifndef NOASM
  endif
  endif
  

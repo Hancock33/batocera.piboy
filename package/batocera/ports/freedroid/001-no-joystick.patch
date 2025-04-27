@@ -1,8 +1,8 @@
 diff --git a/src/input.c b/src/input.c
-index fd191e8..fd0d344 100644
+index c791da6a..ff756a1d 100644
 --- a/src/input.c
 +++ b/src/input.c
-@@ -61,35 +61,19 @@ int input_state[INPUT_LAST];	// array of states (pressed/released) of all keys
+@@ -59,35 +59,19 @@ int input_state[INPUT_LAST];	// array of states (pressed/released) of all keys
  
  int key_cmds[CMD_LAST][3] =  // array of mappings {key1,key2,key3 -> cmd}
    {
@@ -50,7 +50,7 @@ index fd191e8..fd0d344 100644
 +    {SDLK_ESCAPE, SDLK_F15,  SDLK_F15 }  // CMD_BACK
    };
  
- char *keystr[INPUT_LAST];
+ const char *keystr[INPUT_LAST];
 @@ -315,35 +299,8 @@ int sgn (int x)
  
  void Init_Joy (void)
@@ -90,10 +90,10 @@ index fd191e8..fd0d344 100644
  }
  
 diff --git a/src/sound.c b/src/sound.c
-index ca6887e..96778e3 100644
+index 74b216a3..a5cbf373 100644
 --- a/src/sound.c
 +++ b/src/sound.c
-@@ -116,7 +116,7 @@ Init_Audio(void)
+@@ -126,7 +126,7 @@ Init_Audio(void)
    Uint16 audio_format = MIX_DEFAULT_FORMAT;
    int audio_channels = 2;	// = stereo
    //  int audio_buffers = 4096;

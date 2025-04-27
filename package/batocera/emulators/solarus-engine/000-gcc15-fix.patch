@@ -1,0 +1,12 @@
+diff --git a/include/solarus/audio/ItDecoder.h b/include/solarus/audio/ItDecoder.h
+index b7ed2318e..f01f3a49c 100644
+--- a/include/solarus/audio/ItDecoder.h
++++ b/include/solarus/audio/ItDecoder.h
+@@ -22,6 +22,7 @@
+ #include <memory>
+ #include <string>
+ #include <libmodplug/modplug.h>
++#include <cstdint>
+ 
+ namespace Solarus {
+ 

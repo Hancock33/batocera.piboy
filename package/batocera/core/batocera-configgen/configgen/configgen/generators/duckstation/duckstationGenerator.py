@@ -38,7 +38,7 @@ class DuckstationGenerator(Generator):
         if Path('/usr/bin/duckstation/duckstation-qt').exists():
             commandArray = ["/usr/bin/duckstation/duckstation-qt", "-batch", "-nogui", "--", rom ]
         else:
-            commandArray = ["/usr/bin/duckstation/duckstation-nogui", "-batch", "-fullscreen", "--", rom ]
+            commandArray = ["/usr/bin/duckstation/duckstation-mini", "-batch", "-fullscreen", "--", rom ]
 
         settings = CaseSensitiveConfigParser(interpolation=None)
         settings_path = CONFIGS / "duckstation" / "settings.ini"

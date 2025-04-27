@@ -237,7 +237,12 @@ class DolphinTriforceGenerator(Generator):
 
             shutil.copy(source_path, destination_path)
 
-        commandArray = ["dolphin-triforce", "-b", "-u", str(DOLPHIN_TRIFORCE_CONFIG), "-e", rom]
+        # Check what version we've got
+        if Path("/usr/bin/dolphin-triforce-nogui").is_file():
+            commandArray = ["dolphin-triforce-nogui", "-u", str(DOLPHIN_TRIFORCE_CONFIG), "-e", rom]
+        else:
+            # use the -b 'batch' option for nicer exit
+            commandArray = ["dolphin-triforce", "-b", "-u", str(DOLPHIN_TRIFORCE_CONFIG), "-e", rom]
 
         return Command.Command(
             array=commandArray,

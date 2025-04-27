@@ -549,6 +549,9 @@ model3:
   core:     supermodel
   options:
     powersave: '1'
+mohaa:
+  emulator: openmohaa
+  core:     openmohaa
 moonlight:
   emulator: moonlight
   core:     moonlight

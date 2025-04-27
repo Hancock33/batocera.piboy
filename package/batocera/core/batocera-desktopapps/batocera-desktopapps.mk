@@ -36,7 +36,7 @@ ifeq ($(BR2_PACKAGE_DOLPHIN_TRIFORCE),y)
 endif
 
 # duckstation
-ifeq ($(BR2_PACKAGE_DUCKSTATION),y)
+ifeq ($(BR2_PACKAGE_DUCKSTATION)$(BR2_PACKAGE_BATOCERA_QT6),yy)
   BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-duckstation
   BATOCERA_DESKTOPAPPS_APPS	+= duckstation-config.desktop
   BATOCERA_DESKTOPAPPS_ICONS   += duckstation.png

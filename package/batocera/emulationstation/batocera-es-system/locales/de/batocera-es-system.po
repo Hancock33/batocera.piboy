@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-04-18 22:10+0000\n"
+"PO-Revision-Date: 2025-04-23 19:10+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -620,7 +620,7 @@ msgctxt "game_options"
 msgid "16 bit"
 msgstr "16 Bit"
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "16-bit"
 msgstr "16-Bit"
@@ -1270,7 +1270,7 @@ msgctxt "game_options"
 msgid "32 MHz (Overclock)"
 msgstr "32 MHz (übertaktet)"
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "32-bit"
 msgstr "32-Bit"
@@ -2193,7 +2193,7 @@ msgstr "ABSOLUTE MAUSEINGABE"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "ACCELEROMETER"
-msgstr ""
+msgstr "BESCHLEUNIGUNGSSENSOR"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -3325,6 +3325,8 @@ msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
 "Hotkey+R2."
 msgstr ""
+"Layout für Dual-Screen anpassen. Separate Fenster lassen sich mit Hotkey+R2 "
+"umschalten."
 
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
@@ -3758,7 +3760,7 @@ msgctxt "game_options"
 msgid "BRETT HULL HOCKEY"
 msgstr "BRETT HULL HOCKEY"
 
-#. TRANSLATION: doom3, openjk
+#. TRANSLATION: doom3, openjk, openmohaa
 msgctxt "game_options"
 msgid "BRIGHTNESS"
 msgstr "HELLIGKEIT"
@@ -4052,7 +4054,7 @@ msgstr "Unten (Standard)"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Bottom Only"
-msgstr ""
+msgstr "Nur unten"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -4397,7 +4399,7 @@ msgctxt "game_options"
 msgid "COLOUR CORRECTION"
 msgstr ""
 
-#. TRANSLATION: libretro/cap32, openjk
+#. TRANSLATION: libretro/cap32, openjk, openmohaa
 msgctxt "game_options"
 msgid "COLOUR DEPTH"
 msgstr "FARBTIEFE"
@@ -4727,7 +4729,7 @@ msgctxt "game_options"
 msgid "CROP OVERSCAN"
 msgstr "OVERSCAN ZUSCHNEIDEN"
 
-#. TRANSLATION: duckstation, mame, theforceengine
+#. TRANSLATION: duckstation, mame, openmohaa, theforceengine
 msgctxt "game_options"
 msgid "CROSSHAIR"
 msgstr "CROSSHAIR"
@@ -4801,6 +4803,11 @@ msgstr "CURSOR-MODUS"
 msgctxt "game_options"
 msgid "CURSOR TIMEOUT"
 msgstr "CURSOR TIMEOUT"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "CURVE DETAIL"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -5113,7 +5120,7 @@ msgctxt "game_options"
 msgid "Change the consoles country from the default of the United States."
 msgstr "Land der Konsole von der Standardeinstellung „USA“ ändern."
 
-#. TRANSLATION: doom3, openjk
+#. TRANSLATION: doom3, openjk, openmohaa
 msgctxt "game_options"
 msgid "Change the game's brightness."
 msgstr "Helligkeit des Spiels ändern."
@@ -5291,6 +5298,11 @@ msgid ""
 "appear."
 msgstr "Gamma-Wert einstellen, der die mittlere Helligkeit beeinflusst."
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the amount of shadow detail."
+msgstr ""
+
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "Choose the appropriate media for disk image."
@@ -5308,6 +5320,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the audio output type."
 msgstr "Audioausgabetyp auswählen."
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the character view type."
+msgstr ""
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -5338,7 +5355,7 @@ msgctxt "game_options"
 msgid "Choose the depth of texture quality."
 msgstr "Tiefe der Texturqualität wählen."
 
-#. TRANSLATION: libretro/cap32, openjk
+#. TRANSLATION: libretro/cap32, openjk, openmohaa
 msgctxt "game_options"
 msgid "Choose the emulated colour depth."
 msgstr "Wählen Sie die emulierte Farbtiefe."
@@ -5348,12 +5365,32 @@ msgctxt "game_options"
 msgid "Choose the games difficulty."
 msgstr "Schwierigkeitsgrad des Spiels auswählen."
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the level of curve detail."
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the level of effects detail."
+msgstr ""
+
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Choose the level of geometric detail."
 msgstr "Geometrie-Detailgrad wählen."
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the level of model detail."
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the level of terrain detail."
+msgstr ""
+
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "Choose the level of texture detail."
 msgstr "Textur-Detailgrad wählen."
@@ -5373,7 +5410,12 @@ msgctxt "game_options"
 msgid "Choose the size of the heads-up display."
 msgstr "Größe des HUD wählen."
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Choose the texture colour depth."
+msgstr ""
+
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "Choose the texture filter type."
 msgstr "Texturfilter-Typ wählen."
@@ -5718,6 +5760,13 @@ msgid ""
 "Compile shaders using background threads to avoid shader compilation "
 "stutter. May cause graphical glitches."
 msgstr ""
+"Shader im Hintergrund kompilieren, um Ruckler zu vermeiden. Kann "
+"Grafikfehler verursachen."
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Complex"
+msgstr ""
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next, redream
 msgctxt "game_options"
@@ -5853,7 +5902,7 @@ msgctxt "game_options"
 msgid "Cross"
 msgstr "Kreuz"
 
-#. TRANSLATION: omf2097.keys
+#. TRANSLATION: mohaa.keys, omf2097.keys
 msgctxt "keys_files"
 msgid "Crouch"
 msgstr "Kriechen"
@@ -6067,7 +6116,7 @@ msgstr "VERTEX-CACHE DEAKTIVIEREN"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
-msgstr ""
+msgstr "SHADER-ZWISCHENSPEICHER AUF FESTPLATTE"
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
@@ -6748,6 +6797,11 @@ msgctxt "game_options"
 msgid "EET"
 msgstr "EET"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "EFFECTS DETAIL"
+msgstr ""
+
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "EGA"
@@ -6821,7 +6875,7 @@ msgstr "KI-ÜBERSETZUNGSSERVICE AKTIVIEREN"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "ENABLE ASYNC SHADER COMPILATION"
-msgstr ""
+msgstr "ASYNCHRONE SHADER-KOMPILIERUNG AKTIVIEREN"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -7929,7 +7983,7 @@ msgctxt "game_options"
 msgid "Exclusive Ubershaders"
 msgstr "Ausschließlich Ubershaders"
 
-#. TRANSLATION: hotkeys.keys, naomigd.flycast.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: hotkeys.keys, naomigd.flycast.keys
 msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "Emulator beenden"
@@ -8174,7 +8228,7 @@ msgstr "FRAME DUPING (LEISTUNGSSTEIGERUNG)"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "FRAME LIMIT"
-msgstr ""
+msgstr "FPS-BEGRNZUNG"
 
 #. TRANSLATION: libretro/bennugd
 msgctxt "game_options"
@@ -8239,6 +8293,11 @@ msgstr "FSYNC"
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "FULL"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "FULL ENTITY LIGHTING"
 msgstr ""
 
 #. TRANSLATION: vpinball
@@ -8825,7 +8884,7 @@ msgctxt "game_options"
 msgid "Fujitsu FM-77AV disk images"
 msgstr "Fujitsu FM-77AV Disk-Images"
 
-#. TRANSLATION: libretro/hatarib, shared
+#. TRANSLATION: libretro/hatarib, openmohaa, shared
 msgctxt "game_options"
 msgid "Full"
 msgstr "Vollständig"
@@ -9544,6 +9603,11 @@ msgctxt "game_options"
 msgid "Guatemala"
 msgstr "Guatemala"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Gun Only"
+msgstr ""
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "HARD TEXTURE CACHE MEMORY LIMIT"
@@ -9844,6 +9908,11 @@ msgctxt "game_options"
 msgid "High 720p"
 msgstr "Hoch 720p"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "High Detail"
+msgstr ""
+
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "High Performance"
@@ -9854,12 +9923,22 @@ msgctxt "game_options"
 msgid "High-end Computer"
 msgstr "High-end Computer"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Higher"
+msgstr ""
+
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "Higher number for higher picture quality, but requires more bandwidth."
 msgstr ""
 "Auswahl höherer Werte für höhere Bildqualität, benötigt jedoch mehr "
 "Bandbreite."
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Highest"
+msgstr ""
 
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
@@ -9940,12 +10019,12 @@ msgstr "Hybrid + Bicubic"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
-msgstr ""
+msgstr "Hybrider Bildschirm unten"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
-msgstr ""
+msgstr "Hybrider Bildschirm oben"
 
 #. TRANSLATION: dolphin, libretro/dolphin
 msgctxt "game_options"
@@ -10200,6 +10279,11 @@ msgstr "Erhöhung der Emulatorleistung auf Kosten der Genauigkeit/Stabilität."
 msgctxt "game_options"
 msgid "Increase to 128 MiB for debug or homebrew applications."
 msgstr "Für Debug- oder Homebrew-Anwendungen auf 128MiB erhöhen."
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Increases texture quality."
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -10547,7 +10631,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "Juli"
 
-#. TRANSLATION: omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys, omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr "Springen"
@@ -10872,12 +10956,12 @@ msgstr "Querformat"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Large Bottom"
-msgstr ""
+msgstr "Groß unten"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Large Top"
-msgstr ""
+msgstr "Groß oben"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -10903,6 +10987,16 @@ msgstr "Spanisch (Lateinamerika)"
 msgctxt "game_options"
 msgid "Latvia"
 msgstr "Lettland"
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Lean left"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Lean right"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -10942,7 +11036,7 @@ msgstr "Linker Stick"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Left/Right"
-msgstr ""
+msgstr "Links/Rechts"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -11101,7 +11195,7 @@ msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
 msgstr "Lange sichtbare Bildschirmkante (cm)"
 
-#. TRANSLATION: prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr ""
@@ -11131,6 +11225,11 @@ msgctxt "game_options"
 msgid "Low-end Computer"
 msgstr "Low-end Computer"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Lower"
+msgstr ""
+
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid ""
@@ -11139,6 +11238,11 @@ msgid ""
 msgstr ""
 "Niedrige Werte reduzieren die Audiolatenz und verbessern die Leistung, "
 "können allerdings Tonprobleme verursachen."
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Lowest"
+msgstr ""
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -11274,6 +11378,11 @@ msgstr "MISSIONSSTART"
 msgctxt "game_options"
 msgid "MODEL"
 msgstr "MODELL"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "MODEL DETAIL"
+msgstr ""
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
@@ -11561,7 +11670,7 @@ msgctxt "game_options"
 msgid "Match Window"
 msgstr "An Fenster angleichen"
 
-#. TRANSLATION: dosbox
+#. TRANSLATION: dosbox, openmohaa
 msgctxt "game_options"
 msgid "Max"
 msgstr "Max"
@@ -11570,6 +11679,11 @@ msgstr "Max"
 msgctxt "game_options"
 msgid "Max (demanding games)"
 msgstr "Max (anspruchsvolle Spiele)"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "Max Detail"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -11825,7 +11939,7 @@ msgctxt "game_options"
 msgid "Minimal"
 msgstr "Minimal"
 
-#. TRANSLATION: pcsx2, rpcs3
+#. TRANSLATION: openmohaa, pcsx2, rpcs3
 msgctxt "game_options"
 msgid "Minimum"
 msgstr "Minimum"
@@ -11998,6 +12112,11 @@ msgctxt "keys_files"
 msgid "Move Stylet Pointer"
 msgstr "Stylet-Zeiger bewegen"
 
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Move back"
+msgstr ""
+
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
 msgid "Move back / down"
@@ -12028,7 +12147,7 @@ msgctxt "keys_files"
 msgid "Move camera up"
 msgstr "Kamere nach oben bewegen"
 
-#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
+#. TRANSLATION: bstone.keys, mohaa.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
 msgid "Move forward"
 msgstr "Vorwärts"
@@ -12113,7 +12232,7 @@ msgstr "NETZWERK TYP"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "NEW 3DS MODE"
-msgstr ""
+msgstr "NEW 3DS-MODUS"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12426,7 +12545,7 @@ msgctxt "keys_files"
 msgid "Next slot"
 msgstr "Nächster Slot"
 
-#. TRANSLATION: bstone.keys, omf2097.keys
+#. TRANSLATION: bstone.keys, mohaa.keys, omf2097.keys
 msgctxt "keys_files"
 msgid "Next weapon"
 msgstr "Nächste Waffe"
@@ -12663,6 +12782,11 @@ msgctxt "game_options"
 msgid "OVERCLOCK TYPE"
 msgstr "ÜBERTAKTUNGSTYP"
 
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Objective"
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "October"
@@ -12706,7 +12830,7 @@ msgstr "Aus ist sicherer, Ein für spezielle Spiele."
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Off will help some games, others will run too fast."
-msgstr ""
+msgstr "Aus hilft bei manchen Spielen, andere laufen dadurch zu schnell."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -13795,7 +13919,7 @@ msgstr "Preload benötigt mehr RAM."
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Preloading is impossible from ES."
-msgstr ""
+msgstr "Vorab-Laden über ES nicht möglich."
 
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
@@ -13846,10 +13970,15 @@ msgctxt "keys_files"
 msgid "Previous slot"
 msgstr "Vorheriger Slot"
 
-#. TRANSLATION: bstone.keys, openjkdf2.keys
+#. TRANSLATION: bstone.keys, mohaa.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr "Vorherige Waffe"
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Primary attack"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -13955,6 +14084,11 @@ msgstr "BILDZWISCHENSPEICHER BEI JEDEM BILD AUSLESEN (GLIDE64MK2)"
 msgctxt "game_options"
 msgid "READBACK RESOLVE"
 msgstr "RÜCKLESEN AUFLÖSEN"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "REAL DYNAMIC LIGHTING"
+msgstr ""
 
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
@@ -14230,7 +14364,7 @@ msgstr "Reduktion der Ladezeit zu Lasten der Genauigkeit."
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Reduce stutter that happens when compiling shaders."
-msgstr ""
+msgstr "Ruckler beim Shader-Kompilieren reduzieren."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -14276,6 +14410,11 @@ msgstr "Relaxed (Am Schnellsten)"
 msgctxt "game_options"
 msgid "Relaxed XFloat"
 msgstr "Relaxed XFloat (Unpräzise)"
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Reload weapon"
+msgstr ""
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
@@ -14476,7 +14615,7 @@ msgstr "Rechter Stick"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Right/Left"
-msgstr ""
+msgstr "Rechts/Links"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -14782,7 +14921,7 @@ msgctxt "game_options"
 msgid "SHADER SET"
 msgstr "SHADER SET"
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "SHADOWS"
 msgstr "SCHATTEN"
@@ -15102,7 +15241,7 @@ msgctxt "game_options"
 msgid "STRICT RENDERING MODE"
 msgstr "GENAUER RENDERING-MODUS"
 
-#. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce, openjk
+#. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce, openjk, openmohaa
 msgctxt "game_options"
 msgid "SUBTITLES"
 msgstr "UNTERTITEL"
@@ -15207,11 +15346,6 @@ msgctxt "game_options"
 msgid "Saudi Arabia"
 msgstr "Saudi-Arabien"
 
-#. TRANSLATION: wiiware.dolphin-emu.keys
-msgctxt "keys_files"
-msgid "Save State/Save to Selected Slot"
-msgstr ""
-
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Save state"
@@ -15287,6 +15421,11 @@ msgctxt "game_options"
 msgid "Second Empire"
 msgstr ""
 
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Secondary attack"
+msgstr ""
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid ""
@@ -15321,16 +15460,6 @@ msgstr "Auswählen"
 msgctxt "game_options"
 msgid "Select Keyboard, Joystick or Gamepad mode"
 msgstr "Tastatur, Joystick oder Gamepad-Modus auswählen"
-
-#. TRANSLATION: wiiware.dolphin-emu.keys
-msgctxt "keys_files"
-msgid "Select State/Select State Slot 1"
-msgstr ""
-
-#. TRANSLATION: wiiware.dolphin-emu.keys
-msgctxt "keys_files"
-msgid "Select State/Select State Slot 2"
-msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -15494,7 +15623,7 @@ msgstr "Empfindlichkeit bei Mausenutzung für Schieberegler."
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Separate Windows"
-msgstr ""
+msgstr "Separate Fenster"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -15865,7 +15994,7 @@ msgctxt "game_options"
 msgid "Side by side"
 msgstr "Nebeneinander"
 
-#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em, openjk
+#. TRANSLATION: dosbox, libretro/gambatte, libretro/o2em, openjk, openmohaa
 msgctxt "game_options"
 msgid "Simple"
 msgstr "Einfach"
@@ -16388,6 +16517,11 @@ msgctxt "game_options"
 msgid "Speech module installed"
 msgstr "Sprachmodul installiert"
 
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Speed"
+msgstr ""
+
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
 msgid "Speed hack for dual core mode to fix some glitches."
@@ -16469,7 +16603,7 @@ msgctxt "keys_files"
 msgid "Start game"
 msgstr "Spiel beginnen"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys, wiiware.dolphin-emu.keys
+#. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "State/Load from Selected Slot"
 msgstr ""
@@ -16494,12 +16628,12 @@ msgctxt "game_options"
 msgid "Steering Wheel"
 msgstr "Lenkrad"
 
-#. TRANSLATION: openjk.keys
+#. TRANSLATION: mohaa.keys, openjk.keys
 msgctxt "keys_files"
 msgid "Step left"
 msgstr "Schritt nach links"
 
-#. TRANSLATION: openjk.keys
+#. TRANSLATION: mohaa.keys, openjk.keys
 msgctxt "keys_files"
 msgid "Step right"
 msgstr "Schritt nach rechts"
@@ -16829,6 +16963,11 @@ msgctxt "game_options"
 msgid "TEMPEST 2000"
 msgstr "TEMPEST 2000"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "TERRAIN DETAIL"
+msgstr ""
+
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
 msgid "TEST PLAY"
@@ -16839,17 +16978,27 @@ msgctxt "game_options"
 msgid "TEXT"
 msgstr "TEXT"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "TEXTURE COLOUR DEPTH"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "TEXTURE COMPRESSION"
+msgstr ""
+
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "TEXTURE DEPOSTERIZE"
 msgstr "TEXTUREN DEPOSTERISIEREN"
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "TEXTURE DETAIL"
 msgstr "TEXTURDETAILS"
 
-#. TRANSLATION: f2bgl, openjk
+#. TRANSLATION: f2bgl, openjk, openmohaa
 msgctxt "game_options"
 msgid "TEXTURE FILTER"
 msgstr "TEXTURFILTER"
@@ -17133,6 +17282,7 @@ msgstr "Thailand"
 msgctxt "game_options"
 msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
 msgstr ""
+"Der New 3DS hat einen schnelleren Prozessor, ZL/ZR-Tasten und einen C-Stick."
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -17282,6 +17432,16 @@ msgstr ""
 "Zur Verwendung von Cheats oder zur Fehlerbehebung bei Problemen mit dem 16:9 "
 "Seitenverhältnis."
 
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Toggle item"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Toggle menu"
+msgstr ""
+
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
 msgid "Toggle run"
@@ -17315,12 +17475,12 @@ msgstr "Oben"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Top Only"
-msgstr ""
+msgstr "Nur oben"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "Top only"
-msgstr "Nur Oberseite"
+msgstr "Nur oben"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -17401,7 +17561,7 @@ msgstr ""
 "Versucht die Farben mit Per-Vertex (Gouraud) aus der Model2 Per-Poly "
 "Information (Flat) zu schätzen."
 
-#. TRANSLATION: openjk
+#. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
 msgid "Trilinear"
 msgstr "Trilinear"
@@ -17948,7 +18108,7 @@ msgctxt "game_options"
 msgid "Uruguay"
 msgstr "Uruguay"
 
-#. TRANSLATION: bstone.keys, openjk.keys, openjkdf2.keys
+#. TRANSLATION: bstone.keys, mohaa.keys, openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Use"
 msgstr "Verwenden"
@@ -18312,7 +18472,7 @@ msgctxt "game_options"
 msgid "VIC20 PAL Automatic"
 msgstr "VIC20 PAL Automatic"
 
-#. TRANSLATION: citron, openjk, rpcs3
+#. TRANSLATION: citron, openjk, openmohaa, rpcs3
 msgctxt "game_options"
 msgid "VIDEO"
 msgstr "VIDEO"
@@ -18372,6 +18532,11 @@ msgctxt "game_options"
 msgid "VIDEO STREAM RESOLUTION"
 msgstr "VIDEOSTREAM AUFLÖSUNG"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "VIEW MODEL"
+msgstr ""
+
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "VIEW ONLY"
@@ -18401,6 +18566,11 @@ msgstr "STÄRKE DES VISUELLEN ANSTOSSES"
 msgctxt "game_options"
 msgid "VOICE"
 msgstr "STIMME"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "VOLUMETRIC SMOKE"
+msgstr ""
 
 #. TRANSLATION: azahar, bigpemu, bstone, cemu, citron, ...
 msgctxt "game_options"
@@ -18547,6 +18717,11 @@ msgctxt "game_options"
 msgid "W-SU"
 msgstr "W-SU"
 
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "WALL DECALS"
+msgstr ""
+
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "WALL MARKS"
@@ -18576,6 +18751,16 @@ msgstr "WAFFE AUFNEHMEN"
 msgctxt "game_options"
 msgid "WEAPON WAGGLE"
 msgstr "WAFFENWACKELN"
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "WEAPONS BAR"
+msgstr ""
+
+#. TRANSLATION: openmohaa
+msgctxt "game_options"
+msgid "WEATHER EFFECTS"
+msgstr ""
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -18691,6 +18876,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Weak"
 msgstr "Schwach"
+
+#. TRANSLATION: mohaa.keys
+msgctxt "keys_files"
+msgid "Weapon drop"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -19711,6 +19901,14 @@ msgstr "gelb/blau"
 #~ msgstr ""
 #~ "Installieren Sie die Image-Reader-Karte, um Disk-Image-Dateien zu lesen "
 #~ "(nur Mac IIx). Mindestens 4 MB Speicherplatz empfohlen."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Internal accelerometer. Disable if you experience random tilts or "
+#~ "unexpected ball behavior."
+#~ msgstr ""
+#~ "Interner Beschleunigungssensor. Deaktivieren bei zufälligem Neigen oder "
+#~ "ungewöhnlichem Ballverhalten."
 
 #~ msgctxt "game_options"
 #~ msgid ""

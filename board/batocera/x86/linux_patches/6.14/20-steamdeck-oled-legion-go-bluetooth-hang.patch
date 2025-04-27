@@ -1,5 +1,5 @@
 diff --git a/drivers/bluetooth/btqca.c b/drivers/bluetooth/btqca.c
-index 3d6778b95e00..a89069daa72f 100644
+index edefb9dc76aa..9b4853bc5315 100644
 --- a/drivers/bluetooth/btqca.c
 +++ b/drivers/bluetooth/btqca.c
 @@ -1005,15 +1005,11 @@ EXPORT_SYMBOL_GPL(qca_uart_setup);

@@ -3,10 +3,9 @@
 # dolphin-emu
 #
 ################################################################################
-# Version: Commits on Apr 23, 2025
-DOLPHIN_EMU_VERSION = 6c751fb722ebe862071cccb63cc92f781fbd0020
-DOLPHIN_EMU_VERSION_MAJOR = 2412
-DOLPHIN_EMU_VERSION_MINOR = 268
+# Version: Commits on Apr 26, 2025
+DOLPHIN_EMU_VERSION = 8ee64a84c7365b042f50e206d245b8a8464d1656
+DOLPHIN_EMU_VERSION_MINOR = 328
 DOLPHIN_EMU_SITE = https://github.com/dolphin-emu/dolphin
 DOLPHIN_EMU_SITE_METHOD = git
 DOLPHIN_EMU_LICENSE = GPLv2+
@@ -16,7 +15,7 @@ DOLPHIN_EMU_SUPPORTS_IN_SOURCE_BUILD = NO
 DOLPHIN_EMU_DEPENDENCIES += bluez5_utils ffmpeg hidapi host-xz libcurl libevdev libpng libusb lzo sdl2 xz zlib
 # add dolphin-triforce as a dependency so it builds first
 ifeq ($(BR2_PACKAGE_DOLPHIN_TRIFORCE),y)
-DOLPHIN_EMU_DEPENDENCIES += dolphin-triforce
+    DOLPHIN_EMU_DEPENDENCIES += dolphin-triforce
 endif
 
 DOLPHIN_EMU_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
@@ -34,7 +33,7 @@ DOLPHIN_EMU_CONF_OPTS += -DUSE_UPNP=OFF
 
 ifeq ($(BR2_PACKAGE_QT6),y)
     DOLPHIN_EMU_DEPENDENCIES += qt6base qt6svg
-    DOLPHIN_EMU_CONF_OPTS += -DENABLE_QT=ON
+    DOLPHIN_EMU_CONF_OPTS += -DENABLE_QT=OFF
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_NOGUI=ON
 else
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_QT=OFF
@@ -54,7 +53,6 @@ else
 endif
 
 define DOLPHIN_EMU_PRE_CONFIGURE_HOOK
-	sed -i 's/set(DOLPHIN_VERSION_MAJOR .*)/set(DOLPHIN_VERSION_MAJOR "$(DOLPHIN_EMU_VERSION_MAJOR)")/' $(@D)/CMake/ScmRevGen.cmake
 	sed -i 's/set(DOLPHIN_VERSION_MINOR .*)/set(DOLPHIN_VERSION_MINOR "$(DOLPHIN_EMU_VERSION_MINOR)")/' $(@D)/CMake/ScmRevGen.cmake
 endef
 

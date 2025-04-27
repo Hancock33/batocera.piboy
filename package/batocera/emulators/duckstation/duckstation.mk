@@ -3,25 +3,33 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Apr 23, 2025
-DUCKSTATION_VERSION = 559f831c30c2422830facf42a3d42e82686be709
+# Version: Commits on Apr 26, 2025
+DUCKSTATION_VERSION = 8d80ae123dadc39c3c0bb06fa59d8657f9da8f42
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_DEPENDENCIES = boost cpuinfo ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev libsoundtouch plutosvg sdl3 stenzek-shaderc webp zstd
-DUCKSTATION_DEPENDENCIES += qt6base qt6tools qt6svg host-clang host-spirv-cross spirv-cross
+DUCKSTATION_DEPENDENCIES += host-clang host-spirv-cross spirv-cross
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
 
 DUCKSTATION_CONF_OPTS += -DBUILD_SHARED_LIBS=FALSE
 DUCKSTATION_CONF_OPTS += -DENABLE_DISCORD_PRESENCE=OFF
-DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=ON
 DUCKSTATION_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/clang
 DUCKSTATION_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/clang++
 DUCKSTATION_CONF_OPTS += -DCMAKE_PREFIX_PATH=$(STAGING_DIR)/stenzek-shaderc
 DUCKSTATION_CONF_ENV += LDFLAGS=-lpthread
 
+ifeq ($(BR2_PACKAGE_BATOCERA_QT6),y)
+    DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=ON
+    DUCKSTATION_DEPENDENCIES += qt6base qt6tools qt6svg
+    ifeq ($(BR2_PACKAGE_WAYLAND),y)
+        DUCKSTATION_DEPENDENCIES += qt6wayland
+    endif
+else
+    DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=OFF -DBUILD_MINI_FRONTEND=ON
+endif
+
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
     DUCKSTATION_CONF_OPTS += -DENABLE_WAYLAND=ON
-    DUCKSTATION_DEPENDENCIES += qt6wayland
 else
     DUCKSTATION_CONF_OPTS += -DENABLE_WAYLAND=OFF
 endif

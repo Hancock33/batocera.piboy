@@ -1,0 +1,14 @@
+diff --git a/common/const.h b/common/const.h
+index 3e2989f5..9915ab84 100644
+--- a/common/const.h
++++ b/common/const.h
+@@ -744,7 +744,8 @@ typedef unsigned short	word;
+ #undef false
+ 
+ #if !__cplusplus
+-typedef enum { false, true }	qboolean;
++#include <stdbool.h>
++typedef bool qboolean;
+ #else 
+ typedef int qboolean;
+ #endif

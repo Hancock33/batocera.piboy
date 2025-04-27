@@ -1,0 +1,16 @@
+diff --git a/scripts/toolchain.lua b/scripts/toolchain.lua
+index 00a3473d9ec..8253de18167 100644
+--- a/scripts/toolchain.lua
++++ b/scripts/toolchain.lua
+@@ -614,6 +614,11 @@ function toolchain(_buildDir, _subDir)
+ 	configuration { "osx*", "arm64", "Debug" }
+ 		targetdir (_buildDir .. "osx_clang" .. "/bin/x64/Debug")
+ 
++	configuration { "linux-*" }
++		flags {
++			"NoPCH",
++		}
++
+ 	configuration {} -- reset configuration
+ 
+ 	return true

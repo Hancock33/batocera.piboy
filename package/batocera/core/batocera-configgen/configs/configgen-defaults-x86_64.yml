@@ -25,8 +25,8 @@ twentyfourtyeight:
   emulator: libretro
   core:     opera
 3ds:
-  emulator: citra
-  core:     citra
+  emulator: azahar
+  core:     azahar
   options:
     powersave: '1'
 abuse:
@@ -126,7 +126,7 @@ atom:
   emulator: libretro
   core:     mame
 atomiswave:
-  emulator: libretro
+  emulator: flycast
   core:     flycast
   options:
     powersave: '1'
@@ -267,8 +267,8 @@ dos:
   emulator: libretro
   core:     dosbox_pure
 dreamcast:
-  emulator: libretro
-  core:     flycast2021
+  emulator: flycast
+  core:     flycast
   options:
     powersave: '1'
 droidports:
@@ -585,22 +585,22 @@ namco2x6:
   options:
     powersave: '1'
 naomi:
-  emulator: libretro
+  emulator: flycast
   core:     flycast
   options:
     powersave: '1'
 naomi2:
-  emulator: libretro
+  emulator: flycast
   core:     flycast
   options:
     powersave: '1'
 naomi2gd:
-  emulator: libretro
+  emulator: flycast
   core:     flycast
   options:
     powersave: '1'
 naomigd:
-  emulator: libretro
+  emulator: flycast
   core:     flycast
   options:
     powersave: '1'
@@ -972,7 +972,7 @@ switch:
     forceNoBezel: true
     hud_support: false
 systemsp:
-  emulator: libretro
+  emulator: flycast
   core:     flycast
 
 # T-Z

@@ -32,7 +32,7 @@ index 3220ae1a85b..66858415c36 100644
      {
          float a = left[i];
 diff --git a/makefile b/makefile
-index 176f9855a35..86e55dfeb79 100644
+index 4bb8b68b9fb..80f5c079d1e 100644
 --- a/makefile
 +++ b/makefile
 @@ -33,6 +33,7 @@
@@ -57,18 +57,18 @@ index 176f9855a35..86e55dfeb79 100644
  
  # DEPRECATED = 0
  # LTO = 1
-@@ -340,6 +343,10 @@ endif
+@@ -351,6 +354,10 @@ endif # windows
  
- else
+ else # TARGETOS
  CROSS_BUILD := 1
 +ifdef CROSS_ARCH
 +PLATFORM := $(CROSS_ARCH)
 +UNAME := $(CROSS_ARCH)
 +endif
- endif # TARGET_OS
+ endif # TARGETOS
  
  ifdef PTR64
-@@ -598,6 +605,18 @@ ifndef CROSS_BUILD
+@@ -551,6 +558,18 @@ ifndef CROSS_BUILD
  AR := $(OVERRIDE_AR)
  endif
  endif
@@ -87,7 +87,7 @@ index 176f9855a35..86e55dfeb79 100644
  
  #-------------------------------------------------
  # sanity check the configuration
-@@ -773,6 +792,10 @@ ifdef NO_USE_MIDI
+@@ -726,6 +745,10 @@ ifdef NO_USE_MIDI
  PARAMS += --NO_USE_MIDI='$(NO_USE_MIDI)'
  endif
  
@@ -99,10 +99,10 @@ index 176f9855a35..86e55dfeb79 100644
  PARAMS += --NO_USE_PORTAUDIO='$(NO_USE_PORTAUDIO)'
  endif
 diff --git a/scripts/genie.lua b/scripts/genie.lua
-index 89b60a6366e..ac4a2080807 100644
+index 819b753e794..8827284f900 100644
 --- a/scripts/genie.lua
 +++ b/scripts/genie.lua
-@@ -202,6 +202,16 @@ newoption {
+@@ -192,6 +192,16 @@ newoption {
  	description = "AR replacement",
  }
  
@@ -119,7 +119,7 @@ index 89b60a6366e..ac4a2080807 100644
  newoption {
  	trigger = "TOOLCHAIN",
  	description = "Toolchain prefix"
-@@ -402,6 +412,11 @@ newoption {
+@@ -392,6 +402,11 @@ newoption {
  	description = "Target machine platform (x86,arm,...)",
  }
  
@@ -132,10 +132,10 @@ index 89b60a6366e..ac4a2080807 100644
  	trigger = "DEBUG_DIR",
  	description = "Default directory for debugger.",
 diff --git a/scripts/src/3rdparty.lua b/scripts/src/3rdparty.lua
-index 492f01faabe..d1c19074982 100755
+index ad7932afdc2..d6232f92165 100755
 --- a/scripts/src/3rdparty.lua
 +++ b/scripts/src/3rdparty.lua
-@@ -1471,8 +1471,13 @@ end
+@@ -1492,8 +1492,13 @@ end
  		MAME_DIR .. "3rdparty/bx/include",
  		MAME_DIR .. "3rdparty/bimg/include",
  		MAME_DIR .. "3rdparty/bgfx/3rdparty/directx-headers/include/directx",
@@ -152,7 +152,7 @@ index 492f01faabe..d1c19074982 100755
  	configuration { "android-*"}
  		buildoptions {
 diff --git a/scripts/src/osd/modules.lua b/scripts/src/osd/modules.lua
-index 2a5f1a1ec8c..9236cc3124d 100644
+index ca49a2682ca..7c45e291eb8 100644
 --- a/scripts/src/osd/modules.lua
 +++ b/scripts/src/osd/modules.lua
 @@ -281,11 +281,16 @@ function osdmodulesbuild()
@@ -174,13 +174,13 @@ index 2a5f1a1ec8c..9236cc3124d 100644
  		defines {
  			"NO_USE_PORTAUDIO",
 diff --git a/scripts/toolchain.lua b/scripts/toolchain.lua
-index 3181d25d67c..ab6630698b9 100644
+index 59e8bdb504a..00a3473d9ec 100644
 --- a/scripts/toolchain.lua
 +++ b/scripts/toolchain.lua
-@@ -146,7 +146,11 @@ function toolchain(_buildDir, _subDir)
- 				premake.gcc.cc   = "@gcc -V 4.2"
- 				premake.gcc.cxx  = "@g++-4.2"
- 			end
+@@ -141,7 +141,11 @@ function toolchain(_buildDir, _subDir)
+ 		end
+ 
+ 		if "linux-gcc" == _OPTIONS["gcc"] then
 -			premake.gcc.ar  = "ar"
 +			if _OPTIONS["AR"]~=nil then
 +				premake.gcc.ar = _OPTIONS["AR"]
@@ -190,7 +190,7 @@ index 3181d25d67c..ab6630698b9 100644
  			location (_buildDir .. "projects/" .. _subDir .. "/".. _ACTION .. "-linux")
  		end
  
-@@ -357,6 +361,18 @@ function toolchain(_buildDir, _subDir)
+@@ -352,6 +356,18 @@ function toolchain(_buildDir, _subDir)
  	configuration { "linux-gcc", "x64", "Debug" }
  		targetdir (_buildDir .. "linux_gcc" .. "/bin/x64/Debug")
  
@@ -209,7 +209,7 @@ index 3181d25d67c..ab6630698b9 100644
  	configuration { "linux-clang", "x32" }
  		objdir (_buildDir .. "linux_clang" .. "/obj")
  		buildoptions {
-@@ -626,10 +642,17 @@ function strip()
+@@ -621,10 +637,17 @@ function strip()
  		}
  
  	configuration { "linux-*" }

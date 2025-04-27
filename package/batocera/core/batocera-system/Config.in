@@ -358,23 +358,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
     # wireless drivers
-    # use the morrownr RTL8812au & RTL8821au drivers
-    select BR2_PACKAGE_RTL8812AU                            if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_H3          && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3326      && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3588      && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3128      && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_ODIN        && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_SM8250      && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_SM8550      && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
-
-    # (6.13 kernel includes 8821au drivers)
-    select BR2_PACKAGE_RTL8821AU_MORROWNR                   if  BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2   ||  BR2_PACKAGE_BATOCERA_TARGET_RK3588
-    select BR2_PACKAGE_RTL88X2BU                            if  BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2   ||  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
-    select BR2_PACKAGE_RTL8723BU                            if  BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2   ||  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
-    select BR2_PACKAGE_RTL8188EU                            if  BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2   ||  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
-    select BR2_PACKAGE_RTL8821CU                            if  BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2   ||  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY  || BR2_PACKAGE_BATOCERA_TARGET_RK3588
     select BR2_PACKAGE_RTL8189FS                            if  BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_H3       ||  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY  || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2
     select BR2_PACKAGE_RTL8189ES                            if  BR2_PACKAGE_BATOCERA_TARGET_S905        || BR2_PACKAGE_BATOCERA_TARGET_S905GEN2 ||  BR2_PACKAGE_BATOCERA_TARGET_S905GEN3
 
@@ -386,7 +369,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 
     select BR2_PACKAGE_RTW89_TEMP                           if  BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
-    select BR2_PACKAGE_RTL8822CS                            if  BR2_PACKAGE_BATOCERA_TARGET_S905GEN3
+    select BR2_PACKAGE_RTL8852AU                            if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
     select BR2_PACKAGE_AIC8800                              if  BR2_PACKAGE_BATOCERA_TARGET_RK3588      # Rock 5c
 
@@ -519,7 +502,7 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     default "amlogic/s922x/ogu amlogic/s922x/gtkingpro amlogic/s922x/gtking amlogic/s922x/odroidn2l amlogic/s922x/vim3 amlogic/s922x/odroidn2 amlogic/s922x/odroidn2plus amlogic/s922x/zero2"  if  BR2_PACKAGE_BATOCERA_TARGET_S922X
     default "amlogic/s905/odroidc2 amlogic/s905/tvbox amlogic/s905/lepotato amlogic/s905/vim amlogic/s905/p201 amlogic/s905/lepotatov2 amlogic/s905/minix-neo-u1"                              if  BR2_PACKAGE_BATOCERA_TARGET_S905
     default "rockchip/rk3399/orangepi-800 rockchip/rk3399/rg552 rockchip/rk3399/rockpro64 rockchip/rk3399/rock960 rockchip/rk3399/orangepi4-lts rockchip/rk3399/rock-pi-4 rockchip/rk3399/nanopi-m4v2 rockchip/rk3399/hugsun-x99" if  BR2_PACKAGE_BATOCERA_TARGET_RK3399
-    default "rockchip/rk3588/gameforce-ace rockchip/rk3588/rock-5b-plus rockchip/rk3588/nanopi-m6 rockchip/rk3588/orangepi-5-pro rockchip/rk3588/bananapi-m7 rockchip/rk3588/rock-5c rockchip/rk3588/rock-5b rockchip/rk3588/rock-5a rockchip/rk3588/quartzpro64 rockchip/rk3588/orangepi-5 rockchip/rk3588/orangepi-5b rockchip/rk3588/orangepi-5-plus rockchip/rk3588/indiedroid-nova rockchip/rk3588/mekotronics-r58 rockchip/rk3588/khadas-edge-2 rockchip/rk3588/firefly-station-m3"  if BR2_PACKAGE_BATOCERA_TARGET_RK3588
+    default "rockchip/rk3588/orangepi-5-ultra rockchip/rk3588/gameforce-ace rockchip/rk3588/rock-5b-plus rockchip/rk3588/nanopi-m6 rockchip/rk3588/orangepi-5-pro rockchip/rk3588/bananapi-m7 rockchip/rk3588/rock-5c rockchip/rk3588/rock-5b rockchip/rk3588/rock-5a rockchip/rk3588/quartzpro64 rockchip/rk3588/orangepi-5 rockchip/rk3588/orangepi-5b rockchip/rk3588/orangepi-5-plus rockchip/rk3588/indiedroid-nova rockchip/rk3588/mekotronics-r58 rockchip/rk3588/khadas-edge-2 rockchip/rk3588/firefly-station-m3"  if BR2_PACKAGE_BATOCERA_TARGET_RK3588
     default "rockchip/rk3568/orangepi-3b rockchip/rk3568/anbernic-rgxx3 rockchip/rk3568/odroid-m1s rockchip/rk3568/odroid-m1 rockchip/rk3568/rock-3a rockchip/rk3568/rock-3c rockchip/rk3568/firefly-station-m2 rockchip/rk3568/firefly-station-p2" if  BR2_PACKAGE_BATOCERA_TARGET_RK3568
     default "allwinner/h3/orangepi-pc allwinner/h3/orangepi-one allwinner/h3/orangepi-plus2e allwinner/h3/bananapi-m2-zero allwinner/h3/cha"                                                   if  BR2_PACKAGE_BATOCERA_TARGET_H3
     default "allwinner/t527/orangepi-4a"                                                                                                                                                       if  BR2_PACKAGE_BATOCERA_TARGET_T527
@@ -1066,6 +1049,9 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 
     # OpenJK: JediAcademy / Jedi Outcast
     select BR2_PACKAGE_OPENJK                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
+
+    # Medal of Honor: Allied Assault
+    select BR2_PACKAGE_OPENMOHAA                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     help
         Ports

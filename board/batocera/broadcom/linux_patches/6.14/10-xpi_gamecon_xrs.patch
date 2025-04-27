@@ -1,5 +1,5 @@
 diff --git a/drivers/gpio/Kconfig b/drivers/gpio/Kconfig
-index 86701b09b8d2..e91b0f0050a4 100644
+index 4d863955ba75..dbcb1e46d874 100644
 --- a/drivers/gpio/Kconfig
 +++ b/drivers/gpio/Kconfig
 @@ -9,6 +9,13 @@ config XPI_GAMECON
