@@ -116,6 +116,7 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/qualcomm/tqftpserv/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl8812au/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl8821au-morrownr/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl8852au/Config.in
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl88x2bu/Config.in"
   endmenu
 endmenu
