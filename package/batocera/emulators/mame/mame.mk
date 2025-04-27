@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Mar 30, 2025
-MAME_VERSION = mame0276
+MAME_VERSION = mame0277
 MAME_SITE = https://github.com/Hancock33/batocera-mame-builds/releases/download/$(MAME_VERSION)
 MAME_LICENSE = MAME
 MAME_DEPENDENCIES += expat flac fontconfig glm jpeg libpng lua pulseaudio
@@ -15,7 +15,7 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 endif
 
 ifeq ($(BR2_aarch64),y)
-    MAME_CROSS_ARCH = arm64
+    MAME_CROSS_ARCH = aarch64
 endif
 
 ifeq ($(BR2_arm),y)
