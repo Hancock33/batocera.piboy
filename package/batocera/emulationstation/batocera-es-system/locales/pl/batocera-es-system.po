@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-04-27 00:34+0200\n"
+"PO-Revision-Date: 2025-04-27 21:55+0200\n"
 "Last-Translator: borysus\n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -4806,7 +4806,7 @@ msgstr "LIMIT CZASU KURSORA"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "CURVE DETAIL"
-msgstr ""
+msgstr "DETALE KRZYWIZNY"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -5297,7 +5297,7 @@ msgstr ""
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Choose the amount of shadow detail."
-msgstr ""
+msgstr "Wybierz ilość szczegółów cieni."
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
@@ -5320,7 +5320,7 @@ msgstr "Wybierz typ wyjścia audio."
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Choose the character view type."
-msgstr ""
+msgstr "Wybierz typ widoku postaci."
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -5364,12 +5364,12 @@ msgstr "Wybierz poziom trudności gier."
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Choose the level of curve detail."
-msgstr ""
+msgstr "Wybierz poziom szczegółowości zakrzywienia."
 
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Choose the level of effects detail."
-msgstr ""
+msgstr "Wybierz poziom szczegółowości efektów."
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
@@ -5379,12 +5379,12 @@ msgstr "Wybierz poziom szczegółowości geometrycznej."
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Choose the level of model detail."
-msgstr ""
+msgstr "Wybierz poziom szczegółowości modelu."
 
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Choose the level of terrain detail."
-msgstr ""
+msgstr "Wybierz poziom szczegółowości terenu."
 
 #. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
@@ -5409,7 +5409,7 @@ msgstr "Wybierz rozmiar wyświetlacza heads-up."
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Choose the texture colour depth."
-msgstr ""
+msgstr "Wybierz głębię koloru tekstur."
 
 #. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
@@ -5766,7 +5766,7 @@ msgstr ""
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Complex"
-msgstr ""
+msgstr "Złożone"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next, redream
 msgctxt "game_options"
@@ -6801,7 +6801,7 @@ msgstr "EET"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "EFFECTS DETAIL"
-msgstr ""
+msgstr "DETALE EFEKTÓW"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -8287,7 +8287,7 @@ msgstr ""
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "FULL ENTITY LIGHTING"
-msgstr ""
+msgstr "PEŁNE OŚWIETLENIE JEDNOSTKI"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -9588,7 +9588,7 @@ msgstr "Gwatemala"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Gun Only"
-msgstr ""
+msgstr "Tylko broń"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -9888,7 +9888,7 @@ msgstr "Wysoka 720p"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "High Detail"
-msgstr ""
+msgstr "Wysokie detale"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -9903,7 +9903,7 @@ msgstr "Komputer wysokiej klasy"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Higher"
-msgstr ""
+msgstr "Wyższe"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -9915,7 +9915,7 @@ msgstr ""
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Highest"
-msgstr ""
+msgstr "Najwyższe"
 
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
@@ -10258,7 +10258,7 @@ msgstr "Zwiększenie do 128 MB dla debugowania lub aplikacji homebrew."
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Increases texture quality."
-msgstr ""
+msgstr "Zwiększa jakość tekstur."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -10968,12 +10968,12 @@ msgstr "Łotwa"
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Lean left"
-msgstr ""
+msgstr "Pochylenie w lewo"
 
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Lean right"
-msgstr ""
+msgstr "Pochylenie w prawo"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -11174,7 +11174,7 @@ msgstr "Długa widoczna krawędź ekranu (cm)"
 #. TRANSLATION: mohaa.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Look"
-msgstr ""
+msgstr "Spójrz"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -11204,7 +11204,7 @@ msgstr "Komputer niskiej klasy"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Lower"
-msgstr ""
+msgstr "Niskie"
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -11216,7 +11216,7 @@ msgstr "Niższe wartości zmniejszają opóźnienia dźwięku i poprawiają."
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Lowest"
-msgstr ""
+msgstr "Najniższe"
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -11356,7 +11356,7 @@ msgstr "MODEL"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "MODEL DETAIL"
-msgstr ""
+msgstr "DETALE MODELU"
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
@@ -11658,7 +11658,7 @@ msgstr "Maks (wymagające gry)"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Max Detail"
-msgstr ""
+msgstr "Detale Max"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -12085,7 +12085,7 @@ msgstr "Przesuwanie wskaźnika Stylet"
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Move back"
-msgstr ""
+msgstr "Cofnięcie"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -12753,7 +12753,7 @@ msgstr "TYP PRZETAKTOWYWANIA"
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Objective"
-msgstr ""
+msgstr "Cel"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -13942,7 +13942,7 @@ msgstr "Poprzednia broń"
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Primary attack"
-msgstr ""
+msgstr "Atak główny"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -14052,7 +14052,7 @@ msgstr "ROZWIĄZANIE READBACK"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "REAL DYNAMIC LIGHTING"
-msgstr ""
+msgstr "OŚWIETLENIE DYNAMICZNE"
 
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
@@ -14377,7 +14377,7 @@ msgstr "Luźne XFloat"
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Reload weapon"
-msgstr ""
+msgstr "Przeładuj broń"
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
@@ -15382,7 +15382,7 @@ msgstr ""
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Secondary attack"
-msgstr ""
+msgstr "Atak drugorzędny"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -16465,7 +16465,7 @@ msgstr "Zainstalowany moduł mowy"
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Speed"
-msgstr ""
+msgstr "Szybkość"
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -16909,7 +16909,7 @@ msgstr "TEMPEST 2000"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "TERRAIN DETAIL"
-msgstr ""
+msgstr "DETALE TERENU"
 
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
@@ -16924,12 +16924,12 @@ msgstr "TEKST"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "TEXTURE COLOUR DEPTH"
-msgstr ""
+msgstr "GŁĘBIA KOLORU TEKSTUR"
 
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "TEXTURE COMPRESSION"
-msgstr ""
+msgstr "KOMPRESJA TEKSTUR"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -17374,12 +17374,12 @@ msgstr "Aby użyć cheatów do gry lub kodów 16/9 Aspect Ratio Fix."
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Toggle item"
-msgstr ""
+msgstr "Przełącz przedmiot"
 
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Toggle menu"
-msgstr ""
+msgstr "Przełącz menu"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -18459,7 +18459,7 @@ msgstr "ROZDZIELCZOŚĆ STRUMIENIA WIDEO"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "VIEW MODEL"
-msgstr ""
+msgstr "WIDOK MODELU"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -18494,7 +18494,7 @@ msgstr "LEKTOR"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "VOLUMETRIC SMOKE"
-msgstr ""
+msgstr "DYM OBJĘTOŚCIOWY"
 
 #. TRANSLATION: azahar, bigpemu, bstone, cemu, citron, ...
 msgctxt "game_options"
@@ -18644,7 +18644,7 @@ msgstr "W-SU"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "WALL DECALS"
-msgstr ""
+msgstr "NAKLEJKI ŚCIENNE"
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
@@ -18679,12 +18679,12 @@ msgstr "MACHANIE BRONIĄ"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "WEAPONS BAR"
-msgstr ""
+msgstr "PASEK BRONI"
 
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "WEATHER EFFECTS"
-msgstr ""
+msgstr "EFEKTY POGODOWE"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -18804,7 +18804,7 @@ msgstr "Słabe"
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Weapon drop"
-msgstr ""
+msgstr "Upuszczenie broni"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
