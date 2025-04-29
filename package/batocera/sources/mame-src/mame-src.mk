@@ -141,6 +141,7 @@ define MAME_SRC_INSTALL_TARGET_CMDS
 	# Delete bgfx shaders for DX9/DX11/Metal
 	rm -Rf /tmp/mame/usr/bin/mame/bgfx/shaders/metal/
 	rm -Rf /tmp/mame/usr/bin/mame/bgfx/shaders/dx11/
+	rm -Rf /tmp/mame/usr/bin/mame/bgfx/shaders/dx9/
 
 	cd /tmp/mame && tar -cf /tmp/mame-$(MAME_SRC_CROSS_ARCH)-$(subst mame,,$(MAME_SRC_VERSION)).tar .
 	xz -T0 -7 -v /tmp/mame-$(MAME_SRC_CROSS_ARCH)-$(subst mame,,$(MAME_SRC_VERSION)).tar
