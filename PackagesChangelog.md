@@ -17,6 +17,7 @@ Ports|[omf2097](http://github.com/omf2097/openomf)|6379034989ba3b2ec4d0aa0b8a162
 Ports|[stk](http://github.com/supertuxkart/stk-code)|4f1f2d5c6cf854f809ca2dc3dab9f4a9a7cf709f|Apr 29, 2025
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|2f8d8487df5df8f38a63fdf3670bfb187a1e1266|Apr 29, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|9d53e3d7eb2d179ee9f07edfe5b1681ca2a6fb68|Apr 29, 2025
+Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|0189a563218ddb52c8f857ef6a21587988684484|Apr 29, 2025
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0277|Apr 29, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|56c85715162a37f4626156144d3c18092cfe86ee|Apr 29, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|bf041c1c5485d69d415760474463d8468a187afe|Apr 29, 2025
@@ -60,7 +61,6 @@ Emulators|[scummvm](http://github.com/scummvm/scummvm)|92cb377b4d44ed041928ade78
 Hardware|[pironman5](http://github.com/sunfounder/pironman5)|3b64a13c7b81098306157868b1411a5ecc159682|Apr 27, 2025
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|2996daa5e2048a6502a335299cdec5d6393d70eb|Apr 27, 2025
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|aa61fba0fe72f0c76ac226850aee111fde35620c|Apr 27, 2025
-Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|b861916b5ba338960448fbefc49f372476629fd4|Apr 27, 2025
 Utils|[btop](http://github.com/aristocratos/btop)|v1.4.1|Apr 27, 2025
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|160cc6734cb6de2a560817f9aa17e5822a8086fe|Apr 27, 2025
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|81decc29b8aada7b206934bc970531a35ca1a080|Apr 27, 2025
