@@ -1,5 +1,5 @@
 diff --git a/server/Makefile.in b/server/Makefile.in
-index a98615cce72..c53a264e999 100644
+index 4e2008a761f..9bd514abca2 100644
 --- a/server/Makefile.in
 +++ b/server/Makefile.in
 @@ -49,6 +49,7 @@ SOURCES = \
@@ -10,4 +10,4 @@ index a98615cce72..c53a264e999 100644
 +UNIX_LIBS = $(LDEXECFLAGS) $(RT_LIBS) $(INOTIFY_LIBS) $(PROCSTAT_LIBS) -flto=auto -flto-partition=one -fdevirtualize-at-ltrans $(CFLAGS)
 +EXTRADEFS = -flto=auto -flto-partition=one -fdevirtualize-at-ltrans
  
- unicode_EXTRADEFS = -DNLSDIR="\"${nlsdir}\"" -DBIN_TO_NLSDIR=\"`${MAKEDEP} -R ${bindir} ${nlsdir}`\"
+ unicode_EXTRADEFS = -DBINDIR="\"${bindir}\"" -DDATADIR="\"${datadir}\""
