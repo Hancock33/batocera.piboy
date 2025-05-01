@@ -7989,11 +7989,11 @@ hypseus-singe:
             "20": 20
         singe_crosshair:
           group: LIGHT GUN
-          prompt: HIDE LIGHT GUN CROSSHAIRS
-          description: Hide crosshairs in supported games e.g. ActionMax, Maddog II.
+          prompt: LIGHT GUN CROSSHAIRS
+          description: Crosshairs in supported games e.g. ActionMax, Maddog II.
           choices:
-            "Hide": 1
-            "Show": 0
+            "Off": 1
+            "On":  0
         singe_abs:
             group: ADVANCED OPTIONS
             prompt: ABSOLUTE MOUSE INPUT
