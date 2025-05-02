@@ -1,6 +1,5 @@
 config BR2_PACKAGE_LIBRETRO_SUPAFAUST
 	bool "libretro-supafaust"
-	depends on BR2_PACKAGE_RETROARCH
 
 	help
 	  A libretro Supafaust is a unsupported SNES emulator for

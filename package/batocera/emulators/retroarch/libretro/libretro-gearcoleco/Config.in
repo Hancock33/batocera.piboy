@@ -1,6 +1,5 @@
 config BR2_PACKAGE_LIBRETRO_GEARCOLECO
 	bool "libretro-gearcoleco"
-	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
 
 	help

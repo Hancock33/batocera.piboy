@@ -1,6 +1,5 @@
 config BR2_PACKAGE_LIBRETRO_VIRCON32
 	bool "libretro-vircon32"
-	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
 
 	help
