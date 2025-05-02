@@ -25,10 +25,10 @@ index 6ac9612b03..2b3ced27f6 100644
  void SetIsoPaths(const std::vector<std::string>& paths);
  
 diff --git a/Source/Core/DolphinQt/MainWindow.cpp b/Source/Core/DolphinQt/MainWindow.cpp
-index 06331a1450..833273e344 100644
+index 44b2a3f6e4..33b7e9e3b7 100644
 --- a/Source/Core/DolphinQt/MainWindow.cpp
 +++ b/Source/Core/DolphinQt/MainWindow.cpp
-@@ -1474,6 +1474,10 @@ void MainWindow::StateLoadSlot()
+@@ -1476,6 +1476,10 @@ void MainWindow::StateLoadSlot()
  
  void MainWindow::StateSaveSlot()
  {
