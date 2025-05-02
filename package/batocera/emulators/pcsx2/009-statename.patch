@@ -1,16 +1,18 @@
 diff --git a/pcsx2/VMManager.cpp b/pcsx2/VMManager.cpp
-index cb088aeac..e7f1d3bed 100644
+index 1f7bd676b..0286b265d 100644
 --- a/pcsx2/VMManager.cpp
 +++ b/pcsx2/VMManager.cpp
-@@ -1762,18 +1762,11 @@ bool SaveStateBase::vmFreeze()
+@@ -1764,20 +1764,11 @@ bool SaveStateBase::vmFreeze()
  
- std::string VMManager::GetSaveStateFileName(const char* game_serial, u32 game_crc, s32 slot)
+ std::string VMManager::GetSaveStateFileName(const char* game_serial, u32 game_crc, s32 slot, bool backup)
  {
 -	std::string filename;
 -	if (std::strlen(game_serial) > 0)
 -	{
 -		if (slot < 0)
 -			filename = fmt::format("{} ({:08X}).resume.p2s", game_serial, game_crc);
+-		else if (backup)
+-			filename = fmt::format("{} ({:08X}).{:02d}.p2s.backup", game_serial, game_crc, slot);
 -		else
 -			filename = fmt::format("{} ({:08X}).{:02d}.p2s", game_serial, game_crc, slot);
 -
@@ -25,4 +27,4 @@ index cb088aeac..e7f1d3bed 100644
 +  }
  }
  
- std::string VMManager::GetSaveStateFileName(const char* filename, s32 slot)
+ std::string VMManager::GetSaveStateFileName(const char* filename, s32 slot, bool backup)

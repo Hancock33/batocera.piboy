@@ -13,7 +13,7 @@ PCSX2_LICENSE_FILE = COPYING.GPLv3
 PCSX2_SUPPORTS_IN_SOURCE_BUILD = NO
 
 PCSX2_DEPENDENCIES += alsa-lib ecm fmt freetype kddocwidgets libaio libbacktrace libcurl libgtk3 libpcap
-PCSX2_DEPENDENCIES += libpng libsamplerate libsoundtouch
+PCSX2_DEPENDENCIES += libpng libsamplerate libsoundtouch plutosvg plutovg
 PCSX2_DEPENDENCIES += qt6base qt6svg qt6tools portaudio sdl3 shaderc webp wxwidgets xorgproto yaml-cpp zlib
 PCSX2_DEPENDENCIES += host-clang host-libcurl
 

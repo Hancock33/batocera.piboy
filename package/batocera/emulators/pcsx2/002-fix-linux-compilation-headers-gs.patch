@@ -12,7 +12,7 @@ index b268470aa..a54424b5f 100644
  #include "Elfheader.h"
  #include "ps2/BiosTools.h"
 diff --git a/pcsx2/DebugTools/DebugInterface.cpp b/pcsx2/DebugTools/DebugInterface.cpp
-index 99b4b7ab8..aa4135e33 100644
+index 403208f6f..33e9bf529 100644
 --- a/pcsx2/DebugTools/DebugInterface.cpp
 +++ b/pcsx2/DebugTools/DebugInterface.cpp
 @@ -7,7 +7,7 @@
