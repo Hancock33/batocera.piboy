@@ -71,10 +71,10 @@ Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|e27092ada
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v118|Jan 27, 2024
 Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|e6a64aadda4d99ebe16f33f55b0a813444827a06|Apr 27, 2025
-Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|57cf5a0daf1e75bc09cd8c93a490353b3c97104b|Apr 27, 2025
+Emulators|[citron](https://git.citron-emu.org/citron/emu)|ba98d0f15c264de813795c10703439635043d7ce|May 02, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|e07e6b6954e82d76067fa16b1e6dbdc1c472dcd2|May 02, 2025
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|6515807685c608ac97ace6e0747b0a2529e9c917|May 02, 2025
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|63572f15fc92363307914614ec5ad409570f8f50|May 02, 2025
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|cc15858c4aacaca7ca7b346afd0752b909b63064|Dec 30, 2024
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|050f68817a09379150b7bdf665a443b4869d7c08|Apr 27, 2025
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.02.01|Feb 01, 2025
@@ -554,11 +554,11 @@ Wine|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b462519
 Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v2.14.1|Jan 10, 2025
 Wine|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.13|Aug 29, 2024
 Wine|[wine-cachyos](http://github.com/CachyOS/wine-cachyos)|cachyos-9.0-20250117-wine|Jan 17, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.6|Apr 21, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|1e41ecafcb0bf91d428ebd7219477aa45d41d120|May 02, 2025
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-10.0.0|Mar 17, 2025
 Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
 Wine|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0|Jan 21, 2025
-Wine|[wine-proton](http://github.com/ValveSoftware/wine)|c03e2c8bc4442e9174db9ba96ebce8e972d69b06|Apr 30, 2025
+Wine|[wine-proton](http://github.com/ValveSoftware/wine)|c9f44a75cab03b4256a49ed46f6309b6cd4d0341|May 02, 2025
 Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.5|Apr 04, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250502|May 02, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|e73c4d8f71801fe842c0276b603d9c8024d6d957|Feb 07, 2025

@@ -1,7 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[citron](https://git.citron-emu.org/citron/emu)|ba98d0f15c264de813795c10703439635043d7ce|May 02, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|e07e6b6954e82d76067fa16b1e6dbdc1c472dcd2|May 02, 2025
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|6515807685c608ac97ace6e0747b0a2529e9c917|May 02, 2025
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|63572f15fc92363307914614ec5ad409570f8f50|May 02, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|ad13b17bea6558b916444d0eadcd615e85dd8b1a|May 02, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|7a9733dccafcbdf0ae48276e91de274b2557581b|May 02, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|eb09c4ccce4ca6ab8ed08f9e53926c52dd52d8a5|May 02, 2025
@@ -12,6 +13,8 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|abe6e026b99cfb5ad18abd0d8ff8f4f
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|a924fc252b1074a5ffc7dd5d99715f8ab0daf03c|May 02, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|f4d39befff7744d91bdc45b5bc417b61108c0883|May 02, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|4dfe8e263709df452c2d6504885c99d7d4b9904b|May 02, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|1e41ecafcb0bf91d428ebd7219477aa45d41d120|May 02, 2025
+Wine|[wine-proton](http://github.com/ValveSoftware/wine)|c9f44a75cab03b4256a49ed46f6309b6cd4d0341|May 02, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250502|May 02, 2025
 Controllers|[xone](http://github.com/dlundqvist/xone)|197b160f7806d7d27117b12198cacb7656a07f1f|May 02, 2025
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|c5b1e72be0d2b33c18be48c989e726ac176e7872|May 02, 2025
@@ -59,7 +62,6 @@ Ports|[nblood](http://github.com/NBlood/NBlood)|r14222|Apr 30, 2025
 Ports|[omf2097](http://github.com/omf2097/openomf)|c4d71680f993e4bd1771094ca6565201840d98df|Apr 30, 2025
 Ports|[raze](http://github.com/ZDoom/Raze)|fb4763666821e6ff93602bf5062bb3cdfadce124|Apr 30, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.0-rc.13|Apr 30, 2025
-Wine|[wine-proton](http://github.com/ValveSoftware/wine)|c03e2c8bc4442e9174db9ba96ebce8e972d69b06|Apr 30, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|3e8bebeabbde4dc86d58b8ee7e827b71e3d5d289|Apr 30, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|47c484402467a3a74e1e56c57c97c3e253fee3ee|Apr 30, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|57cc7b4a60e6e8c1193f79b0ff30c7ddd2b02993|Apr 30, 2025
@@ -82,7 +84,6 @@ Ports|[box86](http://github.com/ptitseb/box86)|d60937b1ace3984906765c65f29c35d7b
 Ports|[hlsdk-xash3d-dmc](http://github.com/FWGS/hlsdk-portable)|2501babaf4cd34ffad2f41b04dfafd20027b6f2b|Apr 28, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|3d5d27c5cf915e04ea52ea92a6fb5cc86a939972|Apr 27, 2025
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|e6a64aadda4d99ebe16f33f55b0a813444827a06|Apr 27, 2025
-Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|57cf5a0daf1e75bc09cd8c93a490353b3c97104b|Apr 27, 2025
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|050f68817a09379150b7bdf665a443b4869d7c08|Apr 27, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.3.37|Apr 27, 2025
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|9f8fad75512a071ba30fa5e9ca9b25f6149c6f2f|Apr 27, 2025
@@ -119,7 +120,6 @@ Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|87cbcb27
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|e5b036f0be19f7a70fde75cc0e8b1b43476adc13|Apr 22, 2025
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|7acadc46bad5363053874fa625a79314931ba1be|Apr 21, 2025
 Emulators|[play](https://github.com/jpd002/Play-.git)|1bd468c7fbe5c2f1c385b1498de066df6ccf8a12|Apr 21, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.6|Apr 21, 2025
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|1bd468c7fbe5c2f1c385b1498de066df6ccf8a12|Apr 21, 2025
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|83c726d1d4ac43124b569b772d6d8dbd3b931fd2|Apr 20, 2025
 Libraries|[plutosvg](http://github.com/stenzek/plutosvg)|c816e127bcba7ea311114be2cec0d1d3260abe06|Apr 19, 2025

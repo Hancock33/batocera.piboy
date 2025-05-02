@@ -1,5 +1,5 @@
 config BR2_PACKAGE_PLUTOVG
-	bool "plutosvg"
+	bool "plutovg"
 	depends on BR2_INSTALL_LIBSTDCPP
 
 	help
