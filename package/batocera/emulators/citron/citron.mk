@@ -3,9 +3,9 @@
 # citron
 #
 ################################################################################
-# Version: Commits on Apr 27, 2025
-CITRON_VERSION = 57cf5a0daf1e75bc09cd8c93a490353b3c97104b
-CITRON_SITE = https://git.citron-emu.org/Citron/Citron.git
+# Version: Commits on May 02, 2025
+CITRON_VERSION = ba98d0f15c264de813795c10703439635043d7ce
+CITRON_SITE = https://git.citron-emu.org/citron/emu
 CITRON_SITE_METHOD=git
 CITRON_GIT_SUBMODULES=YES
 CITRON_LICENSE = GPLv2
