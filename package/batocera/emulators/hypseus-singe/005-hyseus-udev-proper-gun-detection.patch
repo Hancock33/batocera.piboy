@@ -1,8 +1,8 @@
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 546e69a..6f3e450 100644
+index 9841c5d..d29e717 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -107,13 +107,14 @@ find_package(SDL2_TTF REQUIRED)
+@@ -108,13 +108,14 @@ find_package(SDL2_TTF REQUIRED)
  find_package(SDL2_IMAGE REQUIRED)
  find_package(SDL2_MIXER REQUIRED)
  find_package(Vorbis REQUIRED)

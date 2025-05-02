@@ -1,8 +1,8 @@
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 780b802..6787633 100644
+index 657f3fc..5456dbb 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -49,7 +49,6 @@ string(CONCAT TARGET_ARCH TARGET_ ${TARGET_ARCH})
+@@ -50,7 +50,6 @@ string(CONCAT TARGET_ARCH TARGET_ ${TARGET_ARCH})
  
  include(BuildSupport)
  include(GNUInstallDirs)
@@ -10,7 +10,7 @@ index 780b802..6787633 100644
  include(InstallRequiredSystemLibraries)
  include(FindPkgConfig)
  include(ExternalProject)
-@@ -64,25 +63,10 @@ build_libmpeg2( )
+@@ -65,25 +64,10 @@ build_libmpeg2( )
  
  message(STATUS "Target: ${CMAKE_SYSTEM_NAME} ${CMAKE_TARGET_ARCHITECTURES}")
  

@@ -1,8 +1,8 @@
 diff --git a/src/io/input.cpp b/src/io/input.cpp
-index 9dd77d8..9b5cf64 100644
+index d782b09..b47a4b3 100644
 --- a/src/io/input.cpp
 +++ b/src/io/input.cpp
-@@ -702,6 +702,9 @@ void SDL_check_input()
+@@ -727,6 +727,9 @@ void SDL_check_input()
          process_event(&event);
      }
  
@@ -12,7 +12,7 @@ index 9dd77d8..9b5cf64 100644
      // added by JFA for -idleexit
      if (get_idleexit() > 0 && elapsed_ms_time(idle_timer) > get_idleexit())
          set_quitflag();
-@@ -739,6 +742,8 @@ void process_event(SDL_Event *event)
+@@ -764,6 +767,8 @@ void process_event(SDL_Event *event)
  {
      unsigned int i = 0;
  
@@ -21,7 +21,7 @@ index 9dd77d8..9b5cf64 100644
      // by RDG2010
      // make things easier to read...
      SDL_Keycode keyPressed = event->key.keysym.sym;
-@@ -943,6 +948,7 @@ void process_event(SDL_Event *event)
+@@ -968,6 +973,7 @@ void process_event(SDL_Event *event)
      default:
          break;
      }
@@ -29,7 +29,7 @@ index 9dd77d8..9b5cf64 100644
  
      if (g_game->get_mouse_enabled())
      {
-@@ -952,6 +958,7 @@ void process_event(SDL_Event *event)
+@@ -977,6 +983,7 @@ void process_event(SDL_Event *event)
  
          } else {
  
@@ -37,7 +37,7 @@ index 9dd77d8..9b5cf64 100644
             switch (event->type) {
             case SDL_MOUSEBUTTONDOWN:
                 for (i = 0; i < (sizeof(mouse_buttons_map) / sizeof(int)); i++) {
-@@ -974,6 +981,7 @@ void process_event(SDL_Event *event)
+@@ -999,6 +1006,7 @@ void process_event(SDL_Event *event)
                         event->motion.xrel, event->motion.yrel, NOMOUSE);
                 break;
            }
