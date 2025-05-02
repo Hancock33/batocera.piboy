@@ -5902,6 +5902,11 @@ msgctxt "game_options"
 msgid "Cross"
 msgstr "Krzyż"
 
+#. TRANSLATION: hypseus-singe/zmachine
+msgctxt "game_options"
+msgid "Crosshairs in supported games e.g. ActionMax, Maddog II."
+msgstr ""
+
 #. TRANSLATION: mohaa.keys, omf2097.keys
 msgctxt "keys_files"
 msgid "Crouch"
@@ -9839,7 +9844,7 @@ msgctxt "game_options"
 msgid "Hidden"
 msgstr "Ukryte"
 
-#. TRANSLATION: hypseus-singe/zmachine, libretro/hatarib
+#. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Hide"
 msgstr "Ukryj"
@@ -10844,6 +10849,11 @@ msgstr "PISTOLET ŚWIETLNY"
 msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIR"
 msgstr "CELOWNIK PISTOLETU ŚWIETLNEGO"
+
+#. TRANSLATION: hypseus-singe/zmachine
+msgctxt "game_options"
+msgid "LIGHT GUN CROSSHAIRS"
+msgstr ""
 
 #. TRANSLATION: dolphin, hypseus-singe/zmachine, rpcs3, shared
 msgctxt "game_options"
@@ -15820,7 +15830,7 @@ msgctxt "game_options"
 msgid "Short visible screen edge (cm)"
 msgstr "Krótka widoczna krawędź ekranu (w cm)"
 
-#. TRANSLATION: duckstation, hypseus-singe/zmachine, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, ...
+#. TRANSLATION: duckstation, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, ...
 msgctxt "game_options"
 msgid "Show"
 msgstr "Pokaż"
