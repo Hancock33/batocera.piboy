@@ -9,7 +9,7 @@ VPINBALL_BRANCH = standalone
 VPINBALL_SITE = $(call github,vpinball,vpinball,$(VPINBALL_VERSION))
 VPINBALL_LICENSE = GPLv3+
 VPINBALL_LICENSE_FILES = LICENSE
-VPINBALL_DEPENDENCIES = ffmpeg host-libcurl libfreeimage libpinmame libaltsound libserialport libzedmd libserum libdmdutil libdof sdl2 sdl2_image sdl2_ttf
+VPINBALL_DEPENDENCIES = ffmpeg libfreeimage libpinmame libaltsound libserialport libzedmd libserum libdmdutil libdof sdl2 sdl2_image sdl2_ttf
 VPINBALL_SUPPORTS_IN_SOURCE_BUILD = NO
 
 VPINBALL_CONF_OPTS += $(VPINBALL_COMMON_CONF_OPTS)

@@ -5,47 +5,48 @@ RUN dpkg --add-architecture i386 && \
 	apt-get install -y -o APT::Immediate-Configure=0 libc6:i386 \
 		libncurses6:i386 \
 		libstdc++6:i386 \
-		build-essential \
-		libclang-dev \
-		cmake \
-		git \
-		libncurses6 \
-		libncurses-dev \
-		libssl-dev \
-		mercurial \
-		texinfo \
-		zip \
-		default-jre \
-		imagemagick \
-		subversion \
 		autoconf \
 		automake \
-		bison \
-		scons \
-		libglib2.0-dev \
 		bc \
-		mtools \
-		u-boot-tools \
-		flex \
-		wget \
+		bison \
+		build-essential \
+		cmake \
 		cpio \
-		dosfstools \
-		libtool \
-		rsync \
+		curl \
+		default-jre \
 		device-tree-compiler \
-		gettext \
-		locales \
-		graphviz \
-		python3 \
-		smpq \
-		libsodium-dev \
-		libbz2-dev \
-		libgtest-dev \
-		spirv-tools \
-		gcc-multilib \
+		dosfstools \
+		flex \
 		g++-multilib \ 
+		gcc-multilib \
+		gettext \
+		git \
+		graphviz \
+		imagemagick \
+		libbz2-dev \
+		libclang-dev \
+		libglib2.0-dev \
 		libgmock-dev \
+		libgtest-dev \
+		libncurses6 \
+		libncurses-dev \
+		libsodium-dev \
+		libssl-dev \
+		libtool \
+		locales \
+		mercurial \
+		mtools \
 		po4a \
+		python3 \
+		rsync \
+		scons \
+		smpq \
+		spirv-tools \
+		subversion \
+		texinfo \
+		u-boot-tools \
+		wget \
+		zip \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 

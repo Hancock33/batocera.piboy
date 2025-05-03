@@ -10,7 +10,7 @@ CEMU_LICENSE = GPLv2
 CEMU_SITE_METHOD=git
 CEMU_GIT_SUBMODULES=YES
 CEMU_DEPENDENCIES = bluez5_utils boost fmt glm glslang libcurl libpng libzip pugixml rapidjson sdl2 wxwidgets zlib zstd
-CEMU_DEPENDENCIES += host-glslang host-libcurl host-libusb host-nasm host-pugixml host-zstd
+CEMU_DEPENDENCIES += host-glslang host-libusb host-nasm host-pugixml host-zstd
 
 CEMU_SUPPORTS_IN_SOURCE_BUILD = NO
 
