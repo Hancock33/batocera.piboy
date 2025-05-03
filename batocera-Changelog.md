@@ -83,7 +83,7 @@
 - Cemu to 2.6
 - DevilutionX to 1.5.4
 - Dolphin-Emu to 2503a-328
-- Dosbox Staging to v0.82.0
+- Dosbox Staging to v0.82.2
 - Dosbox-X to v2025.02.01
 - DXX-Rebirth to 12th of Jan build
 - EDuke to 26th of Dec build
@@ -105,7 +105,7 @@
 - Play! to 4th Feb build
 - PPSSPP to 28th February build
 - Raze to 1.11.0
-- RetroArch to v1.21.1
+- RetroArch to v1.21.0
 - Ruffle to nightly-2025-02-12
 - RPCS3 to v0.0.35
 - ScummVM to v2.9.0
@@ -122,7 +122,7 @@
 - Xemu to v0.8.49
 - Xenia to build 5979274 (Jan 24, 2025)
 ### System
-- Bluez to 5.79
+- Bluez to 5.82
 - BTop to 1.4.0
 - Buildroot to 2024.11.x with supporting package updates
 - DXVK to 2.6.1
