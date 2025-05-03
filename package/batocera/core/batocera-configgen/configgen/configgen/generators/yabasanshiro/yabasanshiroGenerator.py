@@ -132,8 +132,10 @@ class YabasanshiroGenerator(Generator):
 
         return Command.Command(
             array=commandArray,
-            env={ 'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)}
-            )
+            env={
+            'LD_LIBRARY_PATH': '/usr/bin/yabasanshiro:/usr/lib:/lib',
+            'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
+        })
 
     def getHotkeysContext(self) -> HotkeysContext:
         return {

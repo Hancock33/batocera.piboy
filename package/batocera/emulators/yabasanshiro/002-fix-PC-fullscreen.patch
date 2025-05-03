@@ -1,15 +1,45 @@
 diff --git a/yabause/src/retro_arena/main.cpp b/yabause/src/retro_arena/main.cpp
-index 39029508..759c6ed4 100644
+index 59dcc2ff..b6d514c1 100644
 --- a/yabause/src/retro_arena/main.cpp
 +++ b/yabause/src/retro_arena/main.cpp
-@@ -401,8 +401,8 @@ int main(int argc, char** argv)
+@@ -238,7 +238,7 @@ int yabauseinit()
+   yinit.cartpath = cartpath;
+   yinit.videoformattype = VIDEOFORMATTYPE_NTSC;
+   yinit.frameskip = g_frame_skip;
+-  yinit.usethreads = 0;
++  yinit.usethreads = 1;
+   yinit.skip_load = 0;    
+   yinit.video_filter_type = 0;
+ #if defined(__JETSON__)    
+@@ -273,10 +273,8 @@ int yabauseinit()
+   }
+ 
+   padmode = inputmng->getCurrentPadMode( 0 );
+-#if !defined(__PC__)  
+   OSDInit(0);
+   OSDChangeCore(OSDCORE_NANOVG);
+-#endif
+   LogStart();
+   LogChangeOutput(DEBUG_CALLBACK, NULL);
+   return 0;
+@@ -400,12 +398,6 @@ int main(int argc, char** argv)
+ 		SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER,       1);
  		SDL_GL_SetAttribute(SDL_GL_ACCELERATED_VISUAL, 1);
  
- #if defined(__PC__)
+-#if defined(__PC__)
 -  int width = 1280;
 -  int height = 720;
-+  int width = dsp.w;
-+  int height = dsp.h;
+-  wnd = SDL_CreateWindow("Yaba Snashiro", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+-      width, height, SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN );
+-#else
+   int width = dsp.w;
+   int height = dsp.h;
    wnd = SDL_CreateWindow("Yaba Snashiro", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-       width, height, SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN );
- #else
+@@ -414,7 +406,6 @@ int main(int argc, char** argv)
+     printf("Fail to SDL_CreateWindow Bye! (%s)", SDL_GetError() );
+     return -1;
+   }
+-#endif
+   dsp.refresh_rate = 60;
+   SDL_SetWindowDisplayMode(wnd,&dsp);
+   SDL_GetWindowSize(wnd,&width,&height);
