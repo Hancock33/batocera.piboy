@@ -191,7 +191,7 @@ define NVIDIA340_LEGACY_DRIVER_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia/X11
 	$(INSTALL) -D -m 0644 \
-		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/gpu/nvidia340-legacy-driver/20-nvidia.conf \
+		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/gpu/nvidia/nvidia340-legacy-driver/20-nvidia.conf \
 		$(TARGET_DIR)/usr/share/nvidia/X11/20-nvidia.conf
 endef
 
