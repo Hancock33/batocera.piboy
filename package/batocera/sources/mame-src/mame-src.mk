@@ -7,14 +7,16 @@
 MAME_SRC_VERSION = mame0277
 MAME_SRC_SOURCE = mame-src-$(MAME_SRC_VERSION).tar.gz
 MAME_SRC_SITE = $(call github,mamedev,mame,$(MAME_SRC_VERSION))
-MAME_SRC_DEPENDENCIES = sdl2 sdl2_ttf zlib libpng fontconfig sqlite jpeg flac rapidjson expat glm pulseaudio
+MAME_SRC_DEPENDENCIES = expat flac fontconfig glm jpeg libpng pulseaudio rapidjson sdl2 sdl2_ttf sqlite zlib
 MAME_SRC_LICENSE = MAME
 
 MAME_SRC_CROSS_ARCH = unknown
 MAME_SRC_CROSS_OPTS = PRECOMPILE=0
+MAME_SRC_CFLAGS += -I$(STAGING_DIR)/usr/include/pipewire-0.3 -I$(STAGING_DIR)/usr/include/spa-0.2
 
 # Limit number of jobs not to eat too much RAM....
 MAME_SRC_JOBS = $(shell expr $(shell nproc))
+
 # x86_64 is desktop linux based on X11 and OpenGL
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
     MAME_SRC_CROSS_ARCH = x86_64
@@ -25,7 +27,6 @@ endif
 ifeq ($(BR2_aarch64),y)
     MAME_SRC_CROSS_ARCH = aarch64
     MAME_SRC_CROSS_OPTS += PTR64=1
-    MAME_SRC_CFLAGS += -DEGL_NO_X11=1
 endif
 
 # Wayland
@@ -47,6 +48,8 @@ define MAME_SRC_BUILD_CMDS
 	# Compile emulation target (MAME)
 	cd $(@D); \
 	CCACHE_SLOPPINESS="pch_defines,time_macros,include_file_ctime,include_file_mtime" \
+	CFLAGS="--sysroot=$(STAGING_DIR) $(MAME_SRC_CFLAGS)" \
+	CXXFLAGS="--sysroot=$(STAGING_DIR) $(MAME_SRC_CFLAGS)" \
 	LDFLAGS="--sysroot=$(STAGING_DIR)" \
 	PATH="$(HOST_DIR)/bin:$$PATH" \
 	PKG_CONFIG_PATH="$(STAGING_DIR)/usr/lib/pkgconfig" \
