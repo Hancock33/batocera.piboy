@@ -135,7 +135,7 @@
 - Kodi to 21.2
 - LibDRM to 2.4.124
 - Linux Firmware to 20250410
-- Linux Kernel to 6.14.4
+- Linux Kernel to 6.14.5
 - LLVM to 19.1.7
 - Mesa3D to 25.0.5
 - MPV to 0.40.0
@@ -152,7 +152,7 @@
 - VKD3D-Proton to 2.14.1
 - Vulkan stack to v1.4.304
 - Wine Mono to 9.4.0
-- Wine-TKG to 10.6
+- Wine-TKG to 10.7
 - Wireplumber to 0.5.8
 - Xone to Mar 13, 2025
 
