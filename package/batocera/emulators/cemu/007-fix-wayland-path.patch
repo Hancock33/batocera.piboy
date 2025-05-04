@@ -1,5 +1,5 @@
 diff --git a/cmake/FindWaylandProtocols.cmake b/cmake/FindWaylandProtocols.cmake
-index a4449885d9..c916408d1f 100644
+index a444988..c916408 100644
 --- a/cmake/FindWaylandProtocols.cmake
 +++ b/cmake/FindWaylandProtocols.cmake
 @@ -22,7 +22,7 @@ find_package(PkgConfig QUIET)

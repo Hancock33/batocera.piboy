@@ -1,5 +1,5 @@
 diff --git a/src/config/CemuConfig.cpp b/src/config/CemuConfig.cpp
-index e7920e8..bd075d5 100644
+index 6bb7ac3..944bc2f 100644
 --- a/src/config/CemuConfig.cpp
 +++ b/src/config/CemuConfig.cpp
 @@ -7,7 +7,7 @@
